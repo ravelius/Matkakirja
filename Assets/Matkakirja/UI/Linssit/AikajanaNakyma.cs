@@ -85,6 +85,8 @@ namespace Matkakirja.Natiivi
         KeksintoTekstit keksinnot;
         IhmisenMatkaAineisto ihminen;
         IhmisenAloitus ihmisenAloitus = new IhmisenAloitus();
+        /// <summary>Avatun Ihmisen matka -linssin nimi (I tai II): esittelylaatikon otsikko (Kytke).</summary>
+        string ihmisenNimi;
         bool keksinnotHaussa, ihminenHaussa;
         IVisualElementScheduledItem mustaPois, yritys;
         readonly AvausTausta avausTausta;
@@ -481,7 +483,11 @@ namespace Matkakirja.Natiivi
             bool saari = Ylapalkki.Matala && p != null && Screen.width > 0;
             ylarivi.EnableInClassList("mk-aikajana-ylarivi--saari", saari);
             var virrat = tutkimus?.Rivi;
-            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat })
+            // Ihmisen matka II:n CC (Linssisepän video 25.9.2026): saaririvillä Tauon vieressä se osui Dynamic Islandin
+            // alle (oikealla on tilaa vain Tauolle ja ☰:lle), joten saaririvillä CC on vuosiluvun rivin oikeassa päässä.
+            if (saari && cc.parent != ylarivi) ylarivi.Add(cc);
+            else if (!saari && cc.parent != ohjaimet) ohjaimet.Insert(ohjaimet.IndexOf(tauko), cc);
+            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat, cc })
             {
                 if (e == null) continue;
                 e.style.position = saari ? Position.Absolute : StyleKeyword.Null;
@@ -509,6 +515,8 @@ namespace Matkakirja.Natiivi
             kelloRuutu.style.top = rivi2;
             float kellonKorkeus = float.IsNaN(kelloRuutu.layout.height) || kelloRuutu.layout.height <= 0 ? 36f : kelloRuutu.layout.height;
             float korkeus = rivi2 + kellonKorkeus + 8f * yksikko;
+            cc.style.right = r.z + reuna;
+            cc.style.top = rivi2 + Mathf.Max(0f, (kellonKorkeus - 36f) / 2f);
             // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
             // niille ei ole tilaa (vuosilaatikko ~150 pt + viisi nappia), joten ne saavat oman rivin vuosiluvun alle
             // (muuten ne jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle tai vuosiluvun päälle).
@@ -573,6 +581,7 @@ namespace Matkakirja.Natiivi
             else
             {
                 otsikko.text = (linssi.Tiedot.Nimi ?? "").ToUpperInvariant();
+                ihmisenNimi = linssi.Tiedot.Nimi;
                 LataaIhminen(() =>
                 {
                     if (tila != Tila.Ihminen) return;
@@ -1185,7 +1194,10 @@ namespace Matkakirja.Natiivi
 
         void NaytaIhmisenAloitus()
         {
-            AsetaLaatikko(ihmisenAloitus.Otsikko ?? "Ihmisen matka", ihmisenAloitus.Teksti ?? "", musta: false);
+            // Ihmisen matka II (Linssisepän video 25.9.2026): esittelyn otsikko linssin nimestä, koska aineiston otsikko
+            // on I:n ("Ihmisen matka"); I:ssä aineiston otsikko kuten ennen.
+            string nimi = ihmisenNimi == IhmisenMatkaLinssi.IhmisenMatka2Tiedot.Nimi ? ihmisenNimi : ihmisenAloitus.Otsikko ?? ihmisenNimi ?? "Ihmisen matka";
+            AsetaLaatikko(nimi, ihmisenAloitus.Teksti ?? "", musta: false);
             AsetaKaynnistaOdottaa(false);
             avausTausta.Nayta(ihmisenAloitus.Taustakuvat);
             Rakenne.Nayta(esittely, true, 250);
