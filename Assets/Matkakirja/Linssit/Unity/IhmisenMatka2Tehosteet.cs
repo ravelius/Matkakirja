@@ -94,6 +94,9 @@ namespace Matkakirja.Natiivi
         IhmisenMatka2Sumu sumu;
         /// <summary>Kerroksellinen sumu (komento "sumu tila"); null, jos georeferenssiä ei ole.</summary>
         public IhmisenMatka2Sumu Sumu => sumu;
+        IhmisenMatka2Hiukkaset hiukkaset;
+        /// <summary>Lumi ja valopöly (komento "hiukkaset tila"); null, jos varjostinta tai kameraa ei ole.</summary>
+        public IhmisenMatka2Hiukkaset Hiukkaset => hiukkaset;
         string kuvaKohde;
         float kuvanPeitto;
         bool siirtoPaalla;
@@ -109,6 +112,7 @@ namespace Matkakirja.Natiivi
             maisema = IhmisenMatka2Maisema.Luo(transform);
             maisema.KertojaSoi = () => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Aani?.KohtaMs != null;
             sumu = IhmisenMatka2Sumu.Luo(transform, kierto);
+            hiukkaset = IhmisenMatka2Hiukkaset.Luo(transform, kierto);
             LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: tehosteet kytketty");
         }
 
@@ -148,6 +152,7 @@ namespace Matkakirja.Natiivi
             if (j == null) return;
             maisema?.Aseta(j.Maisema);
             sumu?.Jakso(j);
+            hiukkaset?.Jakso(j);
             loppuTavoite = j.Vaihe == "loppu" ? 1f : 0f;
             if (j.Vaihe == "loppu") { Sammuta(Kesto(LopunSammutusS)); return; }
             if (j.Vaihe == "pimea") return;
@@ -272,6 +277,7 @@ namespace Matkakirja.Natiivi
         {
             maisema?.Lopeta();
             sumu?.Loppu();
+            hiukkaset?.Loppu();
             loppuTavoite = 0f;   // tutkimusvaihe: vanat takaisin tavallisiksi
             Sammuta(Kesto(LopunSammutusS));
             KuvanAlue = null;

@@ -1149,6 +1149,13 @@ namespace Matkakirja.Natiivi
                     if (osat[1] == "pois" || osat[1] == "paalle") IhmisenMatka2Sumu.Pois = osat[1] == "pois";
                     Kirjaa(IhmisenMatkaKerros.Instanssi?.Tehosteet?.Sumu?.Kuvaus() ?? $"sumu: II ei auki (pois {IhmisenMatka2Sumu.Pois})");
                 }
+                else if (osat[0] == "hiukkaset" && osat.Length > 1)
+                {
+                    // Ihmisen matka II:n hiukkaset pois/päälle (kehysaikojen vertailu), tila lokiin.
+                    if (osat[1] == "pois" || osat[1] == "paalle") IhmisenMatka2Hiukkaset.Pois = osat[1] == "pois";
+                    Kirjaa(IhmisenMatkaKerros.Instanssi?.Tehosteet?.Hiukkaset?.Kuvaus()
+                        ?? $"hiukkaset: II ei auki (pois {IhmisenMatka2Hiukkaset.Pois})");
+                }
                 else if (osat[0] == "ihminen" && osat.Length > 1 && osat[1] == "tutkimus")
                 {
                     // Testikomento: ihmisen matka auki ja suoraan tutkimusvaiheeseen (Laitetestaajan
