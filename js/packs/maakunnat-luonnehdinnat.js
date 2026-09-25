@@ -5556,4 +5556,314 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Punakaikin Pancake Rocks ovat pannukakkupinojen näköisiä kalkkikivikallioita, joiden puhallusrei\'istä meri suihkuaa vaahtona.',
     },
   },
+  /*
+   * CHN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.CHN:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti (Natural Earthin nimet, esim.
+   * "Inner Mongol" = Sisä-Mongolia, "Xizang" = Tiibetin autonominen alue,
+   * "Paracel Islands" = Paracelsaaret; Hongkong, Macao ja Taiwan eivät
+   * kuulu CHN:n aluejoukkoon). Vain `lyhyt` tässä erässä. Xizang, Xinjiang
+   * ja Paracel Islands kuvaavat vain maisemaa, rakennusta tai perinnettä,
+   * ei politiikkaa. Vältetty fokuskohteet-chn.js:n ja maastokohteet-chn.js:n
+   * aiheet (Yuanmingyuan, Taishan, Etelä-Kiinan meri, Jangtse,
+   * Keltainenjoki, Mutianyu, terrakotta-armeija, Mogaon luolat,
+   * Zhangjiajie, Lijiang, Leshanin Buddha, Pingyao). Lähteet
+   * (en-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Chongqing        — Liziba station (linja 2, 19-kerroksinen talo,
+   *                      asema kerroksissa 6–8, avattu 2005)
+   *   Guangxi          — Li River (20 juanin setelin kuva, 5. sarja)
+   *   Guizhou          — Five-hundred-meter Aperture Spherical Telescope
+   *                      (Pingtang, valmis 2016)
+   *   Hainan           — Wenchang Space Launch Site (Long March 5)
+   *   Jilin            — Jilin rime + Fengman Dam (lämmin vesi, joki ei
+   *                      jäädy, huurre rantapuissa)
+   *   Paracel Islands  — Paracel Islands + Woody Island (suurin, 2,1 km²)
+   *   Qinghai          — Qinghai Lake (Kiinan suurin järvi, suolainen;
+   *                      rapsi kukkii heinä–elokuussa)
+   *   Shanxi           — Hanging Temple (Hunyuan, Datong; 491, Pohjoinen Wei)
+   *   Tianjin          — Tianjin Eye (120 m, Yongle-silta, Haijoki, 2008)
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  CHN: {
+    Anhui: {
+      lyhyt: 'Huangshanin graniittihuippujen kallionrakoihin on juurtunut kiemuraisia mäntyjä, ja aamuisin laaksot täyttyvät usein pilvimerestä.',
+    },
+    Beijing: {
+      lyhyt: 'Pekingin hutongit ovat kapeita kujia, joiden varrella monet perheet asuvat yhä perinteisissä sisäpihataloissa, siheyuaneissa.',
+    },
+    Chongqing: {
+      lyhyt: 'Chongqingin Liziban asemalla yksiraidejuna ajaa 19-kerroksisen kerrostalon läpi, ja ylemmissä kerroksissa asutaan tavalliseen tapaan.',
+    },
+    Fujian: {
+      lyhyt: 'Fujianin vuoristossa seisoo hakka-kansan tulou-taloja, pyöreitä savimuurisia rakennuksia, joissa kokonainen suku saattoi asua saman katon alla.',
+    },
+    Gansu: {
+      lyhyt: 'Zhangyen Danxia-vuorten rinteet ovat raidallisia punaisesta, keltaisesta ja vihertävästä hiekkakivestä, ja värit syvenevät ilta-auringossa.',
+    },
+    Guangdong: {
+      lyhyt: 'Guangzhoussa päivä alkaa usein yum cha -teehetkellä, jolloin pöytään kannetaan höyrykoreissa pieniä dim sum -annoksia.',
+    },
+    Guangxi: {
+      lyhyt: 'Lijoen varren kalkkikivihuiput Guilinin ja Yangshuon välillä ovat niin tunnettu maisema, että ne on painettu 20 juanin seteliin.',
+    },
+    Guizhou: {
+      lyhyt: 'Guizhoun karstivuorten luonnolliseen notkoon on rakennettu FAST, halkaisijaltaan 500-metrinen radioteleskooppi, joka valmistui 2016.',
+    },
+    Hainan: {
+      lyhyt: 'Hainanin saaren Wenchangissa on Kiinan eteläisin avaruuskeskus, josta laukaistaan maan raskaimmat kantoraketit.',
+    },
+    Hebei: {
+      lyhyt: 'Chengden vuoristolomapalatsi oli Qing-keisarien kesäasunto, ja sen laajassa puistossa on järviä, paviljonkeja ja temppeleitä.',
+    },
+    Heilongjiang: {
+      lyhyt: 'Harbinin talvisella jää- ja lumifestivaalilla jäälohkareista rakennetaan kokonaisia linnoja, joita valaisevat sisältä värilliset valot.',
+    },
+    Henan: {
+      lyhyt: 'Songshan-vuoren juurella Dengfengissä on Shaolinin luostari, jonka munkkien kungfu tunnetaan kaikkialla maailmassa.',
+    },
+    Hubei: {
+      lyhyt: 'Wudangin vuorten taolaiset temppelit ovat Unescon maailmanperintöä, ja vuori tunnetaan myös wudang-taistelulajien kotina.',
+    },
+    Hunan: {
+      lyhyt: 'Fenghuangin vanhassa kaupungissa puiset paalutalot kurottuvat Tuojiang-joen ylle, ja joen yli pääsee astinkiviä pitkin.',
+    },
+    'Inner Mongol': {
+      lyhyt: 'Sisä-Mongolian Hulunbuirin ruohoaroilla laiduntavat lammas- ja hevoslaumat, ja kesän naadam-juhlissa kisataan painissa ja ratsastuksessa.',
+    },
+    Jiangsu: {
+      lyhyt: 'Suzhoun klassiset puutarhat on sommiteltu lammista, oudonmuotoisista kivistä ja paviljongeista, ja ne kuuluvat Unescon maailmanperintöön.',
+    },
+    Jiangxi: {
+      lyhyt: 'Jingdezhenissä on poltettu posliinia yli tuhat vuotta, ja kaupunkia kutsutaan yhä Kiinan posliinipääkaupungiksi.',
+    },
+    Jilin: {
+      lyhyt: 'Jilinin kaupungissa Songhuajoki ei jäädy voimalan lämpimän veden takia, ja joesta nouseva usva huurruttaa rantapuut valkoisiksi.',
+    },
+    Liaoning: {
+      lyhyt: 'Shenyangin keisarillinen palatsi rakennettiin Qing-dynastian ensimmäisille hallitsijoille ennen kuin hovi muutti Pekingiin 1644.',
+    },
+    Ningxia: {
+      lyhyt: 'Helanvuorten itärinteillä kasvatetaan viinirypäleitä kuivassa ilmastossa, ja Ningxian viinit ovat pärjänneet kansainvälisissä kilpailuissa.',
+    },
+    'Paracel Islands': {
+      lyhyt: 'Paracelsaaret ovat matalia korallisaaria ja riuttoja avomeren keskellä, ja suurinkin niistä on vain noin kahden neliökilometrin kokoinen.',
+    },
+    Qinghai: {
+      lyhyt: 'Qinghaijärvi on Kiinan suurin järvi, ja heinäkuussa sen suolaisen veden rannoilla kukkivat keltaiset rapsipellot.',
+    },
+    Shaanxi: {
+      lyhyt: "Xi'anin Ming-aikainen kaupunginmuuri on lähes 14 kilometriä pitkä, ja sen harjalla voi pyöräillä vanhan kaupungin ympäri.",
+    },
+    Shandong: {
+      lyhyt: 'Qufussa syntyi Kungfutse, ja hänen temppelinsä, sukunsa kartano ja hautausmaa ovat Unescon maailmanperintöä.',
+    },
+    Shanghai: {
+      lyhyt: 'Shanghai Tower on 632 metriä korkea, Kiinan korkein rakennus, ja sen lasijulkisivu kiertyy ylöspäin mentäessä kuin ruuvi.',
+    },
+    Shanxi: {
+      lyhyt: 'Datongin lähellä Xuankongin riippuva temppeli on kiinnitetty jyrkänteen kylkeen puupalkein, ja sen perustaminen ajoitetaan vuoteen 491.',
+    },
+    Sichuan: {
+      lyhyt: 'Jiuzhaigoun laakson järvet hohtavat turkoosina ja smaragdinvihreinä, ja kirkkaassa vedessä näkyvät pohjaan kaatuneet puunrungot.',
+    },
+    Tianjin: {
+      lyhyt: 'Tianjin Eye on 120 metriä korkea maailmanpyörä, joka on rakennettu Haijoen ylittävän sillan päälle.',
+    },
+    Xinjiang: {
+      lyhyt: 'Turpanin painanteessa rypäleet kuivataan rusinoiksi reikäseinäisissä savimajoissa, joiden läpi aavikon kuuma tuuli puhaltaa.',
+    },
+    Xizang: {
+      lyhyt: 'Lhasan Potala-palatsi kohoaa Punaisen vuoren rinteellä noin 3 700 metrin korkeudessa, ja sen valkoiset ja punaiset seinät näkyvät kauas.',
+    },
+    Yunnan: {
+      lyhyt: 'Yuanyangin vuorenrinteille hani-kansa on rakentanut riisiterasseja yli tuhannen vuoden ajan, ja ne ovat Unescon maailmanperintöä.',
+    },
+    Zhejiang: {
+      lyhyt: 'Hangzhoun Länsijärveä ympäröivillä rinteillä kasvaa Longjing-teetä, joka on Kiinan tunnetuimpia vihreitä teitä.',
+    },
+  },
+  /*
+   * USA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.USA:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 50 osavaltiota ja "District of
+   * Columbia" (jonka nimiFi on maakunnat-nimet.js:ssä "Washington", sama
+   * kuin osavaltiolla "Washington"). Vain `lyhyt` tässä erässä; jokaisella
+   * alueella eri aihe. Vältetty maastokohteet-usa.js:n aiheet (Mount
+   * St. Helens, Crater Lake, Nantucket, Mesa Verde, Cahokia, Chacon
+   * kanjoni, Gettysburg, Kill Devil Hills, Promontory, Independence Hall,
+   * Mammothin luola). Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026),
+   * epävarmimmat erikseen:
+   *   California     — Hyperion (tree) (116,22 m, mitattu 2026)
+   *   Colorado       —Colorado State Capitol (13. askelma, mitattu 2003)
+   *   Idaho          — Idaho Potato Commission / Idaho Capital Sun
+   *                    (lähes kolmannes USA:n perunoista)
+   *   Iowa           — Butter sculptures at the Iowa State Fair (1911)
+   *   Michigan       — Mackinac Island (autokielto 6.7.1898)
+   *   Minnesota      — List of lakes of Minnesota (11 842 yli 10 eekkerin)
+   *   Nebraska       — Carhenge (39 autoa, 1987)
+   *   New Jersey     — Lucy the Elephant (1881, kuusi kerrosta, 19,7 m)
+   *   North Carolina — Biltmore Estate (250 huonetta, suurin yksityinen)
+   *   Oklahoma       — TravelOK (yli 400 mailia ajettavaa Route 66:ta)
+   *   Vermont        — Vermont Agency of Agriculture (yli 50 % siirapista)
+   *   Washington     — Hoh Rainforest (noin 140 tuumaa = 3,6 m vuodessa)
+   *   Wisconsin      — Wisconsin cheese (suurin tuottaja vuodesta 1910)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  USA: {
+    Alabama: {
+      lyhyt: 'Huntsvillessä, jota kutsutaan Rakettikaupungiksi, suunniteltiin Saturn V -kantoraketti, ja sellainen on esillä kaupungin avaruusmuseossa.',
+    },
+    Alaska: {
+      lyhyt: 'Denali on 6 190 metriä korkea, Pohjois-Amerikan korkein vuori, ja sen juurelta huipulle on korkeuseroa yli 5 000 metriä.',
+    },
+    Arizona: {
+      lyhyt: 'Grand Canyon on paikoin lähes kaksi kilometriä syvä, ja sen pohjalla virtaa Coloradojoki.',
+    },
+    Arkansas: {
+      lyhyt: 'Crater of Diamonds -puistossa kuka tahansa saa kaivaa timantteja maasta, ja löytäjä saa pitää löytämänsä kiven.',
+    },
+    California: {
+      lyhyt: 'Kalifornian rannikon punapuut ovat maailman korkeimpia puita, ja korkein niistä, Hyperion, kohoaa yli 116 metriin.',
+    },
+    Colorado: {
+      lyhyt: 'Denverin osavaltiontalon portaissa on merkitty askelma, joka on tasan mailin eli noin 1 609 metrin korkeudessa merenpinnasta.',
+    },
+    Connecticut: {
+      lyhyt: 'Mysticin merimuseossa on Charles W. Morgan, maailman viimeinen säilynyt puinen valaanpyyntialus vuodelta 1841.',
+    },
+    Delaware: {
+      lyhyt: 'Delaware ratifioi ensimmäisenä Yhdysvaltain perustuslain vuonna 1787, ja siksi sitä kutsutaan Ensimmäiseksi osavaltioksi.',
+    },
+    'District of Columbia': {
+      lyhyt: 'Tidal Basinin rannan kirsikkapuut ovat Tokion lahja vuodelta 1912, ja niiden kukintaa juhlitaan joka kevät festivaalilla.',
+    },
+    Florida: {
+      lyhyt: 'Evergladesin sahaheinäsoilla alligaattorit ja krokotiilit elävät rinnakkain, eikä sellaista paikkaa ole muualla maailmassa.',
+    },
+    Georgia: {
+      lyhyt: 'Savannahin vanha keskusta on rakennettu ruudukkoon, jonka väleissä on 22 puistoaukiota vanhojen tammien varjossa.',
+    },
+    Hawaii: {
+      lyhyt: 'Mauna Kea on merenpohjasta mitattuna yli 10 000 metriä korkea, ja sen huipulla on maailman suurimpia kaukoputkia.',
+    },
+    Idaho: {
+      lyhyt: 'Idaho kasvattaa lähes kolmanneksen Yhdysvaltain perunoista, ja osavaltion rekisterikilvissä lukee Famous Potatoes.',
+    },
+    Illinois: {
+      lyhyt: 'Chicagossa kaupungin halki virtaava joki värjätään joka pyhän Patrickin päivänä kirkkaan vihreäksi.',
+    },
+    Indiana: {
+      lyhyt: 'Indianapolis 500 -autokilpailun voittaja juo perinteisesti voittajan kehässä pullollisen maitoa.',
+    },
+    Iowa: {
+      lyhyt: 'Iowan osavaltiomessujen kuuluisin nähtävyys on voista veistetty luonnollisen kokoinen lehmä, jollainen on tehty vuodesta 1911.',
+    },
+    Kansas: {
+      lyhyt: 'Yhdysvaltain 48 yhtenäisen osavaltion maantieteellinen keskipiste on Lebanonin pikkukaupungin lähellä Kansasissa.',
+    },
+    Kentucky: {
+      lyhyt: 'Kentucky Derby ajetaan Louisvillessä toukokuun ensimmäisenä lauantaina, ja sitä kutsutaan urheilun kahdeksi hienoimmaksi minuutiksi.',
+    },
+    Louisiana: {
+      lyhyt: 'New Orleansin Mardi Gras -kulkueiden vaunuista heitetään yleisölle värikkäitä helminauhoja.',
+    },
+    Maine: {
+      lyhyt: 'Maine nostaa suurimman osan Yhdysvaltain amerikanhummereista, ja rannikon kylissä hummerirulla on kesän perusruokaa.',
+    },
+    Maryland: {
+      lyhyt: 'Chesapeakenlahden sinirapuja syödään Marylandissa kokonaisina, kuoret puunuijalla rikkoen ja Old Bay -maustetta ripotellen.',
+    },
+    Massachusetts: {
+      lyhyt: 'Bostonin maraton on juostu vuodesta 1897, ja se on maailman vanhin vuosittain järjestettävä maraton.',
+    },
+    Michigan: {
+      lyhyt: 'Mackinacin saarella autot on kielletty vuodesta 1898, ja siellä liikutaan yhä hevosilla, polkupyörillä ja jalan.',
+    },
+    Minnesota: {
+      lyhyt: 'Minnesotaa kutsutaan kymmenentuhannen järven maaksi, vaikka vähintään neljän hehtaarin järviä on todellisuudessa lähes 12 000.',
+    },
+    Mississippi: {
+      lyhyt: 'Mississippin suistoalue on bluesin syntysijoja, ja Clarksdalen kaupungissa on Delta Blues Museum.',
+    },
+    Missouri: {
+      lyhyt: 'St. Louisin Gateway Arch on 192 metriä korkea ruostumattomasta teräksestä tehty kaari, maailman korkein laatuaan.',
+    },
+    Montana: {
+      lyhyt: 'Glacierin kansallispuiston Going-to-the-Sun Road ylittää Kalliovuoret Logan Passin kohdalla, ja lumen vuoksi se on auki vain kesällä.',
+    },
+    Nebraska: {
+      lyhyt: 'Alliancen laitamilla seisoo Carhenge, Stonehengen kopio, joka on koottu 39 harmaaksi maalatusta vanhasta autosta.',
+    },
+    Nevada: {
+      lyhyt: 'Black Rock -aavikolle nousee joka vuosi elokuun lopulla Burning Man -festivaalin tilapäinen kaupunki, joka puretaan viikon päästä jäljettömiin.',
+    },
+    'New Hampshire': {
+      lyhyt: 'Mount Washingtonin huipulla mitattiin 1934 tuulenpuuska, 372 km/h, joka oli vuosikymmeniä maailman kovin mitattu tuuli.',
+    },
+    'New Jersey': {
+      lyhyt: 'Margaten rannalla seisoo Lucy, kuusikerroksinen norsun muotoinen rakennus vuodelta 1881, jonka selkään voi kiivetä sisäportaita.',
+    },
+    'New Mexico': {
+      lyhyt: 'Albuquerquen kansainvälisessä kuumailmapallofestivaalissa nousee lokakuussa ilmaan satoja palloja, ja se on maailman suurimpia.',
+    },
+    'New York': {
+      lyhyt: 'Manhattanin Central Park on 341 hehtaarin puisto, jonka järvet, niityt ja metsiköt on suurelta osin muotoiltu ihmisen käsin.',
+    },
+    'North Carolina': {
+      lyhyt: 'Ashevillen Biltmore-kartano on Yhdysvaltain suurin yksityisomistuksessa oleva talo, ja siinä on 250 huonetta.',
+    },
+    'North Dakota': {
+      lyhyt: 'Theodore Rooseveltin kansallispuiston rapautuneilla karumailla, badlandseilla, laiduntavat biisonit ja villihevoset.',
+    },
+    Ohio: {
+      lyhyt: 'Clevelandissa Erie-järven rannalla on Rock and Roll Hall of Fame, jonka lasipyramidin suunnitteli arkkitehti I. M. Pei.',
+    },
+    Oklahoma: {
+      lyhyt: 'Oklahomassa on enemmän ajettavaa vanhaa Route 66 -tietä kuin missään muussa osavaltiossa, yli 600 kilometriä.',
+    },
+    Oregon: {
+      lyhyt: 'Columbian rotkon Multnomah Falls putoaa kahdessa portaassa yhteensä 189 metriä, ja putousten välissä kulkee kapea kivisilta.',
+    },
+    Pennsylvania: {
+      lyhyt: 'Punxsutawneyssä metsämurmeli Phil ennustaa joka helmikuun toinen päivä, jatkuuko talvi vielä kuusi viikkoa.',
+    },
+    'Rhode Island': {
+      lyhyt: 'Newportin kalliorannalla seisovat miljonäärisukujen kesähuvilat, joita omistajat kutsuivat vaatimattomasti mökeiksi.',
+    },
+    'South Carolina': {
+      lyhyt: 'Charlestonin Rainbow Row on rivi pastellinvärisiä 1700-luvun kauppiastaloja satamanpuoleisen East Bay Streetin varrella.',
+    },
+    'South Dakota': {
+      lyhyt: 'Mount Rushmoren graniittiin on veistetty neljän presidentin kasvot, ja kukin pää on noin 18 metriä korkea.',
+    },
+    Tennessee: {
+      lyhyt: 'Nashvillen Grand Ole Opry on radiossa lähetettävä countrymusiikin konsertti, jota on soitettu joka viikko vuodesta 1925.',
+    },
+    Texas: {
+      lyhyt: 'Big Bendin kansallispuistossa Rio Grande kaartaa jyrkkäseinäisiin kanjoneihin, ja joen toisella rannalla on jo Meksiko.',
+    },
+    Utah: {
+      lyhyt: 'Archesin kansallispuistossa on yli 2 000 luonnon muovaamaa hiekkakivikaarta, joista tunnetuin on Delicate Arch.',
+    },
+    Vermont: {
+      lyhyt: 'Vermont tuottaa yli puolet Yhdysvaltain vaahterasiirapista, ja keväällä sokerimajoissa keitetään vaahteranmahlaa siirapiksi.',
+    },
+    Virginia: {
+      lyhyt: 'Lurayn luolassa on urut, joiden kumivasarat kopauttavat tippukiviä ja soittavat niillä musiikkia.',
+    },
+    Washington: {
+      lyhyt: 'Olympicin niemimaan Hoh-sademetsässä sataa noin 3,5 metriä vuodessa, ja vaahterat ja kuuset ovat sammalen verhoamia.',
+    },
+    'West Virginia': {
+      lyhyt: 'New River Gorgen teräskaarisilta kulkee 267 metriä joen yläpuolella, ja lokakuun Bridge Dayna siltä saa hypätä laskuvarjolla.',
+    },
+    Wisconsin: {
+      lyhyt: 'Wisconsin on Yhdysvaltain suurin juustontuottaja, ja Green Bayn jalkapallofanit pukevat päähänsä juustokolmion muotoisen hatun.',
+    },
+    Wyoming: {
+      lyhyt: 'Yellowstonen Old Faithful -geysir purkautuu noin puolentoista tunnin välein, ja suihku nousee kymmenien metrien korkeuteen.',
+    },
+  },
 };
