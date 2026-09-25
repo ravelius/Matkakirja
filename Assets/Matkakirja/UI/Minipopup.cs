@@ -17,8 +17,17 @@ namespace Matkakirja.Natiivi
     {
         static Minipopup auki;
 
-        readonly VisualElement himmennys;
+        readonly VisualElement himmennys, kehys;
         public readonly VisualElement Sisalto;
+
+        /// <summary>
+        /// Maalehden vaalea arkki pergamentin tilalle (web .lippu-kehys: #f5f0e2 + paperikohina multiply, löydös 72).
+        /// </summary>
+        public Minipopup Arkkipohja()
+        {
+            Kuviot.AsetaArkki(kehys);
+            return this;
+        }
         public event Action Suljettu;
         public bool Auki => auki == this;
 
@@ -28,7 +37,7 @@ namespace Matkakirja.Natiivi
             himmennys = Rakenne.El("mk-himmennys mk-minipopup", juuri);
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
-            var kehys = Rakenne.El("mk-minipopup__kehys", himmennys);
+            kehys = Rakenne.El("mk-minipopup__kehys", himmennys);
             Rakenne.Luokat(kehys, luokka);
             Rakenne.Tausta(kehys, Kuviot.Pergamentti);
             Kirjasimet.Aseta(kehys, Kirjasin.Luku);
