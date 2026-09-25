@@ -22,9 +22,17 @@ namespace Matkakirja.Natiivi
     public static class Kuvat
     {
         public const string PeiliJuuri = "https://media.matkakirja.app/";
-        const int Muistissa = 48;
+        /// <summary>
+        /// Purettujen tekstuurien LRU tavuina (Raamattu ESILATAUSPOLITIIKKA: iPhone ~200 Mt, iPad ~300 Mt; Esilataaja erä 4).
+        /// Uusimmat <see cref="AinaMuistissa"/> jäävät rajasta riippumatta, jottei näkyvää kuvaa vapauteta kesken.
+        /// </summary>
+        public static long MuistiRaja { get; private set; } = 200L * 1048576;
+        const int AinaMuistissa = 12;
+        public static long MuistissaTavuja { get; private set; }
+        public static int MuistissaKpl => muisti.Count;
 
         static readonly Dictionary<string, Texture2D> muisti = new Dictionary<string, Texture2D>();
+        static readonly Dictionary<string, long> tavut = new Dictionary<string, long>();
         static readonly LinkedList<string> jarjestys = new LinkedList<string>();
         static readonly Dictionary<string, List<Action<Texture2D>>> kesken = new Dictionary<string, List<Action<Texture2D>>>();
 
@@ -465,17 +473,46 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void AsetaMuistiRaja()
+        {
+            // iPad: laitemalli tai lyhyt sivu yli 4,5 tuumaa (simulaattorin deviceModel ei kerro laitetta).
+            float dpi = Screen.dpi > 0 ? Screen.dpi : 326f;
+            bool iPad = SystemInfo.deviceModel.StartsWith("iPad") || Mathf.Min(Screen.width, Screen.height) / dpi > 4.5f;
+            MuistiRaja = (iPad ? 300L : 200L) * 1048576;
+            Debug.Log($"MATKAKIRJA ui kuva: muistiraja {MuistiRaja / 1048576} Mt ({(iPad ? "iPad" : "iPhone")})");
+        }
+
+        /// <summary>Purettu koko (RGBA/RGB × mipit ~4/3); pakatuille GetRawTextureData olisi tarkempi mutta kopioi.</summary>
+        static long Koko(Texture2D t)
+        {
+            long px = (long)t.width * t.height;
+            int tavuaPx = t.format == TextureFormat.RGB24 ? 3 : t.format == TextureFormat.Alpha8 || t.format == TextureFormat.R8 ? 1 : 4;
+            long koko = px * tavuaPx;
+            return t.mipmapCount > 1 ? koko * 4 / 3 : koko;
+        }
+
         static void Muista(string avain, Texture2D t)
         {
+            if (muisti.ContainsKey(avain)) Unohda(avain);
             muisti[avain] = t;
+            long n = Koko(t);
+            tavut[avain] = n;
+            MuistissaTavuja += n;
             jarjestys.AddFirst(avain);
-            while (jarjestys.Count > Muistissa)
+            while (MuistissaTavuja > MuistiRaja && jarjestys.Count > AinaMuistissa)
             {
                 string vanha = jarjestys.Last.Value;
-                jarjestys.RemoveLast();
                 if (muisti.TryGetValue(vanha, out var vt) && vt != null) UnityEngine.Object.Destroy(vt);
-                muisti.Remove(vanha);
+                Unohda(vanha);
             }
+        }
+
+        static void Unohda(string avain)
+        {
+            jarjestys.Remove(avain);
+            muisti.Remove(avain);
+            if (tavut.TryGetValue(avain, out var n)) { MuistissaTavuja -= n; tavut.Remove(avain); }
         }
     }
 }

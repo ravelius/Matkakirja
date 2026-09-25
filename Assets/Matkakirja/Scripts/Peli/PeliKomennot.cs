@@ -37,6 +37,8 @@
 //   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
 //   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
+//   levy [Mt]                 levyvälimuistien koko ja siivous vanhimmasta (oletus 2048 Mt; pienempi raja testiin) sekä
+//                             purettujen kuvien muisti (LRU tavuina, iPhone 200 / iPad 300 Mt); tulos lokiin "levy:"
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
 //   uusi-peli [siemen] [kaupunki]  uusi peli (oletus Lontoo; siemen = toistettava noppa); sulkee aloitusnäkymän
@@ -279,6 +281,14 @@ namespace Matkakirja.Natiivi
                     }
                     Lampo.Paivita(true);
                     return "lämpö " + Lampo.Taso;
+                }
+                case "levy":
+                {
+                    // Esilataaja erä 4: Kartta/Levysiivous.cs (taustasäie, tulos lokiin) ja UI/Kuvat.cs:n LRU.
+                    int raja = int.TryParse(A(1), out var r) && r > 0 ? r : Levysiivous.RajaMt;
+                    Levysiivous.Siivoa(raja);
+                    return $"kuvat muistissa {Kuvat.MuistissaKpl} kpl, {Kuvat.MuistissaTavuja / 1048576} / {Kuvat.MuistiRaja / 1048576} Mt; "
+                         + $"levy (edellinen) {Levysiivous.Viimeisin}";
                 }
                 case "verkko":
                     // Verkko-odotusmittari (Kartta/VerkkoOdotus.cs): yhteenveto → verkko-yhteenveto.json; nollaa = summat pois.
