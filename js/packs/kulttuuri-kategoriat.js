@@ -110380,6 +110380,261 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Alexander Selkirk',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Robinson Crusoe Island, San Juan Bautista, Chile,
+       * Juan Fernández Islands, Juan Fernández fur seal, SMS Dresden
+       * (1907), 2010 Chile earthquake), espanjan Wikipediasta (Isla
+       * Robinson Crusoe, San Juan Bautista (Chile), Aeródromo Robinson
+       * Crusoe, Aeródromo Eulogio Sánchez, Parque nacional Archipiélago
+       * de Juan Fernández, Juan Fernández (comuna), Terremoto de Chile
+       * de 2010, Sistema de Alerta de Emergencia) ja Wikivoyagen Juan
+       * Fernández Islands -sivulta (lennot, huoltolaiva, Selkirkin
+       * näköalapaikan reitti, kranaattien jäljet) — teksti omaa.
+       * Wikivoyagen hinnat (2021–2025) ja aikataulut on jätetty pois.
+       * Kuolonuhrien määrä vuoden 2010 tsunamissa vaihtelee lähteittäin,
+       * joten lukua ei kerrota. Nostojen aiheita (nimenvaihto 1966,
+       * tulivuoriperä ja El Yunquen korkeus, kylän asukasluku ja uudet
+       * evakuointitiet, langustinpyynti, liekkikolibri, kaalipuu ja
+       * vieraslajit, Selkirkin muistolaatta, Selkirk, Defoe, Anson,
+       * Liman aarre ja Keiser) eikä gallerian Ansonin leiriä toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: kylän ainoa
+       * tie laskeutuu rantaan (PatHen3333, tammikuu 2013).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'L\'unique "route" de l\'unique village de l\'île.jpg',
+          lyhyt: 'Kapea tie laskeutuu eukalyptusten välistä San Juan Bautistan rantaan.',
+          selite: 'Kuvaajan mukaan kylän ainoa tie viettää eukalyptusten ja '
+            + 'sähkölinjojen alta rantaan, jossa näkyvät laituri ja lahden '
+            + 'sininen vesi; kuva tammikuulta 2013.',
+          lahde: 'PatHen3333, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Robinson Crusoen saarelle pääsee vain pienkoneella tai '
+          + 'huoltolaivalla, ja kumpikin matka riippuu säästä. Kone '
+          + 'laskeutuu saaren kuivaan lounaiskärkeen, josta kylään ei ole '
+          + 'tietä, joten viimeinen osuus kuljetaan veneellä rannikkoa '
+          + 'pitkin. San Juan Bautistassa kaikki on kävelymatkan päässä: '
+          + 'laituri, isänmaallisten luolat ja vanhan espanjalaisen '
+          + 'linnoituksen rauniot. Kylän takana alkaa kansallispuisto, '
+          + 'jonka polut nousevat pilvimetsään, ja laiturin kivillä '
+          + 'loikoilee merikarhuja, joita pidettiin aikanaan jo '
+          + 'sukupuuttoon kuolleina. Kylän pohjoispuolen kallioissa näkyvät yhä '
+          + 'vuoden 1915 meritaistelun ammusten jäljet. Vuoden 2010 '
+          + 'tsunamin opetus on otettu vakavasti, ja kylän kaduilla '
+          + 'vihreät viitat osoittavat pakoreitin ylös rinteeseen.',
+        artikkeli: {
+          nimi: 'Matkailijan Robinson Crusoe',
+          teksti: 'Kylään ei lennetä eikä ajeta: viimeinen matka kuljetaan aina meritse.',
+          nosto: 'Tsunamiyönä 2010 kylän naapureita varoitti 12-vuotias '
+            + 'tyttö, joka huomasi meren vetäytyvän rannasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Pienkoneella Santiagosta',
+              teksti: 'Saarelle lennetään muutaman ilmataksiyhtiön pienillä '
+                + 'koneilla. Wikivoyagen mukaan tavallisin lähtöpaikka on '
+                + 'Tobalaban lentokenttä (Aeródromo Eulogio Sánchez) '
+                + 'Santiagon itäosassa, mutta lentoja on lähtenyt myös '
+                + 'Santiagon päälentoasemalta ja Valparaísosta. Koneet ovat '
+                + 'pieniä kaksimoottorisia, joihin mahtuu vain noin seitsemän '
+                + 'matkustajaa, joten matkatavaroiden on oltava kevyitä. '
+                + 'Lentoja on eniten tammi- ja helmikuussa, ja marraskuun ja '
+                + 'maaliskuun välisen kauden ulkopuolella niitä on harvoin. '
+                + 'Kiitotie on saaren lounaiskärjessä, ainoalla riittävän '
+                + 'tasaisella paikalla, jonka lentäjät ja saarelaiset '
+                + 'raivasivat kivistä vuonna 1966. Kentällä ei ole '
+                + 'lennonjohtotornia eikä valaistusta, joten sinne lennetään '
+                + 'vain päivällä ja hyvällä näkyvyydellä, ja sade tai kova '
+                + 'tuuli voi perua lähdön mihin vuodenaikaan tahansa. '
+                + 'Kentältä ei ole tietä kylään, vaan matkustajat jatkavat '
+                + 'kentän läheiseltä lahdelta moottoriveneellä noin '
+                + 'puolitoista tuntia rannikkoa pitkin San Juan Bautistaan. '
+                + 'Hitaampi vaihtoehto on Valparaísosta noin kahdesti kuussa '
+                + 'lähtevä huoltolaiva, jossa on muutama paikka matkailijoille. '
+                + 'Merimatka kestää lähes kaksi vuorokautta, ja paluu voi '
+                + 'viivästyä säiden takia, joten matkaan kannattaa varata '
+                + 'vähintään viikko. Wikivoyage varoittaa myös, että '
+                + 'lentohakukoneet ovat sekoittaneet saaren kentän mantereen '
+                + 'Concepciónin kaupunkiin.',
+              kuva: [
+                {
+                  tiedosto: 'Sector aerodromo Isla Robinson Crusoe.jpg',
+                  lyhyt: 'Lentokentän ympäristö saaren lounaiskärjessä on kuivaa ja lähes puutonta.',
+                  selite: 'Saaren lounaisosan kuivaa, ruohon ja kuivuneiden '
+                    + 'kasvien peittämää ylänköä lentokentän läheltä; '
+                    + 'taustalla näkyvät Punta de Isla ja Santa Claran saari. '
+                    + 'Kuva tammikuulta 2011.',
+                  lahde: 'Pato Novoa, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Baie près de l\'aérodrome .jpg',
+                  lyhyt: 'Lentokentän läheisestä lahdesta matka kylään jatkuu veneellä.',
+                  selite: 'Punaisen ja keltaisen tuliperäisen kiven '
+                    + 'kerrostamat rinteet kohoavat pienen lahden yllä '
+                    + 'lentokentän lähellä. Kuvaajan mukaan tästä lahdesta '
+                    + 'kylään pääsee vain meritse; kuva tammikuulta 2013.',
+                  lahde: 'PatHen3333, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'CI-Robinson-kai.jpg',
+                  lyhyt: 'San Juan Bautistan laiturilta kävellään suoraan kylän rantaan.',
+                  selite: 'Matkustajat kävelevät punakaiteista laituria '
+                    + 'pitkin San Juan Bautistaan, jonka talot nousevat '
+                    + 'metsäisten vuorten juurelle; kuva marraskuulta 2017.',
+                  lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kylä, luolat ja linnoitus',
+              teksti: 'San Juan Bautistan kiertää jalan, ja suurin osa sen '
+                + 'kaduista on yhä päällystämättömiä. Kylän '
+                + 'perustamisvuodeksi mainitaan yleensä 1877, jolloin '
+                + 'sveitsiläinen paroni Alfred von Rodt aloitti pysyvän '
+                + 'asutuksen, ja hänen nimeään kantaa yhä yksi kylän '
+                + 'kaduista. Pohjoispäässä ovat jalkapallokenttä ja '
+                + 'Dresden-koulu, joka on nimetty lahteen 1915 upotetun '
+                + 'saksalaisen risteilijän mukaan. Kylän yläpuolisessa '
+                + 'rinteessä näkyvät Cuevas de los Patriotas eli '
+                + 'isänmaallisten luolat. Kun espanjalaiset olivat lyöneet '
+                + 'Chilen itsenäisyysliikkeen Rancaguan taistelussa '
+                + 'lokakuussa 1814, he karkottivat saarelle 42 kreolien '
+                + 'johtohahmoa, muiden muassa Juan Egañan ja Manuel de '
+                + 'Salasin. Vangit elivät luolissa vuoteen 1817, ja paikka '
+                + 'julistettiin kansallismonumentiksi 1979. Samaa rinnettä '
+                + 'nousevan polun varrella ovat Santa Bárbaran linnoituksen '
+                + 'rauniot: espanjalaiset rakensivat linnoituksen 1700-luvulla '
+                + 'suojaamaan lahtea merirosvoilta. Kylässä on myös pieni '
+                + 'museo ja kirjasto, turisti-info ja muutama ravintola ja '
+                + 'baari. Nettiyhteydet ovat uusia: internet yleistyi kylässä '
+                + 'vasta vuonna 2020, kun saarelle pystytettiin '
+                + 'satelliittiantennit.',
+              kuva: {
+                tiedosto: 'Isla Robinson Crusoe y las Cuevas de los Patriotas..JPG',
+                lyhyt: 'Isänmaallisten luolien suuaukot näkyvät kylän yläpuolisessa rinteessä.',
+                selite: 'Mereltä kuvatussa näkymässä San Juan Bautistan '
+                  + 'rantaa ja laituria; paljaassa, punaruskeassa rinteessä '
+                  + 'talojen ja havupuiden keskellä ammottaa kaksi tummaa '
+                  + 'luolan suuta. Kuva helmikuulta 2011.',
+                lahde: 'Marisol Romero, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Merikarhut ja Dresdenin hylky',
+              teksti: 'Meri on kylmempi kuin leuto ilma antaa odottaa, sillä '
+                + 'saaren itäpuolella pohjoiseen virtaava Humboldtin virta '
+                + 'viilentää vettä, eikä valkoisia hiekkarantoja ole. '
+                + 'Sukeltajia ja snorklaajia houkuttelevat silti '
+                + 'Juan Fernándezin merikarhut. Lajia pyydettiin '
+                + 'turkiskaupan aikana 1800-luvun alussa niin armottomasti, '
+                + 'että sitä pidettiin kuolleena sukupuuttoon, kunnes '
+                + 'saarilta löydettiin 1960-luvulla noin 200 eläimen ryhmä. '
+                + 'Suojelun ansiosta merikarhuja on nyt yli kymmenentuhatta, '
+                + 'ja niitä makailee kymmenittäin laiturin lähellä '
+                + 'rantakivillä. Poikaset syntyvät marras–joulukuussa, ja emot '
+                + 'hakevat ruokansa öisin kaukana avomerellä. Kuuluisin '
+                + 'sukelluskohde on saksalaisen kevyen risteilijän SMS '
+                + 'Dresdenin hylky Cumberlandinlahdella. Brittiläiset '
+                + 'risteilijät Glasgow ja Kent yllättivät Chilen '
+                + 'puolueettomilla vesillä ankkurissa olleen aluksen 14. '
+                + 'maaliskuuta 1915, ja miehistö upotti sen itse '
+                + 'räjähteillä. Hylky makaa noin 70 metrin syvyydessä, joten '
+                + 'se on vain syväsukellukseen koulutettujen kohde. Sen kello '
+                + 'nostettiin vuonna 2006 ja vietiin Saksaan. Maalla '
+                + 'taistelun jäljet näkee helpommin: kylästä pohjoiseen '
+                + 'kulkevan polun varrella kallioon on jäänyt brittiläisten '
+                + 'ammusten iskemiä. Wikivoyage mainitsee saaren '
+                + 'harrastuksina myös urheilukalastuksen, lintujen '
+                + 'tarkkailun ja ratsastuksen.',
+              kuva: {
+                tiedosto: 'Lobo fino.jpg',
+                lyhyt: 'Juan Fernándezin merikarhu ui pinnalla turkoosissa vedessä evät koholla.',
+                selite: 'Juan Fernándezin merikarhun naaras tai nuori '
+                  + 'yksilö ui aivan pinnassa ja nostaa eväänsä vedestä; '
+                  + 'laji lisääntyy vain Juan Fernándezin ja Desventuradasin '
+                  + 'saarilla. Kuva tammikuulta 2011.',
+                lahde: 'Pato Novoa, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kansallispuiston polut',
+              teksti: 'Kylää lukuun ottamatta lähes koko saari kuuluu vuonna '
+                + '1935 perustettuun kansallispuistoon, johon kuuluvat myös '
+                + 'Alejandro Selkirkin ja Santa Claran saaret, ja puisto on '
+                + 'ollut Unescon maailmanperintöehdokkaiden listalla vuodesta '
+                + '1994. Suosituin retki nousee kylästä vuoriston satulaan, '
+                + 'josta näkee saaren molemmat puolet: vihreän kylänpuoleisen '
+                + 'rinteen ja toisella puolella kuivan, ruskean maaston '
+                + 'sahalaitaisine huippuineen. Liikkeelle kannattaa lähteä jo kahdeksan '
+                + 'maissa aamulla, ennen kuin sumu peittää vuoret. Polku '
+                + 'nousee istutetusta eukalyptusmetsästä alkuperäiseen '
+                + 'pilvimetsään, ja sivupolku vie kalliolle, johon merimiehet '
+                + 'kaiversivat vuonna 1866 laivan ja jättiläiskalan. Toinen '
+                + 'reitti johtaa El Yunquen alle Plazoleta El Yunquelle. '
+                + 'Siellä asui 1930-luvulla Hugo Weber, Dresdenin '
+                + 'entinen merimies, jota kyläläiset kutsuivat saksalaiseksi '
+                + 'Robinsoniksi ja josta tuli Chilen ensimmäinen saarten '
+                + 'puistonvartija. Toisen maailmansodan aikana häntä '
+                + 'syytettiin vakoilusta, ja hän pakeni saarelta vaimonsa '
+                + 'kanssa. Kasveista kannattaa etsiä Lactoris fernandeziana, '
+                + 'vaatimaton pensas, joka on koko kasviheimonsa ainoa laji ja '
+                + 'kasvaa luonnossa vain tällä saarella. Lintujen tarkkailija '
+                + 'voi nähdä pienen, töyhtöpäisen Anairetes fernandezianus '
+                + '-tyrannin, ja merilinnuista saarella elää viistäjälaji, joka '
+                + 'tunnetaan englanniksi saaren vanhan nimen mukaan nimellä '
+                + 'Masatierra petrel.',
+              kuva: {
+                tiedosto: 'Cerro el Yunque.jpg',
+                lyhyt: 'El Yunquen jyrkät seinämät katoavat puistolle tyypilliseen sumuun.',
+                selite: 'Cerro El Yunquen huippu on pilven peitossa, ja '
+                  + 'etualalla punaisessa maassa kasvaa ruohomättäitä ja '
+                  + 'pensaita; kuva marraskuulta 2014.',
+                lahde: 'Daniela HV, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, arki ja tsunamivaroitus',
+              teksti: 'Saari on samalla aikavyöhykkeellä kuin Manner-Chile. '
+                + 'Ilmasto on leuto, vuoden keskilämpö on noin 16 astetta, '
+                + 'ja sateet painottuvat talvikuukausiin. Yli 500 metrin '
+                + 'korkeudessa sataa lähes päivittäin, kun taas saaren '
+                + 'tuulensuojainen länsiosa on kuiva, joten sadetakki kuuluu '
+                + 'jokaiselle vaellukselle. Kylän sähkö tehdään '
+                + 'dieselgeneraattoreilla, joiden polttoaine tuodaan laivalla '
+                + 'mantereelta, ja juomavesi kerätään vuorten lähteistä. '
+                + 'Autoja on vähän, ja hevoset ovat yhä tavallinen kulkuneuvo. '
+                + 'Helmikuun 27. päivän 2010 maanjäristystä ei saarella '
+                + 'tuntunut lainkaan, sillä sen keskus oli yli 600 '
+                + 'kilometrin päässä mantereen edustalla. Hyökyaalto saapui '
+                + 'noin tunnin kuluttua keskellä yötä ja tunkeutui yli 300 '
+                + 'metriä kylän sisään. Laivasto ei antanut ajoissa '
+                + 'virallista varoitusta, ja monet juoksivat rantaan eivätkä '
+                + 'rinteille. Moni pelastui, koska 12-vuotias Martina '
+                + 'Maturana huomasi meren vetäytyvän ja varoitti naapureitaan. '
+                + 'Katastrofin jälkeen Chile rakensi SAE-järjestelmän, joka '
+                + 'lähettää hätävaroituksen tekstinä, omalla äänimerkillään '
+                + 'ja värinänä alueen matkapuhelimiin, ja vuodesta '
+                + '2017 kaikki Chilessä myydyt puhelimet ovat tukeneet sitä. '
+                + 'Vuonna 2013 kylän kaava kielsi rakentamasta asuntoja '
+                + 'rantaan. Matkailijan sääntö on yksinkertainen: jos meri '
+                + 'vetäytyy äkkiä tai puhelin hälyttää, lähde heti vihreiden '
+                + '"Vía de evacuación tsunami" -viittojen suuntaan ylös '
+                + 'rinteeseen äläkä jää rantaan katsomaan.',
+              kuva: {
+                tiedosto: 'CI-Robinson-dorfstrasse.jpg',
+                lyhyt: 'Vihreä kyltti Alfred von Rodtin kadulla osoittaa tsunamin pakoreitin.',
+                selite: 'Puisen Alfred von Rodt -kadunnimikyltin vieressä '
+                  + 'seisoo vihreävalkoinen "Vía de evacuación tsunami" '
+                  + '-kyltti; taustalla kylän puutalot ja metsäinen '
+                  + 'vuorenrinne. Kuva marraskuulta 2017.',
+                lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kirjallisuus',
