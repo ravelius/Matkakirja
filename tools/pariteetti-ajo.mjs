@@ -52,8 +52,9 @@ export const LAITTEET = {
     udid: process.env.PARITEETTI_IPHONE_UDID || 'A2FD9C9F-37CA-4D7A-BA59-E65AF9EBCCA2', w: 402, h: 874, kierto: 'pysty',
     sallitut: IPHONEN_YLAPALKKI,
   },
-  'iphone-vaaka': { udid: '993F8873-E2D9-4230-81CE-CBF9230D9B55', w: 874, h: 402, kierto: 'vaaka' },
-  ipad11: { udid: 'C1D5E34C-DFA8-4326-AD85-92B58A672AA7', w: 834, h: 1210, kierto: 'pysty' },
+  // PARITEETTI_VAAKA_UDID / PARITEETTI_IPAD11_UDID: toisen roolin omat simulaattorit (vaaka voi olla sama kuin iphone).
+  'iphone-vaaka': { udid: process.env.PARITEETTI_VAAKA_UDID || '993F8873-E2D9-4230-81CE-CBF9230D9B55', w: 874, h: 402, kierto: 'vaaka' },
+  ipad11: { udid: process.env.PARITEETTI_IPAD11_UDID || 'C1D5E34C-DFA8-4326-AD85-92B58A672AA7', w: 834, h: 1210, kierto: 'pysty' },
   ipad13: { udid: '88939C12-2D15-4514-B107-DF6DAAABB227', w: 1032, h: 1376, kierto: 'pysty' },
 };
 const BUNDLE = 'app.matkakirja.proto3d';
@@ -147,7 +148,7 @@ async function askel(dokumentit, a) {
   const [laji, ...loput] = a.split(':');
   const rivi = loput.join(':');
   if (laji === 'odota') { await odota(Number(rivi) * 1000); return; }
-  const tiedosto = { ui: 'ui-komento.txt', peli: 'peli-komento.txt', linssi: 'linssi-komento.txt' }[laji];
+  const tiedosto = { ui: 'ui-komento.txt', peli: 'peli-komento.txt', linssi: 'linssi-komento.txt', kartta: 'komento.txt' }[laji];
   if (!tiedosto) throw new Error(`tuntematon askel ${a}`);
   await kirjoita(dokumentit, tiedosto, rivi);
   // peli-komentojen odota-tila jatkuu sovelluksen sisällä: annetaan sille aikaa ennen seuraavaa riviä.
@@ -250,6 +251,8 @@ async function ajaLaite(l) {
   await odota(1000);
   await simctl('launch', `--stdout=${join(NATIIVI, `${tunnus}-stdout.log`)}`, `--stderr=${join(NATIIVI, `${tunnus}-stderr.log`)}`, l.udid, BUNDLE);
   await odota(6000);
+  // Testit ilman ääniä (Fable 24.9.): kartan komento hiljaa mykistää koko sovelluksen (AudioListener.volume).
+  await askel(dokumentit, 'kartta:hiljaa');
   await askel(dokumentit, `ui:ui kierto ${l.kierto}`);
   await odota(1500);
   let peliKaynnissa = false;
