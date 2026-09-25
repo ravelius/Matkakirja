@@ -5299,3 +5299,7 @@ Selittää, miksi sammutuspyynnöt purivat vain väliaikaisesti.
 ## proto-kaanna.sh SAMMUTTAA ASENNUKSEN JALKEEN SIMULAATTORIT, JOTKA EIVAT OLLEET KAYNNISSA ENNEN AJOA (NATIIVISEPPA 10.2x, LOKIRIVI 'sammutettu: <UDID>'); HAVAINTO: proto-3d/tyokalut EI OLE VERSIONHALLINNASSA → NATIIVISEPPA VIE SEN Matkakirja-proto-GITIN tyokalut/-HAKEMISTOON (ILMAN SALAISUUKSIA JA LOKEJA) (25.9.2026 klo 10.19)
 
 Levylinjaus (ei tuplavarmuuskopioita) edellyttää, että työkalut ovat GitHubissa.
+
+## NATIIVIN TYOKALUT VERSIONHALLINNASSA (PROTO-MASTER 3b95d8a8, tyokalut/palvelu/, GITHUB ravelius/Matkakirja-natiivi); LOYDOS: varmuuskopioi-natiivi.sh ON HYLANNYT PUSHIT 24.9. ILLASTA (NON-FAST-FORWARD + set -e) → PELILOGIIKKA-REPO EI VARMUUSKOPIOITU — FABLE: PEILI FORCE-PUSHINA ETULIITTEEN peili/ ALLE, master JA juna/* VAIN FAST-FORWARD (VIRHE → RIVI FABLELLE), EI set -e, MOLEMMAT REPOT, launchd TUNNIN VALEIN + post-merge (25.9.2026 klo 10.21)
+
+Paikallinen proto-git on totuus; GitHub-peili on varmuuskopio.
