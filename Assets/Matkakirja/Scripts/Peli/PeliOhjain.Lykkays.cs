@@ -43,8 +43,23 @@ namespace Matkakirja.Natiivi
         {
             if (!LuentaLykatty(kaupunki)) return false;
             lykattyLuento = l;
+            StartCoroutine(Varakutsu(kaupunki, l));
             return true;
         }
+
+        /// <summary>
+        /// Varakutsu (Pelikoodarin huomio 25.9.): jos pulun sarja ei päästä luentaa (kupla kaatui, näkymä suljettiin),
+        /// lykätty luento soi viimeistään 30 s kuluttua. Sarja kestää tavallisesti 12–15 s (1,8 s + kaksi kuplaa).
+        /// </summary>
+        System.Collections.IEnumerator Varakutsu(string kaupunki, Luento l)
+        {
+            yield return new UnityEngine.WaitForSecondsRealtime(LykkayksenKattoS);
+            if (lykkaysKaupunki != kaupunki || lykattyLuento != l) yield break;
+            UnityEngine.Debug.Log("MATKAKIRJA peli: lykätty luento varakutsulla (" + kaupunki + ")");
+            AloitaLykattyLuenta();
+        }
+
+        const float LykkayksenKattoS = 30f;
 
         /// <summary>Lippu alas ja lykätty luento pois (paikan puheen vaiennus, uusi matka).</summary>
         void PeruLykkays()
