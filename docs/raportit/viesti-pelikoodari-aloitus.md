@@ -5,7 +5,7 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
    [`viesti-pelikoodari-luovutus-20260925-yo3.md`](viesti-pelikoodari-luovutus-20260925-yo3.md) (25.9. klo 20.5x).
-   - Junassa: `pelikoodari/esilataaja-3` 64794fe8 (erät 2+3). Merge-pyynnössä build 17: `pelikoodari/esilataaja-4` 4e4fc18b.
+   - Junassa: `pelikoodari/esilataaja-3` 64794fe8 (erät 2+3). Junassa (build 17): `pelikoodari/esilataaja-4` 4e4fc18b → juna/b13 ac0aaadc. Build 16 = 1.0.16 TF.
    - PallonLepo-kytkennän teki Natiiviseppä; lepopiirto todennettu. Linssiseppä kytkee kohdan 6.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).

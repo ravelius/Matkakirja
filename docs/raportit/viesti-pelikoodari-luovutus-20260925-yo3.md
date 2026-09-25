@@ -9,7 +9,7 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
   515 → 0 ms, luenta 798 → 0 ms. Erä 3: `Esilataaja.Joutilas` (kohta 4) ja `SiirtoKohteetMuuttui`-ennakointi (kohta 5),
   `PeliOhjain.Esilataus.cs`; kylmän käynnistyksen kilpailutilanne korjattu (puheet odottavat luennat.json:ia).
   Raportti web #3240 (mergetty, esilataus-nykytila luku 5). Savuke: `ENNAKOINTI=1 Peli-testit/verkko-savuke.sh …`.
-- **Esilataaja erä 4** `pelikoodari/esilataaja-4` 4e4fc18b (esilataaja-3:n päälle; build 17 -juna) → merge-pyyntö Natiivisepälle:
+- **Esilataaja erä 4** `pelikoodari/esilataaja-4` 4e4fc18b (esilataaja-3:n päälle) → JUNASSA juna/b13 ac0aaadc (build 17):
   levysiivous 2 Gt (Levysiivous + LevyKarsinta, testit), kuvien LRU tavuina 200/300 Mt, Siirtosepän tiedostoväylä
   (`Kohde.Tiedosto`, `Pyyda`, `RyhmaValmis`, `PeruRyhma`; Range todennettu lokit/esilataaja-4-testi). Komennot `levy [Mt]`,
   `tiedosto osoite polku`. Siirtoseppälle ilmoitettu.
