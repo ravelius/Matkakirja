@@ -5567,3 +5567,7 @@ Linssisepän jono: seuraava kierros 4 kun build 14 -juna on käännetty.
 ## NATIIVISEPAN LUOVUTUS -20260925-d.md (selvittaja-3d-luovutus b029ecbe0) + ALOITUSVIESTI, NOLLAUS: juna/b13 066c01fb SISALTAA 111, 112, 81–83, 86/89, C16; EI VIELA JUNASSA (TODENNUS KESKEN): kerma-25 d679fdb3, verho-ohita dbcc0eb1 (OHITA VERHON PAALLA, KAANNOS 40a1e50d VALMIS, SIMUKUVAUS EPAONNISTUI BOOT-AJOITUKSEN TAKIA), maakunnat-kaikki 86e9b4ca (KUVAPARI PUUTTUU) (25.9.2026 klo 16.00)
 
 Aloitusviesti uudelle Natiivisepälle, kun Postivahti ilmoittaa nollauksesta.
+
+## FABLE (TYONJOHTAJAN HARKINTA, OMISTAJA KYSYI MILLOIN TESTAA): BUILD 14 LEIKATAAN JUNAN KARJESTA 066c01fb HETI — LAITETESTAAJAN SAVUKIERROS KAANNOKSEN JALKEEN, JULKAISIJA VIE 1.0.14 PASSIN JALKEEN (ARVIO klo 17.00); BUILD 15 ILLALLA LOPUISTA (94/102/90, 112 SAVYTYS, KERMA-25, OHITA VERHON PAALLA, MAAKUNNAT-KAIKKI, 95 PILOTTIKUVAT) ARVIO klo 19 (25.9.2026 klo 16.03)
+
+Kaksi buildia, jotta omistaja pääsee testaamaan aloituslennon ja aloitusnäytön kokonaisuuden ennen iltaa.
