@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 16:32 EEST
+**Päivitetty:** 2026-09-25 16:37 EEST (KIIREELLINEN levyhälytys)
 
 ## 1) Sessiot
 
@@ -56,9 +56,5 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy:** 183 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 1 (iPad Pro 13" M5). coreaudiod 4 %. **Chrome-GPU-prosesseja:** 3.
-- **5 h -kiintiö:** 79 % (nollautuu 17:30 EEST, ~57 min), ei vielä 85 %. **Viikko (kaikki mallit):** 21 %. **Viikko (Fable):** 10 %.
-- **Konteksti:** Karttaseppä 52 %, Sisältökirjuri 51 %, Natiivi-UI 50 %, Fable 61 %. Ei uusia ylityksiä.
-- **Juna:** viimeisin KÄÄNNETTY 16:04; juna/b13 67630aa5 uusi 16:30, alle 25 min.
-- **Postilaatikko:** uusi commit 4f9f57fa2 (Sisältökirjuri → Kuvaputki: 64 kohtauskuvaa leikattuina), ilmoitettu Fablelle. **Avoimia PR:iä:** 14.
+- **LEVYHÄLYTYS (kiireellinen, ilmoitettu Fablelle 16:37):** Karttasepän GLO-30-nouto (glo30-maailma.sh, alkoi 16:34, tavoite 589 GB, arvio 5,5–8 h) kirjoittaa /Users/Shared/Claude/dem-lataus/, joka on PAIKALLISELLA levyllä (/System/Volumes/Data), EI NAS:issa (NAS-liitos on /Volumes/NAS-Homes, dem-lataus ei ole sen alla). Levyllä vapaana 183 Gt — 589 GB lataus rikkoo 35 Gt -turvarajan kesken kaiken. Seuranta: /Users/Shared/Claude/dem-lataus/glo30-maailma.seuranta (Karttasepän mukaan päivittyy 30 min välein; loppurivi "VALMIS, eheys OK" tai "KESKEN … aja uudelleen"; jos ei riviä >1h, prosessi kuollut, jatko: bash glo30-maailma.sh).
+- **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
