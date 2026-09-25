@@ -2963,4 +2963,112 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen – samalla kadulla asui samaan aikaan Lenin.',
     },
   },
+  /*
+   * PRT (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.PRT:n tunnuksia
+   * (18 manner-Portugalin piiriä + autonomiset alueet Azorit ja
+   * Madeira). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Aveiro           — Aveiro, Portugal ("Portuguese Venice", moliceiro-
+   *                      veneet keräsivät moliço-levää, nyt matkailijoita)
+   *   Azores           — Mount Pico (2 351 m, Portugalin korkein vuori)
+   *   Beja             — Mértola (Matriz oli moskeija, kirkoksi 1238
+   *                      valloituksen jälkeen, rakenne säilytettiin)
+   *   Braga            — Bom Jesus funicular (25.3.1882, maailman vanhin
+   *                      vesipainolla kulkeva köysirata)
+   *   Bragança         — Mirandese language (laki 7/99, 29.1.1999; noin
+   *                      3 500 puhujaa 2020)
+   *   Castelo Branco   — Monsanto (Idanha-a-Nova) (portugalilaisin kylä
+   *                      1938, talot lohkareiden väliin)
+   *   Coimbra          — Biblioteca Joanina (lepakot syövät hyönteisiä)
+   *   Évora            — Capela dos Ossos (noin 5 000 vainajaa, "We bones
+   *                      that are here await yours")
+   *   Faro             — Cape St. Vincent (Manner-Euroopan lounaisin kärki,
+   *                      majakka näkyy 60 km)
+   *   Guarda           — Guarda, Portugal (1 056 m, korkein kaupunki,
+   *                      viisi F:ää, Fria = kylmä)
+   *   Leiria           — Nazaré Canyon (noin 5 000 m syvä, Praia do Norte,
+   *                      Steudtnerin 26,2 m ennätys 2020)
+   *   Lisboa           — Cabo da Roca (Manner-Euroopan läntisin kärki,
+   *                      Sintra, majakka 165 m merenpinnasta)
+   *   Madeira          — Levada (Madeira) (yli 2 170 km, kävelyreitit)
+   *   Portalegre       — Elvas (maailman suurin kuivien vallihautojen
+   *                      bastionijärjestelmä, Unesco 2012)
+   *   Porto            — Vila Nova de Gaia (portviinikellarit "caves",
+   *                      suuri matkailunähtävyys)
+   *   Santarém         — Festa dos Tabuleiros (Tomar, joka 4. vuosi
+   *                      heinäkuussa, 30 leipää tarjottimessa)
+   *   Setúbal          — Setúbal ("A dolphin colony inhabits the Sado
+   *                      River", Arrábidan kukkulat)
+   *   Viana do Castelo — Gil Eannes (ship) (sairaalalaiva turskalaivastolle
+   *                      1955–1973, museo satamassa)
+   *   Vila Real        — Mateus Palace (Nasoni, antaa nimen Mateus-
+   *                      roseelle)
+   *   Viseu            — Lamego (686 porrasta, Nossa Senhora dos Remédios;
+   *                      "Legend holds" ensimmäiset Cortes 1143)
+   */
+  PRT: {
+    Aveiro: {
+      lyhyt: 'Aveiroa kutsutaan Portugalin Venetsiaksi: moliceiro-veneet keräsivät ennen kanavilla levää, nyt ne kuljettavat matkailijoita.',
+    },
+    Azores: {
+      lyhyt: 'Azorien Pico-saaren tulivuori kohoaa keskellä Atlanttia 2 351 metriin – se on koko Portugalin korkein vuori.',
+    },
+    Beja: {
+      lyhyt: 'Mértolan pääkirkko oli alun perin moskeija, ja kun kaupunki valloitettiin 1238, rakennus muutettiin kirkoksi muotoaan hävittämättä.',
+    },
+    Braga: {
+      lyhyt: 'Bom Jesus do Monten pyhäkölle nousee vuodesta 1882 köysirata, jota liikuttaa yhä vesipaino – maailman vanhin laatuaan.',
+    },
+    'Bragança': {
+      lyhyt: 'Miranda do Douron seudulla puhutaan omaa mirandeesin kieltä, joka tunnustettiin virallisesti 1999 – puhujia on noin 3 500.',
+    },
+    'Castelo Branco': {
+      lyhyt: 'Monsanton kylän talot on muurattu jättimäisten graniittilohkareiden väliin, ja 1938 se valittiin Portugalin portugalilaisimmaksi kyläksi.',
+    },
+    Coimbra: {
+      lyhyt: 'Coimbran yliopiston barokkikirjastossa Biblioteca Joaninassa asuu lepakoita, jotka syövät öisin kirjoja uhkaavat hyönteiset.',
+    },
+    'Évora': {
+      lyhyt: 'Évoran Luukappelin seinät on vuorattu noin 5 000 vainajan luilla, ja oven yllä lukee: me luut täällä odotamme teidän luitanne.',
+    },
+    Faro: {
+      lyhyt: 'Algarven Cabo de São Vicente on Manner-Euroopan lounaisin kärki, ja sen majakan valo näkyy merelle 60 kilometrin päähän.',
+    },
+    Guarda: {
+      lyhyt: 'Guarda on 1 056 metrissä Portugalin korkeimmalla sijaitseva kaupunki, ja sitä kutsutaan viiden F:n kaupungiksi – yksi niistä on fria, kylmä.',
+    },
+    Leiria: {
+      lyhyt: 'Nazarén edustalla kulkee noin 5 000 metriä syvä merenalainen kanjoni, joka nostaa Praia do Norten jättiaallot – niillä on surffattu maailmanennätyksiä.',
+    },
+    Lisboa: {
+      lyhyt: 'Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta.',
+    },
+    Madeira: {
+      lyhyt: 'Madeiran vuorenrinteillä kiemurtelee yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja.',
+    },
+    Portalegre: {
+      lyhyt: 'Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on Unescon maailmanperintöä.',
+    },
+    Porto: {
+      lyhyt: 'Douron etelärannalla Vila Nova de Gaian kellareissa kypsyy portviini, ja kellareista on tullut Porton seudun suuri nähtävyys.',
+    },
+    'Santarém': {
+      lyhyt: 'Tomarin Festa dos Tabuleirosissa tytöt kantavat päänsä päällä 30 leivästä pinottuja kukkatarjottimia – juhla pidetään joka neljäs vuosi.',
+    },
+    'Setúbal': {
+      lyhyt: 'Setúbalin Sadojoessa elää delfiiniyhdyskunta, ja kaupungin kupeessa kohoavat Arrábidan luonnonpuiston kukkulat.',
+    },
+    'Viana do Castelo': {
+      lyhyt: 'Viana do Castelon satamassa on sairaalalaiva Gil Eannes, joka saattoi turskanpyytäjiä Newfoundlandiin 1955–1973 – nyt se on museo.',
+    },
+    'Vila Real': {
+      lyhyt: 'Vila Realin barokkipalatsi Mateus on antanut nimensä Mateus-roseeviinille, ja sen suunnitteli 1700-luvulla Nicolau Nasoni.',
+    },
+    Viseu: {
+      lyhyt: 'Lamegossa kiivetään 686 porrasta Nossa Senhora dos Remédiosin barokkikirkolle, ja tarun mukaan Portugalin ensimmäiset säätykokoukset pidettiin täällä 1143.',
+    },
+  },
 };
