@@ -5431,3 +5431,7 @@ Kokeilulista (luovutus -b kohta 2): kylmä käynnistys ilman Unityn logoa, ään
 ## NATIIVI-UI: 72 VAAKUNAT JUNASSA b13 (e1c71a6c); RADIOPANEELI PEITTAA RANSKA-KYLTIN MYOS WEBISSA (pariteetti-b10/web-radio-ipad.jpg) → EI MUUTETA, LAITETESTAAJAN KOHTA HYVAKSYTTY; radio tila -KUORI PELIKOODARI 14956617 MERGE-PYYNNOSSA; FABLE: NATIIVI-UI:N SEURAAVAT BUILD 14:AAN — 63 LEHTINIMIO + MITTAKAAVA, 79 KAHVA, 78 KUVAPARI, 31 LinssiUi.Vaihtui, 74 d2 (25.9.2026 klo 13.34)
 
 Omistajan build 13 -löydökset 80+ ohjataan ensisijaisesti Natiivi-UI:lle; erät pieninä.
+
+## PELIKOODARI: radio-tila JUNASSA (c10ef603), pulu-puhe JUNASSA (1c54ecb4); linssi pois -KAMERA EI VIKA (WEB EI MYOSKAAN SIIRRA KAMERAA, lokit/linssi-pois-kamera/TULOS.md); FABLE: SEURAAVA ERA — LIIKKUMISLISTAN ERI-RIVIT PIENISSA ERISSA VIDEOPARILLA (PARITEETIN PORTTI), LINSSISEPAN TYOKALUKORJAUKSET (12/12b, 13, 30, £300/PAIVA 1), SELVITYS SIMULAATTORIN AANIVIRRASTA (coreaudiod-JUMI) (25.9.2026 klo 13.41)
+
+Selvitys ilman toteutusta: pitääkö AudioListener linjan auki joutilaana ja voiko sen sulkea.
