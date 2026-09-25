@@ -4967,3 +4967,7 @@ Omistajalle ilmoitettu. Sisältö: löydökset 46, 48, 49, 50, 52, radio kokonaa
 ## OMISTAJA klo 04.3x: MIKSI 4 YDINTA YOLLA KUN KONE VAPAA — FABLEN VIRHE, KORJATTU: PERUSKARTTAPOLTTO NYT 16 YTIMELLA (POHJA ~06.15, PALLO Z0–Z9 ~08.45), 4 YTIMEEN VAIN MITTAUSIKKUNASSA TAI TF-AJON AJAKSI (25.9.2026 klo 04.36)
 
 Sääntö ennallaan: --ytimet 4 päivällä, täysi yöllä; poltto alkoi TF:n jälkeen 04.3x.
+
+## NATIIVISEPPA 70 % → LUOVUTUS JA NOLLAUS KASKETTY (LUOVUTUS -20260925.md, clear_session SAMASSA VUOROSSA, LEPOILMOITUS TILATTU) (25.9.2026 klo 04.37)
+
+Postivahdin ilmoitus klo 04.4x.
