@@ -395,12 +395,11 @@ namespace Matkakirja.Natiivi
             kierto.PelaajanEle += KarttaKosketettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
             SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
-            // Lehti peittää pallon: pallo piirtää harvemmin sen ajan (NakymaPeitetty).
-            if (lehtiNakyma != null)
-            {
-                SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.Auki);
-                lehtiNakyma.Suljettu += LehtiSuljettu;
-            }
+            // LÖYDÖS 101 (maalehtien tahmea vieritys laitteella): lehteä EI rekisteröidä näkymäpeitoksi. Peitto asettaa
+            // OnDemandRendering.renderFrameInterval = 4 (PalloKierto.PaivitaPeitto), joka harventaa KOKO Unityn piirron
+            // eikä vain palloa. Se oli tehty WKWebView-lehdelle, jonka iOS piirsi itse; nykyinen lehti on UI Toolkit -näkymä
+            // samassa piirrossa, joten se päivittyi 60 Hz:n näytöllä vain 15 fps:llä, ja vieritys ja heitto nykivät.
+            if (lehtiNakyma != null) lehtiNakyma.Suljettu += LehtiSuljettu;
             AlustaAanet();
 
             if (File.Exists(PoisPolku))
