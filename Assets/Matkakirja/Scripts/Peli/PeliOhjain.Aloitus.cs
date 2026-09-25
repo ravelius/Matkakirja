@@ -43,8 +43,8 @@ namespace Matkakirja.Natiivi
         {
             // Löydös 110 (omistaja 25.9. klo 14.5x): kiinteä kesto kohteen etäisyydestä riippumatta
             // (LennonAikajana.AloituslennonKestoS); ennen 16–26 s reitin pituuden mukaan (LennonAikajana.Kesto).
-            float repliikki = Mathf.Min((float)LennonAikajana.PisinS, (float)(luennat.LentoAlku?.Kesto ?? LentoAlkuOletusS) + 1f);
-            return Mathf.Max((float)LennonAikajana.AloituslennonKestoS, repliikki);
+            // Omistajan päätös 25.9.: 10 s myös, vaikka lentorepliikki on pidempi (ei enää max(kesto, repliikki + 1 s)).
+            return (float)LennonAikajana.AloituslennonKestoS;
         }
 
         /// <summary>
