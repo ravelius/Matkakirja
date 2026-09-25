@@ -38,6 +38,9 @@ ui() { print -r -- "$1" > $DOC/ui-komento.txt; sleep ${2:-2}; }
 linssi() { print -r -- "$1" > $DOC/linssi-komento.txt; sleep ${2:-2}; }
 odota_loki() { for i in {1..${2:-60}}; do grep -q "$1" $OUT/konsoli.log && return 0; sleep 1; done; echo "ei lokiriviä: $1"; }
 
+# Aloitusverho mitataan loppuun ennen matkaa (Natiiviseppä 25.9.: uusi-matka kesken verhon mittasi lennon mustaa).
+odota_loki "aloitusverho: pois" 30
+sleep 1
 peli "uusi-matka ateena" 3
 odota_loki "aloituslento: musta" 90
 odota_loki "luento matkakirja:ateena" 90
