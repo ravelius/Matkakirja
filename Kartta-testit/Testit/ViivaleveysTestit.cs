@@ -108,5 +108,41 @@ namespace Matkakirja.Kartta.Testit
                     Oleta.Tosi(Math.Abs(integraali - w) < 0.01 && pt >= 0, $"w {w} k {k}: pt {pt:0.000} alfa {a:0.00} → {integraali:0.000}");
                 }
         }
-}
+
+        // ---- Kehän paino (löydös 127: "raja joka tapauksessa kevyempi") ----
+
+        [Testi]
+        static void KehanPainotKevyemmatKuinWeb()
+        {
+            var W = Viivaleveys.KehanPaino.Web; var K = Viivaleveys.KehanPaino.Kevyt; var KK = Viivaleveys.KehanPaino.Kevein;
+            Oleta.Tosi(Viivaleveys.KehaPt(0, double.NaN, K) == 1.0 && Viivaleveys.KehaPt(1000, double.NaN, K) == 1.8, "kevyt 1,0–1,8");
+            Oleta.Tosi(Viivaleveys.KehaPt(0, double.NaN, KK) == 0.8 && Viivaleveys.KehaPt(1000, double.NaN, KK) == 1.2, "kevein 0,8–1,2");
+            Oleta.Tosi(Viivaleveys.KehaPt(240) == Viivaleveys.KehaPt(240, double.NaN, W), "oletus = web");
+            Oleta.Tosi(Viivaleveys.KehaPt(240, 1.2, K) == 1.2, "kiinteä leveys ohittaa painon");
+            for (double t = 0; t <= 300; t += 10)
+            {
+                double web = Viivaleveys.KehaPt(t, double.NaN, W) * Viivaleveys.KehaPeitto(W);
+                double kevyt = Viivaleveys.KehaPt(t, double.NaN, K) * Viivaleveys.KehaPeitto(K);
+                double kevein = Viivaleveys.KehaPt(t, double.NaN, KK) * Viivaleveys.KehaPeitto(KK);
+                double raja = Viivaleveys.Pt(t, Viivaleveys.RajaKaukana, Viivaleveys.RajaLahella);
+                // Mustetta (leveys × peitto) vähemmän kuin webin korostuksessa, mutta viiva yhä leveämpi kuin naapurien raja.
+                Oleta.Tosi(kevein < kevyt && kevyt < 0.55 * web, $"tiheys {t}: muste {web:0.00} / {kevyt:0.00} / {kevein:0.00}");
+                Oleta.Tosi(Viivaleveys.KehaPt(t, double.NaN, KK) > raja, $"tiheys {t}: kevein {Viivaleveys.KehaPt(t, double.NaN, KK):0.00} > raja {raja:0.00}");
+            }
+            Oleta.Tosi(Viivaleveys.KehaPeittoNatiivi(W) == 1.0, "täysi peitto pysyy");
+            double kn = Viivaleveys.KehaPeittoNatiivi(K), kkn = Viivaleveys.KehaPeittoNatiivi(KK);
+            Oleta.Tosi(kn >= 0.8 && kn < 1 && kkn >= 0.6 && kkn < kn, $"natiivi {kn:0.000} / {kkn:0.000}");
+            Console.WriteLine($"      kehä: kevyt peitto 0,8 → natiivi {kn:0.000}, kevein 0,6 → {kkn:0.000}");
+        }
+
+        [Testi]
+        static void KehanPainoKomennosta()
+        {
+            Oleta.Tosi(Viivaleveys.LueKehanPaino("web", out var p) && p == Viivaleveys.KehanPaino.Web, "web");
+            Oleta.Tosi(Viivaleveys.LueKehanPaino("nykyinen", out p) && p == Viivaleveys.KehanPaino.Web, "nykyinen = web");
+            Oleta.Tosi(Viivaleveys.LueKehanPaino("kevyt", out p) && p == Viivaleveys.KehanPaino.Kevyt, "kevyt");
+            Oleta.Tosi(Viivaleveys.LueKehanPaino("kevein", out p) && p == Viivaleveys.KehanPaino.Kevein, "kevein");
+            Oleta.Tosi(!Viivaleveys.LueKehanPaino("paksu", out _), "tuntematon");
+        }
+    }
 }

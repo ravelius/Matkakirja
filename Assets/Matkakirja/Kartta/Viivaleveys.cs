@@ -8,6 +8,7 @@ namespace Matkakirja
     /// liukuu lineaarisesti päätteiden [kaukana, lähellä] välillä ruudun tiheyden (laitepikseliä leveysastetta kohti
     /// ruudun keskellä) mukaan välillä VEKTORIT_LEVEYS_TIHEYS [25, 250]. Webin arvot (origin/main 24.9.2026):
     ///   korostus (pelaajan maan kehä)  [1,6; 3] css-px, peitto 1, RAJA_MUSTE #6b5539, piirtyy rannikkoviivan ALLE
+    ///                                  (natiivissa löydös 127:n jälkeen kevyempi ja vain maiden välillä, ks. KEHÄN PAINO)
     ///   rannikko                       [0,8; 1,2] css-px, peitto 0,58, RANTA_MUSTE #5a4330
     ///   rajat                          [0,65; 0,95] css-px, peitto 0,34, RAJA_MUSTE, katkoviiva RAJA_KATKO_YKS
     /// Natiivissa css-px = iOS-piste; laitepikselit = pisteet × PalloKierto.Pistekerroin (iPad 2, iPhone 3), sama kuin
@@ -30,9 +31,50 @@ namespace Matkakirja
             return kaukana + (lahella - kaukana) * t;
         }
 
-        /// <summary>Pelaajan maan kehä (webin korostus) pisteinä; ohitus &gt; 0 = kiinteä leveys (komento "maaraja paksuus").</summary>
-        public static double KehaPt(double tiheys, double ohitusPt = double.NaN) =>
-            ohitusPt > 0 ? ohitusPt : Pt(tiheys, KorostusKaukana, KorostusLahella);
+        // ---- KEHÄN PAINO (omistajan löydös 127, build 16 → 17: "raja joka tapauksessa kevyempi") ----
+        //
+        // WEBISSÄ EI OLE KEVYEMPÄÄ VASTINETTA: webin korostus on yhä [1,6; 3] css-px täydellä RAJA_MUSTEella (KOROSTUS_PEITTO 1,
+        // js/pallovektorit.js origin/main 25.9.), ja muiden maiden raja on [0,65; 0,95] katkoviivana peitolla 0,34. Kevyempi
+        // paino on näiden väliltä: yhtenäinen ja yhä selvästi naapurien rajaa leveämpi, jotta oma maa erottuu, mutta mustetta
+        // (leveys × peitto) Kevyt noin puolet (lähellä 1,8 × 0,8 = 1,44 vs. 3) ja Kevein noin neljännes (1,2 × 0,6 = 0,72)
+        // webin korostuksesta; Kevein on webin rantaviivan leveys [0,8; 1,2]. Leveys liukuu tiheyden mukaan samalla lailla
+        // (Pt). Peitto on webin sRGB-sekoituksena; natiivi muuntaa sen lineaariseksi maan pohjalla (KehaPeittoNatiivi),
+        // kuten aluerajoilla, koska kehä kulkee nyt vain maalla maiden välissä.
+
+        /// <summary>Pelaajan maan kehän paino: Web = webin korostus (build 16 asti), Kevyt ja Kevein = löydös 127.</summary>
+        public enum KehanPaino { Web, Kevyt, Kevein }
+        public const double KevytKaukana = 1.0, KevytLahella = 1.8, KevytPeitto = 0.8;
+        public const double KeveinKaukana = 0.8, KeveinLahella = 1.2, KeveinPeitto = 0.6;
+
+        /// <summary>
+        /// Pelaajan maan kehä pisteinä painolla (oletus Web = webin korostus); ohitus &gt; 0 = kiinteä leveys (komento
+        /// "maaraja paksuus").
+        /// </summary>
+        public static double KehaPt(double tiheys, double ohitusPt = double.NaN, KehanPaino paino = KehanPaino.Web) =>
+            ohitusPt > 0 ? ohitusPt
+            : paino == KehanPaino.Kevyt ? Pt(tiheys, KevytKaukana, KevytLahella)
+            : paino == KehanPaino.Kevein ? Pt(tiheys, KeveinKaukana, KeveinLahella)
+            : Pt(tiheys, KorostusKaukana, KorostusLahella);
+
+        /// <summary>Kehän peitto webin sRGB-sekoituksena (Web = KOROSTUS_PEITTO 1).</summary>
+        public static double KehaPeitto(KehanPaino paino) =>
+            paino == KehanPaino.Kevyt ? KevytPeitto : paino == KehanPaino.Kevein ? KeveinPeitto : 1.0;
+
+        /// <summary>Kehän peitto natiivin lineaarisessa sekoituksessa maan pohjalla (1 pysyy 1:nä).</summary>
+        public static double KehaPeittoNatiivi(KehanPaino paino) =>
+            NimiLadonta.LineaarinenAlfa(Vektorisolut.RajaMuste, KehaPeitto(paino), NimiLadonta.PohjaMaa);
+
+        /// <summary>Komennon sana painoksi: web|nykyinen → Web, kevyt → Kevyt, kevein → Kevein; muu = false.</summary>
+        public static bool LueKehanPaino(string sana, out KehanPaino paino)
+        {
+            switch (sana)
+            {
+                case "web": case "nykyinen": paino = KehanPaino.Web; return true;
+                case "kevyt": paino = KehanPaino.Kevyt; return true;
+                case "kevein": paino = KehanPaino.Kevein; return true;
+                default: paino = KehanPaino.Web; return false;
+            }
+        }
 
         /// <summary>Rajaviivan puolen peiton leveys laitepikseleinä: pt · kerroin + 0,5.</summary>
         public static double NakyvaLaitePx(double pt, double kerroin) => pt * kerroin + 0.5;

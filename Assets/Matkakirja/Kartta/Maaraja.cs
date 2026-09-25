@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Text;
 using System.Threading.Tasks;
 using CesiumForUnity;
 using Matkakirja.Linssit.Maat;
@@ -15,7 +12,7 @@ namespace Matkakirja
     /// <summary>
     /// PELAAJAN MAAN ÄÄRIVIIVA (omistajan build 5 -löydös 2, osa 3; web on oletus): webin pallon
     /// korostuskehä (js/pallovektorit.js korostaMaa, kutsujana js/maanaariviivat.js). Muiden maiden
-    /// rajat ovat poltettuina pohjalaatoissa, joten vektorina piirretään vain nykyinen maa.
+    /// rajat piirtää Rajat-kerros (vektorina), joten tässä piirretään vain nykyinen maa.
     ///
     /// Webin säännöt: muste RAJA_MUSTE #6b5539 täytenä (KOROSTUS_PEITTO 1), yhtenäinen viiva,
     /// leveys VEKTORIT_KOROSTUS_LEVEYS_CSS [1,6; 3] css-px liukuen ruudun tiheyden mukaan
@@ -25,6 +22,16 @@ namespace Matkakirja
     /// VEKTORIT_HAIVE_MS 260 ms (ease-out, 1 − (1 − t)³); vanha poistuu heti (vapautaKorostus).
     /// Kehä pois linssin ajaksi samalla portilla kuin kaupunkipisteet (lauta.js linssiPaalla).
     ///
+    /// LÖYDÖS 127 (omistaja 25.9.2026 klo 22.3x, build 16 → 17, sitova): "Maanraja vain kahden maan välillä, ei niiltä
+    /// osin, joissa maa loppuu mereen; raja joka tapauksessa kevyempi." Kaksi muutosta webin korostukseen:
+    ///  1. VAIN MAA–MAA-RAJAT: kehä piirretään Karttasepän maa–maa-rajoista (<see cref="MaamaaPolku"/>, PR #3248:
+    ///     samat kärjet kuin maapolygonit.geojsonissa, rannikko-osuudet pois; saarimaat tyhjiä, sisämaa kuten CHE koko
+    ///     renkaana) AVOIMINA viivoina (Kehaviivat: ei sulkevaa janaa). Jos tiedosto ei lataudu, varana vanha polku:
+    ///     koko rengas maapolygonit.geojsonista (<see cref="GeojsonPolku"/>) ja sen puuttuessa sisältöpaketin
+    ///     maarajat.json. Komento "maaraja rengas paalle" näyttää vanhan koko renkaan vertailuun.
+    ///  2. KEVYEMPI: leveys ja peitto painosta <see cref="Paino"/> (Viivaleveys.KehanPaino; oletus Kevyt, webin korostus
+    ///     komennolla "maaraja paino web"). Webissä ei ole kevyempää vastinetta (ks. Viivaleveys).
+    ///
     /// Maa: sama kuin väritasolla (<see cref="Varitaso.Kohde"/>), koska webissä korostusIso ohjaa
     /// molempia. Kohde eikä Varitaso.Maa: maa ilman värisarjaa (RUS, ISL …) saa silti kehän,
     /// kuten webissä, jossa kehä tulee maapolygoneista eikä värilaatoista. Ilman väritasoa sama
@@ -33,24 +40,24 @@ namespace Matkakirja
     /// Aineisto (omistajan build 7 -löydös 22 kohta 2: kehän oltava yhtä tarkka kuin webissä): sama
     /// lähde kuin webin kehällä, assets/data/maapolygonit.json (Natural Earth 10m admin-0, DP 0,2
     /// lautayksikköä, rannikko GSHHG full), jonka Karttaseppä muunsi lon/lat-GeoJSONiksi ämpäriin
-    /// (<see cref="GeojsonPolku"/>, 135 maata, ~497 000 pistettä, ominaisuus "iso" = ISO3). Haetaan
-    /// laattapalvelimen kautta (offline-kansio → välimuisti → verkko) ja jäsennetään kerran
-    /// taustasäikeessä omalla kevyellä lukijalla (<see cref="Geojson"/>) maittain tauluksi. Jos tiedosto
-    /// ei tule (offline ilman latausta), varana sisältöpaketin karkea kokoelmat/maarajat.json.
+    /// (<see cref="GeojsonPolku"/>, 135 maata, ~497 000 pistettä, ominaisuus "iso" = ISO3), ja siitä jaettu
+    /// maamaa.geojson (MultiLineString). Haetaan laattapalvelimen kautta (offline-kansio → välimuisti → verkko) ja
+    /// jäsennetään kerran taustasäikeessä omalla kevyellä lukijalla (<see cref="Geojson"/>) maittain tauluksi.
     /// Nauha piirretään Rajaviiva-varjostimella omalla materiaalikopiolla.
     ///
     /// LÖYDÖS 46 JATKO (omistajan kuva Kreikasta, build 11: "paksu tumma kehä rantojen ympärillä"): leveys on jo webin
     /// arvo (Viivaleveys: 1,6–3 pt × Pistekerroin = webin css × dpr, peitto 1, #6b5539), mutta kuvassa kehä oli noin
     /// 8,6 laitepikseliä 6:n sijaan. Syy: janojen neliöjatke porrasmaisilla rannoilla täytti kulmat; web piirtää
-    /// korostuksen päätypyörylöillä. Rajaviiva-varjostin tekee nyt pyöreät päät. Toinen ero webiin jää: webissä kehä
-    /// piirtyy ohuen rannikkoviivan (0,8–1,2 css, peitto 0,58) ALLE ja naulataan rannikkoaineistoon; natiivissa
-    /// rannikko on poltettu laattaan ja kehä piirtyy sen päälle.
+    /// korostuksen päätypyörylöillä. Rajaviiva-varjostin tekee nyt pyöreät päät (myös avoimen viivan päihin).
     /// </summary>
     public class Maaraja : MonoBehaviour
     {
         /// <summary>Webin RAJA_MUSTE (paletin --raja-muste), sRGB.</summary>
         public static readonly Color Muste = new Color32(0x6b, 0x55, 0x39, 0xff);
-        /// <summary>Leveys css-pikseleinä [kaukana, lähellä] (web VEKTORIT_KOROSTUS_LEVEYS_CSS).</summary>
+        /// <summary>
+        /// Webin leveys css-pikseleinä [kaukana, lähellä] (web VEKTORIT_KOROSTUS_LEVEYS_CSS; paino Web). Löydös 127:n jälkeen
+        /// käytössä oleva leveys tulee painosta (Viivaleveys.KehaPt).
+        /// </summary>
         public static readonly Vector2 LeveysCss = new Vector2((float)Viivaleveys.KorostusKaukana, (float)Viivaleveys.KorostusLahella);
         /// <summary>Tiheyden liukuma laitepikseleinä astetta kohti (web VEKTORIT_LEVEYS_TIHEYS).</summary>
         public static readonly Vector2 LeveysTiheys = new Vector2((float)Viivaleveys.TiheysKaukana, (float)Viivaleveys.TiheysLahella);
@@ -67,25 +74,45 @@ namespace Matkakirja
         /// </summary>
         public const int Jono = 2995;
         /// <summary>
-        /// Kehän aineisto ämpärissä (Karttasepän maapolygonit.geojson, content-encoding gzip). Myös
-        /// offline-latauksen "maailma"-alueessa (Alueet.Polut).
+        /// Kehän koko renkaat ämpärissä (Karttasepän maapolygonit.geojson, content-encoding gzip): löydös 127:n jälkeen
+        /// VARA, jos <see cref="MaamaaPolku"/> ei lataudu, ja komento "maaraja rengas paalle". Myös offline-latauksen
+        /// "maailma"-alueessa (Alueet.Polut).
         /// </summary>
         public const string GeojsonPolku = "julisteet/pallo/vektorit/maapolygonit-2026-09-24/maapolygonit.geojson";
+        /// <summary>
+        /// Maa–maa-rajat (löydös 127, Karttaseppä 25.9.2026, PR #3248; tools/maarajat-maamaa.mjs): FeatureCollection,
+        /// properties.iso = ISO3, MultiLineString lon/lat, samat kärjet kuin <see cref="GeojsonPolku"/>issa mutta vain
+        /// osuudet, joiden toisella puolella on toinen maa (myös pelin ulkopuoliset naapurit). Gzip, 307 kt. Myös
+        /// offline-latauksen "maailma"-alueessa.
+        /// </summary>
+        public const string MaamaaPolku = "julisteet/pallo/vektorit/maarajat-2026-09-25/maamaa.geojson";
 
         /// <summary>Kehä sallittu (komento "maaraja pois" = false; oletus true).</summary>
         public static bool Sallittu = true;
         /// <summary>
         /// Kehä myös vektorirannan kanssa. Oletus true: KOTIMAAN KOROSTUS (omistajan build 13 -lista 25.9.2026 ja
         /// Linssisepän kierros 3 rivi 39, web lauta.js paivitaPallonMaakorostus): kotimaa kehällä kuten webissä. Kehä
-        /// piirtyy rannan alle (Jono 2995 &lt; Rannikko.RantaJono 2997), joten rannikolla ei synny kaksoisviivaa.
+        /// piirtyy rannan alle (Jono 2995 &lt; Rannikko.RantaJono 2997). Löydösten 126–127 jälkeen rantaviiva on oletuksena
+        /// pois ja kehä kulkee vain maiden välillä, joten rannikolla ei ole kumpaakaan.
         /// Korvaa 25.9. klo 00.0x:n päätöksen (kehä pois, kun Rannikko piirtyy). Komento "maaraja pois" vertailuun.
         /// </summary>
         public static bool Pakota = true;
-        /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = webin laki [1,6; 3].</summary>
+        /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = painon laki (<see cref="Paino"/>).</summary>
         public static float PaksuusPt = float.NaN;
+        /// <summary>
+        /// Löydös 127: kehän paino. Oletus Kevyt ([1,0; 1,8] pt, peitto 0,8); omistaja valitsee kuvaparista
+        /// (lokit/rajat-126-128), ja valinta vaihdetaan tähän. Komento "maaraja paino web|kevyt|kevein|oletus".
+        /// </summary>
+        public const Viivaleveys.KehanPaino OletusPaino = Viivaleveys.KehanPaino.Kevyt;
+        public static Viivaleveys.KehanPaino Paino = OletusPaino;
+        /// <summary>
+        /// Koko rengas rannikkoineen kuten build 16:ssa (komento "maaraja rengas paalle|pois", vertailuun); oletus false =
+        /// vain maa–maa-rajat (löydös 127).
+        /// </summary>
+        public static bool KokoRengas;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaKokeilut() { Sallittu = true; Pakota = true; PaksuusPt = float.NaN; }
+        static void NollaaKokeilut() { Sallittu = true; Pakota = true; PaksuusPt = float.NaN; Paino = OletusPaino; KokoRengas = false; }
 
         public CesiumGeoreference georeferenssi;
         public PalloKierto kierto;
@@ -98,14 +125,25 @@ namespace Matkakirja
         /// <summary>Maa (ISO3), jonka ääriviiva on nyt piirretty, tai null.</summary>
         public string Maa { get; private set; }
 
+        /// <summary>Koko renkaat (maapolygonit.geojson tai varana maarajat.json) maittain; ladataan vain tarvittaessa.</summary>
         Dictionary<string, List<(double Lon, double Lat)[]>> renkaat;
-        bool latausAlkanut;
+        /// <summary>Maa–maa-rajat avoimina viivoina (maamaa.geojson) maittain.</summary>
+        Dictionary<string, List<(double Lon, double Lat)[]>> maamaa;
+        bool renkaatHaussa, maamaaHaussa;
+        /// <summary>maamaa.geojson ei latautunut (tai oli tyhjä): varana koko rengas, vanha polku.</summary>
+        bool maamaaPuuttuu;
         string haluttu;
+        /// <summary>Viimeksi aloitettu rakennus: maa ja lähde (true = koko rengas).</summary>
+        string kohdeMaa;
+        bool kohdeKoko, kohdeAsetettu;
         Coroutine rakennus;
         MeshRenderer piirto;
         MeshFilter suodatin;
         Material oma;
         bool linssit, piilossa, nakyiEdella;
+        /// <summary>Painon peitto lineaarisena (lasketaan, kun paino vaihtuu).</summary>
+        Viivaleveys.KehanPaino peitonPaino = (Viivaleveys.KehanPaino)(-1);
+        float peittoNatiivi = 1f;
         float haiveAlku = -1f;
 
         // LÄMPÖERÄ (PallonLepo): uuden kehän häive 260 ms; kehän katoaminen on yksittäinen muutos (LateUpdate).
@@ -118,7 +156,6 @@ namespace Matkakirja
             if (georeferenssi == null) georeferenssi = GetComponentInParent<CesiumGeoreference>();
             if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
             if (varitaso == null) varitaso = GetComponent<Varitaso>();
-            if (materiaali != null && !latausAlkanut) StartCoroutine(Lataa());
         }
 
         void OnDestroy()
@@ -156,29 +193,42 @@ namespace Matkakirja
 
         void Update()
         {
+            if (materiaali == null) return;
             string maa = PelaajanMaa();
-            if (maa == haluttu) return;
             haluttu = maa;
-            if (renkaat == null) return; // Lataa rakentaa, kun aineisto on valmis.
+            // Löydös 127: maa–maa-rajat (maamaa.geojson); varana ja komennolla koko rengas (vanha polku).
+            bool koko = KokoRengas || maamaaPuuttuu;
+            var lahde = koko ? renkaat : maamaa;
+            if (lahde == null)
+            {
+                if (koko) { if (!renkaatHaussa) StartCoroutine(LataaRenkaat()); }
+                else if (!maamaaHaussa) StartCoroutine(LataaMaamaa());
+                return;
+            }
+            if (kohdeAsetettu && maa == kohdeMaa && koko == kohdeKoko) return;
+            kohdeAsetettu = true;
+            kohdeMaa = maa;
+            kohdeKoko = koko;
             if (rakennus != null) StopCoroutine(rakennus);
-            rakennus = StartCoroutine(Rakenna(maa));
+            rakennus = StartCoroutine(Rakenna(maa, lahde, koko));
         }
 
-        IEnumerator Lataa()
+        /// <summary>
+        /// Lataa GeoJSONin laattapalvelimen kautta ja jäsentää sen taustasäikeessä (null, jos ei tullut tai oli tyhjä).
+        /// Palvelin tallentaa ja palauttaa raakatavut ilman Content-Encoding-otsaketta: jos ämpäri antoi gzipin eikä
+        /// UnityWebRequest purkanut sitä, tavut alkavat 0x1f 0x8b ja ne puretaan tässä.
+        /// </summary>
+        static IEnumerator LataaGeojson(string polku, string nimi, string vara,
+            System.Action<Dictionary<string, List<(double Lon, double Lat)[]>>> valmis)
         {
-            latausAlkanut = true;
             Dictionary<string, List<(double Lon, double Lat)[]>> tulos = null;
-
-            // 1. Webin tarkka aineisto laattapalvelimen kautta. Palvelin tallentaa ja palauttaa
-            // raakatavut ilman Content-Encoding-otsaketta: jos ämpäri antoi gzipin eikä
-            // UnityWebRequest purkanut sitä, tavut alkavat 0x1f 0x8b ja ne puretaan tässä.
             byte[] tavut = null;
-            using (var pyynto = UnityWebRequest.Get(Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + GeojsonPolku)))
+            using (var pyynto = UnityWebRequest.Get(Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + polku)))
             {
                 pyynto.timeout = 45;
                 yield return pyynto.SendWebRequest();
                 if (pyynto.result == UnityWebRequest.Result.Success) tavut = pyynto.downloadHandler.data;
-                else Debug.LogWarning($"MATKAKIRJA ääriviiva: maapolygonit.geojson ei latautunut ({pyynto.responseCode} {pyynto.error}), varana maarajat.json");
+                else Debug.LogWarning($"MATKAKIRJA ääriviiva: {nimi} ei latautunut ({pyynto.responseCode} {pyynto.error}), varana {vara}");
             }
             if (tavut != null && tavut.Length > 0)
             {
@@ -193,24 +243,49 @@ namespace Matkakirja
                 tavut = null;
                 if (tehtava.IsFaulted)
                 {
-                    Debug.LogError("MATKAKIRJA ääriviiva: maapolygonit.geojson jäsennys kaatui: " + tehtava.Exception?.GetBaseException());
+                    Debug.LogError($"MATKAKIRJA ääriviiva: {nimi} jäsennys kaatui: " + tehtava.Exception?.GetBaseException());
                     tulos = null;
                 }
-                else if (tulos.Count == 0) tulos = null;
+                else if (tulos.Count == 0)
+                {
+                    Debug.LogWarning($"MATKAKIRJA ääriviiva: {nimi} tyhjä, varana {vara}");
+                    tulos = null;
+                }
                 else
                 {
-                    int pisteet = 0;
-                    foreach (var m in tulos.Values) foreach (var r in m) pisteet += r.Length;
-                    Debug.Log($"MATKAKIRJA ääriviiva: maapolygonit.geojson, {tulos.Count} maata, {pisteet} pistettä, jäsennys {kesto} ms");
+                    int viivat = 0, pisteet = 0;
+                    foreach (var m in tulos.Values) foreach (var r in m) { viivat++; pisteet += r.Length; }
+                    Debug.Log($"MATKAKIRJA ääriviiva: {nimi}, {tulos.Count} maata, {viivat} viivaa, {pisteet} pistettä, jäsennys {kesto} ms");
                 }
             }
+            valmis(tulos);
+        }
+
+        /// <summary>Löydös 127: Karttasepän maa–maa-rajat. Epäonnistuessa Update siirtyy vanhaan polkuun (koko rengas).</summary>
+        IEnumerator LataaMaamaa()
+        {
+            maamaaHaussa = true;
+            Dictionary<string, List<(double Lon, double Lat)[]>> tulos = null;
+            yield return LataaGeojson(MaamaaPolku, "maamaa.geojson", "koko rengas (maapolygonit.geojson)", t => tulos = t);
+            maamaaHaussa = false;
+            if (tulos != null) maamaa = tulos;
+            else maamaaPuuttuu = true;
+        }
+
+        /// <summary>Vanha polku: koko renkaat maapolygonit.geojsonista, varana sisältöpaketin karkea maarajat.json.</summary>
+        IEnumerator LataaRenkaat()
+        {
+            renkaatHaussa = true;
+            Dictionary<string, List<(double Lon, double Lat)[]>> tulos = null;
+            // 1. Webin tarkka aineisto.
+            yield return LataaGeojson(GeojsonPolku, "maapolygonit.geojson", "maarajat.json", t => tulos = t);
 
             // 2. Vara: sisältöpaketin karkea maarajat.json (kuten MaaKartta).
             if (tulos == null)
             {
                 string teksti = null;
                 yield return Sisalto.HaeTeksti("maarajat", t => teksti = t, true);
-                if (teksti == null) { Debug.LogWarning("MATKAKIRJA ääriviiva: maarajat.json puuttuu tästä paketista"); latausAlkanut = false; yield break; }
+                if (teksti == null) { Debug.LogWarning("MATKAKIRJA ääriviiva: maarajat.json puuttuu tästä paketista"); renkaatHaussa = false; yield break; }
                 var tehtava = Task.Run(() =>
                 {
                     var aineisto = MaatAineisto.LueRajat(Peli.MiniJson.Jasenna(teksti));
@@ -221,22 +296,28 @@ namespace Matkakirja
                 if (tehtava.IsFaulted)
                 {
                     Debug.LogError("MATKAKIRJA ääriviiva: maarajojen luku kaatui: " + tehtava.Exception?.GetBaseException());
-                    latausAlkanut = false;
+                    renkaatHaussa = false;
                     yield break;
                 }
             }
             renkaat = tulos;
-            if (haluttu != null) rakennus = StartCoroutine(Rakenna(haluttu));
+            renkaatHaussa = false;
         }
 
-        IEnumerator Rakenna(string maa)
+        /// <summary>
+        /// Kehä maalle: koko = renkaat (suljetaan), muuten maa–maa-rajojen avoimet viivat. Maa ilman viivoja (saarimaa
+        /// maamaa.geojsonissa, tai maa aineiston ulkopuolella) jää ilman kehää.
+        /// </summary>
+        IEnumerator Rakenna(string maa, Dictionary<string, List<(double Lon, double Lat)[]>> lahde, bool koko)
         {
             // Vanha kehä pois heti (web vapautaKorostus), uusi häivytetään sisään.
             Vapauta();
             Maa = null;
-            if (string.IsNullOrEmpty(maa) || !renkaat.TryGetValue(maa, out var maanRenkaat) || maanRenkaat.Count == 0)
+            if (string.IsNullOrEmpty(maa) || !lahde.TryGetValue(maa, out var viivat) || viivat.Count == 0)
             {
-                if (!string.IsNullOrEmpty(maa)) Debug.Log($"MATKAKIRJA ääriviiva: {maa} ei aineistossa");
+                if (!string.IsNullOrEmpty(maa))
+                    Debug.Log(koko ? $"MATKAKIRJA ääriviiva: {maa} ei aineistossa"
+                                   : $"MATKAKIRJA ääriviiva: {maa} ei maa–maa-rajoja (saarimaa tai ei aineistossa), ei kehää");
                 rakennus = null;
                 yield break;
             }
@@ -244,16 +325,18 @@ namespace Matkakirja
             // kuin TransformEarthCenteredEarthFixedPositionToUnity (luetaan pääsäikeessä).
             double h = korkeus;
             double4x4 ecefPaikalliseksi = georeferenssi.ecefToLocalMatrix;
+            bool avoimet = !koko;
             Nauha nauha = null;
-            var tehtava = Task.Run(() => nauha = TeeTaulukot(maanRenkaat, h, ecefPaikalliseksi));
+            var tehtava = Task.Run(() => nauha = TeeTaulukot(viivat, avoimet, h, ecefPaikalliseksi));
             while (!tehtava.IsCompleted) yield return null;
             rakennus = null;
             if (tehtava.IsFaulted) { Debug.LogError("MATKAKIRJA ääriviiva: " + tehtava.Exception?.GetBaseException()); yield break; }
-            if (maa != haluttu || nauha.Janoja == 0) yield break;
+            if (maa != kohdeMaa || koko != kohdeKoko || nauha.Janoja == 0) yield break;
             TeeNauha(nauha);
             Maa = maa;
             haiveAlku = Time.unscaledTime;
-            Debug.Log($"MATKAKIRJA ääriviiva: {maa}, {maanRenkaat.Count} rengasta, {nauha.Janoja} janaa");
+            Debug.Log($"MATKAKIRJA ääriviiva: {maa}, {viivat.Count} {(koko ? "rengasta (koko rengas)" : "maa–maa-rajaviivaa")}, " +
+                      $"{nauha.Janoja} janaa, paino {Paino}");
         }
 
         /// <summary>Nauhaverkon taulukot (rakennetaan taustasäikeessä, Mesh pääsäikeessä).</summary>
@@ -277,44 +360,32 @@ namespace Matkakirja
 
         /// <summary>
         /// Nauhaverkko Rajaviiva-varjostimelle kuten MaaKartta.TeeRajat; TEXCOORD1.y = janan pää
-        /// (−1 a, +1 b) × (1 + renkaan lävistäjä asteina), ks. Shaders/Rajaviiva.shader. Lävistäjä on
-        /// renkaan laatikon lävistäjä asteina (pituus kavennettuna leveyspiirin mukaan, kuten webin
-        /// rengasNakyy); pituudet avataan sauman yli (Venäjän ja Fidžin renkaat ylittävät ±180°:n),
-        /// jottei saumarengas saa koko maailman levyistä laatikkoa.
+        /// (−1 a, +1 b) × (1 + viivan lävistäjä asteina), ks. Shaders/Rajaviiva.shader. Lävistäjä on
+        /// viivan laatikon lävistäjä asteina (Kehaviivat.Lavistaja: pituus kavennettuna leveyspiirin mukaan,
+        /// kuten webin rengasNakyy, sauman yli avattuna). Renkaat suljetaan, avoimet viivat (maa–maa-rajat,
+        /// löydös 127) eivät (Kehaviivat.Janoja/Loppu); lyhyt rajanpätkä karsiutuu kaukana kuten pieni rengas.
         /// </summary>
-        static Nauha TeeTaulukot(List<(double Lon, double Lat)[]> renkaat, double h, double4x4 m)
+        static Nauha TeeTaulukot(List<(double Lon, double Lat)[]> viivat, bool avoimet, double h, double4x4 m)
         {
             int n = 0;
-            foreach (var rengas in renkaat)
-                if (rengas != null && rengas.Length >= 2) n += rengas.Length;
+            foreach (var viiva in viivat)
+                if (viiva != null) n += Kehaviivat.Janoja(viiva.Length, avoimet);
             var paikat = new Vector3[n * 4];
             var toiset = new Vector3[n * 4];
             var puolet = new Vector2[n * 4];
             var kolmiot = new int[n * 6];
             Vector3 U(double lon, double lat) => (Vector3)(float3)math.mul(m, new double4(Ecef(lon, lat, h), 1.0)).xyz;
             int i = 0;
-            foreach (var rengas in renkaat)
+            foreach (var viiva in viivat)
             {
-                if (rengas == null || rengas.Length < 2) continue;
-                double w = double.MaxValue, e = double.MinValue, s = double.MaxValue, no = double.MinValue;
-                double edellinen = rengas[0].Lon, siirto = 0;
-                foreach (var p in rengas)
+                if (viiva == null || viiva.Length < 2) continue;
+                float y = 1f + (float)Kehaviivat.Lavistaja(viiva);
+                int janoja = Kehaviivat.Janoja(viiva.Length, avoimet);
+                Vector3 b = U(viiva[0].Lon, viiva[0].Lat);
+                for (int k = 0; k < janoja; k++)
                 {
-                    double lon = p.Lon + siirto;
-                    if (lon - edellinen > 180) { siirto -= 360; lon -= 360; }
-                    else if (lon - edellinen < -180) { siirto += 360; lon += 360; }
-                    edellinen = lon;
-                    w = math.min(w, lon); e = math.max(e, lon);
-                    s = math.min(s, p.Lat); no = math.max(no, p.Lat);
-                }
-                double kerroin = math.max(0.05, math.cos(math.radians((s + no) / 2)));
-                float lavistaja = (float)math.sqrt((e - w) * kerroin * (e - w) * kerroin + (no - s) * (no - s));
-                float y = 1f + lavistaja;
-                Vector3 b = U(rengas[0].Lon, rengas[0].Lat);
-                for (int k = 0; k < rengas.Length; k++)
-                {
-                    var pa = rengas[k];
-                    var pb = rengas[(k + 1) % rengas.Length];
+                    var pa = viiva[k];
+                    var pb = viiva[Kehaviivat.Loppu(k, viiva.Length, avoimet)];
                     Vector3 a = b;
                     if (pa.Lon == pb.Lon && pa.Lat == pb.Lat) continue; // suljetun renkaan viimeinen piste
                     b = U(pb.Lon, pb.Lat);
@@ -391,13 +462,14 @@ namespace Matkakirja
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             oma.SetVector("_Keskus", georeferenssi.transform.TransformPoint((float3)keskus));
             float tiheys = Tiheys();
-            // Webin laki (Viivaleveys.KehaPt = viivanLeveysCss korostukselle) tai komennon kiinteä leveys.
-            oma.SetFloat("_Paksuus", (float)Viivaleveys.KehaPt(tiheys, PaksuusPt));
+            // Painon laki (Viivaleveys.KehaPt: webin viivanLeveysCss painon päätteillä, löydös 127) tai komennon kiinteä leveys.
+            oma.SetFloat("_Paksuus", (float)Viivaleveys.KehaPt(tiheys, PaksuusPt, Paino));
             oma.SetFloat("_Tiheys", tiheys);
             float h = haiveAlku < 0f ? 1f : Mathf.Clamp01((Time.unscaledTime - haiveAlku) / HaiveSek);
             float alfa = 1f - (1f - h) * (1f - h) * (1f - h);
+            if (Paino != peitonPaino) { peitonPaino = Paino; peittoNatiivi = (float)Viivaleveys.KehaPeittoNatiivi(Paino); }
             var vari = Muste;
-            vari.a = alfa;
+            vari.a = alfa * peittoNatiivi;
             oma.SetColor("_BaseColor", vari);
         }
 
@@ -410,277 +482,6 @@ namespace Matkakirja
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             if (kamera == null) kamera = Camera.main;
             return Pintaosuma.Tiheys(georeferenssi, kamera);
-        }
-
-        /// <summary>
-        /// Kevyt GeoJSON-lukija maapolygonit.geojsonille (puhdas C#, ajetaan taustasäikeessä). Käy
-        /// UTF-8-tavut kerran läpi rakentamatta MiniJson-puuta: FeatureCollectionin jokaisesta
-        /// featuresta poimitaan properties.iso ja geometry.coordinates (Polygon tai MultiPolygon,
-        /// sisäkkäisyys päätellään taulukoista), kaikki muu ohitetaan. Kenttien järjestys vapaa.
-        /// Tulos: ISO3 → renkaat [(lon, lat)], jokainen rengas sellaisenaan (sulkeva piste mukana).
-        /// </summary>
-        public static class Geojson
-        {
-            /// <summary>Purkaa gzipin, jos tavut alkavat 0x1f 0x8b (palvelin ei välitä Content-Encodingia).</summary>
-            public static byte[] Pura(byte[] tavut)
-            {
-                if (tavut == null || tavut.Length < 2 || tavut[0] != 0x1f || tavut[1] != 0x8b) return tavut;
-                using var sisaan = new MemoryStream(tavut);
-                using var gz = new GZipStream(sisaan, CompressionMode.Decompress);
-                using var ulos = new MemoryStream(tavut.Length * 4);
-                gz.CopyTo(ulos);
-                return ulos.ToArray();
-            }
-
-            public static Dictionary<string, List<(double Lon, double Lat)[]>> Lue(byte[] tavut)
-            {
-                var l = new Lukija { b = tavut };
-                // UTF-8 BOM
-                if (tavut.Length >= 3 && tavut[0] == 0xef && tavut[1] == 0xbb && tavut[2] == 0xbf) l.i = 3;
-                var tulos = new Dictionary<string, List<(double Lon, double Lat)[]>>(System.StringComparer.Ordinal);
-                l.Objekti(k =>
-                {
-                    if (k != "features" || l.OnNull()) { l.Ohita(); return; }
-                    l.Taulukko(() => l.Feature(tulos));
-                });
-                return tulos;
-            }
-
-            sealed class Lukija
-            {
-                public byte[] b;
-                public int i;
-                readonly List<(double, double)> puskuri = new List<(double, double)>(4096);
-                static readonly double[] Potenssit =
-                {
-                    1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9, 1e10, 1e11,
-                    1e12, 1e13, 1e14, 1e15, 1e16, 1e17, 1e18, 1e19, 1e20, 1e21, 1e22,
-                };
-
-                public void Feature(Dictionary<string, List<(double Lon, double Lat)[]>> tulos)
-                {
-                    if (OnNull()) { Ohita(); return; }
-                    string iso = null;
-                    var renkaat = new List<(double Lon, double Lat)[]>();
-                    Objekti(k =>
-                    {
-                        if (k == "properties" && !OnNull())
-                            Objekti(k2 => { if (k2 == "iso" && b[i] == '"') iso = Merkkijono(); else Ohita(); });
-                        else if (k == "geometry" && !OnNull())
-                            Objekti(k2 => { if (k2 == "coordinates" && b[i] == '[') Koordinaatit(renkaat); else Ohita(); });
-                        else Ohita();
-                    });
-                    if (string.IsNullOrEmpty(iso) || renkaat.Count == 0) return;
-                    if (tulos.TryGetValue(iso, out var vanhat)) vanhat.AddRange(renkaat);
-                    else tulos[iso] = renkaat;
-                }
-
-                /// <summary>Sisäkkäiset taulukot: taulukko, jonka alkiot ovat lukupareja, on rengas.</summary>
-                void Koordinaatit(List<(double Lon, double Lat)[]> renkaat)
-                {
-                    Odota('[');
-                    Ws();
-                    if (b[i] == ']') { i++; return; }
-                    if (OnLukuAlku(b[i]))
-                    {
-                        // Yksittäinen piste (Point) ei ole rengas: ohitetaan.
-                        while (true) { Luku(); Ws(); if (b[i] == ',') { i++; continue; } Odota(']'); return; }
-                    }
-                    int j = i + 1;
-                    while (j < b.Length && OnTyhja(b[j])) j++;
-                    if (b[i] == '[' && j < b.Length && OnLukuAlku(b[j]))
-                    {
-                        puskuri.Clear();
-                        while (true)
-                        {
-                            Ws();
-                            Odota('[');
-                            double lon = Luku();
-                            Ws(); Odota(',');
-                            double lat = Luku();
-                            Ws();
-                            while (b[i] == ',') { i++; Luku(); Ws(); } // korkeus tms.
-                            Odota(']');
-                            puskuri.Add((lon, lat));
-                            Ws();
-                            if (b[i] == ',') { i++; continue; }
-                            Odota(']');
-                            break;
-                        }
-                        if (puskuri.Count >= 2) renkaat.Add(puskuri.ToArray());
-                        return;
-                    }
-                    while (true)
-                    {
-                        Ws();
-                        Koordinaatit(renkaat);
-                        Ws();
-                        if (b[i] == ',') { i++; continue; }
-                        Odota(']');
-                        return;
-                    }
-                }
-
-                public void Objekti(System.Action<string> kentta)
-                {
-                    Ws();
-                    Odota('{');
-                    Ws();
-                    if (b[i] == '}') { i++; return; }
-                    while (true)
-                    {
-                        Ws();
-                        string avain = Merkkijono();
-                        Ws(); Odota(':'); Ws();
-                        kentta(avain);
-                        Ws();
-                        if (b[i] == ',') { i++; continue; }
-                        Odota('}');
-                        return;
-                    }
-                }
-
-                public void Taulukko(System.Action alkio)
-                {
-                    Ws();
-                    Odota('[');
-                    Ws();
-                    if (b[i] == ']') { i++; return; }
-                    while (true)
-                    {
-                        Ws();
-                        alkio();
-                        Ws();
-                        if (b[i] == ',') { i++; continue; }
-                        Odota(']');
-                        return;
-                    }
-                }
-
-                public bool OnNull()
-                {
-                    Ws();
-                    return b[i] == 'n';
-                }
-
-                /// <summary>Ohittaa minkä tahansa arvon (merkkijono, luku, literaali, objekti, taulukko).</summary>
-                public void Ohita()
-                {
-                    Ws();
-                    byte c = b[i];
-                    if (c == '"') { OhitaMerkkijono(); return; }
-                    if (c == '{' || c == '[')
-                    {
-                        int syvyys = 0;
-                        while (true)
-                        {
-                            c = b[i];
-                            if (c == '"') { OhitaMerkkijono(); continue; }
-                            i++;
-                            if (c == '{' || c == '[') syvyys++;
-                            else if ((c == '}' || c == ']') && --syvyys == 0) return;
-                        }
-                    }
-                    while (i < b.Length && b[i] != ',' && b[i] != '}' && b[i] != ']' && !OnTyhja(b[i])) i++;
-                }
-
-                void OhitaMerkkijono()
-                {
-                    i++; // "
-                    while (b[i] != '"') i += b[i] == '\\' ? 2 : 1;
-                    i++;
-                }
-
-                public string Merkkijono()
-                {
-                    Odota('"');
-                    int alku = i;
-                    bool pako = false;
-                    while (b[i] != '"') { if (b[i] == '\\') { pako = true; i++; } i++; }
-                    int loppu = i++;
-                    if (!pako) return Encoding.UTF8.GetString(b, alku, loppu - alku);
-                    var sb = new StringBuilder();
-                    for (int k = alku; k < loppu; k++)
-                    {
-                        if (b[k] != '\\') { sb.Append((char)b[k]); continue; } // avaimet ja ISO-koodit ovat ASCIIta
-                        char c = (char)b[++k];
-                        switch (c)
-                        {
-                            case 'n': sb.Append('\n'); break;
-                            case 't': sb.Append('\t'); break;
-                            case 'r': sb.Append('\r'); break;
-                            case 'b': sb.Append('\b'); break;
-                            case 'f': sb.Append('\f'); break;
-                            case 'u':
-                                sb.Append((char)System.Convert.ToInt32(Encoding.ASCII.GetString(b, k + 1, 4), 16));
-                                k += 4;
-                                break;
-                            default: sb.Append(c); break;
-                        }
-                    }
-                    return sb.ToString();
-                }
-
-                /// <summary>
-                /// JSON-luku ilman merkkijonoa: mantissa kokonaislukuna ja jako kymmenen potenssilla
-                /// (≤ 22 tarkka, joten 7.022 = 7022 / 1e3 pyöristyy oikein).
-                /// </summary>
-                double Luku()
-                {
-                    Ws();
-                    bool miinus = false;
-                    if (b[i] == '-') { miinus = true; i++; }
-                    else if (b[i] == '+') i++;
-                    long m = 0;
-                    int numeroita = 0, eksp = 0;
-                    int alku = i;
-                    while (i < b.Length && b[i] >= '0' && b[i] <= '9')
-                    {
-                        if (numeroita < 18) { m = m * 10 + (b[i] - '0'); if (m != 0) numeroita++; }
-                        else eksp++;
-                        i++;
-                    }
-                    bool nahty = i > alku;
-                    if (i < b.Length && b[i] == '.')
-                    {
-                        i++;
-                        nahty |= i < b.Length && b[i] >= '0' && b[i] <= '9';
-                        while (i < b.Length && b[i] >= '0' && b[i] <= '9')
-                        {
-                            if (numeroita < 18) { m = m * 10 + (b[i] - '0'); if (m != 0) numeroita++; eksp--; }
-                            i++;
-                        }
-                    }
-                    if (i < b.Length && (b[i] == 'e' || b[i] == 'E'))
-                    {
-                        i++;
-                        bool em = false;
-                        if (b[i] == '-') { em = true; i++; }
-                        else if (b[i] == '+') i++;
-                        int e = 0;
-                        while (i < b.Length && b[i] >= '0' && b[i] <= '9') { e = e * 10 + (b[i] - '0'); i++; }
-                        eksp += em ? -e : e;
-                    }
-                    if (!nahty)
-                        throw new System.FormatException("GeoJSON: luku puuttuu kohdassa " + i);
-                    double arvo = m;
-                    if (eksp < 0) arvo = -eksp < Potenssit.Length ? arvo / Potenssit[-eksp] : arvo / System.Math.Pow(10, -eksp);
-                    else if (eksp > 0) arvo = eksp < Potenssit.Length ? arvo * Potenssit[eksp] : arvo * System.Math.Pow(10, eksp);
-                    return miinus ? -arvo : arvo;
-                }
-
-                void Ws() { while (i < b.Length && OnTyhja(b[i])) i++; }
-
-                void Odota(char c)
-                {
-                    if (i >= b.Length || b[i] != c)
-                        throw new System.FormatException($"GeoJSON: odotettiin '{c}' kohdassa {i}");
-                    i++;
-                }
-
-                static bool OnTyhja(byte c) => c == ' ' || c == '\n' || c == '\r' || c == '\t';
-                static bool OnLukuAlku(byte c) => (c >= '0' && c <= '9') || c == '-' || c == '+' || c == '.';
-            }
         }
     }
 }

@@ -23,13 +23,38 @@ namespace Matkakirja
     ///
     /// Linssit käyttävät Cesiumin raster-paikkoja 1 ja 2 (KarttaKerrokset.LisaaRasteri): linssin
     /// kerroksen ajaksi väritaso väistyy (Linssit), ja tyhjän arkin linssit piilottavat sen pohjan mukana.
+    ///
+    /// LÖYDÖS 128 (omistaja 25.9.2026 klo 22.3x, build 16 → 17): "Kermahuntu peittää nyt liikaa muita maita → peittoa
+    /// alas", kuvapari, omistaja valitsee. Peitto on poltettu sarjaan; Karttaseppä polttaa vaihtoehdot p060 ja p045, ja
+    /// sarja vaihdetaan ajossa (<see cref="AsetaVersio"/>, komento "vari sarja p080|p060|p045|oletus"). Natiivi ei säädä
+    /// peittoa itse (Kermasarja).
     /// </summary>
     public class Varitaso : MonoBehaviour
     {
-        /// <summary>Karttasepän kermasarja pohjasta, peitto 0,80 (löydös 22).</summary>
+        /// <summary>Karttasepän kermasarja pohjasta, peitto 0,80 (löydös 22); löydös 128:n valinta vaihdetaan Kermasarja.Oletukseen.</summary>
         // 25.9.: sarja pohjasta 2026-09-25-pohja-20260925 (build 14:n pohja; 23a-sarjan maski ei osunut uuteen rantaan).
-        public const string Versio = "2026-09-25-p080";
-        public const string Kansio = "julisteet/pallo/kerma/" + Versio + "/";
+        public const string OletusVersio = Kermasarja.Oletus;
+        /// <summary>Käytössä oleva sarja (löydös 128: vaihdettava ajossa, komento "vari sarja").</summary>
+        public static string Versio { get; private set; } = OletusVersio;
+        public static string Kansio => "julisteet/pallo/kerma/" + Versio + "/";
+        /// <summary>Sarjan poltettu peitto (napakalottien kerma seuraa sitä).</summary>
+        public static float Peitto => Kermasarja.Peitto(Versio);
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaSarja() => Versio = OletusVersio;
+
+        /// <summary>
+        /// Vaihtaa kermasarjan (löydös 128, komento "vari sarja p060"): luettelo ja kerros haetaan uudesta kansiosta
+        /// seuraavalla päivityksellä. null tai "oletus" = <see cref="OletusVersio"/>.
+        /// </summary>
+        public static void AsetaVersio(string nimi)
+        {
+            string v = Kermasarja.Nimi(nimi);
+            if (v == Versio) return;
+            Versio = v;
+            foreach (var t in FindObjectsByType<Varitaso>(FindObjectsSortMode.None)) t.Uudelleen();
+            Debug.Log($"MATKAKIRJA väritaso: sarja {v} (peitto {Peitto:0.00})");
+        }
         /// <summary>Alin huntutaso: sitä kauempana ei huntua (web kermaPaalla 0 maailmanäkymässä).</summary>
         public const int AlinTaso = 5;
         /// <summary>
