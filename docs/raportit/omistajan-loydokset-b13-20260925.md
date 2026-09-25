@@ -39,7 +39,7 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 105 | Maakunnat kaikille maille. Jos maalla ei ole maakuntia, lista on tyhjä tai sisältää vain maan nimen, ei koskaan muiden maiden maakuntia. | Karttaseppä (data) + Natiivi-UI (lista) |
 | 106 | Karttanostojen teksti saattaa panoroidessa yhä hypätä merkin toiselle puolelle. | Natiiviseppä (nimiölukko) |
 | 107 | Välimeri ja Messinansalmi voivat piirtyä maan päälle; merinimien pitää piirtyä aina meren päälle. | Karttaseppä (nimiödata) + Natiiviseppä |
-| 108 | Välimeri ja Messinansalmi klikattaviksi nostoiksi kuvineen ja teksteineen. | Sisältökirjuri (data) + Natiivi-UI |
+| 108 | Välimeri ja Messinansalmi klikattaviksi nostoiksi kuvineen ja teksteineen. → KORJATTU data PR #3181 (v2226); natiivin näyttö Natiivi-UI | Sisältökirjuri (data) + Natiivi-UI |
 | 109 | Kaupunkien reitit piilossa aina, ellei liikkumistila ole päällä; näkyvyys Raamatun liikkumistilan sääntöjen mukaan. → KORJATTU pelikoodari/reitit-alku e4c75de4 (junassa; todennus aloituskartan napautuksella build 14:ssä) | Pelikoodari |
 
 ## Linssit ja laatikot
