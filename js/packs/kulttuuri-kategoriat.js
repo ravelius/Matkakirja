@@ -114881,6 +114881,241 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Mozambique Island Bridge',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Mosambikin saari
+       * (Ilha de Moçambique) Nampulan maakunnassa, ei koko maa.
+       * Taustatiedot englannin Wikipediasta (Island of Mozambique, Cidade
+       * de Pedra, Fort São Lourenço (Mozambique), Goa Island, Mozambique
+       * Island Bridge, Luís de Camões, Tufo (dance), Indians in
+       * Mozambique, Insurgency in Cabo Delgado, Cyclone Gombe,
+       * Mozambique), Wikivoyagesta (Ilha de Mozambique, Mozambique;
+       * saarisivun hinnat ja paikat ovat vuodelta 2015, joten hinnat ja
+       * aukioloajat on jätetty pois) sekä Global Voicesin mussiro-jutusta
+       * 1.8.2012 ja Chipenen iskun uutisoinnista (Vatican News, Zitamar,
+       * syyskuu 2022) — teksti omaa. Nostojen ja gallerian aiheita
+       * (São Sebastiãon linnoitus ja sen kirkko, Vasco da Gama ja São
+       * Paulon palatsi, vihreä moskeija, Makuti ja kalastajat, sillan
+       * historia, 1655 kartta, dhow't ja orjakauppa, pääkaupungin siirto,
+       * sairaala) eikä africa-kulttuuri.js:n marrabentaa ja piripiriä
+       * toisteta. Turvallisuus: Cabo Delgadon kapina ja sen 2022
+       * ulottuminen Nampulan pohjoisosaan kerrotaan, mutta saarelle
+       * konflikti ei ole ulottunut. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: tufo-tanssijoiden capulanat (Wiki Loves Africa 2019).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tofo danse - 1.jpg',
+          lyhyt: 'Tufo-tanssijoiden kirkkaat capulana-kankaat ja paljaat jalat Mosambikin saarella.',
+          selite: 'Tufoa tanssivat naiset liikkuvat paljain jaloin '
+            + 'terrakottalaatoilla samanlaisissa sinikuvioisissa '
+            + 'capulana-kankaissa; kuva heinäkuulta 2017.',
+          lahde: 'JCPBFerreira, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Mosambikin saari on vain kolme kilometriä pitkä ja '
+          + 'enimmillään puoli kilometriä leveä, joten sen päästä päähän '
+          + 'kävelee parissakymmenessä minuutissa. Matkailija saapuu '
+          + 'yleensä Nampulan lentoasemalta maantietä ja kapeaa siltaa '
+          + 'pitkin, joskus myös risteilyaluksella. Pohjoispään '
+          + 'kivikaupunkia kunnostettiin 2010-luvulla, ja vanhoissa '
+          + 'kauppiastaloissa toimii nyt majataloja ja ravintoloita. '
+          + 'Kaduilla elää makua-kulttuuri: naisten kasvoja peittää '
+          + 'valkoinen mussiro-naamio, ja juhlissa tanssitaan tufoa. '
+          + 'Lähisaarille ja mantereen rannoille pääsee purjeveneellä. '
+          + 'Saari on Nampulan maakunnassa, kaukana etelässä '
+          + 'Cabo Delgadon konfliktialueesta, mutta pohjoisen tilanne '
+          + 'kannattaa silti tarkistaa ennen matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Mosambikin saari',
+          teksti: 'Entinen pääkaupunki on nyt pikkukaupunki, jonka kiertää jalan.',
+          nosto: 'Kun Luís de Camões odotti täällä laivaa kotiin, hän oli '
+            + 'niin köyhä, että ystävät joutuivat ruokkimaan häntä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille Nampulasta',
+              teksti: 'Lähin säännöllisen matkustajaliikenteen lentoasema on '
+                + 'Nampulassa, Pohjois-Mosambikin suurimmassa kaupungissa, '
+                + 'jonne lennetään Maputosta ja muualta Mosambikista. '
+                + 'Nampulasta ajetaan ensin Nacalan tietä ja käännytään '
+                + 'Monapossa kohti rannikkoa; Wikivoyagen mukaan matka '
+                + 'kestää noin kaksi tuntia. '
+                + 'Halvimmin pääsee chapalla eli pikkubussilla, joka lähtee '
+                + 'Nampulan rautatieaseman läheltä. Mantereen puolella '
+                + 'Lumbossa alkaa yksikaistainen betonisilta, jota pitkin '
+                + 'saarelle ajetaan. Joskus saaren edustalle ankkuroi '
+                + 'risteilyalus, jonka matkustajat tuodaan veneillä maihin, '
+                + 'ja rannassa vastassa on laulava tanssiryhmä. Perillä '
+                + 'autoa ei tarvita: kivikaupunki on vain muutaman korttelin '
+                + 'levyinen. '
+                + 'Mosambikin laki velvoittaa kantamaan henkilöllisyys'
+                + 'todistusta, joten matkaoppaat neuvovat pitämään mukana '
+                + 'notaarin oikeaksi todistamaa kopiota passin kuvasivusta, '
+                + 'viisumista ja maahantuloleimasta. Itse passi kannattaa '
+                + 'jättää majapaikkaan, eikä sitä pidä luovuttaa '
+                + 'kenellekään kadulla.',
+              kuva: [
+                {
+                  tiedosto: 'Nampula Airport.jpg',
+                  lyhyt: 'Nampulan lentoasema on saarta lähin säännöllisen lentoliikenteen kenttä.',
+                  selite: 'Matkustajat kävelevät kentän poikki Nampulan '
+                    + 'lentoaseman terminaaliin, jonka katolla lukee '
+                    + 'kaupungin nimi; kuva toukokuulta 2012.',
+                  lahde: 'Gustavo Sugahara, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Mozambique Island Wharf (32679313634).jpg',
+                  lyhyt: 'Kivikaupungin laituri seisoo paksujen betonipilarien varassa.',
+                  selite: 'Mosambikin saaren laiturin tukevat pilarit '
+                    + 'jatkuvat rantaan asti; taustalla näkyvät kirkon '
+                    + 'kellotorni ja rannan keltainen talo.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Local Dancers (33540660425).jpg',
+                  lyhyt: 'Mussiro-naamioidut laulajat ottavat risteilymatkustajat vastaan saarella.',
+                  selite: 'Oranssiin pukeutuneet naiset laulavat '
+                    + 'mukulakivikadulla kasvoillaan valkoinen '
+                    + 'mussiro-tahna ja toivottavat risteilyaluksen '
+                    + 'matkustajat tervetulleiksi; kuva joulukuulta 2016.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kivikaupunki kävellen',
+              teksti: 'Saaren pohjoispään kivikaupunki rapistui '
+                + 'vuosikymmeniä, mutta vuosina 2010–2015 katuja ja '
+                + 'rakennuksia kunnostettiin, ja monessa vanhassa '
+                + 'kauppiastalossa toimii nyt majatalo tai ravintola. '
+                + 'Kävelykierroksen voi aloittaa Misericórdian kirkosta, '
+                + 'jonka yhteydessä toimii kirkkotaiteen museo; sen '
+                + 'tunnetuimpia esineitä on makonde-tyylinen krusifiksi. '
+                + 'Rua da Contra Costa -rantakadulla seisoo Luís de '
+                + 'Camõesin patsas. Portugalin kansallisrunoilija asui '
+                + 'saarella vuosina 1567–1569 odottaessaan kyytiä kotiin '
+                + 'ja viimeisteli täällä eepostaan Luusiadit. Hänen '
+                + 'ystävänsä, historioitsija Diogo do Couto, löysi hänet '
+                + 'niin köyhänä, että muut joutuivat ruokkimaan häntä ja '
+                + 'keräämään hänelle vaatteet kotimatkaa varten. Kaduilla '
+                + 'näkyy myös, kuinka monta uskontoa saarella on elänyt '
+                + 'rinnakkain: kirkkojen lisäksi siellä on useita '
+                + 'moskeijoita ja hindutemppeli, ja jo 1800-luvulla saarella '
+                + 'asui Intian Diusta tulleita hindukauppiaita. Saaren '
+                + 'eteläkärjestä näkyy merelle pieni kolmiomainen São '
+                + 'Lourençon linnake, joka rakennettiin 1690-luvun lopun ja '
+                + '1700-luvun alun välillä omalle luodolleen vartioimaan '
+                + 'sataman lounaista suuta.',
+              kuva: {
+                tiedosto: 'Misericórdia Church.jpg',
+                lyhyt: 'Misericórdian kirkon kyljessä toimii saaren kirkkotaiteen museo.',
+                selite: 'Misericórdian kirkon kalkittu barokkijulkisivu '
+                  + 'Mosambikin saarella; vasemmalla sivuovella on kyltti '
+                  + 'Museu de Arte Sacra.',
+                lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Mussiro ja tufo',
+              teksti: 'Saaren arkeen kuuluu kaksi makua-naisten perinnettä, '
+                + 'joihin matkailija törmää lähes varmasti. Ensimmäinen on '
+                + 'mussiro, valkoinen kasvonaamio, joka tehdään hieromalla '
+                + 'Olax dissitiflora -kasvin varsia kiveä vasten '
+                + 'vesitilkan kanssa. Pohjois-Mosambikin rannikolla ja '
+                + 'saarilla, erityisesti Nampulan maakunnassa, sitä '
+                + 'käytetään kauneudenhoitoon ja auringolta suojaamiseen. '
+                + 'Vanhempien naisten kertoman mukaan valkoiset kasvot '
+                + 'kertoivat aikoinaan myös, ettei tyttö ollut vielä '
+                + 'naimisissa. Toinen perinne on tufo, naisten ryhmätanssi, '
+                + 'jota esitetään islamilaisina juhlapäivinä ja muissakin '
+                + 'juhlissa. Tanssi tuli Mosambikiin luultavasti 1930-luvulla '
+                + 'Kilwasta. Ryhmässä on tavallisesti viidestätoista '
+                + 'kahteenkymmeneen naista, ja tahtia lyö neljä soittajaa '
+                + 'litteillä kehysrummuilla, joiden arabiankielisestä '
+                + 'nimestä ad-duff tanssin nimen arvellaan johtuvan. Laulut '
+                + 'ovat useimmiten makuaksi, joskus arabiaksi tai '
+                + 'portugaliksi, ja ne voivat käsitellä myös yhteiskunnallisia '
+                + 'aiheita. Tanssijat pukeutuvat samanlaisiin huiveihin ja '
+                + 'capulana-kankaisiin. Ennen tanssittiin polvillaan, '
+                + 'pelkkää ylävartaloa liikuttaen, mutta nykyään tanssijat '
+                + 'myös nousevat seisomaan. Ihmisiä kannattaa kuvata vain '
+                + 'luvalla.',
+              kuva: {
+                tiedosto: 'Beauty Masks (33565033415).jpg',
+                lyhyt: 'Mosambikin saaren naisten kasvoja peittää valkoinen mussiro-naamio.',
+                selite: 'Neljä naista punaruudullisissa asuissa istuu '
+                  + 'mukulakivikadulla kasvot valkoisen mussiro-tahnan '
+                  + 'peitossa; kuva joulukuulta 2016.',
+                lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Purjeveneellä lahdelle',
+              teksti: 'Saaren rannoilla odottaa aina purjeveneitä, ja niillä '
+                + 'pääsee sekä lähisaarille että mantereen puolelle. Viiden '
+                + 'kilometrin päässä idässä on asumaton Goan saari, '
+                + 'paikalliselta nimeltään Watólofu: matala korallisaari, '
+                + 'jolla on valkoinen hiekkaranta ja kirkas, kalaisa vesi. '
+                + 'Saaren majakka rakennettiin 1870-luvulla, ja vuonna 1923 '
+                + 'sen torni korotettiin 12 metristä 31 metriin. Nykyään '
+                + 'valo toimii aurinkoenergialla, ja majakan huipulle voi '
+                + 'kiivetä katsomaan näkymiä Mossurilinlahden suulle. '
+                + 'Lahden toisella puolella, noin 40 kilometrin päässä '
+                + 'pohjoisessa, on Chocas-Marin pitkä hiekkaranta, joka on '
+                + 'usein lähes autio, ja purjeveneellä pääsee myös '
+                + 'Mossuriliin ja Cabaceirasin kyliin mantereen rannikolle. '
+                + 'Uimaan kannattaa lähteä nimenomaan retkillä, sillä '
+                + 'Wikivoyage ei suosittele uimista Mosambikin saaren omilla '
+                + 'rannoilla veden likaisuuden vuoksi. Veneen kuntoon ja '
+                + 'pelastusliiveihin kannattaa kiinnittää huomiota: '
+                + 'heinäkuussa 2011 veneonnettomuudessa kuoli kahdeksan '
+                + 'ihmistä, ja Goan ja Senan saaret suljettiin matkailulta '
+                + 'turvallisuusselvityksen ajaksi.',
+              kuva: {
+                tiedosto: 'Farol Ilha de Goa 2010.jpg',
+                lyhyt: 'Goan saaren punavalkoraitainen majakka opastaa laivoja Mossurilinlahdelle.',
+                selite: 'Goan saaren neliskulmainen, punavalkoraitainen '
+                  + 'majakkatorni kohoaa matalan valkoisen rakennuksen '
+                  + 'keskeltä rantapensaikon yllä; kuva joulukuulta 2010.',
+                lahde: 'Margarida Ferreira, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Turvallisuus, sää ja terveys',
+              teksti: 'Pohjoisessa Cabo Delgadon maakunnassa on lokakuusta '
+                + '2017 jatkunut islamistikapina, joka on levinnyt myös '
+                + 'Niassan maakuntaan. Syyskuussa 2022 kapinalliset iskivät '
+                + 'Nampulan maakunnan pohjoisosaan Memban piirikuntaan, '
+                + 'jossa Chipenen lähetysasemalla surmattiin iäkäs '
+                + 'italialainen nunna. Mosambikin saari on samassa '
+                + 'maakunnassa mutta paljon etelämpänä, eikä konflikti ole '
+                + 'ulottunut saarelle. Ennen matkaa kannattaa silti '
+                + 'tarkistaa Suomen ulkoministeriön matkustustiedote, eikä '
+                + 'pohjoiseen Cabo Delgadoon pidä lähteä omin päin. Saarella '
+                + 'riskit ovat arkisempia: Wikivoyage neuvoo tavallista '
+                + 'varovaisuutta ryöstöjen ja varkauksien varalta ja '
+                + 'kehottaa naisia välttämään yksin kulkemista rannoilla. '
+                + 'Malariaa esiintyy koko maassa, joten estolääkityksestä '
+                + 'kannattaa kysyä lääkäriltä hyvissä ajoin ennen matkaa. '
+                + 'Sadekausi kestää lokakuusta maaliskuuhun, ja se on myös '
+                + 'hirmumyrskyjen aikaa: maaliskuussa 2022 hirmumyrsky Gombe '
+                + 'tappoi saarella kuusi ihmistä ja kaatoi vuosisatoja '
+                + 'vanhoja puita. Kuivakausi huhtikuusta syyskuuhun on '
+                + 'vähäsateisempi, ja kesä- ja heinäkuussa illat voivat '
+                + 'olla rannikollakin viileitä.',
+              kuva: {
+                tiedosto: 'Beach cleaning.jpg',
+                lyhyt: 'Naiset siivoavat rantaa aamulla, taustalla Santo Antónion kappeli.',
+                selite: 'Aamuvalossa joukko naisia ja mies siivoaa '
+                  + 'hiekkarantaa haravoin ja luudin; merellä taustalla '
+                  + 'kohoaa valkoinen Santo Antónion kappeli pienen '
+                  + 'linnakkeen muurin päällä. Kuva elokuulta 2009.',
+                lahde: 'Rosino, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
