@@ -103,6 +103,13 @@ namespace Matkakirja.Natiivi
             if (vierii) ajastin = schedule.Execute(Askel).Every(NopeusMs);
         }
 
+        bool Naytetaan()
+        {
+            for (VisualElement e = this; e != null; e = e.hierarchy.parent)
+                if (e.resolvedStyle.display == DisplayStyle.None) return false;
+            return true;
+        }
+
         bool JokinVierii() { foreach (var r in rivit) if (r.Vierii) return true; return false; }
 
         public void Pysayta()
@@ -114,6 +121,10 @@ namespace Matkakirja.Natiivi
         void Askel()
         {
             if (panel == null) { Pysayta(); return; }
+            // Lämpöerä (25.9.2026): piilossa (radiolinssi suljettu, display none) ei vieritetä eikä pyydetä piirtoa.
+            // Muuten suljetun radion näyttö likasi linssikerroksen 9 kertaa sekunnissa, eikä UI koskaan päässyt
+            // lepoon (Ruudunpaivitys PAIKALLAAN). Vieritys jatkuu samasta kohdasta, kun näyttö tulee näkyviin.
+            if (!Naytetaan()) return;
             bool liikkui = false;
             for (int i = 0; i < riveja; i++)
             {
