@@ -45,6 +45,16 @@ namespace Matkakirja.Natiivi
         bool sallittu = true;
         /// <summary>Linssinimet-tila: merkit näkyvät linssin aikana ilman napautusta (NostoKerros.LinssiNimet).</summary>
         bool vainNimet;
+        /// <summary>
+        /// Löydös 106 (web sovittelu.js sääntö 5, nostot.js sovitellutAsennot): nimiön kylki ja näkyvyys NOSTON
+        /// Id:llä, ei merkin indeksillä. Merkit kierrätetään indeksillä (Hae), ja Naytettavat-järjestys muuttuu
+        /// vedossa aina, kun jokin nosto ylittää ruudun reunan — ennen merkki sai toisen noston ja kylki nollautui.
+        /// Ele = lukko tuli eleen aikana (web syy 'ele'). Lukko vapautuu levossa, kun nosto ei ole enää näkyvissä.
+        /// </summary>
+        sealed class Lukko { public string Kylki; public bool Nakyy, Ele; }
+        readonly Dictionary<string, Lukko> lukot = new Dictionary<string, Lukko>();
+        /// <summary>Web SOVITTELUN_NAKYVYYSVARA_PX: lukittu laatikko tämän varan sisällä ruudusta pitää kylkensä.</summary>
+        const float NakyvyysVara = 16f;
 
         sealed class Merkki
         {
@@ -183,7 +193,17 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kamera pysähtyi: merkit pyöristetyille pikseleille (liikkeen aikana ne kulkevat pyöristämättä).</summary>
-        void Lepo(bool levossa) { if (levossa) Paivita(); }
+        void Lepo(bool levossa)
+        {
+            if (!levossa) { vetoKyljet.Clear(); kylkivaihdot = 0; return; }
+            // Löydös 106 -mittari: montako kertaa näkyvän noston nimiö vaihtoi kylkeä vedon aikana (tavoite 0).
+            Debug.Log($"MATKAKIRJA nostot: kylkivaihdot vedossa {kylkivaihdot}");
+            Paivita();
+        }
+
+        /// <summary>Löydös 106 -mittari: noston viimeksi näytetty kylki vedon aikana.</summary>
+        readonly Dictionary<string, string> vetoKyljet = new Dictionary<string, string>();
+        int kylkivaihdot;
 
         void Paivita()
         {
@@ -286,10 +306,14 @@ namespace Matkakirja.Natiivi
         void Sovita(int n)
         {
             float W = juuri.layout.width, H = juuri.layout.height;
+            if (n == 0) lukot.Clear();
             if (n == 0 || float.IsNaN(W) || W <= 0) return;
             var jono = new List<Merkki>(n);
             for (int i = 0; i < n; i++) if (merkit[i].Nimio.text.Length > 0) jono.Add(merkit[i]);
-            jono.Sort((a, b) => a.Paino.CompareTo(b.Paino));
+            // Web sovittelu.js jono: levossa lukittu näkyvä (0) ennen eleen aikana tullutta (1) ennen lukotonta (2),
+            // sitten paino — tulokas väistää, ruudulla jo ollut ei.
+            int Ika(Merkki mm) => mm.Id != null && lukot.TryGetValue(mm.Id, out var l) && l.Nakyy ? (l.Ele ? 1 : 0) : 2;
+            jono.Sort((a, b) => { int d = Ika(a).CompareTo(Ika(b)); return d != 0 ? d : a.Paino.CompareTo(b.Paino); });
             var ikonit = new List<Rect>(n);
             for (int i = 0; i < n; i++)
             {
@@ -298,6 +322,7 @@ namespace Matkakirja.Natiivi
                 ikonit.Add(new Rect(m.Piste.x - r, m.Piste.y - r, 2f * r, 2f * r));
             }
             var varatut = new List<Rect>(jono.Count);
+            var uudet = new Dictionary<string, Lukko>(jono.Count);
             LueNimet();
             bool Musteeton(Rect a) { foreach (var e in nimet) if (e.Overlaps(a)) return false; return true; }
             foreach (var m in jono)
@@ -315,6 +340,30 @@ namespace Matkakirja.Natiivi
                             if (merkit[i] != m && ikonit[i].Overlaps(a)) return false;
                     paikka = a;
                     return true;
+                }
+                // Löydös 106 (web sovittelu.js sääntö 5): lukittu nimiö, jonka laatikko on ruudulla, kokeilee vain
+                // lukittua kylkeään. Reunaa ei koeteta (nimi saa leikkautua); tukossa nimiö häipyy paikallaan ja
+                // palaa samaan kylkeen hystereesillä — ei koskaan merkin toiselle puolelle.
+                if (m.Id != null && lukot.TryGetValue(m.Id, out var lukko))
+                {
+                    var r0 = NimionLaatikko(m, lukko.Kylki);
+                    var a0 = new Rect(r0.x + m.Piste.x, r0.y + m.Piste.y, r0.width, r0.height);
+                    if (a0.xMax > -NakyvyysVara && a0.yMax > -NakyvyysVara && a0.xMin < W + NakyvyysVara && a0.yMin < H + NakyvyysVara)
+                    {
+                        float v = lukko.Nakyy ? 0f : Hystereesi;
+                        var av = new Rect(a0.x - v, a0.y - v, a0.width + 2f * v, a0.height + 2f * v);
+                        bool vapaa = Musteeton(av);
+                        foreach (var e in varatut) if (vapaa && e.Overlaps(av)) vapaa = false;
+                        if (vapaa && !m.Kiintea)
+                            for (int i = 0; i < n && vapaa; i++) if (merkit[i] != m && ikonit[i].Overlaps(av)) vapaa = false;
+                        m.Kylki = lukko.Kylki;
+                        m.NimioNakyy = vapaa;
+                        if (vapaa) { varatut.Add(a0); AsetaNimio(m); }
+                        m.Nimio.style.opacity = vapaa ? 1f : 0f;
+                        AsetaNimionOsuma(m);
+                        uudet[m.Id] = new Lukko { Kylki = m.Kylki, Nakyy = vapaa };
+                        continue;
+                    }
                 }
                 float vara0 = m.NimioNakyy ? 0f : Hystereesi;
                 var ehdokkaat = new List<string>(10);
@@ -345,7 +394,11 @@ namespace Matkakirja.Natiivi
                 }
                 m.Nimio.style.opacity = m.NimioNakyy ? 1f : 0f;
                 AsetaNimionOsuma(m);
+                if (m.Id != null) uudet[m.Id] = new Lukko { Kylki = m.Kylki ?? loytyi ?? "oikea", Nakyy = m.NimioNakyy };
             }
+            // Lukko kantaa seuraavaan lepoon; näkyvistä poistuneiden nostojen lukot vapautuvat (web tulos.asennot).
+            lukot.Clear();
+            foreach (var kv in uudet) lukot[kv.Key] = kv.Value;
         }
 
         NostoKerros.Nosto LoydaNosto(string id)
@@ -509,8 +562,28 @@ namespace Matkakirja.Natiivi
             }
             var m = merkit[i];
             m.El.style.display = DisplayStyle.Flex;
-            if (m.Id != s.Id) { m.Kylki = null; m.NimioNakyy = true; }
+            if (m.Id != s.Id)
+            {
+                // Löydös 106: kylki noston lukosta, muuten datan kylki (web r.puoli ?? 'oikea'). Ennen Kylki = null
+                // → AsetaNimio "oikea" koko vedon ajan ja levossa Sovita takaisin datan kylkeen = loikka.
+                if (s.Id != null && lukot.TryGetValue(s.Id, out var lk)) { m.Kylki = lk.Kylki; m.NimioNakyy = lk.Nakyy; }
+                else
+                {
+                    m.Kylki = DatanKylki(s) ?? "oikea";
+                    m.NimioNakyy = true;
+                    // Eleen aikana tullut lukitaan omaan kylkeensä (web sovittele !lepo, syy 'ele').
+                    if (s.Id != null && lepoKierto != null && !lepoKierto.Levossa)
+                        lukot[s.Id] = new Lukko { Kylki = m.Kylki, Nakyy = true, Ele = true };
+                }
+                m.Nimio.style.opacity = m.NimioNakyy ? 1f : 0f;
+                AsetaNimionOsuma(m);
+            }
             m.Id = s.Id;
+            if (s.Id != null && m.NimioNakyy && lepoKierto != null && !lepoKierto.Levossa)
+            {
+                if (vetoKyljet.TryGetValue(s.Id, out var ed) && ed != m.Kylki) kylkivaihdot++;
+                vetoKyljet[s.Id] = m.Kylki;
+            }
             // Mitoitus (web nostot.js:633): mitta = min(katto / 11, 0,7727 × kerroin × oma).
             bool kaupunki = s.Aihe == "kaupungit";
             m.Taso1 = s.Taso == 1 && !ryhma;
