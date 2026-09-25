@@ -259,8 +259,7 @@ namespace Matkakirja
             {
                 // Satelliittilento (oletus build 10) vie molemmat paikat: linssi saa Sentinelin paikan 2,
                 // lento jatkuu Blue Marblella.
-                sentinel.enabled = false;
-                Destroy(sentinel);
+                VapautaKerros(sentinel);
                 sentinel = null;
                 avainCesium = "2";
                 PaivitaLennonVarjostin();
@@ -271,15 +270,7 @@ namespace Matkakirja
                 KerrosEpaonnistui?.Invoke(avain);
                 return null;
             }
-            var k = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
-            k.materialKey = avainCesium;
-            k.templateUrl = Laattapalvelin.Paikallinen(url);
-            k.projection = projektio;
-            k.minimumLevel = min;
-            k.maximumLevel = max;
-            k.tileWidth = 256;
-            k.tileHeight = 256;
-            k.enabled = alfa > 0f;
+            var k = UusiKerros(pallo.gameObject, avainCesium, url, projektio, min, max, alfa > 0f);
             rasterit[avain] = new Rasteri { kerros = k, lisatty = Time.unscaledTime };
             PaivitaNavat();
             return avain;
@@ -479,17 +470,59 @@ namespace Matkakirja
         static HashSet<long> sentinelZ8;
         bool sentinelHaettu;
 
-        static CesiumUrlTemplateRasterOverlay Kerros(GameObject go, string avain, string url, int max)
+        static CesiumUrlTemplateRasterOverlay Kerros(GameObject go, string avain, string url, int max) =>
+            UusiKerros(go, avain, url, CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, max);
+
+        // ---- Raster-kerrosten kierrätys (build 13: Cesiumin varoitus "Two or more raster overlays use the same
+        //      material key") ----
+        //
+        // AddComponent kutsuu Cesiumin OnEnablen heti, ja uusi kerros liittyy palloon oletusavaimella "0" ennen kuin
+        // avain ehditään asettaa: se törmää pohjan "0":aan (varoitus joka väritason maanvaihdossa ja linssin
+        // rasterissa, lokit b9-huntu-z5 29 kertaa), ja jokainen ominaisuuden asetus liittää kerroksen uudestaan.
+        // Poistetut kerrokset jäävät pois päältä kierrätykseen: seuraava käyttäjä asettaa ominaisuudet pois päältä
+        // (Cesium ei liitä) ja kytkee kerroksen kerran. Uusi komponentti luodaan vain, kun vapaita ei ole, ja se
+        // kytketään heti pois, joten varoitus voi tulla enintään kerran kerrosta kohden koko istunnossa.
+
+        static readonly List<CesiumUrlTemplateRasterOverlay> vapaatKerrokset = new List<CesiumUrlTemplateRasterOverlay>();
+        static int vapaaNro;
+
+        /// <summary>URL-mallipohjainen raster-kerros pallolle kierrätyksestä tai uutena (ks. yllä). url ilman Laattapalvelinta.</summary>
+        public static CesiumUrlTemplateRasterOverlay UusiKerros(GameObject go, string avain, string url,
+            CesiumUrlTemplateRasterOverlayProjection projektio, int min, int max, bool paalle = true)
         {
-            var k = go.AddComponent<CesiumUrlTemplateRasterOverlay>();
+            CesiumUrlTemplateRasterOverlay k = null;
+            for (int i = vapaatKerrokset.Count - 1; i >= 0; i--)
+            {
+                var v = vapaatKerrokset[i];
+                if (v == null) { vapaatKerrokset.RemoveAt(i); continue; }
+                if (v.gameObject != go) continue;
+                vapaatKerrokset.RemoveAt(i);
+                k = v;
+                break;
+            }
+            if (k == null)
+            {
+                k = go.AddComponent<CesiumUrlTemplateRasterOverlay>();
+                k.enabled = false;
+            }
             k.materialKey = avain;
             k.templateUrl = Laattapalvelin.Paikallinen(url);
-            k.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
-            k.minimumLevel = 0;
+            k.projection = projektio;
+            k.minimumLevel = min;
             k.maximumLevel = max;
             k.tileWidth = 256;
             k.tileHeight = 256;
+            k.enabled = paalle;
             return k;
+        }
+
+        /// <summary>Kerros pois pallolta ja kierrätykseen (korvaa Destroyn). Avain vaihdetaan yksilölliseksi.</summary>
+        public static void VapautaKerros(CesiumUrlTemplateRasterOverlay k)
+        {
+            if (k == null) return;
+            k.enabled = false;
+            k.materialKey = "vapaa" + (vapaaNro++);
+            if (!vapaatKerrokset.Contains(k)) vapaatKerrokset.Add(k);
         }
 
         /// <summary>Sentinel-kattavuus: Z8-esivanhempi laatat8-listassa; Z0–Z7 läpinäkyviä (Blue Marble alla).</summary>
@@ -544,11 +577,10 @@ namespace Matkakirja
                 // Perillä: lennon jono pois (näkyvä kartta saa paikat takaisin).
                 LennonEsilataus?.Peru();
                 LennonEsilataus = null;
-                if (silea != null) { silea.enabled = false; Destroy(silea); silea = null; }
+                if (silea != null) { VapautaKerros(silea); silea = null; }
                 if (sentinel != null)
                 {
-                    sentinel.enabled = false;
-                    Destroy(sentinel);
+                    VapautaKerros(sentinel);
                     sentinel = null;
                     if (varitaso != null && rasterit.Count == 0) varitaso.Linssit(false);
                 }
@@ -769,7 +801,7 @@ namespace Matkakirja
         {
             if (!rasterit.TryGetValue(avain, out var r)) return;
             if (r.alfaMuutettu && Paikka(r.kerros) is int paikka && paikka >= 0) Shader.SetGlobalFloat(PaikanAlfaId[paikka], 1f);
-            if (r.kerros != null) { r.kerros.enabled = false; Destroy(r.kerros); }
+            VapautaKerros(r.kerros);
             rasterit.Remove(avain);
             if (rasterit.Count == 0 && varitaso != null) varitaso.Linssit(false);
             PaivitaNavat();
