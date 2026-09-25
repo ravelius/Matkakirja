@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2215, teksti: 'Sisältöjuna: katalogin kuvitus, radio, suunnitelmat' },
   { v: 2214, teksti: 'Maakunnat-välilehti: nykyisen maan ryhmä auki,… (#3140)' },
   { v: 2213, teksti: 'Linssikatalogi: neljä välilehteä (#3131)' },
   { v: 2212, teksti: 'Nostonimiöt kursiiviksi: asua ei lueta irrotetu… (#3135)' },
