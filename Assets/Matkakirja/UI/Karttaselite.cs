@@ -79,8 +79,9 @@ namespace Matkakirja.Natiivi
             foreach (var r in NostoMerkit.Jarjestys) LuoRivi(r);
 
             // Sormen veto rivien yli valitsee (webin peukalolevyn raahaus).
-            lista.RegisterCallback<PointerDownEvent>(e => { vetaa = true; lista.CapturePointer(e.pointerId); ValitseKohdasta(e.localPosition.y); });
-            lista.RegisterCallback<PointerMoveEvent>(e => { if (vetaa) ValitseKohdasta(e.localPosition.y); });
+            lista.RegisterCallback<PointerDownEvent>(e => { vetaa = true; lista.CapturePointer(e.pointerId); ValitseKohdasta(e.localPosition.y); e.StopPropagation(); });
+            // Vedon aikana ScrollView ei vieritä (peukalolevyn veto valitsee, web).
+            lista.RegisterCallback<PointerMoveEvent>(e => { if (vetaa) { ValitseKohdasta(e.localPosition.y); e.StopPropagation(); } });
             lista.RegisterCallback<PointerUpEvent>(e => { vetaa = false; lista.ReleasePointer(e.pointerId); });
             lista.RegisterCallback<PointerCaptureOutEvent>(_ => vetaa = false);
             lista.RegisterCallback<GeometryChangedEvent>(_ => SiirraPeukalo());
@@ -123,6 +124,9 @@ namespace Matkakirja.Natiivi
         void LuoRivi(NostoMerkit.Rivi r)
         {
             var b = Rakenne.Nappi(null, "mk-selite-rivi", null, lista);
+            // Löydös 69 (iPhone): rivi ei ota osumaa. Napin Clickable kaappasi PointerDownin, jolloin listan
+            // valinta (ValitseKohdasta, peukalolevyn veto) ei käynnistynyt. Nyt lista on kohde.
+            b.pickingMode = PickingMode.Ignore;
             b.tooltip = r.Koko;
             b.userData = r.Id;
             var merkki = Rakenne.El("mk-selite-rivi__merkki", b, PickingMode.Ignore);
