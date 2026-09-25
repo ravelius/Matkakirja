@@ -599,6 +599,17 @@ namespace Matkakirja
             }
         }
 
+        static readonly int PallonTummuusId = Shader.PropertyToID("_pallonTummuus");
+
+        /// <summary>
+        /// PALLON SÄVY (löydös 98, build 14; Linssisepän avaruuslinssi): pallon perusväri kerrotaan kertoimella
+        /// (web satelliitti-avaruus.js PALLON_SAVY 0x999999 = 0,6), jotta yökartan pisteet hehkuvat. Tileset-varjostimen
+        /// ja napakansien globaali _pallonTummuus = 1 − kerroin (asettamaton 0 = ennallaan). null = palauta (1).
+        /// Vaikuttaa perusväriin ennen radion hämärää; emissio (yövalot, maavalo) ei tummu.
+        /// </summary>
+        public static void PallonSavy(float? kerroin) =>
+            Shader.SetGlobalFloat(PallonTummuusId, kerroin.HasValue ? 1f - Mathf.Clamp01(kerroin.Value) : 0f);
+
         /// <summary>
         /// LENNON KARTTA (omistaja 24.9.2026 klo 13.4x, Fablen päätös): lennon ajaksi sileä sarja pohjan päälle
         /// Cesiumin raster-paikkaan 1. Pohja latautuu sen alla, joten paluu perillä on välitön (tiet ja rajat
