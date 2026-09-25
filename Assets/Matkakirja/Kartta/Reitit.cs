@@ -344,7 +344,11 @@ namespace Matkakirja
         // lento-materiaalista paikallaan pysyvällä ja liikkuvalla katkolla.
         Material varjo, listaLento, elavaLento;
 
-        /// <summary>Pergamenttivarjo reitit.js:221 REITIN_VARIT.varjo rgba(250,243,226,.3), 4 pt (reitit.js:67).</summary>
+        /// <summary>
+        /// Pergamenttivarjo reitit.js:221 REITIN_VARIT.varjo rgba(250,243,226,.3), 4 pt (reitit.js:67), katko sama kuin
+        /// musteella (reitit.js:447, 458–464). Vaalea vaalealla: lineaarinen sekoitus antaa pergamentilla saman tuloksen
+        /// kuin webin sRGB (.3 → .28), joten alfaa ei kompensoida kuten mustetta (löydös 111).
+        /// </summary>
         static readonly Color VarjonVari = new Color(250f / 255f, 243f / 255f, 226f / 255f, 0.3f);
         /// <summary>Valitun lennon katkon liike: jakso 0,35° (LENTOKAAREN_KATKO_AST) 2,4 s:ssa (LENTOKAAREN_ELO_MS).</summary>
         const float LennonKatkoLiike = 0.35f / 2.4f;
@@ -361,7 +365,7 @@ namespace Matkakirja
             }
             if (listaLento == null && lento != null)
             {
-                // Väri suoraan lento-materiaalista (Rakennus: 150,54,40,153 = webin .6), ei kirkastusta.
+                // Väri suoraan lento-materiaalista (Rakennus: 150,54,40,193 = webin .6 lineaariselle sekoitukselle), ei kirkastusta.
                 listaLento = new Material(lento) { name = "Lento (lista)" };
                 var k = lento.GetVector("_Katko");
                 listaLento.SetVector("_Katko", new Vector4(k.x, k.y, 0, k.w));
@@ -505,7 +509,8 @@ namespace Matkakirja
         /// <summary>Neliön sivu: ulkohalkaisija + reunan pehmennys.</summary>
         const float HelmenNelio = ReittiMitat.HelmenHalkaisijaPt + 4f;
         static readonly Color HelmenTaytto = new Color(250f / 255f, 243f / 255f, 226f / 255f, 0.9f);
-        static readonly Color HelmenReuna = new Color(74f / 255f, 58f / 255f, 36f / 255f, 0.88f);
+        /// <summary>Webin .88 (reitit.js:256 HELMEN_REUNAN_VARI) lineaariselle sekoitukselle kompensoituna pergamentilla .95 (löydös 111).</summary>
+        static readonly Color HelmenReuna = new Color(74f / 255f, 58f / 255f, 36f / 255f, 0.95f);
 
         void Helmet(Reitti r, Transform isanta)
         {

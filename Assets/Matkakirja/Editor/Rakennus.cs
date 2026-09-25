@@ -96,7 +96,8 @@ namespace Matkakirja.Editori
             reitit.maa = Viiva("Reitti-maa", new Color32(74, 58, 36, 152), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
             reitit.meri = Viiva("Reitti-meri", new Color32(61, 85, 112, 140), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
             // Lento: katko paikallaan (build 13, B23); Reitit tekee valitulle lennolle liikkuvan kopion (reitit.js:372).
-            reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 153), 2.5f, new Vector4(0.35f, 0.6f, 0, 0));
+            // Sama kompensaatio (löydös 111): webin .6 (reitit.js:214) pergamentilla = lineaarisena .76 (193).
+            reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 193), 2.5f, new Vector4(0.35f, 0.6f, 0, 0));
             reitit.korostus = Viiva("Reitti-korostus", new Color32(96, 40, 26, 230), 4f, new Vector4(0.35f, 0.6f, 0.35f / 1.2f, 0));
             merkit.reitit = reitit;
 
