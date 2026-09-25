@@ -5415,3 +5415,7 @@ Aineisto lokit/loydos61-d17-ipad11 ja lokit/loydos66-67/pulu-puhe-todennus. core
 ## BUILD 13 VIENTI KAYNNISSA klo 13.20 (AJO 36123399651, PROTO-MASTER ddb3cfb6 = c168c2e4:N PUU); ESTO #3161 KORJATTU ENNEN VIENTIA: TF-VIENTI EI AJANUT LuoPalloA VAAN KAYTTI VANHAA Pallo.unity-TIEDOSTOA — NYT AJAA KUTEN KAANNOSPALVELU; RAAMATTU-SYNKKA 2/2 MAINISSA (#3157, #3158) (25.9.2026 klo 13.21)
 
 Aiemmat TestFlight-buildit ovat voineet saada vanhan pallon; build 13 on ensimmainen, jossa LuoPallo ajetaan viennissa. SHA ja laskuri Fablelle kun TestFlightissa.
+
+## coreaudiod JUMISSA (150–200 %, RSS 1,1 → 9,9 Gt YHDELLA SIMULAATTORILLA) — OMISTAJA IRROTTI AirPods-YHDISTELMALAITTEEN JA AF16Rigin (EI AUTTANUT), FABLE AJOI sudo killall coreaudiod klo 13.25 → RSS 87 Mt, CPU 0 %; OPPI: HUOLTOKOMENTO AJETAAN SANATARKASTI YKSIN (sudo -n … && … MENI LUOKITTIMELLE) (25.9.2026 klo 13.26)
+
+Jäljellä äänilaitteet Mac Studio -kaiuttimet (oletus) ja Scarlett Solo. Jos kuorma kasvaa uudelleen tunnin sisällä, syy on simulaattorin AudioListener-äänivirta, ei laitteet.
