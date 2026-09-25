@@ -47,10 +47,27 @@ namespace Matkakirja
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
     ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
+    ///   maasto sse <arvo>         tilesetin maximumScreenSpaceError (oletus 16; luo tilesetin uudelleen; löydös 46)
+    ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
+    ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
+    ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
+    ///   suodatus                  ladattujen laattojen tekstuurien suodatus lokiin
+    ///   maaraja pois|paalle|auto | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja); auto = vain kun vektoriranta
+    ///                             ei piirry (omistaja 25.9.), paalle = aina vertailuun
+    ///   rajat pois|paalle|tila | rajat taso <0–4>|auto | rajat peitto <a>|oletus   valtioiden rajat vektorina (Rajat, E2)
+    ///   vektorit versio <nimi>|web|oletus   rannikko- ja rajasarjan versio (oletus 2026-09-25-gshhs-korkeus, web =
+    ///                             2026-09-21-gshhs ilman korkeuksia); luettelo ja solut ladataan uudelleen
+    ///   rannikko pois|paalle|tila | rannikko taso <0–4>|auto | rannikko syvyys pois|paalle | rannikko nosto <m> [osuus]
+    ///   rannikko peitto <a>|oletus  rantaviiva vektorina (Rannikko, löydös 46 E1): taso pakottaa webin tason, syvyys pois =
+    ///                             ZTest Always, nosto = syvyysnosto (oletus 200 m + 0,002 × etäisyys), peitto = lineaarinen
+    ///                             alfa (oletus 0,732 = webin 0,58 sRGB-sekoituksena); tila lokiin
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
     ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
+    ///   nostot tila [ISO3] | nostot maa <ISO3|pois>   nostokerroksen portit lokiin (NostoKerros.Kuvaus): näkyvät,
+    ///                             piilotetut syineen (kaupunki nimi/12 km, meri, taso 3, ruutu, katto), uloin osuus,
+    ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa)
     ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
     ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
     ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
@@ -176,6 +193,96 @@ namespace Matkakirja
             kk?.LentoTestiVoimaan();
             Debug.Log($"MATKAKIRJA lentoharmaa {string.Join(" ", o, 1, o.Length - 1)}: testi {KarttaKerrokset.LentoTesti}, varataso {KarttaKerrokset.VaraTaso}, " +
                       $"varapois {KarttaKerrokset.LentoTestiVaraPois}, s2 {KarttaKerrokset.LentoTestiS2}, usva estetty {Usvalevy.Estetty}");
+        }
+
+        /// <summary>
+        /// Kartan rinnevalo (löydös 46, Aurinko.cs):
+        ///   valo pois|paalle            build 11:n kameravalo / matala aurinko karttatilassa
+        ///   valo kulma &lt;atsimuutti&gt; &lt;korkeus&gt;   auringon suunta (° pohjoisesta myötäpäivään, ° vaakatasosta; oletus 315 35)
+        ///   valo voima &lt;v&gt;              suoran valon osuus (1 = ambientti ennallaan, esim. 0.8 = pehmeämpi; tasamaa ennallaan)
+        ///   valo oletus | valo tila     oletusarvot takaisin / tila lokiin (intensiteetti, ambientti, N·L, usva, sumu)
+        /// </summary>
+        void Valo(string[] o)
+        {
+            double D(int i) => double.Parse(o[i], CultureInfo.InvariantCulture);
+            string m = o.Length > 1 ? o[1] : "tila";
+            switch (m)
+            {
+                case "pois": Aurinko.RinnevaloSallittu = false; break;
+                case "paalle": Aurinko.RinnevaloSallittu = true; break;
+                case "kulma" when o.Length > 3:
+                    Aurinko.Atsimuutti = D(2);
+                    Aurinko.KorkeusAst = System.Math.Max(3.0, System.Math.Min(90.0, D(3)));
+                    break;
+                case "voima" when o.Length > 2: Aurinko.Voima = System.Math.Max(0.0, System.Math.Min(2.0, D(2))); break;
+                case "oletus":
+                    Aurinko.RinnevaloSallittu = true;
+                    Aurinko.Atsimuutti = Karttavalo.OletusAtsimuutti;
+                    Aurinko.KorkeusAst = Karttavalo.OletusKorkeus;
+                    Aurinko.Voima = Karttavalo.OletusVoima;
+                    break;
+            }
+            var au = FindAnyObjectByType<Aurinko>();
+            Debug.Log("MATKAKIRJA valo " + string.Join(" ", o, 1, o.Length - 1) + ": " + (au != null ? au.Tila() : "ei aurinkoa"));
+        }
+
+        /// <summary>
+        /// Horisonttiusva kallistuksessa (löydös 46, Aurinko.cs):
+        ///   usva pois|paalle    usva ja pergamenttitausta / build 11:n tumma tausta
+        ///   usva raja &lt;k&gt;       rajan maapinnan matka × korkeus (webin 0.6)
+        ///   usva vari r g b     sävy (sRGB 0–1 tai 0–255; oletus webin --kerma 250 244 214)
+        /// </summary>
+        void Usva(string[] o)
+        {
+            double D(int i) => double.Parse(o[i], CultureInfo.InvariantCulture);
+            string m = o.Length > 1 ? o[1] : "";
+            switch (m)
+            {
+                case "pois": Aurinko.UsvaSallittu = false; break;
+                case "paalle": Aurinko.UsvaSallittu = true; break;
+                case "raja" when o.Length > 2: Aurinko.UsvaRaja = System.Math.Max(0.05, System.Math.Min(5.0, D(2))); break;
+                case "vari" when o.Length > 4:
+                {
+                    double r = D(2), g = D(3), b = D(4);
+                    double k = r > 1.0 || g > 1.0 || b > 1.0 ? 1.0 / 255.0 : 1.0;
+                    Aurinko.UsvaVari = new Color((float)(r * k), (float)(g * k), (float)(b * k));
+                    break;
+                }
+            }
+            var au = FindAnyObjectByType<Aurinko>();
+            Debug.Log("MATKAKIRJA usva " + string.Join(" ", o, 1, o.Length - 1) + ": " + (au != null ? au.Tila() : "ei aurinkoa")
+                      + $", väri {Aurinko.UsvaVari}, katto {kierto.KallistusRaja():0.0}°");
+        }
+
+        /// <summary>
+        /// Rasterikerrosten suodatus lokiin (löydös 46 kohta 2): ladattujen laattojen materiaalien tekstuurit ryhmiteltyinä
+        /// (suodatin, anisotropia, mipit, koko) ja QualitySettings.anisotropicFiltering. Cesium for Unity 1.25.1 tekee
+        /// raster-tekstuurit itse: mipit työsäikeessä (ImageDecoder::generateMipMaps), Clamp, Trilinear, anisoLevel 16.
+        /// </summary>
+        void Suodatus()
+        {
+            var pallo = FindAnyObjectByType<CesiumForUnity.Cesium3DTileset>();
+            if (pallo == null) { Debug.LogWarning("MATKAKIRJA suodatus: ei tilesetiä"); return; }
+            var ryhmat = new Dictionary<string, int>();
+            var nahdyt = new HashSet<Texture>();
+            var idt = new List<int>();
+            foreach (var r in pallo.GetComponentsInChildren<MeshRenderer>())
+            {
+                var mat = r.sharedMaterial;
+                if (mat == null) continue;
+                idt.Clear();
+                mat.GetTexturePropertyNameIDs(idt);
+                foreach (int id in idt)
+                {
+                    var t = mat.GetTexture(id);
+                    if (t == null || !nahdyt.Add(t)) continue;
+                    string avain = $"{t.filterMode} aniso {t.anisoLevel} mipit {t.mipmapCount} {t.width}×{t.height} {t.wrapMode}";
+                    ryhmat[avain] = ryhmat.TryGetValue(avain, out int n) ? n + 1 : 1;
+                }
+            }
+            var sb = new StringBuilder($"MATKAKIRJA suodatus: {nahdyt.Count} tekstuuria, quality aniso {QualitySettings.anisotropicFiltering}");
+            foreach (var p in ryhmat) sb.Append("\n  ").Append(p.Value).Append(" × ").Append(p.Key);
+            Debug.Log(sb.ToString());
         }
 
         void Aja(string rivi)
@@ -331,9 +438,83 @@ namespace Matkakirja
                     // napauta x y: osuus näytöstä 0–1, origo vasen alakulma
                     kierto.Napauta(new Vector2((float)D(1) * Screen.width, (float)D(2) * Screen.height));
                     break;
+                case "maasto" when o.Length > 2 && o[1] == "sse":
+                {
+                    // maasto sse <arvo>: tilesetin maximumScreenSpaceError (löydös 46 lisäys 5). Luo tilesetin uudelleen.
+                    var kk = KarttaKerrokset.Instanssi;
+                    float v = kk != null ? kk.MaastoSse((float)D(2)) : float.NaN;
+                    Debug.Log("MATKAKIRJA maasto sse: " + v.ToString("0.##", CultureInfo.InvariantCulture)
+                              + " (layer.json-maastolla Cesium jakaa 8:lla: " + (v / 8f).ToString("0.##", CultureInfo.InvariantCulture) + " px)");
+                    break;
+                }
                 case "maasto":
                     Maasto(o[1] == "paalle");
                     break;
+                case "valo":
+                    Valo(o);
+                    break;
+                case "usva":
+                    Usva(o);
+                    break;
+                case "kallistus":
+                    // kallistus pois|paalle | kallistus katto pois|paalle (löydös 46, PalloKierto.KallistusSallittu/-KattoPaalla)
+                    if (o.Length > 2 && o[1] == "katto") PalloKierto.KallistusKattoPaalla = o[2] == "paalle";
+                    else if (o.Length > 1) PalloKierto.KallistusSallittu = o[1] == "paalle";
+                    Debug.Log($"MATKAKIRJA kallistus: sallittu {PalloKierto.KallistusSallittu}, katto {PalloKierto.KallistusKattoPaalla}, " +
+                              $"raja nyt {kierto.KallistusRaja():0.0}°, käytetty {kierto.KaytettyKallistus:0.0}°");
+                    break;
+                case "suodatus":
+                    Suodatus();
+                    break;
+                case "maaraja":
+                    // maaraja pois|paalle|auto | maaraja paksuus <pt>|web (löydös 46 jatko ja E2, Maaraja.Sallittu/Pakota/PaksuusPt):
+                    // auto (oletus) = kehä vain, kun vektoriranta ei piirry; paalle = aina (vertailuun); pois = ei koskaan.
+                    if (o.Length > 2 && o[1] == "paksuus")
+                        Maaraja.PaksuusPt = o[2] == "web" ? float.NaN : (float)D(2);
+                    else if (o.Length > 1) { Maaraja.Sallittu = o[1] != "pois"; Maaraja.Pakota = o[1] == "paalle"; }
+                    Debug.Log($"MATKAKIRJA maaraja: sallittu {Maaraja.Sallittu}, pakotettu {Maaraja.Pakota}, " +
+                              $"rannikko piirtyy {(Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy)}, paksuus " +
+                              (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt" : "web 1,6–3 pt") +
+                              $" × pistekerroin {PalloKierto.Pistekerroin}");
+                    break;
+                case "vektorit":
+                    // vektorit versio <nimi>|web|oletus (löydös 46: rajakorkeussarja oletuksena, webin sarja vertailuun)
+                    if (o.Length > 2 && o[1] == "versio") Vektorikerros.AsetaVersio(o[2]);
+                    Debug.Log($"MATKAKIRJA vektorit: versio {Vektorikerros.Versio} (oletus {Vektorikerros.OletusVersio}), " +
+                              $"luettelo {(Vektorikerros.Luettelo != null ? Vektorikerros.Luettelo.Versio : "lataamatta")}");
+                    break;
+                case "rannikko":
+                case "rajat":
+                {
+                    // rannikko|rajat pois|paalle|tila | taso <n>|auto | peitto <a>|oletus; rannikko syvyys pois|paalle |
+                    // rannikko nosto <m> [osuus] (yhteiset molemmille; löydös 46 E1–E2)
+                    bool ranta = o[0] == "rannikko";
+                    if (o.Length > 2 && o[1] == "taso")
+                    {
+                        int t = o[2] == "auto" ? -1 : (int)D(2);
+                        if (ranta) Rannikko.PakotettuTaso = t; else Rajat.PakotettuTaso = t;
+                    }
+                    else if (o.Length > 2 && o[1] == "peitto")
+                    {
+                        // "web" = webin voima (lineaarikorjattu); "oletus" = omistajan valinta (rannikko 0,25, rajat web).
+                        float p = o[2] == "oletus" ? float.NaN
+                            : o[2] == "web" ? (ranta ? Rannikko.PeittoNatiivi : Rajat.PeittoNatiivi) : (float)D(2);
+                        if (ranta) Rannikko.PeittoOhitus = p; else Rajat.PeittoOhitus = p;
+                    }
+                    else if (o.Length > 2 && o[1] == "syvyys") Vektorikerros.Syvyystesti = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "nosto")
+                    {
+                        Vektorikerros.NostoM = (float)D(2);
+                        if (o.Length > 3) Vektorikerros.NostoOsuus = (float)D(3);
+                    }
+                    else if (o.Length > 1 && (o[1] == "pois" || o[1] == "paalle"))
+                    {
+                        if (ranta) Rannikko.Sallittu = o[1] == "paalle"; else Rajat.Sallittu = o[1] == "paalle";
+                    }
+                    Vektorikerros k = ranta ? (Vektorikerros)Rannikko.Instanssi : Rajat.Instanssi;
+                    Debug.Log($"MATKAKIRJA {o[0]}: " + (k != null ? k.Tila() : "ei kohtauksessa"));
+                    break;
+                }
                 case "alue":
                 case "offline":
                 {
@@ -403,6 +584,15 @@ namespace Matkakirja
                     else if (o.Length > 2 && o[1] == "valtameret") nk.valtameret = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "siirto") nk.tasoSiirto = (float)D(2);
                     Debug.Log(nk.Kuvaus());
+                    break;
+                }
+                case "nostot":
+                {
+                    // nostot tila [ISO3] | nostot maa <ISO3|pois> (NostoKerros, löydös 50 B): portit maittain lokiin
+                    var nk = NostoKerros.Instanssi;
+                    if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nostokerros puuttuu"); break; }
+                    if (o.Length > 2 && o[1] == "maa") nk.Maa = o[2] == "pois" ? null : o[2].ToUpperInvariant();
+                    Debug.Log(nk.Kuvaus(o.Length > 2 && o[1] == "tila" ? o[2] : null));
                     break;
                 }
                 case "palvelin":

@@ -19,6 +19,9 @@ namespace Matkakirja
     /// kerroin rajataan siksi välille [<see cref="Pienin"/>, <see cref="Suurin"/>].
     ///
     /// Komento (Komennot.cs, Documents/komento.txt): <c>korkeus 2.5</c>. Ei pysyvää tallennusta.
+    ///
+    /// RINNEVALON TASAUS (löydös 46): _maaKeski.w on varjostimen normaalien tasauksen paino (<see cref="Tasaus"/>,
+    /// Karttavalo.cs); xyz on yhä maan keskipiste. Aurinko.cs asettaa painon joka kehys.
     /// </summary>
     public static class KorkeusKerroin
     {
@@ -37,6 +40,24 @@ namespace Matkakirja
         /// <summary>Voimassa oleva kerroin (1 = ennallaan).</summary>
         public static float Arvo { get; private set; } = Oletus;
 
+        /// <summary>Rinnevalon tasauksen paino 0–1 (_maaKeski.w).</summary>
+        public static float TasausArvo { get; private set; }
+        static Vector3 keskiNyt;
+        static bool keskiOn;
+
+        /// <summary>
+        /// Rinnevalon tasaus (löydös 46, Karttavalo.cs): tileset-varjostin kiertää normaalit kohti kameran alapisteen
+        /// normaalia painolla w (0 = normaalit ennallaan). Kirjoittaa globaalin vain, kun arvo muuttuu.
+        /// </summary>
+        public static void Tasaus(float w)
+        {
+            w = Mathf.Clamp01(float.IsNaN(w) ? 0f : w);
+            if (keskiOn && Mathf.Abs(w - TasausArvo) < 1e-4f) return;
+            TasausArvo = w;
+            if (!keskiOn) return; // Aseta kirjoittaa painon keskipisteen kanssa
+            Shader.SetGlobalVector(KeskiId, new Vector4(keskiNyt.x, keskiNyt.y, keskiNyt.z, w));
+        }
+
         /// <summary>
         /// Asettaa kertoimen heti (varjostimen globaalit). Georeferenssi haetaan kohtauksesta, jos sitä ei anneta.
         /// Palauttaa rajatun arvon.
@@ -51,7 +72,9 @@ namespace Matkakirja
                 Vector3 keski = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
                 Vector3 akseli = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
                     new double3(0, 0, 1))).normalized;
-                Shader.SetGlobalVector(KeskiId, new Vector4(keski.x, keski.y, keski.z, 0));
+                keskiNyt = keski;
+                keskiOn = true;
+                Shader.SetGlobalVector(KeskiId, new Vector4(keski.x, keski.y, keski.z, TasausArvo));
                 Shader.SetGlobalVector(AkseliId, new Vector4(akseli.x, akseli.y, akseli.z, 0));
                 // Pituusasteen akselit lennon varakartalle (KarttaKerrokset, tileset-varjostimen LentoVaraUV):
                 // ECEF +X (lon 0°) ja +Y (lon 90° E) Unityn maailmassa.

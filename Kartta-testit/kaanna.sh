@@ -1,11 +1,12 @@
 #!/bin/sh
 # Kartan puhtaat funktiot (Assets/Matkakirja/Kartta/*.cs ilman UnityEngineä: Saapumisnakyma.cs, NimiLadonta.cs,
-# LennonAikajana.cs, Panorointi.cs + Linssien Kamerakoreografia.cs + MastoGeometria.cs; lista LAHTEET: yksi tiedosto per rivi,
+# LennonAikajana.cs, Panorointi.cs, NostoSaannot.cs + Linssien Kamerakoreografia.cs + MastoGeometria.cs; lista LAHTEET: yksi tiedosto per rivi,
 # jotta haarojen lisäykset yhdistyvät junassa rivien unionina) ja
 # testit Unityn mukana tulevalla dotnetilla ja Roslynilla ilman editoria. Sama kaava kuin
 # Peli-testit/kaanna.sh (oma testiajuri Testit/Ajuri.cs); JSON luetaan pelin MiniJsonilla.
 # Käyttö: ./kaanna.sh [testin nimen osa]
 # Mittaustaulukko: SAAPUMINEN_MITAT=<polku.md> [SAAPUMINEN_MAARAJAT=<maarajat.json>] ./kaanna.sh Saapumisnakyma
+# Rajakorkeussarja: VEKTORIT_KOE=<kansio> ./kaanna.sh Vektorisolut (esim. /Users/Shared/Claude/maasto-poltto/rajakorkeus/2026-09-25-gshhs-korkeus)
 # Nimikerroksen koepaketti: NIMET_KOE=<paketin kansio> ./kaanna.sh NimiLadonta (oletus /Users/Shared/Claude/sisalto-koe-2/v8)
 # Kultaiset arvot uusiksi: node Kultaiset/tee-saapuminen.mjs <webin juuri: js/ ja assets/data/maapolygonit.json>
 set -e
@@ -20,11 +21,17 @@ VIITTEET="$VIITTEET -r:$REF/System.Private.CoreLib.dll -r:$REF/netstandard.dll -
 # Lähteet yksi per rivi (juna yhdistää haarojen lisäykset rivien unionina).
 LAHTEET="
 ../Assets/Matkakirja/Peli/MiniJson.cs
+../Assets/Matkakirja/Kartta/Horisonttiusva.cs
+../Assets/Matkakirja/Kartta/KameraEleet.cs
+../Assets/Matkakirja/Kartta/Karttavalo.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
+../Assets/Matkakirja/Kartta/NostoSaannot.cs
 ../Assets/Matkakirja/Kartta/Panorointi.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs
+../Assets/Matkakirja/Kartta/Vektorisolut.cs
+../Assets/Matkakirja/Kartta/Viivaleveys.cs
 ../Assets/Matkakirja/Linssit/Ydin/Kamera/Kamerakoreografia.cs
 "
 $DN "$R/DotNetSdkRoslyn/csc.dll" -nologo -nowarn:1701,1702 -langversion:9.0 -nullable:disable -target:exe \
