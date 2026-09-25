@@ -152,10 +152,12 @@ namespace Matkakirja.Natiivi
         {
             v = Mathf.Clamp01(v);
             Color C(int r, int g, int b) => new Color(r / 255f, g / 255f, b / 255f);
-            if (v < 0.30f) return Color.Lerp(C(216, 172, 102), C(206, 158, 100), v / 0.30f);
-            if (v < 0.52f) return Color.Lerp(C(206, 158, 100), C(168, 132, 88), (v - 0.30f) / 0.22f);
-            if (v < 0.72f) return Color.Lerp(C(168, 132, 88), C(112, 89, 62), (v - 0.52f) / 0.20f);
-            return Color.Lerp(C(112, 89, 62), C(78, 61, 37), (v - 0.72f) / 0.28f);
+            // b13n:n kuvaparissa lopputulos (kohina, sisävarjot ja tahrat mukana) oli keskeltä ja alhaalta 12–28 %
+            // webiä tummempi: pisteet 30 / 52 / 72 / 100 % nostettu mitatuilla suhteilla.
+            if (v < 0.30f) return Color.Lerp(C(216, 172, 102), C(216, 166, 106), v / 0.30f);
+            if (v < 0.52f) return Color.Lerp(C(216, 166, 106), C(198, 156, 106), (v - 0.30f) / 0.22f);
+            if (v < 0.72f) return Color.Lerp(C(198, 156, 106), C(142, 114, 82), (v - 0.52f) / 0.20f);
+            return Color.Lerp(C(142, 114, 82), C(90, 71, 46), (v - 0.72f) / 0.28f);
         }
 
         /// <summary>Webin radial-gradient(ellipse rx ry at cx cy, väri, läpinäkyvä ~75 %): 1 keskellä, 0 reunalla.</summary>
