@@ -153,7 +153,8 @@
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": ["Creative Commons 0", "Attribution"],
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album", "dark", "scape", "drone", "horror", "cinematic"]
     },
     {
       "tunnus": "kylma-tuuli",
