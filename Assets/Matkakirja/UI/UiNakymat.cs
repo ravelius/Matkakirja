@@ -347,6 +347,9 @@ namespace Matkakirja.Natiivi
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSahkehakemisto(kaupunki));
             EsilataaSahkehakemisto(o.PelaajanKaupunki);
+            // Löydös 104: maan karttanostojen data valmiiksi saapuessa (web sw.js), jotta kortti aukeaa heti.
+            o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaNostot(kaupunki));
+            EsilataaNostot(o.PelaajanKaupunki);
             // Huipennus vasta, kun viimeisen aarteen kysymys (ja sen paljastus) on suljettu: tapahtuma
             // tulee löytöhetkellä, ennen paljastusta, eikä huipennus saa jäädä paljastuksen alle.
             // Web: voittoikkuna aukeaa → sfx.play('win').
@@ -367,6 +370,23 @@ namespace Matkakirja.Natiivi
             o.LentoAani += (alkaa, kesto) => UiKerros.PaaSaikeessa(() => Aanet.LentoAani(alkaa, kesto));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
+        }
+
+        static string esiladattuMaa;
+
+        /// <summary>Saapumismaan nostodata taustalla 2 s:n päästä (saapumisen animaatio ja luenta ensin); maa kerran.</summary>
+        static void EsilataaNostot(string kaupunki)
+        {
+            var maa = kaupunki != null ? UiSisalto.Kaupunki(kaupunki)?.Maa : null;
+            if (string.IsNullOrEmpty(maa) || maa == esiladattuMaa) return;
+            esiladattuMaa = maa;
+            UiKerros.Hae().StartCoroutine(Viiveella(2f, NostoSisalto.Esilataa(maa)));
+        }
+
+        static System.Collections.IEnumerator Viiveella(float s, System.Collections.IEnumerator ajo)
+        {
+            yield return new WaitForSecondsRealtime(s);
+            yield return ajo;
         }
 
         static void EsilataaSahkehakemisto(string kaupunki)
