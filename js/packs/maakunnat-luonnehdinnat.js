@@ -4873,4 +4873,359 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Juutalaisen autonomisen alueen pääkaupungin Birobidžanin pääkatu on nimetty jiddišiksi kirjoittaneen Šolem Aleichemin mukaan.',
     },
   },
+  /*
+   * EGY (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 27 aluetta.
+   * Avaimet ovat js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.EGY:n
+   * tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti (myös gravis-merkit
+   * "Al Isma`iliyah", "Bur Sa`id" ja heittomerkit "Janub Sina'",
+   * "Shamal Sina'"). Vain `lyhyt`. Fokuskohteiden aiheet (Faroksen
+   * majakka, Aleksandrian kirjasto, Gizan pyramidit, Karnak) jätettiin
+   * pois. Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Al Fayyum        — Wadi Al-Hitan (Unesco, takajalalliset valaat)
+   *   Al Gharbiyah     — Ahmad al-Badawi / Tantan moulid (1–3 milj.)
+   *   Al Iskandariyah  — Catacombs of Kom El Shoqafa
+   *   Al Minya         — Amarna
+   *   Al Qahirah       — Al-Azhar Mosque (970–972) ja yliopisto
+   *   Al Bahr al Ahmar — Mons Porphyrites (ainoa keisariporfyyrin lähde)
+   *   Al Buhayrah      — Rosetta / Rosetta Stone (British Museum)
+   *   Ad Daqahliyah    — Mansoura: Dar Ibn Luqman (Ludvig IX, museo)
+   *   Al Minufiyah     — Monufia Governorate (Sadat, Mubarak)
+   *   Al Qalyubiyah    — Delta Barrage / El Qanater El Khayreya
+   *   Ash Sharqiyah    — Bubastis (Tell Basta, Zagazig)
+   *   Al Wadi at Jadid — White Desert (Farafra, liituveistokset)
+   *   Aswan            — Aswan High Dam (1970), Lake Nasser
+   *   Asyut            — Deir el-Muharraq (6 kk, kesäkuun vaellus)
+   *   Bani Suwayf      — Meidum pyramid
+   *   Dumyat           — Damietta Furniture City (SIS; ~2/3 tuotannosta)
+   *   Al Jizah         — Grand Egyptian Museum (avattu 1.11.2025)
+   *   Al Isma`iliyah   — Ismailia (Suez Canal Authority)
+   *   Janub Sina'      — Saint Catherine's Monastery
+   *   Kafr ash Shaykh  — Lake Burullus (Ramsar 1998, 112 lintulajia)
+   *   Luxor            — KV62 (muumio haudassa)
+   *   Matruh           — Siwi language
+   *   Bur Sa`id        — Port Fuad (ilmainen lautta, Aasian puoli)
+   *   Qina             — Dendera Temple complex
+   *   Shamal Sina'     — Lake Bardawil (100 m – 1 km hiekkasärkkä)
+   *   Suhaj            — Abydos King List
+   *   As Suways        — Suez Canal (saattueet)
+   */
+  EGY: {
+    'Ad Daqahliyah': {
+      lyhyt: 'Mansouran Dar Ibn Luqman -talossa pidettiin vankina Ranskan kuningasta Ludvig IX:ttä vuonna 1250, ja nyt talo on museo.',
+    },
+    'Al Bahr al Ahmar': {
+      lyhyt: 'Punaisenmeren rannikon vuorilla on Mons Porphyrites, roomalaisten louhos, joka oli keisarillisen purppuraporfyyrin ainoa tunnettu lähde.',
+    },
+    'Al Buhayrah': {
+      lyhyt: 'Rašidin eli Rosettan kaupunki antoi nimensä kivelle, jonka avulla hieroglyfit opittiin lukemaan; itse kivi on nykyään Lontoossa.',
+    },
+    'Al Fayyum': {
+      lyhyt: 'Fajumin autiomaassa Wadi al-Hitanissa lojuu fossiilisia valaanluurankoja, joilla oli vielä pienet takajalat; laakso on Unescon maailmanperintöä.',
+    },
+    'Al Gharbiyah': {
+      lyhyt: 'Tantassa vietetään joka vuosi sufipyhimys Ahmad al-Badawin moulidia, ja juhla tuo kaupunkiin yli miljoona pyhiinvaeltajaa.',
+    },
+    'Al Iskandariyah': {
+      lyhyt: 'Aleksandrian Kom el-Šoqafan katakombeissa egyptiläiset, kreikkalaiset ja roomalaiset kuva-aiheet sekoittuvat samoissa hautakammioissa.',
+    },
+    'Al Isma`iliyah': {
+      lyhyt: 'Ismailia rakennettiin Suezin kanavan työmaakaupungiksi, ja kanavaa hallinnoivan viraston päämaja on siellä yhä.',
+    },
+    'Al Jizah': {
+      lyhyt: 'Gizaan avattiin 2025 Suuri egyptiläinen museo, jossa Tutankhamonin koko hautalöytö on ensimmäistä kertaa esillä yhdessä.',
+    },
+    'Al Minufiyah': {
+      lyhyt: 'Menufian maalaiskylistä ovat kotoisin kaksi Egyptin presidenttiä, Anwar Sadat ja Hosni Mubarak.',
+    },
+    'Al Minya': {
+      lyhyt: 'Minyan maakunnassa Niilin itärannalla ovat Amarnan rauniot – farao Ekhnatonin lyhytikäisen pääkaupungin jäänteet.',
+    },
+    'Al Qahirah': {
+      lyhyt: 'Kairon al-Azhar-moskeija valmistui 970-luvulla, ja sen yhteydessä toimiva yliopisto on yksi maailman vanhimmista.',
+    },
+    'Al Qalyubiyah': {
+      lyhyt: 'Qanater al-Khairiyassa Niili jakautuu Rosettan ja Damiettan haaroiksi, ja vanhan padon puistot ovat kairolaisten suosittu retkikohde.',
+    },
+    'Al Wadi at Jadid': {
+      lyhyt: 'Farafran keitaan pohjoispuolella Valkoisessa aavikossa tuuli on veistänyt liitukivestä valkoisia sieniä ja torneja.',
+    },
+    'As Suways': {
+      lyhyt: 'Suezin kaupunki on kanavan eteläpäässä, ja sen edustalla laivat odottavat vuoroaan kulkea kanavan läpi saattueissa.',
+    },
+    'Ash Sharqiyah': {
+      lyhyt: 'Zagazigin laidalla ovat Bubastiksen rauniot, muinaisen kissajumalatar Bastetin tärkeimmän kulttikaupungin jäänteet.',
+    },
+    Aswan: {
+      lyhyt: 'Aswanin suurpato valmistui 1970, ja sen taakse padottu Nasserinjärvi on yksi maailman suurimmista tekojärvistä.',
+    },
+    Asyut: {
+      lyhyt: 'Asyutin Deir al-Muharraqin luostarissa pyhän perheen kerrotaan asuneen puoli vuotta, ja kesäisin sinne vaeltaa tuhansia koptikristittyjä.',
+    },
+    'Bani Suwayf': {
+      lyhyt: 'Beni Suefin Meidumissa seisoo osittain romahtanut pyramidi, jonka jäljelle jäänyt ydin näyttää autiomaassa tornilta.',
+    },
+    'Bur Sa`id': {
+      lyhyt: 'Port Saidista pääsee ilmaisella lautalla kanavan yli Port Fuadiin, ja kymmenen minuutin matkalla maanosa vaihtuu Afrikasta Aasiaan.',
+    },
+    Dumyat: {
+      lyhyt: 'Damiettan pienissä pajoissa valmistuu noin kaksi kolmasosaa Egyptin huonekaluista.',
+    },
+    "Janub Sina'": {
+      lyhyt: 'Siinainvuoren juurella oleva Pyhän Katariinan luostari on yksi maailman vanhimmista yhä toimivista kristillisistä luostareista.',
+    },
+    'Kafr ash Shaykh': {
+      lyhyt: 'Burullusjärvi on Niilin suiston toiseksi suurin laguuni ja suojeltu kosteikko, jossa on tavattu yli sata lintulajia.',
+    },
+    Luxor: {
+      lyhyt: 'Kuninkaiden laaksossa Tutankhamonin muumio lepää yhä omassa haudassaan, vaikka aarteet on viety museoon.',
+    },
+    Matruh: {
+      lyhyt: 'Siwan keitaalla puhutaan yhä berberikieliin kuuluvaa siwia, vaikka ympärillä on arabiankielinen Egypti.',
+    },
+    Qina: {
+      lyhyt: 'Qinan lähellä Denderan Hathorin temppeli on yksi Egyptin parhaiten säilyneistä, ja sen kattomaalaukset ovat yhä värikkäitä.',
+    },
+    "Shamal Sina'": {
+      lyhyt: 'Pohjois-Siinain rannikolla Bardawilin matalaa ja suolaista laguunia erottaa Välimerestä vain kapea hiekkasärkkä.',
+    },
+    Suhaj: {
+      lyhyt: 'Sohagin maakunnan Abydoksessa Seti I:n temppelin seinään on kaiverrettu luettelo kymmenistä häntä edeltäneistä faaraoista.',
+    },
+  },
+  /*
+   * IND (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 36 aluetta
+   * (osavaltiot ja liittoalueet). Avaimet kopioitu koneellisesti
+   * MAAKUNNAT_KAIKKI.IND:stä. Vain `lyhyt`. Jammu and Kashmir, Ladakh ja
+   * Arunachal Pradesh kuvataan neutraalisti maiseman tai paikan kautta.
+   * Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Andaman and Nicobar — Barren Island (Etelä-Aasian ainoa aktiivinen)
+   *   Andhra Pradesh      — Venkateswara Temple, Tirumala (hiusuhri)
+   *   Arunachal Pradesh   — Tawang Monastery (Intian suurin, ~3 000 m)
+   *   Assam               — Kaziranga National Park (~2/3 sarvikuonoista)
+   *   Bihar               — Mahabodhi Temple
+   *   Chandigarh          — Chandigarh (Le Corbusier, sektorit)
+   *   Chhattisgarh        — Chitrakote Falls
+   *   Dadra ... Diu       — Diu Fort; Portugalin vallan loppu 1961
+   *   Delhi               — Qutb Minar (72,5 m)
+   *   Goa                 — Basilica of Bom Jesus (näytteille ~10 v välein)
+   *   Gujarat             — Gir National Park
+   *   Haryana             — Kurukshetra
+   *   Himachal Pradesh    — Kalka–Shimla Railway (102 tunnelia käytössä)
+   *   Jammu and Kashmir   — Dal Lake
+   *   Jharkhand           — Jamshedpur
+   *   Karnataka           — Hampi
+   *   Kerala              — Literacy in India (2011: ~94 %)
+   *   Ladakh              — Leh (~3 500 m)
+   *   Lakshadweep         — Lakshadweep (36 saarta, 10 asuttua, lupa)
+   *   West Bengal         — Sundarbans
+   *   Madhya Pradesh      — Khajuraho Group of Monuments
+   *   Maharashtra         — Dabbawala (nyt n. 50 000/pv, ennen 200 000)
+   *   Manipur             — Keibul Lamjao National Park
+   *   Meghalaya           — Living root bridge
+   *   Mizoram             — Cheraw dance
+   *   Nagaland            — Hornbill Festival (Kisama, 1.–10.12.)
+   *   Odisha              — Konark Sun Temple (24 pyörää)
+   *   Puducherry          — Puducherry (de facto siirto 1954)
+   *   Punjab              — Golden Temple, langar
+   *   Rajasthan           — Jaisalmer Fort
+   *   Sikkim              — Sikkim Organic Mission (18.1.2016)
+   *   Tamil Nadu          — Meenakshi Temple
+   *   Telangana           — Charminar (1591), Laad Bazaar
+   *   Tripura             — Neermahal
+   *   Uttar Pradesh       — Varanasi ghats (Manikarnika)
+   *   Uttarakhand         — Jim Corbett National Park (Hailey NP 1936)
+   */
+  IND: {
+    'Andaman and Nicobar': {
+      lyhyt: 'Andamaanien Barren Island on Etelä-Aasian ainoa vahvistetusti toimiva tulivuori, ja sitä pääsee katsomaan vain veneestä.',
+    },
+    'Andhra Pradesh': {
+      lyhyt: 'Tirumalan Venkateswaran temppeliin Tirupatissa saapuu päivittäin kymmeniä tuhansia pyhiinvaeltajia, ja moni uhraa sinne hiuksensa.',
+    },
+    'Arunachal Pradesh': {
+      lyhyt: 'Tawangin luostari noin 3 000 metrin korkeudessa Himalajan rinteillä on Intian suurin buddhalaisluostari.',
+    },
+    Assam: {
+      lyhyt: 'Kazirangan kansallispuistossa elää noin kaksi kolmasosaa kaikista maailman intiansarvikuonoista.',
+    },
+    Bihar: {
+      lyhyt: 'Bodh Gayan Mahabodhi-temppelin viikunapuun juurella Buddhan kerrotaan saavuttaneen valaistumisen, ja paikka on Unescon maailmanperintöä.',
+    },
+    Chandigarh: {
+      lyhyt: 'Chandigarhin suunnitteli sveitsiläissyntyinen arkkitehti Le Corbusier, ja kaupunki on jaettu numeroituihin sektoreihin.',
+    },
+    Chhattisgarh: {
+      lyhyt: 'Chitrakoten vesiputousta Indravati-joella kutsutaan leveytensä vuoksi Intian Niagaraksi.',
+    },
+    'Dadra and Nagar Haveli and Daman and Diu': {
+      lyhyt: 'Diun saarella seisoo portugalilaisten 1500-luvulla rakentama linnoitus, ja saari kuului Portugalille vuoteen 1961.',
+    },
+    Delhi: {
+      lyhyt: 'Delhin Qutb Minar on lähes 73 metriä korkea tiilinen minareetti, jonka rakentaminen alkoi 1100-luvun lopulla.',
+    },
+    Goa: {
+      lyhyt: 'Vanhan Goan Bom Jesusin basilikassa lepää Frans Xavierin ruumis, ja se asetetaan pyhiinvaeltajien nähtäväksi kymmenen vuoden välein.',
+    },
+    Gujarat: {
+      lyhyt: 'Girin metsissä elävät maailman ainoat luonnonvaraiset aasianleijonat.',
+    },
+    Haryana: {
+      lyhyt: 'Kurukshetra on Mahabharatan suuren taistelun näyttämö, jossa Krishnan kerrotaan puhuneen Bhagavadgitan Arjunalle.',
+    },
+    'Himachal Pradesh': {
+      lyhyt: 'Kalkasta Shimlaan kiemurteleva kapearaiteinen vuoristorata kulkee yli sadan tunnelin läpi ja on Unescon maailmanperintöä.',
+    },
+    'Jammu and Kashmir': {
+      lyhyt: 'Srinagarin Dal-järvellä kelluu satoja puisia asuntolaivoja, ja kauppiaat kiertävät niitä kapeilla shikara-veneillä.',
+    },
+    Jharkhand: {
+      lyhyt: 'Jamshedpur rakennettiin Tatan terästehtaan ympärille, ja sitä pidetään Intian ensimmäisenä suunniteltuna teollisuuskaupunkina.',
+    },
+    Karnataka: {
+      lyhyt: 'Hampissa Vijayanagaran valtakunnan pääkaupungin temppelirauniot seisovat valtavien graniittilohkareiden keskellä.',
+    },
+    Kerala: {
+      lyhyt: 'Keralan lukutaitoaste on Intian osavaltioiden korkein: yli 90 prosenttia asukkaista osaa lukea.',
+    },
+    Ladakh: {
+      lyhyt: 'Ladakhin pääkaupunki Leh on noin 3 500 metrin korkeudessa, joten tulijan kannattaa ensin totutella ohueen ilmaan.',
+    },
+    Lakshadweep: {
+      lyhyt: 'Lakshadweepin 36 korallisaaresta vain kymmenellä asuu ihmisiä, ja vierailuun tarvitaan aina erillinen lupa.',
+    },
+    'Madhya Pradesh': {
+      lyhyt: 'Khajurahon tuhatvuotiaiden temppeleiden seinät ovat täynnä veistoksia, myös eroottisia, ja temppelit ovat Unescon maailmanperintöä.',
+    },
+    Maharashtra: {
+      lyhyt: 'Mumbain dabbawalat kuljettavat yhä kymmeniä tuhansia kotona tehtyjä lounaita toimistoihin polkupyörillä ja junilla.',
+    },
+    Manipur: {
+      lyhyt: 'Loktakjärvellä kelluu kasvillisuuslauttoja, phumdeja, ja niiden varaan on perustettu maailman ainoa kelluva kansallispuisto.',
+    },
+    Meghalaya: {
+      lyhyt: 'Meghalayan khasit kasvattavat siltoja kumipuiden elävistä juurista, ja sillat vahvistuvat vuosi vuodelta puun kasvaessa.',
+    },
+    Mizoram: {
+      lyhyt: 'Mizoramin cheraw-tanssissa tanssijat hyppelevät yhteen lyötävien bambuseipäiden välissä rytmiä hukkaamatta.',
+    },
+    Nagaland: {
+      lyhyt: 'Kohiman lähellä Kisamassa järjestetään joka joulukuu Hornbill-festivaali, jossa nagaheimot esittelevät tanssejaan ja käsitöitään.',
+    },
+    Odisha: {
+      lyhyt: 'Konarkin aurinkotemppeli on rakennettu jättimäisen kivivaunun muotoon, ja sen kyljissä on 24 veistettyä pyörää.',
+    },
+    Puducherry: {
+      lyhyt: 'Puducherryn vanhassa ranskalaiskorttelissa kadunnimet ovat yhä ranskaksi, ja kaupunki kuului Ranskalle vuoteen 1954.',
+    },
+    Punjab: {
+      lyhyt: 'Amritsarin Kultaisen temppelin keittiö tarjoaa ilmaisen aterian kymmenille tuhansille ihmisille joka päivä.',
+    },
+    Rajasthan: {
+      lyhyt: 'Jaisalmerin hiekkakivilinnoitus on yksi maailman harvoista linnoista, joiden muurien sisällä asuu yhä ihmisiä.',
+    },
+    Sikkim: {
+      lyhyt: 'Sikkim julistettiin vuonna 2016 Intian ensimmäiseksi osavaltioksi, jonka koko maatalous on luonnonmukaista.',
+    },
+    'Tamil Nadu': {
+      lyhyt: 'Maduraissa Meenakshin temppeliä ympäröivät korkeat porttitornit, jotka on peitetty tuhansilla värikkäillä jumalhahmoilla.',
+    },
+    Telangana: {
+      lyhyt: 'Hyderabadin Charminar rakennettiin 1591, ja sen juurella Laad Bazaarissa myydään yhä kimaltelevia rannerenkaita.',
+    },
+    Tripura: {
+      lyhyt: 'Tripuran Neermahal on Rudrasagar-järven keskelle rakennettu kuninkaallinen kesäpalatsi, jonne mennään veneellä.',
+    },
+    'Uttar Pradesh': {
+      lyhyt: 'Varanasin ghateilla Gangesin rannalla vainajia poltetaan yötä päivää, ja aamuisin portaat täyttyvät kylpijöistä.',
+    },
+    Uttarakhand: {
+      lyhyt: 'Jim Corbettin kansallispuisto perustettiin 1936 Intian ensimmäiseksi kansallispuistoksi, ja se on nimetty kirjailija Jim Corbettin mukaan.',
+    },
+    'West Bengal': {
+      lyhyt: 'Sundarbansin mangrovemetsissä Gangesin suistossa elää bengalintiikereitä, jotka ovat tottuneet uimaan jokihaarojen yli.',
+    },
+  },
+  /*
+   * ZAF (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 9 provinssia.
+   * Avaimet kopioitu koneellisesti MAAKUNNAT_KAIKKI.ZAF:stä. Vain
+   * `lyhyt`. Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Eastern Cape  — Qunu (Mandelan lapsuus, hautajaiset 15.12.2013)
+   *   Free State    — Bloemfontein, Supreme Court of Appeal
+   *   Gauteng       — Johannesburg (Witwatersrandin kultaryntäys 1886)
+   *   KwaZulu-Natal — Maloti-Drakensberg Park (san-kalliotaide)
+   *   Limpopo       — Golden Rhinoceros of Mapungubwe (löydetty 1932)
+   *   Mpumalanga    — Blyde River Canyon, Three Rondavels
+   *   North West    — Pilanesberg (rengasjuonikompleksi)
+   *   Northern Cape — Big Hole (yksi suurimmista käsin kaivetuista)
+   *   Western Cape  — Boulders Beach (afrikanpingviinit)
+   */
+  ZAF: {
+    'Eastern Cape': {
+      lyhyt: 'Nelson Mandela vietti lapsuutensa Itä-Kapin Qunun kylässä, ja sinne hänet myös haudattiin vuonna 2013.',
+    },
+    'Free State': {
+      lyhyt: 'Bloemfontein on Etelä-Afrikan oikeudellinen pääkaupunki, ja siellä toimii maan muutoksenhakutuomioistuin, Supreme Court of Appeal.',
+    },
+    Gauteng: {
+      lyhyt: 'Johannesburg syntyi 1886 kultaryntäyksessä, ja vanhojen kaivosten keltaiset jätekasat näkyvät yhä kaupungin laidoilla.',
+    },
+    'KwaZulu-Natal': {
+      lyhyt: 'Drakensbergin vuorten kallioluolissa on tuhansia san-kansan kalliomaalauksia, ja vuoristo on Unescon maailmanperintöä.',
+    },
+    Limpopo: {
+      lyhyt: 'Mapungubwen kukkulan kuninkaallisesta haudasta löytyi 1932 kultalevyin päällystetty pieni sarvikuono, noin 800 vuotta vanha.',
+    },
+    Mpumalanga: {
+      lyhyt: 'Blyde River Canyonin reunalta näkyvät Kolme rondavelia, kalliohuiput, jotka muistuttavat perinteisiä pyöreitä majoja.',
+    },
+    'North West': {
+      lyhyt: 'Pilanesbergin kansallispuisto on muinaisen tulivuoren kehämäisten harjujen sisällä, ja siellä elää sarvikuonoja ja norsuja.',
+    },
+    'Northern Cape': {
+      lyhyt: 'Kimberleyn Big Hole on yksi maailman suurimmista käsin kaivetuista kuopista, entinen timanttikaivos keskellä kaupunkia.',
+    },
+    'Western Cape': {
+      lyhyt: "Simon's Townin Boulders Beachillä pesii afrikanpingviinejä, ja niitä pääsee katsomaan aivan läheltä.",
+    },
+  },
+  /*
+   * KEN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 8 aluetta.
+   * Avaimet ovat MAAKUNNAT_KAIKKI.KEN:n tunnuksia (vanhat provinssit,
+   * jotka korvattiin 47 piirikunnalla 2013). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Central       — Baden-Powell grave (Nyeri, kohti Kenianvuorta)
+   *   Coast         — Lamu Old Town (aasit, ei juuri autoja)
+   *   Eastern       — Meru National Park, Elsa the lioness
+   *   North-Eastern — North Eastern Province (somalit, kamelinkasvatus)
+   *   Nairobi       — Nairobi National Park
+   *   Nyanza        — Kisumu, Lake Victoria (tilapia, niilinahven)
+   *   Rift Valley   — Iten (2 400 m)
+   *   Western       — Kakamega Forest (Guineo-Kongon sademetsän jäänne)
+   */
+  KEN: {
+    Central: {
+      lyhyt: 'Partioliikkeen perustaja Robert Baden-Powell on haudattu Nyeriin, ja hänen hautansa katsoo kohti Kenianvuorta.',
+    },
+    Coast: {
+      lyhyt: 'Lamun vanhassa kaupungissa ei juuri ole autoja, joten kapeilla kujilla kuljetaan jalan tai aasilla.',
+    },
+    Eastern: {
+      lyhyt: 'Merun kansallispuiston seudulla George ja Joy Adamson palauttivat Elsa-leijonan luontoon; tarinasta tuli kirja ja elokuva Born Free.',
+    },
+    Nairobi: {
+      lyhyt: 'Nairobin kansallispuisto on pääkaupungin rajojen sisällä, ja kirahveja voi nähdä pilvenpiirtäjiä vasten.',
+    },
+    'North-Eastern': {
+      lyhyt: 'Koillis-Kenian kuivilla tasangoilla elää enimmäkseen somalipaimentolaisia, joille kameli on tärkein karjaeläin.',
+    },
+    Nyanza: {
+      lyhyt: 'Kisumu on Viktoriajärven rannalla, ja sen kalasatamiin tuodaan järvestä tilapiaa ja niilinahventa.',
+    },
+    'Rift Valley': {
+      lyhyt: 'Itenin pikkukaupunki noin 2 400 metrin korkeudessa on maailman kestävyysjuoksijoiden tunnetuin harjoituspaikka.',
+    },
+    Western: {
+      lyhyt: 'Kakamegan metsä on Kenian ainoa trooppinen sademetsä, viimeinen jäänne vyöhykkeestä, joka ulottui aikoinaan Kongon altaalle asti.',
+    },
+  },
 };
