@@ -179,6 +179,14 @@ jobs:
               | node tools/savukkeet/valitse-harvat.mjs) || SARJA=taysi
             echo "PR-sarja: $SARJA"
           fi
+          # MUISTISÄÄNTÖ (Fable 25.9.2026 klo 09.3x): 64 Gt RAM, sivutus oli
+          # aamulla 22/23,5 Gt täynnä ja aiheutti jumit. Kun simulaattoreita
+          # on käynnissä, savukkeita enintään 3 rinnakkain (muuten 6).
+          kaynnissa=$(xcrun simctl list devices booted 2>/dev/null | grep -c "(Booted)" || true)
+          if [ "${kaynnissa:-0}" -gt 0 ]; then
+            export SAVUKE_RINNAKKAIN=3
+            echo "Simulaattoreita käynnissä $kaynnissa → SAVUKE_RINNAKKAIN=3"
+          fi
           node tools/savukkeet/aja-sarja.mjs "${SARJA:-julkaisu}" "$TULOKSET"
       - name: Yhteenveto
         if: always()
