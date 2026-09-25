@@ -722,7 +722,8 @@ namespace Matkakirja
                     Piste = Laatikko(new Rect(ruutu.x - pp * 0.5f, ruutu.y - pp * 0.5f, pp, pp)),
                     Nimio = Laatikko(suorakulmio),
                     Pakko = valinta,
-                    Sallittu = valinta || nimiotNakyvat || LinssiTila,
+                    // Siirtokohteen nimen piirtää kohdemerkki (Siirtokohdemerkit.NimeaaKaupungin): nimi kerran kuten webissä.
+                    Sallittu = valinta || ((nimiotNakyvat || LinssiTila) && !(Siirtokohdemerkit.Instanssi?.NimeaaKaupungin(m.kaupunki.id) ?? false)),
                     X = ruutu.x, Y = ruutu.y,
                     Leveys = valinta ? 0 : m.teksti.x * kerroin, Korkeus = m.teksti.y * kerroin,
                     Kirjain = m.nimio.fontSize * kerroin,

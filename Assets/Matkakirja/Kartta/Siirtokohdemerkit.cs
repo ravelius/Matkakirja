@@ -58,6 +58,13 @@ namespace Matkakirja
         }
 
         readonly List<Merkki> merkit = new List<Merkki>();
+        readonly HashSet<string> nimetytKaupungit = new HashSet<string>();
+
+        /// <summary>
+        /// Kaupungit, joiden nimen siirtokohdemerkki piirtää (kohdemerkin nimi halon yläpuolella). KaupunkiMerkit jättää
+        /// niiden oman nimiön pois, jotta nimi näkyy kerran kuten webissä (Pelikoodarin havainto 25.9.: "Sofia" tuplana).
+        /// </summary>
+        public bool NimeaaKaupungin(string kaupunki) => kaupunki != null && nimetytKaupungit.Contains(kaupunki);
         Mesh nelio;
         Material nimiMateriaali;
         const float Etuna = 0.3f;
@@ -103,6 +110,8 @@ namespace Matkakirja
         {
             foreach (var m in merkit) Destroy(m.juuri.gameObject);
             merkit.Clear();
+            nimetytKaupungit.Clear();
+            if (kohteet != null) foreach (var k in kohteet) if (!string.IsNullOrEmpty(k.Kaupunki)) nimetytKaupungit.Add(k.Kaupunki);
             Sovita(kohteet);
             if (kohteet == null || georeferenssi == null || materiaali == null) return;
             nelio ??= Nelio();
