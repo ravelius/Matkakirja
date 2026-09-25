@@ -117247,6 +117247,206 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Opal mining in Australia',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Coober Pedy, Stuart Highway, Pitch Black, Mad Max
+       * Beyond Thunderdome, Kanku-Breakaways Conservation Park, Dingo
+       * Fence, World Solar Challenge), Wikivoyagesta, Parks SA:n
+       * puistosivulta ja ABC Newsin drive-in-jutusta 7.4.2019 — teksti
+       * omaa. Nostojen aiheita (Stuart, nimi, opaalin löytö, kirkko,
+       * kuilut, opaalin geologia) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Koira-aita, ainoa laadukas pystykuva seudulta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Dingo fence Coober pedy.jpg',
+          lyhyt: 'Yli 5 600 kilometrin pituinen Koira-aita kulkee Coober Pedyn pohjoispuolitse.',
+          selite: 'Koira-aita pitää dingot poissa kaakkoisen Australian '
+            + 'lammaslaitumilta, ja yli 5 600 kilometrin pituisena se '
+            + 'kuuluu maailman pisimpiin rakennelmiin.',
+          lahde: 'Foramparikh21, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Coober Pedyn tunnistaa kukkuloista pistävistä '
+          + 'tuuletusputkista: niiden alla asutaan. Adelaidesta ajetaan 846 '
+          + 'kilometriä Stuart Highwayta pitkin, ja perillä matkailijakin '
+          + 'pääsee nukkumaan kallion sisään, maanalaiseen hotelliin tai '
+          + 'retkeilymajaan, jossa ei tarvita ilmastointia eikä '
+          + 'pimennysverhoja. Ympäröivä aavikko on niin vieras, että '
+          + 'elokuvantekijät ovat kuvanneet siellä muita planeettoja, ja '
+          + 'pohjoisessa sen halki kulkee maailman pisimpiin rakennelmiin '
+          + 'kuuluva Koira-aita. Iltaisin pelataan golfia hohtavilla '
+          + 'palloilla kentällä, jolla ei kasva ruohoa. Parhaiten kaupunkiin '
+          + 'sopii tulla talvella: kesäkuussa päivän ylin lämpötila on '
+          + 'keskimäärin 18 astetta, tammikuussa lähes 37.',
+        artikkeli: {
+          nimi: 'Matkailijan Coober Pedy',
+          teksti: 'Coober Pedyssä matkailijakin nukkuu kallion sisällä.',
+          nosto: 'Golfkentällä ei kasva ruohon kortta, joten jokainen pelaaja '
+            + 'kantaa mukanaan omaa nurmipalaansa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille aavikon halki',
+              teksti: 'Coober Pedy on lähes puolivälissä Adelaiden ja Alice '
+                + 'Springsin välillä: etelästä ajetaan 846 ja pohjoisesta 685 '
+                + 'kilometriä Stuart Highwayta pitkin. Tie päällystettiin koko '
+                + 'matkaltaan vasta helmikuussa 1987, ja vasta sen jälkeen '
+                + 'kaivoskaupungista tuli matkailijoiden pysähdyspaikka. '
+                + 'Huoltoasemia on parin sadan kilometrin välein, ja '
+                + 'varoituskyltit tiellä kulkevasta karjasta on kirjoitettu '
+                + 'englanniksi, japaniksi ja saksaksi. Joka toinen vuosi samaa '
+                + 'tietä tulevat Darwinista aurinkoautot, joiden 3 022 '
+                + 'kilometrin kilpailussa Coober Pedy on tarkastuspysähdys. '
+                + 'Kiireisempi lentää Adelaidesta potkuriturbiinikoneella, '
+                + 'jolla vuoroja on kolmesti viikossa. The Ghan -juna '
+                + 'pysähtyy Manguri-nimisellä sivuraiteella yli 40 kilometrin '
+                + 'päässä, eikä junasta yleensä päästetä pois ilman '
+                + 'etukäteen sovittua kyytiä, sillä aavikon yöt ovat kylmiä. '
+                + 'Perillä kaupungin tunnistaa portista: nimikyltin päälle on '
+                + 'nostettu opaalikaivosten imuauto.',
+              kuva: [
+                {
+                  tiedosto: 'Coober Pedy Australia.jpg',
+                  lyhyt: 'Coober Pedyn nimikyltin päällä seisoo opaalikaivosten imuauto.',
+                  selite: 'Coober Pedyn nimikyltin päälle on nostettu '
+                    + 'imuauto, jollaisella opaalipitoinen maa imetään '
+                    + 'ylös kaivoskuilusta.',
+                  lahde: 'Thomas Schoch, Wikimedia Commons (CC BY-SA 2.5)',
+                },
+                {
+                  tiedosto: 'Trilingual warning sign along Stuart Highway.jpg',
+                  lyhyt: 'Stuart Highwayn karjavaroitus on englanniksi, japaniksi ja saksaksi.',
+                  selite: 'Etelä-Australian Stuart Highwayn kyltti varoittaa '
+                    + 'tiellä kulkevasta karjasta englanniksi, japaniksi ja '
+                    + 'saksaksi, aavikkotiellä ajavien matkailijoiden kielillä.',
+                  lahde: 'Marian Deschain, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Stella-era-bwsc-19-coober-pedy.jpg',
+                  lyhyt: 'Aurinkoauto Stella Era ohitti Coober Pedyn kaivoskasat kilpailussa 2019.',
+                  selite: 'Eindhovenin teknillisen yliopiston aurinkoauto '
+                    + 'Stella Era ohitti Coober Pedyn kaivoskasat Darwinista '
+                    + 'Adelaideen ajetussa kilpailussa 2019 ja voitti '
+                    + 'perheautojen sarjan.',
+                  lahde: 'Staartvin, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Yö kallion sisällä',
+              teksti: 'Coober Pedyssä vieraskin nukkuu maan alla. Ensimmäinen '
+                + 'maanalainen hotelli, Desert Cave, avattiin vuonna 1988: '
+                + 'sen rakentaminen alkoi 1984 ja venyi helteiden ja '
+                + 'pölymyrskyjen takia. Nyt kaupungissa on maanalaisia '
+                + 'motelleja, retkeilymajoja ja vuokrattavia luolakoteja, '
+                + 'joiden huoneet on kaivettu rinteeseen ja joiden katossa '
+                + 'näkyvät louhintakoneen jäljet. Ikkunoita ei ole, joten aamu '
+                + 'alkaa vasta kun valot sytytetään, ja paksu kivi vaimentaa '
+                + 'äänet niin, että yö on hiljaisempi kuin yhdessäkään '
+                + 'kaupunkihotellissa. Ilmastointia ei tarvita: kun pinnalla '
+                + 'on neljäkymmentä astetta, huoneessa on yhä tavallinen '
+                + 'huoneenlämpö. Maan päällä kaupunki näyttää siksi '
+                + 'vähäiseltä, sillä asuinkukkuloiden ainoat merkit ovat '
+                + 'rinteestä törröttävät tuuletusputket ja ovet. Useaan '
+                + 'luolakotiin pääsee pientä maksua vastaan kurkistamaan, ja '
+                + 'kallion sisällä toimivat myös monet kaupat, baarit ja '
+                + 'kirkot.',
+              kuva: {
+                tiedosto: 'Outback Trip - Coober Pedy Cave Hostel Room (4156913699).jpg',
+                lyhyt: 'Maanalaisen retkeilymajan makuusalin katto on paljasta, louhittua hiekkakiveä.',
+                selite: 'Coober Pedyn maanalaisen retkeilymajan kerrossängyt '
+                  + 'seisovat louhitun hiekkakivikaton alla, eikä ikkunatonta '
+                  + 'huonetta tarvitse jäähdyttää kesähelteelläkään.',
+                lahde: 'eyeintim, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Toisten planeettojen kuvauspaikka',
+              teksti: 'Coober Pedyn ympäristö näyttää niin vieraalta, että '
+                + 'elokuvantekijät ovat tuoneet sinne muita maailmoja. '
+                + 'Elokuvan Mad Max – ukkosmyrsky (1985) '
+                + 'ulkokuvat filmattiin pääosin kaupungissa ja sen liepeillä, '
+                + 'ja vuonna 2000 valmistuneen Pitch Blackin kaikki '
+                + 'ulkokohtaukset kuvattiin Coober Pedyssä ja sen '
+                + 'ympäristössä: Vin Dieselin esittämä Riddick harhaili '
+                + 'aavikolla, jota elokuvassa valaisi kolme aurinkoa. Samalla '
+                + 'seudulla on kuvattu myös Priscilla, aavikon '
+                + 'kuningatar (1994) ja Red Planet (2000). Pitch Blackista jäi '
+                + 'kaupunkiin konkreettinen muisto: maahan syöksynyt '
+                + 'avaruusalus, jonka paikalliset yrittäjät ostivat kuvausten '
+                + 'jälkeen. Alus lepää yhä pääkadun, Hutchison Streetin, '
+                + 'varrella: lentämään siitä ei enää ole, mutta kaupungin '
+                + 'kuvatuimpia kohteita se on.',
+              kuva: {
+                tiedosto: 'Coober Pedy, South Australia - Spaceship from Pitch Black.jpg',
+                lyhyt: 'Pitch Black -elokuvan avaruusalus jäi kuvausten jälkeen Coober Pedyn pääkadulle.',
+                selite: 'Vuoden 2000 Pitch Black -elokuvan ulkokohtaukset '
+                  + 'kuvattiin Coober Pedyssä, ja elokuvan maahan syöksynyt '
+                  + 'avaruusalus lepää yhä Hutchison Streetin varrella.',
+                lahde: 'Rob Chandler, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Breakaways ja Koira-aita',
+              teksti: 'Parikymmentäviisi kilometriä kaupungista pohjoiseen '
+                + 'aavikkotasanko katkeaa jyrkänteeseen, jonka alle on jäänyt '
+                + 'irrallisia pöytävuoria ja raidallisia kumpuja. Paikka '
+                + 'tunnettiin pitkään nimellä The Breakaways, ja marraskuussa '
+                + '2015 suojelualue sai nimen Kanku-Breakaways. Lähes 15 000 '
+                + 'hehtaarin alueen omistaa Antakirinja Matu-Yankunytjatjara '
+                + '-kansan yhteisö, ja koko puisto on rekisteröity '
+                + 'alkuperäiskansan perintökohteeksi. Matkailijoiden Salt and '
+                + 'Pepperiksi kutsuma valkoisen ja ruskean kummun pari on '
+                + 'alkuperäisasukkaille Papa Kutjara, kaksi makaavaa koiraa, '
+                + 'joiden isäntä on viereinen huippu; koko tarinaa ei '
+                + 'kerrota ulkopuolisille. Näköalapaikalle ajetaan omalla '
+                + 'autolla, ja maksullinen ajolupa hankitaan etukäteen. '
+                + 'Paluumatkan voi ajaa Koira-aidan viertä: yli 5 600 '
+                + 'kilometriä pitkä, enimmäkseen 180-senttinen verkkoaita '
+                + 'pitää dingot poissa lammaslaitumilta, ja Breakawaysin, '
+                + 'aidan ja Oodnadatta Trackin kautta kaupunkiin palaava '
+                + 'lenkki on 66 kilometriä.',
+              kuva: {
+                tiedosto: 'Sunset at Breakaways.jpg',
+                lyhyt: 'Kanku-Breakawaysin pöytävuoret hehkuvat punaisina matalan illan auringon valossa.',
+                selite: 'Kanku-Breakawaysin suojelualueen pöytävuoret Coober '
+                  + 'Pedyn pohjoispuolella ovat Antakirinja '
+                  + 'Matu-Yankunytjatjara -kansan maata ja kauneimmillaan '
+                  + 'auringonlaskun aikaan.',
+                lahde: 'Sliverinverted, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Iltagolf ja aavikon elokuvateatteri',
+              teksti: 'Päivällä on liian kuuma, joten Coober Pedy elää '
+                + 'iltaisin. Paikallisella golfkentällä ei kasva ruohoa '
+                + 'lainkaan, ja pelaaja kantaa mukanaan pientä nurmipalaa, '
+                + 'jolta avauslyönti tehdään; enimmäkseen pelataan pimeällä '
+                + 'hohtavilla palloilla. Kirjeenvaihdon tuloksena kaupungin '
+                + 'golfklubi on maailman ainoa, jonka jäsenillä on '
+                + 'vastavuoroiset pelioikeudet skotlantilaiseen St '
+                + 'Andrewsiin, golfin kotiin. Toinen iltahuvi on vuonna 1965 '
+                + 'avattu ulkoilmaelokuvateatteri, nykyään Etelä-Australian '
+                + 'viimeinen: vapaaehtoisten pyörittämässä teatterissa '
+                + 'muistutetaan ennen näytöstä yhä, ettei räjähteitä saa '
+                + 'tuoda sisään. Kaivosmiehet tulivat aikoinaan suoraan '
+                + 'töistä räjähteet lava-auton kyydissä, ja tylsistynyt '
+                + 'yleisö saattoi sytyttää panoksen valkokankaan alla. Kun '
+                + 'valot sammuvat, kaupungin yllä näkyy aavikon tähtitaivas, '
+                + 'jota ei himmennä yksikään suurkaupunki.',
+              kuva: {
+                tiedosto: 'Coober Pedy at night (5431459386).jpg',
+                lyhyt: 'Coober Pedyn vähäisten valojen yllä kaartuu aavikon tähtitaivas.',
+                selite: 'Toukokuun yönä 2010 kuvatussa näkymässä Coober Pedyn '
+                  + 'valojen yllä erottuvat Pohjan kruunun kaari, Herkuleen '
+                  + 'tähdistö ja kirkas Vega.',
+                lahde: 'Larry W. Lo, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'opaali',
