@@ -211,10 +211,19 @@
     max-height: 60%;
     padding: 9px 12px 11px 12px;
     border-width: 1px;
-    border-color: var(--line);
+    border-color: rgba(122, 85, 20, 0.32);
     border-radius: 12px;
-    background-color: var(--panel);
+    background-color: rgba(244, 231, 202, 0.94);
     overflow: hidden;
+    /* Löydös 139 (omistaja, build 16): avattu matkakirja samalla vaalealla pohjalla kuin pienennetty lappu
+     * (.mk-matkakirja--pieni rgba(244, 231, 202)), ei tummana nahkapaneelina. Teeman muuttujat määritellään kortin
+     * sisällä uudelleen, joten kaikki kortin tekstit vaihtuvat tummiksi; tumma liukumakuva peitetään sävyllä. */
+    --panel: rgba(244, 231, 202, 0.94);
+    --line: rgba(122, 85, 20, 0.32);
+    --ink-light: #2b2218;
+    --muted: #6b5a44;
+    --accent: #7a5514;
+    -unity-background-image-tint-color: rgba(0, 0, 0, 0);
 }
 
 /* Offline-pillerin vuoro samassa kulmassa: lappu häipyy (ristihäivytys, OfflineTilaUi.Vuorottele). */
@@ -307,7 +316,7 @@
     min-height: 0;
     border-width: 0;
     border-bottom-width: 1px;
-    border-color: rgba(179, 156, 125, 0.6);
+    border-color: rgba(122, 85, 20, 0.4); /* löydös 139: vaalealla pohjalla */
     background-color: rgba(0, 0, 0, 0);
     font-size: 12.5px;
     color: var(--muted);
@@ -331,7 +340,7 @@
 }
 
 .mk-matkakirja__kuva:hover {
-    color: #e7b865;
+    color: #a0701c; /* löydös 139: vaalealla pohjalla */
 }
 
 .mk-matkakirja__kuvaikoni {
@@ -350,7 +359,7 @@
     height: 40px;
     margin: 0 6px 4px 0;
     border-width: 1px;
-    border-color: rgba(247, 241, 226, 0.6);
+    border-color: rgba(70, 51, 31, 0.3); /* löydös 139: vaalealla pohjalla */
     border-radius: 3px;
     -unity-background-scale-mode: scale-and-crop;
 }
@@ -471,10 +480,10 @@
 .mk-kuvakortti {
     position: absolute;
     width: 78%; /* koodi asettaa webin mitan (Luentakuvasarja.Leveys, löydös 90) */
-    padding: 7px 7px 0 7px;
-    background-color: #f7f1e2;
-    border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.35);
+    /* Löydös 138 (omistaja, build 16): isoisän ja pulun kuvista paperikehys pois (ja kuvateksti, Luentakuvasarja). */
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
     opacity: 0;
     transition-property: opacity, translate;
     transition-duration: 0.4s, 0.6s;
