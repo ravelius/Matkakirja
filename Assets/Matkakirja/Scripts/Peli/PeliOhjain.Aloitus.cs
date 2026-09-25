@@ -41,9 +41,10 @@ namespace Matkakirja.Natiivi
         /// </summary>
         float AloituslennonKesto(double lat, double lon)
         {
-            double reitti = LennonAikajana.ReittiM(AloitusLat, AloitusLon, lat, lon);
+            // Löydös 110 (omistaja 25.9. klo 14.5x): kiinteä kesto kohteen etäisyydestä riippumatta
+            // (LennonAikajana.AloituslennonKestoS); ennen 16–26 s reitin pituuden mukaan (LennonAikajana.Kesto).
             float repliikki = Mathf.Min((float)LennonAikajana.PisinS, (float)(luennat.LentoAlku?.Kesto ?? LentoAlkuOletusS) + 1f);
-            return Mathf.Max((float)LennonAikajana.Kesto(reitti), repliikki);
+            return Mathf.Max((float)LennonAikajana.AloituslennonKestoS, repliikki);
         }
 
         /// <summary>
@@ -83,8 +84,9 @@ namespace Matkakirja.Natiivi
             int tunnus = ++ajoTunnus;
             kameranOhitus = null;
             ajoValmis = () => AloituslentoPerilla(kohde);
-            // Varareitti: zoomi 2,5 s + lento + vara (valmis tulee Nappulalta).
-            ajoLoppuu = Time.unscaledTime + 2.5f + kesto + AjonVara + 2f;
+            // Varareitti: zoomi 2,5 s + lento + vara (valmis tulee Nappulalta); löydös 84: lisäksi musta verho (häivytys
+            // mustaan ja takaisin + latausodotus enintään Nappula.MustanKatto).
+            ajoLoppuu = Time.unscaledTime + 2.5f + kesto + AjonVara + 2f + Nappula.MustanKatto + 2f * Mustaverho.Haivytys;
             try
             {
                 nappula.AloitusLento(AloitusLat, AloitusLon, b.Value.Lat, b.Value.Lon, kesto,
@@ -108,6 +110,21 @@ namespace Matkakirja.Natiivi
                 AjoValmis();
             }
             return true;
+        }
+
+        /// <summary>
+        /// Löydös 83 (Natiivi-UI:n Ohita-nappi): aloituslento ohitetaan kokonaan. Kesken olevan zoomin ja lennon
+        /// callbackit mitätöidään (ajoTunnus), lentorepliikki vaiennetaan, ja saapumiskortti (paperi) tulee heti;
+        /// Nappula.PaataAloituslento purkaa lennon esityksen paperin alla kuten normaalisti (löydös 85). Ei tee mitään,
+        /// jos aloituslento ei ole käynnissä tai lento on jo perillä (välikortti auki).
+        /// </summary>
+        public void OhitaAloituslento()
+        {
+            if (!AloituslentoKaynnissa || ajoValmis == null) return;
+            ++ajoTunnus;
+            OhitaLuento();
+            Debug.Log("MATKAKIRJA peli: aloituslento ohitettu");
+            AjoValmis();
         }
 
         void AloituslentoPerilla(string kohde)
@@ -134,6 +151,8 @@ namespace Matkakirja.Natiivi
                     () =>
                     {
                         if (!Voimassa()) return;
+                        // Löydös 85: topografiapinta, kone ja lennon merkit pois vasta paperin alla.
+                        Nappula?.PaataAloituslento();
                         Saavu(maaRajaus: false);
                         kameraPerilla = true;
                     },
@@ -156,6 +175,8 @@ namespace Matkakirja.Natiivi
         void AloituslentoLoppui(string kohde, bool kameraPerilla)
         {
             AloituslentoKaynnissa = false;
+            // Varareitti (ei korttia tai kortti keskeytyi): lennon esitys pois viimeistään tässä.
+            Nappula?.PaataAloituslento();
             try { AloituslentoPaattyi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
             // Saapuminen normaalisti: traileri tai kaupunkilehti (Perilla); kamera webin avauslennon tapaan
             // kaupunkinäkymään (siirto.js laske: omaKamera → kamera.kotiin ilman maan laatikkoa), ellei se jo

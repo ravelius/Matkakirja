@@ -655,6 +655,19 @@ namespace Matkakirja
             PaivitaLennonVarjostin();
         }
 
+        /// <summary>
+        /// Löydös 85 / Fablen päätös A (25.9.): Sentinel-2-kerros pois kesken satelliittilennon (aloituslennon loppuorbit),
+        /// koska sen laatoissa on pilviä. Blue Marble (paikka 1, Z7 venytettynä) jää; väritaso pysyy väistössä, kunnes
+        /// LentoPohja(false) palauttaa pohjan. Ei tee mitään ilman Sentinel-kerrosta.
+        /// </summary>
+        public void LentoSentinelPois()
+        {
+            if (sentinel == null) return;
+            VapautaKerros(sentinel);
+            sentinel = null;
+            Debug.Log("MATKAKIRJA lennon pinta: Sentinel pois (aloituslennon loppu)");
+        }
+
         /// <summary>Sentinel-sarjan kansio (ämpärin osoite, "/"-loppuinen); kattavuus Laattapalvelimelle ja sen haku.</summary>
         string SentinelKaytto(string versio)
         {
