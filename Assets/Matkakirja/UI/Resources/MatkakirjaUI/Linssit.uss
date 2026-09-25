@@ -559,10 +559,13 @@
 
 /* --- vertailu: alapalkki ja laput (webin .vertailu-palkki) ------------------ */
 
+/* Web: kelluva pilleri keskellä sisältönsä levyisenä (left 50 %, translateX(-50 %), max-width min(96vw, 900px));
+   reunasta reunaan ulottuva palkki peitti maan nimen (linssipariteetti rivi 39). */
 .mk-vertailupalkki {
     position: absolute;
-    left: 8px;
-    right: 8px;
+    left: 50%;
+    translate: -50% 0;
+    max-width: 96%;
     bottom: 10px;
     flex-direction: row;
     flex-wrap: wrap;

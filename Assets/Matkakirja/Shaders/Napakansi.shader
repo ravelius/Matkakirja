@@ -50,6 +50,8 @@ Shader "Matkakirja/Napakansi"
             CBUFFER_END
             // Radion hämärä (Kartta/RadioMastot.cs, sama kaava kuin tileset-varjostimen RadioHamara): kansi tummuu laattojen mukana.
             float _radioHamara;
+            // Pallon tummennus (löydös 98, KarttaKerrokset.PallonSavy): sama kerroin kuin tileset-varjostimessa.
+            float _pallonTummuus;
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; half4 vari : COLOR; float2 uv : TEXCOORD0; };
             struct Vali { float4 paikka : SV_POSITION; float3 normaali : TEXCOORD0; float2 uv : TEXCOORD1; half4 vari : COLOR; };
@@ -89,6 +91,7 @@ Shader "Matkakirja/Napakansi"
                 // Väritason kerma kuten laatoissa (Cesiumin raster-kerros sekoittuu ennen valaistusta).
                 // Kärkipisteen rgb: reliefikannen väri (NapaKannet ReliefinPohjoisreuna, lineaarisena); muilla valkoinen.
                 half3 vari = lerp(savy * _BaseColor.rgb * i.vari.rgb, _Kerma.rgb, _Kerma.a * maa);
+                vari *= (half)(1.0 - saturate(_pallonTummuus));
                 vari = lerp(vari, vari * half3(0.18, 0.17, 0.24) + half3(0.006, 0.006, 0.016), (half)saturate(_radioHamara));
                 return half4(vari * valaistus * a, a);
             }

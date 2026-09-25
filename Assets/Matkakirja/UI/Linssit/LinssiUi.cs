@@ -190,6 +190,8 @@ namespace Matkakirja.Natiivi
         static readonly Unity.Profiling.ProfilerMarker MerkkiMaat = new Unity.Profiling.ProfilerMarker("UI.Linssi.Maat");
         static readonly Unity.Profiling.ProfilerMarker MerkkiRadio = new Unity.Profiling.ProfilerMarker("UI.Linssi.Radio");
 
+        bool kerrosPaalla;
+
         void Vaihtui(ILinssi linssi)
         {
             // Vaihtui voi tulla LinssiOhjaimen komennoista; UI:ta muutetaan vain pääsäikeessä,
@@ -208,6 +210,9 @@ namespace Matkakirja.Natiivi
             ui.OfflineTila.NaytaSallittu(!paalla);
             ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
             ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
+            // Web piirraLinssiSelite: kerroksellinen linssi (radio on kerrokseton) kutistaa päiväkirjan lapuksi.
+            bool kerros = paalla && !radio;
+            if (kerros != kerrosPaalla) { kerrosPaalla = kerros; ui.Matkakirja.Linssi(kerros); }
             // Löydös 42: karttaselitteen nappi näkyy linssin aikana kuten webissä; piiloon vain aikajanalinsseissä
             // (web body.aikajana-paalla .karttaselite) ja astronautin kamerassa (body.linssi-satelliitti .karttaselite).
             bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || id == AikajanaNakyma.IhmisenMatkaId;
