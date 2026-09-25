@@ -7679,4 +7679,359 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Jurong Lake Gardens on Singaporen kolmas kansallispuutarha, ja sen järvenrannalle on ennallistettu makean veden suometsää.',
     },
   },
+  /*
+   * ARG (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.ARG:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 23 provinssia ja pääkaupunki
+   * avaimella "Ciudad de Buenos Aires" (nimiFi "Buenos Aires" kuten
+   * provinssillakin). Vain `lyhyt`. Vältetty maastokohteet-arg.js:n
+   * aiheet (Aconcagua, Río de la Plata, Cueva de las Manos, Quebrada de
+   * Humahuaca, Córdoban jesuiittakortteli, La Polvorilla, Península
+   * Valdés, Ushuaia, Ischigualasto, Perito Moreno). Lähteet (en-/es-
+   * Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Formosa        — Bañado La Estrella (champales, Pilcomayon tulvat)
+   *   La Pampa       — Parque Luro (Pedro Luron tuomat saksanhirvet,
+   *                    brama maalis–huhtikuussa; turismo.lapampa.gob.ar)
+   *   La Rioja       — Cable Carril Chilecito–La Mejicana (noin 35 km,
+   *                    valmis 1905; argentina.gob.ar, es-Wikipedia)
+   *   San Luis       — Sierra de las Quijadas / Pterodaustro
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  ARG: {
+    'Buenos Aires': {
+      lyhyt: 'Provinssin pääkaupunki La Plata rakennettiin tyhjästä 1880-luvulla, ja sen ruutukaavaa halkovat vinottaiset diagonaalikadut.',
+    },
+    'Ciudad de Buenos Aires': {
+      lyhyt: 'Avenida 9 de Julio on yksi maailman leveimmistä kaduista, ja sen keskellä kohoaa 67-metrinen valkoinen Obelisco.',
+    },
+    'Catamarca': {
+      lyhyt: 'El Peñónin lähellä Punan ylängöllä levittäytyy Campo de Piedra Pómez, tuulen veistämien vaaleiden hohkakivimuodostelmien kenttä.',
+    },
+    'Chaco': {
+      lyhyt: 'Campo del Cielon kraatterikentältä on löydetty maailman raskaimpiin kuuluvia rautameteoriitteja, kuten kymmenien tonnien El Chaco.',
+    },
+    'Chubut': {
+      lyhyt: 'Gaimanissa elää walesilaisten siirtolaisten perintö: teetaloissa tarjoillaan walesilaista kakkua, ja kappeleissa kuulee yhä kymriä.',
+    },
+    'Córdoba': {
+      lyhyt: 'Villa General Belgranossa, saksalaissiirtolaisten perustamassa vuoristokylässä, vietetään joka lokakuu Argentiinan kansallisia olutjuhlia.',
+    },
+    'Corrientes': {
+      lyhyt: 'Iberán kosteikoille on vuodesta 2021 palautettu jaguaareja, jotka olivat kadonneet maakunnasta yli puoli vuosisataa aiemmin.',
+    },
+    'Entre Ríos': {
+      lyhyt: 'Gualeguaychún karnevaali, Argentiinan suurin, täyttää kaupungin sambakulkueen katsomot joka tammi- ja helmikuun viikonloppuna.',
+    },
+    'Formosa': {
+      lyhyt: 'Bañado La Estrellan tulvakosteikossa vedestä nousee kuolleita puita, joiden rungot köynnökset ovat peittäneet vihreiksi pylväiksi.',
+    },
+    'Jujuy': {
+      lyhyt: 'Salinas Grandesin suola-aavikolla yli 3 400 metrin korkeudessa suolaa lohkotaan yhä käsin, ja keskeltä kulkee maantie.',
+    },
+    'La Pampa': {
+      lyhyt: 'Parque Luron vanhalla metsästystilalla voi maalis–huhtikuussa kuunnella Euroopasta tuotujen saksanhirvien kiima-ääntelyä.',
+    },
+    'La Rioja': {
+      lyhyt: 'Chilecitosta nousee La Mejicanan kaivokselle noin 35 kilometrin köysirata, joka valmistui 1905 ja on nyt kansallinen muistomerkki.',
+    },
+    'Mendoza': {
+      lyhyt: 'Mendoza tuottaa suurimman osan Argentiinan viineistä, ja sen tunnetuin rypäle on malbec.',
+    },
+    'Misiones': {
+      lyhyt: 'Iguazún putouksilla joki syöksyy U:n muotoiseen Garganta del Diablon kurkkuun, ja vesisumu nousee korkealle sademetsän ylle.',
+    },
+    'Neuquén': {
+      lyhyt: 'Villa El Chocónin museossa on esillä Giganotosaurus, yksi suurimmista tunnetuista lihansyöjädinosauruksista, joka löytyi läheltä.',
+    },
+    'Río Negro': {
+      lyhyt: 'San Carlos de Bariloche Nahuel Huapi -järven rannalla tunnetaan suklaapuodeistaan ja alppityylisistä kivi- ja puutaloistaan.',
+    },
+    'Salta': {
+      lyhyt: 'Cafayaten laakson viinitarhoilla viljellään torrontésia, Argentiinan omaa tuoksuvaa valkoista rypälettä.',
+    },
+    'San Juan': {
+      lyhyt: 'Vallecitossa on Difunta Correan pyhäkkö, jonne rekkakuskit ja pyhiinvaeltajat jättävät vesipulloja janoon kuolleen äidin muistoksi.',
+    },
+    'San Luis': {
+      lyhyt: 'Sierra de las Quijadasin kansallispuiston punaisista rotkoista on kaivettu esiin Pterodaustron, suodatinhampaisen lentoliskon, fossiileja.',
+    },
+    'Santa Cruz': {
+      lyhyt: 'El Chaltén on Argentiinan vaellusten pääkaupunki, ja sen yllä kohoaa Fitz Royn jyrkkä graniittihuippu.',
+    },
+    'Santa Fe': {
+      lyhyt: 'Rosariossa Paraná-joen rannalla seisoo lipun kansallismonumentti, koska Manuel Belgrano nosti Argentiinan lipun täällä ensi kertaa 1812.',
+    },
+    'Santiago del Estero': {
+      lyhyt: 'Santiago del Estero perustettiin 1553, ja maan vanhimpana yhä asuttuna kaupunkina sitä kutsutaan kaupunkien äidiksi.',
+    },
+    'Tierra del Fuego': {
+      lyhyt: 'Río Granden kaupungin nimikkojoki houkuttelee perhokalastajia ympäri maailmaa, sillä siihen nousee poikkeuksellisen suuria meritaimenia.',
+    },
+    'Tucumán': {
+      lyhyt: 'San Miguel de Tucumánin Casa Históricassa julistettiin Argentiinan itsenäisyys 9. heinäkuuta 1816, ja talo on nyt museo.',
+    },
+  },
+  /*
+   * COL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.COL:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 32 departementtia, pääkaupunkipiiri "Bogota" (ilman aksenttia) ja
+   * "COL+99?" = Natural Earthin nimetön pikkusaari 3,98° N 81,60° W =
+   * Malpelon saari (julisteet/pallo/maakunnat/2026-09-25a/COL.json).
+   * Vain `lyhyt`. Vältetty maastokohteet-col.js:n aiheet (Pico Cristóbal
+   * Colón, Caño Cristales, Ciudad Perdida, San Agustín, Tierradentro,
+   * Cartagena, Mompox, Guatavita, Barranquillan karnevaali,
+   * kahvimaisema). Lähteet (en-/es-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat erikseen:
+   *   Atlántico      — Statue of Shakira (6,5 m, Gran Malecón, 2023)
+   *   Sucre          — Balsam of Tolu (nimi Santiago de Tolún mukaan);
+   *                    Santa Cruz del Islote hylätty, se kuuluu Bolívariin
+   *   Tolima         — Conservatorio del Tolima (1906), "capital musical"
+   *   Vichada        — Maipures (Humboldtin "maailman kahdeksas ihme";
+   *                    colombia.travel, The City Paper Bogotá)
+   *   Guaviare       — Nukak (Calamar, huhtikuu 1988; Survival)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  COL: {
+    'Amazonas': {
+      lyhyt: 'Leticia on kasvanut kiinni brasilialaiseen Tabatingaan niin, että kaupungista toiseen kävellään ilman rajatarkastusta.',
+    },
+    'Antioquia': {
+      lyhyt: 'Medellínissä köysiradat on liitetty metroon, ja ne kuljettavat asukkaita jyrkkien rinnekaupunginosien ja keskustan väliä.',
+    },
+    'Arauca': {
+      lyhyt: 'Arauca on Llanos-tasankojen karjamaata, ja sen Caño Limónin öljykentältä kulkee putki Karibian rannikolle asti.',
+    },
+    'Atlántico': {
+      lyhyt: 'Barranquillassa syntyi laulaja Shakira, ja Magdalena-joen rantabulevardilla tanssii hänen kuusimetrinen pronssipatsaansa.',
+    },
+    'Bogota': {
+      lyhyt: 'Bogotássa suljetaan joka sunnuntai yli sata kilometriä katuja autoilta, kun Ciclovía täyttyy pyöräilijöistä ja juoksijoista.',
+    },
+    'Bolívar': {
+      lyhyt: 'San Basilio de Palenquessa, karanneiden orjien perustamassa kylässä, puhutaan yhä espanjaan ja afrikkalaisiin kieliin pohjaavaa palenqueroa.',
+    },
+    'Boyacá': {
+      lyhyt: 'Villa de Leyvan mukulakivitori on yksi Amerikan suurimmista, ja valkoiset siirtomaa-ajan talot reunustavat sitä joka puolelta.',
+    },
+    'Caldas': {
+      lyhyt: 'Manizalesin kaakkoispuolella kohoaa Nevado del Ruiz, yksi Kolumbian aktiivisimmista tulivuorista.',
+    },
+    'Caquetá': {
+      lyhyt: 'Chiribiqueten kansallispuiston pöytävuorten seinämissä on kymmeniätuhansia muinaisia kalliomaalauksia, ja puisto on Unescon maailmanperintöä.',
+    },
+    'Casanare': {
+      lyhyt: 'Casanaren tasangoilla karjaa ajetaan yhä hevosella, ja llanero-paimenten työlaulut ovat Unescon suojeltavaa perintöä.',
+    },
+    'Cauca': {
+      lyhyt: 'Popayánin valkoisen vanhankaupungin pääsiäisviikon kulkueet ovat Unescon aineetonta kulttuuriperintöä.',
+    },
+    'Cesar': {
+      lyhyt: 'Valleduparissa pidetään joka huhtikuu vallenato-festivaali, jossa valitaan harmonikkamusiikin kuningas.',
+    },
+    'Chocó': {
+      lyhyt: 'Nuquín ja Bahía Solanon edustalle saapuu heinä–lokakuussa ryhävalaita synnyttämään poikasensa lämpimään veteen.',
+    },
+    'COL+99?': {
+      lyhyt: 'Malpelon kalliosaarella noin 500 km rannikolta asuu vain pieni sotilasvartiosto, mutta sen vesissä parveilee satoja vasarahaita.',
+    },
+    'Córdoba': {
+      lyhyt: 'Tuchínissa punotaan zenú-kansan sombrero vueltiaota, olkihattua josta on tullut Kolumbian kansallinen symboli.',
+    },
+    'Cundinamarca': {
+      lyhyt: 'Zipaquirán suolakaivokseen on kaiverrettu maanalainen katedraali, jonka ristit ja pylväät on hakattu vuorisuolaan.',
+    },
+    'Guainía': {
+      lyhyt: 'Inírida-joen varrelta kohoavat Mavecuren graniittikalliot, jotka nousevat jyrkkinä suoraan sademetsästä.',
+    },
+    'La Guajira': {
+      lyhyt: 'Punta Gallinas on Etelä-Amerikan mantereen pohjoisin kärki, ja sinne pääsee vain maastoautolla tai veneellä.',
+    },
+    'Guaviare': {
+      lyhyt: 'Guaviaren metsissä elävät nukakit, paimentolaiskansa, joka tuli kosketuksiin ulkomaailman kanssa vasta 1988 Calamarin kylässä.',
+    },
+    'Huila': {
+      lyhyt: 'Tatacoan autiomaa on punaisiksi ja harmaiksi uurtunutta kuivaa maata keskellä vehreää Kolumbiaa, ja sen öinä tähtiä katsellaan observatoriosta.',
+    },
+    'Magdalena': {
+      lyhyt: 'Aracatacassa syntyi Gabriel García Márquez, ja pikkukaupunki innoitti hänen kuvitteellista Macondoaan.',
+    },
+    'Meta': {
+      lyhyt: 'Villavicencio on Llanos-tasankojen portti, ja sen kansainvälisessä turnauksessa tanssitaan joropoa harpun ja cuatron tahdissa.',
+    },
+    'Nariño': {
+      lyhyt: 'Las Lajasin basilika on rakennettu sillaksi Guáitara-joen rotkon ylle Ipialesin lähellä.',
+    },
+    'Norte de Santander': {
+      lyhyt: 'Cúcutan Simón Bolívarin kansainvälinen silta on yksi Kolumbian ja Venezuelan vilkkaimmista rajanylityspaikoista.',
+    },
+    'Putumayo': {
+      lyhyt: 'Sibundoyn laaksossa kamëntšá- ja inga-kansat viettävät ennen paastoa Bëtscnatéa, anteeksiannon ja ystävyyden juhlaa.',
+    },
+    'Quindío': {
+      lyhyt: 'Salenton lähellä Cocoran laaksossa kasvaa vahapalmuja, maailman korkeimpia palmuja ja Kolumbian kansallispuu.',
+    },
+    'Risaralda': {
+      lyhyt: 'Pereiran pääaukiolla ratsastaa alaston Simón Bolívar, Rodrigo Arenas Betancourtin pronssiveistos.',
+    },
+    'San Andrés y Providencia': {
+      lyhyt: 'San Andrésin saarella puhutaan espanjan rinnalla englantipohjaista kreolia, ja ympäröivä meri hohtaa monina sinisen sävyinä.',
+    },
+    'Santander': {
+      lyhyt: 'Santanderissa herkutellaan paahdetuilla hormigas culonas -muurahaisilla, joiden kuningattaret kerätään sadekauden alussa keväällä.',
+    },
+    'Sucre': {
+      lyhyt: 'Santiago de Tolún rantakaupunki on antanut nimensä tolubalsamille, tuoksuvalle puun pihkalle, jota käytetään yskänlääkkeissä.',
+    },
+    'Tolima': {
+      lyhyt: 'Ibaguéta kutsutaan Kolumbian musiikin pääkaupungiksi, ja sen vuonna 1906 perustettu konservatorio on maan vanhimpia.',
+    },
+    'Valle del Cauca': {
+      lyhyt: 'Calia pidetään salsan maailmanpääkaupunkina, ja joulukuun Feria de Calissa kaupunki tanssii kaduilla.',
+    },
+    'Vaupés': {
+      lyhyt: 'Vaupésin jokikansojen perinteessä puoliso otetaan toisesta kieliryhmästä, joten moni lapsi kasvaa jo kotona monikieliseksi.',
+    },
+    'Vichada': {
+      lyhyt: 'El Tuparron kansallispuistossa ovat Orinocon Maipuresin kosket, joita Alexander von Humboldt kutsui maailman kahdeksanneksi ihmeeksi.',
+    },
+  },
+  /*
+   * ECU (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.ECU:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 24 provinssia, osa ilman aksentteja ("Bolivar", "Los Rios", "Manabi",
+   * "Sucumbios"). Vain `lyhyt`. Vältetty maastokohteet-ecu.js:n aiheet
+   * (Cotopaxi, Quilotoa, Napo-joki, Ingapirca, Cuenca, Guayaquil,
+   * Yasuní, Paholaisen nenä, panamahattu, Valdivian kulttuuri,
+   * Otavalo). Lähteet (en-/es-Wikipedia ja hakutarkistus 25.9.2026),
+   * epävarmimmat erikseen:
+   *   Cañar          — Laguna de Culebrillas (3 800 m, kañarien pyhä
+   *                    järvi, Qhapaq Ñan; El Mercurio 2024)
+   *   Cotopaxi       — Mama Negra (en-Wikipedia, El Universo)
+   *   Manabi         — Manta (IPS 2010: "world capital of tuna")
+   *   Napo           — Cavernas de Jumandy (4 km Archidonasta; 1578
+   *                    kapina, es-Wikipedia Archidona)
+   *   Pastaza        — Sápara (Unesco 2001; puhujia enää muutama)
+   *   Zamora Chinchipe — Mirador mine (tuotanto 2019, ECSA/CRCC-Tongguan)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  ECU: {
+    'Azuay': {
+      lyhyt: 'Cajasin kansallispuiston päramolla on satoja pieniä järviä, ja sieltä virtaavat joet antavat Cuencalle sen juomaveden.',
+    },
+    'Bolivar': {
+      lyhyt: 'Salinas de Guarandan vuoristokylä elää osuuskunnistaan, jotka valmistavat juustoa ja suklaata El Salinerito -nimellä.',
+    },
+    'Cañar': {
+      lyhyt: 'Culebrillasin järvi 3 800 metrissä on kañari-kansan pyhä paikka, ja sen rannalta kulkee inkojen kuninkaantie.',
+    },
+    'Carchi': {
+      lyhyt: 'Tulcánin hautausmaalla sypressit on leikattu eläinten, kasvojen ja rakennusten muotoon, ja puutarhaa hoidetaan kuin taideteosta.',
+    },
+    'Chimborazo': {
+      lyhyt: 'Chimborazon huippu on päiväntasaajan pullistuman takia maapallon pinnan kaukaisin kohta maan keskipisteestä.',
+    },
+    'Cotopaxi': {
+      lyhyt: 'Latacungan Mama Negra -kulkueessa ratsastaa mustiin kasvoihin maalattu naiseksi pukeutunut mies ja pirskottaa katsojiin maitoa.',
+    },
+    'El Oro': {
+      lyhyt: 'Machala kutsuu itseään maailman banaanipääkaupungiksi, ja siellä pidetään joka vuosi maailman banaanimessut.',
+    },
+    'Esmeraldas': {
+      lyhyt: 'Esmeraldasin afroecuadorilaisissa juhlissa soi marimba, jonka musiikki ja laulut ovat Unescon aineetonta kulttuuriperintöä.',
+    },
+    'Galápagos': {
+      lyhyt: 'Saaret ovat saaneet nimensä jättiläiskilpikonnistaan: galápago on vanha espanjan sana kilpikonnalle.',
+    },
+    'Guayas': {
+      lyhyt: 'Guayasin kostealla rannikkotasangolla kasvatetaan Nacional-kaakaota, josta saadaan kukkaistuoksuisena arvostettua Arriba-kaakaota.',
+    },
+    'Imbabura': {
+      lyhyt: 'Cotacachi-tulivuoren juurella olevan Cuicochan kraatterijärven keskellä kohoaa kaksi metsäistä saarta.',
+    },
+    'Loja': {
+      lyhyt: 'Vilcabamban laaksoa mainostetaan yhä satavuotiaiden laaksona, vaikka tutkijat ovat osoittaneet pitkäikäisyystarinat liioitelluiksi.',
+    },
+    'Los Rios': {
+      lyhyt: 'Los Ríos on tasaista jokimaata, jonka tulvatasangoilla viljellään suuri osa Ecuadorin riisistä ja banaaneista.',
+    },
+    'Manabi': {
+      lyhyt: 'Manta kutsuu itseään maailman tonnikalapääkaupungiksi, ja sen satamassa puretaan ja säilötään valtavat saaliit.',
+    },
+    'Morona Santiago': {
+      lyhyt: 'Macasista näkyy Sangay, yksi maailman jatkuvimmin purkautuvista tulivuorista, joka on ollut aktiivinen vuosisatoja.',
+    },
+    'Napo': {
+      lyhyt: 'Archidonan lähellä ovat Jumandín luolat, jotka on nimetty espanjalaisia vastaan 1578 kapinoineen kiikos-päällikön mukaan.',
+    },
+    'Orellana': {
+      lyhyt: 'Puerto Francisco de Orellana, tutummin Coca, kasvoi 1970-luvun öljybuumissa sademetsän reunan kylästä vilkkaaksi kaupungiksi.',
+    },
+    'Pastaza': {
+      lyhyt: 'Pastazan sademetsissä elää sápara-kansa, jonka kieltä osaa enää vain kourallinen vanhuksia; Unesco nosti sen kulttuurin esiin 2001.',
+    },
+    'Pichincha': {
+      lyhyt: 'Quiton pohjoispuolella Mitad del Mundo -muistomerkki merkitsee päiväntasaajaa, vaikka todellinen nollaleveys kulkee parinsadan metrin päästä.',
+    },
+    'Santa Elena': {
+      lyhyt: 'Montañita on surffaajien ja reppumatkaajien rantakylä, jonka aallot houkuttelevat lautailijoita ympäri vuoden.',
+    },
+    'Santo Domingo de los Tsáchilas': {
+      lyhyt: 'Tsáchila-miehet värjäävät hiuksensa achioten punaisella väriaineella ja muotoilevat ne kypärämäiseksi.',
+    },
+    'Sucumbios': {
+      lyhyt: 'Cuyabenon suojelualueen tulvametsän mustavesijärvissä voi nähdä vaaleanpunaisia jokidelfiinejä.',
+    },
+    'Tungurahua': {
+      lyhyt: 'Bañosin yläpuolella Casa del Árbolin puukeinu heilahtaa jyrkänteen yli Tungurahua-tulivuorta kohti.',
+    },
+    'Zamora Chinchipe': {
+      lyhyt: 'Mirador on Ecuadorin ensimmäinen suuren mittakaavan kuparikaivos, kiinalaisomisteinen avolouhos, joka aloitti tuotannon 2019.',
+    },
+  },
+  /*
+   * BOL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BOL:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * yhdeksän departementtia ("El Beni" = Beni). Vain `lyhyt`. Vältetty
+   * maastokohteet-bol.js:n aiheet (Sajama, Illimani, Desaguadero,
+   * Tiwanaku, Cerro Rico, Sucre, Chiquitosin lähetysasemat, Yungas-tie,
+   * Salar de Uyuni, Oruron karnevaali, Samaipata). Lähteet (en-/es-
+   * Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   El Beni        — Casarabe culture (lidar, Nature 2022)
+   *   Pando          — Brazil nut (Bolivia suurin viejä; Pando ja Beni)
+   *   Tarija         — viinitarhat noin 1 850–2 400 m (matkailulähteet)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  BOL: {
+    'El Beni': {
+      lyhyt: 'Benin tasangoilta on laserkeilauksella löydetty Casarabe-kulttuurin kaupunkeja pengerteineen ja kanavineen sademetsän alta.',
+    },
+    'Chuquisaca': {
+      lyhyt: "Cal Orck'on kalkkikiviseinässä on tuhansia dinosaurusten jalanjälkiä, jotka painuivat aikanaan järven rantaliejuun.",
+    },
+    'Cochabamba': {
+      lyhyt: 'Cochabamban kukkulalla seisova Cristo de la Concordia on korkeampi kuin Rion Kristus, ja sen luo pääsee köysiradalla.',
+    },
+    'La Paz': {
+      lyhyt: 'La Pazin ja El Alton välillä kulkee Mi Teleférico, maailman laajin kaupunkiköysirataverkko, joka on osa arkista joukkoliikennettä.',
+    },
+    'Oruro': {
+      lyhyt: 'Poopó-järvi, aiemmin Bolivian toiseksi suurin, kuivui 2015 lähes kokonaan, ja kalastajakylät jäivät autiolle suolapohjalle.',
+    },
+    'Pando': {
+      lyhyt: 'Pandon sademetsissä kerääjät poimivat paraspähkinöitä maahan pudonneista kovista hedelmistä, ja Bolivia on maailman suurin niiden viejä.',
+    },
+    'Potosí': {
+      lyhyt: 'Laguna Coloradan vesi on levien värjäämää punaista, ja järven matalikoilla pesii harvinaisia jamesinflamingoja.',
+    },
+    'Santa Cruz': {
+      lyhyt: 'Santa Cruzin tasangoilla asuu kymmeniätuhansia mennoniitteja, jotka kulkevat hevoskärryillä ja puhuvat plautdietschiä.',
+    },
+    'Tarija': {
+      lyhyt: 'Tarijan laakson viinitarhat ovat lähes 2 000 metrissä maailman korkeimpien joukossa, ja rypäleistä tislataan myös singani-viinaa.',
+    },
+  },
 };
