@@ -66,6 +66,12 @@ namespace Matkakirja.Natiivi
         Vector2Int paperinKoko;
         Texture2D paperi, lyhtyV, lyhtyO;
         readonly Button tauko, kaynnista, kahva, lueJuttu;
+        // Löydös 148 (omistaja, build 17): Ihmisen matka II:n soitin ⏮ ▶/⏸ ⏭ Tauko/Jatka-tekstinapin tilalla.
+        readonly VisualElement soitin;
+        readonly Button soitinAlkuun, soitinToisto, soitinLoppuun;
+        const string KelaaAlkuun = "<path d=\"M6.5 5v14\" /><path d=\"M19 5.5 9.5 12l9.5 6.5z\" fill=\"currentColor\"/>";
+        const string KelaaLoppuun = "<path d=\"M17.5 5v14\" /><path d=\"M5 5.5 14.5 12 5 18.5z\" fill=\"currentColor\"/>";
+        const string Pysayta = "<rect x=\"6.5\" y=\"5\" width=\"3.8\" height=\"14\" rx=\"0.8\" fill=\"currentColor\"/><rect x=\"13.7\" y=\"5\" width=\"3.8\" height=\"14\" rx=\"0.8\" fill=\"currentColor\"/>";
         readonly Aikaselain aikaselain;
         readonly Tiedeliitenakyma tiedeliite;
         readonly Keksijakaruselli karuselli;
@@ -146,6 +152,15 @@ namespace Matkakirja.Natiivi
             // Yksi tekstinappi: Tauko / Jatka (myös välinäytöksessä, hehkuen) / Loppu (web taukoNappi).
             tauko = Rakenne.Nappi("Tauko", "mk-aikajana-nappi mk-aikajana-nappi--teksti", VaihdaTauko, ohjaimet);
             Kirjasimet.Aseta(tauko, Kirjasin.Kone);
+            // Löydös 148: II:n soitin (Linssisepän ohjaus: alkuun AloitaAlusta, loppuun SiirryTutkimukseen, tauko Esitys).
+            soitin = Rakenne.El("mk-aikajana-soitin", ohjaimet, PickingMode.Ignore);
+            soitinAlkuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", AloitaAlusta, soitin, KelaaAlkuun);
+            soitinAlkuun.tooltip = "Aloita alusta";
+            soitinToisto = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", VaihdaTauko, soitin, Pysayta);
+            soitinToisto.tooltip = "Tauko";
+            soitinLoppuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SiirryTutkimaan, soitin, KelaaLoppuun);
+            soitinLoppuun.tooltip = "Tutki karttaa itse";
+            soitin.style.display = DisplayStyle.None;
             Valikko = new LinssiValikko(kerros, () => linssit.SuljeLinssi(), AloitaAlusta);
             ohjaimet.Add(Valikko.Nappi);
 
@@ -477,7 +492,11 @@ namespace Matkakirja.Natiivi
             bool saari = Ylapalkki.Matala && p != null && Screen.width > 0;
             ylarivi.EnableInClassList("mk-aikajana-ylarivi--saari", saari);
             var virrat = tutkimus?.Rivi;
-            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat })
+            // Löydös 148: saaririvin oikealla puolella on tilaa vain yhdelle napille ja ☰:lle, joten II:n soitin on
+            // saaririvillä vuosiluvun rivin oikeassa päässä (kuten entinen CC, Linssisepän video 25.9.).
+            if (saari && soitin.parent != ylarivi) ylarivi.Add(soitin);
+            else if (!saari && soitin.parent != ohjaimet) ohjaimet.Insert(ohjaimet.IndexOf(tauko) + 1, soitin);
+            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat, soitin })
             {
                 if (e == null) continue;
                 e.style.position = saari ? Position.Absolute : StyleKeyword.Null;
@@ -505,6 +524,8 @@ namespace Matkakirja.Natiivi
             kelloRuutu.style.top = rivi2;
             float kellonKorkeus = float.IsNaN(kelloRuutu.layout.height) || kelloRuutu.layout.height <= 0 ? 36f : kelloRuutu.layout.height;
             float korkeus = rivi2 + kellonKorkeus + 8f * yksikko;
+            soitin.style.right = r.z + reuna;
+            soitin.style.top = rivi2 + Mathf.Max(0f, (kellonKorkeus - 36f) / 2f);
             // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
             // niille ei ole tilaa (vuosilaatikko ~150 pt + viisi nappia), joten ne saavat oman rivin vuosiluvun alle
             // (muuten ne jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle tai vuosiluvun päälle).
@@ -762,6 +783,11 @@ namespace Matkakirja.Natiivi
             tauko.tooltip = tauko.Q<Label>().text;
             // Ihmisen matkan lopussa nappi on pois käytöstä (web ihmisen-matka-esitys.js).
             tauko.SetEnabled(!(lopussa && tila == Tila.Ihminen));
+            // Löydös 148: II:n soittimen toisto-/taukosymboli samasta tilasta.
+            var ikoni = soitinToisto.Q<SvgIkoni>();
+            if (ikoni != null) ikoni.Polku = !tauolla ? Pysayta : Ikonit.Toista;
+            soitinToisto.tooltip = !tauolla ? "Tauko" : "Jatka";
+            soitinToisto.SetEnabled(!(lopussa && tila == Tila.Ihminen));
             kelloRuutu.EnableInClassList("mk-tauolla", tauolla);
         }
 
@@ -867,6 +893,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Valikon "Aloita alusta" (web aloitaAlusta, kaksi haaraa).</summary>
+        /// <summary>Löydös 148: kelaa loppuun = esitys loppuun ja tutkimusvaihe (Linssiseppä: SiirryTutkimukseen).</summary>
+        void SiirryTutkimaan()
+        {
+            if (tila != Tila.Ihminen) return;
+            LinssiUi.IhmisenMatka?.SiirryTutkimukseen();
+        }
+
         public void AloitaAlusta()
         {
             if (tila == Tila.Keksinnot)
@@ -1321,6 +1354,15 @@ namespace Matkakirja.Natiivi
         void PaivitaTekstitysKytkin()
         {
             bool nakyy = tila == Tila.Ihminen && IhmisenMatkaKerros.CcNappi;
+            // Löydös 148: II:ssa soitin tekstinapin tilalla; kelaa loppuun pois käytöstä tutkimusvaiheessa.
+            var sd = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (soitin.style.display.value != sd)
+            {
+                soitin.style.display = sd;
+                tauko.style.display = nakyy ? DisplayStyle.None : DisplayStyle.Flex;
+                PaivitaTauko();
+            }
+            if (nakyy) soitinLoppuun.SetEnabled(LinssiUi.IhmisenMatka?.Tutkimus == null);
             if (nakyy == Valikko.TekstitysNakyy) return;
             if (nakyy) Valikko.NaytaTekstitys(() => IhmisenMatkaKerros.TekstitysPaalla, IhmisenMatkaKerros.AsetaTekstitys);
             else Valikko.NaytaTekstitys(null, null);

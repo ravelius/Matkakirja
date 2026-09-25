@@ -931,6 +931,32 @@
     background-color: rgba(217, 161, 59, 0.22);
 }
 
+/* Löydös 148 (omistaja, build 17): Ihmisen matka II:n soitin ⏮ ▶/⏸ ⏭ (palkin napit, symbolit ilman tekstiä). */
+.mk-aikajana-soitin {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-aikajana-nappi.mk-aikajana-soitin__nappi {
+    width: 44px;
+    height: 36px;
+    min-height: 36px;
+    margin-left: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-aikajana-soitin__nappi > .mk-ikoni {
+    width: 18px;
+    height: 18px;
+    color: #f1e6d0;
+    --mk-ikoni-viiva: 2;
+}
+
+.mk-aikajana-soitin__nappi:disabled > .mk-ikoni {
+    opacity: 0.35;
+}
+
 /* Saaririvi (AikajanaNakyma.AsetaSaaririvi): pelin ☰:n mitat 44 × 36 ja Tauko samankorkuisena. */
 .mk-aikajana-ylarivi--saari .mk-aikajana-nappi {
     width: 44px;
