@@ -25,6 +25,11 @@ namespace Matkakirja
     ///    (LEHDEN_VAHIN_OSUUS 0,5: osuus, ei zoomitaso) ja saapumisesta on kulunut 1,4 s kameran
     ///    ja nappulan pysähdyttyä (saapumisPortti, PORTIN_VIIVE_MS). Syttyminen 0,7 s.
     ///  - Enintään <see cref="katto"/> nostoa kerrallaan, lähimmät ruudun keskeltä (NOSTOJEN_KATTO 120).
+    ///  - ELÄINTÄYT KOKO LAUDALTA (löydös 125, web nostot.js keraa "Eläintäyt: koko laudalla"): naapurimaidenkin
+    ///    eläintäyt (lahde elaintaky, yksi per maa: Pelastuskarhu BGR, Mangalitsa HUN, Karhunpennut ROU …) näkyvät,
+    ///    kun näkymän korkeus on enintään <see cref="NostoSaannot.ElaintakyNakyyKorkeus"/> astetta eikä nappula liiku.
+    ///    Natiivissa vain kerroksen ollessa näkyvissä (web myös kauempaa).
+    ///  - Symbolien säännöt (minimerkki, kuvamerkki, kaupunkikoko, hehkupiste) <see cref="NostoSaannot"/>, löydös 125.
     /// Aineisto: kokoelmat/karttavalot.json (sama joukko kuin webin pallon nostokerros, skeema 1.24)
     /// ja maarajat.json:n bbox (maan leveys).
     /// </summary>
@@ -50,6 +55,8 @@ namespace Matkakirja
         public sealed class Nosto
         {
             public string Id, Tunnus, Aihe, Kategoria, Nimi, Nimio, Maa, KaupunkiAvain, TakyNosto;
+            /// <summary>Datan lähde (fokuskohde, skandaalit, elaintaky …); elaintaky näkyy myös naapurimaissa.</summary>
+            public string Lahde;
             /// <summary>
             /// Kohteen tyyppi (web datumin symLaji = kohde.tyyppi: vuori, meri, joki, jarvi, saari, ruoka, tekniikka,
             /// kaupunki …) tai null. Ratkaisee luonnon merkin (aalto vai kolmio), kuvamerkin tyypin, kaupunkimerkin
@@ -156,6 +163,9 @@ namespace Matkakirja
         readonly Dictionary<string, List<Nosto>> maittain = new Dictionary<string, List<Nosto>>();
         readonly Dictionary<string, double4> bboxit = new Dictionary<string, double4>(); // länsi, etelä, itä, pohjoinen
         readonly List<Nosto> naytettavat = new List<Nosto>();
+        /// <summary>Kaikkien maiden eläintäyt (lahde elaintaky, yksi per maa), löydös 125.</summary>
+        readonly List<Nosto> elaintayt = new List<Nosto>();
+        bool elaimetNakyvat;
         /// <summary>Nimikerroksen merinimet (aluenimet luokka meri/valtameri + merinimet), datan porttia varten.</summary>
         readonly HashSet<string> merinimet = new HashSet<string>();
         int luokiteltuKaupunkeja = -1;
@@ -229,6 +239,7 @@ namespace Matkakirja
                         Kategoria = MiniJson.Teksti(a, "kategoria"),
                         // Löydös 125: kohteen tyyppi datasta, kun vienti tuo sen (`laji`, webin datumissa symLaji).
                         Laji = MiniJson.Teksti(a, "laji") ?? MiniJson.Teksti(a, "symLaji"),
+                        Lahde = MiniJson.Teksti(a, "lahde"),
                         Nimi = MiniJson.Teksti(a, "nimi"),
                         Nimio = MiniJson.Teksti(a, "nimio"),
                         Maa = MiniJson.Teksti(a, "maa"),
@@ -250,6 +261,7 @@ namespace Matkakirja
                     if (double.IsNaN(s.OmaLat) || double.IsNaN(s.OmaLon)) { s.OmaLat = s.Lat; s.OmaLon = s.Lon; }
                     if (!maittain.TryGetValue(s.Maa, out var l)) maittain[s.Maa] = l = new List<Nosto>();
                     l.Add(s);
+                    if (s.Lahde == "elaintaky") elaintayt.Add(s);
                 }
             }
             if (rajat != null && MiniJson.Jasenna(rajat) is Dictionary<string, object> r && r.GetValueOrDefault("alkiot") is List<object> maat)
@@ -395,6 +407,11 @@ namespace Matkakirja
             float sytty = Nakyvissa ? Mathf.Clamp01(sytytysAlku < 0 ? 1f : (Time.unscaledTime - sytytysAlku) / Mathf.Max(0.01f, syttyminenS)) : 0f;
             if (sytty != Syttyminen) { Syttyminen = sytty; muuttui = true; }
 
+            // Eläintäyt koko laudalta (web keraa): näkymän korkeus ≤ 45,3° eikä nappula liiku.
+            bool elaimet = NostoSaannot.ElaintaytNakyvat(NakyvaKorkeusAsteina(),
+                nappula != null && (nappula.Vaihe != LennonVaihe.Ei || nappula.Liikkeessa));
+            if (elaimet != elaimetNakyvat) { elaimetNakyvat = elaimet; muuttui = true; }
+
             if (Nakyvissa && maittain.TryGetValue(maa, out var nostot))
             {
                 if (nakymaMuuttui || muuttui || naytettavat.Count == 0) Paivita(nostot);
@@ -438,20 +455,33 @@ namespace Matkakirja
             Lahella = lahi || linssiNimet;
             foreach (var s in nostot)
             {
+                // Eläintäyt tulevat alla koko laudalta (myös oma maa), kuten webin keraa-silmukassa.
+                if (s.Lahde == "elaintaky") continue;
                 // Kohdemaassa lahizoom-lippu ei piilota (web KATTO EI KOSKE KOHDEMAATA); kaupungin sisäiset ja
                 // nimikerroksen meret eivät ole kartalla, taso 3 odottaa lähizoomia (NostoSaannot.Portti).
                 if (NostoSaannot.Portti(s.DatanSyy, s.Taso, lahi) != NostoSaannot.Syy.Nakyy) continue;
-                if (!kierto.RuutuPiste(s.Lat, s.Lon, out var r)) continue;
-                s.Ruutu = r;
-                s.Keskelta = Vector2.Distance(r, keski);
-                naytettavat.Add(s);
+                LisaaRuudulta(s, keski);
             }
+            // LÖYDÖS 125: eläintäyt koko laudalta (web nostot.js keraa "Eläintäyt: koko laudalla", elaintakyLaudalla):
+            // naapurimaidenkin täyt, ilman kaupunki- ja meriportteja (webin silmukka lisää ne suoraan), taso 3 lähellä.
+            if (elaimetNakyvat)
+                foreach (var s in elaintayt)
+                    if (s.Taso != 3 || lahi) LisaaRuudulta(s, keski);
             if (naytettavat.Count > katto)
             {
                 naytettavat.Sort((a, b) => a.Keskelta.CompareTo(b.Keskelta));
                 naytettavat.RemoveRange(katto, naytettavat.Count - katto);
             }
             muuttui = true;
+        }
+
+        /// <summary>Nosto näytettäviin, jos sen piste on ruudulla ja kameran edessä.</summary>
+        void LisaaRuudulta(Nosto s, Vector2 keski)
+        {
+            if (!kierto.RuutuPiste(s.Lat, s.Lon, out var r)) return;
+            s.Ruutu = r;
+            s.Keskelta = Vector2.Distance(r, keski);
+            naytettavat.Add(s);
         }
 
         /// <summary>
@@ -474,9 +504,13 @@ namespace Matkakirja
             int portista = 0;
             foreach (var s in lista)
             {
-                var syy = NostoSaannot.Portti(s.DatanSyy, s.Taso, lahi);
+                // Eläintäky ohittaa kaupunki- ja meriportin (web keraa), portti on näkymän korkeus.
+                bool taky = s.Lahde == "elaintaky";
+                var syy = taky ? (s.Taso == 3 && !lahi ? NostoSaannot.Syy.Taso3 : NostoSaannot.Syy.Nakyy)
+                    : NostoSaannot.Portti(s.DatanSyy, s.Taso, lahi);
                 string avain;
-                if (syy == NostoSaannot.Syy.Nakyy)
+                if (taky && syy == NostoSaannot.Syy.Nakyy && !elaimetNakyvat) avain = "eläintäky (näkymä yli 45°)";
+                else if (syy == NostoSaannot.Syy.Nakyy)
                 {
                     portista++;
                     if (nakyvat.Contains(s)) continue;
@@ -503,8 +537,11 @@ namespace Matkakirja
             // Löydös 125: minimerkit maan nostoille ja lajin puute datassa (ilman lajia luonto on aina kolmio).
             var mb = new System.Text.StringBuilder();
             foreach (var p in merkit) mb.Append(mb.Length > 0 ? ", " : "").Append(p.Key).Append(' ').Append(p.Value);
+            var naapurit = new List<string>();
+            foreach (var s in naytettavat) if (s.Maa != maa) naapurit.Add(s.Nimio ?? s.Nimi);
             b.Append($"; minimerkit {mb}; laji puuttuu {ilmanLajia}/{lista.Count}; nimiön reuna {NimionReunaPeitto:0.##} " +
-                     $"({NimionReunaLeveys:0.###} px), pohja {NimionPohjaPeitto:0.##}");
+                     $"({NimionReunaLeveys:0.###} px), pohja {NimionPohjaPeitto:0.##}; eläintäyt {(elaimetNakyvat ? "auki" : "kiinni")}, " +
+                     $"naapureista {naapurit.Count} ({string.Join(", ", naapurit)})");
             foreach (var p in syyt) b.Append($"\n  {p.Key}: {p.Value.Count} — {string.Join(", ", p.Value)}");
             return b.ToString();
         }

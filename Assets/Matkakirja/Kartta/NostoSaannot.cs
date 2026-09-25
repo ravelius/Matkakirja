@@ -202,6 +202,18 @@ namespace Matkakirja
             alkio != null && alkio.TryGetValue("puoli", out var o) && o is string p
             && (p == "oikea" || p == "vasen" || p == "yla" || p == "ala") ? p : null;
 
+        // ==== ELÄINTÄYT KOKO LAUDALTA (löydös 125, web js/pallolauta/nostot.js keraa ja :390 ELAINTAKY_*) ====
+
+        /// <summary>
+        /// ELAINTAKY_NAKYY_KORKEUS = ELAINTAKY_MAANOSAN_ASTEET 34 / ALUEEN_VAHIN_OSUUS 0,75 = 45,3°: eläintäkymerkit
+        /// näkyvät, kun näkymän korkeus leveysasteina on enintään tämä (Eurooppa täyttää ruudun, ei yleiskuvaa).
+        /// </summary>
+        public const double ElaintakyNakyyKorkeus = 34.0 / 0.75;
+
+        /// <summary>Web `alueenMerkitNakyvat(nakyva, ELAINTAKY_NAKYY_KORKEUS) &amp;&amp; !liikkuu` (liikkuu = nappula siirtyy).</summary>
+        public static bool ElaintaytNakyvat(double nakyvaKorkeusAsteina, bool nappulaLiikkuu) =>
+            !nappulaLiikkuu && nakyvaKorkeusAsteina > 0 && nakyvaKorkeusAsteina <= ElaintakyNakyyKorkeus;
+
         // ==== SYMBOLIT (löydös 125, web js/fokusnosto-symbolit.js; mitattu proto-3d/lokit/nostot-125/web) ====
 
         /// <summary>

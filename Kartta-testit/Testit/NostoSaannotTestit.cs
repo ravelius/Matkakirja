@@ -140,6 +140,24 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(2, 4.0), "taso 2 kertoimesta 4");
         }
 
+        /// <summary>Web keraa: eläintäyt koko laudalta, kun näkymän korkeus ≤ 34 / 0,75 = 45,3° eikä nappula liiku.</summary>
+        [Testi]
+        static void ElaintaytKokoLaudalta()
+        {
+            Oleta.Tosi(Math.Abs(NostoSaannot.ElaintakyNakyyKorkeus - 45.333) < 0.001, "raja 45,3°");
+            Oleta.Tosi(NostoSaannot.ElaintaytNakyvat(16.3, false), "avauslennon jälkeen (Kreikka, 0,31 R) auki");
+            Oleta.Tosi(NostoSaannot.ElaintaytNakyvat(8.5, false), "saapumisnäkymässä auki");
+            Oleta.Tosi(!NostoSaannot.ElaintaytNakyvat(53.4, false), "koko pallo kiinni");
+            Oleta.Tosi(!NostoSaannot.ElaintaytNakyvat(8.5, true), "nappula liikkuu → kiinni");
+            Oleta.Tosi(!NostoSaannot.ElaintaytNakyvat(0, false), "tuntematon näkymä kiinni");
+            string kv = Path.Combine(Environment.GetEnvironmentVariable("NOSTOT_125") ?? "/Users/Shared/Claude/proto-3d/lokit/nostot-125", "data", "karttavalot-v127.json");
+            if (!File.Exists(kv)) return;
+            var taky = MiniJson.Alkiot(File.ReadAllText(kv)).Where(a => MiniJson.Teksti(a, "lahde") == "elaintaky").ToList();
+            Oleta.Tosi(taky.Count >= 100 && taky.Select(a => MiniJson.Teksti(a, "maa")).Distinct().Count() == taky.Count, "yksi täky per maa, saatu " + taky.Count);
+            foreach (var (maa, nimio) in new[] { ("BGR", "Pelastuskarhu"), ("HUN", "Mangalitsa"), ("ROU", "Karhunpennut") })
+                Oleta.Tosi(taky.Any(a => MiniJson.Teksti(a, "maa") == maa && MiniJson.Teksti(a, "nimio") == nimio), maa + " " + nimio + " (webin Ateenan kuvissa)");
+        }
+
         [Testi]
         static void KaupunkimerkkiJaMerenNimio()
         {
