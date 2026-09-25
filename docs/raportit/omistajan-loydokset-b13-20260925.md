@@ -30,12 +30,12 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | # | Löydös | Rooli |
 |---|---|---|
 | 92 | Kaupungin klikkaus kartalla: minivalikko aivan liian pieni → isommaksi. | Natiivi-UI |
-| 93 | Kaikki karttakohteet klikattaviksi myös tekstistä, ei vain pisteestä tai symbolista (nähtävyydet). | Pelikoodari (Natiivi-UI) |
+| 93 | Kaikki karttakohteet klikattaviksi myös tekstistä, ei vain pisteestä tai symbolista (nähtävyydet). → KORJATTU pelikoodari/nosto-nimio 5e21527b (natiivi-ui/nimiolukko-106:n mukana juna/b13 9f78c612) | Pelikoodari (Natiivi-UI) |
 | 94 | Koko ruutu -nappi ei toimi, ja se on oudon näköinen ovaali → toiminta ja ulkoasu webin mallin mukaan. | Natiivi-UI |
 | 95 | Ateenan nähtävyyksistä osa ei ole leikattuja: piirretty tausta näkyy. | Sisältökirjuri (kuvaputki/Codex) |
 | 102 | Nostoissa kuvan avaus koko ruudun kokoiseksi aukeaa liian pienenä. | Natiivi-UI |
 | 103 | Kehittäjätilassa ei löydy, mistä Maailma-tilan saa pois päältä. | Natiivi-UI |
-| 104 | Karttanostot aukeavat hitaasti. Webissä service worker + kaupungin kuvien esilataus saavuttaessa; natiivin esilataus (build 9) ei kata karttanostoja → selvitys ja korjaus samaan kaavaan. | Pelikoodari |
+| 104 | Karttanostot aukeavat hitaasti. Webissä service worker + kaupungin kuvien esilataus saavuttaessa; natiivin esilataus (build 9) ei kata karttanostoja → selvitys ja korjaus samaan kaavaan. → KORJATTU pelikoodari/nosto-esilataus c50c572b (juna/b13 9f78c612; maan nostodata esiladataan saapuessa) | Pelikoodari |
 | 105 | Maakunnat kaikille maille. Jos maalla ei ole maakuntia, lista on tyhjä tai sisältää vain maan nimen, ei koskaan muiden maiden maakuntia. | Karttaseppä (data) + Natiivi-UI (lista) |
 | 106 | Karttanostojen teksti saattaa panoroidessa yhä hypätä merkin toiselle puolelle. | Natiiviseppä (nimiölukko) |
 | 107 | Välimeri ja Messinansalmi voivat piirtyä maan päälle; merinimien pitää piirtyä aina meren päälle. | Karttaseppä (nimiödata) + Natiiviseppä |
@@ -50,8 +50,8 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 97 | Vasemman yläreunan nimilaatikko kuvaa katsottaessa liian iso → tekstin kokoinen. Pienennys animoidaan rivi kerrallaan, ei kertarysäyksellä. SÄÄNTÖ: sama kaikille laatikoille, jotka näyttävät sisällön ja pienenevät automaattisesti (myös 86/87 matkakirja). | Natiivi-UI |
 | 98 | Avaruuslinssin topografianäkymä reilusti tummemmaksi, jotta vihreät pisteet hehkuvat yökartalla. | Linssiseppä (Natiiviseppä) |
 | 99 | Topografian navat ovat vielä pyöreitä reikiä → korjataan (napakalotit). | Natiiviseppä |
-| 100 | Pelinäkymässä kartun klikkaus: radiopainike menee punaiseksi, mutta mitään ei kuulu. | Pelikoodari |
-| 101 | Maalehdet skrollautuvat edelleen todella tahmaisesti (laitteella; löydöksen 64 jatko). | Pelikoodari (Natiivi-UI) |
+| 100 | Pelinäkymässä kartun klikkaus: radiopainike menee punaiseksi, mutta mitään ei kuulu. → KORJATTU pelikoodari/kartun-radio c13af0b3 (juna/b13 9f78c612; voimakkuus Avaa-kutsun jälkeen) | Pelikoodari |
+| 101 | Maalehdet skrollautuvat edelleen todella tahmaisesti (laitteella; löydöksen 64 jatko). → KORJATTU pelikoodari/lehti-piirto 6ba8ada0 (juna/b13 9f78c612; laitteella A/B: lehti 30 → 120 fps) | Pelikoodari (Natiivi-UI) |
 
 ## Lisäksi Linssisepän kierrokselta 3 (ei omistajan numero)
 
