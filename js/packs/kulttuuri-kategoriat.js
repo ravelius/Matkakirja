@@ -110937,6 +110937,278 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Verney Lovett Cameron',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko Angola,
+       * painopisteenä Luanda ja sen lähirannikko, kuten lehden
+       * nostoissakin. Taustatiedot englannin Wikipediasta (Dr. António
+       * Agostinho Neto International Airport, Visa policy of Angola,
+       * Angolan kwanza, Luanda, July 2025 Angolan protests, Luanda
+       * Railway, Ilha de Luanda, Mussulo, Mausoleum of António Agostinho
+       * Neto, Palácio de Ferro, Luanda International Jazz Festival, HALO
+       * Trust, Diana, Princess of Wales, Prince Harry, Duke of Sussex),
+       * portugalin Wikipediasta (Miradouro da Lua), Wikivoyagen Angola-
+       * ja Luanda-sivuilta sekä Britannian ulkoministeriön (FCDO)
+       * Angolan matkustustiedotteesta (päivitetty 28.5.2026) — teksti
+       * omaa. Hinnat ja aukioloajat jätetty pois: kwanza on heilunut
+       * voimakkaasti, ja lähteiden hinnat ovat vanhoja. Turvallisuus
+       * kerrotaan FCDO:n ja Wikivoyagen mukaan liioittelematta:
+       * Cabinda (separatistit), Lundan timanttialueet, miinat ja
+       * Luandan katurikollisuus.
+       *
+       * EI TOISTETA: nostojen aiheita (padrão, São Miguelin linnoitus,
+       * orjakauppa, Livingstone, Cameron, Bié-ylänkö, Kuanza, Kalandula,
+       * jättiläissapeliantilooppi), maalehden aiheita (funge, moamba,
+       * kalulu, cocada, berimbau, semba, kuduro, Tundavala, welwitschia,
+       * Tigres, nzimbu, Nzinga, tšokwe-taide) eikä maastokohteiden
+       * aiheita (Quiçama, Iona, Benguelan rata, Cuito Cuanavale).
+       *
+       * KUVAT: kahdeksan Commons-kuvaa, lisenssi ja tekijä tarkistettu
+       * extmetadatasta ja jokainen katsottu silmin. BAI-pankin kuva on
+       * pankin viestinnän itse lataama CC0-kuva. Huambon kuvan
+       * tekijämerkintä on MAG:n pyytämä (Sean Sutton/MAG). Mausoleumin
+       * kuva on vuodelta 2006, jolloin muistomerkki oli vielä kesken.
+       * HYLÄTYT: uuden lentokentän Yezzispapi-kuvat (videokuvakaappauksen
+       * näköisiä, alkuperä epävarma), "Construction site Angola
+       * International Airport1" (ei tunnistettavasti lentokenttä),
+       * seteli- ja kolikkokuvat, "Danger mines 1" (paikka epävarma) ja
+       * "A minefield digger" (virheellinen kuvaus). Palácio de Ferron
+       * ainoa kuva on liian epätarkka. Pystykuva: Miradouro da Lua.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Miradouro da Lua - 2.jpg',
+          lyhyt: 'Miradouro da Luan uurteiset savikalliot laskeutuvat kohti Atlanttia.',
+          selite: 'Tuulen ja sateen uurtamat punaiset ja vaaleat savikalliot '
+            + 'Miradouro da Luassa, noin 40 kilometriä Luandasta etelään. '
+            + 'Taustalla avautuvat rannikkotasanko ja harmaa Atlantti.',
+          lahde: 'Felipe Miguel, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Angola on yksi maailman vähiten matkailluista maista, ja se on '
+          + 'avautunut vierailijoille vasta hiljattain: suomalainen pääsee '
+          + 'maahan lomalle ilman viisumia syksystä 2023 lähtien, ja Luandan '
+          + 'uusi lentoasema otti kaukolennot vastaan vuosina 2025–2026. '
+          + 'Rahaa varten tarvitaan käteisiä kwanzoja, kaupungilla liikutaan '
+          + 'sinivalkoisilla candongueiroilla tai sovitulla autolla, ja '
+          + 'viikonloppuisin luandalaiset suuntaavat Ilhan ja Mussulon '
+          + 'rannoille. Kameran kanssa ollaan tarkkana, ja maaseudulla '
+          + 'pysytään vakiintuneilla teillä, koska miinoja on yhä jäljellä.',
+        artikkeli: {
+          nimi: 'Matkailijan Angola',
+          teksti: 'Angolassa käteinen, kärsivällisyys ja portugalin alkeet vievät pitkälle.',
+          nosto: 'Luandalaisten viikonloppu alkaa vesitaksista, joka vie lahden '
+            + 'yli Mussulon palmurannoille.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Maahan ilman viisumia',
+              teksti: 'Angola avautui matkailijoille syksyllä 2023, kun maa '
+                + 'poisti turistiviisumin lähes sadalta maalta, muun muassa '
+                + 'Suomelta ja muilta EU-mailta. Lomalle pääsee nyt ilman '
+                + 'viisumia enintään 30 päiväksi kerrallaan ja yhteensä 90 '
+                + 'päiväksi kalenterivuodessa. Passin on oltava voimassa vähintään '
+                + 'kuusi kuukautta saapumisesta, ja siinä on oltava kaksi tyhjää '
+                + 'sivua. Keltakuumerokotusta suositellaan, ja rokotustodistusta '
+                + 'voidaan kysyä maahan tullessa tai viimeistään jatkomatkalla '
+                + 'esimerkiksi Etelä-Afrikkaan. Kaukolennot laskeutuvat nykyään '
+                + 'Dr. António Agostinho Neton kansainväliselle lentoasemalle noin '
+                + '40 kilometriä Luandan keskustasta kaakkoon. Se on suurin '
+                + 'lentoasema, jonka kiinalainen yhtiö on rakentanut Kiinan '
+                + 'ulkopuolelle. Kenttä vihittiin marraskuussa 2023, mutta '
+                + 'reittilentojen siirto vanhalta, keskellä kaupunkia olevalta '
+                + 'Quatro de Fevereiron kentältä valmistui vasta maaliskuussa 2026. '
+                + 'Kaupunkiin kannattaa varata kuljetus etukäteen. Rahassa pärjää '
+                + 'vain käteisellä: useimmat ravintolat ja pienet hotellit '
+                + 'hyväksyvät angolalaisia maksukortteja mutta eivät ulkomaisia. '
+                + 'Pankkiautomaateille on usein jonoa, kerralla saa nostaa vain '
+                + 'rajatun summan ja käteinen voi loppua kesken, joten kwanzoja '
+                + 'kannattaa hankkia hyvissä ajoin. Kwanza menetti touko- ja '
+                + 'kesäkuussa 2023 lähes 40 prosenttia arvostaan dollariin nähden, '
+                + 'joten vanhojen matkaoppaiden hinnat eivät enää pidä. Maasta saa '
+                + 'viedä pois enintään 50 000 kwanzaa, ja sitä voidaan tarkastaa '
+                + 'lentoasemalla. Englantia puhutaan vähän. Luandan ulkopuolella '
+                + 'portugalin alkeet ovat lähes välttämättömät, ja kohtelias bom '
+                + 'dia aloittaa jokaisen kohtaamisen.',
+              kuva: [
+                {
+                  tiedosto: '1.Luanda Airport Aeroporto 4 de Fevereiro LAD.jpg',
+                  lyhyt: 'Vanha Quatro de Fevereiron lentoasema keskellä Luandaa vuonna 2009.',
+                  selite: 'Heinäkuussa 2009 kuvatulla Quatro de Fevereiron '
+                    + 'lentoasemalla seisovat Lufthansan Airbus ja TAAG Angola '
+                    + 'Airlinesin Boeing 747, ja kentän takana leviää Luandan '
+                    + 'asutus. Reittilennot siirtyivät uudelle kentälle 2026.',
+                  lahde: 'Manuel Dohmen, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Angola Entry Stamp.png',
+                  lyhyt: 'Luandan lentoaseman vihreä maahantuloleima elokuulta 2011.',
+                  selite: 'Rajaviranomaisen Migração e Estrangeiros vihreässä '
+                    + 'leimassa ovat päivämäärä 16. elokuuta 2011 ja paikka Luanda. '
+                    + 'Punainen lentokone kertoo, että matkustaja saapui ilmateitse.',
+                  lahde: 'Jimmielin, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Agência Sagrada Família - Banco Angolano de Investimentos.jpg',
+                  lyhyt: 'BAI-pankin Sagrada Família -konttorin asiakastila Luandassa vuonna 2018.',
+                  selite: 'Banco Angolano de Investimentosin konttorissa '
+                    + 'asiakkaat odottavat vuoroaan sinisillä raheilla. Ulkomaisella '
+                    + 'kortilla maksaminen onnistuu Angolassa harvoin, joten käteistä '
+                    + 'nostetaan pankkiautomaatista tai vaihdetaan pankissa.',
+                  lahde: 'BAI Comunicação Institucional, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Sinivalkoinen candongueiro',
+              teksti: 'Luandan tärkein joukkoliikenne ei ole bussi eikä juna vaan '
+                + 'candongueiro: yksityinen, valkoiseksi ja siniseksi maalattu '
+                + 'pikkubussi, useimmiten Toyota Hiace. Autoon on tehty paikat '
+                + 'kahdelletoista, mutta kyytiin ahtautuu yleensä vähintään '
+                + 'viisitoista. Kuljettajat ovat kuuluisia siitä, että liikennesäännöt '
+                + 'joustavat: stop-merkeissä ei pysähdytä, ja ruuhkaa kierretään '
+                + 'jalkakäytävää pitkin. Paikalliset käyttävät candongueiroja joka '
+                + 'päivä, mutta esimerkiksi Britannian ulkoministeriö neuvoo '
+                + 'matkailijoita välttämään sekä pikkubusseja että kyytisovelluksia '
+                + 'ja liikkumaan etukäteen sovitulla autolla. Pikkubussien merkitys '
+                + 'koko kaupungille näkyi heinäkuussa 2025. Kun hallitus leikkasi '
+                + 'polttoainetukia ja dieselin hinta nousi kolmanneksen, '
+                + 'taksinkuljettajien liitto julisti Luandaan kolmen päivän lakon. '
+                + 'Lakko laajeni mielenosoituksiksi ja mellakoiksi muissakin '
+                + 'maakunnissa, ja virallisten lukujen mukaan 22 ihmistä kuoli ja '
+                + 'yli 1 200 pidätettiin. Ruuhka kuuluu Luandan arkeen, ja '
+                + 'marraskuusta huhtikuuhun kestävällä sadekaudella rankkasateet '
+                + 'voivat tulvia kaduille hetkessä. Hintataso yllättää: '
+                + 'ulkomaisten työntekijöiden elinkustannuksia vertailevissa '
+                + 'listoissa Luanda on noussut maailman kalleimpien kaupunkien '
+                + 'kärkeen, koska tuontitavara ja turvallisuus maksavat. Kaupungin '
+                + 'laidalle pääsee myös junalla: Luandan radan lähiliikenne kulkee '
+                + 'Vianaan, ja kaukojuna jatkaa sisämaahan Malanjeen.',
+              kuva: {
+                tiedosto: 'Candongueiros.jpg',
+                lyhyt: 'Sinivalkoisia candongueiro-pikkubusseja Luandan kadulla vuonna 2011.',
+                selite: 'Kolme sinivalkoista Toyota Hiace -pikkubussia keltaisen '
+                  + 'talon edessä Luandassa. Etualan autossa istuvat kuljettaja ja '
+                  + 'ensimmäiset matkustajat.',
+                lahde: 'Patyfessora, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ilha, Mussulo ja Kuun näköala',
+              teksti: 'Luandalaiset pakenevat kaupungin hälinää rannikolle. Lähin '
+                + 'pakopaikka on Ilha do Cabo, jota kutsutaan yleensä vain Ilhaksi: '
+                + 'matala hiekkasärkkä lahden edustalla, joka liittyy kaupunkiin '
+                + 'kapealla kannaksella. Sen rannoilla on ravintoloita hyvin '
+                + 'kalliista rentoihin, baareja, venesatamia ja vuonna 1924 '
+                + 'perustettu pursiseura Clube Náutico, jota Wikivoyage suosittelee '
+                + 'auringonlaskun katseluun. Ilhan omia ruokia ovat grillattu kala '
+                + 'eli mufete ja muzongué-liemi. Illalla ravintolasta toiseen ei '
+                + 'kannata kävellä, vaan siirtyä autolla. Etelämpänä on Mussulo, noin '
+                + '30 kilometriä pitkä hiekkaniemi, jonka Kuanza-joen tuoma hiekka '
+                + 'ja pohjoiseen virtaava Benguelan merivirta ovat kasanneet. Sinne '
+                + 'mennään usein vesitaksilla lahden yli. Lahden puoleiset rannat '
+                + 'ovat luandalaisten suosikkeja, mutta niemen Atlantin puolella '
+                + 'virtaukset ja aallot ovat niin voimakkaita, että siellä käy '
+                + 'harva. Noin 40 kilometriä Luandasta etelään rannikkotie kulkee '
+                + 'Miradouro da Luan eli Kuun näköalapaikan ohi. Tuuli ja sade ovat '
+                + 'uurtaneet punaisiin ja vaaleisiin savikallioihin harjanteita, '
+                + 'jotka muistuttavat kuumaisemaa, ja paikkaa pidetään Angolan '
+                + 'käydyimpänä nähtävyytenä. Se on luonteva pysähdys matkalla Barra '
+                + 'do Cuanzan tai Cabo Ledon rannoille, ja siellä kuvattiin vuonna '
+                + '1993 ensimmäinen portugalilais-angolalainen yhteiselokuva. '
+                + 'Luandan eteläpuolella on myös Benfican käsityötori, jolla '
+                + 'myydään veistoksia, maalauksia, koruja ja batiikkikankaita. '
+                + 'Tinkiminen kuuluu asiaan.',
+              kuva: {
+                tiedosto: 'Mussulo, Angola.jpg',
+                lyhyt: 'Mussulon palmujen reunustama ranta vesitaksista kuvattuna.',
+                selite: 'Luandasta Mussuloon kulkevasta vesitaksista kuvattu '
+                  + 'hiekkaranta, jonka takana palmujen keskellä on '
+                  + 'punakattoisia rantataloja.',
+                lahde: 'Juvenalia Brito, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Raketti, rautapalatsi ja kamera',
+              teksti: 'Luandan siluetin tunnistaa betonitornista, jota kutsutaan '
+                + 'nimellä Foguetão, raketti. Se on Angolan ensimmäisen presidentin '
+                + 'Agostinho Neton mausoleumi: 120 metriä korkea torni, jonka '
+                + 'juurella olevaan pyramidiin on haudattu Neto ja vuodesta 2022 '
+                + 'myös hänen seuraajansa José Eduardo dos Santos. Neuvostoliittolaiset '
+                + 'suunnittelijat aloittivat työn 1980, ja peruskivi muurattiin '
+                + '1982, mutta rakentaminen pysähtyi sodan ja Neuvostoliiton '
+                + 'hajoamisen vuoksi. Muistomerkin viimeisteli lopulta '
+                + 'pohjoiskorealainen Mansudae Overseas Projects, ja se vihittiin '
+                + 'Neton 90-vuotispäivänä syyskuussa 2012. Alueella on museo, '
+                + 'näyttelytila ja kirjasto, jotka ovat avoinna yleisölle. Toinen '
+                + 'kaupungin erikoisuus on Palácio de Ferro, keltainen '
+                + 'rautarakenteinen talo, jonka suunnittelu yhdistetään Gustave '
+                + 'Eiffeliin tai hänen työpajaansa. Asiakirjoja siitä ei ole, ja '
+                + 'tarina rannikolle ajaneen laivan lastista on legenda eikä '
+                + 'todennettua historiaa. Talo kunnostettiin 2009. Vuodesta 2009 '
+                + 'Luandassa on järjestetty myös kansainvälinen jazzfestivaali, '
+                + 'perinteisesti heinä- ja elokuun vaihteessa. Kameran kanssa on oltava tarkkana. '
+                + 'Hallintorakennusten, sotilasalueiden, poliisien, lentoasemien, '
+                + 'rautatieasemien ja siltojen kuvaaminen voi johtaa vakaviin '
+                + 'vaikeuksiin, ja viranomaiset voivat takavarikoida kameran. '
+                + 'Myös virkamiesten julkinen arvostelu voi olla rangaistavaa. '
+                + 'Mukana on aina oltava henkilöllisyystodistus: turvallisinta on '
+                + 'kantaa passin kuvasivun virallisesti oikeaksi todistettua kopiota '
+                + 'ja jättää alkuperäinen hotellin kassakaappiin. Ilman papereita '
+                + 'poliisi voi määrätä sakon heti.',
+              kuva: {
+                tiedosto: 'Agostinhonetomausoleu.jpg',
+                lyhyt: 'Agostinho Neton mausoleumin torni kohoaa Luandan kattojen yli.',
+                selite: 'Rinteeltä kuvatussa näkymässä Neton muistomerkin kapea '
+                  + 'torni nousee matalien talojen ja työmaiden yläpuolelle. Kuva '
+                  + 'on otettu 2006, jolloin muistomerkki oli vielä kesken; se '
+                  + 'valmistui 2011.',
+                lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Miinat, Cabinda ja pimeä',
+              teksti: 'Angolaa pidetään yhä yhtenä maailman eniten miinoitetuista '
+                + 'maista. HALO Trust -järjestö on raivannut maata vuodesta 1994, ja '
+                + 'sen työ tuli maailmankuuluksi tammikuussa 1997, kun prinsessa '
+                + 'Diana kulki suojavarusteissa raivattavalla miinakentällä '
+                + 'Huambossa. Hänen poikansa Harry kävi angolalaisella '
+                + 'miinanraivausalueella syyskuussa 2019. Työ on edennyt paljon, '
+                + 'mutta miinoja ja räjähtämättömiä ammuksia on edelleen teillä, '
+                + 'pientareilla ja siltojen luona etenkin maaseudulla. Sääntö on '
+                + 'yksinkertainen: pysy vakiintuneilla teillä ja poluilla, älä '
+                + 'astu punavalkoisten merkkipaalujen tai punaisilla kivillä '
+                + 'rajattujen alueiden toiselle puolelle, ja muista, että sadekauden '
+                + 'tulvat voivat siirtää miinoja myös paikkoihin, joita on pidetty '
+                + 'turvallisina. Britannian ulkoministeriö neuvoo välttämään kaikkea '
+                + 'muuta kuin välttämätöntä matkustamista Cabindan maakuntaan '
+                + 'Cabindan kaupunkia lukuun ottamatta: erillisalueella '
+                + 'separatistiryhmät ovat hyökänneet myös ulkomaalaisia vastaan, ja '
+                + 'sieppausten riski on todellinen. Lunda Norten ja Lunda Sulin '
+                + 'timanttialueilla viranomaiset voivat rajoittaa ulkomaalaisten '
+                + 'liikkumista, ja kaivoksille johtavilla teillä on rosvoja. Luandassa rikollisuus on '
+                + 'korkea ja osa ryöstöistä väkivaltaisia. Pimeän jälkeen ei '
+                + 'kävellä, arvoesineitä ja puhelinta ei näytetä, rahaa nostetaan '
+                + 'sovitun kuljettajan kanssa, ja ryöstäjälle annetaan heti mitä hän '
+                + 'pyytää. Mielenosoitukset voivat kärjistyä nopeasti, joten niitä '
+                + 'ei jäädä katsomaan eikä kuvaamaan. Pääkaupungin ulkopuolelle '
+                + 'lähdetään mieluiten paikallisen oppaan kanssa tai vähintään '
+                + 'kahdella autolla, eikä maanteillä ajeta pimeällä. Malaria on '
+                + 'yleinen, joten estolääkityksestä kannattaa kysyä ennen matkaa. '
+                + 'Vesijohtovettä ei juoda, ja hyviä yksityisklinikoita on lähinnä '
+                + 'Luandassa. Tilanne voi muuttua, joten tuoreet matkustustiedotteet '
+                + 'kannattaa tarkistaa juuri ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Prince Harry, Duke of Sussex, in Huambo, Angola (2019).jpg',
+                lyhyt: 'Prinssi Harry kävelee Huambossa kadulla, jolla oli aiemmin miinakenttä.',
+                selite: 'Syyskuussa 2019 prinssi Harry kulki Huambossa äitinsä '
+                  + 'jalanjäljissä: kuvaajan mukaan kadun kohdalla oli aiemmin '
+                  + 'miinakenttä. Taustalla koululaiset odottavat vierasta tien '
+                  + 'varressa.',
+                lahde: 'Sean Sutton / Mines Advisory Group, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
