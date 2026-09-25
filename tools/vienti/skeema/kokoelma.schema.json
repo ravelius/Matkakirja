@@ -16,6 +16,11 @@
       "type": "array",
       "items": { "type": "array", "minItems": 2, "items": { "type": "array", "prefixItems": [{ "type": "number" }, { "type": "number" }], "minItems": 2, "maxItems": 2 } }
     },
+    "maat": {
+      "description": "Vain maakuntarajat (skeema 1.42): maat, joilla on maakunnat, { iso3, nimi } webin listan järjestyksessä.",
+      "type": "array",
+      "items": { "type": "object", "required": ["iso3", "nimi"], "properties": { "iso3": { "type": "string" }, "nimi": { "type": "string" } } }
+    },
     "sarakkeet": {
       "description": "Vain tyohuonetilastot (skeema 1.28): taulun sarakkeet { avain, otsikko, selite, taso, luku }.",
       "type": "array", "items": { "type": "object" }
