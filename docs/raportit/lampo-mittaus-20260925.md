@@ -18,7 +18,25 @@ Lokirivit "MATKAKIRJA lampo {…}" (pelikoodari/lampo-mittari de8fbec8) ja "MATK
   HDR, varjot, anturi ja lokitus.
 - Loki: proto-3d/lokit/lampo/b15-ipad13/konsoli.txt, vaiheet.txt.
 
-## Seuraavaksi
+## Build 15 Release (testi/b15-lampo dd6a0237), 25.9. klo 19.18–19.29
+
+- Release-käännös (lokit/natiiviseppa-skriptit/laite-release.sh, MATKAKIRJA_KEHITYS=0). Sama 10 minuutin jakso kuin
+  edellä. Loki: proto-3d/lokit/lampo/b15-release/.
+- thermalState pysyi **0 (nominal)** koko jakson ajan. Lampo-rivin fps oli 24 aloituksessa ja laski 16:een.
+- Kehysaikojen tilajakauma (KehysMittari, p50 / p95): liike aloituksessa 41,7 / 58,6 ms. Lepo kartalla 50,0 / 58 ms. Lepo lehden
+  aikana 58,4 / 66,7 ms (peitto-tilaa ei kirjautunut). Lepo radiolinssissä ja lopussa 58–66,6 / 66,7 ms. Arvot ovat tasan
+  120 Hz:n välin (8,33 ms) monikertoja 5–8 ja kasvavat jakson aikana.
+- **Johtopäätös:** 60–70 ms:n kehys ei johdu lämpökuristuksesta, koska thermal on 0. Syy on piirron hinta tällä laitteella
+  (M1, 2732 × 2048, täysi taajuus ilman lepopiirtoa). Build 16:n lepopiirto poistaa levon kuorman. Liikkeen kehysaika
+  M1-iPadilla on eri asia, ja siihen tarvitaan profilointi.
+
+## Peruttu (omistaja 25.9. klo 19.3x, Fablen kautta)
+
+iPad Pro 13 on Mac Studion päällä ja voi pysyä kuumana sen vuoksi, joten iPadin thermalState-mittauksiin ei luoteta.
+Lämpöerän laitemittaus ja build 16:n Release-toisto perutaan. Omistaja testaa lämmön omalla iPhonellaan build 16:sta.
+Kehysaikojen tilajakauma riittää sivutuotteena.
+
+## Aiempi suunnitelma (peruttu)
 
 1. Build 15 uudelleen **Release**-käännöksellä (laite.sh ilman MATKAKIRJA_KEHITYS=1), laite jäähtyneenä (thermal 0–1 alussa).
 2. Build 16 samoin lämpöerän jälkeen. Vertailuun thermalState-käyrä ja kehysaika (levossa, liikkeessä, lehti ja linssi).
