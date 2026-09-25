@@ -797,6 +797,8 @@ namespace Matkakirja.Natiivi
                     Matkakirja.Linssit.Radio.RadioAineisto.Pistefontti);
                 // Pelaajan kaupunki näkyy aina radiotilassa (web sääntö 1).
                 linssi.Sijainti = () => PeliOhjain.Instanssi?.PelaajanKaupunki;
+                // Esikuuntelu (Natiivisepän ehto 4): ei kuumana eikä virransäästössä (Lampo.Kuuma, sama kuin Esilataaja.Seis).
+                linssi.EsikuunteluSallittu = () => !Esilataaja.Seis;
                 linssi.TilaMuuttui += t => o.Kirjaa($"radio: {t.Vaihe}{(t.Viritys != Matkakirja.Linssit.Radio.ViritysVaihe.Ei ? "/" + t.Viritys : "")} " +
                     $"{t.AsemaId ?? "-"} {t.KaupunkiNimi ?? ""} {t.Nimi ?? ""}{(t.Viesti != null ? " (" + t.Viesti + ")" : "")}{(t.Sivu != null ? " → " + t.Sivu : "")}"); 
                 // Diagnoosi ennen kuin virta suljetaan (Laitetestaajan simulaattorilöydös 23.9.).
