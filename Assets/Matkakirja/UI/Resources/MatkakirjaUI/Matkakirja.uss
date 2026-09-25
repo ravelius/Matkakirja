@@ -1877,7 +1877,10 @@
     display: none;
 }
 
+/* Löydös 122 (omistaja, build 16): lennon tekstitys pois (kaistale oli liian iso); luenta kuuluu yhä, ja kirjoitus
+ * etenee näkymättömänä luennan tahdissa (lennon loppu odottaa sitä kuten ennen). */
 .mk-aloitus__intro--lento > .mk-aloitus__arkki {
+    visibility: hidden;
     flex-grow: 0;
     max-height: 34%;
     padding: 10px 16px 18px 16px;
@@ -1957,19 +1960,23 @@
 /* Löydös 83: aloituslennon Ohita-nappi alareunassa (turva-alueen sisällä, lennon kaistaleen yläpuolella; bottom
  * asetetaan koodista). Sama kehystetty paperinappi kuin VALITSE ALOITUSKAUPUNKI, jotta se erottuu kartan päältä
  * (web .flight-eteen on 0,3-läpinäkyvä nuoli; omistaja pyysi näkyvän napin). */
+/* Löydös 123 (omistaja, build 16): pienempi ja läpinäkyvä kuten iPhonen Liiku (.mk-liiku--puhelin .mk-liiku__nappi):
+ * vain teksti ja kevyt reuna, ei ikonia. */
 .mk-aloitus__ohita {
     position: absolute;
     right: 16px;
     bottom: 16px;
     flex-direction: row;
     align-items: center;
-    min-height: 44px;
-    padding: 6px 12px 6px 18px;
-    border-width: 1.5px;
-    border-color: rgba(70, 51, 31, 0.75);
-    border-radius: 2px;
-    background-color: rgba(247, 237, 216, 0.92);
-    color: var(--map-ink);
+    justify-content: center;
+    min-width: 44px;
+    height: 36px;
+    padding: 0 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(128, 111, 88);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.4s;
@@ -1980,11 +1987,14 @@
 }
 
 .mk-aloitus__ohita .mk-nappi__teksti {
-    font-size: 15px;
-    color: var(--map-ink);
+    font-size: 11.5px;
+    letter-spacing: 10px; /* web 1.15px, kuten Liiku */
+    color: rgb(128, 111, 88);
+    text-shadow: 0 0 3px rgba(244, 232, 205, 0.9);
 }
 
 .mk-aloitus__ohita .mk-ikoni {
+    display: none;
     width: 20px;
     height: 20px;
     margin-left: 4px;
@@ -1994,8 +2004,7 @@
 }
 
 .mk-aloitus__ohita:active {
-    background-color: rgba(247, 237, 216, 1);
-    border-color: var(--map-ink);
+    background-color: rgba(245, 240, 226, 0.35);
 }
 
 .mk-aloitus__portti {

@@ -201,6 +201,8 @@ namespace Matkakirja.Natiivi
             Viiva(porttiJuliste);
             porttiLause = Rakenne.Teksti(PorttiLause, "mk-aloitus__porttilause", porttiYla);
             Kirjasimet.Aseta(porttiLause, Kirjasin.LukuKursiivi);
+            // Löydös 121 (omistaja, build 16): aloitusruudun alaotsikko pois (lause jää vakioksi webin meta-kuvausta varten).
+            porttiLause.style.display = DisplayStyle.None;
             var keskus = porttiKeskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
             aaniNappi = Rakenne.Nappi(null, "mk-aloitus__aanet", AanetPaalle, keskus);
             aaniTeksti = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aaniNappi);
@@ -219,7 +221,7 @@ namespace Matkakirja.Natiivi
 
             // 4 OHITA (löydös 83): lennon ajan alareunassa, turva-alueen sisällä, kaistaleen yläpuolella.
             ohitaNappi = Rakenne.Nappi("Ohita", "mk-aloitus__ohita", Ohita, kerros.Turva(UiKerros.Traileri));
-            Kirjasimet.Aseta(ohitaNappi.Q<Label>(), Kirjasin.Kone);
+            Kirjasimet.Aseta(ohitaNappi.Q<Label>(), Kirjasin.KoneLihava); // löydös 123: kuten Liiku (600)
             ohitaNappi.Add(new SvgIkoni(Ikonit.OhitaLento));
             ohitaNappi.style.display = DisplayStyle.None;
             arkki.RegisterCallback<GeometryChangedEvent>(_ => AsetteleOhita());
@@ -262,7 +264,9 @@ namespace Matkakirja.Natiivi
             if (!ohitaNakyy) return;
             var turva = ohitaNappi.parent;
             float ala = 16f;
-            if (lennolla && turva != null && arkki.resolvedStyle.display == DisplayStyle.Flex && !float.IsNaN(arkki.worldBound.yMin))
+            // Löydös 122: lennon kaistale on piilossa (visibility), joten Ohita asettuu alareunaan.
+            if (lennolla && turva != null && arkki.resolvedStyle.display == DisplayStyle.Flex && arkki.resolvedStyle.visibility == Visibility.Visible
+                && !float.IsNaN(arkki.worldBound.yMin))
                 ala = Mathf.Max(ala, turva.worldBound.yMax - arkki.worldBound.yMin + 12f);
             ohitaNappi.style.bottom = ala;
         }
