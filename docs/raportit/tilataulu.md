@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 14:03 EEST
+**Päivitetty:** 2026-09-25 14:15 EEST
 
 ## 1) Sessiot
 
@@ -12,10 +12,10 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 |---|---|---|---|---|
 | Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 43% | running | — |
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 20% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 18% | idle | — |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 40% | running | — |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 15% | idle | — |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 25% | idle | PR #3154 |
+| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 19% | idle | — |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 41% | running | — |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 17% | idle | — |
+| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 27% | idle | PR #3154 |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 15% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 16% | idle | PR #3155 |
 | Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 34% | running | — |
@@ -56,8 +56,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy:** 188 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 28 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 1 (iPhone 17). **Chrome for Testing GPU-prosesseja:** hetkellisesti 5, uudelleenmitattuna 3 (lyhytikäisiä playwright-ajoja, ei hälytystä). coreaudiod 3 %.
-- **5 h -kiintiö:** 24 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 7 %. **Viikko (Fable):** 5 %.
-- **Juna:** junasääntö RATKENNUT — Natiiviseppä lisäsi niputukselle 20 min ylärajan; juna/b13 KÄÄNNETTY de5e2a28 klo 13:53. Valvonnan raja nyt 25 min (Fable). Ilmoitettu Fablelle 14:00.
-- **Postilaatikko:** kärki 7edc71dfd (Codex ei mergeä mainiin), ei uutta. **Avoimia PR:iä:** 11.
+- **Levy:** 184 Gt vapaana (raja 35 Gt; laski 4 Gt 10 min aikana, seurataan). **wt/-worktreet:** 28 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 2 (linssiseppa-iPhone, linssiseppa-iPad11). coreaudiod 12 %.
+- **Chrome for Testing GPU-prosesseja:** 6 (raja 4), lyhytikäisiä playwright-ajoja → ilmoitettu Julkaisijalle 14:12 (ei Fablelle).
+- **5 h -kiintiö:** 27 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 7 %. **Viikko (Fable):** 5 %.
+- **Juna:** viimeisin KÄÄNNETTY 13:53 (de5e2a28); juna/b13 4887c521 uusi 14:03, alle 25 min, ei hälytystä. Raja 25 min, niputuksen yläraja 20 min.
+- **Postilaatikko:** ei uutta (kärki 7edc71dfd). **Avoimia PR:iä:** 12.
