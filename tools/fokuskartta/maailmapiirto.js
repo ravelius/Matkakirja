@@ -632,6 +632,38 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * laatasta; laikku jää ja siirtyy laudan yksiköihin.
      */
     paperiRaeRuudulla = false,
+    /*
+     * === LÖYDÖS 46 -KOE (Karttaseppä 24.9.2026, kuvavedokset) ========
+     *
+     * Kolme kokeilukytkintä, kaikki oletuksena pois — ilman niitä piirto
+     * on tavulleen entinen.
+     *
+     * `maskiAA` (N ≥ 2): MAAN JA MEREN RAJA PEITTOSUHTEENA. Vanha sääntö
+     * kysyy jokaiselta pikseliltä YHDEN pisteen (keskipiste) meren
+     * monikulmiosta, joten raja on 1-bittinen porras: z6:lla yksi porras
+     * on 0,93 km ja pallon uudelleennäytteistys (lähin pikseli) tekee
+     * siitä epäsäännöllisen. Kokeessa pikselin meriosuus lasketaan N
+     * alirivillä, ja rivin sisällä leikkauskohdista TARKASTI (Miller-
+     * pikseli on lon-väli), ja maan ja meren värit sekoitetaan osuudella.
+     *
+     * `rantaKerroin`: rantaviivan (usva + muste) leveyskerroin tälle
+     * tasolle; generaattori antaa sen tasotaulukosta (`--rantaleveys`).
+     *
+     * `reliefi`: monisuuntainen rinnevarjo + rinnevarjostus + lämmin
+     * hypsometria (ks. reliefiVari alempana). null = entinen yhden valon
+     * varjo ja ASTEIKKO.
+     */
+    maskiAA = 0,
+    rantaKerroin = 1,
+    reliefi = null,
+    /*
+     * `meriKohina`: syvyyden kohinan kerroin (löydös 46, omistaja 24.9.
+     * ilta: *"syvyys vain hienovaraisena sävynä … pehmeä liuku ilman
+     * viivoja"*). 1 = entinen ±150 m:n aaltoilu, joka piirtää merelle
+     * laikkuja; 0,2 jättää pelkän syvyysliu'un. Isobaatit ja
+     * vesiviivoitus ovat omia lippujaan.
+     */
+    meriKohina = 1,
   } = asetukset;
   const SYVYYSKOHINA_YKSIKOT = 30 / 7.2;
   /*
@@ -968,14 +1000,18 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * järjestyksessä). Lasketaan kerran koko kuvalle, koska pikselisilmukka
    * käy rivit läpi järjestyksessä ja sama rivi tarvitaan 512-2112 kertaa.
    */
-  const rivienLeikkaukset = () => {
+  /*
+   * `N` alirivia pikseliriviä kohti (maskiAA-koe): rivi r on kuvan
+   * y = r / N + 0,5 / N. N = 1 on tavulleen entinen (y + 0,5).
+   */
+  const rivienLeikkaukset = (N = 1) => {
     if (!meriIndeksi) return null;
-    const rivit = new Array(H).fill(null);
+    const rivit = new Array(H * N).fill(null);
     const y0 = kehys ? Math.max(0, yYla - GY) : 0;
     const y1 = kehys ? Math.min(H, yAla - GY) : H;
     if (y1 <= y0) return rivit;
-    const latYla = latPikselista(y0 + 0.5);
-    const latAla = latPikselista(y1 - 0.5);
+    const latYla = latPikselista(y0 + 0.5 / N);
+    const latAla = latPikselista(y1 - 0.5 / N);
     const ehdokkaat = [];
     const { xa, ya, xb, yb, korit, nahty } = meriIndeksi;
     meriIndeksi.sukupolvi += 1;
@@ -994,7 +1030,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     }
     if (!ehdokkaat.length) return rivit;
     // Reuna herää sillä rivillä, jolla se alkaa; kuolee kun ohitetaan.
-    const rivinLat = (y) => latPikselista(y + 0.5);
+    const rivinLat = (y) => latPikselista((y + 0.5) / N);
+    const R0 = y0 * N; const R1 = y1 * N;
     const herat = new Map();
     const kuolee = new Int32Array(ehdokkaat.length);
     const reuna = new Int32Array(ehdokkaat.length);
@@ -1003,12 +1040,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       const ylin = Math.max(ya[i], yb[i]);
       const alin = Math.min(ya[i], yb[i]);
       // Rivit ovat pohjoisesta etelään, joten ylin lat on pienin y.
-      let r0 = y0; let r1 = y1 - 1;
+      let r0 = R0; let r1 = R1 - 1;
       // Binäärihaku: ensimmäinen rivi, jonka lat < ylin.
-      let lo = y0; let hi = y1;
+      let lo = R0; let hi = R1;
       while (lo < hi) { const mid = (lo + hi) >> 1; if (rivinLat(mid) < ylin) hi = mid; else lo = mid + 1; }
       r0 = lo;
-      lo = y0; hi = y1;
+      lo = R0; hi = R1;
       while (lo < hi) { const mid = (lo + hi) >> 1; if (rivinLat(mid) <= alin) hi = mid; else lo = mid + 1; }
       r1 = lo - 1;
       if (r1 < r0) continue;
@@ -1019,7 +1056,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       m2 += 1;
     }
     let aktiiviset = [];
-    for (let y = y0; y < y1; y += 1) {
+    for (let y = R0; y < R1; y += 1) {
       const uudet = herat.get(y);
       if (uudet) aktiiviset = aktiiviset.concat(uudet);
       if (!aktiiviset.length) { rivit[y] = new Float64Array(0); continue; }
@@ -1048,6 +1085,108 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     let lo = 0; let hi = leik.length;
     while (lo < hi) { const mid = (lo + hi) >> 1; if (leik[mid] < n) lo = mid + 1; else hi = mid; }
     return (lo & 1) === 1;
+  };
+
+  /*
+   * MASKI-AA (löydös 46 -koe, ks. `maskiAA`): alirivien leikkaukset ja
+   * pikselin meriosuus. Rivin sisällä osuus on tarkka: Miller-pikseli on
+   * pituusasteväli [a, b], ja leikkauskohdat jakavat sen meri- ja
+   * maapätkiin samalla parillisuussäännöllä kuin merenAlallaRivilla.
+   */
+  const AA = maskiAA >= 2 ? Math.round(maskiAA) : 0;
+  const AARIVIT = AA && meriIndeksi ? rivienLeikkaukset(AA) : null;
+  const merenOsuusValilla = (leik, a, b) => {
+    let lo = 0; let hi = leik.length;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (leik[mid] < a) lo = mid + 1; else hi = mid; }
+    let meri = (lo & 1) === 1;
+    let kohta = a; let s = 0;
+    while (lo < leik.length && leik[lo] < b) {
+      if (meri) s += leik[lo] - kohta;
+      kohta = leik[lo]; meri = !meri; lo += 1;
+    }
+    if (meri) s += b - kohta;
+    return s / (b - a);
+  };
+  /** Pikselin (x, y) meriosuus 0…1 alirivien keskiarvona; null = ei AA:ta. */
+  const meriOsuus = (x, y) => {
+    if (!AARIVIT) return null;
+    const a = NORMLON(lonPikselista(x));
+    const b = NORMLON(lonPikselista(x + 1));
+    if (!(b > a)) return null; // sauman yli: vanha pistetesti
+    let s = 0;
+    for (let k = 0; k < AA; k += 1) {
+      const leik = AARIVIT[y * AA + k];
+      if (!leik) return null;
+      s += merenOsuusValilla(leik, a, b);
+    }
+    return s / AA;
+  };
+
+  /*
+   * RELIEFI (löydös 46 -koe C, ks. `reliefi`): MONISUUNTAINEN
+   * RINNEVARJO + RINNEVARJOSTUS + LÄMMIN HYPSOMETRIA.
+   *
+   * Vanha maasto on yksi valo luoteesta (maastovarjo.js VALO) 3′-
+   * ruudukosta, jonka rinteet ovat viiden kilometrin keskiarvoja, ja
+   * varjo vain tummentaa (0,46 · (0,5 − valo)): valoisa rinne ei vaalene,
+   * joten vuoret lukevat haaleina laikkuina. Lisäksi hypsometria saa
+   * korkeuteen ±250 m kohinaa, joka piirtää omat laikkunsa.
+   *
+   * Kokeessa gradientti lasketaan kerran, ja valo on usean suunnan
+   * painotettu summa (Mark 1992 / USGS "multidirectional oblique
+   * weighted"): luode kantaa, länsi ja pohjoinen täyttävät, joten
+   * valon suuntaiset harjanteet eivät katoa. Valo VAALENTAA ja varjo
+   * TUMMENTAA tasamaan valoisuuden ympärillä. Rinnevarjostus (kaltevuus
+   * tummentaa suunnasta riippumatta) antaa vuoristolle massan myös
+   * silloin, kun valo osuu suoraan rinteeseen.
+   */
+  const RELIEFI = reliefi ? {
+    suunnat: reliefi.suunnat ?? [[270, 0.22], [315, 0.5], [0, 0.28]],
+    korkeuskulma: reliefi.korkeuskulma ?? 45,
+    liioittelu: reliefi.liioittelu ?? 1.7,
+    valoVoima: reliefi.valoVoima ?? 0.55,
+    varjoVoima: reliefi.varjoVoima ?? 0.85,
+    rinne: reliefi.rinne ?? 0.35,
+    kohina: reliefi.kohina ?? 0.25,
+    asteikko: reliefi.asteikko ?? [
+      { m: 0, v: [238, 229, 194] },
+      { m: 150, v: [234, 220, 178] },
+      { m: 400, v: [226, 205, 158] },
+      { m: 800, v: [214, 184, 134] },
+      { m: 1300, v: [198, 160, 110] },
+      { m: 1900, v: [178, 134, 90] },
+      { m: 2600, v: [154, 110, 74] },
+      { m: 3500, v: [132, 94, 66] },
+      { m: 5000, v: [122, 92, 72] },
+      { m: 6000, v: [200, 195, 188] },
+    ],
+  } : null;
+  const reliefiValot = RELIEFI ? (() => {
+    const alt = (RELIEFI.korkeuskulma * Math.PI) / 180;
+    let summa = 0;
+    for (const [, w] of RELIEFI.suunnat) summa += w;
+    return RELIEFI.suunnat.map(([az, w]) => {
+      const a = (az * Math.PI) / 180;
+      return [Math.cos(alt) * Math.sin(a), Math.cos(alt) * Math.cos(a), Math.sin(alt), w / summa];
+    });
+  })() : null;
+  /** { valo: −1…1 (0 = tasamaa), rinne: 0…1 } pisteessä; askel = ruudukon väli. */
+  const reliefiVarjo = (lon, lat) => {
+    const dd = DLON;
+    const kx = 2 * dd * 111320 * Math.cos((lat * Math.PI) / 180);
+    const ky = 2 * dd * 111320;
+    const dzdx = (korkeus(lon + dd, lat) - korkeus(lon - dd, lat)) / kx;
+    const dzdy = (korkeus(lon, lat + dd) - korkeus(lon, lat - dd)) / ky;
+    if (!Number.isFinite(dzdx) || !Number.isFinite(dzdy)) return { valo: 0, rinne: 0 };
+    const z = RELIEFI.liioittelu;
+    const nx = -dzdx * z; const ny = -dzdy * z;
+    const len = Math.hypot(nx, ny, 1);
+    let v = 0; let tasa = 0;
+    for (const [lx, ly, lz, w] of reliefiValot) {
+      v += w * Math.max(0, (nx * lx + ny * ly + lz) / len);
+      tasa += w * lz;
+    }
+    return { valo: (v - tasa) / Math.max(1e-6, 1 - tasa), rinne: 1 - 1 / len };
   };
 
   /*
@@ -1081,6 +1220,47 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     const d = img.data;
     // Syvyyskäyrien vyöhykepuskuri: -1 = ei merta, muuten vyöhykkeen indeksi.
     const vyohykkeet = kayrat ? new Int8Array(W * H).fill(-1) : null;
+    /*
+     * Meren ja maan väri pikselille — samat kaavat kuin alla olevassa
+     * silmukassa (siellä ne ovat auki entisellään). Näitä kutsuu vain
+     * löydös 46 -koe: maskiAA:n sekapikseli ja reliefi.
+     */
+    const merenVari = (r0, g0, b0, m, gx, gy, vIdx) => {
+      const n = (syvyysKohinaLaudalla
+        ? fbm(KOHINA, (origo.x + gx / px) / SYVYYSKOHINA_YKSIKOT, (origo.y + gy / px) / SYVYYSKOHINA_YKSIKOT, 4)
+        : fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4)) - 0.5;
+      const mk = m + n * meriKohina * Math.min(150, Math.max(12, -m * 1.25));
+      if (vIdx >= 0) vyohykkeet[vIdx] = kayraVyohyke(mk);
+      const s = lerpSyvyysAsteikolla(syvyysAsteikko, porrasta(mk));
+      const a = MEREN_PEITTO;
+      return [r0 * (1 - a) + s[0] * a, g0 * (1 - a) + s[1] * a, b0 * (1 - a) + s[2] * a];
+    };
+    const RELIEFI_VARJO = [92, 70, 56];
+    const RELIEFI_VALO = [252, 246, 228];
+    const maanVari = (r0, g0, b0, lon, lat, m, gx, gy) => {
+      const n1 = fbm(KOHINA, gx / (26 * P), gy / (26 * P), 4) - 0.5;
+      const n2 = fbm(KOHINA2, gx / (7 * P), gy / (7 * P), 3) - 0.5;
+      const pigmentti = (KOHINA2(gx / (2.1 * P), gy / (2.1 * P)) - 0.5) * 13;
+      const lai = (fbm(KOHINA, gx / (95 * P), gy / (95 * P), 3) - 0.5) * 12;
+      if (RELIEFI) {
+        const c = lerpVari(RELIEFI.asteikko, Math.max(0, m + (n1 * 190 + n2 * 60) * RELIEFI.kohina));
+        const { valo, rinne } = reliefiVarjo(lon, lat);
+        const v = Math.max(-1.6, Math.min(1, valo));
+        const sv = Math.max(0, Math.min(0.72,
+          -Math.min(0, v) * RELIEFI.varjoVoima * 0.42 + rinne * RELIEFI.rinne * 1.6));
+        const vv = Math.max(0, Math.min(0.5, Math.max(0, v) * RELIEFI.valoVoima * 0.45));
+        const ulos = [0, 0, 0];
+        for (let k = 0; k < 3; k += 1) {
+          const tumma = c[k] * (1 - sv) + RELIEFI_VARJO[k] * sv;
+          ulos[k] = tumma * (1 - vv) + RELIEFI_VALO[k] * vv + pigmentti * 0.8 + lai * 0.6;
+        }
+        return ulos;
+      }
+      const c = lerpVari(maanAsteikko, Math.max(0, m + n1 * 190 + n2 * 60));
+      const varjo = varjonVoimakkuus(varjostus(lon, lat));
+      const t = (k) => k * (1 - varjo) + pigmentti + lai + (varjo > 0 ? 0 : varjo * 30);
+      return [t(c[0]), t(c[1] * (1 - varjo * 0.12)), t(c[2] * (1 - varjo * 0.3))];
+    };
     // Paperin pohjaväri kolmena lukuna, jottei sitä pilkota silmukassa.
     const pohja = [
       parseInt(PAPERI.slice(1, 3), 16),
@@ -1146,16 +1326,43 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
 
         const lon = lonPikselista(x + 0.5);
         let m = korkeus(lon, lat);
-        const vesi = leik
-          ? merenAlallaRivilla(leik, lon)
-          : (Number.isFinite(m) ? (m < 0 && ruudukonMerenAlalla(lon, lat)) : true);
-        if (vesi) {
+        /*
+         * MASKI-AA: sekapikselissä lasketaan MOLEMMAT värit ja
+         * sekoitetaan meriosuudella (ks. `maskiAA`). Puhdas pikseli
+         * kulkee entistä polkua.
+         */
+        const osuus = AARIVIT ? meriOsuus(x, y) : null;
+        if (osuus !== null && osuus > 0.002 && osuus < 0.998) {
+          const pr = r; const pg = g; const pb = b;
+          const mMaa = Number.isFinite(m) ? m : 60;
+          const mMeri = Number.isFinite(m) ? m : -900;
+          const maa = maanVari(pr, pg, pb, lon, lat, mMaa, gx, gy);
+          const meri = merenVari(pr, pg, pb, mMeri, gx, gy, osuus >= 0.5 && vyohykkeet ? y * W + x : -1);
+          r = maa[0] * (1 - osuus) + meri[0] * osuus;
+          g = maa[1] * (1 - osuus) + meri[1] * osuus;
+          b = maa[2] * (1 - osuus) + meri[2] * osuus;
+          d[i] = Math.max(0, Math.min(255, r));
+          d[i + 1] = Math.max(0, Math.min(255, g));
+          d[i + 2] = Math.max(0, Math.min(255, b));
+          d[i + 3] = 255;
+          continue;
+        }
+        const vesi = osuus !== null
+          ? osuus >= 0.5
+          : leik
+            ? merenAlallaRivilla(leik, lon)
+            : (Number.isFinite(m) ? (m < 0 && ruudukonMerenAlalla(lon, lat)) : true);
+        if (RELIEFI && !vesi) {
+          if (!Number.isFinite(m)) m = 60;
+          const maa = maanVari(r, g, b, lon, lat, m, gx, gy);
+          r = maa[0]; g = maa[1]; b = maa[2];
+        } else if (vesi) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;
           const n = (syvyysKohinaLaudalla
             ? fbm(KOHINA, (origo.x + gx / px) / SYVYYSKOHINA_YKSIKOT, (origo.y + gy / px) / SYVYYSKOHINA_YKSIKOT, 4)
             : fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4)) - 0.5;
-          const mk = m + n * Math.min(150, Math.max(12, -m * 1.25));
+          const mk = m + n * meriKohina * Math.min(150, Math.max(12, -m * 1.25));
           if (vyohykkeet) vyohykkeet[y * W + x] = kayraVyohyke(mk);
           const s = lerpSyvyysAsteikolla(syvyysAsteikko, porrasta(mk));
           const a = MEREN_PEITTO;
@@ -1395,8 +1602,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * kutsuvat ilman kenttää ja saavat rantaviivan kuten ennenkin; vain
    * `--ilman-rantaviivaa`-pyramidiajo asettaa sen falseksi.
    */
+  // rantaKerroin: löydös 46 -koe (tasokohtainen leveys, `--rantaleveys`; oletus 1).
   if (tyyli.rantaviiva !== false) {
-    piirraRannikkoKankaalle(ctx, viivaPolku, aineisto.rannikot, P);
+    piirraRannikkoKankaalle(ctx, viivaPolku, aineisto.rannikot, P * rantaKerroin);
   }
 
   /* ================================================== 5. JÄRVET
@@ -4188,7 +4396,7 @@ export function piirraViivataso(canvas, asetukset) {
 export function piirraRantataso(canvas, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, koko = null, siirto = null,
-    rannikot = null, paperiS = null,
+    rannikot = null, paperiS = null, rantaKerroin = 1,
   } = asetukset;
   const px = leveys / bbox.w;
   const W = Math.round(leveys);
@@ -4246,7 +4454,7 @@ export function piirraRantataso(canvas, asetukset) {
   ctx.rect(arkkiSiirto.x, yYla, W, yAla - yYla);
   ctx.clip();
 
-  piirraRannikkoKankaalle(ctx, viivaPolku, rannikot, P);
+  piirraRannikkoKankaalle(ctx, viivaPolku, rannikot, P * rantaKerroin);
 
   ctx.restore();
   ctx.restore();

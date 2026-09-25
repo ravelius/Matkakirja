@@ -42,9 +42,13 @@ on:
         type: string
         default: 'fi.matkakirja.peli'
       versio:
-        description: 'Näkyvä versionumero (MARKETING_VERSION) — oltava suurempi kuin webkuoren nykyinen (ios/project.yml, tällä hetkellä 0.3.0)'
+        description: 'Näkyvä versionumero (MARKETING_VERSION). Tyhjä = 1.0.<build-ordinaali> (omistaja 24.9.2026: TestFlightissa näkyy build-numero)'
         type: string
-        default: '1.0.0'
+        default: ''
+      ordinaali:
+        description: 'Build-ordinaali (build 11 → 1.0.11). Tyhjä = laskuri proto-3d/lokit/testflight-ordinaali.txt + 1'
+        type: string
+        default: ''
       build_numero:
         description: 'CFBundleVersion — oletus aikaleima (VVVVKKPPTTMM), koska versiolla 1.0.0 on jo aikaleimanumeroita.'
         type: string
@@ -72,13 +76,20 @@ jobs:
     timeout-minutes: 90
 
     env:
-      PROJEKTI: /Users/Shared/Claude/proto-3d/Matkakirja-proto
+      # Käännöspalvelun kopio (Natiiviseppä 24.9.2026): pääkopio Matkakirja-proto on Natiivisepän
+      # työkopio; tämä worktree on levossa puhdas irrotettu master. Vuorot jaetaan
+      # proto-kaanna.sh:n lukolla (ks. "Käännöspalvelun lukko").
+      PROJEKTI: /Users/Shared/Claude/proto-3d/Matkakirja-proto-kaannos
+      KAANNOSLUKKO: /tmp/matkakirja-kaannospalvelu.lukko
       YOLOKI: /Users/Shared/Claude/proto-3d/lokit/yo-testflight.log
       YOMERKKI: /Users/Shared/Claude/proto-3d/lokit/yo-testflight-viimeisin.txt
       VIE_UNITYSTA: ${{ github.event_name == 'schedule' || inputs.vie_unitysta }}
       VIENTI_KANSIO: ${{ (github.event_name == 'schedule' || inputs.vie_unitysta) && 'yo' || inputs.vienti_kansio }}
       BUNDLE_ID: ${{ inputs.bundle_id || 'fi.matkakirja.peli' }}
-      VERSIO: ${{ inputs.versio || '1.0.0' }}
+      VERSIO_SYOTE: ${{ inputs.versio }}
+      ORDINAALI_SYOTE: ${{ inputs.ordinaali }}
+      # Viimeisimmän TestFlightiin ladatun buildin ordinaali (ajurin levyllä kuten YOMERKKI).
+      LASKURI: /Users/Shared/Claude/proto-3d/lokit/testflight-ordinaali.txt
       SISAINEN_RYHMA: ${{ github.event_name == 'schedule' || inputs.sisainen_ryhma }}
 
     steps:
@@ -90,6 +101,33 @@ jobs:
             exit 1
           fi
 
+      # Sama lukko kuin proto-3d/tyokalut/proto-kaanna.sh:lla: simulaattorijono odottaa viennin.
+      # Lukon pid on taustalla odottava sleep (elää vaiheiden yli; ajuri tappaa sen työn lopussa),
+      # joten kaatuneen ajon lukko tunnistetaan vanhentuneeksi kuten palvelussa.
+      - name: Käännöspalvelun lukko ja puhdas master
+        working-directory: ${{ env.PROJEKTI }}
+        run: |
+          set -euo pipefail
+          oma=0
+          for i in $(seq 1 270); do
+            if mkdir "$KAANNOSLUKKO" 2>/dev/null; then oma=1; break; fi
+            p=$(cat "$KAANNOSLUKKO/pid" 2>/dev/null || true)
+            if [ -n "$p" ] && ! kill -0 "$p" 2>/dev/null; then rm -rf "$KAANNOSLUKKO"; continue; fi
+            [ "$i" = 1 ] && echo "Jonossa: $(cat "$KAANNOSLUKKO/kuka" 2>/dev/null || echo tuntematon)"
+            sleep 10
+          done
+          if [ "$oma" != 1 ]; then
+            echo "::error title=Käännöspalvelun lukko varattu::$(cat "$KAANNOSLUKKO/kuka" 2>/dev/null || true) — ei vapautunut 45 minuutissa."
+            exit 1
+          fi
+          nohup sleep 7200 >/dev/null 2>&1 &
+          echo $! > "$KAANNOSLUKKO/pid"
+          echo "testflight ajo $GITHUB_RUN_ID $(date +%H:%M)" > "$KAANNOSLUKKO/kuka"
+          echo "LUKKO_OMA=1" >> "$GITHUB_ENV"
+          git checkout -q --detach master
+          git reset -q --hard
+          echo "Käännöskopio: $(git rev-parse --short HEAD) (master)"
+
       # Aikaleima buildinumeroksi: App Store Connect hylkää saman
       # versio+build-parin kahdesti. Unity-viennissä sama numero menee
       # MATKAKIRJA_BUILDiin, jolloin sovelluksen rakennus.txt = ASC:n numero.
@@ -99,6 +137,19 @@ jobs:
           build="${{ inputs.build_numero }}"
           [ -n "$build" ] || build=$(date -u +%Y%m%d%H%M)
           echo "BUILD_NUMERO=$build" >> "$GITHUB_ENV"
+          # Näkyvä versio = 1.0.<ordinaali> (build 11 → 1.0.11); CFBundleVersion pysyy aikaleimana,
+          # koska se ei saa pienentyä. Laskuri kasvaa vasta onnistuneen latauksen jälkeen.
+          ord=""
+          if [ -n "${VERSIO_SYOTE:-}" ]; then
+            versio="$VERSIO_SYOTE"
+          else
+            ord="${ORDINAALI_SYOTE:-}"
+            [ -n "$ord" ] || ord=$(( $(cat "$LASKURI" 2>/dev/null || echo 10) + 1 ))
+            versio="1.0.$ord"
+          fi
+          echo "VERSIO=$versio" >> "$GITHUB_ENV"
+          echo "ORDINAALI=$ord" >> "$GITHUB_ENV"
+          echo "Versio $versio (ordinaali ${ord:-–})"
           echo "Buildinumero $build, kansio Build/$VIENTI_KANSIO, Unity-vienti: $VIE_UNITYSTA"
 
       - name: Yöajon ohitusehdot
@@ -112,10 +163,11 @@ jobs:
           # käyttävät samaa levyä, joten raja on 30 Gt (Fable 24.9.2026).
           vapaa=$(df -g /System/Volumes/Data | tail -1 | awk '{print $4}')
           if [ "$vapaa" -lt 30 ]; then syy="levyllä vain $vapaa Gt vapaana (raja 30 Gt)"; fi
-          if pgrep -f "Unity.app/Contents/MacOS/Unity" >/dev/null; then [ -n "$syy" ] || syy="Unity on käynnissä"; fi
+          # Vain ajurin oma käyttäjä: toisen macOS-käyttäjän (omistajan) Unity ei koske tätä projektia;
+          # saman projektin varaus näkyy Library-lukosta alla (24.9.2026, build 10 ohittui turhaan).
+          # Oma käännöskopio: Natiivisepän Unity pääkopiossa ei estä; vain tämän kopion Library-lukko.
           if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
-          haara=$(git rev-parse --abbrev-ref HEAD)
-          if [ -z "$syy" ] && [ "$haara" != "master" ]; then syy="työkopio on haarassa $haara, ei masterissa"; fi
+          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse master)" ]; then syy="käännöskopio ei ole masterissa"; fi
           muutokset=$(git status --porcelain | grep -v " Assets/Matkakirja/Materiaalit/" || true)
           if [ -z "$syy" ] && [ -n "$muutokset" ]; then syy="työkopiossa on muutoksia: $(echo "$muutokset" | head -3 | tr '\n' ' ')"; fi
           master=$(git rev-parse --short master)
@@ -377,6 +429,8 @@ jobs:
               paritetut = [c['id'] for c in asc if sha1(c['attributes']['certificateContent']) in kelvot]
               print(f"{asc_tyyppi}: ASC:ssa {len(asc)} ({', '.join(c['id'] for c in asc) or '-'}), "
                     f"avainnipussa kaytettavissa {len(paritetut)} ({', '.join(paritetut) or '-'}).")
+              for c in asc:
+                  VARMENNE_SHA1[c['id']] = sha1(c['attributes']['certificateContent'])
               if paritetut:
                   return paritetut[0]
 
@@ -405,8 +459,12 @@ jobs:
                   print(f"::error title=Identiteetti ei kelpaa::{uusi['id']} tuotiin, mutta find-identity ei hyvaksy sita "
                         f"(luottamusketju tai avain puuttuu). Ei luoda enempaa.")
                   sys.exit(1)
+              VARMENNE_SHA1[uusi['id']] = sha1(uusi['attributes']['certificateContent'])
               return uusi['id']
 
+          # Varmenne-ID → SHA-1: arkisto ja vienti allekirjoitetaan nimetyllä
+          # identiteetillä (build 11, 24.9.2026), ks. "Arkistoi ja allekirjoita".
+          VARMENNE_SHA1 = {}
           varmista_identiteetti('DEVELOPMENT', 'Matkakirja Development')
           cert_id = varmista_identiteetti('IOS_DISTRIBUTION', 'Matkakirja Distribution')
 
@@ -472,16 +530,20 @@ jobs:
 
           with open(os.environ['GITHUB_ENV'], 'a') as f:
               f.write(f"DIST_IDENTITEETTI=Apple Distribution\n")
+              f.write(f"DIST_SHA1={VARMENNE_SHA1[cert_id]}\n")
               f.write(f"PROFIILI_NIMI={profiili['attributes']['name']}\n")
-          print(f"Profiili asennettu: {profiili['attributes']['name']} (UUID {uuid})")
+          print(f"Profiili asennettu: {profiili['attributes']['name']} (UUID {uuid}), "
+                f"Distribution-varmenne {cert_id} SHA-1 {VARMENNE_SHA1[cert_id]}")
           PY
 
-      # Arkisto allekirjoitetaan Development-identiteetillä (Unityn pbxproj:
-      # CODE_SIGN_IDENTITY="iPhone Developer", Automatic) ja vienti
-      # allekirjoittaa sen uudelleen Distributionilla. Komentorivillä EI
-      # anneta identiteettiä eikä profiilia: ne koskisivat kaikkia targeteja,
-      # ja UnityFramework ei tue profiilia eikä Distribution-identiteettiä
-      # Automatic-tilassa (ajot 23.9.2026).
+      # Arkisto allekirjoitetaan suoraan NIMETYLLÄ Distribution-identiteetillä
+      # (SHA-1 tämän työnkulun avainnipusta) ja App Store -profiililla,
+      # Manual-tilassa. Automatic valitsi builds 10–11 login-nipun
+      # "Apple Development … (FD3S699799)" -identiteetin, jonka avain ei
+      # aukea CI:ssä (errSecInternalComponent, 24.9.2026). Profiili annetaan
+      # Unityn omalla muuttujalla PROVISIONING_PROFILE_SPECIFIER_APP, jota
+      # vain Unity-iPhone-target lukee — UnityFramework ei tue profiilia.
+      # --keychain rajaa codesignin tähän nippuun. Hakulistaa ei vaihdeta.
       - name: Arkistoi ja allekirjoita
         if: env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
@@ -497,12 +559,11 @@ jobs:
             -configuration Release \
             -destination 'generic/platform=iOS' \
             -archivePath "$RUNNER_TEMP/proto3d.xcarchive" \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$ASC_AVAIN_POLKU" \
-            -authenticationKeyID "$ASC_KEY_ID" \
-            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
             DEVELOPMENT_TEAM="$TEAM_ID" \
-            CODE_SIGN_STYLE=Automatic \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="$DIST_SHA1" \
+            PROVISIONING_PROFILE_SPECIFIER_APP="$PROFIILI_NIMI" \
+            OTHER_CODE_SIGN_FLAGS="--keychain $AVAINNIPPU" \
             archive
 
       - name: Vie IPA
@@ -523,7 +584,14 @@ jobs:
             <key>teamID</key>
             <string>$TEAM_ID</string>
             <key>signingStyle</key>
-            <string>automatic</string>
+            <string>manual</string>
+            <key>signingCertificate</key>
+            <string>$DIST_SHA1</string>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>$BUNDLE_ID</key>
+              <string>$PROFIILI_NIMI</string>
+            </dict>
             <key>uploadSymbols</key>
             <true/>
           </dict>
@@ -532,11 +600,7 @@ jobs:
           xcodebuild -exportArchive \
             -archivePath "$RUNNER_TEMP/proto3d.xcarchive" \
             -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
-            -exportPath "$RUNNER_TEMP/ipa" \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$ASC_AVAIN_POLKU" \
-            -authenticationKeyID "$ASC_KEY_ID" \
-            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+            -exportPath "$RUNNER_TEMP/ipa"
           ipa=$(find "$RUNNER_TEMP/ipa" -maxdepth 2 -name '*.ipa' | head -1) || true
           if [ -z "$ipa" ]; then
             echo "::error title=IPA puuttuu::Vienti ei tuottanut .ipa-tiedostoa."
@@ -589,7 +653,11 @@ jobs:
         if: success() && env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
         run: |
           echo "$PROTO_MASTER" > "$YOMERKKI"
-          echo "$(date '+%Y-%m-%d %H:%M') LADATTU: master $PROTO_MASTER, build $BUILD_NUMERO" | tee -a "$YOLOKI"
+          echo "$(date '+%Y-%m-%d %H:%M') LADATTU: master $PROTO_MASTER, versio $VERSIO, build $BUILD_NUMERO" | tee -a "$YOLOKI"
+
+      - name: Kasvata build-laskuri
+        if: success() && env.OHITA != '1' && env.ORDINAALI != ''
+        run: echo "$ORDINAALI" > "$LASKURI"
 
       - name: Kerro mitä lähti
         if: success() && env.OHITA != '1'
@@ -607,6 +675,12 @@ jobs:
       # Avainnippu ($HOME/Library/Keychains/matkakirja-testflight.keychain-db)
       # on pysyvä eikä sitä poisteta — varmenne ja yksityinen avain
       # säilyvät seuraavaa ajoa varten (ks. "Pysyvä avainnippu" -vaihe).
+      - name: Vapauta käännöspalvelun lukko
+        if: always() && env.LUKKO_OMA == '1'
+        run: |
+          kill "$(cat "$KAANNOSLUKKO/pid" 2>/dev/null)" 2>/dev/null || true
+          rm -rf "$KAANNOSLUKKO"
+
       - name: Siivoa avaimet
         if: always()
         run: |

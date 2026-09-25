@@ -2280,10 +2280,20 @@ function vapautaRasteri(valmis) {
  * järjestelmäkirjasinpino (css/styles.css) eikä yhtään verkkokirjasinta,
  * joten canvasin lataman kirjasimen ei voi käydä niin, että rasteri
  * paistetaan varakirjasimella ja oikea saapuu vasta sen jälkeen.
+ *
+ * IRROTETULTA KARTALTA EI LUETA ASUA (web-mittaus 25.9.2026, Ranska
+ * iPhone ja iPad: nimiöt pystykirjaimin). Uusi noston elementti
+ * paistaa rasterinsa jo nostoElementissä (js/pallolauta/nostot.js),
+ * ennen kuin kirjasto liittää sen dokumenttiin. Irrotetun svg:n
+ * getComputedStyle on tyhjä, ja jos tämä oli istunnon ensimmäinen
+ * luku, tyhjä fontStyle jäi välimuistiin ja jokainen nimiö paistui
+ * pystyyn. Kun tyyli ei ole voimassa, palautetaan null: sen kerran
+ * piirretään varapinolla (joka on sama kursiivi), ja oikea luku
+ * tehdään ensimmäisestä liitetystä kartasta.
  */
 function nostosymNimionAsu(svg, laji = 'vuori') {
   if (NOSTOSYM_ASUT.has(laji)) return NOSTOSYM_ASUT.get(laji);
-  if (!svg) return null;
+  if (!svg || svg.isConnected === false) return null;
   const muoto = NOSTOSYM_NIMIO_ASUT[laji];
   const apu = el('text', {
     class: `nostosym-nimio ${muoto.luokka}`.trim(),
@@ -2292,6 +2302,12 @@ function nostosymNimionAsu(svg, laji = 'vuori') {
   }, svg);
   apu.textContent = 'M';
   const t = getComputedStyle(apu);
+  // Tyylitiedosto ei (vielä) koske elementtiin: perhe puuttuu tai täyttö
+  // on selaimen oletusmusta. Sama sääntö kuin yllä — ei välimuistiin.
+  if (!t.fontFamily || !t.fill || t.fill === 'rgb(0, 0, 0)') {
+    apu.remove();
+    return null;
+  }
   const halo = t.stroke && t.stroke !== 'none' ? t.stroke : null;
   const asu = {
     perhe: t.fontFamily || NOSTOSYM_ASU_VARA.perhe,
@@ -2322,7 +2338,8 @@ function nostosymAsuTai(svg, laji) {
  * `stroke` ja `stroke-width` eivät enää koske näihin merkkeihin.
  */
 function nostosymMustelajit(svg) {
-  if (NOSTOSYM_MUSTE || !svg) {
+  // Irrotettu kartta: varasävyt, ei välimuistiin (ks. nostosymNimionAsu).
+  if (NOSTOSYM_MUSTE || !svg || svg.isConnected === false) {
     return NOSTOSYM_MUSTE ?? {
       ...NOSTOSYM_MUSTE_VARA,
       varit: NOSTOSYM_PISTE_VARIT,

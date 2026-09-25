@@ -171,7 +171,8 @@ export function sallittuOrigin(origin, lista = []) {
  */
 export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
 // fi.matkakirja.peli = TestFlight-/App Store -build (proto3d-testflight.yml BUNDLE_ID), omistajan löydös 16.
-export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
+// fi.matkakirja.peli.kehitys = kehityskäännös (Developer-tiimi RCD77XPB7M, iso iPad; Fable 24.9.2026), samat oikeudet.
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
 
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
 export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke']);
@@ -328,6 +329,42 @@ export function tyhjanSyy({ virhe = null, stop = null } = {}) {
   if (virhe) return { syy: 'virta', loki: `virta: ${virhe}`, uusinta: true };
   if (stop === 'refusal') return { syy: 'kieltaytyi', loki: 'stop=refusal', uusinta: false };
   return { syy: 'tyhja', loki: `stop=${stop || 'tuntematon'}`, uusinta: true };
+}
+
+/*
+ * AJATTELU EI SAA SYÖDÄ VASTAUSTA (löydös 67, omistajan kuva 25.9.2026:
+ * vastaus loppui sanaan "…muurin alta, n"). Sonnet 5 ajattelee
+ * oletuksena, kun `thinking` puuttuu, ja ajattelutokenit lasketaan
+ * `max_tokens`-rajaan: 900 tokenin vastausrajasta jäi näkyvälle tekstille
+ * noin 740 merkkiä, 350 tokenin jatkosta noin 300, joskus ei mitään.
+ * Pulun vastaukset ovat lyhyitä, joten ajattelu suljetaan siellä, missä
+ * malli sen sallii. Mallit, joilla ajattelua ei voi sulkea (Fable,
+ * Mythos, Opus 5.5: `disabled` = 400), ajavat pienimmällä vaivalla.
+ * Haiku 4.5 ei ajattele ilman pyyntöä eikä hyväksy effort-kenttää.
+ */
+export function ajatteluKentat(malli) {
+  const m = String(malli ?? '');
+  if (/haiku|claude-3/.test(m)) return {};
+  if (/fable|mythos|opus-5-5/.test(m)) return { output_config: { effort: 'low' } };
+  return { thinking: { type: 'disabled' } };
+}
+
+/*
+ * Sanarajaan (max_tokens) pysähtynyt teksti leikataan viimeiseen
+ * kokonaiseen virkkeeseen, jotta pelaaja ei koskaan saa kesken sanan
+ * loppuvaa vastausta valmiina. Jos kokonaista virkettä ei ole, perään
+ * tulee ellipsi viimeisen (mahdollisesti katkenneen) sanan tilalle,
+ * jolloin katkos näkyy katkoksena.
+ */
+const VIRKKEEN_LOPPU = /[.!?…][»"”’)\]]*(?=\s|$)/g;
+export function katkaiseKokonaiseen(teksti) {
+  const t = String(teksti ?? '').trimEnd();
+  let loppu = -1;
+  for (const osuma of t.matchAll(VIRKKEEN_LOPPU)) loppu = osuma.index + osuma[0].length;
+  if (loppu > 0) return t.slice(0, loppu);
+  // Viimeinen sana voi olla katkennut kesken ("…muurin alta, n"): se pois.
+  const ilmanHantaa = /\s/.test(t) ? t.replace(/\s+\S*$/, '') : t;
+  return t ? `${ilmanHantaa.replace(/[\s,;:–—-]+$/, '')}…` : t;
 }
 
 /** Pelaajalle näytettävä teksti syyluokan mukaan. */

@@ -1119,26 +1119,9 @@ button.skandaali-kuvanuoli:is(:hover, :active, :focus, :focus-visible) { backgro
    Ks. styles.css "NOSTOVISA PAPERINA".
    =========================================================================== */
 
-/* ===========================================================================
-   "HAVAINNEKUVA"-MERKINTÄ LYHYESSÄ KUVATEKSTISSÄ (omistaja 20.9.2026,
-   nostokortti-erä kohta 3; js/havainnekuva.js lisaaHavainnekuvaMerkki).
-   Pieni harvennettu versaali kuvatekstin perässä — sama muste kuin
-   kuvateksti, haaleampana, jotta se lukee merkintänä eikä tekstinä.
-   =========================================================================== */
-.kuvateksti-havainne {
-  display: inline-block;
-  margin-left: 0.45em;
-  padding: 0 0.35em;
-  font-family: var(--font-type);
-  font-size: 0.68em;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.72);
-  border: 1px solid rgba(70, 51, 31, 0.28);
-  border-radius: 3px;
-  vertical-align: 0.1em;
-  white-space: nowrap;
-}
+/* "HAVAINNEKUVA"-MERKINNÄN (.kuvateksti-havainne) sääntö asuu css/styles.css:ssä:
+   merkki piirtyy myös kartan kohdekorttiin, eikä tämä tiedosto ole ladattu
+   ennen ensimmäistä fokusnostoa (Natiivi-UI:n löydös 24.9.2026). */
 
 /* ===========================================================================
    13. NOSTOKORTIN KAKSIPALSTATAITTO ≥ 1100 PX (omistaja 21.9.2026,
