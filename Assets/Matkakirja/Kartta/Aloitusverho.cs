@@ -10,7 +10,8 @@ namespace Matkakirja
     /// logo musteella #46331f, leveys <see cref="LogonOsuus"/> ruudun leveydestä) jatkuu pelin ensimmäisistä
     /// kehyksistä täsmälleen samana kuvana, joten Unityn logoruutua (pois) tai mustaa välikehystä ei näy. Verho
     /// peittää myös kylmän alun: pallon laatat latautuvat sen takana, ja verho häivytetään vasta, kun pallo on
-    /// ladattu (Cesium3DTileset.ComputeLoadProgress) tai <see cref="Katto"/> on kulunut.
+    /// ladattu (Cesium3DTileset.ComputeLoadProgress, yhteinen ehto Valmius.Tasaantunut: ≥ 90 % ja tasaantunut, BUILD 16;
+    /// ennen 99 %, joka ei täyttynyt pyörivällä pallolla, löydös 80) tai <see cref="Katto"/> on kulunut.
     /// </summary>
     public sealed class Aloitusverho : MonoBehaviour
     {
@@ -24,8 +25,6 @@ namespace Matkakirja
         public const float Katto = 8f;
         /// <summary>Häivytys (s), pehmeä ease in/out (KAMERA-AJOT).</summary>
         public const float Haivytys = 0.5f;
-        /// <summary>Pallon latausaste, jolla verho saa lähteä (%).</summary>
-        public const float Valmis = 99f;
 
         public static Aloitusverho Instanssi { get; private set; }
         public static bool Nakyvissa => Instanssi != null;
@@ -88,10 +87,12 @@ namespace Matkakirja
             // Valmiusdiagnostiikka (löydös 80): seuranta kehittäjälipulla, lähtörivi aina (Valmius.cs).
             Valmius.VerhoAlku("aloitusverho");
             string syy = "katto";
+            var ehto = new ValmiusEhto();
             while (Time.realtimeSinceStartup - alku < Katto)
             {
                 if (pallo == null) pallo = FindAnyObjectByType<Cesium3DTileset>();
-                if (pallo != null && Time.frameCount > 10 && pallo.ComputeLoadProgress() >= Valmis) { syy = "valmis"; break; }
+                // Yhteinen ehto (BUILD 16): ≥ 90 % ja tasaantunut 300 ms, ≥ 10 kehystä (ValmiusEhto).
+                if (Valmius.Tasaantunut(ehto, pallo)) { syy = "valmis"; break; }
                 yield return null;
             }
             Valmius.VerhoLoppu("aloitusverho", pallo == null ? "katto:ei-palloa" : syy,

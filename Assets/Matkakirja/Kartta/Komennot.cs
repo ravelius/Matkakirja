@@ -37,7 +37,8 @@ namespace Matkakirja
     ///   valmius seuraa [s]        pallon valmiusasteen seuranta lokiin 0,5 s välein (oletus 30 s; Valmius.cs, löydös 80):
     ///                             ComputeLoadProgress, Cesiumin valintatilasto, raster-kerrokset, palvelimen jonot, kameran liike
     ///   valmius auto paalle [s] | valmius auto pois   sama seuranta aloitusverhon ja mustan verhon alussa (PlayerPrefs
-    ///                             matkakirja-valmius-auto, oletus 12 s; voimaan seuraavista verhoista, myös käynnistyksessä)
+    ///                             matkakirja-valmius-auto tai Documents/valmius-auto.txt, oletus 12 s; voimaan seuraavista
+    ///                             verhoista, myös käynnistyksessä; simulaattorissa xcrun simctl spawn &lt;UDID&gt; defaults write …)
     ///   valmius tila | valmius pois   yksi näyte heti / käynnissä olevat seurannat loppuun (yhteenveto)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)

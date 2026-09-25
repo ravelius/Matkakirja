@@ -827,6 +827,122 @@ namespace Matkakirja
             Debug.Log($"MATKAKIRJA lennon pinta: kohdealue + Sentinel {polut.Count} laattaa etusijalla");
         }
 
+        /// <summary>Aloituslennon lähtö (PeliOhjain.AloitusLat/AloitusLon, Assembly-CSharp): Lontoo.</summary>
+        public const double AloitusLahtoLat = 51.507, AloitusLahtoLon = -0.128;
+        /// <summary>Aloitusvalinnan pallon keskus (Aloitusnakyma.ValintaLat/ValintaLon): koko pallonpuolisko näkyy.</summary>
+        public const double ValintaLat = 30, ValintaLon = 17;
+
+        /// <summary>Aloitusnäytön esilataus (null = ei vielä aloitettu); diagnostiikkaan ja mittauksiin.</summary>
+        public Laattapalvelin.Esilataus AloitusEsilataus { get; private set; }
+        bool aloitusEsiladattu;
+
+        /// <summary>
+        /// ALOITUSNÄYTÖN ESILATAUS (Fablen päätös BUILD 16, esilatauspolitiikan kohta 2; löydös 80): aloituslennon mustan
+        /// verhon aikana Cesium pyytää Lontoon lähikuvan (kone 30 km, LennonAikajana.LahiM / LahiKallistus 84°, näkyvä
+        /// ala horisonttiin ~400 km) ja valintanäkymän (pallonpuolisko keskuksena <see cref="ValintaLat"/>, <see cref="ValintaLon"/>)
+        /// lennon pinnan laatat. Ne haetaan levylle jo portin aikana tavallisena esilatauksena (esiJono: vain kun näkyvän
+        /// kartan jono on tyhjä, kaksi paikkaa jää näkyvälle), jolloin musta verho lukee ne välimuistista.
+        ///   lähikuva: lennon pinta lähtöpäästä samalla kaavalla kuin <see cref="EsilataaLento"/> (Z2–Z6 säde 1, Z7 säde 2,
+        ///             Sentinel Z8–Z9 säde 1 ja Z10–Z11 säde 2, vain katetut) sekä pohja Z5–Z6 säde 1 ja Z7–Z9 säde 2
+        ///             (pohja latautuu lennon pinnan alla, KarttaKerrokset.LentoPohja);
+        ///   valinta:  lennon pinta Z2–Z4 laatoista, joiden keskipiste on enintään 80° valintanäkymän keskuksesta
+        ///             (Sentinel alle Z8 on kattamaton eikä hae verkkoa, pohja on jo näkyvissä).
+        /// Kohde ei ole vielä tiedossa, joten reitin käytävä ja kohde jäävät lennon omaan esilataukseen.
+        /// </summary>
+        public Laattapalvelin.Esilataus EsilataaAloituslahto()
+        {
+            string versio = SatelliittiVersio;
+            string malli = string.IsNullOrEmpty(versio) ? SileaUrl : SatelliittiJuuri + versio + "/" + SatelliittiMeri + "/{z}/{x}/{reverseY}.jpg";
+            int huippu = string.IsNullOrEmpty(versio) ? 8 : 7;
+            if (!malli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal)) return null;
+            string pintaPolku = malli.Substring(Laattapalvelin.Ampari.Length);
+            string pohjaMalli = pohja is CesiumUrlTemplateRasterOverlay pu ? pu.templateUrl : null;
+            if (pohjaMalli != null && Laattapalvelin.Juuri != null && pohjaMalli.StartsWith(Laattapalvelin.Juuri, StringComparison.Ordinal))
+                pohjaMalli = pohjaMalli.Substring(Laattapalvelin.Juuri.Length);
+            else if (pohjaMalli != null && pohjaMalli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal))
+                pohjaMalli = pohjaMalli.Substring(Laattapalvelin.Ampari.Length);
+            else pohjaMalli = null;
+
+            var polut = new List<string>();
+            var nahty = new HashSet<string>();
+            void Lisaa(string m, int z, int x, int y)
+            {
+                string p = m.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{reverseY}", y.ToString());
+                if (nahty.Add(p)) polut.Add(p);
+            }
+            void Ymparilta(string m, int z, double lat, double lon, int sade)
+            {
+                int n = 1 << z;
+                var (x, y) = LaattaXY(z, lat, lon);
+                for (int dx = -sade; dx <= sade; dx++)
+                    for (int dy = -sade; dy <= sade; dy++)
+                    {
+                        int yy = y + dy;
+                        if (yy >= 0 && yy < n) Lisaa(m, z, ((x + dx) % n + n) % n, yy);
+                    }
+            }
+            // Lähikuva ensin (musta verho odottaa sitä), tarkimmat tasot ensin.
+            for (int z = huippu; z >= 7; z--) Ymparilta(pintaPolku, z, AloitusLahtoLat, AloitusLahtoLon, 2);
+            for (int z = Math.Min(6, huippu); z >= 2; z--) Ymparilta(pintaPolku, z, AloitusLahtoLat, AloitusLahtoLon, 1);
+            int lahiPinta = polut.Count;
+            if (pohjaMalli != null)
+                for (int z = 9; z >= 5; z--) Ymparilta(pohjaMalli, z, AloitusLahtoLat, AloitusLahtoLon, z >= 7 ? 2 : 1);
+            int lahiPohja = polut.Count - lahiPinta;
+            // Valintanäkymä: pallonpuolisko, laatan keskipiste enintään 80° keskuksesta.
+            double c0 = Math.Cos(ValintaLat * Math.PI / 180.0);
+            var keskus = (x: c0 * Math.Cos(ValintaLon * Math.PI / 180.0), y: c0 * Math.Sin(ValintaLon * Math.PI / 180.0),
+                z: Math.Sin(ValintaLat * Math.PI / 180.0));
+            double raja = Math.Cos(80.0 * Math.PI / 180.0);
+            for (int z = 2; z <= Math.Min(4, huippu); z++)
+            {
+                int n = 1 << z;
+                for (int x = 0; x < n; x++)
+                    for (int y = 0; y < n; y++)
+                    {
+                        double lon = (x + 0.5) / n * 360.0 - 180.0;
+                        double lat = Math.Atan(Math.Sinh(Math.PI * (1 - 2 * (y + 0.5) / n))) * 180.0 / Math.PI;
+                        double cl = Math.Cos(lat * Math.PI / 180.0);
+                        double d = cl * Math.Cos(lon * Math.PI / 180.0) * keskus.x + cl * Math.Sin(lon * Math.PI / 180.0) * keskus.y
+                                   + Math.Sin(lat * Math.PI / 180.0) * keskus.z;
+                        if (d >= raja) Lisaa(pintaPolku, z, x, y);
+                    }
+            }
+            var e = Laattapalvelin.Esilataa(polut);
+            AloitusEsilataus = e;
+            Debug.Log($"MATKAKIRJA aloitusnäyttö: esilataus {polut.Count} laattaa (lähikuva pinta {lahiPinta}, pohja {lahiPohja}, " +
+                      $"valinta {polut.Count - lahiPinta - lahiPohja})");
+            if (!string.IsNullOrEmpty(versio))
+            {
+                StartCoroutine(EsilataaAloitusSentinel(versio, e));
+                VarmistaVarakartta();
+            }
+            return e;
+        }
+
+        System.Collections.IEnumerator EsilataaAloitusSentinel(string versio, Laattapalvelin.Esilataus e)
+        {
+            string s2 = SentinelKaytto(versio).Substring(Laattapalvelin.Ampari.Length);
+            float raja = Time.unscaledTime + 10f;
+            while (sentinelZ8 == null && Time.unscaledTime < raja && !e.Peruttu) yield return null;
+            if (sentinelZ8 == null || e.Peruttu) yield break;
+            var polut = new List<string>();
+            // Sama säde kuin EsilataaSentinel: Z8–Z9 säde 1, Z10–Z11 säde 2, vain katetut; tarkimmat ensin.
+            for (int z = 11; z >= 8; z--)
+            {
+                int n = 1 << z, sade = z < 10 ? 1 : 2;
+                var (x, y) = LaattaXY(z, AloitusLahtoLat, AloitusLahtoLon);
+                for (int dx = -sade; dx <= sade; dx++)
+                    for (int dy = -sade; dy <= sade; dy++)
+                    {
+                        int xx = ((x + dx) % n + n) % n, yy = y + dy;
+                        if (yy < 0 || yy >= n || !SentinelKattaa(z, xx, yy)) continue;
+                        polut.Add(s2 + z + "/" + xx + "/" + yy + ".jpg");
+                    }
+            }
+            Laattapalvelin.Esilataa(polut, e);
+            Debug.Log($"MATKAKIRJA aloitusnäyttö: esilataus + Sentinel {polut.Count} laattaa (yhteensä {e.Yhteensa})");
+        }
+
         /// <summary>
         /// Sentinel-2 (Z8–Z11, harva) lähtö- ja kohdekaupungin ympäriltä samaan esilataukseen, kun kattavuus on
         /// ladattu: vain katetut laatat (muut Laattapalvelin antaisi läpinäkyvinä ilman verkkoa). Säde 1–2 laattaa.
@@ -929,12 +1045,20 @@ namespace Matkakirja
 
         void Update()
         {
-            if (pallo == null || rasterit.Count == 0) return;
+            // Aloitusnäyttö (portti) näkyy: aloituslennon lähtöpään laatat levylle matalalla prioriteetilla (BUILD 16).
+            if (!aloitusEsiladattu && PalloKierto.PorttiSumea && pallo != null && pohja != null)
+            {
+                aloitusEsiladattu = true;
+                EsilataaAloituslahto();
+            }
+            if (pallo == null || rasterit.Count == 0) { linssiEhto.Nollaa(); linssiKesken = 0; return; }
             // Latausta ei arvioida heti lisäyksen jälkeen: Cesium rekisteröi uudet laatat vasta
             // seuraavilla kehyksillä, ja edistyminen näyttäisi valmiilta liian aikaisin.
-            bool kesken = false;
-            foreach (var r in rasterit.Values) kesken |= !r.valmis && Time.unscaledTime - r.lisatty > 0.3f;
-            if (!kesken || pallo.ComputeLoadProgress() < 99.9f) return;
+            int kesken = 0;
+            foreach (var r in rasterit.Values) if (!r.valmis && Time.unscaledTime - r.lisatty > 0.3f) kesken++;
+            // Yhteinen valmiusehto (BUILD 16, Valmius.Tasaantunut; ennen 99,9 %). Uusi odotus, kun keskeneräisten määrä muuttuu.
+            if (kesken != linssiKesken) { linssiEhto.Nollaa(); linssiKesken = kesken; }
+            if (kesken == 0 || !Valmius.Tasaantunut(linssiEhto, pallo)) return;
             foreach (var p in rasterit)
                 if (!p.Value.valmis && p.Value.kerros.enabled)
                 {
@@ -942,5 +1066,7 @@ namespace Matkakirja
                     KerrosValmis?.Invoke(p.Key);
                 }
         }
+        readonly ValmiusEhto linssiEhto = new ValmiusEhto();
+        int linssiKesken;
     }
 }

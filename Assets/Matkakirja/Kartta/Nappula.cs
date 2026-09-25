@@ -511,22 +511,24 @@ namespace Matkakirja
                 IEnumerator Lataa(float katto, string vaihe)
                 {
                     float alku = Time.unscaledTime;
-                    // Vähintään muutama kehys, jotta Cesium ehtii pyytää uudet laatat ennen latausasteen lukua.
+                    // Yhteinen valmiusehto (BUILD 16, Valmius.Tasaantunut): ≥ 90 % ja tasaantunut 300 ms, vähintään 10 kehystä,
+                    // jotta Cesium ehtii pyytää uuden näkymän laatat ennen luentaa. Uusi ehto kummallekin näkymälle.
+                    var ehto = new ValmiusEhto();
                     int kehykset = 0;
                     bool reitti = false, nakyma = false;
                     lataaSyy = "katto:ei-aikaa";
                     while (Time.unscaledTime - alku < katto)
                     {
                         reitti = esilataus == null || esilataus.Osuus >= 0.9f;
-                        nakyma = pallo == null || pallo.ComputeLoadProgress() >= MustanLataus;
-                        if (++kehykset > 10 && reitti && nakyma)
+                        nakyma = pallo == null ? ++kehykset > ValmiusEhto.MinKehykset : Valmius.Tasaantunut(ehto, pallo);
+                        if (reitti && nakyma)
                         {
                             lataaSyy = "valmis";
                             Valmius.VerhoLoppu("musta-" + vaihe, lataaSyy, (Time.unscaledTime - alku) * 1000.0,
                                 pallo != null ? pallo.ComputeLoadProgress() : -1f);
                             yield break;
                         }
-                        lataaSyy = reitti && nakyma ? "katto:kehykset" : reitti ? "katto:pallo" : nakyma ? "katto:reitti" : "katto:pallo+reitti";
+                        lataaSyy = reitti ? "katto:pallo" : nakyma ? "katto:reitti" : "katto:pallo+reitti";
                         yield return null;
                     }
                     Valmius.VerhoLoppu("musta-" + vaihe, lataaSyy, (Time.unscaledTime - alku) * 1000.0,
@@ -539,7 +541,7 @@ namespace Matkakirja
                     double pohja0 = double.IsNaN(lentoPohja) ? KorkeusKerroin.Sovita(nosto) : lentoPohja;
                     kierto.Kuvaa(lat0, lon0, LennonAikajana.LahiM, LennonAikajana.LahiKallistus,
                         Suuntima(lat0, lon0, lat1, lon1, 0) + 90.0, pohja0 + LennonAikajana.MinKoneKorkeusM);
-                    yield return Lataa(MustanKatto * 0.6f, "lahi");
+                    yield return Lataa(LahikuvanKatto, "lahi");
                     float lahi = Time.unscaledTime - odotus;
                     kierto.Kuvaa(vLat, vLon, vKork, vKall, vSuunta, vKatse);
                     yield return Lataa(MustanKatto - (Time.unscaledTime - odotus), "valinta");
@@ -756,8 +758,12 @@ namespace Matkakirja
 
         /// <summary>Löydös 84: pisin musta odotus (s) lennon pinnan latautumista, vaikka laatat eivät olisi valmiita.</summary>
         public const float MustanKatto = 5f;
-        /// <summary>Näkyvän pallon latausaste (%), jolla musta verho saa lähteä (Cesium3DTileset.ComputeLoadProgress).</summary>
-        public const float MustanLataus = 97f;
+        /// <summary>
+        /// Lontoon lähikuvan latausodotuksen katto (s) mustan alla (BUILD 16; ennen MustanKatto × 0,6 = 3 s). Lähikuvan
+        /// laatat esiladataan jo aloitusnäytössä (KarttaKerrokset.EsilataaAloituslahto), ja valmius on yhteinen
+        /// Valmius.Tasaantunut (ennen kiinteä 97 %, joka jäi lämpimänä 87 %:iin, löydös 80).
+        /// </summary>
+        public const float LahikuvanKatto = 1.2f;
 
         /// <summary>Lennon esitys pois (perillä tai keskeytys): kamera palautuu, valo, sumu ja pilvet pois.</summary>
         KaupunkiMerkit aloitusMerkit;

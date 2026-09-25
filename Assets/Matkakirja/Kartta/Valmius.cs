@@ -29,7 +29,7 @@ namespace Matkakirja
     /// Käynnistys: komento `valmius seuraa [s]` (Komennot) tai automaattisesti verhon alussa, kun kehittäjälippu
     /// PlayerPrefs "matkakirja-valmius-auto" on päällä (1 = <see cref="AutoOletusS"/> s, ≥ 2 = sekunnit; simulaattorissa
     /// sovellus kiinni: defaults write app.matkakirja.proto3d matkakirja-valmius-auto -int 1; komento `valmius auto
-    /// paalle [s]`). Verhon lähtörivi (<see cref="VerhoLoppu"/>) kirjataan aina.
+    /// paalle [s]`; varakanava Documents/valmius-auto.txt). Verhon lähtörivi (<see cref="VerhoLoppu"/>) kirjataan aina.
     /// </summary>
     public sealed class Valmius : MonoBehaviour
     {
@@ -43,7 +43,17 @@ namespace Matkakirja
 
         static Valmius instanssi;
 
-        /// <summary>Automaattinen seuranta verhon alussa (s), 0 = pois. Luetaan PlayerPrefsistä kerran.</summary>
+        /// <summary>
+        /// Automaattinen seuranta verhon alussa (s), 0 = pois. Luetaan kerran: PlayerPrefs (int tai merkkijono) tai tiedosto
+        /// Documents/valmius-auto.txt (sekunnit tai 1). Lähde ja arvo kirjataan lokiin ensimmäisellä luennalla.
+        ///
+        /// HUOM simulaattori (mittaus 25.9.): Unity iOS lukee PlayerPrefsin NSUserDefaultsista (kontin
+        /// Library/Preferences/app.matkakirja.proto3d.plist, avain sellaisenaan, int = integer), mutta plist-tiedostoon
+        /// suoraan kirjoitettu arvo katoaa, koska simulaattorin cfprefsd pitää domainin välimuistissa ja kirjoittaa sen
+        /// päälle. Kirjoita cfprefsd:n kautta (sovellus kiinni): xcrun simctl spawn &lt;UDID&gt; defaults write
+        /// app.matkakirja.proto3d matkakirja-valmius-auto -int 1, tai tiedosto kontin Documents-kansioon
+        /// (xcrun simctl get_app_container &lt;UDID&gt; app.matkakirja.proto3d data).
+        /// </summary>
         public static float AutoS
         {
             get
@@ -51,9 +61,21 @@ namespace Matkakirja
                 if (!autoLuettu)
                 {
                     autoLuettu = true;
+                    string lahde = "PlayerPrefs";
                     int v = PlayerPrefs.GetInt(AutoAvain, 0);
-                    if (v == 0 && PlayerPrefs.GetString(AutoAvain, "") == "1") v = 1;
+                    if (v == 0 && int.TryParse(PlayerPrefs.GetString(AutoAvain, ""), out int sv)) v = sv;
+                    if (v == 0)
+                    {
+                        lahde = "tiedosto";
+                        try
+                        {
+                            string f = System.IO.Path.Combine(Application.persistentDataPath, AutoTiedosto);
+                            if (System.IO.File.Exists(f) && int.TryParse(System.IO.File.ReadAllText(f).Trim(), out int fv)) v = fv;
+                        }
+                        catch (System.Exception) { /* valinnainen */ }
+                    }
                     autoS = v <= 0 ? 0f : v == 1 ? AutoOletusS : v;
+                    Debug.Log(autoS > 0f ? $"MATKAKIRJA valmius: auto {autoS:0.#} s ({lahde})" : "MATKAKIRJA valmius: auto pois");
                 }
                 return autoS;
             }
@@ -63,8 +85,13 @@ namespace Matkakirja
                 autoS = Mathf.Max(0f, value);
                 PlayerPrefs.SetInt(AutoAvain, autoS <= 0f ? 0 : Mathf.Approximately(autoS, AutoOletusS) ? 1 : Mathf.Max(2, Mathf.RoundToInt(autoS)));
                 PlayerPrefs.Save();
+                if (autoS <= 0f)
+                    try { System.IO.File.Delete(System.IO.Path.Combine(Application.persistentDataPath, AutoTiedosto)); }
+                    catch (System.Exception) { /* ei tiedostoa */ }
             }
         }
+        /// <summary>Varakanava kehittäjälipulle (persistentDataPath = Documents): sekunnit tai 1.</summary>
+        public const string AutoTiedosto = "valmius-auto.txt";
         static bool autoLuettu;
         static float autoS;
 
@@ -116,6 +143,14 @@ namespace Matkakirja
             foreach (var x in instanssi.seurannat)
                 if (x.Nimi == nimi) x.VerhoLahti = Time.realtimeSinceStartup - x.Alku;
         }
+
+        /// <summary>
+        /// VERHOJEN YHTEINEN VALMIUSEHTO (Fablen päätös BUILD 16): kirjaa tämän kehyksen asteen olioon ja palauttaa, onko
+        /// pallo valmis (ValmiusEhto: ≥ 90 %, nousu ≤ 1 %-yks / 300 ms, ≥ 10 kehystä). Kutsu kerran kehyksessä; ilman palloa
+        /// false (katto ratkaisee). Aloitusverho, aloituslennon musta verho ja linssin raster-kerrokset (KarttaKerrokset).
+        /// </summary>
+        public static bool Tasaantunut(ValmiusEhto ehto, Cesium3DTileset pallo) =>
+            ehto != null && pallo != null && ehto.Paivita(Time.realtimeSinceStartupAsDouble, pallo.ComputeLoadProgress());
 
         /// <summary>Yksi näyte heti lokiin (komento `valmius tila`).</summary>
         public static void Tila()
