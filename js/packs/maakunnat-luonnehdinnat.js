@@ -9562,4 +9562,366 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Aavikkolinna Qusayr Amran kylpylän seiniä peittävät 700-luvun freskot, joissa on metsästyskohtauksia, eläimiä ja lintuja.',
     },
   },
+  /*
+   * NGA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 7C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.NGA:n tunnuksia
+   * TÄSMÄLLEEN (kopioitu koneellisesti; "Nassarawa" kahdella s:llä,
+   * "Federal Capital Territory"). Vain `lyhyt`. Vältetty maastokohteet-
+   * nga.js:n aiheet (Chappal Waddi, Nigerjoki, Benue-joki, Sukur, Osun-
+   * Osogbo, Zuma Rock, Igbo-Ukwu, Yankari, Kainji, Nok, Badagry). Pohjoinen
+   * vain kulttuuri- ja historia-aiheilla. Lähteet (en-Wikipedia ja haku,
+   * tarkistettu 25.9.2026), epävarmimmat erikseen:
+   *   Akwa Ibom — Ibeno Beach (noin 30 km, Länsi-Afrikan pisin)
+   *   Bauchi    — Tafawa Balewa's tomb (kansallinen muistomerkki 1979)
+   *   Edo       — Igun Street (pronssinvalajien kilta, vahamuotti)
+   *   Ekiti     — Ikogosi Warm Springs
+   *   Gombe     — Dadin Kowa Dam (Gongola, vesi Gomben kaupungille)
+   *   Jigawa    — Birnin Kudu (kalliomaalaukset, muistomerkki 1964)
+   *   Kaduna    — Kajuru Castle (1981–1989, saksalainen rakennuttaja)
+   *   Kano      — Kofar Mata Dye Pits (1498)
+   *   Katsina   — Gobarau Minaret (1400-luku)
+   *   Kogi      — Northern Nigeria Protectorate (Lokoja 1900, Zungeru 1902)
+   *   Kwara     — Esie Museum (1945, vuolukivihahmot)
+   *   Lagos     — Lekki Conservation Centre (401 m)
+   *   Nassarawa — Farin Ruwa Falls (noin 150 m)
+   *   Niger     — Gurara Waterfalls (noin 30 m)
+   *   Ondo      — Idanre Hill (660 porrasta, laskeutuminen 1923)
+   *   Taraba    — Mambilla Plateau (Länsi-Afrikan ainoat ylänköteetilat)
+   *   Zamfara   — Kingdom of Zamfara (Birnin Zamfara)
+   *   Muut      — yleistietoa, tarkistettu vastaavista
+   *               en-Wikipedia-artikkeleista.
+   */
+  NGA: {
+    Abia: {
+      lyhyt: 'Aban Ariaria-markkinoilla myydään kaupungin omissa verstaissa ommeltuja kenkiä, laukkuja ja vaatteita.',
+    },
+    Adamawa: {
+      lyhyt: 'Adamawa on saanut nimensä Modibo Adamasta, joka perusti seudulle emiraatin 1800-luvun alussa; emiirin istuin on yhä Yolassa.',
+    },
+    'Akwa Ibom': {
+      lyhyt: 'Ibenon hiekkaranta kulkee Atlantin rannalla noin 30 kilometrin matkan, ja sitä pidetään Länsi-Afrikan pisimpänä.',
+    },
+    Anambra: {
+      lyhyt: 'Onitshan päätori on yksi Länsi-Afrikan suurimmista markkinoista, ja sen kujilla myydään kankaista varaosiin lähes kaikkea.',
+    },
+    Bauchi: {
+      lyhyt: 'Bauchin kaupungissa lepää Nigerian ensimmäinen pääministeri Abubakar Tafawa Balewa, ja hänen hautansa on kansallinen muistomerkki.',
+    },
+    Bayelsa: {
+      lyhyt: 'Suistomaan pienessä Oloibirin kylässä löydettiin 1956 Nigerian ensimmäinen kaupallisesti hyödynnettävä öljy.',
+    },
+    Benue: {
+      lyhyt: 'Benueta kutsutaan Nigerian ruoka-aitaksi, ja sen pelloilta tulee etenkin jamssia koko maan toreille.',
+    },
+    Borno: {
+      lyhyt: 'Borno on saanut nimensä Bornun valtakunnasta, joka hallitsi vuosisatojen ajan Tšadjärven ympäristöä.',
+    },
+    'Cross River': {
+      lyhyt: 'Calabarin karnevaali täyttää kaupungin kadut joka joulukuu, ja sitä kutsutaan Afrikan suurimmaksi katujuhlaksi.',
+    },
+    Delta: {
+      lyhyt: 'Asaba ja Onitsha ovat vastakkain Nigerin rannoilla, ja niitä yhdistää vuonna 1965 valmistunut Niger-silta.',
+    },
+    Ebonyi: {
+      lyhyt: 'Abakalikin seudun tulvatasangoilla viljellään riisiä, ja Abakaliki-riisi on tuttu nimi Nigerian toreilla.',
+    },
+    Edo: {
+      lyhyt: 'Benin Cityn Igun-kadulla pronssinvalajien kilta valaa yhä veistoksia vahamuottimenetelmällä, jota suvut ovat siirtäneet vuosisatoja.',
+    },
+    Ekiti: {
+      lyhyt: 'Ikogosissa lämmin ja kylmä lähde virtaavat rinnakkain ja yhtyvät lopulta samaksi puroksi.',
+    },
+    Enugu: {
+      lyhyt: 'Enugua kutsutaan Hiilikaupungiksi, sillä sen kukkuloilta louhittiin kivihiiltä 1900-luvun alusta lähtien.',
+    },
+    Gombe: {
+      lyhyt: 'Dadin Kowan pato padottaa Gongola-joen suureksi tekojärveksi, josta Gomben kaupunki saa juomavetensä.',
+    },
+    Imo: {
+      lyhyt: 'Owerrin Mbari-keskuksessa on savesta muotoiltuja, maalattuja hahmoja, joita igbot ovat perinteisesti tehneet maan jumalatar Alalle.',
+    },
+    Jigawa: {
+      lyhyt: 'Birnin Kudun kallioissa on tuhansia vuosia vanhoja maalauksia karjasta, ja paikka on ollut kansallinen muistomerkki vuodesta 1964.',
+    },
+    Kaduna: {
+      lyhyt: 'Kajurun kylän kukkulalla seisoo 1980-luvulla rakennettu torneilla koristeltu graniittilinna, Kadunassa asuneen saksalaisen unelma.',
+    },
+    Kano: {
+      lyhyt: 'Kanon Kofar Matan värjäysaltaissa kankaita on värjätty indigolla vuodesta 1498, ja työ jatkuu yhä samoissa kuopissa.',
+    },
+    Katsina: {
+      lyhyt: 'Katsinan keskustassa kohoaa savesta rakennettu Gobaraun minareetti, joka on peräisin 1400-luvulta.',
+    },
+    Kebbi: {
+      lyhyt: 'Argungun kalastusjuhlilla tuhannet kalastajat syöksyvät yhtä aikaa jokeen ja pyydystävät kaloja käsiverkoilla.',
+    },
+    Kogi: {
+      lyhyt: 'Lokoja oli vuonna 1900 Pohjois-Nigerian protektoraatin ensimmäinen pääkaupunki, kunnes hallinto siirtyi Zungeruun.',
+    },
+    Kwara: {
+      lyhyt: 'Esien museo avattiin 1945 Nigerian ensimmäisenä museona, ja siellä on satoja vuolukivestä veistettyjä ihmishahmoja.',
+    },
+    Lagos: {
+      lyhyt: 'Lekkin luonnonsuojelualueella puiden latvojen yllä kulkee 401 metriä pitkä riippusiltareitti, Afrikan pisin laatuaan.',
+    },
+    Nassarawa: {
+      lyhyt: 'Farin Ruwan vesiputous syöksyy noin 150 metriä Josin ylängön reunalta; nimi tarkoittaa hausaksi valkoista vettä.',
+    },
+    Niger: {
+      lyhyt: 'Gurara-joen vesiputous levittäytyy leveänä verhona kalliolta noin 30 metrin syvyyteen.',
+    },
+    Ogun: {
+      lyhyt: 'Abeokutan nimi tarkoittaa jorubaksi kallion alla, ja keskellä kaupunkia kohoaa graniittinen Olumo-kallio.',
+    },
+    Ondo: {
+      lyhyt: 'Idanren vanhaan kaupunkiin kukkuloiden laelle noustaan 660 porrasta; asukkaat muuttivat sieltä alas tasangolle 1923.',
+    },
+    Osun: {
+      lyhyt: 'Ile-Ifeä pidetään jorubaperinteessä paikkana, josta maailman luominen alkoi.',
+    },
+    Oyo: {
+      lyhyt: 'Ibadanin yliopisto perustettiin 1948, ja se on Nigerian vanhin yliopisto.',
+    },
+    Plateau: {
+      lyhyt: 'Josin ylänkö on noin 1 200 metrin korkeudessa, joten Josin ilmasto on viileämpi kuin useimmissa Nigerian kaupungeissa.',
+    },
+    'Federal Capital Territory': {
+      lyhyt: 'Abuja rakennettiin suunnitelmakaupungiksi maan keskelle, ja siitä tuli Nigerian pääkaupunki 1991 Lagosin jälkeen.',
+    },
+    Rivers: {
+      lyhyt: 'Port Harcourtia kutsutaan puutarhakaupungiksi sen puistojen ja vehreiden katujen vuoksi.',
+    },
+    Sokoto: {
+      lyhyt: 'Sokotossa asuu sulttaani, jota monet Nigerian muslimit pitävät hengellisenä johtajanaan.',
+    },
+    Taraba: {
+      lyhyt: 'Mambillan viileällä ylängöllä viljellään teetä, ja sen teetilat ovat Länsi-Afrikan ainoat ylänköteeviljelmät.',
+    },
+    Yobe: {
+      lyhyt: 'Ngurun lähellä levittäytyvät Hadejia–Nguru-kosteikot, joille monet Euroopan muuttolinnut tulevat talveksi.',
+    },
+    Zamfara: {
+      lyhyt: 'Zamfara on saanut nimensä vanhasta hausakuningaskunnasta, jonka muurien ympäröimä pääkaupunki oli Birnin Zamfara.',
+    },
+  },
+  /*
+   * TZA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 7C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.TZA:n tunnuksia TÄSMÄLLEEN ("Dar-Es-Salaam",
+   * "Kaskazini-Unguja", "Zanzibar South and Central", "Zanzibar West").
+   * Vain `lyhyt`. Vältetty maastokohteet-tza.js:n aiheet (Kilimandžaro-
+   * vuori, Tanganjikajärvi, Olduvai, Serengeti, Kondoa, Kilwa Kisiwani,
+   * Bagamoyo, Ujiji, Taboran kaupunki, Kalambo). Lähteet (en-Wikipedia ja
+   * haku, tarkistettu 25.9.2026), epävarmimmat erikseen:
+   *   Dar-Es-Salaam — Kariakoo (Carrier Corps, 1916)
+   *   Dodoma        — Tanzanian wine (kaksi satoa vuodessa)
+   *   Geita         — Rubondo Island NP (simpanssit 1966–1969)
+   *   Iringa        — Isimila Stone Age Site
+   *   Kusini-Pemba  — Pemban neilikat (noin 70 % Sansibarin sadosta)
+   *   Lindi         — Tendaguru, Giraffatitan (Museum für Naturkunde)
+   *   Njombe        — Kitulo NP ("Bustani ya Mungu", noin 45 orkidealajia)
+   *   Pwani         — Mafia Island (valashait loka–maaliskuu)
+   *   Rukwa         — Lake Rukwa (endorheinen)
+   *   Ruvuma        — Unity Bridge (avattu 12.5.2010)
+   *   Shinyanga     — Williamson pink diamond (1947)
+   *   Simiyu        — puuvilla (yli puolet Tansanian puuvillapinta-alasta)
+   *   Singida       — auringonkukka (noin 25 % maan sadosta)
+   *   Tabora        — hunaja (noin puolet Tansanian tuotannosta)
+   *   Muut          — yleistietoa, tarkistettu vastaavista
+   *                   en-Wikipedia-artikkeleista.
+   */
+  TZA: {
+    Arusha: {
+      lyhyt: 'Ngorongoron kraatteri on valtava sortunut tulivuori, jonka pohjalla elää gnuita, seeproja ja leijonia.',
+    },
+    'Dar-Es-Salaam': {
+      lyhyt: 'Kariakoon tori on saanut nimensä ensimmäisen maailmansodan brittiläisestä kantajajoukosta, Carrier Corpsista, jonka leiri oli paikalla.',
+    },
+    Dodoma: {
+      lyhyt: 'Dodoman kuivilla hiekkamailla kasvatetaan viinirypäleitä, ja lämmön ansiosta satoja voi korjata kaksi vuodessa.',
+    },
+    Geita: {
+      lyhyt: 'Rubondon saarelle Viktoriajärvessä tuotiin 1960-luvulla simpansseja, ja niiden jälkeläiset elävät saarella yhä vapaina.',
+    },
+    Iringa: {
+      lyhyt: 'Isimilan rotkossa kohoaa eroosion muovaamia hiekkakivipylväitä, ja sieltä on löydetty satojentuhansien vuosien takaisia kivikirveitä.',
+    },
+    Kagera: {
+      lyhyt: 'Kagera-joki, jota pidetään Niilin pisimpänä latvajokena, laskee alueella Viktoriajärveen.',
+    },
+    'Kaskazini-Pemba': {
+      lyhyt: 'Pohjois-Pemban Ngezin metsässä elää pemban lentokoira, suuri hedelmälepakko, jota ei tavata missään muualla.',
+    },
+    Katavi: {
+      lyhyt: 'Katavin kansallispuistossa kuivan kauden lopulla sadat virtahevot ahtautuvat Katuma-joen viimeisiin lätäköihin.',
+    },
+    Kigoma: {
+      lyhyt: 'Gomben kansallispuistossa Jane Goodall aloitti simpanssitutkimuksensa 1960, ja työ jatkuu siellä yhä.',
+    },
+    Kilimanjaro: {
+      lyhyt: 'Moshin ympäristön kylissä kahvipensaat kasvavat banaanipuiden varjossa chaggojen perinteisissä kotipuutarhoissa.',
+    },
+    'Kusini-Pemba': {
+      lyhyt: 'Pemban saari tuottaa suurimman osan Sansibarin neilikoista, ja sadonkorjuun aikaan nuput kuivuvat kylien pihoilla.',
+    },
+    Lindi: {
+      lyhyt: 'Lindin lähellä Tendagurussa kaivettiin 1900-luvun alussa dinosaurusluita, joista koottu Giraffatitan seisoo nyt Berliinin museossa.',
+    },
+    Manyara: {
+      lyhyt: 'Tarangiren kansallispuisto on tunnettu mahtavista baobabeistaan ja kuivan kauden suurista norsulaumoista.',
+    },
+    Mara: {
+      lyhyt: 'Butiaman kylässä syntyi Tansanian ensimmäinen presidentti Julius Nyerere, ja hänen kotinsa on nyt museo.',
+    },
+    Mbeya: {
+      lyhyt: 'Matemassa Malawijärven pohjoispäässä Livingstonen vuoret nousevat jyrkkinä suoraan hiekkarannalta.',
+    },
+    Morogoro: {
+      lyhyt: 'Udzungwan vuorten Sanjen vesiputous syöksyy sademetsän keskellä noin 170 metriä alas.',
+    },
+    Mtwara: {
+      lyhyt: 'Makondeylängön veistäjät tunnetaan mustapuusta kaiverretuista, toisiinsa kietoutuvista ihmishahmoista.',
+    },
+    Mwanza: {
+      lyhyt: 'Mwanzaa kutsutaan kalliokaupungiksi graniittilohkareidensa vuoksi, ja Bismarckin kallio kohoaa Viktoriajärven rantavedestä.',
+    },
+    Njombe: {
+      lyhyt: 'Kitulon ylänköä kutsutaan swahiliksi Jumalan puutarhaksi, sillä sadekaudella sen niityillä kukkii kymmeniä orkidealajeja.',
+    },
+    Pwani: {
+      lyhyt: 'Mafian saaren Kilindonin lahdella voi uida valashaiden kanssa, varsinkin lokakuusta maaliskuuhun.',
+    },
+    Rukwa: {
+      lyhyt: 'Rukwajärvellä ei ole laskujokea, joten sen koko vaihtelee paljon sateiden mukaan.',
+    },
+    Ruvuma: {
+      lyhyt: 'Ruvuma-joen yli Mosambikiin kulkeva Unity Bridge avattiin 2010, vaikka siltaa oli suunniteltu jo 1970-luvulta asti.',
+    },
+    Shinyanga: {
+      lyhyt: 'Mwaduin timanttikaivoksesta löytyi 1947 vaaleanpunainen timantti, joka annettiin prinsessa Elisabetille häälahjaksi.',
+    },
+    Simiyu: {
+      lyhyt: 'Simiyu on Tansanian suurin puuvillan tuottaja, ja sen pelloilla viljellään myös luomupuuvillaa.',
+    },
+    Singida: {
+      lyhyt: 'Singidan seutu tuottaa enemmän auringonkukkaa kuin mikään muu Tansanian alue, ja siemenistä puristetaan ruokaöljyä.',
+    },
+    Tabora: {
+      lyhyt: 'Taboran alueen miombometsissä tarhataan mehiläisiä, ja alue tuottaa suuren osan koko Tansanian hunajasta.',
+    },
+    Tanga: {
+      lyhyt: 'Tangan pohjoispuolella ovat Ambonin kalkkikiviluolat, Itä-Afrikan laajimpia luolastoja.',
+    },
+    'Kaskazini-Unguja': {
+      lyhyt: 'Nungwin kylässä Sansibarin pohjoiskärjessä veistetään yhä puisia dhow-veneitä käsin rannan veistämöillä.',
+    },
+    'Zanzibar South and Central': {
+      lyhyt: 'Jozanin metsässä elää Sansibarin punainen kolobusapina, jota ei tavata missään muualla maailmassa.',
+    },
+    'Zanzibar West': {
+      lyhyt: 'Sansibarin Kivikaupungin kujilla näkee taidokkaasti kaiverrettuja puuovia, joista osassa on messinkinupit.',
+    },
+  },
+  /*
+   * ETH (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 7C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.ETH:n tunnuksia TÄSMÄLLEEN ("Benshangul-Gumaz",
+   * "Gambela Peoples", "Harari People", "Oromiya", "Southern Nations,
+   * Nationalities and Peoples"). Vain `lyhyt`. Vältetty maastokohteet-
+   * eth.js:n aiheet (Ras Dejen, Tanajärvi, Sininen Niili, Aksum, Fasil
+   * Ghebbi, Harar, Tiya, Debre Damo, Danakil, Hadar, Bale). Tigray ja
+   * Benishangul vain maisema-, kulttuuri- ja historia-aiheilla. Lähteet
+   * (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Afar            — Lake Abbe (kalkkikivipiiput)
+   *   Dire Dawa       — rautatie 24.12.1902
+   *   Gambela Peoples — Great Nile Migration (valkokorvakob)
+   *   Harari People   — Harari Region (pienin), harari-kieli
+   *   Oromiya         — Irreechaa (Hora Arsadi, Bishoftu)
+   *   Tigray          — Abuna Yemata Guh (Gheralta)
+   *   Muut            — yleistietoa, tarkistettu vastaavista
+   *                     en-Wikipedia-artikkeleista.
+   */
+  ETH: {
+    'Addis Ababa': {
+      lyhyt: 'Addis Abeba tarkoittaa amharaksi uutta kukkaa; kaupunki perustettiin 1886 yli 2 300 metrin korkeuteen.',
+    },
+    Afar: {
+      lyhyt: 'Abbejärven rannalla Djiboutin rajalla kohoaa kymmeniä metrejä korkeita kalkkikivipiippuja, joista osa höyryää yhä.',
+    },
+    Amhara: {
+      lyhyt: 'Lalibelan yksitoista kirkkoa on hakattu suoraan kallioon 1100–1200-luvuilla, ja niissä pidetään yhä jumalanpalveluksia.',
+    },
+    'Benshangul-Gumaz': {
+      lyhyt: 'Asosan seudulla berttojen kylissä kultaa huuhdotaan yhä perinteisesti jokien hiekasta.',
+    },
+    'Dire Dawa': {
+      lyhyt: 'Dire Dawa syntyi 1902, kun Djiboutista Addis Abebaan rakennettu rautatie saavutti seudun.',
+    },
+    'Gambela Peoples': {
+      lyhyt: 'Gambelan kansallispuiston kautta kulkee Afrikan suurimpiin kuuluva vaellus, jossa liikkuu miljoonia kob-antilooppeja.',
+    },
+    'Harari People': {
+      lyhyt: 'Harari on Etiopian pienin alue, ja sen oma harari on seemiläinen kieli, jota puhuu vain muutama kymmenentuhatta ihmistä.',
+    },
+    Oromiya: {
+      lyhyt: 'Bishoftun Hora Arsadi -järvellä vietetään sadekauden päättyessä Irreecha-kiitosjuhlaa, johon tuodaan vihreää ruohoa ja kukkia.',
+    },
+    Somali: {
+      lyhyt: 'Somalialueen pääkaupunki Jijiga on noin 1 600 metrin korkeudessa, joten sen ilma on viileämpi kuin alavilla tasangoilla.',
+    },
+    'Southern Nations, Nationalities and Peoples': {
+      lyhyt: 'Konson kuivilla rinteillä kiviterassit pidättävät vettä ja maata, ja viljelymaisema on Unescon maailmanperintöä.',
+    },
+    Tigray: {
+      lyhyt: 'Gheraltan vuorilla Abuna Yemata Guhin kirkko on hakattu jyrkänteeseen, ja sinne kiivetään paljain jaloin.',
+    },
+  },
+  /*
+   * GHA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 7C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.GHA:n tunnuksia TÄSMÄLLEEN (vanha kymmenen alueen
+   * jako, "Brong Ahafo"). Vain `lyhyt`. Vältetty maastokohteet-gha.js:n
+   * aiheet (Afadja, Voltajärvi, Elmina, Kakum, Larabanga, Mole, Nzulezo,
+   * Osun linna, Paga, Prinzenstein). Lähteet (en-Wikipedia ja haku,
+   * tarkistettu 25.9.2026):
+   *   Brong Ahafo   — Boabeng-Fiema Monkey Sanctuary
+   *   Central       — Aboakyer festival (Winneba)
+   *   Eastern       — Krobo-helmet (Odumase)
+   *   Greater Accra — Fantasy coffin (Teshie)
+   *   Northern      — Bugum Chugu
+   *   Upper West    — Wechiau Community Hippo Sanctuary
+   *   Volta         — Agbamevo-juhla (Agotime, Kpetoe)
+   *   Western       — Cape Three Points (majakka 1925)
+   *   Muut          — yleistietoa, tarkistettu vastaavista
+   *                   en-Wikipedia-artikkeleista.
+   */
+  GHA: {
+    Ashanti: {
+      lyhyt: 'Ashantien Kultainen jakkara on kansan pyhin symboli, eikä sen päällä istu kukaan, ei edes kuningas.',
+    },
+    'Brong Ahafo': {
+      lyhyt: 'Boabengin ja Fieman kylissä apinat ovat pyhiä, ja kuollut apina haudataan arkussa kuin ihminen.',
+    },
+    Central: {
+      lyhyt: 'Winneban Aboakyer-juhlassa kaksi paikallista joukkoa kilpailee siitä, kumpi saa ensin elävän pensasantiloopin kiinni.',
+    },
+    Eastern: {
+      lyhyt: 'Krobon kylissä rikotuista pulloista jauhettu lasi sulatetaan savimuoteissa värikkäiksi helmiksi.',
+    },
+    'Greater Accra': {
+      lyhyt: 'Teshien puusepänverstaissa tehdään arkkuja kalan, auton tai kaakaohedelmän muotoon vainajan elämän mukaan.',
+    },
+    Northern: {
+      lyhyt: 'Tamalen seudulla dagombat viettävät tulijuhlaa, jossa soihtukulkueet valaisevat yön kaduilla.',
+    },
+    'Upper East': {
+      lyhyt: 'Bolgatangan seudulla punotaan norsuheinästä värikkäitä koreja, joita viedään myyntiin ympäri maailmaa.',
+    },
+    'Upper West': {
+      lyhyt: 'Wechiaussa Mustan Voltan varrella kylät suojelevat virtahepoja, joita voi katsella veneestä aamuin ja illoin.',
+    },
+    Volta: {
+      lyhyt: 'Agotimen Kpetoessa ewet kutovat kentekangasta, ja joka elokuu järjestettävillä juhlilla kutojat kilpailevat taidoistaan.',
+    },
+    Western: {
+      lyhyt: 'Kolmen kärjen niemi on Ghanan eteläisin kohta, ja sen majakka on toiminut vuodesta 1925.',
+    },
+  },
 };
