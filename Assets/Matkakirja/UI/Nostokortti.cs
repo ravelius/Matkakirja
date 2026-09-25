@@ -6,7 +6,7 @@
 // Kuva edellä kahdessa vaiheessa (js/nostokuva.js): 1) pelkkä kuva, lyhyt kuvateksti ja
 // LISÄÄ; 2) koko kortti (kuvasarja ‹ › ja laskuri, teksti kappaleittain, lajin lohkot).
 // Kuvaton kortti aukeaa suoraan vaiheeseen 2. Kuvan napautus vaiheessa 2 avaa suurennoksen
-// (pitkä selite ja lähderivi). Sulkeminen: × tai napautus kortin ohi.
+// (pitkä selite ja lähderivi). Sulkeminen: napautus kortin ohi tai kortin tekstiin/pohjaan (löydös 133: ei ✕-nappia).
 //
 //   skandaali  nimiö LISÄLEHTI, "paikka · vuosi" kaksoisviivojen välissä, otsikko, ingressi,
 //              kuvat, teksti, minivisa (+50, Kaupat.Minitehtava(iso, "skandaali:<id>"))
@@ -28,7 +28,7 @@
 // Pelin tila muuttuu vain PeliOhjain.KauppaTeko-kutsuilla (Pelikoodari). Kerros 40, pallo lukittu.
 // Kohdekortin korostetut sanat (web fokuskohteet piirraKorostettuSana): kunkin korostuksen
 // ensimmäinen esiintymä tekstissä on alleviivattu linkki, napautus → pulu "Kerro lisää: X (kohteessa Y)".
-// Kaiutin (web js/lukija.js lisaaLukijanappi, KortinLukija) vaiheessa 2 sulkuruksin vieressä.
+// Kaiutin (web js/lukija.js lisaaLukijanappi, KortinLukija) vaiheessa 2 ylärivin oikeassa päässä (löydös 133).
 // PAIKKA (E3, Fable 24.9.): kuvallinen kortti aukeaa keskelle kuten webin kuva edellä -kortti (js/nostokuva.js
 // "KUVA EDELLÄ -KORTTI EI SEURAA MERKKIÄÄN"); kuvaton kortti ja lisäkaupunki napautuspisteen viereen ilman
 // himmennystä (web asetaKohteenPaikka / asemoiKaupunkipopup): leveys min(384, 86 % ruudusta), rako 12 px merkin
@@ -39,7 +39,7 @@
 // päällä napautus on sulku, painikkeen päällä valinta; matka < 6 px ja kesto < 700 ms). Testikomennot painavat kortin
 // nappeja nimellä (Testaa: lisaa, ihme, leikekirja, kartalla, liite, valokuva, vastaa<n>, juliste).
 // LISÄKAUPUNKI (web kaupunkinosto.js avaaLisakaupunginKortti, kohde.kaupunkikortti ohittaa kohdekortin):
-// ✕, otsikkona kaupungin nimi, herokuva (kuvateksti ja lähderivi; ilman kuvaa paikkamerkki nimellä),
+// otsikkona kaupungin nimi, herokuva (kuvateksti ja lähderivi; ilman kuvaa paikkamerkki nimellä),
 // esittely kappaleittain ja yksi kaupunkiin ankkuroitu nosto (otsikko + teksti). Ei visaa eikä kaiutinta.
 using System;
 using System.Collections.Generic;
@@ -56,7 +56,6 @@ namespace Matkakirja.Natiivi
         // Suurennos selattavana sarjana (web fokuskohteet.js avaaKohdeSuurennos ‹ ›).
         readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
-        readonly Button sulje;
         readonly KortinLukija lukija;
 
         Nosto nosto;
@@ -95,8 +94,6 @@ namespace Matkakirja.Natiivi
             sisus.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
-            sulje = Rakenne.Nappi(null, "mk-nosto__sulje", Sulje, kortti, Ikonit.Viiva["rasti"]); // E4: web ✕
-            sulje.tooltip = "Sulje";
             lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
             kortti.RegisterCallback<GeometryChangedEvent>(_ => { if (ankkuroitu) Asemoi(); });
@@ -529,7 +526,6 @@ namespace Matkakirja.Natiivi
             AsetaPaikka(true);
             sisus.Clear();
             sisus.scrollOffset = Vector2.zero;
-            sulje.style.display = DisplayStyle.Flex;
             lukija.Aseta(null);
 
             Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
@@ -574,7 +570,6 @@ namespace Matkakirja.Natiivi
             napit.Clear();
             napit["lisaa"] = Vaihe2;
             sisus.scrollOffset = Vector2.zero;
-            sulje.style.display = DisplayStyle.None;
             lukija.Aseta(null);
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
@@ -599,7 +594,6 @@ namespace Matkakirja.Natiivi
             rivi = kuvapalsta = tekstipalsta = null;
             napit.Clear();
             sisus.scrollOffset = Vector2.zero;
-            sulje.style.display = DisplayStyle.Flex;
             kortti.RemoveFromClassList("mk-nosto--esittely");
             var n = nosto;
             // Web: lööppi kuuluu luentaan; otsikko lajin mukaan (skandaalit.js, historian-hetket.js,
@@ -611,7 +605,8 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
                 : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina" : "Kuuntele hetki");
 
-            Ylarivi(sisus, n);
+            // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
+            Ylarivi(sisus, n).Add(lukija.Nappi);
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
@@ -691,7 +686,7 @@ namespace Matkakirja.Natiivi
         /// Generoitu kuva UI/Resources/Symbolit/sym-*.png (web assets/kartat/symbolit/sym-*.webp); hetki ja ihme ovat
         /// webissä koodipiirtäjiä, joten niille ei ole kuvaa (rivi ilman symbolia).
         /// </summary>
-        static void Ylarivi(VisualElement isa, Nosto n)
+        static VisualElement Ylarivi(VisualElement isa, Nosto n)
         {
             var rivi = Rakenne.El("mk-nosto__ylarivi mk-nosto__ylarivi--rivi", isa, PickingMode.Ignore);
             Kirjasimet.Aseta(rivi, Kirjasin.Kone);
@@ -702,6 +697,7 @@ namespace Matkakirja.Natiivi
                 symboli.style.backgroundImage = new StyleBackground(kuva);
             }
             Rakenne.Teksti(n.Luokka ?? "", "mk-nosto__ylarivi-teksti", rivi);
+            return rivi;
         }
 
         // --- lajien lohkot ------------------------------------------------------------------
