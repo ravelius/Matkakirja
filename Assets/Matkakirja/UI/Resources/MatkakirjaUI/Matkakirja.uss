@@ -877,8 +877,10 @@
     translate: 0 0;
 }
 
+/* Web .paavalikko on sisältönsä levyinen: mitattu 244,6 (napit 217 + täyte 12,8 × 2 + reunus), iPad 834 × 1194,
+ * tuotanto 25.9. (pariteetti #18). Natiivin omat osiot (Retkikunta, Kokeet) rivittyvät samaan leveyteen. */
 .mk-paavalikko {
-    width: 320px;
+    width: 244.6px;
 }
 
 /* Web äänipaneeli on sisältönsä levyinen (296,36). */
