@@ -145,24 +145,60 @@ namespace Matkakirja.Natiivi
         /// joukon saapumismaalle taustalla, tiedosto kerrallaan ja kehys välissä (jäsennys pääsäikeessä). Kuvia ei esiladata,
         /// koska web ei esilataa tuntemattomien nostojen kuvia.
         /// </summary>
-        public static IEnumerator Esilataa(string iso)
+        public static IEnumerator Esilataa(string iso, Taso taso = Taso.TamaKaupunki)
         {
             if (string.IsNullOrEmpty(iso)) yield break;
             string pieni = iso.ToLowerInvariant(), suuri = iso.ToUpperInvariant();
-            yield return ValojenMaat();
+            // Esilataaja: tämän kaupungin taso (näkyvä nosto ohittaa).
+            yield return ValojenMaat(taso);
             foreach (var k in new[] { "skandaalit", "historianHetket", "elaintayt", "takynostot" })
             {
                 yield return null;
-                yield return LataaKokoelma(k);
+                yield return LataaKokoelma(k, taso);
             }
             foreach (var (tiedosto, vienti) in new[] { ("fokuskohteet", "FOKUSKOHTEET"), ("maastokohteet", "MAASTOKOHTEET"),
                                                        ("hahmotelma", "HAHMOTELMA"), ("nakyvat-kaupungit", "NAKYVAT_KAUPUNGIT") })
             {
                 yield return null;
-                yield return ModuuliArvo($"moduulit/js/packs/{tiedosto}-{pieni}.json", $"{vienti}_{suuri}", _ => { });
+                yield return ModuuliArvo($"moduulit/js/packs/{tiedosto}-{pieni}.json", $"{vienti}_{suuri}", _ => { }, taso);
             }
             Debug.Log("MATKAKIRJA ui nostot: esiladattu " + suuri);
         }
+
+        /// <summary>
+        /// ESILATAUSPOLITIIKKA kohta 4 (Pelikoodari, Esilataaja erä 3; Raamattu voittaa yllä mainitun webin rajauksen):
+        /// joutilaana maan karttanostojen kuvat levylle — ensin jokaisen noston ensimmäinen kuva, sitten galleria.
+        /// Kortin data tulee <see cref="Esilataa"/>-välimuistista; kuvat kulkevat Kuvat.Esilataa-reittiä (sama levy kuin
+        /// kortin HaeKuva). Palauttaa esiladattujen kuvien määrän lokiin.
+        /// </summary>
+        public static IEnumerator EsilataaKuvat(string iso, Taso taso = Taso.TamaKaupunki)
+        {
+            if (string.IsNullOrEmpty(iso)) yield break;
+            yield return Esilataa(iso, taso);
+            if (valot == null) yield break;
+            string suuri = iso.ToUpperInvariant();
+            var ensin = new List<string>();
+            var galleria = new List<string>();
+            foreach (var id in valot.Where(v => string.Equals(v.Value.Maa, suuri, StringComparison.OrdinalIgnoreCase)).Select(v => v.Key).ToList())
+            {
+                Nosto n = null;
+                yield return Hae(id, x => n = x);
+                if (n == null) continue;
+                var kuvat = n.Kuvat.Append(n.Valokuva).Append(n.Ihme).Select(k => k?.Lahde)
+                    .Where(l => !string.IsNullOrEmpty(l)).Distinct().ToList();
+                if (kuvat.Count == 0) continue;
+                ensin.Add(kuvat[0]);
+                galleria.AddRange(kuvat.Skip(1));
+            }
+            bool mediaValmis = false;
+            Media(() => mediaValmis = true);
+            while (!mediaValmis) yield return null;
+            foreach (var l in ensin.Concat(galleria).Distinct()) Natiivi.Kuvat.Esilataa(KuvanOsoite(l), taso);
+            Debug.Log($"MATKAKIRJA ui nostot: kuvat esiladataan {suuri} ({ensin.Count} + {galleria.Count})");
+        }
+
+        static string KuvanOsoite(string lahde) =>
+            lahde.StartsWith("http") ? lahde : media != null && media.TryGetValue(lahde, out var url) ? url : lahde;
 
         // --- haku --------------------------------------------------------------------------
 
@@ -396,12 +432,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kokoelma kerran muistiin (id → data; maa talteen kenttään $maa).</summary>
-        static IEnumerator LataaKokoelma(string kokoelma)
+        static IEnumerator LataaKokoelma(string kokoelma, Taso taso = Taso.Nakyva)
         {
             if (!kokoelmat.TryGetValue(kokoelma, out var taulu))
             {
                 string teksti = null;
-                yield return Sisalto.HaeTeksti(kokoelma, t => teksti = t, valinnainen: true);
+                yield return Sisalto.HaeTeksti(kokoelma, t => teksti = t, true, taso);
                 taulu = new Dictionary<string, Dictionary<string, object>>();
                 try
                 {
@@ -429,11 +465,11 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static IEnumerator ValojenMaat()
+        static IEnumerator ValojenMaat(Taso taso = Taso.Nakyva)
         {
             if (valot != null) yield break;
             string teksti = null;
-            yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, true, taso);
             var m = new Dictionary<string, Valo>();
             try
             {
@@ -530,13 +566,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Moduulin vienti (taulukko tai olio) kerran muistiin; kääre {arvo} puretaan taulukolta.</summary>
-        static IEnumerator ModuuliArvo(string polku, string vienti, Action<object> valmis)
+        static IEnumerator ModuuliArvo(string polku, string vienti, Action<object> valmis, Taso taso = Taso.Nakyva)
         {
             string avain = polku + "#" + vienti;
             if (!moduulit.TryGetValue(avain, out var arvo))
             {
                 string teksti = null;
-                yield return Sisalto.HaePaketista(polku, t => teksti = t, true);
+                yield return Sisalto.HaePaketista(polku, t => teksti = t, true, taso);
                 try
                 {
                     var v = Ob(MiniJson.Kentta(Ob(MiniJson.Jasenna(teksti ?? "{}")), "exportit"));

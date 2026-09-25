@@ -67,6 +67,14 @@ namespace Matkakirja
             if (doc != null) Destroy(doc.gameObject);
         }
 
+        // LÄMPÖERÄ (PallonLepo): kerros näkyy = kone ja viiva liikkuvat portin kierroksen mukana tai kerros häipyy 0,4 s
+        // portin sulkeuduttua. Portti piirretään LEPO-tilassa 30 fps:llä (Fable 25.9. klo 20.1x, PalloKierto.Liikkeessa
+        // ei enää sisällä porttia): tämä ehto pitää piirron joka kehyksessä myös pysäytetyllä kierroksella (etusivu
+        // pysayta). Oma UI Toolkit -paneeli ei kuulu Natiivi-UI:n lepokyselyyn.
+        void OnEnable() => PallonLepo.Animoi(Nakyy, "etusivulento");
+        void OnDisable() => PallonLepo.Poista(Nakyy);
+        bool Nakyy() => peitto > 0f;
+
         void Luo()
         {
             // Sama pohja kuin UiKerroksella (tuo UI:n ja filttereiden shaderit iOS-käännökseen); skaala 1 = paneelin

@@ -59,5 +59,64 @@ namespace Matkakirja
             float askel = Math.Max(0f, dt) / kestoS;
             return nykyinen < tavoite ? Math.Min(tavoite, nykyinen + askel) : Math.Max(tavoite, nykyinen - askel);
         }
+
+        // ---- MAAKUNTARAJAT (omistajan löydös 113, build 14: liian voimakkaat) ----
+        //
+        // WEBIN LÄHDE: web ei piirrä maakuntarajoja vektorina (js/pallomaakunnat.js on pelkkä täyttö, pallovektorit.js
+        // piirtää vain rannat, valtionrajat ja pelaajan maan kehän). Rajat ovat NIMIÖTASON RASTERISSA:
+        // tools/fokuskartta/maailmapiirto.js:4550–4551 RAJAN_LEVEYDET { 6: 1,0, 7: 1,5, 8: 2,2 } px ja RAJAN_VARI
+        // rgba(70, 48, 29, 0,45), piirto :4897–4907 (pyöreä liitos ja pää). Tuotannon nimiötaso 2026-09-22g-nimiot
+        // (julisteet/pyramidi/pyramidi.json nimiotaso.nimiot raja-*: FRA+DEU, ITA, ESP, GBR, POL, AUT, CHE, tasot 6–8),
+        // 512 px:n Miller-laatat, z6 = 43 200 px / 360° = 120 px pituusastetta kohti. Pallo valitsee tason ruudun
+        // tiheydestä (js/pallolaatat.js lepokerroksenTaso: matalin taso, jonka leveys/360 ≥ laitepx/leveysaste), joten
+        // viiva on ruudulla leveys_px · tiheys · cos φ / tason_px_aste laitepikseliä ja näkyy vasta z6:sta.
+        // Pallomaakuntien täyttö (peitto 0,34) piirtyy RASTERIN PÄÄLLE, joten webissä viivan peitto on 0,45 · 0,66.
+        // Mitattu (lokit/maakunnat-kaikki/web, iPhone @2x): 1-ranska.jpg tiheys ~142 → ~1,0 laitepx (z6: puhelimen
+        // laattakatto pudotti tason, sääntö antaisi z7:n 0,6 px), 2-provence.jpg ~615 → ~2,4 laitepx (z8: 2,0 px);
+        // muste neutraalin tumma (RGB-pudotus 38/39/37 = seepia, ei ruoste).
+
+        /// <summary>Pyramidin z6:n tiheys, px pituusastetta kohti (tason z tiheys 120 · 2^(z − 6)).</summary>
+        public const double AluerajaZ6PxAste = 120.0;
+        /// <summary>Web RAJAN_LEVEYDET tasoille 6, 7, 8 (laatan pikseleinä).</summary>
+        public static readonly double[] AluerajaLeveysPx = { 1.0, 1.5, 2.2 };
+        /// <summary>Viiva näkyy vasta z6:lla: z5 (60 px/°) riittää tiheyteen 60 asti.</summary>
+        public const double AluerajaMinTiheys = AluerajaZ6PxAste / 2;
+        /// <summary>Web RAJAN_VARI (sRGB 0–1) ja peitto; pallomaakuntien täyttö 0,34 on rasterin päällä.</summary>
+        public static readonly double[] AluerajaMuste = { 70 / 255.0, 48 / 255.0, 29 / 255.0 };
+        public const double AluerajaPeittoWeb = 0.45 * (1 - 0.34);
+        /// <summary>Sama lineaarisessa sekoituksessa maan pohjalla (NimiLadonta.LineaarinenAlfa, PohjaMaa).</summary>
+        public static readonly double AluerajaPeittoNatiivi =
+            NimiLadonta.LineaarinenAlfa(AluerajaMuste, AluerajaPeittoWeb, NimiLadonta.PohjaMaa);
+
+        /// <summary>Webin pallon pyramiditaso ruudun tiheydelle (laitepx/leveysaste): 0…8, syvin 8.</summary>
+        public static int AluerajaTaso(double tiheys)
+        {
+            if (double.IsNaN(tiheys) || tiheys <= 0) return 0;
+            for (int z = 0; z < 8; z++)
+                if (AluerajaZ6PxAste * Math.Pow(2, z - 6) >= tiheys) return z;
+            return 8;
+        }
+
+        /// <summary>Webin maakuntarajan leveys ruudulla laitepikseleinä (0 alle z6:n); lat = näkymän keskikohdan leveys.</summary>
+        public static double AluerajaLaitePx(double tiheys, double lat)
+        {
+            int z = AluerajaTaso(tiheys);
+            if (z < 6) return 0;
+            double cos = Math.Max(0.05, Math.Cos((double.IsNaN(lat) ? 0 : lat) * Math.PI / 180.0));
+            return AluerajaLeveysPx[z - 6] * tiheys * cos / (AluerajaZ6PxAste * Math.Pow(2, z - 6));
+        }
+
+        /// <summary>
+        /// Rajaviiva-varjostimen paksuus (pt) ja peiton kerroin, joilla viivan poikkileikkauksen peitto (∫ alfa) on
+        /// <paramref name="laitePx"/>: täysi ydin pt·k − 0,5 + reunat antavat pt·k + 0,5, kun puolileveys px = pt·k/2 + 0,75
+        /// on vähintään 1; ohuemmalla px² (pt 0 → 0,5625), ja sitä ohuempi viiva himmenee peitolla.
+        /// </summary>
+        public static (double Pt, double Alfa) AluerajaPiirto(double laitePx, double kerroin)
+        {
+            if (!(laitePx > 0) || !(kerroin > 0)) return (0, 0);
+            if (laitePx >= 1) return ((laitePx - 0.5) / kerroin, 1);
+            if (laitePx >= 0.5625) return (2 * (Math.Sqrt(laitePx) - 0.75) / kerroin, 1);
+            return (0, laitePx / 0.5625);
+        }
     }
 }

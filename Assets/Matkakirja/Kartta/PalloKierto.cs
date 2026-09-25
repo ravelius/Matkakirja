@@ -141,11 +141,17 @@ namespace Matkakirja
 
         /// <summary>Editorin pelitila ilman domain reloadia: staattinen tila ei jää edellisestä ajosta.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaPortti() { PorttiSumea = false; KuvaSumea = false; LinssiAuki = false; PorttiAikaSeis = false; }
+        static void NollaaPortti()
+        {
+            PorttiSumea = false; KuvaSumea = false; LinssiAuki = false; PorttiAikaSeis = false;
+            siirtoAlku = siirtoKohde = siirtoNyt = Vector2.zero; siirtoT = 1f;
+        }
 
         /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
         public bool Portissa => porttiTila;
         bool porttiTila;
+        /// <summary>Käynnistyksen porttiasento asetettu (kerran, aloitusverhon takana).</summary>
+        bool alkuAsento;
         PalloSumennus sumennus;
         Etusivulento etusivulento;
 
@@ -161,8 +167,24 @@ namespace Matkakirja
         /// <summary>Testikomento "etusivu pysayta|jatka": kierrosaika seis (kuvaus samasta hetkestä kuin web).</summary>
         public static bool PorttiAikaSeis { get; set; }
 
-        /// <summary>Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee).</summary>
-        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila || pohjoiseen;
+        /// <summary>
+        /// Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee; Ruudunpaivitys: täysi taajuus).
+        /// Lämpöerä (25.9.): myös kameran omat liikkeet, joita ennen ei laskettu: lennon suuntiman ja katseen palautus
+        /// (Palauta) ja pallon oma pyöritys ennen ensimmäistä kosketusta. Muuten ne olisivat vain PallonLepon kameraehdon
+        /// varassa (LEPO 30 fps), eikä liikkeen sulavuus saa huonontua (Raamattu).
+        /// ALOITUSPORTTI EI OLE LIIKETTÄ (Fable 25.9. klo 20.1x): portin hidas pyöritys (PorttiKierto) piirretään LEPO-tilassa
+        /// 30 fps:llä. Pallo ei silti lepää portissa: kameraehto (PallonLepo) näkee pyörityksen joka kehys, ja portin
+        /// sumennuksen liuku ja etusivulento ovat PallonLepon animaatioita, joten piirto ei harvene (ei PAIKALLAAN).
+        /// Kosketus ja kamera-ajot pysyvät täydellä taajuudella.
+        /// </summary>
+        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || pohjoiseen
+                                  || LinssisiirtoLiukuu || Palautuu || PyoriiItse;
+
+        /// <summary>Lennon suuntima tai katseen korkeus palautuu (Update → Palauta).</summary>
+        bool Palautuu => !Seurataan && ((lennonSuuntima && suuntima != 0) || katseKorkeus != 0);
+
+        /// <summary>Pallo pyörii itsestään (Ohjaa: ei vielä kosketusta eikä ajoa, ei porttia).</summary>
+        bool PyoriiItse => Application.isPlaying && !kosketettu && ajo == null && !porttiTila && nopeus != 0.0 && georeferenssi != null;
 
         /// <summary>Nappula ohjaa kameraa (Nappula.seuraaKamera): kamera katsoo annettua pistettä.</summary>
         public bool Seurataan { get; private set; }
@@ -371,12 +393,10 @@ namespace Matkakirja
         bool eleUilla;
 
         /// <summary>
-        /// Koko näytön peittokysely (Pelikoodari: WKWebView-lehti auki). Kun tosi, pallo
-        /// piirretään harvemmin (<see cref="PeitettyVali"/>) eikä kehysmittari laske kehyksiä
-        /// lepoon: lehden sivulataus ja asettelu ajavat samassa pääsäikeessä kuin Unity.
+        /// Koko näytön peittokysely (Pelikoodari, SyoteLukko). Kun tosi, Ruudunpaivitys sammuttaa pallon kameran
+        /// (lämpöerä 25.9.2026), eikä kehysmittari laske kehyksiä lepoon.
         /// </summary>
         public Func<bool> NakymaPeitetty;
-        public static int PeitettyVali = 4;
 
         /// <summary>
         /// Kaukoleikkauksen alaraja metreinä (0 = pelkkä pallo). Linssit, jotka piirtävät
@@ -392,7 +412,8 @@ namespace Matkakirja
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA pallo: peittokysely kaatui: " + e.Message); }
             if (p == Peitetty) return;
             Peitetty = p;
-            UnityEngine.Rendering.OnDemandRendering.renderFrameInterval = p ? PeitettyVali : 1;
+            // Piirtotahti ja pallon kamera peitossa: Ruudunpaivitys (lämpöerä 25.9.; ennen renderFrameInterval 4, joka
+            // hidasti myös UI:n, löydös 101).
         }
 
         /// <summary>Kameratila muuttui tässä kehyksessä (pituus, leveys, korkeus tai kallistus).</summary>
@@ -427,10 +448,19 @@ namespace Matkakirja
             EnhancedTouchSupport.Enable();
             // Saapumisnäkymän maarajat (web saapumisrajaus): ladataan kerran taustalla.
             StartCoroutine(Saapumisrajaus.Lataa());
+            PallonLepo.Animoi(SumennusLiukuu, "pallon sumennus");
         }
+
+        /// <summary>
+        /// PallonLepo: portin tai kuvasumennuksen häivytys käynnissä (0,4 / 0,3 s). Sumennus on jälkikäsittely eikä
+        /// muuta kameraa, joten kameraehto ei näe sitä. Portin linssin liuku muuttaa projektiota (kameraehto näkee).
+        /// </summary>
+        bool SumennusLiukuu() => sumennusLiukuu;
+        bool sumennusLiukuu;
 
         void OnDisable()
         {
+            if (Application.isPlaying) PallonLepo.Poista(SumennusLiukuu);
             if (Application.isPlaying) EnhancedTouchSupport.Disable();
             // Editorissa URP-asetus on tiedosto: renderScale ei saa jäädä portin arvoon.
             sumennus?.Palauta();
@@ -445,6 +475,15 @@ namespace Matkakirja
         {
             PaivitaPeitto();
             if (georeferenssi == null) return;
+            // Kylmä käynnistys (löydös 80, BUILD 16): aloitusverhon takana kamera on heti portin alkuasennossa, jotta
+            // Cesium lataa portin laatat (laattapaketista) sillä aikaa, kun sisältö latautuu. Portti avautui kylmänä vasta
+            // ~2,9 s:n kohdalla (sisältö 1,2 s verkosta), ja siihen asti ladattiin oletusnäkymää (26 600 km).
+            if (Application.isPlaying && !alkuAsento && Aloitusverho.Nakyvissa && !porttiTila && ajo == null && !Seurataan)
+            {
+                alkuAsento = true;
+                PorttiAika = 0;
+                PorttiKierto(0);
+            }
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
             if (Application.isPlaying)
             {
@@ -460,6 +499,7 @@ namespace Matkakirja
             if (!Seurataan && ((lennonSuuntima && suuntima != 0) || katseKorkeus != 0)) Palauta(Time.unscaledDeltaTime);
             else if (!Seurataan) lennonSuuntima = false;
             if (Application.isPlaying) PaivitaMaasto();
+            if (Application.isPlaying) PaivitaLinssisiirto(Time.unscaledDeltaTime);
             Aseta();
             if (Application.isPlaying) PaivitaPorttiLinssi(Time.unscaledDeltaTime);
             var nakyma = new double4(pituus, leveys, korkeus, KaytettyKallistus + suuntima * 1000.0);
@@ -539,9 +579,12 @@ namespace Matkakirja
                 if (sumennus.Paalla && !Mathf.Approximately(sumennus.sumennusPt, tavoite)) sumennus.Aseta(false);
                 if (!sumennus.Paalla) { sumennus.sumennusPt = tavoite; sumennus.Aseta(true); }
             }
+            sumennusLiukuu = false;
             if (sumennus == null || !sumennus.Paalla) return;
             float askel = (float)dt / Mathf.Max(0.01f, sumennus.sumennusPt >= porttiSumennusPt ? porttiHaivytysS : kuvaHaivytysS);
+            float ennen = sumennus.Osuus;
             sumennus.Osuus += tavoite > 0f ? askel : -askel;
+            sumennusLiukuu = sumennus.Osuus != ennen || tavoite <= 0f;
             if (tavoite <= 0f && sumennus.Osuus <= 0f) sumennus.Aseta(false);
         }
 
@@ -603,6 +646,59 @@ namespace Matkakirja
             p[1, 2] = 2f * (float)((sov.Cy - kork / 2.0) / kork) * osuus;
             kamera.projectionMatrix = p;
             linssiAsetettu = true;
+        }
+
+        // ---- LINSSISIIRTO (Ihmisen matka II, Linssisepän tilaus 25.9.2026: "kartta väistää") ----
+        // Isot havainnekuvat peittävät osan ruudusta, joten tarinan kohta siirretään vapaaseen osaan: kamera kääntyy
+        // paikallaan niin paljon, että katsekohde osuu ruudun kohtaan (dx, dy). Ensimmäinen versio (ecfe86b1) siirsi
+        // projektion pääpistettä kuten portin linssi, mutta ihmisen matkan tähtitaivaan kaukotaso (~2,6e9 m) ja
+        // off-center-matriisi saivat URP:n kirjaamaan joka kehys "Screen position out of view frustum" (Linssisepän
+        // video 25.9., p99 49,6 ms). Kierto ei koske projektioon, joten URP, Cesium ja säteet näkevät saman kameran.
+        // Kallistus, etäisyys, suuntima ja eleiden tila pysyvät; kierto lisätään vain kameran asentoon (Aseta).
+        static Vector2 siirtoAlku, siirtoKohde, siirtoNyt;
+        static float siirtoT = 1f, siirtoKestoS;
+
+        /// <summary>
+        /// Katsekohde siirtyy ruudulla dx (oikealle) ja dy (ylös) ruudun leveyden ja korkeuden osuuksina, esim. (0, −0,25) =
+        /// kohde ruudun keskeltä alaspäin neljänneksen verran. Liuku kestoS sekunnissa (ease in/out, KAMERA-AJOT); uusi kutsu
+        /// jatkaa nykyisestä kohdasta. (0, 0) palauttaa.
+        /// </summary>
+        public static void Linssisiirto(float dx, float dy, float kestoS)
+        {
+            siirtoAlku = siirtoNyt;
+            siirtoKohde = new Vector2(Mathf.Clamp(dx, -0.5f, 0.5f), Mathf.Clamp(dy, -0.5f, 0.5f));
+            siirtoKestoS = Mathf.Max(0f, kestoS);
+            siirtoT = 0f;
+            if (siirtoKestoS <= 0f) { siirtoNyt = siirtoKohde; siirtoT = 1f; }
+        }
+
+        /// <summary>
+        /// Kameran lisäkierto, jolla optisen akselin piste (katsekohde) näkyy ruudun kohdassa (dx, dy): pystykulma
+        /// atan(2·dy·tan(fov/2)) ja vaakakulma atan(2·dx·tan(fov/2)·aspect). Nollasiirrolla identiteetti.
+        /// </summary>
+        static Quaternion LinssisiirronKierto(Camera kamera)
+        {
+            if (siirtoNyt == Vector2.zero || kamera == null) return Quaternion.identity;
+            double tanPysty = math.tan(math.radians((double)kamera.fieldOfView) * 0.5);
+            double pysty = math.degrees(math.atan(2.0 * siirtoNyt.y * tanPysty));
+            double vaaka = math.degrees(math.atan(2.0 * siirtoNyt.x * tanPysty * kamera.aspect));
+            // Unityn kamera: +X-kierto kääntää katseen alas (kuva nousee), +Y oikealle (kuva siirtyy vasemmalle).
+            // Kohde alas (dy < 0) = katse ylös = −X; kohde oikealle (dx > 0) = katse vasemmalle = −Y.
+            return Quaternion.Euler((float)pysty, (float)-vaaka, 0f);
+        }
+
+        /// <summary>Nykyinen linssisiirto (ruudun osuuksina).</summary>
+        public static Vector2 LinssisiirtoNyt => siirtoNyt;
+        /// <summary>Linssisiirto liukuu (kuva muuttuu, vaikka kamera on paikallaan: lepopiirto ei saa harventaa).</summary>
+        public static bool LinssisiirtoLiukuu => siirtoT < 1f;
+
+        static void PaivitaLinssisiirto(float dt)
+        {
+            if (siirtoT >= 1f) return;
+            siirtoT = Mathf.Min(1f, siirtoT + dt / Mathf.Max(1e-3f, siirtoKestoS));
+            // Smootherstep: nopeus ja kiihtyvyys nollassa molemmissa päissä.
+            float s = siirtoT * siirtoT * siirtoT * (siirtoT * (siirtoT * 6f - 15f) + 10f);
+            siirtoNyt = siirtoT >= 1f ? siirtoKohde : Vector2.LerpUnclamped(siirtoAlku, siirtoKohde, s);
         }
 
         /// <summary>Sallittu kallistus tällä korkeudella: kaukaa pallo katsotaan aina suoraan.</summary>
@@ -1465,10 +1561,10 @@ namespace Matkakirja
             var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.silma));
             var t = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.kohde));
             var yl = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(a.ylos));
-            transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl));
+            var kamera = GetComponent<Camera>();
+            transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl) * LinssisiirronKierto(kamera));
 
             // Leikkaustasot seuraavat korkeutta: lähellä pintaa tarkkuus riittää.
-            var kamera = GetComponent<Camera>();
             if (kamera != null)
             {
                 double r = CesiumWgs84Ellipsoid.GetMaximumRadius();

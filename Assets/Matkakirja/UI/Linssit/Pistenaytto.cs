@@ -114,6 +114,10 @@ namespace Matkakirja.Natiivi
         void Askel()
         {
             if (panel == null) { Pysayta(); return; }
+            // Lämpöerä (25.9.2026): piilossa (radiolinssi suljettu, display none) ei vieritetä eikä pyydetä piirtoa.
+            // Muuten suljetun radion näyttö likasi linssikerroksen 9 kertaa sekunnissa, eikä UI koskaan päässyt
+            // lepoon (Ruudunpaivitys PAIKALLAAN). Vieritys jatkuu samasta kohdasta, kun näyttö tulee näkyviin.
+            if (!Rakenne.Naytetaan(this)) return;
             bool liikkui = false;
             for (int i = 0; i < riveja; i++)
             {

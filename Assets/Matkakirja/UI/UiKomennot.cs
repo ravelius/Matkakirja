@@ -573,6 +573,34 @@ namespace Matkakirja.Natiivi
                     Kirjaa("piikit: " + KehysPiikit.Aloita(kesto, kynnysMs) + " merkkiä");
                     return null;
                 }
+                case "rauha":
+                {
+                    // Lämpöerä: UI:n rauha (UiKerros.Rauhassa) ja ruudunpäivityksen tila.
+                    // ui rauha [laskurit [nollaa] | diag paalle|pois | tapa versio|isdirty | erot [ms]]
+                    var ra = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string mita = ra.Length > 0 ? ra[0].ToLowerInvariant() : "";
+                    var uk = UiKerros.Hae();
+                    if (mita == "diag") { UiKerros.Diagnostiikka = !(ra.Length > 1 && ra[1] == "pois"); uk.Laskurit(true); Kirjaa("rauha: diagnostiikka " + UiKerros.Diagnostiikka); return null; }
+                    if (mita == "laskurit") { Kirjaa("rauha laskurit: " + uk.Laskurit(ra.Length > 1 && ra[1] == "nollaa")); return null; }
+                    if (mita == "tapa") { UiKerros.VersioTapa = ra.Length > 1 && ra[1] == "versio"; Kirjaa("rauha: tapa " + (UiKerros.VersioTapa ? "versio" : "isDirty")); return null; }
+                    if (mita == "erot")
+                    {
+                        int ms = ra.Length > 1 && int.TryParse(ra[1], out var m) ? m : 1000;
+                        var eka = uk.Tilakuva();
+                        uk.Juuri(UiKerros.Valikot).schedule.Execute(() =>
+                        {
+                            var toka = uk.Tilakuva();
+                            var erot = toka.Where(kv => !eka.TryGetValue(kv.Key, out var v) || v != kv.Value).Take(12).ToList();
+                            int poistuneet = eka.Keys.Count(k => !toka.ContainsKey(k));
+                            Kirjaa($"rauha erot {ms} ms: {erot.Count} muuttunutta, {poistuneet} poistunutta, {toka.Count} elementtiä");
+                            foreach (var kv in erot)
+                                Kirjaa("  " + UiKerros.Polku(kv.Key) + " | ennen " + (eka.TryGetValue(kv.Key, out var v0) ? v0 : "-") + " | nyt " + kv.Value);
+                        }).StartingIn(ms);
+                        return null;
+                    }
+                    Kirjaa("rauha: " + uk.RauhaKuvaus());
+                    return null;
+                }
                 case "skaala":
                 {
                     UiKerros.Hae().VaihdaSkaala(loput.Trim().ToLowerInvariant());

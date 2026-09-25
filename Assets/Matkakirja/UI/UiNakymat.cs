@@ -332,7 +332,7 @@ namespace Matkakirja.Natiivi
                 var o = PeliOhjain.Instanssi;
                 if (o == null) { Tilarivi.Viesti("Peli ei ole vielä käynnissä"); return; }
                 SuljeKaikki();
-                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka");
+                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka"); PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka-2");
                 Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), null);
             };
 
@@ -400,6 +400,12 @@ namespace Matkakirja.Natiivi
             // Löydös 104: maan karttanostojen data valmiiksi saapuessa (web sw.js), jotta kortti aukeaa heti.
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaNostot(kaupunki));
             EsilataaNostot(o.PelaajanKaupunki);
+            // Esilataaja erä 2 (ESILATAUSPOLITIIKKA kohta 3): kohdekaupungin kuvat ja nostodata jo lennon/matkan aikana.
+            o.SaapuminenTiedossa += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSaapuminen(kaupunki));
+            // Esilataaja erä 3: kohdat 4–5 (nopan päässä / siirtokohteena näkyvä kaupunki) ja kohta 4 (joutilaana
+            // tämän maan nostojen kuvat). Kohdekaupunkien nostodata viimeisenä (taso Muu).
+            o.KaupunkiEnnakoitu += (kaupunki, taso) => UiKerros.PaaSaikeessa(() => EsilataaSaapuminen(kaupunki, taso, Taso.Muu));
+            o.JoutilasKaupungissa += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaNostojenKuvat(kaupunki));
             // Huipennus vasta, kun viimeisen aarteen kysymys (ja sen paljastus) on suljettu: tapahtuma
             // tulee löytöhetkellä, ennen paljastusta, eikä huipennus saa jäädä paljastuksen alle.
             // Web: voittoikkuna aukeaa → sfx.play('win').
@@ -423,6 +429,48 @@ namespace Matkakirja.Natiivi
         }
 
         static string esiladattuMaa;
+
+        /// <summary>
+        /// Saapumisen kuvat levylle ennen perillä oloa (Pelikoodari, Esilataaja erä 2): isoisän luentakuvat ja PuluCam-kuvat
+        /// (Fokusvirrat), trailerin avaus- ja kansikuvat (UiSisalto) sekä maan nostodata heti (SeuraavaRuutu-taso: ei odota
+        /// lennon laattoja kuten taustataso).
+        /// </summary>
+        static void EsilataaSaapuminen(string kaupunki) => EsilataaSaapuminen(kaupunki, Taso.SeuraavaRuutu, Taso.SeuraavaRuutu);
+
+        /// <summary>Saapumisen kuvat tasolla taso ja maan nostodata tasolla nostoTaso (erä 3: ennakointi taustalla).</summary>
+        static void EsilataaSaapuminen(string kaupunki, Taso taso, Taso nostoTaso)
+        {
+            if (string.IsNullOrEmpty(kaupunki)) return;
+            Fokusvirrat.Lataa(() =>
+            {
+                var v = Fokusvirrat.Hae(kaupunki);
+                if (v == null) return;
+                foreach (var k in v.Luentakuvat) Kuvat.Esilataa(k.Osoite, taso);
+                foreach (var k in v.PuluKuvat) Kuvat.Esilataa(k.Osoite, taso);
+            });
+            var tiedot = UiSisalto.Kaupunki(kaupunki);
+            if (tiedot != null)
+            {
+                int n = 0;
+                foreach (var k in tiedot.Avauskuvat) { if (n++ >= 3) break; Kuvat.Esilataa(k.Tiedosto, taso); }
+                if (tiedot.Kansikuvat.Count > 0) Kuvat.Esilataa(tiedot.Kansikuvat[0].Tiedosto, taso);
+            }
+            var maa = tiedot?.Maa;
+            // NostoSisalto pitää jäsennetyn datan muistissa: toinen kutsu samalle maalle ei hae verkosta.
+            if (!string.IsNullOrEmpty(maa) && (nostoTaso != Taso.SeuraavaRuutu || maa != esiladattuMaa))
+            {
+                if (nostoTaso == Taso.SeuraavaRuutu) esiladattuMaa = maa;
+                UiKerros.Hae().StartCoroutine(NostoSisalto.Esilataa(maa, nostoTaso));
+            }
+            Debug.Log($"MATKAKIRJA ui: saapumisen esilataus {kaupunki} ({taso})");
+        }
+
+        /// <summary>Kohta 4 (erä 3): joutilaana tämän maan karttanostojen kuvat levylle.</summary>
+        static void EsilataaNostojenKuvat(string kaupunki)
+        {
+            var maa = kaupunki != null ? UiSisalto.Kaupunki(kaupunki)?.Maa : null;
+            if (!string.IsNullOrEmpty(maa)) UiKerros.Hae().StartCoroutine(NostoSisalto.EsilataaKuvat(maa, Taso.TamaKaupunki));
+        }
 
         /// <summary>Saapumismaan nostodata taustalla 2 s:n päästä (saapumisen animaatio ja luenta ensin); maa kerran.</summary>
         static void EsilataaNostot(string kaupunki)
@@ -465,7 +513,7 @@ namespace Matkakirja.Natiivi
         {
             SuljeKaikki();
             // Uusi peli unohtaa linssin muistin (web: linssimuisti kuuluu matkaan).
-            PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka");
+            PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka"); PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka-2");
             Aloitus.NaytaAvaus(id => Aloita(o, id), o.Lahtokaupungit());
         }
 

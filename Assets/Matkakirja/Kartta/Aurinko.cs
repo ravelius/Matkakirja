@@ -138,9 +138,17 @@ namespace Matkakirja
             sumuLoppu = loppu;
         }
 
+        // LÄMPÖERÄ (PallonLepo): valon, taustan ja usvan pehmeät siirtymät (aurinko 1,5 s, linssin kartta ja tausta 0,5 s,
+        // rinnevalo 0,5 s korkeuden mukaan) jatkuvat kameran pysähdyttyä, ja lennon aurinko (osuus > 0) elää koko ajan.
+        bool liukuu;
+        void OnEnable() => PallonLepo.Animoi(Liukuu, "aurinko");
+        void OnDisable() => PallonLepo.Poista(Liukuu);
+        bool Liukuu() => liukuu;
+
         void LateUpdate()
         {
             if (valo == null) return;
+            float osuus0 = osuus, kartta0 = kartta, tausta0 = taustaKartta, rinne0 = rinne;
             float dt = Time.unscaledDeltaTime;
             float tavoite = Paalla ? 1f : 0f;
             osuus = Mathf.MoveTowards(osuus, tavoite, dt / Mathf.Max(0.05f, siirtymaS));
@@ -154,6 +162,7 @@ namespace Matkakirja
             taustaKartta = Mathf.MoveTowards(taustaKartta, kk != null && kk.OmaTausta ? 0f : 1f, dt / 0.5f);
             float rinneTavoite = RinnevaloSallittu && kierto != null && !kierto.Portissa ? (float)Karttavalo.Osuus(kierto.korkeus) : 0f;
             rinne = Mathf.MoveTowards(rinne, rinneTavoite, dt / 0.5f);
+            liukuu = osuus > 0f || osuus != osuus0 || kartta != kartta0 || taustaKartta != tausta0 || rinne != rinne0;
             Rinne = rinne * rinne * (3f - 2f * rinne) * kartta * (1f - s);
 
             // Kameran alapisteen normaali n0 (geosentrinen, kuten tileset-varjostimen tasaus).

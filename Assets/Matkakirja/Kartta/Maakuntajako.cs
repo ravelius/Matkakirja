@@ -29,6 +29,15 @@ namespace Matkakirja
     ///
     /// Kestot Macilla (Kartta-testit, MAAKUNTARAJAT): MiniJson 0,3 s (puu noin 80 Mt, lyhytikäinen), maittain 0,1–0,15 s
     /// (jää muistiin noin 11 Mt), yhden maan rajaus + rasterointi + janat 1–25 ms.
+    ///
+    /// TÄYTTÖ (WEB ON MALLI, Fable 25.9.2026): webin maakuntakerros täyttää alueet viidellä sävyllä peitolla 0,34
+    /// (js/pallomaakunnat.js MAAKUNNAT_PALETTI, MAAKUNNAT_PEITTO). Alueen värinumero `vari` 0…4 tulee webin aineistosta
+    /// (tools/tee-maakuntavektorit.mjs varita: naapuruus jaetuista rajasärmistä, ahne väritys suurin aste ensin, pienin
+    /// vapaa väri). Kokoelmassa ei ole värinumeroa (skeema 1.42), joten se lasketaan tässä samalla säännöllä
+    /// (<see cref="Naapurit"/>, <see cref="Varita"/>); jos alkiossa on kenttä "vari", käytetään sitä. Naapuruus osuu
+    /// webin kanssa yksiin (webin järjestyksellä kaikki 2 546 aluetta samat, MaakuntaVaritTestit), mutta saman asteen
+    /// alueiden järjestys on webissä Natural Earthin piirrejärjestys, jota kokoelma ei kanna: tässä tunnuksen mukaan,
+    /// jolloin noin 2/3 alueista saa webin sävyn ja loput toisen (naapurit silti aina eri sävyissä).
     /// </summary>
     public sealed class Maakuntajako
     {
@@ -67,7 +76,17 @@ namespace Matkakirja
             public string Iso3, Nimi;
             public readonly List<Maa> Alueet = new List<Maa>();
             public readonly List<(double Lon, double Lat)[]> Kaaret = new List<(double Lon, double Lat)[]>();
+            /// <summary>
+            /// Alueen sisäiset kaaret (molemmilla puolilla sama alue), eivät kuulu Kaariin: aineiston alue on koottu
+            /// Natural Earthin piirteistä (Ranskan 13 aluetta 96 departementista), ja departementtien väliset kaaret
+            /// ovat kokoelmassa mukana. Web ei piirrä niitä (täyttö kolmioittain samalla sävyllä, ei viivoja).
+            /// </summary>
+            public readonly List<(double Lon, double Lat)[]> SisaisetKaaret = new List<(double Lon, double Lat)[]>();
             public readonly List<Rypas> Rypaat = new List<Rypas>();
+            /// <summary>Alueiden värinumerot 0…4 (indeksi = Alueet), web `vari` (ks. luokan kommentti TÄYTTÖ).</summary>
+            public int[] Varit;
+            /// <summary>Tulivatko värit kokoelman "vari"-kentästä (muuten laskettu <see cref="Varita"/>lla).</summary>
+            public bool VaritAineistosta;
         }
 
         /// <summary>Yhden maan tunnuskartan rajaus ja alueet (indeksi = järjestys + 1).</summary>
@@ -78,6 +97,8 @@ namespace Matkakirja
             public int W, H;
             /// <summary>Alueiden kopiot vain rajaukseen otetuin renkain (osumatesti ja rasterointi), tunnuksen mukaan.</summary>
             public List<Maa> Alueet;
+            /// <summary>Alueiden värinumerot (sama järjestys kuin Alueet; tunnuskartan arvo i + 1 → Varit[i]).</summary>
+            public List<int> Varit;
             public int Rypaita, RypaitaPois, AlueitaPois;
             /// <summary>Lähtörypään indeksi maan rypäslistassa (MaaKartta vertaa, vaihtuuko rajaus).</summary>
             public int Lahto;
@@ -94,6 +115,10 @@ namespace Matkakirja
 
         public readonly Dictionary<string, MaanAlueet> Maat = new Dictionary<string, MaanAlueet>(StringComparer.Ordinal);
         public int Kaaria, KohdistamattomatKaaret, AlueitaYhteensa;
+        /// <summary>Maat, joiden värinumerot laskettiin (kokoelmassa ei "vari"-kenttää).</summary>
+        public int VaritLaskettu;
+        /// <summary>Alueiden sisäiset kaaret kaikista maista (karsittu rajaviivoista, <see cref="MaanAlueet.SisaisetKaaret"/>).</summary>
+        public int SisaisetKaaret;
         /// <summary>Suurin alueiden määrä yhdessä maassa ja sen maa (yli 255 → varoitus, katkaisu Rajaa-vaiheessa).</summary>
         public int AlueitaEnintaan;
         public string AlueitaEnintaanMaa;
@@ -124,6 +149,13 @@ namespace Matkakirja
             var aineisto = MaatAineisto.LueRajat(juuri);
             var ob = juuri as Dictionary<string, object>;
             var nimet = new Dictionary<string, string>(StringComparer.Ordinal);
+            // Valinnainen värinumero alkiossa (webin <ISO>.json alueet[].vari); skeemassa 1.42 ei ole.
+            var varit = new Dictionary<string, int>(StringComparer.Ordinal);
+            if (ob != null && ob.TryGetValue("alkiot", out var ak) && ak is List<object> al)
+                foreach (var o in al)
+                    if (o is Dictionary<string, object> d && d.TryGetValue("id", out var i) && i is string id
+                        && d.TryGetValue("vari", out var v) && !double.IsNaN(Luku(v)))
+                        varit[id] = (int)Luku(v);
             if (ob != null && ob.TryGetValue("maat", out var mt) && mt is List<object> ml)
                 foreach (var o in ml)
                     if (o is Dictionary<string, object> d && d.TryGetValue("iso3", out var i) && i is string iso)
@@ -138,11 +170,18 @@ namespace Matkakirja
                 j.AlueitaYhteensa++;
             }
             var maaLista = new List<MaanAlueet>(j.Maat.Values);
+            // Janojen omistajat maittain: sama tieto värityksen naapuruuteen ja sisäisten kaarien karsintaan.
+            var omistajat = new List<Dictionary<(long, long), List<int>>>(maaLista.Count);
             foreach (var m in maaLista)
             {
                 m.Alueet.Sort((x, y) => string.CompareOrdinal(x.Id, y.Id));
                 if (m.Alueet.Count > j.AlueitaEnintaan) { j.AlueitaEnintaan = m.Alueet.Count; j.AlueitaEnintaanMaa = m.Iso3; }
                 Ryhmittele(m);
+                m.VaritAineistosta = m.Alueet.TrueForAll(a => varit.ContainsKey(a.Id));
+                if (m.VaritAineistosta) m.Varit = m.Alueet.ConvertAll(a => varit[a.Id]).ToArray();
+                var om = JanaOmistajat(m.Alueet);
+                omistajat.Add(om);
+                if (!m.VaritAineistosta) { m.Varit = Varita(Naapurit(m.Alueet.Count, om)); j.VaritLaskettu++; }
             }
 
             // Kaaret maittain: jana → maat (enintään kaksi: raja on kahden alueen välissä).
@@ -176,8 +215,14 @@ namespace Matkakirja
                     for (int i = 0; i + 1 < pisteet.Count && v == 0; i++) janat.TryGetValue(JanaAvain(pisteet[i], pisteet[i + 1]), out v);
                     if (v == 0) { j.KohdistamattomatKaaret++; continue; }
                     var taulu = pisteet.ToArray();
-                    maaLista[(v & 0xffff) - 1].Kaaret.Add(taulu);
-                    if ((v >> 16) != 0) maaLista[(v >> 16) - 1].Kaaret.Add(taulu);
+                    void Lisaa(int mi)
+                    {
+                        var m = maaLista[mi];
+                        if (SisainenKaari(taulu, omistajat[mi])) { m.SisaisetKaaret.Add(taulu); j.SisaisetKaaret++; }
+                        else m.Kaaret.Add(taulu);
+                    }
+                    Lisaa((v & 0xffff) - 1);
+                    if ((v >> 16) != 0) Lisaa((v >> 16) - 1);
                 }
             return j;
         }
@@ -415,9 +460,12 @@ namespace Matkakirja
                     l.Add(x.Pisteet);
                 }
             r.Alueet = new List<Maa>();
-            foreach (var a in m.Alueet)
+            r.Varit = new List<int>();
+            for (int ai = 0; ai < m.Alueet.Count; ai++)
             {
+                var a = m.Alueet[ai];
                 if (!renkaat.TryGetValue(a, out var l)) continue;
+                r.Varit.Add(m.Varit != null ? m.Varit[ai] : 0);
                 var k = new Maa
                 {
                     Id = a.Id, Iso2 = a.Iso2, Nimi = a.Nimi, Renkaat = l,
@@ -433,8 +481,151 @@ namespace Matkakirja
             {
                 r.AlueitaPois = r.Alueet.Count - AluetaEnintaan;
                 r.Alueet.RemoveRange(AluetaEnintaan, r.AlueitaPois);
+                r.Varit.RemoveRange(AluetaEnintaan, r.AlueitaPois);
             }
             return r;
+        }
+
+        // ---- Värit ja täyttö (web js/pallomaakunnat.js, tools/tee-maakuntavektorit.mjs) ----
+
+        /// <summary>
+        /// Web MAAKUNNAT_PALETTI (sRGB 0–1): ruoste, sammal, savi, taivas, okra. Värinumero valitsee sävyn modulona
+        /// kuten webin maakuntienKarjet (paletti[vari % 5]).
+        /// </summary>
+        public static readonly double[][] Paletti =
+        {
+            new[] { 0.72, 0.42, 0.28 }, new[] { 0.45, 0.58, 0.38 }, new[] { 0.70, 0.56, 0.36 },
+            new[] { 0.46, 0.56, 0.68 }, new[] { 0.78, 0.66, 0.30 },
+        };
+        /// <summary>Web MAAKUNNAT_PEITTO: täytön peitto sRGB-sekoituksena.</summary>
+        public const double Peitto = 0.34;
+        /// <summary>
+        /// Web MAAKUNNAT_VALITTU_PEITTO: valitun alueen väri kerrotaan 0,62 / 0,34:llä (rajattuna 1:een) ja peitto pysyy
+        /// 0,34:ssä (webin maakuntienKarjet k-kerroin: materiaalin peitto on yhteinen, joten korostus tehdään värillä).
+        /// </summary>
+        public const double ValittuPeitto = 0.62;
+        /// <summary>Web MAAKUNNAT_HAIVE_MS: täytön häive sisään maan vaihtuessa ja kerroksen tullessa päälle.</summary>
+        public const double HaiveSekuntia = 0.26;
+
+        /// <summary>Webin häiveen käyrä (ease-out 1 − (1 − t)², js/pallomaakunnat.js haivyta) kuluneesta ajasta.</summary>
+        public static double Haive(double sekuntia)
+        {
+            if (!(sekuntia > 0)) return 0;
+            double t = Math.Min(1.0, sekuntia / HaiveSekuntia);
+            return 1 - (1 - t) * (1 - t);
+        }
+
+        /// <summary>
+        /// Alueiden naapuruus jaetuista rajajanoista (web kolmioiMaa: "Naapuruus jaetuista rajasärmistä"). Renkaat on
+        /// rakennettu samoista kaarista, joten yhteinen raja on kummassakin renkaassa samoin pistein (avain 1e-3°).
+        /// </summary>
+        public static List<HashSet<int>> Naapurit(IList<Maa> alueet) => Naapurit(alueet.Count, JanaOmistajat(alueet));
+
+        static List<HashSet<int>> Naapurit(int n, Dictionary<(long, long), List<int>> omistajat)
+        {
+            var naapurit = new List<HashSet<int>>(n);
+            for (int i = 0; i < n; i++) naapurit.Add(new HashSet<int>());
+            foreach (var l in omistajat.Values)
+                for (int a = 0; a < l.Count; a++)
+                    for (int b = 0; b < l.Count; b++)
+                        if (l[a] != l[b]) naapurit[l[a]].Add(l[b]);
+            return naapurit;
+        }
+
+        /// <summary>
+        /// Jana → alueet, joiden renkaissa jana on (alueen indeksi kerran per rengas: saman alueen kaksi rengasta
+        /// yhteisellä janalla = alueen sisäinen raja, esim. kaksi departementtia samassa Ranskan alueessa).
+        /// </summary>
+        public static Dictionary<(long, long), List<int>> JanaOmistajat(IList<Maa> alueet)
+        {
+            var omistajat = new Dictionary<(long, long), List<int>>();
+            for (int i = 0; i < alueet.Count; i++)
+                foreach (var r in alueet[i].Renkaat)
+                    for (int k = 0; k < r.Length; k++)
+                    {
+                        var avain = JanaAvain(r[k], r[(k + 1) % r.Length]);
+                        if (avain.Item1 == avain.Item2) continue;
+                        if (!omistajat.TryGetValue(avain, out var l)) omistajat[avain] = l = new List<int>(2);
+                        l.Add(i);
+                    }
+            return omistajat;
+        }
+
+        /// <summary>
+        /// Onko kaari alueen sisällä: sen jana on vähintään kahdessa renkaassa ja kaikki ne ovat samaa aluetta. Kaari
+        /// kulkee solmusta solmuun, joiden välillä omistajat eivät vaihdu (tools/vienti/maakuntarajat.mjs
+        /// kaariTopologia), joten ensimmäinen maan jana ratkaisee. Alueiden väliset rajat ja maan ulkoraja (yksi rengas)
+        /// jäävät.
+        /// </summary>
+        public static bool SisainenKaari((double Lon, double Lat)[] kaari, Dictionary<(long, long), List<int>> omistajat)
+        {
+            for (int i = 0; i + 1 < kaari.Length; i++)
+            {
+                if (!omistajat.TryGetValue(JanaAvain(kaari[i], kaari[i + 1]), out var l)) continue;
+                if (l.Count < 2) return false;
+                foreach (int x in l) if (x != l[0]) return false;
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Ahne väritys kuten webin työkalussa (tools/tee-maakuntavektorit.mjs varita): suurin aste ensin, pienin vapaa
+        /// väri. Saman asteen alueet järjestyksessä <paramref name="etusija"/> (oletus indeksi; webissä Natural Earthin
+        /// piirrejärjestys, JS:n vakaa lajittelu).
+        /// </summary>
+        public static int[] Varita(IList<HashSet<int>> naapurit, IList<int> etusija = null)
+        {
+            int n = naapurit.Count;
+            var jarjestys = new int[n];
+            for (int i = 0; i < n; i++) jarjestys[i] = i;
+            Array.Sort(jarjestys, (x, y) =>
+            {
+                int c = naapurit[y].Count.CompareTo(naapurit[x].Count);
+                if (c != 0) return c;
+                return etusija != null ? etusija[x].CompareTo(etusija[y]) : x.CompareTo(y);
+            });
+            var vari = new int[n];
+            for (int i = 0; i < n; i++) vari[i] = -1;
+            var varatut = new HashSet<int>();
+            foreach (int i in jarjestys)
+            {
+                varatut.Clear();
+                foreach (int j in naapurit[i]) if (vari[j] >= 0) varatut.Add(vari[j]);
+                int v = 0;
+                while (varatut.Contains(v)) v++;
+                vari[i] = v;
+            }
+            return vari;
+        }
+
+        static double Lineaarinen(double c) => NimiLadonta.Lineaarinen(c);
+        static double Srgb(double l) => l <= 0.0031308 ? l * 12.92 : 1.055 * Math.Pow(l, 1 / 2.4) - 0.055;
+
+        /// <summary>
+        /// Täytön paletti-arvo (sRGB 0–1 ja alfa) värinumerolle. Web sekoittaa sRGB-arvoilla (three.js
+        /// MeshBasicMaterial, opacity 0,34 pergamentin päällä); projekti on lineaarinen, jolloin sama väri ja alfa
+        /// näyttäisivät vaaleammilta ja haaleammilta. <paramref name="lineaarinen"/>: alfa vaihdetaan luminanssin mukaan
+        /// kuten nimiöillä (NimiLadonta.LineaarinenAlfa, pohja <see cref="NimiLadonta.PohjaMaa"/>: pelaajan maa näkyy
+        /// pohjan omin värein, Varitaso) ja väri kanavittain niin, että lineaarinen sekoitus tällä pohjalla on täsmälleen
+        /// webin sRGB-sekoitus. Muulla pohjalla virhe on pieni (sävy ja peitto lähellä). Paletti on sRGB-tekstuuri, joten
+        /// palautettu väri on sRGB:tä; varjostin ei saa muuttaa tätä alfaa enää (MaaTaytto _TayttoEksponentti 1).
+        /// </summary>
+        public static (double R, double G, double B, double A) Taytto(int vari, bool valittu, bool lineaarinen, double[] pohja = null)
+        {
+            var p = Paletti[((vari % Paletti.Length) + Paletti.Length) % Paletti.Length];
+            double k = valittu ? ValittuPeitto / Peitto : 1;
+            var c = new[] { Math.Min(1, p[0] * k), Math.Min(1, p[1] * k), Math.Min(1, p[2] * k) };
+            if (!lineaarinen) return (c[0], c[1], c[2], Peitto);
+            pohja ??= NimiLadonta.PohjaMaa;
+            double a = NimiLadonta.LineaarinenAlfa(c, Peitto, pohja);
+            double Kanava(int i)
+            {
+                double t = Lineaarinen(pohja[i]);
+                double tavoite = Lineaarinen(Peitto * c[i] + (1 - Peitto) * pohja[i]);
+                return Srgb(Math.Min(1, Math.Max(0, (tavoite - t * (1 - a)) / a)));
+            }
+            return (Kanava(0), Kanava(1), Kanava(2), a);
         }
 
         // ---- Rasterointi ja janat ----
@@ -497,13 +688,16 @@ namespace Matkakirja
             return kartta;
         }
 
-        /// <summary>Maan kaarien janat rajauksen sisältä (molemmat päät sisällä), asteina.</summary>
-        public List<((double Lon, double Lat) A, (double Lon, double Lat) B)> Janat(Rajaus rj)
+        /// <summary>
+        /// Maan kaarien janat rajauksen sisältä (molemmat päät sisällä), asteina. Alueiden sisäiset kaaret vain
+        /// vertailuun (<paramref name="sisaiset"/>; testit ja luvut ennen karsintaa).
+        /// </summary>
+        public List<((double Lon, double Lat) A, (double Lon, double Lat) B)> Janat(Rajaus rj, bool sisaiset = false)
         {
             var ulos = new List<((double Lon, double Lat), (double Lon, double Lat))>();
             var m = Hae(rj?.Iso3);
             if (m == null) return ulos;
-            foreach (var k in m.Kaaret)
+            foreach (var k in sisaiset ? m.SisaisetKaaret : m.Kaaret)
             {
                 bool edellinen = rj.Sisalla(k[0].Lon, k[0].Lat);
                 for (int i = 1; i < k.Length; i++)

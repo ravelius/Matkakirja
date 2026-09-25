@@ -468,6 +468,7 @@ namespace Matkakirja.Natiivi
                     kehys.style.translate = new Translate(Mathf.Lerp(d.x, 0f, e), Mathf.Lerp(d.y, 0f, e));
                 }
                 Aseta(0f);
+                Ruudunpaivitys.Herata(KutistusMs / 1000f + 0.05f); // lämpö: kutistus täydellä taajuudella
                 kehys.experimental.animation.Start(0f, 1f, (int)KutistusMs, (_, k) => Aseta(k))
                     .OnCompleted(() => { kehys.style.scale = StyleKeyword.Null; kehys.style.translate = StyleKeyword.Null; });
             }

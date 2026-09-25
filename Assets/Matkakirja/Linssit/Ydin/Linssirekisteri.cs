@@ -74,8 +74,17 @@ namespace Matkakirja.Linssit
         /// </summary>
         public Func<string, bool> Omistaa = _ => false;
 
+        /// <summary>
+        /// OMISTUKSEN ALIAS: linssi, joka on toisen linssin versio, on pelaajalla silloin kun alkuperäinen on
+        /// (Ihmisen matka II = Ihmisen matka, omistaja 25.9.2026). Pelikoodarin omistuslogiikka ei tunne versioita.
+        /// </summary>
+        public static readonly IReadOnlyDictionary<string, string> Omistusalias = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["ihmisen-matka-2"] = "ihmisen-matka",
+        };
+
         /// <summary>Valitsimessa näkyvä ja avattava: kehittäjätila tai omistus.</summary>
-        public bool Saatavilla(string id) => Kehittajatila || Omistaa(id);
+        public bool Saatavilla(string id) => Kehittajatila || Omistaa(id != null && Omistusalias.TryGetValue(id, out var alkuperainen) ? alkuperainen : id);
 
         /// <summary>Auki oleva linssi tai null.</summary>
         public ILinssi Auki { get; private set; }
@@ -99,7 +108,7 @@ namespace Matkakirja.Linssit
         /// radio, vertailu, maatiedot, vesistöt ja isoisä eivät.
         /// </summary>
         public static readonly IReadOnlyCollection<string> PorttiLinssit =
-            new HashSet<string>(StringComparer.Ordinal) { "ihmisen-matka", "keksinnot", "topografia", "satelliitti" };
+            new HashSet<string>(StringComparer.Ordinal) { "ihmisen-matka", "ihmisen-matka-2", "keksinnot", "topografia", "satelliitti" };
 
         /// <summary>Estääkö auki oleva linssi pelin kartan (Liiku, siirrot, lehdet).</summary>
         public bool EstaaKartan => Auki != null && PorttiLinssit.Contains(Auki.Tiedot.Id);

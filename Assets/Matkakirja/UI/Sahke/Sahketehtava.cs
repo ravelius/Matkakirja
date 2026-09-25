@@ -855,6 +855,7 @@ namespace Matkakirja.Natiivi
             {
                 if (ohi) return;
                 if (n.kortti.panel == null || !n.Auki) { Pysayta(); return; }
+                Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
                 float t = (Time.unscaledTime - alku) * 1000f;
                 for (int i = 0; i < rivit.Count && i < a.Rivit.Count; i++)
                 {

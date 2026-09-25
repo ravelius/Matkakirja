@@ -58,6 +58,11 @@ namespace Matkakirja
             if (Instanssi == this) Instanssi = null;
         }
 
+        // LÄMPÖERÄ (PallonLepo): pino päällä = lennon jälkikäsittely (filmirae) tai sen häivytys 0,8 s lennon jälkeen.
+        void OnEnable() => PallonLepo.Animoi(Paalla, "filmipino");
+        void OnDisable() => PallonLepo.Poista(Paalla);
+        bool Paalla() => volyymi != null && volyymi.enabled;
+
         /// <summary>Lennon alku ja loppu (Nappula). Häivyttyy haivytysS:n aikana.</summary>
         public void Paalle(bool paalle)
         {

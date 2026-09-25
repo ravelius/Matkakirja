@@ -26,6 +26,16 @@ namespace Matkakirja
     /// pelaajan maa vaihtuu (sama kuin väritasolla ja ääriviivalla: <see cref="Varitaso.Kohde"/>), tunnuskartta
     /// rasteroidaan taustasäikeessä vain sen maan alueista maan omaan rajaukseen ja rajajanat rakennetaan vain maan
     /// kaarista. Napautus, korostus ja <see cref="MaaPisteessa"/> koskevat nykyisen maan alueita.
+    ///
+    /// MAAKUNTIEN TÄYTTÖ (WEB ON MALLI, Fable 25.9.2026): maakohtainen kerros täyttää alueet webin paletista
+    /// (js/pallomaakunnat.js MAAKUNNAT_PALETTI, peitto 0,34, värinumero <see cref="Maakuntajako.Varita"/>), eikä perussävyn
+    /// täyttöä käytetä. Korostettu alue (Korosta, B17 `maakunta ISO3:tunnus`) saa webin valitun sävyn (väri × 0,62 / 0,34)
+    /// ja korostuksen rajan kuten ennen. Täyttö häipyy sisään 260 ms ease-out, kun maa vaihtuu ja kun kerros tulee
+    /// näkyviin (web haivyta). Maatila (maakohtainen pois) ei muutu.
+    ///
+    /// MAAKUNTARAJAT (omistajan löydös 113, build 14: liian voimakkaat): webissä rajat ovat nimiötason rasterissa
+    /// (<see cref="Viivaleveys.AluerajaLaitePx"/>: seepia 0,45 täytön alla, 1,0 / 1,5 / 2,2 laatan pikseliä z6–z8, vasta
+    /// z6:sta). Natiivin vektoriviiva saa saman ruutuleveyden ja peiton; perussävyn reunaväriä ei käytetä.
     /// </summary>
     public class MaaKartta : MonoBehaviour, IMaaKartta
     {
@@ -58,6 +68,10 @@ namespace Matkakirja
         [Tooltip("Rajat vektoriviivoina (Shaders/Rajaviiva), tarkkuus ei riipu tunnuskartasta. null = rajat " +
                  "tunnuskartasta varjostimessa (maatila). Korostetun alueen raja piirtyy edelleen varjostimessa.")]
         public Material rajaMateriaali;
+        [Tooltip("Maakohtainen kerros: OLETUSRAJAT (löydös 113, web: nimiötason poltetut maakuntarajat näkyvät aina). Kun " +
+                 "pelaajalla on maa, kerros tulee itse päälle ilman täyttöä (vain ohuet rajat); täyttö ja korostus vasta " +
+                 "maakunnan valinnasta (Taytto). Natiivi-UI:n Maakunnat \"Pois\" (löydös 114) piilottaa ne (OletusPois).")]
+        public bool oletusrajat;
         [Tooltip("Vektorirajat vasta tästä ruudun tiheydestä (laitepikseliä/aste), web VEKTORIT_RAJAT_PX_ASTE 30 " +
                  "(js/pallovektorit.js:171). Kaukana vakioleveä viiva sulaa läiskäksi (löydös 74 d). 0 = aina.")]
         public float rajatMinTiheys = (float)Vektorisolut.RajatTiheys;
@@ -69,6 +83,14 @@ namespace Matkakirja
         public string NykyinenMaa { get; private set; }
         public bool Paalla { get; private set; }
         public bool Valmis => tunnukset != null;
+        /// <summary>Täyttö näkyvissä (viiden sävyn täyttö ja korostus); false = vain rajat (oletusrajat).</summary>
+        public bool TayttoNakyy { get; private set; } = true;
+        /// <summary>
+        /// Oletusrajojen esto (löydös 114): Natiivi-UI:n "Pois". UI-assembly ei näy Kartalle, joten silta
+        /// (Scripts/Kartta/MaakunnatSilta) antaa lukijan; null = ei estoa. Luetaan tarkistuksen yhteydessä, koska valinta
+        /// muistetaan (PlayerPrefs) ja voi olla voimassa jo ennen kuin UI rakentuu.
+        /// </summary>
+        public Func<bool> OletusPois { get; set; }
 
         MaatAineisto aineisto;
         MaaOsuma osuma;
@@ -84,6 +106,8 @@ namespace Matkakirja
         // Vektorirajojen peiton kerroin 0–1 (Viivaleveys.AluerajaHaive) ja viimeksi luettu tiheys (px/°).
         float rajaHaive;
         float rajaTiheys;
+        // Maakuntarajan leveys ja peiton kerroin viimeksi (Viivaleveys.AluerajaPiirto): leveys laitepikseleinä ja kerroin.
+        float rajaLaitePx, rajaAlfa = 1f;
         // Maakohtainen kerros: aineisto maittain, käynnissä oleva rakennus, rakennetun rajauksen avain (maa#rypäs)
         // ja tunnuskartan rajaus shaderille (länsi, pohjoinen, pituusväli, leveysväli).
         Maakuntajako jako;
@@ -91,6 +115,12 @@ namespace Matkakirja
         string rakennettu;
         float seuraavaTarkistus;
         Vector4 alue = new Vector4(-180, 90, 360, 180);
+        // Maakohtainen täyttö: alueen värinumero (tunnus → vari), häiveen alku (unscaledTime, < 0 = ei käynnissä),
+        // nykyinen häive shaderille ja näkyikö kuori viimeksi (näkyviin tulo käynnistää häiveen).
+        readonly Dictionary<string, int> varit = new Dictionary<string, int>();
+        float haiveAlku = -1f;
+        float haive = 1f;
+        bool nakyi;
 
         void Start()
         {
@@ -105,10 +135,19 @@ namespace Matkakirja
             if (kierto != null) kierto.Napautettu -= Napautus;
         }
 
+        // LÄMPÖERÄ (PallonLepo): maakuntien täytön häive (260 ms) ja vektorirajojen häive tiheyden mukaan
+        // (Viivaleveys.AluerajaHaive) jatkuvat kameran pysähdyttyä; kuoren ja paletin vaihdot ovat yksittäisiä muutoksia.
+        void OnEnable() => PallonLepo.Animoi(Haivyttaa, kokoelma);
+        void OnDisable() => PallonLepo.Poista(Haivyttaa);
+        bool Haivyttaa() => (maakohtainen && haiveAlku >= 0f) || rajaHaiveLiikkuu;
+        bool rajaHaiveLiikkuu;
+
         // ---- IMaaKartta ----
 
         public void MaaTila(bool paalla)
         {
+            // Tilan muutos (PallonLepo, joutosyke jatkuu); kuoren ja paletin valmistuminen on Valmistui.
+            if (paalla != Paalla) PallonLepo.Muuttui(kokoelma);
             Paalla = paalla;
             if (kerrokset != null && piilotaKaupungit)
             {
@@ -138,6 +177,10 @@ namespace Matkakirja
         /// <summary>Kuori heti; vektorirajat häivytetään LateUpdatessa tiheyden mukaan (Viivaleveys.AluerajaHaive).</summary>
         void PaivitaNakyvyys()
         {
+            bool nakyy = NakyyNyt;
+            if (maakohtainen && nakyy && !nakyi) AloitaHaive();
+            if (nakyy != nakyi) PallonLepo.Valmistui(kokoelma);
+            nakyi = nakyy;
             if (kuori != null) kuori.enabled = NakyyNyt;
             if (rajat != null && !NakyyNyt) { rajaHaive = 0f; rajat.enabled = false; }
         }
@@ -296,7 +339,7 @@ namespace Matkakirja
             }
             jako = j;
             Debug.Log($"MATKAKIRJA maakunnat ({kokoelma}): {j.Maat.Count} maata, {j.AlueitaYhteensa} aluetta, {j.Kaaria} kaarta " +
-                      $"({j.KohdistamattomatKaaret} ilman maata), jäsennys {jasennys} ms, maittain {maittain} ms");
+                      $"({j.KohdistamattomatKaaret} ilman maata, {j.SisaisetKaaret} alueen sisäistä pois), jäsennys {jasennys} ms, maittain {maittain} ms");
             if (j.AlueitaEnintaan > Maakuntajako.AluetaEnintaan)
                 Debug.LogWarning($"MATKAKIRJA maakunnat: {j.AlueitaEnintaanMaa} {j.AlueitaEnintaan} aluetta, tunnuskartassa enintään " +
                                  $"{Maakuntajako.AluetaEnintaan} (loput jäävät pois)");
@@ -317,8 +360,39 @@ namespace Matkakirja
         /// Maakohtainen kerros seuraa pelaajan maata (web asetaMaa(korostusIso)) ja nappulan rypästä (Cayenne → Guyana,
         /// Anchorage → Alaska). Vain näkyvissä: piilossa tai linssin aikana ei rakenneta, vaan palatessa.
         /// </summary>
+        /// <summary>Täyttö päälle (maakunnan valinta) tai pois (oletusrajat: vain rajat).</summary>
+        public void Taytto(bool nakyy)
+        {
+            if (TayttoNakyy == nakyy) return;
+            TayttoNakyy = nakyy;
+            PaivitaPaletti();
+        }
+
+        float seuraavaOletus;
+
+        /// <summary>
+        /// Oletusrajat (löydös 113): kun pelaajalla on maa eikä kerros ole päällä eikä Pois ole valittu, kerros päälle
+        /// ilman täyttöä. Aineisto ladataan vasta tässä (ei käynnistyksessä, jossa pelaajalla ei ole maata). Pois
+        /// (löydös 114) sammuttaa oletuksena päälle tulleen kerroksen.
+        /// </summary>
+        void PaivitaOletus()
+        {
+            if (!maakohtainen || !oletusrajat || Time.unscaledTime < seuraavaOletus) return;
+            seuraavaOletus = Time.unscaledTime + 1f;
+            bool pois = OletusPois != null && OletusPois();
+            if (pois)
+            {
+                if (Paalla && !TayttoNakyy) MaaTila(false);
+                return;
+            }
+            if (Paalla || linssit || string.IsNullOrEmpty(SeurattavaMaa())) return;
+            Taytto(false);
+            MaaTila(true);
+        }
+
         void Update()
         {
+            PaivitaOletus();
             if (!maakohtainen || jako == null || !Paalla || linssit || rakennus != null) return;
             if (Time.unscaledTime < seuraavaTarkistus) return;
             seuraavaTarkistus = Time.unscaledTime + 0.5f;
@@ -365,6 +439,8 @@ namespace Matkakirja
                 yield break;
             }
             indeksi.Clear();
+            varit.Clear();
+            string edellinen = NykyinenMaa;
             NykyinenMaa = rj != null ? maa : null;
             if (rj == null)
             {
@@ -375,7 +451,13 @@ namespace Matkakirja
                 Debug.Log($"MATKAKIRJA maakunnat: {(string.IsNullOrEmpty(maa) ? "ei maata" : maa + ": ei maakuntia")}");
                 yield break;
             }
-            for (int i = 0; i < rj.Alueet.Count; i++) indeksi[rj.Alueet[i].Id] = i + 1;
+            for (int i = 0; i < rj.Alueet.Count; i++)
+            {
+                indeksi[rj.Alueet[i].Id] = i + 1;
+                varit[rj.Alueet[i].Id] = rj.Varit[i];
+            }
+            // Web asetaMaa → nayta → haivyta: uusi maa häipyy sisään (rypään vaihto samassa maassa ei).
+            if (maa != edellinen) AloitaHaive();
             osuma = new MaaOsuma(rj.Alueet);
             var vanha = tunnukset;
             tunnukset = new Texture2D(rj.W, rj.H, TextureFormat.R8, false, true)
@@ -470,17 +552,28 @@ namespace Matkakirja
             if (paletti == null) return;
             var px = new Color32[256 * 2];
             Color32 C(Rgba v) => new Color32((byte)(v.R * 255), (byte)(v.G * 255), (byte)(v.B * 255), (byte)(v.A * 255));
+            byte B(double x) => (byte)Math.Round(Math.Min(1, Math.Max(0, x)) * 255);
+            bool lineaarinen = QualitySettings.activeColorSpace == ColorSpace.Linear;
             foreach (var p in indeksi)
             {
                 bool korostettu = korostukset.TryGetValue(p.Key, out var k);
                 var s = korostettu ? k : perus;
-                px[p.Value] = C(s.Taytto);
+                if (maakohtainen)
+                {
+                    // Webin täyttö (Maakuntajako.Taytto): sRGB-väri paletin sRGB-tekstuuriin, alfa jo lineaarisen
+                    // sekoituksen vastine (varjostimen _TayttoEksponentti 1).
+                    var t = Maakuntajako.Taytto(varit.TryGetValue(p.Key, out int v) ? v : 0, korostettu, lineaarinen);
+                    // Oletusrajat (löydös 113): ilman valintaa vain rajat, täyttö läpinäkyvä.
+                    px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), TayttoNakyy ? B(t.A) : (byte)0);
+                }
+                else px[p.Value] = C(s.Taytto);
                 // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan.
                 px[256 + p.Value] = rajat != null && !korostettu ? new Color32(0, 0, 0, 0) : C(s.Reuna);
             }
             AsetaRajanVari();
             paletti.SetPixels32(px);
             paletti.Apply(false);
+            PallonLepo.Valmistui(kokoelma);
         }
 
         void TeeKuori()
@@ -499,6 +592,11 @@ namespace Matkakirja
             bool rj = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
             if (!maakohtainen && rj) alue = new Vector4(rajaus.x, rajaus.w, rajaus.z - rajaus.x, rajaus.w - rajaus.y);
             kuori.sharedMaterial.SetVector("_Alue", alue);
+            if (maakohtainen)
+            {
+                kuori.sharedMaterial.SetFloat("_TayttoEksponentti", 1f);
+                kuori.sharedMaterial.SetFloat("_Haive", haive);
+            }
             kuori.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             kuori.receiveShadows = false;
             kuori.enabled = false;
@@ -598,6 +696,7 @@ namespace Matkakirja
             rajaOma.renderQueue = rajaMateriaali.renderQueue + jonoLisa;
             float kerroin = PalloKierto.Pistekerroin;
             rajaOma.SetFloat("_Kerroin", kerroin);
+            if (maakohtainen) rajaOma.SetFloat("_Paksuus", 0f); // LateUpdate asettaa tiheydestä (löydös 113)
             rajat.sharedMaterial = rajaOma;
             rajat.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             rajat.receiveShadows = false;
@@ -605,10 +704,19 @@ namespace Matkakirja
             PaivitaPaletti();
         }
 
-        /// <summary>Perussävyn reuna × häive (kaukana 0, lähellä 1).</summary>
+        /// <summary>Perussävyn reuna × häive (kaukana 0, lähellä 1); maakunnissa webin rajamuste (löydös 113).</summary>
         void AsetaRajanVari()
         {
             if (rajaOma == null) return;
+            if (maakohtainen)
+            {
+                var m = Viivaleveys.AluerajaMuste;
+                bool lin = QualitySettings.activeColorSpace == ColorSpace.Linear;
+                double peitto = lin ? Viivaleveys.AluerajaPeittoNatiivi : Viivaleveys.AluerajaPeittoWeb;
+                // Color on sRGB-arvoina; URP muuntaa _BaseColorin lineaariseksi lineaarisessa projektissa.
+                rajaOma.SetColor("_BaseColor", new Color((float)m[0], (float)m[1], (float)m[2], (float)peitto * rajaAlfa * rajaHaive));
+                return;
+            }
             rajaOma.SetColor("_BaseColor", new Color(perus.Reuna.R, perus.Reuna.G, perus.Reuna.B, perus.Reuna.A * rajaHaive));
         }
 
@@ -616,9 +724,29 @@ namespace Matkakirja
         public float RajaTiheys => rajaTiheys;
         /// <summary>Vektorirajojen peiton kerroin 0–1 (0 = piilossa: kaukana, linssissä tai tila pois).</summary>
         public float RajaHaive => rajaHaive;
+        /// <summary>Maakuntarajan webin mukainen leveys laitepikseleinä (löydös 113; 0 = alle z6:n tai ei mitattu).</summary>
+        public float RajaLaitePx => rajaLaitePx;
+
+        /// <summary>Täytön häive alusta (web haivyta: peitto 0 → 0,34 ease-out 260 ms).</summary>
+        void AloitaHaive()
+        {
+            haiveAlku = Time.unscaledTime;
+            haive = 0f;
+            if (kuori != null) kuori.sharedMaterial.SetFloat("_Haive", 0f);
+        }
+
+        void PaivitaHaive()
+        {
+            if (haiveAlku < 0f || kuori == null) return;
+            haive = (float)Maakuntajako.Haive(Time.unscaledTime - haiveAlku);
+            kuori.sharedMaterial.SetFloat("_Haive", haive);
+            if (haive >= 1f) haiveAlku = -1f;
+        }
 
         void LateUpdate()
         {
+            if (maakohtainen) PaivitaHaive();
+            rajaHaiveLiikkuu = false;
             if (rajaOma == null || rajat == null || georeferenssi == null) return;
             bool sallittu = NakyyNyt;
             if (!sallittu && rajaHaive <= 0f && !rajat.enabled) return;
@@ -626,8 +754,29 @@ namespace Matkakirja
             // webin rajojen tiheydestä (Viivaleveys.AluerajaHaive). Kaksi sädettä kehyksessä (Pintaosuma.Tiheys).
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
             rajaTiheys = sallittu ? Pintaosuma.Tiheys(georeferenssi, kamera) : 0f;
-            float uusi = Viivaleveys.AluerajaHaive(rajaHaive, sallittu, rajaTiheys, rajatMinTiheys, Time.unscaledDeltaTime);
-            if (uusi != rajaHaive) { rajaHaive = uusi; AsetaRajanVari(); }
+            // Maakunnat: webin rasteriraja vasta z6:sta (tiheys yli 60 laitepx/°).
+            double minTiheys = maakohtainen ? Math.Max(rajatMinTiheys, Viivaleveys.AluerajaMinTiheys) : rajatMinTiheys;
+            float uusi = Viivaleveys.AluerajaHaive(rajaHaive, sallittu, rajaTiheys, minTiheys, Time.unscaledDeltaTime);
+            bool muuttui = uusi != rajaHaive;
+            rajaHaiveLiikkuu = muuttui;
+            rajaHaive = uusi;
+            if (maakohtainen && rajaHaive > 0f && rajaTiheys > 0f)
+            {
+                // Leveys webin tason säännöstä näkymän keskikohdan leveysasteella.
+                var keski = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
+                double lat = Pintaosuma.Osuma(georeferenssi, kamera, keski, out _, out double l) ? l : 0.0;
+                float k = PalloKierto.Pistekerroin;
+                float px = (float)Viivaleveys.AluerajaLaitePx(rajaTiheys, lat);
+                var (pt, alfa) = Viivaleveys.AluerajaPiirto(px, k);
+                if (px != rajaLaitePx || (float)alfa != rajaAlfa)
+                {
+                    rajaLaitePx = px;
+                    rajaAlfa = (float)alfa;
+                    rajaOma.SetFloat("_Paksuus", (float)pt);
+                    muuttui = true;
+                }
+            }
+            if (muuttui) AsetaRajanVari();
             rajat.enabled = rajaHaive > 0f;
             if (!rajat.enabled) return;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);

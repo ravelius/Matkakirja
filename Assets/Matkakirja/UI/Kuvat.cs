@@ -85,6 +85,46 @@ namespace Matkakirja.Natiivi
             return new[] { PeiliJuuri + PeiliKuvaPolku(tiedostoTaiUrl, kansio), CommonsUrl(tiedostoTaiUrl, leveys) };
         }
 
+        static readonly HashSet<string> esiladataan = new HashSet<string>();
+
+        /// <summary>
+        /// Esilataa kuvan levyvälimuistiin purkamatta (Esilataaja erä 2, ESILATAUSPOLITIIKKA kohta 3: saapumisen kuvat
+        /// lennon aikana). Myöhempi Hae lukee sen levyltä ilman verkkoa. Ei tee mitään, jos kuva on muistissa, levyllä
+        /// tai jo haussa. Commons-varareittiä ei esiladata (vain ensimmäinen reitti).
+        /// </summary>
+        public static void Esilataa(string tiedostoTaiUrl, Taso taso = Taso.SeuraavaRuutu, string kansio = "kuvat")
+        {
+            var reitit = Reitit(tiedostoTaiUrl, kansio);
+            if (reitit.Length == 0) return;
+            string url = reitit[0];
+            if (muisti.ContainsKey(url) || kesken.ContainsKey(url) || esiladataan.Contains(url)) return;
+            string levy = Valimuisti(url);
+            if (File.Exists(levy)) return;
+            esiladataan.Add(url);
+            UiKerros.Hae().StartCoroutine(EsilataaLevylle(url, levy, taso));
+        }
+
+        static IEnumerator EsilataaLevylle(string url, string levy, Taso taso)
+        {
+            byte[] tavut = null;
+            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(url); q.timeout = 30; return q; }, taso, "kuva",
+                p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; });
+            esiladataan.Remove(url);
+            if (tavut == null || tavut.Length < 16) yield break;
+            var tyo = System.Threading.Tasks.Task.Run(() =>
+            {
+                try
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(levy));
+                    var valiaikainen = levy + ".esi";
+                    File.WriteAllBytes(valiaikainen, tavut);
+                    if (!File.Exists(levy)) File.Move(valiaikainen, levy); else File.Delete(valiaikainen);
+                }
+                catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: esilataus " + e.Message); }
+            });
+            while (!tyo.IsCompleted) yield return null;
+        }
+
         // --- lataus --------------------------------------------------------------
 
         static string Valimuisti(string url)
@@ -104,6 +144,7 @@ namespace Matkakirja.Natiivi
             string avain = reitit[0];
             if (muisti.TryGetValue(avain, out var t) && t != null)
             {
+                VerkkoOdotus.Osuma("kuva", true);
                 jarjestys.Remove(avain);
                 jarjestys.AddFirst(avain);
                 valmis?.Invoke(t);
@@ -124,7 +165,7 @@ namespace Matkakirja.Natiivi
             var reitit = Reitit(tiedostoTaiUrl, kansio);
             if (reitit.Length == 0) { valmis?.Invoke(null); return; }
             string avain = reitit[0] + "@" + leveys + "x" + korkeus;
-            if (muisti.TryGetValue(avain, out var t) && t != null) { valmis?.Invoke(t); return; }
+            if (muisti.TryGetValue(avain, out var t) && t != null) { VerkkoOdotus.Osuma("kuva", true); valmis?.Invoke(t); return; }
             if (kesken.TryGetValue(avain, out var odottajat)) { odottajat.Add(valmis); return; }
             kesken[avain] = new List<Action<Texture2D>> { valmis };
             UiKerros.Hae().StartCoroutine(Lataa(avain, reitit, (alkup, valmisPieni) => PienennaTaustalla(alkup, leveys, korkeus, ylaAsento, px =>
@@ -284,6 +325,7 @@ namespace Matkakirja.Natiivi
         {
             Texture2D tulos = null;
             string levy = Valimuisti(reitit[0]);
+            VerkkoOdotus.Osuma("kuva", File.Exists(levy));
             // Löydös 63: Unity ei pura WebP:tä (kohdekarttojen miniatyyripiirrokset ovat ämpärissä vain webp:nä),
             // joten webp kulkee ImageIO-purun kautta (Natiivisepän MatkakirjaKuvat_Pura, iOS 14+).
             if (OnWebpOsoite(reitit[0]))
@@ -300,15 +342,18 @@ namespace Matkakirja.Natiivi
             }
             for (int i = 0; tulos == null && !OnWebpOsoite(reitit[0]) && i < reitit.Length; i++)
             {
-                using var p = UnityWebRequestTexture.GetTexture(reitit[i], true);
-                p.timeout = 20;
-                float hakuAlku = Time.realtimeSinceStartup;
-                yield return p.SendWebRequest();
-                VerkkoOdotus.Haku("kuva", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)p.downloadedBytes);
-                if (p.result != UnityWebRequest.Result.Success) continue;
-                tulos = Nimea(DownloadHandlerTexture.GetContent(p), avain);
+                string reitti = reitit[i];
+                Texture2D saatu = null;
+                byte[] tavut = null;
+                yield return Esilataaja.Hae(() => { var q = UnityWebRequestTexture.GetTexture(reitti, true); q.timeout = 20; return q; }, Taso.Nakyva, "kuva", p =>
+                {
+                    if (p.result != UnityWebRequest.Result.Success) return;
+                    saatu = DownloadHandlerTexture.GetContent(p);
+                    tavut = p.downloadHandler.data;
+                });
+                if (saatu == null) continue;
+                tulos = Nimea(saatu, avain);
                 if (tulos == null) continue;
-                var tavut = p.downloadHandler.data;
                 if (tavut == null || tavut.Length < 16) continue;
                 System.Threading.Tasks.Task.Run(() =>
                 {
@@ -360,12 +405,9 @@ namespace Matkakirja.Natiivi
             bool verkosta = false;
             for (int i = 0; (tavut == null || tavut.Length < 16) && i < reitit.Length; i++)
             {
-                using var p = UnityWebRequest.Get(reitit[i]);
-                p.timeout = 20;
-                float hakuAlku = Time.realtimeSinceStartup;
-                yield return p.SendWebRequest();
-                VerkkoOdotus.Haku("kuva", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)p.downloadedBytes);
-                if (p.result == UnityWebRequest.Result.Success) { tavut = p.downloadHandler.data; verkosta = true; }
+                string reitti = reitit[i];
+                yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(reitti); q.timeout = 20; return q; }, Taso.Nakyva, "kuva",
+                    p => { if (p.result == UnityWebRequest.Result.Success) { tavut = p.downloadHandler.data; verkosta = true; } });
             }
             if (tavut == null || tavut.Length < 16) { valmis(null); yield break; }
 #if UNITY_IOS && !UNITY_EDITOR

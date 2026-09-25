@@ -11,9 +11,20 @@
 //     (lineaariseksi); URP:n lineaarinen väriavaruus muuntaa ne näytölle.
 //   - Rantamaski R8, 2880 × 1440, rivi 0 = 90°N v = 0:ssa, u kiertää
 //     (Repeat), bilineaarinen ilman mip-tasoja.
-//   - ZWrite Off: eri vanojen päällekkäinen alue sekoittuu (webin
-//     syvyystemppu jää pois). Saman vanan janat eivät mene päällekkäin
-//     OMISTUSSÄÄNNÖN takia (ks. frag).
+//   - PÄÄLLEKKÄISYYS ON IDEMPOTENTTI (webin kohta 5, Ihmisen matka II:n erä 1
+//     25.9.2026: omistaja näki kaistoissa raidoitusta): säde lasketaan PIKSELISTÄ
+//     (käänteinen VP), ei nelikulmion interpoloidusta paikasta, joten saman pikselin
+//     kaikki fragmentit saavat bitilleen saman pinnan pisteen, ja syvyys kirjoitetaan
+//     siitä pisteestä (SV_Depth). ZTest Less päästää vain ensimmäisen läpi: liitosten
+//     puolittajalla (SUVAITSE) molemmat janat maalaavat, mutta peitto ei enää summaudu
+//     (ennen 1 − 0,5² = 0,75 joka kärjessä = raita). Vahvempi fragmentti vedetään
+//     hitusen lähemmäs (webin KAISTAN_ALFABIAS), jotta toisen vanan häipyvä reuna ei
+//     peitä vahvaa kaistaa.
+//   - MAASTO: natiivin pallossa on korostettu maasto (KorkeusKerroin 2), joten syvyys
+//     vedetään pinnan pisteestä _Syvyys.x kameraa kohti (25 km): kaista maalautuu
+//     vuorten päälle eikä leikkaudu laattojen kolmioihin (repaleiset aukot).
+//   - KUVAN ALUE (Ihmisen matka II): _KuvanAlue häivyttää kaistan havainnekuvan alta
+//     (omistaja: väri ei saa levitä kuvan päälle).
 Shader "Matkakirja/Vana"
 {
     Properties
@@ -28,8 +39,8 @@ Shader "Matkakirja/Vana"
             Name "Forward"
             Tags { "LightMode" = "UniversalForward" }
             Blend SrcAlpha OneMinusSrcAlpha
-            ZWrite Off
-            ZTest LEqual
+            ZWrite On
+            ZTest Less
             Cull Off
 
             HLSLPROGRAM
@@ -65,6 +76,11 @@ Shader "Matkakirja/Vana"
             float4 _Rengas;           // puolileveys, pehmennys (yksikköä)
             float4 _RengasVari;
             float4 _Maski;            // päällä (0/1), kynnys ala, kynnys ylä
+            float4x4 _MaailmastaYksikkoon;
+            float4 _Syvyys;           // veto kameraa kohti (yksikköä), vahvuuden lisäveto täydellä peitolla, peiton porras
+            float4 _KuvanAlue;        // ruudun uv (origo vasen ala): x0, y0, x1, y1
+            float4 _KuvanHaivytys;    // peitto 0–1, reunan pehmeys (uv)
+            float4 _Hehku;            // Ihmisen matka II: rintaman hehku (voima 0–1, hehkun leveys × kaista, sykkeen nopeus)
             float _Kuljettu[VANOJA];
             float _VanaPeitto[VANOJA];
             float4 _Vanha[VIRTOJA];
@@ -75,8 +91,13 @@ Shader "Matkakirja/Vana"
             struct Vali
             {
                 float4 paikkaCS : SV_POSITION;
-                float3 paikka : TEXCOORD0;               // yksikköavaruus
-                nointerpolation uint jana : TEXCOORD1;
+                nointerpolation uint jana : TEXCOORD0;
+            };
+
+            struct Ulos
+            {
+                half4 vari : SV_Target;
+                float syvyys : SV_Depth;
             };
 
             static const float2 KULMAT[6] =
@@ -111,7 +132,6 @@ Shader "Matkakirja/Vana"
                 if (kulj <= j.p1.w || (dot(a, _Kamera) < raja && dot(b, _Kamera) < raja))
                 {
                     o.paikkaCS = float4(0, 0, 0, 1);
-                    o.paikka = float3(0, 0, 0);
                     return o;
                 }
                 float3 keski = kulma.y < 0.0 ? a : b;
@@ -124,7 +144,6 @@ Shader "Matkakirja/Vana"
                 // Jänteen painuma: kulma pallon pinnan yläpuolelle (webin nosto, säde 1).
                 float nosto = length(keski) + (H * H) * 0.5 + 0.001;
                 paikka = normalize(paikka) * nosto;
-                o.paikka = paikka;
                 o.paikkaCS = TransformWorldToHClip(mul(_YksikostaMaailmaan, float4(paikka, 1.0)).xyz);
                 return o;
             }
@@ -150,11 +169,14 @@ Shader "Matkakirja/Vana"
                 return d;
             }
 
-            half4 frag(Vali i) : SV_Target
+            Ulos frag(Vali i)
             {
                 Jana j = _Janat[i.jana];
-                // Pinnan piste: kameran säde pikselin läpi leikattuna yksikköpallon kanssa.
-                float3 suunta = normalize(i.paikka - _Kamera);
+                // Pinnan piste: kameran säde PIKSELIN läpi (käänteinen VP, ei interpoloitu paikka: sama bitteinä
+                // jokaiselle saman pikselin fragmentille) leikattuna yksikköpallon kanssa.
+                float2 uv = GetNormalizedScreenSpaceUV(i.paikkaCS);
+                float3 kaukanaW = ComputeWorldSpacePosition(uv, 0.5, UNITY_MATRIX_I_VP);
+                float3 suunta = normalize(mul((float3x3)_MaailmastaYksikkoon, kaukanaW - _WorldSpaceCameraPos));
                 float b = dot(_Kamera, suunta);
                 float c = dot(_Kamera, _Kamera) - 1.0;
                 float disc = b * b - c;
@@ -199,8 +221,8 @@ Shader "Matkakirja/Vana"
                         // Geodeettinen leveys ja pituus: ECEF = (a' u.x, a' u.y, b' u.z).
                         float lon = atan2(q.y, q.x);
                         float lat = atan2(_Litistys * q.z, length(q.xy));
-                        float2 uv = float2(lon / 6.28318530718 + 0.5, 0.5 - lat / 3.14159265359);
-                        maa = smoothstep(_Maski.y, _Maski.z, SAMPLE_TEXTURE2D_LOD(_Rantamaski, sampler_Rantamaski, uv, 0).r);
+                        float2 uvMaski = float2(lon / 6.28318530718 + 0.5, 0.5 - lat / 3.14159265359);
+                        maa = smoothstep(_Maski.y, _Maski.z, SAMPLE_TEXTURE2D_LOD(_Rantamaski, sampler_Rantamaski, uvMaski, 0).r);
                     }
                     alfa = lerp(muotoMaa * maa, muotoMeri, saturate(meri)) * _Aika.w * _VanaPeitto[vana];
 
@@ -212,9 +234,47 @@ Shader "Matkakirja/Vana"
                     float3 vanhaVari = lerp(_Vanha[v0].rgb, _Vanha[v1].rgb, t2);
                     float3 kirkasVari = lerp(_Kirkas[v0].rgb, _Kirkas[v1].rgb, t2);
                     vari = lerp(vanhaVari, kirkasVari, paino);
+                    // RINTAMAN HEHKU (Ihmisen matka II, vapaat kädet): etenevä kärki loistaa kirkkaana ja sen ympärille
+                    // leviää pehmeä halo, joka sykkii hitaasti — kaista maalautuu rannikolle valona. I:ssä _Hehku.x = 0.
+                    // Simulaattori 25.9. (kuutio, 0,55 / 0,4): kärki ei erottunut pergamentilta, joten paino toiseen,
+                    // kärki kohti lämmintä valkoista ja halo vahvemmaksi (leveys ennallaan, mahtuu nelikulmioon).
+                    // LOPPUKUVA (_Hehku.w): koko vana hehkuu omalla kirkkaalla värillään, kun koko pallo syttyy.
+                    if (_Hehku.x > 0.0 || _Hehku.w > 0.0)
+                    {
+                        float syke = 0.8 + 0.2 * sin(_Time.y * _Hehku.z);
+                        float kiilto = paino * paino * _Hehku.x * syke;
+                        float loppu = _Hehku.w * syke;
+                        float3 valo = lerp(kirkasVari, float3(1.0, 0.95, 0.82), 0.55) * 1.2;
+                        vari = lerp(vari, kirkasVari * 1.25, loppu * 0.6);
+                        vari = lerp(vari, valo, kiilto * 0.7);
+                        float hehkuu = max(kiilto * 0.55, loppu * 0.45);
+                        float halo = (1.0 - smoothstep(puoliMaa, puoliMaa * _Hehku.y, d2)) * hehkuu;
+                        alfa = max(saturate(alfa * (1.0 + max(kiilto, loppu) * 0.7)), halo * _VanaPeitto[vana]);
+                    }
+                }
+                // Havainnekuvan alue (II): kaista häipyy kuvan alta pehmeästi.
+                if (_KuvanHaivytys.x > 0.0)
+                {
+                    float2 ulko2 = max(_KuvanAlue.xy - uv, uv - _KuvanAlue.zw);
+                    float sisalla = 1.0 - smoothstep(-_KuvanHaivytys.y, _KuvanHaivytys.y, max(ulko2.x, ulko2.y));
+                    alfa *= 1.0 - _KuvanHaivytys.x * sisalla;
                 }
                 if (alfa < 0.004) discard;
-                return half4(vari, alfa);
+
+                // Syvyys pinnan pisteestä kameraa kohti vedettynä (maasto), vahvempi hitusen lähemmäs; peitto
+                // portaittain, jotta puolittajan tasapelin kaksi fragmenttia saavat täsmälleen saman syvyyden.
+                float porras = floor(alfa * _Syvyys.z) / _Syvyys.z;
+                float veto = min(_Syvyys.x + porras * _Syvyys.y, t0 * 0.5);
+                float3 qv = q - suunta * veto;
+                float4 leike = TransformWorldToHClip(mul(_YksikostaMaailmaan, float4(qv, 1.0)).xyz);
+                float z = leike.z / leike.w;
+            #if !UNITY_REVERSED_Z && (defined(SHADER_API_GLES3) || defined(SHADER_API_GLCORE))
+                z = z * 0.5 + 0.5;
+            #endif
+                Ulos u;
+                u.vari = half4(vari, alfa);
+                u.syvyys = z;
+                return u;
             }
             ENDHLSL
         }

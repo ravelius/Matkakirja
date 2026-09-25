@@ -15,6 +15,12 @@
 // Kosketukset: PalloKierto lukee Input Systemiä suoraan. PeittaaPisteen kertoo,
 // osuuko ruudun piste johonkin poimittavaan UI-elementtiin (pickingMode
 // Position); läpinäkyvät kehykset ovat pickingMode Ignore.
+//
+// Lämpö (Pelikoodarin lämpöerä 25.9.2026, Kartta/Ruudunpaivitys): UI on rauhassa, kun yksikään kerros ei ole
+// muuttunut (IPanel.isDirty) RauhaS-aikaan. Paneelit päivittyvät (ajastimet, transitiot, asettelu) PreLateUpdatessa
+// ennen LateUpdatea, joten joka kehyksen näyte näkee kaikki muutokset ennen piirtoa. USS-transitio herättää täyden
+// taajuuden kestonsa ajaksi (TransitionRunEvent), ja käsin ajetut kehysanimaatiot (Every(16)) kutsuvat
+// Ruudunpaivitys.Heratan itse. Testikomento `ui rauha` kertoo tilan.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +51,24 @@ namespace Matkakirja.Natiivi
         bool nakyvissa = true;
         readonly Dictionary<int, Vector4> reunat = new Dictionary<int, Vector4>();
 
+        /// <summary>UI on rauhassa, kun mikään kerros ei ole muuttunut näin pitkään (s).</summary>
+        public const float RauhaS = 0.5f;
+        /// <summary>Transition herätyksen yläraja (s): pitkätkään häivytykset eivät pidä täyttä taajuutta kauemmin.</summary>
+        const float TransitioKatto = 3f;
+        float viimeMuutos = float.NegativeInfinity;
+        int muuttunutKerros = -1, transitioita;
+        readonly Queue<float> muutokset = new Queue<float>();
+        /// <summary>Muutosnäytteen tapa: false = IPanel.isDirty, true = paneelin sisäinen versio (heijastus). `ui rauha tapa`.</summary>
+        public static bool VersioTapa;
+        static readonly System.Reflection.PropertyInfo versioOminaisuus = typeof(IPanel).Assembly
+            .GetType("UnityEngine.UIElements.BaseVisualElementPanel")?
+            .GetProperty("version", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic);
+        readonly Dictionary<int, uint> versiot = new Dictionary<int, uint>();
+        /// <summary>Diagnostiikka: kerroksen likaiset ja versiomuuttuneet kehykset (ui rauha nollaa).</summary>
+        readonly Dictionary<int, (int Likainen, int Versio)> laskurit = new Dictionary<int, (int, int)>();
+        int laskurinKehykset;
+        public static bool Diagnostiikka;
+
         /// <summary>Turva-alueen reunat muuttuivat (kierto, ensimmäinen asettelu).</summary>
         public event Action TurvaMuuttui;
 
@@ -70,6 +94,7 @@ namespace Matkakirja.Natiivi
         {
             if (instanssi != null && instanssi != this) { Destroy(gameObject); return; }
             instanssi = this;
+            Ruudunpaivitys.UiRauhassa = Rauhassa;
             teema = Resources.Load<ThemeStyleSheet>(TeemaPolku);
             if (teema == null) Debug.LogWarning("MATKAKIRJA ui: teemaa Resources/" + TeemaPolku + " ei löytynyt");
         }
@@ -77,6 +102,7 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             if (instanssi == this) instanssi = null;
+            if (Ruudunpaivitys.UiRauhassa == (Func<bool>)Rauhassa) Ruudunpaivitys.UiRauhassa = null;
         }
 
         /// <summary>
@@ -136,6 +162,7 @@ namespace Matkakirja.Natiivi
             juuri.pickingMode = PickingMode.Ignore;
             juuri.AddToClassList("mk-juuri");
             if (!nakyvissa) juuri.style.display = DisplayStyle.None;
+            juuri.RegisterCallback<TransitionRunEvent>(TransitioAlkoi, TrickleDown.TrickleDown);
             dokumentit[kerros] = d;
             return d;
         }
@@ -266,6 +293,113 @@ namespace Matkakirja.Natiivi
                 lock (paasaie) { if (paasaie.Count == 0) break; a = paasaie.Dequeue(); }
                 try { a(); } catch (Exception e) { Debug.LogException(e); }
             }
+        }
+
+        void LateUpdate()
+        {
+            // Lämpö: muutosnäyte joka kehys (ks. tiedoston alku); Ruudunpaivitys (LateUpdate, järjestys 10000) lukee sen.
+            if (!nakyvissa) return;
+            bool versio = (VersioTapa || Diagnostiikka) && versioOminaisuus != null;
+            if (Diagnostiikka) laskurinKehykset++;
+            bool muuttui = false;
+            foreach (var pari in dokumentit)
+            {
+                var p = pari.Value.rootVisualElement?.panel;
+                if (p == null) continue;
+                bool likainen = p.isDirty, versioMuuttui = false;
+                if (versio)
+                {
+                    uint v = 0;
+                    try { v = (uint)versioOminaisuus.GetValue(p); } catch (Exception) { }
+                    versioMuuttui = versiot.TryGetValue(pari.Key, out var ennen) && ennen != v;
+                    versiot[pari.Key] = v;
+                }
+                if (Diagnostiikka)
+                {
+                    laskurit.TryGetValue(pari.Key, out var l);
+                    laskurit[pari.Key] = (l.Likainen + (likainen ? 1 : 0), l.Versio + (versioMuuttui ? 1 : 0));
+                }
+                if (muuttui || !(VersioTapa && versioOminaisuus != null ? versioMuuttui : likainen)) continue;
+                muuttui = true;
+                float nyt = Time.unscaledTime;
+                viimeMuutos = nyt;
+                muuttunutKerros = pari.Key;
+                muutokset.Enqueue(nyt);
+                while (muutokset.Count > 0 && nyt - muutokset.Peek() > 2f) muutokset.Dequeue();
+                if (!Diagnostiikka) break;
+            }
+        }
+
+        /// <summary>UI rauhassa (Ruudunpaivitys.UiRauhassa): piilotettu UI tai ei muutosta RauhaS-aikaan.</summary>
+        public bool Rauhassa() => !nakyvissa || Time.unscaledTime - viimeMuutos >= RauhaS;
+
+        void TransitioAlkoi(TransitionRunEvent e)
+        {
+            transitioita++;
+            if (!(e.target is VisualElement v)) return;
+            float kesto = 0f, viive = 0f;
+            foreach (var t in v.resolvedStyle.transitionDuration) kesto = Mathf.Max(kesto, Sekunteina(t));
+            foreach (var t in v.resolvedStyle.transitionDelay) viive = Mathf.Max(viive, Sekunteina(t));
+            Ruudunpaivitys.Herata(Mathf.Min(kesto + viive, TransitioKatto) + 0.05f);
+        }
+
+        static float Sekunteina(TimeValue t) => t.unit == TimeUnit.Millisecond ? t.value / 1000f : t.value;
+
+        /// <summary>Diagnostiikka (`ui rauha laskurit`): kerroksittain likaiset/versiomuuttuneet kehykset nollauksesta.</summary>
+        public string Laskurit(bool nollaa)
+        {
+            var sb = new System.Text.StringBuilder($"{laskurinKehykset} kehystä, versio {(versioOminaisuus != null ? "saatavilla" : "EI saatavilla")}, tapa {(VersioTapa ? "versio" : "isDirty")}:");
+            foreach (var pari in laskurit.OrderBy(kv => kv.Key)) sb.Append($" [{pari.Key}] likainen {pari.Value.Likainen} versio {pari.Value.Versio}");
+            if (nollaa) { laskurit.Clear(); laskurinKehykset = 0; }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Diagnostiikka (`ui rauha erot`): kuva kaikista näkyvistä elementeistä (paikka, opasiteetti, muunnos, teksti,
+        /// värit); kahden kuvan erot kertovat, mikä elementti muuttuu levossa.
+        /// </summary>
+        public Dictionary<VisualElement, string> Tilakuva()
+        {
+            var kuva = new Dictionary<VisualElement, string>();
+            foreach (var pari in dokumentit)
+            {
+                var juuri = pari.Value.rootVisualElement;
+                if (juuri == null) continue;
+                var pino = new Stack<VisualElement>();
+                pino.Push(juuri);
+                while (pino.Count > 0)
+                {
+                    var e = pino.Pop();
+                    var r = e.resolvedStyle;
+                    // Myös piilotetut (display none): niiden muutokset likaavat paneelin yhtä lailla.
+                    var wb = e.worldBound;
+                    string t = e is TextElement te ? te.text : null;
+                    kuva[e] = $"k{pari.Key} {wb.x:0.0},{wb.y:0.0} {wb.width:0.0}x{wb.height:0.0} o{r.opacity:0.000} v{r.visibility} d{r.display} "
+                        + $"t{r.translate.x}/{r.translate.y} r{r.rotate.angle.value:0.00} s{r.scale.value.x:0.000} "
+                        + $"bg{r.backgroundColor} c{r.color} bc{r.borderTopColor} {t}";
+                    foreach (var lapsi in e.hierarchy.Children()) pino.Push(lapsi);
+                }
+            }
+            return kuva;
+        }
+
+        public static string Polku(VisualElement e)
+        {
+            var osat = new List<string>();
+            for (var x = e; x != null && osat.Count < 6; x = x.hierarchy.parent)
+                osat.Add(!string.IsNullOrEmpty(x.name) ? "#" + x.name : x.GetClasses().FirstOrDefault() ?? x.GetType().Name);
+            osat.Reverse();
+            return string.Join(" > ", osat);
+        }
+
+        /// <summary>Testikomento `ui rauha`: rauhan tila, viimeisin muuttunut kerros ja muutoskehykset 2 s:ssa.</summary>
+        public string RauhaKuvaus()
+        {
+            float nyt = Time.unscaledTime;
+            while (muutokset.Count > 0 && nyt - muutokset.Peek() > 2f) muutokset.Dequeue();
+            return $"rauhassa {Rauhassa()}, viimeisin muutos {(float.IsInfinity(viimeMuutos) ? "-" : (nyt - viimeMuutos).ToString("0.00") + " s sitten")} "
+                + $"(kerros {muuttunutKerros}), muutoskehyksiä 2 s:ssa {muutokset.Count}, transitioita {transitioita}, "
+                + (Ruudunpaivitys.Instanssi != null ? Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä");
         }
 
         void PaivitaTurvaalueet()

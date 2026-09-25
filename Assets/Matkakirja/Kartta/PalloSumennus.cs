@@ -53,6 +53,12 @@ namespace Matkakirja
             vaihe = new Vaihe { materiaali = materiaali };
         }
 
+        /// <summary>
+        /// Lämmön perusskaala (Ruudunpaivitys: 0,7 kuumana, muuten null): Palauta palauttaa tähän eikä tallennettuun
+        /// arvoon, koska lämpötaso voi vaihtua sumennuksen aikana (Natiiviseppä 25.9.). null = tallennettu arvo.
+        /// </summary>
+        public static float? PerusSkaala;
+
         /// <summary>Pieni kuva ja sumennusvaihe päälle (true) tai alkuperäinen renderScale takaisin (false).</summary>
         public void Aseta(bool paalla)
         {
@@ -91,7 +97,7 @@ namespace Matkakirja
             if (kytketty) { RenderPipelineManager.beginCameraRendering -= Ennen; kytketty = false; }
             if (asetus != null && alkuperainenSkaala > 0f)
             {
-                asetus.renderScale = alkuperainenSkaala;
+                asetus.renderScale = PerusSkaala ?? alkuperainenSkaala;
                 asetus.upscalingFilter = alkuperainenSuodin;
             }
             alkuperainenSkaala = -1f;

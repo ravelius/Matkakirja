@@ -25,7 +25,7 @@ namespace Matkakirja
 
         public event Action<string> Napautettu;
 
-        sealed class Piste { public string Id; public GameObject Olio; public Material Oma; public Vector3 Paikka; public Vector3 Normaali; public bool Lukittu; public float Koko; }
+        sealed class Piste { public string Id; public GameObject Olio; public Material Oma; public Vector3 Paikka; public Vector3 Normaali; public bool Lukittu; public float Koko; public Color Vari; }
 
         [Tooltip("Avoimen pisteen syke: jakso sekunteina ja koon vaihtelu (lukittu piste ei syki).")]
         public float sykeJakso = 1.6f;
@@ -49,6 +49,27 @@ namespace Matkakirja
             naytetty = Nakyy;
             foreach (var p in pisteet.Values)
                 if (p.Olio != null && p.Olio.TryGetComponent<MeshRenderer>(out var r)) r.enabled = naytetty;
+            PallonLepo.Muuttui("karttapisteet");
+        }
+
+        // LÄMPÖERÄ (PallonLepo): avoimen pisteen syke on jatkuva idle-animaatio, joka näkyy tavallisessa lepokartassa.
+        // Fable 25.9. klo 20.1x: syke jäätyy keskiasentoon (koko × 1 + määrä / 2) 3 s levon jälkeen ja jatkuu heti
+        // aktiivisuudesta (Joutosyke); jäätyneenä ehto on false, ja pallo saa levätä. Ruudun ulkopuolinen piste ei estä lepoa.
+        void OnEnable() => PallonLepo.Animoi(Sykkii, "karttapisteet: syke");
+        void OnDisable() => PallonLepo.Poista(Sykkii);
+
+        bool Sykkii()
+        {
+            if (!Joutosyke.Elaa || !naytetty || sykeMaara == 0f || georeferenssi == null) return false;
+            var kamera = PallonLepo.Kamera;
+            if (kamera == null) return false;
+            var gt = georeferenssi.transform;
+            float reuna = sade * (1f + sykeMaara) * PalloKierto.Pistekerroin;
+            foreach (var p in pisteet.Values)
+                if (!p.Lukittu && p.Olio != null && p.Olio.activeInHierarchy
+                    && PallonLepo.PinnallaRuudulla(kamera, gt.TransformPoint(p.Paikka), gt.TransformDirection(p.Normaali), reuna))
+                    return true;
+            return false;
         }
 
         void Start()
@@ -68,7 +89,8 @@ namespace Matkakirja
         public void Aseta(string id, double lat, double lon, Color vari, bool lukittu)
         {
             if (string.IsNullOrEmpty(id) || georeferenssi == null) return;
-            if (!pisteet.TryGetValue(id, out var p))
+            bool uusi = !pisteet.TryGetValue(id, out var p);
+            if (uusi)
             {
                 p = new Piste { Id = id, Olio = new GameObject("Karttapiste " + id) };
                 p.Olio.transform.SetParent(georeferenssi.transform, false);
@@ -85,6 +107,9 @@ namespace Matkakirja
             // Nosto ellipsoidista × korkeuskerroin: mikä oli kertoimella 1 maaston yllä, pysyy liioitellun yllä.
             var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, KorkeusKerroin.Sovita(nosto)));
             double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            // Tilan muutos (joutosyke jatkuu) vain, kun piste on uusi tai muuttui: peli asettaa saman pisteen joka tallennuksessa.
+            bool muuttui = uusi || p.Paikka != (Vector3)(float3)u || p.Lukittu != lukittu || p.Vari != vari;
+            p.Vari = vari;
             p.Paikka = (float3)u;
             p.Normaali = (float3)math.normalize(u - keskus);
             // Valopiste laajentaa kärjet ruudulla objektin koordinaateissa: verkko pisteen kohdalle.
@@ -95,12 +120,14 @@ namespace Matkakirja
             p.Oma.SetFloat("_Koko", p.Koko);
             p.Oma.SetVector("_Keskus", (Vector3)(float3)keskus);
             p.Olio.SetActive(true);
+            if (muuttui) PallonLepo.Muuttui("karttapisteet");
         }
 
         void Update()
         {
             if (Nakyy != naytetty) Paivita();
-            float s = 1f + sykeMaara * 0.5f * (1f + Mathf.Sin(Time.unscaledTime * 2f * Mathf.PI / sykeJakso));
+            // Syke joutosykkeen omalla ajalla ja voimalla (Fable 25.9.): voima 0 = keskiasento, aika pysähtyy levossa.
+            float s = Lampopaatos.PisteenSyke(Joutosyke.Aika, sykeJakso, sykeMaara, Joutosyke.Voima);
             foreach (var p in pisteet.Values)
                 if (!p.Lukittu) p.Oma.SetFloat("_Koko", p.Koko * s);
         }
@@ -110,6 +137,7 @@ namespace Matkakirja
             if (!pisteet.TryGetValue(id, out var p)) return;
             Destroy(p.Olio);
             pisteet.Remove(id);
+            PallonLepo.Muuttui("karttapisteet");
         }
 
         static Mesh Verkko(Vector3 paikka, Color vari)

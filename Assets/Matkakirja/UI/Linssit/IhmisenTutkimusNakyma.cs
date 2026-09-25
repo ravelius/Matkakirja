@@ -60,7 +60,7 @@ namespace Matkakirja.Natiivi
             // Syke (web ihmisen-nosto-syke 2,6 s): luokka vaihtuu puolen jakson välein, siirtymä hoitaa liukuman.
             pisteet.schedule.Execute(() =>
             {
-                if (nostot.Count == 0) return;
+                if (nostot.Count == 0 || !Rakenne.Naytetaan(pisteet)) return; // lämpöerä: ei sykettä piilossa
                 syke = !syke;
                 pisteet.EnableInClassList("mk-ihmisnostot--syke", syke);
             }).Every(1300);

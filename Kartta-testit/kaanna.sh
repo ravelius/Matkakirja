@@ -9,6 +9,7 @@
 # Rajakorkeussarja: VEKTORIT_KOE=<kansio> ./kaanna.sh Vektorisolut (esim. /Users/Shared/Claude/maasto-poltto/rajakorkeus/2026-09-25-gshhs-korkeus)
 # Nimikerroksen koepaketti: NIMET_KOE=<paketin kansio> ./kaanna.sh NimiLadonta (oletus /Users/Shared/Claude/sisalto-koe-2/v8)
 # Maakunnat maittain oikealla aineistolla (skeema 1.42) ja kestot: MAAKUNTARAJAT=<maakuntarajat.json> ./kaanna.sh Maakuntajako
+# Maakuntien värinumerot webin <ISO>.json-tiedostoihin verrattuna: MAAKUNTARAJAT=<…> MAAKUNNAT_WEB=<kansio> ./kaanna.sh MaakuntaVarit
 # Kultaiset arvot uusiksi: node Kultaiset/tee-saapuminen.mjs <webin juuri: js/ ja assets/data/maapolygonit.json>
 set -e
 cd "$(dirname "$0")"
@@ -26,15 +27,23 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
+../Assets/Matkakirja/Kartta/Laattapaketti.cs
+../Assets/Matkakirja/Kartta/Lampopaatos.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
+../Assets/Matkakirja/Kartta/LennonKamerareitti.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
+../Assets/Matkakirja/Kartta/MaastoLaatat.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
 ../Assets/Matkakirja/Kartta/Panorointi.cs
+../Assets/Matkakirja/Kartta/Pohjapallolaskenta.cs
+../Assets/Matkakirja/Kartta/Reikakorjaus.cs
 ../Assets/Matkakirja/Kartta/ReittiMitat.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs
 ../Assets/Matkakirja/Kartta/Siirtokoreografia.cs
+../Assets/Matkakirja/Kartta/ValmiusEhto.cs
+../Assets/Matkakirja/Kartta/Valokeilalaskenta.cs
 ../Assets/Matkakirja/Kartta/Vektorisolut.cs
 ../Assets/Matkakirja/Kartta/Viivaleveys.cs
 ../Assets/Matkakirja/Linssit/Ydin/Kamera/Kamerakoreografia.cs

@@ -55,6 +55,17 @@ namespace Matkakirja.Natiivi
         public string SoitaIntro() => luennat?.Intro == null ? "introa ei ole" : SoitaLuento(luennat.Intro, 0f);
 
         /// <summary>
+        /// LÖYDÖS 118 (omistaja build 14): intro alkaa samassa aloitusruudussa Aloita seikkailu -painalluksesta, ja
+        /// musiikki jatkuu (Tila.Avaus vain vaimentaa, AaniTaulut.AvauksenMusiikki 0,6 / 1,3 s). Intro-puhe ladataan
+        /// portin aikana, jotta ääni alkaa heti eikä vasta latauksen jälkeen (kylmänä ~0,5–1 s, verkko-odotusmittari).
+        /// Kutsutaan, kun luennat ovat valmiit ja aloitusnäkymä on auki, ja aina kun tila palaa aloitukseen.
+        /// </summary>
+        void EsilataaIntro()
+        {
+            if (Tila == SilmukanTila.Aloitus && luennat?.Intro?.Url != null) puhe?.Esilataa(luennat.Intro.Url);
+        }
+
+        /// <summary>
         /// Uuden matkan aloituslento valittuun kaupunkiin (UusiMatka). Palauttaa, lähtikö lento;
         /// false = ei nappulaa, pelisilmukka pois tai lähtö Lontoosta (intro soi kuten ennen).
         /// </summary>
@@ -79,6 +90,7 @@ namespace Matkakirja.Natiivi
             AloituslentoKaynnissa = true;
             saapumiskorttiTunnus++;
             try { AloituslentoAlkoi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
+            EsilataaSaapuminen(kohde);
             Debug.Log($"MATKAKIRJA peli: aloituslento Lontoo → {kohde}, {kesto:0.0} s");
 
             int tunnus = ++ajoTunnus;

@@ -257,6 +257,13 @@ namespace Matkakirja
 
         // ---- Kehys ----
 
+        // LÄMPÖERÄ (PallonLepo): uuden solun häive (0,26 s) jatkuu kameran pysähdyttyä; solujen ja koko kerroksen
+        // piilotus on yksittäinen muutos (Muuttui). Latautuvat solut eivät muuta kuvaa ennen kuin niiden verkko näkyy.
+        void OnEnable() => PallonLepo.Animoi(Haivyttaa, Laji);
+        void OnDisable() => PallonLepo.Poista(Haivyttaa);
+        bool Haivyttaa() => haiveKaynnissa && juuri != null && juuri.activeSelf;
+        bool haiveKaynnissa;
+
         void LateUpdate()
         {
             if (materiaali == null || georeferenssi == null) return;
@@ -264,7 +271,7 @@ namespace Matkakirja
             if (Luettelo == null && !luetteloHaussa) StartCoroutine(LataaLuettelo());
             bool nakyy = Syy() == null;
             if (juuri == null) Luo();
-            if (juuri.activeSelf != nakyy) juuri.SetActive(nakyy);
+            if (juuri.activeSelf != nakyy) { juuri.SetActive(nakyy); PallonLepo.Valmistui(Laji); }
             // Uudelleen näkyviin: näkyvät solut häivytetään sisään kuten webissä (solu tulee näkyviin → haivyta).
             if (nakyy && !nakyiEdella) foreach (var s in naytetyt) s.HaiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
@@ -327,11 +334,13 @@ namespace Matkakirja
         void Haiveet()
         {
             float nyt = Time.unscaledTime;
+            haiveKaynnissa = false;
             foreach (var s in naytetyt)
             {
                 if (s.HaiveAlku < 0f || s.Piirto == null) continue;
                 float h = Mathf.Clamp01((nyt - s.HaiveAlku) / HaiveSek);
                 if (h >= 1f) { s.HaiveAlku = -1f; s.Piirto.SetPropertyBlock(null); continue; }
+                haiveKaynnissa = true;
                 float alfa = 1f - (1f - h) * (1f - h) * (1f - h);
                 var vari = Muste;
                 vari.a = PeittoNyt * alfa;
@@ -417,7 +426,11 @@ namespace Matkakirja
                 foreach (var s in naytetyt) s.Nakyy = false;
                 foreach (var s in tyolista) if (s.Verkko) s.Nakyy = true;
                 foreach (var s in naytetyt)
-                    if (!s.Nakyy && s.Piirto != null) { s.Piirto.enabled = false; s.HaiveAlku = -1f; s.Piirto.SetPropertyBlock(null); }
+                    if (!s.Nakyy && s.Piirto != null)
+                    {
+                        if (s.Piirto.enabled) PallonLepo.Valmistui(Laji);
+                        s.Piirto.enabled = false; s.HaiveAlku = -1f; s.Piirto.SetPropertyBlock(null);
+                    }
                 naytetyt.Clear();
                 foreach (var s in tyolista)
                 {

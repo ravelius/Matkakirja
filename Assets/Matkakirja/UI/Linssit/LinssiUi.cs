@@ -215,7 +215,7 @@ namespace Matkakirja.Natiivi
             if (kerros != kerrosPaalla) { kerrosPaalla = kerros; ui.Matkakirja.Linssi(kerros); }
             // Löydös 42: karttaselitteen nappi näkyy linssin aikana kuten webissä; piiloon vain aikajanalinsseissä
             // (web body.aikajana-paalla .karttaselite) ja astronautin kamerassa (body.linssi-satelliitti .karttaselite).
-            bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || id == AikajanaNakyma.IhmisenMatkaId;
+            bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id);
             ui.Karttaselite.NaytaNappi(!selitePiiloon);
             if (paalla) ui.Karttaselite.Sulje();
             Valitsin.Sulje();
@@ -233,7 +233,7 @@ namespace Matkakirja.Natiivi
             astroTila = astro;
             Asettele();
             // Aikajanalinsseillä oma palkki korvaa Matkakirjan yläpalkin (web body.aikajana-palkki-auki .topbar).
-            bool aikajana = id == AikajanaNakyma.KeksinnotId || id == AikajanaNakyma.IhmisenMatkaId;
+            bool aikajana = id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id); // myös Ihmisen matka II
             ui.Tilarivi.NaytaPalkki(!astro && !aikajana);
             Valitsin.NaytaNappi(!astro && !aikajana);
             Pulu.Hae().Astronautti = astro;
