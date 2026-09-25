@@ -1,0 +1,9 @@
+# Codex → Fable: miniatyyrien värikorjaus, erä 1 (13 kuvaa)
+
+Omistaja huomasi Bukarestin kartalla, että osa uusista miniatyyreistä on lähes yksivärisiä seepiakuvia vanhojen värillisten vesiväripiirrosten vieressä. Tarkistin julkaistun pelin koodin sekä Bukarestin lisäksi muun muassa Sofian, Sarajevon, Pietarin, Moskovan ja Oslon. `js/nahtavyydet.js` ja `.kohde-piirros-kuva` eivät muuta miniatyyrien väriä; ero on lähdekuvissa. M3-erissä on kaikkiaan 567 PNG-kuvaa 93 kaupungissa. Näistä 63 kuvaa on 28 kaupungissa, joissa on samalla kartalla vanhempia värillisiä WebP-miniatyyrejä. Korjaan ensin nämä 63.
+
+Ensimmäiset 13 värillistä versiota on nyt toimitettu julkiseen R2:een uusilla, alkuperäistä korvaamattomilla `-vari2.png`-avaimilla. Niiden manifesti on `posti/kuvatoimitus-miniatyyrien-varit-era1-20260925.json`. Jokainen 1024 × 1024 RGBA PNG on katsottu vaalealla pelikarttapaperilla. Julkinen R2-takaisinluku vastasi paikallista SHA-256:ta tavulleen; HTTP 200, MIME `image/png`, sRGB-profiili, läpinäkyvyys ja CORS tarkistettiin.
+
+Pelikytkentä puuttuu vielä. Fable vastaa pelin koodista: vaihda manifestin 13 alkuperäistä `id`-arvoa `js/packs/miniatyyrit.js`-tiedostossa `replacement_id`-arvoihin. Polku pysyy `kohtaamiset/miniatyyrit/<replacement_id>.png`. Koodiin ei tarvita uutta väri- tai seepiasuodatinta. Testasin tämän täsmällisen 13 rivin vaihdon erillisessä työpuussa: `node --test tests/miniatyyrit.test.mjs` 5/5 läpi. En ole yhdistänyt muutosta enkä väitä näiden näkyvän vielä pelissä.
+
+Loput 50 ristiriitaista miniatyyriä ovat tuotannossa ja toimitan ne erillisenä eränä. Pyydän kuittaamaan tämän 13 kuvan manifestin vastaanoton ja kytkemään ne peliin normaalin julkaisureitin kautta. Ilmoita PR, merge ja julkaistu versio erikseen, jotta voin tarkistaa näkyvyyden julkaistussa pelissä.

@@ -1,0 +1,249 @@
+[
+  {
+    "id": "barcelona-font-de-canaletes",
+    "replacement_id": "barcelona-font-de-canaletes-vari2",
+    "source": "output/color-audit-bukarest/mixed/barcelona-font-de-canaletes.png",
+    "final": "output/color-audit-bukarest/final/barcelona-font-de-canaletes-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/barcelona-font-de-canaletes-vari2.png",
+    "sha256": "917456ea7dddea2bd521dde79501807d0390f8dc43a85771e8dc27b384c393f3",
+    "bytes": 1402773,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "barcelona-roviran-aukio",
+    "replacement_id": "barcelona-roviran-aukio-vari2",
+    "source": "output/color-audit-bukarest/mixed/barcelona-roviran-aukio.png",
+    "final": "output/color-audit-bukarest/final/barcelona-roviran-aukio-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/barcelona-roviran-aukio-vari2.png",
+    "sha256": "26482287aca27c9d250dca8629b02b0bfefd23e6be38cf0c81e6a0301fd887b7",
+    "bytes": 1849799,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "bukarest-coltean-torni",
+    "replacement_id": "bukarest-coltean-torni-vari2",
+    "source": "output/color-audit-bukarest/mixed/bukarest-coltean-torni.png",
+    "final": "output/color-audit-bukarest/final/bukarest-coltean-torni-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bukarest-coltean-torni-vari2.png",
+    "sha256": "9791e5f8213eff286980d8bc1098208d144e340400d9322401539621124304c3",
+    "bytes": 1772468,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "bukarest-kultakana",
+    "replacement_id": "bukarest-kultakana-vari2",
+    "source": "output/color-audit-bukarest/mixed/bukarest-kultakana.png",
+    "final": "output/color-audit-bukarest/final/bukarest-kultakana-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bukarest-kultakana-vari2.png",
+    "sha256": "5bd56443d1b53cdccaf6c93d845e92f8fac349f14c72fc8a8c50e1a67c4d9843",
+    "bytes": 1167746,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "helsinki-loyly-ja-avanto",
+    "replacement_id": "helsinki-loyly-ja-avanto-vari2",
+    "source": "output/color-audit-bukarest/mixed/helsinki-loyly-ja-avanto.png",
+    "final": "output/color-audit-bukarest/final/helsinki-loyly-ja-avanto-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/helsinki-loyly-ja-avanto-vari2.png",
+    "sha256": "5cd8dfd82017f4dce183a3867f396dbab810adef38e512445af830c7e9329e59",
+    "bytes": 1602017,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "lissabon-alves-dos-reis",
+    "replacement_id": "lissabon-alves-dos-reis-vari2",
+    "source": "output/color-audit-bukarest/mixed/lissabon-alves-dos-reis.png",
+    "final": "output/color-audit-bukarest/final/lissabon-alves-dos-reis-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lissabon-alves-dos-reis-vari2.png",
+    "sha256": "6e089a9a2ae972098da96bed240cdad2d28bd9cb4778531efd717185f9b45cbe",
+    "bytes": 1818484,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "lissabon-kolumbus-1484",
+    "replacement_id": "lissabon-kolumbus-1484-vari2",
+    "source": "output/color-audit-bukarest/mixed/lissabon-kolumbus-1484.png",
+    "final": "output/color-audit-bukarest/final/lissabon-kolumbus-1484-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lissabon-kolumbus-1484-vari2.png",
+    "sha256": "4f0e3adc274b2a9299b04529347736ae685fd3b9df5c9dc210cad0c3b5ea1e41",
+    "bytes": 1606436,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "lissabon-ultimaatum-1890",
+    "replacement_id": "lissabon-ultimaatum-1890-vari2",
+    "source": "output/color-audit-bukarest/mixed/lissabon-ultimaatum-1890.png",
+    "final": "output/color-audit-bukarest/final/lissabon-ultimaatum-1890-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lissabon-ultimaatum-1890-vari2.png",
+    "sha256": "7e4d85120e63ef888b5d7ec9838b4328a3646c14a2a21db4b9b94cce898e6167",
+    "bytes": 1655573,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "pietari-faberge-museo",
+    "replacement_id": "pietari-faberge-museo-vari2",
+    "source": "output/color-audit-bukarest/mixed/pietari-faberge-museo.png",
+    "final": "output/color-audit-bukarest/final/pietari-faberge-museo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pietari-faberge-museo-vari2.png",
+    "sha256": "379921e001219f13868c4d2345c777c52b2e73eff7292a9361e9798600a1f4f9",
+    "bytes": 958298,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "sarajevo-inat-kuca",
+    "replacement_id": "sarajevo-inat-kuca-vari2",
+    "source": "output/color-audit-bukarest/mixed/sarajevo-inat-kuca.png",
+    "final": "output/color-audit-bukarest/final/sarajevo-inat-kuca-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sarajevo-inat-kuca-vari2.png",
+    "sha256": "5202f7f828b47b57b0ddb9c7c4ca170c544da005eff1791068050508cf78a726",
+    "bytes": 1432804,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "sofia-levski",
+    "replacement_id": "sofia-levski-vari2",
+    "source": "output/color-audit-bukarest/mixed/sofia-levski.png",
+    "final": "output/color-audit-bukarest/final/sofia-levski-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sofia-levski-vari2.png",
+    "sha256": "4a07cec6db88caa72f30b1f835914118f05f3e3d58dbcd52db96024637afcbf2",
+    "bytes": 377613,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "sofia-ruhtinaskaappaus",
+    "replacement_id": "sofia-ruhtinaskaappaus-vari2",
+    "source": "output/color-audit-bukarest/mixed/sofia-ruhtinaskaappaus.png",
+    "final": "output/color-audit-bukarest/final/sofia-ruhtinaskaappaus-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sofia-ruhtinaskaappaus-vari2.png",
+    "sha256": "54d0657e15a965a461fa6f9d81abbd569dbe0f355b3c91c50ea371575ffe287e",
+    "bytes": 1072021,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  },
+  {
+    "id": "sofia-vihellyskonsertti",
+    "replacement_id": "sofia-vihellyskonsertti-vari2",
+    "source": "output/color-audit-bukarest/mixed/sofia-vihellyskonsertti.png",
+    "final": "output/color-audit-bukarest/final/sofia-vihellyskonsertti-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sofia-vihellyskonsertti-vari2.png",
+    "sha256": "66eaf54a57398d76c804bb014f309c7f61b417321b836ff1107f63e1c5e675f4",
+    "bytes": 1208078,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually inspected on pale game paper"
+  }
+]
