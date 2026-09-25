@@ -50,7 +50,13 @@ mitattuna (video tai kuvapari) ennen korjausta (WEB ON MALLI).
 | 10 | Black Marble -yövalot | – | Karttasepän poltto (~klo 9) | odottaa |
 | 11 | E28 syvät tasot Z9–Z11 | – | Fablen ilmoitus | odottaa |
 
-Yhteinen testikäännös FBBD41D7:ään: reitit-b13 + rasteriavain + maarajat + saattokamera + aloitusruutu (jonossa 05.5x).
+**Junassa 07.2x: juna/b13 2abbbcf** — erät 1–7 ja loydos77 (3d7efce, löydös 77: radion jäänteiden vahti) sekä Natiivi-UI:n
+valikko-65 ja opas-62; Unityn luomat .metat omana committinaan. Testikäännös ed1a627 (koe/b13-yhdistelma) FBBD41D7:ssä,
+kuvat lokit/b13-yhdistelma: nimet (kuvapari webin Marseille-kuvan kanssa; Lyon vasemmalla kuten webissä), nipistys
+pysähtyy saapumisnäkymään, veto pysyy Ranskassa, noppa sovittaa kohteet ruutuun, kylmä käynnistys ilman Unityn ruutua.
+Kuvasta korjattu: varattu lukko vapautuu (Pariisi ja Marseille olivat ilman nimeä) 24eff66.
+Löydös 74: Linssisepän linssiseppa/ihminen-74 286cf64 korvaa natiiviseppa/loydos74:n (mergetään Linssisepän
+Unity-varmistuksen jälkeen, myös linssiseppa/radio-sulku-varmistus 2cf6ed9). Levysiivous 06.3x: 24,5 Gt vapautettu.
 Kuvaus: lokit/natiiviseppa-skriptit/nimikuvat.sh (Marseille, Ranska, nipistys ulos, veto itään, noppa).
 
 Hyväksytyt poikkeamat (Fable 05.3x): B25 ja D14 — LENNON ESITYS kaikille lennoille, kesto TEMPO-linjauksen mukaan
