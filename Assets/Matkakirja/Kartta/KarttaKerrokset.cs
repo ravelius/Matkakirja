@@ -198,6 +198,8 @@ namespace Matkakirja
                     break;
                 case "kaupungit":
                     if (merkit != null) merkit.merkitNakyvat = nakyy;
+                    // Nopan siirtokohteet samalla portilla (linssin ajaksi pois, palaavat perässä).
+                    if (Siirtokohdemerkit.Instanssi != null) Siirtokohdemerkit.Instanssi.Nakyvissa = nakyy;
                     // Web: maan kehä pois linssin ajaksi samalla portilla kuin kaupunkipisteet
                     // (js/pallolauta/lauta.js linssiPaalla; LinssiOhjain.Pelikerrokset ja maatila piilottavat kaupungit).
                     if (maaraja != null) maaraja.Linssit(!nakyy);
