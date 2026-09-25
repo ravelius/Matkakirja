@@ -117770,6 +117770,232 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Simpson Desert',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Birdsville, Birdsville Track, Birdsville Races, Big
+       * Red Bash, Birdsville Hotel, Birdsville Airport, Birdsville
+       * Developmental Road, Simpson Desert, Munga-Thirri National Park,
+       * Poeppel Corner, Tom Kruse (mailman)) ja Wikivoyagen
+       * Birdsville-sivulta — teksti omaa. Nostojen ja kuvagallerian aiheita
+       * (Burke ja Wills, nimen synty, rajatullit, hotellin synty 1884,
+       * kilpailujen synty 1882, Diamantina, Big Redin dyyni, wangkangurrut
+       * ja mikirit, postiauto 1934) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: kylän tienviitta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Road Signs to even more Remote Areas in Birdsville - panoramio.jpg',
+          lyhyt: 'Birdsvillen tienviitan mukaan Adelaideen on 1 191 ja Brisbaneen 1 602 kilometriä.',
+          selite: 'Birdsvillen laidalla seisova tienviitta luettelee seuraavat '
+            + 'asutut paikat: Betootaan on 170, Marreehen 518 ja Brisbaneen '
+            + '1 602 kilometriä.',
+          lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Birdsvillessä asuu runsaat sata ihmistä, mutta kylä on '
+          + 'Australian tunnetuimpia sisämaan matkakohteita. Brisbaneen on '
+          + 'yli 1 500 kilometriä, ja autolla matka kestää kauemmin kuin '
+          + 'Brisbanesta Melbourneen. Etelästä tullaan Birdsville Trackia '
+          + 'pitkin, länteen alkaa Simpsonin aavikon ylitys, ja syyskuun '
+          + 'laukkakilpailuihin kylän kiitoradalle laskeutuu satoja '
+          + 'pienkoneita. Pubi on lentoterminaalia vastapäätä, leipomossa '
+          + 'myydään kamelipiirakkaa, ja kylän vesi nousee maan alta lähes '
+          + 'kiehuvana. Parhaiten Birdsville sopii matkaan huhti–lokakuussa: '
+          + 'tammikuussa päivän ylin lämpötila on keskimäärin yli 40 astetta, '
+          + 'ja Queenslandin lämpöennätys, 49,5 astetta, mitattiin juuri '
+          + 'täällä.',
+        artikkeli: {
+          nimi: 'Matkailijan Birdsville',
+          teksti: 'Birdsvilleen saavutaan joko pölyistä soratietä tai '
+            + 'pienkoneella lähes pubin ovelle.',
+          nosto: 'Kilpailuviikonloppuna lentäjät saavat leiriytyä oman '
+            + 'koneensa siiven alle.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille maitse tai ilmateitse',
+              teksti: 'Birdsville on 1 590 kilometriä Brisbanesta länteen ja '
+                + '720 kilometriä Mount Isasta etelään, ja ajomatka '
+                + 'Brisbanesta vie kauemmin kuin sieltä Melbourneen tai '
+                + 'Cairnsiin. Idästä kylään johtaa 273 kilometrin Birdsville '
+                + 'Developmental Road, joka on yhä suurimmaksi osaksi '
+                + 'päällystämätön, ja etelästä Etelä-Australian Marreesta '
+                + 'runsaat 500 kilometriä pitkä Birdsville Track. Kuivalla '
+                + 'säällä tavallinen kaksivetoinen auto pärjää yleensä '
+                + 'molemmilla, mutta sade voi sulkea tiet joko kaikilta tai '
+                + 'vain kaksivetoisilta. Kiireisempi lentää: osavaltion '
+                + 'tilaama reittikone kulkee Brisbanesta Charlevillen, '
+                + 'Quilpien ja Windorahin kautta ja jatkaa pohjoiseen '
+                + 'Bedourien ja Boulian kautta Mount Isaan. Terminaali on '
+                + 'pubia vastapäätä, joten koneesta pääsee tiskille '
+                + 'muutamassa minuutissa. Vuonna 2011 valmistunut 1,5 '
+                + 'miljoonan dollarin remontti toi kentälle uuden '
+                + 'terminaalin ja kiitotievalot, sillä pienkoneilla saapuvat '
+                + 'matkailijat ovat kylälle tärkeä tulonlähde. Kentällä '
+                + 'käy myös postilento, joka kuljettaa kirjeet Etelä-'
+                + 'Australian Port Augustasta syrjäisille karja-asemille.',
+              kuva: [
+                {
+                  tiedosto: 'YBDV Birdsville Airport.jpg',
+                  lyhyt: 'Birdsvillen kiitotie kulkee hiekkaharjun viertä, ja sen päässä ovat kylän talot.',
+                  selite: 'Jouluaattona 2007 otetussa ilmakuvassa Birdsvillen '
+                    + 'kiitotie kulkee punaisen hiekkaharjun vierellä, ja sen '
+                    + 'päässä näkyvät kylän talot ja Diamantinan puiden '
+                    + 'reunustamat uomat.',
+                  lahde: 'Stuart Edwards, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'VH-EEH with DC3.JPG',
+                  lyhyt: 'Pienkone tankkaa Birdsvillen kentällä, taustalla vanha DC-3-matkustajakone.',
+                  selite: 'Cessna 210 -pienkone VH-EEH tankkaa Birdsvillen '
+                    + 'kentällä kesäkuussa 2010, ja sen takana seisoo Air '
+                    + 'Nostalgia -yhtiön DC-3, 1930-luvulla suunniteltu '
+                    + 'potkurikone.',
+                  lahde: 'Danger85, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Birdsville Track sign 0789.jpg',
+                  lyhyt: 'Birdsville Trackin pohjoispään kyltti toivottaa hyvää matkaa soratielle.',
+                  selite: 'Birdsville Trackin pohjoispäässä kyltti toivottaa '
+                    + 'antoisaa ajoa, ja soratie katoaa sen takana tasaiselle '
+                    + 'kivikkotasangolle.',
+                  lahde: 'Summerdrought, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Soratie etelään, dyynit länteen',
+              teksti: 'Birdsville Track syntyi karjatieksi, jota pitkin laumat '
+                + 'ajettiin Marreen rautatieasemalle. Nykyään 517 kilometrin reitti on '
+                + 'tasoitettu soratie, joka halkoo Strzeleckin, Sturtin '
+                + 'kivikkoaavikon ja Tirarin aavikot. Ainoa palvelupiste '
+                + 'matkan varrella on Mungeranien asema, jossa on '
+                + 'polttoainetta ja hotelli 204 kilometrin päässä Marreesta '
+                + 'ja 313 kilometrin päässä Birdsvillestä. Kylään ja '
+                + 'Marreehen tuotiin 2008 pronssinen rintakuva Tom Kruselle, joka '
+                + 'ajoi tien postireittiä vuosina 1936–1957. Länteen alkaa '
+                + 'vaativampi seikkailu, Simpsonin aavikon ylitys. Suosituin '
+                + 'reitti Mount Daren hotellille, läntisen reunan viimeiselle '
+                + 'polttoaineasemalle, kulkee French Linea, jonka ranskalainen '
+                + 'öljy-yhtiö raivasi 1960-luvun alussa. Useimmat ajavat sen '
+                + 'lännestä itään, koska vallitsevat tuulet auttavat ja '
+                + 'dyynien länsirinteet ovat loivempia, joten Birdsville on '
+                + 'monelle maali. 174 kilometriä kylästä länteen on Poeppel '
+                + 'Corner, jossa kolme osavaltiota kohtaa ja uusi vuosi '
+                + 'vaihtuu kolmesti puolen tunnin välein. Munga-Thirrin '
+                + 'kansallispuistossa ajetaan vain QAA Line -uraa ja '
+                + 'leiriydytään enintään 500 metrin päähän siitä. Puisto on '
+                + 'suljettu joulukuun alusta maaliskuun puoliväliin, ja '
+                + 'aavikolle lähdetään vähintään kahdella nelivetoautolla ja '
+                + 'kaukoyhteyslaittein.',
+              kuva: {
+                tiedosto: 'Simpson DSC02969 Qld (24379197118).jpg',
+                lyhyt: 'Tarroilla peitetty aavikkokyltti: Mount Daren hotelliin on 375 km French Linea.',
+                selite: 'Simpsonin aavikon hiekalla seisova kyltti lupaa Mount '
+                  + 'Daren hotellissa leirintää, majoitusta, ruokaa, korjaamon, '
+                  + 'hinauksen ja polttoainetta 375 kilometrin päässä, ja ohi '
+                  + 'ajaneet ovat peittäneet sen tarroillaan.',
+                lahde: 'Ian Cochrane, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Laukkaa ja rockia aavikolla',
+              teksti: 'Syyskuinen Birdsville Races on kylän vuoden suurin '
+                + 'tapahtuma: kahden päivän kilpailuihin saapuu 7 000–9 000 '
+                + 'vierasta, ja jopa kaksisataa pienkonetta täyttää 1 700 '
+                + 'metrin kiitoradan. Lentäjät saavat leiriytyä koneensa '
+                + 'siiven alle, ja maanteitse tulevia toivottaa matkan '
+                + 'varrella tervetulleiksi Quilpien kaupunki. Tuotto menee '
+                + 'lentävälle lääkäripalvelulle Royal Flying Doctor '
+                + 'Servicelle ja kylän terveysasemalle. Kilpailut on peruttu '
+                + 'harvoin: ensimmäisen kerran 128 vuoden aikana tulvan '
+                + 'takia 2010, sitten pandemian vuoksi 2020, ja vuoden 2021 '
+                + 'kilpailut siirrettiin huhtikuulle 2022. Heinäkuussa '
+                + 'Big Redin juurella pidetään Big Red Bash, maailman '
+                + 'syrjäisimmäksi mainostettu musiikkijuhla. Ensimmäiseen '
+                + 'kolmipäiväiseen festivaaliin tuli 2013 noin 500 ihmistä, '
+                + 'vuonna 2023 jo yli 11 000, ja kaikki yöpyvät '
+                + 'festivaalialueella. Ohjelmaan kuuluu australialaista '
+                + 'rockia, kamelikyytejä ja joukkotanssi Nutbush City '
+                + 'Limitsin tahdissa: vuonna 2023 tanssijoita oli '
+                + 'maailmanennätykselliset 5 838. Vuoden 2026 juhla '
+                + 'peruttiin maaliskuussa, kun ennennäkemättömät sateet '
+                + 'olivat tulvineet seudun. Myös Simpsonin aavikon ylittävä '
+                + 'pyöräkilpailu päättyy perinteisesti Birdsvilleen.',
+              kuva: {
+                tiedosto: 'Tim Rogers, at the Big Red Bash 2022.jpg',
+                lyhyt: 'Laulaja Tim Rogers esiintyi Big Red Bashin lavalla heinäkuussa 2022.',
+                selite: 'You Am I -yhtyeen laulaja Tim Rogers esiintyi Big Red '
+                  + 'Bashissa 2022 poikkeuksellisesti ilman kitaraa, Rolling '
+                  + 'Stonesin kappaleita soittavan kokoonpanon keulilla.',
+                lahde: 'LeglessGoat, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Pubin tiski ja kamelipiirakka',
+              teksti: 'Birdsville Hotel on yhä kylän olohuone, ja sen Green '
+                + 'Lizard -baarissa tilataan lounas ja illallinen tiskiltä. '
+                + 'Pubin vaiheisiin mahtuu tulta ja myrskyjä: vuoden 1905 '
+                + 'sykloni kaatoi tontilta kaiken muun kuin kivestä '
+                + 'muuratun, ja 1964 tulipalo vei etubaarin ja myrsky '
+                + 'rakennuksen kaakkoiskulman. Vuonna 1979 seikkailija Dick '
+                + 'Smith ehti allekirjoittaa kauppakirjan, mutta hotelli '
+                + 'paloi seuraavana päivänä ja kaupat raukesivat. Seuraavana '
+                + 'vuonna sen ostivat David Brook ja Kim Fort, jotka pitivät '
+                + 'sitä 40 vuotta ennen kuin myivät sen matkailuyrittäjille '
+                + 'Courtney ja Talia Ellisille. Kadun toisella puolella '
+                + 'seisoo muistomerkki Augustus Poeppelille, joka mittasi '
+                + 'Queenslandin ja Etelä-Australian rajan. Pubin ohella '
+                + 'kylän kuuluisin ruokapaikka on Birdsville Bakery, jonka '
+                + 'kahvila on sisustettu vanhan maalaisaustralian tyyliin. '
+                + 'Kahvin ja kakkujen lisäksi se leipoo omia piirakoitaan, '
+                + 'ja niistä tunnetuimmat ovat currylla maustettu '
+                + 'kamelipiirakka ja kenguru-punaviinipiirakka. Leirintäalueella '
+                + 'on lisäksi oma kahvila.',
+              kuva: {
+                tiedosto: 'Bakery Hotel Birdsville - panoramio.jpg',
+                lyhyt: 'Birdsville Bakeryn matala peltikattoinen rakennus seisoo kylän leveän kadun varrella.',
+                selite: 'Birdsville Bakeryn kahvilassa myydään piirakoita, '
+                  + 'joiden täytteenä voi olla kamelia currykastikkeessa tai '
+                  + 'kengurua punaviinissä.',
+                lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Ennen kuin lähdet',
+              teksti: 'Matkailukausi kestää huhtikuusta lokakuuhun. Talvella '
+                + 'päivät ovat lämpimiä ja yöt kylmiä, heinäkuussa aamun '
+                + 'lämpötila on keskimäärin seitsemän astetta, mutta kesällä '
+                + 'päivän ylin lämpötila liikkuu neljänkymmenen tienoilla. '
+                + 'Sadepäiviä on keskimäärin vain 22 vuodessa, mutta '
+                + 'rankkasade voi eristää kylän päiviksi mihin vuodenaikaan '
+                + 'tahansa, joten tieolot tarkistetaan ennen lähtöä. Niistä, '
+                + 'säästä ja kartoista kertoo Wirrarrin matkailuneuvonta, '
+                + 'jossa on myös langaton verkko. Telstran ja Optuksen '
+                + 'matkapuhelinverkot toimivat kylässä, mutta kilpailuviikolla '
+                + 'ne ruuhkautuvat. Vesi tulee vuonna 1961 poratusta '
+                + 'arteesisesta kaivosta 97–99-asteisena: jäähtyneenä se on '
+                + 'kylän juomavettä, ja sen lämmöllä tuotetaan noin kolmannes '
+                + 'kylän sähköstä Australian ainoassa laatuaan olevassa '
+                + 'geotermisessä voimalassa. Uimaan pääsee kylän viereen '
+                + 'billabongiin, jonne on rakennettu laituri. Majoitusta on '
+                + 'pubissa ja leirintäalueen mökeissä, mutta kilpailujen ja '
+                + 'festivaalin aikaan on varauduttava telttaan, ellei varaa '
+                + 'ajoissa. Aavikon kansallispuistoon otetaan mukaan '
+                + 'kaasukeitin, sillä leirinuotiot ovat hupentaneet '
+                + 'puuvaroja niin, että eläimistö voi kärsiä.',
+              kuva: {
+                tiedosto: 'Bore Water Outlet in Birdsville - panoramio.jpg',
+                lyhyt: 'Birdsvillen arteesisen kaivon kuuma vesi höyryää valuessaan putkesta altaaseen.',
+                selite: 'Kylän porakaivosta nouseva vesi on lähes kiehuvaa, ja '
+                  + 'sen kuumuus näkyy höyrynä, kun se valuu suppilon läpi '
+                  + 'altaaseen. Jäähtynyt vesi päätyy kylän vesijohtoihin.',
+                lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'mikirit',
