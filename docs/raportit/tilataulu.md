@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 00:58 EEST
+**Päivitetty:** 2026-09-26 01:09 EEST
 
 ## 1) Sessiot
 
@@ -12,15 +12,15 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 |---|---|---|---|---|
 | Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 62% | running | — |
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 56% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 68% | running | Nollattu ja palannut käyntiin |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 58% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 25% | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 41% | running | Nollattu ja palannut käyntiin |
+| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 69% | running | Nollattu ja palannut käyntiin |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 60% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 33% | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
+| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 42% | running | Nollattu ja palannut käyntiin |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 56% | idle | PR #3153 (savukierros B13) |
-| Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 45% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 54% | running | Nollattu ja palannut käyntiin |
+| Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 50% | idle | PR #3155 |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 58% | running | Nollattu ja palannut käyntiin |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 48% | running | Nollattu ja palannut käyntiin (8 %) |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, 00.56: viikko 75 %, 5 h 86 %, swap 10,6 Gt, levy 142 Gt; juna: uusi käännös juna/b13 (pid 94836) käynnissä 00.46 alkaen, viimeisin KÄÄNNETTY yhä 21.36; vanhat pid 29155/36009 0 % CPU) |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, 01.07: viikko 77 %, 5 h 92 %, swap 9,2 Gt, levy 147 Gt; juna: käännökset pid 94836 (juna/b13, 21 min) ja 30212 käynnissä, viimeisin KÄÄNNETTY yhä 21.36) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
