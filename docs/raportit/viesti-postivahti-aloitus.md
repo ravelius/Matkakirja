@@ -31,3 +31,6 @@ Aja normaali kierros heti:
 Kone käynnistyi uudelleen ~11:3x, sivutus ratkennut (0 Gt), simulaattorit laskeneet 2:een, levy 196-200 Gt, 5h-kiintiö 14%, viikkokiintiö 97% (huom, lähellä 100%, ei vielä hälytysrajaa sovittu — harkitse ehdottaa Fablelle), varmuuskopio ja käännösjuna kunnossa, ei avoimia jumeja.
 
 Jatka kiertoa itsenäisesti `ScheduleWakeup`-työkalulla n. 10 min välein normaaliin tapaan.
+
+## Päivitys 26.9. klo 00.10
+Uusin luovutus: docs/raportit/viesti-postivahti-luovutus-20260926.md (session id:t, kierroksen kohdat, aikavyöhykevaroitus UTC/EEST, pysyvät säännöt). Lue se ensin.
