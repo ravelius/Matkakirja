@@ -872,6 +872,7 @@ namespace Matkakirja.Natiivi
         void Kytke(Matka m)
         {
             using var _ = Ajoita("kytke");
+            AloitaMatkareitit();
             linssit = new Linssiomistus(passi ?? new Passi(), m.Tila.Linssit).Kytke(m);
             linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
             kytkettyRekisteri = null;

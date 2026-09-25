@@ -50,7 +50,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Siirron lähtöpaikka animaation ajan (web siirtoKaynnissa).</summary>
         Sijainti? siirtoLahto;
         IReadOnlyList<string> matkareitit = Array.Empty<string>();
-        string matkareittiAvain = "";
+        // null = seuraava päivitys lähetetään aina (myös tyhjä joukko): löydös 109, ks. AloitaMatkareitit.
+        string matkareittiAvain;
 
         /// <summary>Web matkaSessioKesken: jatkuuko matka (sessio samasta kaupungista ja liuska, heitto tai siirto auki).</summary>
         bool MatkaSessioKesken(string kaupunki)
@@ -107,7 +108,8 @@ namespace Matkakirja.Natiivi
         void KytkeReitit()
         {
             var rt = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.reitit : null;
-            if (merkit != null) merkit.PeliOhjaaReitit = true;
+            var km = merkit != null ? merkit : FindAnyObjectByType<KaupunkiMerkit>();
+            if (km != null) km.PeliOhjaaReitit = true;
             if (rt == null) return;
             MatkareititMuuttuivat = ids => rt.NaytaPeli(ids);
             PeliApu.ReittiPiste = rt.ReittiPiste;
@@ -145,6 +147,20 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Päivittää reitit, jos valinta muuttui (PaivitaNakyma, saapuminen, liuska, siirron alku).</summary>
+        /// <summary>
+        /// LÖYDÖS 109 (omistaja, build 13, iPad): aloituslennon jälkeen Ateenassa näkyi katkoviivareittejä välipisteineen
+        /// ilman Liiku-sessiota. Reitit, jotka on piirretty pelin ulkopuolella (esim. KaupunkiMerkit.ValitseKaupunki
+        /// aloituskartalla ennen kuin peli otti reitit haltuunsa), jäivät kartalle, koska PaivitaMatkareitit lähettää vain
+        /// muutoksen ja tyhjä joukko oli jo "voimassa". Matkan alussa (Kytke) sääntö lähettää joukon aina, ja kaupunkimerkit
+        /// luovuttavat reitit pelille, vaikka ne löytyisivät vasta tässä vaiheessa. Raamattu: reittiviuhka vain matkasession ajan.
+        /// </summary>
+        void AloitaMatkareitit()
+        {
+            KytkeReitit();
+            matkareittiAvain = null;
+            PaivitaMatkareitit();
+        }
+
         void PaivitaMatkareitit()
         {
             PaivitaPeliSuodatin();
