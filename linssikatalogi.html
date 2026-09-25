@@ -97,6 +97,25 @@
   h2.otsikko .selite { font-family: Vollkorn, serif; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--muste-haalea); font-style: italic; }
   section.lohko { margin: 46px 0; }
 
+  /* --- Välilehdet --- */
+  .valilehdet { display: flex; gap: 22px; border-bottom: 2px solid var(--muste); margin: 0 0 36px; overflow-x: auto; }
+  .valilehti-nappi {
+    font: 13px "Special Elite", monospace; letter-spacing: .06em; text-transform: uppercase;
+    background: transparent; border: none; border-bottom: 3px solid transparent; margin-bottom: -2px;
+    padding: 10px 2px; cursor: pointer; color: var(--muste-haalea); white-space: nowrap;
+  }
+  .valilehti-nappi:hover { color: var(--muste); }
+  .valilehti-nappi[aria-selected="true"] { color: var(--muste); border-bottom-color: var(--seepia); }
+  .valilehti-nappi:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  .valilehti-nappi .lyhyt { display: none; }
+  .valilehti[hidden] { display: none; }
+  @media (max-width: 480px) {
+    .valilehdet { gap: 4vw; }
+    .valilehti-nappi { font-size: 11.5px; padding: 8px 0; }
+    .valilehti-nappi .pitka { display: none; }
+    .valilehti-nappi .lyhyt { display: inline; }
+  }
+
   /* --- Moottorikortit --- */
   .moottorit { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
   .moottori { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 16px; display: grid; gap: 8px; }
@@ -117,8 +136,8 @@
   .pn-teksti p { margin: 4px 0 0; font-size: 14px; color: var(--muste-haalea); }
 
   /* --- Seuraavat-kaista --- */
-  .seuraavat-kaista { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 14px; scroll-snap-type: x proximity; }
-  .sk-kortti { scroll-snap-align: start; flex: 0 0 168px; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 10px; display: grid; gap: 6px; }
+  .seuraavat-ruudukko { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 4px 2px 14px; }
+  .sk-kortti { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 10px; display: grid; gap: 6px; }
   .sk-numero { font: 12px "Special Elite", monospace; color: var(--seepia); }
   .sk-kuva { position: relative; aspect-ratio: 4/3; border-radius: 6px; background: var(--tausta, var(--paperi-tumma)); display: flex; align-items: center; justify-content: center; color: var(--vari, var(--muste-haalea)); overflow: hidden; }
   .sk-kuva svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.6; }
@@ -265,7 +284,9 @@
   @media print {
     :root, :root[data-theme] { --paperi: #fff; --paperi-tumma: #f0ede4; --paperi-kortti: #fff; --muste: #111; --muste-haalea: #555; --viiva: #ccc; }
     body { font-size: 11px; }
-    .teemakytkin, nav.suodatin, .seuraavat-kaista, .moottorit, .pelissa-nyt, .tiekartta, .alanapit, #esitys, .k-lisatiedot, section.lohko > h2.otsikko + p { display: none !important; }
+    .teemakytkin, .valilehdet, nav.suodatin, .seuraavat-ruudukko, .moottorit, .pelissa-nyt, .tiekartta, .alanapit, #esitys, .k-lisatiedot, section.lohko > h2.otsikko + p { display: none !important; }
+    .valilehti[hidden] { display: block !important; }
+    #valilehti-moottorit, #valilehti-pelissa, #valilehti-seuraavat { display: none !important; }
     section.lohko#ruudukko-lohko { margin: 0; }
     .ruudukko { grid-template-columns: repeat(4, 1fr); gap: 6px; }
     .kortti { break-inside: avoid; border: 1px solid #ccc; }
@@ -286,58 +307,73 @@
     <div class="luvut" id="luvut"></div>
   </header>
 
-  <section class="lohko" id="moottorit-lohko">
-    <h2 class="otsikko">Kuusi moottoria</h2>
-    <div class="moottorit" id="moottorit"></div>
-  </section>
-
-  <section class="lohko" id="pelissa-nyt-lohko">
-    <h2 class="otsikko">Pelissä nyt</h2>
-    <div class="pelissa-nyt" id="pelissa-nyt"></div>
-  </section>
-
-  <section class="lohko" id="seuraavat-lohko">
-    <h2 class="otsikko">Seuraavat <span class="selite">— kehitysjono numeroituna</span></h2>
-    <div class="seuraavat-kaista" id="seuraavat"></div>
-  </section>
-
-  <nav class="suodatin" aria-label="Suodata ja hae" id="suodatin">
-    <div class="suodatin-rivi">
-      <span class="otsikkopieni">Tila</span>
-      <div id="tilasuodatin"></div>
-    </div>
-    <div class="suodatin-rivi">
-      <span class="otsikkopieni">Manner</span>
-      <div id="mannersuodatin"></div>
-    </div>
-    <div class="suodatin-rivi haku">
-      <input type="search" id="tekstihaku" placeholder="Hae nimellä, alueella tai pysäkillä…">
-      <div class="aikasuodin">
-        <span class="vuosi" id="aika-min-teksti"></span>
-        <div class="aikasuodin-rata">
-          <span class="aktiivi" id="aika-aktiivi"></span>
-          <input type="range" id="aika-min" min="-3500" max="2026" value="-3500" step="10">
-          <input type="range" id="aika-max" min="-3500" max="2026" value="2026" step="10">
-        </div>
-        <span class="vuosi" id="aika-max-teksti"></span>
-      </div>
-      <span class="osuma-maara" id="osumamaara"></span>
-    </div>
+  <nav class="valilehdet" aria-label="Katalogin osiot" id="valilehdet">
+    <button type="button" class="valilehti-nappi" data-valilehti="moottorit">Moottorit</button>
+    <button type="button" class="valilehti-nappi" data-valilehti="pelissa">Pelissä nyt</button>
+    <button type="button" class="valilehti-nappi" data-valilehti="seuraavat">Seuraavat</button>
+    <button type="button" class="valilehti-nappi" data-valilehti="katalogi"><span class="pitka">Koko katalogi</span><span class="lyhyt">Katalogi</span></button>
   </nav>
 
-  <section class="lohko" id="ruudukko-lohko">
-    <h2 class="otsikko">Koko katalogi <span class="selite">— jaettu moottorin (toteutustavan) mukaan</span></h2>
-    <div id="ruudukko-kaikki"></div>
-  </section>
+  <div class="valilehti" id="valilehti-moottorit">
+    <section class="lohko" id="moottorit-lohko">
+      <h2 class="otsikko">Kuusi moottoria</h2>
+      <div class="moottorit" id="moottorit-kortit"></div>
+    </section>
+  </div>
 
-  <section class="lohko" id="tiekartta-lohko">
-    <h2 class="otsikko">Tiekartta</h2>
-    <div class="tiekartta" id="tiekartta"></div>
-  </section>
+  <div class="valilehti" id="valilehti-pelissa">
+    <section class="lohko" id="pelissa-nyt-lohko">
+      <h2 class="otsikko">Pelissä nyt</h2>
+      <div class="pelissa-nyt" id="pelissa-nyt"></div>
+    </section>
+  </div>
 
-  <div class="alanapit">
-    <button type="button" id="esitysnappi">Esitys</button>
-    <button type="button" id="tulostanappi">Tulosta / PDF</button>
+  <div class="valilehti" id="valilehti-seuraavat">
+    <section class="lohko" id="seuraavat-lohko">
+      <h2 class="otsikko">Seuraavat <span class="selite">— kehitysjono numeroituna</span></h2>
+      <div class="seuraavat-ruudukko" id="seuraavat-ruudukko"></div>
+    </section>
+  </div>
+
+  <div class="valilehti" id="valilehti-katalogi">
+    <nav class="suodatin" aria-label="Suodata ja hae" id="suodatin">
+      <div class="suodatin-rivi">
+        <span class="otsikkopieni">Tila</span>
+        <div id="tilasuodatin"></div>
+      </div>
+      <div class="suodatin-rivi">
+        <span class="otsikkopieni">Manner</span>
+        <div id="mannersuodatin"></div>
+      </div>
+      <div class="suodatin-rivi haku">
+        <input type="search" id="tekstihaku" placeholder="Hae nimellä, alueella tai pysäkillä…">
+        <div class="aikasuodin">
+          <span class="vuosi" id="aika-min-teksti"></span>
+          <div class="aikasuodin-rata">
+            <span class="aktiivi" id="aika-aktiivi"></span>
+            <input type="range" id="aika-min" min="-3500" max="2026" value="-3500" step="10">
+            <input type="range" id="aika-max" min="-3500" max="2026" value="2026" step="10">
+          </div>
+          <span class="vuosi" id="aika-max-teksti"></span>
+        </div>
+        <span class="osuma-maara" id="osumamaara"></span>
+      </div>
+    </nav>
+
+    <section class="lohko" id="ruudukko-lohko">
+      <h2 class="otsikko">Koko katalogi <span class="selite">— jaettu moottorin (toteutustavan) mukaan</span></h2>
+      <div id="ruudukko-kaikki"></div>
+    </section>
+
+    <section class="lohko" id="tiekartta-lohko">
+      <h2 class="otsikko">Tiekartta</h2>
+      <div class="tiekartta" id="tiekartta"></div>
+    </section>
+
+    <div class="alanapit">
+      <button type="button" id="esitysnappi">Esitys</button>
+      <button type="button" id="tulostanappi">Tulosta / PDF</button>
+    </div>
   </div>
 
   <footer>
@@ -457,7 +493,7 @@ document.getElementById('luvut').innerHTML = [
 ].map(([nimi, luku, erittely]) => `<div><b>${luku}</b>${nimi}${erittely ? `<span class="erittely">${erittely}</span>` : ''}</div>`).join('');
 
 // --- Moottorikortit (linssikatalogi-data.js:stä) ---
-document.getElementById('moottorit').innerHTML = MOOTTORIT_DATA.map((m) => {
+document.getElementById('moottorit-kortit').innerHTML = MOOTTORIT_DATA.map((m) => {
   const vari = MOOTTORIVARIT[m.avain]?.vari || 'var(--seepia)';
   const rakennettu = !/^ei\b/i.test((m.rakennettu || '').trim());
   return `<div class="moottori">
@@ -490,7 +526,7 @@ document.getElementById('pelissa-nyt').innerHTML = pelissaNytLista.map((l) => {
 
 // --- Seuraavat-kaista ---
 const seuraavatJarjestyksessa = LINSSIT.filter((l) => l.jarjestys != null).sort((a, b) => a.jarjestys - b.jarjestys);
-document.getElementById('seuraavat').innerHTML = seuraavatJarjestyksessa.map((l) => {
+document.getElementById('seuraavat-ruudukko').innerHTML = seuraavatJarjestyksessa.map((l) => {
   const t = MOOTTORIVARIT[l.moottori];
   const havainne = l.kuvat && l.kuvat.havainne;
   return `<div class="sk-kortti">
@@ -758,6 +794,26 @@ try {
 document.getElementById('teemakytkin').addEventListener('click', () => {
   asetaTeema(nykyinenTeema() === 'dark' ? 'light' : 'dark', true);
 });
+
+// --- Välilehdet ---
+const VALILEHDET = ['moottorit', 'pelissa', 'seuraavat', 'katalogi'];
+function nykyinenValilehti() {
+  const hash = (location.hash || '').replace('#', '');
+  return VALILEHDET.includes(hash) ? hash : VALILEHDET[0];
+}
+function aktivoiValilehti(nimi) {
+  VALILEHDET.forEach((v) => {
+    document.getElementById(`valilehti-${v}`).hidden = v !== nimi;
+    document.querySelector(`.valilehti-nappi[data-valilehti="${v}"]`).setAttribute('aria-selected', v === nimi ? 'true' : 'false');
+  });
+}
+document.getElementById('valilehdet').addEventListener('click', (ev) => {
+  const nappi = ev.target.closest('.valilehti-nappi');
+  if (!nappi) return;
+  location.hash = nappi.dataset.valilehti;
+});
+window.addEventListener('hashchange', () => aktivoiValilehti(nykyinenValilehti()));
+aktivoiValilehti(nykyinenValilehti());
 </script>
 </body>
 </html>
