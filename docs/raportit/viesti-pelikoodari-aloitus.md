@@ -4,12 +4,15 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260925.md`](viesti-pelikoodari-luovutus-20260925.md).
-   PÄÄTEEMA build 13: LIIKKUMISEN JA REITTIEN PARITEETTIKIERROS, lista
-   [`liikkuminen-pariteetti-20260925.md`](liikkuminen-pariteetti-20260925.md) (rivijako Pelikoodari / Natiiviseppä /
-   Natiivi-UI). ENSIMMÄISENÄ todenna simulaattorissa haara `pelikoodari/liikkuminen` fb0a30e (juna/b13 + liikkuminen):
-   55 automaattiheitto, 53/54 vaiennus, 58 maailmahyppy, 57/60 reitit, 56 kohdesovitus, 59 lehti; sitten merge-pyyntö
-   ja videopari. Lisäksi 61 (kortin kamera, nyt b13:ssa), 63 ja 66/67 (mittaukset `proto-3d/lokit/loydos66-67/`).
+   [`viesti-pelikoodari-luovutus-20260925-b.md`](viesti-pelikoodari-luovutus-20260925-b.md) (25.9. klo 12.2x, tilinvaihto).
+   - LIIKKUMISEN PARITEETTIKIERROS on valmis Pelikoodarin osalta. `pelikoodari/liikkuminen` 03218b4 on junassa. Todennettu
+     simulaattorissa: 55, 56, 57/60, 53, 58 ja 59. Pelikoodarilla ei ole avoimia rivejä (lista
+     [`liikkuminen-pariteetti-20260925.md`](liikkuminen-pariteetti-20260925.md), luku 0). 54 ja 66 ovat Natiivi-UI:n.
+   - ENSIMMÄISENÄ: löydöksen 61 ja D17:n todennus iPad11:llä (juna d76c9669 asennettuna). Pyydä vuoro Julkaisijalta ensin.
+   - Sitten `pelikoodari/pulu-puhe` b3e0b67 (66 kohta 7) junaan yhdessä Natiivi-UI:n 66-erän kanssa. 67 (#3139) ja 70
+     (#3140) ovat mainissa.
+   - Pariteettiajon työkalu (origin/pelikoodari-pariteetti-ajo 4f5d1d6e9) sisältää Linssisepän korjaukset rivit 13, 30 ja
+     12b, sallitut poikkeamat (iPhonen yläpalkki) ja muistisäännön (2 simulaattoria).
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
 
@@ -40,6 +43,9 @@ laitteella `proto-3d/Matkakirja-proto/tyokalut/ipad.sh peli|hae|konsoli`. Sammut
 **JUMI → FABLE** (omistaja 25.9. klo 04.4x, korvaa JUMI → KORTTI): jos jäät jumiin (luokitin estää, päätös puuttuu,
 työ ei etene), lähetä Fablelle yksi viesti (tilanne, vaihtoehdot, oma suositus) ja jatka muuta työtä; ei korttia
 omistajalle. Lupaikkunasta ilmoitetaan Fablelle heti.
+
+**MUISTISÄÄNTÖ** (Fable 25.9. klo 10): simulaattoriajot päivällä enintään kahdella simulaattorilla, ei samaan aikaan
+Julkaisijan savukkeiden kanssa (vuoro sovitaan Julkaisijan kanssa). Pariteettisimulaattorit ovat päällä vain ajon ajan.
 
 **PARITEETTISIMULAATTORIT** (Fable 25.9.): pidetään kaikki neljä; `proto-3d/tyokalut/siivoa-pariteettisimut.sh --aja`
 jokaisen pariteettiajon lopussa (Clauden omaa työkalua, ei tarvitse omistajaa).
