@@ -53,7 +53,7 @@ namespace Matkakirja.Natiivi
         readonly LinssiUi linssit;
         readonly UiKerros kerros;
         readonly VisualElement ylarivi, paneeli, paneelinKuva, kertomus, kertomusLaatikko, valinaytos, valinaytosRivit, esittely, musta;
-        readonly VisualElement otsikot, kelloRuutu;
+        readonly VisualElement otsikot, kelloRuutu, ohjaimet;
         readonly Label otsikko, paikka, kello, kelloYksikko, pVuosi, pOtsikko, pAlarivi, pTeksti, kertomusTeksti, vOtsikko;
         // Havainnekuva (web .aikajana-ilmiokuva): kaksi kerrosta ristihäivytykseen ja kuvateksti kuvan alareunassa.
         readonly VisualElement havainne, havainneTeksti;
@@ -72,6 +72,7 @@ namespace Matkakirja.Natiivi
         readonly IhmisenNostokortti nostokortti;
         // Tutkimusvaihe (web luoTutkimusvaihe): palkin virtanapit, nostopisteet ja vanalappu.
         readonly IhmisenTutkimusNakyma tutkimus;
+        bool virratNakyi;
         Loytopaikka kuvanPaikka;
         Tila tila;
         string kelloTeksti;
@@ -132,7 +133,7 @@ namespace Matkakirja.Natiivi
                 kelloLeveys = null;
                 kello.style.minWidth = StyleKeyword.Null;
             });
-            var ohjaimet = Rakenne.El("mk-aikajana-ohjaimet", ylarivi, PickingMode.Ignore);
+            ohjaimet = Rakenne.El("mk-aikajana-ohjaimet", ylarivi, PickingMode.Ignore);
             // Lapun kahva (web .aikajana-kahva "Näytä X ▾"): kartan kosketus piilottaa paneelin, kahva tuo sen takaisin.
             kahva = Rakenne.Nappi("", "mk-aikajana-nappi mk-aikajana-kahva", NaytaLappu, ohjaimet);
             kahva.style.display = DisplayStyle.None;
@@ -199,6 +200,14 @@ namespace Matkakirja.Natiivi
             nostokortti.Muuttui += () => LinssiUi.IhmisenMatka?.Tutkimus?.KorttiAuki(nostokortti.Auki);
             // Virtanapit palkkiin kellon ja ohjainten väliin (web .aikajana.kertomus .ihmisen-vananapit margin 0 auto).
             tutkimus = new IhmisenTutkimusNakyma(kerros, ylarivi, 2, nostokortti);
+            // Virtanappien rivi tulee ja menee tutkimusvaiheen mukana: saaririvin korkeus uudelleen (löydös 74).
+            kerros.JokaRuutu += () =>
+            {
+                bool nakyy = tutkimus.Rivi.resolvedStyle.display != DisplayStyle.None;
+                if (nakyy == virratNakyi) return;
+                virratNakyi = nakyy;
+                Asettele();
+            };
             kerros.JokaRuutu += SijoitaKertomuskuva;
 
             // Ihmisen matkan aikaselain alareunassa (web luoAikaselain): veto esikatselee, irrotus valitsee.
@@ -317,12 +326,16 @@ namespace Matkakirja.Natiivi
             // Palkki Matkakirjan yläpalkin paikalla: turva-alue ylä- ja sivureunoilla, sama korkeus (web
             // --aikajana-palkki-korkeus). Paneeli palkin alle 10 px väliin (web asetaPaneelinYla).
             var r = kerros.Reunat(LinssiUi.Kerros);
-            ylarivi.style.paddingTop = r.y;
-            ylarivi.style.paddingLeft = r.x + 14;
-            ylarivi.style.paddingRight = r.z + 8;
-            ylarivi.style.height = r.y + Ylapalkki.Korkeus;
-            paneeli.style.top = Ylapalkki.Korkeus + 10;
-            nostokortti.Yla = Ylapalkki.Korkeus + 11;
+            float palkki = Ylapalkki.Korkeus;
+            if (!AsetaSaaririvi(r, ref palkki))
+            {
+                ylarivi.style.paddingTop = r.y;
+                ylarivi.style.paddingLeft = r.x + 14;
+                ylarivi.style.paddingRight = r.z + 8;
+                ylarivi.style.height = r.y + Ylapalkki.Korkeus;
+            }
+            paneeli.style.top = palkki + 10;
+            nostokortti.Yla = palkki + 11;
             // Oletusasettelut näyttöluokittain (web .aikajana-ilmio): puhelin pystyssä reunasta reunaan,
             // tabletti pystyssä 66 % hieman oikealle (right 3,5 %), vaakanäyttö 45 % oikeassa yläkulmassa.
             float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
@@ -336,6 +349,63 @@ namespace Matkakirja.Natiivi
             }
             valinaytos.EnableInClassList("mk-pysty", pysty);
             PaivitaAikaselain();
+        }
+
+        /// <summary>
+        /// Löydös 74 (omistaja 25.9.2026, iPhone pystyssä, kuten pelin matala yläpalkki Ylapalkki.AsetaSaaririvi):
+        /// linssin nimi Dynamic Islandin vasemmalle ja Tauko/Jatka sekä ☰ oikealle samalle riville (näytön kaarevista
+        /// kulmista 14 pt:n vara), vuosiluku sen alle vasempaan reunaan. Palauttaa false muilla näytöillä (entinen rivi).
+        /// palkki = palkin korkeus turva-alueen yläreunasta (paneelin ja nostokortin yläraja).
+        /// </summary>
+        bool AsetaSaaririvi(Vector4 r, ref float palkki)
+        {
+            var p = ylarivi.panel;
+            bool saari = Ylapalkki.Matala && p != null && Screen.width > 0;
+            ylarivi.EnableInClassList("mk-aikajana-ylarivi--saari", saari);
+            var virrat = tutkimus?.Rivi;
+            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat })
+            {
+                if (e == null) continue;
+                e.style.position = saari ? Position.Absolute : StyleKeyword.Null;
+                e.style.left = e.style.right = e.style.top = e.style.height = StyleKeyword.Null;
+            }
+            if (!saari) return false;
+            float pp = Ylapalkki.PuhelimenSkaala;
+            Vector2 P(float x, float y) => RuntimePanelUtils.ScreenToPanel(p, new Vector2(x * pp, y * pp));
+            var s = Ylapalkki.Saari();
+            float yksikko = P(100f, 0f).x / 100f, rivi = 40f * yksikko, reuna = 14f * yksikko;
+            float keski = s.height > 0 ? (P(s.xMin, s.yMin).y + P(s.xMax, s.yMax).y) / 2f : r.y / 2f;
+            float yla = Mathf.Max(4f * yksikko, keski - rivi / 2f);
+            ylarivi.style.paddingTop = ylarivi.style.paddingLeft = ylarivi.style.paddingRight = 0;
+            // Rivi 1: nimi vasemmalla (ei saaren alle), Tauko ja ☰ oikealla.
+            otsikot.style.left = r.x + reuna;
+            otsikot.style.top = yla;
+            otsikot.style.height = rivi;
+            if (s.width > 0) otsikot.style.maxWidth = Mathf.Max(60f, P(s.xMin, 0f).x - 6f * yksikko - r.x - reuna);
+            ohjaimet.style.right = r.z + reuna;
+            ohjaimet.style.top = yla;
+            ohjaimet.style.height = rivi;
+            // Rivi 2: vuosiluku vasempaan reunaan turva-alueen alle.
+            float rivi2 = Mathf.Max(r.y, yla + rivi) + 4f * yksikko;
+            kelloRuutu.style.left = r.x + reuna;
+            kelloRuutu.style.top = rivi2;
+            float kellonKorkeus = float.IsNaN(kelloRuutu.layout.height) || kelloRuutu.layout.height <= 0 ? 36f : kelloRuutu.layout.height;
+            float korkeus = rivi2 + kellonKorkeus + 8f * yksikko;
+            // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
+            // niille ei ole tilaa (vuosilaatikko ~150 pt + viisi nappia), joten ne saavat oman rivin vuosiluvun alle
+            // (muuten ne jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle tai vuosiluvun päälle).
+            if (virrat != null && virrat.resolvedStyle.display != DisplayStyle.None)
+            {
+                float rivi3 = rivi2 + kellonKorkeus + 4f * yksikko;
+                float virtaKorkeus = float.IsNaN(virrat.layout.height) || virrat.layout.height <= 0 ? 28f : virrat.layout.height;
+                virrat.style.left = r.x + reuna;
+                virrat.style.right = r.z + reuna;
+                virrat.style.top = rivi3;
+                korkeus = rivi3 + virtaKorkeus + 8f * yksikko;
+            }
+            ylarivi.style.height = korkeus;
+            palkki = korkeus - r.y;
+            return true;
         }
 
         /// <summary>

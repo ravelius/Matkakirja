@@ -32,6 +32,9 @@ namespace Matkakirja.Natiivi
         readonly List<(VisualElement El, TutkimusNosto Nosto)> nostot = new List<(VisualElement, TutkimusNosto)>();
         bool toiminnassa, syke;
 
+        /// <summary>Virtanappien rivi palkissa (AikajanaNakyma.AsetaSaaririvi sijoittaa sen saaririvin alle).</summary>
+        public VisualElement Rivi => napit;
+
         public IhmisenTutkimusNakyma(UiKerros kerros, VisualElement palkki, int palkinPaikka, IhmisenNostokortti kortti)
         {
             this.kortti = kortti;

@@ -891,20 +891,35 @@
     background-color: rgba(214, 96, 72, 0.22);
 }
 
+/* Löydös 74: napit pelin yläpalkin ☰:n asussa (Matkakirja.uss .mk-ylapalkki .mk-ikoninappi: läpinäkyvä, reunus
+ * #4b3826). Läpikuultava valkoinen vaaleni lineaarisessa väriavaruudessa harmaaksi. */
 .mk-aikajana-nappi {
     width: 30px;
     height: 30px;
     min-height: 30px;
     margin-left: 3px;
     padding: 0;
-    border-color: rgba(217, 161, 59, 0.45);
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.07);
+    border-width: 1px;
+    border-color: #4b3826;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
     color: #f1e6d0;
 }
 
 .mk-aikajana-nappi:active {
     background-color: rgba(217, 161, 59, 0.22);
+}
+
+/* Saaririvi (AikajanaNakyma.AsetaSaaririvi): pelin ☰:n mitat 44 × 36 ja Tauko samankorkuisena. */
+.mk-aikajana-ylarivi--saari .mk-aikajana-nappi {
+    width: 44px;
+    height: 36px;
+    min-height: 36px;
+    margin-left: 6px;
+}
+
+.mk-aikajana-ylarivi--saari .mk-aikajana-nappi.mk-aikajana-nappi--teksti {
+    width: auto;
 }
 
 .mk-aikajana-nappi .mk-nappi__teksti {
@@ -1141,10 +1156,14 @@
     color: #f1e6d0;
 }
 
+/* Web text-shadow: 0 2px 14px rgba(0,0,0,.95), 0 0 4px rgba(0,0,0,.8). UITK ottaa yhden varjon; toinen, tiivis
+ * tumma kehä tekstin ympärillä ääriviivana (löydös 74 d2: teksti luki heikosti vaalean pallon päällä). */
 .mk-aikajana-kertomus.mk-keskella .mk-aikajana-kertomus__teksti {
     font-size: 24px;
     color: #f7eeda;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
+    -unity-text-outline-width: 0.8px;
+    -unity-text-outline-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Web @media (max-width: 600px): avausteksti 1,25rem puhelimessa. */
