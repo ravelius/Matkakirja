@@ -24,18 +24,24 @@
  * ulkorajat (rannikko, valtionraja) kerran.
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { gunzipSync, gzipSync } from 'node:zlib';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { harvenna } from './maarajat.mjs';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
-export const MAAKUNTATIEDOSTO = join(TAMA, 'maakuntarajat.json');
-export const MAAKUNTAMAAT = ['AUT', 'CHE', 'DEU', 'ESP', 'FRA', 'GBR', 'ITA', 'POL'];
+/*
+ * SKEEMA 1.42 (Fable 25.9.2026, Karttasepän löydökset 105/107): kaikki webin
+ * maakuntamaat (js/karttatyokalu-maakunnat.js MAAKUNTIEN_MAAT, joilla maakuntienMaa), nimet webin
+ * maakunnanNimi-funktiolla. Tiedosto on gzipattu (8 Mt → 2,4 Mt), jotta
+ * repon historia ei kasva joka aineistoversiolla raakana JSONina.
+ */
+export const MAAKUNTATIEDOSTO = join(TAMA, 'maakuntarajat.json.gz');
 export const MAAKUNTARAJOJEN_TOLERANSSI = 0.02;
 const pyorista = (v) => Math.round(v * 1000) / 1000;
 
 export function lueMaakuntarajat() {
-  return existsSync(MAAKUNTATIEDOSTO) ? JSON.parse(readFileSync(MAAKUNTATIEDOSTO, 'utf8')) : { alueet: [] };
+  return existsSync(MAAKUNTATIEDOSTO) ? JSON.parse(gunzipSync(readFileSync(MAAKUNTATIEDOSTO)).toString('utf8')) : { alueet: [], maat: [] };
 }
 
 const karkiAvain = (p) => `${p[0]},${p[1]}`;
@@ -143,12 +149,17 @@ export function kaariTopologia(alueet, tol = MAAKUNTARAJOJEN_TOLERANSSI, pyor = 
 
 async function paivita() {
   const { PALLOMAAKUNNAT_JUURI, PALLOMAAKUNNAT_VERSIO, puraMaa } = await import('../../js/pallomaakunnat.js');
+  const { MAAKUNTIEN_MAAT, maakunnanNimi, maakuntienMaa } = await import('../../js/karttatyokalu-maakunnat.js');
+  // Web näyttää maakunnat vain maille, joilla on nimiä (maakuntienMaa; GUF, PRI, NFK ja FLK ovat tyhjiä).
+  const listalla = MAAKUNTIEN_MAAT.filter(({ iso }) => maakuntienMaa(iso));
   const raaka = [];
-  for (const iso of MAAKUNTAMAAT) {
-    const [bin, json] = await Promise.all([
-      fetch(`${PALLOMAAKUNNAT_JUURI}${iso}.bin`).then((v) => { if (!v.ok) throw new Error(`${iso}.bin ${v.status}`); return v.arrayBuffer(); }),
-      fetch(`${PALLOMAAKUNNAT_JUURI}${iso}.json`).then((v) => { if (!v.ok) throw new Error(`${iso}.json ${v.status}`); return v.json(); }),
-    ]);
+  const ilman = [];
+  for (const { iso } of listalla) {
+    const [binV, jsonV] = await Promise.all([fetch(`${PALLOMAAKUNNAT_JUURI}${iso}.bin`), fetch(`${PALLOMAAKUNNAT_JUURI}${iso}.json`)]);
+    // Maa listalla ilman omaa aineistoa (esim. GUF on FRA:n sisällä): web ei piirrä sille maakuntia.
+    if (binV.status === 404 || jsonV.status === 404) { ilman.push(iso); continue; }
+    if (!binV.ok || !jsonV.ok) throw new Error(`${iso}: ${binV.status}/${jsonV.status}`);
+    const [bin, json] = [await binV.arrayBuffer(), await jsonV.json()];
     const { paikat } = puraMaa(new Uint8Array(bin));
     for (const a of json.alueet) {
       const renkaat = a.renkaat.map(([alku, loppu]) => {
@@ -156,7 +167,7 @@ async function paivita() {
         for (let i = alku; i < loppu; i += 1) r.push([paikat[i * 2], paikat[i * 2 + 1]]);
         return r;
       });
-      raaka.push({ id: `${iso}:${a.tunnus}`, iso3: iso, nimi: a.nimi, renkaat });
+      raaka.push({ id: `${iso}:${a.tunnus}`, iso3: iso, nimi: maakunnanNimi(iso, a.tunnus), renkaat });
     }
   }
   // Kaikki maat yhdessä: maiden väliset rajat yhdistyvät, kun kärjet ovat samat.
@@ -170,11 +181,13 @@ async function paivita() {
     return { id, iso3, nimi, bbox: [w, s, e, n], renkaat };
   });
   alueet.sort((a, b) => (a.id < b.id ? -1 : 1));
-  writeFileSync(MAAKUNTATIEDOSTO, `${JSON.stringify({
+  const omat = new Set(alueet.map((a) => a.iso3));
+  const maat = listalla.filter(({ iso }) => omat.has(iso)).map(({ iso, nimi }) => ({ iso3: iso, nimi }));
+  writeFileSync(MAAKUNTATIEDOSTO, gzipSync(`${JSON.stringify({
     lahde: 'Natural Earth 10m admin_1_states_provinces (public domain), webin maakunta-aineisto ämpärissä',
-    versio: PALLOMAAKUNNAT_VERSIO, toleranssi: MAAKUNTARAJOJEN_TOLERANSSI, alueet, kaaret: topo.kaaret,
-  })}\n`);
-  return { alueita: alueet.length, puuttuu: raaka.length - alueet.length, kaaria: topo.kaaret.length, maita: MAAKUNTAMAAT.length };
+    versio: PALLOMAAKUNNAT_VERSIO, toleranssi: MAAKUNTARAJOJEN_TOLERANSSI, maat, alueet, kaaret: topo.kaaret,
+  })}\n`, { level: 9 }));
+  return { alueita: alueet.length, puuttuu: raaka.length - alueet.length, kaaria: topo.kaaret.length, maita: maat.length, listalla: listalla.length, ilmanAineistoa: ilman };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
