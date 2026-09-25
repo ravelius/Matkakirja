@@ -98,7 +98,7 @@ namespace Matkakirja.Natiivi
                         Kirjasimet.Aseta(Rakenne.Teksti(selite, "mk-lippu__versioselite", b), Kirjasin.Luku);
                 }
                 Rakenne.Ruudukko(rivi, 96f, 10f);
-            }, "mk-minipopup--lippu");
+            }, "mk-minipopup--lippu").Arkkipohja(); // löydös 72: maalehden vaalea korttipohja kuten webin .lippu-kehys
         }
 
         /// <summary>Versioiden polku on sivuston suhteellinen (assets/liput/versiot/…).</summary>
