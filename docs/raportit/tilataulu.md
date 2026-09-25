@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 23:17 EEST
+**Päivitetty:** 2026-09-25 23:2x EEST (Linssiseppä käynnissä)
 
 ## 1) Sessiot
 
@@ -14,7 +14,7 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 51% | running | — |
 | Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 58% | running | Nollattu ja palannut käyntiin |
 | Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 41% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | nollattu | idle, RC pois | Nollattu 23:15; ilmoitettu Fablelle, odottaa aloitusviestiä + RC:tä |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | uusi (nollauksen jälkeen) | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
 | Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 27% | running | Nollattu ja palannut käyntiin |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 55% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 38% | idle | PR #3155 |
