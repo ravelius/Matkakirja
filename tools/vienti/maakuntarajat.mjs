@@ -167,18 +167,19 @@ async function paivita() {
         for (let i = alku; i < loppu; i += 1) r.push([paikat[i * 2], paikat[i * 2 + 1]]);
         return r;
       });
-      raaka.push({ id: `${iso}:${a.tunnus}`, iso3: iso, nimi: maakunnanNimi(iso, a.tunnus), renkaat });
+      // 1.43: webin väri (tools/tee-maakuntavektorit.mjs varita, 0…k−1, naapureilla eri).
+      raaka.push({ id: `${iso}:${a.tunnus}`, iso3: iso, nimi: maakunnanNimi(iso, a.tunnus), vari: a.vari, renkaat });
     }
   }
   // Kaikki maat yhdessä: maiden väliset rajat yhdistyvät, kun kärjet ovat samat.
   const topo = kaariTopologia(raaka);
-  const alueet = raaka.filter((a) => topo.renkaat.has(a.id)).map(({ id, iso3, nimi }) => {
+  const alueet = raaka.filter((a) => topo.renkaat.has(a.id)).map(({ id, iso3, nimi, vari }) => {
     const renkaat = topo.renkaat.get(id);
     let [w, s, e, n] = [Infinity, Infinity, -Infinity, -Infinity];
     for (const r of renkaat) for (const [lon, lat] of r) {
       w = Math.min(w, lon); e = Math.max(e, lon); s = Math.min(s, lat); n = Math.max(n, lat);
     }
-    return { id, iso3, nimi, bbox: [w, s, e, n], renkaat };
+    return { id, iso3, nimi, vari, bbox: [w, s, e, n], renkaat };
   });
   alueet.sort((a, b) => (a.id < b.id ? -1 : 1));
   const omat = new Set(alueet.map((a) => a.iso3));

@@ -1379,3 +1379,9 @@ test('skeema 1.42: maakuntarajat kaikista webin maakuntamaista, juuren maat', as
   for (const a of k.alkiot) assert.equal(a.nimi, maakunnanNimi(a.iso3, a.id.slice(4)), a.id);
 });
 
+test('skeema 1.43: maakuntarajojen vari webin aineistosta (Natiiviseppä)', () => {
+  const alueet = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
+  assert.ok(alueet.every((a) => Number.isInteger(a.vari) && a.vari >= 0 && a.vari <= 4), 'vari 0–4');
+  assert.ok(new Set(alueet.map((a) => a.vari)).size >= 3);
+});
+
