@@ -34,12 +34,23 @@ namespace Matkakirja
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
+    ///   valmius seuraa [s]        pallon valmiusasteen seuranta lokiin 0,5 s välein (oletus 30 s; Valmius.cs, löydös 80):
+    ///                             ComputeLoadProgress, Cesiumin valintatilasto, raster-kerrokset, palvelimen jonot, kameran liike
+    ///   valmius auto paalle [s] | valmius auto pois   sama seuranta aloitusverhon ja mustan verhon alussa (PlayerPrefs
+    ///                             matkakirja-valmius-auto tai Documents/valmius-auto.txt, oletus 12 s; voimaan seuraavista
+    ///                             verhoista, myös käynnistyksessä; simulaattorissa xcrun simctl spawn &lt;UDID&gt; defaults write …)
+    ///   valmius tila | valmius pois   yksi näyte heti / käynnissä olevat seurannat loppuun (yhteenveto)
+    ///   valmius kevennys pois|paalle   verhon kevennys (Laattapalvelin: näkyvä jono 24 rinnakkain, tausta tauolla) pois
+    ///                             A/B-mittaukseen; muistetaan (PlayerPrefs matkakirja-valmius-kevennys-pois tai
+    ///                             Documents/valmius-kevennys-pois.txt), voimaan seuraavista verhoista
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
     ///   maakunta <ISO3:tunnus>|pois|tila | maakunta maa ISO3|pois   maakunnan värjäys (B17); maa = pakotettu kerroksen maa
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   lentokaaret lähtö kohde … | lentokaaret pois   lentolistan kaaret + kameran sovitus (Reitit)
     ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | aloitus lat0 lon0 lat1 lon1 kesto | pois
+    ///   kamerareitti paalle|pois  lennon oikea kamera 0,1 s:n näytteinä lokiin lennon lopussa (nopeus m/s, kulmanopeus °/s,
+    ///                             HYPPY/KULMAHYPPY = muutos yli 3 × ympäröivien keskiarvo; löydös 120, LennonKamerareitti)
     ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
     ///   portti paalle|pois        aloitusportin pallo (PalloKierto.PorttiSumea): sumennus 6 pt, täyttö, kierto
@@ -515,6 +526,10 @@ namespace Matkakirja
                     else if (o[1] == "pois") np.Piilota();
                     break;
                 }
+                case "kamerareitti":
+                    Nappula.KamerareittiLoki = o.Length < 2 || o[1] != "pois";
+                    Debug.Log($"MATKAKIRJA kamerareitti: loki {(Nappula.KamerareittiLoki ? "päällä" : "pois")}");
+                    break;
                 case "piste":
                 {
                     // piste <id> lat lon [lukittu] | piste pois <id>: pelin karttapiste (Karttapisteet)
@@ -722,9 +737,30 @@ namespace Matkakirja
                     break;
                 }
                 case "palvelin":
-                    Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
+                    Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
+                              $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
                     break;
+                case "valmius":
+                {
+                    // valmius seuraa [s] | valmius auto paalle [s] | valmius auto pois | valmius kevennys pois|paalle | valmius tila | valmius pois
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "seuraa") Valmius.Seuraa("komento", o.Length > 2 ? (float)D(2) : 30f);
+                    else if (m == "auto" && o.Length > 2)
+                    {
+                        Valmius.AutoS = o[2] == "paalle" ? (o.Length > 3 ? (float)D(3) : Valmius.AutoOletusS) : 0f;
+                        Debug.Log($"MATKAKIRJA valmius: auto {(Valmius.AutoS > 0f ? Valmius.AutoS.ToString("0.#") + " s" : "pois")} (seuraavista verhoista)");
+                    }
+                    else if (m == "kevennys" && o.Length > 2)
+                    {
+                        // valmius kevennys pois|paalle: verhon kevennys A/B-mittaukseen (muistetaan PlayerPrefsissä)
+                        Valmius.KevennysPois = o[2] == "pois";
+                        Debug.Log($"MATKAKIRJA valmius: kevennys {Valmius.KevennysTila()} (seuraavista verhoista)");
+                    }
+                    else if (m == "pois") Valmius.Lopeta();
+                    else Valmius.Tila();
+                    break;
+                }
                 case "valot":
                 {
                     // valot <aihe> | valot kaikki | valot ei | valot tila (laskurit lokiin)

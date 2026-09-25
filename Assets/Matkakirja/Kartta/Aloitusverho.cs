@@ -10,7 +10,8 @@ namespace Matkakirja
     /// logo musteella #46331f, leveys <see cref="LogonOsuus"/> ruudun leveydestä) jatkuu pelin ensimmäisistä
     /// kehyksistä täsmälleen samana kuvana, joten Unityn logoruutua (pois) tai mustaa välikehystä ei näy. Verho
     /// peittää myös kylmän alun: pallon laatat latautuvat sen takana, ja verho häivytetään vasta, kun pallo on
-    /// ladattu (Cesium3DTileset.ComputeLoadProgress) tai <see cref="Katto"/> on kulunut.
+    /// ladattu (Cesium3DTileset.ComputeLoadProgress, yhteinen ehto Valmius.Tasaantunut: ≥ 90 % ja tasaantunut, BUILD 16;
+    /// ennen 99 %, joka ei täyttynyt pyörivällä pallolla, löydös 80) tai <see cref="Katto"/> on kulunut.
     /// </summary>
     public sealed class Aloitusverho : MonoBehaviour
     {
@@ -24,8 +25,12 @@ namespace Matkakirja
         public const float Katto = 8f;
         /// <summary>Häivytys (s), pehmeä ease in/out (KAMERA-AJOT).</summary>
         public const float Haivytys = 0.5f;
-        /// <summary>Pallon latausaste, jolla verho saa lähteä (%).</summary>
-        public const float Valmis = 99f;
+        /// <summary>
+        /// Portin odotus (s): verho lähtee vasta, kun aloitusportti on auki (PalloKierto.PorttiSumea; UI avaa sen, kun
+        /// sisältö on luettu), jottei valmis pallo näy hetkeä ilman aloitusnäkymää. Tämän jälkeen pelkkä pallo riittää
+        /// (kehittäjän suorat aloitukset, joissa porttia ei avata).
+        /// </summary>
+        public const float PorttiOdotus = 5f;
 
         public static Aloitusverho Instanssi { get; private set; }
         public static bool Nakyvissa => Instanssi != null;
@@ -91,12 +96,25 @@ namespace Matkakirja
         {
             float alku = Time.realtimeSinceStartup;
             Cesium3DTileset pallo = null;
+            // Valmiusdiagnostiikka (löydös 80): seuranta kehittäjälipulla, lähtörivi aina (Valmius.cs).
+            Valmius.VerhoAlku("aloitusverho");
+            // Verhon kevennys (BUILD 16): näkyvän kartan haut ensin, taustan esilataus tauolla verhon ajan.
+            Valmius.KevennysAlku("aloitusverho");
+            string syy = "katto";
+            var ehto = new ValmiusEhto();
             while (Time.realtimeSinceStartup - alku < Katto)
             {
                 if (pallo == null) pallo = FindAnyObjectByType<Cesium3DTileset>();
-                if (pallo != null && Time.frameCount > 10 && pallo.ComputeLoadProgress() >= Valmis) break;
+                // Yhteinen ehto (BUILD 16): ≥ 90 % ja tasaantunut 300 ms, ≥ 10 kehystä (ValmiusEhto). Ehto luetaan joka
+                // kehys (tasaantumisen ikkuna), mutta verho lähtee vasta, kun portti on auki tai PorttiOdotus kulunut.
+                bool valmis = Valmius.Tasaantunut(ehto, pallo);
+                bool portti = PalloKierto.PorttiSumea || Time.realtimeSinceStartup - alku >= PorttiOdotus;
+                if (valmis && portti) { syy = PalloKierto.PorttiSumea ? "valmis" : "valmis:ei-porttia"; break; }
                 yield return null;
             }
+            Valmius.VerhoLoppu("aloitusverho", pallo == null ? "katto:ei-palloa" : syy,
+                (Time.realtimeSinceStartup - alku) * 1000.0, pallo != null ? pallo.ComputeLoadProgress() : -1f);
+            Valmius.KevennysLoppu("aloitusverho");
             VerkkoOdotus.Kirjaa("kaynnistys", "aloitusverho", (Time.realtimeSinceStartup - alku) * 1000.0);
             Debug.Log($"MATKAKIRJA aloitusverho: pois {Time.realtimeSinceStartup - alku:0.0} s " +
                       $"(pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %)");
