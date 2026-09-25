@@ -1293,7 +1293,7 @@ shardin_yritys () {
   # ajettu ERI jaolla (--pallo-osia, --sarakkeet), levylle jää laattoja
   # jotka eivät kuulu tähän shardiin, ja eheystarkistus laskisi ne
   # kahteen kertaan.
-  rm -rf "$kansio"
+  poista_varmasti "$kansio" || return 1
   mkdir -p "$kansio" "$ULOS/lokit"
   tila_kirjoita "$nimi" ajossa 0 0 "$alkoi" "$yritys" "$loki"
   # `--korkeuspalat` vain kun se on olemassa: nosto- ja viivatason
@@ -1667,7 +1667,7 @@ pallon_yritys () {
   local nimi="$1" kansio="$2" i="$3" rantalippu="$4" ampariKansio="$5"
   local loki="$6" yritys="$7" alkoi="$8" vali="$9"
   # Tyhjä kansio jokaiseen yritykseen, ks. shardin_yritys.
-  rm -rf "$kansio"
+  poista_varmasti "$kansio" || return 1
   mkdir -p "$kansio" "$ULOS/lokit"
   tila_kirjoita "$nimi" ajossa 0 0 "$alkoi" "$yritys" "$loki"
   tila_vahti "$nimi" "$loki" "$alkoi" "$yritys" "$kansio" '*.jpg' &
@@ -1956,6 +1956,17 @@ kokoa_lahde () {
   PALLON_LAHDE="$lahde"
 }
 
+# POISTO FINDERIN KILPAILUA VASTEN (25.9.2026): avoin Finder-ikkuna voi
+# kirjoittaa .DS_Storen kesken rm -rf:n, jolloin poisto kaatuu "Directory not
+# empty" ja set -e katkaisee ajon (pallon lähdekansio) tai kansioon jää
+# vanhoja laattoja (shardin uusinta). Yritetään muutaman kerran.
+poista_varmasti () {
+  local k
+  for k in 1 2 3 4 5; do rm -rf "$1" 2>/dev/null && [ ! -e "$1" ] && return 0; sleep 2; done
+  echo "VIRHE: $1 ei poistunut" >&2
+  return 1
+}
+
 # LÄHDELAATAT LEVYN SHARDEISTA (ei ämpäristä): täyden polton shardit
 # ovat vielä levyllä (ilman --siivoa), joten pallon sarja kootaan niistä
 # kloonaamalla (APFS `cp -c`: ei kopioi tavuja). Rakenne on sama kuin
@@ -1965,7 +1976,7 @@ kokoa_lahde_levylta () {
   local lahde="$ULOS/lahde-levylta"
   local alkoi kansio d zn
   alkoi="$(date +%s)"
-  rm -rf "$lahde"
+  poista_varmasti "$lahde" || return 1
   mkdir -p "$lahde/$VERSIO"
   # Reseptin pohjashardit: z0…z4 ja z5-01…z7-NN (ks. reseptin_shardit).
   for kansio in "$ULOS"/z0-z6 "$ULOS"/z7? "$ULOS"/z[0-9] "$ULOS"/z[5-7]-[0-9]* "$ULOS"/z8-*; do
