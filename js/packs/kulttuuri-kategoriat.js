@@ -127229,6 +127229,266 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Karora, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Milford Sound, New Zealand State Highway 94, Homer
+       * Tunnel, Transport in Milford Sound, Milford Track, Milford Sound
+       * Airport, Te Anau, Routeburn Track, Kea, Antipathella fiordensis,
+       * Austrosimulium ungulatum, Sandfly, Fiordland National Park) ja
+       * Wikivoyagen sivuilta Milford Sound, Milford Track ja Te Anau —
+       * teksti omaa. Hinnat ja aukioloajat jätetty pois, koska
+       * Wikivoyagen yritystiedot ovat osin vanhoja; observatorion
+       * aukiolo ja ulkomaalaisten pääsymaksuehdotus (2025) merkitty
+       * tarkistettaviksi. Nostojen aiheita (Grono, Piopiotahi-nimi,
+       * Tū-te-rakiwhanoa vuonojen veistäjänä, Sutherland ja Sutherland
+       * Falls, Mitre Peak, Kipling ja kävijämäärät, sademäärä ja
+       * tilapäiset putoukset, Bowen Falls, delfiinit, tawaki, Milford
+       * Trackin synty ja "maailman hienoin kävelyretki") eikä ennen–nyt-
+       * kuvien aiheita (photochrom, Stirling Falls, karvahylkeet,
+       * Homerin tunnelin rakentaminen) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: autojono Homerin tunnelin itäsuulla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Homer Tunnel, Milford Sound, New Zealand (18).JPG',
+          lyhyt: 'Autot jonottavat liikennevaloissa Homerin tunnelin itäsuulla Milford Roadilla.',
+          selite: 'Kesän vilkkaimpaan aikaan Homerin tunnelia ajetaan '
+            + 'liikennevalojen tahdissa vuorotellen yhteen suuntaan. Jonon '
+            + 'yllä kohoavat pystysuorat kallioseinät, joilta valuu ohuita '
+            + 'vesiputouksia, ja tunnelin suuta suojaa lumivyörykatos.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Milford Soundiin johtaa yksi ainoa maantie, ja lähes '
+          + 'jokainen kävijä tulee samaa reittiä päiväretkellä: Te Anausta '
+          + 'ajetaan noin 120 ja Queenstownista 291 kilometriä. Perillä '
+          + 'odottavat risteilyveneet, kajakit ja vedenalainen maailma, '
+          + 'jossa mustat korallit kasvavat tavallista paljon lähempänä '
+          + 'pintaa. Milford Trackin kävelijät saapuvat neljän päivän '
+          + 'vaelluksen päätteeksi veneellä, ja paikat reitille varataan '
+          + 'kuukausia etukäteen. Sadetakki ja hyönteiskarkote kuuluvat '
+          + 'jokaisen reppuun, ja tien tila tarkistetaan ennen lähtöä, '
+          + 'sillä vuoristotie voi sulkeutua lumivyöryvaaran, maanvyöryn '
+          + 'tai tulvan takia.',
+        artikkeli: {
+          nimi: 'Matkailijan Milford Sound',
+          teksti: 'Milford Soundiin on yksi tie, ja puolet elämyksestä on '
+            + 'sen varrella.',
+          nosto: 'Māorien tarinan mukaan hiekkakärpänen luotiin, jotta '
+            + 'ihmiset eivät jäisi toimettomina ihailemaan Fiordlandin '
+            + 'kauneutta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille yhtä tietä',
+              teksti: 'Milford Soundin kylään päättyy vain yksi maantie, '
+                + 'valtatie 94 eli Milford Road. Useimmat matkailijat '
+                + 'yöpyvät vajaan 3 000 asukkaan Te Anaussa, josta vuonolle '
+                + 'on noin 120 kilometriä: ajoaikaa kannattaa varata '
+                + 'vähintään kaksi tuntia, pysähdyksineen helposti kolme. '
+                + 'Queenstownista matkaa on 291 kilometriä suuntaansa, koska '
+                + 'tie kiertää Te Anaun kautta, ja sieltä lähtevä bussiretki '
+                + 'venyy noin kaksitoistatuntiseksi. Tankki täytetään Te '
+                + 'Anaussa, sillä myöhemmin polttoainetta saa vain hyvin '
+                + 'rajoitetusti. Tie seurailee ensin Te Anau -järven rantaa '
+                + 'ja nousee sitten Eglintonin laaksoon, jonka puolivälissä '
+                + 'Mirror Lakesin lammet heijastavat tyynellä säällä '
+                + 'vuorenhuiput. The Dividen pysäköintipaikalta alkaa '
+                + 'Routeburn Track, ja sen jälkeen tie kapuaa Homerin '
+                + 'tunnelille 945 metrin korkeuteen. Kesän ruuhka-aikaan '
+                + '1,27 kilometrin tunnelia ajetaan liikennevaloin '
+                + 'vuorotellen yhteen suuntaan, ja odotus voi venyä '
+                + 'parikymmentä minuuttia. Tunnelin suulla liikkuu usein '
+                + 'uteliaita kea-papukaijoja, joita ei saa ruokkia. '
+                + 'Kiireisempi voi lentää pienkoneella tai helikopterilla '
+                + 'Queenstownista, Wānakasta tai Te Anausta vuonon pienelle '
+                + 'lentokentälle, mutta huono sää voi perua lennon.',
+              kuva: [
+                {
+                  tiedosto: '015 City distances on a road sign in New Zealand - distance to Invercargill, Te Anau and Milford Sound.jpg',
+                  lyhyt: 'Valtatie 6:n viitta Queenstownin seudulla: Milford Soundiin on 291 kilometriä.',
+                  selite: 'Queenstownin seudulla valtatie 6:n viitta lupaa '
+                    + 'Milford Soundiin 291 kilometriä ja Te Anauhun 171. '
+                    + 'Matka on pitkä, koska vuorten läpi ei ole oikotietä '
+                    + 'ja tie kiertää Te Anaun kautta.',
+                  lahde: 'Marek Ślusarczyk (Tupungato), Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Mirror Lake, Fiordland 3.jpg',
+                  lyhyt: 'Mirror Lakesin lampi Milford Roadin varrella heijastaa lumihuippuisia vuoria.',
+                  selite: 'Eglintonin laaksossa, suunnilleen Te Anaun ja '
+                    + 'Milford Soundin puolivälissä, tien vieressä on '
+                    + 'pieniä lampia, joiden tyyni pinta heijastaa '
+                    + 'Earl-vuoriston huiput. Pysähdyspaikka on '
+                    + 'bussiretkien suosituimpia.',
+                  lahde: 'Robert Linsdell, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Kea 0A2A7264.jpg',
+                  lyhyt: 'Kea-papukaija Homerin tunnelin lähellä, jossa linnut liikkuvat autojen seassa.',
+                  selite: 'Kea on Eteläsaaren vuoristossa elävä papukaija, '
+                    + 'joka tutkii uteliaana reppuja, kenkiä ja autoja. '
+                    + 'Homerin tunnelin suulla ruokinta on houkutellut '
+                    + 'lintuja jonottavien autojen sekaan, ja vuonna 2017 '
+                    + 'tunnelin lähelle rakennettiin keoille oma '
+                    + 'kiipeilypaikka houkuttelemaan niitä pois tieltä.',
+                  lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Laivalla, kajakilla ja pinnan alla',
+              teksti: 'Vuonolle lähdetään kylän satamaterminaalista, josta '
+                + 'usea yhtiö ajaa tavallisesti tunnista kahteen tuntiin '
+                + 'kestäviä risteilyjä. Monet niistä käyvät vuonon suulla '
+                + 'Tasmaninmerellä ja palaavat samaa reittiä, jota '
+                + 'varhaiset purjehtijat tulivat. Koska Queenstownin ja Te '
+                + 'Anaun bussit saapuvat keskipäivän tienoilla, veneet '
+                + 'ovat täysimmillään juuri silloin; aamun tai myöhäisen '
+                + 'iltapäivän lähdöllä väkeä on vähemmän, ja valokin on '
+                + 'usein kuvaamiseen parempi. Yön yli -risteilyillä '
+                + 'matkustajat syövät ja nukkuvat laivassa vuonolla. '
+                + 'Kajakilla pääsee kalliorannoille, joihin isot alukset '
+                + 'eivät mahdu, ja hiljaa liukuessa hylkeet ja pingviinit '
+                + 'näkyvät paremmin. Opastetut ryhmät ovat pieniä, mutta '
+                + 'melonta on raskasta, ja kylmään ja märkään on '
+                + 'varauduttava. Pinnan alla on oma maailmansa: sadevesi '
+                + 'muodostaa suolaisen meriveden päälle metsän '
+                + 'parkkihapoista ruskean makean kerroksen, joka pimentää '
+                + 'syvyydet. Siksi tavallisesti syvällä elävät mustat '
+                + 'korallit kasvavat täällä jo noin kymmenen metrin '
+                + 'syvyydessä. Harrison Covessa on toiminut kelluva '
+                + 'vedenalainen observatorio, josta korallit näkee lasin '
+                + 'läpi; sen aukiolo kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Black coral at Milford Sound Underwater Observatory.jpg',
+                lyhyt: 'Elävä musta koralli näyttää vedenalaisen observatorion ikkunasta valkoiselta.',
+                selite: 'Harrison Coven vedenalaisesta observatoriosta '
+                  + 'kuvattu musta koralli on elävänä vaalea: nimensä '
+                  + 'korallit ovat saaneet tummasta tukirangastaan. '
+                  + 'Fiordlandin vuonoissa ne kasvavat poikkeuksellisen '
+                  + 'matalalla, koska ruskea makean veden pintakerros '
+                  + 'himmentää valon.',
+                lahde: 'Pseudopanax, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milford Track: varaa ajoissa',
+              teksti: 'Milford Track on Uuden-Seelannin '
+                + 'luonnonsuojeluviraston DOC:n Great Walk -reitti, ja '
+                + 'pääkaudella lokakuun lopulta huhtikuun loppuun sitä '
+                + 'kävellään tarkkojen sääntöjen mukaan: vain yhteen '
+                + 'suuntaan, Te Anau -järven päästä Milford Soundiin, '
+                + 'neljässä päivässä. Telttailu on kielletty, ja jokainen '
+                + 'yö vietetään varatussa majassa. Itsenäiset kulkijat '
+                + 'nukkuvat DOC:n Clinton-, Mintaro- ja Dumpling-majoissa '
+                + 'ja kantavat itse ruokansa, makuupussinsa ja kattilansa; '
+                + 'opastetun retken ostaneet yöpyvät omissa majataloissaan, '
+                + 'joissa on suihkut ja valmiit ateriat. Reitille pääsee '
+                + 'päivittäin aloittamaan enintään 40 itsenäistä ja 50 '
+                + 'opastettua kävelijää, joten paikat menevät nopeasti: '
+                + 'toukokuussa 2022 koko kesä varattiin täyteen 13 '
+                + 'minuutissa. Vaellus alkaa veneellä Te Anau Downsista '
+                + 'Glade Wharfiin ja päättyy Sandfly Pointiin, jonne ei '
+                + 'johda tietä; sieltä noin varttitunnin venekyyti vie '
+                + 'Milford Soundin laiturille. Talvella rajoituksia ei ole, '
+                + 'mutta majojen varusteita viedään pois ja siltoja '
+                + 'puretaan lumivyöryjen tieltä, joten reitti sopii silloin '
+                + 'vain kokeneille. Säät voivat sotkea suunnitelmat '
+                + 'kesälläkin: vuonna 2025 kauden alku viivästyi '
+                + 'lumivyöryvaurioiden takia. Ilman varausta pääsee '
+                + 'tien varrelta The Dividesta päiväkävelylle Key '
+                + 'Summitille, jolta näkyy Hollyfordin laaksoon.',
+              kuva: {
+                tiedosto: 'Milford Track Sandfly Point Shelter.jpg',
+                lyhyt: 'Sandfly Pointin suojakatos Milford Trackin päässä, jossa kävelijät odottavat venettä.',
+                selite: 'Milford Trackin viimeinen päivä päättyy Sandfly '
+                  + 'Pointin puiseen suojakatokseen. Tietä ei ole, joten '
+                  + 'kävelijät odottavat täällä venettä, joka vie heidät '
+                  + 'vuonon poikki Milford Soundin laiturille.',
+                lahde: 'AlasdairW, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Sadevarusteet ja tien tila',
+              teksti: 'Sade on Milford Soundissa pikemmin sääntö kuin '
+                + 'poikkeus, joten sadetakki kuuluu päiväretkenkin '
+                + 'varusteisiin ja kameralle kannattaa ottaa sateenvarjo '
+                + 'tai vedenpitävä suoja. Sadepäivää ei silti tarvitse '
+                + 'surra: osa retkiyhtiöistä pitää sitä vuonon parhaana, '
+                + 'ja moni suosittelee näkemään paikan sekä poudalla että '
+                + 'sateella. Tien tila tarkistetaan ennen lähtöä. Milford '
+                + 'Road on korkea vuoristotie, jolla on kesäkuusta '
+                + 'marraskuuhun usein jäätä, ja lumiketjut ovat '
+                + 'lumiolosuhteissa pakolliset. Keskimäärin tie on '
+                + 'suljettuna noin kahdeksan päivää vuodessa, enimmäkseen '
+                + 'talvella, mutta maanvyöryt, kaatuneet puut ja tulvat '
+                + 'voivat katkaista sen mihin vuodenaikaan tahansa. '
+                + 'Lumivyöryalueilla pysähtyminen on kielletty pitkillä '
+                + 'matkoilla, eikä niille pidä jäädä kuvaamaankaan. '
+                + 'Talvella helikoptereista pudotetaan rinteille '
+                + 'räjähteitä, jotta kertynyt lumi saadaan vyörymään '
+                + 'hallitusti; viimeisin tiedossa oleva lumivyöryn '
+                + 'aiheuttama kuolema tiellä sattui vuonna 1983. '
+                + 'Tienvarren taulut kertovat sulkemisista, ja '
+                + 'vaarallisimpina aikoina Hollyfordin ja Cleddaun '
+                + 'laaksoissa lasketaan puomit. Omalla autolla ajavan on '
+                + 'hyvä tietää, että kapea ja mutkainen tie, jolla on '
+                + 'yksikaistaisia siltoja ja vähän ohituspaikkoja, oli '
+                + 'vuoden 2008 tilastossa maan kolmanneksi vaarallisin '
+                + 'valtatieosuus.',
+              kuva: {
+                tiedosto: 'Knobs Flat sgn.jpg',
+                lyhyt: 'Knobs Flatin tienvarsitaulu kertoo tien olevan auki ja lumivyöryvaaran pieni.',
+                selite: 'Eglintonin laakson Knobs Flatissa seisova taulu '
+                  + 'kertoo, onko Hollyfordin ja Milford Soundin välinen '
+                  + 'tieosuus auki ja kuinka suuri lumivyöryvaara '
+                  + 'vuorilla on. Kuvan ottopäivänä syyskuussa 2009 tie '
+                  + 'oli auki ja vaara pieni.',
+                lahde: 'Motorau, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Hiekkakärpäset ja kylän palvelut',
+              teksti: 'Fiordlandin tunnetuin eläin ei ole delfiini eikä '
+                + 'pingviini vaan hiekkakärpänen, māoriksi namu. '
+                + 'Uudessa-Seelannissa hiekkakärpäsiksi kutsutaan pieniä '
+                + 'mäkäräisiä, ja länsirannikon laji Austrosimulium '
+                + 'ungulatum on niistä pahamaineisin. Verta imevät vain '
+                + 'naaraat, jotka tarvitsevat sitä munien kehittymiseen, ja '
+                + 'pahimmillaan ihmistä on laskettu purevan yli tuhat '
+                + 'kärpästä tunnissa, etenkin juuri ennen auringonlaskua '
+                + 'tai sadetta. Māorien tarinan mukaan kärpäsillä on '
+                + 'tehtävä: kun Tū-te-rakiwhanoa oli saanut vuonot '
+                + 'valmiiksi, maisema oli niin kaunis, että ihmiset '
+                + 'lakkasivat tekemästä töitä ja jäivät vain katselemaan, '
+                + 'ja jumalatar Hine-nui-te-pō loi hiekkakärpäsen pitämään '
+                + 'heidät liikkeessä. DEET- tai ikaridiinipitoinen '
+                + 'karkote, pitkät hihat ja lahkeet auttavat; kylän '
+                + 'vierailijakeskuksessa kärpäsille on pystytetty '
+                + 'veistoksiakin. Kylässä palveluja on vähän: '
+                + 'majoituspaikat täyttyvät helposti, ja ruokapaikkoja on '
+                + 'niukasti, joten eväät kannattaa ottaa mukaan. Siksi noin '
+                + 'yhdeksän kävijää kymmenestä tulee vain päiväksi. '
+                + 'Maan luonnonsuojeluministeri ehdotti vuonna 2025 '
+                + 'ulkomaisille kävijöille 20–40 Uuden-Seelannin dollarin '
+                + 'pääsymaksua muutamiin luontokohteisiin, Milford Sound '
+                + 'mukaan lukien. Maksu ei tulisi voimaan ainakaan ennen kesää '
+                + '2027, joten tilanne kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Biting sandfly.jpg',
+                lyhyt: 'Hiekkakärpänen imee verta sormesta, luultavasti Te Anaun seudulla.',
+                selite: 'Uudessa-Seelannissa hiekkakärpäsiksi kutsutut '
+                  + 'mäkäräiset ovat vain muutaman millimetrin mittaisia, '
+                  + 'mutta niiden puremat kutiavat. Kuva on otettu '
+                  + 'todennäköisesti Te Anaun seudulla, Milford Roadin '
+                  + 'alkupäässä.',
+                lahde: 'Emilio Floris, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
