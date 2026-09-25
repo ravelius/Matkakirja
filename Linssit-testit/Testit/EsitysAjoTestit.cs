@@ -41,9 +41,11 @@ namespace Matkakirja.Linssit.Testit
             readonly ValeYmparisto y;
             public readonly List<(double ms, string mita)> Loki = new List<(double, string)>();
             public double Kellossa;
+            /// <summary>Viimeisimmän mustan poiston feidi (ms).</summary>
+            public double MustanFeidi = double.NaN;
             public ValeNakyma(ValeYmparisto y) { this.y = y; }
             void K(string s) => Loki.Add((y.Kello * 1000, s));
-            public void Musta(bool p, double f) => K($"musta {p}");
+            public void Musta(bool p, double f) { if (!p) MustanFeidi = f; K($"musta {p}"); }
             public void Valot(double f) => K("valot");
             public void PidonPohja(double v) => K("pohja " + v);
             public void Jakso(int i, KertomusJakso j) => K("jakso " + j.Id);

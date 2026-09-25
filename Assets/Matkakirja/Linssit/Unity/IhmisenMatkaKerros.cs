@@ -190,18 +190,50 @@ namespace Matkakirja.Natiivi
             double nyt = Time.realtimeSinceStartupAsDouble * 1000;
             valot?.Paivita(nyt);
             vanat?.Paivita(vuosia, pito);
-            if (valoissa && taivas != null)
+            if (taivas != null)
             {
+                // II (löydös 152): tähdet nousevat mustasta samassa feidissä kuin musta laskee (Esitys.TahtienEsiin, esityksen
+                // kello); I näyttää ne mustan alta sellaisenaan.
+                float nousu = 1f;
+                if (Versio2 && NykyinenEsitys() is { } e)
+                {
+                    nousu = (float)e.TahtienEsiin;
+                    if (nousu >= 1f && !feidiKirjattu && e.I == 0)
+                    {
+                        feidiKirjattu = true;
+                        LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: avaus: feidi päättyi, tähdet täysin (kulunut {e.Kulunut / 1000:0.00} s)");
+                    }
+                }
                 // Tähdet häipyvät, kun kartta valkenee (web: tähdet vain avausjaksossa).
-                float t = Mathf.Clamp01((Time.unscaledTime - valotAlkoi) / (float)(Esitysmatikka.ValojenMs / 1000));
-                tahtienPeitto = 1f - t;
+                float t = valoissa ? Mathf.Clamp01((Time.unscaledTime - valotAlkoi) / (float)(Esitysmatikka.ValojenMs / 1000)) : 0f;
+                tahtienPeitto = Mathf.Min(nousu, 1f - t);
             }
             taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
         }
 
+        bool feidiKirjattu;
+
+        /// <summary>Auki olevan ihmisen matkan esitys (II:n avauksen ajat ja tähtien nousu), null muuten.</summary>
+        static Esitys NykyinenEsitys() => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Linssi?.Esitys;
+
         public void Musta(bool paalla, double feidiMs)
         {
             LinssiOhjain.Instanssi?.Kirjaa($"esitys: musta {paalla} ({feidiMs:F0} ms)");
+            if (paalla)
+            {
+                // Uusi esitys (myös Aloita alusta): tähtitaivas alusta, muuten edellisen esityksen valot jättivät sen piiloon.
+                valoissa = false;
+                tahtienPeitto = 1f;
+                feidiKirjattu = false;
+            }
+            else if (Versio2 && NykyinenEsitys() is { } e && e.I == 0 && !e.AvausOhi)
+            {
+                // Videon ajoitus lokista (löydös 152): feidi ja zoomi alkavat samalla hetkellä.
+                var a = e.AvauksenAjat();
+                LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: avaus: feidi alkaa {e.Kulunut / 1000:0.00} s ({a.Feidi / 1000:0.00} s, " +
+                    $"päättyy {(a.Musta + a.Feidi) / 1000:0.00} s), zoomi {a.ZoomAlku / 1000:0.00} → {a.ZoomLoppu / 1000:0.00} s, " +
+                    $"Afrikka {a.Afrikka / 1000:0.00} s");
+            }
             MustaKasittelija?.Invoke(paalla, feidiMs);
             Tehosteet?.Musta(paalla, feidiMs);
         }

@@ -83,7 +83,15 @@ namespace Matkakirja.Linssit.Aikajana
             this.nakyma = nakyma;
             this.aani = aani;
             Tiedot = tiedot ?? IhmisenMatkaTiedot;
+            RauhallinenAvaus = Tiedot.Id == IhmisenMatka2Tiedot.Id;
         }
+
+        /// <summary>
+        /// AVAUS RAUHASSA (II, omistajan löydös 152): musta feidautuu 2,75 s:ssa ja pallo lähestyy samaan aikaan
+        /// (Esitys.RauhallinenAvaus, Esitysmatikka.RauhallinenAvaus). Oletus tunnuksesta: II tosi, I epätosi (webin avaus
+        /// sellaisenaan). Vaikuttaa seuraavaan esitykseen (avaus, Aloita alusta).
+        /// </summary>
+        public bool RauhallinenAvaus { get; set; }
 
         /// <summary>
         /// Värivirrat ja vanat aineistosta (puhdas laskenta, ~130 ms Macilla): sovitin
@@ -140,7 +148,8 @@ namespace Matkakirja.Linssit.Aikajana
 
         Esitys UusiEsitys()
         {
-            var e = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani) { MusiikkiLaji = MusiikkiLaji };
+            var e = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani)
+                { MusiikkiLaji = MusiikkiLaji, RauhallinenAvaus = RauhallinenAvaus };
             e.Tallenna = () => TallennaMuisti();
             e.Lopussa = AloitaTutkimus;
             return e;

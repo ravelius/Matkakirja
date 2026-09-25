@@ -470,5 +470,76 @@ namespace Matkakirja.Linssit.Testit
             vaisto.Pyyda((0, -0.2), false, k.Ajo.Alku, null);
             Oleta.Tosi(vaisto.Ratkaise(k.Ajo.Alku, k.Ajo), "väistö liittyy jakson ajoon");
         }
+
+        // ── Avaus rauhassa (löydös 152): tähdet ja pallo feidautuvat mustasta, pallo lähestyy samaan aikaan ──
+
+        [Testi] static void RauhallinenAvausFeidiJaZoomiYhtaAikaa()
+        {
+            var kultainen = System.Text.Json.JsonDocument.Parse(System.IO.File.ReadAllText(System.IO.Path.Combine(
+                AppContext.BaseDirectory, "..", "kultaiset", "esitys.json"))).RootElement;
+            foreach (var c in kultainen.GetProperty("avaus").EnumerateArray())
+            {
+                var lauseet = c.GetProperty("lauseet").EnumerateArray().Select(x => x.GetDouble()).ToList();
+                double? sana = c.GetProperty("sana").ValueKind == System.Text.Json.JsonValueKind.Number ? c.GetProperty("sana").GetDouble() : (double?)null;
+                double kesto = c.GetProperty("kesto").GetDouble();
+                var i = Esitysmatikka.Avaus(lauseet, sana, kesto);
+                var ii = Esitysmatikka.RauhallinenAvaus(lauseet, sana, kesto);
+                Oleta.Sama(i.Musta, ii.Musta, "ensimmäinen virke mustalla kuten I:ssä");
+                Oleta.Sama(i.ZoomLoppu, ii.ZoomLoppu, "zoomi perillä samaan aikaan kuin I:ssä (valot ja Marokko eivät siirry)");
+                Oleta.Sama(i.Afrikka, ii.Afrikka);
+                double katto = Esitysmatikka.AvaruudenMs + Esitysmatikka.ZoominJatkoMs;
+                Oleta.Sama(Math.Max(ii.Musta, i.ZoomLoppu - katto), ii.ZoomAlku, "zoomi alkaa feidin kanssa (ellei katto rajaa)");
+                Oleta.Tosi(ii.ZoomKesto <= katto && ii.ZoomKesto >= i.ZoomKesto, "zoomi pidempi, katon alla");
+                Oleta.Tosi(ii.Feidi > 0 && ii.Feidi <= Esitysmatikka.RauhallinenFeidiMs, "feidi rauhassa: " + ii.Feidi);
+                Oleta.Sama(ii.Musta + ii.Feidi, ii.Piste);
+            }
+            // Oikea kertomus: musta 4,7 s, feidi 2,75 s ja zoomi 4,7 → 13,44 s alkavat samalla hetkellä.
+            var (kertomus, kohteet, leimat) = EsitysAjoTestitApu.Aineisto();
+            var l = leimat["avaus"];
+            var a = Esitysmatikka.RauhallinenAvaus(l.Lauseet, Esitys.SananHetki(kertomus[0], l, l.Kesto), l.Kesto);
+            Oleta.Sama(a.Musta, a.ZoomAlku, "feidi ja zoomi yhtä aikaa");
+            Oleta.Sama(Esitysmatikka.RauhallinenFeidiMs, a.Feidi);
+            Oleta.Sama(Esitysmatikka.Avaus(l.Lauseet, Esitys.SananHetki(kertomus[0], l, l.Kesto), l.Kesto).ZoomLoppu, a.ZoomLoppu);
+        }
+
+        [Testi] static void IIAvausAjossaEikaPalloKutistu()
+        {
+            var (kertomus, kohteet, leimat) = EsitysAjoTestitApu.Aineisto();
+            var y = new ValeYmparisto();
+            var n = new EsitysAjoTestit.ValeNakyma(y);
+            var e = new Esitys(kertomus, kohteet, leimat, null, y, n, new EsitysAjoTestit.ValeAani(y, leimat.Values.Max(x => x.Paattyy)))
+                { RauhallinenAvaus = true };
+            void Aja(double s) { double loppu = y.Kello + s; while (y.Kello < loppu) { y.Kello += 1 / 60.0; e.Paivita(); } }
+            e.Aloita();
+            var v = e.AvauksenAjat();
+            Oleta.Tosi(y.Avaruus != null && y.Ajo == null, "kamera avaruudessa mustan alla ilman ajoa (Raamattu: alkuzoomi verhon takana)");
+            Aja((v.Musta - 40) / 1000);
+            Oleta.Tosi(e.MustaPaalla && y.Ajo == null, "ensimmäinen virke mustalla, ei ajoa");
+            Oleta.Sama(0.0, e.TahtienEsiin, "tähdet mustan alla");
+            Aja(0.05);
+            Oleta.Tosi(!e.MustaPaalla, "feidi alkoi");
+            Oleta.Sama(Esitysmatikka.RauhallinenFeidiMs, n.MustanFeidi, "feidi 2,75 s");
+            Oleta.Tosi(y.Ajo != null && y.Loki.Count(r => r == "ajo") == 1, "zoomi alkoi samassa kehyksessä kuin feidi");
+            Oleta.Tosi(y.Ajo.Value.Korkeus < Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade / 10, "pallo lähestyy, ei kutistu");
+            Oleta.Tosi(Math.Abs(y.AjonKesto - (v.ZoomLoppu - v.Musta) / 1000) < 0.05, "zoomi saapuu ZoomLoppussa: " + y.AjonKesto);
+            Oleta.Tosi(Math.Abs(y.AjonPehmennys(0.5) - Kamerakayrat.Arvo(Kayra.SyoksyKuminauha, 0.5)) < 1e-12, "syöksy: hidas alku");
+            Oleta.Tosi(y.AjonPehmennys(0.1) < 0.05, "alku rauhassa");
+            Aja(v.Feidi / 2000);
+            Oleta.Tosi(Math.Abs(e.TahtienEsiin - 0.5) < 0.03, "tähdet puolivälissä feidiä: " + e.TahtienEsiin);
+            Aja(v.Feidi / 2000);
+            Oleta.Sama(1.0, e.TahtienEsiin, "tähdet täysin feidin jälkeen");
+            Aja((v.ZoomLoppu - v.Musta - v.Feidi) / 1000 + 0.5);
+            Oleta.Tosi(n.Hetki("valot") >= v.ZoomLoppu - 20, "valot vasta zoomin jälkeen kuten I:ssä");
+            Oleta.Sama(1, y.Loki.Count(r => r == "ajo"), "yksi yhtenäinen zoomi");
+
+            // I sellaisenaan: webin avaus, IhmisenMatkaLinssi valitsee tunnuksesta.
+            var aineisto = NostoKentatTestit.Aineisto();
+            Oleta.Tosi(!new IhmisenMatkaLinssi(aineisto, null, n, null).RauhallinenAvaus, "I: webin avaus");
+            var ii = new IhmisenMatkaLinssi(aineisto, null, n, null, IhmisenMatkaLinssi.IhmisenMatka2Tiedot);
+            Oleta.Tosi(ii.RauhallinenAvaus, "II: rauhallinen avaus");
+            ii.Avaa(new ValeYmparisto());
+            Oleta.Tosi(ii.Esitys.RauhallinenAvaus, "II:n esitys saa parametrin");
+            ii.Sulje();
+        }
     }
 }
