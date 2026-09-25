@@ -116137,6 +116137,238 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Rebiana Sand Sea',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Kufra, Kufra District, Kufra Airport, El Tag, Capture
+       * of Kufra, Tragedy at Kufra, Gabal El Uweinat, Libyan cuisine,
+       * Nubian Sandstone Aquifer System), Wikivoyagen Libya-artikkelista
+       * (Kufralla ei ole omaa artikkelia), Suomen ulkoministeriön Libyan
+       * matkustustiedotteesta 3.7.2026, Britannian FCDO:n Libyan
+       * matkustusohjeesta 21.7.2026 sekä NASA Earth Observatoryn ja JPL:n
+       * kuvaselitteistä Commonsissa — teksti omaa. Nostojen ja gallerioiden
+       * aiheita (allas ja Al Jawfin mitat, zuwayyat, karavaanit, Rohlfs,
+       * Rebiana, senussit ja El Tagin perustaminen, vieraanvaraisuus, teen
+       * kolme lasillista, pohjaveden ikä) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Uweinatin retkikuntaleiri 2021.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Jebel Uweinat , South Easte of Libya, North Africa.jpg',
+          lyhyt: 'Retkikunnan maastoautot leirissä Uweinatin vuoriston kalliopatsaiden juurella.',
+          selite: 'Libyalainen retkikunta leiriytyi vuonna 2021 tuulen '
+            + 'hiomien kalliopatsaiden juurelle Uweinatin vuoristossa, '
+            + 'Libyan, Egyptin ja Sudanin rajojen kohtaamispaikalla. '
+            + 'Punaisen auton katolla ovat retken vesikanisterit.',
+          lahde: 'Mustafa.explore, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kufra on Libyan syrjäisimpiä asuttuja paikkoja: '
+          + 'keidasryhmä Saharan kaakkoiskolkassa, jonka pääkaupunki Al Jawf '
+          + 'on yli 900 kilometrin päässä lähimmästä suurkaupungista. '
+          + 'Nykymatkailijalle se on ennen kaikkea paikka, jonne ei tällä '
+          + 'hetkellä pidä lähteä, sillä Suomen ulkoministeriö kehottaa '
+          + 'välttämään kaikkea matkustamista Libyaan. Tämä opas kertoo, '
+          + 'millainen Kufra on sitten, kun matka joskus taas on mahdollinen: '
+          + 'aavikon vuoret, avaruuteen asti näkyvät pellot, maan alta '
+          + 'pumpattava muinainen vesi, Etelä-Libyan ruoka ja sodan jäljet, '
+          + 'jotka näkyvät yhä kaupungin laella.',
+        artikkeli: {
+          nimi: 'Matkailijan Kufra',
+          teksti: 'Kufraan kannattaa nyt matkustaa vain kartan ja kirjan '
+            + 'kautta.',
+          nosto: 'Kufran lähellä kulki kerran joki, jonka hiekan alta löysi '
+            + 'vasta avaruussukkulan tutka vuonna 1994.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Matkustusvaroitus ja pitkä tie',
+              teksti: 'Rehellisesti sanottuna Kufraan ei nyt matkusteta '
+                + 'huvin vuoksi. Suomen ulkoministeriön matkustustiedote '
+                + 'pitää Libyaa korkeimmalla turvallisuustasolla: ministeriö '
+                + 'kehottaa välttämään kaikkea matkustamista maahan ja jo '
+                + 'siellä olevia poistumaan. Britannian ulkoministeriö '
+                + 'varoittaa kaikesta matkustamisesta muualle kuin Tripoliin, '
+                + 'Misrataan ja Bengasin seudulle, joten Kufra on varoituksen '
+                + 'piirissä. Syitä on monta. Kaupunki on Sudanista pohjoiseen '
+                + 'kulkevan siirtolaisreitin pysähdyspaikka, jossa '
+                + 'ihmissalakuljettajat toimivat, ja vuonna 2012 toubujen ja '
+                + 'zuwayyojen yhteenotoissa kuoli yli sata ihmistä. Sudanin '
+                + 'sisällissodan alettua vuonna 2023 Kufran lentoaseman on '
+                + 'raportoitu toimineen Arabiemiirikuntien huoltokenttänä '
+                + 'sodan toiselle osapuolelle, RSF-joukoille, ja tammikuussa '
+                + '2026 itäistä Libyaa hallitseva Libyan kansallinen armeija '
+                + 'sulki kentän kuukaudeksi. Kun matkustaminen joskus taas '
+                + 'onnistuu, Kufraan lennetään kotimaan vuorolla tai ajetaan '
+                + 'pohjoisesta Jalun keitaan kautta kulkevaa aavikkotietä. '
+                + 'Libya otti sähköisen viisumin käyttöön maaliskuussa 2024, '
+                + 'mutta maahantulon säännöt muuttuvat usein ilman '
+                + 'ennakkovaroitusta, ja lyhyelläkin vierailulla on '
+                + 'ilmoittauduttava poliisille viikon kuluessa saapumisesta.',
+              kuva: [
+                {
+                  tiedosto: 'مطار الكفرة.jpg',
+                  lyhyt: 'Kufran lentoaseman terminaali, jonka kyltissä lukee arabiaksi Kufran kansainvälinen lentoasema.',
+                  selite: 'Auton tuulilasin läpi vuonna 2022 kuvattu terminaali '
+                    + 'on Al Jawfin itälaidalla, italialaisten 1930-luvulla '
+                    + 'rakentaman Buman lentokentän paikalla.',
+                  lahde: 'مريم محمد الروادي, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'End of Road in Libya.jpg',
+                  lyhyt: 'Aavikkoura katkeaa jyrkänteelle Libyan Saharassa, ja matka jatkuu maastoautolla.',
+                  selite: 'Vuonna 2002 Messak Mustafetin kivikkoylängöllä '
+                    + 'Lounais-Libyassa kuvattu ura päättyy jyrkänteelle: '
+                    + 'Saharassa tie voi loppua kesken, ja matkalle tarvitaan '
+                    + 'maastoauto ja reitin tunteva kuljettaja.',
+                  lahde: 'Bernhard Holub (Dromedar61), Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'The Al Kufrah Oasis in southeastern Libya is shown in this Envisat image ESA206420.jpg',
+                  lyhyt: 'Envisat-satelliitin kuvassa Kufran kasteluympyrät asettuvat riveiksi hiekkameren laitaan.',
+                  selite: 'Euroopan avaruusjärjestön Envisat kuvasi Kufran '
+                    + 'keitaan helmikuussa 2006: kastelupeltojen tummat '
+                    + 'ympyrät muodostavat rivejä, ja kuvan oikeaa laitaa '
+                    + 'peittää aaltoileva hiekkameri.',
+                  lahde: 'ESA, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kennot, ympyrät ja lähteiden vuori',
+              teksti: 'Lentokoneen ikkunasta Kufra näyttää geometrian '
+                + 'oppikirjalta. Al Jawfin eteläpuolella on vierekkäin kolmea '
+                + 'peltokuviota: vanhinta viljelytapaa edustavia ruutupeltoja, '
+                + 'Libyan aavikon ensimmäisen suunnitellun viljelyhankkeen '
+                + 'kuusikulmaisia kennoja noin vuodelta 1970 sekä niiden '
+                + 'tilalle vettä säästämään tulleita kiertokastelun ympyröitä, '
+                + 'joista jokainen on noin kilometrin levyinen. Keitaan '
+                + 'ulkopuolella alkaa tyhjyys. Kaakossa, Egyptin ja Sudanin '
+                + 'rajan tuntumassa, hiekasta kohoavat Arkenun ja Uweinatin '
+                + 'vuoristot. Uweinat tarkoittaa arabiaksi lähteiden vuorta, ja '
+                + 'sen kallioihin on hakattu tuhansia esihistoriallisia kuvia '
+                + 'leijonista, kirahveista, strutseista, gaselleista ja '
+                + 'karjasta ajalta, jolloin Saharassa laidunnettiin karjaa. '
+                + 'Ilmasto on maailman kuivimpia: sadetta tulee noin '
+                + 'millimetri vuodessa, ja aurinko paistaa lähes 3 700 tuntia. '
+                + 'Kesällä päivälämpö nousee keskimäärin 38 asteeseen, kun '
+                + 'taas tammikuussa päivä on noin 21-asteinen ja yö viilenee '
+                + 'viiteen asteeseen, joten talvi on paras matka-aika. '
+                + 'Keväällä kannattaa varautua hiekkamyrskyihin, jotka voivat '
+                + 'kestää neljästä kahdeksaan päivää.',
+              kuva: {
+                tiedosto: 'Al Jawf, Libya.jpg',
+                lyhyt: 'Al Jawfin eteläpuolella ruutupellot, kuusikulmaiset kennot ja kastelukehät vierekkäin.',
+                selite: 'Avaruusasemalta lokakuussa 2016 otetussa kuvassa '
+                  + 'Al Jawf on ylälaidassa, vanhat ruutupellot vasemmalla, '
+                  + 'noin vuoden 1970 kuusikulmaiset kennot keskellä ja '
+                  + 'uudemmat kiertokastelun ympyrät vasemmassa alakulmassa.',
+                lahde: 'NASA, International Space Station Program, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Joki hiekan alla',
+              teksti: 'Kufran vehreys on lainaa menneisyydeltä. Lokakuussa '
+                + '1994 avaruussukkula Endeavourin tutka kuvasi Kufran '
+                + 'lähistön aavikkoa taajuuksilla, jotka läpäisevät kuivan '
+                + 'hiekan, ja kuvasta löytyi aiemmin tuntematon haara '
+                + 'muinaisesta jokiverkostosta, jonka tuulen kuljettama hiekka '
+                + 'oli haudannut tuhansiksi vuosiksi. Sama sade on yhä maan '
+                + 'alla: keitaan kaivot ja kastelupuomit pumppaavat vettä '
+                + 'Nubian hiekkakiven pohjavesiesiintymästä, jota Saharan '
+                + 'rankkasateet täyttivät vielä yli 20 000 vuotta sitten. '
+                + 'Nykyään vettä ei tule lisää, ja liikakäyttö näkyy jo: '
+                + 'joulukuuhun 2011 mennessä keitaan järvi oli kuivunut '
+                + 'kokonaan. Pumppaus silti jatkuu, sillä Libya on sopinut '
+                + 'YK:n elintarvike- ja maatalousjärjestön FAO:n kanssa alueen '
+                + 'maatalouden kehittämisestä ruokaturvan parantamiseksi. '
+                + 'Matkailijalle vesi on Kufrassa arvokkain varuste. '
+                + 'Aavikkoretket tehdään usean maastoauton saattueessa, ja '
+                + 'jokaiseen autoon pakataan omat vesikanisterit, kuten '
+                + 'tämän oppaan kansikuvan retkikunta Uweinatin vuoristossa.',
+              kuva: {
+                tiedosto: 'Kufra-space-radar.jpg',
+                lyhyt: 'Avaruussukkulan tutka paljasti hiekan alta muinaisen jokiuoman Kufran lähellä.',
+                selite: 'Endeavourin SIR-C/X-SAR-tutka kuvasi lokakuussa 1994 '
+                  + 'aluetta Kufran keitaan lähellä: tummat, haarautuvat '
+                  + 'juovat ovat hiekan alle hautautuneita, kauan sitten '
+                  + 'kuivuneita jokilaaksoja.',
+                lahde: 'NASA, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Bazin, taatelisiirappi ja kuivan maan tavat',
+              teksti: 'Etelä-Libyan keittiö on rakentunut säilyvien '
+                + 'raaka-aineiden varaan: kuivatun lihan, hapatettujen '
+                + 'maitotuotteiden, ohran ja kestävien palkokasvien. Lammas '
+                + 'on koko maan yleisin liha, mutta etelässä syödään '
+                + 'rannikkoa useammin kamelia, ja suolattu, auringossa '
+                + 'kuivattu gideed-liha säilötään oliiviöljyyn keittoja ja '
+                + 'kuskusia varten. Tunnetuin kotiruoka on bazin: '
+                + 'ohrajauhoista keitetty taikina vatkataan magraf-kepillä '
+                + 'kiinteäksi kuvuksi, jonka ympärille kaadetaan lampaanlihalla '
+                + 'haudutettu tomaattikastike, keitettyjä kananmunia ja '
+                + 'perunaa. Asida-taikinamöykky syödään usein rubin, '
+                + 'taateleista tai johanneksenleivästä keitetyn tumman '
+                + 'siirapin kanssa, ja kesähelteellä juodaan kylmää ja hapanta '
+                + 'hibiskusjuomaa, karkadea. Alkoholi ja sianliha ovat '
+                + 'kiellettyjä. Rahana on Libyan dinaari, jota idässä '
+                + 'kutsutaan puhekielessä nimellä jneh, brittiläisen guinean '
+                + 'mukaan. Pankkikortin toimivuus kannattaa varmistaa ennen '
+                + 'kuin lähtee suurista kaupungeista. Kohteliaisuus alkaa '
+                + 'vanhimmista: kotiin kutsuttu vieras tervehtii ensin talon '
+                + 'vanhimpia, ja libyalaiset ilmaisevat erimielisyytensä '
+                + 'mieluummin kiertoteitse kuin suoraan.',
+              kuva: {
+                tiedosto: 'Bazin.jpg',
+                lyhyt: 'Bazin: ohrataikinan kupu lihakastikkeessa, ympärillä kananmunia ja perunaa.',
+                selite: 'Libyalaisen bazinin keskellä on ohrajauhoista '
+                  + 'vatkattu taikinakupu ja ympärillä tomaattinen '
+                  + 'lihakastike, keitetyt kananmunat ja perunat, tällä '
+                  + 'kertaa myös sieniä.',
+                lahde: 'Libiya11, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Linnake kaupungin laella',
+              teksti: 'Kufran uudempaa historiaa voi lukea kaupungin '
+                + 'siluetista. Keitaan pohjoisreunan kohoumalla El Tagissa '
+                + 'seisoo yhä italialaisten 1930-luvun puolivälissä rakentama '
+                + 'linnake, joka hallitsee edelleen näkymää. Italia oli '
+                + 'vallannut Kufran vuonna 1931: kenraali Rodolfo Graziani toi '
+                + 'paikalle noin 3 000 sotilasta ja parikymmentä pommikonetta, '
+                + 'ja moni asukas pakeni aavikon halki Uweinatin kautta '
+                + 'Egyptiin. Brittiläinen kartoittaja Pat Clayton kohtasi '
+                + 'pakolaisia ja auttoi pelastamaan monet menehtymästä '
+                + 'aavikolle. Samoihin aikoihin rakennettu Buman lentokenttä '
+                + 'oli tärkeä välilasku Italian Itä-Afrikkaan, ja sen '
+                + 'paikalla on nykyinen lentoasema. Toisessa maailmansodassa '
+                + 'Tšadista tullut vapaiden ranskalaisten joukko kenraali '
+                + 'Leclercin johdolla piiritti Kufraa 31. tammikuuta – 1. '
+                + 'maaliskuuta 1941. Voiton jälkeen Leclerc miehineen vannoi, '
+                + 'ettei laskisi aseita ennen kuin Ranskan liput liehuvat '
+                + 'Strasbourgin katedraalilla, ja lupaus täyttyi 23. '
+                + 'marraskuuta 1944. Siksi useassa ranskalaisessa kaupungissa '
+                + 'on yhä Kufran mukaan nimetty katu. Myöhemmin keitaalla oli '
+                + 'brittiläisen Long Range Desert Group -kaukopartion '
+                + 'tukikohta, ja toukokuussa 1942 kolme eteläafrikkalaista '
+                + 'pommikonetta eksyi harjoituslennolla ja teki pakkolaskun '
+                + 'aavikolle: kahdestatoista miehestä vain yksi selvisi. '
+                + 'Tapaus muistuttaa, miksi Kufrasta ei vieläkään lähdetä '
+                + 'aavikolle ilman opasta ja vesivarastoa.',
+              kuva: {
+                tiedosto: 'Serment de Koufra 2 mars 1941.JPG',
+                lyhyt: 'Kufran valan teksti on hakattu Leclercin muistomerkkiin Strasbourgissa.',
+                selite: 'Strasbourgin Place Broglien Leclerc-muistomerkkiin '
+                  + 'kaiverrettu teksti toistaa Kufrassa vannotun valan: '
+                  + 'aseita ei lasketa ennen kuin liput liehuvat Strasbourgin '
+                  + 'katedraalilla. Muistomerkki ajoittaa valan 2. '
+                  + 'maaliskuuta 1941.',
+                lahde: 'Claude Truong-Ngoc, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'senussit',
