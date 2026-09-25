@@ -68,6 +68,10 @@ namespace Matkakirja
         [Tooltip("Rajat vektoriviivoina (Shaders/Rajaviiva), tarkkuus ei riipu tunnuskartasta. null = rajat " +
                  "tunnuskartasta varjostimessa (maatila). Korostetun alueen raja piirtyy edelleen varjostimessa.")]
         public Material rajaMateriaali;
+        [Tooltip("Maakohtainen kerros: OLETUSRAJAT (löydös 113, web: nimiötason poltetut maakuntarajat näkyvät aina). Kun " +
+                 "pelaajalla on maa, kerros tulee itse päälle ilman täyttöä (vain ohuet rajat); täyttö ja korostus vasta " +
+                 "maakunnan valinnasta (Taytto). Natiivi-UI:n Maakunnat \"Pois\" (löydös 114) piilottaa ne (OletusPois).")]
+        public bool oletusrajat;
         [Tooltip("Vektorirajat vasta tästä ruudun tiheydestä (laitepikseliä/aste), web VEKTORIT_RAJAT_PX_ASTE 30 " +
                  "(js/pallovektorit.js:171). Kaukana vakioleveä viiva sulaa läiskäksi (löydös 74 d). 0 = aina.")]
         public float rajatMinTiheys = (float)Vektorisolut.RajatTiheys;
@@ -79,6 +83,14 @@ namespace Matkakirja
         public string NykyinenMaa { get; private set; }
         public bool Paalla { get; private set; }
         public bool Valmis => tunnukset != null;
+        /// <summary>Täyttö näkyvissä (viiden sävyn täyttö ja korostus); false = vain rajat (oletusrajat).</summary>
+        public bool TayttoNakyy { get; private set; } = true;
+        /// <summary>
+        /// Oletusrajojen esto (löydös 114): Natiivi-UI:n "Pois". UI-assembly ei näy Kartalle, joten silta
+        /// (Scripts/Kartta/MaakunnatSilta) antaa lukijan; null = ei estoa. Luetaan tarkistuksen yhteydessä, koska valinta
+        /// muistetaan (PlayerPrefs) ja voi olla voimassa jo ennen kuin UI rakentuu.
+        /// </summary>
+        public Func<bool> OletusPois { get; set; }
 
         MaatAineisto aineisto;
         MaaOsuma osuma;
@@ -346,8 +358,39 @@ namespace Matkakirja
         /// Maakohtainen kerros seuraa pelaajan maata (web asetaMaa(korostusIso)) ja nappulan rypästä (Cayenne → Guyana,
         /// Anchorage → Alaska). Vain näkyvissä: piilossa tai linssin aikana ei rakenneta, vaan palatessa.
         /// </summary>
+        /// <summary>Täyttö päälle (maakunnan valinta) tai pois (oletusrajat: vain rajat).</summary>
+        public void Taytto(bool nakyy)
+        {
+            if (TayttoNakyy == nakyy) return;
+            TayttoNakyy = nakyy;
+            PaivitaPaletti();
+        }
+
+        float seuraavaOletus;
+
+        /// <summary>
+        /// Oletusrajat (löydös 113): kun pelaajalla on maa eikä kerros ole päällä eikä Pois ole valittu, kerros päälle
+        /// ilman täyttöä. Aineisto ladataan vasta tässä (ei käynnistyksessä, jossa pelaajalla ei ole maata). Pois
+        /// (löydös 114) sammuttaa oletuksena päälle tulleen kerroksen.
+        /// </summary>
+        void PaivitaOletus()
+        {
+            if (!maakohtainen || !oletusrajat || Time.unscaledTime < seuraavaOletus) return;
+            seuraavaOletus = Time.unscaledTime + 1f;
+            bool pois = OletusPois != null && OletusPois();
+            if (pois)
+            {
+                if (Paalla && !TayttoNakyy) MaaTila(false);
+                return;
+            }
+            if (Paalla || linssit || string.IsNullOrEmpty(SeurattavaMaa())) return;
+            Taytto(false);
+            MaaTila(true);
+        }
+
         void Update()
         {
+            PaivitaOletus();
             if (!maakohtainen || jako == null || !Paalla || linssit || rakennus != null) return;
             if (Time.unscaledTime < seuraavaTarkistus) return;
             seuraavaTarkistus = Time.unscaledTime + 0.5f;
@@ -518,7 +561,8 @@ namespace Matkakirja
                     // Webin täyttö (Maakuntajako.Taytto): sRGB-väri paletin sRGB-tekstuuriin, alfa jo lineaarisen
                     // sekoituksen vastine (varjostimen _TayttoEksponentti 1).
                     var t = Maakuntajako.Taytto(varit.TryGetValue(p.Key, out int v) ? v : 0, korostettu, lineaarinen);
-                    px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), B(t.A));
+                    // Oletusrajat (löydös 113): ilman valintaa vain rajat, täyttö läpinäkyvä.
+                    px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), TayttoNakyy ? B(t.A) : (byte)0);
                 }
                 else px[p.Value] = C(s.Taytto);
                 // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan.
