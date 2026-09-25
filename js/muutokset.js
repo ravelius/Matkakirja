@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2223, teksti: 'Maakunnat kaikille pelin maille ja merinimet ve… (#3182)' },
   { v: 2222, teksti: 'Sisältöjuna: turistiopas erät 5, 9, 10, työlista' },
   { v: 2221, teksti: 'Sisältöjuna: turistiopas erät 5–8' },
   { v: 2220, teksti: 'Sisältöjuna: galleriat, nimiöt 1.40, turistiopas 3–4' },
