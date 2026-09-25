@@ -954,12 +954,15 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     'Maakuntarajat asteina, sama muoto kuin maarajat: id = "<ISO3>:<tunnus>" (sama avain kuin '
       + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
       + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
-      + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL. '
+      + 'Skeema 1.42: kaikki webin maakuntamaat (js/karttatyokalu-maakunnat.js MAAKUNTIEN_MAAT, jolla on aineisto '
+      + 'ämpärissä); juuren maat [{ iso3, nimi }] = maat, joilla on maakunnat. Maa, jota ei ole listalla, ei näytä '
+      + 'maakuntia (listassa vain maan nimi tai tyhjä). Nimet webin maakunnanNimi-funktiolla. '
       + 'Skeema 1.25: juuren kaaret [[[lon, lat], …]] = rajaviivat, jokainen sisäraja ja maiden välinen raja '
       + 'kerran sekä ulkorajat (rannikko); harvennettu kaarina solmusta solmuun, ja renkaat on rakennettu '
       + 'samoista kaarista, joten täyttö ja viiva osuvat yhteen.',
     {}, maakunnat.alueet);
   kokoelmat.maakuntarajat.kaaret = maakunnat.kaaret ?? [];
+  kokoelmat.maakuntarajat.maat = maakunnat.maat ?? [];
   // Skeema 1.22 (Natiivi-UI:n "Mitä uutta"): käsin kirjoitetut rivit, uusin ensin.
   const muutosloki = lueMuutosloki();
   kokoelmat['muutosloki-natiivi'] = taulukko('tools/vienti/muutosloki-natiivi.json',

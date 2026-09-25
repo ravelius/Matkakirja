@@ -1366,3 +1366,15 @@ test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympä
   const fra = o.maat.FRA.rasteri[9];
   assert.ok(fra.some(([x0, y0, x1, y1]) => x0 <= 259 && 259 <= x1 && y0 <= 176 && 176 <= y1), JSON.stringify(fra));
 });
+
+test('skeema 1.42: maakuntarajat kaikista webin maakuntamaista, juuren maat', async () => {
+  const { MAAKUNTIEN_MAAT, maakunnanNimi } = await import('../js/karttatyokalu-maakunnat.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json'));
+  assert.ok(k.maat.length >= 130, `maita ${k.maat.length}`);
+  const listalla = new Set(MAAKUNTIEN_MAAT.map((m) => m.iso));
+  const omat = new Set(k.alkiot.map((a) => a.iso3));
+  assert.deepEqual(k.maat.map((m) => m.iso3).sort(), [...omat].sort());
+  for (const m of k.maat) assert.ok(listalla.has(m.iso3) && m.nimi, m.iso3);
+  for (const a of k.alkiot) assert.equal(a.nimi, maakunnanNimi(a.iso3, a.id.slice(4)), a.id);
+});
+
