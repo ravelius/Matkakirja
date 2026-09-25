@@ -380,6 +380,7 @@
     height: 24px;
     min-height: 24px;
     margin-left: 6px;
+    color: #211d18;
 }
 
 /* Löydös 73: iPhonella pienennetty lappu vain kaupungin nimen levyinen ("Ateena"). */

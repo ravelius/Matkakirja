@@ -468,6 +468,8 @@ namespace Matkakirja.Natiivi
         void Kirjoitettu()
         {
             NaytaLahteet();
+            // Löydös 87: ilman kertojan luentaa (kertoja pois) merkintä on "luettu", kun teksti on kirjoitettu loppuun.
+            if (!luentaPiilo && !Aanet.KertojaPuhuu && !luettu) { luettu = true; PaivitaLyhyt(true); }
             var k = kirjoitettu;
             kirjoitettu = null;
             try { k?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
