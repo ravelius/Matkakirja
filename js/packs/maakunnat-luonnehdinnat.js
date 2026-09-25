@@ -3475,4 +3475,359 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
     },
   },
+  /*
+   * SRB (Sisältökirjuri 25.9.2026, erä 2C, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SRB:n tunnuksia
+   * TÄSMÄLLEEN (piirit ilman diakriitteja osassa, esim. "Branicevski").
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja matkailusivut, tarkistettu
+   * 25.9.2026):
+   *   Grad Beograd      — Belgrade Fortress (Kalemegdan, Savan ja Tonavan
+   *                       yhtymäkohta)
+   *   Borski            — Lepenski Vir (Boljetin, Majdanpekin kunta;
+   *                       siirretty 1971 ~100 m alavirtaan ja 30 m ylemmäs
+   *                       Rautaportti I:n padon alta)
+   *   Branicevski       — Viminacium (Ylä-Moesian pääkaupunki, legioonaleiri,
+   *                       Kostolac/Požarevac)
+   *   Južno-Backi       — Petrovaradin Fortress (kellon viisarit
+   *                       käänteiset: iso viisari = tunnit, kalastajia varten)
+   *   Jablanicki        — Leskovac (Roštiljijada syyskuun alussa vuodesta 1989)
+   *   Srednje-Banatski  — Carska Bara (17 km Zrenjaninista etelään,
+   *                       240 lintulajia, ~50 000 tundrahanhea talvella)
+   *   Kolubarski        — Valjevo (Tešnjar, vanha kauppakortteli
+   *                       Kolubaran rannalla)
+   *   Zapadno-Backi     — Franz Eisenhut: Battle of Senta (7 × 4 m,
+   *                       Somborin Županija-talo, Serbian suurin öljymaalaus;
+   *                       serbia.com, visitsombor.org)
+   *   Macvanski         — Tršić (Loznica; Vuk Karadžićin syntymäkylä)
+   *   Moravicki         — Guča Trumpet Festival (Lučani, 1961 alkaen,
+   *                       elokuun alussa, 2024 ~150 000 kävijää/päivä)
+   *   Nišavski          — Niš / Mediana (Konstantinus Suuren syntymäkaupunki
+   *                       Naissus, huvila Mediana)
+   *   Severno-Banatski  — Kikinda (sarvipöllöjen talviyöpymät kaupungin
+   *                       puistoissa, ennätys 743 lintua 2009, "Serbian
+   *                       owl capital")
+   *   Pcinjski          — Vranjska Banja (96 °C, Serbian kuumimmat lähteet)
+   *   Pirotski          — Pirot carpet (maantieteellinen alkuperäsuoja 2002,
+   *                       122 ornamenttia, osuuskunta 1902)
+   *   Podunavski        — Smederevo Fortress (Đurađ Branković, 1400-luku)
+   *   Severno-Backi     — Subotica City Hall (jugend), Palić
+   *   Pomoravski        — Manasija (Despotovac, Stefan Lazarević,
+   *                       1407–1418, linnoitusmuurit). HUOM datavirhe:
+   *                       maakunnat-nimet.js antaa nimiFi "Rasina", vaikka
+   *                       tunnus on Pomoravski (Pomoravlje).
+   *   Raški             — Studenica (Kraljevo, perustettu 1190, Unesco 1986)
+   *   Južno-Banatski    — Deliblato Sands ("the largest sandy terrain in
+   *                       Europe", "European Sahara", Kovin)
+   *   Sremski           — Fruška Gora National Park (1960, Serbian vanhin,
+   *                       16 toimivaa luostaria)
+   *   Šumadijski        — Stellantis Kragujevac (Fiat Grande Panda,
+   *                       sähkö/hybridi/bensiini, 2024–)
+   *   Toplicki          — Đavolja Varoš (Kuršumlija, ~200 maapyramidia)
+   *   Zajecarski        — Gamzigrad / Felix Romuliana (Galerius, Unesco 2007)
+   *   Zlatiborski       — Šargan Eight (Mokra Gora, kapearaiteinen museorata)
+   */
+  SRB: {
+    'Grad Beograd': {
+      lyhyt: 'Kalemegdanin linnoituksen muureilta keskellä Belgradia näkee kohdan, jossa Sava laskee Tonavaan.',
+    },
+    Borski: {
+      lyhyt: 'Lepenski Virin kivikautinen kylä siirrettiin 1971 ylemmäs rinteeseen, kun Rautaportin pato alkoi nostaa Tonavan pintaa.',
+    },
+    Branicevski: {
+      lyhyt: 'Požarevacin lähellä kaivetaan esiin Viminaciumia, joka oli Rooman Ylä-Moesian maakunnan pääkaupunki ja legioonan leiri.',
+    },
+    'Južno-Backi': {
+      lyhyt: 'Novi Sadin Petrovaradinin linnoituksen kellossa iso viisari näyttää tunnit, jotta Tonavan kalastajat erottivat ajan kaukaa.',
+    },
+    Jablanicki: {
+      lyhyt: 'Leskovacin pääkatu suljetaan joka syyskuun alussa Roštiljijada-grillijuhlille, joita on pidetty vuodesta 1989.',
+    },
+    'Srednje-Banatski': {
+      lyhyt: 'Zrenjaninin eteläpuolella on Carska baran kosteikko, jossa on tavattu noin 240 lintulajia ja talvella kymmeniä tuhansia hanhia.',
+    },
+    Kolubarski: {
+      lyhyt: 'Valjevon Tešnjar on vanha kauppakortteli Kolubara-joen rannalla, ja sen kivetyillä kujilla istutaan yhä kahviloissa.',
+    },
+    'Zapadno-Backi': {
+      lyhyt: 'Somborin maakuntatalon juhlasalissa riippuu Sentan taistelu, seitsemän metriä leveä öljymaalaus – Serbian suurin.',
+    },
+    Macvanski: {
+      lyhyt: 'Tršićin kylässä syntyi Vuk Karadžić, joka uudisti serbian kirjakielen niin, että sitä kirjoitetaan niin kuin puhutaan.',
+    },
+    Moravicki: {
+      lyhyt: 'Gučan kylässä soi joka elokuu trumpettifestivaali, joka alkoi 1961 neljän orkesterin kisana ja vetää nyt satoja tuhansia kuulijoita.',
+    },
+    'Nišavski': {
+      lyhyt: 'Niš oli roomalaisten Naissus, jossa syntyi keisari Konstantinus Suuri – hänen Mediana-huvilansa rauniot ovat kaupungin laidalla.',
+    },
+    'Severno-Banatski': {
+      lyhyt: 'Kikindan puistojen puihin kerääntyy talveksi satoja sarvipöllöjä, ja kaupunkia kutsutaan Serbian pöllöpääkaupungiksi.',
+    },
+    Pcinjski: {
+      lyhyt: 'Vranjska Banjan lähteistä purkautuu 96-asteista vettä, ja ne ovat Serbian kuumimmat.',
+    },
+    Pirotski: {
+      lyhyt: 'Pirotissa kudotaan yhä kilim-mattoja, ja niiden yli sata perinteistä kuviota on suojattu alkuperämerkinnällä vuodesta 2002.',
+    },
+    Podunavski: {
+      lyhyt: 'Smederevon linnoitus rakennettiin Tonavan rantaan 1400-luvulla despootti Đurađ Brankovićin pääkaupungiksi, ja sen tornit seisovat yhä.',
+    },
+    'Severno-Backi': {
+      lyhyt: 'Subotican kaupungintalo on unkarilaista jugendia, ja läheisen Palićjärven rannalla on saman aikakauden kylpyläpaviljonkeja.',
+    },
+    Pomoravski: {
+      lyhyt: 'Despotovacin Manasijan luostaria ympäröivät linnoitusmuurit ja tornit – despootti Stefan Lazarević rakennutti sen 1400-luvun alussa.',
+    },
+    'Raški': {
+      lyhyt: 'Kraljevon lähellä oleva Studenican luostari perustettiin 1100-luvun lopulla, ja sen marmorikirkko on Unescon maailmanperintöä.',
+    },
+    'Južno-Banatski': {
+      lyhyt: 'Deliblaton hiekka-alue on Euroopan suurin sisämaan hiekkakenttä, ja sen dyynejä kutsutaan Euroopan Saharaksi.',
+    },
+    Sremski: {
+      lyhyt: 'Fruška Gora on Serbian vanhin kansallispuisto, ja sen metsäisillä rinteillä toimii yhä kuusitoista ortodoksista luostaria.',
+    },
+    'Šumadijski': {
+      lyhyt: 'Kragujevacin autotehtaalla kootaan nykyään Fiatin Grande Panda -malleja, myös sähköautoina.',
+    },
+    Toplicki: {
+      lyhyt: 'Kuršumlijan lähellä on Đavolja varoš eli Paholaisen kaupunki: parisataa maapyramidia, joiden huipuilla keikkuu kivilohkareita.',
+    },
+    Zajecarski: {
+      lyhyt: 'Zaječarin lähellä on Felix Romuliana, keisari Galeriuksen palatsi, joka on ollut Unescon maailmanperintöä vuodesta 2007.',
+    },
+    Zlatiborski: {
+      lyhyt: 'Mokra Goran Šarganin kasi on kapearaiteinen museorata, joka nousee vuoren rinnettä kahdeksikon muotoisena silmukkana.',
+    },
+  },
+  /*
+   * BIH (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BIH:n tunnuksia TÄSMÄLLEEN (sekaisin federaation
+   * kantoneita, Republika Srpskan alueita ja Brčkon piiri, englanninkieliset
+   * tunnukset kuten "Central Bosnia"). Tekstit kuvaavat maisemaa ja
+   * kulttuuria, eivät sotaa tai entiteettirajoja. Sarajevon fokusvirran
+   * aiheet (Mostarin silta, olympialaiset/Bjelašnica, Livnon villihevoset,
+   * haggada) on vältetty. Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Banja Luka          — Banja Luka (Vrbas, Kastel)
+   *   Bijeljina           — Stanišići (etnokylä 2003, vanhoja taloja eri
+   *                         puolilta entistä Jugoslaviaa)
+   *   Bosnian Podrinje    — Goražde printing house (1519–1523, ensimmäinen
+   *                         nykyisen BiH:n alueella, kirkkoslaavi)
+   *   Brčko Distrikt      — Brčko District (Sava, oma hallinto)
+   *   Central Bosnia      — Jajce (Plivan putous Vrbakseen, linnoitus)
+   *   Doboj               — Doboj (linnoitus Bosnan laaksossa,
+   *                         rautatieristeys)
+   *   Foča                — Sutjeska National Park (Perućica, Maglić
+   *                         2 386 m, BiH:n korkein)
+   *   Herzegovina-Neretva — Blagaj Tekke / Vrelo Bune (~30 m³/s, yksi
+   *                         Euroopan suurimmista lähteistä, tekke ~1520)
+   *   Posavina            — Posavina Canton (pienin kantoni, 330,85 km²)
+   *   Sarajevo            — Sebilj (Baščaršija, paluulegenda)
+   *   Sarajevo-romanija   — Jahorina (BiH:n suurin laskettelukeskus,
+   *                         Ogorjelica 1 916 m)
+   *   Trebinje            — Trebinje (yli satavuotiaat plataanit torilla,
+   *                         Trebišnjica)
+   *   Tuzla               — Tuzla (Pannonian suolajärvet 2003–2012,
+   *                         nimi = turkin 'suolakaivos')
+   *   Una-Sana            — Štrbački buk (25 m, Unan kansallispuiston
+   *                         korkein putous, Kroatian rajalla)
+   *   Vlasenica           — Birač (region); Drina rajajokena. Neutraali
+   *                         maisemakuvaus tarkoituksella.
+   *   West Bosnia         — Livno cheese (1886, sveitsiläiset juustomestarit,
+   *                         gruyèren menetelmä)
+   *   West Herzegovina    — Kravica (Trebižat, Ljubuški)
+   *   Zenica-Doboj        — Zenica (teräksen tuotanto vuodesta 1892)
+   */
+  BIH: {
+    'Banja Luka': {
+      lyhyt: 'Banja Lukan keskustan halki virtaa Vrbas-joki, jonka rannalla seisoo Kastelin linnoitus ja jonka koskissa lasketaan kumiveneillä.',
+    },
+    Bijeljina: {
+      lyhyt: 'Bijeljinan laitaan on koottu Stanišićin etnokylä, jonne on tuotu vanhoja puutaloja ja myllyjä eri puolilta entistä Jugoslaviaa.',
+    },
+    'Bosnian Podrinje': {
+      lyhyt: 'Goražden lähellä toimi 1519–1523 nykyisen Bosnia ja Hertsegovinan ensimmäinen kirjapaino, jossa painettiin kirkkoslaavinkielisiä kirjoja.',
+    },
+    'Brčko Distrikt': {
+      lyhyt: 'Brčko on Sava-joen satamakaupunki, ja piirillä on oma pormestarinsa, parlamenttinsa ja hallintonsa.',
+    },
+    'Central Bosnia': {
+      lyhyt: 'Jajcen keskustassa Pliva-joki syöksyy vesiputouksena Vrbakseen, ja putouksen yllä kohoaa vanhan linnoituksen muuri.',
+    },
+    Doboj: {
+      lyhyt: 'Dobojn linnoitus valvoo mäeltä Bosna-joen laaksoa, ja kaupunki on maan rautateiden tärkeä risteysasema.',
+    },
+    'Foča': {
+      lyhyt: 'Sutjeskan kansallispuistossa kasvaa Perućican aarniometsä, ja sen reunalla kohoaa Maglić, Bosnia ja Hertsegovinan korkein huippu.',
+    },
+    'Herzegovina-Neretva': {
+      lyhyt: 'Blagajssa Buna-joki pulppuaa kallion alta yhtenä Euroopan suurimmista lähteistä, ja sen partaalla seisoo 1500-luvun dervissitalo.',
+    },
+    Posavina: {
+      lyhyt: 'Posavina on maan pienin kantoni, vain 331 neliökilometriä, ja sen pohjoisrajana virtaa Sava-joki.',
+    },
+    Sarajevo: {
+      lyhyt: 'Sarajevon Baščaršijan puinen Sebilj-kaivo on vanhankaupungin tunnus, ja tarun mukaan siitä juonut palaa kaupunkiin.',
+    },
+    'Sarajevo-romanija': {
+      lyhyt: 'Jahorina on Bosnia ja Hertsegovinan suurin laskettelukeskus, ja sen korkein huippu Ogorjelica nousee 1 916 metriin.',
+    },
+    Trebinje: {
+      lyhyt: 'Trebinjen vanhaa toria varjostavat yli satavuotiaat plataanit, ja kaupungin halki virtaa kirkas Trebišnjica-joki.',
+    },
+    Tuzla: {
+      lyhyt: 'Tuzla seisoo suolakerrosten päällä, ja keskustaan on kaivettu suolavetisiä uimajärviä – nimikin tarkoittaa turkiksi suolakaivosta.',
+    },
+    'Una-Sana': {
+      lyhyt: 'Una-joen Štrbački buk syöksyy 25 metrin korkeudelta Kroatian rajalla, ja se on Unan kansallispuiston korkein vesiputous.',
+    },
+    Vlasenica: {
+      lyhyt: 'Vlasenican seutu on metsäistä ylänköä, joka laskeutuu idässä Drinan laaksoon – joki on raja Serbian kanssa.',
+    },
+    'West Bosnia': {
+      lyhyt: 'Livnon juustoa tehdään yhä gruyèren tapaan, samalla menetelmällä, jonka sveitsiläiset juustomestarit opettivat seudulle 1886.',
+    },
+    'West Herzegovina': {
+      lyhyt: 'Trebižat-joen Kravican vesiputous valuu leveänä kaarena altaaseen, jossa kesäisin uidaan.',
+    },
+    'Zenica-Doboj': {
+      lyhyt: 'Zenicassa on tehty terästä vuodesta 1892, ja terästehtaan piiput näkyvät yhä Bosna-joen laakson yli.',
+    },
+  },
+  /*
+   * MKD (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MKD:n englanninkielisiä tilastoaluetunnuksia
+   * TÄSMÄLLEEN ("Eastern", "Southwestern" ym.). Kokinon observatorio
+   * hylättiin, koska sen tähtitieteellinen tulkinta on kiistanalainen.
+   * Lähteet (en-Wikipedia ja matkailusivut, tarkistettu 25.9.2026):
+   *   Eastern      — Kočani Valley (maan suurin riisinviljelyalue)
+   *   Southeastern — Strumica Carnival (Evliya Çelebi 1670)
+   *   Northeastern — Kratovo (sammuneen tulivuoren kraatteri, kuusi tornia,
+   *                  kivisillat)
+   *   Southwestern — Lake Ohrid (yli miljoona vuotta, ohridintaimen
+   *                  Salmo letnica endeeminen)
+   *   Pelagonia    — Heraclea Lyncestis (Filippos II, 2 km Bitolasta,
+   *                  basilikoiden mosaiikit)
+   *   Polog        — St Nicholas Church, Mavrovo (1850–1857, tekojärvi 1953,
+   *                  nousee esiin kuivuudessa)
+   *   Skopje       — Matka Canyon (nimi = kohtu, Vrelon luola, Saraj)
+   *   Vardar       — Stobi (Vardarin ja Crnan yhtymäkohta, Gradsko)
+   */
+  MKD: {
+    Eastern: {
+      lyhyt: 'Bregalnica-joen varren Kočanin laakso on Pohjois-Makedonian suurin riisinviljelyalue, ja sadonkorjuuta juhlitaan joka syksy.',
+    },
+    Southeastern: {
+      lyhyt: 'Strumican karnevaalista kirjoitti jo turkkilainen matkailija Evliya Çelebi 1670, ja naamiaiskulkue täyttää kadut yhä joka kevättalvi.',
+    },
+    Northeastern: {
+      lyhyt: 'Kratovo on rakennettu sammuneen tulivuoren kraatteriin, ja kaupungissa on yhä kuusi vanhaa kivitornia ja kaarevia kivisiltoja.',
+    },
+    Southwestern: {
+      lyhyt: 'Ohridinjärvi on yli miljoona vuotta vanha, ja sen vedessä elää ohridintaimen, jota ei tavata luonnonvaraisena missään muualla.',
+    },
+    Pelagonia: {
+      lyhyt: 'Bitolan laidalla on Heraclea Lyncestis, Makedonian Filippos II:n perustama kaupunki, jonka basilikoiden lattiamosaiikit ovat säilyneet.',
+    },
+    Polog: {
+      lyhyt: 'Mavrovonjärvestä nousee kuivina kesinä esiin Pyhän Nikolaoksen kirkko, joka jäi veden alle, kun tekojärvi padottiin 1950-luvulla.',
+    },
+    Skopje: {
+      lyhyt: 'Skopjen laidalla on Matkan kanjoni – nimi tarkoittaa kohtua – ja sen tekojärveltä pääsee veneellä Vrelon luolaan.',
+    },
+    Vardar: {
+      lyhyt: 'Gradskon lähellä on Stobi, antiikin kaupunki Vardarin ja Crna-joen yhtymäkohdassa, jonka teatterin ja basilikoiden rauniot näkyvät yhä.',
+    },
+  },
+  /*
+   * ALB (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.ALB:n prefektuuritunnuksia TÄSMÄLLEEN (diakriitein,
+   * esim. "Dibër", "Tiranë"). Lähteet (en-Wikipedia ja matkailusivut,
+   * tarkistettu 25.9.2026):
+   *   Berat       — Berat ("tuhannen ikkunan kaupunki")
+   *   Dibër       — Korab (2 764 m, Albanian ja Pohjois-Makedonian korkein)
+   *   Durrës      — Amphitheatre of Durrës (löydetty 1966, Balkanin
+   *                 niemimaan suurin roomalainen amfiteatteri)
+   *   Elbasan     — Dita e Verës (14.3., ballokume)
+   *   Fier        — Apollonia (Illyria) (Octavianus opiskeli siellä 44 eaa.)
+   *   Gjirokastër — Gjirokastër (liuskekivikatot, Ismail Kadaren syntymäkaupunki)
+   *   Korçë       — Korçë (ensimmäinen albaniankielinen koulu 1887,
+   *                 Birra Korça)
+   *   Kukës       — Kukës (vanha kaupunki Fierzan altaan alle 1976)
+   *   Lezhë       — Skanderbeg Mausoleum (Pyhän Nikolauksen kirkko, 1468)
+   *   Shkodër     — Lake Skadar (Balkanin suurin järvi), Rozafa Castle
+   *                 (legenda muuriin muuratusta äidistä)
+   *   Tiranë      — Bunk'Art 1 (viisikerroksinen bunkkeri, 106 huonetta)
+   *   Vlorë       — Albanian Declaration of Independence (28.11.1912),
+   *                 Independence Monument, Flag Square
+   */
+  ALB: {
+    Berat: {
+      lyhyt: 'Beratia kutsutaan tuhannen ikkunan kaupungiksi, sillä sen valkoiset talot nousevat rinnettä ikkunarivi ikkunarivin yllä.',
+    },
+    'Dibër': {
+      lyhyt: 'Dibërin itärajalla kohoaa 2 764 metrin Korab, joka on sekä Albanian että Pohjois-Makedonian korkein vuori.',
+    },
+    'Durrës': {
+      lyhyt: 'Durrësin keskustasta löydettiin 1966 talojen alta roomalainen amfiteatteri, Balkanin niemimaan suurin.',
+    },
+    Elbasan: {
+      lyhyt: 'Elbasanissa juhlitaan 14. maaliskuuta Kesän päivää, ja silloin kaupungissa leivotaan ballokume-keksejä.',
+    },
+    Fier: {
+      lyhyt: 'Fierin lähellä on muinainen Apollonia, kreikkalaisten perustama kaupunki, jossa nuori Octavianus – tuleva keisari Augustus – opiskeli.',
+    },
+    'Gjirokastër': {
+      lyhyt: 'Gjirokastërin kivitalojen katot on ladottu harmaista liuskekivistä, ja kaupungissa syntyi kirjailija Ismail Kadare.',
+    },
+    'Korçë': {
+      lyhyt: 'Korçëssa avattiin 1887 ensimmäinen albaniankielinen koulu, ja nykyään kaupungin nimi tunnetaan koko maassa Birra Korça -oluesta.',
+    },
+    'Kukës': {
+      lyhyt: 'Kukësin vanha kaupunki jäi 1976 Fierzan tekojärven alle, ja uusi Kukës rakennettiin järven yläpuoliselle tasanteelle.',
+    },
+    'Lezhë': {
+      lyhyt: 'Lezhën Pyhän Nikolauksen kirkon raunioissa on Skanderbegin muistomerkki, sillä kansallissankari haudattiin sinne 1468.',
+    },
+    'Shkodër': {
+      lyhyt: 'Shkodërjärvi on Balkanin suurin järvi, ja sen rannalla kohoaa Rozafan linna, jonka muuriin tarun mukaan muurattiin nuori äiti.',
+    },
+    'Tiranë': {
+      lyhyt: "Tiranan Bunk'Art on museo Enver Hoxhan viisikerroksisessa maanalaisessa bunkkerissa, jossa on 106 huonetta.",
+    },
+    'Vlorë': {
+      lyhyt: 'Vlorëssa julistettiin Albanian itsenäisyys 28. marraskuuta 1912, ja Lipun aukiolla seisoo itsenäisyyden muistomerkki.',
+    },
+  },
+  /*
+   * CYP (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CYP:n piiritunnuksia TÄSMÄLLEEN (viisi piiriä,
+   * Kyreniaa ei datassa). Tekstit kuvaavat luontoa ja kulttuuria, eivät
+   * saaren jakoa; Famagustan teksti on Kap Grecosta. Lähteet
+   * (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Famagusta — Cape Greco (merenrantaluolat, luonnonkaaret, sukellus)
+   *   Larnaca   — Larnaca Salt Lake (flamingot talvella), Hala Sultan Tekke
+   *   Limassol  — Commandaria (vanhin yhä valmistettava nimetty viini,
+   *               Limassolin piirin viinikylät)
+   *   Nicosia   — Kykkos Monastery (Nikosian piiri, Troodos, Luukkaan
+   *               maalaamaksi kerrottu ikoni)
+   *   Paphos    — Petra tou Romiou (Afroditen syntymäpaikka tarussa)
+   */
+  CYP: {
+    Famagusta: {
+      lyhyt: 'Kap Grecon niemellä meri on kovertanut kalkkikiveen luolia ja kallioportteja, ja sen kirkkaassa vedessä sukelletaan.',
+    },
+    Larnaca: {
+      lyhyt: 'Larnakan suolajärvelle saapuu talvisin tuhansia flamingoja, ja sen rannalla seisoo Hala Sultan Tekke -moskeija.',
+    },
+    Limassol: {
+      lyhyt: 'Limassolin vuoristokylissä tehdään makeaa Commandaria-viiniä, jota pidetään maailman vanhimpana yhä valmistettavana nimettynä viininä.',
+    },
+    Nicosia: {
+      lyhyt: 'Troodoksen rinteillä Kykkosin luostari vaalii Neitsyt Marian ikonia, jonka perimätieto sanoo evankelista Luukkaan maalaamaksi.',
+    },
+    Paphos: {
+      lyhyt: 'Paphosin rannikolla Petra tou Romioun kallio on tarun mukaan paikka, jossa Afrodite nousi merenvaahdosta.',
+    },
+  },
 };

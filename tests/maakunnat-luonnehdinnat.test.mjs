@@ -27,6 +27,11 @@ const ODOTETUT_MAARAT = {
   BGR: 28,
   HRV: 20,
   MNE: 21,
+  SRB: 24,
+  BIH: 18,
+  MKD: 8,
+  ALB: 12,
+  CYP: 5,
 };
 
 /*
@@ -37,7 +42,7 @@ const ODOTETUT_MAARAT = {
  * DNK ja SVK lisättiin samana päivänä samalla tavalla (erä 1, vain
  * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {
