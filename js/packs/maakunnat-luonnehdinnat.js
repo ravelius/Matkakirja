@@ -4213,4 +4213,347 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Snæfellsjökull on 1 446-metrinen jäätikön peittämä tulivuori – Jules Vernen romaanissa matka maan keskipisteeseen alkaa sen kraaterista.',
     },
   },
+  /*
+   * TUR (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 3B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.TUR:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti — myös lähdedatan kirjoitusvirheet
+   * "Kinkkale" (= Kırıkkale) ja "Zinguldak" (= Zonguldak) sekä
+   * diakriittiset sekamuodot ("Bartın", "Iğdir", "Çankiri", "K. Maras").
+   * Vain `lyhyt` tässä erässä. Istanbulin teksti välttää fokusvirran ja
+   * fokuskohteiden aiheet (Kapalıçarşı, Dolmabahçe, hippodromi, muurit,
+   * kissat, Yerebatan), ja fokuskohteiden Troija, Efesos, Pamukkale,
+   * Kappadokia, Göbekli Tepe, Ararat, Vanjärvi ja Vanin kissa jätettiin
+   * maakuntateksteistä pois. Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Adana          — Taşköprü (Adana) (moottoriliikenne 2007 asti)
+   *   Adiyaman       — Mount Nemrut (Antiokhos I, päät irrallaan)
+   *   Afyonkarahisar — Afyonkarahisar (maailman suurin lääkeoopiumin
+   *                    tuottaja; linna mustalla kalliolla)
+   *   Agri           — Ishak Pasha Palace (aloitettu 1685, haaremi 1784)
+   *   Aksaray        — Ihlara Valley (15 km, n. 50 kirkkoa)
+   *   Amasya         — Amasya (Pontoksen kuninkaiden kalliohaudat)
+   *   Ankara         — Anıtkabir (valmis 1953, Rauhanpuisto)
+   *   Antalya        — Düden Waterfalls (Ala-Düden 40 m mereen)
+   *   Ardahan        — Lake Çıldır (jäätyy talvella; "lake of shadows")
+   *   Artvin         — Deriner Dam (249 m, Turkin korkein)
+   *   Aydin          — Aydın Province (Turkin suurin viikunantuottaja)
+   *   Balikesir      — Kuşcenneti National Park (1959, 2–3 milj. lintua)
+   *   Bartın         — Bartın (Turkin ainoa laivakulkukelpoinen joki)
+   *   Batman         — Batman, Turkey (Batı Raman, suurin öljykenttä)
+   *   Bayburt        — Bayburt Province (asukasluvultaan pienin, 84 241)
+   *   Bilecik        — Söğüt (Osmanien pääkaupunki 1281–1335)
+   *   Bingöl         — Bingöl ("thousand lakes", ei isoja järviä)
+   *   Bitlis         — Nemrut (volcano) (kaldera, 3 kraatterijärveä,
+   *                    laavavirta padotti Vanjärven)
+   *   Bolu           — Yedigöller National Park (7 maanvyöryjärveä)
+   *   Burdur         — Lake Salda (NASA 2021: lähin vastine Jezerolle)
+   *   Bursa          — Bursa Uludağ Gondola (8,8 km, maailman pisin)
+   *   Çanakkale      — 1915 Çanakkale Bridge (2022, jänne 2 023 m)
+   *   Çankiri        — Çankırı (suolaluola, louhittu antiikista asti)
+   *   Çorum          — Hattusa (Boğazkale, Unesco 1986)
+   *   Denizli        — Denizli (chicken) (kiekaisu 20–25 s, lasiveistos 2013)
+   *   Diyarbakir     — Diyarbakır Fortress (basaltti, Unesco 2015 + Hevsel)
+   *   Düzce          — Düzce (81. maakunta 1999)
+   *   Edirne         — Selimiye Mosque, Edirne (Sinanin mestariteos, 2011)
+   *   Elazig         — Lake Hazar (Tigrisin lähde, uponnut kaupunki)
+   *   Erzincan       — Karanlık Canyon (25 km, 1 000 m, 10–15 m)
+   *   Erzurum        — Cağ kebabı (maantieteellinen merkintä 2010)
+   *   Eskisehir      — Sepiolite (merenvaha, Eskişehirin tasanko)
+   *   Gaziantep      — Zeugma Mosaic Museum (padon alle jäänyt Zeugma)
+   *   Giresun        — Giresun (Kerasous < kerasós "kirsikka", Plinius)
+   *   Gümüshane      — Karaca Cave (Torul, tippukivet)
+   *   Hakkari        — Hakkari Cilo-Sat Mountains National Park
+   *                    (Uludoruk 4 135 m, toiseksi korkein; puisto 2020)
+   *   Hatay          — Titus Tunnel (Vespasianus/Titus, tulvasuoja)
+   *   Iğdir          — Iğdır Province (lämpimin, puuvilla) + Iğdır
+   *                    (puuvilla ja aprikoosit)
+   *   Isparta        — Isparta ("City of Roses", bulgarialaispakolaiset)
+   *   Istanbul       — Marmaray (Bosporin upotettu tunneli, 2013)
+   *   Izmir          — İzmir Clock Tower (1901, Raymond Charles Péré)
+   *   K. Maras       — Dondurma (maraş dondurma, salep ja mastiksi)
+   *   Karabük        — Safranbolu (sahrami, Unesco 1994)
+   *   Karaman        — Karamanoğlu Mehmet Bey (turkin kieli 1277)
+   *   Kars           — Ani ("City of 1,001 Churches", Unesco 2016)
+   *   Kastamonu      — Taşköprü, Kastamonu (valkosipuli, PDO)
+   *   Kayseri        — Erciyes Ski Resort (3 917 m) + Mount Erciyes
+   *   Kilis          — Kilis (Ulu-moskeija 1388, Kilis tava)
+   *   Kinkkale       — Kırıkkale (Tüpraşin jalostamo 1986)
+   *   Kirklareli     — İğneada Floodplain Forests National Park (longoz)
+   *   Kirsehir       — Neşet Ertaş (s. 1938 Kırtıllar, Kırşehir)
+   *   Kocaeli        — Osman Gazi Bridge (Gebze–Yalova, 2016)
+   *   Konya          — Çatalhöyük (Unesco 2012)
+   *   Kütahya        — Kütahya (kaakeli- ja keramiikkakeskus)
+   *   Malatya        — Malatya ("Kayısı Diyarı")
+   *   Manisa         — Manisa + Mesir macunu (maaliskuun juhla, 41 ainesta)
+   *   Mardin         — Mor Hananyo Monastery (patriarkaatti 1166–1932)
+   *   Mersin         — Kızkalesi (linna pienellä saarella)
+   *   Mugla          — İztuzu Beach (Caretta caretta, "Turtle Beach")
+   *   Mus            — Muş Province + Muş (tulppaanit, aamusumu)
+   *   Nevsehir       — Derinkuyu underground city (85 m, 20 000 ihm.)
+   *   Nigde          — Aladağlar National Park (4 huippua yli 3 700 m)
+   *   Ordu           — Ordu Province (hasselpähkinä, 88 % viljelymaasta)
+   *   Osmaniye       — Karatepe (kaksikielinen piirtokirjoitus)
+   *   Rize           — Rize Province + Rize (sateisin, tee 1940-luvulta)
+   *   Sakarya        — Lake Sapanca (16 km, päiväretket)
+   *   Samsun         — Samsun (19.5.1919)
+   *   Sanliurfa      — Balıklıgöl (Nimrod ja Abraham)
+   *   Siirt          — Botan Valley National Park (2019)
+   *   Sinop          — İnceburun (majakka 1863, pohjoisin kärki)
+   *   Sivas          — Kangal Shepherd Dog
+   *   Sirnak         — Mount Judi (Cizre, arkin laskeutumispaikka)
+   *   Tekirdag       — Tekirdağ (Tekirdağ köftesi)
+   *   Tokat          — Zile (Zelan taistelu 47 eaa.)
+   *   Trabzon        — Uzungöl (Çaykara)
+   *   Tunceli        — Munzur Valley National Park (1971, suurin)
+   *   Usak           — Karun Treasure (363 esinettä, palautus 1993)
+   *   Van            — Cathedral of the Holy Cross, Aghtamar (915–921)
+   *   Yalova         — Yalova (Termalin kuumat lähteet)
+   *   Yozgat         — Yozgat Pine Grove National Park (1958, ensimmäinen)
+   *   Zinguldak      — Zonguldak + Zonguldak Province (satama 1849)
+   */
+  TUR: {
+    Adana: {
+      lyhyt: 'Adanan Taşköprü on roomalaisten Seyhan-joelle rakentama kivisilta, ja autot ajoivat sen yli vielä vuoteen 2007 asti.',
+    },
+    Adiyaman: {
+      lyhyt: 'Nemrut Dağın huipulla Kommagenen kuninkaan Antiokhos I:n hautapyhäkön jättipatsaiden kivipäät lepäävät nyt irrallaan maassa.',
+    },
+    Afyonkarahisar: {
+      lyhyt: 'Afyon tarkoittaa turkiksi oopiumia, ja maakunta onkin maailman suurin lääkeoopiumin tuottaja – kaupungin linna kohoaa mustalla kalliolla.',
+    },
+    Agri: {
+      lyhyt: 'Doğubayazıtin rinteellä seisoo İshak Paşan palatsi, jonka rakentaminen alkoi 1685 ja jonka haaremisiipi valmistui vasta 1784.',
+    },
+    Aksaray: {
+      lyhyt: 'Ihlaran laakso on 15 kilometriä pitkä kanjoni, jonka tuffiseinämiin bysanttilaiset munkit kaivoivat noin 50 kirkkoa.',
+    },
+    Amasya: {
+      lyhyt: 'Amasyassa Pontoksen kuninkaiden hautakammiot on hakattu kallioon Yeşilırmak-joen varren vanhojen puutalojen yläpuolelle.',
+    },
+    Ankara: {
+      lyhyt: 'Atatürkin mausoleumi Anıtkabir valmistui Ankaraan 1953, ja sen ympärille on istutettu Rauhanpuistoksi kutsuttu metsikkö.',
+    },
+    Antalya: {
+      lyhyt: 'Antalyan laidalla Düden-joki syöksyy 40 metriä jyrkänteeltä suoraan Välimereen.',
+    },
+    Ardahan: {
+      lyhyt: 'Çıldırjärvi jäätyy talvisin umpeen, ja georgiaksi sen nimi tarkoittaa varjojen järveä.',
+    },
+    Artvin: {
+      lyhyt: 'Çoruh-joen Deriner-pato on 249 metriä korkea kaksoiskaarinen holvipato ja Turkin korkein pato.',
+    },
+    Aydin: {
+      lyhyt: 'Aydın on Turkin suurin viikunantuottaja, ja kuivattuja Aydın-viikunoita viedään kaikkialle maailmaan.',
+    },
+    Balikesir: {
+      lyhyt: 'Manyasjärven Kuşcenneti eli Lintuparatiisi on ollut kansallispuisto vuodesta 1959, ja siellä käy vuosittain 2–3 miljoonaa lintua.',
+    },
+    'Bartın': {
+      lyhyt: 'Bartınjoki on Turkin ainoa laivoilla kulkukelpoinen joki, ja sitä pitkin pääsee kaupungista Mustallemerelle.',
+    },
+    Batman: {
+      lyhyt: 'Batmanin laitamilla on Turkin suurin öljykenttä Batı Raman, ja öljylöydöt kasvattivat seudusta kaupungin 1940-luvulta alkaen.',
+    },
+    Bayburt: {
+      lyhyt: 'Bayburt on asukasluvultaan Turkin pienin maakunta: koko maakunnassa asuu vain noin 84 000 ihmistä.',
+    },
+    Bilecik: {
+      lyhyt: 'Pikkukaupunki Söğüt oli Osmanien valtakunnan syntysija ja sen ensimmäinen pääkaupunki vuosina 1281–1335.',
+    },
+    'Bingöl': {
+      lyhyt: 'Bingöl tarkoittaa turkiksi tuhatta järveä, mutta maakunnan rajojen sisällä ei ole yhtään mainittavan kokoista järveä.',
+    },
+    Bitlis: {
+      lyhyt: 'Tatvanin yllä uinuvan Nemrut-tulivuoren kalderassa on kolme kraatterijärveä, ja sen muinainen laavavirta padotti Vanjärven.',
+    },
+    Bolu: {
+      lyhyt: 'Bolun Yedigöllerin kansallispuistossa on seitsemän maanvyörymien muodostamaa järveä keskellä rehevää metsää.',
+    },
+    Burdur: {
+      lyhyt: 'NASAn mukaan Saldajärven mineraalit muistuttavat maapallolla eniten Marsin Jezero-kraatteria, jonne Perseverance-mönkijä laskeutui.',
+    },
+    Bursa: {
+      lyhyt: 'Bursasta Uludağille nouseva 8,8 kilometrin gondolirata on maailman pisin, ja sen yläasema on vuoren hotellialueella.',
+    },
+    'Çanakkale': {
+      lyhyt: 'Dardanellien yli kulkeva 1915 Çanakkale -silta avattiin 2022, ja sen 2 023 metrin pääjänne on maailman riippusilloista pisin.',
+    },
+    'Çankiri': {
+      lyhyt: 'Çankırın suolaluola on yksi Turkin suurimmista vuorisuolaesiintymistä, ja suolaa on louhittu sieltä antiikin ajoista asti.',
+    },
+    'Çorum': {
+      lyhyt: 'Boğazkalen lähellä ovat heettiläisten pääkaupungin Hattusan rauniot, jotka ovat olleet Unescon maailmanperintöä vuodesta 1986.',
+    },
+    Denizli: {
+      lyhyt: 'Denizlin kukko voi kiekua 20–25 sekuntia yhteen menoon, ja kaupungin aukiolla seisoo jättimäinen kukko, Turkin suurin lasiveistos.',
+    },
+    Diyarbakir: {
+      lyhyt: 'Diyarbakırin mustat basalttimuurit ja Hevselin puutarhat merkittiin yhdessä Unescon maailmanperintöluetteloon 2015.',
+    },
+    'Düzce': {
+      lyhyt: 'Düzcestä tehtiin vuoden 1999 maanjäristysten jälkeen Turkin 81. maakunta, jotta tuhoutunut seutu saataisiin rakennettua nopeasti uudelleen.',
+    },
+    Edirne: {
+      lyhyt: 'Mimar Sinan piti Edirnen Selimiye-moskeijaa mestariteoksenaan, ja se on ollut Unescon maailmanperintöä vuodesta 2011.',
+    },
+    Elazig: {
+      lyhyt: 'Hazarjärvi Elazığin kaakkoispuolella on Tigrisin lähde, ja sen pohjasta on löydetty jälkiä veden alle jääneestä kaupungista.',
+    },
+    Erzincan: {
+      lyhyt: 'Karanlık eli Pimeä kanjoni on 25 kilometriä pitkä ja kilometrin syvä, mutta pohjaltaan vain 10–15 metriä leveä.',
+    },
+    Erzurum: {
+      lyhyt: 'Erzurumin cağ kebabı paistetaan vaakasuoraan pinotulla, pyörivällä vartaalla, ja sillä on suojattu maantieteellinen merkintä vuodesta 2010.',
+    },
+    Eskisehir: {
+      lyhyt: 'Eskişehirin tasangolta louhitaan merenvahaa eli sepioliittia, josta veistetään kuuluisia merenvahapiippuja.',
+    },
+    Gaziantep: {
+      lyhyt: 'Gaziantepin Zeugma-museoon on siirretty mosaiikit roomalaiskaupungista, joka jäi osittain Eufratin padon altaan alle.',
+    },
+    Giresun: {
+      lyhyt: 'Giresunin nimi juontuu kirsikkaa tarkoittavasta kreikan sanasta, ja Pliniuksen mukaan kirsikka vietiin Eurooppaan juuri täältä.',
+    },
+    'Gümüshane': {
+      lyhyt: 'Torulin lähellä oleva Karacan luola on täynnä tippukiviä, ja sen muodostelmat ovat monen muotoisia ja värisiä.',
+    },
+    Hakkari: {
+      lyhyt: 'Hakkarin Cilo-vuorilla kohoaa Uludoruk, 4 135 metriä, Turkin toiseksi korkein huippu – vuoristo on ollut kansallispuisto vuodesta 2020.',
+    },
+    Hatay: {
+      lyhyt: 'Samandağin lähellä kulkee Titus-tunneli, roomalaisten käsin kallioon louhima vesikanava, joka suojasi Antiokian satamaa tulvilta.',
+    },
+    'Iğdir': {
+      lyhyt: 'Iğdır on Itä-Turkin lämpimin kolkka: Araratin juurella tasangolla kasvaa puuvillaa ja aprikooseja.',
+    },
+    Isparta: {
+      lyhyt: 'Isparta tunnetaan ruusujen kaupunkina, ja sen ruusuvesitaidon toivat mukanaan Bulgariasta tulleet pakolaiset.',
+    },
+    Istanbul: {
+      lyhyt: 'Marmaray-junat sukeltavat Bosporinsalmen alle upotettuun tunneliin, ja vuodesta 2013 raiteet ovat yhdistäneet Euroopan ja Aasian.',
+    },
+    Izmir: {
+      lyhyt: 'İzmirin Konakin aukion kellotorni valmistui 1901, ja sen suunnitteli levantiniranskalainen arkkitehti Raymond Charles Péré.',
+    },
+    'K. Maras': {
+      lyhyt: 'Maraşin jäätelö saa sitkeytensä orkidean mukuloista jauhetusta salepista ja mastiksista, ja se kestää sulamista tavallista paremmin.',
+    },
+    'Karabük': {
+      lyhyt: 'Safranbolu on saanut nimensä sahramista, ja sen osmanitalot ovat olleet Unescon maailmanperintöä vuodesta 1994.',
+    },
+    Karaman: {
+      lyhyt: 'Karamanin ruhtinas Mehmet Bey määräsi 1277, että virastoissa käytetään turkkia persian ja arabian sijaan.',
+    },
+    Kars: {
+      lyhyt: 'Anin rauniokaupunki Armenian rajalla tunnettiin 1001 kirkon kaupunkina, ja se on ollut Unescon maailmanperintöä vuodesta 2016.',
+    },
+    Kastamonu: {
+      lyhyt: 'Kastamonun Taşköprü on valkosipulin pitäjä: Taşköprün valkosipulilla on suojattu alkuperänimitys.',
+    },
+    Kayseri: {
+      lyhyt: 'Kayserin yllä kohoaa 3 917-metrinen Erciyes, uinuva tulivuori, jonka pohjois- ja itärinteillä on hiihtokeskus.',
+    },
+    Kilis: {
+      lyhyt: 'Kilisin keskustan vanhin rakennus on mamelukkiajan Ulu-moskeija vuodelta 1388, ja kaupungin tunnetuin ruoka on Kilis tava -kebab.',
+    },
+    Kinkkale: {
+      lyhyt: 'Kırıkkale on Ankaran itäpuolinen teollisuuskaupunki, jonka laidalla on toiminut Tüpraşin öljynjalostamo vuodesta 1986.',
+    },
+    Kirklareli: {
+      lyhyt: 'İğneadan kansallispuistossa Bulgarian rajalla kasvaa harvinaista longoz-tulvametsää, jota Strandžan vuorilta laskevat purot tulvivat.',
+    },
+    Kirsehir: {
+      lyhyt: 'Bağlaman mestari Neşet Ertaş syntyi 1938 Kırtıllarin kylässä Kırşehirissä.',
+    },
+    Kocaeli: {
+      lyhyt: 'Osman Gazi -silta ylittää İzmitinlahden kapeimmalta kohdalta Gebzestä, ja avattaessa 2016 se oli Turkin pisin riippusilta.',
+    },
+    Konya: {
+      lyhyt: 'Konyan tasangolla on Çatalhöyük, yksi varhaisimmista kivikauden kaupungeista, ja se on ollut Unescon maailmanperintöä vuodesta 2012.',
+    },
+    'Kütahya': {
+      lyhyt: 'Kütahya on vuosisatoja ollut kaakelien ja keramiikan kaupunki, jonka laattoja päätyi moskeijoihin ja kirkkoihin kaikkialla Lähi-idässä.',
+    },
+    Malatya: {
+      lyhyt: 'Malatyaa kutsutaan aprikoosien maaksi, sillä huomattava osa Turkin kuivatuista aprikooseista kasvaa täällä.',
+    },
+    Manisa: {
+      lyhyt: 'Manisa juhlii joka maaliskuu mesir-tahnaa, mausteista makeista, jonka alkuperäisresepti sisältää 41 ainesosaa.',
+    },
+    Mardin: {
+      lyhyt: 'Mardinin lähellä oleva Deyrulzafaranin luostari oli syyrialaisortodoksisen patriarkan istuin vuodesta 1166 vuoteen 1932.',
+    },
+    Mersin: {
+      lyhyt: 'Kızkalesin eli Neitsytlinnan linnoitus seisoo pienellä saarella aivan kylän rannan edustalla.',
+    },
+    Mugla: {
+      lyhyt: 'Dalyanin İztuzun hiekkaranta on yksi Välimeren tärkeimmistä merikilpikonnien pesimärannoista, ja siksi sitä kutsutaan kilpikonnarannaksi.',
+    },
+    Mus: {
+      lyhyt: 'Muşin tasangolla kukkivat keväisin villit tulppaanit, ja aamuisin tasankoa peittää usein sumu.',
+    },
+    Nevsehir: {
+      lyhyt: 'Derinkuyun maanalainen kaupunki ulottuu noin 85 metrin syvyyteen, ja sinne mahtui arviolta 20 000 ihmistä karjoineen.',
+    },
+    Nigde: {
+      lyhyt: 'Niğden Aladağlarin vuoristossa on neljä yli 3 700 metrin huippua, ja sinne tulevat vuorikiipeilijät ja vaeltajat.',
+    },
+    Ordu: {
+      lyhyt: 'Ordu on Turkin suurin hasselpähkinämaakunta, ja pähkinäpensaat peittävät lähes 90 prosenttia sen viljelymaasta.',
+    },
+    Osmaniye: {
+      lyhyt: 'Karatepen ulkoilmamuseossa on 700-luvulta eaa. peräisin oleva kivikirjoitus kahdella kielellä, foinikiaksi ja luvian hieroglyfeillä.',
+    },
+    Rize: {
+      lyhyt: 'Rize on Turkin sateisin kolkka ja maan teen sydän – teepensaat istutettiin rinteille vasta 1940-luvulla.',
+    },
+    Sakarya: {
+      lyhyt: 'Sapancajärvi on 16 kilometriä pitkä makean veden järvi, jonne tullaan päiväretkille ja viikonlopun lomille.',
+    },
+    Samsun: {
+      lyhyt: 'Samsunissa Mustafa Kemal aloitti kansallisen vastarinnan 19.5.1919, ja päivää juhlitaan yhä Turkin nuorison ja urheilun päivänä.',
+    },
+    Sanliurfa: {
+      lyhyt: 'Şanlıurfan Balıklıgöl on pyhä kala-allas, jonne perimätiedon mukaan Nimrod heitti Abrahamin tuleen.',
+    },
+    Siirt: {
+      lyhyt: 'Siirtin Botanin laakso julistettiin kansallispuistoksi 2019, ja sen jyrkät maisemat sopivat koskenlaskuun ja varjoliitoon.',
+    },
+    Sinop: {
+      lyhyt: 'İnceburunin majakka rakennettiin 1863 kallioille Anatolian pohjoisimpaan kärkeen noin 25 kilometriä Sinopista luoteeseen.',
+    },
+    Sivas: {
+      lyhyt: 'Sivasin Kangalista on nimensä saanut kangal, suuri paimenkoira, joka vartioi lammaslaumoja susilta.',
+    },
+    Sirnak: {
+      lyhyt: 'Cizren koillispuolella kohoaa Cudi-vuori, jolle vanhan kristillisen ja islamilaisen perinteen mukaan Nooan arkki laskeutui.',
+    },
+    Tekirdag: {
+      lyhyt: 'Tekirdağin kuuluisin herkku ovat pienet, mausteiset Tekirdağ köftesi -grillipyörykät.',
+    },
+    Tokat: {
+      lyhyt: 'Tokatin Zilessä Caesar voitti taistelun 47 eaa. ja kuittasi voittonsa sanoilla veni, vidi, vici.',
+    },
+    Trabzon: {
+      lyhyt: 'Uzungöl eli Pitkä järvi on vuorilaakson järvi ja kylä Trabzonin eteläpuolella, ja siitä on tullut suosittu matkakohde.',
+    },
+    Tunceli: {
+      lyhyt: 'Munzurin laakson kansallispuisto on Turkin suurin ja lajistoltaan monimuotoisin kansallispuisto, perustettu 1971.',
+    },
+    Usak: {
+      lyhyt: 'Uşakin arkeologisessa museossa on Karunin aarre, 363 lyydialaista esinettä, jotka New Yorkin Metropolitan palautti Turkille 1993.',
+    },
+    Van: {
+      lyhyt: 'Vanjärven Akdamarin saarella seisoo 915–921 punaisesta tuffikivestä rakennettu Pyhän Ristin kirkko, nykyään museo.',
+    },
+    Yalova: {
+      lyhyt: 'Yalovan Termalin kuumat lähteet ovat istanbulilaisten suosima kesäpaikka, ja nimi tulee kreikan lämmintä tarkoittavasta sanasta.',
+    },
+    Yozgat: {
+      lyhyt: 'Yozgatin mäntymetsä perustettiin 1958 Turkin ensimmäiseksi kansallispuistoksi.',
+    },
+    Zinguldak: {
+      lyhyt: 'Zonguldak perustettiin 1849 satamakaupungiksi Ereğlin hiilikaivoksia varten, ja kivihiili on siitä asti ollut sen elinkeino.',
+    },
+  },
 };
