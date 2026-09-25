@@ -28,3 +28,13 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
 - Taso Muu odottaa aloitusnäkymän laattoja (Laattapalvelin.Kiireinen): testikomennon tulos voi viipyä; odota lokiriviä.
 - `ui rauha erot` ei näe pelkkää MarkDirtyRepaintia; `ui rauha laskurit` kertoo kerroksen.
 - Vertaa epäilyttävää lepokuvaa aina käännökseen ilman lepoa ennen kuin nimeät syyn (yläpalkin puuttuminen oli pelin tila).
+
+## 4. Lisäys klo 23.1x: KEHYKSEN HINTA LEVOSSA, CPU (Fable 22.4x)
+- Mittari `pelikoodari/cpu-mittari` (CpuMittari.cs; `cpu profiler | lista | mittaa [s] [-|suodatin|kaikki] [piirto]`;
+  Development-simulaattorikäännös `MATKAKIRJA_KEHITYS=1 proto-kaanna.sh …`) ja korjaus `pelikoodari/kehys-cpu`
+  (KaupunkiMerkit + Nimikerros eivät ladota piirtämättömässä kehyksessä) → merge-pyynnöt Natiivisepälle.
+- Raportti web-PR #3250 `docs/raportit/kehyksen-hinta-20260925.md` osio CPU: pääsäie levossa 2,8 / 4,0 ms (PAIKALLAAN / LEPO,
+  iPad11-simulaattori); CPU ei ole 16 ms:n este. Mittausskripti: lokit/kehyksen-hinta/ (ajo: lokit/kehyksen-hinta/cpu.sh; PROFILER=1 ODOTUS=60 KESTO=15 cpu.sh <app> <UDID> <kansio>).
+- AVOINNA: Natiivisepän vastaus Cesium3DTileset.Updaten ohittamisesta levossa (0,5 ms); laitemittaus cpu-komennolla
+  Development-laitekäännöksessä; laitemittauksen tuki (vartija + osuma-% laitteella) Fablen listalla toisena.
+- Linssiseppä teki kohdan 6 osittain (linssiseppa/esilataus adca3817); radio, topografia ±1 ja mastot/yövalot jäivät hänen seuraajalleen.
