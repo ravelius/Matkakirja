@@ -162,6 +162,9 @@ namespace Matkakirja.Natiivi
             sisallys.Add(sv);
             sisallysLista = sv.contentContainer;
             sisallysLista.AddToClassList("mk-lehti__sisallyslista");
+            // Pystyn ScrollViewin sisältösäiliön oma tyyli (column, nowrap) voitti USS:n: rivit jäivät iPadilla allekkain.
+            sisallysLista.style.flexDirection = FlexDirection.Row;
+            sisallysLista.style.flexWrap = Wrap.Wrap;
             sisallysLista.RegisterCallback<GeometryChangedEvent>(e =>
             {
                 // Kaksi palstaa vain leveällä (web @media max-width 560px → yksi palsta).
