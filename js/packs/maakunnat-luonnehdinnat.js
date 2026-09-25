@@ -3441,4 +3441,176 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Norjan pisin joki Glomma laskee mereen Fredrikstadissa, jonka itärannalla on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki.',
     },
   },
+  /*
+   * IRL (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.IRL:n tunnuksia
+   * (26 kreivikuntaa, Dublinin neljä hallintoaluetta erikseen sekä
+   * North ja South Tipperary erikseen = 30). Vain `lyhyt` tässä
+   * erässä, kuten GRC:llä. Dublin (kaupunki) välttää pelin olemassa
+   * olevien Dublin-nostojen aiheet (Kellsin kirja, Guinness, eläintarha
+   * ja Phoenix Park, Ha'penny Bridge, Dublinin linna, Croke Park,
+   * Spire, Joyce).
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Carlow                 — Brownshill dolmen (4000–3000 eaa., kattokivi
+   *                            n. 150 t, "reputed to be the heaviest in Europe")
+   *   Cavan                  — Shannon Pot (Cuilcagh, 16 m leveä, Shannonin
+   *                            perinteinen lähde)
+   *   Clare                  — The Burren (arktis-alpiiniset ja Välimeren
+   *                            kasvit rinnakkain, yli 70 % kukkalajeista)
+   *   Cork                   — Cobh (Queenstown 1849–1920, Titanicin viimeinen
+   *                            satama 11.4.1912)
+   *   Donegal                — Slieve League (601 m, Euroopan korkeimpia
+   *                            merijyrkänteitä)
+   *   Dublin                 — Bull Island (syntyi Bull Wallin 1820–1825
+   *                            jälkeen, Dublin City Council)
+   *   Dún Laoghaire–Rathdown — Forty Foot (Sandycove, uitu ympäri vuoden
+   *                            n. 250 v, ennen vain miehille) + Sandycove
+   *                            (Dún Laoghairen ja Dalkeyn välissä)
+   *   Fingal                 — Lambay Island (punakaulavallabit 1950-luvulta,
+   *                            lisää Dublin Zoosta 1980-luvulla, n. 100 v. 2017)
+   *                            + Portrane (Fingal)
+   *   Galway                 — Kylemore Abbey (benediktiiniluostari 1920,
+   *                            nunnat pakenivat Belgiasta 1. maailmansodassa)
+   *   Kerry                  — Killarney National Park (1. kansallispuisto
+   *                            1932, mantereen ainoa saksanhirvilauma)
+   *   Kildare                — The Curragh (kaikki viisi klassikkolaukkaa,
+   *                            Pyhän Brigidin viittalegenda)
+   *   Kilkenny               — Kilkenny GAA (36 All-Ireland-hurlingmestaruutta,
+   *                            ennätys)
+   *   Laoighis               — Electric Picnic (Stradbally Hall vuodesta 2004,
+   *                            "Ireland's version of Glastonbury")
+   *   Leitrim                — County Leitrim (lyhyin rantaviiva, Tullaghan
+   *                            4,7 km)
+   *   Limerick               — Foynes (Irish coffee 1943, Joe Sheridan,
+   *                            lentovenemuseo) + Irish coffee
+   *   Longford               — Corlea Trackway (tammilankut kaadettu
+   *                            148–147 eaa., Karthagon piirityksen aikaan)
+   *   Louth                  — County Louth (pienin kreivikunta) + Oliver
+   *                            Plunkett (pää Droghedan St Peter's Churchissa
+   *                            29.6.1921 alkaen)
+   *   Mayo                   — Achill Island (suurin saari, kääntösilta) +
+   *                            Croaghaun (Irlannin korkeimmat merijyrkänteet)
+   *   Meath                  — Trim Castle (suurin normannilinna, Braveheartin
+   *                            York)
+   *   Monaghan               — Castle Leslie (Glaslough, McCartneyn häät
+   *                            2002, 300 vierasta)
+   *   Offaly                 — Leviathan of Parsonstown (maailman suurin
+   *                            1845–1917) + Birr Castle (Offaly, entisöity
+   *                            1990-luvun lopulla)
+   *   Roscommon              — Rathcroghan (Oweynagat, "Cave of the Cats",
+   *                            portti Toiseen maailmaan, Samhain)
+   *   Sligo                  — Drumcliff (Yeats haudattu 1948, Ben Bulben)
+   *   South Dublin           — Montpelier Hill (Hell Fire Club -maja n. 1725,
+   *                            South Dublin County Councilin hanke)
+   *   North Tipperary        — Devil's Bit (paholaisen purema, Cashelin
+   *                            kallio) + North Tipperary (Devil's Bit,
+   *                            Templemore)
+   *   South Tipperary        — Clonmel (Bulmers eli Magners, tehdas 2 km
+   *                            kaupungista itään) + South Tipperary
+   *                            (Clonmel pääkaupunki)
+   *   Waterford              — Blaa (EU:n PGI 19.11.2013, neliskanttinen,
+   *                            jauhotettu) + Waterford (Irlannin vanhin
+   *                            kaupunki)
+   *   Westmeath              — Hill of Uisneach (lähellä maantieteellistä
+   *                            keskipistettä, pyhä keskus, Bealtaine)
+   *   Wexford                — Hook Lighthouse (yli 800 v, 2. vanhin toimiva
+   *                            Herkuleen tornin jälkeen)
+   *   Wicklow                — Powerscourt Waterfall (121 m, 2. korkein) +
+   *                            Powerscourt Estate (peurapuisto 1858,
+   *                            japaninpeura Irlantiin)
+   */
+  IRL: {
+    Carlow: {
+      lyhyt: 'Brownshillin dolmen Carlow’n laidalla on yli 5 000 vuotta vanha hauta, jonka noin 150-tonnista kattokiveä pidetään Euroopan painavimpana.',
+    },
+    Cavan: {
+      lyhyt: 'Cuilcaghvuoren juurella on Shannon Pot, 16 metrin levyinen lähdelampi, josta Shannon-joen katsotaan perinteisesti saavan alkunsa.',
+    },
+    Clare: {
+      lyhyt: 'Burrenin kalkkikivikarstilla kasvavat arktiset tunturikasvit ja Välimeren kasvit rinnakkain – siellä on yli 70 % Irlannin kukkalajeista.',
+    },
+    Cork: {
+      lyhyt: 'Cobhin satamasta, jonka nimi oli silloin Queenstown, Titanic lähti 11. huhtikuuta 1912 viimeiseltä pysähdykseltään kohti Atlanttia.',
+    },
+    Donegal: {
+      lyhyt: 'Slieve Leaguen merijyrkänteet kohoavat 601 metriin suoraan Atlantista, ja ne kuuluvat Euroopan korkeimpiin.',
+    },
+    Dublin: {
+      lyhyt: 'Dublininlahden Bull Island syntyi vahingossa: hiekka alkoi kasautua saareksi, kun satamaan rakennettiin Bull Wall -aallonmurtaja 1820–1825.',
+    },
+    'Dún Laoghaire–Rathdown': {
+      lyhyt: 'Sandycoven Forty Footilla on uitu Irlanninmeressä ympäri vuoden jo noin 250 vuotta – ennen vain miehet, nykyään kaikki.',
+    },
+    Fingal: {
+      lyhyt: 'Fingalin rannikon edustalla Lambayn yksityissaarella hyppii noin sata punakaulavallabia, jotka tuotiin sinne 1950- ja 1980-luvuilla.',
+    },
+    Galway: {
+      lyhyt: 'Connemaran Kylemoren linna on ollut vuodesta 1920 luostari, jonka perustivat ensimmäisen maailmansodan aikana Belgiasta paenneet nunnat.',
+    },
+    Kerry: {
+      lyhyt: 'Killarneyn kansallispuisto oli Irlannin ensimmäinen, ja sen tammimetsissä elää mantereen ainoa saksanhirvilauma.',
+    },
+    Kildare: {
+      lyhyt: 'Curraghin tasangolla ajetaan kaikki viisi Irlannin klassikkolaukkaa – tarun mukaan Pyhä Brigid sai maan peittämällä sen viitallaan.',
+    },
+    Kilkenny: {
+      lyhyt: 'Kilkenny on hurlingin mahtikreivikunta: se on voittanut lajin All-Ireland-mestaruuden 36 kertaa, enemmän kuin kukaan muu.',
+    },
+    Laoighis: {
+      lyhyt: 'Stradbally Hallin kartanon mailla järjestetään joka vuosi Electric Picnic -festivaali, jota on kutsuttu Irlannin Glastonburyksi.',
+    },
+    Leitrim: {
+      lyhyt: 'Leitrim ulottuu mereen vain Tullaghanin kohdalla, ja sen 4,7 kilometrin rantaviiva on Irlannin kreivikunnista lyhyin.',
+    },
+    Limerick: {
+      lyhyt: 'Foynesin lentovenesatamassa kokki Joe Sheridan lorautti 1943 viskiä kohmeisten matkustajien kahviin – näin syntyi Irish coffee.',
+    },
+    Longford: {
+      lyhyt: 'Corlean suolta kaivettiin esiin rautakautinen tammilankkutie, jonka puut kaadettiin 148–147 eaa. – samaan aikaan kun Karthagoa piiritettiin.',
+    },
+    Louth: {
+      lyhyt: 'Louth on Irlannin pienin kreivikunta, ja Droghedan Pyhän Pietarin kirkossa on vuodesta 1921 säilytetty pyhimys Oliver Plunkettin päätä.',
+    },
+    Mayo: {
+      lyhyt: 'Achill on Irlannin suurin saari, ja sen Croaghaunin merijyrkänteet ovat maan korkeimmat – mantereelle pääsee kääntösiltaa pitkin.',
+    },
+    Meath: {
+      lyhyt: 'Trimin linna on Irlannin suurin normannilinna, ja elokuvassa Braveheart se esitti muurien ympäröimää Yorkia.',
+    },
+    Monaghan: {
+      lyhyt: 'Glasloughin Castle Leslien kartanon kirkossa Paul McCartney vihittiin 2002, ja linnan hääjuhlassa oli 300 vierasta.',
+    },
+    Offaly: {
+      lyhyt: 'Birrin linnan puistossa seisoo Leviathan-kaukoputki, joka oli maailman suurin 1845–1917 ja entisöitiin 1990-luvun lopulla.',
+    },
+    Roscommon: {
+      lyhyt: 'Rathcroghanin kapea Oweynagat eli Kissojen luola oli tarujen mukaan portti tuonpuoleiseen, ja siihen liitetään Samhain-juhla.',
+    },
+    Sligo: {
+      lyhyt: 'Runoilija W. B. Yeats lepää Drumcliffin kirkkomaalla Benbulbenvuoren juurella – hänen jäännöksensä tuotiin Ranskasta 1948.',
+    },
+    'South Dublin': {
+      lyhyt: 'Montpelier Hillin laella on 1725 rakennetun metsästysmajan raunio, jossa Hellfire Clubin herrojen kerrotaan juhlineen ja jonka sanotaan kummittelevan.',
+    },
+    'North Tipperary': {
+      lyhyt: 'Devil’s Bit -vuoren harjanteessa on lovi: tarun mukaan paholainen puraisi siitä palan, katkaisi hampaansa ja sylki palasta Cashelin kallion.',
+    },
+    'South Tipperary': {
+      lyhyt: 'Clonmelissa perustettua Bulmers-siideriä, muualla Magnersia, valmistetaan yhä kaupungin laidalla omenatarhojen keskellä.',
+    },
+    Waterford: {
+      lyhyt: 'Waterford on Irlannin vanhin kaupunki, ja aamiaiseksi siellä syödään jauhoisia, neliskanttisia blaa-sämpylöitä, joilla on EU:n suoja.',
+    },
+    Westmeath: {
+      lyhyt: 'Uisneachin kukkula lähellä Irlannin maantieteellistä keskipistettä oli taruissa saaren pyhä keskus, jossa druidit viettivät Bealtainea.',
+    },
+    Wexford: {
+      lyhyt: 'Hook Headin majakka on toiminut yli 800 vuotta, ja maailmassa vain Espanjan Herkuleen torni on sitä vanhempi toimiva majakka.',
+    },
+    Wicklow: {
+      lyhyt: 'Powerscourtin vesiputous putoaa 121 metriä, ja sen ympärille 1858 perustettuun peurapuistoon tuotiin Irlannin ensimmäiset japaninpeurat.',
+    },
+  },
 };
