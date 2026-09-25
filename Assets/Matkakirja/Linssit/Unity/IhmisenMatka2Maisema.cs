@@ -85,7 +85,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Jakson maisema (tunnus tai null = hiljaisuus). Sama tyyppi jatkuu katkeamatta.</summary>
         public void Aseta(string tunnus)
         {
-            if (lopetus) return;
+            // Jakso = esitys käynnissä. Lopetus (esityksen loppu tai muistista avattu tutkimusvaihe, joka kutsuu Loppua)
+            // ei saa vaientaa uutta esitystä: "Aloita alusta" soittaa maisemat uudelleen (simulaattori 25.9.: maisema
+            // ei soinut lainkaan, koska linssi avautui tutkimusvaiheeseen ennen "esitys alusta" -komentoa).
+            lopetus = false;
             haluttu = tunnus;
             if (tunnus == tyyppi) return;
             if (tunnus == null) { Vaihda(null, null); return; }
@@ -103,7 +106,11 @@ namespace Matkakirja.Natiivi
                 dh.streamAudio = false;
                 dh.compressed = true;   // pakattuna muistiin (kuten kertoja): ei pitkää purkua pääsäikeessä
                 yield return p.SendWebRequest();
-                if (p.result != UnityWebRequest.Result.Success) yield break;
+                if (p.result != UnityWebRequest.Result.Success)
+                {
+                    LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: maisema {tunnus} ei latautunut ({p.error})");
+                    yield break;
+                }
                 klippi = DownloadHandlerAudioClip.GetContent(p);
                 klippi.name = "maisema-" + tunnus;
                 klipit[tunnus] = klippi;
@@ -111,6 +118,7 @@ namespace Matkakirja.Natiivi
             if (haluttu != tunnus || lopetus) yield break;   // jakso vaihtui latauksen aikana
             if (tyyppi == tunnus) yield break;   // toinen lataus ehti ensin (jaksot edestakaisin): ei alkua uudelleen
             Vaihda(tunnus, klippi);
+            LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: maisema {tunnus} ({klippi.length:F0} s)");
         }
 
         /// <summary>Ristihäivytys uuteen klippiin (null = häivytys hiljaisuuteen). Kesken oleva hiipuva katkaistaan.</summary>
@@ -156,7 +164,10 @@ namespace Matkakirja.Natiivi
                 karki.volume = taso * karjenKerroin;
                 // Silmukan sauma: uusi kierros toisella lähteellä ristihäivytyksen verran ennen loppua.
                 if (karki.clip != null && karki.clip.length > RistiS * 2 && karki.time >= karki.clip.length - RistiS)
+                {
                     Vaihda(tyyppi, karki.clip);
+                    LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: maisema {tyyppi} sauma");
+                }
             }
             if (hiipuva != null)
             {
