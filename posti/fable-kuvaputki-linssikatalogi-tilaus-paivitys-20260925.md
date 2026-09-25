@@ -1,6 +1,6 @@
 ## 2026-09-25 01.2x — FABLE → KUVAPUTKI: linssikatalogin tilauksen päivitys
 
-**Ajo vasta NAS-siirron jälkeen** — kuvaputki on tauolla, Julkaisija ilmoittaa Codexille kun se palaa.
+**AJETTAVISSA NYT (25.9. klo 03.5x)** — NAS-siirto valmis, kuvaputki jatkaa (Julkaisijan ilmoitus: posti/julkaisija-codex-kuvaputki-jatkuu-20260925.md).
 
 `posti/linssikatalogi-tilaus-20260924.json` päivitetty roolimuutosten mukaan (Sisältökirjuri, diffattu
 nykyistä linssikatalogi-data.js:ää vasten):
