@@ -125828,6 +125828,238 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Harbison, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Uluru, Uluṟu-Kata Tjuṯa National Park, Kata Tjuta,
+       * Ayers Rock Airport, Yulara, Bruce Munro) ja Wikivoyagesta
+       * (Uluṟu-Kata Tjuṯa National Park, Yulara) — teksti omaa. Nostojen
+       * aiheita (Gosse ja retkikunta, Gossen nousu 1873, Ayersin nimi,
+       * anangujen asuinhistoria ja vesikuopat, kallion koko, geologia ja
+       * värin syy) ei toisteta. Hintoja, aukioloja ja lentoreittejä ei
+       * mainita, koska lähteiden tiedot vanhenevat; tekstissä kehotetaan
+       * tarkistamaan ajantasaiset ohjeet. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Rabichin kuivunut puu Kuniya-polun varrelta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3630.jpg',
+          lyhyt: 'Kuivunut puu seisoo Ulurun juurella kirkkaassa iltapäivän auringossa.',
+          selite: 'Lokakuussa 2019 Kuniya-polun varrelta kuvattu kuivunut '
+            + 'puu kallion eteläpuolella; kallion juuren poluilla varjoa on '
+            + 'vähän, joten vesi ja hattu kulkevat aina mukana.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Uluru ei ole kaupunki: kallio ja 36 kupolin Kata Tjuta '
+          + 'ovat kansallispuistossa, joka suljetaan yöksi ja jossa ei saa '
+          + 'yöpyä. Matkailija nukkuu lähes 20 kilometrin päässä Yularan '
+          + 'lomakylässä, jonne lennetään Ayers Rockin lentokentälle tai '
+          + 'ajetaan Alice Springsistä noin 450 kilometriä. Kalliolle ei enää '
+          + 'kiivetä, vaan sen kiertää kävellen, ja anangut pyytävät, ettei '
+          + 'tiettyjä kohtia kuvata. Päivän kohokohdat ovat aamu ja ilta, '
+          + 'jolloin katselupaikoilla odotetaan valon muuttumista, ja kesällä '
+          + 'juuri silloin kuumuus sallii liikkumisen. Leudointa on '
+          + 'huhtikuusta syyskuuhun, Australian syksynä, talvena ja '
+          + 'varhaiskeväänä.',
+        artikkeli: {
+          nimi: 'Matkailijan Uluru',
+          teksti: 'Ulurulla matkailijan päivä alkaa ennen auringonnousua ja '
+            + 'päättyy tähtitaivaan alla.',
+          nosto: 'Kiipeämiskielto astui voimaan 26. lokakuuta 2019, '
+            + 'täsmälleen 34 vuotta sen jälkeen, kun kallio palautettiin '
+            + 'anangujen omistukseen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kenttä, kylä ja puisto',
+              teksti: 'Ulurulle saapuvan kannattaa hahmottaa kolme erillistä '
+                + 'paikkaa. Ayers Rockin lentokenttä, jota kutsutaan myös '
+                + 'Connellanin kentäksi, on noin kuusi kilometriä Yularan '
+                + 'pohjoispuolella ja parinkymmenen minuutin ajomatkan päässä '
+                + 'kalliosta. Sinne lennetään suoraan muun muassa Sydneystä, '
+                + 'Melbournesta, Brisbanesta ja Cairnsista, mutta reitit ja '
+                + 'yhtiöt vaihtuvat, joten ne kannattaa tarkistaa ennen matkaa. '
+                + 'Yulara on 1980-luvulla rakennettu lomakylä aivan puiston '
+                + 'rajan ulkopuolella: hotellit, leirintäalue, kauppa ja '
+                + 'ravintolat ovat kaikki siellä, sillä kansallispuistossa ei '
+                + 'ole majoitusta eikä siellä saa leiriytyä. Kylän hotelleja '
+                + 'kiertää ilmainen bussi, ja kentältä pääsee kylään lentojen '
+                + 'mukaan ajoitetulla kuljetuksella. Kolmas paikka on itse '
+                + 'puisto, jonne tarvitaan henkilökohtainen, omalla nimellä '
+                + 'varustettu pääsylippu; sen voi ostaa verkosta tai puiston '
+                + 'portilta, ja vartijat voivat pyytää nähdä '
+                + 'henkilöllisyystodistuksen. Alice Springsistä ajetaan ensin '
+                + 'noin 200 kilometriä etelään Stuart Highwayta ja sitten 245 '
+                + 'kilometriä länteen Lasseter Highwayta; matkaan menee neljästä '
+                + 'viiteen tuntia. Pimeällä ajamista kannattaa välttää, sillä '
+                + 'tietä ei ole aidattu koko matkalta ja sille vaeltaa '
+                + 'kenguruja ja karjaa, ja moni vuokra-autoyhtiö kieltää yöajon '
+                + 'sopimuksessaan.',
+              kuva: [
+                {
+                  tiedosto: 'Ayers Rock Airport, October 2025 02.jpg',
+                  lyhyt: 'Ayers Rockin lentokentän matala terminaali on noin kuuden kilometrin päässä Yularasta.',
+                  selite: 'Lokakuussa 2025 kuvatun terminaalin edessä kyltti '
+                    + 'varaa kaistan lomakylän kuljetusbussille; kentälle '
+                    + 'lennetään suoraan Australian suurista kaupungeista.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: '2010-03 Lasseter Highway.jpg',
+                  lyhyt: 'Lasseter Highway vie Stuart Highwaylta Ulurulle punaisen aavikon halki.',
+                  selite: 'Lasseter Highway Mount Connerin näköalapaikan '
+                    + 'kohdalla maaliskuussa 2010; tie on päällystetty, mutta '
+                    + 'sitä ei ole aidattu koko matkalta.',
+                  lahde: 'Pulv, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Climb to Imalung Lookout, Yulara.jpg',
+                  lyhyt: 'Hiekkapolku nousee Yularan keskellä Imalungin näköalapaikalle dyynin laelle.',
+                  selite: 'Yularan keskustan Imalungin näköalapaikka on '
+                    + 'hiekkadyynin laella; sieltä näkyvät Uluru ja osittain '
+                    + 'Kata Tjuta, ja iltaisin sinne noustaan katsomaan '
+                    + 'auringonlaskua.',
+                  lahde: 'Querent, Wikimedia Commons (CC BY 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kallion kierto ja kulttuurikeskus',
+              teksti: 'Koska kalliolle ei enää kiivetä, Ulurun kokee '
+                + 'parhaiten sen juurella. Koko kallion kiertävä perusreitti '
+                + 'on noin kymmenen kilometriä pitkä ja tasainen, ja siihen '
+                + 'kannattaa varata kolmesta neljään tuntia. Useimmat kulkevat '
+                + 'myötäpäivään, ja muutaman kilometrin jälkeen muut kävelijät '
+                + 'harvenevat. Lyhyemmistä poluista Mala-reitti vie pohjoisen '
+                + 'pysäköintipaikalta Kantjun rotkoon, ja kallion '
+                + 'eteläpuolella noin kilometrin mittaisen Kuniya-polun '
+                + 'varrella on kalliosuojan maalauksia. Anangut vetävät myös '
+                + 'opastettuja kävelyjä, joilla kerrotaan pensasruoasta, '
+                + 'kasveista ja tjukurpan kertomuksista. Ennen kiertoa '
+                + 'kannattaa poiketa kulttuurikeskuksessa, joka avattiin 1995 '
+                + 'maanpalautuksen kymmenvuotispäivän kunniaksi. Arkkitehti '
+                + 'Gregory Burgessin suunnittelemassa rakennuksessa kerrotaan '
+                + 'tjukurpasta, anangujen elämästä ja puiston '
+                + 'yhteishallinnosta, ja näyttelyn tekstejä on pitjantjatjaran '
+                + 'ja englannin lisäksi saksaksi, ranskaksi, italiaksi ja '
+                + 'japaniksi. Sisäänpääsy on ilmainen. Keskuksessa toimivat '
+                + 'anangujen omistama Maruku Arts ja Mutitjulun taiteilijoiden '
+                + 'Walkatjara-taidekeskus, joten sieltä ostettu teos tukee '
+                + 'suoraan tekijöitään. Keskukselta kallion juurelle johtaa '
+                + 'Liru-polku.',
+              kuva: {
+                tiedosto: 'Outback Trip - Uluru Base Walk 2 (4157509210).jpg',
+                lyhyt: 'Hiekkapolku kulkee harvan puuston läpi Ulurun jyrkän seinämän juurelle.',
+                selite: 'Ulurun perusreitti kiertää koko kallion, ja '
+                  + 'marraskuussa 2009 kuvattu osuus kulkee puiden välistä '
+                  + 'aivan seinämän juurelle; kaukana polulla näkyy '
+                  + 'kävelijäryhmä.',
+                lahde: 'eyeintim, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kiipeämisen loppu ja kuvaamisen rajat',
+              teksti: 'Vielä 2010-luvun alussa noin joka kuudes puiston '
+                + 'kävijä kiipesi Ulurun laelle vuonna 1964 asennettua ja 1976 '
+                + 'jatkettua ketjukaidetta pitkin. Reitti seuraa polkua, jota '
+                + 'esi-isien mala-miehet kulkivat saapuessaan kalliolle '
+                + 'seremoniaan, eivätkä anangut itse kiipeä sille. He '
+                + 'pyysivät vuosikymmenten ajan vieraita jättämään nousun '
+                + 'väliin, myös turvallisuuden vuoksi: heinäkuuhun 2018 '
+                + 'mennessä kiipeilyyn liittyviä kuolemia oli kirjattu 37. '
+                + 'Pääministeri Bob Hawke oli jo 1983 luvannut kiellon osana '
+                + 'maanpalautusta, mutta lupausta ei pidetty. Puiston hallitus '
+                + 'päätti yksimielisesti marraskuussa 2017 kieltää '
+                + 'kiipeämisen, ja kielto astui voimaan 26. lokakuuta 2019; '
+                + 'ketjut purettiin. Ennen kiellon alkua kalliolle ehti '
+                + 'rynnätä poikkeuksellisen paljon kiipeilijöitä. '
+                + 'Kuvaamisellakin on rajansa: osa kallion kohdista liittyy '
+                + 'vain miesten tai vain naisten seremonioihin, ja anangut '
+                + 'pyytävät, ettei niitä kuvata, jotta kukaan väärää sukupuolta '
+                + 'oleva ei näkisi kuvaa vahingossa. Kohdat on merkitty '
+                + 'perusreitin varrelle kyltein. Droonilla kuvaaminen on '
+                + 'kielletty, ja kaupallinen kuvaaminen vaatii luvan. '
+                + 'Mutitjulun yhteisöön ei mennä ilman lupaa, eikä ihmisiä '
+                + 'kuvata kysymättä.',
+              kuva: {
+                tiedosto: 'Uluru climb permanently closed sign.jpg',
+                lyhyt: 'Ulurun juurella oleva kyltti kertoo nousureitin pysyvästä sulkemisesta.',
+                selite: 'Kyltissä lukee englanniksi, että reitti suljettiin '
+                  + 'pysyvästi 26. lokakuuta 2019; kuva on otettu kallion '
+                  + 'juurella huhtikuussa 2022.',
+                lahde: 'Querent, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Aamun ja illan katselupaikat',
+              teksti: 'Ulurun päivä rytmittyy auringon mukaan. Kallion '
+                + 'itäpuolella on auringonnousun katselualue Talinguru '
+                + 'Nyakuntjaku, jonka nimi tarkoittaa suunnilleen paikkaa, '
+                + 'josta katsotaan hiekkadyyniltä. Korotetulta paikalta '
+                + 'näkyvät sekä Uluru että kaukana Kata Tjuta, ja alueella on '
+                + 'noin puolentoista kilometrin kävelypolut, varjokatoksia ja '
+                + 'käymälät. Aiempi aamun katselupaikka suljettiin, koska '
+                + 'sieltä näkyi pyhä kohde. Iltaa varten on omat '
+                + 'auringonlaskualueet Kata Tjutan tienhaaran ja '
+                + 'kulttuurikeskuksen välillä, ja Kata Tjutalla on '
+                + 'katselupaikat sekä aamulle että illalle. Pimeän tultua '
+                + 'Yularan liepeillä syttyy Field of Light, brittitaiteilija '
+                + 'Bruce Munron valoteos. Munro sai idean leiriytyessään '
+                + 'Ulurulla 1992: hän kuvitteli teoksen, joka puhkeaisi yöllä '
+                + 'kukkaan kuin aavikon siemenet sateen jälkeen. Teos avattiin '
+                + '2016, ja 2019 se päätettiin jättää paikalleen toistaiseksi. '
+                + 'Pitjantjatjaraksi sen nimi on Tili Wiru Tjuta Nyakutjaku, '
+                + '”katsotaan monia kauniita valoja”, ja noin seitsemän '
+                + 'jalkapallokentän kokoisella alueella kävellään pimeässä '
+                + 'tuhansien hehkuvien varsien keskellä; alueelle mennään '
+                + 'lomakylän bussilla. Kun kaupunkien valoja ei ole satojen '
+                + 'kilometrien säteellä, myös Linnunrata näkyy harvinaisen '
+                + 'kirkkaana.',
+              kuva: {
+                tiedosto: 'Field of Light Uluru, October 2025 01.jpg',
+                lyhyt: 'Field of Light -teoksen tuhannet valot hehkuvat aavikolla Ulurun lähellä.',
+                selite: 'Lokakuussa 2025 hämärässä kuvatut valovarret '
+                  + 'hehkuvat pensaiden lomassa; Bruce Munron teoksen '
+                  + 'alueella kuljetaan pimeän tultua polkuja pitkin.',
+                lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kata Tjuta ja aavikon kuumuus',
+              teksti: 'Noin 25 kilometriä Ulurusta länteen kohoaa Kata Tjuta, '
+                + '36 punaisen kupolin ryhmä, jonka nimi tarkoittaa '
+                + 'pitjantjatjaraksi ”monta päätä”. Korkein kupu, Mount Olga, '
+                + 'nousee noin 546 metriä tasangon yläpuolelle, lähes 200 '
+                + 'metriä Ulurua korkeammalle; eurooppalaisen nimensä se sai '
+                + '1872 tutkimusmatkailija Ernest Gilesiltä Württembergin '
+                + 'kuningatar Olgan mukaan. Suuri osa kupolien välisistä '
+                + 'laaksoista on suljettu, mutta kaksi reittiä vie niiden '
+                + 'sisään: helppo, noin 2,6 kilometrin Walpan rotko ja 7,4 '
+                + 'kilometrin Tuulten laakso, jonka kivikkoinen ja paikoin '
+                + 'jyrkkä polku vaatii kunnon kengät. Kuumuus ohjaa kaikkea '
+                + 'liikkumista. Joulu- ja tammikuussa päivän ylin lämpötila '
+                + 'on keskimäärin lähes 38 astetta ja ennätys 46, kun taas '
+                + 'talviöinä lämpötila voi laskea pakkasen puolelle. '
+                + 'UV-säteily on lokakuusta maaliskuuhun äärimmäistä. Tuulten '
+                + 'laakso suljetaan kuumina päivinä ensimmäisen näköalapaikan '
+                + 'jälkeen jo aamupäivällä, joten kävelyt kannattaa aloittaa '
+                + 'heti aamulla. Vettä juodaan janosta riippumatta, ja '
+                + 'lämpiminä kuukausina kasvoille hakeutuvilta kärpäsiltä '
+                + 'suojaa parhaiten hattuun kiinnitettävä verkko. '
+                + 'Sulkemiskäytännöt voivat muuttua, joten puiston '
+                + 'ajankohtaiset ohjeet kannattaa tarkistaa paikan päällä.',
+              kuva: {
+                tiedosto: 'KataTjuta ValleyOfTheWinds.jpg',
+                lyhyt: 'Tuulten laakso kulkee kivikkoisena Kata Tjutan jyrkkien kupolien välissä.',
+                selite: 'Heinäkuussa 2009 kuvatussa Tuulten laaksossa '
+                  + 'kupolien sileät, punaiset seinämät kohoavat louhikkoisen '
+                  + 'laakson molemmin puolin.',
+                lahde: 'Toby Hudson, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
@@ -126799,6 +127031,275 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'USGS, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Daniel K. Inouye International Airport, Skyline
+       * (Honolulu), Hawaiian Airlines, Hawaii Superferry, 2023 Hawaii
+       * wildfires, Lahaina, Haleakalā National Park, Hāʻena State Park,
+       * Plate lunch, Poke, Loco moco, Spam musubi, Shave ice, Hawaiian
+       * language, ʻOkina, Lei, Merrie Monarch Festival, Kīlauea, Mauna
+       * Kea, Hanauma Bay, Sunscreen, Hawaiian monk seal, Green sea turtle)
+       * ja Wikivoyagesta (Hawaii, Maui, Kauai, Haleakala National Park,
+       * Hawaii Volcanoes National Park) — teksti omaa.
+       * Nostojen ja ennen-nyt-kuvien aiheita (Cook, Kamehameha I,
+       * Lunalilo, sokeriplantaasit, kuningaskunnan kaataminen ja
+       * liittäminen, alaia-surffaus, Leilani Estatesin laava, Mauna Loa,
+       * kuuma piste, Kilauean purkaukset, Pele, Mark Twain, Diamond Head)
+       * ei toisteta. Hinnat ja aukioloajat on jätetty pois, koska ne
+       * muuttuvat nopeasti. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Kalalau-polku Kauailla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kalalau Trail 2004-08-22.JPG',
+          lyhyt: 'Kalalau-polku kiemurtelee Kauain Nā Pali -rannikon jyrkänteillä meren yllä.',
+          selite: 'Kalalau-polun alkupään kapea, punamultainen polku '
+            + 'kulkee hala-puiden ja heinikon läpi Kauain pohjoisrannikolla, '
+            + 'ja taustalla Nā Pali -rannikon vihreät jyrkänteet laskeutuvat '
+            + 'suoraan mereen.',
+          lahde: 'Matt Wright, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Havaiji on Yhdysvaltain 50. osavaltio keskellä '
+          + 'Tyyntämerta. Useimmat matkailijat lentävät ensin Honoluluun ja '
+          + 'jatkavat sieltä pienemmillä koneilla naapurisaarille. Kuudella '
+          + 'matkailijoille avoimella saarella on kullakin oma luonteensa: '
+          + 'Oahulla on kaupunki ja Waikikin ranta, Mauilla Haleakalān huippu, '
+          + 'Kauailla jyrkät rannikot ja Isolla saarella toimivat tulivuoret. '
+          + 'Paikallinen ruoka yhdistää havaijilaista, aasialaista, '
+          + 'portugalilaista ja amerikkalaista keittiötä. Lämmintä on ympäri '
+          + 'vuoden, mutta tuulen puoleisilla pohjois- ja itärannikoilla '
+          + 'sataa selvästi enemmän kuin suojan puolella, ja korkeimmilla '
+          + 'huipuilla voi olla pakkasta. Paikalliset arvostavat vierailijaa, '
+          + 'joka kunnioittaa havaijilaista kulttuuria ja luontoa.',
+        artikkeli: {
+          nimi: 'Matkailijan Hawaii',
+          teksti: 'Havaijin kuusi matkailijoille avointa saarta kuuluvat '
+            + 'samaan osavaltioon, mutta jokaisella on oma luonteensa.',
+          nosto: 'Saarten välillä ei ole kulkenut autolauttaa vuoden 2009 '
+            + 'jälkeen, joten saarelta toiselle lennetään.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen perille ja saarelta toiselle',
+              teksti: 'Useimmat lennot Yhdysvaltain mantereelta ja lähes '
+                + 'kaikki kansainväliset lennot laskeutuvat Honoluluun Daniel '
+                + 'K. Inouyen lentoasemalle, joka sai nimensä 2017 Honolulussa '
+                + 'syntyneen pitkäaikaisen senaattorin mukaan. Suoria lentoja '
+                + 'mantereelta on myös Mauin Kahuluihin, Ison saaren Konaan ja '
+                + 'Hiloon sekä Kauain Lihueen, ja Los Angelesista tai San '
+                + 'Franciscosta lento kestää noin viisi tuntia. Saarten välillä '
+                + 'liikutaan käytännössä lentäen, ja lennot kestävät 20 '
+                + 'minuutista tuntiin. Autolautta Hawaii Superferry lopetti jo '
+                + '2009, kun Havaijin korkein oikeus totesi sen toimintaluvan '
+                + 'perustuslain vastaiseksi puuttuvan ympäristöarvioinnin '
+                + 'vuoksi. Suurin saarten välinen lentoyhtiö Hawaiian Airlines '
+                + 'kuuluu nykyään Alaska Airlinesin emoyhtiöön, mutta nimi on '
+                + 'säilynyt Havaijin-lennoilla. Kun saapuu yhdelle saarelle ja '
+                + 'lähtee kotiin toiselta, säästää yhden saarten välisen '
+                + 'paluulennon. Lokakuusta 2025 lähtien kuljettajaton '
+                + 'Skyline-metro on pysähtynyt lentoasemalla, mutta keskustaan '
+                + 'rata on määrä jatkaa vasta noin 2031, eikä se ulotu '
+                + 'Waikikiin. Lentoasemalta Waikikiin pääsee TheBusin W-linjalla. '
+                + 'Naapurisaarilla bussiyhteydet ovat vähäisiä, joten auto '
+                + 'kannattaa vuokrata ajoissa. Maatalouskaranteeni koskee '
+                + 'matkailijaa molempiin suuntiin: saapuessa täytetään '
+                + 'ilmoitus kasveista ja eläimistä, ja mantereelle lähtiessä '
+                + 'kaikki matkatavarat tarkastetaan. Tuoreita hedelmiä ei saa '
+                + 'viedä, lukuun ottamatta ananasta ja käsiteltyä papaijaa. '
+                + 'Havaijilla ei siirrytä kesäaikaan, joten aikaero mantereelle '
+                + 'vaihtelee vuodenajan mukaan.',
+              kuva: [
+                {
+                  tiedosto: 'Skyline Lelepaua Station with eastbound train 2025-11-24.jpg',
+                  lyhyt: 'Kuljettajaton Skyline-juna Honolulun lentoaseman Lelepaua-asemalla 2025.',
+                  selite: 'Valkoinen, sateenkaariraidallinen Skyline-juna '
+                    + 'seisoo korotetulla laiturilla lentoaseman asemalla; kuva '
+                    + 'on otettu marraskuussa 2025 kansainvälisen '
+                    + 'pysäköintitalon kuudennesta kerroksesta.',
+                  lahde: 'Musashi1600, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Hawaiian Airlines Boeing 717 at Hilo International Airport.jpg',
+                  lyhyt: 'Hawaiian Airlinesin saarten välinen Boeing 717 Hilon lentoasemalla Isolla saarella.',
+                  selite: 'Hawaiian Airlinesin Boeing 717 odottaa '
+                    + 'matkustajasillan vieressä Hilon lentoasemalla elokuussa '
+                    + '2013. Peräsimessä on yhtiön tunnus Pualani, "taivaan '
+                    + 'kukka"; yhtiö on lentänyt tällä konetyypillä saarten '
+                    + 'välisiä lentoja vuodesta 2001.',
+                  lahde: 'Macpro3000, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Kahului Airport Terminal Entrance 2021.jpg',
+                  lyhyt: 'Mauin Kahuluin lentoasema on osavaltion toiseksi suurin kaupallinen lentokenttä.',
+                  selite: 'Matkustajia matkalaukkuineen ja autoja Kahuluin '
+                    + 'lentoaseman terminaalin edessä heinäkuussa 2021. '
+                    + 'Kentälle lennetään suoraan useista Yhdysvaltain '
+                    + 'mantereen ja Kanadan kaupungeista.',
+                  lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kuusi saarta, kuusi luonnetta',
+              teksti: 'Havaijin kahdeksasta pääsaaresta kuusi on avoinna '
+                + 'matkailijoille. Oahu on väkirikkain: siellä ovat Honolulu ja '
+                + 'Waikikin ranta, ja sademetsäpolut alkavat vain minuuttien '
+                + 'päässä hotelleista. Talvella saaren pohjoisrannikolle '
+                + 'vyöryvät jättiaallot tekevät muuten uneliaasta seudusta '
+                + 'surffauksen maailmankeskuksen. Mauilla ajetaan Hanan tietä, '
+                + 'joka on vain noin 90 kilometriä pitkä mutta niin mutkainen '
+                + 'ja paikoin yksikaistainen, että matka voi kestää kolme '
+                + 'tuntia suuntaansa. Haleakalān yli 3 000 metrin huipulle '
+                + 'nousee auringonnousua katsomaan niin paljon väkeä, että '
+                + 'aamun käyntiin tarvitaan ennakkovaraus, ja huipulla voi olla '
+                + 'lähes pakkasta. Mauin länsirannikon Lahaina paloi elokuussa '
+                + '2023: maastopalossa kuoli ainakin 102 ihmistä ja yli 2 200 '
+                + 'rakennusta tuhoutui. Jälleenrakennus kestää vuosia, eikä '
+                + 'suljetuille palaneille alueille ole asiaa, mutta muualle '
+                + 'saarelle matkailijat ovat tervetulleita. Kauai on pääsaarista '
+                + 'vanhin ja eroosion eniten muovaama. Nā Pali -rannikon ja '
+                + 'noin kilometrin syvyisen Waimean kanjonin vuoksi mikään tie '
+                + 'ei kierrä saarta. Pohjoisrannikon tien päässä Hāʻenan '
+                + 'osavaltiopuistoon tarvitaan ennakkovaraus, ja sieltä alkaa '
+                + '18 kilometrin Kalalau-polku, jonka pidempi osuus vaatii '
+                + 'yöpymisluvan. Molokailla ja Lanailla ei ole säännöllisiä '
+                + 'bussivuoroja. Sadekausi on suunnilleen loka–maaliskuussa ja '
+                + 'hurrikaanikausi kesä–marraskuussa. Wikivoyagen mukaan sää on '
+                + 'miellyttävimmillään huhti–toukokuussa ja syys–lokakuussa, '
+                + 'jolloin matkat ovat usein myös edullisempia kuin joulun '
+                + 'sesonkina.',
+              kuva: {
+                tiedosto: 'Haleakala sunrise.jpg',
+                lyhyt: 'Aurinko nousee pilvimeren yltä Haleakalān huipulla Mauilla.',
+                selite: 'Kansallispuistopalvelun kuvassa aurinko nousee '
+                  + 'raidallisten pilvien takaa, ja sen alla lepää tumma '
+                  + 'pilvimeri, josta vain vuoren reunan siluetti kohoaa esiin.',
+                lahde: 'National Park Service, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Plate lunch, poke ja shave ice',
+              teksti: 'Havaijin arkiruoka syntyi plantaaseilla, joille '
+                + 'tuotiin työläisiä muun muassa Kiinasta, Japanista, '
+                + 'Portugalista ja Filippiineiltä. Heidän eväistään kehittyi '
+                + 'plate lunch: kaksi kauhallista valkoista riisiä, '
+                + 'makaronisalaattia ja pääruoka, esimerkiksi teriyakilihaa, '
+                + 'kanakatsua tai korealaista kalbia. Sitä myyvät ketjut, '
+                + 'ostoskeskusten ruokapaikat ja parkkipaikoille pysäköidyt '
+                + 'lounasautot, joita paikalliset suosivat. Hilossa keksittiin '
+                + '1949 loco moco, jossa riisin päällä on jauhelihapihvi, '
+                + 'paistettu kananmuna ja ruskea kastike. Poke tarkoittaa '
+                + 'havaijiksi paloittelua: kuutioitu raaka kala, usein '
+                + 'keltaevätonnikala ʻahi, maustetaan nykyään tavallisesti '
+                + 'soijakastikkeella ja seesamiöljyllä, sipulilla ja '
+                + 'merilevällä. Spam musubi, säilykelihaviipale riisipalan '
+                + 'päällä merilevään käärittynä, odottaa lähikauppojen '
+                + 'kassoilla. Portugalilaiset malasada-munkit ja kiinalaista '
+                + 'perua olevat suolatut ja kuivatut hedelmät, kuten li hing '
+                + 'mui -luumut, ovat tyypillisiä välipaloja. Helteellä syödään '
+                + 'shave icea, japanilaisesta kakigōrista periytyvää hienoksi '
+                + 'höylättyä jäätä, joka imee itseensä guava-, passionhedelmä- '
+                + 'tai kookossiirapin; päälle voi pyytää azukipapuja tai '
+                + 'jäätelöä. Perinteisiä havaijilaisia ruokia tarjoillaan '
+                + 'lūʻau-juhlissa, joita järjestävät monet lomakeskukset: '
+                + 'maakuopassa haudutettua kālua-possua, taaron juuresta '
+                + 'survottua poita, taaron lehtiin käärittyä laulauta ja '
+                + 'kookoshyytelö haupiaa. Hinnat ovat saarilla yleensä '
+                + 'korkeammat kuin mantereella, koska lähes kaikki tuodaan '
+                + 'laivalla.',
+              kuva: {
+                tiedosto: 'Wardsplatelunch.jpg',
+                lyhyt: 'Havaijilainen lounasrasia: ahi-pokea, lomi-lohta, kālua-possua ja laulau riisin kera.',
+                selite: 'Styroksirasiassa on kaksi kauhallista riisiä, '
+                  + 'soijaan marinoitua ahi-pokea, tomaatin kanssa sekoitettua '
+                  + 'lomi lomi -lohta, kālua-possua, taaron lehtiin haudutettu '
+                  + 'laulau ja pala kookoshyytelö haupiaa; annos on ostettu '
+                  + 'Honolulun Wardin torilta vuonna 2007.',
+                lahde: 'christian razukas, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Aloha käytännössä: kieli, lei ja hula',
+              teksti: 'Havaijin kieli, ʻōlelo Hawaiʻi, on englannin ohella '
+                + 'osavaltion virallinen kieli, vaikka arjessa puhutaan '
+                + 'lähinnä englantia ja paikallista pidginiä. Vuonna 1896 '
+                + 'Havaijin tasavalta kielsi havaijin opetuskielenä, ja kieli '
+                + 'palasi julkisiin kouluihin vasta 1987; kielipesät ovat '
+                + 'opettaneet lapsille havaijia vuodesta 1984. Kirjoituksessa '
+                + 'näkyvä ʻokina on oma kirjaimensa, joka merkitsee '
+                + 'kurkkuäänteen katkoa. Muutama sana ilahduttaa: mahalo on '
+                + 'kiitos, pau tarkoittaa valmista, ja reittiohjeissa mauka '
+                + 'viittaa vuorille päin ja makai merelle päin. Mantereen '
+                + 'Yhdysvalloista puhutaan Mainlandina, sillä "the States" '
+                + 'kuulostaa paikallisten korvissa siltä kuin Havaiji ei '
+                + 'kuuluisi niihin. Havaijilainen tarkoittaa saarilla '
+                + 'alkuperäiskansan jälkeläistä, ei jokaista asukasta, ja '
+                + 'kotiin kutsuttuna kengät jätetään oven ulkopuolelle. Lei eli '
+                + 'kukkaseppele otetaan vastaan kiitollisena. Sitä ei heitetä '
+                + 'roskiin, ja jos sitä ei voi pitää kaulassa, se asetetaan '
+                + 'kunniapaikalle. Perinteen mukaan raskaana olevalle annetaan '
+                + 'vain avoin lei. Toukokuun ensimmäisenä päivänä vietetään '
+                + 'vuodesta 1927 lähtien Lei Dayta. Hulan tärkein näyttämö on '
+                + 'Hilon Merrie Monarch -festivaali, joka alkaa joka vuosi '
+                + 'pääsiäissunnuntaina ja huipentuu kolmen illan kilpailuun. '
+                + 'Se on nimetty kuningas Kalākauan mukaan, joka elvytti hulaa '
+                + 'hallituskaudellaan 1874–1891, ja kilpailuillat lähetetään '
+                + 'televisiossa ja verkossa maksutta.',
+              kuva: {
+                tiedosto: 'Hula Hālau O Kamuela under the direction of Kumu Hula Kauʻi Kamanaʻo and Kunewa Mook - 2019 Overall Winners of the Merrie Monarch Festival - Hilo HI - Lokalia Montgomery Perpetual Trophy.jpg',
+                lyhyt: 'Hula Hālau O Kamuela voitti Merrie Monarch -festivaalin kokonaiskilpailun 2019.',
+                selite: 'Kukkaseppeleisiin ja vihreisiin lehtihameisiin '
+                  + 'pukeutuneet tanssijat seisovat rivissä Hilon '
+                  + 'festivaalilavalla huhtikuussa 2019; heidän edessään ovat '
+                  + 'puinen kiertopalkinto, rumpu ja kalebassista tehdyt '
+                  + 'soittimet.',
+                lahde: 'Allanbcool, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tulivuoripuisto ja luonnon kunnioitus',
+              teksti: 'Ison saaren Hawaiʻi Volcanoes -kansallispuiston ydin '
+                + 'on Kīlauean huippu noin 1 200 metrin korkeudessa, missä voi '
+                + 'sataa ja olla koleaa mihin vuodenaikaan tahansa. Crater Rim '
+                + 'Drive kiersi ennen koko kalderan, mutta osa tiestä sortui '
+                + 'kraatteriin vuoden 2018 purkauksessa ja on suljettu '
+                + 'pysyvästi. Lyhyt polku vie sademetsän läpi Nāhukuun, noin '
+                + '120 metrin mittaiseen valaistuun laavatunneliin. Chain of '
+                + 'Craters Road laskeutuu 32 kilometrin matkalla runsaan '
+                + 'kilometrin rannikolle Hōlein merikaarelle, eikä matkalla ole '
+                + 'ruokaa, vettä eikä polttoainetta. Tien varren Puʻuloan '
+                + 'laavakentällä on yli 23 000 kallioon hakattua kuvaa. '
+                + 'Joulukuussa 2024 alkanut purkaus Halemaʻumaʻun kraatterissa '
+                + 'on jatkunut jaksoittaisina laavasuihkuina, joten nähtävä '
+                + 'vaihtelee päivästä toiseen; ajantasainen tilanne kannattaa '
+                + 'tarkistaa puiston ja USGS:n sivuilta. Tulivuoren rikkipitoinen '
+                + 'savusumu, vog, voi haitata hengityssairaita. Mauna Kean '
+                + 'vierailukeskus on noin 2 800 metrin korkeudessa, ja '
+                + 'kolmannes kävijöistä on saanut vuoristotaudin oireita; '
+                + 'huipulle suositellaan nelivetoa. Luonnossa pätee sääntö: '
+                + 'ota vain valokuvia. Kiviä, hiekkaa tai heiau-temppelien '
+                + 'esineitä ei viedä mukaan. Havaijilla on kielletty '
+                + 'oksibentsonia ja oktinoksaattia sisältävien aurinkovoiteiden '
+                + 'myynti, koska ne vahingoittavat koralleja. Oahun suosittuun '
+                + 'Hanauman lahteen muualla asuvat pääsevät vain verkossa '
+                + 'varatulla ajalla, ja ensikertalaiset katsovat ensin videon '
+                + 'riutan suojelusta. Rannalla lepääviä kilpikonnia ja '
+                + 'munkkihylkeitä ei saa häiritä, ja delfiinejä jahtaavia '
+                + 'retkiveneitä on sakotettu.',
+              kuva: {
+                tiedosto: 'Nāhuku.jpg',
+                lyhyt: 'Kävijöitä Nāhukun valaistussa laavatunnelissa Hawaiʻi Volcanoes -kansallispuistossa.',
+                selite: 'Ryhmä kävelee märkää polkua pitkin Nāhukun eli '
+                  + 'Thurstonin laavatunnelin holvimaisessa käytävässä, jonka '
+                  + 'seinät valaisimet värjäävät kullanruskeiksi; tunneli syntyi '
+                  + 'satoja vuosia sitten, kun sula laava valui sen läpi pois.',
+                lahde: 'Michael Szoenyi / National Park Service, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -127797,6 +128298,234 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Galápagos Islands, Galápagos National Park, Seymour
+       * Airport, Puerto Baquerizo Moreno, Puerto Villamil, Isabela Island,
+       * San Cristóbal Island, Floreana Island, Sierra Negra) ja
+       * Wikivoyagesta (Galapagos Islands, Galapagos wildlife, Santa Cruz,
+       * San Cristobal, Isabela, Floreana) — teksti omaa. Nostojen,
+       * ennen/nyt-kuvien ja valokuvapaketin aiheita (geologia, Berlanga,
+       * Beagle, peipposet, Puerto Ayoran synty ja väkiluku, puiston ja
+       * tutkimusaseman perustaminen, jättiläiskilpikonnat, meri-iguaanit,
+       * pingviini, lentokyvytön kormoraani, merileijonat laiturilla,
+       * sinijalkasuulan kosinta, Bartolomén näköala) ei toisteta. Hinnat
+       * jätetty pois paitsi puiston pääsymaksu, jonka Wikivoyage kertoo
+       * nousseen 1.8.2024; teksti kehottaa tarkistamaan sen. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: Las Grietas.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Las Grietas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-26, DD 83.JPG',
+          lyhyt: 'Uimari Las Grietasin laavarailossa Santa Cruzin saarella Puerto Ayoran lähellä.',
+          selite: 'Las Grietas on kallioiden väliin revennyt kapea railo '
+            + 'Puerto Ayoran lähellä. Sen kirkkaassa vedessä sekoittuvat '
+            + 'meri- ja sadevesi, ja railo on paikallisten ja matkailijoiden '
+            + 'suosima uimapaikka.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Galápagos on noin tuhannen kilometrin päässä Ecuadorin '
+          + 'rannikosta, ja sinne pääsee vain lentäen Quitosta tai '
+          + 'Guayaquilista. Pääsaaria on kolmetoista, mutta asuttuja vain '
+          + 'neljä: Santa Cruz, San Cristóbal, Isabela ja Floreana. Muualle '
+          + 'mennään kansallispuiston hyväksymän oppaan kanssa, joko laivalla, '
+          + 'joka kiertää saaria päiviä tai viikon, tai päiväretkillä jonkin '
+          + 'kylän hotellista käsin. Kummallakin tavalla näkee eläimiä, jotka '
+          + 'eivät pakene ihmistä, ja siksi niiden katseluun on tarkat '
+          + 'säännöt. Matka ei ole halpa eikä nopea, mutta harvassa paikassa '
+          + 'pääsee yhtä lähelle luontoa. Vuodenaikoja on kaksi: joulukuusta '
+          + 'toukokuuhun on lämmintä ja meri tyyni, kesäkuusta marraskuuhun '
+          + 'viileämpää ja usvaista.',
+        artikkeli: {
+          nimi: 'Matkailijan Galápagos',
+          teksti: 'Galápagosille pääsee vain lentäen, ja kansallispuistoon vain oppaan kanssa.',
+          nosto: 'Oppaiden nyrkkisääntö on yksinkertainen: jos eläin huomaa '
+            + 'sinut, olet jo liian lähellä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille kahdella lennolla',
+              teksti: 'Galápagosille lennetään Ecuadorin mantereelta, Quitosta '
+                + 'tai Guayaquilista, ja koneet laskeutuvat joko Baltran saaren '
+                + 'Seymourin kentälle tai San Cristóbalin saarelle. Saarille '
+                + 'lennetään yleensä aamupäivällä ja takaisin iltapäivällä, joten '
+                + 'mantereella yövytään usein kumpaankin suuntaan. Jo '
+                + 'lähtökentällä ostetaan saariston matkustajakortti, ja '
+                + 'ruumaan menevät laukut läpivalaistaan ja sinetöidään, jottei '
+                + 'mukana kulkeudu siemeniä, hyönteisiä tai muita vieraita '
+                + 'eliöitä. Perillä maksetaan kansallispuiston pääsymaksu '
+                + 'käteisellä. Elokuussa 2024 ulkomaisen aikuisen maksu nousi '
+                + '200 dollariin; summa on muuttunut ennenkin, joten se kannattaa '
+                + 'tarkistaa ennen matkaa. Baltra oli toisen maailmansodan aikana '
+                + 'Yhdysvaltain lentotukikohta, ja nykyinen terminaali on '
+                + 'rakennettu kierrätetyistä öljynporausputkista ja käyttää '
+                + 'aurinko- ja tuulivoimaa. Kentältä ajetaan bussilla Itabacan '
+                + 'salmelle, jonka yli vesitaksi vie Santa Cruzin puolelle, ja '
+                + 'sieltä matka jatkuu Puerto Ayoraan. San Cristóbalilla kenttä '
+                + 'on keskellä saariston hallintokaupunkia Puerto Baquerizo '
+                + 'Morenoa, ja keskustaan voi kävellä.',
+              kuva: [
+                {
+                  tiedosto: 'Seymour Airport, Isla Baltra, Galapagos Islands.jpg',
+                  lyhyt: 'Seymourin lentoaseman terminaali ja tuulivoimalat Baltran kuivalla tasangolla.',
+                  selite: 'Seymourin lentoasema Baltran saarella on saariston '
+                    + 'vilkkain kenttä. Sen 2010-luvulla uusittu terminaali '
+                    + 'pyrkii toimimaan uusiutuvalla energialla, ja kentän '
+                    + 'laidalla pyörivät tuulivoimalat.',
+                  lahde: 'Pi3.124, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Baltra Island, water taxi dock with the Itabaca Channel - Galápagos in the background.JPG',
+                  lyhyt: 'Baltran laiturilta vesitaksit vievät Itabacan salmen yli Santa Cruzin saarelle.',
+                  selite: 'Lentokentältä bussi tuo matkustajat Baltran '
+                    + 'laiturille, josta vesitaksit ja lautat kuljettavat heidät '
+                    + 'kapean Itabacan salmen yli Santa Cruzille. Vastarannalta '
+                    + 'matka jatkuu Puerto Ayoraan.',
+                  lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Arribo a San Cristóbal (46231006642).jpg',
+                  lyhyt: 'San Cristóbalille laskeutuva kone ylittää lahden, jolla risteilyalukset ovat ankkurissa.',
+                  selite: 'Laskeutuessaan San Cristóbalin kentälle kone '
+                    + 'lentää Puerto Baquerizo Morenon sataman yli. Lahdella on '
+                    + 'ankkurissa risteilyaluksia, ja osa risteilyistä alkaa tai '
+                    + 'päättyy juuri San Cristóbalille.',
+                  lahde: 'David Ceballos, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Risteily vai saarihyppely',
+              teksti: 'Kaukaisimmille saarille, kuten Genovesalle, Fernandinalle '
+                + 'ja Españolalle, pääsee vain risteilyllä. Saaristossa '
+                + 'liikennöi kymmeniä yöpymiseen varustettuja aluksia: pienimpiin '
+                + 'mahtuu kahdeksan, suurimpiin sata matkustajaa. Kansallispuisto '
+                + 'vahvistaa jokaisen aluksen reitit etukäteen, jotta samalla '
+                + 'rannalla ei olisi kerralla liikaa ihmisiä, ja yhdellä oppaalla '
+                + 'saa olla enintään 16 hengen ryhmä. Maissa käydään vain '
+                + 'päivänvalossa, tavallisesti aamupäivällä ja iltapäivällä. '
+                + 'Laivalta siirrytään rantaan pienellä veneellä, pangalla: '
+                + 'kuivassa maihinnousussa astutaan kalliolle, märässä kahlataan '
+                + 'hiekkarannalle. Toinen tapa on saarihyppely, jossa asutaan '
+                + 'kylien hotelleissa ja tehdään päiväretkiä esimerkiksi North '
+                + 'Seymourille, South Plazalle, Santa Fehen tai Bartolomélle. '
+                + 'Asuttujen saarten väliä kulkevat pikaveneet, joiden noin '
+                + 'kahden tunnin matka voi olla hyvin keinuva. Saarihyppely on '
+                + 'halvempi ja joustavampi, ja sen suosio on kasvanut nopeasti: '
+                + 'vuonna 2017 risteilyllä kävi noin 72 000 matkailijaa, maissa '
+                + 'majoittuneita oli yli kaksi kertaa enemmän. Vielä vuoteen 1969 '
+                + 'asti saarille pääsi vain yksityisellä tai vuokratulla aluksella.',
+              kuva: {
+                tiedosto: 'Day 2 - first landing (wet) on Sombrero (Islote Mosquera) at the SE corner of Santiago Is - (16493563889).jpg',
+                lyhyt: 'Risteilyn matkustajat märän maihinnousun jälkeen hiekkarannalla Santiagon kupeessa.',
+                selite: 'Tammikuussa 2015 risteilyn ensimmäinen maihinnousu '
+                  + 'oli märkä: matkustajat kahlasivat pangasta rantaan pienellä '
+                  + 'luodolla Santiagon saaren kaakkoiskulmassa. Taustalla näkyy '
+                  + 'karua laavamaata.',
+                lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Neljä asuttua saarta',
+              teksti: 'Omin päin liikkuva matkailija asuu jollakin neljästä '
+                + 'asutusta saaresta, ja kylien lähellä on paljon nähtävää ilman '
+                + 'opastettua retkeä. Santa Cruzilla Puerto Ayorasta kävellään '
+                + 'parin kilometrin polkua Tortuga Bayn hiekkarannalle, jonka '
+                + 'suojaisessa poukamassa voi uida ja meloa; polun alussa '
+                + 'kirjaudutaan, ja ranta on auki vain päivällä. Vesitaksilla ja '
+                + 'lyhyellä kävelyllä pääsee Las Grietasin uimarailolle. San '
+                + 'Cristóbalilla Puerto Baquerizo Morenon laidalta lähtee polku '
+                + 'kansallispuiston tulkintakeskukseen ja fregattilintujen '
+                + 'pesimämäelle, ja ylängöllä noin 600 metrin korkeudessa on El '
+                + 'Junco, makean veden järvi, joita kuivassa saaristossa on '
+                + 'hyvin vähän. Isabelan Puerto Villamilin laguuneissa kahlaa '
+                + 'flamingoja, ja kylästä pyöräillään tai kävellään Kyynelten '
+                + 'muurille, jonka vangit rakensivat, kun saarella oli '
+                + 'vankisiirtola 1940- ja 1950-luvuilla. Sierra Negran '
+                + 'tulivuoren valtavan kalderan reunalle tehdään oppaan kanssa '
+                + 'pitkä päiväretki. Floreanalla asuu vain noin sata ihmistä. '
+                + 'Sen Post Office Bayhin valaanpyytäjät jättivät tynnyriin '
+                + 'kirjeitä kotimatkalla olevien laivojen vietäviksi, ja yhä '
+                + 'matkailijat jättävät sinne kortteja ilman postimerkkiä ja '
+                + 'ottavat mukaansa ne, jotka voivat toimittaa perille.',
+              kuva: {
+                tiedosto: 'PtoVillamilMuro.jpg',
+                lyhyt: 'Isabelan Kyynelten muurin kasasivat laavakivistä saaren vankisiirtolan vangit.',
+                selite: 'Muro de las Lágrimas eli Kyynelten muuri on Puerto '
+                  + 'Villamilin lähellä Isabelan saarella. Vankisiirtolan vangit '
+                  + 'rakensivat sen laavalohkareista, ja nykyään sinne johtaa '
+                  + 'kävely- ja pyöräilyreitti laguunien ja rantojen ohi.',
+                lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Säännöt ja eläinten katselu',
+              teksti: 'Galápagosin eläimet eivät pakene, ja juuri siksi '
+                + 'puistossa on tarkat säännöt. Kylien ulkopuolella liikutaan '
+                + 'pääsääntöisesti kansallispuiston hyväksymän oppaan kanssa, '
+                + 'merkityillä poluilla ja vain päivänvalossa. Eläimiin pidetään '
+                + 'vähintään kahden metrin etäisyys, eikä niitä saa koskea eikä '
+                + 'ruokkia. Saarelta toiselle siirryttäessä kengät puhdistetaan, '
+                + 'jotta siemenet eivät kulkeudu mukana, eikä saarille saa tuoda '
+                + 'kasveja tai eläimiä. Tupakointi ja nuotiot ovat kiellettyjä, '
+                + 'eikä matkamuistoksi saa ostaa mustasta korallista, '
+                + 'simpukankuorista, merileijonan hampaista, kilpikonnan kilvestä '
+                + 'tai laavakivestä tehtyjä esineitä. Monelle matkan kohokohta on '
+                + 'snorklaus nuorten merileijonien kanssa, mutta aikuiset urokset '
+                + 'puolustavat reviiriään kiivaasti, joten yhdyskuntien lähellä '
+                + 'ei pidä uida. North Seymourilla pesivät fregattilinnut, joiden '
+                + 'urokset pullistavat punaisen kurkkupussinsa, ja Genovesalla '
+                + 'pensaissa pesii punajalkasuulia. Aaltoalbatrossit palaavat '
+                + 'Españolalle pesimään huhtikuusta marraskuuhun. Sukeltajat '
+                + 'hakeutuvat Darwinin ja Wolfin saarille vasarahaiparvien '
+                + 'perään, mutta niille pääsee vain sukellusristeilyllä, ja '
+                + 'kovat virrat sopivat vain kokeneille.',
+              kuva: {
+                tiedosto: '(Galápagos Islands Tortuga Bay do not touch to tocar Amblyrhynchus cristatus) Maine Iguana.JPG',
+                lyhyt: 'Tortuga Bayn kyltti: iguaaneihin ei kosketa, ja niihin pidetään kahden metrin väli.',
+                selite: 'Santa Cruzin Tortuga Baylla kaksikielinen kyltti kieltää '
+                  + 'koskemasta meri-iguaaneihin tai häiritsemästä niitä ja '
+                  + 'muistuttaa kahden metrin etäisyydestä, joka koskee kaikkia '
+                  + 'saariston eläimiä.',
+                lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Usvakausi ja käytännön vinkit',
+              teksti: 'Vaikka Galápagos on päiväntasaajalla, etelästä tuleva '
+                + 'kylmä Humboldtin virta pitää ilmaston viileämpänä kuin '
+                + 'tropiikissa odottaisi. Joulukuusta toukokuuhun on lämmin '
+                + 'kausi: meri ja ilma ovat noin 25-asteisia, tuulet heikkoja ja '
+                + 'meri tyynimmillään, ja aurinkoisia päiviä keskeyttävät vain '
+                + 'satunnaiset rankkasateet. Kesäkuusta marraskuuhun on garúan '
+                + 'aika. Kaakkoistuuli viilentää rannikon noin 22 asteeseen, ja '
+                + 'matalat pilvet jäävät ylänköjen rinteille, jotka saavat '
+                + 'kosteutensa tihkuna ja usvana, kun alavat rannat pysyvät '
+                + 'kuivina. Meri on silloin rauhattomampi, mutta kesällä eläimet '
+                + 'ovat vilkkaimmillaan, ja heinä–marraskuussa sukeltajat voivat '
+                + 'nähdä valashaita. Syys–marraskuussa moni alus on telakalla. '
+                + 'Muutaman vuoden välein El Niño lämmittää meren ja sekoittaa '
+                + 'koko kuvion. Snorklatessa märkäpuku on usein tarpeen, ja '
+                + 'päiväntasaajan aurinko polttaa nopeasti. Ecuadorin valuutta on '
+                + 'Yhdysvaltain dollari; pankkiautomaatteja on vähän, eikä kortti '
+                + 'kelpaa kaikkialla, joten käteistä kannattaa varata etenkin '
+                + 'Isabelalle ja Floreanalle. Puerto Ayorassa hanavettä ei '
+                + 'suositella juotavaksi, ja joulun ja pääsiäisen ajaksi majoitus '
+                + 'kannattaa varata hyvissä ajoin.',
+              kuva: {
+                tiedosto: 'Clouds surround the Galapagos Islands (MODIS 2020-09-21).jpg',
+                lyhyt: 'Satelliittikuvassa syyskuulta 2020 matala pilvimeri ympäröi Galápagossaaret.',
+                selite: 'NASAn Terra-satelliitti kuvasi saariston 17. syyskuuta '
+                  + '2020 garúan kaudella. Useimmat saaret ovat auringossa, mutta '
+                  + 'Isabelan ja Santa Cruzin rinteillä lepää usvapilvi, ja '
+                  + 'kaakkoinen San Cristóbal on kokonaan pilven peitossa.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
