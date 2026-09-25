@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 17:02 EEST
+**Päivitetty:** 2026-09-25 17:13 EEST
 
 ## 1) Sessiot
 
@@ -56,9 +56,8 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Paikallinen levy:** 184 Gt vapaana (raja 35 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 29 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 17). coreaudiod 6 %. **Chrome-GPU-prosesseja:** 3.
-- **5 h -kiintiö:** 87 % (nollautuu 17:30 EEST, ~27 min). Fablen uusi hälytysraja 96 % ennen nollausta — ei vielä ylitetty. **Viikko (kaikki mallit):** 23 %. **Viikko (Fable):** 12 %.
-- **Levätessä 17.30 asti (Fable):** Sisältökirjuri, Linssiseppä, Siirtoseppä. **Jatkavat build 15:tä:** Natiiviseppä, Natiivi-UI, Pelikoodari, Julkaisija, Laitetestaaja.
-- **Juna:** viimeisin KÄÄNNETTY 16:57 (020fe9ed), ei odottavaa.
-- **Postilaatikko:** uusi commit d2af92199 (Codex → Kuvaputki: Amsterdamin leikatut kuvat, PR #3207), ilmoitettu Fablelle. **Avoimia PR:iä:** 17.
+- **Paikallinen levy:** 184 Gt vapaana (raja 35 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 0. coreaudiod 2 %. **Chrome-GPU-prosesseja:** 0.
+- **5 h -kiintiö:** 92 % (nollautuu 17:29 EEST, ~16 min), ei vielä 96 %. **Viikko (kaikki mallit):** 25 %. **Viikko (Fable):** 12 %.
+- **Juna:** viimeisin KÄÄNNETTY 16:57; juna/b13 c7091b7c uusi 17:04, alle 25 min.
+- **Postilaatikko:** kaksi uutta commitia (22fac1074, f1efd5e50) — Codex → Kuvaputki, leikatut kohtauskuvat Berliini/Bryssel/Helsinki + Ljubljana (PR #3210), ilmoitettu Fablelle. **Avoimia PR:iä:** 10.
