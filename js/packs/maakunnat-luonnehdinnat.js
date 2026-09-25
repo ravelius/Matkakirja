@@ -11484,4 +11484,381 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Sennarin pato valmistui Siniselle Niilille 1925, ja sen altaasta johdetaan vettä Gezira-tasangon kanaviin.',
     },
   },
+  /*
+   * MDG (erä 9B). Avaimet MAAKUNNAT_KAIKKI.MDG:n tunnuksia TÄSMÄLLEEN
+   * (22 aluetta; Vatovavy-Fitovinany on yhä yksi alue, vaikka se
+   * jaettiin 2021 kahtia). Vain `lyhyt`. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026): Amoron'i Mania — Ambositra; Androy — Androy; Anosy —
+   * Tôlanaro; Analamanga — Rova of Antananarivo; Bongolava —
+   * Tsiroanomandidy; Vakinankaratra — Antsirabe; Itasy — Lake Itasy;
+   * Atsimo-Andrefana — Toliara; Atsimo-Atsinanana — Canal des
+   * Pangalanes; Betsiboka — Betsiboka River; Boeny — Ankarafantsika
+   * National Park; Diana — Nosy Be; Haute Matsiatra — Ambalavao;
+   * Ihorombe — Ihorombe; Melaky — Barren Isles; Menabe — Malagasy giant
+   * rat; Sava — Sava Region; Sofia — Sofia Region; Analanjirofo —
+   * Analanjirofo (nimen merkitys hausta); Atsinanana — Toamasina;
+   * Alaotra-Mangoro — Lake Alaotra; Vatovavy-Fitovinany —
+   * Fianarantsoa-Côte Est railway
+   */
+  MDG: {
+    "Amoron'i Mania": {
+      lyhyt: 'Ambositra on Madagaskarin puunveiston keskus, ja lähikylien zafimaniry-kansan puutyötaito on Unescon aineetonta kulttuuriperintöä.',
+    },
+    Androy: {
+      lyhyt: 'Androyn nimi käännetään yleensä piikkimaaksi, ja sen asukkaat tandroyt ovat nimensä mukaan piikkipensaikon kansaa.',
+    },
+    Anosy: {
+      lyhyt: 'Tolagnaroa kutsutaan yhä myös Fort-Dauphiniksi: kaupunki sai alkunsa 1643 Ranskan ensimmäisenä siirtokuntana Madagaskarilla.',
+    },
+    Analamanga: {
+      lyhyt: 'Antananarivon korkeimmalla kukkulalla kohoaa kuningattaren palatsi Manjakamiadana, joka on rakennettu uudelleen vuoden 1995 tulipalon jälkeen.',
+    },
+    Bongolava: {
+      lyhyt: 'Tsiroanomandidyssa on Madagaskarin suurin zebutori, ja karjakauppa tuo kaupungille yli kolmanneksen sen verotuloista.',
+    },
+    Vakinankaratra: {
+      lyhyt: 'Antsirabe on Madagaskarin kolmanneksi suurin kaupunki, ja sen kaduilla kulkee tuhansia pousse-pousse-riksoja.',
+    },
+    Itasy: {
+      lyhyt: 'Itasyjärvi syntyi, kun laavavirta patosi joen, ja sen ympäristöä kirjovat yhä vanhat tuhkakartiot.',
+    },
+    "Atsimo-Andrefana": {
+      lyhyt: 'Toliaraa kutsutaan auringon kaupungiksi, ja siltä on saanut nimensä myös pörröinen coton de tuléar -koirarotu.',
+    },
+    "Atsimo-Atsinanana": {
+      lyhyt: 'Farafanganaan päättyy Pangalanesin kanava, yli 600 kilometrin laguunien ja järvien ketju, joka alkaa Toamasinasta.',
+    },
+    Betsiboka: {
+      lyhyt: 'Betsiboka-joki kuljettaa niin paljon punaista lietettä, että sen värjäämä suisto näkyy avaruuteen asti.',
+    },
+    Boeny: {
+      lyhyt: 'Ankarafantsikan kansallispuiston kuivissa metsissä elää kahdeksan lemurilajia ja yli sata lintulajia.',
+    },
+    Diana: {
+      lyhyt: 'Nosy Be on Madagaskarin vilkkain lomasaari, ja ylang-ylang-viljelmiensä vuoksi sitä kutsutaan tuoksujen saareksi.',
+    },
+    "Haute Matsiatra": {
+      lyhyt: 'Ambalavaon verstaissa valmistetaan yhä käsin antaimoro-paperia mulperipuun kuoresta.',
+    },
+    Ihorombe: {
+      lyhyt: 'Ihorombe on Madagaskarin harvimmin asuttuja alueita, ja sen asukkaista neljä viidestä on bara-kansaa.',
+    },
+    Melaky: {
+      lyhyt: 'Maintiranon edustan Barren-saarilla leiriytyy kausittain vezo-kalastajia, jotka purjehtivat sinne jopa 600 kilometrin päästä.',
+    },
+    Menabe: {
+      lyhyt: 'Kirindyn metsässä elää jättiloikkarotta, jota ei tavata luonnossa missään muualla kuin tällä pienellä Menaben kaistaleella.',
+    },
+    Sava: {
+      lyhyt: 'Savan nimi on koottu sen neljän kaupungin alkukirjaimista, ja alue tuottaa enemmän vaniljaa kuin mikään muu seutu maailmassa.',
+    },
+    Sofia: {
+      lyhyt: 'Sofian rannikolla on Madagaskarin tihein mangrovemetsien keskittymä, yhteensä noin 450 neliökilometriä.',
+    },
+    Analanjirofo: {
+      lyhyt: 'Analanjirofo tarkoittaa neilikkametsää, ja valtaosa Madagaskarin mausteneilikasta kasvatetaan täällä.',
+    },
+    Atsinanana: {
+      lyhyt: 'Toamasina on Madagaskarin tärkein satama ja saaren toiseksi suurin kaupunki.',
+    },
+    "Alaotra-Mangoro": {
+      lyhyt: 'Alaotrajärvi on Madagaskarin suurin järvi, ja sen ruovikoissa elää alaotranbambulemuri, jota ei tavata missään muualla.',
+    },
+    "Vatovavy-Fitovinany": {
+      lyhyt: 'Manakarassa Fianarantsoasta tuleva rautatie ylittää lentokentän kiitotien, mikä on maailmassa hyvin harvinaista.',
+    },
+  },
+  /*
+   * MOZ (erä 9B). Avaimet MAAKUNNAT_KAIKKI.MOZ:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Cabo Delgado — Ibo Island; Gaza — Limpopo National Park;
+   *   Inhambane — Bazaruto Archipelago; Manica — Chimoio (Cabeça do
+   *   Velho); Maputo — Maputo National Park; Nampula — Island of
+   *   Mozambique; Niassa — Niassa Reserve (haku); Sofala — Port of
+   *   Beira; Tete — Samora Machel Bridge; Zambezia — Gurúè
+   */
+  MOZ: {
+    "Cabo Delgado": {
+      lyhyt: 'Quirimbasin saariston Ibo tunnetaan hopeasepistään, ja mantereelta saarelle kuljetaan perinteisillä dhow-veneillä.',
+    },
+    Gaza: {
+      lyhyt: 'Limpopon kansallispuisto on osa rajat ylittävää Suurta Limpopon puistoa, joka jatkuu Etelä-Afrikan Krugerin puistoon.',
+    },
+    Inhambane: {
+      lyhyt: 'Bazaruton saariston kansallispuiston vesissä elää noin 120 dugongia, Mosambikin suurin jäljellä oleva kanta.',
+    },
+    Manica: {
+      lyhyt: 'Chimoion kaupungin yllä kohoaa Cabeça do Velho, kallio, jonka muoto muistuttaa vanhan miehen päätä.',
+    },
+    Maputo: {
+      lyhyt: 'Maputon kansallispuisto perustettiin 1932 rannikon norsujen suojaksi, ja nyt niitä elää siellä noin 400.',
+    },
+    Nampula: {
+      lyhyt: 'Mosambikin saarelle, maan entiseen pääkaupunkiin, johtaa mantereelta 3,8 kilometriä pitkä silta.',
+    },
+    Niassa: {
+      lyhyt: 'Niassan riistansuojelualue on yli 42 000 neliökilometrin laajuisena Mosambikin suurin suojelualue.',
+    },
+    Sofala: {
+      lyhyt: 'Beiran satama on Mosambikin toiseksi suurin, ja sen radat vievät tavaraa Zimbabween ja Malawiin.',
+    },
+    Tete: {
+      lyhyt: 'Teten kaupungissa Sambesin ylittää 1972 valmistunut Samora Machelin riippusilta, joka on yli 750 metriä pitkä.',
+    },
+    Zambezia: {
+      lyhyt: 'Gurúèn teeviljelmät ovat Mosambikin laajimmat, ja kaupungin yllä kohoaa maan toiseksi korkein vuori Namuli.',
+    },
+  },
+  /*
+   * ZWE (erä 9B). Avaimet MAAKUNNAT_KAIKKI.ZWE:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Bulawayo — Bulawayo; Harare — Mbare Musika; Manicaland — Mutarazi
+   *   Falls; Mashonaland Central — Mazowe ja Mazoe Orange Crush (haku);
+   *   Mashonaland East — Ewanrigg Botanical Garden (haku); Mashonaland
+   *   West — Lake Kariba; Masvingo — Gonarezhou National Park;
+   *   Matabeleland North — Binga District; Matabeleland South —
+   *   Beitbridge (haku); Midlands — Great Dyke
+   */
+  ZWE: {
+    Bulawayo: {
+      lyhyt: 'Bulawayon keskustan kadut tehtiin aikanaan niin leveiksi, että härkävaljakot pystyivät kääntymään niillä.',
+    },
+    Harare: {
+      lyhyt: 'Hararen Mbare Musika on maan tärkein vihannestori ja maaseudulle lähtevien linja-autojen pääasema.',
+    },
+    Manicaland: {
+      lyhyt: 'Mutarazin putoukset syöksyvät itäisen vuoriston reunalta kahdessa portaassa yhteensä noin 770 metriä.',
+    },
+    "Mashonaland Central": {
+      lyhyt: 'Mazowen laakson appelsiinitarhat antoivat nimensä Zimbabwen tunnetuimmalle mehujuomalle, Mazoe-appelsiinitiivisteelle.',
+    },
+    "Mashonaland East": {
+      lyhyt: 'Ewanriggin kasvitieteellisessä puutarhassa on yksi maailman suurimmista aloekokoelmista, ja se kukkii toukokuusta heinäkuuhun.',
+    },
+    "Mashonaland West": {
+      lyhyt: 'Karibajärvi on tilavuudeltaan maailman suurin tekojärvi, ja siihen tuotiin Tanganjikajärvestä sardiinimaista kapenta-kalaa.',
+    },
+    Masvingo: {
+      lyhyt: 'Gonarezhoun puistossa Runde-joen varrella kohoavat punaiset Chilojon hiekkakivijyrkänteet, jopa 180 metriä korkeat.',
+    },
+    "Matabeleland North": {
+      lyhyt: 'Bingan lähellä Karibajärven rannalla pulppuavat Chibwatatatan kuumat lähteet, ja seutu on tonga-kansan kotia.',
+    },
+    "Matabeleland South": {
+      lyhyt: 'Beitbridgen raja-asema Limpopon yli Etelä-Afrikkaan on eteläisen Afrikan vilkkain maaraja.',
+    },
+    Midlands: {
+      lyhyt: 'Midlandsin halki kulkee Great Dyke, noin 550 kilometriä pitkä kallioperän vyöhyke, josta louhitaan kromia ja platinaa.',
+    },
+  },
+  /*
+   * NAM (erä 9B). Avaimet MAAKUNNAT_KAIKKI.NAM:n tunnuksia TÄSMÄLLEEN
+   * (vanha jako: "Caprivi" = 2013 alkaen Sambesin alue, "Kavango" =
+   * 2013 jaettu Itä- ja Länsi-Kavangoon, "Karas" = nyk. ǁKaras).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Caprivi — Zambezi Region; Erongo — Walvis Bay; Hardap — Hardap
+   *   Dam; Karas — Namib Desert horse; Kavango — Rundu; Khomas —
+   *   Christuskirche (haku); Kunene — Twyfelfontein; Ohangwena —
+   *   Ohangwena Region; Omaheke — Gobabis; Omusati — Ombalantu baobab
+   *   tree; Oshana — Oshana Region; Oshikoto — Lake Otjikoto;
+   *   Otjozondjupa — Waterberg Plateau Park
+   */
+  NAM: {
+    Caprivi: {
+      lyhyt: 'Nykyisen Sambesin alueen itäkärjessä Namibian, Sambian ja Botswanan rajat kohtaavat alle sadan metrin päässä Zimbabwesta.',
+    },
+    Erongo: {
+      lyhyt: 'Walvis Bayssa on Namibian ainoa luonnollinen syväsatama, ja sen laguunissa ruokailee flamingoja.',
+    },
+    Hardap: {
+      lyhyt: 'Marientalin lähellä oleva Hardapin pato valmistui 1963 ja oli yli viisikymmentä vuotta Namibian suurin.',
+    },
+    Karas: {
+      lyhyt: 'Ausin lähellä Namibin aavikolla elää villiintyneitä hevosia, joiden alkuperästä kiistellään yhä.',
+    },
+    Kavango: {
+      lyhyt: 'Rundu on Kavango-joen rannalla, jonka toisella puolella on jo Angola, ja kaupunki tunnetaan puunveistäjistään.',
+    },
+    Khomas: {
+      lyhyt: 'Windhoekin Christuskirche vihittiin 1910, ja sen lasimaalaukset olivat Saksan keisarin lahja.',
+    },
+    Kunene: {
+      lyhyt: 'Twyfelfonteinin hiekkakiviin on kaiverrettu tuhansia kalliopiirroksia, ja paikka oli Namibian ensimmäinen maailmanperintökohde.',
+    },
+    Ohangwena: {
+      lyhyt: 'Ohangwenan hiekkamailla viljellään ennen kaikkea mahangua eli helmihirssiä, ja karjanhoito on toinen pääelinkeino.',
+    },
+    Omaheke: {
+      lyhyt: 'Gobabisin sisääntuloa vartioi härän patsas tekstillä "Cattle Country", sillä seutu on karjatilojen sydänmaata.',
+    },
+    Omusati: {
+      lyhyt: 'Outapin Ombalantun baobabin onttoa runkoa on käytetty kappelina, postina ja piilopaikkana.',
+    },
+    Oshana: {
+      lyhyt: 'Oshakati, Ongwediva ja Ondangwa muodostavat yhdessä Namibian toiseksi suurimman asutuskeskittymän.',
+    },
+    Oshikoto: {
+      lyhyt: 'Otjikotojärvi syntyi karstiluolan sortuessa, ja sen pohjassa on yhä saksalaisten 1915 upottamia tykkejä.',
+    },
+    Otjozondjupa: {
+      lyhyt: 'Waterbergin ylänkö kohoaa Kalaharin tasangolta, ja sen kallioissa on noin 200 miljoonaa vuotta vanhoja dinosauruksen jälkiä.',
+    },
+  },
+  /*
+   * UGA (erä 9B). Avaimet MAAKUNNAT_KAIKKI.UGA:n tunnuksia TÄSMÄLLEEN
+   * (neljä aluetta). Vain `lyhyt`. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026): Eastern — Sipi Falls; Central — Namugongo (Martyrs'
+   * Day, haku); Western — Bwindi Impenetrable National Park; Northern —
+   * Vitellaria paradoxa subsp. nilotica (haku)
+   */
+  UGA: {
+    Eastern: {
+      lyhyt: 'Elgonvuoren rinteellä Sipin putoukset laskeutuvat kolmessa osassa, ja ympäröivillä rinteillä kasvatetaan arabicakahvia.',
+    },
+    Central: {
+      lyhyt: 'Namugongon marttyyrien pyhäkköön kokoontuu joka 3. kesäkuuta satojatuhansia pyhiinvaeltajia eri puolilta Afrikkaa.',
+    },
+    Western: {
+      lyhyt: 'Bwindin läpipääsemättömässä metsässä elää noin puolet maailman vuorigorilloista.',
+    },
+    Northern: {
+      lyhyt: 'Pohjoisen savanneilla kasvaa sheapuuta, jonka pähkinöistä tehty nilotica-voi on pehmeämpää kuin Länsi-Afrikan sheavoi.',
+    },
+  },
+  /*
+   * SEN (erä 9B). Avaimet MAAKUNNAT_KAIKKI.SEN:n tunnuksia TÄSMÄLLEEN
+   * diakriitteineen. Vain `lyhyt`. Lähteet (en-/fr-Wikipedia ja haku
+   * 25.9.2026): Dakar — Lake Retba; Diourbel — Diourbel (fr); Fatick —
+   * Kingdom of Sine; Kaffrine — Région de Kaffrine (fr); Kaolack —
+   * Kaolack (fr); Kédougou — Bassari Country; Kolda — Kolda (fr);
+   * Louga — Désert de Lompoul (haku); Matam — Région de Matam (fr);
+   * Saint-Louis — Richard Toll; Sédhiou — anacarde (haku); Tambacounda —
+   * Niokolo-Koba National Park; Thiès — Manufactures sénégalaises des
+   * arts décoratifs (haku); Ziguinchor — Mlomp (fr)
+   */
+  SEN: {
+    Dakar: {
+      lyhyt: 'Retban eli Lac Rosen suolajärvi hehkuu vaaleanpunaisena levän väriaineen ansiosta, ja sen pohjasta kerätään suolaa.',
+    },
+    Diourbel: {
+      lyhyt: 'Diourbel on vanhan Baolin sydänmaata, ja sen suuri moskeija valmistui 1918.',
+    },
+    Fatick: {
+      lyhyt: 'Sinen serer-kuningaskunta palautettiin seremoniallisena 2019, ja kuningas kruunattiin vanhassa pääkaupungissa Diakhaossa.',
+    },
+    Kaffrine: {
+      lyhyt: 'Kaffrine erotettiin Kaolackista omaksi alueekseen 2008, ja se vei mukanaan noin kaksi kolmasosaa emoalueen pinta-alasta.',
+    },
+    Kaolack: {
+      lyhyt: 'Kaolackin Médina Bayen kaupunginosassa on suuri moskeija, jonka rakennutti sufijohtaja Ibrahim Niasse.',
+    },
+    "Kédougou": {
+      lyhyt: 'Kédougoun vuorilla asuvien bassari-, bedik- ja fulbe-kansojen kulttuurimaisemat ovat Unescon maailmanperintöä.',
+    },
+    Kolda: {
+      lyhyt: 'Kolda on Ylä-Casamancen pääkaupunki lähellä Guinea-Bissaun rajaa, ja sen asukkaista suurin osa on fulbeja.',
+    },
+    Louga: {
+      lyhyt: 'Lompoulin pieni aavikko kohoaa oranssinpunaisina, jopa 50-metrisinä dyyneinä alle kymmenen kilometrin päässä Atlantista.',
+    },
+    Matam: {
+      lyhyt: 'Matamin Ndendoryssa on fosfaattiesiintymä, jonka varannoiksi arvioidaan noin 40 miljoonaa tonnia.',
+    },
+    "Saint-Louis": {
+      lyhyt: 'Richard-Tollissa Senegal-joen varrella viljellään sokeriruokoa, ja kaupungin sokeritehdas toimittaa sokeria koko maahan.',
+    },
+    "Sédhiou": {
+      lyhyt: 'Sédhiou on Senegalin suurin cashewpähkinöiden tuottaja: arviolta 70 prosenttia maan sadosta tulee täältä.',
+    },
+    Tambacounda: {
+      lyhyt: 'Niokolo-Koba on Senegalin suurin kansallispuisto, ja sen savanneilla elää yhä leijonia ja simpansseja.',
+    },
+    "Thiès": {
+      lyhyt: 'Thièsin kuvakudostehtaalla on kudottu käsin seinävaatteita vuodesta 1966, ja se on laatuaan ainoa Afrikassa.',
+    },
+    Ziguinchor: {
+      lyhyt: 'Mlompin kylän harvinaiset kaksikerroksiset savitalot suojeltiin historiallisina muistomerkkeinä vuonna 2003.',
+    },
+  },
+  /*
+   * SLE (erä 9B). Avaimet MAAKUNNAT_KAIKKI.SLE:n tunnuksia TÄSMÄLLEEN
+   * (vanha jako ennen vuotta 2017: "Northern" sisältää nykyisen
+   * Luoteisen provinssin, jossa Lungi on). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026): Eastern — Star of Sierra Leone
+   * Diamond; Northern — Freetown International Airport; Southern —
+   * sowei-naamio (haku); Western — Tacugama Chimpanzee Sanctuary (haku)
+   */
+  SLE: {
+    Eastern: {
+      lyhyt: 'Koidun timanttikaivoksilta löytyi 1972 Sierra Leonen tähti, lähes 969 karaatin timantti, suurin koskaan löydetty jokisoran timantti.',
+    },
+    Northern: {
+      lyhyt: 'Maan ainoa kansainvälinen lentoasema on Lungissa, ja Freetowniin jatketaan yleensä lautalla tai vesitaksilla joensuun yli.',
+    },
+    Southern: {
+      lyhyt: 'Mende-naisten Sande-seuran mustat sowei-naamiot ovat harvinaisia, sillä niitä kantavat tanssissa naiset itse.',
+    },
+    Western: {
+      lyhyt: 'Freetownin laitamien vuoristometsässä toimii vuonna 1995 perustettu Tacugaman simpanssien turvakoti.',
+    },
+  },
+  /*
+   * LBR (erä 9B). Avaimet MAAKUNNAT_KAIKKI.LBR:n tunnuksia TÄSMÄLLEEN
+   * ("Gbapolu" = Gbarpolu, "River Cess" = Rivercess). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja haku 25.9.2026): Bomi — Blue Lake (haku);
+   * Bong — Cuttington University; Gbapolu — Gbarpolu County; Grand
+   * Bassa — Bassa people (haku); Grand Cape Mount — Lake Piso; Grand
+   * Gedeh — Grebo-Krahn National Park; Grand Kru — Grand Kru County;
+   * Lofa — Lofa County; Margibi — Roberts International Airport;
+   * Maryland — Maryland County; Montserrado — Montserrado County;
+   * Nimba — Ganta; River Gee — Fish Town; River Cess — Rivercess County;
+   * Sinoe — Greenville, Liberia
+   */
+  LBR: {
+    Bomi: {
+      lyhyt: 'Tubmanburgin lähellä on Blue Lake, hylättyyn rautamalmikuoppaan syntynyt syvä ja kirkkaan sininen järvi.',
+    },
+    Bong: {
+      lyhyt: 'Suacocossa toimii Cuttingtonin yliopisto, joka perustettiin 1889 ja on Saharan eteläpuolisen Afrikan vanhimpia yksityisyliopistoja.',
+    },
+    Gbapolu: {
+      lyhyt: 'Gbarpolu erotettiin Lofasta 2001, joten se on Liberian nuorin maakunta, ja valtaosa sen pinta-alasta on metsää.',
+    },
+    "Grand Bassa": {
+      lyhyt: 'Grand Bassa on bassa-kansan ydinaluetta, ja bassat ovat yksi Liberian suurimmista kansoista.',
+    },
+    "Grand Cape Mount": {
+      lyhyt: 'Pisojärvi on Liberian suurin järvi, oikeastaan pitkänomainen vuorovesilaguuni, ja sen kosteikot on suojeltu.',
+    },
+    "Grand Gedeh": {
+      lyhyt: 'Grand Gedehin sademetsissä on vuonna 2017 perustettu Grebo-Krahnin kansallispuisto, jossa elää kääpiövirtahepoja.',
+    },
+    "Grand Kru": {
+      lyhyt: 'Grand Kru syntyi 1984, kun Sasstownin ja Kru Coastin alueet yhdistettiin, ja arkikieli on yhä kru.',
+    },
+    Lofa: {
+      lyhyt: 'Lofa on Liberian tärkeimpiä riisimaakuntia: vuonna 2011 noin kuudesosa maan riisipelloista oli täällä.',
+    },
+    Margibi: {
+      lyhyt: 'Harbelin lähellä on Liberian päälentoasema Roberts International, jonka kiitotie on yli kolme kilometriä pitkä.',
+    },
+    Maryland: {
+      lyhyt: 'Maryland on Liberian kaupungistuneimpia maakuntia: noin kuusi asukasta kymmenestä asuu kaupungeissa.',
+    },
+    Montserrado: {
+      lyhyt: 'Montserrado on Liberian pienin maakunta, mutta siellä asuu Monrovian ansiosta noin kolmannes koko maan väestöstä.',
+    },
+    Nimba: {
+      lyhyt: 'Ganta on Liberian toiseksi väkirikkain kaupunki, ja sen pohjoislaidalla virtaava Mano-joki on raja Guineaan.',
+    },
+    "River Gee": {
+      lyhyt: 'Pääkaupunki Fish Town on käännös grebonkielisestä nimestä, joka viittaa kylän vieressä virtaavaan kalapuroon.',
+    },
+    "River Cess": {
+      lyhyt: 'Rivercessin sademetsiin sataa vuodessa noin 4 500 millimetriä vettä, moninkertaisesti Suomeen verrattuna.',
+    },
+    Sinoe: {
+      lyhyt: 'Pääkaupunki Greenvillen satama on Liberian kolmanneksi suurin, ja sen kautta kulkee nykyään lähinnä puutavaraa.',
+    },
+  },
 };
