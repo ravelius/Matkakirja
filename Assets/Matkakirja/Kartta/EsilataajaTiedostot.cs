@@ -113,7 +113,8 @@ namespace Matkakirja
                     else if (File.Exists(osa)) File.Delete(osa);
                 }
                 catch (IOException e) { Debug.LogWarning("MATKAKIRJA esilataaja: tiedosto " + e.Message); ok = false; }
-                if (!ok) Debug.Log($"MATKAKIRJA esilataaja: tiedosto {Lyhenna(osoite)} {q.responseCode} {q.error} ({kohta}, {ryhma})");
+                Debug.Log(ok ? $"MATKAKIRJA esilataaja: tiedosto {Lyhenna(osoite)} {q.responseCode} alku {alku} +{q.downloadedBytes} t ({kohta}, {ryhma})"
+                             : $"MATKAKIRJA esilataaja: tiedosto {Lyhenna(osoite)} {q.responseCode} {q.error} ({kohta}, {ryhma})");
             });
             if (r.Peruttu) yield break;
             if (ok) { r.Valmiit++; TiedostojaValmiina++; } else r.Virheet++;
