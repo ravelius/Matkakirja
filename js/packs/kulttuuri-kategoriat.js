@@ -116401,6 +116401,208 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (Turistiopas, 25.9.2026). Nostot kertovat jo
+       * historian, asulejot, bumba-meu-boin ja reggaen synnyn, joten opas
+       * pysyy nykypäivässä: liikkuminen, ruoka, vuorovesi ja Alcântara,
+       * Lençóis Maranhenses sekä reggae-ilta. Taustatiedot en- ja
+       * pt-Wikipediasta (São Luís, Cuxá, Guaraná Jesus, Reggae no Brasil,
+       * Reggae Maranhão Museum, Lençóis Maranhenses) ja Wikivoyagesta;
+       * teksti omaa. Kuvien lisenssit ja kuvaukset tarkistettu Commonsin
+       * tiedostosivuilta 25.9.2026, kaikki kahdeksan katsottu silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Beco Catarina Mina São Luís Maranhão 2025-6041.jpg',
+          lyhyt: 'Beco Catarina Minan 35 porrasta tehtiin 1700-luvulla Portugalista tuodusta lioz-kivestä.',
+          selite: 'Värikkäiden paperilippujen alla nouseva Beco Catarina '
+            + 'Minan portaikko on 1700-luvulta, ja kuja on nimetty Catarina '
+            + 'Rosa Ferreira de Jesusin mukaan, joka osti vapautensa '
+            + 'orjuudesta ja asui myöhemmin kujan varrella.',
+          lahde: 'Prburley, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'São Luís on saarikaupunki, jonka vanha keskusta kuljetaan '
+          + 'jalan: jyrkät kivikadut ja portaat laskeutuvat palatseilta '
+          + 'satamaan, ja juuri sinne matkailijan kannattaa majoittua. '
+          + 'Keittiöllä on oma hapan sävynsä — vihreä arroz '
+          + 'de cuxá, katkaravun kanssa syötävä juçara ja vaaleanpunainen '
+          + 'Guaraná Jesus ovat tämän osavaltion omia. Rannoilla vuoroveden '
+          + 'korkeusero voi ylittää seitsemän metriä, ja sama vesi määrää '
+          + 'Alcântaran veneen lähtöajan. Neljän–viiden tunnin bussimatkan päässä '
+          + 'ovat Lençóis Maranhensesin dyynit ja sadevesilammet. Illalla '
+          + 'kuunnellaan reggaeta, jota täällä tanssitaan pareittain.',
+        artikkeli: {
+          nimi: 'Matkailijan São Luís',
+          teksti: 'São Luís kuljetaan jalan, syödään happamana ja tanssitaan '
+            + 'pareittain.',
+          nosto: 'Vuorovesi voi nousta lahdella yli seitsemän metriä, ja se '
+            + 'määrää sekä rannan leveyden että Alcântaran veneen lähtöajan.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Portaita ylös ja alas',
+              teksti: 'São Luís on saari, ja maantie mantereelle kulkee vain '
+                + 'Estreito dos Mosquitosin salmen ylittävää siltaa pitkin. '
+                + 'Lentokenttä on noin viidentoista '
+                + 'kilometrin päässä keskustasta, ja vanhaan kaupunkiin '
+                + 'pääsee taksilla tai kaupunkibussilla. Majoitus kannattaa '
+                + 'hakea historiallisesta keskustasta, sillä sen korttelit '
+                + 'kuljetaan joka tapauksessa jalan. Kaupunki on rakennettu '
+                + 'rinteeseen: ylhäällä ovat palatsit ja Pedro II:n aukio, '
+                + 'alhaalla sataman puoleinen Praia Grande, ja niiden välillä '
+                + 'kulkevat jyrkät kivikadut ja portaikot. Rua do Gizin '
+                + 'virallinen nimi on ollut 28 de Julho vuodesta 1865, mutta '
+                + 'uusi nimi ei koskaan tarttunut kansan suuhun. Beco Catarina Minan 35 '
+                + 'porrasta on tehty Portugalista tuodusta lioz-kivestä, ja '
+                + 'kuja on nimetty vapautensa ostaneen orjan mukaan, josta '
+                + 'tuli talonomistaja. Mukulakivi on sateella liukas, ja '
+                + 'sadekausi kestää tammikuusta kesäkuuhun. Iltaisin tyhjille '
+                + 'sivukaduille ei kannata eksyä: kun puotien ovet '
+                + 'sulkeutuvat, taksi on turvallisin kyyti takaisin.',
+              kuva: [
+                {
+                  tiedosto: 'Escadaria da Rua 28 de Julho.jpg',
+                  lyhyt: 'Rua do Giz nimettiin virallisesti 28 de Julhoksi 1865, mutta kansa käyttää vanhaa nimeä.',
+                  selite: 'Rua do Giz laskeutuu portaina sobrado-talojen '
+                    + 'välistä, ja sen virallinen nimi 28 de Julho muistuttaa '
+                    + 'päivästä vuonna 1823, jolloin portugalilaiset joukot '
+                    + 'antautuivat ja Maranhão liittyi itsenäiseen Brasiliaan.',
+                  lahde: 'Mariza Bezerra, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Rua Portugal iluminada.jpg',
+                  lyhyt: 'Rua Portugal kulkee alhaalla Praia Grandessa, sataman puoleisessa kaupunginosassa.',
+                  selite: 'Ilta-aurinko valaisee Rua Portugalin mukulakivet '
+                    + 'ja laatoitetut julkisivut alhaalla sataman puoleisessa '
+                    + 'Praia Granden kaupunginosassa.',
+                  lahde: 'Mariza Bezerra, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Centro histórico, rain.jpg',
+                  lyhyt: 'Sadekauden kuuro vanhassa kaupungissa tekee mukulakivestä liukkaan hetkessä.',
+                  selite: 'Helmikuun iltakuuro kastelee vanhan kaupungin '
+                    + 'aukion, sillä São Luísin sadekausi kestää tammikuusta '
+                    + 'kesäkuuhun ja sateisin kuukausi on huhtikuu.',
+                  lahde: 'Alan Rodrigues, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Hapan ja vihreä keittiö',
+              teksti: 'Maranhãon keittiö maistuu happamalta. Arroz de cuxán '
+                + 'vihreä väri tulee vinagreirasta, hapokkaasta '
+                + 'hibiskuslajista, jonka lehdet haudutetaan kuivatun '
+                + 'katkaravun, paahdetun seesamin ja maniokkijauhon kanssa; '
+                + 'nimen arvellaan tulevan tupin sanoista, jotka tarkoittavat '
+                + 'suunnilleen "se mikä säilyy happamana". Riisi syödään '
+                + 'usein paistetun kalan kanssa. Juçaraksi kutsutaan täällä '
+                + 'samaa palmunmarjasosetta, jota muualla Brasiliassa myydään '
+                + 'makeana açaína, mutta maranhãolainen voi syödä sen myös '
+                + 'kuivatun katkaravun ja maniokkijauhon kanssa. Marjaa '
+                + 'juhlitaan joka lokakuu Maracanãn kaupunginosassa '
+                + 'festivaalilla, jota on vietetty yli viisikymmentä vuotta. '
+                + 'Janoon tilataan Guaraná Jesusta: vaaleanpunaista, kanelille '
+                + 'tuoksuvaa limonadia, jonka apteekkari Jesus Norberto Gomes '
+                + 'toi myyntiin vuonna 1920. Merkin omistaa nykyään Coca-Cola, '
+                + 'ja kun juomaa tarjotaan, kysytään leikillään: otetaanko '
+                + 'Jesus vastaan?',
+              kuva: {
+                tiedosto: 'Arroz de cuxá.jpg',
+                lyhyt: 'Arroz de cuxán vihreä väri tulee happamista vinagreiran lehdistä.',
+                selite: 'Arroz de cuxá on Maranhãon tunnusruoka, jossa riisin '
+                  + 'sekaan haudutetaan vinagreiran lehtiä, kuivattua '
+                  + 'katkarapua, paahdettua seesamia ja maniokkijauhoa, ja '
+                  + 'tämä kattila kuvattiin lahden toisella puolella '
+                  + 'Alcântarassa.',
+                lahde: 'Ciriice, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vuoroveden tahdissa',
+              teksti: 'Rannalle lähtiessä kannattaa katsoa vuorovesitaulukkoa. '
+                + 'São Marcosin lahdella nousu- ja laskuveden ero voi ylittää '
+                + 'seitsemän metriä: laskuveden aikaan meri vetäytyy paikoin '
+                + 'lähes kilometrin päähän, ja nousuveden aikaan kuivaa '
+                + 'hiekkaa ei jää lainkaan. Suosituin ranta on Ponta '
+                + 'd\'Areia, lähimpänä vanhaa kaupunkia; siitä rannat '
+                + 'jatkuvat Avenida Litorânean varrella itään, ja Calhaun '
+                + 'rantaa pidetään kaupungin parhaana. Kaikki rannat eivät '
+                + 'ole aina uimakelpoisia, joten osavaltion '
+                + 'ympäristöviraston uimavesikartta tarkistetaan samana '
+                + 'päivänä. Vuorovesi määrää myös päiväretken: Alcântaraan '
+                + 'lähtevät veneet ylittävät lahden Praia Granden '
+                + 'vesiliikenneterminaalista runsaassa tunnissa, ja koska '
+                + 'lähtöajat seuraavat vettä, ne kysytään edellisenä päivänä. '
+                + 'Perillä odottaa hiljainen siirtomaakaupunki, jonka '
+                + 'päätorilla São Matiasin kirkosta on jäljellä pelkkä '
+                + 'julkisivu.',
+              kuva: {
+                tiedosto: 'Ponta D\'areia-4 (53225927252).jpg',
+                lyhyt: 'Ponta d\'Areian ranta on São Luísin suosituin, ja vuorovesi muuttaa sen leveyttä.',
+                selite: 'Ponta d\'Areian leveä hiekkaranta ja kerrostalorivi '
+                  + 'São Marcosin lahden rannalla, jossa nousu- ja '
+                  + 'laskuveden ero voi ylittää seitsemän metriä.',
+                lahde: 'Otávio Nogueira, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Dyynit ja sadevesilammet',
+              teksti: 'Maranhãon suurin nähtävyys on neljän–viiden tunnin '
+                + 'bussimatkan päässä. Lençóis Maranhensesin kansallispuiston '
+                + 'portti on Barreirinhasin pikkukaupunki noin 260 kilometriä '
+                + 'São Luísista itään; linja-autot lähtevät kaupungin '
+                + 'bussiasemalta päivittäin, ja tilauslento vie perille '
+                + 'viidessäkymmenessä minuutissa. Barreirinhasista dyyneille '
+                + 'ajetaan nelivetoautoilla, ja viimeinen matka Lagoa Azulin '
+                + 'tai Lagoa Bonitan rantaan kiivetään hiekkaa pitkin jalan. '
+                + 'Toinen reitti kulkee jokea: Preguiças-joen reittivene '
+                + 'suistoon kestää noin neljä tuntia, pikavene puolitoista. '
+                + 'Ajoitus ratkaisee kaiken. Sadekausi täyttää dyynien '
+                + 'väliset painanteet, ja lammet ovat täysimmillään '
+                + 'toukokuusta syyskuuhun; vuodenvaihteessa ne voivat kuivua '
+                + 'lähes kokonaan. Suosio on kasvanut nopeasti: vuonna 2023 '
+                + 'puistossa kävi luonnonsuojeluviraston mukaan noin 408 000 '
+                + 'vierailijaa.',
+              kuva: {
+                tiedosto: 'Lençóis Maranhenses 2018.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'Lençóis Maranhensesin lammet ovat täysimmillään toukokuusta syyskuuhun.',
+                selite: 'Ilmakuva Lençóis Maranhensesin kansallispuistosta '
+                  + 'kesäkuussa 2018, kun sadekauden vesi on täyttänyt '
+                  + 'dyynien väliset painanteet makean veden lammiksi.',
+                lahde: 'Julius Dadalti, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Reggae kahdestaan',
+              teksti: 'Reggaeta São Luísissa ei kuunnella istuen. Maranhão on '
+                + 'ensimmäinen paikka maailmassa, jossa reggaeta alettiin '
+                + 'tanssia pareittain, tiukasti toisissa kiinni — tyyliä '
+                + 'kutsutaan nimellä agarradinho. Helpoin tapa päästä mukaan '
+                + 'on torstai-ilta: osavaltion kulttuurisihteeristö järjestää '
+                + 'Praça do Reggaella maksuttoman Quinta do Reggae -illan '
+                + 'kello kuudesta puoli yhteentoista, ja vuorollaan soittavat '
+                + 'bändit ja radiolat. Aukion laidalla Rua da Estrelalla on '
+                + 'Museu do Reggae, joka avattiin tammikuussa 2018 '
+                + 'ensimmäisenä reggaemuseona Jamaikan ulkopuolella; '
+                + 'kokoelmissa on harvinaisia vinyylejä, vanhojen '
+                + 'reggaeklubien muistoja ja pioneeri-DJ Serralheiron radiola. '
+                + 'Sanastoa kannattaa opetella: kappale, josta tulee yleisön '
+                + 'suosikki, on pedra eli kivi. Syyskuussa 2023 voimaan '
+                + 'tullut liittovaltion laki antoi São Luísille virallisen '
+                + 'nimen Brasilian reggaepääkaupunki.',
+              kuva: {
+                tiedosto: 'Museu do Reggae do Maranhão - 10.jpg',
+                lyhyt: 'Serralheiron radiola Voz de Ouro Canarinho kuuluu Maranhãon reggaen pioneereihin.',
+                selite: 'Museu do Reggaessa esillä oleva Voz de Ouro '
+                  + 'Canarinho on DJ Serralheiron eli Edmilson Tomé da Costan '
+                  + 'radiola, jonka vahvistinpinon päällä seisoo pokaaleja.',
+                lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kuvataide',
