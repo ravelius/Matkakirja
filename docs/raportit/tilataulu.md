@@ -20,7 +20,7 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 44% | idle | PR #3155 |
 | Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 52% | running | Nollattu ja palannut käyntiin |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 46% | running | Nollattu ja palannut käyntiin (8 %) |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, juna: proto-kaanna.sh 0 % CPU, ei lokia 23.44 jälkeen (epäilty jumi)) |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, juna: jumi (IL2CPP) purettu 00.35 Natiiviseppä, juna käännetään uudelleen) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
