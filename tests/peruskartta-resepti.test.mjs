@@ -459,3 +459,12 @@ test('vanha resepti (23a) piirtää z6-laatan tavulleen entisenä', { skip: ohit
     rmSync(k, { recursive: true, force: true });
   }
 });
+
+test('resepti 2026-09-26 = 2026-09-25 + litistys 1 ja syvyyskontrasti 1,35 (löydös 129)', () => {
+  const a = RESEPTIT['2026-09-25']; const b = RESEPTIT['2026-09-26'];
+  for (const k of Object.keys(a)) if (!['kuvaus', 'pohjaliput'].includes(k)) assert.deepEqual(b[k], a[k], k);
+  assert.ok(b.pohjaliput.includes('{"syvyys":{"litistys":1}}'));
+  assert.deepEqual(b.pohjaliput.slice(-2), ['--syvyyskontrasti', '1.35']);
+  assert.equal(b.pohjaliput[b.pohjaliput.indexOf('--reseptinimi') + 1], '2026-09-26');
+  assert.ok(a.pohjaliput.includes('{"syvyys":{"litistys":0.8}}'), '25 ennallaan');
+});
