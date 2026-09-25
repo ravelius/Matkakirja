@@ -112091,6 +112091,267 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Freetown',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Sierra Leone
+       * Freetownin ja sen niemimaan kautta: nostot kertovat Freetownista,
+       * joten opas pysyy pääkaupungissa, niemimaan rannoilla ja
+       * lentokentän matkalla. Taustatiedot englannin Wikipediasta
+       * (Freetown, Freetown International Airport, Tourism in Sierra
+       * Leone, Bureh Town, Banana Islands, Kent, Sierra Leone, Western
+       * Area Peninsula National Park, Wildlife of Sierra Leone, Pan
+       * African Sanctuary Alliance, Sierra Leonean cuisine, Sierra
+       * Leonean leone, 2017 Sierra Leone mudslides) ja Wikivoyagesta
+       * (Freetown, Sierra Leone, Banana Islands; hinnat, aukioloajat ja
+       * yritysten nimet jätetty pois, koska ne vanhenevat) — teksti omaa.
+       * Nostojen ja gallerian aiheita (puuvillapuu, Fourah Bay College,
+       * Horton, leijonavuorten nimi ja satama, The Graphic, Bunce-saari,
+       * vapautettujen turvakoti, Black Joke, Cuffee, Crowther) eikä
+       * africa-kulttuuri.js:n krioa ja riisiä tai maalehden (SLE)
+       * kassavanlehtiä, poyoa ja garia toisteta; Bai Bureh vain nimenä.
+       * Sisällissota mainitaan vain päättyneenä (2002). Kuvien lisenssit
+       * ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: River Number 2:n auringonlasku (2009).
+       * Lautan kuvan tekijä on CDC:n Flickr-tilin mukaan Katrin Kohl.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sierra Leone River No 2 sunset.jpg',
+          lyhyt: 'Aurinko laskee Atlanttiin River Number 2:n rannalla Freetownin niemimaalla.',
+          selite: 'Palmunlehdet ja kaksi olkikattoista varjoa piirtyvät '
+            + 'mustina oranssia iltataivasta vasten, ja vesirajassa istuu '
+            + 'pariskunta aurinkovarjon alla; River Number 2:n ranta '
+            + 'joulupäivänä 2009.',
+          lahde: 'Niroshan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Sierra Leonen sisällissota päättyi 2002, ja sen jälkeen '
+          + 'maa on ollut rauhallinen. Matkailu on toipunut tasaisesti, '
+          + 'ja eniten kävijöitä vetää Freetownin niemimaa, jonka '
+          + 'Atlantin puolta kiertää pitkä rivi vaaleita hiekkarantoja sademetsän peittämien vuorten '
+          + 'juurella. Lentokenttä on Lungissa suiston pohjoispuolella, '
+          + 'joten ensimmäinen matka tehdään yleensä veneellä lahden yli. '
+          + 'Kaupungin omalta Lumley Beachiltä ajetaan etelään River '
+          + 'Number 2:n, Tokehin ja Bureh Beachin rannoille ja Kentin '
+          + 'kylästä veneellä Banaanisaarille. Vuorten metsässä, lähellä '
+          + 'keskustaa, on Tacugaman simpanssien turvapaikka. Rannoilla '
+          + 'syödään tuoretta kalaa ja hummeria, ja kuivakausi joulukuusta '
+          + 'huhtikuuhun on myös vilkkainta matkailuaikaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Sierra Leone',
+          teksti: 'Lentokentältä kaupunkiin mennään veneellä, ja rannat alkavat kaupungin laidalta.',
+          nosto: 'Tacugaman simpanssien turvapaikka sai alkunsa, kun '
+            + 'pariskunta osti tienvarresta myytävänä olleen '
+            + 'simpanssinpoikasen 30 dollarilla.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lungista veneellä kaupunkiin',
+              teksti: 'Sierra Leonen ainoa kansainvälinen lentoasema, '
+                + 'Freetown International Airport, on Lungin kaupungissa '
+                + 'Sierra Leone -joen suiston pohjoisrannalla, noin 17 '
+                + 'kilometrin päässä pääkaupungista veden yli. Kiitotien '
+                + 'pohjoispuolelle rakennettu uusi terminaali avattiin '
+                + 'maaliskuussa 2023. Useimmat ulkomaiset matkailijat '
+                + 'ylittävät lahden vesitaksilla: pikaveneet lähtevät '
+                + 'kentän läheltä ja ajavat 30–40 minuutissa Freetownin '
+                + 'länsiosan Aberdeeniin tai Murray Towniin tai keskustan '
+                + 'Government Wharfiin. Liput myydään tuloaulan tiskeiltä, '
+                + 'ja usein ne voi varata myös verkossa. Halvin mutta '
+                + 'hitain vaihtoehto on valtion autolautta, joka kulkee '
+                + 'Lungin eteläkärjen Tagrinista Freetownin itäosan '
+                + 'Kissyyn; itse ylitys kestää noin tunnin, mutta lastaus ja '
+                + 'odotus voivat venyttää matkan tunneiksi. Maanteitse '
+                + 'Port Lokon kautta ajo kestää vähintään kolme tuntia. '
+                + 'Laskuveden aikaan kaikkiin laitureihin ei pääse '
+                + 'kuivin jaloin, ja kantajat nostavat matkustajat '
+                + 'matkatavaroineen veneeseen. Yöllä yksityisveneisiin ei '
+                + 'kannata nousta. Presidentti Julius Maada Bio julkisti '
+                + 'lahden ylittävän sillan hankkeen 2019, mutta toistaiseksi '
+                + 'kentältä kaupunkiin pääsee vain veneellä tai kiertotietä. '
+                + 'Tullessa tarkastetaan keltakuumerokotustodistus, joten '
+                + 'se kannattaa pitää käsimatkatavaroissa passin vieressä.',
+              kuva: [
+                {
+                  tiedosto: 'New Freetown International Airport airside.jpg',
+                  lyhyt: 'Lungin uusi terminaali avattiin 2023 kiitotien pohjoispuolelle.',
+                  selite: 'Freetown International Airportin kaareva '
+                    + 'terminaalirakennus ja keltaiset matkustajasillat '
+                    + 'utuisessa ilta-auringossa; kuva tammikuulta 2024.',
+                  lahde: 'Davidbstanley, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Aberdeen, Freetown, Sierra Leone - panoramio - Ghassan Mroue.jpg',
+                  lyhyt: 'Vesitaksit odottavat Aberdeenin sillan alla lähtöä Lungin lentokentälle.',
+                  selite: 'Valkoisia Sea Coach Express -pikaveneitä '
+                    + 'kelluvan puulaiturin vieressä Aberdeenin ja Murray '
+                    + 'Townin välisen sillan alla; taustalla Freetownin '
+                    + 'rinnetaloja. Kuva heinäkuulta 2011.',
+                  lahde: 'Ghassan Mroue, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Daily ferry commute in Sierra Leone (14794863188).jpg',
+                  lyhyt: 'Autolautta on halvin tapa ylittää suisto, mutta matka voi venyä tunneiksi.',
+                  selite: 'Ruosteinen matkustaja-autolautta on laskenut '
+                    + 'rampin betonirantaan, ja pakettiauto ajaa kannelta '
+                    + 'maihin; kuva elokuulta 2014.',
+                  lahde: 'Katrin Kohl / CDC Global, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Niemimaan rannat',
+              teksti: 'Freetownin niemimaan Atlantin puoleista rannikkoa '
+                + 'kiertää pitkä sarja hiekkarantoja, ja Wikivoyagen mukaan '
+                + 'ne ovat tavallisena arkipäivänä usein lähes tyhjiä. '
+                + 'Lähin on kaupungin oma Lumley Beach, joka ulottuu Cape '
+                + 'Sierra Leonen niemeltä Lumleyhin. Sen koko pituudelta '
+                + 'kulkee päällystetty kävelytie, hiekalla pelataan '
+                + 'jalkapalloa, ja viikonloppuisin ja pyhinä ranta täyttyy '
+                + 'väestä. Aberdeenin ja Lumleyn välisen rantatien baarit, '
+                + 'ravintolat ja yökerhot ovat kaupungin yöelämän keskus. '
+                + 'Etelään ajettaessa vastaan tulevat ensin Lakka ja sitten '
+                + 'River Number 2, jossa pieni joki kiemurtelee valkoisen '
+                + 'hiekan poikki mereen. Kylän asukkaat perustivat '
+                + 'yhteisöhankkeen, joka hoitaa rantaa, ja pieni baari myy '
+                + 'kylmää juotavaa ja tuoretta kalaa. Tokehin kohdalta alkaa '
+                + 'hyvä päällystetty tie. Bureh Beachin kylässä toimii '
+                + 'Sierra Leonen ainoa surffiklubi, ja John Obeyn ja Bureh '
+                + 'Beachin tienoilla ravintoloita on niin vähän, että eväät '
+                + 'kannattaa ottaa mukaan. Niemen eteläpäässä Kentin '
+                + 'kalastajakylästä pääsee paikallisella veneellä '
+                + 'Banaanisaarille, noin 40 kilometrin päähän Freetownista. '
+                + 'Saarilla ei ole autoja, Dublinin ja Rickettsin saaret '
+                + 'yhdistää kivipenger, ja edustan hylkyjen luona sukelletaan '
+                + 'ja snorklataan. Poda-poda-minibussit vievät vain Lakan '
+                + 'risteykseen, sieltä eteenpäin mennään okadalla eli '
+                + 'moottoripyörätaksilla. Rannoille johtavat sivutiet ovat '
+                + 'usein huonoja ja huonosti viitoitettuja.',
+              kuva: {
+                tiedosto: 'Hodroj Houssein-Tokey Beach (IMG 2218).jpg',
+                lyhyt: 'Kalastajien veneet ovat ankkurissa Tokehin rannan edustalla Freetownin niemimaalla.',
+                selite: 'Leveä, vaalea hiekkaranta kaartuu palmujen '
+                  + 'reunustamana, ja matalassa vedessä on ankkurissa puisia '
+                  + 'kalastus- ja kuljetusveneitä; horisontissa kaksi pientä '
+                  + 'saarta. Kuva tammikuulta 2016.',
+                lahde: 'Hodroj Houssein, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tacugaman simpanssit',
+              teksti: 'Freetownin selän takana kohoavien vuorten metsä on '
+                + 'suojeltu jo vuodesta 1916, jolloin siitä tehtiin '
+                + 'metsäreservi, ja kansallispuisto Western Area Peninsula '
+                + 'National Parkista tuli 2012. Se on Sierra Leonen '
+                + 'läntisin yhtenäinen sademetsä, jossa elää muun muassa '
+                + 'kolme sukeltajakauriin lajia ja runsaasti lintuja, ja '
+                + 'puisto on Unescon maailmanperintöehdokkaiden listalla. '
+                + 'Metsän keskellä, vain muutaman kilometrin päässä '
+                + 'keskustasta, on Tacugaman simpanssien turvapaikka. Sen '
+                + 'tarina alkoi 1988, kun Bala Amarasekaran ja hänen '
+                + 'vaimonsa Sharmila näkivät tienvarressa Freetownin '
+                + 'pohjoispuolella myytävänä simpanssinpoikasen ja ostivat '
+                + 'sen 30 dollarilla. Pian he huomasivat, että simpansseja '
+                + 'pidettiin yleisesti lemmikkeinä ja kohdeltiin usein '
+                + 'huonosti, ja 1995 he perustivat turvapaikan orvoille ja '
+                + 'hylätyille eläimille. Noin 40 hehtaarin alueella käy '
+                + 'vuosittain yli 2 000 maaseudun koululaista oppimassa '
+                + 'simpanssien suojelusta. Vuoden 2010 laskennassa Sierra '
+                + 'Leonen luonnossa arvioitiin elävän yli 5 500 simpanssia, '
+                + 'mikä on Guinean jälkeen toiseksi suurin '
+                + 'länsiafrikansimpanssien kanta. Vierailut sovitaan '
+                + 'etukäteen, ja perille ajetaan Regent Roadia Hill '
+                + 'Stationin ja Leicesterin kautta; Wikivoyage suosittelee '
+                + 'nelivetoautoa. Suojelusta huolimatta kaupungin kasvu on '
+                + 'syönyt metsää, ja sisällissota pahensi hakkuita.',
+              kuva: {
+                tiedosto: 'Chimpas at Tacugama Sanctuary, near Freetown.jpg',
+                lyhyt: 'Kaksi simpanssia istuu puunrungolla Tacugaman turvapaikassa Freetownin lähellä.',
+                selite: 'Kaksi simpanssia istuu vastakkain köysin '
+                  + 'sidotulla puunrungolla, toinen kurottaa kohti toista '
+                  + 'ja toinen työntää huulensa esiin; taustalla vihreää '
+                  + 'metsää ja aitaus. Kuva kesäkuulta 2010.',
+                lahde: 'Jeremy Weate, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kalaa, inkivääriä ja libanonilaista',
+              teksti: 'Freetown on Atlantin rannalla, ja kala on sen '
+                + 'ruokapöydän ylpeys. Barrakudaa, meriahventa ja hummeria '
+                + 'saa helposti, ja Lumley Beachillä voi nähdä kalastajien '
+                + 'vetävän nuottaa käsin rantaan täynnä rapuja, napsijoita '
+                + 'ja muuta saalista. Niemimaan rantaravintoloissa Lakassa '
+                + 'ja River Number 2:lla tarjotaan tuoretta kalaa ja '
+                + 'hummeria. Kaupungissa asuu suuri libanonilainen '
+                + 'yhteisö, ja siksi libanonilaista ruokaa saa useimmista '
+                + 'ravintoloista. Kadulla ja kodeissa syödään friteerattua '
+                + 'akaraa, paistettua plantainia, kanalla ja vihanneksilla haudutettua maapähkinäpataa ja '
+                + 'jollof-riisiä, ja jälkiruoaksi foorahia, makeita '
+                + 'riisijauhonyyttejä. Lumleyn rannalla kaupataan tuoreita '
+                + 'maapähkinöitä, ja hedelmiä myydään toreilla samana '
+                + 'päivänä poimittuina: mangoa, papaijaa, ananasta ja '
+                + 'guavaa. Juotavaksi kannattaa kokeilla kotitekoista '
+                + 'inkiväärijuomaa, ginger beeriä. Se tehdään pelkästä inkivääristä ja '
+                + 'sokerista, joskus mausteena on neilikkaa ja limettiä, eikä '
+                + 'siinä ole alkoholia. Oluista tunnetuin on paikallisen '
+                + 'panimon Star. Muoviastioissa myytäviin väkeviin '
+                + 'viinoihin ei kannata koskea, koska niiden laadusta ei ole '
+                + 'varmuutta. Juomavedeksi käy vain pullovesi, ja '
+                + 'Wikivoyage neuvoo syömään mieluummin tuoreeltaan '
+                + 'valmistettua paikallista ruokaa kuin pitkään säilytettyjä '
+                + 'länsimaisia annoksia.',
+              kuva: {
+                tiedosto: 'Zegenvisserij in Freetown, Sierra Leone, -2 oktober 2010 a.jpg',
+                lyhyt: 'Kalastajat vetävät nuottaa käsin rantaan Lumley Beachillä Freetownissa.',
+                selite: 'Rivi miehiä ja poikia vetää paljain jaloin '
+                  + 'nuotan köyttä pitkin Lumley Beachin märkää hiekkaa '
+                  + 'tyrskyjen reunassa; taustalla harmaa Atlantti.',
+                lahde: 'Ghassan Mroue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Raha, sää ja arjen turvallisuus',
+              teksti: 'Useimmat ulkomaalaiset tarvitsevat viisumin, jonka '
+                + 'saa sähköisenä etukäteen tai lentokentällä. Leonesta '
+                + 'poistettiin heinäkuussa 2022 kolme nollaa, ja vanhat '
+                + 'setelit lakkasivat kelpaamasta maksuvälineeksi vuoden 2024 '
+                + 'alussa, joten vanhojen oppaiden hinnat näyttävät '
+                + 'tuhatkertaisilta. Pankkiautomaatteja on Freetownissa ja '
+                + 'suuremmissa kaupungeissa, ja kortti, useimmiten Visa, '
+                + 'käy yhä useammassa hotellissa, ravintolassa ja '
+                + 'supermarketissa. Sähkö on 220 volttia brittiläisillä '
+                + 'pistorasioilla, mutta katkoja on usein. Kuivakausi kestää '
+                + 'joulukuusta huhtikuuhun, ja silloin Saharasta puhaltaa '
+                + 'kuiva harmattan-tuuli. Toukokuusta marraskuuhun on '
+                + 'sadekausi, ja heinä- ja elokuussa sataa lähes joka päivä, '
+                + 'kumpanakin kuukautena Freetowniin keskimäärin yli metri. Elokuussa '
+                + '2017 kolmen päivän rankkasateet laukaisivat Regentissä '
+                + 'mutavyöryn, jossa 1 141 ihmistä kuoli tai katosi; '
+                + 'syyksi on arvioitu myös rinteiden metsäkatoa. Väkivaltarikokset '
+                + 'ovat Wikivoyagen mukaan harvinaisia, mutta taskuvarkaita '
+                + 'on, ja Aberdeenin ja Lumleyn yökerhojen lähellä on '
+                + 'sattunut välikohtauksia. Suurempi vaara on liikenne: '
+                + 'ylikuormatut poda-podat ja kiireiset okadat. Pimeällä '
+                + 'kannattaa kantaa taskulamppua, koska katuvaloja on vähän. '
+                + 'Jaetut taksit ajavat kiinteitä reittejä; sanomalla '
+                + '"no cha cha" kertoo haluavansa jakaa kyydin eikä '
+                + 'vuokrata koko autoa. Malaria on suurin terveysriski, joten '
+                + 'estolääkityksestä kannattaa kysyä lääkäriltä hyvissä '
+                + 'ajoin. Aidosti paikallisia käsitöitä ovat solmuvärjätty '
+                + 'gara-kangas, kudottu country cloth, batiikkikuvat ja '
+                + 'puuveistokset, ja niitä myyvät Wallace Johnson Streetin '
+                + 'Big Marketin kojut.',
+              kuva: {
+                tiedosto: 'An aisle at the Sierra Leone Big Market.jpg',
+                lyhyt: 'Freetownin Big Marketin käytävillä myydään koreja, kalebasseja ja helmikoruja.',
+                selite: 'Kapean käytävän molemmin puolin on hyllyt '
+                  + 'täynnä punottuja koreja, kalebasseja, savikulhoja ja '
+                  + 'helminauhoja, ja mies kävelee käytävää pitkin; kuva '
+                  + 'huhtikuulta 2025.',
+                lahde: 'ODC-SIERRA-LEONE, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
