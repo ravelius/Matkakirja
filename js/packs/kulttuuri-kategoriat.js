@@ -109360,6 +109360,15 @@ export const KULTTUURI_KATEGORIAT = {
             'Valokuva näyttää suuren, vuorille katsovan puuveistoksen partaisesta merimiehestä keihäs kädessään San Juan Bautistan kylän raitilla – patsas muistuttaa saaren nimestä, joka vaihtui vasta 1966.',
           lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Robinson Crusoe Island',
+          galleria: [
+            {
+              otsikko: 'Ansonin leiri Juan Fernándezin saarella',
+              osoite: 'https://media.matkakirja.app/kaupunkikuvasto/20260925/galleria/robinsoncrusoe-galleria.jpg',
+              lyhyt: 'J. Masonin vuoden 1748 kaiverrus näyttää kommodori Ansonin leirin Juan Fernándezin saarella.',
+              selite: 'Brittiläisen retkikunnan kuva esittää saarelle pystytettyä leiriä ja sen ympärillä kohoavia vuoria; se kuvaa todellista Juan Fernándezin saarta eikä Defoen romaanin tapahtumia.',
+              lahde: 'J. Mason, A Voyage Round the World (1748), Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Tulivuorten synnyttämä saaristo',
@@ -109427,15 +109436,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanha mustavalkoinen valokuva näyttää kallioon kiinnitetyn, kulahtaneen pronssilaatan, jonka kohokirjaimet kertovat Alexander Selkirkin neljän vuoden ja neljän kuukauden yksinäisyydestä saarella.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
           wiki: 'Alexander Selkirk',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Ansonin leiri Juan Fernándezin saarella',
-          osoite: 'https://media.matkakirja.app/kaupunkikuvasto/20260925/galleria/robinsoncrusoe-galleria.jpg',
-          lyhyt: 'J. Masonin vuoden 1748 kaiverrus näyttää kommodori Ansonin leirin Juan Fernándezin saarella.',
-          selite: 'Brittiläisen retkikunnan kuva esittää saarelle pystytettyä leiriä ja sen ympärillä kohoavia vuoria; se kuvaa todellista Juan Fernándezin saarta eikä Defoen romaanin tapahtumia.',
-          lahde: 'J. Mason, A Voyage Round the World (1748), Wikimedia Commons (PD)',
         },
       ],
     },
@@ -119037,6 +119037,15 @@ export const KULTTUURI_KATEGORIAT = {
             'Näkymä kaupungin yli mäeltä: värikkäitä kattoja ja keskustan rakennuksia, taustalla Reloncavín selän sininen vesi, jolla näkyy risteilyalus.',
           lahde: 'HaSt, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Puerto Montt',
+          galleria: [
+            {
+              otsikko: 'Puerto Montt vuonna 1872',
+              osoite: 'https://media.matkakirja.app/kaupunkikuvasto/20260925/galleria/puertomontt-galleria.jpg',
+              lyhyt: 'Chile ilustrado -teoksen kaiverrus näyttää Puerto Monttin talot ja rannikon vuonna 1872.',
+              selite: 'Painettu kaupunkinäkymä näyttää vasta 1850-luvulla perustetun Puerto Monttin puutalot ja Reloncavín selän; vedos on peräisin Recaredo Santos Torneron vuoden 1872 Chile ilustrado -teoksesta.',
+              lahde: 'Recaredo Santos Tornero, Chile ilustrado (1872), Biblioteca Nacional de Chile / Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Lauta ja pärekatto',
@@ -119112,15 +119121,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Montin satamakylä Tenglon salmen varrella, ja sen '
             + 'kojuista ostetaan kalaa, simpukoita ja merilevää.',
           lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Puerto Montt vuonna 1872',
-          osoite: 'https://media.matkakirja.app/kaupunkikuvasto/20260925/galleria/puertomontt-galleria.jpg',
-          lyhyt: 'Chile ilustrado -teoksen kaiverrus näyttää Puerto Monttin talot ja rannikon vuonna 1872.',
-          selite: 'Painettu kaupunkinäkymä näyttää vasta 1850-luvulla perustetun Puerto Monttin puutalot ja Reloncavín selän; vedos on peräisin Recaredo Santos Torneron vuoden 1872 Chile ilustrado -teoksesta.',
-          lahde: 'Recaredo Santos Tornero, Chile ilustrado (1872), Biblioteca Nacional de Chile / Wikimedia Commons (PD)',
         },
       ],
     },
