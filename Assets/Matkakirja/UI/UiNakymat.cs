@@ -335,7 +335,10 @@ namespace Matkakirja.Natiivi
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
             // Noppa häipyy, kun nappula on perillä (web haivyta saapuessa).
-            o.MatkaPerilla += _ => UiKerros.PaaSaikeessa(() => Noppa.Haivyta());
+            // A11 (web ui.js piilotaNoppa): noppa häipyy vain kaupunkiin päättyneellä matkalla; reitin varrella se jää
+            // lepopaikalleen seuraavaan heittoon asti.
+            o.MatkaPerilla += k => { if (k != null) UiKerros.PaaSaikeessa(() => Noppa.Haivyta()); };
+            PeliOhjain.KortinRuutupiste = LiuskanRuutupiste;
             // Livian sähkekuplat (johdanto, odotus, vinkki, linkin saate, oikein, paluu) puluun.
             o.LivianKuplat += (kaupunki, kentta, kuplat) => Sahkelomake.LivianKuplat(kaupunki, kentta, kuplat);
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
@@ -464,7 +467,15 @@ namespace Matkakirja.Natiivi
             float w = juuri.resolvedStyle.width, h = juuri.resolvedStyle.height;
             if (float.IsNaN(w) || w <= 0 || juuri.panel == null) { valmis?.Invoke(); return; }
             var arpa = new System.Random();
-            var loppu = new Vector2(w * (0.8f + (float)(arpa.NextDouble() - 0.5) * 0.06f), h * (0.74f + (float)(arpa.NextDouble() - 0.5) * 0.05f));
+            // A9 (web dieRestingSpot, packs/maailmankartta.js dieSpot): lepo vasemmassa reunassa puolivälissä (0,06; 0,5);
+            // jos matkakirjakortti on samassa (vasen ala) kulmassa, oikea reuna (dieSpotAlt 0,94; 0,5). Värinä ±0,03 / ±0,025.
+            float sx = 0.06f;
+            if (Matkakirja != null && Matkakirja.Nakyy)
+            {
+                var r = Matkakirja.Laatikko;
+                if (r.center.x < w * 0.5f && r.center.y >= h * 0.5f) sx = 0.94f;
+            }
+            var loppu = new Vector2(w * (sx + (float)(arpa.NextDouble() - 0.5) * 0.06f), h * (0.5f + (float)(arpa.NextDouble() - 0.5) * 0.05f));
             var alku = loppu;
             kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))
@@ -474,6 +485,35 @@ namespace Matkakirja.Natiivi
             Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike(),
                 laskeutui: () => Aanet.Tehoste(Aanitunnukset.Noppa),
                 pomppu: () => Aanet.Tehoste("clack"), kohina: () => Aanet.Tehoste("dieTick"));
+        }
+
+        /// <summary>
+        /// D17 (web lauta.js napautaKaupunki, PAATOKSET 34 kohdat 10 ja 12): kaupunkimerkki liuskan avautuessa
+        /// vaakasuunnassa neljännekseen leveydestä (LIUSKAN_MERKIN_OSUUS_X) ja pystysuunnassa vapaan kaistan keskelle:
+        /// ylärajana ylimmän kolmanneksen kalusteet (yläpalkki, matkakirjakortti) + 18 px, alarajana alimman kolmanneksen
+        /// kalusteet (pulu, Liiku) − 18 px (LIUSKAN_YLAVARA_PX, YLAKALUSTEEN_RAJA 1/3). Jos kaista on listaa korkeampi,
+        /// merkki saa jäädä ruudun keskelle kaistan sisällä. Palauttaa ruudun pikselit (origo vasen ala).
+        /// </summary>
+        Vector2 LiuskanRuutupiste(string kaupunki)
+        {
+            var juuri = Kerros.Juuri(UiKerros.Valikot);
+            float w = juuri.layout.width, h = juuri.layout.height;
+            if (float.IsNaN(w) || w <= 0 || h <= 0) return new Vector2(Screen.width / 4f, Screen.height / 2f);
+            const float Vara = 18f, Raja = 1f / 3f;
+            // Listan korkeus: kaupunki, Nähtävyydet, Turistiopas, Liiku ja noin neljä kategoriaa (.mk-liuska__rivi 18,85).
+            float tarve = 8 * 18.85f;
+            float r0 = Kerros.Reunat(UiKerros.Valikot).y;
+            var ylat = new System.Collections.Generic.List<Rect> { new Rect(0, 0, w, r0 + Ylapalkki.Varaus) };
+            if (Matkakirja != null && Matkakirja.Nakyy) ylat.Add(Matkakirja.Laatikko);
+            var alat = new System.Collections.Generic.List<Rect> { Pulu.Laatikko, Matkavalinta.LiikuLaatikko };
+            float ylaRaja = Vara, alaRaja = h - Vara;
+            foreach (var k in ylat) if (k.height > 0 && k.yMin < h * Raja) ylaRaja = Mathf.Max(ylaRaja, k.yMax + Vara);
+            foreach (var k in alat) if (k.height > 0 && k.yMax > h * (1f - Raja)) alaRaja = Mathf.Min(alaRaja, k.yMin - Vara);
+            float puolikas = tarve / 2f;
+            float y = alaRaja - ylaRaja >= tarve
+                ? Mathf.Min(Mathf.Max(h / 2f, ylaRaja + puolikas), alaRaja - puolikas)
+                : (ylaRaja + alaRaja) / 2f;
+            return new Vector2(Screen.width * 0.25f, Screen.height * (1f - y / h));
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

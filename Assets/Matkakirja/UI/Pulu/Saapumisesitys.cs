@@ -80,6 +80,8 @@ namespace Matkakirja.Natiivi
             o.LuentoAlkoi += (k, _) => Alkoi(k);
             o.LuentoLoppui += Loppui;
             o.MatkaPerilla += Perilla;
+            // A7/C14 (löydökset 53–54): heitto, siirto, maailmahyppy ja Ohita vaientavat paikan puheen.
+            o.PaikanPuheVaiennettu += () => UiKerros.PaaSaikeessa(VaiennaPaikanPuhe);
             o.TilaMuuttui += TarkistaAarre;
             // Aloituslento alkaa: kortti ja luentakuvat pois lennon tieltä (web renderFact aloituslentoKesken).
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { kortti.Piilota(); kortti.Kuvat.Tyhjenna(false); });
@@ -299,10 +301,25 @@ namespace Matkakirja.Natiivi
             }
             kommentoitu.Add(k);
             vuoro = -1;
-            Kommentti(v, 0);
+            // C12 (web SAAPUMISKUPLAN_TAUKO_MS): kommentti 900 ms luennan jälkeen, ellei paikan puhetta vaiennettu.
+            Ajastin.Execute(() => { if (kaupunki == k && vuoro == -1) Kommentti(v, 0); }).StartingIn(KommentinTaukoMs);
         }
 
         int vuoro = -1;
+        const int KommentinTaukoMs = 900;
+
+        /// <summary>
+        /// Web vaiennaLivianKaupunkipuhe + polloKuplatPois: Livian ääni seis, kaupungin ajastimet (kommenttiketju,
+        /// luennan odotus, kuvien vaihto) pois ja kuplapino häivytyksellä pois. Sanottu jää chatin historiaan.
+        /// </summary>
+        void VaiennaPaikanPuhe()
+        {
+            vuoro = int.MaxValue; // Kommentti(v, i) ei enää jatka ketjua tässä kaupungissa
+            vaihto?.Pause();
+            luentoOdotus?.Pause();
+            Aanet.Pysayta(AaniKanava.Puhe);
+            pulu.Kuplat.TyhjennaKaikki();
+        }
 
         void Kommentti(Saapumisvirta v, int i)
         {
@@ -315,7 +332,7 @@ namespace Matkakirja.Natiivi
             if (i == 0) for (int n = 0; n < v.PuluKuvat.Count; n++)
             {
                 var kuva = v.PuluKuvat[n];
-                juuri.schedule.Execute(() => kortti.Kuvat.Lisaa(kuva)).StartingIn(600 + n * Luentakuvasarja.PuluVaihtoMs);
+                juuri.schedule.Execute(() => kortti.Kuvat.Lisaa(kuva)).StartingIn(n * Luentakuvasarja.PuluVaihtoMs); // C10: 0 ms, 4 s välein
             }
             var teksti = v.PuluKommentit[i];
             pulu.Sano(teksti, KommentinAani(v.Kaupunki, i, teksti), null, () => Kommentti(v, i + 1));

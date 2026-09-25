@@ -79,6 +79,8 @@ namespace Matkakirja.Natiivi
         Action kirjoitettu;
 
         public bool Nakyy => kortti.style.display == DisplayStyle.Flex;
+        /// <summary>Kortin laatikko paneelissa (nopan lepopaikan kulmavalinta, web factCard.dataset.corner).</summary>
+        public Rect Laatikko => kortti.worldBound;
 
         /// <summary>Kortti on yhden rivin lappu (ei auki).</summary>
         public bool Lappuna => Nakyy && pieni;
@@ -113,6 +115,9 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(UiKerros.Tilarivi);
             // Kuvapakka ensin: se jää kortin alle (webin z-index 3 < rail 4).
             Kuvat = new Luentakuvasarja(kerros, turva);
+            // Kuvien lennon maali (web lennataKuvatMatkakirjaan: .fact-card): näkyvän kortin laatikko, muuten ei lentoa.
+            Kuvat.Maali = () => kortti.panel != null && kortti.resolvedStyle.display != DisplayStyle.None
+                && kortti.resolvedStyle.opacity > 0.01f ? kortti.worldBound : default;
 
             kortti = Rakenne.El("mk-matkakirja", turva);
             kortti.style.display = DisplayStyle.None;
