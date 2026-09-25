@@ -29,7 +29,9 @@ namespace Matkakirja.Natiivi
             // on versiosta riippumaton, joten osoittimen vaihtuminen ei riko laitekokeita.
             string koe = Path.Combine(Application.persistentDataPath, "sisalto-koe", polku.Replace('/', Path.DirectorySeparatorChar));
             if (File.Exists(koe)) { valmis(File.ReadAllText(koe)); yield break; }
-            // Verkko-odotus: linssi odottaa aineistoaan (välimuistista heti).
+            // Verkko-odotus vain, kun linssi on auki (pelaaja odottaa aineistoa); käynnistyksen taustarekisteröinti
+            // (esim. LataaAstronautti) kirjautuu vain hakuna.
+            if (LinssiOhjain.Rekisteri?.Auki == null) { yield return HaeSisalto(polku, valmis); yield break; }
             var odotus = VerkkoOdotus.Alku("linssi", polku);
             string saatu = null;
             yield return HaeSisalto(polku, t => saatu = t);
