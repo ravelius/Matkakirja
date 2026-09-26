@@ -191,3 +191,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   uinuva × 0,3), PaivitaHeraaminen(), Herata(avain, piilossa) 0,3 s. Linssiseppä: herätysanimaatio ≤ 2,5 s MaakuntaHeraa-tapahtumasta;
   Natiivi-UI: kartussin leima ja merkit.
 - natiiviseppa/pohja-26 **c4c46662** (wt/proto-natiiviseppa-saapuminen): pohjasarja 2026-09-26-pohja-20260926 (Karttaseppä 06.57, 349 525 laattaa). Kuvapari käynnissä 07.0x: lokit/pohja-26/{b13,pohja-26}/ (pohjakuvat.sh, 7 näkymää) → Fablelle → junaan hyväksynnän jälkeen.
+- maakunta-heraa **9d9eb1bd**: herännyt näkyy aina (myös oletusrajoilla), uinuva paperina ilman täyttöä; diagnostiikkarivi "maakunnat: herääminen …". Linssisepän linssiseppa/maakunta-heraa (d7395a81) mergeää tämän uudelleen ja tarkistaa avainmuodon (MusteMaakunnat vs ISO:tunnus) → merge-pyyntö; molemmat junaan yhdessä.
