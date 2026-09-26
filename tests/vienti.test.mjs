@@ -20,6 +20,7 @@
  * Packien ulkopuoliset nimetyt exportit (tools/vienti/lahteet.mjs)
  * tarkistetaan samoin kohdissa 1 ja 2.
  */
+import { gunzipSync } from 'node:zlib';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -178,6 +179,11 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
+    maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
+    aluenimet: ((a) => a.nimet.length + a.valtameret.length)(JSON.parse(readFileSync(join(JUURI, 'assets/data/aluenimet-natiivi.json'), 'utf8'))),
+    maakuntasalaisuudet: Object.keys(ns('maakuntasalaisuudet.js').MAAKUNTASALAISUUDET).length,
+    reitit1873: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/reitit1873.json.gz'))).toString('utf8')).reitit.length,
+    merinimet: ns('nimisto-1873.js').NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva')).length,
     tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
     'muutosloki-natiivi': JSON.parse(readFileSync(join(JUURI, 'tools/vienti/muutosloki-natiivi.json'), 'utf8')).rivit.length,
     lehtitehtavat: Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).reduce((a, v) => a + (v?.lehtitehtavat?.length ?? 0), 0),
@@ -202,7 +208,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,
     livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
     livianrepliikit: avaimia(ns('js/liviapuhe.js').LIVIAN_AANITETYT),
-    maakuntarajat: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maakuntarajat.json'), 'utf8')).alueet.length,
+    maakuntarajat: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/maakuntarajat.json.gz'))).toString('utf8')).alueet.length,
     luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)

@@ -113,6 +113,7 @@ export const HAHMOTELMA_CZE = [
   },
   {
     id: 'hahmotelma-adrspach',
+    nimio: 'Adršpach',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-adrspach-8f3c1c15.jpg',
       lyhyt: 'Korkeita hiekkakivipylväitä puiston nurmikon reunalla Adršpachissa.',
@@ -389,6 +390,7 @@ export const HAHMOTELMA_CZE = [
   },
   {
     id: 'hahmotelma-podyji',
+    nimio: 'Podyjí',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-podyji-12f55abc.jpg',
       lyhyt: 'Hardeggin kaupunki ja linna Dyje-joen laaksossa näköalapaikalta katsottuna.',
@@ -486,6 +488,7 @@ export const HAHMOTELMA_CZE = [
   },
   {
     id: 'hahmotelma-slavkov',
+    nimio: 'Austerlitz',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-slavkov-b796a491.jpg',
       lyhyt: 'Mohyla míru -rauhanmuistomerkki Austerlitzin taistelupaikan kukkulalla.',
@@ -597,6 +600,7 @@ export const HAHMOTELMA_CZE = [
   },
   {
     id: 'hahmotelma-kromeriz',
+    nimio: 'Kroměříž',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-kromeriz-0688aa46.jpg',
       lyhyt: 'Kroměřížin Kukkatarhan barokkinen kuviopuutarha ja vihreäkupolinen rotunda.',
@@ -793,6 +797,7 @@ export const HAHMOTELMA_CZE = [
   },
   {
     id: 'hahmotelma-koniggratz',
+    nimio: 'Königgrätz',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-koniggratz-66ca31ef.jpg',
       lyhyt: 'Itävaltalaisen 1. armeijakunnan muistomerkki kotkineen Chlumin mäellä.',
@@ -1133,6 +1138,7 @@ export const HAHMOTELMA_CZE = [
   },
   {
     id: 'hahmotelma-zdar',
+    nimio: 'Zelená hora',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-zdar-e426b5b4.jpg',
       lyhyt: 'Zelená Horan pyhiinvaelluskirkko ja sitä ympäröivä tähtimäinen muuri ilmasta.',

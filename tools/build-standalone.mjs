@@ -973,6 +973,7 @@ const MODULES = [
    */
   'js/packs/maakunnat-luonnehdinnat.js',
   'js/packs/maakunnat-pulu.js',
+  'js/packs/maakunnat-nimet.js',
   'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
@@ -1072,6 +1073,7 @@ const MODULES = [
   // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
+  'js/lehtikuori.js',
   'js/main.js',
 ];
 

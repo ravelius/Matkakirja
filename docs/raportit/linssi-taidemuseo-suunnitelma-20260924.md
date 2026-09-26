@@ -215,7 +215,9 @@ Tarkat teokset valitaan luvun 4 varmennetusta luettelosta.
 
 ## 4. Teosluettelo (pilotti)
 
-Täysi varmennettu luettelo (ID:t, IIIF-osoitteet, resoluutiot ja lisenssit rivikohtaisesti) on liitteessä
+**Esitysmoottorin datalähde 25.9.2026 alkaen: `docs/raportit/renessanssisali-teosluettelo-20260925.md`**
+(Sisältökirjuri, PR #3144). Se kokoaa toimitetut erät 1–2 R2-polkuineen ja ohittaa alla olevat ehdokaslistat
+(luku 4.5). Täysi varmennettu luettelo (ID:t, IIIF-osoitteet, resoluutiot ja lisenssit rivikohtaisesti) on liitteessä
 **linssi-taidemuseo-teosluettelo-20260924.md**. Kaikki rivit on varmennettu 24.9.2026 museoiden avoimista
 rajapinnoista. Italialaisten museoiden kuvia ei ole käytetty.
 
@@ -291,6 +293,9 @@ Laatassa lukee "Musée du Louvre, Pariisi · kuva C2RMF / Wikimedia Commons, PD"
 
 ### 4.2 Veistokset: 5, SMK Kööpenhamina, kipsivalosten 3D-skannaukset (PD (PDM 1.0))
 
+*Toimitettu 25.9. (luku 4.5): Bacchus, Ylösnoussut Kristus, Kapinoiva orja, **Yö** ja **Pietà**. Mooses ja
+Kuoleva orja jäivät pois, koska Mooseksen valos on vain yläosa. Alla on alkuperäinen ehdotus.*
+
 Michelangelo: **Mooses**, **Bacchus**, **Kapinoiva orja**, **Kuoleva orja** ja **Ylösnoussut Kristus**.
 Tiedostot ovat STL-muodossa: pieni versio noin 20 Mt ja suuri 45–173 Mt. Ne muunnetaan GLB:ksi
 (meshopt, 150–300 k kolmiota) ja paistetaan AO- ja normaalikartoiksi. Laatassa lukee "kipsivalos, SMK".
@@ -300,6 +305,8 @@ orjat) sekä Firenzen osaan (Bacchus). Lisähaku Smithsonian 3D:stä myöhemmin.
 Lisenssi kirjataan muodossa "PD (PDM 1.0)" (Fable 24.9.).
 
 ### 4.3 Taiteilijoiden muotokuvat: 17 taiteilijaa
+
+*Toimitettu 25.9.: 16/18 (luku 4.5). Lähteet poikkeavat alla olevasta, ja osa on Commonsin omakuvia.*
 
 - **NGA (CC0):** Giovanni ja Gentile Bellini (Gambellon aikalaismitalit), Michelangelo (Leone Leonin
   mitali 1560 ja Bonasonen kaiverrus 1546) ja Tizian (Agostino Carraccin kaiverrus 1587). Lisäksi AIC:n
@@ -321,6 +328,38 @@ muotokuvat on hylätty.
 Venuksen syntymä, Kevät (Uffizi), Sikstiinan kappeli (Vatikaani), Viimeinen
 ehtoollinen (Milano), Vitruviuksen mies ja Tempesta (Accademia) sekä Assunta (Frari). Syyt ovat liitteessä.
 Kertoja mainitsee ne, ja karttapiirros vie niiden kaupunkiin pallolle.
+
+### 4.5 Toimitettu aineisto esitysmoottorin datana (25.9.2026)
+
+Lähde: `renessanssisali-teosluettelo-20260925.md` (R2-bucket `matkakirja`, perus-URL `https://media.matkakirja.app/`;
+Codexin toimitukset takaisinluettu: HTTP, MIME, CORS, dekoodaus, SHA-256). Esitys.json viittaa teoksiin
+luettelon tunnuksilla (`met-435729`, `nga-26`, `commons-mona-lisa-c2rmf`); salikuva `…-gallery.jpg`, kortti `…-card.jpg`.
+
+| Aineisto | Määrä | Käyttö esitysmoottorissa |
+|---|---|---|
+| Maalaukset | 42 (erä 1: 30, erä 2: 12) | teospaikat (Sali-lava), avainkehykset `teos` + `etaisyys`, Ken Burns -pidot |
+| Muotokuvat | 16/18 | merkintäraidan medaljongit (`tyyppi: "omakuva"`); **Cima da Conegliano ja Fra Carnevale**: nimi ja signeeraus (Fablen päätös 4), ei sijaiskuvaa |
+| Veistokset | 5 GLB (glTFast) | jalustat; Rooma: Pietà (Pietarinkirkko), Ylösnoussut Kristus (S. Maria sopra Minerva), Kapinoiva orja (Julius II:n hautaan, nyt Louvre); Firenze: Bacchus (Bargello), Yö (San Lorenzo) |
+| Kartat | 3 (3000 px JPEG) | merkintäraidan karttapiirrokset (`tyyppi: "karttapiirros"`): Firenze 1557 (Cock), Venetsia 1500 (de' Barbari), Rooma 1577 (Dupérac–Lafreri); napautus → Pallo-lava |
+
+**Erä 2 täydentää käsikirjoituksen teokset** (luku 3.3 ei muutu): Alban Madonna, Bindo Altoviti, Kardinaali Sauli,
+Humanistin muotokuva, Signorellin Ristiinnaulitseminen, Perugino (2), Botticellin Tietäjien kumarrus ja
+Giuliano de' Medici, Jumalten juhla, Venus peilin kanssa sekä Mona Lisa. Rooman osassa on nyt 10 maalausta (Rafael 5, Sebastiano 2, Perugino 2, Signorelli 1).
+
+**Veistosten laatta ja kertoja:** kaikki viisi ovat 1800-luvun kipsivalosten 3D-skannauksia (SMK:n Royal Cast
+Collection), eivät alkuperäisten marmoriteosten. Laatassa lukee "Kipsivalos (SMK, Kööpenhamina) · alkuperäinen
+marmori: <sijainti>", ja kertoja tai tiedeliite sanoo saman. Mooseksen `sculpture-moses.glb` on R2:ssa
+jäljitettävyyden vuoksi, mutta sitä ei kytketä.
+
+**Tarkistettavaa ennen toteutusta (Linssiseppä, 25.9.):**
+1. Pietàn R2-polku on luettelossa muodossa `museo/renessanssi/veistokset/sculpture-pieta.glb` ilman
+   `matkakirja/`-etuliitettä, toisin kuin muut. Korjattu luetteloon 7346a8403 (objekti tarkistettu, HTTP 200).
+2. **Leonardon muotokuvan lähde on Biblioteca comunale di Trento** (Magonio Bossin mukaan, 1837). Kunnan
+   kirjasto on italialainen julkisyhteisö, joten Fablen päätöksen 1 kulttuuriperintölakiriski (Codice art.
+   107–108) voi koskea tätäkin, vaikka teos on PD. **Fable 25.9.: vaihdetaan** Rijksmuseumin RP-P-2022-4655
+   (Vasarin Vite -puupiirros, PD (PDM 1.0); varalla RP-P-1907-793, Mellan). Toimitettu luetteloon 7346a8403.
+3. Colombinin ja Cecchin 1769-laatat (Botticelli, Fra Bartolomeo) ovat Commonsista ilman nimettyä
+   pitävää laitosta. Tarkistetaan, ettei skannaus ole italialaisen valtionkirjaston.
 
 ## 5. Kuvat: resoluutio ja striimaus
 

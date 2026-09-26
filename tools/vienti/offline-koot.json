@@ -1,18 +1,19 @@
 {
- "haettu": "2026-09-23",
+ "haettu": "2026-09-25",
  "otos": 24,
  "rasteri": {
-  "poltto": "2026-09-22c-pohja-20260922c",
+  "poltto": "2026-09-25-pohja-20260925",
   "keskitavut": {
-   "0": 16218,
-   "1": 13738,
-   "2": 15962,
-   "3": 14055,
-   "4": 10982,
-   "5": 9562,
-   "6": 7932,
-   "7": 7377,
-   "8": 6260
+   "0": 15324,
+   "1": 12745,
+   "2": 16423,
+   "3": 15400,
+   "4": 12314,
+   "5": 11116,
+   "6": 10240,
+   "7": 10203,
+   "8": 9459,
+   "9": 9321
   }
  },
  "maasto": {
@@ -141,20 +142,20 @@
  },
  "media": {
   "aani-oma": 513798,
-  "aani-peilattu": 2878993,
+  "aani-peilattu": 2996568,
   "ampari-avain": 326992,
-  "asset-aarteet": 59570,
+  "asset-aarteet": 63834,
   "asset-elaimet": 119136,
   "asset-ihmeet": 298762,
   "asset-miniatyyrit": 137090,
   "asset-nostot": 202831,
   "hetkikuva": 606451,
-  "juliste": 2918028,
+  "juliste": 3086581,
   "kohtaamiskuva": 588138,
-  "kuva-commons": 344006,
+  "kuva-commons": 362531,
   "kuva-flickr": 162755,
   "lippu-commons": 2729,
-  "repo": 544189,
-  "muu": 646898
+  "repo": 369767,
+  "muu": 655864
  }
 }

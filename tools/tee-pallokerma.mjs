@@ -6,7 +6,9 @@
  *
  *   node tools/tee-pallokerma.mjs --pohja <kansio Z/X/Y.jpg> --polygonit <maapolygonit.geojson>
  *        --ulos <kansio> (--maa ISO --alue lon0,lat0,lon1,lat1 | --maailma)
- *        [--min 5] [--max 8] [--osa i/n] [--vain-luettelo]
+ *        [--min 5] [--max 8] [--osa i/n] [--vain-luettelo] [--peitto 0.8] [--pohjanimi <sarja>]
+ *   node tools/tee-pallokerma.mjs --ulos <sarjan kansio> --alasnayte 3 [--vara <_maailma-kansio>]
+ *        (tasot 3…min−1 valmiista alimmasta tasosta, laatat.json tasot.min → 3)
  *
  * WEBIN SÄÄNTÖ (js/laattakerma-shader.js, js/laattapyramidi.js
  * pyramidinTasoitus): pallon pohjalaatan jokaiselle texelille
@@ -33,7 +35,7 @@
  * pehmeä. Tässä renkaat rasteroidaan laatan tarkkuudella (antialiasoitu
  * SVG) ja sumennetaan saman maskipikselin levyisesti.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 export const KERMA = [0xfa, 0xf4, 0xd6];
@@ -46,9 +48,20 @@ const RAD = Math.PI / 180;
 
 const smoothstep = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
+/*
+ * Ajon peitto (omistajan löydös 128, build 16: p080 peittää liikaa; Natiiviseppä
+ * 25.9.2026: vaihtoehdot p060 ja p045 kuvapariin). `--peitto 0.6`; oletus on
+ * webin KERMA_PEITTO, jolloin tulos on tavulleen entinen.
+ */
+let ajonPeitto = KERMA_PEITTO;
+export function asetaPeitto(p) {
+  if (!(p > 0 && p <= 1)) throw new Error(`--peitto ${p}: oltava 0 < p <= 1`);
+  ajonPeitto = p;
+}
+
 /** Kerman alfa (0…255) texelin sRGB-arvoista. */
 export function kermanAlfa(r, b, sisalla = 0) {
-  return Math.round(255 * smoothstep(KERMA_MERI_ERO, KERMA_MAA_ERO, r - b) * KERMA_PEITTO * (1 - sisalla));
+  return Math.round(255 * smoothstep(KERMA_MERI_ERO, KERMA_MAA_ERO, r - b) * ajonPeitto * (1 - sisalla));
 }
 
 /** Web Mercator: lon/lat → maailman pikseli tasolla Z. */
@@ -137,10 +150,92 @@ export async function kermaLaatta(sharp, pohjaJpg, maski) {
   return jotain ? ulos : null;
 }
 
+/**
+ * ALASNÄYTE (Natiiviseppä 24.9.2026, B7-3 "varalaatta"): Cesium sekoittaa
+ * samassa näkymässä vierekkäisiä tasoja; jos Z4:llä ei ole huntua, Z5:n
+ * alueet näkyvät vaaleina suorakulmioina. Taso Z tehdään tasosta Z+1:
+ * 2 × 2 lasta 512 px:n läpinäkyvälle pohjalle (puuttuva lapsi =
+ * läpinäkyvä) ja pienennys 256 px:iin (sharp esikertoo alfan, joten
+ * reunan kerma ei tummu). Täysin läpinäkyvää laattaa ei kirjoiteta.
+ */
+export function vanhemmat(lapsiAvaimet) {
+  const v = new Map();
+  for (const [x, y] of lapsiAvaimet) {
+    const k = `${x >> 1}/${y >> 1}`;
+    if (!v.has(k)) v.set(k, [x >> 1, y >> 1]);
+  }
+  return [...v.values()];
+}
+
+function tasonTiedostot(ulos, Z) {
+  const kansio = join(ulos, String(Z));
+  if (!existsSync(kansio)) return [];
+  const t = [];
+  for (const x of readdirSync(kansio)) {
+    if (!/^\d+$/.test(x)) continue;
+    for (const f of readdirSync(join(kansio, x))) {
+      const m = /^(\d+)\.webp$/.exec(f);
+      if (m) t.push([Number(x), Number(m[1])]);
+    }
+  }
+  return t;
+}
+
+/*
+ * Maan sarjassa (alue = varitaso-laatikko) laatikon ULKOPUOLISET lapset
+ * otetaan maailman sarjasta (vara): muuten laatikon reunan yli ulottuva
+ * vanhempi saisi läpinäkyvän neljänneksen ja kovan suorakulmion reunan.
+ * Laatikon sisällä puuttuva lapsi on aidosti läpinäkyvä (oma maa reikä).
+ */
+export async function alasnaytaTaso(sharp, ulos, Z, { alue = null, vara = null } = {}) {
+  let kirjoitettu = 0;
+  const sisalla = alue ? new Set(tasonLaatat(Z + 1, alue).map(([x, y]) => `${x}/${y}`)) : null;
+  const lapset = alue ? tasonLaatat(Z + 1, alue) : tasonTiedostot(ulos, Z + 1);
+  for (const [X, Y] of vanhemmat(lapset)) {
+    const osat = [];
+    for (const [dx, dy] of [[0, 0], [1, 0], [0, 1], [1, 1]]) {
+      const x = 2 * X + dx; const y = 2 * Y + dy;
+      const kansio = sisalla && !sisalla.has(`${x}/${y}`) ? vara : ulos;
+      const p = kansio && join(kansio, String(Z + 1), String(x), `${y}.webp`);
+      if (p && existsSync(p)) osat.push({ input: readFileSync(p), left: dx * LAATTA, top: dy * LAATTA });
+    }
+    if (!osat.length) continue; // eslint-disable-line no-continue
+    const iso = await sharp({ create: { width: 2 * LAATTA, height: 2 * LAATTA, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } }) // eslint-disable-line no-await-in-loop
+      .composite(osat).png().toBuffer();
+    const { data } = await sharp(iso).resize(LAATTA, LAATTA, { kernel: 'lanczos3' }).ensureAlpha().raw() // eslint-disable-line no-await-in-loop
+      .toBuffer({ resolveWithObject: true });
+    let alfa = 0;
+    for (let i = 3; i < data.length; i += 4) if (data[i] > alfa) alfa = data[i];
+    if (!alfa) continue; // eslint-disable-line no-continue
+    const webp = await sharp(data, { raw: { width: LAATTA, height: LAATTA, channels: 4 } }).webp({ quality: 90, alphaQuality: 90 }).toBuffer(); // eslint-disable-line no-await-in-loop
+    mkdirSync(join(ulos, String(Z), String(X)), { recursive: true });
+    writeFileSync(join(ulos, String(Z), String(X), `${Y}.webp`), webp);
+    kirjoitettu += 1;
+  }
+  return kirjoitettu;
+}
+
 async function paa() {
   const argv = process.argv.slice(2);
   const lippu = (n) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : null; };
   const pohja = lippu('--pohja'); const ulos = lippu('--ulos');
+  if (lippu('--peitto') !== null) asetaPeitto(Number(lippu('--peitto')));
+  if (lippu('--alasnayte') !== null) {
+    const lp = join(ulos, 'laatat.json');
+    const l = JSON.parse(readFileSync(lp, 'utf8'));
+    const alin = Number(lippu('--alasnayte')); const lahtotaso = l.alasnayte?.lahde ?? l.tasot.min;
+    const sharp = (await import('sharp')).default;
+    for (let Z = l.tasot.min - 1; Z >= alin; Z -= 1) {
+      const a = l.varitaso?.alue; const alue = a ? [a.lon0, a.lat0, a.lon1, a.lat1] : null;
+      const vara = alue ? lippu('--vara') : null;
+      if (alue && !vara) throw new Error('maan sarja tarvitsee --vara <maailman sarja> laatikon ulkopuolisille lapsille');
+      console.log(`${ulos}: Z${Z} ${await alasnaytaTaso(sharp, ulos, Z, { alue, vara })} laattaa (alasnäyte Z${Z + 1}:stä)`); // eslint-disable-line no-await-in-loop
+    }
+    l.tasot.min = Math.min(l.tasot.min, alin);
+    l.alasnayte = { tasot: [l.tasot.min, lahtotaso - 1], lahde: lahtotaso, tapa: '2 × 2 lasta → 256 px (esikerrottu alfa), puuttuva lapsi läpinäkyvä' };
+    writeFileSync(lp, `${JSON.stringify(l, null, 1)}\n`);
+    return;
+  }
   const iso = lippu('--maa'); const maailma = argv.includes('--maailma');
   if (!pohja || !ulos || (!iso && !maailma)) throw new Error('käyttö: --pohja --ulos (--maa ISO --alue … | --maailma) [--polygonit]');
   const min = Number(lippu('--min') ?? 5); const max = Number(lippu('--max') ?? 8);
@@ -149,8 +244,8 @@ async function paa() {
   const osa = lippu('--osa')?.split('/').map(Number) ?? null;
   mkdirSync(ulos, { recursive: true });
   const luettelo = {
-    lahde: 'webin laattakerma-shaderin sääntö (js/laattakerma-shader.js), pohja 2026-09-23a-pohja-20260923a',
-    kerma: '#faf4d6', peitto: KERMA_PEITTO, ero: [KERMA_MERI_ERO, KERMA_MAA_ERO],
+    lahde: `webin laattakerma-shaderin sääntö (js/laattakerma-shader.js), pohja ${lippu('--pohjanimi') ?? '2026-09-23a-pohja-20260923a'}`,
+    kerma: '#faf4d6', peitto: ajonPeitto, ero: [KERMA_MERI_ERO, KERMA_MAA_ERO],
     ...(iso ? { maa: iso, varitaso: { alue: { lon0: alue[0], lat0: alue[1], lon1: alue[2], lat1: alue[3] } } } : { maailma: true }),
     tasot: { min, max }, laatta: LAATTA, muoto: 'webp', puuttuva: 'läpinäkyvä', tehty: new Date().toISOString(),
   };

@@ -285,6 +285,7 @@ export const MAASTOKOHTEET_NOR = [
    * ============================================================== */
   {
     id: 'urnes',
+    nimio: 'Urnes',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-13afbfbbe1bf.jpg',
       lyhyt: 'Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.',
@@ -368,6 +369,7 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'altankalliopiirrokset',
+    nimio: 'Alta',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-altankalliopiirrokset-81c27406.jpg',
       lyhyt: 'Punaisiksi maalattuja kalliopiirroksia Altassa: poroja ja muita eläinhahmoja.',
@@ -468,6 +470,7 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'nidaros',
+    nimio: 'Nidaros',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nidaros-415aedfa.jpg',
       lyhyt: 'Nidarosin tuomiokirkon goottilainen länsijulkisivu Trondheimissa.',
@@ -617,6 +620,7 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'eidsvoll',
+    nimio: 'Eidsvoll',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-eidsvoll-61252011.jpg',
       lyhyt: 'Eidsvollsbygningen, valkoinen kartanorakennus, ja Norjan liput.',

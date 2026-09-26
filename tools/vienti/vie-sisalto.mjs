@@ -163,8 +163,46 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.32 linssiaineisto sellaisenaan päätasolle (Linssiseppä), tarinakaari kuva,
  *        lauta, saapumisLuenta; kohtaamiskuvat kansio, tiedosto; tapahtumat teksti,
  *        vaikutus. Vartija: jokainen raakakenttä päätasolla tai RAAKA_VASTINEET.
+ *   1.33 kokoelma maamerkit (natiivin 3D-maamerkit, Pelikoodari; Raamattu LENNON
+ *        KARTTA JA MAAMERKIT): lat, lon, maanKorkeus, suunta, mallinKorkeus,
+ *        malli { url, sha256, tavuja }; mallit myös offline.json maat[].media.
+ *   1.34 maarajat: 1.29:n rajaus pois (web #3078 piirtää Natural Earth 10m
+ *        -rajat): renkaat = kaikki admin-0-renkaat, muutRenkaat = [].
+ *   1.35 maat.fokuspohja = webin FOKUS_POHJAT (bbox ja rajaus asteina ja laudalla):
+ *        nostotaso ja kameran rajaus kuten webissä (Natiiviseppä).
+ *   1.36 kokoelma merinimet (Linssiseppä, build 11): webin nimiötason meret
+ *        (nimisto-1873 luokka meri) nimi, lat, lon, kulma, kaari, tasot, lahde,
+ *        lisenssi; juuren tyyli = webin piirto (tools/vienti/merinimet.mjs).
+ *   1.37 kokoelma aluenimet (Karttaseppä, löydös 38 b): assets/data/aluenimet-natiivi.json
+ *        sellaisenaan (meret, maakunnat, nykyalueet väistön jälkeisin ankkurein
+ *        tasoittain + valtameret); juuressa tyylit, fontti, aineistoversio.
+ *   1.38 kaupungit.asukkaat (Linssiseppä, radiouudistus): Wikidata P1082 (CC0),
+ *        asukkaatVuosi, asukkaatAlue (luku koskee saarta/valtiota), asukkaatLahde
+ *        (tools/vienti/hae-asukkaat.mjs → kaupunkien-asukkaat.json).
+ *   1.39 karttavalot.ankkuri (webin lukittu ankkuri, js/packs/nostoankkurit-<iso>.js) ja
+ *        karttavalot.puoli (nimiön poltettu kylki) — Natiivi-UI, löydös 50 C.
+ *   1.40 monumentit.nimio (kartan nimiö, kun nimi ei mahdu 18 merkkiin; web: kohteenKarttanimi =
+ *        nimio ?? nimi) — Sisältökirjurin nimiöt #3162, löydös b13 iPad 3. Karttavalojen nimio
+ *        oli jo kentässä, vain arvot lyhenivät.
+ *   1.41 offline.json: rasteripohja sarjaan 2026-09-25 (Z0–Z9), maittain z6–z8 kuten ennen ja
+ *        z9 vain kaupunkien ympärillä listana välejä (lahteet.rasteri.kaupunkitaso: säde 60 km,
+ *        kaupungit tyyppi 'kaupunki', sama rajaus kuin satelliittipinnalla) — Natiiviseppä, build 13.
+ *   1.42 maakuntarajat kaikista webin maakuntamaista (138, oli 8; webin maakuntienMaa) ja juuren maat [{ iso3, nimi }];
+ *        nimet webin maakunnanNimi-funktiolla — Fable 25.9.2026, Karttasepän löydökset 105/107.
+ *   1.43 maakuntarajat.vari (0–4): webin väri ämpärin <ISO>.json-aineistosta (tools/tee-maakuntavektorit.mjs
+ *        varita, naapureilla eri) — Natiiviseppä 25.9.2026, sama sävy kuin webissä.
+ *   1.44 karttavalot.laji = webin symLaji (kohteen tyyppi: vuori, saari, jarvi, meri, joki, ruoka,
+ *        tekniikka…; eläintäky elain): kuvamerkki ja vektorisymboli lajin mukaan — Pelikoodari, löydös 125.
+ *   1.45 Elävä kartta (omistaja 26.9.2026, tools/vienti/elava-kartta.mjs): karttavalot.kokoluokka (+ kokoluokkaLahde),
+ *        karttavalot.maakunta (+ maakuntaLahde) ja maakuntarajat.salaisuus. Vain natiivi.
+ *   1.46 kokoelma reitit1873: vuoden 1873 laivalinjat ja rautatiet (Karttaseppä #3266, tools/vienti/reitit1873.mjs),
+ *        juuressa lahteet. Elävä kartta, vain natiivi.
+ *   1.47 kokoelma maakuntasalaisuudet: maakunnan salaisuus-nosto (lyhyt, teksti, nappi, viite, lat/lon) — Pelikoodari
+ *        26.9.2026; oma kokoelma, koska build 16/17 piirtäisi karttavalorivit (Natiiviseppä). Elävä kartta.
+ *   1.48 manifest.kaupunkilehdetKaupungeittain [{ id, tiedosto, sha256, tavuja }]: kokoelmat/kaupunkilehdet/<id>.json
+ *        (sama kokoelmamuoto, yksi alkio) — Pelikoodari, build 19 (16 Mt:n lehtikokoelma kylmänä 1,9 s).
  */
-export const SKEEMAVERSIO_TARKKA = '1.32';
+export const SKEEMAVERSIO_TARKKA = '1.48';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
@@ -284,6 +322,19 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     tiedostot.set(tiedosto, teksti);
     kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti), tavuja: tavuja(teksti) });
   }
+  /*
+   * Skeema 1.48 (Pelikoodari, build 19): kaupunkilehdet myös kaupungeittain (16 Mt kokonaisena, noin 1,9 s kylmänä).
+   * kokoelmat/kaupunkilehdet/<id>.json = sama kokoelmamuoto yhdellä alkiolla, jotta natiivi lataa vain valitun
+   * kaupungin lehden (ESILATAUSPOLITIIKKA kohta 3). Kokonainen kokoelma jää vanhoille buildeille.
+   */
+  const lehdetKaupungeittain = [];
+  for (const a of kokoelmat.kaupunkilehdet?.alkiot ?? []) {
+    const k = kokoelmat.kaupunkilehdet;
+    const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi: 'kaupunkilehdet', ...k, alkiot: [a] }) + '\n';
+    const tiedosto = `kokoelmat/kaupunkilehdet/${a.id}.json`;
+    tiedostot.set(tiedosto, teksti);
+    lehdetKaupungeittain.push({ id: a.id, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) });
+  }
 
   const lisatiedostot = LISATIEDOSTOT.map((polku) => {
     const teksti = readFileSync(join(juuri, polku), 'utf8');
@@ -338,6 +389,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     skeemat: skeemat.map((f) => `skeema/${f}`),
     media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
+    kaupunkilehdetKaupungeittain: lehdetKaupungeittain,
     webNakymat,
     offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
     lisenssit: { tiedosto: 'lisenssit.json', sha256: sha(lisenssiTeksti), tavuja: tavuja(lisenssiTeksti) },

@@ -76,6 +76,7 @@ export const HAHMOTELMA_SWE = [
   ...EUROOPAN_KADONNEET.SWE,
   {
     id: 'hahmotelma-sarek',
+    nimio: 'Sarek',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-sarek-d5137427.jpg',
       lyhyt: 'Rapajoen suisto ja Skierfe-vuori Sarekin kansallispuistossa.',
@@ -141,6 +142,7 @@ export const HAHMOTELMA_SWE = [
   },
   {
     id: 'hahmotelma-abisko',
+    nimio: 'Abisko',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-abisko-4c232a64.jpg',
       lyhyt: 'Abiskojåkka-joen kanjoni Abiskon kansallispuistossa.',
@@ -484,6 +486,7 @@ export const HAHMOTELMA_SWE = [
   },
   {
     id: 'hahmotelma-kosterhavet',
+    nimio: 'Kosterhavet',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kosterhavet-a07a52e3.jpg',
       lyhyt: 'Kalliosaaria ja avomerta Kosterinsaarten seudulla.',
@@ -1083,6 +1086,7 @@ export const HAHMOTELMA_SWE = [
   },
   {
     id: 'hahmotelma-varberg',
+    nimio: 'Varberg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-varberg-7bca56a6.jpg',
       lyhyt: 'Varbergin linnoitus talvella ilmasta: vallihauta, muurit ja meri taustalla.',
@@ -1566,6 +1570,7 @@ export const HAHMOTELMA_SWE = [
   },
   {
     id: 'hahmotelma-halsingegardar',
+    nimio: 'Hälsingegårdar',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-halsingegardar-61fc7701.jpg',
       lyhyt: 'Erik-Andersin punainen kaksikerroksinen hirsinen päärakennus Söderalassa.',
@@ -1861,6 +1866,7 @@ export const HAHMOTELMA_SWE = [
   },
   {
     id: 'hahmotelma-gammelstad',
+    nimio: 'Gammelstad',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gammelstad-c267ed89.jpg',
       lyhyt: 'Nederluleån kirkko ja sitä ympäröivät kirkkomajat ilmakuvassa.',

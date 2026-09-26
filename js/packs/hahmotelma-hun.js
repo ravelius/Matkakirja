@@ -383,6 +383,7 @@ export const HAHMOTELMA_HUN = [
   },
   {
     id: 'hahmotelma-esztergom',
+    nimio: 'Esztergom',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/hun-nosto-esztergom-b37eef8c.jpg',
       lyhyt: 'Esztergomin basilika kohoaa linnavuorella Tonavan yllä.',
@@ -1098,6 +1099,7 @@ export const HAHMOTELMA_HUN = [
   },
   {
     id: 'hahmotelma-fertod',
+    nimio: 'Eszterháza',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/hun-nosto-fertod-81b1fa68.jpg',
       lyhyt: 'Eszterházan palatsin barokkijulkisivu, kaareva siipi ja puutarha Fertődissä.',
@@ -1471,6 +1473,7 @@ export const HAHMOTELMA_HUN = [
    */
   {
     id: 'hahmotelma-visegrad-palota',
+    nimio: 'Visegrád',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/hun-nosto-visegrad-bccd3fec.jpg',
       lyhyt: 'Visegrádin kuninkaallisen palatsin kaivettuja kiviraunioita metsäisen mäenrinteen edessä.',

@@ -330,6 +330,9 @@ export function kaynnistaKarttaselite(ui) {
     valitse: vaihda,
   });
 
+  /** Rakennetun Maakunnat-välilehden kahva (paivitaMaa: löydös 70, lista seuraa nykyistä maata). */
+  let maakunnatKahva = null;
+
   /** Rivien tila ja luvut ajan tasalle — vain kun valikko on auki. */
   function paivita() {
     /*
@@ -351,6 +354,7 @@ export function kaynnistaKarttaselite(ui) {
       sulje();
       return;
     }
+    maakunnatKahva?.paivitaMaa?.();
     const nyt = karttavaloValinta(KARTTASELITE_AIHEJARJESTYS);
     for (const [id, solmu] of rivit) {
       solmu.setAttribute('aria-pressed', String(id === nyt));
@@ -406,7 +410,7 @@ export function kaynnistaKarttaselite(ui) {
     try { localStorage.setItem(VALILEHTI_TALLE, nimi); } catch { /* yksityinen selaus */ }
     if (!nostotAuki && !maakunnatRakennettu && maakunnatRakentaja) {
       maakunnatRakennettu = true;
-      maakunnatRakentaja(paneeliMaakunnat, { levy: luoPeukalolevy });
+      maakunnatKahva = maakunnatRakentaja(paneeliMaakunnat, { levy: luoPeukalolevy });
     }
     if (nostotAuki) paivita();
   };
@@ -433,7 +437,7 @@ export function kaynnistaKarttaselite(ui) {
     maakunnatRakentaja = rakenna;
     if (valilehtiNyt === 'maakunnat' && !maakunnatRakennettu) {
       maakunnatRakennettu = true;
-      rakenna(paneeliMaakunnat, { levy: luoPeukalolevy });
+      maakunnatKahva = rakenna(paneeliMaakunnat, { levy: luoPeukalolevy });
     }
   }
 

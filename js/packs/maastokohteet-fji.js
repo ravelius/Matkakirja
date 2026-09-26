@@ -130,6 +130,7 @@ export const MAASTOKOHTEET_FJI = [
   {
     id: 'sri-siva-subramaniya',
     nimi: 'Sri Siva Subramaniya',
+    nimio: 'Sri Siva',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuinka suuri temppeli on?',

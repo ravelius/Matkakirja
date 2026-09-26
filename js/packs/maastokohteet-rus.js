@@ -505,6 +505,7 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'solovetskin-luostari',
+    nimio: 'Solovetski',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-solovetskin-luostari-b816d38e.jpg',
       lyhyt: 'Solovetskin luostarin muurit ja kirkot heijastuvat järven pintaan.',

@@ -14051,6 +14051,33 @@ button.lukija-nappi.lukee,
   color: #16130f;
 }
 
+/* ===========================================================================
+   "HAVAINNEKUVA"-MERKINTÄ LYHYESSÄ KUVATEKSTISSÄ (omistaja 20.9.2026,
+   nostokortti-erä kohta 3; js/havainnekuva.js lisaaHavainnekuvaMerkki).
+   Pieni harvennettu versaali kuvatekstin perässä — sama muste kuin
+   kuvateksti, haaleampana, jotta se lukee merkintänä eikä tekstinä.
+
+   ASUU TÄÄLLÄ, EI css/fokusnosto.css:SSÄ (Natiivi-UI:n löydös 24.9.2026):
+   merkki piirtyy myös kartan kohdekorttiin (js/fokuskohteet.js), ja
+   fokusnosto.css ladataan vasta ensimmäisen fokusnoston yhteydessä
+   (js/elaintaky.js, js/fokusnosto.js). Sitä ennen merkki näkyi pelkkänä
+   Iowan-tekstinä kuvatekstin perässä ilman väliä ja reunaa.
+   =========================================================================== */
+.kuvateksti-havainne {
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0 0.35em;
+  font-family: var(--font-type);
+  font-size: 0.68em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.72);
+  border: 1px solid rgba(70, 51, 31, 0.28);
+  border-radius: 3px;
+  vertical-align: 0.1em;
+  white-space: nowrap;
+}
+
 /*
  * NOSTOVISA PAPERINA (Raamattu NOSTOVISAN ULKOASU JA VAIHTOEHTOJEN KIELI;
  * omistajan laitekuva 19.9.2026 klo 20.41, Rocamadour: "Tämä visuaalisesti
@@ -26184,6 +26211,15 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   gap: 0.15rem;
 }
 
+/* Maa ilman maakuntia (löydös 70): teksti listan yllä, muut maat suljettuina alla. */
+.maakunnat-ei-maakuntia {
+  margin: 0 0 0.3rem;
+  color: rgba(70, 51, 31, 0.78);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .maakunnat-ryhma {
   display: flex;
   flex-direction: column;
@@ -29150,3 +29186,15 @@ body.pallolauta-kallistettu .minipopup,
 body.pallolauta-kallistettu [class^="pallolauta-liuska"] {
   visibility: hidden;
 }
+
+/*
+ * LEHTIKUORI (js/lehtikuori.js, ?lehti=<kaupunki>): natiivin pelin
+ * web-näkymässä näkyy vain kaupunkilehti. Sovelluksen runko (.app:
+ * yläpalkki, lauta, toimintorivi) ja päivitysruutu piiloon; dialogit
+ * (lehti, artikkeli, nähtävyys, suurennos) ovat bodyn suoria lapsia ja
+ * toimivat kuten pelissä. Tausta pergamentin tumma, ettei lehden sulkeutuminen
+ * välähdä valkoisena ennen kuin natiivi sulkee näkymän.
+ */
+body.lehtikuori > .app,
+body.lehtikuori > .paivitysruutu { display: none !important; }
+body.lehtikuori { background: #2a241c; }

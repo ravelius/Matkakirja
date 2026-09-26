@@ -289,6 +289,7 @@ export const MAASTOKOHTEET_MDG = [
   {
     id: 'merirosvojen-hautausmaa',
     nimi: 'Merirosvojen hautausmaa',
+    nimio: 'Sainte-Marie',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi merirosvot valitsivat juuri tämän saaren?',

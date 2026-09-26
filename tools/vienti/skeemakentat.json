@@ -10,10 +10,26 @@
   "1.29": "5333684225d7cb2b",
   "1.30": "4eacd12cb5266253",
   "1.31": "a7e1d2be199a1a5e",
-  "1.32": "39f6e79314ed0da5"
+  "1.32": "39f6e79314ed0da5",
+  "1.33": "081f5d7fd7c62ab5",
+  "1.34": "081f5d7fd7c62ab5",
+  "1.35": "7a7178d9759be893",
+  "1.36": "da7f54e6ae671424",
+  "1.37": "1f3dae321dc1fa92",
+  "1.38": "8ecfeec7eec821e1",
+  "1.39": "3c9e4ae05bfc9dcb",
+  "1.40": "a6303d9592c8e80b",
+  "1.41": "a6303d9592c8e80b",
+  "1.42": "450976039e4a59be",
+  "1.43": "07faa994d7f35bb1",
+  "1.44": "21ebc85d60d4db64",
+  "1.45": "f2f2e3b5ee71c11f",
+  "1.46": "e04def76b9069363",
+  "1.47": "293c3b3783dd4ab6",
+  "1.48": "e46e9962636f79b9"
  },
  "uusin": {
-  "skeemaversio": "1.32",
+  "skeemaversio": "1.48",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -43,6 +59,25 @@
     "url",
     "vakio",
     "voima"
+   ],
+   "aluenimet": [
+    "/aineistoversio",
+    "/fontti",
+    "/tyylit",
+    "id",
+    "iso",
+    "koko_arkki",
+    "korkeus_m",
+    "kulma",
+    "lat",
+    "lon",
+    "luokka",
+    "muste",
+    "paikat",
+    "pallotasot",
+    "tasot",
+    "teksti",
+    "tyyli"
    ],
    "elaintayt": [
     "data",
@@ -125,23 +160,30 @@
    ],
    "karttavalot": [
     "aihe",
+    "ankkuri",
     "id",
     "kategoria",
     "kaupunki",
     "kaupunkiAvain",
     "kohdekartta",
+    "kokoluokka",
+    "kokoluokkaLahde",
     "ladottu",
     "lahde",
     "lahizoom",
+    "laji",
     "lat",
     "liitetytNostot",
     "lon",
     "maa",
+    "maakunta",
+    "maakuntaLahde",
     "nimi",
     "nimio",
     "paakartalla",
     "paikka",
     "paikkaLahde",
+    "puoli",
     "takynosto",
     "tarkeys",
     "taso",
@@ -150,6 +192,10 @@
    "kaupungit": [
     "aloitus",
     "ambienssi",
+    "asukkaat",
+    "asukkaatAlue",
+    "asukkaatLahde",
+    "asukkaatVuosi",
     "data",
     "id",
     "intro",
@@ -380,11 +426,33 @@
    ],
    "maakuntarajat": [
     "/kaaret",
+    "/maat",
     "bbox",
     "id",
     "iso3",
     "nimi",
-    "renkaat"
+    "renkaat",
+    "salaisuus",
+    "vari"
+   ],
+   "maakuntasalaisuudet": [
+    "aihe",
+    "id",
+    "kategoria",
+    "kokoluokka",
+    "laji",
+    "lat",
+    "lon",
+    "lyhyt",
+    "maa",
+    "maakunta",
+    "maakuntaNimi",
+    "nappi",
+    "nimi",
+    "nimio",
+    "teksti",
+    "tunnus",
+    "viite"
    ],
    "maalehdet": [
     "aiheet",
@@ -393,6 +461,7 @@
     "maa",
     "sivut"
    ],
+   "maamerkit": [],
    "maarajat": [
     "bbox",
     "id",
@@ -412,6 +481,7 @@
    ],
    "maat": [
     "aiheet",
+    "fokuspohja",
     "id",
     "intro",
     "iso2",
@@ -431,6 +501,18 @@
     "vanhaAani",
     "wiki"
    ],
+   "merinimet": [
+    "/tyyli",
+    "id",
+    "kaari",
+    "kulma",
+    "lahde",
+    "lat",
+    "lisenssi",
+    "lon",
+    "nimi",
+    "tasot"
+   ],
    "miniatyyrit": [
     "data",
     "id",
@@ -449,6 +531,7 @@
     "maa",
     "nappi",
     "nimi",
+    "nimio",
     "teksti",
     "tyyppi"
    ],
@@ -541,6 +624,16 @@
     "laji",
     "maksu",
     "via"
+   ],
+   "reitit1873": [
+    "/lahteet",
+    "id",
+    "lahde",
+    "laji",
+    "lisenssi",
+    "nimi",
+    "viivat",
+    "vuosi"
    ],
    "saannot": [
     "arvo",
@@ -697,6 +790,7 @@
   },
   "manifest": [
    "$skeema",
+   "kaupunkilehdetKaupungeittain",
    "kokoelmat",
    "kuvaus",
    "laskennat",

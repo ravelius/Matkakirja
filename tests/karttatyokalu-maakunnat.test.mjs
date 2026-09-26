@@ -12,13 +12,22 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  MAAKUNTIEN_NIMET, MAAKUNTIEN_MAAT, maakunnanNimi, maakunnanKuvat,
+  MAAKUNTIEN_NIMET, MAAKUNTIEN_MAAT, maakunnanNimi, maakunnanKuvat, maakuntienMaa, naytettavaMaa, EI_MAAKUNTIA_TEKSTI,
 } from '../js/karttatyokalu-maakunnat.js';
+import { MAAKUNNAT_KAIKKI } from '../js/packs/maakunnat-nimet.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from '../js/packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from '../js/packs/maakunnat-pulu.js';
 
-test('MAAKUNTIEN_MAAT on kahdeksan maata ja täsmää MAAKUNTIEN_NIMET-tauluun', () => {
-  assert.equal(MAAKUNTIEN_MAAT.length, 8);
+/*
+ * MAAKUNNAT KAIKILLE MAILLE (löydös 105, Fable 25.9.2026): jokainen pelin
+ * maa on listassa, ja jokaisella on MAAKUNTIEN_NIMET-avain — tyhjä olio
+ * tarkoittaa "ei maakuntia".
+ */
+test('MAAKUNTIEN_MAAT kattaa pelin maat ja täsmää MAAKUNTIEN_NIMET-tauluun', () => {
+  assert.ok(MAAKUNTIEN_MAAT.length >= 140, `maita vain ${MAAKUNTIEN_MAAT.length}`);
+  for (const iso of ['FRA', 'DEU', 'GRC', 'FIN', 'EGY', 'JPN']) {
+    assert.ok(MAAKUNTIEN_MAAT.some((m) => m.iso === iso), `${iso} puuttuu`);
+  }
   const isotMaista = MAAKUNTIEN_MAAT.map((m) => m.iso).sort();
   const isotNimista = Object.keys(MAAKUNTIEN_NIMET).sort();
   assert.deepEqual(isotMaista, isotNimista,
@@ -105,4 +114,50 @@ test('MAAKUNTIEN_PULU: muoto on ISO -> tunnus -> [{ q, a }] ja avaimet ovat kelv
     }
   }
   assert.deepEqual(virheet, [], virheet.join('\n'));
+});
+
+/*
+ * LÖYDÖS 70 (Fable 25.9.2026): Kreikassa Maakunnat-välilehti näytti Ranskan.
+ * Nykyinen maa avataan vain, jos sillä on maakuntia; muuten ei yhtään ryhmää
+ * eikä Ranskaa varalle, ja lista kertoo sen tekstillä.
+ */
+test('maakuntienMaa: vain maat, joilla on maakuntia, ei Ranskaa varalle', () => {
+  for (const { iso } of MAAKUNTIEN_MAAT) {
+    const tyhja = Object.keys(MAAKUNTIEN_NIMET[iso]).length === 0;
+    assert.equal(maakuntienMaa(iso), tyhja ? null : iso, iso);
+  }
+  assert.equal(maakuntienMaa('GRC'), 'GRC');
+  assert.equal(maakuntienMaa('PRI'), null, 'Puerto Ricolla ei ole maakuntia');
+  assert.equal(maakuntienMaa('XYZ'), null);
+  assert.equal(maakuntienMaa(undefined), null);
+  assert.equal(EI_MAAKUNTIA_TEKSTI, 'Tälle maalle ei ole vielä maakuntia');
+});
+
+/*
+ * VAIN NYKYINEN MAA LISTASSA (löydös 105): näytettävä maa on pelaajan maa,
+ * ennen peliä tallennetun valinnan maa; maa ilman maakuntia näytetään
+ * silti (pelkkä nimi), tuntematon maa ei.
+ */
+test('naytettavaMaa: pelaajan maa, muuten valinnan maa', () => {
+  assert.equal(naytettavaMaa('GRC', 'FRA:Bretagne'), 'GRC');
+  assert.equal(naytettavaMaa('PRI', 'FRA:Bretagne'), 'PRI');
+  assert.equal(naytettavaMaa(null, 'FRA:Bretagne'), 'FRA');
+  assert.equal(naytettavaMaa(null, null), null);
+  assert.equal(naytettavaMaa('XYZ', 'FRA:Bretagne'), null);
+});
+
+/*
+ * KURATOIDUT TUNNUKSET OVAT VEKTORIEN TUNNUKSIA: kahdeksan kuratoitua maata
+ * korvaavat generoidun rivistön, joten jokaisen kuratoidun tunnuksen pitää
+ * löytyä generoidusta (= maakuntavektorien alueen tunnus), muuten kartan
+ * värjäys ja lista puhuisivat eri alueista.
+ */
+test('kuratoitujen maiden tunnukset löytyvät generoidusta nimistöstä', () => {
+  const puuttuvat = [];
+  for (const iso of ['FRA', 'DEU', 'ITA', 'ESP', 'GBR', 'POL', 'AUT', 'CHE']) {
+    for (const tunnus of Object.keys(MAAKUNTIEN_NIMET[iso])) {
+      if (MAAKUNNAT_KAIKKI[iso]?.[tunnus] === undefined) puuttuvat.push(`${iso}:${tunnus}`);
+    }
+  }
+  assert.deepEqual(puuttuvat, []);
 });

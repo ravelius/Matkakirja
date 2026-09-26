@@ -489,6 +489,7 @@ export const HAHMOTELMA_AUT = [
   },
   {
     id: 'hahmotelma-heiligenkreuz',
+    nimio: 'Heiligenkreuz',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-heiligenkreuz-c8491d1c.jpg',
       lyhyt: 'Heiligenkreuzin luostari noin vuoden 1830 kivipiirroksessa.',
@@ -538,6 +539,7 @@ export const HAHMOTELMA_AUT = [
   },
   {
     id: 'hahmotelma-kremsmuenster',
+    nimio: 'Kremsmünster',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-kremsmuenster-26fcbe8d.jpg',
       lyhyt: 'Ilmakuva Kremsmünsterin luostarista ja sen sisäpihoista.',
@@ -1466,6 +1468,7 @@ export const HAHMOTELMA_AUT = [
   },
   {
     id: 'hahmotelma-st-anton',
+    nimio: 'Sankt Anton',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-st-anton-08b90bb2.jpg',
       lyhyt: 'Näkymä St. Antonin kylään Galzig-gondolin yli.',

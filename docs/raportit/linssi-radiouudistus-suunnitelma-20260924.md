@@ -1,12 +1,16 @@
 # Radiolinssin uudistus natiivissa: kuvitettu suunnitelma
 
-*Linssiseppä (Opus), 24.9.2026 klo 19.4x. Fablen hyväksyttäväksi. Toteutus on build 12:ssa pariteettitöiden
-jälkeen. Linjaus on Raamatussa ("RADIOLINSSIN UUDISTUS NATIIVISSA", omistaja 24.9. klo 19.2x–19.3x). Tämä
+*Linssiseppä (Opus), 24.9.2026 klo 19.4x. HYVÄKSYTTY sellaisenaan (Fable 24.9.2026 klo 19.5x, päätökset
+luvussa 12). Toteutus on build 12:ssa, kun build 11:n pariteettityöt on mergetty. Sitä ennen tehdään vain
+valmistelu (radiopinnat.py, mastoluokat). Linjaus on Raamatussa ("RADIOLINSSIN UUDISTUS NATIIVISSA", omistaja 24.9. klo 19.2x–19.3x). Tämä
 suunnitelma koskee vain natiivia, web pysyy ennallaan.*
 
 Kuvat ovat kansiossa `kaappaukset/radiouudistus-20260924/` (lähdekoodi `lahde/`). Ne ovat havainnekuvia.
 Kartta on natiivin oma kuvakaappaus isosta iPadista (40° kallistus, 47° N 6° E, 2 600 km), ja sen päälle on
-laskettu hämärä. Mastot, renkaat, yövalot ja paneeli on piirretty päälle. Paneelin puu, messinki ja lasi ovat
+laskettu hämärä. Yövalot ovat oikeaa NASA Black Marble -aineistoa (GIBS VIIRS_Black_Marble), joka on projisoitu
+samaan näkymään pelin kameramallilla (`lahde/proj.py`). Mastot ovat oikeissa paikoissa, ja niiden koko tulee
+asukasluvusta (skeema 1.38). Pääkuva päivitettiin omistajan palautteen mukaan 24.9. klo 20.1x: kartta on
+tummempi, yövalot kattavat kaikki kaupungit ja tiet, ja hehku on voimakkaampi. Paneelin puu, messinki ja lasi ovat
 proseduraalisia sijaisia, kunnes kuvaputki toimittaa tekstuurit (tilaus d5928ae06).
 
 ![Pääkuva: iPad, hämärä kartta, Pariisin masto valittuna](kaappaukset/radiouudistus-20260924/1-paakuva-ipad.jpg)
@@ -28,13 +32,19 @@ proseduraalisia sijaisia, kunnes kuvaputki toimittaa tekstuurit (tilaus d5928ae0
 
 ![Paneeli iPadilla ja iPhonella, mitat](kaappaukset/radiouudistus-20260924/2-paneeli-mitat.jpg)
 
-**iPad (1024 pt):** kotelo on 640 × 172 pt, keskellä ja 22 pt alareunasta.
-- Rivi 1: VU 118 × 84, väli 10 pt, LCD-lasi 424 × 84 (16 × 2 merkkiä, pisteväli 4,25 pt), väli 10 pt ja lamppu ⌀ 30.
+**Lampun paikka** (omistaja 24.9. klo 20.0x, sitova): lamppu on keskellä LCD:n oikean reunan ja kotelon
+sisäreunan välistä tilaa sekä vaaka- että pystysuunnassa, LCD:n rivien keskilinjalla. UI:ssa lampun
+säiliö täyttää jäljelle jäävän tilan (flex-grow 1, align-self stretch), ja lamppu keskitetään sen sisään.
+
+**iPad (1024 pt):** kotelo on 640 × 172 pt, keskellä ja 22 pt alareunasta. Sisäleveys on 612 pt (reunus 14 pt).
+- Rivi 1: VU 118 × 84, väli 10 pt, LCD-lasi 424 × 84 (16 × 2 merkkiä, pisteväli 4,25 pt) ja lamppu ⌀ 30
+  keskellä jäljelle jäävää 60 pt:n tilaa (15 + 30 + 15).
 - Rivi 2: viivain 612 × 42, jossa 9 nimeä ja punainen viisari keskellä.
 - Messinkikehys on 4 pt jokaisen osan ympärillä, ja kotelon reunus on 12–14 pt.
 
 **iPhone (393 pt):** kotelo on koko ruudun levyinen ja 150 pt korkea, ja turva-alue jää puun sisään.
-- Rivi 1: VU 76 × 56, LCD-lasi 260 × 58 (pisteväli 2,54 pt) ja lamppu ⌀ 20.
+- Rivi 1: VU 76 × 56, väli 10 pt, LCD-lasi 240 × 58 (pisteväli 2,33 pt) ja lamppu ⌀ 20 keskellä jäljelle
+  jäävää 39 pt:n tilaa. Aiempi LCD (260 pt) ei mahtunut sisäleveyteen 365 pt lampun kanssa.
 - Rivi 2: viivain 365 × 36, jossa on 5 nimeä.
 - 16 merkin näyttö mahtuu, kun VU pienenee. Nykyinen iPhone-asettelu, jossa VU on omalla rivillään, poistuu.
 
@@ -47,6 +57,8 @@ proseduraalisia sijaisia, kunnes kuvaputki toimittaa tekstuurit (tilaus d5928ae0
 | Lasi (naarmut) | LCD:n ja VU:n kansi | päällyskuva 512 × 128 (heijastus ja naarmut alfana) |
 | Asteikkopaperi | VU-levy ja viivain | 256 × 180 ja toistuva 512 × 64 |
 
+![Paneeli kuvaputken tekstuureilla (ambientCG CC0), leivottu radiopinnat.py:llä](kaappaukset/radiouudistus-20260924/7-pinnat-koekuva.jpg)
+
 Kangasta ei tarvita, koska kaiutinverkolle ei jää tilaa kummallakaan laitteella. UI Toolkit ei valaise
 kuvia, joten normal- ja roughness-kartat leivotaan värikuvaan kiinteällä valolla vasemmalta ylhäältä
 (L = (−0,4, 0,6, 0,7), ambient 0,55). Samalla lisätään kevyt kiilto roughnessin mukaan. Leivonta tehdään
@@ -58,11 +70,25 @@ napautuksesta tauko. LCD:n rivit tulevat edelleen RadioTilasta.
 
 ## 3. Hämärä kartta
 
-Hämärä ei ole yö. Pergamentti tummuu ja viilenee, ja rannat, rajat, nimet ja relief jäävät näkyviin.
+**POHJA ON VÄRILLINEN TOPOGRAFIA** (omistaja 24.9. klo 22.3x, havainnekuva A, Raamattu RADIOLINSSIN
+UUDISTUS, POHJA): radiolinssi ei käytä pergamenttia, vaan sama topografiarasteri kuin topografialinssi
+(väriasteikko vihreästä alamaasta ruskeisiin vuoriin, meri sininen) tummuu hämäräksi ja Black Marble -valot
+syttyvät sen päälle. Toteutus:
+- **Linssiseppä (RadioLinssi):** avaus ottaa topografialinssin rasterin samalla polulla kuin topografialinssi
+  (KarttaKerrokset.LisaaRasteri Topografia.Kerros, pohja "laatat" piiloon), ja sulku palauttaa entisen pohjan.
+- **Natiiviseppä (Kartta):** pehmeä häivytys paikan alfalla (_overlayAlfa_<paikka>) avauksen 1,5 s:n aikana.
+- Hämärän kertoimet (alla) eivät muutu: ne kertovat pohjan värit, oli pohja mikä tahansa.
+
+![A: topografia hämärässä (valittu)](kaappaukset/radiouudistus-20260924/3-topografia-a.jpg)
+
+Vertailuksi B (päivänvalo, ei valittu): `kaappaukset/radiouudistus-20260924/3-topografia-b.jpg`.
+Pääkuva (1) on pergamenttipohjainen ja näyttää mastot, renkaat ja paneelin samasta näkymästä.
+
+Hämärä ei ole yö. Kartta tummuu ja viilenee, ja rannat, rajat, nimet ja relief jäävät näkyviin.
 Tileset-varjostimessa tehdään yksi kerto- ja lisäys lineaarisessa tilassa:
 
 ```
-hämärä = pohja × (0,30, 0,29, 0,36) + (0,010, 0,010, 0,022)
+hämärä = pohja × (0,18, 0,17, 0,24) + (0,006, 0,006, 0,016)     (omistaja 24.9. klo 20.0x: tummempi)
 lopputulos = lerp(pohja, hämärä, h),  h = 0 → 1 linssin avauksessa (1,5 s, Pehmeä)
 ```
 
@@ -74,12 +100,17 @@ lähtee pois (löydös 43, alla), joten kaikki maat näkyvät samassa hämäräs
 satelliittiputkella, ja Natiiviseppä lisää sen hämärään emissiivisenä:
 
 ```
-valo = BlackMarble × (0,25 + 0,75 × paikallinen)
+w     = saturate((R − 48/255) / (170/255)) × saturate((R − B + 10/255) / (40/255))   (vain lämmin valo,
+        ei kuunvalaistua maata eikä lunta; Karttaseppä voi leipoa tämän suoraan polttoon)
+valo  = w × 0,85 × (0,5 + 0,5 × paikallinen) × (1,05, 0,82, 0,52)                   (natriumin sävy)
 paikallinen = smoothstep(230 km, 60 km, etäisyys valittuun mastoon) × syttyminen (0 → 1, 1,2 s Pehmeä)
+hehku = valo + blur(valo, 4 pt) × 1,4 + blur(valo, 14 pt) × 1,9                       (bloom, lisätään)
 ```
 
-Pääkuvassa Black Marblen sijaisena ovat piirretyt pisteet. Oikea aineisto on tiheämpi ja seuraa teitä ja
-rannikoita. Sama kerros palvelee myöhemmin yön valot -datalinssiä ja lennon yöosuutta.
+Perustaso on 0,5 kaikkialla maailmassa (omistaja: selvästi näkyvä), ja valitun maston ympärillä valot ovat
+täysiä. Bloom on Natiivisepän filmipinossa (URP Bloom: kynnys emissiiviselle, sironta noin 0,7) tai
+tileset-varjostimen oma kahden säteen hehku, kumpi on iPhonella halvempi. Sama kerros palvelee myöhemmin
+yön valot -datalinssiä ja lennon yöosuutta.
 
 ## 4. Radiomastot
 
@@ -91,9 +122,11 @@ rannikoita. Sama kerros palvelee myöhemmin yön valot -datalinssiä ja lennon y
 | Keski | 0,5–3 milj. | itsekantava ristikkotorni | 2 tasoa (50 %, huippu) | 46 pt | 600 km |
 | Pieni | < 0,5 milj. | putkimasto | huippu | 30 pt | 350 km |
 
-- **Koko tulee kaupungin asukasluvusta.** Kaupungit.json ei vielä sisällä sitä. Ehdotan, että
-  Siirtoseppä lisää kentän `asukkaat` Wikidatasta (P1082, CC0) radiokaupungeille (115). Kentän
-  `tarkeys` jakauma radiokaupungeissa on 81 × 3, 6 × 2, 7 × 1 ja 21 × 0, joten se ei erottele kokoja.
+- **Koko tulee kaupungin asukasluvusta:** kaupungit.json-kenttä `asukkaat` (skeema 1.38, Wikidata P1082,
+  CC0). Jos luku puuttuu (luontokohteet kuten Sahara ja Alpit) tai `asukkaatAlue` on tosi (luku koskee
+  saarta tai valtiota, esim. Angola ja Islanti), masto on Pieni. Koepaketissa v49 jako on 36 Iso, 43 Keski
+  ja 36 Pieni. Huom: P1082 on kaupungin oma raja eikä metropolialue, joten Pariisi (2,1 milj.) ja Rooma
+  (2,7 milj.) ovat Keskiä.
 - **Liioittelu:** 64 pt 2 600 km:n korkeudelta vastaa noin 150 km:n mastoa (oikea on noin 300 m), eli
   liioittelu on noin 500-kertainen. Maston korkeus maailmassa on c × kameran korkeus^0,85, joten koko
   ruudulla kasvaa hieman zoomattaessa lähemmäs mutta ei räjähdä. Mastot seisovat pinnan normaalin
@@ -111,6 +144,9 @@ rannikoita. Sama kerros palvelee myöhemmin yön valot -datalinssiä ja lennon y
 **Muut mastot (lentoestevalot):** kukin vilkkuu omassa vaiheessaan. Jakso on 1,5 s ± 20 % (arvottu
 mastoittain, siemen = aseman tunnus), valo palaa 0,45 s ja nousee ja laskee 0,12 s. Kaikki lasketaan
 varjostimessa, joten prosessori ei tee mitään kehyskohtaista.
+
+**Hehku** (omistaja 24.9. klo 20.0x): lentoestevalon halo on 6,8 × valon säde (valittu 12 ×), eli
+kaksinkertainen ensimmäiseen havainnekuvaan nähden, ja reunan alfa on korkeampi. Maavalon säde on 140 km.
 
 **Valittu masto:** kirkkaus = max(0,25, VU) (aito taso, AVAudioEngine build 8). Kirkkaus nousee 30 ms:ssa
 ja laskee 250 ms:ssa, jotta tahti näkyy mutta ei välky. Kaikki tasot vilkkuvat samassa tahdissa. Maavalo on
@@ -223,13 +259,15 @@ hänen varjostimessaan.
    vain maavalo näkyy.
 6. **Linnut** (Raamattu, hämärässä ja lennolla) eivät kuulu tähän suunnitelmaan, ks. kysymys 5.
 
-## 12. Kysymykset Fablelle
+## 12. Fablen päätökset (24.9.2026 klo 19.5x)
 
-1. **Mastoluokka asukasluvusta** (≥ 3 milj. / 0,5–3 / < 0,5), jolloin Siirtoseppä lisää `asukkaat`-kentän.
-   Vai kelpaako maan väkiluku väliaikaisesti? Maan väkiluvulla jako olisi 48 / 45 / 19.
-2. **Kallistus 40° radion avauksessa.** Ilman sitä mastot eivät näytä kolmiulotteisilta.
-3. **Mastot korvaavat ▶-napit** kartalla, ja valitun nimi näkyy maston vieressä.
-4. **Rahina** tarkoittaa asteikkoetäisyyttä vedon aikana. Maantieteellinen etäisyys vaikuttaa vain
-   kamera-ajon kaareen. Tarkoittiko omistaja myös maantieteellistä etäisyyttä?
-5. **Linnut:** kuka tekee (ehdotus: parvilogiikka Ydimeen Linssisepälle ja piirto Natiivisepälle) ja
-   kuuluvatko ne build 12:een vai myöhempään?
+1. **Mastoluokka tulee asukasluvusta** (≥ 3 milj. / 0,5–3 / < 0,5). Siirtoseppä lisää kentän `asukkaat`
+   Wikidatasta (P1082, CC0) radiokaupungeille uuteen skeemaversioon. Linssiseppä tilaa sen suoraan.
+2. **Radion avaus kallistaa kameran 40°:seen.** Pelaaja saa kallistaa itse 0–85°.
+3. **Mastot korvaavat ▶-napit.** Osuma-alue on 44 pt.
+4. **Rahina riippuu vain asteikkoetäisyydestä** webin kaavalla (luku 7).
+5. **Linnut:** Natiiviseppä toteuttaa boid-parvet (piirto, LOD ja määrä). Linssiseppä määrittelee, milloin
+   ne näkyvät (radion hämärä ja lento), ja niiden reitit. Linnut tulevat build 12:een omana eränään
+   mastojen jälkeen, eivät samaan PR:ään.
+
+Toteutus alkaa vasta, kun build 11:n pariteettityöt on mergetty.

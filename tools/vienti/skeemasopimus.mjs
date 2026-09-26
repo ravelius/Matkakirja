@@ -34,7 +34,7 @@ const VAKIOAVAIMET = new Set(['$skeema', 'nimi', 'lahde', 'kuvaus', 'viittaukset
  *   '<kokoelma>#<id>'           alkio tällä id:llä on olemassa
  *   '<kokoelma>/<avain>'        kokoelman juuressa on avain (esim. maakuntarajat/kaaret)
  *   'moduuli:<polku>'          moduuli on manifestissa (esim. moduuli:js/tyohuone-pelit.js)
- *   'manifest.<avain>' | 'offline.<avain>' | 'offline.maat.*.<avain>' | 'media.<avain>'
+ *   'manifest.<avain>' | 'offline.<polku.pisteillä>' | 'offline.maat.*.<avain>' | 'media.<avain>'
  *   '!…'                       ei saa olla (poistot)
  */
 export const VAATIMUKSET = {
@@ -64,6 +64,22 @@ export const VAATIMUKSET = {
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
+  '1.48': ['manifest.kaupunkilehdetKaupungeittain'],
+  '1.47': ['kokoelma:maakuntasalaisuudet'],
+  '1.46': ['kokoelma:reitit1873', 'reitit1873/lahteet'],
+  '1.45': ['karttavalot.kokoluokka', 'karttavalot.maakunta', 'maakuntarajat.salaisuus'],
+  '1.44': ['karttavalot.laji'],
+  '1.43': ['maakuntarajat.vari'],
+  '1.42': ['maakuntarajat/maat'],
+  '1.41': ['offline.lahteet.rasteri.kaupunkitaso'],
+  '1.40': ['monumentit.nimio'],
+  '1.39': ['karttavalot.ankkuri', 'karttavalot.puoli'],
+  '1.38': ['kaupungit.asukkaat', 'kaupungit.asukkaatVuosi', 'kaupungit.asukkaatAlue', 'kaupungit.asukkaatLahde'],
+  '1.37': ['kokoelma:aluenimet', 'aluenimet/tyylit', 'aluenimet/fontti', 'aluenimet/aineistoversio'],
+  '1.36': ['kokoelma:merinimet', 'merinimet/tyyli'],
+  '1.35': ['maat.fokuspohja'],
+  '1.34': ['maarajat.renkaat'],
+  '1.33': ['kokoelma:maamerkit'],
   '1.32': ['pulmaaineisto.aineisto', 'kohtaamiskuvat.kaupunginNimi', 'linssiaineisto.manifesti', 'linssiaineisto.juoksut', 'tarinakaari.saapumisLuenta', 'tapahtumat.teksti'],
   '1.31': ['skandaalit.teksti', 'historianHetket.lehti', 'monumentit.teksti', 'fokusvirrat.oppitunti', 'kaupungit.nimionAnkkuri'],
 };
@@ -97,7 +113,8 @@ function tayttyy(ehto, { lue, manifest, kokoelma }) {
     if (!o) return false;
     const m = /^offline\.maat\.\*\.(.+)$/.exec(ehto);
     if (m) { const maat = Object.values(o.maat ?? {}); return maat.length > 0 && maat.every((x) => x[m[1]] !== undefined); }
-    return o[ehto.slice(8)] !== undefined;
+    // Pistepolku (skeema 1.40): offline.lahteet.rasteri.kaupunkitaso.
+    return ehto.slice(8).split('.').reduce((x, k) => (x == null ? undefined : x[k]), o) !== undefined;
   }
   if (ehto.startsWith('media.')) {
     const md = lue(manifest.media.tiedosto);

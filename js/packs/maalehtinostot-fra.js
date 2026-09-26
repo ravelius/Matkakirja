@@ -111,7 +111,7 @@ const JAKO = [
     nosto: 3,
     id: 'maalehti-peilisali',
     tyyppi: 'kulttuuri',
-    nimio: 'Versaillesin peilisali',
+    nimio: 'Peilisali',
     symboli: 'kulttuuri',
     lahi: true,
     teksti: "Kun Ludvig XIV halusi peilisalin Versailles'hen, Venetsia piti "
@@ -261,7 +261,7 @@ const JAKO = [
     nosto: 0,
     id: 'maalehti-montgolfier',
     tyyppi: 'tekniikka',
-    nimio: 'Montgolfierin pallo',
+    nimio: 'Montgolfier',
     symboli: 'tekniikka',
     lahi: true,
     teksti: 'Veljekset Joseph ja Étienne Montgolfier valmistivat '
@@ -658,7 +658,7 @@ const JAKO = [
     nosto: 3,
     id: 'maalehti-le-mans',
     tyyppi: 'tekniikka',
-    nimio: 'Le Mansin 24 tuntia',
+    nimio: 'Le Mans 24 h',
     symboli: 'urheilu',
     lahi: true,
     teksti: 'Le Mansin kaupungin liepeillä on ajettu vuodesta 1923 '
@@ -725,7 +725,7 @@ const JAKO = [
     nosto: 1,
     id: 'maalehti-bouquinistit',
     tyyppi: 'kulttuuri',
-    nimio: 'Seinen kirjalaatikot',
+    nimio: 'Bouquinistes',
     symboli: 'kulttuuri',
     lahi: true,
     teksti: 'Seinen kirjakauppiaat olivat vuosisatoja '

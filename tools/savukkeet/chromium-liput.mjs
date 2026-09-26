@@ -88,3 +88,62 @@ if (liput.length) {
     ? `INFO  chromium-liput: ${liput.join(' ')}`
     : `INFO  chromium-liput: EI KYTKETTY (Playwrightia ei löytynyt) — ${liput.join(' ')}`);
 }
+
+/*
+ * AJURI ILMAN NÄYTTÖISTUNTOA (Fable 25.9.2026, Karttaseppä). Savukeajurin
+ * LaunchAgent (SessionCreate) ajaa koodaus-käyttäjänä omassa istunnossaan;
+ * kun konsoli on toisella käyttäjällä, istunnolla ei ole näyttöä:
+ *   - WebKit (Playwright.app) ei käynnisty lainkaan: launch jää 180 s:n
+ *     aikakatkaisuun (25.9. klo 13.38 alkaen 11 savuketta 0/0).
+ *   - Chrome for Testing (uusi headless) kirjaa "CVDisplayLinkCreateWith-
+ *     CGDisplay failed" ja kaatuu pitkässä ajossa SEGV:iin (astro-sumu).
+ * aja-sarja.mjs kokeilee WebKitin kerran sarjan alussa ja asettaa
+ * SAVUKE_EI_NAYTTOA=1, jos se ei käynnisty. Silloin tämä shim
+ *   - vaihtaa Chrome for Testingin Playwrightin headless-kuoreen
+ *     (chromium_headless_shell, vanha headless, ei näyttölinkkiä) ja antaa
+ *     sille ANGLE Metalin (oikea GPU, ks. muistiinpano gpu-headless-metal),
+ *     ellei savuke/rivi ole valinnut GL-taustaa itse;
+ *   - ohjaa webkit.launchin Chromiumiin (savukkeet, joissa WebKit on
+ *     kovakoodattu; SAVUKE_MOOTTORI-savukkeet ohjataan jo aja-sarjassa).
+ * Mitattu ajurilla 25.9.2026 (ajo 36165941808): WebKit 40 s aikakatkaisu,
+ * headless-kuori + Metal 0,6 s ja "ANGLE Metal Renderer: Apple M4 Max".
+ */
+if (process.env.SAVUKE_EI_NAYTTOA === '1') {
+  const GPU = ['--use-angle=metal', '--ignore-gpu-blocklist'];
+  let osui = false;
+  for (const lahde of ['playwright', process.env.PLAYWRIGHT_JS].filter(Boolean)) {
+    let moduuli;
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      moduuli = await import(lahde);
+    } catch {
+      continue;
+    }
+    const pw = moduuli?.chromium ? moduuli : moduuli?.default;
+    if (!pw?.chromium || typeof pw.chromium.launch !== 'function') continue;
+    if (pw.chromium.__savukeEiNayttoa) { osui = true; continue; }
+    const kaynnista = pw.chromium.launch.bind(pw.chromium);
+    pw.chromium.launch = (asetukset = {}) => {
+      if (asetukset.headless === false) return kaynnista(asetukset);
+      const args = asetukset.args ?? [];
+      const omaGl = args.some((a) => /^--use-(gl|angle)=/.test(a));
+      const cft = /Google Chrome for Testing/.test(asetukset.executablePath ?? '');
+      return kaynnista({
+        ...asetukset,
+        executablePath: cft ? undefined : asetukset.executablePath,
+        args: omaGl ? args : [...args, ...GPU],
+      });
+    };
+    pw.chromium.__savukeEiNayttoa = true;
+    if (pw.webkit && typeof pw.webkit.launch === 'function') {
+      pw.webkit.launch = (asetukset = {}) => {
+        console.log('INFO  ei näyttöistuntoa: webkit.launch → Chromium (headless-kuori + Metal)');
+        return pw.chromium.launch(asetukset);
+      };
+    }
+    osui = true;
+  }
+  console.log(osui
+    ? 'INFO  ei näyttöistuntoa: Chromium headless-kuorena + ANGLE Metal, WebKit → Chromium'
+    : 'INFO  ei näyttöistuntoa: EI KYTKETTY (Playwrightia ei löytynyt)');
+}

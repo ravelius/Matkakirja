@@ -468,6 +468,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-nautilus',
     nimi: 'Nautilus navan alla',
+    nimio: 'Nautilus',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miksi sukellusvene meni navan ali?',
@@ -813,6 +814,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-gronlannin-jaatikko',
     nimi: 'Grönlannin jäätikkö',
+    nimio: 'Mannerjäätikkö',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka paksua jää on?',
@@ -876,6 +878,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-ilulissat',
     nimi: 'Ilulissatin jäävuono',
+    nimio: 'Ilulissat',
     tyyppi: 'meri',
     kysymykset: [
       'Kuinka nopeasti jäätikkö liikkuu?',

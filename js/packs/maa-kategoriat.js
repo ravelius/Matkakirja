@@ -3890,8 +3890,8 @@ export const MAA_KATEGORIAT = {
           wiki: 'Säkkipilli',
           musiikki: 'https://music.apple.com/fi/search?term=highland%20bagpipe',
           musiikkiNimi: 'Skotlantilaista säkkipillimusiikkia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/raretunes_364_beating-retreat-edinburgh-castle/raretunesedretreat.mp3',
-          musiikkiNayteNimi: 'Pipe band, Edinburgh Castle — CC BY-NC-SA',
+          musiikkiNayte: 'https://archive.org/download/PiperOfTheMilitaryOrderOfThePurpleHeartEmmettJordanBagpipe/No.10-Track001_20130929-115204.mp3',
+          musiikkiNayteNimi: 'Royal Scottish Bagpipe -medley — Emmett Jordan, CC0',
         },
         {
           otsikko: 'Tattoo tarkoitti: sulkekaa hanat',
@@ -13963,8 +13963,8 @@ export const MAA_KATEGORIAT = {
           wiki: 'Jean Sibelius',
           musiikki: 'https://music.apple.com/fi/search?term=sibelius%20finlandia',
           musiikkiNimi: 'Sibeliuksen Finlandia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/SIBELIUSFinlandia-NEWTRANSFER/Sibelius-FinlandiaOp.26.mp3',
-          musiikkiNayteNimi: 'Sibelius: Finlandia — Artur Rodzinski, CC BY-NC-SA',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ac/Finlandia_-_Cwmbach_Male_Choir.ogg/Finlandia_-_Cwmbach_Male_Choir.ogg.mp3',
+          musiikkiNayteNimi: 'Finlandia-hymni — Cwmbach Male Choir, CC BY-SA (Wikimedia Commons)',
         },
         {
           otsikko: 'Soitin, joka syntyi kalasta',
@@ -14081,7 +14081,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kaksi viikkoa jolloin tunturi syttyy tuleen',
           aika: 'syyskuu',
-          tiedosto: 'Vatikuru nature trail in Pallas-Yllastunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
+          tiedosto: 'Vatikuru nature trail in Pallas-Yllästunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
           teksti: 'Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, '
             + 'jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti '
             + 'keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö '
@@ -15292,8 +15292,8 @@ export const MAA_KATEGORIAT = {
           wiki: 'Irlantilainen kansanmusiikki',
           musiikki: 'https://music.apple.com/fi/search?term=uilleann%20pipes',
           musiikkiNimi: 'Uilleann-pillimusiikkia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/TheKerryJigTheMugOfBrownAle/01_kerry_mug_of_brown_ale_jigs.mp3',
-          musiikkiNayteNimi: 'Irlantilainen jigi ja reel — Tradschool, CC BY-NC-SA',
+          musiikkiNayte: 'https://archive.org/download/TomEnnisTheMaidintheMeadowTheFriezeBreechesPaytheReckoning/Tom_Ennis__The_Maid_in_the_Meadow_The_Frieze_Breeches_Pay_the_Reckoning.mp3',
+          musiikkiNayteNimi: 'Uilleann-pillijigejä — Tom Ennis, CC BY-SA',
         },
         {
           otsikko: 'Kolikon harppu on väärän muotoinen',

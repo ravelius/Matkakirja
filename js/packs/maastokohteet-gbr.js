@@ -522,6 +522,7 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'bathin-roomalaiset-kylpylat',
+    nimio: 'Roomalaiskylpylä',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bathin-roomalaiset-kylpylat-465008b9.jpg',
       lyhyt: 'Bathin Suuri kylpylä, taustalla Bath Abbeyn torni.',

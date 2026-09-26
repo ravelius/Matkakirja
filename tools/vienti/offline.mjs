@@ -38,9 +38,19 @@ const TAMA = dirname(fileURLToPath(import.meta.url));
 const KOOT_TIEDOSTO = join(TAMA, 'offline-koot.json');
 
 export const OFFLINE_LAHTEET = {
+  /*
+   * Skeema 1.40 (Natiiviseppä, Fablen päätös 25.9.2026, build 13): pohja
+   * Karttasepän sarjaan 2026-09-25 (Z0–Z9, viivaton). Z0–Z8 kuten ennen
+   * (globaalisti z0–z5, maittain z6–z8); Z9 vain kaupunkien ympärillä
+   * (kaupunkitaso): sama kaupunkilista ja rajaus kuin satelliittipinnan
+   * Z8–Z11 (Karttasepän tools/tee-satelliitti.mjs kaupunginLaatikko:
+   * kokoelman kaupungit, tyyppi 'kaupunki', säde 60 km). Maan rasteri[9]
+   * on siksi LISTA välejä, yksi kaupunkia kohti.
+   */
   rasteri: {
-    url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/{z}/{x}/{y}.jpg',
-    skeema: 'xyz', projektio: 'EPSG:3857', koko: 256, minzoom: 0, maxzoom: 8, globaaliMax: 5,
+    url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{y}.jpg',
+    skeema: 'xyz', projektio: 'EPSG:3857', koko: 256, minzoom: 0, maxzoom: 9, globaaliMax: 5, maaMax: 8,
+    kaupunkitaso: { tasot: [9], sadeKm: 60, kaupungit: "kokoelma kaupungit, tyyppi 'kaupunki'" },
   },
   maasto: {
     layer: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23b/layer.json',
@@ -129,6 +139,40 @@ function rasteriLaatat(renkaat, b, z) {
     }
   }
   return { vali: [x0, y0, x1, y1], laattoja };
+}
+
+/*
+ * KAUPUNGIN LAATIKKO (Karttasepän tee-satelliitti.mjs kaupunginLaatikko,
+ * sama kaava): leveyssuunnassa säde/R radiaaneina, pituussuunnassa sama
+ * jaettuna cos(lat):lla, pyöristys 4 desimaaliin.
+ */
+const MAAN_SADE_KM = 6371.0088;
+const RAD = Math.PI / 180;
+function kaupunginLaatikko(lon, lat, sadeKm) {
+  const dLat = (sadeKm / MAAN_SADE_KM) / RAD;
+  const dLon = dLat / Math.cos(lat * RAD);
+  const p = (v) => Math.round(v * 1e4) / 1e4;
+  return { w: p(Math.max(-180, lon - dLon)), s: p(Math.max(-MERCATOR_MAX, lat - dLat)),
+    e: p(Math.min(180, lon + dLon)), n: p(Math.min(MERCATOR_MAX, lat + dLat)) };
+}
+
+/** Kaupunkitason välit maittain: { iso: { z: [[x0, y0, x1, y1], …] } } ja laattojen joukot. */
+function kaupunkitasonValit(kaupungit, taso) {
+  const maat = new Map();
+  for (const c of kaupungit) {
+    if (c.tyyppi !== 'kaupunki' || !c.maa || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) continue;
+    const b = kaupunginLaatikko(c.lon, c.lat, taso.sadeKm);
+    if (!maat.has(c.maa)) maat.set(c.maa, new Map());
+    for (const z of taso.tasot) {
+      const x0 = rajaa(xyzX(b.w, z), z); const x1 = rajaa(xyzX(b.e, z), z);
+      const y0 = rajaa(xyzY(b.n, z), z); const y1 = rajaa(xyzY(b.s, z), z);
+      const m = maat.get(c.maa);
+      if (!m.has(z)) m.set(z, { valit: [], laatat: new Set() });
+      m.get(z).valit.push([x0, y0, x1, y1]);
+      for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) m.get(z).laatat.add(`${x}/${y}`);
+    }
+  }
+  return maat;
 }
 
 /** TMS EPSG:4326 -laatat (z0 = 2 × 1), rajattuna available-väleihin. */
@@ -277,6 +321,19 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     return [r, { media: lista.map(url), tavuja: Math.round(mediaTavut(lista)) }];
   }));
 
+  const kaupunginMaa = new Map(JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.map((k) => [k.id, k.maa]));
+  const maamerkit = new Map();
+  if (tiedostot.has('kokoelmat/maamerkit.json')) {
+    for (const a of JSON.parse(tiedostot.get('kokoelmat/maamerkit.json')).alkiot) {
+      const iso = kaupunginMaa.get(a.kaupunki);
+      if (!iso) continue;
+      if (!maamerkit.has(iso)) maamerkit.set(iso, []);
+      maamerkit.get(iso).push(a.malli);
+    }
+  }
+
+  const kaupunkiKokoelma = tiedostot.get('kokoelmat/kaupungit.json');
+  const kaupunkiValit = kaupunkitasonValit(kaupunkiKokoelma ? JSON.parse(kaupunkiKokoelma).alkiot : [], R.kaupunkitaso);
   const maat = {};
   for (const [iso, maa] of Object.entries(countryShapes)) {
     if (!maa.renkaat?.length) continue;
@@ -284,9 +341,14 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     const b = bbox(renkaat);
     const rasteri = {}; const maasto = {}; const laattoja = { rasteri: 0, maasto: 0 };
     let rTavut = 0; let mTavut = 0;
-    for (let z = R.globaaliMax + 1; z <= R.maxzoom; z++) {
+    for (let z = R.globaaliMax + 1; z <= R.maaMax; z++) {
       const t = rasteriLaatat(renkaat, b, z);
       rasteri[z] = t.vali; laattoja.rasteri += t.laattoja; rTavut += t.laattoja * (koot.rasteri.keskitavut[z] ?? 0);
+    }
+    // Kaupunkitaso: päällekkäiset laatat lasketaan tavuihin kerran.
+    for (const [z, t] of kaupunkiValit.get(iso) ?? []) {
+      rasteri[z] = t.valit; laattoja.rasteri += t.laatat.size;
+      rTavut += t.laatat.size * (koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[R.maaMax] ?? 0);
     }
     for (let z = M.globaaliMax + 1; z < saatavilla.length; z++) {
       const t = maastoLaatat(renkaat, b, z, saatavilla[z]);
@@ -294,10 +356,12 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       maasto[z] = t.vali; laattoja.maasto += t.laattoja; mTavut += t.laattoja * (koot.maasto.keskitavut[z] ?? 0);
     }
     const media = [...(jako.get(iso) ?? [])].sort();
-    const medTavut = mediaTavut(media);
+    // Skeema 1.33: maan kaupunkien 3D-maamerkit (tarkka koko kokoelmasta).
+    const mallit = (maamerkit.get(iso) ?? []).sort((a, b) => (a.url < b.url ? -1 : 1));
+    const medTavut = mediaTavut(media) + mallit.reduce((s, m) => s + m.tavuja, 0);
     maat[iso] = {
       iso2: ISO2[iso] ?? null, nimi: maa.nimi, rasteri, maasto, laattoja,
-      media: media.map(url),
+      media: [...media.map(url), ...mallit.map((m) => m.url)],
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
         yht: Math.round(rTavut + mTavut + medTavut) },
     };

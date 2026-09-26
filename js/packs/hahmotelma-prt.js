@@ -429,6 +429,7 @@ export const HAHMOTELMA_PRT = [
   },
   {
     id: 'hahmotelma-vila-nova-de-cerveira',
+    nimio: 'Cerveira',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-vila-nova-de-cerveira-8ece885a.jpg',
       lyhyt: 'Ilmakuva Vila Nova de Cerveiran kivisistä kaupunginmuureista ja punakattoisista taloista.',
@@ -634,6 +635,7 @@ export const HAHMOTELMA_PRT = [
   },
   {
     id: 'hahmotelma-foz-coa',
+    nimio: 'Côa-laakso',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-foz-coa-958ab81e.jpg',
       lyhyt: 'Kallioon kaiverrettu esihistoriallinen härkä Côa-laakson Penascosan kalliopiirroksissa.',
@@ -1193,6 +1195,7 @@ export const HAHMOTELMA_PRT = [
   },
   {
     id: 'hahmotelma-sao-domingos',
+    nimio: 'São Domingos',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-sao-domingos-9853bba4.jpg',
       lyhyt: 'Entisen kaivoksen louhoksen täyttää tumma hapan vesi, jota ympäröivät ruosteenpunaiset ja keltaiset kalliot.',
@@ -1255,6 +1258,7 @@ export const HAHMOTELMA_PRT = [
   },
   {
     id: 'hahmotelma-castro-marim',
+    nimio: 'Castro Marim',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-castro-marim-f9398891.jpg',
       lyhyt: 'Ylhäältä otetussa kuvassa Castro Marimin valkoiset talot, suola-altaat ja laaja kosteikko.',
@@ -1382,6 +1386,7 @@ export const HAHMOTELMA_PRT = [
   },
   {
     id: 'hahmotelma-panasqueira',
+    nimio: 'Panasqueira',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-panasqueira-d487f40a.jpg',
       lyhyt: 'Panasqueiran kaivoksen rikastamon ruosteiset teräsrakennukset, hihnakuljettimet ja tornit ylhäältä nähtynä.',
@@ -1514,6 +1519,7 @@ export const HAHMOTELMA_PRT = [
   },
   {
     id: 'hahmotelma-torres-vedras',
+    nimio: 'Torres Vedras',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-torres-vedras-b5373068.jpg',
       lyhyt: 'Vanha kartta Torres Vedrasin linjoista ja niiden yhteydestä Lissaboniin.',

@@ -357,6 +357,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-tabernas',
+    nimio: 'Tabernas',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-tabernas-a2f30462.jpg',
       lyhyt: 'Tabernasin autiomaan eroosion uurtamia rotkoja ja kuivia harjuja Almeríassa.',
@@ -838,6 +839,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-las-navas',
+    nimio: 'Las Navas',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-las-navas-81efc4af.jpg',
       lyhyt: 'Las Navas de Tolosan taistelu 1212 Van Halenin maalauksessa vuodelta 1864.',
@@ -887,6 +889,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-campo-de-criptana',
+    nimio: 'Campo de Criptana',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-campo-de-criptana-7b3f58b5.jpg',
       lyhyt: 'Valkoiset tuulimyllyt Sierra de los Molinosin harjanteella pilvisen taivaan alla.',
@@ -1208,6 +1211,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-riotinto',
+    nimio: 'Riotinto',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-riotinto-4c8af57d.jpg',
       lyhyt: 'Riotinto-joen punertava vesi virtaa oranssien ja punaruskeiden kivien välissä.',
@@ -1281,6 +1285,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-almaden',
+    nimio: 'Almadén',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-almaden-72965ff2.jpg',
       lyhyt: 'Puinen kottikärry täynnä malmikiviä Almadénin kaivoskäytävässä.',

@@ -677,4 +677,36 @@ export const TYOLISTA = [
       + 'terminus with its sheds at the shore, camel caravans bringing figs and '
       + 'raisins down to the port, and tiny porters for scale',
   },
+  {
+    id: 'bergen',
+    tiedosto: 'tuot-bergen.png',
+    nimi: 'BERGEN',
+    vuosi: '1873',
+    sommittelu: 'Bergen in 1873 as a beautiful miniature world: the long row '
+      + 'of gabled timber Hanseatic merchant houses of Bryggen along the wharf '
+      + 'as the dominant central feature, surrounded by the twin Romanesque '
+      + 'towers of Mariakirken, the medieval stone hall of Håkonshallen and the '
+      + 'round Rosenkrantz tower, racks of drying stockfish, bustling fish '
+      + 'market stalls at Torget, sailing schooners and rowing boats crowding '
+      + 'the quay, and steep timber-house lanes climbing the lower slopes; the '
+      + 'sheltered Vågen bay ringed by the seven surrounding mountains as the '
+      + 'geographical anchor, with tiny period figures, fishermen and horse '
+      + 'carts for scale',
+  },
+  {
+    id: 'sevilla',
+    tiedosto: 'tuot-sevilla.png',
+    nimi: 'SEVILLE',
+    vuosi: '1873',
+    sommittelu: 'Seville in 1873 as a beautiful miniature world: the Giralda '
+      + 'bell tower rising in ochre brick above Seville Cathedral as the '
+      + 'dominant central feature, surrounded by the horseshoe arches and '
+      + 'walled gardens of the Alcázar palace, the twelve-sided Torre del Oro '
+      + 'on the riverbank, the iron lattice spans of the Triana bridge over the '
+      + 'Guadalquivir, the chimneys of the Royal Tobacco Factory, whitewashed '
+      + 'courtyard houses hung with orange trees, and river barges loading '
+      + 'casks at the quay; the wide Guadalquivir valley and the flat '
+      + 'Andalusian plain as the geographical anchor, with tiny period '
+      + 'figures, women in fringed shawls and ox carts for scale',
+  },
 ];

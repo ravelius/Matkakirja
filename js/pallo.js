@@ -40,6 +40,7 @@
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { koepyramidinPallokansio, pyramidiKoe } from './media.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet,
@@ -120,7 +121,16 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-23a-pohja';
+/*
+ * PERUSKARTTA 2026-09-25 (omistaja 25.9.2026: "vaihda", kuvakokeilu
+ * koelipulla ?pyramidi=2026-09-25). Resepti D2 + C-reliefi + vektorirannat;
+ * sarja on poltettu ILMAN viivatasoa (sama sarja kuin natiivilla), joten
+ * liikkuvassa pallossa ei ole poltettuja rajoja — levossa rajat, joet ja
+ * nostot tulevat pyramidin lepokerroksesta. laatat.json: viivat null,
+ * nostot null, ranta null, versio = pyramidin versio (lepokerroksen
+ * versiovahti, js/pallolaatat.js lepokerroksenKerrokset).
+ */
+export const PALLO_LAATTAVERSIO = '2026-09-26-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -190,14 +200,23 @@ export const PALLO_LAATTAVERSIO = '2026-09-23a-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260923a';
+export const PALLO_LAATTATUNNISTE = '20260926';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
  * (js/pallolaatat.js nostotMaittain). Sama tieto sw.js LAATTAKANSIO.
  */
 export const PALLO_SARJASSA_NOSTOT = false;
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+/*
+ * KOEPYRAMIDI (?pyramidi=<sarja>, js/media.js pyramidiKoe): pallo lukee
+ * saman sarjan laatat kuin koeluettelo, koska lepokerros vaatii pallon
+ * sarjan ja pyramidin luettelon version täsmäävän (js/pallolaatat.js
+ * lepokerroksenKerrokset) — muuten kerros sammuisi kokeessa.
+ */
+const KOEPYRAMIDI = pyramidiKoe();
+/** Tuotannon kansio (sw.js LAATTAKANSIO on sama). */
+export const TUOTANNON_PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+export const PALLO_LAATTAKANSIO = KOEPYRAMIDI ? koepyramidinPallokansio(KOEPYRAMIDI) : TUOTANNON_PALLO_LAATTAKANSIO;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;

@@ -238,6 +238,12 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
  * moduuli jää ilman tuojaa.
  */
 const NIPUTTAMATTOMAT = new Set([
+  // Elävä kartta (26.9.2026): natiivin datapaketit, joita mikään selainmoduuli ei
+  // vielä tuo (kokoluokat ja maakuntasalaisuudet luetaan sisältöpaketin viennissä).
+  // Palautetaan MODULES-listalle, kun webin ensimmäinen tuoja ilmestyy.
+  'js/packs/nostojen-kokoluokat.js',
+  'js/packs/maakuntasalaisuudet.js',
+  'js/packs/maakuntasalaisuudet-grc.js',
   // Vanha PNG-B-sovitin säilyy vertailuun; pelissä käytetään pikselikasvoa.
   'js/livia-kasvot.js',
   // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
@@ -599,7 +605,9 @@ test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivou
   // 18.9.2026): silloin kansiossa ei ole '-nostot'-osaa (tools/tee-pallolaatat.mjs
   // laattojenKansio).
   const sarjassaNostot = pallo.match(/PALLO_SARJASSA_NOSTOT = (true|false)/)?.[1] === 'true';
-  assert.match(pallo, /PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}\$\{PALLO_SARJASSA_NOSTOT \? '-nostot' : ''\}-\$\{PALLO_LAATTATUNNISTE\}`/);
+  assert.match(pallo, /TUOTANNON_PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}\$\{PALLO_SARJASSA_NOSTOT \? '-nostot' : ''\}-\$\{PALLO_LAATTATUNNISTE\}`/);
+  // Koepyramidi (?pyramidi=<sarja>, js/media.js pyramidiKoe) on ainoa poikkeus tuotannon kansiosta.
+  assert.match(pallo, /PALLO_LAATTAKANSIO = KOEPYRAMIDI \? koepyramidinPallokansio\(KOEPYRAMIDI\) : TUOTANNON_PALLO_LAATTAKANSIO;/);
   assert.equal(swKansio, `${versio}${sarjassaNostot ? '-nostot' : ''}-${tunniste}`,
     'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
     + 'activate siivoaisi juuri käytössä olevat laatat');

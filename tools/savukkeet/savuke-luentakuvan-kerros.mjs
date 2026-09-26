@@ -327,6 +327,19 @@ await ctx.close();
   await ajo.sivu.waitForFunction(() => document.body.classList.contains('kertoja-aanessa')
     && Boolean(document.querySelector('.fokusvirta-isokuva.nakyy, .fokusvirta-luentakuva.nakyy')),
   null, { timeout: 30000 }).catch(() => console.log('HUOM  isoisän luenta+kuva ei ehtinyt ruudulle 30 s:ssa'));
+  /*
+   * KUVA TÄYSIN NÄKYVIIN ENNEN MITTAUSTA (löydös 45, 24.9.2026). Iso kuva
+   * avautuu nyt isoisän äänen 'playing'-tapahtumasta, ei play()-kutsusta,
+   * joten se on vielä häivytyksessä (css .fokusvirta-isokuva 700 ms) kun
+   * ääni alkaa. Puoliksi läpinäkyvä kuva päästää sumean kartan läpi, ja
+   * terävyysvartio mittasi kuvan sijaan huntua (−68 %).
+   */
+  await ajo.sivu.waitForFunction(() => {
+    const k = document.querySelector('.fokusvirta-isokuva.nakyy');
+    const r = document.querySelector('.fokusvirta-isokuva-ruutu.nakyy');
+    return Boolean(k && r) && Number(getComputedStyle(k).opacity) >= 0.99
+      && Number(getComputedStyle(r).opacity) >= 0.99;
+  }, null, { timeout: 5000 }).catch(() => console.log('HUOM  iso kuva ei ehtinyt täysin näkyviin 5 s:ssa'));
   await ajo.sivu.waitForTimeout(300);
 
   const tila = await ajo.sivu.evaluate(() => {

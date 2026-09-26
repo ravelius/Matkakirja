@@ -1583,6 +1583,7 @@ export const HAHMOTELMA_HRV = [
   },
   {
     id: 'hahmotelma-salona-amfiteatteri',
+    nimio: 'Amfiteatteri',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/hrv-nosto-salona-amfiteatteri-5b371c4c.jpg',
       lyhyt: 'Salonan amfiteatterin sortuneet kiviholvit ja ympärysmuurin rauniot.',

@@ -67,8 +67,17 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
   const lontoo = kaupungit.find((k) => k.id === 'lontoo');
   assert.ok(lontoo.kayty && lontoo.alku && lontoo.x === 5829.5, 'Lontoo: käyty, aloitus, laudan x säilyy kameran kotia varten');
   assert.ok(kaupungit.every((k) => Math.abs(k.lat) <= 90 && Math.abs(k.lon) <= 180));
-  // Napautus Lontoon asteisiin osuu Lontoon laudan koordinaattiin.
-  const kohta = sukelluskohta(lontoo.lat, lontoo.lon);
+  /*
+   * Napautus laudan raakaprojisoituihin asteisiin osuu takaisin samaan
+   * laudan koordinaattiin. Lasketaan asteet suoraan laudaltaAsteiksi-
+   * kaavalla emmekä lontoo.lat/lon:sta, koska jälkimmäinen voi 23.9.2026
+   * alkaen olla PALLON_KAUPUNKIPISTEET-korjattu (Wikidata) piste — ero
+   * laudan omaan projektioon on juuri se korjaus, jota vain pallolauta
+   * näyttää (js/packs/maailmankartta-pallopisteet.js), eikä sukellus
+   * käytä sitä.
+   */
+  const lontooAsteina = laudaltaAsteiksi('maailmankartta', lontoo.x, lontoo.y);
+  const kohta = sukelluskohta(lontooAsteina.lat, lontooAsteina.lon);
   assert.ok(Math.abs(kohta.x - lontoo.x) < 1e-6 && Math.abs(kohta.y - lontoo.y) < 1e-6, JSON.stringify(kohta));
   assert.equal(sukelluskohta(NaN, 0), null);
   /*
@@ -135,7 +144,10 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   /*
-   * TUNNISTE 20260923a, versio 2026-09-23a-pohja (23.9.2026: sama kuin 22c,
+   * TUNNISTE 20260926, versio 2026-09-26-pohja (peruskartta 2026-09-26,
+   * omistaja hyväksyi 26.9.2026 klo 08.1x; sarja ilman viivatasoa, rajat lepokerroksesta).
+   * Edellinen 20260925, versio 2026-09-25-pohja (25.9.2026).
+   * Edellinen 20260923a, versio 2026-09-23a-pohja (23.9.2026: sama kuin 22c,
    * mutta vesiviivoitus.harvennus = 'haive' — harvennus häivyttää eikä katkaise;
    * docs/raportit/kuvat/harvennus-haive-20260923/). Edellinen 20260922c,
    * versio 2026-09-22c-pohja (22.9.2026 ilta: vesiviivat
@@ -149,8 +161,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
    * lepokerroksesta. Tunniste on pelkkiä kirjaimia ja numeroita, koska
    * tools/tee-pallolaatat.mjs hylkää muun.
    */
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260923a`);
-  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260923a')}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260926`);
+  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260926')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   /*
@@ -183,8 +195,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 6);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 8 } }), 8, 'luettelon 8 riittaa, kun sarja b kantaa sen');
-  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-23a-pohja-20260923a\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
-  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-23a-pohja-20260923a\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-26-pohja-20260926\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-26-pohja-20260926\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
@@ -1045,22 +1057,37 @@ test('kaupungin oma pallopiste voittaa laudan pisteen, ja siirtymä palaa siihen
 
 test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () => {
   const nimet = new Map(MAAILMANKARTTA.cities.map((c) => [c.id, c]));
-  // ALUEITA EI SIIRRETÄ: niiden Wikidata-koordinaatti on alueen
-  // keskipiste eikä se kohta, jota lauta tarkoittaa (luku 12.2).
+  /*
+   * ALUEET EIVÄT SIIRRY PALLOLLA: niiden Wikidata-koordinaatti on
+   * alueen keskipiste eikä se kohta, jota lauta tarkoittaa (luku 12.2).
+   * Neljäs kierros 23.9.2026 (Siirtosepän 163 kaupungin ehdotus,
+   * docs/raportit/kaupunkien-latlon-20260923.md): vienti tarvitsee
+   * silti pisteen jokaiselle, joten alueet SAAVAT nyt pallopisteen,
+   * mutta sen on oltava täsmälleen laudan oma piste (poikkeama 0) —
+   * pallo ei siis siirry, vain vienti saa koordinaatin.
+   */
   for (const alue of ['borneo', 'kamtsatka', 'ahaggar', 'namib', 'nullarbor', 'sahara',
     'viktoria', 'tanganjika', 'tshadjarvi', 'galapagos', 'falkland', 'bali', 'sthelena',
     'hawaii', 'sierraleone', 'siinai', 'sepik',
-    'kappalmas', 'bahrelghazal', 'bananal', 'mosambik', 'orjarannikko',
+    'bahrelghazal', 'bananal', 'orjarannikko',
     // Toinen kierros 7.9.2026 illalla: samasta syystä nämäkin jäävät.
     'sumatra', 'sisilia', 'kreeta', 'kapadokia', 'madagaskar', 'darfur',
-    'sahalin', 'kongo', 'kamerun', 'angola', 'islanti', 'alpit', 'appalakit',
+    'sahalin', 'kongo', 'angola', 'islanti', 'alpit', 'appalakit',
     'labrador', 'rubalkhali']) {
     /*
      * Kolmas kierros 19.9.2026 (Fablen päätös, erä H): Sansibar,
      * Victorian putoukset, Mount Rushmore, Kilimandžaro, Uluru ja
      * Milford Sound ovat PISTEMÄISIÄ kohteita ja saivat pisteen.
+     * Neljäs kierros 23.9.2026: myös Kap Palmas, Ras Hafun (niemien
+     * kärjet), Mosambik (Ilha de Moçambique) ja Kamerun (Douala)
+     * siirtyivät alueista pistemäisiin — ks. luetteloa ei enää tässä.
      */
-    assert.ok(!PALLON_KAUPUNKIPISTEET[alue], `alue ${alue} ei saa omaa pallopistettä`);
+    const p = PALLON_KAUPUNKIPISTEET[alue];
+    assert.ok(p, `alue ${alue} tarvitsee laudan pisteen (23.9.2026 lisäys vientiä varten)`);
+    const c = nimet.get(alue);
+    const laudalla = laudaltaAsteiksi('maailmankartta', c.x, c.y);
+    assert.ok(Math.abs(p.lat - laudalla.lat) < 1e-3 && Math.abs(p.lon - laudalla.lon) < 1e-3,
+      `alue ${alue}: pallopiste ei ole täsmälleen laudan oma piste`);
   }
   for (const [id, p] of Object.entries(PALLON_KAUPUNKIPISTEET)) {
     const c = nimet.get(id);
@@ -1086,8 +1113,13 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
      * POIKKEUS: Sansibarin laudan piste on avomerellä 531 km Stone
      * Townista (−9,28 / 42,70); siirto on juuri se korjaus
      * (docs/raportit/viesti-fable-kaupunkisiirtymat-20260919.md).
+     * POIKKEUS 23.9.2026: Mosambik on Ilha de Moçambique, 823 km laudan
+     * alue-Mosambikista (Beiran rannikko) — Fablen päätös, laudan nimi
+     * ja 1873-merkitys tarkoittavat kaupunkisaarta, ei aluetta
+     * (docs/raportit/kaupunkien-latlon-20260923.md).
      */
-    assert.ok(km < (id === 'sansibar' ? 560 : 500), `${id} siirtyisi ${km.toFixed(0)} km`);
+    const raja = { sansibar: 560, mosambik: 850 }[id] ?? 500;
+    assert.ok(km < raja, `${id} siirtyisi ${km.toFixed(0)} km`);
   }
 });
 
