@@ -770,7 +770,9 @@ namespace Matkakirja
                     Nimio = Laatikko(suorakulmio),
                     Pakko = valinta,
                     // Siirtokohteen nimen piirtää kohdemerkki (Siirtokohdemerkit.NimeaaKaupungin): nimi kerran kuten webissä.
-                    Sallittu = valinta || ((nimiotNakyvat || LinssiTila) && !(Siirtokohdemerkit.Instanssi?.NimeaaKaupungin(m.kaupunki.id) ?? false)),
+                    // UI-pariteetti rivi 2 (Fable 26.9., web on malli): aloitusvalinnan aikana vain valittavien nimet.
+                    Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila)
+                                           && !(Siirtokohdemerkit.Instanssi?.NimeaaKaupungin(m.kaupunki.id) ?? false)),
                     X = ruutu.x, Y = ruutu.y,
                     Leveys = valinta ? 0 : m.teksti.x * kerroin, Korkeus = m.teksti.y * kerroin,
                     Kirjain = m.nimio.fontSize * kerroin,
