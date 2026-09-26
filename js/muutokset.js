@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2260, teksti: 'Pelin maiden joet vektoreina, Kreikka ensin (#3281)' },
   { v: 2259, teksti: 'Peruskartta 2026-09-26 webin palloon (#3301)' },
   { v: 2258, teksti: 'Sisältöpaketti 1.48: kaupunkilehdet kaupungeitt… (#3298)' },
   { v: 2257, teksti: 'Sisältöjuna: miniatyyrien värit 503 erä 12' },
