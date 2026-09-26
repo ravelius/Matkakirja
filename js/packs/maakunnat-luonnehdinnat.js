@@ -4739,45 +4739,198 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CZE: {
     'Jihočeský': {
       lyhyt: 'Český Krumlovin linnan barokkiteatterissa on säilynyt alkuperäinen puinen lavakoneisto kulisseineen, harvinaisuus koko Euroopassa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihocesky-8d22070f.jpg",
+          lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Pudelek (Marcin Szala)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Český_Krumlov_(Krummau)_-_panorama.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihocesky-8d22070f.jpg",
     },
     'Jihomoravský': {
       lyhyt: 'Brnon Tugendhatin huvila valmistui 1930 Mies van der Rohen piirustuksista, ja sen olohuoneen suuret ikkunat voi laskea lattian alle.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihomoravsky-aeb03b9d.jpg",
+          lahde: "Thomas Ledl, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Thomas Ledl",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Villa_Tugendhat,_Brno.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihomoravsky-aeb03b9d.jpg",
     },
     'Karlovarský': {
       lyhyt: 'Karlovy Varyn kuumin lähde Vřídlo suihkuaa yli 70-asteista vettä, ja kylpylävieraat juovat lähdevettä nokallisista posliinikupeista.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-karlovarsky-b32666cf.jpg",
+          lahde: "Juan de Vojníkov, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Juan de Vojníkov",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vřídelní_kolonáda_zvenku.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-karlovarsky-b32666cf.jpg",
     },
     'Královéhradecký': {
       lyhyt: 'Krkonošen Sněžka on 1 603 metrillään Tšekin korkein vuori, ja sen huipun poikki kulkee raja Puolaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-kralovehradecky-152c1d3d.jpg",
+          lahde: "GabrielaZelenkova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "GabrielaZelenkova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sněžka,_nejvyšší_hora_Česka.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-kralovehradecky-152c1d3d.jpg",
     },
     'Liberecký': {
       lyhyt: 'Ještědin huipulla seisoo 1973 valmistunut suppilomainen torni, jossa on sekä televisiolähetin että hotelli ja ravintola.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-liberecky-513d415c.jpg",
+          lahde: "Bernd Gutte, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Bernd Gutte",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jested.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-liberecky-513d415c.jpg",
     },
     'Moravskoslezský': {
       lyhyt: 'Ostravan Dolní Vítkovicessa masuunit sammuivat 1998, ja nyt yhden niistä huipulle pääsee kiipeämään näköalapaikalle.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-moravskoslezsky-86919ccd.jpg",
+          lahde: "Petr Štefek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+          tekija: "Petr Štefek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dolni_Vitkovice_sever.jpg",
+          lisenssi: "CC BY-SA 3.0 cz",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/cz/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-moravskoslezsky-86919ccd.jpg",
     },
     'Olomoucký': {
       lyhyt: 'Olomoucin torilla kohoaa barokkinen Pyhän Kolminaisuuden pylväs, joka on Unescon maailmanperintöä ja kätkee jalustaansa pienen kappelin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-olomoucky-4a6930cb.jpg",
+          lahde: "Ben Meyer, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ben Meyer",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Holy_Trinity_Column_-_Olomouc.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-olomoucky-4a6930cb.jpg",
     },
     'Pardubický': {
       lyhyt: 'Pardubicessa juostaan joka lokakuu Velká pardubická, yksi Euroopan rankimmista estelaukoista, ja sen pelätyin este on Taxis-oja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-pardubicky-b550be81.jpg",
+          lahde: "Jarba, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Jarba",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Velký_Taxisův_příkop.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-pardubicky-b550be81.jpg",
     },
     'Plzeňský': {
       lyhyt: 'Plzeňissä pantiin 1842 ensimmäinen vaalea pohjahiivaolut, ja sen mukaan pils-oluet saivat nimensä ympäri maailman.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-plzensky-99a6a1c6.jpg",
+          lahde: "Taken by me at the Plzen brewary, Wikimedia Commons (Public domain)",
+          tekija: "Taken by me at the Plzen brewary",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pilsner_Urquell_Brewery.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-plzensky-99a6a1c6.jpg",
     },
     Prague: {
       lyhyt: 'Petřínin kukkulalla seisoo 1891 rakennettu näkötorni, Eiffel-tornin pienempi sukulainen, jonka huipulle noustaan 299 askelmaa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-prague-013aff3e.jpg",
+          lahde: "Suisant7, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Suisant7",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Petřín_tower_05_2018.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-prague-013aff3e.jpg",
     },
     'Středočeský': {
       lyhyt: 'Kutná Horan Sedlecin luukappelin kattokruunu ja koristeet on koottu kymmenientuhansien vainajien luista.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-stredocesky-fa02cbcb.jpg",
+          lahde: "User: (WT-shared) Puzzlement at wts wikivoyage aka. User:(WT-shared) Hypatia, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "User: (WT-shared) Puzzlement at wts wikivoyage aka. User:(WT-shared) Hypatia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kutna_Hora_Kostnice_Chandelier.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-stredocesky-fa02cbcb.jpg",
     },
     'Ústecký': {
       lyhyt: 'Böömin Sveitsin kansallispuistossa kohoaa Pravčická brána, Euroopan suurin luonnon muovaama hiekkakivikaari.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-ustecky-707b1990.jpg",
+          lahde: "Mars 2002, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mars 2002",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pravcicka-brana-115.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-ustecky-707b1990.jpg",
     },
     'Vysočina': {
       lyhyt: 'Telčin pitkää toria reunustavat renessanssitalot pastellisävyisine päätyineen, ja koko vanha keskusta on Unescon maailmanperintöä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-vysocina-edd869b3.jpg",
+          lahde: "Beentree., Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Beentree.",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zachariáše_z_Hradce_Square,_Telč,_Moravia,_Czech_Republic_-_20060930-01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-vysocina-edd869b3.jpg",
     },
     'Zlínský': {
       lyhyt: 'Zlín on Baťan kenkätehtaan kaupunki, ja sen pilvenpiirtäjässä johtajan työhuone oli hissi, joka liikkui kerroksesta toiseen.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-zlinsky-6fc888e8.jpg",
+          lahde: "Romanenko, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Romanenko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Baťův_mrakodrap.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-zlinsky-6fc888e8.jpg",
     },
   },
   /*
@@ -4795,12 +4948,45 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   LUX: {
     Diekirch: {
       lyhyt: 'Viandenin linna kohoaa Our-joen laakson yllä, ja joen varrella on talo, jossa Victor Hugo asui maanpaossa 1871.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-diekirch-e55c720f.jpg",
+          lahde: "Flocci Nivis, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Flocci Nivis",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:20200829_Vianden_castle_03.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-diekirch-e55c720f.jpg",
     },
     Grevenmacher: {
       lyhyt: 'Schengenin viinikylän edustalla allekirjoitettiin 1985 rajasopimus laivalla Mosel-joella, jossa Luxemburg, Saksa ja Ranska kohtaavat.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-grevenmacher-1c3c5dfb.jpg",
+          lahde: "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Cayambe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Schengen_Moselle_01.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-grevenmacher-1c3c5dfb.jpg",
     },
     Luxembourg: {
       lyhyt: 'Luxemburgissa bussit, junat ja raitiovaunut ovat olleet maksuttomia koko maassa helmikuusta 2020 lähtien.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-luxembourg-6f0ca08c.jpg",
+          lahde: "Cayambe, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Cayambe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Luxembourg_City_-_Grund_from_Corniche.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-luxembourg-6f0ca08c.jpg",
     },
   },
   /*
@@ -5029,63 +5215,283 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   HRV: {
     'Bjelovarsko-bilogorska': {
       lyhyt: 'Daruvar on Kroatian tšekkiläisvähemmistön keskus, ja kaupungin lämpimissä lähteissä on kylvetty jo roomalaisten aikaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-bjelovarsko-bilogorska-c9df4c6e.jpg",
+          lahde: "SMESNJAKphotoZ, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "SMESNJAKphotoZ",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dvorac_Janković_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-bjelovarsko-bilogorska-c9df4c6e.jpg",
     },
     'Brodsko-Posavska': {
       lyhyt: 'Slavonski Brodissa Savan rannalla on Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui 4 000 sotilasta ja 150 tykkiä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-brodsko-posavska-03b27267.jpg",
+          lahde: "Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Petar Milošević",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tvrđava_Brod_(Brod_Fortress,_Slavonski_Brod,_Croatia).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-brodsko-posavska-03b27267.jpg",
     },
     'Dubrovacko-Neretvanska': {
       lyhyt: 'Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-dubrovacko-neretvanska-8a7bc2ad.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Casco_viejo_de_Dubrovnik,_Croacia,_2014-04-14,_DD_04.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-dubrovacko-neretvanska-8a7bc2ad.jpg",
     },
     Istarska: {
       lyhyt: 'Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista – asukkaita on noin viisikymmentä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-istarska-b8605a87.jpg",
+          lahde: "Sheeba Samuel, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Sheeba Samuel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hum_Croatia.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-istarska-b8605a87.jpg",
     },
     Karlovacka: {
       lyhyt: 'Karlovacia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-karlovacka-18f4ab70.jpg",
+          lahde: "Bukovacka, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bukovacka",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zračni_pogled_na_Karlovca-_Autor-_Igor_Čepurkovskii.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-karlovacka-18f4ab70.jpg",
     },
     'Koprivničko-Križevačka': {
       lyhyt: 'Koprivnicassa on Podravka-elintarvikeyhtiön koti, ja siellä on valmistettu Vegeta-maustetta vuodesta 1959 lähtien.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-koprivnicko-krizevacka-852b0258.jpg",
+          lahde: "Szatmári Tivadar, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Szatmári Tivadar",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kapronca_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-koprivnicko-krizevacka-852b0258.jpg",
     },
     'Krapinsko-Zagorska': {
       lyhyt: 'Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-krapinsko-zagorska-861473bf.jpg",
+          lahde: "Zeljko.filipin, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Zeljko.filipin",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Krapina_Neanderthal_Museum_Photo_1.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-krapinsko-zagorska-861473bf.jpg",
     },
     'Licko-Senjska': {
       lyhyt: 'Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä, ja hänen synnyinkotinsa on nykyään muistokeskus.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-licko-senjska-99975556.jpg",
+          lahde: "old_s, Wikimedia Commons (CC0)",
+          tekija: "old_s",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Birth_place_Nikola_Tesla.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-licko-senjska-99975556.jpg",
     },
     Medimurska: {
       lyhyt: 'Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-medimurska-9eae0c14.jpg",
+          lahde: "Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Krzysztof Golik",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zrinski_Castle_in_Cakovec_(13).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-medimurska-9eae0c14.jpg",
     },
     'Osjecko-Baranjska': {
       lyhyt: 'Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-osjecko-baranjska-adde931c.jpg",
+          lahde: "Antimuonium, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Antimuonium",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kopački_Rit,_Sakadaš_lake,_Kopačevo,_2025_(2).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-osjecko-baranjska-adde931c.jpg",
     },
     'Primorsko-Goranska': {
       lyhyt: 'Rijekassa suunniteltiin ja testattiin 1866 maailman ensimmäinen torpedo, ja kaupunki oli Euroopan kulttuuripääkaupunki 2020.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-primorsko-goranska-08195744.jpg",
+          lahde: "RijekaPhotos, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "RijekaPhotos",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Center_of_Rijeka_and_mountain_Učka.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-primorsko-goranska-08195744.jpg",
     },
     'Šibensko-Kninska': {
       lyhyt: 'Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sibensko-kninska-f4e33cd1.jpg",
+          lahde: "Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bernard Gagnon",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cathedral_of_St._James,_Šibenik_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sibensko-kninska-f4e33cd1.jpg",
     },
     'Sisacko-Moslavacka': {
       lyhyt: 'Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi – haikaroita oli enemmän kuin kylässä ihmisiä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sisacko-moslavacka-3455976d.jpg",
+          lahde: "Fraxinus Croat, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Fraxinus Croat",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cigoc1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sisacko-moslavacka-3455976d.jpg",
     },
     'Splitsko-Dalmatinska': {
       lyhyt: 'Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne alkoi 1715.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-splitsko-dalmatinska-368dd37c.jpg",
+          lahde: "dronepicr, Wikimedia Commons (CC BY 2.0)",
+          tekija: "dronepicr",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Diocletian's_Palace_in_Split,_Croatia_(48608247353).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-splitsko-dalmatinska-368dd37c.jpg",
     },
     'Varaždinska': {
       lyhyt: 'Barokkinen Varaždin oli Kroatian pääkaupunki vuoteen 1776, ja nykyään sen kadut täyttää loppukesällä Špancirfest-katufestivaali.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-varazdinska-c80fd41a.jpg",
+          lahde: "Ptrnc7965, Wikimedia Commons (CC0)",
+          tekija: "Ptrnc7965",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Varaždin_Croatia_Korzo_2025.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-varazdinska-c80fd41a.jpg",
     },
     'Viroviticko-Podravska': {
       lyhyt: 'Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-viroviticko-podravska-8d3df889.jpg",
+          lahde: "Nikola, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nikola",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lake_at_Jankovac,_Papuk_mountain.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-viroviticko-podravska-8d3df889.jpg",
     },
     'Vukovarsko-Srijemska': {
       lyhyt: 'Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-vukovarsko-srijemska-117dca75.jpg",
+          lahde: "August Dominus, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "August Dominus",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vodotoranj_u_Vukovaru_2021.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-vukovarsko-srijemska-117dca75.jpg",
     },
     Zadarska: {
       lyhyt: 'Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zadarska-7a42776f.jpg",
+          lahde: "Fred Romero from Paris, France, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Fred Romero from Paris, France",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zadar_-_Morske_Orgulje_(48913834056).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zadarska-7a42776f.jpg",
     },
     Zagrebacka: {
       lyhyt: 'Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zagrebacka-6be197c2.jpg",
+          lahde: "Danijela Stefanac, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Danijela Stefanac",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:At_King_Tomislav_Square_5,_Samobor.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zagrebacka-6be197c2.jpg",
     },
     'Grad Zagreb': {
       lyhyt: 'Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-grad-zagreb-f81ad3be.jpg",
+          lahde: "Nikolai Karaneschev, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Nikolai Karaneschev",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zagreb_2015_-_Zagrebačka_katedrala_-_pogled_s_Gornjeg_Grada_(Zagreb_Cathedral_-_view_from_Upper_Town)_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-grad-zagreb-f81ad3be.jpg",
     },
   },
   /*
@@ -5122,66 +5528,297 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MNE: {
     Andrijevica: {
       lyhyt: 'Andrijevica jakaa Kolašinin kanssa Komovin vuoriston, jonka korkein huippu Kom Kučki kohoaa 2 487 metriin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-andrijevica-a0c0a228.jpg",
+          lahde: "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bjoertvedt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kolasin_district_south_Komovi_massif_2487_masl_Bielasici_mountains_IMG_1350.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-andrijevica-a0c0a228.jpg",
     },
     Bar: {
       lyhyt: 'Stari Barin lähellä kasvaa oliivipuu Stara maslina, jonka arvellaan olevan yli 2 000 vuotta vanha – yksi maailman vanhimmista.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bar-151e1eb7.jpg",
+          lahde: "BuhaM, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "BuhaM",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Old_olive_in_Bar,_Montenegro.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bar-151e1eb7.jpg",
     },
     Berane: {
       lyhyt: 'Limin varrella Beranen laidalla kohoaa Đurđevi Stupovin luostari, joka rakennettiin jo 1100-luvun lopulla.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-berane-fef33b0b.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Đurđevi_stupovi,_Berane,_MNE.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-berane-fef33b0b.jpg",
     },
     'Bijelo Polje': {
       lyhyt: 'Limin varren Bijelo Polje on Pohjois-Montenegron keskus, jonka asukkaista lähes puolet on muslimeja ja lähes puolet ortodokseja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bijelo-polje-441da6da.jpg",
+          lahde: "Steffpop, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Steffpop",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Panorama_Bijelog_Polja.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bijelo-polje-441da6da.jpg",
     },
     Budva: {
       lyhyt: 'Sveti Stefanin kalastajakylä on pieni saari hiekkakannaksen päässä, ja koko kylä muutettiin Jugoslavian aikana luksushotelliksi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-budva-ceca849d.jpg",
+          lahde: "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Marcin Konsek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sveti_Stefan_(07).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-budva-ceca849d.jpg",
     },
     Cetinje: {
       lyhyt: 'Cetinje on virallisesti Montenegron vanha kuninkaallinen pääkaupunki, ja presidentin virka-asunto Sininen palatsi on yhä siellä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-cetinje-61df0219.jpg",
+          lahde: "AQVA121, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "AQVA121",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Plavi_dvorac,_Montenegro.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-cetinje-61df0219.jpg",
     },
     Danilovgrad: {
       lyhyt: 'Ostrogin luostari on rakennettu pystysuoraan kallioseinään, ja sinne nousee vuosittain yli miljoona pyhiinvaeltajaa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-danilovgrad-29098384.jpg",
+          lahde: "Misa.stefanovic.07, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Misa.stefanovic.07",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:E17_-_Manastir_Ostrog.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-danilovgrad-29098384.jpg",
     },
     'Herceg Novi': {
       lyhyt: 'Herceg Novissa keltaiset mimosat kukkivat jo talvella, ja kaupunki juhlii niitä joka vuosi omalla mimosajuhlallaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-herceg-novi-7aea1a37.jpg",
+          lahde: "Alexkom000, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Alexkom000",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2024-02-04_Herceg_Novi_Old_Town_1.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-herceg-novi-7aea1a37.jpg",
     },
     'Kolašin': {
       lyhyt: 'Kolašinin Biogradska Gorassa on yksi Euroopan viimeisistä aarniometsistä, ja osa sen puista on yli 500 vuotta vanhoja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kolasin-4432bfd2.jpg",
+          lahde: "Javier Sánchez Portero, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Javier Sánchez Portero",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biogradsko_jezero_in_July.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kolasin-4432bfd2.jpg",
     },
     Kotor: {
       lyhyt: 'Kotorin vanhassakaupungissa kissoja on niin paljon, että niistä on tullut kaupungin symboli – niillä on oma aukionsa ja museonsa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kotor-ce21ec2a.jpg",
+          lahde: "Jaakko Luttinen, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jaakko Luttinen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:View_of_Kotor_bay_and_old_town.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kotor-ce21ec2a.jpg",
     },
     Mojkovac: {
       lyhyt: 'Mojkovacin yllä leviää Sinjajevinan ylänkö, jonka laajoilla kesälaitumilla paimenet pitävät yhä lampaitaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-mojkovac-9997941d.jpg",
+          lahde: "JYB Devot, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JYB Devot",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Foothills_of_Sinjajevina_P1010126mod.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-mojkovac-9997941d.jpg",
     },
     'Nikšic': {
       lyhyt: 'Nikšićin Trebjesan panimo on Montenegron suurin, ja kaupungissa on pantu olutta 1800-luvun lopulta asti.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-niksic-ab3345fe.jpg",
+          lahde: "sr:User:Borisniksic, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "sr:User:Borisniksic",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Niksic_-_Pogled_sa_Trebjese.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-niksic-ab3345fe.jpg",
     },
     Plav: {
       lyhyt: 'Kirottujen vuorten juurella Plavin järvi on Montenegron suurin jäätikköjärvi, ja sitä ruokkivat maan alta pulppuavat lähteet.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-plav-bdb42b39.jpg",
+          lahde: "Андрей Романенко, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Андрей Романенко",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Plav_Lake_in_Montenegro_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-plav-bdb42b39.jpg",
     },
     Pljevlja: {
       lyhyt: 'Pljevljan Husein-pašan moskeija valmistui 1500-luvun lopulla, ja sen 42-metrinen minareetti on Balkanin korkeimpia.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pljevlja-ae434d02.jpg",
+          lahde: "Thornjak, Wikimedia Commons (CC0)",
+          tekija: "Thornjak",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Husein-paša's_Mosque_Minaret.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pljevlja-ae434d02.jpg",
     },
     'Plužine': {
       lyhyt: 'Pivan luostari siirrettiin kivi kiveltä uuteen paikkaan padon tieltä, ja yli tuhat freskon kappaletta irrotettiin ja kiinnitettiin takaisin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pluzine-926974b6.jpg",
+          lahde: "Дмитрий Мозжухин, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Дмитрий Мозжухин",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Пивский_монастырь_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pluzine-926974b6.jpg",
     },
     Podgorica: {
       lyhyt: 'Montenegron pääkaupunki Podgorica kantoi 1946–1992 nimeä Titograd, ja se on rakentunut Ribnica- ja Morača-jokien yhtymäkohtaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-podgorica-6c21eb06.jpg",
+          lahde: "ines lukic, Wikimedia Commons (CC BY 3.0)",
+          tekija: "ines lukic",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Usce_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-podgorica-6c21eb06.jpg",
     },
     'Rožaje': {
       lyhyt: 'Rožaje on noin kilometrin korkeudessa vuorten keskellä, ja kaupungin luota alkava Ibar-joki halkaisee sen kahtia.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-rozaje-6a4d5fb5.jpg",
+          lahde: "Planeti, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Planeti",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:\"VRELO_IBRA\"_Rozaje.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-rozaje-6a4d5fb5.jpg",
     },
     'Šavnik': {
       lyhyt: 'Kolmen joen yhtymäkohtaan 1861 perustetussa Šavnikissa asuu vain noin 360 ihmistä – se on Montenegron pienimpiä kaupunkeja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-savnik-fa98eb13.jpg",
+          lahde: "BuhaM, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "BuhaM",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Šavnik,_Montenegro_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-savnik-fa98eb13.jpg",
     },
     Tivat: {
       lyhyt: 'Tivatin vanha, 1889 rakennettu laivastoarsenaali on muutettu Porto Montenegroksi, luksusjahtien satamaksi ja lomakyläksi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-tivat-1a6ca9dc.jpg",
+          lahde: "Vux33, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vux33",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Esplanade_Porto_Montenegro.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-tivat-1a6ca9dc.jpg",
     },
     Ulcinj: {
       lyhyt: 'Ulcinjin Velika plaža on 12 kilometriä pitkä, Montenegron pisin hiekkaranta, ja kesätuulet tekevät siitä leijalautailijoiden suosikin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-ulcinj-90060bbd.jpg",
+          lahde: "Mjuzikxhankej, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mjuzikxhankej",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dolcinium_kitesurf.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-ulcinj-90060bbd.jpg",
     },
     'Žabljak': {
       lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-zabljak-2402297e.jpg",
+          lahde: "Alexkom000, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Alexkom000",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2025-07-12_Crno_jezero_09.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-zabljak-2402297e.jpg",
     },
   },
   /*
@@ -5350,57 +5987,255 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BIH: {
     'Banja Luka': {
       lyhyt: 'Banja Lukan keskustan halki virtaa Vrbas-joki, jonka rannalla seisoo Kastelin linnoitus ja jonka koskissa lasketaan kumiveneillä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-banja-luka-2dea50c9.jpg",
+          lahde: "ArhistefoBL, Wikimedia Commons (CC0)",
+          tekija: "ArhistefoBL",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rijeka_Vrbas_i_tvrdjava_Kastel_Banja_Luka.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-banja-luka-2dea50c9.jpg",
     },
     Bijeljina: {
       lyhyt: 'Bijeljinan laitaan on koottu Stanišićin etnokylä, jonne on tuotu vanhoja puutaloja ja myllyjä eri puolilta entistä Jugoslaviaa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bijeljina-025edb80.jpg",
+          lahde: "Bojana Wiki PG, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bojana Wiki PG",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Etno_selo_Stanišići,_Bijeljina_01.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bijeljina-025edb80.jpg",
     },
     'Bosnian Podrinje': {
       lyhyt: 'Goražden lähellä toimi 1519–1523 nykyisen Bosnia ja Hertsegovinan ensimmäinen kirjapaino, jossa painettiin kirkkoslaavinkielisiä kirjoja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bosnian-podrinje-5b46aaf7.jpg",
+          lahde: "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bjoertvedt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gorazde_south_IMG_0570.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bosnian-podrinje-5b46aaf7.jpg",
     },
     'Brčko Distrikt': {
       lyhyt: 'Brčko on Sava-joen satamakaupunki, ja piirillä on oma pormestarinsa, parlamenttinsa ja hallintonsa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-brcko-distrikt-bf4e5af3.jpg",
+          lahde: "Vladanovski, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vladanovski",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Brčansko_šetalište.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-brcko-distrikt-bf4e5af3.jpg",
     },
     'Central Bosnia': {
       lyhyt: 'Jajcen keskustassa Pliva-joki syöksyy vesiputouksena Vrbakseen, ja putouksen yllä kohoaa vanhan linnoituksen muuri.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-central-bosnia-0640cb43.jpg",
+          lahde: "Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Jocelyn Erskine-Kellie",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bosnia_and_Herzegovina_-_Pliva_Waterfall,_Jajce.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-central-bosnia-0640cb43.jpg",
     },
     Doboj: {
       lyhyt: 'Dobojn linnoitus valvoo mäeltä Bosna-joen laaksoa, ja kaupunki on maan rautateiden tärkeä risteysasema.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-doboj-81d21bee.jpg",
+          lahde: "Inga Cvijanovic, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Inga Cvijanovic",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tvrđava_Doboj_7.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-doboj-81d21bee.jpg",
     },
     'Foča': {
       lyhyt: 'Sutjeskan kansallispuistossa kasvaa Perućican aarniometsä, ja sen reunalla kohoaa Maglić, Bosnia ja Hertsegovinan korkein huippu.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-foca-e31fb6a7.jpg",
+          lahde: "Erwan Martin from Plouzané, France, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Erwan Martin from Plouzané, France",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Perućica_primeval_forest_(7901927430).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-foca-e31fb6a7.jpg",
     },
     'Herzegovina-Neretva': {
       lyhyt: 'Blagajssa Buna-joki pulppuaa kallion alta yhtenä Euroopan suurimmista lähteistä, ja sen partaalla seisoo 1500-luvun dervissitalo.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-herzegovina-neretva-3216829f.jpg",
+          lahde: "Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jocelyn Erskine-Kellie",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tekiya_Dervish_House_and_Buna_River.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-herzegovina-neretva-3216829f.jpg",
     },
     Posavina: {
       lyhyt: 'Posavina on maan pienin kantoni, vain 331 neliökilometriä, ja sen pohjoisrajana virtaa Sava-joki.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-posavina-10f13696.jpg",
+          lahde: "MrWeasel91, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "MrWeasel91",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Odzak,_Hauptplatz.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-posavina-10f13696.jpg",
     },
     Sarajevo: {
       lyhyt: 'Sarajevon Baščaršijan puinen Sebilj-kaivo on vanhankaupungin tunnus, ja tarun mukaan siitä juonut palaa kaupunkiin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-9e774c97.jpg",
+          lahde: "Fred Romero from Paris, France, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Fred Romero from Paris, France",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sarajevo_-_Sebilj_(49090400881).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-9e774c97.jpg",
     },
     'Sarajevo-romanija': {
       lyhyt: 'Jahorina on Bosnia ja Hertsegovinan suurin laskettelukeskus, ja sen korkein huippu Ogorjelica nousee 1 916 metriin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-romanija-09ac959b.jpg",
+          lahde: "EXIT Photo Team, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "EXIT Photo Team",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jahorina_mountain_2018.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-romanija-09ac959b.jpg",
     },
     Trebinje: {
       lyhyt: 'Trebinjen vanhaa toria varjostavat yli satavuotiaat plataanit, ja kaupungin halki virtaa kirkas Trebišnjica-joki.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-trebinje-ee7e42d0.jpg",
+          lahde: "Emilijatrklja, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Emilijatrklja",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Platanitrebinje.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-trebinje-ee7e42d0.jpg",
     },
     Tuzla: {
       lyhyt: 'Tuzla seisoo suolakerrosten päällä, ja keskustaan on kaivettu suolavetisiä uimajärviä – nimikin tarkoittaa turkiksi suolakaivosta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-tuzla-cf59887f.jpg",
+          lahde: "Sebleouf, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Sebleouf",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tuzla_-_Pannonian_Lakes_9_(2019).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-tuzla-cf59887f.jpg",
     },
     'Una-Sana': {
       lyhyt: 'Una-joen Štrbački buk syöksyy 25 metrin korkeudelta Kroatian rajalla, ja se on Unan kansallispuiston korkein vesiputous.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-una-sana-61888a28.jpg",
+          lahde: "Julian Nyča, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Julian Nyča",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Štrbački_buk_1.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-una-sana-61888a28.jpg",
     },
     Vlasenica: {
       lyhyt: 'Vlasenican seutu on metsäistä ylänköä, joka laskeutuu idässä Drinan laaksoon – joki on raja Serbian kanssa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-vlasenica-a7c9c67d.jpg",
+          lahde: "j.budissin (Julian Nyča) stitched by Marku1988 This image was created with Hugin., Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "j.budissin (Julian Nyča) stitched by Marku1988 This image was created with Hugin.",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vlasenica_Panorama.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-vlasenica-a7c9c67d.jpg",
     },
     'West Bosnia': {
       lyhyt: 'Livnon juustoa tehdään yhä gruyèren tapaan, samalla menetelmällä, jonka sveitsiläiset juustomestarit opettivat seudulle 1886.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-bosnia-4f73f657.jpg",
+          lahde: "Brian Eager, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Brian Eager",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gornji_Grad_and_Begluk_in_Livno_during_autumn.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-bosnia-4f73f657.jpg",
     },
     'West Herzegovina': {
       lyhyt: 'Trebižat-joen Kravican vesiputous valuu leveänä kaarena altaaseen, jossa kesäisin uidaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-herzegovina-d4cc1e00.jpg",
+          lahde: "Marcin Ostajewski, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Marcin Ostajewski",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kravica_Waterfalls.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-herzegovina-d4cc1e00.jpg",
     },
     'Zenica-Doboj': {
       lyhyt: 'Zenicassa on tehty terästä vuodesta 1892, ja terästehtaan piiput näkyvät yhä Bosna-joen laakson yli.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-zenica-doboj-e9880795.jpg",
+          lahde: "Ioacc1234red, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ioacc1234red",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Зеница_20230223_131618.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-zenica-doboj-e9880795.jpg",
     },
   },
   /*
@@ -5425,27 +6260,115 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MKD: {
     Eastern: {
       lyhyt: 'Bregalnica-joen varren Kočanin laakso on Pohjois-Makedonian suurin riisinviljelyalue, ja sadonkorjuuta juhlitaan joka syksy.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-eastern-dfd3cc5e.jpg",
+          lahde: "Деан Лазаревски, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Деан Лазаревски",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Оризови_полиња_во_Кочанско_Поле.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-eastern-dfd3cc5e.jpg",
     },
     Southeastern: {
       lyhyt: 'Strumican karnevaalista kirjoitti jo turkkilainen matkailija Evliya Çelebi 1670, ja naamiaiskulkue täyttää kadut yhä joka kevättalvi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southeastern-71080379.jpg",
+          lahde: "Тиверополник, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Тиверополник",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Плоштад_Гоце_Делчев_Струмица.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southeastern-71080379.jpg",
     },
     Northeastern: {
       lyhyt: 'Kratovo on rakennettu sammuneen tulivuoren kraatteriin, ja kaupungissa on yhä kuusi vanhaa kivitornia ja kaarevia kivisiltoja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-northeastern-983a946c.jpg",
+          lahde: "Dars at Macedonian Wikipedia, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Dars at Macedonian Wikipedia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kratovo-panorama.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-northeastern-983a946c.jpg",
     },
     Southwestern: {
       lyhyt: 'Ohridinjärvi on yli miljoona vuotta vanha, ja sen vedessä elää ohridintaimen, jota ei tavata luonnonvaraisena missään muualla.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southwestern-fb820c3a.jpg",
+          lahde: "kallerna, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "kallerna",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Church_of_St._John_at_Kaneo_6.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southwestern-fb820c3a.jpg",
     },
     Pelagonia: {
       lyhyt: 'Bitolan laidalla on Heraclea Lyncestis, Makedonian Filippos II:n perustama kaupunki, jonka basilikoiden lattiamosaiikit ovat säilyneet.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-pelagonia-26d30929.jpg",
+          lahde: "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Marcin Konsek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2011_Bitola,_Heraclea_Lyncestis_(15).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-pelagonia-26d30929.jpg",
     },
     Polog: {
       lyhyt: 'Mavrovonjärvestä nousee kuivina kesinä esiin Pyhän Nikolaoksen kirkko, joka jäi veden alle, kun tekojärvi padottiin 1950-luvulla.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-polog-08567e22.jpg",
+          lahde: "Daniela Stefanoska, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Daniela Stefanoska",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Св._Никола_Маврово.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-polog-08567e22.jpg",
     },
     Skopje: {
       lyhyt: 'Skopjen laidalla on Matkan kanjoni – nimi tarkoittaa kohtua – ja sen tekojärveltä pääsee veneellä Vrelon luolaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-skopje-7407cee9.jpg",
+          lahde: "Güldem Üstün from Istanbul, TURKEY, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Güldem Üstün from Istanbul, TURKEY",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Macedonia_(Skopje)_Beautiful_view_of_Matka_canyon_(26471426684).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-skopje-7407cee9.jpg",
     },
     Vardar: {
       lyhyt: 'Gradskon lähellä on Stobi, antiikin kaupunki Vardarin ja Crna-joen yhtymäkohdassa, jonka teatterin ja basilikoiden rauniot näkyvät yhä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-vardar-791f8908.jpg",
+          lahde: "d_proffer, Wikimedia Commons (CC BY 2.0)",
+          tekija: "d_proffer",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Roman_city_ruins_Stobi_Macedonia_00.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-vardar-791f8908.jpg",
     },
   },
   /*
@@ -5473,39 +6396,170 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ALB: {
     Berat: {
       lyhyt: 'Beratia kutsutaan tuhannen ikkunan kaupungiksi, sillä sen valkoiset talot nousevat rinnettä ikkunarivi ikkunarivin yllä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-berat-3641295d.jpg",
+          lahde: "Michel NOCTURE, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Michel NOCTURE",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:The_old_town_of_Berat_2019.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-berat-3641295d.jpg",
     },
     'Dibër': {
       lyhyt: 'Dibërin itärajalla kohoaa 2 764 metrin Korab, joka on sekä Albanian että Pohjois-Makedonian korkein vuori.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-diber-273ba90e.jpg",
+          lahde: "Desnosie, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Desnosie",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Korabi,_mountain_(Albania).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-diber-273ba90e.jpg",
     },
     'Durrës': {
       lyhyt: 'Durrësin keskustasta löydettiin 1966 talojen alta roomalainen amfiteatteri, Balkanin niemimaan suurin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-durres-218d275a.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Amphitheatre_of_Durrës_(by_Pudelek).JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-durres-218d275a.jpg",
     },
     Elbasan: {
       lyhyt: 'Elbasanissa juhlitaan 14. maaliskuuta Kesän päivää, ja silloin kaupungissa leivotaan ballokume-keksejä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-elbasan-1520bd09.jpg",
+          lahde: "Brams, Wikimedia Commons (Public domain)",
+          tekija: "Brams",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Elbasan_Castle_1.JPG",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-elbasan-1520bd09.jpg",
     },
     Fier: {
       lyhyt: 'Fierin lähellä on muinainen Apollonia, kreikkalaisten perustama kaupunki, jossa nuori Octavianus – tuleva keisari Augustus – opiskeli.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-fier-572dc708.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Apollonia,_Albania_-_panorama_(by_Pudelek).JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-fier-572dc708.jpg",
     },
     'Gjirokastër': {
       lyhyt: 'Gjirokastërin kivitalojen katot on ladottu harmaista liuskekivistä, ja kaupungissa syntyi kirjailija Ismail Kadare.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-gjirokaster-b919118d.jpg",
+          lahde: "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Radosław Botev",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gjirokaster_castle_hill_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-gjirokaster-b919118d.jpg",
     },
     'Korçë': {
       lyhyt: 'Korçëssa avattiin 1887 ensimmäinen albaniankielinen koulu, ja nykyään kaupungin nimi tunnetaan koko maassa Birra Korça -oluesta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-korce-39cfa8f7.jpg",
+          lahde: "Nensi Bibe, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nensi Bibe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Resurrection_of_Christ_Cathedral,_Korçë.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-korce-39cfa8f7.jpg",
     },
     'Kukës': {
       lyhyt: 'Kukësin vanha kaupunki jäi 1976 Fierzan tekojärven alle, ja uusi Kukës rakennettiin järven yläpuoliselle tasanteelle.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-kukes-5eec596f.jpg",
+          lahde: "CivArmy, Wikimedia Commons (CC BY 4.0)",
+          tekija: "CivArmy",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kukes,_Albania.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-kukes-5eec596f.jpg",
     },
     'Lezhë': {
       lyhyt: 'Lezhën Pyhän Nikolauksen kirkon raunioissa on Skanderbegin muistomerkki, sillä kansallissankari haudattiin sinne 1468.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-lezhe-624ea869.jpg",
+          lahde: "Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pasztilla aka Attila Terbócs",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lezhë,_Albania_–_Skanderbeg_Memorial_2016_04.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-lezhe-624ea869.jpg",
     },
     'Shkodër': {
       lyhyt: 'Shkodërjärvi on Balkanin suurin järvi, ja sen rannalla kohoaa Rozafan linna, jonka muuriin tarun mukaan muurattiin nuori äiti.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-shkoder-4130051d.jpg",
+          lahde: "Artemiss.B, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Artemiss.B",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rozafa_Castle_in_Shkodër.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-shkoder-4130051d.jpg",
     },
     'Tiranë': {
       lyhyt: "Tiranan Bunk'Art on museo Enver Hoxhan viisikerroksisessa maanalaisessa bunkkerissa, jossa on 106 huonetta.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-tirane-e3dea515.jpg",
+          lahde: "Albinfo, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Albinfo",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tirana_Bunk'Art_Doors.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-tirane-e3dea515.jpg",
     },
     'Vlorë': {
       lyhyt: 'Vlorëssa julistettiin Albanian itsenäisyys 28. marraskuuta 1912, ja Lipun aukiolla seisoo itsenäisyyden muistomerkki.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-vlore-fbc77cf7.jpg",
+          lahde: "A.jobs02, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "A.jobs02",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Independence_Monument,_Vlorë.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-vlore-fbc77cf7.jpg",
     },
   },
   /*
