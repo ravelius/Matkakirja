@@ -89,6 +89,11 @@ namespace Matkakirja
     ///                             (erikoismallit, arkkityypit), tasot 2–3 (instanssit tyypeittäin, LOD, piirtokutsut) ja
     ///                             arkkityyppien kolmiot LOD0/LOD1
     ///   symbolit taso23 0|1       tasojen 2–3 arkkityypit pois/päälle (A/B-mittaus, oletus 1)
+    ///   symbolit ylhaalta 3d|2d   1.0.27-kokeilu: 3d = Linna, Kirkko ja Majakka myös pystysuorasta ja liioiteltu perspektiivi
+    ///                             (oletus kokeiluhaarassa), 2d = 1.0.26:n sääntö (mallit vasta kallistuksesta 25°)
+    ///   symbolit perspektiivi <aste>   liioitellun perspektiivin kulma ruudun reunalla (0–80, oletus 55 = Linssisepän
+    ///                             LiioiteltuPerspektiivi-käyrä; 0 = pois)
+    ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
     ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
@@ -753,6 +758,7 @@ namespace Matkakirja
                     else if (m == "taso23" && o.Length > 2) Symbolimallit.Taso23 = o[2] != "0" && o[2] != "pois";
                     else if (m == "loydetty" || m == "himmea") Symbolimallit.PakotaLoydetty = m == "loydetty";
                     else if (m == "koko" && o.Length > 2) Symbolimallit.KokoPt = float.Parse(o[2], CultureInfo.InvariantCulture);
+                    else Symbolimallit.Komento(o);   // 1.0.27-kokeilu: ylhaalta 3d|2d, perspektiivi <aste>, reuna <pt>
                     // Natiivi-UI kysyy OnMallia merkkejä päivittäessään: näytettävät uudelleen, jotta 2D-merkit palaavat tai lähtevät.
                     if (m != "tila") NostoKerros.Instanssi?.Herata();
                     PallonLepo.Muuttui("symbolit");
