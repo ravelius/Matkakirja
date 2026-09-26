@@ -7371,3 +7371,7 @@ Siirtoseppa: delta v2278+v2279 → 1.x v181 (812aa429d) ilman skeemamuutosta; Eu
 ## NOSTOSAANTO YHTENAISTETTY: LOYTAMATON EI HIMMEA, KYNNYS 2,5 MYOS NATIIVIIN (26.9.2026 klo 20.48)
 
 Pelikoodari osoitti ristiriidan: web ei himmenna loytamatonta (omistaja 21.9., loytosumu vain ?loytosumu=1), natiivin 174 himmensi ja elavan kartan suunnitelma sanoi himmeina musteen jalkina; web nayttaa kuvamerkin vasta kertoimesta 2,5, natiivi kaikilla zoomeilla. Fable: web on malli — loytamaton EI himmea missaan (myos 3D-mallit samat loydetylle ja loytamattomalle), kerroin ≥ 2,5 → kuvamerkki webin koossa (24/42/47, 22/30 px), alle → lajin minikuvake 12–16 px (ei piste, ei laikka; webiin minikuvake oletukseksi), 3D-malli vain ≥ 2,5 ja kallistus ≥ 25°. Elavan kartan kohta 4 (reittihistoria kynaviivana) valmis natiivissa; webiin ei tehda (web yllapidossa). Kysymysvartija riittava (tasan 2/kohde).
+
+## P0: NRE Symbolimallit.LateUpdate 1.0.26-JUNASSA (c5e329a9) (26.9.2026 klo 20.48)
+
+Laitetestaaja: esikierros keskeytyi — NullReferenceException Symbolimallit.LateUpdate() 610×/10 s aloitusruudulla, verho 6,0 s; epailty 175c f362c74a; raportti savukierros-b26-poikkeama-20260926.md 62d2e434c. Natiiviseppa korjaa ennen 175-kuvapareja; Laitetestaaja odottaa uutta kaannosta.
