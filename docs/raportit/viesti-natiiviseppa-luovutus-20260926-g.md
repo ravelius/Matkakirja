@@ -127,3 +127,18 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
    yhteisen haun; osoitin-taustalle on jo junassa.
 
 Juna nyt **bbb8583b** (build 19). Kiintiö 89 % klo 05.0x → luovutus tähän; seuraaja jatkaa tilinvaihdon jälkeen.
+
+### Elävä kartta, kohta 1 (saapuminen) — SOVITTU RAJAPINTA Linssisepän kanssa 05.1x (älä muuta ilman häntä)
+
+Linssiseppä (linssiseppa/elava-saapuminen): ElavaSaapuminen käynnistyy PeliOhjain.MatkaPerilla-tapahtumasta, kun maa on uusi.
+Aikajana on ≤ 5 s, ja napautus ohittaa sen lopputilaan 0,3 s:ssa. PallonLepo.Animoi on päällä vain ajon aikana. Linssiseppä
+pitää omat kerroksensa (kynäviivat, syttymistäytön ja läikkäpudotukset), häivyttää ne lopuksi pysyviin kerroksiin ja ajaa
+Aurinkoa kentillä Atsimuutti/KorkeusAst.
+NATIIVISEPÄN TOTEUTETTAVAT:
+1. `Varitaso.Paljastus(lat, lon, sadeKm, reunaKm)` + `PaljastusPois()`: saapumismaan kermahunnun radiaalinen kuivuminen
+   varjostimessa kohinareunalla (tileset-varjostimen globaalit + Napakansi.shader samat), säde joka kehys Linssiseppältä.
+2. `MaaKartta.Saapuminen(bool)` ja `NostoKerros.Saapuminen(bool)`: täyttö, rajat ja nostot piiloon saapumisen ajaksi,
+   paluu 0,3 s:n häivytyksellä.
+3. `PalloKierto.SaapuminenAlkaa(float kestoS)` + `SaapuminenPaattyi` -tapahtumat AjaSaapumisnakymaan-ajon ympärille
+   (PalloKierto.cs ~1167); kamera pysyy Natiivisepällä.
+Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
