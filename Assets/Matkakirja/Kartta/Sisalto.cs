@@ -78,6 +78,31 @@ namespace Matkakirja
             Path.Combine(Application.persistentDataPath, "sisalto", polku.Replace('/', Path.DirectorySeparatorChar));
 
         static string ViimeisinPolku => Path.Combine(Application.persistentDataPath, "sisalto", "viimeisin.txt");
+        /// <summary>Viimeksi haettu osoitin (uusin.json) levyllä: lämmin käynnistys ei odota versiotarkistusta.</summary>
+        static string OsoitinValimuisti => Path.Combine(Application.persistentDataPath, "sisalto", "osoitin.json");
+
+        static string LueTiedosto(string polku)
+        {
+            try { return File.Exists(polku) ? File.ReadAllText(polku).Trim() : null; } catch (Exception) { return null; }
+        }
+
+        static string OsoittimenPolku(string osoitin)
+        {
+            try { var o = osoitin != null ? JsonUtility.FromJson<OsoitinTiedot>(osoitin) : null; return string.IsNullOrEmpty(o?.polku) ? null : o.polku; }
+            catch (Exception) { return null; }
+        }
+
+        /// <summary>Tuore osoitin taustalla seuraavaa käynnistystä varten (ei vaihda tämän istunnon versiota).</summary>
+        static IEnumerator PaivitaOsoitinTaustalla()
+        {
+            string tuore = null;
+            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Osoitin); q.timeout = 10; return q; }, Taso.TamaKaupunki, "sisalto",
+                p => { if (p.result == UnityWebRequest.Result.Success) tuore = p.downloadHandler.text; });
+            if (OsoittimenPolku(tuore) == null) yield break;
+            string polku = OsoitinValimuisti;
+            yield return Taustalla(() => { try { Kirjoita(polku, tuore); } catch (Exception) { } return tuore; }, _ => { });
+            Debug.Log("MATKAKIRJA sisältö: tuore osoitin tallennettu taustalla (" + OsoittimenPolku(tuore) + ", käyttöön seuraavassa käynnistyksessä)");
+        }
 
         /// <summary>Hakee kokoelman. valmis(null) = ei verkkoa eikä välimuistia.</summary>
         public static IEnumerator Hae<T>(string kokoelma, Action<T[]> valmis)
@@ -113,6 +138,21 @@ namespace Matkakirja
             if (versioPolku == null)
             {
                 osoitinHaussa = true;
+                // ESILATAUSPOLITIIKKA kohta 2 (Fable 26.9.): versiotarkistus ei estä pelaamista. Lämmin käynnistys käyttää
+                // edellistä osoitinta heti (sama valinta kuin ennen, yhden käynnistyksen viiveellä) ja hakee tuoreen taustalla;
+                // PakettiPaivitys (Siirtoseppä) hoitaa uuden version lataamisen ja käyttöönoton kuten ennenkin.
+                string tallennettu = LueTiedosto(OsoitinValimuisti), aiempi = LueTiedosto(ViimeisinPolku);
+                string tallennettuPolku = OsoittimenPolku(tallennettu) ?? aiempi;
+                if (tallennettu != null && tallennettuPolku != null)
+                {
+                    versioPolku = PakettiPaivitys.Valitse(tallennettu, tallennettuPolku);
+                    Debug.Log($"MATKAKIRJA sisältö: osoitin välimuistista ({versioPolku}), tuore haetaan taustalla");
+                    osoitinHaussa = false;
+                    istunnonPolku = versioPolku;
+                    Esilataaja.AjaTaustalla(PaivitaOsoitinTaustalla());
+                    valmis(versioPolku);
+                    yield break;
+                }
                 string osoitin = null, osoitinVirhe = null;
                 yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Osoitin); q.timeout = 10; return q; }, Taso.Nakyva, "sisalto",
                     p => { if (p.result == UnityWebRequest.Result.Success) osoitin = p.downloadHandler.text; else osoitinVirhe = p.error; });
@@ -120,7 +160,12 @@ namespace Matkakirja
                 {
                     var o = osoitin != null ? JsonUtility.FromJson<OsoitinTiedot>(osoitin) : null;
                     versioPolku = string.IsNullOrEmpty(o?.polku) ? null : o.polku;
-                    if (versioPolku != null) Debug.Log($"MATKAKIRJA sisältö: versio {o.versio}, skeema {o.skeemaversio}, {o.polku}");
+                    if (versioPolku != null)
+                    {
+                        Debug.Log($"MATKAKIRJA sisältö: versio {o.versio}, skeema {o.skeemaversio}, {o.polku}");
+                        string talteen = OsoitinValimuisti, teksti = osoitin;
+                        try { Directory.CreateDirectory(Path.GetDirectoryName(talteen)); Kirjoita(talteen, teksti); } catch (Exception) { }
+                    }
                 }
                 catch (Exception e) { osoitinVirhe = "uusin.json ei jäsenny: " + e.Message; }
                 if (versioPolku == null && File.Exists(ViimeisinPolku))
