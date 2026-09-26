@@ -232,3 +232,9 @@ Kuva: docs/raportit/kaappaukset/omistaja-20260926/loydos153-155-kreikka-horisont
 juna/b13 **3f2db11b**: pohja-26, nosto-muste (kohta 2 + Linssisepän jäljet), pallo lepo peli-lokiin, offline-lepo (C). Fablen A (laite-
 aloitusverho) Laitetestaajan kierroksella, B todennettu (Attiki), D laukaisu Laitetestaajalla. Jonossa: 153–155, lepo-suspend A/B.
 Siirtosepän #3303 (offline.json → pohja 26) PIDOSSA kunnes 1.0.20 on TF:ssä → ilmoita Siirtosepälle.
+- Pelikoodari 08.5x: **153** haara pelikoodari/loydos153 e6a2f829 (Aurinko → Horisonttiusva.RuutuRajaY/RuutuVoima, Peitto(y) webin
+  paperiusvan kaava, NostotKartalla × (1 − Peitto)); merge-pyyntö tulossa simulaattorin jälkeen. SEURAAJA: tarkista, ottavatko 3D-
+  kaupunkimerkit (Shaders/Kohdemerkki/Rengas?) ja TMP-nimiöt (Distance Field Overlay: EI sumua) horisonttiusvan → jos eivät,
+  kerro niillekin Peitto. **155**: symbolit kuten webissä; riski NostotKartalla.cs:747 (kuvamerkki vain löydetylle → tason 1
+  kuvamerkit katoavat ennen löytöä; web: taso 1 aina) → ehdotus `|| s.Taso == 1` (Natiivi-UI + Linssiseppä päättävät).
+  Raportti proto-3d/lokit/loydos155-symbolit.md.
