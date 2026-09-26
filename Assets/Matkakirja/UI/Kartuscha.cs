@@ -153,8 +153,13 @@ namespace Matkakirja.Natiivi
         /// <summary>True, jos nimeä pienennettiin (kolme tai useampia rivejä riviK:n korkuisina).</summary>
         bool SovitaNimi(float riviK)
         {
-            float h = nimi.layout.height;
-            if (float.IsNaN(h) || h <= 0f || h <= riviK * (NimenRivitMax + 0.5f) || nimenKerroin * NimenAskel < NimenMinimi) return false;
+            float h = nimi.layout.height, w = nimi.contentRect.width;
+            if (float.IsNaN(h) || h <= 0f || float.IsNaN(w) || w <= 0f || nimenKerroin * NimenAskel < NimenMinimi) return false;
+            // Myös pisin sana yksinään riville (muuten UITK katkaisee sanan: "HERTSEGOVIN / A", Laitetestaaja b17).
+            float pisin = 0f;
+            foreach (var sana in (nimi.text ?? "").Split(' '))
+                if (sana.Length > 0) pisin = Mathf.Max(pisin, nimi.MeasureTextSize(sana, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x);
+            if (h <= riviK * (NimenRivitMax + 0.5f) && pisin <= w + 0.5f) return false;
             if (nimenKerroin >= 1f) { nimenFontti = nimi.resolvedStyle.fontSize; nimenHarvennus = nimi.resolvedStyle.letterSpacing; }
             nimenKerroin *= NimenAskel;
             nimi.style.fontSize = nimenFontti * nimenKerroin;
