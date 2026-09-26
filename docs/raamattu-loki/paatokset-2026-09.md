@@ -7519,3 +7519,7 @@ BUILD 26 = proto-master 2c91a5d2 (puu 745f6a6f, kaannos 282aa01c): Laitetestaaja
 ## NATIIVISEPPA NOLLATTU JA KAYNNISTETTY (LUOVUTUS -J 36fa0e8b8) (26.9.2026 klo 22.25)
 
 Natiivisepan luovutus -j pushattu (BUILD 26 2c91a5d2 → TF 1.0.26, 1.0.27-jono: Mallinsepan rajapinta, kategoriasymbolit, perspektiivi, S11); scratchpad siivottu 8 Gt → 103 Mt; avoin: ylhaalta-175-worktreen lupatarkistus esti agentilta. Sessio nollattu 22.2x, aloitusviesti lahetetty.
+
+## TF 1.0.26 ULKONA 22.30 (26.9.2026 klo 22.32)
+
+Julkaisija: TF 1.0.26 lahetetty ja ASC:ssa kasitelty, ajo 36265749506, CFBundleVersion 202609261921, proto 2c91a5d2, laskuri 26, ISS-TLE mukana (14:57Z). Push omistajalle 22.3x. Sisalto: 176 porttikorjaus, 175 nostojen koko/kynnys, 171, 168, 172, Pulun karttavaisto, laattaera 2, ilmapallo, ISS-SGP4, 174b, S10, lipun piilotus, 177 uusi peli. Huom: 170 (kuvat ilman uudelleenkaynnistysta) ja 173/169/174 (Natiivi-UI) eivat ehtineet → 1.0.27.
