@@ -1308,8 +1308,9 @@ namespace Matkakirja
         string PohjaMalli()
         {
             string m = pohja is CesiumUrlTemplateRasterOverlay pu ? pu.templateUrl : null;
-            if (m != null && Laattapalvelin.Juuri != null && m.StartsWith(Laattapalvelin.Juuri, StringComparison.Ordinal))
-                return m.Substring(Laattapalvelin.Juuri.Length);
+            // Löydös 176: pohja on pohjan portissa (Laattapalvelin.Juuret), ei välttämättä Juuri-osoitteessa.
+            string paikallinen = m != null ? Laattapalvelin.PaikallinenPolku(m) : null;
+            if (paikallinen != null) return paikallinen;
             if (m != null && m.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal))
                 return m.Substring(Laattapalvelin.Ampari.Length);
             return null;

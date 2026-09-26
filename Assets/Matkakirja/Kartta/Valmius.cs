@@ -392,6 +392,8 @@ namespace Matkakirja
                 }
             }
             sb.Append(" | palvelin ").Append(Laattapalvelin.JonoTila());
+            // Löydös 176: yhteys- ja pyyntölaskurit porteittain (maks = huippu edellisen valmius-rivin jälkeen).
+            sb.Append(" | ").Append(Laattapalvelin.YhteysKuvaus(1));
             sb.Append(" | luokat");
             foreach (var p in Laattapalvelin.Luokat)
             {
@@ -418,8 +420,9 @@ namespace Matkakirja
         static string Ampariton(string url)
         {
             if (url == null) return "";
-            string j = Laattapalvelin.Juuri;
-            if (j != null && url.StartsWith(j, System.StringComparison.Ordinal)) return url.Substring(j.Length);
+            // Löydös 176: kerrokset ovat eri porteissa, joten mikä tahansa paikallinen juuri.
+            string paikallinen = Laattapalvelin.PaikallinenPolku(url);
+            if (paikallinen != null) return paikallinen;
             return url.StartsWith(Laattapalvelin.Ampari, System.StringComparison.Ordinal) ? url.Substring(Laattapalvelin.Ampari.Length) : url;
         }
 
