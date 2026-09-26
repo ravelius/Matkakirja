@@ -313,6 +313,144 @@
     color: rgba(74, 52, 33, 0.75);
 }
 
+/* --- Elävä kartta: kartussin muste (Kartuscha.Muste.cs) ------------------ */
+
+/* Tutkimuspalkki (maakunnat, nostot) ja heränneet maakunnat avatun kortin ylimpänä, ohut viiva alla. */
+.mk-kartuscha__muste {
+    flex-direction: column;
+    margin-bottom: 5.6px;
+    padding-bottom: 4.8px;
+    border-bottom-width: 1px;
+    border-color: rgba(74, 52, 33, 0.22);
+}
+
+.mk-kartuscha__maakunnat {
+    flex-direction: column;
+    margin-top: 3px;
+}
+
+.mk-kartuscha__mk {
+    flex-direction: row;
+    align-items: center;
+    min-height: 27px;
+}
+
+/* Maakunnan pikkukuva leimana (löydös 115): kierto −2° levossa, herätyksessä 1,3 → 1 ja −6° → −2° (koodi). */
+.mk-kartuscha__mkkuva {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    border-width: 1px;
+    border-color: rgba(74, 52, 33, 0.6);
+    background-color: rgb(233, 219, 186);
+    -unity-background-scale-mode: scale-and-crop;
+    rotate: -2deg;
+}
+
+/* Käsialanimi (Kirjasin.Kauno = Snell Roundhand, web --font-kauno). */
+.mk-kartuscha__mknimi {
+    flex-shrink: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 17px;
+    color: rgba(40, 28, 16, 0.92);
+}
+
+.mk-kartuscha__pisteet {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 8px;
+}
+
+/* Mustepisteet löydetyt/kaikki: täysi = mustetäplä, tyhjä = rengas. */
+.mk-kartuscha__piste {
+    width: 5px;
+    height: 5px;
+    margin-left: 2.5px;
+    border-width: 1px;
+    border-radius: 2.5px;
+    border-color: rgba(58, 40, 25, 0.7);
+}
+
+.mk-kartuscha__piste--taysi {
+    background-color: rgba(58, 40, 25, 0.88);
+}
+
+.mk-kartuscha__pisteluku {
+    font-size: 10.56px;
+    color: rgba(74, 52, 33, 0.85);
+}
+
+/* Salaisuusrivi masto-osan alla (kiinni ja auki): pieni kursiivi, kiinni pergamenttihalolla kuten alarivi. */
+.mk-kartuscha__salaisuus {
+    flex-direction: row;
+    align-items: center;
+    min-height: 0;
+    margin: 3px 0 0 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-kartuscha__salaisuus:active {
+    opacity: 0.7;
+}
+
+.mk-kartuscha__salaisuusteksti {
+    white-space: normal;
+    font-size: 12.2px;
+    color: #7a5514;
+    text-shadow: 0 0 3px rgb(244, 232, 205);
+}
+
+.mk-kartuscha.mk-auki .mk-kartuscha__salaisuus {
+    margin: 0 0 4px 0;
+}
+
+.mk-kartuscha.mk-auki .mk-kartuscha__salaisuusteksti {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Maakunnan salaisuuden kortti: sama koko, oma sävy ylärivissä ja otsikossa (löydös 135: vain tyyli eri). */
+.mk-nosto--salaisuus .mk-nosto__ylarivi {
+    color: #8e4550;
+}
+
+.mk-nosto--salaisuus .mk-nosto__otsikko {
+    color: #5a2a22;
+}
+
+/* Käsialanimet kartalla (MaakuntanimetKartalla): nimi keskitetty maakunnan pisteeseen, kallistettu kuin kynällä
+   kirjoitettu (video 10,4 s "Attika"); muste ja paperihehku kuten maiden nimillä (MaidenNimetKerros). */
+.mk-maakuntanimet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mk-maakuntanimi {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mk-maakuntanimi__teksti {
+    position: absolute;
+    translate: -50% -50%;
+    rotate: -8deg;
+    white-space: nowrap;
+    -unity-text-align: middle-center;
+    font-size: 24px;
+    color: rgba(40, 28, 16, 0.88);
+    text-shadow: 0 0 4px rgb(244, 232, 205);
+}
+
 /* --- karttaselite -------------------------------------------------------- */
 
 .mk-seliteNappi {

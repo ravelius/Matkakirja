@@ -207,6 +207,7 @@ namespace Matkakirja.Natiivi
             bool vertailu = id == "vertailu", radio = id == "radio";
             ui.Kartuscha.NaytaSallittu(!portti);
             ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
+            ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio));
             ui.OfflineTila.NaytaSallittu(!paalla);
             ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
             ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
