@@ -7207,3 +7207,7 @@ Sisältökirjurin havainto koski aikajana.js:n pulunLinssikysymyksiä, eri mekan
 ## CODEX: PULUN KARTTAVAISTO NATIIVIIN LAITEARVIOON (26.9.2026 klo 18.29)
 
 Codex toimitti Pulun karttavaiston Unity-natiiviin (haara proto/natiivi-ui/pulu-karttavaisto-20260926, 303a32ec, PR ravelius/Matkakirja-natiivi#1, ei mergetty; kaanna.sh 321/321). Fable valitti Natiivi-UI:lle katselmointiin ja simulaattoriarvioon (veto, nipistys, uusi veto kesken paluun, puhe-/dialogikeskeytys, reduced motion, kurkistuksen rajaus iPad, 5 paluuta) ja Natiivisepalle: PASSin jalkeen 1.0.25-junaan ja laitemittaus; merge-, asennus- ja laitetila ilmoitetaan erikseen. Fablen checkout synkattu mainiin (tarkista-tyotilat.sh #3337 mukana).
+
+## RAAMATTU-PR 3338: EI MONOTONIAA JA AITO 3D (26.9.2026 klo 18.31)
+
+Omistajan 13.4x-13.5x-saannot (vaihtelu kaikkiin animoituihin kohteisiin; 3D-nostot aidosti kolmiulotteisia, katselukulmaan reagoivia, maan pinnalla, pienet valot, hillityt varit) lisatty Raamatun JOHTOAJATUS VISUAALISUUDESTA -kohtaan PR:na #3338 Julkaisijan junaan. Karttasepan sessio nollattu ja kaynnistetty uudelleen luovutuksesta -b (Z10 v3 8 ydinta). Fablen checkout synkattu mainiin.
