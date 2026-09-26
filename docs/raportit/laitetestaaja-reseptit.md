@@ -66,6 +66,14 @@ echo "aani mittaa" > peli-komento.txt   # rms/huippu + soivien url-lista peli-lo
 HUOM (Pelikoodari): tunnus (`kaupunki <id>`) ei katkaise jo soivaa aihetta — testaa tuoreella pelillä
 ennen muita `aani aihe` -kutsuja, tai odota edellisen aiheen loppuvan.
 
+## Lipputanko (161, build 21)
+
+Kreikan itäreunassa Traakiassa, 41,08° N / 25,95° E (Aleksandroupolin luoteispuolella). Kamera:
+```
+echo "aja 41.08 25.95 2 1.5" > komento.txt
+```
+Lippu liehuu itään maan ulkopuolelle; lepomittaus (kehysajat.jsonl piirretty) tässä näkymässä (Fable 26.9.).
+
 ## Vielä auki (ei komentoa löytynyt / ei ehditty)
 
 - K (156, maakuntien selain sormivedolla): `aja`-komennolla pääsee samaan lopputulokseen kameraa
