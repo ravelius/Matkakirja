@@ -1,4 +1,4 @@
-# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 06.1x)
+# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 07.1x)
 
 Luovuttaja on Siirtoseppä (Opus). Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
@@ -13,7 +13,7 @@ voimassa.
 
 ## Tila
 
-- **main = e8541dea3 (v2252).** Tuotanto 1.x **v144** (skeema **1.45**) ja 2.0 **v85**.
+- **main v2258.** Tuotanto 1.x **v151** (skeema **1.48**) ja 2.0 **v92**. Pino #3269 (1.46), #3285 (1.47), #3298 (1.48), #3299 (tilannekuva.mjs) ja Sisältökirjurin #3297 (maakuntanimet suomeksi, v148) ovat mainissa ja tuotannossa.
 - Tässä vuorossa julkaistut:
 
 | Skeema | PR | Sisältö |
@@ -31,29 +31,17 @@ voimassa.
 - **Natiivi:** taustapäivityksen vaihe 2 (proto-haara `siirtoseppa/paketti-paivitys` 99f049ec) on build 18 -junassa
   (juna/b13 99eaf8d9). Simulaattoriloki: `/Users/Shared/Claude/proto-3d/lokit/siirtoseppa-paketti-paivitys-20260926.txt`.
 
-## Pushatut, julkaisemattomat PR:t (Julkaisijan jonossa, järjestyksessä)
+## Pushatut, julkaisemattomat PR:t
 
-1. **#3269 (1.46)** kokoelma `reitit1873` (Karttasepän #3266, 1368 riviä, CC0). Main v2251 on yhdistetty, ja Natiiviseppä
-   on kuitannut. Worktree `wt/siirtoseppa-reitit1873`.
-2. **#3285 (1.47)** kokoelma `maakuntasalaisuudet` (14 GRC). Oma kokoelma karttavalorivien sijaan, koska build 16/17
-   piirtäisi karttavalorivit (Natiiviseppä). Natiiviseppä on kuitannut. Worktree `wt/siirtoseppa-salaisuudet`.
-   Sisältökirjurin nimiöt (#3286) ovat jo mainissa, joten `nimio` täyttyy itsestään.
-3. **#3298 (1.48)** kaupunkilehdet kaupungeittain: kokoelmat/kaupunkilehdet/<id>.json ja
-   manifest.kaupunkilehdetKaupungeittain (Pelikoodari, build 19). Natiiviseppä on kuitannut. Worktree
-   `wt/siirtoseppa-lehdet-kaupungeittain`.
-4. **#3299** tools/vienti/tilannekuva.mjs (buildin tilannekuva). Riippumaton pinosta.
-
-Julkaisija ilmoittaa jokaisen mergen, minkä jälkeen yhdistetään main seuraavaan: skeemariveistä pidetään haaran puoli,
-**sw.js ja tools/build-standalone.mjs otetaan aina mainista** (`git checkout origin/main -- …`). Tarkista lopuksi
-`git diff --name-only origin/main`, jotta mainista eroavat vain omat tiedostot.
+Ei avoimia web-PR:iä. Omat worktreet on poistettu.
 
 ## Kesken — tee nämä ensin
 
-0. **Natiivin merge-pyyntö Natiivisepällä:** proto-haara `siirtoseppa/tilannekuva` 8603b496 (juna/b13 fd29a2ae:n päällä):
-   buildin tilannekuva ja osittainen laiska tila, HaeHakemistoKylmana (Sisalto.cs yksi rivi) sekä korjaus, jolla
-   taustapäivitys hakee aina tuoreen osoittimen (lämmin käynnistys b74983a6 antoi vanhan). Loki
-   proto-3d/lokit/siirtoseppa-tilannekuva-20260926.txt. Natiiviseppä tekee buildivaiheen (tilannekuva.mjs →
-   Data/Raw/sisalto/tilannekuva/).
+0. **KIIREELLINEN natiivin merge-pyyntö Natiivisepällä:** proto-haara `siirtoseppa/siivous-korjaus` 13e5bcf4
+   (juna/b13 d706da81:n päällä). PakettiPaatokset.Sailytettavat poisti juuri valmistuneen seuraavan version, jolloin
+   laite jäi pysyvästi vanhaan (Natiivi-UI:n löydös). Todennettu simulaattorissa, loki
+   proto-3d/lokit/siirtoseppa-siivous-korjaus-20260926.txt. Varmista, että se on build 19 -junassa.
+   Tilannekuva (8603b496, Natiivisepän buildivaihe 03860cc4) on jo junassa.
 
 1. Pinon mergejen jälkeen: tuotannon ämpäritarkistus (`amparitarkistus.mjs --url …/sisalto/1/v<N>/`), sitten versio
    Natiivisepälle, Natiivi-UI:lle ja Pelikoodarille sekä rivi Fablelle.
