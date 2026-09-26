@@ -70,3 +70,14 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
   Avoinna: piirto (Natiiviseppä), kartussi (Natiivi-UI), salaisuus-kortti NostoSisalto:n "salaisuus:"-etuliite (Natiivi-UI).
 - Web-PR:t auki: #3272 musiikki- ja äänisuunnitelma, #3274 löydös 135 web, #3250 kehyksen hinta CPU.
 - Jono tyhjä → kysytty Fablelta seuraava.
+
+## 8. Lisäys 26.9. klo 04.4x
+- Build 18 -junassa: elava-kartta 3ef13a97 (Fable kuittasi; WEB EI — Raamattu "vain natiivi").
+- Merge-pyynnöt Natiivisepällä (build 18):
+  - `pelikoodari/humina-muunnelmat` 7d41a3df: linssin taustaääni ilman maiseman kompressoria, ulosfeidi 600 ms (Linssisepän
+    mittaus), Aanet.RekisteroiTehoste muunnelmalistalla.
+  - `pelikoodari/verkko-raja` 0e3335e2: esilatauksen mittarit laitteelle (`verkko raja [vaihe]`, KehysMittari-rivi
+    verkkoOdotusMs/saapuminenVerkkoMs/osumaPros). Mitattu b18: saapuminen 0 ms PASS kylmä+lämmin; istunto 1 214 / 313 ms,
+    osuma 32 / 84 % (lokit/verkko-odotus/b18-*).
+- Lepopiirto b17:ssä ei toteutunut (Laitetestaaja): Natiiviseppä korjasi build 18:aan (SykeJaatyy = true).
+- Jono tyhjä; odotan Fablen seuraavaa.
