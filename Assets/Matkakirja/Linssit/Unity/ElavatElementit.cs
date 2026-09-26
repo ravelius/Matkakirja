@@ -2,7 +2,7 @@
 // docs/raportit/elavat-elementit-selvitys-20260926.md, omistaja hyväksyi järjestyksen). Yksi liikkuva aihe kaupunkia
 // kohden, ja kukin aihe on yksi Aihe-määrittely: paikka, yksilöt ruudulla, runko, pyörivä osa ja animaatio.
 //   kokeilu 1  Zaandamin kolme tuulimyllyä (vain siivet pyörivät, 7–9 s/kierros)
-//   kokeilu 2  Tivolin karuselli Kööpenhaminassa (katos ja hevoset pyörivät 10 s/kierros, hevoset nousevat 2,5 s)
+//   kokeilu 2  Tivolin ketjukaruselli Kööpenhaminassa (katos 10 s/kierros, istuimet keinuvat ulospäin aaltoillen, lamput)
 //
 // Mallit ovat proseduraalisia low-poly-malleja löydöksen 160 paletilla (MalliVarit) ja varjostimella
 // Matkakirja/Linssit/Malli. Natiivisepän Blender-mallit voivat korvata ne myöhemmin (sama juuri ja sama pyörivä osa).
@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
+using Matkakirja.Linssit.Elava;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -37,26 +38,36 @@ namespace Matkakirja.Natiivi
             public float KokoPt;
             public (float x, float y, float vaihe)[] Yksilot;
             public Func<Mesh> Runko, Roottori;
-            public Func<Mesh> Lapsi;          // valinnainen: pyörivän osan lapset (karusellin hevoset)
+            public Func<Mesh> Lapsi;          // valinnainen: pyörivän osan lapset (karusellin istuimet)
+            public Func<Mesh> Valot;          // valinnainen: roottorin lamput (hillitty hehku, ei valaistusta)
             public Vector3[] LastenPaikat;    // lasten paikat roottorin avaruudessa
-            public Action<Transform, Transform[], float> Animoi;
+            public Action<Transform, Transform[], float, float> Animoi;   // (roottori, lapset, aika s, nopeus 0–1)
+            /// <summary>Maapohjan säde mallin yksiköissä (omistaja 16.5x: ei leijuntaa, jokainen aihe istuu maahan).</summary>
+            public float PohjaSade = 0.6f;
+            /// <summary>Värien haalistus kohti pergamenttia (Malli-varjostimen _Haalistus).</summary>
+            public float Haalistus;
             // Ajonaikaiset
-            public readonly List<(Transform juuri, Transform roottori, Transform[] lapset, float vaihe)> Oliot = new();
+            public readonly List<Yksilo> Oliot = new();
+            /// <summary>Vaihtelu ja tauot yksilölle i (omistaja 16.5x: ei monotoniaa), siemenellä toistettava.</summary>
+            public Func<int, Vaihtelu> Vaihtelu;
+            public readonly List<Transform> Pohjat = new();
             public int Kolmioita;
             public bool Nakyvissa;
             public float Peitto = -1;
-            public Material Materiaali;
+            public Material Materiaali, PohjaMateriaali, ValoMateriaali;
         }
 
         static readonly Aihe[] Aiheet =
         {
             new Aihe
             {
+                // Myllyt: puuskat ±35 %, ja joskus yksi seisoo 25–70 s (20 % jaksoista).
+                Vaihtelu = i => new Vaihtelu(101 + i) { KayMinS = 90, KayMaxS = 240, SeisooMinS = 25, SeisooMaxS = 70, TaukoTod = 0.2, Puuska = 0.35 },
                 Nimi = "myllyt", Paikka = new LatLon(52.4735, 4.8166), KokoPt = 34f,   // Zaanse Schans, Zaandam
                 Yksilot = new[] { (-26f, -4f, 0f), (0f, 3f, 2.4f), (25f, -2f, 5.1f) },
-                Runko = MyllyGeometria.Runko, Roottori = MyllyGeometria.Siivet,
+                Runko = MyllyGeometria.Runko, Roottori = MyllyGeometria.Siivet, PohjaSade = 0.45f,
                 // Siivet akselin ympäri, jokaisella oma tahti (7,4 / 8,3 / 9,1 s): tahti vaiheesta.
-                Animoi = (roottori, _, t) =>
+                Animoi = (roottori, _, t, _) =>
                 {
                     roottori.localPosition = MyllyGeometria.Akseli;
                     roottori.localRotation = Quaternion.Euler(-MyllyGeometria.AkselinNousu, 0, 0) * Quaternion.Euler(0, 0, t * 360f / 8.3f);
@@ -64,35 +75,29 @@ namespace Matkakirja.Natiivi
             },
             new Aihe
             {
+                // Karuselli: käy 60–150 s, hidastuu, seisoo 20–60 s ja kiihtyy uudelleen.
+                Vaihtelu = i => new Vaihtelu(211 + i) { KayMinS = 60, KayMaxS = 150, SeisooMinS = 20, SeisooMaxS = 60, TaukoTod = 1, Puuska = 0.05 },
                 Nimi = "karuselli", Paikka = new LatLon(55.6737, 12.5681), KokoPt = 38f,   // Tivoli, Kööpenhamina
                 Yksilot = new[] { (0f, 0f, 0f) },
-                Runko = KaruselliGeometria.Runko, Roottori = KaruselliGeometria.Katos, Lapsi = KaruselliGeometria.Hevonen,
-                LastenPaikat = KaruselliGeometria.HevostenPaikat(),
-                // Katos ja hevoset 10 s/kierros pystyakselin ympäri; hevoset nousevat ja laskevat 2,5 s, vuorotellen.
-                Animoi = (roottori, lapset, t) =>
-                {
-                    roottori.localRotation = Quaternion.Euler(0, t * 36f, 0);
-                    for (int i = 0; i < lapset.Length; i++)
-                    {
-                        var q = KaruselliGeometria.HevostenPaikat()[i];
-                        float nousu = 0.045f * Mathf.Sin((t / 2.5f + (i % 2) * 0.5f) * Mathf.PI * 2);
-                        lapset[i].localPosition = q + new Vector3(0, nousu, 0);
-                        lapset[i].localRotation = Quaternion.LookRotation(Vector3.Cross(Vector3.up, q).normalized, Vector3.up);
-                    }
-                },
+                Runko = KaruselliGeometria.Runko, Roottori = KaruselliGeometria.Katos, Lapsi = KaruselliGeometria.Istuin,
+                Valot = KaruselliGeometria.Lamput,
+                PohjaSade = 0.95f, Haalistus = 0.25f,
+                LastenPaikat = KaruselliGeometria.Ripustukset(),
+                Animoi = KaruselliGeometria.Animoi,
             },
         };
 
         static ElavatElementit instanssi;
         public static bool Paalla = true;
+        static double AikaSiirto;
 
         LinssiOhjain ohjain;
         CesiumGeoreference georeferenssi;
         Camera kamera;
         readonly List<UnityEngine.Object> roskat = new();
         Func<bool> kaynnissa;
-        float nopeus, aika;
-        bool jokinNakyvissa;
+        float liike;
+        bool jokinNakyvissa, jokinLiikkuu;
 
         public static void Kytke(LinssiOhjain o)
         {
@@ -109,6 +114,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento "elava elementit tila|0|1".</summary>
         public static void Testi(string arvo, LinssiOhjain o)
         {
+            // "elava elementit siirra <s>": aikataulun kello siirtyy (todennus: hidastus ja tauko videolle).
+            if (arvo != null && arvo.StartsWith("siirra ") && double.TryParse(arvo.Substring(7), System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out var siirto)) AikaSiirto += siirto;
             if (arvo == "0" || arvo == "1") { Paalla = arvo == "1"; PallonLepo.Muuttui("elävät elementit"); }
             o.Kirjaa("elävät elementit: " + Tila());
         }
@@ -117,8 +125,14 @@ namespace Matkakirja.Natiivi
         {
             if (instanssi == null) return "ei kytketty";
             var osat = new List<string>();
-            foreach (var a in Aiheet) osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota");
-            return $"{(Paalla ? "päällä" : "pois")}; {string.Join("; ", osat)}; liike {instanssi.nopeus:F2}, kerros {ElavaKerros.Nyt}";
+            double nyt = Time.unscaledTimeAsDouble + AikaSiirto;
+            foreach (var a in Aiheet)
+            {
+                var yk = a.Oliot.Count > 0 ? a.Oliot[0] : null;
+                string tauko = yk?.Aikataulu == null ? "" : $", nopeus {yk.Nopeus:F2}, seuraava tauko {yk.Aikataulu.SeuraavaTauko(nyt) - nyt:F0} s";
+                osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota{tauko}");
+            }
+            return $"{(Paalla ? "päällä" : "pois")}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
         }
 
         void Start()
@@ -129,19 +143,44 @@ namespace Matkakirja.Natiivi
             {
                 a.Oliot.Clear();
                 a.Materiaali = new Material(s) { name = a.Nimi };
+                a.Materiaali.SetFloat("_Haalistus", a.Haalistus);
                 roskat.Add(a.Materiaali);
-                var runko = a.Runko(); var roottori = a.Roottori(); var lapsi = a.Lapsi?.Invoke();
+                // Maapohja ja pehmeä varjo: maaston päällä (ZTest Always, ZWrite Off), mallia ennen (jono 3010).
+                a.PohjaMateriaali = new Material(s) { name = a.Nimi + " pohja", renderQueue = 3010 };
+                a.PohjaMateriaali.SetFloat("_ZTest", (float)CompareFunction.Always);
+                a.PohjaMateriaali.SetFloat("_ZWrite", 0);
+                a.PohjaMateriaali.SetFloat("_Ymparisto", 1);
+                roskat.Add(a.PohjaMateriaali);
+                var pohja = MaaPohja.Mesh(); roskat.Add(pohja);
+                var runko = a.Runko(); var roottori = a.Roottori(); var lapsi = a.Lapsi?.Invoke(); var valot = a.Valot?.Invoke();
                 roskat.Add(runko); roskat.Add(roottori); if (lapsi != null) roskat.Add(lapsi);
+                Material valoMateriaali = null;
+                if (valot != null)
+                {
+                    // Lamput: täysi kirkkaus ilman valaistusta ja haalistusta (hillitty hehku, ei bloomia).
+                    roskat.Add(valot);
+                    valoMateriaali = new Material(s) { name = a.Nimi + " valot" };
+                    valoMateriaali.SetFloat("_Ymparisto", 1);
+                    roskat.Add(valoMateriaali);
+                    a.ValoMateriaali = valoMateriaali;
+                }
                 int lapsia = a.LastenPaikat?.Length ?? 0;
-                a.Kolmioita = (runko.triangles.Length + roottori.triangles.Length + (lapsi != null ? lapsi.triangles.Length * lapsia : 0)) / 3;
+                a.Kolmioita = (runko.triangles.Length + roottori.triangles.Length + (valot != null ? valot.triangles.Length : 0)
+                    + (lapsi != null ? lapsi.triangles.Length * lapsia : 0)) / 3;
                 foreach (var (_, _, vaihe) in a.Yksilot)
                 {
+                    var pt = new GameObject(a.Nimi + " pohja").transform;
+                    pt.SetParent(transform, false);
+                    Kappale(pt, "Pohja", pohja, a.PohjaMateriaali);
+                    pt.gameObject.SetActive(false);
+                    a.Pohjat.Add(pt);
                     var juuri = new GameObject(a.Nimi).transform;
                     juuri.SetParent(transform, false);
                     Kappale(juuri, "Runko", runko, a.Materiaali);
                     var rt = new GameObject("Roottori").transform;
                     rt.SetParent(juuri, false);
                     Kappale(rt, "Roottori", roottori, a.Materiaali);
+                    if (valot != null) Kappale(rt, "Valot", valot, valoMateriaali);
                     var lapset = new Transform[lapsia];
                     for (int i = 0; i < lapsia; i++)
                     {
@@ -150,8 +189,8 @@ namespace Matkakirja.Natiivi
                         Kappale(lapset[i], "Lapsi", lapsi, a.Materiaali);
                     }
                     juuri.gameObject.SetActive(false);
-                    a.Oliot.Add((juuri, rt, lapset, vaihe));
-                    a.Animoi(rt, lapset, vaihe);
+                    a.Oliot.Add(new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, Vaihe = vaihe, Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) });
+                    a.Animoi(rt, lapset, vaihe, 0f);
                 }
             }
             Debug.Log($"MATKAKIRJA elävät elementit: {Tila()}");
@@ -171,7 +210,7 @@ namespace Matkakirja.Natiivi
 
         void OnEnable()
         {
-            kaynnissa = () => jokinNakyvissa && (nopeus > 0.001f || Liikkuu());
+            kaynnissa = () => jokinNakyvissa && jokinLiikkuu;
             ElavaKerros.Animoi(kaynnissa, "elävät elementit", 30);
         }
 
@@ -200,9 +239,10 @@ namespace Matkakirja.Natiivi
             Vector3 kohtiKameraa = -gt.InverseTransformDirection(kamera.transform.forward).normalized;
             var asento = Quaternion.AngleAxis(SivuKulma, kameraYlos) * Quaternion.LookRotation(kohtiKameraa, kameraYlos);
 
-            // Liike pehmeästi kohti 1/0 (PehmeysS); aika kulkee nopeuden mukaan (animaatiot ajan funktioita).
-            nopeus = Mathf.MoveTowards(nopeus, Liikkuu() ? 1f : 0f, Time.unscaledDeltaTime / PehmeysS);
-            aika += nopeus * Time.unscaledDeltaTime;
+            // Liike pehmeästi kohti 1/0 (PehmeysS): vähennetty liike, Staattinen ja pois-kytkin.
+            liike = Mathf.MoveTowards(liike, Liikkuu() ? 1f : 0f, Time.unscaledDeltaTime / PehmeysS);
+            double seina = Time.unscaledTimeAsDouble + AikaSiirto;
+            bool liikkuu = false;
 
             bool jokin = false;
             foreach (var a in Aiheet)
@@ -218,10 +258,15 @@ namespace Matkakirja.Natiivi
                 if (nyt != a.Nakyvissa)
                 {
                     a.Nakyvissa = nyt;
-                    foreach (var o in a.Oliot) o.juuri.gameObject.SetActive(nyt);
+                    foreach (var o in a.Oliot) o.Juuri.gameObject.SetActive(nyt);
+                    foreach (var po in a.Pohjat) po.gameObject.SetActive(nyt);
                     PallonLepo.Muuttui("elävät elementit");
                 }
-                if (!Mathf.Approximately(p, a.Peitto)) { a.Peitto = p; a.Materiaali.SetFloat("_Peitto", p); }
+                if (!Mathf.Approximately(p, a.Peitto))
+                {
+                    a.Peitto = p; a.Materiaali.SetFloat("_Peitto", p); a.PohjaMateriaali.SetFloat("_Peitto", p);
+                    if (a.ValoMateriaali != null) a.ValoMateriaali.SetFloat("_Peitto", p);
+                }
                 if (!a.Nakyvissa) continue;
                 jokin = true;
                 // Koko ruudulla vakio; yksilöiden rivi asettuu ruudulla vaakaan kamerasta riippumatta.
@@ -232,16 +277,33 @@ namespace Matkakirja.Natiivi
                 float kerroin = a.KokoPt * pt;
                 for (int i = 0; i < a.Oliot.Count; i++)
                 {
-                    var (j, rt, lapset, vaihe) = a.Oliot[i];
+                    var yk = a.Oliot[i];
+                    var j = yk.Juuri;
                     var (x, y, _) = a.Yksilot[i];
                     // Nosto kameraa kohti rungon syvyyden verran, ettei pop-up-malli painu maaston sisään (ZTest LEqual).
-                    j.localPosition = juuri + (oikea * x + eteen * y) * pt + kohtiKameraa * (0.55f * kerroin);
+                    Vector3 maassa = juuri + (oikea * x + eteen * y) * pt;
+                    j.localPosition = maassa + kohtiKameraa * (0.55f * kerroin);
+                    // Maapohja makaa pinnalla juuren alla (ellipsinä kallistettaessa), säde aiheen mukaan.
+                    var pj = a.Pohjat[i];
+                    pj.localPosition = maassa + ylos * 20f;
+                    pj.localRotation = Quaternion.LookRotation(eteen, ylos);
+                    pj.localScale = Vector3.one * (a.PohjaSade * kerroin);
                     j.localRotation = asento;
                     j.localScale = Vector3.one * kerroin;
-                    if (nopeus > 0.0001f) a.Animoi(rt, lapset, aika * (1f + 0.07f * i) + vaihe);
+                    // Vaihtelu ja tauot: yksilön nopeus aikataulusta × liike; aika kulkee nopeuden mukaan.
+                    float tavoite = liike * (float)(yk.Aikataulu?.Tavoite(seina) ?? 1.0);
+                    yk.Nopeus = Mathf.MoveTowards(yk.Nopeus, tavoite, Time.unscaledDeltaTime / PehmeysS);
+                    yk.Aika += yk.Nopeus * Time.unscaledDeltaTime;
+                    if (yk.Nopeus > 0.0001f || tavoite > 0.0001f) liikkuu = true;
+                    if (yk.Nopeus > 0.0001f || !yk.Asetettu)
+                    {
+                        a.Animoi(yk.Roottori, yk.Lapset, yk.Aika + yk.Vaihe, Mathf.Clamp01(yk.Nopeus));
+                        yk.Asetettu = true;
+                    }
                 }
             }
             jokinNakyvissa = jokin;
+            jokinLiikkuu = liikkuu;
         }
 
         /// <summary>Juuri ruudulla RuutuVara-osuuden reunavaralla (aihe ulottuu juuresta noin koon verran).</summary>
@@ -251,6 +313,16 @@ namespace Matkakirja.Natiivi
             return v.z > 0 && v.x > -RuutuVara && v.x < 1 + RuutuVara && v.y > -RuutuVara && v.y < 1 + RuutuVara;
         }
 
+        /// <summary>Yksi animoitu yksilö: oliot, aikataulu (Vaihtelu) ja oma nopeus ja aika.</summary>
+        sealed class Yksilo
+        {
+            public Transform Juuri, Roottori;
+            public Transform[] Lapset;
+            public float Vaihe, Nopeus, Aika;
+            public Vaihtelu Aikataulu;
+            public bool Asetettu;
+        }
+
         Vector3 Paikka(LatLon q, double korkeus)
         {
             var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(q.Lon, q.Lat, korkeus));
@@ -258,11 +330,54 @@ namespace Matkakirja.Natiivi
         }
     }
 
+    /// <summary>
+    /// Maapohja (omistaja 26.9. klo 16.5x: "näyttää leijuvan ilmassa"): pinnalla makaava pehmeäreunainen kiekko, jonka
+    /// keskellä on tumma pehmeä varjo ja reunalla vaalea sage-sävy häipyen nollaan. Säde 1, +y ylös (pinnan normaali).
+    /// </summary>
+    public static class MaaPohja
+    {
+        public static Mesh Mesh()
+        {
+            const int sivuja = 32;
+            var renkaat = new (float r, Color c)[]
+            {
+                (0f, WithA(MalliVarit.Varjo, 0.42f)), (0.28f, WithA(MalliVarit.Varjo, 0.32f)),
+                (0.55f, WithA(MalliVarit.SageVaalea, 0.30f)), (0.8f, WithA(MalliVarit.SageVaalea, 0.16f)), (1f, WithA(MalliVarit.SageVaalea, 0f)),
+            };
+            var p = new List<Vector3>(); var n = new List<Vector3>(); var c = new List<Color>(); var t = new List<int>();
+            p.Add(Vector3.zero); n.Add(Vector3.up); c.Add(renkaat[0].c);
+            for (int k = 1; k < renkaat.Length; k++)
+                for (int i = 0; i < sivuja; i++)
+                {
+                    float a = i * Mathf.PI * 2 / sivuja;
+                    p.Add(new Vector3(Mathf.Cos(a) * renkaat[k].r, 0, Mathf.Sin(a) * renkaat[k].r)); n.Add(Vector3.up); c.Add(renkaat[k].c);
+                }
+            for (int i = 0; i < sivuja; i++) t.AddRange(new[] { 0, 1 + (i + 1) % sivuja, 1 + i });
+            for (int k = 1; k < renkaat.Length - 1; k++)
+            {
+                int a0 = 1 + (k - 1) * sivuja, b0 = 1 + k * sivuja;
+                for (int i = 0; i < sivuja; i++)
+                {
+                    int i1 = (i + 1) % sivuja;
+                    t.AddRange(new[] { a0 + i, a0 + i1, b0 + i1, a0 + i, b0 + i1, b0 + i });
+                }
+            }
+            var m = new Mesh { name = "Maapohja" };
+            m.SetVertices(p); m.SetNormals(n); m.SetColors(c); m.SetTriangles(t, 0);
+            m.RecalculateBounds();
+            return m;
+        }
+
+        static Color WithA(Color v, float a) { v.a = a; return v; }
+    }
+
     /// <summary>Löydöksen 160 paletti (Sisältökirjurin poiminta 26.9.) ja tummempi sage varjopinnoille.</summary>
     public static class MalliVarit
     {
         public static readonly Color Sage = Hex(0x7a9a92), SageVarjo = Hex(0x5f7e77), Varjo = Hex(0x887858),
             Pinta = Hex(0xc8b898), Valo = Hex(0xe8d8b8), Terrakotta = Hex(0xb8785e);
+        /// <summary>Hillityt sävyt (omistaja 16.5x karusellista: värit alemmas, sage ja pergamentti hallitsevat).</summary>
+        public static readonly Color SageVaalea = Color.Lerp(Sage, Valo, 0.45f), TerrakottaHimmea = Color.Lerp(Terrakotta, Pinta, 0.45f);
 
         public static Color Hex(int rgb) => new Color(((rgb >> 16) & 255) / 255f, ((rgb >> 8) & 255) / 255f, (rgb & 255) / 255f, 1f);
     }
@@ -291,15 +406,16 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kahdeksankulmainen kapeneva vaippa korkeuksilta y0 → y1 säteillä r0 → r1.</summary>
-        public void Vaippa(float y0, float r0, float y1, float r1, Color ala, Color yla, int sivuja = 8)
+        public void Vaippa(float y0, float r0, float y1, float r1, Color ala, Color yla, int sivuja = 8, float ox = 0, float oz = 0)
         {
+            var o = new Vector3(ox, 0, oz);
             for (int i = 0; i < sivuja; i++)
             {
                 float a0 = i * Mathf.PI * 2 / sivuja + Mathf.PI / sivuja, a1 = (i + 1) * Mathf.PI * 2 / sivuja + Mathf.PI / sivuja;
                 Vector3 p00 = new(Mathf.Cos(a0) * r0, y0, Mathf.Sin(a0) * r0), p10 = new(Mathf.Cos(a1) * r0, y0, Mathf.Sin(a1) * r0);
                 Vector3 p01 = new(Mathf.Cos(a0) * r1, y1, Mathf.Sin(a0) * r1), p11 = new(Mathf.Cos(a1) * r1, y1, Mathf.Sin(a1) * r1);
                 // Tahkojen vuorottelu antaa kaiverruksen laudoitusvaikutelman ilman tekstuuria.
-                Nelio(p00, p10, p11, p01, Color.Lerp(ala, yla, i % 2 == 0 ? 0.35f : 0.6f));
+                Nelio(p00 + o, p10 + o, p11 + o, p01 + o, Color.Lerp(ala, yla, i % 2 == 0 ? 0.35f : 0.6f));
             }
         }
 
@@ -404,26 +520,48 @@ namespace Matkakirja.Natiivi
     }
 
     /// <summary>
-    /// Proseduraalinen karuselli (Tivoli, kokeilu 2): leveys 1,16, korkeus noin 0,9, juuri origossa, +y ylös. Runko on
-    /// paikallaan pysyvä lava; Katos (pyörivä osa) on raidallinen kartiokatto helmoineen, keskipylväs ja kahdeksan tankoa;
-    /// hevoset ovat katoksen lapsia (HevostenPaikat), ja ne nousevat ja laskevat tankoja pitkin.
+    /// Proseduraalinen ketjukaruselli (Tivoli, kokeilu 2; omistaja 16.5x: "vaunut lentävät sivuilla iloisemmin ja elävämmin
+    /// eri tasoissa"). Runko on paikallaan pysyvä lava ja kaksi puuta. Katos (pyörivä osa) on raidallinen kartiokatto
+    /// helmoineen ja keskipylväs; Lamput (erillinen, valaisematon materiaali) kiertävät helman reunaa; istuimet riippuvat
+    /// ketjuissa helman ripustuspisteistä (Ripustukset). Animoi: katos pyörii 10 s/kierros; ripustuspisteiden korkeus aaltoilee
+    /// kehän ympäri (katto kallistuu hitaasti kuin aaltokaruselli) ja istuimet keinuvat ulospäin keskipakoisesti nopeuden
+    /// mukaan (pysähtyessä ne laskeutuvat pystyyn ease-käyrällä), kukin hieman eri vaiheessa.
     /// </summary>
     public static class KaruselliGeometria
     {
-        const int Hevosia = 8;
-        const float HevostenSade = 0.38f, HevostenKorkeus = 0.2f;
-        static Vector3[] paikat;
+        const int Istuimia = 12, Lamppuja = 20;
+        const float RipustusSade = 0.52f, RipustusKorkeus = 0.64f, Ketju = 0.30f;
+        static Vector3[] ripustukset;
 
-        public static Vector3[] HevostenPaikat()
+        public static Vector3[] Ripustukset()
         {
-            if (paikat != null) return paikat;
-            paikat = new Vector3[Hevosia];
-            for (int i = 0; i < Hevosia; i++)
+            if (ripustukset != null) return ripustukset;
+            ripustukset = new Vector3[Istuimia];
+            for (int i = 0; i < Istuimia; i++)
             {
-                float a = i * Mathf.PI * 2 / Hevosia + Mathf.PI / Hevosia;
-                paikat[i] = new Vector3(Mathf.Cos(a) * HevostenSade, HevostenKorkeus, Mathf.Sin(a) * HevostenSade);
+                float a = i * Mathf.PI * 2 / Istuimia;
+                ripustukset[i] = new Vector3(Mathf.Cos(a) * RipustusSade, RipustusKorkeus, Mathf.Sin(a) * RipustusSade);
             }
-            return paikat;
+            return ripustukset;
+        }
+
+        /// <summary>Katoksen kierto, aaltoileva kehä ja keskipakoinen keinunta (ease: nopeus², pysähtyessä pystyyn).</summary>
+        public static void Animoi(Transform katos, Transform[] istuimet, float t, float nopeus)
+        {
+            katos.localRotation = Quaternion.Euler(0, t * 36f, 0);
+            float n = nopeus * nopeus * (3f - 2f * nopeus);   // smoothstep
+            var r = Ripustukset();
+            for (int i = 0; i < istuimet.Length; i++)
+            {
+                float fi = i * Mathf.PI * 2 / istuimet.Length;
+                Vector3 ulos = new Vector3(Mathf.Cos(fi), 0, Mathf.Sin(fi)), tangentti = new Vector3(-Mathf.Sin(fi), 0, Mathf.Cos(fi));
+                // Aalto kiertää kehää 7 s:n jaksolla: ripustus nousee ja laskee ±0,06, joten istuimet lentävät eri tasoissa.
+                float aalto = Mathf.Sin(fi - t * Mathf.PI * 2 / 7f);
+                istuimet[i].localPosition = r[i] + new Vector3(0, 0.06f * aalto * n, 0);
+                // Keinunta ulospäin: 30° perusta + 8° aallon mukaan + 3° oma värinä (2,3 s), nopeuden mukaan.
+                float kulma = n * (30f + 8f * aalto + 3f * Mathf.Sin(t * Mathf.PI * 2 / 2.3f + i * 1.7f));
+                istuimet[i].localRotation = Quaternion.AngleAxis(kulma, tangentti) * Quaternion.LookRotation(tangentti, Vector3.up);
+            }
         }
 
         public static Mesh Runko()
@@ -432,40 +570,53 @@ namespace Matkakirja.Natiivi
             r.Vaippa(0f, 0.60f, 0.05f, 0.58f, MalliVarit.Varjo, MalliVarit.Pinta, 16);
             r.Kansi(0.05f, 0.58f, MalliVarit.Pinta, 16);
             r.Vaippa(0.05f, 0.62f, 0.02f, 0.66f, MalliVarit.Varjo, MalliVarit.Varjo, 16);   // porras
+            // Ympäristövihje (omistaja 16.5x, kevyt): kaksi pientä puuta karusellin takana.
+            foreach (var (x, z, h) in new[] { (-0.78f, -0.42f, 0.42f), (0.82f, -0.34f, 0.34f) })
+            {
+                r.Laatikko(new Vector3(x, h * 0.18f, z), new Vector3(0.018f, h * 0.18f, 0.018f), MalliVarit.Varjo);
+                r.Vaippa(h * 0.3f, h * 0.32f, h, 0.01f, MalliVarit.SageVarjo, MalliVarit.Sage, 7, x, z);
+            }
             return r.Mesh("Karuselli: lava");
         }
 
         public static Mesh Katos()
         {
             var r = new MalliRakenne();
-            r.Vaippa(0.05f, 0.08f, 0.52f, 0.07f, MalliVarit.Varjo, MalliVarit.Pinta, 8);           // keskipylväs
-            r.VaippaRaidat(0.46f, 0.58f, 0.53f, 0.58f, MalliVarit.Valo, MalliVarit.Terrakotta);     // helma
-            r.VaippaRaidat(0.53f, 0.60f, 0.84f, 0.05f, MalliVarit.Terrakotta, MalliVarit.Valo);     // kartiokatto
-            r.Kansi(0.46f, 0.58f, MalliVarit.Varjo, 16, ylos: false);                              // katon alapinta
-            r.Laatikko(new Vector3(0, 0.88f, 0), new Vector3(0.012f, 0.05f, 0.012f), MalliVarit.Varjo);   // tanko
-            r.Kolmio(new Vector3(0.012f, 0.93f, 0), new Vector3(0.11f, 0.905f, 0), new Vector3(0.012f, 0.88f, 0), MalliVarit.Terrakotta);  // viiri
-            foreach (var q in HevostenPaikat())
-                r.Laatikko(new Vector3(q.x, 0.285f, q.z), new Vector3(0.008f, 0.235f, 0.008f), MalliVarit.Pinta);   // tangot
+            r.Vaippa(0.05f, 0.07f, 0.66f, 0.06f, MalliVarit.Varjo, MalliVarit.Pinta, 8);            // keskipylväs
+            r.VaippaRaidat(0.60f, 0.58f, 0.67f, 0.58f, MalliVarit.Valo, MalliVarit.TerrakottaHimmea);  // helma (ainoa aksentti)
+            r.VaippaRaidat(0.67f, 0.60f, 0.96f, 0.05f, MalliVarit.SageVaalea, MalliVarit.Valo);        // kartiokatto
+            r.Kansi(0.60f, 0.58f, MalliVarit.Varjo, 16, ylos: false);                                // katon alapinta
+            r.Laatikko(new Vector3(0, 1.0f, 0), new Vector3(0.012f, 0.05f, 0.012f), MalliVarit.Varjo);   // tanko
+            r.Kolmio(new Vector3(0.012f, 1.05f, 0), new Vector3(0.11f, 1.025f, 0), new Vector3(0.012f, 1.0f, 0), MalliVarit.TerrakottaHimmea);  // viiri
             return r.Mesh("Karuselli: katos");
         }
 
-        /// <summary>Hevonen +z eteenpäin, keskipiste origossa: runko, kaula, pää, satula ja neljä jalkaa laukassa.</summary>
-        public static Mesh Hevonen()
+        /// <summary>Lamput helman alareunassa ja katon puolivälissä: pienet vaaleat nuput (valaisematon materiaali).</summary>
+        public static Mesh Lamput()
         {
             var r = new MalliRakenne();
-            r.Laatikko(new Vector3(0, 0, 0), new Vector3(0.028f, 0.032f, 0.075f), MalliVarit.Valo);             // runko
-            r.Laatikko(new Vector3(0, 0.045f, 0.07f), new Vector3(0.02f, 0.035f, 0.018f), MalliVarit.Valo);       // kaula
-            r.Laatikko(new Vector3(0, 0.08f, 0.1f), new Vector3(0.018f, 0.018f, 0.035f), MalliVarit.Valo);        // pää
-            r.Laatikko(new Vector3(0, 0.06f, 0.055f), new Vector3(0.006f, 0.03f, 0.02f), MalliVarit.Varjo);       // harja
-            r.Laatikko(new Vector3(0, 0.036f, -0.005f), new Vector3(0.03f, 0.006f, 0.03f), MalliVarit.Terrakotta); // satula
-            r.Laatikko(new Vector3(0, 0.01f, -0.09f), new Vector3(0.006f, 0.03f, 0.012f), MalliVarit.Varjo);      // häntä
-            foreach (var (x, z, kallistus) in new[] { (0.017f, 0.05f, 35f), (-0.017f, 0.05f, 35f), (0.017f, -0.055f, -30f), (-0.017f, -0.055f, -30f) })
+            var lamppu = MalliVarit.Hex(0xfff0c8);
+            for (int i = 0; i < Lamppuja; i++)
             {
-                var q = Quaternion.Euler(kallistus, 0, 0);
-                var k = new Vector3(x, -0.03f, z) + q * new Vector3(0, -0.035f, 0);
-                r.Laatikko(k, new Vector3(0.006f, 0.035f, 0.006f), MalliVarit.Varjo);   // jalat (akselin suuntaiset, kallistus paikasta)
+                float a = (i + 0.5f) * Mathf.PI * 2 / Lamppuja;
+                r.Laatikko(new Vector3(Mathf.Cos(a) * 0.595f, 0.61f, Mathf.Sin(a) * 0.595f), new Vector3(0.012f, 0.012f, 0.012f), lamppu);
+                if (i % 2 == 0)
+                    r.Laatikko(new Vector3(Mathf.Cos(a) * 0.33f, 0.82f, Mathf.Sin(a) * 0.33f), new Vector3(0.01f, 0.01f, 0.01f), lamppu);
             }
-            return r.Mesh("Karuselli: hevonen");
+            return r.Mesh("Karuselli: lamput");
+        }
+
+        /// <summary>Istuin ketjuineen: ripustuspiste origossa, ketjut alas (−y) Ketju-pituudelta, istuin +z-suuntaan katsoen.</summary>
+        public static Mesh Istuin()
+        {
+            var r = new MalliRakenne();
+            const float leveys = 0.035f;
+            r.Laatikko(new Vector3(leveys, -Ketju * 0.5f, 0), new Vector3(0.003f, Ketju * 0.5f, 0.003f), MalliVarit.Varjo);    // ketjut
+            r.Laatikko(new Vector3(-leveys, -Ketju * 0.5f, 0), new Vector3(0.003f, Ketju * 0.5f, 0.003f), MalliVarit.Varjo);
+            r.Laatikko(new Vector3(0, -Ketju - 0.006f, 0.008f), new Vector3(leveys + 0.006f, 0.006f, 0.028f), MalliVarit.Valo);   // istuin
+            r.Laatikko(new Vector3(0, -Ketju + 0.03f, -0.018f), new Vector3(leveys + 0.006f, 0.032f, 0.004f), MalliVarit.SageVaalea); // selkä
+            r.Laatikko(new Vector3(0, -Ketju - 0.03f, 0.03f), new Vector3(0.012f, 0.022f, 0.004f), MalliVarit.Varjo);       // jalkatuki
+            return r.Mesh("Karuselli: istuin");
         }
     }
 }
