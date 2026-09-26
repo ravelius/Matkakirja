@@ -12,10 +12,10 @@ HUOLTOKOMENNOT); docs/roolitus.md "Julkaisusäännöt"; tämä luovutus; edellin
 ## Tila
 
 - **TestFlight:** 1.0.13 (ddb3cfb6), 1.0.14 (7f68d1f7), 1.0.15 (4a813e60), 1.0.16 (7f3979b0),
-  1.0.17 (d04841a0), **1.0.18 (43a6347c, CFBundleVersion 202609260152, ajo 36209851560)**. Laskuri = 18 → **1.0.19 viennissä klo 08.26** (ajo 36220773751, proto 41dd79c7 = master, puu adcf61d8 = juna fdc47632; korvaa viallisen 1.0.18:n). Tarkista tulos: gh run view 36220773751; jos onnistui, laskuri 19 ja yömerkki 41dd79c7.
+  1.0.17 (d04841a0), **1.0.18 (43a6347c, CFBundleVersion 202609260152, ajo 36209851560)**. **1.0.19 TF:ssä klo 08.36** (CFBundleVersion 202609260528, ajo 36220773751, proto 41dd79c7 = puu adcf61d8, korvaa viallisen 1.0.18:n). Laskuri = 19, yömerkki 41dd79c7. #3303 (natiivin offline-sarja 26) PIDOSSA pidossa.txt:ssä, kunnes Siirtoseppä vapauttaa sen build 20:n jälkeen.
   Yömerkki `yo-testflight-viimeisin.txt` = 43a6347c (proto-master).
-- **Build 19:** Kaava: Laitetestaajan PASS-commit →
-  `gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true -f ordinaali=19 -f proto_ref=<PASS tai master-SHA>`.
+- **Build 20:** Kaava: Laitetestaajan PASS-commit →
+  `gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true -f ordinaali=20 -f proto_ref=<PASS tai master-SHA>`.
   Peru ensin PR-savukkeet (sama ajuri!), ilmoita Natiivisepälle alku ja loppu. Viennin jälkeen päivitä
   yömerkki Natiivisepän master-mergen SHA:ksi (työnkulku kirjoittaa merkkiin proto_refin).
 - Web mainissa v2258 asti (06.5x); aiemmin v2251 (05.00): #3287 v2247, #3288 v2248, #3290 v2249 (KOR, maakunnat 138/138 valmiit), #3291 v2250, #3267 v2251. Raamattu synkattu #3262 asti.
