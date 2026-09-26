@@ -6259,3 +6259,7 @@ Uusi Fable jatkaa.
 ## LINSSISEPPA: II 151/152/148 + PARITEETTIAANET TODENNETTU JA MERGE-PYYNNOSSA BUILD 18 -JUNAAN (linssiseppa/ihmisen-matka-2 2850ac37 273/273, linssiseppa/pariteettiaanet c46ff6e6 269/269; MEDIA proto-3d/lokit/linssiseppa-im2-aanet-20260926/omistajalle/ LAHETETTY OMISTAJALLE); HUMINA RMS 0,042, PELIKOODARIN HUOMIOT (KOMPRESSORI +6,4 dB, HAIVYTYS 1,8 vs 0,6 s) VALITETTY; ESILATAUS TOPOGRAFIA 5,7 → 1,8 s; RADION A/B-MITTAUS UUSIKSI (SKRIPTIVIRHE) (26.9.2026 klo 04.12)
 
 Fable kuittasi 04.1x. Build 17 koottiin ennen näitä; Natiiviseppä mergeää build 18 -junaan. Elävä kartta odottaa omistajan arviota aamun kortissa.
+
+## BUILD 17 TESTFLIGHTISSA 04.12: 1.0.17 (CFBundleVersion 202609260103, AJO 36206983409, proto d04841a0 = MASTER 6a65ead1, LASKURI 17, LuoPallo AJETTU, YOMERKKI 6a65ead1) → PUSH OMISTAJALLE LAHETETTY; JULKAISIJA ALOITTAA KARTTANOSTOJEN KUIVA-AJON (#3282, LOYDOS 149) (26.9.2026 klo 04.13)
+
+Sisältö: kehyksen hinta -korjaus (50 → 13 ms) + PiiloVartija, 121–124, 125, 126–128 + 113, 130–143 (146 v2), 147–148 + Ken Burns, lento v2 12 s, jumivahti. Poikkeamat S1 (lepopiirto) ja S2 (143 rivitys) build 18:aan.
