@@ -7551,3 +7551,7 @@ Natiiviseppa: tanko seisoo 55°, perspektiivi nojauttaa ulospain ruudun tasossa 
 ## LIIOITELTU PERSPEKTIIVI, OMISTAJAN TARKENNUS: KESKELLA LAHES NAKYMATON, TANKO RADIAALISESTI ULOS (26.9.2026 klo 22.46)
 
 Omistaja 22.4x: lipun pitaa olla lahes nakymaton ruudun keskella (nakyma suoraan ylhaalta), ja kun kamera menee sen yli (lippu ruudun alaosassa), tanko piirtyy ALASPAIN. Fable: tangon suunta radiaalisesti poispain keskipisteesta (ylos/alas/sivuille), nakyva pituus 0 → taysi keskelta reunaan, kangas kaantyy mukana; sama kaava nostojen 3D-symboleille. Natiivisepan 9d6682d1 (tanko aina pystyssa 55°, nojaa ulospain) ei riita → korjataan ennen 1.0.27-junaa.
+
+## MAAKUNTAPIKKUKUVAT ERA B VALMIS: 227 ALUETTA 15 MAASTA (26.9.2026 klo 22.47)
+
+Sisaltokirjuri: #3349 (CZE/HRV/BIH/MNE/ALB/MKD/LUX 96) ja #3350 (SRB/BGR/MLT/ISL 67) mainissa, #3351 (MDA/UKR 64) auki; UKR:n sota-alttiit alueet ja Transnistria neutraalein kuvin. Euroopan kaikki 21 puuttunutta maata katettu (era A 138 + era B 227). Sisaltokirjuri nollataan ennen 178:aa. Julkaisija: #3351, #3353, #3347 junaan; Siirtoseppa delta B-erista.
