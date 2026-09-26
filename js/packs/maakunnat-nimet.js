@@ -1117,7 +1117,7 @@ export const MAAKUNNAT_KAIKKI = {
   },
   GRC: {
     "Ayion Oros": "Athos",
-    "Attiki": "Attiki",
+    "Attiki": "Attika",
     "Ipeiros": "Epeiros",
     "Notio Aigaio": "Etelä-Egean saaret",
     "Anatoliki Makedonia kai Thraki": "Itä-Makedonia ja Traakia",
