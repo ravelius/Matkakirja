@@ -10,6 +10,9 @@
 // Skeema 1.24: kohteen linkit [{tunnus, laji, aihe, kategoria, nimi}] (laji fokuskohde | skandaalit |
 // historianHetket | syvennys | takynosto | maalehtinosto) ja aihe = ensimmäisen linkin aihe (sama kaava
 // kuin webin kaupunkiliuskassa: kohteenKategoria → nostosymPaakategoria). Vanhassa paketissa vain nosto.
+//
+// Löydös 178 (web #3353): kohteet[] sisältää vain kartan paikat samassa järjestyksessä kuin web (numerointi
+// suoraan listasta) ja kentän tyyppi (rakennus | aukio | luonto); aukio ja luonto kevyellä merkillä.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,6 +40,10 @@ namespace Matkakirja.Natiivi
         public int Numero;
         /// <summary>Miniatyyripiirroksen osoite (läpinäkyvä webp) tai null.</summary>
         public string Piirros;
+        /// <summary>Paikan tyyppi (löydös 178, kohteet[].tyyppi): rakennus | aukio | luonto; puuttuva = rakennus.</summary>
+        public string Tyyppi = "rakennus";
+        /// <summary>Kevyt merkki (web KEVYET_KOHDETYYPIT): aukio ja luonto piirretään rakennusta keveämpinä.</summary>
+        public bool Kevyt => Tyyppi == "aukio" || Tyyppi == "luonto";
         /// <summary>Nähtävyysjuttu (teksti ja kuvat) tai null (pelkkä wiki-kohde).</summary>
         public NahtavyysKohde Juttu;
         /// <summary>Selattava (web): juttu, jossa on teksti ja vähintään yksi kuva.</summary>
@@ -187,6 +194,7 @@ namespace Matkakirja.Natiivi
                     var kohde = new KohdekarttaKohde
                     {
                         Nimi = nimi, Wiki = T(o, "wiki"), NimiPuoli = T(o, "nimiPuoli"), Aika = T(o, "aika"),
+                        Tyyppi = T(o, "tyyppi") ?? "rakennus",
                         X = (float)x, Y = (float)y, Numero = ++numero,
                         Siirto = siirto != null ? new Vector2((float)(MiniJson.Luku(siirto, "x") ?? 0), (float)(MiniJson.Luku(siirto, "y") ?? 0)) : Vector2.zero,
                     };

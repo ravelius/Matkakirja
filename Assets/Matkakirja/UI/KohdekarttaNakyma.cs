@@ -170,6 +170,9 @@ namespace Matkakirja.Natiivi
             p.Juuri = Rakenne.El("mk-kohdekartta__piirros", lava);
             p.Juuri.userData = p;
             p.Kuva = Rakenne.El("mk-kohdekartta__piirroskuva", p.Juuri, PickingMode.Ignore);
+            // Löydös 178: aukio ja luonto kevyellä merkillä (web .kohde-kevyt .kohde-piirros-kuva: scale 0,72, peitto 0,78);
+            // vain kuva kutistuu, joten jalka, kyltti ja nimi pysyvät paikallaan kuten webin transformissa.
+            p.Juuri.EnableInClassList("mk-kohdekartta__piirros--kevyt", kohde.Kevyt);
             p.Kyltti = Rakenne.Teksti($"{kohde.Numero} · {kohde.Nimi}", "mk-kohdekartta__kyltti", p.Juuri);
             Kirjasimet.Aseta(p.Kyltti, Kirjasin.Kone);
             p.Nimi = Nimilappu(kohde, p.Juuri);
