@@ -4,9 +4,9 @@
 // mikään ei muutu (lepopiirto: herätys vain piirron ajaksi). Käydyt kaupungit hehkuvat kaukana pallolla (väliaikainen
 // Pehmeapiste-hehku; Natiivisepän yövalomaski korvaa sen), ja hehku häipyy lähelle zoomatessa.
 //
-// Reitti: ElavaMatka.Reitti (Pelikoodarin PeliOhjain.KuljettuReitti, kaupunkien tunnukset aikajärjestyksessä; webin
-// punainen viiva). Asettamaton = ei reittiä, hehku käytyjen kaupunkien joukosta (Pelaaja.Kaydyt). Testi: "elava reitti
-// <kaupunki> <kaupunki> …" (korvaa reitin) ja "elava reitti pois".
+// Reitti: ElavaMatka.Reitti, oletuksena pelin kuljettu reitti (Pelikoodarin PeliOhjain.KuljettuReitti: uusi osuus
+// lisätään vasta, kun kamera on perillä, KuljettuReittiKasvoi). Hehku tulee käytyjen kaupunkien joukosta
+// (Pelaaja.Kaydyt), testissä reitistä. Testi: "elava reitti <kaupunki> <kaupunki> …" (korvaa reitin) ja "elava reitti pois".
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +21,8 @@ namespace Matkakirja.Natiivi
 {
     public class ElavaMatka : MonoBehaviour
     {
-        /// <summary>Kuljettu reitti kaupunkien tunnuksina aikajärjestyksessä (Pelikoodari asettaa); null = ei reittiä.</summary>
-        public static Func<IReadOnlyList<string>> Reitti;
+        /// <summary>Kuljettu reitti kaupunkien tunnuksina aikajärjestyksessä (oletus PelinReitti); null = ei reittiä.</summary>
+        public static Func<IReadOnlyList<string>> Reitti = PelinReitti;
         /// <summary>Testikomennon reitti (voittaa Reitin).</summary>
         static List<string> testiReitti;
 
@@ -34,6 +34,35 @@ namespace Matkakirja.Natiivi
         public const double ViivaAlkaaM = 8_000, ViivaTaysiM = 25_000;
 
         static ElavaMatka instanssi;
+
+        // Pelin reitti ilman kehysvarauksia: kopio kasvaa KuljettuReittiKasvoi-tapahtumasta (kamera perillä), ja koko
+        // reitti tahdistetaan, kun pelaaja tai peli vaihtuu (listan viite) tai reitti lyhenee.
+        static readonly List<string> kuljettu = new List<string>();
+        static object kuljettuLahde;
+        static PeliOhjain kytkettyOhjain;
+
+        static IReadOnlyList<string> PelinReitti()
+        {
+            var po = PeliOhjain.Instanssi;
+            if (po == null) return null;
+            if (kytkettyOhjain != po)
+            {
+                kytkettyOhjain = po;
+                po.KuljettuReittiKasvoi += (a, b, tapa) =>
+                {
+                    if (b != null && (kuljettu.Count == 0 || kuljettu[kuljettu.Count - 1] != b)) kuljettu.Add(b);
+                };
+            }
+            var r = po.KuljettuReitti;
+            if (!ReferenceEquals(r, kuljettuLahde) || r.Count < kuljettu.Count)
+            {
+                kuljettuLahde = r;
+                kuljettu.Clear();
+                foreach (var p in r)
+                    if (p?.Kaupunki != null && (kuljettu.Count == 0 || kuljettu[kuljettu.Count - 1] != p.Kaupunki)) kuljettu.Add(p.Kaupunki);
+            }
+            return kuljettu;
+        }
         LinssiOhjain ohjain;
         PalloKierto kierto;
         CesiumGeoreference georeferenssi;
@@ -194,8 +223,8 @@ namespace Matkakirja.Natiivi
         void PaivitaHehku(IReadOnlyList<string> reitti, Vector3 keskus, Vector3 kameraL, double korkeus)
         {
             if (hehkuMesh == null) return;
-            // Lähde: reitti tai (ilman reittiä) käydyt kaupungit.
-            var kaydyt = reitti == null ? PeliOhjain.Instanssi?.Matka?.Tila?.Pelaaja?.Kaydyt : null;
+            // Lähde: käydyt kaupungit (yövalot vain käydyissä), testireitillä reitti.
+            var kaydyt = testiReitti == null ? PeliOhjain.Instanssi?.Matka?.Tila?.Pelaaja?.Kaydyt : null;
             if (!ReferenceEquals(kaydyt, kaydytViite) || (kaydyt?.Count ?? -1) != kaydytMaara)
             {
                 kaydytViite = kaydyt; kaydytMaara = kaydyt?.Count ?? -1; valotLikaiset = true;
@@ -205,7 +234,7 @@ namespace Matkakirja.Natiivi
             {
                 valotLikaiset = false;
                 valot.Clear();
-                IEnumerable<string> lahde = (IEnumerable<string>)reitti ?? kaydyt;
+                IEnumerable<string> lahde = (IEnumerable<string>)kaydyt ?? reitti;
                 if (lahde != null) foreach (var id in lahde.Distinct()) if (Kaupunki(id, out var q)) valot.Add(q);
             }
             float voima = Mathf.Clamp01((float)((korkeus - HehkuAlkaaM) / (HehkuTaysiM - HehkuAlkaaM)));
