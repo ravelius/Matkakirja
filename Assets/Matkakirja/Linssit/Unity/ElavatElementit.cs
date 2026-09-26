@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
     public sealed class ElavatElementit : MonoBehaviour
     {
         public const double NakyyAlkaenM = 15_000, NakyyAstiM = 600_000, HaipyyAlkaenM = 450_000;
-        public const float PehmeysS = 0.6f, SivuKulma = 25f;
+        public const float PehmeysS = 0.6f, SivuKulma = 25f, RuutuVara = 0.12f;
 
         /// <summary>
         /// Yksi aihe: paikka, koko ruutupisteinä, yksilöt (siirto ruudulla pisteinä, vaihe), mallit ja animaatio. Animoi saa
@@ -209,7 +209,10 @@ namespace Matkakirja.Natiivi
             {
                 Vector3 juuri = Paikka(a.Paikka, 25);
                 Vector3 ylos = (juuri - c0).normalized;
+                // Näkyy: korkeusikkuna, juuri kameran puolella (ei horisontin takana) ja ruudulla reunavaralla (simulaattori
+                // 26.9.: ruudun ulkopuolinen aihe piti elävän kerroksen käynnissä turhaan).
                 float p = Paalla && korkeus >= NakyyAlkaenM && korkeus <= NakyyAstiM && Vector3.Dot(kameraL - juuri, ylos) > 0
+                    && Ruudulla(gt.TransformPoint(juuri))
                     ? Mathf.Clamp01((float)((NakyyAstiM - korkeus) / (NakyyAstiM - HaipyyAlkaenM))) : 0f;
                 bool nyt = p > 0.001f;
                 if (nyt != a.Nakyvissa)
@@ -239,6 +242,13 @@ namespace Matkakirja.Natiivi
                 }
             }
             jokinNakyvissa = jokin;
+        }
+
+        /// <summary>Juuri ruudulla RuutuVara-osuuden reunavaralla (aihe ulottuu juuresta noin koon verran).</summary>
+        bool Ruudulla(Vector3 maailma)
+        {
+            var v = kamera.WorldToViewportPoint(maailma);
+            return v.z > 0 && v.x > -RuutuVara && v.x < 1 + RuutuVara && v.y > -RuutuVara && v.y < 1 + RuutuVara;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)
