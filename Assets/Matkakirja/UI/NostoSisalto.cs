@@ -671,7 +671,9 @@ namespace Matkakirja.Natiivi
             };
             // Löydös 158: kortin kuva kentästä kuva (yksi tai lista), varana pikkukuva (ämpäriosoite).
             Kuvat(n, MiniJson.Kentta(d, "kuva"), "osoite");
-            if (n.Kuvat.Count == 0 && T(d, "pikkukuva") is string pk && pk.Length > 0) n.Kuvat.Add(new NostoKuva { Lahde = pk });
+            // Siirtoseppä v159 (skeema 1.49): pikkukuvaLahde = tekijä ja lisenssi, näytetään kuvan lähderivinä.
+            if (n.Kuvat.Count == 0 && T(d, "pikkukuva") is string pk && pk.Length > 0)
+                n.Kuvat.Add(new NostoKuva { Lahde = pk, LahdeRivi = T(d, "pikkukuvaLahde") });
             return n;
         }
 
