@@ -130,7 +130,7 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * nostot null, ranta null, versio = pyramidin versio (lepokerroksen
  * versiovahti, js/pallolaatat.js lepokerroksenKerrokset).
  */
-export const PALLO_LAATTAVERSIO = '2026-09-25-pohja';
+export const PALLO_LAATTAVERSIO = '2026-09-26-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -200,7 +200,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-25-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260925';
+export const PALLO_LAATTATUNNISTE = '20260926';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
