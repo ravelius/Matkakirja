@@ -1,0 +1,982 @@
+[
+  {
+    "id": "rio-sao-benton-luostari",
+    "replacement_id": "rio-sao-benton-luostari-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-sao-benton-luostari-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-sao-benton-luostari-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-sao-benton-luostari-vari2.png",
+    "sha256": "59879ced777688d5a5a9dfc9ac07e5a0bb8812625a91d674ba47ebe5d4019f1a",
+    "bytes": 1293650,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: São Bento Monastery Rio, white colonial church with two square bell towers and simple side nave. Preserve exact original ink-drawn miniature cutout, architecture, silhouette, viewpoint, size, placement, all windows/arches and original garden geometry. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream plaster/stone, restrained dusty terracotta roofs, muted sage tropical foliage where present, and blue-gray shadows. Soft airy historic hand-tinted watercolor, not saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-vanha-katedraali-antiga-se",
+    "replacement_id": "rio-vanha-katedraali-antiga-se-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-vanha-katedraali-antiga-se-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-vanha-katedraali-antiga-se-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-vanha-katedraali-antiga-se-vari2.png",
+    "sha256": "4b7b344333f76580c83810d86333e32bb1bb0826f6f51797c2248afc3c0bfd6d",
+    "bytes": 1425170,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "A STRICT PIXEL-ALIGNED RECOLOR of Image 1 ONLY. Keep exact original cathedral silhouette: right bell tower with dome, ornate central Baroque front, low left wing and exactly original windows/doorways. Do not redraw, reconstruct, reinterpret, change perspective, add/subtract any tower, dome, roof, window, arch or column. Keep the exact original outer silhouette and transparent openings, positions and dimensions; this is the SAME original ink drawing after hand tinting, not a new building. Image 2 shows ONLY the approved pale watercolor palette. Add restrained soft color within the original linework: pale cool cream stone, dusty terracotta roof accents, muted sage and blue-gray shadows. Keep original line detail fully visible. Background and original through-openings exactly flat RGB #FF00FF magenta for chromakey. No checkerboard, shadow, paper, text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-central-do-brasilin-asema",
+    "replacement_id": "rio-central-do-brasilin-asema-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-central-do-brasilin-asema-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-central-do-brasilin-asema-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-central-do-brasilin-asema-vari2.png",
+    "sha256": "a876ff078495d527c2031f090da238ba82a4343d91fabbb0bb1008419952d586",
+    "bytes": 1211030,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Central do Brasil railway station, tall Art Deco clock tower with low flanking wings. Preserve exact original ink-drawn miniature cutout, architecture, silhouette, viewpoint, size, placement, all windows/arches and original garden geometry. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream plaster/stone, restrained dusty terracotta roofs, muted sage tropical foliage where present, and blue-gray shadows. Soft airy historic hand-tinted watercolor, not saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-real-gabinete-kirjasto",
+    "replacement_id": "rio-real-gabinete-kirjasto-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-real-gabinete-kirjasto-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-real-gabinete-kirjasto-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-real-gabinete-kirjasto-vari2.png",
+    "sha256": "b2df90337654c5a6ecd2276418fdf1c9fae69c93ddf215719a8fdab7285f5311",
+    "bytes": 1063280,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "A STRICT PIXEL-ALIGNED RECOLOR of Image 1 ONLY. Keep exact original royal reading-room façade silhouette, five front pointed arches and crenellated stepped upper towers. Do not redraw, reconstruct, reinterpret, change perspective, add/subtract any tower, dome, roof, window, arch or column. Keep the exact original outer silhouette and transparent openings, positions and dimensions; this is the SAME original ink drawing after hand tinting, not a new building. Image 2 shows ONLY the approved pale watercolor palette. Add restrained soft color within the original linework: pale cool cream stone, dusty terracotta roof accents, muted sage and blue-gray shadows. Keep original line detail fully visible. Background and original through-openings exactly flat RGB #FF00FF magenta for chromakey. No checkerboard, shadow, paper, text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-quinta-da-boa-vista",
+    "replacement_id": "rio-quinta-da-boa-vista-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-quinta-da-boa-vista-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-quinta-da-boa-vista-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-quinta-da-boa-vista-vari2.png",
+    "sha256": "61e215f09aa098f5e41ef52773dc3d27e6bc51b36f739a31ae038dca5c201a3f",
+    "bytes": 1523344,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Quinta da Boa Vista, wide neoclassical palace above symmetrical garden terraces and palms. Preserve exact original ink-drawn miniature cutout, architecture, silhouette, viewpoint, size, placement, all windows/arches and original garden geometry. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream plaster/stone, restrained dusty terracotta roofs, muted sage tropical foliage where present, and blue-gray shadows. Soft airy historic hand-tinted watercolor, not saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-kansallinen-historiallinen-museo",
+    "replacement_id": "rio-kansallinen-historiallinen-museo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-kansallinen-historiallinen-museo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-kansallinen-historiallinen-museo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-kansallinen-historiallinen-museo-vari2.png",
+    "sha256": "02bf803a1560c67db6a092f280f957b210d5df7b1ce4ec826d29a1690ed4c1f1",
+    "bytes": 1545950,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: National Historical Museum Rio, isometric walled fort-like historic building around open square courtyard. Preserve exact original ink-drawn cutout, geometry, structure and every arch/stadium seat/path, silhouette, angle, scale and placement. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cool cream masonry, restrained dusty terracotta roof/surface accents, muted sage foliage or field where existing, faint blue-gray shadows. Airy soft hand-tinted historical miniature. No invented objects or text. Empty exterior and genuine see-through openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-theatro-municipal",
+    "replacement_id": "rio-theatro-municipal-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-theatro-municipal-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-theatro-municipal-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-theatro-municipal-vari2.png",
+    "sha256": "1a88d31898029b7ec34500c57719fb12764df373d8fe0ff54ed85a586d980dc1",
+    "bytes": 1433968,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "A STRICT PIXEL-ALIGNED RECOLOR of Image 1 ONLY. Keep exact original Theatro Municipal: large front colonnade, ONE central upper dome and two side domes, exact breadth and depth of side wings. Do not redraw, reconstruct, reinterpret, change perspective, add/subtract any tower, dome, roof, window, arch or column. Keep the exact original outer silhouette and transparent openings, positions and dimensions; this is the SAME original ink drawing after hand tinting, not a new building. Image 2 shows ONLY the approved pale watercolor palette. Add restrained soft color within the original linework: pale cool cream stone, dusty terracotta roof accents, muted sage and blue-gray shadows. Keep original line detail fully visible. Background and original through-openings exactly flat RGB #FF00FF magenta for chromakey. No checkerboard, shadow, paper, text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-maracanan-stadion",
+    "replacement_id": "rio-maracanan-stadion-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-maracanan-stadion-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-maracanan-stadion-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-maracanan-stadion-vari2.png",
+    "sha256": "d633411ebcf18aa7adb911f01bc13b9f705cbf63aa0623e575a6e727574e1362",
+    "bytes": 1470356,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Maracanã Stadium, oval bowl with detailed concentric seating and field inside. Preserve exact original ink-drawn cutout, geometry, structure and every arch/stadium seat/path, silhouette, angle, scale and placement. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cool cream masonry, restrained dusty terracotta roof/surface accents, muted sage foliage or field where existing, faint blue-gray shadows. Airy soft hand-tinted historical miniature. No invented objects or text. Empty exterior and genuine see-through openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-lapan-akvedukti",
+    "replacement_id": "rio-lapan-akvedukti-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-lapan-akvedukti-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-lapan-akvedukti-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-lapan-akvedukti-vari2.png",
+    "sha256": "27bea8e6d2c3f1f0ea0e25c876c909a406a0ec8ef8e5f0c1234277e2298c1e88",
+    "bytes": 1092917,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Arcos da Lapa aqueduct, long two-level white stone viaduct with repeating arches. Preserve exact original ink-drawn cutout, geometry, structure and every arch/stadium seat/path, silhouette, angle, scale and placement. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cool cream masonry, restrained dusty terracotta roof/surface accents, muted sage foliage or field where existing, faint blue-gray shadows. Airy soft hand-tinted historical miniature. No invented objects or text. Empty exterior and genuine see-through openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "rio-passeio-publico",
+    "replacement_id": "rio-passeio-publico-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/rio-passeio-publico-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/rio-passeio-publico-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rio-passeio-publico-vari2.png",
+    "sha256": "365ce37dfa46afe65510c92f1b06eabbfd85083ec0ad2957417338facdea1b50",
+    "bytes": 1559621,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Passeio Público Rio, walled public garden with elaborate entry gate, paths, palms and small pavilion. Preserve exact original ink-drawn cutout, geometry, structure and every arch/stadium seat/path, silhouette, angle, scale and placement. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cool cream masonry, restrained dusty terracotta roof/surface accents, muted sage foliage or field where existing, faint blue-gray shadows. Airy soft hand-tinted historical miniature. No invented objects or text. Empty exterior and genuine see-through openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "salalah-sultan-qaboosin-moskeija",
+    "replacement_id": "salalah-sultan-qaboosin-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/salalah-sultan-qaboosin-moskeija-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/salalah-sultan-qaboosin-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/salalah-sultan-qaboosin-moskeija-vari2.png",
+    "sha256": "c5ea3a944b669b2db3eb58b10dfeeb890aca281ac7c7bb073fb1da34e1f1b72e",
+    "bytes": 1568621,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sultan Qaboos Mosque Salalah, broad mosque with central dome, two tall slim minarets and forecourt. Preserve exact original ink-drawn isometric cutout, architecture/ruin plan, silhouette, angle, scale, placement, all arches and genuine openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream stone and warm pale sandstone, subtle dusty terracotta earth, muted sage only in existing shrubs/palms, faint blue-gray shadows. Soft airy hand-tinted historical miniature, never saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "salalah-al-husnin-palatsi",
+    "replacement_id": "salalah-al-husnin-palatsi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/salalah-al-husnin-palatsi-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/salalah-al-husnin-palatsi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/salalah-al-husnin-palatsi-vari2.png",
+    "sha256": "90bc0f14c1accea47889908ae0cf6b0d0a576f8ba58184b96b9291ddff106eee",
+    "bytes": 1977509,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Al Husn Palace, terraced walled Omani palace with central dome, towers, and garden above rocky edge. Preserve exact original ink-drawn isometric cutout, architecture/ruin plan, silhouette, angle, scale, placement, all arches and genuine openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream stone and warm pale sandstone, subtle dusty terracotta earth, muted sage only in existing shrubs/palms, faint blue-gray shadows. Soft airy hand-tinted historical miniature, never saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "salalah-al-haffan-basaari",
+    "replacement_id": "salalah-al-haffan-basaari-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/salalah-al-haffan-basaari-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/salalah-al-haffan-basaari-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/salalah-al-haffan-basaari-vari2.png",
+    "sha256": "d6b614cd1eb9ce14ac027a13bccf795e0fafdd6fb4c01d75f6973168517a50e9",
+    "bytes": 1519738,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Al Haffa Souq, low long rows of pale stone market stalls with fabric awnings. Preserve exact original ink-drawn isometric cutout, architecture/ruin plan, silhouette, angle, scale, placement, all arches and genuine openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream stone and warm pale sandstone, subtle dusty terracotta earth, muted sage only in existing shrubs/palms, faint blue-gray shadows. Soft airy hand-tinted historical miniature, never saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "salalah-nabi-umranin-hauta",
+    "replacement_id": "salalah-nabi-umranin-hauta-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/salalah-nabi-umranin-hauta-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/salalah-nabi-umranin-hauta-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/salalah-nabi-umranin-hauta-vari2.png",
+    "sha256": "f4bb6645c4f3024f4d22785c418415013f3bfbc41b547e6a42d6b00d19c025ca",
+    "bytes": 1477003,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Nabi Umran Tomb, very long low rectangular stone mausoleum with one entrance at near corner. Preserve exact original ink-drawn isometric cutout, architecture/ruin plan, silhouette, angle, scale, placement, all arches and genuine openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream stone and warm pale sandstone, subtle dusty terracotta earth, muted sage only in existing shrubs/palms, faint blue-gray shadows. Soft airy hand-tinted historical miniature, never saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "salalah-burj-an-nahda",
+    "replacement_id": "salalah-burj-an-nahda-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/salalah-burj-an-nahda-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/salalah-burj-an-nahda-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/salalah-burj-an-nahda-vari2.png",
+    "sha256": "e17c39f6ae6be32c4a2b7948db1f57169306370e1d62a13293c78d94096a3312",
+    "bytes": 1316166,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Burj an-Nahda Clock Tower on round paved plaza, square tower with upper clock and tapered roof. Preserve exact original ink-drawn isometric cutout, architecture/ruin plan, silhouette, angle, scale, placement, all arches and genuine openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream stone and warm pale sandstone, subtle dusty terracotta earth, muted sage only in existing shrubs/palms, faint blue-gray shadows. Soft airy hand-tinted historical miniature, never saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "salalah-al-baleedin-puisto",
+    "replacement_id": "salalah-al-baleedin-puisto-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/salalah-al-baleedin-puisto-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/salalah-al-baleedin-puisto-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/salalah-al-baleedin-puisto-vari2.png",
+    "sha256": "e2d7641a094f81b91cd46d4f8b8192c6a76687d62b9c4085024a7e7b591faff1",
+    "bytes": 1655077,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Al Baleed archaeological park, low Omani ruins around sandy curving path and a few shrubs. Preserve exact original ink-drawn isometric cutout, architecture/ruin plan, silhouette, angle, scale, placement, all arches and genuine openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream stone and warm pale sandstone, subtle dusty terracotta earth, muted sage only in existing shrubs/palms, faint blue-gray shadows. Soft airy hand-tinted historical miniature, never saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "salalah-suitsukemuseo",
+    "replacement_id": "salalah-suitsukemuseo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-20/salalah-suitsukemuseo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/salalah-suitsukemuseo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/salalah-suitsukemuseo-vari2.png",
+    "sha256": "7109932555b8d264a28418055a1951ff7c8646efe92035bd64f4c444858854c2",
+    "bytes": 1592144,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Land of Frankincense Museum stone façade, squat crenellated gateway with three deep arches. Preserve exact original ink-drawn isometric cutout, architecture/ruin plan, silhouette, angle, scale, placement, all arches and genuine openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream stone and warm pale sandstone, subtle dusty terracotta earth, muted sage only in existing shrubs/palms, faint blue-gray shadows. Soft airy hand-tinted historical miniature, never saturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-ulugbekin-observatorio",
+    "replacement_id": "samarkand-ulugbekin-observatorio-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-ulugbekin-observatorio.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-ulugbekin-observatorio-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-ulugbekin-observatorio-vari2.png",
+    "sha256": "6aa8f25f92dbfc14e64f66ed526a6e0d0e8b01a7a257026940ebe23a5a242fc4",
+    "bytes": 1169360,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Ulugh Beg Observatory in Samarkand: exposed curved arc segment of buried masonry astronomical instrument within oval excavation, exact original diagonal elevated form. Cream stone, dusty terracotta inner arc and cool sage-gray shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-khoja-doniyorin-mausoleumi",
+    "replacement_id": "samarkand-khoja-doniyorin-mausoleumi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-khoja-doniyorin-mausoleumi.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-khoja-doniyorin-mausoleumi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-khoja-doniyorin-mausoleumi-vari2.png",
+    "sha256": "d6849f5304fdef3f5c593fccd64ba13f5b1a5ee31f0b7d8c949fea49bb35fefa",
+    "bytes": 936096,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Khoja Doniyor Mausoleum in Samarkand: very long low rectangular shrine with a line of five evenly spaced domes and repeated pointed arched niches, exact original three-quarter silhouette. Ivory plaster, tiny muted turquoise-sage domes, warm grey shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-afrasiyabin-rauniokumpu",
+    "replacement_id": "samarkand-afrasiyabin-rauniokumpu-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-afrasiyabin-rauniokumpu.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-afrasiyabin-rauniokumpu-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-afrasiyabin-rauniokumpu-vari2.png",
+    "sha256": "f2dcfcb953840898749a27a6192868192b058551d23ebc34ccc1025b40a9c17a",
+    "bytes": 1213410,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Afrasiyab archaeological mound in Samarkand: low oval earth rise with excavated rectilinear foundation trenches and an arched vault cut into front edge, exact original elevated cutout. Pale ochre earth, terracotta exposed soil, muted sage-gray shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-hazrat-khizrin-moskeija",
+    "replacement_id": "samarkand-hazrat-khizrin-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-hazrat-khizrin-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-hazrat-khizrin-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-hazrat-khizrin-moskeija-vari2.png",
+    "sha256": "09a1e0577dc76016d8b3b46e8ebebcee6bdb50f45b09c7a8e4089b54a62544a1",
+    "bytes": 1077376,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Hazrat Khizr Mosque in Samarkand: small pale stone domed mosque atop steep rocky slope, low open veranda at left and slender tall minaret behind at right, exact original elevated view. Cream plaster, restrained pale turquoise-sage dome, terracotta earth and grey rocks. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-shah-i-zindan-hautakuja",
+    "replacement_id": "samarkand-shah-i-zindan-hautakuja-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-shah-i-zindan-hautakuja.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-shah-i-zindan-hautakuja-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-shah-i-zindan-hautakuja-vari2.png",
+    "sha256": "83d5f9ef59ebcacb8b2a2076ef448164797b91bfc855a7ac75fab92fe6d5f451",
+    "bytes": 1351140,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Shah-i-Zinda necropolis in Samarkand: narrow stone stairway ascending between tall decorated mausoleum facades with pointed arch niches, domes behind, exact original perspective cutout. Ivory stone, faded turquoise tile accents, cool grey shadows and pale terracotta masonry. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-bibi-khanymin-moskeija",
+    "replacement_id": "samarkand-bibi-khanymin-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-bibi-khanymin-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-bibi-khanymin-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-bibi-khanymin-moskeija-vari2.png",
+    "sha256": "811bdf6577f0626a6f0e0c53948861445f4922e4e528b3995db20f9622a66f9b",
+    "bytes": 1220531,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Bibi-Khanym Mosque in Samarkand: monumental ruined pointed portal at left, broad ribbed dome at right, scattered crumbling walls at foot, exact original three-quarter arrangement. Cream stone, faded turquoise-sage tilework on portal and dome, dusty terracotta ruin details. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-registanin-aukio",
+    "replacement_id": "samarkand-registanin-aukio-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-registanin-aukio.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-registanin-aukio-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-registanin-aukio-vari2.png",
+    "sha256": "f2391bcffd93cbe8c599b7d20b1f3f09e42423ca0aa660dcd88d57e4146ad7c5",
+    "bytes": 1105214,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Samarkand Registan square: three grand madrasah facades around empty central paved square, main pointed central portal and two tall minarets, exact original elevated courtyard perspective. Cream masonry, faded turquoise tile accents, dusty terracotta paving and pale grey shade. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-gur-e-amir",
+    "replacement_id": "samarkand-gur-e-amir-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-gur-e-amir.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-gur-e-amir-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-gur-e-amir-vari2.png",
+    "sha256": "60956d182edab9d46558b86d7b8afd1a3dd0088c69259bb562a5612dea801f55",
+    "bytes": 894097,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Gur-e Amir Mausoleum in Samarkand: square monumental mausoleum with tall pointed entrance arch and huge ribbed dome, exact original frontal three-quarter cutout. Cream brick, restrained pale turquoise-blue ribbed dome and grey shadow. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "samarkand-ishratkhanan-mausoleumi",
+    "replacement_id": "samarkand-ishratkhanan-mausoleumi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/samarkand-ishratkhanan-mausoleumi.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/samarkand-ishratkhanan-mausoleumi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/samarkand-ishratkhanan-mausoleumi-vari2.png",
+    "sha256": "ba15f721a2c6c66c4e22d6b82ea2c863b2e3d658963aeca5239a11ff5c08673d",
+    "bytes": 1321396,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Ishratkhana Mausoleum ruin in Samarkand: squat square weathered brick tomb with crumbling upper walls and three large front archways, exact original elevated three-quarter silhouette. Ivory and soft dusty terracotta brick, sage-grey shadow and tiny faded turquoise tile traces. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sana-al-bakiriyyan-moskeija",
+    "replacement_id": "sana-al-bakiriyyan-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/sana-al-bakiriyyan-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sana-al-bakiriyyan-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sana-al-bakiriyyan-moskeija-vari2.png",
+    "sha256": "0aac53d3318832ed370845438fd93d19946fe27cb0e299b593e4f5f52c43d408",
+    "bytes": 880027,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Al-Bakiriyya Mosque in Sana’a: compact rectangular pale-stone mosque with domed roof, open three-arch veranda and slim minaret at rear right, exact original three-quarter form. Cream plaster, soft sage-grey dome, restrained dusty terracotta cornice. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sana-suolatori",
+    "replacement_id": "sana-suolatori-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/sana-suolatori.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sana-suolatori-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sana-suolatori-vari2.png",
+    "sha256": "61acd14b4ca84d7fdf703491c979e5b8110f2692c84d26d152ecc4429af356ee",
+    "bytes": 1405355,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Salt Market in Sana’a: narrow old bazaar lane between multi-story Yemeni tower houses with small windows and ground-floor shop awnings, exact original deep street perspective. Cream mud plaster, muted terracotta masonry, sage-grey shade, no people or extra structures. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sana-talhan-moskeija",
+    "replacement_id": "sana-talhan-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/sana-talhan-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sana-talhan-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sana-talhan-moskeija-vari2.png",
+    "sha256": "802c44cd23860d9a60ec30c820882c1d823b54ecafda72379c8ef04ca17892c9",
+    "bytes": 1020536,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Talha Mosque in Sana’a: low rectangular mosque with central dome, five-arch open front arcade and a tall thin minaret at right, exact original near-frontal three-quarter silhouette. Warm ivory stone, muted sage-grey dome and tiny dusty terracotta details. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sana-suuri-moskeija",
+    "replacement_id": "sana-suuri-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/sana-suuri-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sana-suuri-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sana-suuri-moskeija-vari2.png",
+    "sha256": "bdaa01cad5957a38de3c2bc4566a6900657adb09d3e7ea0124d8f34a202f762c",
+    "bytes": 1075830,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Great Mosque of Sana’a: broad nearly square low-walled mosque compound seen from high oblique map perspective, open central courtyard surrounded by arcades and two narrow corner minarets, exact original footprint. Cream plaster, dusty terracotta roofs and sage-grey arcade shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sana-al-mahdin-moskeija",
+    "replacement_id": "sana-al-mahdin-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/sana-al-mahdin-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sana-al-mahdin-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sana-al-mahdin-moskeija-vari2.png",
+    "sha256": "fc698f429cab712981c987a8810f92c35d2e480c05301ebde318b06c25804776",
+    "bytes": 1008342,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Al-Mahdi Mosque in Sana’a: two-story mosque with broad round dome, large five-arch open front arcade and one slender minaret behind right, exact original near frontal three-quarter view. Pale ivory stone, soft sage-grey dome and muted terracotta trim. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sana-bab-al-yaman",
+    "replacement_id": "sana-bab-al-yaman-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-21/sana-bab-al-yaman.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sana-bab-al-yaman-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sana-bab-al-yaman-vari2.png",
+    "sha256": "8ffad301e53b13c59458f23f9d60ac994e73e921a6435dafd50be6383931075c",
+    "bytes": 1321472,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Bab al-Yaman old city gate in Sana’a: fortified rough stone gate with wide central pointed arch, two massive round towers and clustered Yemeni tower houses rising behind, exact original frontal silhouette. Cream stone, faded terracotta mud brick and sage-grey recesses. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-coit-tower",
+    "replacement_id": "sanfrancisco-coit-tower-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-coit-tower.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-coit-tower-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-coit-tower-vari2.png",
+    "sha256": "74901e22ba8a38ed530c303c584f3e579d7f6fe5e0829a627f9cb33f1a18ec2e",
+    "bytes": 638507,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-coit-tower city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-ferry-building",
+    "replacement_id": "sanfrancisco-ferry-building-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-ferry-building.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-ferry-building-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-ferry-building-vari2.png",
+    "sha256": "98800dc435c4b21ff9ff0cbdcb03e96ef9df231d29f8d845382b240ce0843197",
+    "bytes": 522454,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-ferry-building city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-ghirardelli-square",
+    "replacement_id": "sanfrancisco-ghirardelli-square-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-ghirardelli-square.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-ghirardelli-square-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-ghirardelli-square-vari2.png",
+    "sha256": "1bab90f1294df559450f81e2b1a9db1e0e04e90dce2c95a08a410760a75e2bb4",
+    "bytes": 992306,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-ghirardelli-square city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-grace-cathedral",
+    "replacement_id": "sanfrancisco-grace-cathedral-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-grace-cathedral.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-grace-cathedral-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-grace-cathedral-vari2.png",
+    "sha256": "69596d8ea9e8bd1bf9adfb86a38703d4d74a55279ac861682c212314398b6de9",
+    "bytes": 943427,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-grace-cathedral city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-haas-lilienthalin-talo",
+    "replacement_id": "sanfrancisco-haas-lilienthalin-talo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-haas-lilienthalin-talo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-haas-lilienthalin-talo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-haas-lilienthalin-talo-vari2.png",
+    "sha256": "9ec116a07a08b2a07c61d1a579192d64474633c033c5f7c3ea3e50ce5ba90024",
+    "bytes": 1013739,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-haas-lilienthalin-talo city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-old-st-mary-s-katedraali",
+    "replacement_id": "sanfrancisco-old-st-mary-s-katedraali-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-old-st-mary-s-katedraali.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-old-st-mary-s-katedraali-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-old-st-mary-s-katedraali-vari2.png",
+    "sha256": "fb43428bb146ee138fd6785cf3d28e0f5f98129c20a08c37e96b51a1941f99f5",
+    "bytes": 1073022,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-old-st-mary-s-katedraali city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-palace-hotel",
+    "replacement_id": "sanfrancisco-palace-hotel-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-palace-hotel.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-palace-hotel-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-palace-hotel-vari2.png",
+    "sha256": "a576266997bd588a88fd411cba9a925e380f0e3bc0c2c42f1cb3e211a50be3b6",
+    "bytes": 1103539,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-palace-hotel city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-san-franciscon-kaupungintalo",
+    "replacement_id": "sanfrancisco-san-franciscon-kaupungintalo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-san-franciscon-kaupungintalo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-san-franciscon-kaupungintalo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-san-franciscon-kaupungintalo-vari2.png",
+    "sha256": "8fe9122d1b270d1a4fde2e18820ab8601db05867efbd5fa56aa2130d7a297e1e",
+    "bytes": 959123,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact city-map miniature sanfrancisco-san-franciscon-kaupungintalo; preserve its landmark identity, every major architectural feature, silhouette, composition, viewpoint, scale and framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor its dark sepia to the approved airy light palette: San Francisco pale stone and dusty terracotta brick, warm cream highlights, muted sage only on plants already present, and very soft slate shadows. Match the existing game's old hand-painted colorful miniatures without saturated modern colors. No new structures, people, signs, labels, letters, border or background; not photorealistic or oversharpened. Place only the isolated illustration on completely uniform flat pure #FF00FF chroma-key, with no shadow or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-transamerica-pyramid",
+    "replacement_id": "sanfrancisco-transamerica-pyramid-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-transamerica-pyramid.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-transamerica-pyramid-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-transamerica-pyramid-vari2.png",
+    "sha256": "6be65d5b78e5184ed2eac2867a4c8b2d935441b172b12fe757c0edbd0f98e3f6",
+    "bytes": 377115,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact sanfrancisco-transamerica-pyramid city-map miniature. This is an edit of the given image, not a new design: preserve the same landmark, architectural geometry, silhouette, viewpoint, composition, fine linework and full framing. Keep hand-drawn brown ink details and translucent watercolor washes. Change the heavy nearly monochrome sepia to the approved light antique-map palette: warm cream and pale stone highlights, restrained dusty terracotta on brick, sage on existing foliage only, and desaturated slate shadows. Airy and moderately low contrast on cream game-map paper. No photorealism, oversharpening, added people, signs, letters, scenery, or replacement structures. Put only the cutout miniature on a completely flat uniform pure #FF00FF chroma-key background with no shadows, checkerboard, or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sanfrancisco-union-square",
+    "replacement_id": "sanfrancisco-union-square-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sanfrancisco-union-square.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sanfrancisco-union-square-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sanfrancisco-union-square-vari2.png",
+    "sha256": "e41566963392f0f3640076cb2d8c49f0d491ddd8926113dc4af61c2f41fb4130",
+    "bytes": 1007856,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact city-map miniature sanfrancisco-union-square; preserve its landmark identity, every major architectural feature, silhouette, composition, viewpoint, scale and framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor its dark sepia to the approved airy light palette: San Francisco pale stone and dusty terracotta brick, warm cream highlights, muted sage only on plants already present, and very soft slate shadows. Match the existing game's old hand-painted colorful miniatures without saturated modern colors. No new structures, people, signs, labels, letters, border or background; not photorealistic or oversharpened. Place only the isolated illustration on completely uniform flat pure #FF00FF chroma-key, with no shadow or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sevilla-alcazar",
+    "replacement_id": "sevilla-alcazar-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sevilla-alcazar.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sevilla-alcazar-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sevilla-alcazar-vari2.png",
+    "sha256": "0956d1a20e3929d287fd7992a02eb3f98ffa32b241ef78013ad0dcb51e557ad8",
+    "bytes": 1484701,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact city-map miniature sevilla-alcazar; preserve its landmark identity, every major architectural feature, silhouette, composition, viewpoint, scale and framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor its dark sepia to the approved airy light palette: Seville ochre stone, pale tile and restrained terracotta, warm cream highlights, muted sage only on plants already present, and very soft slate shadows. Match the existing game's old hand-painted colorful miniatures without saturated modern colors. No new structures, people, signs, labels, letters, border or background; not photorealistic or oversharpened. Place only the isolated illustration on completely uniform flat pure #FF00FF chroma-key, with no shadow or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sevilla-katedraali-ja-giralda",
+    "replacement_id": "sevilla-katedraali-ja-giralda-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sevilla-katedraali-ja-giralda.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sevilla-katedraali-ja-giralda-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sevilla-katedraali-ja-giralda-vari2.png",
+    "sha256": "8f930d092be664eee655e9e5164bddc1d08dfb8ea4c635ee0cb4aa4a7a755b0c",
+    "bytes": 1256524,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact city-map miniature sevilla-katedraali-ja-giralda; preserve its landmark identity, every major architectural feature, silhouette, composition, viewpoint, scale and framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor its dark sepia to the approved airy light palette: Seville ochre stone, pale tile and restrained terracotta, warm cream highlights, muted sage only on plants already present, and very soft slate shadows. Match the existing game's old hand-painted colorful miniatures without saturated modern colors. No new structures, people, signs, labels, letters, border or background; not photorealistic or oversharpened. Place only the isolated illustration on completely uniform flat pure #FF00FF chroma-key, with no shadow or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sevilla-maestranzan-areena",
+    "replacement_id": "sevilla-maestranzan-areena-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sevilla-maestranzan-areena.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sevilla-maestranzan-areena-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sevilla-maestranzan-areena-vari2.png",
+    "sha256": "0e45e01cb3bf827f0f4f1e57af4bf9aad07579cc5d5a22b135148397cbcc40b2",
+    "bytes": 1452470,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact Seville landmark miniature sevilla-maestranzan-areena; preserve its identity, all major architecture, silhouette, composition, viewpoint, scale and full framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor dark monochrome sepia to approved airy restrained palette: warm cream and pale limestone, soft ochre and dusty terracotta on appropriate stone and brick, muted sage only on existing plants, and very soft slate shadows. Match the existing game's hand-painted colorful miniatures, with no saturated modern colors. Do not add or remove structures, people, signs, text, labels, ornaments, border, or scenery; not photorealistic or oversharpened. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, no shadow, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sevilla-plaza-de-espana",
+    "replacement_id": "sevilla-plaza-de-espana-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sevilla-plaza-de-espana.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sevilla-plaza-de-espana-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sevilla-plaza-de-espana-vari2.png",
+    "sha256": "e5df10da803d41ea2766be06f9203662fd3bf6d7f05111026fde28b40b281ea3",
+    "bytes": 1061752,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact Seville landmark miniature sevilla-plaza-de-espana; preserve its identity, all major architecture, silhouette, composition, viewpoint, scale and full framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor dark monochrome sepia to approved airy restrained palette: warm cream and pale limestone, soft ochre and dusty terracotta on appropriate stone and brick, muted sage only on existing plants, and very soft slate shadows. Match the existing game's hand-painted colorful miniatures, with no saturated modern colors. Do not add or remove structures, people, signs, text, labels, ornaments, border, or scenery; not photorealistic or oversharpened. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, no shadow, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sevilla-torre-del-oro",
+    "replacement_id": "sevilla-torre-del-oro-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sevilla-torre-del-oro.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sevilla-torre-del-oro-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sevilla-torre-del-oro-vari2.png",
+    "sha256": "cb993187afbdf1efb0ad808e87cae430ece4a0ba71cec6eeaed285f77f1d62fa",
+    "bytes": 1018733,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact Seville landmark miniature sevilla-torre-del-oro; preserve its identity, all major architecture, silhouette, composition, viewpoint, scale and full framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor dark monochrome sepia to approved airy restrained palette: warm cream and pale limestone, soft ochre and dusty terracotta on appropriate stone and brick, muted sage only on existing plants, and very soft slate shadows. Match the existing game's hand-painted colorful miniatures, with no saturated modern colors. Do not add or remove structures, people, signs, text, labels, ornaments, border, or scenery; not photorealistic or oversharpened. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, no shadow, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sevilla-trianan-silta",
+    "replacement_id": "sevilla-trianan-silta-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sevilla-trianan-silta.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sevilla-trianan-silta-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sevilla-trianan-silta-vari2.png",
+    "sha256": "2223fe347ef6478be67ce4a8d6ab4c919bf8eb88273d509a743d998ba8ce4c93",
+    "bytes": 887470,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Edit the supplied exact Seville landmark miniature sevilla-trianan-silta; preserve its identity, all major architecture, silhouette, composition, viewpoint, scale and full framing. Keep delicate antique brown ink linework with translucent watercolor. Recolor dark monochrome sepia to approved airy restrained palette: warm cream and pale limestone, soft ochre and dusty terracotta on appropriate stone and brick, muted sage only on existing plants, and very soft slate shadows. Match the existing game's hand-painted colorful miniatures, with no saturated modern colors. Do not add or remove structures, people, signs, text, labels, ornaments, border, or scenery; not photorealistic or oversharpened. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, no shadow, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sevilla-victorian-laituri",
+    "replacement_id": "sevilla-victorian-laituri-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-22/original/sevilla-victorian-laituri.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sevilla-victorian-laituri-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sevilla-victorian-laituri-vari2.png",
+    "sha256": "610143db35d728be786e534d9da0800c262a5216135655cb383d4fa7f174cdab",
+    "bytes": 1245108,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Create a new faithful watercolor recoloring of this exact historical sailing ship and pier miniature. Copy the original ship's hull, mast arrangement, sails, rigging, pier blocks, viewpoint, silhouette and framing closely; do not redesign. Delicate dark-brown ink lines, restrained antique watercolor: cream and pale warm ivory sails; light neutral brown ropes; warm dusty terracotta and tawny wooden hull; pale golden stone pier. Absolutely NO violet, purple, magenta, lavender, pink, blue stripes or saturated details anywhere on the object. Airy soft color matching other old game-map landmark miniatures. No added figures, flags, words, borders, water or scenery. Only the isolated illustrated object on a perfectly uniform solid pure #FF00FF chroma-key background, no cast shadow, texture or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
