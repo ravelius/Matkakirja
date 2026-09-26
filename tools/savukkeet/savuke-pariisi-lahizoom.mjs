@@ -2597,7 +2597,16 @@ if (lohko('liuska')) for (const ruutu of RUUDUT) {
        */
       kohteet: ['Versailles', 'Chartres', 'Chambord'].map((nimi) => {
         const re = new RegExp(nimi, 'iu');
-        const r = (n.kartanRivit?.() ?? []).find((x) => re.test(x.nimi ?? ''));
+        /*
+         * NIMIÖ TAI TUNNISTE (korjattu 26.9.2026, Karttaseppä): #3168
+         * lyhensi nimiön "Versaillesin peilisali" → "Peilisali", jolloin
+         * nimiöhaku antoi "ei rivistossa", vaikka rivi
+         * `nosto-maalehti-peilisali` oli kerroksessa (mitattu: 241 riviä,
+         * `paikkaNimi` null). Nimiö ensin, sitten noston tunniste.
+         */
+        const rivit = n.kartanRivit?.() ?? [];
+        const r = rivit.find((x) => re.test(x.nimi ?? ''))
+          ?? rivit.find((x) => (nimi === 'Versailles' && (x.id ?? '').endsWith('maalehti-peilisali')));
         if (!r) return { nimi, tila: 'ei rivistossa' };
         const keskus = { lat: city.lat, lng: city.lng };
         const omaP = k.nostonOmaPaikka(r) ?? null;
