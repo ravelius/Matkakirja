@@ -100,7 +100,13 @@ namespace Matkakirja
     ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
     ///   nostot tila [ISO3] | nostot maa <ISO3|pois>   nostokerroksen portit lokiin (NostoKerros.Kuvaus): näkyvät,
     ///                             piilotetut syineen (kaupunki nimi/12 km, meri, taso 3, ruutu, katto), uloin osuus,
-    ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa)
+    ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa); lisäksi minimerkit
+    ///                             ja lajin puute datassa (löydös 125)
+    ///   nostot kerroin <k> [lat lon] [s]   kamera korkeuteen, jossa kartan mittakerroin on k (saapumiskorkeus / k;
+    ///                             webin portaat 1, 2 ja 3,13 kuvapariin, löydös 125), keskipiste lat lon tai nykyinen
+    ///   nostot nimio reuna <O> [leveys px] | nostot nimio pohja <U>   nimiön reunan vahvistus samalla musteella
+    ///                             (NostoKerros.NimionReunaPeitto: SDF-ääriviivan peitto, oletus 0,65, leveys 0,05 px;
+    ///                             NimionPohjaPeitto: siirtymätön varjo, oletus 0; 0 = pois), heti (NostoKerros.Herata)
     ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
     ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
     ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
@@ -796,9 +802,28 @@ namespace Matkakirja
                 case "nostot":
                 {
                     // nostot tila [ISO3] | nostot maa <ISO3|pois> (NostoKerros, löydös 50 B): portit maittain lokiin
+                    // nostot kerroin <k> [lat lon] [s] | nostot nimio pohja <k> (löydös 125)
                     var nk = NostoKerros.Instanssi;
                     if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nostokerros puuttuu"); break; }
                     if (o.Length > 2 && o[1] == "maa") nk.Maa = o[2] == "pois" ? null : o[2].ToUpperInvariant();
+                    if (o.Length > 2 && o[1] == "kerroin")
+                    {
+                        // Webin mittauksen portaat (kerroin 1 = saapumisnäkymä, 2, 3,13) samalla kaavalla kuin ZoomKerroin.
+                        double h = nk.KorkeusKertoimella(D(2));
+                        if (h <= 0) { Debug.LogWarning("MATKAKIRJA komento: nostot kerroin: saapumiskorkeus tuntematon"); break; }
+                        bool paikka = o.Length > 4;
+                        kierto.Aja(paikka ? D(3) : kierto.leveys, paikka ? D(4) : kierto.pituus, h, o.Length > 5 ? (float)D(5) : 1.2f, null);
+                        Debug.Log($"MATKAKIRJA nostot: kerroin {D(2).ToString("0.###", CultureInfo.InvariantCulture)} → korkeus {h / 1000.0:0} km");
+                        break;
+                    }
+                    if (o.Length > 3 && o[1] == "nimio" && o[2] == "pohja")
+                        NostoKerros.NimionPohjaPeitto = Mathf.Clamp01((float)D(3));
+                    if (o.Length > 3 && o[1] == "nimio" && o[2] == "reuna")
+                    {
+                        NostoKerros.NimionReunaPeitto = Mathf.Clamp01((float)D(3));
+                        if (o.Length > 4) NostoKerros.NimionReunaLeveys = Mathf.Max(0f, (float)D(4));
+                    }
+                    if (o.Length > 1 && o[1] == "nimio") nk.Herata();
                     Debug.Log(nk.Kuvaus(o.Length > 2 && o[1] == "tila" ? o[2] : null));
                     break;
                 }
