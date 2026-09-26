@@ -24,6 +24,8 @@ Uusi tili klo 11:54: viikko (all models) **11 %**, viikko (Fable) 7 %, 5 h **40�
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
+**12:0x: Fable löysi levyn syyn — CoreSimulator/Devices 78 Gt (19 laitetta; offline-sarja 26 latautuu joka simulaattoripeliin ~2 Gt + PRBPoster-roska 4,4 Gt/laite).** Ei purge-toistoa. Korjaus etenee: Laitetestaaja siivoaa käyttämättömät laitteet, Siirtoseppä + Natiiviseppä kytkevät offline-latauksen pois oletuksena. Sisältökirjurille (70 %) välitetty pyyntö: luovutus + kontekstin nollaus BEL-PR:n jälkeen.
+
 **11:54 KAKSI ILMOITUSTA FABLELLE:**
 1. **Sisältökirjuri konteksti YLITTI 70 % (65→70 %).** Ilmoitettu.
 2. **Levy 84 Gt < 85 Gt -raja → ajoin `sudo purge` Fablen ohjeen mukaan.** Tulos: swap ja levy **ennallaan** (84 Gt, swap ~15,8 Gt) — purge ei vapauttanut tilaa, koska kyse ei ole muistivälimuistista vaan oikeasta levytilasta. Levyongelma vaatii muuta kuin purgea; ilmoitettu Fablelle.
