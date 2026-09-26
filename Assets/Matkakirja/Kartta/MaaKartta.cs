@@ -339,7 +339,7 @@ namespace Matkakirja
             }
             jako = j;
             Debug.Log($"MATKAKIRJA maakunnat ({kokoelma}): {j.Maat.Count} maata, {j.AlueitaYhteensa} aluetta, {j.Kaaria} kaarta " +
-                      $"({j.KohdistamattomatKaaret} ilman maata, {j.SisaisetKaaret} alueen sisäistä pois), jäsennys {jasennys} ms, maittain {maittain} ms");
+                      $"({j.KohdistamattomatKaaret} ilman maata, {j.SisaisetKaaret} alueen sisäistä ja {j.UlkoKaaret} ulkorajaa pois), jäsennys {jasennys} ms, maittain {maittain} ms");
             if (j.AlueitaEnintaan > Maakuntajako.AluetaEnintaan)
                 Debug.LogWarning($"MATKAKIRJA maakunnat: {j.AlueitaEnintaanMaa} {j.AlueitaEnintaan} aluetta, tunnuskartassa enintään " +
                                  $"{Maakuntajako.AluetaEnintaan} (loput jäävät pois)");
@@ -712,7 +712,8 @@ namespace Matkakirja
             {
                 var m = Viivaleveys.AluerajaMuste;
                 bool lin = QualitySettings.activeColorSpace == ColorSpace.Linear;
-                double peitto = lin ? Viivaleveys.AluerajaPeittoNatiivi : Viivaleveys.AluerajaPeittoWeb;
+                // Löydös 113 jatko: oletusrajat ilman täyttöä webin täydellä rasterirajalla (0,45), täytön kanssa 0,297.
+                double peitto = Viivaleveys.AluerajaPeitto(TayttoNakyy, lin);
                 // Color on sRGB-arvoina; URP muuntaa _BaseColorin lineaariseksi lineaarisessa projektissa.
                 rajaOma.SetColor("_BaseColor", new Color((float)m[0], (float)m[1], (float)m[2], (float)peitto * rajaAlfa * rajaHaive));
                 return;
