@@ -192,3 +192,18 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   karuselli → pallo → gondolit → Lontoo (pyörä + siipiratashöyry) → köysirata + Etna, ja kokeilut alkavat build 20:n
   jälkeen. AIKA-sääntö: kartta elää nykyajassa, joten 1873-tarkistusta ei tehdä.
 - Lipputanko 161: liehunta on Natiivisepän Liput.Aaltoile. Minulta tarvitaan vain ajastus, kun hän pyytää.
+
+## Päivitys klo 11.1x
+
+- **Build 20 = TF 1.0.20** (master 1a57cc39). Siinä on usva-159 7f5291f4: kohdat 4+5, löydös 159 ja reitin väri A.
+- **Build 21 -junassa** juna/b13 4ae6df79: usva-159 1308bfec, jossa on omistajan valitsema väri B (0,50, 0,02, 0,03,
+  peitto 0,65), katkoviiva (Kynäviivan _Katko, jakso noin 16 pt kahden potenssiin, viivaa 60 %) ja
+  ElavaMatka.NakyvissaKysely. Natiivi-UI:n kytkin "Kuljettu reitti" on haarassa natiivi-ui/kuljettu-kytkin.
+  Simulaattorissa f88d9378 toimivat usva, piilotus ja lepo, poikkeuksia 0. Kuvat: lokit/linssiseppa-katko-20260926/.
+- Testikomennot: `elava reitti vari r g b a [pt]` ja `elava reitti nakyy 0|1|oletus`.
+- **Valkoinen neliö Mont Blancilla** (Natiivisepän pariteettiajo): ei tule linsseistä. Todennäköisesti se on Natiivi-UI:n tason 1
+  kuvamerkki merkki-vuori.png, jonka tekstuuri on tyhjä. Erottelukomennot on annettu Natiivisepälle.
+- **Karttaseppä:** polkudatan muoto on sovittu (tools/vienti/elavat-polut.json.gz, reitit1873-rakenne + pysakit + kulku).
+  Järjestys: Canal Grande → Thames → köysirata Chamonix. Budapest on varapaikka, ja Afrikan kolme aluetta tulevat myöhemmin.
+- **Seuraavaksi:** build 20:n PASS ja Natiivisepän ElavaKerros-haara → siirrä PallonLepo.Animoi-kutsut → myllyt
+  (kokeilu 1). Worktree wt/proto-linssiseppa-elava (elavat-hetket) poistetaan, kun build 21 on masterissa.
