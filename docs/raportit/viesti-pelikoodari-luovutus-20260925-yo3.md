@@ -120,3 +120,11 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
   (johtoaihe + 3 koeraitaa: aloituslento, saapuminen Välimeri, loppu) ensin, jokainen erä omistajalle (mp3-linkit + rivi/raita)
   ennen seuraavaa. Avaimet vain Macin ympäristöstä (GOOGLE_API_KEY), ei lokiin. Työkalut tools/lyria.mjs, generoi-musiikki.mjs,
   generoi-siirtymamusiikki.mjs. Aloita kun kiintiö sallii.
+
+## 13. Lisäys 26.9. klo 05.2x — JONO 2 EI VALMIS (taantuma)
+- `pelikoodari/yhteinen-haku` 1967620d: päällekkäiset haut vähenivät (kaupungit 4→1), MUTTA kylmä sisältöodotus piteni:
+  vuorotellen ajetut kylmät (lokit/verkko-odotus/vert-*): ennen 1 159 / 915 ms (30/35 hakua), jälkeen 1 438 / 1 496 ms (38/40).
+  Todennäköinen syy: PeliOhjain.HaeTiedosto → Sisalto.HaePaketista tuo pelin haut käynnistyksen sisältöodotuksen ikkunaan
+  (ja Taustalla-kierros). EI merge-pyyntöä. SEURAAVA KOE: pelkkä Sisalto-sisäinen jako (peru PeliOhjain-muutos, commit
+  "Yhteinen haku: …" → jätä vain Sisalto.cs:n haussa/Jaa), mittaa samoin (4 vuorotellen kylmää, SIMCTL_CHILD_MATKAKIRJA_HAUT=1).
+- JONO 3 (kaupunkilehdet/linssidata/II-kuvat pois käynnistyksestä) avoinna. Musiikin generointi vaihe 1 avoinna.
