@@ -7615,3 +7615,7 @@ Siirtoseppa: B-erat tuotannossa 1.x v189 (14b828f8e), 478 aluetta 29 maassa, oso
 ## 179 TEHTY: LEHDEN TAPAA-NAPPI POIS (natiivi-ui/tapaa-nappi-179 1287c7f7) (26.9.2026 klo 23.21)
 
 Natiivi-UI: lehden tehtavanappi poistettu, kohtaaminen alkaa vain vihreasta fokuspisteesta kuten webissa; merge-pyynto Natiivisepalla 1.0.27-junaan, kuvapari kaannoksen jalkeen. 178 tuotannossa natiivipaketissa v189 ilman erillista deltaa.
+
+## 178 LOPPUOSA PR 3355 (9 GALLERIAAN, SANTAREM/BROOME) + IRL-HAVAINNEKUVA PR 3354 (26.9.2026 klo 23.22)
+
+Sisaltokirjuri: 9 ei-paikkaa (tarkka luku, ei 11) museon/rakennuksen galleriaan koneellisesti todennettuna, Santarem + Broome saivat WebSearch-todennetut rakennuskohteet (#3355); Ouzel Galley tekoalyhavainnekuva (#3354). Era C (BLR + ROU) ennen astronautin eraa 2.
