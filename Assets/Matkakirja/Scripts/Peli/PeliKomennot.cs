@@ -239,7 +239,8 @@ namespace Matkakirja.Natiivi
                         default: return "käyttö: aani aihe aloituslento|loppu|kaupunki <id>";
                     }
                     var t = ohjain.Aanisoitin?.Tila;
-                    return "aihe " + (t?.Toive(Matkakirja.Peli.Kanava.Aarre).Url ?? "ei soi");
+                    Debug.Log("MATKAKIRJA aani: aihe " + (t?.Toive(Matkakirja.Peli.Kanava.Aarre).Url ?? "ei soi"));
+                    return null;
                 }
                 case "aani" when A(1) == "sini":
                 {
