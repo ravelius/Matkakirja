@@ -245,7 +245,10 @@ namespace Matkakirja.Natiivi
             while (!kolmiointi.IsCompleted) yield return null;
             if (kolmiointi.IsFaulted) { Kirjaa("kolmiointi kaatui " + kolmiointi.Exception?.GetBaseException().Message); Lopeta(); yield break; }
 
-            paljastusKaytossa = saapuminen && ElavaPallo.Kytketty;
+            // Laattahuntu (Varitaso.Paljastus) ei rajaudu saapumismaahan: pelaajan oma maa ei ole hunnun alla, ja säde paljastaa
+            // myös naapurimaat (Natiiviseppä 26.9.). Saapumismaahan rajattu verkkohuntu (videon ilme) on käytössä, kunnes
+            // Paljastus sekoittaa säteen sisällä saapumismaan sarjan (naapurit hunnussa) ja ulkona edellisen maan sarjan.
+            paljastusKaytossa = false;
             Rakenna(verkot);
             TilaTalteen();
             t = Math.Max(0, Math.Min(kohtaus.KestoS, alkuPyynto));
