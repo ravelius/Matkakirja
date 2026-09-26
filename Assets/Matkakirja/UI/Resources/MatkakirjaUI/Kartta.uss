@@ -1893,3 +1893,30 @@
     background-position-x: center;
     background-position-y: center;
 }
+
+/* Löydös 150 (omistaja build 16, Fablen linjaus A): noston kuva kokoruudulle — tumma tausta, ei kehystä, ei
+ * kuvatekstiä eikä lähderiviä (138:n linja; tekijärivi jää korttiin), kuva reunasta reunaan (Kuvasuurennos.Kokoruutu). */
+.mk-nosto__suurennos.mk-suurennos--kokoruutu {
+    padding: 0;
+    background-color: rgba(10, 7, 4, 0.86);
+}
+
+.mk-suurennos--kokoruutu .mk-nosto__suurennoskehys {
+    width: auto;
+    max-width: none;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+}
+
+.mk-suurennos--kokoruutu .mk-nosto__suurennoskuva {
+    max-height: none;
+}
+
+.mk-suurennos--kokoruutu .mk-nosto__suurennosteksti,
+.mk-suurennos--kokoruutu .mk-nosto__lahde,
+.mk-suurennos--kokoruutu .mk-reaktiot--suurennos {
+    display: none;
+}
