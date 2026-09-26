@@ -175,6 +175,8 @@ namespace Matkakirja.Natiivi
 
         static void Joutilaana()
         {
+            // Ei aloitusverhon aikana (Pelikoodarin käynnistysanalyysi 26.9.: II:n kuvat latautuivat verhon aikana): vain kartalla.
+            if (PeliOhjain.Instanssi == null || PeliOhjain.Instanssi.Tila != SilmukanTila.Kartta) return;
             if (rekisteri == null || rekisteri.Auki != null) return;
             if (ohjain != null) ohjain.StartCoroutine(JoutilaatLaatat());
             foreach (var l in rekisteri.Kaikki)

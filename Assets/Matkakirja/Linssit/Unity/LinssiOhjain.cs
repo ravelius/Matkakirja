@@ -194,13 +194,7 @@ namespace Matkakirja.Natiivi
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
-            StartCoroutine(LataaAstronautti());
-            StartCoroutine(LataaKeksinnot());
-            StartCoroutine(LataaIhmisenMatka());
-            StartCoroutine(LataaVesistot());
-            StartCoroutine(LataaMaat());
-            StartCoroutine(LataaRadio());
-            StartCoroutine(LataaIsoisa());
+            StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.
@@ -264,6 +258,49 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Astronautin kamera rekisteriin, kun sen aineisto on ladattu paketista.</summary>
+        /// <summary>Linssien aineiston katto (s käynnistyksestä), jos peli ei joudu joutilaaksi kartalla sitä ennen.</summary>
+        public const float AineistoKattoS = 20f;
+        static bool aineistoHeti;
+        /// <summary>Linssien aineisto on haettu ja linssit rekisteröity.</summary>
+        public static bool AineistoValmis { get; private set; }
+
+        /// <summary>
+        /// Linssien aineisto heti (valitsin avautuu tai linssiä pyydetään ennen joutilasta hetkeä). Natiivi-UI kutsuu, kun
+        /// linssivalitsin avataan; linssi-komento kutsuu itse.
+        /// </summary>
+        public static void LataaAineistoHeti() => aineistoHeti = true;
+
+        /// <summary>
+        /// ESILATAUSPOLITIIKKA (Pelikoodarin käynnistysanalyysi 26.9.2026, lokit/kohta1-kaynnistys-20260926.md): linssien
+        /// noin 20 aineistotiedostoa eivät kuulu kylmään käynnistykseen, vaan ensimmäiseen joutilaaseen hetkeen kartalla
+        /// (kohta 4: Esilataaja.Joutilas, peli kartalla) tai linssin pyyntöön (kohta 6). Katto AineistoKattoS. Haut
+        /// peräkkäin kevyimmästä, jottei verkko ruuhkaudu; rekisteröinti samoilla korutiineilla kuin ennen.
+        /// </summary>
+        System.Collections.IEnumerator LataaLinssitJoutilaana()
+        {
+            bool joutilas = false;
+            Action kuuntelija = () => joutilas |= PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.Tila == SilmukanTila.Kartta;
+            Esilataaja.Joutilas += kuuntelija;
+            float alku = Time.realtimeSinceStartup;
+            while (!joutilas && !aineistoHeti && Time.realtimeSinceStartup - alku < AineistoKattoS) yield return null;
+            Esilataaja.Joutilas -= kuuntelija;
+            Kirjaa($"linssien aineisto: {(aineistoHeti ? "pyydetty" : joutilas ? "joutilaana kartalla" : "katto")} {Time.realtimeSinceStartup - alku:F1} s käynnistyksestä");
+            foreach (var lataus in new Func<System.Collections.IEnumerator>[]
+                { LataaKeksinnot, LataaMaat, LataaIhmisenMatka, LataaVesistot, LataaRadio, LataaAstronautti, LataaIsoisa })
+                yield return lataus();
+            AineistoValmis = true;
+            Kirjaa($"linssien aineisto valmis {Time.realtimeSinceStartup - alku:F1} s käynnistyksestä");
+        }
+
+        /// <summary>Linssi-komento ennen aineistoa: haku heti, ja valinta, kun linssi on rekisteröity (enintään 30 s).</summary>
+        System.Collections.IEnumerator ValitseKunValmis(string id)
+        {
+            LataaAineistoHeti();
+            float alku = Time.realtimeSinceStartup;
+            while (!AineistoValmis && rekisteri.Kaikki.All(l => l.Tiedot.Id != id) && Time.realtimeSinceStartup - alku < 30f) yield return null;
+            rekisteri.Valitse(id);
+        }
+
         System.Collections.IEnumerator LataaAstronautti()
         {
             string data = null, kysymykset = null;
@@ -1207,7 +1244,10 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "linssi" && osat.Length > 1 && osat[1] == "pois")
                     rekisteri.Sulje();
                 else if (osat[0] == "linssi" && osat.Length > 1)
-                    rekisteri.Valitse(osat[1]);
+                {
+                    if (!AineistoValmis && rekisteri.Kaikki.All(l => l.Tiedot.Id != osat[1])) StartCoroutine(ValitseKunValmis(osat[1]));
+                    else rekisteri.Valitse(osat[1]);
+                }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)
