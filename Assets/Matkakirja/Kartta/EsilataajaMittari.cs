@@ -34,7 +34,12 @@ namespace Matkakirja
 
         enum Tila { Jonossa, Valmis, Kaytetty }
 
-        sealed class Avoin { public string Vaihe; public double Alku; }
+        sealed class Avoin { public string Vaihe; public double Alku; public Luokka Luokka; }
+
+        /// <summary>Päättynyt huti (build 22: mitkä kohteet pelaaja odotti, jotta esilataus osataan kohdistaa).</summary>
+        public sealed class Huti { public string Vaihe, Kohde; public Luokka Luokka; public double Ms; }
+        public const int HutejaEnintaan = 300;
+        readonly List<Huti> hudit = new List<Huti>();
 
         /// <summary>Vaiheen (tai kaikkien) laskurit ja huteista kirjatut odotukset.</summary>
         public sealed class Tilasto
@@ -141,7 +146,7 @@ namespace Matkakirja
                 kaikki.Lisaa(l);
                 Vaihe(vaihe).Lisaa(l);
                 if (l == Luokka.Osuma) { kaikki.Odotukset.Add(0); Vaihe(vaihe).Odotukset.Add(0); }
-                else if (l != Luokka.Levylla) avoimet[a] = new Avoin { Vaihe = vaihe, Alku = nytMs };
+                else if (l != Luokka.Levylla) avoimet[a] = new Avoin { Vaihe = vaihe, Alku = nytMs, Luokka = l };
                 return l;
             }
         }
@@ -161,6 +166,13 @@ namespace Matkakirja
             double ms = Math.Max(0, nytMs - o.Alku);
             kaikki.Odotukset.Add(ms);
             Vaihe(o.Vaihe).Odotukset.Add(ms);
+            if (hudit.Count < HutejaEnintaan) hudit.Add(new Huti { Vaihe = o.Vaihe, Kohde = a, Luokka = o.Luokka, Ms = ms });
+        }
+
+        /// <summary>Päättyneet hudit pisimmästä alkaen (kopio).</summary>
+        public List<Huti> Hudit()
+        {
+            lock (lukko) { var j = new List<Huti>(hudit); j.Sort((x, y) => y.Ms.CompareTo(x.Ms)); return j; }
         }
 
         Tilasto Vaihe(string v)
@@ -181,6 +193,7 @@ namespace Matkakirja
             {
                 avoimet.Clear();
                 vaiheet.Clear();
+                hudit.Clear();
                 kaikki.Osumat = kaikki.Kesken = kaikki.EiEsiladattu = kaikki.Hukattu = kaikki.Levylla = kaikki.Toistot = 0;
                 kaikki.Odotukset.Clear();
             }
@@ -210,7 +223,17 @@ namespace Matkakirja
                     Kirjoita(sb, kv.Value);
                     sb.Append('}');
                 }
-                sb.Append("}}");
+                sb.Append("},\"hudit\":[");
+                var j = new List<Huti>(hudit);
+                j.Sort((x, y) => y.Ms.CompareTo(x.Ms));
+                for (int i = 0; i < j.Count; i++)
+                {
+                    if (i > 0) sb.Append(',');
+                    sb.Append("{\"vaihe\":\"").Append(j[i].Vaihe.Replace("\"", "'")).Append("\",\"kohde\":\"")
+                      .Append(j[i].Kohde.Replace("\\", "/").Replace("\"", "'")).Append("\",\"luokka\":\"").Append(j[i].Luokka)
+                      .Append("\",\"ms\":").Append(((long)Math.Round(j[i].Ms)).ToString(CultureInfo.InvariantCulture)).Append('}');
+                }
+                sb.Append("]}");
             }
             return sb.ToString();
         }

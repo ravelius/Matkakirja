@@ -139,5 +139,21 @@ namespace Matkakirja.Peli.Testit
             m.Nollaa();
             Oleta.Sama(EsilataajaMittari.Luokka.Levylla, m.Nakyva(A, true, "saapuminen", 6));
         }
+
+        [Testi] static void HuditListataanPisimmastaJaJsoniin()
+        {
+            var m = new EsilataajaMittari();
+            m.Nakyva("https://x/a.jpg?v=1", false, "aloitus", 1000);
+            m.Nakyva("https://x/b.mp3", false, "lento", 1000);
+            m.NakyvaValmis("https://x/a.jpg", 1200);
+            m.NakyvaValmis("https://x/b.mp3", 1900);
+            var h = m.Hudit();
+            Oleta.Sama(2, h.Count);
+            Oleta.Sama("https://x/b.mp3", h[0].Kohde, "pisin ensin");
+            Oleta.Sama(900.0, h[0].Ms);
+            Oleta.Tosi(m.Json().Contains("\"hudit\":[{\"vaihe\":\"lento\",\"kohde\":\"https://x/b.mp3\",\"luokka\":\"EiEsiladattu\",\"ms\":900}"), m.Json());
+            m.NollaaSummat();
+            Oleta.Sama(0, m.Hudit().Count);
+        }
     }
 }

@@ -104,6 +104,10 @@ if os.path.exists(p):
                     f"ei esiladattu {s['eiEsiladattu']}, hukattu {s['hukattu']}; levyllä {s['levylla']}, toistoja {s['toistoja']}")
         print("\nESILATAAJA " + mrivi(m) + f", avoimia {m['avoimia']}")
         for k, s in m.get("vaiheet", {}).items(): print(f"  {k:<11} " + mrivi(s))
+        hs = m.get("hudit", [])
+        if hs:
+            print(f"  HUDIT pisimmästä (25/{len(hs)}):")
+            for h in hs[:25]: print(f"    {h['ms']:>6} ms  {h['vaihe']:<11} {h['luokka']:<13} {h['kohde'][-90:]}")
     # Laatat omana rivinään (Kartta/LaattaOsumat.cs, build 22): näkyvä laatta tämän istunnon esilatauksesta = osuma.
     lt = y.get("esilataaja", {}).get("laatat")
     if lt:
