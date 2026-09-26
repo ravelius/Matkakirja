@@ -5,6 +5,7 @@
 //   kokeilu 2  Tivolin ketjukaruselli Kööpenhaminassa (katos 10 s/kierros, istuimet keinuvat ulospäin aaltoillen, lamput)
 //   kokeilu 3  Pariisin kiinnitetty ilmapallo Tuileries'ssa (nousu ja lasku 24 s, kori heiluu 5 s, köysi vintturiin)
 //   kokeilu 4  Venetsian gondolit Canal Grandella (kaksi vastakkaisiin suuntiin, matka 30 s airon tahdissa, odotus päissä)
+//   kokeilu 5  Lontoon maailmanpyörä (kierros 40 s, 16 koria pysyvät pystyssä, pysähtyy välillä koreja täyttämään)
 //
 // Mallit ovat proseduraalisia low-poly-malleja löydöksen 160 paletilla (MalliVarit) ja varjostimella
 // Matkakirja/Linssit/Malli. Natiivisepän Blender-mallit voivat korvata ne myöhemmin (sama juuri ja sama pyörivä osa).
@@ -118,6 +119,19 @@ namespace Matkakirja.Natiivi
                 // Suunta 0: kaavan +z on pohjoinen, joten S-mutka on oikein päin.
                 PohjaSade = 0.85f, Haalistus = 0.25f, Suunta = 0f,
                 Animoi = GondoliGeometria.Animoi,
+            },
+            new Aihe
+            {
+                // Maailmanpyörä: pyörii 60–180 s, ja välillä se pysähtyy 15–40 s (korit täyttyvät); tahti vaihtelee ±6 %.
+                Vaihtelu = i => new Vaihtelu(503 + i) { KayMinS = 60, KayMaxS = 180, SeisooMinS = 15, SeisooMaxS = 40, TaukoTod = 0.6, Puuska = 0.06 },
+                Nimi = "maailmanpyora", Paikka = new LatLon(51.5033, -0.1196), KokoPt = 46f,   // London Eye, South Bank
+                // Selvitys: hieman kaupunkipisteen sivussa, ei peitä pistettä eikä nimeä (nimi on pisteen oikealla).
+                Yksilot = new[] { (-40f, 16f, 0f) },
+                Runko = MaailmanpyoraGeometria.Tuki, Roottori = MaailmanpyoraGeometria.Keha, Lapsi = MaailmanpyoraGeometria.Kori,
+                LastenPaikat = MaailmanpyoraGeometria.Korit(),
+                // Suunta 0: pyörän taso itä–länsi, joten etelän kallistuksesta näkyy koko kehä.
+                PohjaSade = 0.55f, Haalistus = 0.25f, Suunta = 0f,
+                Animoi = MaailmanpyoraGeometria.Animoi,
             },
         };
 
@@ -1020,6 +1034,89 @@ namespace Matkakirja.Natiivi
             r.Laatikko(new Vector3(0, 0.02f, -0.05f), new Vector3(0.003f, 0.009f, 0.003f), runko);                          // gondolieeri
             r.Tanko(new Vector3(0.006f, 0.026f, -0.05f), new Vector3(0.016f, 0.0f, -0.03f), 0.0012f, runko);                // airo
             return r.Mesh("Venetsia: gondoli");
+        }
+    }
+
+    /// <summary>
+    /// Proseduraalinen maailmanpyörä (kokeilu 5, Lontoo; selvitys: kierros 40 s, 16 koria pystyssä, kaupunkipisteen sivussa).
+    /// Runko (Tuki): matala laituri ja A-tuki, joka kannattaa akselia. Roottori (Kehä): kaksi kehää, 16 pinnaa ja napa;
+    /// pyörii akselinsa (+z) ympäri. Lapset: 16 soikeaa koria kehän ulkopuolella; Animoi kiertää ne vastakkaiseen suuntaan,
+    /// joten korit pysyvät pystyssä (Animoi saa ajan valmiiksi nopeudella kerrottuna, joten pysähdys ja käynnistys ovat pehmeät).
+    /// </summary>
+    public static class MaailmanpyoraGeometria
+    {
+        const int Koreja = 16;
+        const float Sade = 0.46f, AkseliY = 0.52f, KierrosS = 40f, Syvyys = 0.03f;
+        static Vector3[] korit;
+
+        public static Vector3[] Korit()
+        {
+            if (korit != null) return korit;
+            korit = new Vector3[Koreja];
+            for (int i = 0; i < Koreja; i++)
+            {
+                float a = i * Mathf.PI * 2 / Koreja;
+                korit[i] = new Vector3(Mathf.Cos(a) * (Sade + 0.035f), Mathf.Sin(a) * (Sade + 0.035f), 0);
+            }
+            return korit;
+        }
+
+        public static void Animoi(Transform keha, Transform[] korit2, float t, float nopeus)
+        {
+            float kulma = -t * 360f / KierrosS;   // myötäpäivään etelästä katsottuna
+            keha.localPosition = new Vector3(0, AkseliY, 0);
+            keha.localRotation = Quaternion.Euler(0, 0, kulma);
+            var p = Korit();
+            for (int i = 0; i < korit2.Length; i++)
+            {
+                korit2[i].localPosition = p[i];
+                // Vastakierto: kori pysyy pystyssä; pieni heilahdus käynnistyksessä ja pysähdyksessä (nopeuden muutos).
+                korit2[i].localRotation = Quaternion.Euler(0, 0, -kulma + 2f * (1 - nopeus) * Mathf.Sin(t * 2.1f + i));
+            }
+        }
+
+        public static Mesh Tuki()
+        {
+            var r = new MalliRakenne();
+            r.Laatikko(new Vector3(0, 0.012f, 0), new Vector3(0.16f, 0.012f, 0.07f), MalliVarit.Pinta);          // laituri
+            // A-tuki akselin kummallekin puolelle (pyörän taso x–y, akseli z): kaksi jalkaa kummallakin puolella.
+            foreach (float z in new[] { -Syvyys - 0.03f, Syvyys + 0.03f })
+            {
+                var akseli = new Vector3(0, AkseliY, z);
+                r.Tanko(new Vector3(-0.14f, 0.02f, z * 1.8f), akseli, 0.009f, MalliVarit.Varjo);
+                r.Tanko(new Vector3(0.14f, 0.02f, z * 1.8f), akseli, 0.009f, MalliVarit.Varjo);
+            }
+            r.Tanko(new Vector3(0, AkseliY, -Syvyys - 0.035f), new Vector3(0, AkseliY, Syvyys + 0.035f), 0.012f, MalliVarit.Varjo);   // akseli
+            return r.Mesh("Maailmanpyörä: tuki");
+        }
+
+        public static Mesh Keha()
+        {
+            var r = new MalliRakenne();
+            const int osia = 32;
+            foreach (float z in new[] { -Syvyys, Syvyys })
+                for (int i = 0; i < osia; i++)
+                {
+                    float a0 = i * Mathf.PI * 2 / osia, a1 = (i + 1) * Mathf.PI * 2 / osia;
+                    r.Tanko(new Vector3(Mathf.Cos(a0) * Sade, Mathf.Sin(a0) * Sade, z), new Vector3(Mathf.Cos(a1) * Sade, Mathf.Sin(a1) * Sade, z), 0.006f, MalliVarit.Valo);
+                }
+            for (int i = 0; i < Koreja; i++)
+            {
+                float a = (i + 0.5f) * Mathf.PI * 2 / Koreja;
+                var reuna = new Vector3(Mathf.Cos(a) * Sade, Mathf.Sin(a) * Sade, 0);
+                r.Tanko(new Vector3(0, 0, i % 2 == 0 ? -Syvyys : Syvyys), reuna, 0.0025f, MalliVarit.Varjo);   // pinnat vuorotellen
+            }
+            r.Laatikko(Vector3.zero, new Vector3(0.03f, 0.03f, Syvyys + 0.01f), MalliVarit.Varjo);            // napa
+            return r.Mesh("Maailmanpyörä: kehä");
+        }
+
+        /// <summary>Soikea kori (lasikapseli): valoisa sage-lasi ja tumma pohja; origo kiinnityskohdassa.</summary>
+        public static Mesh Kori()
+        {
+            var r = new MalliRakenne();
+            r.Laatikko(new Vector3(0, -0.004f, 0), new Vector3(0.022f, 0.012f, 0.014f), MalliVarit.SageVaalea);
+            r.Laatikko(new Vector3(0, -0.018f, 0), new Vector3(0.016f, 0.003f, 0.011f), MalliVarit.Varjo);
+            return r.Mesh("Maailmanpyörä: kori");
         }
     }
 }
