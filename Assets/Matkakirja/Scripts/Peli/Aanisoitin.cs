@@ -357,6 +357,7 @@ namespace Matkakirja.Natiivi
                 Kanava = k, A = a, Komp = KompressoriLahteelle(k, a), Url = w.Url, Tavoite = w.Tavoite, Alku = w.Alku,
                 Silmukka = w.Silmukka, Tauko = w.Tauko, NousuMs = w.KestoMs ?? 0,
             };
+            if (l.Komp != null) l.Komp.Ohita = w.IlmanKompressoria;
             elavat.Add(l);
             StartCoroutine(Hae(l, l.Vuoro));
             return l;
