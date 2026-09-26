@@ -80,6 +80,8 @@ namespace Matkakirja.Natiivi
             /// <summary>Mitoitus tältä kehykseltä: mitta (px / yksikkö), ikoniruudun puolikas yksikköinä, prioriteetti.</summary>
             public float Mitta, Ruutu, Paino;
             public bool Kiintea, Taso1;
+            /// <summary>Noston taso 1–3 (mallin koko PeitaMallienAlta:ssa).</summary>
+            public int Taso;
             /// <summary>Nimiön kylki (web SOVITTELUN_KYLJET) ja näkyvyys väistön jälkeen.</summary>
             public string Kylki;
             public bool NimioNakyy = true;
@@ -226,7 +228,8 @@ namespace Matkakirja.Natiivi
             bool loyto = m.Loydetty == false && loydetty && m.JaljenId == s.Id;
             m.Loydetty = loydetty;
             m.JaljenId = s.Id;
-            var jalki = loydetty || s.Taso == 1 ? null : MusteJaljet.Hae(s.Id); // löydös 155: taso 1 ilman jälkeä
+            // Löydös 155: taso 1 ilman jälkeä; löydös 160: ei jälkeä myöskään, kun 3D-malli (tasot 2–3 arkkityyppeinä) piirtää sen.
+            var jalki = loydetty || s.Taso == 1 || (!ryhma && Symbolimallit.OnMalli(s.Id)) ? null : MusteJaljet.Hae(s.Id);
             if (jalki != null)
             {
                 if (m.Jalki == null)
@@ -421,7 +424,7 @@ namespace Matkakirja.Natiivi
             if (lepoKierto == null || lepoKierto.Levossa) Sovita(n);
         }
 
-        readonly List<Vector2> mallienPisteet = new List<Vector2>();
+        readonly List<(Vector2 Piste, float Koko)> mallienPisteet = new List<(Vector2, float)>();
 
         /// <summary>
         /// Löydös 160 jatko (Fable 26.9.): 3D-symbolimallin (Symbolimallit, KokoPt) kohdalle osuvat muiden nostojen
@@ -436,15 +439,16 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n; i++)
             {
                 var m = merkit[i];
-                if (m.Taso1 && m.Ryhma == null && Symbolimallit.OnMalli(m.Id)) mallienPisteet.Add(m.Piste);
+                // Löydös 160: tasojen 2–3 arkkityypit 0,6 × ja 0,45 × tason 1 koko (Symbolimallit.Tasot23).
+                if (m.Ryhma == null && Symbolimallit.OnMalli(m.Id))
+                    mallienPisteet.Add((m.Piste, Symbolimallit.KokoPt * (m.Taso1 ? 1f : m.Taso >= 3 ? 0.45f : 0.6f)));
             }
-            float koko = Symbolimallit.KokoPt;
             for (int i = 0; i < n; i++)
             {
                 var m = merkit[i];
                 bool peitossa = false;
-                if (mallienPisteet.Count > 0 && m.Loydetty != true && m.Ryhma == null && !(m.Taso1 && Symbolimallit.OnMalli(m.Id)))
-                    foreach (var p in mallienPisteet)
+                if (mallienPisteet.Count > 0 && m.Loydetty != true && m.Ryhma == null && !Symbolimallit.OnMalli(m.Id))
+                    foreach (var (p, koko) in mallienPisteet)
                     {
                         var d = m.Piste - p;
                         if (Mathf.Abs(d.x) < koko * 0.5f && d.y > -koko * 0.85f && d.y < koko * 0.3f) { peitossa = true; break; }
@@ -800,6 +804,7 @@ namespace Matkakirja.Natiivi
             // (web datumin kaupunki = kohde.tyyppi 'kaupunki', löydös 125), ilman lajia aiheesta kuten ennen.
             bool kaupunki = s.Kaupunkimerkki;
             m.Taso1 = s.Taso == 1 && !ryhma;
+            m.Taso = s.Taso;
             float oma = kaupunki ? KaupunginKerroin : m.Taso1 ? Taso1Kerroin : 1f;
             // Elävä kartta, kohta 2: kokoluokka (ei kaupunkimerkkeihin eikä ryhmiin).
             if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
@@ -826,7 +831,8 @@ namespace Matkakirja.Natiivi
             }
             // Löydös 160 (omistaja hyväksyi 3D-symbolinostot): tason 1 nostolla, jolla on 3D-malli (Symbolimallit,
             // Natiiviseppä), 2D-kuvamerkki piiloon; laatikko jää paikalleen, joten napautus ja nimiö toimivat ennallaan.
-            var nakyvyys = !ryhma && m.Taso1 && Symbolimallit.OnMalli(s.Id) ? Visibility.Hidden : Visibility.Visible;
+            // Löydös 160 (tasot 2–3 arkkityyppeinä, omistaja 16.5x): OnMalli tosi myös tasoille 2–3 kynnyksen yllä.
+            var nakyvyys = !ryhma && Symbolimallit.OnMalli(s.Id) ? Visibility.Hidden : Visibility.Visible;
             if (m.Symboli.style.visibility != nakyvyys) m.Symboli.style.visibility = nakyvyys;
             // Merkin laatikko = ikoniruutu keskipisteen ympärillä; kuviot (16 yksikköä) keskelle.
             float ruutuPx = 2f * m.Ruutu * m.Mitta, kuvioPx = 16f * m.Mitta;
