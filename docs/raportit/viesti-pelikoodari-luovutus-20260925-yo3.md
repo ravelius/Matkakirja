@@ -233,7 +233,7 @@ MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (
 - Skriptit: lokit/loydos155/kreikka-natiivi.sh (muste loyda kaikki GRC → aja → nipistys kerroin ~3 → [kallistus]),
   kreikka-web.mjs (web, kerroin iteroiden), e-musiikki.sh.
 
-## 22. Lisäys 26.9. klo 11.3x — MUSIIKKI VAIHEET 2+3 KYTKETTY, 155 0,85
+## 22. Lisäys 26.9. klo 11.2x — MUSIIKKI VAIHEET 2+3 KYTKETTY, 155 0,85
 - 155: omistaja valitsi koon 0,85. Web #3311 mainissa (v2264). Natiivi pelikoodari/loydos155-085 4a5a7a4e → Natiiviseppä (build 20).
 - Vaihe 3 generoitu ja hyväksytty (omistaja 11.0x): 8 maanosaa + 6 tunnuskaupunkia ämpärissä, lista
   docs/raportit/musiikki-vaihe3-kuunneltavaksi.md. Lyria hylkäsi Istanbulin nimen → kuvattu paikkana.
