@@ -7243,3 +7243,7 @@ Karttaseppa: omistajan hyvaksynnalla (Karttasepan sessiossa) v3 pysaytetty siist
 ## SISALTOKIRJURIN LUOVUTUS -C: 158 VALMIS, ASTRONAUTTI ERA 1 ODOTTAA (26.9.2026 klo 19.03)
 
 Sisaltokirjuri: luovutus viesti-sisaltokirjuri-luovutus-20260926-c.md mainissa 18581616c; loydos 158 (kuvat maakuntanostoihin ja pikkukuviin) kokonaan valmis v2274; Astronautin era 1 (23 kaupunkia) haarassa astro-era1-kaupungit-20260926 odottaa Pelikoodarin build-questions.mjs-yleistysta (Fable pyysi 19.0x); maakunta-era 2 (CHE/PRT/HUN/SWE/NOR/IRL) jonossa.
+
+## Z10 204/419 KLO 19.17, 3,4 SHARDIA/MIN (26.9.2026 klo 19.17)
+
+Karttaseppa: v4 8 ytimella 3,4 shardia/min, free 77 %, ei pysaytyksia. Osa 1 valmis n. 20.20, maakunnat alkavat automaattisesti peraan. Pelikoodari: build-questions.mjs-yleistys PR #3339 (koeyhdistys Sisaltokirjurin haaran kanssa 87 kohdetta, 4403/4403).
