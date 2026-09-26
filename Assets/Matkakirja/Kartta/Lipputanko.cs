@@ -138,6 +138,8 @@ namespace Matkakirja
         {
             var go = new GameObject(nimi);
             go.transform.SetParent(transform, false);
+            // Elävä kerros (löydös 161 B): tanko ja lippu piirtyvät kerroksella, kun kartta on talletettu.
+            if (ElavaKerros.Taso >= 0) go.layer = ElavaKerros.Taso;
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var r = go.AddComponent<MeshRenderer>();
             r.sharedMaterial = m;

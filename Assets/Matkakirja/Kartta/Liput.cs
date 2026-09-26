@@ -58,6 +58,7 @@ namespace Matkakirja
 
         static readonly List<Aalto> kahvat = new List<Aalto>();
         static readonly Func<bool> muuttuuEhto = Muuttuu;
+        static readonly Func<bool> jatkuvaEhto = MuuttuuJatkuva;
         static Material materiaali;
         static bool varjostinHaettu;
         static LiputAjuri ajuri;
@@ -247,14 +248,16 @@ namespace Matkakirja
 
         internal static void Rekisteroi(bool paalle)
         {
-            if (paalle) PallonLepo.Animoi(muuttuuEhto, "liput");
-            else PallonLepo.Poista(muuttuuEhto);
+            // Jatkuvat (lipputanko) elävällä kerroksella: kartta ei piirry niiden takia (löydös 161 B).
+            if (paalle) { PallonLepo.Animoi(muuttuuEhto, "liput"); ElavaKerros.Animoi(jatkuvaEhto, "lippu", Fps); }
+            else { PallonLepo.Poista(muuttuuEhto); ElavaKerros.Poista(jatkuvaEhto); }
         }
 
         /// <summary>Aaltoilun kello ja voima tällä hetkellä.</summary>
         static void Tila(Aalto k, out float aika, out float voima)
         {
-            if (SeuraaSyketta && !k.Jatkuva) { aika = Joutosyke.Aika; voima = Joutosyke.Voima; }
+            // Jatkuva lippu seuraa silti sykettä, kun animaatiot ovat staattisia (lämpö, virransäästö; ElavaKerros.Staattinen).
+            if ((SeuraaSyketta && !k.Jatkuva) || (k.Jatkuva && ElavaKerros.Staattinen)) { aika = Joutosyke.Aika; voima = Joutosyke.Voima; }
             else { aika = Time.unscaledTime; voima = 1f; }
         }
 
@@ -268,7 +271,20 @@ namespace Matkakirja
             if (kahvat.Count == 0) return false;
             foreach (var k in kahvat)
             {
-                if (!k.nakyy) continue;
+                if (!k.nakyy || (k.Jatkuva && !ElavaKerros.Staattinen)) continue;
+                Tila(k, out float aika, out float voima);
+                if (k.likainen || (!k.staattinen && !Sama(k, aika, voima))) return true;
+            }
+            return false;
+        }
+
+        /// <summary>Elävän kerroksen ehto: jatkuva näkyvä lippu muuttuisi (lipputanko, löydös 161).</summary>
+        static bool MuuttuuJatkuva()
+        {
+            if (ElavaKerros.Staattinen) return false;
+            foreach (var k in kahvat)
+            {
+                if (!k.nakyy || !k.Jatkuva) continue;
                 Tila(k, out float aika, out float voima);
                 if (k.likainen || (!k.staattinen && !Sama(k, aika, voima))) return true;
             }

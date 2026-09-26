@@ -432,6 +432,17 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA huntu: paljastus ({plat}, {plon}) säde {pkm} km, reuna {preuna} km");
                     break;
                 }
+                case "pallo" when o.Length > 1 && o[1] == "kerros":
+                {
+                    // pallo kerros tila|pois|paalle|pakota taysi|kerros|auto (elävä kerros, löydös 161 B)
+                    string m = o.Length > 2 ? o[2] : "tila";
+                    if (m == "pois" || m == "paalle") ElavaKerros.Kaytossa = m == "paalle";
+                    else if (m == "pakota" && o.Length > 3)
+                        ElavaKerros.Pakota = o[3] == "taysi" ? ElavaKerros.Pakotus.Taysi : o[3] == "kerros" ? ElavaKerros.Pakotus.Kerros : ElavaKerros.Pakotus.Auto;
+                    PallonLepo.Muuttui("pallo kerros");
+                    Debug.Log("MATKAKIRJA pallo kerros " + m + ": " + ElavaKerros.Kuvaus());
+                    break;
+                }
                 case "pallo" when o.Length > 1 && o[1] == "lepo":
                     // Lämpöerä: pallon lepotila ja syy (PallonLepo.Kuvaus); ei herätä palloa (ks. loppu).
                     Debug.Log(PallonLepo.Kuvaus());

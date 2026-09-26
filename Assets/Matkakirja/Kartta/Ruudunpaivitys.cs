@@ -33,7 +33,9 @@ namespace Matkakirja
         public const int PaikallaanVali = 60;
         public const float KuumaSkaala = 0.7f;
 
-        public enum Tila { Taysi, Lepo, Paikallaan }
+        /// <summary>KERROS (löydös 161 B, ElavaKerros): kuten PAIKALLAAN, mutta elävän kerroksen animaatiot piirtyvät omalla
+        /// taajuudellaan (kartta talletettuna, vain Elava-layer).</summary>
+        public enum Tila { Taysi, Lepo, Paikallaan, Kerros }
 
         public static Ruudunpaivitys Instanssi { get; private set; }
         /// <summary>UI rauhassa: ei animaatiota, kirjoituskonetta, pulun liikettä tai siirtymää (Natiivi-UI asettaa).</summary>
@@ -128,9 +130,14 @@ namespace Matkakirja
             if (nyt - viimeLiike < TaysiPitoS) uusi = Tila.Taysi;
             else if (Muuttuu(out var muutos)) { uusi = Tila.Lepo; Syy = muutos; }
             else { uusi = Tila.Paikallaan; Syy = "paikallaan"; }
+            // Elävä kerros (ElavaKerros): paikallaan, mutta Elava-kohteet animoivat → piirto joka kehys vain niille.
+            int kerrosFps = 0;
+            if (uusi == Tila.Paikallaan && !kameraPois && ElavaKerros.Tarvitaan(out kerrosFps)) { uusi = Tila.Kerros; Syy = "elävä kerros"; }
+            else if (ElavaKerros.Pakota == ElavaKerros.Pakotus.Kerros && !kameraPois && uusi == Tila.Lepo && ElavaKerros.Tarvitaan(out kerrosFps)) { uusi = Tila.Kerros; Syy = "elävä kerros (pakotettu)"; }
+            ElavaKerros.Pyyda(uusi == Tila.Kerros, kerrosFps);
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
-            int fps = Math.Min(uusi == Tila.Taysi ? Naytto : LepoFps, katto);
+            int fps = Math.Min(uusi == Tila.Taysi ? Naytto : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
             int vali = uusi == Tila.Paikallaan ? PaikallaanVali : 1;
             if (Application.targetFrameRate != fps) Application.targetFrameRate = fps;
             if (OnDemandRendering.renderFrameInterval != vali) OnDemandRendering.renderFrameInterval = vali;
