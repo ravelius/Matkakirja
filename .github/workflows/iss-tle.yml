@@ -1,0 +1,64 @@
+# ISS-TLE ämpäriin 6 tunnin välein (Siirtoseppä 26.9.2026; Linssisepän tilaus,
+# omistaja hyväksyi docs/raportit/iss-linssi-suunnitelma-20260926.md).
+#
+# Yksi pyyntö CelesTrakiin per ajo (CelesTrak toivoo säästeliästä käyttöä;
+# GP-data päivittyy muutaman kerran vuorokaudessa). Pelaajat hakevat vain
+# ämpäristä: media.matkakirja.app/data/iss-tle.json. tools/iss-tle.mjs
+# tarkistaa rivit (NORAD 25544, tarkistussummat); virhe kaataa ajon ENNEN
+# kirjoitusta, joten ämpäriin jää edellinen versio eikä koskaan tyhjää.
+# Ajokone on GitHubin ubuntu, ei omistajan Mac.
+
+name: ISS-TLE ämpäriin
+
+on:
+  schedule:
+    # 6 h välein, minuutti 17 (ei tasatunnin ruuhkaa CelesTrakissa).
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iss-tle
+  cancel-in-progress: false
+
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Hae TLE CelesTrakista
+        run: node tools/iss-tle.mjs --ulos iss-tle.json
+
+      - name: Vie ämpäriin
+        env:
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          aws s3 cp iss-tle.json "s3://$R2_AMPARI/data/iss-tle.json" \
+            --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+            --content-type 'application/json; charset=utf-8' \
+            --cache-control 'public, max-age=3600' --no-progress
+
+      # Takaisinluku julkisesta osoitteesta: sama sisältö (CDN voi palauttaa
+      # hetken vanhaa, joten kysely ohittaa välimuistin).
+      - name: Tarkista julkinen osoite
+        run: |
+          set -euo pipefail
+          curl -fsS "https://media.matkakirja.app/data/iss-tle.json?t=$(date +%s)" -o julkinen.json
+          node -e "const a=require('fs').readFileSync('iss-tle.json','utf8'),b=require('fs').readFileSync('julkinen.json','utf8');if(JSON.parse(a).rivi1!==JSON.parse(b).rivi1){console.error('julkinen eri kuin viety');process.exit(1)}"
+          cat julkinen.json
