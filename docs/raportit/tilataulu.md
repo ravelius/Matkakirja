@@ -24,6 +24,8 @@ Uusi tili klo 12:08: viikko (all models) **12 %**, viikko (Fable) 8 %, 5 h **44 
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
+**12:10 Fablen ylimääräinen muistipainekierros:** Natiivisepän simulaattori ei käynnistynyt (muistipaine, swap oli 15,7 Gt). Simulaattoritarkistus: vain **pariteetti-iPhone** boottina (Natiivi-UI:n sallittu pariteettiajo) — ei muita sammutettavia. Lähetetty Julkaisijalle: aja mainin sarja ENSIN; Pelikoodarille: odota Julkaisijaa ennen esilataaja-savukeajoa. **Julkaisija vastasi 12.1x: mainin sarja (36229149241) valmistui jo 11.4x, ei savukkeita käynnissä (vain PR-savukkeita: 1 käynnissä, 2 jonossa), ilmoittanut itse Pelikoodarille** — ei siis pinoontuvaa konfliktia. Raportoidaan Fablelle kun swap <12 Gt tai 20 min kuluttua (viim. 12:30).
+
 **12:0x: Fable löysi levyn syyn — CoreSimulator/Devices 78 Gt (19 laitetta; offline-sarja 26 latautuu joka simulaattoripeliin ~2 Gt + PRBPoster-roska 4,4 Gt/laite).** Ei purge-toistoa. Korjaus etenee: Laitetestaaja siivoaa käyttämättömät laitteet, Siirtoseppä + Natiiviseppä kytkevät offline-latauksen pois oletuksena. Sisältökirjurille (70 %) välitetty pyyntö: luovutus + kontekstin nollaus BEL-PR:n jälkeen.
 
 **11:54 KAKSI ILMOITUSTA FABLELLE:**
