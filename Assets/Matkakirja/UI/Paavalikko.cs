@@ -131,8 +131,10 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti("Striimiääni", "mk-kytkinrivi__nimi", striimi);
             var striimiNimet = new List<string> { Striimiaani.Oletus + " (oletus)" };
             foreach (var a in Striimiaani.Aanet) if (a != Striimiaani.Oletus) striimiNimet.Add(a);
-            striimiaani = Lomake.Valinta(striimi, striimiNimet);
+            striimiaani = new DropdownField(striimiNimet, 0);
             striimiaani.AddToClassList("mk-kytkinrivi__valinta");
+            Kirjasimet.Aseta(striimiaani, Kirjasin.Kone);
+            striimi.Add(striimiaani);
             striimiaani.RegisterValueChangedCallback(e =>
             {
                 var valittu = Striimiaani.Aseta(striimiaani.index > 0 ? e.newValue : null);
