@@ -25,7 +25,7 @@
   "1.44": "21ebc85d60d4db64",
   "1.45": "f2f2e3b5ee71c11f",
   "1.46": "e04def76b9069363",
-  "1.47": "a6efa8144b4e4827"
+  "1.47": "293c3b3783dd4ab6"
  },
  "uusin": {
   "skeemaversio": "1.47",
@@ -174,24 +174,19 @@
     "lat",
     "liitetytNostot",
     "lon",
-    "lyhyt",
     "maa",
     "maakunta",
     "maakuntaLahde",
-    "nappi",
     "nimi",
     "nimio",
     "paakartalla",
     "paikka",
     "paikkaLahde",
     "puoli",
-    "salaisuus",
     "takynosto",
     "tarkeys",
     "taso",
-    "teksti",
-    "tunnus",
-    "viite"
+    "tunnus"
    ],
    "kaupungit": [
     "aloitus",
@@ -438,6 +433,25 @@
     "renkaat",
     "salaisuus",
     "vari"
+   ],
+   "maakuntasalaisuudet": [
+    "aihe",
+    "id",
+    "kategoria",
+    "kokoluokka",
+    "laji",
+    "lat",
+    "lon",
+    "lyhyt",
+    "maa",
+    "maakunta",
+    "maakuntaNimi",
+    "nappi",
+    "nimi",
+    "nimio",
+    "teksti",
+    "tunnus",
+    "viite"
    ],
    "maalehdet": [
     "aiheet",

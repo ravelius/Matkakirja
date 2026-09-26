@@ -86,7 +86,7 @@ export function maakuntaPisteelle(alueetMaittain, iso, lon, lat, { lahin = true 
   return paras ? { id: paras.id, lahde: 'lahin' } : null;
 }
 
-export function rikastaElavaKartta(kokoelmat) {
+export function rikastaElavaKartta(kokoelmat, taulukko) {
   const alueet = kokoelmat.maakuntarajat?.alkiot ?? [];
   const alueetMaittain = new Map();
   for (const a of alueet) {
@@ -107,33 +107,35 @@ export function rikastaElavaKartta(kokoelmat) {
     + `piste on (maakuntaLahde sisalla | lahin = lähin saman maan alue ≤ ${LAHIN_KM} km; meri ei saa maakuntaa; null = ei maakuntaa).`;
   kokoelmat.maakuntarajat.kuvaus += ' Skeema 1.45: salaisuus = maakunnan salaisuus-noston karttavalo-id (js/packs/maakuntasalaisuudet.js) tai null.';
   /*
-   * 1.47: salaisuus-nosto omana karttavalorivinään (Pelikoodari: natiivin ei tarvitse jäsentää maakuntarajoja yhden
-   * viitteen takia). salaisuus = true, aina paakohde, piilossa kunnes maakunnan kaikki nostot on löydetty (natiivi).
+   * 1.47: maakuntien salaisuus-nostot OMANA KOKOELMANAAN (Pelikoodari: ei maakuntarajojen jäsennystä yhden viitteen
+   * takia; Natiiviseppä: ei karttavaloriveiksi, koska build 16/17 piirtäisi ne tavallisina nostoina).
    */
-  for (const v of kokoelmat.karttavalot.alkiot) v.salaisuus = false;
   const alueNimet = new Map(alueet.map((a) => [a.id, a.nimi]));
+  const salaiset = [];
   for (const [maakunta, avain] of Object.entries(MAAKUNTASALAISUUDET)) {
     const s = SALAISUUKSIEN_SISALTO[avain];
     if (!s || !Number.isFinite(s.lat) || !Number.isFinite(s.lng)) continue;
     const iso = maakunta.split(':')[0];
     const tunnus = avain.replace(/^nosto:/, '');
     const kategoria = kohteenKategoria({ tyyppi: s.tyyppi }) ?? 'historia';
-    kokoelmat.karttavalot.alkiot.push({
-      ankkuri: null, puoli: null, id: `salaisuus:${tunnus}`, tunnus, aihe: nostosymPaakategoria(kategoria), kategoria,
-      laji: s.tyyppi ?? null, nimi: s.nimi, nimio: s.nimio ?? null, lat: s.lat, lon: s.lng, ladottu: null, maa: iso,
-      kaupunki: null, kaupunkiAvain: null, tarkeys: 1, taso: 1, lahizoom: false, paakartalla: true, kohdekartta: null,
-      paikka: alueNimet.get(maakunta) ?? maakunnanNimi(iso, maakunta.slice(iso.length + 1)), paikkaLahde: 'alue',
-      lahde: 'maakuntasalaisuus', kokoluokka: 'paakohde', kokoluokkaLahde: 'data', maakunta, maakuntaLahde: 'data',
-      salaisuus: true, lyhyt: s.lyhyt ?? null, teksti: s.teksti ?? null, nappi: s.nappi ?? null, viite: s.lahde ?? null,
+    salaiset.push({
+      id: `salaisuus:${tunnus}`, tunnus, maa: iso, maakunta,
+      maakuntaNimi: alueNimet.get(maakunta) ?? maakunnanNimi(iso, maakunta.slice(iso.length + 1)),
+      nimi: s.nimi, nimio: s.nimio ?? null, laji: s.tyyppi ?? null, kategoria, aihe: nostosymPaakategoria(kategoria),
+      kokoluokka: 'paakohde', lat: s.lat, lon: s.lng,
+      lyhyt: s.lyhyt ?? null, teksti: s.teksti ?? null, nappi: s.nappi ?? null, viite: s.lahde ?? null,
     });
   }
-  kokoelmat.karttavalot.kuvaus += ' Skeema 1.47: salaisuus = true maakunnan salaisuus-nostolle (lahde maakuntasalaisuus, '
-    + 'id salaisuus:<tunnus>, aina paakohde, maakunta annettu, nimio datan oma ≤ 18 merkkiä tai null; lyhyt = Livian repliikki, teksti, nappi = 1873-alaotsikko, '
-    + 'viite = lähdeteksti; js/packs/maakuntasalaisuudet-<iso>.js). Natiivi piilottaa sen, kunnes maakunnan kaikki nostot on löydetty. '
-    + 'Muilla riveillä salaisuus = false.';
-  const valot = new Map(kokoelmat.karttavalot.alkiot.map((v) => [v.tunnus, v.id]));
+  kokoelmat.maakuntasalaisuudet = taulukko('js/packs/maakuntasalaisuudet.js + maakuntasalaisuudet-<iso>.js (Sisältökirjuri)',
+    'Maakuntien salaisuus-nostot (skeema 1.47, Elävä kartta, vain natiivi): yksi maakuntaa kohden, aina paakohde. '
+      + 'id = salaisuus:<tunnus>, maakunta = maakuntarajojen id, maakuntaNimi, nimi, nimio (datan oma ≤ 18 merkkiä tai null), '
+      + 'laji = kohteen tyyppi, kategoria ja aihe kuten karttavaloissa, lat/lon, lyhyt = Livian repliikki, teksti, '
+      + 'nappi = 1873-alaotsikko, viite = lähdeteksti. Natiivi näyttää sen vasta, kun maakunnan kaikki nostot (karttavalot.maakunta) '
+      + 'on löydetty. Ei karttavaloissa, jotta vanhat buildit eivät piirrä sitä.',
+    { maakunta: 'maakuntarajat' }, salaiset);
   for (const a of alueet) {
     const tunnus = MAAKUNTASALAISUUDET[a.id];
-    a.salaisuus = tunnus ? (valot.get(tunnus) ?? valot.get(tunnus.replace(/^nosto:/, '')) ?? null) : null;
+    a.salaisuus = tunnus && salaiset.some((x) => x.tunnus === tunnus.replace(/^nosto:/, ''))
+      ? `salaisuus:${tunnus.replace(/^nosto:/, '')}` : null;
   }
 }
