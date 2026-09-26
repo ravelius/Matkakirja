@@ -848,7 +848,7 @@ test('nippu 4: muotokuvat, laattakuvat, karttamerkit, linssiluennat, kätkökuva
   const laatta = K('laatat')[0];
   assert.match(laatta.mannerKuvat.europe.star.url, /^https:\/\//);
   assert.ok(K('paikallisaarteet').every((a) => /^[A-Z]{3}$/.test(a.maa) && a.data.pieniAarre?.name && a.data.isoAarre?.name), 'maa, tyyppi ja nimi');
-  assert.equal(K('karttamerkit').length, 11);
+  assert.equal(K('karttamerkit').length, 14);
   const ll = K('linssiaineisto').find((r) => r.id === 'linssiluennat').data;
   const { luennanOsoite } = await import('../js/linssipuhe.js');
   const { LINSSI } = await import('../js/linssit/keksinnot.js');
