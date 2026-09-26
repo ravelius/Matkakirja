@@ -1,7 +1,9 @@
 # Lento v3 -speksi (luonnos omistajan korttiin, 26.9.2026)
 
-*Linssiseppä (apuagentti) 26.9.2026 klo 23.4x Fablen tilauksesta (omistaja 22.2x). Ei koodia ennen hyväksyntää. Pohjana
-proto `juna/b13` 8a90b51f (LennonAikajana.cs, löydökset 120 v2 ja 172), kamerakäsikirjoitus 24.9., ESILATAUSPOLITIIKKA, S10.*
+*Linssiseppä (apuagentti) 26.9.2026 klo 23.4x Fablen tilauksesta (omistaja 22.2x; raamattu-loki 26.9. klo 22.20 "SAAPUMISLENTO
+RETRO-KAKSITASOLLA", Fablen haara). Ei koodia ennen hyväksyntää. Pohjana proto `juna/b13` 8a90b51f (LennonAikajana.cs,
+löydökset 120 v2 ja 172), kamerakäsikirjoitus 24.9., ESILATAUSPOLITIIKKA, S10. Fablen päätökset 27.9.: kysymys 4 ja kaanon
+(Fogg) alla.*
 
 Merkinnät: **[O]** = omistajan vaatimus (sitova). **[E]** = Linssisepän ehdotus (hyväksytään kortilla).
 
@@ -106,6 +108,8 @@ Commonsista, lisenssit tarkistettu tiedostosivuilta 26.9. Ne ovat vain viitteit�
 
 - **Kolmiot (~1 480):** runko ja moottorin suojus 360, pakoputki 40, siivet 440, tuet 90, vaijerit 48, pyrstö 120,
   laskuteline ja pyörät 170, ohjaamot, kypäräpäät ja huivi 130, potkuri 80, potkurilevy 2. Ääriviiva käännetyllä kuorella.
+- **Matkustajat (kaanon, Fable 27.9.):** etumaisen ohjaamon matkustaja punaisella huivilla ON Fogg (pelaaja), takana
+  ohjaava lentäjä on nimetön.
 - **Paletti** on hyväksytty seepiaramppi (21.4x) kuten 3D-merkeissä: paperi #efe4cc valaistut pinnat, seepia #8a6a44
   varjopuoli, muste #3b2f22 ääriviiva (1,2 pt), aukot ja vaijerit. Aksentti pelin punainen #9a3b2c huivissa ja
   potkurin kärjissä, noin 4 % alasta (raja 10 %). Ei kiiltoa.
@@ -199,5 +203,5 @@ pilvisumu, ELOKUVALLINEN ALOITUSLENTO, ALOITUSLENNON KAMERAKÄSIKIRJOITUS ja 25.
 2. **Lähestymissuunta:** kaupungin kuvauslinja (Ateena etelästä, vaikka lento tulee Lontoosta; ehdotus
    aloituskaupungeille) vai aina todellinen lentosuunta?
 3. **Loppu:** lasku ja rullaus renkaalle kameran lähestyessä 80 → 45 km (ehdotus) vai ohilento maamerkin yli?
-4. **Odotus:** riittävätkö käynnistysääni ja sykkivä rengas (ehdotus), vai yli 2 s:n odotukseen teksti "Kone lähtee…"?
+4. ~~Odotus~~ **PÄÄTETTY (Fable 27.9.):** käynnistysääni ja sykkivä rengas; teksti "Kone lähtee…" vain, jos odotus on yli 2 s.
 5. **Pilvet:** pelkkä utu (ehdotus) vai 2–4 paperista pilvenhattaraa, joiden ohi kone lentää?
