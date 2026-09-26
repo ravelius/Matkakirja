@@ -52,3 +52,5 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   iPad Pro 11 503000D1 -erase estettiin luokittimella → Fablelle vaihtoehdot, ei uusintaa.
   Omistaja tyhjensi 993F8873, 88939C12, C1D5E34C ja iPad Pro 11 503000D1 (sovellus+data pois, laitteet säilyvät): iPadilla
   ajo vaatii ensin proto-kaanna.sh-asennuksen. A2FD9C9F jäi (oli boottina). simctl erase -sallinta tulossa mainin kautta.
+- 164 jatko (pisteet-kalusteet) MERGETTY 1.0.23-junaan 1b9f193b. Natiivisepän mukaan 165 on todennäköisesti myös 163b:n
+  ("kohdemaan kartta puuttuu") juurisyy; hän ilmoittaa Fablelle. Kaikki erät nyt junassa, jono tyhjä.
