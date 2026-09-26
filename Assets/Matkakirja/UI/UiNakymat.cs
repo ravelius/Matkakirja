@@ -260,6 +260,14 @@ namespace Matkakirja.Natiivi
             Chat = new PuluChat(kerros, Pulu);
             Traileri = new Saapumistraileri(kerros);
             KaupunkiMerkit.Kalusteet = KartanKalusteet; // löydös 164
+            // Löydös 170: sisältöpaketti vaihtui kesken istunnon (Siirtoseppä) → maakunta- ja nostodata uudesta versiosta.
+            PakettiPaivitys.SisaltoVaihtui += (versio, muuttuneet) =>
+            {
+                MaakuntaTiedot.Hylkaa();
+                NostoSisalto.Hylkaa();
+                Karttaselite?.Maakunnat?.SisaltoVaihtui();
+                Debug.Log($"MATKAKIRJA ui: sisältö v{versio} käyttöön kesken istunnon ({muuttuneet?.Count ?? 0} muuttunutta): maakunta- ja nostodata hylätty");
+            };
             // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin pallonäkymässä
             // ison pulun napautus ei avaa pääkeskustelua (löydös 96); kuvanäkymässä keskustelu on minipulun kortissa.
             Pulu.Napautus += Chat.Vaihda;

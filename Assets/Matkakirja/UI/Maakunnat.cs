@@ -133,6 +133,30 @@ namespace Matkakirja.Natiivi
 
         public void SuljeKortti() => kortti.Sulje();
 
+        /// <summary>
+        /// Löydös 170: sisältöpaketti vaihtui kesken istunnon → luonnehdinnat ja Pulun kysymykset uudelleen (pikkukuvat uusista
+        /// osoitteista) ja näkyvä luonnehdinta päivitetään. Maalista (nimet) pysyy; se muuttuu vain skeeman mukana.
+        /// </summary>
+        public void SisaltoVaihtui()
+        {
+            if (!rakennettu || !UiKerros.Olemassa) return;
+            UiKerros.Hae().StartCoroutine(LataaLuonnehdinnat());
+        }
+
+        System.Collections.IEnumerator LataaLuonnehdinnat()
+        {
+            string luonn = null, kysymykset = null;
+            yield return LinssiSisalto.Hae("moduulit/js/packs/maakunnat-luonnehdinnat.json", t => luonn = t);
+            yield return LinssiSisalto.Hae("moduulit/js/packs/maakunnat-pulu.json", t => kysymykset = t);
+            try
+            {
+                if (luonn != null) luonnehdinnat = Viennit(luonn, "MAAKUNTIEN_LUONNEHDINNAT");
+                if (kysymykset != null) pulu = Viennit(kysymykset, "MAAKUNTIEN_PULU");
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui maakunnat: uusi sisältö: " + e.Message); }
+            PaivitaLuonnehdinta();
+        }
+
         System.Collections.IEnumerator Lataa()
         {
             string nimet = null, luonn = null, kysymykset = null;
