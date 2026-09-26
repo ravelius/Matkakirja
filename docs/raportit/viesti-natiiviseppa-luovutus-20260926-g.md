@@ -170,3 +170,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   tools/vienti/tilannekuva.mjs --versio N --ulos <kansio> (Matkakirja-repo). NATIIVISEPPÄ: buildivaihe laattapaketin tapaan (ei gitiin;
   Build/tilannekuva/ käännöksen alussa uusin.jsonin versiolla → Data/Raw/sisalto/tilannekuva/ PostProcessBuildissa, ks.
   LaattapakettiRakennus.Varmista/KopioiBuildiin) + maamaa.geojson Mukana-kansioon (Maaraja lukee sen; ei paketissa). 1.48 kuitattu ok.
+- natiiviseppa/kohta1-maamaa **30056ed0** (juna fd29a2ae:n päällä): maamaa.geojson laattapakettiin sarjana "maarajat" (Editor + mjs). Käännöspalvelu todentaa Editor-käännöksen ja paketin uudelleenrakennuksen (Z5 + maarajat) → sitten junaan. unity-tarkistus EI käännä Editor-kansiota.
