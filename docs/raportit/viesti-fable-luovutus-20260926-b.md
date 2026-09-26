@@ -43,3 +43,11 @@ Pelikoodarin oppi: yhteinen haku hidasti kylmää käynnistystä (1 159/915 → 
 3. Musiikin vaihe 1 -erä omistajalle kuunneltavaksi, kun Pelikoodari toimittaa.
 4. Elävän kartan kohta 1 kuvapari omistajalle; sitten kohdat 2–3.
 5. Löydökset 153 → raporttiin ja rooleille.
+
+## Päivitys klo 08.3x (omistaja: "jatka 98 asti"; viikko ~96 %, lepokäsky 98 %:ssa)
+- Omistajan kortit: musiikin vaihe 1 kaikki 4 raitaa HYVÄKSYTTY (06.0x; leikattu, −11 LUFS = nykyisten taso, kytkentä build 20 + web); pohja 26 HYVÄKSYTTY natiiviin ja webiin (08.1x) → natiiviseppa/pohja-26 build 20, Julkaisija vaihtaa webin osoittimen (2026-09-26-pohja + PALLO_LAATTAVERSIO).
+- BUILD 19 = proto fdc47632 / käännös 343ca803, kierros PASS (b117edc23) → BUILD 1.0.19 Julkaisijalle 08.3x (korvaa viallisen 1.0.18:n: taustapäivityksen siivous poisti ladatun paketin). TARKISTA gh run list → push omistajalle "Build 19 TestFlightissa: 1.0.19 — sisältöpäivityksen korjaus, elävän kartan saapuminen ja maakunnan herääminen, käynnistys 4–5 s, 23 ääntä ja kuvakkeet buildissa".
+- Build 20 -jono: S6 verhon laitemittaus, S7 heränneen maakunnan pysyvä väri, S8 lepopiirto testitilassa, S9 salaisuuskortin laukaisija, pohja-26, musiikin kytkentä, elävän kartan kohta 2 (muste-jaljet + nosto-muste merge-pyynnössä) ja kohta 4 (Pelikoodari reittihistoria, Linssiseppä kynäviiva; sopivat suoraan), kohta 5 viimeisenä.
+- Webin meren harso: kohdemaan laatikossa meri 88 % harson alla (13.9. päätös 4) → resepti 26 ei näy siellä; Karttaseppä tekee GRC-kokeen (meri alfa 0) + kuvaparin → OMISTAJAN KORTTI ennen muiden maiden polttoa.
+- Maakuntanimet suomeksi tuotannossa v148 (#3297); 1.47 (#3285) ja 1.48 lehdet kaupungeittain (#3298) Julkaisijalla; Codex 503 valmis (#3296 viimeinen).
+- Oppi: omistajan kortti sitoi Fablen 06.0x–08.0x ja roolit odottivat → ennen korttia jaa roolien jonot; Postivahti pushaa jos roolit odottavat päätöstä > 30 min.
