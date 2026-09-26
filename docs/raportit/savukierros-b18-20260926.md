@@ -26,7 +26,11 @@ Pelikoodarin `verkko raja` jätetty pois (ei käännöksessä).
    sulkenut sitä; sulkeutuu vain kortin ulkopuolelle napautuksella). Kortin sulku linssiä avattaessa?
 3. `vieritys koe` vaatii vieritettävän ScrollView'n näkyviin (esim. laajennettu nosto) — ei ajettu sillä.
 
+## Täydennys (iPad, 05.3x) — PASS
+- **iPadin II (`linssi ihmisen-matka-2`):** otsikko "IHMISEN MATKA II" kokonaan, vuosiluku + värilegenda (Päävirta/Eurooppa/Siperia/Amerikat/Tyynimeri), soitin ⏮ ⏸ ⏭ ylärivillä; ☰: Poistu / Aloita alusta / Kertoja pois / Taustamusiikki päällä / **Tekstitys pois → päälle** toimii, tekstityslaatikko näkyy (kuvat 11–13).
+- `vieritys koe` laajennetun nostokortin päällä ajamatta (kortti-tila vaatii kosketuksen; jää b19:ään).
+
 ## Ei ajettu
-iPad: II/CC-kytkin, soitin (iPhonella todettu). `verkko raja` (ei käännöksessä).
+`verkko raja` (ei käännöksessä).
 
 Simulaattorit sammutettu.
