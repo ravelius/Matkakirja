@@ -61,3 +61,6 @@ Codexin 504/503-värikorjauserät (posti/codex-fable-miniatyyrien-varit-*) ilmoi
 Roolit jatkavat työtä viikkokiintiön 98 %:iin (ei pysähdystä 90 %:ssa; luovutukset ajan tasalla, pyyntö 05.21 lähetetty ja kuitattu). UUSI RAJA: viikko ≥98 % → lepokäsky KAIKILLE 9 roolille ("vie käsillä oleva erä pushiin ja lepää") + PushNotification omistajalle "Viikkokiintiö täynnä — vaihda tili" + ilmoitus Fablelle. (Aiempi 97 %:n push korvattu 98 %:lla.) Välitys 9 roolille lähetetty 05.3x. 5 h nollautui 05.30.
 
 KORJAUS 05.32: 5 h -kiintiö nollautuu seuraavaksi klo **08.30 EEST** (resetsAt 05:30Z), ei 05.30. Viikkoraja ti 29.9. klo 02.00 EEST. Viikko 91 % klo 05.32 (~5 %/h → 98 % ~06.55–07.10).
+
+## Päivitys 26.9. klo 08.0x (Fable)
+Roolit odottivat Fablea (omistajan kortti sitoi sen 06.0x–08.0x), eivät jonon puutetta. Nyt työn alla: build 19 (1.0.18:n siivousvika), Laitetestaajan kierros, Linssiseppä kohdat 2/4/5, pohja 26 -kortti omistajalle. UUSI SÄÄNTÖ: jos FABLEN kortti on auki > 30 min JA roolit odottavat päätöstä → PushNotification omistajalle (nyt sallittu, omistaja hereillä). Muuten kierrokset kuten ennen; 98 %:n raja voimassa.
