@@ -18,6 +18,80 @@ namespace Matkakirja
         /// <summary>Sage lämpimämpänä oliivina (paletin sage #7a9a92 näytti kartalla sinertävältä pinnalta).</summary>
         static readonly Color Oliivi = Hex(0x7f8f6a);
 
+        // ---- Maakontakti (löydös 175c kohta 5, Linssiseppä) ----
+
+        /// <summary>Maakontaktilevyn säde mallin leveydestä (0,6 ×).</summary>
+        public const float PohjaSade = 0.6f;
+        /// <summary>Levyn peitto keskellä (varjo #887858), laskee reunalla nollaan.</summary>
+        const float PohjaPeitto = 0.42f;
+        static readonly int PohjaId = Shader.PropertyToID("_Pohja"), ZTestId = Shader.PropertyToID("_ZTest"),
+            ZWriteId = Shader.PropertyToID("_ZWrite");
+        static Mesh pohjaVerkko;
+
+        /// <summary>
+        /// Pehmeä varjolevy mallin alle: säde 1 paikallisen XZ-tason origossa, 24 sektoria ja kolme rengasta; kärkivärinä
+        /// varjo, alfa keskellä <see cref="PohjaPeitto"/> ja reunalla 0 (smoothstep-lasku, ei kovaa reunaa). Etupuoli +Y.
+        /// </summary>
+        static Mesh PohjaVerkko()
+        {
+            if (pohjaVerkko != null) return pohjaVerkko;
+            const int sektoreita = 24;
+            float[] renkaat = { 0.35f, 0.7f, 1f };
+            var v = new List<Vector3> { Vector3.zero };
+            var c = new List<Color>();
+            var lin = Varjo.linear;
+            c.Add(new Color(lin.r, lin.g, lin.b, PohjaPeitto));
+            foreach (float r in renkaat)
+            {
+                var vari = new Color(lin.r, lin.g, lin.b, PohjaPeitto * (1f - Mathf.SmoothStep(0f, 1f, r)));
+                for (int i = 0; i < sektoreita; i++)
+                {
+                    float a = i * Mathf.PI * 2f / sektoreita;
+                    v.Add(new Vector3(Mathf.Cos(a) * r, 0f, Mathf.Sin(a) * r));
+                    c.Add(vari);
+                }
+            }
+            var t = new List<int>();
+            void Kolmio(int a, int b, int d)
+            {
+                // Etupuoli ylös (Unity: Cross(b − a, d − a) osoittaa katsojaan päin).
+                if (Vector3.Cross(v[b] - v[a], v[d] - v[a]).y < 0f) (b, d) = (d, b);
+                t.Add(a); t.Add(b); t.Add(d);
+            }
+            for (int i = 0; i < sektoreita; i++) Kolmio(0, 1 + i, 1 + (i + 1) % sektoreita);
+            for (int j = 0; j + 1 < renkaat.Length; j++)
+                for (int i = 0; i < sektoreita; i++)
+                {
+                    int q = (i + 1) % sektoreita, s0 = 1 + j * sektoreita, s1 = s0 + sektoreita;
+                    Kolmio(s0 + i, s1 + i, s1 + q);
+                    Kolmio(s0 + i, s1 + q, s0 + q);
+                }
+            var n = new List<Vector3>(v.Count);
+            for (int i = 0; i < v.Count; i++) n.Add(Vector3.up);
+            pohjaVerkko = new Mesh { name = "Symbolimalli-maakontakti" };
+            pohjaVerkko.SetVertices(v); pohjaVerkko.SetNormals(n); pohjaVerkko.SetColors(c); pohjaVerkko.SetTriangles(t, 0);
+            pohjaVerkko.RecalculateBounds();
+            return pohjaVerkko;
+        }
+
+        /// <summary>Mallin leveys levyn mitoitukseen: verkon rajojen suurempi vaakamitta (X tai Z).</summary>
+        static float Leveys(Mesh m)
+        {
+            var s = m.bounds.size;
+            return Mathf.Max(0.1f, Mathf.Max(s.x, s.z));
+        }
+
+        /// <summary>Levyn materiaali mallin materiaalista: _Pohja 1, ZTest Always, ZWrite Off, piirto ennen mallia.</summary>
+        static Material PohjaMateriaali(Material malli)
+        {
+            var m = new Material(malli) { name = malli.name + " (maakontakti)" };
+            m.SetFloat(PohjaId, 1f);
+            m.SetFloat(ZTestId, (float)UnityEngine.Rendering.CompareFunction.Always);
+            m.SetFloat(ZWriteId, 0f);
+            m.renderQueue = malli.renderQueue - 1;
+            return m;
+        }
+
         /// <summary>Tasavarjostettu verkko (kärjet tahkoittain, normaali tahkosta), kärkivärit lineaarisina.</summary>
         sealed partial class Rakentaja
         {

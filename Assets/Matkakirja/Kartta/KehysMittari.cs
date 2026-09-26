@@ -54,6 +54,8 @@ namespace Matkakirja
 
         // Lämpöerä (Fable 25.9.): kehysten jakauma Ruudunpaivityksen tiloihin ja piirretyt kehykset jaksolla.
         int nTaysi, nLepo, nPaikallaan, nPeitto, piirretty, kehyksia;
+        // Löydös S10: kehykset, joissa Cesium valitsi laatat liikkeen varjokameralla (LiikeLaatat, SSE-vastine).
+        int nVarjo;
 
         void Update()
         {
@@ -63,6 +65,7 @@ namespace Matkakirja
             kehyksia++;
             if (UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender) piirretty++;
             Gpu();
+            if (LiikeLaatat.Nyt == LiikeLaatatPaatos.Valinta.Varjo) nVarjo++;
             var r = Ruudunpaivitys.Instanssi;
             if (pallo != null && pallo.Peitetty) nPeitto++;
             else if (r == null || r.Nyt == Ruudunpaivitys.Tila.Taysi) nTaysi++;
@@ -97,16 +100,21 @@ namespace Matkakirja
         void Kirjaa()
         {
             float akku = SystemInfo.batteryLevel;
+            // Löydös S10: liikkeen tavoite seuraa Ruudunpaivityksen liikkeen kattoa (120 vs 60 Hz A/B), jotta yli15x on vertailukelpoinen.
+            int katto = Ruudunpaivitys.LiikeKatto;
+            float liikeTavoite = katto > 0 ? Mathf.Max(tavoite, 1000f / katto) : tavoite;
             string rivi = "{" +
-                $"\"t\":{F(Time.realtimeSinceStartup)},\"tavoiteMs\":{F(tavoite)}," +
-                $"\"liike\":{Tilasto(liike, tavoite)},\"lepo\":{Tilasto(lepo, 1000f / Ruudunpaivitys.LepoFps)},\"peitto\":{Tilasto(peitto, 1000f / Ruudunpaivitys.LepoFps)}," +
+                $"\"t\":{F(Time.realtimeSinceStartup)},\"tavoiteMs\":{F(liikeTavoite)}," +
+                $"\"liike\":{Tilasto(liike, liikeTavoite)},\"lepo\":{Tilasto(lepo, 1000f / Ruudunpaivitys.LepoFps)},\"peitto\":{Tilasto(peitto, 1000f / Ruudunpaivitys.LepoFps)}," +
                 $"\"kehyksia\":{kehyksia},\"piirretty\":{piirretty}," +
                 $"\"tilat\":{{\"taysi\":{nTaysi},\"lepo\":{nLepo},\"paikallaan\":{nPaikallaan},\"kerros\":{nKerros},\"peitto\":{nPeitto}}}," +
                 $"\"gpuMs\":{(gpuN > 0 ? F((float)(gpuSumma / gpuN)) : "null")},\"gpuKehyksia\":{gpuN}," +
+                $"\"valinta\":{{\"varjo\":{nVarjo},\"sse\":{F(LiikeLaatat.Sse)},\"nyt\":\"{LiikeLaatatPaatos.Nimi(LiikeLaatat.Nyt)}\"}}," +
+                $"\"liikeKatto\":{katto}," +
                 $"\"fps\":{Application.targetFrameRate},\"thermal\":{Lampo.ThermalState},\"lampo\":\"{Lampo.Taso}\"," +
                 $"\"virransaasto\":{(Lampo.Virransaasto ? "true" : "false")},\"akku\":{(akku >= 0 ? F(akku * 100f) : "-1")}," +
                 VerkkoOdotus.Rivi() + "}";
-            nTaysi = nLepo = nPaikallaan = nKerros = nPeitto = piirretty = kehyksia = 0;
+            nTaysi = nLepo = nPaikallaan = nKerros = nPeitto = piirretty = kehyksia = nVarjo = 0;
             gpuSumma = 0; gpuN = 0;
             if (polku != null) File.AppendAllText(polku, rivi + "\n");
             Debug.Log("MATKAKIRJA kehysajat " + rivi);
