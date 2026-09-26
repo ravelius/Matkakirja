@@ -42,7 +42,8 @@ Shader "Matkakirja/Symbolimalli"
                 o.positionCS = TransformObjectToHClip(i.positionOS.xyz);
                 o.n = TransformObjectToWorldNormal(i.normalOS);
                 o.vari = i.vari;
-                o.usvaY = UsvaYlhaalta(o.positionCS);
+                // Usva mallin jalkapisteestä (symboli paikassaan): korkea malli ei haalistu yläpäästään horisonttiin.
+                o.usvaY = UsvaYlhaalta(TransformObjectToHClip(float3(0, 0, 0)));
                 return o;
             }
 

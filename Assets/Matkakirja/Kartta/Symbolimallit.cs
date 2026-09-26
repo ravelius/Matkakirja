@@ -191,18 +191,20 @@ namespace Matkakirja
         static Mesh Delfoi()
         {
             var r = new Rakentaja();
-            // Parnassoksen rinne takana (pohjoinen) sagen sävyin, pengerrys edessä.
-            r.Kallio(new Vector3(0f, 0f, 0.2f), 0.66f, 0.3f, 0.38f, 0.12f, 0.5f, 9, 3, Sage, Pinta);
-            r.Laatikko(new Vector3(0f, 0f, -0.12f), new Vector3(0.66f, 0.1f, 0.36f), Pinta, Pinta);
-            // Apollon temppeli raunioina: 6 pylvästä edessä eri korkeuksilla, stylobaatti.
+            // Parnassoksen rinne takana (pohjoinen): matala huipukas harjanne kiven sävyin, sage vain alarinteen kaistana.
+            r.Kallio(new Vector3(0f, 0f, 0.24f), 0.86f, 0.34f, 0.16f, 0.06f, 0.36f, 13, 3, Varjo, Pinta);
+            r.Kallio(new Vector3(-0.05f, 0f, 0.1f), 0.72f, 0.16f, 0.62f, 0.1f, 0.05f, 9, 8, Sage, Sage);
+            // Pengerrys ja Apollon temppeli raunioina: 6 pylvästä edessä eri korkeuksilla, stylobaatti.
+            r.Laatikko(new Vector3(0.05f, 0f, -0.1f), new Vector3(0.5f, 0.05f, 0.3f), Pinta, Pinta);
             float[] korkeudet = { 0.16f, 0.1f, 0.16f, 0.16f, 0.07f, 0.16f };
-            r.Laatikko(new Vector3(0.05f, 0.1f, -0.1f), new Vector3(0.4f, 0.025f, 0.18f), Valo, Valo);
+            r.Laatikko(new Vector3(0.05f, 0.05f, -0.1f), new Vector3(0.4f, 0.025f, 0.18f), Valo, Valo);
             for (int i = 0; i < 6; i++)
-                r.Pylvas(new Vector3(-0.13f + i * 0.072f, 0.125f, -0.17f), 0.017f, korkeudet[i], 6, Valo);
+                r.Pylvas(new Vector3(-0.13f + i * 0.072f, 0.075f, -0.17f), 0.017f, korkeudet[i], 6, Valo);
             for (int i = 0; i < 6; i += 2)
-                r.Pylvas(new Vector3(-0.13f + i * 0.072f, 0.125f, -0.03f), 0.017f, korkeudet[5 - i] * 0.8f, 6, Valo);
+                r.Pylvas(new Vector3(-0.13f + i * 0.072f, 0.075f, -0.03f), 0.017f, korkeudet[5 - i] * 0.8f, 6, Valo);
             // Tholos alempana: pyöreä pylväskehä ja kartiokatto.
-            var t = new Vector3(-0.25f, 0.1f, -0.24f);
+            var t = new Vector3(-0.3f, 0f, -0.28f);
+            r.Kartio(t, 0.08f, 0.01f, 10, Pinta);
             for (int i = 0; i < 8; i++)
             {
                 float a = i * Mathf.PI * 2f / 8f;
@@ -212,19 +214,21 @@ namespace Matkakirja
             return r.Verkko("Delfoi");
         }
 
+        static readonly Color Kivi = Hex(0xa89878);
+
         static Mesh Meteora()
         {
             var r = new Rakentaja();
-            // Kolme kalliopylvästä, luostari korkeimman päällä.
-            r.Kallio(new Vector3(-0.2f, 0f, 0.05f), 0.2f, 0.17f, 0.15f, 0.13f, 0.62f, 8, 11, Varjo, Pinta);
-            r.Kallio(new Vector3(0.16f, 0f, -0.08f), 0.24f, 0.2f, 0.19f, 0.16f, 0.82f, 9, 5, Varjo, Pinta);
-            r.Kallio(new Vector3(0.05f, 0f, 0.25f), 0.16f, 0.14f, 0.12f, 0.1f, 0.5f, 7, 3, Varjo, Pinta);
+            // Kolme pyöreähköä kalliopylvästä (kivi, tasanne pinta), luostari korkeimman päällä.
+            r.Kallio(new Vector3(-0.22f, 0f, 0.06f), 0.26f, 0.22f, 0.2f, 0.17f, 0.4f, 9, 11, Kivi, Pinta);
+            r.Kallio(new Vector3(0.14f, 0f, -0.08f), 0.32f, 0.27f, 0.25f, 0.21f, 0.52f, 10, 5, Kivi, Pinta);
+            r.Kallio(new Vector3(0.04f, 0f, 0.26f), 0.22f, 0.18f, 0.16f, 0.13f, 0.3f, 8, 3, Kivi, Pinta);
             // Suuri Meteoron: päärakennus, punainen katto ja kupoli.
-            var y = new Vector3(0.16f, 0.82f, -0.08f);
-            r.Laatikko(y, new Vector3(0.2f, 0.07f, 0.12f), Valo, Valo);
-            r.Harja(y + Vector3.up * 0.07f, new Vector3(0.2f, 0.05f, 0.12f), Terrakotta, Valo);
-            r.Pylvas(y + new Vector3(-0.06f, 0.07f, 0f), 0.035f, 0.05f, 8, Valo);
-            r.Kartio(y + new Vector3(-0.06f, 0.12f, 0f), 0.04f, 0.035f, 8, Terrakotta);
+            var y = new Vector3(0.14f, 0.52f, -0.08f);
+            r.Laatikko(y, new Vector3(0.18f, 0.06f, 0.11f), Valo, Valo);
+            r.Harja(y + Vector3.up * 0.06f, new Vector3(0.18f, 0.045f, 0.11f), Terrakotta, Valo);
+            r.Pylvas(y + new Vector3(-0.055f, 0.06f, 0f), 0.032f, 0.045f, 8, Valo);
+            r.Kartio(y + new Vector3(-0.055f, 0.105f, 0f), 0.036f, 0.032f, 8, Terrakotta);
             return r.Verkko("Meteora");
         }
 
