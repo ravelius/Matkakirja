@@ -7759,3 +7759,7 @@ Natiiviseppa 01.4x: juna/b13 52ea3d10 = ylhaalta-175 d65986ae (junamerge 01b56f5
 ## XAI ARA TUOTANNOSSA (#3365 v2292, POLLON JULKAISU OK); 1.0.27 PASS 4/4 → MASTER + TF; KAIUTINVIPU PR 3366; #3364 BUILD-KORJAUS (27.9.2026 klo 01.43)
 
 Julkaisija 01.37: #3365 mainissa v2292, testit 4413/0, Pollon julkaisu -ajo 36276852325 ok, XAI_API_KEY workerin salaisuutena; puhepyynto (persoona pollo) 200 audio/mpeg, ensimmainen tavu 0,59 s workerin kautta, 24 kHz mono — moottori ei nay vastauksessa (jatkokehitys: x-puhe-moottori-otsake). #3363 mergessa; #3364 odottaa Pelikoodarin build-korjausta (lehtiosiot.js puuttuu MODULES-listalta). Laitetestaaja 01.4x: d7705537 painopistekierros 4/4 PASS (ylhaalta-perspektiivi, lippu, savuke, 177; raportti savukierros-tf1027b-20260927.md b61b29bdf) → Natiiviseppa mergeaa masteriin ja lahettaa TF 1.0.27. Pelikoodari: Pulun kaiutinvipu PR #3366 (paalla kulta + aaniaallot, pois himmea + vinoviiva; kuvaparit pulu-kaiutin-web/) → omistajan kortti.
+
+## OMISTAJA HYVAKSYI PULUN KAIUTINVIVUN (PR 3366) → JUNAAN; NATIIVI-UI TEKEE NATIIVIN (27.9.2026 klo 01.43)
+
+Omistaja 01.4x kortilla: Pulun paneelin kaiutinnappi (pois himmea + yliviivattu, paalla kulta + aaniaallot) hyvaksytty → #3366 Julkaisijan junaan; Natiivi-UI tekee natiivin saman mallin mukaan 1.0.28-junaan.
