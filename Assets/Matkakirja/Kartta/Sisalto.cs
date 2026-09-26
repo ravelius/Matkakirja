@@ -212,6 +212,8 @@ namespace Matkakirja
                 yield return Taustalla(() => File.ReadAllText(tiedosto), t => teksti = t);
             }
             VerkkoOdotus.Osuma("sisalto", teksti != null);
+            // Esilataajan mittari: vain Nakyva-pyyntö; alempi taso on esilataus (Esilataaja.Hae avain alla).
+            if (taso == Taso.Nakyva) Esilataaja.NakyvaPyynto(Juuri + polku, teksti != null);
             // YHTEINEN HAKU (Fablen jono 26.9., kohta 1 -analyysi: kaupungit.json haettiin kylmänä 3× rinnakkain tästä
             // funktiosta): sama polku jo haussa → odotetaan sen tulosta, ei toista verkkohakua.
             if (teksti == null && haussa.TryGetValue(polku, out var odottajat))
@@ -220,6 +222,7 @@ namespace Matkakirja
                 string jaettu = null;
                 odottajat.Add(t => { jaettu = t; saatu = true; });
                 while (!saatu) yield return null;
+                if (taso == Taso.Nakyva) Esilataaja.NakyvaValmis(Juuri + polku);
                 valmis(jaettu);
                 yield break;
             }
@@ -233,7 +236,7 @@ namespace Matkakirja
                 {
                     koodi = k.responseCode;
                     if (k.result == UnityWebRequest.Result.Success) tavut = k.downloadHandler.data; else virhe = k.error;
-                });
+                }, avain: Juuri + polku);
                 if (tavut == null)
                 {
                     if (valinnainen && koodi == 404)
