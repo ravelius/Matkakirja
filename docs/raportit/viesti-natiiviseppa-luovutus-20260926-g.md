@@ -110,3 +110,4 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
 - linssiseppa/tehoste-rekisteri 859b937a (linssien kilahdus/naksahdus tehosteväylälle) → juna/b13 **923be3b0** (testit 278/284/300).
 - Klo 05.00 TF 1.0.18 valmis (master 43a6347c), vientilippu poistettu.
 - pelikoodari/osoitin-taustalle b74983a6 (uusin.json taustalle lämpimässä käynnistyksessä; ajoitusmittaus uusitaan) → juna/b13 **f190521b**.
+- natiivi-ui/linssi-sulkee-s3 198ecc30 (S3, todennettu 506b198c) → juna/b13 **bbb8583b**.
