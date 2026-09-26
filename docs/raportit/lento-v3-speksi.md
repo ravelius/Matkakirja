@@ -1,4 +1,4 @@
-# Lento v3 -speksi (luonnos omistajan korttiin, 26.9.2026)
+# Lento v3 -speksi (omistaja hyväksyi 26.9.2026 klo 23.5x, toteutus 1.0.28)
 
 *Linssiseppä (apuagentti) 26.9.2026 klo 23.4x Fablen tilauksesta (omistaja 22.2x; raamattu-loki 26.9. klo 22.20 "SAAPUMISLENTO
 RETRO-KAKSITASOLLA", Fablen haara). Ei koodia ennen hyväksyntää. Pohjana proto `juna/b13` 8a90b51f (LennonAikajana.cs,
@@ -197,11 +197,13 @@ Korvautuvat: LENNON PINTA (satelliitti, "ei kartan sävyyn tyyliteltyä konetta"
 pilvisumu, ELOKUVALLINEN ALOITUSLENTO, ALOITUSLENNON KAMERAKÄSIKIRJOITUS ja 25.9.:n "lennon alku näkyy", kestot 12 s ja
 16–26 s. Säilyvät: KAMERA-AJOT, TEMPO, kone aina näkyvissä, ei suoraan takaa, LENNON KARTTA, saapumissekvenssi, AIKA.
 
-## 9. Avoimet kysymykset omistajalle
+## 9. Omistajan päätökset (kortti 26.9. klo 23.5x, Fablen kautta) — HYVÄKSYTTY TOTEUTUKSEEN 1.0.28
 
-1. **Kone ja väri:** Tiger Moth seepiana (ehdotus), Tiger Moth keltaisena koulukoneena vai Boeing-Stearman?
-2. **Lähestymissuunta:** kaupungin kuvauslinja (Ateena etelästä, vaikka lento tulee Lontoosta; ehdotus
-   aloituskaupungeille) vai aina todellinen lentosuunta?
-3. **Loppu:** lasku ja rullaus renkaalle kameran lähestyessä 80 → 45 km (ehdotus) vai ohilento maamerkin yli?
-4. ~~Odotus~~ **PÄÄTETTY (Fable 27.9.):** käynnistysääni ja sykkivä rengas; teksti "Kone lähtee…" vain, jos odotus on yli 2 s.
-5. **Pilvet:** pelkkä utu (ehdotus) vai 2–4 paperista pilvenhattaraa, joiden ohi kone lentää?
+1. **Kone ja väri:** Tiger Moth SEEPIANA (kohta 4).
+2. **Lähestymissuunta:** kaupungin kuvauslinja (Ateena etelästä myös Lontoosta tultaessa; `Lahestymiset`-taulukko).
+3. **Loppu:** lasku ja rullaus kaupungin renkaalle, kamera lähestyy 80 → 45 km (kohdat 1–2).
+4. **Odotus:** käynnistysääni ja sykkivä rengas; teksti "Kone lähtee…" vain, jos odotus on yli 2 s (Fable 27.9.).
+5. **Pilvet:** pelkkä utu, ei pilvenhattaroita.
+- **Kaanon:** etumainen matkustaja punaisella huivilla on Fogg (pelaaja), lentäjä nimetön.
+- **Työnjako ja järjestys:** 3 erikoismallia → merikokeilu → lento v3. Koneen malli ja kamera-aikajana: Linssiseppä.
+  Esilatauskäytävä ja kytkin `lento v3 0|1`: Natiiviseppä. Moottorin ääni (`LentoAani`): Pelikoodari.
