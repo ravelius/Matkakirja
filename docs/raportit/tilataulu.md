@@ -2,29 +2,31 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 08:40 EEST
+**Päivitetty:** 2026-09-26 09:16 EEST
 
 ## 1) Sessiot
 
-Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna nyt 1 M, prosentit sen mukaan.
+**TILINVAIHTO HAVAITTU 09:16 (Postivahti):** kaikki 25.9. id:t "not found" (vanha tili), get_usage "self" näyttää viikko (all models) 0 %, viikko (Fable) 1 %, 5 h 2 % — uusi tili. `list_sessions` löytää vain 3 sessiota tällä tilillä: Fable, Julkaisija, Natiiviseppä. Loput 7 roolia (Natiivi-UI, Linssiseppä, Sisältökirjuri, Laitetestaaja, Siirtoseppä, Pelikoodari, Karttaseppä) puuttuvat kokonaan — eivät nollattuja, vaan olemattomia tällä tilillä. Ilmoitettu Fablelle.
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | nollattu 04.06 |idle → uusi Fable, aloitusviesti lähetetty 04.08 (RC pois, uusi Fable kytkee itse) | — |
-| Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 56% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 69% | running | Nollattu ja palannut käyntiin |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 60% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 33% | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 42% | running | Nollattu ja palannut käyntiin |
-| Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 56% | idle | PR #3153 (savukierros B13) |
-| Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 50% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 58% | running | Nollattu ja palannut käyntiin |
-| Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 48% | running | Nollattu ja palannut käyntiin (8 %) |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, 04.27: viikko 88 %, 5 h 25 %, swap 7,9 Gt, levy 130 Gt; juna: KÄÄNNETTY 6fd19114 03.48, 99bf0fe5 odottaa niputusta|
+| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 16% | running | — |
+| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 10% | running | — |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 10% | running, RC päällä | — |
+| Natiivi-UI | — | — | **puuttuu** | Fable luo uudelleen |
+| Linssiseppä | — | — | **puuttuu** | Fable luo uudelleen |
+| Sisältökirjuri | — | — | **puuttuu** | Fable luo uudelleen |
+| Laitetestaaja | — | — | **puuttuu** | Fable luo uudelleen |
+| Siirtoseppä | — | — | **puuttuu** | Fable luo uudelleen |
+| Pelikoodari | — | — | **puuttuu** | Fable luo uudelleen |
+| Karttaseppä | — | — | **puuttuu** | Fable luo uudelleen |
+| Postivahti (self) | (uusi tili, get_usage "self") | 9% | running | tämä taulu; viikko 0–1 %, 5 h 2 %, swap 5,7 Gt, levy 120 Gt vapaana; juna: KÄÄNNETTY aed733c9 09:13 |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-**08.3x: Build 19 TestFlightissa 1.0.19 (ajo 36220773751, proto 41dd79c7), omistajalle pushattu (Fable). Fablen luovutus -b päivitetty (16c165c3e). Viikko 96 %, 5 h nollautui 08.30 (seur. 13.30 EEST); 98 % → lepokäsky kaikille + push.**
+**09:16: TILINVAIHTO — ks. kohta 1.** Viikko/5h-rajat (85/98 %) koskevat nyt uutta tiliä, laskuri alkaa alusta. Vanhan tilin luovutukset (build 19, 96 %, lepokäsky-suunnitelma) jäivät historiaan; Fable päättää tarvitseeko 7 puuttuvaa roolia luoda uudelleen samalla worktree-tilalla.
+
+**08.3x (vanha tili): Build 19 TestFlightissa 1.0.19 (ajo 36220773751, proto 41dd79c7), omistajalle pushattu (Fable). Fablen luovutus -b päivitetty (16c165c3e).**
 
 **LUOVUTUSPYYNTÖ 05.21: viikko 90 % → kaikille 9 roolille lähetetty "kirjoita luovutus + aloitusviesti nyt ja pushaa (tilinvaihto lähestyy)"; Fablelle ilmoitettu. 97 % → Push omistajalle "Viikkokiintiö täynnä — vaihda tili" (ei muuta pushia ennen 08).**
 
@@ -54,9 +56,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 65 % — nollautuu klo **03:30 EEST** (00:30 UTC; KORJAUS: aiemmat kirjaukset "00:30 EEST" olivat väärin, UTC-sekaannus). extraUsage pois päältä. **Viikko (kaikki mallit): 70 %** (saavutti 70 % 00:06, ilmoitettu Fablelle). **Viikko (Fable):** 26 %.
-- **Levy:** 141 Gt vapaana (Fablen hälytysraja 80 Gt). **Swap:** 10,3 Gt / 11,3 Gt (hälytys >16 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 34 kpl.
-- **Simulaattorit boottina:** 0. coreaudiod 7 %. **Chrome-GPU-prosesseja:** 6 (CI:n savukkeita).
-- **Konteksti:** Natiiviseppä 64 %, Linssiseppä 59 %, Laitetestaaja 56 %, Fable 55 %, Julkaisija 53 %, Pelikoodari 52 %, Natiivi-UI 52 %, Siirtoseppä 40 %, Karttaseppä 39 %, Sisältökirjuri 30 %. Ei ylityksiä.
-- **Juna:** proto-kaanna.sh käynnissä (6 prosessia), yläraja laukesi 23:37 (erä työn alla 29 min); viimeisin KÄÄNNETTY 21:36. Ei hälytystä (prosessi elossa).
-- **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** 11.
+- **5 h -kiintiö:** 2 % (uusi tili, nollautuu 10:59 UTC). extraUsage pois päältä. **Viikko (kaikki mallit): 0 %.** **Viikko (Fable):** 1 %.
+- **Levy:** 120 Gt vapaana (Fablen hälytysraja 80 Gt). **Swap:** 5,7 Gt / 7 Gt (hälytys >16 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 33 kpl.
+- **Simulaattorit boottina:** 1 (iPhone 17, max 4 päivällä). coreaudiod 0 %. **Chrome-GPU-prosesseja:** 0.
+- **Konteksti:** Fable 16 %, Julkaisija 10 %, Natiiviseppä 10 %. Ei ylityksiä. Loput 7 roolia puuttuu (ks. kohta 1).
+- **Juna:** proto-kaanna.sh ei käynnissä juuri nyt; viimeisin KÄÄNNETTY aed733c9 09:13, ei hälytystä.
+- **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
