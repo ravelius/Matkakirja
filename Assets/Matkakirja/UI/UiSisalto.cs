@@ -217,6 +217,9 @@ namespace Matkakirja.Natiivi
         public static event Action LehdetSaapuivat;
         public static bool LehdetLuettu { get; private set; }
 
+        /// <summary>Kaupungin lehti on liitetty (kaupungeittain tai koko kokoelma); kuvia ei välttämättä ole.</summary>
+        public static bool LehtiLuettu(string id) => LehdetLuettu || lehtiLuettu.Contains(id);
+
         /// <summary>
         /// Lehdet Valmis-tilan jälkeen (Pelikoodari 26.9., kylmän käynnistyksen analyysi: 16 Mt, 1,9 s pidätti kaikki UiSisalto-
         /// odottajat). Jäsennys taustasäikeessä väliaikaisiin olioihin, kopiointi oikeisiin pääsäikeessä (ei kilpailua lukijoiden kanssa).
