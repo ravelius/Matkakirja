@@ -7255,3 +7255,7 @@ Pelikoodari: #3339 (build-questions.mjs lukee kaikki qa-*.json) mainissa; Sisalt
 ## OMISTAJAN LOYDOKSET 168-171 (1.0.24/25) KLO 19.3X (26.9.2026 klo 19.31)
 
 168: noston avaus varjaa maakunnan (elavan kartan kohta 3 + S7) → OMISTAJA: varjaytyminen POIS, heraamisen muut osat jaavat; Raamatun ELAVA KARTTA kohta 3 paivitetaan seuraavassa Raamattu-PR:ssa (Natiiviseppa koodi, Linssiseppa kasikirjoitus). 169: maakuntavalitsimeen Kaikki-nappi (Natiivi-UI). 170: maakuntanostojen kuvat puuttuvat laitteella vaikka 158 valmis v2274 → Siirtoseppa tarkistaa paketin ja kattavuuden, Sisaltokirjuri tekee KAIKKI puuttuvat kuvat (oikeita PD/CC tai havainnekuvia), Natiivi-UI pikkukuva minitekstin kylkeen. 171 P1: aloituslennossa kohdemaa vaalea laatta (163:n toistuma saapumislennossa) → Natiiviseppa kiirejono+vartija lennon ajaksi. Omistajan kysymys 3D-nostoista: ovat pelissa 1.0.25:sta alkaen (TF 18.51).
+
+## LOYDOS 172: LENTOKONE MATALAMMALLE, LAHIKUVASSA VAAKASUORAAN (26.9.2026 klo 19.32)
+
+Omistaja 19.3x: saapumislennon lentokone saisi lentaa matalammalla ja lahikuvassa olla vaakasuorassa. Linssiseppa paivittaa saapumisen kasikirjoituksen (korkeus, asento kameran etaisyyden mukaan), Natiiviseppa toteuttaa 1.0.26-junaan, kuvapari omistajalle.
