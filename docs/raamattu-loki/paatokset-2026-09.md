@@ -7359,3 +7359,7 @@ Julkaisija: #3342 mainissa v2278 20.23, #3343 v2279 20.30, testit 4405/0; jonoss
 ## KORJAUS: KUVAMERKIT EIVAT OLE POLTETUSSA NOSTOTASOSSA — EI UUDELLEENPOLTTOA (26.9.2026 klo 20.41)
 
 Karttaseppa: generoi-laattapyramidi.mjs piirtaa kuvamerkin vain tason 1 nostolle ja vain --nostotasot-tiedoston ＠kuvat-kentalla, jota tuotanto ei kayta; poltettuna ovat vain tyyppisymbolit, kuvamerkit piirtaa elavana pallolauta/nostot.js (155-kynnys). 174b:n merkit nakyvat siis heti v2278:ssa. Koepoltto 2026-09-27-nostot (eacd14790, 3 974 laattaa, 13 min) erosi tuotannosta vain 9 FRA-laatalla (uudet tyyppisymbolit) → Fable: ei vieda, tulevat seuraavan polton mukana.
+
+## S10 KORJAUS: DYNAAMINEN SSE 32 LIIKKEESSA + LIIKKEEN KATTO 60 HZ (26.9.2026 klo 20.42)
+
+Natiiviseppa (natiiviseppa/s10-sse f3c15204, iPad Pro 13): SSE vaihtuu ajossa ilman tilesetin uudelleenluontia; liikkeessa SSE 32 p50 13,1 / p95 25,0 ms (−7,3 ms), levossa 3 s jalkeen kuva identtinen; liikkeen katto 60 Hz: tasainen 16,7 ms ilman piikkeja. Fable: oletus 60 Hz + SSE 32 liikkeessa → 1.0.26 kun 10 min lampojakso ajettu; 120 Hz kehittajakytkimena mittaukseen.
