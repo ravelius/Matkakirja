@@ -7299,3 +7299,7 @@ Omistaja 19.5x (kuva, Ranska iPhone): NOSTOT/MAAKUNNAT-paneeli kapeammaksi ja ko
 ## LOYDOS 174: LAIKAT MAATASON ZOOMISSA — LINJAUS: EI LAIKKAA MISSAAN ZOOMISSA (26.9.2026 klo 19.50)
 
 Omistaja 19.5x (kuva Ranska): valtaosa nostoista yha ruskeina laikkina maatason nakymassa, kysyy milloin korvataan. Tila: 1.0.25 (TF 18.51) piirtaa tason 1 kaikki 182 nostoa 3D:na ja tasot 2–3 pienina instansseina lahikuvassa; maatason zoomissa pienet mallit jaavat siluettirajan (18 pt) alle → laikka. Fablen linjaus: laikkaa ei nayteta missaan zoomissa — kaukaa nosto piirtyy lajin symbolina (webin 155-kaava, loytamaton himmeana), lahella 3D-mallina. Natiiviseppa vastaa buildista ja tyoarviosta, Pelikoodari tarkistaa lajisymbolien kattavuuden datassa.
+
+## 174 VASTAUS: KUVA 1.0.24, KAUKOSYMBOLIT 1.0.26 (26.9.2026 klo 19.51)
+
+Natiiviseppa: omistajan kuva on 1.0.24 (tason 1 nostot 2D-merkkeina; 1.0.25:ssa kaikki 182 tason 1 nostoa 3D:na). Tasojen 2–3 mallit tulevat 155:n kynnyksella (kerroin ≥ 2,5), maatason zoomissa jaa alle → laikat; siluettiraja ei syy. Toteutus: kynnyksen alla lajin 2D-kuvamerkki kaikille tasoille (loytamaton himmeana), yllä 3D; laikkaa ei missaan. Natiivi-UI NostotKartalla ~2–3 h (P1, aloittaa nyt), Natiiviseppa laji→symboli-kartoitus ~1 h + mittaus maatasolla 100+ merkkia. Tavoite 1.0.26.
