@@ -78,6 +78,9 @@ namespace Matkakirja.Kartta.Testit
         {
             var s = PakettiPaatokset.Sailytettavat(106, new[] { 103, 105, 106 }, new[] { 104, 107 });
             Oleta.Sama("105,106,107", string.Join(",", s.OrderBy(v => v)));
+            // Juuri valmistunut seuraava versio säilyy, kunnes se otetaan käyttöön (Natiivi-UI 26.9., v145/v151).
+            var t = PakettiPaatokset.Sailytettavat(145, new[] { 142, 145, 151 }, new[] { 150 });
+            Oleta.Sama("142,145,150,151", string.Join(",", t.OrderBy(v => v)));
             var h105 = new[] { R("a", A) }; var h106 = new[] { R("a", A), R("b", B) };
             var orvot = PakettiPaatokset.Orvot(new[] { A, B, "c" }, new[] { h105, h106 });
             Oleta.Sama("c", string.Join(",", orvot));
