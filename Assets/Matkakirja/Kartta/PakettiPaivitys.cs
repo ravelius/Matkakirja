@@ -15,8 +15,9 @@ namespace Matkakirja
     ///
     /// Levy (persistentDataPath/sisalto/):
     ///   tiedostot/&lt;sha256&gt;              sisällön mukaan avainnettu varasto (versioiden yhteiset tiedostot kerran)
-    ///   &lt;p&gt;/v&lt;N&gt;/hakemisto.json         versio N:n tiedostot (tarkistettu osoittimen tiivisteitä vasten)
-    ///   &lt;p&gt;/v&lt;N&gt;/valmis.json            kaikki N:n tiedostot varastossa ja tarkistettu → kelpaa käyttöön
+    ///   sisalto/&lt;p&gt;/v&lt;N&gt;/hakemisto.json versio N:n tiedostot (tarkistettu osoittimen tiivisteitä vasten); sama kansio kuin
+    ///                                    laiskan tilan välimuisti (Sisalto.Valimuisti)
+    ///   sisalto/&lt;p&gt;/v&lt;N&gt;/valmis.json    kaikki N:n tiedostot varastossa ja tarkistettu → kelpaa käyttöön
     ///   kaytossa.txt                     käytössä oleva versiopolku
     /// Levysiivous (Esilataaja erä 4) ei koske näihin.
     ///
@@ -64,7 +65,8 @@ namespace Matkakirja
         static string Juuri => Path.Combine(Application.persistentDataPath, "sisalto");
         static string Varasto => Path.Combine(Juuri, "tiedostot");
         static string KaytossaTxt => Path.Combine(Juuri, "kaytossa.txt");
-        static string VersioKansio(string versioPolku) => Path.Combine(Application.persistentDataPath, versioPolku.TrimEnd('/').Replace('/', Path.DirectorySeparatorChar));
+        /// <summary>Sama kansio kuin Sisalto.Valimuisti (persistentDataPath/sisalto/&lt;versiopolku&gt;), jotta laiskan tilan tiedostot siirtyvät ja siivoutuvat.</summary>
+        static string VersioKansio(string versioPolku) => Path.Combine(Juuri, versioPolku.TrimEnd('/').Replace('/', Path.DirectorySeparatorChar));
         static string ValmisJson(string versioPolku) => Path.Combine(VersioKansio(versioPolku), "valmis.json");
         static string HakemistoJson(string versioPolku) => Path.Combine(VersioKansio(versioPolku), "hakemisto.json");
 
@@ -276,6 +278,13 @@ namespace Matkakirja
                 int poistettu = 0;
                 foreach (var kv in kansiot)
                     if (!sailyta.Contains(kv.Key)) { Directory.Delete(kv.Value, true); poistettu++; }
+                    else if (valmiit.Contains(kv.Key))
+                    {
+                        // Valmiin version laiskan tilan kopiot (kokoelmat/ …) ovat varastossa: vain hakemisto ja valmis jäävät.
+                        foreach (var d in Directory.GetDirectories(kv.Value)) Directory.Delete(d, true);
+                        foreach (var f in Directory.GetFiles(kv.Value))
+                            if (Path.GetFileName(f) != "hakemisto.json" && Path.GetFileName(f) != "valmis.json") File.Delete(f);
+                    }
                 var hakemistot = sailyta.Where(kansiot.ContainsKey)
                     .Select(v => Path.Combine(kansiot[v], "hakemisto.json")).Where(File.Exists)
                     .Select(p => PakettiPaatokset.LueHakemisto(File.ReadAllText(p))).ToList();
