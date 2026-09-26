@@ -26,7 +26,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Myllyn korkeus ruutupisteinä (liioiteltu, jotta aihe erottuu maakuntanäkymässä).</summary>
         public const float MyllyPt = 34f;
         public const double NakyyAlkaenM = 15_000, NakyyAstiM = 600_000, HaipyyAlkaenM = 450_000;
-        public const float PehmeysS = 0.6f;
+        public const float PehmeysS = 0.6f, SivuKulma = 25f;
 
         /// <summary>Zaanse Schans (Zaandam), Amsterdamin vieressä.</summary>
         static readonly LatLon Zaandam = new LatLon(52.4735, 4.8166);
@@ -149,11 +149,17 @@ namespace Matkakirja.Natiivi
             // Koko ruudulla vakio: ruutupisteen pituus juuren kohdalla.
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
             float pt = 2f * LinssiOhjain.Pistekerroin * (kameraL - juuri).magnitude * tanPuoli / Mathf.Max(1, Screen.height);
-            Vector3 ita = PinnanIta(ylos);
             // Ruudun suunnat pinnalla: myllyrivi asettuu ruudulla vaakaan kamerasta riippumatta.
             Vector3 oikea = gt.InverseTransformDirection(kamera.transform.right);
             oikea = (oikea - ylos * Vector3.Dot(oikea, ylos)).normalized;
             Vector3 eteen = Vector3.Cross(oikea, ylos);
+
+            // Pop-up-asento (simulaattori 26.9.: pinnan normaalin mukaan pystyssä ylhäältä katsottuna näkyi vain katto):
+            // mylly seisoo ruudun ylösuuntaan ja katsoo kameraa kohti SivuKulma-kierrettynä, jolloin siivet ja kylki näkyvät
+            // myös suoraan ylhäältä; kallistettaessa ruudun ylös lähestyy pinnan normaalia, joten mylly nousee pystyyn.
+            Vector3 kameraYlos = gt.InverseTransformDirection(kamera.transform.up).normalized;
+            Vector3 kohtiKameraa = -gt.InverseTransformDirection(kamera.transform.forward).normalized;
+            var asento = Quaternion.AngleAxis(SivuKulma, kameraYlos) * Quaternion.LookRotation(kohtiKameraa, kameraYlos);
 
             // Siivet: nopeus pehmeästi kohti 1/0 (PehmeysS), kulma ajan mukaan.
             float tavoite = Liikkuu() ? 1f : 0f;
@@ -163,22 +169,14 @@ namespace Matkakirja.Natiivi
             {
                 var (j, s, kierrosS, kulma) = myllyt[i];
                 var (x, y, _, _) = Myllyt[i];
-                j.localPosition = juuri + (oikea * x + eteen * y) * pt;
-                // Siivet tuuleen (länsi, vallitseva tuuli): mylly katsoo länteen, ja runko on pystyssä pinnan normaalin mukaan.
-                j.localRotation = Quaternion.LookRotation(-ita, ylos);
+                // Nosto kameraa kohti rungon syvyyden verran, ettei pop-up-malli painu maaston sisään (ZTest LEqual).
+                j.localPosition = juuri + (oikea * x + eteen * y) * pt + kohtiKameraa * (0.45f * kerroin);
+                j.localRotation = asento;
                 j.localScale = Vector3.one * kerroin;
                 kulma = (kulma + 360f * nopeus * Time.unscaledDeltaTime / kierrosS) % 360f;
                 s.localRotation = Quaternion.Euler(-MyllyGeometria.AkselinNousu, 0, 0) * Quaternion.Euler(0, 0, kulma);
                 myllyt[i] = (j, s, kierrosS, kulma);
             }
-        }
-
-        Vector3 PinnanIta(Vector3 ylos)
-        {
-            // ECEF-akseli z (pohjoisnapa) georeferenssin avaruudessa; itä = z × ylös.
-            var napa = (Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1));
-            var ita = Vector3.Cross(napa, ylos);
-            return ita.sqrMagnitude > 1e-8f ? ita.normalized : Vector3.right;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)
