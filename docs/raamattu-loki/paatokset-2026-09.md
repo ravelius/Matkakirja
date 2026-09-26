@@ -6271,3 +6271,7 @@ Fable 04.1x. Musiikkisuunnitelman #3272 punainen testi oli mainin niputusvian aj
 ## LOYDOS 149 HOIDETTU (JULKAISIJA): 288 KARTTANOSTOKUVAA VIETY AMPARIIN — KUIVA-AJO 36207661384 (288 VIETAVAA, 0 JO AMPARISSA), OIKEA AJO 36207702414 (288 VIETYA, SHA256-LISTA YHTEENVEDOSSA), CDN 200, VARTIJA #3283 VERKKOTILASSA PUUTTUVIA 0 (26.9.2026 klo 04.19)
 
 Fable kuittasi 04.2x. Pelikoodarin 149-korjaukset (media.json, atominen kirjoitus, 404 ei uusita) build 18 -junassa.
+
+## JULKAISIJAN LUOVUTUS VALMIINA VAKUUDEKSI (julkaisija-luovutus-20260926 fba5ca649, viesti-julkaisija-luovutus-20260926.md + ALOITUSVIESTI); SESSIO JATKAA: JUNA #3287, SITTEN #3267 JA #3288; VANHA JUNA #3273 SULJETTU (26.9.2026 klo 04.21)
+
+Fable 04.2x: ei nollausta (konteksti 56 %), jatkaa junaa kiintiön täyttymiseen asti.
