@@ -33,8 +33,22 @@ namespace Matkakirja
         public const float MinKulma = 55f;
         const float Sade = 0.013f, NupinSade = 0.03f;
 
+        /// <summary>
+        /// Omistaja 26.9. klo 10.0x: lippu liehuu KOKO AJAN (elävällä kerroksella, kartta 0 kehystä). false = vaihtoehto A
+        /// (Joutosyke: liehuu kosketuksen jälkeen ja jähmettyy levossa), mittausta varten (komento `lipputanko jatkuva|syke`).
+        /// </summary>
+        public static bool Jatkuva = true;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KorkeusPt = 120f; instanssi = null; }
+        static void Nollaa() { KorkeusPt = 120f; Jatkuva = true; instanssi = null; }
+
+        /// <summary>Vaihtoehdon vaihto ajossa (A/B-mittaus).</summary>
+        public static void AsetaJatkuva(bool j)
+        {
+            Jatkuva = j;
+            if (instanssi != null && instanssi.aalto != null) instanssi.aalto.Jatkuva = j;
+            PallonLepo.Muuttui("lipputanko");
+        }
 
         static Lipputanko instanssi;
 
@@ -58,7 +72,7 @@ namespace Matkakirja
         /// <summary>Tila lokiin.</summary>
         public static string Tila() => instanssi == null ? "ei luotu" : instanssi.Kuvaus();
 
-        /// <summary>Kokeen lippu ilman verkkoa (komento `lipputanko koe`): Kreikan 1873-lipun kaltainen, sininen risti valkoisella.</summary>
+        /// <summary>Kokeen lippu ilman verkkoa (komento `lipputanko koe`): Kreikan 1873 maalippu, valkoinen risti sinisellä.</summary>
         public static Texture2D Koelippu()
         {
             const int w = 90, h = 60;
@@ -67,7 +81,7 @@ namespace Matkakirja
             var px = new Color32[w * h];
             for (int y = 0; y < h; y++)
                 for (int x = 0; x < w; x++)
-                    px[y * w + x] = (Mathf.Abs(x - w / 2) < 8 || Mathf.Abs(y - h / 2) < 8) ? sini : valk;
+                    px[y * w + x] = (Mathf.Abs(x - w / 2) < 7 || Mathf.Abs(y - h / 2) < 7) ? valk : sini;
             tx.SetPixels32(px);
             tx.Apply(false, true);
             return tx;
@@ -146,6 +160,7 @@ namespace Matkakirja
                     float suhde = kuva.width / (float)Mathf.Max(1, kuva.height);
                     int h = Mathf.Clamp(Mathf.CeilToInt(hPx), 16, 512), w = Mathf.Clamp(Mathf.CeilToInt(hPx * suhde), 16, 512);
                     aalto = Liput.Aaltoile(kuva, w, h);
+                    aalto.Jatkuva = Jatkuva;
                     lippuMat.mainTexture = aalto.Kuva;
                     lippu.GetComponent<MeshFilter>().sharedMesh = Nelio(suhde);
                 }
@@ -198,8 +213,8 @@ namespace Matkakirja
             Vector3 akseli = n;
             if (kulma < MinKulma)
             {
-                Vector3 t = n - v * Vector3.Dot(n, v);
-                t = t.sqrMagnitude > 1e-8f ? t.normalized : kamera.transform.up;
+                // Kallistus ruudun ylöspäin (ylhäältä katsottuna tanko "seisoo" kartalla; normaalin oma suunta on silloin satunnainen).
+                Vector3 t = Vector3.ProjectOnPlane(kamera.transform.up, v).normalized;
                 float a = MinKulma * Mathf.Deg2Rad;
                 akseli = (v * Mathf.Cos(a) + t * Mathf.Sin(a)).normalized;
             }

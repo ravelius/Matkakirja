@@ -90,6 +90,10 @@ namespace Matkakirja
                 }
             }
 
+            /// <summary>Tosi: liehuu aina täydellä voimalla omalla kellolla, ei seuraa Joutosykettä (löydös 161: kohdemaan
+            /// lipputanko liehuu koko ajan elävällä kerroksella). Oletus epätosi.</summary>
+            public bool Jatkuva;
+
             internal bool nakyy, likainen, vapautettu, staattinen;
             internal float vaihe, piirrettyAika = float.NaN, piirrettyVoima = float.NaN;
 
@@ -172,7 +176,7 @@ namespace Matkakirja
         public static string Kuvaus()
         {
             var ic = CultureInfo.InvariantCulture;
-            Tila(out float aika, out float voima);
+            float aika = SeuraaSyketta ? Joutosyke.Aika : Time.unscaledTime, voima = SeuraaSyketta ? Joutosyke.Voima : 1f;
             return $"liput: {kahvat.Count} kahvaa, {Nakyvia} näkyvissä, piirtoja {piirtoja}, varjostin " +
                    $"{(Materiaali() != null ? "ok" : "PUUTTUU (suora kuva)")}, kello {(SeuraaSyketta ? "joutosyke" : "jatkuva")} " +
                    $"(aika {aika.ToString("0.0", ic)} s, voima {voima.ToString("0.00", ic)}), muuttuu {Muuttuu()}";
@@ -248,9 +252,9 @@ namespace Matkakirja
         }
 
         /// <summary>Aaltoilun kello ja voima tällä hetkellä.</summary>
-        static void Tila(out float aika, out float voima)
+        static void Tila(Aalto k, out float aika, out float voima)
         {
-            if (SeuraaSyketta) { aika = Joutosyke.Aika; voima = Joutosyke.Voima; }
+            if (SeuraaSyketta && !k.Jatkuva) { aika = Joutosyke.Aika; voima = Joutosyke.Voima; }
             else { aika = Time.unscaledTime; voima = 1f; }
         }
 
@@ -262,9 +266,12 @@ namespace Matkakirja
         static bool Muuttuu()
         {
             if (kahvat.Count == 0) return false;
-            Tila(out float aika, out float voima);
             foreach (var k in kahvat)
-                if (k.nakyy && (k.likainen || (!k.staattinen && !Sama(k, aika, voima)))) return true;
+            {
+                if (!k.nakyy) continue;
+                Tila(k, out float aika, out float voima);
+                if (k.likainen || (!k.staattinen && !Sama(k, aika, voima))) return true;
+            }
             return false;
         }
 
@@ -280,7 +287,6 @@ namespace Matkakirja
             const float vali = 1f / Fps;
             // Katto: 30 fps:n kehykset osuvat väliin pienellä värinällä, joten neljänneksen jousto (muuten joka toinen jäisi).
             bool vuoro = nyt >= seuraava - vali * 0.25f;
-            Tila(out float aika, out float voima);
             bool piirsi = false;
             // Tapahtuman kuuntelija voi vapauttaa kahvan: kopio ennen kierrosta.
             var lista = kahvat.ToArray();
@@ -290,6 +296,7 @@ namespace Matkakirja
                 bool rt = k.Kuva != null && !k.Kuva.IsCreated();
                 if (rt) k.Kuva.Create();
                 if (k.staattinen && !rt && !k.likainen) continue;
+                Tila(k, out float aika, out float voima);
                 if (!rt && !k.likainen && (!vuoro || Sama(k, aika, voima))) continue;
                 Piirra(k, aika, voima);
                 piirsi = true;

@@ -77,7 +77,7 @@ namespace Matkakirja
     ///   maasto sse <arvo>         tilesetin maximumScreenSpaceError (oletus 16; luo tilesetin uudelleen; löydös 46)
     ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
-    ///   lipputanko tila|pois|koe [lat lon]|koko <pt>   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
+    ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
@@ -696,6 +696,7 @@ namespace Matkakirja
                     // lipputanko tila | pois | koe [lat lon] | koko <pt> (löydös 161)
                     string m = o.Length > 1 ? o[1] : "tila";
                     if (m == "pois") Lipputanko.Pois();
+                    else if (m == "jatkuva" || m == "syke") Lipputanko.AsetaJatkuva(m == "jatkuva");
                     else if (m == "koko" && o.Length > 2) Lipputanko.KorkeusPt = float.Parse(o[2], CultureInfo.InvariantCulture);
                     else if (m == "koe")
                     {
