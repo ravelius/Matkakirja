@@ -166,5 +166,61 @@ namespace Matkakirja.Linssit.Testit
             foreach (var j in KreikanAineisto.Joet)
                 Oleta.Tosi(j.Pisteet.All(p => p.Lat > 34 && p.Lat < 42 && p.Lon > 19 && p.Lon < 30), j.Nimi);
         }
+
+        static ElavaKohtaus Saapuminen() => new ElavaKohtaus(
+            new LatLon(0.3, 0.4), Kolme(),
+            new[] { new ElavaJoki("pitkä", new[] { 0.5, 0.2, 0.5, 1.5, 1.5, 1.8 }) },
+            new[] { new ElavaNosto("p1", 0.5, 0.5, Kokoluokka.Paakohde), new ElavaNosto("s1", 0.2, 0.2, Kokoluokka.Pieni) },
+            null, null, null, null, 0, 315, 35, ElavaProfiili.Saapuminen);
+
+        [Testi] static void SaapuminenAlleViidenSekunnin()
+        {
+            var k = Saapuminen();
+            Oleta.Tosi(k.KestoS <= 5.0, "≤ 5 s (Raamattu ELÄVÄ KARTTA)");
+            var P = ElavaProfiili.Saapuminen;
+            foreach (var v in k.Rajat.Concat(k.Joet)) Oleta.Tosi(v.Alku >= P.ViivatAlku - 1e-9 && v.Alku + v.Kesto <= P.ViivatLoppu + 1e-9, v.Nimi);
+            foreach (var s in k.Sytytys) Oleta.Tosi(s + P.MaakunnanTaytto <= P.LuovutusAlku, "maakunnat ennen luovutusta");
+            foreach (var n in k.Nostot) Oleta.Tosi(n.Alku + n.Kesto <= P.LuovutusAlku, "nostot ennen luovutusta");
+            Oleta.Tosi(k.HuntuSadeKm(P.HuntuLoppu) >= k.HuntuMaxKm - 1e-6 && !k.HuntuNakyy(1.7), "huntu kuivunut 1,6 s:ssa");
+            Oleta.Tosi(k.KerrostenPeitto(4.0) == 1 && k.KerrostenPeitto(k.KestoS) < 1e-9, "luovutus pysyville kerroksille");
+            Oleta.Tosi(k.Asettuminen(4.0) == 0, "saapumisessa ei asetuta paperiksi");
+            Oleta.Sama(-1, k.Heraava, "ei herätystä saapuessa");
+            Oleta.Tosi(!k.LaivanTila(2).Nakyy && k.Valot.Count == 0, "ei laivaa eikä valoja");
+        }
+
+        [Testi] static void SaapumisenAurinkoPalaaKartanValoon()
+        {
+            var k = Saapuminen();
+            Oleta.Tosi(Math.Abs(k.Aurinko(0, out double e0) - 315) < 1e-9 && Math.Abs(e0 - 35) < 1e-9, "alku");
+            Oleta.Tosi(Math.Abs(k.Aurinko(0.8, out double e1) - 285) < 1e-9 && Math.Abs(e1 - 12) < 1e-9, "matala 30° vastapäivään");
+            Oleta.Tosi(Math.Abs(k.Aurinko(4.5, out double e2) - 315) < 1e-9 && Math.Abs(e2 - 35) < 1e-9, "kartan valo lopussa");
+            double ed = k.Aurinko(0, out _);
+            for (double t = 0.02; t <= 4.8; t += 0.02) { double a = k.Aurinko(t, out _); Oleta.Tosi(Math.Abs(((a - ed) % 360 + 540) % 360 - 180) < 3, "ei hyppyä " + t); ed = a; }
+        }
+
+        [Testi] static void JoetGeoJsonistaPaauomat()
+        {
+            string json = "{\"type\":\"FeatureCollection\",\"features\":[" +
+                "{\"type\":\"Feature\",\"properties\":{\"jarjestys\":7,\"valuma_km2\":50000},\"geometry\":{\"type\":\"LineString\",\"coordinates\":[[22.1,40.1],[22.2,40.2],[22.3,40.3]]}}," +
+                "{\"type\":\"Feature\",\"properties\":{\"jarjestys\":6,\"valuma_km2\":9000},\"geometry\":{\"type\":\"MultiLineString\",\"coordinates\":[[[21,39],[21.1,39.1]],[[21.5,39.5],[21.6,39.6]]]}}," +
+                "{\"type\":\"Feature\",\"properties\":{\"jarjestys\":4,\"valuma_km2\":800},\"geometry\":{\"type\":\"LineString\",\"coordinates\":[[23,38],[23.1,38.1]]}}]}";
+            var j = ElavaAineisto.JoetGeoJsonista(json);
+            Oleta.Sama(3, j.Count, "Strahler 7 ja 6 (kaksi osaa), ei 4");
+            Oleta.Tosi(j[0].Pisteet.Length == 3 && Math.Abs(j[0].Pisteet[0].Lat - 40.1) < 1e-9 && Math.Abs(j[0].Pisteet[0].Lon - 22.1) < 1e-9, "[lon, lat] → LatLon");
+        }
+
+        [Testi] static void NostotKarttavaloista()
+        {
+            string json = "{\"alkiot\":[" +
+                "{\"id\":\"a\",\"lat\":38,\"lon\":23,\"maa\":\"GRC\",\"kokoluokka\":\"paakohde\"}," +
+                "{\"id\":\"b\",\"lat\":39,\"lon\":22,\"maa\":\"GRC\",\"taso\":3}," +
+                "{\"id\":\"c\",\"lat\":39,\"lon\":22,\"maa\":\"GRC\",\"salaisuus\":true}," +
+                "{\"id\":\"d\",\"lat\":39,\"lon\":22,\"maa\":\"GRC\",\"paakartalla\":false}," +
+                "{\"id\":\"e\",\"lat\":48,\"lon\":2,\"maa\":\"FRA\",\"taso\":1}]}";
+            var n = ElavaAineisto.NostotKarttavaloista(json, "GRC");
+            Oleta.Sama(2, n.Count, "salaisuus, sivukartta ja muu maa pois");
+            Oleta.Sama(Kokoluokka.Paakohde, n[0].Luokka);
+            Oleta.Sama(Kokoluokka.Pieni, n[1].Luokka, "taso 3 = pieni");
+        }
     }
 }
