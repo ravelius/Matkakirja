@@ -175,6 +175,9 @@ namespace Matkakirja.Natiivi
                 case "saapuminen":
                     if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain, osat.Length > 3 && osat[3] == "odota");
                     break;
+                case "myllyt":
+                    ElavatElementit.Testi(osat.Length > 2 ? osat[2] : "tila", ohjain);
+                    break;
                 case "hetki":
                     ElavatHetket.Testi(osat.Length > 2 ? osat[2] : null, ohjain);
                     break;
@@ -439,6 +442,8 @@ namespace Matkakirja.Natiivi
             ElavaMatka.Kytke(ohjain);
             // Kohta 5: elävät hetket (3 s:n hetki 2–5 min välein, lepopiirto säilyy).
             ElavatHetket.Kytke(ohjain);
+            // Elävät elementit kaupungeissa (kokeilu 1: Zaandamin myllyt, elävällä kerroksella).
+            ElavatElementit.Kytke(ohjain);
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
