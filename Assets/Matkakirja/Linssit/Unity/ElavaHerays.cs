@@ -4,18 +4,18 @@
 // (PeliOhjain.MusteMaakunnat): löytöjä > 0 = herännyt (täysi sävy), 0 = uinuva paperi, ei nostoja = ennallaan.
 // Herätys: PeliOhjain.MaakuntaHeraa (ensimmäinen löytö) piilottaa maakunnan pysyvän täytön (MaaKartta.Herata) ja jonottaa
 // animaation, joka alkaa, kun kartta on taas vapaana (nostokortti kiinni: ei kuvasumennusta, peli kartalla, ei linssiä).
-// Animaatio (Ydin/Elava/Herays, ≤ 2,4 s): rengas noston kohdalla, väri valuu maakuntaan (Maakuntapinta-varjostimen tulva
-// uinuvasta täyteen), nimi kirjoittuu käsialalla, löydösmerkit leimautuvat, ja lopuksi pysyvä täyttö palaa (luovutus).
+// Animaatio (Ydin/Elava/Herays, ≤ 2,4 s): rengas noston kohdalla, nimi kirjoittuu käsialalla ja löydösmerkit leimautuvat.
+// Löydös 168 (omistaja 26.9. klo 19.3x): noston avaus EI värjää maakuntaa, joten tulvaväri (Maakuntapinta-varjostimen
+// tulva uinuvasta täyteen) on poistettu. MaaKartta.Herata-kutsut jäävät: Natiivisepän täyttö ei enää reagoi niihin
+// (natiiviseppa/loydos168), mutta A/B-komento "maakunta herays ab" palauttaa vanhan täytön vertailuun.
 // Natiivi-UI:n kartussi (pikkukuva ja merkit) on oma osansa. Testikomento: "elava herata <ISO:tunnus>".
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Elava;
-using Matkakirja.Linssit.Vesistot;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -159,18 +159,13 @@ namespace Matkakirja.Natiivi
             var (loydetyt, kaikki) = laskurit.TryGetValue(avain, out var x) ? x : (1, 1);
             var h = new Herays(maakunta, keskus, loydetyt, kaikki);
 
-            List<Jarvikolmiot.Verkko> verkot = null;
-            var tyo = Task.Run(() => verkot = maakunta.Renkaat.Select(r => Jarvikolmiot.Laske(r, 1.0)).ToList());
-            while (!tyo.IsCompleted) yield return null;
-            if (tyo.IsFaulted) { MaaKartta.Herata(avain, false); yield break; }
-
             var kierto = FindAnyObjectByType<PalloKierto>();
             var go = new GameObject("ElavaHerays " + avain);
             go.transform.SetParent(kierto.georeferenssi.transform, false);
             var e = go.AddComponent<ElavaHerays>();
-            e.Alusta(h, avain, verkot, kierto);
+            e.Alusta(h, avain, kierto);
             nykyinen = e;
-            ohjain?.Kirjaa($"elävä: herää {avain} ({maakunta.Nimi}), {loydetyt}/{kaikki}, tulva {h.TulvaMaxKm:0} km");
+            ohjain?.Kirjaa($"elävä: herää {avain} ({maakunta.Nimi}), {loydetyt}/{kaikki}, ei värjäystä (löydös 168)");
             while (e != null) yield return null;
             nykyinen = null;
         }
@@ -180,7 +175,7 @@ namespace Matkakirja.Natiivi
         Herays h;
         string avain;
         CesiumGeoreference georeferenssi;
-        Material taytto, laikat;
+        Material laikat;
         Mesh laikkaMesh;
         readonly List<Vector4> laikkaTila = new List<Vector4>();
         readonly List<UnityEngine.Object> roskat = new List<UnityEngine.Object>();
@@ -234,55 +229,12 @@ namespace Matkakirja.Natiivi
             r.receiveShadows = false;
         }
 
-        void Alusta(Herays herays, string maakunta, List<Jarvikolmiot.Verkko> verkot, PalloKierto kierto)
+        void Alusta(Herays herays, string maakunta, PalloKierto kierto)
         {
             h = herays;
             avain = maakunta;
             georeferenssi = kierto.georeferenssi;
             var m = h.Maakunta;
-
-            // Täyttö: uinuva sävy (pysyvän täytön peitto × UinuvanPeitto) → tulva herääneeseen täyteen sävyyn.
-            var (r, g, b, a) = Maakuntajako.Taytto(m.Varinumero, false, true);
-            var tayteen = new Color((float)r, (float)g, (float)b).linear;
-            var uinuva = tayteen;
-            uinuva.a = (float)a * MaaKartta.UinuvanPeitto;
-            var paikat = new List<Vector3>();
-            var varit = new List<Color>();
-            var suunnat = new List<Vector3>();
-            var tiedot = new List<Vector3>();
-            var korostus = new List<Vector3>();
-            var kolmiot = new List<int>();
-            foreach (var v in verkot)
-            {
-                int pohja = paikat.Count;
-                foreach (var p in v.Karjet)
-                {
-                    paikat.Add(Paikka(p, 1500));
-                    varit.Add(uinuva);
-                    suunnat.Add(Suunta(p));
-                    tiedot.Add(new Vector3(0, -10, (float)a));
-                    korostus.Add(new Vector3(tayteen.r, tayteen.g, tayteen.b));
-                }
-                foreach (int i in v.Kolmiot) kolmiot.Add(pohja + i);
-            }
-            var pinta = new Mesh { name = "Herätys", indexFormat = IndexFormat.UInt32 };
-            roskat.Add(pinta);
-            pinta.SetVertices(paikat);
-            pinta.SetColors(varit);
-            pinta.SetUVs(0, suunnat);
-            pinta.SetUVs(1, tiedot);
-            pinta.SetUVs(2, korostus);
-            pinta.SetTriangles(kolmiot, 0);
-            pinta.RecalculateBounds();
-            taytto = Materiaali("Maakuntapinta");
-            if (taytto != null)
-            {
-                taytto.SetFloat("_Aika", 100);
-                taytto.SetFloat("_Heraava", 0);
-                taytto.SetVector("_TulvaKeskus", Suunta(h.Keskus));
-                taytto.SetFloat("_TulvaReuna", (float)(4.0 / 6371));
-                Kappale("Herätyksen täyttö", pinta, taytto);
-            }
 
             // Mittakaava maakunnan koosta: nimen korkeus 8 % laatikon lävistäjästä (6–30 km).
             var kaikki = m.Renkaat.SelectMany(q => q).ToList();
@@ -370,13 +322,6 @@ namespace Matkakirja.Natiivi
         void Sovella(double aika)
         {
             float peitto = (float)h.KerrostenPeitto(aika);
-            if (taytto != null)
-            {
-                var (sade, valmis) = h.Tulva(aika);
-                taytto.SetFloat("_TulvaSade", (float)(sade / 6371.0));
-                taytto.SetFloat("_TulvaValmis", (float)valmis);
-                taytto.SetFloat("_Peitto", peitto);
-            }
             if (laikat != null && laikkaTila.Count > 0)
             {
                 double rengas = h.Rengas(aika);
