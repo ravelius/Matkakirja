@@ -30,6 +30,7 @@ elävällä kerroksella (161-B).*
 | **Pariisi** (Giffardin kiinnitetty ilmapallo, Tuileries 1867/1878) | pallo nousee köyden varassa ja laskee, ja kori heiluu hieman tuulessa | 1 nousu + lasku / 24 s, heilunta 5 s | 900 (pallo, verkko, kori, köysi viivana) | Hidas pystyliike. Terrakottainen kangas on kaupungin ainoa värikäs piste. |
 | **Venetsia** | 2 gondolia liukuu Canal Grandella vastakkaisiin suuntiin, ja airo keinuu | matka 30 s splinellä, airo 3 s | 2 × 250 | Vesiväylää pitkin kulkeva liike toistaa kaupungin luonnetta. Kun gondolit ovat pieniä ja tummia, ne eivät kilpaile nimien kanssa. |
 | **Lontoo** (omistajan idea) | maailmanpyörä pyörii hitaasti hieman kaupunkipisteen sivussa | 1 kierros / 40 s | 2 000 (kehä, pinnat, 16 koria kiertonsa mukaan pystyssä) | Pyörä on suurin elementti, joten se on myös hitain. Sivuun siirrettynä se ei peitä kaupunkipistettä eikä nimeä. |
+| **Lontoo, toinen aihe** (omistaja 10.1x) | siipiratashöyry kulkee Thamesia pitkin, rattaat pyörivät ja savupallot nousevat (ElavatHetket.Savua) | matka 25 s ja tauko 40 s, eli laiva ei ole aina näkyvissä | 600 + savu | Pyörä pyörii paikallaan ja hitaasti sivussa, laiva kulkee joella omalla tempollaan, eikä kumpikaan peitä pistettä. Tämä on ainoa kaupunki, jossa on kaksi aihetta, ja siksi laiva vuorottelee taukojen kanssa. Jos Lontoon kokeessa näkymä on sekava, laiva siirtyy Tonavalle Budapestiin. |
 | **Alpit** (köysirata, Chamonix–Aiguille du Midi) | kaksi hyttiä liukuu vaijeria pitkin vastakkaisiin suuntiin ja kohtaa puolivälissä, ja hytti heilahtaa pysähtyessään | matka 20 s, tauko 6 s | 500 (2 hyttiä, 2 asemaa, vaijeri viivana) | Suora vaijeri laakson yli on selkeämpi kuin rinteen hammasrata, eikä siinä ole savua. Sykli on symmetrinen ja rauhallinen. |
 | **Napoli** (Vesuvius, purkaus 1872) | kraaterista nousee hidas savupatsas, joka kaartuu tuulen mukana | jatkuva; pallo 6 s:n välein | 0 kolmiota (Pehmeapiste-läiskät, ≤ 12 kerrallaan) | Savua on vähän ja se on vaaleaa. Liike on hitaampaa kuin mikään muu kartalla. |
 | *Myöhemmin: Afrikka* | norsu- tai kamelijono (3–5 eläintä) kävelee savannia pitkin | askel 1,4 s, siirtymä 0,3 pt/s | 5 × 400; jalat kärkivarjostimen heiluntana | Kulkue on niin hidas, että sen huomaa vasta katsoessaan. Kaukaa se näkyy pelkkänä pistejonona. |
@@ -48,5 +49,5 @@ elävällä kerroksella (161-B).*
 ## Kokeilujärjestys
 
 1) Amsterdamin myllyt, joilla testataan kerros, kierto ja 0 kehystä levossa. 2) Kööpenhaminan karuselli. 3) Pariisin
-pallo. 4) Venetsian gondolit (spline). 5) Lontoon maailmanpyörä. 6) Alppien köysirata ja Vesuviuksen savu. Jokaisesta
+pallo. 4) Venetsian gondolit (spline). 5) Lontoon maailmanpyörä ja siipiratashöyry samassa kokeessa. 6) Alppien köysirata ja Vesuviuksen savu. Jokaisesta
 kuvapari ja lyhyt video (liike) omistajalle sekä kehysmittaus ennen seuraavaa.
