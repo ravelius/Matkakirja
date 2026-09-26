@@ -7295,3 +7295,7 @@ Siirtoseppa: Euroopassa 21 maakuntanostoa 14 maassa ilman kuvaa (19 skandaalia, 
 ## LOYDOS 173: MAAKUNTAVALIKKO KAPEAMMAKSI JA KORKEAMMAKSI (26.9.2026 klo 19.49)
 
 Omistaja 19.5x (kuva, Ranska iPhone): NOSTOT/MAAKUNNAT-paneeli kapeammaksi ja korkeammaksi; nyt lahes koko leveys ja loppuu ruudun puolivalissa. Natiivi-UI 1.0.26-junaan yhdessa 169:n Kaikki-napin kanssa (kuvassa ylin rivi Pois). Kuvapari Fablelle.
+
+## LOYDOS 174: LAIKAT MAATASON ZOOMISSA — LINJAUS: EI LAIKKAA MISSAAN ZOOMISSA (26.9.2026 klo 19.50)
+
+Omistaja 19.5x (kuva Ranska): valtaosa nostoista yha ruskeina laikkina maatason nakymassa, kysyy milloin korvataan. Tila: 1.0.25 (TF 18.51) piirtaa tason 1 kaikki 182 nostoa 3D:na ja tasot 2–3 pienina instansseina lahikuvassa; maatason zoomissa pienet mallit jaavat siluettirajan (18 pt) alle → laikka. Fablen linjaus: laikkaa ei nayteta missaan zoomissa — kaukaa nosto piirtyy lajin symbolina (webin 155-kaava, loytamaton himmeana), lahella 3D-mallina. Natiiviseppa vastaa buildista ja tyoarviosta, Pelikoodari tarkistaa lajisymbolien kattavuuden datassa.
