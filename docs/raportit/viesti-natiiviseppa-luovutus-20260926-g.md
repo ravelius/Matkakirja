@@ -174,3 +174,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - Linssiseppä 06.1x: build 19:n saapuminen käyttää saapumismaahan rajattua VERKKOHUNTUA (92feb808), koska laattojen Paljastus paljastaisi naapurit. MaaKartta/NostoKerros.Saapuminen ja SaapuminenAlkaa käytössä. JATKOEHDOTUS (build 20+): Paljastus sekoittaa säteen sisällä saapumismaan kermasarjan (naapurit hunnussa, oma maa reikänä) ja ulkona edellisen maan sarjan → laattahuntu korvaa verkkohunnun (ranta täsmälleen). Vaatii kaksi kermasarjaa yhtä aikaa (raster-paikat 1/2) → suunnittele kermaväistön kanssa.
 - juna/b13 **3fec84c7**: + kohta1-maamaa 30056ed0 (käännös 19099766 todensi Editor-koodin; laattapaketti 27,3 Mt: Z5 + maarajat).
 - juna/b13 **05d68639**: + natiivi-ui/maakunta-keskus a3fa7854 (MaakunnatSilta → MaakunnanKeskus, todennettu 39a99aea).
+- juna/b13 **99162d67**: + pelikoodari/lehdet-perassa 0bdb771b (+ natiivi-ui/kortti-lehdet; kaupunkilehdet perään, kylmä aloitusverho 5,3 s).
