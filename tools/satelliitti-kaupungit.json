@@ -1,0 +1,590 @@
+{
+ "kuvaus": "Satelliittisarjan s2-kerroksen kaupungit: sisältöpaketin kokoelma kaupungit, tyyppi \"kaupunki\" (laudan ambience, js/packs/maailmankartta.js). 72 = 71 + Lontoo. lat/lon paketista: pallopiste (Wikidata) tai laudalta laskettu, ks. sijaintiLahde. Tuotettu: node tools/tee-satelliitti.mjs kaupungit.",
+ "lahde": {
+  "kokoelma": "kaupungit",
+  "suodatin": {
+   "tyyppi": "kaupunki"
+  },
+  "paketti": "sisalto/2/v5/",
+  "commit": "2276b716d",
+  "julkaistu": "2026-09-24T09:11:45.481Z"
+ },
+ "kaupungit": [
+  {
+   "id": "lontoo",
+   "nimi": "Lontoo",
+   "maa": "GBR",
+   "lat": 51.5051,
+   "lon": -0.115,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "dublin",
+   "nimi": "Dublin",
+   "maa": "IRL",
+   "lat": 53.368,
+   "lon": -6.259,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "edinburgh",
+   "nimi": "Edinburgh",
+   "maa": "GBR",
+   "lat": 55.9539,
+   "lon": -3.187,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "pariisi",
+   "nimi": "Pariisi",
+   "maa": "FRA",
+   "lat": 48.8451,
+   "lon": 2.333,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "madrid",
+   "nimi": "Madrid",
+   "maa": "ESP",
+   "lat": 40.4036,
+   "lon": -3.709,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "granada",
+   "nimi": "Granada",
+   "maa": "ESP",
+   "lat": 37.1702,
+   "lon": -3.604,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "sevilla",
+   "nimi": "Sevilla",
+   "maa": "ESP",
+   "lat": 37.3888,
+   "lon": -5.989,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "bryssel",
+   "nimi": "Bryssel",
+   "maa": "BEL",
+   "lat": 50.8502,
+   "lon": 4.352,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "luxemburg",
+   "nimi": "Luxemburg",
+   "maa": "LUX",
+   "lat": 49.6126,
+   "lon": 6.131,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "berliini",
+   "nimi": "Berliini",
+   "maa": "DEU",
+   "lat": 52.5323,
+   "lon": 13.376,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "praha",
+   "nimi": "Praha",
+   "maa": "CZE",
+   "lat": 50.0983,
+   "lon": 14.417,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "kosice",
+   "nimi": "Košice",
+   "maa": "SVK",
+   "lat": 48.7169,
+   "lon": 21.26,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "ljubljana",
+   "nimi": "Ljubljana",
+   "maa": "SVN",
+   "lat": 46.0568,
+   "lon": 14.507,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "wien",
+   "nimi": "Wien",
+   "maa": "AUT",
+   "lat": 48.1976,
+   "lon": 16.397,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "budapest",
+   "nimi": "Budapest",
+   "maa": "HUN",
+   "lat": 47.492,
+   "lon": 19.051,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "varsova",
+   "nimi": "Varsova",
+   "maa": "POL",
+   "lat": 52.2286,
+   "lon": 21.032,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "krakova",
+   "nimi": "Krakova",
+   "maa": "POL",
+   "lat": 50.0616,
+   "lon": 19.937,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "firenze",
+   "nimi": "Firenze",
+   "maa": "ITA",
+   "lat": 43.7712,
+   "lon": 11.255,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "rooma",
+   "nimi": "Rooma",
+   "maa": "ITA",
+   "lat": 41.8869,
+   "lon": 12.491,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "ateena",
+   "nimi": "Ateena",
+   "maa": "GRC",
+   "lat": 37.9699,
+   "lon": 23.741,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "sofia",
+   "nimi": "Sofia",
+   "maa": "BGR",
+   "lat": 42.6844,
+   "lon": 23.324,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "bukarest",
+   "nimi": "Bukarest",
+   "maa": "ROU",
+   "lat": 44.4324,
+   "lon": 26.084,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "kiova",
+   "nimi": "Kiova",
+   "maa": "UKR",
+   "lat": 50.442,
+   "lon": 30.509,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "moskova",
+   "nimi": "Moskova",
+   "maa": "RUS",
+   "lat": 55.764,
+   "lon": 37.646,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "pietari",
+   "nimi": "Pietari",
+   "maa": "RUS",
+   "lat": 59.946,
+   "lon": 30.302,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "tallinna",
+   "nimi": "Tallinna",
+   "maa": "EST",
+   "lat": 59.439,
+   "lon": 24.754,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "riika",
+   "nimi": "Riika",
+   "maa": "LVA",
+   "lat": 56.947,
+   "lon": 24.105,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "vilna",
+   "nimi": "Vilna",
+   "maa": "LTU",
+   "lat": 54.689,
+   "lon": 25.28,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "ankara",
+   "nimi": "Ankara",
+   "maa": "TUR",
+   "lat": 39.9184,
+   "lon": 32.84,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "nikosia",
+   "nimi": "Nikosia",
+   "maa": "CYP",
+   "lat": 35.1564,
+   "lon": 33.359,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "jerusalem",
+   "nimi": "Jerusalem",
+   "maa": null,
+   "lat": 31.783,
+   "lon": 35.217,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "mosul",
+   "nimi": "Mosul",
+   "maa": "IRQ",
+   "lat": 36.3469,
+   "lon": 43.121,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "teheran",
+   "nimi": "Teheran",
+   "maa": "IRN",
+   "lat": 35.7003,
+   "lon": 51.401,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "tokio",
+   "nimi": "Tokio",
+   "maa": "JPN",
+   "lat": 35.7003,
+   "lon": 139.7,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "kioto",
+   "nimi": "Kioto",
+   "maa": "JPN",
+   "lat": 35.012,
+   "lon": 135.768,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "jekaterinburg",
+   "nimi": "Jekaterinburg",
+   "maa": "RUS",
+   "lat": 56.8009,
+   "lon": 60.599,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "peking",
+   "nimi": "Peking",
+   "maa": "CHN",
+   "lat": 39.9006,
+   "lon": 116.399,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "soul",
+   "nimi": "Soul",
+   "maa": "KOR",
+   "lat": 37.5993,
+   "lon": 127.001,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "xian",
+   "nimi": "Xi’an",
+   "maa": "CHN",
+   "lat": 34.2991,
+   "lon": 108.899,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "taipei",
+   "nimi": "Taipei",
+   "maa": "TWN",
+   "lat": 25.033,
+   "lon": 121.633,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "hanoi",
+   "nimi": "Hanoi",
+   "maa": "VNM",
+   "lat": 21.0012,
+   "lon": 105.8,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "jakarta",
+   "nimi": "Jakarta",
+   "maa": "IDN",
+   "lat": -6.21,
+   "lon": 106.845,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "mumbai",
+   "nimi": "Mumbai",
+   "maa": "IND",
+   "lat": 18.975,
+   "lon": 72.826,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "newyork",
+   "nimi": "New York",
+   "maa": "USA",
+   "lat": 40.67,
+   "lon": -73.94,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "winnipeg",
+   "nimi": "Winnipeg",
+   "maa": "CAN",
+   "lat": 49.9007,
+   "lon": -97.099,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "montreal",
+   "nimi": "Montreal",
+   "maa": "CAN",
+   "lat": 45.546,
+   "lon": -73.639,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "toronto",
+   "nimi": "Toronto",
+   "maa": "CAN",
+   "lat": 43.6999,
+   "lon": -79.399,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "chicago",
+   "nimi": "Chicago",
+   "maa": "USA",
+   "lat": 41.8994,
+   "lon": -87.601,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "losangeles",
+   "nimi": "Los Angeles",
+   "maa": "USA",
+   "lat": 34.05,
+   "lon": -118.25,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "houston",
+   "nimi": "Houston",
+   "maa": "USA",
+   "lat": 29.763,
+   "lon": -95.383,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "miami",
+   "nimi": "Miami",
+   "maa": "USA",
+   "lat": 25.788,
+   "lon": -80.224,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "monterrey",
+   "nimi": "Monterrey",
+   "maa": "MEX",
+   "lat": 25.7008,
+   "lon": -100.3,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "mexico",
+   "nimi": "Mexico City",
+   "maa": "MEX",
+   "lat": 19.411,
+   "lon": -99.131,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "merida",
+   "nimi": "Mérida",
+   "maa": "MEX",
+   "lat": 20.97,
+   "lon": -89.62,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "guatemala",
+   "nimi": "Guatemala",
+   "maa": "GTM",
+   "lat": 14.623,
+   "lon": -90.531,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "managua",
+   "nimi": "Managua",
+   "maa": "NIC",
+   "lat": 12.136,
+   "lon": -86.251,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "buenosaires",
+   "nimi": "Buenos Aires",
+   "maa": "ARG",
+   "lat": -34.608,
+   "lon": -58.373,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "caracas",
+   "nimi": "Caracas",
+   "maa": "VEN",
+   "lat": 10.496,
+   "lon": -66.898,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "saoluis",
+   "nimi": "São Luís",
+   "maa": "BRA",
+   "lat": -2.53,
+   "lon": -44.303,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "salvador",
+   "nimi": "Salvador",
+   "maa": "BRA",
+   "lat": -12.983,
+   "lon": -38.493,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "lima",
+   "nimi": "Lima",
+   "maa": "PER",
+   "lat": -12.06,
+   "lon": -77.037,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "santacruz",
+   "nimi": "Santa Cruz",
+   "maa": "BOL",
+   "lat": -17.7787,
+   "lon": -63.181,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "rio",
+   "nimi": "Rio de Janeiro",
+   "maa": "BRA",
+   "lat": -22.911,
+   "lon": -43.206,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "saopaulo",
+   "nimi": "São Paulo",
+   "maa": "BRA",
+   "lat": -23.55,
+   "lon": -46.634,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "asuncion",
+   "nimi": "Asunción",
+   "maa": "PRY",
+   "lat": -25.3018,
+   "lon": -57.64,
+   "sijaintiLahde": "laudalta-laskettu"
+  },
+  {
+   "id": "sydney",
+   "nimi": "Sydney",
+   "maa": "AUS",
+   "lat": -33.868,
+   "lon": 151.21,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "perth",
+   "nimi": "Perth",
+   "maa": "AUS",
+   "lat": -31.956,
+   "lon": 115.86,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "melbourne",
+   "nimi": "Melbourne",
+   "maa": "AUS",
+   "lat": -37.814,
+   "lon": 144.963,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "brisbane",
+   "nimi": "Brisbane",
+   "maa": "AUS",
+   "lat": -27.468,
+   "lon": 153.028,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "adelaide",
+   "nimi": "Adelaide",
+   "maa": "AUS",
+   "lat": -34.928,
+   "lon": 138.6,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "wellington",
+   "nimi": "Wellington",
+   "maa": "NZL",
+   "lat": -41.289,
+   "lon": 174.777,
+   "sijaintiLahde": "pallopiste"
+  },
+  {
+   "id": "christchurch",
+   "nimi": "Christchurch",
+   "maa": "NZL",
+   "lat": -43.531,
+   "lon": 172.636,
+   "sijaintiLahde": "pallopiste"
+  }
+ ]
+}
