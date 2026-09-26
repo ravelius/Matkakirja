@@ -66,6 +66,14 @@ namespace Matkakirja.Natiivi
         const string PoisAvain = "matkakirja-karttatyokalu-maakunnat-pois", PoisTunnus = ":pois";
         static bool OnPois(string avain) => avain != null && avain.EndsWith(PoisTunnus, StringComparison.Ordinal);
 
+        /// <summary>
+        /// Löydös 169 (omistaja 19.3x): "Kaikki" = koko maa ilman rajausta (ei yksittäistä maakuntaa, ei Pois). Rivi on valittuna
+        /// aina, kun kumpaakaan ei ole; välilehden ollessa auki kartalla kaikkien maakuntien täyttö ilman korostusta
+        /// (MaakunnatSilta saa avaimen "ISO:kaikki"). Ei tallennu (tallennettu valinta poistetaan).
+        /// </summary>
+        public const string KaikkiTunnus = ":kaikki";
+        public static bool OnKaikki(string avain) => avain != null && avain.EndsWith(KaikkiTunnus, StringComparison.Ordinal);
+
         sealed class Maa { public string Iso, Nimi; public List<(string Tunnus, string Nimi)> Alueet = new List<(string, string)>(); }
         sealed class Luonnehdinta { public string Lyhyt, Pitka, Pikkukuva; public List<Dictionary<string, object>> Kuvat = new List<Dictionary<string, object>>(); }
 
@@ -246,6 +254,13 @@ namespace Matkakirja.Natiivi
                     poisRivi.pickingMode = PickingMode.Ignore;
                     poisRivi.userData = poisAvain;
                     rivit[poisAvain] = poisRivi;
+                    string kaikkiAvain = iso + KaikkiTunnus;
+                    var kaikkiRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(kaikkiAvain), ryhmanRivit);
+                    Kirjasimet.Aseta(Rakenne.Teksti("Kaikki", "mk-maakunnat__nimi", kaikkiRivi), Kirjasin.Luku);
+                    kaikkiRivi.tooltip = "Koko maa, ei rajausta";
+                    kaikkiRivi.pickingMode = PickingMode.Ignore;
+                    kaikkiRivi.userData = kaikkiAvain;
+                    rivit[kaikkiAvain] = kaikkiRivi;
                 }
                 foreach (var a in m.Alueet)
                 {
@@ -329,7 +344,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Pois-tilassa jokaisen maan Pois-rivi näkyy valittuna (tila on maasta riippumaton).</summary>
         void MerkitsePois()
         {
-            foreach (var p in rivit) if (OnPois(p.Key)) p.Value.EnableInClassList("mk-valittu", Pois);
+            foreach (var p in rivit)
+            {
+                if (OnPois(p.Key)) p.Value.EnableInClassList("mk-valittu", Pois);
+                // Löydös 169: Kaikki valittuna, kun ei ole Pois eikä yksittäistä maakuntaa.
+                else if (OnKaikki(p.Key)) p.Value.EnableInClassList("mk-valittu", !Pois && ValittuAvain == null);
+            }
         }
 
         void AsetaRyhma(string iso, bool auki)
@@ -382,6 +402,7 @@ namespace Matkakirja.Natiivi
                 if (rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
                 ValittuAvain = null;
                 PaivitaLuonnehdinta();
+                MerkitsePois();
             }
             SiirraPeukalo();
         }
@@ -401,14 +422,14 @@ namespace Matkakirja.Natiivi
         public void Valitse(string avain)
         {
             if (!Kelpaa(avain)) return;
-            bool pois = OnPois(avain);
-            if (avain == ValittuAvain && pois == Pois) return;
+            bool pois = OnPois(avain), kaikki = OnKaikki(avain);
+            if (kaikki ? ValittuAvain == null && !Pois : avain == ValittuAvain && pois == Pois) return;
             if (ValittuAvain != null && rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
-            ValittuAvain = pois ? null : avain;
-            if (!pois) rivit[avain].AddToClassList("mk-valittu");
+            ValittuAvain = pois || kaikki ? null : avain;
+            if (!pois && !kaikki) rivit[avain].AddToClassList("mk-valittu");
             try
             {
-                if (pois) PlayerPrefs.DeleteKey(TallennusAvain); else PlayerPrefs.SetString(TallennusAvain, avain);
+                if (pois || kaikki) PlayerPrefs.DeleteKey(TallennusAvain); else PlayerPrefs.SetString(TallennusAvain, avain);
                 PlayerPrefs.SetInt(PoisAvain, pois ? 1 : 0);
                 PlayerPrefs.Save();
             }
@@ -419,6 +440,7 @@ namespace Matkakirja.Natiivi
             PaivitaLuonnehdinta();
             SiirraPeukalo();
             // Pois: korostus ja rajat pois (MaakunnatSilta null), ja 113:n oletusrajat kuuntelevat PoisMuuttui.
+            // Kaikki: avain "ISO:kaikki" (täyttö ilman korostusta).
             Valittu?.Invoke(pois ? null : avain);
             if (muuttui) PoisMuuttui?.Invoke(pois);
         }
@@ -433,6 +455,8 @@ namespace Matkakirja.Natiivi
         {
             string kohde = ValittuAvain;
             if (kohde == null && Pois) kohde = rivit.Keys.FirstOrDefault(k => OnPois(k) && rivit[k].parent.resolvedStyle.display != DisplayStyle.None);
+            // Löydös 169: ei valintaa eikä Pois → peukalo Kaikki-rivillä.
+            else if (kohde == null) kohde = rivit.Keys.FirstOrDefault(k => OnKaikki(k) && rivit[k].parent.resolvedStyle.display != DisplayStyle.None);
             if (kohde == null || !rivit.TryGetValue(kohde, out var r) || r.parent.resolvedStyle.display == DisplayStyle.None
                 || float.IsNaN(r.layout.height))
             {
@@ -460,12 +484,20 @@ namespace Matkakirja.Natiivi
             // Löydös 158: oma pikkukuva ensin, varana kortin ensimmäinen kuva.
             string pikku = data == null ? null : !string.IsNullOrEmpty(data.Pikkukuva) ? data.Pikkukuva
                 : data.Kuvat.Count > 0 ? MiniJson.Teksti(data.Kuvat[0], "pikku") ?? MiniJson.Teksti(data.Kuvat[0], "osoite") : null;
+            // Löydös 170b (omistaja 19.3x): kuvan paikka näkyy aina minitekstin kyljessä; kuvan puuttuessa (tai haun
+            // epäonnistuessa) vaalea paikkakuva pienellä karttaikonilla, kunnes Sisältökirjurin kuva tulee pakettiin.
+            var kuva = Rakenne.El("mk-maakunnat__lkuva", rivi);
+            var paikka = new SvgIkoni(Ikonit.Viiva["taitekartta"]);
+            paikka.AddToClassList("mk-maakunnat__lpaikka");
+            kuva.Add(paikka);
             if (!string.IsNullOrEmpty(pikku))
-            {
-                var kuva = Rakenne.El("mk-maakunnat__lkuva", rivi);
-                Kuvat.Hae(pikku, tx => { if (tx != null) kuva.style.backgroundImage = new StyleBackground(tx); });
-                kuva.RegisterCallback<ClickEvent>(_ => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain)));
-            }
+                Kuvat.Hae(pikku, tx =>
+                {
+                    if (tx == null) return;
+                    kuva.style.backgroundImage = new StyleBackground(tx);
+                    paikka.RemoveFromHierarchy();
+                });
+            if (data != null) kuva.RegisterCallback<ClickEvent>(_ => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain)));
             var t = Rakenne.Teksti(data?.Lyhyt ?? "Luonnehdinta tulossa.", "mk-maakunnat__lteksti", rivi);
             Kirjasimet.Aseta(t, Kirjasin.Luku);
             if (data != null)

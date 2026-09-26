@@ -840,6 +840,20 @@
     -unity-background-scale-mode: scale-and-crop;
 }
 
+/* Löydös 170b: kuvan paikka ilman kuvaa — vaalea ruutu, pieni himmeä karttaikoni keskellä (ei koristeita). */
+.mk-maakunnat__lkuva {
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-maakunnat__lpaikka {
+    width: 20px;
+    height: 20px;
+    opacity: 0.35;
+    color: #46331f;
+    --mk-ikoni-viiva: 1.4;
+}
+
 .mk-maakunnat__lteksti {
     flex-shrink: 1;
     flex-grow: 1;

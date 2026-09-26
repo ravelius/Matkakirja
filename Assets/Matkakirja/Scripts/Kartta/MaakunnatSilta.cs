@@ -48,6 +48,8 @@ namespace Matkakirja.Natiivi
             if (!Maakunnat.Nakyvissa) { Palauta(mk); return; }
             mk.MaaPerussavy(Perus);
             mk.KorostusPois(null);
+            // Löydös 169: Kaikki = koko maan täyttö ilman yksittäistä korostusta.
+            if (Maakunnat.OnKaikki(avain)) { mk.Taytto(true); mk.MaaTila(true); return; }
             mk.Korosta(avain, Valittu);
             mk.Taytto(true);
             mk.MaaTila(true);
@@ -57,7 +59,8 @@ namespace Matkakirja.Natiivi
         {
             var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
             if (mk == null) return;
-            if (nakyy) { if (!string.IsNullOrEmpty(valittu)) Valitse(valittu); }
+            // Ilman valintaa (eikä Pois) välilehti näyttää Kaikki-tilan (löydös 169).
+            if (nakyy) { if (!string.IsNullOrEmpty(valittu)) Valitse(valittu); else if (!Maakunnat.Pois) Valitse(Maakunnat.KaikkiTunnus); }
             else Palauta(mk);
         }
 
