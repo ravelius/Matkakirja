@@ -7535,3 +7535,7 @@ Omistaja 22.3x: ei naytteita, vain selvitys onko Grokilla striimaava puheaani. F
 ## 178 OMISTAJA: 70 TARINAKOHDETTA SUORAAN KAUPUNGIN NOSTOIHIN (26.9.2026 klo 22.39)
 
 Omistaja 22.4x: 70 tarinakohdetta (skandaalit, historian hetket, taustat) siirretaan suoraan kaupungin nostoihin — kaupunkikatto ei rajoita, koska kaupungilla on oma kortti, joka kokoaa kaikki nostot. Fable: piilotetaan kaikki 81 nahtavyyskartalta; Pelikoodari liittaa 70 kaupungin nostolistaan (data, testit 953/3985 paivitetaan), web + natiivi; Sisaltokirjurille jaa 11 ei-tarinakohdetta (museon juttuun) ja Santarem + Broome.
+
+## MERIKOHDAT VALMIS PR 3352 (29 MAATA, 129 KOHTAA) (26.9.2026 klo 22.39)
+
+Karttaseppa: assets/data/merikohdat.json (paketissa kartta/merikohdat.json), merijako Valimeri/Mustameri/Atlantti/Pohjanmeri/Kanaali/Itameri/Jaameri; kohdat 15–45 km rannasta, ≥ 12 km 1873-reiteista, ei vierasta rantaa 35 km, ≤ 4/meri, suunta rannasta merelle; kuva pyramidi-poltto/kuvat/merikohdat-eurooppa-20260926.png. Julkaisijan junaan, Siirtoseppa delta natiiviin. Linssisepan merikokeilu (hoyrylaiva + valas, NOR) voi kayttaa tata.
