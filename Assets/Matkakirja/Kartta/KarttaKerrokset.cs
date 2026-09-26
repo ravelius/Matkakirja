@@ -1212,10 +1212,6 @@ namespace Matkakirja
         /// <summary>Aloitusnäytön esilataus (null = ei vielä aloitettu); diagnostiikkaan ja mittauksiin.</summary>
         public Laattapalvelin.Esilataus AloitusEsilataus { get; private set; }
         bool aloitusEsiladattu;
-        PalloKierto avausKierto;
-        float kiilatAlkoi;
-        /// <summary>Aloitusnäytön avauskiilojen enimmäisaika (s): sen jälkeen Cesium ei enää valitse niiden laattoja.</summary>
-        const float KiilatEnintaanS = 120f;
 
         /// <summary>
         /// ALOITUSNÄYTÖN ESILATAUS (Fablen päätös BUILD 16, esilatauspolitiikan kohta 2; löydös 80): aloituslennon mustan
@@ -1600,18 +1596,6 @@ namespace Matkakirja
                 // Aloituslennon avauksen lähialue (build 22): suunnasta riippumaton osa jo aloitusnäytössä; kiila lennon alussa.
                 // Vaatii maaston layer.jsonin (EsilataaAloitusMaasto), joten odottaa sitä.
                 StartCoroutine(AvausLahialue());
-                // Avausnäkymän virtuaalikamerat (kokeilu, kehittäjälippu): Cesium lataa avauksen laatat kaikkiin suuntiin.
-                if (avausKierto == null) avausKierto = FindAnyObjectByType<PalloKierto>();
-                AvausKamerat.Kiilat(avausKierto, pallo, AloitusLahtoLat, AloitusLahtoLon, LennonAikajana.AloitusAvausM,
-                    LennonAikajana.AloitusAvausKallistus);
-                kiilatAlkoi = Time.unscaledTime;
-            }
-            // Kiilat pois, jos aloitusnäytöstä lähdettiin ilman aloituslentoa (jatka tallennusta) tai ne ovat olleet liian kauan.
-            if (AvausKamerat.Maara > 0 && kiilatAlkoi > 0f && (nappula == null || !nappula.AloitusAjossa)
-                && (!PalloKierto.PorttiSumea || Time.unscaledTime - kiilatAlkoi > KiilatEnintaanS))
-            {
-                kiilatAlkoi = 0f;
-                AvausKamerat.Lopeta(PalloKierto.PorttiSumea ? "aikaraja" : "aloitusnäyttö ohi");
             }
             // Valinta sulkeutui (LentoPohjaValmiiksi(false)): valmis pinta pois, kun aloituslentoa ei ole käynnissä. Valinnan
             // Valitse käynnistää lennon samassa kutsussa, jolloin pinta odottaa lentoa (LentoPohja(true) tai keskeytys).
