@@ -865,6 +865,35 @@ namespace Matkakirja
             return 0.5 * (a + minimi + Math.Sqrt(d * d + KorkeusPehmennysM * KorkeusPehmennysM));
         }
 
+        // ---- Löydös 172 (omistaja 26.9. klo 19.3x): kone matalammalle ja lähikuvassa vaakasuoraan. ----
+        // Käsikirjoitus proto-3d/lokit/kamerakasikirjoitus-lento-20260924.md, osio "Koneen korkeus ja asento". Paino
+        // k(d) kameran etäisyydestä koneeseen: lähikuvissa (d ≤ 150 km) kone on matkalentokorkeudessa (minimi) ja
+        // vaakasuorassa, kaukaa (d ≥ 2000 km) se kulkee matalalla kaarella ja nokka seuraa kaarta enintään ±6°.
+
+        /// <summary>Painon rajat (m): lähikuva ja kaukokuva.</summary>
+        public const double PainoLahiM = 150_000.0, PainoKaukoM = 2_000_000.0;
+        /// <summary>Kaaren huippu: enintään 150 km ja 5 % reitistä (ennen 900 km ja 12 %).</summary>
+        public const double HuippuMaxM = 150_000.0, HuippuOsuus = 0.05;
+        /// <summary>Nokan suurin kallistus kaaren mukaan (°), kaukokuvassa.</summary>
+        public const double NokkaMaxAste = 6.0;
+
+        public static double Huippu(double reittiM) => Math.Min(HuippuMaxM, HuippuOsuus * Math.Max(0, reittiM));
+
+        /// <summary>Kaaren ja nokan paino k(d) ∈ [0, 1]: smootherstep logaritmisella etäisyydellä 150 km → 2000 km.</summary>
+        public static double KaarenPaino(double etaisyysM)
+        {
+            if (!(etaisyysM > PainoLahiM)) return 0;
+            return Kamerakayrat.Pehmea(Math.Log(etaisyysM / PainoLahiM) / Math.Log(PainoKaukoM / PainoLahiM));
+        }
+
+        /// <summary>Koneen korkeus lennon pohjasta painolla: kaari huippu · sin πp · k, vähintään minimi (pehmeä maksimi).</summary>
+        public static double KoneenKorkeus(double p, double huippu, double minimi, double paino) =>
+            KoneenKorkeus(p, huippu * Math.Max(0, Math.Min(1, paino)), minimi);
+
+        /// <summary>Nokan kulma vaakatasosta (°, + ylös): kaaren kulma rajattuna ±NokkaMaxAste ja kerrottuna painolla.</summary>
+        public static double NokanKulma(double kaarenKulmaAste, double paino) =>
+            Math.Max(-NokkaMaxAste, Math.Min(NokkaMaxAste, double.IsNaN(kaarenKulmaAste) ? 0 : kaarenKulmaAste)) * Math.Max(0, Math.Min(1, paino));
+
         // ---- Koneen eteneminen: nopeusprofiili integroituna, normitettuna niin, että t = 1 → 1. ----
 
         const int Naytteita = 512;
