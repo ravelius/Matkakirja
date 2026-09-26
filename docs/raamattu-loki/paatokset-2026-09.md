@@ -7739,3 +7739,7 @@ Natiiviseppa 01.2x: juna/b13 5cbd7870 (kaannos 16be7e44, mukana 177-korjaus cc33
 ## MAAJUTTUJEN SIIRTO: 5 POIKKEUSTA JAAVAT KAUPUNKIIN (FABLEN PAATOS), ~28 SIIRTYY (27.9.2026 klo 01.23)
 
 Sisaltokirjuri 01.2x: 33 maajutusta 5 ei siirry suoraan — Dublin sakkipilli (duplikaatti IRL-musiikissa + Dublinin saapumisvisa), Marseille hymni, Lissabon azulejot, Barcelona ihmistorni (saapumisvisat nojaavat juttuun), Praha Dvorak (CZE:lla ei musiikkikategoriaa). Fable paatti: kaikki 5 jaavat kaupunkilehteen tassa erassa, uusia visoja ei kirjoiteta nyt; duplikaatit poistetaan vain kaupungista. Loput ~28 siirtyvat (9 puhtaat, 8 orpokorjauksin, 3 historian hetkea lehti-kentalla, 6–7 duplikaattia).
+
+## LAITETESTAAJA: 1.0.27-KIERROS 16be7e44 6/7 PASS (170 NATIIVI-UI:N LAITETODENNUS); UUSI SHA KLO 02 (27.9.2026 klo 01.28)
+
+Laitetestaaja 01.2x: TF 1.0.27 -kierros kaannokselle 16be7e44: 178, 179, lipun perspektiivi, hoyrylaiva, 177+kortti PASS, 0 poikkeusta; 170 ei konsolikomennolla testattavissa → Natiivi-UI:n laitetodennus (v176 → v194) lasketaan PASSiksi. Raportti docs/raportit/savukierros-tf1027-20260927.md 8e5783164. Koska ylhaalta-175 tulee omistajan paatoksella junaan, klo 02 kaannoksesta lyhyt uusintakierros (perspektiivi, lippu, savuke, 177) ennen master-mergea ja TF:aa.
