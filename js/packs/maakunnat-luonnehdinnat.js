@@ -8249,24 +8249,101 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BLR: {
     Brest: {
       lyhyt: 'Belovežin aarniometsässä, jonka Valko-Venäjä jakaa Puolan kanssa, elää yli 800 visenttiä – Euroopan painavinta maaeläintä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-brest-530d8b42.jpg",
+          lahde: "Eternal Beginner, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Eternal Beginner",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:European_bison_in_the_National_Park_„Belovezhskaya_Pushcha“_aviary_-_Sep_2023.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-brest-530d8b42.jpg",
     },
     Gomel: {
       lyhyt: 'Homelin palatsin ympärille Sož-joen rannalle perusti ruhtinas Ivan Paskevitš 1800-luvulla englantilaisen puiston, joka on yhä paikallaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-gomel-19a2bfdd.jpg",
+          lahde: "diluted88, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "diluted88",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Гомельскі_палацава-паркавы_ансамбль_..._Gomel_Palace_and_Park_Ensemble_-_panoramio.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-gomel-19a2bfdd.jpg",
     },
     Grodno: {
       lyhyt: 'Mirin linnaa alettiin rakentaa 1500-luvun alussa goottilaiseksi linnoitukseksi, ja se on Unescon maailmanperintöä vuodesta 2000.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
+          lahde: "Mike1979 Russia, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mike1979 Russia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mir_Castle_2023-07-02_5838.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
     },
     Mogilev: {
       lyhyt: 'Mahiljoun Pyhän Nikolauksen luostarin katedraali valmistui 1668, ja sen alkuperäinen ikonostaasi on säilynyt.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
+          lahde: "Alena2026, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alena2026",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Saint_Nicholas_monastery,_Mogilev,_2025.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
     },
     Minsk: {
       lyhyt: 'Njasvižin linna oli vuosisatoja Radziwiłłien suvun kotilinna, ja se on Unescon maailmanperintöä vuodesta 2005.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
+          lahde: "Alexxx1979, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alexxx1979",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Belarus_Nesvizh_Castle_7259_2050.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
     },
     'City of Minsk': {
       lyhyt: 'Minskin kansalliskirjasto on 73,6 metriä korkea rombikuboktaedri, kuin timantiksi hiottu talo, ja se avattiin 2006.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-city-of-minsk-835329e5.jpg",
+          lahde: "Agbarto, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Agbarto",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2024.04.11_National_Library_of_Belarus_Building_Minsk.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-city-of-minsk-835329e5.jpg",
     },
     Vitebsk: {
       lyhyt: 'Vitsebskin Pokrovskaja-kadulla on talo, jossa Marc Chagall vietti lapsuutensa – nykyään siinä toimii hänen kotimuseonsa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
+          lahde: "Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Adam Jones from Kelowna, BC, Canada",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Marc_Chagall_House_-_Vitebsk_-_Belarus_(27430073700).jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
     },
   },
   /*
