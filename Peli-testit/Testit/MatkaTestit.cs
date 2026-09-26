@@ -283,6 +283,32 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(150, m.Tila.Pelaaja.Raha);
         }
 
+        /// <summary>Elävä kartta kohta 4: kuljettu reitti järjestyksessä, tapa mukana, tallennus ja vanha tallennus.</summary>
+        [Testi] static void KuljettuReittiJarjestyksessa()
+        {
+            string Reitti(Matka x) => string.Join(",", x.Tila.Pelaaja.Kuljettu.Select(k => k.Kaupunki + ":" + (k.Tapa?.ToString() ?? "-")));
+            var m = Uusi("ala");
+            var osuudet = new List<string>();
+            m.KuljettuKasvoi += (p, a, b) => osuudet.Add((a?.Kaupunki ?? "-") + ">" + b.Kaupunki);
+            Oleta.Sama("ala:-", Reitti(m), "aloitus");
+            Oleta.Tosi(m.Bussi("bee").Ok, "bussi");
+            Oleta.Tosi(m.PeruKulkutapa().Ok, "paluu valintaan");
+            Oleta.Tosi(m.Bussi("ala").Ok, "takaisin");
+            Oleta.Sama("ala:-,bee:Bussi,ala:Bussi", Reitti(m), "paluu samaan kaupunkiin kirjataan, järjestys säilyy");
+            Oleta.Sama("ala>bee,bee>ala", string.Join(",", osuudet));
+            m.KirjaaSaapuminen();
+            Oleta.Sama(3, m.Tila.Pelaaja.Kuljettu.Count, "sama kaupunki peräkkäin ei kasvata");
+
+            var l = Matka.Lataa(ValeVerkko.Pieni(), m.Tallenna());
+            Oleta.Sama(Reitti(m), Reitti(l), "tallennus säilyttää");
+            var json = m.Tallenna();
+            int alku = json.IndexOf(",\"kuljettu\":[", StringComparison.Ordinal), loppu = json.IndexOf('[', alku), syvyys = 0;
+            do { if (json[loppu] == '[') syvyys++; else if (json[loppu] == ']') syvyys--; loppu++; } while (syvyys > 0);
+            var vanha = json.Remove(alku, loppu - alku);
+            Oleta.Tosi(!vanha.Contains("kuljettu"), "kenttä pois");
+            Oleta.Sama("ala:-", Reitti(Matka.Lataa(ValeVerkko.Pieni(), vanha)), "vanha tallennus: reitti alkaa nykyisestä");
+        }
+
         [Testi] static void BussiPolkuKulkeeReitinVarren()
         {
             var m = Uusi("bee");

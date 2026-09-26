@@ -902,6 +902,7 @@ namespace Matkakirja.Natiivi
             linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
             kytkettyRekisteri = null;
             KytkeRekisteri();
+            KytkeReitti(m);
             m.Tapahtui += (laji, teksti) => { tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
             m.Loysi += (p, l) =>
             {
@@ -1425,6 +1426,7 @@ namespace Matkakirja.Natiivi
             PaivitaMatkareitit();
             // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
             try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
+            ReittiPerilla(kaupunki);
             // Hyppyketju soitti saapumisäänen jo viimeisellä laskeutumisella (NappulaLaskeutui); muuten tässä.
             if (kaupunki != null && !saapumisaaniSoi) Aanita(Aanitunnukset.Saapuminen);
             saapumisaaniSoi = false;
