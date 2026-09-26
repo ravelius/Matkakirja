@@ -24,7 +24,7 @@
 // pysäyttää kohtaan s (pysäytyskuvat), "elava jatka", "elava pois" (kartta ennalleen), "elava tila" ja "elava ui 0|1"
 // (käyttöliittymä piiloon kohtauksen ajaksi, oletus 0 = piiloon); saapumiselle "elava saapuminen <kaupunki>" (testiajo
 // saapumisajoineen), "elava saapumiset 0|1" (automaattinen laukaisu), "elava kaikki 0|1" (myös jo käydyt maat) ja
-// "elava herata <ISO:tunnus>" (maakunnan herätys, ElavaHerays).
+// "elava herata <ISO:tunnus>" (maakunnan herätys, ElavaHerays) ja "elava reitti <kaupungit…> | pois" (ElavaMatka).
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -163,6 +163,9 @@ namespace Matkakirja.Natiivi
                     break;
                 case "saapuminen":
                     if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain);
+                    break;
+                case "reitti":
+                    if (osat.Length > 2) ElavaMatka.Testi(osat.Skip(2).ToArray(), ohjain);
                     break;
                 case "herata":
                     if (osat.Length > 2) ElavaHerays.Testi(osat[2]);
@@ -411,6 +414,8 @@ namespace Matkakirja.Natiivi
             ElavaHerays.Kytke(ohjain);
             // Kohta 2: löytämättömien nostojen musteen jäljet tekstuureina Natiivi-UI:lle (taustasäikeessä).
             MusteJaljet.Valmistele();
+            // Kohta 4: kirjoitettu maailma (kuljettu reitti kynänjälkenä, käytyjen kaupunkien hehku kaukana).
+            ElavaMatka.Kytke(ohjain);
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
