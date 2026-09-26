@@ -801,11 +801,12 @@ namespace Matkakirja.Natiivi
     /// keinuu 3 s). Kaavamainen käänteinen S-mutka (oma käyrä, ei johdettu kartta-aineistosta): luoteesta itään Rialtolle,
     /// volta lounaaseen ja itään San Marcon altaaseen. Runko (Kaupunki): vesi, rantakadut ja matalat palatsit kanavan
     /// varrella. Roottori (Rialto) on paikallaan pysyvä silta. Lapset: kaksi gondolia, jotka kulkevat kanavaa edestakaisin
-    /// 30 s:n matkoin (smootherstep ja airon vedot 3 s:n välein), odottavat päissä 7 / 11 s ja keinuvat vedon tahdissa.
+    /// omalla aikataulullaan (matka 24–38 s, odotus 4–18 s, joskus pysähdys kesken; smootherstep ja airon vedot 3 s) ja
+    /// keinuvat vedon tahdissa.
     /// </summary>
     public static class GondoliGeometria
     {
-        const float Leveys = 0.07f, Ranta = 0.014f, VesiY = 0.006f, RantaY = 0.012f, MatkaS = 30f, VetoS = 3f;
+        const float Leveys = 0.07f, Ranta = 0.014f, VesiY = 0.006f, RantaY = 0.012f, VetoS = 3f;
         static readonly Vector2[] Ohjaus =
         {
             new(-0.62f, 0.06f), new(-0.38f, 0.17f), new(-0.13f, 0.24f), new(0.08f, 0.16f), new(0.10f, -0.02f),
@@ -850,22 +851,65 @@ namespace Matkakirja.Natiivi
 
         static float Pehmea(float x) { x = Mathf.Clamp01(x); return x * x * x * (x * (x * 6 - 15) + 10); }
 
+        /// <summary>Yksi matka päästä päähän: alku (s), kesto soutaen, odotus perillä, pysähdys kesken (osuus, s; 0 = ei).</summary>
+        struct Matka { public float Alku, Kesto, Odotus, PysahdysU, PysahdysS; }
+        static readonly List<Matka>[] matkat2 = { new List<Matka>(), new List<Matka>() };
+
         /// <summary>
-        /// Gondolin i osuus kanavalla hetkellä t (edestakaisin): matka 30 s ja odotus päissä (7 / 11 s). Airon vedot:
-        /// aika etenee (1 − 0,35 cos 2πt/3)-painolla, joten vauhti sykkii vedon tahdissa mutta ei koskaan pysähdy.
+        /// Gondolin i aikataulu (Fable 26.9. klo 20.4x: EI MONOTONIAA): jokainen matka on eri pituinen (24–38 s), odotus
+        /// laiturissa vaihtelee (4–18 s), ja 35 %:lla matkoista gondolieeri pysähtyy kesken kanavan 3–8 s:ksi (palatsin
+        /// kohdalla). Siemenellä toistettava; lista kasvaa laiskasti ajan mukana.
+        /// </summary>
+        static Matka Aikataulu(int i, float t, out int n)
+        {
+            var l = matkat2[i];
+            var arpa = new System.Random(421 + i * 97 + l.Count);
+            while (l.Count == 0 || l[l.Count - 1].Alku + l[l.Count - 1].Kesto + l[l.Count - 1].Odotus <= t)
+            {
+                arpa = new System.Random(421 + i * 97 + l.Count);
+                float alku = l.Count == 0 ? -(float)arpa.NextDouble() * 20f - i * 17f : l[l.Count - 1].Alku + l[l.Count - 1].Kesto + l[l.Count - 1].Odotus;
+                bool pysahtyy = arpa.NextDouble() < 0.35;
+                l.Add(new Matka
+                {
+                    Alku = alku, Kesto = 24f + (float)arpa.NextDouble() * 14f, Odotus = 4f + (float)arpa.NextDouble() * 14f,
+                    PysahdysU = pysahtyy ? 0.3f + (float)arpa.NextDouble() * 0.4f : 0f,
+                    PysahdysS = pysahtyy ? 3f + (float)arpa.NextDouble() * 5f : 0f,
+                });
+            }
+            int k = l.Count - 1;
+            while (k > 0 && l[k].Alku > t) k--;
+            n = k;
+            return l[k];
+        }
+
+        /// <summary>Soutumatkan osuus 0–1 ajassa m (s) kestolla d: smootherstep ja airon vedot (vauhti sykkii 3 s:n tahdissa).</summary>
+        static float Soutu(float m, float d)
+        {
+            float tau = (m - 0.35f * VetoS / (2 * Mathf.PI) * Mathf.Sin(2 * Mathf.PI * m / VetoS)) / Mathf.Max(0.1f, d);
+            return Pehmea(tau);
+        }
+
+        /// <summary>
+        /// Gondolin i osuus kanavalla hetkellä t, liikkuuko se ja airon veto (−1…1). Matkat vuorottelevat suuntaa (gondoli 1
+        /// lähtee vastakkaisesta päästä); pysähdys kesken jakaa matkan kahteen soutuun, joiden välissä gondoli seisoo.
         /// </summary>
         public static (float u, bool liikkuu, float veto) Osuus(int i, float t)
         {
-            float odotus = i == 0 ? 7f : 11f, jakso = 2 * (MatkaS + odotus);
-            float tt = Mathf.Repeat(t + i * 19f, jakso);
-            bool paluu = tt >= MatkaS + odotus;
-            float m = paluu ? tt - MatkaS - odotus : tt;
-            if (m >= MatkaS) return (paluu == (i == 0) ? 0.06f : 0.94f, false, 0);
-            float tau = (m - 0.35f * VetoS / (2 * Mathf.PI) * Mathf.Sin(2 * Mathf.PI * m / VetoS)) / MatkaS;
-            float u = Mathf.Lerp(0.06f, 0.94f, Pehmea(tau));
-            // Gondoli 1 lähtee vastakkaisesta päästä.
-            bool eteen = paluu == (i == 1);
-            return (eteen ? u : 1 - u, true, Mathf.Sin(2 * Mathf.PI * m / VetoS));
+            var m = Aikataulu(i, t, out int n);
+            bool eteen = (n % 2 == 0) == (i == 0);
+            float aika = t - m.Alku, soutu = m.Kesto, x;
+            bool liikkuu = true;
+            if (aika >= soutu + m.PysahdysS) { x = 1; liikkuu = false; }
+            else if (m.PysahdysS <= 0) x = Soutu(aika, soutu);
+            else
+            {
+                float d1 = soutu * m.PysahdysU, d2 = soutu - d1;
+                if (aika < d1) x = m.PysahdysU * Soutu(aika, d1);
+                else if (aika < d1 + m.PysahdysS) { x = m.PysahdysU; liikkuu = false; }
+                else x = m.PysahdysU + (1 - m.PysahdysU) * Soutu(aika - d1 - m.PysahdysS, d2);
+            }
+            float u = Mathf.Lerp(0.06f, 0.94f, x);
+            return (eteen ? u : 1 - u, liikkuu, liikkuu ? Mathf.Sin(2 * Mathf.PI * aika / VetoS) : 0);
         }
 
         public static void Animoi(Transform silta, Transform[] gondolit, float t, float nopeus)
@@ -879,9 +923,9 @@ namespace Matkakirja.Natiivi
                 var (p, suunta) = Kohta(u);
                 // Oikeanpuoleinen liikenne: kumpikin pysyy kulkusuuntaansa nähden oikealla, joten ne ohittavat toisensa.
                 var (_, perus) = Kohta(Mathf.Clamp(u + 0.01f, 0, 1));
-                bool eteen = Osuus(i, t + 0.05f).u >= u;
+                Aikataulu(i, t, out int matka);
+                bool eteen = (matka % 2 == 0) == (i == 0);
                 var kulku = eteen ? perus : -perus;
-                if (!liikkuu) kulku = i == 0 ? suunta : -suunta;
                 var oikea = Vector3.Cross(Vector3.up, kulku).normalized;
                 gondolit[i].localPosition = p + oikea * (Leveys * 0.22f) + Vector3.up * VesiY;
                 // Keinunta vedon tahdissa (1,5° kallistus, 0,8° nokka), laiturissa hiljainen maininki.
