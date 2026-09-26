@@ -8,13 +8,21 @@
  * musiikkitiedostot ovat −33 LUFS:ssä, ja kestot ovat suunnitelman
  * raitalistan mukaiset. Tämä työkalu tekee molemmat samalla kertaa:
  *
- *   1. leikkaa raakaversiosta (musa-<nimi>-lyria.mp3) kohdan alku–loppu,
+ *   1. leikkaa raakaversiosta (musa-<nimi>-raaka.mp3) kohdan alku–loppu,
  *   2. häivyttää alun (lyhyt, vain naksahduksen esto) ja lopun
  *      (fraasin pehmeä loppu),
  *   3. mittaa leikatun integroidun äänekkyyden (EBU R128) ja säätää sen
  *      lineaarisella vahvistuksella −33 LUFS:iin. Ei loudnorm-kompressiota:
  *      raidan oma dynamiikka säilyy.
- *   4. tarkistaa tuloksen (±0,5 LU) ja kirjoittaa musa-<nimi>.mp3.
+ *   4. tarkistaa tuloksen (±0,5 LU) ja kirjoittaa musa-<nimi>-lyria.mp3.
+ *
+ * NIMET: peli soittaa aina tunnuksen <tunnus>-lyria.mp3 (web media.js
+ * musaPolku, natiivi AaniTaulut.MusaPolku). Generointi (generoi-
+ * musiikki.mjs) kirjoittaa raa'an samaan nimeen, joten --vie siirtää
+ * raa'an ensin ämpärissä nimelle -raaka.mp3 (vain jos sitä ei vielä
+ * ole) ja kirjoittaa valmiin sen paikalle. Uusi generointi samalle
+ * tunnukselle ylikirjoittaa valmiin raa'alla: aja silloin tämä perään
+ * poistettuasi vanhan -raaka.mp3:n.
  *
  * LEIKKAUSKOHDAT valittiin RMS-kuopista (0,25 s ikkunat): leikkaus osuu
  * fraasin taukoon, ei kesken sävelen. Raaka jää ämpäriin ennalleen, joten
@@ -24,8 +32,9 @@
  *   node tools/viimeistele-musiikki.mjs [nimi ...] [--vie]
  *     --vie  lähettää valmiit ämpäriin (aws s3 cp; AMPARI ja PAATE sekä
  *            AWS-avaimet Macin ympäristöstä, arvoja ei tulosteta).
- * Raaka haetaan osoitteesta https://media.matkakirja.app/audio/, ellei
- * sitä ole jo kansiossa assets/audio/ (ei repossa, .gitignore).
+ * Raaka luetaan kansiosta assets/audio/ (ei repossa, .gitignore) tai
+ * haetaan osoitteesta https://media.matkakirja.app/audio/ (-raaka, sen
+ * puuttuessa vielä viimeistelemätön -lyria).
  */
 import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
@@ -78,10 +87,11 @@ function kesto(tiedosto) {
 }
 
 async function raaka(nimi) {
-  const polku = join(KANSIO, `musa-${nimi}-lyria.mp3`);
+  const polku = join(KANSIO, `musa-${nimi}-raaka.mp3`);
   if (existsSync(polku)) return polku;
   mkdirSync(KANSIO, { recursive: true });
-  const vastaus = await fetch(MEDIA + `musa-${nimi}-lyria.mp3`);
+  let vastaus = await fetch(MEDIA + `musa-${nimi}-raaka.mp3`);
+  if (vastaus.status === 404) vastaus = await fetch(MEDIA + `musa-${nimi}-lyria.mp3`);
   if (!vastaus.ok) throw new Error(`${nimi}: raaka HTTP ${vastaus.status}`);
   writeFileSync(polku, Buffer.from(await vastaus.arrayBuffer()));
   return polku;
@@ -96,7 +106,7 @@ async function viimeistele(nimi) {
     + `afade=t=in:d=${r.sisaan},afade=t=out:st=${(pituus - r.ulos).toFixed(3)}:d=${r.ulos}`;
   const ennen = lueLufs(mittaa(lahde, leikkaus));
   const vahvistus = TAVOITE_LUFS - ennen.lufs;
-  const kohde = join(KANSIO, `musa-${nimi}.mp3`);
+  const kohde = join(KANSIO, `musa-${nimi}-lyria.mp3`);
   ffmpeg(['-y', '-i', lahde, '-af', `${leikkaus},volume=${vahvistus.toFixed(2)}dB`,
     '-c:a', 'libmp3lame', '-b:a', '192k', '-ar', '44100', kohde]);
   const jalkeen = lueLufs(mittaa(kohde));
@@ -107,13 +117,40 @@ async function viimeistele(nimi) {
   return kohde;
 }
 
-function vie(tiedosto) {
+async function vie(nimi, tiedosto) {
   const { AMPARI, PAATE } = process.env;
   if (!AMPARI || !PAATE) throw new Error('AMPARI/PAATE puuttuu ympäristöstä (source ~/.zshrc)');
-  execFileSync('aws', ['s3', 'cp', tiedosto, `s3://${AMPARI}/audio/`, '--endpoint-url', PAATE,
+  const aws = (...a) => execFileSync('aws', ['s3', 'cp', ...a, '--endpoint-url', PAATE,
     '--content-type', 'audio/mpeg', '--cache-control', 'public, max-age=2592000'],
   { stdio: ['ignore', 'ignore', 'inherit'] });
+  const raakaAmparissa = (await fetch(MEDIA + `musa-${nimi}-raaka.mp3`, { method: 'HEAD' })).ok;
+  if (!raakaAmparissa) {
+    aws(`s3://${AMPARI}/audio/musa-${nimi}-lyria.mp3`, `s3://${AMPARI}/audio/musa-${nimi}-raaka.mp3`);
+    console.log(`  raaka talteen → ${MEDIA}musa-${nimi}-raaka.mp3`);
+  }
+  aws(tiedosto, `s3://${AMPARI}/audio/`);
   console.log(`  → ${MEDIA}${tiedosto.split('/').pop()}`);
+  await tyhjennaReuna(MEDIA + tiedosto.split('/').pop());
+}
+
+/*
+ * Reunavälimuisti: media.matkakirja.app pitää tiedostoa 30 vrk
+ * (max-age=2592000), ja kuunneltu raaka on jo reunalla samalla nimellä.
+ * Ilman tyhjennystä peli saisi raa'an 100 s:n version kuukauden ajan
+ * (26.9.2026: cf-cache-status HIT, age 8653 s vaihdon jälkeen).
+ */
+async function tyhjennaReuna(osoite) {
+  const { CLOUDFLARE_API_TOKEN: avain } = process.env;
+  if (!avain) { console.warn('  ! CLOUDFLARE_API_TOKEN puuttuu: reunavälimuisti tyhjentämättä'); return; }
+  const otsakkeet = { Authorization: `Bearer ${avain}`, 'Content-Type': 'application/json' };
+  const alue = await (await fetch('https://api.cloudflare.com/client/v4/zones?name=matkakirja.app', { headers: otsakkeet })).json();
+  const id = alue.result?.[0]?.id;
+  if (!id) throw new Error('Cloudflare-vyöhyke matkakirja.app ei löytynyt');
+  const r = await (await fetch(`https://api.cloudflare.com/client/v4/zones/${id}/purge_cache`, {
+    method: 'POST', headers: otsakkeet, body: JSON.stringify({ files: [osoite] }),
+  })).json();
+  if (!r.success) throw new Error(`reunan tyhjennys epäonnistui: ${JSON.stringify(r.errors)}`);
+  console.log('  reunavälimuisti tyhjennetty');
 }
 
 const argit = process.argv.slice(2);
@@ -121,5 +158,5 @@ const viedaan = argit.includes('--vie');
 const nimet = argit.filter((a) => !a.startsWith('--'));
 for (const nimi of nimet.length ? nimet : Object.keys(RAIDAT)) {
   const valmis = await viimeistele(nimi);
-  if (viedaan) vie(valmis);
+  if (viedaan) await vie(nimi, valmis);
 }
