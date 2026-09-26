@@ -971,6 +971,26 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 /*
+ * Striimiäänen pudotusvalikko (omistaja 27.9.2026): sama kolmen
+ * sarakkeen rivi kuin kytkimillä, valitsin tilatekstin paikalla.
+ */
+.kehittaja-valikko .kehittaja-valinta {
+  cursor: default;
+}
+
+.kehittaja-valikko .kehittaja-valinta-select {
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(230, 214, 184, 0.35);
+  border-radius: 4px;
+  padding: 0.12rem 0.3rem;
+  max-width: 8.5rem;
+}
+
+/*
  * Tila luetaan yhdellä vilkaisulla: päällä oleva kytkin kultaa sekä
  * nimen että tilatekstin, pois kytketty jää himmeäksi.
  */
