@@ -137,6 +137,10 @@ namespace Matkakirja
     ///                             kehyksen hinta -erästä alkaen, jaatyy = 3 s levon jälkeen keskiasentoon); tila lokiin
     ///   piilo tila|pois|paalle    piilotettujen UI-alipuiden suotimet (PiiloVartija): poistot, piilossa piirrettävät ja
     ///                             vartijan hinta lokiin; pois palauttaa suotimet
+    ///   liput tila|jatkuva|syke   aaltoilevat liput (Liput, löydös 144): tila lokiin; jatkuva = oma kello ja täysi voima
+    ///                             aina näkyvissä, syke = seuraa Joutosykettä (oletus: levossa asettuu suoraksi)
+    ///   liput koe nimi [aika]     koelippu (raidat + ruudukko) aaltoon hetkellä aika (s, oletus 0,8), kuva
+    ///                             Documents/nimi.png (120 × 80): varjostimen tarkistus laitteella ilman UI:ta
     /// Jokainen muu komento herättää pallon hetkeksi (PallonLepo.Muuttui), jotta muutos piirtyy heti myös lepopiirrossa,
     /// ja kuva piirtää tuoreen kehyksen (Ruudunpaivitys.Herata).
     /// </summary>
@@ -454,6 +458,22 @@ namespace Matkakirja
                     if (m == "pois" || m == "paalle") PiiloVartija.Paalla = m == "paalle";
                     else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: piilo tila|pois|paalle, ei " + m); return; }
                     Debug.Log(PiiloVartija.Instanssi != null ? PiiloVartija.Instanssi.Kuvaus() : "MATKAKIRJA piilovartija: ei käynnissä");
+                    break;
+                }
+                case "liput":
+                {
+                    // Löydös 144 (Liput.cs): aaltoilevien lippujen tila, kello ja laitekoe.
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "jatkuva") Liput.SeuraaSyketta = false;
+                    else if (m == "syke") Liput.SeuraaSyketta = true;
+                    else if (m == "koe" && o.Length > 2)
+                    {
+                        Debug.Log("MATKAKIRJA " + Liput.Koe(Path.Combine(Application.persistentDataPath, o[2] + ".png"),
+                            o.Length > 3 ? (float)D(3) : 0.8f));
+                        break;
+                    }
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: liput tila|jatkuva|syke|koe nimi [aika], ei " + m); return; }
+                    Debug.Log("MATKAKIRJA " + Liput.Kuvaus());
                     break;
                 }
                 case "kaupunki":
