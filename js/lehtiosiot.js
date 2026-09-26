@@ -11,7 +11,7 @@
  *   1. lehden omat osiot (ui.lehtitila.tutkiSivut: historia, arki,
  *      musiikki, historian hetket …) — linkki avaa lehden sivun;
  *   2. kaupungin nostot (liuskan entinen sisältö, myös löydöksen 178
- *      tarinakohteet) aiheittain (js/pallolauta/kaupunkiliuska.js
+ *      tarinakohteet) aiheittain (js/nostokategoriat.js
  *      kategoriat) — rivi avaa noston oman kortin.
  * Sama asia kahdesti (historian hetki nostona JA lehden sivuna) näkyy
  * kerran: tunnus tai nimi, joka on jo lehden osiossa, ohitetaan.
@@ -19,15 +19,10 @@
  * Nähtävyydet, Turisti-info ja Radio eivät ole enää lehdessä (ne ovat
  * avauskortissa ja kartussissa), joten ne eivät ole hakemistossakaan.
  */
-import { KOHDE_MAAT } from './fokuskohteet.js';
-import { NOSTO_MAAT, nostonKuvat } from './fokusnosto.js';
-import { hetkenKuvat, HISTORIAN_HETKET } from './packs/historian-hetket.js';
 import { assetOsoite, asetaKuva, julisteUrl } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
-import { SKANDAALIT } from './packs/skandaalit.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
-import { KAUPUNKIKARTAT } from './packs/maakartat.js';
-import { kategoriat as osiohakKategoriat } from './pallolauta/kaupunkiliuska.js';
+import { kategoriat as osiohakKategoriat } from './nostokategoriat.js';
 import { html } from './ui-apurit.js';
 
 /** Hakemiston otsikko etusivulla. */
@@ -56,39 +51,16 @@ function osiohakKuvaLehdesta(osa) {
   return kansi?.tiedosto || kansi?.ampari ? kansi : null;
 }
 
-/**
- * Noston kuva tunnuksen mukaan (liuskan rivit): historian hetki, täkynosto,
- * skandaali tai kaupunkikartan tarinakohteen nähtävyysjuttu.
+/*
+ * NOSTON KUVA TUNNUKSEN MUKAAN tulee js/lehtiosiot-kuvat.js:stä, joka
+ * rekisteröi sen käynnistyksessä (main.js). Suora tuonti olisi
+ * tuontisykli (kaupunkinosto → lehti → tämä → fokuskohteet →
+ * kaupunkinosto), jota yhden tiedoston niputus ei voi järjestää.
+ * Ennen rekisteröintiä kuvaa ei ole, ja osio näyttää lehden oman kuvan.
  */
-export function osiohakNostonKuva(id, { iso = null, cityId = null } = {}) {
-  const tunnus = String(id ?? '');
-  if (tunnus.startsWith('hetki-')) {
-    const h = HISTORIAN_HETKET.find((x) => x.id === tunnus.slice(6));
-    const k = h ? hetkenKuvat(h)[0] : null;
-    if (k?.osoite) return { osoite: k.osoite, suora: true };
-  }
-  if (tunnus.startsWith('nosto-') && iso) {
-    const n = (NOSTO_MAAT[iso] ?? []).find((x) => x.id === tunnus.slice(6));
-    const k = n ? nostonKuvat(n)[0] : null;
-    if (k) return k;
-  }
-  if (tunnus.startsWith('skandaali-') && iso) {
-    const s = (SKANDAALIT[iso] ?? []).find((x) => x.id === tunnus.slice(10));
-    if (s?.kuva?.osoite || s?.kuva?.tiedosto) return s.kuva;
-  }
-  // Kadonnut ihme tai muu kohde, jolla on oma kuva (ihmeen loistoaika).
-  const kohde0 = Object.values(KOHDE_MAAT).flat().find((k) => k?.id === tunnus);
-  if (kohde0?.ihme?.osoite) return { osoite: kohde0.ihme.osoite, suora: true };
-  if (kohde0?.kuva?.osoite || kohde0?.kuva?.tiedosto) return kohde0.kuva;
-  // Kaupunkikartan kohde, joka kantaa tämän noston: sen juttu kuvineen.
-  if (cityId) {
-    const kohde = (KAUPUNKIKARTAT[cityId]?.kohteet ?? []).find((k) => (Array.isArray(k.nosto) ? k.nosto : [k.nosto]).includes(tunnus));
-    const juttu = kohde ? NAHTAVYYSJUTUT[cityId]?.[kohde.nimi] : null;
-    const k = juttu?.kuvat?.[0] ?? null;
-    if (k?.osoite || k?.tiedosto) return k;
-  }
-  return null;
-}
+let osiohakNostonKuvaHaku = () => null;
+export function asetaOsiohakNostonKuva(haku) { osiohakNostonKuvaHaku = haku; }
+const osiohakHaeNostonKuva = (id, valinnat) => osiohakNostonKuvaHaku(id, valinnat);
 
 /** Kuvan tunniste päällekkäisyyden estoon (jokaiselle osiolle oma kuva). */
 function osiohakKuvanAvain(k) {
@@ -131,7 +103,7 @@ export function osiohakemisto({ sivut = [], nostot = [], iso = null, cityId = nu
       o.jutut.push({ otsikko, sivu: i + 1 });
     }
     nahty.add(String(osa.id));
-    o.ehdokkaat.push(aihe === 'hetket' ? osiohakNostonKuva(osa.id) : osiohakKuvaLehdesta(osa));
+    o.ehdokkaat.push(aihe === 'hetket' ? osiohakHaeNostonKuva(osa.id) : osiohakKuvaLehdesta(osa));
   });
   for (const kasa of osiohakKategoriat(nostot)) {
     const aihe = kasa.aihe || 'muut';
@@ -142,7 +114,7 @@ export function osiohakemisto({ sivut = [], nostot = [], iso = null, cityId = nu
       nahty.add(otsikko.toLowerCase());
       const o = osio(aihe, kasa.nimi);
       o.jutut.push({ otsikko, avaa: r.avaa });
-      o.ehdokkaat.push(osiohakNostonKuva(r.id, { iso, cityId }));
+      o.ehdokkaat.push(osiohakHaeNostonKuva(r.id, { iso, cityId }));
     }
   }
   // Varakuvat: kaupungin nähtävyysjuttujen kuvat (osio, jolla ei ole omaa kuvaa).

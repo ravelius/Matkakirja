@@ -16,6 +16,7 @@
  *   3. KORTISSA KOLME OSAA ja se mahtuu ruutuun ilman vieritystä:
  *      herokuva, esittely (≤ 2 lausetta) + Lue kaupunkilehti, kartta,
  *      turisti-info.
+ *   3b. KARTTA 35 % RUUDUN KORKEUDESTA ja täyttää kaistan ilman tyhjää reunaa.
  *   4. KARTALLA EI TEKSTEJÄ: ei legendaa, vihjettä, mittakaavaa eikä
  *      Kokoruutu-nappia.
  *   5. KARTAN NAPAUTUS AVAA SUURENNOKSEN: lähes koko ruutu, sumennettu
@@ -106,6 +107,8 @@ for (const ruutu of RUUDUT) {
     const ctx = await selain.newContext({
       viewport: { width: ruutu.w, height: ruutu.h }, deviceScaleFactor: 2, serviceWorkers: 'block',
     });
+    // Kuormitetulla koneella (poltot) kuvakaappaus voi kestää yli oletuksen 30 s.
+    ctx.setDefaultTimeout(120000);
     await ctx.addInitScript((data) => {
       try {
         localStorage.setItem('matkakirja-save-v1', data);
@@ -180,6 +183,17 @@ for (const ruutu of RUUDUT) {
         opas: Boolean(p.querySelector('.avauskortti-opas')),
         lauseita: (teksti.match(/[.!?](\s|$)/g) ?? []).length,
         mahtuu: s ? s.scrollHeight <= s.clientHeight + 1 : false,
+        // 3b. Kaista on 35 % ruudun korkeudesta, ja kartta peittää sen.
+        kaista: (() => {
+          const k = kartta?.getBoundingClientRect();
+          const r = kartta?.querySelector('.kartta-kehys')?.getBoundingClientRect();
+          if (!k || !r) return null;
+          return {
+            osuus: Number((k.height / innerHeight).toFixed(3)),
+            peittaa: r.left <= k.left + 1.5 && r.right >= k.right - 1.5
+              && r.top <= k.top + 1.5 && r.bottom >= k.bottom - 1.5,
+          };
+        })(),
         tekstit: kartta ? ['.kartta-opaste', '.kartta-ihmeselite', '.kartta-mittajana', '.kartta-kokoruutu-nappi']
           .filter((v) => kartta.querySelector(v)) : ['ei karttaa'],
       };
@@ -187,12 +201,16 @@ for (const ruutu of RUUDUT) {
     vaadi(`3. ${nimi}: kortissa herokuva, esittely + lehtilinkki, kartta ja turisti-info; mahtuu ruutuun`,
       kortti && kortti.hero && kortti.lehti && kortti.kartta && kortti.opas && kortti.lauseita <= 2 && kortti.mahtuu,
       JSON.stringify(kortti));
+    vaadi(`3b. ${nimi}: kortin kartta on 35 % ruudun korkeudesta ja täyttää kaistan`,
+      Boolean(kortti?.kaista) && Math.abs(kortti.kaista.osuus - 0.35) <= 0.02 && kortti.kaista.peittaa,
+      JSON.stringify(kortti?.kaista));
     vaadi(`4. ${nimi}: kortin kartalla ei tekstejä (legenda, vihje, jana, Kokoruutu)`,
       kortti && kortti.tekstit.length === 0, JSON.stringify(kortti?.tekstit));
     if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `avauskortti-${kaupunki}-${ruutu.w}-1-kortti.png`) });
 
     // 5. Kartan napautus → suurennos sumennetun hunnun päällä.
-    const kehys = await sivu.$('.avauskortti-kartta .kartta-kehys');
+    // Kehys voi olla kaistaa suurempi (rajaus), joten napautus osuu kaistaan.
+    const kehys = await sivu.$('.avauskortti-kartta');
     if (kehys) {
       const b = await kehys.boundingBox();
       await sivu.mouse.click(b.x + b.width * 0.5, b.y + b.height * 0.55);

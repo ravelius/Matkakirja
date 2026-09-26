@@ -313,3 +313,23 @@
 .avauskortti-kartta .kaupunkikartta-pelkka .kartta-tyokalut:empty { display: none; }
 .avauskortti-kartta .kaupunkikartta-pelkka .kartta-kehys { margin: 0; border: 0; }
 .avauskortti-kartta .kaupunkikartta-pelkka .kuvalahde { padding: 0.15rem 0.4rem; }
+/*
+ * KARTTA ON 35 % RUUDUN KORKEUDESTA sekä puhelimessa että tabletissa
+ * (omistaja 27.9.2026 klo 00.1x). Kaista on kiinteä, ja kartta täyttää
+ * sen kuten object-fit: cover: kehys pitää oman kuvasuhteensa
+ * (--kartta-suhde, nahtavyydet.js), on vähintään kaistan levyinen ja
+ * korkuinen, ja flex keskittää sen — ylijäämä rajautuu tasan molemmilta
+ * reunoilta. Kehys ei muutu, joten piirrokset pysyvät paikoillaan.
+ * Lähde kulkee kartan päällä alanurkassa.
+ */
+.avauskortti-kartta { height: 35svh; position: relative; }
+.avauskortti-kartta .kaupunkikartta.kaupunkikartta-pelkka {
+  height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.avauskortti-kartta .kaupunkikartta-pelkka .kartta-kehys {
+  flex: none; width: max(100%, calc(35svh * var(--kartta-suhde, 1.5)));
+}
+.avauskortti-kartta .kaupunkikartta-pelkka > .lahde {
+  position: absolute; padding: 0.15rem 0.4rem; font-size: 0.72rem; left: 0; bottom: 0; margin: 0; z-index: 2;
+  background: rgba(245, 240, 226, 0.85); border-top-right-radius: 6px;
+}

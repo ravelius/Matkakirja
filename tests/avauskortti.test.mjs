@@ -8,7 +8,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { avauskortinLauseet } from '../js/kaupunkinosto.js';
-import { osiohakemisto, osiohakNostonKuva } from '../js/lehtiosiot.js';
+import { osiohakemisto } from '../js/lehtiosiot.js';
+import { kytkeOsiohakKuvat, osiohakNostonKuva } from '../js/lehtiosiot-kuvat.js';
+
+kytkeOsiohakKuvat();
 import { KULTTUURI_KATEGORIAT } from '../js/packs/kulttuuri-kategoriat.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');

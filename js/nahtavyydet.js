@@ -418,6 +418,8 @@ export function piirraKaupunkiKartta(ui, kohde, {
   if (laajennettu) {
     kehys.classList.add('kartta-laajennettu');
     kehys.style.aspectRatio = String(karttaKuvasuhde(kartta.rajat));
+    // Avauskortin kiinteä kaista rajaa kartan tällä suhteella (css/kaupunkinosto.css).
+    kehys.style.setProperty('--kartta-suhde', String(karttaKuvasuhde(kartta.rajat)));
     kotelo.classList.add('kartta-laajennettu');
     kotelo.style.aspectRatio = String(karttaKuvasuhde(kartta.piirtoRajat));
     kotelo.style.width = `${(10000 / ydin.leveys).toFixed(4)}%`;
@@ -456,6 +458,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     const mitoitaKehys = () => {
       if (kuva.naturalWidth && kuva.naturalHeight) {
         kehys.style.aspectRatio = `${kuva.naturalWidth} / ${kuva.naturalHeight}`;
+        kehys.style.setProperty('--kartta-suhde', String(kuva.naturalWidth / kuva.naturalHeight));
       }
     };
     if (kuva.complete) mitoitaKehys();
