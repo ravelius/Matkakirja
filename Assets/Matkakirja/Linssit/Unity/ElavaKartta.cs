@@ -52,8 +52,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static readonly Dictionary<string, float> Saadot = new Dictionary<string, float>
         {
-            ["laikka"] = 1, ["viiva"] = 1, ["nimi"] = 1, ["laiva"] = 1, ["valo"] = 1,
-            ["huntu"] = 0.8f, ["taytto"] = 1, ["hamara"] = 0.62f,
+            // Ensimmäisen videon arvot (simulaattori 26.9. klo 03.35): läikät 0,6, nimi 1,6, laiva 2,6, valot 0,45, huntu 0,72.
+            ["laikka"] = 0.6f, ["viiva"] = 1, ["nimi"] = 1.6f, ["laiva"] = 2.6f, ["valo"] = 0.45f,
+            ["huntu"] = 0.72f, ["taytto"] = 1, ["hamara"] = 0.62f,
         };
 
         static float Saato(string n) => Saadot.TryGetValue(n, out var v) ? v : 1;
