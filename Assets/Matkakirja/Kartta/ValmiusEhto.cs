@@ -21,6 +21,15 @@ namespace Matkakirja
         public const float Raja = 90f;
         /// <summary>Suurin sallittu nousu ikkunan aikana (%-yksikköä).</summary>
         public const float Nousu = 1f;
+        /// <summary>
+        /// Ylempi porras (Fablen päätös 26.9.2026, 1.0.24; aloitusverhon ensikäynnistyksen katto): vähintään tämän asteen
+        /// (%) kohdalla nousun katsotaan pysähtyneen, kun aste on ikkunan aikana heilunut enintään <see cref="KorkeaNousu"/>
+        /// %-yksikköä. Portin kierto tuo kehys kehykseltä uusia laattoja, jolloin aste heiluu 98,9 ↔ 100 (+1,1) eikä
+        /// tiukka ehto täyty koskaan (lokit/aloitusverho-katto).
+        /// </summary>
+        public const float KorkeaRaja = 96f;
+        /// <summary>Sallittu heilunta ylemmässä portaassa (%-yksikköä).</summary>
+        public const float KorkeaNousu = 2.5f;
         /// <summary>Tasaantumisen ikkuna (s).</summary>
         public const double Ikkuna = 0.3;
         /// <summary>Vähintään näin monta kehystä, jotta Cesium ehtii pyytää uuden näkymän laatat ennen luentaa.</summary>
@@ -54,7 +63,7 @@ namespace Matkakirja
             if (t - naytteet[0].t < Ikkuna) return false;   // ikkuna ei vielä katettu
             float alin = aste;
             foreach (var n in naytteet) if (n.aste < alin) alin = n.aste;
-            return aste - alin <= Nousu;
+            return aste - alin <= (aste >= KorkeaRaja ? KorkeaNousu : Nousu);
         }
     }
 }
