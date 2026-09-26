@@ -439,6 +439,7 @@ namespace Matkakirja.Natiivi
             aalto.Nakyy = Rakenne.Naytetaan(lippu);
             lippu.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(aalto.Kuva));
             lippu.style.scale = new Scale(new Vector2(k, k));
+            lippu.style.borderTopWidth = lippu.style.borderBottomWidth = lippu.style.borderLeftWidth = lippu.style.borderRightWidth = 0f; // aaltoileva lippu ilman jäykkää kehystä
         }
 
         void VapautaAalto()
@@ -448,6 +449,7 @@ namespace Matkakirja.Natiivi
             Liput.Vapauta(aalto);
             aalto = null;
             lippu.style.scale = StyleKeyword.Null;
+            lippu.style.borderTopWidth = lippu.style.borderBottomWidth = lippu.style.borderLeftWidth = lippu.style.borderRightWidth = StyleKeyword.Null;
         }
 
         public void Sulje()
