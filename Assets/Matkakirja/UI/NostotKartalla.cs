@@ -216,11 +216,10 @@ namespace Matkakirja.Natiivi
             luokka == NostoKerros.MusteLuokka.Paakohde ? 1f / 0.67f : luokka == NostoKerros.MusteLuokka.Pieni ? 0.44f / 0.67f : 1f;
 
         /// <summary>Löytämätön nosto: himmeä musteen jälki ilman nimeä (MusteJalki.JaljenPeitto 0,5).</summary>
-        const float LoytamatonPeitto = 0.5f, JaljenKoko = 1.35f, HehkunKoko = 2.6f, LoytoS = 0.3f;
+        const float LoytamatonPeitto = 0.5f, HehkunKoko = 2.6f, LoytoS = 0.3f;
 
         /// <summary>
-        /// Elävä kartta, kohta 2: löytämätön = Linssisepän musteen jälki (MusteJaljet.Hae, muunnelman kierto ja peilaus) peitolla
-        /// 0,5 symbolin tilalla; löydetty = täysi merkki, ja löydön hetkellä käyrä MusteJaljet.Loyto (0,3 s, mittakaava ja peitto);
+        /// Elävä kartta, kohta 2: löytämätön = lajin merkki peitolla 0,5 (löydös 174: ei enää musteläikkää); löydetty = täysi merkki, ja löydön hetkellä käyrä MusteJaljet.Loyto (0,3 s, mittakaava ja peitto);
         /// pääkohteella staattinen kultainen hehku merkin alla. Tyylit kirjoitetaan vain muutoksessa (lepopiirto).
         /// </summary>
         void AsetaMuste(Merkki m, NostoKerros.Nosto s, bool loydetty, bool ryhma, float ruutuPx)
@@ -228,28 +227,10 @@ namespace Matkakirja.Natiivi
             bool loyto = m.Loydetty == false && loydetty && m.JaljenId == s.Id;
             m.Loydetty = loydetty;
             m.JaljenId = s.Id;
-            // Löydös 155: taso 1 ilman jälkeä; löydös 160: ei jälkeä myöskään, kun 3D-malli (tasot 2–3 arkkityyppeinä) piirtää sen.
-            var jalki = loydetty || s.Taso == 1 || (!ryhma && Symbolimallit.OnMalli(s.Id)) ? null : MusteJaljet.Hae(s.Id);
-            if (jalki != null)
-            {
-                if (m.Jalki == null)
-                {
-                    m.Jalki = new VisualElement { pickingMode = PickingMode.Ignore };
-                    m.Jalki.AddToClassList("mk-nosto-merkki__jalki");
-                    m.El.Insert(0, m.Jalki);
-                }
-                int mu = MusteJaljet.Muunnelma(s.Id);
-                float koko = ruutuPx * JaljenKoko;
-                m.Jalki.style.backgroundImage = new StyleBackground(jalki);
-                m.Jalki.style.width = m.Jalki.style.height = koko;
-                m.Jalki.style.left = m.Jalki.style.top = (ruutuPx - koko) / 2f;
-                m.Jalki.style.rotate = new Rotate(new Angle(mu * 36f));
-                m.Jalki.style.scale = new Scale(new Vector2(mu % 2 == 0 ? 1f : -1f, 1f));
-                m.Jalki.style.display = DisplayStyle.Flex;
-            }
-            else if (m.Jalki != null) m.Jalki.style.display = DisplayStyle.None;
-            // Symboli piiloon jäljen ajaksi; ilman valmista poolia löytämätön on himmeä symboli.
-            if (m.Symboli != null) m.Symboli.style.display = jalki != null ? DisplayStyle.None : DisplayStyle.Flex;
+            // Löydös 174 (omistaja 19.5x, P1): musteläikkää ei piirretä missään zoomissa; löytämätön nosto on lajin kuvamerkki
+            // (tai minimerkki / kaupunkimerkki, kun lajilla ei ole kuvaa) himmeänä. Kynnyksen yllä 3D-malli (Symbolimallit).
+            if (m.Jalki != null) m.Jalki.style.display = DisplayStyle.None;
+            if (m.Symboli != null) m.Symboli.style.display = DisplayStyle.Flex;
             float peitto = loydetty ? 1f : LoytamatonPeitto;
             if (!loyto && !Mathf.Approximately(m.El.resolvedStyle.opacity, peitto)) m.El.style.opacity = peitto;
             bool hehku = loydetty && !ryhma && s.Luokka == NostoKerros.MusteLuokka.Paakohde;
@@ -810,13 +791,14 @@ namespace Matkakirja.Natiivi
             if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
             bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
-            // Löydös 155 (Linssiseppä, Fablen kuittaus): löytämätön taso 1 näkyy kuvamerkkinä (himmeänä, ilman nimeä) kuten
-            // webin maamerkki; tasot 2–3 ovat jälkiä.
-            bool kuvamerkki = !ryhma && (loydetty || s.Taso == 1) && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
-            // Ruudun kerroin (web nostot.js ruudunKerroin): ykköstason kuvamerkki 1,6, muu kuvamerkki 0,85 kertoimilla
-            // 2,5–4 (löydös 155), muuten 1.
+            // Löydös 155: löytämätön taso 1 näkyy kuvamerkkinä (himmeänä, ilman nimeä) kuten webin maamerkki. Löydös 174
+            // (omistaja 19.5x): lajin kuvamerkki KAIKILLE tasoille ja kaikilla zoomeilla (ei webin kerroin 2,5 -kynnystä eikä
+            // läikkää); ilman lajin kuvaa minimerkki (huuto, eläin, hetki, ihme) tai kaupunkimerkki kuten ennen.
+            bool kuvamerkki = !ryhma && Kuva(s) != null;
+            // Ruudun kerroin: ykköstason kuvamerkki 1,6; muu kuvamerkki 0,85 kertoimeen 4 asti (löydös 155:n pieni koko myös
+            // kynnyksen alla, 174), täysi kerroimesta 4; minimerkki 1.
             m.Ruutu = MiniRuutu * (!kuvamerkki ? 1f : m.Taso1 ? KuvamerkinKerroin
-                : NostoSaannot.KuvamerkkiPieni(s.Taso, kerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
+                : kerroin < NostoSaannot.TyyppimerkinTaysiKerroin ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
             string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);
