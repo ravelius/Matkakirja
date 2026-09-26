@@ -1412,7 +1412,7 @@ namespace Matkakirja.Natiivi
         public const float NorRannikko = 355f;
         /// <summary>Laiva 0,14 yksikköä → noin 11 pt ja valaan selkä 0,2 → noin 14 pt (lajilista: laiva 8–12 pt, valas 14 pt).</summary>
         public const float LaivaKokoPt = 80f, ValasKokoPt = 70f;
-        public const int Suihkuja = 3;
+        public const int Suihkuja = 4;
 
         static readonly Color Vaahto = new Color(0.96f, 0.94f, 0.88f, 1f);
         static readonly Color ValasTumma = MalliVarit.Hex(0x39433f), ValasKylki = MalliVarit.Hex(0x4f5b56), ValasVatsa = MalliVarit.Hex(0xd6d2c2);
@@ -1567,21 +1567,22 @@ namespace Matkakirja.Natiivi
         // ---- Valas ----
 
         /// <summary>
-        /// Valaan selkä: pitkä matala kaari (pituus 0,2, leveys 0,05, korkeus 0,02; korkein kohta takakolmanneksella), selkäevä
-        /// ja pehmeä vaahtorengas pinnassa. Animaatio nostaa ja laskee selkää vain y-skaalauksella, joten rengas pysyy pinnassa.
-        /// +z eteen (pää).
+        /// Valaan selkä ylhäältä tunnistettavana: pyöreä pää, levein kohta etukolmanneksella ja pitkä kapeneva pyrstönvarsi
+        /// (pituus 0,2, leveys 0,06, korkeus 0,024), selkäevä takakolmanneksella, vaaleat pitkät rintaevät (ryhävalaan tunnusmerkki,
+        /// pinnan alla puoliksi läpikuultavina) ja pehmeä vaahtorengas. Animaatio nostaa ja laskee selkää vain y-skaalauksella,
+        /// joten evät ja rengas pysyvät pinnassa. +z eteen (pää).
         /// </summary>
         public static Mesh ValaanSelka()
         {
             var r = new MalliRakenne();
-            const int pit = 8, ymp = 4;
+            const int pit = 10, ymp = 4;
             var p = new Vector3[pit + 1, ymp + 1];
             for (int i = 0; i <= pit; i++)
             {
                 float u = Mathf.Lerp(-1f, 1f, i / (float)pit), z = 0.1f * u;
-                float lev = 0.026f * Mathf.Sqrt(Mathf.Max(0f, 1f - u * u)) * (u < 0f ? Mathf.Lerp(1f, 0.6f, -u) : 1f);
-                float q = (u + 0.2f) / (u < -0.2f ? 0.8f : 1.2f);
-                float kork = 0.02f * Mathf.Pow(Mathf.Max(0f, 1f - q * q), 0.6f);
+                float lev = ValaanLeveys(u);
+                float q = (u + 0.1f) / (u > -0.1f ? 1.1f : 0.9f);
+                float kork = 0.02f * Mathf.Sqrt(Mathf.Max(0f, 1f - q * q)) + 0.004f;
                 for (int j = 0; j <= ymp; j++)
                 {
                     float a = Mathf.PI * j / ymp;
@@ -1591,25 +1592,47 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < pit; i++)
                 for (int j = 0; j < ymp; j++)
                     r.Nelio(p[i, j], p[i + 1, j], p[i + 1, j + 1], p[i, j + 1], j == 1 || j == 2 ? ValasTumma : ValasKylki);
-            r.Kolmio(new Vector3(0f, 0.018f, -0.028f), new Vector3(0f, 0.03f, -0.046f), new Vector3(0f, 0.015f, -0.058f), ValasTumma);
+            // Pyrstönvarren pää suljetaan (pyrstö kiinnittyy siihen).
+            r.Kolmio(p[0, 0], p[0, 2], p[0, 4], ValasKylki);
+            r.Kolmio(p[0, 0], p[0, 1], p[0, 2], ValasKylki);
+            r.Kolmio(p[0, 2], p[0, 3], p[0, 4], ValasKylki);
+            // Selkäevä takakolmanneksella.
+            r.Kolmio(new Vector3(0f, 0.021f, -0.025f), new Vector3(0f, 0.032f, -0.043f), new Vector3(0f, 0.016f, -0.052f), ValasTumma);
+            // Rintaevät: pitkät ja vaaleat, kylestä ulos ja taakse, pinnan alla (alfa 0,8).
+            Color eva = ValasVatsa; eva.a = 0.8f;
+            float ze = 0.034f, le = ValaanLeveys(0.34f);
+            foreach (float puoli in new[] { -1f, 1f })
+            {
+                Vector3 edessa = new Vector3(le * 0.9f * puoli, 0.003f, ze + 0.008f), takana = new Vector3(le * 0.9f * puoli, 0.003f, ze - 0.007f);
+                Vector3 karki = new Vector3((le + 0.05f) * puoli, 0.002f, ze - 0.034f), polvi = new Vector3((le + 0.026f) * puoli, 0.0025f, ze - 0.012f);
+                r.NelioVarit(edessa, polvi, karki, takana, eva, eva, eva, eva);
+            }
             // Vaahtorengas: sisäreuna vaahtoa, ulkoreuna häipyy.
-            const int sektoreita = 14;
+            const int sektoreita = 16;
             Color sisa = Vaahto, ulko = Vaahto; sisa.a = 0.55f; ulko.a = 0f;
             for (int i = 0; i < sektoreita; i++)
             {
                 float a0 = i * Mathf.PI * 2f / sektoreita, a1 = (i + 1) * Mathf.PI * 2f / sektoreita;
-                Vector3 s0 = new Vector3(Mathf.Cos(a0) * 0.034f, 0.0012f, Mathf.Sin(a0) * 0.112f), s1 = new Vector3(Mathf.Cos(a1) * 0.034f, 0.0012f, Mathf.Sin(a1) * 0.112f);
-                Vector3 u0 = new Vector3(Mathf.Cos(a0) * 0.062f, 0.0012f, Mathf.Sin(a0) * 0.148f), u1 = new Vector3(Mathf.Cos(a1) * 0.062f, 0.0012f, Mathf.Sin(a1) * 0.148f);
+                Vector3 s0 = new Vector3(Mathf.Cos(a0) * 0.04f, 0.0012f, Mathf.Sin(a0) * 0.114f), s1 = new Vector3(Mathf.Cos(a1) * 0.04f, 0.0012f, Mathf.Sin(a1) * 0.114f);
+                Vector3 u0 = new Vector3(Mathf.Cos(a0) * 0.072f, 0.0012f, Mathf.Sin(a0) * 0.15f), u1 = new Vector3(Mathf.Cos(a1) * 0.072f, 0.0012f, Mathf.Sin(a1) * 0.15f);
                 r.NelioVarit(s0, u0, u1, s1, sisa, ulko, ulko, sisa);
             }
             return r.Mesh("Meri: valaan selkä");
         }
 
-        /// <summary>Puhalluksen suihkupallo: vaalea oktaedri, skaalataan iän mukaan.</summary>
+        /// <summary>Valaan puolileveys pituuskohdassa u (−1 pyrstönvarsi … 1 pää): pyöreä pää, levein kohdassa 0,2, kapeneva varsi.</summary>
+        static float ValaanLeveys(float u)
+        {
+            const float W = 0.03f;
+            if (u > 0.2f) { float q = (u - 0.2f) / 0.8f; return W * Mathf.Sqrt(Mathf.Max(0f, 1f - q * q)); }
+            return W * (0.18f + 0.82f * Mathf.Pow(Mathf.Clamp01((u + 1f) / 1.2f), 1.4f));
+        }
+
+        /// <summary>Puhalluksen suihkupallo: vaalea oktaedri, skaalataan iän mukaan (neljä palloa pinoutuu pensasmaiseksi pilareeksi).</summary>
         public static Mesh Suihku()
         {
             var r = new MalliRakenne();
-            r.Nuppi(Vector3.zero, 0.011f, Vaahto);
+            r.Nuppi(Vector3.zero, 0.014f, Vaahto);
             return r.Mesh("Meri: suihku");
         }
 
@@ -1643,7 +1666,7 @@ namespace Matkakirja.Natiivi
         /// Valaan näytös: selkä nousee (1,6 s), puhallus (1,1 s), notkahdus ja toinen puhallus, sitten sukellus: selkä painuu ja
         /// pyrstö nousee takaa pystyyn, seisoo hetken ja liukuu veteen. Harvinainen: pyrstö nousee korkeammalle ja läiskähtää
         /// kahdesti (roiskeet), ja vasta sitten valas sukeltaa. Uintisuunta rannikon suuntaan ±25° jaksosta, eteneminen hidas.
-        /// Lapset: 0 selkä, 1–3 suihkupallot, 4 pyrstö.
+        /// Lapset: 0 selkä, 1–4 suihkupallot, 5 pyrstö.
         /// </summary>
         public static void ValasAnimoi(Transform juuri, Transform[] lapset, float t, float nopeus)
         {
@@ -1669,13 +1692,13 @@ namespace Matkakirja.Natiivi
             selka.localRotation = Quaternion.Euler(0f, 0f, 1.2f * Mathf.Sin(s * 0.9f + 1f));
             selka.localScale = new Vector3(1f, Mathf.Max(0.03f, sy), 1f);
 
-            // Pyrstö: tavallinen sukellus (nousu 1,2 s, seisoo 1 s, liukuu veteen 1,2 s) tai läiskäytys kahdesti.
+            // Pyrstö: tavallinen sukellus (nousu pystyyn 1,2 s, seisoo 1 s, liukuu veteen 1,2 s) tai läiskäytys kahdesti.
             float kulma = -85f, korkeus = 1f, nosto = 0f, isku1 = -1f, isku2 = -1f;
             if (sp < 0f) korkeus = 0f;
             else if (!harv)
             {
                 float ylos = Pehmea(sp / 1.2f);
-                kulma = Mathf.Lerp(-85f, -6f, ylos) + 3f * Mathf.Sin(sp * 2.2f) * ylos;
+                kulma = Mathf.Lerp(-85f, 4f, ylos) + 3f * Mathf.Sin(sp * 2.2f) * ylos;
                 korkeus = 1f - Pehmea((sp - 2.2f) / 1.2f);
             }
             else
@@ -1693,27 +1716,27 @@ namespace Matkakirja.Natiivi
             pyrsto.localRotation = Quaternion.Euler(kulma, 0f, 0f);
             pyrsto.localScale = korkeus > 0.001f ? new Vector3(1f, korkeus, 1f) : Vector3.zero;
 
-            // Suihku: kolme palloa suihkuaukosta porrastettuna (elinikä 2,4 s) kahdessa puhalluksessa; läiskäytyksen roiskeet
-            // pyrstön kärjestä matalampina ja leveämpinä (elinikä 1,1 s).
-            var aukko = new Vector3(0f, 0.02f * sy, z + 0.055f);
+            // Suihku: neljä palloa suihkuaukosta pinoutuen pensasmaiseksi pilariksi (nousee, leviää ja häipyy 2,2 s:ssa) kahdessa
+            // puhalluksessa; läiskäytyksen roiskeet pyrstön kärjestä matalina ja leveinä (elinikä 1,1 s).
+            var aukko = new Vector3(0f, 0.022f * sy, z + 0.062f);
             var karki = new Vector3(0f, 0.004f, z - 0.1f - 0.042f);
             for (int k = 0; k < Suihkuja; k++)
             {
                 var pallo = lapset[1 + k];
-                float koko = 1f - 0.15f * k;
-                float i1 = (s - 1.1f - k * 0.12f) / 2.4f, i2 = (s - puhallus2 - k * 0.12f) / 2.4f;
+                float i1 = (s - 1.1f - k * 0.08f) / 2.2f, i2 = (s - puhallus2 - k * 0.08f) / 2.2f;
                 float r1 = isku1 < 0f ? -1f : (s - isku1 - k * 0.06f) / 1.1f, r2 = isku2 < 0f ? -1f : (s - isku2 - k * 0.06f) / 1.1f;
                 if (i1 >= 0f && i1 <= 1f || i2 >= 0f && i2 <= 1f)
                 {
                     float ika = i1 >= 0f && i1 <= 1f ? i1 : i2;
-                    pallo.localPosition = aukko + new Vector3((k - 1) * 0.004f, 0.012f + 0.07f * Pehmea(ika * 1.5f) * koko, -0.012f * ika);
-                    pallo.localScale = Vector3.one * (Mathf.Pow(Mathf.Sin(Mathf.PI * ika), 0.7f) * (0.55f + ika) * koko);
+                    float h = 0.014f + k * 0.018f + 0.04f * Pehmea(ika * 1.4f);
+                    pallo.localPosition = aukko + new Vector3(0.003f * (k % 2 == 0 ? 1 : -1), h, -0.018f * ika * (1f + k * 0.3f));
+                    pallo.localScale = Vector3.one * (Mathf.Pow(Mathf.Max(0f, Mathf.Sin(Mathf.PI * ika)), 0.6f) * (0.7f + 1.1f * ika) * (1f - 0.1f * k));
                 }
                 else if (r1 >= 0f && r1 <= 1f || r2 >= 0f && r2 <= 1f)
                 {
                     float ika = r1 >= 0f && r1 <= 1f ? r1 : r2;
-                    pallo.localPosition = karki + new Vector3((k - 1) * 0.014f * (0.5f + ika), 0.035f * Mathf.Sin(Mathf.PI * ika), 0f);
-                    pallo.localScale = Vector3.one * (Mathf.Sin(Mathf.PI * ika) * 0.9f * koko);
+                    pallo.localPosition = karki + new Vector3((k - 1.5f) * 0.012f * (0.5f + ika), 0.035f * Mathf.Sin(Mathf.PI * ika), 0f);
+                    pallo.localScale = Vector3.one * (Mathf.Max(0f, Mathf.Sin(Mathf.PI * ika)) * 0.9f);
                 }
                 else pallo.localScale = Vector3.zero;
             }
