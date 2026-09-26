@@ -39,3 +39,11 @@ test('rautatiet kattavat Euroopan ydinalueen (yli 80 000 km)', () => {
   }
   assert.ok(km > 80000, `${Math.round(km)} km`);
 });
+
+test('erä 2: Egyptin radat (OHM, ruutu 27°N) ja Pireus–Ateena 1869 (täydennys) mukana', () => {
+  const alussa = (b) => data.reitit.some((r) => r.laji === 'rautatie'
+    && r.viivat.some((v) => v.some(([lon, lat]) => lon >= b[0] && lon <= b[2] && lat >= b[1] && lat <= b[3])));
+  assert.ok(alussa([29.8, 30.9, 31.4, 31.3]), 'Aleksandria–Kairo');
+  assert.ok(alussa([23.6, 37.9, 23.75, 38.0]), 'Pireus–Ateena');
+  assert.ok(data.reitit.find((r) => r.id === 'rautatie-pireus-ateena')?.lisenssi.startsWith('CC0'));
+});
