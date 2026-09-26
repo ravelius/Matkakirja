@@ -1413,3 +1413,13 @@ test('taustapäivitys vaihe 1: tasoittain periytyy ja uusi taso jättää vanhan
   assert.ok(validoiNimella({ ...eka, tasoittain: { ios: { x: 1 } } }, 'osoitin.schema.json').length);
 });
 
+test('skeema 1.44: karttavalot.laji = webin symLaji (löydös 125, Kreikka)', () => {
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  assert.ok(valot.every((v) => 'laji' in v), 'laji jokaisella rivillä');
+  const laji = (tunnus) => valot.find((v) => v.maa === 'GRC' && v.tunnus === tunnus)?.laji;
+  assert.equal(laji('parnassos'), 'vuori');
+  assert.equal(laji('santorini'), 'saari');
+  assert.equal(laji('egeanmeri'), 'meri');
+  assert.equal(laji('aliakmonas'), 'joki');
+  assert.ok(valot.filter((v) => v.lahde === 'elaintaky').every((v) => v.laji === 'elain'));
+});
