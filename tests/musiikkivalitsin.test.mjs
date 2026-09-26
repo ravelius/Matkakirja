@@ -31,9 +31,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import * as lyria from '../tools/lyria.mjs';
-import {
-  ALUEIDEN_RAIDAT, RAIDAT, TILOJEN_RAIDAT, VAIHE1_RAIDAT,
-} from '../tools/generoi-musiikki.mjs';
+import { ALUEIDEN_RAIDAT, RAIDAT, TILOJEN_RAIDAT } from '../tools/generoi-musiikki.mjs';
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 
@@ -511,46 +509,6 @@ test('kaupunginRaidat ei anna raitoja virtuaalipaikoille', () => {
 
 /* ── 8. musiikkisuunnitelma, vaihe 1 (26.9.2026) ─────────────────── */
 
-test('viimeistellyt raidat ovat täsmälleen suunnitelman raidat', () => {
-  /*
-   * Viimeistely (tools/viimeistele-musiikki.mjs) vie suunnitelman raidat
-   * −33 LUFS:iin, ja peli korjaa tason tästä joukosta. Jos työkaluun
-   * tulee raita eikä joukkoon, se soisi 21,6 dB liian hiljaa — ja
-   * päinvastoin paletin raita joukossa soisi 21,6 dB liian kovaa.
-   */
-  const suunnitelman = VAIHE1_RAIDAT.map((id) => RAIDAT[id].tiedosto.replace(/\.mp3$/, ''));
-  assert.deepEqual([...valitsin.VIIMEISTELLYT_RAIDAT].sort(), [...suunnitelman].sort());
-});
-
-test('tasokorjaus nostaa −33 LUFS -raidan paletin tasolle, ei muuta', () => {
-  const { PALETIN_LUFS, VIIMEISTELLYN_LUFS, musiikinTasokorjaus } = valitsin;
-  const db = 20 * Math.log10(musiikinTasokorjaus(ETUSIVU));
-  assert.ok(Math.abs(db - (PALETIN_LUFS - VIIMEISTELLYN_LUFS)) < 1e-9, `korjaus ${db} dB`);
-  assert.ok(db > 20 && db < 23, `korjaus ${db} dB ei vastaa mitattua eroa (21,6 dB)`);
-  // Pääte ei vaikuta: sama tunnus korjataan kummallakin moottorilla.
-  assert.equal(musiikinTasokorjaus('assets/audio/musa-loppu.mp3'), musiikinTasokorjaus(ETUSIVU));
-  for (const polku of [POHJA, musaPolku('musa-aarre'), musaPolku('musa-etusivu'), null, '']) {
-    assert.equal(musiikinTasokorjaus(polku), 1, `${polku}: paletin raitaa ei korjata`);
-  }
-});
-
-test('etusivun johtoaihe soi samalla kuuluvalla tasolla kuin paletin raita', async () => {
-  const s = await lataaAmbienssi();
-  s.mod.playPlaceAmbience('etusivu', 'lentoasema', 'europe');
-  await Promise.resolve();
-  await Promise.resolve();
-  await ajaHaivytykset(s.kello);
-  const etusivu = s.musiikit().at(-1);
-  const etusivunTaso = etusivu.volume;
-  await saavu(s, 'sofia', 'BGR');
-  const alue = s.musiikit().at(-1);
-  assert.notEqual(alue, etusivu);
-  assert.ok(alue.volume > 0, 'alueraita ei noussut');
-  const suhde = etusivunTaso / alue.volume;
-  assert.ok(Math.abs(suhde - valitsin.musiikinTasokorjaus(ETUSIVU)) < 1e-6,
-    `etusivun ja paletin tasojen suhde ${suhde} — korjaus ei kulje pohjavireen tason läpi`);
-});
-
 test('saapumistunnus on vain Välimeren alueella, sama maa→alue-taulu', async () => {
   const { SAAPUMISTUNNUKSET, saapumistunnus } = await import('../js/kaupunkimusiikki.js');
   const tunnus = musaPolku('musa-saapuminen-valimeri');
@@ -561,19 +519,15 @@ test('saapumistunnus on vain Välimeren alueella, sama maa→alue-taulu', async 
   for (const [kaupunki, maa] of [['pariisi', 'FRA'], ['sofia', 'BGR'], ['kumasi', 'GHA'], ['etusivu', null]]) {
     assert.equal(saapumistunnus(kaupunki, maa), null, `${kaupunki}: tunnus ilman aluetta`);
   }
-  for (const [alue, raita] of Object.entries(SAAPUMISTUNNUKSET)) {
+  for (const alue of Object.keys(SAAPUMISTUNNUKSET)) {
     assert.ok(Object.hasOwn(ALUERAIDAT, alue), `${alue}: tuntematon alue`);
-    assert.ok(valitsin.VIIMEISTELLYT_RAIDAT.has(raita), `${raita}: tasokorjaus puuttuu`);
   }
 });
 
-test('matkan aiheet soivat aarreaiheen paikassa ja korjatulla tasolla', () => {
-  // Kolme kertaraitaa, yksi soitin (soitaAarreMusiikki) ja sen taso
-  // kulkee tasokorjauksen ja säätimen läpi.
+test('matkan aiheet soivat aarreaiheen paikassa', () => {
+  // Kolme kertaraitaa, yksi soitin (soitaAarreMusiikki).
   assert.match(UI, /aloituslento: musaPolku\('musa-aloituslento'\)/);
   assert.match(UI, /loppu: musaPolku\('musa-loppu'\)/);
-  assert.match(UI, /AARRE_MUSIIKIN_VOIMA \* korjaus \* musiikinKerroin\(\)/,
-    'aiheen taso ei kulje tasokorjauksen läpi');
   assert.match(UI, /this\.soitaAarreMusiikki\(MATKAN_AIHEET\.aloituslento\)/,
     'aloituslento ei soita aihettaan');
   assert.match(UI, /this\.soitaSaapumistunnus\(city\)/, 'saapuminen ei soita tunnusta');

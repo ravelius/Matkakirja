@@ -220,11 +220,11 @@ erässä tehtiin.
 ## Matkan aiheet (musiikkisuunnitelma, vaihe 1, 26.9.2026)
 
 Suunnitelma: `docs/raportit/musiikki-ja-aanisuunnitelma-20260926.md`.
-Tiedostot on viimeistelty −33 LUFS:iin (`tools/viimeistele-musiikki.mjs`),
-kun paletin Lyria-raidat ovat −11,4 LUFS. Ero korjataan soitossa
-tiedoston mukaan (`js/musiikkivalitsin.js` `musiikinTasokorjaus`,
-`VIIMEISTELLYT_RAIDAT`), joten uusi raita soi samalla kuuluvalla tasolla
-kuin paikan vanha raita ja seuraa samaa säädintä (`musiikinKerroin`).
+Kaikki musiikkitiedostot (paletti ja suunnitelman raidat) ovat noin
+−11 LUFS:ssä; suunnitelman raidat leikataan ja normalisoidaan
+`tools/viimeistele-musiikki.mjs`:llä. Soittotaso tulee siis samoista
+voimista ja samasta säätimestä (`musiikinKerroin`) kuin muullakin
+musiikilla.
 
 | raita | milloin | soitin |
 |---|---|---|

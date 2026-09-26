@@ -279,7 +279,7 @@ import {
  */
 import {
   MUSIIKIN_PERUSTASO, asetaMusiikkitila, kuunteleMusiikinKerrointa, musiikinKerroin,
-  musiikinTasokorjaus, musiikkiPaalla,
+  musiikkiPaalla,
 } from './musiikkivalitsin.js';
 // Saapumistunnus luetaan samasta maa→alue-taulusta kuin alueraita.
 import { saapumistunnus } from './kaupunkimusiikki.js';
@@ -19836,10 +19836,9 @@ export class UI {
    *
    * SAMA PAIKKA MATKAN AIHEILLE (musiikkisuunnitelma 26.9.2026):
    * aloituslento, saapumistunnus ja loppu soivat tämän kautta
-   * (MATKAN_AIHEET). Taso on sama AARRE_MUSIIKIN_VOIMA, ja
-   * viimeistellyn raidan −33 LUFS korjataan tiedoston mukaan
-   * (js/musiikkivalitsin.js musiikinTasokorjaus), jotta kaikki aiheet
-   * kuuluvat samalla tasolla kuin Lyria-paletin aarreaihe.
+   * (MATKAN_AIHEET). Taso on sama AARRE_MUSIIKIN_VOIMA: viimeistellyt
+   * raidat ovat paletin tavoin noin −11 LUFS:ssä
+   * (tools/viimeistele-musiikki.mjs), joten korjausta ei tarvita.
    *
    * @returns {?HTMLAudioElement} soiva aihe, tai null jos se jäi pois
    */
@@ -19863,8 +19862,7 @@ export class UI {
     // koskee myös sitä — ja sama vahvistinreitti, jotta taso menee
     // perille myös iPhonessa (omistajan vika 9.9.2026).
     audio.aaniVahvistin = liitaMusiikkiin(audio);
-    const korjaus = musiikinTasokorjaus(lahde);
-    asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * korjaus * musiikinKerroin());
+    asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
     /*
      * Tausta madaltuu aiheen ajaksi. Hiljennys (syyjoukko) eikä väistö
      * (laskuri): pääaarteella soi samaan aikaan luettu huudahdus, joka
@@ -19877,7 +19875,7 @@ export class UI {
     // Säädin koskee myös kesken soivaa aihetta: kuuntelija irtoaa, kun
     // aihe päättyy tai seuraava ottaa sen paikan.
     const irtiSaatimesta = kuunteleMusiikinKerrointa(() => {
-      asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * korjaus * musiikinKerroin());
+      asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
     });
     /*
      * Purku VAIN jos tämä aihe on yhä se soiva. Pysäytys asettaa

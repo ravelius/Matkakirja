@@ -32,7 +32,7 @@ import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
 import {
   MUSIIKIN_PERUSTASO, POHJARAITA, asetaMusiikkipaikka, asetaMusiikkitila,
   kuunteleMusiikinKerrointa, kuunteleMusiikkitilaa, musiikinKerroin,
-  musiikinMaa, musiikinPaikka, musiikinTasokorjaus, musiikkiPaalla, valitseMusiikki,
+  musiikinMaa, musiikinPaikka, musiikkiPaalla, valitseMusiikki,
 } from './musiikkivalitsin.js';
 /*
  * MUSIIKIN VAHVISTIN (js/musiikkivahvistin.js) on se tie, jota pitkin
@@ -1323,14 +1323,9 @@ function pohjanPolku(cityId, maa) {
  * musiikkia siinä missä siirtymä- ja linssiraidat
  * (js/siirtymamusiikki.js raidanTaso). Tavallisella pelaajalla kerroin
  * on aina 1,0.
- *
- * Tiedostotason korjaus luetaan SOIVASTA polusta: etusivun johtoaihe on
- * viimeistelty −33 LUFS:iin, paletti −11,4 LUFS:iin
- * (js/musiikkivalitsin.js musiikinTasokorjaus). Ristihäivytyksessä
- * väistyvä raita liukuu nollaan eikä tarvitse omaa tasoaan.
  */
 const pohjaMusiikinTaso = (kerroin = voimassaVaisto()) => POHJA_VOIMA * kerroin
-  * musiikinKerroin() * avauksenMusiikkiKerroin() * musiikinTasokorjaus(pohjaPolku);
+  * musiikinKerroin() * avauksenMusiikkiKerroin();
 
 /*
  * Musiikin säädin (js/musiikkivalitsin.js musiikinKerroin): soiva raita
