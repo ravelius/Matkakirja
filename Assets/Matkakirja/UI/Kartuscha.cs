@@ -22,6 +22,7 @@
 // Kartta-/Dialogi-/Matkalla-tilassa tai linssi on päällä (NaytaSallittu).
 // Data: UiSisalto.Maa (Siirtosepän maat-kokoelma).
 // Elävä kartta (tutkimuspalkki, heränneet maakunnat, salaisuusrivi, lippu liehuu valmiissa maassa): Kartuscha.Muste.cs.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -220,6 +221,7 @@ namespace Matkakirja.Natiivi
             {
                 Sulje();
                 kortti.style.display = DisplayStyle.None;
+                Lipputanko.Pois();
                 return;
             }
             Tayta(UiSisalto.Maa(iso));
@@ -227,6 +229,21 @@ namespace Matkakirja.Natiivi
             Mediarivi.AsetaRadionMaa(radio, iso, mt?.Nimi ?? iso);
             Asettele();
             kortti.style.display = DisplayStyle.Flex;
+        }
+
+        /// <summary>
+        /// Löydös 161 (omistaja, build 21 -koe): kohdemaan 3D-lipputanko (Natiivisepän Lipputanko) pääkaupunkiin samalla
+        /// 1873-lipulla kuin kartussissa. Pääkaupunki = maalehden kartan pääpiste (KarttaKaupungit paa) pelin kaupungeista;
+        /// varana maan pelikaupunkien keskipiste. Ei kaupunkeja → ei tankoa.
+        /// </summary>
+        static void AsetaLipputanko(MaaTiedot m, Texture lippu)
+        {
+            var omat = UiSisalto.Kaikki.Where(k => k.Maa == m.Iso3 && !double.IsNaN(k.Lat) && !double.IsNaN(k.Lon)).ToList();
+            string paaNimi = m.KarttaKaupungit.Where(k => k.Paa).Select(k => k.Nimi).FirstOrDefault();
+            var paa = paaNimi == null ? null : omat.FirstOrDefault(k => string.Equals(k.Nimi, paaNimi, StringComparison.OrdinalIgnoreCase));
+            if (paa != null) { Lipputanko.Aseta(m.Iso3, paa.Lat, paa.Lon, lippu); return; }
+            if (omat.Count == 0) { Lipputanko.Pois(); return; }
+            Lipputanko.Aseta(m.Iso3, omat.Average(k => k.Lat), omat.Average(k => k.Lon), lippu);
         }
 
         void Tayta(MaaTiedot m)
@@ -252,7 +269,9 @@ namespace Matkakirja.Natiivi
                     lippuKuva = t;
                     lippuLeveys = lw;
                     PaivitaLippu();
+                    AsetaLipputanko(m, t);
                 }, "liput");
+            else Lipputanko.Pois();
 
             // Valtiomuoto 1873 ilman "v. 1873" -päätettä (webin valtiomuoto1873).
             valtiomuoto.text = vm != null ? vm.Replace(" v. 1873", "") : "";
