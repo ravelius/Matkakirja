@@ -20,6 +20,7 @@ const ODOTETUT_MAARAT = {
   LVA: 5,
   LTU: 10,
   SVN: 12,
+  KOR: 17,
   ROU: 42,
   CZE: 14,
   LUX: 3,
@@ -143,7 +144,7 @@ const ODOTETUT_MAARAT = {
  * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN sekä erässä 3A MDA, UKR,
  * BLR ja ISL.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA', 'AFG', 'MNG', 'KAZ', 'UZB', 'TKM', 'KHM', 'LAO', 'MMR', 'BTN', 'TLS', 'GEO', 'ARM', 'AZE', 'YEM', 'OMN', 'ARE', 'QAT', 'KWT', 'BHR', 'AGO', 'COD', 'CMR', 'TCD', 'SDS', 'SDN', 'MDG', 'MOZ', 'ZWE', 'NAM', 'UGA', 'SEN', 'SLE', 'LBR', 'LBY', 'MLI', 'SOM', 'GTM', 'NIC', 'CUB', 'PAN', 'HKG', 'TWN', 'PRK', 'TJK', 'KGZ']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA', 'AFG', 'MNG', 'KAZ', 'UZB', 'TKM', 'KHM', 'LAO', 'MMR', 'BTN', 'TLS', 'GEO', 'ARM', 'AZE', 'YEM', 'OMN', 'ARE', 'QAT', 'KWT', 'BHR', 'AGO', 'COD', 'CMR', 'TCD', 'SDS', 'SDN', 'MDG', 'MOZ', 'ZWE', 'NAM', 'UGA', 'SEN', 'SLE', 'LBR', 'LBY', 'MLI', 'SOM', 'GTM', 'NIC', 'CUB', 'PAN', 'HKG', 'TWN', 'PRK', 'TJK', 'KGZ', 'KOR']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {

@@ -12590,4 +12590,73 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: "Arslanbobin 11 000 hehtaarin saksanpähkinämetsä on maailman suurin, ja syyskuussa kylä lähtee keräämään pähkinöitä.",
     },
   },
+  /*
+   * KOR. Avaimet MAAKUNNAT_KAIKKI.KOR:n tunnuksia TÄSMÄLLEEN (kopioitu
+   * koneellisesti). Vain `lyhyt`. Vältetty maastokohteet-kor.js:n
+   * aiheita (Hallasan, Nakdong, Gyeongju, Haeinsa, Hwaseong, Hahoe,
+   * Gochang, Jeonju, Baekje, Songgwangsa). Lähteet (en-Wikipedia ja
+   * haku 26.9.2026):
+   *   Busan — Jagalchi Market; Daegu — Yangnyeongsi; Daejeon —
+   *   Sungsimdang; South Chungcheong — Boryeong Mud Festival; South
+   *   Gyeongsang — Jinju Namgang Yudeung Festival; South Jeolla —
+   *   Boseong County; Gangwon — Alpensia Resort; Gwangju — Gwangju
+   *   Biennale; Gyeonggi — Everland; Incheon — Chinatown, Incheon;
+   *   Jeju — Haenyeo; North Chungcheong — North Chungcheong Province;
+   *   North Gyeongsang — Homigot; North Jeolla — Saemangeum Seawall;
+   *   Sejong — Sejong City; Seoul — Cheonggyecheon; Ulsan — haku
+   *   (Autocar: Inside Ulsan, the world's biggest car factory)
+   */
+  KOR: {
+    "Busan": {
+      lyhyt: "Busanin Jagalchin kalatori on Etelä-Korean suurin, ja sen tunnetuimpia myyjiä ovat yhä jagalchi-ajummat, kalaa kauppaavat naiset.",
+    },
+    "Daegu": {
+      lyhyt: "Daegun yrttitori Yangnyeongsi on toiminut vuodesta 1658, ja sen Yakjeon-kujalla on yhä noin 180 perinteisen lääkinnän liikettä.",
+    },
+    "Daejeon": {
+      lyhyt: "Sungsimdang-leipomo perustettiin Daejeoniin 1956, ja sen soboro-pullaa saa vain sieltä, sillä leipomolla ei ole myymälöitä muualla.",
+    },
+    "South Chungcheong": {
+      lyhyt: "Boryeongin Daecheonin rannalla pidetään joka heinäkuu mutafestivaali, jossa väki kieriskelee rannikon mutatasankojen mudassa.",
+    },
+    "South Gyeongsang": {
+      lyhyt: "Jinjussa Nam-joelle lasketaan joka lokakuu lyhtyjä muistoksi niille, jotka kuolivat kaupungin piirityksissä Imjin-sodassa 1590-luvulla.",
+    },
+    "South Jeolla": {
+      lyhyt: "Boseongin rinteiden terassimaiset teeviljelmät tuottavat noin 40 prosenttia koko Etelä-Korean teestä.",
+    },
+    "Gangwon": {
+      lyhyt: "Pyeongchangin Alpensiassa ovat yhä vuoden 2018 talviolympialaisten mäkihyppytornit ja kelkkarata.",
+    },
+    "Gwangju": {
+      lyhyt: "Gwangjussa järjestetään joka toinen vuosi nykytaiteen biennaali, joka perustettiin 1995 ja tuo kaupunkiin taiteilijoita ympäri maailmaa.",
+    },
+    "Gyeonggi": {
+      lyhyt: "Yonginissa sijaitseva Everland on Etelä-Korean suurin teemapuisto, ja sen puinen T Express -vuoristorata syöksyy alas 77 asteen kulmassa.",
+    },
+    "Incheon": {
+      lyhyt: "Incheonin Chinatownin jajangmyeon-museo toimii Gonghwachunissa, ravintolassa, jonka katsotaan tarjonneen mustapapunuudeleita Koreassa ensimmäisenä.",
+    },
+    "Jeju": {
+      lyhyt: "Jejun haenyeo-sukeltajat, enimmäkseen iäkkäitä naisia, sukeltavat ilman happilaitteita jopa 20 metrin syvyyteen merikorvien ja merisiilien perässä.",
+    },
+    "North Chungcheong": {
+      lyhyt: "Pohjois-Chungcheong on Etelä-Korean ainoa maakunta, jolla ei ole lainkaan merenrantaa.",
+    },
+    "North Gyeongsang": {
+      lyhyt: "Homigot-niemen edustalla nousee merestä 8,5 metriä korkea käsiveistos, ja uudenvuodenaamuna rannalle kerääntyy tuhansia katsomaan auringonnousua.",
+    },
+    "North Jeolla": {
+      lyhyt: "Saemangeumin merivalli Gunsanin ja Buanin välillä on 33 kilometriä pitkä, maailman pisin ihmisen rakentama pato.",
+    },
+    "Sejong": {
+      lyhyt: "Sejong perustettiin 2007 uudeksi hallintokaupungiksi, ja nykyään siellä toimivat pääministerin kanslia ja kymmenkunta ministeriötä.",
+    },
+    "Seoul": {
+      lyhyt: "Soulin keskustassa virtaa Cheonggyecheon-puro, joka avattiin 2005 uudelleen puretun moottoritien alta, ja sen rantoja voi kävellä lähes 11 kilometriä.",
+    },
+    "Ulsan": {
+      lyhyt: "Hyundain Ulsanin tehdas on maailman suurin yksittäinen autotehdas, ja sillä on oma satama, josta valmiit autot lastataan suoraan laivoihin.",
+    },
+  },
 };
