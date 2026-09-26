@@ -124,6 +124,8 @@ namespace Matkakirja
             kameraKomp = transform.parent != null ? transform.parent.GetComponent<Camera>() : null;
             kierto = transform.parent != null ? transform.parent.GetComponent<PalloKierto>() : null;
             if (kameraKomp != null) perusTausta = kameraKomp.backgroundColor;
+            // Kartan taivas kallistuksessa (löydös 154): oletus pois, komento "taivas kartta …".
+            if (kameraKomp != null && kameraKomp.GetComponent<Karttataivas>() == null) kameraKomp.gameObject.AddComponent<Karttataivas>();
             perusOn = true;
         }
 
