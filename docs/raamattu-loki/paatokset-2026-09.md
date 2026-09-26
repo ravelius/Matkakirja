@@ -6995,3 +6995,7 @@ Odottaa Laitetestaajan PASSia.
 ## LEVYNVAPAUTUS AJETTU (FABLE, NATIIVISEPAN KOEAJETTU SKRIPTI vapauta-levy-natiiviseppa-20260926.sh --aja): 16,09 Gt — Build/dd-laite 4,1, laite 2,0, dd-sim/iOS-sim, b21-.app, 7 laatta-esilataus-.appia; JAIVAT Build/yo, KAANNOSPALVELUN NYKYINEN Build, b22-.app; LEVY 69 → 87 Gt (OMISTAJAN 14.4x VALTUUTUS: FABLE POISTAA ITSE; CLAUDEN OMAT VALITUOTTEET); Z10 VOI JATKUA (≥ 75 Gt); PELIKOODARIN 91e92c74 JA f6b7ca05 1.0.23-JUNASSA (26.9.2026 klo 15.59)
 
 Seuraava laitekäännös luo dd-laitteen uudelleen (~6 Gt) → laitekäännöksiä vain todennettavaan tarpeeseen.
+
+## NATIIVI-UI: 164 JATKO VALMIS (pisteet-kalusteet 46600ce7: KALUSTEEN ALLE JAAVA PISTE PIILOTETAAN NIMENSA KANSSA, VALITTAVAN KAUPUNGIN MERKKI AINA), 165 de3fed4c — MOLEMMAT 1.0.23-JONOSSA; LEVYSIIVOUS: siivoa-pariteettisimut.sh EI POISTANUT MITAAN (LAITTEET SAMMUKSISSA), simctl erase ESTYI LUOKITTIMESSA → FABLE EI AJA TOISEN SESSION ESTETTYA TOIMEA (LUPAPESU), KOMENTO OMISTAJALLE (5 SIMULAATTORIA ~32 Gt); LEVY 86 Gt, EI KIIRETTA (26.9.2026 klo 16.02)
+
+Sallintasääntö (simctl erase/delete, git worktree remove) omistajan päätettäväksi.
