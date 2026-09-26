@@ -140,7 +140,7 @@ function kehittajaKoodi() {
 }
 
 /**
- * Yhden pyynnön merkkikatto. Workerin kova raja on 1000
+ * Yhden pyynnön merkkikatto. Workerin kova raja on 2500
  * (tools/pollo/rajat.js PUHE_TEKSTIN_KATTO); tämä pysyy sen alla,
  * jotta siivousten pyöristykset eivät koskaan leikkaa lausetta kesken.
  *
@@ -149,7 +149,14 @@ function kehittajaKoodi() {
  * mahdollisimman moni kappale yhdellä pyynnöllä — raja on enää
  * workerin kovan rajan vartija, ei palakoon säädin.
  */
-export const PUHE_PALA_KATTO = 950;
+/*
+ * 950 → 2400 (omistaja 27.9.2026 klo 01.5x): pitkäkin kappale on yksi
+ * pala. Palojen väliin ei synny odotusta, koska soitin hakee jo kaksi
+ * seuraavaa palaa sillä aikaa kun edellinen soi (aikatauluta: hae +1, +2;
+ * mitattu 27.9. xAI:lla — lehtisivun palojen välit 0,45/0,95 s eli vain
+ * suunnitellut tauot). Aloituspala katetaan esipuskurilla.
+ */
+export const PUHE_PALA_KATTO = 2400;
 
 /*
  * Istunnon estolippu: asetusvirhe (503/403) tarkoittaa, ettei puhe ole
