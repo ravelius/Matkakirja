@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Matkakirja.Linssit.Aanet;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Elava;
 
@@ -316,6 +317,24 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(HetkenGeometria.Suuntima(new LatLon(40, 20), q) - 90) < 1e-6, "suuntima");
             var takaisin = HetkenValinta.ViivaaPitkin(new[] { new LatLon(0, 0), new LatLon(0, 1), new LatLon(0, 2) }, 2, 1.5, true);
             Oleta.Tosi(takaisin != null && Math.Abs(takaisin[takaisin.Length - 1].Lon - 0.5) < 1e-6, "viivan päästä taaksepäin");
+        }
+            [Testi] static void HetkienAanetHiljaisia()
+        {
+            foreach (var nimi in HetkienAanet.Nimet)
+            {
+                var x = HetkienAanet.Syntetisoi(nimi, 48000, 12345);
+                Oleta.Sama(Synteesi.Naytteita(HetkienAanet.KestoS, 48000), x.Length);
+                Oleta.Tosi(!x.Any(float.IsNaN), nimi + " ei NaN");
+                float huippu = x.Max(v => Math.Abs(v));
+                double rms = Math.Sqrt(x.Average(v => (double)v * v));
+                Console.WriteLine($"      {nimi}: huippu {huippu:F4}, rms {rms:F4}");
+                Oleta.Tosi(huippu > 0.004 && huippu < 0.1, $"{nimi} huippu {huippu:F4}");
+                Oleta.Tosi(x[0] == 0 && x[x.Length - 1] == 0, nimi + " alku ja loppu hiljaa");
+            }
+            var k = HetkienAanet.Syntetisoi(HetkienAanet.Laiva, 48000, 7);
+            double Energia(double t0, double t1) { double e = 0; for (int n = (int)(t0 * 48000); n < (int)(t1 * 48000); n++) e += k[n] * k[n]; return e; }
+            Oleta.Tosi(Energia(0.36, 0.40) > 3 * Energia(0.30, 0.34), "ensimmäinen lyönti");
+            Oleta.Tosi(Energia(0.76, 0.80) > 1.5 * Energia(0.70, 0.74), "toinen lyönti");
         }
     }
 }

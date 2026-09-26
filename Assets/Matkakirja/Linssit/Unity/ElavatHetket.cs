@@ -8,12 +8,14 @@
 //   parvi  11 lintua V-muodostelmassa, siivet lyövät (kaksi kapeaa läiskää linnulla)
 //   sade   harmaa kuuro ja viistot juovat, kulkee länsituulessa
 // Aineisto: sisältöpaketin kokoelma reitit1873 (skeema 1.46, Karttaseppä) ladataan joutilaana, ja maakunnat tulevat
-// ElavaKartan välimuistista. Testi: "elava hetki [laiva|juna|parvi|sade]" (heti) ja "elava hetket 0|1|tila".
+// ElavaKartan välimuistista. Äänet (Ydin/Aanet/HetkienAanet: tuuli, kaukainen laivan kello, sade, junan puhallukset)
+// syntetisoidaan taustasäikeessä ja soivat tehosteväylällä hiljaa. Testi: "elava hetki [laiva|juna|parvi|sade]" (heti) ja "elava hetket 0|1|tila".
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CesiumForUnity;
+using Matkakirja.Linssit.Aanet;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Elava;
 using Unity.Mathematics;
@@ -34,6 +36,7 @@ namespace Matkakirja.Natiivi
         static ElavatHetket instanssi;
         static List<Reitti1873> reitit;
         static bool reititHaussa;
+        readonly Dictionary<string, AudioClip[]> aanet = new Dictionary<string, AudioClip[]>();
 
         LinssiOhjain ohjain;
         CesiumGeoreference georeferenssi;
@@ -119,7 +122,49 @@ namespace Matkakirja.Natiivi
             if (pehmea != null) Kappale("Hetki: savu ja kuuro", pehmeaMesh, pehmea);
             if (laiva != null) { laivaOlio = Kappale("Hetki: laiva", laivaMesh, laiva); laivaOlio.SetActive(false); }
             StartCoroutine(LataaReitit());
+            StartCoroutine(Syntetisoi());
         }
+
+        /// <summary>Hetkien äänet taustasäikeessä joutilaana, klipit pääsäikeessä ja rekisteröinti tehosteväylälle.</summary>
+        IEnumerator Syntetisoi()
+        {
+            yield return new WaitForSecondsRealtime(AineistoViiveS);
+            int taajuus = AudioSettings.outputSampleRate > 0 ? AudioSettings.outputSampleRate : 48000;
+            uint siemen = (uint)Environment.TickCount | 1u;
+            var tehtava = Task.Run(() =>
+            {
+                var tulos = new Dictionary<string, float[][]>();
+                foreach (var nimi in HetkienAanet.Nimet)
+                {
+                    var m = new float[HetkienAanet.Muunnelmia][];
+                    for (int i = 0; i < m.Length; i++) m[i] = HetkienAanet.Syntetisoi(nimi, taajuus, siemen + (uint)(i * 7919 + nimi.Length * 104729));
+                    tulos[nimi] = m;
+                }
+                return tulos;
+            });
+            while (!tehtava.IsCompleted) yield return null;
+            if (tehtava.IsFaulted) { Debug.Log("MATKAKIRJA elävät hetket: äänisynteesi epäonnistui: " + tehtava.Exception?.InnerException?.Message); yield break; }
+            foreach (var kv in tehtava.Result)
+            {
+                var klipit = new AudioClip[kv.Value.Length];
+                for (int i = 0; i < klipit.Length; i++)
+                {
+                    klipit[i] = AudioClip.Create($"{kv.Key}-{i + 1}", kv.Value[i].Length, 1, taajuus, false);
+                    klipit[i].SetData(kv.Value[i], 0);
+                }
+                aanet[kv.Key] = klipit;
+                Aanet.RekisteroiTehoste(kv.Key, klipit, 1f, true);
+            }
+            Debug.Log($"MATKAKIRJA elävät hetket: äänet valmiit ({aanet.Count} × {HetkienAanet.Muunnelmia}, {taajuus} Hz, tehosteväylällä)");
+        }
+
+        static string AanenNimi(HetkenLaji laji) => laji switch
+        {
+            HetkenLaji.Laiva => HetkienAanet.Laiva,
+            HetkenLaji.Juna => HetkienAanet.Juna,
+            HetkenLaji.Sade => HetkienAanet.Sade,
+            _ => HetkienAanet.Tuuli,
+        };
 
         void OnEnable()
         {
@@ -135,6 +180,9 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             foreach (var o in roskat) if (o != null) Destroy(o);
+            foreach (var nimi in aanet.Keys) Aanet.RekisteroiTehoste(nimi, (IReadOnlyList<AudioClip>)null);
+            foreach (var k in aanet.Values) foreach (var c in k) if (c != null) Destroy(c);
+            aanet.Clear();
             if (instanssi == this) instanssi = null;
         }
 
@@ -236,8 +284,9 @@ namespace Matkakirja.Natiivi
             var r = new System.Random(h.Siemen);
             juovaX = new float[28]; juovaVaihe = new float[28];
             for (int i = 0; i < juovaX.Length; i++) { juovaX[i] = (float)(r.NextDouble() * 2 - 1); juovaVaihe[i] = (float)r.NextDouble(); }
+            bool soi = aanet.ContainsKey(AanenNimi(h.Laji)) && Aanet.Tehoste(AanenNimi(h.Laji));
             ohjain?.Kirjaa($"elävä hetki: {h.Laji} {h.Kohde} ({keskus.Lat:F2}, {keskus.Lon:F2}), näkymä {sadeKm:F0} km, " +
-                           $"korkeus {korkeus / 1000:F0} km, rata {h.Rata.Pituus * ElavaKohtaus.KmAsteella:F0} km");
+                           $"korkeus {korkeus / 1000:F0} km, rata {h.Rata.Pituus * ElavaKohtaus.KmAsteella:F0} km, ääni {(soi ? AanenNimi(h.Laji) : "ei")}");
             return true;
         }
 
