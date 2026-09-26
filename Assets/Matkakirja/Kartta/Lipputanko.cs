@@ -36,10 +36,8 @@ namespace Matkakirja
         /// <summary>Tangon koko piilokynnyksellä suhteessa täyteen (kerroin 1): pienenee lineaarisesti tähän.</summary>
         public const float PieninOsuus = 0.45f;
         bool piilossaZoom;
-        /// <summary>Liioiteltu perspektiivi: tangon kallistus ruudun reunalla (astetta; 0 = pois). Komento `lipputanko perspektiivi a`.</summary>
-        public static float PerspektiiviAste = 55f;
-        /// <summary>Kallistuksen ja kameran oman kallistuksen yhteinen katto (astetta).</summary>
-        public const float PerspektiiviKatto = 70f;
+        /// <summary>Liioiteltu perspektiivi päällä (komento `lipputanko perspektiivi 0|1`); käyrä LiioiteltuPerspektiivi.</summary>
+        public static bool Perspektiivi = true;
         /// <summary>Lipun korkeus tangon korkeudesta.</summary>
         public const float LipunOsuus = 0.36f;
         /// <summary>Tangon pienin kulma katseeseen (°): ylhäältä katsottuna tanko kallistuu näkyviin.</summary>
@@ -62,7 +60,7 @@ namespace Matkakirja
         public static bool Jatkuva = true;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KorkeusPt = 120f; PerspektiiviAste = 55f; Jatkuva = true; instanssi = null; }
+        static void Nollaa() { KorkeusPt = 120f; Perspektiivi = true; Jatkuva = true; instanssi = null; }
 
         /// <summary>Vaihtoehdon vaihto ajossa (A/B-mittaus).</summary>
         public static void AsetaJatkuva(bool j)
@@ -257,19 +255,23 @@ namespace Matkakirja
             // Akseli: normaali, mutta vähintään MinKulma katseesta (normaalin ja katseen tasossa, katseesta poispäin).
             float kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(n, v), -1f, 1f)) * Mathf.Rad2Deg;
             Vector3 akseli = n;
-            // LIIOITELTU PERSPEKTIIVI (omistaja 26.9. klo 21.4x): ruudun keskellä tanko näkyy suoraan ylhäältä, reunoja kohti
-            // se kallistuu poispäin ruudun keskipisteestä (0° → PerspektiiviAste, smootherstep), kuin kamera olisi paljon
-            // alempana; kameran oma kallistus vähennetään, ettei kokonaiskulma ylitä PerspektiiviKatto-arvoa.
-            if (PerspektiiviAste > 0f)
+            // LIIOITELTU PERSPEKTIIVI (omistaja 26.9. klo 21.4x; yhteinen käyrä Linssisepän LiioiteltuPerspektiivi.Kallistus):
+            // ruudun keskellä suoraan ylhäältä, reunoja kohti tanko kallistuu poispäin keskipisteestä (0 → 55°, smootherstep),
+            // liioittelu häipyy kameran oman kallistuksen mukana (0 → 40°).
+            if (Perspektiivi)
             {
-                Vector3 vp = kamera.WorldToViewportPoint(p);
-                Vector2 d = new Vector2((vp.x - 0.5f) * kamera.aspect, vp.y - 0.5f);
-                float r = Mathf.Clamp01(d.magnitude / 0.5f);
-                float kallistus = Mathf.Min(PerspektiiviAste * r * r * r * (r * (r * 6f - 15f) + 10f), Mathf.Max(0f, PerspektiiviKatto - kulma));
-                Vector3 ulos = Vector3.ProjectOnPlane(kamera.transform.right * d.x + kamera.transform.up * d.y, n);
-                if (kallistus > 0.01f && ulos.sqrMagnitude > 1e-10f)
-                    akseli = Quaternion.AngleAxis(kallistus, Vector3.Cross(n, ulos.normalized)) * n;
-                kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(akseli, v), -1f, 1f)) * Mathf.Rad2Deg;
+                Vector3 sp = kamera.WorldToScreenPoint(p);
+                var (k, dx, dy) = Matkakirja.Linssit.Kamera.LiioiteltuPerspektiivi.Kallistus(sp.x, sp.y, Screen.width, Screen.height,
+                    kierto != null ? kierto.KaytettyKallistus : 0.0);
+                Vector3 oikeaT = Vector3.ProjectOnPlane(kamera.transform.right, n).normalized;
+                Vector3 ylosT = Vector3.ProjectOnPlane(kamera.transform.up, n).normalized;
+                Vector3 ulos = oikeaT * (float)dx + ylosT * (float)dy;
+                if (k > 0.01 && ulos.sqrMagnitude > 1e-10f)
+                {
+                    float kr = (float)k * Mathf.Deg2Rad;
+                    akseli = (n * Mathf.Cos(kr) + ulos.normalized * Mathf.Sin(kr)).normalized;
+                    kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(akseli, v), -1f, 1f)) * Mathf.Rad2Deg;
+                }
             }
             if (kulma < MinKulma)
             {
