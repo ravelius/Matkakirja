@@ -420,6 +420,7 @@ namespace Matkakirja.Natiivi
             // Löydös 104: maan karttanostojen data valmiiksi saapuessa (web sw.js), jotta kortti aukeaa heti.
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaNostot(kaupunki));
             EsilataaNostot(o.PelaajanKaupunki);
+            UiSisalto.LataaLehti(o.PelaajanKaupunki);
             // Esilataaja erä 2 (ESILATAUSPOLITIIKKA kohta 3): kohdekaupungin kuvat ja nostodata jo lennon/matkan aikana.
             o.SaapuminenTiedossa += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSaapuminen(kaupunki));
             // Esilataaja erä 3: kohdat 4–5 (nopan päässä / siirtokohteena näkyvä kaupunki) ja kohta 4 (joutilaana
@@ -461,6 +462,8 @@ namespace Matkakirja.Natiivi
         static void EsilataaSaapuminen(string kaupunki, Taso taso, Taso nostoTaso)
         {
             if (string.IsNullOrEmpty(kaupunki)) return;
+            // Kaupungin lehti (skeema 1.48, kaupungeittain): kansi- ja avauskuvat, johdanto ja aiheet lennon aikana.
+            UiSisalto.LataaLehti(kaupunki);
             Fokusvirrat.Lataa(() =>
             {
                 var v = Fokusvirrat.Hae(kaupunki);
