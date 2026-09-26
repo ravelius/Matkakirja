@@ -196,3 +196,14 @@ MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (
   36222088349. Seuraavaksi: kestot ffprobella → RAIDAT-taulu tools/viimeistele-musiikki.mjs:ään (tunnukset 8–10 s,
   ratkaisu 4–6, epäonnistuminen 3–4, kohtaaminen ja maanosat looppeja: ei leikkausta, vain taso) → `--vie` → linkit + 1 rivi/raita
   Fablelle omistajalle. Vaihe 3 vasta kuuntelun jälkeen.
+
+## 19. Lisäys 26.9. klo 09.0x — viimeiset tilat
+- Build 20 -junassa (Natiiviseppä): musiikki-vaihe1 (juna/b13 63984096) ja kuljettu-reitti 025f6507 (merge juna → haara,
+  ristiriita PeliOhjain.Kytke ratkaistu, juna 2ab54860). Linssiseppä on yhdistänyt e5ee31dc:n haaraansa
+  linssiseppa/elavat-hetket — ÄLÄ kirjoita historiaa uudelleen, korjaukset uusina committeina.
+- 153: käännös 7b01113b valmis (lokit/loydos153/Matkakirja3D-153.app), ennen-kuva lokit/loydos153/ennen.png EI KELPAA:
+  kartta sumennettu (kortti/pulun kupla auki) ja zoom koko Kreikka → nostomerkkejä ei näy. Korjaa kallistus-kuva.sh:
+  `ui sulje` (ui-komento.txt) ja lähennys kertoimeen ~3 (Komennot.cs, esim. zoom-komento) ennen `kallista 40`, aja ennen
+  (Matkakirja3D-f994.app) ja jälkeen (-153.app), kuvapari → merge-pyyntö Natiivisepälle (kuitannut odottavansa).
+- Musiikki vaihe 2: ajo 36222088349 käynnissä klo 09.0x (loput 9 raitaa).
+- Simulaattori A2FD9C9F sammutettu.
