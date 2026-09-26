@@ -7387,3 +7387,7 @@ Sisaltokirjuri: era 2 kaikki 6 maata — CHE mainissa #3341, PRT #3344, HUN/SWE/
 ## S10 LAMPO OK, JUNASSA 0c9b7dca; 175 NRE-KORJAUS 42f18378 (26.9.2026 klo 20.54)
 
 Natiiviseppa: iPad Pro 13, SSE 32 liikkeessa + 60 Hz katto: 9 min jaksoa thermal 0, Normaali, ei kuumaa tilaa (10. katkesi Siirtosepan iPad-vuoroon); riittaa, taydet 10 min 1.0.26-laitekaannoksella 171:n yhteydessa. S10 mergetty junaan juna/b13 0c9b7dca. 175 NRE-korjaus 42f18378 kaannetaan omaan simulaattoriin, kuvaparit sen jalkeen.
+
+## 170 GRC: TUORE ASENNUS PIIRTAA KUVAN — EPAILY PAIVITYSPOLUSSA (26.9.2026 klo 21.01)
+
+Siirtoseppa (sim b26b-c15d4487, tuore asennus): v181 730/730, Kreugerin kortti (TIME-kansi), Athoksen salaisuus ja Attikan maakuntakortti (Akropolis) piirtyvat → data ja piirto kunnossa tuoreena. Omistajan laite on vanha asennus → Siirtoseppa testaa paivityspolun (vanha paketti → delta v181 → kortti). 174b-merkit buildin mukana-kansiossa, nakyvyys vaatii loydetyt nostot (Natiivi-UI). Siirtoseppa katkaisi S10-lampojakson 2 min ennen loppua (iPad-vuoro liian aikaisin) — vuorot Natiivisepan rivilla.
