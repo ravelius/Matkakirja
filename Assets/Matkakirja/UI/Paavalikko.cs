@@ -4,6 +4,7 @@
 //            [nuotti] Musiikki      PÄÄLLÄ
 //            [kaiutin] Äänimaisema  PÄÄLLÄ
 //   KARTTA   [aalto]  Pieni liike   PÄÄLLÄ
+//            [reitti] Kuljettu reitti PÄÄLLÄ (omistaja 26.9.2026: kuljetun reitin viiva pois näkyvistä)
 //            [pallo]  Maailma       PÄÄLLÄ   (vain kehittäjätilassa; löydös 65: KOKEET-ryhmästä tänne)
 //   RETKIKUNTA (sähkelinja, UI/Sahke/SahkeNakyma rakentaa; piilossa, kunnes linjan tila selviää;
 //            web retkikuntaOsio asuu hampurilaisen palautelomakkeessa). Löydös 65 (omistaja 25.9.2026): vain omana
@@ -84,6 +85,7 @@ namespace Matkakirja.Natiivi
             Kytkinrivi(Kytkin.Aanimaisema, Ikonit.Aanimaisema);
             Otsikko("Kartta");
             Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
+            Kytkinrivi(Kytkin.KuljettuReitti, Ikonit.KuljettuReitti);
             // Maailmanappi (omistajan löydös 36, web #kehittaja-maailma-btn kehittäjävalikossa): vain kehittäjälle;
             // huntu pois koko pallolta (web: ei kermaa maailmanäkymässä). Löydös 65: KARTTA-ryhmään Pieni liike -rivin alle.
             maailma = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, Sisalto, Maapallo);

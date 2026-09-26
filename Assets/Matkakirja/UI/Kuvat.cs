@@ -153,8 +153,8 @@ namespace Matkakirja.Natiivi
             if (muisti.TryGetValue(avain, out var t) && t != null)
             {
                 VerkkoOdotus.Osuma("kuva", true);
-                jarjestys.Remove(avain);
-                jarjestys.AddFirst(avain);
+                // Kiinteä (buildin mukana) ei ole LRU-järjestyksessä eikä saa joutua sinne.
+                if (tavut.ContainsKey(avain)) { jarjestys.Remove(avain); jarjestys.AddFirst(avain); }
                 valmis?.Invoke(t);
                 return;
             }
@@ -332,6 +332,7 @@ namespace Matkakirja.Natiivi
         static IEnumerator LataaVuorossa(string avain, string[] reitit, Action<Texture2D, Action<Texture2D>> muunna)
         {
             Texture2D tulos = null;
+            bool kiintea = false;
             string levy = Valimuisti(reitit[0]);
             string mukana = Mukana.Polku(reitit[0]);
             VerkkoOdotus.Osuma("kuva", mukana != null || File.Exists(levy));
@@ -348,6 +349,7 @@ namespace Matkakirja.Natiivi
                 using var l = UnityWebRequestTexture.GetTexture("file://" + mukana, true);
                 yield return l.SendWebRequest();
                 tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
+                kiintea = tulos != null && muunna == null;
             }
             if (tulos == null && !OnWebpOsoite(reitit[0]) && File.Exists(levy))
             {
@@ -396,7 +398,7 @@ namespace Matkakirja.Natiivi
             }
             // Kysely pois lokista: kehittäjän kuratointikuvien osoitteissa on avain (?avain=).
             if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0].Split('?')[0]);
-            else Muista(avain, tulos);
+            else Muista(avain, tulos, kiintea);
             if (kesken.TryGetValue(avain, out var odottajat))
             {
                 kesken.Remove(avain);
@@ -493,6 +495,22 @@ namespace Matkakirja.Natiivi
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        /// <summary>Testikomento ui kuvat raja: LRU-raja megatavuina (karsii heti).</summary>
+        public static void AsetaRaja(long mt)
+        {
+            MuistiRaja = Math.Max(1L, mt) * 1048576;
+            while (MuistissaTavuja > MuistiRaja && jarjestys.Count > AinaMuistissa)
+            {
+                string vanha = jarjestys.Last.Value;
+                if (muisti.TryGetValue(vanha, out var vt) && vt != null) UnityEngine.Object.Destroy(vt);
+                Unohda(vanha);
+            }
+        }
+
+        /// <summary>Testikomento ui kuvat: muistin tila.</summary>
+        public static string Tila() =>
+            $"kuvat: {MuistissaTavuja / 1048576} / {MuistiRaja / 1048576} Mt, LRU {jarjestys.Count} kpl, kiinteät {muisti.Count - tavut.Count} kpl";
+
         static void AsetaMuistiRaja()
         {
             // iPad: laitemalli tai lyhyt sivu yli 4,5 tuumaa (simulaattorin deviceModel ei kerro laitetta).
@@ -511,10 +529,16 @@ namespace Matkakirja.Natiivi
             return t.mipmapCount > 1 ? koko * 4 / 3 : koko;
         }
 
-        static void Muista(string avain, Texture2D t)
+        /// <summary>
+        /// UI-pariteetti b20-ui-1 (valkoinen neliö Mont Blancilla): LRU tuhosi kartan nostomerkin kuvakkeen, jota kartta
+        /// yhä näytti, kun lehtien isot kuvat täyttivät rajan (tuhottu tekstuuri piirtyy valkoisena). Buildin mukana
+        /// tulevat pienet kuvakkeet (nostotyyppien merkit, pulu) ovat kiinteitä: muistissa koko istunnon, ei LRU:ssa.
+        /// </summary>
+        static void Muista(string avain, Texture2D t, bool kiintea = false)
         {
             if (muisti.ContainsKey(avain)) Unohda(avain);
             muisti[avain] = t;
+            if (kiintea) return;
             long n = Koko(t);
             tavut[avain] = n;
             MuistissaTavuja += n;

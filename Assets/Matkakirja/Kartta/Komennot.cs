@@ -78,6 +78,7 @@ namespace Matkakirja
     ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
     ///   symbolit tila|pois|paalle|loydetty|himmea|koko <pt>   tason 1 nostojen 3D-mallit (Symbolimallit, löydös 160)
+    ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
@@ -432,6 +433,22 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA huntu: paljastus ({plat}, {plon}) säde {pkm} km, reuna {preuna} km");
                     break;
                 }
+                case "naytto":
+                    // naytto valvo|oletus: näyttö ei lukitu mittausten aikana (löydös 161 A/B, 10 min lepojaksot)
+                    Screen.sleepTimeout = o.Length > 1 && o[1] == "valvo" ? SleepTimeout.NeverSleep : SleepTimeout.SystemSetting;
+                    Debug.Log("MATKAKIRJA naytto: sleepTimeout " + Screen.sleepTimeout);
+                    break;
+                case "pallo" when o.Length > 1 && o[1] == "kerros":
+                {
+                    // pallo kerros tila|pois|paalle|pakota taysi|kerros|auto (elävä kerros, löydös 161 B)
+                    string m = o.Length > 2 ? o[2] : "tila";
+                    if (m == "pois" || m == "paalle") ElavaKerros.Kaytossa = m == "paalle";
+                    else if (m == "pakota" && o.Length > 3)
+                        ElavaKerros.Pakota = o[3] == "taysi" ? ElavaKerros.Pakotus.Taysi : o[3] == "kerros" ? ElavaKerros.Pakotus.Kerros : ElavaKerros.Pakotus.Auto;
+                    PallonLepo.Muuttui("pallo kerros");
+                    Debug.Log("MATKAKIRJA pallo kerros " + m + ": " + ElavaKerros.Kuvaus());
+                    break;
+                }
                 case "pallo" when o.Length > 1 && o[1] == "lepo":
                     // Lämpöerä: pallon lepotila ja syy (PallonLepo.Kuvaus); ei herätä palloa (ks. loppu).
                     Debug.Log(PallonLepo.Kuvaus());
@@ -702,6 +719,22 @@ namespace Matkakirja
                     Debug.Log("MATKAKIRJA symbolit " + m + ": " + Symbolimallit.Tila());
                     break;
                 }
+                case "lipputanko":
+                {
+                    // lipputanko tila | pois | koe [lat lon] | koko <pt> (löydös 161)
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "pois") Lipputanko.Pois();
+                    else if (m == "jatkuva" || m == "syke") Lipputanko.AsetaJatkuva(m == "jatkuva");
+                    else if (m == "koko" && o.Length > 2) Lipputanko.KorkeusPt = float.Parse(o[2], CultureInfo.InvariantCulture);
+                    else if (m == "koe")
+                    {
+                        double la = o.Length > 3 ? double.Parse(o[2], CultureInfo.InvariantCulture) : 37.98;
+                        double lo = o.Length > 3 ? double.Parse(o[3], CultureInfo.InvariantCulture) : 23.73;
+                        Lipputanko.Aseta("GRC", la, lo, Lipputanko.Koelippu());
+                    }
+                    Debug.Log("MATKAKIRJA lipputanko " + m + ": " + Lipputanko.Tila());
+                    break;
+                }
                 case "taivas" when o.Length > 2 && o[1] == "kartta":
                 {
                     // taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari] (löydös 154)
@@ -969,6 +1002,13 @@ namespace Matkakirja
                         MaaKartta.ValinnanPeitto = double.Parse(o[2], CultureInfo.InvariantCulture);
                         MaaKartta.PaivitaKaikki();
                         Debug.Log($"MATKAKIRJA maakunnat: valinnan peitto {MaaKartta.ValinnanPeitto:0.00}");
+                        break;
+                    }
+                    if (o[1] == "maski" && o.Length > 2)
+                    {
+                        // maakunta maski pois|paalle: rantaviivan maski (löydös 157) vertailuun
+                        mk.MaskiNakyy(o[2] == "paalle");
+                        Debug.Log($"MATKAKIRJA maakunnat: maamaski {(Maamaski.Paalla ? "päällä" : "pois")}");
                         break;
                     }
                     if (o[1] == "maa")
