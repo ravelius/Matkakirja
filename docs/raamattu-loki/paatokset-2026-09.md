@@ -7411,3 +7411,7 @@ Kortti 21.2x: 175 (kynnys 2,5 + kallistus ≥ 25°, mallit 22–40 pt, pergament
 ## OMISTAJAN TILAUS: PAREMPI STRIIMAAVA PUHEAANI (VERTAILUERA) (26.9.2026 klo 21.09)
 
 Omistaja 21.1x: etsii parempaa striimiaanta kuin nykyinen (gpt-4o-mini-tts striimissa, eleven_v3 esigeneroituna); pelaajan pitaisi kuulla tietoja pelin aikana lukemisen sijaan; kysyi Grokista. Fable: Pelikoodari tekee vertailueran suomeksi (ElevenLabs Flash/v3 striimaus, OpenAI Realtime, xAI Grok Voice API jos TTS+suomi, Google Chirp 3 HD, Azure Neural fi-FI, Cartesia): ensimmainen tavu, luontevuus, hinta, valimuisti → mp3-linkit + taulukko → omistajan kortti.
+
+## 175 JATKO: MALLIT LUETTAVIKSI MYOS YLHAALTA, VAALEINA (26.9.2026 klo 21.10)
+
+Omistaja 21.3x: paras ratkaisu olisi 3D-mallit jarkevina myos ylhaalta; toivoo vaaleita malleja; puhelimella kuvaparit liian pienia. Fable: 1.0.26 lahtee 2D-ylhaalta-saannolla; 1.0.27:aan kokeilu 3 arkkityypilla (linna, kirkko, majakka): katot lajin mukaan tunnistettaviksi, tumma aariviiva + maavarjo, mallin oma 15° kallistus pystykamerassa, vaalea pergamenttipaletti (nykyiset seinat viela harmahtavat) — Natiiviseppa + Linssiseppa, kuvat isoina rajattuina. Saanto omistajan kuviin: malli ≥ 300 px rajattuna, ei pienia kuvapareja.
