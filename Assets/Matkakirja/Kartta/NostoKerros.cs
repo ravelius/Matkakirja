@@ -89,6 +89,34 @@ namespace Matkakirja
             public Vector2 Ruutu;
             /// <summary>Etäisyys ruudun keskeltä pikseleinä (järjestys).</summary>
             public float Keskelta;
+            /// <summary>
+            /// ELÄVÄ KARTTA, KOHTA 2 (build 20): kokoluokka <see cref="MusteLuokka"/> (0 pääkohde, 1 kohde, 2 pieni) ja löydetty.
+            /// <see cref="Muste"/>-delegaatista joka päivityksessä; ilman sitä kohde ja löydetty (nykyinen ulkoasu).
+            /// </summary>
+            public int Luokka = MusteLuokka.Kohde;
+            public bool Loydetty = true;
+        }
+
+        /// <summary>Elävän kartan kokoluokat (Pelikoodarin Kokoluokka-järjestys, karttavalot.kokoluokka / taso 1–3).</summary>
+        public static class MusteLuokka
+        {
+            public const int Paakohde = 0, Kohde = 1, Pieni = 2;
+        }
+
+        /// <summary>
+        /// ELÄVÄ KARTTA, KOHTA 2 (Linssisepän ja Natiivi-UI:n työnjako 26.9.): noston muste valo-id:llä (Nosto.Id) →
+        /// (luokka, löydetty, näkyy) tai null (ei tietoa: nykyinen ulkoasu). Asettaa Assembly-CSharp PeliOhjain.NostonMuste-
+        /// tiedosta; näkyy = false (maakunnan salaisuus, jota ei vielä piirretä) jättää noston pois Naytettavat-listasta.
+        /// Muutoksen jälkeen (MusteValmis, NostoLoytyi) <see cref="PaivitaMuste"/>. UI (NostotKartalla) lukee Luokka- ja
+        /// Loydetty-kentät: koko ja peitto luokan mukaan, löytämätön himmeänä ilman nimeä.
+        /// </summary>
+        public static Func<string, (int luokka, bool loydetty, bool nakyy)?> Muste;
+
+        /// <summary>Muste muuttui: näytettävät lasketaan seuraavassa kehyksessä uudelleen (Paivittyi herää).</summary>
+        public static void PaivitaMuste()
+        {
+            if (Instanssi != null) Instanssi.muuttui = true;
+            PallonLepo.Muuttui("nostot: muste");
         }
 
         /// <summary>Pakotettu maa (ISO3) tai null = pelaajan kaupungin maa (nappulan lähin kaupunki).</summary>
@@ -209,7 +237,7 @@ namespace Matkakirja
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaSaapuminen() => saapumisPiilo = false;
+        static void NollaaSaapuminen() { saapumisPiilo = false; Muste = null; }
         void OnDisable() => PallonLepo.Poista(Syttyy);
         bool Syttyy() => (Nakyvissa && Syttyminen < 1f && !saapumisPiilo) || saapumisKerroin != (saapumisPiilo ? 0f : 1f);
         void Start()
@@ -486,19 +514,30 @@ namespace Matkakirja
                 // Kohdemaassa lahizoom-lippu ei piilota (web KATTO EI KOSKE KOHDEMAATA); kaupungin sisäiset ja
                 // nimikerroksen meret eivät ole kartalla, taso 3 odottaa lähizoomia (NostoSaannot.Portti).
                 if (NostoSaannot.Portti(s.DatanSyy, s.Taso, lahi) != NostoSaannot.Syy.Nakyy) continue;
+                if (!LueMuste(s)) continue;
                 LisaaRuudulta(s, keski);
             }
             // LÖYDÖS 125: eläintäyt koko laudalta (web nostot.js keraa "Eläintäyt: koko laudalla", elaintakyLaudalla):
             // naapurimaidenkin täyt, ilman kaupunki- ja meriportteja (webin silmukka lisää ne suoraan), taso 3 lähellä.
             if (elaimetNakyvat)
                 foreach (var s in elaintayt)
-                    if (s.Taso != 3 || lahi) LisaaRuudulta(s, keski);
+                    if ((s.Taso != 3 || lahi) && LueMuste(s)) LisaaRuudulta(s, keski);
             if (naytettavat.Count > katto)
             {
                 naytettavat.Sort((a, b) => a.Keskelta.CompareTo(b.Keskelta));
                 naytettavat.RemoveRange(katto, naytettavat.Count - katto);
             }
             muuttui = true;
+        }
+
+        /// <summary>Elävän kartan muste nostoon (<see cref="Muste"/>); false = ei vielä näy (salaisuus).</summary>
+        static bool LueMuste(Nosto s)
+        {
+            (int luokka, bool loydetty, bool nakyy)? m = null;
+            if (Muste != null) try { m = Muste(s.Id); } catch (Exception) { m = null; }
+            s.Luokka = m?.luokka ?? MusteLuokka.Kohde;
+            s.Loydetty = m?.loydetty ?? true;
+            return m?.nakyy ?? true;
         }
 
         /// <summary>Nosto näytettäviin, jos sen piste on ruudulla ja kameran edessä.</summary>
