@@ -10,5 +10,5 @@ SITOVA: WEB ON MALLI, MITATTUNA (omistajan löydökset voittavat webin). Omistaj
 video vain liikkeelle. Levossa ei piirtoa (ui rauha -mittaus). Käännä proto-kaanna.sh:lla. Erät pieninä.
 
 Fablen erä 14.4x tehty (luovutus t): valikkonapit merge-pyynnössä Natiivisepällä, reseptirivi Laitetestaajan haarassa,
-lipputanko todennettu paketin ankkureilla. Odota omistajan 1.0.21-löydöksiä ja Fablen seuraavaa erää.
+lipputanko todennettu paketin ankkureilla. Löydös 164 (nimiot-kalusteet) merge-pyynnössä. Odota omistajan 1.0.21-löydöksiä ja Fablen seuraavaa erää.
 Viestit Fablelle vain valmiista erästä, jumista tai kysymyksestä, enintään 8 riviä.

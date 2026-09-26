@@ -24,3 +24,10 @@ Jatkaa luovutusta (s) (lue se ensin: simulaattorit, session id:t, opit). Tämä 
 ## Käännössääntö 26.–27.9. (Fable Natiivisepän kautta, Karttasepän poltto)
 Enintään yksi Xcode/Unity-käännös kerrallaan, vain kun on todennettavaa (ei koekäännöksiä), ja ilmoita Karttasepälle rivillä
 ennen jokaista käännöstä. Junavahti on tauolla (/tmp/matkakirja-juna-tauko), joten Natiiviseppä kääntää junat käsin.
+
+## Löydös 164 (omistaja 15.3x, 1.0.21 Alankomaat) — merge-pyynnössä
+`natiivi-ui/nimiot-kalusteet` f3500eb5 (juna/b13 01a274bb päällä): kaupunki- ja aluenimiöt väistävät ruudun kalusteita
+(kartussi, Liiku, pulu, yläpalkki; web LIUSKAN_KALUSTEET). KaupunkiMerkit.Kalusteet-koukku (Kartta) varaa laatikot
+nostoikonien jälkeen, NostoIkoneita sisältää ne; UiNakymat.KartanKalusteet muuntaa paneelin laatikot ruudulle (+4 pt).
+Käännetty 7994e1df, todennettu iPhone 17:ssä (Brussel otsikon kohdalla: nimiö väistyy, piste jää). Kuvapari
+`proto-3d/lokit/natiivi-ui-loydos164/kuvapari-164-ennen-jalkeen.png`. Merge-pyyntö Natiivisepälle 15.36 (build 22).
