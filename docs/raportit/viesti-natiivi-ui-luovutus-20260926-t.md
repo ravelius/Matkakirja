@@ -40,3 +40,10 @@ Korjaus `natiivi-ui/maakunta-korostus` de3fed4c (juna/b13 45398ff8): Maakunnat.N
 korostaa vain näkyvissä ja palauttaa oletustilan (koskee Natiivisepän tiedostoa). Käännetty 3d972a0f, todennettu.
 Kuvat `proto-3d/lokit/natiivi-ui-loydos165/` (kuvasarja-165.png, kuvasarja-165-korjaus.png). Merge-pyyntö 15.53.
 Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testitila).
+
+## Tila klo 16.0x
+- 164 (nimiot-kalusteet) MERGETTY junaan 0b7d021b (build 22).
+- 164 jatko `natiivi-ui/pisteet-kalusteet` 46600ce7: kalusteen alle jäävä kaupunkipiste + nimi piiloon (Fablen pyyntö; web ei
+  piilota). Kuvapari `proto-3d/lokit/natiivi-ui-loydos164/kuvapari-164-jatko-piste.png`. Merge-pyyntö 1.0.23.
+- 165 `natiivi-ui/maakunta-korostus` de3fed4c: Fable hyväksyi, 1.0.23 (build 22 leikattiin ennen). Merge-pyyntö.
+- valikkonapit 79adce1b: build 22 -junaan Natiivisepän mukaan (tarkista junasta).
