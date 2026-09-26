@@ -37,11 +37,9 @@ Ei avoimia web-PR:iä. Omat worktreet on poistettu.
 
 ## Kesken — tee nämä ensin
 
-0. **KIIREELLINEN natiivin merge-pyyntö Natiivisepällä:** proto-haara `siirtoseppa/siivous-korjaus` 13e5bcf4
-   (juna/b13 d706da81:n päällä). PakettiPaatokset.Sailytettavat poisti juuri valmistuneen seuraavan version, jolloin
-   laite jäi pysyvästi vanhaan (Natiivi-UI:n löydös). Todennettu simulaattorissa, loki
-   proto-3d/lokit/siirtoseppa-siivous-korjaus-20260926.txt. Varmista, että se on build 19 -junassa.
-   Tilannekuva (8603b496, Natiivisepän buildivaihe 03860cc4) on jo junassa.
+0. Siivouskorjaus 13e5bcf4 on build 19 -junassa (juna/b13 e5ed36bd). **TF 1.0.18 -laitteet jäävät ensimmäiseen valmiiseen
+   versioonsa**, kunnes build 19 asennetaan (paketti-paivitys on build 18:ssa ilman korjausta). Palvelimelta ei voi auttaa.
+   Seuraa build 19:n laitetestiä: lokissa "käytössä vN" pitää vaihtua toisella käynnistyksellä.
 
 1. Pinon mergejen jälkeen: tuotannon ämpäritarkistus (`amparitarkistus.mjs --url …/sisalto/1/v<N>/`), sitten versio
    Natiivisepälle, Natiivi-UI:lle ja Pelikoodarille sekä rivi Fablelle.
