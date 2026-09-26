@@ -95,3 +95,6 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
   aluenimet, ui-tekstit, maamaa.geojson 913 kt) ja bmng-bathy Z5 (9 laattaa puuttuu laattapaketista). Ehdotettu jako Fablelle:
   Natiiviseppä 1–3 tilannekuvana buildiin + 4 Karttasepän kanssa; Pelikoodari yhteinen haku (kaupungit.json 4× rinnakkain) ja
   uusin.json taustalle (estää 1,3–1,4 s, kohta 2). Tarkista efektiäänten (Aanet) latausreitti.
+- Build 19 -merge-pyynnöt (junaan heti build 18 -master-mergen jälkeen, koemergellä): natiivi-ui/im2-ohjaus d56afbd5 (II:n soitin
+  Linssisepän Ohjaus-rajapinnalla; todennettu 911791cc, kuvat lokit/natiivi-ui-b19-ohjaus/), natiiviseppa/lepo-suspend 651ad27b
+  (A/B ensin).
