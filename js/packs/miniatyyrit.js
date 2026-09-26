@@ -982,15 +982,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Canal Grande': 'venetsia-canal-grande',
-    'La Fenicen oopperatalo': 'venetsia-la-fenicen-oopperatalo',
-    'Rialton silta': 'venetsia-rialton-silta',
-    'Pyhän Markuksen tori': 'venetsia-pyhan-markuksen-tori',
-    'San Giorgio Maggiore': 'venetsia-san-giorgio-maggiore',
-    Arsenaali: 'venetsia-arsenaali',
-    'Markuksen hevoset': 'venetsia-markuksen-hevoset',
-    'Dogen palatsi': 'venetsia-dogen-palatsi',
-    'Aldon paino': 'venetsia-aldon-paino',
+    'Canal Grande': 'venetsia-canal-grande-vari2',
+    'La Fenicen oopperatalo': 'venetsia-la-fenicen-oopperatalo-vari2',
+    'Rialton silta': 'venetsia-rialton-silta-vari2',
+    'Pyhän Markuksen tori': 'venetsia-pyhan-markuksen-tori-vari2',
+    'San Giorgio Maggiore': 'venetsia-san-giorgio-maggiore-vari2',
+    Arsenaali: 'venetsia-arsenaali-vari2',
+    'Markuksen hevoset': 'venetsia-markuksen-hevoset-vari2',
+    'Dogen palatsi': 'venetsia-dogen-palatsi-vari2',
+    'Aldon paino': 'venetsia-aldon-paino-vari2',
   },
   odessa: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1214,15 +1214,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Pokrovskin puisto': 'vladivostok-pokrovskin-puisto',
-    Linnoitusmuseo: 'vladivostok-linnoitusmuseo',
-    'Kotkanpesän kukkula': 'vladivostok-kotkanpesan-kukkula',
-    Funikulaari: 'vladivostok-funikulaari',
-    'Arsenjevin museo': 'vladivostok-arsenjevin-museo',
-    'GUM-tavaratalo': 'vladivostok-gum-tavaratalo',
-    'Sukellusvene S-56': 'vladivostok-sukellusvene-s-56',
-    Rautatieasema: 'vladivostok-rautatieasema',
-    'Kultaisen sarven silta': 'vladivostok-kultaisen-sarven-silta',
+    'Pokrovskin puisto': 'vladivostok-pokrovskin-puisto-vari2',
+    Linnoitusmuseo: 'vladivostok-linnoitusmuseo-vari2',
+    'Kotkanpesän kukkula': 'vladivostok-kotkanpesan-kukkula-vari2',
+    Funikulaari: 'vladivostok-funikulaari-vari2',
+    'Arsenjevin museo': 'vladivostok-arsenjevin-museo-vari2',
+    'GUM-tavaratalo': 'vladivostok-gum-tavaratalo-vari2',
+    'Sukellusvene S-56': 'vladivostok-sukellusvene-s-56-vari2',
+    Rautatieasema: 'vladivostok-rautatieasema-vari2',
+    'Kultaisen sarven silta': 'vladivostok-kultaisen-sarven-silta-vari2',
   },
   jekaterinburg: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1306,15 +1306,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Xi’anin rautatieasema': 'xian-xi-anin-rautatieasema',
-    'Anyuan-portti': 'xian-anyuan-portti',
-    'Suuri moskeija': 'xian-suuri-moskeija',
-    Rumpitorni: 'xian-rumpitorni',
-    Kellotorni: 'xian-kellotorni',
-    'Steelametsä': 'xian-steelametsa',
-    'Yongning-portti': 'xian-yongning-portti',
-    'Shaanxin historiallinen museo': 'xian-shaanxin-historiallinen-museo',
-    'Suuri villihanhipagoda': 'xian-suuri-villihanhipagoda',
+    'Xi’anin rautatieasema': 'xian-xi-anin-rautatieasema-vari2',
+    'Anyuan-portti': 'xian-anyuan-portti-vari2',
+    'Suuri moskeija': 'xian-suuri-moskeija-vari2',
+    Rumpitorni: 'xian-rumpitorni-vari2',
+    Kellotorni: 'xian-kellotorni-vari2',
+    'Steelametsä': 'xian-steelametsa-vari2',
+    'Yongning-portti': 'xian-yongning-portti-vari2',
+    'Shaanxin historiallinen museo': 'xian-shaanxin-historiallinen-museo-vari2',
+    'Suuri villihanhipagoda': 'xian-suuri-villihanhipagoda-vari2',
   },
   varanasi: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1398,15 +1398,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Chaukhtatgyin temppeli': 'yangon-chaukhtatgyin-temppeli',
-    'Shwedagon-pagodi': 'yangon-shwedagon-pagodi',
-    'Kandawgyi-järvi ja Karaweik': 'yangon-kandawgyi-jarvi-ja-karaweik',
-    'Yangonin keskusasema': 'yangon-yangonin-keskusasema',
-    'Bogyoken markkinat': 'yangon-bogyoken-markkinat',
-    'Sihteeristö': 'yangon-sihteeristo',
-    'Sule-pagodi': 'yangon-sule-pagodi',
-    'Strand-hotelli': 'yangon-strand-hotelli',
-    'Botataung-pagodi': 'yangon-botataung-pagodi',
+    'Chaukhtatgyin temppeli': 'yangon-chaukhtatgyin-temppeli-vari2',
+    'Shwedagon-pagodi': 'yangon-shwedagon-pagodi-vari2',
+    'Kandawgyi-järvi ja Karaweik': 'yangon-kandawgyi-jarvi-ja-karaweik-vari2',
+    'Yangonin keskusasema': 'yangon-yangonin-keskusasema-vari2',
+    'Bogyoken markkinat': 'yangon-bogyoken-markkinat-vari2',
+    'Sihteeristö': 'yangon-sihteeristo-vari2',
+    'Sule-pagodi': 'yangon-sule-pagodi-vari2',
+    'Strand-hotelli': 'yangon-strand-hotelli-vari2',
+    'Botataung-pagodi': 'yangon-botataung-pagodi-vari2',
   },
   mandalay: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
