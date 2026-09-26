@@ -639,6 +639,8 @@ namespace Matkakirja.Natiivi
         /// ylärajana ylimmän kolmanneksen kalusteet (yläpalkki, matkakirjakortti) + 18 px, alarajana alimman kolmanneksen
         /// kalusteet (pulu, Liiku) − 18 px (LIUSKAN_YLAVARA_PX, YLAKALUSTEEN_RAJA 1/3). Jos kaista on listaa korkeampi,
         /// merkki saa jäädä ruudun keskelle kaistan sisällä. Palauttaa ruudun pikselit (origo vasen ala).
+        /// Löydös 146: iPhonella (liuska merkin yläpuolella) merkki vaakasuunnassa keskelle ja liuskan korkeuden verran
+        /// yläkalusteiden alle; iPadilla kuten yllä.
         /// </summary>
         Vector2 LiuskanRuutupiste(string kaupunki)
         {
@@ -646,8 +648,8 @@ namespace Matkakirja.Natiivi
             float w = juuri.layout.width, h = juuri.layout.height;
             if (float.IsNaN(w) || w <= 0 || h <= 0) return new Vector2(Screen.width / 4f, Screen.height / 2f);
             const float Vara = 18f, Raja = 1f / 3f;
-            // Listan korkeus: kaupunki, Nähtävyydet, Turistiopas, Liiku ja noin neljä kategoriaa (.mk-liuska__rivi 18,85).
-            float tarve = 8 * 18.85f;
+            // Löydös 146: liuskan korkeus herokuvan ja noin seitsemän rivin kanssa (ennen 8 × 18,85 pelkille riveille).
+            float tarve = KaupunkiKortti.ArvioituKorkeus(w);
             float r0 = Kerros.Reunat(UiKerros.Valikot).y;
             var ylat = new System.Collections.Generic.List<Rect> { new Rect(0, 0, w, r0 + Ylapalkki.Varaus) };
             if (Matkakirja != null && Matkakirja.Nakyy) ylat.Add(Matkakirja.Laatikko);
@@ -655,6 +657,15 @@ namespace Matkakirja.Natiivi
             float ylaRaja = Vara, alaRaja = h - Vara;
             foreach (var k in ylat) if (k.height > 0 && k.yMin < h * Raja) ylaRaja = Mathf.Max(ylaRaja, k.yMax + Vara);
             foreach (var k in alat) if (k.height > 0 && k.yMax > h * (1f - Raja)) alaRaja = Mathf.Min(alaRaja, k.yMin - Vara);
+            if (!UiKerros.Tabletti)
+            {
+                // Löydös 146: iPhonella liuska on kaupungin yläpuolella keskitettynä (enintään 45 % ruudusta, rako 16),
+                // joten merkki vaakasuunnassa keskelle ja pystyssä niin alas, että liuska mahtuu sen ylle (mallissa
+                // Ateena 50 % / 55 %). Ei mahdu → liuska menee merkin alle (KaupunkiKortti.Asemoi).
+                float ylle = Mathf.Min(tarve, h * 0.45f) + 16f;
+                float yp = Mathf.Min(Mathf.Max(h / 2f, ylaRaja + ylle), Mathf.Max(ylaRaja, alaRaja));
+                return new Vector2(Screen.width * 0.5f, Screen.height * (1f - yp / h));
+            }
             float puolikas = tarve / 2f;
             float y = alaRaja - ylaRaja >= tarve
                 ? Mathf.Min(Mathf.Max(h / 2f, ylaRaja + puolikas), alaRaja - puolikas)
