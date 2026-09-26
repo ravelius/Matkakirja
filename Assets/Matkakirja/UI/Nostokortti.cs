@@ -290,6 +290,8 @@ namespace Matkakirja.Natiivi
         /// (esim. Lyon aukesi 544 pt:n ankkuroituna ja kuvaton kohde 384 pt:n) ja skandaali (vain tyyli eri, koko sama).
         /// Leveys ei riipu vaiheesta, joten kuva ei muuta kokoaan LISÄÄ-napautuksessa (löydös 131).
         /// </summary>
+        const float LeveysKatto = 620f;
+
         void Mitoita()
         {
             var pohja = kerros.panel?.visualTree.layout ?? default;
@@ -302,7 +304,9 @@ namespace Matkakirja.Natiivi
                 return;
             }
             kuvaKatto = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
-            float leveys = Mathf.Round(Mathf.Min(kuvaKatto * 1.5f + KortinVara, rl - 2f * Sivuvara));
+            // Fable 26.9. (UI-pariteetti iPad 13): 130/135:n kuvan korkeudesta laskettu leveys enintään LeveysKatto (webin
+            // ~34 rem vastine); omistajan löydös koski puhelimen pystykuvaa, ei koko iPadin ruutua. Pystypuhelimella ei vaikuta.
+            float leveys = Mathf.Round(Mathf.Min(Mathf.Min(kuvaKatto * 1.5f + KortinVara, rl - 2f * Sivuvara), LeveysKatto));
             if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
         }
 
