@@ -7379,3 +7379,7 @@ Laitetestaaja: esikierros keskeytyi — NullReferenceException Symbolimallit.Lat
 ## MAAKUNTAPIKKUKUVAT: 10 MAASSA, 21 EUROOPAN MAATA ILMAN (26.9.2026 klo 20.49)
 
 Siirtoseppa v181: pikkukuvat BEL DNK EST FIN GRC LTU LVA NLD SVK SVN (113 aluetta); AUT DEU ESP FRA GBR ITA POL kortin kuva[0] varana; kokonaan ilman ALB BGR BIH BLR CHE CZE HRV HUN IRL ISL LUX MDA MKD MLT MNE NOR PRT ROU SRB SWE UKR (~400 aluetta). GRC 14/14 osoitetta 200 → laitteen puute piirrossa/paketissa (Natiivi-UI tutkii, Siirtoseppa laitekierros). Fable: maakunta-era 2 sisaltaa pikkukuvan jokaiselle maakunnalle, erat 3–5 lopuille 15 maalle reitin jarjestyksessa.
+
+## MAAKUNTA-ERA 2 VALMIS; PIKKUKUVAT ENNEN ASTRONAUTIN ERIA 2-4 (26.9.2026 klo 20.49)
+
+Sisaltokirjuri: era 2 kaikki 6 maata — CHE mainissa #3341, PRT #3344, HUN/SWE/NOR/IRL #3346 (92 aluetta, aiheet tarkistettu). Fable: jarjestys muutettu — maakuntien pikkukuvat ensin: era A CHE/PRT/HUN/SWE/NOR/IRL (138 aluetta), era B loput 15 Euroopan maata reitin jarjestyksessa; astronautin erat 2–4 sen jalkeen.
