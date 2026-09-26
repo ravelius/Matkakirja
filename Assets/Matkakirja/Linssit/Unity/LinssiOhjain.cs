@@ -236,29 +236,52 @@ namespace Matkakirja.Natiivi
                 if (fontti == null) yield return new WaitForSecondsRealtime(0.5f);
             }
             if (fontti == null) { Kirjaa("fonttilämmitys: kartan fonttia ei löytynyt"); yield break; }
-            // Ajo 4 (24.9.): pelkkä lyhyt teksti ei riittänyt, koska kustannus syntyy jokaisesta UUDESTA merkistä
-            // dynaamiseen atlakseen (glyfin rasterointi + OpenType-tietueet). Siksi koko nimien merkistö
-            // lisätään ennalta (TryAddCharacters) ja jäsennetään kerran näkyvällä, ruudun ulkopuolisella tekstillä.
-            float t1 = Time.realtimeSinceStartup;
-            // Kuusi merkkiä kehyksessä: käynnistyksen aikana ei saa syntyä yhtä pitkää kehystä.
+            // Natiiviseppä 26.9. (aloitusverho-katto): lämmitys varasi pääsäikeen verhon aikana, jolloin Cesium ei edennyt ja
+            // ensimmäinen käynnistys osui verhon 8 s:n kattoon. Nyt se alkaa vasta verhon jälkeen, ja kehyksessä tehdään
+            // enintään LammitysMs työtä (vähintään yksi merkki, jotta työ etenee).
+            float odotusAlku = Time.realtimeSinceStartup;
+            while (Aloitusverho.Nakyvissa && Time.realtimeSinceStartup - odotusAlku < 60f) yield return null;
+            float t1 = Time.realtimeSinceStartup, pisin = 0;
+            int kehyksia = 0;
+            // Ajo 4 (24.9.): kustannus syntyy jokaisesta UUDESTA merkistä dynaamiseen atlakseen (glyfin rasterointi +
+            // OpenType-tietueet), joten koko nimien merkistö lisätään ennalta (TryAddCharacters) merkki kerrallaan.
             var puuttuu = new System.Text.StringBuilder();
-            for (int i = 0; i < Merkisto.Length; i += 6)
+            int i = 0;
+            while (i < Merkisto.Length)
             {
-                if (!fontti.TryAddCharacters(Merkisto.Substring(i, Math.Min(6, Merkisto.Length - i)), out string p)) puuttuu.Append(p);
+                float alku = Time.realtimeSinceStartup;
+                do
+                {
+                    if (!fontti.TryAddCharacters(Merkisto.Substring(i, 1), out string p)) puuttuu.Append(p);
+                    i++;
+                } while (i < Merkisto.Length && (Time.realtimeSinceStartup - alku) * 1000f < LammitysMs);
+                pisin = Mathf.Max(pisin, (Time.realtimeSinceStartup - alku) * 1000f);
+                kehyksia++;
                 yield return null;
             }
-            string puuttuvat = puuttuu.ToString();
+            // Jäsennys (OpenType-tietueet) paloina näkymättömällä tekstillä ruudun ulkopuolella, 16 merkkiä kehyksessä.
             var go = new GameObject("Fonttilämmitys");
             go.transform.position = new Vector3(0, -1e7f, 0);
             var t0 = go.AddComponent<TMPro.TextMeshPro>();
             t0.font = fontti;
-            t0.text = Merkisto;
-            t0.ForceMeshUpdate(true, true);
-            yield return null;
+            for (int k = 0; k < Merkisto.Length; k += 16)
+            {
+                float alku = Time.realtimeSinceStartup;
+                t0.text = Merkisto.Substring(k, Math.Min(16, Merkisto.Length - k));
+                t0.ForceMeshUpdate(true, true);
+                pisin = Mathf.Max(pisin, (Time.realtimeSinceStartup - alku) * 1000f);
+                kehyksia++;
+                yield return null;
+            }
             Destroy(go);
-            Kirjaa($"fonttilämmitys: {Merkisto.Length} merkkiä, {(Time.realtimeSinceStartup - t1) * 1000:F0} ms" +
+            string puuttuvat = puuttuu.ToString();
+            Kirjaa($"fonttilämmitys: {Merkisto.Length} merkkiä verhon jälkeen (odotus {(t1 - odotusAlku) * 1000:F0} ms), " +
+                $"{(Time.realtimeSinceStartup - t1) * 1000:F0} ms {kehyksia} kehyksessä, pisin työ {pisin:F1} ms" +
                 (string.IsNullOrEmpty(puuttuvat) ? "" : $", fontista puuttuu {puuttuvat.Length}"));
         }
+
+        /// <summary>Fonttilämmityksen työ kehyksessä enintään (ms), Natiivisepän pyyntö 26.9.</summary>
+        public const float LammitysMs = 4f;
 
         /// <summary>Astronautin kamera rekisteriin, kun sen aineisto on ladattu paketista.</summary>
         /// <summary>Linssien aineiston katto (s käynnistyksestä), jos peli ei joudu joutilaaksi kartalla sitä ennen.</summary>
