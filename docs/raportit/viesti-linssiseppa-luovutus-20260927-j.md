@@ -5,6 +5,16 @@
 Natiivi-UI local_44392b3c-86ee-4873-9d76-82f9aaa6b832, Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab.
 SendMessage-raja (10/vuoro) täyttyy → varakanava mcp__ccd_session_mgmt__send_message session id:llä.*
 
+## TULOS 02.15 (käännös c931ac98 = juna/b13 + kategoriat3d-b + merikoristeet v3; kuvat mallinseppa-laite-20260927-c/)
+
+- Koosteet mallinseppa-toimitus-20260927/: kategoriat-lahi-1..4.png (kaari A/B Thermopylai ja Sounion, vuori A/B Olympos,
+  vuori B Parnassos ja Taygetos) ja meri-v3.png. Rivi Fablelle lähetetty 02.1x.
+- Vuori NÄKYY nyt (Natiivisepän maastokorjaus toimii) mutta tason 2 symbolit ovat pieniä (~20 pt): omistajalle "ISONA" vaatii
+  tiukemman rajauksen symbolin ympäriltä (esim. 200 px → ×3) tai isomman arviointikoon. A/B-ero (kärkiväri vs seepiaramppi)
+  ei erotu tässä rajauksessa → tee tiukat rajaukset ennen A/B-valintaa.
+- Meri v3: pelikoossa laiva (39 pt) ja valas (50 pt) erottuvat, valaan pyrstö näkyy; koosteen ×2-rajaukset osuivat ohi
+  (koko 2 siirtää paikkoja) → rajaa uudelleen ennen omistajalle.
+
 ## REBASE 01.4x (Natiiviseppä: natiiviseppa/kategoriamallit ddd9b867 = juna 52ea3d10 + liioiteltu perspektiivi + maastokorjaus)
 
 Uudet kärjet: mallinseppa/pohja **2b8f6dcd**, mallinseppa/kategoriat3d **cc235dd5**, mallinseppa/kategoriat3d-b **5a51c3e1**,
