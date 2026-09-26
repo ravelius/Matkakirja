@@ -22,7 +22,7 @@ import {
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { HENKILOLINKIT, HENKILOT } from './packs/henkilot.js';
 import {
-  KAUPUNKIKARTAT, karttaKuvasuhde, karttapiste, mittakaava, ydinAla,
+  KAUPUNKIKARTAT, KEVYET_KOHDETYYPIT, kaupunginTarinakohteet, kaupunkikartanKohteet, kohteenTyyppi, karttaKuvasuhde, karttapiste, mittakaava, ydinAla,
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
@@ -236,13 +236,35 @@ export function kaupunkikartanSiirretyt(ui, cityId) {
   return laskeKaupunkikartanSiirretyt(ui, cityId, kartta);
 }
 
+/**
+ * TARINAKOHTEET KAUPUNGIN NOSTOIHIN (löydös 178, omistaja 26.9.2026 klo 22.4x):
+ * kartalta poistettu ei-paikka, joka kantaa karttanoston, on kaupunkiliuskan
+ * rivi kuten piirroksettomat kohteet — tunnus on noston oma, joten aihe
+ * (hetket, skandaalit …) tulee noston datasta. Numeroa ei ole: kohde ei ole
+ * kartan järjestyksessä (nuoliselaus kulkee vain kartan kohteissa).
+ */
+function lisaaTarinakohteet(ui, cityId, kartta, ulos) {
+  for (const raaka of kaupunginTarinakohteet(kartta)) {
+    const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
+    const kuvahaku = raaka.wiki ?? raaka.nimi;
+    const k = juttu ? { ...raaka, wiki: undefined, ...juttu, kuvahaku } : { ...raaka, kuvahaku };
+    const avaa = k.teksti
+      ? () => avaaNahtavyys(ui, k, null)
+      : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+    if (!avaa) continue;
+    const tunnus = Array.isArray(raaka.nosto) ? raaka.nosto[0] : raaka.nosto;
+    ulos.push({ avain: `kartta:${cityId}:nosto:${tunnus}`, id: tunnus, nimi: raaka.nimi, avaa });
+  }
+}
+
 /** Varsinainen ladonta (ks. muisti yllä). */
 function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
   const ulos = [];
+  lisaaTarinakohteet(ui, cityId, kartta, ulos);
   // Numeroympyrälliset kartat (Bryssel, Ljubljana) pitävät piirroksettomat
-  // kohteet kartalla, joten liuskaan ei siirry mitään (ks. piirraKaupunkiKartta).
+  // kohteet kartalla, joten liuskaan ei siirry niistä mitään (ks. piirraKaupunkiKartta).
   if (kartta.numeroympyrat) return ulos;
-  (kartta.kohteet ?? []).forEach((raaka, i) => {
+  kaupunkikartanKohteet(kartta).forEach((raaka, i) => {
     if (MINIATYYRIT[cityId]?.[raaka.nimi]) return;
     const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
     const kuvahaku = raaka.wiki ?? raaka.nimi;
@@ -500,7 +522,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
   // Montako kohdetta sai Matkakirjan ihmeen tähden? Selite kartan
   // yläkulmaan syntyy vain, jos tähtiä on (ks. lohkon loppu).
   let ihmeita = 0;
-  (kartta.kohteet ?? []).forEach((raaka, i) => {
+  kaupunkikartanKohteet(kartta).forEach((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     /*
      * `kuvahaku` säilyttää kohteen Wikipedia-otsikon kuvagalleriaa
@@ -571,6 +593,9 @@ export function piirraKaupunkiKartta(ui, kohde, {
      */
     const piste = html(avattava ? 'button' : 'span',
       'maakartta-piste kaupunki-kohde kohde-numero');
+    // LÖYDÖS 178: aukio ja luonto ovat paikkoja mutta eivät rakennuksia —
+    // kartalla kevyempi merkki (js/packs/maakartat.js KEVYET_KOHDETYYPIT).
+    if (KEVYET_KOHDETYYPIT.has(kohteenTyyppi(raaka))) piste.classList.add('kohde-kevyt');
     /*
      * NUMEROYMPYRÄ ILMAN MINIATYYRIÄ (omistajan päätös 20.9.2026,
      * Bryssel ja Ljubljana; kuvat lisätään myöhemmin). Kartan data
@@ -1432,7 +1457,7 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * vaakakuvan alle — puhelimen pystyruudulla koko kartta ja koko
    * selite näkyvät nyt kerralla ilman vieritystä.
    */
-  const kohteet = kartta.kohteet ?? [];
+  const kohteet = kaupunkikartanKohteet(kartta);
   if (kohteet.length) {
     const selite = html('div', 'kartta-selitteet kartta-suurennos-selitteet');
     kohteet.forEach((k, i) => {
@@ -2507,7 +2532,7 @@ export function varustaNahtavyysSelaus(ui, kohde) {
  */
 export function nahtavyysKohteet(ui) {
   const kaupunki = ui.lehtitila.arrivalShownFor;
-  return (KAUPUNKIKARTAT[kaupunki]?.kohteet ?? []).map((raaka, i) => {
+  return kaupunkikartanKohteet(KAUPUNKIKARTAT[kaupunki]).map((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     /*
      * `kuvahaku` säilyttää kohteen Wikipedia-otsikon kuvagalleriaa

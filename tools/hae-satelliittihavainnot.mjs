@@ -1059,6 +1059,327 @@ export const KOHTEET = [
       },
     ],
   },
+  /*
+   * ERÄ 1: PELIN KAUPUNGIT (Sisältökirjuri 26.9.2026, omistajan tilaus,
+   * Fablen välitys). 23 kaupunkia pelilaudan PALLON_KAUPUNKIPISTEET-
+   * listasta, jotka eivät olleet vielä mukana. Kaksi Pulu-kysymystä per
+   * kohde: tools/astronaut/qa-era1.json. Amsterdam, Berliini, Tukholma,
+   * Kööpenhamina, Praha, Toronto, Lagos, Hanoi ja Manila jätetty pois —
+   * millekään ei löytynyt kelvollista ISS-käsikamerakuvaa (vain
+   * avaruussukkulakuvia, moni-kaupunki-yleiskuvia joissa kaupunki ei
+   * erotu, tai ei osumia lainkaan).
+   */
+  {
+    tunnus: 'pariisi', nimi: 'Pariisi', seutu: 'Ranska', lat: 48.857, lon: 2.352,
+    selite: 'Ranskan pääkaupunki, jonka säteittäiset bulevardit erottuvat selvästi yöllä avaruudesta.',
+    oletus: 'iss072e789833',
+    kuvat: [
+      {
+        id: 'iss072e789833',
+        teksti: 'Pariisi yöllisessä valaistuksessa avaruusasemalta kuvattuna. Eiffel-tornin ja '
+          + 'Champs de Marsin kohdalla erottuu kirkas valopilkku kuvan keskellä, ja kaupungin '
+          + 'säteittäiset bulevardit haarautuvat siitä joka suuntaan. Seine-joki näkyy tummana, '
+          + 'valottomana nauhana kaupungin halki.',
+      },
+    ],
+  },
+  {
+    tunnus: 'lontoo', nimi: 'Lontoo', seutu: 'Englanti, Yhdistynyt kuningaskunta', lat: 51.507, lon: -0.128,
+    selite: 'Yhdistyneen kuningaskunnan pääkaupunki, jonka halki mutkitteleva Thames erottaa sen kahtia myös yöllä.',
+    oletus: 'iss074e0405029',
+    kuvat: [
+      {
+        id: 'iss074e0405029',
+        teksti: 'Lontoo yöllä avaruusasemalta kuvattuna. Thames-joki mutkittelee kirkkaana '
+          + 'valonauhojen välissä kaupungin keskellä ja jakaa sen kahtia. Kuvan alareunassa erottuu '
+          + 'Heathrowin lentokentän kiitoratavalaistus ja oikeassa reunassa Gatwickin lentokenttä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'rooma', nimi: 'Rooma', seutu: 'Italia', lat: 41.893, lon: 12.483,
+    selite: 'Italian pääkaupunki ja antiikin valtakunnan sydän, asutettuna yhtäjaksoisesti tuhansia vuosia.',
+    oletus: 'iss073e0343840',
+    kuvat: [
+      {
+        id: 'iss073e0343840',
+        teksti: 'Rooma yöllä, avaruusasemalta kuvattuna. Kaupungin tiivis, sokkeloinen valokudos '
+          + 'erottuu selvästi ympäröivästä maaseudusta, ja kuvan vasemmassa reunassa näkyy '
+          + 'Tyrrhenanmeren pimeä rantaviiva.',
+      },
+    ],
+  },
+  {
+    tunnus: 'venetsia', nimi: 'Venetsia', seutu: 'Italia', lat: 45.44, lon: 12.332,
+    selite: 'Italian kanavakaupunki, rakennettu sadan sokkeloisen saaren päälle laguunin keskelle.',
+    oletus: 'iss014e17346',
+    kuvat: [
+      {
+        id: 'iss014e17346',
+        teksti: 'Venetsia päivänvalossa avaruusasemalta kuvattuna. Kaupungin tunnusomainen '
+          + 'kalanmuotoinen saari erottuu selvästi laguunin vihertävästä vedestä, ja Canal Granden '
+          + 'S-mutka halkoo sitä keskeltä. Kuvan yläosassa näkyy Muranon saari, ja vasemmassa '
+          + 'reunassa rautatiesilta, joka yhdistää Venetsian Italian mantereeseen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'moskova', nimi: 'Moskova', seutu: 'Venäjä', lat: 55.751, lon: 37.617,
+    selite: 'Venäjän pääkaupunki, jonka säteittäis-rengasmainen katuverkko erottuu selvästi avaruudesta.',
+    oletus: 'iss064e024687',
+    kuvat: [
+      {
+        id: 'iss064e024687',
+        teksti: 'Moskova yöllä avaruusasemalta kuvattuna. Kaupungin säteittäis-rengasmainen '
+          + 'katuverkko erottuu kirkkaana valokuviona, ja tiiviisti valaistu keskusta hehkuu selvästi '
+          + 'ympäröivää, harvemmin valaistua esikaupunkialuetta vasten. Moskova-joki virtaa '
+          + 'keskustan halki tummana, valottomana raitana.',
+      },
+    ],
+  },
+  {
+    tunnus: 'peking', nimi: 'Peking', seutu: 'Kiina', lat: 39.904, lon: 116.408,
+    selite: 'Kiinan pääkaupunki ja Kielletyn kaupungin kotipaikka, ainoa isännöinyt kesä- ja talviolympialaiset.',
+    oletus: 'iss072e444944',
+    kuvat: [
+      {
+        id: 'iss072e444944',
+        teksti: 'Peking yöllä avaruusasemalta kuvattuna. Kaupungin keskusta erottuu ruudukkomaisena, '
+          + 'oranssinsävyisenä valomerenä, jota ympäröivät konsentriset kehätiet. Kuvan keskellä '
+          + 'erottuu Kielletyn kaupungin kirkkaasti valaistu Meridiaaniportti, ja oikeassa yläkulmassa '
+          + 'näkyvät lentokentän valaistut kiitoradat.',
+      },
+    ],
+  },
+  {
+    tunnus: 'hongkong', nimi: 'Hongkong', seutu: 'Kiina (erityishallintoalue)', lat: 22.278, lon: 114.159,
+    selite: 'Kiinan erityishallintoalue, jonka valot erottuvat selvästi naapurikaupunki Shenzhenin valoista.',
+    oletus: 'iss072e399613',
+    kuvat: [
+      {
+        id: 'iss072e399613',
+        teksti: 'Hongkong ja naapurikaupunki Shenzhen yöllä avaruusasemalta kuvattuna. Kuvan '
+          + 'alaosan Hongkongin rannikko erottuu lämpimän kellertävänä valona, kun taas yläosan '
+          + 'Shenzhen hohtaa sinertävänä — ero johtuu kaupunkien erilaisesta valaistushistoriasta '
+          + 'ja -tekniikasta rajan molemmin puolin.',
+      },
+    ],
+  },
+  {
+    tunnus: 'singapore', nimi: 'Singapore', seutu: 'Singapore', lat: 1.3, lon: 103.8,
+    selite: 'Kaupunkivaltio Malesian kärjessä, jonka lentokenttä ja konttisatama näkyvät selvästi yöllä.',
+    oletus: 'iss073e0763866',
+    kuvat: [
+      {
+        id: 'iss073e0763866',
+        teksti: 'Singapore erottuu kuvan keskellä, erotettuna Malesian Johor Bahrusta vasemmalla '
+          + 'Johorin salmella. Oikealla keskellä siintää Changin lentokenttä, ja kuvan alaosan '
+          + 'kirkas suorakulmainen alue on Pasir Panjangin konttisatama, suunniteltu maailman '
+          + 'suurimmille konttialuksille. Kuva otettu yöllä ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sydney', nimi: 'Sydney', seutu: 'Australia', lat: -33.868, lon: 151.21,
+    selite: 'Australian suurin kaupunki, jonka lentokenttä ja satama-alueet reunustavat Botany Baytä.',
+    oletus: 'iss055e073720',
+    kuvat: [
+      {
+        id: 'iss055e073720',
+        teksti: 'Kuvassa näkyy Sydneyn lentokenttä kahdella kiitoradallaan Botany Bayn rannalla. '
+          + 'Lentokentän ympärillä erottuvat sataman konttiterminaalit ja tiheä ruudukkomainen '
+          + 'kaupunkirakenne, joka jatkuu rannikkoa pitkin koilliseen. Kuva otettu päivänvalossa ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'rio', nimi: 'Rio de Janeiro', seutu: 'Brasilia', lat: -22.911, lon: -43.206,
+    selite: 'Brasilian rantakaupunki Guanabaran lahden rannalla, yhdistettynä Niteróihin pitkällä sillalla.',
+    oletus: 'iss070e108427',
+    kuvat: [
+      {
+        id: 'iss070e108427',
+        teksti: 'Kuvan keskellä avautuu Guanabaran lahti, jonka länsirannalla on Rio de Janeiro ja '
+          + 'itärannalla Niterói. Lahden poikki kulkee noin 13 kilometrin pituinen Rio-Niterói-silta, '
+          + 'joka yhdistää kaupungit. Kuva otettu päivänvalossa ISS:ltä Atlantin rannikon yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'saopaulo', nimi: 'São Paulo', seutu: 'Brasilia', lat: -23.55, lon: -46.634,
+    selite: 'Etelä-Amerikan suurin kaupunki ja Brasilian talouden veturi, levittäytynyt laajana valomerenä.',
+    oletus: 'iss073e0982063',
+    kuvat: [
+      {
+        id: 'iss073e0982063',
+        teksti: 'São Paulo levittäytyy kuvassa laajana valomerenä yöllä otetussa kuvassa. Kaupungin '
+          + 'valot ovat siirtyneet energiatehokkaisiin valkoisiin LED-lamppuihin, jotka näkyvät '
+          + 'kuvassa vanhoja oransseja natriumlamppuja kirkkaampina. São Paulon metropolialueella '
+          + 'asuu noin 22 miljoonaa ihmistä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'losangeles', nimi: 'Los Angeles', seutu: 'Yhdysvallat', lat: 34.05, lon: -118.25,
+    selite: 'Yhdysvaltain Tyynenmeren rannikon suurkaupunki, jonka satama on maan vilkkain konttisatama.',
+    oletus: 'iss073e0513936',
+    kuvat: [
+      {
+        id: 'iss073e0513936',
+        teksti: 'Kuvassa erottuu Los Angelesin rannikkoa ja tiheää ruudukkomaista kaupunkirakennetta '
+          + 'aina Long Beachin satama-alueelle ja Terminal Islandille asti oikeassa alakulmassa. '
+          + 'Vasemmalla rannikolla näkyy myös lentokenttä- ja satamarakenteita. Kuva otettu '
+          + 'päivänvalossa ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sanfrancisco', nimi: 'San Francisco', seutu: 'Yhdysvallat', lat: 37.779, lon: -122.419,
+    selite: 'Kalifornian lahtikaupunki, joka tunnetaan Golden Gate -sillasta ja lähellä syntyneestä Piilaaksosta.',
+    oletus: 'iss073e0285002',
+    kuvat: [
+      {
+        id: 'iss073e0285002',
+        teksti: 'Kuvassa San Franciscon lahti erottuu pimeänä alueena, jonka ympärillä valot '
+          + 'piirtävät kaupungin ja sen esikaupunkien, kuten San Josen ja Oaklandin, ääriviivat '
+          + 'näkyviin. Lahden yli kulkevat siltayhteydet erottuvat valojuovina veden yllä. Kuva '
+          + 'otettu keskiyön aikaan ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'chicago', nimi: 'Chicago', seutu: 'Yhdysvallat', lat: 41.882, lon: -87.628,
+    selite: 'Yhdysvaltain Keskilännen suurkaupunki Michiganjärven rannalla, pilvenpiirtäjien syntypaikka.',
+    oletus: 'iss073e0080182',
+    kuvat: [
+      {
+        id: 'iss073e0080182',
+        teksti: 'Chicago erottuu kuvassa kirkkaana valoruudukkona Michiganjärven eteläkärjessä, ja '
+          + 'järven pimeä pinta rajaa kaupungin selvästi idässä. Kaupungin ydin pistää esiin '
+          + 'ympäröivästä esikaupunkialueesta kirkkaimpana valopilkkuna. Kuva otettu yöllä ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mexico', nimi: 'Mexico City', seutu: 'Meksiko', lat: 19.411, lon: -99.131,
+    selite: 'Meksikon pääkaupunki entisen järven pohjalla korkealla vuoristolaaksossa, joka vaipuu vuosi vuodelta.',
+    oletus: 'iss073e0075943',
+    kuvat: [
+      {
+        id: 'iss073e0075943',
+        teksti: 'Mexico City loistaa yöllä kirkkaana Meksikon laakson pohjalla. Kaupungin valot '
+          + 'täyttävät koko altaan, ja niitä reunustavat tummat, valottomat alueet: Texcocon ja '
+          + 'Tláhuac-Xicon luonnonsuojelualueet sekä Ajuscon kansallispuiston vuoret. Kuva otettiin '
+          + 'Kansainväliseltä avaruusasemalta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kapkaupunki', nimi: 'Kapkaupunki', seutu: 'Etelä-Afrikka', lat: -33.925, lon: 18.425,
+    selite: 'Etelä-Afrikan lainsäädäntöpääkaupunki mantereen lounaiskärjessä, Kapniemen vuorten juurella.',
+    oletus: 'iss064e038871',
+    kuvat: [
+      {
+        id: 'iss064e038871',
+        teksti: 'Kapkaupunki ja sen ympäröivä rannikko näkyvät päivänvalossa Etelä-Afrikan '
+          + 'kärjessä, auringon kimmellyksen loistaessa Atlantin pinnalla. Kaupungin katuverkko '
+          + 'erottuu vaaleana, tiiviisti rakennettuna alueena rannikon tuntumassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mumbai', nimi: 'Mumbai', seutu: 'Intia', lat: 18.975, lon: 72.826,
+    selite: 'Intian talouselämän keskus, rakennettu alun perin seitsemälle erilliselle saarelle Arabianmeren rannalla.',
+    oletus: 'iss014e08744',
+    kuvat: [
+      {
+        id: 'iss014e08744',
+        teksti: 'Mumbain satama ja kaupunkialue täyttävät kapean Salsette-niemekkeen Arabianmeren '
+          + 'rannalla. Rakennettu alue jatkuu yhtenäisenä noin 50 kilometrin matkan pohjoisesta '
+          + 'etelään, ja kuvassa erottuvat myös rannikon pienet niemet ja lahdet.',
+      },
+    ],
+  },
+  {
+    tunnus: 'delhi', nimi: 'Delhi', seutu: 'Intia', lat: 28.61, lon: 77.23,
+    selite: 'Intian pääkaupunkialue, maailman toiseksi suurin metropolialue Himalajan eteläpuolella.',
+    oletus: 'iss072e757452',
+    kuvat: [
+      {
+        id: 'iss072e757452',
+        teksti: 'Delhin valot loistavat kirkkaina lähellä puolta yötä paikallista aikaa, Himalajan '
+          + 'reunan tuntumassa. Kaupungin tiivis valoverkko peittää laajan alueen tasaisella '
+          + 'tasangolla, ja valojen tiheys vaihtelee vanhan ja uuden kaupunginosan välillä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bangkok', nimi: 'Bangkok', seutu: 'Thaimaa', lat: 13.75, lon: 100.517,
+    selite: 'Thaimaan pääkaupunki, jonka Chao Phraya -joki jakaa kahtia matkalla Siaminlahteen.',
+    oletus: 'iss072e757257',
+    kuvat: [
+      {
+        id: 'iss072e757257',
+        teksti: 'Bangkok jakautuu selvästi kahtia Chao Phraya -joen ympärille, joka erottuu kuvassa '
+          + 'mustana nauhana kaupungin valojen keskellä. Kuvan keskioikealla erottuu tumma, '
+          + 'vähemmän valaistu Bang Krachaon viheralue joen mutkassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'jakarta', nimi: 'Jakarta', seutu: 'Indonesia', lat: -6.21, lon: 106.845,
+    selite: 'Indonesian pääkaupunki, joka vajoaa nopeasti ja jota siksi korvaamaan rakennetaan uutta pääkaupunkia.',
+    oletus: 'iss030e015896',
+    kuvat: [
+      {
+        id: 'iss030e015896',
+        teksti: 'Kuva on otettu infrapunakameralla, joten Jakartan kaupunkialue hohtaa '
+          + 'oranssinpunaisena rannikolla. Tiivis, verkkomainen kaupunkirakenne erottuu selvästi '
+          + 'ympäröivästä pimeästä merestä ja harvaan asutusta maaseudusta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'shanghai', nimi: 'Shanghai', seutu: 'Kiina', lat: 31.224, lon: 121.476,
+    selite: 'Kiinan väkirikkain kaupunki Jangtse-joen suulla, jonka rannikko värjäytyy joen liejusta.',
+    oletus: 'iss073e0513927',
+    kuvat: [
+      {
+        id: 'iss073e0513927',
+        teksti: 'Kuva näyttää Shanghain kaupunkialueen päiväsaikaan Jangtse-joen suulla Itä-Kiinan '
+          + 'meren rannalla. Ylälaidassa erottuu Pudongin kansainvälisen lentokentän kiitoradat, ja '
+          + 'kuvan oikealla puolella näkyy pyöreä Dishui-järvi, Kiinan suurin tekoallas. Mereen '
+          + 'laskeva sedimenttipitoinen vesi näkyy vaaleanruskeana rannikon tuntumassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'wien', nimi: 'Wien', seutu: 'Itävalta', lat: 48.208, lon: 16.373,
+    selite: 'Itävallan pääkaupunki Tonavan rannalla, jonka tiivis keskusta erottuu selvästi yöllä avaruudesta.',
+    oletus: 'iss064e005231',
+    kuvat: [
+      {
+        id: 'iss064e005231',
+        teksti: 'Kuva näyttää Wienin yöllä avaruusasemalta kuvattuna, katuvalot piirtävät kaupungin '
+          + 'tiheän verkkomaisen rakenteen selvästi näkyviin. Tonava-joki erottuu kuvan keskellä '
+          + 'pimeänä, valottomana nauhana, joka halkoo valaistua kaupunkialuetta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'soul', nimi: 'Soul', seutu: 'Etelä-Korea', lat: 37.567, lon: 126.978,
+    selite: 'Etelä-Korean pääkaupunki, jonka Han-joki jakaa kaupungin kahtia niemimaan keskiosassa.',
+    oletus: 'iss072e757318',
+    kuvat: [
+      {
+        id: 'iss072e757318',
+        teksti: 'Kuva näyttää Soulin yöllä, kaupungin tiheä valoverkko peittää laajan alueen '
+          + 'Korean niemimaan keskiosassa. Han-joki kulkee kuvan poikki pimeänä nauhana ja jakaa '
+          + 'kaupungin selvästi kahteen osaan. Kuva paljastaa myös kaupungin ympärille leviävän '
+          + 'esikaupunkialueen tiiviin tieverkoston.',
+      },
+    ],
+  },
 ];
 
 /**

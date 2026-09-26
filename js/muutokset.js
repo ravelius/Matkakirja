@@ -13,6 +13,17 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2286, teksti: 'Maakunta-erä B3: MDA/UKR pikkukuvat (#3351)' },
+  { v: 2285, teksti: 'Löydös 178: nähtävyyskartalla vain paikat, tari… (#3353)' },
+  { v: 2284, teksti: 'Maakunta-erä B2: SRB/BGR/MLT/ISL pikkukuvat (#3350)' },
+  { v: 2283, teksti: 'Maakunta-erä B1: CZE/HRV/BIH/MNE/ALB/MKD/LUX pi… (#3349)' },
+  { v: 2282, teksti: 'Maakunta-erä A: CHE/PRT/HUN/SWE/NOR/IRL pikkuku… (#3348)' },
+  { v: 2281, teksti: 'PRT: maakuntien pitkä-teksti (#3344)' },
+  { v: 2280, teksti: 'Maakunta-erä 2: HUN/SWE/NOR/IRL pitkä-teksti (#3346)' },
+  { v: 2279, teksti: 'Löydös 170: Euroopan 26 maakuntanoston kuvat (#3343)' },
+  { v: 2278, teksti: 'Löydös 174b: kuvamerkit skandaaleille, eläimill… (#3342)' },
+  { v: 2277, teksti: 'CHE: maakuntien pitkä-teksti (#3341)' },
+  { v: 2276, teksti: 'Astronautin kamera erä 1: pelin kaupungit (#3340)' },
   { v: 2275, teksti: 'Löydös 135 (#3274)' },
   { v: 2274, teksti: 'FIN/EST/SVN: maakuntien kuva- ja pikkukuva-kent… (#3336)' },
   { v: 2273, teksti: 'LTU: maakuntien kuva- ja pikkukuva-kentät (#3333)' },

@@ -1,21 +1,19 @@
-# Luovutus: Sisältökirjuri — 26.9.2026 ilta (n. 19.0x Suomen aikaa)
+# Luovutus: Sisältökirjuri — 26.9.2026 ilta (n. 19.4x Suomen aikaa, konteksti 70 % → nollaus)
 
 Edellinen: `viesti-sisaltokirjuri-luovutus-20260926-b.md`. Tämä vuoro (iltapäivä–ilta):
-löydös 158 valmistui kokonaan (kaikki 6 PR:ää mainissa), ja sen jälkeen aloitettiin
-omistajan uusi tilaus, Astronautin kameran kohdelaajennus, erä 1.
+löydös 158 valmistui kokonaan, sen jälkeen omistajan uusi tilaus (Astronautin
+kameran erä 1, mainissa) ja maakunta-erä 2 alkoi (CHE + PRT pitkä valmiina).
 
 ## 1. Lue ensin
 
 - `CLAUDE.md`, `docs/roolitus.md`.
-- Raamattu: "TYÖTAPA JA SESSIOT" (roolit, worktreet, viestisäännöt).
-- Ei uusia Raamattu-linjauksia tässä vuorossa — kaikki uudet päätökset tässä
-  raportissa ovat tilannekuvaa, ei pysyviä sääntöjä (ne kirjaa Fable Raamattuun
-  erikseen jos ne vakiintuvat).
+- Raamattu: "TYÖTAPA JA SESSIOT".
+- Ei uusia Raamattu-linjauksia tässä vuorossa.
 
 ## 2. Tila
 
-**main = v2274, `aa5f7b42c`** (uusimmat commitit `#3335`–`#3338` eivät koskeneet
-sisältöä). Tämän vuoron julkaisut:
+**main = v2276, `9da80d49a`** (+ tämä raportti-commit `9b92fbd6c`, ei sisältöä).
+Tämän vuoron julkaisut:
 
 | Versio | PR | Sisältö |
 | --- | --- | --- |
@@ -25,133 +23,105 @@ sisältöä). Tämän vuoron julkaisut:
 | v2272 | #3332 | LVA: maakuntien kuva- ja pikkukuva-kentät (5/5) |
 | v2273 | #3333 | LTU: maakuntien kuva- ja pikkukuva-kentät (10/10) |
 | v2274 | #3336 | FIN/EST/SVN: maakuntien kuva- ja pikkukuva-kentät (45/45) |
+| v2276 | #3340 | Astronautin kamera erä 1: pelin kaupungit (23/25) |
 
-**Löydös 158 on nyt kokonaan valmis**: 9 maata (NLD/BEL/DNK/SVK/LVA/LTU/FIN/EST/SVN),
-99 aluetta, kaikilla pitkä + kuva + pikkukuva. Kaikki kuvat Wikimedia Commonsista,
-lisenssi PD/CC0/CC BY/CC BY-SA tarkistettu suoraan Commonsin API:sta jokaiselle,
-katsottu silmillä tunnistettavien yksityishenkilöiden varalta ennen latausta.
-Ämpärissä `karttanostot/20260926/`.
+**Löydös 158 kokonaan valmis**: 9 maata (NLD/BEL/DNK/SVK/LVA/LTU/FIN/EST/SVN),
+99 aluetta, pitkä + kuva + pikkukuva. Ämpärissä `karttanostot/20260926/`.
 
-Kaikki kuusi PR:ää mergettiin **automaattisesti** (Julkaisijan uusi rutiini, ks.
-kohta 7) — ei tarvinnut odottaa erillistä ihmis- tai Fable-mergeä.
+## 3. Pushatut haarat, ei vielä PR:ää tai PR auki
 
-## 3. Pushattu mutta ei PR:ää — ODOTTAA PELIKOODARIA
-
-**Haara `astro-era1-kaupungit-20260926`** (origin, `d31bab0b4`, pohjautuu mainiin
-`aa5f7b42c`): Astronautin kameran kohdelaajennus, **erä 1** (omistajan tilaus,
-Fablen välitys 26.9. klo 15.5x). 23 uutta kaupunkikohdetta (pariisi, lontoo,
-rooma, venetsia, moskova, peking, hongkong, singapore, sydney, rio, saopaulo,
-losangeles, sanfrancisco, chicago, mexico, kapkaupunki, mumbai, delhi, bangkok,
-jakarta, shanghai, wien, soul). Yhdeksälle kaupungille (Amsterdam, Berliini,
-Tukholma, Kööpenhamina, Praha, Toronto, Lagos, Hanoi, Manila) EI löytynyt
-kelvollista ISS-käsikamerakuvaa millään hakutavalla NASAn kuvakirjastosta —
-jätetty pois, ei kompromissoitu.
-
-Sisältö haarassa:
-- `js/linssit/satelliitti-data.js` — regeneroitu `tools/hae-satelliittihavainnot.mjs`:llä,
-  kaikki 23 uutta NASA-kuvatunnusta tarkistettu suoraan `images-api.nasa.gov`:sta
-  (kuvateksti + päivämäärä täsmää) JA katsottu kuvina ennen hyväksymistä.
-- `tools/astronaut/qa-era1.json` — 2 Pulu-kysymystä/vastausta per kohde,
-  `qa-first.json`:n muodossa, validoitu käsin `build-questions.mjs`:n säännöillä
-  (2 kysymystä, ≤60 merkkiä, 2–3 virkkeen vastaus ≤500 merkkiä, https-lähteet,
-  `havaintoId` täsmää) — **0 ongelmaa**.
-
-**MIKSI EI PR:ÄÄ VIELÄ**: `tools/astronaut/build-questions.mjs` on kovakoodattu
-lukemaan vain `qa-first.json` + `qa-last.json` ja vaatimaan tasan 64 kohdetta.
-Kolme testiä on siksi juuri nyt PUNAISENA tässä haarassa (odotetusti):
-`tests/astronaut-kysymykset.test.mjs` (2 testiä: "all 64 camera targets..." ja
-"runtime text matches validated...") ja `tests/satelliitti.test.mjs:1221`
-(minipulun napautustesti). Pelikoodari lupasi yleistää `build-questions.mjs`:n
-lukemaan kaikki `qa-*.json`-tiedostot kun erä 1 on olemassa — ilmoitin hänelle
-26.9. klo 18.5x että data on haarassa. **Kun Pelikoodari on tehnyt yleistyksen**:
-rebasoi tämä haara mainiin, aja `node tools/astronaut/build-questions.mjs`, aja
-koko testisarja, avaa PR.
+- **PR #3341 (AUKI)** — "CHE: maakuntien pitkä-teksti (26/26)"
+  (`sisalto-pitka-che-20260926`). Testit 113/113 vihreät. Matchaa
+  Julkaisijan automerge-kaavan — tarkista onko mennyt läpi.
+- **Haara `sisalto-pitka-prt-20260926` (pushattu, EI PR:ää)** — PRT:n 20
+  aluetta, pitkä-teksti valmis ja committoitu (`f37b27510`, pohjautuu
+  mainiin `9da80d49a`), testit 113/113 vihreät, dual-key ok. **PR avataan
+  vasta kun #3341 (CHE) on mainissa** — yksi maakunta-PR kerrallaan
+  -sääntö. Kun avaat: `git checkout sisalto-pitka-prt-20260926`, rebasoi
+  tuoreeseen mainiin, aja testit uudestaan, `gh pr create`.
 
 ## 4. Kesken — tee nämä ensin
 
-1. **Odota Pelikoodarin kuittausta** `astro-era1-kaupungit-20260926`-haarasta
-   (build-questions.mjs yleistetty) — sitten rebasoi, testaa, avaa PR.
-2. **Maakunta-erä 2** (Fablen priorisoima kolmanneksi, ks. kohta 6): CHE (26),
-   PRT (20), HUN (20), SWE (21), NOR (21), IRL (30) — 138 aluetta, EI vielä
-   pitkää eikä kuvaa (tarkistettu `js/packs/maakunnat-luonnehdinnat.js`:stä,
-   `pitka: false` kaikilla). Menetelmä samat kuin löydös 158:ssa (ks. edellinen
-   luovutus `-b.md` kohta 3), mutta HUOM: nämä maat tarvitsevat ENSIN pitkä-tekstin
-   (Livian äänellä, 1873-kytkös), VASTA SEN JÄLKEEN kuvan — kaksivaiheinen työ,
-   ei suoraan kuvahakuun kuten löydös 158:ssa. Yksi maakunta-PR kerrallaan mainiin.
-3. **Astronautin erät 2–4** (isoisän reitin maisemat, luonnonkohteet, "sama
-   paikka eri vuosina" -parit) — Fable sanoi: "maakuntien lomassa", ei kiinteää
-   järjestystä erä 2:n kanssa. Odottaa vielä aloitusta.
+1. Tarkista PR #3341 (CHE) — jos mainissa, avaa PRT:n PR (ks. kohta 3).
+2. **Maakunta-erä 2, jatko**: HUN (20), SWE (21), NOR (21), IRL (30) —
+   pitkä-teksti puuttuu näiltä 4 maalta (92 aluetta). Menetelmä: 3
+   rinnakkaista Sonnet-agenttia per maa, KÄYTÄ AINA WebSearchia (yksi
+   CHE-agentti ei käyttänyt sitä ja sai Gotthard-tunnelin päivämäärän
+   väärin — kiinni jäi omalla jälkitarkistuksella). Integraatioskripti:
+   `/private/tmp/.../scratchpad/integroi-che-pitka.mjs` mallina (scratchpad,
+   ei repossa — kirjoita uudelleen, rakenne on yksinkertainen regex-korvaus
+   `lyhyt:`-rivin jälkeen).
+3. Kun KAIKKI 6 maata (CHE/PRT/HUN/SWE/NOR/IRL, 138 aluetta) on pitkä-tekstillä:
+   jatka kuva-kenttään, menetelmä kuten löydös 158:ssa (Commons-kuva per
+   alue, lisenssi tarkistettu API:sta, katsottu silmillä).
+4. **Astronautin erät 2–4** (isoisän reitin maisemat, luonnonkohteet, "sama
+   paikka eri vuosina" -parit) — Fable: "maakuntien lomassa". Ei aloitettu.
+5. **UUSI, EI VIELÄ PRIORISOITU — löydös 170 (Siirtoseppä 26.9. klo 19.4x)**:
+   996/2782 maakuntanostosta puuttuu kuva. Fokuskohteet 807 kpl (moduuli
+   puuttuu, useimmiten `maastokohteet-<iso>.js`), skandaalit 187 kpl
+   (`data.kuva(t)` puuttuu), täkynostot 2 kpl (`pariisin-vuosisadat`,
+   `exchange-alleyn-kupla`). Pääosin Euroopan ulkopuolella (8–13/maa),
+   Euroopassa SWE 3, FRA/HUN/LTU/NOR/PRT/CYP 2 kukin, GRC valmis. Lista:
+   `git show origin/siirtoseppa-luovutus:docs/raportit/maakuntanostot-ilman-kuvaa-20260926.md`.
+   **Kysy Fablelta järjestys** ennen aloitusta (Fable sanoi päättävänsä sen).
 
 ## 5. Odottaa omistajan päätöstä
 
-Ei avoimia kysymyksiä omistajalle juuri nyt. (Erä 1 vs. maakunta-erä 2 -jäjestys
-kysyttiin Fablelta 26.9. klo 18.3x ja vastaus saatiin: erä 1 → maakunta-erä 2 →
-astronautin erät 2–4 maakuntien lomassa.)
+Ei avoimia kysymyksiä juuri nyt.
 
 ## 6. Voimassa olevat työtavat — mikä muuttui tässä vuorossa
 
 - Ks. Raamattu "TYÖTAPA JA SESSIOT" ja `docs/roolitus.md` — ei muutoksia
   itse sääntöihin.
-- **Uusi tieto (ei Raamattu-linjaus, vain havainto)**: Julkaisija ajaa nyt
-  automaattista mergeä maakunta-PR:ille (haara `sisalto-kuva-*` tai
-  `sisalto-pitka-*`, muutokset vain `js/packs/maakun*`-tiedostoihin, testit
-  vihreät → versionosto + merge). Avaajan (minun) vastuu pysyy: yksi PR
-  kerrallaan, avaa seuraava vasta kun edellinen on mainissa.
-- **Pulu-kysymysmekanismi satelliitti-linssille** ei kulje `js/aikajana.js`:n
-  `PULUKYSYMYSTEN_LINSSI`-reitin kautta (se on vain ihmisen-matka-linssille) —
-  vaan omalla koneistollaan: `tools/astronaut/qa-*.json` + `build-questions.mjs`
-  → `js/linssit/astronaut-kysymykset.js`, käytössä `satelliitti.js`:ssä
-  (`haeAstronautinKysymykset`). Tämä ei ollut minulle alussa selvää — löysin sen
-  vasta kun Pelikoodari kertoi.
+- **Havainto (ei Raamattu-linjaus)**: Julkaisija ajaa automaattista mergeä
+  maakunta-PR:ille (haara `sisalto-kuva-*`/`sisalto-pitka-*`, muutokset
+  vain `js/packs/maakun*`-tiedostoihin, testit vihreät → versionosto +
+  merge). Avaajan vastuu pysyy: yksi PR kerrallaan.
+- **Pulu-kysymysmekanismi satelliitti-linssille**: `tools/astronaut/qa-*.json`
+  + `build-questions.mjs` → `js/linssit/astronaut-kysymykset.js`, käytössä
+  `satelliitti.js`:ssä. EI kulje `js/aikajana.js`:n `PULUKYSYMYSTEN_LINSSI`-
+  reitin kautta (se on vain ihmisen-matka-linssille).
 
 ## 7. Julkaisukaava
 
-Ei muutoksia peruskaavaan (`docs/roolitus.md` "Julkaisusäännöt"): rebase
-`origin/main`iin → testit → `tarkista-kaksoisavaimet.mjs` → commit → push →
-`gh pr create` → CI. Maakunta-PR:ien osalta CI:n `savukkeet-mac`-tarkistus on
-tänä vuorona epäonnistunut toistuvasti nopeasti (< 3 min) merkinnällä "The run
-was canceled by @ravelius" — omistajan itse peruma ajokilpailun vuoksi samalla
-Macilla, EI oikea testivika. Merge on siitä huolimatta mennyt läpi (testit+reitti
-riittävät), ei vaatinut toimenpiteitä.
+Ei muutoksia (`docs/roolitus.md` "Julkaisusäännöt"). Maakunta-PR:ien
+`savukkeet-mac`-tarkistus epäonnistui toistuvasti nopeasti tänä vuorona
+("The run was canceled by @ravelius" — omistajan oma ajokilpailun
+peruminen, EI testivika); merge meni läpi silti (testit+reitti riittävät).
 
 ## 8. Ympäristö ja infra
 
-- Työkansio: `/Users/Shared/Claude/Matkakirja-sisaltokirjuri` (tämä sessio).
-- Poistin oman vanhan worktreen `/Users/Shared/Claude/wt/sisaltokirjuri-linssikatalogi-kuvatekstit-era2`
-  Postivahdin/Fablen pyynnöstä (levytila, PR #3138 suljettu, vain untracked
-  node_modules) — `git worktree remove --force` + `prune`.
-- Käytin tilapäisiä worktreejä Codex-postilaatikkoon (`claude/postilaatikko`)
-  kahdesti tämän vuoron aikana (Cupola-tilaus + kuittaus), molemmat siivottu
-  pois lopuksi (`git worktree remove` + haaran poisto).
-- Ämpäri (R2): `karttanostot/20260926/` sisältää nyt 45 uutta maakuntakuvaa
-  (FIN 18 + EST 15 + SVN 12) BEL/DNK/SVK/LVA/LTU:n 39:n lisäksi, sekä 6 ISS
-  Cupola-kehyskuvaa (Codexin toimitus Linssisepälle, ei minun tuottamaani).
+- Työkansio: `/Users/Shared/Claude/Matkakirja-sisaltokirjuri`.
+- Poistin worktreen `sisaltokirjuri-linssikatalogi-kuvatekstit-era2`
+  (levytila, PR #3138 suljettu). Käytin ja poistin worktreen
+  `sisaltokirjuri-astro-era1` (astronautti-PR:n rebase/build).
+- Ämpäri (R2): `karttanostot/20260926/` +45 maakuntakuvaa (FIN/EST/SVN)
+  BEL/DNK/SVK/LVA/LTU:n 39:n lisäksi, + 6 ISS Cupola-kehyskuvaa (Codexin
+  toimitus Linssisepälle).
 - Ei uusia avaimia, ei muutoksia rutiineihin/ajastuksiin.
 
 ## 9. Avoimet velat ja opetukset
 
 **Velat:**
-1. Astronautin erä 1 tarvitsee vielä Pelikoodarin `build-questions.mjs`-
-   yleistyksen ennen PR:ää (kohta 3).
-2. Erä 1 on 23/25 kohdetta — 9 kaupunkia kokeiltu ja hylätty (ei ISS-kuvaa).
-   Jos omistaja haluaa täsmälleen 25, pitää etsiä 2 lisää muista pelin
-   kaupungeista jotka eivät ole listalla.
+1. PRT-PR avaamatta, odottaa CHE:n mergeä (kohta 3).
+2. Astronautin erä 1 on 23/25 kohdetta — 9 kaupunkia hylätty (ei ISS-kuvaa:
+   Amsterdam, Berliini, Tukholma, Kööpenhamina, Praha, Toronto, Lagos,
+   Hanoi, Manila).
+3. Löydös 170 (kohta 4.5) odottaa Fablen priorisointia.
 
 **Opetukset:**
-- Commons- ja NASA-kuvarajapinnat rajoittavat pyyntitahtia (429) — tarvitaan
-  eksponentiaalinen backoff (≥20 s × yritys), ei vain muutaman sekunnin viive.
-  Havaittu molemmilla API:lla tämän vuoron aikana; syynä luultavasti muiden
-  roolien samanaikainen liikenne samalta Macilta.
-- **Aina tarkista agentin ilmoittama kuvatunnus/lisenssi itse API:sta JA katso
-  kuva silmillä** ennen kuin luotat siihen — tässä vuorossa ei löytynyt virheitä,
-  mutta Gorenjskan (SVN) alkuperäinen ehdokas oli täysi turistivene, korvattava.
-- Fablen sanamuoto "maakuntakuvat ensin" oli tulkinnanvarainen (juuri valmistunut
-  löydös 158 -jono vs. koko maakunta-pitkä+kuva-työ mukaan lukien erä 2) —
-  kysyin ja sain selvennyksen nopeasti; kannattaa jatkossa nimetä eräjono
-  täsmällisesti tilauksissa.
-- Pulu-kysymysten kytkentä satelliitti-linssille on eri mekanismi kuin
-  ihmisen-matka-linssin — tarkista aina koko koodikanta (myös `tools/`-kansio)
-  ennen kuin toteat että jokin puuttuu.
+- Commons- ja NASA-kuvarajapinnat rajoittavat pyyntitahtia (429) —
+  eksponentiaalinen backoff (≥20 s × yritys) tarvitaan.
+- **Aina tarkista agentin ilmoittama kuvatunnus/lisenssi itse API:sta JA
+  katso kuva silmillä** — Gorenjskan (SVN) alkuperäinen kuvaehdokas oli
+  täysi turistivene, korvattava.
+- **Pyydä pitkä-teksti-agenteilta AINA WebSearch**, älä luota muistiin —
+  yksi CHE-agentti ei käyttänyt hakua ja sai Gotthard-tunnelin
+  aloituspäivän väärin (helmikuu vs. oikea syyskuu 1872), kiinni jäi
+  vain koska tein jälkitarkistuksen itse.
+- Kirjoita tutkittu, valmis sisältö talteen (committoi/pushaa) HETI kun se
+  on valmis, älä jätä sitä vain agenttien palautusviesteihin konteksti-
+  session muistiin — ne katoavat nollauksessa.
 
 ## 10. Aloitusviesti uudelle sessiolle
 
@@ -161,25 +131,23 @@ Ensimmäinen komento: git fetch origin && git checkout -B sisalto-tyo-$(date +%Y
 Lue CLAUDE.md, docs/roolitus.md ja docs/raportit/viesti-sisaltokirjuri-luovutus-20260926-c.md
 kokonaan ja toimi niiden mukaan.
 
-TILA lyhyesti: löydös 158 (maakuntien kuva-kenttä) on KOKONAAN VALMIS, kaikki
-6 PR:ää mainissa (v2274). Astronautin kameran erä 1 (23 kaupunkia) on haarassa
-astro-era1-kaupungit-20260926, odottaa Pelikoodarin build-questions.mjs-
-yleistystä ennen PR:ää.
+TILA lyhyesti: löydös 158 KOKONAAN VALMIS (v2274), Astronautin erä 1 MAINISSA
+(v2276). Maakunta-erä 2: CHE pitkä PR #3341 auki, PRT pitkä valmis haarassa
+sisalto-pitka-prt-20260926 (odottaa CHE:n mergeä ennen PR:n avaamista).
 
 ENSIMMÄINEN TEHTÄVÄ:
-1. Tarkista onko Pelikoodari yleistänyt tools/astronaut/build-questions.mjs:n
-   (kysy Pelikoodarilta tai tarkista git log). Jos kyllä: rebasoi
-   astro-era1-kaupungit-20260926 mainiin, aja build-questions.mjs, aja koko
-   testisarja, avaa PR.
-2. Sen jälkeen (tai sillä välin jos Pelikoodari ei ole valmis): aloita
-   maakunta-erä 2 (CHE/PRT/HUN/SWE/NOR/IRL, 138 aluetta, pitkä+kuva, ks. tämän
-   raportin kohta 4.2).
+1. Tarkista PR #3341 (CHE). Jos mainissa: avaa PRT:n PR (rebasoi
+   sisalto-pitka-prt-20260926, testaa, gh pr create).
+2. Kysy Fablelta löydös 170:n (raportin kohta 4.5) priorisointi suhteessa
+   maakunta-erä 2:n loppuun (HUN/SWE/NOR/IRL).
+3. Jatka maakunta-erä 2:ta: HUN/SWE/NOR/IRL pitkä-teksti, sitten kaikkien
+   6 maan kuva-kenttä.
 
 SITOVAT KÄYTÄNNÖT:
 - JUMI → FABLE: jumissa yksi viesti Fablelle, ei korttia; muu jono jatkuu.
 - VIESTIRAJA: SendMessage ~10/vuoro; varakanava mcp send_message session id:llä.
 - Maakunta-PR:t yksi kerrallaan mainiin; Julkaisija automerges kun testit vihreät.
-- Agentit vain Sonnet/Opus, enintään 3–4 rinnan.
+- Agentit vain Sonnet/Opus, enintään 3–4 rinnan, KÄYTÄ AINA WEBSEARCHIA faktojen tarkistukseen.
 - Kuvat (maakunta) vain PD/CC0/CC BY/CC BY-SA Commonsista, tarkistettuina
   API:sta suoraan; NASA-astronauttikuvat aina PD, mutta tarkista kuvatunnus
   itse images-api.nasa.gov:sta äläkä luota agentin raporttiin sokeasti.

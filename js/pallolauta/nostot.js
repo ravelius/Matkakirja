@@ -2099,6 +2099,9 @@ export function luoNostot({
           nimioNakyy: true,
           kategoria: 'elain',
           symLaji: 'elain',
+          // LÖYDÖS 174b: eläintäky saa eläimen kuvamerkin samalla 155-kynnyksellä kuin muut nostot.
+          kuvamerkki: tyyppimerkitKaytossa(nostonKarttakerroin) ? nostosymKuvamerkki('elain', 'elain') : null,
+          kuvamerkkiPieni: tyyppimerkkiPieni(nostonKarttakerroin),
           puoli: 'oikea',
           aihe: 'elaimet',
           lunastettu: Boolean(game.elaintakyLunastettu?.(t.iso)),
