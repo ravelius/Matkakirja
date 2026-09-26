@@ -228,6 +228,19 @@ namespace Matkakirja.Natiivi
                     StartCoroutine(MittaaAani(float.TryParse(A(2), System.Globalization.NumberStyles.Float,
                         System.Globalization.CultureInfo.InvariantCulture, out var mittaS) ? mittaS : 3f));
                     return null;
+                case "aani" when A(1) == "aihe":
+                {
+                    // Musiikkisuunnitelma vaihe 1: aiheen laukaisu ilman pelitilannetta (todennus: aani mittaa perään).
+                    switch (A(2))
+                    {
+                        case "aloituslento": Aanisoitin.AloituslentoAlkoi(); break;
+                        case "loppu": Aanisoitin.MatkaLoppui(); break;
+                        case "kaupunki": Aanisoitin.UusiKaupunki(A(3)); break;
+                        default: return "käyttö: aani aihe aloituslento|loppu|kaupunki <id>";
+                    }
+                    var t = ohjain.Aanisoitin?.Tila;
+                    return "aihe " + (t?.Toive(Matkakirja.Peli.Kanava.Aarre).Url ?? "ei soi");
+                }
                 case "aani" when A(1) == "sini":
                 {
                     // Positiivinen kontrolli (löydös 49): 440 Hz 2 s omasta klipistä ilman latausta. rms > 0 = Unityn
