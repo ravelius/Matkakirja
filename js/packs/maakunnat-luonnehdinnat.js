@@ -3129,39 +3129,140 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Trnavský — University of Trnava (1635); Basilica of the Seven
    *     Sorrows, Šaštín
    *   Žilinský — Žilina Region; Painted Village of Čičmany (1977); Kysuce
+   *
+   * SVK KUVA + PIKKUKUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko):
+   * sama kaava — Commons-kuva lisenssi tarkistettu API:sta, ämpäri
+   * karttanostot/20260926/, pikkukuva kierrättää saman osoitteen.
+   * Lähteet:
+   *   Banskobystrický — File:Banská Štiavnica zhora.jpg (Rudo Mlich, CC BY-SA 4.0)
+   *   Bratislavský — File:Panoramic_view_from_Bratislava_castle.jpg (Lukáš Perný, CC BY-SA 4.0)
+   *   Košický — File:St_Elisabeth_Cathedral_Kosice.jpeg (Ingo Mehling, CC BY-SA 3.0)
+   *   Nitriansky — File:Nitriansky_hrad_1.jpg (Tomáš Bartovič, CC BY-SA 4.0)
+   *   Prešov — File:Market_Square_of_Bardejov.jpg (Michał Rawlik, CC BY-SA 4.0)
+   *   Trenciansky — File:Trencin_Castle_030.jpg (Ingo Mehling, CC BY-SA 4.0)
+   *   Trnavský — File:Trojičné námestie.jpg (Pavel Briatka, CC BY-SA 2.5)
+   *   Žilinský — File:Orava_Castle.jpg (Juraj Bednárik, CC BY-SA 4.0)
    */
   SVK: {
     'Banskobystrický': {
       lyhyt: 'Banská Štiavnican kaivoskaupunki on rakennettu muinaisen, romahtaneen tulivuoren kalderan keskelle, ja se on Unescon maailmanperintöä.',
       pitka: `Alue on Slovakian vulkaanisin kolkka: Banská Štiavnican lisäksi täällä kohoaa Poľanan tulivuorimassiivi, laaja metsäinen suojelualue, ja etelämmässä Nízke Tatryn eli Matalan Tatran vuoret houkuttelevat nykyään vaeltajia ja hiihtäjiä. Keskiajalla seudun hopea- ja kultakaivokset tekivät Banská Štiavnicasta yhden Euroopan rikkaimmista kaupungeista, ja täällä toimi vuodesta 1762 yksi maailman vanhimmista kaivosopistoista, kauan ennen isoisän matkaa 1870-luvulla. Toisen maailmansodan aikana alueen pääkaupunki Banská Bystrica nousi vastarinnan keskukseksi: elokuussa 1944 sieltä syttyi Slovakian kansallinen nousu, Euroopan toiseksi suurin natsivastainen kansannousu, jota nykyään muistetaan suurella museolla kaupungin sydämessä. Vuoristokylien välissä elää yhä sitkeä kaivos- ja metsäperinne, ja monet pikkukaupungit tuoksuvat edelleen kylpylävedeltä – Dudincen ja Sklené Teplicen lämpimät lähteet ovat hoitaneet väsyneitä vaeltajia vuosisatoja.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-banskobystricky-a7d04f80.jpg',
+          lahde: 'Rudo Mlich, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Rudo Mlich',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Banská Štiavnica zhora.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-banskobystricky-a7d04f80.jpg',
     },
     'Bratislavský': {
       lyhyt: 'Bratislava on maailman ainoa pääkaupunki, joka rajautuu kahteen valtioon: Itävalta ja Unkari alkavat aivan kaupungin laidalta.',
       pitka: `Modernin Bratislavan siluettia hallitsee oudon näköinen Nový most eli Uusi silta, jonka yhden pylvään päällä lepää lentävän lautasen muotoinen näköalatasanne UFO. Kaupungin liepeillä, Tonavan ja Moravan jokien yhtymäkohdassa, seisovat Devínin linnan rauniot, yksi Slovakian vanhimmista linnoista ja muinainen rajapaikka, jota on vartioitu roomalaisajoista lähtien. Pohjoiseen avautuvat Pikku-Karpaattien rinteet, joilla viinitarhat kiertyvät kylästä kylään aina Trnavaan asti – Bratislava on Slovakian viinin sydän. Alue on pinta-alaltaan pienin mutta asukasta kohti rikkain kaikista maan kahdeksasta maakunnasta, ja sen halki soljuva Tonava sitoi kaupungin kauppareitteihin jo isoisän aikaan, kun höyrylaivat kulkivat Wienin ja Budapestin väliä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-bratislavsky-39e167c3.jpg',
+          lahde: 'Lukáš Perný, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Lukáš Perný',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panoramic_view_from_Bratislava_castle.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-bratislavsky-39e167c3.jpg',
     },
     'Košický': {
       lyhyt: 'Košicen Pyhän Elisabetin katedraali on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista.',
       pitka: `Košicen vanhankaupungin kivijalkojen alta löytyi vuonna 1935 lähes 3000 kultakolikon aarre, kätkettynä maan alle jo 1600-luvun kapinoiden aikaan – se on suurin koskaan Slovakiasta löydetty kulta-aarre, ja osa siitä on esillä Itä-Slovakian museossa. Kaupunki on rakentunut Hornád-joen varrelle Slovakian rautavuorten itäreunalla, lähellä sekä Unkarin että Ukrainan rajaa, ja seudulla asuu slovakkien rinnalla unkarilaisia, tšekkejä ja romaneja. Rautatie Košicesta pohjoiseen valmistui juuri isoisän matkan kynnyksellä: Košicen ja Prešovin välinen rata avattiin syksyllä 1870 ja koko yhteys Puolan rajalle asti vuonna 1872, joten vuonna 1873 juna oli vielä aivan uusi ihme näillä main. Nykyään noin kolmasosa koko maakunnan väestä asuu Košicen kaupunkiseudulla, joka valittiin vuonna 2013 Euroopan kulttuuripääkaupungiksi yhdessä Ranskan Marseillen kanssa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-kosicky-e3cee3fc.jpg',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Ingo Mehling',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:St_Elisabeth_Cathedral_Kosice.jpeg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-kosicky-e3cee3fc.jpg',
     },
     Nitriansky: {
       lyhyt: 'Nitran seutu on Slovakian lämpimin kolkka, jonka pelloilla kasvaa vehnää, ja lähes joka neljäs asukas on kansallisuudeltaan unkarilainen.',
       pitka: `Nitran yllä kohoavan Zobor-vuoren rinteillä toimi keskiajalla benediktiiniläismunkkien luostari, ja sieltä ovat peräisin Slovakian alueen kaksi vanhinta säilynyttä asiakirjaa, vuosilta 1111 ja 1113 – niissä mainitaan yli 150 joen, kylän ja alueen nimeä, monet ensimmäistä kertaa historiassa. Kaupungin juuret ulottuvat vielä kauemmas: Nitra oli 800-luvulla Suur-Määrin valtakunnan keskuksia, ja Zoborin linnavuori oli asutettu jo rautakaudella. Ympäröivä tasanko on Slovakian lämpimintä ja viljavinta seutua, ja sen pelloilta korjataan vehnää siinä missä isoisän aikaankin, joskin sadon kuljettaa nykyään rekka. Alueen eteläosassa maan alta pulppuaa lämmintä kivennäisvettä, ja Podhájskan kylpylässä ihmiset kelluvat 38-asteisessa vedessä, joka koostumukseltaan muistuttaa Kuollutta merta.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-nitriansky-73593719.jpg',
+          lahde: 'Tomáš Bartovič, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Tomáš Bartovič',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nitriansky_hrad_1.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-nitriansky-73593719.jpg',
     },
     'Prešov': {
       lyhyt: 'Korkeiden Tatrain Gerlachovský štít kohoaa 2 654 metriin – se on koko Karpaattien korkein huippu, ja sen laki katoaa usein pilviin.',
       pitka: `Korkeiden Tatrojen liepeiltä maisema laskeutuu itään kohti Šarišin seutua, missä kyliin kätkeytyy kymmeniä satojen vuosien takaisia puukirkkoja – kahdeksan niistä on Unescon maailmanperintöä, ja vanhin, Hervartovin Pyhän Fransiskus Assisilaisen kirkko, on peräisin jo 1400-luvulta. Kirkot rakensivat pääosin karpaattien rusiinit, kreikkalaiskatolinen paimen- ja metsästäjäväestö, jonka kieltä ja perinteitä kuulee alueella yhä. Pohjoisempana keskiaikainen Bardejovin kaupunki on säilyttänyt renessanssitorinsa ja muurinsa niin ehjinä, että koko vanhakaupunki on omalla Unesco-listallaan. Vuoristo on tehnyt Prešovin maakunnasta Slovakian suurimman pinta-alaltaan, vaikka isoisän aikaan monet näistä kylistä olivat vielä vaikeakulkuisia ja köyhiä vuoristoseutuja.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-presov-30ab73d3.jpg',
+          lahde: 'Michał Rawlik, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Michał Rawlik',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Market_Square_of_Bardejov.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-presov-30ab73d3.jpg',
     },
     Trenciansky: {
       lyhyt: 'Trenčínin linnan alla kalliossa on roomalaisten sotilaiden vuonna 179 kaivertama kirjoitus, joka kutsuu paikkaa nimellä Laugaricio.',
       pitka: `Alueen halki virtaa Slovakian pisin joki Váh, ja sen varrelle on noussut lämpökylpylöitä kuten Trenčianske Teplice ja Nimnica; monet lähteet kuohuivat parantavaa vettä jo isoisän aikaan 1870-luvulla, jolloin kylpymatkailu oli muodissa koko Itävalta-Unkarissa. Pohjoisempana Bojnicen linna kohoaa kuin suoraan sadusta pyöreine torneineen ja koristeellisine kaarikäytävineen – se on Slovakian rakastetuin linna, ja joka kevät sen pihalla juhlitaan kansainvälistä haamujen ja henkien festivaalia. Linnan naapurissa toimii maan vanhin ja suurin eläintarha, joka on viihdyttänyt perheitä 1950-luvulta lähtien. Trenčínin oma linna kohoaa yhä kaupungin yllä kalliolla, jonka juurella roomalaissotilaiden kaiverrus muistuttaa vielä paljon vanhemmasta ajasta, jolloin tämä oli valtakunnan pohjoisin etuvartio.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trenciansky-cfc2a7c3.jpg',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Ingo Mehling',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trencin_Castle_030.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trenciansky-cfc2a7c3.jpg',
     },
     'Trnavský': {
       lyhyt: 'Trnavaa kutsutaan Pikku-Roomaksi, koska vanhankaupungin muurien sisälle on mahtunut niin monta kirkkoa.',
       pitka: `Trnavaan perustettiin vuonna 1635 yliopisto, yksi tuon ajan Ylä-Unkarin merkittävimmistä oppilaitoksista, ja se toimi kaupungissa lähes 150 vuotta ennen kuin se siirrettiin Budaan ja lopulta Pestiin – isoisän vieraillessa seudulla 1870-luvulla yliopisto oli jo historiaa, mutta sen tiedekunnat olivat tehneet Trnavasta aikansa oppineisuuden keskuksen. Alue on Slovakian tasaisinta ja viljellyintä maata, Tonavan ja Záhorien tasankojen välissä, ja sen pelloilla ja Pikku-Karpaattien rinteillä kasvaa sekä vehnää että viiniä. Läntisessä Šaštín-Strážen kaupungissa seisoo maan tärkein pyhiinvaelluskohde, barokkinen basilika, jonne on kuljettu Slovakian suojeluspyhimyksen, Seitsemän kivun Neitsyt Marian, juhlaa viettämään jo yli 450 vuoden ajan. Basilikan pihalle kokoontuu syksyisin yhä kymmeniätuhansia pyhiinvaeltajia, aivan kuten isoisänkin aikana.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trnavsky-4f6d1181.jpg',
+          lahde: 'Pavel Briatka, Wikimedia Commons (CC BY-SA 2.5)',
+          tekija: 'Pavel Briatka',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trojičné námestie.jpg',
+          lisenssi: 'CC BY-SA 2.5',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trnavsky-4f6d1181.jpg',
     },
     'Žilinský': {
       lyhyt: 'Oravan linna kohoaa korkealla kalliolla joen yllä, ja moni vuoden 1922 kauhuklassikon Nosferatun kohtaus kuvattiin sen muureilla.',
       pitka: `Alue on Slovakian vuoristoisin maakunta, ja sen ympärillä kohoavat niin Länsi- ja Matala-Tatra kuin Malá Fatra ja Kysucen Beskydit – laaksoissa asuu yhä sitkeitä paimen- ja metsästäjäyhteisöjä, joiden perinteet elävät festivaaleissa ja käsityössä. Kysucen kapearaiteinen metsärautatie kiemurtelee yhä samoja jokivarsia, joita pitkin puuta kuljetettiin sahoille jo vuosikymmenten ajan. Yksi seudun kummallisimmista näyistä löytyy Čičmanyn kylästä, jonka tummat hirsitalot on koristeltu valkoisilla, kalkilla maalatuilla geometrisilla kuvioilla ylhäältä alas asti – tapa syntyi, kun kosteudelta suojaava kalkki muuttui vuosikymmenten myötä koristetaiteeksi, ja kylästä tuli vuonna 1977 maailman ensimmäinen suojeltu kansanrakennusreservaatti. Oravan linnan tapaan Čičmany muistuttaa siitä, että Žilinän maakunnan aarteet eivät ole vain vuorissa, vaan myös tavassa, jolla ihmiset ovat tehneet arjestaan kaunista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-zilinsky-6bf5c376.jpg',
+          lahde: 'Juraj Bednárik, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Juraj Bednárik',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Orava_Castle.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-zilinsky-6bf5c376.jpg',
     },
   },
   /*
