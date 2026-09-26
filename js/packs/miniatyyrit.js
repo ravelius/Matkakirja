@@ -1359,14 +1359,14 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    Boudhanath: 'kathmandu-boudhanath',
-    Swayambhunath: 'kathmandu-swayambhunath',
-    'Unelmien puutarha': 'kathmandu-unelmien-puutarha',
-    Pashupatinath: 'kathmandu-pashupatinath',
-    'Rani Pokhari': 'kathmandu-rani-pokhari',
-    'Kathmandun Durbar-aukio': 'kathmandu-kathmandun-durbar-aukio',
-    Dharahara: 'kathmandu-dharahara',
-    'Patanin Durbar-aukio': 'kathmandu-patanin-durbar-aukio',
+    Boudhanath: 'kathmandu-boudhanath-vari2',
+    Swayambhunath: 'kathmandu-swayambhunath-vari2',
+    'Unelmien puutarha': 'kathmandu-unelmien-puutarha-vari2',
+    Pashupatinath: 'kathmandu-pashupatinath-vari2',
+    'Rani Pokhari': 'kathmandu-rani-pokhari-vari2',
+    'Kathmandun Durbar-aukio': 'kathmandu-kathmandun-durbar-aukio-vari2',
+    Dharahara: 'kathmandu-dharahara-vari2',
+    'Patanin Durbar-aukio': 'kathmandu-patanin-durbar-aukio-vari2',
   },
   astana: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1385,14 +1385,14 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Zhenhai-torni': 'kanton-zhenhai-torni',
-    'Guangxiao-temppeli': 'kanton-guangxiao-temppeli',
-    'Chenin suvun sali': 'kanton-chenin-suvun-sali',
-    'Liurong-temppeli': 'kanton-liurong-temppeli',
-    'Huaisheng-moskeija': 'kanton-huaisheng-moskeija',
-    'Pyhän sydämen katedraali': 'kanton-pyhan-sydamen-katedraali',
-    'Kolmentoista faktorian paikka': 'kanton-kolmentoista-faktorian-paikka',
-    'Shamianin saari': 'kanton-shamianin-saari',
+    'Zhenhai-torni': 'kanton-zhenhai-torni-vari2',
+    'Guangxiao-temppeli': 'kanton-guangxiao-temppeli-vari2',
+    'Chenin suvun sali': 'kanton-chenin-suvun-sali-vari2',
+    'Liurong-temppeli': 'kanton-liurong-temppeli-vari2',
+    'Huaisheng-moskeija': 'kanton-huaisheng-moskeija-vari2',
+    'Pyhän sydämen katedraali': 'kanton-pyhan-sydamen-katedraali-vari2',
+    'Kolmentoista faktorian paikka': 'kanton-kolmentoista-faktorian-paikka-vari2',
+    'Shamianin saari': 'kanton-shamianin-saari-vari2',
   },
   yangon: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1485,13 +1485,13 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Afaq Khojan mausoleumi': 'kashgar-afaq-khojan-mausoleumi',
-    'Chini-Bagh': 'kashgar-chini-bagh',
-    'Suuri basaari': 'kashgar-suuri-basaari',
-    'Id Kahin moskeija': 'kashgar-id-kahin-moskeija',
-    Vanhakaupunki: 'kashgar-vanhakaupunki',
-    Kansanpuisto: 'kashgar-kansanpuisto',
-    'Yusuf Khass Hajibin mausoleumi': 'kashgar-yusuf-khass-hajibin-mausoleumi',
+    'Afaq Khojan mausoleumi': 'kashgar-afaq-khojan-mausoleumi-vari2',
+    'Chini-Bagh': 'kashgar-chini-bagh-vari2',
+    'Suuri basaari': 'kashgar-suuri-basaari-vari2',
+    'Id Kahin moskeija': 'kashgar-id-kahin-moskeija-vari2',
+    Vanhakaupunki: 'kashgar-vanhakaupunki-vari2',
+    Kansanpuisto: 'kashgar-kansanpuisto-vari2',
+    'Yusuf Khass Hajibin mausoleumi': 'kashgar-yusuf-khass-hajibin-mausoleumi-vari2',
   },
   lhasa: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1581,16 +1581,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Empress Market': 'karachi-empress-market',
-    'Karachin kaupungintalo': 'karachi-karachin-kaupungintalo',
-    'Denso Hall': 'karachi-denso-hall',
-    'Pyhän Kolminaisuuden katedraali': 'karachi-pyhan-kolminaisuuden-katedraali',
-    'Wazir Mansion': 'karachi-wazir-mansion',
-    'Merewetherin kellotorni': 'karachi-merewetherin-kellotorni',
-    'Karachi Cityn rautatieasema': 'karachi-karachi-cityn-rautatieasema',
-    'Frere Hall': 'karachi-frere-hall',
-    'Satamahallinnon talo': 'karachi-satamahallinnon-talo',
-    'Mohatta Palace': 'karachi-mohatta-palace',
+    'Empress Market': 'karachi-empress-market-vari2',
+    'Karachin kaupungintalo': 'karachi-karachin-kaupungintalo-vari2',
+    'Denso Hall': 'karachi-denso-hall-vari2',
+    'Pyhän Kolminaisuuden katedraali': 'karachi-pyhan-kolminaisuuden-katedraali-vari2',
+    'Wazir Mansion': 'karachi-wazir-mansion-vari2',
+    'Merewetherin kellotorni': 'karachi-merewetherin-kellotorni-vari2',
+    'Karachi Cityn rautatieasema': 'karachi-karachi-cityn-rautatieasema-vari2',
+    'Frere Hall': 'karachi-frere-hall-vari2',
+    'Satamahallinnon talo': 'karachi-satamahallinnon-talo-vari2',
+    'Mohatta Palace': 'karachi-mohatta-palace-vari2',
   },
   auckland: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
