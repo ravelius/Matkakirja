@@ -431,6 +431,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PeitaMallienAlta(int n)
         {
+            KalusteetPaneeliin();
             mallienPisteet.Clear();
             for (int i = 0; i < n; i++)
             {
@@ -448,10 +449,30 @@ namespace Matkakirja.Natiivi
                         var d = m.Piste - p;
                         if (Mathf.Abs(d.x) < koko * 0.5f && d.y > -koko * 0.85f && d.y < koko * 0.3f) { peitossa = true; break; }
                     }
+                // Löydös 167 (Laitetestaaja b23): kalusteen (pulu, kartussi, Liiku, yläpalkki) alle jäävä merkki piiloon
+                // kuten 164:n kaupunkipisteet (natiivin parannus, web ei tee tätä).
+                if (!peitossa) foreach (var r in kalusteRuudut) if (r.Contains(m.Piste)) { peitossa = true; break; }
                 float peitto = peitossa ? 0f : 1f - m.Usva;
                 if (m.El.style.opacity.value != peitto) m.El.style.opacity = peitto;
                 var poiminta = peitossa || vainNimet ? PickingMode.Ignore : PickingMode.Position;
                 if (m.El.pickingMode != poiminta) m.El.pickingMode = poiminta;
+            }
+        }
+
+        readonly List<Rect> kalusteRuudut = new List<Rect>();
+
+        /// <summary>KaupunkiMerkit.Kalusteet (ruutupikselit, y ylös) tämän kerroksen paneelin pisteiksi (y alas).</summary>
+        void KalusteetPaneeliin()
+        {
+            kalusteRuudut.Clear();
+            var lista = KaupunkiMerkit.Kalusteet?.Invoke();
+            var paneeli = juuri.panel;
+            if (lista == null || paneeli == null) return;
+            foreach (var k in lista)
+            {
+                var a = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(k.X0, Screen.height - k.Y1));
+                var b = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(k.X1, Screen.height - k.Y0));
+                kalusteRuudut.Add(Rect.MinMaxRect(a.x, a.y, b.x, b.y));
             }
         }
 
