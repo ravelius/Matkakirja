@@ -639,6 +639,12 @@ namespace Matkakirja
         /// </summary>
         public static readonly ConcurrentDictionary<string, int[]> Luokat = new ConcurrentDictionary<string, int[]>();
 
+        /// <summary>Cesiumin valmistuneet laattahaut yhteensä (Luokat [1]; ei esilatausta). Vartija 163 vertaa kehysten välillä.</summary>
+        public static long CesiumValmiita
+        {
+            get { long n = 0; foreach (var kv in Luokat) n += Volatile.Read(ref kv.Value[1]); return n; }
+        }
+
         /// <summary>
         /// Ämpärin polun luokka diagnostiikkaan: pohja (pallo/laatat), maasto, kerma (väritaso), sat/&lt;sarja&gt;
         /// (lennon pinta: bmng-bathy, s2-alkup …), muuten ensimmäinen kansio julisteet/-etuliitteen jälkeen.
