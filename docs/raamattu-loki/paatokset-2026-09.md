@@ -7783,3 +7783,7 @@ Julkaisija 01.55: TF 1.0.27 lahetetty ja ASC:ssa kasitelty, ajo 36277251380, CFB
 ## KAIUTINVIPU MAINISSA V2294 (#3366) (27.9.2026 klo 01.58)
 
 Julkaisija 01.58: #3366 Pulun kaiutinvipu mainissa v2294, testit 4413/0. #3364 (avauskortti) odottaa Pelikoodarin build-korjausta (lehtiosiot.js MODULES-listalle).
+
+## MAALEHTI-SIIRTO VALMIS PR 3367 (28/28); SISALTOKIRJURI ASTRONAUTIN ERIIN 5–6 (27.9.2026 klo 02.05)
+
+Sisaltokirjuri 02.0x: maalehti-siirto valmis 28/28 (5 poikkeusta jaivat kaupunkiin), PR #3367 Julkaisijan junaan, testit 4431/4431. Seuraavaksi astronautin kameran erat 5–6.
