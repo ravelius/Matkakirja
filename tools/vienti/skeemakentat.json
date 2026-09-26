@@ -22,10 +22,11 @@
   "1.41": "a6303d9592c8e80b",
   "1.42": "450976039e4a59be",
   "1.43": "07faa994d7f35bb1",
-  "1.44": "21ebc85d60d4db64"
+  "1.44": "21ebc85d60d4db64",
+  "1.45": "f2f2e3b5ee71c11f"
  },
  "uusin": {
-  "skeemaversio": "1.44",
+  "skeemaversio": "1.45",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -162,6 +163,8 @@
     "kaupunki",
     "kaupunkiAvain",
     "kohdekartta",
+    "kokoluokka",
+    "kokoluokkaLahde",
     "ladottu",
     "lahde",
     "lahizoom",
@@ -170,6 +173,8 @@
     "liitetytNostot",
     "lon",
     "maa",
+    "maakunta",
+    "maakuntaLahde",
     "nimi",
     "nimio",
     "paakartalla",
@@ -424,6 +429,7 @@
     "iso3",
     "nimi",
     "renkaat",
+    "salaisuus",
     "vari"
    ],
    "maalehdet": [
