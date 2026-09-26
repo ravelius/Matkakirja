@@ -61,8 +61,9 @@
  * vain niille, joiden maa vetäisi väärään suuntaan — Marseille on
  * Välimeri, ei Keski-Eurooppa.
  *
- * Ketju on siis kaupunki → alue → pohjavire, ja js/musiikkivalitsin.js
- * jatkaa sitä ylöspäin tiloilla (lehti, matkalaukku, etusivu).
+ * Ketju on siis kaupunki → alue → maanosa → pohjavire (maanosa:
+ * vaihe 2, alempana), ja js/musiikkivalitsin.js jatkaa sitä ylöspäin
+ * tiloilla (lehti, matkalaukku, kohtaaminen, etusivu).
  */
 import { musaPolku } from './media.js';
 
@@ -214,14 +215,140 @@ export function alueenMusiikki(alue) {
   return musaPolku(kaupunkiraidanTunnus(alue));
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * MAANOSAT — saapumistunnuksen ja maanosaraidan avain (vaihe 2)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Musiikkisuunnitelma 26.9.2026 (docs/raportit/musiikki-ja-
+ * aanisuunnitelma-20260926.md 1.2 ja 2.2, vaihe 2): saapumistunnus
+ * ja maanosaraita vaihtuvat MAANOSAN mukaan, ei alueen. Maanosia on
+ * kymmenen, ja jako on 1873:n matkailijan jako kuten alueillakin:
+ * Kypros kuuluu Välimereen eikä Lähi-itään, Keski-Aasian aroilla
+ * (KAZ, UZB) kuljetaan Lähi-idän karavaanireittejä.
+ *
+ * MAANOSA ON UUSI KÄSITE, MUTTA EI UUSI KAUPUNKILUETTELO. Se johdetaan
+ * samasta maatiedosta kuin alue (pakan `map.cityCountry`), kahdessa
+ * portaassa:
+ *
+ *   1. kaupungilla on ALUE (kaupunginAlue: KAUPUNGIN_ALUE, ALUEEN_MAAT)
+ *      → ALUEEN_MAANOSA. Euroopan kuusi aluetta jakautuvat kolmeen
+ *      maanosaan, joten Marseille on Välimeri myös maanosana.
+ *   2. aluetta ei ole → MAAN_MAANOSA[maa]. Tässä ovat kaikki pakkojen
+ *      maat, joilla ei ole aluetta (tests/musiikkivalitsin.test.mjs
+ *      kaatuu, jos pakasta löytyy maa ilman maanosaa).
+ *
+ * Muuten null: virtuaalipaikka ('etusivu', 'merimatka') tai
+ * tuntematon maa. Silloin ei soi tunnusta eikä maanosaraitaa.
+ *
+ * NATIIVI PEILAA TÄMÄN SELLAISENAAN (Assets/Matkakirja/Peli/Aani/
+ * AaniTaulut.cs): web on malli, ja taulut ovat tässä yhdessä
+ * paikassa juuri siksi, että ne voi kopioida rivi riviltä.
+ */
+export const MAANOSAT = [
+  'lansi-eurooppa', 'valimeri', 'ita-eurooppa', 'lahi-ita', 'saharan-etelapuoli',
+  'etela-aasia', 'ita-aasia', 'pohjois-amerikka', 'etela-amerikka', 'oseania',
+];
+
+/** Euroopan alue → maanosa (portaan 1 taulu). */
+export const ALUEEN_MAANOSA = {
+  britteinsaaret: 'lansi-eurooppa',
+  pohjola: 'lansi-eurooppa',
+  'keski-eurooppa': 'lansi-eurooppa',
+  valimeri: 'valimeri',
+  balkan: 'valimeri',
+  'ita-eurooppa': 'ita-eurooppa',
+};
+
+/** Rivit maanosittain: luettavampi kuin 89 riviä aakkosjärjestyksessä. */
+const MAANOSAN_MAAT = {
+  valimeri: ['CYP'],
+  'lahi-ita': ['ARE', 'DZA', 'EGY', 'IRN', 'IRQ', 'JOR', 'KWT', 'LBY', 'MAR', 'OMN', 'QAT',
+    'SAU', 'SDN', 'SYR', 'TUN', 'YEM', 'KAZ', 'UZB'],
+  'saharan-etelapuoli': ['AGO', 'CMR', 'COD', 'ETH', 'GHA', 'KEN', 'LBR', 'MDG', 'MLI', 'MOZ',
+    'NAM', 'NGA', 'SEN', 'SHN', 'SLE', 'SOM', 'SDS', 'TCD', 'TZA', 'UGA', 'ZAF', 'ZWE'],
+  'etela-aasia': ['AFG', 'IND', 'LKA', 'NPL', 'PAK', 'MMR'],
+  'ita-aasia': ['CHN', 'HKG', 'JPN', 'KOR', 'MNG', 'TWN', 'VNM', 'THA', 'PHL', 'IDN', 'SGP'],
+  oseania: ['AUS', 'NZL', 'FJI', 'NCL', 'NFK', 'PNG', 'SLB', 'VUT', 'TLS'],
+  'pohjois-amerikka': ['USA', 'CAN', 'MEX', 'CUB', 'GTM', 'NIC', 'PAN', 'PRI', 'BMU', 'GRL'],
+  'etela-amerikka': ['ARG', 'BOL', 'BRA', 'CHL', 'COL', 'ECU', 'FLK', 'GUF', 'PER', 'PRY',
+    'URY', 'VEN'],
+};
+
+/**
+ * Maa (ISO-3) → maanosa niille maille, joilla EI ole aluetta (portaan
+ * 2 taulu). Euroopan maat eivät ole tässä: ne kulkevat alueen kautta,
+ * jotta kaupunkipoikkeus (Marseille) pätee myös maanosaan.
+ */
+export const MAAN_MAANOSA = Object.fromEntries(Object.entries(MAANOSAN_MAAT)
+  .flatMap(([maanosa, maat]) => maat.map((maa) => [maa, maanosa])));
+
+/**
+ * Kaupungin maanosa, tai null jos sitä ei tiedetä.
+ *
+ * @param {?string} cityId laudan kaupungin id
+ * @param {?string} maa kaupungin ISO-3-maakoodi pakan cityCountry-taulusta
+ */
+export function kaupunginMaanosa(cityId, maa = null) {
+  const alue = kaupunginAlue(cityId, maa);
+  if (alue) return ALUEEN_MAANOSA[alue] ?? null;
+  if (maa && Object.hasOwn(MAAN_MAANOSA, maa)) return MAAN_MAANOSA[maa];
+  return null;
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * MAANOSARAIDAT — alueraidan varareitti (vaihe 2)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Suunnitelma 2.2: *"Nykyiset 6 alueraitaa jäävät Euroopan
+ * hienojaoksi, ja maanosaraita on niiden varareitti."* Ketju on siis
+ *
+ *   kaupungin oma kappale → ALUEraita → MAANOSAraita → pohjavire
+ *
+ * ja soitin on sama kuin alueraidalla (js/ambience-stream.js
+ * pohjavirekoneisto). Käytännössä Euroopan alueilla alueraita voittaa,
+ * ja maanosaraita kuuluu, kun alueraita puuttuu: Kypros (maa ilman
+ * aluetta) tai alueraidan 404, jolloin soittimen oma varapolku ottaa
+ * ketjun seuraavan.
+ *
+ * Tiedostonimi `musa-maanosa-<maanosa>`, eri etuliite kuin alueilla,
+ * koska Välimeri on sekä alue että maanosa: sama nimi olisi sama
+ * tiedosto kahdelle eri raidalle. Vaihe 2 tuo kaksi maanosaa; vaihe 3
+ * lisää loput riveinä tähän.
+ */
+export const MAANOSARAIDAT = {
+  valimeri: {
+    kuvaus: 'Välimeri ja Balkan: kitara ja mandoliini, klarinetti vihjaa '
+      + 'johtoaiheeseen kerran, aurinkoinen rannikko pohjaäänimaiseman alla.',
+  },
+  'lansi-eurooppa': {
+    kuvaus: 'Pohjois- ja Länsi-Eurooppa: piano, sello ja harmoni, huilu vihjaa '
+      + 'johtoaiheeseen kerran, sade ikkunassa pohjaäänimaiseman alla.',
+  },
+};
+
+/** Maanosaraidan tunnus tiedostonimeä varten: `valimeri` → `musa-maanosa-valimeri`. */
+export const maanosaraidanTunnus = (maanosa) => `musa-maanosa-${maanosa}`;
+
+/** Maanosan raidan polku, tai null jos maanosaa tai raitaa ei ole. */
+export function maanosanMusiikki(maanosa) {
+  if (!maanosa || !Object.hasOwn(MAANOSARAIDAT, maanosa)) return null;
+  return musaPolku(maanosaraidanTunnus(maanosa));
+}
+
 /**
  * Paikan raidat parhaasta alkaen: kaupungin oma kappale ensin, alueen
- * raita perään. Tyhjä lista tarkoittaa, ettei paikalla ole omaa
- * musiikkia — silloin soi pohjavire (js/musiikkivalitsin.js).
+ * raita perään ja maanosan raita alueen varareittinä. Tyhjä lista
+ * tarkoittaa, ettei paikalla ole omaa musiikkia — silloin soi
+ * pohjavire (js/musiikkivalitsin.js).
  */
 export function kaupunginRaidat(cityId, maa = null) {
-  return [kaupunginMusiikki(cityId), alueenMusiikki(kaupunginAlue(cityId, maa))]
-    .filter(Boolean);
+  return [
+    kaupunginMusiikki(cityId),
+    alueenMusiikki(kaupunginAlue(cityId, maa)),
+    maanosanMusiikki(kaupunginMaanosa(cityId, maa)),
+  ].filter(Boolean);
 }
 
 /*
@@ -233,27 +360,27 @@ export function kaupunginRaidat(cityId, maa = null) {
  * aanisuunnitelma-20260926.md 2.2 kohta 2): `musa-saapuminen` on
  * johtoaiheen kaksi ensimmäistä tahtia maanosan soittimella, one-shot
  * 8–10 s, kun pelaaja saapuu UUTEEN kaupunkiin. Soittaja on js/ui.js
- * (soitaSaapumistunnus); tämä taulu kertoo vain, millä alueella on
+ * (soitaSaapumistunnus); tämä taulu kertoo vain, millä maanosalla on
  * oma tunnuksensa.
  *
- * AVAIN ON ALUE, joka luetaan samasta maa→alue-taulusta kuin alueraita
- * (kaupunginAlue: ALUEEN_MAAT ja KAUPUNGIN_ALUE, joten Marseille kuuluu
- * Välimereen). Vaihe 1 tuo vain Välimeren; maanosaversiot (vaihe 2)
- * lisätään tähän riveinä. Alueella ilman riviä tunnusta ei soi.
+ * AVAIN ON MAANOSA (vaihe 2; vaiheessa 1 avain oli alue ja rivi vain
+ * Välimerellä). Maanosa luetaan kaupunginMaanosa-funktiolla, joten
+ * Marseille saa Välimeren tunnuksen ja Sofia (Balkan) samoin. Kaikilla
+ * kymmenellä maanosalla on tunnus; maanosaa ilman riviä ei soi.
  */
-export const SAAPUMISTUNNUKSET = {
-  valimeri: 'musa-saapuminen-valimeri',
-};
+export const SAAPUMISTUNNUKSET = Object.fromEntries(
+  MAANOSAT.map((maanosa) => [maanosa, `musa-saapuminen-${maanosa}`]),
+);
 
 /**
- * Kaupungin saapumistunnuksen polku, tai null jos kaupungin alueella
+ * Kaupungin saapumistunnuksen polku, tai null jos kaupungin maanosalla
  * ei ole tunnusta.
  *
  * @param {?string} cityId laudan kaupungin id
  * @param {?string} maa kaupungin ISO-3-maakoodi pakan cityCountry-taulusta
  */
 export function saapumistunnus(cityId, maa = null) {
-  const alue = kaupunginAlue(cityId, maa);
-  if (!alue || !Object.hasOwn(SAAPUMISTUNNUKSET, alue)) return null;
-  return musaPolku(SAAPUMISTUNNUKSET[alue]);
+  const maanosa = kaupunginMaanosa(cityId, maa);
+  if (!maanosa || !Object.hasOwn(SAAPUMISTUNNUKSET, maanosa)) return null;
+  return musaPolku(SAAPUMISTUNNUKSET[maanosa]);
 }
