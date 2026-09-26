@@ -26,9 +26,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 Ei avoimia jumeja. Fablen oma nollaus vielä kesken (96 %, odottaa pyyntöä).
 
-**Uusi postilaatikkoviesti (18:24, ilmoitettu Fablelle):** `posti/codex-fable-pulu-natiivi-karttavaisto-20260926.md` — Codexilta, Pulun karttaväistö natiivi-Unityssa valmis omaan haaraan (PR github.com/ravelius/Matkakirja-natiivi/pull/1, ei mergetty), pyytää välitystä Natiivi-UI:lle+Natiivisepälle laitearvioon.
-
-**Löydös (18:24, ilmoitettu Fablelle):** `tarkista-tyotilat.sh`:n LIVE-versio Fablen omassa checkoutissa (`/Users/Shared/Claude/Matkakirja-fable`, haara `claude/bold-ride-vow4ki`) on yhä VANHA — #3337:n korjaus origin/mainissa ei näy siellä, koska checkout ei ole pullannut mainia. Kierros näyttää siis yhä T7-rivin (nyt 2 kpl, uusi Codex-worktree `pulu-natiivi-posti` lisätty). Tunnettu ja hyväksytty (T7 = Codex, ei poikkeama) — kysytty Fablelta pitäisikö checkout päivittää skriptin osalta.
+**KÄSITELTY (Fable 18:3x):** Codex-postiviesti Pulun karttaväistöstä välitetty Natiivi-UI:lle (katselmointi+simulaattori) ja Natiivisepälle (junaan PASSin jälkeen), kirjattu lokiin. tarkista-tyotilat.sh-löydös korjattu — Fablen checkout synkattu mainiin, skripti sisältää #3337:n, vahvistin ajolla: tyhjä tulos (kunnossa).
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Omistaja poissa koneelta 26.–27.9. — ei mittausikkunaa, kortit voivat olla auki pitkään, muistutus 2 h välein (ei 10 min).
