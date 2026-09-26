@@ -7455,3 +7455,7 @@ Karttaseppa: vapaa levy seuraa swapin kokoa minuutin tahdissa (vm.swapusage 29,6
 ## OMISTAJA: 3D-NOSTOT KUVAMERKKIEN SAVYISIKSI, KAIKKI ANIMOIDAAN, YKSINKERTAISIA (26.9.2026 klo 21.40)
 
 Omistaja 21.4x: 3D-nostot samaan savyyn kuin 2D-kuvamerkit (seepia-kaiverrus) tai nahtavyyskartan kohteet; kaikki animoidaan ainakin jotenkin Tivolin logiikalla (elava kerros, ei monotoniaa); mallit mahdollisimman yksinkertaisia. Arkkityyppeja on 16 (+ Akropolis, Delfoi erikoismallit), 2D-kuvamerkkeja 11 + 3 uutta. Fable lahetti omistajalle nykyiset 16 esikatselusta (loydos160-arkkityypit-esikatselu.png 4 osana). Natiiviseppa + Linssiseppa: paletti + animaatiotaulukko → omistajan kortti ennen koodia (1.0.27-era, yhdessa liioitellun perspektiivin kanssa).
+
+## LINSSISEPPA: SCRATCHPAD 17 → 0,9 GT; PERSPEKTIIVIKAYRA SOVITTU dce8c373 (26.9.2026 klo 21.40)
+
+Linssiseppa vapautti ~16 Gt (38 .app-kopiota, 7 raakavideota). Liioitellun perspektiivin yhteinen kayra sovittu Natiivisepan kanssa (dce8c373): lippu ja nostot Natiivisepalla, elavat elementit Linssisepalla (8ceb8b97, kaannos jonossa). Web-linsseissa ei 3D-kohteita.
