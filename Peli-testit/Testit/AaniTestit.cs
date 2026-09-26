@@ -138,7 +138,8 @@ namespace Matkakirja.Peli.Testit
                 maat.TryGetValue(k, out var maa);
                 // Koepaketti v30 on vaihetta 2 vanhempi: sen ketjuissa ei ole maanosaraitaa (musa-maanosa-*),
                 // joka tulee alueraidan jälkeen. Muu ketju on sama (MusiikkiVaihe2Testit vartioi maanosan paikan).
-                Oleta.Sama(Yhdista(Tekstit(o["ketju"])), Yhdista(valitsin.Ketju(null, k, maa).Where(p => !p.Contains("/musa-maanosa-"))), k);
+                // Vaihe 3: tunnuskaupungit eivät ole koepaketin kaupunkiraidoissa, joten niiden oma kappale jää vertailusta pois.
+                Oleta.Sama(Yhdista(Tekstit(o["ketju"])), Yhdista(valitsin.Ketju(null, k, maa).Where(p => !p.Contains("/musa-maanosa-") && !Vaihe3Kaupungit.Any(x => p.Contains("/musa-kaupunki-" + x + "-")))), k);
                 ketjuja++;
             }
             Oleta.Sama(266, ketjuja, "musiikkiketjuja");
@@ -147,6 +148,8 @@ namespace Matkakirja.Peli.Testit
         // =====================================================================
         // JÄLJET 1–4: VALITSIN JA TASO
         // =====================================================================
+
+        static readonly string[] Vaihe3Kaupungit = { "pariisi", "lontoo", "rooma", "istanbul", "kairo", "pietari" };
 
         [Testi] static void KetjutKutenWeb()
         {

@@ -215,6 +215,8 @@ namespace Matkakirja.Peli
             // Vaihe 1 (web #3304): etusivulla soi isoisän johtoaihe (paketti ≤ v41 antaa vielä musa-etusivu).
             t.Paikkaraidat["etusivu"] = "musa-johtoaihe";
             t.Kaupunkiraidat.Add("ateena");
+            // Vaihe 3 (omistaja 26.9. klo 11.0x): tunnuskaupungit (web KAUPUNKIRAIDAT).
+            foreach (var k in new[] { "pariisi", "lontoo", "rooma", "istanbul", "kairo", "pietari" }) t.Kaupunkiraidat.Add(k);
             t.KaupunginAlue["marseille"] = "valimeri";
             foreach (var a in new[] { "britteinsaaret", "pohjola", "keski-eurooppa", "valimeri", "balkan", "ita-eurooppa" }) t.Alueraidat.Add(a);
             void Alue(string alue, params string[] maat) { foreach (var m in maat) t.AlueenMaat[m] = alue; }
@@ -237,7 +239,8 @@ namespace Matkakirja.Peli
             Maanosa("oseania", "AUS", "NZL", "FJI", "NCL", "NFK", "PNG", "SLB", "VUT", "TLS");
             Maanosa("pohjois-amerikka", "USA", "CAN", "MEX", "CUB", "GTM", "NIC", "PAN", "PRI", "BMU", "GRL");
             Maanosa("etela-amerikka", "ARG", "BOL", "BRA", "CHL", "COL", "ECU", "FLK", "GUF", "PER", "PRY", "URY", "VEN");
-            foreach (var m in new[] { "valimeri", "lansi-eurooppa" }) t.Maanosaraidat.Add(m);
+            // Maanosaraidat: vaihe 2 (valimeri, lansi-eurooppa) ja vaihe 3 (loput 8) = kaikki maanosat (web MAANOSARAIDAT).
+            foreach (var m in Maanosat) t.Maanosaraidat.Add(m);
             SiirtymaRaita R(string laji, string ryhma, double voima, int nousu = AaniVakiot.SiirtymaNousuMs, int lasku = AaniVakiot.SiirtymaLaskuMs)
             {
                 var tunnus = (ryhma == "linssi" ? "linssi-" : "siirtyma-") + laji + "-lyria.mp3";

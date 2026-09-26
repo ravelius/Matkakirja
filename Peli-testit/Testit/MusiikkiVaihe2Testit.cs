@@ -43,7 +43,8 @@ namespace Matkakirja.Peli.Testit
             // Alueen maat eivät ole MAAN_MAANOSASSA (kaupunkipoikkeus Marseille pätee maanosaankin).
             foreach (var m in t.AlueenMaat.Keys) Oleta.Tosi(!t.MaanMaanosa.ContainsKey(m), "alueen maa maanosataulussa: " + m);
             foreach (var m in t.MaanMaanosa.Values) Oleta.Tosi(AaniTaulut.Maanosat.Contains(m), "tuntematon maanosa " + m);
-            Oleta.Sama("[lansi-eurooppa|valimeri]", Yhdista(t.Maanosaraidat.OrderBy(x => x == "valimeri" ? 1 : 0)), "MAANOSARAIDAT");
+            // Vaihe 3: kaikilla kymmenellä maanosalla on raita.
+            Oleta.Sama(Yhdista(AaniTaulut.Maanosat.OrderBy(x => x, StringComparer.Ordinal)), Yhdista(t.Maanosaraidat.OrderBy(x => x, StringComparer.Ordinal)), "MAANOSARAIDAT");
         }
 
         /// <summary>Määrittelyn testi: jokaisella pakan cityCountry-maalla on maanosa (koepaketti ja tuotannon kopio).</summary>
@@ -121,28 +122,28 @@ namespace Matkakirja.Peli.Testit
             string K(string paikka, string maa, params string[] tilat) => Yhdista(v.Ketju(tilat, paikka, maa));
             Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-ateena"), P("musa-kaupunki-valimeri"), P("musa-maanosa-valimeri"), P("musa-pohja") }),
                 K("ateena", "GRC"), "kaupunki → alue → maanosa → pohja");
-            Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-keski-eurooppa"), P("musa-maanosa-lansi-eurooppa"), P("musa-pohja") }), K("pariisi", "FRA"));
+            Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-keski-eurooppa"), P("musa-maanosa-lansi-eurooppa"), P("musa-pohja") }), K("wien", "AUT"));
             Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-valimeri"), P("musa-maanosa-valimeri"), P("musa-pohja") }), K("marseille", "FRA"));
-            Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-ita-eurooppa"), P("musa-pohja") }), K("moskova", "RUS"), "Itä-Euroopalla ei vielä maanosaraitaa");
+            Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-ita-eurooppa"), P("musa-maanosa-ita-eurooppa"), P("musa-pohja") }), K("moskova", "RUS"), "vaihe 3: Itä-Euroopan maanosaraita alueraidan jälkeen");
             Oleta.Sama(Yhdista(new[] { P("musa-maanosa-valimeri"), P("musa-pohja") }), K("nikosia", "CYP"), "maanosaraita ilman aluetta");
-            Oleta.Sama(Yhdista(new[] { P("musa-pohja") }), K("kairo", "EGY"), "vaihe 3 tuo loput maanosat");
+            Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-kairo"), P("musa-maanosa-lahi-ita"), P("musa-pohja") }), K("kairo", "EGY"), "vaihe 3: tunnuskaupunki → maanosa → pohja");
             // Tilat ennen paikkaa; kohtaaminen viimeisenä (web TILARAIDAT: lehti ja matkalaukku vievät musiikin mukanaan).
             Oleta.Sama(Yhdista(new[] { P("musa-lehti"), P("musa-matkalaukku"), P("musa-kohtaaminen"), P("musa-kaupunki-keski-eurooppa"), P("musa-maanosa-lansi-eurooppa"), P("musa-pohja") }),
-                K("pariisi", "FRA", "kohtaaminen", "matkalaukku", "lehti"));
+                K("wien", "AUT", "kohtaaminen", "matkalaukku", "lehti"));
             // Visan aikana kohtaaminen odottaa ketjussa (web VISAN_ALLE_JAAVAT); lehti ei.
             Oleta.Sama(Yhdista(new[] { P("musa-lehti"), P("musa-kaupunki-keski-eurooppa"), P("musa-maanosa-lansi-eurooppa"), P("musa-pohja") }),
-                Yhdista(v.Ketju(new[] { "kohtaaminen", "lehti" }, "pariisi", "FRA", visaSoi: true)));
+                Yhdista(v.Ketju(new[] { "kohtaaminen", "lehti" }, "wien", "AUT", visaSoi: true)));
             // Alueraidan 404 → maanosaraita (soittimen varareitti Valitse).
-            var ketju = v.Ketju(null, "pariisi", "FRA");
+            var ketju = v.Ketju(null, "wien", "AUT");
             Oleta.Sama(P("musa-maanosa-lansi-eurooppa"), Musiikkivalitsin.Valitse(ketju, new HashSet<string> { P("musa-kaupunki-keski-eurooppa") }));
         }
 
         [Testi] static void KohtaaminenTilaraitanaVisaVoittaa()
         {
             var t = AaniTaulut.Oletus();
-            t.Maat["pariisi"] = "FRA";
+            t.Maat["wien"] = "AUT";
             var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
-            tila.Paikka("pariisi", "kaupunki");
+            tila.Paikka("wien", "kaupunki");
             string Pohja() => tila.Toive(Kanava.Pohja).Url;
             Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria.mp3") == true, "alueraita: " + Pohja());
             tila.Kohtaaminen(true);
@@ -162,7 +163,7 @@ namespace Matkakirja.Peli.Testit
             // Koukut (web visa.js): tervehdyssivu = kohtaaminen ilman visaa, kysymyssivu = visa, tulos = kohtaaminen.
             var koukut = new Aanikoukut(tila, t);
             Aanitilanne S(bool auki, bool kohtaaminen, bool odottaa) =>
-                new Aanitilanne { Valmis = true, Kaupunki = "pariisi", KysymysAuki = auki, Kohtaaminen = kohtaaminen, VisaOdottaa = odottaa };
+                new Aanitilanne { Valmis = true, Kaupunki = "wien", KysymysAuki = auki, Kohtaaminen = kohtaaminen, VisaOdottaa = odottaa };
             koukut.Paivita(S(true, true, true));
             Oleta.Tosi(!tila.VisaAuki && Pohja()?.EndsWith("/musa-kohtaaminen-lyria.mp3") == true, "tervehdyssivu: " + Pohja());
             koukut.Paivita(S(true, true, false));
@@ -181,7 +182,7 @@ namespace Matkakirja.Peli.Testit
         {
             var t = AaniTaulut.Oletus();
             var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
-            tila.Paikka("pariisi", "kaupunki");
+            tila.Paikka("wien", "kaupunki");
             string Aihe() => tila.Toive(Kanava.Aarre).Url;
             tila.TehtavanTulos(true);
             Oleta.Tosi(Aihe()?.EndsWith("/musa-ratkaisu-lyria.mp3") == true, "ratkaisu: " + Aihe());
