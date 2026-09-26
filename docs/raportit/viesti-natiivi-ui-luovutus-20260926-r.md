@@ -28,6 +28,10 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
   lepo 244/244. Myös linssit-heti (junassa) ja kortti-lehdet (Pelikoodarin merge-pyynnössä).
 - Klo 08.4x: build 20 -junassa myös offline-lepo 7d6f7bc3 (Natiiviseppä mergeää; offline-pillerin vuorottelu seisoo levossa,
   todennettu 306/306). Build 20 -junassa nosto-muste fed603b9 (juna/b13 427e1a1a).
+- Klo 09.3x: natiivi-ui/taso1-155 d262c1e2 (löydös 155: löytämätön taso 1 himmeänä kuvamerkkinä, tasot 2–3 jälkinä)
+  todennettu 9a677a78, lepo Paikallaan 0 kehystä; merge-pyyntö Natiivisepälle. Todisteet proto-3d/lokit/natiivi-ui-b20-155/.
+  Testikomennot: peli-komento.txt (peli), ui-komento.txt (rivit alkavat "ui "), komento.txt (kartta, kuva).
+  Siirtosepän siivous-korjaus 13e5bcf4 on BUILD 19:ssä → salaisuus/Attika todennettavissa.
 - Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
   laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
