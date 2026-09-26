@@ -61,3 +61,12 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
 - Opit: proto-kaanna.sh ei tulosta merge-konfliktia stdoutiin (exit 13) — katso kaannospalvelu/<aika>.log; Burst AotLinkerException oli ohimenevä.
 - SEURAAVA: Elävä kartta — nostojen kokoluokat (pääkohde/kohde/pieni) ja "unohdettu" tila (himmeä musteen jälki), maakunnan
   laskuri ja salaisuus-nosto; logiikka web+natiivi, piirto Natiiviseppä, data Siirtoseppä (skeema 1.45), GRC-taulu #3263.
+
+## 7. Lisäys 26.9. klo 04.3x
+- Build 18 -junassa: loydos149 (+vieritys), tehoste-rekisteri, linssi-aani.
+- ELÄVÄ KARTTA pelilogiikka: `pelikoodari/elava-kartta` 3ef13a97 (Peli/KarttaMuste.cs + PeliOhjain.Muste.cs, Pelitila.LoydetytNostot
+  "nostotLoydetty", Natiivi-UI:n NostoAvattu-kytkentä mukana) → merge-pyyntö Natiivisepälle. Todennettu lokit/elava-kartta/.
+  Data: skeema 1.45 (kokoluokka, maakunta) ja 1.47 (kokoelma maakuntasalaisuudet, Siirtoseppä #3285).
+  Avoinna: piirto (Natiiviseppä), kartussi (Natiivi-UI), salaisuus-kortti NostoSisalto:n "salaisuus:"-etuliite (Natiivi-UI).
+- Web-PR:t auki: #3272 musiikki- ja äänisuunnitelma, #3274 löydös 135 web, #3250 kehyksen hinta CPU.
+- Jono tyhjä → kysytty Fablelta seuraava.
