@@ -60,7 +60,7 @@ verhokoe; napakansi; Elävän kartan pallon rajapinnat. Omistajan valinnat 127/1
 Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /tmp/natiiviseppa-vienti-tulossa oli päällä
 03.45 alkaen). Worktreet (3/3 käytössä yllä olevilla haaroilla). Unity-työkopio Matkakirja-proto: puhdas master 6a65ead1.
 
-**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 622f99f3 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
+**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 541092d9 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
 132 yhdessä Natiivi-UI:n kanssa, verhokoe huntu pois, napakansi.
 
 ## Päivitys klo 04.2x
@@ -77,3 +77,7 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
   lepopiirron (tavoite build 16:n 2–3/151) → yhdistelmäkäännöksen simulaattorikierroksella `ruutu`/`pallo lepo` levossa.
   Natiivi-UI kääntää liput-144:n junan päälle ja mittaa lipun hiljaisuuden, sitten merge-pyyntö (Fable hyväksyi 144 lepoehdolla).
   Saapuminen-worktree on nyt haarassa natiiviseppa/syke-jaatyy.
+- Klo 04.3x: natiivi-ui/liput-144 fc0bbc93 junaan → juna/b13 **541092d9** (testit 278/284/300). Lepopiirto mitattu (Natiivi-UI,
+  käännös 688e1f5c, lokit/natiivi-ui-b18-lepo/merge-pyynto-144.md): kartta 247/247 kaikki UI-kerrokset 0 → Paikallaan; kartussi
+  + lippu auki Paikallaan. SHA Fablelle. Laitetestaajan kierros ja BUILD 18 vasta Fablen ohjeesta (omistajan herättyä, kiintiö).
+  Omista haaroista jäljellä vain lepo-suspend 651ad27b (A/B yhdistelmäkäännöksellä taustalla).
