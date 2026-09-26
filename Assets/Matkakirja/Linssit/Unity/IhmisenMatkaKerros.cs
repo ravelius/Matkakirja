@@ -132,7 +132,7 @@ namespace Matkakirja.Natiivi
         Tahtitaivas taivas;
         double vuosia = 300000;
         bool pito, valoissa;
-        float tahtienPeitto = 1f, valotAlkoi = -1f;
+        float tahtienPeitto = 1f, valotKulunut;
 
         public static IhmisenMatkaKerros Luo(PalloKierto kierto, IReadOnlyList<Loytopaikka> paikat, bool versio2 = false)
         {
@@ -190,18 +190,58 @@ namespace Matkakirja.Natiivi
             double nyt = Time.realtimeSinceStartupAsDouble * 1000;
             valot?.Paivita(nyt);
             vanat?.Paivita(vuosia, pito);
-            if (valoissa && taivas != null)
+            // II:n tauko (löydös 148): tähtien ajelehtiminen ja häipyminen odottavat esityksen jatkoa; I ennallaan.
+            float dt = Tehosteet != null && Tehosteet.Tauolla ? 0f : Time.unscaledDeltaTime;
+            if (taivas != null)
             {
+                // II (löydös 152): tähdet nousevat mustasta samassa feidissä kuin musta laskee (Esitys.TahtienEsiin, esityksen
+                // kello); I näyttää ne mustan alta sellaisenaan.
+                float nousu = 1f;
+                if (Versio2 && NykyinenEsitys() is { } e)
+                {
+                    nousu = (float)e.TahtienEsiin;
+                    if (nousu >= 1f && !feidiKirjattu && e.I == 0)
+                    {
+                        feidiKirjattu = true;
+                        LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: avaus: feidi päättyi, tähdet täysin (kulunut {e.Kulunut / 1000:0.00} s)");
+                    }
+                }
                 // Tähdet häipyvät, kun kartta valkenee (web: tähdet vain avausjaksossa).
-                float t = Mathf.Clamp01((Time.unscaledTime - valotAlkoi) / (float)(Esitysmatikka.ValojenMs / 1000));
-                tahtienPeitto = 1f - t;
+                if (valoissa) valotKulunut += dt;
+                float t = valoissa ? Mathf.Clamp01(valotKulunut / (float)(Esitysmatikka.ValojenMs / 1000)) : 0f;
+                tahtienPeitto = Mathf.Min(nousu, 1f - t);
             }
-            taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
+            taivas?.Paivita(dt, tahtienPeitto);
         }
+
+        bool feidiKirjattu;
+
+        /// <summary>Auki olevan ihmisen matkan esitys (II:n avauksen ajat ja tähtien nousu), null muuten.</summary>
+        static Esitys NykyinenEsitys() => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Linssi?.Esitys;
 
         public void Musta(bool paalla, double feidiMs)
         {
             LinssiOhjain.Instanssi?.Kirjaa($"esitys: musta {paalla} ({feidiMs:F0} ms)");
+            if (paalla)
+            {
+                // Uusi esitys (myös Aloita alusta): tähtitaivas alusta, muuten edellisen esityksen valot jättivät sen piiloon.
+                valoissa = false;
+                valotKulunut = 0f;
+                tahtienPeitto = 1f;
+                feidiKirjattu = false;
+                // Löydös 148 (⏮): edellisen esityksen vanat ja lamput pois. Pito on yksisuuntainen maksimi (VanaPiirto), joten
+                // ilman nollausta koko reitti jäi piirretyksi uuden esityksen alle; lamput palaavat jakso kerrallaan.
+                pito = false;
+                valot?.Alusta();
+            }
+            else if (Versio2 && NykyinenEsitys() is { } e && e.I == 0 && !e.AvausOhi)
+            {
+                // Videon ajoitus lokista (löydös 152): feidi ja zoomi alkavat samalla hetkellä.
+                var a = e.AvauksenAjat();
+                LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: avaus: feidi alkaa {e.Kulunut / 1000:0.00} s ({a.Feidi / 1000:0.00} s, " +
+                    $"päättyy {(a.Musta + a.Feidi) / 1000:0.00} s), zoomi {a.ZoomAlku / 1000:0.00} → {a.ZoomLoppu / 1000:0.00} s, " +
+                    $"Afrikka {a.Afrikka / 1000:0.00} s");
+            }
             MustaKasittelija?.Invoke(paalla, feidiMs);
             Tehosteet?.Musta(paalla, feidiMs);
         }
@@ -210,7 +250,7 @@ namespace Matkakirja.Natiivi
         {
             LinssiOhjain.Instanssi?.Kirjaa($"esitys: valot ({feidiMs:F0} ms)");
             valoissa = true;
-            valotAlkoi = Time.unscaledTime;
+            valotKulunut = 0f;
             ValotKasittelija?.Invoke(feidiMs);
             Tehosteet?.Valot(feidiMs);
         }
@@ -287,6 +327,7 @@ namespace Matkakirja.Natiivi
 
         public void Loppu()
         {
+            LinssiOhjain.Instanssi?.Kirjaa("esitys: loppu");
             LoppuKasittelija?.Invoke();
             Tehosteet?.Loppu();
         }

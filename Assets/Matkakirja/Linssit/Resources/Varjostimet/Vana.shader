@@ -112,7 +112,17 @@ Shader "Matkakirja/Vana"
             float Hulli(Jana j)
             {
                 float puoli = OnRengas(j) ? _Rengas.x + _Rengas.y : max(max(j.leveys.x, j.leveys.y), _Leveys.x);
-                return puoli + max(j.leveys.z, j.leveys.w) + _Leveys.z + 0.02;
+                float H = puoli + max(j.leveys.z, j.leveys.w) + _Leveys.z + 0.02;
+                // HEHKUN HALO (II): halo ulottuu puoliMaa × _Hehku.y:hen, mikä ylitti nelikulmion leveillä kaistoilla, ja
+                // halon reuna katkesi suoraksi. Nelikulmio kasvaa vain hehkuville janoille: rintaman lähellä (sama paino
+                // kuin fragmentissa, janan tuoreemmasta päästä) tai loppukuvassa kaikille. I:ssä _Hehku = 0: ennallaan.
+                if (!OnRengas(j) && (_Hehku.x > 0.0 || _Hehku.w > 0.0))
+                {
+                    float tuorein = min(j.aikaMeri.x, j.aikaMeri.y);
+                    float paino = _Aika.y > 0.0 ? saturate(1.0 - (tuorein - _Aika.x) / _Aika.y) : 0.0;
+                    if (_Hehku.w > 0.0 || paino > 0.0) H = max(H, puoli * _Hehku.y + _Leveys.z + 0.005);
+                }
+                return H;
             }
 
             Vali vert(uint vid : SV_VertexID)
