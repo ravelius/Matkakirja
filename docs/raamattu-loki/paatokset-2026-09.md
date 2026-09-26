@@ -7567,3 +7567,7 @@ Natiivi-UI luovutus v (d60b571e3): 174 piste-saannolla (1857e8d5) ja maakunnat-k
 ## SISALTOKIRJURI KAYNNISTETTY UUDELLEEN (LUOVUTUS -D) (26.9.2026 klo 22.54)
 
 Aloitusviesti lahetetty tyhjaan sessioon 22.5x: jono 178 supistettu (11 + Santarem/Broome), IRL-havainnekuva, astronautin erat 2–4.
+
+## 178 VALMIS PR 3353 (79 POIS, 70 KAUPUNGIN NOSTOIHIN); 177 TODENNETTU (26.9.2026 klo 22.57)
+
+Pelikoodari: #3353 paivitetty omistajan 22.4x-malliin — kartalla rakennus/aukio/luonto (Bund, Privoz aukioita), 79 kohdetta pois, 70 tarinakohdetta kaupungin nostoissa (liuska), natiiviin kartalla:false; testit 4408, 953/3985 vihreat. 177 todennettu simulaattorissa (proto-3d/lokit/loydos177/kooste-177.png: Madrid + 3 herannytta maakuntaa → Uusi peli → Lontoo 300 £, tyhjaa); merge-pyynto Natiivisepalla (2769b6a8 + Natiivi-UI 5b7994a7). Lukijoilta-avain: ero ei pysy, poistetaan kuten web.
