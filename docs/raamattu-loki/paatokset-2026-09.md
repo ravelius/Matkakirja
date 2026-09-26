@@ -7419,3 +7419,7 @@ Omistaja 21.3x: paras ratkaisu olisi 3D-mallit jarkevina myos ylhaalta; toivoo v
 ## VERHO 4,7–8,0 s EI REGRESSIO VAAN MACIN KUORMA (LOAD 353) (26.9.2026 klo 21.13)
 
 Natiiviseppa: build 25 samassa simulaattorissa nyt 6,3/8,0/2,8 s, 1.0.26-juna 5,0/3,3/2,6 s — vaihtelu 2,6–8,0 s kaikissa, kytkimet eivat erota; Macin load average ~353 (Z10-poltto, Playwright/Chromium, node). Fable: verhoportti mitataan laitteella (iPad Pro 13, 3× kylma, ≤ 3,5 s); simulaattorin verhoajat hylataan polton aikana.
+
+## 170 TOISTETTU SIMULAATTORISSA; SISALTO-VAIHTUI-TAPAHTUMA VALMIS 42b790c2 (26.9.2026 klo 21.18)
+
+Siirtoseppa: ennen-tilanne toistuu (b25, v157 kaytossa, v182 varastossa): Attikan kortti kuvaton myos paivityksen jalkeen samassa istunnossa, kuva vasta uudelleenkaynnistyksessa (kuvat proto-3d/lokit/siirtoseppa-paivityspolku/ennen/). Korjaus siirtoseppa/sisalto-vaihtui 42b790c2: PakettiPaivitys.SisaltoVaihtui(versio, muuttuneet) + Sisalto.VaihdaVersio — uudempi valmis versio kayttoon heti, palautus odottaa kaynnistysta; testit 7/7. Natiivi-UI tekee kuuntelijan valimuisteihin; jalkeen-kierros ja 1.0.26-juna sen jalkeen.
