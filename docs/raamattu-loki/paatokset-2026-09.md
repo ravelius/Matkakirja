@@ -7247,3 +7247,7 @@ Sisaltokirjuri: luovutus viesti-sisaltokirjuri-luovutus-20260926-c.md mainissa 1
 ## Z10 204/419 KLO 19.17, 3,4 SHARDIA/MIN (26.9.2026 klo 19.17)
 
 Karttaseppa: v4 8 ytimella 3,4 shardia/min, free 77 %, ei pysaytyksia. Osa 1 valmis n. 20.20, maakunnat alkavat automaattisesti peraan. Pelikoodari: build-questions.mjs-yleistys PR #3339 (koeyhdistys Sisaltokirjurin haaran kanssa 87 kohdetta, 4403/4403).
+
+## ASTRONAUTIN KAMERA ERA 1 PR 3340 JUNAAN (26.9.2026 klo 19.21)
+
+Pelikoodari: #3339 (build-questions.mjs lukee kaikki qa-*.json) mainissa; Sisaltokirjurin era 1 = PR #3340 (23 kaupunkia, kohteita 64 → 87, testit vihreat) rebasoitu sen paalle. Fable: Julkaisijan junaan ja versioon kun vihrea. Sisaltokirjuri jatkaa maakunta-era 2:lla; astronautin erat 2–4 sen jalkeen.
