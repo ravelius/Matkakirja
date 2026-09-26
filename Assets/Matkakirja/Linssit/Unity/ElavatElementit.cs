@@ -4,6 +4,7 @@
 //   kokeilu 1  Zaandamin kolme tuulimyllyä (vain siivet pyörivät, 7–9 s/kierros)
 //   kokeilu 2  Tivolin ketjukaruselli Kööpenhaminassa (katos 10 s/kierros, istuimet keinuvat ulospäin aaltoillen, lamput)
 //   kokeilu 3  Pariisin kiinnitetty ilmapallo Tuileries'ssa (nousu ja lasku 24 s, kori heiluu 5 s, köysi vintturiin)
+//   kokeilu 4  Venetsian gondolit Canal Grandella (kaksi vastakkaisiin suuntiin, matka 30 s airon tahdissa, odotus päissä)
 //
 // Mallit ovat proseduraalisia low-poly-malleja löydöksen 160 paletilla (MalliVarit) ja varjostimella
 // Matkakirja/Linssit/Malli. Natiivisepän Blender-mallit voivat korvata ne myöhemmin (sama juuri ja sama pyörivä osa).
@@ -103,6 +104,20 @@ namespace Matkakirja.Natiivi
                 // Suunta: tuuli lounaasta, joten pallo nojaa koilliseen (+z).
                 PohjaSade = 0.7f, Haalistus = 0.25f, Suunta = 45f,
                 Animoi = IlmapalloGeometria.Animoi,
+            },
+            new Aihe
+            {
+                // Gondolit: soutavat 90–200 s, ja joskus molemmat lepäävät 10–25 s; soututahti vaihtelee ±10 %. Omat
+                // odotukset päissä ovat GondoliGeometria.Animoissa (laiturissa odotus, rakenteellinen tauko).
+                Vaihtelu = i => new Vaihtelu(409 + i) { KayMinS = 90, KayMaxS = 200, SeisooMinS = 10, SeisooMaxS = 25, TaukoTod = 0.25, Puuska = 0.1 },
+                Nimi = "gondolit", Paikka = new LatLon(45.4380, 12.3358), KokoPt = 56f,   // Canal Grande, Rialto
+                // Ylös Venetsian pisteestä kuten Pariisin pallo (pistettä ei peitetä).
+                Yksilot = new[] { (0f, 44f, 0f) },
+                Runko = GondoliGeometria.Kaupunki, Roottori = GondoliGeometria.Rialto, Lapsi = GondoliGeometria.Gondoli,
+                LastenPaikat = new Vector3[2],
+                // Suunta 0: kaavan +z on pohjoinen, joten S-mutka on oikein päin.
+                PohjaSade = 0.85f, Haalistus = 0.25f, Suunta = 0f,
+                Animoi = GondoliGeometria.Animoi,
             },
         };
 
@@ -778,6 +793,189 @@ namespace Matkakirja.Natiivi
             r.Tanko(Vector3.zero, Vector3.down, 0.004f, MalliVarit.Varjo);
             var m = r.Mesh("Ilmapallo: köysi");
             return m;
+        }
+    }
+
+    /// <summary>
+    /// Proseduraalinen Venetsia-vinjetti (kokeilu 4; selvitys: kaksi gondolia Canal Grandella vastakkaisiin suuntiin, airo
+    /// keinuu 3 s). Kaavamainen käänteinen S-mutka (oma käyrä, ei johdettu kartta-aineistosta): luoteesta itään Rialtolle,
+    /// volta lounaaseen ja itään San Marcon altaaseen. Runko (Kaupunki): vesi, rantakadut ja matalat palatsit kanavan
+    /// varrella. Roottori (Rialto) on paikallaan pysyvä silta. Lapset: kaksi gondolia, jotka kulkevat kanavaa edestakaisin
+    /// 30 s:n matkoin (smootherstep ja airon vedot 3 s:n välein), odottavat päissä 7 / 11 s ja keinuvat vedon tahdissa.
+    /// </summary>
+    public static class GondoliGeometria
+    {
+        const float Leveys = 0.07f, Ranta = 0.014f, VesiY = 0.006f, RantaY = 0.012f, MatkaS = 30f, VetoS = 3f;
+        static readonly Vector2[] Ohjaus =
+        {
+            new(-0.62f, 0.06f), new(-0.38f, 0.17f), new(-0.13f, 0.24f), new(0.08f, 0.16f), new(0.10f, -0.02f),
+            new(-0.06f, -0.16f), new(0.04f, -0.27f), new(0.32f, -0.29f), new(0.58f, -0.22f),
+        };
+        static Vector3[] polku;
+        static float[] matkat;
+
+        static void Varmista()
+        {
+            if (polku != null) return;
+            // Catmull–Rom ohjauspisteiden läpi, 12 näytettä väliä kohden; kaarenpituus taulukkoon.
+            var p = new List<Vector3>();
+            for (int i = 0; i < Ohjaus.Length - 1; i++)
+            {
+                Vector2 a = Ohjaus[Mathf.Max(0, i - 1)], b = Ohjaus[i], c = Ohjaus[i + 1], d = Ohjaus[Mathf.Min(Ohjaus.Length - 1, i + 2)];
+                for (int k = 0; k < 12; k++)
+                {
+                    float t = k / 12f, t2 = t * t, t3 = t2 * t;
+                    var q = 0.5f * (2 * b + (c - a) * t + (2 * a - 5 * b + 4 * c - d) * t2 + (3 * b - a - 3 * c + d) * t3);
+                    p.Add(new Vector3(q.x, 0, q.y));
+                }
+            }
+            var viim = Ohjaus[Ohjaus.Length - 1];
+            p.Add(new Vector3(viim.x, 0, viim.y));
+            polku = p.ToArray();
+            matkat = new float[polku.Length];
+            for (int i = 1; i < polku.Length; i++) matkat[i] = matkat[i - 1] + Vector3.Distance(polku[i - 1], polku[i]);
+        }
+
+        /// <summary>Piste ja suunta kanavan osuudella u (0–1) kaarenpituuden mukaan.</summary>
+        static (Vector3 p, Vector3 suunta) Kohta(float u)
+        {
+            Varmista();
+            float s = Mathf.Clamp01(u) * matkat[matkat.Length - 1];
+            int i = 1;
+            while (i < matkat.Length - 1 && matkat[i] < s) i++;
+            float v = Mathf.InverseLerp(matkat[i - 1], matkat[i], s);
+            var d = polku[i] - polku[i - 1];
+            return (Vector3.Lerp(polku[i - 1], polku[i], v), d.sqrMagnitude > 1e-10f ? d.normalized : Vector3.forward);
+        }
+
+        static float Pehmea(float x) { x = Mathf.Clamp01(x); return x * x * x * (x * (x * 6 - 15) + 10); }
+
+        /// <summary>
+        /// Gondolin i osuus kanavalla hetkellä t (edestakaisin): matka 30 s ja odotus päissä (7 / 11 s). Airon vedot:
+        /// aika etenee (1 − 0,35 cos 2πt/3)-painolla, joten vauhti sykkii vedon tahdissa mutta ei koskaan pysähdy.
+        /// </summary>
+        public static (float u, bool liikkuu, float veto) Osuus(int i, float t)
+        {
+            float odotus = i == 0 ? 7f : 11f, jakso = 2 * (MatkaS + odotus);
+            float tt = Mathf.Repeat(t + i * 19f, jakso);
+            bool paluu = tt >= MatkaS + odotus;
+            float m = paluu ? tt - MatkaS - odotus : tt;
+            if (m >= MatkaS) return (paluu == (i == 0) ? 0.06f : 0.94f, false, 0);
+            float tau = (m - 0.35f * VetoS / (2 * Mathf.PI) * Mathf.Sin(2 * Mathf.PI * m / VetoS)) / MatkaS;
+            float u = Mathf.Lerp(0.06f, 0.94f, Pehmea(tau));
+            // Gondoli 1 lähtee vastakkaisesta päästä.
+            bool eteen = paluu == (i == 1);
+            return (eteen ? u : 1 - u, true, Mathf.Sin(2 * Mathf.PI * m / VetoS));
+        }
+
+        public static void Animoi(Transform silta, Transform[] gondolit, float t, float nopeus)
+        {
+            silta.localPosition = Vector3.zero;
+            silta.localRotation = Quaternion.identity;
+            if (gondolit == null) return;
+            for (int i = 0; i < gondolit.Length; i++)
+            {
+                var (u, liikkuu, veto) = Osuus(i, t);
+                var (p, suunta) = Kohta(u);
+                // Oikeanpuoleinen liikenne: kumpikin pysyy kulkusuuntaansa nähden oikealla, joten ne ohittavat toisensa.
+                var (_, perus) = Kohta(Mathf.Clamp(u + 0.01f, 0, 1));
+                bool eteen = Osuus(i, t + 0.05f).u >= u;
+                var kulku = eteen ? perus : -perus;
+                if (!liikkuu) kulku = i == 0 ? suunta : -suunta;
+                var oikea = Vector3.Cross(Vector3.up, kulku).normalized;
+                gondolit[i].localPosition = p + oikea * (Leveys * 0.22f) + Vector3.up * VesiY;
+                // Keinunta vedon tahdissa (1,5° kallistus, 0,8° nokka), laiturissa hiljainen maininki.
+                float n = nopeus * nopeus * (3 - 2 * nopeus);
+                float rulla = liikkuu ? 1.5f * veto * n : 0.5f * Mathf.Sin(t * 0.9f + i);
+                gondolit[i].localRotation = Quaternion.LookRotation(kulku, Vector3.up) * Quaternion.Euler(0.8f * veto * n, 0, rulla);
+            }
+        }
+
+        public static Mesh Kaupunki()
+        {
+            Varmista();
+            var r = new MalliRakenne();
+            Color vesi = Color.Lerp(MalliVarit.Sage, MalliVarit.Valo, 0.25f);
+            // Vesi ja rantakadut nauhoina polun normaalin suuntaan.
+            for (int i = 1; i < polku.Length; i++)
+            {
+                Vector3 a = polku[i - 1], b = polku[i];
+                Vector3 na = Normaali(i - 1), nb = Normaali(i);
+                Nauha(r, a, b, na, nb, -Leveys / 2, Leveys / 2, VesiY, vesi);
+                Nauha(r, a, b, na, nb, Leveys / 2, Leveys / 2 + Ranta, RantaY, MalliVarit.Pinta);
+                Nauha(r, a, b, na, nb, -Leveys / 2 - Ranta, -Leveys / 2, RantaY, MalliVarit.Pinta);
+            }
+            // Palatsit: matalat laatikot vuorotellen rannoilla, katolla tummempi sävy (tasavarjostus erottaa).
+            for (int k = 0; k < 18; k++)
+            {
+                float u = 0.04f + 0.92f * k / 17f;
+                var (p, suunta) = Kohta(u);
+                var n = Vector3.Cross(Vector3.up, suunta).normalized;
+                float puoli = k % 2 == 0 ? 1 : -1, h = 0.018f + 0.012f * ((k * 7) % 3);
+                var keski = p + n * puoli * (Leveys / 2 + Ranta + 0.022f) + Vector3.up * (RantaY + h);
+                var q = Quaternion.LookRotation(suunta, Vector3.up);
+                Palatsi(r, keski, q, new Vector3(0.02f, h, 0.024f), k % 3 == 0 ? MalliVarit.Valo : MalliVarit.Pinta);
+            }
+            return r.Mesh("Venetsia: kanava");
+        }
+
+        static Vector3 Normaali(int i)
+        {
+            var d = polku[Mathf.Min(polku.Length - 1, i + 1)] - polku[Mathf.Max(0, i - 1)];
+            return Vector3.Cross(Vector3.up, d).normalized;
+        }
+
+        static void Nauha(MalliRakenne r, Vector3 a, Vector3 b, Vector3 na, Vector3 nb, float o0, float o1, float y, Color c)
+        {
+            var yy = Vector3.up * y;
+            r.Nelio(a + na * o0 + yy, a + na * o1 + yy, b + nb * o1 + yy, b + nb * o0 + yy, c);
+        }
+
+        /// <summary>Kierretty laatikko (palatsi): sivut värillä c, katto Varjo-sävyllä.</summary>
+        static void Palatsi(MalliRakenne r, Vector3 k, Quaternion q, Vector3 h, Color c)
+        {
+            Vector3 x = q * new Vector3(h.x, 0, 0), y = new Vector3(0, h.y, 0), z = q * new Vector3(0, 0, h.z);
+            r.Nelio(k - x - y + z, k + x - y + z, k + x + y + z, k - x + y + z, c);
+            r.Nelio(k + x - y - z, k - x - y - z, k - x + y - z, k + x + y - z, c);
+            r.Nelio(k - x - y - z, k - x - y + z, k - x + y + z, k - x + y - z, Color.Lerp(c, MalliVarit.Varjo, 0.25f));
+            r.Nelio(k + x - y + z, k + x - y - z, k + x + y - z, k + x + y + z, Color.Lerp(c, MalliVarit.Varjo, 0.25f));
+            r.Nelio(k - x + y + z, k + x + y + z, k + x + y - z, k - x + y - z, Color.Lerp(MalliVarit.TerrakottaHimmea, MalliVarit.Varjo, 0.3f));
+        }
+
+        /// <summary>Rialton silta kanavan poikki (paikallaan; Aiheen pyörivä osa, joka ei pyöri).</summary>
+        public static Mesh Rialto()
+        {
+            var r = new MalliRakenne();
+            var (p, suunta) = Kohta(0.36f);
+            var q = Quaternion.LookRotation(Vector3.Cross(Vector3.up, suunta), Vector3.up);
+            float pituus = Leveys / 2 + Ranta + 0.006f;
+            Palatsi(r, p + Vector3.up * (RantaY + 0.008f), q, new Vector3(0.014f, 0.008f, pituus), MalliVarit.Valo);
+            return r.Mesh("Venetsia: Rialto");
+        }
+
+        /// <summary>Gondoli: tumma kapea runko (nokka ja perä koholla), terrakotta-katos ja gondolieeri perässä; +z eteen.</summary>
+        public static Mesh Gondoli()
+        {
+            var r = new MalliRakenne();
+            Color runko = new Color(0.20f, 0.17f, 0.13f), kansi = new Color(0.27f, 0.23f, 0.18f);
+            const float L = 0.075f, W = 0.011f;
+            // Runko viidellä poikkileikkauksella: leveys kapenee päitä kohti ja reuna nousee.
+            var z = new[] { -L, -L * 0.6f, 0f, L * 0.6f, L };
+            var w = new[] { 0.001f, W * 0.8f, W, W * 0.8f, 0.001f };
+            var yy = new[] { 0.014f, 0.008f, 0.007f, 0.008f, 0.018f };
+            for (int i = 1; i < z.Length; i++)
+            {
+                Vector3 a0 = new(-w[i - 1], yy[i - 1], z[i - 1]), a1 = new(w[i - 1], yy[i - 1], z[i - 1]);
+                Vector3 b0 = new(-w[i], yy[i], z[i]), b1 = new(w[i], yy[i], z[i]);
+                Vector3 alaA = new(0, 0, z[i - 1] * 0.9f), alaB = new(0, 0, z[i] * 0.9f);
+                r.Nelio(a0, a1, b1, b0, kansi);                 // kansi
+                r.Nelio(alaA, a0, b0, alaB, runko);             // kyljet
+                r.Nelio(a1, alaA, alaB, b1, runko);
+            }
+            r.Laatikko(new Vector3(0, 0.013f, 0.004f), new Vector3(0.006f, 0.004f, 0.012f), MalliVarit.TerrakottaHimmea);   // katos
+            r.Laatikko(new Vector3(0, 0.02f, -0.05f), new Vector3(0.003f, 0.009f, 0.003f), runko);                          // gondolieeri
+            r.Tanko(new Vector3(0.006f, 0.026f, -0.05f), new Vector3(0.016f, 0.0f, -0.03f), 0.0012f, runko);                // airo
+            return r.Mesh("Venetsia: gondoli");
         }
     }
 }
