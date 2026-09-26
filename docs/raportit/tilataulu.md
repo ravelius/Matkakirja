@@ -2,29 +2,29 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 09:16 EEST
+**Päivitetty:** 2026-09-26 09:23 EEST
 
 ## 1) Sessiot
 
-**TILINVAIHTO HAVAITTU 09:16 (Postivahti):** kaikki 25.9. id:t "not found" (vanha tili), get_usage "self" näyttää viikko (all models) 0 %, viikko (Fable) 1 %, 5 h 2 % — uusi tili. `list_sessions` löytää vain 3 sessiota tällä tilillä: Fable, Julkaisija, Natiiviseppä. Loput 7 roolia (Natiivi-UI, Linssiseppä, Sisältökirjuri, Laitetestaaja, Siirtoseppä, Pelikoodari, Karttaseppä) puuttuvat kokonaan — eivät nollattuja, vaan olemattomia tällä tilillä. Ilmoitettu Fablelle.
+**TILINVAIHTO klo 09.0x — kaikki 10 roolisessiota luotu uudelleen (Fable 09.12–09.22).** Uusi tili: viikko (all models) 1 %, viikko (Fable) 2 %, 5 h 4 % klo 09.23 (vauhti lasketaan seuraavalla kierroksella, liian vähän dataa nyt).
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
 | Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 16% | running | — |
-| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 10% | running | — |
-| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 10% | running, RC päällä | — |
-| Natiivi-UI | — | — | **puuttuu** | Fable luo uudelleen |
-| Linssiseppä | — | — | **puuttuu** | Fable luo uudelleen |
-| Sisältökirjuri | — | — | **puuttuu** | Fable luo uudelleen |
-| Laitetestaaja | — | — | **puuttuu** | Fable luo uudelleen |
-| Siirtoseppä | — | — | **puuttuu** | Fable luo uudelleen |
-| Pelikoodari | — | — | **puuttuu** | Fable luo uudelleen |
-| Karttaseppä | — | — | **puuttuu** | Fable luo uudelleen |
-| Postivahti (self) | (uusi tili, get_usage "self") | 9% | running | tämä taulu; viikko 0–1 %, 5 h 2 %, swap 5,7 Gt, levy 120 Gt vapaana; juna: KÄÄNNETTY aed733c9 09:13 |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 12% | running | tämä taulu |
+| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 10% | idle | — |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 10% | idle, RC päällä | — |
+| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | ? | running, RC päällä | — |
+| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | ? | idle | — |
+| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | ? | running | — |
+| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | ? | idle | — |
+| Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | ? | idle | — |
+| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | ? | running | PR #3304 |
+| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | ? | running | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-**09:16: TILINVAIHTO — ks. kohta 1.** Viikko/5h-rajat (85/98 %) koskevat nyt uutta tiliä, laskuri alkaa alusta. Vanhan tilin luovutukset (build 19, 96 %, lepokäsky-suunnitelma) jäivät historiaan; Fable päättää tarvitseeko 7 puuttuvaa roolia luoda uudelleen samalla worktree-tilalla.
+**09:23: TILINVAIHTO valmis — kaikki 10 roolisessiota luotu (ks. kohta 1).** Viikko/5h-rajat (85/98 %) koskevat nyt uutta tiliä, laskuri alkaa alusta. Vanhan tilin luovutukset (build 19, 96 %) jäivät historiaan.
 
 **08.3x (vanha tili): Build 19 TestFlightissa 1.0.19 (ajo 36220773751, proto 41dd79c7), omistajalle pushattu (Fable). Fablen luovutus -b päivitetty (16c165c3e).**
 
@@ -56,9 +56,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 2 % (uusi tili, nollautuu 10:59 UTC). extraUsage pois päältä. **Viikko (kaikki mallit): 0 %.** **Viikko (Fable):** 1 %.
+- **5 h -kiintiö:** 4 % (uusi tili, nollautuu 10:59 UTC = 13:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 1 %.** **Viikko (Fable):** 2 %.
 - **Levy:** 120 Gt vapaana (Fablen hälytysraja 80 Gt). **Swap:** 5,7 Gt / 7 Gt (hälytys >16 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 33 kpl.
 - **Simulaattorit boottina:** 1 (iPhone 17, max 4 päivällä). coreaudiod 0 %. **Chrome-GPU-prosesseja:** 0.
-- **Konteksti:** Fable 16 %, Julkaisija 10 %, Natiiviseppä 10 %. Ei ylityksiä. Loput 7 roolia puuttuu (ks. kohta 1).
+- **Konteksti:** Fable 16 %, Postivahti 12 %, Julkaisija 10 %, Natiiviseppä 10 %, muut ei mitattu tällä kierroksella. Ei ylityksiä.
 - **Juna:** proto-kaanna.sh ei käynnissä juuri nyt; viimeisin KÄÄNNETTY aed733c9 09:13, ei hälytystä.
 - **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
