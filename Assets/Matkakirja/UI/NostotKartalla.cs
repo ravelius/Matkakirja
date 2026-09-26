@@ -125,8 +125,8 @@ namespace Matkakirja.Natiivi
 
         // Web js/pallolauta/nostot.js:398 NOSTON_MITTA (8,5 / 11), fokusnosto-symbolit.js NOSTOSYM_NIMIO_KOKO 11,
         // NOSTOSYM_MINI_RUUTU 7,4, NOSTOSYM_PISTE_R 3,4, NOSTOSYM_NIMIO_X 8,9, NOSTOSYM_NIMIO_Y 0,36 × 11,
-        // NOSTOSYM_KUVAMERKIN_KERROIN 1,6, NOSTON_TASO1_KERROIN 1,3, kaupunki 11,5 / 8,5; tyyppimerkin kerroin 4
-        // NostoSaannot.KuvamerkkiKaytossa (löydös 125).
+        // NOSTOSYM_KUVAMERKIN_KERROIN 1,6, NOSTON_TASO1_KERROIN 1,3, kaupunki 11,5 / 8,5; tyyppimerkin kerroin 2,5
+        // (0,7-kokoisena 4:ään asti) NostoSaannot.KuvamerkkiKaytossa / KuvamerkkiPieni (löydökset 125 ja 155).
         const float NostonMitta = 8.5f / 11f, NimioK = 11f, MiniRuutu = 7.4f, NimioX = 8.9f, NimioY = 0.36f * 11f,
             KuvamerkinKerroin = 1.6f, Taso1Kerroin = 1.3f, KaupunginKerroin = 11.5f / 8.5f,
             NimioMerkkeja = 18f, Nousu = 0.891f, Hystereesi = 6f;
@@ -745,7 +745,10 @@ namespace Matkakirja.Natiivi
             bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
             bool kuvamerkki = !ryhma && loydetty && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
-            m.Ruutu = MiniRuutu * (m.Taso1 && kuvamerkki ? KuvamerkinKerroin : 1f);
+            // Ruudun kerroin (web nostot.js ruudunKerroin): ykköstason kuvamerkki 1,6, muu kuvamerkki 0,7 kertoimilla
+            // 2,5–4 (löydös 155), muuten 1.
+            m.Ruutu = MiniRuutu * (!kuvamerkki ? 1f : m.Taso1 ? KuvamerkinKerroin
+                : NostoSaannot.KuvamerkkiPieni(s.Taso, kerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
             string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);
