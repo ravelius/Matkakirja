@@ -16,8 +16,11 @@ namespace Matkakirja
     /// </summary>
     public sealed partial class Symbolimallit
     {
-        static readonly Color KsKivi = Hex(0xefe4cc), KsKivi2 = Hex(0xe8dbbf), KsKivi3 = Hex(0xf4ecda), KsRaunio = Hex(0xdccdab);
-        static readonly Color KsPohja = Hex(0xe3d4b2), KsMuste = Hex(0x3b2f22), KsSeepia = Hex(0x8a6a44);
+        /// <summary>Kärkialfa 0 = Symbolimalli-varjostimen seepiaramppi (paperi → seepia → muste valoisuuden mukaan), kuten
+        /// 2D-kuvamerkin kaiverrus; alfa 1 näyttäisi kärkivärin sellaisenaan (laitteella harmahtava, 27.9. klo 01.2x).</summary>
+        static Color Ramppi(int rgb) { var c = Hex(rgb); c.a = 0f; return c; }
+        static readonly Color KsKivi = Ramppi(0xefe4cc), KsKivi2 = Ramppi(0xe8dbbf), KsKivi3 = Ramppi(0xf4ecda), KsRaunio = Ramppi(0xdccdab);
+        static readonly Color KsPohja = Ramppi(0xe3d4b2), KsMuste = Ramppi(0x3b2f22), KsSeepia = Ramppi(0x8a6a44);
         /// <summary>Sauman leveys (mallin yksiköissä): kuvamerkin musteviiva ≈ 2 px 128:sta.</summary>
         const float KsSauma = 0.022f;
 
@@ -82,7 +85,7 @@ namespace Matkakirja
             r.NelioUlos(V(a - n), V(b - n), V(b + n), V(a + n), Vector3.back, KsMuste);
         }
 
-        static readonly Color KvLumi = Hex(0xf8f4ea), KvLumiVarjo = Hex(0xe6e0d2), KvHarjanne = Hex(0xeadcbd), KvRinne = Hex(0xcfb88e), KvKuru = Hex(0xa98a5c);
+        static readonly Color KvLumi = Ramppi(0xf8f4ea), KvLumiVarjo = Ramppi(0xe6e0d2), KvHarjanne = Ramppi(0xeadcbd), KvRinne = Ramppi(0xcfb88e), KvKuru = Ramppi(0xa98a5c);
 
         /// <summary>Toistettava kohina −1…1 (kokonaisluvuista, ei allokaatioita).</summary>
         static float KvKohina(int a, int b)
