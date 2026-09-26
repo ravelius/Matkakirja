@@ -7231,3 +7231,7 @@ Natiivi-UI: Codexin PR ravelius/Matkakirja-natiivi#1 (303a32ec) PASS iPhone 17 +
 ## TF 1.0.25 ULKONA 18.51 (26.9.2026 klo 18.52)
 
 Julkaisija: TF 1.0.25 lahetetty ja ASC:ssa kasitelty, ajo 36252890020, CFBundleVersion 202609261542, proto 31fd6d5f, laskuri 25. Sisalto: 160 arkkityypit + laikkapiilotus, fonttilammitys-b + verho (kylma kaynnistys 2,1–2,2 s). Push omistajalle 18.5x. 1.0.26-juna alkaa: Pulun karttavaisto (blink-korjaus), laattaesilataus 2, Pariisin ilmapallo, S10-profilointi.
+
+## PULUN KARTTAVAISTO 1.0.26-JUNASSA c39797f9 (26.9.2026 klo 18.59)
+
+Natiiviseppa: Codexin 303a32ec + Natiivi-UI:n Sano-korjaus = c39797f9 junassa juna/b13 eb73863a ilman ristiriitoja; kaannos 75388de2 asennettu 18.58 Laitetestaajan ja pariteetin simulaattoreihin. Laitetodennus iPad Pro 13:lla (kurkistuksen rajaus, 5 paluuta, vahennetty liike); iPhone- ja iPad Pro 11 -mittaus odottaa kytkentaa. Merge- ja asennustila ilmoitettu, laitetila tulossa.
