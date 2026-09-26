@@ -75,6 +75,8 @@ namespace Matkakirja.Natiivi
             /// <summary>Ryhmän jäsenet (null = yksittäinen nosto).</summary>
             public List<NostoKerros.Nosto> Ryhma;
             public Vector2 Piste;
+            /// <summary>Horisonttiusvan peitto 0…1 (löydös 153); läpinäkyvyys asetetaan PeitaMallienAlta:ssa.</summary>
+            public float Usva;
             /// <summary>Mitoitus tältä kehykseltä: mitta (px / yksikkö), ikoniruudun puolikas yksikköinä, prioriteetti.</summary>
             public float Mitta, Ruutu, Paino;
             public bool Kiintea, Taso1;
@@ -410,13 +412,47 @@ namespace Matkakirja.Natiivi
                 m.El.style.translate = liikkuu ? new Translate(m.Piste.x, m.Piste.y)
                     : new Translate(Mathf.Round(m.Piste.x), Mathf.Round(m.Piste.y));
                 // Löydös 153: horisonttiusva peittää merkin kuten webin paperiusva GL-merkit.
-                float usva = korkeus > 0f ? Horisonttiusva.Peitto(m.Piste.y / korkeus) : 0f;
-                m.El.style.opacity = 1f - usva;
+                m.Usva = korkeus > 0f ? Horisonttiusva.Peitto(m.Piste.y / korkeus) : 0f; // asetetaan PeitaMallienAlta:ssa
             }
+            PeitaMallienAlta(n);
             for (int i = n; i < merkit.Count; i++) merkit[i].El.style.display = DisplayStyle.None;
             if (viuhkanAvain != null && !viuhkaLoytyi) SuljeViuhka();
             // Väistö vain levossa (web sovittelu levossa): liikkeen aikana kyljet ja näkyvyys pysyvät.
             if (lepoKierto == null || lepoKierto.Levossa) Sovita(n);
+        }
+
+        readonly List<Vector2> mallienPisteet = new List<Vector2>();
+
+        /// <summary>
+        /// Löydös 160 jatko (Fable 26.9.): 3D-symbolimallin (Symbolimallit, KokoPt) kohdalle osuvat muiden nostojen
+        /// löytämättömät merkit (mustejälki, piste, minimerkki) piiloon, ettei 2D-muste piirry mallin päälle. Malli seisoo
+        /// pisteessään ja kohoaa ruudulla ylöspäin: alue on ±KokoPt/2 vaakaan, 0,85 × KokoPt ylös ja 0,3 × KokoPt alas.
+        /// Piilotettu merkki ei ota napautusta (malli ottaa). Löydetyt nimelliset nostot jäävät näkyviin.
+        /// </summary>
+        void PeitaMallienAlta(int n)
+        {
+            mallienPisteet.Clear();
+            for (int i = 0; i < n; i++)
+            {
+                var m = merkit[i];
+                if (m.Taso1 && m.Ryhma == null && Symbolimallit.OnMalli(m.Id)) mallienPisteet.Add(m.Piste);
+            }
+            float koko = Symbolimallit.KokoPt;
+            for (int i = 0; i < n; i++)
+            {
+                var m = merkit[i];
+                bool peitossa = false;
+                if (mallienPisteet.Count > 0 && m.Loydetty != true && m.Ryhma == null && !(m.Taso1 && Symbolimallit.OnMalli(m.Id)))
+                    foreach (var p in mallienPisteet)
+                    {
+                        var d = m.Piste - p;
+                        if (Mathf.Abs(d.x) < koko * 0.5f && d.y > -koko * 0.85f && d.y < koko * 0.3f) { peitossa = true; break; }
+                    }
+                float peitto = peitossa ? 0f : 1f - m.Usva;
+                if (m.El.style.opacity.value != peitto) m.El.style.opacity = peitto;
+                var poiminta = peitossa || vainNimet ? PickingMode.Ignore : PickingMode.Position;
+                if (m.El.pickingMode != poiminta) m.El.pickingMode = poiminta;
+            }
         }
 
         static List<List<int>> Yksittain(int n)
