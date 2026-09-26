@@ -10,7 +10,9 @@
 // POLKU = ajosuuntainen viiva [[lon, lat(, m)], …]. Tukipisteet ovat siltojen, asemien ja
 // maamerkkien koordinaatteja (julkisia tosiasioita) väylän keskellä; niiden väli täytetään
 // Catmull–Rom-splinellä noin 25 m:n pistevälein, jotta liike on sulavaa ilman omaa
-// splinelaskentaa. Köysiradan vaijeri on suora asemalta asemalle, ja pisteissä on korkeus
+// splinelaskentaa. Linssisepän kentät (26.9.2026): `pysakit` = viivan pisteindeksit (laiturit,
+// asemat, päät; tukipisteinä lähteessä) ja `kulku` = edestakaisin | yksisuuntainen | silmukka.
+// Köysiradan vaijeri on suora asemalta asemalle, ja pisteissä on korkeus
 // metreinä (asemien julkaistut korkeudet). Savannin kulkue on sommittelu (ei eläinten
 // todellinen reitti), ja se lukee lahde-kentässä.
 import { writeFileSync } from 'node:fs';
@@ -33,6 +35,7 @@ export const LAHTEET = [
 export const POLUT = [
   {
     id: 'vesi-canal-grande', laji: 'vesi', nimi: 'Canal Grande', kaupunki: 'ITA-venetsia',
+    kulku: 'edestakaisin', pysakit: [0, 7, 15], // laiturit: Santa Lucia, Rialto, Punta della Dogana
     lisenssi: 'CC BY 4.0 (johdettu ESA WorldCover 2021 -aineistosta: © ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium)',
     lahde: 'https://en.wikipedia.org/wiki/Grand_Canal_(Venice)',
     /*
@@ -61,6 +64,7 @@ export const POLUT = [
   },
   {
     id: 'vesi-thames-lontoo', laji: 'vesi', nimi: 'Thames: Westminster – Tower Bridge', kaupunki: 'GBR-lontoo',
+    kulku: 'yksisuuntainen', pysakit: [0, 8, 10], // Westminster, London Bridge, Tower Bridge
     lahde: 'https://en.wikipedia.org/wiki/List_of_crossings_of_the_River_Thames',
     tuet: [
       [51.5008, -0.1218], // Westminster Bridge
@@ -78,6 +82,7 @@ export const POLUT = [
   },
   {
     id: 'vesi-tonava-budapest', laji: 'vesi', nimi: 'Tonava: Margitin silta – Petőfin silta', kaupunki: 'HUN-budapest',
+    kulku: 'yksisuuntainen', pysakit: [0, 2, 5], // Margitin silta, Ketjusilta, Petőfin silta
     lahde: 'https://en.wikipedia.org/wiki/List_of_crossings_of_the_Danube',
     tuet: [
       [47.5145, 19.0462], // Margitin silta
@@ -97,10 +102,11 @@ export const POLUT = [
       [45.8933, 6.8856, 2317], // Plan de l'Aiguille (vaihtoasema)
       [45.8786, 6.8873, 3777], // Aiguille du Midi
     ],
-    pysakit: [0, 1, 2], // tukipisteinä; tulosteessa viivan indekseinä
+    kulku: 'edestakaisin', pysakit: [0, 1, 2], // asemat
   },
   {
     id: 'kulkue-amboseli', laji: 'kulkue', nimi: 'Norsujen kulkue Amboselissa (Kilimandžaron juurella)', kaupunki: 'KEN-amboseli',
+    kulku: 'yksisuuntainen', pysakit: [0, 5],
     lahde: 'Karttasepän sommittelu Amboselin tasangolle (https://en.wikipedia.org/wiki/Amboseli_National_Park), ei eläinten todellinen reitti',
     tuet: [
       [-2.620, 37.180],
@@ -157,7 +163,7 @@ export function teePolut() {
     /* Pysäkit (asemat) VIIVAN indekseinä: lähin tihennetty piste kutakin tukipistettä. */
     const lahin = ([lat, lon]) => viiva.reduce((b, q, i) => (etaisyysM(q, [lon, lat]) < etaisyysM(viiva[b], [lon, lat]) ? i : b), 0);
     return {
-      ...muut, viivat: [viiva], ...(pysakit ? { pysakit: pysakit.map((i) => lahin(tuet[i])) } : {}),
+      ...muut, viivat: [viiva], pysakit: pysakit.map((i) => lahin(tuet[i])),
       lisenssi: lisenssi ?? OMA_LISENSSI,
     };
   });

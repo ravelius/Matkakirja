@@ -14,6 +14,10 @@ test('tiedosto vastaa lähdettä: jokaisella polulla laji, lähde ja lisenssi', 
     assert.ok(['vesi', 'koysirata', 'kulkue'].includes(p.laji), p.id);
     assert.ok(p.lahde && p.nimi && p.kaupunki, p.id);
     assert.ok(/^CC0|^CC BY 4\.0/.test(p.lisenssi), p.id);
+    assert.ok(['edestakaisin', 'yksisuuntainen', 'silmukka'].includes(p.kulku), p.id);
+    const v = p.viivat[0];
+    assert.equal(p.pysakit[0], 0, p.id); assert.equal(p.pysakit.at(-1), v.length - 1, p.id);
+    assert.ok(p.pysakit.every((i, n) => n === 0 || i > p.pysakit[n - 1]), `${p.id} pysäkit kasvavat`);
   }
   assert.ok(data.lahteet.every((l) => l.url && l.lisenssi));
 });
