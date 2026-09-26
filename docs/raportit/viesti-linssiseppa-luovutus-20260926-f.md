@@ -43,3 +43,23 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
 - Scratchpad 15ddf057: kaanna.sh, ajo-elava.sh, media-elava.sh, ajo-im2.sh, ajo-saapuminen.sh, mittaa-klikit.sh,
   ajo-esilataus-im2.sh + apu.sh (zsh: `${=VAR}`, apufunktioissa `local`).
 - Effortia ei voi vaihtaa omasta sessiosta. Fable voi vaihtaa sen: set_session_effort local_45a869de… high.
+
+## Päivitys klo 06.5x
+
+- **Elävä kartta, kohta 1** on build 19 -junassa (linssiseppa/elava-kartta ed136705, juna/b13 b2a5fb4a).
+  - Natiivisepän pallopuoli (natiiviseppa/elava-saapuminen) on mergetty ja kytketty.
+  - Huntu on saapumismaahan rajattu verkkohuntu. Laattahunnun kahden sarjan sekoitus on build 20+:ssa.
+  - Simulaattori:
+    - aloituslennon saapuminen käynnistyy itsestään
+    - valmistelu 0,8 s testin pikakäynnistyksessä ja 0,2 s välimuistista
+    - kehysajan mediaani 18 ms
+    - lepopiirto palaa: `pallo lepo` → lepää
+- **Linssien aineisto pois kylmästä käynnistyksestä** on build 19 -junassa (linssiseppa/lykatty-data 0693c0d8 +
+  natiivi-ui/linssit-heti dc66cd26, juna d706da81).
+  - Aineiston lataus alkoi 15,2 s:n kohdalla joutilaana kartalla ja valmistui 17,2 s:ssa.
+  - LinssiSisalto käyttää Sisalto.HaePaketista-funktiota.
+  - Valitsin kutsuu LataaAineistoHeti.
+- **Seuraavaksi kohta 3 (maakunta herää).** Ehdotus Natiivisepälle klo 06.5x:
+  - minä: MaakuntaHeraa → ≤ 2,5 s:n herätys, jossa väri valuu, käsialanimi ja merkit tulevat ja lopuksi luovutus
+  - Natiiviseppä: MaaKartta piirtää heränneet täysin sävyin ja muut paperina sekä Herata(maakunta, piilossa)
+  - Natiivi-UI: kartussi
