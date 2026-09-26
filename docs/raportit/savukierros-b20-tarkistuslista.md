@@ -8,3 +8,9 @@
   `ui kartuscha GRC auki` → rivi "Maakunnan salaisuus löytyi: …", napautus avaa kortin; suoraan `ui nosto salaisuus:salaisuus-deinokrateen-vuori`;
   ilman peliä `ui muste salaisuus GRC:Ayion Oros`.
 - `huntu paljastus 38.42 27.14 200 40` (komento.txt; lokiin "MATKAKIRJA huntu: paljastus …"; näkyy vain hunnutetulla alueella, ei omassa maassa).
+
+## Päivitys (Natiiviseppä ~08.4x)
+- `pallo lepo` toimii peli-komento.txt:ssä; rivi "=MATKAKIRJA pallo lepo: … ei lepää (syy) …" → peli-loki.txt. Build 20 -juna juna/b13 cbe64f95.
+- Build 19 PASS kuitattu (Fable), master 41dd79c7.
+- Verkottoman tilan syyrivi VASTA natiivi-ui/offline-lepo -korjauksen kanssa (build 20 mittauksen jälkeen): mittaa ensin ilman korjausta (`ui offline verkoton`,
+  levossa `pallo lepo`), sitten korjauksen kanssa; vertaa piirretty/150.

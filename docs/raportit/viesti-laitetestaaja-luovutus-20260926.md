@@ -17,7 +17,7 @@ ylimääräisiä worktreitä ei.
 ## 1b. Build 19 (fdc47632, käännös 343ca803) — AJETTU 26.9. ~08.3x (raportti savukierros-b19-20260926.md, b117edc23)
 PASS: taustapäivitys (v151 säilyy 2.–3. käynnistyksessä), verkko raja 0 ms, saapuminen 4,8 s + Ohita + verkoton, lepopiirto 2–3/150 (verkon kanssa).
 Avoinna Natiivisepälle/Natiivi-UI:lle: kylmäkäynnistys 5,4–6,1 s (laitemittaus), lepopiirto ei laske `ui offline verkoton`:ssa, Marathon→Attika väri ei näy stillistä
-(loki "herää GRC:Attiki"), `huntu paljastus` ei mene läpi (komento.txt ei kirjaudu), Athos-salaisuuskortti ilman laukaisijaa. Odotan Fablen päätöstä/ohjetta build 20:lle.
+(loki "herää GRC:Attiki"), `huntu paljastus` ei mene läpi (komento.txt ei kirjaudu), Athos-salaisuuskortti ilman laukaisijaa. Build 19 PASS kuitattu (Fable), master 41dd79c7. Build 20 -juna cbe64f95 (pallo lepo peli-komento.txt:ssä → peli-loki); lista savukierros-b20-tarkistuslista.md; odota Fablen kutsua.
 
 ## 2. Seuraava kierros (build 20 / seuraava kutsu) — kysy Fablelta/kutsu; tarkistuslistat ja opit
 - Lista: `docs/raportit/savukierros-b18-tarkistuslista.md` (S1–S7 + nostokuvat/vieritys) → päivitä b19:lle;
