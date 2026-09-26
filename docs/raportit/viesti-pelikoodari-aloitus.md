@@ -4,8 +4,9 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260926-b.md`](viesti-pelikoodari-luovutus-20260926-b.md) (26.9. klo 16.1x), jonka
-   osio 2 on työjono. Yksityiskohdat: `viesti-pelikoodari-luovutus-20260925-yo3.md` osiot 20–24.
+   [`viesti-pelikoodari-luovutus-20260927.md`](viesti-pelikoodari-luovutus-20260927.md) (27.9. klo 01.3x): jono
+   1) avauskortti #3364 loppuun (kartta 35 %, kuvapari kulma+versio), 2) xAI ara -striimipuhe workeriin, 3) 177:n kehitysavaimet.
+   Edellinen: `viesti-pelikoodari-luovutus-20260926-b.md`.
    - Natiivin juna: juna/b13 b449f4be (1.0.23) sisältää Esilataaja erä 5:n, musiikin vaiheet 2+3, 162 ja 163-korjaukset.
    - Web: #3323 (maanosa-kaupungit) auki; muut tämän session PR:t mainissa.
    - Simulaattoriajo vain Julkaisijan "nyt"-kuittauksella ja kun booted < 2. SendMessage-raja → varakanava
