@@ -162,6 +162,20 @@ namespace Matkakirja
         }
 
         static readonly int SaapuminenId = Shader.PropertyToID("_Saapuminen");
+        /// <summary>
+        /// Maakunnan keskipiste (Natiivi-UI:n elävä kartussi, käsialanimi kartalla): Maakuntajako-alueen KeskusLat/KeskusLon
+        /// avaimella "ISO:tunnus". false, jos aineisto ei ole ladattu, aluetta ei löydy tai keskus puuttuu.
+        /// </summary>
+        public bool MaakunnanKeskus(string avain, out double lat, out double lon)
+        {
+            lat = lon = double.NaN;
+            var m = jako?.Hae(Maakuntajako.MaaTunnuksesta(avain));
+            if (m == null) return false;
+            foreach (var a in m.Alueet)
+                if (a.Id == avain) { lat = a.KeskusLat; lon = a.KeskusLon; break; }
+            return !double.IsNaN(lat) && !double.IsNaN(lon);
+        }
+
         bool SaapuminenLiikkuu => saapumisKerroin != (saapumisPiilo ? 0f : 1f);
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
