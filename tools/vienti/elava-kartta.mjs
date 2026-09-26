@@ -31,7 +31,7 @@ import { mediaLaji, ratkaiseMedia } from './media.mjs';
  * maakuntasalaisuuksilla (kokoelma) ja maakunnilla (moduuli js/packs/maakunnat-luonnehdinnat.js). Datassa saa lukea
  * valmis osoite, repon polku assets/kartat/maakunnat/<iso>-<slug>.webp, pelkkä ämpäritunnus (→ kohtaamiset/maakunnat/
  * <tunnus>.png, js/media.js assetOsoite) tai Commons-tiedostonimi. Arvo, josta ei synny https-osoitetta, kaataa viennin:
- * puuttuva kuva on null, ei rikkinäinen osoite.
+ * puuttuva kuva on null, ei rikkinäinen osoite. Salaisuuksilla lisäksi pikkukuvaLahde (tekijä ja lisenssi).
  */
 export function pikkukuvaOsoite(arvo, missa = 'pikkukuva') {
   if (arvo == null || arvo === '') return null;
@@ -136,13 +136,15 @@ export function rikastaElavaKartta(kokoelmat, taulukko) {
     const iso = maakunta.split(':')[0];
     const tunnus = avain.replace(/^nosto:/, '');
     const kategoria = kohteenKategoria({ tyyppi: s.tyyppi }) ?? 'historia';
+    // Datan pikkukuva on osoite/polku tai olio { osoite, lahde, … } (lähde = tekijä ja lisenssi, kuten muissa kuvissa).
+    const pk = s.pikkukuva && typeof s.pikkukuva === 'object' ? s.pikkukuva : { osoite: s.pikkukuva, lahde: s.pikkukuvaLahde };
     salaiset.push({
       id: `salaisuus:${tunnus}`, tunnus, maa: iso, maakunta,
       maakuntaNimi: alueNimet.get(maakunta) ?? maakunnanNimi(iso, maakunta.slice(iso.length + 1)),
       nimi: s.nimi, nimio: s.nimio ?? null, laji: s.tyyppi ?? null, kategoria, aihe: nostosymPaakategoria(kategoria),
       kokoluokka: 'paakohde', lat: s.lat, lon: s.lng,
       lyhyt: s.lyhyt ?? null, teksti: s.teksti ?? null, nappi: s.nappi ?? null, viite: s.lahde ?? null,
-      pikkukuva: pikkukuvaOsoite(s.pikkukuva, avain),
+      pikkukuva: pikkukuvaOsoite(pk.osoite, avain), pikkukuvaLahde: pk.lahde ?? null,
     });
   }
   kokoelmat.maakuntasalaisuudet = taulukko('js/packs/maakuntasalaisuudet.js + maakuntasalaisuudet-<iso>.js (Sisältökirjuri)',
@@ -151,7 +153,7 @@ export function rikastaElavaKartta(kokoelmat, taulukko) {
       + 'laji = kohteen tyyppi, kategoria ja aihe kuten karttavaloissa, lat/lon, lyhyt = Livian repliikki, teksti, '
       + 'nappi = 1873-alaotsikko, viite = lähdeteksti. Natiivi näyttää sen vasta, kun maakunnan kaikki nostot (karttavalot.maakunta) '
       + 'on löydetty. Ei karttavaloissa, jotta vanhat buildit eivät piirrä sitä. Skeema 1.49: pikkukuva = salaisuuden kuvan '
-      + 'ämpäriosoite (https) tai null (löydös 158).',
+      + 'ämpäriosoite (https) tai null (löydös 158), pikkukuvaLahde = kuvan tekijä ja lisenssi (pakollinen, kun kuva on).',
     { maakunta: 'maakuntarajat' }, salaiset);
   for (const a of alueet) {
     const tunnus = MAAKUNTASALAISUUDET[a.id];

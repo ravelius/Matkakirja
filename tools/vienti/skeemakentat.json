@@ -27,7 +27,7 @@
   "1.46": "e04def76b9069363",
   "1.47": "293c3b3783dd4ab6",
   "1.48": "e46e9962636f79b9",
-  "1.49": "f42b83f4d3454085"
+  "1.49": "a157da8dd145220b"
  },
  "uusin": {
   "skeemaversio": "1.49",
@@ -452,6 +452,7 @@
     "nimi",
     "nimio",
     "pikkukuva",
+    "pikkukuvaLahde",
     "teksti",
     "tunnus",
     "viite"

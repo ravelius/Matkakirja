@@ -202,7 +202,7 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        26.9.2026; oma kokoelma, koska build 16/17 piirtäisi karttavalorivit (Natiiviseppä). Elävä kartta.
  *   1.48 manifest.kaupunkilehdetKaupungeittain [{ id, tiedosto, sha256, tavuja }]: kokoelmat/kaupunkilehdet/<id>.json
  *        (sama kokoelmamuoto, yksi alkio) — Pelikoodari, build 19 (16 Mt:n lehtikokoelma kylmänä 1,9 s).
- *   1.49 pikkukuva = ämpäriosoite (https) tai null: maakuntasalaisuudet.pikkukuva ja moduulin
+ *   1.49 pikkukuva = ämpäriosoite (https) tai null: maakuntasalaisuudet.pikkukuva (+ pikkukuvaLahde) ja moduulin
  *        js/packs/maakunnat-luonnehdinnat.js alueiden pikkukuva (datan polku/tunnus muunnetaan osoitteeksi,
  *        tools/vienti/elava-kartta.mjs pikkukuvaOsoite) — Fable 26.9.2026, löydökset 115 ja 158. Elävä kartta.
  */
@@ -217,7 +217,8 @@ function osoitteiksiPikkukuvat(puu, missa) {
   if (Array.isArray(puu)) { puu.forEach((x, i) => osoitteiksiPikkukuvat(x, `${missa}/${i}`)); return; }
   if (!puu || typeof puu !== 'object') return;
   for (const [k, v] of Object.entries(puu)) {
-    if (k === 'pikkukuva') puu[k] = pikkukuvaOsoite(v, `${missa}/${k}`);
+    if (k === 'pikkukuva' && v && typeof v === 'object') v.osoite = pikkukuvaOsoite(v.osoite, `${missa}/${k}/osoite`);
+    else if (k === 'pikkukuva') puu[k] = pikkukuvaOsoite(v, `${missa}/${k}`);
     else osoitteiksiPikkukuvat(v, `${missa}/${k}`);
   }
 }
