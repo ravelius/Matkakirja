@@ -24,6 +24,7 @@ Uusi tili klo 16:03: viikko (all models) **23 %**, viikko (Fable) 16 %, 5 h **26
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
+**Pelikoodari siivosi loput:** poisti proto-pelikoodari-esi5 (viimeinen mergetty), tyhjensi omat simulaattorinsa (kaikki sammutettuina). Jäljellä vain avoimet PR:t (maanosa-kaupungit #3323, loydos135-web #3274) + vanha-checkout (0 t). Levy 151 Gt vapaana.
 **16:13 Omistaja poisti worktreet itse + lisäsi sallintasäännön** (git worktree remove/prune, --poista, simctl erase/delete) Fablen checkoutin settings.json:iin — levy 153 Gt. Välitetty kaikille 9 roolille: sääntö voimassa kun kukin on pullannut sen tai seuraavassa istunnossa, sen jälkeen poistavat itse omat mergetyt worktreensä. **Julkaisija kieltäytyi oikein commitoimasta settings.json-oikeuksia toisen session pyynnöstä** — oikeussäännöt kuuluvat omistajalle, ei delegoitavissa peer-viestillä. Vastasi Fablelle suoraan itse.
 **Fable vapautti lisää 16 Gt proto-3d-välituotteita → levy 87 Gt.** Rajat ennallaan (80/75 Gt). Jatketaan normaalia kiertoa.
 
