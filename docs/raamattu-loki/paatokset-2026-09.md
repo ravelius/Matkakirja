@@ -7619,3 +7619,7 @@ Natiivi-UI: lehden tehtavanappi poistettu, kohtaaminen alkaa vain vihreasta foku
 ## 178 LOPPUOSA PR 3355 (9 GALLERIAAN, SANTAREM/BROOME) + IRL-HAVAINNEKUVA PR 3354 (26.9.2026 klo 23.22)
 
 Sisaltokirjuri: 9 ei-paikkaa (tarkka luku, ei 11) museon/rakennuksen galleriaan koneellisesti todennettuna, Santarem + Broome saivat WebSearch-todennetut rakennuskohteet (#3355); Ouzel Galley tekoalyhavainnekuva (#3354). Era C (BLR + ROU) ennen astronautin eraa 2.
+
+## XAI-AVAIN MACIN YMPARISTOON (EI REPOON), KOKEILU LIVIAN AANELLA (26.9.2026 klo 23.25)
+
+Omistaja antoi 23.3x xAI:n API-avaimen kokeiluun (vaihdetaan myohemmin); riittaa Livian aani. Fable tallensi avaimen koodaus-kayttajan yksityiseen tiedostoon (~/.matkakirja-avaimet-koodaus.zsh, 600, sourcetaan ~/.zshenv:sta; samireivisen .matkakirja-avaimet.zsh ei ole koodaus-kayttajan kirjoitettavissa) — arvo ei lokiin eika repoon. Pelikoodari ajaa Livian repliikin wss://api.x.ai/v1/tts:lla (auto/fi, eve), mp3 ampariin, ensimmainen tavu + sanatarkkuus.
