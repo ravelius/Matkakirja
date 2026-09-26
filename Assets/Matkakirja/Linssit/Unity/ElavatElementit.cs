@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Elava;
+using Matkakirja.Linssit.Kamera;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -55,6 +56,8 @@ namespace Matkakirja.Natiivi
             public float Suunta = 180f;
             /// <summary>Värien haalistus kohti pergamenttia (Malli-varjostimen _Haalistus).</summary>
             public float Haalistus;
+            /// <summary>Liioiteltu perspektiivi vain roottorille (höyrylaiva: juuren kallistus nostaisi joen polun irti kartasta).</summary>
+            public bool KallistaVainRoottori;
             // Ajonaikaiset
             public readonly List<Yksilo> Oliot = new();
             /// <summary>Vaihtelu ja tauot yksilölle i (omistaja 16.5x: ei monotoniaa), siemenellä toistettava.</summary>
@@ -147,7 +150,7 @@ namespace Matkakirja.Natiivi
                 Yksilot = new[] { (0f, 0f, 0f) },
                 Runko = HoyryGeometria.Joki, Roottori = HoyryGeometria.Laiva, Lapsi = HoyryGeometria.Siipiratas,
                 LastenPaikat = new Vector3[2], Lapsi2 = HoyryGeometria.Savupallo, Lapsia2 = HoyryGeometria.Palloja,
-                PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = 0f,
+                PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = 0f, KallistaVainRoottori = true,
                 Animoi = HoyryGeometria.Animoi,
             },
         };
@@ -336,6 +339,10 @@ namespace Matkakirja.Natiivi
                 Vector3 oikea = gt.InverseTransformDirection(kamera.transform.right);
                 oikea = (oikea - ylos * Vector3.Dot(oikea, ylos)).normalized;
                 Vector3 eteen = Vector3.Cross(oikea, ylos);
+                // Liioiteltu perspektiivi (omistajan sääntö 26.9.): ruudun ylös tangenttitasossa ja kameran kallistus.
+                Vector3 ruutuYlos = gt.InverseTransformDirection(kamera.transform.up);
+                ruutuYlos = (ruutuYlos - ylos * Vector3.Dot(ruutuYlos, ylos)).normalized;
+                float kameranKallistus = Vector3.Angle(gt.InverseTransformDirection(kamera.transform.forward), -ylos);
                 float kerroin = a.KokoPt * pt;
                 for (int i = 0; i < a.Oliot.Count; i++)
                 {
@@ -351,7 +358,24 @@ namespace Matkakirja.Natiivi
                     pj.localPosition = maassa + ylos * 20f;
                     pj.localRotation = Quaternion.LookRotation(eteen, ylos);
                     pj.localScale = Vector3.one * (a.PohjaSade * kerroin);
-                    j.localRotation = Quaternion.AngleAxis(a.Suunta, ylos) * Quaternion.LookRotation(pohjoinen, ylos);
+                    var perus = Quaternion.AngleAxis(a.Suunta, ylos) * Quaternion.LookRotation(pohjoinen, ylos);
+                    // Liioiteltu perspektiivi: ruudun keskellä suoraan ylhäältä, reunoilla 55° keskeltä poispäin (yhteinen
+                    // LiioiteltuPerspektiivi-käyrä lipun ja 3D-nostojen kanssa); pivot jalassa, joten jalkaa nostetaan hieman.
+                    var ruutu = kamera.WorldToScreenPoint(gt.TransformPoint(maassa));
+                    var (kulma, dx, dy) = LiioiteltuPerspektiivi.Kallistus(ruutu.x, ruutu.y, Screen.width, Screen.height, kameranKallistus);
+                    var kallistus = Quaternion.identity;
+                    if (kulma > 0.01)
+                    {
+                        Vector3 d = (oikea * (float)dx + ruutuYlos * (float)dy).normalized;
+                        float kr = (float)kulma * Mathf.Deg2Rad;
+                        kallistus = Quaternion.FromToRotation(ylos, ylos * Mathf.Cos(kr) + d * Mathf.Sin(kr));
+                    }
+                    if (a.KallistaVainRoottori) j.localRotation = perus;
+                    else
+                    {
+                        j.localRotation = kallistus * perus;
+                        j.localPosition += ylos * (0.35f * kerroin * Mathf.Sin((float)kulma * Mathf.Deg2Rad));
+                    }
                     j.localScale = Vector3.one * kerroin;
                     // Vaihtelu ja tauot: yksilön nopeus aikataulusta × liike; aika kulkee nopeuden mukaan.
                     float tavoite = liike * (float)(yk.Aikataulu?.Tavoite(seina) ?? 1.0);
@@ -362,7 +386,11 @@ namespace Matkakirja.Natiivi
                     {
                         a.Animoi(yk.Roottori, yk.Lapset, yk.Aika + yk.Vaihe, Mathf.Clamp01(yk.Nopeus));
                         yk.Asetettu = true;
+                        yk.RoottoriPerus = yk.Roottori.localRotation;
                     }
+                    // Roottorin oma kallistus (juuren avaruudessa) Animoin asennon päälle, joka kehys ilman kertymistä.
+                    if (a.KallistaVainRoottori)
+                        yk.Roottori.localRotation = Quaternion.Inverse(perus) * kallistus * perus * yk.RoottoriPerus;
                 }
             }
             jokinNakyvissa = jokin;
@@ -384,6 +412,7 @@ namespace Matkakirja.Natiivi
             public float Vaihe, Nopeus, Aika;
             public Vaihtelu Aikataulu;
             public bool Asetettu;
+            public Quaternion RoottoriPerus = Quaternion.identity;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)
