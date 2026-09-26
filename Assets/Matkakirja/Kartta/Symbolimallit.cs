@@ -327,6 +327,8 @@ namespace Matkakirja
             public Vector3 Paikka, Normaali;
             public Quaternion Asento;
             public float Himmea = -1f, Iso, ReunaLeveys = -1f;
+            /// <summary>Kaupungin maamerkki (Erikoismalli.Kaupunki): malli kaupunkipisteen vasemmalla puolella.</summary>
+            public bool Maamerkki;
         }
         /// <summary>Tason 1 kappaleet noston id:llä.</summary>
         readonly Dictionary<string, Kappale> kappaleet = new Dictionary<string, Kappale>();
@@ -376,6 +378,7 @@ namespace Matkakirja
                     if (osatNostolla.TryGetValue(p.Key, out var osat)) PaivitaOsat(osat, false, default);
                     PallonLepo.Muuttui("symbolimallit");
                 }
+            if (sallittu && Taso1Zoom()) PaivitaMaamerkit(nk);
             PiirraTasot23(sallittu ? nk : null);
         }
 
@@ -437,7 +440,7 @@ namespace Matkakirja
                 go.transform.localPosition = paikka;
                 go.transform.localRotation = asento;
                 k = new Kappale { T = go.transform, R = r, Paikka = paikka, Normaali = nl, Asento = asento, Suodin = suodin,
-                                  Malli = tieto.Erikois != null ? -1 : MalliIndeksi(tieto) };
+                                  Malli = tieto.Erikois != null ? -1 : MalliIndeksi(tieto), Maamerkki = OnMaamerkki(s.Id) };
                 // Maakontakti (löydös 175c): varjolevy lapsena mallin juuren tasossa, säde 0,6 × mallin leveys; 1.0.27-kokeilussa
                 // siirretty kaakkoon (PohjaSiirto, valo luoteesta).
                 k.Pohja = Lapsi(go.transform, "Maakontakti", PohjaVerkko(), pohjaMateriaali);
@@ -472,6 +475,12 @@ namespace Matkakirja
             float koko = PisteMaailmassa(etaisyys) * pt / Mathf.Max(1e-9f, gt.lossyScale.x);
             var sk = Vector3.one * koko;
             if ((k.T.localScale - sk).sqrMagnitude > 1e-6f * koko * koko) k.T.localScale = sk;
+            if (k.Maamerkki)
+            {
+                // Pisteen vasemmalle (nimiö on oletuksena oikealla): mallin puolikas + väli pisteinä, itä = asennon +X.
+                var lp = k.Paikka - (k.Asento * Vector3.right) * (koko / Mathf.Max(1e-3f, pt) * (pt * 0.5f + MaamerkkiValiPt));
+                if ((k.T.localPosition - lp).sqrMagnitude > 1e-6f * koko * koko) k.T.localPosition = lp;
+            }
             // Oma kallistus (kokeilu): lasketaan joka kehys, koska akseli seuraa kameran suuntaa; asetetaan vain muuttuessa.
             float iso = IsoNyt();
             var kierto = IsoKierto(k.Normaali, iso) * PerusAsento(tieto, k.Normaali, k.Asento);
