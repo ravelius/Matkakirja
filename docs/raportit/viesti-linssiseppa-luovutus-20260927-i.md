@@ -1,46 +1,50 @@
 # Linssisepän luovutus 27.9.2026 yö (i) — Linssiseppä (Opus, max) = myös Mallinseppä
 
-*Sessio 7ea9f18e (session id local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4), 26.9. klo 23.1x alkaen. Edellinen: -h.md
-(lue sen kohdat 1–4 taustaksi). Fable local_5df52e10-10e4-4b72-9554-0049db300dfe, Natiiviseppä
-local_674b9ec4-e2f3-48e9-a810-a129f20a4f03.*
+*Sessio 7ea9f18e (session id local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4), 26.9. klo 23.1x alkaen. Edellinen: -h.md.
+Fable local_5df52e10-10e4-4b72-9554-0049db300dfe, Natiiviseppä local_674b9ec4-e2f3-48e9-a810-a129f20a4f03,
+Natiivi-UI local_44392b3c-86ee-4873-9d76-82f9aaa6b832, Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab.*
 
-## Jono (omistaja 22.3x, Fable)
+## Jono (omistaja 22.3x, Fable) ja tila 27.9. klo 00.3x
 
-1. **Kolme erikoismallia** (mallinseppa/pohja 9bb99488, EI muutoksia tässä sessiossa) → käännös Natiivisepän kautta →
-   laitekuvat → rivi Fablelle → PYSÄHDY omistajan tarkastukseen.
-2. **Merikokeilu** höyrylaiva + valas: KOODI VALMIS (alla), odottaa samaa käännöstä.
-3. **Lento v3 -speksi**: Opus-agentti kirjoittaa docs/raportit/lento-v3-speksi.md (ei committoitu, tarkistan ennen Fablea).
+1. **Kolme erikoismallia**: laitteella ajettu 00.08 (käännös 292e7a51), korjaukset tehty, UUSI KÄÄNNÖS klo 01.00
+   (taustalla ajastettuna, kaanna.sh mallit2) → ajo `APPNIMI=mallit2 ajo-mallit.sh` (L = …/mallinseppa-laite-20260927-b)
+   → kuvat + videot Fablelle → PYSÄHDY omistajan tarkastukseen.
+2. **Merikokeilu** (laiva + valas): laitteella toimii, koko kaksinkertaistettu, sama käännös klo 01.
+3. **Lento v3**: speksi HYVÄKSYTTY (omistaja 23.5x, 1.0.28). Koneen malli + kamera tehty haarassa mallinseppa/tiger-moth
+   (alla). Natiivisepälle (käytävä, kytkin, Nappulan v3) ilmoitetaan erikoismallien toimituksen jälkeen.
 
-## Käännös (odottaa Natiiviseppää)
+## Erikoismallit: proto-haara `mallinseppa/pohja` (327689c3, worktree /Users/Shared/Claude/wt/proto-mallinseppa)
 
-- Pyyntö 23.3x: YKSI yhteiskäännös `juna/b13+mallinseppa/pohja+linssiseppa/merikoristeet` simulaattoriin D0D2CD1E
-  (merge-tree: ei ristiriitoja juna/b13 8a90b51f:n päällä). ylhaalta-175 menee ristiin juna/b13:n kanssa
-  (Symbolimallit.cs, Tasot23.cs) → jos yhdistelmähaaraa ei ole, erikoismallit kuvataan ilman ääriviivaa ja
-  ylhäältä-kulma puuttuu (kallistus < 25° näyttää 2D-symbolin), kerrotaan omistajalle.
-- Kysymykset Natiivisepälle yhä auki: kokokerroin (1,5 × symboli vs ≤ 40 pt), tapahtuma kortin jokaisella avauksella.
-- Kun .app on valmis: `APPNIMI=mallit /Users/Shared/Claude/proto-3d/tyokalut/linssiseppa-ajot/ajo-mallit.sh`
-  (VAIHEET 1 käynnistys, 2 erikoismallit: kerroin 6, 30°/55°, iso 110 pt + lähikuva, video 12 s tapahtumalla, yö;
-  3 meri: yhteyskuva, valaan ja laivan videot, isot kuvat koko × 3; 9 sammutus). S-muuttuja osoittaa tämän session
-  scratchpadiin → kopioi .app kansioon $S/mallit-app/. Rajaus: rajaa.py (neliö mallin ympäriltä, --rivi vierekkäin).
+- Rebasetu Natiivisepän yhdistelmähaaran `natiiviseppa/kategoriat-reliefi` 6d0dfc49 päälle (juna d211337c + ylhaalta-175:n
+  ääriviiva, valo ja maavarjo + reliefit + rajapinta). Osajako päällä (EmOsaAlku/Loppu → Alku/Loppu), KokoKerroin 1,5,
+  Kolmiot0 todelliset (1 324 / 858 / 1 420), natiivi-ui/nostokortti-avattu 1a46986d mergetty (kortin JOKAINEN avaus →
+  tapahtuma, Nostokortti.Avattu).
+- Laitteen löydökset 00.1x ja korjaukset 327689c3: maatason osat (MSM hiekka/vesi/vaahto, Stonehengen valli/lampaat/säde)
+  0,006 ylemmäs, koska liioiteltu maasto peitti ne; Stonehengen nurmilevy pois ja valli vaaleaksi seepiaksi speksin
+  mukaan (ruoho = kartta); MSM:n silta 0,024. Todellinen yö sytyttää valot → arviointikuvissa `erikois yo 0`.
+- **COLOSSEUM EI NÄY PÄÄKARTALLA** (karttavalo paakartalla false, kohdekartta rooma): kysytty Fablelta 00.1x
+  (A = Rooman kaupunkipisteen maamerkkinä, suositus; B = vaihda pääkartan kohteeseen; C = odottaa kaupunkinäkymää).
+  Omistajalle Colosseumista esikatselukuvat (proto-3d/lokit/mallinseppa-esikatselu/kuvat/colosseum-*).
+- Ensimmäisen ajon kuvat: /Users/Shared/Claude/proto-3d/lokit/mallinseppa-laite-20260927/ (MSM ja Stonehenge ok,
+  Stonehengen nurmi osin maaston alla, Colosseum puuttuu).
 
-## Merikokeilu: proto-haara `linssiseppa/merikoristeet` (a7e39640, worktree /Users/Shared/Claude/wt/proto-linssiseppa)
+## Merikokeilu: `linssiseppa/merikoristeet` (e89349c4, worktree /Users/Shared/Claude/wt/proto-linssiseppa)
 
-- Pohja linssiseppa/hoyrylaiva b59c99b0 (merge-pyynnössä, ei vielä junassa). Vain ElavatElementit.cs muuttui.
-- Aiheet `merilaiva` ja `valas` ankkurissa NOR 4,113 E 61,013 N (merikohdat.json, merelle 265°, rannikko 355°), siirrot
-  ilmansuuntiin (laiva 90 pt pohjoiseen, valas 70 pt etelään → ≥ 120 pt).
-- MeriGeometria: näytös/tauko siemenaikataululla (laiva 25–40 s / 30–90 s, valas 12–16 s / 60–150 s, ensimmäinen tauko
-  3–8 s), tauolla ei piirretä (Aihe.Naytos), harvinainen ~1/10 (vihellys / pyrstön läiskäytys).
-  - Laiva: Thamesin laiva + vanavesi (Kelvinin kiila, rattaiden kuohu, keulakuohu), keinunta ja rannikon suuntainen kaari.
-  - Valas: pyöreä pää, rintaevät, vaahtorengas, puhallus 4 pallon pilarina kahdesti ja pyrstö pystyyn sukelluksessa.
-- Kolmiot: laiva 90 + rattaat 96 + savu 40 = 226; valas 120 + suihku 32 + pyrstö 8 = 160.
-- Komennot: `elava elementit nayta <merilaiva|valas> [harvinainen]`, `elava elementit koko <k>` (arviointikuviin),
-  `elava elementit tila` (näyttää näytös-/taukotilan).
-- Esikatselu ilman Unityä: /Users/Shared/Claude/proto-3d/tyokalut/meri-esikatselu/ (poimi.py poimii luokat worktreestä,
-  kaanna.sh, `dotnet meri.dll verkot <merilaiva|valas> <ajat,…> [harv]`, piirra.py <laji> <ajat> <ulos.png> [kallistus] [skaala]).
-- Reaktio pelaajaan ja valintasääntö (kohdemaan meri) vasta hyväksynnän jälkeen.
+- Höyrylaiva b59c99b0 on junassa d211337c. Merikoristeet sen päällä: Aiheet `merilaiva` ja `valas` (NOR 4,113 E 61,013 N),
+  näytös/tauko (tauolla 0 kehystä), koko nyt noin 22 pt / 28 pt (lajilistan 11/14 pt olivat laitteella pilkkuja),
+  siirrot 120 / −80 pt. Komennot `elava elementit nayta <aihe> [harvinainen]`, `koko <k>`.
 
-## Muuta
+## Lento v3: `mallinseppa/tiger-moth` (4b62bd8c, worktree /Users/Shared/Claude/wt/proto-mallinseppa-lento, pohja mallinseppa/pohja)
 
-- Elävät elementit (hoyrylaiva b59c99b0) eivät ole vielä junassa (Fable pyysi Natiiviseppää 23.1x).
-- Erikoismallien Kolmiot0-arviot (1076/900/1150 → 1324/858/1420) päivitetään toimitushaaroihin hyväksynnän jälkeen, jotta
-  käännösjonossa oleva SHA ei vaihdu.
+- `Kartta/Erikoismallit/TigerMoth.cs`: DH.82A seepiana (runko 1 086, potkuri 52, huivi 16 kolmiota; Fogg edessä).
+- `Kartta/Erikoismallit/TigerMothKone.cs`: Luo(isä, materiaali) ja Aseta(t, siemen, reitin kallistus).
+- `Kartta/LennonV3.cs` + Kartta-testit/Testit/LennonV3Testit.cs (11 testiä, kaikki Kartta-testit 322/322): kamera-
+  kanavat, nopeusprofiili, korkeus/lasku, Ateenan kuvauslinja, kallistus, Elo.
+- Esikatselu: scratchpad /Users/Shared/Claude/proto-3d/tyokalut/tigermoth-esikatselu/ (kaanna.sh tigermoth + python3 kone.py).
+
+## Työkalut
+
+- Ajot: /Users/Shared/Claude/proto-3d/tyokalut/linssiseppa-ajot/ (ajo-mallit.sh, kaanna-jono.sh, rajaa.py).
+- Merikoristeiden esikatselu: /Users/Shared/Claude/proto-3d/tyokalut/meri-esikatselu/.
+- Käännöskuri: yksi käännös kerrallaan, ikkuna :00–:15, rivi Karttasepälle ennen ja jälkeen (Natiivisepän lupa 23.5x
+  ajaa proto-kaanna.sh itse D0D2CD1E:hen).
