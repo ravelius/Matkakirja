@@ -7479,3 +7479,7 @@ Omistaja 21.5x (kuva paatos-3d-nostot-kategoriat.jpg): 3D-nostoja ovat VAIN NOST
 ## OMISTAJA: NOSTOJA EI TARVITSE ANIMOIDA (26.9.2026 klo 21.51)
 
 Omistaja 21.5x: kategoriasymboleita (3D-nostoja) ei tarvitse animoida — kumoaa 21.4x:n animointitilauksen nostoille. Animointi jaa elaviin elementteihin (Tivoli, myllyt, ilmapallo, gondolit, maailmanpyora), lippuun ja mahdollisesti erikoismalleihin harkinnan mukaan. 1.0.27-suunnitelma: staattiset kategoriasymbolit 3D:na hyvaksytylla paletilla + liioiteltu perspektiivi; kehysbudjetti kevenee (levossa 0 kehysta ilman ehtoja).
+
+## MAAKUNTAPIKKUKUVAT ERA A TUOTANNOSSA: V184, 251 ALUETTA 16 MAASSA (26.9.2026 klo 21.52)
+
+Siirtoseppa: #3348 mainissa, natiivipaketti 1.x v184 (a1579184b), ampari 771/771; pikkukuvat nyt 251 aluetta 16 maassa (+138: CHE 26, PRT 20, HUN 20, SWE 21, NOR 21, IRL 30), osoitteet 200. Era B tarkistetaan samoin.
