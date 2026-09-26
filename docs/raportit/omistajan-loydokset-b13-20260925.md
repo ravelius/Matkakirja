@@ -169,3 +169,11 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 153 | Nostot (merkit ja nimiöt) saisivat häipyä näkyvistä horisontin kanssa — nyt kaukaiset nostot piirtyvät täydellä voimalla horisontin yläpuolelle (Thessaloniki, Filippoi, Pelion). Etäisyyshäivytys kameran etäisyyden/horisontin mukaan, kuten pohja häipyy. | Natiiviseppä (Pelikoodari: nostokerroksen häivytysraja) |
 | 154 | Horisontti (taivas) hieman sinisemmäksi — nyt pergamentin kermaa. Kuvapari 2–3 sävyllä (utuinen vaaleansininen → pergamentti alhaalla), omistaja valitsee. | Natiiviseppä |
 | 155 | Nostoissa ei näy vielä symboleita (löydös 125 jatkuu): useimmat nostot ovat pelkkiä ympyröitä (Thessaloniki, Epidauros, Monemvasia, Korintin kanava), vain osa saa symbolin (Delfoi kaari, Náfplio salama, tassu). Vertaa webiin: mikä nostotyyppi/luokka jää ympyräksi ja miksi (data vai piirto). | Pelikoodari (data: mitkä tyypit) + Natiiviseppä (piirto) |
+
+## Build 19 (1.0.19) — omistajan löydökset 26.9. klo 09.3x (maakunnat)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 156 | Maakuntien selain saisi toimia samalla tavalla vetämällä kuin nostojen selain (sama ele ja tuntuma). | Natiivi-UI |
+| 157 | Valitussa maakunnassa ei näytetä vahvennettuja rajoja, vaan maakunnan väri vahvistuu kartalla. | Natiiviseppä (MaaKartta) + Natiivi-UI (valinnan ohjaus) |
+| 158 | Kuvat kaikkiin maakuntanostoihin ja pikkukuviin (115:n pikkukuvadata) — nyt osa ilman kuvaa. | Sisältökirjuri (kuvat PD/CC Commonsista) + Siirtoseppä (pikkukuvadata pakettiin) + Natiivi-UI (näyttö) |
