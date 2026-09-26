@@ -1154,8 +1154,8 @@ namespace Matkakirja.Natiivi
 
         public void Tehoste(string nimi, float voima = 1f)
         {
-            // Keksintöjen kilahdus ja vuosinaksahdus ovat webissä synteesiä: ne soivat LinssiTehosteista, koska
-            // tehosteväylälle ei voi rekisteröidä ajonaikaista klippiä. Muut nimet Pelikoodarin väylälle.
+            // Keksintöjen kilahdus ja vuosinaksahdus ovat webissä synteesiä: LinssiTehosteet rekisteröi ne tehosteväylälle
+            // (Aanet.RekisteroiTehoste) ja soittaa väylältä sekä laskee ne lokiin. Muut nimet Pelikoodarin väylälle.
             if (tehosteet != null && LinssiTehosteet.Tuntee(nimi))
             {
                 var (lahde, tila) = tehosteet.Soita(nimi, voima);

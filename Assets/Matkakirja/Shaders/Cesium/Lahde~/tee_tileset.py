@@ -14,6 +14,10 @@
 # Valokeila (Ihmisen matka II, 25.9.2026): pallo hämärtyy paitsi yhden tai kahden keilan kohdalla (_keila0/1, _keilaRajat,
 # _keila0Vari/_keila1Vari, _keilaHamaryys; KarttaKerrokset.Valokeila, kaavat Kartta/Valokeilalaskenta.cs). Perusväriin
 # tummennuksen jälkeen ja ennen radion hämärää; keilan hehku ja muu emissio eivät tummu. 0 = ennallaan.
+# Hunnun paljastus (elävä kartta, build 19; Varitaso.Paljastus): paikan 2 sekoituspaino kerrotaan säteittäisellä
+# peitolla — pikselin suunta n = normalize(pos − _maaKeski.xyz), jänne c = |n − k| (k = _paljastus.xyz, kuten
+# valokeilassa), kohinalla rikottu reuna; peitto = smoothstep(r − w/2, r + w/2, c + kohina). _paljastusReuna.w = 0 →
+# ennallaan (paljastus pois). Vain paikka 2 kytketään; muilla syötteet ovat oletusarvossa 0.
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
 import json, sys, uuid, os
 
@@ -106,15 +110,31 @@ SEKOITUS_RUNKO = (
     "    float bathy = smoothstep(0.02, 0.08, p.b - p.r);\n"
     "    s.rgb = lerp(s.rgb, lerp(meriVari.rgb, base.rgb, bathy.xxx), meri.xxx);\n"
     "}\n"
-    "ulos = lerp(base, s, (s.a * alfa).xxxx);\n")
+    "float peitto = 1.0;\n"
+    "// Veil reveal (living map, Varitaso.Paljastus): radial dry-out from the arrival city with a noisy edge.\n"
+    "if (paljastusReuna.w > 0.5)\n"
+    "{\n"
+    "    float3 kn = normalize(pos.xyz - keski.xyz);\n"
+    "    float c = length(kn - paljastus.xyz);\n"
+    "    float3 q = kn * paljastusReuna.z;\n"
+    "    float kohina = sin(q.x + 1.7 * sin(q.y * 1.3)) * sin(q.y * 1.1 + 1.3 * sin(q.z * 1.7))\n"
+    "        + 0.5 * sin(q.z * 2.3 + 1.1 * sin(q.x * 2.9));\n"
+    "    float w = max(paljastusReuna.x, 1e-6);\n"
+    "    peitto = smoothstep(paljastus.w - 0.5 * w, paljastus.w + 0.5 * w, c + kohina * paljastusReuna.y);\n"
+    "}\n"
+    "ulos = lerp(base, s, (s.a * alfa * peitto).xxxx);\n")
 # Alikaavion uudet syötteet: (nimi, viite, tyyppi, kiinteä GUID, solmun paikka-id pääkaaviossa)
 ALI_SYOTTEET = [("varaVari", "_varaVari", "v4", "b2e5c8d1-4f6a-4b7c-9d0e-1f2a3b4c5d6e", 710000),
                 ("vara", "_vara", "v1", "c3f6d9e2-5a7b-4c8d-8e1f-2a3b4c5d6e7f", 710001),
                 ("meriVari", "_meriVari", "v4", "d4a7e0f3-6b8c-4d9e-9f2a-3b4c5d6e7f80", 710002),
                 ("meriKynnys", "_meriKynnys", "v1", "e5b8f1a4-7c9d-4eaf-8a3b-4c5d6e7f8091", 710003),
-                ("varaTaso", "_varaTaso", "v1", "f6c9a2b5-8dae-4fb0-9b4c-5d6e7f8091a2", 710004)]
+                ("varaTaso", "_varaTaso", "v1", "f6c9a2b5-8dae-4fb0-9b4c-5d6e7f8091a2", 710004),
+                ("paljastus", "_paljastus", "v4", "a7d0b3c6-9ebf-4a01-8c5d-6e7f8091a2b3", 710005),
+                ("paljastusReuna", "_paljastusReuna", "v4", "b8e1c4d7-afc0-4b12-9d6e-7f8091a2b3c4", 710006),
+                ("keski", "_keski", "v4", "c9f2d5e8-b0d1-4c23-8e7f-8091a2b3c4d5", 710007),
+                ("pos", "_pos", "v4", "d0a3e6f9-c1e2-4d34-9f80-91a2b3c4d5e6", 710008)]
 # Sekoitusfunktion syöttöpaikat ALI_SYOTTEET-järjestyksessä (7 = ulos, 8 = ts, 10 = ouv).
-ALI_CF_PAIKAT = [3, 4, 5, 6, 9]
+ALI_CF_PAIKAT = [3, 4, 5, 6, 9, 11, 12, 13, 14]
 
 def ali_ominaisuus(nimi, viite, tyyppi, guid):
     o = {"m_SGVersion": 1, "m_ObjectId": uusi_id(), "m_Guid": {"m_GuidSerialized": guid}, "m_Name": nimi,
@@ -166,7 +186,9 @@ sf_paikat = [sf_paikka("Vector4MaterialSlot", 0, "base", 0), sf_paikka("Vector4M
              sf_paikka("Vector1MaterialSlot", 4, "vara", 0), sf_paikka("Vector4MaterialSlot", 5, "meriVari", 0),
              sf_paikka("Vector1MaterialSlot", 6, "kynnys", 0), sf_paikka("Vector4MaterialSlot", 7, "ulos", 1),
              sf_paikka("Vector4MaterialSlot", 8, "ts", 0), sf_paikka("Vector1MaterialSlot", 9, "varaTaso", 0),
-             sf_paikka("Vector2MaterialSlot", 10, "ouv", 0)]
+             sf_paikka("Vector2MaterialSlot", 10, "ouv", 0), sf_paikka("Vector4MaterialSlot", 11, "paljastus", 0),
+             sf_paikka("Vector4MaterialSlot", 12, "paljastusReuna", 0), sf_paikka("Vector4MaterialSlot", 13, "keski", 0),
+             sf_paikka("Vector4MaterialSlot", 14, "pos", 0)]
 sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", "m_ObjectId": uusi_id(), "m_Group": {"m_Id": ""},
       "m_Name": "MatkakirjaSekoitus (Custom Function)", "m_DrawState": {"m_Expanded": True, "m_Position": {
       "serializedVersion": "2", "x": 1100.0, "y": -415.0, "width": 208.0, "height": 200.0}},
@@ -466,6 +488,25 @@ G["m_Edges"] += [reuna(maailma_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 0),
                  reuna(varataso_solmu["m_ObjectId"], 0, p1, 710004),
                  reuna(meriv_solmu["m_ObjectId"], 0, p2, 710002),
                  reuna(kynnys_solmu["m_ObjectId"], 0, p2, 710003)]
+# Hunnun paljastus paikkaan 2: _paljastus, _paljastusReuna, _maaKeski ja maailmapaikka (Absolute World).
+palj_om = vektori_ominaisuus("paljastus", "_paljastus")
+preuna_om = vektori_ominaisuus("paljastusReuna", "_paljastusReuna")
+PX = paikkasolmut["2"]["m_DrawState"]["m_Position"]["x"] - 250.0
+PY = paikkasolmut["2"]["m_DrawState"]["m_Position"]["y"] + 380.0
+palj_solmu, palj_ulos = vektori_ominaisuussolmu(palj_om, PX, PY)
+preuna_solmu, preuna_ulos = vektori_ominaisuussolmu(preuna_om, PX, PY + 60.0)
+keski4_solmu, keski4_ulos = vektori_ominaisuussolmu(keski_om, PX, PY + 120.0)
+ppos_ulos = slotti("Vector3MaterialSlot", 0, "Out", 1, v3())
+ppos_solmu = solmupohja("PositionNode", "Position", PX, PY + 180.0, [ppos_ulos], m_SGVersion=1, m_Space=4,
+                        m_PositionSource=0, m_DismissedVersion=0)
+G["m_Edges"] += [reuna(palj_solmu["m_ObjectId"], 0, p2, 710005), reuna(preuna_solmu["m_ObjectId"], 0, p2, 710006),
+                 reuna(keski4_solmu["m_ObjectId"], 0, p2, 710007), reuna(ppos_solmu["m_ObjectId"], 0, p2, 710008)]
+for om in (palj_om, preuna_om):
+    G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
+    KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
+for o in (palj_solmu, preuna_solmu, keski4_solmu, ppos_solmu):
+    G["m_Nodes"].append({"m_Id": o["m_ObjectId"]})
+lisat += [palj_om, preuna_om, palj_solmu, palj_ulos, preuna_solmu, preuna_ulos, keski4_solmu, keski4_ulos, ppos_solmu, ppos_ulos]
 for om in (vara_om, varataso_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})

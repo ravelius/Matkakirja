@@ -31,6 +31,52 @@ namespace Matkakirja
     /// </summary>
     public class Varitaso : MonoBehaviour
     {
+        // ---- Elävä kartta: hunnun paljastus (Linssisepän rajapinta 26.9., build 19) ----
+
+        static readonly int PaljastusId = Shader.PropertyToID("_paljastus");
+        static readonly int PaljastusReunaId = Shader.PropertyToID("_paljastusReuna");
+        /// <summary>Reunan kohinan aallonpituus (km): kuinka tiheästi musteen reuna aaltoilee.</summary>
+        public const double PaljastusKohinaAaltoKm = 60.0;
+
+        /// <summary>
+        /// HUNNUN PALJASTUS (Linssiseppä, ElavaSaapuminen; kutsu joka kehys): kermahunnun sekoituspaino kerrotaan
+        /// säteittäisellä peitolla, joka on 0 (kartta paljaana) keskipisteen (lat, lon) ympärillä <paramref name="sadeKm"/>:n
+        /// säteellä ja 1 (huntu) sen ulkopuolella; reuna <paramref name="reunaKm"/> leveä ja kohinalla rikottu (musteen
+        /// kuivuminen, amplitudi puolet reunasta). Tileset-varjostimen paikka 2 ja napakannet (sama kaava, globaalit
+        /// _paljastus ja _paljastusReuna, suunta ja jänteet kuten valokeilassa). Ei muuta hunnun tilaa (Varitaso päättää
+        /// yhä, missä kerma on); <see cref="PaljastusPois"/> palauttaa tavallisen hunnun.
+        /// </summary>
+        public static void Paljastus(double lat, double lon, double sadeKm, double reunaKm)
+        {
+            var geo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.GetComponent<CesiumForUnity.CesiumGeoreference>()
+                : FindAnyObjectByType<CesiumForUnity.CesiumGeoreference>();
+            if (geo == null) { Debug.LogWarning("MATKAKIRJA huntu: paljastus ilman georeferenssiä"); return; }
+            var e = Valokeilalaskenta.SuuntaEcef(lat, lon);
+            // ECEF-suunta → Unityn maailma kuten valokeila (KarttaKerrokset.Valokeila) ja KorkeusKerroin (_maaKeski).
+            Vector3 u = geo.transform.TransformDirection((Unity.Mathematics.float3)geo.TransformEarthCenteredEarthFixedDirectionToUnity(
+                new Unity.Mathematics.double3(e.x, e.y, e.z))).normalized;
+            double r = Valokeilalaskenta.Janne(Valokeilalaskenta.Kulma(Math.Max(0.0, sadeKm)));
+            double w = Valokeilalaskenta.Janne(Valokeilalaskenta.Kulma(Math.Max(0.1, reunaKm)));
+            double taajuus = Valokeilalaskenta.MaanSadeKm / PaljastusKohinaAaltoKm;
+            Shader.SetGlobalVector(PaljastusId, new Vector4(u.x, u.y, u.z, (float)r));
+            Shader.SetGlobalVector(PaljastusReunaId, new Vector4((float)w, (float)(0.5 * w), (float)taajuus, 1f));
+            paljastusPaalla = true;
+            PallonLepo.Muuttui("huntu: paljastus");
+        }
+
+        /// <summary>Paljastus pois: huntu ennallaan (tileset- ja napakansivarjostin ohittavat paljastuksen).</summary>
+        public static void PaljastusPois()
+        {
+            if (!paljastusPaalla) return;
+            paljastusPaalla = false;
+            Shader.SetGlobalVector(PaljastusReunaId, Vector4.zero);
+            PallonLepo.Muuttui("huntu: paljastus pois");
+        }
+        static bool paljastusPaalla;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaPaljastus() => paljastusPaalla = false;
+
         /// <summary>Karttasepän kermasarja pohjasta, peitto 0,80 (löydös 22); löydös 128:n valinta vaihdetaan Kermasarja.Oletukseen.</summary>
         // 25.9.: sarja pohjasta 2026-09-25-pohja-20260925 (build 14:n pohja; 23a-sarjan maski ei osunut uuteen rantaan).
         public const string OletusVersio = Kermasarja.Oletus;

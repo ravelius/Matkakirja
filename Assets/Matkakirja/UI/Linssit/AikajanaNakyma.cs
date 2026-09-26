@@ -154,9 +154,9 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(tauko, Kirjasin.Kone);
             // Löydös 148: II:n soitin (Linssisepän ohjaus: alkuun AloitaAlusta, loppuun SiirryTutkimukseen, tauko Esitys).
             soitin = Rakenne.El("mk-aikajana-soitin", ohjaimet, PickingMode.Ignore);
-            soitinAlkuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", AloitaAlusta, soitin, KelaaAlkuun);
+            soitinAlkuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SoitinAlkuun, soitin, KelaaAlkuun);
             soitinAlkuun.tooltip = "Aloita alusta";
-            soitinToisto = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", VaihdaTauko, soitin, Pysayta);
+            soitinToisto = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SoitinToisto, soitin, Pysayta);
             soitinToisto.tooltip = "Tauko";
             soitinLoppuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SiirryTutkimaan, soitin, KelaaLoppuun);
             soitinLoppuun.tooltip = "Tutki karttaa itse";
@@ -618,6 +618,39 @@ namespace Matkakirja.Natiivi
             l.JuttuPyydetty += IhmisenJuttu;
             l.TutkimusAlkoi += TutkimusAlkoi;
             if (l.Tutkimus != null) TutkimusAlkoi(l.Tutkimus);
+            // Build 19 (Linssisepän Ohjaus-rajapinta): soittimen symbolit ja käytettävyys esityksen tilasta, myös kun
+            // tauko tulee muualta (aikaselain, testikomento).
+            l.OhjausMuuttui += o => UiKerros.PaaSaikeessa(() => { if (ReferenceEquals(l, kuunneltuIhminen)) PaivitaSoitin(o); });
+            PaivitaSoitin(l.Ohjaus);
+        }
+
+        /// <summary>II:n soittimen tila: ▶ tai ⏸ ohjauksen mukaan; tutkimusvaiheessa ▶/⏸ ja ⏭ pois käytöstä (Linssiseppä).</summary>
+        void PaivitaSoitin(EsityksenOhjaus o)
+        {
+            var ikoni = soitinToisto.Q<SvgIkoni>();
+            if (ikoni != null) ikoni.Polku = o == EsityksenOhjaus.Soi ? Pysayta : Ikonit.Toista;
+            soitinToisto.tooltip = o == EsityksenOhjaus.Soi ? "Tauko" : "Jatka";
+            soitinToisto.SetEnabled(o != EsityksenOhjaus.Tutkimus);
+            soitinLoppuun.SetEnabled(o != EsityksenOhjaus.Tutkimus);
+        }
+
+        /// <summary>▶/⏸ (IhmisenMatkaLinssi.ToistaTaiTauko: käynnistää myös käynnistämättömän esityksen).</summary>
+        void SoitinToisto()
+        {
+            var l = LinssiUi.IhmisenMatka;
+            if (l == null) { VaihdaTauko(); return; }
+            l.ToistaTaiTauko();
+        }
+
+        /// <summary>⏮: esitys alusta ja heti soimaan ohi esittelyn (IhmisenMatkaLinssi.Alkuun); UI:n paneelit alkutilaan.</summary>
+        void SoitinAlkuun()
+        {
+            var l = LinssiUi.IhmisenMatka;
+            if (l == null || tila != Tila.Ihminen) { AloitaAlusta(); return; }
+            var auki = linssit.Auki;
+            if (!l.Alkuun()) return;
+            Pois();
+            Kytke(auki);
         }
 
         void IhmisenJuttu(int i) => UiKerros.PaaSaikeessa(() => { if (kuunneltuIhminen != null) tiedeliite.Avaa(kuunneltuIhminen, i); });
@@ -783,11 +816,7 @@ namespace Matkakirja.Natiivi
             tauko.tooltip = tauko.Q<Label>().text;
             // Ihmisen matkan lopussa nappi on pois käytöstä (web ihmisen-matka-esitys.js).
             tauko.SetEnabled(!(lopussa && tila == Tila.Ihminen));
-            // Löydös 148: II:n soittimen toisto-/taukosymboli samasta tilasta.
-            var ikoni = soitinToisto.Q<SvgIkoni>();
-            if (ikoni != null) ikoni.Polku = !tauolla ? Pysayta : Ikonit.Toista;
-            soitinToisto.tooltip = !tauolla ? "Tauko" : "Jatka";
-            soitinToisto.SetEnabled(!(lopussa && tila == Tila.Ihminen));
+            // II:n soittimen symboli tulee Linssisepän OhjausMuuttui-tapahtumasta (PaivitaSoitin).
             kelloRuutu.EnableInClassList("mk-tauolla", tauolla);
         }
 
@@ -897,7 +926,7 @@ namespace Matkakirja.Natiivi
         void SiirryTutkimaan()
         {
             if (tila != Tila.Ihminen) return;
-            LinssiUi.IhmisenMatka?.SiirryTutkimukseen();
+            LinssiUi.IhmisenMatka?.Loppuun();
         }
 
         public void AloitaAlusta()
@@ -1362,7 +1391,7 @@ namespace Matkakirja.Natiivi
                 tauko.style.display = nakyy ? DisplayStyle.None : DisplayStyle.Flex;
                 PaivitaTauko();
             }
-            if (nakyy) soitinLoppuun.SetEnabled(LinssiUi.IhmisenMatka?.Tutkimus == null);
+
             if (nakyy == Valikko.TekstitysNakyy) return;
             if (nakyy) Valikko.NaytaTekstitys(() => IhmisenMatkaKerros.TekstitysPaalla, IhmisenMatkaKerros.AsetaTekstitys);
             else Valikko.NaytaTekstitys(null, null);

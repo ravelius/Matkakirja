@@ -96,6 +96,9 @@ namespace Matkakirja
         /// <summary>Käynnistää palvelun (joutilas-tarkkailu) ennen ensimmäistä hakua.</summary>
         public static void Kaynnista() => Varmista();
 
+        /// <summary>Korutiini palvelun omalla isännällä (staattisille lukijoille, esim. Sisalto.PaivitaOsoitinTaustalla).</summary>
+        public static void AjaTaustalla(IEnumerator ajo) { Varmista(); instanssi.StartCoroutine(ajo); }
+
         static void Varmista()
         {
             if (instanssi != null) return;
@@ -131,7 +134,7 @@ namespace Matkakirja
                         o.Pyynto = r;
                         float alku = Time.realtimeSinceStartup;
                         yield return r.SendWebRequest();
-                        VerkkoOdotus.Haku(lahde, (Time.realtimeSinceStartup - alku) * 1000.0, (long)r.downloadedBytes);
+                        VerkkoOdotus.Haku(lahde, (Time.realtimeSinceStartup - alku) * 1000.0, (long)r.downloadedBytes, r.url);
                         if (r.result == UnityWebRequest.Result.Success || !Uusittava(r) || yritys >= Viiveet.Length)
                         {
                             valmis?.Invoke(r);

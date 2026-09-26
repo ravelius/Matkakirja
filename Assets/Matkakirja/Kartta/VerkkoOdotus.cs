@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.IO;
 using System.Text;
 using UnityEngine;
@@ -58,6 +59,11 @@ namespace Matkakirja
         static readonly Dictionary<string, Summa> haut = new Dictionary<string, Summa>();
         /// <summary>Osuma-% (Esilataaja erä 1): vaihe/lähde → N = pyyntöjä, Tavut = välimuistista (osumat).</summary>
         static readonly Dictionary<string, Summa> osumat = new Dictionary<string, Summa>();
+        /// <summary>
+        /// "Pelaaja odotti verkkoa" (Raamattu ESILATAUSPOLITIIKKA, MITTARIT): vaihe → odotukset, joiden aikana valmistui
+        /// verkkohaku (haut > 0) tai jotka ovat puheen latausta — sama sääntö kuin verkko-savukkeen RAJA-rivillä.
+        /// </summary>
+        static readonly Dictionary<string, Summa> verkkoaOdotettu = new Dictionary<string, Summa>();
         static int hakuja;
         /// <summary>Pääsäikeen viimeksi laskema vaihe (PaivitaVaihe), taustasäikeiden kirjauksiin.</summary>
         static volatile string vaiheKopio = "kaynnistys";
@@ -126,7 +132,11 @@ namespace Matkakirja
         /// <summary>Valmiiksi mitattu odotus (esim. aloituslennon musta verho).</summary>
         public static void Kirjaa(string vaihe, string mita, double ms, int verkkohaut = -1, string tulos = null)
         {
-            lock (lukko) Lisaa(odotukset, vaihe, ms, 0);
+            lock (lukko)
+            {
+                Lisaa(odotukset, vaihe, ms, 0);
+                if (verkkohaut > 0 || (mita != null && mita.StartsWith("puhe:", StringComparison.Ordinal))) Lisaa(verkkoaOdotettu, vaihe, ms, 0);
+            }
             var sb = new StringBuilder(160);
             sb.Append("{\"t\":").Append(Nyt.ToString("0.00", CultureInfo.InvariantCulture))
               .Append(",\"vaihe\":\"").Append(vaihe).Append("\",\"mita\":\"").Append(Puhdas(mita))
@@ -144,11 +154,44 @@ namespace Matkakirja
             catch (Exception) { }
         }
 
+        /// <summary>
+        /// Hakurivit osoitteineen (kehittäjätila tai komento `verkko haut paalle`): persistentDataPath/verkko-haut.jsonl
+        /// {t, vaihe, lahde, url, ms, kt} — mitä käynnistyksessä haetaan verkosta (ESILATAUSPOLITIIKKA kohta 1 -analyysi).
+        /// </summary>
+        public static bool HautTiedostoon { get; private set; }
+        static string hautTiedosto;
+
+        /// <summary>Kytkee hakurivit (pääsäikeestä: polku luetaan täällä, Laattapalvelin kirjaa taustasäikeestä).</summary>
+        public static void KirjaaHaut(bool paalla)
+        {
+            hautTiedosto = Path.Combine(Application.persistentDataPath, "verkko-haut.jsonl");
+            HautTiedostoon = paalla;
+        }
+
+        /// <summary>Kylmän käynnistyksen mittaus: ympäristömuuttuja MATKAKIRJA_HAUT=1 (simctl: SIMCTL_CHILD_MATKAKIRJA_HAUT=1).</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        static void HautYmparistosta()
+        {
+            if (Environment.GetEnvironmentVariable("MATKAKIRJA_HAUT") == "1") KirjaaHaut(true);
+        }
+
         /// <summary>Oikea verkkohaku valmistui (lahde: sisalto, peli, kuva, puhe, laatta, linssi).</summary>
-        public static void Haku(string lahde, double ms, long tavut)
+        public static void Haku(string lahde, double ms, long tavut, string url = null)
         {
             string vaihe;
             lock (lukko) vaihe = Paallimmainen() ?? vaiheKopio;
+            if (HautTiedostoon && url != null)
+            {
+                int q = url.IndexOf('?');
+                string rivi = "{\"t\":" + Nyt.ToString("0.00", CultureInfo.InvariantCulture) + ",\"vaihe\":\"" + vaihe + "\",\"lahde\":\"" + lahde
+                    + "\",\"url\":\"" + Puhdas(q > 0 ? url.Substring(0, q) : url) + "\",\"ms\":" + Math.Round(ms).ToString(CultureInfo.InvariantCulture)
+                    + ",\"kt\":" + (tavut / 1024) + "}";
+                try
+                {
+                    if (hautTiedosto != null) lock (lukko) File.AppendAllText(hautTiedosto, rivi + "\n");
+                }
+                catch (Exception) { }
+            }
             lock (lukko)
             {
                 hakuja++;
@@ -214,9 +257,45 @@ namespace Matkakirja
         }
 
         /// <summary>Testikomento `verkko nollaa`: summat pois (tiedosto jää).</summary>
+        /// <summary>Vaiheen verkko-odotus millisekunteina (0 = pelaaja ei odottanut verkkoa).</summary>
+        public static double VerkkoaOdotettuMs(string vaihe)
+        {
+            lock (lukko) return verkkoaOdotettu.TryGetValue(vaihe, out var s) ? s.Ms : 0;
+        }
+
+        /// <summary>Kaikkien vaiheiden verkko-odotus yhteensä (ms) ja osuma-% kaikista pyynnöistä (−1 = ei pyyntöjä).</summary>
+        public static (double Ms, int OsumaPros) Kokonaisuus()
+        {
+            lock (lukko)
+            {
+                double ms = verkkoaOdotettu.Values.Sum(s => s.Ms);
+                long n = osumat.Values.Sum(s => (long)s.N), o = osumat.Values.Sum(s => s.Tavut);
+                return (ms, n > 0 ? (int)Math.Round(100.0 * o / n) : -1);
+            }
+        }
+
+        /// <summary>
+        /// VARTIJA laitteelle (Laitetestaajan kierros; komento `verkko raja [vaihe]`): "RAJA saapuminen 0 ms verkko-odotusta:
+        /// PASS|FAIL (ms, kpl)". Sama sääntö kuin Peli-testit/verkko-savuke.sh, mutta ilman Macin skriptiä.
+        /// </summary>
+        public static string Raja(string vaihe = "saapuminen")
+        {
+            int n;
+            double ms;
+            lock (lukko) { verkkoaOdotettu.TryGetValue(vaihe, out var s); ms = s?.Ms ?? 0; n = s?.N ?? 0; }
+            return $"RAJA {vaihe} 0 ms verkko-odotusta: {(ms == 0 ? "PASS" : "FAIL")} ({Math.Round(ms)} ms, {n} odotusta)";
+        }
+
+        /// <summary>Kehittäjätilan rivi (KehysMittari): odotettu verkkoa yhteensä ja saapumisessa, osuma-%.</summary>
+        public static string Rivi()
+        {
+            var (ms, pros) = Kokonaisuus();
+            return $"\"verkkoOdotusMs\":{Math.Round(ms)},\"saapuminenVerkkoMs\":{Math.Round(VerkkoaOdotettuMs("saapuminen"))},\"osumaPros\":{pros}";
+        }
+
         public static void NollaaSummat()
         {
-            lock (lukko) { odotukset.Clear(); haut.Clear(); osumat.Clear(); }
+            lock (lukko) { odotukset.Clear(); haut.Clear(); osumat.Clear(); verkkoaOdotettu.Clear(); }
         }
     }
 }

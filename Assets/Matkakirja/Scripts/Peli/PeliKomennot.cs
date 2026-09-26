@@ -41,6 +41,7 @@
 //   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
 //   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
+//   verkko raja [vaihe]       vartija: "RAJA saapuminen 0 ms verkko-odotusta: PASS|FAIL (ms, kpl)" lokiin ja peli-lokiin
 //   levy [Mt]                 levyvälimuistien koko ja siivous vanhimmasta (oletus 2048 Mt; pienempi raja testiin) sekä
 //                             purettujen kuvien muisti (LRU tavuina, iPhone 200 / iPad 300 Mt); tulos lokiin "levy:"
 //   tiedosto osoite polku     Esilataaja.Pyyda(Kohde.Tiedosto) ryhmään "testi" (polku suhteessa Documents/sisalto;
@@ -333,6 +334,9 @@ namespace Matkakirja.Natiivi
                 case "verkko":
                     // Verkko-odotusmittari (Kartta/VerkkoOdotus.cs): yhteenveto → verkko-yhteenveto.json; nollaa = summat pois.
                     if (A(1) == "nollaa") { VerkkoOdotus.NollaaSummat(); return null; }
+                    // Vartija laitteelle: verkko raja [vaihe] → "RAJA saapuminen 0 ms verkko-odotusta: PASS|FAIL".
+                    if (A(1) == "haut") { VerkkoOdotus.KirjaaHaut(A(2) != "pois"); return "=hakurivit " + (VerkkoOdotus.HautTiedostoon ? "päällä (verkko-haut.jsonl)" : "pois"); }
+                    if (A(1) == "raja") { var r = VerkkoOdotus.Raja(A(2) ?? "saapuminen"); Debug.Log("MATKAKIRJA " + r); return "=" + r; }
                     return "=" + VerkkoOdotus.Yhteenveto();
                 case "odota-tila":
                 {

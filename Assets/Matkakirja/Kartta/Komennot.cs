@@ -130,6 +130,7 @@ namespace Matkakirja
     ///                             oletus 17 46 92 0.18)
     ///   pallo lepo                pallon lepotila ja syy lokiin (PallonLepo: kamera, tilesetit, palvelin, herätys ja
     ///                             käynnissä olevat kartan animaatiot); ei herätä palloa
+    ///   huntu paljastus <lat> <lon> <km> [reuna km] | huntu paljastus pois   elävän kartan hunnun kuivuminen (Varitaso.Paljastus)
     ///   hdr pois|paalle|oletus|tila   pallon kameran HDR (LampoSaadot; oletus ennallaan päällä) kuvapariin
     ///   varjot pois|auto|paalle|tila  päävalon varjot (LampoSaadot; oletus pois = nykyinen ilme, auto = vain kun
     ///                             maamerkki on ruudulla, varjokartan etäisyys maamerkeistä)
@@ -414,6 +415,20 @@ namespace Matkakirja
                     ScreenCapture.CaptureScreenshot(Application.isMobilePlatform
                         ? o[1] + ".png" : Path.Combine(Application.persistentDataPath, o[1] + ".png"));
                     break;
+                case "huntu" when o.Length > 1 && o[1] == "paljastus":
+                {
+                    // Elävä kartta (build 19): huntu paljastus <lat> <lon> <säde km> [reuna km] | huntu paljastus pois
+                    if (o.Length > 2 && o[2] == "pois") { Varitaso.PaljastusPois(); Debug.Log("MATKAKIRJA huntu: paljastus pois"); break; }
+                    var ic = CultureInfo.InvariantCulture;
+                    if (o.Length < 5 || !double.TryParse(o[2], NumberStyles.Float, ic, out double plat)
+                        || !double.TryParse(o[3], NumberStyles.Float, ic, out double plon)
+                        || !double.TryParse(o[4], NumberStyles.Float, ic, out double pkm))
+                    { Debug.LogWarning("MATKAKIRJA komento: huntu paljastus <lat> <lon> <säde km> [reuna km] | pois"); break; }
+                    double preuna = o.Length > 5 && double.TryParse(o[5], NumberStyles.Float, ic, out double r5) ? r5 : 40.0;
+                    Varitaso.Paljastus(plat, plon, pkm, preuna);
+                    Debug.Log($"MATKAKIRJA huntu: paljastus ({plat}, {plon}) säde {pkm} km, reuna {preuna} km");
+                    break;
+                }
                 case "pallo" when o.Length > 1 && o[1] == "lepo":
                     // Lämpöerä: pallon lepotila ja syy (PallonLepo.Kuvaus); ei herätä palloa (ks. loppu).
                     Debug.Log(PallonLepo.Kuvaus());

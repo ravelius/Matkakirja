@@ -6,15 +6,10 @@
 // voimakkuuteen, joten klippejä on muunnelmina (kilahduksia 4, naksuja 8; naksuilla lisäksi eri kohinapätkä, koska
 // webin kierrätetty suhinakanava soi koko ajan) ja soitto arpoo muunnelman, ei samaa kahdesti peräkkäin.
 //
-// TASO JA MYKISTYS kuten tehosteväylän äänitteillä: Natiivi-UI:n Aanet.Taso(Tehoste) (webin master 0,24 × kompressorin
-// makeup × Äänitehosteet-liuku; Äänimaisema-kytkin pois = 0, web play() ei soita) kerrottuna webin kuivalla haaralla
-// 0,82 (Tehostetaulu.Kaiku.Kuiva). Webin kaiku (märkä haara 0,18 ConvolverNoden normalisoinnilla) jää näillä äänillä
-// noin 24 dB kuivan alle eikä kuulu, joten sitä ei lasketa. Sanelun aikana ei soi (web: konteksti pysäytetty). Testien
-// "hiljaa" (komento.txt: AudioListener.volume 0) vaientaa nämäkin, koska ne ovat tavallisia AudioSourceja.
-//
-// MIKSI OMAT LÄHTEET: tehosteväylälle (Aanet.Tehoste → Tehostetaulu) ei voi rekisteröidä ajonaikaista AudioClipiä, vaan
-// taulun rivi on osoite. LinssiOhjain.Tehoste (ILinssiYmparisto.Tehoste) ohjaa nämä kaksi nimeä tänne ja muut
-// Pelikoodarin väylälle; kun väylä saa rekisteröinnin, klipit voi antaa sille eikä linssien kutsuja tarvitse muuttaa.
+// TEHOSTEVÄYLÄLLÄ (Pelikoodarin Aanet.RekisteroiTehoste 26.9.2026, muunnelmalista): klipit rekisteröidään kerran
+// väylälle nimillä "keksinto" (4) ja "vuosi" (8), ja Aanet.Tehoste arpoo muunnelman. Väylä antaa tason (webin master ×
+// Äänitehosteet-liuku, Äänimaisema pois = 0), mykistyksen, sanelutauon ja webin kaiun (kuiva 0,82 + märkä haara), joten
+// gain on 1 (klipeissä on jo webin reseptin gainit). Testien "hiljaa" (AudioListener.volume 0) vaientaa nämäkin.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,25 +22,24 @@ namespace Matkakirja.Natiivi
 {
     public class LinssiTehosteet : MonoBehaviour
     {
-        public const int KilahduksenMuunnelmia = 4, NaksunMuunnelmia = 8, Lahteita = 6;
+        public const int KilahduksenMuunnelmia = 4, NaksunMuunnelmia = 8;
         /// <summary>Naksun suhinakanavan esirulla (s): suodin lämpimänä kuten webin kierrätetyssä kanavassa.</summary>
         public const double EsirullaS = 0.005;
 
         readonly Dictionary<string, AudioClip[]> klipit = new Dictionary<string, AudioClip[]>();
-        readonly Dictionary<string, int> edelliset = new Dictionary<string, int>();
         readonly Dictionary<string, int> soittoja = new Dictionary<string, int>();
-        readonly List<AudioSource> lahteet = new List<AudioSource>();
-        readonly System.Random arpa = new System.Random();
         Task<(float[][] Kilahdus, float[][] Naksu, double Ms)> laskenta;
         int taajuus;
-        AudioSource viimeisin;
         string viimeisinNimi;
 
         /// <summary>Onko nimi syntetisoitu linssitehoste (muut menevät tehosteväylälle).</summary>
         public static bool Tuntee(string nimi) => nimi == KeksintojenAanet.Keksinto || nimi == KeksintojenAanet.Vuosi;
 
-        /// <summary>Soiva taso: tehosteväylän taso (asetukset, mykistys) × webin kuiva haara.</summary>
-        public static float Taso => Aanet.Taso(AaniKanava.Tehoste) * Tehostetaulu.Kaiku.Kuiva;
+        /// <summary>Väylän gain: väylän kaiku tekee webin kuivan ja märän haaran, joten klipit soivat sellaisinaan.</summary>
+        public const float VaylanGain = 1f;
+
+        /// <summary>Soiva taso: tehosteväylän taso (asetukset, mykistys) × gain (kaiku jakaa sen kuivaan ja märkään).</summary>
+        public static float Taso => Aanet.Taso(AaniKanava.Tehoste) * VaylanGain;
 
         public static LinssiTehosteet Luo(Transform isanta)
         {
@@ -83,8 +77,10 @@ namespace Matkakirja.Natiivi
             }
             klipit[KeksintojenAanet.Keksinto] = Klipit(KeksintojenAanet.Keksinto, t.Result.Kilahdus);
             klipit[KeksintojenAanet.Vuosi] = Klipit(KeksintojenAanet.Vuosi, t.Result.Naksu);
+            foreach (var kv in klipit) Aanet.RekisteroiTehoste(kv.Key, kv.Value, VaylanGain, true);
             LinssiOhjain.Instanssi?.Kirjaa($"linssiaani: synteesi valmis {taajuus} Hz, kilahdus {t.Result.Kilahdus.Length} × " +
-                $"{Synteesi.KeksinnonKestoS:0.00} s, naksu {t.Result.Naksu.Length} × {Synteesi.VuodenKestoS:0.000} s, {t.Result.Ms:F0} ms taustasäikeessä");
+                $"{Synteesi.KeksinnonKestoS:0.00} s, naksu {t.Result.Naksu.Length} × {Synteesi.VuodenKestoS:0.000} s, {t.Result.Ms:F0} ms taustasäikeessä, " +
+                "rekisteröity tehosteväylälle");
         }
 
         AudioClip[] Klipit(string nimi, float[][] pcm)
@@ -98,59 +94,20 @@ namespace Matkakirja.Natiivi
             return c;
         }
 
-        AudioSource Vapaa()
-        {
-            foreach (var s in lahteet) if (!s.isPlaying) return s;
-            if (lahteet.Count < Lahteita)
-            {
-                var uusi = gameObject.AddComponent<AudioSource>();
-                uusi.playOnAwake = false;
-                uusi.loop = false;
-                uusi.spatialBlend = 0;
-                lahteet.Add(uusi);
-                return uusi;
-            }
-            // Kaikki soivat (ei tapahdu: naksu 82 ms enintään 8/s, kilahdus 0,46 s): pisimmällä oleva katkaistaan.
-            AudioSource vanhin = lahteet[0];
-            foreach (var s in lahteet) if (s.time > vanhin.time) vanhin = s;
-            vanhin.Stop();
-            return vanhin;
-        }
-
-        int Arvo(string nimi, int maara)
-        {
-            int e = edelliset.TryGetValue(nimi, out var v) ? v : -1;
-            int i;
-            if (e < 0 || maara <= 1) i = arpa.Next(maara);
-            else
-            {
-                i = arpa.Next(maara - 1);
-                if (i >= e) i++;   // ei samaa muunnelmaa kahdesti peräkkäin
-            }
-            edelliset[nimi] = i;
-            return i;
-        }
-
         /// <summary>
-        /// Soittaa tehosteen (voima kertoo tason kuten tehosteväylällä). Palauttaa soittaneen lähteen tai null ja lokiin
-        /// sopivan syyn.
+        /// Soittaa tehosteen väylältä (voima kertoo tason kuten muillakin tehosteilla). Lähde on väylän oma, joten tila on
+        /// syy lokiin; soiminen todennetaan väylän mittauksesta ("aani mittaa", soivat lähteet "oma:keksinto").
         /// </summary>
         public (AudioSource Lahde, string Tila) Soita(string nimi, float voima = 1f)
         {
-            if (Sanelu.Kaynnissa) return (null, "hiljaa (sanelu)");
-            float taso = Taso * Mathf.Max(0f, voima);
-            if (taso <= 0f) return (null, Asetukset.Paalla(Kytkin.Aanimaisema) ? "hiljaa (Äänitehosteet 0)" : "hiljaa (Äänimaisema pois)");
             if (!klipit.TryGetValue(nimi, out var k) || k.Length == 0)
                 return (null, laskenta != null ? "ei soi (synteesi kesken)" : "ei soi (ei klippiä)");
-            int i = Arvo(nimi, k.Length);
-            var s = Vapaa();
-            s.clip = k[i];
-            s.volume = Mathf.Min(1f, taso);
-            s.Play();
-            viimeisin = s;
+            if (Sanelu.Kaynnissa) return (null, "hiljaa (sanelu)");
+            if (Taso * voima <= 0f) return (null, Asetukset.Paalla(Kytkin.Aanimaisema) ? "hiljaa (Äänitehosteet 0)" : "hiljaa (Äänimaisema pois)");
+            bool soi = Aanet.Tehoste(nimi, voima);
             viimeisinNimi = nimi;
             soittoja[nimi] = (soittoja.TryGetValue(nimi, out var n) ? n : 0) + 1;
-            return (s, $"muunnelma {i + 1}/{k.Length}, taso {s.volume:0.000}");
+            return (null, soi ? $"väylällä ({k.Length} muunnelmaa), taso {Taso * voima:0.000}" : "ei soi (väylä ei tunne nimeä)");
         }
 
         /// <summary>Lähteen tila lokiin: play() ei todista ääntä, mutta etenevä aika (time, timeSamples) todistaa.</summary>
@@ -171,11 +128,12 @@ namespace Matkakirja.Natiivi
             string tila = klipit.Count > 0 ? $"valmiit {taajuus} Hz" : laskenta != null ? "synteesi kesken" : "ei klippejä";
             return $"tehosteet {tila}, taso {Taso:0.000} (Äänitehosteet {Asetukset.Taso(Voima.Tehosteet):0.00}, Äänimaisema " +
                 $"{(Asetukset.Paalla(Kytkin.Aanimaisema) ? "päällä" : "pois")}), soitettu kilahduksia {Soitot(KeksintojenAanet.Keksinto)}, " +
-                $"naksuja {Soitot(KeksintojenAanet.Vuosi)}; viimeisin {viimeisinNimi ?? "-"}: {Lahteen(viimeisin)}";
+                $"naksuja {Soitot(KeksintojenAanet.Vuosi)}; viimeisin {viimeisinNimi ?? "-"} (tehosteväylällä)";
         }
 
         void OnDestroy()
         {
+            foreach (var nimi in klipit.Keys) Aanet.RekisteroiTehoste(nimi, (IReadOnlyList<AudioClip>)null);
             foreach (var k in klipit.Values) foreach (var c in k) if (c != null) Destroy(c);
             klipit.Clear();
         }

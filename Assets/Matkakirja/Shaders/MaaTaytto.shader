@@ -18,6 +18,7 @@ Shader "Matkakirja/MaaTaytto"
         _Alue("Rajaus", Vector) = (-180, 90, 360, 180)
         _TayttoEksponentti("Täytön peittävyyden eksponentti lineaarisessa tilassa", Float) = 1.75
         _Haive("Täytön häive", Float) = 1
+        _Saapuminen("Saapumisen piilotus (1 = näkyy)", Float) = 1
     }
     SubShader
     {
@@ -44,6 +45,8 @@ Shader "Matkakirja/MaaTaytto"
                 float4 _Alue; // länsi, pohjoinen, pituusväli, leveysväli (asteina)
                 float _TayttoEksponentti;
                 float _Haive;
+                // Elävän kartan saapuminen (MaaKartta.Saapuminen): täyttö JA reuna piiloon ja takaisin 0,3 s:ssa.
+                float _Saapuminen;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -100,11 +103,12 @@ Shader "Matkakirja/MaaTaytto"
                 {
                     // Rajalla maan oma reunaväri; meren puolella viereisen maan.
                     half4 r = Vari(k > 0 ? k : naapuri, 0.75, 1.75);
+                    r.a *= _Saapuminen;
                     if (r.a > 0) return r;
                 }
                 if (k <= 0) discard;
                 half4 t = Vari(k, 0.25, _TayttoEksponentti);
-                t.a *= _Haive;
+                t.a *= _Haive * _Saapuminen;
                 if (t.a <= 0) discard;
                 return t;
             }
