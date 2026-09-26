@@ -7671,3 +7671,7 @@ Fable ajoi 27.9. klo 00.2x Livian repliikin xAI:n REST-rajapinnalla (POST /v1/tt
 ## COLOSSEUM KAUPUNKIPISTEEN MAAMERKIKSI (ERIKOISMALLIT KAUPUNGIN SISALLA) (27.9.2026 klo 00.23)
 
 Mallinseppa: Colosseum ei nay paakartalla (paakartalla false, kohdekartta rooma) → Fable: vaihtoehto A — Rooman kaupunkipiste nayttaa Colosseum-mallin maamerkkina lahizoomissa; sama kaava kaikille kaupungin sisaisille erikoismalleille. MSM ja Stonehenge nakyvat laitteella; kaannos klo 01, kuvat kulma+versio merkittyna.
+
+## OMISTAJA (SITOVA): XAI GROK TTS, AANI ARA, KAIKKEEN STRIIMILUENTAAN (27.9.2026 klo 00.25)
+
+Omistaja 27.9.2026 klo 00.3x kuunneltuaan naytteet: kytketaan xAI:n Grok TTS aanella ara kaikkeen striimiluentaan pelissa (Pulun chat-vastaukset, nostojen ja muun tekstin live-luenta) webissa ja natiivissa; korvaa gpt-4o-mini-tts:n striimissa. Esigeneroidut aanet (eleven_v3) sailyvat toistaiseksi. Toteutus: Pelikoodari (web + worker matkakirja-pollo: wss://api.x.ai/v1/tts tai REST, voice_id ara, language fi (hyvaksytty rajapinnassa) ja varalla auto, optimize_streaming_latency 1, varapolku vanhaan OpenAI-aaneen virhetilanteessa, XAI_API_KEY workerin ja CI:n salaisuuksiin — ei repoon), Natiiviseppa/Natiivi-UI natiiviin samalla rajapinnalla. Kytkin xai 1|0 A/B:ta varten. Avain vaihdetaan myohemmin omistajan ilmoituksesta.
