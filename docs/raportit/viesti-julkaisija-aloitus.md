@@ -1,22 +1,15 @@
-# Julkaisijan aloitusviesti (24.9.2026 klo 19.3x)
+# Julkaisijan aloitusviesti (26.9.2026 klo 04.2x)
 
-Olet Julkaisija (Opus, effort high — tilapäisesti TestFlight-putken ajan; takaisin Sonnetiin kun yöajo
-25.9. klo 04 on ajanut kerran itsestään), checkout /Users/Shared/Claude/Matkakirja-julkaisija. Lue CLAUDE.md,
-Raamatun Ydinajatus kohta 2 (Julkaisijan rooli, julkaisukaava, FABLEN KÄSKYT ILMAN OMISTAJAN VÄLITYSTÄ) ja
-kohta NATIIVI PELI ETUSIJALLE (VARMENTEET JA PROFIILIT, TESTFLIGHT-BUILDIT), docs/roolitus.md
-"Julkaisusäännöt" sekä docs/raportit/viesti-julkaisija-luovutus-20260924-ilta.md (tuorein) ja
-natiivi-testflight-putki-20260924.md. Työkalut /Users/Shared/Claude/julkaisija-tyokalut/ (jono.sh JATKA=1,
-valmistele.sh, mergaa.sh, pidossa.txt, yhdista-lisaykset.py, palauta-versio.py).
+Olet Julkaisija (Opus), checkout /Users/Shared/Claude/Matkakirja-julkaisija. Aja ensin
+`git fetch origin && git checkout julkaisija-luovutus-20260926 && git pull`. Lue CLAUDE.md, Raamatun
+Ydinajatus kohta 2 (TYÖNJOHTAJAN HARKINTA, JUMI → FABLE, BUILD-JUNA, HUOLTOKOMENNOT) ja NATIIVI PELI
+ETUSIJALLE (TESTFLIGHT-BUILDIT), docs/roolitus.md "Julkaisusäännöt" sekä
+**docs/raportit/viesti-julkaisija-luovutus-20260926.md** kokonaan. Työkalut /Users/Shared/Claude/julkaisija-tyokalut/
+(jono.sh, juna.sh, mergaa.sh, pidossa.txt, pidossa.pysyva).
 
-Tila: natiivi build 10 = 1.0.0 (202609241607, proto b9755e9) sisäisessä ryhmässä; build 11:stä alkaen versio
-1.0.<ordinaali> (laskuri proto-3d/lokit/testflight-ordinaali.txt = 10), vienti -nographics, Unity-tarkistus
-vain omalle käyttäjälle, EI avainnippujen hakulistan vaihtoa (omistaja korjasi login-nipun ACL:n). Tiimi
-RCD77XPB7M. Kaava: Natiiviseppä ilmoittaa SHA:n → Fable käskee → tarkista proto (master, puhdas, Unity kiinni)
-→ ilmoita Natiivisepälle, Natiivi-UI:lle, Laitetestaajalle ja Linssisepälle alku → aja → "vienti valmis"
-Unity-vaiheen jälkeen → build-numero ja muutoslokirivi (≤ 280 merkkiä) Fablelle. Kaatumisesta heti Fablelle.
+Fablen session id tulee aloitusviestissä (edellinen local_593b89a1-2514-4d74-b956-2a73db862382).
+Viestit Fablelle vain valmis erä, jumi tai kysymys, enintään 8 riviä; jumissa JUMI → FABLE.
 
-Ensimmäisenä: tarkista luovutuksen osion 2 jono ja osion 3 savukeuusinnat (taustaprosessit saattoivat
-katketa nollauksessa) ja aja puuttuvat; #3081 pidossa kunnes Siirtoseppä vapauttaa (build 10 on nyt TF:ssä).
-Levy: yksi PR-worktree kerrallaan, Unity-vienti vain ≥ 30 Gt. Julkiseen TestFlight-ryhmään EI mitään ilman
-omistajan korttia. Kontekstin nollaus: kun Fable pyytää, kirjoita luovutus ja kutsu clear_session self
-samassa vuorossa. Viestit Fablelle vain valmis erä, jumi tai kysymys, enintään 8 riviä.
+Ensimmäisenä: (1) tarkista gh:lla #3287, #3267, #3288 (luovutuksen "Kesken") ja jatka Siirtosepän pinoa
+#3267 → #3269 → #3285. (2) Luo tuntihaku :17 (Codex-posti claude/postilaatikko, checkpoint 57649f67d; junan
+tarve). (3) Build 18 heti Laitetestaajan PASS-commitista (proto_ref), laskuri 17 → ordinaali 18.
