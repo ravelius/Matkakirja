@@ -7451,3 +7451,7 @@ Omistaja 21.4x: lipun (ja samalla logiikalla nostojen 3D-mallien) pitaa nakya pe
 ## LEVYN HEILUNTA = SWAP (27–37 GT), POLTTO TASAINEN (26.9.2026 klo 21.37)
 
 Karttaseppa: vapaa levy seuraa swapin kokoa minuutin tahdissa (vm.swapusage 29,6/30,7 Gt, aamulla 20); osa 2 siivoaa shardit viennin jalkeen (7–9 Gt kerrallaan valiaikaisesti), lokit eivat kasva; v4 pysayttaa < 70 Gt ja jatkaa ≥ 75 Gt. Fable: pidetaan 8 ydinta ja seurataan; Linssiseppa (16 Gt) ja Natiiviseppa (8 Gt) siivoavat omat scratchpadinsa /private/tmp/claude-502/.
+
+## OMISTAJA: 3D-NOSTOT KUVAMERKKIEN SAVYISIKSI, KAIKKI ANIMOIDAAN, YKSINKERTAISIA (26.9.2026 klo 21.40)
+
+Omistaja 21.4x: 3D-nostot samaan savyyn kuin 2D-kuvamerkit (seepia-kaiverrus) tai nahtavyyskartan kohteet; kaikki animoidaan ainakin jotenkin Tivolin logiikalla (elava kerros, ei monotoniaa); mallit mahdollisimman yksinkertaisia. Arkkityyppeja on 16 (+ Akropolis, Delfoi erikoismallit), 2D-kuvamerkkeja 11 + 3 uutta. Fable lahetti omistajalle nykyiset 16 esikatselusta (loydos160-arkkityypit-esikatselu.png 4 osana). Natiiviseppa + Linssiseppa: paletti + animaatiotaulukko → omistajan kortti ennen koodia (1.0.27-era, yhdessa liioitellun perspektiivin kanssa).
