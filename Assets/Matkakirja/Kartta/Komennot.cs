@@ -91,6 +91,7 @@ namespace Matkakirja
     ///   symbolit taso23 0|1       tasojen 2–3 arkkityypit pois/päälle (A/B-mittaus, oletus 1)
     ///   symbolit ylhaalta 3d|2d   1.0.27-kokeilu: 3d = Linna, Kirkko ja Majakka myös pystysuorasta ja liioiteltu perspektiivi
     ///                             (oletus kokeiluhaarassa), 2d = 1.0.26:n sääntö (mallit vasta kallistuksesta 25°)
+    ///   symbolit maasto 0|1       symbolimallit maaston pinnalle (SampleHeightMostDetailed erissä, oletus 1; 0 = ellipsoidilla)
     ///   symbolit perspektiivi <aste>   liioitellun perspektiivin kulma ruudun reunalla (0–80, oletus 55 = Linssisepän
     ///                             LiioiteltuPerspektiivi-käyrä; 0 = pois)
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)

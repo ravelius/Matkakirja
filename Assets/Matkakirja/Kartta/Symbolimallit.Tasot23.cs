@@ -81,6 +81,7 @@ namespace Matkakirja
             public int Lod = -1;
             public bool Nahty, Loydetty;
             public float SyttyAlku = -1f;
+            public bool KorkeusOk;
         }
 
         readonly Dictionary<string, Instanssi23> instanssit23 = new Dictionary<string, Instanssi23>(StringComparer.Ordinal);
@@ -109,7 +110,7 @@ namespace Matkakirja
         int laskettuKorkeus;
         bool laskettuPakota, laskettuYlhaalta;
         float laskettuPerspektiivi, laskettuReuna;
-        int laskettuLeveys;
+        int laskettuLeveys, laskettuMaasto = -1;
 
         // Tila (`symbolit tila`): viimeisimmän laskennan määrät.
         readonly int[,] tyypeittain = new int[2, ArkkityyppiKartoitus.Lukumaara];
@@ -180,12 +181,12 @@ namespace Matkakirja
                            || laskettuFov != kamera.fieldOfView || laskettuKerroin != nk.ZoomKerroin || laskettuSyttyminen != nk.Syttyminen
                            || laskettuKoko != KokoPt || laskettuKorkeus != Screen.height || laskettuPakota != PakotaLoydetty
                            || laskettuYlhaalta != Ylhaalta3D || laskettuPerspektiivi != PerspektiiviAste || laskettuReuna != ReunaPt
-                           || laskettuLeveys != Screen.width;
+                           || laskettuLeveys != Screen.width || laskettuMaasto != maastoVersio;
             if (!muuttui) return false;
             laskettuVersio = nostoVersio; laskettuKamera = kameraM; laskettuPallo = palloM; laskettuFov = kamera.fieldOfView;
             laskettuKerroin = nk.ZoomKerroin; laskettuSyttyminen = nk.Syttyminen; laskettuKoko = KokoPt;
             laskettuKorkeus = Screen.height; laskettuPakota = PakotaLoydetty;
-            laskettuYlhaalta = Ylhaalta3D; laskettuPerspektiivi = PerspektiiviAste; laskettuReuna = ReunaPt; laskettuLeveys = Screen.width;
+            laskettuYlhaalta = Ylhaalta3D; laskettuPerspektiivi = PerspektiiviAste; laskettuReuna = ReunaPt; laskettuLeveys = Screen.width; laskettuMaasto = maastoVersio;
             return true;
         }
 
@@ -221,6 +222,11 @@ namespace Matkakirja
                     // Piirtopiste (ankkuri tai ladottu) kuten 2D-merkillä, jonka paikalle malli tulee.
                     Asento(s.Lat, s.Lon, out i.Paikka, out i.Asento, out i.Normaali);
                     instanssit23[s.Id] = i;
+                }
+                if (!i.KorkeusOk && PinnanKorkeus(s.Id, s.Lat, s.Lon, out double hPinta))
+                {
+                    Asento(s.Lat, s.Lon, hPinta, out i.Paikka, out _, out _);
+                    i.KorkeusOk = true;
                 }
                 Vector3 p = gt.TransformPoint(i.Paikka);
                 Vector3 kohti = kp - p;

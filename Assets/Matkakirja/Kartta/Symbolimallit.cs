@@ -140,6 +140,7 @@ namespace Matkakirja
             {
                 case "ylhaalta": Ylhaalta3D = o[2] != "2d"; return true;
                 case "perspektiivi": PerspektiiviAste = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 80f); return true;
+                case "maasto": MaastoKorkeudet = o[2] != "0" && o[2] != "pois"; return true;
                 case "reuna": ReunaPt = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 4f); return true;
                 default: return false;
             }
@@ -293,6 +294,8 @@ namespace Matkakirja
             public Quaternion Asento;
             public Vector2 Puoli;
             public float Himmea = -1f, ReunaLeveys = -1f, PohjaLeveys, Koko = -1f;
+            /// <summary>Pinnan korkeus haettu (Symbolimallit.Maasto.cs).</summary>
+            public bool KorkeusOk;
         }
         /// <summary>Tason 1 kappaleet noston id:llä.</summary>
         readonly Dictionary<string, Kappale> kappaleet = new Dictionary<string, Kappale>();
@@ -321,6 +324,7 @@ namespace Matkakirja
                 aurinko = FindAnyObjectByType<Aurinko>();
                 if (kamera == null) return;
             }
+            PaivitaKorkeudet();
             var kk = KarttaKerrokset.Instanssi;
             var nk = NostoKerros.Instanssi;
             bool sallittu = Paalla && nk != null && nk.Nakyvissa && !PalloKierto.PorttiSumea && !(kk != null && kk.LinssiPaalla)
@@ -413,6 +417,13 @@ namespace Matkakirja
                 LuoOsat(s.Id, tieto.Erikois, go.transform);
             }
             var osat = osatNostolla.TryGetValue(s.Id, out var oo) ? oo : eiOsia;
+            if (!k.KorkeusOk && PinnanKorkeus(s.Id, s.OmaLat, s.OmaLon, out double hPinta))
+            {
+                // Maaston pinnalle (Mallinseppä 27.9.: vuori Olympoksella jäi liioitellun maaston sisään).
+                Asento(s.OmaLat, s.OmaLon, hPinta, out k.Paikka, out _, out _);
+                k.KorkeusOk = true;
+                k.Koko = -1f;   // maakontakti uuteen paikkaan
+            }
             var gt = georeferenssi.transform;
             Vector3 p = gt.TransformPoint(k.Paikka);
             Vector3 kohti = kamera.transform.position - p;
