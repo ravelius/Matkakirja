@@ -207,3 +207,19 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   Järjestys: Canal Grande → Thames → köysirata Chamonix. Budapest on varapaikka, ja Afrikan kolme aluetta tulevat myöhemmin.
 - **Seuraavaksi:** build 20:n PASS ja Natiivisepän ElavaKerros-haara → siirrä PallonLepo.Animoi-kutsut → myllyt
   (kokeilu 1). Worktree wt/proto-linssiseppa-elava (elavat-hetket) poistetaan, kun build 21 on masterissa.
+
+## Päivitys klo 14.5x
+
+- **Löydös 162 (saapuminen luennan jälkeen)** on build 21:ssä (4b52b8f0 = juna 64887a7a). Haara
+  linssiseppa/saapuminen-luennan-jalkeen: 64f7625d, sitten kuvapakan korjaus 2d850f73, jossa Natiivi-UI:n Hiljeni(0).
+  - ElavaKartta: Vaihe.Odottaa (kohtaus ajassa 0). Käynnistyy, kun ElavaHerays.HiljaisuudenEste() == null on ollut
+    voimassa 0,6 s. Esteet: luento, SaapumisluentaKesken (Pelikoodari 23f262bf), Puhe.Soi, KorttiAukiKysely
+    (Natiivi-UI 5662eab5), kuvasumennus, portti ja linssi. Kun vain kuvasumennus on jäljellä, KuvapakkaLahtee →
+    viive 0,2 s.
+  - Sama ehto koskee elävät hetket ja maakunnan herätyksen.
+  - Todennettu (lokit/linssiseppa-162-20260926/): luento → 0,2 s, Ohita → 0,6 s, ääni pois + kortti → ≤ 1 s.
+  - Testikomento `elava saapuminen <kaupunki> odota`. Skriptit scratchpadissa f0b4fec1: ajo-162d.sh.
+  - HUOM: Marseillen saapumispuhe kestää vain 3,5 s, joten testiskriptin "FAIL: soi luennan aikana" on virhehälytys.
+- **ISS-linssin suunnitelma** docs/raportit/iss-linssi-suunnitelma-20260926.md odottaa omistajan kuittausta (poissa 2 pv).
+  Toteutus vasta build 22:n ja myllyjen jälkeen.
+- **Seuraavaksi:** Natiivisepän ElavaKerros-haara → siirrä PallonLepo.Animoi-kutsut → myllyt (kokeilu 1).
