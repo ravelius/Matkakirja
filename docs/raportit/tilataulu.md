@@ -2,11 +2,11 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 11:30 EEST
+**Päivitetty:** 2026-09-26 11:39 EEST
 
 ## 1) Sessiot
 
-Uusi tili klo 11:30: viikko (all models) **9 %**, viikko (Fable) 6 %, 5 h **34 %**. Ei ylityksiä. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista.
+Uusi tili klo 11:39: viikko (all models) **10 %**, viikko (Fable) 6 %, 5 h **37 %**. Ei ylityksiä. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista.
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
@@ -24,7 +24,11 @@ Uusi tili klo 11:30: viikko (all models) **9 %**, viikko (Fable) 6 %, 5 h **34 %
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-**11:30 HÄLYTYS Postivahdilta — SWAP YLI RAJAN:** swap nyt **19,25 Gt / 20,48 Gt** (raja >16 Gt), nousi 5,6 Gt:sta ~12 minuutissa (11:18→11:30). Samalla levy laski 102→**90 Gt** (raja 80 Gt, lähestyy nopeasti). Ilmoitettu Fablelle heti. Ei toimenpidettä Postivahdilta — seurataan, ilmoitetaan jos jatkuu tai levy alittaa 80 Gt.
+**11:39: Fable selvitti swap/levy-hälytyksen — ei yksittäistä syyllistä** (simulaattori 1,3 Gt, 3× Playwright-Chromium ~3 Gt, mds_stores 1,4 Gt/Spotlight indeksoi lokit-kansiota 38 Gt, dotnet 0,9 Gt, DerivedData 9,6 Gt). Klo 11:39 swap **16,13/17,4 Gt**, levy **91 Gt** — molemmat Fablen uusien rajojen sisällä (swap ≤24 Gt, levy ≥85 Gt), ei purge-tarvetta. **UUDET RAJAT (Fable 11:4x): swap >24 Gt TAI levy <85 Gt → Postivahti ajaa `sudo purge` ja ilmoittaa Fablelle.**
+
+**11:39 HAVAINTO (Fablen pyytämä tarkistus #3): useita proto-kaanna.sh-ajoja päällekkäin samalla simulaattorilla.** Simulaattori FBBD41D7 (natiiviseppa-iPhone) kohteena 4 samanaikaisessa proto-kaanna.sh-prosessissa yhtä aikaa: `natiivi-ui/symbolit-160b`, `natiiviseppa/symbolimallit-160+natiivi-ui/symbolit-160b`, `juna/b13` (x2, eri haarayhdistelmillä). Tämä on todennäköinen swap-piikin osasyy — muistutus [[poltot-rinnakkaisuus-paivalla]]-säännöstä lähetetty Fablelle.
+
+**11:30 HÄLYTYS Postivahdilta — SWAP YLI RAJAN (kuitattu 11:39, ks. yllä):** swap oli **19,25 Gt / 20,48 Gt**, levy 90 Gt.
 
 **09:23: TILINVAIHTO valmis — kaikki 10 roolisessiota luotu (ks. kohta 1), kaikki kuitanneet 09.22 (Fable).** Viikko/5h-rajat (85/98 %) koskevat nyt uutta tiliä, laskuri alkaa alusta. Vanhan tilin luovutukset (build 19, 96 %) jäivät historiaan. Laitetestaaja: build 20 -esikierros käynnissä (aed733c9). Karttaseppä: ei aja delta-polttoa juuri nyt.
 
@@ -58,9 +62,24 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 34 % (uusi tili, nollautuu 11:00 UTC = 14:00 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 9 %.** **Viikko (Fable):** 6 %.
-- **Levy:** **90 Gt vapaana** (Fablen hälytysraja 80 Gt, laski 102→90 Gt tällä kierroksella — nopea trendi, seurataan tiiviisti). **Swap: 19,25 Gt / 20,48 Gt (YLI 16 Gt -rajan, hälytetty Fablelle 11:30).** **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 44 kpl.
-- **Simulaattorit boottina:** 1 (natiiviseppa-iPhone — max 4 päivällä). coreaudiod 7 %. **Chrome-GPU-prosesseja (type=gpu-process):** 1.
-- **Konteksti:** Sisältökirjuri 65 %, Natiiviseppä 59 %, Pelikoodari 47 %, Fable 47 %, Karttaseppä 40 %, Natiivi-UI 45 %, Laitetestaaja 35 %, Linssiseppä 32 %, Siirtoseppä 25 %, Julkaisija 19 %, Postivahti 33 %. Ei ylityksiä (raja 70 %).
-- **Juna:** vanhin kääntämätön commit 18 min (juna/b13 7fab7ed8, 11:26), ei proto-kaanna.sh käynnissä — lähestyy 25 min -rajaa, seurataan.
+- **5 h -kiintiö:** 37 % (uusi tili, nollautuu 11:00 UTC = 14:00 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 10 %.** **Viikko (Fable):** 6 %.
+- **Levy:** 91 Gt vapaana (Fablen hälytysraja **85 Gt** uusi, oli 80 Gt — Fable 11:4x). **Swap: 16,13 / 17,4 Gt (normalisoitunut, uusi raja 24 Gt).** **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 45 kpl.
+- **Simulaattorit boottina:** 3 (natiiviseppa-iPhone, iPhone 17, iPad Pro 13-inch — max 4 päivällä; usea proto-kaanna.sh-ajo kohdistuu samaan simulaattoriin yhtä aikaa, ks. kohta 2). coreaudiod 6 %. **Chrome-GPU-prosesseja (type=gpu-process):** 1. Playwright/Chromium-prosesseja yhteensä 32.
+- **Konteksti:** Sisältökirjuri 65 % (vakiintunut), Natiiviseppä 59 %, Pelikoodari 47 %, Fable 47 %, Karttaseppä 40 %, Natiivi-UI 45 %, Laitetestaaja 35 %, Linssiseppä 32 %, Siirtoseppä 25 %, Julkaisija 19 %, Postivahti 36 %. Ei ylityksiä (raja 70 %).
+- **Juna:** yläraja laukesi 11:36, käännös käynnissä — ei hälytystä.
 - **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
+
+## 6) proto-3d/lokit — 10 suurinta alikansiota yli 24 h vanhoja (Fablen pyyntö 11:3x, ei poistoja)
+
+1. koreografia-iphone-20260924 — 255 M
+2. lento-aikajana-20260924 — 158 M
+3. lento-aikajana-20260924-b — 149 M
+4. lento-aikajana-20260924-tokio — 140 M
+5. kuvasarjat-natiivi-ui-20260924 — 72 M
+6. lento-nostot-20260924 — 47 M
+7. lento-ipad-20260924 — 39 M
+8. kontakti-web2 — 38 M
+9. ihminen-avaus-iphone-20260924 — 28 M
+10. piikit3-20260924 — 22 M
+
+(Huom: nämä ovat lokit/-kansion suoria alikansioita; itse mds_stores/Spotlight-indeksin 38 Gt koskee koko lokit/-puuta, ei näitä yksittäisiä kansioita — poistot vain omistajan skriptillä.)
