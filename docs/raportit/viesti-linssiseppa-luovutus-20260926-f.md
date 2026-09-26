@@ -142,3 +142,27 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
 - **Käännös:** jonossa TestFlight-lukon (08.28) ja junan 427e1a1a jälkeen. Taustalla ketjutettuna on scratchpad
   `ajo-matka.sh`, joka ottaa kuvat kaukaa, Euroopasta, piirtymisestä, läheltä, takapuolelta ja pois-tilasta
   (lokit/linssiseppa-matka-20260926/). Sitten kuvapari omistajalle ja Fablelle, .meta Unitylta ja merge-pyyntö.
+
+## Päivitys klo 08.5x: kohta 5 (elävät hetket) koodattu kohdan 4 päälle
+
+- **Haara linssiseppa/elavat-hetket 89d0d258** on pinottu kohdan 4 päälle (kirjoitettu-maailma 89b054e8). Merge-pyyntö
+  koskee koko haaraa, tai kohta 4 ensin.
+  - Ydin/Elava/Hetket.cs (puhdas, testattu):
+    - HetkiAjastin: ensimmäinen hetki 45–120 s:n kuluttua, sitten 2–5 min välein. Varattuna lykkäys 20 s.
+    - HetkenValinta: laji niistä, joilla on näkyvä kohde, eikä sama laji peräkkäin. Radat 1873-viivoja pitkin
+      (laiva 5 % ja juna 8 % näkymän halkaisijasta), parvi maakunnan yli ja sade länsituulessa.
+    - Reitti1873.Jasenna lukee paketin kokoelman reitit1873 (alkiot, viivat [lon, lat]).
+  - Ydin/Aanet/HetkienAanet.cs: syntetisoidut hiljaiset äänet eli tuuli, kaukainen laivan kello, sade ja junan
+    puhallukset. Huiput 0,02–0,06, keksinnön kilahduksen luokkaa. Ei äänitiedostoja eikä lisenssejä.
+  - Unity/ElavatHetket.cs:
+    - 3 s:n hetki ruutupisteinä: videon Laiva-varjostin, vana ja savu; veturi ja vaunut; 11 linnun V-parvi;
+      kuuro ja juovat.
+    - Ehdot: vain maa- ja maakuntanäkymässä (15–2 500 km), kun kartta on vapaa, kamera on ollut levossa 5 s ja
+      sitä on liikutettu viimeisen 10 min aikana. Ei hetkiä vähennetyllä liikkeellä.
+    - Lepopiirto: PallonLepo.Animoi (ei joutosykkeen aktiivisuutta), loppuun Valmistui.
+    - Komennot `elava hetki [laiva|juna|parvi|sade]` ja `elava hetket 0|1|tila`.
+  - Testit 321/321, tarkista 0 virhettä.
+- **Käännös:** scratchpad `kaanna.sh hetket linssiseppa/elavat-hetket` odottaa junan (3f2db11b) käännöstä. Taustalla
+  ketjutettuna `ajo-matka.sh` ajaa kohdan 4 ja kohdan 5 lajit (laiva, parvi ja sade Kreikassa, juna Lontoossa)
+  sekä `pallo lepo`. Kuvat tulevat hakemistoon lokit/linssiseppa-matka-20260926/, ja niistä kuvapari omistajalle ja
+  Fablelle. Unityn .metat (ElavaMatka, ElavatHetket, Hetket, HetkienAanet) otetaan käännöksen -metat-kansiosta.
