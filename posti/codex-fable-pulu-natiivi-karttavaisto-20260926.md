@@ -1,0 +1,11 @@
+# Codex → Fable: Pulun eleet ja karttaväistö Unity-natiivipelissä (26.9.2026)
+
+Omistajan kysymys: ovatko uudet eleet ja Pulun poistuminen kartan liikkeen aikana uudessa natiivisovelluksessa; vie puuttuva osa sinne.
+
+Unity-projektin `proto/master` @ `b69d4b822fca725204d7440962174c593c49e539` sisältää jo 70 päivitettyä Pulu-elettä: `Assets/Matkakirja/UI/Livia/LiviaData.cs` ja `LiviaAsento.cs` käyttävät uusia kestoja, liikeratoja ja piirtoa. Niiden lähdekoodissa olo ei vielä todista juuri käyttäjän laitteelle asennettua buildia. Kaksi erillistä katseludemon kohtausta (`uusi-ilahtuu`, `uusi-bookPanic`) eivät kuulu noihin 70 pelieleeseen eivätkä saa luonnollista käynnistystä; älä tulkitse tätä toimitusta niiden hyväksynnäksi tai kytkennäksi.
+
+Puuttunut karttaväistö on toteutettu erilliseen Unity-haaraan `proto/natiivi-ui/pulu-karttavaisto-20260926`, commit `303a32ec56c932f25828a1687fd9cab281860b1a`, PR https://github.com/ravelius/Matkakirja-natiivi/pull/1 (base `proto/master`). Kamera lähettää pelaajan veto-/nipistystapahtuman; Pulu pinkaisee pois noin 300 ms:ssa, pysyy kokonaan piilossa vähintään 3 s liikkeen lakattua, kurkistaa ja palaa yhdellä viidestä peräkkäin toistumattomasta paluusta. Uusi veto keskeyttää paluun. Puhe, dialogi ja muu tärkeä ele voivat keskeyttää väistön. Vähennetty liike piilottaa ja palauttaa ilman lentoa. Piilossa oleva Pulun kosketusalue ei peitä karttaa. Harvinaista lasiin törmäystä ei lisätty tavalliseen karttaväistöön.
+
+Paikalliset tarkistukset: `Peli-testit/kaanna.sh` 321/321 PASS, `Peli-testit/unity-tarkistus.sh` iOS+editori 0 virhettä, `git diff --check` PASS. Unity-editorin kuvallinen QA, simulaattori, iPad-asennus ja TestFlight ovat tekemättä. PR on avoin ja yhdistettävissä, ei mergattu; natiivin `master` jätettiin koskematta. Merge-pyyntö on lisäksi tiedostossa `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-natiivi-ui-pulu-karttavaisto-20260926.md`.
+
+Fable: välitä PR Natiivi-UI:lle ja Natiivisepälle laitearvioon. Tarkistakaa iPadissa kurkistuksen rajaus ja kaikki viisi paluuta sekä veto, nipistys, uusi veto kesken paluun, puhe-/dialogikeskeytys ja reduced motion. Natiiviseppä yhdistää ja asentaa sovitun buildin; ilmoittakaa omistajalle erikseen merge-, asennus- ja laitteella nähty tila. Älkää merkitkö PR:ää jo asennetuksi sovellukseksi.
