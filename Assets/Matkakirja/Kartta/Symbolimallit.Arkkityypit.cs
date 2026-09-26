@@ -156,7 +156,8 @@ namespace Matkakirja
             }
         }
 
-        /// <summary>Luostari: kirkko pohjoisreunalla ja sen eteläpuolella umpipiha (neljä siipeä, sage-puutarha).</summary>
+        /// <summary>Luostari: kirkko pohjoisreunalla ja sen eteläpuolella umpipiha (neljä siipeä, kivetty piha ja puu).
+        /// Löydös 175c (yksi aksentti mallia kohden): aksentti on terrakottakatot, piha kivenä ja puu varjona (ennen oliivi).</summary>
         static void ALuostari(Rakentaja r, bool k)
         {
             var kirkko = V(0.02f, 0, 0.26f);
@@ -177,8 +178,8 @@ namespace Matkakirja
             r.HarjaZ(piha + V(lx * 0.5f - w * 0.5f, h, 0), V(w, 0.07f, lz - 2 * w), Terrakotta, Pinta);
             r.Laatikko(piha + V(0, 0, lz * 0.5f - w * 0.5f), V(lx, 0.1f, w), Pinta, Varjo); // pohjoissiipi matalampi
             r.Nelio(piha + V(-lx * 0.5f + w, 0.004f, -lz * 0.5f + w), piha + V(-lx * 0.5f + w, 0.004f, lz * 0.5f - w),
-                piha + V(lx * 0.5f - w, 0.004f, lz * 0.5f - w), piha + V(lx * 0.5f - w, 0.004f, -lz * 0.5f + w), Oliivi);
-            r.Kartio(piha + V(0, 0.004f, 0), 0.04f, 0.1f, 6, Oliivi); // pihan puu
+                piha + V(lx * 0.5f - w, 0.004f, lz * 0.5f - w), piha + V(lx * 0.5f - w, 0.004f, -lz * 0.5f + w), Kivi);
+            r.Kartio(piha + V(0, 0.004f, 0), 0.04f, 0.1f, 6, Varjo); // pihan puu
             // Apsis ja portti eteläsiivessä.
             r.Rengaskallio(kirkko + V(0.29f, 0, 0), new[] { (0f, 0.18f, 0.18f), (0.19f, 0.18f, 0.18f) }, 0.28f, 8, 1, Valo, Terrakotta, 0f);
             r.NelioUlos(piha + V(-0.04f, 0, -lz * 0.5f - 0.002f), piha + V(-0.04f, 0.1f, -lz * 0.5f - 0.002f),
