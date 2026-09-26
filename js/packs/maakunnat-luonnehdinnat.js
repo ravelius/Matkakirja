@@ -7297,120 +7297,549 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MDA: {
     'Anenii Noi': {
       lyhyt: 'Varnițan kylässä Benderin pohjoispuolella leireili Ruotsin kuningas Kaarle XII vuosina 1711–1713, kunnes osmanien joukot hyökkäsivät leiriin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-anenii-noi-8b1e0b46.jpg",
+          lahde: "Gikü, Wikimedia Commons (CC0)",
+          tekija: "Gikü",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.AN.AN_-_downtown_-_nov_2012.JPG",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-anenii-noi-8b1e0b46.jpg",
     },
     'Bălţi': {
       lyhyt: 'Bălți tarkoittaa romaniaksi lätäköitä – kaupunki sai nimensä kosteikoista mäen juurella, jossa Răuțel-puro laskee Răut-jokeen.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-balti-518257be.jpg",
+          lahde: "Avereanu, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Avereanu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Panorama_Centru_Bălți.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-balti-518257be.jpg",
     },
     Basarabeasca: {
       lyhyt: 'Basarabeasca sai alkunsa 1846 juutalaisesta maanviljelyssiirtokunnasta nimeltä Romanovka, ja nykyisen nimensä kaupunki sai vasta 1957.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-basarabeasca-f3a84a5a.jpg",
+          lahde: "Tanyaofearth, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Tanyaofearth",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Complexul_de_clădiri_al_nodului_de_cale_ferată_în_Basarabeasca_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-basarabeasca-f3a84a5a.jpg",
     },
     Bender: {
       lyhyt: 'Benderin linnoituksen Dnestrin rannalla rakennutti uudelleen sulttaani Süleyman Suuri 1500-luvulla, ja sen muureissa on kymmenen bastionia.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-bender-98d42d40.jpg",
+          lahde: "Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Ivo Kruusamägi",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bender_Fortress._South_side_03.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-bender-98d42d40.jpg",
     },
     Briceni: {
       lyhyt: 'Crivan kylän kipsilouhoksesta avautui 1959 Emil Racovițăn luola, jonka maanalaisia käytäviä on kartoitettu noin 90 kilometriä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-briceni-e9e8115d.jpg",
+          lahde: "Heliaque, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Heliaque",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD-BR-mn.A-003-pestera-emil-racovita-01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-briceni-e9e8115d.jpg",
     },
     Cahul: {
       lyhyt: 'Giurgiuleștissa Moldova ulottuu Tonavalle vain noin 480 metrin matkalta, ja siihen on mahtunut maan ainoa Tonavan satama.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cahul-d58fefdf.jpg",
+          lahde: "Glax2007, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Glax2007",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Portul_de_pasgeri_Giurgiulești.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cahul-d58fefdf.jpg",
     },
     'Călărași': {
       lyhyt: 'Hîrjaucan luostari Codrun metsissä perustettiin 1740, kun sinne asettui kaksi munkkia Romanian puolella sijaitsevasta Neamțin luostarista.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-calarasi-14a0c098.jpg",
+          lahde: "Vladikh, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vladikh",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mănăstirea_„Înălțarea_Domnului”_din_sat._Hîrjauca_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-calarasi-14a0c098.jpg",
     },
     Camenca: {
       lyhyt: 'Camencan Dnestr-parantolassa joen rannalla hoidetaan vieraita ampeloterapialla eli rypälemehulla ja viinillä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-camenca-ee7bb0e5.jpg",
+          lahde: "Simiprof, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Simiprof",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sanatorium_Dnester1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-camenca-ee7bb0e5.jpg",
     },
     Cantemir: {
       lyhyt: 'Cantemirin kaupunki sai nimensä 1973 ruhtinas Dimitrie Cantemirin 300-vuotispäivänä – hän oli Moldovan hallitsija ja oppinut kirjailija.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cantemir-bb635cce.jpg",
+          lahde: "Society for Birds and Nature Protection of Moldova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Society for Birds and Nature Protection of Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.CT_-_rezervația_Cantemir_-_jun_2021_-_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cantemir-bb635cce.jpg",
     },
     Causeni: {
       lyhyt: 'Căușenin 1600-luvun Neitsyt Marian kirkon lattia on yli 90 senttiä maanpinnan alapuolella, ja seinillä on Moldovan ainoa keskiaikainen fresko.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-causeni-61162f0f.jpg",
+          lahde: "Vladikh, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vladikh",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biserica_„Adormirea_Maicii_Domnului”_din_or._Căușeni_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-causeni-61162f0f.jpg",
     },
     'Chişinău': {
       lyhyt: 'Chișinăun pohjoislaidalla Cricovan viinikellareissa kulkee noin 120 kilometriä maanalaisia teitä entisissä kalkkikivilouhoksissa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-chisinau-a8e27317.jpg",
+          lahde: "Kolmkolm, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Kolmkolm",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cricova_Wine_Cellar_Collection.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-chisinau-a8e27317.jpg",
     },
     'Cimişlia': {
       lyhyt: 'Cimișlian rotkoista on kaivettu 1929 lähtien yli 40 selkärankaislajin fossiileja 6–8 miljoonan vuoden takaa, muun muassa mastodontteja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cimislia-6f47cc96.jpg",
+          lahde: "Злодей Андрей, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Злодей Андрей",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cimișlia_panorama.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cimislia-6f47cc96.jpg",
     },
     Comrat: {
       lyhyt: 'Comrat on Gagauzian pääkaupunki, ja gagauusit puhuvat turkkilaista kieltä mutta ovat valtaosin ortodoksikristittyjä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-comrat-cf169ffe.jpg",
+          lahde: "Злодей Андрей, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Злодей Андрей",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.GE.Comrat_-_Catedrala_Sf._Ioan_Botezătorul_-_jun_2017.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-comrat-cf169ffe.jpg",
     },
     Criuleni: {
       lyhyt: 'Criulenin lähellä Dnestrin rantametsässä on Yllätysten luola, 1 700 metriä pitkä kalkkikiviluola ja Moldovan toiseksi pisin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-criuleni-867237a0.jpg",
+          lahde: "Crissty90, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Crissty90",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Intrare_in_pestera_surprizelor.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-criuleni-867237a0.jpg",
     },
     Donduseni: {
       lyhyt: 'Țaulin kylässä vain viiden kilometrin päässä Dondușenista on puisto, jota pidetään Moldovan suurimpana.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-donduseni-a217853c.jpg",
+          lahde: "Cornelia vac, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Cornelia vac",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Parcul_Țaul_08.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-donduseni-a217853c.jpg",
     },
     Drochia: {
       lyhyt: 'Drochiassa toimii Moldovan suurin sokeritehdas, ja piirin maaperästä noin 80 prosenttia on hedelmällistä mustaamultaa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-drochia-eced1f01.jpg",
+          lahde: "Photobank MD from Chisinau, Moldova, Wikimedia Commons (CC0)",
+          tekija: "Photobank MD from Chisinau, Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Дрокия,_дом_культуры_Casa_raionala_de_cultura_din_Drochia_Drochia_House_of_Culture_(43533033121).jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-drochia-eced1f01.jpg",
     },
     'Edineţ': {
       lyhyt: 'Edinețin toltry-kukkulat ovat 15–20 miljoonaa vuotta vanhoja muinaisen meren riuttoja, ja Brînzenin kallioihin on syöpynyt luolia.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-edinet-e8f069c5.jpg",
+          lahde: "Alex Prodan, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Toltre_din_Brinzeni_Edinet_(1).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-edinet-e8f069c5.jpg",
     },
     'Făleşti': {
       lyhyt: 'Făleștin piiristä lähtöisin oleva taiteilija Gheorghe Vrabie piirsi Moldovan vaakunan, ja häntä kutsutaan Moldovan leun isäksi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-falesti-da911cad.jpg",
+          lahde: "Avereanu, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Avereanu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Centru_Falesti.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-falesti-da911cad.jpg",
     },
     'Floreşti': {
       lyhyt: 'Dnestrin rannalla seisova Japcan luostari oli Bessarabian ainoa luostari, jota neuvostovalta ei koskaan sulkenut.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-floresti-cc48a8b2.jpg",
+          lahde: "Criss90kf, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Criss90kf",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Manastirea_Japca_2014.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-floresti-cc48a8b2.jpg",
     },
     Glodeni: {
       lyhyt: 'Pădurea Domneascăn suojelualueelle tuotiin 2006 Puolasta visenttejä, ja sen metsissä on yli 3 500 arvoituksellista muinaista kumpua.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-glodeni-0400c990.jpg",
+          lahde: "Alex Prodan, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Padurea_Domneasca_zimbrii_Glodeni_(5).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-glodeni-0400c990.jpg",
     },
     Grigoriopol: {
       lyhyt: 'Grigoriopol perustettiin 1792 armenialaisten siirtokunnaksi Dnestrin vasemmalle rannalle.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-grigoriopol-10fde0a0.jpg",
+          lahde: "Clay Gilliland, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Clay Gilliland",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Along_the_Dniester_River_(14942562199).jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-grigoriopol-10fde0a0.jpg",
     },
     'Hîncesti': {
       lyhyt: 'Hînceștin tiluksille vetäytyi elämänsä lopulla armenialainen kauppias ja diplomaatti Manuc Bei, ja hänen poikansa rakennutti sinne palatsin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-hincesti-6422161e.jpg",
+          lahde: "Agenția de Inspectare și Restaurare a Monumentelor din Republica Moldova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Agenția de Inspectare și Restaurare a Monumentelor din Republica Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:AIRM_-_Mansion_of_Manuc_Bei_-_feb_2012_-_07.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-hincesti-6422161e.jpg",
     },
     Ialoveni: {
       lyhyt: 'Mileștii Micin viinikellareissa on lähes kaksi miljoonaa pulloa – Guinness kirjasi sen 2005 maailman suurimmaksi viinikokoelmaksi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ialoveni-679b7234.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bodegas_de_Mileștii_Mici,_Moldavia,_2023-11-02,_DD_73.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ialoveni-679b7234.jpg",
     },
     Leova: {
       lyhyt: 'Leovan seudun halki kulkee Traianuksen valliksi kutsuttu muinainen maavalli, ja piirin länsilaitaa seuraa Romanian rajajoki Prut.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-leova-aa11a759.jpg",
+          lahde: "Lars Larsen, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Lars Larsen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Leova,_Moldova,_Piața_mare._-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-leova-aa11a759.jpg",
     },
     Nisporeni: {
       lyhyt: 'Nisporenin piirissä kohoava Bălăneștin kukkula on noin 430 metrin korkeudellaan Moldovan korkein kohta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-nisporeni-83be8503.jpg",
+          lahde: "Joerggo, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Joerggo",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dealul_Bălănești_2.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-nisporeni-83be8503.jpg",
     },
     'Ocniţa': {
       lyhyt: 'Naslavcean kylä Dnestrin rannalla on Moldovan pohjoisin kohta, ja sen kalkkikivirinteiltä avautuu näkymä joen mutkiin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ocnita-1e087f73.jpg",
+          lahde: "Alex Prodan, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Malul_abrupt_al_Nistrului_Naslavcea-Verejeni_Ocnita_(3).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ocnita-1e087f73.jpg",
     },
     Orhei: {
       lyhyt: 'Răut-joen mutkassa Orheiul Vechin kalkkikivikallioon on kaiverrettu luolaluostari, jossa asuu yhä kourallinen munkkeja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-orhei-21c2c9f0.jpg",
+          lahde: "Julian Nyča, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Julian Nyča",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Orhei_Vechi_08.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-orhei-21c2c9f0.jpg",
     },
     Rezina: {
       lyhyt: 'Saharnan luostari on Moldovan suurimpia pyhiinvaelluspaikkoja, ja tarun mukaan sen yllä kohoavalla kalliolla on Neitsyt Marian jalanjälki.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-rezina-0eb6cc45.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Monasterio_de_Saharna,_Saharna,_Moldavia,_2023-11-01,_DD_52-54_HDR.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-rezina-0eb6cc45.jpg",
     },
     'Rîşcani': {
       lyhyt: 'Prutille Costeștiin valmistui 1978 yhdessä Romanian kanssa rakennettu pato ja vesivoimala, jonka tekojärvessä on noin 1,3 miljardia kuutiota vettä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-riscani-6b8458c4.jpg",
+          lahde: "Bogdan Muraru, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bogdan Muraru",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Barajul_Stânca_Costesti.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-riscani-6b8458c4.jpg",
     },
     'Sîngerei': {
       lyhyt: 'Sîngerein piirin halki virtaa Răut, pisin kokonaan Moldovan rajojen sisällä virtaava joki, matkallaan kohti Dnestriä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-singerei-00cf0ad5.jpg",
+          lahde: "Анатолий Зубанюк, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Анатолий Зубанюк",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sîngerei_District,_Moldova_-_panoramio_(7).jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-singerei-00cf0ad5.jpg",
     },
     'Şoldăneşti': {
       lyhyt: 'Șoldăneștin piiristä lähes viidennes on tammi-, saarni- ja lehmusmetsää, jonka kätköissä elää susia ja villisikoja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soldanesti-e585f35b.jpg",
+          lahde: "Анатолий Зубанюк, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Анатолий Зубанюк",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Șoldănești_District,_Moldova_-_panoramio_(7).jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soldanesti-e585f35b.jpg",
     },
     Soroca: {
       lyhyt: 'Sorocan linnoitus Dnestrin rannalla on täydellinen ympyrä, jossa on viisi tasavälein sijoitettua bastionia; kivisenä se valmistui 1540-luvulla.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soroca-259df16b.jpg",
+          lahde: "Popușoi Radu Cornel, Wikimedia Commons (CC0)",
+          tekija: "Popușoi Radu Cornel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Soroca_Fortress.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soroca-259df16b.jpg",
     },
     'Ștefan Vodă': {
       lyhyt: 'Purcarin viinitila sai 1827 keisarin asetuksella Bessarabian ensimmäisen erikoistuneen viinitilan aseman, ja siellä tehdään tummaa Negru de Purcaria.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stefan-voda-22545d5c.jpg",
+          lahde: "Diana.moraru, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diana.moraru",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Purcari.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stefan-voda-22545d5c.jpg",
     },
     'Stîngă Nistrului': {
       lyhyt: 'Dnestrin itärannalla Dubăsarin pato ja vesivoimala valmistuivat 1954, ja padon taakse syntyi Dubăsarin tekojärvi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stinga-nistrului-8c382a9d.jpg",
+          lahde: "Criss90kf, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Criss90kf",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hidrocentrala_Dubăsari_2011_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stinga-nistrului-8c382a9d.jpg",
     },
     'Străşeni': {
       lyhyt: 'Lozovan lähellä Codrun luonnonsuojelualueella on suojeltu vuodesta 1971 yli 5 000 hehtaaria tiheää tammi- ja pyökkimetsää.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-strasani-8f1af1e0.jpg",
+          lahde: "Alex Prodan md, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan md",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rezervatia_Codrii_Straseni_(1).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-strasani-8f1af1e0.jpg",
     },
     Taraclia: {
       lyhyt: 'Taraclian asukkaista yli kolme neljäsosaa on bulgarialaisia, ja kaupungin yliopistossa opetetaan bulgariaksi ja romaniaksi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-taraclia-b4edd728.jpg",
+          lahde: "Gikü, Wikimedia Commons (CC0)",
+          tekija: "Gikü",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.TR.TR_-_peste_drum_de_monumentul_de_război_-_jul_2025.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-taraclia-b4edd728.jpg",
     },
     'Teleneşti': {
       lyhyt: 'Teleneștissä syntyi 1898 Nachum Gutman, josta tuli tunnettu israelilainen taidemaalari – hänen taidemuseonsa on Tel Avivissa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-telenesti-f193ec0e.jpg",
+          lahde: "Gganebnyi, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Gganebnyi",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Primaria_Telenesti_IMG_8094.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-telenesti-f193ec0e.jpg",
     },
     Transnistria: {
       lyhyt: 'Dnestrin itärannalla olevan Dubăsarin nimi tulee vanhasta sanasta dubăsar, joka tarkoitti veneentekijää tai lauttamiestä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-transnistria-4e1fa202.jpg",
+          lahde: "Eugene Romanenko from Tiraspol, Moldova, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Eugene Romanenko from Tiraspol, Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tiraspol,_embankment_(7109955089).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-transnistria-4e1fa202.jpg",
     },
     Ungheni: {
       lyhyt: 'Unghenin rautatiesilta Prutin yli tunnetaan Eiffelin siltana; se avattiin 1877, ja sitä pitkin kulkevat yhä junat Romaniaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ungheni-a7821b69.jpg",
+          lahde: "Ungheni shoot, Wikimedia Commons (CC0)",
+          tekija: "Ungheni shoot",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Podul_Eiffel_de_peste_Prut,_situat_la_granița_dintre_Romînia_și_Moldova.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ungheni-a7821b69.jpg",
     },
   },
   /*
@@ -7452,78 +7881,353 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   UKR: {
     Cherkasy: {
       lyhyt: 'Kanivin lähellä Tarasinmäellä Dneprin rannalla lepää runoilija Taras Ševtšenko, jonka maalliset jäännökset siirrettiin sinne Pietarista 1861.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-cherkasy-ba7e3558.jpg",
+          lahde: "Visem, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Visem",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chernecha_Hora_(May_2018)_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-cherkasy-ba7e3558.jpg",
     },
     Chernihiv: {
       lyhyt: 'Tšernihivin Kirkastumisen katedraalia alettiin rakentaa 1030-luvulla, ja se on harvoja mongolivalloitusta edeltäneen Kiovan Rusin rakennuksia.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernihiv-96c88ff1.jpg",
+          lahde: "Wadco2, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Wadco2",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:74-101-0001_001_Chernigiv.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernihiv-96c88ff1.jpg",
     },
     Chernivtsi: {
       lyhyt: 'Tšernivtsin yliopisto toimii entisessä Bukovinan ja Dalmatian metropoliittojen residenssissä, joka on Unescon maailmanperintöä vuodesta 2011.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernivtsi-491657ec.jpg",
+          lahde: "Artem Vynohradov, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Artem Vynohradov",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chernivtsi_University_main_building.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernivtsi-491657ec.jpg",
     },
     "Dnipropetrovs'k": {
       lyhyt: 'Petrykivkan kylästä on lähtöisin valkoiselle pohjalle maalattu kukkakoristelu, joka on ollut Unescon aineetonta kulttuuriperintöä vuodesta 2013.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-dnipropetrovsk-ad593c25.jpg",
+          lahde: "Skoropadsky, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Skoropadsky",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Petrykivka1.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-dnipropetrovsk-ad593c25.jpg",
     },
     "Donets'k": {
       lyhyt: 'Svjatohirskin luostari kohoaa Siverskyi Donetsin jyrkälle oikealle rannalle liitukallioiden keskelle, ja siitä on kirjallinen maininta vuodelta 1627.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-donetsk-dc976bd3.jpg",
+          lahde: "Mortier.Daniel, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mortier.Daniel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Laure_de_Sviatohirsk_au_nord_de_Donetsk_en_Ukraine.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-donetsk-dc976bd3.jpg",
     },
     "Ivano-Frankivs'k": {
       lyhyt: 'Kolomyjassa on pääsiäismunan muotoinen 14-metrinen museo, jonka kokoelmissa on yli 10 000 koristeltua pysankaa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ivano-frankivsk-b819f809.jpg",
+          lahde: "User:VargaA, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "User:VargaA",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pysanka_Kolomyia_06.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ivano-frankivsk-b819f809.jpg",
     },
     Kharkiv: {
       lyhyt: 'Harkovan Vapaudenaukion laidalla seisova konstruktivistinen Deržprom valmistui 1928 Neuvostoliiton ensimmäiseksi pilvenpiirtäjäksi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kharkiv-be7eb59a.jpg",
+          lahde: "Serhii BobokIf you have any questions please contact with me. Other photos see here.Якщо у Вас є якісь запитання будь ласка зв'яжіться зі мною. Інші фотографії Ви можете переглянути тут, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Serhii BobokIf you have any questions please contact with me. Other photos see here.Якщо у Вас є якісь запитання будь ласка зв'яжіться зі мною. Інші фотографії Ви можете переглянути тут",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Derzhprom_Kharkiv_2025_-_01.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kharkiv-be7eb59a.jpg",
     },
     Kherson: {
       lyhyt: 'Askania-Novan suojelualueen perusti 1898 Friedrich Falz-Fein, ja se tunnetaan przewalskinhevosistaan ja koskemattomasta arostaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kherson-cf1d7ac2.jpg",
+          lahde: "Nataliya Shestakova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nataliya Shestakova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Askania-Nova_Steppe_24_Przewalski's_Horses_(YDS_1683).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kherson-cf1d7ac2.jpg",
     },
     "Khmel'nyts'kyy": {
       lyhyt: 'Kamjanets-Podilskyin linna seisoo niemellä, jonka ympärille Smotrytš-joki on kaivertanut kanjonin; linnaan johtaa 88-metrinen silta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-khmelnytskyy-23492f8e.jpg",
+          lahde: "Dima Sergiyenko; Please attribute this image as the work of \"DiscoverWithDima.\", Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Dima Sergiyenko; Please attribute this image as the work of \"DiscoverWithDima.\"",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kamianets-Podilskyi_Castle_(2007)-2.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-khmelnytskyy-23492f8e.jpg",
     },
     Kiev: {
       lyhyt: 'Bila Tserkvan Oleksandrija on Ukrainan suurin dendrologinen puisto, jonka kreivi Branicki perusti Ros-joen rannalle 1793.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-afac92de.jpg",
+          lahde: "Mykola Swarnyk, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mykola Swarnyk",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Oleksandriya_Park_Ros_River.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-afac92de.jpg",
     },
     'Kiev City': {
       lyhyt: 'Kiovan metron Arsenalna-asema on 105,5 metrin syvyydessä, ja se on yksi maailman syvimmistä metroasemista.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-city-1f928085.jpg",
+          lahde: "AMY (talk) 12:14, 7 May 2010 (UTC), Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "AMY (talk) 12:14, 7 May 2010 (UTC)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Arsenalna_metro_station_Kiev_2010_pano.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-city-1f928085.jpg",
     },
     Kirovohrad: {
       lyhyt: 'Kirovohradin alueen pikkukaupunkia Dobrovelytškivkaa pidetään Ukrainan maantieteellisenä keskipisteenä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kirovohrad-250841fd.jpg",
+          lahde: "Map hobby, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Map hobby",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Гео_Центр_Добровеличківка.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kirovohrad-250841fd.jpg",
     },
     "L'viv": {
       lyhyt: 'Lvivin Rynok-toria ympäröi 44 vanhaa kaupunkitaloa, ja torin jokaisessa kulmassa on 1790-luvun kaivolähde antiikin tarujen hahmon patsaineen.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-lviv-500ca648.jpg",
+          lahde: "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Jorge Láscar from Australia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rynok_Square_in_Lviv_(8673813675).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-lviv-500ca648.jpg",
     },
     "Luhans'k": {
       lyhyt: 'Alueen pohjoisosan Striltsivskyin aro otettiin suojeluun arosurmelin vuoksi, ja tuo murmeli on yhä suojelualueen tunnuseläin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-luhansk-cc02798f.jpg",
+          lahde: "Дар`я Коршун, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Дар`я Коршун",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:\"Стрільцівський_степ\",_відділення_Луганського_природного_заповіднику,_Міловський_район,_Луганська_область_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-luhansk-cc02798f.jpg",
     },
     Mykolayiv: {
       lyhyt: 'Parutynen kylän lähellä Etelä-Bugin suistossa ovat Olbian rauniot – kaupungin perustivat Miletoksen kreikkalaiset 600-luvulla eaa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-mykolayiv-ee5018e9.jpg",
+          lahde: "Investigatio, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Investigatio",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mykolayivs'ka_parutino_Olvia_archeological_site-01.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-mykolayiv-ee5018e9.jpg",
     },
     Odessa: {
       lyhyt: 'Odessan alla kiemurtelee jopa 2 500 kilometriä katakombeja, enimmäkseen louhoksia, joista kaupungin rakennuskivi aikanaan nostettiin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-odessa-e70df068.jpg",
+          lahde: "DIMSFIKAS, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "DIMSFIKAS",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Potemkin_stairs,_Odessa.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-odessa-e70df068.jpg",
     },
     Poltava: {
       lyhyt: 'Opišnjan kylä on tunnettu keramiikastaan: siellä on valmistettu koristeellisia saviastioita perinteisin menetelmin 1800-luvulta asti.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-poltava-17b214b8.jpg",
+          lahde: "Tetiana.iefimenko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Tetiana.iefimenko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:3_cats_in_the_National_Museum_of_Ukrainian_Pottery,_Opishnya,_Ukraine.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-poltava-17b214b8.jpg",
     },
     Rivne: {
       lyhyt: 'Klevanin lähellä kulkee Rakkauden tunneli, muutaman kilometrin teollisuusrata, jonka yllä puut kaartuvat vihreäksi holviksi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-rivne-ee6897f4.jpg",
+          lahde: "Дядя Саша, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Дядя Саша",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tunnel_of_love_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-rivne-ee6897f4.jpg",
     },
     Sumy: {
       lyhyt: 'Hluhiv oli kasakkahetmanaatin pääkaupunki 1708–1764, ja sinne perustettiin 1730 Venäjän keisarikunnan ensimmäinen laulukoulu.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-sumy-25ce37d5.jpg",
+          lahde: "Андрій Гриценко, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Андрій Гриценко",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hlukhiv_Uspensʹka_tserkva_1724.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-sumy-25ce37d5.jpg",
     },
     "Ternopil'": {
       lyhyt: 'Korolivkan kylän alla on Optymistytšna, maailman pisin kipsiluola – sen käytäviä on kartoitettu noin 264 kilometriä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ternopil-728419af.jpg",
+          lahde: "Rbrechko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rbrechko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Optymistychna_Cave_RB.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ternopil-728419af.jpg",
     },
     Transcarpathia: {
       lyhyt: 'Hustin lähellä on Narsissien laakso, 256 hehtaarin niitty, jolla villit narsissit kukkivat keväisin valkoisena mattona.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-transcarpathia-585f1b9d.jpg",
+          lahde: "Rbrechko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rbrechko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:21-212-5018_Narcissi_Valley_RB.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-transcarpathia-585f1b9d.jpg",
     },
     Vinnytsya: {
       lyhyt: 'Tultšynissa opettanut Mykola Leontovytš sävelsi 1914 Štšedrykin, jonka melodia kiertää maailmaa joululauluna Carol of the Bells.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-vinnytsya-cb36a3d5.jpg",
+          lahde: "Rbrechko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rbrechko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:05-243-0076_Tulchyn_Palace_RB.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-vinnytsya-cb36a3d5.jpg",
     },
     Volyn: {
       lyhyt: 'Lutskin Lubartin linna rakennettiin 1300-luvulla, ja sen porttitorni on painettu 200 hryvnan setelin taakse.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-volyn-a2c67596.jpg",
+          lahde: "Sasha India, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Sasha India",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lubart's_Castle_(Lutsk,_Ukraine)_(26099505504).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-volyn-a2c67596.jpg",
     },
     Zaporizhzhya: {
       lyhyt: 'Hortytsja on Dneprin suurin saari, 12,5 kilometriä pitkä, ja se on Zaporožjen kasakoiden historian keskeisiä paikkoja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zaporizhzhya-deab951b.jpg",
+          lahde: "George Chernilevsky, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "George Chernilevsky",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Khortytsia_2021_G1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zaporizhzhya-deab951b.jpg",
     },
     Zhytomyr: {
       lyhyt: 'Žytomyrissa syntyi 1907 rakettisuunnittelija Sergei Koroljov, ja hänen syntymäkotinsa vastapäätä on astronautiikan museo.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
+          lahde: "Texnik, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Texnik",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Korolev-museum-zhytomyr.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
     },
   },
   /*
