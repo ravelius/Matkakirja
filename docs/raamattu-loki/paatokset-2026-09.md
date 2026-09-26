@@ -7271,3 +7271,7 @@ Julkaisija: #3340 (era 1, 23 kaupunkia, kohteita 64 → 87) mainissa v2276 klo 1
 ## 170 KATTAVUUS: 996/2782 MAAKUNTANOSTOA ILMAN KUVAA (26.9.2026 klo 19.34)
 
 Siirtoseppa: paketti v177 (1.50) sisaltaa 158:n (salaisuudet 14/14, luonnehdinnat 113 aluetta, GRC 0 puuttuvaa) → deltaa ei tarvita; jos omistaja nakee GRC-nostoja ilman kuvaa, syy natiivin piirrossa (Natiivi-UI tarkistaa). Kattavuus kaikissa maissa: 2782 maakuntanostosta 996 ilman kuvaa (fokuskohde 807, skandaali 187, takynosto 2), paaosin Euroopan ulkopuolella 8–13/maa, Euroopassa ≤ 3/maa; syventavat, elaintayt, hetket ja maalehtinostot 100 %. Lista docs/raportit/maakuntanostot-ilman-kuvaa-20260926.md (siirtoseppa-luovutus 0fdd6b3d2). Omistaja kaski tehda KAIKKI puuttuvat (oikeita PD/CC tai havainnekuvia) → Sisaltokirjuri erina reitin jarjestyksessa (Eurooppa ensin), agenttiparvella; jokainen era PR:na Julkaisijan junaan, kuvien lahde ja lisenssi vartijalla.
+
+## PULUN KARTTAVAISTO LAITTEELLA OK (IPAD PRO 13) (26.9.2026 klo 19.43)
+
+Natiiviseppa: iPad Pro 13, laitekaannos juna 31e3cbd4: veto → 1,2 s poissa → 7 s kurkistaa oikeasta reunasta (paa ja silma, rajaus siisti) → 10 s kotona; 5 perakkaista vetoa ilman poikkeuksia. Vahennetty liike vain Natiivi-UI:n simulaattori-PASSilla (ei komentoa laitteella). iPhone-mittaus odottaa kytkentaa. Tila: merge junassa, asennettu simulaattoreihin 18.58 ja iPadiin 19.37, laitteella oikein. Kuvat proto-3d/lokit/natiiviseppa-pulu-laite-2/pulu-aikasarja.jpg. Omistajalle 1.0.26:n push-tekstiin.
