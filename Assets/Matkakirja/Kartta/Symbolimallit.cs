@@ -316,7 +316,7 @@ namespace Matkakirja
             Pilari(r, new Vector3(0.14f, 0f, -0.08f), 0.16f, 0.52f, 5, true);
             Pilari(r, new Vector3(0.05f, 0f, 0.27f), 0.1f, 0.3f, 3, false);
             // Suuri Meteoron korkeimman pilarin tasaisella laella: päärakennus, punainen harjakatto, kupoli ja kellotorni.
-            var y = new Vector3(0.14f, 0.52f * 0.95f, -0.08f);
+            var y = new Vector3(0.14f, 0.52f * PilarinLaki, -0.08f);
             r.Laatikko(y, new Vector3(0.16f, 0.055f, 0.1f), Valo, Valo);
             r.Harja(y + Vector3.up * 0.055f, new Vector3(0.16f, 0.04f, 0.1f), Terrakotta, Valo);
             r.Pylvas(y + new Vector3(-0.05f, 0.055f, 0f), 0.03f, 0.04f, 10, Valo);
@@ -325,15 +325,24 @@ namespace Matkakirja
             return r.Verkko("Meteora");
         }
 
+        /// <summary>Ylimmän renkaan korkeus pilarin korkeudesta (luostari istuu tasaisella laella tällä korkeudella).</summary>
+        const float PilarinLaki = 0.97f;
+
         /// <summary>
-        /// Meteoran kalliopilari: 7 fasettia vahvalla säteen vaihtelulla (pystysärmät, Fable: ei sileitä kapseleita), hieman
-        /// pullistuva; laki pyöristetty tai tasainen (luostari).
+        /// Meteoran kalliopilari (Fable 26.9. simulaattorin lähikuvasta: 7 fasettia näytti kallistettuna laatikolta):
+        /// 11 fasettia epäsäännöllisellä säteellä sivuittain (±16 %, pystysärmät; Fable: ei sileitä kapseleita), lievä
+        /// pullistus keskivaiheilla ja kapeneminen latvaa kohti (latva 0,66 × tyvi). Laki matalana kupolina tai tasainen
+        /// (luostari).
         /// </summary>
         static void Pilari(Rakentaja r, Vector3 p, float sade, float h, int siemen, bool tasainen)
         {
             float d = sade * 2f;
-            r.Rengaskallio(p, new[] { (0f, d * 1.05f, d), (h * 0.35f, d * 1.1f, d * 1.04f), (h * 0.75f, d * 1.0f, d * 0.95f), (h * 0.95f, d * 0.84f, d * 0.8f) },
-                tasainen ? float.NaN : h * 1.02f, 7, siemen, Kivi, Pinta, 0.5f);
+            r.Rengaskallio(p, new[]
+                {
+                    (0f, d * 1.0f, d * 0.94f), (h * 0.22f, d * 1.04f, d * 0.98f), (h * 0.45f, d * 1.02f, d * 0.96f),
+                    (h * 0.68f, d * 0.9f, d * 0.85f), (h * 0.86f, d * 0.76f, d * 0.72f), (h * PilarinLaki, d * 0.66f, d * 0.62f),
+                },
+                tasainen ? float.NaN : h * 1.04f, 11, siemen, Kivi, Pinta, 0.32f);
         }
     }
 }

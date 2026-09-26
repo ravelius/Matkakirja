@@ -22,6 +22,9 @@ namespace Matkakirja
 
         /// <summary>Luolan suu ja portin varjo: kartan muste (#4b3a1c, sama kuin nostomerkkien musterengas).</summary>
         static readonly Color Muste = Hex(0x4b3a1c);
+        /// <summary>Vaimennettu terrakotta laajoille pinnoille (majakan raidat; Fable 26.9.: puna-valkoiset raidat olivat
+        /// paletin kirkkain asia). Sama sekoitus kuin elävien elementtien MalliVarit.TerrakottaHimmea (45 % pintaa).</summary>
+        static readonly Color TerrakottaHimmea = Color.Lerp(Terrakotta, Pinta, 0.45f);
 
         static readonly Mesh[,] arkkiVerkot = new Mesh[ArkkityyppiKartoitus.Lukumaara, 2];
         /// <summary>Kolmiot verkoittain (Mesh.triangles kopioi taulukon, joten määrä talteen rakennettaessa).</summary>
@@ -247,12 +250,12 @@ namespace Matkakirja
             int s = k ? 6 : 10;
             r.Rengaskallio(Vector3.zero, new[] { (0f, 0.62f, 0.5f), (0.07f, 0.5f, 0.42f) }, float.NaN, k ? 6 : 9, 5, Kivi, Pinta, 0.3f);
             var p = V(0.04f, 0.07f, 0.02f);
-            // Torni neljänä raitana (valo, terrakotta, valo, terrakotta), LOD1 kahtena.
+            // Torni neljänä raitana (valo ja vaimennettu terrakotta vuorotellen), LOD1 kahtena. Ei lippua.
             float[] y = k ? new[] { 0f, 0.28f, 0.56f } : new[] { 0f, 0.14f, 0.28f, 0.42f, 0.56f };
             for (int i = 0; i + 1 < y.Length; i++)
             {
                 float r0 = Mathf.Lerp(0.13f, 0.085f, y[i] / 0.56f), r1 = Mathf.Lerp(0.13f, 0.085f, y[i + 1] / 0.56f);
-                r.Vaippa(p + Vector3.up * y[i], r0, r1, y[i + 1] - y[i], s, i % 2 == 0 ? Valo : Terrakotta);
+                r.Vaippa(p + Vector3.up * y[i], r0, r1, y[i + 1] - y[i], s, i % 2 == 0 ? Valo : TerrakottaHimmea);
             }
             var yla = p + Vector3.up * 0.56f;
             r.Rengaskallio(yla, new[] { (0f, 0.26f, 0.26f), (0.025f, 0.26f, 0.26f) }, float.NaN, s, 1, Varjo, Varjo, 0f); // parveke
