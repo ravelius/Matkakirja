@@ -540,10 +540,17 @@ export function suljeKaupunkipopup(ui) {
       { transform: 'none', opacity: 1, transformOrigin: '50% 50%' },
       { transform: loppu, opacity: 0.35, transformOrigin: '50% 50%' },
     ], { duration: AVAUSKORTIN_KASVU_MS, easing: 'cubic-bezier(0.4, 0, 0.6, 1)', fill: 'forwards' });
-    liike.finished.catch(() => {}).then(() => {
+    // Poisto ajastimella liikkeen mittaan (finished voi viipyä, kun
+    // selain säästää kehyksiä): kortti ei saa jäädä haamuksi kartalle.
+    let valmis = false;
+    const loppuu = () => {
+      if (valmis) return;
+      valmis = true;
       auki.popup.remove();
       lahde.style.visibility = '';
-    });
+    };
+    setTimeout(loppuu, AVAUSKORTIN_KASVU_MS + 30);
+    liike.finished.catch(() => {}).then(loppuu);
     return;
   }
   if (lahde) lahde.style.visibility = '';
