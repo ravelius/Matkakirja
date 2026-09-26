@@ -89,6 +89,7 @@ namespace Matkakirja.Natiivi
 
         static ElavatElementit instanssi;
         public static bool Paalla = true;
+        static double AikaSiirto;
 
         LinssiOhjain ohjain;
         CesiumGeoreference georeferenssi;
@@ -113,6 +114,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento "elava elementit tila|0|1".</summary>
         public static void Testi(string arvo, LinssiOhjain o)
         {
+            // "elava elementit siirra <s>": aikataulun kello siirtyy (todennus: hidastus ja tauko videolle).
+            if (arvo != null && arvo.StartsWith("siirra ") && double.TryParse(arvo.Substring(7), System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out var siirto)) AikaSiirto += siirto;
             if (arvo == "0" || arvo == "1") { Paalla = arvo == "1"; PallonLepo.Muuttui("elävät elementit"); }
             o.Kirjaa("elävät elementit: " + Tila());
         }
@@ -121,7 +125,13 @@ namespace Matkakirja.Natiivi
         {
             if (instanssi == null) return "ei kytketty";
             var osat = new List<string>();
-            foreach (var a in Aiheet) osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota");
+            double nyt = Time.unscaledTimeAsDouble + AikaSiirto;
+            foreach (var a in Aiheet)
+            {
+                var yk = a.Oliot.Count > 0 ? a.Oliot[0] : null;
+                string tauko = yk?.Aikataulu == null ? "" : $", nopeus {yk.Nopeus:F2}, seuraava tauko {yk.Aikataulu.SeuraavaTauko(nyt) - nyt:F0} s";
+                osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota{tauko}");
+            }
             return $"{(Paalla ? "päällä" : "pois")}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
         }
 
@@ -231,7 +241,7 @@ namespace Matkakirja.Natiivi
 
             // Liike pehmeästi kohti 1/0 (PehmeysS): vähennetty liike, Staattinen ja pois-kytkin.
             liike = Mathf.MoveTowards(liike, Liikkuu() ? 1f : 0f, Time.unscaledDeltaTime / PehmeysS);
-            double seina = Time.unscaledTimeAsDouble;
+            double seina = Time.unscaledTimeAsDouble + AikaSiirto;
             bool liikkuu = false;
 
             bool jokin = false;

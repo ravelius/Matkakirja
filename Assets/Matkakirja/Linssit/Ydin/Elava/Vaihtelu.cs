@@ -64,6 +64,17 @@ namespace Matkakirja.Linssit.Elava
             return Math.Max(0, kaynti * (1 + puuska));
         }
 
+        /// <summary>Seuraavan tauon alku (hidastuksen loppu) hetkestä t eteenpäin, tai NaN (ei taukoja tunnin sisällä).</summary>
+        public double SeuraavaTauko(double t)
+        {
+            for (double h = Math.Max(0, t); h < t + 3600; h = jaksot[jaksot.Count - 1].loppu + 1e-6)
+            {
+                Varmista(h);
+                foreach (var j in jaksot) if (j.kayLoppu >= t && j.loppu > j.kayLoppu) return j.kayLoppu;
+            }
+            return double.NaN;
+        }
+
         /// <summary>Seisooko yksilö hetkellä t (tauon keskellä).</summary>
         public bool Seisoo(double t) => Tavoite(t) < 1e-4;
     }

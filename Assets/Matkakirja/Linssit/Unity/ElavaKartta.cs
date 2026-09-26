@@ -177,7 +177,7 @@ namespace Matkakirja.Natiivi
                     break;
                 case "myllyt":
                 case "elementit":
-                    ElavatElementit.Testi(osat.Length > 2 ? osat[2] : "tila", ohjain);
+                    ElavatElementit.Testi(osat.Length > 2 ? string.Join(" ", osat, 2, osat.Length - 2) : "tila", ohjain);
                     break;
                 case "hetki":
                     ElavatHetket.Testi(osat.Length > 2 ? osat[2] : null, ohjain);
