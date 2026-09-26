@@ -108,6 +108,8 @@ namespace Matkakirja.Natiivi
         static string karttavalot;
         static bool karttavalotHaussa;
         static readonly Dictionary<string, List<ElavaNosto>> nostotMaittain = new Dictionary<string, List<ElavaNosto>>();
+        static readonly Dictionary<string, List<(int Maakunta, Jarvikolmiot.Verkko Verkko)>> verkotMaittain =
+            new Dictionary<string, List<(int, Jarvikolmiot.Verkko)>>();
 
         // Saapuminen
         /// <summary>Automaattinen saapuminen (komento "elava saapumiset 0|1").</summary>
@@ -211,12 +213,16 @@ namespace Matkakirja.Natiivi
         {
             float alku = Time.realtimeSinceStartup;
             yield return VarmistaMaakunnat();
+            float tMaakunnat = Time.realtimeSinceStartup;
             if (jako == null) { Kirjaa("maakuntarajat puuttuu"); Lopeta(); yield break; }
+            float tValot = tMaakunnat, tJoet = tMaakunnat;
             if (saapuminen)
             {
                 yield return VarmistaKarttavalot();
-                // Joet on haettu yleensä jo lennon noustessa; muuten odotetaan enintään 0,8 s (saapuminen ei viivästy).
-                if (!joetMaittain.ContainsKey(maa)) yield return HaeJoet(maa, 0.8f);
+                tValot = Time.realtimeSinceStartup;
+                // Joet on haettu yleensä jo lennon aikana (Esivalmistele); muuten odotetaan enintään 0,5 s (saapuminen ei viivästy).
+                if (!joetMaittain.ContainsKey(maa)) yield return HaeJoet(maa, 0.5f);
+                tJoet = Time.realtimeSinceStartup;
                 var nostot = NostotMaalle(maa);
                 kohtaus = new ElavaKohtaus(keskus, MaakunnatMaalle(maa), joetMaittain.TryGetValue(maa, out var j) ? j : new List<ElavaJoki>(),
                     nostot, null, null, null, null, 0, Aurinko.Atsimuutti, Aurinko.KorkeusAst, ElavaProfiili.Saapuminen);
@@ -232,18 +238,11 @@ namespace Matkakirja.Natiivi
             }
             if (kohtaus.Maakunnat.Count == 0) { Kirjaa($"ei maakuntia maalle {maa ?? KreikanAineisto.Maa}"); Lopeta(); yield break; }
 
-            // Kolmiot taustasäikeessä (korvanleikkaus; rannikot ja saaret).
-            List<(int Maakunta, Jarvikolmiot.Verkko Verkko)> verkot = null;
-            var k = kohtaus;
-            var kolmiointi = Task.Run(() =>
-            {
-                var l = new List<(int, Jarvikolmiot.Verkko)>();
-                for (int i = 0; i < k.Maakunnat.Count; i++)
-                    foreach (var r in k.Maakunnat[i].Renkaat) l.Add((i, Jarvikolmiot.Laske(r, 1.0)));
-                verkot = l;
-            });
-            while (!kolmiointi.IsCompleted) yield return null;
-            if (kolmiointi.IsFaulted) { Kirjaa("kolmiointi kaatui " + kolmiointi.Exception?.GetBaseException().Message); Lopeta(); yield break; }
+            // Kolmiot taustasäikeessä (korvanleikkaus; rannikot ja saaret), valmiina yleensä jo lennon ajalta.
+            string verkkoMaa = maa ?? KreikanAineisto.Maa;
+            yield return Kolmioi(verkkoMaa, kohtaus.Maakunnat);
+            if (!verkotMaittain.TryGetValue(verkkoMaa, out var verkot)) { Kirjaa("kolmiointi epäonnistui"); Lopeta(); yield break; }
+            float tKolmiot = Time.realtimeSinceStartup;
 
             // Laattahuntu (Varitaso.Paljastus) ei rajaudu saapumismaahan: pelaajan oma maa ei ole hunnun alla, ja säde paljastaa
             // myös naapurimaat (Natiiviseppä 26.9.). Saapumismaahan rajattu verkkohuntu (videon ilme) on käytössä, kunnes
@@ -253,7 +252,8 @@ namespace Matkakirja.Natiivi
             TilaTalteen();
             t = Math.Max(0, Math.Min(kohtaus.KestoS, alkuPyynto));
             vaihe = kuvaPyynto ? Vaihe.Kuva : Vaihe.Soi;
-            Kirjaa($"valmis {(Time.realtimeSinceStartup - alku) * 1000:F0} ms: {(saapuminen ? "saapuminen " + maa + ", " : "")}{kohtaus.Maakunnat.Count} maakuntaa, " +
+            Kirjaa($"valmis {(Time.realtimeSinceStartup - alku) * 1000:F0} ms (maakunnat {(tMaakunnat - alku) * 1000:F0}, valot {(tValot - tMaakunnat) * 1000:F0}, " +
+                   $"joet {(tJoet - tValot) * 1000:F0}, kolmiot {(tKolmiot - tJoet) * 1000:F0}): {(saapuminen ? "saapuminen " + maa + ", " : "")}{kohtaus.Maakunnat.Count} maakuntaa, " +
                    $"{kohtaus.Rajat.Count} rajaa, {kohtaus.Joet.Count} jokea, {kohtaus.Nostot.Count} nostoa ({kohtaus.HeraavanNostoja} heräävässä), " +
                    $"{verkot.Sum(v => v.Verkko.Kolmiot.Count) / 3} kolmiota; {(kuvaPyynto ? $"kuva {t:F2} s" : $"soi {t:F2} s:sta, nopeus {nopeus:F2}")}");
         }
@@ -348,6 +348,45 @@ namespace Matkakirja.Natiivi
             pyynto.Dispose();
         }
 
+        static readonly HashSet<string> kolmioidaan = new HashSet<string>();
+
+        /// <summary>Maan maakuntien kolmiot taustasäikeessä kerran (välimuisti maittain).</summary>
+        static IEnumerator Kolmioi(string iso, IReadOnlyList<ElavaMaakunta> maakunnat)
+        {
+            while (kolmioidaan.Contains(iso)) yield return null;
+            if (verkotMaittain.ContainsKey(iso)) yield break;
+            kolmioidaan.Add(iso);
+            List<(int, Jarvikolmiot.Verkko)> verkot = null;
+            var tyo = Task.Run(() =>
+            {
+                var l = new List<(int, Jarvikolmiot.Verkko)>();
+                for (int i = 0; i < maakunnat.Count; i++)
+                    foreach (var r in maakunnat[i].Renkaat) l.Add((i, Jarvikolmiot.Laske(r, 1.0)));
+                verkot = l;
+            });
+            while (!tyo.IsCompleted) yield return null;
+            if (!tyo.IsFaulted) verkotMaittain[iso] = verkot;
+            else Debug.LogWarning("MATKAKIRJA elävä: kolmiointi kaatui " + tyo.Exception?.GetBaseException().Message);
+            kolmioidaan.Remove(iso);
+        }
+
+        /// <summary>
+        /// ESILATAUSPOLITIIKKA kohta 3 (valinnan ja lennon aikana): kohdemaan maakunnat, nostot, joet ja kolmiot valmiiksi,
+        /// jotta saapuminen alkaa samassa kehyksessä kuin saapumisajo.
+        /// </summary>
+        static IEnumerator Esivalmistele(string kaupunki)
+        {
+            var po = PeliOhjain.Instanssi;
+            if (kaupunki == null || po?.Verkko == null || !po.Verkko.Kaupungit.TryGetValue(kaupunki, out var k) || string.IsNullOrEmpty(k.Maa)) yield break;
+            float alku = Time.realtimeSinceStartup;
+            yield return VarmistaMaakunnat();
+            yield return VarmistaKarttavalot();
+            NostotMaalle(k.Maa);
+            yield return HaeJoet(k.Maa, 30f);
+            yield return Kolmioi(k.Maa, MaakunnatMaalle(k.Maa));
+            Debug.Log($"MATKAKIRJA elävä: {k.Maa} esivalmisteltu {(Time.realtimeSinceStartup - alku) * 1000:F0} ms");
+        }
+
         // ── Saapumisen laukaisu ──────────────────────────────────────────
 
         /// <summary>LinssiOhjain kutsuu käynnistyksessä: kytkee saapumiset peliin ja esilataa aineiston taustalla.</summary>
@@ -361,21 +400,22 @@ namespace Matkakirja.Natiivi
             ElavaPallo.PysyvatKerrokset = nakyvissa => { MaaKartta.Saapuminen(!nakyvissa); NostoKerros.Saapuminen(!nakyvissa); };
             PalloKierto.SaapuminenAlkaa += (maa, kestoS) => ElavaPallo.IlmoitaSaapuminenAlkaa(kestoS);
             PalloKierto.SaapuminenPaattyi += (maa, keskeytetty) => ElavaPallo.IlmoitaSaapuminenPaattyi();
+            // Aineisto taustalla heti käynnistyksessä (maakuntarajat ja karttavalot jäsennetään kerran).
+            ohjain.StartCoroutine(VarmistaMaakunnat());
+            ohjain.StartCoroutine(VarmistaKarttavalot());
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
             // MatkaPerilla käynnistää 0,5 s:n päästä, jos saapuminen ei ole jo alkanut.
             PalloKierto.SaapuminenAlkaa += (maa, kestoS) => Saavu(po.PelaajanKaupunki, ohjain, maa);
             po.MatkaPerilla += kaupunki => ohjain.StartCoroutine(SaavuMyohemmin(kaupunki, ohjain));
+            // ESILATAUSPOLITIIKKA kohta 3: kohdemaa valmiiksi lennon aikana (myös aloituslento) ja pelaajan nykyinen maa heti.
             po.LennonVaiheMuuttui += (v, suunnitelma) =>
             {
-                // ESILATAUSPOLITIIKKA: kohdemaan joet lennon aikana.
-                if (v == LennonVaihe.Nousu && suunnitelma?.Kohde != null && po.Verkko != null &&
-                    po.Verkko.Kaupungit.TryGetValue(suunnitelma.Kohde, out var kohde) && kohde.Maa != null)
-                    ohjain.StartCoroutine(HaeJoet(kohde.Maa, 30f));
+                if (v == LennonVaihe.Nousu && suunnitelma?.Kohde != null) ohjain.StartCoroutine(Esivalmistele(suunnitelma.Kohde));
             };
-            yield return VarmistaMaakunnat();
-            yield return VarmistaKarttavalot();
+            po.AloituslentoAlkoi += kohde => ohjain.StartCoroutine(Esivalmistele(kohde));
+            if (po.PelaajanKaupunki != null) ohjain.StartCoroutine(Esivalmistele(po.PelaajanKaupunki));
         }
 
         static IEnumerator SaavuMyohemmin(string kaupunki, LinssiOhjain ohjain)
