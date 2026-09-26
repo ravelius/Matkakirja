@@ -54,3 +54,6 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   ajo vaatii ensin proto-kaanna.sh-asennuksen. A2FD9C9F jäi (oli boottina). simctl erase -sallinta tulossa mainin kautta.
 - 164 jatko (pisteet-kalusteet) MERGETTY 1.0.23-junaan 1b9f193b. Natiivisepän mukaan 165 on todennäköisesti myös 163b:n
   ("kohdemaan kartta puuttuu") juurisyy; hän ilmoittaa Fablelle. Kaikki erät nyt junassa, jono tyhjä.
+- Siivous odottaa sallintasääntöä (git worktree remove, simctl erase; Julkaisija commitoi mainiin): kun se on pullattu,
+  poista proto-worktree wt/proto-natiivi-ui-kuvapakka (git -C proto-3d/Matkakirja-proto worktree remove, mergetty) ja
+  simctl erase FB234D08 (oma iPhone 17). Kolme muuta proto-työkopiota jäävät uudelleenkäyttöön (puhtaita, mergetty).
