@@ -171,7 +171,7 @@ namespace Matkakirja.Natiivi
                         $", aurinko aamu {ElavaKohtaus.AamuAtsimuutti:0}°/{ElavaKohtaus.AamuKorkeus:0}° päivä {ElavaKohtaus.PaivaAtsimuutti:0}°/{ElavaKohtaus.PaivaKorkeus:0}°");
                     break;
                 case "saapuminen":
-                    if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain);
+                    if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain, osat.Length > 3 && osat[3] == "odota");
                     break;
                 case "hetki":
                     ElavatHetket.Testi(osat.Length > 2 ? osat[2] : null, ohjain);
@@ -495,8 +495,8 @@ namespace Matkakirja.Natiivi
             e.StartCoroutine(e.Valmistele());
         }
 
-        /// <summary>Testikomento "elava saapuminen <kaupunki>": saapumisajo kuten pelissä (kamera Natiivisepän ajolla) ja kohtaus.</summary>
-        static void TestiSaapuminen(string kaupunki, LinssiOhjain ohjain)
+        /// <summary>Testikomento "elava saapuminen <kaupunki> [odota]" (odota: kuten pelissä luennan ja kortin jälkeen, 162): saapumisajo kuten pelissä (kamera Natiivisepän ajolla) ja kohtaus.</summary>
+        static void TestiSaapuminen(string kaupunki, LinssiOhjain ohjain, bool odota = false)
         {
             var po = PeliOhjain.Instanssi;
             if (po?.Verkko == null || !po.Verkko.Kaupungit.TryGetValue(kaupunki, out var k) || string.IsNullOrEmpty(k.Maa))
@@ -504,7 +504,7 @@ namespace Matkakirja.Natiivi
             Instanssi?.Lopeta();
             var kierto = FindAnyObjectByType<PalloKierto>();
             kierto?.AjaSaapumisnakymaan(k.Maa, k.Lat, k.Lon, 1.6f, null);
-            AloitaSaapuminen(ohjain, k.Maa, new LatLon(k.Lat, k.Lon));
+            AloitaSaapuminen(ohjain, k.Maa, new LatLon(k.Lat, k.Lon), odota);
         }
 
         Vector3 Paikka(LatLon p, double korkeus)
