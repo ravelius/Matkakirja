@@ -4,7 +4,8 @@
 //     ja astronautin kameran avausnäkymän reliefi; edellisen matkan ja kaikkien ennakointien esilataukset perutaan.
 //   PeliOhjain.KaupunkiEnnakoitu (siirtokohteet näkyvissä tai nopan päässä joutilaana) → saapumisnäkymän laatat tasolla
 //     Kohdekaupungit (kuumana ja virransäästössä seis: PeliOhjain ei ennakoi, Esilataaja ei aloita). Sama näkymä yhdistetään
-//     (SaapumisLaatat.Avain), nykyisen kaupungin näkymä ohitetaan, ja enintään EnnakointejaEnintaan kerrallaan.
+//     (SaapumisLaatat.Avain), oman maan kaupungit ohitetaan (maan näkymä ladattiin saavuttaessa), ja enintään
+//     EnnakointejaEnintaan kerrallaan (lähimmät ulkomaiset ensin).
 //   PeliOhjain.MatkaPerilla → kaikki perutaan: perillä Cesium pyytää näkymän laatat itse, ja esilatauksen loput olisivat
 //     tuplahakuja näkyvän jonon perässä.
 // Aloituslento ohitetaan (oma mustan verhon esilatauksensa, erä 1: KarttaKerrokset.EsilataaAvaus). Laatat haetaan taustan
@@ -88,8 +89,9 @@ namespace Matkakirja.Natiivi
         {
             if (kytketty == null || kytketty.AloituslentoKaynnissa || Esilataaja.Seis) return;
             if (!Kohde(kaupunki, out var maa, out var lat, out var lon, out var avain)) return;
-            // Nykyisen kaupungin saapumisnäkymä on jo ladattu (pelaaja on siinä), ja sama näkymä ladataan vain kerran.
-            if (Kohde(kytketty.PelaajanKaupunki, out _, out _, out _, out var nykyinen) && nykyinen == avain) return;
+            // Oman maan saapumisnäkymä ladattiin tänne saavuttaessa (sama maan laatikko, keskipiste siirtyy enintään vähän):
+            // paikat ulkomaille (lähimmät ensin), ja sama näkymä ladataan vain kerran.
+            if (Kohde(kytketty.PelaajanKaupunki, out var nykyMaa, out _, out _, out var nykyinen) && (nykyinen == avain || nykyMaa == maa)) return;
             ennakoidut.RemoveAll(x => x.e == null || x.e.Peruttu || x.e.Osuus >= 1f);
             if ((matkan.avain == avain && matkan.e != null && !matkan.e.Peruttu) || ennakoidut.Exists(x => x.avain == avain)) return;
             if (ennakoidut.Count >= EnnakointejaEnintaan) return;
