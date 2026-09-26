@@ -83,3 +83,7 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   proto-3d/lokit/natiivi-ui-loydos169-170b/kuvasarja-169-170b.png (Kaikki | Athos kuvalla | Alba paikkakuvalla).
   AVOIN: merge-pyyntö Natiivisepälle ja kuvasarja Fablelle LÄHETTÄMÄTTÄ (istuntojen viestiraja 10, odottaa omistajan viestiä).
 - 18.5x pulun blink-korjauksen rivi Fablelle jäi myös lähettämättä (sama raja); Natiiviseppä sai merge-pyynnön.
+- 19.5x löydös 170 (Fable: nostokuvat puuttuvat laitteella?): natiivin piirto OK. Maakuntasalaisuudet vain GRC:llä (14/14
+  pikkukuva v175–v178); simulaattorissa (b9fd4936, paketti v178) GRC-salaisuuden sekä NLD:n kohde:krollermuller ja
+  nosto:kirja-arkku kortit näyttävät kuvan. Todennäköinen syy: laitteen vanhempi paketti (simulaattorikin oli v176:lla, vaikka
+  osoitin tarjosi v178:aa; vaihto vasta käynnistyksessä). Kuvasarja proto-3d/lokit/natiivi-ui-loydos170/. Rivi Fablelle LÄHETTÄMÄTTÄ (viestiraja).
