@@ -7715,3 +7715,7 @@ Omistaja 01.2x: kehittajavalikkoon (web + natiivi) aanen valinta xAI:n aanivaiht
 ## OMISTAJA: FABLE KYTKEE XAI:N ITSE; PULUN LUKIJANAPPIIN KYTKIMEN TILAN VISUAALI; PELIKOODARI NOLLATTU (27.9.2026 klo 01.15)
 
 Omistaja 01.2x "Kytke sinä se": Fable tekee xAI ara -kytkennan itse worktreessa fable-xai-ara (worker: XAI_API_KEY + PUHE_MOOTTORI=xai, varapolku OpenAI 8 s aikarajalla, xAI-aanet 28 kpl /v1/tts/voices; web: kehittajavalikon striimiaani-valitsin; workflow: XAI_API_KEY-salaisuus workerille; GitHub-salaisuus XAI_API_KEY asetettu gh:lla). Mittaus 01.1x: /v1/tts ara suomeksi 200, ttfb 0,18 s, mp3 24 kHz 128 kbps, speed-kentta toimii. Omistaja 01.3x (kuvakaappaus Pulun paneelista): kaiutin/lukija-nappi tarvitsee visuaalisen vahvistuksen kytkimen tilasta → Pelikoodari web, Natiivi-UI natiivi webin mallin mukaan. Pelikoodari nollattu 01.3x (luovutus -20260927 971b18ba5, avauskortti PR #3364), aloitusviesti lahetetty.
+
+## OMISTAJA: JATKOSSA TAAS APUSESSIOT (FABLEN OMA KOODAUS VAIN XAI-ERA) (27.9.2026 klo 01.16)
+
+Omistaja 01.4x: "Jatkossa käytä taas apu sessioita" — Fablen oma koodaus rajoittuu tahan xAI-eraan (v2292); kaikki muu koodi roolisessioille kuten Raamattu sanoo (Fable = tarina + koordinaatio).
