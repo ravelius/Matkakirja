@@ -13,7 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2295, teksti: 'Maalehti-siirto: 28 kaupunkijuttua maalehtiin' },
+  { v: 2294, teksti: 'v2292: Pulun kaiutinvipu — päällä kulta + aallo… (#3366)' },
+  { v: 2293, teksti: 'Astronautin kamera erä 4: 16 uutta kohdetta (#3363)' },
+  { v: 2292, teksti: 'Striimiluenta xAI Grok TTS (#3365)' },
   { v: 2291, teksti: 'Astronautin kamera erä 3: 16 uutta kohdetta (#3362)' },
   { v: 2290, teksti: 'Astronautin kamera erä 2: 22 uutta kohdetta (#3359)' },
   { v: 2289, teksti: 'Maakunta-erä C: BLR+ROU kuvat+pikkukuvat (#3358)' },

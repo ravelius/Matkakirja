@@ -3886,6 +3886,486 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss059e059149"
       }
     ]
+  },
+  "falklandinsaaret": {
+    "kysymykset": [
+      "Montako ihmistä Falklandinsaarilla asuu?",
+      "Miksi Falklandinsaarista käytiin sota vuonna 1982?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Montako ihmistä Falklandinsaarilla asuu?",
+        "vastaus": "Falklandinsaarilla asuu vain noin 3 700 ihmistä, joista suurin osa pääkaupunki Port Stanleyssa. Lampaita saarilla on moninkertainen määrä asukkaisiin verrattuna, ja villa on tärkeä vientituote.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Falkland_Islands",
+            "title": "Falkland Islands – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss071e582470"
+      },
+      {
+        "kysymys": "Miksi Falklandinsaarista käytiin sota vuonna 1982?",
+        "vastaus": "Argentiina hyökkäsi saarille huhtikuussa 1982 vaatien niitä omikseen nimellä Malvinas, ja Britannia lähetti laivaston takaisinvaltaukseen. Sota kesti 74 päivää ja päättyi Britannian voittoon.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Falklands_War",
+            "title": "Falklands War – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss066e091560"
+      }
+    ]
+  },
+  "etela-georgia": {
+    "kysymykset": [
+      "Kuka käveli Etelä-Georgian yli vuonna 1916?",
+      "Mitä eläimiä Etelä-Georgialla pesii miljoonittain?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuka käveli Etelä-Georgian yli vuonna 1916?",
+        "vastaus": "Ernest Shackleton ja kaksi toveriaan ylittivät saaren jäätiköt ja vuoret 36 tunnissa hakeakseen apua haaksirikkoutuneelle Endurance-retkikunnalleen. Vaellus on yhä yksi tunnetuimmista selviytymistarinoista napa-alueiden historiassa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ernest_Shackleton",
+            "title": "Ernest Shackleton – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss011e12148"
+      },
+      {
+        "kysymys": "Mitä eläimiä Etelä-Georgialla pesii miljoonittain?",
+        "vastaus": "Etelä-Georgialla pesii miljoonia kuningaspingviinejä ja merileijonia, ja saari on yksi maailman tärkeimmistä alueista näille lajeille. Valaanpyytäjien 1800-luvulla tuomat rotat hävitettiin saarelta myrkytysohjelmalla 2010-luvulla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/South_Georgia",
+            "title": "South Georgia – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss011e12148"
+      }
+    ]
+  },
+  "dasht-e-lut": {
+    "kysymykset": [
+      "Mikä on Dasht-e Lutin lämpötilaennätys?",
+      "Mitä kaluutit ovat Dasht-e Lutin maastossa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä on Dasht-e Lutin lämpötilaennätys?",
+        "vastaus": "NASA:n satelliitit ovat mitanneet Dasht-e Lutin pintalämpötilaksi yli 70 celsiusastetta, yhden korkeimmista koskaan satelliitilla mitatuista maanpinnan lämpötiloista. Alue on niin kuiva, ettei siellä juuri kasva mitään.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lut_Desert",
+            "title": "Lut Desert – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss012e18779"
+      },
+      {
+        "kysymys": "Mitä kaluutit ovat Dasht-e Lutin maastossa?",
+        "vastaus": "Kaluutit ovat tuulen vuosituhansien aikana muovaamia, kymmeniä metrejä korkeita harjanteita, jotka rivistössä muistuttavat linnoituksen muureja. Ne syntyvät, kun voimakas vallitseva tuuli kuluttaa pehmeää savikkoa vuodesta toiseen samaan suuntaan.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lut_Desert",
+            "title": "Lut Desert – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss012e18779"
+      }
+    ]
+  },
+  "damavand": {
+    "kysymykset": [
+      "Kuinka korkea Damavand-tulivuori on?",
+      "Mistä asti Damavand voi näkyä selkeällä säällä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka korkea Damavand-tulivuori on?",
+        "vastaus": "Damavand kohoaa 5 610 metrin korkeuteen ja on sekä Iranin että koko Lähi-idän korkein huippu. Se on yhä toimiva tulivuori, jonka huipulta purkautuu rikkikaasua.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Damavand",
+            "title": "Damavand – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss010e13393"
+      },
+      {
+        "kysymys": "Mistä asti Damavand voi näkyä selkeällä säällä?",
+        "vastaus": "Damavand näkyy selkeällä säällä jopa Teheranista asti, yli 60 kilometrin päähän, ja vuori on keskeinen hahmo Persian mytologiassa. Se on suosittu kiipeilykohde, jonne nousee vuosittain kymmeniätuhansia retkeilijöitä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Damavand",
+            "title": "Damavand – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss010e13393"
+      }
+    ]
+  },
+  "sarezjarvi": {
+    "kysymykset": [
+      "Miten Sarezjärvi syntyi vuonna 1911?",
+      "Miksi Usoin pato huolestuttaa tutkijoita yhä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miten Sarezjärvi syntyi vuonna 1911?",
+        "vastaus": "Voimakas maanjäristys irrotti valtavan kalliovyöryn, joka tukki joenlaakson ja loi Usoin padon. Padon taakse kertynyt vesi muodosti yli 60 kilometriä pitkän Sarezjärven.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Sarez_Lake",
+            "title": "Sarez Lake – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0814815"
+      },
+      {
+        "kysymys": "Miksi Usoin pato huolestuttaa tutkijoita yhä?",
+        "vastaus": "Usoin pato on maailman korkeimpia, yli 550 metriä, mutta se on löyhää kivi- ja maa-ainesta eikä insinöörien rakentama. Uusi voimakas maanjäristys voisi murtaa padon ja uhata satojatuhansia ihmisiä alapuolisissa laaksoissa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Sarez_Lake",
+            "title": "Sarez Lake – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0814815"
+      }
+    ]
+  },
+  "toktogul": {
+    "kysymykset": [
+      "Milloin Toktogulin pato valmistui?",
+      "Miksi Toktogulin veden juoksutus kiistelyttää naapurimaita?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Milloin Toktogulin pato valmistui?",
+        "vastaus": "Toktogulin pato ja tekojärvi valmistuivat vuonna 1974 osana Neuvostoliiton Syrdarja-joen vesivoimahankkeita. Järvi on Kirgisian suurin ja tärkein sähköntuotannon lähde.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toktogul_Reservoir",
+            "title": "Toktogul Reservoir – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0825692"
+      },
+      {
+        "kysymys": "Miksi Toktogulin veden juoksutus kiistelyttää naapurimaita?",
+        "vastaus": "Kirgisia haluaa juoksuttaa vettä talvella sähköntarpeen vuoksi, kun taas alapuoliset Uzbekistan ja Kazakstan tarvitsisivat saman veden keväällä kastelukauden alkuun. Kiista padon käytöstä on jatkunut Neuvostoliiton hajoamisesta lähtien.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toktogul_Reservoir",
+            "title": "Toktogul Reservoir – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0825692"
+      }
+    ]
+  },
+  "kljutsevskaja": {
+    "kysymykset": [
+      "Kuinka usein Kljutševskaja purkautuu?",
+      "Miksi Kamtšatkalla on niin paljon tulivuoria?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka usein Kljutševskaja purkautuu?",
+        "vastaus": "Kljutševskaja on yksi maailman aktiivisimmista tulivuorista ja purkautuu keskimäärin muutaman vuoden välein. Se on Euraasian korkein toimiva tulivuori, lähes 4 800 metriä korkea.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Klyuchevskaya_Sopka",
+            "title": "Klyuchevskaya Sopka – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss038e005515"
+      },
+      {
+        "kysymys": "Miksi Kamtšatkalla on niin paljon tulivuoria?",
+        "vastaus": "Kamtšatkan niemimaa on osa Tyynenmeren tulirengasta, jossa Tyynenmeren laatta painuu naapurilaatan alle ja sulaa magmaksi. Niemimaalla on yli 160 tulivuorta, joista noin 30 on yhä toiminnassa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Kamchatka_Peninsula",
+            "title": "Kamchatka Peninsula – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss038e005515"
+      }
+    ]
+  },
+  "reunion": {
+    "kysymykset": [
+      "Kuinka usein Piton de la Fournaise purkautuu?",
+      "Mikä hallinnollinen asema Réunionilla on Ranskassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka usein Piton de la Fournaise purkautuu?",
+        "vastaus": "Piton de la Fournaise on yksi maailman aktiivisimmista tulivuorista ja purkautuu keskimäärin kerran vuodessa, joskus useamminkin. Purkaukset ovat harvoin vaarallisia, sillä laava valuu yleensä asumattomaan kalderaan.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Piton_de_la_Fournaise",
+            "title": "Piton de la Fournaise – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss055e020372"
+      },
+      {
+        "kysymys": "Mikä hallinnollinen asema Réunionilla on Ranskassa?",
+        "vastaus": "Réunion on Ranskan merentakainen departementti ja alue, eli osa Ranskaa ja Euroopan unionia siinä missä Pariisikin. Saaren virallinen valuutta on euro ja kieli ranska.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/R%C3%A9union",
+            "title": "Réunion – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss055e020372"
+      }
+    ]
+  },
+  "villarrica": {
+    "kysymykset": [
+      "Kuinka monta pysyvää laavajärveä maailmassa on?",
+      "Mikä uhka liittyy erityisesti Villarrican purkauksiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka monta pysyvää laavajärveä maailmassa on?",
+        "vastaus": "Villarrican kraatterissa on yksi vain noin viidestä maailman tulivuoresta, joissa on jatkuvasti näkyvä, kiehuva laavajärvi. Muita ovat muun muassa Nyiragongo Kongossa ja Erta Ale Etiopiassa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Villarrica_(volcano)",
+            "title": "Villarrica (volcano) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss068e040596"
+      },
+      {
+        "kysymys": "Mikä uhka liittyy erityisesti Villarrican purkauksiin?",
+        "vastaus": "Villarrican huippu on jäätikön peitossa. Purkaus voi siksi sulattaa jäätä nopeasti ja synnyttää laharin — tuhoisan muta- ja kivivirran, joka voi edetä kymmeniä kilometrejä asutuille laaksoille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Villarrica_(volcano)",
+            "title": "Villarrica (volcano) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss068e040596"
+      }
+    ]
+  },
+  "laguna-verde": {
+    "kysymykset": [
+      "Kuinka korkea Ojos del Salado -tulivuori on?",
+      "Mistä Laguna Verden turkoosi väri johtuu?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka korkea Ojos del Salado -tulivuori on?",
+        "vastaus": "Ojos del Salado kohoaa 6 893 metriin ja on maailman korkein aktiivinen tulivuori sekä Etelä-Amerikan toiseksi korkein huippu. Sen huipulla on myös maailman korkein pysyvä kraatterijärvi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ojos_del_Salado",
+            "title": "Ojos del Salado – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0760459"
+      },
+      {
+        "kysymys": "Mistä Laguna Verden turkoosi väri johtuu?",
+        "vastaus": "Järven väri syntyy veteen liuenneista mineraaleista, erityisesti kuparista, joita tulivuorinen ympäristö on huuhtonut järveen. Vastaavia värikkäitä korkean Andien järviä on useita samalla alueella.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ojos_del_Salado",
+            "title": "Ojos del Salado – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0760459"
+      }
+    ]
+  },
+  "laguna-colorada": {
+    "kysymykset": [
+      "Mikä värjää Laguna Coloradan veden punaiseksi?",
+      "Mikä flamingolaji on harvinainen Laguna Coloradalla?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä värjää Laguna Coloradan veden punaiseksi?",
+        "vastaus": "Veden punainen väri syntyy pigmentistä, jota levät ja mikrobit tuottavat suojautuakseen voimakkaalta auringolta ja UV-säteilyltä yli 4 200 metrin korkeudessa. Sama ilmiö värjää monia muitakin Andien suolajärviä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Laguna_Colorada",
+            "title": "Laguna Colorada – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss066e110899"
+      },
+      {
+        "kysymys": "Mikä flamingolaji on harvinainen Laguna Coloradalla?",
+        "vastaus": "Jamesinflamingo on harvinaisin kolmesta Etelä-Amerikan flamingolajista, ja Laguna Colorada on sen tärkeimpiä pesimäalueita. Laji luultiin sukupuuttoon kuolleeksi 1900-luvun alussa, kunnes se löydettiin uudelleen 1950-luvulla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/James%27s_flamingo",
+            "title": "James's flamingo – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss066e110899"
+      }
+    ]
+  },
+  "san-rafael": {
+    "kysymykset": [
+      "Mistä jäätikköalueesta San Rafael laskee?",
+      "Miten San Rafaelin jäätikkö on viime aikoina muuttunut?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mistä jäätikköalueesta San Rafael laskee?",
+        "vastaus": "San Rafael laskee Pohjois-Patagonian jäätiköltä, yhdeltä maailman suurimmista mannerjäätikön ulkopuolisista jäämassoista. Jäätikkö ulottuu poikkeuksellisen alas, lähes sademetsävyöhykkeeseen asti.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Northern_Patagonian_Ice_Field",
+            "title": "Northern Patagonian Ice Field – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss063e081907"
+      },
+      {
+        "kysymys": "Miten San Rafaelin jäätikkö on viime aikoina muuttunut?",
+        "vastaus": "San Rafael on vetäytynyt useita kilometrejä 1900-luvun puolivälin jälkeen ilmaston lämpenemisen seurauksena, kuten suurin osa Patagonian jäätiköistä. Sulava jää ruokkii laguunia, johon jäätikkö kalvaa jäävuoria.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Northern_Patagonian_Ice_Field",
+            "title": "Northern Patagonian Ice Field – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss063e081907"
+      }
+    ]
+  },
+  "simienit": {
+    "kysymykset": [
+      "Mikä eläinlaji elää vain Simienin vuorilla?",
+      "Miksi Simienin vuoria kutsutaan Afrikan Grand Canyoniksi?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä eläinlaji elää vain Simienin vuorilla?",
+        "vastaus": "Geladapaviaani, ainoa nykyään elävä ruohonsyöjäpaviaanilaji, elää luonnossa vain Etiopian ylängöillä, erityisesti Simienin vuoristossa. Se laiduntaa ruohoa laumoissa, joissa voi olla satoja yksilöitä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Gelada",
+            "title": "Gelada – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss016e010784"
+      },
+      {
+        "kysymys": "Miksi Simienin vuoria kutsutaan Afrikan Grand Canyoniksi?",
+        "vastaus": "Vuosimiljoonien eroosio on kaivertanut ylängön reunoihin jyrkkiä, satojen metrien syvyisiä rotkoja ja teräviä huippuja, jotka muistuttavat Yhdysvaltain Grand Canyonia. Alue julistettiin UNESCOn maailmanperintökohteeksi 1978.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Simien_Mountains",
+            "title": "Simien Mountains – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss016e010784"
+      }
+    ]
+  },
+  "everglades": {
+    "kysymykset": [
+      "Miksi Evergladesia kutsutaan ruohon joeksi?",
+      "Mitkä kaksi krokotiililajia elävät Evergladesissa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi Evergladesia kutsutaan ruohon joeksi?",
+        "vastaus": "Vesi virtaa Evergladesin läpi hyvin hitaasti, vain muutaman sadan metrin päivässä, leveänä ja matalana virtana saraikon seassa. Siksi aluetta kutsutaan osuvasti ruohon joeksi tavallisen kosteikon sijaan.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Everglades",
+            "title": "Everglades – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss015e08920"
+      },
+      {
+        "kysymys": "Mitkä kaksi krokotiililajia elävät Evergladesissa?",
+        "vastaus": "Everglades on maailman ainoa paikka, jossa amerikanalligaattori ja uhanalainen amerikankrokotiili elävät samalla alueella luonnossa. Kansallispuisto perustettiin 1947 suojelemaan aluetta laajenevalta maankäytöltä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Everglades_National_Park",
+            "title": "Everglades National Park – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss015e08920"
+      }
+    ]
+  },
+  "ennedi": {
+    "kysymykset": [
+      "Kuinka Gweni-Fadan kraatteri syntyi?",
+      "Mitä Ennedin ylängön kallioseinillä on nähtävissä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka Gweni-Fadan kraatteri syntyi?",
+        "vastaus": "Gweni-Fada on eroosion paljastama rakenne Ennedin hiekkakivessä, halkaisijaltaan yli kolme kilometriä; NASA kuvailee sen meteoriitin törmäyksestä syntyneeksi. Tarkkaa ikää ei tunneta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0320315",
+            "title": "Crater Gweni-Fada on Chad's Ennedi Plateau – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0320315"
+      },
+      {
+        "kysymys": "Mitä Ennedin ylängön kallioseinillä on nähtävissä?",
+        "vastaus": "Ennedin luolissa ja kallioseinillä on tuhansia vuosia vanhoja maalauksia ja kaiverruksia ihmisistä, karjasta ja villieläimistä ajalta, jolloin Sahara oli vihreä ja märkä. UNESCO merkitsi alueen maailmanperintökohteeksi 2016.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ennedi_Plateau",
+            "title": "Ennedi Plateau – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e404551"
+      }
+    ]
+  },
+  "nevado-del-ruiz": {
+    "kysymykset": [
+      "Montako ihmistä Nevado del Ruizin purkaus tappoi 1985?",
+      "Miksi 1985 purkaus oli tilavuudeltaan pieni mutta tappava?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Montako ihmistä Nevado del Ruizin purkaus tappoi 1985?",
+        "vastaus": "Marraskuun 1985 purkaus suli osan huipun jäätiköstä, ja syntynyt lahar hautasi Armeron kaupungin. Onnettomuudessa kuoli yli 23 000 ihmistä, mikä teki siitä 1900-luvun toiseksi tuhoisimman tulivuoripurkauksen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/1985_Armero_tragedy",
+            "title": "1985 Armero tragedy – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss023e027737"
+      },
+      {
+        "kysymys": "Miksi 1985 purkaus oli tilavuudeltaan pieni mutta tappava?",
+        "vastaus": "Purkaus tuotti vain vähän tuhkaa ja laavaa verrattuna suurimpiin historiallisiin purkauksiin. Koska huippu on kuitenkin jäätikön peitossa, jo pieni purkaus riitti sulattamaan jäätä ja synnyttämään tuhoisan mutavirran.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Nevado_del_Ruiz",
+            "title": "Nevado del Ruiz – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss023e027737"
+      }
+    ]
   }
 };
 

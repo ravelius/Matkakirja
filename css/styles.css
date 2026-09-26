@@ -971,6 +971,26 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 /*
+ * Striimiäänen pudotusvalikko (omistaja 27.9.2026): sama kolmen
+ * sarakkeen rivi kuin kytkimillä, valitsin tilatekstin paikalla.
+ */
+.kehittaja-valikko .kehittaja-valinta {
+  cursor: default;
+}
+
+.kehittaja-valikko .kehittaja-valinta-select {
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(230, 214, 184, 0.35);
+  border-radius: 4px;
+  padding: 0.12rem 0.3rem;
+  max-width: 8.5rem;
+}
+
+/*
  * Tila luetaan yhdellä vilkaisulla: päällä oleva kytkin kultaa sekä
  * nimen että tilatekstin, pois kytketty jää himmeäksi.
  */
@@ -22872,17 +22892,29 @@ button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
  * pergamenttisääntö, joka muuten voittaisi tämän.
  */
 /*
- * Kaiutin päällä: sama täyteinen muoto kuin kuuntelevalla mikillä,
- * mutta ilman sykettä — vipu on päällä, se ei tee juuri nyt mitään.
+ * KAIUTINVIVUN TILA NÄKYY SELVÄSTI (omistaja 27.9.2026). Päällä nappi
+ * on kultainen ja kuvakkeessa on ääniaallot; pois-tilassa nappi on
+ * paperilla, kuvake himmeä ja kaiuttimen yli kulkee vinoviiva. Kulta
+ * erottaa vivun myös kuuntelevasta mikistä, joka on ruskea ja sykkii.
+ *
+ * Päällä-säännössä ovat mukana myös :hover ja :focus-visible:
+ * kosketuslaitteella hover jää napautuksen jälkeen päälle, eikä
+ * yleinen osoitussääntö saa maalata päällä olevaa vipua paperiksi.
  * Valitsin on paneelin luokan alla samasta syystä kuin mikillä:
  * kartan .actions-napeilla on oma pergamenttisääntönsä.
  */
 .pollo-paneeli button.pollo-kaiutin.paalla,
-body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla {
-  background: var(--pollo-korostus);
-  color: #f7f1e2;
+.pollo-paneeli button.pollo-kaiutin.paalla:hover:not(:disabled),
+.pollo-paneeli button.pollo-kaiutin.paalla:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla,
+body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla:hover:not(:disabled) {
+  background: #e3ad45;
+  color: var(--pollo-muste);
   border-color: var(--pollo-korostus);
 }
+.pollo-kaiutin:not(.paalla) .viiva-ikoni { opacity: 0.55; }
+.pollo-kaiutin:not(.paalla) .pollo-kaiutin-aalto,
+.pollo-kaiutin.paalla .pollo-kaiutin-vino { display: none; }
 
 /* Kehittäjäkoodin kenttä: näkyy vain kehittäjätilassa, ja sen kuuluu
    olla huomaamaton — se on työkalu, ei pelin osa. */
