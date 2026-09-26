@@ -186,3 +186,7 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - juna/b13 **b2a5fb4a**: + linssiseppa/elava-kartta ed136705 (**ELÄVÄ KARTTA KOHTA 1 KOKONAAN JUNASSA**: saapuminen ≤ 4,8 s ohitettava, verkkohuntu, kynäviivat, syttyminen, nostopudotukset; simulaattori 189c9f36 mediaani 17,7 ms; testit 278/284/314). Laitetestaajan kierroksella: lepopiirto animaation jälkeen.
 - juna/b13 **d4f3fa25**: + linssiseppa/lykatty-data 0693c0d8 (linssien ~20 aineistoa joutilaaseen, ei kylmään käynnistykseen; LinssiOhjain.LataaAineistoHeti Natiivi-UI:lle).
 - juna/b13 **d706da81**: + natiivi-ui/linssit-heti (Linssivalitsin.Avaa → LataaAineistoHeti).
+- Linssiseppä: lepo todennettu saapumisen jälkeen (pallo lepää 1 s ja 7 s animaatiosta). ELÄVÄ KARTTA KOHTA 3 (maakunta herää, build 20):
+  jako sovittu. natiiviseppa/maakunta-heraa **29beca06** (EI junassa, menee Linssisepän haaran kanssa): MaaKartta.Heraannyt (Func<string,bool?>,
+  uinuva × 0,3), PaivitaHeraaminen(), Herata(avain, piilossa) 0,3 s. Linssiseppä: herätysanimaatio ≤ 2,5 s MaakuntaHeraa-tapahtumasta;
+  Natiivi-UI: kartussin leima ja merkit.
