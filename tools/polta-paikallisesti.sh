@@ -2262,13 +2262,42 @@ if [ "$LISTA" -eq 1 ]; then
   exit 0
 fi
 
+# RINNAKKAISUUS TIEDOSTOSTA (Fable 26.9.2026: ytimien vaihto ei saa vaatia
+# killiä). Jos POLTTO_YTIMET_TIEDOSTO on asetettu, xargs ajetaan
+# ylärajalla ja jokainen lapsi odottaa ennen shardinsa alkua vapaata
+# paikkaa. Raja luetaan tiedostosta joka yrityksellä, joten polttovahti
+# muuttaa rinnakkaisuutta kirjoittamalla tiedostoon: käynnissä olevat
+# shardit ajetaan loppuun, uudet alkavat vasta, kun paikkoja on vapaana.
+# Paikat ovat mkdir-lukkoja (atominen); vanhempi tyhjentää ne ajon alussa,
+# joten tapetun ajon jäämät eivät vie paikkoja. Ei EXIT-ansaa: shardin
+# taustatyöt perisivät sen ja vapauttaisivat paikan kesken.
+PAIKKA=""
+odota_paikka () {
+  local t="${POLTTO_YTIMET_TIEDOSTO:-}" d="$ULOS/lokit/paikat" raja i
+  [ -n "$t" ] || return 0
+  mkdir -p "$d"
+  while :; do
+    raja="$(tr -dc 0-9 < "$t" 2>/dev/null)"
+    [ -n "$raja" ] && [ "$raja" -ge 1 ] || raja=1
+    i=1
+    while [ "$i" -le "$raja" ]; do
+      if mkdir "$d/$i" 2>/dev/null; then PAIKKA="$d/$i"; return 0; fi
+      i=$((i + 1))
+    done
+    sleep 10
+  done
+}
+
 # Lapsiprosessi (xargs) ajaa yhden shardin ilman esitarkistuksia.
 if [ "$LAPSI" -eq 1 ] && [ -n "$VAIN" ]; then
+  odota_paikka
   case "$VAIN" in
     pallo-*) aja_pallo_shardi "$VAIN" ;;
     *) aja_shardi "$VAIN" ;;
   esac
-  exit $?
+  k=$?
+  [ -z "$PAIKKA" ] || rmdir "$PAIKKA" 2>/dev/null
+  exit $k
 fi
 
 [ "$VIE" -eq 1 ] && vaadi_avaimet
@@ -2296,6 +2325,7 @@ trap 'exit 143' TERM
 # vanha lista tekisi raporttiin kymmeniä ikuisesti "jonossa" olevia
 # shardeja, jotka eivät kuulu tähän ajoon lainkaan.
 rm -f "$ULOS/lokit/shardit.txt" "$ULOS/lokit/pallo-shardit.txt"
+rm -rf "$ULOS/lokit/paikat"
 echo poltto > "$ULOS/lokit/vaihe.txt"
 
 echo "Paikallinen poltto — sarjat $SARJAT, ytimiä $YTIMET"
