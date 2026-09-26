@@ -7,6 +7,10 @@ Raamattu ELÄVÄ KARTTA. Video kuvataan natiivista (iPhone pystyssä, rajattuna 
 reitin mukaan (korjattu riville 4,0–5,5 s). Omistajan soitin näyttää pystyvideot pieninä, joten videon rinnalle tehdään
 neljä pysäytyskuvaa, ja ne ovat ensisijaisia.*
 
+*Muutos 26.9. klo 19.3x (omistaja, löydös 168, Fablen kautta): noston avaus ei värjää maakuntaa. Kohta 8,0–11,5
+"Maakunta herää" menettää värin ja pysyvän täytön; käsialanimi, pikkukuva kartussiin, löydösmerkit, salaisuus-nosto ja
+lippu jäävät. Natiiviseppä tekee koodin.*
+
 **Rakenne:** kolme näytöstä ja loppukuva. Liike on tapahtumaohjattua, ja jokaisen vaiheen ajoitus tulee yhdeltä
 aikajanalta (esitysmoottori: Kamerakoreografia, Kayra-käyrät, KAMERA-AJOT: ease in/out, ei lineaarisia pätkiä).
 
@@ -18,7 +22,7 @@ aikajanalta (esitysmoottori: Kamerakoreografia, Kayra-käyrät, KAMERA-AJOT: eas
 | 4,0–5,5 | **Maakunnat syttyvät** etäisyysjärjestyksessä Ateenasta ulospäin, koska kaanonissa ei ole kiinteää 1873-reittiä (porrastus 1,1 s jaettuna maakuntien määrällä, enintään 0,12 s; 5 sävyn täyttö 0,4 s) | – | – | Natiiviseppä: Maakuntaväri(id, t); järjestys lasketaan maakuntien keskipisteiden etäisyydestä saapumiskaupunkiin (Linssiseppä, ei reittidataa) |
 | 5,0–6,5 | **Nostot putoavat** musteläikkinä: ensin pääkohteet (0,25 s läikkä), sitten kohteet ja pienet (porrastus 60 ms) | – | pieni naksahdus/läikkä | Pelikoodari: kokoluokat ja himmeät jäljet; Sisältökirjuri: GRC-luokitus |
 | 5,5–8,0 | **Aamuaurinko** pyyhkäisee reliefin yli (matala itä → etelä, pitkät varjot liikkuvat) | kallistettu kierto 20° Attikan ympäri, Pehmea | aamun tuuli | Natiiviseppä: Aurinko(atsimuutti, korkeus) |
-| 8,0–11,5 | **Maakunta herää**: napautus Attikan nostoon → väri valuu maakuntaan (0,8 s), nimi kirjoittuu käsialalla (1,2 s), pikkukuva leimautuu kartussiin (0,3 s), merkit 1/7 | pieni kuminauha-ajo Attikaan, 700 km | kynä + leimasin | Natiivi-UI: kartussi ja merkit; Natiiviseppä: Maakuntaväri(paikallinen) |
+| 8,0–11,5 | **Maakunta herää**: napautus Attikan nostoon → nimi kirjoittuu käsialalla (1,2 s), pikkukuva leimautuu kartussiin (0,3 s), löydösmerkit 1/7, salaisuus-nosto ja lippu. **Maakuntaa ei värjätä** (omistaja 26.9. klo 19.3x, löydös 168): ei väriä avauksessa eikä pysyvää täyttöä. | pieni kuminauha-ajo Attikaan, 700 km | kynä + leimasin | Natiivi-UI: kartussi ja merkit; Natiiviseppä: värjäyksen poisto (koodi) |
 | 11,5–14,5 | **Elävä hetki**: 1873-höyrylaiva lipuu Pireuksesta Egeanmerelle savuvanan kanssa (tai lintuparvi Peloponnesoksen yli) | seuraa hitaasti, ei zoomia | kaukainen laivan kello | Karttaseppä: 1873 laivareitti; Natiiviseppä: Boidit / laivamalli |
 | 14,5–18,0 | **Kirjoitettu maailma**: vetäytyminen koko pallolle hämärään. Kuljettu reitti on punainen kynänjälki, ja käydyt kaupungit hehkuvat yövaloina (Black Marble, maskattu). | Kiihtyva → Tasainen → Jarruttava, 3,5 s; pito 0,5 s | musiikki nousee hiljaa | Natiiviseppä: Yövalot(maski käydyt); Karttaseppä: yövalosarja |
 
