@@ -887,14 +887,20 @@ namespace Matkakirja.Natiivi
         /// säädöt. Natiivin omat kehittäjäkytkimet (linssien kehittäjätila, maailmatila) ovat samaa laitetta.
         /// Pulun kehittäjäkoodi on Keychainissa, johon tyhjennys ei koske.
         /// </summary>
-        /// Arvon laji kulkee mukana, koska PlayerPrefs ei kerro sitä (luku luetaan GetIntillä).
-        static readonly (string Avain, bool Luku)[] SailyvatAsetukset =
+        /// Arvon laji kulkee mukana, koska PlayerPrefs ei kerro sitä: 's' teksti, 'i' kokonaisluku, 'f' liukuluku.
+        /// Kehittäjien mittaus- ja kokeiluavaimet (Natiiviseppä, Linssiseppä; Natiivi-UI:n havainto 26.9.) ovat samaa
+        /// laitetta kuin kehittäjätila, joten ne säilyvät.
+        static readonly (string Avain, char Laji)[] SailyvatAsetukset =
         {
-            ("matkakirja-kehittaja", false),                // Asetukset.KehittajaAvain (SetString)
-            ("matkakirja-kehittaja-maailma", true),         // Paavalikko.MaailmaAvain (SetInt)
-            (LinssiOhjain.KehittajatilaAvain, true),        // SetInt
-            (Lukijaaani.KoodiAvain, false), (Lukijaaani.VoimaAvain, false),
-            (Lukijaaani.NopeusAvain, false), (Lukijaaani.AsetusAvain, false),
+            ("matkakirja-kehittaja", 's'),                // Asetukset.KehittajaAvain
+            ("matkakirja-kehittaja-maailma", 'i'),        // Paavalikko.MaailmaAvain
+            (LinssiOhjain.KehittajatilaAvain, 'i'),
+            (Lukijaaani.KoodiAvain, 's'), (Lukijaaani.VoimaAvain, 's'),
+            (Lukijaaani.NopeusAvain, 's'), (Lukijaaani.AsetusAvain, 's'),
+            (Valmius.AutoAvain, 'i'), (Valmius.KevennysPoisAvain, 'i'), (PyyntoLoki.Avain, 'i'),
+            ("matkakirja-verho-taysi", 'i'), ("matkakirja-mustan-katto", 'i'),
+            ("matkakirja-avaus-esilataus", 'i'), ("matkakirja-avaus-malli", 's'),
+            (IhmisenMatkaKerros.TekstitysAvain, 'i'), (LinssiOhjain.KyllaisyysAvain, 'f'),
         };
 
         /// <summary>Uusi peli -tyhjennys tehtiin: pelin muistit ovat poissa, aloitusnäkymä seuraa (löydös 177).</summary>
@@ -929,12 +935,19 @@ namespace Matkakirja.Natiivi
                 try { if (File.Exists(polku)) File.Delete(polku); }
                 catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tyhjennys ei poistanut " + Path.GetFileName(polku) + ": " + e.Message); }
             var sailyvat = SailyvatAsetukset.Where(a => PlayerPrefs.HasKey(a.Avain))
-                .Select(a => (a.Avain, a.Luku, Teksti: a.Luku ? null : PlayerPrefs.GetString(a.Avain), Arvo: a.Luku ? PlayerPrefs.GetInt(a.Avain) : 0))
+                .Select(a => (a.Avain, a.Laji, Teksti: a.Laji == 's' ? PlayerPrefs.GetString(a.Avain) : null,
+                    Luku: a.Laji == 'i' ? PlayerPrefs.GetInt(a.Avain) : 0, Liuku: a.Laji == 'f' ? PlayerPrefs.GetFloat(a.Avain) : 0f))
                 .ToList();
             PlayerPrefs.DeleteAll();
             foreach (var a in sailyvat)
-                if (a.Luku) PlayerPrefs.SetInt(a.Avain, a.Arvo); else PlayerPrefs.SetString(a.Avain, a.Teksti);
+                switch (a.Laji)
+                {
+                    case 'i': PlayerPrefs.SetInt(a.Avain, a.Luku); break;
+                    case 'f': PlayerPrefs.SetFloat(a.Avain, a.Liuku); break;
+                    default: PlayerPrefs.SetString(a.Avain, a.Teksti); break;
+                }
             PlayerPrefs.Save();
+            luennat?.Nollaa();
             LataaPassi();
             Tila = SilmukanTila.Aloitus;
             tilarivi.Aseta("");
