@@ -20,6 +20,7 @@
  * KÄYTTÖ SKRIPTISTÄ (rivit muotoa AVAIN=arvo, shell-eval):
  *   node tools/polttoresepti.mjs liput 2026-09-25
  *   node tools/polttoresepti.mjs shardit 2026-09-25 --korkeus 1
+ *   node tools/polttoresepti.mjs delta 2026-09-26    (R_DELTA_LAJI, R_DELTA_RESEPTI)
  */
 
 /*
@@ -111,6 +112,19 @@ RESEPTITAULU['2026-09-26'] = Object.freeze({
   ...R25,
   kuvaus: 'D2 + C-reliefi + natiivin vektorirannat + voimakkaampi meren syvyysliuku (omistaja 25.9.2026 klo 23, löydös 129)',
   pohjaliput: [...POHJA26, '--syvyyskontrasti', '1.35'],
+  /*
+   * DELTA EDELLISEEN (Karttaseppä 26.9.2026, ks. tools/delta-luokitin.mjs):
+   * reseptin ero edeltäjäänsä koskee vain merta (syvyysrampin kontrasti
+   * ja patinan syvyyslitistys), joten sen voi polttaa 2026-09-25-pohjan
+   * päälle `--delta meri` -tilassa. Kenttä on VÄITE, jonka ajo todistaa:
+   * tarkistusotos (piirretyt kopioitavat laatat) on oltava bitilleen
+   * lähteen laattoja, tai vertailu kaatuu ennen julkaisua. Patinan
+   * litistys lukee meren KROMASTA, joten vaalea maa olisi voinut kuulua
+   * siihen; koeajossa 26.9.2026 (z7, 1′, ilman DEM:ää) 25- ja 26-reseptin
+   * puhtaat maalaatat olivat tavulleen samat Libyassa (8/8) ja Grönlannin
+   * jäätiköllä (35/35), ja kaikki muuttuneet laatat olivat vesi-/rantalaattoja.
+   */
+  deltaEdelliseen: Object.freeze({ resepti: '2026-09-25', laji: 'meri' }),
 });
 export const RESEPTIT = Object.freeze(RESEPTITAULU);
 
@@ -176,13 +190,23 @@ async function paa(argv) {
     for (const [k, v] of Object.entries(rivit)) console.log(`${k}=${shellArvo(v)}`);
     return;
   }
+  /*
+   * DELTA-TIETO OMANA KOMENTONA, jotta `liput`-tuloste pysyy tavulleen
+   * entisenä: R_DELTA_LAJI on tyhjä, jos reseptillä ei ole edeltäjää.
+   */
+  if (komento === 'delta') {
+    const d = resepti(nimi).deltaEdelliseen ?? null;
+    console.log(`R_DELTA_LAJI=${shellArvo(d?.laji ?? '')}`);
+    console.log(`R_DELTA_RESEPTI=${shellArvo(d?.resepti ?? '')}`);
+    return;
+  }
   if (komento === 'shardit') {
     const i = muut.indexOf('--korkeus');
     const korkeus = i >= 0 ? Number(muut[i + 1]) : 1;
     for (const s of reseptinShardit(nimi, { korkeus })) console.log(`${s.nimi}|${s.args}`);
     return;
   }
-  throw new Error('käyttö: polttoresepti.mjs liput|shardit <nimi> [--korkeus 1|3]');
+  throw new Error('käyttö: polttoresepti.mjs liput|shardit|delta <nimi> [--korkeus 1|3]');
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

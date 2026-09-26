@@ -14,6 +14,8 @@
  *        [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
  *        [--vain-lista] [--vain-palat [tiedosto]] [--paikkaus <lähdeversio>]
+ *        [--delta meri|maa --delta-lahde <lähdeversio> [--delta-marginaali <px>]
+ *         [--delta-tarkistus <n>]]
  *
  * Omistajan päälinjaus 30.8.2026 (Raamattu, "YKSI MAAILMANBITTIKARTTA -
  * MAALEHDISTA LUOVUTAAN"): *"koko maailma on kokoajan yksi iso
@@ -109,6 +111,10 @@ import { NIMISTO_1873 } from '../js/packs/nimisto-1873.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
 import { NOSTOLADONTA_SAANTO } from '../js/nostoladonta.js';
 import { nostotasonKansio, varitasonKansio } from '../js/laattapyramidi.js';
+import {
+  DELTA_LAJIT, DELTA_LISAMARGINAALI_PX, DELTA_TARKISTUS_OLETUS,
+  lataaLuokitin, pyramidinDeltaSuunnitelma, tasonLuvut,
+} from './delta-luokitin.mjs';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -331,6 +337,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--dem-kaikki-tasot] [--maski-aa 4] [--meri-kohina 0.2] [--reliefi-koe lammin|<json>] [--rantaleveys z:k,…] [--reseptinimi <nimi>] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
+    + '[--delta meri|maa --delta-lahde <lähdeversio> [--delta-marginaali <px>] [--delta-tarkistus <n>]] '
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>] [--nostot-ilman-nimioita]] '
     + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
@@ -511,6 +518,70 @@ const PAIKKAUS_LAHDE = valitsin('paikkaus', null);
 if (PAIKKAUS_LAHDE && PAIKKAUS_LAHDE === VERSIO) {
   console.error(`--paikkaus: lähdeversio ja uusi versio ovat sama (${VERSIO}). `
     + 'Paikkaus ei saa koskaan kirjoittaa lähteen polkuun.');
+  process.exit(1);
+}
+/*
+ * DELTA (`--delta meri|maa --delta-lahde <lähdeversio>`, Karttaseppä
+ * 26.9.2026, omistajan pyyntö Fablen kautta) — PAIKKAUKSEN SISAR, JONKA
+ * ALUE ON MASKI EIKÄ LAATIKKO.
+ *
+ * Kun reseptin muutos koskee vain merta (syvyysliuku) tai vain maata
+ * (kermaharso, rajat), piirretään vain laatat, joiden alalla on vettä
+ * (`meri`) tai maata (`maa`), ja loput kopioidaan lähdeversiosta uuteen
+ * versiopolkuun palvelinkopiona — täsmälleen kuten paikkauksessa. Laji
+ * luetaan laatan KOKO alalta marginaalin kanssa (tools/delta-luokitin.mjs:
+ * mitä on vettä, mikä marginaali ja miksi), samoista meren ja järvien
+ * renkaista, joista moottori päättää pikselin veden.
+ *
+ * TÄMÄ EI PIIRRÄ MITÄÄN ERI TAVALLA. Piirrettävä laatta on tavulleen se
+ * laatta, jonka täysi ajo samalla reseptillä tekisi: korkeusruudukko ja
+ * DEM-ikkuna kootaan SUODATTAMATTOMAN työlistan lohkoista
+ * (lohkotKorkeudelle), joten ruudukon origo ja solujako ovat samat kuin
+ * täysajossa. Suodatus vain jättää kopioitavat laatat piirtämättä.
+ *
+ * TARKISTUSOTOS (`--delta-tarkistus`, oletus 4 tasoa kohti): muutama
+ * KOPIOITAVA laatta piirretään silti, ja paikkaa-pyramidi.mjs vertaa
+ * vaatii niiden olevan bitilleen lähteen laattoja. Se on koko delta-
+ * mallin todistus: jos muutos ei ollutkaan puhdas meri- tai maamuutos
+ * (esim. patina lukee vaalean maan vedeksi) tai marginaali ei riitä,
+ * vertailu kaatuu ennen kuin luettelo julkaistaan.
+ *
+ * Kirjanpito luettelossa (`delta`), kuten `paikkaus`: lähde, laji,
+ * marginaali, tasoittaiset luvut ja suunnitelman tiiviste, jonka pallon
+ * sarja (tools/tee-pallolaatat.mjs --delta) tarkistaa ennen kuin se
+ * johtaa omat piirrettävänsä pyramidin piirrettävistä.
+ */
+const DELTA = valitsin('delta', null);
+const DELTA_LAHDE = valitsin('delta-lahde', null);
+if (DELTA !== null || DELTA_LAHDE !== null) {
+  if (!DELTA_LAJIT[DELTA]) {
+    console.error(`--delta ${DELTA ?? ''}: laji on ${Object.keys(DELTA_LAJIT).join(' tai ')}.`);
+    process.exit(1);
+  }
+  if (!DELTA_LAHDE) {
+    console.error('--delta vaatii --delta-lahde <lähdeversio>: mistä muuttumattomat laatat kopioidaan.');
+    process.exit(1);
+  }
+  if (DELTA_LAHDE === VERSIO) {
+    console.error(`--delta: lähdeversio ja uusi versio ovat sama (${VERSIO}). `
+      + 'Delta ei saa koskaan kirjoittaa lähteen polkuun.');
+    process.exit(1);
+  }
+  if (PAIKKAUS_LAHDE) {
+    console.error('--delta ja --paikkaus ovat eri ajoja: kummallakin on oma alueensa ja kirjanpitonsa.');
+    process.exit(1);
+  }
+}
+/*
+ * Marginaali pikseleinä: REUNUS + DELTA_LISAMARGINAALI_PX (perustelu
+ * tools/delta-luokitin.mjs). Luetaan getterinä, koska reunus lasketaan
+ * paperivakiosta, joka esitellään vasta alempana.
+ */
+const DELTA_MARGINAALI_ANNETTU = valitsin('delta-marginaali', null);
+/** Tarkistusotos tasoa kohti (0 = ei otosta). */
+const DELTA_TARKISTUS = Number(valitsin('delta-tarkistus', DELTA_TARKISTUS_OLETUS));
+if (DELTA && !(Number.isInteger(DELTA_TARKISTUS) && DELTA_TARKISTUS >= 0)) {
+  console.error(`--delta-tarkistus ${valitsin('delta-tarkistus', '')}: kokonaisluku ≥ 0.`);
   process.exit(1);
 }
 /** Nostotason matalin taso: kaukotasoilla nostolaattoja ei ole. */
@@ -1705,11 +1776,17 @@ function laatanBbox(mitat, sarake, rivi) {
  * laatat pysyvät tavulleen entisinä.
  */
 function korkeudenLaatikko(MARGINAALI = 0.5) {
-  if (!lohkot.size) return laatikko;
+  /*
+   * DELTA-AJOSSA LAATIKKO TULEE SUODATTAMATTOMASTA TYÖLISTASTA (ks.
+   * DELTA): kapeampi laatikko siirtäisi ruudukon ja DEM-ikkunan origoa,
+   * ja silloin piirretty laatta ei enää olisi tavulleen täysajon laatta.
+   */
+  const kaytetyt = lohkotKorkeudelle ?? lohkot;
+  if (!kaytetyt.size) return laatikko;
   const R = PATINA ? reunusTasolle() : 0;
   let ax0 = Infinity; let ax1 = -Infinity;
   let ay0 = Infinity; let ay1 = -Infinity;
-  for (const { mitat, bx, by } of lohkot.values()) {
+  for (const { mitat, bx, by } of kaytetyt.values()) {
     const s0 = bx * LOHKO;
     const r0 = by * LOHKO;
     const pw = Math.min(Math.min(LOHKO, mitat.sarakkeita - s0) * LAATTA,
@@ -2462,6 +2539,8 @@ const nimioPeitteet = new Map(
 );
 const tarvitaan = new Set();
 const lohkot = new Map();
+/** Delta-ajon suodattamattomat lohkot korkeusruudukon laatikolle (ks. DELTA). */
+let lohkotKorkeudelle = null;
 for (const mitat of tasot) {
   let peite = viivaPeitteet.get(mitat.z);
   if (NOSTOTASO) peite = nostoPeitteet.get(mitat.z);
@@ -2515,6 +2594,96 @@ console.log(`  arkki laudalla  x ${arkinBbox.x} y ${arkinBbox.y.toFixed(1)} `
 const PAPERI_S = 1;
 console.log(`  painojälki      paperivakioina (paperiS ${PAPERI_S}); `
   + 'maasto ja kalusteet kartan mittakaavassa');
+
+/*
+ * DELTA-SUODATUS (ks. DELTA ylempänä ja tools/delta-luokitin.mjs).
+ *
+ * Luokitus lasketaan KOKO tason ruudukolle eikä vain tämän shardin
+ * kaistalle: luokka ja tarkistusotos ovat silloin samat jokaisessa
+ * shardissa ja luettelojobissa, ja kukin shardi piirtää vain oman
+ * kaistansa osuuden. Aineistona ovat vain meren ja järvien renkaat —
+ * kevyet vektorit, joten tämä toimii myös `--vain-lista`- ja
+ * `--vain-luettelo`-ajossa ilman korkeusruudukkoa ja selainta.
+ */
+const DELTA_MARGINAALI_PX = DELTA_MARGINAALI_ANNETTU !== null
+  ? Number(DELTA_MARGINAALI_ANNETTU)
+  : reunusTasolle() + DELTA_LISAMARGINAALI_PX;
+if (DELTA && !(DELTA_MARGINAALI_PX >= 0)) {
+  console.error(`--delta-marginaali ${DELTA_MARGINAALI_ANNETTU}: pikseleitä, 0 tai enemmän.`);
+  process.exit(1);
+}
+let DELTA_SUUNNITELMA = null;
+/** Suodatuksessa pois jääneet (kopioitavat) laatat [z, sarake, rivi]. */
+const deltaKopioitavat = [];
+/** Tarkistusotoksen laatat tässä ajossa [z, sarake, rivi]. */
+const deltaTarkistettavat = [];
+const deltaTarkistusAvaimet = new Set();
+if (DELTA) {
+  if (MERKKITASO || SYVA_ALUE) {
+    console.error('--delta koskee vain pohjaa: ei --nostotaso/--viivataso/'
+      + '--rantataso/--nimiotaso/--vari eikä --syva-alue.');
+    process.exit(1);
+  }
+  /*
+   * `--alue` deltan kanssa on KOEAJO (vedos yhdestä kohdasta, jolla
+   * marginaalin voi mitata): suodatus koskee vain alueen laatat, eikä
+   * luetteloa saa julkaista, koska se kuvaisi vain alueen.
+   */
+  if (ALUE) console.log('  delta + alue    KOEAJO: vain alueen laatat, luettelo ei ole julkaistava');
+  if (!existsSync(join(dataKansio, 'ne_10m_ocean.geojson'))) {
+    console.error(`--delta tarvitsee meren renkaat: ${join(dataKansio, 'ne_10m_ocean.geojson')} puuttuu `
+      + '(--data <sama aineistokansio kuin piirrolla>).');
+    process.exit(1);
+  }
+  const luokitin = await lataaLuokitin(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  DELTA_SUUNNITELMA = pyramidinDeltaSuunnitelma({
+    luokitin,
+    geometria: {
+      projektio, arkki: arkinBbox, rajaus: laudanBbox, laatta: LAATTA,
+    },
+    tasot: tasot.map((m) => ({
+      z: m.z, leveys: m.leveys, korkeus: m.korkeus, sarakkeita: m.sarakkeita, riveja: m.riveja,
+    })),
+    laji: DELTA,
+    marginaaliPx: DELTA_MARGINAALI_PX,
+    tarkistus: DELTA_TARKISTUS,
+  });
+  const perTaso = new Map(DELTA_SUUNNITELMA.tasot.map((t) => [t.z, t]));
+  lohkotKorkeudelle = new Map(lohkot);
+  const jaljelle = [];
+  for (const tyo of tyot) {
+    const t = perTaso.get(tyo.mitat.z);
+    const i = tyo.rivi * t.sarakkeita + tyo.sarake;
+    if (t.piirra[i]) { jaljelle.push(tyo); continue; }
+    if (t.tarkistus.has(i)) {
+      jaljelle.push(tyo);
+      deltaTarkistettavat.push([tyo.mitat.z, tyo.sarake, tyo.rivi]);
+      deltaTarkistusAvaimet.add(`${tyo.mitat.z}:${tyo.sarake}:${tyo.rivi}`);
+      continue;
+    }
+    deltaKopioitavat.push([tyo.mitat.z, tyo.sarake, tyo.rivi]);
+  }
+  const ennen = tyot.length;
+  tyot.length = 0;
+  tyot.push(...jaljelle);
+  tarvitaan.clear();
+  lohkot.clear();
+  for (const t of tyot) {
+    tarvitaan.add(`${t.mitat.z}:${t.sarake}:${t.rivi}`);
+    const k = `${t.mitat.z}:${Math.floor(t.sarake / LOHKO)}:${Math.floor(t.rivi / LOHKO)}`;
+    if (!lohkot.has(k)) lohkot.set(k, { mitat: t.mitat, bx: Math.floor(t.sarake / LOHKO), by: Math.floor(t.rivi / LOHKO) });
+  }
+  console.log(`  delta           ${DELTA} lähteestä ${DELTA_LAHDE}: marginaali ${DELTA_MARGINAALI_PX} px, `
+    + `${luokitin.janoja} rantajanaa, suunnitelma ${DELTA_SUUNNITELMA.tiiviste}`);
+  for (const t of DELTA_SUUNNITELMA.tasot) {
+    const l = tasonLuvut(t);
+    console.log(`    z${t.z}  piirretään ${l.piirretaan} + tarkistus ${l.tarkistus} / ${l.kaikki} `
+      + `(kopioidaan ${l.kopioidaan - l.tarkistus}; vesi ${l.vesi}, maa ${l.maa}, `
+      + `ranta ${l.molemmat}, kehys ${l.ulkona})`);
+  }
+  console.log(`  delta tässä ajossa: ${tyot.length} / ${ennen} laattaa piirretään `
+    + `(tarkistus ${deltaTarkistettavat.length}), ${deltaKopioitavat.length} kopioidaan`);
+}
 
 for (const m of tasot) {
   const kaikki = m.sarakkeita * m.riveja;
@@ -2605,9 +2774,40 @@ if (lippu('vain-lista')) {
     rantataso: RANTATASO || undefined,
     alue: ALUE,
     tasot: TASOT,
-    laatat: tyot.map(({ mitat, sarake, rivi }) => [mitat.z, sarake, rivi]),
+    /*
+     * DELTA-AJON LISTA: `laatat` on piirrettävät (vertaa vaatii niiden
+     * olevan uudessa versiossa), `tarkistus` on piirretyt KOPIOITAVAT
+     * (vertaa vaatii ne bitilleen lähteen laatoiksi — ne eivät ole
+     * `laatat`-listassa) ja `kopioitavat` loput. Ilman --delta kentät
+     * puuttuvat ja tiedosto on tavulleen entinen.
+     */
+    ...(DELTA ? {
+      delta: {
+        laji: DELTA,
+        lahde: DELTA_LAHDE,
+        marginaaliPx: DELTA_MARGINAALI_PX,
+        rannikonHarvennus: RANNIKON_HARVENNUS,
+        tiiviste: DELTA_SUUNNITELMA.tiiviste,
+      },
+    } : {}),
+    laatat: (DELTA
+      ? tyot.filter(({ mitat, sarake, rivi }) => !deltaTarkistusAvaimet.has(`${mitat.z}:${sarake}:${rivi}`))
+      : tyot).map(({ mitat, sarake, rivi }) => [mitat.z, sarake, rivi]),
+    ...(DELTA ? { tarkistus: deltaTarkistettavat, kopioitavat: deltaKopioitavat } : {}),
   })}\n`);
   console.log(`\n--vain-lista: ${polku} (${tyot.length} laattaa)`);
+  process.exit(0);
+}
+
+/*
+ * TYHJÄ DELTA-SHARDI: kaistalla ei ole yhtään piirrettävää eikä
+ * tarkistettavaa laattaa (esim. z8-kaista keskellä Tyyntämerta
+ * maa-deltassa). Se on onnistunut ajo — kaikki sen laatat kopioidaan.
+ * Luettelojobi ja listat ovat jo tehneet työnsä yllä.
+ */
+if (DELTA && !tyot.length && !lippu('vain-palat') && !KUIVA && !lippu('vain-luettelo')) {
+  console.log(`\n--delta ${DELTA}: tässä ajossa ei ole piirrettävää, `
+    + `${deltaKopioitavat.length} laattaa kopioidaan lähteestä ${DELTA_LAHDE}.`);
   process.exit(0);
 }
 
@@ -4702,6 +4902,26 @@ function teeLuettelo() {
    * on.
    */
   paikkaus: PAIKKAUS_LAHDE ? { lahde: PAIKKAUS_LAHDE, alue: ALUE } : undefined,
+  /*
+   * DELTAN KIRJANPITO (ks. DELTA): mistä versiosta muuttumattomat laatat
+   * kopioitiin, millä lajilla ja marginaalilla piirrettävät valittiin,
+   * montako laattaa kultakin tasolta piirrettiin (`piirretty`, ilman
+   * tarkistusotosta) ja tarkistettiin, sekä suunnitelman tiiviste.
+   * Poltto-edistyminen.mjs eheys odottaa shardeilta juuri `piirretty` +
+   * `tarkistettu` laattaa tasoa kohti. Peli ei lue kenttää; pallon
+   * sarjan delta (tee-pallolaatat.mjs) lukee.
+   */
+  delta: DELTA && !MERKKITASO ? {
+    lahde: DELTA_LAHDE,
+    laji: DELTA,
+    marginaaliPx: DELTA_MARGINAALI_PX,
+    rannikonHarvennus: RANNIKON_HARVENNUS,
+    luokitus: 'meren ja järvien renkaat (tools/delta-luokitin.mjs)',
+    tarkistus: DELTA_TARKISTUS,
+    tiiviste: DELTA_SUUNNITELMA.tiiviste,
+    piirretty: Object.fromEntries(DELTA_SUUNNITELMA.tasot.map((t) => [t.z, tasonLuvut(t).piirretaan])),
+    tarkistettu: Object.fromEntries(DELTA_SUUNNITELMA.tasot.map((t) => [t.z, tasonLuvut(t).tarkistus])),
+  } : undefined,
   lahteet: [
     'Natural Earth 10m (Kelso & Patterson) — public domain',
     'ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain',
@@ -4750,6 +4970,7 @@ const kirjoitettava = yhdistaLuettelo(luettelo, vanhaLuettelo, {
     varipaletti: VARITASO ? VARIPALETTI : undefined,
     varirajattu: VARITASO ? !VARI_ILMAN_RAJAUSTA : undefined,
     paikkaus: PAIKKAUS_LAHDE || undefined,
+    delta: DELTA ? `${DELTA} ${DELTA_LAHDE}` : undefined,
   },
 });
 kirjoitettava.erat = kirjoitettava.erat ?? [{ tasot: TASOT, alue: ALUE }];
