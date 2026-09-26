@@ -24,7 +24,9 @@ Uusi tili klo 14:55: viikko (all models) **19 %**, viikko (Fable) 13 %, 5 h **12
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-**14:55 HÄLYTYS: swap nousi 12,2 Gt:sta 20,5 Gt:aan / 21,5 Gt (raja 24 Gt) ~12 minuutissa** — Z10-poltto + maakuntapoltto (pyramidi-poltto/, 13 Gt ja kasvaa) syövät muistia nopeasti. Levy laski 91→81 Gt (raja 80 Gt, hyvin lähellä). Ei vielä ylitystä kummassakaan, mutta trendi on jyrkkä — ilmoitettu Fablelle, seurataan tiiviisti (5 min).
+**15:00 Fable kuittasi ja antoi Karttasepälle ohjeen** (ajokansio ≤20 Gt, shardit ämpäriin ja pois, ytimet 16→10 jos levy <78 Gt tai swap >24 Gt). **UUSI KRIITTINEN RAJA: levy <75 Gt → lähetä Karttasepälle suoraan "KESKEYTÄ POLTTO" + rivi Fablelle.** Klo 15:00: levy vakiintunut 81 Gt, swap laskenut 20,2 Gt — ei kriittistä, seurataan 5 min välein.
+
+**14:55 HÄLYTYS: swap nousi 12,2 Gt:sta 20,5 Gt:aan / 21,5 Gt (raja 24 Gt) ~12 minuutissa** — Z10-poltto + maakuntapoltto (pyramidi-poltto/, 13 Gt ja kasvaa) syövät muistia nopeasti. Levy laski 91→81 Gt (raja 80 Gt, hyvin lähellä). Ilmoitettu Fablelle 14:55, kuitattu 15:00 (ks. yllä).
 
 **14:55 Postilaatikossa uusi ei-Fable-viesti:** af811bdc3 "Kuvaputken tilaus: ISS Cupola-kehys" (Sisältökirjuri → Kuvaputki, Linssiseppä välittää, Fablen käsky, omistaja 14.5x) — ilmoitettu Fablelle.
 
