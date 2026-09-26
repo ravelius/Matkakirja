@@ -190,7 +190,7 @@ namespace Matkakirja
             bool rajatAlussa = true;
             foreach (var s in nk.Naytettavat)
             {
-                if (s.Taso < 2 || s.Id == null || !NostoSaannot.KuvamerkkiKaytossa(s.Taso, nk.ZoomKerroin)) continue;
+                if (s.Taso < 2 || s.Id == null || !Taso23Kaytossa(s.Taso)) continue;   // sama ehto kuin OnMalli (kerroin + kallistus 175)
                 var tieto = TietoNostolle(s);
                 if (!instanssit23.TryGetValue(s.Id, out var i))
                 {
