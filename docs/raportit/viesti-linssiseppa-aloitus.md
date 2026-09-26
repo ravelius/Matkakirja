@@ -5,7 +5,7 @@ Olet Linssiseppä (Opus, max-tila).
 - Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet:
   - /Users/Shared/Claude/wt/proto-linssiseppa (linssiseppa/ihmisen-matka-2, build 18 -junassa)
   - /Users/Shared/Claude/wt/proto-linssiseppa-aanet (linssiseppa/tehoste-rekisteri, kesken)
-  - /Users/Shared/Claude/wt/proto-linssiseppa-elava (linssiseppa/elava-kartta, videoprototyyppi)
+  - /Users/Shared/Claude/wt/proto-linssiseppa-elava (linssiseppa/elava-kartta: video + pelattava saapuminen)
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
 
 Lue:
@@ -13,15 +13,14 @@ Lue:
 - Raamatun Ydinajatus kohta 2 (FABLEN KÄSKYT, JUMI → FABLE, VIESTIRAJA JA VARAKANAVAT)
 - Raamatun kohdat IHMISEN MATKA II, ELÄVÄ KARTTA, ESILATAUSPOLITIIKKA ja NATIIVI PELI ETUSIJALLE
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260926-e.md** (koko tila; -d.md taustaksi)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260926-f.md** (koko tila; -e.md taustaksi)
 - docs/raportit/elava-kartta-kasikirjoitus-20260926.md ja elava-kartta-suunnitelma-20260926.md
 
-**Järjestys (tilanne 26.9. klo 04.4x):**
-1. linssiseppa/tehoste-rekisteri 859b937a on merge-pyynnössä (build 19). Seuraa Natiivisepän kuittausta.
-2. Elävä kartta: omistajan palaute ensimmäisestä videosta. Sen jälkeen rajapinnat Natiivisepän kanssa ja pelattava
-   versio seuraavaan buildiin. Joet tarvitaan Karttasepältä.
-3. II:n löydökset, pariteettiäänet, laattaesilataus ja radion esikuuntelu ovat build 18 -junassa. Seuraa omistajan
-   löydöksiä TestFlightista.
+**Järjestys (tilanne 26.9. klo 05.4x):**
+1. Elävä kartta, kohta 1 (saapuminen, haara linssiseppa/elava-kartta): käännös → ajo-saapuminen.sh → kuvapari
+   omistajalle ja Fablelle (vain kuvat, ei videoita ennen kuin liike on valmis) → merge-pyyntö Natiivisepälle (build 19).
+2. Kohdat 2–3 (maakunta herää): Pelikoodarin MaakuntaHeraa ja NostoLoytyi sekä Natiivi-UI:n kartussi. Sen jälkeen kohdat 4–5.
+3. Jatka viikkokiintiön 98 %:iin asti (omistaja 05.2x) ja pidä luovutus ajan tasalla.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
