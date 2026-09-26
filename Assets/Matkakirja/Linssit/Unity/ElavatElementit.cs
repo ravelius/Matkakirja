@@ -170,8 +170,8 @@ namespace Matkakirja.Natiivi
                 // länsirannikolla. Näytös (matka 25–40 s) ja tauko (30–90 s) tulevat MeriGeometrian aikataulusta, joten
                 // Vaihtelua ei tarvita; vähennetty liike ja Staattinen pysäyttävät ajan kuten muillakin.
                 Nimi = "merilaiva", Paikka = new LatLon(MeriGeometria.NorLat, MeriGeometria.NorLon), KokoPt = MeriGeometria.LaivaKokoPt,
-                // Rannikon suunnassa 90 pt pohjoiseen ankkurista ja valas 70 pt etelään: reitti (±40 pt) pysyy ≥ 120 pt:n päässä.
-                Yksilot = new[] { (0f, 90f, 0f) }, SiirtoIlmansuuntiin = true,
+                // Rannikon suunnassa 120 pt pohjoiseen ankkurista ja valas 80 pt etelään: reitti (±80 pt) pysyy ≥ 120 pt:n päässä.
+                Yksilot = new[] { (0f, 120f, 0f) }, SiirtoIlmansuuntiin = true,
                 Runko = HoyryGeometria.Joki, Roottori = MeriGeometria.Laiva, Lapsi = HoyryGeometria.Siipiratas,
                 LastenPaikat = new Vector3[2], Lapsi2 = HoyryGeometria.Savupallo, Lapsia2 = HoyryGeometria.Palloja,
                 PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = MeriGeometria.NorRannikko, KallistaVainRoottori = true,
@@ -181,7 +181,7 @@ namespace Matkakirja.Natiivi
             {
                 // Valas: nousee, puhaltaa kahdesti ja sukeltaa pyrstö pystyssä (näytös 12–16 s, tauko 60–150 s).
                 Nimi = "valas", Paikka = new LatLon(MeriGeometria.NorLat, MeriGeometria.NorLon), KokoPt = MeriGeometria.ValasKokoPt,
-                Yksilot = new[] { (-6f, -70f, 0f) }, SiirtoIlmansuuntiin = true,
+                Yksilot = new[] { (-6f, -80f, 0f) }, SiirtoIlmansuuntiin = true,
                 Runko = HoyryGeometria.Joki, Roottori = HoyryGeometria.Joki, Lapsi = MeriGeometria.ValaanSelka,
                 LastenPaikat = new Vector3[1], Lapsi2 = MeriGeometria.Suihku, Lapsia2 = MeriGeometria.Suihkuja,
                 Lapsi3 = MeriGeometria.Pyrsto, Lapsia3 = 1,
@@ -1414,11 +1414,14 @@ namespace Matkakirja.Natiivi
         public const double NorLat = 61.013, NorLon = 4.113;
         /// <summary>Rannikon suunta pohjoisesta: merikohdan 265° osoittaa merelle, joten rannikko kulkee suuntaan 355°.</summary>
         public const float NorRannikko = 355f;
-        /// <summary>Laiva 0,14 yksikköä → noin 11 pt ja valaan selkä 0,2 → noin 14 pt (lajilista: laiva 8–12 pt, valas 14 pt).</summary>
-        public const float LaivaKokoPt = 80f, ValasKokoPt = 70f;
+        /// <summary>Laiva 0,14 yksikköä → noin 22 pt ja valaan selkä 0,2 → noin 28 pt. Lajilistan 8–12 pt ja 14 pt olivat laitteella
+        /// (27.9. klo 00.1x) liian pienet tunnistettaviksi (pilkku merellä, suihku ei erottunut), joten kokeilussa kaksinkertaiset.</summary>
+        public const float LaivaKokoPt = 160f, ValasKokoPt = 140f;
         public const int Suihkuja = 4;
 
         static readonly Color Vaahto = new Color(0.96f, 0.94f, 0.88f, 1f);
+        /// <summary>Suihku kylmän valkoisena, jotta se erottuu vaaleasta merestä (laite 27.9.: vaahdon sävy katosi).</summary>
+        static readonly Color SuihkuVari = new Color(0.99f, 1f, 1f, 1f);
         static readonly Color ValasTumma = MalliVarit.Hex(0x39433f), ValasKylki = MalliVarit.Hex(0x4f5b56), ValasVatsa = MalliVarit.Hex(0xd6d2c2);
 
         /// <summary>Toistettava arpa 0–1 ilman allokaatiota (siemen, jakso, kanava).</summary>
@@ -1636,7 +1639,7 @@ namespace Matkakirja.Natiivi
         public static Mesh Suihku()
         {
             var r = new MalliRakenne();
-            r.Nuppi(Vector3.zero, 0.014f, Vaahto);
+            r.Nuppi(Vector3.zero, 0.018f, SuihkuVari);
             return r.Mesh("Meri: suihku");
         }
 
