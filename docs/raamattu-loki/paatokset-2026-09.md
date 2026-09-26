@@ -7595,3 +7595,7 @@ Luovutus -h: elavat elementit linssiseppa/hoyrylaiva b59c99b0 merge-pyynnossa; e
 ## KAUPUNKILEHTI-MALLI, OMISTAJAN TARKENNUS: NOSTOT-LIUSKA POIS, LEHDEN ETUSIVULLE OSIOLINKIT (26.9.2026 klo 23.16)
 
 Omistaja 23.1x: kollaasimallissa nostot-liuska (kaupungin nostojen liuska) otetaan POIS. Kaupunkilehden etusivulle alas selkeat linkit lehden osioihin, ja jokaisen linkin alla osion yksittaiset jutunotsikot + yksi kuva per osio (historia, luonto, jne.). Fable: valitetty Pelikoodarille web-malliin (kollaasi + lehden etusivun osiohakemisto) — kuvapari omistajan korttiin; Natiivi-UI seuraa webia; 70 tarinakohdetta (178) paatyvat siis kaupunkilehden osioihin liuskan sijaan.
+
+## OMISTAJA HALUAA ENSIN VEDOKSET KAUPUNGIN AVAUSKORTISTA (26.9.2026 klo 23.16)
+
+Omistaja 23.1x: ensin vedokset uudesta kaupungin avauskortista (kolme osaa paallekkain: hero + esittely + lehtilinkki, nahtavyyskartta, turisti-info). Pelikoodari tekee staattiset mockit oikealla datalla (Pariisi, Ateena; iPhone + iPad, 2–3 mittasuhdevaihtoehtoa) etusijalla; lehden osiohakemisto sen jalkeen.
