@@ -24,7 +24,7 @@ import { gunzipSync } from 'node:zlib';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { JUURI, kokoaVienti, peitaSahkopostit } from '../tools/vienti/vie-sisalto.mjs';
@@ -314,4 +314,19 @@ test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () 
   const hae = async (url) => (url in ampari ? { tila: 200, koko: ampari[url] } : { tila: 404, koko: NaN });
   const v = await tarkistaAmpari('x/', [{ polku: 'a.json', koko: 10 }, { polku: 'bä.json', koko: 6 }, { polku: 'c.json' }], { hae });
   assert.deepEqual(v, ['bä.json: koko 5 ≠ 6', 'c.json: 404']);
+});
+
+test('nimetyt lisätiedostot: lipputankoankkurit kartta/lippu_lonlat.json (löydös 161)', async () => {
+  const { tarkistaMuoto } = await import('../tools/vienti/vie-sisalto.mjs');
+  const { NIMETYT_LISATIEDOSTOT } = await import('../tools/vienti/lahteet.mjs');
+  tarkistaMuoto('iso3-lonlat', { GRC: [26.3, 41.1] }, 'koe');
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { GRC: [41.1] }, 'koe'), /lon, lat/);
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { GRC: { lon: 26, lat: 41 } }, 'koe'), /lon, lat/);
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { gr: [26, 41] }, 'koe'), /lon, lat/);
+  for (const { lahde, tiedosto } of NIMETYT_LISATIEDOSTOT) {
+    const rivi = manifest.lisatiedostot.find((t) => t.tiedosto === tiedosto);
+    if (!existsSync(join(JUURI, lahde))) { assert.equal(rivi, undefined, tiedosto); continue; }
+    assert.equal(rivi?.lahde, lahde, tiedosto);
+    assert.equal(tiedostot.get(tiedosto), readFileSync(join(JUURI, lahde), 'utf8'));
+  }
 });

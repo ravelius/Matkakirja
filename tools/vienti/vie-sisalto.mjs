@@ -34,11 +34,11 @@
  * Ei muuta peliä: lukee vain moduuleja. dist/ on .gitignoressa.
  */
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { sarjallista } from './sarjallista.mjs';
-import { LISAMODUULIT, LISATIEDOSTOT, PAKETISTA_POISTETUT } from './lahteet.mjs';
+import { LISAMODUULIT, LISATIEDOSTOT, NIMETYT_LISATIEDOSTOT, PAKETISTA_POISTETUT } from './lahteet.mjs';
 import { SIVUSTON_ASSET_ETULIITE, TARKKUUS, mediaLaji, ratkaiseMedia, sivustonTiiviste } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
 import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
@@ -225,6 +225,17 @@ function osoitteiksiPikkukuvat(puu, missa) {
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
+/** Nimetyn lisätiedoston muoto (tools/vienti/lahteet.mjs NIMETYT_LISATIEDOSTOT): virhe kaataa viennin. */
+export function tarkistaMuoto(muoto, data, lahde) {
+  if (muoto !== 'iso3-lonlat') throw new Error(`${lahde}: tuntematon muoto ${muoto}`);
+  if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${lahde}: odotettiin oliota { ISO3: [lon, lat] }`);
+  for (const [iso, p] of Object.entries(data)) {
+    const ok = /^[A-Z]{3}$/.test(iso) && Array.isArray(p) && p.length === 2
+      && Number.isFinite(p[0]) && Number.isFinite(p[1]) && Math.abs(p[0]) <= 180 && Math.abs(p[1]) <= 90;
+    if (!ok) throw new Error(`${lahde}: ${iso}: odotettiin [lon, lat] asteina`);
+  }
+}
+
 /*
  * Kehittäjämoduulit (työhuone) ovat julkisia webissäkin, mutta paketti
  * jaetaan sovelluksen mukana: henkilöiden sähköpostit peitetään.
@@ -362,6 +373,13 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     tiedostot.set(`tiedostot/${polku}`, teksti);
     return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti), tavuja: tavuja(teksti) };
   });
+  for (const { lahde, tiedosto, muoto } of NIMETYT_LISATIEDOSTOT) {
+    if (!existsSync(join(juuri, lahde))) continue;
+    const teksti = readFileSync(join(juuri, lahde), 'utf8');
+    tarkistaMuoto(muoto, JSON.parse(teksti), lahde);
+    tiedostot.set(tiedosto, teksti);
+    lisatiedostot.push({ lahde, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) });
+  }
 
   const webNakymat = kokoaWebNakymat(juuri).map(({ nimi, tiedosto, sisalto }) => {
     const teksti = JSON.stringify(sisalto) + '\n';
