@@ -100,3 +100,11 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
    datatiedostoa ja Ihmisen matka II:n kuvat vasta linssiä avattaessa (koko kaari pienenä heti, kaksi pysäkkiä täysinä).
 Mittaus: `SIMCTL_CHILD_MATKAKIRJA_HAUT=1 Peli-testit/verkko-savuke.sh …` (haara verkko-raja) → verkko-haut.jsonl; vertailu
 lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
+
+## 11. Lisäys 26.9. klo 05.0x
+- Build 19 -junassa: verkko-raja bd27ed1d, humina-muunnelmat 7d41a3df.
+- JONO 1 TEHTY (merge-pyyntö): `pelikoodari/osoitin-taustalle` b74983a6 — lämmin käynnistys käyttää tallennettua osoitinta
+  heti, tuore uusin.json taustalla; PakettiPaivitys valitsee kuten ennen. Toiminta todennettu lokista. AJOITUSVERTAILU
+  MITTAAMATTA LUOTETTAVASTI (paketti v141 julkaistiin kesken) → mittaa vakaalla paketilla: kylmä ajo, sitten 3 lämmintä
+  SAMALLA käännöksellä molemmille (LAMMIN=1 ei asenna uudelleen! ennen-käännös pitää asentaa kylmällä ajolla ensin).
+- JONO 2 (yhteinen haku Esilataajaan) ja JONO 3 (kaupunkilehdet/linssidata/II-kuvat pois käynnistyksestä) AVOINNA.
