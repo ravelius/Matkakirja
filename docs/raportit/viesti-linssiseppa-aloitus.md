@@ -37,7 +37,7 @@ Työtavat:
   KÄÄNNETTY-rivin jälkeen. Kopioi .app heti KÄÄNNETTY-rivin jälkeen.
 - **Ajoskriptit:** edellisen session scratchpadissa (polku luovutuksessa): apu.sh, ajo-esilataus-im2.sh
   (VAIHEET=1/2/3, LAITE, UDID) ja radiotesti/. Erikoismallien esikatselu ilman Unityä:
-  /Users/Shared/Claude/proto-3d/lokit/mallinseppa-esikatselu/ (kaanna.sh, msm.py/sh.py/co.py, video.py).
+  /Users/Shared/Claude/proto-3d/tyokalut/mallinseppa-esikatselu/ (kaanna.sh, msm.py/sh.py/co.py, video.py).
 - **Videot omistajalle:** rajattuna laitteen ruutuun ilman reunoja (pysty pysynä, iPad vaakana), hidastus omana tiedostonaan.
 - **Tiedostojen omistajat:** UI-tiedostot ovat Natiivi-UI:n. Pallo, kamera, laatat ja MatkakirjaRadio.mm ovat Natiivisepän
   (esikuuntelu oli sovittu poikkeus). Äänipalvelut ovat Pelikoodarin, ja hän tekee myös ILinssiYmparisto.Tehoste- ja

@@ -17,12 +17,13 @@ mcp__ccd_session_mgmt__send_message session id:llä (vastaukset tulevat silti t�
   rajapinnan `natiiviseppa/mallit-rajapinta` 0bb84d1f päällä. EI ylhaalta-175:n päällä (Natiiviseppä: ei junassa).
   - `Kartta/Erikoismallit/ErikoismalliApurit.cs`: paletti (Em*), Rakentajan lisämuodot Kerroskallio, Seina, Talo, Timantti,
     Kiekko, Rengas, Holvi, Laatta; AloitaOsa/LopetaOsa (= tyhjät osittaismetodit EmOsaAlku/EmOsaLoppu).
-  - `MontSaintMichel.cs` 1 292 kolmiota (runko 1 044): kerroskallio, metsä luoteessa, muurit ja tornit, 26 taloa kierteisellä
+  - `MontSaintMichel.cs` 1 324 kolmiota (runko 1 044): kerroskallio, metsä luoteessa, muurit ja tornit, 26 taloa kierteisellä
     kadulla, luostarikruunu, La Merveille, torni ja patsas. Osat hiekka (kartio), vesi, vaahto, patsas, valot.
   - `Stonehenge.cs` 858 (runko 568): mittakaava 1,0 = 60 m (kehä 0,55). Osat nurmi, valli, lammas1–3, aurinko, sade, kuu.
   - `Colosseum.cs` 1 420 (runko 1 060): ehjä pohjoisseinä, sortunut etelä (sisärengas 2 kerrosta), holvikaaret, katsomo 3
     kaistaa + vomitoria, hypogeum. Osat velarium0–15 (skaala harjalta), parvi, valot.
   - Rekisteröinti `static readonly bool x = Rekisteroi("avain", new Erikoismalli { … })`, osat LiikkuvaOsaMaaritys.
+    Kolmiot0-arviot ovat vanhoja (1076/900/1150) → päivitä ennen toimitusta todellisiin 1324/858/1420.
 - **Liikeydin** `Linssit/Ydin/Elava/ErikoisLiike.cs` (puhdas, testit ErikoisLiikeTestit 9, Linssit-testit 344/344): kolme
   kerrosta (perus, harvinainen ~1/10, reaktio lähellä < 60 km / tapahtuma) + yövalot (Valo 0–1, 1,5 s). Asennot osan nimellä.
 - **Ajaja** `Linssit/Unity/ErikoismalliElavat.cs`: lukee Symbolimallit.LiikkuvatOsat/LiikkuvatVersio, enintään 3 liikkeellä
@@ -39,10 +40,12 @@ mcp__ccd_session_mgmt__send_message session id:llä (vastaukset tulevat silti t�
 - **Toimitus** (rajapinta §4): lopuksi mallikohtaiset haarat `mallinseppa/<avain>` (sama ErikoismalliApurit.cs kaikissa,
   identtinen → mergeytyy) ja ajaja+ydin omaan haaraan (esim. `linssiseppa/erikoiselavat`), merge-pyyntö Natiivisepälle:
   SHA, kolmiot, kehyshinta, kuvat `proto-3d/lokit/mallinseppa-<avain>/`.
-- **Esikatselu ilman Unityä** `proto-3d/lokit/mallinseppa-esikatselu/`: `./kaanna.sh` (stub + ylhaalta-175:n Rakentaja +
-  Erikoismallit, dump verkot/), `python3 msm.py|sh.py|co.py` (kolme kulmaa kuvat/), `./kaanna.sh liike <avain> <s> <tapahtuma s>`
-  + `python3 video.py <avain> <kansio>` (10 s video liikeytimen asennoista). Vanhat MontSaintMichel-*-kuvat ovat vanhentuneita.
-  Viimeisimmät videot: scratchpad a00188e3/scratchpad/mallit/video-msm.mp4, video-sh.mp4, video-co.mp4.
+- **Esikatselu ilman Unityä** `/Users/Shared/Claude/proto-3d/tyokalut/mallinseppa-esikatselu/` (siirretty pois lokit-kansiosta,
+  jonka Fable siivoaa 48 h:n jälkeen; todennettu toimivaksi uudesta paikasta): `./kaanna.sh` (stub + ylhaalta-175:n Rakentaja
+  + worktreen Erikoismallit ja ErikoisLiike → verkot/), `python3 msm.py|sh.py|co.py` (kolme kulmaa, KUVAT-ympäristömuuttuja,
+  oletus lokit/mallinseppa-esikatselu/kuvat), `./kaanna.sh liike <avain> <s> <tapahtuma s>` + `python3 video.py <avain> <ulos>`
+  (liikeytimen asennoista, 12 fps). Viimeisimmät kuvat ja videot (12 s, tapahtuma 0,5 s):
+  lokit/mallinseppa-esikatselu/kuvat/*-kolme.png ja videot/video-msm|sh|co.mp4.
 - Speksit: docs/raportit/erikoismalli-speksi-pohja.md (kohta 0 ELÄMÄNIDEA) ja docs/raportit/erikoismallit/*.md.
 
 ## 2. Elävät elementit — hyväksytty 22.3x, merge-pyyntö lähetetty
@@ -76,4 +79,5 @@ Pohjaksi: LennonAikajana.cs, löydös 172 (KaarenPaino, NokanKulma), proto-3d/lo
 - Nostojen animaatio peruttu (omistaja 21.5x): `linssiseppa/arkkityyppi-liike` 71cf5c6d jää käyttämättä.
 - Worktreet: /Users/Shared/Claude/wt/proto-linssiseppa (linssiseppa/hoyrylaiva), /Users/Shared/Claude/wt/proto-mallinseppa
   (mallinseppa/pohja). Mergetyt haarat siivotaan hyväksynnän jälkeen.
-- Käännökset: kaanna-heti.sh (odottaa junan käännöstä ja lukkoa) scratchpadissa a00188e3/scratchpad/; ajo-*.sh samassa.
+- Käännös- ja ajomallit kopioitu /Users/Shared/Claude/proto-3d/tyokalut/linssiseppa-ajot/ (kaanna-heti.sh odottaa junan
+  käännöstä ja lukkoa; ajo-*.sh simulaattoriajot). Ne viittaavat vanhaan scratchpadiin a00188e3 → vaihda S-muuttuja.
