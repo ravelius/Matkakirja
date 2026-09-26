@@ -74,6 +74,18 @@ echo "aja 41.08 25.95 2 1.5" > komento.txt
 ```
 Lippu liehuu itään maan ulkopuolelle; lepomittaus (kehysajat.jsonl piirretty) tässä näkymässä (Fable 26.9.).
 
+## Yläpalkin piiloutuminen karttaa vieritettäessä (TF-kierros, vain laitteella; Fable 26.9. klo 14.4x)
+
+Simulaattorin touch_path ei panoroi karttaa, joten tämä tarkistetaan TestFlight-iPhonella molemmissa asennoissa
+(Ylapalkki.TarkistaVeto, löydös 73). **Vaaka**: kartalla alkanut ≥ 8 pt veto piilottaa palkin (näkyviin jää vain ☰),
+lyhyt napautus kartalla (< 6 pt, < 0,7 s) tuo sen takaisin; palkin, korttien tai nappien päällä alkanut ele ei piilota.
+**Pysty**: palkki pysyy näkyvissä vedon aikana ja sen jälkeen (odotettu, ei vika). Kirjaa kumpikin asento PASS/FAIL
++ ruutukaappaus. Simulaattorissa logiikan voi ajaa vaaka-asennossa ilman elettä:
+```
+echo "ui ylapalkki veto" > ui-komento.txt      # piiloon
+echo "ui ylapalkki napautus" > ui-komento.txt  # takaisin
+```
+
 ## Vielä auki (ei komentoa löytynyt / ei ehditty)
 
 - K (156, maakuntien selain sormivedolla): `aja`-komennolla pääsee samaan lopputulokseen kameraa
