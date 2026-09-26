@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2280, teksti: 'PRT: maakuntien pitkä-teksti (20/20)' },
   { v: 2279, teksti: 'Löydös 170: Euroopan 26 maakuntanoston kuvat (#3343)' },
   { v: 2278, teksti: 'Löydös 174b: kuvamerkit skandaaleille, eläimill… (#3342)' },
   { v: 2277, teksti: 'CHE: maakuntien pitkä-teksti (#3341)' },
