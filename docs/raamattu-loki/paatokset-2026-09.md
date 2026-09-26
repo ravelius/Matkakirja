@@ -7363,3 +7363,7 @@ Karttaseppa: generoi-laattapyramidi.mjs piirtaa kuvamerkin vain tason 1 nostolle
 ## S10 KORJAUS: DYNAAMINEN SSE 32 LIIKKEESSA + LIIKKEEN KATTO 60 HZ (26.9.2026 klo 20.42)
 
 Natiiviseppa (natiiviseppa/s10-sse f3c15204, iPad Pro 13): SSE vaihtuu ajossa ilman tilesetin uudelleenluontia; liikkeessa SSE 32 p50 13,1 / p95 25,0 ms (−7,3 ms), levossa 3 s jalkeen kuva identtinen; liikkeen katto 60 Hz: tasainen 16,7 ms ilman piikkeja. Fable: oletus 60 Hz + SSE 32 liikkeessa → 1.0.26 kun 10 min lampojakso ajettu; 120 Hz kehittajakytkimena mittaukseen.
+
+## V181 (1.50) DELTA TUOTANNOSSA: 170-KUVAT MUKANA, 174B-MERKIT VAATIVAT NATIIVIN KOODIMUUTOKSEN (26.9.2026 klo 20.45)
+
+Siirtoseppa: delta v2278+v2279 → 1.x v181 (812aa429d) ilman skeemamuutosta; Euroopan 21 nostosta 20 kuvallisia (IRL ouzel-galleyn-mysteeri puuttuu), osoitteet 200. Merkit huuto/elain/hetki ovat amparissa mutta natiivi valitsee merkin kovakoodatusta NostoSaannot.Kuvamerkit-taulusta (NostoSaannot.cs:250) → Natiivi-UI lisaa avaimet + elaintayn kytkennan 174-erassa; Siirtoseppa ajaa simulaattorikierroksen sen jalkeen ja todentaa taustapaivityksen laitteella.
