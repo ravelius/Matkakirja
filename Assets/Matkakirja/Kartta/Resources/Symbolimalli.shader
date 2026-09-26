@@ -7,8 +7,8 @@
 //     kärkivärit ovat lineaarisia; muuten tumma muste #4b3a1c luettaisiin harmaaksi ja haalistuisi).
 //  2. Valo 0,55 + 0,45 · N·L ja ylöspäin olevat tahkot hieman kirkkaampia (0,85–1,06 mallin +Y:n mukaan).
 //  3. Ohut kaiverrusreuna: syrjittäiset tahkot musteeksi (smoothstep 0,65–0,92, enintään 0,7).
-//  4. Löytämätön (_Himmea 1 tai _Tila.x): seepia 0,8 (aksenttiväri kokonaan), 15 % pergamenttia, peitto 0,9; valoisuus
-//     enintään löydetyn (ei koskaan löydettyä kirkkaampi).
+//  4. Löytämätön näyttää samalta kuin löydetty (Fable 26.9., löydös 175; web ei himmennä). _Himmea ja _Tila.x ovat
+//     rajapinnassa, mutta eivät vaikuta väriin.
 //  5. Maakontakti: _Pohja 1 = mallin alla pehmeä varjolevy (kärkiväri sellaisenaan, ei valoa, reunaa eikä seepiaa, usva
 //     kyllä). Levyn materiaali: _ZTest Always, _ZWrite Off ja pienempi renderQueue kuin mallilla.
 //
@@ -114,14 +114,9 @@ Shader "Matkakirja/Symbolimalli"
                 c *= 0.55 + 0.45 * nl;
                 c *= lerp(0.85, 1.06, saturate(dot(n, normalize(i.ylos))));
 
-                // 4. Löytämätön (taso 1 _Himmea, tasot 2–3 tila.x): seepia 0,8 (saturoitu aksentti kokonaan seepiaksi), 15 %
-                // pergamenttia; valoisuus enintään löydetyn, joten löytämätön ei ole koskaan löydettyä kirkkaampi.
-                half muste = max((half)_Himmea, (half)tila.x);
-                half lLoydetty = dot(c, luma);
-                half seepia = lerp(0.8, 1.0, smoothstep(0.22, 0.32, sat));
-                c = lerp(c, dot(c, luma) * half3(1.02, 0.93, 0.76), seepia * muste);
-                c = lerp(c, _Paperi.rgb, 0.15 * muste);
-                c *= min(1.0, lLoydetty / max(dot(c, luma), 1e-4));
+                // 4. Löytämätön näyttää samalta kuin löydetty (Fable 26.9. löydös 175: web ei himmennä, omistajan päätös
+                // 21.9.; himmennys oli osasyy harmauteen). _Himmea ja tila.x (muste) jäävät rajapintaan, mutta eivät vaikuta.
+                const half muste = 0;
 
                 // 3. Ohut kaiverrusreuna: tahko lähes syrjittäin kameraan tummuu musteeksi (siluetti).
                 half reuna = smoothstep(0.65, 0.92, 1.0 - abs(dot(n, normalize(i.kohti))));
