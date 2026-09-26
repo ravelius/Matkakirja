@@ -72,6 +72,11 @@ namespace Matkakirja.Natiivi
         /// (MaakunnatSilta saa avaimen "ISO:kaikki"). Ei tallennu (tallennettu valinta poistetaan).
         /// </summary>
         public const string KaikkiTunnus = ":kaikki";
+        const string ValinnatLuokka = "mk-maakunnat__valinnat";
+
+        /// <summary>Rivin maaryhmän rivisäiliö (Kaikki/Pois ovat yhden tason syvemmällä valintarivissä).</summary>
+        static VisualElement Ryhmassa(VisualElement rivi) =>
+            rivi.parent != null && rivi.parent.ClassListContains(ValinnatLuokka) ? rivi.parent.parent : rivi.parent;
         public static bool OnKaikki(string avain) => avain != null && avain.EndsWith(KaikkiTunnus, StringComparison.Ordinal);
 
         sealed class Maa { public string Iso, Nimi; public List<(string Tunnus, string Nimi)> Alueet = new List<(string, string)>(); }
@@ -247,20 +252,23 @@ namespace Matkakirja.Natiivi
                 KytkeVeto(ryhmanRivit);
                 if (m.Alueet.Count > 0)
                 {
-                    string poisAvain = iso + PoisTunnus;
-                    var poisRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(poisAvain), ryhmanRivit);
-                    Kirjasimet.Aseta(Rakenne.Teksti("Pois", "mk-maakunnat__nimi", poisRivi), Kirjasin.Luku);
-                    poisRivi.tooltip = "Maakunnat pois kartalta";
-                    poisRivi.pickingMode = PickingMode.Ignore;
-                    poisRivi.userData = poisAvain;
-                    rivit[poisAvain] = poisRivi;
+                    // Löydös 173: Kaikki ja Pois samalla ylimmällä rivillä (Kaikki vasemmalla); veto valitsee puoliskon x:n mukaan.
+                    var valinnat = Rakenne.El(ValinnatLuokka, ryhmanRivit, PickingMode.Ignore);
+                    valinnat.userData = ValinnatLuokka;
                     string kaikkiAvain = iso + KaikkiTunnus;
-                    var kaikkiRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(kaikkiAvain), ryhmanRivit);
+                    var kaikkiRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois mk-maakunnat__rivi--kaikki", () => Valitse(kaikkiAvain), valinnat);
                     Kirjasimet.Aseta(Rakenne.Teksti("Kaikki", "mk-maakunnat__nimi", kaikkiRivi), Kirjasin.Luku);
                     kaikkiRivi.tooltip = "Koko maa, ei rajausta";
                     kaikkiRivi.pickingMode = PickingMode.Ignore;
                     kaikkiRivi.userData = kaikkiAvain;
                     rivit[kaikkiAvain] = kaikkiRivi;
+                    string poisAvain = iso + PoisTunnus;
+                    var poisRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(poisAvain), valinnat);
+                    Kirjasimet.Aseta(Rakenne.Teksti("Pois", "mk-maakunnat__nimi", poisRivi), Kirjasin.Luku);
+                    poisRivi.tooltip = "Maakunnat pois kartalta";
+                    poisRivi.pickingMode = PickingMode.Ignore;
+                    poisRivi.userData = poisAvain;
+                    rivit[poisAvain] = poisRivi;
                 }
                 foreach (var a in m.Alueet)
                 {
@@ -297,13 +305,13 @@ namespace Matkakirja.Natiivi
                 vedettava = rivit;
                 rivit.CapturePointer(e.pointerId);
                 AsetaVeto(true);
-                ValitseKohdasta(rivit, e.localPosition.y);
+                ValitseKohdasta(rivit, e.localPosition);
                 e.StopPropagation();
             });
             rivit.RegisterCallback<PointerMoveEvent>(e =>
             {
                 if (vedettava != rivit) return;
-                ValitseKohdasta(rivit, e.localPosition.y);
+                ValitseKohdasta(rivit, e.localPosition);
                 e.StopPropagation();
             });
             rivit.RegisterCallback<PointerUpEvent>(e => { if (rivit.HasPointerCapture(e.pointerId)) rivit.ReleasePointer(e.pointerId); LopetaVeto(); });
@@ -326,8 +334,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Rivi sormen korkeudella (säiliön koordinaatit); vedettäessä rivien ohi reunimmainen rivi.</summary>
-        void ValitseKohdasta(VisualElement rivit, float y)
+        void ValitseKohdasta(VisualElement rivit, Vector2 p)
         {
+            float y = p.y;
             VisualElement osuma = null;
             foreach (var r in rivit.Children())
             {
@@ -338,7 +347,15 @@ namespace Matkakirja.Natiivi
                 osuma = r;
                 if (y < l.yMax) break;
             }
-            if (osuma != null) Valitse((string)osuma.userData);
+            // Löydös 173: Kaikki/Pois-rivillä puolisko x:n mukaan.
+            if (osuma != null && osuma.ClassListContains(ValinnatLuokka))
+            {
+                VisualElement puoli = null;
+                float x = p.x - osuma.layout.x;
+                foreach (var c in osuma.Children()) { puoli = c; if (x < c.layout.xMax) break; }
+                osuma = puoli;
+            }
+            if (osuma?.userData is string avain) Valitse(avain);
         }
 
         /// <summary>Pois-tilassa jokaisen maan Pois-rivi näkyy valittuna (tila on maasta riippumaton).</summary>
@@ -454,10 +471,10 @@ namespace Matkakirja.Natiivi
         void SiirraPeukalo()
         {
             string kohde = ValittuAvain;
-            if (kohde == null && Pois) kohde = rivit.Keys.FirstOrDefault(k => OnPois(k) && rivit[k].parent.resolvedStyle.display != DisplayStyle.None);
+            if (kohde == null && Pois) kohde = rivit.Keys.FirstOrDefault(k => OnPois(k) && Ryhmassa(rivit[k]).resolvedStyle.display != DisplayStyle.None);
             // Löydös 169: ei valintaa eikä Pois → peukalo Kaikki-rivillä.
-            else if (kohde == null) kohde = rivit.Keys.FirstOrDefault(k => OnKaikki(k) && rivit[k].parent.resolvedStyle.display != DisplayStyle.None);
-            if (kohde == null || !rivit.TryGetValue(kohde, out var r) || r.parent.resolvedStyle.display == DisplayStyle.None
+            else if (kohde == null) kohde = rivit.Keys.FirstOrDefault(k => OnKaikki(k) && Ryhmassa(rivit[k]).resolvedStyle.display != DisplayStyle.None);
+            if (kohde == null || !rivit.TryGetValue(kohde, out var r) || Ryhmassa(r).resolvedStyle.display == DisplayStyle.None
                 || float.IsNaN(r.layout.height))
             {
                 peukalo.style.display = DisplayStyle.None;
