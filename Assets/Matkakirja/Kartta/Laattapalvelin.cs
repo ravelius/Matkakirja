@@ -382,6 +382,7 @@ namespace Matkakirja
 
         void Awake()
         {
+            PyyntoLoki.Alusta();
             if (varakuva == null)
             {
                 var t = new Texture2D(256, 256, TextureFormat.RGB24, false);
@@ -605,6 +606,7 @@ namespace Matkakirja
         async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null, Func<bool> pyydetty = null)
         {
             var lahde = new Lahde();
+            long alkuT = System.Diagnostics.Stopwatch.GetTimestamp();
             // Valmiusdiagnostiikka: HTTP-pyynnöt (Cesium ja omat haut, ei esilatausta) luokittain kesken / valmiit / verkosta.
             var luokka = esilataus == null ? Luokat.GetOrAdd(Luokka(polku), _ => new int[4]) : null;
             if (luokka != null) Interlocked.Increment(ref luokka[0]);
@@ -613,6 +615,9 @@ namespace Matkakirja
                 var tulos = await HaeSisalto(polku, esilataus, lahde, pyydetty);
                 if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
                     SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
+                if (esilataus == null && PyyntoLoki.Paalla)
+                    PyyntoLoki.Kirjaa(Luokka(polku), polku, lahde.Nimi, tulos.Item1,
+                        (System.Diagnostics.Stopwatch.GetTimestamp() - alkuT) * 1000.0 / System.Diagnostics.Stopwatch.Frequency);
                 return tulos;
             }
             finally

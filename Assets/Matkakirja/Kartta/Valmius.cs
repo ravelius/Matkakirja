@@ -131,6 +131,7 @@ namespace Matkakirja
         /// <summary>Verho alkaa: seuranta käyntiin, jos kehittäjälippu on päällä.</summary>
         public static void VerhoAlku(string nimi)
         {
+            PyyntoLoki.Merkki("verho " + nimi + " alkaa");
             float s = AutoS;
             if (s > 0f) Seuraa(nimi, s);
         }
@@ -144,6 +145,7 @@ namespace Matkakirja
         {
             Debug.Log($"MATKAKIRJA valmius: verho {nimi} lähti {syy} {ms:0} ms aste {(aste < 0 ? "-" : aste.ToString("0.0"))} % " +
                       $"kevennys {KevennysTila()}" + (string.IsNullOrEmpty(lisa) ? "" : " | " + lisa));
+            PyyntoLoki.Merkki($"verho {nimi} lähti {syy} {ms:0} ms aste {aste:0.0}");
             if (instanssi == null) return;
             foreach (var x in instanssi.seurannat)
                 if (x.Nimi == nimi) x.VerhoLahti = Time.realtimeSinceStartup - x.Alku;
