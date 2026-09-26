@@ -288,3 +288,17 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
 - **Worktree:** wt/proto-linssiseppa on haarassa linssiseppa/elementit-3d. Samassa proto-reposssa ovat haarat
   fonttilammitys ja karuselli (mergetty).
 - **Seuraavaksi:** omistajan pelikokeilu (1.0.23/1.0.24) → Pariisin ilmapallo sääntöjen 7–8 mukaan, aito 3D.
+
+## Päivitys klo 17.5x (käännöstauko 19.00 asti, Fable)
+
+- **ISS-linssin ydin** on valmis haarassa linssiseppa/iss-sgp4 1d2c0872 (wt/proto-linssiseppa, junan fe86446e päällä,
+  ei vielä merge-pyynnössä, ei .metoja ennen Unity-käännöstä).
+  - Linssit/Ydin/Iss/Sgp4.cs: Tle (jäsennys, tarkiste), Aika (JD, GMST), Rata (SGP4 lähiradoille, Sijainti(min),
+    Alapiste(jd), Maahan).
+  - Linssit/Ydin/Iss/Aurinko.cs: auringon suunta, alihajapiste ja varjo.
+  - Testit Linssit-testit/Testit/IssTestit.cs (6): Vallado-vektori 00005 alle 1 m:n tarkkuudella, ISS 2008 -korkeus,
+    seisaukset ja tasaus, varjo 20–45 % kierroksesta, GMST J2000.
+- TLE-Actions on tilattu Siirtosepältä: ämpäri data/iss-tle.json 6 h:n välein ja StreamingAssets/mukana/iss-tle.json.
+- **Seuraava vaihe (käännöstauon jälkeen, erissä):** Unity-puoli IssLinssi (kaukonäkymä: pallo topografiana, ISS-merkki,
+  rata kynänjälkenä, menneen kierroksen häivytys ja seuraava katkoviivana) → kuvapari. Sen jälkeen Natiivisepältä
+  terminaattori ja yövalot.
