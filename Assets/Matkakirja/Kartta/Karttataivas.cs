@@ -7,7 +7,7 @@ namespace Matkakirja
     /// ylöspäin (pergamentti usvan rajalla → utuinen vaaleansininen ruudun yläreunassa). Kokoruudun liukuväri
     /// (Resources/Karttataivas.shader) kameran lapsena; raja ja voima Horisonttiusva.RuutuRajaY/RuutuVoima (Aurinko
     /// kirjoittaa joka kehys, löydös 153), joten lento, linssin oma tausta ja kallistamaton kartta ohittavat sen.
-    /// Oletus <see cref="Savy"/> = null (pois) kunnes omistaja valitsee sävyn kuvaparista; komento
+    /// Oletus <see cref="Savy"/> = utu (omistajan valinta 26.9.2026 kuvasarjasta lokit/taivas-154/); komento
     /// "taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]" (Komennot.cs).
     /// Lepopiirto: materiaali päivitetään vain arvon muuttuessa (kamera liikkuu → kehys piirretään joka tapauksessa).
     /// </summary>
@@ -19,15 +19,15 @@ namespace Matkakirja
         public static readonly Color Vaalea = new Color(0.71f, 0.81f, 0.90f);
         public static readonly Color Sini = new Color(0.58f, 0.72f, 0.88f);
 
-        /// <summary>Taivaan sävy; null = pois (build 19:n kerma).</summary>
-        public static Color? Savy;
+        /// <summary>Taivaan sävy (omistaja valitsi utun 26.9.2026 klo 09.3x); null = pois (build 19:n kerma).</summary>
+        public static Color? Savy = Utu;
         /// <summary>Peitto ruudun yläreunassa (0–1).</summary>
         public static float Voima = 0.85f;
         /// <summary>Liukuvärin käyrä: &lt; 1 sinertää nopeasti rajan yllä, &gt; 1 vasta ylhäällä.</summary>
         public static float Kaari = 0.8f;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Savy = null; Voima = 0.85f; Kaari = 0.8f; }
+        static void Nollaa() { Savy = Utu; Voima = 0.85f; Kaari = 0.8f; }
 
         static readonly int VariId = Shader.PropertyToID("_Vari"), RajaId = Shader.PropertyToID("_Raja"),
             VoimaId = Shader.PropertyToID("_Voima"), KaariId = Shader.PropertyToID("_Kaari");
