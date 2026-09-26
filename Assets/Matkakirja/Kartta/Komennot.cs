@@ -85,7 +85,7 @@ namespace Matkakirja
     ///                             web = build 16:n korostus) ja koko rengas rannikkoineen vertailuun (oletus pois =
     ///                             vain Karttasepän maa–maa-rajat)
     ///   vari sarja p080|p060|p045|oletus|<versio>   kermahunnun sarja (löydös 128, Varitaso.Versio; peitto on poltettu
-    ///                             sarjaan, oletus 2026-09-25-p080); vari <ISO3>|pelaaja|pois|paalle|alin <z> kuten ennen
+    ///                             sarjaan, oletus 2026-09-26-p060, omistaja 26.9.); vari <ISO3>|pelaaja|pois|paalle|alin <z> kuten ennen
     ///   rajat pois|paalle|tila | rajat taso <0–4>|auto | rajat peitto <a>|oletus   valtioiden rajat vektorina (Rajat, E2)
     ///   vektorit versio <nimi>|web|oletus   rannikko- ja rajasarjan versio (oletus 2026-09-25-gshhs-korkeus, web =
     ///                             2026-09-21-gshhs ilman korkeuksia); luettelo ja solut ladataan uudelleen
