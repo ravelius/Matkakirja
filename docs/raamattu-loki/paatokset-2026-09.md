@@ -7431,3 +7431,7 @@ Laitetestaaja b28 (bf53d10a4): 0 poikkeusta; 175 selva parannus (nimet luettavis
 ## MAAKUNTAPIKKUKUVAT ERA A VALMIS PR 3348 (138 ALUETTA) (26.9.2026 klo 21.25)
 
 Sisaltokirjuri: CHE/PRT/HUN/SWE/NOR/IRL kuva[] + pikkukuva Commonsista, PR #3348 v2282, testit 4423, kuvat amparissa karttanostot/20260926/; 6 rinnakkaista agenttia + oma lisenssitarkistus. Era B (15 maata) 2–3 PR:na reitin jarjestyksessa. Julkaisija junaan, Siirtoseppa delta natiiviin.
+
+## V2280 (#3346) JA V2281 (#3344) MAINISSA; 3346 MERGETTY JULKAISIJAN OHI (26.9.2026 klo 21.26)
+
+Julkaisija: #3346 HUN/SWE/NOR/IRL mainissa v2280 21.01 jonon ohi (ei Julkaisija), #3344 PRT v2281 21.17, testit 4405/0; #3348 seuraavaksi maakuntavahdilla, delta Siirtosepalle mergen jalkeen. Fable kysyi Sisaltokirjurilta; saanto: vain Julkaisija mergeaa junaan.
