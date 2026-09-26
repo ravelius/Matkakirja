@@ -958,8 +958,15 @@
     align-items: center;
 }
 
-.mk-kytkinrivi__valinta {
+.mk-kytkinrivi--valinta > .mk-kytkinrivi__nimi {
     flex-shrink: 0;
+}
+
+.mk-kytkinrivi__valinta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 150px;
     margin: 0 0 0 8px;
 }
 
