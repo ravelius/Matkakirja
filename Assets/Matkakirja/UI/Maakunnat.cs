@@ -47,7 +47,7 @@ namespace Matkakirja.Natiivi
         static bool OnPois(string avain) => avain != null && avain.EndsWith(PoisTunnus, StringComparison.Ordinal);
 
         sealed class Maa { public string Iso, Nimi; public List<(string Tunnus, string Nimi)> Alueet = new List<(string, string)>(); }
-        sealed class Luonnehdinta { public string Lyhyt, Pitka; public List<Dictionary<string, object>> Kuvat = new List<Dictionary<string, object>>(); }
+        sealed class Luonnehdinta { public string Lyhyt, Pitka, Pikkukuva; public List<Dictionary<string, object>> Kuvat = new List<Dictionary<string, object>>(); }
 
         readonly UiKerros kerros;
         readonly VisualElement juuri, lista, kuvaus, peukalo;
@@ -178,7 +178,8 @@ namespace Matkakirja.Natiivi
             var (iso, tunnus) = Jaa(avain);
             var o = Ob(MiniJson.Kentta(Ob(MiniJson.Kentta(luonnehdinnat, iso ?? "")), tunnus ?? ""));
             if (o == null) return null;
-            var l = new Luonnehdinta { Lyhyt = MiniJson.Teksti(o, "lyhyt"), Pitka = MiniJson.Teksti(o, "pitka") };
+            // Löydös 158 (Fablen datasopimus 26.9.): oma pikkukuva kentässä pikkukuva (ämpäriosoite).
+            var l = new Luonnehdinta { Lyhyt = MiniJson.Teksti(o, "lyhyt"), Pitka = MiniJson.Teksti(o, "pitka"), Pikkukuva = MiniJson.Teksti(o, "pikkukuva") };
             // Kuva voi olla yksi olio tai lista (web maakunnanKuvat).
             var k = MiniJson.Kentta(o, "kuva");
             if (Ob(k) is Dictionary<string, object> yksi) l.Kuvat.Add(yksi);
@@ -373,7 +374,9 @@ namespace Matkakirja.Natiivi
             var rivi = Rakenne.El("mk-maakunnat__lrivi", kuvaus, PickingMode.Ignore);
             // Löydös 115 (omistaja, build 14): pieni kuva maakunnasta tekstin vasemmalle, kun datassa on kuva (nyt kortin
             // ensimmäinen kuva; Sisältökirjuri voi tilata omat pikkukuvat samaan kenttään). Ilman kuvaa ruutu ennallaan.
-            string pikku = data != null && data.Kuvat.Count > 0 ? MiniJson.Teksti(data.Kuvat[0], "pikku") ?? MiniJson.Teksti(data.Kuvat[0], "osoite") : null;
+            // Löydös 158: oma pikkukuva ensin, varana kortin ensimmäinen kuva.
+            string pikku = data == null ? null : !string.IsNullOrEmpty(data.Pikkukuva) ? data.Pikkukuva
+                : data.Kuvat.Count > 0 ? MiniJson.Teksti(data.Kuvat[0], "pikku") ?? MiniJson.Teksti(data.Kuvat[0], "osoite") : null;
             if (!string.IsNullOrEmpty(pikku))
             {
                 var kuva = Rakenne.El("mk-maakunnat__lkuva", rivi);
