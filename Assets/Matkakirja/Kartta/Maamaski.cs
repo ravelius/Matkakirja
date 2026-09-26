@@ -76,23 +76,23 @@ namespace Matkakirja
         public static Lahde Jasenna(string s)
         {
             var l = new Lahde();
-            int i = 0;
-            while (true)
+            // Featuret järjestyksessä: "Feature"-merkkijono (ei FeatureCollection), jonka alueelta osa ja coordinates.
+            const string F = "\"Feature\"";
+            int alku = s.IndexOf(F, StringComparison.Ordinal);
+            while (alku >= 0)
             {
-                int f = s.IndexOf("\"osa\"", i, StringComparison.Ordinal);
-                int c = s.IndexOf("\"coordinates\"", i, StringComparison.Ordinal);
-                if (c < 0) break;
+                int loppu = s.IndexOf(F, alku + F.Length, StringComparison.Ordinal);
+                int raja = loppu < 0 ? s.Length : loppu;
                 bool jarvi = false;
-                // Osa ennen koordinaatteja tai heti niiden jälkeen samassa featuressa.
-                int seuraavaC = s.IndexOf("\"coordinates\"", c + 13, StringComparison.Ordinal);
-                if (f >= 0 && (seuraavaC < 0 || f < seuraavaC))
+                int f = s.IndexOf("\"osa\"", alku, raja - alku, StringComparison.Ordinal);
+                if (f >= 0)
                 {
                     int lainaus = s.IndexOf('"', s.IndexOf(':', f + 5) + 1);
                     jarvi = string.CompareOrdinal(s, lainaus + 1, "jarv", 0, 4) == 0;
                 }
-                int k = s.IndexOf('[', c);
-                i = Renkaat(s, k, jarvi ? l.Jarvet : l.Maa);
-                if (f >= 0 && f > c && (seuraavaC < 0 || f < seuraavaC)) i = Math.Max(i, f + 5);
+                int c = s.IndexOf("\"coordinates\"", alku, raja - alku, StringComparison.Ordinal);
+                if (c >= 0) Renkaat(s, s.IndexOf('[', c), jarvi ? l.Jarvet : l.Maa);
+                alku = loppu;
             }
             return l;
         }
