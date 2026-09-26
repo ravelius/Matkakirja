@@ -116,3 +116,7 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   (MinikuvakkeenKoko 1,5 → ~14 pt, web 12–16 px); puuttuva kuva → minimerkki. Kaupunkimerkit (laji kaupunki) jäävät pisteiksi kuten
   webissä. Käännetty 24b9ee3b, ei poikkeuksia; kuvapari proto-3d/lokit/natiivi-ui-loydos174/kuvapari-174-web-malli.png.
   Merge-pyyntö LÄHETTÄMÄTTÄ (viestiraja). Siirtosepälle rivi kun junassa.
+- 21.1x 170 (Fablen juurisyy: kuvat vasta uudelleenkäynnistyksessä): ESTE — PakettiPaivitys.cs (Siirtoseppä, omistaja hyväksyi 25.9.)
+  ottaa uuden sisältöversion käyttöön VAIN seuraavassa käynnistyksessä; "sisältö vaihtui" -tapahtumaa ei ole. Latausta kesken istunnon
+  ei voi tehdä UI:ssa ennen kuin Siirtoseppä lisää version vaihdon kesken istunnon + tapahtuman (suunnittelupäätös Fablelle/omistajalle).
+  UI-puoli sen jälkeen: MaakuntaTiedot/Maakunnat luonnehdinnat, NostoSisalto-kokoelmat ja Kuvat-välimuisti tyhjiksi tapahtumasta.
