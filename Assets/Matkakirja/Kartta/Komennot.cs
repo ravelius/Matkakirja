@@ -77,7 +77,7 @@ namespace Matkakirja
     ///   maasto sse <arvo>         tilesetin maximumScreenSpaceError (oletus 16; luo tilesetin uudelleen; löydös 46)
     ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
-    ///   symbolit tila|pois|paalle|koko <pt>   tason 1 nostojen 3D-mallit (Symbolimallit, löydös 160)
+    ///   symbolit tila|pois|paalle|loydetty|himmea|koko <pt>   tason 1 nostojen 3D-mallit (Symbolimallit, löydös 160)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
@@ -696,6 +696,7 @@ namespace Matkakirja
                     // symbolit tila|pois|paalle|koko <pt> (löydös 160, 3D-symbolinostot)
                     string m = o.Length > 1 ? o[1] : "tila";
                     if (m == "pois" || m == "paalle") Symbolimallit.Paalla = m == "paalle";
+                    else if (m == "loydetty" || m == "himmea") Symbolimallit.PakotaLoydetty = m == "loydetty";
                     else if (m == "koko" && o.Length > 2) Symbolimallit.KokoPt = float.Parse(o[2], CultureInfo.InvariantCulture);
                     PallonLepo.Muuttui("symbolit");
                     Debug.Log("MATKAKIRJA symbolit " + m + ": " + Symbolimallit.Tila());

@@ -1,7 +1,7 @@
 // Symbolimalli (Kartta/Symbolimallit.cs, omistajan löydös 160, build 21 -prototyyppi): tason 1 nostojen low-poly 3D-mallit.
 // Yksi materiaali, värit kärkiväreinä (Sisältökirjurin vari2-paletti), ei tekstuureja. Tasavarjostus (normaalit tahkoittain
 // verkossa) pehmeällä pääsuuntavalolla, hillitty: 0,74 + 0,26 · N·L. Löytämätön (_Himmea 1): väri kohti pergamenttia ja
-// hieman läpikuultava kuten elävän kartan musteen jälki. Horisonttiusva (Shaders/Horisonttiusva.hlsl, 153/159).
+// hieman läpikuultava kuten elävän kartan musteen jälki (35 % pergamenttia, peitto 0,88; 1. koe 60 %/0,7 liian haalea). Horisonttiusva (Shaders/Horisonttiusva.hlsl, 153/159).
 Shader "Matkakirja/Symbolimalli"
 {
     Properties
@@ -50,8 +50,8 @@ Shader "Matkakirja/Symbolimalli"
             {
                 half nl = saturate(dot(normalize(i.n), GetMainLight().direction));
                 half3 c = i.vari.rgb * (0.74 + 0.26 * nl);
-                c = lerp(c, _Paperi.rgb * (0.86 + 0.14 * nl), _Himmea * 0.6);
-                half a = lerp(1.0, 0.7, _Himmea) * UsvaNakyvyys(i.usvaY);
+                c = lerp(c, _Paperi.rgb * (0.86 + 0.14 * nl), _Himmea * 0.35);
+                half a = lerp(1.0, 0.88, _Himmea) * UsvaNakyvyys(i.usvaY);
                 return half4(c, a);
             }
             ENDHLSL

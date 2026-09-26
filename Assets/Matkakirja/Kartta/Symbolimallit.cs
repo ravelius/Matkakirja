@@ -23,11 +23,13 @@ namespace Matkakirja
     public sealed class Symbolimallit : MonoBehaviour
     {
         /// <summary>Mallin leveys ruudulla (pt), liioiteltu (omistaja).</summary>
-        public static float KokoPt = 64f;
+        public static float KokoPt = 90f;
         public static bool Paalla = true;
+        /// <summary>Esikatselu (komento `symbolit loydetty|himmea`): kaikki löydettyinä.</summary>
+        public static bool PakotaLoydetty;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KokoPt = 64f; Paalla = true; instanssi = null; verkot.Clear(); }
+        static void Nollaa() { KokoPt = 90f; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -157,7 +159,7 @@ namespace Matkakirja
             float koko = piste * KokoPt / Mathf.Max(1e-9f, gt.lossyScale.x);
             var sk = Vector3.one * koko;
             if ((k.t.localScale - sk).sqrMagnitude > 1e-6f * koko * koko) k.t.localScale = sk;
-            float h = s.Loydetty ? 0f : 1f;
+            float h = s.Loydetty || PakotaLoydetty ? 0f : 1f;
             if (h != k.himmea)
             {
                 lohko.SetFloat(HimmeaId, h);
