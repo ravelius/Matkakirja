@@ -179,3 +179,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - natiiviseppa/tilannekuva-build **03860cc4**: Editor/TilannekuvaRakennus.cs (tilannekuva.mjs:n muoto C#:na, ei Nodea) + Rakennus-kutsut
   (Varmista ennen vientiä, KopioiBuildiin PostProcessBuild 185). Käännöspalvelussa 06.2x → tarkista Build/tilannekuva/ (5 tiedostoa)
   ja .app/Data/Raw/sisalto/tilannekuva/, vertaa node tools/vienti/tilannekuva.mjs --ulos <tmp> -tulokseen → junaan.
+- juna/b13 **0249a248**: + natiiviseppa/tilannekuva-build 03860cc4 (**KOHTA 1 OSA 3 VALMIS**: käännös d7927c6c tuotti v145-tilannekuvan 1,9 Mt, tavu tavulta sama kuin tilannekuva.mjs; .app/Data/Raw/sisalto/tilannekuva/). Kohta 1 kokonaan junassa.
