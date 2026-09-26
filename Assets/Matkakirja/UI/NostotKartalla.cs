@@ -3,14 +3,15 @@
 // (RAJAPINTA.md luku 3c). Kartta päättää, mitkä nostot näkyvät ja missä (Naytettavat, Ruutu);
 // tämä piirtää merkin, nimiön ja syttymisen ja avaa kortin napautuksesta.
 //
-//   ● Thessaloniki        kaupungit ja hetket: piste r 3,4 aihevärillä ja musterengas
-//   ✦ Olympos            ihmeet, skandaalit, eläimet: kynäsymboli (NostoMerkit) aihevärillä
-//   [kuva] Delfoi         historia, luonto, kulttuuri, kauppa: tyyppimerkki (merkki-*.png)
+//   ● Thessaloniki        pisteperheet (kaupungit, historia, kulttuuri, kauppa, hetket): harmaa hehkupiste ja musterengas
+//   ∧ Ólympos  ≈ Strymónas   viivamerkit (NostoSaannot.MiniTunnus): luonto vuori-kolmio tai aalto lajin mukaan,
+//                        eläimet tassu, skandaalit salama, ihmeet ruusu — musteella, ei aiheväriä
+//   [kuva] Delfoi         tyyppimerkki (merkki-*.png) tasolla 1 tai kertoimesta 4 (NostoSaannot.Kuvamerkki: laji ensin)
 //
 // LÖYDÖS 50 (25.9.2026, web-nostot-kartalla-mitat.txt): mitta = min(katto / 11, 0,7727 × zoomikerroin × oma),
 // oma 1,353 kaupungeilla ja 1,3 tasolla 1; katto 16 px, kertoimesta 2 kertoimeen 4 log2-lineaarisesti 22 px:iin.
-// Merkki: kuvamerkki vain tasolla 1 (1,6-kertainen ruutu) tai kertoimesta 4; muuten pisteperheet harmaana kiekkona
-// (#6f6a61, r 3,4) ja muut vektorina musteella. Nimiö Liberation Serif kursiivi 11 × mitta, ilman haloa, lyhennys
+// Merkki: kuvamerkki vain tasolla 1 (1,6-kertainen ruutu) tai kertoimesta 4; muuten pisteperheet harmaana
+// hehkupisteenä ja muut viivamerkkinä musteella. Nimiö Liberation Serif kursiivi 11 × mitta, ilman haloa, lyhennys
 // 18 merkkiin kokonaisin sanoin (web nostosymLyhennaNimio). Paikka webin 8 asennosta (nostosymNimioAsemointi),
 // väistö levossa (web sovittelu.js): kaupunki > taso 1 > taso 2 > taso 3, lyhyt nimi ensin; ei vapaata → nimiö
 // häipyy ja merkki jää. Ryhmitys vain koelipulla (web ?aihemerkit=1, ui aihemerkit on).
@@ -28,6 +29,16 @@
 // Napautus avaa viuhkan: pystylista merkin tyhjemmälle kyljelle (26 px sivuun, rivit 30 px välein) kehyksettömällä
 // paperipohjalla (#efdcb4, peitto 0,82); rivin napautus avaa noston kortin. Lista sulkeutuu kartan
 // napautuksesta, zoomista ja panoroinnista (merkin piste liikkuu) sekä toisen viuhkan avauksesta.
+//
+// LÖYDÖS 125 (omistaja build 16: "Ateenan karttanostoista puuttuu symboleita, ja niiden teksteistä ei saa selvää";
+// web mitattu proto-3d/lokit/nostot-125, Natiivisepän patch): 1) luonnon viivamerkit (vuori, aalto) puuttuivat —
+// luonto piirtyi harmaana pisteenä; merkin valitsee nyt NostoSaannot.MiniTunnus kategoriasta ja lajista (laji =
+// kohteen tyyppi, datassa kun vienti tuo sen), kuvamerkin NostoSaannot.Kuvamerkki ja kaupunkikoon
+// NostoKerros.Nosto.Kaupunkimerkki. 2) Hehkupiste: harmaa häive 2,1 r ja vaalea sisus (NostoHehku) musterenkaan alla.
+// 3) Kontrasti: UI Toolkit sekoittaa SDF-reunan lineaarisesti, jolloin 4,4–8,5 px:n kursiivi jäi webiä vaaleammaksi ja
+// ohuemmaksi; musteen peitot korjataan (NimiLadonta.LineaarinenAlfa, webin 0,92 → 0,97) ja reunaa vahvistetaan
+// samalla musteella (NostoKerros.NimionReunaPeitto / NimionPohjaPeitto, mitattu kuvaparista). Meren nimiö on webin
+// harvennettu versaali (rgba(120, 108, 84, 0,72), 0,28 em). Sykähdys ±7 % / 2,4 s Joutosykkeen tahdissa (Syke).
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -71,6 +82,34 @@ namespace Matkakirja.Natiivi
             public string Kylki;
             public bool NimioNakyy = true;
             public Vector2 NimioKoko;
+            /// <summary>Löydös 125: nimiön asu viimeksi asetettuna (muste, reuna, pohja, harvennus px), jottei tyyli likaannu turhaan.</summary>
+            public Color Muste;
+            public float Reuna = -1f, ReunaLeveys = -1f, Pohja = -1f, Harvennus;
+        }
+
+        // Löydös 125: nimiön musteet (css/styles.css .nostosym-nimio, NOSTOSYM_TASO1_MUSTE, .nostosym-nimio-meri) peitot
+        // lineaariseen sekoitukseen korjattuina (NimiLadonta.LineaarinenAlfa: webin sRGB-sekoitus pergamentilla / merellä).
+        static Color Vari(double[] c, double a, double[] pohja) =>
+            new Color((float)c[0], (float)c[1], (float)c[2], (float)NimiLadonta.LineaarinenAlfa(c, a, pohja));
+        static readonly Color NimionMuste = Vari(NostoSaannot.NimionMuste, NostoSaannot.NimionPeitto, NimiLadonta.PohjaMaa),
+            Taso1Muste = Vari(NostoSaannot.Taso1Muste, NostoSaannot.Taso1Peitto, NimiLadonta.PohjaMaa),
+            MerenMuste = Vari(NostoSaannot.MerenMuste, NostoSaannot.MerenPeitto, NimiLadonta.PohjaMeri);
+
+        /// <summary>
+        /// Nimiön muste ja reunan vahvistus samalla musteella (NostoKerros.NimionReunaPeitto: SDF-ääriviiva lähes
+        /// nollaleveydellä, NimionPohjaPeitto: siirtymätön varjo), asetetaan vain muuttuneina.
+        /// </summary>
+        static void AsetaMuste(Merkki m, Color muste)
+        {
+            float reuna = NostoKerros.NimionReunaPeitto, leveys = reuna > 0f ? NostoKerros.NimionReunaLeveys : 0f, pohja = NostoKerros.NimionPohjaPeitto;
+            if (m.Muste == muste && m.Reuna == reuna && m.ReunaLeveys == leveys && m.Pohja == pohja) return;
+            m.Muste = muste; m.Reuna = reuna; m.ReunaLeveys = leveys; m.Pohja = pohja;
+            m.Nimio.style.color = muste;
+            m.Nimio.style.unityTextOutlineWidth = leveys;
+            m.Nimio.style.unityTextOutlineColor = new Color(muste.r, muste.g, muste.b, reuna);
+            m.Nimio.style.textShadow = pohja > 0f
+                ? new StyleTextShadow(new TextShadow { offset = Vector2.zero, blurRadius = 0f, color = new Color(muste.r, muste.g, muste.b, pohja) })
+                : new StyleTextShadow(StyleKeyword.Null);
         }
 
         /// <summary>Koelippu (web ?aihemerkit=1): saman aiheen nostot ryhmämerkeiksi. Oletus pois (PAATOKSET 34/17 b).</summary>
@@ -82,9 +121,10 @@ namespace Matkakirja.Natiivi
 
         // Web js/pallolauta/nostot.js:398 NOSTON_MITTA (8,5 / 11), fokusnosto-symbolit.js NOSTOSYM_NIMIO_KOKO 11,
         // NOSTOSYM_MINI_RUUTU 7,4, NOSTOSYM_PISTE_R 3,4, NOSTOSYM_NIMIO_X 8,9, NOSTOSYM_NIMIO_Y 0,36 × 11,
-        // NOSTOSYM_KUVAMERKIN_KERROIN 1,6, NOSTON_TASO1_KERROIN 1,3, kaupunki 11,5 / 8,5, NOSTOJEN_TYYPPIMERKIN_KERROIN 4.
+        // NOSTOSYM_KUVAMERKIN_KERROIN 1,6, NOSTON_TASO1_KERROIN 1,3, kaupunki 11,5 / 8,5; tyyppimerkin kerroin 4
+        // NostoSaannot.KuvamerkkiKaytossa (löydös 125).
         const float NostonMitta = 8.5f / 11f, NimioK = 11f, MiniRuutu = 7.4f, NimioX = 8.9f, NimioY = 0.36f * 11f,
-            KuvamerkinKerroin = 1.6f, Taso1Kerroin = 1.3f, KaupunginKerroin = 11.5f / 8.5f, TyyppimerkinKerroin = 4f,
+            KuvamerkinKerroin = 1.6f, Taso1Kerroin = 1.3f, KaupunginKerroin = 11.5f / 8.5f,
             NimioMerkkeja = 18f, Nousu = 0.891f, Hystereesi = 6f;
         static readonly string[] Kyljet = { "oikea", "vasen", "yla", "ala", "koillinen", "kaakko", "luode", "lounas" };
 
@@ -129,6 +169,29 @@ namespace Matkakirja.Natiivi
             viuhka.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Kytke;
             kerros.JokaRuutu += SuljeOhiNapautuksesta;
+            kerros.JokaRuutu += Syke;
+        }
+
+        float levonAlku = -1f, sykeNyt = 1f;
+
+        /// <summary>
+        /// HEHKUPISTEEN SYKÄHDYS (löydös 125; web glnimiot-sovitin.js glSykeKerroin: koko 1 + 0,07 · a · sin(2π t / 2,4 s),
+        /// a nousee 0,6 s levon alusta, liikkeessä 1). Natiivissa aika ja voima Joutosykkeestä (Lampopaatos.SykeJaatyy:
+        /// syke elää aktiivisuuden jälkeen ja jäätyy levossa, jotta pallo ja UI saavat levätä PAIKALLAAN-tilassa).
+        /// Pistemerkin symboli (hehku ja rengas) skaalautuu keskipisteensä ympäri, nimiö ei; kuvamerkki ei syki.
+        /// </summary>
+        void Syke()
+        {
+            bool levossa = lepoKierto == null || lepoKierto.Levossa;
+            if (!levossa) levonAlku = -1f;
+            else if (levonAlku < 0f) levonAlku = Time.unscaledTime;
+            float a = levossa ? Joutosyke.Voima * Mathf.Clamp01((Time.unscaledTime - levonAlku) / (float)NostoSaannot.SykkeenNousuS) : 0f;
+            float s = juuri.resolvedStyle.display == DisplayStyle.None ? 1f : (float)NostoSaannot.PisteenSyke(Joutosyke.Aika, a);
+            if (Mathf.Abs(s - sykeNyt) < 0.0005f) return;
+            sykeNyt = s;
+            var koko = new Scale(new Vector3(s, s, 1f));
+            foreach (var m in merkit)
+                if (m.Symboli != null && m.Symboli.ClassListContains("mk-nosto-merkki__symboli--piste")) m.Symboli.style.scale = koko;
         }
 
         /// <summary>Linssi päällä tai muu koko ruudun näkymä: merkit piiloon.</summary>
@@ -584,20 +647,24 @@ namespace Matkakirja.Natiivi
                 if (vetoKyljet.TryGetValue(s.Id, out var ed) && ed != m.Kylki) kylkivaihdot++;
                 vetoKyljet[s.Id] = m.Kylki;
             }
-            // Mitoitus (web nostot.js:633): mitta = min(katto / 11, 0,7727 × kerroin × oma).
-            bool kaupunki = s.Aihe == "kaupungit";
+            // Mitoitus (web nostot.js:633): mitta = min(katto / 11, 0,7727 × kerroin × oma). Kaupunkimerkki lajista
+            // (web datumin kaupunki = kohde.tyyppi 'kaupunki', löydös 125), ilman lajia aiheesta kuten ennen.
+            bool kaupunki = s.Kaupunkimerkki;
             m.Taso1 = s.Taso == 1 && !ryhma;
             float oma = kaupunki ? KaupunginKerroin : m.Taso1 ? Taso1Kerroin : 1f;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
-            bool kuvamerkki = !ryhma && Kuva(s) != null && (m.Taso1 || kerroin >= TyyppimerkinKerroin);
+            bool kuvamerkki = !ryhma && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
             m.Ruutu = MiniRuutu * (m.Taso1 && kuvamerkki ? KuvamerkinKerroin : 1f);
             m.Kiintea = kaupunki || m.Taso1;
-            string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : "-");
+            // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
+            string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);
             if (tyyppi != m.Tyyppi)
             {
                 m.Tyyppi = tyyppi;
                 m.Symboli?.RemoveFromHierarchy();
                 m.Symboli = ryhma ? RyhmaSymboli(s) : Symboli(s, kuvamerkki);
+                if (m.Symboli.ClassListContains("mk-nosto-merkki__symboli--piste") && sykeNyt != 1f)
+                    m.Symboli.style.scale = new Scale(new Vector3(sykeNyt, sykeNyt, 1f));
                 m.El.Insert(0, m.Symboli);
             }
             // Merkin laatikko = ikoniruutu keskipisteen ympärillä; kuviot (16 yksikköä) keskelle.
@@ -611,12 +678,20 @@ namespace Matkakirja.Natiivi
                 kv.style.width = kv.style.height = kuvioPx;
                 kv.style.left = kv.style.top = (ruutuPx - kuvioPx) / 2f;
             }
+            // Meren nimiö (web NOSTOSYM_NIMIO_ASUT.meri): lyhennys, sitten versaali ja harvennus 0,28 em.
+            bool meri = !ryhma && NostoSaannot.OnMerenNimio(s.Laji);
             string nimi = nimio ?? Lyhenna(s.Nimio ?? "");
+            if (meri) nimi = nimi.ToUpperInvariant();
             if (m.Nimio.text != nimi) m.Nimio.text = nimi;
             m.Nimio.style.display = nimi.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             float fs = NimioK * m.Mitta;
             if (!Mathf.Approximately(m.Nimio.resolvedStyle.fontSize, fs)) m.Nimio.style.fontSize = fs;
-            m.Nimio.EnableInClassList("mk-nosto-merkki__nimio--taso1", m.Taso1);
+            // UI Toolkitin letter-spacing on em/100 (tyokalut/kirjainvali.py): webin 0,28 em = 28 kaikilla fonttikoilla.
+            float harvennus = meri ? (float)(NostoSaannot.MerenHarvennus * 100.0) : 0f;
+            if (!Mathf.Approximately(m.Harvennus, harvennus)) { m.Harvennus = harvennus; m.Nimio.style.letterSpacing = harvennus; }
+            m.Nimio.EnableInClassList("mk-nosto-merkki__nimio--taso1", m.Taso1 && !meri);
+            m.Nimio.EnableInClassList("mk-nosto-merkki__nimio--meri", meri);
+            AsetaMuste(m, meri ? MerenMuste : m.Taso1 ? Taso1Muste : NimionMuste);
             m.NimioKoko = nimi.Length > 0
                 ? m.Nimio.MeasureTextSize(nimi, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined)
                 : Vector2.zero;
@@ -627,16 +702,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Tyyppimerkin kuva aiheen rivistä (webin KARTTASELITE_MERKIT): kategorian oma merkki, jos sellainen on
-        /// (ruoka, tekniikka, merenkulku, meri), muuten aiheen ensimmäinen.
+        /// Tyyppimerkin kuva (web nostosymKuvamerkki, löydös 125): lajin merkki ensin (saari, järvi, joki, meri, ruoka,
+        /// tekniikka …), sitten kategorian; datan ilman lajia luonto saa vuoren merkin (NostoSaannot.Kuvamerkki).
         /// </summary>
-        string Kuva(NostoKerros.Nosto s)
-        {
-            if (s.Aihe == null || !rivit.TryGetValue(s.Aihe, out var r) || r.Kuvat.Length == 0) return null;
-            foreach (var k in r.Kuvat)
-                if (s.Kategoria != null && k == "merkki-" + s.Kategoria + ".png") return k;
-            return r.Kuvat[0];
-        }
+        static string Kuva(NostoKerros.Nosto s) => NostoSaannot.Kuvamerkki(s.Kategoria, s.Laji);
 
         /// <summary>Web piirraAihemerkki: paperilevy, aiheväri puoliksi läpi ja musterengas, r 3,4 (ei sisäsymbolia).</summary>
         VisualElement RyhmaSymboli(NostoKerros.Nosto s)
@@ -661,14 +730,15 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Web: kuvamerkki (kuvamerkki = true) koko ruutuun; pisteperheet harmaana kiekkona #6f6a61 ja musterenkaalla
-        /// (aiheväri vain karttaselitteen valossa); vektorit musteella rgba(58, 40, 25, 0,86).
+        /// Web (piirraNostosymMiniCanvas, löydös 125): kuvamerkki (kuvamerkki = true ja tyypillä merkki) koko ruutuun;
+        /// pistemerkki (NostoSaannot.OnPistemerkki) harmaana hehkupisteenä — häive 2,1 r ja vaalea sisus yhtenä kuvana
+        /// (NostoHehku) — ja musterenkaana päällä; viivamerkki (NostoSaannot.MiniTunnus: vuori, aalto, salama, tassu,
+        /// ruusu) rungon ja ohuen vedon musteella rgba(58, 40, 25, 0,86 / 0,52). Aiheväri vain karttaselitteen valossa.
         /// </summary>
         VisualElement Symboli(NostoKerros.Nosto s, bool kuvamerkki = true)
         {
             var alue = new VisualElement { pickingMode = PickingMode.Ignore };
             alue.AddToClassList("mk-nosto-merkki__symboli");
-            if (s.Aihe == null || !rivit.TryGetValue(s.Aihe, out var r)) r = rivit["kaupungit"];
             string kuva = kuvamerkki ? Kuva(s) : null;
             if (kuva != null)
             {
@@ -676,22 +746,33 @@ namespace Matkakirja.Natiivi
                 Kuvat.Hae(NostoMerkit.KuvaJuuri + kuva, t => { if (t != null) alue.style.backgroundImage = new StyleBackground(t); });
                 return alue;
             }
-            bool piste = r.Piste || r.Vektori == null;
+            string tunnus = s.Minimerkki;
+            bool piste = NostoSaannot.OnPistemerkki(tunnus) || !NostoMerkit.Viivamerkit.ContainsKey(tunnus);
             alue.EnableInClassList("mk-nosto-merkki__symboli--piste", piste);
-            var taytto = new SvgIkoni(piste ? NostoMerkit.PisteTaytto : r.Vektori) { Ruutu = 16, Alku = new Vector2(-8, -8), pickingMode = PickingMode.Ignore };
-            taytto.AddToClassList("mk-ikoni--tayta");
-            taytto.AddToClassList("mk-nosto-merkki__kuvio");
-            taytto.AddToClassList(piste ? "mk-nosto-merkki__kiekko" : "mk-nosto-merkki__vektori");
-            alue.Add(taytto);
             if (piste)
             {
-                var rengas = new SvgIkoni(NostoMerkit.PisteRengas) { Ruutu = 16, Alku = new Vector2(-8, -8), pickingMode = PickingMode.Ignore };
-                rengas.AddToClassList("mk-ikoni--tayta");
-                rengas.AddToClassList("mk-nosto-merkki__kuvio");
-                rengas.AddToClassList("mk-nosto-merkki__rengas");
-                alue.Add(rengas);
+                var hehku = new VisualElement { pickingMode = PickingMode.Ignore };
+                hehku.AddToClassList("mk-nosto-merkki__kuvio");
+                hehku.AddToClassList("mk-nosto-merkki__hehku");
+                hehku.style.backgroundImage = new StyleBackground(NostoHehku.Kuva);
+                alue.Add(hehku);
+                alue.Add(Kuvio(NostoMerkit.PisteRengas, "mk-nosto-merkki__rengas"));
+                return alue;
             }
+            var (vahva, ohut) = NostoMerkit.Viivamerkit[tunnus];
+            if (ohut != null) alue.Add(Kuvio(ohut, "mk-nosto-merkki__vektori-ohut"));
+            alue.Add(Kuvio(vahva, "mk-nosto-merkki__vektori"));
             return alue;
+        }
+
+        /// <summary>Minimerkin kuvio (viewBox −8 −8 16 16, täyttö), Hae asettaa koon ja paikan (mk-nosto-merkki__kuvio).</summary>
+        static SvgIkoni Kuvio(string polku, string luokka)
+        {
+            var k = new SvgIkoni(polku) { Ruutu = 16, Alku = new Vector2(-8, -8), pickingMode = PickingMode.Ignore };
+            k.AddToClassList("mk-ikoni--tayta");
+            k.AddToClassList("mk-nosto-merkki__kuvio");
+            k.AddToClassList(luokka);
+            return k;
         }
     }
 }

@@ -105,6 +105,27 @@ namespace Matkakirja.Linssit.Aikajana
             return new AvauksenVaiheet(musta, feidi, piste, zoomAlku, zoomPerus, zoomPerus + ZoominJatkoMs, afrikka);
         }
 
+        /// <summary>Ihmisen matka II:n mustan feidi (ms): pidempi kuin webin 1,8 s, "rauhassa" (löydös 152, pyyntö 2,5–3 s).</summary>
+        public const double RauhallinenFeidiMs = 2750;
+
+        /// <summary>
+        /// IHMISEN MATKA II:N AVAUS (omistajan löydös 152, build 16: "tähdet ja pallo feidautuvat rauhassa mustasta, pallo
+        /// zoomautuu samalla lähemmäs"). Musta kestää ensimmäisen virkkeen kuten I:ssä (Avaus), mutta sitten mustan feidi
+        /// (RauhallinenFeidiMs) ja syöksy Afrikkaan alkavat SAMALLA hetkellä, eikä hetkeä tähdissä ole. Zoomi saapuu perille
+        /// samaan aikaan kuin I:ssä (ZoomLoppu), joten valot, Marokon ajo ja kertomus eivät siirry; zoomi vain kestää
+        /// pidempään ja alkaa hitaasti (syöksyn käyrä). Kamera on mustan alla jo avaruudessa, joten pallo vain lähestyy.
+        /// Jos zoomi ylittäisi esityksen katon (AvaruudenMs + ZoominJatkoMs), se alkaa sen verran myöhemmin.
+        /// </summary>
+        public static AvauksenVaiheet RauhallinenAvaus(IReadOnlyList<double> lauseet, double? sana, double kesto)
+        {
+            var a = Avaus(lauseet, sana, kesto);
+            double katto = AvaruudenMs + ZoominJatkoMs;
+            double zoomAlku = Math.Max(a.Musta, a.ZoomLoppu - katto);
+            double zoomKesto = Math.Max(AvaruudenMinMs, a.ZoomLoppu - zoomAlku);
+            double feidi = Math.Max(0, Math.Min(RauhallinenFeidiMs, zoomKesto * FeidinOsuus));
+            return new AvauksenVaiheet(a.Musta, feidi, a.Musta + feidi, zoomAlku, Math.Max(0, a.Afrikka - zoomAlku), zoomKesto, a.Afrikka);
+        }
+
         public static double MarokonPehmennys(double t, double jarru = MarokonJarru)
         {
             double x = Math.Max(0, Math.Min(1, double.IsNaN(t) ? 0 : t));

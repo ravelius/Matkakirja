@@ -34,6 +34,22 @@
 //
 // ERÄ 3 (KERROKSELLINEN SUMU; Natiiviseppä 25.9.: omana kerroksena Linssit-puolelle): IhmisenMatka2Sumu — avauksen
 //   kolme kuorta, joiden läpi kamera syöksyy, ja jakson seudun matala sumu valokeilan valossa (Pilvikuoret).
+//
+// LÖYDÖS 151 (omistaja build 16: "kameraliikkeet liian äkkinäisiä kartan väistäessä"): väistö oli oma 0,9 s:n liukunsa
+//   jakson 1,4–9 s:n kamera-ajon päällä, joten kuva nytkähti sivuun ennen kuin kamera ehti liikkua. Nyt väistö odottaa jakson
+//   ajoa (Esitys ajaa heti Kuva-kutsun jälkeen samassa kutsussa, saattolento seuraavassa kehyksessä) ja kulkee kääreen
+//   kirjaaman ajon (IhmisenMatka2Ymparisto.Ajo) käyrällä samassa tahdissa: väistö ja ajo ovat yksi liike (Raamattu KAMERA-AJOT:
+//   yksi yhtenäinen käyrä, ei erillisiä liikkeitä päällekkäin). Ilman omaa ajoa (Marokon ajo jo matkalla, jakso ilman aluetta)
+//   väistö liukuu pehmeästi käynnissä olevan ajon loppuun tai 1,6 s (paluu 1,8 s); logiikka Ytimessä (KuvanVaisto).
+//   PalloKierto.Linssisiirto liukuu vain smootherstepillä, joten ajon käyrää (kuminauha, syöksy, Marokon kaari) ajetaan
+//   tässä kehys kerrallaan: LateUpdatessa lyhyt liuku seuraavan kehyksen arvoon, jonka PalloKierto vie perille samassa
+//   päivityksessä kuin kameran ajon, ja liuku pitää PalloKierto.Liikkeessa-tilan päällä (täysi ruudunpäivitys).
+//
+// LÖYDÖS 148 (esityksen ohjaus ⏮ ▶/⏸ ⏭): tauko (kääreen Tauolla) pysäyttää kameran ajon ja väistön (kääreen kello seisoo),
+//   soihdun lepatuksen, saattolennon keilan, aamunkoiton, sumun ajelehtimisen ja pyörteen, hiukkaset ja tähtien
+//   ajelehtimisen, ja äänimaisema hiljenee raidan tavoin puoleen; jatko jatkaa niitä. Keilan siirtymät ovat Natiivisepän
+//   (KarttaKerrokset.Valokeila) eivätkä pysähdy (ehdotus: ValokeilaTauko). ⏭ (Esitys.Loppuun): valot ilman aamunkoittoa
+//   odottavat kehyksen, jotta loppu ei välähdä keilaa; aamunkoitto pysähtyy. ⏮: Musta(true) nollaa kaiken mustan alla.
 using System.Collections.Generic;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -42,8 +58,10 @@ namespace Matkakirja.Natiivi
 {
     public class IhmisenMatka2Tehosteet : MonoBehaviour
     {
-        /// <summary>Kuvan ja kartan väistön liuku (s): sama tahti kuin kuvan sisääntulo (UI 0,4–0,5 s) pidennettynä.</summary>
-        public const float SiirtoS = 0.9f;
+        /// <summary>Ruudun kierron jälkeen väistö uuteen kohtaan (s). Muut väistön kestot: KuvanVaisto (Ydin), löydös 151.</summary>
+        public const float KiertoS = 0.6f;
+        /// <summary>Kehyksen askel PalloKierto.Linssisiirrolle (s): seuraava päivitys vie arvon perille.</summary>
+        const float VaistonAskelS = 0.001f;
         /// <summary>Vanojen häivytys kuvan alueelta (s).</summary>
         public const float KuvanHaivytysS = 0.4f;
         /// <summary>Kuvan reunavara ruudun reunaan (pt).</summary>
@@ -99,8 +117,12 @@ namespace Matkakirja.Natiivi
         public IhmisenMatka2Hiukkaset Hiukkaset => hiukkaset;
         string kuvaKohde;
         float kuvanPeitto;
-        bool siirtoPaalla;
         int ruutuW, ruutuH;
+
+        /// <summary>Kuvan väistö samalla käyrällä kuin jakson kamera-ajo (löydös 151, logiikka Ytimessä).</summary>
+        readonly KuvanVaisto vaisto = new KuvanVaisto();
+        /// <summary>Viimeksi asetettu Linssisiirto (ruudun osuuksina).</summary>
+        Vector2 siirtoNyt;
 
         /// <summary>Kuvan alue ruudun osuuksina (origo vasen yläkulma); null, kun kuvaa ei ole.</summary>
         public Rect? KuvanAlue { get; private set; }
@@ -123,6 +145,20 @@ namespace Matkakirja.Natiivi
             KarttaKerrokset.ValokeilaPois(0f);
             keilaPaalla = false;
             edellinenKohde = null;
+            // Uusi esitys (myös Aloita alusta): edellisen kuvan väistö pois heti mustan alla, ei liukuna.
+            VaistoPoisHeti();
+            KuvanAlue = null;
+            kuvaKohde = null;
+            kuvaPaalla = false;
+            // ⏮ kesken esityksen tai tutkimusvaiheesta: edellisen esityksen tehosteet pois mustan alla (löydös 148).
+            StopCoroutine(nameof(Aamunkoitto));
+            valotOdottaa = false;
+            keilaOdottaa = false;
+            saattoKeila = false;
+            toinen = null;
+            lepoAlkaa = -1f;
+            loppuTavoite = 0f;
+            loppuhehku = 0f;
         }
 
         public void Valot(double feidiMs)
@@ -132,17 +168,23 @@ namespace Matkakirja.Natiivi
             float kesto = Kesto((float)(feidiMs / 1000.0));
             nykyinen = new KarttaKerrokset.Keila(2, 20, AfrikanSadeKm, 0.6f, null, 0.1f);
             toinen = null;
-            if (kesto <= 0f) { Nayta(0f); return; }
             StopCoroutine(nameof(Aamunkoitto));
+            // Valot heti (muistista jatko, ⏭, vähennetty liike): seuraavassa kehyksessä, jottei samassa kutsussa tuleva loppu
+            // (Esitys.Loppuun → Loppu) välähdä keilaa ennen sammutusta.
+            if (kesto <= 0f) { valotOdottaa = true; return; }
+            valotOdottaa = false;
             StartCoroutine(nameof(Aamunkoitto), kesto);
         }
+
+        bool valotOdottaa;
 
         System.Collections.IEnumerator Aamunkoitto(float kesto)
         {
             var piste = new KarttaKerrokset.Keila(2, 20, 420f, 0.85f, KarttaKerrokset.KelvinVari(2600f, 0.9f), 0.3f);
             KarttaKerrokset.Valokeila(piste, null, 0.82f, kesto * 0.25f);
             keilaPaalla = true;
-            yield return new WaitForSecondsRealtime(kesto * 0.3f);
+            // Odotus esityksen tahdissa: tauko pysäyttää aamunkoiton.
+            for (float t = 0f; t < kesto * 0.3f; t += Tauolla ? 0f : Time.unscaledDeltaTime) yield return null;
             if (!keilaOdottaa) Nayta(kesto * 0.9f);
         }
 
@@ -237,6 +279,9 @@ namespace Matkakirja.Natiivi
 
         static IhmisenMatka2Ymparisto Kaare() => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Kaare;
 
+        /// <summary>Esitys tauolla (kääre, löydös 148): tehosteiden liike seis, äänimaisema hiljaa puoleen.</summary>
+        public bool Tauolla => Kaare()?.Tauolla ?? false;
+
         /// <summary>Vanojen selkärangan kärki kellon mukaan (saattolento); null ennen vanoja.</summary>
         (double Lat, double Lon)? RintamaNyt()
         {
@@ -256,6 +301,7 @@ namespace Matkakirja.Natiivi
 
         void SaataKeila()
         {
+            if (Tauolla) return;   // keila odottaa rintaman kanssa
             bool saattaa = Kaare()?.Saattaa ?? false;
             if (!saattaa)
             {
@@ -282,7 +328,7 @@ namespace Matkakirja.Natiivi
         {
             float nyt = Time.unscaledTime;
             if (!keilaPaalla || keilaOdottaa || jakso == null || !Luolat.Contains(jakso.Id) || lepoAlkaa < 0f
-                || nyt < lepoAlkaa || nyt < seuraavaLepatus || Kesto(1f) <= 0f) return;
+                || nyt < lepoAlkaa || nyt < seuraavaLepatus || Kesto(1f) <= 0f || Tauolla) return;
             seuraavaLepatus = nyt + 1f / LepatusHz;
             float n = Mathf.PerlinNoise(nyt * 7.3f, 0.37f) * 0.65f + Mathf.PerlinNoise(nyt * 19.1f, 3.1f) * 0.35f;
             var k = nykyinen;
@@ -314,11 +360,10 @@ namespace Matkakirja.Natiivi
             if (kohde == null)
             {
                 KuvanAlue = null;
-                if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(Kesto(SiirtoS));
-                siirtoPaalla = false;
+                PyydaVaisto(Vector2.zero, paluu: true);
                 return;
             }
-            Asettele();
+            if (Asettele() is { } kohdalle) PyydaVaisto(kohdalle, paluu: false);
         }
 
         public void Loppu()
@@ -327,22 +372,77 @@ namespace Matkakirja.Natiivi
             sumu?.Loppu();
             hiukkaset?.Loppu();
             loppuTavoite = 0f;   // tutkimusvaihe: vanat takaisin tavallisiksi
+            // ⏭ kesken avauksen tai valojen: aamunkoitto ja odottavat valot eivät saa sytyttää keilaa lopun jälkeen.
+            StopCoroutine(nameof(Aamunkoitto));
+            valotOdottaa = false;
+            saattoKeila = false;
+            lepoAlkaa = -1f;
             Sammuta(Kesto(LopunSammutusS));
             KuvanAlue = null;
-            if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(Kesto(SiirtoS));
-            siirtoPaalla = false;
+            // Esityksen loppu ajaa kameran koko palloon ennen tätä kutsua: paluu kulkee sen käyrällä.
+            PyydaVaisto(Vector2.zero, paluu: true);
         }
 
         static float Kesto(float s) => LinssiOhjain.Instanssi != null && LinssiOhjain.Instanssi.VahennettyLiike ? 0f : s;
 
+        // ── Kuvan väistö (löydös 151) ──
+
+        static double Kello() => Kaare()?.Kello ?? Time.realtimeSinceStartupAsDouble;
+
+        /// <summary>Väistö uuteen kohtaan: odottaa jakson ajoa (KuvanVaisto.Ratkaise LateUpdatessa). Vähennetty liike: heti.</summary>
+        void PyydaVaisto(Vector2 kohde, bool paluu)
+        {
+            if (Kesto(1f) <= 0f)
+            {
+                // Vähennetty liike: ajot ovat hyppyjä, joten väistökin.
+                vaisto.Heti((kohde.x, kohde.y));
+                Aseta(kohde);
+                return;
+            }
+            vaisto.Pyyda((kohde.x, kohde.y), paluu, Kello(), Kaare()?.Ajo);
+        }
+
+        /// <summary>
+        /// Väistö kehys kerrallaan (LateUpdate): odottava väistö liittyy jakson ajoon, ja arvo lasketaan seuraavan kehyksen
+        /// hetkelle, jolloin PalloKierto vie sen perille samassa päivityksessä kuin kameran ajon.
+        /// </summary>
+        void AjaVaisto()
+        {
+            double kello = Kello();
+            if (vaisto.Ratkaise(kello, Kaare()?.Ajo))
+                LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: kuvan väistö " + vaisto.Kuvaus(kello));
+            if (!vaisto.Liikkuu) return;
+            // Tauolla kääreen kello seisoo, eikä seuraava kehys etene (ei ennakkoa).
+            var (x, y) = vaisto.Arvo(kello + (Tauolla ? 0f : Time.unscaledDeltaTime));
+            Aseta(new Vector2((float)x, (float)y));
+            if (!vaisto.Liikkuu) LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: kuvan väistö perillä {x:0.00},{y:0.00}");
+        }
+
+        /// <summary>Linssisiirto tähän arvoon seuraavassa PalloKierron päivityksessä (lyhyt liuku: kuva liikkuu, täysi ruudunpäivitys).</summary>
+        void Aseta(Vector2 arvo)
+        {
+            if ((arvo - siirtoNyt).sqrMagnitude < 1e-12f) return;
+            siirtoNyt = arvo;
+            KarttaKerrokset.Linssisiirto(Mathf.Clamp(arvo.x, -0.5f, 0.5f), Mathf.Clamp(arvo.y, -0.5f, 0.5f), VaistonAskelS);
+        }
+
+        /// <summary>Väistö pois heti (musta ruutu, linssi suljetaan).</summary>
+        void VaistoPoisHeti()
+        {
+            vaisto.Heti((0, 0));
+            if (siirtoNyt == Vector2.zero) return;
+            siirtoNyt = Vector2.zero;
+            KarttaKerrokset.LinssisiirtoPois(0f);
+        }
+
         /// <summary>
         /// Kuvan alue ja kartan väistö ruudun muodosta. Pisteet muunnetaan pikseleiksi LinssiOhjain.Pistekerroin-kertoimella
-        /// (sama kuin UI:n pt). Katsekohde siirretään kuvan ulkopuolisen vapaan alueen keskelle.
+        /// (sama kuin UI:n pt). Katsekohde siirretään kuvan ulkopuolisen vapaan alueen keskelle; palauttaa väistön kohteen.
         /// </summary>
-        void Asettele()
+        Vector2? Asettele()
         {
             float W = Screen.width, H = Screen.height;
-            if (W < 1 || H < 1) return;
+            if (W < 1 || H < 1) return null;
             ruutuW = Screen.width; ruutuH = Screen.height;
             float pt = Mathf.Max(1f, LinssiOhjain.Pistekerroin);
             Rect turva = Screen.safeArea;                        // origo vasen alakulma
@@ -375,24 +475,61 @@ namespace Matkakirja.Natiivi
                 dy = -(yk / H - 0.5f);
             }
             KuvanAlue = new Rect(x / W, y / H, w / W, h / H);
-            KarttaKerrokset.Linssisiirto(Mathf.Clamp(dx, -0.5f, 0.5f), Mathf.Clamp(dy, -0.5f, 0.5f), Kesto(SiirtoS));
-            siirtoPaalla = true;
             LinssiOhjain.Instanssi?.Kirjaa($"ihmisen matka II: kuva {kuvaKohde} alue {KuvanAlue.Value.x:0.00},{KuvanAlue.Value.y:0.00} " +
                 $"{KuvanAlue.Value.width:0.00}×{KuvanAlue.Value.height:0.00}, väistö {dx:0.00},{dy:0.00}");
+            return new Vector2(Mathf.Clamp(dx, -0.5f, 0.5f), Mathf.Clamp(dy, -0.5f, 0.5f));
         }
+
+        void LateUpdate()
+        {
+            // Kaikkien Updatejen jälkeen: Esityksen tämän kehyksen ajo on jo kääreen kirjanpidossa, ja PalloKierto vie väistön
+            // arvon perille seuraavassa päivityksessään (PallonLepo 9990 näkee liukuvan siirron samassa kehyksessä).
+            AjaVaisto();
+        }
+
+        bool tauollaOli;
+        Esitys seurattuEsitys;
 
         void Update()
         {
+            // ⏮ (Aloita alusta) purki esityksen, ja uusi odottaa esittelyn Käynnistä-nappia: edellisen esityksen äänimaisema,
+            // sumu, hiukkaset, keila ja kuvan väistö häipyvät eivätkä jää soimaan esittelyn alle (käynnistyvä esitys nollaa
+            // kaiken itse mustan alla, Musta).
+            var esitys = (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Linssi?.Esitys;
+            if (!ReferenceEquals(esitys, seurattuEsitys))
+            {
+                var oli = seurattuEsitys;
+                seurattuEsitys = esitys;
+                if (oli != null && esitys != null && esitys.I < 0 && !esitys.Kaynnissa)
+                {
+                    LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: esitys purettu (alkuun), tehosteet häipyvät");
+                    Loppu();
+                }
+            }
+            bool tauolla = Tauolla;
+            if (tauolla != tauollaOli)
+            {
+                tauollaOli = tauolla;
+                LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: tehosteet " + (tauolla ? "tauolla (kamera, väistö, sumu, hiukkaset, lepatus seis; maisema puoleen)" : "jatkuvat"));
+            }
+            if (sumu != null) sumu.Tauolla = tauolla;
+            if (hiukkaset != null) hiukkaset.Tauolla = tauolla;
+            if (maisema != null) maisema.Tauolla = tauolla;
+            if (valotOdottaa) { valotOdottaa = false; Nayta(0f); }
             if (keilaOdottaa) AsetaJaksonKeila();
             SaataKeila();
             Lepata();
-            // Ruudun kierto kesken kuvan: alue ja väistö uudelleen.
-            if (kuvaKohde != null && (Screen.width != ruutuW || Screen.height != ruutuH)) Asettele();
+            // Ruudun kierto kesken kuvan: alue ja väistö uudelleen (ilman ajoa, lyhyt pehmeä liuku).
+            if (kuvaKohde != null && (Screen.width != ruutuW || Screen.height != ruutuH) && Asettele() is { } uusi)
+            {
+                if (Kesto(1f) <= 0f) { vaisto.Heti((uusi.x, uusi.y)); Aseta(uusi); }
+                else vaisto.Liuku((uusi.x, uusi.y), Kello(), KiertoS);   // odottava väistö saa uuden kohteen samaan ajoon
+            }
             float tavoite = KuvanAlue.HasValue ? 1f : 0f;
             float kesto = Kesto(KuvanHaivytysS);
             kuvanPeitto = kesto <= 0f ? tavoite : Mathf.MoveTowards(kuvanPeitto, tavoite, Time.unscaledDeltaTime / kesto);
             float hehkuS = Kesto(LoppuhehkuS);
-            loppuhehku = hehkuS <= 0f ? loppuTavoite : Mathf.MoveTowards(loppuhehku, loppuTavoite, Time.unscaledDeltaTime / hehkuS);
+            loppuhehku = hehkuS <= 0f ? loppuTavoite : Mathf.MoveTowards(loppuhehku, loppuTavoite, (tauolla ? 0f : Time.unscaledDeltaTime) / hehkuS);
             var v = kerros != null ? kerros.Vanat : null;
             if (v != null)
             {
@@ -406,8 +543,9 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             // Linssi suljettiin: kartan pääpiste heti paikalleen (kamera palaa omalla ajollaan).
-            if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(0f);
-            siirtoPaalla = false;
+            if (siirtoNyt != Vector2.zero || vaisto.Liikkuu) KarttaKerrokset.LinssisiirtoPois(0f);
+            siirtoNyt = Vector2.zero;
+            vaisto.Heti((0, 0));
             KuvanAlue = null;
             // Keila ja hämärä pois heti: muu peli ei saa jäädä hämärään.
             KarttaKerrokset.ValokeilaPois(0f);

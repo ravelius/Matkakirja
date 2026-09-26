@@ -81,20 +81,32 @@ namespace Matkakirja
     ///   suodatus                  ladattujen laattojen tekstuurien suodatus lokiin
     ///   maaraja pois|paalle|auto | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja); auto = vain kun vektoriranta
     ///                             ei piirry (omistaja 25.9.), paalle = aina vertailuun
+    ///   maaraja paino web|kevyt|kevein|oletus | maaraja rengas paalle|pois   kehän paino (löydös 127: oletus kevyt,
+    ///                             web = build 16:n korostus) ja koko rengas rannikkoineen vertailuun (oletus pois =
+    ///                             vain Karttasepän maa–maa-rajat)
+    ///   vari sarja p080|p060|p045|oletus|<versio>   kermahunnun sarja (löydös 128, Varitaso.Versio; peitto on poltettu
+    ///                             sarjaan, oletus 2026-09-25-p080); vari <ISO3>|pelaaja|pois|paalle|alin <z> kuten ennen
     ///   rajat pois|paalle|tila | rajat taso <0–4>|auto | rajat peitto <a>|oletus   valtioiden rajat vektorina (Rajat, E2)
     ///   vektorit versio <nimi>|web|oletus   rannikko- ja rajasarjan versio (oletus 2026-09-25-gshhs-korkeus, web =
     ///                             2026-09-21-gshhs ilman korkeuksia); luettelo ja solut ladataan uudelleen
     ///   rannikko pois|paalle|tila | rannikko taso <0–4>|auto | rannikko syvyys pois|paalle | rannikko nosto <m> [osuus]
-    ///   rannikko peitto <a>|oletus  rantaviiva vektorina (Rannikko, löydös 46 E1): taso pakottaa webin tason, syvyys pois =
-    ///                             ZTest Always, nosto = syvyysnosto (oletus 200 m + 0,002 × etäisyys), peitto = lineaarinen
-    ///                             alfa (oletus 0,732 = webin 0,58 sRGB-sekoituksena); tila lokiin
+    ///   rannikko peitto <a>|oletus  rantaviiva vektorina (Rannikko, löydös 46 E1; löydös 126: oletuksena POIS, paalle =
+    ///                             vertailuun): taso pakottaa webin tason, syvyys pois = ZTest Always, nosto = syvyysnosto
+    ///                             (oletus 200 m + 0,002 × etäisyys), peitto = lineaarinen alfa (oletus 0,25 = omistajan
+    ///                             himmeä, web = 0,732 eli webin 0,58 sRGB-sekoituksena); tila lokiin
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
     ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
     ///   nostot tila [ISO3] | nostot maa <ISO3|pois>   nostokerroksen portit lokiin (NostoKerros.Kuvaus): näkyvät,
     ///                             piilotetut syineen (kaupunki nimi/12 km, meri, taso 3, ruutu, katto), uloin osuus,
-    ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa)
+    ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa); lisäksi minimerkit
+    ///                             ja lajin puute datassa (löydös 125)
+    ///   nostot kerroin <k> [lat lon] [s]   kamera korkeuteen, jossa kartan mittakerroin on k (saapumiskorkeus / k;
+    ///                             webin portaat 1, 2 ja 3,13 kuvapariin, löydös 125), keskipiste lat lon tai nykyinen
+    ///   nostot nimio reuna <O> [leveys px] | nostot nimio pohja <U>   nimiön reunan vahvistus samalla musteella
+    ///                             (NostoKerros.NimionReunaPeitto: SDF-ääriviivan peitto, oletus 0,65, leveys 0,05 px;
+    ///                             NimionPohjaPeitto: siirtymätön varjo, oletus 0; 0 = pois), heti (NostoKerros.Herata)
     ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
     ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
     ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
@@ -121,8 +133,14 @@ namespace Matkakirja
     ///   hdr pois|paalle|oletus|tila   pallon kameran HDR (LampoSaadot; oletus ennallaan päällä) kuvapariin
     ///   varjot pois|auto|paalle|tila  päävalon varjot (LampoSaadot; oletus pois = nykyinen ilme, auto = vain kun
     ///                             maamerkki on ruudulla, varjokartan etäisyys maamerkeistä)
-    ///   syke jaatyy|jatkuva|oletus|tila  jatkuvien idle-animaatioiden jäädytys levossa (Joutosyke; oletus jäätyy
-    ///                             3 s levon jälkeen keskiasentoon, jatkuva = kuten ennen lämpöerää); tila lokiin
+    ///   syke jaatyy|jatkuva|oletus|tila  jatkuvien idle-animaatioiden jäädytys levossa (Joutosyke; oletus jatkuva
+    ///                             kehyksen hinta -erästä alkaen, jaatyy = 3 s levon jälkeen keskiasentoon); tila lokiin
+    ///   piilo tila|pois|paalle    piilotettujen UI-alipuiden suotimet (PiiloVartija): poistot, piilossa piirrettävät ja
+    ///                             vartijan hinta lokiin; pois palauttaa suotimet
+    ///   liput tila|jatkuva|syke   aaltoilevat liput (Liput, löydös 144): tila lokiin; jatkuva = oma kello ja täysi voima
+    ///                             aina näkyvissä, syke = seuraa Joutosykettä (oletus: levossa asettuu suoraksi)
+    ///   liput koe nimi [aika]     koelippu (raidat + ruudukko) aaltoon hetkellä aika (s, oletus 0,8), kuva
+    ///                             Documents/nimi.png (120 × 80): varjostimen tarkistus laitteella ilman UI:ta
     /// Jokainen muu komento herättää pallon hetkeksi (PallonLepo.Muuttui), jotta muutos piirtyy heti myös lepopiirrossa,
     /// ja kuva piirtää tuoreen kehyksen (Ruudunpaivitys.Herata).
     /// </summary>
@@ -433,6 +451,31 @@ namespace Matkakirja
                     Debug.Log("MATKAKIRJA joutosyke: " + Joutosyke.Kuvaus());
                     break;
                 }
+                case "piilo":
+                {
+                    // piilo tila|pois|paalle (PiiloVartija, kehyksen hinta -erä 25.9.): piilotettujen alipuiden suotimet.
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "pois" || m == "paalle") PiiloVartija.Paalla = m == "paalle";
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: piilo tila|pois|paalle, ei " + m); return; }
+                    Debug.Log(PiiloVartija.Instanssi != null ? PiiloVartija.Instanssi.Kuvaus() : "MATKAKIRJA piilovartija: ei käynnissä");
+                    break;
+                }
+                case "liput":
+                {
+                    // Löydös 144 (Liput.cs): aaltoilevien lippujen tila, kello ja laitekoe.
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "jatkuva") Liput.SeuraaSyketta = false;
+                    else if (m == "syke") Liput.SeuraaSyketta = true;
+                    else if (m == "koe" && o.Length > 2)
+                    {
+                        Debug.Log("MATKAKIRJA " + Liput.Koe(Path.Combine(Application.persistentDataPath, o[2] + ".png"),
+                            o.Length > 3 ? (float)D(3) : 0.8f));
+                        break;
+                    }
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: liput tila|jatkuva|syke|koe nimi [aika], ei " + m); return; }
+                    Debug.Log("MATKAKIRJA " + Liput.Kuvaus());
+                    break;
+                }
                 case "kaupunki":
                     if (!merkit.ValitseKaupunki(o[1])) Debug.LogWarning("MATKAKIRJA komento: ei kaupunkia " + o[1]);
                     break;
@@ -643,12 +686,25 @@ namespace Matkakirja
                 case "maaraja":
                     // maaraja pois|paalle|auto | maaraja paksuus <pt>|web (löydös 46 jatko ja E2, Maaraja.Sallittu/Pakota/PaksuusPt):
                     // auto (oletus) = kehä vain, kun vektoriranta ei piirry; paalle = aina (vertailuun); pois = ei koskaan.
+                    // maaraja paino web|kevyt|kevein|oletus | maaraja rengas paalle|pois (löydös 127, Maaraja.Paino/KokoRengas).
                     if (o.Length > 2 && o[1] == "paksuus")
                         Maaraja.PaksuusPt = o[2] == "web" ? float.NaN : (float)D(2);
+                    else if (o.Length > 2 && o[1] == "paino")
+                    {
+                        if (o[2] == "oletus") Maaraja.Paino = Maaraja.OletusPaino;
+                        else if (Viivaleveys.LueKehanPaino(o[2], out var paino)) Maaraja.Paino = paino;
+                        else Debug.LogWarning("MATKAKIRJA komento: maaraja paino web|kevyt|kevein|oletus, ei " + o[2]);
+                    }
+                    else if (o.Length > 2 && o[1] == "rengas") Maaraja.KokoRengas = o[2] == "paalle";
                     else if (o.Length > 1) { Maaraja.Sallittu = o[1] != "pois"; Maaraja.Pakota = o[1] == "paalle"; }
                     Debug.Log($"MATKAKIRJA maaraja: sallittu {Maaraja.Sallittu}, pakotettu {Maaraja.Pakota}, " +
-                              $"rannikko piirtyy {(Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy)}, paksuus " +
-                              (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt" : "web 1,6–3 pt") +
+                              $"rannikko piirtyy {(Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy)}, " +
+                              $"{(Maaraja.KokoRengas ? "koko rengas" : "maa–maa-rajat")}, paino {Maaraja.Paino} " +
+                              $"(peitto {Viivaleveys.KehaPeitto(Maaraja.Paino).ToString("0.##", CultureInfo.InvariantCulture)} web, " +
+                              $"{Viivaleveys.KehaPeittoNatiivi(Maaraja.Paino).ToString("0.###", CultureInfo.InvariantCulture)} natiivi), paksuus " +
+                              (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt"
+                                  : Viivaleveys.KehaPt(0, double.NaN, Maaraja.Paino).ToString("0.##", CultureInfo.InvariantCulture) + "–" +
+                                    Viivaleveys.KehaPt(1e9, double.NaN, Maaraja.Paino).ToString("0.##", CultureInfo.InvariantCulture) + " pt") +
                               $" × pistekerroin {PalloKierto.Pistekerroin}");
                     break;
                 case "vektorit":
@@ -717,9 +773,12 @@ namespace Matkakirja
                         Varitaso.AlinKaytetty = alin;
                         vt.Uudelleen();
                     }
+                    // vari sarja p080|p060|p045|oletus|<versio> (löydös 128: kermasarjan vaihto kuvapariin)
+                    else if (o[1] == "sarja") { if (o.Length > 2) Varitaso.AsetaVersio(o[2]); }
                     else if (o[1] == "pois" || o[1] == "paalle") vt.Nakyvat(o[1] == "paalle");
                     else vt.Pakotettu = o[1] == "pelaaja" ? null : o[1];
-                    Debug.Log($"MATKAKIRJA väritaso: komento {o[1]}, nyt {vt.Maa ?? "ei"}");
+                    Debug.Log($"MATKAKIRJA väritaso: komento {o[1]}, nyt {vt.Maa ?? "ei"}, sarja {Varitaso.Versio} " +
+                              $"(peitto {Varitaso.Peitto.ToString("0.00", CultureInfo.InvariantCulture)})");
                     break;
                 }
                 case "korkeus":
@@ -763,9 +822,28 @@ namespace Matkakirja
                 case "nostot":
                 {
                     // nostot tila [ISO3] | nostot maa <ISO3|pois> (NostoKerros, löydös 50 B): portit maittain lokiin
+                    // nostot kerroin <k> [lat lon] [s] | nostot nimio pohja <k> (löydös 125)
                     var nk = NostoKerros.Instanssi;
                     if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nostokerros puuttuu"); break; }
                     if (o.Length > 2 && o[1] == "maa") nk.Maa = o[2] == "pois" ? null : o[2].ToUpperInvariant();
+                    if (o.Length > 2 && o[1] == "kerroin")
+                    {
+                        // Webin mittauksen portaat (kerroin 1 = saapumisnäkymä, 2, 3,13) samalla kaavalla kuin ZoomKerroin.
+                        double h = nk.KorkeusKertoimella(D(2));
+                        if (h <= 0) { Debug.LogWarning("MATKAKIRJA komento: nostot kerroin: saapumiskorkeus tuntematon"); break; }
+                        bool paikka = o.Length > 4;
+                        kierto.Aja(paikka ? D(3) : kierto.leveys, paikka ? D(4) : kierto.pituus, h, o.Length > 5 ? (float)D(5) : 1.2f, null);
+                        Debug.Log($"MATKAKIRJA nostot: kerroin {D(2).ToString("0.###", CultureInfo.InvariantCulture)} → korkeus {h / 1000.0:0} km");
+                        break;
+                    }
+                    if (o.Length > 3 && o[1] == "nimio" && o[2] == "pohja")
+                        NostoKerros.NimionPohjaPeitto = Mathf.Clamp01((float)D(3));
+                    if (o.Length > 3 && o[1] == "nimio" && o[2] == "reuna")
+                    {
+                        NostoKerros.NimionReunaPeitto = Mathf.Clamp01((float)D(3));
+                        if (o.Length > 4) NostoKerros.NimionReunaLeveys = Mathf.Max(0f, (float)D(4));
+                    }
+                    if (o.Length > 1 && o[1] == "nimio") nk.Herata();
                     Debug.Log(nk.Kuvaus(o.Length > 2 && o[1] == "tila" ? o[2] : null));
                     break;
                 }

@@ -6,11 +6,15 @@ using Matkakirja.Peli;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Kosketus = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 namespace Matkakirja
 {
+    /// <summary>Kuvasumennuksen taso (löydös 132): kortti mieto, kokoruutu vahvempi ja pysäytyskuvana.</summary>
+    public enum KuvaSumennus { Ei, Kortti, Kokoruutu }
+
     /// <summary>
     /// Pallon kamera: katsoo aina maan keskipisteeseen paikasta (pituus, leveys, korkeus).
     ///
@@ -109,6 +113,8 @@ namespace Matkakirja
         public float porttiHaivytysS = 0.4f;
         [Tooltip("Kuvien aikainen mieto sumennus (löydös 19), pisteinä.")]
         public float kuvaSumennusPt = 2.25f;
+        [Tooltip("Kokoruudun kuvan taustan sumennus (löydös 132), pisteinä: kortin ja portin välissä.")]
+        public float kokoruutuSumennusPt = 4f;
         [Tooltip("Kuvasumennuksen häivytys, sekunteja.")]
         public float kuvaHaivytysS = 0.3f;
         [Tooltip("Matkakirja/Sumennus (Rakennus.cs). Ilman sitä portti on vain pieni kuva (renderScale 0,1).")]
@@ -128,9 +134,31 @@ namespace Matkakirja
         /// KUVASUMENNUS (omistajan löydös 19; Natiivi-UI: UiNakymat.KuvaSumeaMuuttui → tämä): kartta mieto sumeaksi
         /// (<see cref="kuvaSumennusPt"/>), kun isoisän tai pulun kuvia on ruudulla — sama keino kuin portin verhossa,
         /// mutta ei täyttöä, pyöritystä eikä merkkien piilotusta; liukuu päälle ja pois <see cref="kuvaHaivytysS"/>.
-        /// Portti voittaa, jos molemmat ovat päällä.
+        /// Portti voittaa, jos molemmat ovat päällä. Yhteensopivuus: tosi = <see cref="KuvaTaso"/> ei ole Ei.
         /// </summary>
-        public static bool KuvaSumea { get; set; }
+        public static bool KuvaSumea
+        {
+            get => KuvaTaso != KuvaSumennus.Ei;
+            set => KuvaTaso = !value ? KuvaSumennus.Ei : KuvaTaso == KuvaSumennus.Ei ? KuvaSumennus.Kortti : KuvaTaso;
+        }
+
+        /// <summary>
+        /// KUVASUMENNUKSEN TASO (löydös 132; Natiivi-UI: UiNakymat.KuvaTasoMuuttui → tämä). Kortti = <see cref="kuvaSumennusPt"/>,
+        /// Kokoruutu = <see cref="kokoruutuSumennusPt"/>. Kokoruudussa, kun sumennus on liukunut täyteen, sumea kuva kaapataan
+        /// kerran (<see cref="Pysaytyskuva"/>) ja pallon kamera sammuu (<see cref="Peitetty"/>, Ruudunpaivitys; lämpö).
+        /// </summary>
+        public static KuvaSumennus KuvaTaso { get; set; }
+
+        /// <summary>
+        /// Kokoruudun pysäytyskuva (sumea pallo jälkikäsittelyn jälkeen, pieni RenderTexture) tai null. UI näyttää sen
+        /// kokoruudun näkymän taustana (scale-and-crop) <see cref="PysaytysValmis"/>-tapahtumasta
+        /// <see cref="PysaytysPoistui"/>-tapahtumaan asti; tekstuuri vapautetaan heti PysaytysPoistuin jälkeen.
+        /// </summary>
+        public static Texture Pysaytyskuva { get; private set; }
+        /// <summary>Pysäytyskuva on valmis ja pallon kamera sammuu tämän kehyksen lopussa.</summary>
+        public static event Action<Texture> PysaytysValmis;
+        /// <summary>Pallon kamera on piirtänyt taas elävän kehyksen: UI irrottaa pysäytyskuvan (ei välähdystä).</summary>
+        public static event Action PysaytysPoistui;
 
         /// <summary>
         /// Linssi auki (LinssiOhjain.Pelikerrokset): kuvasumennus ei koske linssiä. Kerronnan kuvat (KuvaSumea) jäivät
@@ -143,7 +171,8 @@ namespace Matkakirja
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void NollaaPortti()
         {
-            PorttiSumea = false; KuvaSumea = false; LinssiAuki = false; PorttiAikaSeis = false;
+            PorttiSumea = false; KuvaTaso = KuvaSumennus.Ei; LinssiAuki = false; PorttiAikaSeis = false;
+            Pysaytyskuva = null; PysaytysValmis = null; PysaytysPoistui = null;
             siirtoAlku = siirtoKohde = siirtoNyt = Vector2.zero; siirtoT = 1f;
         }
 
@@ -408,7 +437,7 @@ namespace Matkakirja
         void PaivitaPeitto()
         {
             bool p = false;
-            try { p = NakymaPeitetty != null && NakymaPeitetty(); }
+            try { p = pysaytys == Pysaytys.Paalla || NakymaPeitetty != null && NakymaPeitetty(); }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA pallo: peittokysely kaatui: " + e.Message); }
             if (p == Peitetty) return;
             Peitetty = p;
@@ -461,6 +490,7 @@ namespace Matkakirja
         void OnDisable()
         {
             if (Application.isPlaying) PallonLepo.Poista(SumennusLiukuu);
+            PuraPysaytys(true);
             if (Application.isPlaying) EnhancedTouchSupport.Disable();
             // Editorissa URP-asetus on tiedosto: renderScale ei saa jäädä portin arvoon.
             sumennus?.Palauta();
@@ -571,7 +601,9 @@ namespace Matkakirja
             // Sumennuksen tavoite: portti 6 pt, kuvat mieto (löydös 19), muuten pois.
             // Lennon kuvauksessa (vapaaKuvaus, Nappula.Lento) ei kuvasumennusta: sumennus on koko ruudun jälkikäsittely ja
             // sumensi myös koneen, kun lento-alun luenta näytti isoisän kuvan (Laitetestaaja 24.9., iPhone, f6de924).
-            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea && !vapaaKuvaus && !LinssiAuki ? kuvaSumennusPt : 0f;
+            // Kokoruudun kuva (löydös 132) vahvemmin kuin kortti.
+            float kuvaPt = KuvaTaso == KuvaSumennus.Kokoruutu ? kokoruutuSumennusPt : kuvaSumennusPt;
+            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea && !vapaaKuvaus && !LinssiAuki ? kuvaPt : 0f;
             if (tavoite > 0f)
             {
                 sumennus ??= new PalloSumennus(GetComponent<Camera>(), sumennusMateriaali);
@@ -580,12 +612,85 @@ namespace Matkakirja
                 if (!sumennus.Paalla) { sumennus.sumennusPt = tavoite; sumennus.Aseta(true); }
             }
             sumennusLiukuu = false;
+            PaivitaPysaytys(tavoite);
             if (sumennus == null || !sumennus.Paalla) return;
+            // Pysäytyskuva ruudulla: sumennus pysyy täytenä, kunnes elävä kehys on piirretty (PysaytysPoistui).
+            if (pysaytys != Pysaytys.Ei) { sumennusLiukuu = pysaytys != Pysaytys.Paalla; return; }
             float askel = (float)dt / Mathf.Max(0.01f, sumennus.sumennusPt >= porttiSumennusPt ? porttiHaivytysS : kuvaHaivytysS);
             float ennen = sumennus.Osuus;
             sumennus.Osuus += tavoite > 0f ? askel : -askel;
             sumennusLiukuu = sumennus.Osuus != ennen || tavoite <= 0f;
             if (tavoite <= 0f && sumennus.Osuus <= 0f) sumennus.Aseta(false);
+        }
+
+        enum Pysaytys { Ei, Pyydetty, Paalla, Purku }
+        Pysaytys pysaytys;
+        bool purkuPiirretty;
+        float purkuAlku;
+        /// <summary>Purku ei jää odottamaan, jos kamera ei piirrä (muu peitto): pysäytyskuva pois viimeistään tämän jälkeen.</summary>
+        const float PurkuKatto = 0.5f;
+
+        /// <summary>
+        /// KOKORUUDUN PYSÄYTYS (löydös 132, lämpö): Kokoruutu-tasolla täyteen liukunut sumennus kaapataan kerran, sitten
+        /// Peitetty → Ruudunpaivitys sammuttaa kameran. Purku: kamera päälle (Peitetty pois), odotetaan yksi piirretty kehys,
+        /// sitten PysaytysPoistui ja sumennus liukuu pois tavalliseen tapaan.
+        /// </summary>
+        void PaivitaPysaytys(float tavoite)
+        {
+            bool haluaa = !porttiTila && KuvaTaso == KuvaSumennus.Kokoruutu && tavoite > 0f && sumennus != null && sumennus.Paalla
+                          && sumennus.Osuus >= 1f && Mathf.Approximately(sumennus.sumennusPt, kokoruutuSumennusPt);
+            switch (pysaytys)
+            {
+                case Pysaytys.Ei:
+                    if (!haluaa) return;
+                    sumennus.PyydaKaappaus();
+                    pysaytys = Pysaytys.Pyydetty;
+                    Ruudunpaivitys.Herata(0.2f);
+                    return;
+                case Pysaytys.Pyydetty:
+                    if (!haluaa) { sumennus.VapautaKaappaus(); pysaytys = Pysaytys.Ei; return; }
+                    if (!sumennus.Kaapattu || sumennus.Kaappaus == null) { Ruudunpaivitys.Herata(0.2f); return; }
+                    Pysaytyskuva = sumennus.Kaappaus;
+                    pysaytys = Pysaytys.Paalla;
+                    Debug.Log("MATKAKIRJA pallo: kokoruudun pysäytyskuva päällä, kamera pois");
+                    try { PysaytysValmis?.Invoke(Pysaytyskuva); }
+                    catch (Exception e) { Debug.LogException(e); }
+                    return;
+                case Pysaytys.Paalla:
+                    if (haluaa) return;
+                    pysaytys = Pysaytys.Purku;
+                    purkuPiirretty = false;
+                    purkuAlku = Time.unscaledTime;
+                    RenderPipelineManager.endCameraRendering += Piirretty;
+                    Ruudunpaivitys.Herata(0.3f);
+                    return;
+                case Pysaytys.Purku:
+                    if (purkuPiirretty || Time.unscaledTime - purkuAlku > PurkuKatto) PuraPysaytys(false);
+                    else Ruudunpaivitys.Herata(0.2f);
+                    return;
+            }
+        }
+
+        void Piirretty(ScriptableRenderContext _, Camera c)
+        {
+            if (c != null && c.gameObject == gameObject) purkuPiirretty = true;
+        }
+
+        /// <summary>Pysäytyskuva pois ja tekstuuri vapaaksi (heti = OnDisable, ei odoteta kehystä).</summary>
+        void PuraPysaytys(bool heti)
+        {
+            RenderPipelineManager.endCameraRendering -= Piirretty;
+            if (pysaytys == Pysaytys.Ei) return;
+            bool nakyi = Pysaytyskuva != null;
+            pysaytys = Pysaytys.Ei;
+            Pysaytyskuva = null;
+            if (nakyi)
+            {
+                Debug.Log($"MATKAKIRJA pallo: kokoruudun pysäytyskuva pois{(heti ? " (heti)" : purkuPiirretty ? "" : " (katto)")}");
+                try { PysaytysPoistui?.Invoke(); }
+                catch (Exception e) { Debug.LogException(e); }
+            }
+            sumennus?.VapautaKaappaus();
         }
 
         /// <summary>

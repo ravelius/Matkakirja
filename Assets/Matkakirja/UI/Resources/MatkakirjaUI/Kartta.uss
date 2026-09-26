@@ -74,20 +74,34 @@
 
 .mk-kartuscha__nimirivi {
     flex-direction: row;
-    align-items: center;
+    /* Löydös 143: lippu ylimmän nimirivin tasalla (margin-top Kartuscha.TasaaNimirivi), ei kaksirivisen lohkon keskellä. */
+    align-items: flex-start;
+    flex-shrink: 1;
+    max-width: 100%;
 }
 
 /* Web .maapaneeli-nimi-suomi: American Typewriter, puhelimessa 1,3rem / 0,16em, tabletilla 1,9rem / 0,2em. */
 .mk-kartuscha__nimi {
+    /* Löydös 143: pitkä nimi rivittyy sanavälistä kahdelle riville (ei katkaisua eikä ellipsiä). */
+    flex-shrink: 1;
+    white-space: normal;
     font-size: 20.8px;
     letter-spacing: 16.01px; /* web 3.33px */
     color: rgba(58, 40, 25, 0.92);
     text-shadow: 0 0 4px rgb(244, 232, 205);
 }
 
+/* Löydös 141 (omistaja, build 16): pienennetty (kiinni oleva) kartussi oli iPadilla hieman liian iso, iPhonella
+   koko hyvä. Kiinni-tilan tekstit × 0,88 (30,4 → 26,8 ja 16 → 14,1): noin kahdeksasosa pienempi on selvä mutta
+   maltillinen ero (iPadin ruutu on 1,3–1,5 × iPhonen leveys), ja nimi pysyy iPhonen 20,8:aa selvästi isompana.
+   Harvennus on em/100, joten se skaalautuu mukana. Avattu kortti pitää webin koon (ks. .mk-auki alla). */
 .mk-kartuscha--tabletti .mk-kartuscha__nimi {
-    font-size: 30.4px;
+    font-size: 26.8px;
     letter-spacing: 20px; /* web 6.08px */
+}
+
+.mk-kartuscha--tabletti.mk-auki .mk-kartuscha__nimi {
+    font-size: 30.4px;
 }
 
 .mk-kartuscha.mk-auki .mk-kartuscha__nimi,
@@ -132,7 +146,7 @@
 }
 
 .mk-kartuscha--tabletti .mk-kartuscha__alarivi {
-    font-size: 16px;
+    font-size: 14.1px; /* löydös 141: 16 × 0,88 (alarivi näkyy vain kiinni) */
     letter-spacing: 8.12px; /* web 1.3px */
 }
 
@@ -178,6 +192,37 @@
 
 .mk-kartuscha__tilastot.mk-sijat-auki .mk-kartuscha__sija {
     display: flex;
+}
+
+/* Löydös 142 (omistaja, build 16): vertailupalkki rivin oikeassa reunassa. Kiinteä raita (pisteviiva, sama muste kuin
+   aiheiden alleviivauksissa), jonka päällä täyte = osuus ykkössijasta; palkit ovat samassa sarakkeessa radion kanssa.
+   Kasvuanimaatio Kartuscha.AnimoiVertailut (scale-x, transform-origin vasen). */
+.mk-kartuscha__vertailu {
+    flex-shrink: 0;
+    width: 56px;
+    height: 3px;
+    margin-left: auto;
+}
+
+.mk-kartuscha--tabletti .mk-kartuscha__vertailu {
+    width: 72px;
+}
+
+.mk-kartuscha__vertailuraita {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px;
+    height: 1px;
+    color: rgba(74, 52, 33, 0.45);
+}
+
+.mk-kartuscha__vertailupalkki {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    background-color: rgba(58, 40, 25, 0.62);
 }
 
 .mk-kartuscha__nyt {
@@ -873,19 +918,9 @@
     background-color: rgba(18, 12, 4, 0.3);
 }
 
-/* E3: kuvaton kortti ja lisäkaupunki napautuspisteen vieressä ilman himmennystä (web .fokuskohde-popup:
- * kartta näkyy). Vapaa = kortti absoluuttisena (ankkuroitu tai raahattu), kerroksessa ei täytettä. */
-.mk-nosto__kerros--ankkuroitu {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.mk-nosto__kerros--vapaa {
-    padding: 0;
-}
-
 .mk-nosto {
     width: 100%;
-    max-width: 544px;
+    max-width: 544px; /* vara ennen ensimmäistä asettelua; leveys koodista (Nostokortti.Mitoita, löydökset 130/135) */
     max-height: 88%;
     /* Web .fokuskohde-popup: täyte 13,6 / 15,2 / 15,2 px molemmissa vaiheissa (mitattu 24.9. b11). */
     padding: 13.6px 15.2px 15.2px 15.2px;
@@ -896,61 +931,35 @@
     color: #211d18;
 }
 
-.mk-nosto--kohde {
-    max-width: 384px;
-}
-
+/* Löydös 135: kohde ja skandaali samaan kokoon kuin muut (leveys koodista, Nostokortti.Mitoita); skandaalilla vain tyyli. */
 .mk-nosto--looppi {
-    max-width: 640px;
     background-color: #f6ecc6;
     border-color: rgba(122, 85, 20, 0.45);
-}
-
-.mk-nosto--esittely {
-    max-width: 760px;
 }
 
 .mk-nosto__sisus {
     flex-shrink: 1;
 }
 
-/* Kaiutin sulkuruksin vasemmalla puolella (web: otsikkorivin oikea reuna). */
+/* Löydös 133 (omistaja, build 16): ei ✕-nappia; kaiutin ylärivin oikeassa päässä (web: otsikkorivin oikea reuna).
+   34 × 34 -nappi ei korota 16,3 pt:n riviä (negatiiviset pystymarginaalit). */
 .mk-nosto__lukija {
-    position: absolute;
-    top: 4px;
-    right: 40px;
-}
-
-.mk-nosto__sulje {
-    /* E4 (web .fokuskohde-sulje): ✕ 1rem, 30 × 30, reuna ja vaalea pohja, top 0,3rem, right 0,35rem. */
-    position: absolute;
-    top: 4.8px;
-    right: 5.6px;
-    width: 30px;
-    height: 30px;
-    min-height: 30px;
-    padding: 0;
-    border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.3);
-    border-radius: 6px;
-    background-color: rgba(245, 240, 226, 0.86);
-    color: rgba(33, 29, 24, 0.7);
-    align-items: center;
-    justify-content: center;
-}
-
-.mk-nosto__sulje .mk-ikoni {
-    width: 24px;
-    height: 24px;
-    --mk-ikoni-viiva: 1.3;
+    margin: -9px -6px -9px auto;
+    flex-shrink: 0;
 }
 
 .mk-nosto__ylarivi {
-    /* Web .fokuskohde-ylarivi: American Typewriter 10,88 px, harvennus 1,52 px, #7a5514, alla 1,92 px. */
+    /* Web .fokuskohde-ylarivi: American Typewriter 10,88 px, harvennus 1,52 px, #7a5514, alla 1,92 px.
+       Löydös 133: oikealla ei enää ✕:n varausta (40 px). */
     font-size: 10.88px;
     letter-spacing: 13.97px; /* web 1.52px */
     color: #7a5514;
-    margin: 2px 40px 1.92px 0;
+    margin: 2px 0 1.92px 0;
+}
+
+.mk-nosto__ylarivi-teksti {
+    flex-shrink: 1;
+    white-space: normal;
 }
 
 .mk-nosto__nimio {
@@ -980,13 +989,13 @@
 .mk-nosto__otsikko {
     font-size: 20px;
     white-space: normal;
-    margin: 0 30px 6px 0;
+    margin: 0 0 6px 0; /* löydös 133: ei ✕:n varausta */
     color: #16130f;
 }
 
 .mk-nosto__otsikko--kohde {
     font-size: 16.32px;
-    margin: 0 32px 7.2px 0;
+    margin: 0 0 7.2px 0; /* löydös 133: ei ✕:n varausta */
     color: #211d18;
 }
 
@@ -1027,6 +1036,11 @@
     border-radius: 6px;
     overflow: hidden;
     background-color: rgba(70, 51, 31, 0.1);
+}
+
+/* Löydös 130: kehys kuvan omassa muodossa korkeuskattoon asti; katetun kuvan sivuilla kortin paperi, ei sävyä. */
+.mk-nosto__kuvakehys--ladattu {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .mk-nosto__kuva {
@@ -1691,20 +1705,29 @@
     height: 18px;
 }
 
+/* Löydös 125 (web piirraNostosymMiniCanvas): pistemerkin harmaa häive 2,1 r ja vaalea sisus yhtenä kuvana
+ * (Kartta/NostoHehku, peitot jo lineaarisina); musterengas päällä. Väri vain karttaselitteen valossa. */
+.mk-nosto-merkki__hehku {
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+/* Web .nostosym-mini rgba(58, 40, 25, 0,86): musterengas ja viivamerkin runko. Peitto lineaariseen sekoitukseen
+ * korjattuna (NimiLadonta.LineaarinenAlfa pergamentilla: 0,86 → 0,95), kuten nimikerroksen värit. */
 .mk-nosto-merkki__rengas {
-    color: #4b3a1c;
+    color: rgb(58, 40, 25);
+    opacity: 0.95;
 }
 
-/* Web NOSTOSYM_PISTE_HARMAA #6f6a61, kiekon peitto 0,86 (css 25420); väri vain karttaselitteen valossa. */
-.mk-nosto-merkki__kiekko {
-    color: #6f6a61;
-    opacity: 0.86;
-}
-
-/* Web vektori-ikonit (vuori, aalto, tassu, huutomerkki, ruusu) musteella. */
+/* Web viivamerkit (vuori, aalto, salama, tassu, ruusu) musteella, ei aiheväriä. */
 .mk-nosto-merkki__vektori {
     color: rgb(58, 40, 25);
-    opacity: 0.86;
+    opacity: 0.95;
+}
+
+/* Web .nostosym-mini-ohut rgba(58, 40, 25, 0,52): aallon alempi veto (lineaarisena 0,72). */
+.mk-nosto-merkki__vektori-ohut {
+    color: rgb(58, 40, 25);
+    opacity: 0.72;
 }
 
 /* Ryhmämerkki (web css .pallolauta-aihemerkki-pohja/-lautanen/-keha): levy r 3,4 px ilman sisäsymbolia. */
@@ -1724,22 +1747,28 @@
 }
 
 /* Web .nostosym-nimio: --font-atlas (Liberation Serif) kursiivi, rgba(74, 52, 33, 0,92), ei haloa, ei harvennusta;
- * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). */
+ * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). Löydös 125: peitto lineaarisena 0,97 ja
+ * SDF-reunan vahvistus samalla musteella asetetaan C#:ssa (NostotKartalla.AsetaMuste, NostoKerros.NimionReuna*). */
 .mk-nosto-merkki__nimio {
     position: absolute;
     font-size: 8.5px;
     white-space: nowrap;
     padding: 0;
     margin: 0;
-    color: rgb(74, 52, 33);
+    color: rgba(74, 52, 33, 0.97);
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.18s;
 }
 
-/* Web NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98). */
+/* Web NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98) (lineaarisena 1,0). */
 .mk-nosto-merkki__nimio--taso1 {
     color: rgb(46, 30, 14);
+}
+
+/* Web .nostosym-nimio-meri: versaali, harvennus 0,28 em (C#), rgba(120, 108, 84, 0,72) (merellä lineaarisena 0,8). */
+.mk-nosto-merkki__nimio--meri {
+    color: rgba(120, 108, 84, 0.8);
 }
 
 /* Viuhka (web .pallolauta-viuhka-pohja, VIUHKAN_POHJAN_VYOT): kehyksetön paperipohja, reuna pehmennetty
@@ -1810,30 +1839,6 @@
     color: rgb(88, 70, 51);
 }
 
-/* Nostokortin kaksipalstataitto ≥ 1100 pt (web css/fokusnosto.css osio 13, mitattu 24.9. b12 1194 × 834 ja
-   1366 × 1024): kuvapalsta (kuva ja kuvateksti) vasemmalla, tekstipalsta oikealla, väli 1,5 rem, palstat alkavat
-   samalta yläreunalta (align-items flex-start). Kuvapalstan leveys tulee koodista (Nostokortti.MitoitaKuvapalsta). */
-.mk-nosto__rivi {
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.mk-nosto__kuvapalsta {
-    flex-shrink: 0;
-    margin-right: 24px;
-}
-
-.mk-nosto__kuvapalsta > .mk-nosto__kuvasarja {
-    margin-top: 0;
-}
-
-.mk-nosto__tekstipalsta {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
-    min-width: 0;
-}
-
 /* Lyhyt kuvateksti kotelona (Nostokortti.Kuvateksti): rivi rivittyy ja keskittyy kuten webin text-align center. */
 .mk-nosto__kuvateksti--kotelo {
     flex-direction: row;
@@ -1887,4 +1892,43 @@
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
+}
+
+/* Löydös 150 (omistaja build 16, Fablen linjaus A): noston kuva kokoruudulle — tumma tausta, ei kehystä, ei
+ * kuvatekstiä eikä lähderiviä (138:n linja; tekijärivi jää korttiin), kuva reunasta reunaan (Kuvasuurennos.Kokoruutu). */
+.mk-nosto__suurennos.mk-suurennos--kokoruutu {
+    padding: 0;
+    /* Löydös 132: tummennus 0,6, jotta sumennettu tausta näkyy (omistaja: pehmennetään ja tummennetaan). */
+    background-color: rgba(10, 7, 4, 0.6);
+}
+
+/* Löydös 132: pallon pysäytyskuva kokoruudun taustana, tummennettuna sävyllä (lapsi piirtyy kerroksen värin päälle). */
+.mk-suurennos__pysaytys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(102, 96, 88);
+}
+
+.mk-suurennos--kokoruutu .mk-nosto__suurennoskehys {
+    width: auto;
+    max-width: none;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+}
+
+.mk-suurennos--kokoruutu .mk-nosto__suurennoskuva {
+    max-height: none;
+}
+
+.mk-suurennos--kokoruutu .mk-nosto__suurennosteksti,
+.mk-suurennos--kokoruutu .mk-nosto__lahde,
+.mk-suurennos--kokoruutu .mk-reaktiot--suurennos {
+    display: none;
 }

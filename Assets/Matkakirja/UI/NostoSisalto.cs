@@ -197,6 +197,45 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA ui nostot: kuvat esiladataan {suuri} ({ensin.Count} + {galleria.Count})");
         }
 
+        /// <summary>
+        /// SAVUKEVARTIJA "NOSTOKUVA NÄKYY" (löydös 149, Laitetestaajalle; komento `nostokuvat ISO [max]`): maan karttanostot
+        /// yksi kerrallaan kuten kortti ne avaa (Hae → ensimmäinen kuva HaeKuva-reitillä), jokaisen kuvan tulos ja aika.
+        /// Kirjoittaa Documents/nostokuvat.txt ja palauttaa yhteenvedon: "RAJA nostokuva näkyy: PASS|FAIL (näkyy/kuvallisia)".
+        /// </summary>
+        public static IEnumerator TarkistaKuvat(string iso, int enintaan, Action<string> valmis)
+        {
+            string suuri = (iso ?? "").ToUpperInvariant();
+            yield return ValojenMaat();
+            var idt = valot == null ? new List<string>()
+                : valot.Where(v => string.Equals(v.Value.Maa, suuri, StringComparison.OrdinalIgnoreCase)).Select(v => v.Key).OrderBy(x => x, StringComparer.Ordinal).Take(enintaan).ToList();
+            var rivit = new List<string>();
+            int kuvallisia = 0, nakyy = 0;
+            foreach (var id in idt)
+            {
+                Nosto n = null;
+                yield return Hae(id, x => n = x);
+                var lahde = n?.Kuvat.FirstOrDefault(k => !string.IsNullOrEmpty(k?.Lahde))?.Lahde;
+                if (lahde == null) { rivit.Add($"-\t{id}\t(ei kuvaa)"); continue; }
+                kuvallisia++;
+                Texture2D t = null;
+                bool saatu = false;
+                float alku = Time.realtimeSinceStartup;
+                HaeKuva(lahde, x => { t = x; saatu = true; });
+                while (!saatu && Time.realtimeSinceStartup - alku < 30f) yield return null;
+                float ms = (Time.realtimeSinceStartup - alku) * 1000f;
+                bool ok = t != null;
+                if (ok) nakyy++;
+                rivit.Add($"{(ok ? "OK" : saatu ? "PUUTTUU" : "AIKARAJA")}\t{id}\t{ms:0} ms\t{lahde}\t{KuvanOsoite(lahde)}");
+            }
+            string yhteenveto = $"nostokuvat {suuri}: {idt.Count} nostoa, kuvallisia {kuvallisia}, näkyy {nakyy}, puuttuu {kuvallisia - nakyy}; "
+                              + $"RAJA nostokuva näkyy: {(kuvallisia > 0 && nakyy == kuvallisia ? "PASS" : "FAIL")} ({nakyy}/{kuvallisia})";
+            try { System.IO.File.WriteAllLines(System.IO.Path.Combine(Application.persistentDataPath, "nostokuvat.txt"), new[] { yhteenveto }.Concat(rivit)); }
+            catch (System.IO.IOException) { }
+            Debug.Log("MATKAKIRJA ui " + yhteenveto);
+            foreach (var r in rivit.Where(r => !r.StartsWith("OK") && !r.StartsWith("-"))) Debug.Log("MATKAKIRJA ui nostokuva puuttuu: " + r);
+            valmis?.Invoke(yhteenveto);
+        }
+
         static string KuvanOsoite(string lahde) =>
             lahde.StartsWith("http") ? lahde : media != null && media.TryGetValue(lahde, out var url) ? url : lahde;
 
@@ -903,7 +942,11 @@ namespace Matkakirja.Natiivi
                     return m;
                 }).ContinueWith(tt => UiKerros.PaaSaikeessa(() =>
                 {
-                    media = tt.Result ?? new Dictionary<string, string>();
+                    // Löydös 149: epäonnistunut haku (t == null: verkko, 404) EI jää muistiin tyhjänä tauluna — ennen
+                    // se esti paketin omat nostokuvat (hetket, eläimet) koko istunnon ajan. Odottajat saavat nyt
+                    // tyhjän taulun tälle kerralle, ja seuraava kuva hakee media.json:n uudelleen.
+                    if (t != null) media = tt.Result ?? new Dictionary<string, string>();
+                    else Debug.LogWarning("MATKAKIRJA ui nostot: media.json ei latautunut (yritetään seuraavalla kuvalla)");
                     mediaHaussa = false;
                     var o = mediaOdottajat.ToList();
                     mediaOdottajat.Clear();

@@ -367,8 +367,10 @@ namespace Matkakirja.Natiivi
                 {
                     try
                     {
+                        // Löydös 149: atominen kirjoitus (väliaikainen + siirto), ettei rinnakkainen luku (Hae ja
+                        // HaePienena samasta kuvasta) pura puolikasta tiedostoa.
                         Directory.CreateDirectory(Path.GetDirectoryName(levy));
-                        File.WriteAllBytes(levy, tavut);
+                        KirjoitaAtomisesti(levy, tavut);
                     }
                     catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
                 });
@@ -392,6 +394,15 @@ namespace Matkakirja.Natiivi
                 kesken.Remove(avain);
                 foreach (var o in odottajat) { try { o?.Invoke(tulos); } catch (Exception e) { Debug.LogException(e); } }
             }
+        }
+
+        /// <summary>Väliaikainen (.esi, levysiivous ei koske) + siirto; jos kuva ehti jo levylle, väliaikainen pois.</summary>
+        static void KirjoitaAtomisesti(string levy, byte[] tavut)
+        {
+            var valiaikainen = levy + "." + System.Threading.Thread.CurrentThread.ManagedThreadId + ".esi";
+            File.WriteAllBytes(valiaikainen, tavut);
+            try { if (File.Exists(levy)) File.Delete(valiaikainen); else File.Move(valiaikainen, levy); }
+            catch (IOException) { try { File.Delete(valiaikainen); } catch (IOException) { } }
         }
 
         static bool OnWebpOsoite(string url) => url != null && url.Split('?')[0].EndsWith(".webp", StringComparison.OrdinalIgnoreCase);
@@ -449,7 +460,7 @@ namespace Matkakirja.Natiivi
             if (verkosta)
                 System.Threading.Tasks.Task.Run(() =>
                 {
-                    try { Directory.CreateDirectory(Path.GetDirectoryName(levy)); File.WriteAllBytes(levy, tavut); }
+                    try { Directory.CreateDirectory(Path.GetDirectoryName(levy)); KirjoitaAtomisesti(levy, tavut); }
                     catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
                 });
             valmis(Nimea(t, avain));
