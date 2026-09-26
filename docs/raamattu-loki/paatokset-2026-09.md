@@ -7663,3 +7663,7 @@ Julkaisija: Fablen docs (loki, raportit, kaappaukset) mainissa #3356; Raamattu, 
 ## OMISTAJA (SITOVA): ESIMERKKIKUVIIN KULMA JA VERSIO MERKITTYNA SUORAAN KUVAAN (27.9.2026 klo 00.20)
 
 Omistaja 27.9.2026 klo 00.2x: esimerkki- ja vertailukuviin merkitaan jatkossa suoraan kuvaan, mista kulmasta on kuvattu ja mika versio/vaihtoehto on kyseessa (ennen/jalkeen, A/B, 35/45 %), niin ettei tarvitse tulkita erillisesta tekstista. Kirjattu Raamattuun (JOHTOAJATUS, OMISTAJALLE TOIMITETTAVAT ESIMERKKIKUVAT) Raamattu-PR:ssa; kaikille rooleille.
+
+## XAI GROK TTS KOKEILTU SUOMEKSI: TOIMII, ENSIMMAINEN TAVU 0,16–0,39 s (27.9.2026 klo 00.22)
+
+Fable ajoi 27.9. klo 00.2x Livian repliikin xAI:n REST-rajapinnalla (POST /v1/tts; aanet eve, ara, aurora; language auto ja fi — fi hyvaksyttiin vaikka ei tuettujen listalla): kaikki 200, ensimmainen tavu 0,16–0,39 s, koko 6 s lause 1,3–1,9 s, mp3 24 kHz 128 kbps; hinta 4,20 $/M merkkia. Naytteet lahetetty omistajalle kuunneltavaksi (luontevuus omistajan korvalle); Pelikoodari vie ne ampariin ja raporttiin. Aiempi 400-virhe oli kuoren lainausvirhe, ei avaimen.
