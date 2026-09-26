@@ -1,0 +1,182 @@
+[
+  {
+    "filename": "cupola-keski-2048.png",
+    "objectKey": "karttanostot/20260926/iss-cupola-keski-2048.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260926/iss-cupola-keski-2048.png",
+    "width": 2048,
+    "height": 2048,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "sha256": "29c9ed3602e395e21f959478d49771ae93322dfe1a3f75dc13c9a3b9efafd24b",
+    "bytes": 2862232,
+    "http": 200,
+    "cors": true,
+    "lahde": [
+      {
+        "nasa_id": "iss035e010551",
+        "url": "https://images.nasa.gov/details/iss035e010551"
+      },
+      {
+        "nasa_id": "iss038e013587",
+        "url": "https://images.nasa.gov/details/iss038e013587"
+      },
+      {
+        "nasa_id": "iss022e066972",
+        "url": "https://images.nasa.gov/details/iss022e066972"
+      }
+    ],
+    "qa": "visual compositing and byte-exact public R2 readback passed"
+  },
+  {
+    "filename": "cupola-keski-1024.png",
+    "objectKey": "karttanostot/20260926/iss-cupola-keski-1024.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260926/iss-cupola-keski-1024.png",
+    "width": 1024,
+    "height": 1024,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "sha256": "99385c44521b992643a3709e30f81472960d09f6b3c8489632ede565166b4f50",
+    "bytes": 900676,
+    "http": 200,
+    "cors": true,
+    "lahde": [
+      {
+        "nasa_id": "iss035e010551",
+        "url": "https://images.nasa.gov/details/iss035e010551"
+      },
+      {
+        "nasa_id": "iss038e013587",
+        "url": "https://images.nasa.gov/details/iss038e013587"
+      },
+      {
+        "nasa_id": "iss022e066972",
+        "url": "https://images.nasa.gov/details/iss022e066972"
+      }
+    ],
+    "qa": "visual compositing and byte-exact public R2 readback passed"
+  },
+  {
+    "filename": "cupola-kokonainen-ipad-1536x2732.png",
+    "objectKey": "karttanostot/20260926/iss-cupola-kokonainen-ipad-1536x2732.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260926/iss-cupola-kokonainen-ipad-1536x2732.png",
+    "width": 1536,
+    "height": 2732,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "sha256": "2bd40a41934128bc2c2ef31031d12732594bf35f2b8d6f0a3b85f040c4e537f6",
+    "bytes": 4163275,
+    "http": 200,
+    "cors": true,
+    "lahde": [
+      {
+        "nasa_id": "iss035e010551",
+        "url": "https://images.nasa.gov/details/iss035e010551"
+      },
+      {
+        "nasa_id": "iss038e013587",
+        "url": "https://images.nasa.gov/details/iss038e013587"
+      },
+      {
+        "nasa_id": "iss022e066972",
+        "url": "https://images.nasa.gov/details/iss022e066972"
+      }
+    ],
+    "qa": "visual compositing and byte-exact public R2 readback passed"
+  },
+  {
+    "filename": "cupola-kokonainen-iphone-1206x2622.png",
+    "objectKey": "karttanostot/20260926/iss-cupola-kokonainen-iphone-1206x2622.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260926/iss-cupola-kokonainen-iphone-1206x2622.png",
+    "width": 1206,
+    "height": 2622,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "sha256": "3784acf46976b5df4c641bf064eca1e238ae096e55bfe0a6a9c8d6b22e40106e",
+    "bytes": 3119109,
+    "http": 200,
+    "cors": true,
+    "lahde": [
+      {
+        "nasa_id": "iss035e010551",
+        "url": "https://images.nasa.gov/details/iss035e010551"
+      },
+      {
+        "nasa_id": "iss038e013587",
+        "url": "https://images.nasa.gov/details/iss038e013587"
+      },
+      {
+        "nasa_id": "iss022e066972",
+        "url": "https://images.nasa.gov/details/iss022e066972"
+      }
+    ],
+    "qa": "visual compositing and byte-exact public R2 readback passed"
+  },
+  {
+    "filename": "cupola-heijastus-ipad-1536x2732.png",
+    "objectKey": "karttanostot/20260926/iss-cupola-heijastus-ipad-1536x2732.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260926/iss-cupola-heijastus-ipad-1536x2732.png",
+    "width": 1536,
+    "height": 2732,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "sha256": "c19107d378bd568de986ca4a6289b29d6ecc6336ebdc38b3d20fadbc9e49be33",
+    "bytes": 99561,
+    "http": 200,
+    "cors": true,
+    "lahde": [
+      {
+        "nasa_id": "iss035e010551",
+        "url": "https://images.nasa.gov/details/iss035e010551"
+      },
+      {
+        "nasa_id": "iss038e013587",
+        "url": "https://images.nasa.gov/details/iss038e013587"
+      },
+      {
+        "nasa_id": "iss022e066972",
+        "url": "https://images.nasa.gov/details/iss022e066972"
+      }
+    ],
+    "qa": "visual compositing and byte-exact public R2 readback passed"
+  },
+  {
+    "filename": "cupola-heijastus-iphone-1206x2622.png",
+    "objectKey": "karttanostot/20260926/iss-cupola-heijastus-iphone-1206x2622.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260926/iss-cupola-heijastus-iphone-1206x2622.png",
+    "width": 1206,
+    "height": 2622,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "sha256": "6f51310f138e128073d65271a3d558c60e29a4b51358da5e8257ccec3ca96917",
+    "bytes": 44689,
+    "http": 200,
+    "cors": true,
+    "lahde": [
+      {
+        "nasa_id": "iss035e010551",
+        "url": "https://images.nasa.gov/details/iss035e010551"
+      },
+      {
+        "nasa_id": "iss038e013587",
+        "url": "https://images.nasa.gov/details/iss038e013587"
+      },
+      {
+        "nasa_id": "iss022e066972",
+        "url": "https://images.nasa.gov/details/iss022e066972"
+      }
+    ],
+    "qa": "visual compositing and byte-exact public R2 readback passed"
+  }
+]
