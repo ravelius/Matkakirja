@@ -974,7 +974,6 @@ const MODULES = [
   'js/packs/maakunnat-luonnehdinnat.js',
   'js/packs/maakunnat-pulu.js',
   'js/packs/maakunnat-nimet.js',
-  'js/packs/nostojen-kokoluokat.js',
   'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
