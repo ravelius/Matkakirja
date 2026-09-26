@@ -7331,3 +7331,7 @@ Natiiviseppa: mallit vasta kertoimesta 2,5 JA kallistuksesta ≥ 25° (hysterees
 ## OMISTAJA HYVAKSYI 172 JA PARIISIN ILMAPALLON 1.0.26:EEN; 170 EUROOPPA PR 3343 (26.9.2026 klo 20.13)
 
 Kortti 20.2x: 172 (kone lahikuvassa vaakasuorassa 10 km, kaari ≤ 150 km) HYVAKSYTTY → junassa 99e01a78; Pariisin ilmapallo (kokeilu 3, 536 kolmiota, 30 fps, 26 s jakso) HYVAKSYTTY 1.0.26:een pelikokeiluun (merge-pyynto 89e921be Natiivisepalla). Kuvaparit proto-3d/lokit/linssiseppa-lento-172-jalkeen/ ja linssiseppa-ilmapallo-20260926-b/. Sisaltokirjuri: 170 Eurooppa valmis PR #3343 v2278, 26/27 Commons-kuvaa (IRL ouzel-galleyn-mysteeri ilman lisenssikelpoista kuvaa → havainnekuva myohemmin), testit 4423; jatkaa maakunta-era 2 (HUN/SWE/NOR/IRL). Linssiseppa seuraavaksi ISS-kaukonakyman kuvapari, sitten Venetsian gondolit.
+
+## 175 TYYLIOHJE (LINSSISEPPA → NATIIVISEPPA) (26.9.2026 klo 20.14)
+
+Harmaat karkivarit lammitetaan pergamentiksi samalla valoisuudella; paletti 160:n mukainen, yksi aksentti, saturaatio ≤ 0,35; katto vaalenee ja kyljet tummuvat (muoto erottuu ylhaalta), kaiverrusreuna ohuempi; loytamaton seepiaa 15 % kohti paperia, alfa 0,9, ei aksenttia; pehmea maapohja kuten elavissa elementeissa; koko ≤ 2,5 × kaupunkinimion fonttikoko (~40 pt). Viitekuva Pariisin ilmapallon kuvapari.
