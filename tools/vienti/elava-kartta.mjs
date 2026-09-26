@@ -19,12 +19,26 @@
  *                           (js/packs/maakuntasalaisuudet.js, Sisältökirjuri; avaimet
  *                           MAAKUNNAT_KAIKKI-avaimia, esim. 'GRC:Attiki').
  */
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { NOSTOJEN_KOKOLUOKAT } from '../../js/packs/nostojen-kokoluokat.js';
+import { kohteenKategoria } from '../../js/fokuskohteet.js';
+import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
+import { maakunnanNimi } from '../../js/karttatyokalu-maakunnat.js';
 
 const SALAISUUDET = new URL('../../js/packs/maakuntasalaisuudet.js', import.meta.url);
 // Tiedosto tulee Sisältökirjurilta; puuttuessa jokainen salaisuus on null.
 const MAAKUNTASALAISUUDET = existsSync(SALAISUUDET) ? ((await import(SALAISUUDET.href)).MAAKUNTASALAISUUDET ?? {}) : {};
+/*
+ * Skeema 1.47 (Pelikoodari 26.9.): salaisuus-nostojen sisältö maittain js/packs/maakuntasalaisuudet-<iso>.js
+ * (MAAKUNTASALAISUUDET_<ISO> = { 'nosto:<tunnus>': { maakunta, nimi, tyyppi, lat, lng, lyhyt, teksti, nappi, lahde } }).
+ */
+const PAKIT = new URL('../../js/packs/', import.meta.url);
+const SALAISUUKSIEN_SISALTO = {};
+for (const f of readdirSync(PAKIT).filter((n) => /^maakuntasalaisuudet-[a-z]{3}\.js$/.test(n)).sort()) {
+  for (const [nimi, arvo] of Object.entries(await import(new URL(f, PAKIT).href))) {
+    if (nimi.startsWith('MAAKUNTASALAISUUDET_')) Object.assign(SALAISUUKSIEN_SISALTO, arvo);
+  }
+}
 const TASON_KOKOLUOKKA = { 1: 'paakohde', 2: 'kohde', 3: 'pieni' };
 
 function renkaissa(renkaat, lon, lat) {
@@ -92,6 +106,31 @@ export function rikastaElavaKartta(kokoelmat) {
     + '(kokoluokkaLahde data = js/packs/nostojen-kokoluokat.js, taso = taso 1/2/3), maakunta = maakuntarajojen alue, jossa valon '
     + `piste on (maakuntaLahde sisalla | lahin = lähin saman maan alue ≤ ${LAHIN_KM} km; meri ei saa maakuntaa; null = ei maakuntaa).`;
   kokoelmat.maakuntarajat.kuvaus += ' Skeema 1.45: salaisuus = maakunnan salaisuus-noston karttavalo-id (js/packs/maakuntasalaisuudet.js) tai null.';
+  /*
+   * 1.47: salaisuus-nosto omana karttavalorivinään (Pelikoodari: natiivin ei tarvitse jäsentää maakuntarajoja yhden
+   * viitteen takia). salaisuus = true, aina paakohde, piilossa kunnes maakunnan kaikki nostot on löydetty (natiivi).
+   */
+  for (const v of kokoelmat.karttavalot.alkiot) v.salaisuus = false;
+  const alueNimet = new Map(alueet.map((a) => [a.id, a.nimi]));
+  for (const [maakunta, avain] of Object.entries(MAAKUNTASALAISUUDET)) {
+    const s = SALAISUUKSIEN_SISALTO[avain];
+    if (!s || !Number.isFinite(s.lat) || !Number.isFinite(s.lng)) continue;
+    const iso = maakunta.split(':')[0];
+    const tunnus = avain.replace(/^nosto:/, '');
+    const kategoria = kohteenKategoria({ tyyppi: s.tyyppi }) ?? 'historia';
+    kokoelmat.karttavalot.alkiot.push({
+      ankkuri: null, puoli: null, id: `salaisuus:${tunnus}`, tunnus, aihe: nostosymPaakategoria(kategoria), kategoria,
+      laji: s.tyyppi ?? null, nimi: s.nimi, nimio: s.nimio ?? null, lat: s.lat, lon: s.lng, ladottu: null, maa: iso,
+      kaupunki: null, kaupunkiAvain: null, tarkeys: 1, taso: 1, lahizoom: false, paakartalla: true, kohdekartta: null,
+      paikka: alueNimet.get(maakunta) ?? maakunnanNimi(iso, maakunta.slice(iso.length + 1)), paikkaLahde: 'alue',
+      lahde: 'maakuntasalaisuus', kokoluokka: 'paakohde', kokoluokkaLahde: 'data', maakunta, maakuntaLahde: 'data',
+      salaisuus: true, lyhyt: s.lyhyt ?? null, teksti: s.teksti ?? null, nappi: s.nappi ?? null, viite: s.lahde ?? null,
+    });
+  }
+  kokoelmat.karttavalot.kuvaus += ' Skeema 1.47: salaisuus = true maakunnan salaisuus-nostolle (lahde maakuntasalaisuus, '
+    + 'id salaisuus:<tunnus>, aina paakohde, maakunta annettu, nimio datan oma ≤ 18 merkkiä tai null; lyhyt = Livian repliikki, teksti, nappi = 1873-alaotsikko, '
+    + 'viite = lähdeteksti; js/packs/maakuntasalaisuudet-<iso>.js). Natiivi piilottaa sen, kunnes maakunnan kaikki nostot on löydetty. '
+    + 'Muilla riveillä salaisuus = false.';
   const valot = new Map(kokoelmat.karttavalot.alkiot.map((v) => [v.tunnus, v.id]));
   for (const a of alueet) {
     const tunnus = MAAKUNTASALAISUUDET[a.id];

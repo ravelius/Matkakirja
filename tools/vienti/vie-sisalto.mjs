@@ -197,8 +197,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        karttavalot.maakunta (+ maakuntaLahde) ja maakuntarajat.salaisuus. Vain natiivi.
  *   1.46 kokoelma reitit1873: vuoden 1873 laivalinjat ja rautatiet (Karttaseppä #3266, tools/vienti/reitit1873.mjs),
  *        juuressa lahteet. Elävä kartta, vain natiivi.
+ *   1.47 karttavalot.salaisuus: maakunnan salaisuus-nosto omana rivinään (lahde maakuntasalaisuus, lyhyt, teksti, nappi,
+ *        viite) — Pelikoodari 26.9.2026, Elävä kartta.
  */
-export const SKEEMAVERSIO_TARKKA = '1.46';
+export const SKEEMAVERSIO_TARKKA = '1.47';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

@@ -752,7 +752,7 @@ test('skeema 1.24: karttavalot = webin pallon nostokerros (maanKohdemerkit), nim
   const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
   for (const iso of ['GRC', 'FRA', 'GBR']) {
     const odotus = maanKohdemerkit(P, iso, FOKUS_POHJAT[iso], () => false).filter((m) => nostosymPaakategoria(m.kategoria));
-    const omat = valot.filter((v) => v.maa === iso && v.paakartalla && !['elaintaky', 'napakohde'].includes(v.lahde));
+    const omat = valot.filter((v) => v.maa === iso && v.paakartalla && !['elaintaky', 'napakohde', 'maakuntasalaisuus'].includes(v.lahde));
     assert.deepEqual(omat.map((v) => v.tunnus), odotus.map((m) => m.id), iso);
     assert.deepEqual(omat.map((v) => v.aihe), odotus.map((m) => nostosymPaakategoria(m.kategoria)), iso);
   }
@@ -1453,5 +1453,20 @@ test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () =>
     assert.ok(r.viivat.length && r.viivat.every((v) => v.length >= 2 && v.every(([lon, lat]) => Math.abs(lon) <= 180 && Math.abs(lat) <= 90)), r.id);
   }
   assert.ok(k.alkiot.some((r) => r.laji === 'laiva') && k.alkiot.some((r) => r.laji === 'rautatie'));
+});
+
+test('skeema 1.47: maakuntasalaisuudet karttavaloina (Pelikoodari)', async () => {
+  const { MAAKUNTASALAISUUDET } = await import('../js/packs/maakuntasalaisuudet.js');
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  const salaiset = valot.filter((v) => v.salaisuus === true);
+  assert.equal(salaiset.length, Object.keys(MAAKUNTASALAISUUDET).length);
+  assert.ok(valot.every((v) => typeof v.salaisuus === 'boolean'));
+  for (const v of salaiset) {
+    assert.ok(v.id.startsWith('salaisuus:') && v.kokoluokka === 'paakohde' && v.lahde === 'maakuntasalaisuus', v.id);
+    assert.ok(v.maakunta && v.teksti && v.lyhyt && Number.isFinite(v.lat) && Number.isFinite(v.lon) && v.aihe, v.id);
+    assert.equal(MAAKUNTASALAISUUDET[v.maakunta], `nosto:${v.tunnus}`);
+  }
+  const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
+  assert.equal(rajat.find((a) => a.id === 'GRC:Attiki').salaisuus, 'salaisuus:salaisuus-eleusiin-mysteerit');
 });
 
