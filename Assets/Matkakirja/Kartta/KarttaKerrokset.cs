@@ -1212,6 +1212,10 @@ namespace Matkakirja
         /// <summary>Aloitusnäytön esilataus (null = ei vielä aloitettu); diagnostiikkaan ja mittauksiin.</summary>
         public Laattapalvelin.Esilataus AloitusEsilataus { get; private set; }
         bool aloitusEsiladattu;
+        PalloKierto avausKierto;
+        float kiilatAlkoi;
+        /// <summary>Aloitusnäytön avauskiilojen enimmäisaika (s): sen jälkeen Cesium ei enää valitse niiden laattoja.</summary>
+        const float KiilatEnintaanS = 120f;
 
         /// <summary>
         /// ALOITUSNÄYTÖN ESILATAUS (Fablen päätös BUILD 16, esilatauspolitiikan kohta 2; löydös 80): aloituslennon mustan
@@ -1318,7 +1322,10 @@ namespace Matkakirja
         /// <summary>Käynnissä oleva aloituslennon avausnäkymän esilataus (EsilataaAvaus); null = ei aloitettu.</summary>
         public Laattapalvelin.Esilataus AvausEsilataus { get; private set; }
 
-        /// <summary>Kehittäjälippu A/B-mittaukseen: avauksen esilataus pois (PlayerPrefs matkakirja-avaus-esilataus 0).</summary>
+        /// <summary>
+        /// Kehittäjälippu: geometrinen avauksen esilataus päälle (PlayerPrefs matkakirja-avaus-esilataus 1). Oletus pois:
+        /// malli ennusti 2–3-kertaisen joukon (tarkkuus 20–35 %), ja AvausKamerat antaa Cesiumin valita laatat itse.
+        /// </summary>
         public static bool AvausEsilatausPaalla
         {
             get
@@ -1326,7 +1333,7 @@ namespace Matkakirja
 #if !MATKAKIRJA_APPSTORE
                 if (avausLippu < 0)
                 {
-                    avausLippu = PlayerPrefs.GetInt("matkakirja-avaus-esilataus", 1);
+                    avausLippu = PlayerPrefs.GetInt("matkakirja-avaus-esilataus", 0);
                     AvausLaatat.Saada(PlayerPrefs.GetString("matkakirja-avaus-malli", ""));
                 }
                 return avausLippu != 0;
@@ -1576,6 +1583,18 @@ namespace Matkakirja
             {
                 aloitusEsiladattu = true;
                 EsilataaAloituslahto();
+                // Avausnäkymän virtuaalikamerat (build 22): Cesium lataa aloituslennon avauksen laatat kaikkiin suuntiin.
+                if (avausKierto == null) avausKierto = FindAnyObjectByType<PalloKierto>();
+                AvausKamerat.Kiilat(avausKierto, pallo, AloitusLahtoLat, AloitusLahtoLon, LennonAikajana.AloitusAvausM,
+                    LennonAikajana.AloitusAvausKallistus);
+                kiilatAlkoi = Time.unscaledTime;
+            }
+            // Kiilat pois, jos aloitusnäytöstä lähdettiin ilman aloituslentoa (jatka tallennusta) tai ne ovat olleet liian kauan.
+            if (AvausKamerat.Maara > 0 && kiilatAlkoi > 0f && (nappula == null || !nappula.AloitusAjossa)
+                && (!PalloKierto.PorttiSumea || Time.unscaledTime - kiilatAlkoi > KiilatEnintaanS))
+            {
+                kiilatAlkoi = 0f;
+                AvausKamerat.Lopeta(PalloKierto.PorttiSumea ? "aikaraja" : "aloitusnäyttö ohi");
             }
             // Valinta sulkeutui (LentoPohjaValmiiksi(false)): valmis pinta pois, kun aloituslentoa ei ole käynnissä. Valinnan
             // Valitse käynnistää lennon samassa kutsussa, jolloin pinta odottaa lentoa (LentoPohja(true) tai keskeytys).

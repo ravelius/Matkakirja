@@ -258,6 +258,32 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// Asettaa TOISEN kameran (AvausKamerat: Cesiumin virtuaalikamera laattojen esilataukseen) asentoon, johon
+        /// <see cref="Kuvaa"/> veisi tämän kameran, liikuttamatta tätä kameraa. Leikkaustasot kuten <see cref="Aseta"/>.
+        /// </summary>
+        public void AsetaKamera(Camera c, double lat, double lon, double etaisyys, double kallistusAsteina, double suuntimaAsteina,
+            double katseenKorkeus)
+        {
+            if (c == null || georeferenssi == null) return;
+            var talteen = (korkeus, kallistus, katseKorkeus, vapaaKuvaus);
+            korkeus = math.max(100.0, etaisyys);
+            kallistus = math.clamp(kallistusAsteina, 0, 85);
+            katseKorkeus = katseenKorkeus;
+            vapaaKuvaus = true;
+            Asento a;
+            try { a = LaskeAsento(lon, lat, suuntimaAsteina); }
+            finally { (korkeus, kallistus, katseKorkeus, vapaaKuvaus) = talteen; }
+            var gt = georeferenssi.transform;
+            var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.silma));
+            var t = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.kohde));
+            var yl = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(a.ylos));
+            c.transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl));
+            double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
+            c.nearClipPlane = (float)math.max(50.0, a.etaisyys * 0.01);
+            c.farClipPlane = (float)math.max(a.etaisyys + 2.0 * r, KaukorajaVahintaan);
+        }
+
+        /// <summary>
         /// Kallistus, jolla kamera tässä kehyksessä oikeasti on (asteina): tallennettu <see cref="kallistus"/>
         /// rajattuna korkeuden mukaan (<see cref="KallistusRaja()"/>, ei lennon kuvauksessa) ja maaston raon mukaan.
         /// Tallennettu arvo ei muutu, joten lähemmäs zoomatessa pelaajan kallistus palaa. Kameran asentoa

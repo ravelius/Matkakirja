@@ -549,6 +549,8 @@ namespace Matkakirja
                 // Avausnäkymän laatat levylle heti, kun asento tiedetään (build 22): musta verho odottaa niitä.
                 var av = aloitusReitti.Avaus;
                 KarttaKerrokset.Instanssi?.EsilataaAvaus(lat0, lon0, av.etaisyys, av.kallistus, av.suunta);
+                AvausKamerat.Tarkka(kierto, KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null, lat0, lon0,
+                    av.etaisyys, av.kallistus, av.suunta, double.IsNaN(lentoPohja) ? 0.0 : lentoPohja);
             }
             if (aloitus)
             {
@@ -631,6 +633,7 @@ namespace Matkakirja
                 Valmius.VerhoLoppu("musta", lataaSyy, (Time.unscaledTime - odotus) * 1000.0,
                     pallo != null ? pallo.ComputeLoadProgress() : -1f, pinta);
                 Valmius.KevennysLoppu("musta");
+                AvausKamerat.Lopeta("musta ohi");
                 VerkkoOdotus.Kirjaa("lento", "aloituslento-musta", (Time.unscaledTime - odotus) * 1000.0);
                 yield return Mustaverho.Haivyta(0f);
             }
