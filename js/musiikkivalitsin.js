@@ -87,11 +87,26 @@ export const TILARAIDAT = {
  * selailu oman raitansa etusivun rinnalle. EI TARVITSE: pelaaja ei
  * poistu mihinkään pallon ja avaustekstin välillä, ja raidan vaihto
  * kesken saman näkymän kuulostaisi virheeltä. Yksi raita, yksi vaihe.
+ *
+ * ETUSIVULLA SOI ISOISÄN JOHTOAIHE (musiikkisuunnitelma 26.9.2026,
+ * vaihe 1, docs/raportit/musiikki-ja-aanisuunnitelma-20260926.md 1.1:
+ * "täytenä: etusivu, loppu ja pääaarre"). Sama periaate kuin visan
+ * musa-visa-2:lla: vanhaa raitaa ei ylikirjoitettu, `musa-etusivu`
+ * jää ämpäriin, ja PALUU ON TÄMÄN RIVIN VAIHTO takaisin tunnukseen
+ * 'musa-etusivu'. Etusivun raita ei ole ehdokaslistalla
+ * (js/aani-ehdokkaat.js), koska paikkaraitaa ei valita studiosta.
+ *
+ * Johtoaihe ei ole saumaton looppi, mutta pohjavireen soitin kiertää
+ * sen (js/ambience-stream.js `audio.loop`). Mitattu sauma: lopun
+ * hiljainen sointu (≈ −47 dBFS) häipyy 1,2 s:ssa, ja alussa on 0,7 s
+ * lähes hiljaista ennen ensimmäistä säveltä — kierto kuulostaa siis
+ * fraasin lopulta ja hengähdykseltä, ei leikkaukselta. Oma
+ * looppileikkaus tehdään vasta, jos kuulokoe sitä vaatii.
  */
 export const PAIKKARAIDAT = {
   etusivu: {
-    tunnus: 'musa-etusivu',
-    kuvaus: 'Etusivu ja lähtökaupungin valinta: avara ja odottava, kartan tunnelma.',
+    tunnus: 'musa-johtoaihe',
+    kuvaus: 'Etusivu ja lähtökaupungin valinta: isoisän johtoaihe täytenä, pianolla ja jousilla.',
   },
 };
 
@@ -271,6 +286,50 @@ export function asetaMusiikkiPaalla(paalla) {
  * 0–100, ks. seuraava luku).
  */
 export const MUSIIKIN_PERUSTASO = 0.034;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * VIIMEISTELLYT RAIDAT OVAT −33 LUFS, PALETTI −11,4 LUFS
+ * (musiikkisuunnitelma 26.9.2026, vaihe 1)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Suunnitelman raidat (johtoaihe, aloituslento, saapumistunnukset,
+ * loppu) viimeistellään tiedostoina −33 LUFS:iin
+ * (tools/viimeistele-musiikki.mjs; omistajan päätös 2: tiedostot
+ * pysyvät −33 LUFS:ssä). Paletin Lyria-raidat, joihin
+ * MUSIIKIN_PERUSTASO ja sen kertoimet on kuunneltu, ovat mitattuina
+ * −11,4 LUFS (ffmpeg ebur128 26.9.2026: musa-etusivu-lyria −11,4,
+ * musa-pohja-lyria −10,8, musa-aarre-lyria −11,3, musa-lehti-lyria
+ * −11,4, musa-kaupunki-valimeri-lyria −11,5).
+ *
+ * Ilman korjausta sama paikka soisi uudella raidalla 21,6 dB
+ * hiljempaa kuin vanhalla — sama vika kuin 8.9.2026 (tiedostot
+ * vaihtuivat mutta kertoimet eivät), vain toiseen suuntaan. Siksi
+ * korjaus on TIEDOSTON ominaisuus eikä paikan: jokainen soitin laskee
+ * tasonsa kuten ennenkin ja kertoo sen lisäksi tällä luvulla, jolloin
+ * viimeistelty raita soi samalla kuuluvalla tasolla kuin paikan vanha
+ * raita. Säädin (musiikinKerroin) koskee niitä samalla tavalla. Uusi
+ * viimeistelty tunnus lisätään joukkoon; tests/musiikkivalitsin.test.mjs
+ * vertaa joukkoa generointityökalun suunnitelmaraitoihin.
+ */
+export const PALETIN_LUFS = -11.4;
+export const VIIMEISTELLYN_LUFS = -33;
+export const VIIMEISTELLYT_RAIDAT = new Set([
+  'musa-johtoaihe', 'musa-aloituslento', 'musa-saapuminen-valimeri', 'musa-loppu',
+]);
+const VIIMEISTELLYN_KORJAUS = 10 ** ((PALETIN_LUFS - VIIMEISTELLYN_LUFS) / 20);
+
+/**
+ * Raidan tiedostotason korjaus kertoimena: ≈ 12,0 (+21,6 dB)
+ * viimeistellylle raidalle, 1 kaikelle muulle.
+ *
+ * @param {?string} polku `assets/audio/<tunnus><pääte>.mp3` (musaPolku)
+ */
+export function musiikinTasokorjaus(polku) {
+  const tunnus = String(polku ?? '').split('/').at(-1)
+    .replace(/\.mp3$/, '').replace(/-lyria$/, '');
+  return VIIMEISTELLYT_RAIDAT.has(tunnus) ? VIIMEISTELLYN_KORJAUS : 1;
+}
 
 /**
  * KAIKEN MUSIIKIN KERROIN — pohjaraita, kaupunki- ja aluekappaleet,
