@@ -226,6 +226,9 @@ namespace Matkakirja
                     CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaRaja);
                 Horisonttiusva.RuutuRajaY = double.IsNaN(y) ? 0f : Mathf.Clamp01((float)((1.0 - y) * 0.5));
             }
+            // Sama usva varjostimille (löydös 159, Shaders/Horisonttiusva.hlsl): reitit, kynäviivat, Overlay-nimet.
+            var usvaRuutu = new Vector4(Horisonttiusva.RuutuRajaY, Horisonttiusva.RuutuVoima, (float)Horisonttiusva.Liuku, 0f);
+            if (usvaRuutu != edellinenUsvaRuutu) { edellinenUsvaRuutu = usvaRuutu; Shader.SetGlobalVector(UsvaRuutuId, usvaRuutu); }
             if (sumu && !SumuEstetty)
             {
                 RenderSettings.fog = true;
@@ -289,6 +292,8 @@ namespace Matkakirja
         }
 
         bool taivasPaalla;
+        static readonly int UsvaRuutuId = Shader.PropertyToID("_UsvaRuutu");
+        Vector4 edellinenUsvaRuutu = new Vector4(-1f, -1f, -1f, -1f);
 
         /// <summary>
         /// Sininen taivas lennon ajaksi (häivytys samalla osuudella kuin aurinko): kameran tausta vaihtuu
