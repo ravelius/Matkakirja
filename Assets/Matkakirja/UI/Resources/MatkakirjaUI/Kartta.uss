@@ -2070,3 +2070,10 @@
 .mk-suurennos--kokoruutu .mk-reaktiot--suurennos {
     display: none;
 }
+
+/* Elävä kartta, kohta 2: löytämättömän musteen jälki ja pääkohteen hehku merkin alla (MusteJaljet, NostotKartalla.AsetaMuste). */
+.mk-nosto-merkki__jalki,
+.mk-nosto-merkki__hehku {
+    position: absolute;
+    -unity-background-scale-mode: stretch-to-fill;
+}
