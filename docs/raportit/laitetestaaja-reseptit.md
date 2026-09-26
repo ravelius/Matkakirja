@@ -6,6 +6,19 @@ Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia s
 löytyi 26.9.2026 build 20:n testauksessa: kamera-, usva- ja maakuntakomennot ovat siinä, ja se toimii
 samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama konsoli kaikissa käännöksissä).
 
+## PYSYVÄ KOHTA: arkkityyppien maatason kokotarkistus (löydös 175, Fable 26.9.2026)
+
+Aina kun testataan tason 1–3 arkkityyppejä/nostoja (esim. 160-tyyppiset kohdat), ota AINA myös
+maatason (lähelle zoomattu, ei kaukokallistus) kuvakaappaus sekä Ranskasta että Kreikasta samasta
+näkymästä. Omistajan löydös 175: 1.0.25:ssä tason 1 -arkkityypit näyttivät maatason zoomissa
+valtavilta harmailta muodoilta, jotka peittivät nimistöä — aiempi kierros antoi PASSin ilman tätä
+kokokohtaa.
+
+**Kriteeri: mikään nostomalli ei saa ylittää kaupunkinimiön kokoa eikä peittää paikannimiä.**
+Poikkeama = FAIL, ei "PASS, ei visuaalisesti tarkistettu". Esimerkkikuva:
+`docs/raportit/kaappaukset/omistaja-20260926/loydos175-arkkityypit-ranska-125.png`
+(Fablen haara `claude/bold-ride-vow4ki`).
+
 ## Kamera kauas + kallistus (H/153/159 usva, I/154 taivas)
 
 ```
