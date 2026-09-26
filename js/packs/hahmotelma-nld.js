@@ -316,6 +316,7 @@ export const HAHMOTELMA_NLD = [
   },
   {
     id: 'hahmotelma-oostvaardersplassen',
+    nimio: 'Oostvaarders',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-oostvaardersplassen-19d942fd.jpg',
       lyhyt: 'Konik-hevosia laiduntamassa ja lintuja lentämässä kosteikon vesialueen yllä.',

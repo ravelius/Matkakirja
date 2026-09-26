@@ -14,7 +14,7 @@
  *   5. maanvaihto: asetaMaa('CHE') vaihtaa oliota ja FRA jää muistiin.
  *
  * Aineisto luetaan paikallisesta kansiosta (MAAKUNNAT=<kansio>, oletus
- * /Users/koodaus/pyramidi-poltto/maakunnat-2026-09-22a), koska sitä ei
+ * /Users/Shared/Claude/pyramidi-poltto/maakunnat-2026-09-25a), koska sitä ei
  * ole vielä ämpärissä: ämpärin maakuntapolku ohjataan kansioon.
  *
  *   PLAYWRIGHT_JS=… MAAKUNNAT=<kansio> node tools/savukkeet/savuke-pallomaakunnat.mjs
@@ -31,7 +31,7 @@ const { packById } = await import(`${JUURI}/js/pack.js`);
 const pw = await import('playwright').catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const paketti = pw.webkit ? pw : (pw.default ?? pw);
 const MOOTTORI = process.env.SAVUKE_MOOTTORI ?? 'webkit';
-const MAAKUNNAT = process.env.MAAKUNNAT ?? '/Users/koodaus/pyramidi-poltto/maakunnat-2026-09-22a';
+const MAAKUNNAT = process.env.MAAKUNNAT ?? '/Users/Shared/Claude/pyramidi-poltto/maakunnat-2026-09-25a';
 const ULOS = process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/pallomaakunnat';
 mkdirSync(ULOS, { recursive: true });
 const DPR = Number(process.env.DPR) || 3;

@@ -65,11 +65,44 @@ export const LAHTEET = [
         lisenssi: 'Public domain',
       },
       {
+        nimi: 'GSHHG — rantaviivat pääkartan laatoissa ja pallon vektoreissa (versio 2.3.7)',
+        tekija: 'Wessel & Smith, A Global Self-consistent, Hierarchical, '
+          + 'High-resolution Geography Database',
+        lisenssi: 'LGPL 3+',
+      },
+      {
+        nimi: 'GEOGLOWS v2 (TDX-Hydro) — jokiverkko natiivin elävään karttaan',
+        tekija: 'GEOGLOWS ECMWF Streamflow Service (BYU, ECMWF); jokiviivat NGA TDX-Hydro',
+        lisenssi: 'CC BY-SA 4.0',
+        huom: 'Contains information from the GEOGLOWS ECMWF Streamflow Service (CC BY 4.0), derived from NGA TDX-Hydro (CC BY-SA 4.0). Johdetut jokiviivat julkaistaan samalla lisenssillä. Tarkistettu 26.9.2026 s3://geoglows-v2/licenses.md.',
+      },
+      {
+        nimi: 'OpenHistoricalMap — vuoden 1873 rautatiet elävään karttaan',
+        tekija: 'OpenHistoricalMap-yhteisö, openhistoricalmap.org',
+        lisenssi: 'CC0 1.0',
+        huom: 'Radat, joiden start_date ≤ 1873 (tools/tee-reitit1873.mjs). Lisenssi tarkistettu 26.9.2026 wiki.openstreetmap.org/wiki/OpenHistoricalMap/License.',
+      },
+      {
         nimi: 'ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — '
-          + 'maaston korkeus, meren syvyys, varjostus ja reliefikartta',
+          + 'pääkartan varjostus ja meren syvyys sekä maaston korkeustiedot',
         tekija: 'Amante & Eakins 2009, NOAA NGDC / NCEI '
           + '(doi:10.7289/V5C8276M); haettu NOAA CoastWatch ERDDAPista',
         lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'ETOPO 2022 15 Arc-Second Global Relief Model, surface — '
+          + 'topografia- ja vesistölinssin reliefi sekä astronautin kamera',
+        tekija: 'NOAA National Centers for Environmental Information 2022 '
+          + '(doi:10.25921/fd45-gt74)',
+        lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'Copernicus DEM GLO-30 ja GLO-90 — natiivipelin maaston korkeusmalli '
+          + 'ja kaupunkien korkeudet',
+        tekija: 'Produced using Copernicus WorldDEM-30 and WorldDEM-90 © DLR e.V. 2010-2014 '
+          + 'and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS '
+          + 'by the European Union and ESA; all rights reserved',
+        lisenssi: 'Copernicus DEM -lisenssi (vapaa käyttö lähdemaininnalla)',
       },
       {
         nimi: 'Earth at Night (Black Marble) 2016 — yökartan valot',
@@ -254,23 +287,41 @@ export const LAHTEET = [
        * Kaksi hakuajoa, jotka valitsevat äänensä koneellisesti ja
        * kirjaavat tekijän manifestiin äänen viereen ämpäriin: pulun
        * ääniefektit (tools/hae-freesound.mjs --pulu) ja Ihmisen matka
-       * -linssin äänimaisemat (--maisemat). Nimeltä ei voi luetella
-       * tässä, koska huonon osuman vaihtaminen paremmaksi vaihtaa
-       * tekijän eikä peli saa odottaa julkaisua sen takia — mutta
-       * KOKOELMA ja LISENSSIRAJAUS ovat pysyviä, ja juuri ne lisenssi
-       * vaatii näytettäväksi. Yksittäiset CC BY -nimet ovat manifestissa
-       * ja ajon lokissa; ne lisätään tähän riviin, kun lista on ajettu
-       * ja omistaja on hyväksynyt äänet.
+       * -linssin äänimaisemat (--maisemat). KOKOELMA ja LISENSSIRAJAUS
+       * ovat pysyviä; yksittäiset CC BY -nimet ovat manifestissa ja ajon
+       * lokissa. Fable 25.9.2026: attribuutio kulkee aina aineiston
+       * mukana (Raamattu, lisenssit), joten peliin tulevan listan CC BY
+       * -nimet kirjataan tänne samassa muutoksessa kuin äänet — ei vasta
+       * omistajan kuuntelun jälkeen. Vaihdettu ääni vaihtaa rivin nimen.
        */
       {
-        nimi: 'Freesound — Livian ääniefektit ja linssien nauhoitetut '
-          + 'äänimaisemat (Ihmisen matka: savanni, sademetsä, luola, '
-          + 'arktinen tuuli, meren ranta…)',
+        nimi: 'Freesound — Livian ääniefektit',
         tekija: 'Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id '
-          + 'kulkevat äänen mukana manifestissa (aanet/tehosteet/pulu/ ja '
-          + 'aanet/tehosteet/ihmisen-matka/)',
+          + 'kulkevat äänen mukana manifestissa (aanet/tehosteet/pulu/)',
         lisenssi: 'CC0 ja CC BY kohteittain (haku rajaa vain näihin kahteen)',
         huom: 'Haku tools/hae-freesound.mjs, ajo .github/workflows/aanihaku.yml',
+      },
+      {
+        nimi: 'Freesound — Ihmisen matka II -linssin äänimaisemat (15: '
+          + 'savanni, jokilaakso, meren ranta, vuoristotuuli, ruohikko '
+          + 'ja järvi, sademetsä, rannikkomeri, luola, arktinen tuuli, '
+          + 'tundratuuli, metsäsade, kylmä tuuli, avomeri, rantalinnut, '
+          + 'hiljainen tuuli)',
+        tekija: 'CC BY 4.0: "Hluhluwe13_unknown_bird.WAV" — reinsamba '
+          + '(freesound.org/s/58233); "Small Creek & Birds" — KasperAugustTopp '
+          + '(freesound.org/s/328140); "Calm Waves" — nsmusic '
+          + '(freesound.org/s/397358); "Doi bo ambi 02 wind up mountain.wav" — '
+          + 'fundamental_harmonics (freesound.org/s/437514); "Sailing Ambience - '
+          + 'Focus On Cutting Through the Waves" — iainmccurdy '
+          + '(freesound.org/s/645968); "waves and oystercatcher 01 xy90 '
+          + '160717_0917.wav" — klankbeeld (freesound.org/s/355344). '
+          + 'CC0: monotraum, gladkiy, emainta, Sclolex, cobratronik, '
+          + 'dhallcomposer, felix.blume, DBlover, BenHarmSound.',
+        lisenssi: 'CC BY 4.0 (6 äänitystä) ja CC0 (9)',
+        huom: 'Muokattu: lyhennetty, voimakkuus tasattu −30 LUFS:iin ja pakattu '
+          + 'mp3:ksi (luola +11,8 dB). Lisenssit Freesoundista 25.9.2026 '
+          + '(aanihaku-ajo, #3231); tekijä, id ja sivu myös manifestissa '
+          + 'aanet/tehosteet/ihmisen-matka/manifesti.json.',
       },
       {
         nimi: 'Lyhytaaltoäänitteet — maailmanradion viritysäänet',

@@ -21,6 +21,8 @@
  *                          reitit, maat...) id-viittauksineen — tuojan
  *                          helppo lähtöpiste (tools/vienti/kokoelmat.mjs).
  *   tiedostot/...          valmiit JSON-aineistot sellaisenaan (lahteet.mjs).
+ *   web/<näkymä>.json      web-näkymän (lehti) koodi- ja tiedostoriippuvuudet
+ *                          natiivin WKWebView-kuorelle (web-riippuvuudet.mjs).
  *   skeema/*.schema.json   JSON Schema (2020-12) jokaiselle tiedostolajille.
  *   manifest.json          sisällysluettelo: moduulit, exportit, lukumäärät,
  *                          tiivisteet. Tuoja tarkistaa tästä, että sai kaiken.
@@ -32,13 +34,19 @@
  * Ei muuta peliä: lukee vain moduuleja. dist/ on .gitignoressa.
  */
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { sarjallista } from './sarjallista.mjs';
-import { LISAMODUULIT, LISATIEDOSTOT } from './lahteet.mjs';
-import { TARKKUUS, mediaLaji, ratkaiseMedia } from './media.mjs';
+import { LISAMODUULIT, LISATIEDOSTOT, NIMETYT_LISATIEDOSTOT, PAKETISTA_POISTETUT } from './lahteet.mjs';
+import { SIVUSTON_ASSET_ETULIITE, TARKKUUS, mediaLaji, ratkaiseMedia, sivustonTiiviste } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
+import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
+import { logiikkaLista } from './logiikka.mjs';
+import { kokoaOffline } from './offline.mjs';
+import { lueKuvamitat } from './kuvamitat.mjs';
+import { kokoaLisenssit } from './lisenssit.mjs';
+import { pikkukuvaOsoite } from './elava-kartta.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -49,10 +57,195 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  * Poisto tai merkityksen muutos nostaa majoria ja vaihtaa osoitinpolun.
  *   1.0  ensimmäinen vienti (PR #2890)
  *   1.1  kaupungit: maa2 (ISO2), tyyppi, lentokentta, aloitus; osoitin
+ *   1.2  kaupungit: tarkeys 0–3; manifest: tavuja kokoelmille, medialle
+ *        ja lisätiedostoille; kaupunki.data merkitty raakaolioksi
+ *   1.3  web/<näkymä>.json: web-näkymän (lehti) JS/CSS/tiedostoriippuvuudet
+ *        WKWebView-kuorelle; manifest.webNakymat
+ *   1.4  kokoelmat saannot (hinnat ja sääntövakiot) ja saapuminen
+ *        (saapumishaut kaupungeittain valmiiksi laskettuina)
+ *   1.5  manifest.logiikka (jokainen paketin funktio luokiteltuna,
+ *        tools/vienti/logiikka.mjs), kokoelmat esilasketut ja laatat,
+ *        media.suurennos; kaupungit.lauta {x, y}, reitit.askelia ja via
+ *   1.6  saannot: tokens.js ja ai.js (aarteiden arvovälit, BOT_SKILL),
+ *        litteät sääntörakenteet; kokoelma tapahtumat (AFRICA.events)
+ *   1.7  kokoelma linssiaineisto (maskit, manifestit, pilvet, astronautin
+ *        äänet, avauskynnykset)
+ *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
+ *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
+ *   1.9  kokoelmat kuvakysymykset, lippumaat, pulmaaineisto, luennat
+ *        (aikaleimoineen), livianpuhe ja maat; offline.json (manifest.offline)
+ *   1.10 (nippu 4) kokoelmat karttamerkit, karttavalot, maastonimet ja
+ *        maarajat; kaupungit.korkeus; muotokuva kohtaamisiin ja tarinakaareen, laattojen ja
+ *        paikallisaarteiden kuvat, linssiluennat, saannot KATKOKUVA;
+ *        luennat: reaktiot, tekstiSha256, reaktioHetket (vain voimassa
+ *        olevista aikaleimoista; vanhentuneet aikaleimat pois paketista).
+ *        Vertaa versioita numeroina (1.10 > 1.9), ei merkkijonoina.
+ *   1.11 Livian cue-data: livianpuhe.cuet[].ele, alku, loppu ja
+ *        eleetTila, aaniTavut, aaniSha256 (tools/vienti/livian-eleet.mjs);
+ *        luennat.reaktiot[].ele; kokoelma livianrepliikit (68 äänitettyä
+ *        repliikkiä).
+ *   1.12 Sivuston assetit ämpärissä: repon assets/-kuvat (karttamerkit,
+ *        kätkökuva, liput, kartat, valokuvat…) osoittavat
+ *        media.matkakirja.app/assets/…?v=<sha256 12>, Pages varana;
+ *        saannot LIVIAN_ASTRONAUTTI_KYPARA. CI vie tiedostot
+ *        (tools/vienti/sivustoassetit.mjs).
+ *   1.13 media.json leveys ja korkeus (px, tools/vienti/kuvamitat.mjs).
+ *   1.14 POISTOJA MINORINA (Fablen poikkeus 23.9.2026; sääntö 5.3 vaatisi
+ *        majorin): kokoelma kaksintaistelut, saannot DUEL_PRIZE ja
+ *        BOT_SKILL, moduuli js/ai.js, laatat.data.types.robber ja vanhat
+ *        mannerlaudat (moduulit/js/packs/<lauta>[-questions].json,
+ *        lahteet.mjs PAKETISTA_POISTETUT). Yksikään proto-haara ei lue niitä,
+ *        ja kaksintaistelujen lukija sietää puuttuvan tiedoston.
+ *   1.15 Lehdet natiiville (omistaja 23.9.2026, tools/vienti/lehdet.mjs):
+ *        kaupunkilehdet ja maalehdet: aiheet[] (nostot kappaleineen,
+ *        kuvat url/varat/mitat, äänet, musiikki, tehtävä palkkioineen,
+ *        lista), sivut; kaupunkilehdet: laji, kansi, menovinkitMaalta,
+ *        maaosastoEtusivulla, saa, kulttuurivisa ja "Elämää"-kaupungit
+ *        (laji elama); kokoelmat kulttuurivisat ja saatiedot; maat: intro,
+ *        maakartta, rajat, radio, vanhaAani, uutislahde, lipputarina,
+ *        numeroina; kaupungit: intro, kielinayte; moduulit js/lehti.js,
+ *        js/ui-apurit.js, js/ui.js ja js/saa.js (lehden kiinteät tekstit).
+ *        Lisäksi kokoelma maakuntarajat (tools/vienti/maakuntarajat.mjs) ja
+ *        lisenssit.json (manifest.lisenssit, tools/vienti/lisenssit.mjs).
+ *   1.16 Radio hybridinä (omistajan kortti 23.9.2026): kokoelma radiot
+ *        (asema, url, tyyppi, yleisradio, sivu, luokka sallittu | epaselva |
+ *        kielletty, peruste; sallittu ja epaselva soivat; 17 kielletyn
+ *        yleisradion maahan korvaava soiva asema tools/vienti/radiokorvaavat.json,
+ *        kiellettyjä ei pakettiin, omistaja 23.9.2026) ja aanitaulut
+ *        laji viritys (viritysäänet pelin osoitteella, tekijä ja lisenssi).
+ *   1.17 kokoelma kohdekartat (kaupunkien kohdekartat, kohteiden x/y pelin
+ *        karttapiste()-funktiolla, kartat ämpärissä assets/kartat/),
+ *        kokoelma lehtitehtavat (fokusvirtojen lehtitehtävät) ja moduuli
+ *        js/fokustehtavat.js (PULLA_NIMET, PULLA_YLEISNIMI, palkkio).
+ *   1.18 nahtavyydet ja miniatyyrit päätasolle (2.0-polun ensimmäinen
+ *        tyypitys, docs/raportit/sisaltopaketti-2-0-suunnitelma-20260923.md).
+ *   1.19 kysymykset ja pulmat päätasolle (2.0-polku).
+ *   1.20 elaintayt ja julisteet päätasolle (2.0-polku).
+ *   1.21 fokusvirrat (virta: kuvat ratkaistuina, lehtitehtävien id:t) ja
+ *        laatat (tyypit, mannerTyypit, maarat) päätasolle; 2.0-polun
+ *        natiivin data-lukijat ovat nyt kaikki tyypitetty.
+ *   1.22 kokoelma muutosloki-natiivi (Julkaisijan rivit) ja osoittimeen
+ *        kokoelmaLkm ja muutos (automaattinen sisältörivi, julkaise-sisalto.mjs).
+ *   1.23 offline.json ryhmat: maailma, maanosat (7) ja kaikki summattuine
+ *        tavuineen; maat[].manner (omistaja: lataus maanosittain; arvot kuten kaupungit.manner).
+ *   1.24 Natiivi-UI:n datatoiveet (tools/vienti/saapumiset.mjs, karttavalot.mjs):
+ *        kokoelmat saapumistekstit (kaupungit ilman fokusvirtaa: pakin kuvaus
+ *        ja nosto tai havainto, kuvapino R.kuva-muodossa, äänite), liviansaapumiset
+ *        (LIVIAN_SAAPUMISET valintasääntöineen) ja takynostot (NOSTO_MAAT);
+ *        karttavalot uusiksi webin pallon nostokerroksesta (maanKohdemerkit:
+ *        + syvennykset, täky- ja maalehtinostot, napakohteet, kohdekartalle
+ *        siirretyt paakartalla false; nimio, paikka, kategoria, tunnus, ladottu,
+ *        taso, lahizoom, kaupunkiAvain, kohdekartta, takynosto, liitetytNostot);
+ *        kohdekartat.kohteet[].linkit ja aihe.
+ *   1.25 maakuntarajat: juuren kaaret (rajaviivat, jokainen jaettu raja kerran)
+ *        ja renkaat rakennettuna samoista kaarista (Natiivisepän pyyntö,
+ *        Fable 24.9.2026: rajat vektoriviivoina); tools/vienti/maakuntarajat.mjs
+ *        kaariTopologia. Lisäksi julkaisun tarkistus skeemasopimus.mjs.
+ *   1.26 2.0-polku jatkuu (Pelikoodarin pakettivartija, v32): tarinakaari,
+ *        paikkatiedot, kohtaamiset, kohtaamiskuvat, paikallisaarteet,
+ *        saapumispuheet sekä fokusvirtojen kohtaamispiste ja sahketehtava
+ *        päätasolle (tools/vienti/tyypitys.mjs).
+ *   1.27 työhuoneen moduulit natiivin KOKEET-valikolle (Natiivi-UI):
+ *        js/tyohuone-raamattu.js RAAMATTU, js/tyohuone-tilanne.js TILANNE,
+ *        TESTATTAVAA ja TUOREET, js/tyohuone-pelit.js PELIT (luokka kehittaja);
+ *        tyohuone-musiikki.js HILJENNYKSEN_SYY ja TUNTEMATTOMAT_LAJIT.
+ *        Kehittäjämoduulien sähköpostiosoitteet peitetään (peitaSahkopostit).
+ *   1.28 kokoelma tyohuonetilastot (Natiivi-UI): webin laskeTilastot()
+ *        valmiina (alkio = manner), juuressa sarakkeet (KAUPUNGIN_OSAT ja
+ *        MAAN_OSAT ilman laskufunktioita).
+ *   1.29 maarajat: renkaat rajattu webin laudan maamuodon alueelle (Natiiviseppä:
+ *        NOR ilman Huippuvuoria kuten webissä), muutRenkaat ja kokoBbox
+ *        (tools/vienti/maarajat.mjs rajaaWebinMuotoon).
+ *   1.30 Pelikoodarin tilaus: aanitaulut (siirtyma, tila-/paikkaraita, pulu)
+ *        kentät päätasolle, reitit.maksu, laattatyyppeihin nimi/symboli/arvo/vari.
+ *   1.31 ennen 2.0:aa loput raakakentät päätasolle: skandaalit, historianHetket,
+ *        monumentit ja fokusvirrat sellaisenaan; kaupungit wiki, ambienssi,
+ *        nimionAnkkuri.
+ *   1.32 linssiaineisto sellaisenaan päätasolle (Linssiseppä), tarinakaari kuva,
+ *        lauta, saapumisLuenta; kohtaamiskuvat kansio, tiedosto; tapahtumat teksti,
+ *        vaikutus. Vartija: jokainen raakakenttä päätasolla tai RAAKA_VASTINEET.
+ *   1.33 kokoelma maamerkit (natiivin 3D-maamerkit, Pelikoodari; Raamattu LENNON
+ *        KARTTA JA MAAMERKIT): lat, lon, maanKorkeus, suunta, mallinKorkeus,
+ *        malli { url, sha256, tavuja }; mallit myös offline.json maat[].media.
+ *   1.34 maarajat: 1.29:n rajaus pois (web #3078 piirtää Natural Earth 10m
+ *        -rajat): renkaat = kaikki admin-0-renkaat, muutRenkaat = [].
+ *   1.35 maat.fokuspohja = webin FOKUS_POHJAT (bbox ja rajaus asteina ja laudalla):
+ *        nostotaso ja kameran rajaus kuten webissä (Natiiviseppä).
+ *   1.36 kokoelma merinimet (Linssiseppä, build 11): webin nimiötason meret
+ *        (nimisto-1873 luokka meri) nimi, lat, lon, kulma, kaari, tasot, lahde,
+ *        lisenssi; juuren tyyli = webin piirto (tools/vienti/merinimet.mjs).
+ *   1.37 kokoelma aluenimet (Karttaseppä, löydös 38 b): assets/data/aluenimet-natiivi.json
+ *        sellaisenaan (meret, maakunnat, nykyalueet väistön jälkeisin ankkurein
+ *        tasoittain + valtameret); juuressa tyylit, fontti, aineistoversio.
+ *   1.38 kaupungit.asukkaat (Linssiseppä, radiouudistus): Wikidata P1082 (CC0),
+ *        asukkaatVuosi, asukkaatAlue (luku koskee saarta/valtiota), asukkaatLahde
+ *        (tools/vienti/hae-asukkaat.mjs → kaupunkien-asukkaat.json).
+ *   1.39 karttavalot.ankkuri (webin lukittu ankkuri, js/packs/nostoankkurit-<iso>.js) ja
+ *        karttavalot.puoli (nimiön poltettu kylki) — Natiivi-UI, löydös 50 C.
+ *   1.40 monumentit.nimio (kartan nimiö, kun nimi ei mahdu 18 merkkiin; web: kohteenKarttanimi =
+ *        nimio ?? nimi) — Sisältökirjurin nimiöt #3162, löydös b13 iPad 3. Karttavalojen nimio
+ *        oli jo kentässä, vain arvot lyhenivät.
+ *   1.41 offline.json: rasteripohja sarjaan 2026-09-25 (Z0–Z9), maittain z6–z8 kuten ennen ja
+ *        z9 vain kaupunkien ympärillä listana välejä (lahteet.rasteri.kaupunkitaso: säde 60 km,
+ *        kaupungit tyyppi 'kaupunki', sama rajaus kuin satelliittipinnalla) — Natiiviseppä, build 13.
+ *   1.42 maakuntarajat kaikista webin maakuntamaista (138, oli 8; webin maakuntienMaa) ja juuren maat [{ iso3, nimi }];
+ *        nimet webin maakunnanNimi-funktiolla — Fable 25.9.2026, Karttasepän löydökset 105/107.
+ *   1.43 maakuntarajat.vari (0–4): webin väri ämpärin <ISO>.json-aineistosta (tools/tee-maakuntavektorit.mjs
+ *        varita, naapureilla eri) — Natiiviseppä 25.9.2026, sama sävy kuin webissä.
+ *   1.44 karttavalot.laji = webin symLaji (kohteen tyyppi: vuori, saari, jarvi, meri, joki, ruoka,
+ *        tekniikka…; eläintäky elain): kuvamerkki ja vektorisymboli lajin mukaan — Pelikoodari, löydös 125.
+ *   1.45 Elävä kartta (omistaja 26.9.2026, tools/vienti/elava-kartta.mjs): karttavalot.kokoluokka (+ kokoluokkaLahde),
+ *        karttavalot.maakunta (+ maakuntaLahde) ja maakuntarajat.salaisuus. Vain natiivi.
+ *   1.46 kokoelma reitit1873: vuoden 1873 laivalinjat ja rautatiet (Karttaseppä #3266, tools/vienti/reitit1873.mjs),
+ *        juuressa lahteet. Elävä kartta, vain natiivi.
+ *   1.47 kokoelma maakuntasalaisuudet: maakunnan salaisuus-nosto (lyhyt, teksti, nappi, viite, lat/lon) — Pelikoodari
+ *        26.9.2026; oma kokoelma, koska build 16/17 piirtäisi karttavalorivit (Natiiviseppä). Elävä kartta.
+ *   1.48 manifest.kaupunkilehdetKaupungeittain [{ id, tiedosto, sha256, tavuja }]: kokoelmat/kaupunkilehdet/<id>.json
+ *        (sama kokoelmamuoto, yksi alkio) — Pelikoodari, build 19 (16 Mt:n lehtikokoelma kylmänä 1,9 s).
+ *   1.49 pikkukuva = ämpäriosoite (https) tai null: maakuntasalaisuudet.pikkukuva (+ pikkukuvaLahde) ja moduulin
+ *        js/packs/maakunnat-luonnehdinnat.js alueiden pikkukuva (datan polku/tunnus muunnetaan osoitteeksi,
+ *        tools/vienti/elava-kartta.mjs pikkukuvaOsoite) — Fable 26.9.2026, löydökset 115 ja 158. Elävä kartta.
+ *   1.50 aanitaulut: laji musiikkiaihe (aloituslento, loppu, ratkaisu, epaonnistuminen, saapuminen-<maanosa>; tunnus, url)
+ *        ja musiikkiketju.maanosa — Pelikoodari 26.9.2026, musiikkisuunnitelman vaihe 2 (#3304, #3314).
  */
-export const SKEEMAVERSIO_TARKKA = '1.1';
+export const SKEEMAVERSIO_TARKKA = '1.50';
+
+/*
+ * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
+ * tämä on ainoa poikkeus, jotta natiivi saa maakunnan pikkukuvan ilman omaa polkusääntöä.
+ */
+const PIKKUKUVAMODUULIT = new Set(['js/packs/maakunnat-luonnehdinnat.js']);
+function osoitteiksiPikkukuvat(puu, missa) {
+  if (Array.isArray(puu)) { puu.forEach((x, i) => osoitteiksiPikkukuvat(x, `${missa}/${i}`)); return; }
+  if (!puu || typeof puu !== 'object') return;
+  for (const [k, v] of Object.entries(puu)) {
+    if (k === 'pikkukuva' && v && typeof v === 'object') v.osoite = pikkukuvaOsoite(v.osoite, `${missa}/${k}/osoite`);
+    else if (k === 'pikkukuva') puu[k] = pikkukuvaOsoite(v, `${missa}/${k}`);
+    else osoitteiksiPikkukuvat(v, `${missa}/${k}`);
+  }
+}
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
+
+/** Nimetyn lisätiedoston muoto (tools/vienti/lahteet.mjs NIMETYT_LISATIEDOSTOT): virhe kaataa viennin. */
+export function tarkistaMuoto(muoto, data, lahde) {
+  if (muoto !== 'iso3-lonlat') throw new Error(`${lahde}: tuntematon muoto ${muoto}`);
+  if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${lahde}: odotettiin oliota { ISO3: [lon, lat] }`);
+  for (const [iso, p] of Object.entries(data)) {
+    const ok = /^[A-Z]{3}$/.test(iso) && Array.isArray(p) && p.length === 2
+      && Number.isFinite(p[0]) && Number.isFinite(p[1]) && Math.abs(p[0]) <= 180 && Math.abs(p[1]) <= 90;
+    if (!ok) throw new Error(`${lahde}: ${iso}: odotettiin [lon, lat] asteina`);
+  }
+}
+
+/*
+ * Kehittäjämoduulit (työhuone) ovat julkisia webissäkin, mutta paketti
+ * jaetaan sovelluksen mukana: henkilöiden sähköpostit peitetään.
+ * Pelin omat osoitteet (@matkakirja.app) jäävät.
+ */
+const SAHKOPOSTI = /[A-Za-z0-9._%+-]+@(?!matkakirja\.app\b)[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
+export const peitaSahkopostit = (teksti) => teksti.replace(SAHKOPOSTI, '[sähköposti]');
+const tavuja = (s) => Buffer.byteLength(s);
 
 /**
  * Kaikki vietävät moduulit aakkosjärjestyksessä: js/packs/*.js kokonaan
@@ -96,6 +289,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     const lahde = readFileSync(join(juuri, polku), 'utf8');
     const ns = await import(pathToFileURL(join(juuri, polku)).href);
     nimiavaruudet.set(polku, ns);
+    if (PAKETISTA_POISTETUT.has(polku)) continue;
     const exportit = {};
     const kuvaus = [];
     for (const nimi of valitut ?? Object.keys(ns)) {
@@ -112,6 +306,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
           mediat.get(teksti).esiintymat.push({ moduuli: polku, export: nimi, polku: kohta });
         },
       });
+      if (PIKKUKUVAMODUULIT.has(polku)) osoitteiksiPikkukuvat(puu, `${polku}#${nimi}`);
       const teksti = JSON.stringify(puu);
       funktioita = (teksti.match(/\{"\$funktio":/g) || []).length;
       exportit[nimi] = puu;
@@ -124,7 +319,8 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
       });
     }
     const tiedosto = `moduulit/${polku.replace(/\.js$/, '.json')}`;
-    const sisalto = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/moduuli`, moduuli: polku, exportit });
+    const raaka = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/moduuli`, moduuli: polku, exportit });
+    const sisalto = luokka === 'kehittaja' ? peitaSahkopostit(raaka) : raaka;
     tiedostot.set(tiedosto, sisalto + '\n');
     manifestModuulit.push({
       moduuli: polku,
@@ -138,30 +334,76 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     });
   }
 
+  // Skeema 1.13: leveys ja korkeus px ensisijaisesta tiedostosta
+  // (tools/vienti/kuvamitat.mjs), jos mitattu.
+  const kuvamitat = lueKuvamitat();
   const mediaLista = [...mediat.keys()].sort().map((arvo) => ({
     arvo,
     laji: mediat.get(arvo).laji,
     ...ratkaiseMedia(arvo, mediat.get(arvo).laji),
+    ...(kuvamitat[arvo] ? { leveys: kuvamitat[arvo][0], korkeus: kuvamitat[arvo][1] } : {}),
     esiintymat: mediat.get(arvo).esiintymat,
   }));
   const mediaTeksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/media`, viitteet: mediaLista }) + '\n';
   tiedostot.set('media.json', mediaTeksti);
 
-  const kokoelmat = kokoaKokoelmat(nimiavaruudet);
+  const kokoelmat = kokoaKokoelmat(nimiavaruudet, { media: mediaLista });
   const kokoelmaKuvaus = [];
   for (const [nimi, k] of Object.entries(kokoelmat)) {
     const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi, ...k }) + '\n';
     const tiedosto = `kokoelmat/${nimi}.json`;
     tiedostot.set(tiedosto, teksti);
-    kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti) });
+    kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti), tavuja: tavuja(teksti) });
+  }
+  /*
+   * Skeema 1.48 (Pelikoodari, build 19): kaupunkilehdet myös kaupungeittain (16 Mt kokonaisena, noin 1,9 s kylmänä).
+   * kokoelmat/kaupunkilehdet/<id>.json = sama kokoelmamuoto yhdellä alkiolla, jotta natiivi lataa vain valitun
+   * kaupungin lehden (ESILATAUSPOLITIIKKA kohta 3). Kokonainen kokoelma jää vanhoille buildeille.
+   */
+  const lehdetKaupungeittain = [];
+  for (const a of kokoelmat.kaupunkilehdet?.alkiot ?? []) {
+    const k = kokoelmat.kaupunkilehdet;
+    const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi: 'kaupunkilehdet', ...k, alkiot: [a] }) + '\n';
+    const tiedosto = `kokoelmat/kaupunkilehdet/${a.id}.json`;
+    tiedostot.set(tiedosto, teksti);
+    lehdetKaupungeittain.push({ id: a.id, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) });
   }
 
   const lisatiedostot = LISATIEDOSTOT.map((polku) => {
     const teksti = readFileSync(join(juuri, polku), 'utf8');
     JSON.parse(teksti); // vain kelvollinen JSON kelpaa sellaisenaan
     tiedostot.set(`tiedostot/${polku}`, teksti);
-    return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti) };
+    return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti), tavuja: tavuja(teksti) };
   });
+  for (const { lahde, tiedosto, muoto } of NIMETYT_LISATIEDOSTOT) {
+    if (!existsSync(join(juuri, lahde))) continue;
+    const teksti = readFileSync(join(juuri, lahde), 'utf8');
+    tarkistaMuoto(muoto, JSON.parse(teksti), lahde);
+    tiedostot.set(tiedosto, teksti);
+    lisatiedostot.push({ lahde, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) });
+  }
+
+  const webNakymat = kokoaWebNakymat(juuri).map(({ nimi, tiedosto, sisalto }) => {
+    const teksti = JSON.stringify(sisalto) + '\n';
+    tiedostot.set(tiedosto, teksti);
+    return { nimi, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) };
+  });
+
+  // Offline-manifesti (skeema 1.9): maittain ladattavat laatat, maasto ja
+  // media arvioituine tavuineen (tools/vienti/offline.mjs).
+  const offline = kokoaOffline({
+    tiedostot,
+    manifest: { media: { tiedosto: 'media.json' }, kokoelmat: kokoelmaKuvaus },
+    countryShapes: nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA.map.countryShapes,
+    // Skeema 1.23: maanosaryhmät (offline.json ryhmat).
+    kartta: (({ cities, map }) => ({ countryShapes: map.countryShapes, cities, cityCountry: map.cityCountry,
+      cityManner: map.cityManner }))(nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA),
+    mannerNimet: nimiavaruudet.get('js/game.js').MANNER_NIMET,
+  });
+  const offlineTeksti = JSON.stringify(offline) + '\n';
+  tiedostot.set('offline.json', offlineTeksti);
+  const lisenssiTeksti = JSON.stringify(kokoaLisenssit(), null, 1) + '\n';
+  tiedostot.set('lisenssit.json', lisenssiTeksti);
 
   const skeemat = readdirSync(join(JUURI, 'tools/vienti/skeema')).filter((f) => f.endsWith('.json')).sort();
   for (const f of skeemat) tiedostot.set(`skeema/${f}`, readFileSync(join(JUURI, 'tools/vienti/skeema', f), 'utf8'));
@@ -185,12 +427,27 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     },
     lisatiedostot,
     skeemat: skeemat.map((f) => `skeema/${f}`),
-    media: { tiedosto: 'media.json', sha256: sha(mediaTeksti) },
+    media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
+    kaupunkilehdetKaupungeittain: lehdetKaupungeittain,
+    webNakymat,
+    offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
+    lisenssit: { tiedosto: 'lisenssit.json', sha256: sha(lisenssiTeksti), tavuja: tavuja(lisenssiTeksti) },
+    logiikka: logiikkaLista(),
     moduulit: manifestModuulit,
   };
   tiedostot.set('manifest.json', JSON.stringify(manifest, null, 1) + '\n');
   return { tiedostot, manifest, nimiavaruudet };
+}
+
+/** Paketin viittaamat ämpärin assets/-tiedostot: { polku: sha256 }. */
+export function sivustonAssetit(tiedostot) {
+  const polut = new Set();
+  const malli = new RegExp(`${SIVUSTON_ASSET_ETULIITE.replaceAll('.', '[.]')}([^"?\\s]+)[?]v=`, 'g');
+  for (const teksti of tiedostot.values()) {
+    for (const [, polku] of teksti.matchAll(malli)) polut.add(`assets/${polku}`);
+  }
+  return Object.fromEntries([...polut].sort().map((p) => [p, sivustonTiiviste(p)]));
 }
 
 export function kirjoita(tiedostot, ulos) {
@@ -207,6 +464,9 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const ulos = resolve(i > 0 ? process.argv[i + 1] : join(JUURI, 'dist/vienti'));
   const { tiedostot, manifest } = await kokoaVienti();
   kirjoita(tiedostot, ulos);
+  // Ämpäriin vietävät sivuston assetit paketin ulkopuolelle (CI:n syöte).
+  const assetit = sivustonAssetit(tiedostot);
+  writeFileSync(join(dirname(ulos), 'sivusto-assetit.json'), `${JSON.stringify(assetit, null, 1)}\n`);
   const l = manifest.laskennat;
   const tavut = [...tiedostot.values()].reduce((a, t) => a + Buffer.byteLength(t), 0);
   console.log(`vienti → ${relative(process.cwd(), ulos) || '.'}: ${tiedostot.size} tiedostoa, ${(tavut / 1e6).toFixed(1)} Mt`);

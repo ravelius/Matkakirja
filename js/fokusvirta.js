@@ -154,7 +154,7 @@ import {
   livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
-import { luennanLoppuun, stopDiaryVoice } from './luenta.js';
+import { aaniKuuluu, luennanLoppuun, stopDiaryVoice } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 // Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
 // mietintärepliikit ja saman välityspalvelinosoitteen kuin chat.
@@ -731,7 +731,7 @@ const SAAPUMISKUPLA_VAITI = new Set();
  *     sä. Kevyet täytesanat (no, niin, kato) säästellen, ja Kääk vain
  *     aidossa säikähdyksessä. Kirjakielinen abstraktio on tässä virhe.
  */
-const LIVIAN_SAAPUMISET = {
+export const LIVIAN_SAAPUMISET = {
   /* (b) pröystäily — Venetsian torilla suku on kotonaan. */
   venetsia: 'Venetsia. Täs kaupungissa minun sukuni istuu torilla '
     + 'kuin virkamiehet: Columba Livia, jos joku kysyy — ja täällä '
@@ -3838,17 +3838,66 @@ const SARJAN_ALKUVAHTI_MS = 200;
 const SARJAN_LYKKAYSKATTO_MS = 120000;
 
 /**
+ * Kuinka kauan kuva odottaa isoisän äänen 'playing'-tapahtumaa, kun luenta
+ * on jo käynnistetty (Fable 24.9.2026, löydös 45 kohta B varaventtiilillä).
+ */
+const SARJAN_AANIVARA_MS = 1500;
+
+/**
  * Odota, että isoisän luenta oikeasti alkaa — ja vasta sitten kuva.
  * Odotus on peruttavissa: `ui.luentakuvaOdotus` nollataan
  * piilotaLuentakuvassa, joten kaupungista lähtö ei jätä kuvaa
  * ilmestymään jälkijunassa.
+ *
+ * KUVA ÄÄNEN MUKANA, EI PLAY()-KUTSUN (löydös 45, Fablen päätös B
+ * 24.9.2026). `ui.luentaKesken()` kääntyy todeksi jo, kun soitin on
+ * luotu ja play() kutsuttu; ääni alkoi kuulua mitattuna noin 1,1 s
+ * myöhemmin (Ateena, tuotanto), ja sen ajan iso kuva ja Ohita olivat
+ * ruudulla Liiku-napin kanssa, koska Liiku piiloutuu vasta kuuluvasta
+ * äänestä (15.9.2026: epäonnistunut play() ei saa piilottaa mitään).
+ * Nyt kuva odottaa äänen 'playing'-tapahtumaa, jolloin kuva, ääni ja
+ * Liikun piilo alkavat yhdessä.
+ *
+ * VARAVENTTIILI: kuva ei saa koskaan jäädä tulematta äänen takia. Se
+ * avautuu heti ennallaan, jos luenta on striimattu lukija (ei <audio>-
+ * soitinta), soitin kaatuu ('error') tai loppuu, ja viimeistään
+ * SARJAN_AANIVARA_MS:n kuluttua, jos 'playing' ei tule (play() hylätty,
+ * hidas verkko). Äänet pois päältä -tilassa luenta ei ala lainkaan, ja
+ * kuva tulee alkukaton polulla kuten ennenkin.
  */
 function odotaLuennanAlku(ui, city, aloita) {
   clearTimeout(ui.luentakuvaOdotus);
   ui.luentakuvaOdotus = null;
+  const odotaAanta = (aani) => {
+    let valmis = false;
+    const ajastin = setTimeout(() => avaa(), SARJAN_AANIVARA_MS);
+    const avaa = () => {
+      if (valmis) return;
+      valmis = true;
+      clearTimeout(ajastin);
+      aani.removeEventListener('playing', avaa);
+      aani.removeEventListener('error', avaa);
+      aani.removeEventListener('ended', avaa);
+      // Peruttu (piilotaLuentakuva nollasi kahvan) tai kaupunki vaihtui.
+      if (ui.luentakuvaOdotus !== ajastin) return;
+      ui.luentakuvaOdotus = null;
+      if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+      aloita();
+    };
+    ui.luentakuvaOdotus = ajastin;
+    aani.addEventListener('playing', avaa);
+    aani.addEventListener('error', avaa);
+    aani.addEventListener('ended', avaa);
+  };
   const vahti = (kulunut = 0) => {
     if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
-    if (ui.luentaKesken?.() === true) { aloita(); return; }
+    if (ui.luentaKesken?.() === true) {
+      const aani = ui.diaryVoice;
+      const soitin = typeof aani?.addEventListener === 'function';
+      if (!soitin || aaniKuuluu(aani) || aani.error || aani.ended) { aloita(); return; }
+      odotaAanta(aani);
+      return;
+    }
     const lykkays = ui.luennanLykkays === true;
     const katko = lykkays ? SARJAN_LYKKAYSKATTO_MS : SARJAN_LUENNAN_ALKUKATTO_MS;
     if (kulunut >= katko) { aloita(); return; }
@@ -6462,29 +6511,44 @@ function aloitaSahkelento(ui, city, data) {
     : SAHKE_LENTO_MS;
   ui.sahkeLentoAjastin = setTimeout(() => {
     if (ui.dead) return;
-    // Pelaaja on voinut lähteä kaupungista tai laatta on jo käännetty
-    // muuta tietä: paluu odottaa silloin seuraavaa pisteen napautusta.
-    if (ui.game?.cityOf?.()?.id !== city.id) return;
-    if (!ui.game.tokens?.has(city.id)) return;
-    const tehtava = data.sahketehtava ?? {};
-    const kuplat = livianKuplat(tehtava.paluu);
-    // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
-    // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
-    // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
-    // LIVIAN_KAIKU).
-    polloKuplasarja(ui, city, 'paluu',
-      kuplat.length ? kuplat : ['Perillä oltiin. Pöllö kertoi paikan.']);
-    /*
-     * AARRE ODOTTAA KOKO SARJAN. Paluu on 7.9.2026 alkaen kaksi kuplaa,
-     * ja ne tulevat samaan paikkaan peräkkäin (polloKuplasarja). Aarre
-     * paljastuu vasta viimeisen kuplan päälle, joten odotukseen lisätään
-     * niiden edeltäjien lukuajat — yhden kuplan kaupungeissa tahti on
-     * entinen.
-     */
-    clearTimeout(ui.sahkeAarreAjastin);
-    ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data),
-      SAHKE_PALUU_MS + livianSarjanKesto(kuplat.slice(0, -1)));
+    // Laatta käännetty muuta tietä: Livialla ei ole enää mitään tuotavaa.
+    if (!ui.game?.tokens?.has(city.id)) return;
+    // Pelaaja lähti kaupungista lennon aikana: paluu odottaa seuraavaa
+    // pisteen napautusta (sahkePaluuOdottaa, avaaFokusKohtaaminen).
+    if (ui.game?.cityOf?.()?.id !== city.id) {
+      ui.sahkePaluuOdottaa ??= new Set();
+      ui.sahkePaluuOdottaa.add(sahkeAvain(ui, city));
+      return;
+    }
+    sahkePaluu(ui, city, data);
   }, lento);
+}
+
+/**
+ * LIVIA PALAA JA AARRE PALJASTUU (lennon ajastin tai, jos pelaaja oli
+ * poissa, pisteen napautus paluun jälkeen — omistaja 23.9.2026: lennon
+ * aikana lähtenyt saa aarteen, kun palaa pisteelle, eikä vasta uudessa
+ * istunnossa; sama kuin natiivissa).
+ */
+function sahkePaluu(ui, city, data) {
+  const tehtava = data.sahketehtava ?? {};
+  const kuplat = livianKuplat(tehtava.paluu);
+  // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
+  // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
+  // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
+  // LIVIAN_KAIKU).
+  polloKuplasarja(ui, city, 'paluu',
+    kuplat.length ? kuplat : ['Perillä oltiin. Pöllö kertoi paikan.']);
+  /*
+   * AARRE ODOTTAA KOKO SARJAN. Paluu on 7.9.2026 alkaen kaksi kuplaa,
+   * ja ne tulevat samaan paikkaan peräkkäin (polloKuplasarja). Aarre
+   * paljastuu vasta viimeisen kuplan päälle, joten odotukseen lisätään
+   * niiden edeltäjien lukuajat — yhden kuplan kaupungeissa tahti on
+   * entinen.
+   */
+  clearTimeout(ui.sahkeAarreAjastin);
+  ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data),
+    SAHKE_PALUU_MS + livianSarjanKesto(kuplat.slice(0, -1)));
 }
 
 /**
@@ -6533,7 +6597,9 @@ function paljastaSahkeAarre(ui, city, data) {
  *
  * KAKSI AVAINTA SAMAAN LUKKOON (TAI-ehto), ei yhtä:
  *
- *   1. UUSI — kaksi ratkaistua NOSTON minikysymystä koko matkalla
+ *   1. UUSI — ratkaistu NOSTON minikysymys koko matkalla (LÖYDÖS 145,
+ *      omistaja 25.9.2026: kynnys kahdesta yhteen — vihreä piste syttyy
+ *      jo ensimmäisestä oikeasta ratkaisusta)
  *      (game.nostotehtavatRatkaistu, erä 6). Laskuri on GLOBAALI eikä
  *      kaupunkikohtainen: omistajan sana on *"kaksi mita tahansa mini
  *      tehtavaa"*, ja kaupunkikohtainen laskuri lukitsisi pelaajan
@@ -6548,21 +6614,24 @@ function paljastaSahkeAarre(ui, city, data) {
  * koskee VAIN sitä, milloin vihreä piste on napautettavissa.
  */
 
-/** Montako noston minikysymystä avaa aarrepisteen (Raamattu: kaksi). */
-export const NOSTOTEHTAVIA_AARREPISTEESEEN = 2;
+/** Montako noston minikysymystä avaa aarrepisteen (löydös 145, 25.9.2026: yksi; ennen kaksi). */
+export const NOSTOTEHTAVIA_AARREPISTEESEEN = 1;
 
 /**
  * Lukitun pisteen ruudunlukijalappu ja napautuksen vastaus.
  * Sama lause molemmissa, jotta kuultu ja luettu peli kertovat saman.
  */
-export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kaksi kysymystä kartalta';
+export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kysymys kartalta';
 
 /** Lukitun pisteen napautuksen vastaus pulun kuplassa. */
-export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kaksi kysymystä kartalta.';
+export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kysymys kartalta.';
 
-/** Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto, ks. yllä). */
-export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kaksi kysymystä ja '
-  + 'vastaamalla niihin oikein saat vihjeen aarteen sijainnista.';
+/**
+ * Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto 13.9., ks. yllä,
+ * yksikössä löydöksen 145 kynnyksen mukaan).
+ */
+export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kysymyksen ja '
+  + 'vastaamalla siihen oikein saat vihjeen aarteen sijainnista.';
 
 /** Kuinka kauan ohje odottaa saapumisen rauhoittumista. */
 const AARREPISTEEN_OHJE_VIIVE_MS = 2500;
@@ -6762,6 +6831,14 @@ export function avaaFokusKohtaaminen(ui, city) {
     suljeFokusvirta(ui);
     const pulmaOdottaa = ui.game.pendingPuzzle?.();
     ui.doAction(() => ui.game.actionQuiz(pulmaOdottaa ? {} : { form: 'quiz' }));
+    return true;
+  }
+  // Livia palasi lennolta pelaajan ollessa poissa: napautus tuo aarteen.
+  const avain = sahkeAvain(ui, city);
+  if (ui.sahkePaluuOdottaa?.has(avain) && ui.game?.tokens?.has(city.id)) {
+    ui.sahkePaluuOdottaa.delete(avain);
+    suljeFokusvirta(ui);
+    sahkePaluu(ui, city, data);
     return true;
   }
   lataaTyyli();

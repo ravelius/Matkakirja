@@ -40,10 +40,11 @@
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { koepyramidinPallokansio, pyramidiKoe } from './media.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet,
-  haePyramidinLuettelo, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
+  haePyramidinLuettelo, nostotasonNimetElavina, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
   pyramidinLaattaUrl,
 } from './laattapyramidi.js';
 import { JAAVARI, MERIVARI, kuunteleReliefiLinssi, reliefiKaytossa } from './reliefipyramidi.js';
@@ -120,7 +121,16 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-22c-pohja';
+/*
+ * PERUSKARTTA 2026-09-25 (omistaja 25.9.2026: "vaihda", kuvakokeilu
+ * koelipulla ?pyramidi=2026-09-25). Resepti D2 + C-reliefi + vektorirannat;
+ * sarja on poltettu ILMAN viivatasoa (sama sarja kuin natiivilla), joten
+ * liikkuvassa pallossa ei ole poltettuja rajoja — levossa rajat, joet ja
+ * nostot tulevat pyramidin lepokerroksesta. laatat.json: viivat null,
+ * nostot null, ranta null, versio = pyramidin versio (lepokerroksen
+ * versiovahti, js/pallolaatat.js lepokerroksenKerrokset).
+ */
+export const PALLO_LAATTAVERSIO = '2026-09-26-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -190,14 +200,23 @@ export const PALLO_LAATTAVERSIO = '2026-09-22c-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260922c';
+export const PALLO_LAATTATUNNISTE = '20260926';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
  * (js/pallolaatat.js nostotMaittain). Sama tieto sw.js LAATTAKANSIO.
  */
 export const PALLO_SARJASSA_NOSTOT = false;
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+/*
+ * KOEPYRAMIDI (?pyramidi=<sarja>, js/media.js pyramidiKoe): pallo lukee
+ * saman sarjan laatat kuin koeluettelo, koska lepokerros vaatii pallon
+ * sarjan ja pyramidin luettelon version täsmäävän (js/pallolaatat.js
+ * lepokerroksenKerrokset) — muuten kerros sammuisi kokeessa.
+ */
+const KOEPYRAMIDI = pyramidiKoe();
+/** Tuotannon kansio (sw.js LAATTAKANSIO on sama). */
+export const TUOTANNON_PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+export const PALLO_LAATTAKANSIO = KOEPYRAMIDI ? koepyramidinPallokansio(KOEPYRAMIDI) : TUOTANNON_PALLO_LAATTAKANSIO;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
@@ -536,6 +555,28 @@ export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
   if (KOHDEMAAN_NIMIOT_ELAVINA && !laattaluettelo?.nostotaso?.nostot) return false;
   if (!nostot || !tunnus) return false;
   const poltettu = nostot[tunnus];
+  if (!poltettu) return false;
+  return tiiviste ? poltettu === tiiviste : true;
+}
+
+/*
+ * PISTE LAATASSA, NIMI ELÄVÄNÄ (Fable 23.9.2026, koe `poltetutnostot`;
+ * js/piirtokoe-asetus.js POLTETUT NOSTOT). Kohdemaan nostotaso on
+ * poltettu ilman nimiä (js/laattapyramidi.js nostotasonNimetElavina),
+ * ja tämä nosto on siinä samalla tiivisteellä: laatta piirtää pisteen tai
+ * kuvamerkin, elävä kerros vain nimen (js/pallolauta/nostot.js
+ * `pisteLaatassa`). pallonNostoOnPoltettu pysyy false — nimi kulkee
+ * sovittelun läpi kuten muutkin elävät. Koe luetaan kerran: valinta
+ * lataa sivun (js/piirtokoe-asetus.js koetilanAvain).
+ */
+let poltetutNostotKoe = null;
+export function pallonNostonPisteLaatassa(tunnus, tiiviste = null) {
+  poltetutNostotKoe ??= laattakerroksenKokeet().has('poltetutnostot');
+  if (!poltetutNostotKoe || !tunnus) return false;
+  // Pallon sarjaan poltetut nostot (vanha malli): nimet ovat laatassa.
+  if (laattaluettelo?.nostotaso?.nostot) return false;
+  if (!nostotasonNimetElavina()) return false;
+  const poltettu = nostotasonPoltetut()?.[tunnus];
   if (!poltettu) return false;
   return tiiviste ? poltettu === tiiviste : true;
 }
@@ -1730,7 +1771,16 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     const piiloon = eiPohjaa || (pohjanPiilotus && kerrosKaytossa && kerros.peittaaKokonaan());
     if (piiloon === moottori.pohjaPiilossa) return;
     moottori.pohjaPiilossa = piiloon;
-    moottori.visible = !piiloon;
+    /*
+     * KIRJASTON OMA SULKU VOITTAA (savuke-astro-pallo 43/47b, 26.9.2026).
+     * Astronautin kamera sulkee moottorin `globeTileEngineUrl(null)`:lla
+     * (js/linssit/satelliitti-avaruus.js) ja piilottaa kerroksen; silloin
+     * `peittaaKokonaan` kääntyy epätodeksi ja palautus kirjoitti
+     * `visible = true` suljetun moottorin päälle — pelin z2-laatat ja
+     * napakansi piirtyivät linssin reliefipallon päälle. Palautetaan vain,
+     * jos kirjastolla on laattaosoite.
+     */
+    moottori.visible = !piiloon && Boolean(pallo.globeTileEngineUrl?.());
   };
   const kehyspurku = kerros
     ? kytkePallonKehys(pallo, kotelo, (kehys) => {
@@ -3060,6 +3110,43 @@ export const VEDON_KATTO_RUUTUA = 1;
 export const VAUHDIN_KATTO_MS = 250;
 
 /*
+ * ======== LIU'UN LOPPU PEHMEÄSTI (omistaja 23.9.2026 klo 12.4x) ========
+ *
+ * *"siinä lopussa on vähän turhan nopea liikkeen lopetus, jos sen
+ * pystyisi vielä pehmeämmin hidastamaan sen ihan lopun vierityksen."*
+ *
+ * VANHA: eksponentiaalinen kitka ja katkaisu, kun kulmanopeus alitti
+ * 0,0006 °/ms. Kynnys oli ASTEINA, joten ruudulla se oli sitä
+ * isompi, mitä lähempänä kamera oli: iPadin maakuvassa (korkeus ~0,2)
+ * kartta liikkui vielä ~1 px/kehys (60 px/s) ja pysähtyi seuraavassa
+ * kehyksessä kuin seinään.
+ *
+ * UUSI: kun ruutunopeus laskee alle LIUKU_LOPPU_PX_MS:n, liuku siirtyy
+ * loppuvaiheeseen, jossa nopeus on v0·(1 − s/T)² ja T = 2 / kitka.
+ * Silloin
+ *   - hidastuvuus vaiheen alussa (2·v0/T = kitka·v0) on sama kuin
+ *     eksponentiaalisen kitkan juuri ennen vaihtoa: saumaa ei tunne;
+ *   - lopussa sekä nopeus että hidastuvuus ovat nolla: kartta asettuu
+ *     eikä pysähdy.
+ * Kynnys on ruudun pikseleinä, joten tuntuma on sama jokaisella
+ * zoomitasolla. Loppuvaihe kestää T ≈ 710 ms ja kulkee v0·T/3 ≈ 36 px.
+ */
+/** Ruutunopeus (px/ms), jonka alla liuku siirtyy loppuvaiheeseen (~2,5 px/kehys). */
+export const LIUKU_LOPPU_PX_MS = 0.15;
+
+/**
+ * Loppuvaiheen askel hetkestä s0 hetkeen s1 (ms vaiheen alusta), kesto T.
+ * Palauttaa { matka, nopeus } suhteessa vaiheen alkunopeuteen v0:
+ * matka (ms-yksikköä, kerro v0:lla) on nopeuden tarkka integraali, ja
+ * nopeus on kerroin v0:lle hetkellä s1. `valmis`, kun s1 ≥ T.
+ */
+export function liukuLoppuAskel(s0, s1, T) {
+  const k = (s) => Math.max(0, 1 - Math.min(s, T) / T);
+  const a = k(s0); const b = k(s1);
+  return { matka: (T / 3) * (a ** 3 - b ** 3), nopeus: b * b, valmis: s1 >= T };
+}
+
+/*
  * ======== OSOITIN KEHYKSEN HETKELLÄ (sulavuus kohta 13) =============
  *
  * MITATTU VIKA (Laitetestaaja 22.9.2026, aidot hiirivedot, 16 kierrosta
@@ -3341,7 +3428,8 @@ export function kohdistaAnkkuri(pov, ankkuri, sx, sy, altitude, linssi, kierroks
     return { lat, lng, altitude };
   }
   for (let i = 0; i < kierroksia; i += 1) {
-    const osuma = laattakerroksenOsuma({ lat, lng, altitude }, sx, sy, linssi);
+    // Kallistettu kamera (pysyvä kallistus) ankkuroi kallistetun säteen kautta.
+    const osuma = laattakerroksenOsuma({ lat, lng, altitude, kallistus: pov?.kallistus }, sx, sy, linssi);
     if (!osuma) break;
     let dLng = ankkuri.lng - osuma.lng;
     if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
@@ -3651,23 +3739,93 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   const VAUHTI_KYNNYS = 0.0006; // astetta/ms
   const vauhti = { lat: 0, lng: 0, aika: 0, raf: 0 };
   ui.pallonVauhti = vauhti; // mittausta varten (savukkeet)
-  const pysaytaLiuku = () => { if (vauhti.raf) cancelAnimationFrame(vauhti.raf); vauhti.raf = 0; };
-  const liu = (edellinen) => {
-    const nyt = performance.now();
-    const dt = Math.min(50, nyt - edellinen);
+  /*
+   * LIUKU ASTUU KIRJASTON TICKISSÄ, EI OMASSA rAF:SSA (omistaja 23.9.2026
+   * klo 12.4x, paljas kartta: *"siinäkin on yksi tökkäys yleensä, jos
+   * vedän kerran ja jätän kartan liikkumaan itsestään loppuun"*).
+   *
+   * MITATTU (tools/savukkeet/mittaa-heitto.mjs, WebKit, 4/4 heittoa):
+   * irrotuksen jälkeen KAKSI renderiä ilman siirtymää (~34 ms seisahdus)
+   * ennen kuin liuku lähti. Kaksi syytä:
+   *   1. Liu'un oma rAF rekisteröitiin pointerupissa, eli kirjaston tickin
+   *      JÄLKEEN — liu'un askel näkyi vasta seuraavassa renderissä, joten
+   *      irrotuksen jälkeinen ensimmäinen kehys piirtyi paikallaan.
+   *   2. rAF-kääre `() => liu(performance.now())` luki
+   *      lähtöhetken vasta takaisinkutsussa, joten ensimmäisen askeleen
+   *      dt oli ~0 ja toinenkin kehys seisoi.
+   * Nyt liuku astuu samassa paikassa kuin veto (`sovellaSyote`, ennen
+   * renderiä), ja sen kello jatkaa vedon aikajanaa: `aika` on viimeksi
+   * sovelletun vetopaikan hetki, ja joka askeleen tavoitehetki on
+   * kehyksen hetki miinus sama viive, jolla veto seurasi sormea. Ensimmäinen
+   * liukukehys siirtyy siis täyden kehyksen verran, kuten veto ennen sitä.
+   *
+   * `vauhti.raf` on yhä liu'un oma rAF-silmukka, mutta se vain pitää
+   * lepopiirron hereillä ja on "liukuu"-lippu muille (lauta.js vetoNyt,
+   * savukkeet). Jos kirjaston tick ei jostain syystä aja (tauko), silmukka
+   * astuu itse, jottei liuku jää roikkumaan.
+   */
+  const LIUKU_VARA_MS = 100;
+  const pysaytaLiuku = () => {
+    if (vauhti.raf) cancelAnimationFrame(vauhti.raf);
+    vauhti.raf = 0;
+    vauhti.liukuu = false;
+    vauhti.loppu = null;
+  };
+  const LIUKU_LOPPU_T_MS = 2 / VAUHTI_KITKA;
+  /** Liu'un nopeus ruudun pikseleinä/ms (pystykaista = kotelon korkeus). */
+  const ruutunopeus = (v, lat) => {
+    const korkeus = kotelo.clientHeight || globalThis.innerHeight || 800;
+    const pxAste = korkeus / nakyvaKaista(pallo.pointOfView().altitude, kamera.fov);
+    return Math.hypot(v.lat, v.lng * Math.cos((lat * Math.PI) / 180)) * pxAste;
+  };
+  const liu = (nyt) => {
+    if (!vauhti.liukuu) return;
+    vauhti.askelNyt = nyt;
+    const tavoite = nyt - vauhti.liukuViive;
+    const dt = Math.min(50, tavoite - vauhti.liukuAika);
+    if (!(dt > 0)) return; // sama kehys (update kahdesti) tai kello taaksepäin
+    vauhti.liukuAika = tavoite;
     const pov = pallo.pointOfView();
+    // Siirtymä tällä askeleella: kitkavaiheessa v·dt, loppuvaiheessa tarkka integraali.
+    let dLat = vauhti.lat * dt;
+    let dLng = vauhti.lng * dt;
+    const loppu = vauhti.loppu;
+    let askel = null;
+    if (loppu) {
+      askel = liukuLoppuAskel(loppu.s, loppu.s + dt, LIUKU_LOPPU_T_MS);
+      loppu.s += dt;
+      dLat = loppu.lat * askel.matka;
+      dLng = loppu.lng * askel.matka;
+    }
     const kohta = rajaaKohta(
-      Math.max(-89.5, Math.min(89.5, pov.lat + vauhti.lat * dt)),
-      pov.lng + vauhti.lng * dt,
+      Math.max(-89.5, Math.min(89.5, pov.lat + dLat)),
+      pov.lng + dLng,
     );
     pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
     // Seinään osunut suunta pysähtyy tähän (ks. PEHMEÄ PYSÄYTYS).
-    if (kohta.latRajattu) vauhti.lat = 0;
-    if (kohta.lngRajattu) vauhti.lng = 0;
+    if (kohta.latRajattu) { vauhti.lat = 0; if (loppu) loppu.lat = 0; }
+    if (kohta.lngRajattu) { vauhti.lng = 0; if (loppu) loppu.lng = 0; }
+    if (loppu) {
+      vauhti.lat = loppu.lat * askel.nopeus;
+      vauhti.lng = loppu.lng * askel.nopeus;
+      if (askel.valmis || !(loppu.lat || loppu.lng)) pysaytaLiuku();
+      return;
+    }
     const vaimennus = Math.exp(-VAUHTI_KITKA * dt);
     vauhti.lat *= vaimennus; vauhti.lng *= vaimennus;
-    if (Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) vauhti.raf = requestAnimationFrame(() => liu(nyt));
-    else vauhti.raf = 0;
+    if (!(vauhti.lat || vauhti.lng)) { pysaytaLiuku(); return; }
+    // Ruutunopeus alle LIUKU_LOPPU_PX_MS → pehmeä loppuvaihe (ks. LIU'UN LOPPU PEHMEÄSTI).
+    if (ruutunopeus(vauhti, kohta.lat) < LIUKU_LOPPU_PX_MS) {
+      vauhti.loppu = { s: 0, lat: vauhti.lat, lng: vauhti.lng };
+    }
+  };
+  const liukuSyke = () => {
+    if (!vauhti.liukuu) { vauhti.raf = 0; return; }
+    const nyt = performance.now();
+    if (nyt - vauhti.askelNyt > LIUKU_VARA_MS) liu(nyt);
+    if (!vauhti.liukuu) { vauhti.raf = 0; return; }
+    ilmoitaSyote();
+    vauhti.raf = requestAnimationFrame(liukuSyke);
   };
   /*
    * SYÖTE ON MUUTOSLÄHDE, JOTEN SE ILMOITTAA LEPOPIIRROLLE
@@ -3858,10 +4016,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   const sovellaSyote = () => {
     const nyt = kehyksenHetki();
     paivitaKehysvali(nyt);
+    if (vauhti.liukuu) { liu(nyt); return; }
     if (syote.tapa === 'vanha') {
       // (1) v2097: viimeisin näyte sellaisenaan, kerran kehyksessä.
       const v = syote.veto;
-      if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
+      if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); syote.sovellusNyt = nyt; }
     } else if (syote.naytteet.length) {
       const n = syote.naytteet;
       const viimeinen = n[n.length - 1];
@@ -3922,6 +4081,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
       if (kohta) {
         syote.veto = null;
         sovellaVeto(kohta.x, kohta.y, kohta.t);
+        syote.sovellusNyt = nyt;
       }
     }
     if (syote.nipistys) { syote.nipistys = false; sovellaNipistys(); }
@@ -3929,6 +4089,9 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   const alkuperainenUpdate = ohjaimet.update;
   ohjaimet.update = function pallonSyoteUpdate(...args) {
     sovellaSyote();
+    // Pysyvä kallistus (js/pallolauta/kallistus.js): eleet ajetaan, mutta
+    // kirjaston update vetäisi kameran takaisin katsomaan pallon keskelle.
+    if (ohjaimet.__kirjastoOhi) return false;
     return alkuperainenUpdate.apply(this, args);
   };
   const puraSyote = () => {
@@ -3948,10 +4111,19 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     syote.veto = null; // irrotuksen jälkeen ei enää sovelleta
     tartunta = null;
     if (sormet.alhaalla > 0) return;
-    const seisahtunut = performance.now() - vauhti.aika > 150; // sormi pysähtyi ennen irrotusta
+    const nytP = performance.now();
+    const seisahtunut = nytP - vauhti.aika > 150; // sormi pysähtyi ennen irrotusta
     if (!ui.reducedMotion && !seisahtunut && Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) {
       pysaytaLiuku();
-      vauhti.raf = requestAnimationFrame(() => liu(performance.now()));
+      // Liuku jatkaa vedon aikajanaa (ks. LIUKU ASTUU KIRJASTON TICKISSÄ):
+      // viive = kuinka paljon sovellettu vetopaikka oli kehyksen hetkeä jäljessä.
+      const viimeNyt = syote.sovellusNyt || nytP;
+      vauhti.liukuViive = Math.max(0, Math.min(2 * kehysvali, viimeNyt - vauhti.aika));
+      vauhti.liukuAika = vauhti.aika;
+      vauhti.askelNyt = nytP;
+      vauhti.liukuu = true;
+      ilmoitaSyote();
+      vauhti.raf = requestAnimationFrame(liukuSyke);
     }
     vauhti.aika = 0;
   };

@@ -446,3 +446,18 @@ test('kytkimet: laattakerros ja vektorit myös muistista, ratasvalikosta', async
   assert.doesNotMatch(main, /asetaLaattakerros\(/);
   assert.doesNotMatch(main, /asetaPallovektorit\(/);
 });
+
+/*
+ * NAULAUKSEN TYÖSÄIE (korjaus 23.9.2026): korostuksen pyyntölaskuri oli
+ * alustamatta, ensimmäinen pyyntö oli NaN, ja NaN !== NaN hylkäsi jokaisen
+ * säikeen vastauksen — kehä jäi naulaamatta ("kaksi erilaista viivaa").
+ */
+test('naulauksen pyyntölaskuri on alustettu ja säikeen portti on matalampi', async () => {
+  const lahde = lue('../js/pallovektorit.js');
+  const kentat = /const korostus = \{([\s\S]*?)\n {2}\};/.exec(lahde)?.[1] ?? '';
+  assert.match(kentat, /\bpyynto: 0\b/);
+  assert.match(kentat, /\bodottaa: null\b/);
+  assert.match(lahde, /tiheys >= \(tyosaie \? NAULAUKSEN_TIHEYS_RAJA_SAIE : NAULAUKSEN_TIHEYS_RAJA\)/);
+  const n = await import('../js/pallovektorit-naulaus.js');
+  assert.ok(n.NAULAUKSEN_TIHEYS_RAJA_SAIE < n.NAULAUKSEN_TIHEYS_RAJA);
+});

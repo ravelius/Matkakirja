@@ -133,8 +133,9 @@ export function kartanMittaSallittu() {
  * velka): sama lukitus kuin Ranskalla, jotta elävä merkki ei ladu
  * itseään uudelleen panoroinnissa eikä maakohde ole merellä (saaret ja
  * tyypin 'meri' nostot pitävät pisteensä). Maat EIVÄT ole
- * LUKITUT_MAAT-listalla: hahmotelmat pysyvät elävinä, poltto on oma
- * päätöksensä. FRA ensin: sen poltettu piste voittaa.
+ * LUKITUT_MAAT-listalla (paitsi ESP 23.9.2026): hahmotelmat pysyvät
+ * elävinä, poltto on oma päätöksensä. FRA ensin: sen piste voittaa
+ * yhteisessä taulussa, mutta poltto kysyy maan omasta taulusta.
  */
 const MAIDEN_TAULUT = {
   FRA: NOSTOANKKURIT_FRA, ESP: NOSTOANKKURIT_ESP, ITA: NOSTOANKKURIT_ITA,
@@ -202,7 +203,12 @@ export function lukittujaAnkkureita() { return LUKITUT_ANKKURIT.size; }
  * lainkaan — muuten sen muste jäisi laatassa siihen, minne vanha
  * levitys sen jätti, eikä elävä nimiö osuisi siihen.
  */
-export const LUKITUT_MAAT = Object.freeze(['FRA']);
+/*
+ * ESP LUKITTU 23.9.2026 (Fable, nostotason poltto; 19.9. velka
+ * docs/raportit/viesti-fable-ankkurilukitus-20260919.md). Poltto kysyy
+ * ankkurin maan omasta taulusta (tools/fokuskartta/nostot.mjs).
+ */
+export const LUKITUT_MAAT = Object.freeze(['FRA', 'ESP']);
 export function onLukittuMaa(iso) { return LUKITUT_MAAT.includes(String(iso ?? '').toUpperCase()); }
 
 const limittyy = (a, b, vara) => a.x0 - vara < b.x1 && b.x0 - vara < a.x1

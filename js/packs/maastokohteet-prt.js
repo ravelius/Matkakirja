@@ -428,6 +428,7 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'almendres',
+    nimio: 'Almendres',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-almendres-012f21e4.jpg',
       lyhyt: 'Almendresin megaliittikehän pystykiviä Évoran lähellä.',

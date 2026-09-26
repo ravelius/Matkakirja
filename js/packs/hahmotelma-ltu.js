@@ -558,6 +558,7 @@ export const HAHMOTELMA_LTU = [
   },
   {
     id: 'hahmotelma-dzukija',
+    nimio: 'Dzūkija',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-dzukija-53ca0050.jpg',
       lyhyt: 'Čepkeliain suon vetisiä laikkuja ja valkoisia tupsuja.',
@@ -1468,6 +1469,7 @@ export const HAHMOTELMA_LTU = [
    */
   {
     id: 'hahmotelma-trakai-niemekelinna',
+    nimio: 'Trakai',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/ltu-nosto-trakai-niemeke-607912e4.jpg',
       lyhyt: 'Trakain niemekelinnan rauniotorni kohoaa puiden keskellä.',

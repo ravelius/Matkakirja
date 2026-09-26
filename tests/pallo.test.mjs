@@ -28,7 +28,7 @@ import {
 import {
   PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
   RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
-  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
+  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto, liukuLoppuAskel, LIUKU_LOPPU_PX_MS,
   ZOOMIN_ASKELKATTO, ZOOMIN_HERKKYYS, ZOOMIN_LIUKU_MS, kohdistaAnkkuri, zoominAskel,
   ENNUSTE_KEHYS_MAX_MS, ennustaKamera, pallonEnnusteKaytossa,
 } from '../js/pallo.js';
@@ -67,8 +67,17 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
   const lontoo = kaupungit.find((k) => k.id === 'lontoo');
   assert.ok(lontoo.kayty && lontoo.alku && lontoo.x === 5829.5, 'Lontoo: käyty, aloitus, laudan x säilyy kameran kotia varten');
   assert.ok(kaupungit.every((k) => Math.abs(k.lat) <= 90 && Math.abs(k.lon) <= 180));
-  // Napautus Lontoon asteisiin osuu Lontoon laudan koordinaattiin.
-  const kohta = sukelluskohta(lontoo.lat, lontoo.lon);
+  /*
+   * Napautus laudan raakaprojisoituihin asteisiin osuu takaisin samaan
+   * laudan koordinaattiin. Lasketaan asteet suoraan laudaltaAsteiksi-
+   * kaavalla emmekä lontoo.lat/lon:sta, koska jälkimmäinen voi 23.9.2026
+   * alkaen olla PALLON_KAUPUNKIPISTEET-korjattu (Wikidata) piste — ero
+   * laudan omaan projektioon on juuri se korjaus, jota vain pallolauta
+   * näyttää (js/packs/maailmankartta-pallopisteet.js), eikä sukellus
+   * käytä sitä.
+   */
+  const lontooAsteina = laudaltaAsteiksi('maailmankartta', lontoo.x, lontoo.y);
+  const kohta = sukelluskohta(lontooAsteina.lat, lontooAsteina.lon);
   assert.ok(Math.abs(kohta.x - lontoo.x) < 1e-6 && Math.abs(kohta.y - lontoo.y) < 1e-6, JSON.stringify(kohta));
   assert.equal(sukelluskohta(NaN, 0), null);
   /*
@@ -135,7 +144,13 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   /*
-   * TUNNISTE 20260922c, versio 2026-09-22c-pohja (22.9.2026 ilta: vesiviivat
+   * TUNNISTE 20260926, versio 2026-09-26-pohja (peruskartta 2026-09-26,
+   * omistaja hyväksyi 26.9.2026 klo 08.1x; sarja ilman viivatasoa, rajat lepokerroksesta).
+   * Edellinen 20260925, versio 2026-09-25-pohja (25.9.2026).
+   * Edellinen 20260923a, versio 2026-09-23a-pohja (23.9.2026: sama kuin 22c,
+   * mutta vesiviivoitus.harvennus = 'haive' — harvennus häivyttää eikä katkaise;
+   * docs/raportit/kuvat/harvennus-haive-20260923/). Edellinen 20260922c,
+   * versio 2026-09-22c-pohja (22.9.2026 ilta: vesiviivat
    * laudan yksiköihin ja laikut maailmaan, jotta tasot piirtävät saman kuvion
    * samaan maantieteelliseen kohtaan — docs/raportit/vesiviivat-laudan-
    * yksikoihin-20260922.md; edellinen 20260922a 21.9.2026 ilta, isobaatit +
@@ -146,8 +161,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
    * lepokerroksesta. Tunniste on pelkkiä kirjaimia ja numeroita, koska
    * tools/tee-pallolaatat.mjs hylkää muun.
    */
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260922c`);
-  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260922c')}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260926`);
+  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260926')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   /*
@@ -180,8 +195,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 6);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 8 } }), 8, 'luettelon 8 riittaa, kun sarja b kantaa sen');
-  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-22c-pohja-20260922c\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
-  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-22c-pohja-20260922c\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-26-pohja-20260926\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-26-pohja-20260926\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
@@ -240,7 +255,17 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Liike jatkuu sormen irrottua: kitka ja kynnys (5.9.2026).
   const pallo2 = lue('../js/pallo.js');
   assert.match(pallo2, /const VAUHTI_KITKA = 0\.0028;/);
-  assert.match(pallo2, /requestAnimationFrame\(\(\) => liu\(/);
+  /*
+   * HEITON TÖKKÄYS (omistaja 23.9.2026, paljas kartta): liuku astuu
+   * kirjaston tickissä ennen renderiä (sovellaSyote), ei omassa rAF:ssa
+   * tickin jälkeen, ja sen kello jatkaa vedon aikajanaa. Vanha kaava
+   * jätti irrotuksen jälkeen kaksi renderiä ilman siirtymää.
+   */
+  assert.doesNotMatch(pallo2, /requestAnimationFrame\(\(\) => liu\(/, 'liuku ei astu omassa rAF:ssa');
+  assert.match(pallo2, /const sovellaSyote = \(\) => \{\n    const nyt = kehyksenHetki\(\);\n    paivitaKehysvali\(nyt\);\n    if \(vauhti\.liukuu\) \{ liu\(nyt\); return; \}/,
+    'liuku astuu tickissä ennen vetoa ja renderiä');
+  assert.match(pallo2, /vauhti\.liukuAika = vauhti\.aika;/, 'liu\'un kello alkaa viimeksi sovelletusta vetopaikasta');
+  assert.match(pallo2, /const tavoite = nyt - vauhti\.liukuViive;/, 'liuku seuraa samalla viiveellä kuin veto');
 });
 
 /*
@@ -878,7 +903,8 @@ test('pallon poltto: osat rinnakkain, vienti rinnakkain, ei yhtä prosessia', ()
   assert.match(poltto, /lokit\/\$nimi\.valmis/, 'valmista osaa ei ohiteta uusinnassa');
   // Vienti: rinnakkaisuus ja aikakatkaisu jokaiseen kutsuun.
   assert.match(poltto, /max_concurrent_requests/, 'viennin rinnakkaisuutta ei nosteta');
-  const kutsuja = (poltto.match(/aws s3 (sync|cp)/g) ?? []).length;
+  // Kaikki ämpärikutsut (myös delta-polton cp/ls/s3api, 26.9.2026).
+  const kutsuja = (poltto.match(/aws s3(api)? /g) ?? []).length;
   const katkaisuja = (poltto.match(/--cli-connect-timeout/g) ?? []).length;
   assert.equal(katkaisuja, kutsuja, 'jokainen aws-kutsu tarvitsee --cli-connect-timeout');
   // Pelkkä pallo ilman pyramidia (myös työnkulun sarjat-syötteestä).
@@ -1032,22 +1058,37 @@ test('kaupungin oma pallopiste voittaa laudan pisteen, ja siirtymä palaa siihen
 
 test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () => {
   const nimet = new Map(MAAILMANKARTTA.cities.map((c) => [c.id, c]));
-  // ALUEITA EI SIIRRETÄ: niiden Wikidata-koordinaatti on alueen
-  // keskipiste eikä se kohta, jota lauta tarkoittaa (luku 12.2).
+  /*
+   * ALUEET EIVÄT SIIRRY PALLOLLA: niiden Wikidata-koordinaatti on
+   * alueen keskipiste eikä se kohta, jota lauta tarkoittaa (luku 12.2).
+   * Neljäs kierros 23.9.2026 (Siirtosepän 163 kaupungin ehdotus,
+   * docs/raportit/kaupunkien-latlon-20260923.md): vienti tarvitsee
+   * silti pisteen jokaiselle, joten alueet SAAVAT nyt pallopisteen,
+   * mutta sen on oltava täsmälleen laudan oma piste (poikkeama 0) —
+   * pallo ei siis siirry, vain vienti saa koordinaatin.
+   */
   for (const alue of ['borneo', 'kamtsatka', 'ahaggar', 'namib', 'nullarbor', 'sahara',
     'viktoria', 'tanganjika', 'tshadjarvi', 'galapagos', 'falkland', 'bali', 'sthelena',
     'hawaii', 'sierraleone', 'siinai', 'sepik',
-    'kappalmas', 'bahrelghazal', 'bananal', 'mosambik', 'orjarannikko',
+    'bahrelghazal', 'bananal', 'orjarannikko',
     // Toinen kierros 7.9.2026 illalla: samasta syystä nämäkin jäävät.
     'sumatra', 'sisilia', 'kreeta', 'kapadokia', 'madagaskar', 'darfur',
-    'sahalin', 'kongo', 'kamerun', 'angola', 'islanti', 'alpit', 'appalakit',
+    'sahalin', 'kongo', 'angola', 'islanti', 'alpit', 'appalakit',
     'labrador', 'rubalkhali']) {
     /*
      * Kolmas kierros 19.9.2026 (Fablen päätös, erä H): Sansibar,
      * Victorian putoukset, Mount Rushmore, Kilimandžaro, Uluru ja
      * Milford Sound ovat PISTEMÄISIÄ kohteita ja saivat pisteen.
+     * Neljäs kierros 23.9.2026: myös Kap Palmas, Ras Hafun (niemien
+     * kärjet), Mosambik (Ilha de Moçambique) ja Kamerun (Douala)
+     * siirtyivät alueista pistemäisiin — ks. luetteloa ei enää tässä.
      */
-    assert.ok(!PALLON_KAUPUNKIPISTEET[alue], `alue ${alue} ei saa omaa pallopistettä`);
+    const p = PALLON_KAUPUNKIPISTEET[alue];
+    assert.ok(p, `alue ${alue} tarvitsee laudan pisteen (23.9.2026 lisäys vientiä varten)`);
+    const c = nimet.get(alue);
+    const laudalla = laudaltaAsteiksi('maailmankartta', c.x, c.y);
+    assert.ok(Math.abs(p.lat - laudalla.lat) < 1e-3 && Math.abs(p.lon - laudalla.lon) < 1e-3,
+      `alue ${alue}: pallopiste ei ole täsmälleen laudan oma piste`);
   }
   for (const [id, p] of Object.entries(PALLON_KAUPUNKIPISTEET)) {
     const c = nimet.get(id);
@@ -1073,8 +1114,13 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
      * POIKKEUS: Sansibarin laudan piste on avomerellä 531 km Stone
      * Townista (−9,28 / 42,70); siirto on juuri se korjaus
      * (docs/raportit/viesti-fable-kaupunkisiirtymat-20260919.md).
+     * POIKKEUS 23.9.2026: Mosambik on Ilha de Moçambique, 823 km laudan
+     * alue-Mosambikista (Beiran rannikko) — Fablen päätös, laudan nimi
+     * ja 1873-merkitys tarkoittavat kaupunkisaarta, ei aluetta
+     * (docs/raportit/kaupunkien-latlon-20260923.md).
      */
-    assert.ok(km < (id === 'sansibar' ? 560 : 500), `${id} siirtyisi ${km.toFixed(0)} km`);
+    const raja = { sansibar: 560, mosambik: 850 }[id] ?? 500;
+    assert.ok(km < raja, `${id} siirtyisi ${km.toFixed(0)} km`);
   }
 });
 
@@ -1269,4 +1315,32 @@ test('kytkentä: viisi syötetapaa ovat samassa rakennuksessa lippuina', () => {
    */
   assert.match(lahde, /const mittausLippu = mittauslippuPaalla\(\);/);
   assert.match(lahde, /if \(mittausLippu\) return; \/\/ mittausajossa lippu pitää valtansa/);
+});
+
+/*
+ * LIU'UN LOPPU PEHMEÄSTI (omistaja 23.9.2026: "pehmeämmin hidastaa sen
+ * ihan lopun vierityksen"). Loppuvaihe v0·(1 − s/T)²: sauma kitkaan on
+ * sileä, ja lopussa nopeus ja hidastuvuus ovat nolla.
+ */
+test('liu\'un loppuvaihe: sileä sauma, asettuu nollaan, tarkka matka', () => {
+  const KITKA = 0.0028;
+  const T = 2 / KITKA;
+  // Hidastuvuus vaiheen alussa = kitka · v0 (sama kuin eksponentiaalisen kitkan).
+  const h = 0.01;
+  const alku = liukuLoppuAskel(0, h, T);
+  assert.ok(Math.abs((1 - alku.nopeus) / h - KITKA) < 1e-4, `hidastuvuus ${(1 - alku.nopeus) / h}`);
+  // Koko vaiheen matka = v0·T/3 askeleista riippumatta (60 Hz ja 120 Hz samat).
+  const matka = (dt) => { let s = 0; let m = 0; for (;;) { const a = liukuLoppuAskel(s, s + dt, T); m += a.matka; s += dt; if (a.valmis) return m; } };
+  assert.ok(Math.abs(matka(16.7) - T / 3) < 1e-9);
+  assert.ok(Math.abs(matka(8.3) - T / 3) < 1e-9);
+  // Loppu: nopeus nolla, ja viimeisen kehyksen askel on pieni (ei seinää).
+  const loppu = liukuLoppuAskel(T - 16.7, T, T);
+  assert.equal(loppu.valmis, true);
+  assert.equal(loppu.nopeus, 0);
+  assert.ok(loppu.matka < 0.001 * 16.7, `viimeinen askel ${loppu.matka}`);
+  // Kynnys pikseleinä, noin 2,5 px/kehys.
+  assert.ok(LIUKU_LOPPU_PX_MS > 0.1 && LIUKU_LOPPU_PX_MS < 0.2);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /if \(ruutunopeus\(vauhti, kohta\.lat\) < LIUKU_LOPPU_PX_MS\)/, 'kynnys luetaan ruudun pikseleinä');
+  assert.doesNotMatch(pallo, /hypot\(vauhti\.lat, vauhti\.lng\) > VAUHTI_KYNNYS\) pysaytaLiuku|> VAUHTI_KYNNYS\) vauhti\.raf = requestAnimationFrame/, 'ei asteisiin perustuvaa katkaisua kesken liu\'un');
 });

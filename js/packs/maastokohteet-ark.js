@@ -468,6 +468,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-nautilus',
     nimi: 'Nautilus navan alla',
+    nimio: 'Nautilus',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miksi sukellusvene meni navan ali?',
@@ -813,6 +814,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-gronlannin-jaatikko',
     nimi: 'Grönlannin jäätikkö',
+    nimio: 'Mannerjäätikkö',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka paksua jää on?',
@@ -876,6 +878,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-ilulissat',
     nimi: 'Ilulissatin jäävuono',
+    nimio: 'Ilulissat',
     tyyppi: 'meri',
     kysymykset: [
       'Kuinka nopeasti jäätikkö liikkuu?',
@@ -923,13 +926,19 @@ export const MAASTOKOHTEET_ARK = [
       + '1979 jäätä on kadonnut yli puolet. Sulamiskausi on pidentynyt viisi päivää '
       + 'vuosikymmenessä, enimmäkseen siksi, että syksyn jäätyminen alkaa myöhemmin. Syyskuussa '
       + '2020 jäätä oli 3,74 miljoonaa neliökilometriä, toiseksi vähiten mittaushistoriassa. '
-      + 'Vuosina 1994–2017 maapallolta suli 28 biljoonaa tonnia jäätä, ja siitä 7,6 biljoonaa '
+      + '12. syyskuuta 2026 NASA ja NSIDC mittasivat kesän vähimmäisjäämääräksi 4,60 miljoonaa '
+      + 'neliökilometriä, mittaushistorian kymmenenneksi vähiten yhdessä vuosien 2008, 2010 ja '
+      + '2025 kanssa — silti koko viimeisten kahdenkymmenen vuoden (2007–2026) minimit ovat '
+      + 'kaikki satelliittiajan kaksikymmentä pienintä. Vuosina 1994–2017 maapallolta suli '
+      + '28 biljoonaa tonnia jäätä, ja siitä 7,6 biljoonaa '
       + 'tonnia oli juuri arktista merijäätä. IPCC:n kuudennen arviointiraportin (2021) mukaan '
       + 'jäätä on todennäköisesti jonain syyskuuna alle miljoona neliökilometriä jo ennen vuotta '
       + '2050. Merijään häviäminen on yksi pääsyistä arktiseen vahvistumaan, siihen että napa-alue '
       + 'lämpenee muuta maapalloa nopeammin: valkoinen jää heijastaa auringonvalon, tumma meri '
       + 'nielee sen.',
-    lahde: 'en-Wikipedia "Arctic sea ice decline", johdanto-osa (tarkistettu 11.9.2026).',
+    lahde: 'en-Wikipedia "Arctic sea ice decline", johdanto-osa (tarkistettu 11.9.2026); '
+      + 'NASA Science, "Arctic Sea Ice Reaches 2026 Annual Minimum Extent" '
+      + '(science.nasa.gov, tarkistettu 24.9.2026).',
   },
   /*
    * 28. THULEN KULTTUURI JA INUIITIT.

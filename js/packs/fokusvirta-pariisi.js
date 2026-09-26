@@ -722,7 +722,7 @@ export const FOKUSVIRTA_PARIISI = {
        * lähde antaa täsmällisenä.
        */
       id: 'kirahvin-kavelymatka',
-      nimio: 'Kirahvin kävelymatka',
+      nimio: 'Kirahvi',
       otsikko: 'Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — '
         + 'takki päällä ja kengät jalassa',
       lunastus: [
@@ -1060,7 +1060,7 @@ export const FOKUSVIRTA_PARIISI = {
        * 48,8844 N / 2,3382 E.
        */
       id: 'guimardin-metro',
-      nimio: 'Metron sisäänkäynti',
+      nimio: 'Métropolitain',
       otsikko: 'Metron sisäänkäynti koottiin palasista',
       symboli: 'tekniikka',
       lunastus: [
@@ -1344,7 +1344,7 @@ export const FOKUSVIRTA_PARIISI = {
        * kirjoitettu 1800-luvun ranskaksi."*
        */
       id: 'pariisin-vuosisadat',
-      nimio: 'Pariisin vuosisadat',
+      nimio: 'Vuosisadat',
       otsikko: 'Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, '
         + 'joita ei ollut',
       symboli: 'historia',

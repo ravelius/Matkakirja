@@ -87,7 +87,7 @@ import {
   stopDiaryVoice, stopIntroVoice,
   // Luennan NÄKYVÄT merkit lukevat kuuluvaa ääntä, eivät varattua
   // puheenvuoroa (15.9.2026, ks. kaynnistaLuentavahti).
-  soivaPuhuja,
+  soivaPuhuja, puheenKello,
   vapautaPuhuja,
 } from './luenta.js';
 import {
@@ -281,6 +281,8 @@ import {
   MUSIIKIN_PERUSTASO, asetaMusiikkitila, kuunteleMusiikinKerrointa, musiikinKerroin,
   musiikkiPaalla,
 } from './musiikkivalitsin.js';
+// Saapumistunnus luetaan samasta maa→alue-taulusta kuin alueraita.
+import { saapumistunnus } from './kaupunkimusiikki.js';
 /*
  * Aarteen paljastusaihe on musiikkia, joten sekin kulkee musiikin
  * yhteisen vahvistimen kautta — muuten iOS soittaisi sen tiedoston
@@ -460,7 +462,10 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
  * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
  */
 import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
+import { aaniLisenssiSallittu } from './lisenssi.js';
 import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
+import { taytaPohja } from './tekstipohja.js';
+import { INTRO_PAIKKA, INTRO_TEXT, INTRO_VALINTA, PERIAATTEET } from './ui-tekstit.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -516,7 +521,7 @@ const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
  * arpoutua korista ja alkaa eri kohdasta joka kerta, koska sama
  * siirtymä toistuu pelissä kymmeniä kertoja.
  */
-const JALKAMATKAN_MAISEMA = 'metsa';
+export const JALKAMATKAN_MAISEMA = 'metsa';
 const FLIGHT_MS = 900;
 // Mantereen sisäinen lento liukuu rauhallisemmin moottorin hurinalla.
 const MANNER_LENTO_MS = 2800;
@@ -860,9 +865,9 @@ export { puhelinTila, luennanTekstipiilo, tekstitPiilossa };
  *   1. VÄLIRAUHA. Isoisän luennan ja Livian repliikin väliin jää
  *      hengähdys (SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900 ms).
  *      Ilman välirauhaa nappi välähtäisi siinä välissä näkyviin.
- *   2. VARAVENTTIILI. Jos vuoro jää jostain syystä roikkumaan, nappi
- *      tulee näkyviin viimeistään 30 sekunnin kuluttua — piiloon
- *      jäänyt Liiku olisi umpikuja.
+ *   2. VARAVENTTIILI. Jos puhe jää jumiin (mikään soitin ei etene
+ *      30 sekuntiin), nappi tulee näkyviin — piiloon jäänyt Liiku olisi
+ *      umpikuja. Ehjä pitkä luento ei laukaise sitä (löydös 45).
  */
 /** Kuinka usein napin vahti kysyy, onko joku äänessä. */
 const LUENTAVAHDIN_VALI_MS = 200;
@@ -1046,9 +1051,27 @@ const REVEAL_HUUDAHDUS_RIVI = false;
  * eikä niitä esiladata service workerissa, joten peli hakee ne
  * ämpäristä — puuttuva tiedosto on hiljainen eikä riko paljastusta.
  */
-const AARRE_MUSIIKKI = {
+export const AARRE_MUSIIKKI = {
   tavallinen: musaPolku('musa-aarre'),
   paa: musaPolku('musa-paaaarre'),
+};
+/*
+ * MATKAN AIHEET (musiikkisuunnitelma 26.9.2026, vaihe 1). Kertaraitoja
+ * kuten aarreaiheet, ja ne soivat SAMASSA PAIKASSA samalla soittimella
+ * (soitaAarreMusiikki): pohjaraita ja maisema väistyvät aiheen ajaksi
+ * ja palaavat, kun aihe loppuu. Saapumistunnus asuu maanosittain
+ * js/kaupunkimusiikki.js:n SAAPUMISTUNNUKSET-taulussa.
+ *
+ *   aloituslento     Lontoosta ensimmäiseen kaupunkiin, 26 s (doPickStart)
+ *   loppu            kaikki pääaarteet löydetty, 69 s (ajastaMatkanLoppu)
+ *   ratkaisu         kohtaamisen kysymys oikein, 4,3 s (soitaKohtaamisenTulos)
+ *   epaonnistuminen  kohtaamisen kysymys väärin tai aika loppui, 4,0 s (sama)
+ */
+export const MATKAN_AIHEET = {
+  aloituslento: musaPolku('musa-aloituslento'),
+  loppu: musaPolku('musa-loppu'),
+  ratkaisu: musaPolku('musa-ratkaisu'),
+  epaonnistuminen: musaPolku('musa-epaonnistuminen'),
 };
 /*
  * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
@@ -1794,53 +1817,6 @@ const INTRO_KARTTA_ENINTAAN = 0.72;
  * ALAPUOLISEEN pergamenttiin eikä syö karttakuvan alinta kaistaletta.
  */
 const INTRO_HAIVYTYS_EM = 2.2;
-/*
- * Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
- * (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
- * pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
- * 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
- * muutos vain tools/generoi-avaus.mjs:n kautta, jonka INTRO_RUUTU
- * on tämän vakion ainoa lähde (sanasta sanaan).
- *
- * V3/V4 25.8.2026 (omistajan etusivu-uudistus): kirjan nimi pois —
- * se luetaan nyt kansikuvan selästä (assets/etusivu/kansikuva.png) —
- * ja ohjerivi "Valitse kohde kartalta" pois, koska ohjeen tilalle
- * tuli klikattava viimeinen lause (INTRO_VALINTA). Teksti päättyy
- * siis täsmälleen siihen, mihin nauhoitettu luentakin.
- */
-/*
- * V5 25.8.2026 (omistajan uusi alkuteksti, sanasta sanaan): terminaali
- * ja revitty sivu yhdessä kappaleessa; paikkarivi naputetaan ensin
- * kirjoituskoneella ja luenta alkaa vasta tästä kappaleesta.
- */
-const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
-  + 'matkakirja. Juokset sisälle terminaaliin ja olet varma, että ukko '
-  + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
-  + 'sivun?';
-/*
- * KYSYMYS ON NAPPI (omistajan tilaus 26.8.2026, ilta): "Mistä
- * aloitan?" on samalla se kehystetty 1873-nappi, joka vie kartan
- * lähikuvaan Lontoon kohdalle. Välivaihe, jossa kysymys oli pelkkää
- * tekstiä ja sen alla erillinen ALOITA MATKA -nappi, purettiin — kaksi
- * peräkkäistä kehotusta oli yksi liikaa.
- *
- * Nappi EI OLE KERRONTAA eikä siksi kuulu INTRO_TEXTiin: nauhoitettu
- * luenta päättyy revittyyn sivuun.
- *
- * TEKSTI ON NYT KEHOTUS EIKÄ KYSYMYS (omistajan pelitestipalaute
- * v1119): *"Mistä aloitan?" → "Valitse aloituskaupunki"*. Nappi vie
- * kartan lähikuvaan, jossa valinta oikeasti tehdään, ja kysymys jätti
- * epäselväksi mitä napista tapahtuu.
- */
-const INTRO_VALINTA = 'Valitse aloituskaupunki';
-/*
- * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
- * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
- * kellosta. Kertoja EI lue tätä (nauhoitettu luenta alkaa vasta
- * varsinaisesta tekstistä), joten rivi elää oman elementtinsä
- * varassa eikä ole osa INTRO_TEXTiä.
- */
-const INTRO_PAIKKA = 'Heathrow, Lontoo';
 
 /*
  * ETUSIVUN ALKUANIMAATIO: kuusi reittiä, joita pitkin kulkee sykkivä
@@ -2164,7 +2140,7 @@ function sykkeenArvo(arvot, osuus) {
 
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
-const MINITEHTAVA_PALKKIO = 10;
+export const MINITEHTAVA_PALKKIO = 10;
 /*
  * Tarkkuusvahdin kaksi viivettä (ks. tarkistaTarkkuus).
  *
@@ -4364,6 +4340,8 @@ export class UI {
 
   /** Renderin pallohaara: avaa pallon tarvittaessa, päivittää merkit. */
   paivitaPallolauta() {
+    // Lehtikuori (js/lehtikuori.js): pelkkä lehti, lautaa ei avata eikä herätetä.
+    if (this.lehtikuori) return;
     if (this.pallolauta) {
       this.pallolauta.paivita();
       return;
@@ -4716,6 +4694,9 @@ export class UI {
     this.vapautaPohja();
     this.taideLahde = null;
     stopPlaceStream();
+    // Kohtaaminen kiinni ENNEN visan pysäytystä: muuten visan loppu
+    // nostaisi kohtaamisen hetkeksi soimaan kuolleen pelin päälle.
+    asetaMusiikkitila('kohtaaminen', false);
     stopQuizMusic();
     sfx.stopFlight();
     stopIntroVoice(this);
@@ -11735,8 +11716,17 @@ export class UI {
      * välkkyi päälle ja pois 400 ms:n välein).
      */
     if (this.luentavahti || typeof document === 'undefined') return;
-    // Puheenvuoron alku: varaventtiilin kello lähtee tästä.
-    let puheAlkoi = 0;
+    /*
+     * VARAVENTTIILI MITTAA PUHEEN EDISTYMISTÄ, EI KESTOA (löydös 45,
+     * 24.9.2026). Ennen kello lähti puheenvuoron alusta, joten jokainen yli
+     * 30 sekunnin luenta välähdytti Liikun (ja palautti hetkeksi tekstit
+     * ja hunnun) kesken puheen ja nollasi kellon (mitattu Ateena
+     * 393 × 852: Liiku näkyvissä t 33,4–33,6 s). Nyt venttiili aukeaa vasta,
+     * kun joku on "äänessä" mutta mikään soitin ei ole edennyt 30 sekuntiin
+     * (pysähtynyt virta) — ehjä pitkä luento ei koskaan laukaise sitä.
+     */
+    let kello = -1;
+    let viimeEdistys = 0;
     // Viimeisin hetki, jolloin joku oli äänessä: välirauhan kello.
     let puheLoppui = 0;
     // Sama kello erikseen kertojalle (tekstipiilo, ks. alempana).
@@ -11745,18 +11735,15 @@ export class UI {
       if (this.dead) return;
       const nyt = Date.now();
       const aanessa = Boolean(soivaPuhuja());
-      if (aanessa) {
-        if (!puheAlkoi) puheAlkoi = nyt;
-        puheLoppui = nyt;
-      } else if (!puheLoppui) {
-        puheAlkoi = 0;
-      }
-      const varaventtiili = puheAlkoi && nyt - puheAlkoi > LUENNAN_VARAVENTTIILI_MS;
+      const nytKello = puheenKello();
+      if (!aanessa || nytKello !== kello) { kello = nytKello; viimeEdistys = nyt; }
+      if (aanessa) puheLoppui = nyt;
+      const varaventtiili = aanessa && nyt - viimeEdistys > LUENNAN_VARAVENTTIILI_MS;
       // Välirauha: kahden puheenvuoron väliin jäävä hengähdys ei
       // paljasta nappia välähdykseksi.
       const valirauhassa = Boolean(puheLoppui) && nyt - puheLoppui < LUENNAN_VALIRAUHA_MS;
       const piiloon = !varaventtiili && (aanessa || valirauhassa);
-      if (!piiloon) { puheAlkoi = 0; puheLoppui = 0; }
+      if (!piiloon) puheLoppui = 0;
       document.body.classList.toggle('luenta-aanessa', piiloon);
       /*
        * KERTOJA ERIKSEEN PULUSTA (omistaja 14.9.2026): *"Luennan aikana
@@ -12708,6 +12695,16 @@ export class UI {
        * väliin osuva render palauttaisi etusivun lähtöaulan.
        */
       if (!this.reducedMotion) this.aloitaLennonAmbienssi();
+      /*
+       * ALOITUSLENNON AIHE (musiikkisuunnitelma 26.9.2026, vaihe 1):
+       * johtoaihe täytenä ja nousevana, one-shot 26 s. Alkaa samasta
+       * napautuksesta kuin kabiini, ja pohjaraita väistyy sen ajaksi
+       * kuten aarteen aiheelle. Liikeherkkyydessä lentoa ei ole, joten
+       * ei aihettakaan; radiotilassa radio on ainoa ääni.
+       */
+      if (!this.reducedMotion && !this.radioPaalla()) {
+        this.soitaAarreMusiikki(MATKAN_AIHEET.aloituslento);
+      }
       // Lukuääni väistyy, kun matka alkaa.
       stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
@@ -14289,6 +14286,17 @@ export class UI {
     const city = game.board.cityById.get(pos.city);
     if (!city) return;
     playPlaceAmbience(city.id, city.ambience ?? null, game.pack?.id, game.pack?.map?.cityCountry ?? null);
+    /*
+     * SAAPUMISTUNNUS vain kaupunkiin, jossa ei ole käyty tällä matkalla
+     * (musiikkisuunnitelma: "lyhyt tunnus uuteen kaupunkiin"). Kaupunki
+     * lisätään heti joukkoon, koska maailmankartan lento kutsuu tätä
+     * kahdesti (kalvon lopussa ja nappulan hypyssä).
+     */
+    const ennen = this.kaydytEnnenSiirtoa;
+    if (ennen && !ennen.has(city.id)) {
+      ennen.add(city.id);
+      this.soitaSaapumistunnus(city);
+    }
   }
 
   /**
@@ -16285,7 +16293,14 @@ export class UI {
       linkki.appendChild(document.createTextNode(musiikki.nakyva));
       otsikkoRivi.appendChild(linkki);
     }
-    if (nosto.musiikkiNayte) {
+    /*
+     * LISENSSIPORTTI (Fable 23.9.2026, js/lisenssi.js): NC- tai ND-ehtoinen
+     * näyte ei soi. Silloin nosto käyttäytyy kuin näytettä ei olisi
+     * (esikuuntelu tai linkki voi tulla tilalle alla).
+     */
+    const musiikkiNayte = nosto.musiikkiNayte && aaniLisenssiSallittu(nosto.musiikkiNayteNimi)
+      ? nosto.musiikkiNayte : null;
+    if (musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = nosto.musiikkiNayteNimi ?? 'Vapaasti lisensoitu ääninäyte';
@@ -16295,7 +16310,7 @@ export class UI {
         + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg>'
         + '<span>Kuuntele musiikkia</span><span class="aika" hidden></span>';
       nappi.addEventListener('click', () => this.kulttuuriAaniNapista(
-        { aani: nosto.musiikkiNayte, otsikko: nosto.otsikko }, nappi,
+        { aani: musiikkiNayte, otsikko: nosto.otsikko }, nappi,
       ));
       otsikkoRivi.appendChild(nappi);
     }
@@ -16322,7 +16337,7 @@ export class UI {
      * "Kuuntele näyte" -nappia vierekkäin ei kertoisi kumpi soi.
      * Nimenomainen `esikuuntelu`-termi toimii silloinkin.
      */
-    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !nosto.musiikkiNayte) {
+    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';
@@ -17472,61 +17487,20 @@ export class UI {
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
 
-    const otsikko = html('h2', 'periaate-otsikko', 'Oppiminen on hauskaa');
+    const otsikko = html('h2', 'periaate-otsikko', PERIAATTEET.otsikko);
     kortti.appendChild(otsikko);
 
-    const kappale = (teksti, luokka = '') => {
-      const p = html('p', `periaate-teksti ${luokka}`.trim());
-      p.textContent = teksti;
+    // Tekstit: js/ui-tekstit.js PERIAATTEET (sama lähde natiivin paketissa).
+    for (const osa of PERIAATTEET.osat) {
+      if (osa.otsikko) {
+        const h = html('h3', 'periaate-valiotsikko');
+        h.textContent = osa.otsikko;
+        kortti.appendChild(h);
+      }
+      const p = html('p', `periaate-teksti ${osa.karki ? 'kärki' : ''}`.trim());
+      p.textContent = osa.teksti;
       kortti.appendChild(p);
-    };
-    const valiotsikko = (teksti) => {
-      const h = html('h3', 'periaate-valiotsikko');
-      h.textContent = teksti;
-      kortti.appendChild(h);
-    };
-
-    kappale('Matkakirja ja unohdettu aarre on seikkailupeli, jonka sivutuotteena opitaan — '
-      + 'ei oppikirja, johon on liimattu noppa. Pelin pitää olla '
-      + 'koukuttava ensin; tieto tarttuu matkassa.', 'kärki');
-
-    valiotsikko('Mitä pelissä opitaan');
-    kappale('Maiden arkea ja kulttuuria, maantiedettä ja historiaa, '
-      + 'geopolitiikkaa ja poliittista tilannetta — ja ennen kaikkea sitä, '
-      + 'että maailma on suurempi kuin oma ympäristö. Jokaisella '
-      + 'pysähdyksellä on jotain katsottavaa: valokuva silloin ja nyt, '
-      + 'maan tunnusluvut, kaupungin musiikkia ja ruokaa.');
-
-    valiotsikko('Kaksi ääntä');
-    kappale('Isoisän päiväkirja vuodelta 1873 ja nuoren Foggin havainto '
-      + 'tänään. Vanha ääni loistaa siinä, mikä ei ole muuttunut, ja on '
-      + 'toivottoman vanhentunut nimissä ja rajoissa.');
-
-    valiotsikko('Totuus ja lähteet');
-    kappale('Jokainen väittämä on tarkistettavissa. Epävarmaa ei väitetä '
-      + 'eikä kiistanalaista esitetä varmana. Politiikka ja historia '
-      + 'kuvataan, ei tuomita: kerrotaan mitä on ja miksi.');
-
-    valiotsikko('Tekoäly apuna, ihminen päättää');
-    kappale('Tekoäly auttaa sisällön kokoamisessa: havainnekuvat luodaan '
-      + 'avoimesti lisensoiduista aineistoista ja merkitään havainnekuviksi, '
-      + 'ja tekstit kirjoitetaan lähteistä uudelleen yhtenäiseen asuun. '
-      + 'Jokaisen sisällön tarkistaa ja hyväksyy ihminen.');
-
-    valiotsikko('Kunnioitus');
-    kappale('Jokainen maa kuvataan asukkaidensa silmin — ei stereotypioita, '
-      + 'ei pilkkaa eikä säälittelyä, ei pelkkiä turistikliseitä. '
-      + 'Vaikeita aiheita ei kaunistella eikä kauhistella.');
-
-    valiotsikko('Avointa ja ilmaista');
-    kappale('Peli on toistaiseksi ilmainen, ja sen lähdekoodi on '
-      + 'kaikkien luettavissa. Peliä tekee tamperelainen '
-      + 'Visuaaliviestinnän Instituutti (VVI). '
-      + 'Kuvat, äänet ja tiedot tulevat avoimista '
-      + 'lähteistä, ja jokaisen kohdalla lukee mistä se on ja kuka sen '
-      + 'on tehnyt. Peli itse on tekijänsä omaisuutta: sitä saa pelata '
-      + 'ja lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan '
-      + 'tuotteeseen tarvitaan lupa.');
+    }
 
     // Lippukuvat näkyvät pieninä tervehdysten vieressä, eikä niiden alle
     // mahdu omaa lähderiviä. Valtaosa on public domainia, mutta muutaman
@@ -17534,15 +17508,14 @@ export class UI {
     // "jokaisen kohdalla lukee kuka sen on tehnyt" pitää paikkansa.
     if (LIPPU_TEKIJAT.length) {
       const lippurivi = html('p', 'periaate-teksti periaate-liput');
-      lippurivi.textContent = `Lippukuvat ovat Wikimedia Commonsista. `
-        + `Näiden tekijät lisenssi käskee nimetä: `
+      lippurivi.textContent = PERIAATTEET.lippurivi
         + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
       kortti.appendChild(lippurivi);
     }
 
     const linkit = html('p', 'periaate-linkit');
-    const gh = html('a', 'periaate-linkki', 'Pelin GitHub-sivu');
-    gh.href = 'https://github.com/ravelius/Matkakirja';
+    const gh = html('a', 'periaate-linkki', PERIAATTEET.linkki.teksti);
+    gh.href = PERIAATTEET.linkki.url;
     gh.target = '_blank';
     gh.rel = 'noopener';
     linkit.appendChild(gh);
@@ -17550,8 +17523,7 @@ export class UI {
 
     kortti.appendChild(this.periaatePalaute());
 
-    const oikeudet = html('p', 'periaate-oikeudet',
-      '© Visuaaliviestinnän Instituutti Tampere Oy');
+    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
     kortti.appendChild(oikeudet);
 
     const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
@@ -17593,7 +17565,7 @@ export class UI {
     lohko.appendChild(johdanto);
 
     const vihje = html('p', 'periaate-teksti');
-    vihje.textContent = 'Pelin oikeassa alakulmassa on huutomerkki. Sitä '
+    vihje.textContent = 'Valikossa on nappi "ehdota sisältöä". Sitä '
       + 'napauttamalla voit lähettää palautetta juuri siitä kohdasta, '
       + 'jossa olet — kätevää etenkin, jos jokin näyttää menneen vikaan.';
     lohko.appendChild(vihje);
@@ -19582,7 +19554,7 @@ export class UI {
     // Voiton ainoa tie on pääaarre kotiin (js/game.js checkWin).
     this.typeText(
       document.getElementById('winner-text'),
-      this.game.pack.texts.winnerStar(w.name, w.money),
+      taytaPohja(this.game.pack.texts.winnerStar, { name: w.name, money: w.money }),
       'winner',
     );
     const roamBtn = document.getElementById('winner-roam');
@@ -19868,11 +19840,19 @@ export class UI {
    * PUUTTUVA TIEDOSTO ON HILJAINEN: kytkentä on pelissä ennen kuin
    * mp3 on generoitu (.github/workflows/generoi-musiikki.yml), ja
    * silloin virhetapahtuma purkaa väistön eikä mitään muuta tapahdu.
+   *
+   * SAMA PAIKKA MATKAN AIHEILLE (musiikkisuunnitelma 26.9.2026):
+   * aloituslento, saapumistunnus ja loppu soivat tämän kautta
+   * (MATKAN_AIHEET). Taso on sama AARRE_MUSIIKIN_VOIMA: viimeistellyt
+   * raidat ovat paletin tavoin noin −11 LUFS:ssä
+   * (tools/viimeistele-musiikki.mjs), joten korjausta ei tarvita.
+   *
+   * @returns {?HTMLAudioElement} soiva aihe, tai null jos se jäi pois
    */
   soitaAarreMusiikki(lahde) {
     // Paljastusaihe on musiikkia: oma kytkin vaientaa sen erikseen
     // (Raamattu, VIAT v1672) — äänimaisema ja tehosteet jatkavat.
-    if (!sfx.enabled || !musiikkiPaalla()) return;
+    if (!sfx.enabled || !musiikkiPaalla()) return null;
     // Edellinen aihe pois, jos pelaaja ehti seuraavaan paljastukseen:
     // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
     this.pysaytaAarreMusiikki();
@@ -19925,8 +19905,11 @@ export class UI {
      * ja hiljennys puretaan heti — juhla ilman fanfaaria on parempi
      * kuin fanfaari, joka jyrää huudahduksen yli.
      */
-    if (!musiikkiSaaSoida(audio)) { ohi(); return; }
+    if (!musiikkiSaaSoida(audio)) { ohi(); return null; }
     audio.play().catch(ohi);
+    // Viimeinen pääaarre: matkan loppuaihe jatkaa tämän perään.
+    if (lahde === AARRE_MUSIIKKI.paa) this.ajastaMatkanLoppu(audio);
+    return audio;
   }
 
   /** Katkaisee soivan aarremusiikin ja purkaa taustan hiljennyksen. */
@@ -19944,6 +19927,87 @@ export class UI {
     // elementin kiinni destinationissa jokaisen aarteen jälkeen.
     irrotaMusiikinVahvistin(audio);
     palautaAmbienssi(AARRE_MUSIIKIN_SYY);
+  }
+
+  /**
+   * SAAPUMISTUNNUS UUTEEN KAUPUNKIIN (musiikkisuunnitelma 26.9.2026;
+   * vaihe 2: kaikki kymmenen maanosaa, js/kaupunkimusiikki.js
+   * SAAPUMISTUNNUKSET ja kaupunginMaanosa).
+   *
+   * Kutsuja (ennakoiAmbienssi) on jo todennut, että kaupungissa ei ole
+   * käyty tällä matkalla. Tunnus EI KESKEYTÄ soivaa aihetta: jos
+   * aloituslennon tai aarteen aihe soi vielä, tunnus jää pois — aarre
+   * sen sijaan saa katkaista tunnuksen (soitaAarreMusiikki pysäyttää
+   * edellisen). Aloituslennon kohde ei saa tunnusta lainkaan: lento
+   * päättyy siihen omalla aiheellaan (ks. run, kaydytEnnenSiirtoa).
+   */
+  soitaSaapumistunnus(city) {
+    if (!city || this.aarreMusiikki || this.aloituslentoKesken || this.radioPaalla()) return;
+    const maa = this.game.pack?.map?.cityCountry?.[city.id] ?? null;
+    const tunnus = saapumistunnus(city.id, maa);
+    if (tunnus) this.soitaAarreMusiikki(tunnus);
+  }
+
+  /**
+   * KOHTAAMISEN TULOS (musiikkisuunnitelma 26.9.2026, vaihe 2):
+   * `musa-ratkaisu` oikeasta vastauksesta, `musa-epaonnistuminen`
+   * väärästä tai ajan loppumisesta. Kutsuja on js/visa.js (answerQuiz
+   * ja timeUp) ja vain kohtaamisen kysymyksessä (onKohtaaminen).
+   *
+   * EI KATKAISE: sama sääntö kuin saapumistunnuksella. Jos aarre- tai
+   * matkan aihe soi yhä, tulos jää pois. Toisin päin aarre voittaa:
+   * kun oikea vastaus avaa aarteen, paljastuksen aihe (playTokenReveal
+   * → soitaAarreMusiikki) katkaisee ratkaisun hetken päästä, ja juuri
+   * niin kuuluu — löytö on isompi hetki kuin oikea vastaus.
+   *
+   * Oikein/väärin-tehosteet (sfx correct/wrong/timeout) soivat
+   * ennallaan; tämä on musiikkia niiden päällä, joten musiikin kytkin
+   * ja säädin koskevat sitä soitaAarreMusiikin kautta.
+   *
+   * @param {boolean} oikein
+   */
+  soitaKohtaamisenTulos(oikein) {
+    if (this.aarreMusiikki || this.radioPaalla()) return;
+    this.soitaAarreMusiikki(oikein ? MATKAN_AIHEET.ratkaisu : MATKAN_AIHEET.epaonnistuminen);
+  }
+
+  /**
+   * MATKAN LOPPU (musiikkisuunnitelma 26.9.2026: `musa-loppu`, "matkan
+   * loppu, kaikki aarteet"). Kun viimeinen pääaarre paljastuu, sen
+   * fanfaari soi ensin loppuun ja loppuaihe jatkaa perään — kaksi
+   * aihetta päällekkäin olisi sotku, ja katkaistu fanfaari veisi
+   * löydöltä sen hetken.
+   *
+   * Kerran pelikerrassa. Jos toinen aihe ehtii paikalle ennen kuin
+   * fanfaari loppuu, loppuaihe jää pois eikä katkaise sitä.
+   *
+   * @param {?HTMLAudioElement} aihe soiva pääaarteen aihe
+   */
+  ajastaMatkanLoppu(aihe) {
+    if (!aihe || this.katselu || this.matkanLoppuSoitettu) return;
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    if (kaikki.length === 0 || loydetyt.length < kaikki.length) return;
+    this.matkanLoppuSoitettu = true;
+    let jatkettu = false;
+    const jatka = () => {
+      if (jatkettu) return;
+      jatkettu = true;
+      if (this.dead || this.radioPaalla()) return;
+      if (this.aarreMusiikki && this.aarreMusiikki !== aihe) return;
+      this.soitaAarreMusiikki(MATKAN_AIHEET.loppu);
+    };
+    // Myös virhe jatkaa: puuttuva fanfaari ei saa viedä loppuaihetta.
+    aihe.addEventListener('ended', jatka);
+    aihe.addEventListener('error', jatka);
+  }
+
+  /** Kaikkien pelin maailmojen käydyt kaupungit (saapumistunnus). */
+  kaydytKaupungit() {
+    const kaydyt = new Set();
+    for (const maailma of this.game.worlds?.values?.() ?? []) {
+      for (const id of maailma.visited ?? []) kaydyt.add(id);
+    }
+    return kaydyt;
   }
 
   /**
@@ -20579,6 +20643,14 @@ export class UI {
     if (this.busy || this.dead) return;
     this.busy = true;
     this.actionsEl.dataset.busy = 'true';
+    /*
+     * Käydyt kaupungit ENNEN tekoa: peli kirjaa saapumisen käydyksi jo
+     * teossa (js/game.js visitCity), joten saapumistunnus
+     * (ennakoiAmbienssi) ei muuten tietäisi, oliko kaupunki uusi.
+     * Lähtövalinnalle ei kirjata mitään: aloituslennon kohde saa
+     * lennon oman aiheen eikä tunnusta sen päälle.
+     */
+    this.kaydytEnnenSiirtoa = this.game.phase === 'pickstart' ? null : this.kaydytKaupungit();
     try {
       const result = fn();
       if (result && result.ok === false) {

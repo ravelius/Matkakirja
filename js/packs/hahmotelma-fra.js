@@ -95,6 +95,7 @@ export const HAHMOTELMA_FRA = [
   ...EUROOPAN_KADONNEET.FRA,
   {
     id: 'hahmotelma-pic-du-midi',
+    nimio: 'Pic du Midi',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-pic-du-midi-vuori-85944887.jpg',
       lyhyt: 'Observatorion kupolit Pic du Midin huipulla pilvien yläpuolella.',
@@ -535,6 +536,7 @@ export const HAHMOTELMA_FRA = [
   },
   {
     id: 'hahmotelma-amiens',
+    nimio: 'Amiens',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-amiens-lansijulkisivu-f1ce66d9.jpg',
       lyhyt: 'Amiensin tuomiokirkon länsijulkisivu portaaleineen ja ruusuikkunoineen.',
@@ -829,6 +831,7 @@ export const HAHMOTELMA_FRA = [
   {
     id: 'hahmotelma-place-stanislas',
     nimi: 'Nancy, Place Stanislas',
+    nimio: 'Place Stanislas',
     tyyppi: 'kulttuuri',
     lahi: true,
     kuva: {
@@ -1075,6 +1078,7 @@ export const HAHMOTELMA_FRA = [
   },
   {
     id: 'hahmotelma-rouen',
+    nimio: 'Rouen',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-rouen-670ab4d8.jpg',
       lyhyt: 'Tuomiokirkon kolme tornia ja valurautainen torninhuippu.',

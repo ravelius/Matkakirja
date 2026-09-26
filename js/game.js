@@ -12,6 +12,8 @@ import {
 } from './linssit/omistus.js';
 import { LINSSIAARTEET, linssiAarteesta } from './linssit/aarteet.js';
 import { tietajatasonNousut } from './tietajatasot.js';
+import { pulmanGeneraattori } from './pulmageneraattorit.js';
+import { taytaPohja } from './tekstipohja.js';
 
 export const START_MONEY = 300;
 export const SEA_FARE = 100; // laivamatkan hinta vuorolta
@@ -491,7 +493,7 @@ export class Game {
      * Nostokortin lopun minikysymys kirjataan kuten lehden minitehtävä
      * (actionMinitehtava, avain 'pakka:nosto:tunnus'), mutta erä 7
      * tarvitsee siitä vain yhden asian: MONTAKO on ratkaistu. Aarteen
-     * vihreä piste syttyy, kun tämä on vähintään 2 — ja koska ehto
+     * vihreä piste syttyy, kun tämä on vähintään 1 (löydös 145; ennen 2) — ja koska ehto
      * lukee VAIN nostojen kysymyksiä, lehtitehtävien joukko ei kelpaa
      * laskuriksi (se täyttyisi vahingossa vanhoista vastauksista).
      *
@@ -2618,7 +2620,8 @@ export class Game {
     // VAIN tässä, pelin omalla rng:llä, ja tulos jää quiz-tilaan — näin
     // tallennettu peli jatkuu täsmälleen samasta pulmasta. `fact` on aina
     // pulman oma: se on tarkistettu fakta eikä se saa vaihdella.
-    const arvottu = puzzle.generate ? puzzle.generate(this.rng) : null;
+    const generaattori = pulmanGeneraattori(puzzle);
+    const arvottu = generaattori ? generaattori(this.rng) : null;
     const sketch = arvottu?.sketch ?? puzzle.sketch ?? null;
     const options = arvottu?.options ?? puzzle.options;
     const correct = arvottu?.correct ?? puzzle.correct;
@@ -3187,7 +3190,7 @@ export class Game {
             this.say(p.id, MANNERLENTO_ILMOITUS);
           }
         } else {
-          this.say(p.id, this.pack.texts.starFound(p.name, city.name));
+          this.say(p.id, taytaPohja(this.pack.texts.starFound, { name: p.name, city: city.name }));
           this.say(null, this.pack.texts.starChase);
           this.emit('treasure', this.pack.texts.starToast, {
             token: type,

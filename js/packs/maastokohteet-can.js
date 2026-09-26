@@ -247,6 +247,7 @@ export const MAASTOKOHTEET_CAN = [
   {
     id: 'dinosaur-provincial-park',
     nimi: 'Dinosaur Provincial Park',
+    nimio: 'Dinosaur Park',
     tyyppi: 'elain',
     kysymykset: [
       'Mikä on badland-maasto?',
@@ -301,6 +302,7 @@ export const MAASTOKOHTEET_CAN = [
   {
     id: 'louisbourgin-linnoitus',
     nimi: 'Louisbourgin linnoitus',
+    nimio: 'Louisbourg',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi linnoitus oli heikko maan puolelta?',

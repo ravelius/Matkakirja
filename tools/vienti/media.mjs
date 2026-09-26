@@ -32,6 +32,8 @@
  *   tiedosto       tiedostonimi, jolle ei ole koneellista sääntöä
  *                  (ratkaistaan käsin — raportti listaa nämä)
  */
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync } from 'node:fs';
 import {
   ASSET_KANSIOT, PEILI_JUURI, aaniUrl, assetOsoite, julisteUrl, peiliAaniPolku, peiliKuvaPolku,
 } from '../../js/media.js';
@@ -48,6 +50,32 @@ const KOHTAAMISKANSIO = new Map(kohtaamiskuvat.map((k) => [k.tiedosto, k.kansio 
 const AMPARIN_KANSIOT = /^(audio|aanet|kuvat|liput|julisteet|kohtaamiset)\//;
 
 export const PELIN_JUURI = 'https://matkakirja.app/';
+
+/*
+ * SIVUSTON ASSETIT ÄMPÄRISSÄ (skeema 1.12, Natiivi-UI 23.9.2026). Repon
+ * assets/-tiedostot, jotka web tarjoilee Pagesista, viedään ämpäriin samalle
+ * polulle (assets/…, .github/workflows/vie-sisalto.yml). Paketti osoittaa
+ * ämpäriin ja kiinnittää version sisällön tiivisteellä (?v=<sha256 12>);
+ * Pages-osoite jää varaksi. Tiedosto, jota repossa ei ole, jää Pagesiin.
+ */
+const REPON_JUURI = new URL('../../', import.meta.url);
+const SIVUSTON_TIIVISTEET = new Map();
+export const SIVUSTON_ASSET_ETULIITE = `${PEILI_JUURI}assets/`;
+
+export function sivustonTiiviste(polku) {
+  if (!SIVUSTON_TIIVISTEET.has(polku)) {
+    const tiedosto = new URL(polku, REPON_JUURI);
+    SIVUSTON_TIIVISTEET.set(polku, existsSync(tiedosto)
+      ? createHash('sha256').update(readFileSync(tiedosto)).digest('hex') : null);
+  }
+  return SIVUSTON_TIIVISTEET.get(polku);
+}
+
+/** [ämpäri?v=, Pages] tai pelkkä [Pages], jos tiedostoa ei ole repossa. */
+export function sivustoReitit(polku) {
+  const sha = polku.startsWith('assets/') ? sivustonTiiviste(polku) : null;
+  return sha ? [`${PEILI_JUURI}${polku}?v=${sha.slice(0, 12)}`, PELIN_JUURI + polku] : [PELIN_JUURI + polku];
+}
 
 const KUVA = /\.(jpe?g|png|webp|gif|svg|avif|tiff?)$/i;
 const AANI = /\.(mp3|ogg|oga|opus|m4a|aac|wav|flac)$/i;
@@ -124,12 +152,18 @@ export function ratkaiseMedia(arvo, laji) {
       const oma = (lippu ? LIPUT_PAIKALLISET : VALOKUVAT_PAIKALLISET).get(arvo);
       const alkuperainen = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(arvo.replace(/ /g, '_'))}`;
       const reitit = [
-        oma && `${PELIN_JUURI}assets/${lippu ? 'liput' : 'valokuvat'}/${oma}`,
+        ...(oma ? sivustoReitit(`assets/${lippu ? 'liput' : 'valokuvat'}/${oma}`) : []),
         !lippu && VALOKUVAT_FLICKR.has(arvo) && flickrOsoite(arvo, 'b'),
         PEILI_JUURI + avain,
         alkuperainen,
       ].filter(Boolean);
-      return { avain, url: reitit[0], varat: reitit.slice(1), alkuperainen };
+      // Skeema 1.5: suurennos (1600 px) kuten pelin valokuvaSuurennos():
+      // rajatun Flickr-kuvan suurennos on repon oma rajaus, muuten Flickrin
+      // h-koko tai Commons 1600 px.
+      const suurennos = lippu ? null : (VALOKUVAT_FLICKR.get(arvo)?.rajattu && oma
+        ? sivustoReitit(`assets/valokuvat/${oma}`)[0]
+        : flickrOsoite(arvo, 'h') ?? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(arvo)}?width=1600`);
+      return { avain, url: reitit[0], varat: reitit.slice(1), alkuperainen, ...(suurennos ? { suurennos } : {}) };
     }
     case 'kuva-flickr': {
       const url = flickrOsoite(arvo);
@@ -158,15 +192,19 @@ export function ratkaiseMedia(arvo, laji) {
       const url = hetkenKuvaOsoite(arvo);
       return { avain: url.slice(PEILI_JUURI.length), url };
     }
-    case 'repo':
-      return { url: PELIN_JUURI + arvo };
+    case 'repo': {
+      const [url, ...varat] = sivustoReitit(arvo);
+      return varat.length ? { avain: arvo, url, varat } : { url, varat };
+    }
     case 'kuva-url': case 'aani-url': case 'video-url': case 'linkki':
       return { url: arvo };
     default:
       if (laji.startsWith('asset-')) {
         const url = assetOsoite(laji.slice(6), arvo);
-        const tulos = { url: /^https?:/.test(url) ? url : PELIN_JUURI + url };
-        if (tulos.url.startsWith(PEILI_JUURI)) tulos.avain = tulos.url.slice(PEILI_JUURI.length);
+        const [ensin, ...varat] = /^https?:/.test(url) ? [url] : sivustoReitit(url);
+        const tulos = varat.length ? { url: ensin, varat } : { url: ensin };
+        if (varat.length) tulos.avain = url;
+        else if (tulos.url.startsWith(PEILI_JUURI)) tulos.avain = tulos.url.slice(PEILI_JUURI.length);
         return tulos;
       }
       return {};

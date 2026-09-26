@@ -412,11 +412,11 @@ export const ASIA = {
 
   texts: {
     intro: 'Peli alkaa! Etsikää Keisarin jadesinetti ja palatkaa kotisatamaan: Teheraniin, Tokioon, Pekingiin, Singaporeen tai Mumbaihin.',
-    starFound: (name, city) => `◈ ${name} löysi KEISARIN JADESINETIN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi KEISARIN JADESINETIN kaupungista {city}!',
     starToast: 'KEISARIN JADESINETTI!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Keisarin jadesinetin turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Keisarin jadesinetin kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Keisarin jadesinetin kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Klubilla tätä mannerta kutsuttiin Itämaiksi ja odotettiin kameleita. Luotijuna ohitti odotukseni kolmensadan kilometrin tuntinopeudella.',

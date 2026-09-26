@@ -1,0 +1,4 @@
+{
+  "kuvaus": "NC/ND-ehtoiset mediaviitteet, jotka ovat pelissä (lisenssi-inventaario 23.9.2026: 23; korit A ja B korvattu #2903:ssa → 9; loput 9 korvattu #2895+#2897:ssä → 0). Lista saa vain lyhentyä: korvattu viite poistetaan, uutta ei lisätä (tests/lisenssit.test.mjs). Korvaus: Sisältökirjuri.",
+  "viitteet": []
+}

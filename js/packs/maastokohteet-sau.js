@@ -186,6 +186,7 @@ export const MAASTOKOHTEET_SAU = [
   {
     id: 'jubbah',
     nimi: 'Jubbahin kalliotaide',
+    nimio: 'Jubbah',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Mitä vanhimmat kalliokuvat esittävät?',

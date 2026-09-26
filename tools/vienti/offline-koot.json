@@ -1,0 +1,161 @@
+{
+ "haettu": "2026-09-26",
+ "otos": 24,
+ "rasteri": {
+  "poltto": "2026-09-26-pohja-20260926",
+  "keskitavut": {
+   "0": 16235,
+   "1": 13596,
+   "2": 17203,
+   "3": 16148,
+   "4": 13032,
+   "5": 11748,
+   "6": 10856,
+   "7": 10709,
+   "8": 10031,
+   "9": 10323
+  }
+ },
+ "maasto": {
+  "poltto": "2026-09-23b",
+  "available": [
+   [
+    {
+     "startX": 0,
+     "startY": 0,
+     "endX": 1,
+     "endY": 0
+    }
+   ],
+   [
+    {
+     "startX": 0,
+     "startY": 0,
+     "endX": 3,
+     "endY": 1
+    }
+   ],
+   [
+    {
+     "startX": 0,
+     "startY": 0,
+     "endX": 7,
+     "endY": 3
+    }
+   ],
+   [
+    {
+     "startX": 0,
+     "startY": 0,
+     "endX": 15,
+     "endY": 7
+    }
+   ],
+   [
+    {
+     "startX": 0,
+     "startY": 0,
+     "endX": 31,
+     "endY": 15
+    }
+   ],
+   [
+    {
+     "startX": 0,
+     "startY": 0,
+     "endX": 63,
+     "endY": 31
+    }
+   ],
+   [
+    {
+     "startX": 0,
+     "startY": 0,
+     "endX": 127,
+     "endY": 63
+    }
+   ],
+   [
+    {
+     "startX": 123,
+     "startY": 93,
+     "endX": 135,
+     "endY": 100
+    }
+   ],
+   [
+    {
+     "startX": 247,
+     "startY": 186,
+     "endX": 270,
+     "endY": 201
+    }
+   ],
+   [
+    {
+     "startX": 494,
+     "startY": 372,
+     "endX": 540,
+     "endY": 403
+    }
+   ],
+   [
+    {
+     "startX": 989,
+     "startY": 745,
+     "endX": 1080,
+     "endY": 807
+    }
+   ],
+   [
+    {
+     "startX": 1979,
+     "startY": 1490,
+     "endX": 2161,
+     "endY": 1615
+    }
+   ],
+   [
+    {
+     "startX": 3959,
+     "startY": 2980,
+     "endX": 4323,
+     "endY": 3231
+    }
+   ]
+  ],
+  "keskitavut": {
+   "0": 3261,
+   "1": 2120,
+   "2": 1071,
+   "3": 709,
+   "4": 423,
+   "5": 317,
+   "6": 212,
+   "7": 3327,
+   "8": 5039,
+   "9": 6387,
+   "10": 6814,
+   "11": 7346,
+   "12": 8081
+  }
+ },
+ "media": {
+  "aani-oma": 513798,
+  "aani-peilattu": 2996568,
+  "ampari-avain": 326992,
+  "asset-aarteet": 63834,
+  "asset-elaimet": 119136,
+  "asset-ihmeet": 298762,
+  "asset-miniatyyrit": 109244,
+  "asset-nostot": 202831,
+  "hetkikuva": 606451,
+  "juliste": 3086581,
+  "kohtaamiskuva": 588138,
+  "kuva-commons": 340861,
+  "kuva-flickr": 162755,
+  "lippu-commons": 2729,
+  "repo": 369767,
+  "muu": 652563
+ }
+}

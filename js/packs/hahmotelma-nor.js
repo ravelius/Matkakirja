@@ -373,6 +373,7 @@ export const HAHMOTELMA_NOR = [
   },
   {
     id: 'hahmotelma-borgund',
+    nimio: 'Borgund',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-borgund-1117f633.jpg',
       lyhyt: 'Borgundin sauvakirkon lohikäärmepäiset katot ja tapuli vuorten edessä.',
@@ -987,6 +988,7 @@ export const HAHMOTELMA_NOR = [
   },
   {
     id: 'hahmotelma-lindesnes',
+    nimio: 'Lindesnes',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-lindesnes-8977a9cc.jpg',
       lyhyt: 'Lindesnesin punavalkoinen majakka kirkkaan sinistä taivasta vasten.',
@@ -1008,7 +1010,12 @@ export const HAHMOTELMA_NOR = [
           + 'restrictions).',
         tekija: 'Tuntematon valokuvaaja / Knut Aune Kunstforlag',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Norge._Lindesnes_fyr_(9912085303).jpg',
-        lisenssi: 'No known copyright restrictions',
+        // "No known copyright restrictions" on Flickr Commons -ohjelman
+        // vakiomerkintä (kansalliskirjastot): käytännössä PD, ei NC/ND-
+        // ehtoja. Rakenteinen lisenssi normalisoitu tunnistettavaksi
+        // (Julkaisijan lisenssiportti js/lisenssi.js, 23.9.2026);
+        // vapaamuotoinen selite lahde-rivillä säilyy ennallaan.
+        lisenssi: 'Public domain',
         lisenssiUrl: 'https://www.flickr.com/commons/usage/',
       },
     ],
@@ -1052,6 +1059,7 @@ export const HAHMOTELMA_NOR = [
   },
   {
     id: 'hahmotelma-dovrefjell',
+    nimio: 'Dovrefjell',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-dovrefjell-39500673.jpg',
       lyhyt: 'Myskihärkä laiduntaa Dovrefjellin tunturilaaksossa.',

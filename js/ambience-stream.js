@@ -31,7 +31,7 @@ import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
 // kohtiin peliä").
 import {
   MUSIIKIN_PERUSTASO, POHJARAITA, asetaMusiikkipaikka, asetaMusiikkitila,
-  kuunteleMusiikinKerrointa, kuunteleMusiikkitilaa, musiikinKerroin,
+  asetaVisaSoi, kuunteleMusiikinKerrointa, kuunteleMusiikkitilaa, musiikinKerroin,
   musiikinMaa, musiikinPaikka, musiikkiPaalla, valitseMusiikki,
 } from './musiikkivalitsin.js';
 /*
@@ -59,7 +59,7 @@ let arvottu = null; // { cityId, url }
  * sekunneilla 1–4, ja arvottu aloituskohta hyppäsi sen yli, jolloin
  * kabiini kuulosti pelkältä huminalta.
  */
-const VAKIOPAIKAT = new Set(['etusivu', 'lentomatka']);
+export const VAKIOPAIKAT = new Set(['etusivu', 'lentomatka']);
 
 /**
  * Kaupungin äänimaisema: oma kenttä-äänitys ensin, maisematyypin
@@ -1048,6 +1048,13 @@ export function startQuizMusic(lauta) {
   // Kaupungin ääni väistyy reilusti kysymyksen ajaksi — kaksi ääntä
   // päällekkäin täydellä voimalla oli puuroa.
   saadaVaistoa(0.15);
+  /*
+   * Visa voittaa kohtaamisen (js/musiikkivalitsin.js VISA VOITTAA
+   * KOHTAAMISEN): lippu nousee ennen kytkimiä, koska se kertoo, että
+   * kysymys on auki — ei sitä, kuuluuko huilu. Musiikin ollessa pois
+   * mikään ei soi joka tapauksessa.
+   */
+  asetaVisaSoi(true);
   // Visan huililuuppi on musiikkia: oma kytkin vaientaa sen (v1672).
   if (!sfx.enabled || !musiikkiPaalla() || musiikki) return;
   // Maanosan oma valinta tai oletus voittaa; ilman kumpaakaan soi
@@ -2085,6 +2092,8 @@ function ajaVaisto(kesto = HAIVYTYS_MS) {
 export function stopQuizMusic() {
   // Kaupungin ääni palaa täyteen voimaansa.
   saadaVaistoa(1);
+  // Kysymys ohi: auki oleva kohtaaminen palaa ketjun kärkeen.
+  asetaVisaSoi(false);
   const vanha = musiikki;
   musiikki = null;
   if (!vanha) return;

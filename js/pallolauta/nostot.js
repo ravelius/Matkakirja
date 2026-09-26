@@ -49,7 +49,6 @@ import {
   onKaupunginSisainen,
 } from './kaupunkiliuska.js';
 // Koeliput osoitteesta (?koe=): sama jäsennys kuin laattakerroksella.
-import { laattakerroksenKokeet } from '../pallolaatat.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
@@ -60,6 +59,7 @@ import {
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
+import { hetkiKohdetieto } from '../historian-hetket.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
@@ -77,7 +77,7 @@ import {
   kartanMittaSallittu, luoAnkkurivarasto, levitaMerkit, lukittuAnkkuri, lukitutAnkkuritSallittu,
   nostoankkuritSallittu, pikseleistaAsteiksi,
 } from './nostoankkurit.js';
-import { pallonNostoOnPoltettu } from '../pallo.js';
+import { pallonNostoOnPoltettu, pallonNostonPisteLaatassa } from '../pallo.js';
 // Kytkin asuu js/laattapyramidi.js:ssä; pallo.js vie sen eteenpäin, koska
 // nostokerros kysyy vain pallon luetteloa (tests/pallonimet.test.mjs).
 import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
@@ -482,7 +482,8 @@ export const NOSTON_TASO1_KERROIN = 1.3;
  * ══ TYYPPIMERKIT LÄHIZOOMISSA (omistajan päätös 21.9.2026 klo 23.05,
  * Fable: *"nostojen karttamerkit takaisin"*) ═══════════════════════
  *
- * z8:sta lähemmäs (kartan kerroin ≥ NOSTOJEN_TYYPPIMERKIN_KERROIN, sama
+ * z8:sta lähemmäs (kartan kerroin ≥ NOSTOJEN_TYYPPIMERKIN_KERROIN, 26.9. alkaen
+ * 2,5 — ks. LÖYDÖS 155 alla; alun perin sama
  * kerroin kuin nimiön katolla: kaksi zoomiporrasta saapumisnäkymästä)
  * JOKAINEN nosto saa tyyppinsä Codexin kuvamerkin (js/fokusnosto-
  * symbolit.js NOSTOSYM_KUVAMERKIT, 11 tyyppiä) pisteen tilalle
@@ -494,30 +495,33 @@ export const NOSTON_TASO1_KERROIN = 1.3;
  * saman ruudun kertoimen (ruudunKerroin), joten ykköstason merkki varaa
  * isomman tilan ja tavallinen merkki pisteen tilan.
  */
-export const NOSTOJEN_TYYPPIMERKIN_KERROIN = 4;
+export const NOSTOJEN_TYYPPIMERKIN_KERROIN = 2.5;
 /*
- * KOELIPPU `?koe=symbolitkaukana` (omistaja 22.9.2026, sanatarkasti:
- * *"Voisi kokeilla vaihtaa nostojen pisteet piirroksiksi jo
- * kaukonäkymässä..."*). Lippu pudottaa kertoimen rajan pois, eli
- * tyyppimerkit ovat käytössä KAIKILLA zoomeilla — omistajan vertailua
- * varten harmaata pistettä vasten (ks. KARTAN PISTE ON HARMAA
- * js/fokusnosto-symbolit.js). Ei muuta mitään muuta: merkki, ruudun
- * kerroin ja laatikot tulevat samasta koodista kuin lähizoomissa.
- *
- * Lippu luetaan KERRAN moduulin latauksessa, koska sama vastaus
- * tarvitaan ladonnassa, rasteripyynnössä ja sovittelun laatikoissa —
- * kesken kehyksen vaihtuva vastaus repisi ne eri tiloihin.
+ * LÖYDÖS 155 (Fablen päätös 26.9.2026 klo 09.0x): kuvamerkit tulevat
+ * lähemmäs saapumisnäkymää. Kynnys 4 → 2,5, ja kertoimilla 2,5–4 merkki
+ * on NOSTOJEN_TYYPPIMERKIN_PIENI kertaa tavallisesta (siirtymä pisteestä
+ * täysikokoiseen merkkiin kahdessa portaassa). Koelippu
+ * `?koe=symbolitkaukana` poistui samalla päätöksellä. Natiivi
+ * (NostoSaannot.cs) muuttui samassa erässä samoihin lukuihin. Koko 0,85
+ * on omistajan valinta kuvaparista (26.9.2026 klo 10.4x; ehdotus oli 0,7).
  */
-const SYMBOLIT_KAUKANA = laattakerroksenKokeet().has('symbolitkaukana');
-/** Ovatko tyyppimerkit käytössä kartan kertoimella (z8 ja lähempänä). */
+export const NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN = 4;
+export const NOSTOJEN_TYYPPIMERKIN_PIENI = 0.85;
+/** Ovatko tyyppimerkit käytössä kartan kertoimella. */
 export function tyyppimerkitKaytossa(kerroin) {
-  if (SYMBOLIT_KAUKANA) return true;
   return Number.isFinite(kerroin) && kerroin >= NOSTOJEN_TYYPPIMERKIN_KERROIN;
 }
 
-/** Merkin ruudun kerroin: kuvamerkillinen YKKÖSTASO on isompi ruutu; muu kuvamerkki pisteen ruudussa. */
+/** Onko kuvamerkki kertoimella vielä pienennetty (2,5 ≤ kerroin < 4, ks. LÖYDÖS 155). */
+export function tyyppimerkkiPieni(kerroin) {
+  return tyyppimerkitKaytossa(kerroin) && kerroin < NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN;
+}
+
+/** Merkin ruudun kerroin: kuvamerkillinen YKKÖSTASO on isompi ruutu; muu kuvamerkki pisteen ruudussa (lähellä kynnystä pienempi). */
 export function ruudunKerroin(d) {
-  return d?.kuvamerkki && d?.taso === 1 && !d?.poltettu ? NOSTOSYM_KUVAMERKIN_KERROIN : 1;
+  if (!d?.kuvamerkki || d?.poltettu) return 1;
+  if (d.taso === 1) return NOSTOSYM_KUVAMERKIN_KERROIN;
+  return d.kuvamerkkiPieni ? NOSTOJEN_TYYPPIMERKIN_PIENI : 1;
 }
 
 /*
@@ -1355,7 +1359,7 @@ export function asetteleNosto(el, d) {
   // Kuvamerkki: ykköstaso aina, muut lähizoomissa (TYYPPIMERKIT LÄHIZOOMISSA).
   const kuvamerkki = !d.poltettu ? (d.kuvamerkki ?? null) : null;
   const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`
-    + (taso1 || kuvamerkki ? `|${taso1 ? 'taso1' : ''}|${kuvamerkki ?? ''}` : '');
+    + (taso1 || kuvamerkki ? `|${taso1 ? 'taso1' : ''}|${kuvamerkki ?? ''}|${ruudunKerroin(d)}` : '');
   if (g.dataset.resepti !== resepti) {
     /*
      * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ, EI HYPPÄÄMÄLLÄ (KARTAN SULAVUUS ENSIN,
@@ -1399,6 +1403,8 @@ export function asetteleNosto(el, d) {
     }
   }
   g.classList.toggle('nostosym-nimio-piilossa', !nakyy);
+  // Piste laatassa (koe `poltetutnostot`): vain nimi elävänä, ikoni piiloon.
+  g.classList.toggle('nostosym-ikoni-laatassa', Boolean(d.pisteLaatassa));
   if (el.dataset.nimio !== (nakyy ? nimio : '')) el.dataset.nimio = nakyy ? nimio : '';
   if (el.dataset.taso !== String(d.taso ?? 2)) el.dataset.taso = String(d.taso ?? 2);
   el.classList.toggle('pallolauta-nosto-taso1', taso1);
@@ -1529,6 +1535,29 @@ export function nostonLaatikko(p, d, {
 }
 
 /**
+ * NÄHTÄVYYSKARTALTA SIIRRETYN NOSTON AIHE (kaupunkiliuskan kategoria).
+ *
+ * Aihe tulee noston omasta kohdetiedosta (maanKohdetiedot) saman
+ * kohteenKategoria-säännön kautta kuin kartan merkillä. Kohdekartan
+ * historian hetki (`kartalla: false`, js/packs/historian-hetket.js) ei
+ * ole maan kohdetiedoissa, koska se ei ole pääkartan rivi — sen tieto
+ * haetaan tunnuksella hetkimoduulista (hetkiKohdetieto). Ilman tätä 23
+ * kohdekartan hetkeä putosi liuskan "Muut"-kasaan (korjattu 23.9.2026;
+ * vartija tests/kaupunkiliuska-hetket.test.mjs). Tuntematon tai
+ * aiheeton kohde palauttaa tyhjän aiheen ja menee "Muut"-kasaan kuten
+ * ennenkin (PAATOKSET 34 kohta 11).
+ *
+ * @param {Map<string,object>} kohdetiedot maanKohdetiedot(ui, iso)
+ * @param {string} tunnus siirretyn rivin `id`
+ * @returns {string} aihe (KARTTAVALO_AIHEET) tai '' / null
+ */
+export function siirretynAihe(kohdetiedot, tunnus) {
+  const kohde = kohdetiedot?.get?.(tunnus) ?? hetkiKohdetieto(tunnus);
+  const kategoria = kohde ? kohteenKategoria(kohde) : null;
+  return kategoria ? nostosymPaakategoria(kategoria) : '';
+}
+
+/**
  * NAPAKOHTEEN RIVI: nosto, jonka paikka on datassa asteina eikä laudan
  * pisteenä (js/packs/maastokohteet-ata.js ja -ark.js). Sama tietue kuin
  * tavallisella nostolla, mutta paikka luetaan kohteen omasta
@@ -1577,6 +1606,13 @@ const laudanAvain = (k) => `lauta:${k?.id ?? k?.nimi ?? k?.name ?? ''}`;
 
 export function luoNostot({
   ui, merkit, asteet, ruudulla, onPoltettu = pallonNostoOnPoltettu,
+  /*
+   * PISTE LAATASSA (koe `poltetutnostot`, js/pallo.js
+   * pallonNostonPisteLaatassa): rivi on elävä (nimi sovittelun läpi),
+   * mutta sen piste tai kuvamerkki on nostotason laatassa, joten kerros
+   * ei piirrä omaa ikonia (`pisteLaatassa`). Valotäplä ja osuma jäävät.
+   */
+  onPisteLaatassa = pallonNostonPisteLaatassa,
   /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null: nostot rungolle. */
   glSovitin = null,
   /*
@@ -1656,6 +1692,8 @@ export function luoNostot({
   const naytaNostot = () => merkit.aseta('nostot', glSovitin ? glSovitin.nostot(datumit, naytaNostot) : datumit);
   // Viimeisin merkkiportin päätös (savukkeet ja vartijat lukevat sen).
   let portti = null;
+  /** Kohdemaan nostot, joiden piste on laatassa (ks. onPisteLaatassa). */
+  const pisteLaatassa = new Set();
   let viimeisinUloinOsuus = 0;
   let sovittelu = {
     siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, reunalta: 0, lappuja: 0,
@@ -1902,8 +1940,14 @@ export function luoNostot({
        * sama kohteidenNykyinenIso), eikä katselutilassa lainkaan —
        * ylempänä tässä funktiossa. Siksi lippu on tässä aina tosi.
        */
+      // Samalla kierroksella kuin poltettu-liput: ladonta ajetaan kerran.
+      pisteLaatassa.clear();
+      const kirjaaPiste = (tunnus, tiiviste) => {
+        if (onPisteLaatassa(tunnus, tiiviste)) pisteLaatassa.add(tunnus);
+        return onPoltettu(tunnus, tiiviste);
+      };
       portti = merkkiPortti(
-        maanKohdemerkit(pack, iso, pohja, onPoltettu),
+        maanKohdemerkit(pack, iso, pohja, kirjaaPiste),
         lahizoomiAuki(uloinOsuus),
         (m) => tiedot.get(m.id) ?? m.kohde ?? null,
         { kohdemaa: true },
@@ -1955,6 +1999,7 @@ export function luoNostot({
           puoli: m.puoli ?? 'oikea',
           aihe: nostosymPaakategoria(m.kategoria),
           poltettu: m.poltettu,
+          pisteLaatassa: !m.poltettu && pisteLaatassa.has(m.id),
           /*
            * NÄKYVÄ KAUPUNKI ILMAN KORTTIA (`vainNimi`, omistaja
            * KARTTAUUDISTUKSEN PAATOKSET 13). Merkki ja nimi ovat
@@ -1977,6 +2022,8 @@ export function luoNostot({
           // Tyyppimerkit lähizoomissa (ks. TYYPPIMERKIT LÄHIZOOMISSA): kaikille.
           kuvamerkki: kohde.taso === 1 || tyyppimerkitKaytossa(nostonKarttakerroin)
             ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
+          // LÖYDÖS 155: kynnyksen ja täyden koon välissä merkki on pienempi (ruudunKerroin).
+          kuvamerkkiPieni: kohde.taso !== 1 && tyyppimerkkiPieni(nostonKarttakerroin),
           // Löytämisen sumu: luonnos, kunnes löydetty (ks. keraa).
           luonnos: luonnos(m.id, kohde.taso === 1 ? 1 : 2, a.lat, a.lon),
           /*
@@ -2056,6 +2103,7 @@ export function luoNostot({
           aihe: 'elaimet',
           lunastettu: Boolean(game.elaintakyLunastettu?.(t.iso)),
           poltettu: onPoltettu(t.tunnus, tiiviste),
+          pisteLaatassa: onPisteLaatassa(t.tunnus, tiiviste),
           avaa: () => { if (!ui.busy) avaaElaintaky(ui, t.iso); },
         });
       }
@@ -2828,17 +2876,13 @@ export function luoNostot({
        * merkkiä, jota pitäisi piilottaa (PAATOKSET 33 rajaus a:
        * kaupungin sisäisiä ei polteta laattaan).
        */
-      const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => {
-        const kohde = kohdetiedot.get(k.id) ?? null;
-        const kategoria = kohde ? kohteenKategoria(kohde) : null;
-        return {
-          ...k,
-          perhe: 'nosto',
-          kartalta: true,
-          aihe: kategoria ? nostosymPaakategoria(kategoria) : '',
-          ladontaNro: Number.MAX_SAFE_INTEGER,
-        };
-      });
+      const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => ({
+        ...k,
+        perhe: 'nosto',
+        kartalta: true,
+        aihe: siirretynAihe(kohdetiedot, k.id),
+        ladontaNro: Number.MAX_SAFE_INTEGER,
+      }));
       const omat = [...kartalta, ...siirretyt];
       if (!omat.length) continue;
       sisaisetKaupungeittain.set(city.avain, omat);
@@ -3160,6 +3204,8 @@ export function luoNostot({
       lunastettu: Boolean(r.lunastettu),
       taso: r.taso ?? 2,
       kuvamerkki: r.kuvamerkki ?? null,
+      // Löydös 155: aina kirjoitettuna (myös false), koska merkit.aseta yhdistää vanhaan datumiin.
+      kuvamerkkiPieni: Boolean(r.kuvamerkkiPieni),
       luonnos: Boolean(r.luonnos),
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,

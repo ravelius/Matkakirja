@@ -76,6 +76,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'ilulissatin-jaavuono',
     nimi: 'Ilulissatin jäävuono',
+    nimio: 'Ilulissat',
     tyyppi: 'meri',
     kysymykset: [
       'Kuinka nopeasti Sermeq Kujalleq liikkuu?',
@@ -212,6 +213,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'gronlannin-jaatikko',
     nimi: 'Grönlannin jäätikkö',
+    nimio: 'Mannerjäätikkö',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka paksu jäätikkö on paksuimmillaan?',
@@ -316,6 +318,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'koillis-gronlannin-kansallispuisto',
     nimi: 'Koillis-Grönlannin kansallispuisto',
+    nimio: 'Koillis-Grönlanti',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka moni maailman valtio on tätä puistoa pienempi?',

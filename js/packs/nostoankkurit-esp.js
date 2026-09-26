@@ -6,8 +6,9 @@
  * --iso ESP --yhdista maan fokuskaupungeista) ja lukittu maalle
  * (tools/lukitse-nostoankkurit-maalle.mjs --maa ESP): maakohde ei ole
  * merellä; saari (Stromboli, Helgoland, Antikythera, Berlengas, Capri)
- * ja tyypin 'meri' nosto pitävät oman pisteensä. Hahmotelmat pysyvät
- * elävinä: maa EI ole LUKITUT_MAAT-listalla (poltto on oma päätöksensä).
+ * ja tyypin 'meri' nosto pitävät oman pisteensä. Maa on LUKITUT_MAAT-
+ * listalla 23.9.2026 alkaen (nostotason poltto); hahmotelmat pysyvät
+ * elävinä, koska poltto ajetaan --ilman-hahmotelmia.
  * Raportti docs/raportit/viesti-fable-ankkurilukitus-20260919.md.
  */
 export const NOSTOANKKURIT_ESP = {

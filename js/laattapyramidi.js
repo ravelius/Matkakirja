@@ -88,7 +88,7 @@
  *    kohtaan leveys, jossa kopio jatkaa.
  */
 import { el } from './mapart.js';
-import { pyramidiUrl } from './media.js';
+import { pyramidiUrl, pyramidinLuettelonPolku } from './media.js';
 import {
   ASTRONAUTIN_SAVY, ASTRONAUTIN_SUODATIN, JAARAJA_LAT, astronautinValoliuunPysakit,
   haeReliefinLuettelo, merkitseLinssiketju, reliefiAstronautilla, reliefiKaytossa,
@@ -491,6 +491,19 @@ export function nostotasonPoltetut() {
   return nostotasonKirjaus()?.nostot ?? null;
 }
 
+/*
+ * NIMET ELÄVINÄ, MERKIT LAATASSA (Fable 23.9.2026, koe `poltetutnostot`):
+ * kohdemaan nostotaso on poltettu ilman nimiä (tools/generoi-
+ * laattapyramidi.mjs --nostot-ilman-nimioita → kirjauksen `nimiot:
+ * false`). Silloin laatta kantaa pisteen tai kuvamerkin ja peli piirtää
+ * vain nimen elävänä. Vanha kirjaus ilman kenttää = nimet laatassa =
+ * false (kerros pysyy poissa kuten KOHDEMAAN_NIMIOT_ELAVINA vaatii).
+ */
+export function nostotasonNimetElavina() {
+  const kirjaus = luettelo?.nostotasot ? nostotasonKirjaus() : null;
+  return Boolean(kirjaus?.versio && kirjaus.tasot?.length && kirjaus.nimiot === false);
+}
+
 /** Tunnus→tiiviste-taulu, josta elävä kerros saa vaieta. */
 function poltetutNostot() {
   if (luettelo?.nostotasot) return nostotasonKirjaus()?.nostot ?? null;
@@ -565,6 +578,29 @@ export function pyramidinArkki(lauta) {
 /* ------------------------------------------------------------ luettelo */
 
 /*
+ * PELIN SYVIN TASO (Karttaseppä 23.9.2026). Ämpärin luettelo voi kuvata
+ * tasot z9–z10: ne poltetaan vain alueelle (Ranska) 30 metrin
+ * korkeusaineistosta natiivipelin pallosarjaa Z9–Z11 varten
+ * (tools/generoi-laattapyramidi.mjs SYVÄT TASOT). Selainpeli EI käytä
+ * niitä — pallo pysyy Z8:ssa, eikä tasokartan tason valinta
+ * (valitseTaso) saa hypätä alueen laattoihin, joiden ulkopuolella
+ * laatastossa on pelkkiä nollia. Siksi luettelon tasot rajataan tähän
+ * kattoon HETI haettaessa, yhdessä paikassa: jokainen kuluttaja
+ * (tasokartta, pallon lepokerros, pallolauta) saa luettelonsa
+ * haePyramidinLuettelo()-kutsusta ja näkee vain tasot z0–z8.
+ */
+export const PELIN_SYVIN_TASO = 8;
+
+/**
+ * Luettelo pelin käyttöön: tasot, joiden z ylittää PELIN_SYVIN_TASO:n,
+ * jätetään pois. Palauttaa saman olion, jos rajattavaa ei ole.
+ */
+export function pelinLuettelo(j, katto = PELIN_SYVIN_TASO) {
+  if (!Array.isArray(j?.tasot) || !j.tasot.some((t) => t.z > katto)) return j;
+  return { ...j, tasot: j.tasot.filter((t) => t.z <= katto) };
+}
+
+/*
  * Luettelo haetaan kerran istuntoa kohti. Moduulitasolla eikä
  * UI-oliossa: tiedosto ei muutu kesken istunnon, eikä uusi peli saa
  * aloittaa hakua alusta.
@@ -603,9 +639,11 @@ let luetteloHaku = null;
  * välimuistista — muuten koko kartta katoaisi lentokonetilassa.
  */
 function noudaLuettelo() {
-  return fetch(pyramidiUrl('pyramidi.json'), { cache: 'no-cache' })
+  // Koelippu ?pyramidi=<sarja> lukee sarjan kopion (js/media.js pyramidiKoe).
+  const polku = pyramidinLuettelonPolku();
+  return fetch(pyramidiUrl(polku), { cache: 'no-cache' })
     .then((v) => (v.ok ? v : Promise.reject(new Error('luettelo'))))
-    .catch(() => fetch(pyramidiUrl('pyramidi.json')));
+    .catch(() => fetch(pyramidiUrl(polku)));
 }
 
 async function haeLuettelo() {
@@ -627,8 +665,8 @@ async function haeLuettelo() {
         // mukaan lukien, koska laatan osoite rakennetaan siitä.
         if (!j?.arkki?.w || !j?.laatta || !j?.versio
           || !Array.isArray(j.tasot) || !j.tasot.length) return null;
-        luettelo = j;
-        return j;
+        luettelo = pelinLuettelo(j);
+        return luettelo;
       })
       .catch(() => null);
   }

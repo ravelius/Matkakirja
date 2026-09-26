@@ -3041,6 +3041,359 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * Gao (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Peli ei käsittele
+   * nykykonflikteja — molemmat kohteet ja niiden tekstit koskevat vain
+   * Songhain valtakunnan aikaa (1400–1500-luvut).
+   */
+  gao: {
+    polku: 'assets/kartat/gao-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 16.3014, etela: 16.2673, lansi: -0.0613, ita: -0.0325,
+    },
+    esittely: 'Kartan alue on Gaon ydinkeskusta Nigerjoen rannalla. '
+      + 'Askian mausoleumi, savesta rakennettu pyramidinmuotoinen '
+      + 'hautamonumentti, kohoaa yhä keskustassa; se on Gaon suurin '
+      + 'esikolonialistinen rakennus ja Unescon maailmanperintökohde.',
+    kohteet: [
+      {
+        nimi: 'Askian mausoleumi', lat: 16.2894, lon: -0.0445,
+        teksti: 'Songhain valtakunnan hallitsija Askia Muhammad '
+          + 'rakennutti oman hautamonumenttinsa Gaohon 1495. Pyramidin '
+          + 'muotoinen, 17 metriä korkea savirakennelma on Gaon suurin '
+          + 'esikolonialistinen monumentti ja toimii yhä rukouspaikkana '
+          + '— Unesco liitti sen maailmanperintöluetteloon 2004.',
+      },
+      {
+        nimi: 'Gaon suurmoskeija', lat: 16.2793494, lon: -0.0493098,
+        teksti: 'Kaupungin suurmoskeija sijaitsee Askian mausoleumista '
+          + 'reilun kilometrin päässä, samalla Askia-nimisellä '
+          + 'kadulla — molemmat muistuttavat Gaon asemasta islamilaisen '
+          + 'oppineisuuden ja hallinnon keskuksena Songhain valtakunnan '
+          + 'aikana.',
+      },
+    ],
+  },
+  /*
+   * Cayenne (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  cayenne: {
+    polku: 'assets/kartat/cayenne-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 4.947, etela: 4.930, lansi: -52.343, ita: -52.326,
+    },
+    esittely: 'Kartan alue on Cayennen vanha kaupunki kapealla '
+      + 'niemellä. Cépéroun kukkulalle nousi 1643 linnoitus, jonka '
+      + 'juurelle koko kaupunki kasvoi; kaupungin puolustusmuurin '
+      + 'paikalle raivattiin 1810-luvulla kuningaspalmuaukio, joka on '
+      + 'yhä keskustan tärkein kohtaamispaikka.',
+    kohteet: [
+      {
+        nimi: 'Fort Cépérou', lat: 4.9377244, lon: -52.3368014,
+        teksti: 'Ranskalaiset kauppiaat pystyttivät linnoituksen '
+          + 'alkuperäiskansan päällikön, Cépéroun, mukaan nimetylle '
+          + 'kukkulalle 1643. Paikka vaihtoi omistajaa moneen kertaan '
+          + 'hollantilaisten, englantilaisten ja portugalilaisten '
+          + 'välillä, ennen kuin Ranska vakiinnutti asemansa '
+          + '1600-luvun lopulla.',
+      },
+      {
+        nimi: 'Place des Palmistes', lat: 4.9395938, lon: -52.3338290,
+        teksti: 'Kun Cayennea ympäröinyt puolustusmuuri purettiin '
+          + '1810-luvulla, sen paikalle raivattiin aukio ja istutettiin '
+          + 'komeita kuningaspalmuja. Aukiosta tuli nopeasti '
+          + 'siirtokunnan tärkein kohtaamispaikka, ja se on sitä yhä.',
+      },
+    ],
+  },
+  /*
+   * Macapá (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Rajaus on tavallista leveämpi,
+   * koska ainoat kaksi paikannettavaa kohdetta ovat kaupungin eri
+   * laidoilla (tools/piirra-kaupunkikartta.mjs macapa-rivin kommentti).
+   */
+  macapa: {
+    polku: 'assets/kartat/macapa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 0.043, etela: -0.011, lansi: -51.090, ita: -51.037,
+    },
+    esittely: 'Kartan alue kattaa Macapán vanhan linnoituksen ja '
+      + 'Marco Zero -muistomerkin, jotka sijaitsevat kaupungin eri '
+      + 'laidoilla Amazon-joen suiston partaalla. Macapá on ainoa '
+      + 'Brasilian osavaltion pääkaupunki, jonka halki päiväntasaaja '
+      + 'kulkee.',
+    kohteet: [
+      {
+        nimi: 'Fortaleza de São José de Macapá', lat: 0.0310513, lon: -51.0487588,
+        teksti: 'Tähdenmuotoinen, nelibastioninen linnoitus valmistui '
+          + '1782 lähes kaksikymmentä vuotta kestäneen rakennustyön '
+          + 'jälkeen ja suojasi Amazonin suiston rajaseutua Ranskan ja '
+          + 'Alankomaiden pyrkimyksiltä. Linnoitusta pidetään nykyisin '
+          + 'kaupungin symbolisena syntymäpaikkana.',
+      },
+      {
+        nimi: 'Marco Zero -muistomerkki', lat: 0.0007167, lon: -51.0779419,
+        teksti: 'Vuonna 1987 avattu 30-metrinen betoniobeliski merkitsee '
+          + 'tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa '
+          + 'pohjoisella ja eteläisellä pallonpuoliskolla. Tästä '
+          + 'Macapá tunnetaan lempinimellä "Keskimaailman pääkaupunki".',
+      },
+    ],
+  },
+  /*
+   * João Pessoa (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Farol do Cabo Branco/Ponta do
+   * Seixas (Amerikan mantereen itäisin kärki) on muutaman km päässä
+   * keskustasta, ei samassa rajauksessa.
+   */
+  joaopessoa: {
+    polku: 'assets/kartat/joaopessoa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -7.108, etela: -7.128, lansi: -34.895, ita: -34.876,
+    },
+    esittely: 'Kartan alue on João Pessoan historiallinen keskusta '
+      + 'Paraíban joen mutkan yllä — Brasilian kolmanneksi vanhin '
+      + 'kaupunki, perustettu 1585. São Franciscon luostari ja Teatro '
+      + 'Santa Roza ovat molemmat vanhan kaupungin ydinalueella.',
+    kohteet: [
+      {
+        nimi: 'São Franciscon luostari', lat: -7.1145883, lon: -34.8825453,
+        teksti: 'Fransiskaanimunkit aloittivat luostarin ja kirkon '
+          + 'rakentamisen 1589; koko kokonaisuus täydentyi vasta 1788. '
+          + 'Sisätiloja koristavat kullatut puuveistokset ja Unescon '
+          + 'ainutlaatuiseksi nostama saarnastuoli — Etelä-Amerikan '
+          + 'suurin barokkimonumentti.',
+      },
+      {
+        nimi: 'Teatro Santa Roza', lat: -7.1177565, lon: -34.8866680,
+        teksti: 'Vaaleanpunainen, uusklassinen teatteri avattiin 3. '
+          + 'marraskuuta 1889 Parahyban maakunnan tärkeimpänä '
+          + 'teatterina. Rakennus seisoo yhä samalla paikalla '
+          + 'muutaman korttelin päässä joenrannasta.',
+      },
+    ],
+  },
+  /*
+   * Santarém (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  santarem: {
+    polku: 'assets/kartat/santarem-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -2.408, etela: -2.430, lansi: -54.735, ita: -54.705,
+    },
+    esittely: 'Kartan alue on Santarémin vanha keskusta siinä kohtaa, '
+      + 'jossa tumma Tapajós-joki ja sameanruskea Amazon virtaavat '
+      + 'vierekkäin sekoittumatta — ilmiö tunnetaan nimellä Vesien '
+      + 'kohtaaminen. Rantaraitilta avautuu paras näköala ilmiöön; '
+      + 'lähellä on kaupungin vanha keskusaukio.',
+    kohteet: [
+      {
+        nimi: 'Vesien kohtaamisen näköalapaikka (Orla)', lat: -2.4179024, lon: -54.7172252,
+        teksti: 'Santarémin edustalla Amazonin sameanruskea vesi kohtaa '
+          + 'Tapajós-joen tumman, kirkkaan veden, ja kaksi väriä virtaa '
+          + 'vierekkäin kilometrien matkan sekoittumatta juuri lainkaan. '
+          + 'Ilmiötä kutsutaan nimellä Encontro das Águas, ja rantaraitilta '
+          + 'sen näkee parhaiten.',
+      },
+      {
+        nimi: 'Praça Tiradentes', lat: -2.4194012, lon: -54.7235362,
+        teksti: 'Santarémin vanhan kaupunginosan keskusaukio lähellä '
+          + 'paikkaa, jossa jesuiittapappi João Felipe Bettendorff '
+          + 'perusti lähetysaseman 1661 — kaupungin virallisen '
+          + 'syntyhetken. Ympäröivät talot on perinteisesti '
+          + 'päällystetty portugalilaistyylisillä atsulejo-kaakeleilla.',
+      },
+    ],
+  },
+  /*
+   * Porto Velho (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  portovelho: {
+    polku: 'assets/kartat/portovelho-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -8.75, etela: -8.7785, lansi: -63.924, ita: -63.889,
+    },
+    esittely: 'Kartan alue on Porto Velhon vanha keskusta Rio Madeiran '
+      + 'rannalla. Kaupunki syntyi 1907 kuolonuhreja vaatineen Madeira-'
+      + 'Mamoré-rautatien leirinä; vanha rautatieasema seisoo yhä joen '
+      + 'varrella, ja lähellä kohoaa kaupungin ensimmäinen kivikirkko.',
+    kohteet: [
+      {
+        nimi: 'Sagrado Coração de Jesus -katedraali', lat: -8.7620468, lon: -63.9040348,
+        teksti: 'Porto Velhon ensimmäinen katolinen kivikirkko: peruskivi '
+          + 'muurattiin 1917, mutta rakentaminen käynnistyi kunnolla '
+          + 'vasta kymmenen vuotta myöhemmin. Ulkoa kaksitorninen '
+          + 'katedraali on roomalaistyylinen, mutta sisällä holvit '
+          + 'nousevat goottilaisittain terävinä.',
+      },
+      {
+        nimi: 'Madeira-Mamoré-rautatien vanha asema', lat: -8.7664873, lon: -63.9090431,
+        teksti: 'Porto Velho syntyi 1907 tämän rautatien '
+          + 'rakennusleirinä — hanke vaati satoja työläisten henkiä '
+          + 'malariaan ja muihin sairauksiin. Vanha asemarakennus joen '
+          + 'varrella on säilytetty, ja sen pihalla seisoo yhä ratahankkeen '
+          + 'vanhoja vetureita.',
+      },
+    ],
+  },
+  /*
+   * Broome (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  broome: {
+    polku: 'assets/kartat/broome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -17.9424, etela: -17.9749, lansi: 122.2189, ita: 122.2633,
+    },
+    esittely: 'Kartan alue on Broomen ydinkeskusta, joka kasvoi '
+      + '1880-luvulla maailman johtavaksi helmisatamaksi. Bedford '
+      + 'Parkissa muistetaan naisia, jotka pakotettiin sukeltamaan '
+      + 'helmiäissimpukkaa; Chinatownin kapeat kujat syntyivät '
+      + 'aikanaan Aasiasta saapuneiden sukeltajien ja kauppiaiden '
+      + 'korttelina.',
+    kohteet: [
+      {
+        nimi: 'Women of Pearling -patsas', lat: -17.9628799, lon: 122.2388728,
+        teksti: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
+          + 'odottivat lugger-veneiden palaavan merten takaa, '
+          + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
+          + 'aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka '
+          + 'kädessään — muistomerkki naisille, joita pakotettiin '
+          + 'sukeltamaan simpukoita 1800-luvulla ilman korvausta.',
+      },
+      {
+        nimi: 'Chinatown', lat: -17.9544454, lon: 122.2433213,
+        teksti: 'Helmisatama veti Broomeen sukeltajia ja kauppiaita '
+          + 'Japanista, Kiinasta, Malesiasta ja Filippiineiltä, ja '
+          + 'satamalaitureiden ympärille kasvanut kortteli sai lopulta '
+          + 'nimen Chinatown. Vuoteen 1910 mennessä noin 3 500 kaupungin '
+          + '5 000 asukkaasta sai leipänsä helmiteollisuudesta.',
+      },
+    ],
+  },
+  /*
+   * Kalgoorlie (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Kohteet
+   * käyttävät plain `teksti`-kenttää, EI `nosto:`-linkkiä — tämä on
+   * uutta, vielä olemassa olevaan nostoon linkittämätöntä sisältöä eikä
+   * kytkeydy pelin globaaliin nosto-sijoittelusääntöön
+   * (tests/nostot-kartalla.test.mjs). Vain kaksi nähtävyyttä on aidosti
+   * paikannettavissa; loput kaupungin kulttuurinostoista (kamelikaravaanit,
+   * Boulder-kaksoiskaupunki, piikkipiru) ovat teemallisia eivätkä
+   * osoitteellisia, siksi ne eivät ole kartalla.
+   */
+  kalgoorlie: {
+    polku: 'assets/kartat/kalgoorlie-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -30.723, etela: -30.756, lansi: 121.443, ita: 121.492,
+    },
+    esittely: 'Kartan alue on Kalgoorlien ydinkeskusta, joka kasvoi '
+      + 'kultaryntäyksen mukana 1890-luvulla Hannan Streetin ympärille. '
+      + 'Pääkadulla seisoo Paddy Hannanin patsas, jonka löytö sytytti koko '
+      + 'ryntäyksen; muutaman kilometrin päässä pohjoisessa on Hannans '
+      + 'North, yksi Golden Milen vanhoista kultakaivoksista.',
+    kohteet: [
+      {
+        nimi: 'Paddy Hannanin patsas', lat: -30.7490175, lon: 121.4705657,
+        teksti: 'Paddy Hannanin pronssipatsas seisoo yhä Kalgoorlien '
+          + 'pääkadulla vesileili sylissään ja toimii juomalähteenä. '
+          + 'Hänen hevosensa kengän irtoaminen tällä paikalla kesäkuussa '
+          + '1893 johti kultalöytöön, joka synnytti koko kaupungin.',
+      },
+      {
+        nimi: 'Hannans North -kaivos', lat: -30.7268005, lon: 121.4716290,
+        teksti: 'Hannans North oli yksi kymmenistä kaivoksista Golden '
+          + 'Milella, maailman rikkaimmalla kultaneliömailin, jonka alla '
+          + 'kulki yli kolmetuhatta kilometriä käytäviä. Kaivos on '
+          + 'nykyään museo: sen nostotornit seisovat yhä punaisella '
+          + 'hiekalla.',
+      },
+    ],
+  },
+  /*
+   * Mount Isa (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Lake Moondarra, jota
+   * kulttuurinosto kuvaa "aivan kaupungin kupeessa", jätettiin pois: se
+   * on todellisuudessa n. 18 km kaupungista eikä mahdu samaan
+   * rajaukseen kuin kaivos ja lookout (tools/piirra-kaupunkikartta.mjs
+   * mountisa-rivin kommentti).
+   */
+  mountisa: {
+    polku: 'assets/kartat/mountisa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -20.709, etela: -20.743, lansi: 139.463, ita: 139.518,
+    },
+    esittely: 'Kartan alue on Mount Isan ydinkeskusta Leichhardtin joen '
+      + 'molemmin puolin. Joen länsipuolella kohoavat Mount Isa Minesin '
+      + 'piiput ja louhokset, jotka hallitsevat koko kaupungin '
+      + 'taivaanrantaa; keskustan lounaispuolella oleva City Lookout '
+      + 'tarjoaa parhaan näköalan kaivosalueelle.',
+    kohteet: [
+      {
+        nimi: 'Mount Isa Mines', lat: -20.7279113, lon: 139.4830884,
+        teksti: 'Mount Isa Minesin lyijy-, sinkki-, hopea- ja '
+          + 'kuparimalmiot ovat maailman suurimpia. Kaupungin '
+          + 'taivaanrantaa hallitsevat kaksi piippua — korkeampi '
+          + 'lyijysulatolle, punavalkoraidallinen kuparisulatolle — ja '
+          + 'niiden juurella vanha, jo käytöstä poistettu nostotorni '
+          + 'seisoo yhä kaupungin symbolina.',
+      },
+      {
+        nimi: 'City Lookout', lat: -20.7235054, lon: 139.4984195,
+        teksti: 'Kaupungin lounaisreunalla kohoava City Lookout on '
+          + 'paikallisten ja matkailijoiden näköalapaikka, josta avautuu '
+          + 'näkymä koko Mount Isaan ja sen kaivosalueen piippuihin '
+          + 'Leichhardtin joen yli.',
+      },
+    ],
+  },
+  /*
+   * Geraldton (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Houtman Abrolhosin haaksirikko
+   * on 80 km ulkona merellä, ei kartalla.
+   */
+  geraldton: {
+    polku: 'assets/kartat/geraldton-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -28.7548, etela: -28.7977, lansi: 114.5644, ita: 114.6283,
+    },
+    esittely: 'Kartan alue on Geraldtonin ydinkeskusta Champion Bayn '
+      + 'rannalla. Länsikärjessä kohoaa Point Mooren majakka, Länsi-'
+      + 'Australian vanhin yhä pystyssä oleva liittovaltion majakka; '
+      + 'kauempana idässä on kaupungin rautatieasema, joka avasi '
+      + 'sisämaan kaivosseudun satamalle 1879.',
+    kohteet: [
+      {
+        nimi: 'Point Mooren majakka', lat: -28.7827109, lon: 114.5793925,
+        teksti: 'Point Mooren punavalkoraidallinen majakka valmistui '
+          + '1878 opastamaan laivat turvallisesti Champion Bayhin. Se on '
+          + 'Länsi-Australian vanhin yhä pystyssä oleva liittovaltion '
+          + 'majakka, lähes 35 metriä korkea, ja sen valo näkyy '
+          + 'avomerelle kymmenien kilometrien päähän.',
+      },
+      {
+        nimi: 'Geraldtonin rautatieasema', lat: -28.7697728, lon: 114.6132638,
+        teksti: 'Vuonna 1879 valmistunut rautatie yhdisti Geraldtonin '
+          + 'sataman sisämaan kaivosseutuun ja moninkertaisti '
+          + 'satamaliikenteen käytännössä yhdessä yössä. Nykyinen '
+          + 'koristeellinen asemarakennus samalla paikalla toimii yhä '
+          + 'matkailijoiden lähtöpisteenä.',
+      },
+    ],
+  },
+  /*
    * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
    * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
    * kohteet ovat kulttuurikohteita. Lehti kertoo roomalaisesta,

@@ -110,6 +110,7 @@ export const MAASTOKOHTEET_AUS = [
   {
     id: 'parkesin-radioteleskooppi',
     nimi: 'Parkesin radioteleskooppi',
+    nimio: 'Parkes',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Mitä lautanen välitti heinäkuussa 1969?',
@@ -189,6 +190,7 @@ export const MAASTOKOHTEET_AUS = [
   {
     id: 'snowy-mountains-hanke',
     nimi: 'Snowy Mountains -hanke',
+    nimio: 'Snowy Mountains',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Mihin suuntaan hanke käänsi Snowy-joen veden?',

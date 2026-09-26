@@ -1,0 +1,7221 @@
+{
+ "kuvaus": "Aluenimet natiiville elävinä, pinnalle painettuina (Fable 24.9.2026, löydös 38 b). Paikat ovat webin nimiötason törmäyksenväistön jälkeiset ankkurit tasoittain; tasot = pyramidin z, pallotasot = Mercator Z = z + 1. korkeus_m = kirjainkorkeus metreinä (Millerin pystymittakaava), leveys_m = koko nimen leveys harvennuksineen. Teksti versaalein; nykyalueilla sanan ensimmäinen kirjain täysikokoinen, muut pienkapiteeli-kertoimella. Ei haloa.",
+ "versio": "2026-09-24a",
+ "lahde": {
+  "pyramidi": "2026-09-23a-pohja",
+  "nimiotaso": "2026-09-22g-nimiot",
+  "tyylit": "tools/fokuskartta/maailmapiirto.js"
+ },
+ "fontti": {
+  "pyydetty": "\"Liberation Serif\", \"FreeSerif\", serif",
+  "valittu": "Liberation Serif 2.1.5 (OFL 1.1): pysty maakunnille, nykyalueille ja merille, kursiivi valtamerille",
+  "tiedostot": "tools/fokuskartta/fontit/ (LiberationSerif-Regular.ttf, LiberationSerif-Italic.ttf, OFL.txt, LAHDE.txt)",
+  "huom": "Fable 24.9.2026: sama fontti natiiviin ja webin seuraavaan polttoon (PR #3105). Nimiötaso 2026-09-22g on vielä poltettu macOS:n Timesilla; mitat tästä tiedostosta (metriikka lähes sama)."
+ },
+ "tyylit": {
+  "meri": {
+   "versaali": true,
+   "harvennus_em": 0.32,
+   "halo": false,
+   "koot_px": {
+    "4": 14,
+    "5": 18,
+    "6": 24,
+    "7": 34,
+    "8": 46
+   },
+   "vari": "rgba(58, 66, 84, 0.62)",
+   "aaltomerkki": {
+    "alla_em": 0.95,
+    "leveys_osuus": 0.5,
+    "kaaria": 3
+   }
+  },
+  "maakunta": {
+   "versaali": true,
+   "harvennus_em": 0.32,
+   "halo": false,
+   "koot_px": {
+    "5": 13,
+    "6": 17,
+    "7": 24,
+    "8": 32
+   },
+   "vari": "rgba(70, 48, 29, 0.58)"
+  },
+  "maakunta-pieni": {
+   "versaali": true,
+   "harvennus_em": 0.32,
+   "halo": false,
+   "koot_px": {
+    "7": 18,
+    "8": 26
+   },
+   "vari": "rgba(70, 48, 29, 0.58)"
+  },
+  "nykyalue": {
+   "versaali": true,
+   "harvennus_em": 0.32,
+   "halo": false,
+   "koot_px": {
+    "7": 16,
+    "8": 22
+   },
+   "pienkapiteeli": 0.78,
+   "varit": {
+    "ruoste": "rgba(146, 66, 38, 0.60)",
+    "ruoste-vahva": "rgba(128, 44, 20, 0.95)",
+    "sepia": "rgba(70, 48, 29, 0.36)"
+   }
+  },
+  "nykyalue-pieni": {
+   "versaali": true,
+   "harvennus_em": 0.32,
+   "halo": false,
+   "koot_px": {
+    "8": 18
+   },
+   "pienkapiteeli": 0.78,
+   "varit": {
+    "ruoste": "rgba(146, 66, 38, 0.60)",
+    "ruoste-vahva": "rgba(128, 44, 20, 0.95)",
+    "sepia": "rgba(70, 48, 29, 0.36)"
+   }
+  },
+  "valtameri": {
+   "kursiivi": true,
+   "versaali": true,
+   "harvennus_em": 0.34,
+   "vari": "rgba(112, 99, 76, 0.62)",
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "halo": false
+  }
+ },
+ "lukumaarat": {
+  "nimet": 180,
+  "luokittain": {
+   "meri": 29,
+   "maakunta": 65,
+   "nykyalue": 86
+  },
+  "valtameret": 7,
+  "ohitetut": {
+   "kuva": 8,
+   "raja": 7,
+   "eiLaatikkoa": 0
+  },
+  "meret_vedelle": {
+   "siirretty": [
+    "valimeri z4 91 km",
+    "valimeri z5 44 km",
+    "valimeri z6 88 km",
+    "valimeri z7 57 km",
+    "valimeri z8 44 km",
+    "itameri z4 36 km",
+    "itameri z6 17 km",
+    "itameri z7 11 km",
+    "itameri z8 8 km",
+    "vienanmeri z4 29 km",
+    "asovanmeri z5 69 km",
+    "asovanmeri z6 14 km",
+    "egeanmeri z4 217 km",
+    "egeanmeri z6 44 km",
+    "marmaranmeri z7 31 km",
+    "marmaranmeri z8 9 km",
+    "tyrrhenanmeri z4 49 km",
+    "adrianmeri z5 33 km",
+    "ligurianmeri z4 278 km",
+    "irlanninmeri z6 15 km",
+    "irlanninmeri z7 11 km",
+    "lioninlahti z4 200 km",
+    "lioninlahti z5 51 km",
+    "lioninlahti z6 17 km",
+    "pohjanlahti z5 50 km",
+    "suomenlahti z6 12 km",
+    "riianlahti z6 47 km",
+    "riianlahti z7 8 km",
+    "englannin-kanaali z4 78 km koko 0.65",
+    "englannin-kanaali z5 35 km",
+    "englannin-kanaali z6 23 km",
+    "englannin-kanaali z7 17 km",
+    "englannin-kanaali z8 11 km",
+    "skagerrak z4 47 km",
+    "gibraltarinsalmi z5 124 km koko 0.5",
+    "gibraltarinsalmi z6 83 km koko 0.5",
+    "gibraltarinsalmi z7 59 km koko 0.5",
+    "gibraltarinsalmi z8 40 km koko 0.65",
+    "bosporinsalmi z4 107 km koko 0.8",
+    "bosporinsalmi z5 69 km",
+    "bosporinsalmi z6 59 km",
+    "bosporinsalmi z7 47 km",
+    "bosporinsalmi z8 31 km koko 0.8",
+    "dardanellit z5 84 km koko 0.5",
+    "juutinrauma z7 30 km koko 0.8",
+    "messinansalmi z4 103 km",
+    "messinansalmi z5 74 km",
+    "messinansalmi z6 68 km koko 0.8",
+    "messinansalmi z7 49 km koko 0.5"
+   ],
+   "poistettu": [
+    "asovanmeri z4",
+    "marmaranmeri z4",
+    "marmaranmeri z6",
+    "adrianmeri z4",
+    "irlanninmeri z4",
+    "irlanninmeri z5",
+    "pohjanlahti z4",
+    "suomenlahti z4",
+    "riianlahti z4",
+    "gibraltarinsalmi z4",
+    "dardanellit z4",
+    "dardanellit z6",
+    "dardanellit z7",
+    "dardanellit z8",
+    "juutinrauma z4",
+    "juutinrauma z5",
+    "juutinrauma z6",
+    "juutinrauma z8",
+    "kattegat z4",
+    "kattegat z5",
+    "messinansalmi z8"
+   ]
+  }
+ },
+ "nimet": [
+  {
+   "id": "valimeri",
+   "teksti": "VÄLIMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 13.94718,
+     "lat": 38.88228,
+     "korkeus_px": 14,
+     "korkeus_m": 44430,
+     "leveys_m": 303768
+    },
+    "5": {
+     "lon": 14.5488,
+     "lat": 38.74432,
+     "korkeus_px": 18,
+     "korkeus_m": 28637,
+     "leveys_m": 196137
+    },
+    "6": {
+     "lon": 15.9024,
+     "lat": 37.64443,
+     "korkeus_px": 24,
+     "korkeus_m": 19181,
+     "leveys_m": 131785
+    },
+    "7": {
+     "lon": 14.89346,
+     "lat": 38.50372,
+     "korkeus_px": 34,
+     "korkeus_m": 13587,
+     "leveys_m": 93353
+    },
+    "8": {
+     "lon": 15,
+     "lat": 38.39751,
+     "korkeus_px": 46,
+     "korkeus_m": 9191,
+     "leveys_m": 63141
+    }
+   }
+  },
+  {
+   "id": "itameri",
+   "teksti": "ITÄMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 19,
+     "lat": 58.3235,
+     "korkeus_px": 14,
+     "korkeus_m": 35785,
+     "leveys_m": 179837
+    },
+    "5": {
+     "lon": 19,
+     "lat": 58.2272,
+     "korkeus_px": 18,
+     "korkeus_m": 22928,
+     "leveys_m": 114875
+    },
+    "6": {
+     "lon": 19.1308,
+     "lat": 58.13862,
+     "korkeus_px": 24,
+     "korkeus_m": 15336,
+     "leveys_m": 77073
+    },
+    "7": {
+     "lon": 18.99995,
+     "lat": 58.09818,
+     "korkeus_px": 34,
+     "korkeus_m": 10863,
+     "leveys_m": 54593
+    },
+    "8": {
+     "lon": 18.93732,
+     "lat": 58.06645,
+     "korkeus_px": 46,
+     "korkeus_m": 7349,
+     "leveys_m": 36934
+    }
+   }
+  },
+  {
+   "id": "pohjanmeri",
+   "teksti": "POHJANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 3,
+     "lat": 55.99999,
+     "korkeus_px": 14,
+     "korkeus_m": 36820,
+     "leveys_m": 275082
+    },
+    "5": {
+     "lon": 3,
+     "lat": 56,
+     "korkeus_px": 18,
+     "korkeus_m": 23670,
+     "leveys_m": 176838
+    },
+    "6": {
+     "lon": 3,
+     "lat": 55.99999,
+     "korkeus_px": 24,
+     "korkeus_m": 15780,
+     "leveys_m": 117892
+    },
+    "7": {
+     "lon": 3,
+     "lat": 55.99999,
+     "korkeus_px": 34,
+     "korkeus_m": 11178,
+     "leveys_m": 83507
+    },
+    "8": {
+     "lon": 3.00005,
+     "lat": 56.00002,
+     "korkeus_px": 46,
+     "korkeus_m": 7561,
+     "leveys_m": 56490
+    }
+   }
+  },
+  {
+   "id": "norjanmeri",
+   "teksti": "NORJANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 2,
+     "lat": 68.00001,
+     "korkeus_px": 14,
+     "korkeus_m": 30207,
+     "leveys_m": 184279
+    },
+    "5": {
+     "lon": 2,
+     "lat": 67.99999,
+     "korkeus_px": 18,
+     "korkeus_m": 19419,
+     "leveys_m": 118465
+    },
+    "6": {
+     "lon": 2,
+     "lat": 68.00003,
+     "korkeus_px": 24,
+     "korkeus_m": 12946,
+     "leveys_m": 78977
+    },
+    "7": {
+     "lon": 2,
+     "lat": 67.99999,
+     "korkeus_px": 34,
+     "korkeus_m": 9170,
+     "leveys_m": 55942
+    },
+    "8": {
+     "lon": 2,
+     "lat": 68.00002,
+     "korkeus_px": 46,
+     "korkeus_m": 6203,
+     "leveys_m": 37847
+    }
+   }
+  },
+  {
+   "id": "barentsinmeri",
+   "teksti": "BARENTSINMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 40,
+     "lat": 73.99998,
+     "korkeus_px": 14,
+     "korkeus_m": 26570,
+     "leveys_m": 177645
+    },
+    "5": {
+     "lon": 40,
+     "lat": 73.99998,
+     "korkeus_px": 18,
+     "korkeus_m": 17081,
+     "leveys_m": 114200
+    },
+    "6": {
+     "lon": 40,
+     "lat": 73.99998,
+     "korkeus_px": 24,
+     "korkeus_m": 11387,
+     "leveys_m": 76134
+    },
+    "7": {
+     "lon": 40.00005,
+     "lat": 73.99999,
+     "korkeus_px": 34,
+     "korkeus_m": 8066,
+     "leveys_m": 53928
+    },
+    "8": {
+     "lon": 40,
+     "lat": 73.99997,
+     "korkeus_px": 46,
+     "korkeus_m": 5456,
+     "leveys_m": 36479
+    }
+   }
+  },
+  {
+   "id": "vienanmeri",
+   "teksti": "VIENANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 37.5576,
+     "lat": 65.68343,
+     "korkeus_px": 14,
+     "korkeus_m": 31661,
+     "leveys_m": 203999
+    },
+    "5": {
+     "lon": 38,
+     "lat": 65.49999,
+     "korkeus_px": 18,
+     "korkeus_m": 20354,
+     "leveys_m": 131142
+    },
+    "6": {
+     "lon": 38,
+     "lat": 65.49999,
+     "korkeus_px": 24,
+     "korkeus_m": 13569,
+     "leveys_m": 87428
+    },
+    "7": {
+     "lon": 38,
+     "lat": 65.49999,
+     "korkeus_px": 34,
+     "korkeus_m": 9611,
+     "leveys_m": 61928
+    },
+    "8": {
+     "lon": 37.99995,
+     "lat": 65.50002,
+     "korkeus_px": 46,
+     "korkeus_m": 6502,
+     "leveys_m": 41893
+    }
+   }
+  },
+  {
+   "id": "mustameri",
+   "teksti": "MUSTAMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 34,
+     "lat": 43.50001,
+     "korkeus_px": 14,
+     "korkeus_m": 42610,
+     "leveys_m": 319938
+    },
+    "5": {
+     "lon": 34,
+     "lat": 43.49999,
+     "korkeus_px": 18,
+     "korkeus_m": 27392,
+     "leveys_m": 205678
+    },
+    "6": {
+     "lon": 34,
+     "lat": 43.49998,
+     "korkeus_px": 24,
+     "korkeus_m": 18262,
+     "leveys_m": 137119
+    },
+    "7": {
+     "lon": 34,
+     "lat": 43.49999,
+     "korkeus_px": 34,
+     "korkeus_m": 12935,
+     "leveys_m": 97128
+    },
+    "8": {
+     "lon": 34,
+     "lat": 43.49997,
+     "korkeus_px": 46,
+     "korkeus_m": 8750,
+     "leveys_m": 65704
+    }
+   }
+  },
+  {
+   "id": "asovanmeri",
+   "teksti": "ASOVANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 36.7156,
+     "lat": 46.17803,
+     "korkeus_px": 18,
+     "korkeus_m": 26497,
+     "leveys_m": 216631
+    },
+    "6": {
+     "lon": 37,
+     "lat": 46.545,
+     "korkeus_px": 24,
+     "korkeus_m": 17681,
+     "leveys_m": 144655
+    },
+    "7": {
+     "lon": 37,
+     "lat": 46.49999,
+     "korkeus_px": 34,
+     "korkeus_m": 12547,
+     "leveys_m": 102795
+    },
+    "8": {
+     "lon": 37.00005,
+     "lat": 46.49997,
+     "korkeus_px": 46,
+     "korkeus_m": 8488,
+     "leveys_m": 69538
+    }
+   }
+  },
+  {
+   "id": "egeanmeri",
+   "teksti": "EGEANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 25.17732,
+     "lat": 36.9988,
+     "korkeus_px": 14,
+     "korkeus_m": 44441,
+     "leveys_m": 343488
+    },
+    "6": {
+     "lon": 25,
+     "lat": 38.89916,
+     "korkeus_px": 24,
+     "korkeus_m": 19102,
+     "leveys_m": 147938
+    },
+    "7": {
+     "lon": 25,
+     "lat": 38.49999,
+     "korkeus_px": 34,
+     "korkeus_m": 13531,
+     "leveys_m": 104792
+    },
+    "8": {
+     "lon": 25,
+     "lat": 38.49997,
+     "korkeus_px": 46,
+     "korkeus_m": 9153,
+     "leveys_m": 70888
+    }
+   }
+  },
+  {
+   "id": "marmaranmeri",
+   "teksti": "MARMARANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 28.32412,
+     "lat": 40.82285,
+     "korkeus_px": 34,
+     "korkeus_m": 13277,
+     "leveys_m": 136618
+    },
+    "8": {
+     "lon": 27.89036,
+     "lat": 40.70002,
+     "korkeus_px": 46,
+     "korkeus_m": 8981,
+     "leveys_m": 92427
+    }
+   }
+  },
+  {
+   "id": "joonianmeri",
+   "teksti": "JOONIANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 19,
+     "lat": 38.00002,
+     "korkeus_px": 14,
+     "korkeus_m": 44757,
+     "leveys_m": 427722
+    },
+    "5": {
+     "lon": 19,
+     "lat": 38.56793,
+     "korkeus_px": 18,
+     "korkeus_m": 28637,
+     "leveys_m": 272818
+    },
+    "6": {
+     "lon": 19,
+     "lat": 38.37893,
+     "korkeus_px": 24,
+     "korkeus_m": 19122,
+     "leveys_m": 182356
+    },
+    "7": {
+     "lon": 19,
+     "lat": 38.26849,
+     "korkeus_px": 34,
+     "korkeus_m": 13557,
+     "leveys_m": 129363
+    },
+    "8": {
+     "lon": 19,
+     "lat": 38.18172,
+     "korkeus_px": 46,
+     "korkeus_m": 9177,
+     "leveys_m": 87615
+    }
+   }
+  },
+  {
+   "id": "tyrrhenanmeri",
+   "teksti": "TYRRHENANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 12.5796,
+     "lat": 40.00004,
+     "korkeus_px": 14,
+     "korkeus_m": 44006,
+     "leveys_m": 493705
+    },
+    "5": {
+     "lon": 12,
+     "lat": 39.43893,
+     "korkeus_px": 18,
+     "korkeus_m": 28427,
+     "leveys_m": 319975
+    },
+    "6": {
+     "lon": 12,
+     "lat": 40.37253,
+     "korkeus_px": 24,
+     "korkeus_m": 18798,
+     "leveys_m": 210429
+    },
+    "7": {
+     "lon": 11.99995,
+     "lat": 40.26404,
+     "korkeus_px": 34,
+     "korkeus_m": 13328,
+     "leveys_m": 149294
+    },
+    "8": {
+     "lon": 12,
+     "lat": 40.17867,
+     "korkeus_px": 46,
+     "korkeus_m": 9023,
+     "leveys_m": 101116
+    }
+   }
+  },
+  {
+   "id": "adrianmeri",
+   "teksti": "ADRIANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 15.7844,
+     "lat": 42.66388,
+     "korkeus_px": 18,
+     "korkeus_m": 27667,
+     "leveys_m": 233327
+    },
+    "6": {
+     "lon": 15.236,
+     "lat": 43.14513,
+     "korkeus_px": 24,
+     "korkeus_m": 18324,
+     "leveys_m": 153824
+    },
+    "7": {
+     "lon": 15.5,
+     "lat": 42.99999,
+     "korkeus_px": 34,
+     "korkeus_m": 12998,
+     "leveys_m": 109217
+    },
+    "8": {
+     "lon": 15.50005,
+     "lat": 42.99997,
+     "korkeus_px": 46,
+     "korkeus_m": 8793,
+     "leveys_m": 73882
+    }
+   }
+  },
+  {
+   "id": "ligurianmeri",
+   "teksti": "LIGURIANMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 6.0307,
+     "lat": 41.41486,
+     "korkeus_px": 14,
+     "korkeus_m": 42825,
+     "leveys_m": 434312
+    },
+    "5": {
+     "lon": 8.7,
+     "lat": 43.12839,
+     "korkeus_px": 18,
+     "korkeus_m": 27491,
+     "leveys_m": 278516
+    },
+    "6": {
+     "lon": 8.7,
+     "lat": 43.21903,
+     "korkeus_px": 24,
+     "korkeus_m": 18311,
+     "leveys_m": 185402
+    },
+    "7": {
+     "lon": 8.7,
+     "lat": 43.27184,
+     "korkeus_px": 34,
+     "korkeus_m": 12964,
+     "leveys_m": 131207
+    },
+    "8": {
+     "lon": 8.7,
+     "lat": 43.40002,
+     "korkeus_px": 46,
+     "korkeus_m": 8759,
+     "leveys_m": 88580
+    }
+   }
+  },
+  {
+   "id": "keltienmeri",
+   "teksti": "KELTIENMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": -8,
+     "lat": 49.99998,
+     "korkeus_px": 14,
+     "korkeus_m": 39751,
+     "leveys_m": 348897
+    },
+    "5": {
+     "lon": -8,
+     "lat": 50.00005,
+     "korkeus_px": 18,
+     "korkeus_m": 25554,
+     "leveys_m": 224288
+    },
+    "6": {
+     "lon": -8,
+     "lat": 49.99999,
+     "korkeus_px": 24,
+     "korkeus_m": 17036,
+     "leveys_m": 149525
+    },
+    "7": {
+     "lon": -8,
+     "lat": 49.99999,
+     "korkeus_px": 34,
+     "korkeus_m": 12067,
+     "leveys_m": 105911
+    },
+    "8": {
+     "lon": -8,
+     "lat": 49.99997,
+     "korkeus_px": 46,
+     "korkeus_m": 8163,
+     "leveys_m": 71646
+    }
+   }
+  },
+  {
+   "id": "irlanninmeri",
+   "teksti": "IRLANNINMERI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "6": {
+     "lon": -4.472,
+     "lat": 53.63609,
+     "korkeus_px": 24,
+     "korkeus_m": 16317,
+     "leveys_m": 151331
+    },
+    "7": {
+     "lon": -5,
+     "lat": 53.59639,
+     "korkeus_px": 34,
+     "korkeus_m": 11558,
+     "leveys_m": 107189
+    },
+    "8": {
+     "lon": -5,
+     "lat": 53.49997,
+     "korkeus_px": 46,
+     "korkeus_m": 7819,
+     "leveys_m": 72517
+    }
+   }
+  },
+  {
+   "id": "biskajanlahti",
+   "teksti": "BISKAJANLAHTI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": -4.5,
+     "lat": 45.49996,
+     "korkeus_px": 14,
+     "korkeus_m": 41767,
+     "leveys_m": 451727
+    },
+    "5": {
+     "lon": -4.5,
+     "lat": 45.49999,
+     "korkeus_px": 18,
+     "korkeus_m": 26850,
+     "leveys_m": 290396
+    },
+    "6": {
+     "lon": -4.5,
+     "lat": 45.49999,
+     "korkeus_px": 24,
+     "korkeus_m": 17900,
+     "leveys_m": 193597
+    },
+    "7": {
+     "lon": -4.50005,
+     "lat": 45.49999,
+     "korkeus_px": 34,
+     "korkeus_m": 12679,
+     "leveys_m": 137131
+    },
+    "8": {
+     "lon": -4.5,
+     "lat": 45.50002,
+     "korkeus_px": 46,
+     "korkeus_m": 8577,
+     "leveys_m": 92761
+    }
+   }
+  },
+  {
+   "id": "lioninlahti",
+   "teksti": "LIONINLAHTI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 5.8247,
+     "lat": 42.45995,
+     "korkeus_px": 14,
+     "korkeus_m": 43036,
+     "leveys_m": 400441
+    },
+    "5": {
+     "lon": 4.6276,
+     "lat": 42.79999,
+     "korkeus_px": 18,
+     "korkeus_m": 27577,
+     "leveys_m": 256021
+    },
+    "6": {
+     "lon": 4.2092,
+     "lat": 42.79998,
+     "korkeus_px": 24,
+     "korkeus_m": 18385,
+     "leveys_m": 170680
+    },
+    "7": {
+     "lon": 4,
+     "lat": 42.79999,
+     "korkeus_px": 34,
+     "korkeus_m": 13023,
+     "leveys_m": 120896
+    },
+    "8": {
+     "lon": 4,
+     "lat": 42.80002,
+     "korkeus_px": 46,
+     "korkeus_m": 8809,
+     "leveys_m": 81783
+    }
+   }
+  },
+  {
+   "id": "pohjanlahti",
+   "teksti": "POHJANLAHTI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 19.6862,
+     "lat": 62.57261,
+     "korkeus_px": 18,
+     "korkeus_m": 21264,
+     "leveys_m": 158411
+    },
+    "6": {
+     "lon": 20,
+     "lat": 62.99999,
+     "korkeus_px": 24,
+     "korkeus_m": 14176,
+     "leveys_m": 105607
+    },
+    "7": {
+     "lon": 20,
+     "lat": 62.99999,
+     "korkeus_px": 34,
+     "korkeus_m": 10041,
+     "leveys_m": 74804
+    },
+    "8": {
+     "lon": 20,
+     "lat": 62.99997,
+     "korkeus_px": 46,
+     "korkeus_m": 6793,
+     "leveys_m": 50603
+    }
+   }
+  },
+  {
+   "id": "suomenlahti",
+   "teksti": "SUOMENLAHTI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 26,
+     "lat": 60.02115,
+     "korkeus_px": 18,
+     "korkeus_m": 22314,
+     "leveys_m": 174354
+    },
+    "6": {
+     "lon": 26,
+     "lat": 59.90522,
+     "korkeus_px": 24,
+     "korkeus_m": 14927,
+     "leveys_m": 117013
+    },
+    "7": {
+     "lon": 26,
+     "lat": 59.79999,
+     "korkeus_px": 34,
+     "korkeus_m": 10573,
+     "leveys_m": 82882
+    },
+    "8": {
+     "lon": 26,
+     "lat": 59.79997,
+     "korkeus_px": 46,
+     "korkeus_m": 7152,
+     "leveys_m": 56068
+    }
+   }
+  },
+  {
+   "id": "riianlahti",
+   "teksti": "RIIANLAHTI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "6": {
+     "lon": 23.3104,
+     "lat": 57.90753,
+     "korkeus_px": 24,
+     "korkeus_m": 15449,
+     "leveys_m": 113277
+    },
+    "7": {
+     "lon": 23.5,
+     "lat": 57.57215,
+     "korkeus_px": 34,
+     "korkeus_m": 10943,
+     "leveys_m": 80238
+    },
+    "8": {
+     "lon": 23.49995,
+     "lat": 57.49997,
+     "korkeus_px": 46,
+     "korkeus_m": 7402,
+     "leveys_m": 54278
+    }
+   }
+  },
+  {
+   "id": "englannin-kanaali",
+   "teksti": "ENGLANNIN KANAALI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": -2.76254,
+     "lat": 49.90112,
+     "korkeus_px": 9.1,
+     "korkeus_m": 26018,
+     "leveys_m": 358632
+    },
+    "5": {
+     "lon": -2,
+     "lat": 50.1164,
+     "korkeus_px": 18,
+     "korkeus_m": 25614,
+     "leveys_m": 351825
+    },
+    "6": {
+     "lon": -2,
+     "lat": 50.01098,
+     "korkeus_px": 24,
+     "korkeus_m": 17076,
+     "leveys_m": 234550
+    },
+    "7": {
+     "lon": -2,
+     "lat": 49.9494,
+     "korkeus_px": 34,
+     "korkeus_m": 12095,
+     "leveys_m": 166137
+    },
+    "8": {
+     "lon": -2,
+     "lat": 49.90105,
+     "korkeus_px": 46,
+     "korkeus_m": 8182,
+     "leveys_m": 112395
+    }
+   }
+  },
+  {
+   "id": "skagerrak",
+   "teksti": "SKAGERRAK",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 7.70668,
+     "lat": 57.79999,
+     "korkeus_px": 14,
+     "korkeus_m": 35890,
+     "leveys_m": 235034
+    },
+    "5": {
+     "lon": 8.5,
+     "lat": 57.8,
+     "korkeus_px": 18,
+     "korkeus_m": 23072,
+     "leveys_m": 151096
+    },
+    "6": {
+     "lon": 8.5,
+     "lat": 57.79999,
+     "korkeus_px": 24,
+     "korkeus_m": 15381,
+     "leveys_m": 100731
+    },
+    "7": {
+     "lon": 8.5,
+     "lat": 57.79999,
+     "korkeus_px": 34,
+     "korkeus_m": 10895,
+     "leveys_m": 71353
+    },
+    "8": {
+     "lon": 8.5,
+     "lat": 57.80002,
+     "korkeus_px": 46,
+     "korkeus_m": 7370,
+     "leveys_m": 48268
+    }
+   }
+  },
+  {
+   "id": "gibraltarinsalmi",
+   "teksti": "GIBRALTARINSALMI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -4.2176,
+     "lat": 36.23897,
+     "korkeus_px": 9,
+     "korkeus_m": 14590,
+     "leveys_m": 206635
+    },
+    "6": {
+     "lon": -4.6784,
+     "lat": 36.14273,
+     "korkeus_px": 12,
+     "korkeus_m": 9734,
+     "leveys_m": 137926
+    },
+    "7": {
+     "lon": -6.2528,
+     "lat": 36.08654,
+     "korkeus_px": 17,
+     "korkeus_m": 6898,
+     "leveys_m": 97768
+    },
+    "8": {
+     "lon": -6.0416,
+     "lat": 35.95002,
+     "korkeus_px": 29.9,
+     "korkeus_m": 6072,
+     "leveys_m": 86127
+    }
+   }
+  },
+  {
+   "id": "bosporinsalmi",
+   "teksti": "BOSPORINSALMI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "4": {
+     "lon": 30.1592,
+     "lat": 42.38986,
+     "korkeus_px": 11.2,
+     "korkeus_m": 34590,
+     "leveys_m": 383406
+    },
+    "5": {
+     "lon": 30.1646,
+     "lat": 42.10028,
+     "korkeus_px": 18,
+     "korkeus_m": 27902,
+     "leveys_m": 310098
+    },
+    "6": {
+     "lon": 29.4968,
+     "lat": 41.65795,
+     "korkeus_px": 24,
+     "korkeus_m": 18645,
+     "leveys_m": 207554
+    },
+    "7": {
+     "lon": 29.176,
+     "lat": 41.62777,
+     "korkeus_px": 34,
+     "korkeus_m": 13214,
+     "leveys_m": 147139
+    },
+    "8": {
+     "lon": 29.11902,
+     "lat": 41.45717,
+     "korkeus_px": 36.8,
+     "korkeus_m": 7154,
+     "leveys_m": 79676
+    }
+   }
+  },
+  {
+   "id": "dardanellit",
+   "teksti": "DARDANELLIT",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    5
+   ],
+   "pallotasot": [
+    6
+   ],
+   "paikat": {
+    "5": {
+     "lon": 25.4586,
+     "lat": 40.51968,
+     "korkeus_px": 9,
+     "korkeus_m": 14051,
+     "leveys_m": 132154
+    }
+   }
+  },
+  {
+   "id": "juutinrauma",
+   "teksti": "JUUTINRAUMA",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    7
+   ],
+   "pallotasot": [
+    8
+   ],
+   "paikat": {
+    "7": {
+     "lon": 12.84818,
+     "lat": 55.22566,
+     "korkeus_px": 27.2,
+     "korkeus_m": 9006,
+     "leveys_m": 74703
+    }
+   }
+  },
+  {
+   "id": "kattegat",
+   "teksti": "KATTEGAT",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "6": {
+     "lon": 11.5,
+     "lat": 57.00004,
+     "korkeus_px": 24,
+     "korkeus_m": 15560,
+     "leveys_m": 91084
+    },
+    "7": {
+     "lon": 11.5,
+     "lat": 57.00004,
+     "korkeus_px": 34,
+     "korkeus_m": 11022,
+     "leveys_m": 64522
+    },
+    "8": {
+     "lon": 11.5,
+     "lat": 56.99997,
+     "korkeus_px": 46,
+     "korkeus_m": 7456,
+     "leveys_m": 43640
+    }
+   }
+  },
+  {
+   "id": "messinansalmi",
+   "teksti": "MESSINANSALMI",
+   "luokka": "meri",
+   "tyyli": "meri",
+   "iso": null,
+   "kulma": 0,
+   "tasot": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "pallotasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "paikat": {
+    "4": {
+     "lon": 15.6,
+     "lat": 36.39076,
+     "korkeus_px": 14,
+     "korkeus_m": 45007,
+     "leveys_m": 512585
+    },
+    "5": {
+     "lon": 15.2274,
+     "lat": 36.75214,
+     "korkeus_px": 18,
+     "korkeus_m": 28925,
+     "leveys_m": 329379
+    },
+    "6": {
+     "lon": 14.8548,
+     "lat": 38.58403,
+     "korkeus_px": 19.2,
+     "korkeus_m": 15296,
+     "leveys_m": 173196
+    },
+    "7": {
+     "lon": 15.7759,
+     "lat": 37.78523,
+     "korkeus_px": 17,
+     "korkeus_m": 6783,
+     "leveys_m": 76876
+    }
+   }
+  },
+  {
+   "id": "bretagne",
+   "teksti": "BRETAGNE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -3,
+     "lat": 48.19999,
+     "korkeus_px": 13,
+     "korkeus_m": 18839,
+     "leveys_m": 120763
+    },
+    "6": {
+     "lon": -3,
+     "lat": 48.20002,
+     "korkeus_px": 17,
+     "korkeus_m": 12318,
+     "leveys_m": 78962
+    },
+    "7": {
+     "lon": -3,
+     "lat": 48.20001,
+     "korkeus_px": 24,
+     "korkeus_m": 8695,
+     "leveys_m": 55735
+    },
+    "8": {
+     "lon": -3,
+     "lat": 48.2,
+     "korkeus_px": 32,
+     "korkeus_m": 5797,
+     "leveys_m": 37161
+    }
+   }
+  },
+  {
+   "id": "normandia",
+   "teksti": "NORMANDIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 0.5,
+     "lat": 49.09999,
+     "korkeus_px": 13,
+     "korkeus_m": 18649,
+     "leveys_m": 134076
+    },
+    "6": {
+     "lon": 0.5,
+     "lat": 49.10002,
+     "korkeus_px": 17,
+     "korkeus_m": 12194,
+     "leveys_m": 87670
+    },
+    "7": {
+     "lon": 0.5,
+     "lat": 49.10001,
+     "korkeus_px": 24,
+     "korkeus_m": 8607,
+     "leveys_m": 61883
+    },
+    "8": {
+     "lon": 0.5,
+     "lat": 49.1,
+     "korkeus_px": 32,
+     "korkeus_m": 5738,
+     "leveys_m": 41251
+    }
+   }
+  },
+  {
+   "id": "picardie",
+   "teksti": "PICARDIE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 2.6,
+     "lat": 49.79999,
+     "korkeus_px": 13,
+     "korkeus_m": 18499,
+     "leveys_m": 116945
+    },
+    "6": {
+     "lon": 2.6,
+     "lat": 49.80002,
+     "korkeus_px": 17,
+     "korkeus_m": 12095,
+     "leveys_m": 76466
+    },
+    "7": {
+     "lon": 2.6,
+     "lat": 49.80001,
+     "korkeus_px": 24,
+     "korkeus_m": 8538,
+     "leveys_m": 53972
+    },
+    "8": {
+     "lon": 2.6,
+     "lat": 49.8,
+     "korkeus_px": 32,
+     "korkeus_m": 5692,
+     "leveys_m": 35986
+    }
+   }
+  },
+  {
+   "id": "champagne",
+   "teksti": "CHAMPAGNE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 4.5,
+     "lat": 48.89999,
+     "korkeus_px": 13,
+     "korkeus_m": 18691,
+     "leveys_m": 134615
+    },
+    "6": {
+     "lon": 4.5,
+     "lat": 48.89997,
+     "korkeus_px": 17,
+     "korkeus_m": 12221,
+     "leveys_m": 88023
+    },
+    "7": {
+     "lon": 4.5,
+     "lat": 48.90001,
+     "korkeus_px": 24,
+     "korkeus_m": 8627,
+     "leveys_m": 62132
+    },
+    "8": {
+     "lon": 4.5,
+     "lat": 48.9,
+     "korkeus_px": 32,
+     "korkeus_m": 5751,
+     "leveys_m": 41417
+    }
+   }
+  },
+  {
+   "id": "lorraine",
+   "teksti": "LORRAINE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 6,
+     "lat": 49.08469,
+     "korkeus_px": 13,
+     "korkeus_m": 18652,
+     "leveys_m": 118663
+    },
+    "6": {
+     "lon": 6,
+     "lat": 48.89997,
+     "korkeus_px": 17,
+     "korkeus_m": 12221,
+     "leveys_m": 77877
+    },
+    "7": {
+     "lon": 6,
+     "lat": 48.90001,
+     "korkeus_px": 24,
+     "korkeus_m": 8627,
+     "leveys_m": 54969
+    },
+    "8": {
+     "lon": 6,
+     "lat": 48.9,
+     "korkeus_px": 32,
+     "korkeus_m": 5751,
+     "leveys_m": 36651
+    }
+   }
+  },
+  {
+   "id": "burgundi",
+   "teksti": "BURGUNDI",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 4.6,
+     "lat": 47.38824,
+     "korkeus_px": 13,
+     "korkeus_m": 19008,
+     "leveys_m": 122665
+    },
+    "6": {
+     "lon": 4.6,
+     "lat": 47.20002,
+     "korkeus_px": 17,
+     "korkeus_m": 12454,
+     "leveys_m": 80492
+    },
+    "7": {
+     "lon": 4.6,
+     "lat": 47.20001,
+     "korkeus_px": 24,
+     "korkeus_m": 8791,
+     "leveys_m": 56814
+    },
+    "8": {
+     "lon": 4.6,
+     "lat": 47.19995,
+     "korkeus_px": 32,
+     "korkeus_m": 5861,
+     "leveys_m": 37881
+    }
+   }
+  },
+  {
+   "id": "poitou",
+   "teksti": "POITOU",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -0.5,
+     "lat": 46.60004,
+     "korkeus_px": 13,
+     "korkeus_m": 19170,
+     "leveys_m": 92032
+    },
+    "6": {
+     "lon": -0.5,
+     "lat": 46.59997,
+     "korkeus_px": 17,
+     "korkeus_m": 12534,
+     "leveys_m": 60173
+    },
+    "7": {
+     "lon": -0.5,
+     "lat": 46.60001,
+     "korkeus_px": 24,
+     "korkeus_m": 8848,
+     "leveys_m": 42479
+    },
+    "8": {
+     "lon": -0.5,
+     "lat": 46.6,
+     "korkeus_px": 32,
+     "korkeus_m": 5898,
+     "leveys_m": 28314
+    }
+   }
+  },
+  {
+   "id": "auvergne",
+   "teksti": "AUVERGNE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 3,
+     "lat": 45.50004,
+     "korkeus_px": 13,
+     "korkeus_m": 19392,
+     "leveys_m": 126992
+    },
+    "6": {
+     "lon": 3,
+     "lat": 45.50002,
+     "korkeus_px": 17,
+     "korkeus_m": 12679,
+     "leveys_m": 83035
+    },
+    "7": {
+     "lon": 3,
+     "lat": 45.49996,
+     "korkeus_px": 24,
+     "korkeus_m": 8950,
+     "leveys_m": 58609
+    },
+    "8": {
+     "lon": 3,
+     "lat": 45.5,
+     "korkeus_px": 32,
+     "korkeus_m": 5967,
+     "leveys_m": 39078
+    }
+   }
+  },
+  {
+   "id": "gascogne",
+   "teksti": "GASCOGNE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 0.2,
+     "lat": 43.69999,
+     "korkeus_px": 13,
+     "korkeus_m": 19745,
+     "leveys_m": 130988
+    },
+    "6": {
+     "lon": 0.2,
+     "lat": 43.69997,
+     "korkeus_px": 17,
+     "korkeus_m": 12910,
+     "leveys_m": 85648
+    },
+    "7": {
+     "lon": 0.2,
+     "lat": 43.70001,
+     "korkeus_px": 24,
+     "korkeus_m": 9113,
+     "leveys_m": 60454
+    },
+    "8": {
+     "lon": 0.2,
+     "lat": 43.7,
+     "korkeus_px": 32,
+     "korkeus_m": 6075,
+     "leveys_m": 40308
+    }
+   }
+  },
+  {
+   "id": "languedoc",
+   "teksti": "LANGUEDOC",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 2.6,
+     "lat": 43.89514,
+     "korkeus_px": 13,
+     "korkeus_m": 19707,
+     "leveys_m": 147564
+    },
+    "6": {
+     "lon": 2.6,
+     "lat": 43.82762,
+     "korkeus_px": 17,
+     "korkeus_m": 12894,
+     "leveys_m": 96600
+    },
+    "7": {
+     "lon": 2.6,
+     "lat": 43.70001,
+     "korkeus_px": 24,
+     "korkeus_m": 9113,
+     "leveys_m": 68332
+    },
+    "8": {
+     "lon": 2.6,
+     "lat": 43.7,
+     "korkeus_px": 32,
+     "korkeus_m": 6075,
+     "leveys_m": 45549
+    }
+   }
+  },
+  {
+   "id": "provence",
+   "teksti": "PROVENCE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 6.1,
+     "lat": 43.30859,
+     "korkeus_px": 13,
+     "korkeus_m": 19820,
+     "leveys_m": 131840
+    },
+    "6": {
+     "lon": 6.1,
+     "lat": 43.95512,
+     "korkeus_px": 17,
+     "korkeus_m": 12878,
+     "leveys_m": 85283
+    },
+    "7": {
+     "lon": 6.232,
+     "lat": 43.77206,
+     "korkeus_px": 24,
+     "korkeus_m": 9107,
+     "leveys_m": 60381
+    },
+    "8": {
+     "lon": 6.1,
+     "lat": 43.7,
+     "korkeus_px": 32,
+     "korkeus_m": 6075,
+     "leveys_m": 40308
+    }
+   }
+  },
+  {
+   "id": "dauphine",
+   "teksti": "DAUPHINÉ",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 5.7,
+     "lat": 44.99999,
+     "korkeus_px": 13,
+     "korkeus_m": 19491,
+     "leveys_m": 128115
+    },
+    "6": {
+     "lon": 5.7,
+     "lat": 45.00002,
+     "korkeus_px": 17,
+     "korkeus_m": 12744,
+     "leveys_m": 83769
+    },
+    "7": {
+     "lon": 5.7,
+     "lat": 44.99996,
+     "korkeus_px": 24,
+     "korkeus_m": 8996,
+     "leveys_m": 59127
+    },
+    "8": {
+     "lon": 5.7,
+     "lat": 45,
+     "korkeus_px": 32,
+     "korkeus_m": 5997,
+     "leveys_m": 39423
+    }
+   }
+  },
+  {
+   "id": "korsika",
+   "teksti": "KORSIKA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 9.1,
+     "lat": 42.19999,
+     "korkeus_px": 13,
+     "korkeus_m": 20030,
+     "leveys_m": 116724
+    },
+    "6": {
+     "lon": 9.10005,
+     "lat": 42.20002,
+     "korkeus_px": 17,
+     "korkeus_m": 13096,
+     "leveys_m": 76319
+    },
+    "7": {
+     "lon": 9.1,
+     "lat": 42.20001,
+     "korkeus_px": 24,
+     "korkeus_m": 9244,
+     "leveys_m": 53872
+    },
+    "8": {
+     "lon": 9.1,
+     "lat": 42.2,
+     "korkeus_px": 32,
+     "korkeus_m": 6163,
+     "leveys_m": 35915
+    }
+   }
+  },
+  {
+   "id": "brandenburg",
+   "teksti": "BRANDENBURG",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 13.5,
+     "lat": 52.87649,
+     "korkeus_px": 13,
+     "korkeus_m": 17819,
+     "leveys_m": 152098
+    },
+    "6": {
+     "lon": 13.5,
+     "lat": 52.70002,
+     "korkeus_px": 17,
+     "korkeus_m": 11677,
+     "leveys_m": 99848
+    },
+    "7": {
+     "lon": 13.5,
+     "lat": 52.70001,
+     "korkeus_px": 24,
+     "korkeus_m": 8243,
+     "leveys_m": 70483
+    },
+    "8": {
+     "lon": 13.5,
+     "lat": 52.7,
+     "korkeus_px": 32,
+     "korkeus_m": 5495,
+     "leveys_m": 46993
+    }
+   }
+  },
+  {
+   "id": "hannover",
+   "teksti": "HANNOVER",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 9.7,
+     "lat": 52.60004,
+     "korkeus_px": 13,
+     "korkeus_m": 17882,
+     "leveys_m": 110045
+    },
+    "6": {
+     "lon": 9.7,
+     "lat": 52.60002,
+     "korkeus_px": 17,
+     "korkeus_m": 11692,
+     "leveys_m": 71954
+    },
+    "7": {
+     "lon": 9.7,
+     "lat": 52.60001,
+     "korkeus_px": 24,
+     "korkeus_m": 8253,
+     "leveys_m": 50788
+    },
+    "8": {
+     "lon": 9.7,
+     "lat": 52.6,
+     "korkeus_px": 32,
+     "korkeus_m": 5502,
+     "leveys_m": 33863
+    }
+   }
+  },
+  {
+   "id": "westfalen",
+   "teksti": "WESTFALEN",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 8,
+     "lat": 51.69999,
+     "korkeus_px": 13,
+     "korkeus_m": 18083,
+     "leveys_m": 126916
+    },
+    "6": {
+     "lon": 8,
+     "lat": 51.69997,
+     "korkeus_px": 17,
+     "korkeus_m": 11824,
+     "leveys_m": 82989
+    },
+    "7": {
+     "lon": 8,
+     "lat": 51.70001,
+     "korkeus_px": 24,
+     "korkeus_m": 8346,
+     "leveys_m": 58579
+    },
+    "8": {
+     "lon": 8,
+     "lat": 51.7,
+     "korkeus_px": 32,
+     "korkeus_m": 5564,
+     "leveys_m": 39048
+    }
+   }
+  },
+  {
+   "id": "rheinland",
+   "teksti": "RHEINLAND",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 7,
+     "lat": 50.51874,
+     "korkeus_px": 13,
+     "korkeus_m": 18343,
+     "leveys_m": 130202
+    },
+    "6": {
+     "lon": 6.626,
+     "lat": 50.51037,
+     "korkeus_px": 17,
+     "korkeus_m": 11995,
+     "leveys_m": 85153
+    },
+    "7": {
+     "lon": 6.736,
+     "lat": 50.56616,
+     "korkeus_px": 24,
+     "korkeus_m": 8461,
+     "leveys_m": 60035
+    },
+    "8": {
+     "lon": 6.824,
+     "lat": 50.61085,
+     "korkeus_px": 32,
+     "korkeus_m": 5638,
+     "leveys_m": 39981
+    }
+   }
+  },
+  {
+   "id": "schleswig-holstein",
+   "teksti": "SCHLESWIG-HOLSTEIN",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 9.7,
+     "lat": 54.39999,
+     "korkeus_px": 13,
+     "korkeus_m": 17470,
+     "leveys_m": 242903
+    },
+    "6": {
+     "lon": 9.7,
+     "lat": 54.39997,
+     "korkeus_px": 17,
+     "korkeus_m": 11423,
+     "leveys_m": 158820
+    },
+    "7": {
+     "lon": 9.7,
+     "lat": 54.39996,
+     "korkeus_px": 24,
+     "korkeus_m": 8063,
+     "leveys_m": 112111
+    },
+    "8": {
+     "lon": 9.7,
+     "lat": 54.4,
+     "korkeus_px": 32,
+     "korkeus_m": 5375,
+     "leveys_m": 74736
+    }
+   }
+  },
+  {
+   "id": "baijeri",
+   "teksti": "BAIJERI",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 11.5,
+     "lat": 48.99999,
+     "korkeus_px": 13,
+     "korkeus_m": 18670,
+     "leveys_m": 103371
+    },
+    "6": {
+     "lon": 11.49995,
+     "lat": 49.00002,
+     "korkeus_px": 17,
+     "korkeus_m": 12207,
+     "leveys_m": 67589
+    },
+    "7": {
+     "lon": 11.5,
+     "lat": 48.99996,
+     "korkeus_px": 24,
+     "korkeus_m": 8617,
+     "leveys_m": 47710
+    },
+    "8": {
+     "lon": 11.5,
+     "lat": 49,
+     "korkeus_px": 32,
+     "korkeus_m": 5745,
+     "leveys_m": 31806
+    }
+   }
+  },
+  {
+   "id": "w-rttemberg",
+   "teksti": "WÜRTTEMBERG",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 9.3,
+     "lat": 48.59999,
+     "korkeus_px": 13,
+     "korkeus_m": 18755,
+     "leveys_m": 166659
+    },
+    "6": {
+     "lon": 9.3,
+     "lat": 48.59997,
+     "korkeus_px": 17,
+     "korkeus_m": 12263,
+     "leveys_m": 108964
+    },
+    "7": {
+     "lon": 9.3,
+     "lat": 48.60001,
+     "korkeus_px": 24,
+     "korkeus_m": 8656,
+     "leveys_m": 76917
+    },
+    "8": {
+     "lon": 9.3,
+     "lat": 48.59995,
+     "korkeus_px": 32,
+     "korkeus_m": 5771,
+     "leveys_m": 51283
+    }
+   }
+  },
+  {
+   "id": "baden",
+   "teksti": "BADEN",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 8.2,
+     "lat": 48.31404,
+     "korkeus_px": 13,
+     "korkeus_m": 18815,
+     "leveys_m": 73388
+    },
+    "6": {
+     "lon": 8.2,
+     "lat": 48.50002,
+     "korkeus_px": 17,
+     "korkeus_m": 12277,
+     "leveys_m": 47804
+    },
+    "7": {
+     "lon": 8.2,
+     "lat": 48.50001,
+     "korkeus_px": 24,
+     "korkeus_m": 8666,
+     "leveys_m": 33745
+    },
+    "8": {
+     "lon": 8.2,
+     "lat": 48.5,
+     "korkeus_px": 32,
+     "korkeus_m": 5777,
+     "leveys_m": 22502
+    }
+   }
+  },
+  {
+   "id": "piemonte",
+   "teksti": "PIEMONTE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 7.9,
+     "lat": 44.80699,
+     "korkeus_px": 13,
+     "korkeus_m": 19529,
+     "leveys_m": 128545
+    },
+    "6": {
+     "lon": 8.274,
+     "lat": 44.79807,
+     "korkeus_px": 17,
+     "korkeus_m": 12770,
+     "leveys_m": 84064
+    },
+    "7": {
+     "lon": 8.164,
+     "lat": 44.85751,
+     "korkeus_px": 24,
+     "korkeus_m": 9009,
+     "leveys_m": 59274
+    },
+    "8": {
+     "lon": 7.988,
+     "lat": 44.9525,
+     "korkeus_px": 32,
+     "korkeus_m": 6000,
+     "leveys_m": 39456
+    }
+   }
+  },
+  {
+   "id": "lombardia",
+   "teksti": "LOMBARDIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 9.7,
+     "lat": 45.69164,
+     "korkeus_px": 13,
+     "korkeus_m": 19353,
+     "leveys_m": 143041
+    },
+    "6": {
+     "lon": 9.7,
+     "lat": 45.62537,
+     "korkeus_px": 17,
+     "korkeus_m": 12663,
+     "leveys_m": 93643
+    },
+    "7": {
+     "lon": 9.7,
+     "lat": 45.58851,
+     "korkeus_px": 24,
+     "korkeus_m": 8942,
+     "leveys_m": 66143
+    },
+    "8": {
+     "lon": 9.7,
+     "lat": 45.5,
+     "korkeus_px": 32,
+     "korkeus_m": 5967,
+     "leveys_m": 44159
+    }
+   }
+  },
+  {
+   "id": "veneto",
+   "teksti": "VENETO",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 11.614,
+     "lat": 45.65334,
+     "korkeus_px": 13,
+     "korkeus_m": 19361,
+     "leveys_m": 93628
+    },
+    "6": {
+     "lon": 11.9,
+     "lat": 45.62537,
+     "korkeus_px": 17,
+     "korkeus_m": 12663,
+     "leveys_m": 61247
+    },
+    "7": {
+     "lon": 11.9,
+     "lat": 45.49996,
+     "korkeus_px": 24,
+     "korkeus_m": 8950,
+     "leveys_m": 43333
+    },
+    "8": {
+     "lon": 11.9,
+     "lat": 45.5,
+     "korkeus_px": 32,
+     "korkeus_m": 5967,
+     "leveys_m": 28884
+    }
+   }
+  },
+  {
+   "id": "toscana",
+   "teksti": "TOSCANA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 11.386,
+     "lat": 43.14299,
+     "korkeus_px": 13,
+     "korkeus_m": 19852,
+     "leveys_m": 114966
+    },
+    "6": {
+     "lon": 11.10005,
+     "lat": 43.30002,
+     "korkeus_px": 17,
+     "korkeus_m": 12960,
+     "leveys_m": 74977
+    },
+    "7": {
+     "lon": 11.1,
+     "lat": 43.30001,
+     "korkeus_px": 24,
+     "korkeus_m": 9148,
+     "leveys_m": 52925
+    },
+    "8": {
+     "lon": 11.1,
+     "lat": 43.3,
+     "korkeus_px": 32,
+     "korkeus_m": 6099,
+     "leveys_m": 35283
+    }
+   }
+  },
+  {
+   "id": "lazio",
+   "teksti": "LAZIO",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 12.8,
+     "lat": 42.29664,
+     "korkeus_px": 13,
+     "korkeus_m": 20012,
+     "leveys_m": 81623
+    },
+    "6": {
+     "lon": 12.8,
+     "lat": 42.15952,
+     "korkeus_px": 17,
+     "korkeus_m": 13101,
+     "leveys_m": 53478
+    },
+    "7": {
+     "lon": 12.8,
+     "lat": 41.99166,
+     "korkeus_px": 24,
+     "korkeus_m": 9262,
+     "leveys_m": 37851
+    },
+    "8": {
+     "lon": 12.8,
+     "lat": 41.9611,
+     "korkeus_px": 32,
+     "korkeus_m": 6177,
+     "leveys_m": 25252
+    }
+   }
+  },
+  {
+   "id": "campania",
+   "teksti": "CAMPANIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 14.8,
+     "lat": 40.29754,
+     "korkeus_px": 13,
+     "korkeus_m": 20378,
+     "leveys_m": 138186
+    },
+    "6": {
+     "lon": 15.174,
+     "lat": 40.48967,
+     "korkeus_px": 17,
+     "korkeus_m": 13302,
+     "leveys_m": 90097
+    },
+    "7": {
+     "lon": 14.8,
+     "lat": 40.79271,
+     "korkeus_px": 24,
+     "korkeus_m": 9364,
+     "leveys_m": 63306
+    },
+    "8": {
+     "lon": 14.8,
+     "lat": 40.7618,
+     "korkeus_px": 32,
+     "korkeus_m": 6244,
+     "leveys_m": 42229
+    }
+   }
+  },
+  {
+   "id": "apulia",
+   "teksti": "APULIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 16.6,
+     "lat": 40.99999,
+     "korkeus_px": 13,
+     "korkeus_m": 20251,
+     "leveys_m": 101090
+    },
+    "6": {
+     "lon": 16.6,
+     "lat": 40.99997,
+     "korkeus_px": 17,
+     "korkeus_m": 13241,
+     "leveys_m": 66095
+    },
+    "7": {
+     "lon": 16.6,
+     "lat": 41.00001,
+     "korkeus_px": 24,
+     "korkeus_m": 9347,
+     "leveys_m": 46660
+    },
+    "8": {
+     "lon": 16.6,
+     "lat": 41,
+     "korkeus_px": 32,
+     "korkeus_m": 6231,
+     "leveys_m": 31101
+    }
+   }
+  },
+  {
+   "id": "sisilia",
+   "teksti": "SISILIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 14,
+     "lat": 37.80604,
+     "korkeus_px": 13,
+     "korkeus_m": 20813,
+     "leveys_m": 124489
+    },
+    "6": {
+     "lon": 14.00005,
+     "lat": 37.60002,
+     "korkeus_px": 17,
+     "korkeus_m": 13631,
+     "leveys_m": 81623
+    },
+    "7": {
+     "lon": 14,
+     "lat": 37.60001,
+     "korkeus_px": 24,
+     "korkeus_m": 9622,
+     "leveys_m": 57617
+    },
+    "8": {
+     "lon": 14,
+     "lat": 37.6,
+     "korkeus_px": 32,
+     "korkeus_m": 6415,
+     "leveys_m": 38411
+    }
+   }
+  },
+  {
+   "id": "sardinia",
+   "teksti": "SARDINIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 9.05,
+     "lat": 40.30179,
+     "korkeus_px": 13,
+     "korkeus_m": 20377,
+     "leveys_m": 138178
+    },
+    "6": {
+     "lon": 9.05,
+     "lat": 40.23197,
+     "korkeus_px": 17,
+     "korkeus_m": 13332,
+     "leveys_m": 90442
+    },
+    "7": {
+     "lon": 9.05,
+     "lat": 40.10001,
+     "korkeus_px": 24,
+     "korkeus_m": 9422,
+     "leveys_m": 63962
+    },
+    "8": {
+     "lon": 9.05,
+     "lat": 40.1,
+     "korkeus_px": 32,
+     "korkeus_m": 6281,
+     "leveys_m": 42647
+    }
+   }
+  },
+  {
+   "id": "galicia",
+   "teksti": "GALICIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -8,
+     "lat": 42.79999,
+     "korkeus_px": 13,
+     "korkeus_m": 19917,
+     "leveys_m": 115609
+    },
+    "6": {
+     "lon": -8.00005,
+     "lat": 42.79997,
+     "korkeus_px": 17,
+     "korkeus_m": 13023,
+     "leveys_m": 75591
+    },
+    "7": {
+     "lon": -8,
+     "lat": 42.80001,
+     "korkeus_px": 24,
+     "korkeus_m": 9192,
+     "leveys_m": 53358
+    },
+    "8": {
+     "lon": -8,
+     "lat": 42.8,
+     "korkeus_px": 32,
+     "korkeus_m": 6128,
+     "leveys_m": 35572
+    }
+   }
+  },
+  {
+   "id": "aragonia",
+   "teksti": "ARAGONIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -0.5,
+     "lat": 41.49999,
+     "korkeus_px": 13,
+     "korkeus_m": 20160,
+     "leveys_m": 135697
+    },
+    "6": {
+     "lon": -0.126,
+     "lat": 41.70847,
+     "korkeus_px": 17,
+     "korkeus_m": 13156,
+     "leveys_m": 88441
+    },
+    "7": {
+     "lon": -0.236,
+     "lat": 41.64716,
+     "korkeus_px": 24,
+     "korkeus_m": 9292,
+     "leveys_m": 62484
+    },
+    "8": {
+     "lon": -0.324,
+     "lat": 41.59815,
+     "korkeus_px": 32,
+     "korkeus_m": 6197,
+     "leveys_m": 41693
+    }
+   }
+  },
+  {
+   "id": "katalonia",
+   "teksti": "KATALONIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": 1.5,
+     "lat": 41.99869,
+     "korkeus_px": 13,
+     "korkeus_m": 20067,
+     "leveys_m": 152182
+    },
+    "6": {
+     "lon": 1.5,
+     "lat": 41.80002,
+     "korkeus_px": 17,
+     "korkeus_m": 13145,
+     "leveys_m": 99820
+    },
+    "7": {
+     "lon": 1.5,
+     "lat": 41.80001,
+     "korkeus_px": 24,
+     "korkeus_m": 9279,
+     "leveys_m": 70459
+    },
+    "8": {
+     "lon": 1.5,
+     "lat": 41.8,
+     "korkeus_px": 32,
+     "korkeus_m": 6186,
+     "leveys_m": 46967
+    }
+   }
+  },
+  {
+   "id": "valencia",
+   "teksti": "VALENCIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -0.4,
+     "lat": 39.49999,
+     "korkeus_px": 13,
+     "korkeus_m": 20520,
+     "leveys_m": 139804
+    },
+    "6": {
+     "lon": -0.4,
+     "lat": 39.50002,
+     "korkeus_px": 17,
+     "korkeus_m": 13417,
+     "leveys_m": 91412
+    },
+    "7": {
+     "lon": -0.4,
+     "lat": 39.50001,
+     "korkeus_px": 24,
+     "korkeus_m": 9471,
+     "leveys_m": 64522
+    },
+    "8": {
+     "lon": -0.4,
+     "lat": 39.5,
+     "korkeus_px": 32,
+     "korkeus_m": 6314,
+     "leveys_m": 43021
+    }
+   }
+  },
+  {
+   "id": "extremadura",
+   "teksti": "EXTREMADURA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -6.2,
+     "lat": 39.20004,
+     "korkeus_px": 13,
+     "korkeus_m": 20573,
+     "leveys_m": 195296
+    },
+    "6": {
+     "lon": -6.2,
+     "lat": 39.20002,
+     "korkeus_px": 17,
+     "korkeus_m": 13451,
+     "leveys_m": 127687
+    },
+    "7": {
+     "lon": -6.2,
+     "lat": 39.20001,
+     "korkeus_px": 24,
+     "korkeus_m": 9495,
+     "leveys_m": 90134
+    },
+    "8": {
+     "lon": -6.2,
+     "lat": 39.2,
+     "korkeus_px": 32,
+     "korkeus_m": 6330,
+     "leveys_m": 60095
+    }
+   }
+  },
+  {
+   "id": "andalusia",
+   "teksti": "ANDALUSIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pallotasot": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "paikat": {
+    "5": {
+     "lon": -4.5,
+     "lat": 37.70624,
+     "korkeus_px": 13,
+     "korkeus_m": 20830,
+     "leveys_m": 162011
+    },
+    "6": {
+     "lon": -4.5,
+     "lat": 37.49997,
+     "korkeus_px": 17,
+     "korkeus_m": 13642,
+     "leveys_m": 106231
+    },
+    "7": {
+     "lon": -4.5,
+     "lat": 37.50001,
+     "korkeus_px": 24,
+     "korkeus_m": 9630,
+     "leveys_m": 74984
+    },
+    "8": {
+     "lon": -4.5,
+     "lat": 37.5,
+     "korkeus_px": 32,
+     "korkeus_m": 6420,
+     "leveys_m": 49984
+    }
+   }
+  },
+  {
+   "id": "artois",
+   "teksti": "ARTOIS",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 2.3,
+     "lat": 50.4,
+     "korkeus_px": 18,
+     "korkeus_m": 6358,
+     "leveys_m": 29556
+    },
+    "8": {
+     "lon": 2.3,
+     "lat": 50.39995,
+     "korkeus_px": 26,
+     "korkeus_m": 4592,
+     "leveys_m": 21349
+    }
+   }
+  },
+  {
+   "id": "flanderi",
+   "teksti": "FLANDERI",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 2.7,
+     "lat": 50.8,
+     "korkeus_px": 18,
+     "korkeus_m": 6328,
+     "leveys_m": 39637
+    },
+    "8": {
+     "lon": 2.7,
+     "lat": 50.79995,
+     "korkeus_px": 26,
+     "korkeus_m": 4570,
+     "leveys_m": 28632
+    }
+   }
+  },
+  {
+   "id": "ile-de-france",
+   "teksti": "ÎLE-DE-FRANCE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 2.50005,
+     "lat": 49.02795,
+     "korkeus_px": 18,
+     "korkeus_m": 6461,
+     "leveys_m": 67915
+    },
+    "8": {
+     "lon": 2.5,
+     "lat": 48.9462,
+     "korkeus_px": 26,
+     "korkeus_m": 4670,
+     "leveys_m": 49134
+    }
+   }
+  },
+  {
+   "id": "franche-comte",
+   "teksti": "FRANCHE-COMTÉ",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 6.10005,
+     "lat": 47.2305,
+     "korkeus_px": 18,
+     "korkeus_m": 6591,
+     "leveys_m": 70335
+    },
+    "8": {
+     "lon": 6.0285,
+     "lat": 47.1377,
+     "korkeus_px": 26,
+     "korkeus_m": 4765,
+     "leveys_m": 50890
+    }
+   }
+  },
+  {
+   "id": "anjou",
+   "teksti": "ANJOU",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -0.49995,
+     "lat": 47.46505,
+     "korkeus_px": 18,
+     "korkeus_m": 6574,
+     "leveys_m": 25822
+    },
+    "8": {
+     "lon": -0.5,
+     "lat": 47.44695,
+     "korkeus_px": 26,
+     "korkeus_m": 4749,
+     "leveys_m": 18649
+    }
+   }
+  },
+  {
+   "id": "touraine",
+   "teksti": "TOURAINE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 0.8,
+     "lat": 47.3,
+     "korkeus_px": 18,
+     "korkeus_m": 6586,
+     "leveys_m": 42530
+    },
+    "8": {
+     "lon": 0.8,
+     "lat": 47.3,
+     "korkeus_px": 26,
+     "korkeus_m": 4757,
+     "leveys_m": 30721
+    }
+   }
+  },
+  {
+   "id": "berry",
+   "teksti": "BERRY",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 2.09995,
+     "lat": 46.8,
+     "korkeus_px": 18,
+     "korkeus_m": 6622,
+     "leveys_m": 26147
+    },
+    "8": {
+     "lon": 2.1,
+     "lat": 46.8,
+     "korkeus_px": 26,
+     "korkeus_m": 4782,
+     "leveys_m": 18877
+    }
+   }
+  },
+  {
+   "id": "limousin",
+   "teksti": "LIMOUSIN",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 1.5,
+     "lat": 45.8,
+     "korkeus_px": 18,
+     "korkeus_m": 6692,
+     "leveys_m": 43722
+    },
+    "8": {
+     "lon": 1.5,
+     "lat": 45.8,
+     "korkeus_px": 26,
+     "korkeus_m": 4833,
+     "leveys_m": 31582
+    }
+   }
+  },
+  {
+   "id": "bearn",
+   "teksti": "BÉARN",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -0.39995,
+     "lat": 43.29995,
+     "korkeus_px": 18,
+     "korkeus_m": 6861,
+     "leveys_m": 27798
+    },
+    "8": {
+     "lon": -0.4,
+     "lat": 43.3,
+     "korkeus_px": 26,
+     "korkeus_m": 4955,
+     "leveys_m": 20069
+    }
+   }
+  },
+  {
+   "id": "roussillon",
+   "teksti": "ROUSSILLON",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 2.7,
+     "lat": 42.6,
+     "korkeus_px": 18,
+     "korkeus_m": 6907,
+     "leveys_m": 58196
+    },
+    "8": {
+     "lon": 2.70005,
+     "lat": 42.6,
+     "korkeus_px": 26,
+     "korkeus_m": 4989,
+     "leveys_m": 42030
+    }
+   }
+  },
+  {
+   "id": "savoiji",
+   "teksti": "SAVOIJI",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 6.5,
+     "lat": 45.59995,
+     "korkeus_px": 18,
+     "korkeus_m": 6706,
+     "leveys_m": 38153
+    },
+    "8": {
+     "lon": 6.5,
+     "lat": 45.6,
+     "korkeus_px": 26,
+     "korkeus_m": 4843,
+     "leveys_m": 27556
+    }
+   }
+  },
+  {
+   "id": "hessen",
+   "teksti": "HESSEN",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.6,
+     "lat": 49.9,
+     "korkeus_px": 18,
+     "korkeus_m": 6396,
+     "leveys_m": 29867
+    },
+    "8": {
+     "lon": 8.6,
+     "lat": 49.9,
+     "korkeus_px": 26,
+     "korkeus_m": 4619,
+     "leveys_m": 21573
+    }
+   }
+  },
+  {
+   "id": "oldenburg",
+   "teksti": "OLDENBURG",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.2,
+     "lat": 53.1,
+     "korkeus_px": 18,
+     "korkeus_m": 6151,
+     "leveys_m": 42569
+    },
+    "8": {
+     "lon": 8.2,
+     "lat": 53.1,
+     "korkeus_px": 26,
+     "korkeus_m": 4442,
+     "leveys_m": 30738
+    }
+   }
+  },
+  {
+   "id": "braunschweig",
+   "teksti": "BRAUNSCHWEIG",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 10.3,
+     "lat": 52.1,
+     "korkeus_px": 18,
+     "korkeus_m": 6229,
+     "leveys_m": 58606
+    },
+    "8": {
+     "lon": 10.3,
+     "lat": 52.1,
+     "korkeus_px": 26,
+     "korkeus_m": 4498,
+     "leveys_m": 42322
+    }
+   }
+  },
+  {
+   "id": "anhalt",
+   "teksti": "ANHALT",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 12.2,
+     "lat": 51.8,
+     "korkeus_px": 18,
+     "korkeus_m": 6252,
+     "leveys_m": 28675
+    },
+    "8": {
+     "lon": 12.2,
+     "lat": 51.8,
+     "korkeus_px": 26,
+     "korkeus_m": 4515,
+     "leveys_m": 20712
+    }
+   }
+  },
+  {
+   "id": "hampuri",
+   "teksti": "HAMPURI",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 9.80195,
+     "lat": 53.55,
+     "korkeus_px": 18,
+     "korkeus_m": 6115,
+     "leveys_m": 32404
+    },
+    "8": {
+     "lon": 10,
+     "lat": 53.5063,
+     "korkeus_px": 26,
+     "korkeus_m": 4419,
+     "leveys_m": 23424
+    }
+   }
+  },
+  {
+   "id": "bremen",
+   "teksti": "BREMEN",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.8,
+     "lat": 53.1,
+     "korkeus_px": 18,
+     "korkeus_m": 6151,
+     "leveys_m": 27840
+    },
+    "8": {
+     "lon": 8.8,
+     "lat": 53.1,
+     "korkeus_px": 26,
+     "korkeus_m": 4442,
+     "leveys_m": 20109
+    }
+   }
+  },
+  {
+   "id": "l-beck",
+   "teksti": "LÜBECK",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 10.7,
+     "lat": 53.9,
+     "korkeus_px": 18,
+     "korkeus_m": 6087,
+     "leveys_m": 27320
+    },
+    "8": {
+     "lon": 10.7,
+     "lat": 53.9,
+     "korkeus_px": 26,
+     "korkeus_m": 4396,
+     "leveys_m": 19733
+    }
+   }
+  },
+  {
+   "id": "liguria",
+   "teksti": "LIGURIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.90005,
+     "lat": 44.35,
+     "korkeus_px": 18,
+     "korkeus_m": 6791,
+     "leveys_m": 39001
+    },
+    "8": {
+     "lon": 8.9,
+     "lat": 44.35,
+     "korkeus_px": 26,
+     "korkeus_m": 4905,
+     "leveys_m": 28164
+    }
+   }
+  },
+  {
+   "id": "umbria",
+   "teksti": "UMBRIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 12.5,
+     "lat": 42.9,
+     "korkeus_px": 18,
+     "korkeus_m": 6888,
+     "leveys_m": 33967
+    },
+    "8": {
+     "lon": 12.5,
+     "lat": 42.9,
+     "korkeus_px": 26,
+     "korkeus_m": 4974,
+     "leveys_m": 24534
+    }
+   }
+  },
+  {
+   "id": "marche",
+   "teksti": "MARCHE",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 13.1,
+     "lat": 43.2,
+     "korkeus_px": 18,
+     "korkeus_m": 6868,
+     "leveys_m": 33801
+    },
+    "8": {
+     "lon": 13.1,
+     "lat": 43.2,
+     "korkeus_px": 26,
+     "korkeus_m": 4960,
+     "leveys_m": 24415
+    }
+   }
+  },
+  {
+   "id": "basilicata",
+   "teksti": "BASILICATA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 16,
+     "lat": 40.5,
+     "korkeus_px": 18,
+     "korkeus_m": 7041,
+     "leveys_m": 60117
+    },
+    "8": {
+     "lon": 16,
+     "lat": 40.5,
+     "korkeus_px": 26,
+     "korkeus_m": 5085,
+     "leveys_m": 43427
+    }
+   }
+  },
+  {
+   "id": "calabria",
+   "teksti": "CALABRIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 16.3,
+     "lat": 39,
+     "korkeus_px": 18,
+     "korkeus_m": 7133,
+     "leveys_m": 48738
+    },
+    "8": {
+     "lon": 16.3,
+     "lat": 39,
+     "korkeus_px": 26,
+     "korkeus_m": 5152,
+     "leveys_m": 35205
+    }
+   }
+  },
+  {
+   "id": "asturia",
+   "teksti": "ASTURIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -6.00005,
+     "lat": 43.2,
+     "korkeus_px": 18,
+     "korkeus_m": 6868,
+     "leveys_m": 39759
+    },
+    "8": {
+     "lon": -6,
+     "lat": 43.2,
+     "korkeus_px": 26,
+     "korkeus_m": 4960,
+     "leveys_m": 28711
+    }
+   }
+  },
+  {
+   "id": "baskimaa",
+   "teksti": "BASKIMAA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -2.6,
+     "lat": 43,
+     "korkeus_px": 18,
+     "korkeus_m": 6881,
+     "leveys_m": 45866
+    },
+    "8": {
+     "lon": -2.6,
+     "lat": 43,
+     "korkeus_px": 26,
+     "korkeus_m": 4970,
+     "leveys_m": 33131
+    }
+   }
+  },
+  {
+   "id": "navarra",
+   "teksti": "NAVARRA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -1.59995,
+     "lat": 42.7,
+     "korkeus_px": 18,
+     "korkeus_m": 6901,
+     "leveys_m": 40083
+    },
+    "8": {
+     "lon": -1.6,
+     "lat": 42.7,
+     "korkeus_px": 26,
+     "korkeus_m": 4984,
+     "leveys_m": 28945
+    }
+   }
+  },
+  {
+   "id": "murcia",
+   "teksti": "MURCIA",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -1.5,
+     "lat": 38,
+     "korkeus_px": 18,
+     "korkeus_m": 7193,
+     "leveys_m": 36539
+    },
+    "8": {
+     "lon": -1.5,
+     "lat": 38,
+     "korkeus_px": 26,
+     "korkeus_m": 5195,
+     "leveys_m": 26392
+    }
+   }
+  },
+  {
+   "id": "baleaarit",
+   "teksti": "BALEAARIT",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 2.90005,
+     "lat": 39.5,
+     "korkeus_px": 18,
+     "korkeus_m": 7103,
+     "leveys_m": 54698
+    },
+    "8": {
+     "lon": 2.9,
+     "lat": 39.5,
+     "korkeus_px": 26,
+     "korkeus_m": 5130,
+     "leveys_m": 39503
+    }
+   }
+  },
+  {
+   "id": "kanariansaaret",
+   "teksti": "KANARIANSAARET",
+   "luokka": "maakunta",
+   "tyyli": "maakunta-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -15.6,
+     "lat": 28.3,
+     "korkeus_px": 18,
+     "korkeus_m": 7697,
+     "leveys_m": 98394
+    },
+    "8": {
+     "lon": -15.6,
+     "lat": 28.3,
+     "korkeus_px": 26,
+     "korkeus_m": 5559,
+     "leveys_m": 71059
+    }
+   }
+  },
+  {
+   "id": "saksi",
+   "teksti": "Saksi",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 12.85,
+     "lat": 51.25,
+     "korkeus_px": 16,
+     "korkeus_m": 5595,
+     "leveys_m": 18555
+    },
+    "8": {
+     "lon": 12.85,
+     "lat": 51.25,
+     "korkeus_px": 22,
+     "korkeus_m": 3846,
+     "leveys_m": 12751
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "rheinland-pfalz",
+   "teksti": "Rheinland-Pfalz",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.3,
+     "lat": 50.05,
+     "korkeus_px": 16,
+     "korkeus_m": 5675,
+     "leveys_m": 59462
+    },
+    "8": {
+     "lon": 7.3,
+     "lat": 50.05,
+     "korkeus_px": 22,
+     "korkeus_m": 3902,
+     "leveys_m": 40884
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "hauts-de-france",
+   "teksti": "Hauts-de-France",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 2.95,
+     "lat": 50.25,
+     "korkeus_px": 16,
+     "korkeus_m": 5662,
+     "leveys_m": 59911
+    },
+    "8": {
+     "lon": 2.95,
+     "lat": 50.25,
+     "korkeus_px": 22,
+     "korkeus_m": 3893,
+     "leveys_m": 41183
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "grand-est",
+   "teksti": "Grand Est",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 4.9,
+     "lat": 49.00685,
+     "korkeus_px": 16,
+     "korkeus_m": 5744,
+     "leveys_m": 36397
+    },
+    "8": {
+     "lon": 4.9,
+     "lat": 48.95,
+     "korkeus_px": 22,
+     "korkeus_m": 3952,
+     "leveys_m": 25047
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "ala-saksi",
+   "teksti": "Ala-Saksi",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 9.4,
+     "lat": 52.95,
+     "korkeus_px": 16,
+     "korkeus_m": 5478,
+     "leveys_m": 33431
+    },
+    "8": {
+     "lon": 9.4,
+     "lat": 52.95,
+     "korkeus_px": 22,
+     "korkeus_m": 3766,
+     "leveys_m": 22980
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "nordrhein-westfalen",
+   "teksti": "Nordrhein-Westfalen",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.7,
+     "lat": 51.59495,
+     "korkeus_px": 16,
+     "korkeus_m": 5571,
+     "leveys_m": 72903
+    },
+    "8": {
+     "lon": 7.7,
+     "lat": 51.65,
+     "korkeus_px": 22,
+     "korkeus_m": 3828,
+     "leveys_m": 50061
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "provence-alpes-c-te-d-azur",
+   "teksti": "Provence-Alpes-Côte d'Azur",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 6.25,
+     "lat": 44.35,
+     "korkeus_px": 16,
+     "korkeus_m": 6037,
+     "leveys_m": 117203
+    },
+    "8": {
+     "lon": 6.25,
+     "lat": 44.35,
+     "korkeus_px": 22,
+     "korkeus_m": 4150,
+     "leveys_m": 80579
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "auvergne-rh-ne-alpes",
+   "teksti": "Auvergne-Rhône-Alpes",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 4.2,
+     "lat": 44.78115,
+     "korkeus_px": 16,
+     "korkeus_m": 6011,
+     "leveys_m": 88461
+    },
+    "8": {
+     "lon": 4.321,
+     "lat": 44.96535,
+     "korkeus_px": 22,
+     "korkeus_m": 4125,
+     "leveys_m": 60626
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "nouvelle-aquitaine",
+   "teksti": "Nouvelle-Aquitaine",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 0.6,
+     "lat": 44.6,
+     "korkeus_px": 16,
+     "korkeus_m": 6021,
+     "leveys_m": 79158
+    },
+    "8": {
+     "lon": 0.6,
+     "lat": 44.6,
+     "korkeus_px": 22,
+     "korkeus_m": 4140,
+     "leveys_m": 54424
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "occitanie",
+   "teksti": "Occitanie",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 1.6,
+     "lat": 43.4,
+     "korkeus_px": 16,
+     "korkeus_m": 6093,
+     "leveys_m": 39523
+    },
+    "8": {
+     "lon": 1.6,
+     "lat": 43.4,
+     "korkeus_px": 22,
+     "korkeus_m": 4189,
+     "leveys_m": 27178
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "baden-w-rttemberg",
+   "teksti": "Baden-Württemberg",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 9.1,
+     "lat": 48.35,
+     "korkeus_px": 16,
+     "korkeus_m": 5787,
+     "leveys_m": 69774
+    },
+    "8": {
+     "lon": 9.1,
+     "lat": 48.35,
+     "korkeus_px": 22,
+     "korkeus_m": 3979,
+     "leveys_m": 47960
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "bourgogne-franche-comte",
+   "teksti": "Bourgogne-Franche-Comté",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 5.35,
+     "lat": 47.4,
+     "korkeus_px": 16,
+     "korkeus_m": 5848,
+     "leveys_m": 96927
+    },
+    "8": {
+     "lon": 5.35,
+     "lat": 47.4,
+     "korkeus_px": 22,
+     "korkeus_m": 4020,
+     "leveys_m": 66640
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "mecklenburg-etu-pommeri",
+   "teksti": "Mecklenburg-Etu-Pommeri",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 12.4,
+     "lat": 53.84995,
+     "korkeus_px": 16,
+     "korkeus_m": 5414,
+     "leveys_m": 84472
+    },
+    "8": {
+     "lon": 12.4,
+     "lat": 53.85,
+     "korkeus_px": 22,
+     "korkeus_m": 3722,
+     "leveys_m": 58077
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "pays-de-la-loire",
+   "teksti": "Pays de la Loire",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -0.9,
+     "lat": 47.75,
+     "korkeus_px": 16,
+     "korkeus_m": 5826,
+     "leveys_m": 67871
+    },
+    "8": {
+     "lon": -0.9,
+     "lat": 47.75,
+     "korkeus_px": 22,
+     "korkeus_m": 4005,
+     "leveys_m": 46668
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "th-ringen",
+   "teksti": "Thüringen",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 10.75,
+     "lat": 50.75,
+     "korkeus_px": 16,
+     "korkeus_m": 5628,
+     "leveys_m": 34417
+    },
+    "8": {
+     "lon": 10.75,
+     "lat": 50.75,
+     "korkeus_px": 22,
+     "korkeus_m": 3870,
+     "leveys_m": 23667
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "saksi-anhalt",
+   "teksti": "Saksi-Anhalt",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 12.05,
+     "lat": 52.15,
+     "korkeus_px": 16,
+     "korkeus_m": 5533,
+     "leveys_m": 45427
+    },
+    "8": {
+     "lon": 12.05,
+     "lat": 52.15,
+     "korkeus_px": 22,
+     "korkeus_m": 3804,
+     "leveys_m": 31235
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "centre-val-de-loire",
+   "teksti": "Centre-Val de Loire",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "FRA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 1.9,
+     "lat": 47.15,
+     "korkeus_px": 16,
+     "korkeus_m": 5864,
+     "leveys_m": 81278
+    },
+    "8": {
+     "lon": 1.9,
+     "lat": 47.15,
+     "korkeus_px": 22,
+     "korkeus_m": 4031,
+     "leveys_m": 55884
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "emilia-romagna",
+   "teksti": "Emilia-Romagna",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 10.9,
+     "lat": 44.55,
+     "korkeus_px": 16,
+     "korkeus_m": 6025,
+     "leveys_m": 61587
+    },
+    "8": {
+     "lon": 10.9,
+     "lat": 44.55,
+     "korkeus_px": 22,
+     "korkeus_m": 4142,
+     "leveys_m": 42347
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "trentino-alto-adige",
+   "teksti": "Trentino-Alto Adige",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 11.3,
+     "lat": 46.3415,
+     "korkeus_px": 16,
+     "korkeus_m": 5915,
+     "leveys_m": 81770
+    },
+    "8": {
+     "lon": 11.3,
+     "lat": 46.4,
+     "korkeus_px": 22,
+     "korkeus_m": 4064,
+     "leveys_m": 56147
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "abruzzo",
+   "teksti": "Abruzzo",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 13.848,
+     "lat": 42.23,
+     "korkeus_px": 16,
+     "korkeus_m": 6161,
+     "leveys_m": 31123
+    },
+    "8": {
+     "lon": 13.848,
+     "lat": 42.23,
+     "korkeus_px": 22,
+     "korkeus_m": 4236,
+     "leveys_m": 21391
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "friuli-venezia-giulia",
+   "teksti": "Friuli-Venezia Giulia",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 12.9,
+     "lat": 46.2,
+     "korkeus_px": 16,
+     "korkeus_m": 5923,
+     "leveys_m": 90539
+    },
+    "8": {
+     "lon": 12.9,
+     "lat": 46.2,
+     "korkeus_px": 22,
+     "korkeus_m": 4072,
+     "leveys_m": 62248
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "kastilia-ja-le-n",
+   "teksti": "Kastilia ja León",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -5,
+     "lat": 41.7,
+     "korkeus_px": 16,
+     "korkeus_m": 6192,
+     "leveys_m": 74571
+    },
+    "8": {
+     "lon": -5,
+     "lat": 41.7,
+     "korkeus_px": 22,
+     "korkeus_m": 4257,
+     "leveys_m": 51258
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "kastilia-la-mancha",
+   "teksti": "Kastilia-La Mancha",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -2.9,
+     "lat": 39.5,
+     "korkeus_px": 16,
+     "korkeus_m": 6314,
+     "leveys_m": 86607
+    },
+    "8": {
+     "lon": -2.9,
+     "lat": 39.5,
+     "korkeus_px": 22,
+     "korkeus_m": 4341,
+     "leveys_m": 59546
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "kantabria",
+   "teksti": "Kantabria",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -4.034,
+     "lat": 43.19895,
+     "korkeus_px": 16,
+     "korkeus_m": 6105,
+     "leveys_m": 39654
+    },
+    "8": {
+     "lon": -4.034,
+     "lat": 43.199,
+     "korkeus_px": 22,
+     "korkeus_m": 4197,
+     "leveys_m": 27268
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "la-rioja",
+   "teksti": "La Rioja",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -2.496,
+     "lat": 42.28,
+     "korkeus_px": 16,
+     "korkeus_m": 6158,
+     "leveys_m": 36462
+    },
+    "8": {
+     "lon": -2.496,
+     "lat": 42.28,
+     "korkeus_px": 22,
+     "korkeus_m": 4234,
+     "leveys_m": 25076
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "englanti",
+   "teksti": "Englanti",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "GBR",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -1.3,
+     "lat": 52.7088,
+     "korkeus_px": 16,
+     "korkeus_m": 5494,
+     "leveys_m": 29211
+    },
+    "8": {
+     "lon": -1.179,
+     "lat": 52.6,
+     "korkeus_px": 22,
+     "korkeus_m": 3783,
+     "leveys_m": 20126
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "skotlanti",
+   "teksti": "Skotlanti",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "GBR",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -4.2,
+     "lat": 56.9,
+     "korkeus_px": 16,
+     "korkeus_m": 5194,
+     "leveys_m": 29706
+    },
+    "8": {
+     "lon": -4.2,
+     "lat": 56.9,
+     "korkeus_px": 22,
+     "korkeus_m": 3571,
+     "leveys_m": 20428
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "wales",
+   "teksti": "Wales",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "GBR",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -3.75,
+     "lat": 52.35,
+     "korkeus_px": 16,
+     "korkeus_m": 5519,
+     "leveys_m": 18108
+    },
+    "8": {
+     "lon": -3.75,
+     "lat": 52.35,
+     "korkeus_px": 22,
+     "korkeus_m": 3795,
+     "leveys_m": 12443
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "pohjois-irlanti",
+   "teksti": "Pohjois-Irlanti",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "GBR",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": -6.9,
+     "lat": 54.6,
+     "korkeus_px": 16,
+     "korkeus_m": 5361,
+     "leveys_m": 53643
+    },
+    "8": {
+     "lon": -6.9,
+     "lat": 54.6,
+     "korkeus_px": 22,
+     "korkeus_m": 3686,
+     "leveys_m": 36883
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "masovia",
+   "teksti": "Masovia",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 21.2,
+     "lat": 52.6,
+     "korkeus_px": 16,
+     "korkeus_m": 5502,
+     "leveys_m": 25529
+    },
+    "8": {
+     "lon": 21.2,
+     "lat": 52.6,
+     "korkeus_px": 22,
+     "korkeus_m": 3783,
+     "leveys_m": 17546
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "suur-puola",
+   "teksti": "Suur-Puola",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 17,
+     "lat": 52.3,
+     "korkeus_px": 16,
+     "korkeus_m": 5523,
+     "leveys_m": 37712
+    },
+    "8": {
+     "lon": 17,
+     "lat": 52.3,
+     "korkeus_px": 22,
+     "korkeus_m": 3797,
+     "leveys_m": 25921
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "varmia-masuria",
+   "teksti": "Varmia-Masuria",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 20.769,
+     "lat": 53.84995,
+     "korkeus_px": 16,
+     "korkeus_m": 5414,
+     "leveys_m": 50980
+    },
+    "8": {
+     "lon": 20.769,
+     "lat": 53.85,
+     "korkeus_px": 22,
+     "korkeus_m": 3722,
+     "leveys_m": 35053
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "lansi-pommeri",
+   "teksti": "Länsi-Pommeri",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 15.615,
+     "lat": 53.587,
+     "korkeus_px": 16,
+     "korkeus_m": 5433,
+     "leveys_m": 47630
+    },
+    "8": {
+     "lon": 15.615,
+     "lat": 53.587,
+     "korkeus_px": 22,
+     "korkeus_m": 3735,
+     "leveys_m": 32739
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "lublin",
+   "teksti": "Lublin",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 22.9,
+     "lat": 51.243,
+     "korkeus_px": 16,
+     "korkeus_m": 5595,
+     "leveys_m": 22428
+    },
+    "8": {
+     "lon": 22.9,
+     "lat": 51.243,
+     "korkeus_px": 22,
+     "korkeus_m": 3847,
+     "leveys_m": 15426
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "podlasia",
+   "teksti": "Podlasia",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 22.883,
+     "lat": 53.279,
+     "korkeus_px": 16,
+     "korkeus_m": 5455,
+     "leveys_m": 28828
+    },
+    "8": {
+     "lon": 22.883,
+     "lat": 53.279,
+     "korkeus_px": 22,
+     "korkeus_m": 3750,
+     "leveys_m": 19813
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "ala-sleesia",
+   "teksti": "Ala-Sleesia",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 16.3,
+     "lat": 51.2,
+     "korkeus_px": 16,
+     "korkeus_m": 5598,
+     "leveys_m": 42516
+    },
+    "8": {
+     "lon": 16.3,
+     "lat": 51.2,
+     "korkeus_px": 22,
+     "korkeus_m": 3849,
+     "leveys_m": 29236
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "d",
+   "teksti": "Łódź",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 19.409,
+     "lat": 51.559,
+     "korkeus_px": 16,
+     "korkeus_m": 5574,
+     "leveys_m": 14587
+    },
+    "8": {
+     "lon": 19.409,
+     "lat": 51.559,
+     "korkeus_px": 22,
+     "korkeus_m": 3832,
+     "leveys_m": 10024
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "podkarpackie",
+   "teksti": "Podkarpackie",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 22.208,
+     "lat": 49.97,
+     "korkeus_px": 16,
+     "korkeus_m": 5681,
+     "leveys_m": 46931
+    },
+    "8": {
+     "lon": 22.208,
+     "lat": 49.97,
+     "korkeus_px": 22,
+     "korkeus_m": 3905,
+     "leveys_m": 32270
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "vaha-puola",
+   "teksti": "Vähä-Puola",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 20.3,
+     "lat": 49.9,
+     "korkeus_px": 16,
+     "korkeus_m": 5685,
+     "leveys_m": 39722
+    },
+    "8": {
+     "lon": 20.3,
+     "lat": 49.9,
+     "korkeus_px": 22,
+     "korkeus_m": 3909,
+     "leveys_m": 27303
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "lubuskie",
+   "teksti": "Lubuskie",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 15.342,
+     "lat": 52.202,
+     "korkeus_px": 16,
+     "korkeus_m": 5530,
+     "leveys_m": 29549
+    },
+    "8": {
+     "lon": 15.342,
+     "lat": 52.202,
+     "korkeus_px": 22,
+     "korkeus_m": 3802,
+     "leveys_m": 20308
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "sleesia",
+   "teksti": "Sleesia",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 18.996,
+     "lat": 50.31,
+     "korkeus_px": 16,
+     "korkeus_m": 5658,
+     "leveys_m": 26843
+    },
+    "8": {
+     "lon": 18.996,
+     "lat": 50.31,
+     "korkeus_px": 22,
+     "korkeus_m": 3890,
+     "leveys_m": 18449
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "wi-tokrzyskie",
+   "teksti": "Świętokrzyskie",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 20.768,
+     "lat": 50.742,
+     "korkeus_px": 16,
+     "korkeus_m": 5629,
+     "leveys_m": 53999
+    },
+    "8": {
+     "lon": 20.768,
+     "lat": 50.742,
+     "korkeus_px": 22,
+     "korkeus_m": 3870,
+     "leveys_m": 37125
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "opole",
+   "teksti": "Opole",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 17.787,
+     "lat": 50.57235,
+     "korkeus_px": 16,
+     "korkeus_m": 5640,
+     "leveys_m": 18827
+    },
+    "8": {
+     "lon": 17.8145,
+     "lat": 50.58635,
+     "korkeus_px": 22,
+     "korkeus_m": 3877,
+     "leveys_m": 12934
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "ala-itavalta",
+   "teksti": "Ala-Itävalta",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 15.6,
+     "lat": 48.128,
+     "korkeus_px": 16,
+     "korkeus_m": 5801,
+     "leveys_m": 49415
+    },
+    "8": {
+     "lon": 15.6605,
+     "lat": 48.3315,
+     "korkeus_px": 22,
+     "korkeus_m": 3979,
+     "leveys_m": 33843
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "steiermark",
+   "teksti": "Steiermark",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 15,
+     "lat": 47.19995,
+     "korkeus_px": 16,
+     "korkeus_m": 5861,
+     "leveys_m": 41160
+    },
+    "8": {
+     "lon": 15,
+     "lat": 47.2,
+     "korkeus_px": 22,
+     "korkeus_m": 4029,
+     "leveys_m": 28301
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "tiroli",
+   "teksti": "Tiroli",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 11.4,
+     "lat": 47.25,
+     "korkeus_px": 16,
+     "korkeus_m": 5857,
+     "leveys_m": 24319
+    },
+    "8": {
+     "lon": 11.4,
+     "lat": 47.25,
+     "korkeus_px": 22,
+     "korkeus_m": 4027,
+     "leveys_m": 16726
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "yla-itavalta",
+   "teksti": "Ylä-Itävalta",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 13.956,
+     "lat": 48.142,
+     "korkeus_px": 16,
+     "korkeus_m": 5800,
+     "leveys_m": 49402
+    },
+    "8": {
+     "lon": 13.956,
+     "lat": 48.142,
+     "korkeus_px": 22,
+     "korkeus_m": 3988,
+     "leveys_m": 33968
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "karnten",
+   "teksti": "Kärnten",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 13.911,
+     "lat": 46.772,
+     "korkeus_px": 16,
+     "korkeus_m": 5888,
+     "leveys_m": 28788
+    },
+    "8": {
+     "lon": 13.911,
+     "lat": 46.772,
+     "korkeus_px": 22,
+     "korkeus_m": 4048,
+     "leveys_m": 19786
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "salzburg",
+   "teksti": "Salzburg",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 13.088,
+     "lat": 47.392,
+     "korkeus_px": 16,
+     "korkeus_m": 5848,
+     "leveys_m": 32640
+    },
+    "8": {
+     "lon": 13.088,
+     "lat": 47.392,
+     "korkeus_px": 22,
+     "korkeus_m": 4021,
+     "leveys_m": 22432
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "burgenland",
+   "teksti": "Burgenland",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 16.513,
+     "lat": 47.546,
+     "korkeus_px": 16,
+     "korkeus_m": 5839,
+     "leveys_m": 40891
+    },
+    "8": {
+     "lon": 16.513,
+     "lat": 47.54595,
+     "korkeus_px": 22,
+     "korkeus_m": 4014,
+     "leveys_m": 28116
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "vorarlberg",
+   "teksti": "Vorarlberg",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 9.881,
+     "lat": 47.237,
+     "korkeus_px": 16,
+     "korkeus_m": 5858,
+     "leveys_m": 41131
+    },
+    "8": {
+     "lon": 9.881,
+     "lat": 47.237,
+     "korkeus_px": 22,
+     "korkeus_m": 4028,
+     "leveys_m": 28281
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "graub-nden",
+   "teksti": "Graubünden",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 9.62,
+     "lat": 46.59865,
+     "korkeus_px": 16,
+     "korkeus_m": 5899,
+     "leveys_m": 41624
+    },
+    "8": {
+     "lon": 9.62,
+     "lat": 46.6169,
+     "korkeus_px": 22,
+     "korkeus_m": 4054,
+     "leveys_m": 28611
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "bern",
+   "teksti": "Bern",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.627,
+     "lat": 46.825,
+     "korkeus_px": 16,
+     "korkeus_m": 5884,
+     "leveys_m": 16053
+    },
+    "8": {
+     "lon": 7.627,
+     "lat": 46.825,
+     "korkeus_px": 22,
+     "korkeus_m": 4045,
+     "leveys_m": 11032
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "valais",
+   "teksti": "Valais",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.586,
+     "lat": 46.09275,
+     "korkeus_px": 16,
+     "korkeus_m": 5930,
+     "leveys_m": 24846
+    },
+    "8": {
+     "lon": 7.586,
+     "lat": 46.1294,
+     "korkeus_px": 22,
+     "korkeus_m": 4075,
+     "leveys_m": 17077
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "vaud",
+   "teksti": "Vaud",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 6.657,
+     "lat": 46.572,
+     "korkeus_px": 16,
+     "korkeus_m": 5900,
+     "leveys_m": 16129
+    },
+    "8": {
+     "lon": 6.657,
+     "lat": 46.572,
+     "korkeus_px": 22,
+     "korkeus_m": 4056,
+     "leveys_m": 11084
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "ticino",
+   "teksti": "Ticino",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.798,
+     "lat": 46.294,
+     "korkeus_px": 16,
+     "korkeus_m": 5918,
+     "leveys_m": 24755
+    },
+    "8": {
+     "lon": 8.798,
+     "lat": 46.294,
+     "korkeus_px": 22,
+     "korkeus_m": 4068,
+     "leveys_m": 17026
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "st-gallen",
+   "teksti": "St. Gallen",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 9.195,
+     "lat": 47.20565,
+     "korkeus_px": 16,
+     "korkeus_m": 5860,
+     "leveys_m": 41896
+    },
+    "8": {
+     "lon": 9.283,
+     "lat": 47.252,
+     "korkeus_px": 22,
+     "korkeus_m": 4027,
+     "leveys_m": 28772
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "z-rich",
+   "teksti": "Zürich",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.646,
+     "lat": 47.417,
+     "korkeus_px": 16,
+     "korkeus_m": 5847,
+     "leveys_m": 24243
+    },
+    "8": {
+     "lon": 8.646,
+     "lat": 47.417,
+     "korkeus_px": 22,
+     "korkeus_m": 4020,
+     "leveys_m": 16673
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "fribourg",
+   "teksti": "Fribourg",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.082,
+     "lat": 46.719,
+     "korkeus_px": 16,
+     "korkeus_m": 5891,
+     "leveys_m": 33055
+    },
+    "8": {
+     "lon": 7.082,
+     "lat": 46.719,
+     "korkeus_px": 22,
+     "korkeus_m": 4050,
+     "leveys_m": 22717
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "luzern",
+   "teksti": "Luzern",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.02,
+     "lat": 47.11445,
+     "korkeus_px": 16,
+     "korkeus_m": 5866,
+     "leveys_m": 24382
+    },
+    "8": {
+     "lon": 8.108,
+     "lat": 47.068,
+     "korkeus_px": 22,
+     "korkeus_m": 4035,
+     "leveys_m": 16784
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "aargau",
+   "teksti": "Aargau",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 8.154,
+     "lat": 47.412,
+     "korkeus_px": 16,
+     "korkeus_m": 5847,
+     "leveys_m": 24245
+    },
+    "8": {
+     "lon": 8.154,
+     "lat": 47.412,
+     "korkeus_px": 22,
+     "korkeus_m": 4020,
+     "leveys_m": 16675
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "thurgau",
+   "teksti": "Thurgau",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 9.109,
+     "lat": 47.56295,
+     "korkeus_px": 16,
+     "korkeus_m": 5838,
+     "leveys_m": 28362
+    },
+    "8": {
+     "lon": 9.109,
+     "lat": 47.563,
+     "korkeus_px": 22,
+     "korkeus_m": 4013,
+     "leveys_m": 19493
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "jura",
+   "teksti": "Jura",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.15,
+     "lat": 47.348,
+     "korkeus_px": 16,
+     "korkeus_m": 5851,
+     "leveys_m": 15897
+    },
+    "8": {
+     "lon": 7.15,
+     "lat": 47.348,
+     "korkeus_px": 22,
+     "korkeus_m": 4023,
+     "leveys_m": 10924
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "neuch-tel",
+   "teksti": "Neuchâtel",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 6.779,
+     "lat": 46.996,
+     "korkeus_px": 16,
+     "korkeus_m": 5873,
+     "leveys_m": 37101
+    },
+    "8": {
+     "lon": 6.779,
+     "lat": 46.996,
+     "korkeus_px": 22,
+     "korkeus_m": 4038,
+     "leveys_m": 25513
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "solothurn",
+   "teksti": "Solothurn",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.641,
+     "lat": 47.305,
+     "korkeus_px": 16,
+     "korkeus_m": 5854,
+     "leveys_m": 36886
+    },
+    "8": {
+     "lon": 7.641,
+     "lat": 47.305,
+     "korkeus_px": 22,
+     "korkeus_m": 4025,
+     "leveys_m": 25365
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "basel-landschaft",
+   "teksti": "Basel-Landschaft",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    7,
+    8
+   ],
+   "pallotasot": [
+    8,
+    9
+   ],
+   "paikat": {
+    "7": {
+     "lon": 7.698,
+     "lat": 47.5148,
+     "korkeus_px": 16,
+     "korkeus_m": 5841,
+     "leveys_m": 66720
+    },
+    "8": {
+     "lon": 7.698,
+     "lat": 47.457,
+     "korkeus_px": 22,
+     "korkeus_m": 4018,
+     "leveys_m": 45922
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "saarland",
+   "teksti": "Saarland",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 6.95,
+     "lat": 49.3,
+     "korkeus_px": 18,
+     "korkeus_m": 3220,
+     "leveys_m": 17678
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "berliini",
+   "teksti": "Berliini",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "DEU",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 13.55,
+     "lat": 52.62,
+     "korkeus_px": 18,
+     "korkeus_m": 3094,
+     "leveys_m": 16458
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "molise",
+   "teksti": "Molise",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 14.593,
+     "lat": 41.687,
+     "korkeus_px": 18,
+     "korkeus_m": 3483,
+     "leveys_m": 15047
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "aostanlaakso",
+   "teksti": "Aostanlaakso",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "ITA",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 7.371,
+     "lat": 45.73,
+     "korkeus_px": 18,
+     "korkeus_m": 3348,
+     "leveys_m": 28657
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "madrid",
+   "teksti": "Madrid",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": -3.717,
+     "lat": 40.495,
+     "korkeus_px": 18,
+     "korkeus_m": 3521,
+     "leveys_m": 15322
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "ceuta",
+   "teksti": "Ceuta",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": -5.347,
+     "lat": 35.85585,
+     "korkeus_px": 18,
+     "korkeus_m": 3658,
+     "leveys_m": 13518
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "melilla",
+   "teksti": "Melilla",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "ESP",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": -2.944,
+     "lat": 35.295,
+     "korkeus_px": 18,
+     "korkeus_m": 3674,
+     "leveys_m": 19295
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "kujavia-pommeri",
+   "teksti": "Kujavia-Pommeri",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue",
+   "iso": "POL",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 18.501,
+     "lat": 53.022,
+     "korkeus_px": 22,
+     "korkeus_m": 3762,
+     "leveys_m": 38298
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "wien",
+   "teksti": "Wien",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "AUT",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 16.285,
+     "lat": 48.223,
+     "korkeus_px": 18,
+     "korkeus_m": 3260,
+     "leveys_m": 8786
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "uri",
+   "teksti": "Uri",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 8.625,
+     "lat": 46.775,
+     "korkeus_px": 18,
+     "korkeus_m": 3312,
+     "leveys_m": 6656
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "schwyz",
+   "teksti": "Schwyz",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 8.749,
+     "lat": 47.064,
+     "korkeus_px": 18,
+     "korkeus_m": 3301,
+     "leveys_m": 13725
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "glarus",
+   "teksti": "Glarus",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 9.057,
+     "lat": 46.984,
+     "korkeus_px": 18,
+     "korkeus_m": 3304,
+     "leveys_m": 13745
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "obwalden",
+   "teksti": "Obwalden",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 8.239,
+     "lat": 46.853,
+     "korkeus_px": 18,
+     "korkeus_m": 3309,
+     "leveys_m": 18539
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "schaffhausen",
+   "teksti": "Schaffhausen",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 8.589,
+     "lat": 47.74045,
+     "korkeus_px": 18,
+     "korkeus_m": 3277,
+     "leveys_m": 27608
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "geneve",
+   "teksti": "Geneve",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 6.0685,
+     "lat": 46.24835,
+     "korkeus_px": 18,
+     "korkeus_m": 3330,
+     "leveys_m": 13933
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "nidwalden",
+   "teksti": "Nidwalden",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 8.4,
+     "lat": 46.927,
+     "korkeus_px": 18,
+     "korkeus_m": 3306,
+     "leveys_m": 20898
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "zug",
+   "teksti": "Zug",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 8.531,
+     "lat": 47.158,
+     "korkeus_px": 18,
+     "korkeus_m": 3298,
+     "leveys_m": 6608
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "appenzell-ausserrhoden",
+   "teksti": "Appenzell Ausserrhoden",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 9.352,
+     "lat": 47.367,
+     "korkeus_px": 18,
+     "korkeus_m": 3291,
+     "leveys_m": 51785
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "appenzell-innerrhoden",
+   "teksti": "Appenzell Innerrhoden",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 9.402,
+     "lat": 47.32,
+     "korkeus_px": 18,
+     "korkeus_m": 3292,
+     "leveys_m": 49464
+    }
+   },
+   "muste": "ruoste-vahva"
+  },
+  {
+   "id": "basel-stadt",
+   "teksti": "Basel-Stadt",
+   "luokka": "nykyalue",
+   "tyyli": "nykyalue-pieni",
+   "iso": "CHE",
+   "kulma": 0,
+   "tasot": [
+    8
+   ],
+   "pallotasot": [
+    9
+   ],
+   "paikat": {
+    "8": {
+     "lon": 7.599,
+     "lat": 47.5315,
+     "korkeus_px": 18,
+     "korkeus_m": 3285,
+     "leveys_m": 25767
+    }
+   },
+   "muste": "ruoste-vahva"
+  }
+ ],
+ "valtameret": [
+  {
+   "id": "valtameri-1",
+   "teksti": "TYYNIMERI",
+   "lon": -142,
+   "lat": 4,
+   "kulma": 0,
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "pallotasot": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "koko_arkki": 49,
+   "korkeus_m": 163202
+  },
+  {
+   "id": "valtameri-2",
+   "teksti": "TYYNIMERI",
+   "lon": 163,
+   "lat": 18,
+   "kulma": 0,
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "pallotasot": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "koko_arkki": 49,
+   "korkeus_m": 158321
+  },
+  {
+   "id": "valtameri-3",
+   "teksti": "ATLANTIN VALTAMERI",
+   "lon": -38,
+   "lat": 26,
+   "kulma": 0,
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "pallotasot": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "koko_arkki": 42,
+   "korkeus_m": 130975
+  },
+  {
+   "id": "valtameri-4",
+   "teksti": "ETELÄINEN ATLANTTI",
+   "lon": -18,
+   "lat": -30,
+   "kulma": 0,
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "pallotasot": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "koko_arkki": 36,
+   "korkeus_m": 109708
+  },
+  {
+   "id": "valtameri-5",
+   "teksti": "INTIAN VALTAMERI",
+   "lon": 78,
+   "lat": -28,
+   "kulma": 0,
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "pallotasot": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "koko_arkki": 42,
+   "korkeus_m": 129534
+  },
+  {
+   "id": "valtameri-6",
+   "teksti": "JÄÄMERI",
+   "lon": 110,
+   "lat": 80.5,
+   "kulma": 0,
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "pallotasot": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "koko_arkki": 38,
+   "korkeus_m": 54772
+  },
+  {
+   "id": "valtameri-7",
+   "teksti": "ETELÄINEN JÄÄMERI",
+   "lon": 60,
+   "lat": -61.5,
+   "kulma": 0,
+   "tasot": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "pallotasot": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "koko_arkki": 34,
+   "korkeus_m": 74110
+  }
+ ]
+}

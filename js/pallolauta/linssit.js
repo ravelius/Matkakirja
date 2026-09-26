@@ -43,6 +43,8 @@
  * siis versioida kahteen kertaan eikä sivulle ladata toista three.js:ää.
  */
 
+import { kerrostaPallolla } from './reitit.js';
+
 /**
  * Kalvon säde pinnan säteinä.
  *
@@ -685,10 +687,21 @@ export function luoLinssit({
   };
 
   const polygoniOsat = new Map(); // osan nimi → datumit
+  let polygonitKerrostettu = false;
   const tyonnaPolygonit = () => {
     const kaikki = [];
     for (const lista of polygoniOsat.values()) kaikki.push(...lista);
     pallo.polygonsData(kaikki);
+    /*
+     * Datumin `jarjestys` → kiinteä piirtojärjestys ilman syvyys-
+     * kirjoitusta (js/pallolauta/reitit.js KIINTEÄ PIIRTOJÄRJESTYS).
+     * Kirjasto käärii linssin datumin omaansa, joten luku on `data.data`.
+     */
+    const kerrostettavia = kaikki.some((d) => Number.isFinite(d?.jarjestys));
+    if (kerrostettavia || polygonitKerrostettu) {
+      kerrostaPallolla(pallo, 'polygon', (d) => d?.data?.jarjestys);
+    }
+    polygonitKerrostettu = kerrostettavia;
   };
 
   /**

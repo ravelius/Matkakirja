@@ -181,7 +181,7 @@ import {
  * saman voiman kuin laiva (0,11): sen päällä ei soi äänite vaan
  * pelaajan oma napautusääni, ja ajo kestää minuutteja.
  */
-const RAIDAT = {
+export const RAIDAT = {
   jalan: {
     ryhma: 'siirtyma',
     ampari: `${AANI_JUURI}aanet/siirtyma-jalan-lyria.mp3`,
