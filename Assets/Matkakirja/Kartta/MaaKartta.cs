@@ -306,6 +306,21 @@ namespace Matkakirja
 
         public void MaaPerussavy(Savy savy) { perus = savy; PaivitaPaletti(); }
 
+        /// <summary>
+        /// Löydös 157: valitun maakunnan täytön sRGB-peitto (paletin oma väri; tavallinen 0,34). Komento
+        /// "maakunta valinta &lt;peitto&gt;".
+        /// </summary>
+        public static double ValinnanPeitto = 0.6;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaValinta() => ValinnanPeitto = 0.6;
+
+        /// <summary>Paletti uudelleen kaikille kerroksille (komento: valinnan peitto vaihtui).</summary>
+        public static void PaivitaKaikki()
+        {
+            foreach (var m in FindObjectsByType<MaaKartta>(FindObjectsSortMode.None)) m.PaivitaPaletti();
+        }
+
         public void Korosta(string iso3, Savy savy)
         {
             if (string.IsNullOrEmpty(iso3)) return;
@@ -681,7 +696,10 @@ namespace Matkakirja
                 {
                     // Webin täyttö (Maakuntajako.Taytto): sRGB-väri paletin sRGB-tekstuuriin, alfa jo lineaarisen
                     // sekoituksen vastine (varjostimen _TayttoEksponentti 1).
-                    var t = Maakuntajako.Taytto(varit.TryGetValue(p.Key, out int v) ? v : 0, korostettu, lineaarinen);
+                    // Löydös 157 (omistaja 26.9.): valittu maakunta vahvistuu omalla värillään (ValinnanPeitto), ei vaalene.
+                    int vari = varit.TryGetValue(p.Key, out int v) ? v : 0;
+                    var t = korostettu ? Maakuntajako.TayttoPeitolla(vari, ValinnanPeitto, lineaarinen)
+                        : Maakuntajako.Taytto(vari, false, lineaarinen);
                     // Oletusrajat (löydös 113): ilman valintaa vain rajat, täyttö läpinäkyvä.
                     // Elävä kartta (kohta 3): uinuva maakunta himmeänä, herätyksen ajaksi piilotettu häivytyksellä.
                     double peitto = t.A;
@@ -695,8 +713,9 @@ namespace Matkakirja
                     px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), nakyy ? B(peitto) : (byte)0);
                 }
                 else px[p.Value] = C(s.Taytto);
-                // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan.
-                px[256 + p.Value] = rajat != null && !korostettu ? new Color32(0, 0, 0, 0) : C(s.Reuna);
+                // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan; maakunnilla ei sitäkään (löydös 157:
+                // valinnan raja on tavallinen vektoriviiva, korostus on täytössä).
+                px[256 + p.Value] = rajat != null && (!korostettu || maakohtainen) ? new Color32(0, 0, 0, 0) : C(s.Reuna);
             }
             AsetaRajanVari();
             paletti.SetPixels32(px);
