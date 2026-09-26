@@ -139,8 +139,43 @@ namespace Matkakirja
         // (Viivaleveys.AluerajaHaive) jatkuvat kameran pysähdyttyä; kuoren ja paletin vaihdot ovat yksittäisiä muutoksia.
         void OnEnable() => PallonLepo.Animoi(Haivyttaa, kokoelma);
         void OnDisable() => PallonLepo.Poista(Haivyttaa);
-        bool Haivyttaa() => (maakohtainen && haiveAlku >= 0f) || rajaHaiveLiikkuu;
+        bool Haivyttaa() => (maakohtainen && haiveAlku >= 0f) || rajaHaiveLiikkuu || SaapuminenLiikkuu;
         bool rajaHaiveLiikkuu;
+
+        // ---- Elävä kartta: saapuminen (Linssisepän rajapinta 26.9., build 19) ----
+
+        /// <summary>Saapumisen piilotuksen häivytys (s) molempiin suuntiin.</summary>
+        public const float SaapumisHaiveS = 0.3f;
+        static bool saapumisPiilo;
+        float saapumisKerroin = 1f;
+
+        /// <summary>
+        /// ELÄVÄ KARTTA, SAAPUMINEN (Linssiseppä, ElavaSaapuminen): true = kaikkien maakarttojen täyttö ja rajat piiloon
+        /// saapumisanimaation ajaksi (animaatio piirtää omat kynäviivansa ja syttymistäyttönsä), false = palaavat
+        /// <see cref="SaapumisHaiveS"/>:n häivytyksellä. Koskee kaikkia MaaKartta-olioita (maat ja maakunnat).
+        /// </summary>
+        public static void Saapuminen(bool piilossa)
+        {
+            if (saapumisPiilo == piilossa) return;
+            saapumisPiilo = piilossa;
+            PallonLepo.Muuttui("maakartta: saapuminen");
+        }
+
+        static readonly int SaapuminenId = Shader.PropertyToID("_Saapuminen");
+        bool SaapuminenLiikkuu => saapumisKerroin != (saapumisPiilo ? 0f : 1f);
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaSaapuminen() => saapumisPiilo = false;
+
+        /// <summary>Saapumiskertoimen askel; tosi, jos muuttui (täytön häive ja rajan väri uusiksi).</summary>
+        bool PaivitaSaapuminen()
+        {
+            float tavoite = saapumisPiilo ? 0f : 1f;
+            if (saapumisKerroin == tavoite) return false;
+            saapumisKerroin = Mathf.MoveTowards(saapumisKerroin, tavoite, Time.unscaledDeltaTime / SaapumisHaiveS);
+            if (kuori != null) kuori.sharedMaterial.SetFloat(SaapuminenId, saapumisKerroin);
+            return true;
+        }
 
         // ---- IMaaKartta ----
 
@@ -592,6 +627,7 @@ namespace Matkakirja
             bool rj = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
             if (!maakohtainen && rj) alue = new Vector4(rajaus.x, rajaus.w, rajaus.z - rajaus.x, rajaus.w - rajaus.y);
             kuori.sharedMaterial.SetVector("_Alue", alue);
+            kuori.sharedMaterial.SetFloat(SaapuminenId, saapumisKerroin);
             if (maakohtainen)
             {
                 kuori.sharedMaterial.SetFloat("_TayttoEksponentti", 1f);
@@ -715,10 +751,10 @@ namespace Matkakirja
                 // Löydös 113 jatko: oletusrajat ilman täyttöä webin täydellä rasterirajalla (0,45), täytön kanssa 0,297.
                 double peitto = Viivaleveys.AluerajaPeitto(TayttoNakyy, lin);
                 // Color on sRGB-arvoina; URP muuntaa _BaseColorin lineaariseksi lineaarisessa projektissa.
-                rajaOma.SetColor("_BaseColor", new Color((float)m[0], (float)m[1], (float)m[2], (float)peitto * rajaAlfa * rajaHaive));
+                rajaOma.SetColor("_BaseColor", new Color((float)m[0], (float)m[1], (float)m[2], (float)peitto * rajaAlfa * rajaHaive * saapumisKerroin));
                 return;
             }
-            rajaOma.SetColor("_BaseColor", new Color(perus.Reuna.R, perus.Reuna.G, perus.Reuna.B, perus.Reuna.A * rajaHaive));
+            rajaOma.SetColor("_BaseColor", new Color(perus.Reuna.R, perus.Reuna.G, perus.Reuna.B, perus.Reuna.A * rajaHaive * saapumisKerroin));
         }
 
         /// <summary>Ruudun tiheys (px/°) viimeksi, kun vektorirajat olivat mahdollisia (tila-komennot, mittarit).</summary>
@@ -736,6 +772,7 @@ namespace Matkakirja
             if (kuori != null) kuori.sharedMaterial.SetFloat("_Haive", 0f);
         }
 
+
         void PaivitaHaive()
         {
             if (haiveAlku < 0f || kuori == null) return;
@@ -747,8 +784,10 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (maakohtainen) PaivitaHaive();
+            bool saapuminenMuuttui = PaivitaSaapuminen();
             rajaHaiveLiikkuu = false;
             if (rajaOma == null || rajat == null || georeferenssi == null) return;
+            if (saapuminenMuuttui) AsetaRajanVari();
             bool sallittu = NakyyNyt;
             if (!sallittu && rajaHaive <= 0f && !rajat.enabled) return;
             // Löydös 74 d: vakioleveä viiva (Rajaviiva _Paksuus pisteinä) sulaa kaukana läiskäksi, joten rajat vasta
