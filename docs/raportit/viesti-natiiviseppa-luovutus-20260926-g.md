@@ -103,3 +103,7 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
   Julkaisijalle (TF 1.0.18 Fablen ohjeesta; aseta /tmp/natiiviseppa-vienti-tulossa kun vienti alkaa, poista kun valmis).
   Avoinna build 19: 144 aaltoilu videotodennus; löydös "laajennettu nostokortti jää auki linssin avauksen yli" (Natiivi-UI).
   Build 19 -merget (im2-ohjaus, lepo-suspend) junaan vasta 1.0.18-viennin JÄLKEEN, ettei vahdin käännös viivästytä vientiä.
+- **Build 19 -juna juna/b13 4586288e** (Fable: juna auki): pelikoodari/verkko-raja bd27ed1d, pelikoodari/humina-muunnelmat 7d41a3df,
+  natiivi-ui/im2-ohjaus d56afbd5 (testit 278/284/300). Odottaa: natiivi-ui/linssi-sulkee-s3 198ecc30 (S3-korjaus) laitetodennuksen
+  jälkeen; lepo-suspend 651ad27b A/B:n jälkeen. 144-video lokit/natiivi-ui-b18/k144-lippu-rajattu-4x-silmukka.mp4. TF 1.0.18 -vienti
+  käynnissä 04.52 (vientilippu päällä → poista, kun Julkaisija ilmoittaa valmiiksi).
