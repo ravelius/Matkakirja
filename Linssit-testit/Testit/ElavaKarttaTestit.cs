@@ -251,5 +251,71 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(MusteJalki.Loyto(0).Peitto - MusteJalki.JaljenPeitto) < 1e-9 && Math.Abs(MusteJalki.Loyto(0.3).Peitto - 1) < 1e-9, "jäljestä täyteen");
             Oleta.Tosi(Math.Abs(MusteJalki.Loyto(0.3).Mittakaava - 1) < 1e-9 && Enumerable.Range(0, 31).Max(i => MusteJalki.Loyto(i / 100.0).Mittakaava) > 1.0, "jousi yli 1:n");
         }
+            const string Reitit1873Json = "{\"alkiot\":[" +
+            "{\"id\":\"laiva-a\",\"laji\":\"laiva\",\"nimi\":\"A\",\"viivat\":[[[20,38],[21,38],[22,38],[23,38],[24,38]]]}," +
+            "{\"id\":\"rata-b\",\"laji\":\"rautatie\",\"nimi\":null,\"viivat\":[[[2,48],[3,48.5]]]}," +
+            "{\"id\":\"tyhja\",\"laji\":\"laiva\",\"viivat\":[[[1,1]]]}]}";
+
+        [Testi] static void Reitit1873Jasennys()
+        {
+            var r = Reitti1873.Jasenna(Reitit1873Json);
+            Oleta.Sama(2, r.Count, "yhden pisteen viiva pois");
+            Oleta.Tosi(r[0].Laiva && !r[1].Laiva, "laji");
+            Oleta.Tosi(r[0].Viivat[0][0].Lat == 38 && r[0].Viivat[0][0].Lon == 20, "[lon, lat] → LatLon(lat, lon)");
+            Oleta.Tosi(r[0].MinLon == 20 && r[0].MaxLon == 24 && r[1].MaxLat == 48.5, "rajauslaatikko");
+            Oleta.Sama(0, Reitti1873.Jasenna("{}").Count);
+        }
+
+        [Testi] static void HetkiAjastinLykkaa()
+        {
+            var a = new HetkiAjastin(7, 1000);
+            Oleta.Tosi(a.Seuraava >= 1045 && a.Seuraava <= 1120, "ensimmäinen 45–120 s");
+            Oleta.Tosi(!a.Tarkista(1040, true), "ei ennen aikaa");
+            double s = a.Seuraava;
+            Oleta.Tosi(!a.Tarkista(s, false) && Math.Abs(a.Seuraava - (s + HetkiAjastin.LykkaysS)) < 1e-9, "varattu lykkää");
+            double t = a.Seuraava;
+            Oleta.Tosi(a.Tarkista(t, true), "vapaa käynnistää");
+            Oleta.Tosi(a.Seuraava >= t + 120 && a.Seuraava <= t + 300, "seuraava 2–5 min");
+        }
+
+        [Testi] static void HetkenValintaNakyvalta()
+        {
+            var reitit = Reitti1873.Jasenna(Reitit1873Json);
+            var keskus = new LatLon(38, 22);
+            var satunnainen = new Random(3);
+            Oleta.Sama(null, HetkenValinta.Valitse(satunnainen, keskus, 400, reitit, null, pakota: HetkenLaji.Juna), "rata ei näy");
+            for (int i = 0; i < 20; i++)
+            {
+                var h = HetkenValinta.Valitse(satunnainen, keskus, 400, reitit, null, pakota: HetkenLaji.Laiva);
+                Oleta.Tosi(h != null && h.Laji == HetkenLaji.Laiva, "laiva näkyvällä reitillä");
+                double km = h.Rata.Pituus * ElavaKohtaus.KmAsteella, odotus = Hetki.RadanOsuus(HetkenLaji.Laiva) * 800;
+                Oleta.Tosi(km > odotus * 0.5 - 1 && km < odotus + 1, $"radan pituus {km:F1} km (odotus {odotus:F0})");
+                Oleta.Tosi(h.Rata.Pisteet.All(p => Math.Abs(p.Lat - 38) < 0.01), "rata reittiä pitkin");
+            }
+            var maakunnat = Kolme();
+            for (int i = 0; i < 30; i++)
+            {
+                var h = HetkenValinta.Valitse(satunnainen, keskus, 400, reitit, maakunnat, edellinen: HetkenLaji.Laiva);
+                Oleta.Tosi(h != null && h.Laji != HetkenLaji.Laiva && h.Laji != HetkenLaji.Juna, "sama laji ei toistu, rata ei näy");
+                if (h.Laji == HetkenLaji.Sade)
+                {
+                    double s = HetkenGeometria.Suuntima(h.Rata.Pisteet[0], h.Rata.Pisteet[h.Rata.Pisteet.Length - 1]);
+                    Oleta.Tosi(s >= 55 && s <= 125, $"sade länsituulessa ({s:F0}°)");
+                }
+            }
+        }
+
+        [Testi] static void HetkenPeittoJaGeometria()
+        {
+            var h = new Hetki(HetkenLaji.Parvi, new[] { new LatLon(40, 20), new LatLon(40, 21) }, "x", 1);
+            Oleta.Tosi(Hetki.Kesto <= 3, "hetki ≤ 3 s");
+            Oleta.Tosi(h.Peitto(0) == 0 && Math.Abs(h.Peitto(1.5) - 1) < 1e-9 && h.Peitto(Hetki.Kesto) == 0, "sisään ja ulos");
+            Oleta.Tosi(Math.Abs(h.Suunta(1.5) - 90) < 1, "itään");
+            var q = HetkenGeometria.Kohde(new LatLon(40, 20), 90, 1);
+            Oleta.Tosi(Math.Abs(Kameramatikka.KulmaAsteina(new LatLon(40, 20), q) - 1) < 1e-6, "kohde kulman päässä");
+            Oleta.Tosi(Math.Abs(HetkenGeometria.Suuntima(new LatLon(40, 20), q) - 90) < 1e-6, "suuntima");
+            var takaisin = HetkenValinta.ViivaaPitkin(new[] { new LatLon(0, 0), new LatLon(0, 1), new LatLon(0, 2) }, 2, 1.5, true);
+            Oleta.Tosi(takaisin != null && Math.Abs(takaisin[takaisin.Length - 1].Lon - 0.5) < 1e-6, "viivan päästä taaksepäin");
+        }
     }
 }

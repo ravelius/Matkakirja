@@ -24,7 +24,8 @@
 // pysäyttää kohtaan s (pysäytyskuvat), "elava jatka", "elava pois" (kartta ennalleen), "elava tila" ja "elava ui 0|1"
 // (käyttöliittymä piiloon kohtauksen ajaksi, oletus 0 = piiloon); saapumiselle "elava saapuminen <kaupunki>" (testiajo
 // saapumisajoineen), "elava saapumiset 0|1" (automaattinen laukaisu), "elava kaikki 0|1" (myös jo käydyt maat) ja
-// "elava herata <ISO:tunnus>" (maakunnan herätys, ElavaHerays) ja "elava reitti <kaupungit…> | pois" (ElavaMatka).
+// "elava herata <ISO:tunnus>" (maakunnan herätys, ElavaHerays) ja "elava reitti <kaupungit…> | pois" (ElavaMatka),
+// "elava hetki [laiva|juna|parvi|sade]" ja "elava hetket 0|1|tila" (ElavatHetket).
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -163,6 +164,13 @@ namespace Matkakirja.Natiivi
                     break;
                 case "saapuminen":
                     if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain);
+                    break;
+                case "hetki":
+                    ElavatHetket.Testi(osat.Length > 2 ? osat[2] : null, ohjain);
+                    break;
+                case "hetket":
+                    if (osat.Length > 2 && osat[2] != "tila") ElavatHetket.Paalla = osat[2] != "0";
+                    ohjain.Kirjaa("elävät hetket: " + ElavatHetket.Tila());
                     break;
                 case "reitti":
                     if (osat.Length > 2) ElavaMatka.Testi(osat.Skip(2).ToArray(), ohjain);
@@ -416,6 +424,8 @@ namespace Matkakirja.Natiivi
             MusteJaljet.Valmistele();
             // Kohta 4: kirjoitettu maailma (kuljettu reitti kynänjälkenä, käytyjen kaupunkien hehku kaukana).
             ElavaMatka.Kytke(ohjain);
+            // Kohta 5: elävät hetket (3 s:n hetki 2–5 min välein, lepopiirto säilyy).
+            ElavatHetket.Kytke(ohjain);
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
