@@ -26,7 +26,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 Ei avoimia jumeja. Fablen oma nollaus vielä kesken (92 %, odottaa pyyntöä).
 
-**Uusi kysymys Fablelle (17:48):** työtila-poikkeama havaittu `tarkista-tyotilat.sh`:llä — git worktree `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/worktrees/pulu-kartalta-poistuminen-20260926` (haara `codex/pulu-kartalta-poistuminen-20260926`) ei täsmää skriptin poikkeuslistaan (`/Users/samireivinen/Documents/Codex/…`). Ilmeisesti Codexin oma polku ulkoisella levyllä — Fable päättää onko hyväksytty.
+**Ratkaistu (Fable 17:5x):** T7-Codex-worktree HYVÄKSYTTY, ei poikkeama — Codexin oma työtila. Sääntö: kaikki polut joissa "Codex" tai "ChatGPT" ohitetaan Clauden työtilatarkistuksessa. Pyydetty Julkaisijalta pieni tools-PR laajentamaan `tools/tarkista-tyotilat.sh`:n poikkeuslistaa (nykyinen grep -v kattaa vain `/Users/samireivinen/Documents/Codex/`).
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Omistaja poissa koneelta 26.–27.9. — ei mittausikkunaa, kortit voivat olla auki pitkään, muistutus 2 h välein (ei 10 min).
