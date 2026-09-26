@@ -107,3 +107,4 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
   natiivi-ui/im2-ohjaus d56afbd5 (testit 278/284/300). Odottaa: natiivi-ui/linssi-sulkee-s3 198ecc30 (S3-korjaus) laitetodennuksen
   jälkeen; lepo-suspend 651ad27b A/B:n jälkeen. 144-video lokit/natiivi-ui-b18/k144-lippu-rajattu-4x-silmukka.mp4. TF 1.0.18 -vienti
   käynnissä 04.52 (vientilippu päällä → poista, kun Julkaisija ilmoittaa valmiiksi).
+- linssiseppa/tehoste-rekisteri 859b937a (linssien kilahdus/naksahdus tehosteväylälle) → juna/b13 **923be3b0** (testit 278/284/300).
