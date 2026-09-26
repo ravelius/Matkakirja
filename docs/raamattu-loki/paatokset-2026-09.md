@@ -6263,3 +6263,7 @@ Fable kuittasi 04.1x. Build 17 koottiin ennen näitä; Natiiviseppä mergeää b
 ## BUILD 17 TESTFLIGHTISSA 04.12: 1.0.17 (CFBundleVersion 202609260103, AJO 36206983409, proto d04841a0 = MASTER 6a65ead1, LASKURI 17, LuoPallo AJETTU, YOMERKKI 6a65ead1) → PUSH OMISTAJALLE LAHETETTY; JULKAISIJA ALOITTAA KARTTANOSTOJEN KUIVA-AJON (#3282, LOYDOS 149) (26.9.2026 klo 04.13)
 
 Sisältö: kehyksen hinta -korjaus (50 → 13 ms) + PiiloVartija, 121–124, 125, 126–128 + 113, 130–143 (146 v2), 147–148 + Ken Burns, lento v2 12 s, jumivahti. Poikkeamat S1 (lepopiirto) ja S2 (143 rivitys) build 18:aan.
+
+## CODEX 504 ERAT 8 (55 KUVAA) JA 9 (49 KUVAA: RIO, SALALAH, SAMARKAND, SANA, SAN FRANCISCO, SEVILLA) → SISALTOKIRJURI TARKISTAA JA TEKEE PR:T KUTEN ERAT 4–7; 409/504 R2:SSA, 95 JALJELLA; POSTIVAHTI 04.16: VIIKKO 87 % (VAUHTI ≲ 3 %/h, 90 % ~05.30), 5 h 23 %, LEVY 127 Gt, 99eaf8d9 ODOTTAA NIPUTUSTA (26.9.2026 klo 04.16)
+
+Fable 04.1x. Musiikkisuunnitelman #3272 punainen testi oli mainin niputusvian ajalta → ajettu uudelleen.
