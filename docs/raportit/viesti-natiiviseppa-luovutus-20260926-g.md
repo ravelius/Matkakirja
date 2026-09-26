@@ -87,3 +87,6 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
   "KÄÄNNETTY <käännös> juna/b13" -rivi, varmista käännöksen toinen vanhempi = 541092d9 (git -C Matkakirja-proto-kaannos log -1
   --format=%p <käännös>), ilmoita käännös-SHA Laitetestaajalle ja Fablelle. Master-merge vasta PASSin jälkeen (puu = käännöksen puu).
   Yhdistelmäkäännös (suspend-A/B) peruttu; lepo-suspend 651ad27b odottaa build 19:ää.
+- **Klo 04.38 BUILD 18 KÄÄNNETTY e85255cd** (= master 6a65ead1 + juna 541092d9, puu d3206794), asennettu Laitetestaajan ja pariteetin
+  simulaattoreihin; SHA Laitetestaajalle ja Fablelle. SEURAAVAKSI: Laitetestaajan PASS → Matkakirja-proto: `git merge --no-ff
+  juna/b13` (tarkista puu = d3206794) → SHA Fablelle + Julkaisijalle.
