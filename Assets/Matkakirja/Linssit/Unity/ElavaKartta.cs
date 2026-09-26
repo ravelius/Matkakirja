@@ -306,7 +306,8 @@ namespace Matkakirja.Natiivi
                     foreach (var r in a.Renkaat) if (r.Length >= 3) em.Renkaat.Add(r.Select(p => new LatLon(p.Lat, p.Lon)).ToArray());
                     lista.Add(em);
                 }
-            maakunnatMaittain[iso] = lista;
+            // Ennen maakuntarajojen latausta ei välimuistiin (muuten maa jäisi tyhjäksi koko istunnoksi).
+            if (jako != null) maakunnatMaittain[iso] = lista;
             return lista;
         }
 
