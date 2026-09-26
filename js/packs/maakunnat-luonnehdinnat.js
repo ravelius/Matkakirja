@@ -7832,66 +7832,113 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Viseu            — Lamego (686 porrasta, Nossa Senhora dos Remédios;
    *                      "Legend holds" ensimmäiset Cortes 1143)
    */
+  /*
+   * PRT PITKA (Sisältökirjuri 26.9.2026, maakunta-erä 2). Lähteet
+   * (en-Wikipedia + muut, WebSearchilla tarkistettu 26.9.2026):
+   *   Aveiro — moliço-levän keräys (lannoite ennen kemiallisia)
+   *   Azores — Mount Pico; Pico Island (fylloksera 1872–1874)
+   *   Beja — Mértola (moskeija→kirkko 1238)
+   *   Braga — Bom Jesus do Monte Funicular (1882); Water balance railway
+   *   Bragança — Mirandese language (tunnustus 1999)
+   *   Castelo Branco — Monsanto (Portugalilaisin kylä 1938)
+   *   Coimbra — Biblioteca Joanina (1717–1728, lepakot)
+   *   Évora — Capela dos Ossos
+   *   Faro — Lighthouse of Cabo de São Vicente (1846, sähkö vasta myöh.)
+   *   Guarda — Guarda Cathedral
+   *   Leiria — Praia do Norte; Nazaré Funicular (1889)
+   *   Lisboa — Cabo da Roca (sähkövalo 1897); National Palace of Pena
+   *     (1842–1854)
+   *   Madeira — Levadas of Madeira Island (Rabaçal, Furado Velho 1855)
+   *   Portalegre — Elvas (Amoreira-vesijohto 1622, linnoitukset 1600–1800-l.)
+   *   Porto — Dom Luís I Bridge (1886); Maria Pia Bridge (1877)
+   *   Santarém — Our Lady of Fátima (ilmestykset 1917); Festa dos
+   *     Tabuleiros
+   *   Setúbal — Roman ruins of Tróia; Setúbalin säilyketeollisuus 1850-l.
+   *   Viana do Castelo — Santa Luzia -basilika (1904–1959)
+   *   Vila Real — Alto Douro Wine Region (fylloksera 1871 alkaen; rata
+   *     Régualle 1879)
+   *   Viseu — Sanctuary of Our Lady of Good Remedy (Lamego, valmistui 1905)
+   */
   PRT: {
     Aveiro: {
       lyhyt: 'Aveiroa kutsutaan Portugalin Venetsiaksi: moliceiro-veneet keräsivät ennen kanavilla levää, nyt ne kuljettavat matkailijoita.',
+      pitka: `Aveiro on nykyään turisteille tuttu kaupunki, jossa kirkkaanväriset moliceiro-veneet kuljettavat matkailijoita kanavilla ja Art Nouveau -julkisivut kilpailevat huomiosta kaupungin keskustassa. 1800-luvulla samat veneet olivat arkisia työkaluja: niillä kerättiin ria-lahden pohjasta moliço-levää, jota levitettiin lannoitteeksi hiekkaisille pelloille, ja lahden rannoilla kohosi suolakekoja niin korkeina, että yksi kanava sai nimensä pyramideista. Isoisän matkatessa alueella 1873 veneet olivat siis yhä työveneitä, ei koristeltuja huviretkiveneitä – matkailijaa niissä ei olisi nähnyt, vain levänkerääjän ja suolantekijän. Vasta kun kemialliset lannoitteet syrjäyttivät moliçon 1900-luvulla, veneet vaihtoivat rahdin matkailijoihin.`,
     },
     Azores: {
       lyhyt: 'Azorien Pico-saaren tulivuori kohoaa keskellä Atlanttia 2 351 metriin – se on koko Portugalin korkein vuori.',
+      pitka: `Azorien Pico-saaren tulivuori on Portugalin korkein kohta, 2 351 metriä keskellä Atlanttia, ja sen mustan laavan täyttämät currais-viinitarhat ovat nykyään Unescon maailmanperintökohde. 1800-luvun puolivälissä sama rinne tuotti vuosittain jopa 15 000 tynnyriä vahvaa Verdelho-viiniä, jota Venäjän aatelisto arvosti pöydässään – mutta juuri isoisän matkan aikaan, vuosina 1872–1874, viiniä tuhoava fylloksera-kirva levisi saarelle ja tuho oli täydellinen: tuotanto romahti muutamaan sataan tynnyriin ja moni viljelijä lähti siirtolaiseksi. Isoisä olisi siis nähnyt Picon viinimäet juuri siinä hetkessä, kun vuosisatoja vanha vienti alkoi hävitä silmien edessä, ei enää kukoistuksessaan.`,
     },
     Beja: {
       lyhyt: 'Mértolan pääkirkko oli alun perin moskeija, ja kun kaupunki valloitettiin 1238, rakennus muutettiin kirkoksi muotoaan hävittämättä.',
+      pitka: `Mértolan pääkirkko on nykyään suosittu pysähdyspaikka Alentejon matkailijoille: harvinainen rakennus, jossa moskeijan mihrab-seinäkomero osoittaa yhä Mekkaan kirkon alttarin vierellä. Rakennus nousi moskeijaksi 1100-luvulla, ja kun kuningas Sancho II valtasi kaupungin 1238, se muutettiin kirkoksi muotoaan juuri koskematta – ainutlaatuinen ratkaisu, joka säästyi sekä Reconquistan että vastauskonpuhdistuksen tuholta. Isoisän saapuessa 1873 rakennus oli seisonut kirkkona jo 635 vuotta, ja hän näki täsmälleen saman mihrabin kuin nykyinen matkailija – Mértolassa aika on tässä mielessä pysähtynyt isoisän ajoista tähän päivään.`,
     },
     Braga: {
       lyhyt: 'Bom Jesus do Monten pyhäkölle nousee vuodesta 1882 köysirata, jota liikuttaa yhä vesipaino – maailman vanhin laatuaan.',
+      pitka: `Bom Jesus do Monten pyhäkölle kipuaa nykyään vesipainoinen köysirata, joka on toiminut katkeamatta vuodesta 1882 – maailman vanhin laatuaan, sillä täysi vaunu vetää tyhjän ylös pelkällä painovoimalla, ei sähköllä. Isoisän vieraillessa Bragassa 1873 köysirataa ei ollut vielä rakennettu: hän olisi joutunut kiipeämään pyhäkön kuuluisan siksak-portaikon jalan, samaa reittiä, jota barokkiaikaiset pyhiinvaeltajat olivat kulkeneet vuosikymmenten ajan ennen häntä. Vasta yhdeksän vuotta isoisän matkan jälkeen sveitsiläinen insinööri Niklaus Riggenbach rakensi radan, joka yhä tänään kuljettaa matkailijoita samaa 274 metrin nousua.`,
     },
     'Bragança': {
       lyhyt: 'Miranda do Douron seudulla puhutaan omaa mirandeesin kieltä, joka tunnustettiin virallisesti 1999 – puhujia on noin 3 500.',
+      pitka: `Miranda do Douron seudulla puhutaan nykyään virallisesti tunnustettua mirandeesin kieltä, jolla on oma kielilaki vuodelta 1999 ja vielä noin 3 500 puhujaa – pieni, sitkeä kieliyhteisö Portugalin ja Espanjan rajaseudulla. Isoisän kulkiessa alueen kylissä 1873 samaa kieltä puhuttiin jo, mutta se oli vain talonpoikien murre vailla mitään virallista asemaa – kukaan sivistynyt lissabonilainen ei olisi tunnustanut sitä omaksi kielekseen, vaan pitänyt sitä rappeutuneena portugalin muotona. Tunnustus antoi kielelle arvon vasta 126 vuotta myöhemmin, kauan isoisän ajan jälkeen.`,
     },
     'Castelo Branco': {
       lyhyt: 'Monsanton kylän talot on muurattu jättimäisten graniittilohkareiden väliin, ja 1938 se valittiin Portugalin portugalilaisimmaksi kyläksi.',
+      pitka: `Monsanton kylä kyyristyy nykyään jättimäisten graniittilohkareiden lomaan täsmälleen niin kuin ennenkin, ja 1938 kylä voitti kilpailun Portugalin portugalilaisimmasta kylästä – tittelin, jota ei ole sen jälkeen jaettu kenellekään muulle. Kivitalot olivat isoisän aikaan 1873 samat: ensimmäiset asukkaat olivat sovittaneet pienet mökkinsä lohkareiden väliin ja alle vuosisatoja aiemmin, koska kiviä ei yksinkertaisesti jaksettu siirtää. Ero on siinä, että isoisän aikaan kylä oli vain syrjäinen, unohdettu vuorikylä ilman mainetta – kukaan ei matkustanut sinne ihailemaan sitä, ja tittelin tuoma huomio saapui vasta 65 vuotta myöhemmin, Estado Novon aikana.`,
     },
     Coimbra: {
       lyhyt: 'Coimbran yliopiston barokkikirjastossa Biblioteca Joaninassa asuu lepakoita, jotka syövät öisin kirjoja uhkaavat hyönteiset.',
+      pitka: `Coimbran yliopiston barokkikirjasto Biblioteca Joanina on nykyään ihailtu nähtävyys, jonka hämärissä hyllyissä asustaa lepakkoyhdyskunta – öisin ne saalistavat kirjoja syöviä hyönteisiä, ja illalla pöydät peitetään nahalla lepakon jätösten varalta. Kirjasto rakennettiin vuosina 1717–1728 kuningas João V:n tilauksesta, ja lepakot ovat asuneet siellä arviolta 250 vuotta, joten isoisän vieraillessa 1873 sekä rakennus että sen siivekkäät vartijat olivat jo paikoillaan – hän olisi kävellyt saman kultareunaisen kirjahyllyn ohi kuin nykyinen matkailija, tietämättä että katossa lepäsi lepakoita. Muuten mikään ei ole muuttunut: kokoelma ja rakennus näyttävät isoisän ajoista tähän päivään suunnilleen samalta.`,
     },
     'Évora': {
       lyhyt: 'Évoran Luukappelin seinät on vuorattu noin 5 000 vainajan luilla, ja oven yllä lukee: me luut täällä odotamme teidän luitanne.',
+      pitka: `Évora on Alentejon yliopistokaupunki, jonka kivetyillä kujilla tuoksuu paahdettu korkki ja jonka Pyhän Fransiskuksen kirkon kupeesta löytyy yksi Euroopan makaabereimmista nähtävyyksistä, Luukappeli (Capela dos Ossos). Sen seinät on vuorattu noin 5 000 vainajan luilla, ja sisäänkäynnin yläpuolella lukee muistutus: me luut täällä odotamme teidän luitanne. Kappelin rakensivat 1500-luvulla fransiskaanimunkit, koska kaupungin viiden hautausmaan luille oli loppumassa tila, ja luiden järjestäminen oli aikansa hartaustapa, ei kauhuviihdettä. Isoisän aikaan 1873 kappeli oli jo kolmisataa vuotta vanha nähtävyys – hän katsoi täsmälleen samaa luusommitelmaa jonka sinäkin näet, ei kiveäkään ole siirretty sen jälkeen.`,
     },
     Faro: {
       lyhyt: 'Algarven Cabo de São Vicente on Manner-Euroopan lounaisin kärki, ja sen majakan valo näkyy merelle 60 kilometrin päähän.',
+      pitka: `Cabo de São Vicente Algarven lounaiskärjessä on Manner-Euroopan lounaisin piste, ja nykyään sen majakan valo kantaa merelle 60 kilometrin päähän – niemellä istuu iltaisin rivi kalastajia ja auringonlaskun katsojia paikassa jota kutsutaan "maailman loppuna". Majakka nousi vuonna 1846 keskiaikaisen fransiskaanikonventin raunioille sen jälkeen, kun Portugali lakkautti uskonnolliset veljeskunnat ja otti niiden omaisuuden haltuunsa. Isoisän aikaan 1873 majakka oli siis jo parikymmentä vuotta vanha ja isoisä olisi nähnyt saman kivitornin kuin sinäkin – vaikka sen valo paloi hänen aikanaan yhä öljylampulla, ei sähköllä.`,
     },
     Guarda: {
       lyhyt: 'Guarda on 1 056 metrissä Portugalin korkeimmalla sijaitseva kaupunki, ja sitä kutsutaan viiden F:n kaupungiksi – yksi niistä on fria, kylmä.',
+      pitka: `Guarda on Portugalin korkein kaupunki, 1 056 metrissä Serra da Estrelan kainalossa, ja paikalliset kutsuvat sitä viiden F:n kaupungiksi – forte, farta, fria, fiel, formosa: vahva, runsas, kylmä, uskollinen, kaunis. Talvella lunta kertyy kaduille enemmän kuin missään muualla maassa, ja harmaat graniittitalot on rakennettu kestämään se. Kaupungin katedraali, Sé da Guarda, nousee keskiajan rajakaupungin ytimessä kuin linnoitus – sen rakentaminen kesti 1300-luvun lopulta 1500-luvun puoliväliin. Isoisän aikaan 1873 katedraali oli ollut valmiina jo kolmisataa vuotta, ja Guarda oli tuolloinkin täsmälleen se kylmä, kivinen raja-vartiokaupunki jonka sinäkin näet.`,
     },
     Leiria: {
       lyhyt: 'Nazarén edustalla kulkee noin 5 000 metriä syvä merenalainen kanjoni, joka nostaa Praia do Norten jättiaallot – niillä on surffattu maailmanennätyksiä.',
+      pitka: `Nazarén rannassa Leirian maakunnassa kokoontuu talvisin maailman parhaita isoaaltosurffareita, sillä Praia do Norten edustalla avautuva lähes 5 000 metriä syvä merenalainen kanjoni puskee syys–maaliskuussa paikalle jättiaaltoja, joilla on rikottu maailmanennätyksiä vuodesta 2011 lähtien. Ranta ja sen yllä kohoava kalliokylä Sítio ovat kuuluneet yhteen aina, mutta jyrkkä nousu niiden välillä piti pitkään kulkea jalan tai aasin selässä. Vasta vuonna 1889 valmistui köysirata, joka vieläkin kuljettaa matkailijoita kalliolle – isoisän vieraillessa 1873 sitä ei ollut, nousu piti tehdä samalla tavalla kuin kalastajat olivat tehneet vuosisatoja.`,
     },
     Lisboa: {
       lyhyt: 'Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta.',
+      pitka: `Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta kalliolta – matkailijat hakevat siellä yhä paperisen sertifikaatin todisteeksi käynnistä maailman äärellä. Majakka oli rakennettu jo vuonna 1772, mutta sen valo kulki isoisän aikaan yhä öljyllä: lupa sähkövalaistukseen myönnettiin vasta 1883 ja se otettiin käyttöön 1897, vuosikymmeniä isoisän matkan jälkeen. Muutaman kilometrin päässä metsäisellä vuorenhuipulla kohoaa satumainen, kirkkaan värinen Pena-palatsi, jonka kuningas Ferdinand II rakennutti vuosina 1842–1854. Isoisän saapuessa 1873 palatsi oli siis vain parikymmentä vuotta vanha ja tuoreen uusi nähtävyys – ei se vuosisatoja paikallaan seisonut linna jonka nykymatkailija mielessään näkee.`,
     },
     Madeira: {
       lyhyt: 'Madeiran vuorenrinteillä kiemurtelee yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja.',
+      pitka: `Madeiran vuorenrinteillä kiemurtelee nykyään yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja saaren vuoristoisessa sisäosassa laaksosta laaksoon. Kanavat syntyivät alkujaan yksityisten tilan- ja lähteenomistajien voimin, mutta 1800-luvulla viinintuotannon kriisi ajoi valtion rahoittamaan uusia, aiempaa suurempia levadoja. Isoisän aikaan 1873 saarella oltiin juuri tämän valtion rahoittaman rakennusbuumin keskellä – esimerkiksi Rabaçalin levadan 1855 valmistunut Furado Velho -tunneli oli silloin vain parikymmentä vuotta vanha, arkinen ihme jota isoisä olisi voinut nähdä yhä rakenteilla naapurilaaksoissa.`,
     },
     Portalegre: {
       lyhyt: 'Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on Unescon maailmanperintöä.',
+      pitka: `Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on nykyään Unescon maailmanperintöä – muurien sisällä eletään yhä tavallista alentejolaista arkea, ei museossa. Kaupungin vedet kulkevat 1500-luvulla alkunsa saaneessa ja 1622 valmistuneessa Amoreira-vesijohdossa, joka kantaa vettä yli seitsemän kilometrin päästä nelikerroksisten kaariholvien läpi. Linnoitukset itse muotoutuivat nykyiseen laajuuteensa vasta 1600–1800-luvuilla hollantilaisen insinöörin Cosmanderin suunnitelmien mukaan. Isoisän aikaan 1873 Elvas oli siis edelleen toimiva raja-varuskunta, ei rauhoitettu nähtävyys – sen viimeisimmätkin linnoituslaajennukset olivat vain vuosikymmenten takaa.`,
     },
     Porto: {
       lyhyt: 'Douron etelärannalla Vila Nova de Gaian kellareissa kypsyy portviini, ja kellareista on tullut Porton seudun suuri nähtävyys.',
+      pitka: `Porto on nykyään yli 200 000 asukkaan kaupunki, jonka graniittiset kujat ja Riberian UNESCO-listattu vanhakaupunki houkuttelevat miljoonia matkailijoita Douron rannoille – joella kuhisee risteilyveneitä ja illalla baarien valot heijastuvat veteen. Jokea reunustaa nykyään kaksi rautaista siltaa, Ponte de Dom Luís I ja rautatiesilta Ponte Maria Pia, joiden suunnittelijoina olivat Gustave Eiffelin oppilas Théophile Seyrig ja Eiffel itse. Isoisän aikaan 1873 kumpaakaan ei ollut vielä olemassa: Maria Pia valmistui 1877 ja Dom Luís I vasta 1886, joten hän olisi ylittänyt joen veneellä tai kapealla riippusillalla, ei rautaisella kaarella korkealla kaupungin yllä. Douro oli silti jo täynnä viinilaivoja matkalla Vila Nova de Gaian kellareihin – se osa maisemasta ei ole muuttunut.`,
     },
     'Santarém': {
       lyhyt: 'Tomarin Festa dos Tabuleirosissa tytöt kantavat päänsä päällä 30 leivästä pinottuja kukkatarjottimia – juhla pidetään joka neljäs vuosi.',
+      pitka: `Santarémin maakunta tunnetaan nykyään ennen kaikkea Fátiman pyhiinvaelluspaikasta, jonne saapuu vuosittain miljoonia matkailijoita ja uskovia ympäri maailman suuren basilikan eteen. Vuonna 1873 Fátima ei ollut mitään erityistä – vain tavallinen paimenkylä Keski-Portugalin kukkuloilla, sillä kolmen lapsen kertomat Neitsyt Marian ilmestykset tapahtuivat vasta 1917, kymmeniä vuosia isoisän matkan jälkeen. Samaan aikaan Tomarin Tabuleiros-juhlassa tytöt ovat kantaneet päänsä päällä leipätarjottimia jo satojen vuosien ajan – perinne juontaa keskiajan Pyhän Hengen veljeskuntiin, joten isoisä olisi hyvin voinut nähdä samankaltaisen kulkueen. Tejo-joen keskellä kohoava Almourolin linna, ristiretkeläisten temppeliherrojen linnoitus, oli jo silloin vuosisatoja vanha muistomerkki, ei tuore rakennus.`,
     },
     'Setúbal': {
       lyhyt: 'Setúbalin Sadojoessa elää delfiiniyhdyskunta, ja kaupungin kupeessa kohoavat Arrábidan luonnonpuiston kukkulat.',
+      pitka: `Setúbal on nykyään elävä satamakaupunki, jonka rannalta pääsee lautalla parissakymmenessä minuutissa Tróian niemelle valkoisille hiekkarannoille ja loma-asuntoalueille. Niemen kärjessä nousevat esiin antiikin Cetóbrigan rauniot, jossa roomalaiset valmistivat garumia, voimakkaasti maustettua kalakastiketta, jota vietiin ympäri valtakuntaa – paikka oli jo isoisän aikaan vuosituhannen vanha jäänne. Vuonna 1873 Setúbal oli myös nuoren teollisuuden kaupunki: ensimmäiset sardiinisäilyketehtaat oli perustettu 1850-luvulla, ja isoisä olisi saattanut nähdä juuri näitä savuavia tehtaita ja tynnyreitä satamassa, sillä Setúbalista kehittyi vuosisadan loppuun mennessä Portugalin säilyketeollisuuden sydän. Tänään Sadojoen suistossa asuu myös Euroopan harvinaisimpia pysyviä delfiiniyhdyskuntia, ja niiden tarkkailu veneestä on suosituimpia retkiä alueella.`,
     },
     'Viana do Castelo': {
       lyhyt: 'Viana do Castelon satamassa on sairaalalaiva Gil Eannes, joka saattoi turskanpyytäjiä Newfoundlandiin 1955–1973 – nyt se on museo.',
+      pitka: `Viana do Castelon yllä kohoava Santa Luzian basilika on nykyään kaupungin maamerkki, jonka portaille kiipeää vuosittain tuhansia matkailijoita nauttimaan näköalasta Lima-joelle ja Atlantille. Isoisän aikaan 1873 basilikaa ei ollut olemassa lainkaan – sen rakentaminen alkoi vasta 1904 ja sisätilat valmistuivat vuonna 1959, joten mäellä seisoi vielä pelkkä pieni kappeli. Alakaupungin Praça da República sen sijaan oli isoisän aikaan jo vuosisatoja vanha – 1500-luvulla rakennettu Misericórdian talo ja Chafariz-suihkulähde seisoivat paikallaan silloinkin. Juhlapäivinä kaduilla näkyy edelleen paikallisia Vianan perinnepuvussa ja kultaisin filigraanikoruin, perinne joka vakiintui juuri 1800-luvulla – isoisä olisi voinut nähdä samanlaisen kulkueen torilla.`,
     },
     'Vila Real': {
       lyhyt: 'Vila Realin barokkipalatsi Mateus on antanut nimensä Mateus-roseeviinille, ja sen suunnitteli 1700-luvulla Nicolau Nasoni.',
+      pitka: `Vila Realin maakunta on Douro-joen viinialueiden sydän, ja sen kaupunki Peso da Régua toimii nykyään risteilylaivojen ja viinimatkailijoiden porttina Alto Douron UNESCO-maailmanperintöalueelle. Vuonna 1873 alueen viinitarhoja koetteli jo etenevä phylloxera-kirvakriisi, joka levisi Douroon 1871 alkaen ja tuhosi vanhat viiniköynnökset – nykyiset, tarkasti muotoillut terassit istutettiin vasta kriisin jälkeen 1880-luvulla ja sen jälkeen, niin että isoisän näkemä maisema oli rosoisempi ja osin kuihtunut. Rautatie, joka nykyään kuljettaa matkailijoita jokilaaksoa pitkin, ei ollut vielä valmis: raiteet ulottuivat Régualle asti vasta 1879, kuusi vuotta isoisän matkan jälkeen, joten hän olisi noussut jokilaivaan tai matkustanut hevosella. Mateus-palatsin barokkijulkisivu ja Nicolau Nasonin suunnittelemat puutarhat seisoivat kuitenkin jo paikallaan 1700-luvulta asti, ja niiden näkymä on tuskin muuttunut.`,
     },
     Viseu: {
       lyhyt: 'Lamegossa kiivetään 686 porrasta Nossa Senhora dos Remédiosin barokkikirkolle, ja tarun mukaan Portugalin ensimmäiset säätykokoukset pidettiin täällä 1143.',
+      pitka: `Viseun maakunnan pääkaupunki Viseu on nykyään tunnettu renessanssimaalari Grão Vascon nimikkomuseosta ja keskiaikaisesta katedraalista, jotka houkuttelevat kulttuurimatkailijoita Dão-viinialueen keskuksesta. Lamegossa kohoava barokkiportaikko Nossa Senhora dos Remédiosin pyhäkölle näyttää nykyään valmiilta yhtenäiseltä teokselta, jota kiivetään yhä juhlapäivinä. Isoisän aikaan 1873 se oli kuitenkin vielä työmaa: rakentaminen alkoi 1750-luvulla, mutta pyhäkön rakennus valmistui vasta 1905 ja portaikkoa laajennettiin vuosikymmeniä lisää, niin että hän olisi nähnyt keskeneräisen, telineiden ympäröimän rinteen. Legenda Portugalin ensimmäisistä säätykokouksista Lamegossa vuonna 1143 oli isoisän aikaan yhtä vanha tarina kuin nykyään – historioitsijat kyseenalaistavat sen yhä, mutta paikalliset kertovat sitä samalla ylpeydellä.`,
     },
   },
   /*
