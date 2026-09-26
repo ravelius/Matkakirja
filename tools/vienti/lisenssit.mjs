@@ -28,6 +28,14 @@ export const AINEISTOT = [
     kaytto: 'kokoelma reitit1873 (rautatiet), tools/tee-reitit1873.mjs',
   },
   {
+    id: 'esa-worldcover',
+    nimi: 'ESA WorldCover 10 m 2021 v200',
+    lisenssi: 'CC BY 4.0',
+    lahde: 'https://esa-worldcover.org/en/data-access',
+    attribuutio: '© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium.',
+    kaytto: 'elävien elementtien polut (Canal Grande keskitetty vesiluokalle), tools/tee-elavat-polut.mjs',
+  },
+  {
     id: 'natural-earth',
     nimi: 'Natural Earth 10m (admin-0 ja admin-1)',
     lisenssi: 'public domain',
