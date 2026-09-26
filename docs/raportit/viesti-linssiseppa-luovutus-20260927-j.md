@@ -26,7 +26,8 @@ SendMessage-raja (10/vuoro) täyttyy → varakanava mcp__ccd_session_mgmt__send_
    dba69a3c (B: kärkialfa 0 = seepiaramppi). Tiedostot Kartta/Kategoriamallit/{Kaari,Vuori,KategoriaApurit}.cs, rekisteröinti
    RekisteroiKategoria (rajapinta proto-3d/lokit/mallinseppa-rajapinta.md §5: Runko ≤ 800, Lod1 ≤ 200, ei jalustaa, ei
    liikettä). Kolmiot kaari 410/196, vuori 338/60. Kuvamerkit assets/nostotyypit/merkki-*.png (ilme ja yksityiskohdat).
-   - **A/B KÄYNNISSÄ klo 02.00** (ajastettu taustalle): käännös `juna/b13+mallinseppa/kategoriat3d-b` → ajo VAIHEET 1,4,5
+   - **A/B KÄYNNISSÄ klo 02.00** (ajastettu taustalle): käännös `juna/b13+mallinseppa/kategoriat3d-b+linssiseppa/merikoristeet`
+     (.app $S/mallit3-app) → ajo VAIHEET 1,4,5,3
      → kuvat /Users/Shared/Claude/proto-3d/lokit/mallinseppa-laite-20260927-c/ (lahi-<olympos|parnassos|taygetos|thermopylai|
      sounion>-<40|75>-<0|27|55>.png, kat-*.png). Vertaa A-kuviin mallinseppa-laite-20260927-b/ (laitteella A-kivet
      harmahtavia, kuvamerkki lämmintä seepiaa). Valitse A tai B ja kerro Fablelle yhdellä rivillä.
@@ -36,9 +37,10 @@ SendMessage-raja (10/vuoro) täyttyy → varakanava mcp__ccd_session_mgmt__send_
    - Kivet ja saumat: erilliset kivet välein (KsSauma 0,022) + musteydin sisällä → tummat saumat; kaarikivien kavennus
      kiven keskustaa kohti (bugi korjattu a91fe51c/693cb7d0).
 4. **Meri: isompi koko — valas ja laiva noin 1,5–2 × nykyisestä, suihku näkyväksi pelikoossa → uusi kuvasarja omistajalle.**
-   Proto-haara `linssiseppa/merikoristeet` (worktree /Users/Shared/Claude/wt/proto-linssiseppa), nyt LaivaKokoPt 160
-   (≈ 22 pt) ja ValasKokoPt 140 (≈ 28 pt) → esim. 280 ja 250; siirrot (Yksilot) kasvatettava samassa suhteessa (≥ 120 pt:n
-   väli); Suihku-pallo isommaksi ja kontrastia (vaalea meri): harkitse suihkulle tummaa reunaa tai isompaa pilaria.
+   Proto-haara `linssiseppa/merikoristeet` (worktree /Users/Shared/Claude/wt/proto-linssiseppa): TEHTY 68560569 (laiva 39 pt,
+   valas 50 pt, reitti ±0,35, siirrot 170 / −110 pt, suihku 0,026), mukana klo 02 käännöksessä ja ajossa (VAIHE 3) →
+   kuvat mallinseppa-laite-20260927-c/meri-* → koosta ja toimita omistajalle (merikuvasarja v3). Jos suihku ei vieläkään
+   erotu, harkitse tummempaa reunaa tai isompaa pilaria.
 5. **Lento v3** (1.0.28): mallinseppa/tiger-moth f7db782d odottaa Natiivisepän integraatiota (viesti lähetetty 01.4x:
    TigerMoth.cs, TigerMothKone.cs, LennonV3.cs + 11 testiä). Vastaa hänen kysymyksiinsä.
 
