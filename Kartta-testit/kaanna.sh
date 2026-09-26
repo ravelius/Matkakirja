@@ -32,6 +32,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
 ../Assets/Matkakirja/Kartta/Kermasarja.cs
 ../Assets/Matkakirja/Kartta/Laattapaketti.cs
+../Assets/Matkakirja/Kartta/LaattaPortit.cs
 ../Assets/Matkakirja/Kartta/Lampopaatos.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/LennonKamerareitti.cs

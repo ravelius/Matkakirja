@@ -977,11 +977,20 @@ namespace Matkakirja
                 }
                 case "palvelin":
                     // palvelin | palvelin loki paalle|pois | palvelin maastouusinta paalle|pois (löydös 119)
+                    // | palvelin yksiportti paalle|pois (löydös 176: PlayerPrefs, vaikuttaa seuraavasta käynnistyksestä)
                     if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "yksiportti")
+                    {
+                        PlayerPrefs.SetInt(LaattaPortit.YksiPorttiAvain, o[2] == "paalle" ? 1 : 0);
+                        PlayerPrefs.Save();
+                        Debug.Log($"MATKAKIRJA laattapalvelin: yksi-portti {(o[2] == "paalle" ? "päälle" : "pois")} seuraavasta käynnistyksestä " +
+                                  $"(nyt {(Laattapalvelin.YksiPortti ? "yksi portti" : Laattapalvelin.Portteja + " porttia")})");
+                    }
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
                               $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
-                              $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
+                              $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}, " +
+                              $"väritason uusintoja {Laattapalvelin.VariUusintoja} (pelastettu {Laattapalvelin.VariPelastettu}) | {Laattapalvelin.YhteysKuvaus(0)} | {Laattapalvelin.JonoTila()}");
                     Debug.Log(Laattapalvelin.MaastoKuvaus());
                     break;
                 case "saapuminen" when o.Length > 1 && o[1] == "vartija":
