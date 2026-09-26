@@ -108,7 +108,7 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
  */
 import {
-  TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo, avaaAvauskortti,
+  TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo, avaaAvauskortti, avauskortinHeroOsoite,
   avaaKaupunkiesittely, avaaNahtavyysnakyma, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
   kaupungillaKohdekartta, kaupunginMatkailijalle, suljeKaupunkipopup, turistiOppaanArtikkeli,
   turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
@@ -4319,6 +4319,104 @@ export async function avaaPallolauta(ui) {
    * @param {object[]} omaMuste sama NIMIÖINEEN (nostot.omaMuste): koko
    *   muste, jonka päälle kyltin ankkuri ei saa jäädä
    */
+  /*
+   * ══ AVAUSKORTIN KUTSU: MINIATYYRI KAUPUNGIN VIERESSÄ (omistaja 27.9.2026 klo 23.4x) ══
+   *
+   * Saapuessa mikään ei avaudu itsestään, joten pelaajan kaupungin ja
+   * nappulan viereen YLÄVIISTOON tulee pieni kortti (herokuva + nimi,
+   * KUTSUN_KOKO px), joka napautettaessa kasvaa pehmeästi täydeksi
+   * avauskortiksi ja sulkeutuessa palaa samaan paikkaan
+   * (js/kaupunkinosto.js avaaAvauskortti `lahde`).
+   *
+   * PAIKKA VÄISTÄÄ: nostojen ikonit ja muste, kaupungin piste ja
+   * nappula sekä ruudun kalusteet (Pulu, Liiku, paikkarivi —
+   * ruudunKalusteet). Asennot kokeillaan järjestyksessä yläoikea,
+   * ylävasen, oikea, vasen, alaoikea; jos mikään ei mahdu, kutsu jää
+   * pois (ei peitä mitään). Piiloon, kun kamera on maatasoa kauempana
+   * (nostojen karttakerroin < KUTSUN_KERROIN), linssissä, lennolla ja
+   * aloitusnäkymässä.
+   */
+  const KUTSUN_KOKO = 64;
+  const KUTSUN_KERROIN = 0.95;
+  // Asennot etäisyysrenkaittain (lähin ensin), kussakin renkaassa yläoikea
+  // → ylävasen → oikea → vasen → alaoikea: tiheässä kaupungissa (Pariisi)
+  // lähin vapaa kohta löytyy vasta kauempaa.
+  const KUTSUN_ASENNOT = [16, 40, 70, 100].flatMap((v) => [
+    { dx: v, dy: -v - KUTSUN_KOKO }, { dx: -v - KUTSUN_KOKO, dy: -v - KUTSUN_KOKO },
+    { dx: v + 4, dy: -KUTSUN_KOKO / 2 }, { dx: -v - 4 - KUTSUN_KOKO, dy: -KUTSUN_KOKO / 2 },
+    { dx: v, dy: v },
+  ]);
+  const kutsuElementti = (d) => {
+    const juuri = document.createElement('div');
+    juuri.className = 'kaupunkikortin-kutsu';
+    const nappi = document.createElement('button');
+    nappi.type = 'button';
+    nappi.className = 'kaupunkikortin-kutsu-kortti';
+    nappi.setAttribute('aria-label', `Avaa ${d.nimi}: kaupungin kortti`);
+    if (d.kuva) {
+      const kuva = document.createElement('img');
+      kuva.alt = '';
+      kuva.decoding = 'async';
+      kuva.draggable = false;
+      kuva.src = d.kuva;
+      nappi.appendChild(kuva);
+    }
+    const nimi = document.createElement('span');
+    nimi.className = 'kaupunkikortin-kutsu-nimi';
+    nimi.textContent = d.nimi;
+    nappi.appendChild(nimi);
+    // Oma napautus: pallon eleet eivät saa ottaa tätä (kuten kortin omat napit).
+    nappi.addEventListener('pointerdown', (e) => e.stopPropagation());
+    nappi.addEventListener('click', (e) => { e.stopPropagation(); d.avaa?.(d, nappi); });
+    juuri.appendChild(nappi);
+    return juuri;
+  };
+  const asetteleKutsu = (el, d) => {
+    const kortti = el.firstElementChild;
+    if (!kortti) return;
+    kortti.style.left = `${d.dx}px`;
+    kortti.style.top = `${d.dy}px`;
+  };
+  const paivitaKaupunkikortinKutsu = (kiinteaMuste = [], omaMuste = []) => {
+    const tyhjaa = () => { merkit.aseta('kaupunkikortinkutsu', []); return []; };
+    if (linssiPaalla() || lento || aloitusNakyvat() || ui.katselu) return tyhjaa();
+    if (!(Number(nostot.karttakerroin?.()) >= KUTSUN_KERROIN)) return tyhjaa();
+    const city = ui.game.cityOf?.();
+    if (!city || !kaupungillaKohdekartta(city.id) && !kaupunginMatkailijalle(city.id)) return tyhjaa();
+    const oma = pallonAsteet({ x: city.x, y: city.y });
+    const p = oma ? pallo.getScreenCoords(oma.lat, oma.lon, 0) : null;
+    if (!p) return tyhjaa();
+    const W = kotelo.clientWidth;
+    const H = kotelo.clientHeight;
+    // Kaupungin piste ja nappula (seisoo pisteen päällä, n. 44 px ylös).
+    const esteet = [...kiinteaMuste, ...omaMuste, ...ruudunKalusteet(),
+      { x0: p.x - 14, y0: p.y - 46, x1: p.x + 14, y1: p.y + 10 }];
+    let valittu = null;
+    for (const a of KUTSUN_ASENNOT) {
+      const r = { x0: p.x + a.dx, y0: p.y + a.dy, x1: p.x + a.dx + KUTSUN_KOKO, y1: p.y + a.dy + KUTSUN_KOKO + 14 };
+      if (r.x0 < 4 || r.y0 < 4 || r.x1 > W - 4 || r.y1 > H - 4) continue;
+      if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
+      valittu = { a, r };
+      break;
+    }
+    if (!valittu) return tyhjaa();
+    merkit.aseta('kaupunkikortinkutsu', [{
+      avain: `kaupunkikortinkutsu:${city.id}`,
+      laji: 'kaupunkikortinkutsu',
+      cityId: city.id,
+      nimi: city.name,
+      kuva: avauskortinHeroOsoite(city),
+      lat: oma.lat,
+      lng: oma.lon,
+      dx: valittu.a.dx,
+      dy: valittu.a.dy,
+      elementti: kutsuElementti,
+      asettele: asetteleKutsu,
+      avaa: (_d, lahde) => { avaaAvauskortti(ui, city, { lahde }); },
+    }]);
+    return [valittu.r];
+  };
+
   const paivitaTuristiInfo = (kiinteaMuste = [], omaMuste = []) => {
     const tyhjaa = () => { merkit.aseta('turistiinfo', []); return []; };
     /*
@@ -4737,8 +4835,9 @@ export async function avaaPallolauta(ui) {
      */
     const kaupunginMitat = kohdekaupunki();
     const infoTulos = paivitaTuristiInfo(nostot.omatIkonilaatikot(), nostot.omaMuste());
+    const kutsuTulos = paivitaKaupunkikortinKutsu(nostot.omatIkonilaatikot(), nostot.omaMuste());
     const nimiTulos = nimet.lado({
-      varaukset: [...nostoTulos.laatikot, ...infoTulos],
+      varaukset: [...nostoTulos.laatikot, ...infoTulos, ...kutsuTulos],
       pinot: pelinLaatikot,
       katto,
       vain,

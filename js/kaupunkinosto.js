@@ -527,6 +527,26 @@ export function suljeKaupunkipopup(ui) {
   document.body.classList.remove('nosto-popup-auki');
   auki.purku?.();
   auki.popup?.nostokuvaPurku?.();
+  /*
+   * Avauskortti palaa kutsuminiatyyrin paikalle (sama liike takaperin);
+   * kortti poistetaan vasta liikkeen jälkeen, ja miniatyyri tulee näkyviin.
+   */
+  const lahde = auki.lahde;
+  const loppu = lahde?.isConnected && auki.popup?.isConnected && typeof auki.popup.animate === 'function'
+    && !avauskortinLiikeVahennetty() ? kutsunMuunnos(auki.popup, lahde) : null;
+  if (loppu) {
+    auki.popup.style.pointerEvents = 'none';
+    const liike = auki.popup.animate([
+      { transform: 'none', opacity: 1, transformOrigin: '50% 50%' },
+      { transform: loppu, opacity: 0.35, transformOrigin: '50% 50%' },
+    ], { duration: AVAUSKORTIN_KASVU_MS, easing: 'cubic-bezier(0.4, 0, 0.6, 1)', fill: 'forwards' });
+    liike.finished.catch(() => {}).then(() => {
+      auki.popup.remove();
+      lahde.style.visibility = '';
+    });
+    return;
+  }
+  if (lahde) lahde.style.visibility = '';
   auki.popup?.remove();
 }
 
@@ -661,7 +681,15 @@ function avaaKortti(ui, city, {
 export function avauskortinLauseet(teksti, n = 2) {
   const puhdas = String(teksti ?? '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
   const lauseet = puhdas.match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? (puhdas ? [puhdas] : []);
-  return lauseet.slice(0, n).join(' ').trim();
+  return lauseet.slice(0, n).map((l) => l.trim()).join(' ').trim();
+}
+
+/** Herokuvan osoite (kartan kutsuminiatyyri): avauskuva tai kansikuva. */
+export function avauskortinHeroOsoite(city) {
+  const kansi = kaupunginKansi(city?.id);
+  const teos = kansi?.avauskuvat?.[0] ?? kansi?.kansikuvat?.[0] ?? null;
+  if (!teos) return null;
+  return teos.ampari ? julisteUrl(teos.ampari) : valokuvaUrl(teos.tiedosto, 240);
 }
 
 /** Kortin herokuva: avauskuvista ensimmäinen, muuten kansikuvista. */
@@ -729,14 +757,50 @@ function latoAvauskortti(ui, sisalto, city) {
   }
 }
 
-/** Avaa kaupungin avauskortin (korvaa kaupunkiliuskan). */
-export function avaaAvauskortti(ui, city, { ankkuri = null } = {}) {
-  return avaaKortti(ui, city, {
+/** Kasvuanimaation kesto (omistaja: 250–300 ms, pehmeä, ei pop-up). */
+export const AVAUSKORTIN_KASVU_MS = 280;
+
+/**
+ * Kortin ja kutsuminiatyyrin välinen muunnos: kortti skaalataan
+ * miniatyyrin kokoiseksi sen paikalle (FLIP), josta se kasvaa.
+ */
+function kutsunMuunnos(kortti, lahde) {
+  const k = kortti.getBoundingClientRect();
+  const m = lahde.getBoundingClientRect();
+  if (!(k.width > 0) || !(m.width > 0)) return null;
+  const skaala = m.width / k.width;
+  const dx = (m.left + m.width / 2) - (k.left + k.width / 2);
+  const dy = (m.top + m.height / 2) - (k.top + k.height / 2);
+  return `translate(${dx}px, ${dy}px) scale(${skaala.toFixed(4)})`;
+}
+
+function avauskortinLiikeVahennetty() {
+  return Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
+}
+
+/**
+ * Avaa kaupungin avauskortin (korvaa kaupunkiliuskan). `lahde` on kartan
+ * kutsuminiatyyri: kortti kasvaa sen paikalta ja palaa sinne suljettaessa.
+ */
+export function avaaAvauskortti(ui, city, { ankkuri = null, lahde = null } = {}) {
+  const kortti = avaaKortti(ui, city, {
     laji: 'avaus',
     otsikko: city?.name ?? '',
     ankkuri,
     lato: latoAvauskortti,
   });
+  if (!kortti || !lahde?.isConnected || typeof kortti.animate !== 'function' || avauskortinLiikeVahennetty()) return kortti;
+  ui.kaupunkipopupAuki.lahde = lahde;
+  kortti.style.animation = 'none';
+  const alku = kutsunMuunnos(kortti, lahde);
+  if (alku) {
+    lahde.style.visibility = 'hidden';
+    kortti.animate([
+      { transform: alku, opacity: 0.35, transformOrigin: '50% 50%' },
+      { transform: 'none', opacity: 1, transformOrigin: '50% 50%' },
+    ], { duration: AVAUSKORTIN_KASVU_MS, easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)' });
+  }
+  return kortti;
 }
 
 export function avaaKaupunkipopup(ui, city, { ankkuri = null } = {}) {

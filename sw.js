@@ -503,6 +503,7 @@ const SHELL = [
   './js/packs/maakuntasalaisuudet.js',
   './js/packs/maakuntasalaisuudet-grc.js',
   './js/packs/nahtavyysjutut.js',
+  './js/lehtiosiot.js',
   './js/packs/miniatyyrit.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
   './assets/nostotyypit/merkki-vuori.png',
