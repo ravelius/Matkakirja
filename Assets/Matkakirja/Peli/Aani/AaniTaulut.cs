@@ -153,6 +153,8 @@ namespace Matkakirja.Peli
         public Dictionary<string, string> AlueenMaanosa = new Dictionary<string, string>();
         /// <summary>Maa (ISO3) → maanosa niille maille, joilla ei ole musiikkialuetta (web MAAN_MAANOSA).</summary>
         public Dictionary<string, string> MaanMaanosa = new Dictionary<string, string>();
+        /// <summary>Kaupunkikohtainen maanosa kaupungeille ilman maata (web KAUPUNGIN_MAANOSA, 26.9.2026).</summary>
+        public Dictionary<string, string> KaupunginMaanosa = new Dictionary<string, string>();
         /// <summary>Maanosat, joilla on oma looppi musa-maanosa-&lt;maanosa&gt; (web MAANOSARAIDAT; vaihe 3 lisää loput).</summary>
         public HashSet<string> Maanosaraidat = new HashSet<string>();
         /// <summary>RAIDAT järjestyksessä.</summary>
@@ -232,6 +234,12 @@ namespace Matkakirja.Peli
             t.AlueenMaanosa["ita-eurooppa"] = "ita-eurooppa";
             void Maanosa(string maanosa, params string[] maat) { foreach (var m in maat) t.MaanMaanosa[m] = maanosa; }
             Maanosa("valimeri", "CYP");
+            // Kaupungit ilman maata (web KAUPUNGIN_MAANOSA): Maailma-laudalla ei ole cityCountryä, Jerusalem ja St. Helena puuttuvat muualtakin.
+            foreach (var (k, m) in new[] { ("jerusalem", "lahi-ita"), ("sthelena", "saharan-etelapuoli"), ("lontoo", "lansi-eurooppa"),
+                ("moskova", "ita-eurooppa"), ("istanbul", "valimeri"), ("ateena", "valimeri"), ("tanger", "lahi-ita"), ("kairo", "lahi-ita"),
+                ("mumbai", "etela-aasia"), ("peking", "ita-aasia"), ("tokio", "ita-aasia"), ("singapore", "ita-aasia"), ("sydney", "oseania"),
+                ("kapkaupunki", "saharan-etelapuoli"), ("rio", "etela-amerikka"), ("newyork", "pohjois-amerikka"),
+                ("losangeles", "pohjois-amerikka"), ("sanfrancisco", "pohjois-amerikka") }) t.KaupunginMaanosa[k] = m;
             Maanosa("lahi-ita", "ARE", "DZA", "EGY", "IRN", "IRQ", "JOR", "KWT", "LBY", "MAR", "OMN", "QAT", "SAU", "SDN", "SYR", "TUN", "YEM", "KAZ", "UZB");
             Maanosa("saharan-etelapuoli", "AGO", "CMR", "COD", "ETH", "GHA", "KEN", "LBR", "MDG", "MLI", "MOZ", "NAM", "NGA", "SEN", "SHN", "SLE", "SOM", "SDS", "TCD", "TZA", "UGA", "ZAF", "ZWE");
             Maanosa("etela-aasia", "AFG", "IND", "LKA", "NPL", "PAK", "MMR");
