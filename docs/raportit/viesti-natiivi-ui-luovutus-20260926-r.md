@@ -37,6 +37,14 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
   kanssa Fablen OK:lla. 158 natiivi-ui/pikkukuva-158 68e9dc2f (kenttä `pikkukuva`, salaisuuskortin kuva) merge-pyynnössä.
   Salaisuuskortti ja "Attika" TODENNETTU build 19 -datalla. Todisteet proto-3d/lokit/natiivi-ui-b20-156/.
   Konsoli: simctl launch --terminate-running-process --stdout=<tiedosto> (Debug.Log, esim. komento.txt "maakunta tila").
+- Klo 11.4x: UI-pariteettikierros (Fablen OK) aloitettu: b20-ui-1 (iPhone, 33 UI-riviä), luokittelu
+  proto-3d/lokit/pariteetti-ajo/b20-ui-1/luokittelu.md (vain 2 aitoa eroa). Junassa build 21: pariteetti-kokoruutu 9d114de5,
+  kuljettu-kytkin 602ea18a (☰ Kartta, Linssisepän ElavaMatka.NakyvissaKysely), pikkukuva-lahde 49bbf06b.
+  Merge-pyynnössä: kuvat-kiinteat bbbbb501 (valkoinen nostomerkki = Kuvat-LRU tuhosi näkyvän tekstuurin; testi ui kuvat raja 1).
+  160 symbolit-160b 2486228c (Natiiviseppä 726ac455 + piilotus, odottaa omistajaa). 161 lipputanko-161 a500a778
+  (ankkuri lippu_lonlat, polku Kartuscha.LippuAnkkuritPolku vahvistetaan Natiiviseppä/Karttaseppä; käännös jonossa).
+  Seuraavaksi: pariteetin työkalurivit 2/24/35, iPad-ajo (503000D1 jaettu Laitetestaajan kanssa), kytkinrivin USS todentamatta.
+  Todisteet proto-3d/lokit/natiivi-ui-b21-erat/.
 - (Vanha) Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
   laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
