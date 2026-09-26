@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2245, teksti: 'Sisältöjuna: maakunnat 9, miniatyyrien värit 504 (1–7)' },
   { v: 2244, teksti: 'Taustapäivitys vaihe 1: hakemisto.json ja osoit… (#3247)' },
   { v: 2243, teksti: 'Maakunnat erä 8: AFG MNG KAZ UZB TKM KHM LAO MM… (#3257)' },
   { v: 2242, teksti: 'Miniatyyrien värikorjaus erä 2: 50 kuvaa (#3255)' },
