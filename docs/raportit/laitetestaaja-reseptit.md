@@ -19,6 +19,21 @@ Poikkeama = FAIL, ei "PASS, ei visuaalisesti tarkistettu". Esimerkkikuva:
 `docs/raportit/kaappaukset/omistaja-20260926/loydos175-arkkityypit-ranska-125.png`
 (Fablen haara `claude/bold-ride-vow4ki`).
 
+## PYSYVÄ KOHTA: uusi peli kesken pelin (löydös 177, Fable 26.9.2026)
+
+Joka kierroksella testataan myös: käynnistä `uusi-peli`-komento (peli-komento.txt) KESKEN käynnissä
+olevan pelin (ei vasta appin käynnistyksen jälkeen tyhjästä). **Kriteeri: kaiken pitää nollautua ja
+aloitusjakso (intro/saapuminen) alkaa puhtaasti**, kuten ensimmäisellä kerralla — ei jämiä edellisestä
+pelistä (esim. vanha kamera-asento, vanhat heränneet maakunnat, vanha raha/löydöslaskuri jää näkyviin).
+Poikkeama = FAIL.
+
+## PYSYVÄ KOHTA: loitonnus Kreikasta Eurooppaan (löydös 176, Fable 26.9.2026)
+
+Joka kierroksella testataan myös: zoomaa/loitonna kamera Kreikan maatasosta koko Euroopan
+näkymään (esim. `aja 48 15 40 3`). **Kriteeri: kaikkien laattojen pitää piirtyä 5 sekunnin sisällä,
+ei näkyviä pergamenttiaukkoja (tyhjiä/lataamattomia laatta-alueita) loitonnuksen jälkeen.**
+Poikkeama = FAIL.
+
 ## Kamera kauas + kallistus (H/153/159 usva, I/154 taivas)
 
 ```
