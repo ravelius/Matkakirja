@@ -16,13 +16,10 @@ Lue:
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys (omistaja 22.3x, Fable):**
-1. Kolme erikoismallia (Mont-Saint-Michel, Stonehenge, Colosseum; koodi mallinseppa/pohja 9bb99488) → käännös
-   Natiivisepän kautta → laitekuvat (3 kulmaa isona + 10 s video) → rivi Fablelle → PYSÄHDY omistajan tarkastukseen.
-2. Meren koristeet: kokeilu höyrylaiva + valas Norjan länsirannikolla (kartta/merikohdat.json, lista hyväksytty).
-3. Lento v3 -speksi docs/raportit/lento-v3-speksi.md (saa tehdä agentilla rinnalla, vain Opus/Sonnet).
-4. Elävät elementit (linssiseppa/hoyrylaiva b59c99b0) on merge-pyynnössä 1.0.27-junaan: tarkista, että meni.
-5. Pidä luovutus ajan tasalla.
+**Järjestys: omistajan päätökset 27.9. klo 01.4x luovutuksessa -j (kohta "OMISTAJAN PÄÄTÖKSET = JONO"):** erikoismallit
+MSM/Stonehenge/Colosseum hyväksytty (merge-pyyntö 1.0.28-junaan, kun 1.0.27 on TF:ssä) → seuraavat 3 erikoismallia (Segovia,
+Brandenburgin portti, Kinderdijk) → kategoriasymbolit 3D:nä (kaari + vuori loppuun, sitten 12 muuta) → meri isommaksi →
+lento v3 Natiivisepän integraatiossa.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
