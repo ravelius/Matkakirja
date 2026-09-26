@@ -31,6 +31,11 @@ namespace Matkakirja
     {
         /// <summary>Tangon korkeus ruudun pisteinä (liioiteltu, omistaja: "liioitellun iso").</summary>
         public static float KorkeusPt = 120f;
+        /// <summary>Löydös 176: kartan kerroin, jonka alla tanko piiloutuu (maatasolla 1, Euroopan mittakaavassa ~0,3).</summary>
+        public const float PiiloKerroin = 0.55f;
+        /// <summary>Tangon koko piilokynnyksellä suhteessa täyteen (kerroin 1): pienenee lineaarisesti tähän.</summary>
+        public const float PieninOsuus = 0.45f;
+        bool piilossaZoom;
         /// <summary>Lipun korkeus tangon korkeudesta.</summary>
         public const float LipunOsuus = 0.36f;
         /// <summary>Tangon pienin kulma katseeseen (°): ylhäältä katsottuna tanko kallistuu näkyviin.</summary>
@@ -227,7 +232,13 @@ namespace Matkakirja
             float etaisyys = kohti.magnitude;
             Vector3 v = kohti / Mathf.Max(1e-6f, etaisyys);
             bool edessa = Vector3.Dot(n, v) > 0.12f;
-            if (!sallittu || !edessa) { if (nakyi) { Nayta(false); PallonLepo.Muuttui("lipputanko"); } return; }
+            // Löydös 176 (Fable 26.9.): loitonnettaessa maatason (kerroin 1) alle tanko pienenee ja piiloutuu Euroopan
+            // mittakaavassa (kerroin < PiiloKerroin, hystereesi), ettei kangas nouse naapurimaan tai meren ylle; ankkuri pysyy.
+            var nk = NostoKerros.Instanssi;
+            float kerroin = nk != null ? nk.ZoomKerroin : 1f;
+            if (piilossaZoom && kerroin >= PiiloKerroin * 1.1f) piilossaZoom = false;
+            else if (!piilossaZoom && kerroin < PiiloKerroin) piilossaZoom = true;
+            if (!sallittu || !edessa || piilossaZoom) { if (nakyi) { Nayta(false); PallonLepo.Muuttui("lipputanko"); } return; }
             if (!nakyi) { Nayta(true); PallonLepo.Muuttui("lipputanko"); }
             // Kankaan aalto: elävällä kerroksella oma kello, muuten Joutosyke (jähmettyy levossa).
             bool jatkuvaNyt = Jatkuva && !ElavaKerros.Staattinen;
@@ -256,7 +267,8 @@ namespace Matkakirja
             // Vakio ruutukoko (KaupunkiMerkit): yksi piste tällä etäisyydellä.
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
             float piste = 2f * etaisyys * tanPuoli / (Screen.height / PalloKierto.Pistekerroin);
-            float koko = piste * KorkeusPt / Mathf.Max(1e-9f, gt.lossyScale.x);
+            float zoom = Mathf.Lerp(PieninOsuus, 1f, Mathf.InverseLerp(PiiloKerroin, 1f, kerroin));
+            float koko = piste * KorkeusPt * zoom / Mathf.Max(1e-9f, gt.lossyScale.x);
             if (transform.rotation != suunta) transform.rotation = suunta;
             // Jalka sivuun nappulasta ruudun oikealle (vakio pisteinä).
             Vector3 paikka = p + kamera.transform.right * (piste * SivuPt);
