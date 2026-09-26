@@ -7747,3 +7747,7 @@ Laitetestaaja 01.2x: TF 1.0.27 -kierros kaannokselle 16be7e44: 178, 179, lipun p
 ## OMISTAJA HYVAKSYI ERIKOISMALLIT V2 (MSM, STONEHENGE, COLOSSEUM), KAARI+VUORI-SUUNNAN JA MEREN ISOMMAN KOKEILUN (27.9.2026 klo 01.39)
 
 Omistaja 01.4x kortilla (Linssisepan era v2, kaannos 91a4b727, kuvat proto-3d/lokit/mallinseppa-toimitus-20260927/): 1) erikoismallit Mont-Saint-Michel (kevatvuoksi), Stonehenge (auringonnousu, nurmi pois) ja Colosseum Rooman maamerkkina (velarium, yovalot) HYVAKSYTTY → 1.0.28-junaan; Linssiseppa jatkaa listan seuraaviin 3 maahan samalla tyylilla; 2) kategoriasymbolit oikeina 3D-esineina: kaari + vuori suunta oikea → loput 12 symbolia samoin (vuori jaa Olympoksella maaston sisaan → Natiivisepan sijoituskorjaus); 3) meren koristeet: isompi koko (valas ja laiva 1,5–2 ×, suihku nakyvaksi pelikoossa) → uusi kokeilu. Julkaisija: #3363 ja #3365 molemmat v2292 → #3365 nostetaan ennen mergea. Sisaltokirjuri 93 % → WIP-push + luovutus + nollaus kaskettu.
+
+## SISALTOKIRJURI NOLLATTU 01.4x (LUOVUTUS daafa34f4); MAALEHTI-SIIRTO JATKUU HAARASTA (27.9.2026 klo 01.40)
+
+Sisaltokirjuri nollattu 01.4x (93 % → tyhja), luovutus docs/raportit/viesti-sisaltokirjuri-luovutus-20260927.md (haara sisalto-luovutus-20260927 daafa34f4), WIP-haara origin/sisalto-maalehti-siirto-20260927. Aloitusviesti lahetetty: maalehti-siirto loppuun (28 siirtyy, 5 jaa), #3363 Julkaisijalla, sitten astronautin erat 5–6.
