@@ -45,6 +45,12 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
   (ankkuri lippu_lonlat, polku Kartuscha.LippuAnkkuritPolku vahvistetaan Natiiviseppä/Karttaseppä; käännös jonossa).
   Seuraavaksi: pariteetin työkalurivit 2/24/35, iPad-ajo (503000D1 jaettu Laitetestaajan kanssa), kytkinrivin USS todentamatta.
   Todisteet proto-3d/lokit/natiivi-ui-b21-erat/.
+- Klo 13.0x: junassa myös kuvat-kiinteat, lipputanko-161 (ankkuri kartta/lippu_lonlat.json, Siirtosepän PR #3321).
+  Merge-pyynnössä: lippu-kiinnitys a3a40cd6 (Kuvat.Kiinnita + ankkurijäsennyksen FormatException-korjaus), iPad-pariteetti
+  ipad-visa f3dec87a, ipad-maalehti 8a88ef60, ipad-sahke f15b238c (kuvaparit pariteetti-ajo/b21-ui-ipad-2/).
+  Pariteettityökalu PR #3324 (rivit 2/24/35) Julkaisijalla. Rivi 2 (aloitusvalinnan nimet) = Natiiviseppä (Fable).
+  Kortin tila saapumisanimaatioon (ElavaHerays.KorttiAukiKysely) Linssisepän haarassa. 160 odottaa omistajaa.
+  Avoinna: iPhone-vaaka- ja iPad 13 -pariteetti (Fable päättää), lipputangon todennus kun paketti tuotannossa.
 - (Vanha) Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
   laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
