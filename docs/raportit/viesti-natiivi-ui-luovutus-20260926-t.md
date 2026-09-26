@@ -66,5 +66,6 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
 - 17.40: käännöstauko PURETTU (Fable; Z10 v2-vahdilla ei väistä). Käännä tarpeen mukaan, mieluiten kootuin erin.
 - 18.2x löydös 160 (tasot 2–3 arkkityyppeinä, Natiivisepän pyyntö): `natiivi-ui/arkkityypit-2d` b26564f5 (juna 5d2bda85):
   NostotKartalla piilottaa 2D-merkin ja jäljen aina kun Symbolimallit.OnMalli; PeitaMallienAlta tasoittain (1/0,6/0,45 × KokoPt).
-  Käännetty yhdessä natiiviseppa/arkkityypit-160:n kanssa (2bd98f51), ei poikkeuksia. Kuvana todentamatta: tasojen 2–3 instansseja
-  0 Amsterdamissa kaarilla 0,7–0,15 → Natiiviseppä todentaa tai antaa näkymän. Merge-pyyntö 1.0.25.
+  Käännetty yhdessä natiiviseppa/arkkityypit-160:n kanssa (2bd98f51), ei poikkeuksia. TODENNETTU Kreikassa 18.2x (aja 38.9 22.0 1.3 1.5,
+  kallista 50): läiskät pois, napautus mallin kohdalle avaa kortin; kuvasarja natiivi-ui-loydos160-arkkityypit/. (Amsterdamissa instansseja
+  0 kaarilla 0,7–0,15.) Merge-pyyntö 1.0.25; napautus säilyy (Visibility vain m.Symbolille).
