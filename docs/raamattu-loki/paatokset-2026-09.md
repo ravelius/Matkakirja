@@ -7719,3 +7719,7 @@ Omistaja 01.2x "Kytke sinä se": Fable tekee xAI ara -kytkennan itse worktreessa
 ## OMISTAJA: JATKOSSA TAAS APUSESSIOT (FABLEN OMA KOODAUS VAIN XAI-ERA) (27.9.2026 klo 01.16)
 
 Omistaja 01.4x: "Jatkossa käytä taas apu sessioita" — Fablen oma koodaus rajoittuu tahan xAI-eraan (v2292); kaikki muu koodi roolisessioille kuten Raamattu sanoo (Fable = tarina + koordinaatio).
+
+## OMISTAJA HYVAKSYI AVAUSKORTIN WEBIIN (PR 3364) JA TRAILERI+POSTIKORTIT JAAVAT; #3361 JA #3362 MAINISSA (27.9.2026 klo 01.19)
+
+Omistaja 01.4x kortilla: avauskortti webiin (Pelikoodari PR #3364, v2291; kuvasarjat proto-3d/lokit/kaupunkikortti-web/) hyvaksytty → Julkaisijan junaan; Natiivi-UI tekee natiivin saman mallin mukaan. Saapumisen traileri ja 1873-postikortit jaavat — "ei mitaan automaattisesti" koskee vain lehden ja kortin avautumista. Julkaisija: #3361 (Raamattu) mainissa 01.02, #3362 (astro era 3, v2291) 01.14; #3363 rebase Sisaltokirjurilla. Fablen xAI-era: v2292 nostettu, kaksoisavaimet ok, standalone-build ok, tayssarja ajossa.
