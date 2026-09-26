@@ -7215,3 +7215,7 @@ Omistajan 13.4x-13.5x-saannot (vaihtelu kaikkiin animoituihin kohteisiin; 3D-nos
 ## Z10-POLTTOVAHTI V4: OMISTAJA HYVAKSYY KARTTASEPAN SESSIOSSA (26.9.2026 klo 18.38)
 
 Vahti v3 pudotti 4 ytimeen 18.31 (memory pressure warn clang-kaannoksen aikana, ei swap). Karttasepan v4: free > 40 % → 8 ydinta, < 20 % → 4, pysaytys vain free < 10 %, critical tai levy < 70 Gt; warn- ja swap-liipaisimet pois. Luokitin esti Karttasepalta tiedoston kirjoituksen ja pkillin; Fable ei kiertanyt. Omistaja valitsi kortilla: hyvaksyy kirjoituksen ja kaynnistyksen suoraan Karttasepan sessiossa Remote Controlilla. Z10 120/419 klo 18.4x.
+
+## 160 JUNASSA, A/B IPAD EI EROTA TASOJEN 2-3 HINTAA; IPAD GPU-SIDOTTU 20 MS (26.9.2026 klo 18.42)
+
+Natiiviseppa: 160 arkkityypit (majakka vaimennettu, Meteora 11 fasettia) + Natiivi-UI:n laikkapiilotus junassa juna/b13 bf7431df, asennettu simulaattoreihin 18.28, Laitetestaaja tarkistaa. A/B iPad Pro 13 Kreikka 22 instanssia: liike p50 19,5/20,6 ms, p95 27,0/28,9 ms (taso23 1/0) — ero kohinassa, 0,4 ms rajaa ei voi todentaa; levossa 30 fps. Havainto: nakyma on iPadilla GPU-sidottu ~20 ms/kehys myos ilman 160:ta → 120 Hz ei toteudu; iPhone-mittaus puuttuu. Fable: 160 hyvaksytty junaan, A/B riittaa; GPU-sidonta kirjataan loydokseksi S10 profilointiin 1.0.25:n jalkeen. Lokit proto-3d/lokit/loydos160-ab-ipad/.
