@@ -216,6 +216,12 @@ namespace Matkakirja
             "moduulit/js/linssit/vertailu.json",
         };
 
+        /// <summary>Käynnistyksen kokoelmat (listan alku): vain näille VANHA SISÄLTÖ -varareitti (PakettiPaivitys.VanhaTilannekuvasta).</summary>
+        public const int KaynnistyksenOsuus = 11;
+        static readonly HashSet<string> kaynnistyksenJoukko = new HashSet<string>(new ArraySegment<string>(KaynnistyksenKokoelmat, 0, KaynnistyksenOsuus));
+        /// <summary>Tässä istunnossa tilannekuvasta luetut vanhat kokoelmat (mittarin "vanhaa sisältöä käytetty").</summary>
+        public static readonly List<string> VanhaaKaytetty = new List<string>();
+
         static string esiladattuVersio;
         public static int KaynnistyksenEsilatauksia { get; private set; }
 
@@ -258,7 +264,24 @@ namespace Matkakirja
             string polku = versioPolku + suhteellinen;
             string tiedosto = PakettiPaivitys.Varastosta(versioPolku, suhteellinen) ?? Valimuisti(polku);
             string teksti = null;
-            if (File.Exists(tiedosto))
+            // VANHA SISÄLTÖ (Fable 26.9. klo 12.4x): käynnistyksen kokoelma puuttuu tästä versiosta → buildin tilannekuva
+            // heti, jos se on enintään 2 versiota vanhempi; tuore on jo haussa (KaynnistyksenEsilataus) seuraavaa kertaa varten.
+            // Varaston tiedosto luetaan omasta muuttujastaan: epäonnistunut luku ei saa johtaa siihen, että verkkohaku
+            // kirjoittaa tuoreen sisällön vanhan tiivisteen nimelle (tiedosto-muuttuja jää tämän version polkuun).
+            if (!File.Exists(tiedosto) && taso == Taso.Nakyva && kaynnistyksenJoukko.Contains(suhteellinen))
+            {
+                var vanha = PakettiPaivitys.VanhaTilannekuvasta(versioPolku, suhteellinen, out int tkVersio);
+                if (vanha != null)
+                {
+                    yield return Taustalla(() => File.ReadAllText(vanha), t => teksti = t);
+                    if (teksti != null)
+                    {
+                        if (!VanhaaKaytetty.Contains(suhteellinen)) VanhaaKaytetty.Add(suhteellinen);
+                        Debug.Log($"MATKAKIRJA sisältö: vanhaa sisältöä käytetty {suhteellinen} (tilannekuva v{tkVersio}, käytössä {versioPolku})");
+                    }
+                }
+            }
+            if (teksti == null && File.Exists(tiedosto))
             {
                 // Välimuistitiedosto on 3–11 Mt: luku ja purku pääsäikeessä maksoi 25–58 ms:n kehyksen
                 // jokaisella kokoelmalla (Natiivi-UI:n piikkimittaus 24.9.), joten luetaan taustasäikeessä.
