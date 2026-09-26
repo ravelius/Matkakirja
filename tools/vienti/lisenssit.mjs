@@ -12,6 +12,14 @@
  */
 export const AINEISTOT = [
   {
+    id: 'geoglows-tdx-hydro',
+    nimi: 'GEOGLOWS v2 -jokiverkko (NGA TDX-Hydro)',
+    lisenssi: 'CC BY-SA 4.0',
+    lahde: 'https://registry.opendata.aws/geoglows-v2/',
+    attribuutio: 'Contains information from the GEOGLOWS ECMWF Streamflow Service (CC BY 4.0), derived from NGA TDX-Hydro (CC BY-SA 4.0).',
+    kaytto: 'joet vektoreina ämpärissä (julisteet/pallo/vektorit/joet-<pvm>/<ISO>.geojson), tools/tee-joet.mjs',
+  },
+  {
     id: 'openhistoricalmap',
     nimi: 'OpenHistoricalMap (rautatiet 1873)',
     lisenssi: 'CC0 1.0',
