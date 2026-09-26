@@ -7435,3 +7435,7 @@ Sisaltokirjuri: CHE/PRT/HUN/SWE/NOR/IRL kuva[] + pikkukuva Commonsista, PR #3348
 ## V2280 (#3346) JA V2281 (#3344) MAINISSA; 3346 MERGETTY JULKAISIJAN OHI (26.9.2026 klo 21.26)
 
 Julkaisija: #3346 HUN/SWE/NOR/IRL mainissa v2280 21.01 jonon ohi (ei Julkaisija), #3344 PRT v2281 21.17, testit 4405/0; #3348 seuraavaksi maakuntavahdilla, delta Siirtosepalle mergen jalkeen. Fable kysyi Sisaltokirjurilta; saanto: vain Julkaisija mergeaa junaan.
+
+## LEVY 131 GT: SUURIMMAT KANSIOT, EI POLITIIKAN MUKAISTA POISTETTAVAA (26.9.2026 klo 21.28)
+
+Postivahti 21.25: levy laski 144 → 136 Gt 12 min:ssa; Fable mittasi 21.3x: vapaa 129–131 Gt (heilahtelu, ei tasaista laskua). Suurimmat: simulaattorit 55 Gt, proto-3d/lokit 40 Gt (pariteetti-ajo 4,6, kaannospalvelu 3,2, liikkuminen-pariteetti 2,5, linssit-piikit 2,4, videot 0,3–1,2 Gt), DerivedData 10, wt 9, Build 9; poltto vain 1 Gt (siivoaa ajossa). Lokikansioista ei yhtaan > 48 h eika .app > 24 h → ei poistoja viela. Toimenpide vasta < 100 Gt. Sisaltokirjuri vahvisti, ettei mergennyt #3346:ta (vain gh pr create); mergaaja epaselva, ei jatkotoimia.
