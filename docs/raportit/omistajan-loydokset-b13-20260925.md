@@ -186,3 +186,10 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | # | Löydös | Rooli |
 |---|---|---|
 | 162 | Kartan saapumisanimaatio (elävä kartta kohta 1) käynnistyy vasta pulun luennan jälkeen — nyt se pyörii luennan ja kortin aikana eikä näy pelaajalle. Sama elävien hetkien tapahtumille. | Linssiseppä (ajoitus) + Pelikoodari (tapahtuma luenta päättyi) |
+
+## Build 21 (1.0.21) — omistajan löydökset 26.9. klo 15.3x (Alankomaat; kuva kaappaukset/omistaja-20260926/loydos163-pallo-ei-piirry-alankomaat.png)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 163 | Pallo jää vieläkin helposti piirtymättä: maakuntanäkymässä pohjan laatat puuttuvat (tasainen pergamentti), vain vektorit (maakuntarajat, nostot, reitti) piirtyvät. Toistuva vika — juurisyy (laatat eivät saavu / piirto ei herää laattojen saapuessa lepopiirrossa / esilataus) ja korjaus build 22:een. | Natiiviseppä (Cesium/laatat, lepopiirron herätys) + Pelikoodari (Esilataaja, mittari) |
+| 164 | "Brysseli"-nimiö limittyy maan otsikkorivin ("Nederland · kuningaskunta v. 1873") päälle ruudun alareunassa. | Natiivi-UI (nimiöiden väistö otsikkoalueelta) |
