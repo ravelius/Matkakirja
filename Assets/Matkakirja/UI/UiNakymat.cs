@@ -222,7 +222,8 @@ namespace Matkakirja.Natiivi
         {
             // Kaikilla laitteilla (Fable 24.9.: omistajan ohje koski karttaa yleisesti, ei vain iPhonea).
             bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki);
-            var taso = PakotaKuvaTaso ?? (s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
+            // Löydös 132 (Natiivi-UI): Kokoruutu, kun noston kuva on kokoruudulla (löydös 150); muut näkymät Kortti.
+            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
             if (taso != KuvaSumennus.Ei) s = true;
             if (taso != KuvaTaso) { KuvaTaso = taso; KuvaTasoMuuttui?.Invoke(taso); }
             if (s == KuvaSumea) return;

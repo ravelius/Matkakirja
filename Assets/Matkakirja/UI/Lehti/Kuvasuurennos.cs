@@ -17,7 +17,7 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Kuvasuurennos
     {
-        readonly VisualElement kerros, kuva, kehys;
+        readonly VisualElement kerros, kuva, kehys, pysaytys;
         ReaktioRivi reaktiot;
         readonly Label teksti, lahde, laskuri;
         string lahdeUrl;
@@ -65,6 +65,12 @@ namespace Matkakirja.Natiivi
         {
             kerros = Rakenne.El("mk-nosto__suurennos mk-suurennos", isa);
             kerros.style.display = DisplayStyle.None;
+            // Löydös 132: kokoruudun taustaksi pallon sumennettu pysäytyskuva (Natiiviseppä, PalloKierto.Pysaytyskuva)
+            // tummennettuna; pallon kamera on sen ajan pois (lämpö).
+            pysaytys = Rakenne.El("mk-suurennos__pysaytys", kerros, PickingMode.Ignore);
+            pysaytys.style.display = DisplayStyle.None;
+            PalloKierto.PysaytysValmis += t => { if (kokoruutu && Auki) AsetaPysaytys(t); };
+            PalloKierto.PysaytysPoistui += () => AsetaPysaytys(null); // synkronisesti: tekstuuri vapautetaan heti tämän jälkeen
             kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros && !kokoruutu) Sulje(); });
             kehys = Rakenne.El("mk-nosto__suurennoskehys", kerros);
             kuva = Rakenne.El("mk-nosto__suurennoskuva", kehys, PickingMode.Ignore);
@@ -95,6 +101,7 @@ namespace Matkakirja.Natiivi
             Nayta(alku);
             bool oli = Auki;
             Auki = true;
+            if (kokoruutu && PalloKierto.Pysaytyskuva != null) AsetaPysaytys(PalloKierto.Pysaytyskuva);
             Rakenne.Nayta(kerros, true, 220);
             if (!oli) AukiMuuttui?.Invoke(true);
         }
@@ -144,6 +151,14 @@ namespace Matkakirja.Natiivi
             kuva.style.width = w;
             kuva.style.height = h;
             kehys.style.width = w + vaakaTila;
+        }
+
+        void AsetaPysaytys(Texture t)
+        {
+            if (t == null) { pysaytys.style.backgroundImage = StyleKeyword.None; pysaytys.style.display = DisplayStyle.None; return; }
+            var tausta = t is RenderTexture rt ? Background.FromRenderTexture(rt) : t is Texture2D t2 ? Background.FromTexture2D(t2) : default;
+            pysaytys.style.backgroundImage = new StyleBackground(tausta);
+            pysaytys.style.display = DisplayStyle.Flex;
         }
 
         // --- kokoruudun eleet (löydös 150) ------------------------------------------------------------

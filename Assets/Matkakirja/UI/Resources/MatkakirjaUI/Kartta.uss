@@ -1898,7 +1898,19 @@
  * kuvatekstiä eikä lähderiviä (138:n linja; tekijärivi jää korttiin), kuva reunasta reunaan (Kuvasuurennos.Kokoruutu). */
 .mk-nosto__suurennos.mk-suurennos--kokoruutu {
     padding: 0;
-    background-color: rgba(10, 7, 4, 0.86);
+    /* Löydös 132: tummennus 0,6, jotta sumennettu tausta näkyy (omistaja: pehmennetään ja tummennetaan). */
+    background-color: rgba(10, 7, 4, 0.6);
+}
+
+/* Löydös 132: pallon pysäytyskuva kokoruudun taustana, tummennettuna sävyllä (lapsi piirtyy kerroksen värin päälle). */
+.mk-suurennos__pysaytys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(102, 96, 88);
 }
 
 .mk-suurennos--kokoruutu .mk-nosto__suurennoskehys {
