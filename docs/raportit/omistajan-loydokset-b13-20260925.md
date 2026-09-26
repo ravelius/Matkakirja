@@ -150,3 +150,14 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | S2 | KORJATTU build 18:ssa (143b): pitkä maannimi kahdelle riville, pienennys 22 %. | — |
 | S3 | Laajennettu nostokortti jää auki linssin avauksen yli; sulkeutuu vain ulkopuolelle napautuksella → linssin avaus sulkee kortin (ja postikortin) automaattisesti. | Natiivi-UI (build 19) |
 | S4 | 144 lipun aaltoilua ei voi todentaa pysäytyskuvista (levossa suora ✓) — todennus videosta Natiivi-UI:n k144-lippu.mp4:stä (Fable hyväksyi 04.2x). | — |
+
+## Build 19 -savukierros (Laitetestaaja 26.9. klo 08.3x, raportti b117edc23) — sisäiset löydökset
+
+| # | Löydös | Rooli |
+|---|---|---|
+| S3 | KORJATTU build 19:ssä: linssin avaus sulkee laajennetun nostokortin. | — |
+| S5 | KORJATTU build 19:ssä: 1.0.18:n taustapäivityksen siivous poisti ladatun paketin samalla käynnistyksellä → laite jäi vanhaan sisältöön. 1.0.19: 1. käynnistys lataa uusimman, 2. käyttää sitä. | — |
+| S6 | Kylmän käynnistyksen aloitusverho simulaattorissa 5,4–6,1 s (raja 5,3 s) → laitemittaus. | Natiiviseppä (Pelikoodari) |
+| S7 | Elävän kartan kohta 3: maakunnan herääminen käynnistyy (loki), mutta pysyvä väri ei näy — MaaKartan pysyvä täyttö on oletuksena pois. | Natiiviseppä (Linssiseppä) |
+| S8 | Lepopiirto ei laske verkottomassa testitilassa (ui offline -rivi pitää kerroksen likaisena); vain testitila. | Natiivi-UI |
+| S9 | Salaisuuskortille ei ole testilaukaisijaa (Athos 1/1 → Athos-jättiläinen). | Natiiviseppä + Laitetestaaja |
