@@ -60,5 +60,5 @@ verhokoe; napakansi; Elävän kartan pallon rajapinnat. Omistajan valinnat 127/1
 Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /tmp/natiiviseppa-vienti-tulossa oli päällä
 03.45 alkaen). Worktreet (3/3 käytössä yllä olevilla haaroilla). Unity-työkopio Matkakirja-proto: puhdas master 6a65ead1.
 
-**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 99eaf8d9 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
+**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 99bf0fe5 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
 132 yhdessä Natiivi-UI:n kanssa, verhokoe huntu pois, napakansi.
