@@ -263,7 +263,12 @@ namespace Matkakirja.Natiivi
                 string json = null;
                 yield return LinssiSisalto.Hae(LippuAnkkuritPolku, t => json = t);
                 var d = new Dictionary<string, (double, double)>();
-                if (Matkakirja.Peli.MiniJson.Jasenna(json ?? "") is Dictionary<string, object> o)
+                // Tiedosto puuttuu paketista (ennen Siirtosepän vientiä) → tyhjä: MiniJson heittää tyhjästä merkkijonosta.
+                object juuri = null;
+                if (!string.IsNullOrWhiteSpace(json))
+                    try { juuri = Matkakirja.Peli.MiniJson.Jasenna(json); }
+                    catch (FormatException e) { Debug.LogWarning("MATKAKIRJA ui lipputanko: ankkurit eivät jäsenny: " + e.Message); }
+                if (juuri is Dictionary<string, object> o)
                     foreach (var kv in o)
                         if (kv.Value is List<object> p && p.Count >= 2 && p[0] is double lon && p[1] is double lat) d[kv.Key] = (lat, lon);
                 lippuAnkkurit = d;
