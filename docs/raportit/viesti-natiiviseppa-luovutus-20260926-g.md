@@ -190,3 +190,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   jako sovittu. natiiviseppa/maakunta-heraa **29beca06** (EI junassa, menee Linssisepän haaran kanssa): MaaKartta.Heraannyt (Func<string,bool?>,
   uinuva × 0,3), PaivitaHeraaminen(), Herata(avain, piilossa) 0,3 s. Linssiseppä: herätysanimaatio ≤ 2,5 s MaakuntaHeraa-tapahtumasta;
   Natiivi-UI: kartussin leima ja merkit.
+- natiiviseppa/pohja-26 **c4c46662** (wt/proto-natiiviseppa-saapuminen): pohjasarja 2026-09-26-pohja-20260926 (Karttaseppä 06.57, 349 525 laattaa). Kuvapari käynnissä 07.0x: lokit/pohja-26/{b13,pohja-26}/ (pohjakuvat.sh, 7 näkymää) → Fablelle → junaan hyväksynnän jälkeen.
