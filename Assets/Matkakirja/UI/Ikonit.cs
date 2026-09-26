@@ -46,6 +46,9 @@ namespace Matkakirja.Natiivi
         public const string TunnusVaaka = "<path d=\"M7.3 1.8v11.4M3.6 13.2h7.4M2.4 4.2h9.8\"/><path d=\"M2.4 4.2 1 7.9a2.2 2.2 0 0 0 2.8 0zM12.2 4.2l-1.4 3.7a2.2 2.2 0 0 0 2.8 0z\"/>";
         public const string TunnusRaha = "<circle cx=\"7.3\" cy=\"7.5\" r=\"5.9\"/><path d=\"M7.3 4.3v6.4M5.5 6.2c0-.9.8-1.6 1.8-1.6s1.8.65 1.8 1.5c0 1.9-3.6 1.05-3.6 2.95 0 .85.8 1.5 1.8 1.5s1.8-.7 1.8-1.6\"/>";
 
+        /// <summary>Kuljettu reitti: mutkitteleva viiva lähtö- ja tulopisteineen (☰ Kartta).</summary>
+        public const string KuljettuReitti = "<path d=\"M5.5 17.5c3.5 0 3-6 6.5-6s3-5 6.5-5\"/><circle cx=\"4\" cy=\"18\" r=\"1.7\"/><circle cx=\"20\" cy=\"6\" r=\"1.7\"/>";
+
         public const string NuoliOikea = "<path d=\"M9 5.5 15.5 12 9 18.5\"/>";
         public const string NuoliAlas = "<path d=\"M5.5 9 12 15.5 18.5 9\"/>";
         public const string Tauko = "<path d=\"M8.5 5v14M15.5 5v14\"/>";
