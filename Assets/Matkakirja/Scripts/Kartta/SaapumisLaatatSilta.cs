@@ -8,7 +8,8 @@
 //     EnnakointejaEnintaan kerrallaan (lähimmät ulkomaiset ensin).
 //   PeliOhjain.MatkaPerilla → kaikki perutaan: perillä Cesium pyytää näkymän laatat itse, ja esilatauksen loput olisivat
 //     tuplahakuja näkyvän jonon perässä.
-// Aloituslento ohitetaan (oma mustan verhon esilatauksensa, erä 1: KarttaKerrokset.EsilataaAvaus). Laatat haetaan taustan
+// Aloituslento ohitetaan (oma mustan verhon esilatauksensa, erä 1: KarttaKerrokset.EsilataaAvaus; kohdemaan näkymä kiireellä
+// Nappulan lennossa, löydös 171). PeliOhjain.AloituslentoPaattyi → Saapumisvartija.Paljastus (VARTIJA 171). Laatat haetaan taustan
 // esilatauksena (Laattapalvelin.Esilataus.Tausta): ei näkyvän jonon, kiirejonon eikä verhon aikana.
 using System.Collections;
 using System.Collections.Generic;
@@ -46,6 +47,7 @@ namespace Matkakirja.Natiivi
                         kytketty.SaapuminenTiedossa -= MatkaAlkoi;
                         kytketty.KaupunkiEnnakoitu -= Ennakoitu;
                         kytketty.MatkaPerilla -= Perilla;
+                        kytketty.AloituslentoPaattyi -= Paljastui;
                     }
                     kytketty = o;
                     if (o != null)
@@ -53,6 +55,7 @@ namespace Matkakirja.Natiivi
                         o.SaapuminenTiedossa += MatkaAlkoi;
                         o.KaupunkiEnnakoitu += Ennakoitu;
                         o.MatkaPerilla += Perilla;
+                        o.AloituslentoPaattyi += Paljastui;
                     }
                 }
                 yield return odotus;
@@ -98,6 +101,12 @@ namespace Matkakirja.Natiivi
             var e = KarttaKerrokset.Instanssi.EsilataaSaapumisalue(kaupunki, maa, lat, lon, taso, linssi: false);
             if (e != null) ennakoidut.Add((avain, kaupunki, e));
         }
+
+        /// <summary>
+        /// Löydös 171: aloituslennon saapumiskortti valmis, arkki häipyy ja kohdemaa paljastuu (PeliOhjain.AloituslentoLoppui):
+        /// VARTIJA 171 kirjaa, oliko kohdemaan näkymä valmis.
+        /// </summary>
+        static void Paljastui(string kaupunki) => Saapumisvartija.Paljastus("aloituslento " + (kaupunki ?? "?"));
 
         static void Perilla(string kaupunki)
         {

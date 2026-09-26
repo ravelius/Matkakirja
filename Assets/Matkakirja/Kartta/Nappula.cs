@@ -434,6 +434,8 @@ namespace Matkakirja
             if (!AloituslentoPerilla) return;
             AloituslentoPerilla = false;
             Paatalento();
+            // VARTIJA 171: lennon esitys purettu kortin alla, pelin kartta latautuu nyt (Saavu ajaa näkymään: odotus "ajo").
+            Saapumisvartija.Vapauta("lento");
         }
 
         /// <summary>Aloituslennon Lento-ajo käynnissä (musta verho tai lento).</summary>
@@ -483,7 +485,10 @@ namespace Matkakirja
             // Lento päättyy täsmälleen saapumisnäkymään, johon PeliOhjain.Saavu ajaa perillä (aloituslento: webin
             // kaupunkinäkymä ilman maan laatikkoa; kallistus 0, pohjoinen ylös), joten perillä kamera ei hyppää.
             double saapumisKorkeus = lahtoKorkeus, saapumisLat = lat1, saapumisLon = lon1;
-            Laattapalvelin.Esilataus kohdeLataus = null;
+            Laattapalvelin.Esilataus kohdeLataus = null, saapumisLataus = null;
+            // Löydös 171: lennon lisäaika loppuorbitissa (SaapumisKiire.Aikakerroin) ja vartijan alku liu'ussa.
+            double lisattyS = 0;
+            bool vartijaAlkoi = false;
             if (kierto != null)
             {
                 var sn = kierto.SaapumisNakyma(null, lat1, lon1, maaRajaus: false);
@@ -498,6 +503,18 @@ namespace Matkakirja
                 double pk = pl / aspect;
                 kohdeLataus = KarttaKerrokset.Instanssi?.EsilataaKohde(
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
+                // LÖYDÖS 171: kohdemaan PELIN KARTAN laatat (pohja, maasto, kerma + laatat.json) samasta kaupunkinäkymästä, johon
+                // PeliOhjain.Saavu(maaRajaus: false) ajaa kortin alla, jo lennon alusta saapumisjonossa (näkyvän kartan vapaat
+                // paikat näkyvän jonon jälkeen). Ennen kohteesta esiladattiin vain lennon pinta, ja kortin alla koko näkymä tuli
+                // kylmänä verkosta. Kehittäjälippu Saapumisvartija.Paalla.
+                if (aloitus && Saapumisvartija.Paalla && KarttaKerrokset.Instanssi != null)
+                {
+                    var km0 = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
+                    string kid = km0 != null ? km0.LahinId(lat1, lon1) : null;
+                    string kmaa = kid != null ? km0.KaupunginMaa(kid) : null;
+                    saapumisLataus = KarttaKerrokset.Instanssi.EsilataaSaapumisalue(kid ?? "aloituslento", kmaa, lat1, lon1, Taso.Nakyva,
+                        linssi: false, maaRajaus: false, kiire: true);
+                }
             }
             bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false, pilvetPois = false;
             // LENNON ESITYS PÄÄLLE (EsitysPaalle): kartta, merkit, valo, filmipino ja pilvet. Löydös 120 v2: aloituslennolla
@@ -696,9 +713,17 @@ namespace Matkakirja
             AsetaVaihe(LennonVaihe.Nousu);
 
             float alku = Time.unscaledTime;
+            float edellinen = alku;
             while (true)
             {
-                float kulunut = Time.unscaledTime - alku;
+                // Löydös 171: loppuorbitissa lennon aika etenee hitaammin (enintään SaapumisKiire.LisaaEnintaanS), jos kohdemaan
+                // laatat eivät vielä ole levyllä; kamera liikkuu koko ajan (ei pysähdystä).
+                float nytT = Time.unscaledTime;
+                double tEnnen = math.saturate((edellinen - alku - lisattyS) / kesto);
+                double osuusNyt = saapumisLataus == null ? -1.0 : saapumisLataus.Peruttu ? 1.0 : saapumisLataus.Osuus;
+                lisattyS += SaapumisKiire.Lisa(nytT - edellinen, SaapumisKiire.Aikakerroin(tEnnen, jako.Kierto, osuusNyt, lisattyS), lisattyS);
+                edellinen = nytT;
+                float kulunut = (float)(nytT - alku - lisattyS);
                 double t = math.saturate(kulunut / kesto);
                 // Koneen tempo: lähikuvassa lähes paikallaan, kiihdytys, tasainen matka, hidastus kaupunkiin. Aloituslennolla
                 // reitin oma eteneminen (löydös 120 v2: lähtö levosta Lontoosta, laskeutuminen kameran mukana).
@@ -720,7 +745,15 @@ namespace Matkakirja
                 {
                     kohdeKirjattu = true;
                     Debug.Log($"MATKAKIRJA lennon pinta: orbit alkaa t={t * kesto:0.0} s, kohdealue {kohdeLataus.Valmis}+{kohdeLataus.Epaonnistui}"
-                              + $"/{kohdeLataus.Yhteensa} ({kohdeLataus.Osuus:P0})");
+                              + $"/{kohdeLataus.Yhteensa} ({kohdeLataus.Osuus:P0})"
+                              + (saapumisLataus != null ? $", kohdemaa {saapumisLataus.Valmis}+{saapumisLataus.Epaonnistui}/{saapumisLataus.Yhteensa} ({saapumisLataus.Osuus:P0})" : ""));
+                }
+                // VARTIJA 171: laskeutumisesta (liuku) kohdemaan näkymän valmistumiseen saapumistila (korjaus päällä) ja mittaus
+                // (aina). Odotus "lento" vapautuu, kun lennon esitys puretaan kortin alla (PaataAloituslento).
+                if (aloitus && !vartijaAlkoi && t >= jako.Liuku)
+                {
+                    vartijaAlkoi = true;
+                    Saapumisvartija.Aloita("aloituslento " + (kohdeId ?? "?"), "lento", saapumisLataus);
                 }
 
                 var (etaisyys, kallistusNyt, suuntimaNyt, kohde, koneOsuus) = aloitusReitti != null
@@ -822,6 +855,11 @@ namespace Matkakirja
                 if (t >= 1) break;
                 yield return null;
             }
+            if (aloitus)
+                Debug.Log($"MATKAKIRJA VARTIJA 171: aloituslento perillä, lisäaika {lisattyS:0.00} s, kohdemaa "
+                          + (saapumisLataus != null ? $"{saapumisLataus.Valmis}+{saapumisLataus.Epaonnistui}/{saapumisLataus.Yhteensa} ({saapumisLataus.Osuus:P0})"
+                              : Saapumisvartija.Paalla ? "- (ei esilatausta)" : "- (korjaus pois)")
+                          + $", pallo {(KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.ComputeLoadProgress().ToString("0.0") : "-")} %");
             if (reittiNaytteet != null)
                 Debug.Log(LennonKamerareitti.Raportti(LennonKamerareitti.Analysoi(reittiNaytteet),
                     $"{(aloitus ? "aloituslento" : "lento")} {kohdeId ?? "?"} {kesto:0.0} s (oikea kamera)"));
@@ -1190,6 +1228,7 @@ namespace Matkakirja
             Nosta(0);
             PoistaLentokaari();
             if (aloitusKesken) Valmius.KevennysLoppu("musta");
+            Saapumisvartija.Vapauta("lento");
             if (Vaihe != LennonVaihe.Ei || aloitusKesken) Paatalento();
             else if (kierto != null) kierto.SeurantaLoppui();
             Kone(false);
