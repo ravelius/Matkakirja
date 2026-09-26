@@ -147,6 +147,7 @@ namespace Matkakirja.Peli
                 Nimi = nimi,
                 Aloitus = aloitus,
                 Sijainti = Sijainti.KaupungissaSijainti(aloitus),
+                Kuljettu = { new KuljettuPiste(aloitus, null) },
             });
             return new Matka(verkko, satunnainen, tila);
         }
@@ -363,7 +364,27 @@ namespace Matkakirja.Peli
         {
             if (!p.Sijainti.Kaupungissa) return;
             bool uusi = p.Kaydyt.Add(p.Sijainti.Kaupunki);
+            KirjaaKuljettu(p);
             Saapui?.Invoke(p, p.Sijainti.Kaupunki, uusi);
+        }
+
+        /// <summary>
+        /// Kuljettu reitti kasvoi (pelaaja, edellinen piste tai null, uusi piste): Elävä kartta kohta 4.
+        /// Tulee logiikan hetkellä, ennen kamera-ajon loppua (PeliOhjain lykkää sen perille).
+        /// </summary>
+        public event Action<Pelaaja, KuljettuPiste, KuljettuPiste> KuljettuKasvoi;
+
+        /// <summary>Uusi kaupunki reitin perään (sama kaupunki peräkkäin ei kasvata reittiä).</summary>
+        void KirjaaKuljettu(Pelaaja p)
+        {
+            var kaupunki = p.Sijainti.Kaupunki;
+            var edellinen = p.Kuljettu.Count > 0 ? p.Kuljettu[p.Kuljettu.Count - 1] : null;
+            if (edellinen?.Kaupunki == kaupunki) return;
+            // Nopan siirrossa tapa on esivalittu tai oletus maitse (Heita: Kulkutapa ?? Maa).
+            var tapa = Tila.Kulkutapa ?? (Tila.Vaihe == Vaihe.Siirto ? Kulkutapa.Maa : (Kulkutapa?)null);
+            var uusi = new KuljettuPiste(kaupunki, tapa);
+            p.Kuljettu.Add(uusi);
+            KuljettuKasvoi?.Invoke(p, edellinen, uusi);
         }
 
         /// <summary>Web visitCity siirron ulkopuolelta (esim. vapaa siirtyminen).</summary>

@@ -41,6 +41,7 @@
 //   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
 //   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
+//   pallo lepo                pallon lepotila ja syy (PallonLepo.Kuvaus) peli-lokiin (sama kuin komento.txt:n pallo lepo)
 //   verkko raja [vaihe]       vartija: "RAJA saapuminen 0 ms verkko-odotusta: PASS|FAIL (ms, kpl)" lokiin ja peli-lokiin
 //   levy [Mt]                 levyvälimuistien koko ja siivous vanhimmasta (oletus 2048 Mt; pienempi raja testiin) sekä
 //                             purettujen kuvien muisti (LRU tavuina, iPhone 200 / iPad 300 Mt); tulos lokiin "levy:"
@@ -301,6 +302,9 @@ namespace Matkakirja.Natiivi
                 case "ruutu":
                     // Dynaaminen ruudunpäivitys ja lämpö (Kartta/Ruudunpaivitys.cs, lämpöerä 25.9.2026).
                     return Ruudunpaivitys.Instanssi != null ? "=" + Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä";
+                case "pallo" when A(1) == "lepo":
+                    // Laitetestaaja 26.9. (b19, verkoton lepopiirto): pallon lepotila ja syy peli-lokiin, kun Debug.Log ei näy.
+                    return "=" + PallonLepo.Kuvaus();
                 case "lampo":
                 {
                     // lampo normaali|kuuma|kriittinen|auto: pakottaa lämpötason (simulaattorissa thermalState on aina 0).
