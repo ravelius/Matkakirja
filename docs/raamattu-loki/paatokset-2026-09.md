@@ -7523,3 +7523,7 @@ Natiivisepan luovutus -j pushattu (BUILD 26 2c91a5d2 → TF 1.0.26, 1.0.27-jono:
 ## TF 1.0.26 ULKONA 22.30 (26.9.2026 klo 22.32)
 
 Julkaisija: TF 1.0.26 lahetetty ja ASC:ssa kasitelty, ajo 36265749506, CFBundleVersion 202609261921, proto 2c91a5d2, laskuri 26, ISS-TLE mukana (14:57Z). Push omistajalle 22.3x. Sisalto: 176 porttikorjaus, 175 nostojen koko/kynnys, 171, 168, 172, Pulun karttavaisto, laattaera 2, ilmapallo, ISS-SGP4, 174b, S10, lipun piilotus, 177 uusi peli. Huom: 170 (kuvat ilman uudelleenkaynnistysta) ja 173/169/174 (Natiivi-UI) eivat ehtineet → 1.0.27.
+
+## 178 TOTEUTUS: VAIHTOEHTO A (11 NYT, 70 TARINAKOHDETTA SIIRRON JALKEEN); STRIIMIPUHE ALOITETTU (26.9.2026 klo 22.36)
+
+Pelikoodari (76dc1d7a0, ei pushattu): tyyppikentta 250 kohteelle, web + natiivi suodatus, min/kaupunki-vartija; RISTIRIITA: 70/81 piilotettavasta on tarinakohteen ainoa karttapaikka (skandaalit, historian hetket, taustat; omistajan 2.9-saanto), testit 953 ja 3985 punaisia. Fable: vaihtoehto A — piilota nyt vain 11 ei-tarinakohdetta, 70 jaavat kunnes Sisaltokirjuri siirtaa; testit vihreina. Pelikoodari oli jumissa SendMessage-rajassa → varakanava. Striimipuheen vertailu ei ollut viela alkanut → aloitetaan nyt agentilla, valitila 60 min.
