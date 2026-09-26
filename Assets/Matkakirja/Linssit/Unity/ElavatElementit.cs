@@ -3,6 +3,7 @@
 // kohden, ja kukin aihe on yksi Aihe-määrittely: paikka, yksilöt ruudulla, runko, pyörivä osa ja animaatio.
 //   kokeilu 1  Zaandamin kolme tuulimyllyä (vain siivet pyörivät, 7–9 s/kierros)
 //   kokeilu 2  Tivolin ketjukaruselli Kööpenhaminassa (katos 10 s/kierros, istuimet keinuvat ulospäin aaltoillen, lamput)
+//   kokeilu 3  Pariisin kiinnitetty ilmapallo Tuileries'ssa (nousu ja lasku 24 s, kori heiluu 5 s, köysi vintturiin)
 //
 // Mallit ovat proseduraalisia low-poly-malleja löydöksen 160 paletilla (MalliVarit) ja varjostimella
 // Matkakirja/Linssit/Malli. Natiivisepän Blender-mallit voivat korvata ne myöhemmin (sama juuri ja sama pyörivä osa).
@@ -87,6 +88,21 @@ namespace Matkakirja.Natiivi
                 PohjaSade = 0.95f, Haalistus = 0.25f,
                 LastenPaikat = KaruselliGeometria.Ripustukset(),
                 Animoi = KaruselliGeometria.Animoi,
+            },
+            new Aihe
+            {
+                // Ilmapallo: ajaa 50–130 s (2–5 nousua), ja vintturi pysähtyy välillä 15–45 s (pallo jää paikalleen
+                // ilmaan tai maahan, kori asettuu pystyyn); vintturin tahti vaihtelee ±8 %.
+                Vaihtelu = i => new Vaihtelu(307 + i) { KayMinS = 50, KayMaxS = 130, SeisooMinS = 15, SeisooMaxS = 45, TaukoTod = 0.7, Puuska = 0.08 },
+                Nimi = "ilmapallo", Paikka = new LatLon(48.8634, 2.3275), KokoPt = 40f,   // Jardin des Tuileries, Pariisi
+                // 40 pt ruudulla ylös (kallistettaessa taakse): Tuileries on vain 2 km Pariisin pisteestä, ja simulaattorissa
+                // 26.9. pallo peitti pisteen.
+                Yksilot = new[] { (0f, 40f, 0f) },
+                Runko = IlmapalloGeometria.Asema, Roottori = IlmapalloGeometria.Pallo, Lapsi = IlmapalloGeometria.Koysi,
+                LastenPaikat = new[] { Vector3.zero },
+                // Suunta: tuuli lounaasta, joten pallo nojaa koilliseen (+z).
+                PohjaSade = 0.7f, Haalistus = 0.25f, Suunta = 45f,
+                Animoi = IlmapalloGeometria.Animoi,
             },
         };
 
@@ -450,6 +466,18 @@ namespace Matkakirja.Natiivi
             Kolmio(k - y, k + z, k + x, v); Kolmio(k - y, k - x, k + z, v); Kolmio(k - y, k - z, k - x, v); Kolmio(k - y, k + x, k - z, v);
         }
 
+        /// <summary>Ohut nelikulmainen tanko pisteestä a pisteeseen b (köydet, ripustusnarut), 8 kolmiota.</summary>
+        public void Tanko(Vector3 a, Vector3 b, float paksuus, Color v)
+        {
+            Vector3 d = (b - a).normalized;
+            Vector3 u = Vector3.Cross(d, Mathf.Abs(d.y) < 0.9f ? Vector3.up : Vector3.right).normalized * paksuus;
+            Vector3 w = Vector3.Cross(d, u).normalized * paksuus;
+            Nelio(a + u + w, a + u - w, b + u - w, b + u + w, v);
+            Nelio(a - u - w, a - u + w, b - u + w, b - u - w, v);
+            Nelio(a - u + w, a + u + w, b + u + w, b - u + w, v);
+            Nelio(a + u - w, a - u - w, b - u - w, b + u - w, v);
+        }
+
         /// <summary>Laatikko keskipisteestä puolikoolla (siipipuut, lavan tuet).</summary>
         public void Laatikko(Vector3 k, Vector3 h, Color v)
         {
@@ -634,6 +662,122 @@ namespace Matkakirja.Natiivi
             r.Laatikko(new Vector3(0, -Ketju + 0.03f, -0.018f), new Vector3(leveys + 0.006f, 0.032f, 0.004f), MalliVarit.SageVaalea); // selkä
             r.Laatikko(new Vector3(0, -Ketju - 0.03f, 0.03f), new Vector3(0.012f, 0.022f, 0.004f), MalliVarit.Varjo);       // jalkatuki
             return r.Mesh("Karuselli: istuin");
+        }
+    }
+
+    /// <summary>
+    /// Proseduraalinen kiinnitetty ilmapallo (kokeilu 3, Pariisi; selvitys: Giffardin pallo Tuileries'ssa). Runko (Asema) on
+    /// paikallaan pysyvä pyöreä lava, jonka keskellä on laskeutumiskehä ja reunalla vintturihuone ja pylväät. Pallo (pyörivä
+    /// osa) on terrakottainen kupu, ekvaattorivyö, kantorengas, narut ja kori; juuri on lavan tasossa, ja kori lepää kehässä.
+    /// Koysi (lapsi) kulkee korin pohjasta vintturiin ja venyy korkeuden mukaan. Animoi: 24 s:n jakso (maassa 2 s, nousu 9 s,
+    /// ylhäällä 3 s, lasku 9 s, maassa 1 s), ylhäällä pallo nojaa tuulen alle (+z), ja kori heiluu 5 s:n jaksolla kuvun
+    /// keskipisteen ympäri, heilunta nopeuden ja korkeuden mukaan (maassa ja pysähtyessä pystyyn).
+    /// </summary>
+    public static class IlmapalloGeometria
+    {
+        const float KupuY = 0.54f, KupuR = 0.26f, KoriAla = 0.06f, KoriYla = 0.13f, RengasY = 0.22f, Korkein = 1.0f, Nojaus = 0.14f;
+        static readonly Vector3 Vintturi = new Vector3(0, 0.05f, 0);
+
+        static float Pehmea(float x) { x = Mathf.Clamp01(x); return x * x * (3f - 2f * x); }
+
+        /// <summary>Korkeus (0–Korkein) jakson hetkellä t: maassa, nousu, ylhäällä, lasku.</summary>
+        public static float Korkeus(float t)
+        {
+            float u = Mathf.Repeat(t, 24f);
+            if (u < 2f) return 0f;
+            if (u < 11f) return Korkein * Pehmea((u - 2f) / 9f);
+            if (u < 14f) return Korkein;
+            if (u < 23f) return Korkein * (1f - Pehmea((u - 14f) / 9f));
+            return 0f;
+        }
+
+        public static void Animoi(Transform pallo, Transform[] lapset, float t, float nopeus)
+        {
+            float h = Korkeus(t);
+            float n = Pehmea(nopeus) * Mathf.Clamp01(h / 0.15f);
+            float w = t * Mathf.PI * 2f / 5f;
+            // Heilunta kuvun keskipisteen ympäri: kori piirtää pienen soikion (5° ja 3°, eri vaiheissa).
+            var r = Quaternion.Euler(5f * n * Mathf.Sin(w), 0, 3f * n * Mathf.Sin(w * 0.77f + 1f));
+            var kupu = new Vector3(0, KupuY, 0);
+            Vector3 p = new Vector3(0, h, Nojaus * h) + kupu - r * kupu;
+            pallo.localPosition = p;
+            pallo.localRotation = r;
+            if (lapset == null || lapset.Length == 0) return;
+            // Köysi pallon avaruudessa korin pohjasta vintturiin (runko = pallon isän isä, pallo on sen suora lapsi).
+            Vector3 b = new Vector3(0, KoriAla, 0), q = Quaternion.Inverse(r) * (Vintturi - p);
+            Vector3 d = q - b;
+            var koysi = lapset[0];
+            koysi.localPosition = b;
+            koysi.localRotation = d.sqrMagnitude > 1e-8f ? Quaternion.FromToRotation(Vector3.down, d) : Quaternion.identity;
+            koysi.localScale = new Vector3(1, Mathf.Max(0.001f, d.magnitude), 1);
+        }
+
+        public static Mesh Asema()
+        {
+            var r = new MalliRakenne();
+            r.Vaippa(0f, 0.46f, 0.05f, 0.44f, MalliVarit.Varjo, MalliVarit.Pinta, 16);            // lava
+            r.Kansi(0.05f, 0.44f, MalliVarit.Pinta, 16);
+            r.Vaippa(0.05f, 0.12f, 0.075f, 0.12f, MalliVarit.Varjo, MalliVarit.Varjo, 12);        // laskeutumiskehä
+            r.Laatikko(new Vector3(0, 0.10f, -0.33f), new Vector3(0.09f, 0.05f, 0.055f), MalliVarit.Pinta);   // vintturihuone
+            r.Nelio(new Vector3(-0.10f, 0.15f, -0.39f), new Vector3(0.10f, 0.15f, -0.39f), new Vector3(0.10f, 0.19f, -0.33f), new Vector3(-0.10f, 0.19f, -0.33f), MalliVarit.Varjo);
+            r.Nelio(new Vector3(-0.10f, 0.19f, -0.33f), new Vector3(0.10f, 0.19f, -0.33f), new Vector3(0.10f, 0.15f, -0.27f), new Vector3(-0.10f, 0.15f, -0.27f), MalliVarit.Varjo);
+            for (int i = 0; i < 8; i++)
+            {
+                float a = (i + 0.5f) * Mathf.PI * 2 / 8;
+                r.Laatikko(new Vector3(Mathf.Cos(a) * 0.41f, 0.09f, Mathf.Sin(a) * 0.41f), new Vector3(0.01f, 0.04f, 0.01f), MalliVarit.Varjo);   // pylväät
+            }
+            return r.Mesh("Ilmapallo: asema");
+        }
+
+        public static Mesh Pallo()
+        {
+            var r = new MalliRakenne();
+            // Kupu: 12 kaistaa × 8 leveysvyötä, kaistat vuorotellen kahdella terrakotan sävyllä (ainoa aksentti).
+            const int kaistoja = 12, vyot = 8;
+            Color c1 = MalliVarit.TerrakottaHimmea, c2 = Color.Lerp(MalliVarit.Terrakotta, MalliVarit.TerrakottaHimmea, 0.4f);
+            Vector3 P(int i, int j)
+            {
+                float lat = -Mathf.PI / 2 + Mathf.PI * j / vyot, lon = Mathf.PI * 2 * i / kaistoja;
+                return new Vector3(Mathf.Cos(lat) * Mathf.Cos(lon) * KupuR, KupuY + Mathf.Sin(lat) * KupuR, Mathf.Cos(lat) * Mathf.Sin(lon) * KupuR);
+            }
+            for (int i = 0; i < kaistoja; i++)
+                for (int j = 0; j < vyot; j++)
+                {
+                    Color c = i % 2 == 0 ? c1 : c2;
+                    if (j == 0) r.Kolmio(P(i, 0), P(i, 1), P(i + 1, 1), c);
+                    else if (j == vyot - 1) r.Kolmio(P(i, j), P(i, j + 1), P(i + 1, j), c);
+                    else r.Nelio(P(i, j), P(i, j + 1), P(i + 1, j + 1), P(i + 1, j), c);
+                }
+            r.Vaippa(KupuY - 0.012f, KupuR + 0.004f, KupuY + 0.012f, KupuR + 0.004f, MalliVarit.Varjo, MalliVarit.Varjo, 12);   // ekvaattorivyö
+            r.Nuppi(new Vector3(0, KupuY + KupuR + 0.01f, 0), 0.02f, MalliVarit.Varjo);                              // venttiili
+            r.Vaippa(RengasY - 0.006f, 0.07f, RengasY + 0.006f, 0.07f, MalliVarit.Varjo, MalliVarit.Varjo, 8);       // kantorengas
+            // Narut: kahdeksan kuvun alavyöltä (−35°) kantorenkaaseen ja neljä renkaasta koriin.
+            float la = -35f * Mathf.Deg2Rad;
+            for (int i = 0; i < 8; i++)
+            {
+                float a = (i + 0.5f) * Mathf.PI * 2 / 8;
+                Vector3 yla = new Vector3(Mathf.Cos(a) * Mathf.Cos(la) * KupuR, KupuY + Mathf.Sin(la) * KupuR, Mathf.Sin(a) * Mathf.Cos(la) * KupuR);
+                Vector3 ala = new Vector3(Mathf.Cos(a) * 0.07f, RengasY, Mathf.Sin(a) * 0.07f);
+                r.Tanko(ala, yla, 0.003f, MalliVarit.Varjo);
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                float a = (i + 0.5f) * Mathf.PI * 2 / 4;
+                r.Tanko(new Vector3(Mathf.Cos(a) * 0.055f, KoriYla, Mathf.Sin(a) * 0.055f), new Vector3(Mathf.Cos(a) * 0.07f, RengasY, Mathf.Sin(a) * 0.07f), 0.003f, MalliVarit.Varjo);
+            }
+            r.Vaippa(KoriAla, 0.065f, KoriYla, 0.08f, MalliVarit.Varjo, MalliVarit.Pinta, 8);    // kori
+            r.Kansi(KoriAla, 0.065f, MalliVarit.Varjo, 8, ylos: false);
+            r.Kansi(KoriYla - 0.01f, 0.075f, MalliVarit.Varjo, 8);
+            return r.Mesh("Ilmapallo: pallo");
+        }
+
+        /// <summary>Köysi: origosta alas (−y) yhden yksikön; Animoi venyttää sen vintturiin.</summary>
+        public static Mesh Koysi()
+        {
+            var r = new MalliRakenne();
+            r.Tanko(Vector3.zero, Vector3.down, 0.004f, MalliVarit.Varjo);
+            var m = r.Mesh("Ilmapallo: köysi");
+            return m;
         }
     }
 }
