@@ -1132,10 +1132,12 @@ namespace Matkakirja
         /// <summary>
         /// Nappulan ja koneen pohjakorkeus ellipsoidista. Maassa (ei lentoa) <see cref="nosto"/> × korkeuskerroin: mikä
         /// oli kertoimella 1 maaston yllä, pysyy sen yllä (KorkeusKerroin.Sovita). Lennolla <see cref="lentoPohja"/>.
+        /// Nappula itse (Siirra) käyttää maassa kaupungin pisteen korkeutta (löydös 166, KaupunkiMerkit.PisteenKorkeus).
         /// </summary>
         double Pohja => double.IsNaN(lentoPohja) ? KorkeusKerroin.Sovita(nosto) : lentoPohja;
         /// <summary>Lennon pohjakorkeus (koneen kaari = pohja + huippu·sin(πp)); NaN = ei lentoa.</summary>
         double lentoPohja = double.NaN;
+        KaupunkiMerkit pisteMerkit;
         /// <summary>Lähtö- ja laskusumu puolet nostosta koneen alle (ennen 1,0: nosto/2), korotetun pohjan mukana.</summary>
         double UsvanKorkeus => math.max(nosto * 0.5, Pohja - nosto * 0.5);
 
@@ -1236,7 +1238,16 @@ namespace Matkakirja
         {
             Lat = lat;
             Lon = lon;
-            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, Pohja + h));
+            // LÖYDÖS 166: maassa nappulan jalka kaupungin pisteen korkeudelle (pinta × kerroin + nosto, KaupunkiMerkit), ei
+            // Sovita(nosto):aan (10 km, 5 km pisteen yläpuolella → kallistettuna nappula irtosi pisteestä). Lennolla ennallaan.
+            double pohja = Pohja;
+            if (double.IsNaN(lentoPohja))
+            {
+                if (pisteMerkit == null) pisteMerkit = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
+                double piste = pisteMerkit != null ? pisteMerkit.PisteenKorkeus(lat, lon) : double.NaN;
+                if (!double.IsNaN(piste)) pohja = piste;
+            }
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, pohja + h));
             olio.transform.localPosition = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
         }
 
