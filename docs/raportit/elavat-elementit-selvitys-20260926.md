@@ -42,8 +42,7 @@ elävällä kerroksella (161-B).*
 - **Praha:** Orlojin apostolikulkue laukeaa tunnin lyönnillä ja kaupunkiin saavuttaessa (luukut aukeavat ja 12 hahmoa
   kiertää 8 s, 1 200). Tapahtuma on harvinainen, joten se ei lisää jatkuvaa liikettä.
 - **Tukholma:** purjevene luovii saariston selällä (käännös 12 s:n välein, 300).
-- **Wien:** Riesenrad. Se toistaisi Lontoon pyörää, joten Wien vain, jos Lontoon pyörä jää pois; muuten Wienin
-  aihe on Tonavan höyry (Lontoon varapaikka).
+- **Wien:** Riesenrad. Se toistaisi Lontoon pyörää, joten Wien vain, jos Lontoon pyörä jää pois.
 
 ## Tekninen toteutus ja työnjako
 
