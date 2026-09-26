@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2250, teksti: 'Miniatyyrien värikorjaus (#3291)' },
+  { v: 2249, teksti: 'Maakunnat: KOR lyhyt (#3290)' },
+  { v: 2248, teksti: 'Miniatyyrien värikorjaus (#3288)' },
   { v: 2247, teksti: 'Sisältöjuna: maakunnat 10, GRC-salaisuuksien nimiöt' },
   { v: 2246, teksti: 'Sisältöpaketti 1.44: karttavalot.laji (#3260)' },
   { v: 2245, teksti: 'Sisältöjuna: maakunnat 9, miniatyyrien värit 504 (1–7)' },
