@@ -1,0 +1,722 @@
+[
+  {
+    "id": "venetsia-canal-grande",
+    "replacement_id": "venetsia-canal-grande-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-canal-grande-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-canal-grande-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-canal-grande-vari2.png",
+    "sha256": "61223c7f4d78fb9cb78a4d4a8f83e34cbce172858b61ab453a292abadb544fc2",
+    "bytes": 1712772,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Venice Grand Canal, preserve the exact original two curving rows of palazzi around the waterway, the perspective, buildings, silhouette, canal, mooring posts, scale, and empty gaps. Treat this as hand-coloring the same miniature, not redrawing it. Image 2 is ONLY the approved light colored ink-watercolor STYLE reference. Add restrained dusty terracotta and pale gray-cream facades, warm ocher stone, quiet sage accents, subtle blue-green water, soft muted shadows; keep original fine architectural ink lines visible. No new buildings, boats, figures or text. Background and true through-openings perfectly flat RGB #FF00FF chroma-key magenta, no paper/checkerboard/gradient/shadow/halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-la-fenicen-oopperatalo",
+    "replacement_id": "venetsia-la-fenicen-oopperatalo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-la-fenicen-oopperatalo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-la-fenicen-oopperatalo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-la-fenicen-oopperatalo-vari2.png",
+    "sha256": "9892c5a07a92d003fe8cf74b80a13824a019e17f63b9847f6a3955f7db47de33",
+    "bytes": 1900449,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Venice La Fenice Opera House historic horseshoe auditorium, gilded balconies, stage curtain, vaulted ceiling; preserve exact original interior sectional cutaway. This is hand-coloring the SAME miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, linework and every architectural detail. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Use light creamy stone, muted terracotta roofs and brick, quiet sage accents where foliage exists, dusty blue-gray shadows and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, additions, removals and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-rialton-silta",
+    "replacement_id": "venetsia-rialton-silta-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-rialton-silta-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-rialton-silta-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-rialton-silta-vari2.png",
+    "sha256": "9076f6ea5b39edf75777ecd82c70a16a00b472d013455270a560870b01ccc146",
+    "bytes": 1539098,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Venice Rialto Bridge, single tall central arch topped by row of shops; preserve exact original bridge span, angle, river water, buildings and transparent central opening. This is hand-coloring the SAME miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, linework and every architectural detail. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Use light creamy stone, muted terracotta roofs and brick, quiet sage accents where foliage exists, dusty blue-gray shadows and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, additions, removals and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-pyhan-markuksen-tori",
+    "replacement_id": "venetsia-pyhan-markuksen-tori-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-pyhan-markuksen-tori-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-pyhan-markuksen-tori-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-pyhan-markuksen-tori-vari2.png",
+    "sha256": "5b7fef57df86aa670fb44595122b8b83b91dbde45d83c4bb089c8b168c4882ab",
+    "bytes": 1489249,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Venice Piazza San Marco, long arcaded square with the Basilica/campanile as depicted; preserve exact original perspective, architecture, arcades, tower and open square. This is hand-coloring the SAME miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, linework and every architectural detail. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Use light creamy stone, muted terracotta roofs and brick, quiet sage accents where foliage exists, dusty blue-gray shadows and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, additions, removals and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-san-giorgio-maggiore",
+    "replacement_id": "venetsia-san-giorgio-maggiore-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-san-giorgio-maggiore-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-san-giorgio-maggiore-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-san-giorgio-maggiore-vari2.png",
+    "sha256": "6462a701e8e29bd9d6edc37baaf9b5bb8c45b13f38573f6098e89b966c29ab8a",
+    "bytes": 1589604,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Venice San Giorgio Maggiore church, tall campanile left, domes and classical pediment; preserve exact original arrangement, silhouette and architecture. This is hand-coloring the SAME miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, linework and every architectural detail. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Use light creamy stone, muted terracotta roofs and brick, quiet sage accents where foliage exists, dusty blue-gray shadows and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, additions, removals and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-arsenaali",
+    "replacement_id": "venetsia-arsenaali-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-arsenaali-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-arsenaali-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-arsenaali-vari2.png",
+    "sha256": "ebd9a1bfc312474284dc9d1c044b40b4f122c7465ff33403ac02c6b9e0600f95",
+    "bytes": 1777853,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Venice Arsenal monumental arched gate between two round stone towers, bridge and narrow canal as originally depicted. This is hand-coloring the SAME isolated miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, arch/window/tool details and linework. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Apply light creamy stone and wood, muted terracotta roof or aged bronze accents, quiet sage where foliage exists, dusty blue-gray shadows, subtle water where original contains water, and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, invented objects and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-markuksen-hevoset",
+    "replacement_id": "venetsia-markuksen-hevoset-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-markuksen-hevoset-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-markuksen-hevoset-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-markuksen-hevoset-vari2.png",
+    "sha256": "17d061d9430eab8e989197597ab1c2ebb9f03b08c384188183fbd6f389926bbd",
+    "bytes": 1679529,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: the four bronze Horses of Saint Mark on the original ornate loggia, exactly four horses and original arch supports. This is hand-coloring the SAME isolated miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, arch/window/tool details and linework. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Apply light creamy stone and wood, muted terracotta roof or aged bronze accents, quiet sage where foliage exists, dusty blue-gray shadows, subtle water where original contains water, and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, invented objects and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-dogen-palatsi",
+    "replacement_id": "venetsia-dogen-palatsi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-dogen-palatsi-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-dogen-palatsi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-dogen-palatsi-vari2.png",
+    "sha256": "fe6b311d807e6bf8431e676a3cd5fb6adb6d457286bdc12212103a2d75e5bd3f",
+    "bytes": 1789655,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Venice Doge's Palace original broad two-story arcades, diamond-patterned upper wall, arched windows and central dome as depicted. This is hand-coloring the SAME isolated miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, arch/window/tool details and linework. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Apply light creamy stone and wood, muted terracotta roof or aged bronze accents, quiet sage where foliage exists, dusty blue-gray shadows, subtle water where original contains water, and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, invented objects and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "venetsia-aldon-paino",
+    "replacement_id": "venetsia-aldon-paino-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/venetsia-aldon-paino-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/venetsia-aldon-paino-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/venetsia-aldon-paino-vari2.png",
+    "sha256": "393efa9777e66c63222138b59b64c4e027075faccdea560738bfb3a06a211d64",
+    "bytes": 1606927,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Aldus Manutius historical wooden printing press and laid-out letterpress type trays, preserve precise structure and placement. This is hand-coloring the SAME isolated miniature, not redrawing it. Preserve exact original composition, camera angle, scale, placement, silhouette, contours, arch/window/tool details and linework. Image 2 is ONLY the approved pale colored ink-watercolor STYLE reference. Apply light creamy stone and wood, muted terracotta roof or aged bronze accents, quiet sage where foliage exists, dusty blue-gray shadows, subtle water where original contains water, and soft gentle watercolor washes. Keep fine historic ink lines visible. Avoid monochrome sepia, dark brown, saturated color, photorealism, CGI, invented objects and text. Background and real see-through openings perfectly flat pure RGB #FF00FF magenta chroma-key, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-pokrovskin-puisto",
+    "replacement_id": "vladivostok-pokrovskin-puisto-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-pokrovskin-puisto-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-pokrovskin-puisto-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-pokrovskin-puisto-vari2.png",
+    "sha256": "085c8ad705d08f25394edd8068ddf0d17567d9d59e383ac5b08e654dce30a0d2",
+    "bytes": 1831208,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Vladivostok Pokrovsky Park, small white Russian Orthodox church with onion domes on wooded island and original curved stairs. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve the exact original subject, composition, camera angle, dimensions, silhouette, contour, architectural or vehicle details and fine ink lines. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Use soft creamy pale masonry, dusty muted terracotta for actual brick/roof, quiet sage on original foliage, restrained blue-gray shadows or water, delicate antique ink lines. Do not invent anything, remove anything, add text, make photorealism or saturated CGI. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-linnoitusmuseo",
+    "replacement_id": "vladivostok-linnoitusmuseo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-linnoitusmuseo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-linnoitusmuseo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-linnoitusmuseo-vari2.png",
+    "sha256": "2bfbd307e7aa28a9dad3cc69697df9469e22a22b7a3cdcfabefa3440ed0d5ad0",
+    "bytes": 1772148,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Vladivostok Fortress Museum, coastal concrete gun emplacement built into rocky hill, original cannon and stairs. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve the exact original subject, composition, camera angle, dimensions, silhouette, contour, architectural or vehicle details and fine ink lines. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Use soft creamy pale masonry, dusty muted terracotta for actual brick/roof, quiet sage on original foliage, restrained blue-gray shadows or water, delicate antique ink lines. Do not invent anything, remove anything, add text, make photorealism or saturated CGI. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-kotkanpesan-kukkula",
+    "replacement_id": "vladivostok-kotkanpesan-kukkula-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-kotkanpesan-kukkula-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-kotkanpesan-kukkula-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-kotkanpesan-kukkula-vari2.png",
+    "sha256": "969a8436f95868fb47ed08beb1ba2b146845d0ec7df748c01d919df8e5543825",
+    "bytes": 1872594,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Eagle's Nest Hill viewpoint in Vladivostok, original stone terrace, small domed pavilion, steep winding stairs and conifers. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve the exact original subject, composition, camera angle, dimensions, silhouette, contour, architectural or vehicle details and fine ink lines. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Use soft creamy pale masonry, dusty muted terracotta for actual brick/roof, quiet sage on original foliage, restrained blue-gray shadows or water, delicate antique ink lines. Do not invent anything, remove anything, add text, make photorealism or saturated CGI. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-funikulaari",
+    "replacement_id": "vladivostok-funikulaari-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-funikulaari-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-funikulaari-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-funikulaari-vari2.png",
+    "sha256": "b114389de6fde4b85b9f56e2f36ec5703d28b4f65d427de7b7204910ae27923c",
+    "bytes": 1450750,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Vladivostok Funicular, one compact historic cable railway car on steep rails with original masonry walls. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve the exact original subject, composition, camera angle, dimensions, silhouette, contour, architectural or vehicle details and fine ink lines. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Use soft creamy pale masonry, dusty muted terracotta for actual brick/roof, quiet sage on original foliage, restrained blue-gray shadows or water, delicate antique ink lines. Do not invent anything, remove anything, add text, make photorealism or saturated CGI. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-arsenjevin-museo",
+    "replacement_id": "vladivostok-arsenjevin-museo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-arsenjevin-museo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-arsenjevin-museo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-arsenjevin-museo-vari2.png",
+    "sha256": "5f73f1bfabe2d38a261bbe0d1e291188183e96e46ab21b648149e1b60b25ce1d",
+    "bytes": 1632189,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Vladivostok Arseniev Museum small rectangular two-story stone building, arched windows and hipped roof in original perspective. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve exact original subject, composition, viewpoint, dimensions, silhouette, contours, technical and architectural details and fine ink linework. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Add soft creamy pale stone, dusty muted terracotta for actual brick or roof, quiet sage where original has foliage, gentle dusty blue-gray on steel/water/shadows, delicate watercolor washes. Avoid flat monochrome sepia, strong saturation, photorealism, CGI, invented objects, missing objects, added text. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-gum-tavaratalo",
+    "replacement_id": "vladivostok-gum-tavaratalo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-gum-tavaratalo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-gum-tavaratalo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-gum-tavaratalo-vari2.png",
+    "sha256": "0df27286aded28752fb00fa7fcea10b056336c000338a802fa4ff86a5f6ecbc0",
+    "bytes": 1585851,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Vladivostok GUM department store ornate historic multi-story facade with corner towers and arches in original three-quarter view. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve exact original subject, composition, viewpoint, dimensions, silhouette, contours, technical and architectural details and fine ink linework. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Add soft creamy pale stone, dusty muted terracotta for actual brick or roof, quiet sage where original has foliage, gentle dusty blue-gray on steel/water/shadows, delicate watercolor washes. Avoid flat monochrome sepia, strong saturation, photorealism, CGI, invented objects, missing objects, added text. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-sukellusvene-s-56",
+    "replacement_id": "vladivostok-sukellusvene-s-56-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-sukellusvene-s-56-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-sukellusvene-s-56-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-sukellusvene-s-56-vari2.png",
+    "sha256": "58024306e72dd26d2003d3ac7e12174fd51674bf6c68e90952bbac7ec6c56348",
+    "bytes": 1588996,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: S-56 Soviet submarine outdoor memorial on original rectangular display plinth, preserve exact hull, conning tower and view angle. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve exact original subject, composition, viewpoint, dimensions, silhouette, contours, technical and architectural details and fine ink linework. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Add soft creamy pale stone, dusty muted terracotta for actual brick or roof, quiet sage where original has foliage, gentle dusty blue-gray on steel/water/shadows, delicate watercolor washes. Avoid flat monochrome sepia, strong saturation, photorealism, CGI, invented objects, missing objects, added text. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-rautatieasema",
+    "replacement_id": "vladivostok-rautatieasema-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-rautatieasema-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-rautatieasema-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-rautatieasema-vari2.png",
+    "sha256": "b84a3bb89ede231bc47a5d3018f7c4c9bf13b767120471cac32df1d73b09c826",
+    "bytes": 1500218,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Vladivostok railway station, original ornate historic entrance hall with steep roof and arcaded porch, exact view angle. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve exact original subject, composition, viewpoint, dimensions, silhouette, contours, technical and architectural details and fine ink linework. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Add soft creamy pale stone, dusty muted terracotta for actual brick or roof, quiet sage where original has foliage, gentle dusty blue-gray on steel/water/shadows, delicate watercolor washes. Avoid flat monochrome sepia, strong saturation, photorealism, CGI, invented objects, missing objects, added text. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "vladivostok-kultaisen-sarven-silta",
+    "replacement_id": "vladivostok-kultaisen-sarven-silta-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-26/vladivostok-kultaisen-sarven-silta-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/vladivostok-kultaisen-sarven-silta-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/vladivostok-kultaisen-sarven-silta-vari2.png",
+    "sha256": "b5e1f563a160d2da3b39917eb51b88f30f2144ea31ab9a78cfcceba0f3a54dcc",
+    "bytes": 1404607,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Vladivostok Golden Horn Bridge, two cable-stayed towers, asymmetric trusses/cables and original perspective. This is hand-coloring the SAME original isolated map miniature, not redrawing it. Preserve exact original subject, composition, viewpoint, dimensions, silhouette, contours, technical and architectural details and fine ink linework. Image 2 is ONLY approved pale colored ink-watercolor STYLE reference. Add soft creamy pale stone, dusty muted terracotta for actual brick or roof, quiet sage where original has foliage, gentle dusty blue-gray on steel/water/shadows, delicate watercolor washes. Avoid flat monochrome sepia, strong saturation, photorealism, CGI, invented objects, missing objects, added text. Background and real see-through openings are perfectly flat pure chroma-key RGB #FF00FF magenta, no checkerboard, white paper, gradient, shadow or halo. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-anyuan-portti",
+    "replacement_id": "xian-anyuan-portti-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-anyuan-portti.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-anyuan-portti-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-anyuan-portti-vari2.png",
+    "sha256": "09409614c8dcd770b2e19050f687de785db900f13a1151b25184e30bfe2066dc",
+    "bytes": 1315565,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-anyuan-portti. This is an edit of the given landmark, not a new design: preserve the precise roof tiers, gate or courtyard geometry, carved details, original silhouette, camera angle, composition and full framing. Fine antique brown ink lines with translucent watercolor washes. Replace the heavy uniform sepia with the established light restrained palette: warm cream and pale stone walls, muted dusty terracotta timber and roof accents, soft slate roof and shadow details, small sage touches only where plants already exist. Airy historical miniature, dignified and accurate; no photorealism, oversharpening or bright saturation. No new people, symbols, signs, Chinese characters, labels, buildings, borders or scenery. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, without shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-kellotorni",
+    "replacement_id": "xian-kellotorni-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-kellotorni.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-kellotorni-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-kellotorni-vari2.png",
+    "sha256": "eb1156ed07ccadd76d5fde525fa138a4223e0a9f28b1e0842aa91faf98285a04",
+    "bytes": 1081598,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-kellotorni. Preserve all original architecture, roof tiers, gates, pillars, walls, geometry, silhouette, viewpoint, fine linework, composition and full framing. This is a color treatment of this image, not a replacement. Use delicate warm-brown ink and translucent watercolor in the approved airy antique-map palette: light cream masonry, soft muted terracotta on existing wood and roof, dusty ochre and faint sage only where appropriate, and desaturated slate roof/shadow touches. Light restrained contrast against cream map paper; no dark monochrome sepia, photorealism or over-sharpening. Do not add people, letters, signs, objects, borders, symbols, architecture or background. Isolated illustrated cutout on a perfectly flat uniform pure #FF00FF chroma-key background without checkerboard, shadow or texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-rumpitorni",
+    "replacement_id": "xian-rumpitorni-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-rumpitorni.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-rumpitorni-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-rumpitorni-vari2.png",
+    "sha256": "dbf09323513404c1e62fa660e7e0b4789f20ecb8c0ea2fda84e8a07c66dde105",
+    "bytes": 1225991,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-rumpitorni. This is an edit of the given landmark, not a new design: preserve the precise roof tiers, gate or courtyard geometry, carved details, original silhouette, camera angle, composition and full framing. Fine antique brown ink lines with translucent watercolor washes. Replace the heavy uniform sepia with the established light restrained palette: warm cream and pale stone walls, muted dusty terracotta timber and roof accents, soft slate roof and shadow details, small sage touches only where plants already exist. Airy historical miniature, dignified and accurate; no photorealism, oversharpening or bright saturation. No new people, symbols, signs, Chinese characters, labels, buildings, borders or scenery. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, without shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-shaanxin-historiallinen-museo",
+    "replacement_id": "xian-shaanxin-historiallinen-museo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-shaanxin-historiallinen-museo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-shaanxin-historiallinen-museo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-shaanxin-historiallinen-museo-vari2.png",
+    "sha256": "8e0e7a6264127d2d60adb839b000fbb066e68ee483d2e250353df9b1e2c0cd16",
+    "bytes": 1058873,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-shaanxin-historiallinen-museo. Preserve all original architecture, roof tiers, gates, pillars, walls, geometry, silhouette, viewpoint, fine linework, composition and full framing. This is a color treatment of this image, not a replacement. Use delicate warm-brown ink and translucent watercolor in the approved airy antique-map palette: light cream masonry, soft muted terracotta on existing wood and roof, dusty ochre and faint sage only where appropriate, and desaturated slate roof/shadow touches. Light restrained contrast against cream map paper; no dark monochrome sepia, photorealism or over-sharpening. Do not add people, letters, signs, objects, borders, symbols, architecture or background. Isolated illustrated cutout on a perfectly flat uniform pure #FF00FF chroma-key background without checkerboard, shadow or texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-steelametsa",
+    "replacement_id": "xian-steelametsa-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-steelametsa.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-steelametsa-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-steelametsa-vari2.png",
+    "sha256": "052e590574ae93c3ff64d06161c5d7e2c0c5c71013fd7495ef092aa060c2abd6",
+    "bytes": 1464279,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-steelametsa. Preserve all original architecture, roof tiers, gates, pillars, walls, geometry, silhouette, viewpoint, fine linework, composition and full framing. This is a color treatment of this image, not a replacement. Use delicate warm-brown ink and translucent watercolor in the approved airy antique-map palette: light cream masonry, soft muted terracotta on existing wood and roof, dusty ochre and faint sage only where appropriate, and desaturated slate roof/shadow touches. Light restrained contrast against cream map paper; no dark monochrome sepia, photorealism or over-sharpening. Do not add people, letters, signs, objects, borders, symbols, architecture or background. Isolated illustrated cutout on a perfectly flat uniform pure #FF00FF chroma-key background without checkerboard, shadow or texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-suuri-moskeija",
+    "replacement_id": "xian-suuri-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-suuri-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-suuri-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-suuri-moskeija-vari2.png",
+    "sha256": "83db934a6eaca37a0e43582f3abc9106eb4683de937fb15e7fe462fb5477015d",
+    "bytes": 1213258,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-suuri-moskeija. This is an edit of the given landmark, not a new design: preserve the precise roof tiers, gate or courtyard geometry, carved details, original silhouette, camera angle, composition and full framing. Fine antique brown ink lines with translucent watercolor washes. Replace the heavy uniform sepia with the established light restrained palette: warm cream and pale stone walls, muted dusty terracotta timber and roof accents, soft slate roof and shadow details, small sage touches only where plants already exist. Airy historical miniature, dignified and accurate; no photorealism, oversharpening or bright saturation. No new people, symbols, signs, Chinese characters, labels, buildings, borders or scenery. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, without shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-suuri-villihanhipagoda",
+    "replacement_id": "xian-suuri-villihanhipagoda-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-suuri-villihanhipagoda.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-suuri-villihanhipagoda-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-suuri-villihanhipagoda-vari2.png",
+    "sha256": "6847de8a326f8d03107b3a5d9610209332baaf5510b98d0ea9d4f1461bca664b",
+    "bytes": 915535,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor this exact xian-suuri-villihanhipagoda antique map miniature. Preserve the original subject, sacred details and proportions, all pagoda tiers or original boat and pavilion elements, silhouette, viewpoint, fine ink linework, composition and full framing. Light airy hand-drawn brown ink and translucent watercolor, using the established approved palette: Xi'an pagoda in muted brick and stone, cream highlights, delicate sage existing foliage, desaturated slate shadows; if water is present it must be pale gray-blue, never saturated cyan. Keep details historically dignified and recognizable. No heavy sepia cast, bright saturation, photorealism or oversharpening. Do not invent or remove architecture, boats, people, religious details, text, signs, letters, borders or scenery. Only the isolated illustration on perfectly flat uniform pure #FF00FF chroma-key, no shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-xi-anin-rautatieasema",
+    "replacement_id": "xian-xi-anin-rautatieasema-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-xi-anin-rautatieasema.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-xi-anin-rautatieasema-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-xi-anin-rautatieasema-vari2.png",
+    "sha256": "34637fc0ea11f7a840c276ae7cc9ca6fb34cb5e8ccb506ffeb827c49a30ba2b6",
+    "bytes": 1234344,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-xi-anin-rautatieasema. This is an edit of the given landmark, not a new design: preserve the precise roof tiers, gate or courtyard geometry, carved details, original silhouette, camera angle, composition and full framing. Fine antique brown ink lines with translucent watercolor washes. Replace the heavy uniform sepia with the established light restrained palette: warm cream and pale stone walls, muted dusty terracotta timber and roof accents, soft slate roof and shadow details, small sage touches only where plants already exist. Airy historical miniature, dignified and accurate; no photorealism, oversharpening or bright saturation. No new people, symbols, signs, Chinese characters, labels, buildings, borders or scenery. Place only the isolated illustration on a perfectly uniform pure #FF00FF chroma-key background, without shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "xian-yongning-portti",
+    "replacement_id": "xian-yongning-portti-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/xian-yongning-portti.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/xian-yongning-portti-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/xian-yongning-portti-vari2.png",
+    "sha256": "6549f5963fe5b2649d54506faca8bbaf5ce7af7bf3d760b2620a7d3551f4f5da",
+    "bytes": 1522777,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Xi'an city-map miniature xian-yongning-portti. Preserve all original architecture, roof tiers, gates, pillars, walls, geometry, silhouette, viewpoint, fine linework, composition and full framing. This is a color treatment of this image, not a replacement. Use delicate warm-brown ink and translucent watercolor in the approved airy antique-map palette: light cream masonry, soft muted terracotta on existing wood and roof, dusty ochre and faint sage only where appropriate, and desaturated slate roof/shadow touches. Light restrained contrast against cream map paper; no dark monochrome sepia, photorealism or over-sharpening. Do not add people, letters, signs, objects, borders, symbols, architecture or background. Isolated illustrated cutout on a perfectly flat uniform pure #FF00FF chroma-key background without checkerboard, shadow or texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-bogyoken-markkinat",
+    "replacement_id": "yangon-bogyoken-markkinat-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-bogyoken-markkinat.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-bogyoken-markkinat-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-bogyoken-markkinat-vari2.png",
+    "sha256": "0866f0d16de332583bcdab501f43ba1f1ac875e65d9a43f027287141bbec1408",
+    "bytes": 1141432,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor the supplied exact Yangon city-map miniature yangon-bogyoken-markkinat. This is a faithful color edit: preserve its actual landmark, architectural rooflines, arches, columns, pagoda or tower details, geometry, silhouette, viewpoint and full framing. Keep delicate antique brown ink linework with transparent watercolor in the approved light palette: warm cream plaster and stone, faded terracotta and dusty ochre architectural accents, muted sage on greenery already visible, very soft slate-blue-gray shadow details; restrained muted gold only on the pagoda. Airy and moderately low-contrast against cream game-map paper. No heavy brown monochrome, saturated modern colors, photorealism or sharp digital render. Do not add or remove people, buildings, signs, words, labels, religious symbols, borders or scenery. Only the isolated hand-painted cutout on a perfectly flat pure #FF00FF chroma-key background with no cast shadow, checkerboard or paper.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-botataung-pagodi",
+    "replacement_id": "yangon-botataung-pagodi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-botataung-pagodi.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-botataung-pagodi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-botataung-pagodi-vari2.png",
+    "sha256": "7dbc8fa0b1ffef7f8721be299b4f9fdc210504c57637f1ea3a40edc8aa6e596e",
+    "bytes": 857904,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor the supplied exact Yangon city-map miniature yangon-botataung-pagodi. This is a faithful color edit: preserve its actual landmark, architectural rooflines, arches, columns, pagoda or tower details, geometry, silhouette, viewpoint and full framing. Keep delicate antique brown ink linework with transparent watercolor in the approved light palette: warm cream plaster and stone, faded terracotta and dusty ochre architectural accents, muted sage on greenery already visible, very soft slate-blue-gray shadow details; restrained muted gold only on the pagoda. Airy and moderately low-contrast against cream game-map paper. No heavy brown monochrome, saturated modern colors, photorealism or sharp digital render. Do not add or remove people, buildings, signs, words, labels, religious symbols, borders or scenery. Only the isolated hand-painted cutout on a perfectly flat pure #FF00FF chroma-key background with no cast shadow, checkerboard or paper.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-chaukhtatgyin-temppeli",
+    "replacement_id": "yangon-chaukhtatgyin-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-chaukhtatgyin-temppeli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-chaukhtatgyin-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-chaukhtatgyin-temppeli-vari2.png",
+    "sha256": "c8a415d37001cb83eb2a4a39093ae88f256c7495f7295835fc2af70b4c006d9f",
+    "bytes": 1242375,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor this exact yangon-chaukhtatgyin-temppeli antique map miniature. Preserve the original subject, sacred details and proportions, all pagoda tiers or original boat and pavilion elements, silhouette, viewpoint, fine ink linework, composition and full framing. Light airy hand-drawn brown ink and translucent watercolor, using the established approved palette: Yangon sacred and historic architecture with restrained muted gold and terracotta, cream highlights, delicate sage existing foliage, desaturated slate shadows; if water is present it must be pale gray-blue, never saturated cyan. Keep details historically dignified and recognizable. No heavy sepia cast, bright saturation, photorealism or oversharpening. Do not invent or remove architecture, boats, people, religious details, text, signs, letters, borders or scenery. Only the isolated illustration on perfectly flat uniform pure #FF00FF chroma-key, no shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-kandawgyi-jarvi-ja-karaweik",
+    "replacement_id": "yangon-kandawgyi-jarvi-ja-karaweik-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-kandawgyi-jarvi-ja-karaweik.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-kandawgyi-jarvi-ja-karaweik-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-kandawgyi-jarvi-ja-karaweik-vari2.png",
+    "sha256": "37950a6c7293f48556a51445d010db88ebcb95e2be1ac6a1b5f2af044d84b4d4",
+    "bytes": 925668,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor this exact yangon-kandawgyi-jarvi-ja-karaweik antique map miniature. Preserve the original subject, sacred details and proportions, all pagoda tiers or original boat and pavilion elements, silhouette, viewpoint, fine ink linework, composition and full framing. Light airy hand-drawn brown ink and translucent watercolor, using the established approved palette: Yangon sacred and historic architecture with restrained muted gold and terracotta, cream highlights, delicate sage existing foliage, desaturated slate shadows; if water is present it must be pale gray-blue, never saturated cyan. Keep details historically dignified and recognizable. No heavy sepia cast, bright saturation, photorealism or oversharpening. Do not invent or remove architecture, boats, people, religious details, text, signs, letters, borders or scenery. Only the isolated illustration on perfectly flat uniform pure #FF00FF chroma-key, no shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-shwedagon-pagodi",
+    "replacement_id": "yangon-shwedagon-pagodi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-shwedagon-pagodi.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-shwedagon-pagodi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-shwedagon-pagodi-vari2.png",
+    "sha256": "a2c130a14b386cc202dc2adc963b0a4217e4862770a2692c9e360e7cc01be86e",
+    "bytes": 880326,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor this exact yangon-shwedagon-pagodi antique map miniature. Preserve the original subject, sacred details and proportions, all pagoda tiers or original boat and pavilion elements, silhouette, viewpoint, fine ink linework, composition and full framing. Light airy hand-drawn brown ink and translucent watercolor, using the established approved palette: Yangon sacred and historic architecture with restrained muted gold and terracotta, cream highlights, delicate sage existing foliage, desaturated slate shadows; if water is present it must be pale gray-blue, never saturated cyan. Keep details historically dignified and recognizable. No heavy sepia cast, bright saturation, photorealism or oversharpening. Do not invent or remove architecture, boats, people, religious details, text, signs, letters, borders or scenery. Only the isolated illustration on perfectly flat uniform pure #FF00FF chroma-key, no shadow, paper or checkerboard.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-sihteeristo",
+    "replacement_id": "yangon-sihteeristo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-sihteeristo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-sihteeristo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-sihteeristo-vari2.png",
+    "sha256": "ffb3062780b10a6ccc41384690aa618fcdb4f0347abab3c31e047c2c568d9c51",
+    "bytes": 760406,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor the supplied exact Yangon city-map miniature yangon-sihteeristo. This is a faithful color edit: preserve its actual landmark, architectural rooflines, arches, columns, pagoda or tower details, geometry, silhouette, viewpoint and full framing. Keep delicate antique brown ink linework with transparent watercolor in the approved light palette: warm cream plaster and stone, faded terracotta and dusty ochre architectural accents, muted sage on greenery already visible, very soft slate-blue-gray shadow details; restrained muted gold only on the pagoda. Airy and moderately low-contrast against cream game-map paper. No heavy brown monochrome, saturated modern colors, photorealism or sharp digital render. Do not add or remove people, buildings, signs, words, labels, religious symbols, borders or scenery. Only the isolated hand-painted cutout on a perfectly flat pure #FF00FF chroma-key background with no cast shadow, checkerboard or paper.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-strand-hotelli",
+    "replacement_id": "yangon-strand-hotelli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-strand-hotelli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-strand-hotelli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-strand-hotelli-vari2.png",
+    "sha256": "97fd9a166a12368e2ab77c31170f312276784bb52bb28674658214ff64ac6814",
+    "bytes": 821512,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor the supplied exact Yangon city-map miniature yangon-strand-hotelli. This is a faithful color edit: preserve its actual landmark, architectural rooflines, arches, columns, pagoda or tower details, geometry, silhouette, viewpoint and full framing. Keep delicate antique brown ink linework with transparent watercolor in the approved light palette: warm cream plaster and stone, faded terracotta and dusty ochre architectural accents, muted sage on greenery already visible, very soft slate-blue-gray shadow details; restrained muted gold only on the pagoda. Airy and moderately low-contrast against cream game-map paper. No heavy brown monochrome, saturated modern colors, photorealism or sharp digital render. Do not add or remove people, buildings, signs, words, labels, religious symbols, borders or scenery. Only the isolated hand-painted cutout on a perfectly flat pure #FF00FF chroma-key background with no cast shadow, checkerboard or paper.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-sule-pagodi",
+    "replacement_id": "yangon-sule-pagodi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-sule-pagodi.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-sule-pagodi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-sule-pagodi-vari2.png",
+    "sha256": "e1a09d4e901da791d22dec4c63862b541690b63ab7f4ff27d121c4d946b56ad8",
+    "bytes": 847077,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor the supplied exact Yangon city-map miniature yangon-sule-pagodi. This is a faithful color edit: preserve its actual landmark, architectural rooflines, arches, columns, pagoda or tower details, geometry, silhouette, viewpoint and full framing. Keep delicate antique brown ink linework with transparent watercolor in the approved light palette: warm cream plaster and stone, faded terracotta and dusty ochre architectural accents, muted sage on greenery already visible, very soft slate-blue-gray shadow details; restrained muted gold only on the pagoda. Airy and moderately low-contrast against cream game-map paper. No heavy brown monochrome, saturated modern colors, photorealism or sharp digital render. Do not add or remove people, buildings, signs, words, labels, religious symbols, borders or scenery. Only the isolated hand-painted cutout on a perfectly flat pure #FF00FF chroma-key background with no cast shadow, checkerboard or paper.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "yangon-yangonin-keskusasema",
+    "replacement_id": "yangon-yangonin-keskusasema-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-27/original/yangon-yangonin-keskusasema.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/yangon-yangonin-keskusasema-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/yangon-yangonin-keskusasema-vari2.png",
+    "sha256": "965a3d67b0420507b0f1101c388776b1a10d4fdc12974fca1522131f1ce794b5",
+    "bytes": 902380,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor the supplied exact Yangon city-map miniature yangon-yangonin-keskusasema. This is a faithful color edit: preserve its actual landmark, architectural rooflines, arches, columns, pagoda or tower details, geometry, silhouette, viewpoint and full framing. Keep delicate antique brown ink linework with transparent watercolor in the approved light palette: warm cream plaster and stone, faded terracotta and dusty ochre architectural accents, muted sage on greenery already visible, very soft slate-blue-gray shadow details; restrained muted gold only on the pagoda. Airy and moderately low-contrast against cream game-map paper. No heavy brown monochrome, saturated modern colors, photorealism or sharp digital render. Do not add or remove people, buildings, signs, words, labels, religious symbols, borders or scenery. Only the isolated hand-painted cutout on a perfectly flat pure #FF00FF chroma-key background with no cast shadow, checkerboard or paper.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
