@@ -222,5 +222,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(Kokoluokka.Paakohde, n[0].Luokka);
             Oleta.Sama(Kokoluokka.Pieni, n[1].Luokka, "taso 3 = pieni");
         }
+
+        [Testi] static void HeraysAlleKolmenSekunnin()
+        {
+            var m = Kolme()[0];
+            var h = new Herays(m, new LatLon(0.5, 0.5), 1, 3);
+            Oleta.Tosi(Herays.Kesto <= 2.5, "herätys ≤ 2,5 s");
+            Oleta.Tosi(h.Tulva(0.05).SadeKm == 0 && h.Tulva(Herays.TulvaAlku + Herays.TulvaKesto).SadeKm >= h.TulvaMaxKm - 1e-6, "tulva kattaa renkaan");
+            Oleta.Tosi(h.Tulva(Herays.TulvaAlku + Herays.TulvaKesto + Herays.ValmisKesto).Valmis >= 1 - 1e-9, "saaret lopuksi");
+            Oleta.Tosi(h.NimiOsuus(Herays.NimiAlku) == 0 && h.NimiOsuus(Herays.NimiAlku + Herays.NimiKesto) >= 1 - 1e-9, "nimi kirjoittuu");
+            Oleta.Tosi(h.Merkit(1.0).Peitto == 0 && h.Merkit(Herays.MerkitAlku + Herays.MerkitKesto).Peitto == 1, "merkit leimautuvat");
+            Oleta.Tosi(h.KerrostenPeitto(1.9) == 1 && h.KerrostenPeitto(Herays.Kesto) < 1e-9, "luovutus pysyvälle täytölle");
+            Oleta.Tosi(Math.Abs(h.TulvaMaxKm - (Math.Sqrt(0.5) * ElavaKohtaus.KmAsteella + 5)) < 1, "kauimmainen kulma");
+        }
     }
 }

@@ -23,7 +23,8 @@
 // KOMENNOT (Documents/linssi-komento.txt): "elava kreikka [alku s] [nopeus]" soittaa kohtauksen, "elava kuva <s>"
 // pysäyttää kohtaan s (pysäytyskuvat), "elava jatka", "elava pois" (kartta ennalleen), "elava tila" ja "elava ui 0|1"
 // (käyttöliittymä piiloon kohtauksen ajaksi, oletus 0 = piiloon); saapumiselle "elava saapuminen <kaupunki>" (testiajo
-// saapumisajoineen), "elava saapumiset 0|1" (automaattinen laukaisu) ja "elava kaikki 0|1" (myös jo käydyt maat).
+// saapumisajoineen), "elava saapumiset 0|1" (automaattinen laukaisu), "elava kaikki 0|1" (myös jo käydyt maat) ja
+// "elava herata <ISO:tunnus>" (maakunnan herätys, ElavaHerays).
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -163,6 +164,9 @@ namespace Matkakirja.Natiivi
                 case "saapuminen":
                     if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain);
                     break;
+                case "herata":
+                    if (osat.Length > 2) ElavaHerays.Testi(osat[2]);
+                    break;
                 case "saapumiset":
                     SaapumisetPaalla = !(osat.Length > 2 && osat[2] == "0");
                     ohjain.Kirjaa("elävä: automaattinen saapuminen " + (SaapumisetPaalla ? "päällä" : "pois"));
@@ -260,7 +264,7 @@ namespace Matkakirja.Natiivi
 
         // ── Aineisto (staattinen, kerran istunnossa) ─────────────────────
 
-        static IEnumerator VarmistaMaakunnat()
+        internal static IEnumerator VarmistaMaakunnat()
         {
             while (jakoHaussa) yield return null;
             if (jako != null) yield break;
@@ -278,7 +282,7 @@ namespace Matkakirja.Natiivi
             jakoHaussa = false;
         }
 
-        static List<ElavaMaakunta> MaakunnatMaalle(string iso)
+        internal static List<ElavaMaakunta> MaakunnatMaalle(string iso)
         {
             if (maakunnatMaittain.TryGetValue(iso, out var valmis)) return valmis;
             var lista = new List<ElavaMaakunta>();
@@ -295,7 +299,7 @@ namespace Matkakirja.Natiivi
             return lista;
         }
 
-        static IEnumerator VarmistaKarttavalot()
+        internal static IEnumerator VarmistaKarttavalot()
         {
             while (karttavalotHaussa) yield return null;
             if (karttavalot != null) yield break;
@@ -304,7 +308,7 @@ namespace Matkakirja.Natiivi
             karttavalotHaussa = false;
         }
 
-        static List<ElavaNosto> NostotMaalle(string iso)
+        internal static List<ElavaNosto> NostotMaalle(string iso)
         {
             if (nostotMaittain.TryGetValue(iso, out var valmis)) return valmis;
             var lista = karttavalot == null ? new List<ElavaNosto>() : ElavaAineisto.NostotKarttavaloista(karttavalot, iso);
@@ -403,6 +407,8 @@ namespace Matkakirja.Natiivi
             // Aineisto taustalla heti käynnistyksessä (maakuntarajat ja karttavalot jäsennetään kerran).
             ohjain.StartCoroutine(VarmistaMaakunnat());
             ohjain.StartCoroutine(VarmistaKarttavalot());
+            // Kohta 3: maakunta herää (pysyvä tila MaaKartalle ja herätysanimaatio).
+            ElavaHerays.Kytke(ohjain);
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
@@ -708,6 +714,18 @@ namespace Matkakirja.Natiivi
         }
 
         static TMP_FontAsset kasiala;
+
+        /// <summary>Käsialafontti (Snell Roundhand iOS:n järjestelmäfontista), varalla kartan nimiöiden fontti.</summary>
+        internal static TMP_FontAsset KasialaFontti()
+        {
+            if (kasiala != null) return kasiala;
+            foreach (var tyyli in new[] { "Bold", "Regular", "Black" })
+            {
+                try { kasiala = TMP_FontAsset.CreateFontAsset("Snell Roundhand", tyyli); } catch (Exception) { }
+                if (kasiala != null) break;
+            }
+            return kasiala ?? KarttaKerrokset.Instanssi?.merkit?.fontti;
+        }
 
         TMP_FontAsset Kasiala()
         {
