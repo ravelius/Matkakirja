@@ -7219,3 +7219,7 @@ Vahti v3 pudotti 4 ytimeen 18.31 (memory pressure warn clang-kaannoksen aikana, 
 ## 160 JUNASSA, A/B IPAD EI EROTA TASOJEN 2-3 HINTAA; IPAD GPU-SIDOTTU 20 MS (26.9.2026 klo 18.42)
 
 Natiiviseppa: 160 arkkityypit (majakka vaimennettu, Meteora 11 fasettia) + Natiivi-UI:n laikkapiilotus junassa juna/b13 bf7431df, asennettu simulaattoreihin 18.28, Laitetestaaja tarkistaa. A/B iPad Pro 13 Kreikka 22 instanssia: liike p50 19,5/20,6 ms, p95 27,0/28,9 ms (taso23 1/0) — ero kohinassa, 0,4 ms rajaa ei voi todentaa; levossa 30 fps. Havainto: nakyma on iPadilla GPU-sidottu ~20 ms/kehys myos ilman 160:ta → 120 Hz ei toteudu; iPhone-mittaus puuttuu. Fable: 160 hyvaksytty junaan, A/B riittaa; GPU-sidonta kirjataan loydokseksi S10 profilointiin 1.0.25:n jalkeen. Lokit proto-3d/lokit/loydos160-ab-ipad/.
+
+## BUILD 25 KAANNOKSEEN: TF 1.0.25 = 31fd6d5f (26.9.2026 klo 18.42)
+
+Natiiviseppa: BUILD 25 = proto-master 31fd6d5f (puu 3e7520aa, kaannos 2d82476e), Laitetestaaja PASS c0b34f7bd iPhone-simulaattorilla. Mukana 160 arkkityypit + laikkapiilotus, fonttilammitys-b + verho (kylma kaynnistys 2,1–2,2 s). Fable: TF 1.0.25 Julkaisijalle nyt, yksi kaannos kerrallaan polton rinnalla; Pulun karttavaisto (Codex PR #1) → 1.0.26 Natiivi-UI:n PASSin jalkeen. 1.0.26-juna: Pulu, laattaesilataus 2, Pariisin ilmapallo, S10-profilointi.
