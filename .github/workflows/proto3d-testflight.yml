@@ -53,6 +53,10 @@ on:
         description: 'CFBundleVersion — oletus aikaleima (VVVVKKPPTTMM), koska versiolla 1.0.0 on jo aikaleimanumeroita.'
         type: string
         default: ''
+      proto_ref:
+        description: 'Proton haara tai commit Unity-vientiin (tyhjä = master). Build 14: juna/b13-commit, jos Natiiviseppä ei ehdi mergetä (puu = testattu, Fable 25.9.2026).'
+        type: string
+        default: ''
       sisainen_ryhma:
         description: 'Vie build latauksen jälkeen sisäiselle testiryhmälle (testaaja = TESTFLIGHT_TESTAAJA tai tilin omistaja)'
         type: boolean
@@ -91,6 +95,8 @@ jobs:
       # Viimeisimmän TestFlightiin ladatun buildin ordinaali (ajurin levyllä kuten YOMERKKI).
       LASKURI: /Users/Shared/Claude/proto-3d/lokit/testflight-ordinaali.txt
       SISAINEN_RYHMA: ${{ github.event_name == 'schedule' || inputs.sisainen_ryhma }}
+      # Yöajo (schedule) vie aina masterin; käsiajo voi antaa haaran tai commitin.
+      PROTO_REF: ${{ inputs.proto_ref || 'master' }}
 
     steps:
       - name: Onko Unity-projekti paikallaan
@@ -124,9 +130,10 @@ jobs:
           echo $! > "$KAANNOSLUKKO/pid"
           echo "testflight ajo $GITHUB_RUN_ID $(date +%H:%M)" > "$KAANNOSLUKKO/kuka"
           echo "LUKKO_OMA=1" >> "$GITHUB_ENV"
-          git checkout -q --detach master
+          git rev-parse -q --verify "$PROTO_REF^{commit}" >/dev/null || { echo "::error::Proton ref $PROTO_REF ei löydy"; exit 1; }
+          git checkout -q --detach "$PROTO_REF"
           git reset -q --hard
-          echo "Käännöskopio: $(git rev-parse --short HEAD) (master)"
+          echo "Käännöskopio: $(git rev-parse --short HEAD) ($PROTO_REF)"
 
       # Aikaleima buildinumeroksi: App Store Connect hylkää saman
       # versio+build-parin kahdesti. Unity-viennissä sama numero menee
@@ -159,6 +166,13 @@ jobs:
           set -euo pipefail
           mkdir -p "$(dirname "$YOLOKI")"
           syy=""
+          # AIKARAJA (Fable 25.9.2026): GitHubin ajastus voi viivästyä tunteja (25.9. yöajo
+          # käynnistyi vasta 11.35 ja olisi vienyt päivän keskeneräisen masterin).
+          # Ajastettu yöajo ohittaa itsensä, jos se käynnistyy klo 06.00 jälkeen Helsingin aikaa.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            tunti=$(TZ=Europe/Helsinki date +%H)
+            if [ "$((10#$tunti))" -ge 6 ]; then syy="ajastus viivästyi, käynnistyi klo $(TZ=Europe/Helsinki date +%H.%M) (raja 06.00)"; fi
+          fi
           # Vienti (~2 Gt) + arkiston DerivedData (~4 Gt) + IPA; muut sessiot
           # käyttävät samaa levyä, joten raja on 30 Gt (Fable 24.9.2026).
           vapaa=$(df -g /System/Volumes/Data | tail -1 | awk '{print $4}')
@@ -167,10 +181,10 @@ jobs:
           # saman projektin varaus näkyy Library-lukosta alla (24.9.2026, build 10 ohittui turhaan).
           # Oma käännöskopio: Natiivisepän Unity pääkopiossa ei estä; vain tämän kopion Library-lukko.
           if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
-          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse master)" ]; then syy="käännöskopio ei ole masterissa"; fi
+          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse "$PROTO_REF^{commit}")" ]; then syy="käännöskopio ei ole kohdassa $PROTO_REF"; fi
           muutokset=$(git status --porcelain | grep -v " Assets/Matkakirja/Materiaalit/" || true)
           if [ -z "$syy" ] && [ -n "$muutokset" ]; then syy="työkopiossa on muutoksia: $(echo "$muutokset" | head -3 | tr '\n' ' ')"; fi
-          master=$(git rev-parse --short master)
+          master=$(git rev-parse --short "$PROTO_REF^{commit}")
           edellinen=$(cat "$YOMERKKI" 2>/dev/null || true)
           if [ -z "$syy" ] && [ "$master" = "$edellinen" ]; then syy="master $master on jo ladattu"; fi
           echo "PROTO_MASTER=$master" >> "$GITHUB_ENV"
@@ -191,13 +205,38 @@ jobs:
           MATKAKIRJA_KANSIO: Build/yo
         run: |
           set -uo pipefail
-          rm -rf Build/yo
-          MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
-            zsh tyokalut/unity-vahti.sh tulokset/yo.log \
-            -batchmode -nographics -quit -projectPath . -buildTarget iOS \
-            -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
+          # Edellisen viennin siivous: rm -rf kaatui 25.9. "Directory not empty" -virheeseen
+          # (joku kirjoitti kansioon samaan aikaan). Yritetään viisi kertaa, ja jos kansio on
+          # yhä olemassa, se siirretään sivuun (mv onnistuu ei-tyhjällekin) ja poistetaan taustalla.
+          for yritys in 1 2 3 4 5; do
+            rm -rf Build/yo 2>/dev/null || true
+            [ -e Build/yo ] || break
+            sleep 3
+          done
+          if [ -e Build/yo ]; then
+            sivu="Build/yo.poisto-$(date +%s)"
+            mv Build/yo "$sivu" && { rm -rf "$sivu" >/dev/null 2>&1 & }
+            echo "::warning::Build/yo ei poistunut viidellä yrityksellä; siirretty sivuun ($sivu)"
+          fi
+          # Kohtaus generoidaan koodista ennen vientiä kuten käännöspalvelussa (proto-kaanna.sh):
+          # masterin Pallo.unity ei ole aina tuore (build 13: kohtausta ei committoitu mergessä),
+          # ja IosTestFlight kutsuu LuoPalloa vain, jos kohtaustiedosto puuttuu.
+          zsh tyokalut/unity-vahti.sh tulokset/yo-luo.log \
+            -batchmode -nographics -quit -projectPath . -executeMethod Matkakirja.Editori.Rakennus.LuoPallo
           tila=$?
-          git checkout -- ProjectSettings/ProjectSettings.asset Assets/Matkakirja/Materiaalit/ || echo "::warning::ProjectSettingsin tai Materiaalien palautus epäonnistui"
+          if [ $tila -eq 0 ] && grep -q "error CS\|Aborting batchmode" tulokset/yo-luo.log; then tila=15; fi
+          if [ $tila -eq 0 ]; then
+            MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
+              zsh tyokalut/unity-vahti.sh tulokset/yo.log \
+              -batchmode -nographics -quit -projectPath . -buildTarget iOS \
+              -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
+            tila=$?
+          else
+            echo "LuoPallo kaatui ($tila):"; grep -E "error CS|MATKAKIRJA:" tulokset/yo-luo.log | sort -u | tail -10 || true
+          fi
+          # Vienti ja LuoPallo kirjoittavat Assets/- ja ProjectSettings-tiedostoja: käännöskopio
+          # palautetaan puhtaaksi masteriksi (kuten proto-kaanna.sh ajon alussa).
+          { git reset -q --hard && git clean -fdq Assets/ ProjectSettings/; } || echo "::warning::Käännöskopion palautus epäonnistui"
           if [ $tila -ne 0 ]; then
             echo "$(date '+%Y-%m-%d %H:%M') VIENTI KAATUI ($tila), ks. $PROJEKTI/tulokset/yo.log" | tee -a "$YOLOKI"
             grep -E "MATKAKIRJA:|error" tulokset/yo.log | tail -20 || true

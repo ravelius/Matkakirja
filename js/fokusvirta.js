@@ -6597,7 +6597,9 @@ function paljastaSahkeAarre(ui, city, data) {
  *
  * KAKSI AVAINTA SAMAAN LUKKOON (TAI-ehto), ei yhtä:
  *
- *   1. UUSI — kaksi ratkaistua NOSTON minikysymystä koko matkalla
+ *   1. UUSI — ratkaistu NOSTON minikysymys koko matkalla (LÖYDÖS 145,
+ *      omistaja 25.9.2026: kynnys kahdesta yhteen — vihreä piste syttyy
+ *      jo ensimmäisestä oikeasta ratkaisusta)
  *      (game.nostotehtavatRatkaistu, erä 6). Laskuri on GLOBAALI eikä
  *      kaupunkikohtainen: omistajan sana on *"kaksi mita tahansa mini
  *      tehtavaa"*, ja kaupunkikohtainen laskuri lukitsisi pelaajan
@@ -6612,21 +6614,24 @@ function paljastaSahkeAarre(ui, city, data) {
  * koskee VAIN sitä, milloin vihreä piste on napautettavissa.
  */
 
-/** Montako noston minikysymystä avaa aarrepisteen (Raamattu: kaksi). */
-export const NOSTOTEHTAVIA_AARREPISTEESEEN = 2;
+/** Montako noston minikysymystä avaa aarrepisteen (löydös 145, 25.9.2026: yksi; ennen kaksi). */
+export const NOSTOTEHTAVIA_AARREPISTEESEEN = 1;
 
 /**
  * Lukitun pisteen ruudunlukijalappu ja napautuksen vastaus.
  * Sama lause molemmissa, jotta kuultu ja luettu peli kertovat saman.
  */
-export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kaksi kysymystä kartalta';
+export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kysymys kartalta';
 
 /** Lukitun pisteen napautuksen vastaus pulun kuplassa. */
-export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kaksi kysymystä kartalta.';
+export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kysymys kartalta.';
 
-/** Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto, ks. yllä). */
-export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kaksi kysymystä ja '
-  + 'vastaamalla niihin oikein saat vihjeen aarteen sijainnista.';
+/**
+ * Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto 13.9., ks. yllä,
+ * yksikössä löydöksen 145 kynnyksen mukaan).
+ */
+export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kysymyksen ja '
+  + 'vastaamalla siihen oikein saat vihjeen aarteen sijainnista.';
 
 /** Kuinka kauan ohje odottaa saapumisen rauhoittumista. */
 const AARREPISTEEN_OHJE_VIIVE_MS = 2500;

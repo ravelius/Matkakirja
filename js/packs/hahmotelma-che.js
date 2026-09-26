@@ -153,6 +153,7 @@ export const HAHMOTELMA_CHE = [
   },
   {
     id: 'hahmotelma-lavaux',
+    nimio: 'Lavaux',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/che-nosto-lavaux-cdc09343.jpg',
       lyhyt: "Lavaux'n viinitarhapenkereet kiertyvät rinteessä Genevenjärven yllä.",
@@ -651,6 +652,7 @@ export const HAHMOTELMA_CHE = [
   },
   {
     id: 'hahmotelma-grande-dixence',
+    nimio: 'Grande Dixence',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/che-nosto-grande-dixence-e4c37b63.jpg',
       lyhyt: 'Grande Dixencen pato ja tekojärvi vuorten keskellä.',

@@ -1,40 +1,33 @@
-# Sisältökirjurin aloitusviesti (24.9.2026 klo 23.5x)
+# Sisältökirjurin aloitusviesti (26.9.2026 iltapäivä, kontekstin nollaus)
 
-Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri. Ensimmäinen komento:
-git fetch origin && git checkout -B sisalto-tyo-$(date +%Y%m%d-%H%M) origin/main. Lue CLAUDE.md,
-docs/roolitus.md, Raamatun "TYÖTAPA JA SESSIOT", ja docs/raportit/viesti-sisaltokirjuri-luovutus-20260924-yo.md
-kokonaan.
+Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri.
+Ensimmäinen komento: git fetch origin && git checkout -B sisalto-tyo-$(date +%Y%m%d-%H%M) origin/main.
+Lue CLAUDE.md, Raamatun "TYÖTAPA JA SESSIOT", JUMI → FABLE ja
+docs/raportit/viesti-sisaltokirjuri-luovutus-20260926-b.md kokonaan.
 
-TILA: Linssikatalogin uudistus (esittelysivu yhteistyökumppaneille) vaihe 1 on PR:ssä
-#3128 (haara sisaltokirjuri-linssikatalogi), odottaa Pelikoodarin ulkoasutarkistusta ja Fablen
-mergeä — ks. luovutuksen kohta 3 (viisi avointa korjausta: muu-moottorin väri/ikoni, header-lukujen
-laskentatapa, erä 1b:n kuvatekstien lisäystapa, kartta-osio siirretty vaiheeseen 3, Pelikoodarin tarkistus
-kesken). Kuvatilausluonnos (galleria+ennenNyt 59 kaupungille) hyväksytty ja viety postilaatikkoon, raportti
-mainiin PR #3106 (auki, odottaa mergeä).
+TILA lyhyesti: löydös 158 (maakuntien kuva/pikkukuva-kentät Wikimedia Commonsista)
+etenee maa kerrallaan pitkä-luonnehdintojen (99 aluetta, 9 maata) rinnalla. GRC ja NLD
+ovat mainissa. BEL/DNK/SVK/LVA/LTU ovat VALMIINA HAAROISSA (testattu, pushattu) mutta
+PR:t odottavat vuoroaan (yksi maakunta-PR kerrallaan mainiin, ei pinota).
 
-ENSIMMÄINEN TEHTÄVÄ: tarkista onko linssikatalogi-PR mergetty tai onko Pelikoodari/Fable jättänyt kommentteja
-— jos on, tee pyydetyt korjaukset. Jos kuvaputken erä 1b (23 linssiä lisää, sama polku
-linssikatalogi/<id>-havainne.jpg) on saapunut postilaatikkoon, lisää sen kuvatekstit
-linssikatalogi.html:n ERA1_KUVATEKSTIT-taulukkoon (muoto: luovutuksen kohta 3.3) — kuvat itse toimivat
-automaattisesti. Muuten jatka Fablen seuraavaksi antamalla tehtävällä (linssikatalogin vaihe 2/3: kartta-osio,
-tai muu sisältötyö).
+ENSIMMÄINEN TEHTÄVÄ:
+1. Tarkista `gh pr list --search "maakunta OR pitka OR kuva-kenttä" --state open` ja
+   `gh pr view 3318 --json state` (NLD). Jos jono on vapaa, avaa seuraava PR
+   järjestyksessä BEL → DNK → SVK → LVA → LTU (ks. luovutuksen kohta 2: rebase
+   origin/mainiin, testaa, force-with-lease, avaa PR vasta kun jono on vapaa).
+2. Kun kaikki viisi ovat mainissa: jatka FIN/EST/SVN:n kuva-kenttään (luovutuksen
+   kohta 3, toistettava menetelmä vaihe vaiheelta) ja sen jälkeen seuraaviin
+   pitkä-erän maihin (CHE, PRT, HUN, SWE, NOR, IRL — ks. edellinen luovutus
+   viesti-sisaltokirjuri-luovutus-20260926.md).
+3. Lue luovutuksen kohta 5 (Opit) ennen kuin toistat kuvahakuprosessin — siinä on
+   korjattuja virheitä (regex-bugi, sharp-polku, lisenssin API-tarkistus, kuvien
+   silmämääräinen tarkistus ihmisten varalta).
 
-HUOM Fablelle täsmennettäväksi: edellisessä ohjeessa mainittiin "käännöspalvelu" osana tätä aloitusviestiä,
-mutta tällä sessiolla ei ollut mitään kontekstia siitä mikä se on — kysy Fablelta tai Postivahdilta ennen kuin
-oletat mitään.
-
-SITOVAT KÄYTÄNNÖT TÄLLÄ HETKELLÄ:
-- **JUMI → KORTTI (omistaja 24.9. klo 22.5x):** jos jäät jumiin (luokitin estää toimen, päätös puuttuu, työ ei
-  etene), tee AINA AskUserQuestion-kortti omistajalle SAMASSA VUOROSSA kutsu PushNotification (status
-  proactive, yksi rivi "Sisältökirjuri: kysymyskortti auki — <aihe>") — älä jää odottamaan vapaata tekstiä.
-  Yksi rivi myös Fablelle lokia varten.
-- **Levynkäyttö:** älä aja npm ci uudessa worktreessä — symlinkkaa node_modules pääkassasta
-  (ln -s /Users/Shared/Claude/Matkakirja-sisaltokirjuri/node_modules <worktree>/node_modules). Tarkista
-  git status --short ennen git add:ia, symlinkki näkyy ?? eikä .gitignore poimi sitä.
-- **preview_start ei toimi worktree-hakemistoissa** (käynnistää palvelimen pääkassasta) — käytä
-  python3 -m http.server <portti> --bind 127.0.0.1 worktreesta run_in_background: true -Bash-kutsulla.
-- Agentit vain Sonnet/Opus, enintään 4 rinnakkain. Kontekstin nollaus: kun Fable pyytää, kirjoita luovutus ja
-  kutsu clear_session self samassa vuorossa. Viestit Fablelle vain PR-numero valmiista erästä, jumi tai
-  kysymys, enintään 8 riviä. Testit ilman ääniä (node --test tests/*.test.mjs — huom: yöllä/kuormitetulla
-  koneella yksi ajo voi kestää 15+ min, käytä run_in_background + Monitor, älä tapa prosessia jos tail näyttää
-  "jumissa" — se voi olla vain tiedostopuskurin viive). Aikaleimat date-komennolla.
+SITOVAT KÄYTÄNNÖT:
+- JUMI → FABLE: jumissa yksi viesti Fablelle (tilanne, vaihtoehdot, suositus), ei korttia; muu jono jatkuu.
+- VIESTIRAJA: SendMessage ~10 viestiä/vuoro; varakanava mcp send_message session id:llä.
+- Maakunta-PR:t yksi kerrallaan mainin päälle; agentit vain Sonnet/Opus, enintään 3–4 rinnan.
+- Kuvat vain PD/CC0/CC BY/CC BY-SA, tarkistettuina Commonsin API:sta suoraan (ei vain
+  agentin raportista); ei tunnistettavia yksityishenkilöitä lähikuvassa; jos sopivaa
+  kuvaa ei löydy, jätä kenttä tyhjäksi ja listaa puute PR:n kuvaukseen — ei kompromissia.
+- Aikaleimat date-komennolla. Testit ilman ääniä. Kuormatarkistus `uptime` ennen koko sarjaa.

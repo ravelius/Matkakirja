@@ -363,6 +363,27 @@ function monotoninenRamppi(ankkurit, askel) {
  */
 export const SYVYYS = monotoninenRamppi(SYVYYS_ANKKURIT, 25);
 
+/*
+ * SYVYYSKONTRASTI (omistajan löydös 129, build 16, 25.9.2026: "meressä
+ * syvyyserot näkyvät liian vähän"). Kerroin k venyttää ankkurien kirkkauden
+ * 0 m:n kirkkaudesta poispäin (k > 1 = syvä vesi tummempi, matala ennallaan)
+ * ja ramppi lasketaan uudelleen SAMAAN taulukkoon, jotta kaikki lukijat
+ * (lerpSyvyys, generoi-laattapyramidi syvyysSavy) näkevät sen. k = 1 on
+ * tavulleen entinen. Kutsu ennen piirtoa (generoi-laattapyramidi
+ * --syvyyskontrasti k).
+ */
+export function asetaSyvyyskontrasti(k) {
+  if (!(k > 0) || k === 1) return;
+  // Kirkkaus venytetään, sävy (kanavien suhde) säilyy: seepia ei harmaannu.
+  const kirkkaus = (v) => (v[0] + v[1] + v[2]) / 3;
+  const L0 = kirkkaus(SYVYYS_ANKKURIT[0].v);
+  const venytetyt = SYVYYS_ANKKURIT.map(({ m, v }) => {
+    const L = kirkkaus(v); const kerroin = Math.max(0, L0 + (L - L0) * k) / L;
+    return { m, v: v.map((c) => Math.max(0, Math.min(255, Math.round(c * kerroin)))) };
+  });
+  SYVYYS.splice(0, SYVYYS.length, ...monotoninenRamppi(venytetyt, 25));
+}
+
 /* ------------------------------------------- värillinen topografia */
 
 /*

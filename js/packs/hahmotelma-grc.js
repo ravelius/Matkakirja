@@ -382,6 +382,7 @@ export const HAHMOTELMA_GRC = [
   },
   {
     id: 'hahmotelma-navagio',
+    nimio: 'Navagio',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/grc-nosto-navagio-b6a6abf6.jpg',
       lyhyt: 'Navagio-ranta Zakynthoksella: valkoiset kalkkikivikalliot ympäröivät turkoosia lahtea.',
@@ -1380,6 +1381,7 @@ export const HAHMOTELMA_GRC = [
   },
   {
     id: 'hahmotelma-lavrio',
+    nimio: 'Lavrio',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/grc-nosto-lavrio-c2317a73.jpg',
       lyhyt: 'Lavrion vanhoja teollisuusrakennuksia kukkulan rinteellä.',
@@ -1919,6 +1921,7 @@ export const HAHMOTELMA_GRC = [
    */
   {
     id: 'hahmotelma-korintin-apollon-temppeli',
+    nimio: 'Apollontemppeli',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/grc-nosto-korintin-apollon-temppeli-f536835f.jpg',
       lyhyt: 'Antiikin Korintin Apollon temppelin seitsemän pylvästä 1900-luvun alussa.',

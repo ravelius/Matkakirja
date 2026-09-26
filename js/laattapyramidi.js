@@ -88,7 +88,7 @@
  *    kohtaan leveys, jossa kopio jatkaa.
  */
 import { el } from './mapart.js';
-import { pyramidiUrl } from './media.js';
+import { pyramidiUrl, pyramidinLuettelonPolku } from './media.js';
 import {
   ASTRONAUTIN_SAVY, ASTRONAUTIN_SUODATIN, JAARAJA_LAT, astronautinValoliuunPysakit,
   haeReliefinLuettelo, merkitseLinssiketju, reliefiAstronautilla, reliefiKaytossa,
@@ -639,9 +639,11 @@ let luetteloHaku = null;
  * välimuistista — muuten koko kartta katoaisi lentokonetilassa.
  */
 function noudaLuettelo() {
-  return fetch(pyramidiUrl('pyramidi.json'), { cache: 'no-cache' })
+  // Koelippu ?pyramidi=<sarja> lukee sarjan kopion (js/media.js pyramidiKoe).
+  const polku = pyramidinLuettelonPolku();
+  return fetch(pyramidiUrl(polku), { cache: 'no-cache' })
     .then((v) => (v.ok ? v : Promise.reject(new Error('luettelo'))))
-    .catch(() => fetch(pyramidiUrl('pyramidi.json')));
+    .catch(() => fetch(pyramidiUrl(polku)));
 }
 
 async function haeLuettelo() {

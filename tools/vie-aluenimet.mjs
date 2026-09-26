@@ -8,6 +8,7 @@
  *
  *   node tools/vie-aluenimet.mjs [--pyramidi <pyramidi.json|URL>]
  *        [--nimisto <nimiot-poltto-N.json>] [--versio 2026-09-24a] --ulos aluenimet.json
+ *        [--maa <ne_10m_admin_0_countries.geojson>]   merinimet veden päälle (löydös 107)
  *
  * LÄHTEET
  * - Paikat: ämpärin pyramidi.json `nimiotaso.nimiot[id].laatikot[z]` —
@@ -156,6 +157,141 @@ export function aluenimet(pyramidi, { muste = new Map(), versio } = {}) {
   };
 }
 
+/*
+ * MERINIMET AINA MEREN PÄÄLLÄ (löydös 107, omistaja build 13: Välimeri ja
+ * Messinansalmi piirtyivät Sisilian ja Calabrian päälle). Webin nimiötason
+ * ankkuri on törmäyksenväistön tulos, joka ei katso rantaviivaa. Jokaisen
+ * merinimen laatikko (teksti ja sen alla aaltomerkki) tarkistetaan
+ * maapolygoneja vastaan tasoittain; jos se osuu maahan, nimi siirretään
+ * lähimpään kohtaan, jossa laatikko on veden päällä (enintään 5 %
+ * näytteistä maalla — pienet saaret sallitaan). Haku ulottuu enintään
+ * 0,75 nimen leveyden päähän (salmilla 0,35), jotta nimi pysyy omalla
+ * merellään, eikä uusi paikka saa osua saman tason muihin nimiin. Jos
+ * paikkaa ei löydy, salmen nimeä pienennetään (0,8 → 0,65 → 0,5 kertaa
+ * webin koko; korkeus_m ja leveys_m kertovat piirtokoon), ja jos sekään
+ * ei mahdu, nimi jätetään pois siltä tasolta: maan päällä oleva merinimi
+ * on virhe, puuttuva ei. Rivi säilyy, vaikka yksikään taso ei jäisi
+ * (merinimet.json viittaa samoihin tunnuksiin).
+ *
+ * Laatikko kirjainkorkeuksina k: yläreuna +0,6 k, alareuna −1,75 k
+ * (tyylit.meri.aaltomerkki.alla_em 0,95 + aallon korkeus), leveys leveys_m.
+ */
+const LAATIKKO_YLOS = 0.6;
+const LAATIKKO_ALAS = 1.75;
+const NAYTTEET = [13, 5];
+const MAATA_ENINTAAN = 0.05;
+const HAKU_LEVEYKSINA = 0.75;
+/** Salmi tai kanaali nimeää kapean kohdan: sen nimi saa siirtyä vain vähän. */
+const SALMEN_HAKU = 0.35;
+const onSalmi = (n) => /salmi|kanaali|rauma|dardanellit/u.test(n.id);
+
+/** Nimen laatikko asteina [w, s, e, n]; merinimellä aaltomerkki alla. */
+function nimenLaatikko(n, p) {
+  const mLon = 1 / (R * RAD * Math.cos(p.lat * RAD));
+  const mLat = 1 / (R * RAD);
+  const k = p.korkeus_m;
+  const alas = n.luokka === 'meri' ? LAATIKKO_ALAS : LAATIKKO_YLOS;
+  return [p.lon - (p.leveys_m / 2) * mLon, p.lat - alas * k * mLat, p.lon + (p.leveys_m / 2) * mLon, p.lat + LAATIKKO_YLOS * k * mLat];
+}
+const leikkaa = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a[3];
+
+/** Maapolygonit (NE admin-0 GeoJSON) nopeaan piste-maalla-testiin: [{ laatikko, renkaat }]. */
+export function maaIndeksi(geojson) {
+  const osat = [];
+  for (const f of geojson.features) {
+    const polys = f.geometry?.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry?.coordinates ?? [];
+    for (const poly of polys) {
+      let [w, s, e, n] = [Infinity, Infinity, -Infinity, -Infinity];
+      for (const [x, y] of poly[0]) { w = Math.min(w, x); e = Math.max(e, x); s = Math.min(s, y); n = Math.max(n, y); }
+      osat.push({ laatikko: [w, s, e, n], renkaat: poly });
+    }
+  }
+  return osat;
+}
+
+function renkaassa(r, x, y) {
+  let sisalla = false;
+  for (let i = 0, j = r.length - 1; i < r.length; j = i, i += 1) {
+    const [xi, yi] = r[i]; const [xj, yj] = r[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) sisalla = !sisalla;
+  }
+  return sisalla;
+}
+
+export function maalla(maa, lon, lat) {
+  for (const o of maa) {
+    const [w, s, e, n] = o.laatikko;
+    if (lon < w || lon > e || lat < s || lat > n) continue; // eslint-disable-line no-continue
+    if (renkaassa(o.renkaat[0], lon, lat) && !o.renkaat.slice(1).some((r) => renkaassa(r, lon, lat))) return true;
+  }
+  return false;
+}
+
+/** Osuus laatikon näytepisteistä maalla (0…1). */
+export function maaOsuus(maa, { lon, lat, korkeus_m: k, leveys_m: l }) {
+  const mLon = 1 / (R * RAD * Math.cos(lat * RAD));
+  const mLat = 1 / (R * RAD);
+  const [nx, ny] = NAYTTEET;
+  let osumia = 0;
+  for (let i = 0; i < nx; i += 1) {
+    for (let j = 0; j < ny; j += 1) {
+      const dx = (i / (nx - 1) - 0.5) * l;
+      const dy = LAATIKKO_YLOS * k - (j / (ny - 1)) * (LAATIKKO_YLOS + LAATIKKO_ALAS) * k;
+      if (maalla(maa, lon + dx * mLon, lat + dy * mLat)) osumia += 1;
+    }
+  }
+  return osumia / (nx * ny);
+}
+
+/**
+ * Siirtää merinimet (luokka meri) veden päälle tasoittain. Palauttaa
+ * { siirretty, poistettu } ja muuttaa `nimet`-rivejä paikallaan.
+ */
+export function meretVedenPaalle(nimet, maa) {
+  const tulos = { siirretty: [], poistettu: [] };
+  const muutTasolla = (itse, z) => nimet.filter((m) => m !== itse && m.paikat[z]).map((m) => nimenLaatikko(m, m.paikat[z]));
+  for (const n of nimet) {
+    if (n.luokka !== 'meri') continue; // eslint-disable-line no-continue
+    for (const [z, p] of Object.entries(n.paikat)) {
+      if (maaOsuus(maa, p) <= MAATA_ENINTAAN) continue; // eslint-disable-line no-continue
+      const muut = muutTasolla(n, z);
+      const haku = (onSalmi(n) ? SALMEN_HAKU : HAKU_LEVEYKSINA) * p.leveys_m;
+      const mLon = 1 / (R * RAD * Math.cos(p.lat * RAD));
+      const mLat = 1 / (R * RAD);
+      let paras = null;
+      for (const kerroin of onSalmi(n) ? [1, 0.8, 0.65, 0.5] : [1]) {
+        const koko = { ...p, korkeus_m: Math.round(p.korkeus_m * kerroin), leveys_m: Math.round(p.leveys_m * kerroin) };
+        const askel = p.leveys_m / 10;
+        for (let a = -8; a <= 8; a += 1) {
+          for (let b = -8; b <= 8; b += 1) {
+            const d = Math.hypot(a, b) * askel;
+            if (d > haku || (paras && d >= paras.d)) continue; // eslint-disable-line no-continue
+            const ehdokas = { ...koko, lon: p.lon + a * askel * mLon, lat: p.lat + b * askel * mLat };
+            const laatikko = nimenLaatikko(n, ehdokas);
+            if (muut.some((m) => leikkaa(m, laatikko))) continue; // eslint-disable-line no-continue
+            if (maaOsuus(maa, ehdokas) <= MAATA_ENINTAAN) paras = { d, kerroin, ...ehdokas };
+          }
+        }
+        if (paras) break;
+      }
+      if (paras) {
+        tulos.siirretty.push(`${n.id} z${z} ${Math.round(paras.d / 1000)} km${paras.kerroin < 1 ? ` koko ${paras.kerroin}` : ''}`);
+        p.lon = +paras.lon.toFixed(5); p.lat = +paras.lat.toFixed(5);
+        if (paras.kerroin < 1) {
+          p.korkeus_m = paras.korkeus_m; p.leveys_m = paras.leveys_m;
+          p.korkeus_px = +(p.korkeus_px * paras.kerroin).toFixed(1);
+        }
+      } else {
+        tulos.poistettu.push(`${n.id} z${z}`);
+        delete n.paikat[z];
+      }
+    }
+    n.tasot = Object.keys(n.paikat).map(Number);
+    n.pallotasot = n.tasot.map((z) => z + 1);
+  }
+  return tulos;
+}
+
 async function lueJson(lahde) {
   if (/^https?:/.test(lahde)) return (await fetch(lahde)).json();
   return JSON.parse(readFileSync(lahde, 'utf8'));
@@ -165,13 +301,27 @@ async function paa() {
   const argv = process.argv.slice(2);
   const lippu = (n) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : null; };
   const ulos = lippu('--ulos');
-  if (!ulos) throw new Error('käyttö: --ulos aluenimet.json [--pyramidi] [--nimisto] [--versio]');
+  if (lippu('--vain-meret')) {
+    // Olemassa olevan aluenimet-tiedoston merinimet veden päälle ilman uutta vientiä.
+    const tulos = await lueJson(lippu('--vain-meret'));
+    const vesi = meretVedenPaalle(tulos.nimet, maaIndeksi(await lueJson(lippu('--maa'))));
+    tulos.lukumaarat.meret_vedelle = { siirretty: vesi.siirretty, poistettu: vesi.poistettu };
+    writeFileSync(ulos ?? lippu('--vain-meret'), `${JSON.stringify(tulos, null, 1)}\n`);
+    console.log(`meret veden päälle: siirretty ${vesi.siirretty.length}, pois ${vesi.poistettu.join(', ') || '–'}`);
+    return;
+  }
+  if (!ulos) throw new Error('käyttö: --ulos aluenimet.json [--pyramidi] [--nimisto] [--versio] [--maa ne_10m_admin_0_countries.geojson]');
   const pyramidi = await lueJson(lippu('--pyramidi') ?? PYRAMIDI_URL);
   const muste = new Map();
   if (lippu('--nimisto')) {
     for (const r of await lueJson(lippu('--nimisto'))) if (r.muste && r.teksti) muste.set(`${r.iso}|${r.teksti}`, r.muste);
   }
   const tulos = aluenimet(pyramidi, { muste, versio: lippu('--versio') ?? new Date().toISOString().slice(0, 10) });
+  if (lippu('--maa')) {
+    const vesi = meretVedenPaalle(tulos.nimet, maaIndeksi(await lueJson(lippu('--maa'))));
+    tulos.lukumaarat.meret_vedelle = { siirretty: vesi.siirretty, poistettu: vesi.poistettu };
+    console.log(`meret veden päälle: siirretty ${vesi.siirretty.join(', ') || '–'}; pois ${vesi.poistettu.join(', ') || '–'}`);
+  }
   const puuttuu = tulos.nimet.filter((n) => n.luokka === 'nykyalue' && !muste.has(`${n.iso}|${n.teksti}`));
   if (lippu('--nimisto') && puuttuu.length) console.warn(`varoitus: ${puuttuu.length} nykyalueelta puuttuu muste nimistöstä (oletus sepia)`);
   writeFileSync(ulos, `${JSON.stringify(tulos, null, 1)}\n`);

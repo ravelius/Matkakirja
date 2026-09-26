@@ -202,6 +202,7 @@ export const HAHMOTELMA_SVK = [
   },
   {
     id: 'hahmotelma-ochtinska',
+    nimio: 'Ochtinská',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/svk-nosto-ochtinska-6a829b5b.jpg',
       lyhyt: 'Valkoisia aragoniittikiteitä Ochtinán luolan katossa.',
@@ -251,6 +252,7 @@ export const HAHMOTELMA_SVK = [
   },
   {
     id: 'hahmotelma-poloniny',
+    nimio: 'Poloniny',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/svk-nosto-poloniny-c11ad12c.jpg',
       lyhyt: 'Stužican alkumetsää, kaatuneita runkoja ja pieni puro.',
@@ -704,6 +706,7 @@ export const HAHMOTELMA_SVK = [
   },
   {
     id: 'hahmotelma-bratislava',
+    nimio: 'Bratislava',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/svk-nosto-bratislava-fd1b4bea.jpg',
       lyhyt: 'Bratislavan linna ja Pyhän Martinin tuomiokirkon torni Tonavan rannalta nähtynä.',
@@ -1835,6 +1838,7 @@ export const HAHMOTELMA_SVK = [
   },
   {
     id: 'hahmotelma-tokaj',
+    nimio: 'Tokaj',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-tokaj-5f5850db.jpg',
       lyhyt: 'Tokajin viinialueen slovakialaista osaa Malá Tŕňan kylän lähellä.',

@@ -754,7 +754,7 @@ export const FOKUSVIRTA_MADRID = {
        * LAUDALLA): maailmankartta Millerin lieriönä, europe tasavälinä.
        */
       id: 'munkkiaratit',
-      nimio: 'Madridin papukaijat',
+      nimio: 'Papukaijat',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * piste on Casa de Campon ja Länsipuiston puolella, kaupunkilehden

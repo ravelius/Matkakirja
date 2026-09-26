@@ -166,3 +166,15 @@ export const LISATIEDOSTOT = [
   // mukaan ei tule yhtään. Ks. kokoelmat.mjs luentoKokoelma.
   ...voimassaOlevatAikaleimat(),
 ];
+
+/*
+ * NIMETYT LISÄTIEDOSTOT: repon tiedosto paketin kiinteään polkuun, jonka natiivi lukee suoraan (muoto tarkistetaan
+ * viennissä). Puuttuva lähde ohitetaan, jotta vientikoodi voi tulla mainiin ennen dataa. manifest.lisatiedostot-rivin
+ * muoto on sama kuin muilla (lahde, tiedosto, sha256, tavuja), joten skeema ei muutu.
+ *
+ *   kartta/lippu_lonlat.json  Löydös 161 (Fable 26.9.2026): Karttasepän lipputankoankkurit { ISO3: [lon, lat] },
+ *                             natiivi Kartuscha.LippuAnkkuritPolku (Natiivi-UI a500a778).
+ */
+export const NIMETYT_LISATIEDOSTOT = [
+  { lahde: 'assets/data/lippu-lonlat.json', tiedosto: 'kartta/lippu_lonlat.json', muoto: 'iso3-lonlat' },
+];

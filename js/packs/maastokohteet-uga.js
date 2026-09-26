@@ -152,6 +152,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'murchison',
     nimi: 'Murchisonin putoukset',
+    nimio: 'Murchison',
     tyyppi: 'joki',
     kysymykset: [
       'Kuinka kapeasta raosta Niili puristuu?',
@@ -179,6 +180,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'queenelizabeth',
     nimi: 'Queen Elizabethin puisto',
+    nimio: 'Queen Elizabeth',
     tyyppi: 'elain',
     kysymykset: [
       'Mistä puisto sai nimensä?',
@@ -207,6 +209,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'kibale',
     nimi: 'Kibalen kansallispuisto',
+    nimio: 'Kibale',
     tyyppi: 'elain',
     kysymykset: [
       'Montako kädellislajia Kibalessa elää?',
@@ -234,6 +237,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'nyero',
     nimi: 'Nyeron kalliomaalaukset',
+    nimio: 'Nyero',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Millaisia kuvioita Nyerossa on maalattu?',

@@ -17,9 +17,10 @@ const ihme = (tiedosto, selite, url) => ({
   url,
 });
 
-const kohde = ({ id, nimi, nappi, laudat, teksti, lahde, kuva, url }) => ({
+const kohde = ({ id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, url }) => ({
   id: `hahmotelma-${id}`,
   nimi,
+  ...(nimio ? { nimio } : {}),
   tyyppi: 'historia',
   lahi: true,
   kysymykset: [
@@ -37,6 +38,7 @@ const kohde = ({ id, nimi, nappi, laudat, teksti, lahde, kuva, url }) => ({
 export const EUROOPAN_KADONNEET = {
   FRA: [kohde({
     id: 'saint-cloud', nimi: 'Saint-Cloud’n linna',
+    nimio: 'Saint-Cloud',
     nappi: 'Aurinkokuninkaan veljen palatsi Pariisin länsipuolella',
     laudat: { maailmankartta: { x: 5906.2, y: 1440.4 }, europe: { x: 253.2, y: 609.2 } },
     teksti: 'Saint-Cloud’n linna kasvoi 1600-luvulla Orléansin herttuan loisteliaaksi '
@@ -48,6 +50,7 @@ export const EUROOPAN_KADONNEET = {
   DEU: [
     kohde({
       id: 'hampurin-vanha-raatihuone', nimi: 'Hampurin vanha raatihuone',
+      nimio: 'Vanha raatihuone',
       nappi: 'Renessanssiraatihuone, joka räjäytettiin suurpalon tieltä',
       laudat: { maailmankartta: { x: 6166.4, y: 1232.3 }, europe: { x: 403.1, y: 485.2 } },
       teksti: 'Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 '
@@ -80,6 +83,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'vanha-pietarinkirkko', nimi: 'Vanha Pietarinkirkko',
+      nimio: 'Pietarinkirkko',
       nappi: 'Konstantinuksen basilika ennen uuden kirkon rakennustöitä',
       laudat: { maailmankartta: { x: 6248.5, y: 1727.5 }, europe: { x: 450.3, y: 791.6 } },
       teksti: 'Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin '
@@ -102,6 +106,7 @@ export const EUROOPAN_KADONNEET = {
   ESP: [
     kohde({
       id: 'real-alcazar-madrid', nimi: 'Madridin Real Alcázar',
+      nimio: 'Real Alcázar',
       nappi: 'Habsburgien kuninkaanlinna ennen jouluyön tulipaloa',
       laudat: { maailmankartta: { x: 5709.5, y: 1786.4 }, europe: { x: 139.9, y: 830.6 } },
       teksti: 'Madridin maurilainen linnoitus kasvoi Habsburgien kuninkaanlinnaksi, jossa '
@@ -112,6 +117,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'buen-retiro', nimi: 'Palacio del Buen Retiro',
+      nimio: 'Buen Retiro',
       nappi: 'Filip IV:n laaja huvilinna puutarhoineen',
       laudat: { maailmankartta: { x: 5710.4, y: 1786.6 }, europe: { x: 140.4, y: 830.7 } },
       teksti: 'Buen Retiro oli Filip IV:lle 1630-luvulla rakennettu yli kahdenkymmenen '
@@ -134,6 +140,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'hospital-real-todos-os-santos', nimi: 'Hospital Real de Todos-os-Santos',
+      nimio: 'Todos-os-Santos',
       nappi: 'Manuel I:n suuri sairaala Rossion laidalla',
       laudat: { maailmankartta: { x: 5528.7, y: 1853.2 }, europe: { x: 35.7, y: 875.4 } },
       teksti: 'Kaikkien pyhien kuninkaallinen sairaala rakennettiin Lissaboniin vuosina '
@@ -146,6 +153,7 @@ export const EUROOPAN_KADONNEET = {
   NLD: [
     kohde({
       id: 'amsterdamin-vanha-raatihuone', nimi: 'Amsterdamin vanha raatihuone',
+      nimio: 'Vanha raatihuone',
       nappi: 'Damin goottilainen raatihuone ennen vuoden 1652 paloa',
       laudat: { maailmankartta: { x: 5996.4, y: 1285.4 }, europe: { x: 305.1, y: 516.2 } },
       teksti: 'Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1400-luvulta lähtien. '
@@ -156,6 +164,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'utrechtin-domkirkon-keskilaiva', nimi: 'Utrechtin Domkirkon keskilaiva',
+      nimio: 'Utrecht',
       nappi: 'Katedraalin keskilaiva ennen vuoden 1674 myrskyä',
       laudat: { maailmankartta: { x: 6004.1, y: 1298.0 }, europe: { x: 309.5, y: 523.6 } },
       teksti: 'Utrechtin Domkirkon keskilaiva jäi vuosisadoiksi keskeneräiseksi rahapulan '
@@ -168,6 +177,7 @@ export const EUROOPAN_KADONNEET = {
   AUT: [
     kohde({
       id: 'vanha-burgtheater', nimi: 'Wienin vanha Burgtheater',
+      nimio: 'Burgtheater',
       nappi: 'Keisarillinen hoviteatteri Michaelerplatzilla',
       laudat: { maailmankartta: { x: 6378.9, y: 1467.4 }, europe: { x: 525.4, y: 625.7 } },
       teksti: 'Wienin keisarillinen hoviteatteri avattiin vuonna 1741. Siellä kantaesitettiin '
@@ -178,6 +188,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'karntnertor-bastioni', nimi: 'Kärntnertor-bastioni',
+      nimio: 'Kärntnertor',
       nappi: 'Wienin renessanssimuuri juuri ennen Ringstraßea',
       laudat: { maailmankartta: { x: 6379.0, y: 1467.6 }, europe: { x: 525.5, y: 625.9 } },
       teksti: 'Wieniä ympäröivät 1500-luvulta renessanssiajan bastionimuurit. Keisari '
@@ -190,6 +201,7 @@ export const EUROOPAN_KADONNEET = {
   CHE: [
     kohde({
       id: 'christoffelturm', nimi: 'Bernin Christoffelturm',
+      nimio: 'Christoffelturm',
       nappi: 'Pyhän Kristoforoksen vartioima keskiaikainen kaupunginportti',
       laudat: { maailmankartta: { x: 6081.3, y: 1520.7 }, europe: { x: 354.0, y: 658.9 } },
       teksti: 'Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen '
@@ -200,6 +212,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'porte-neuve', nimi: 'Geneven Porte Neuve',
+      nimio: 'Porte Neuve',
       nappi: 'Geneven läntinen pääportti ennen linnoitusten purkua',
       laudat: { maailmankartta: { x: 6038.1, y: 1552.0 }, europe: { x: 329.1, y: 678.5 } },
       teksti: 'Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. '
@@ -211,6 +224,7 @@ export const EUROOPAN_KADONNEET = {
   ],
   CZE: [kohde({
     id: 'josefov-asanace', nimi: 'Josefov ennen asanacea',
+    nimio: 'Josefov',
     nappi: 'Prahan juutalaiskorttelin keskiaikainen kujaverkko',
     laudat: { maailmankartta: { x: 6313.9, y: 1386.3 }, europe: { x: 488.0, y: 576.2 } },
     teksti: 'Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. '
@@ -221,6 +235,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   HUN: [kohde({
     id: 'budan-matyas-palatsi', nimi: 'Budan Mátyás-palatsi',
+    nimio: 'Mátyás-palatsi',
     nappi: 'Mátyás Corvinuksen italialainen renessanssihovi',
     // Pieni itäinen asettelusiirto pitää Hollókőn ja Kruunuvarkaus 1440:n nimiöt erillään.
     laudat: { maailmankartta: { x: 6469.0, y: 1497.6 }, europe: { x: 577.3, y: 644.5 } },
@@ -233,6 +248,7 @@ export const EUROOPAN_KADONNEET = {
   BGR: [
     kohde({
       id: 'pliska-palatsi', nimi: 'Pliskan kaanien palatsi',
+      nimio: 'Pliska',
       nappi: 'Ensimmäisen Bulgarian valtakunnan pääkaupungin suurpalatsi',
       laudat: { maailmankartta: { x: 6737.5, y: 1668.6 }, europe: { x: 732.0, y: 753.1 } },
       teksti: 'Pliska oli ensimmäisen Bulgarian valtakunnan pääkaupunki vuosina 681–893. '
@@ -254,6 +270,7 @@ export const EUROOPAN_KADONNEET = {
   ],
   HRV: [kohde({
     id: 'salona-porta-caesarea', nimi: 'Salonan Porta Caesarea',
+    nimio: 'Porta Caesarea',
     nappi: 'Rooman Dalmatian pääkaupungin monumentaalinen portti',
     laudat: { maailmankartta: { x: 6382.8, y: 1661.5 }, europe: { x: 527.7, y: 748.5 } },
     teksti: 'Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen '
@@ -274,6 +291,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   SVK: [kohde({
     id: 'vydrica-zuckermandel', nimi: 'Vydrica–Zuckermandel',
+    nimio: 'Zuckermandel',
     nappi: 'Bratislavan linnan ja Tonavan välinen rantakaupunginosa',
     laudat: { maailmankartta: { x: 6403.1, y: 1470.2 }, europe: { x: 539.4, y: 627.5 } },
     teksti: 'Vydrica ja Zuckermandel muodostivat 1300-luvulta lähtien Bratislavan linnanmäen '
@@ -294,6 +312,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   LVA: [kohde({
     id: 'mustapaiden-talo', nimi: 'Riian Mustapäiden talo',
+    nimio: 'Mustapäiden talo',
     nappi: 'Kauppiasveljeskunnan manneristinen juhlarakennus',
     laudat: { maailmankartta: { x: 6636.9, y: 1074.4 }, europe: { x: 674.1, y: 395.9 } },
     teksti: 'Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. '
@@ -304,6 +323,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   EST: [kohde({
     id: 'narvan-vanhakaupunki', nimi: 'Narvan barokkinen vanhakaupunki',
+    nimio: 'Narva',
     nappi: 'Narvan yhtenäinen barokkikaupunki 1700-luvun asussa',
     laudat: { maailmankartta: { x: 6773.0, y: 956.6 }, europe: { x: 752.4, y: 332.0 } },
     teksti: 'Narvan vanhakaupunki oli Pohjois-Euroopan parhaiten säilyneitä barokkikaupunkeja. '
@@ -314,6 +334,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   FIN: [kohde({
     id: 'turun-tuomiokirkon-vanha-torni', nimi: 'Turun tuomiokirkon vanha torni',
+    nimio: 'Tuomiokirkon torni',
     nappi: 'Sipulikupolinen barokkitorni ennen Turun suurpaloa',
     laudat: { maailmankartta: { x: 6575.9, y: 903.1 }, europe: { x: 638.9, y: 303.7 } },
     teksti: 'Turun tuomiokirkon keskiaikainen torni sai barokkisen sipulikupolin '
@@ -346,6 +367,7 @@ export const EUROOPAN_KADONNEET = {
   ],
   IRL: [kohde({
     id: 'dublinin-keskiaikainen-linna', nimi: 'Dublinin keskiaikainen linna',
+    nimio: 'Dublin Castle',
     nappi: 'Englannin vallan nelitorninen linnoitus ennen vuoden 1684 paloa',
     laudat: { maailmankartta: { x: 5624.4, y: 1241.7 }, europe: { x: 90.9, y: 490.7 } },
     teksti: 'Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui '
@@ -357,6 +379,7 @@ export const EUROOPAN_KADONNEET = {
   DNK: [
     kohde({
       id: 'christiansborg', nimi: 'Toinen Christiansborg',
+      nimio: 'Christiansborg',
       nappi: 'Tanskan kuninkaanlinna ennen vuoden 1884 tulipaloa',
       laudat: { maailmankartta: { x: 6252.6, y: 1134.3 }, europe: { x: 452.7, y: 429.3 } },
       teksti: 'Ensimmäinen Christiansborg tuhoutui tulipalossa vuonna 1794. Toinen palatsi '
@@ -378,6 +401,7 @@ export const EUROOPAN_KADONNEET = {
   ],
   RUS: [kohde({
     id: 'valkokivinen-kreml', nimi: 'Moskovan valkokivinen Kreml',
+    nimio: 'Kreml',
     nappi: 'Dmitri Donskoin kalkkikivimuuri ennen tiililinnoitusta',
     laudat: { maailmankartta: { x: 7087.2, y: 1130.8 }, europe: { x: 933.4, y: 427.3 } },
     teksti: 'Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina '
@@ -388,6 +412,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   UKR: [kohde({
     id: 'kymmenyskirkko', nimi: 'Kiovan Kymmenyskirkko',
+    nimio: 'Kymmenyskirkko',
     nappi: 'Kiovan Venäjän ensimmäinen kivikirkko',
     laudat: { maailmankartta: { x: 6850.6, y: 1370.2 }, europe: { x: 797.1, y: 566.6 } },
     teksti: 'Vladimir Suuri rakennutti Kymmenyskirkon vuosina 989–996 Kiovan Venäjän '
@@ -421,6 +446,7 @@ export const EUROOPAN_KADONNEET = {
   ],
   MLT: [kohde({
     id: 'mdinan-vanha-katedraali', nimi: 'Mdinan vanha normannikatedraali',
+    nimio: 'Mdina',
     nappi: 'Keskiaikainen katedraali ennen vuoden 1693 maanjäristystä',
     laudat: { maailmankartta: { x: 6313.4, y: 1961.8 }, europe: { x: 487.7, y: 949.8 } },
     teksti: 'Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian '
@@ -431,6 +457,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   BIH: [kohde({
     id: 'mile-kruunajaiskirkko', nimi: 'Milen kruunajaiskirkko',
+    nimio: 'Mile',
     nappi: 'Bosnian kuninkaiden kruunajais- ja hautauskirkko',
     // Pieni eteläinen asettelusiirto jättää Visokon ympäristön vanhoille nimiöille vapaat kyljet.
     laudat: { maailmankartta: { x: 6437.3, y: 1643.1 }, europe: { x: 559.1, y: 736.6 } },

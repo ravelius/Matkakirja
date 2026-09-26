@@ -1,0 +1,108 @@
+/*
+ * MINIATYYRIT OVAT LEIKATTUJA KOHTEITA, EIVÄT KOHTAUKSIA (omistajan
+ * löydös 95, build 13, 25.9.2026: "piirretty tausta on väärin";
+ * alkuperäinen tilaus 15.8.2026: "tee piirroksista leikattuja. Poista
+ * siis ylimääräinen tausta niistä"; Fablen linjaus 25.9.: karttanostojen
+ * kuvat ovat leikattuja kohteita).
+ *
+ * Leikattu miniatyyri on läpinäkyvä webp: yksittäinen kohde, jonka
+ * ympärillä on läpinäkyvää pohjaa (esim. ateena-akropolis.webp).
+ * Kohtauskuva on koko maalattu näkymä taustoineen. Kaksi mittaa
+ * (256×256:ksi skaalatusta alfasta, alfa > 200 = läpinäkymätön; mittaa
+ * tools/mittaa-miniatyyrit.mjs → tools/miniatyyri-mitat.json, koska CI:ssä
+ * ei ole sharpia — testi tarkistaa manifestin kuvan sha256:llä):
+ *   - TÄYTTÖ: läpinäkymättömien pikselien osuus koko kuvasta.
+ *     Leikatuilla yleensä 0,1–0,5; kohtauskuvilla 0,6–0,9.
+ *   - REUNA: läpinäkymättömien pikselien osuus kuvan kehästä.
+ *     Leikatuilla 0–0,29, kohtauksilla, joiden tausta ulottuu
+ *     reunaan, 0,37–0,53.
+ * Rajat: täyttö < 0,6 ja reuna <= 0,35. Mitattu 25.9.2026, 423 kuvaa,
+ * katsottu silmin; luettelo docs/raportit/miniatyyrit-kohtauskuvat-
+ * 20260925.md.
+ *
+ * TUNNETUT KOHTAUSKUVAT: 70 kuvaa odottaa kuvaputken (Codexin) leikattua
+ * versiota. Kaikki 70 on tilattu 25.9.2026 (Ateenan 6 ensin pilottina
+ * build 14:ään, loput 64 kaupungeittain samana päivänä — omistaja
+ * hyväksyi kaikki odottamatta pilotin tulosta). Kun kuva on korvattu,
+ * se PITÄÄ poistaa alta — toinen testi kaatuu, jos lista kuvaa jo
+ * leikattua.
+ */
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+
+const KANSIO = new URL('../assets/kartat/miniatyyrit/', import.meta.url);
+const TAYTTO_RAJA = 0.6;
+const REUNA_RAJA = 0.35;
+
+const TUNNETUT_KOHTAUSKUVAT = new Set([
+  'ateena-akropolis-museo.webp',
+  'ateena-diogeneen-astia.webp',
+  'ateena-elginin-marmorit.webp',
+  'ateena-iliou-melathron.webp',
+  'ateena-maratonhuijaus.webp',
+  'ateena-niken-temppeli.webp',
+  'pariisi-72-nimea.webp',
+  'pariisi-bastilji-1789.webp',
+  'pariisi-carmenin-ensi-ilta.webp',
+  'pariisi-curie-1898.webp',
+  'pariisi-impressionistit.webp',
+  'pariisi-kirahvin-kavelymatka.webp',
+  'pariisi-lumiere-1895.webp',
+  'pariisi-paras-patonki.webp',
+  'pariisi-pariisi-soi.webp',
+  'pariisi-pasteur-1862.webp',
+  'pariisi-torni-romuraudaksi.webp',
+  'pariisi-tuileriain-rauniot.webp',
+  'pariisi-vrain-lucas.webp',
+  'pietari-janissaari-1703.webp',
+  'rooma-aqua-virgo.webp',
+  'rooma-areenan-kellari.webp',
+  'rooma-kolikko-olan-yli.webp',
+  'rooma-sikstus-1510.webp',
+  'valletta-auberge-de-castille.webp',
+  'valletta-pyhan-elmon-linnake.webp',
+  'valletta-suurmestarin-palatsi.webp',
+  'valletta-ylabarrakka-puutarhat.webp',
+  'wien-figaro-1786.webp',
+  'wien-lipizzanit.webp',
+  'wien-taikahuilu.webp',
+  'wien-vuoristovesijohto.webp',
+  'wien-yhdeksas-1824.webp',
+]);
+
+const MITAT = JSON.parse(readFileSync(new URL('../tools/miniatyyri-mitat.json', import.meta.url), 'utf8'));
+
+/** {taytto, reuna} manifestista; kaatuu, jos kuva on vaihtunut mittauksen jälkeen. */
+function mittaa(nimi) {
+  const m = MITAT[nimi];
+  assert.ok(m, `${nimi}: ei mittausta — aja node tools/mittaa-miniatyyrit.mjs`);
+  const sha = createHash('sha256').update(readFileSync(fileURLToPath(new URL(nimi, KANSIO)))).digest('hex').slice(0, 16);
+  assert.equal(sha, m.sha, `${nimi}: kuva on vaihtunut mittauksen jälkeen — aja node tools/mittaa-miniatyyrit.mjs`);
+  return m;
+}
+
+const onKohtaus = (m) => m.taytto >= TAYTTO_RAJA || m.reuna > REUNA_RAJA;
+const KUVAT = readdirSync(KANSIO).filter((n) => n.endsWith('.webp'));
+
+test('miniatyyrit ovat leikattuja kohteita: ei maalattua taustaa', () => {
+  assert.ok(KUVAT.length > 100, 'miniatyyrejä pitäisi olla satoja');
+  const huonot = [];
+  for (const nimi of KUVAT) {
+    if (TUNNETUT_KOHTAUSKUVAT.has(nimi)) continue;
+    const m = mittaa(nimi);
+    if (onKohtaus(m)) huonot.push(`${nimi}: täyttö ${m.taytto.toFixed(2)}, reuna ${m.reuna.toFixed(2)}`);
+  }
+  assert.deepEqual(huonot, [], 'kuva on kohtaus — tilaa leikattu versio kuvaputkelta');
+});
+
+test('tunnettujen kohtauskuvien lista ei sisällä jo korjattuja kuvia', () => {
+  const vanhentuneet = [];
+  for (const nimi of TUNNETUT_KOHTAUSKUVAT) {
+    assert.ok(KUVAT.includes(nimi), `${nimi}: tiedostoa ei ole — poista listalta`);
+    if (!onKohtaus(mittaa(nimi))) vanhentuneet.push(nimi);
+  }
+  assert.deepEqual(vanhentuneet, [], 'kuva on jo leikattu — poista se TUNNETUT_KOHTAUSKUVAT-listalta');
+});

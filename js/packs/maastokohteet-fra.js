@@ -448,6 +448,7 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'carcassonnen-linnoituskaupunki',
+    nimio: 'Carcassonne',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg',
       lyhyt: 'Carcassonnen kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.',
@@ -568,6 +569,7 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'chartresin-katedraali',
+    nimio: 'Chartres',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-chartresin-katedraali-13d8d62f.jpg',
       lyhyt: 'Chartresin katedraalin eri-ikäiset tornit kaupungin yllä.',
@@ -1067,6 +1069,127 @@ export const MAASTOKOHTEET_FRA = [
       + 'Outstanding Structure Award -palkinnon.',
     lahde: 'en-Wikipedia "Millau Viaduct", johdanto-osa ja osio "History" '
       + '(tarkistettu 11.9.2026).',
+  },
+  /*
+   * ── ERÄ 23.9.2026: CAMARGUE JA DUNE DU PILAT ────────────────────
+   *
+   * Fablen tehtävänanto 23.9.2026 (Ranskan fokuskohteet Saksan
+   * tasolle). Kahdeksan alun perin nimetystä kohteesta kuusi
+   * (Mont-Saint-Michel, Chambord, Lascaux, Pont du Gard, Carcassonne,
+   * Millaun silta) sekä kaksi HAHMOTELMA_FRA:ssa (Puy de Sancy,
+   * Canal du Midi) olivat jo omana kohteenaan KOHDE_MAAT.FRA:ssa —
+   * niitä ei toisteta, ks. tiedoston yläosan MIKSI OMA LISTA -kommentti.
+   * Vain Camargue ja Dune du Pilat puuttuivat omana kohteenaan:
+   * Camargue esiintyi tähän asti vain `rhone`-kohteen korostus-
+   * sanana, ja Dune du Pilat vain "biskajanlahti"-kohteen kuvassa ja
+   * maalehtinostot-fra.js:n omana nostonaan. Kumpikin lisätään tähän
+   * (tyyppi 'joki'/'vuori', sama luokittelu kuin muualla peliaineistossa
+   * suistoilla ja dyyneillä), eri Commons-kuvin kuin nuo olemassa
+   * olevat maininnat, jotta yksikään kuva ei toistu.
+   */
+  {
+    id: 'camargue',
+    kuva: {
+      tiedosto: '001 Greater flamingo in flight in the Camargue Photo by Giles Laurent.jpg',
+      lyhyt: 'Flamingo laskeutuu Camarguen laguunille parven yllä.',
+      selite: 'Flamingo laskeutumassa Camarguen matalille laguuneille; taustalla lepää suurempi parvi.',
+      lahde: 'Valokuva: Giles Laurent, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Giles Laurent',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:001_Greater_flamingo_in_flight_in_the_Camargue_Photo_by_Giles_Laurent.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      tiedosto: '24 mai 1935 , les gardians accueillent les Saintes pour le bain de mer.jpg',
+      lyhyt: 'Gardianit ratsastavat mereen vuonna 1935.',
+      selite: 'Camarguen gardianit ratsastavat valkoisilla hevosillaan mereen vuoden 1935 kansanjuhlassa.',
+      lahde: 'Valokuva vuodelta 1935, tekijä tuntematon, Wikimedia Commons (public domain).',
+      tekija: 'tuntematon',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:24_mai_1935_,_les_gardians_accueillent_les_Saintes_pour_le_bain_de_mer.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
+    nimi: 'Camargue',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Mistä camarguenhevoset ovat alun perin peräisin?',
+      'Miksi juuri gardianit paimentavat härkiä ratsain?',
+    ],
+    nappi: 'Suisto, jossa asuu flamingoja ja valkoisia hevosia',
+    // 4.5 E / 43.53333333 N — en-Wikipedia "Camargue", sama piste kuin maalehtinostot-fra.js:n Camargue-nostolla
+    laudat: {
+      maailmankartta: { x: 5983.3, y: 1661.8 },
+      europe: { x: 297.6, y: 748.7 },
+    },
+    teksti: 'Camargue on yli 930 neliökilometrin suistoalue, joka syntyy Rhônen '
+      + 'jakautuessa kahdeksi pääuomaksi, Grand Rhôneksi ja Petit Rhôneksi, ennen '
+      + 'laskuaan Välimereen Arlesin eteläpuolella — yksi Länsi-Euroopan '
+      + 'suurimmista jokisuistoista. Suolaisten laguunien ja ruovikkoisten '
+      + 'suomaiden verkosto on koti yli 400 lintulajille, joista tunnetuin on '
+      + 'flamingo. Puolivillit valkoiset camarguenhevoset ja camarguenhärät '
+      + 'laiduntavat vapaina laumoina, joita gardianit eli alueen paimenet '
+      + 'kaitsevat ratsain. Alue rauhoitettiin luonnonpuistoksi vuonna 1970, ja '
+      + 'sen kosteikot liitettiin kansainväliseen Ramsar-sopimukseen 1986.',
+    lahde: 'en-Wikipedia "Camargue", johdanto-osa (tarkistettu 23.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Camarguen kosteikot liitettiin kansainväliseen Ramsar-sopimukseen?',
+      vaihtoehdot: [
+        '1970',
+        '1979',
+        '1986',
+        '1996',
+      ],
+      oikea: 2,
+      fakta: 'Camarguen kosteikot liitettiin Ramsar-sopimukseen vuonna 1986; La Petite Camargue seurasi 1996.',
+    },
+  },
+  {
+    id: 'dune-du-pilat',
+    kuva: {
+      tiedosto: 'Dune of Pilat at sunrise.jpg',
+      lyhyt: 'Dyynin harja laskeutuu mäntymetsään auringonnousussa.',
+      selite: 'Dune du Pilatin harja laskeutuu Landesin mäntymetsään auringonnousun valossa.',
+      lahde: 'Valokuva: Didier Baertschiger, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Didier Baertschiger',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dune_of_Pilat_at_sunrise.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
+    nimi: 'Dune du Pilat',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Mihin nimi Pilat oikeastaan viittaa?',
+      'Mitä dyynin alta on löytynyt kaivauksissa?',
+    ],
+    nappi: 'Euroopan korkein hiekkadyyni',
+    // -1.21166667 E / 44.59 N — en-Wikipedia "Dune of Pilat", sama piste kuin maalehtinostot-fra.js:n Dune du Pilat -nostolla
+    laudat: {
+      maailmankartta: { x: 5792.9, y: 1618.6 },
+      europe: { x: 187.9, y: 720.9 },
+    },
+    teksti: 'Dune du Pilat on Euroopan korkein hiekkadyyni, La Teste-de-Buchin '
+      + 'kunnassa Arcachonin lahden eteläpuolella noin 60 kilometriä '
+      + 'Bordeaux\'sta lounaaseen. Vuoden 2018 mittauksessa sen korkeus oli '
+      + '106,6 metriä merenpinnasta, ja se on noin 500 metriä leveä ja 2,7 '
+      + 'kilometriä pitkä; hiekkaa siinä on arviolta 60 miljoonaa kuutiometriä. '
+      + 'Dyyni on niin sanottu etudyyni, joka kulkeutuu vähitellen sisämaahan '
+      + 'päin ja työntää edessään olevaa mäntymetsää tieltään. Vielä '
+      + '1700-luvun kartoissa Pilat-niminen paikka merkittiin nykyistä '
+      + 'etelämmäksi ja osin merelle — nykyinen sijainti tunnettiin '
+      + '1930-luvulle asti nimellä Les Sabloneys, "uudet hiekat".',
+    lahde: 'en-Wikipedia "Dune of Pilat", johdanto-osa ja osiot "Formation and '
+      + 'movement" ja "Etymology" (tarkistettu 23.9.2026).',
+    visa: {
+      kysymys: 'Kuinka korkea Dune du Pilat oli vuoden 2018 mittauksessa?',
+      vaihtoehdot: [
+        '86,6 metriä',
+        '106,6 metriä',
+        '126,6 metriä',
+        '156,6 metriä',
+      ],
+      oikea: 1,
+      fakta: 'Dune du Pilat mitattiin 106,6 metrin korkuiseksi vuonna 2018 — Euroopan korkein hiekkadyyni.',
+    },
   },
 ];
 

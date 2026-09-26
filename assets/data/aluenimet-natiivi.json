@@ -108,6 +108,82 @@
    "kuva": 8,
    "raja": 7,
    "eiLaatikkoa": 0
+  },
+  "meret_vedelle": {
+   "siirretty": [
+    "valimeri z4 91 km",
+    "valimeri z5 44 km",
+    "valimeri z6 88 km",
+    "valimeri z7 57 km",
+    "valimeri z8 44 km",
+    "itameri z4 36 km",
+    "itameri z6 17 km",
+    "itameri z7 11 km",
+    "itameri z8 8 km",
+    "vienanmeri z4 29 km",
+    "asovanmeri z5 69 km",
+    "asovanmeri z6 14 km",
+    "egeanmeri z4 217 km",
+    "egeanmeri z6 44 km",
+    "marmaranmeri z7 31 km",
+    "marmaranmeri z8 9 km",
+    "tyrrhenanmeri z4 49 km",
+    "adrianmeri z5 33 km",
+    "ligurianmeri z4 278 km",
+    "irlanninmeri z6 15 km",
+    "irlanninmeri z7 11 km",
+    "lioninlahti z4 200 km",
+    "lioninlahti z5 51 km",
+    "lioninlahti z6 17 km",
+    "pohjanlahti z5 50 km",
+    "suomenlahti z6 12 km",
+    "riianlahti z6 47 km",
+    "riianlahti z7 8 km",
+    "englannin-kanaali z4 78 km koko 0.65",
+    "englannin-kanaali z5 35 km",
+    "englannin-kanaali z6 23 km",
+    "englannin-kanaali z7 17 km",
+    "englannin-kanaali z8 11 km",
+    "skagerrak z4 47 km",
+    "gibraltarinsalmi z5 124 km koko 0.5",
+    "gibraltarinsalmi z6 83 km koko 0.5",
+    "gibraltarinsalmi z7 59 km koko 0.5",
+    "gibraltarinsalmi z8 40 km koko 0.65",
+    "bosporinsalmi z4 107 km koko 0.8",
+    "bosporinsalmi z5 69 km",
+    "bosporinsalmi z6 59 km",
+    "bosporinsalmi z7 47 km",
+    "bosporinsalmi z8 31 km koko 0.8",
+    "dardanellit z5 84 km koko 0.5",
+    "juutinrauma z7 30 km koko 0.8",
+    "messinansalmi z4 103 km",
+    "messinansalmi z5 74 km",
+    "messinansalmi z6 68 km koko 0.8",
+    "messinansalmi z7 49 km koko 0.5"
+   ],
+   "poistettu": [
+    "asovanmeri z4",
+    "marmaranmeri z4",
+    "marmaranmeri z6",
+    "adrianmeri z4",
+    "irlanninmeri z4",
+    "irlanninmeri z5",
+    "pohjanlahti z4",
+    "suomenlahti z4",
+    "riianlahti z4",
+    "gibraltarinsalmi z4",
+    "dardanellit z4",
+    "dardanellit z6",
+    "dardanellit z7",
+    "dardanellit z8",
+    "juutinrauma z4",
+    "juutinrauma z5",
+    "juutinrauma z6",
+    "juutinrauma z8",
+    "kattegat z4",
+    "kattegat z5",
+    "messinansalmi z8"
+   ]
   }
  },
  "nimet": [
@@ -134,36 +210,36 @@
    ],
    "paikat": {
     "4": {
-     "lon": 15,
+     "lon": 13.94718,
      "lat": 38.88228,
      "korkeus_px": 14,
      "korkeus_m": 44430,
      "leveys_m": 303768
     },
     "5": {
-     "lon": 15,
-     "lat": 38.56793,
+     "lon": 14.5488,
+     "lat": 38.74432,
      "korkeus_px": 18,
      "korkeus_m": 28637,
      "leveys_m": 196137
     },
     "6": {
-     "lon": 15,
-     "lat": 37.99998,
+     "lon": 15.9024,
+     "lat": 37.64443,
      "korkeus_px": 24,
      "korkeus_m": 19181,
      "leveys_m": 131785
     },
     "7": {
-     "lon": 15,
-     "lat": 37.99999,
+     "lon": 14.89346,
+     "lat": 38.50372,
      "korkeus_px": 34,
      "korkeus_m": 13587,
      "leveys_m": 93353
     },
     "8": {
      "lon": 15,
-     "lat": 38.00002,
+     "lat": 38.39751,
      "korkeus_px": 46,
      "korkeus_m": 9191,
      "leveys_m": 63141
@@ -194,7 +270,7 @@
    "paikat": {
     "4": {
      "lon": 19,
-     "lat": 58.00004,
+     "lat": 58.3235,
      "korkeus_px": 14,
      "korkeus_m": 35785,
      "leveys_m": 179837
@@ -207,22 +283,22 @@
      "leveys_m": 114875
     },
     "6": {
-     "lon": 19,
-     "lat": 57.99999,
+     "lon": 19.1308,
+     "lat": 58.13862,
      "korkeus_px": 24,
      "korkeus_m": 15336,
      "leveys_m": 77073
     },
     "7": {
      "lon": 18.99995,
-     "lat": 57.99999,
+     "lat": 58.09818,
      "korkeus_px": 34,
      "korkeus_m": 10863,
      "leveys_m": 54593
     },
     "8": {
-     "lon": 19,
-     "lat": 58.00002,
+     "lon": 18.93732,
+     "lat": 58.06645,
      "korkeus_px": 46,
      "korkeus_m": 7349,
      "leveys_m": 36934
@@ -429,8 +505,8 @@
    ],
    "paikat": {
     "4": {
-     "lon": 38,
-     "lat": 65.49997,
+     "lon": 37.5576,
+     "lat": 65.68343,
      "korkeus_px": 14,
      "korkeus_m": 31661,
      "leveys_m": 203999
@@ -532,37 +608,28 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
     5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
     6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 37,
-     "lat": 46.50002,
-     "korkeus_px": 14,
-     "korkeus_m": 41333,
-     "leveys_m": 338620
-    },
     "5": {
-     "lon": 37,
-     "lat": 46.76249,
+     "lon": 36.7156,
+     "lat": 46.17803,
      "korkeus_px": 18,
      "korkeus_m": 26497,
      "leveys_m": 216631
     },
     "6": {
      "lon": 37,
-     "lat": 46.67509,
+     "lat": 46.545,
      "korkeus_px": 24,
      "korkeus_m": 17681,
      "leveys_m": 144655
@@ -604,15 +671,15 @@
    ],
    "paikat": {
     "4": {
-     "lon": 24.384,
-     "lat": 38.85223,
+     "lon": 25.17732,
+     "lat": 36.9988,
      "korkeus_px": 14,
      "korkeus_m": 44441,
      "leveys_m": 343488
     },
     "6": {
      "lon": 25,
-     "lat": 38.50003,
+     "lat": 38.89916,
      "korkeus_px": 24,
      "korkeus_m": 19102,
      "leveys_m": 147938
@@ -641,41 +708,23 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
-    6,
     7,
     8
    ],
    "pallotasot": [
-    5,
-    7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 28,
-     "lat": 40.26649,
-     "korkeus_px": 14,
-     "korkeus_m": 43903,
-     "leveys_m": 452964
-    },
-    "6": {
-     "lon": 28,
-     "lat": 40.70003,
-     "korkeus_px": 24,
-     "korkeus_m": 18744,
-     "leveys_m": 192880
-    },
     "7": {
-     "lon": 28,
-     "lat": 40.69999,
+     "lon": 28.32412,
+     "lat": 40.82285,
      "korkeus_px": 34,
      "korkeus_m": 13277,
      "leveys_m": 136618
     },
     "8": {
-     "lon": 28,
+     "lon": 27.89036,
      "lat": 40.70002,
      "korkeus_px": 46,
      "korkeus_m": 8981,
@@ -765,7 +814,7 @@
    ],
    "paikat": {
     "4": {
-     "lon": 12,
+     "lon": 12.5796,
      "lat": 40.00004,
      "korkeus_px": 14,
      "korkeus_m": 44006,
@@ -809,30 +858,21 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
     5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
     6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 15.5,
-     "lat": 43,
-     "korkeus_px": 14,
-     "korkeus_m": 42816,
-     "leveys_m": 359773
-    },
     "5": {
-     "lon": 15.5,
-     "lat": 42.45404,
+     "lon": 15.7844,
+     "lat": 42.66388,
      "korkeus_px": 18,
      "korkeus_m": 27667,
      "leveys_m": 233327
@@ -883,8 +923,8 @@
    ],
    "paikat": {
     "4": {
-     "lon": 8.7,
-     "lat": 42.9772,
+     "lon": 6.0307,
+     "lat": 41.41486,
      "korkeus_px": 14,
      "korkeus_m": 42825,
      "leveys_m": 434312
@@ -986,44 +1026,26 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
-    5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
-    6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": -5,
-     "lat": 54.24964,
-     "korkeus_px": 14,
-     "korkeus_m": 37703,
-     "leveys_m": 346829
-    },
-    "5": {
-     "lon": -5,
-     "lat": 54.22295,
-     "korkeus_px": 18,
-     "korkeus_m": 24246,
-     "leveys_m": 223108
-    },
     "6": {
      "lon": -4.472,
-     "lat": 53.49999,
+     "lat": 53.63609,
      "korkeus_px": 24,
      "korkeus_m": 16317,
      "leveys_m": 151331
     },
     "7": {
      "lon": -5,
-     "lat": 53.49999,
+     "lat": 53.59639,
      "korkeus_px": 34,
      "korkeus_m": 11558,
      "leveys_m": 107189
@@ -1119,21 +1141,21 @@
    ],
    "paikat": {
     "4": {
-     "lon": 3.384,
+     "lon": 5.8247,
      "lat": 42.45995,
      "korkeus_px": 14,
      "korkeus_m": 43036,
      "leveys_m": 400441
     },
     "5": {
-     "lon": 4,
+     "lon": 4.6276,
      "lat": 42.79999,
      "korkeus_px": 18,
      "korkeus_m": 27577,
      "leveys_m": 256021
     },
     "6": {
-     "lon": 4,
+     "lon": 4.2092,
      "lat": 42.79998,
      "korkeus_px": 24,
      "korkeus_m": 18385,
@@ -1163,30 +1185,21 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
     5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
     6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 20,
-     "lat": 63.00003,
-     "korkeus_px": 14,
-     "korkeus_m": 33077,
-     "leveys_m": 246420
-    },
     "5": {
-     "lon": 20,
-     "lat": 63,
+     "lon": 19.6862,
+     "lat": 62.57261,
      "korkeus_px": 18,
      "korkeus_m": 21264,
      "leveys_m": 158411
@@ -1222,27 +1235,18 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
     5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
     6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 26,
-     "lat": 59.79998,
-     "korkeus_px": 14,
-     "korkeus_m": 34829,
-     "leveys_m": 273033
-    },
     "5": {
      "lon": 26,
      "lat": 60.02115,
@@ -1252,7 +1256,7 @@
     },
     "6": {
      "lon": 26,
-     "lat": 59.79999,
+     "lat": 59.90522,
      "korkeus_px": 24,
      "korkeus_m": 14927,
      "leveys_m": 117013
@@ -1281,35 +1285,26 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 23.5,
-     "lat": 57.14249,
-     "korkeus_px": 14,
-     "korkeus_m": 36232,
-     "leveys_m": 266896
-    },
     "6": {
-     "lon": 23.5,
-     "lat": 57.50004,
+     "lon": 23.3104,
+     "lat": 57.90753,
      "korkeus_px": 24,
      "korkeus_m": 15449,
      "leveys_m": 113277
     },
     "7": {
      "lon": 23.5,
-     "lat": 57.49999,
+     "lat": 57.57215,
      "korkeus_px": 34,
      "korkeus_m": 10943,
      "leveys_m": 80238
@@ -1346,36 +1341,36 @@
    ],
    "paikat": {
     "4": {
-     "lon": -2,
-     "lat": 49.40493,
-     "korkeus_px": 14,
-     "korkeus_m": 40027,
-     "leveys_m": 551741
+     "lon": -2.76254,
+     "lat": 49.90112,
+     "korkeus_px": 9.1,
+     "korkeus_m": 26018,
+     "leveys_m": 358632
     },
     "5": {
      "lon": -2,
-     "lat": 49.8,
+     "lat": 50.1164,
      "korkeus_px": 18,
      "korkeus_m": 25614,
      "leveys_m": 351825
     },
     "6": {
      "lon": -2,
-     "lat": 49.80004,
+     "lat": 50.01098,
      "korkeus_px": 24,
      "korkeus_m": 17076,
      "leveys_m": 234550
     },
     "7": {
      "lon": -2,
-     "lat": 49.79999,
+     "lat": 49.9494,
      "korkeus_px": 34,
      "korkeus_m": 12095,
      "leveys_m": 166137
     },
     "8": {
      "lon": -2,
-     "lat": 49.79997,
+     "lat": 49.90105,
      "korkeus_px": 46,
      "korkeus_m": 8182,
      "leveys_m": 112395
@@ -1405,7 +1400,7 @@
    ],
    "paikat": {
     "4": {
-     "lon": 8.5,
+     "lon": 7.70668,
      "lat": 57.79999,
      "korkeus_px": 14,
      "korkeus_m": 35890,
@@ -1449,54 +1444,45 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
     5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
     6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": -5.6,
-     "lat": 35.0469,
-     "korkeus_px": 14,
-     "korkeus_m": 45801,
-     "leveys_m": 652528
-    },
     "5": {
-     "lon": -5.6,
+     "lon": -4.2176,
      "lat": 36.23897,
-     "korkeus_px": 18,
-     "korkeus_m": 29179,
-     "leveys_m": 413270
+     "korkeus_px": 9,
+     "korkeus_m": 14590,
+     "leveys_m": 206635
     },
     "6": {
-     "lon": -5.6,
+     "lon": -4.6784,
      "lat": 36.14273,
-     "korkeus_px": 24,
-     "korkeus_m": 19467,
-     "leveys_m": 275852
+     "korkeus_px": 12,
+     "korkeus_m": 9734,
+     "leveys_m": 137926
     },
     "7": {
-     "lon": -5.6,
+     "lon": -6.2528,
      "lat": 36.08654,
-     "korkeus_px": 34,
-     "korkeus_m": 13795,
-     "leveys_m": 195535
+     "korkeus_px": 17,
+     "korkeus_m": 6898,
+     "leveys_m": 97768
     },
     "8": {
-     "lon": -5.6,
+     "lon": -6.0416,
      "lat": 35.95002,
-     "korkeus_px": 46,
-     "korkeus_m": 9342,
-     "leveys_m": 132503
+     "korkeus_px": 29.9,
+     "korkeus_m": 6072,
+     "leveys_m": 86127
     }
    }
   },
@@ -1523,39 +1509,39 @@
    ],
    "paikat": {
     "4": {
-     "lon": 29,
-     "lat": 41.95885,
-     "korkeus_px": 14,
-     "korkeus_m": 43238,
-     "leveys_m": 479257
+     "lon": 30.1592,
+     "lat": 42.38986,
+     "korkeus_px": 11.2,
+     "korkeus_m": 34590,
+     "leveys_m": 383406
     },
     "5": {
-     "lon": 29.792,
-     "lat": 41.54253,
+     "lon": 30.1646,
+     "lat": 42.10028,
      "korkeus_px": 18,
      "korkeus_m": 27902,
      "leveys_m": 310098
     },
     "6": {
-     "lon": 29,
-     "lat": 41.28463,
+     "lon": 29.4968,
+     "lat": 41.65795,
      "korkeus_px": 24,
      "korkeus_m": 18645,
      "leveys_m": 207554
     },
     "7": {
-     "lon": 29.00005,
-     "lat": 41.23079,
+     "lon": 29.176,
+     "lat": 41.62777,
      "korkeus_px": 34,
      "korkeus_m": 13214,
      "leveys_m": 147139
     },
     "8": {
-     "lon": 29,
-     "lat": 41.18847,
-     "korkeus_px": 46,
-     "korkeus_m": 8942,
-     "leveys_m": 99595
+     "lon": 29.11902,
+     "lat": 41.45717,
+     "korkeus_px": 36.8,
+     "korkeus_m": 7154,
+     "leveys_m": 79676
     }
    }
   },
@@ -1567,54 +1553,18 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
-    5,
-    6,
-    7,
-    8
+    5
    ],
    "pallotasot": [
-    5,
-    6,
-    7,
-    8,
-    9
+    6
    ],
    "paikat": {
-    "4": {
-     "lon": 27.632,
-     "lat": 39.50258,
-     "korkeus_px": 14,
-     "korkeus_m": 44196,
-     "leveys_m": 418813
-    },
     "5": {
-     "lon": 26.4,
-     "lat": 40.75738,
-     "korkeus_px": 18,
-     "korkeus_m": 28101,
-     "leveys_m": 264308
-    },
-    "6": {
-     "lon": 26.4,
-     "lat": 39.63988,
-     "korkeus_px": 24,
-     "korkeus_m": 18919,
-     "leveys_m": 179134
-    },
-    "7": {
-     "lon": 26.4,
-     "lat": 40.19999,
-     "korkeus_px": 34,
-     "korkeus_m": 13336,
-     "leveys_m": 125850
-    },
-    "8": {
-     "lon": 26.4,
-     "lat": 40.20002,
-     "korkeus_px": 46,
-     "korkeus_m": 9021,
-     "leveys_m": 85134
+     "lon": 25.4586,
+     "lat": 40.51968,
+     "korkeus_px": 9,
+     "korkeus_m": 14051,
+     "leveys_m": 132154
     }
    }
   },
@@ -1626,54 +1576,18 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
-    5,
-    6,
-    7,
-    8
+    7
    ],
    "pallotasot": [
-    5,
-    6,
-    7,
-    8,
-    9
+    8
    ],
    "paikat": {
-    "4": {
-     "lon": 12.7,
-     "lat": 56.42784,
-     "korkeus_px": 14,
-     "korkeus_m": 36601,
-     "leveys_m": 300154
-    },
-    "5": {
-     "lon": 12.7,
-     "lat": 56.40195,
-     "korkeus_px": 18,
-     "korkeus_m": 23538,
-     "leveys_m": 193085
-    },
-    "6": {
-     "lon": 12.7,
-     "lat": 55.69999,
-     "korkeus_px": 24,
-     "korkeus_m": 15846,
-     "leveys_m": 131088
-    },
     "7": {
-     "lon": 12.7,
-     "lat": 55.47759,
-     "korkeus_px": 34,
-     "korkeus_m": 11258,
-     "leveys_m": 93379
-    },
-    "8": {
-     "lon": 12.7,
-     "lat": 55.85007,
-     "korkeus_px": 46,
-     "korkeus_m": 7577,
-     "leveys_m": 62570
+     "lon": 12.84818,
+     "lat": 55.22566,
+     "korkeus_px": 27.2,
+     "korkeus_m": 9006,
+     "leveys_m": 74703
     }
    }
   },
@@ -1685,34 +1599,16 @@
    "iso": null,
    "kulma": 0,
    "tasot": [
-    4,
-    5,
     6,
     7,
     8
    ],
    "pallotasot": [
-    5,
-    6,
     7,
     8,
     9
    ],
    "paikat": {
-    "4": {
-     "lon": 11.5,
-     "lat": 56.99999,
-     "korkeus_px": 14,
-     "korkeus_m": 36306,
-     "leveys_m": 212533
-    },
-    "5": {
-     "lon": 11.5,
-     "lat": 56.76875,
-     "korkeus_px": 18,
-     "korkeus_m": 23417,
-     "leveys_m": 137474
-    },
     "6": {
      "lon": 11.5,
      "lat": 57.00004,
@@ -1747,51 +1643,42 @@
     4,
     5,
     6,
-    7,
-    8
+    7
    ],
    "pallotasot": [
     5,
     6,
     7,
-    8,
-    9
+    8
    ],
    "paikat": {
     "4": {
      "lon": 15.6,
-     "lat": 37.31272,
+     "lat": 36.39076,
      "korkeus_px": 14,
      "korkeus_m": 45007,
      "leveys_m": 512585
     },
     "5": {
-     "lon": 15.6,
-     "lat": 37.34457,
+     "lon": 15.2274,
+     "lat": 36.75214,
      "korkeus_px": 18,
      "korkeus_m": 28925,
      "leveys_m": 329379
     },
     "6": {
-     "lon": 15.6,
-     "lat": 38.38933,
-     "korkeus_px": 24,
-     "korkeus_m": 19120,
-     "leveys_m": 216495
+     "lon": 14.8548,
+     "lat": 38.58403,
+     "korkeus_px": 19.2,
+     "korkeus_m": 15296,
+     "leveys_m": 173196
     },
     "7": {
-     "lon": 15.59995,
-     "lat": 38.20004,
-     "korkeus_px": 34,
-     "korkeus_m": 13565,
-     "leveys_m": 153751
-    },
-    "8": {
-     "lon": 15.6,
-     "lat": 38.20002,
-     "korkeus_px": 46,
-     "korkeus_m": 9176,
-     "leveys_m": 104004
+     "lon": 15.7759,
+     "lat": 37.78523,
+     "korkeus_px": 17,
+     "korkeus_m": 6783,
+     "leveys_m": 76876
     }
    }
   },

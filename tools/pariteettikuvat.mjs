@@ -7,7 +7,11 @@
  *   node tools/pariteettikuvat.mjs [--url https://matkakirja.app/ | paikallinen | http://localhost:8080/]
  *     [--nakymat kartta,passi,...] [--koot 393x852,834x1194] [--ulos kansio]
  *     [--kaupunki marseille] [--siemen 5] [--dpr-iphone 3]
- *     [--gpu metal|ohjelma] [--uusinta 1] [--lista]
+ *     [--gpu metal|ohjelma] [--uusinta 1] [--laatikot] [--lista]
+ *
+ * --laatikot: jokaisen onnistuneen kuvan viereen <nakyma>-<koko>.json,
+ * jossa näkyvien tekstien ja kuvien DOM-laatikot samalla skeemalla kuin
+ * natiivin ui-puu.json (automaattinen pariteettiajo vertaa näitä kahta).
  *
  * Jokainen kuva otetaan TUOREESSA selainkontekstissa: tallenne (siemen +
  * kaupunki) istutetaan localStorageen, sivu avataan `?lauta=pallo&koe=suoraan`
@@ -34,7 +38,7 @@ const arg = (nimi, oletus = null) => {
   return v && !v.startsWith('--') ? v : true;
 };
 if (arg('lista')) {
-  for (const n of NAKYMAT) console.log(`${n.nimi.padEnd(24)} ${n.kuvaus}`);
+  for (const n of NAKYMAT) console.log(`${n.nimi.padEnd(28)} ${n.kuvaus}`);
   process.exit(0);
 }
 const pvm = new Date().toISOString().slice(0, 10);
@@ -45,6 +49,7 @@ const SIEMEN = Number(arg('siemen', 5));
 const DPR_IPHONE = Number(arg('dpr-iphone', 3));
 const GPU = String(arg('gpu', 'metal'));
 const UUSINTOJA = Math.max(0, Number(arg('uusinta', 1)));
+const LAATIKOT = Boolean(arg('laatikot'));
 const KOOT = String(arg('koot', '393x852,834x1194')).split(',').map((k) => {
   const [w, h] = k.split('x').map(Number);
   // Kapea = iPhone (dpr 3 tai --dpr-iphone), leveä = iPad 11" (dpr 2).
@@ -254,6 +259,92 @@ const NAKYVYYSTARKISTIN = () => {
   };
 };
 
+/*
+ * LAATIKOT (--laatikot): näkyvät tekstit ja kuvat CSS-pikseleinä samalla
+ * skeemalla kuin natiivin ui-puu.json:
+ *   { paneeli: { w, h }, elementit: [{ teksti?, fontti?, versaali?, kuva?,
+ *     x, y, w, h, opasiteetti, luokat, nimi }] }
+ * Mukaan tulee (a) elementti, jolla on OMAA suoraa tekstiä (lapsitekstinoodit),
+ * ja (b) <img>, <canvas>, <video> tai url()-taustakuva, vähintään 16 × 16 px.
+ * Teksti on raakateksti tekstinoodeista: innerText soveltaisi
+ * text-transformia, joten versaali merkitään erikseen kentällä versaali.
+ * "Näkyvä" = ei display:nonea esivanhemmissa, ei visibility:hiddenia,
+ * kertynyt opacity > 0,02, laatikko leikkaa ruudun ja elementFromPoint
+ * osuu ruudulle rajatun laatikon keskelle (elementtiin tai sen lapseen).
+ * Toisin kuin NAKYVYYSTARKISTIMESSA, pointer-events:none ei vapauta
+ * osumavaatimuksesta (ks. kytke alla). Sarjallistetaan page.evaluateen.
+ */
+const KERAA_LAATIKOT = () => {
+  const OHITA = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE', 'LINK', 'META']);
+  const KUVATAGIT = new Set(['IMG', 'CANVAS', 'VIDEO']);
+  // Kertynyt tila muistiin: sama esivanhempi lasketaan kerran.
+  const tilat = new Map();
+  const tila = (el) => {
+    if (!el || el.nodeType !== 1) return { piilossa: false, opasiteetti: 1 };
+    if (tilat.has(el)) return tilat.get(el);
+    const ylempi = tila(el.parentElement);
+    const cs = getComputedStyle(el);
+    const t = {
+      piilossa: ylempi.piilossa || cs.display === 'none',
+      opasiteetti: ylempi.opasiteetti * Number(cs.opacity),
+      cs,
+    };
+    tilat.set(el, t);
+    return t;
+  };
+  const d1 = (n) => Math.round(n * 10) / 10;
+  const elementit = [];
+  for (const el of document.body.querySelectorAll('*')) {
+    if (OHITA.has(el.tagName)) continue;
+    const omat = [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.data).join(' ');
+    const teksti = omat.replace(/\s+/g, ' ').trim().slice(0, 200);
+    const b = el.getBoundingClientRect();
+    const onKuvatagi = KUVATAGIT.has(el.tagName);
+    // Kuvaehdokas ennen getComputedStyleä: pieni laatikko ei ole kuva.
+    const kuvaKoko = b.width >= 16 && b.height >= 16;
+    if (!teksti && !kuvaKoko) continue;
+    if (b.width <= 0 || b.height <= 0 || b.right <= 0 || b.bottom <= 0 || b.left >= innerWidth || b.top >= innerHeight) continue;
+    const t = tila(el);
+    const { cs } = t;
+    const kuva = kuvaKoko && (onKuvatagi || /url\(/.test(cs.backgroundImage));
+    if (!teksti && !kuva) continue;
+    if (t.piilossa || cs.visibility === 'hidden' || t.opasiteetti <= 0.02) continue;
+    /*
+     * pointer-events:none-elementti (ja sen perivät lapset) ei osu
+     * elementFromPointiin, joten se kytketään osumaan HETKEKSI: muuten
+     * lehden alle jäävä maapaneeli (pointer-events:none) tulisi mukaan
+     * näkyvänä. Päällä oleva osuva elementti peittää sen kuten muutkin.
+     */
+    const kytke = cs.pointerEvents === 'none';
+    const vanha = kytke ? [el.style.getPropertyValue('pointer-events'), el.style.getPropertyPriority('pointer-events')] : null;
+    if (kytke) el.style.setProperty('pointer-events', 'auto', 'important');
+    const x = (Math.max(0, b.left) + Math.min(innerWidth, b.right)) / 2;
+    const y = (Math.max(0, b.top) + Math.min(innerHeight, b.bottom)) / 2;
+    const osuma = document.elementFromPoint(x, y);
+    if (kytke) {
+      if (vanha[0]) el.style.setProperty('pointer-events', vanha[0], vanha[1]);
+      else el.style.removeProperty('pointer-events');
+    }
+    if (!osuma || (osuma !== el && !el.contains(osuma))) continue;
+    const rivi = {};
+    if (teksti) {
+      rivi.teksti = teksti;
+      rivi.fontti = d1(parseFloat(cs.fontSize));
+      if (cs.textTransform === 'uppercase') rivi.versaali = true;
+    }
+    if (kuva) rivi.kuva = true;
+    Object.assign(rivi, {
+      x: d1(b.left), y: d1(b.top), w: d1(b.width), h: d1(b.height),
+      opasiteetti: Math.round(t.opasiteetti * 1000) / 1000,
+      // SVG-elementin className on olio, joten luokat attribuutista.
+      luokat: el.getAttribute('class') ?? '',
+      nimi: el.id || el.tagName.toLowerCase(),
+    });
+    elementit.push(rivi);
+  }
+  return { paneeli: { w: innerWidth, h: innerHeight }, elementit };
+};
+
 /** Näkymän todennus sivulla: kaikki nakyy-valitsimet ja ehto(p). null = ok. */
 async function todenna(sivu, nakyma, p) {
   return sivu.evaluate(async ([valitsimet, ehtoLahde, param]) => {
@@ -369,7 +460,9 @@ async function kuvaaYksi(nakyma, koko) {
     merkitse('kuvat');
     // Vieritys vasta kuvien jälkeen: latautuva kuva siirtäisi kohdetta.
     if (nakyma.viimeinen) {
-      await sivu.evaluate(nakyma.viimeinen, p);
+      const v = await sivu.evaluate(nakyma.viimeinen, p);
+      if (v && v.virhe) throw new Error(`vieritys: ${v.virhe}`);
+      if (v) tulos = { ...(tulos ?? {}), ...v };
       kuvat = (await odotaKuvat(sivu)) && kuvat;
     }
     // Viimeinen asettuminen: päättyvät CSS-animaatiot ja -siirtymät loppuun
@@ -393,10 +486,15 @@ async function kuvaaYksi(nakyma, koko) {
     merkitse('todennettu');
     const polku = join(ULOS, `${nakyma.nimi}-${koko.nimi}.png`);
     const virhepolku = join(ULOS, `${nakyma.nimi}-${koko.nimi}-VIRHE.png`);
+    const laatikkonimi = `${nakyma.nimi}-${koko.nimi}.json`;
     rmSync(polku, { force: true });
     rmSync(virhepolku, { force: true });
+    rmSync(join(ULOS, laatikkonimi), { force: true });
     await sivu.screenshot({ path: syy ? virhepolku : polku });
+    let laatikot = null;
     if (!syy) {
+      // Laatikot heti kuvan jälkeen, ennen jälkitodennusta: sama hetki kuin kuvassa.
+      if (LAATIKOT) laatikot = await sivu.evaluate(KERAA_LAATIKOT).catch((e) => ({ virhe: String(e.message).split('\n')[0] }));
       const jalkeen = await todenna(sivu, nakyma, p);
       if (jalkeen) {
         syy = `sulkeutui kuvan aikana: ${jalkeen}`;
@@ -406,7 +504,13 @@ async function kuvaaYksi(nakyma, koko) {
     if (syy) {
       return { nakyma: nakyma.nimi, koko: koko.nimi, ok: false, ms: Date.now() - alku, virhe: `todennus: ${syy}`, polku: virhepolku, pallo, kuvat, virheet, tulos, vaiheet };
     }
-    return { nakyma: nakyma.nimi, koko: koko.nimi, ok: true, ms: Date.now() - alku, polku, pallo, kuvat, virheet, tulos, vaiheet };
+    const rivi = { nakyma: nakyma.nimi, koko: koko.nimi, ok: true, ms: Date.now() - alku, polku, pallo, kuvat, virheet, tulos, vaiheet };
+    if (laatikot?.virhe) rivi.laatikkovirhe = laatikot.virhe;
+    else if (laatikot) {
+      writeFileSync(join(ULOS, laatikkonimi), JSON.stringify(laatikot, null, 1));
+      rivi.laatikot = laatikkonimi;
+    }
+    return rivi;
   } catch (e) {
     return { nakyma: nakyma.nimi, koko: koko.nimi, ok: false, ms: Date.now() - alku, virhe: String(e.message ?? e).split('\n')[0], virheet, vaiheet };
   } finally {
@@ -434,10 +538,10 @@ try {
     }
     tulokset.push(t);
     const huom = t.ok
-      ? `${t.uusinta ? ` (uusinnalla; ensin: ${t.ensinVirhe})` : ''}${t.pallo === false ? ' (pallo ei valmis katossa)' : ''}${t.kuvat === false ? ' (kuvia kesken)' : ''}${t.virheet.length ? ` sivuvirheitä ${t.virheet.length}` : ''}`
+      ? `${t.uusinta ? ` (uusinnalla; ensin: ${t.ensinVirhe})` : ''}${t.pallo === false ? ' (pallo ei valmis katossa)' : ''}${t.kuvat === false ? ' (kuvia kesken)' : ''}${t.virheet.length ? ` sivuvirheitä ${t.virheet.length}` : ''}${t.laatikkovirhe ? ` (laatikot kaatui: ${t.laatikkovirhe})` : ''}`
       : ` — ${t.virhe}`;
     const tieto = t.tulos && typeof t.tulos === 'object' ? ` ${JSON.stringify(t.tulos)}` : '';
-    console.log(`${t.ok ? 'OK   ' : 'VIRHE'} ${t.nakyma.padEnd(24)} ${t.koko.padEnd(9)} ${(t.ms / 1000).toFixed(1).padStart(5)} s${huom}${tieto}`);
+    console.log(`${t.ok ? 'OK   ' : 'VIRHE'} ${t.nakyma.padEnd(28)} ${t.koko.padEnd(9)} ${(t.ms / 1000).toFixed(1).padStart(5)} s${huom}${tieto}`);
   }
 } finally {
   await suljeKaikki();
@@ -449,7 +553,7 @@ console.log(`\nYHTEENVETO: ${ok}/${tulokset.length} ok, ${tulokset.length - ok} 
 console.log(`Verkko: ${HAKUTILASTO.haettu} tiedostoa haettu kerran (Noden välimuisti), 429-vastauksia ${HAKUTILASTO.rajoitettu}, epäonnistui ${HAKUTILASTO.epaonnistui}`);
 for (const t of tulokset.filter((x) => !x.ok)) console.log(`  VIRHE ${t.nakyma} ${t.koko}: ${t.virhe}`);
 writeFileSync(join(ULOS, 'yhteenveto.json'), JSON.stringify({
-  osoite: OSOITE, kaupunki: KAUPUNKI, siemen: SIEMEN, gpu: GPU, pvm, kestoS: kesto,
+  osoite: OSOITE, kaupunki: KAUPUNKI, siemen: SIEMEN, gpu: GPU, pvm, kestoS: kesto, laatikot: LAATIKOT,
   tulokset,
 }, null, 2));
 console.log(`Kuvat: ${ULOS}`);

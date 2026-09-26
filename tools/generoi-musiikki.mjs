@@ -490,6 +490,245 @@ export const RAIDAT = {
       + 'without a seam. '
       + `${TYYLI}`,
   },
+
+  /*
+   * ----------------------------------------------------------------
+   * MUSIIKKI- JA ÄÄNISUUNNITELMA, VAIHE 1 (docs/raportit/musiikki-ja-aanisuunnitelma-20260926.md; omistaja hyväksyi 26.9.
+   * klo 05.0x kaikki 8 suositusta). Johtoaihe ja kolme koeraitaa; omistaja kuuntelee erän ennen seuraavaa. Raidat EIVÄT
+   * soi pelissä ennen kuin pelidata viittaa niihin (kuuntelusääntö), joten vienti ämpäriin on turvallinen.
+   * Johtoaihe Lyrian likimääräisenä (päätös 1): D–G–F–E–D–C–D, nouseva kvartti ja laskeva askelkulku.
+   * ----------------------------------------------------------------
+   */
+  johtoaihe: {
+    laji: 'suunnitelma',
+    vaihe: 1,
+    tiedosto: 'musa-johtoaihe.mp3',
+    kesto: 25000,
+    looppi: false,
+    kuvaus: 'Isoisän johtoaihe täytenä (vaihe 1, kuunneltava)',
+    prompt: 'The grandfather\'s theme, stated once, simply and completely: a short singable melody of seven notes, '
+      + 'D–G–F–E–D–C–D in D minor turning to F major — a rising fourth like a question, then a stepwise descent home '
+      + 'like an answer. Solo piano states it first, then soft strings repeat it with a clarinet counter-line. Wistful '
+      + 'but warm, a family memory opening. Tempo about 70 BPM. Starts immediately and ends on a soft sustained chord. '
+      + `${TYYLI}`,
+  },
+  aloituslento: {
+    laji: 'suunnitelma',
+    vaihe: 1,
+    tiedosto: 'musa-aloituslento.mp3',
+    kesto: 25000,
+    looppi: false,
+    kuvaus: 'Aloituslento Lontoosta kohteeseen (vaihe 1)',
+    prompt: 'Departure: an old propeller plane lifts off from London and turns towards the first destination; the '
+      + 'journey begins. The grandfather\'s theme (D–G–F–E–D–C–D, rising fourth then stepwise descent) sounds in full, '
+      + 'rising and widening as the plane climbs, strings and piano with a light woodwind lift, then settles into a calm, '
+      + 'hopeful descent for the landing. About 80 BPM. Leaves space for a narrator voice; no sudden peaks. Starts '
+      + 'immediately and ends softly. '
+      + `${TYYLI}`,
+  },
+  'saapuminen-valimeri': {
+    laji: 'suunnitelma',
+    vaihe: 1,
+    tiedosto: 'musa-saapuminen-valimeri.mp3',
+    kesto: 10000,
+    looppi: false,
+    kuvaus: 'Saapumistunnus Välimeren kaupunkiin (vaihe 1, maanosaversioiden malli)',
+    prompt: 'A short arrival signature for a Mediterranean city: the first two bars of the grandfather\'s theme '
+      + '(D–G–F–E, a rising fourth then a step down) played by a classical guitar with mandolin tremolo, a light '
+      + 'tambourine touch and a clarinet answer, warm Mediterranean sunlight. About 90 BPM. Starts immediately with no '
+      + 'lead-in and ends cleanly on an open chord. '
+      + `${TYYLI}`,
+  },
+  loppu: {
+    laji: 'suunnitelma',
+    vaihe: 1,
+    tiedosto: 'musa-loppu.mp3',
+    kesto: 75000,
+    looppi: false,
+    kuvaus: 'Matkan loppu, kaikki aarteet löydetty (vaihe 1)',
+    prompt: 'The journey\'s end: every forgotten treasure has been found and the grandfather\'s diary is complete. '
+      + 'The grandfather\'s theme (D–G–F–E–D–C–D) returns in full, first alone on piano, then carried by the whole '
+      + 'chamber orchestra — strings singing it, horn support, clarinet and flute weaving around it — moved and grateful '
+      + 'rather than triumphant. Gradual build to one warm climax at about two thirds, then a long, quiet close on solo '
+      + 'piano and a final sustained chord. About 66 BPM. No drum kit. '
+      + `${TYYLI}`,
+  },
+  /*
+   * ----------------------------------------------------------------
+   * VAIHE 2 (suunnitelman §5 kohta 2, Fable 26.9. klo 08.3x: sanatarkasti §5): pelin kulun kolme raitaa, saapumistunnukset
+   * lopuille maanosille (taulukko 1.2; Välimeri tehtiin vaiheessa 1) ja maanosaraidat Välimeri sekä Pohjois- ja
+   * Länsi-Eurooppa. Omistaja kuuntelee erän ennen vaihetta 3. Kestot ja taso: tools/viimeistele-musiikki.mjs.
+   * Saapumistunnus on aina johtoaiheen kaksi ensimmäistä tahtia (D–G–F–E) maanosan pääsoittimella ja värillä.
+   * Kulttuurilaina: soittimet ja moodit, ei pyhiä lauluja eikä tunnistettavia kansansävelmiä (1.2).
+   * ----------------------------------------------------------------
+   */
+  kohtaaminen: {
+    laji: 'suunnitelma',
+    vaihe: 2,
+    tiedosto: 'musa-kohtaaminen.mp3',
+    kesto: 70000,
+    looppi: true,
+    kuvaus: 'Kohtaaminen: henkilön tapaaminen ja tehtävä (vaihe 2, looppi)',
+    prompt: 'Meeting a stranger in a foreign city who has a task for the traveller: curious and a little playful, '
+      + 'attentive rather than tense. A light pizzicato pulse in the strings, a clarinet asking short questions and a '
+      + 'piano answering, like a conversation across a café table. About 94 BPM, even dynamics. It plays UNDER a '
+      + 'narrator voice and dialogue text and must never pull attention. No grandfather\'s theme. Seamless loop: begin '
+      + 'and end on the same quiet pulse so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  ratkaisu: {
+    laji: 'suunnitelma',
+    vaihe: 2,
+    tiedosto: 'musa-ratkaisu.mp3',
+    kesto: 6000,
+    looppi: false,
+    kuvaus: 'Oikea ratkaisu, vihreä piste syttyy (vaihe 2, one-shot 4–6 s)',
+    prompt: 'A very short cue for solving a riddle correctly and a green dot lighting on the map: the answering half '
+      + 'of the grandfather\'s theme (E–D–C–D, a stepwise descent home) on piano with a warm string chord under it and '
+      + 'a single music box sparkle at the end. Satisfied and warm, not a fanfare. About 90 BPM. Starts immediately with '
+      + 'no lead-in and ends cleanly on a major chord. '
+      + `${TYYLI}`,
+  },
+  epaonnistuminen: {
+    laji: 'suunnitelma',
+    vaihe: 2,
+    tiedosto: 'musa-epaonnistuminen.mp3',
+    kesto: 4000,
+    looppi: false,
+    kuvaus: 'Väärä vastaus tai aika loppui (vaihe 2, one-shot 3–4 s)',
+    prompt: 'A very short, gentle cue for a wrong answer or time running out: two soft descending notes on clarinet '
+      + 'over a quiet unresolved string chord, like a shrug and "not this time". Kind, never mocking, never a '
+      + 'punishment, no comedic trombone. About 80 BPM. Starts immediately and fades out quickly. '
+      + `${TYYLI}`,
+  },
+  // Saapumistunnukset: pääsoitin + väri taulukosta 1.2.
+  ...Object.fromEntries([
+    ['lansi-eurooppa', 'Northern or Western European city', 'solo piano with a cello line, a harmonium chord and a flute answer, grey northern light'],
+    ['ita-eurooppa', 'Eastern European or Russian city', 'a balalaika tremolo and a violin, with a cimbalom shimmer, wide snowy plains'],
+    // Lyria hylkäsi 26.9. muotoilun "Middle Eastern or North African city" (Input blocked: sensitive words).
+    ['lahi-ita', 'harbour city of the Levant or the North African coast', 'an oud and a ney flute in a modal colour, a soft frame drum touch and a qanun ripple, warm dusk'],
+    ['saharan-etelapuoli', 'city south of the Sahara', 'a kora and a balafon, soft hand drums and a wooden flute, open savanna light'],
+    ['etela-aasia', 'South Asian city', 'a bansuri flute with a very quiet sitar drone and a soft tabla touch, humid evening air'],
+    ['ita-aasia', 'East Asian city', 'a guzheng or koto and an erhu, with a breathy shakuhachi answer, early morning mist'],
+    ['pohjois-amerikka', 'North American city of the 1870s', 'a fiddle and an 1870s banjo, with a harmonica answer, a wide river town'],
+    ['etela-amerikka', 'South American city', 'a charango and a guitar, with a quena flute answer, high mountain air'],
+    ['oseania', 'city in Oceania', 'a classical guitar with soft strings, a harbour at the far side of the world'],
+  ].map(([id, paikka, soittimet]) => [`saapuminen-${id}`, {
+    laji: 'suunnitelma',
+    vaihe: 2,
+    tiedosto: `musa-saapuminen-${id}.mp3`,
+    kesto: 10000,
+    looppi: false,
+    kuvaus: `Saapumistunnus: ${id} (vaihe 2, one-shot 8–10 s)`,
+    prompt: `A short arrival signature for a ${paikka}: the first two bars of the grandfather's theme `
+      + `(D–G–F–E, a rising fourth then a step down) played by ${soittimet}. Instruments and mode only, no sacred `
+      + 'song and no recognisable folk tune. About 88 BPM. Starts immediately with no lead-in and ends cleanly on an '
+      + 'open chord. '
+      + `${TYYLI}`,
+  }])),
+  // Maanosaraidat (looppeja 60–70 s): alueraitojen varareitti, johtoaihe sisäänrakennettuna.
+  'maanosa-valimeri': {
+    laji: 'suunnitelma',
+    vaihe: 2,
+    tiedosto: 'musa-maanosa-valimeri.mp3',
+    kesto: 70000,
+    looppi: true,
+    kuvaus: 'Maanosaraita Välimeri ja Balkan (vaihe 2, looppi)',
+    // Lyria hylkäsi 26.9. muotoilun "around the Mediterranean and the Balkans in 1873" (Input blocked: sensitive words).
+    prompt: 'A slow journey along sunny southern European sea coasts and islands in the 1870s: a classical guitar and '
+      + 'a mandolin play unhurriedly over soft strings, a light hand percussion touch now and then and a clarinet line that '
+      + 'quietly hints at the grandfather\'s theme (D–G–F–E–D–C–D) once, woven in, never stated loudly. Sunlit '
+      + 'stone, sea wind, afternoon. About 72 BPM, even dynamics. It plays UNDER the ambient soundscape of the city '
+      + 'and must never pull attention from it. Seamless loop: begin and end on the same quiet sustained chord so the '
+      + 'track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  'maanosa-lansi-eurooppa': {
+    laji: 'suunnitelma',
+    vaihe: 2,
+    tiedosto: 'musa-maanosa-lansi-eurooppa.mp3',
+    kesto: 70000,
+    looppi: true,
+    kuvaus: 'Maanosaraita Pohjois- ja Länsi-Eurooppa (vaihe 2, looppi)',
+    prompt: 'Travelling through Northern and Western Europe in 1873: a soft 1870s piano and a singing cello over '
+      + 'quiet strings, a harmonium holding the harmony and a flute that quietly hints at the grandfather\'s theme '
+      + '(D–G–F–E–D–C–D) once, woven in, never stated loudly. Rain on windows, gas lamps, railway stations, a library. '
+      + 'About 68 BPM, even dynamics. It plays UNDER the ambient soundscape of the city and must never pull attention '
+      + 'from it. Seamless loop: begin and end on the same quiet sustained chord so the track can repeat without a '
+      + 'seam. '
+      + `${TYYLI}`,
+  },
+  // Vaihe 3 (§5 kohta 3): loput maanosaraidat. Sama muotti kuin vaiheen 2 maanosilla; Lyrian suodatin hylkäsi 26.9.
+  // muotoilut "Middle Eastern", "the Balkans" → paikat kuvataan maisemana ja soittimina, ei kansoina eikä uskontoina.
+  ...Object.fromEntries([
+    ['ita-eurooppa', 'Travelling across the wide plains of Eastern Europe and Russia in the 1870s',
+      'a balalaika tremolo and a warm cello over soft strings, a gentle cimbalom shimmer now and then and a clarinet line',
+      'Snow light on birch forests, a sleigh road, a samovar by the window', 70],
+    ['lahi-ita', 'A slow journey along warm desert coasts and old harbour towns of the Levant and North Africa in the 1870s',
+      'an oud and a ney flute in a modal colour over soft strings, a quiet frame drum touch now and then and a qanun ripple',
+      'Dusk over flat roofs, a caravan road, palm shade by a harbour', 72],
+    ['saharan-etelapuoli', 'Travelling through the savanna and river lands south of the Sahara in the 1870s',
+      'a kora and a balafon over soft strings, gentle hand drums now and then and a wooden flute line',
+      'Wide open savanna light, a slow river, evening birds', 76],
+    ['etela-aasia', 'A slow journey through the river towns and hill country of South Asia in the 1870s',
+      'a bansuri flute over a very quiet sitar drone and soft strings, a light tabla touch now and then and a harmonium',
+      'Humid evening air, a river ghat at dusk, tea gardens on the hills', 70],
+    ['ita-aasia', 'Travelling through the harbour cities and misty mountains of East Asia in the 1870s',
+      'a guzheng or koto and an erhu over soft strings, a breathy shakuhachi answer now and then and a quiet piano',
+      'Early morning mist, a lantern-lit harbour, a garden with stone paths', 66],
+    ['pohjois-amerikka', 'Travelling across North America in the 1870s by riverboat and railway',
+      'a fiddle and an 1870s banjo over soft strings, a harmonica answer now and then and a parlour piano',
+      'A wide river town, a railway station on the prairie, a painted steamboat', 80],
+    ['etela-amerikka', 'A slow journey through the harbour cities and high mountains of South America in the 1870s',
+      'a charango and a guitar over soft strings, a quena flute answer now and then and a light hand percussion touch',
+      'High mountain air, a colonial plaza at siesta, a harbour on the Pacific', 76],
+    ['oseania', 'Travelling around the islands and far harbours of Oceania in the 1870s',
+      'a classical guitar and a warm ukulele-like strum over soft strings, a gentle slide guitar line now and then and a quiet flute',
+      'A harbour at the far side of the world, trade winds, a long white beach', 70],
+  ].map(([id, matka, soittimet, kuva, bpm]) => [`maanosa-${id}`, {
+    laji: 'suunnitelma',
+    vaihe: 3,
+    tiedosto: `musa-maanosa-${id}.mp3`,
+    kesto: 70000,
+    looppi: true,
+    kuvaus: `Maanosaraita ${id} (vaihe 3, looppi)`,
+    prompt: `${matka}: ${soittimet} that quietly hints at the grandfather's theme (D–G–F–E–D–C–D) once, woven in, `
+      + `never stated loudly. ${kuva}. About ${bpm} BPM, even dynamics. It plays UNDER the ambient soundscape of the `
+      + 'city and must never pull attention from it. Instruments and mode only, no recognisable folk tune. Seamless loop: '
+      + 'begin and end on the same quiet sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  }])),
+  // Vaihe 3: tunnuskaupungit (suunnitelma 2.2, "johtoaihe paikallisella soittimella", matkan pääkaupungit). Tiedosto on
+  // kaupunkiraidan nimisäännöllä (js/kaupunkimusiikki.js kaupunkiraidanTunnus), jotta hyväksytty raita kytketään
+  // KAUPUNKIRAIDAT-riviksi (omistaja hyväksyi 26.9. klo 11.0x; vartija: tests/kaupunkimusiikki.test.mjs). Ryhmä
+  // `kaupungit` generoi ne uudelleen, `vaihe3` ei enää (laji kaupunki).
+  ...Object.fromEntries([
+    ['pariisi', 'Paris in the 1870s: boulevards, cafés and gas lamps after rain',
+      'a salon piano and a violin carry the theme, soft strings and a musette accordion colour underneath', 84],
+    ['lontoo', 'London in the 1870s: fog on the river, cab horses, a busy railway terminus',
+      'a cello and a clarinet carry the theme over soft strings, a church-bell-like celesta touch now and then', 76],
+    ['rooma', 'Rome in the 1870s: warm stone, fountains in a piazza, late afternoon light',
+      'a mandolin and a guitar carry the theme, a warm oboe answers over soft strings', 80],
+    // Lyria hylkäsi 26.9. muotoilun "Istanbul in the 1870s … seagulls over domes" (Input blocked: sensitive words).
+    ['istanbul', 'A great harbour city on a strait between two continents in the 1870s: ferries crossing, a covered market, seagulls',
+      'a kanun and a ney flute carry the theme in a modal colour, a soft oud and strings underneath', 72],
+    ['kairo', 'A great river city at the edge of the desert in the 1870s: the Nile at dusk, sailing boats, a lively market street',
+      'an oud and a ney flute carry the theme over soft strings, a quiet riq tambourine touch now and then', 74],
+    ['pietari', 'Saint Petersburg in the 1870s: wide frozen canals, palace façades, white-night light',
+      'a balalaika tremolo and a solo piano carry the theme, a warm cello and strings underneath', 68],
+  ].map(([id, kuva, soittimet, bpm]) => [id, {
+    laji: 'kaupunki',
+    kaupunki: id,
+    tiedosto: `musa-kaupunki-${id}.mp3`,
+    kesto: 75000,
+    looppi: true,
+    kuvaus: `Tunnuskaupunki ${id} (vaihe 3, looppi)`,
+    prompt: `${kuva}. The grandfather's theme (D–G–F–E–D–C–D) played gently by local instruments: ${soittimet}. `
+      + `About ${bpm} BPM, even dynamics. It plays UNDER the ambient soundscape of the city and must never pull `
+      + 'attention from it. Instruments and mode only, no recognisable folk tune, no singing. Seamless loop: begin and end '
+      + 'on the same quiet sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  }])),
 };
 
 /** Onko raita kaupungin oma kappale vai paletin raita? */
@@ -500,6 +739,9 @@ const onAlue = (raita) => raita?.laji === 'alue';
 
 /** Onko raita näkymän tai virtuaalipaikan oma raita? */
 const onTila = (raita) => raita?.laji === 'tila';
+
+/** Onko raita musiikkisuunnitelman erän raita (vaihe 1 …)? */
+const onSuunnitelma = (raita) => raita?.laji === 'suunnitelma';
 
 /** Paletin neljä raitaa — `kaikki` tarkoittaa näitä. */
 export const PALETIN_RAIDAT = Object.keys(RAIDAT).filter((id) => !RAIDAT[id].laji);
@@ -512,6 +754,12 @@ export const ALUEIDEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onAlue(RAIDAT[
 
 /** Tilaraidat (lehti, matkalaukku, etusivu) — `tilat` tarkoittaa näitä. */
 export const TILOJEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onTila(RAIDAT[id]));
+
+/** Musiikkisuunnitelman vaihe n (`vaihe1`, `vaihe2` …): erä, jonka omistaja kuuntelee kerralla. */
+const vaiheenRaidat = (n) => Object.keys(RAIDAT).filter((id) => onSuunnitelma(RAIDAT[id]) && RAIDAT[id].vaihe === n);
+export const VAIHE1_RAIDAT = vaiheenRaidat(1);
+export const VAIHE2_RAIDAT = vaiheenRaidat(2);
+export const VAIHE3_RAIDAT = vaiheenRaidat(3);
 
 /**
  * Raitalista argumenteista.
@@ -529,6 +777,9 @@ export const RYHMAT = {
   kaupungit: () => [...KAUPUNKIEN_RAIDAT, ...ALUEIDEN_RAIDAT],
   alueet: () => [...ALUEIDEN_RAIDAT],
   tilat: () => [...TILOJEN_RAIDAT],
+  vaihe1: () => [...VAIHE1_RAIDAT],
+  vaihe2: () => [...VAIHE2_RAIDAT],
+  vaihe3: () => [...VAIHE3_RAIDAT],
 };
 
 export function valitseRaidat(argumentit) {
