@@ -7587,3 +7587,7 @@ Omistaja 23.0x: alkuperaiset kaupunkilehdet tallella? (Fable: kylla — lehtidat
 ## MAAKUNTAPIKKUKUVAT B VALMIS TUOTANNOSSA (V2283/V2284/V2286) (26.9.2026 klo 23.13)
 
 Julkaisija: #3349 v2283, #3350 v2284, #3351 v2286 mainissa → Euroopan kaikki maakuntapikkukuvat webissa (365 uutta aluetta tanaan); Siirtoseppa tekee natiivipaketin deltan.
+
+## LINSSISEPPA (OPUS, MAX) NOLLATTU JA KAYNNISTETTY (LUOVUTUS -H 131296ddb) (26.9.2026 klo 23.14)
+
+Luovutus -h: elavat elementit linssiseppa/hoyrylaiva b59c99b0 merge-pyynnossa; erikoismallit mallinseppa/pohja 9bb99488 (MSM 1 324, Stonehenge 858, Colosseum 1 420 kolmiota, liikeydin 344/344) odottavat Natiivisepan kaannosta + yhdistelmaa ylhaalta-175:n kanssa; esikatselutyokalut proto-3d/tyokalut/. Aloitusviesti lahetetty 23.1x: 3 mallia → merikokeilu → lento v3 -speksi.
