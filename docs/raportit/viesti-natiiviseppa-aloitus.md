@@ -6,7 +6,7 @@ NATIIVI PELI ETUSIJALLE (ESILATAUSPOLITIIKKA, LÄMPÖ JA VIRRANKULUTUS) ja ELÄV
 docs/raportit/viesti-natiiviseppa-luovutus-20260926-g.md KOKONAAN (haara selvittaja-3d-luovutus; päivitykset lopussa).
 
 Tila: BUILD 19 = proto-master 41dd79c7 (juna fdc47632, käännös 343ca803) PASS → TF 1.0.19 Julkaisijalla; BUILD 18 = 43a6347c = TF 1.0.18.
-Build 20 -juna 427e1a1a (pohja-26, nosto-muste; jono luovutuksen g lopussa: A–D, pohja-26, nosto-muste fed603b9, lepo-suspend). TYÖJONO build 19 (luovutus g, loppu):
+Build 20 -juna cbe64f95 (pohja-26, nosto-muste, pallo lepo peli-lokiin; jono luovutuksen g lopussa: A–D, pohja-26, nosto-muste fed603b9, lepo-suspend). TYÖJONO build 19 (luovutus g, loppu):
 (1) ELÄVÄ KARTTA kohta 1 saapuminen — pallon puolen rajapinta SOVITTU Linssisepän kanssa: Varitaso.Paljastus/PaljastusPois,
 MaaKartta/NostoKerros.Saapuminen(bool), PalloKierto.SaapuminenAlkaa/SaapuminenPaattyi; (2) 128 Kermasarja.Oletus = p060, kun
 Karttasepän p060-sarja on ämpärissä; (3) kohta 1 -paketointi buildiin (lokit/kohta1-kaynnistys-20260926.md); (4) lepo-suspend
