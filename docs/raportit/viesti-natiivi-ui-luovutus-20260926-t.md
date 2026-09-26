@@ -110,3 +110,9 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   2,5–4: 22 px ×0,85; ≥4: 30 px), taso 1: 24→47 px; tuotantoweb EI himmennä löytämättömiä (löytösumu pois, omistaja 21.9.).
   Natiivi 174 Fablen ohjeen mukaan: kuvamerkki kaikilla zoomeilla + löytämätön 0,5. PÄÄTÖS FABLELLE (a) kynnys 2,5, (b) himmennys.
   Muutos pieni: NostotKartalla Hae: kuvamerkki-ehto + KuvamerkkiKaytossa, LoytamatonPeitto 1.
+- 21.0x 174 WEB-MALLIN MUKAAN (Fable 26.9.): haara `natiivi-ui/kuvamerkit-174` TEHTY UUDELLEEN juna f583f1c2:n päälle (Natiiviseppä
+  lisäsi 174b-avaimet itse; vanha a41f2f77 konfliktoi) @ 21479236, vain NostotKartalla.cs: ei läikkää; löytämätön täysin mustein;
+  kuvamerkki webin koossa (taso 1 1,6; 2,5–4 0,85; ≥4 1); kertoimen 2,5 alla tasot 2–3 minikuvakkeena ruudulla vakiokoossa
+  (MinikuvakkeenKoko 1,5 → ~14 pt, web 12–16 px); puuttuva kuva → minimerkki. Kaupunkimerkit (laji kaupunki) jäävät pisteiksi kuten
+  webissä. Käännetty 24b9ee3b, ei poikkeuksia; kuvapari proto-3d/lokit/natiivi-ui-loydos174/kuvapari-174-web-malli.png.
+  Merge-pyyntö LÄHETTÄMÄTTÄ (viestiraja). Siirtosepälle rivi kun junassa.
