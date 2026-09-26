@@ -111,3 +111,19 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
 - Klo 05.00 TF 1.0.18 valmis (master 43a6347c), vientilippu poistettu.
 - pelikoodari/osoitin-taustalle b74983a6 (uusin.json taustalle lämpimässä käynnistyksessä; ajoitusmittaus uusitaan) → juna/b13 **f190521b**.
 - natiivi-ui/linssi-sulkee-s3 198ecc30 (S3, todennettu 506b198c) → juna/b13 **bbb8583b**.
+
+## Omistajan päätökset 05.0x (Fablen kautta) — SEURAAJAN TYÖJONO build 19
+
+1. **127** maarajan paino KEVYT = nykyinen oletus, ei muutosta.
+2. **128** kermahuntu **p060** → `Kermasarja.Oletus = p060` build 19 -junaan. Karttaseppä polttaa kermahunnun 26-pohjasta p060:lla;
+   vaihda sarja vasta kun se on ämpärissä (kysy Karttasepältä versionimi).
+3. **Elävä kartta hyväksytty → pelattava versio build 19.** Sovi rajapinnat Linssisepän kanssa (pallon puoli: hunnun kuivuminen
+   saapumiskaupungista, vektoriviivojen piirtoanimaatio, maakuntavärien syttyminen, yövalot/Black Marble -maski), **kohta 1
+   saapuminen ensin**. Pohja: linssiseppa/elava-kartta cf5d21e0 (Huntu.shader paikkamerkkinä Natiivisepän Paljastus(keskus, säde,
+   t) -rajapinnalle), Pelikoodarin musterajapinta (junassa, PeliOhjain.NostonMuste + tapahtumat), suunnitelma
+   docs/raportit/elava-kartta-suunnitelma-20260926.md. Tapahtumaohjattu, lepopiirto säilyy (SykeJaatyy/PallonLepo.Animoi).
+4. **Kohta 1 -paketointi** samaan junaan (lokit/kohta1-kaynnistys-20260926.md): nostotyyppien kuvakkeet, pulun kuva, aloitusdatan
+   ja paketin osoittimen tilannekuva buildiin (StreamingAssets), bmng-bathy Z5 laattapakettiin (Karttaseppä). Pelikoodari tekee
+   yhteisen haun; osoitin-taustalle on jo junassa.
+
+Juna nyt **bbb8583b** (build 19). Kiintiö 89 % klo 05.0x → luovutus tähän; seuraaja jatkaa tilinvaihdon jälkeen.
