@@ -42,10 +42,28 @@ namespace Matkakirja
 
         public static int Maara => kamerat.Count;
 
+        /// <summary>
+        /// Aloitusnäytön kiilat (kehittäjälippu matkakirja-avauskiilat 1; oletus pois): mittauksessa (kamerat-katto30) kolme
+        /// 130°:n kiilaa toivat Cesiumin jonoon 2 200–2 600 laattaa, jotka tukkivat lennon mustan (avaus 18,7 s).
+        /// </summary>
+        public static bool KiilatPaalla
+        {
+            get
+            {
+#if !MATKAKIRJA_APPSTORE
+                if (kiilaLippu < 0) kiilaLippu = PlayerPrefs.GetInt("matkakirja-avauskiilat", 0);
+                return kiilaLippu != 0;
+#else
+                return false;
+#endif
+            }
+        }
+        static int kiilaLippu = -1;
+
         /// <summary>Aloitusnäyttö: kiilat avausasennon kaikkiin suuntiin (suunta selviää vasta valinnassa).</summary>
         public static void Kiilat(PalloKierto kierto, Cesium3DTileset pallo, double lat, double lon, double etaisyysM, double kallistus)
         {
-            if (!Paalla) return;
+            if (!Paalla || !KiilatPaalla) return;
             Lopeta(null);
             for (int i = 0; i < Kiila; i++)
                 Lisaa(kierto, pallo, lat, lon, etaisyysM, kallistus, i * 360.0 / Kiila, KiilanVaaka);

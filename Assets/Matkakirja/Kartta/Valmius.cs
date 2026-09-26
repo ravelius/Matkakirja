@@ -218,6 +218,12 @@ namespace Matkakirja
             Laattapalvelin.VerhoKevennys(false);
         }
 
+        /// <summary>
+        /// Jokin verho odottaa pallon laattoja (kevennys päällä): Ruudunpaivitys pitää täyden taajuuden (build 22, Natiiviseppä
+        /// 26.9.: lepotilan 30 fps puolitti Cesiumin pääsäikeen latauskierrokset verhon aikana, kun kamera on paikallaan).
+        /// </summary>
+        public static bool Verhossa => instanssi != null && instanssi.kevennykset.Count > 0;
+
         /// <summary>Kevennyksen tila lokiriveille: "paalle (aloitusverho, musta)", "pois" tai "pois (lippu)".</summary>
         public static string KevennysTila()
         {
