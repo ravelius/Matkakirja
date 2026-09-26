@@ -23,7 +23,8 @@ namespace Matkakirja.Editori
     /// Sarjat pelin vakioista (paketti vastaa käännettävää peliä):
     ///   pohja        Rakennus.LaattaUrl                             Z0–Z5 (Web Mercator)
     ///   maasto       Rakennus.MaastoUrl (layer.json + available)    Z0–Z5 (quantized-mesh)
-    ///   bmng-bathy   KarttaKerrokset.SatelliittiVersio/Meri          Z0–Z4 (lennon Blue Marble)
+    ///   bmng-bathy   KarttaKerrokset.SatelliittiVersio/Meri          Z0–Z5 (lennon Blue Marble; Z5 build 19, kohta 1:
+    ///                Pelikoodarin kylmämittaus: 9 Z5-laattaa haettiin verkosta, ~1 024 laattaa ≈ 6 Mt)
     ///   vektorit     Vektorikerros.OletusVersio                      luettelo + l0–l2 (rannikko, rajat)
     ///   napakalotit  NapaKannet.OfflinePolut                         2 kuvaa
     ///
@@ -35,7 +36,7 @@ namespace Matkakirja.Editori
     public static class LaattapakettiRakennus
     {
         const string Ampari = Laattapalvelin.Ampari;
-        public const int PohjaMax = 5, MaastoMax = 5, BmngMax = 4, VektoritMax = 2;
+        public const int PohjaMax = 5, MaastoMax = 5, BmngMax = 5, VektoritMax = 2;
         const int Rinnakkain = 24;
 
         /// <summary>Paketin polku projektissa (tai MATKAKIRJA_LAATTAPAKETTI).</summary>
@@ -104,8 +105,10 @@ namespace Matkakirja.Editori
             if (p != null)
             {
                 var olevat = p.Sarjat.Select(s => s.Etuliite).ToList();
+                // Tasojen muutos (esim. BmngMax 4 → 5) ei näy etuliitteissä: syvimmän bmng-tason laatta on oltava mukana.
+                bool tasot = odotetut.Count > 2 && p.Onko(Laattapaketti.Avain(odotetut[2] + BmngMax + "/0/0.jpg"));
                 p.Dispose();
-                if (olevat.SequenceEqual(odotetut))
+                if (olevat.SequenceEqual(odotetut) && tasot)
                 {
                     Debug.Log($"MATKAKIRJA laattapaketti: ajan tasalla {polku}");
                     return;
