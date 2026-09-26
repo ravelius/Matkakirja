@@ -100,3 +100,7 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
 - 20.1x 174c (Fable, omistajan lähikuva Massif Central): sama 7c6999ab kattaa kaikki zoomit (ei MusteJaljet-läikkää koskaan;
   kynnyksen yllä OnMalli → 3D-arkkityyppi, muuten lajin symboli). Lähikuvassa (aja 45.55 3.0 0.9) läikkien paikoilla 3D-arkkityypit.
   Kuvapari proto-3d/lokit/natiivi-ui-loydos174/kuvapari-174c-lahikuva.png. Ei uutta koodia. Rivi Fablelle LÄHETTÄMÄTTÄ (viestiraja).
+- 20.2x 174b (Pelikoodari: web PR #3342 kolme merkkiä) samaan haaraan `natiivi-ui/kuvamerkit-174` @ a41f2f77: NostoSaannot.Kuvamerkit
+  + huuto/elain/hetki (NATIIVISEPÄN TIEDOSTO, kerro merge-pyynnössä), Kartta-testit päivitetty 289/289; NostotKartalla: merkin kuvan
+  lataus epäonnistuu → minimerkki (ei tyhjää). Kuvat haetaan matkakirja.app/assets/nostotyypit/ → näkyvät kun #3342 on tuotannossa.
+  Käännetty b21b808f, ei poikkeuksia, näkymä ennallaan varamerkein. Merge-pyyntö (174+174b = a41f2f77) LÄHETTÄMÄTTÄ (viestiraja).
