@@ -1,0 +1,242 @@
+[
+  {
+    "id": "varanasi-durga-kund-temppeli",
+    "replacement_id": "varanasi-durga-kund-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-durga-kund-temppeli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-durga-kund-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-durga-kund-temppeli-vari2.png",
+    "sha256": "71b6d63f4fc54d89884afb4a109643229143aa56c71f60e7f8ca314cb6354b47",
+    "bytes": 998764,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-durga-kund-temppeli. Preserve the original historic site, steps, towers, architecture, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible; if water is already depicted, use only a soft pale gray-blue, never saturated cyan. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "varanasi-ramnagarin-linnoitus",
+    "replacement_id": "varanasi-ramnagarin-linnoitus-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-ramnagarin-linnoitus.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-ramnagarin-linnoitus-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-ramnagarin-linnoitus-vari2.png",
+    "sha256": "70508b13cad77f051c02bd09e4ae2584fa0659aca52227fac4bc486115c39aac",
+    "bytes": 1126870,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-ramnagarin-linnoitus. Preserve the original historic site, steps, towers, architecture, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible; if water is already depicted, use only a soft pale gray-blue, never saturated cyan. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-bopiliaon-vanha-kortteli",
+    "replacement_id": "taipei-bopiliaon-vanha-kortteli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-bopiliaon-vanha-kortteli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-bopiliaon-vanha-kortteli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-bopiliaon-vanha-kortteli-vari2.png",
+    "sha256": "e607dfa7a0adf09bdf6680c17b31927532bc3edfa2f32e82758a0e1c4848fa7c",
+    "bytes": 946988,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei Bopiliao Old Street: straight historic brick shophouse row with continuous arched ground-floor arcade, repeated gable fronts and one taller right end block, original oblique map view. Dusty terracotta brick, ivory trim and slate-grey shade. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-chiang-kai-shek-muistosali",
+    "replacement_id": "taipei-chiang-kai-shek-muistosali-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-chiang-kai-shek-muistosali.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-chiang-kai-shek-muistosali-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-chiang-kai-shek-muistosali-vari2.png",
+    "sha256": "d7ca7a7b20de87282a423baa966dcd3da4d14589cf557a254fe53b78073278f3",
+    "bytes": 940031,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Chiang Kai-shek Memorial Hall, Taipei: symmetrical white marble memorial hall with grand stairs, central tall arched entry and distinct dark blue tiered Chinese roof, exact original frontal cutout. Ivory marble, muted indigo-sage roof and pale terracotta accents. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-kasvitieteellinen-puutarha",
+    "replacement_id": "taipei-kasvitieteellinen-puutarha-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-kasvitieteellinen-puutarha.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-kasvitieteellinen-puutarha-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-kasvitieteellinen-puutarha-vari2.png",
+    "sha256": "2e52194e5ba5fd2ec4e10337a1030e77fdb55631196688a6480ca27a2821d19c",
+    "bytes": 1160645,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei Botanical Garden as original miniature: low oval stone-edged planting bed with several palms and tropical shrubs rising above, exact original oblique cutout. Sage greens and pale ochre earth with soft grey shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-taipei-101",
+    "replacement_id": "taipei-taipei-101-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-taipei-101.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-taipei-101-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-taipei-101-vari2.png",
+    "sha256": "0c75417aabdd4c133f4686417616abc9aeaca426b0c7f8148ab8af38b1a14035",
+    "bytes": 396764,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei 101 skyscraper: slender stack of distinctly stepped pagoda-like tower tiers with tiny upper antenna and low entrance base, original upright isolated silhouette. Muted jade-sage glass, pale grey-blue steel and ivory base; retain tier count and form. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tromssa-polaarimuseo",
+    "replacement_id": "tromssa-polaarimuseo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tromssa-polaarimuseo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tromssa-polaarimuseo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tromssa-polaarimuseo-vari2.png",
+    "sha256": "64da917e8661e6e80d46a53ceb836e25431f16cb471d86002418a6b00a29fffd",
+    "bytes": 1205812,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Tromsø Polar Museum: traditional timber warehouse-like museum raised over wooden waterfront piles, two gabled upper levels and deep front veranda, exact original elevated three-quarter form. Cream timber, dusty terracotta siding and sage-grey roof. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tromssa-tromssan-silta",
+    "replacement_id": "tromssa-tromssan-silta-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tromssa-tromssan-silta.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tromssa-tromssan-silta-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tromssa-tromssan-silta-vari2.png",
+    "sha256": "7e6d50232c9d8b1d6921326ab09e746a399d325a718ef17efaa7b83b7dbf0c25",
+    "bytes": 327675,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Tromsø Bridge: very long narrow road bridge curving in perspective on many tall open concrete piers, exact original isolated elongated side view. Pale grey bridge deck, ivory piers and muted sage-grey underside. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tromssa-tromssan-tuomiokirkko",
+    "replacement_id": "tromssa-tromssan-tuomiokirkko-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tromssa-tromssan-tuomiokirkko.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tromssa-tromssan-tuomiokirkko-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tromssa-tromssan-tuomiokirkko-vari2.png",
+    "sha256": "7f6f990dfa034f033b48983cb41776706970656092e0b9c8a06ff4b73c3ec6d2",
+    "bytes": 865822,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Tromsø Cathedral: historic wooden Gothic church with steep roof, pointed front entry, narrow lancet windows and tall delicate front spire, exact original three-quarter upright silhouette. Cream-painted timber, muted terracotta shingles and sage-grey shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tromssa-jaamerenkatedraali",
+    "replacement_id": "tromssa-jaamerenkatedraali-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tromssa-jaamerenkatedraali.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tromssa-jaamerenkatedraali-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tromssa-jaamerenkatedraali-vari2.png",
+    "sha256": "835022b9584f711e45cb77f29c6e09e0e0ee87af8170d91da805d4fde0e4d707",
+    "bytes": 811404,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Arctic Cathedral in Tromsø: sharply peaked modern white concrete church formed by a row of triangular folded plates, immense pointed glazed front opening, exact original three-quarter silhouette. Ivory concrete, very pale ice blue and cool sage-grey shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tromssa-polaria",
+    "replacement_id": "tromssa-polaria-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tromssa-polaria.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tromssa-polaria-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tromssa-polaria-vari2.png",
+    "sha256": "612d4a37d8849e15240766e2ea6f5143f0729b065d7091cdb076b5b4d0ffe715",
+    "bytes": 1030516,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Polaria in Tromsø: modern science center designed as stacked tilted white stone slabs like fallen ice floes on low base, exact original oblique sculptural silhouette. Ivory concrete, pale glacial blue-grey planes and soft terracotta ground shade. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tromssa-fjellheisenin-koysirata",
+    "replacement_id": "tromssa-fjellheisenin-koysirata-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tromssa-fjellheisenin-koysirata.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tromssa-fjellheisenin-koysirata-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tromssa-fjellheisenin-koysirata-vari2.png",
+    "sha256": "40189bbee94db81bf17ed509f0720927d7460ed30d69b33f203370e50fb3151c",
+    "bytes": 682788,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Fjellheisen cable car in Tromsø: one enclosed rectangular vintage cabin with glazed side windows hanging below a small pulley assembly and two taut diagonal cables, exact original isolated shape. Ivory cabin, sage glass, pale terracotta metal fittings. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
