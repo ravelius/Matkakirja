@@ -870,23 +870,23 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Tabrizin basaari': 'tabriz-tabrizin-basaari',
-    Perustuslakitalo: 'tabriz-perustuslakitalo',
-    Arg: 'tabriz-arg',
-    'Saat-torni': 'tabriz-saat-torni',
-    'Azerbaidžanin museo': 'tabriz-azerbaidzanin-museo',
-    'Sininen moskeija': 'tabriz-sininen-moskeija',
+    'Tabrizin basaari': 'tabriz-tabrizin-basaari-vari2',
+    Perustuslakitalo: 'tabriz-perustuslakitalo-vari2',
+    Arg: 'tabriz-arg-vari2',
+    'Saat-torni': 'tabriz-saat-torni-vari2',
+    'Azerbaidžanin museo': 'tabriz-azerbaidzanin-museo-vari2',
+    'Sininen moskeija': 'tabriz-sininen-moskeija-vari2',
   },
   riad: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Masmakin linnoitus': 'riad-masmakin-linnoitus',
-    'Imam Turkin suurmoskeija': 'riad-imam-turkin-suurmoskeija',
-    'Punainen palatsi': 'riad-punainen-palatsi',
-    'Riadin vesitorni': 'riad-riadin-vesitorni',
-    'Murabban palatsi': 'riad-murabban-palatsi',
-    'Saudi-Arabian kansallismuseo': 'riad-saudi-arabian-kansallismuseo',
+    'Masmakin linnoitus': 'riad-masmakin-linnoitus-vari2',
+    'Imam Turkin suurmoskeija': 'riad-imam-turkin-suurmoskeija-vari2',
+    'Punainen palatsi': 'riad-punainen-palatsi-vari2',
+    'Riadin vesitorni': 'riad-riadin-vesitorni-vari2',
+    'Murabban palatsi': 'riad-murabban-palatsi-vari2',
+    'Saudi-Arabian kansallismuseo': 'riad-saudi-arabian-kansallismuseo-vari2',
   },
   luxor: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -982,39 +982,39 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Canal Grande': 'venetsia-canal-grande',
-    'La Fenicen oopperatalo': 'venetsia-la-fenicen-oopperatalo',
-    'Rialton silta': 'venetsia-rialton-silta',
-    'Pyhän Markuksen tori': 'venetsia-pyhan-markuksen-tori',
-    'San Giorgio Maggiore': 'venetsia-san-giorgio-maggiore',
-    Arsenaali: 'venetsia-arsenaali',
-    'Markuksen hevoset': 'venetsia-markuksen-hevoset',
-    'Dogen palatsi': 'venetsia-dogen-palatsi',
-    'Aldon paino': 'venetsia-aldon-paino',
+    'Canal Grande': 'venetsia-canal-grande-vari2',
+    'La Fenicen oopperatalo': 'venetsia-la-fenicen-oopperatalo-vari2',
+    'Rialton silta': 'venetsia-rialton-silta-vari2',
+    'Pyhän Markuksen tori': 'venetsia-pyhan-markuksen-tori-vari2',
+    'San Giorgio Maggiore': 'venetsia-san-giorgio-maggiore-vari2',
+    Arsenaali: 'venetsia-arsenaali-vari2',
+    'Markuksen hevoset': 'venetsia-markuksen-hevoset-vari2',
+    'Dogen palatsi': 'venetsia-dogen-palatsi-vari2',
+    'Aldon paino': 'venetsia-aldon-paino-vari2',
   },
   odessa: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Vorontsovin majakka': 'odessa-vorontsovin-majakka',
-    'Odessan satama': 'odessa-odessan-satama',
-    'Potjomkinin portaat': 'odessa-potjomkinin-portaat',
-    'Odessan oopperatalo': 'odessa-odessan-oopperatalo',
-    Kaupunginpuisto: 'odessa-kaupunginpuisto',
-    'Privozin tori': 'odessa-privozin-tori',
-    'Potjomkin-portaat': 'odessa-potjomkin-portaat',
+    'Vorontsovin majakka': 'odessa-vorontsovin-majakka-vari2',
+    'Odessan satama': 'odessa-odessan-satama-vari2',
+    'Potjomkinin portaat': 'odessa-potjomkinin-portaat-vari2',
+    'Odessan oopperatalo': 'odessa-odessan-oopperatalo-vari2',
+    Kaupunginpuisto: 'odessa-kaupunginpuisto-vari2',
+    'Privozin tori': 'odessa-privozin-tori-vari2',
+    'Potjomkin-portaat': 'odessa-potjomkin-portaat-vari2',
   },
   sevilla: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Katedraali ja Giralda': 'sevilla-katedraali-ja-giralda',
-    'Alcázar': 'sevilla-alcazar',
-    'Torre del Oro': 'sevilla-torre-del-oro',
-    'Maestranzan areena': 'sevilla-maestranzan-areena',
-    'Trianan silta': 'sevilla-trianan-silta',
-    'Plaza de España': 'sevilla-plaza-de-espana',
-    'Victorian laituri': 'sevilla-victorian-laituri',
+    'Katedraali ja Giralda': 'sevilla-katedraali-ja-giralda-vari2',
+    'Alcázar': 'sevilla-alcazar-vari2',
+    'Torre del Oro': 'sevilla-torre-del-oro-vari2',
+    'Maestranzan areena': 'sevilla-maestranzan-areena-vari2',
+    'Trianan silta': 'sevilla-trianan-silta-vari2',
+    'Plaza de España': 'sevilla-plaza-de-espana-vari2',
+    'Victorian laituri': 'sevilla-victorian-laituri-vari2',
   },
   dubrovnik: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1053,28 +1053,28 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Ad Deir': 'petra-ad-deir',
-    'Bysanttilainen kirkko': 'petra-bysanttilainen-kirkko',
-    Kuninkaanhaudat: 'petra-kuninkaanhaudat',
-    'Qasr al-Bint': 'petra-qasr-al-bint',
-    'Suuri temppeli': 'petra-suuri-temppeli',
-    Teatteri: 'petra-teatteri',
-    Siq: 'petra-siq',
-    'Al-Khazneh': 'petra-al-khazneh',
-    Uhripaikka: 'petra-uhripaikka',
+    'Ad Deir': 'petra-ad-deir-vari2',
+    'Bysanttilainen kirkko': 'petra-bysanttilainen-kirkko-vari2',
+    Kuninkaanhaudat: 'petra-kuninkaanhaudat-vari2',
+    'Qasr al-Bint': 'petra-qasr-al-bint-vari2',
+    'Suuri temppeli': 'petra-suuri-temppeli-vari2',
+    Teatteri: 'petra-teatteri-vari2',
+    Siq: 'petra-siq-vari2',
+    'Al-Khazneh': 'petra-al-khazneh-vari2',
+    Uhripaikka: 'petra-uhripaikka-vari2',
   },
   persepolis: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Kaikkien kansojen portti': 'persepolis-kaikkien-kansojen-portti',
-    'Artakserkses III:n hauta': 'persepolis-artakserkses-iii-n-hauta',
-    'Sadan pylvään sali': 'persepolis-sadan-pylvaan-sali',
-    Apadana: 'persepolis-apadana',
-    'Kolmen oven sali': 'persepolis-kolmen-oven-sali',
-    Aarrekammio: 'persepolis-aarrekammio',
-    Tachara: 'persepolis-tachara',
-    'Hadishin palatsi': 'persepolis-hadishin-palatsi',
+    'Kaikkien kansojen portti': 'persepolis-kaikkien-kansojen-portti-vari2',
+    'Artakserkses III:n hauta': 'persepolis-artakserkses-iii-n-hauta-vari2',
+    'Sadan pylvään sali': 'persepolis-sadan-pylvaan-sali-vari2',
+    Apadana: 'persepolis-apadana-vari2',
+    'Kolmen oven sali': 'persepolis-kolmen-oven-sali-vari2',
+    Aarrekammio: 'persepolis-aarrekammio-vari2',
+    Tachara: 'persepolis-tachara-vari2',
+    'Hadishin palatsi': 'persepolis-hadishin-palatsi-vari2',
   },
   medina: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1103,12 +1103,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Al-Bakiriyyan moskeija': 'sana-al-bakiriyyan-moskeija',
-    Suolatori: 'sana-suolatori',
-    'Talhan moskeija': 'sana-talhan-moskeija',
-    'Suuri moskeija': 'sana-suuri-moskeija',
-    'Al-Mahdin moskeija': 'sana-al-mahdin-moskeija',
-    'Bab al-Yaman': 'sana-bab-al-yaman',
+    'Al-Bakiriyyan moskeija': 'sana-al-bakiriyyan-moskeija-vari2',
+    Suolatori: 'sana-suolatori-vari2',
+    'Talhan moskeija': 'sana-talhan-moskeija-vari2',
+    'Suuri moskeija': 'sana-suuri-moskeija-vari2',
+    'Al-Mahdin moskeija': 'sana-al-mahdin-moskeija-vari2',
+    'Bab al-Yaman': 'sana-bab-al-yaman-vari2',
   },
   aden: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1123,13 +1123,13 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Sultan Qaboosin moskeija': 'salalah-sultan-qaboosin-moskeija',
-    'Al-Husnin palatsi': 'salalah-al-husnin-palatsi',
-    'Al-Haffan basaari': 'salalah-al-haffan-basaari',
-    'Nabi Umranin hauta': 'salalah-nabi-umranin-hauta',
-    'Burj an-Nahda': 'salalah-burj-an-nahda',
-    'Al-Baleedin puisto': 'salalah-al-baleedin-puisto',
-    Suitsukemuseo: 'salalah-suitsukemuseo',
+    'Sultan Qaboosin moskeija': 'salalah-sultan-qaboosin-moskeija-vari2',
+    'Al-Husnin palatsi': 'salalah-al-husnin-palatsi-vari2',
+    'Al-Haffan basaari': 'salalah-al-haffan-basaari-vari2',
+    'Nabi Umranin hauta': 'salalah-nabi-umranin-hauta-vari2',
+    'Burj an-Nahda': 'salalah-burj-an-nahda-vari2',
+    'Al-Baleedin puisto': 'salalah-al-baleedin-puisto-vari2',
+    Suitsukemuseo: 'salalah-suitsukemuseo-vari2',
   },
   mosul: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1161,16 +1161,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Vanha kesäpalatsi': 'peking-vanha-kesapalatsi',
-    'Kesäpalatsi': 'peking-kesapalatsi',
-    'Yonghe-temppeli': 'peking-yonghe-temppeli',
-    Nanluoguxiang: 'peking-nanluoguxiang',
-    'Rumpu- ja kellotorni': 'peking-rumpu-ja-kellotorni',
-    'Jingshanin puisto': 'peking-jingshanin-puisto',
-    'Kielletty kaupunki': 'peking-kielletty-kaupunki',
-    Tiananmen: 'peking-tiananmen',
-    Zhengyangmen: 'peking-zhengyangmen',
-    'Taivaan temppeli': 'peking-taivaan-temppeli',
+    'Vanha kesäpalatsi': 'peking-vanha-kesapalatsi-vari2',
+    'Kesäpalatsi': 'peking-kesapalatsi-vari2',
+    'Yonghe-temppeli': 'peking-yonghe-temppeli-vari2',
+    Nanluoguxiang: 'peking-nanluoguxiang-vari2',
+    'Rumpu- ja kellotorni': 'peking-rumpu-ja-kellotorni-vari2',
+    'Jingshanin puisto': 'peking-jingshanin-puisto-vari2',
+    'Kielletty kaupunki': 'peking-kielletty-kaupunki-vari2',
+    Tiananmen: 'peking-tiananmen-vari2',
+    Zhengyangmen: 'peking-zhengyangmen-vari2',
+    'Taivaan temppeli': 'peking-taivaan-temppeli-vari2',
   },
   jakutsk: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1214,15 +1214,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Pokrovskin puisto': 'vladivostok-pokrovskin-puisto',
-    Linnoitusmuseo: 'vladivostok-linnoitusmuseo',
-    'Kotkanpesän kukkula': 'vladivostok-kotkanpesan-kukkula',
-    Funikulaari: 'vladivostok-funikulaari',
-    'Arsenjevin museo': 'vladivostok-arsenjevin-museo',
-    'GUM-tavaratalo': 'vladivostok-gum-tavaratalo',
-    'Sukellusvene S-56': 'vladivostok-sukellusvene-s-56',
-    Rautatieasema: 'vladivostok-rautatieasema',
-    'Kultaisen sarven silta': 'vladivostok-kultaisen-sarven-silta',
+    'Pokrovskin puisto': 'vladivostok-pokrovskin-puisto-vari2',
+    Linnoitusmuseo: 'vladivostok-linnoitusmuseo-vari2',
+    'Kotkanpesän kukkula': 'vladivostok-kotkanpesan-kukkula-vari2',
+    Funikulaari: 'vladivostok-funikulaari-vari2',
+    'Arsenjevin museo': 'vladivostok-arsenjevin-museo-vari2',
+    'GUM-tavaratalo': 'vladivostok-gum-tavaratalo-vari2',
+    'Sukellusvene S-56': 'vladivostok-sukellusvene-s-56-vari2',
+    Rautatieasema: 'vladivostok-rautatieasema-vari2',
+    'Kultaisen sarven silta': 'vladivostok-kultaisen-sarven-silta-vari2',
   },
   jekaterinburg: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1240,11 +1240,11 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Novosibirsk-Glavnyi': 'novosibirsk-novosibirsk-glavnyi',
-    'Kaupungin kauppatalo': 'novosibirsk-kaupungin-kauppatalo',
-    Taidemuseo: 'novosibirsk-taidemuseo',
-    'Satohuoneiston talo': 'novosibirsk-satohuoneiston-talo',
-    'Aleksanteri Nevskin katedraali': 'novosibirsk-aleksanteri-nevskin-katedraali',
+    'Novosibirsk-Glavnyi': 'novosibirsk-novosibirsk-glavnyi-vari2',
+    'Kaupungin kauppatalo': 'novosibirsk-kaupungin-kauppatalo-vari2',
+    Taidemuseo: 'novosibirsk-taidemuseo-vari2',
+    'Satohuoneiston talo': 'novosibirsk-satohuoneiston-talo-vari2',
+    'Aleksanteri Nevskin katedraali': 'novosibirsk-aleksanteri-nevskin-katedraali-vari2',
   },
   irkutsk: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1277,55 +1277,55 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Sultan-moskeija': 'singapore-sultan-moskeija',
-    'Raffles Hotel': 'singapore-raffles-hotel',
-    'Fort Canningin kukkula': 'singapore-fort-canningin-kukkula',
-    'Clarke Quay': 'singapore-clarke-quay',
-    'Empress Place': 'singapore-empress-place',
-    'Boat Quay': 'singapore-boat-quay',
-    'Merlion-puisto': 'singapore-merlion-puisto',
-    'Gardens by the Bay': 'singapore-gardens-by-the-bay',
-    'Sri Mariamman -temppeli': 'singapore-sri-mariamman-temppeli',
-    'Thian Hock Keng -temppeli': 'singapore-thian-hock-keng-temppeli',
+    'Sultan-moskeija': 'singapore-sultan-moskeija-vari2',
+    'Raffles Hotel': 'singapore-raffles-hotel-vari2',
+    'Fort Canningin kukkula': 'singapore-fort-canningin-kukkula-vari2',
+    'Clarke Quay': 'singapore-clarke-quay-vari2',
+    'Empress Place': 'singapore-empress-place-vari2',
+    'Boat Quay': 'singapore-boat-quay-vari2',
+    'Merlion-puisto': 'singapore-merlion-puisto-vari2',
+    'Gardens by the Bay': 'singapore-gardens-by-the-bay-vari2',
+    'Sri Mariamman -temppeli': 'singapore-sri-mariamman-temppeli-vari2',
+    'Thian Hock Keng -temppeli': 'singapore-thian-hock-keng-temppeli-vari2',
   },
   samarkand: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Ulugbekin observatorio': 'samarkand-ulugbekin-observatorio',
-    'Khoja Doniyorin mausoleumi': 'samarkand-khoja-doniyorin-mausoleumi',
-    'Afrasiyabin rauniokumpu': 'samarkand-afrasiyabin-rauniokumpu',
-    'Hazrat Khizrin moskeija': 'samarkand-hazrat-khizrin-moskeija',
-    'Shah-i-Zindan hautakuja': 'samarkand-shah-i-zindan-hautakuja',
-    'Bibi-Khanymin moskeija': 'samarkand-bibi-khanymin-moskeija',
-    'Registanin aukio': 'samarkand-registanin-aukio',
-    'Gur-e-Amir': 'samarkand-gur-e-amir',
-    'Ishratkhanan mausoleumi': 'samarkand-ishratkhanan-mausoleumi',
+    'Ulugbekin observatorio': 'samarkand-ulugbekin-observatorio-vari2',
+    'Khoja Doniyorin mausoleumi': 'samarkand-khoja-doniyorin-mausoleumi-vari2',
+    'Afrasiyabin rauniokumpu': 'samarkand-afrasiyabin-rauniokumpu-vari2',
+    'Hazrat Khizrin moskeija': 'samarkand-hazrat-khizrin-moskeija-vari2',
+    'Shah-i-Zindan hautakuja': 'samarkand-shah-i-zindan-hautakuja-vari2',
+    'Bibi-Khanymin moskeija': 'samarkand-bibi-khanymin-moskeija-vari2',
+    'Registanin aukio': 'samarkand-registanin-aukio-vari2',
+    'Gur-e-Amir': 'samarkand-gur-e-amir-vari2',
+    'Ishratkhanan mausoleumi': 'samarkand-ishratkhanan-mausoleumi-vari2',
   },
   xian: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Xi’anin rautatieasema': 'xian-xi-anin-rautatieasema',
-    'Anyuan-portti': 'xian-anyuan-portti',
-    'Suuri moskeija': 'xian-suuri-moskeija',
-    Rumpitorni: 'xian-rumpitorni',
-    Kellotorni: 'xian-kellotorni',
-    'Steelametsä': 'xian-steelametsa',
-    'Yongning-portti': 'xian-yongning-portti',
-    'Shaanxin historiallinen museo': 'xian-shaanxin-historiallinen-museo',
-    'Suuri villihanhipagoda': 'xian-suuri-villihanhipagoda',
+    'Xi’anin rautatieasema': 'xian-xi-anin-rautatieasema-vari2',
+    'Anyuan-portti': 'xian-anyuan-portti-vari2',
+    'Suuri moskeija': 'xian-suuri-moskeija-vari2',
+    Rumpitorni: 'xian-rumpitorni-vari2',
+    Kellotorni: 'xian-kellotorni-vari2',
+    'Steelametsä': 'xian-steelametsa-vari2',
+    'Yongning-portti': 'xian-yongning-portti-vari2',
+    'Shaanxin historiallinen museo': 'xian-shaanxin-historiallinen-museo-vari2',
+    'Suuri villihanhipagoda': 'xian-suuri-villihanhipagoda-vari2',
   },
   varanasi: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Dhamek-stupa': 'varanasi-dhamek-stupa',
-    'Chaukhandi-stupa': 'varanasi-chaukhandi-stupa',
-    'Manikarnika Ghat': 'varanasi-manikarnika-ghat',
-    'Kashi Vishwanath -temppeli': 'varanasi-kashi-vishwanath-temppeli',
-    'Dashashwamedh Ghat': 'varanasi-dashashwamedh-ghat',
-    'Assi Ghat': 'varanasi-assi-ghat',
+    'Dhamek-stupa': 'varanasi-dhamek-stupa-vari2',
+    'Chaukhandi-stupa': 'varanasi-chaukhandi-stupa-vari2',
+    'Manikarnika Ghat': 'varanasi-manikarnika-ghat-vari2',
+    'Kashi Vishwanath -temppeli': 'varanasi-kashi-vishwanath-temppeli-vari2',
+    'Dashashwamedh Ghat': 'varanasi-dashashwamedh-ghat-vari2',
+    'Assi Ghat': 'varanasi-assi-ghat-vari2',
     'Durga Kund -temppeli': 'varanasi-durga-kund-temppeli',
     'Ramnagarin linnoitus': 'varanasi-ramnagarin-linnoitus',
   },
@@ -1346,14 +1346,14 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Gandantegchinlenin luostari': 'ulanbator-gandantegchinlenin-luostari',
-    'Mongolian kansallismuseo': 'ulanbator-mongolian-kansallismuseo',
-    'Sükhbaatarin aukio': 'ulanbator-sukhbaatarin-aukio',
-    'Choijin Laman temppeli': 'ulanbator-choijin-laman-temppeli',
-    Rautatieasema: 'ulanbator-rautatieasema',
-    Kansallisstadion: 'ulanbator-kansallisstadion',
-    'Bogd Khanin talvipalatsi': 'ulanbator-bogd-khanin-talvipalatsi',
-    'Zaisanin muistomerkki': 'ulanbator-zaisanin-muistomerkki',
+    'Gandantegchinlenin luostari': 'ulanbator-gandantegchinlenin-luostari-vari2',
+    'Mongolian kansallismuseo': 'ulanbator-mongolian-kansallismuseo-vari2',
+    'Sükhbaatarin aukio': 'ulanbator-sukhbaatarin-aukio-vari2',
+    'Choijin Laman temppeli': 'ulanbator-choijin-laman-temppeli-vari2',
+    Rautatieasema: 'ulanbator-rautatieasema-vari2',
+    Kansallisstadion: 'ulanbator-kansallisstadion-vari2',
+    'Bogd Khanin talvipalatsi': 'ulanbator-bogd-khanin-talvipalatsi-vari2',
+    'Zaisanin muistomerkki': 'ulanbator-zaisanin-muistomerkki-vari2',
   },
   kathmandu: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1398,15 +1398,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Chaukhtatgyin temppeli': 'yangon-chaukhtatgyin-temppeli',
-    'Shwedagon-pagodi': 'yangon-shwedagon-pagodi',
-    'Kandawgyi-järvi ja Karaweik': 'yangon-kandawgyi-jarvi-ja-karaweik',
-    'Yangonin keskusasema': 'yangon-yangonin-keskusasema',
-    'Bogyoken markkinat': 'yangon-bogyoken-markkinat',
-    'Sihteeristö': 'yangon-sihteeristo',
-    'Sule-pagodi': 'yangon-sule-pagodi',
-    'Strand-hotelli': 'yangon-strand-hotelli',
-    'Botataung-pagodi': 'yangon-botataung-pagodi',
+    'Chaukhtatgyin temppeli': 'yangon-chaukhtatgyin-temppeli-vari2',
+    'Shwedagon-pagodi': 'yangon-shwedagon-pagodi-vari2',
+    'Kandawgyi-järvi ja Karaweik': 'yangon-kandawgyi-jarvi-ja-karaweik-vari2',
+    'Yangonin keskusasema': 'yangon-yangonin-keskusasema-vari2',
+    'Bogyoken markkinat': 'yangon-bogyoken-markkinat-vari2',
+    'Sihteeristö': 'yangon-sihteeristo-vari2',
+    'Sule-pagodi': 'yangon-sule-pagodi-vari2',
+    'Strand-hotelli': 'yangon-strand-hotelli-vari2',
+    'Botataung-pagodi': 'yangon-botataung-pagodi-vari2',
   },
   mandalay: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1426,12 +1426,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Baoan-temppeli': 'taipei-baoan-temppeli',
-    'Dihua-katu': 'taipei-dihua-katu',
-    Pohjoisportti: 'taipei-pohjoisportti',
-    Presidentinlinna: 'taipei-presidentinlinna',
-    'Punainen talo': 'taipei-punainen-talo',
-    'Lungshan-temppeli': 'taipei-lungshan-temppeli',
+    'Baoan-temppeli': 'taipei-baoan-temppeli-vari2',
+    'Dihua-katu': 'taipei-dihua-katu-vari2',
+    Pohjoisportti: 'taipei-pohjoisportti-vari2',
+    Presidentinlinna: 'taipei-presidentinlinna-vari2',
+    'Punainen talo': 'taipei-punainen-talo-vari2',
+    'Lungshan-temppeli': 'taipei-lungshan-temppeli-vari2',
     'Bopiliaon vanha kortteli': 'taipei-bopiliaon-vanha-kortteli',
     'Chiang Kai-shek -muistosali': 'taipei-chiang-kai-shek-muistosali',
     'Kasvitieteellinen puutarha': 'taipei-kasvitieteellinen-puutarha',
@@ -1552,16 +1552,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Crawford Market': 'mumbai-crawford-market',
-    'Marine Drive': 'mumbai-marine-drive',
-    'Chhatrapati Shivaji Maharaj Terminus': 'mumbai-chhatrapati-shivaji-maharaj-terminus',
-    'St. Thomasin katedraali': 'mumbai-st-thomasin-katedraali',
-    'Town Hall': 'mumbai-town-hall',
-    'Bombayn korkein oikeus': 'mumbai-bombayn-korkein-oikeus',
-    'Rajabain kellotorni': 'mumbai-rajabain-kellotorni',
-    'David Sassoonin kirjasto': 'mumbai-david-sassoonin-kirjasto',
-    'Prince of Walesin museo': 'mumbai-prince-of-walesin-museo',
-    'Gateway of India': 'mumbai-gateway-of-india',
+    'Crawford Market': 'mumbai-crawford-market-vari2',
+    'Marine Drive': 'mumbai-marine-drive-vari2',
+    'Chhatrapati Shivaji Maharaj Terminus': 'mumbai-chhatrapati-shivaji-maharaj-terminus-vari2',
+    'St. Thomasin katedraali': 'mumbai-st-thomasin-katedraali-vari2',
+    'Town Hall': 'mumbai-town-hall-vari2',
+    'Bombayn korkein oikeus': 'mumbai-bombayn-korkein-oikeus-vari2',
+    'Rajabain kellotorni': 'mumbai-rajabain-kellotorni-vari2',
+    'David Sassoonin kirjasto': 'mumbai-david-sassoonin-kirjasto-vari2',
+    'Prince of Walesin museo': 'mumbai-prince-of-walesin-museo-vari2',
+    'Gateway of India': 'mumbai-gateway-of-india-vari2',
   },
   colombo: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1611,16 +1611,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Ghirardelli Square': 'sanfrancisco-ghirardelli-square',
-    'Coit Tower': 'sanfrancisco-coit-tower',
-    'Ferry Building': 'sanfrancisco-ferry-building',
-    'Transamerica Pyramid': 'sanfrancisco-transamerica-pyramid',
-    'Haas–Lilienthalin talo': 'sanfrancisco-haas-lilienthalin-talo',
-    'Old St. Mary\'s -katedraali': 'sanfrancisco-old-st-mary-s-katedraali',
-    'Grace Cathedral': 'sanfrancisco-grace-cathedral',
-    'Palace Hotel': 'sanfrancisco-palace-hotel',
-    'Union Square': 'sanfrancisco-union-square',
-    'San Franciscon kaupungintalo': 'sanfrancisco-san-franciscon-kaupungintalo',
+    'Ghirardelli Square': 'sanfrancisco-ghirardelli-square-vari2',
+    'Coit Tower': 'sanfrancisco-coit-tower-vari2',
+    'Ferry Building': 'sanfrancisco-ferry-building-vari2',
+    'Transamerica Pyramid': 'sanfrancisco-transamerica-pyramid-vari2',
+    'Haas–Lilienthalin talo': 'sanfrancisco-haas-lilienthalin-talo-vari2',
+    'Old St. Mary\'s -katedraali': 'sanfrancisco-old-st-mary-s-katedraali-vari2',
+    'Grace Cathedral': 'sanfrancisco-grace-cathedral-vari2',
+    'Palace Hotel': 'sanfrancisco-palace-hotel-vari2',
+    'Union Square': 'sanfrancisco-union-square-vari2',
+    'San Franciscon kaupungintalo': 'sanfrancisco-san-franciscon-kaupungintalo-vari2',
   },
   buenosaires: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1641,31 +1641,31 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Sydney Harbour Bridge': 'sydney-sydney-harbour-bridge',
-    'Sydneyn oopperatalo': 'sydney-sydneyn-oopperatalo',
-    'Mrs Macquarie\'s Chair': 'sydney-mrs-macquarie-s-chair',
-    'Sydneyn konservatorio': 'sydney-sydneyn-konservatorio',
-    'Hyde Park Barracks': 'sydney-hyde-park-barracks',
-    'Pyrmontin silta': 'sydney-pyrmontin-silta',
-    'Pyhän Marian katedraali': 'sydney-pyhan-marian-katedraali',
-    'Pyhän Andreaksen katedraali': 'sydney-pyhan-andreaksen-katedraali',
-    'Australian museo': 'sydney-australian-museo',
-    'Anzac-muistomerkki': 'sydney-anzac-muistomerkki',
+    'Sydney Harbour Bridge': 'sydney-sydney-harbour-bridge-vari2',
+    'Sydneyn oopperatalo': 'sydney-sydneyn-oopperatalo-vari2',
+    'Mrs Macquarie\'s Chair': 'sydney-mrs-macquarie-s-chair-vari2',
+    'Sydneyn konservatorio': 'sydney-sydneyn-konservatorio-vari2',
+    'Hyde Park Barracks': 'sydney-hyde-park-barracks-vari2',
+    'Pyrmontin silta': 'sydney-pyrmontin-silta-vari2',
+    'Pyhän Marian katedraali': 'sydney-pyhan-marian-katedraali-vari2',
+    'Pyhän Andreaksen katedraali': 'sydney-pyhan-andreaksen-katedraali-vari2',
+    'Australian museo': 'sydney-australian-museo-vari2',
+    'Anzac-muistomerkki': 'sydney-anzac-muistomerkki-vari2',
   },
   rio: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'São Benton luostari': 'rio-sao-benton-luostari',
-    'Vanha katedraali Antiga Sé': 'rio-vanha-katedraali-antiga-se',
-    'Central do Brasilin asema': 'rio-central-do-brasilin-asema',
-    'Real Gabinete -kirjasto': 'rio-real-gabinete-kirjasto',
-    'Quinta da Boa Vista': 'rio-quinta-da-boa-vista',
-    'Kansallinen historiallinen museo': 'rio-kansallinen-historiallinen-museo',
-    'Theatro Municipal': 'rio-theatro-municipal',
-    'Maracanãn stadion': 'rio-maracanan-stadion',
-    'Lapan akvedukti': 'rio-lapan-akvedukti',
-    'Passeio Público': 'rio-passeio-publico',
+    'São Benton luostari': 'rio-sao-benton-luostari-vari2',
+    'Vanha katedraali Antiga Sé': 'rio-vanha-katedraali-antiga-se-vari2',
+    'Central do Brasilin asema': 'rio-central-do-brasilin-asema-vari2',
+    'Real Gabinete -kirjasto': 'rio-real-gabinete-kirjasto-vari2',
+    'Quinta da Boa Vista': 'rio-quinta-da-boa-vista-vari2',
+    'Kansallinen historiallinen museo': 'rio-kansallinen-historiallinen-museo-vari2',
+    'Theatro Municipal': 'rio-theatro-municipal-vari2',
+    'Maracanãn stadion': 'rio-maracanan-stadion-vari2',
+    'Lapan akvedukti': 'rio-lapan-akvedukti-vari2',
+    'Passeio Público': 'rio-passeio-publico-vari2',
   },
   halifax: {
     // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-16b- ja

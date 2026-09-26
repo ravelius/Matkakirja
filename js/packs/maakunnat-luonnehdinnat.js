@@ -12590,4 +12590,360 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: "Arslanbobin 11 000 hehtaarin saksanpähkinämetsä on maailman suurin, ja syyskuussa kylä lähtee keräämään pähkinöitä.",
     },
   },
+  /*
+   * PNG (erä 10). Avaimet MAAKUNNAT_KAIKKI.PNG:n tunnuksia TÄSMÄLLEEN
+   * (esim. "North Solomons" = Bougainville, "Northern" = Oro,
+   * "National Capital District" = Port Moresby). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   North Solomons — 2019 Bougainvillean independence referendum;
+   *   Chimbu — Chimbu skeleton dancers (haku); East Sepik — Iatmul
+   *   crocodile scarification (haku); Eastern Highlands — Goroka (haku,
+   *   Coffee Industry Corporation); Enga — Enga Province; Gulf — Gulf
+   *   Province; East New Britain — Baining people; Central — Varirata
+   *   National Park (haku); West New Britain — Kimbe Bay; Madang — Manam
+   *   2004 (haku, ReliefWeb); Manus — Papustyla pulcherrima; Milne Bay —
+   *   Kenu and Kundu Festival (haku); Morobe — YUS Conservation Area;
+   *   Northern — Queen Alexandra's birdwing; National Capital District —
+   *   National Parliament House, Port Moresby (haku); Sandaun — Sandaun
+   *   Province; Southern Highlands — Lake Kutubu; New Ireland — shark
+   *   calling, Kontu (haku); Western — Ok Tedi Mine; Western Highlands —
+   *   Mount Hagen
+   */
+  PNG: {
+    "North Solomons": {
+      lyhyt: "Bougainvillen kansanäänestyksessä vuonna 2019 yli 97 prosenttia äänestäjistä kannatti itsenäisyyttä Papua-Uudesta-Guineasta.",
+    },
+    "Chimbu": {
+      lyhyt: "Simbun luurankotanssijat maalaavat mustan vartalonsa päälle valkoiset luut ja kallon, ja tanssi nähdään nykyään sing-sing-juhlissa.",
+    },
+    "East Sepik": {
+      lyhyt: "Keski-Sepikin iatmul-kylissä nuorukaisten ihoon viilletään yhä krokotiilin suomuja muistuttavat arvet aikuisuuden merkiksi.",
+    },
+    "Eastern Highlands": {
+      lyhyt: "Goroka on ylänköjen arabicakahvin keskus: ympäröiviltä rinteiltä kerätty kahvi kootaan ja ostetaan siellä ennen vientiä.",
+    },
+    "Enga": {
+      lyhyt: "Engan kaikissa viidessä piirissä puhutaan samaa enga-kieltä, mikä on harvinaista maassa, jossa kieliä on yli 800.",
+    },
+    "Gulf": {
+      lyhyt: "Kikori, Turama, Purari ja Vailala laskevat kaikki Gulfin maakunnassa Papuanlahteen, ja rannikko on yhtä jokisuistojen verkkoa.",
+    },
+    "East New Britain": {
+      lyhyt: "Baining-kansan tulitanssissa naamioidut tanssijat juoksevat ja hyppivät nuotion hiilloksen läpi läpi yön aamunkoittoon asti.",
+    },
+    "Central": {
+      lyhyt: "Port Moresbyn lähellä oleva Varirata oli Papua-Uuden-Guinean ensimmäinen kansallispuisto, ja sen metsissä näkee paratiisilintuja.",
+    },
+    "West New Britain": {
+      lyhyt: "Kimbenlahden riutoilla elää yli 860 riuttakalalajia, ja lahti on yksi maan suosituimmista sukelluskohteista.",
+    },
+    "Madang": {
+      lyhyt: "Manamin tulivuorisaarelta evakuoitiin vuonna 2004 yli 9 000 ihmistä mantereelle, ja moni asui leireissä vielä vuosikymmen myöhemmin.",
+    },
+    "Manus": {
+      lyhyt: "Manuksen sademetsän puissa elää smaragdikotilo, jonka kirkkaanvihreä väri on vain ohuessa pintakalvossa keltaisen kuoren päällä.",
+    },
+    "Milne Bay": {
+      lyhyt: "Alotaussa pidetään joka marraskuu Kenu ja Kundu -festivaali, jossa perinteiset kanootit kilpailevat kundu-rumpujen tahdissa.",
+    },
+    "Morobe": {
+      lyhyt: "Huonin niemimaan YUS-alue oli Papua-Uuden-Guinean ensimmäinen suojelualue, ja sen kylät suojelevat uhanalaista Matschien puukengurua.",
+    },
+    "Northern": {
+      lyhyt: "Popondettan rannikkometsissä elää maailman suurin perhonen, kuningatar Aleksandran lintusiipi, jonka siipiväli ylittää 25 senttiä.",
+    },
+    "National Capital District": {
+      lyhyt: "Port Moresbyn parlamenttitalo on rakennettu Sepikin haus tambaran -henkitalojen mallin mukaan, ja se avattiin vuonna 1984.",
+    },
+    "Sandaun": {
+      lyhyt: "Sandaun tarkoittaa tok pisiniksi auringonlaskua, koska maakunta on maan länsilaidalla – sen raja on Indonesiaa vasten.",
+    },
+    "Southern Highlands": {
+      lyhyt: "Kutubujärvi on Papua-Uuden-Guinean toiseksi suurin järvi, ja siinä elää 13 kalalajia, joita ei ole missään muualla.",
+    },
+    "New Ireland": {
+      lyhyt: "Kontun kylässä haita kutsutaan yhä: kalastaja helistää kookoskuorista tehtyä helistintä vedessä ja houkuttelee hain kanoottinsa viereen.",
+    },
+    "Western": {
+      lyhyt: "Ok Tedin avolouhoksesta Fubilan-vuorelta kaivetaan kuparia ja kultaa, ja kaivos tuo noin neljänneksen koko maan vientituloista.",
+    },
+    "Western Highlands": {
+      lyhyt: "Mount Hagen on Papua-Uuden-Guinean kolmanneksi suurin kaupunki, ja se on saanut nimensä läheisestä kuluneesta tulivuoresta.",
+    },
+  },
+  /*
+   * SLB (erä 10). Avaimet MAAKUNNAT_KAIKKI.SLB:n tunnuksia TÄSMÄLLEEN
+   * ("Capital Territory (Honiara)"). Vain `lyhyt`. Lähteet (en-Wikipedia
+   * ja haku 25.9.2026):
+   *   Central — Savo Island; Choiseul — Choiseul Island; Guadalcanal —
+   *   Guadalcanal Province; Capital Territory (Honiara) — Honiara;
+   *   Isabel — Diocese of Ysabel (haku); Makira — Makira-Ulawa Province;
+   *   Malaita — Malaita Province; Rennell and Bellona — Laticauda
+   *   crockeri; Temotu — Tevau (haku, museokokoelmat); Western — Western
+   *   Province (Solomon Islands), 2007 earthquake
+   */
+  SLB: {
+    "Central": {
+      lyhyt: "Savon saaren kuumaan hiekkaan isojalkakanat hautaavat munansa hautoutumaan, ja kyläläiset keräävät isot munat ruoaksi.",
+    },
+    "Choiseul": {
+      lyhyt: "Choiseulin omakielinen nimi on Lauru, ja Maetamben vuoren ympärillä kasvaa Salomonsaarten parhaiten säilynyttä kalkkikivimetsää.",
+    },
+    "Guadalcanal": {
+      lyhyt: "Guadalcanalin maastosta löytyy yhä toisen maailmansodan räjähtämättömiä ammuksia, ja niiden raivaus jatkuu edelleen.",
+    },
+    "Capital Territory (Honiara)": {
+      lyhyt: "Honiaran kartion muotoinen parlamenttitalo valmistui vuonna 1993 Yhdysvaltain avustuksella kaupungin yläpuolelle.",
+    },
+    "Isabel": {
+      lyhyt: "Isabelin pääkylä Buala on sekä maakunnan hallintokeskus että Melanesian anglikaanisen kirkon Ysabelin hiippakunnan kotipaikka.",
+    },
+    "Makira": {
+      lyhyt: "Makiralla on enemmän sisämaan soita – ja suistokrokotiileja – kuin millään muulla Salomonsaarten saarella.",
+    },
+    "Malaita": {
+      lyhyt: "Malaita on Salomonsaarten väkirikkain maakunta, ja siihen kuuluu myös kaukana pohjoisessa oleva polynesialainen Ontong Javan atolli.",
+    },
+    "Rennell and Bellona": {
+      lyhyt: "Rennellin Teganojärven murtovedessä elää merikäärmelaji, jota ei tavata missään muualla maailmassa.",
+    },
+    "Temotu": {
+      lyhyt: "Santa Cruzin saarilla kierrettiin tevau-rahaa punaisista höyhenistä, ja yhteen rullaan kului yli 300 linnun höyhenet.",
+    },
+    "Western": {
+      lyhyt: "Vuoden 2007 maanjäristys nosti Läntisen maakunnan Ranonggan saarta kerralla 2,5–3 metriä ylemmäs merenpinnasta.",
+    },
+  },
+  /*
+   * FJI (erä 10). Avaimet MAAKUNNAT_KAIKKI.FJI:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia 25.9.2026):
+   *   Central — Suva; Eastern — Lau Islands; Northern — Savusavu;
+   *   Rotuma — Rotuma; Western — Lautoka
+   */
+  FJI: {
+    "Central": {
+      lyhyt: "Suvan Laucalanlahden rannalla on Etelä-Tyynenmeren yliopiston pääkampus, jonka omistavat useat saarivaltiot yhdessä.",
+    },
+    "Eastern": {
+      lyhyt: "Lau-saarilla kriketti on suositumpaa kuin rugby, ja saaret ovat koko Fidžin kriketin keskus.",
+    },
+    "Northern": {
+      lyhyt: "Savusavun Nakaman kuumissa lähteissä vesi on lähes kiehuvaa, ja kyläläiset keittävät niissä taroa ja leipäpuun hedelmiä.",
+    },
+    "Rotuma": {
+      lyhyt: "Rotuman maata saavat omistaa ja käyttää vain rotumalaiset, vaikka saari kuuluu Fidžiin 646 kilometrin päässä Suvasta.",
+    },
+    "Western": {
+      lyhyt: "Lautokaa sanotaan Sokerikaupungiksi: sen sokeritehdas on toiminut vuodesta 1903 ja on kaupungin suurin työnantaja.",
+    },
+  },
+  /*
+   * VUT (erä 10). Avaimet MAAKUNNAT_KAIKKI.VUT:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Malampa — Malampa Province; Penama — Maewo; Sanma — SS President
+   *   Coolidge; Shefa — Hideaway Island underwater post office (haku,
+   *   Vanuatu Post); Tafea — John Frum; Torba — Torba Province
+   */
+  VUT: {
+    "Malampa": {
+      lyhyt: "Malampan nimi on koottu sen kolmen pääsaaren alkutavuista: MALakula, AMbrym ja PAama.",
+    },
+    "Penama": {
+      lyhyt: "Penamaan kuuluva Maewo on Vanuatun sateisin saari, noin 3 500 millimetriä vuodessa, ja sen rinteiltä syöksyy vesiputouksia.",
+    },
+    "Sanma": {
+      lyhyt: "Espiritu Santon edustalla makaa miinaan 1942 ajanut SS President Coolidge, ja hylkyyn sukelletaan suoraan rannalta.",
+    },
+    "Shefa": {
+      lyhyt: "Hideaway Islandin edustalla Port Vilan lähellä on vedenalainen posti, johon sukeltajat pudottavat vedenkestäviä postikortteja.",
+    },
+    "Tafea": {
+      lyhyt: "Tannalla John Frumin liikkeen kannattajat marssivat yhä joka 15. helmikuuta ja odottavat John Frumin paluuta.",
+    },
+    "Torba": {
+      lyhyt: "Torban pienillä saarilla puhutaan 17:ää eri kieltä, ja kutakin niistä puhuu keskimäärin vain noin 550 ihmistä.",
+    },
+  },
+  /*
+   * NCL (erä 10). Avaimet MAAKUNNAT_KAIKKI.NCL:n tunnuksia TÄSMÄLLEEN
+   * ("Îles Loyauté" Î = U+00CE, é = U+00E9). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Sud — Tjibaou Cultural Centre; Îles Loyauté — Loyalty Islands
+   *   Province; Nord — Hienghène, La Poule Couveuse (haku, New Caledonia
+   *   Tourism)
+   */
+  NCL: {
+    "Sud": {
+      lyhyt: "Nouméan Tjibaou-kulttuurikeskuksen kymmenen paviljonkia muistuttavat kanakien perinteisiä suurmajoja; korkein on 28 metriä.",
+    },
+    "Îles Loyauté": {
+      lyhyt: "Loyaltysaarten asukkaista noin 95 prosenttia on kanakeja, ja saarilla puhutaan drehua, iaaita ja nengonea.",
+    },
+    "Nord": {
+      lyhyt: "Hienghènen lahden suulla merestä nousee musta kalkkikivikallio, jota kutsutaan hautovaksi kanaksi, La Poule Couveuse.",
+    },
+  },
+  /*
+   * GRL (erä 10). Avaimet MAAKUNNAT_KAIKKI.GRL:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin kuntajako: Qaasuitsup jaettiin 2018 Avannaataan ja
+   * Qeqertalikiin). Vain `lyhyt`. Lähteet (en-Wikipedia 25.9.2026):
+   *   Nationalparken — Sirius Dog Sled Patrol; Kommune Kujalleq —
+   *   Alluitsup Paa (Uunartoq); Pituffik — Pituffik Space Base;
+   *   Qaasuitsup Kommunia — Qaasuitsup, Qaanaaq; Qeqqata Kommunia —
+   *   Aasivissuit – Nipisat; Kommuneqarfik Sermersooq — Nuuk Airport
+   */
+  GRL: {
+    "Nationalparken": {
+      lyhyt: "Tanskan Sirius-partio kiertää Koillis-Grönlannin rannikkoa koiravaljakoilla: kaksi partiolaista ja 11–15 koiraa jopa neljä kuukautta kerrallaan.",
+    },
+    "Kommune Kujalleq": {
+      lyhyt: "Uunartoqin saarella Alluitsup Paan lähellä kumpuaa 34–38-asteisia kuumia lähteitä, joissa kylpijät istuvat ulkona Etelä-Grönlannin kesässä.",
+    },
+    "Pituffik": {
+      lyhyt: "Entinen Thulen lentotukikohta on vuodesta 2023 ollut Pituffikin avaruustukikohta, Yhdysvaltain puolustusministeriön pohjoisin asema.",
+    },
+    "Qaasuitsup Kommunia": {
+      lyhyt: "Qaasuitsupin kunta jaettiin vuonna 2018 kahtia, ja sen pohjoisessa Qaanaaqissa narvalia metsästetään yhä kajakista.",
+    },
+    "Qeqqata Kommunia": {
+      lyhyt: "Aasivissuit–Nipisatin maailmanperintöalueella on Grönlannin suurin karibujen ajojärjestelmä, 3,9 kilometriä pitkä.",
+    },
+    "Kommuneqarfik Sermersooq": {
+      lyhyt: "Nuukin lentokentän kiitotie pidennettiin 2 200 metriin marraskuussa 2024, ja nyt pääkaupunkiin lennetään suoraan Kööpenhaminasta.",
+    },
+  },
+  /*
+   * BMU (erä 10). Avaimet MAAKUNNAT_KAIKKI.BMU:n tunnuksia TÄSMÄLLEEN
+   * (avaimissa suora heittomerkki U+0027, teksteissä typografinen).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   City of Hamilton — Hamilton, Bermuda; City of Saint George —
+   *   St. George's, Bermuda; Devonshire — Devonshire Parish; Hamilton —
+   *   Crystal Cave, Bermuda (haku); Paget — Paget Parish; Pembroke —
+   *   Pembroke Parish; Saint George's — L.F. Wade International Airport;
+   *   Sandys — Somerset Bridge; Smith's — Spittal Pond Nature Reserve
+   *   (haku, Bermuda National Trust); Southampton — Gibbs Hill
+   *   Lighthouse; Warwick — Warwick Academy
+   */
+  BMU: {
+    "City of Hamilton": {
+      lyhyt: "Bermudan pääkaupungissa Hamiltonissa asuu vain noin 850 ihmistä, ja koko kaupunki mahtuu alle neliökilometrille.",
+    },
+    "City of Saint George": {
+      lyhyt: "St. George’sin St. Peter’s Church on läntisen pallonpuoliskon vanhin säilynyt anglikaaninen kirkko, ja siellä pidetään yhä jumalanpalveluksia.",
+    },
+    "Devonshire": {
+      lyhyt: "Devonshiren keskellä on Devonshire Marsh, jonka suota suojelee kaksi luonnonsuojelualuetta, Firefly ja Freer Cox.",
+    },
+    "Hamilton": {
+      lyhyt: "Hamiltonin seurakunnan Crystal Caven löysi kaksi krikettipalloa etsinyttä poikaa, ja sen pohjalla on kirkas maanalainen järvi.",
+    },
+    "Paget": {
+      lyhyt: "Pagetissa on King Edward VII Memorial Hospital, koko Bermudan ainoa sairaala.",
+    },
+    "Pembroke": {
+      lyhyt: "Pembroke on Bermudan tiheimmin asuttu seurakunta: sen viidellä neliökilometrillä asuu noin 11 000 ihmistä.",
+    },
+    "Saint George's": {
+      lyhyt: "Bermudan lentoasema on St. David’s Islandilla, ja sitä varten tasoitettiin sodan aikana kokonainen saari ja täytettiin salmia.",
+    },
+    "Sandys": {
+      lyhyt: "Sandysin Somerset Bridgeä sanotaan maailman pienimmäksi toimivaksi läppäsillaksi: aukko on vain noin 80 senttiä, juuri maston mentävä.",
+    },
+    "Smith's": {
+      lyhyt: "Smith’sin Spittal Pond on Bermudan suurin luonnonsuojelualue, ja muuttolinnut pysähtyvät sen murtovesilammelle keväin ja syksyin.",
+    },
+    "Southampton": {
+      lyhyt: "Southamptonin Gibbs Hillin majakka on valurautaa, ja sen huipulle kiivetään 185 askelmaa.",
+    },
+    "Warwick": {
+      lyhyt: "Warwick Academy on perustettu vuonna 1662, ja se on Bermudan vanhin koulu.",
+    },
+  },
+  /*
+   * SHN (erä 10). Avaimet MAAKUNNAT_KAIKKI.SHN:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Ascension — Green Mountain (haku, Ascension Island Government);
+   *   Saint Helena — Jacob's Ladder (Saint Helena); Tristan da Cunha —
+   *   Tristan da Cunha
+   */
+  SHN: {
+    "Ascension": {
+      lyhyt: "Ascensionin Green Mountainin huipulla kasvaa ihmisen istuttama pilvimetsä, joka syntyi Joseph Hookerin suunnitelmasta 1800-luvulla.",
+    },
+    "Saint Helena": {
+      lyhyt: "Jamestownista nousee Ladder Hillin rinnettä suoraan ylös Jacob’s Ladder, 699 askelman porraskuja.",
+    },
+    "Tristan da Cunha": {
+      lyhyt: "Tristan da Cunhalla ei ole kiitotietä, joten ainoa kylä Edinburgh of the Seven Seas on saavutettavissa vain laivalla Kapkaupungista.",
+    },
+  },
+  /*
+   * KOR. Avaimet MAAKUNNAT_KAIKKI.KOR:n tunnuksia TÄSMÄLLEEN (kopioitu
+   * koneellisesti). Vain `lyhyt`. Vältetty maastokohteet-kor.js:n
+   * aiheita (Hallasan, Nakdong, Gyeongju, Haeinsa, Hwaseong, Hahoe,
+   * Gochang, Jeonju, Baekje, Songgwangsa). Lähteet (en-Wikipedia ja
+   * haku 26.9.2026):
+   *   Busan — Jagalchi Market; Daegu — Yangnyeongsi; Daejeon —
+   *   Sungsimdang; South Chungcheong — Boryeong Mud Festival; South
+   *   Gyeongsang — Jinju Namgang Yudeung Festival; South Jeolla —
+   *   Boseong County; Gangwon — Alpensia Resort; Gwangju — Gwangju
+   *   Biennale; Gyeonggi — Everland; Incheon — Chinatown, Incheon;
+   *   Jeju — Haenyeo; North Chungcheong — North Chungcheong Province;
+   *   North Gyeongsang — Homigot; North Jeolla — Saemangeum Seawall;
+   *   Sejong — Sejong City; Seoul — Cheonggyecheon; Ulsan — haku
+   *   (Autocar: Inside Ulsan, the world's biggest car factory)
+   */
+  KOR: {
+    "Busan": {
+      lyhyt: "Busanin Jagalchin kalatori on Etelä-Korean suurin, ja sen tunnetuimpia myyjiä ovat yhä jagalchi-ajummat, kalaa kauppaavat naiset.",
+    },
+    "Daegu": {
+      lyhyt: "Daegun yrttitori Yangnyeongsi on toiminut vuodesta 1658, ja sen Yakjeon-kujalla on yhä noin 180 perinteisen lääkinnän liikettä.",
+    },
+    "Daejeon": {
+      lyhyt: "Sungsimdang-leipomo perustettiin Daejeoniin 1956, ja sen soboro-pullaa saa vain sieltä, sillä leipomolla ei ole myymälöitä muualla.",
+    },
+    "South Chungcheong": {
+      lyhyt: "Boryeongin Daecheonin rannalla pidetään joka heinäkuu mutafestivaali, jossa väki kieriskelee rannikon mutatasankojen mudassa.",
+    },
+    "South Gyeongsang": {
+      lyhyt: "Jinjussa Nam-joelle lasketaan joka lokakuu lyhtyjä muistoksi niille, jotka kuolivat kaupungin piirityksissä Imjin-sodassa 1590-luvulla.",
+    },
+    "South Jeolla": {
+      lyhyt: "Boseongin rinteiden terassimaiset teeviljelmät tuottavat noin 40 prosenttia koko Etelä-Korean teestä.",
+    },
+    "Gangwon": {
+      lyhyt: "Pyeongchangin Alpensiassa ovat yhä vuoden 2018 talviolympialaisten mäkihyppytornit ja kelkkarata.",
+    },
+    "Gwangju": {
+      lyhyt: "Gwangjussa järjestetään joka toinen vuosi nykytaiteen biennaali, joka perustettiin 1995 ja tuo kaupunkiin taiteilijoita ympäri maailmaa.",
+    },
+    "Gyeonggi": {
+      lyhyt: "Yonginissa sijaitseva Everland on Etelä-Korean suurin teemapuisto, ja sen puinen T Express -vuoristorata syöksyy alas 77 asteen kulmassa.",
+    },
+    "Incheon": {
+      lyhyt: "Incheonin Chinatownin jajangmyeon-museo toimii Gonghwachunissa, ravintolassa, jonka katsotaan tarjonneen mustapapunuudeleita Koreassa ensimmäisenä.",
+    },
+    "Jeju": {
+      lyhyt: "Jejun haenyeo-sukeltajat, enimmäkseen iäkkäitä naisia, sukeltavat ilman happilaitteita jopa 20 metrin syvyyteen merikorvien ja merisiilien perässä.",
+    },
+    "North Chungcheong": {
+      lyhyt: "Pohjois-Chungcheong on Etelä-Korean ainoa maakunta, jolla ei ole lainkaan merenrantaa.",
+    },
+    "North Gyeongsang": {
+      lyhyt: "Homigot-niemen edustalla nousee merestä 8,5 metriä korkea käsiveistos, ja uudenvuodenaamuna rannalle kerääntyy tuhansia katsomaan auringonnousua.",
+    },
+    "North Jeolla": {
+      lyhyt: "Saemangeumin merivalli Gunsanin ja Buanin välillä on 33 kilometriä pitkä, maailman pisin ihmisen rakentama pato.",
+    },
+    "Sejong": {
+      lyhyt: "Sejong perustettiin 2007 uudeksi hallintokaupungiksi, ja nykyään siellä toimivat pääministerin kanslia ja kymmenkunta ministeriötä.",
+    },
+    "Seoul": {
+      lyhyt: "Soulin keskustassa virtaa Cheonggyecheon-puro, joka avattiin 2005 uudelleen puretun moottoritien alta, ja sen rantoja voi kävellä lähes 11 kilometriä.",
+    },
+    "Ulsan": {
+      lyhyt: "Hyundain Ulsanin tehdas on maailman suurin yksittäinen autotehdas, ja sillä on oma satama, josta valmiit autot lastataan suoraan laivoihin.",
+    },
+  },
 };
