@@ -7315,3 +7315,7 @@ Natiiviseppa: tasojen 2–3 paakartan nostoista 1 972/2 590 saa symbolin webin 1
 ## Z10 OSA 1 VALMIS 20.00: 419/419 AMPARISSA (26.9.2026 klo 20.02)
 
 Karttaseppa: Z10 osa 1 (kaupungit ±1° + fokusmaat) valmis 20.00, 419/419 shardia amparissa: z10 27 991 laattaa (1,25 Gt), z9 8 346 (0,35 Gt), tasmaavat luetteloon; kesto 1,0 h v4:lla, ei kaatumisia. Ajo paattyi koodiin 1 (luettelon vienti estettiin: paikallisesta luettelosta puuttuivat varitasot, amparissa 27 maata) — vahti toimi oikein, ei koske laattoja; luettelo tehdaan ketjun lopuksi koekansioon. Maakunnat (ajo-20260927m) kaynnistetty kasin v4:lla 20.01. Kuvapari GRC z8 vs z10 pyramidi-poltto/kuvat/grc-z8-vs-z10-20260926.png → omistajalle.
+
+## P0 LOYDOS 175/175b: ARKKITYYPIT EIVAT OLE VALMIIT — KORTTI ENNEN TF 1.0.26 (26.9.2026 klo 20.07)
+
+Omistaja 1.0.25 Ranska (20.0x–20.1x): maatasolla tason 1 arkkityypit valtavia tasaisen harmaita muotoja (kupoli, linnakehikot, laatikko, palkki, punainen stadion) jotka peittavat nimiston; lahikuvassa tasojen 2–3 mallit haaleita sumeita moykkyja ilman siluettia (Ei saa mitaan selvaa). Fable: EI VALMIS. Ennen TF 1.0.26: koko maatasolla murto-osaan (ei yli kaupunkinimion), mallit vasta 155:n kynnyksella (alla lajin symboli, 174), savy kartan paletista + musteaariviiva (Linssisepan tyyliohje), himmennys savyyn ei kontrastiin, LOD0 lahikuvassa; kuvaparit maataso + lahikuva → OMISTAJAN KORTTI ennen TF:aa. Laitetestaajan kierrokseen pysyva ulkonakokohta (Ranska + Kreikka maataso).
