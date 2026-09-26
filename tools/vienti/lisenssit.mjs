@@ -65,7 +65,7 @@ export const AINEISTOT = [
     lisenssi: 'LGPL 3+',
     lahde: 'https://www.soest.hawaii.edu/pwessel/gshhg/',
     attribuutio: 'Rantaviivat: GSHHG, Wessel & Smith, LGPL.',
-    kaytto: 'laattoihin poltetut rantaviivat ja pallon vektorit ämpärissä',
+    kaytto: 'laattoihin poltetut rantaviivat, pallon vektorit ja maamaski maittain (tools/tee-maamaski-maittain.mjs) ämpärissä',
   },
   {
     id: 'historical-basemaps',
