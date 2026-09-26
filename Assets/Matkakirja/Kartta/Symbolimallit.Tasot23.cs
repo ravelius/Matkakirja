@@ -31,7 +31,8 @@ namespace Matkakirja
     ///    LOD0-leveys) yhtenä yhteisenä RenderMeshInstanced-kutsuna samoista matriiseista mallin juuren tasossa;
     ///    instansoitu pohjamateriaali (ZTest Always, ZWrite Off, renderQueue mallia pienempi, eli piirto ennen malleja).
     ///  - 1.0.27-KOKEILU: sama kallistusportti kuin tasolla 1 (<see cref="KulmaSallii"/>; ennen piirto ei tarkistanut
-    ///    kallistusta, vaikka OnMalli tarkisti), mallin oma kallistus (<see cref="IsoKierto"/>) matriisiin, ääriviiva omana
+    ///    kallistusta, vaikka OnMalli tarkisti), liioiteltu perspektiivi (<see cref="PerspektiiviKierto"/>) instanssin
+    ///    matriisiin vain Laske23:ssa (lepo säilyy), ääriviiva omana
     ///    RenderMeshInstanced-kutsunaan samoista matriiseista ja tiloista (_Tila.z = leveys mallin yksiköissä) ja
     ///    maakontakti kaakkoon (PohjaSiirto).
     ///  - KATEGORIASYMBOLIT (omistaja 26.9. klo 21.5x): erät mallin indeksillä (MalliIndeksi: arkkityypit ja niiden perään
@@ -56,6 +57,22 @@ namespace Matkakirja
 
         static void NollaaTasot23() { Taso23 = true; }
 
+        static readonly Vector2[] arkkiPuoli = new Vector2[ArkkityyppiKartoitus.Lukumaara];
+        static readonly bool[] arkkiPuoliLaskettu = new bool[ArkkityyppiKartoitus.Lukumaara];
+
+        /// <summary>Arkkityypin pohjan ulottuma (LOD0) jalan nostoon, lasketaan kerran.</summary>
+        /// <summary>Mallin pohjan ulottuma perspektiivin jalan nostoon (arkkityyppi tai kategoriasymboli, LOD0).</summary>
+        static Vector2 MalliPuoli(int malli) => malli < ArkkityyppiKartoitus.Lukumaara
+            ? ArkkiPuoli((Arkkityyppi)malli)
+            : Puoli(MallinVerkko(malli, 0));
+
+        static Vector2 ArkkiPuoli(Arkkityyppi a)
+        {
+            int i = (int)a;
+            if (!arkkiPuoliLaskettu[i]) { arkkiPuoli[i] = Puoli(ArkkityypinVerkko(a, 0)); arkkiPuoliLaskettu[i] = true; }
+            return arkkiPuoli[i];
+        }
+
         /// <summary>Piirretäänkö tason 2–3 nostolle arkkityyppi nyt (OnMalli ja Laske23 käyttävät samaa ehtoa).</summary>
         static bool Taso23Kaytossa(Tieto t)
         {
@@ -72,6 +89,7 @@ namespace Matkakirja
             public int Lod = -1;
             public bool Nahty, Loydetty;
             public float SyttyAlku = -1f;
+            public bool KorkeusOk;
         }
 
         readonly Dictionary<string, Instanssi23> instanssit23 = new Dictionary<string, Instanssi23>(StringComparer.Ordinal);
@@ -99,7 +117,8 @@ namespace Matkakirja
         float laskettuFov, laskettuKerroin, laskettuSyttyminen, laskettuKoko;
         int laskettuKorkeus;
         bool laskettuPakota, laskettuYlhaalta;
-        float laskettuIso, laskettuReuna;
+        float laskettuPerspektiivi, laskettuReuna;
+        int laskettuLeveys, laskettuMaasto = -1;
 
         bool laskettuKategoriat, laskettuRuutu;
 
@@ -171,13 +190,13 @@ namespace Matkakirja
             bool muuttui = laskettuVersio != nostoVersio || laskettuKamera != kameraM || laskettuPallo != palloM
                            || laskettuFov != kamera.fieldOfView || laskettuKerroin != nk.ZoomKerroin || laskettuSyttyminen != nk.Syttyminen
                            || laskettuKoko != KokoPt || laskettuKorkeus != Screen.height || laskettuPakota != PakotaLoydetty
-                           || laskettuYlhaalta != Ylhaalta3D || laskettuIso != IsoAste || laskettuReuna != ReunaPt
-                           || laskettuKategoriat != Kategoriat || laskettuRuutu != KategoriaRuutuYlos;
+                           || laskettuYlhaalta != Ylhaalta3D || laskettuPerspektiivi != PerspektiiviAste || laskettuReuna != ReunaPt
+                           || laskettuLeveys != Screen.width || laskettuMaasto != maastoVersio || laskettuKategoriat != Kategoriat || laskettuRuutu != KategoriaRuutuYlos;
             if (!muuttui) return false;
             laskettuVersio = nostoVersio; laskettuKamera = kameraM; laskettuPallo = palloM; laskettuFov = kamera.fieldOfView;
             laskettuKerroin = nk.ZoomKerroin; laskettuSyttyminen = nk.Syttyminen; laskettuKoko = KokoPt;
             laskettuKorkeus = Screen.height; laskettuPakota = PakotaLoydetty;
-            laskettuYlhaalta = Ylhaalta3D; laskettuIso = IsoAste; laskettuReuna = ReunaPt;
+            laskettuYlhaalta = Ylhaalta3D; laskettuPerspektiivi = PerspektiiviAste; laskettuReuna = ReunaPt; laskettuLeveys = Screen.width; laskettuMaasto = maastoVersio;
             laskettuKategoriat = Kategoriat; laskettuRuutu = KategoriaRuutuYlos;
             return true;
         }
@@ -201,7 +220,7 @@ namespace Matkakirja
             var gt = georeferenssi.transform;
             var paikallinen = gt.localToWorldMatrix;
             Vector3 kp = kamera.transform.position;
-            float skaala = Mathf.Max(1e-9f, gt.lossyScale.x), nyt = Time.unscaledTime, piilo = 1f - nk.Syttyminen, iso = IsoNyt();
+            float skaala = Mathf.Max(1e-9f, gt.lossyScale.x), nyt = Time.unscaledTime, piilo = 1f - nk.Syttyminen;
             bool rajatAlussa = true;
             foreach (var s in nk.Naytettavat)
             {
@@ -214,6 +233,11 @@ namespace Matkakirja
                     // Piirtopiste (ankkuri tai ladottu) kuten 2D-merkillä, jonka paikalle malli tulee.
                     Asento(s.Lat, s.Lon, out i.Paikka, out i.Asento, out i.Normaali);
                     instanssit23[s.Id] = i;
+                }
+                if (!i.KorkeusOk && PinnanKorkeus(s.Id, s.Lat, s.Lon, out double hPinta))
+                {
+                    Asento(s.Lat, s.Lon, hPinta, out i.Paikka, out _, out _);
+                    i.KorkeusOk = true;
                 }
                 Vector3 p = gt.TransformPoint(i.Paikka);
                 Vector3 kohti = kp - p;
@@ -242,16 +266,19 @@ namespace Matkakirja
                 int e = malli * 2 + i.Lod;
                 if (lkm[e] >= EnintaanErassa) continue;
                 float koko = PisteMaailmassa(etaisyys) * pt / skaala;
-                var asento = IsoKierto(i.Normaali, iso) * PerusAsento(tieto, i.Normaali, i.Asento);
-                matriisit[e][lkm[e]] = paikallinen * Matrix4x4.TRS(i.Paikka, asento, Vector3.one * koko);
+                // Liioiteltu perspektiivi instanssikohtaisesti (jalan nosto LOD0:n ulottumasta, ettei malli hyppää LOD-vaihdossa).
+                var perus = PerusAsento(tieto, i.Normaali, i.Asento);
+                var pk = PerspektiiviKierto(i.Paikka, i.Normaali, perus, MalliPuoli(malli), out float nosto);
+                matriisit[e][lkm[e]] = paikallinen * Matrix4x4.TRS(i.Paikka + i.Normaali * (nosto * koko), pk * perus, Vector3.one * koko);
                 // z = ääriviivan leveys mallin yksiköissä (vain ääriviivamateriaali lukee sen).
                 tilat[e][lkm[e]] = new Vector4(muste, piilo, ReunaYksikoissa(pt), 0f);
                 if (pohjaLkm < EnintaanErassa)
                 {
-                    // Levy samasta matriisista mallin juuren tasossa kaakkoon siirrettynä; leveys LOD0:sta, ettei levy hyppää
-                    // LOD-vaihdossa.
+                    // Levy mallin juuren tasossa kaakkoon siirrettynä; leveys LOD0:sta, ettei levy hyppää LOD-vaihdossa.
                     float lev = PohjaSade * Leveys(MallinVerkko(malli, 0));
-                    pohjaMatriisit[pohjaLkm] = matriisit[e][lkm[e]] * Matrix4x4.TRS(PohjaSiirto, Quaternion.identity, new Vector3(lev, lev, lev));
+                    // Levy maassa ilman perspektiivin kallistusta.
+                    pohjaMatriisit[pohjaLkm] = paikallinen * Matrix4x4.TRS(i.Paikka, i.Asento, Vector3.one * koko)
+                                               * Matrix4x4.TRS(PohjaSiirto, Quaternion.identity, new Vector3(lev, lev, lev));
                     pohjaTilat[pohjaLkm++] = new Vector4(0f, piilo, 0f, 0f);
                 }
                 lkm[e]++;

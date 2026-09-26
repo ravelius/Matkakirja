@@ -123,6 +123,23 @@ namespace Matkakirja.Natiivi
             kynnykset.tooltip = "Linssien kynnykset: pois = kaikki linssit auki (kehittäjä).";
             Rakenne.Teksti("Linssien kynnykset", "mk-kytkinrivi__nimi", kynnykset);
             kynnyksetTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", kynnykset);
+            // Striimiääni (omistaja 27.9. klo 01.2x, web #kehittaja-striimiaani): xAI-ääni striimiluentaan (Striimiaani.cs).
+            var striimi = Rakenne.El("mk-kytkinrivi mk-kytkinrivi--valinta", kokeet);
+            striimi.tooltip = "Striimiluennan ääni (xAI Grok TTS). Oletus ara on omistajan valinta; muut äänet ovat kokeilua "
+                + "varten ja tottelevat vain kehittäjäkoodilla.";
+            Rakenne.Ikoni(Ikonit.Viiva["kaiutin"], null, striimi);
+            Rakenne.Teksti("Striimiääni", "mk-kytkinrivi__nimi", striimi);
+            var striimiNimet = new List<string> { Striimiaani.Oletus + " (oletus)" };
+            foreach (var a in Striimiaani.Aanet) if (a != Striimiaani.Oletus) striimiNimet.Add(a);
+            striimiaani = Lomake.Valinta(striimi, striimiNimet);
+            striimiaani.AddToClassList("mk-kytkinrivi__valinta");
+            striimiaani.RegisterValueChangedCallback(e =>
+            {
+                var valittu = Striimiaani.Aseta(striimiaani.index > 0 ? e.newValue : null);
+                UiNakymat.Hae()?.Tilarivi.Viesti(valittu != null
+                    ? "Striimiääni: " + valittu + " — seuraava luenta lähtee tällä äänellä"
+                    : "Striimiääni: " + Striimiaani.Oletus + " (oletus)");
+            });
             // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).
             // Fable 24.9.: vain kehittäjätilassa eikä koskaan App Store -buildissa.
             Tyohuonerivi("Raamattu", "<path d=\"M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z\"/><path d=\"M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z\"/>", Tyohuone.AvaaRaamattu);
@@ -184,6 +201,7 @@ namespace Matkakirja.Natiivi
         readonly Button reliefi;
         readonly VisualElement kokeet;
         Button kynnykset;
+        DropdownField striimiaani;
         Label kynnyksetTila;
         readonly KehittajaIkkuna kehittaja;
         public readonly MitaUutta MitaUutta;
@@ -266,6 +284,11 @@ namespace Matkakirja.Natiivi
                 bool paalla = !Matkakirja.Linssit.Linssirekisteri.Kehittajatila;
                 kynnykset.EnableInClassList("mk-valittu", paalla);
                 kynnyksetTila.text = paalla ? "PÄÄLLÄ" : "POIS";
+            }
+            if (striimiaani != null && Asetukset.Kehittaja && osa == Osa.Kehittaja)
+            {
+                string v = Striimiaani.Valittu;
+                striimiaani.SetValueWithoutNotify(v ?? striimiaani.choices[0]);
             }
             // E7: webin versiokulma "vNNN" / "vNNN · kehittäjä" (js/main.js); sisältöversio vain Tietoja-näkymässä.
             versio.text = "v" + Application.version + (Asetukset.Kehittaja ? " · kehittäjä" : "");
