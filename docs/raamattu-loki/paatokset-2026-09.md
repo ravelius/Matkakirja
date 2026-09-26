@@ -6499,3 +6499,7 @@ Fable 09.0x. Omistajan 08.1x päätös toteutettu webissä; natiivi build 20:ssa
 ## OMISTAJA 09.0x: 'LOPETA KAIKKI SESSIOT' → FABLE PYSAYTTI ROOLISESSIOT (NATIIVISEPPA JA NATIIVI-UI KESKEN, MUUT 8 JO IDLE), POSTIVAHDIN KIERROSKETJU LOPETETAAN; TILINVAIHTO: UUSI FABLE LUO SESSIOT docs/raportit/viesti-fable-aloitus.md:N MUKAAN; VIIKKO 97 %; VANHA FABLE local_593b89a1 LEPAA (26.9.2026 klo 09.01)
 
 Tila: build 19 TF, web pohja 26 tuotannossa, build 20 -juna 3f2db11b/2ab54860, musiikin vaihe 2 generoinnissa 36222088349 (leikkaus seuraajalle).
+
+## UUSI FABLE (TILI VAIHTUI) ALOITTI 09.1x: SESSIO local_5df52e10-10e4-4b72-9554-0049db300dfe, RC PAALLA, HAARA claude/bold-ride-vow4ki; ROOLISESSIOITA EI OLE → LUODAAN 10 RAAMATUN KAAVALLA, POSTIVAHTI ENSIN (26.9.2026 klo 09.11)
+
+Uusi Fable-sessio local_5df52e10-10e4-4b72-9554-0049db300dfe (tili vaihtui klo 09.0x, vanha local_593b89a1 lepää). Remote Control päällä. list_sessions: ei muita sessioita → kaikki 10 roolisessiota luodaan osascript-kaavalla (SESSIOIDEN LUONTI ILMAN OMISTAJAA), Postivahti ensin. Jono luovutus -b:n ja aloitusviestin mukaan: build 20 -juna (pohja-26, musiikin kytkentä, 153–155), webin pohja 26 tuotannossa jo 08.56, musiikin vaihe 2, elävän kartan kohdat 2/4/5.
