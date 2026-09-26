@@ -7235,3 +7235,7 @@ Julkaisija: TF 1.0.25 lahetetty ja ASC:ssa kasitelty, ajo 36252890020, CFBundleV
 ## PULUN KARTTAVAISTO 1.0.26-JUNASSA c39797f9 (26.9.2026 klo 18.59)
 
 Natiiviseppa: Codexin 303a32ec + Natiivi-UI:n Sano-korjaus = c39797f9 junassa juna/b13 eb73863a ilman ristiriitoja; kaannos 75388de2 asennettu 18.58 Laitetestaajan ja pariteetin simulaattoreihin. Laitetodennus iPad Pro 13:lla (kurkistuksen rajaus, 5 paluuta, vahennetty liike); iPhone- ja iPad Pro 11 -mittaus odottaa kytkentaa. Merge- ja asennustila ilmoitettu, laitetila tulossa.
+
+## Z10 V4 KAYNNISSA 8 YTIMELLA 18.57 (26.9.2026 klo 18.59)
+
+Karttaseppa: omistajan hyvaksynnalla (Karttasepan sessiossa) v3 pysaytetty siististi, v4 kaynnistyi 18.57 8 ytimella (free 78 %, levy 157 Gt). Valmiit ohitettu: 136/419, jonossa 283. Seuraava tilarivi 200:n kohdalla. Maakuntamaat (ajo-20260927m) automaattisesti peraan.
