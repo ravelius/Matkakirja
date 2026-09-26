@@ -39,6 +39,15 @@ export const RAAMATTU = {
           + 'on CLAUDE.md:n ja docs/roolitus.md:n ensimmäisellä rivillä. '
           + 'Kumoaa 1.9.2026 kohdan poikkeuksen "todella vaikeaan ongelmaan '
           + 'kysyen".',
+        'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
+          + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
+          + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '
+          + 'päiväkirjan jäljillä. Kartalla, nostoissa, elävissä elementeissä ja '
+          + 'linsseissä saa siis olla nykyajan kohteita (Lontoon maailmanpyörä, Korintin '
+          + 'kanava, nykyiset rautatiet) — vain ULKOASU on vanhaa (pergamentti, muste, '
+          + '1873-rajat ja -lippu tyylinä, isoisän ääni). Vuoden 1873 tarkistusta ei tehdä '
+          + 'nykyajan kohteille; vain isoisän päiväkirjan ja 1873-reittien sisältö on '
+          + 'aikakauden mukaista. Kukaan rooli ei hylkää ideaa "koska sitä ei ollut 1873".',
         'TYÖTAPA JA SESSIOT — NOPEUS JA TOKENITEHOKKUUS (omistaja 20.09.2026 klo 20.40, SITOVA, '
           + 'koskee kaikkia sessioita nyt ja jatkossa; muutokset vain omistajan kortilla). '
           + 'A) ROOLIT (kuusi sessiota, omistaja avaa, Fable nimeää "Rooli (malli)"): '
