@@ -60,7 +60,7 @@ import {
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { asetaNostonKuva, piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
-import { nostokuvaAloita } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaVakiokortti } from './nostokuva.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
@@ -238,7 +238,11 @@ export function avaaSkandaali(ui, iso, skandaali) {
     kaksipalstaTaitto: true,
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoSkandaali(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoSkandaali(sisalto, undefined);
+    // Kuvaton kortti samaan kokoon ja paikkaan kuin kuvallinen (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
+  }
   // Kaiutin kortin otsikkoriville (omistaja 6.9.2026, juuri tästä
   // kortista: "Kaikissa missä on tekstiä, saisi olla striimi lukijan
   // symboli") — js/lukija.js lisaaLukijanappi.
@@ -473,7 +477,7 @@ export function suljeSkandaali(ui) {
   if (typeof document === 'undefined') return;
   for (const vanha of document.querySelectorAll('.skandaali-kerros')) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
-    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+    vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
     vanha.remove();
   }
 }
