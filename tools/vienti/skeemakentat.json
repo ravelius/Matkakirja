@@ -21,10 +21,16 @@
   "1.40": "a6303d9592c8e80b",
   "1.41": "a6303d9592c8e80b",
   "1.42": "450976039e4a59be",
-  "1.43": "07faa994d7f35bb1"
+  "1.43": "07faa994d7f35bb1",
+  "1.44": "21ebc85d60d4db64",
+  "1.45": "f2f2e3b5ee71c11f",
+  "1.46": "e04def76b9069363",
+  "1.47": "293c3b3783dd4ab6",
+  "1.48": "e46e9962636f79b9",
+  "1.49": "a157da8dd145220b"
  },
  "uusin": {
-  "skeemaversio": "1.43",
+  "skeemaversio": "1.49",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -161,13 +167,18 @@
     "kaupunki",
     "kaupunkiAvain",
     "kohdekartta",
+    "kokoluokka",
+    "kokoluokkaLahde",
     "ladottu",
     "lahde",
     "lahizoom",
+    "laji",
     "lat",
     "liitetytNostot",
     "lon",
     "maa",
+    "maakunta",
+    "maakuntaLahde",
     "nimi",
     "nimio",
     "paakartalla",
@@ -422,7 +433,29 @@
     "iso3",
     "nimi",
     "renkaat",
+    "salaisuus",
     "vari"
+   ],
+   "maakuntasalaisuudet": [
+    "aihe",
+    "id",
+    "kategoria",
+    "kokoluokka",
+    "laji",
+    "lat",
+    "lon",
+    "lyhyt",
+    "maa",
+    "maakunta",
+    "maakuntaNimi",
+    "nappi",
+    "nimi",
+    "nimio",
+    "pikkukuva",
+    "pikkukuvaLahde",
+    "teksti",
+    "tunnus",
+    "viite"
    ],
    "maalehdet": [
     "aiheet",
@@ -595,6 +628,16 @@
     "maksu",
     "via"
    ],
+   "reitit1873": [
+    "/lahteet",
+    "id",
+    "lahde",
+    "laji",
+    "lisenssi",
+    "nimi",
+    "viivat",
+    "vuosi"
+   ],
    "saannot": [
     "arvo",
     "id",
@@ -750,6 +793,7 @@
   },
   "manifest": [
    "$skeema",
+   "kaupunkilehdetKaupungeittain",
    "kokoelmat",
    "kuvaus",
    "laskennat",

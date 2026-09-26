@@ -46,6 +46,7 @@ import { logiikkaLista } from './logiikka.mjs';
 import { kokoaOffline } from './offline.mjs';
 import { lueKuvamitat } from './kuvamitat.mjs';
 import { kokoaLisenssit } from './lisenssit.mjs';
+import { pikkukuvaOsoite } from './elava-kartta.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -191,8 +192,36 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        nimet webin maakunnanNimi-funktiolla — Fable 25.9.2026, Karttasepän löydökset 105/107.
  *   1.43 maakuntarajat.vari (0–4): webin väri ämpärin <ISO>.json-aineistosta (tools/tee-maakuntavektorit.mjs
  *        varita, naapureilla eri) — Natiiviseppä 25.9.2026, sama sävy kuin webissä.
+ *   1.44 karttavalot.laji = webin symLaji (kohteen tyyppi: vuori, saari, jarvi, meri, joki, ruoka,
+ *        tekniikka…; eläintäky elain): kuvamerkki ja vektorisymboli lajin mukaan — Pelikoodari, löydös 125.
+ *   1.45 Elävä kartta (omistaja 26.9.2026, tools/vienti/elava-kartta.mjs): karttavalot.kokoluokka (+ kokoluokkaLahde),
+ *        karttavalot.maakunta (+ maakuntaLahde) ja maakuntarajat.salaisuus. Vain natiivi.
+ *   1.46 kokoelma reitit1873: vuoden 1873 laivalinjat ja rautatiet (Karttaseppä #3266, tools/vienti/reitit1873.mjs),
+ *        juuressa lahteet. Elävä kartta, vain natiivi.
+ *   1.47 kokoelma maakuntasalaisuudet: maakunnan salaisuus-nosto (lyhyt, teksti, nappi, viite, lat/lon) — Pelikoodari
+ *        26.9.2026; oma kokoelma, koska build 16/17 piirtäisi karttavalorivit (Natiiviseppä). Elävä kartta.
+ *   1.48 manifest.kaupunkilehdetKaupungeittain [{ id, tiedosto, sha256, tavuja }]: kokoelmat/kaupunkilehdet/<id>.json
+ *        (sama kokoelmamuoto, yksi alkio) — Pelikoodari, build 19 (16 Mt:n lehtikokoelma kylmänä 1,9 s).
+ *   1.49 pikkukuva = ämpäriosoite (https) tai null: maakuntasalaisuudet.pikkukuva (+ pikkukuvaLahde) ja moduulin
+ *        js/packs/maakunnat-luonnehdinnat.js alueiden pikkukuva (datan polku/tunnus muunnetaan osoitteeksi,
+ *        tools/vienti/elava-kartta.mjs pikkukuvaOsoite) — Fable 26.9.2026, löydökset 115 ja 158. Elävä kartta.
  */
-export const SKEEMAVERSIO_TARKKA = '1.43';
+export const SKEEMAVERSIO_TARKKA = '1.49';
+
+/*
+ * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
+ * tämä on ainoa poikkeus, jotta natiivi saa maakunnan pikkukuvan ilman omaa polkusääntöä.
+ */
+const PIKKUKUVAMODUULIT = new Set(['js/packs/maakunnat-luonnehdinnat.js']);
+function osoitteiksiPikkukuvat(puu, missa) {
+  if (Array.isArray(puu)) { puu.forEach((x, i) => osoitteiksiPikkukuvat(x, `${missa}/${i}`)); return; }
+  if (!puu || typeof puu !== 'object') return;
+  for (const [k, v] of Object.entries(puu)) {
+    if (k === 'pikkukuva' && v && typeof v === 'object') v.osoite = pikkukuvaOsoite(v.osoite, `${missa}/${k}/osoite`);
+    else if (k === 'pikkukuva') puu[k] = pikkukuvaOsoite(v, `${missa}/${k}`);
+    else osoitteiksiPikkukuvat(v, `${missa}/${k}`);
+  }
+}
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
@@ -264,6 +293,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
           mediat.get(teksti).esiintymat.push({ moduuli: polku, export: nimi, polku: kohta });
         },
       });
+      if (PIKKUKUVAMODUULIT.has(polku)) osoitteiksiPikkukuvat(puu, `${polku}#${nimi}`);
       const teksti = JSON.stringify(puu);
       funktioita = (teksti.match(/\{"\$funktio":/g) || []).length;
       exportit[nimi] = puu;
@@ -311,6 +341,19 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     const tiedosto = `kokoelmat/${nimi}.json`;
     tiedostot.set(tiedosto, teksti);
     kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti), tavuja: tavuja(teksti) });
+  }
+  /*
+   * Skeema 1.48 (Pelikoodari, build 19): kaupunkilehdet myös kaupungeittain (16 Mt kokonaisena, noin 1,9 s kylmänä).
+   * kokoelmat/kaupunkilehdet/<id>.json = sama kokoelmamuoto yhdellä alkiolla, jotta natiivi lataa vain valitun
+   * kaupungin lehden (ESILATAUSPOLITIIKKA kohta 3). Kokonainen kokoelma jää vanhoille buildeille.
+   */
+  const lehdetKaupungeittain = [];
+  for (const a of kokoelmat.kaupunkilehdet?.alkiot ?? []) {
+    const k = kokoelmat.kaupunkilehdet;
+    const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi: 'kaupunkilehdet', ...k, alkiot: [a] }) + '\n';
+    const tiedosto = `kokoelmat/kaupunkilehdet/${a.id}.json`;
+    tiedostot.set(tiedosto, teksti);
+    lehdetKaupungeittain.push({ id: a.id, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) });
   }
 
   const lisatiedostot = LISATIEDOSTOT.map((polku) => {
@@ -366,6 +409,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     skeemat: skeemat.map((f) => `skeema/${f}`),
     media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
+    kaupunkilehdetKaupungeittain: lehdetKaupungeittain,
     webNakymat,
     offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
     lisenssit: { tiedosto: 'lisenssit.json', sha256: sha(lisenssiTeksti), tavuja: tavuja(lisenssiTeksti) },
