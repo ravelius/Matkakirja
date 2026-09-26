@@ -666,8 +666,8 @@ namespace Matkakirja
         {
             var p = Instanssi;
             if (p == null) return "-";
-            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}) jono {p.jono.Count} kiire {p.kiireJono.Count} " +
-                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} tauolla {p.tauolla.Count}";
+            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}, kiire {p.kiireKaynnissa}) jono {p.jono.Count} kiire {p.kiireJono.Count} " +
+                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} tauolla {p.tauolla.Count} nälkä163b {PohjaNalka}";
         }
 
         sealed class Lahde { public string Nimi = "?"; }
@@ -852,15 +852,24 @@ namespace Matkakirja
             // Kohdealueen paikat eivät vie näkyvän kartan paikkoja (muut rajat ilman niitä).
             // Verhon kevennys (BUILD 16): näkyvän kartan jonolle enemmän paikkoja, tausta tauolla.
             int raja = verhot > 0 ? Math.Max(rinnakkain, VerhoRinnakkain) : rinnakkain;
-            while (kaynnissa - kohdeKaynnissa < raja + 4 && kiireJono.TryDequeue(out var k))
+            // LÖYDÖS 163b (Pelikoodarin löytö, Fablen päätös 26.9.): NÄKYVÄN RUUDUN POHJALAATAT AINA ENSIN. Ennen kiirejono
+            // (huntu, kerma, Sentinel) sai raja + 4 paikkaa ennen näkyvää jonoa, ja maakuntanäkymässä hunnun pyynnöt
+            // nälkiinnyttivät pohjan ja maaston (kohdemaa pergamenttina, naapurit ilman huntua piirtyivät). Nyt näkyvä jono
+            // ensin, ja kiirejono saa enintään puolet paikoista, kun näkyvässä jonossa on odottajia (tyhjänä raja + 4 kuten ennen).
+            while (kaynnissa - kohdeKaynnissa < raja && jono.TryDequeue(out var h))
+            {
+                if (h.Yrityksia == 0 && h.KuluS > PohjaOdotusRaja && kiireKaynnissa > 0) KirjaaNalka(h);
+                StartCoroutine(Lataa(h));
+            }
+            int kiireRaja = jono.IsEmpty ? raja + 4 : Math.Max(2, raja / 2);
+            while (kaynnissa - kohdeKaynnissa < raja + 4 && kiireKaynnissa < kiireRaja && kiireJono.TryDequeue(out var k))
             {
                 if (k.Esi != null && k.Esi.Peruttu) { k.Valmis.TrySetResult((499, null)); continue; }
                 // Verhon aikana kiirejonon esilatauksista vain verhon odottama (Verholle); kohdealueen Sentinel odottaa verhon
                 // lähtöä kuten kohdealueen muutkin laatat (kohdeJono) ja palaa sitten kiirejonoon (VerhoKevennys).
                 if (verhot > 0 && k.Esi != null && !k.Esi.Verholle) { tauolla.Add(k); continue; }
-                StartCoroutine(Lataa(k));
+                StartCoroutine(LataaKiire(k));
             }
-            while (kaynnissa - kohdeKaynnissa < raja && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
             while (verhot == 0 && kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
             {
                 if (c.Esi != null && c.Esi.Peruttu) { c.Valmis.TrySetResult((499, null)); continue; }
@@ -914,6 +923,28 @@ namespace Matkakirja
             kohdeKaynnissa++;
             try { yield return Lataa(h); }
             finally { kohdeKaynnissa--; }
+        }
+
+        /// <summary>Kiirejonon haku (163b: oma laskuri, jotta kiire ei vie näkyvän jonon paikkoja).</summary>
+        IEnumerator LataaKiire(Haku h)
+        {
+            kiireKaynnissa++;
+            try { yield return Lataa(h); }
+            finally { kiireKaynnissa--; }
+        }
+
+        int kiireKaynnissa;
+        /// <summary>Vartija 163b: näkyvän kartan laatta odotti jonossa yli tämän (s), kun kiirejonon hakuja oli käynnissä.</summary>
+        public const double PohjaOdotusRaja = 2.0;
+        /// <summary>Vartija 163b: kiirejonon takia yli 2 s odottaneet näkyvän kartan laatat.</summary>
+        public static int PohjaNalka { get; private set; }
+
+        void KirjaaNalka(Haku h)
+        {
+            PohjaNalka++;
+            if (PohjaNalka <= 20 || PohjaNalka % 100 == 0)
+                Debug.Log($"MATKAKIRJA VARTIJA 163b: pohjalaatta odotti {h.KuluS:0.0} s kiirejonon takia ({h.Luokka} {h.Polku}; " +
+                          $"kiire käynnissä {kiireKaynnissa}, jonossa {kiireJono.Count}) #{PohjaNalka}");
         }
 
         IEnumerator Lataa(Haku h)
