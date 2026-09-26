@@ -882,6 +882,70 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// Laitteen asetukset, jotka säilyvät Uusi peli -tyhjennyksessä (web main.js SAILYVAT_ASETUKSET, omistaja
+        /// 14.8.2026: "jos aloitan uuden pelin, kehittäjätila saisi pysyä päällä"): kehittäjätila ja lukijaäänen
+        /// säädöt. Natiivin omat kehittäjäkytkimet (linssien kehittäjätila, maailmatila) ovat samaa laitetta.
+        /// Pulun kehittäjäkoodi on Keychainissa, johon tyhjennys ei koske.
+        /// </summary>
+        /// Arvon laji kulkee mukana, koska PlayerPrefs ei kerro sitä (luku luetaan GetIntillä).
+        static readonly (string Avain, bool Luku)[] SailyvatAsetukset =
+        {
+            ("matkakirja-kehittaja", false),                // Asetukset.KehittajaAvain (SetString)
+            ("matkakirja-kehittaja-maailma", true),         // Paavalikko.MaailmaAvain (SetInt)
+            (LinssiOhjain.KehittajatilaAvain, true),        // SetInt
+            (Lukijaaani.KoodiAvain, false), (Lukijaaani.VoimaAvain, false),
+            (Lukijaaani.NopeusAvain, false), (Lukijaaani.AsetusAvain, false),
+        };
+
+        /// <summary>Uusi peli -tyhjennys tehtiin: pelin muistit ovat poissa, aloitusnäkymä seuraa (löydös 177).</summary>
+        public event Action MuistitTyhjennetty;
+
+        /// <summary>
+        /// Valikon "Uusi peli" (web main.js tyhjennaMuistit, löydös 177): KAIKKI pelin muistit pois ennen
+        /// aloitusnäkymää — tallennus, passin leimat (ja niiden mukana hankitut linssit), laukku, löydetyt nostot,
+        /// heränneet maakunnat, kuljettu reitti, tavoite ja PlayerPrefsin pelimuistit (Pulun avaus ja paljastus,
+        /// poiminnat, reaktiot, linssien muistit, ääniasetukset …). Säilyvät vain <see cref="SailyvatAsetukset"/>.
+        /// Web poistaa avaimet etuliitteellä ja lataa sivun uudelleen; PlayerPrefsiä ei voi luetella, joten
+        /// täällä kaikki pyyhitään (DeleteAll) ja laitteen asetukset kirjoitetaan takaisin — uusi avain ei jää
+        /// siivouksen ulkopuolelle. Sisällön välimuistit (laatat, kuvat, äänet, paketit) jäävät: ne ovat
+        /// ladattua sisältöä eivätkä pelin muistia, ja niiden pyyhkiminen veisi offline-pelin.
+        /// Voiton "Uusi matka" ei tyhjennä (UusiMatka), kuten webissäkään.
+        /// </summary>
+        public void TyhjennaMuistit()
+        {
+            using var _ = Ajoita("tyhjennaMuistit");
+            if (LehtiAuki) SuljeLehti();
+            PeruLykkays();
+            kysymysNakyma?.Piilota();
+            KysymysTila = null;
+            // Muistista ensin: mikään ei saa tallentaa vanhaa matkaa takaisin levylle.
+            matka = null;
+            jatkettava = null;
+            Tavoite = null;
+            Viimeisin = null;
+            linssit = null;
+            kytkettyRekisteri = null;
+            foreach (var polku in new[] { TallennusPolku, TavoitePolku, PassiPolku })
+                try { if (File.Exists(polku)) File.Delete(polku); }
+                catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tyhjennys ei poistanut " + Path.GetFileName(polku) + ": " + e.Message); }
+            var sailyvat = SailyvatAsetukset.Where(a => PlayerPrefs.HasKey(a.Avain))
+                .Select(a => (a.Avain, a.Luku, Teksti: a.Luku ? null : PlayerPrefs.GetString(a.Avain), Arvo: a.Luku ? PlayerPrefs.GetInt(a.Avain) : 0))
+                .ToList();
+            PlayerPrefs.DeleteAll();
+            foreach (var a in sailyvat)
+                if (a.Luku) PlayerPrefs.SetInt(a.Avain, a.Arvo); else PlayerPrefs.SetString(a.Avain, a.Teksti);
+            PlayerPrefs.Save();
+            LataaPassi();
+            Tila = SilmukanTila.Aloitus;
+            tilarivi.Aseta("");
+            PaivitaNappula();
+            Debug.Log("MATKAKIRJA peli: muistit tyhjennetty (Uusi peli), säilyi " + sailyvat.Count + " laiteasetusta");
+            Ilmoita(MuistitTyhjennetty);
+            // Kartta näyttää aloitusnäkymän alla jo tyhjän maailman (ei vanhan matkan heränneitä maakuntia).
+            if (muste != null) Ilmoita(MusteValmis);
+        }
+
+        /// <summary>
         /// Uusi peli lähtökaupungista (null = Pariisi tai paketin ensimmäinen aloituskaupunki).
         /// siemen null = kellosta.
         /// </summary>
@@ -905,6 +969,8 @@ namespace Matkakirja.Natiivi
             Tallenna();
             Debug.Log("MATKAKIRJA peli: uusi peli, " + PeliApu.TilaTeksti(verkko, matka.Tila));
             IlmoitaUusiMatka();
+            // Löydös 177: heränneet maakunnat, nostojen muste ja kartussin laskurit uuden matkan löydöistä (tyhjä).
+            if (muste != null) Ilmoita(MusteValmis);
             Kartalle(true);
         }
 

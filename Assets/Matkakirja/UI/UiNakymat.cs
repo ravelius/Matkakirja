@@ -362,7 +362,8 @@ namespace Matkakirja.Natiivi
                 var o = PeliOhjain.Instanssi;
                 if (o == null) { Tilarivi.Viesti("Peli ei ole vielä käynnissä"); return; }
                 SuljeKaikki();
-                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka"); PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka-2");
+                // Löydös 177: kaikki pelin muistit pois (web tyhjennaMuistit), myös linssien muistit ja passi.
+                o.TyhjennaMuistit();
                 Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), null);
             };
 
