@@ -7723,3 +7723,7 @@ Omistaja 01.4x: "Jatkossa käytä taas apu sessioita" — Fablen oma koodaus raj
 ## OMISTAJA HYVAKSYI AVAUSKORTIN WEBIIN (PR 3364) JA TRAILERI+POSTIKORTIT JAAVAT; #3361 JA #3362 MAINISSA (27.9.2026 klo 01.19)
 
 Omistaja 01.4x kortilla: avauskortti webiin (Pelikoodari PR #3364, v2291; kuvasarjat proto-3d/lokit/kaupunkikortti-web/) hyvaksytty → Julkaisijan junaan; Natiivi-UI tekee natiivin saman mallin mukaan. Saapumisen traileri ja 1873-postikortit jaavat — "ei mitaan automaattisesti" koskee vain lehden ja kortin avautumista. Julkaisija: #3361 (Raamattu) mainissa 01.02, #3362 (astro era 3, v2291) 01.14; #3363 rebase Sisaltokirjurilla. Fablen xAI-era: v2292 nostettu, kaksoisavaimet ok, standalone-build ok, tayssarja ajossa.
+
+## NATIIVI-UI LAITE-ERA VALMIS: 174 MITATTU, 173/169, 170, 179, 178 PASS (JUNA ba90668f) (27.9.2026 klo 01.20)
+
+Natiivi-UI 01.2x: juna/b13 ba90668f (kaannos da5c85d4) iPhone 17 + iPad Pro 11, kuvat proto-3d/lokit/natiivi-ui-laite-20260927/ (versio+kulma kuvassa). 174 iPad Ranskan maataso: veto/nipistys mediaani 16,6 ms, p95 33,4 ms, max 34,9 ms, levossa 30 fps. 173/169 PASS (Kaikki|Pois samalla rivilla, Kaikki varjaa koko maan). 170 PASS (v176 → v194 kesken istunnon, Attikan kuva heti). 179 PASS (Tapaa-nappi pois). 178 PASS (Ateenan 4 tarinakohdetta nostoissa). Avoinna 177-korjaus cc33ba3b seuraavasta junakaannoksesta. Seuraava era: Pulun lukijanapin tila (webin mallin jalkeen) ja kehittajavalikon striimiaani natiiviin.
