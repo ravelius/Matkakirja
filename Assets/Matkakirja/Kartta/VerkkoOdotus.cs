@@ -187,7 +187,8 @@ namespace Matkakirja
                       .Append(",\"pros\":").Append(o.N > 0 ? (100 * o.Tavut / o.N).ToString(CultureInfo.InvariantCulture) : "0").Append('}');
                 }
                 sb.Append("},\"esilataaja\":{\"kaynnissa\":").Append(Esilataaja.Kaynnissa).Append(",\"jonossa\":").Append(Esilataaja.Jonossa)
-                  .Append(",\"uusintoja\":").Append(Esilataaja.Uusintoja).Append(",\"joutilaita\":").Append(Esilataaja.JoutilaitaHetkia).Append(",\"ennakoituja\":").Append(Esilataaja.Ennakoituja).Append("}}");
+                  .Append(",\"uusintoja\":").Append(Esilataaja.Uusintoja).Append(",\"joutilaita\":").Append(Esilataaja.JoutilaitaHetkia).Append(",\"ennakoituja\":").Append(Esilataaja.Ennakoituja)
+                  .Append(",\"tiedostoja\":").Append(Esilataaja.TiedostojaValmiina).Append("}}");
             }
             var json = sb.ToString();
             try { File.WriteAllText(Path.Combine(Application.persistentDataPath, "verkko-yhteenveto.json"), json); } catch (Exception) { }

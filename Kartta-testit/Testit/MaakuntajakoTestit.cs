@@ -110,8 +110,12 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(2, j.Maat.Count);
             Oleta.Sama(3, j.Hae("AAA").Alueet.Count);
             Oleta.Sama("Aa", j.Hae("AAA").Nimi);
-            Oleta.Sama(3, j.Hae("AAA").Kaaret.Count);
-            Oleta.Sama(1, j.Hae("BBB").Kaaret.Count);
+            // Löydökset 113/126: vain alueiden välinen raja piirretään; ranta ja saaren rengas ovat ulkorajaa.
+            Oleta.Sama(1, j.Hae("AAA").Kaaret.Count, "AAA:n sisäraja");
+            Oleta.Sama(2, j.Hae("AAA").UlkoKaaret.Count, "AAA:n etelärannikko ja saari");
+            Oleta.Sama(0, j.Hae("BBB").Kaaret.Count);
+            Oleta.Sama(1, j.Hae("BBB").UlkoKaaret.Count);
+            Oleta.Sama(3, j.UlkoKaaret);
             Oleta.Sama(1, j.KohdistamattomatKaaret);
             Oleta.Sama(2, j.Hae("AAA").Rypaat.Count, "emämaa ja saari");
             Oleta.Sama(1, j.Hae("BBB").Rypaat.Count, "±180 yksi rypäs");
@@ -158,7 +162,9 @@ namespace Matkakirja.Kartta.Testit
             k = Maakuntajako.Rasteroi(r);
             Oleta.Sama(1, (int)Pikseli(r, k, 179.5, 10.5), "länsipuoli");
             Oleta.Sama(1, (int)Pikseli(r, k, -179.5, 10.5), "itäpuoli (-179,5 ≡ 180,5)");
-            Oleta.Sama(1, j.Janat(r).Count);
+            // BBB:n ainoa kaari on ulkoraja (löydökset 113/126: ei piirretä); sen päät ovat silti rajauksessa sauman yli.
+            Oleta.Sama(0, j.Janat(r).Count, "ulkoraja ei piirry");
+            Oleta.Tosi(r.Sisalla(179, 10) && r.Sisalla(180, 10) && r.Sisalla(-179.5, 10.5), "sauman yli rajauksessa");
         }
 
         // ---- Oikea aineisto ----
@@ -220,7 +226,10 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(138, j.Maat.Count);
             Oleta.Tosi(j.AlueitaEnintaan <= Maakuntajako.AluetaEnintaan, $"{j.AlueitaEnintaanMaa} {j.AlueitaEnintaan}");
             Oleta.Tosi(j.KohdistamattomatKaaret < 100, $"kohdistamatta {j.KohdistamattomatKaaret}");
-            foreach (var m in j.Maat.Values) Oleta.Tosi(m.Kaaret.Count > 0, m.Iso3 + " ilman kaaria");
+            foreach (var m in j.Maat.Values)
+                Oleta.Tosi(m.Kaaret.Count + m.UlkoKaaret.Count > 0, m.Iso3 + " ilman kaaria");
+            Console.WriteLine($"      ulkorajan kaaria pois {j.UlkoKaaret}, alueiden välisiä jäljellä " +
+                              $"{System.Linq.Enumerable.Sum(j.Maat.Values, m => m.Kaaret.Count)}");
         }
 
         [Testi]
@@ -293,7 +302,9 @@ namespace Matkakirja.Kartta.Testit
                 },
             });
             var m = j.Hae("DDD");
-            Oleta.Sama(5, m.Kaaret.Count);
+            Oleta.Sama(1, m.Kaaret.Count, "vain alueiden a ja b raja x = 2");
+            Oleta.Sama(4, m.UlkoKaaret.Count, "ulkoraja pois");
+            Oleta.Tosi(m.Kaaret[0][0] == (2.0, 0.0) && m.Kaaret[0][1] == (2.0, 1.0), "x = 2 jää");
             Oleta.Sama(1, m.SisaisetKaaret.Count);
             Oleta.Sama(1, j.SisaisetKaaret);
             Oleta.Tosi(m.SisaisetKaaret[0][0] == (1.0, 0.0) && m.SisaisetKaaret[0][1] == (1.0, 1.0), "x = 1 pois");
@@ -312,16 +323,18 @@ namespace Matkakirja.Kartta.Testit
                 var m = j.Hae(iso);
                 var r = j.Rajaa(iso, lat, lon, Tavoite, Budjetti, Sivu);
                 int jalkeen = j.Janat(r).Count, pois = j.Janat(r, true).Count;
-                Console.WriteLine($"      {iso}: kaaria {m.Kaaret.Count + m.SisaisetKaaret.Count} → {m.Kaaret.Count}, " +
+                Console.WriteLine($"      {iso}: kaaria {m.Kaaret.Count + m.SisaisetKaaret.Count + m.UlkoKaaret.Count} → {m.Kaaret.Count}, " +
                                   $"rajajanoja {jalkeen + pois} → {jalkeen}");
                 if (iso == "FRA")
                 {
                     // 96 departementtia 13 alueessa (+ merentakaiset): sisäisiä kaaria on paljon, alueiden rajat jäävät.
                     Oleta.Tosi(m.SisaisetKaaret.Count > 50, $"FRA sisäisiä {m.SisaisetKaaret.Count}");
                     Oleta.Tosi(m.Kaaret.Count > 20, $"FRA jäljellä {m.Kaaret.Count}");
-                    // Jokainen jäljelle jäänyt kaari on alueiden välinen raja tai ulkoraja.
+                    // Jokainen jäljelle jäänyt kaari on alueiden välinen raja (ei sisäinen eikä ulkoraja).
                     var om = Maakuntajako.JanaOmistajat(m.Alueet);
                     foreach (var k in m.Kaaret) Oleta.Tosi(!Maakuntajako.SisainenKaari(k, om), "sisäinen jäi");
+                    foreach (var k in m.Kaaret) Oleta.Tosi(!Maakuntajako.UlkoKaari(k, om), "ulkoraja jäi");
+                    Oleta.Tosi(m.UlkoKaaret.Count > 20, $"FRA ulkorajaa {m.UlkoKaaret.Count}");
                 }
             }
         }

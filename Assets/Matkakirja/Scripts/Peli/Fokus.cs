@@ -4,8 +4,8 @@
 //   laatasta tai vihreästä pisteestä → aarre.
 // Lehden "aarteen avaajat" ovat fokusvirran lehtitehtävät, joiden palkinto ei ole juliste, ja
 // kulttuurivisa (fokus:kulttuurivisa), kun kaupungilla on kohtaaminen ja aarrepiste. Oikein ratkaistu
-// avaaja tai ostettu pullavinkki sytyttää pisteen (fokusAarreAvattu); kaksi ratkaistua nostotehtävää
-// avaa sen myös (fokusAarrepisteAuki). Piste näkyy nykyisessä kaupungissa niin kauan kuin laatta on
+// avaaja tai ostettu pullavinkki sytyttää pisteen (fokusAarreAvattu); yksi ratkaistu nostotehtävä
+// avaa sen myös (fokusAarrepisteAuki; löydös 145, omistaja 25.9.2026: kynnys kahdesta yhteen). Piste näkyy nykyisessä kaupungissa niin kauan kuin laatta on
 // kääntämättä, lukittuna tai auki. Sisältö: kokoelma fokusvirrat (kohtaaminen, sahketehtava,
 // kohtaamispiste.laudat.maailmankartta {x, y} laudan Miller-pisteinä, lehtitehtavat).
 // Ei UnityEngineä: testattavissa (Peli-testit/Testit/FokusTestit.cs).
@@ -33,9 +33,9 @@ namespace Matkakirja.Natiivi
         public const string Etuliite = "fokus";
         public const string KulttuurivisaId = "kulttuurivisa";
         /// <summary>Web NOSTOTEHTAVIA_AARREPISTEESEEN.</summary>
-        public const int NostotehtaviaAarrepisteeseen = 2;
+        public const int NostotehtaviaAarrepisteeseen = 1;
         /// <summary>Web AARREPISTEEN_LUKKOLAPPU.</summary>
-        public const string Lukkolappu = "ratkaise kaksi kysymystä kartalta";
+        public const string Lukkolappu = "ratkaise kysymys kartalta";
 
         sealed class Kaupunki
         {
@@ -145,7 +145,7 @@ namespace Matkakirja.Natiivi
         public bool AarreAuki(Kaupat kaupat, string kaupunki) =>
             AarreAvattu(kaupat, kaupunki) || !kaupat.Matka.LaattaTassa(kaupunki);
 
-        /// <summary>Web fokusAarrepisteAuki: avattu tai kaksi nostotehtävää ratkaistu.</summary>
+        /// <summary>Web fokusAarrepisteAuki: avattu tai nostotehtävä ratkaistu (löydös 145: yksi riittää).</summary>
         public bool AarrepisteAuki(Kaupat kaupat, string kaupunki) =>
             AarreAvattu(kaupat, kaupunki) || kaupat.Matka.Tila.Kaupat.NostotehtavatRatkaistu >= NostotehtaviaAarrepisteeseen;
 

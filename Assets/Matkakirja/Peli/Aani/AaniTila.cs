@@ -76,6 +76,8 @@ namespace Matkakirja.Peli
             public string CityId, Url, Osoite;
             public double Alku, Tavoite, Vaimennus;
             public bool ArvoAlku, TaustaTauolla;
+            /// <summary>Linssin taustaääni (LinssiTausta): linssin oma hiljennys ei väistä sitä (web vaistonPohja).</summary>
+            public bool Linssi;
             public int Nouse;
             public Soitin Audio, Vaistyva;
         }
@@ -238,6 +240,37 @@ namespace Matkakirja.Peli
                 SoitaPaikka();
             }
         });
+
+        /// <summary>
+        /// Linssin taustaääni (ILinssiYmparisto.Taustaaani; web js/linssit/satelliitti-aani.js humina): silmukka maiseman
+        /// paikalla, joten sauma ristihäivytetään kuten maisemassa (SilmukkaVaihtuu). Taso = voima × taustan liuku; linssin
+        /// oma hiljennys ei väistä sitä (web: vaistonPohja, kun LINSSIN_HILJENNYS on voimassa). url null = pois, ja jos linssi
+        /// on jo suljettu, paikan maisema palaa. Äänimaisema-kytkin pois = ei soi.
+        /// </summary>
+        public void LinssiTausta(string url, double voima, int nousuMs) => Tee(() =>
+        {
+            if (url == null)
+            {
+                if (nykyinen == null || !nykyinen.Linssi) return;
+                LopetaMaisema();
+                if (!pito) SoitaPaikka();
+                return;
+            }
+            if (!Aanimaisema) return;
+            if (nykyinen != null && nykyinen.Linssi && nykyinen.Url == url) return;
+            LopetaMaisema();
+            var oma = new MaisemaOma
+            {
+                CityId = "linssi", Url = url, Osoite = url, Alku = 0, Linssi = true,
+                Tavoite = voima, ArvoAlku = false, Nouse = nousuMs,
+            };
+            oma.Vaimennus = LinssinVaimennus(oma, Voimassa);
+            nykyinen = oma;
+            oma.Audio = LuoMaisemaSoitin(oma, false, nousuMs);
+        });
+
+        double LinssinVaimennus(MaisemaOma oma, double k) =>
+            oma.Linssi && hiljennykset.Contains(AaniVakiot.LinssinHiljennys) ? pyydetty : k;
 
         /// <summary>Musiikki-kytkin (web kaannaMusiikki).</summary>
         public void MusiikkiPaalle(bool paalla) => Tee(() =>
@@ -470,7 +503,7 @@ namespace Matkakirja.Peli
             if (visa != null && k < 1) Ramppi(visa, VisaTaso(k), kesto);
             if (pohja != null) Ramppi(pohja, PohjaTaso(k), kesto);
             if (nykyinen == null) return;
-            nykyinen.Vaimennus = k;
+            nykyinen.Vaimennus = LinssinVaimennus(nykyinen, k);
             if (nykyinen.Audio != null) Ramppi(nykyinen.Audio, MaisemaTaso(nykyinen), kesto);
             if (nykyinen.Vaistyva != null && k < 1) Ramppi(nykyinen.Vaistyva, 0, kesto);
         }

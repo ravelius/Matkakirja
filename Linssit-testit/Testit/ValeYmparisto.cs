@@ -66,6 +66,8 @@ namespace Matkakirja.Linssit.Testit
         public double RaidanTaso = -1;
         public void LinssiMusiikki(string laji) { Loki.Add("raita " + (laji ?? "pois")); Raita = laji; }
         public void LinssiMusiikkiHimmennys(double t) { Loki.Add("raidan taso " + t); RaidanTaso = t; }
+        public void Tehoste(string nimi, float voima = 1f) => Loki.Add($"tehoste {nimi} {voima:0.##}");
+        public void Taustaaani(string tunnus) => Loki.Add("taustaääni " + (tunnus ?? "pois"));
         public bool VahennettyLiike => Vahennetty;
         public double Aika => Kello;
     }

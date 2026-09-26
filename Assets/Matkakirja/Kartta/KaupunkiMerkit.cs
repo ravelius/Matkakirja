@@ -696,6 +696,10 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (merkit.Count == 0 || kamera == null) return;
+            // Kehyksen hinta (Pelikoodari 25.9.): kehystä ei piirretä (Ruudunpaivitys PAIKALLAAN, 59/60) → ei ladontaa.
+            // Kamera ja näkymä ovat silloin levossa, joten edellinen ladonta on voimassa; Nimikerros ohittaa samat kehykset,
+            // joten yhteiset Varaukset pysyvät yhtenäisinä. Säästö levossa ~0,25 ms/kehys (kehyksen-hinta-20260925.md).
+            if (!UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender) return;
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);

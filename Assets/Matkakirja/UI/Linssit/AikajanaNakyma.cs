@@ -65,7 +65,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Paperin ja lyhtyjen tekstuurit tälle koolle (RepaleinenPergamentti); uudet vasta koon muuttuessa.</summary>
         Vector2Int paperinKoko;
         Texture2D paperi, lyhtyV, lyhtyO;
-        readonly Button tauko, kaynnista, kahva, lueJuttu, cc;
+        readonly Button tauko, kaynnista, kahva, lueJuttu;
+        // Löydös 148 (omistaja, build 17): Ihmisen matka II:n soitin ⏮ ▶/⏸ ⏭ Tauko/Jatka-tekstinapin tilalla.
+        readonly VisualElement soitin;
+        readonly Button soitinAlkuun, soitinToisto, soitinLoppuun;
+        const string KelaaAlkuun = "<path d=\"M6.5 5v14\" /><path d=\"M19 5.5 9.5 12l9.5 6.5z\" fill=\"currentColor\"/>";
+        const string KelaaLoppuun = "<path d=\"M17.5 5v14\" /><path d=\"M5 5.5 14.5 12 5 18.5z\" fill=\"currentColor\"/>";
+        const string Pysayta = "<rect x=\"6.5\" y=\"5\" width=\"3.8\" height=\"14\" rx=\"0.8\" fill=\"currentColor\"/><rect x=\"13.7\" y=\"5\" width=\"3.8\" height=\"14\" rx=\"0.8\" fill=\"currentColor\"/>";
         readonly Aikaselain aikaselain;
         readonly Tiedeliitenakyma tiedeliite;
         readonly Keksijakaruselli karuselli;
@@ -144,16 +150,17 @@ namespace Matkakirja.Natiivi
             kahva = Rakenne.Nappi("", "mk-aikajana-nappi mk-aikajana-kahva", NaytaLappu, ohjaimet);
             kahva.style.display = DisplayStyle.None;
             // Yksi tekstinappi: Tauko / Jatka (myös välinäytöksessä, hehkuen) / Loppu (web taukoNappi).
-            // Ihmisen matka II (omistaja 25.9.2026, Linssisepän suunnitelma #3221): CC-nappi Tauon vasemmalle samalle riville
-            // (LINSSIEN YLÄPALKKI iPHONELLA: Dynamic Islandin korkeus), tekstitys oletuksena pois; vain II:ssa.
-            cc = Rakenne.Nappi("CC", "mk-aikajana-nappi mk-aikajana-nappi--teksti mk-aikajana-cc",
-                () => IhmisenMatkaKerros.AsetaTekstitys(!IhmisenMatkaKerros.TekstitysPaalla), ohjaimet);
-            Kirjasimet.Aseta(cc, Kirjasin.KoneLihava);
-            cc.tooltip = "Tekstitys";
-            cc.style.display = DisplayStyle.None;
-            IhmisenMatkaKerros.TekstitysMuuttui += _ => PaivitaCc();
             tauko = Rakenne.Nappi("Tauko", "mk-aikajana-nappi mk-aikajana-nappi--teksti", VaihdaTauko, ohjaimet);
             Kirjasimet.Aseta(tauko, Kirjasin.Kone);
+            // Löydös 148: II:n soitin (Linssisepän ohjaus: alkuun AloitaAlusta, loppuun SiirryTutkimukseen, tauko Esitys).
+            soitin = Rakenne.El("mk-aikajana-soitin", ohjaimet, PickingMode.Ignore);
+            soitinAlkuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", AloitaAlusta, soitin, KelaaAlkuun);
+            soitinAlkuun.tooltip = "Aloita alusta";
+            soitinToisto = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", VaihdaTauko, soitin, Pysayta);
+            soitinToisto.tooltip = "Tauko";
+            soitinLoppuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SiirryTutkimaan, soitin, KelaaLoppuun);
+            soitinLoppuun.tooltip = "Tutki karttaa itse";
+            soitin.style.display = DisplayStyle.None;
             Valikko = new LinssiValikko(kerros, () => linssit.SuljeLinssi(), AloitaAlusta);
             ohjaimet.Add(Valikko.Nappi);
 
@@ -485,11 +492,11 @@ namespace Matkakirja.Natiivi
             bool saari = Ylapalkki.Matala && p != null && Screen.width > 0;
             ylarivi.EnableInClassList("mk-aikajana-ylarivi--saari", saari);
             var virrat = tutkimus?.Rivi;
-            // Ihmisen matka II:n CC (Linssisepän video 25.9.2026): saaririvillä Tauon vieressä se osui Dynamic Islandin
-            // alle (oikealla on tilaa vain Tauolle ja ☰:lle), joten saaririvillä CC on vuosiluvun rivin oikeassa päässä.
-            if (saari && cc.parent != ylarivi) ylarivi.Add(cc);
-            else if (!saari && cc.parent != ohjaimet) ohjaimet.Insert(ohjaimet.IndexOf(tauko), cc);
-            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat, cc })
+            // Löydös 148: saaririvin oikealla puolella on tilaa vain yhdelle napille ja ☰:lle, joten II:n soitin on
+            // saaririvillä vuosiluvun rivin oikeassa päässä (kuten entinen CC, Linssisepän video 25.9.).
+            if (saari && soitin.parent != ylarivi) ylarivi.Add(soitin);
+            else if (!saari && soitin.parent != ohjaimet) ohjaimet.Insert(ohjaimet.IndexOf(tauko) + 1, soitin);
+            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat, soitin })
             {
                 if (e == null) continue;
                 e.style.position = saari ? Position.Absolute : StyleKeyword.Null;
@@ -517,8 +524,8 @@ namespace Matkakirja.Natiivi
             kelloRuutu.style.top = rivi2;
             float kellonKorkeus = float.IsNaN(kelloRuutu.layout.height) || kelloRuutu.layout.height <= 0 ? 36f : kelloRuutu.layout.height;
             float korkeus = rivi2 + kellonKorkeus + 8f * yksikko;
-            cc.style.right = r.z + reuna;
-            cc.style.top = rivi2 + Mathf.Max(0f, (kellonKorkeus - 36f) / 2f);
+            soitin.style.right = r.z + reuna;
+            soitin.style.top = rivi2 + Mathf.Max(0f, (kellonKorkeus - 36f) / 2f);
             // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
             // niille ei ole tilaa (vuosilaatikko ~150 pt + viisi nappia), joten ne saavat oman rivin vuosiluvun alle
             // (muuten ne jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle tai vuosiluvun päälle).
@@ -776,6 +783,11 @@ namespace Matkakirja.Natiivi
             tauko.tooltip = tauko.Q<Label>().text;
             // Ihmisen matkan lopussa nappi on pois käytöstä (web ihmisen-matka-esitys.js).
             tauko.SetEnabled(!(lopussa && tila == Tila.Ihminen));
+            // Löydös 148: II:n soittimen toisto-/taukosymboli samasta tilasta.
+            var ikoni = soitinToisto.Q<SvgIkoni>();
+            if (ikoni != null) ikoni.Polku = !tauolla ? Pysayta : Ikonit.Toista;
+            soitinToisto.tooltip = !tauolla ? "Tauko" : "Jatka";
+            soitinToisto.SetEnabled(!(lopussa && tila == Tila.Ihminen));
             kelloRuutu.EnableInClassList("mk-tauolla", tauolla);
         }
 
@@ -881,6 +893,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Valikon "Aloita alusta" (web aloitaAlusta, kaksi haaraa).</summary>
+        /// <summary>Löydös 148: kelaa loppuun = esitys loppuun ja tutkimusvaihe (Linssiseppä: SiirryTutkimukseen).</summary>
+        void SiirryTutkimaan()
+        {
+            if (tila != Tila.Ihminen) return;
+            LinssiUi.IhmisenMatka?.SiirryTutkimukseen();
+        }
+
         public void AloitaAlusta()
         {
             if (tila == Tila.Keksinnot)
@@ -1328,18 +1347,30 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Joka ruutu: näkyvä osa esityksen seinäkellosta (Esitys.Kulunut), jolloin tauko pysäyttää sen.</summary>
-        /// <summary>CC-napin näkyvyys (vain Ihmisen matka II) ja tila (valittu = tekstitys päällä); kertomusteksti uudelleen.</summary>
-        void PaivitaCc()
+        /// <summary>
+        /// Löydös 147 (omistaja, build 17): Ihmisen matka II:n tekstitys ☰-valikon kytkimenä "Tekstitys" (entinen CC-nappi
+        /// yläpalkissa); vain II:ssa (IhmisenMatkaKerros.CcNappi).
+        /// </summary>
+        void PaivitaTekstitysKytkin()
         {
             bool nakyy = tila == Tila.Ihminen && IhmisenMatkaKerros.CcNappi;
-            var d = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            if (cc.style.display.value != d) cc.style.display = d;
-            cc.EnableInClassList("mk-valittu", nakyy && IhmisenMatkaKerros.TekstitysPaalla);
+            // Löydös 148: II:ssa soitin tekstinapin tilalla; kelaa loppuun pois käytöstä tutkimusvaiheessa.
+            var sd = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (soitin.style.display.value != sd)
+            {
+                soitin.style.display = sd;
+                tauko.style.display = nakyy ? DisplayStyle.None : DisplayStyle.Flex;
+                PaivitaTauko();
+            }
+            if (nakyy) soitinLoppuun.SetEnabled(LinssiUi.IhmisenMatka?.Tutkimus == null);
+            if (nakyy == Valikko.TekstitysNakyy) return;
+            if (nakyy) Valikko.NaytaTekstitys(() => IhmisenMatkaKerros.TekstitysPaalla, IhmisenMatkaKerros.AsetaTekstitys);
+            else Valikko.NaytaTekstitys(null, null);
         }
 
         void PaivitaKertomus()
         {
-            if (tila == Tila.Ihminen && (cc.style.display.value == DisplayStyle.Flex) != IhmisenMatkaKerros.CcNappi) PaivitaCc();
+            PaivitaTekstitysKytkin();
             if (tila != Tila.Ihminen || osat == null || kertomus.style.display.value != DisplayStyle.Flex) return;
             if (osat.Count == 0) { AsetaKertomusteksti("", false); return; }
             var es = LinssiUi.IhmisenMatka?.Esitys;
@@ -1462,6 +1493,8 @@ namespace Matkakirja.Natiivi
                     if (t == null || tila != Tila.Ihminen || versio != kertomuskuvaVersio) return;
                     kertomuskuva.style.backgroundImage = new StyleBackground(t);
                     kertomuskuvaEsilla = true;
+                    kbAlku = LinssiUi.IhmisenMatka?.Esitys?.Kulunut ?? 0;
+                    kbJakso = jakso;
                     kertomuskuva.style.display = DisplayStyle.Flex;
                     SijoitaKertomuskuva();
                     kertomuskuva.schedule.Execute(() => { if (kertomuskuvaEsilla && versio == kertomuskuvaVersio) kertomuskuva.AddToClassList("mk-esilla"); });
@@ -1470,6 +1503,41 @@ namespace Matkakirja.Natiivi
         }
 
         int kertomuskuvaVersio;
+        /// <summary>Ken Burnsin alku esityksen kellossa (Esitys.Kulunut) ja jakso (suunta); II:n erä 5.</summary>
+        double kbAlku;
+        int kbJakso;
+        const float KbSkaala = 0.06f, KbSiirto = 0.03f, KbOletusS = 12f;
+
+        /// <summary>
+        /// Ihmisen matka II, erä 5 (Linssisepän pyyntö): hidas Ken Burns kuvan ollessa esillä, 1,00 → 1,06 ja siirto 3 %
+        /// leveydestä yhteen neljästä viistosuunnasta jakson mukaan, kestona jakson luenta (Esitys.Luenta, vara 12 s),
+        /// smootherstep ja pysähtyy lopputilaan. Aika on esityksen kello (Esitys.Kulunut), joten tauko pysäyttää liikkeen.
+        /// Tausta skaalataan ja siirretään elementin sisällä (background-size/-position), joten kuva ja sen vinjetti
+        /// pysyvät KuvanAlueen rajoissa. Vähennetty liike: ei liikettä.
+        /// </summary>
+        void KenBurns(float w, float h)
+        {
+            var es = LinssiUi.IhmisenMatka?.Esitys;
+            if (LinssiUi.VahennettyLiike() || es == null || w <= 0 || h <= 0)
+            {
+                kertomuskuva.style.backgroundSize = StyleKeyword.Null;
+                kertomuskuva.style.backgroundPositionX = StyleKeyword.Null;
+                kertomuskuva.style.backgroundPositionY = StyleKeyword.Null;
+                return;
+            }
+            double kesto = es.Luenta > 1 ? es.Luenta : KbOletusS;
+            float t = Mathf.Clamp01((float)((es.Kulunut - kbAlku) / kesto));
+            float e = t * t * t * (t * (t * 6f - 15f) + 10f); // smootherstep: pehmeä alku ja loppu
+            float k = 1f + KbSkaala * e;
+            int suunta = ((kbJakso % 4) + 4) % 4;
+            float sx = (suunta == 0 || suunta == 3 ? 1f : -1f) * KbSiirto * e, sy = (suunta < 2 ? 1f : -1f) * KbSiirto * e;
+            // Keskitetty ylivuoto (1 − k)/2 plus siirto, rajattuna niin, ettei reuna paljastu.
+            float vx = Mathf.Clamp((1f - k) / 2f * w + sx * w, (1f - k) * w, 0f);
+            float vy = Mathf.Clamp((1f - k) / 2f * h + sy * h, (1f - k) * h, 0f);
+            kertomuskuva.style.backgroundSize = new StyleBackgroundSize(new BackgroundSize(Length.Percent(k * 100f), Length.Percent(k * 100f)));
+            kertomuskuva.style.backgroundPositionX = new StyleBackgroundPosition(new BackgroundPosition(BackgroundPositionKeyword.Left, vx));
+            kertomuskuva.style.backgroundPositionY = new StyleBackgroundPosition(new BackgroundPosition(BackgroundPositionKeyword.Top, vy));
+        }
 
         void PiilotaKertomuskuva()
         {
@@ -1502,6 +1570,7 @@ namespace Matkakirja.Natiivi
                 kertomuskuva.style.height = kh;
                 kertomuskuva.style.left = Mathf.Round(a.x * jw + (aw - kw) / 2f);
                 kertomuskuva.style.top = Mathf.Round(a.y * jh + (ah - kh) / 2f);
+                KenBurns(Mathf.Round(kw), kh);
                 return;
             }
             var piste = IhmisenMatkaKerros.KuvanPiste;

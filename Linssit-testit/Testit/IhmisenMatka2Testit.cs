@@ -181,5 +181,54 @@ namespace Matkakirja.Linssit.Testit
             k2.AjaKamera(new Nakyma(48.85, 2.35, 2_000_000, 35), 0.9f);
             Oleta.Sama<double?>(null, v2.AjonKallistus, "kääre ei muuttanut kallistusta: paluu sellaisenaan");
         }
+
+        // ── Kerroksellinen sumu (erä 3) ──
+
+        [Testi] static void AvauksenKuoriNakyyVainLahestyessa()
+        {
+            const double H = 8_000_000;
+            Oleta.Sama(0.0, IhmisenMatka2Sumukuva.AvauksenOsuus(300 * 6_371_000.0, H), "kaukaa ei paisunutta pilvipalloa");
+            Oleta.Sama(0.0, IhmisenMatka2Sumukuva.AvauksenOsuus(2.5 * H, H));
+            double nousu = IhmisenMatka2Sumukuva.AvauksenOsuus(2.0 * H, H);
+            Oleta.Tosi(nousu > 0 && nousu < 1, "nousu 2,5 H → 1,6 H");
+            Oleta.Sama(1.0, IhmisenMatka2Sumukuva.AvauksenOsuus(1.6 * H, H));
+            Oleta.Sama(1.0, IhmisenMatka2Sumukuva.AvauksenOsuus(1.2 * H, H));
+            Oleta.Tosi(System.Math.Abs(IhmisenMatka2Sumukuva.AvauksenOsuus(1.1 * H, H) - 0.5) < 1e-9, "häivytys 1,2 H → H");
+            Oleta.Sama(0.0, IhmisenMatka2Sumukuva.AvauksenOsuus(H, H), "läpi");
+            Oleta.Sama(0.0, IhmisenMatka2Sumukuva.AvauksenOsuus(0.5 * H, H), "kuoren alla ei näy");
+        }
+
+        [Testi] static void KameraSyoksyyKaikkienKolmenKuorenLapi()
+        {
+            // Esityksen reitti: Afrikan valot 18 165 km → Marokko 9 342 km → ensimmäinen laskeutuminen 4 000 km.
+            double Osuus(double kameraKm, int i) =>
+                IhmisenMatka2Sumukuva.AvauksenOsuus(kameraKm * 1000, IhmisenMatka2Sumukuva.Avaus[i].KorkeusKm * 1000);
+            Oleta.Sama(1.0, Osuus(18_165, 0), "ylin täysi Afrikan valoissa");
+            Oleta.Tosi(Osuus(18_165, 2) == 0, "alin ei vielä");
+            Oleta.Tosi(Osuus(9_342, 0) == 0 && Osuus(9_342, 1) > 0 && Osuus(9_342, 2) > 0, "Marokossa ylin ohitettu, kaksi alempaa");
+            for (int i = 0; i < 3; i++) Oleta.Sama(0.0, Osuus(4_000, i), "laskeutumisessa kaikki läpäisty");
+            bool kaikkiNakyivat = true;
+            for (int i = 0; i < 3; i++)
+            {
+                bool nakyi = false;
+                for (double km = 18_165; km >= 4_000; km -= 100) nakyi |= Osuus(km, i) > 0.5;
+                kaikkiNakyivat &= nakyi;
+            }
+            Oleta.Tosi(kaikkiNakyivat, "jokainen kuori näkyy matkalla");
+        }
+
+        [Testi] static void SeutusumutJaksoista()
+        {
+            var afrikka = IhmisenMatka2Sumukuva.Seutu("omo");
+            Oleta.Tosi(afrikka.Peitto > 0 && afrikka.R > afrikka.B, "kuumuusutu lämmin");
+            var kylma = IhmisenMatka2Sumukuva.Seutu("beringia");
+            Oleta.Tosi(kylma.B > kylma.R && kylma.Peitto > afrikka.Peitto, "jää-usva sininen ja tiheämpi");
+            Oleta.Tosi(IhmisenMatka2Sumukuva.Seutu("aikahyppy").Pyorre, "aikahypyn pyörre");
+            Oleta.Sama(0f, IhmisenMatka2Sumukuva.Seutu("avaus").Peitto, "avauksessa ei seutusumua");
+            Oleta.Sama(0f, IhmisenMatka2Sumukuva.Seutu("loppu").Peitto, "loppu: sumu hälvenee");
+            Oleta.Sama(0f, IhmisenMatka2Sumukuva.Seutu(null).Peitto);
+            Oleta.Tosi(IhmisenMatka2Sumukuva.AvausJaksossa("afrikka") && IhmisenMatka2Sumukuva.AvausJaksossa("jebel-irhoud"), "avaus");
+            Oleta.Tosi(!IhmisenMatka2Sumukuva.AvausJaksossa("omo"), "avaus päättyy ensimmäisen kohteen jälkeen");
+        }
     }
 }

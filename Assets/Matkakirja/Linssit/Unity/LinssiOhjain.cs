@@ -15,7 +15,8 @@
 // "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin);
 // maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti);
 // keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
-// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | tila"; kaikille
+// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | tila" ja II:lle "sumu pois | paalle | tila"
+// (kehysaikojen vertailu sumun kanssa ja ilman); kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
@@ -53,6 +54,9 @@ namespace Matkakirja.Natiivi
         bool porttiOli;
         /// <summary>Linssin oma raita (Pelikoodari: Aanisoitin.LinssiMusiikki): laji tai null = pois.</summary>
         public static Action<string> LinssiMusiikkiKasittelija;
+        /// <summary>Linssin äänitehoste ja taustaääni (Aanisoitin, PeliOhjain.Aanet kytkee).</summary>
+        public static Action<string, float> TehosteKasittelija;
+        public static Action<string> TaustaaaniKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
         public static Action<double> LinssiHimmennysKasittelija;
         /// <summary>
@@ -192,6 +196,8 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaIsoisa());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
+            // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.
+            LinssienEsilataaja.Kytke(this, rekisteri);
             rekisteri.Vaihtui += _ =>
             {
                 bool nyt = rekisteri.EstaaKartan;
@@ -379,6 +385,8 @@ namespace Matkakirja.Natiivi
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Käynnissä oleva linssi (Natiivi-UI: Esitys.Tauko/Jatka/Valitse).</summary>
             public Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi Linssi => linssi;
+            /// <summary>Linssin aineisto (esilatauslistat, LinssienEsilataaja).</summary>
+            public Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto Aineisto => aineisto;
             /// <summary>Kertojan ääni (linssi-loki), null ennen avausta.</summary>
             public EsityksenAani Aani => aani;
             /// <summary>II:n kameran kääre (lähikuvan laskeutuminen, IhmisenMatka2Tehosteet.Kuva), null I:ssä ja suljettuna.</summary>
@@ -864,6 +872,8 @@ namespace Matkakirja.Natiivi
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Käynnissä oleva linssi (Natiivi-UI: Kaynnista, JatkaValinaytoksesta, Ajo.Tauko, Ajo.Siirry).</summary>
             public Matkakirja.Linssit.Aikajana.KeksinnotLinssi Linssi => linssi;
+            /// <summary>Linssin aineisto (esilatauslistat, LinssienEsilataaja).</summary>
+            public Matkakirja.Linssit.Aikajana.KeksinnotAineisto Aineisto => aineisto;
             public void Avaa(ILinssiYmparisto y)
             {
                 kerros = KeksinnotKerros.Luo(o.kierto, aineisto);
@@ -908,6 +918,8 @@ namespace Matkakirja.Natiivi
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Auki oleva linssi (Natiivi-UI), muuten null.</summary>
             public Matkakirja.Linssit.Astronautti.AstronauttiLinssi Linssi => linssi;
+            /// <summary>Linssin aineisto (esilatauslistat, LinssienEsilataaja).</summary>
+            public Matkakirja.Linssit.Astronautti.AstronauttiAineisto Aineisto => aineisto;
             /// <summary>Auki olevan linssin 3D-kerros (Natiivi-UI: kohteiden napautus), muuten null.</summary>
             public AstronauttiKerros Kerros => kerros;
             public void Avaa(ILinssiYmparisto y)
@@ -1104,6 +1116,18 @@ namespace Matkakirja.Natiivi
 
         public void LinssiMusiikkiHimmennys(double taso) => LinssiHimmennysKasittelija?.Invoke(taso);
 
+        public void Tehoste(string nimi, float voima = 1f)
+        {
+            Kirjaa($"tehoste {nimi} {voima:0.##}");
+            TehosteKasittelija?.Invoke(nimi, voima);
+        }
+
+        public void Taustaaani(string tunnus)
+        {
+            Kirjaa("taustaääni " + (tunnus ?? "pois"));
+            TaustaaaniKasittelija?.Invoke(tunnus);
+        }
+
         public bool VahennettyLiike => VahennettyLiikeKysely?.Invoke() ?? false;
 
         public double Aika => Time.realtimeSinceStartupAsDouble;
@@ -1134,6 +1158,12 @@ namespace Matkakirja.Natiivi
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)
                     Esitys(osat[1]);
+                else if (osat[0] == "sumu" && osat.Length > 1)
+                {
+                    // Ihmisen matka II:n sumu pois/päälle (kehysaikojen vertailu samasta jaksosta, Natiiviseppä 25.9.).
+                    if (osat[1] == "pois" || osat[1] == "paalle") IhmisenMatka2Sumu.Pois = osat[1] == "pois";
+                    Kirjaa(IhmisenMatkaKerros.Instanssi?.Tehosteet?.Sumu?.Kuvaus() ?? $"sumu: II ei auki (pois {IhmisenMatka2Sumu.Pois})");
+                }
                 else if (osat[0] == "ihminen" && osat.Length > 1 && osat[1] == "tutkimus")
                 {
                     // Testikomento: ihmisen matka auki ja suoraan tutkimusvaiheeseen (Laitetestaajan

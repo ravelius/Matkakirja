@@ -1163,6 +1163,8 @@
 
 /* --- kaupunkikortti (kaupunkiliuska + lehden masto) ---------------------- */
 
+/* Löydös 146: kuori 60 ms ease-out heti napautuksesta, sulku 100 ms ease-in (siirtymä luetaan muutoksen jälkeisestä
+ * tyylistä: avaus .mk-auki, sulku perusluokka). */
 .mk-kaupunkikortti-alue {
     position: absolute;
     top: 0;
@@ -1171,11 +1173,14 @@
     bottom: 0;
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 0.18s;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
 }
 
 .mk-kaupunkikortti-alue.mk-auki {
     opacity: 1;
+    transition-duration: 0.06s;
+    transition-timing-function: ease-out;
 }
 
 .mk-masto {
@@ -1248,65 +1253,69 @@
     margin-top: 2px;
 }
 
-/* KAUPUNKILIUSKA (löydös 48; web js/pallolauta/nostot.js piirraLiuskanRivi, css .pallolauta-viuhka-pohja,
- * .nostosym-nimio, .pallolauta-liuska-hiusviiva; mitattu 25.9. b12, web-liuska-mitat.txt). Liberation Serif kursiivi
- * 13 px, riviväli 18,85; teksti 33,5 px pohjan reunasta, pallo ⌀ 5,7 keskellä 23,1; ylä ja ala 18,5, oikea 20,4.
- * Muste rgba(74, 52, 33, .92) paperin #efdcb4 päällä sRGB:nä = rgb(87, 65, 45) (lineaarinen väriavaruus). */
-/* Löydös 92 (omistaja build 13: minivalikko aivan liian pieni): kaikki liuskan mitat 1,4 × webin mitoista. */
+/* KAUPUNKILIUSKA (löydös 48; ulkoasu löydös 146 malli v2, omistaja 26.9.2026, lokit/natiivi-ui-146-malli/malli2.html):
+ * kapea ja tiivis pergamenttikortti. Leveys (iPhone 60 % ruudusta, iPad 300) ja kuvan korkeus (3:2) asetetaan
+ * koodissa (KaupunkiKortti.Asemoi). Rivi 22, teksti 14,5 Iowan Old Style, lukumäärät ja nuolet American Typewriter 12
+ * himmeinä oikealla. UITK:ssa ei ole box-shadowia: mallin varjo jää pois, reuna erottaa kortin kartasta. */
 .mk-liuska {
     position: absolute;
-    padding: 25.9px 28.56px 25.9px 0;
+    flex-direction: column;
+    padding: 8px;
+    border-width: 1px;
+    border-color: rgba(92, 62, 30, 0.5);
+    border-radius: 3px;
+    background-color: #f3e8cf;
 }
 
-/* Paperi neljänä pyöristettynä kerroksena (web fill-opacity .11 / .24 / .38 / .58, sisennys 0 / 4,5 / 8 / 10,
- * pyöristys 20 / 15,5 / 12 / 10 merkin yksiköissä × 13/11). */
-.mk-liuska__pohja {
+/* Herokuva 3:2 kortin levyisenä; napautus = kaupunkilehti. Pohjaväri näkyy, kunnes kuva on ladattu. */
+.mk-liuska__kuva {
+    flex-shrink: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: rgb(214, 196, 160);
+}
+
+.mk-liuska__kuva:active {
+    background-color: rgb(214, 196, 160);
+}
+
+.mk-liuska__kuva:disabled {
+    opacity: 1;
+}
+
+.mk-liuska__kuvapinta {
     position: absolute;
-    background-color: rgba(239, 220, 180, 0.11);
-}
-
-.mk-liuska__pohja--0 {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 33.04px;
-    background-color: rgba(239, 220, 180, 0.11);
-}
-
-.mk-liuska__pohja--1 {
-    top: 6.3px;
-    left: 6.3px;
-    right: 6.3px;
-    bottom: 6.3px;
-    border-radius: 25.62px;
-    background-color: rgba(239, 220, 180, 0.24);
-}
-
-.mk-liuska__pohja--2 {
-    top: 11.2px;
-    left: 11.2px;
-    right: 11.2px;
-    bottom: 11.2px;
-    border-radius: 19.88px;
-    background-color: rgba(239, 220, 180, 0.38);
-}
-
-.mk-liuska__pohja--3 {
-    top: 14px;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    border-radius: 16.52px;
-    background-color: rgba(239, 220, 180, 0.58);
-}
-
-/* Pieni herokuva (hyväksytty poikkeama webistä, omistaja 25.9.): tekstin levyinen, 16:9. */
-.mk-liuska__kuva {
-    height: 100.8px;
-    margin: 0 0 11.2px 46.9px;
-    border-radius: 5.6px;
     -unity-background-scale-mode: scale-and-crop;
+}
+
+/* Mallin linear-gradient(to top, rgba(20, 12, 4, .62) 0 %, läpinäkyvä 42 %) tekstuurina (Kuviot.Pysty). */
+.mk-liuska__nimivarjo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 42%;
+}
+
+.mk-liuska__kuvanimi {
+    position: absolute;
+    left: 8px;
+    bottom: 5px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    letter-spacing: 4px; /* web 0.04em */
+    white-space: nowrap;
+    color: #fbf3e2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
 .mk-liuska__vieritys {
@@ -1317,18 +1326,22 @@
     flex-direction: column;
 }
 
+.mk-liuska__rivit--kuvan-alla {
+    margin-top: 4px;
+}
+
 .mk-liuska__rivi {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    height: 26.39px;
-    min-height: 26.39px;
+    height: 22px;
+    min-height: 22px;
     margin: 0;
-    padding: 0 0 0 46.9px;
+    padding: 0 1px 0 0;
     border-width: 0;
-    border-radius: 5.6px;
+    border-radius: 2px;
     background-color: rgba(0, 0, 0, 0);
-    color: rgb(87, 65, 45);
+    color: #3a2a1c;
 }
 
 .mk-liuska__rivi:active {
@@ -1343,58 +1356,83 @@
     background-color: rgba(70, 51, 31, 0.06);
 }
 
-/* Haitarin kohde: sisennys LIUSKAN_SISENNYS_PX 9 × 13/11 = 10,6. */
+/* Haitarin kohde: kategorian tekstin kohdalle (pallo 8 + väli 7). */
 .mk-liuska__kohde {
-    padding-left: 61.74px;
+    padding-left: 15px;
 }
 
 .mk-liuska__pallo {
-    position: absolute;
-    left: 28.35px;
-    top: 9.24px;
-    width: 7.98px;
-    height: 7.98px;
-    border-radius: 3.99px;
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin-right: 7px;
+    border-radius: 4px;
 }
 
 .mk-liuska__nimi {
-    font-size: 18.2px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 14.5px;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     -unity-text-align: middle-left;
-    color: rgb(87, 65, 45);
+    color: #3a2a1c;
 }
 
-/* Hiusviiva omana rivinään: 29,2 px:stä, rgba(58, 47, 36, .35) paperin päällä = rgb(176, 160, 130). */
+/* Ilman herokuvaa kaupungin nimi omana rivinään (vara). */
+.mk-liuska__rivi--nimi {
+    height: 26px;
+    min-height: 26px;
+}
+
+.mk-liuska__rivi--nimi > .mk-liuska__nimi {
+    font-size: 18px;
+}
+
+.mk-liuska__maara {
+    flex-shrink: 0;
+    margin: 0 0 0 6px;
+    padding: 0;
+    font-size: 12px;
+    -unity-text-align: middle-right;
+    color: #7a6650;
+}
+
+/* Hiusviiva omana rivinään: rgba(92, 62, 30, .3) paperin #f3e8cf päällä sRGB:nä = rgb(198, 181, 154)
+ * (lineaarinen väriavaruus sekoittaisi läpikuultavan eri tavoin). */
 .mk-liuska__viivarivi {
-    height: 26.39px;
+    height: 7px;
     justify-content: center;
-    padding: 0 8.4px 0 40.88px;
 }
 
 .mk-liuska__hiusviiva {
     height: 1px;
-    background-color: rgb(176, 160, 130);
+    background-color: rgb(198, 181, 154);
 }
 
 /* Kelausrivit (web "▲ edelliset" / "▼ lisää"). */
 .mk-liuska__kelaus {
     flex-shrink: 0;
-    height: 30.8px;
-    padding: 0 0 0 46.9px;
+    height: 22px;
+    min-height: 22px;
+    padding: 0;
     justify-content: flex-start;
     border-width: 0;
     background-color: rgba(0, 0, 0, 0);
-    color: rgb(87, 65, 45);
+    color: #7a6650;
 }
 
 .mk-liuska__kelaus > .mk-ikoni {
-    width: 16.8px;
-    height: 16.8px;
-    margin-right: 7px;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
 }
 
 .mk-liuska__kelaus > .mk-nappi__teksti {
-    font-size: 16.8px;
+    font-size: 12px;
 }
 
 /* --- tekijätiedot ja lähteet --------------------------------------------- */
@@ -1877,7 +1915,10 @@
     display: none;
 }
 
+/* Löydös 122 (omistaja, build 16): lennon tekstitys pois (kaistale oli liian iso); luenta kuuluu yhä, ja kirjoitus
+ * etenee näkymättömänä luennan tahdissa (lennon loppu odottaa sitä kuten ennen). */
 .mk-aloitus__intro--lento > .mk-aloitus__arkki {
+    visibility: hidden;
     flex-grow: 0;
     max-height: 34%;
     padding: 10px 16px 18px 16px;
@@ -1957,19 +1998,23 @@
 /* Löydös 83: aloituslennon Ohita-nappi alareunassa (turva-alueen sisällä, lennon kaistaleen yläpuolella; bottom
  * asetetaan koodista). Sama kehystetty paperinappi kuin VALITSE ALOITUSKAUPUNKI, jotta se erottuu kartan päältä
  * (web .flight-eteen on 0,3-läpinäkyvä nuoli; omistaja pyysi näkyvän napin). */
+/* Löydös 123 (omistaja, build 16): pienempi ja läpinäkyvä kuten iPhonen Liiku (.mk-liiku--puhelin .mk-liiku__nappi):
+ * vain teksti ja kevyt reuna, ei ikonia. */
 .mk-aloitus__ohita {
     position: absolute;
     right: 16px;
     bottom: 16px;
     flex-direction: row;
     align-items: center;
-    min-height: 44px;
-    padding: 6px 12px 6px 18px;
-    border-width: 1.5px;
-    border-color: rgba(70, 51, 31, 0.75);
-    border-radius: 2px;
-    background-color: rgba(247, 237, 216, 0.92);
-    color: var(--map-ink);
+    justify-content: center;
+    min-width: 44px;
+    height: 36px;
+    padding: 0 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(128, 111, 88);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.4s;
@@ -1980,11 +2025,14 @@
 }
 
 .mk-aloitus__ohita .mk-nappi__teksti {
-    font-size: 15px;
-    color: var(--map-ink);
+    font-size: 11.5px;
+    letter-spacing: 10px; /* web 1.15px, kuten Liiku */
+    color: rgb(128, 111, 88);
+    text-shadow: 0 0 3px rgba(244, 232, 205, 0.9);
 }
 
 .mk-aloitus__ohita .mk-ikoni {
+    display: none;
     width: 20px;
     height: 20px;
     margin-left: 4px;
@@ -1994,8 +2042,7 @@
 }
 
 .mk-aloitus__ohita:active {
-    background-color: rgba(247, 237, 216, 1);
-    border-color: var(--map-ink);
+    background-color: rgba(245, 240, 226, 0.35);
 }
 
 .mk-aloitus__portti {

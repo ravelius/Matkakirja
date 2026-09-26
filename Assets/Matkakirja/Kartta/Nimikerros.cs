@@ -314,6 +314,8 @@ namespace Matkakirja
         {
             // Ilman nimistöä ladotaan silti: kaupunkien laatikot (Laatikot) tarvitaan nostojen sovitteluun.
             if (kamera == null || kierto == null) return;
+            // Piirtämätön kehys (PAIKALLAAN): ei ladontaa, kuten KaupunkiMerkit (yhteiset Varaukset samoissa kehyksissä).
+            if (!UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender) return;
             var ll = KarttaKerrokset.Instanssi;
             bool linssi = ll != null && ll.Linssinimet;
             bool lento = nappula != null && nappula.Vaihe != LennonVaihe.Ei;

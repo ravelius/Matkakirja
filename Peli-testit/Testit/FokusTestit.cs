@@ -59,10 +59,10 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(f.AarreAvattu(ka, "pariisi"), "pulla avaa (web fokusAarreAvattu)");
 
             PeliJossaLaattaPariisissa(out var kb);
+            Oleta.Tosi(f.Piste(kb).Lukittu, "ilman nostotehtävää piste on lukossa");
             kb.KirjaaNostotehtava();
-            Oleta.Tosi(f.Piste(kb).Lukittu, "yksi nosto ei riitä");
-            kb.KirjaaNostotehtava();
-            Oleta.Tosi(!f.Piste(kb).Lukittu && !f.AarreAvattu(kb, "pariisi"), "kaksi nostoa avaa pisteen, ei aarteen jälkeä");
+            // Löydös 145 (omistaja 25.9.2026): kynnys kahdesta yhteen.
+            Oleta.Tosi(!f.Piste(kb).Lukittu && !f.AarreAvattu(kb, "pariisi"), "yksi nosto avaa pisteen, ei aarteen jälkeä");
         }
 
         [Testi] static void TehtavaNappiKutenWeb()

@@ -10,6 +10,7 @@
 # Nimikerroksen koepaketti: NIMET_KOE=<paketin kansio> ./kaanna.sh NimiLadonta (oletus /Users/Shared/Claude/sisalto-koe-2/v8)
 # Maakunnat maittain oikealla aineistolla (skeema 1.42) ja kestot: MAAKUNTARAJAT=<maakuntarajat.json> ./kaanna.sh Maakuntajako
 # Maakuntien värinumerot webin <ISO>.json-tiedostoihin verrattuna: MAAKUNTARAJAT=<…> MAAKUNNAT_WEB=<kansio> ./kaanna.sh MaakuntaVarit
+# Kehän aineisto (löydös 127): MAAMAA=<maamaa.geojson[.gz]> [MAAPOLYGONIT=<maapolygonit.geojson>] ./kaanna.sh Geojson
 # Kultaiset arvot uusiksi: node Kultaiset/tee-saapuminen.mjs <webin juuri: js/ ja assets/data/maapolygonit.json>
 set -e
 cd "$(dirname "$0")"
@@ -24,9 +25,11 @@ VIITTEET="$VIITTEET -r:$REF/System.Private.CoreLib.dll -r:$REF/netstandard.dll -
 LAHTEET="
 ../Assets/Matkakirja/Peli/MiniJson.cs
 ../Assets/Matkakirja/Kartta/EtusivunLento.cs
+../Assets/Matkakirja/Kartta/Geojson.cs
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
+../Assets/Matkakirja/Kartta/Kermasarja.cs
 ../Assets/Matkakirja/Kartta/Laattapaketti.cs
 ../Assets/Matkakirja/Kartta/Lampopaatos.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
