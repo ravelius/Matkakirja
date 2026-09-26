@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
     {
         readonly UiKerros kerros;
         readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu, nimirivi;
+        /// <summary>Löydös 144: aaltoileva lippu (Natiiviseppä, Liput.Aaltoile); null = staattinen kuva.</summary>
+        Liput.Aalto aalto;
         readonly Button masto, radio;
         readonly Label nimi, alarivi, valtiomuoto;
         readonly VisualElement valtiomuotoRivi;
@@ -168,6 +170,7 @@ namespace Matkakirja.Natiivi
 
         void Seuraa()
         {
+            if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu) && lippu.resolvedStyle.width > 0f; // löydös 144
             string uusi = TodellinenMaa();
             // Testimaa (ui kartuscha ISO) raukeaa, kun pelaajan todellinen maa vaihtuu (matka, uusi peli): muuten
             // testin KREIKKA jäi kartalle Lontooseen ja lennolle (Laitetestaaja 24.9., 161fa35).
@@ -199,12 +202,14 @@ namespace Matkakirja.Natiivi
             alarivi.style.display = alarivi.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
 
             lippu.style.backgroundImage = StyleKeyword.None;
+            VapautaAalto();
             if (m.Lippu.Count > 0)
                 Kuvat.Hae(m.Lippu[0], t =>
                 {
                     if (t == null || iso != m.Iso3) return;
-                    lippu.style.backgroundImage = new StyleBackground(t);
-                    lippu.style.width = 18f * t.width / Mathf.Max(1, t.height);
+                    float lw = 18f * t.width / Mathf.Max(1, t.height);
+                    lippu.style.width = lw;
+                    AsetaLippu(t, lw, 18f);
                 }, "liput");
 
             // Valtiomuoto 1873 ilman "v. 1873" -päätettä (webin valtiomuoto1873).
@@ -415,13 +420,41 @@ namespace Matkakirja.Natiivi
             sisus.style.display = DisplayStyle.Flex;
             Asettele();
             AnimoiVertailut();
+            if (aalto != null) kortti.schedule.Execute(() => { if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu); }); // löydös 144
             AukiMuuttui?.Invoke(true);
+        }
+
+        /// <summary>
+        /// Löydös 144 (omistaja: liput aaltoilemaan arvokkaasti kuin tuulessa): lippu Natiivisepän aaltovarjostimen
+        /// RenderTextureen (Liput.Aaltoile, pikseleinä UI-koko × paneelin skaala). RT:n reunoilla on Liput.Reuna-marginaali
+        /// (lippu 92 %), joten elementti skaalataan 1 / 0,92:lla (scale ei muuta asettelua, TasaaNimirivi ennallaan).
+        /// Aalto piirtyy vain, kun lippu näkyy (Seuraa: Nakyy); ilman aaltoa staattinen kuva kuten ennen.
+        /// </summary>
+        void AsetaLippu(Texture2D t, float leveys, float korkeus)
+        {
+            float k = 1f / (1f - 2f * Liput.Reuna), px = Mathf.Max(1f, UiKerros.PikseliaPisteessa);
+            aalto = Liput.Aaltoile(t, Mathf.CeilToInt(leveys * k * px), Mathf.CeilToInt(korkeus * k * px));
+            if (aalto?.Kuva == null) { VapautaAalto(); lippu.style.backgroundImage = new StyleBackground(t); return; }
+            aalto.Paivittyi += lippu.MarkDirtyRepaint;
+            aalto.Nakyy = Rakenne.Naytetaan(lippu);
+            lippu.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(aalto.Kuva));
+            lippu.style.scale = new Scale(new Vector2(k, k));
+        }
+
+        void VapautaAalto()
+        {
+            if (aalto == null) return;
+            aalto.Paivittyi -= lippu.MarkDirtyRepaint;
+            Liput.Vapauta(aalto);
+            aalto = null;
+            lippu.style.scale = StyleKeyword.Null;
         }
 
         public void Sulje()
         {
             if (!auki) return;
             auki = false;
+            if (aalto != null) aalto.Nakyy = false; // löydös 144: ei aaltoa kiinni
             sijatAuki = false;
             tilastot.RemoveFromClassList("mk-sijat-auki");
             kortti.RemoveFromClassList("mk-auki");
