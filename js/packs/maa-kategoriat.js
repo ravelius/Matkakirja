@@ -329,6 +329,45 @@ export const MAA_KATEGORIAT = {
             + 'pidetään maailman vanhimpana yhä hedelmää tuottavana viiniköynnöksenä.',
           lahde: 'Marco Almbauer, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Makkara, jonka ainekset on säädetty tarkasti',
+          aika: '1912',
+          tiedosto: 'Kranjska klobasa.jpg',
+          teksti: 'Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty '
+              + 'makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin '
+              + '(sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja '
+              + 'sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa '
+              + '1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, '
+              + 'ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja '
+              + 'mustapippuria. Makkarat liitetään pareiksi puutikulla ja '
+              + 'kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun '
+              + 'maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa '
+              + 'vastustivat.',
+          lyhyt: 'Grillattu kranjska klobasa tarjoillaan pareina lautasella leivän ja '
+              + 'lisukkeiden kanssa.',
+          selite: 'Grillatut makkarat on liitetty pareiksi puutikulla, ja lautasella on '
+              + 'lisäksi tomaattia, salaattia ja valkoista leipää.',
+          lahde: 'J.O., Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Carniolan sausage',
+        },
+        {
+          otsikko: 'Harmaa mehiläinen Krainista',
+          aika: 'nykyään',
+          tiedosto: 'Apis mellifera carnica worker hive entrance 2.jpg',
+          teksti: 'Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on '
+              + 'läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi '
+              + 'viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan '
+              + 'myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää '
+              + 'asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen '
+              + 'italianmehiläisen jälkeen. EU:n suojaamiin ruokatuotteisiin kuuluu '
+              + 'myös slovenialainen hunaja.',
+          lyhyt: 'Carniolan mehiläisen työläinen on ruskeanharmaa, ja sen takaruumiissa on '
+              + 'vaaleampia raitoja.',
+          selite: 'Lähikuvassa Carniolan mehiläisen työläinen, jonka takaruumista koristavat '
+              + 'ruskeat ja vaaleammat raidat.',
+          lahde: 'Richard Bartz, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Carniolan honey bee',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka paljon viiniä Mariborin vanha köynnös antaa yhtenä syksynä?',
@@ -1262,12 +1301,32 @@ export const MAA_KATEGORIAT = {
             + 'yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, '
             + 'joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet '
             + 'suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. '
-            + 'Slovakiassa tämä on kuudesta viinialueesta pienin.',
+            + 'Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset '
+            + 'että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n '
+            + 'tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.',
           lyhyt: 'Slovakialaisen Tokajin viinialueen keskiaikainen tynnyrikellari.',
           selite: 'Tokajin viinialue jakautuu Unkarin ja Slovakian kesken Trianonin '
             + 'rauhansopimuksen jälkeen.',
           lahde: 'Slavo O., Wikimedia Commons (public domain)',
           wiki: 'Tokaj-Hegyalja',
+        },
+        {
+          otsikko: 'Hapankaalikeitto joulupöytään',
+          aika: 'Joulupöydässä',
+          tiedosto: 'Kapustnica (Sauerkraut soup).jpg',
+          teksti: 'Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja '
+              + 'Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen '
+              + 'kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan '
+              + 'leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, '
+              + 'jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia '
+              + 'säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja '
+              + 'maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja '
+              + 'syödään myös Puolassa, Ukrainassa ja Venäjällä.',
+          lyhyt: 'Kapustnica-keitossa on hapankaalia ja makkaranpaloja.',
+          selite: 'Kapustnica tarjoillaan savikulhossa, ja punertavasta liemestä nousee '
+              + 'lusikalle hapankaalia ja makkaraa.',
+          lahde: 'young shanahan, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Cabbage soup',
         },
       ],
       tehtava: {
@@ -1640,6 +1699,28 @@ export const MAA_KATEGORIAT = {
             + 'pitkään aateliston ja kirkon keskus.',
           lahde: 'R Muscat, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Mdina',
+        },
+        {
+          otsikko: 'Saari, jonka vuokra oli yksi haukka',
+          aika: '1530',
+          tiedosto: 'Prise de Malte en 1530.jpg',
+          teksti: 'Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun '
+              + 'osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän '
+              + 'vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana '
+              + 'Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. '
+              + 'Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian '
+              + 'varakuninkaalle. Suurmestari Philippe Villiers de L\'Isle-Adam purjehti '
+              + 'Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä '
+              + 'Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. '
+              + 'Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan '
+              + 'uudelleen Pyhän Angelon linnakkeeksi.',
+          lyhyt: 'Punaviittaiset ritarit ja ritarikunnan valkoristinen lippu Maltan '
+              + 'rannalla.',
+          selite: 'René Théodore Berthonin vuonna 1839 maalaama kuva ritarikunnan '
+              + 'saapumisesta Maltalle vuonna 1530: punaviittaiset ritarit, trumpetit ja '
+              + 'valkoristinen lippu linnoituksen edustalla.',
+          lahde: 'René Théodore Berthon, Wikimedia Commons (PD)',
+          wiki: 'Hospitaller Malta',
         },
       ],
       tehtava: {
@@ -6981,6 +7062,167 @@ export const MAA_KATEGORIAT = {
               lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio The '
                 + 'Timesin 7.11.1805 julkaisemasta Trafalgar-uutisesta. Faktat: '
                 + 'Royal Museums Greenwich, *Battle of Trafalgar Timeline*; '
+                + 'tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `kolumbus-palos-1492`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-kolumbus-palos-1492',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Palos 1492',
+      johdanto: 'Kahdeksankymmentä kilometriä Sevillasta länteen, Río Tinton '
+        + 'suistossa, kolme laivaa odotti laskuvettä 3. elokuuta 1492 — ja '
+        + 'lähtijät olivat tämän saman jokisuun omia merenkulkijoita.',
+      tehtava: {
+        kysymys: 'Mikä kolmesta aluksesta oli Kolumbuksen laivueen suurin?',
+        vaihtoehdot: [
+          'Pinta',
+          'Niña',
+          'Santa María',
+          'Bérrio',
+        ],
+        oikea: 2,
+        fakta: 'Santa María oli pyöreärunkoinen nao; Pinta ja Niña olivat '
+          + 'pienempiä karavelleja.',
+      },
+      nostot: [
+        {
+          otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
+          aika: '3.8.1492',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-lahi-photo-v3.jpg',
+          teksti: 'Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja '
+            + 'ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
+            + 'Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja '
+            + 'Niñaa luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín '
+            + 'Alonso ja Vicente Yáñez Pinzón, ja miehistö on värvätty '
+            + 'naapureista Palosista ja Moguerista. Laiturilla seisova väki '
+            + 'tuntee lähtijät nimeltä, ja se on pojan onni ja pelko yhtä aikaa. '
+            + 'Aamu on juuri valjennut. Río Tinton suistossa vesi laskee, ja '
+            + 'juuri sitä on odotettu: laskuvesi vie laivat merelle ilman soutua. '
+            + 'Suurin aluksista on Santa María, pyöreärunkoinen nao, jonka '
+            + 'omistaa Juan de la Cosa ja jota Kolumbus itse komentaa. Kolme '
+            + 'päivää myöhemmin Pintan peräsin murtuu ja korjataan '
+            + 'Kanariansaarilla; vasta 6. syyskuuta laivat kääntyvät La Gomeralta '
+            + 'länteen viiden viikon merimatkalle. Poika luulee purjehtivansa '
+            + 'Aasiaan, kuten Kolumbuskin. Matka päätyy toisaalle, ja siitä '
+            + 'kohtaamisesta tulee käänne sekä Euroopalle että Amerikan '
+            + 'alkuperäiskansoille.',
+          lyhyt: 'Santa Marían laivapoika kuuntelee Palosin kelloja ennen '
+            + 'purjehdusta kohti oletettua Aasiaa.',
+          selite: 'Santa Marían nuori laivapoika kuuntelee Palosin kelloja ja '
+            + 'yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
+            + 'Kolumbus uskoo purjehtivansa Aasiaan; pojan tuntematon matka '
+            + 'päätyy osaksi kohtaamista, joka mullistaa sekä Euroopan että '
+            + 'Amerikan alkuperäiskansojen elämän.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Library of Congress, '
+            + '*Writings of Christopher Columbus* ja Henry Harrisse Collection; '
+            + 'tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
+              lyhyt: 'Kolme laivaa katoaa Río Tinton suulle; retki etsii Aasiaa '
+                + 'mutta avaa yhteyden Atlantin yli.',
+              selite: 'Rannalle jäävä perhe näkee kolmen pienen laivan katoavan '
+                + 'Río Tinton suulle tietämättä, maksetaanko luvattu palkka tai '
+                + 'palaako oma mies koskaan. Kolumbuksen retkikunta etsii Aasiaa '
+                + 'mutta avaa pysyvän ja pian väkivaltaisen yhteyden Atlantin yli.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Library of Congress, '
+                + '*Writings of Christopher Columbus* ja Henry Harrisse '
+                + 'Collection; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `magalhaes-sanlucar-1519`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-magalhaes-sanlucar-1519',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Sanlúcar 1519',
+      johdanto: 'Sevillasta lähdettiin 10. elokuuta 1519 Guadalquivirjokea alas, '
+        + 'ja jokisuussa Sanlúcar de Barramedassa viisi laivaa odotti vielä yli '
+        + 'viisi viikkoa ennen kuin ne katosivat länteen.',
+      tehtava: {
+        kysymys: 'Montako Magalhãesin viidestä laivasta palasi Sanlúcariin vuonna 1522?',
+        vaihtoehdot: [
+          'Ei yhtään',
+          'Yksi',
+          'Kolme',
+          'Kaikki viisi',
+        ],
+        oikea: 1,
+        fakta: 'Victoria palasi 6. syyskuuta 1522, kannellaan kahdeksantoista miestä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
+          aika: '20.9.1519',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-lahi-photo-v3.jpg',
+          teksti: 'Kuka teistä palaa? Sitä ei jokisuussa kysy kukaan ääneen. '
+            + 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä, ja kolmen '
+            + 'vuoden kuluttua kotiin pääsee heistä kahdeksantoista. Laivasto '
+            + 'tuli Sevillasta 10. elokuuta Guadalquivirjokea alas ja on maannut '
+            + 'tässä jokisuussa yli viisi viikkoa: vettä, viiniä ja suolalihaa on '
+            + 'lastattu viimeiseen asti. Ankkurissa on viisi alusta — lippulaiva '
+            + 'Trinidad, San Antonio, Concepción, Victoria ja Santiago. Rannalla '
+            + 'liikkuu ontuen portugalilainen Fernão de Magalhães, jonka jalka '
+            + 'jäi vialle Azemmourin taistelussa Marokossa 1513 ja joka purjehtii '
+            + 'nyt Espanjan kuninkaan lipun alla; espanjalaiset kapteenit '
+            + 'epäilevät häntä jo ennen lähtöä. Hän itse kaatuu Filippiineillä '
+            + 'huhtikuussa 1521. Tähän samaan jokisuuhun palaa 6. syyskuuta 1522 '
+            + 'yksi laiva, Victoria, Juan Sebastián Elcanon komennossa — '
+            + 'ensimmäiset maapallon ympäri purjehtineet ihmiset. Useimmat '
+            + 'toverit jäivät nimettömiin hautoihin matkan varrelle.',
+          lyhyt: 'Noin 270 lähtijästä vain 18 palaa; Magalhães kuolee matkalla, '
+            + 'Elcano tuo viimeisen laivan kotiin.',
+          selite: 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä; kotiin '
+            + 'palaa alkuperäisestä joukosta vain 18. Magalhães itse kuolee '
+            + 'Filippiineillä, ja Juan Sebastián Elcano tuo viimeisen laivan '
+            + 'Espanjaan.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Espanjan merivoimien '
+            + 'Instituto de Historia y Cultura Naval, *Expedición de Juan '
+            + 'Sebastián de Elcano y Fernando de Magallanes (1519–1522)*; '
+            + 'tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
+              lyhyt: 'Viisi laivaa lähtee Sanlúcarista; lähes kolme vuotta '
+                + 'myöhemmin palaa vain uupunut Victoria.',
+              selite: 'Viisi laivaa lähtee, mutta Sanlúcar näkee kahden vuoden ja '
+                + 'yhdentoista kuukauden kuluttua palaavan vain Victorian. Sen '
+                + 'uupuneet miehet ovat ensimmäiset, jotka ovat kiertäneet '
+                + 'maapallon — useimmat toverit jäävät nimettömiin hautoihin '
+                + 'matkan varrelle.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Espanjan merivoimien '
+                + 'Instituto de Historia y Cultura Naval, *Expedición de Juan '
+                + 'Sebastián de Elcano y Fernando de Magallanes (1519–1522)*; '
                 + 'tarkistettu 3.9.2026.',
             },
           ],
@@ -13333,6 +13575,89 @@ export const MAA_KATEGORIAT = {
         fakta: 'Se siirtyy jopa 18 metriä vuodessa ja on Pohjois-Euroopan suurin liikkuva '
           + 'hiekkasärkkä.',
       },
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `viikinkilaiva-roskilde-1040`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-viikinkilaiva-roskilde-1040',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Roskilde 1040',
+      johdanto: 'Roskildenvuonon pohjasta nostettiin vuosina 1957–1962 viisi '
+        + 'viikinkilaivaa, jotka oli aikanaan upotettu sulkemaan väylä — ja juuri '
+        + 'niiden ansiosta tiedetään tarkasti, miltä tuhat vuotta sitten lähtenyt '
+        + 'pitkälaiva näytti.',
+      tehtava: {
+        kysymys: 'Missä Skuldelev 2 -pitkälaiva rakennettiin?',
+        vaihtoehdot: [
+          'Roskildessa',
+          'Bergenissä',
+          'Dublinin seudulla',
+          'Haithabussa',
+        ],
+        oikea: 2,
+        fakta: 'Vuosilustot ajoittavat rakentamisen Dublinin seudulle noin vuoteen 1042.',
+      },
+      nostot: [
+        {
+          otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
+          aika: 'n. 1040',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-lahi-photo-v3.jpg',
+          teksti: 'Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu '
+            + 'kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee '
+            + 'ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö '
+            + 'kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja '
+            + 'mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, '
+            + 'idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti '
+            + 'rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje '
+            + 'on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä '
+            + 'on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään '
+            + 'viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, '
+            + 'koska viisi niistä upotettiin 1000-luvulla tähän samaan vuonoon '
+            + 'sulkemaan Peberrendenin väylä, ja Tanskan kansallismuseo nosti ne '
+            + 'pohjasta vuosina 1957–1962. Suurin, Skuldelev 2, on tammesta '
+            + 'rakennettu kolmikymmenmetrinen sotalaiva: kuusikymmentä soutajaa, '
+            + '112 neliömetrin purje ja tilaa 70–80 miehelle. Sen tarkka '
+            + 'jäljennös Havhingsten fra Glendalough purjehti vuonna 2007 '
+            + 'Roskildesta Dubliniin ja seuraavana kesänä takaisin — sama matka, '
+            + 'samat airot, tuhat vuotta myöhemmin.',
+          lyhyt: 'Nuori soutaja lähtee ensi kertaa pitkälle viikinkimatkalle '
+            + 'tietämättä, palaako miehistö lainkaan.',
+          selite: 'Kuvan nuori soutaja lähtee ensimmäiselle pitkälle matkalleen '
+            + 'eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei '
+            + 'lainkaan. Kapea pitkälaiva tekee saman aluksen kaikista kolmesta '
+            + 'mahdollisen ja kuljettaa pohjoismaisia ihmisiä Atlantille sekä '
+            + 'idän jokireiteille.',
+          lahde: 'Matkakirjan havainnekuva. Alusreferenssi: Vikingeskibsmuseet, '
+            + 'Skuldelev 2, Irlannissa noin 1042–1043 rakennettu pitkälaiva; '
+            + 'tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
+              lyhyt: 'Pitkälaiva kuljettaa kokonaista yhteisöä, sukulaisia ja '
+                + 'soutajia, Atlantille ja itään.',
+              selite: 'Vuonon rannalle jäävät eivät näe pelkkää sotalaivaa vaan '
+                + 'kokonaisen liikkuvan yhteisön: sukulaisia, velallisia, vapaita '
+                + 'miehiä ja ehkä pakotettuja soutajia. Noin 60 airoa antaa '
+                + 'alukselle nopeuden, mutta jokainen meripeninkulma syntyy '
+                + 'yksittäisten käsien työstä.',
+              lahde: 'Matkakirjan havainnekuva. Alusreferenssi: '
+                + 'Vikingeskibsmuseet, Skuldelev 2, Irlannissa noin 1042–1043 '
+                + 'rakennettu pitkälaiva; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'menovinkit',
