@@ -230,7 +230,7 @@ namespace Matkakirja
                 if (tavut != null && tavut.Length > 0)
                 {
                     Vektorisolut.Luettelo l = null;
-                    var tehtava = Task.Run(() => l = Vektorisolut.LueLuettelo(Encoding.UTF8.GetString(Maaraja.Geojson.Pura(tavut))));
+                    var tehtava = Task.Run(() => l = Vektorisolut.LueLuettelo(Encoding.UTF8.GetString(Geojson.Pura(tavut))));
                     while (!tehtava.IsCompleted) yield return null;
                     if (kierros != versioKierros) yield break; // versio vaihtui kesken: uusi haku hoitaa
                     if (tehtava.IsFaulted) Debug.LogError("MATKAKIRJA vektorit: luettelon jäsennys kaatui: " + tehtava.Exception?.GetBaseException());
@@ -482,7 +482,7 @@ namespace Matkakirja
             s.Purku = Task.Run(() =>
             {
                 var kello2 = System.Diagnostics.Stopwatch.StartNew();
-                var v = Vektorisolut.Pura(Maaraja.Geojson.Pura(tavut), korkeus);
+                var v = Vektorisolut.Pura(Geojson.Pura(tavut), korkeus);
                 lock (this) purkuMs += kello2.Elapsed.TotalMilliseconds;
                 return v;
             });

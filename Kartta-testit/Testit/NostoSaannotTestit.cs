@@ -98,6 +98,158 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(null, NostoSaannot.Puoli((Dictionary<string, object>)MiniJson.Jasenna("{\"puoli\":\"koillinen\"}")), "tuntematon kylki");
         }
 
+        // ==== LÖYDÖS 125: symbolit ja hehkupiste (web js/fokusnosto-symbolit.js, mitattu proto-3d/lokit/nostot-125) ====
+
+        [Testi]
+        static void MiniTunnusWebinTaulusta()
+        {
+            Oleta.Sama("vuori", NostoSaannot.MiniTunnus("luonto", "vuori"));
+            Oleta.Sama("meri", NostoSaannot.MiniTunnus("luonto", "meri"), "meri aaltona");
+            Oleta.Sama("meri", NostoSaannot.MiniTunnus("luonto", "joki"), "joki aaltona (NOSTOSYM_MINI_LAJIT)");
+            Oleta.Sama("vuori", NostoSaannot.MiniTunnus("luonto", "jarvi"), "järvi kolmiona kuten webissä");
+            Oleta.Sama("vuori", NostoSaannot.MiniTunnus("luonto", "saari"));
+            Oleta.Sama("vuori", NostoSaannot.MiniTunnus("luonto", null), "laji puuttuu → webin oletus vuori (ei pistettä)");
+            Oleta.Sama("huuto", NostoSaannot.MiniTunnus("huuto", "skandaali"));
+            Oleta.Sama("elain", NostoSaannot.MiniTunnus("elain", null));
+            Oleta.Sama("ihme", NostoSaannot.MiniTunnus("ihme", "historia"));
+            Oleta.Sama("historia", NostoSaannot.MiniTunnus("historia", "kaupunki"));
+            Oleta.Sama("huuto", NostoSaannot.MiniTunnus("tuntematon", null), "webin varamerkki");
+            Oleta.Sama("huuto", NostoSaannot.MiniTunnus(null, null));
+            foreach (var p in new[] { "silma", "historia", "ruoka", "kulttuuri", "tekniikka", "kauppa", "sana", "merenkulku", "urheilu", "kaupunki", "hetki" })
+                Oleta.Tosi(NostoSaannot.OnPistemerkki(p), p + " on piste");
+            foreach (var v in new[] { "vuori", "meri", "huuto", "elain", "ihme", null })
+                Oleta.Tosi(!NostoSaannot.OnPistemerkki(v), (v ?? "null") + " ei ole piste");
+        }
+
+        [Testi]
+        static void KuvamerkkiLajiEnsin()
+        {
+            Oleta.Sama("merkki-saari.png", NostoSaannot.Kuvamerkki("luonto", "saari"), "Santoríni");
+            Oleta.Sama("merkki-joki.png", NostoSaannot.Kuvamerkki("luonto", "joki"));
+            Oleta.Sama("merkki-kulttuuri.png", NostoSaannot.Kuvamerkki("kulttuuri", "urheilu"), "Olympia: laji ilman merkkiä → kategoria");
+            Oleta.Sama("merkki-tekniikka.png", NostoSaannot.Kuvamerkki("kauppa", "tekniikka"), "Korintin kanava");
+            Oleta.Sama("merkki-saari.png", NostoSaannot.Kuvamerkki("kauppa", "saari"), "Antikythera");
+            Oleta.Sama("merkki-historia.png", NostoSaannot.Kuvamerkki("ihme", "historia"), "Rodoksen kolossi");
+            Oleta.Sama("merkki-kauppa.png", NostoSaannot.Kuvamerkki("kauppa", "kaupunki"), "Ermoupoli");
+            Oleta.Sama(null, NostoSaannot.Kuvamerkki("ihme", null));
+            Oleta.Sama(null, NostoSaannot.Kuvamerkki("elain", "elain"));
+            Oleta.Sama(null, NostoSaannot.Kuvamerkki("huuto", "skandaali"));
+            Oleta.Sama("merkki-vuori.png", NostoSaannot.Kuvamerkki("luonto", null), "väliaikainen vara datalle ilman lajia");
+            Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(1, 0.52), "taso 1 aina");
+            Oleta.Tosi(!NostoSaannot.KuvamerkkiKaytossa(2, 3.99), "taso 2 alle kertoimen 4");
+            Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(2, 4.0), "taso 2 kertoimesta 4");
+        }
+
+        [Testi]
+        static void TasoJaSykeWebinMukaan()
+        {
+            Oleta.Sama(2, NostoSaannot.Taso(null), "puuttuva taso = 2 (web), ei 1");
+            Oleta.Sama(1, NostoSaannot.Taso(1));
+            Oleta.Sama(3, NostoSaannot.Taso(3));
+            Oleta.Sama(2, NostoSaannot.Taso(0), "tuntematon arvo = 2");
+            Oleta.Sama(2, NostoSaannot.Taso(1.5));
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(0.6, 1) - 1.07) < 1e-9, "neljännesjakso: 1,07");
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(1.8, 1) - 0.93) < 1e-9, "kolme neljännestä: 0,93");
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(0.6, 0) - 1) < 1e-12, "jäätynyt (voima 0) = 1");
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(0.6, 0.5) - 1.035) < 1e-9, "puolikas amplitudi");
+        }
+
+        /// <summary>Web keraa: eläintäyt koko laudalta, kun näkymän korkeus ≤ 34 / 0,75 = 45,3° eikä nappula liiku.</summary>
+        [Testi]
+        static void ElaintaytKokoLaudalta()
+        {
+            Oleta.Tosi(Math.Abs(NostoSaannot.ElaintakyNakyyKorkeus - 45.333) < 0.001, "raja 45,3°");
+            Oleta.Tosi(NostoSaannot.ElaintaytNakyvat(16.3, false), "avauslennon jälkeen (Kreikka, 0,31 R) auki");
+            Oleta.Tosi(NostoSaannot.ElaintaytNakyvat(8.5, false), "saapumisnäkymässä auki");
+            Oleta.Tosi(!NostoSaannot.ElaintaytNakyvat(53.4, false), "koko pallo kiinni");
+            Oleta.Tosi(!NostoSaannot.ElaintaytNakyvat(8.5, true), "nappula liikkuu → kiinni");
+            Oleta.Tosi(!NostoSaannot.ElaintaytNakyvat(0, false), "tuntematon näkymä kiinni");
+            string kv = Path.Combine(Environment.GetEnvironmentVariable("NOSTOT_125") ?? "/Users/Shared/Claude/proto-3d/lokit/nostot-125", "data", "karttavalot-v127.json");
+            if (!File.Exists(kv)) return;
+            var taky = MiniJson.Alkiot(File.ReadAllText(kv)).Where(a => MiniJson.Teksti(a, "lahde") == "elaintaky").ToList();
+            Oleta.Tosi(taky.Count >= 100 && taky.Select(a => MiniJson.Teksti(a, "maa")).Distinct().Count() == taky.Count, "yksi täky per maa, saatu " + taky.Count);
+            foreach (var (maa, nimio) in new[] { ("BGR", "Pelastuskarhu"), ("HUN", "Mangalitsa"), ("ROU", "Karhunpennut") })
+                Oleta.Tosi(taky.Any(a => MiniJson.Teksti(a, "maa") == maa && MiniJson.Teksti(a, "nimio") == nimio), maa + " " + nimio + " (webin Ateenan kuvissa)");
+        }
+
+        [Testi]
+        static void KaupunkimerkkiJaMerenNimio()
+        {
+            Oleta.Tosi(NostoSaannot.OnKaupunkimerkki("historia", "historia", "kaupunki"), "Marathon lajista");
+            Oleta.Tosi(!NostoSaannot.OnKaupunkimerkki("kaupungit", "kaupunki", "historia"), "laji voittaa aiheen");
+            Oleta.Tosi(NostoSaannot.OnKaupunkimerkki("kaupungit", "kaupunki", null), "ilman lajia aihe");
+            Oleta.Tosi(!NostoSaannot.OnKaupunkimerkki("kulttuuri", "kulttuuri", null), "Kalamata ilman lajia: tavallinen (datan puute)");
+            Oleta.Tosi(NostoSaannot.OnMerenNimio("meri") && !NostoSaannot.OnMerenNimio("joki") && !NostoSaannot.OnMerenNimio(null), "meren nimiö");
+        }
+
+        [Testi]
+        static void HehkupisteWebinGradienteista()
+        {
+            const double e = 1e-9;
+            Oleta.Tosi(Math.Abs(NostoSaannot.HehkunPeitto(0) - 0.45) < e && Math.Abs(NostoSaannot.HehkunPeitto(0.7) - 0.45) < e, "sisäympyrä 0,45");
+            Oleta.Tosi(Math.Abs(NostoSaannot.HehkunPeitto(1.4) - 0.225) < e, "puolivälissä 0,225");
+            Oleta.Tosi(NostoSaannot.HehkunPeitto(2.1) == 0 && NostoSaannot.HehkunPeitto(3) == 0, "2,1 r:stä ulos 0");
+            // Sisus: polttopiste (−0,25; −0,25) = 0, reuna 1, keskipiste ratkaisusta (0,125 − √0,125) / −0,875.
+            Oleta.Tosi(NostoSaannot.SisuksenOsuus(-0.25, -0.25) < 1e-6, "polttopiste vaalein");
+            Oleta.Tosi(Math.Abs(NostoSaannot.SisuksenOsuus(1, 0) - 1) < 1e-6 && Math.Abs(NostoSaannot.SisuksenOsuus(0, -1) - 1) < 1e-6, "reuna 1");
+            Oleta.Tosi(Math.Abs(NostoSaannot.SisuksenOsuus(0, 0) - (0.125 - Math.Sqrt(0.125)) / -0.875) < 1e-9, "keskipiste 0,261");
+            Oleta.Tosi(NostoSaannot.SisuksenOsuus(0.5, 0.5) > NostoSaannot.SisuksenOsuus(-0.5, -0.5), "vaalea vasemmalla ylhäällä (y alas)");
+            var vaalea = NostoSaannot.Vaalenna(NostoSaannot.PisteHarmaa, 0.42);
+            Oleta.Sama(171.0, Math.Round(vaalea[0] * 255), "vaalenna #6f6a61 0,42 → r 171");
+            var (r, g, b, a) = NostoSaannot.Hehkupiste(0, 0, 1);
+            Oleta.Tosi(Math.Abs(a - (0.86 + 0.45 * 0.14)) < 1e-9, "keskellä kiekko häiveen päällä, saatu " + a);
+            Oleta.Tosi(r > NostoSaannot.PisteHarmaa[0], "sisus harmaata vaaleampi");
+            var (r2, _, _, a2) = NostoSaannot.Hehkupiste(1.5, 0, 0);
+            Oleta.Tosi(Math.Abs(a2 - 0.45 * (1 - 0.8 / 1.4)) < 1e-9 && Math.Abs(r2 - NostoSaannot.PisteHarmaa[0]) < 1e-9, "kiekon ulkopuolella pelkkä harmaa häive");
+            Oleta.Sama(0.0, NostoSaannot.Hehkupiste(2.2, 0, 0).A, "häiveen ulkopuolella läpinäkyvä");
+        }
+
+        /// <summary>
+        /// Webin tuotannon datumit (lokit/nostot-125/web/web-kreikka-lajit.json, mitattu 25.9.2026): kategorialla ja
+        /// lajilla natiivin säännöt antavat saman minimerkin, kuvamerkin ja kaupunkikoon kuin web kaikille Kreikan
+        /// nostoille. Ilman lajia (karttavalot v127) listataan erot: ne ovat datan puutteita (Pelikoodarille).
+        /// </summary>
+        [Testi]
+        static void WebinKreikanSymbolit()
+        {
+            string kansio = Environment.GetEnvironmentVariable("NOSTOT_125") ?? "/Users/Shared/Claude/proto-3d/lokit/nostot-125";
+            string web = Path.Combine(kansio, "web", "web-kreikka-lajit.json"), kv = Path.Combine(kansio, "data", "karttavalot-v127.json");
+            if (!File.Exists(web)) { Console.WriteLine("  (webin mittausta ei ole: " + web + ")"); return; }
+            var rivit = ((List<object>)MiniJson.Jasenna(File.ReadAllText(web))).Cast<Dictionary<string, object>>()
+                .Where(d => MiniJson.Teksti(d, "perhe") == "nosto").ToList();
+            Oleta.Tosi(rivit.Count >= 50, "webin Kreikan nostoja " + rivit.Count);
+            foreach (var d in rivit)
+            {
+                string kat = MiniJson.Teksti(d, "kategoria"), laji = MiniJson.Teksti(d, "laji"), nimi = MiniJson.Teksti(d, "nimi");
+                Oleta.Sama(MiniJson.Teksti(d, "minimerkki"), NostoSaannot.MiniTunnus(kat, laji), nimi);
+                string wk = MiniJson.Teksti(d, "kuvamerkki");
+                Oleta.Sama(wk == null ? null : Path.GetFileName(wk), NostoSaannot.Kuvamerkki(kat, laji), nimi + " kuvamerkki");
+                Oleta.Sama(MiniJson.Kentta(d, "kaupunki") is bool kb && kb, NostoSaannot.OnKaupunkimerkki(MiniJson.Teksti(d, "aihe"), kat, laji), nimi + " kaupunki");
+            }
+            if (!File.Exists(kv)) return;
+            // Datan puute: v127 ilman lajia → mikä natiivissa yhä eroaa webistä.
+            var webinNimet = rivit.GroupBy(d => MiniJson.Teksti(d, "nimi")).ToDictionary(g => g.Key, g => g.First());
+            var erot = new List<string>();
+            int luontoPisteena = 0;
+            foreach (var a in MiniJson.Alkiot(File.ReadAllText(kv)).Where(a => MiniJson.Teksti(a, "maa") == "GRC"))
+            {
+                string kat = MiniJson.Teksti(a, "kategoria"), laji = MiniJson.Teksti(a, "laji"), nimi = MiniJson.Teksti(a, "nimi");
+                if (kat == "luonto" && NostoSaannot.OnPistemerkki(NostoSaannot.MiniTunnus(kat, laji))) luontoPisteena++;
+                if (nimi == null || !webinNimet.TryGetValue(nimi, out var w)) continue;
+                var syyt = new List<string>();
+                if (NostoSaannot.MiniTunnus(kat, laji) != MiniJson.Teksti(w, "minimerkki")) syyt.Add("merkki " + MiniJson.Teksti(w, "minimerkki"));
+                string wk = MiniJson.Teksti(w, "kuvamerkki");
+                if (NostoSaannot.Kuvamerkki(kat, laji) != (wk == null ? null : Path.GetFileName(wk))) syyt.Add("kuvamerkki " + (wk == null ? "-" : Path.GetFileName(wk)));
+                bool wKaup = MiniJson.Kentta(w, "kaupunki") is bool kb && kb;
+                if (NostoSaannot.OnKaupunkimerkki(MiniJson.Teksti(a, "aihe"), kat, laji) != wKaup) syyt.Add("kaupunkikoko");
+                if (NostoSaannot.OnMerenNimio(laji) != NostoSaannot.OnMerenNimio(MiniJson.Teksti(w, "laji"))) syyt.Add("meren nimiö");
+                if (syyt.Count > 0) erot.Add($"{nimi} ({kat}, webin laji {MiniJson.Teksti(w, "laji")}): {string.Join(", ", syyt)}");
+            }
+            Console.WriteLine($"  v127 Kreikka ilman lajia: {erot.Count} nostoa eroaa webistä (datan puute)");
+            foreach (var e in erot) Console.WriteLine("    " + e);
+            Oleta.Sama(0, luontoPisteena, "yksikään luontonosto ei ole enää harmaa piste");
+        }
+
         /// <summary>Koepaketin v50 ankkurit: Versailles ja Iraklion piirtyvät omaan paikkaansa (web mitat kohta 4).</summary>
         [Testi]
         static void KoepaketinAnkkurit()

@@ -209,8 +209,9 @@ namespace Matkakirja
             Laatat("maasto", maastoPohja);
             // Napakalotit (NapaKannet) kuuluvat yleiskarttaan: ilman niitä navat jäävät yksivärisiksi kansiksi.
             if (a.Id == "maailma") polut.AddRange(NapaKannet.OfflinePolut());
-            // Samoin pelaajan maan tarkka ääriviiva (Maaraja): ilman sitä offline-kehä on karkea varamonikulmio.
-            if (a.Id == "maailma") polut.Add(Maaraja.GeojsonPolku);
+            // Samoin pelaajan maan tarkka ääriviiva (Maaraja): maa–maa-rajat (löydös 127) ja varana koko renkaat; ilman
+            // niitä offline-kehä on karkea varamonikulmio.
+            if (a.Id == "maailma") { polut.Add(Maaraja.MaamaaPolku); polut.Add(Maaraja.GeojsonPolku); }
             // Rannikko ja rajat vektorina (Vektorikerros, löydös 46 E1–E2): maailmalle luettelo ja karkeat tasot, maalle
             // tarkat solut rasterin laatikosta.
             if (a.Id == "maailma") polut.AddRange(Vektorikerros.OfflinePolut(true, null));

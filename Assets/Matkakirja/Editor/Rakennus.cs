@@ -379,7 +379,18 @@ namespace Matkakirja.Editori
                 "Packages/com.cesium.unity/Source/Runtime/Resources/CesiumDefaultTilesetMaterial.mat");
             var m = oletus != null ? new Material(oletus) : new Material(varjostin);
             m.shader = varjostin;
-            if (oletus != null) m.renderQueue = oletus.renderQueue;
+            // KEHYKSEN HINTA LEVOSSA (korjaus 2, 25.9.2026; docs/raportit/kehyksen-hinta-20260925.md): ei alpha-testiä.
+            // Cesiumin oletusmateriaalin leikkaus (_AlphaClip, _ALPHATEST_ON, AlphaTest-jono 2450, TransparentCutout) on
+            // leikkauspolygoneja varten (CesiumPolygonRasterOverlay), joita peli ei käytä. Discard estää Apple-GPU:n
+            // piilopintojen poiston: iPad Pro 13:lla laattojen varjostus 18,6 → 14,1 ms kehyksessä, kuva sama (≤ 4/255).
+            m.SetFloat("_AlphaClip", 0f);
+            m.SetFloat("_AlphaToMask", 0f);
+            m.SetFloat("_BUILTIN_AlphaClip", 0f);
+            m.DisableKeyword("_ALPHATEST_ON");
+            m.DisableKeyword("_BUILTIN_ALPHATEST_ON");
+            m.DisableKeyword("_BUILTIN_AlphaClip");
+            m.SetOverrideTag("RenderType", "Opaque");
+            m.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Geometry;
             AssetDatabase.DeleteAsset(polku);
             AssetDatabase.CreateAsset(m, polku);
             return AssetDatabase.LoadAssetAtPath<Material>(polku);

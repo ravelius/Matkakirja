@@ -7,6 +7,7 @@
 //   2. Aloita alusta    kaari alkuun (entinen ↺; kutsujan teko)
 //   3. Kertoja          pelin oma kytkin Asetukset Kytkin.Kertoja (web luentaKytkin)
 //   4. Taustamusiikki   pelin oma kytkin Asetukset Kytkin.Musiikki (web musiikkiPaalla)
+//   5. Tekstitys        vain linsseillä, jotka antavat sen (NaytaTekstitys; Ihmisen matka II, löydös 147)
 //
 // Kytkimet ovat PELIN omia eivätkä linssin paikallisia: sama kertoja vaikenee
 // matkakirjan merkinnöissä (Puhe kuuntelee Asetukset.Muuttui), ja linssin oma
@@ -33,7 +34,9 @@ namespace Matkakirja.Natiivi
         public readonly Button Nappi;
         readonly VisualElement valikko;
         readonly Button alustaNappi;
-        readonly (Button Rivi, Label Tila) kertoja, musiikki;
+        readonly (Button Rivi, Label Tila) kertoja, musiikki, tekstitys;
+        Func<bool> tekstitysTila;
+        Action<bool> tekstitysAseta;
         readonly Action poistu, alusta;
 
         /// <summary>Taustamusiikin kytkin käännettiin (web onMusiikki: linssin oma raita tottelee samaa kytkintä).</summary>
@@ -57,6 +60,17 @@ namespace Matkakirja.Natiivi
             alustaNappi = Komento("Aloita alusta", () => this.alusta?.Invoke());
             kertoja = Kytkinrivi(Kytkin.Kertoja, "Kertoja");
             musiikki = Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
+            // Löydös 147 (omistaja, build 17): Ihmisen matka II:n CC-nappi pois yläriviltä, tilalle kytkin "Tekstitys".
+            var tb = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () =>
+            {
+                if (tekstitysTila == null) return;
+                tekstitysAseta?.Invoke(!tekstitysTila());
+                PaivitaTekstitys();
+                Sulje();
+            }, valikko);
+            Rakenne.Teksti("Tekstitys", "mk-linssivalikko__nimi", tb);
+            tekstitys = (tb, Rakenne.Teksti("", "mk-linssivalikko__tila", tb));
+            tb.style.display = DisplayStyle.None;
 
             kerros.JokaRuutu += TarkistaOhiNapautus;
         }
@@ -100,6 +114,29 @@ namespace Matkakirja.Natiivi
         {
             PaivitaRivi(Kytkin.Kertoja);
             PaivitaRivi(Kytkin.Musiikki);
+            PaivitaTekstitys();
+        }
+
+        /// <summary>
+        /// Tekstitys-kytkin näkyviin linssin omalla tilalla (tila + asetus), tai pois (null). Löydös 147: Ihmisen matka II.
+        /// </summary>
+        public void NaytaTekstitys(Func<bool> tila, Action<bool> aseta)
+        {
+            tekstitysTila = tila;
+            tekstitysAseta = aseta;
+            tekstitys.Rivi.style.display = tila != null ? DisplayStyle.Flex : DisplayStyle.None;
+            PaivitaTekstitys();
+        }
+
+        public bool TekstitysNakyy => tekstitysTila != null;
+
+        void PaivitaTekstitys()
+        {
+            if (tekstitysTila == null) return;
+            bool paalla = tekstitysTila();
+            tekstitys.Rivi.EnableInClassList("mk-valittu", paalla);
+            tekstitys.Tila.text = paalla ? "päällä" : "pois";
+            tekstitys.Rivi.tooltip = "Tekstitys: " + tekstitys.Tila.text;
         }
 
         /// <summary>Aloita alusta -rivi näkyviin tai pois (kaari, jolle alustusta ei vielä ole).</summary>
