@@ -21,7 +21,9 @@
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
-// kylläisyys ja kehittäjätila muistetaan PlayerPrefsissä; isoisän linssille 1873 "isoisa tila".
+// kylläisyys ja kehittäjätila muistetaan PlayerPrefsissä; isoisän linssille 1873 "isoisa tila";
+// linssien äänille "aani tila | keksinto | vuosi | humina [pois]" (soitto ja lähteen aika hetken päästä, humina
+// Pelikoodarin maisemakanavalla ilman linssiä).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -144,6 +146,8 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
         }
         KerrosSovitin kerrokset;
+        /// <summary>Keksintöjen kilahdus ja vuosinaksahdus syntetisoituina (Tehoste ohjaa ne tänne).</summary>
+        LinssiTehosteet tehosteet;
         string komentoPolku, lokiPolku;
         float komentoKello;
 
@@ -201,6 +205,8 @@ namespace Matkakirja.Natiivi
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.
             LinssienEsilataaja.Kytke(this, rekisteri);
+            // Syntetisoidut tehosteet (ESILATAUSPOLITIIKKA kohta 1: efektiäänet ilman verkkoa) taustasäikeessä heti.
+            tehosteet = LinssiTehosteet.Luo(transform);
             rekisteri.Vaihtui += _ =>
             {
                 bool nyt = rekisteri.EstaaKartan;
@@ -1145,8 +1151,29 @@ namespace Matkakirja.Natiivi
 
         public void Tehoste(string nimi, float voima = 1f)
         {
+            // Keksintöjen kilahdus ja vuosinaksahdus ovat webissä synteesiä: ne soivat LinssiTehosteista, koska
+            // tehosteväylälle ei voi rekisteröidä ajonaikaista klippiä. Muut nimet Pelikoodarin väylälle.
+            if (tehosteet != null && LinssiTehosteet.Tuntee(nimi))
+            {
+                var (lahde, tila) = tehosteet.Soita(nimi, voima);
+                // Naksu voi soida 8 kertaa sekunnissa: lokiin vain kilahdukset (naksut laskurina, "aani tila").
+                if (nimi != Matkakirja.Linssit.Aanet.KeksintojenAanet.Keksinto) return;
+                string alku = $"linssiaani: keksinto {tila}, {AaniLaskurit()}";
+                if (lahde == null) Kirjaa(alku);
+                else StartCoroutine(tehosteet.KirjaaMyohemmin(lahde, alku, 0.2f));
+                return;
+            }
             Kirjaa($"tehoste {nimi} {voima:0.##}");
             TehosteKasittelija?.Invoke(nimi, voima);
+        }
+
+        /// <summary>Auki olevan keksintölinssin kilahdukset ja naksut (web keksinnonAani, naksahda) lokiriville.</summary>
+        string AaniLaskurit()
+        {
+            var l = (rekisteri?.Auki as KeksinnotSovitin)?.Linssi;
+            if (l?.Ajo == null) return "keksinnöt ei auki";
+            var a = l.Aanet;
+            return $"pysäkki {l.Ajo.Tila.I}, vuosi {l.Ajo.Tila.Paikka:F1}, kilahduksia {a.Kilahduksia}, naksuja {a.Naksuja} (harvennettu {a.Harvennettuja})";
         }
 
         public void Taustaaani(string tunnus)
@@ -1247,6 +1274,8 @@ namespace Matkakirja.Natiivi
                     (rekisteri.Auki as MaatSovitin)?.Linssi?.Napauta(osat[1].ToUpperInvariant());
                 else if (osat[0] == "vertaa")
                     Kirjaa("vertaa: " + ((rekisteri.Auki as MaatSovitin)?.Linssi is Matkakirja.Linssit.Maat.VertailuLinssi v && v.Vertaa()));
+                else if (osat[0] == "aani" && osat.Length > 1)
+                    Aani(osat);
                 else if (osat[0] == "lehti")
                     Kirjaa("lehti: " + ((rekisteri.Auki as MaatSovitin)?.Linssi is Matkakirja.Linssit.Maat.MaatiedotLinssi m && m.AvaaLehti()));
                 else
@@ -1298,6 +1327,51 @@ namespace Matkakirja.Natiivi
             Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, " +
                 $"ohjaus {il?.Ohjaus}, ääni {sovitin?.Aani?.Tila ?? "ei"}" +
                 (kaare != null ? $", kääre {(kaare.Tauolla ? "tauolla" : "käy")} ajo #{kaare.Ajo?.Numero ?? 0}{(kaare.Saattaa ? " saattaa" : "")}" : ""));
+        }
+
+        /// <summary>
+        /// Linssien äänet simulaattorimittaukseen: "aani keksinto|vuosi" soittaa tehosteen ja kirjaa lähteen ajan hetken
+        /// päästä (play() ei todista ääntä), "aani humina [pois]" soittaa astronautin huminan Pelikoodarin maisemakanavalla
+        /// ilman linssiä, "aani tila" kertoo tehosteet, laskurit ja huminan lähteet (Aanisoitin "Maisema A/B").
+        /// </summary>
+        void Aani(string[] osat)
+        {
+            string mita = osat[1];
+            if (LinssiTehosteet.Tuntee(mita))
+            {
+                if (tehosteet == null) { Kirjaa("linssiaani: tehosteita ei ole"); return; }
+                var (lahde, tila) = tehosteet.Soita(mita);
+                string alku = $"linssiaani: {mita} {tila}";
+                if (lahde == null) Kirjaa(alku);
+                else StartCoroutine(tehosteet.KirjaaMyohemmin(lahde, alku, mita == Matkakirja.Linssit.Aanet.KeksintojenAanet.Vuosi ? 0.02f : 0.2f));
+            }
+            else if (mita == "humina")
+            {
+                bool pois = osat.Length > 2 && osat[2] == "pois";
+                Taustaaani(pois ? null : Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina);
+                if (!pois) StartCoroutine(KirjaaHuminaMyohemmin(3f));
+            }
+            else if (mita == "tila")
+                Kirjaa($"linssiaani: {tehosteet?.Kuvaus() ?? "tehosteita ei ole"}; {AaniLaskurit()}; {Humina()}");
+            else Kirjaa("linssiaani: tuntematon " + mita + " (aani tila | keksinto | vuosi | humina [pois])");
+        }
+
+        System.Collections.IEnumerator KirjaaHuminaMyohemmin(float s)
+        {
+            yield return new WaitForSecondsRealtime(s);
+            Kirjaa("linssiaani: " + Humina());
+        }
+
+        /// <summary>Huminan tila Pelikoodarin äänisoittimesta: maisemakanavan toive ja huminaklippiä soittavat lähteet.</summary>
+        static string Humina()
+        {
+            if (!Aanisoitin.LinssiTaustat.TryGetValue(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina, out var h)) return "humina: ei taulussa";
+            var toive = Aanisoitin.Instanssi?.Tila?.Toive(Matkakirja.Peli.Kanava.Maisema);
+            string kanava = toive == null ? "ei äänisoitinta" : toive.Url == h.Url ? $"maisemakanavalla, taso {toive.Tavoite:0.000}" : "ei maisemakanavalla";
+            var lahteet = new List<string>();
+            foreach (var s in FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+                if (s.clip != null && s.clip.name == h.Url) lahteet.Add($"{s.gameObject.name}: {LinssiTehosteet.Lahteen(s)}");
+            return $"humina {kanava} (voima {h.Voima:0.00}, nousu {h.NousuMs} ms), lähteet [{string.Join("; ", lahteet)}]";
         }
 
         /// <summary>Natiivin Kuvauksen loppu "VU <tila> <syy>" (Natiiviseppä 161fa35), muuten koko kuvaus.</summary>

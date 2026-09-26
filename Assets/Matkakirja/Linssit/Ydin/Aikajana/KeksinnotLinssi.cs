@@ -9,8 +9,12 @@
 // oman luentansa, merkkipaalun välinäytös syrjäyttää sen omalla puheellaan ja
 // katkeaa Jatka-napista; selaus ja sulku hiljentävät. Soiva luenta pidättää
 // pysäkin tauon loppua (Kello.PidataLuennalle).
+//
+// ÄÄNET (web aikajana.js keksinnonAani ja naksahda, Aanet/KeksintojenAanet): syttyvä keksintö kilahtaa ja käyvän
+// kellon vuosi naksahtaa (enintään 8/s) ILinssiYmparisto.Tehoste-kutsulla ("keksinto", "vuosi").
 using System;
 using System.Collections.Generic;
+using Matkakirja.Linssit.Aanet;
 
 namespace Matkakirja.Linssit.Aikajana
 {
@@ -40,8 +44,39 @@ namespace Matkakirja.Linssit.Aikajana
             this.aineisto = aineisto;
             this.luennat = luennat;
             this.soitin = soitin;
-            this.nakyma = soitin == null ? nakyma : new LuennanValittaja(this, nakyma);
+            var n = soitin == null ? nakyma : new LuennanValittaja(this, nakyma);
+            this.nakyma = new AanenValittaja(this, n);
             this.luentaSoi = luentaSoi ?? (soitin == null ? null : () => soitin.Soi);
+        }
+
+        /// <summary>Kilahdusten ja naksahdusten ajoitus ja laskurit (linssi-loki ja testit); uusi jokaiselle avaukselle.</summary>
+        public KeksintojenAanet Aanet { get; } = new KeksintojenAanet();
+
+        /// <summary>Kuuntelee kellon ja syttymisen ja soittaa kilahduksen ja naksahduksen; välittää kaiken eteenpäin.</summary>
+        sealed class AanenValittaja : IPysakkiajonNakyma
+        {
+            readonly KeksinnotLinssi l;
+            readonly IPysakkiajonNakyma n;
+            public AanenValittaja(KeksinnotLinssi l, IPysakkiajonNakyma n) { this.l = l; this.n = n; }
+            public void Kello(double vuosi)
+            {
+                n?.Kello(vuosi);
+                // Selaus (Pysakkiajo.Siirry) pysäyttää kellon ennen kuin näyttää vuoden: rullaus on hiljainen.
+                if (l.y != null && l.Aanet.Kello(vuosi, l.Ajo?.Kaynnissa ?? false, l.y.Aika * 1000)) l.y.Tehoste(KeksintojenAanet.Vuosi);
+            }
+            public void Sytyta(int i)
+            {
+                n?.Sytyta(i);
+                if (l.y != null && l.Aanet.Sytyta(l.aineisto.Pysakit[i])) l.y.Tehoste(KeksintojenAanet.Keksinto);
+            }
+            public void Selaus(int i)
+            {
+                if (i < 0) l.Aanet.Nollaa();   // Alusta: kello alkuun ilman naksua
+                n?.Selaus(i);
+            }
+            public void Valinaytos(int i) => n?.Valinaytos(i);
+            public void Tauolla(bool tauolla) => n?.Tauolla(tauolla);
+            public void Loppu() => n?.Loppu();
         }
 
         /// <summary>Viimeksi soitettu luenta (testit ja linssi-loki); null = hiljaa.</summary>
