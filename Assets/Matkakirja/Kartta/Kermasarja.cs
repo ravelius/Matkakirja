@@ -15,8 +15,12 @@ namespace Matkakirja
     /// </summary>
     public static class Kermasarja
     {
-        /// <summary>Oletussarja (build 14:n pohjasta, peitto 0,80; löydös 22).</summary>
-        public const string Oletus = "2026-09-25-p080";
+        /// <summary>
+        /// Oletussarja: OMISTAJAN VALINTA p060 (26.9. klo 05.0x, Fablen kautta), Karttasepän poltto 26-pohjasta
+        /// (2026-09-26-pohja-20260926, peitto 0,60). Ennen 2026-09-25-p080 (build 14:n pohjasta, löydös 22). 26-pohjasta on
+        /// poltettu vain p060, joten lyhyet nimet p080/p045 eivät nyt löydy; vertailuun koko nimi (vari sarja 2026-09-25-p080).
+        /// </summary>
+        public const string Oletus = "2026-09-26-p060";
         /// <summary>
         /// Lyhyen nimen ("p060") etuliite: saman pohjan sarjat, oletussarjan nimestä ennen "-pNNN"-päätettä. Kun kerma
         /// poltetaan uudelleen uudesta pohjasta (Karttaseppä: 2026-09-26-pohja-20260926 ja valittu peitto), vaihdetaan vain
@@ -24,7 +28,7 @@ namespace Matkakirja
         /// </summary>
         public static string Etuliite => Oletus.LastIndexOf("-p", System.StringComparison.Ordinal) is int i && i >= 0
             ? Oletus.Substring(0, i + 1) : Oletus + "-";
-        /// <summary>Peitto, jos nimessä ei ole "-pNNN"-päätettä (vanhat sarjat olivat 0,80).</summary>
+        /// <summary>Peitto, jos nimessä ei ole "-pNNN"-päätettä (vanhat sarjat olivat 0,80; ei oletussarjan peitto).</summary>
         public const float OletusPeitto = 0.80f;
 
         /// <summary>
