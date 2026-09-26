@@ -658,6 +658,77 @@ export const RAIDAT = {
       + 'seam. '
       + `${TYYLI}`,
   },
+  // Vaihe 3 (§5 kohta 3): loput maanosaraidat. Sama muotti kuin vaiheen 2 maanosilla; Lyrian suodatin hylkäsi 26.9.
+  // muotoilut "Middle Eastern", "the Balkans" → paikat kuvataan maisemana ja soittimina, ei kansoina eikä uskontoina.
+  ...Object.fromEntries([
+    ['ita-eurooppa', 'Travelling across the wide plains of Eastern Europe and Russia in the 1870s',
+      'a balalaika tremolo and a warm cello over soft strings, a gentle cimbalom shimmer now and then and a clarinet line',
+      'Snow light on birch forests, a sleigh road, a samovar by the window', 70],
+    ['lahi-ita', 'A slow journey along warm desert coasts and old harbour towns of the Levant and North Africa in the 1870s',
+      'an oud and a ney flute in a modal colour over soft strings, a quiet frame drum touch now and then and a qanun ripple',
+      'Dusk over flat roofs, a caravan road, palm shade by a harbour', 72],
+    ['saharan-etelapuoli', 'Travelling through the savanna and river lands south of the Sahara in the 1870s',
+      'a kora and a balafon over soft strings, gentle hand drums now and then and a wooden flute line',
+      'Wide open savanna light, a slow river, evening birds', 76],
+    ['etela-aasia', 'A slow journey through the river towns and hill country of South Asia in the 1870s',
+      'a bansuri flute over a very quiet sitar drone and soft strings, a light tabla touch now and then and a harmonium',
+      'Humid evening air, a river ghat at dusk, tea gardens on the hills', 70],
+    ['ita-aasia', 'Travelling through the harbour cities and misty mountains of East Asia in the 1870s',
+      'a guzheng or koto and an erhu over soft strings, a breathy shakuhachi answer now and then and a quiet piano',
+      'Early morning mist, a lantern-lit harbour, a garden with stone paths', 66],
+    ['pohjois-amerikka', 'Travelling across North America in the 1870s by riverboat and railway',
+      'a fiddle and an 1870s banjo over soft strings, a harmonica answer now and then and a parlour piano',
+      'A wide river town, a railway station on the prairie, a painted steamboat', 80],
+    ['etela-amerikka', 'A slow journey through the harbour cities and high mountains of South America in the 1870s',
+      'a charango and a guitar over soft strings, a quena flute answer now and then and a light hand percussion touch',
+      'High mountain air, a colonial plaza at siesta, a harbour on the Pacific', 76],
+    ['oseania', 'Travelling around the islands and far harbours of Oceania in the 1870s',
+      'a classical guitar and a warm ukulele-like strum over soft strings, a gentle slide guitar line now and then and a quiet flute',
+      'A harbour at the far side of the world, trade winds, a long white beach', 70],
+  ].map(([id, matka, soittimet, kuva, bpm]) => [`maanosa-${id}`, {
+    laji: 'suunnitelma',
+    vaihe: 3,
+    tiedosto: `musa-maanosa-${id}.mp3`,
+    kesto: 70000,
+    looppi: true,
+    kuvaus: `Maanosaraita ${id} (vaihe 3, looppi)`,
+    prompt: `${matka}: ${soittimet} that quietly hints at the grandfather's theme (D–G–F–E–D–C–D) once, woven in, `
+      + `never stated loudly. ${kuva}. About ${bpm} BPM, even dynamics. It plays UNDER the ambient soundscape of the `
+      + 'city and must never pull attention from it. Instruments and mode only, no recognisable folk tune. Seamless loop: '
+      + 'begin and end on the same quiet sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  }])),
+  // Vaihe 3: tunnuskaupungit (suunnitelma 2.2, "johtoaihe paikallisella soittimella", matkan pääkaupungit). Tiedosto on
+  // kaupunkiraidan nimisäännöllä (js/kaupunkimusiikki.js kaupunkiraidanTunnus), jotta hyväksytty raita kytketään
+  // KAUPUNKIRAIDAT-riviksi (omistaja hyväksyi 26.9. klo 11.0x; vartija: tests/kaupunkimusiikki.test.mjs). Ryhmä
+  // `kaupungit` generoi ne uudelleen, `vaihe3` ei enää (laji kaupunki).
+  ...Object.fromEntries([
+    ['pariisi', 'Paris in the 1870s: boulevards, cafés and gas lamps after rain',
+      'a salon piano and a violin carry the theme, soft strings and a musette accordion colour underneath', 84],
+    ['lontoo', 'London in the 1870s: fog on the river, cab horses, a busy railway terminus',
+      'a cello and a clarinet carry the theme over soft strings, a church-bell-like celesta touch now and then', 76],
+    ['rooma', 'Rome in the 1870s: warm stone, fountains in a piazza, late afternoon light',
+      'a mandolin and a guitar carry the theme, a warm oboe answers over soft strings', 80],
+    // Lyria hylkäsi 26.9. muotoilun "Istanbul in the 1870s … seagulls over domes" (Input blocked: sensitive words).
+    ['istanbul', 'A great harbour city on a strait between two continents in the 1870s: ferries crossing, a covered market, seagulls',
+      'a kanun and a ney flute carry the theme in a modal colour, a soft oud and strings underneath', 72],
+    ['kairo', 'A great river city at the edge of the desert in the 1870s: the Nile at dusk, sailing boats, a lively market street',
+      'an oud and a ney flute carry the theme over soft strings, a quiet riq tambourine touch now and then', 74],
+    ['pietari', 'Saint Petersburg in the 1870s: wide frozen canals, palace façades, white-night light',
+      'a balalaika tremolo and a solo piano carry the theme, a warm cello and strings underneath', 68],
+  ].map(([id, kuva, soittimet, bpm]) => [id, {
+    laji: 'kaupunki',
+    kaupunki: id,
+    tiedosto: `musa-kaupunki-${id}.mp3`,
+    kesto: 75000,
+    looppi: true,
+    kuvaus: `Tunnuskaupunki ${id} (vaihe 3, looppi)`,
+    prompt: `${kuva}. The grandfather's theme (D–G–F–E–D–C–D) played gently by local instruments: ${soittimet}. `
+      + `About ${bpm} BPM, even dynamics. It plays UNDER the ambient soundscape of the city and must never pull `
+      + 'attention from it. Instruments and mode only, no recognisable folk tune, no singing. Seamless loop: begin and end '
+      + 'on the same quiet sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  }])),
 };
 
 /** Onko raita kaupungin oma kappale vai paletin raita? */
@@ -688,6 +759,7 @@ export const TILOJEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onTila(RAIDAT[i
 const vaiheenRaidat = (n) => Object.keys(RAIDAT).filter((id) => onSuunnitelma(RAIDAT[id]) && RAIDAT[id].vaihe === n);
 export const VAIHE1_RAIDAT = vaiheenRaidat(1);
 export const VAIHE2_RAIDAT = vaiheenRaidat(2);
+export const VAIHE3_RAIDAT = vaiheenRaidat(3);
 
 /**
  * Raitalista argumenteista.
@@ -707,6 +779,7 @@ export const RYHMAT = {
   tilat: () => [...TILOJEN_RAIDAT],
   vaihe1: () => [...VAIHE1_RAIDAT],
   vaihe2: () => [...VAIHE2_RAIDAT],
+  vaihe3: () => [...VAIHE3_RAIDAT],
 };
 
 export function valitseRaidat(argumentit) {
