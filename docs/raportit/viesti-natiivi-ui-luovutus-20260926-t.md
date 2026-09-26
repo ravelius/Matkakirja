@@ -47,3 +47,6 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   piilota). Kuvapari `proto-3d/lokit/natiivi-ui-loydos164/kuvapari-164-jatko-piste.png`. Merge-pyyntö 1.0.23.
 - 165 `natiivi-ui/maakunta-korostus` de3fed4c: Fable hyväksyi, 1.0.23 (build 22 leikattiin ennen). Merge-pyyntö.
 - valikkonapit 79adce1b: build 22 -junaan Natiivisepän mukaan (tarkista junasta).
+- 16.1x: 165 MERGETTY junaan 60cfadda (1.0.23-juna; 1.0.22 leikattiin 45398ff8:sta, jossa valikkonapit ja 164 ovat).
+  Levysiivous (Fable): siivoa-pariteettisimut.sh --aja ei vapauttanut mitään (uninstall vaatii käynnissä olevan laitteen);
+  iPad Pro 11 503000D1 -erase estettiin luokittimella → Fablelle vaihtoehdot, ei uusintaa.
