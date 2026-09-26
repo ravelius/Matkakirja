@@ -605,7 +605,8 @@ export const RAIDAT = {
   ...Object.fromEntries([
     ['lansi-eurooppa', 'Northern or Western European city', 'solo piano with a cello line, a harmonium chord and a flute answer, grey northern light'],
     ['ita-eurooppa', 'Eastern European or Russian city', 'a balalaika tremolo and a violin, with a cimbalom shimmer, wide snowy plains'],
-    ['lahi-ita', 'Middle Eastern or North African city', 'an oud and a ney flute in a modal colour, a soft darbuka touch and a qanun ripple, warm dusk'],
+    // Lyria hylkäsi 26.9. muotoilun "Middle Eastern or North African city" (Input blocked: sensitive words).
+    ['lahi-ita', 'harbour city of the Levant or the North African coast', 'an oud and a ney flute in a modal colour, a soft frame drum touch and a qanun ripple, warm dusk'],
     ['saharan-etelapuoli', 'city south of the Sahara', 'a kora and a balafon, soft hand drums and a wooden flute, open savanna light'],
     ['etela-aasia', 'South Asian city', 'a bansuri flute with a very quiet sitar drone and a soft tabla touch, humid evening air'],
     ['ita-aasia', 'East Asian city', 'a guzheng or koto and an erhu, with a breathy shakuhachi answer, early morning mist'],
