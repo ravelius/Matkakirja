@@ -95,7 +95,9 @@ namespace Matkakirja.Natiivi
                 // ilmaan tai maahan, kori asettuu pystyyn); vintturin tahti vaihtelee ±8 %.
                 Vaihtelu = i => new Vaihtelu(307 + i) { KayMinS = 50, KayMaxS = 130, SeisooMinS = 15, SeisooMaxS = 45, TaukoTod = 0.7, Puuska = 0.08 },
                 Nimi = "ilmapallo", Paikka = new LatLon(48.8634, 2.3275), KokoPt = 40f,   // Jardin des Tuileries, Pariisi
-                Yksilot = new[] { (0f, 0f, 0f) },
+                // 40 pt ruudulla ylös (kallistettaessa taakse): Tuileries on vain 2 km Pariisin pisteestä, ja simulaattorissa
+                // 26.9. pallo peitti pisteen.
+                Yksilot = new[] { (0f, 40f, 0f) },
                 Runko = IlmapalloGeometria.Asema, Roottori = IlmapalloGeometria.Pallo, Lapsi = IlmapalloGeometria.Koysi,
                 LastenPaikat = new[] { Vector3.zero },
                 // Suunta: tuuli lounaasta, joten pallo nojaa koilliseen (+z).
