@@ -172,6 +172,7 @@ namespace Matkakirja
         static void NollaaPortti()
         {
             PorttiSumea = false; KuvaTaso = KuvaSumennus.Ei; LinssiAuki = false; PorttiAikaSeis = false;
+            SaapuminenAlkaa = null; SaapuminenPaattyi = null;
             Pysaytyskuva = null; PysaytysValmis = null; PysaytysPoistui = null;
             siirtoAlku = siirtoKohde = siirtoNyt = Vector2.zero; siirtoT = 1f;
         }
@@ -525,6 +526,8 @@ namespace Matkakirja
                     if (ajo != null) Etene(Time.unscaledDeltaTime);
                 }
             }
+            // Saapumisajo katkesi (sormi tai toinen ajo) ennen valmis-kutsua: SaapuminenPaattyi(maa, keskeytetty).
+            if (saapumisAjo != null && ajo != saapumisAjo) PaataSaapuminen(true);
             if (pohjoiseen && !Seurataan) KaannaPohjoiseen(Time.unscaledDeltaTime);
             if (!Seurataan && ((lennonSuuntima && suuntima != 0) || katseKorkeus != 0)) Palauta(Time.unscaledDeltaTime);
             else if (!Seurataan) lennonSuuntima = false;
@@ -1289,11 +1292,20 @@ namespace Matkakirja
         {
             var t = SaapumisNakyma(maa, lat, lon, maaRajaus);
             AsetaMaanRajat(t, lon);
-            Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, valmis);
+            PaataSaapuminen(true);
+            Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, () =>
+            {
+                PaataSaapuminen(false);
+                valmis?.Invoke();
+            });
             if (ajo != null)
             {
                 ajo.kallistusAlku = kallistus;
                 ajo.kallistukseen = 0;
+                saapumisAjo = ajo;
+                saapumisMaa = maa;
+                try { SaapuminenAlkaa?.Invoke(maa, kestoS); }
+                catch (Exception e) { Debug.LogException(e); }
             }
             // Webin saapuminen on pohjoinen ylös; eleet (löydös 30) säilyttävät pelaajan suuntiman, joten käännetään
             // se samassa ajassa takaisin.
@@ -1304,6 +1316,30 @@ namespace Matkakirja
                       (t.Laatikko.HasValue ? $", laatikko {t.Laatikko.Value}" : "") +
                       (Saapumisrajaus.Valmis ? "" : " (rajat lataamatta)"));
             return t;
+        }
+
+        /// <summary>
+        /// ELÄVÄ KARTTA (Linssisepän rajapinta 26.9., build 19): saapumisajo (<see cref="AjaSaapumisnakymaan"/>) alkoi —
+        /// (maa, kesto s). Linssiseppä sovittaa ElavaSaapumisen aikajanan ajoon; kamera pysyy PalloKierrolla.
+        /// </summary>
+        public static event Action<string, float> SaapuminenAlkaa;
+        /// <summary>Saapumisajo päättyi — (maa, keskeytetty: sormi tai uusi ajo katkaisi sen ennen loppua).</summary>
+        public static event Action<string, bool> SaapuminenPaattyi;
+        Ajo saapumisAjo;
+        string saapumisMaa;
+
+        /// <summary>
+        /// Käynnissä olevan saapumisajon päätös: uusi saapuminen (alkaa = true) tai ajon loppu (false) ilmoittaa aiemman
+        /// ajon päättyneeksi. Keskeytys (ajo vaihtui tai loppui ilman valmis-kutsua) huomataan Updatessa.
+        /// </summary>
+        void PaataSaapuminen(bool alkaa)
+        {
+            if (saapumisAjo == null) return;
+            string maa = saapumisMaa;
+            saapumisAjo = null;
+            saapumisMaa = null;
+            try { SaapuminenPaattyi?.Invoke(maa, alkaa); }
+            catch (Exception e) { Debug.LogException(e); }
         }
 
         [Tooltip("Panoroinnin (Panoroi) pehmennyksen ramppi: web LIUSKAN_AJON_RAMPPI 0,12.")]

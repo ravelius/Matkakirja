@@ -188,8 +188,30 @@ namespace Matkakirja
         // LÄMPÖERÄ (PallonLepo): syttyminen 0,7 s saapumisportin jälkeen. Merkit piirtää Natiivi-UI (UI Toolkit, oma
         // lepokysely), mutta syttyminen alkaa kameran pysähdyttyä, joten pallo pysyy hereillä sen ajan.
         void OnEnable() => PallonLepo.Animoi(Syttyy, "nostot: syttyminen");
+
+        // ---- Elävä kartta: saapuminen (Linssisepän rajapinta 26.9., build 19) ----
+
+        /// <summary>Saapumisen piilotuksen häivytys (s) molempiin suuntiin (sama kuin MaaKartta.SaapumisHaiveS).</summary>
+        public const float SaapumisHaiveS = 0.3f;
+        static bool saapumisPiilo;
+        float saapumisKerroin = 1f;
+
+        /// <summary>
+        /// ELÄVÄ KARTTA, SAAPUMINEN (Linssiseppä, ElavaSaapuminen): true = nostomerkit piiloon saapumisanimaation ajaksi
+        /// (animaatio pudottaa omat läikkänsä, ettei merkkejä ole kahdesti), false = palaavat <see cref="SaapumisHaiveS"/>:n
+        /// häivytyksellä. Toteutus: <see cref="Syttyminen"/> (UI:n peittävyys) kerrotaan saapumiskertoimella.
+        /// </summary>
+        public static void Saapuminen(bool piilossa)
+        {
+            if (saapumisPiilo == piilossa) return;
+            saapumisPiilo = piilossa;
+            PallonLepo.Muuttui("nostot: saapuminen");
+        }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaSaapuminen() => saapumisPiilo = false;
         void OnDisable() => PallonLepo.Poista(Syttyy);
-        bool Syttyy() => Nakyvissa && Syttyminen < 1f;
+        bool Syttyy() => (Nakyvissa && Syttyminen < 1f && !saapumisPiilo) || saapumisKerroin != (saapumisPiilo ? 0f : 1f);
         void Start()
         {
             if (kierto != null) kierto.NakymaMuuttui += Muuttui;
@@ -407,6 +429,8 @@ namespace Matkakirja
                 muuttui = true;
             }
             float sytty = Nakyvissa ? Mathf.Clamp01(sytytysAlku < 0 ? 1f : (Time.unscaledTime - sytytysAlku) / Mathf.Max(0.01f, syttyminenS)) : 0f;
+            saapumisKerroin = Mathf.MoveTowards(saapumisKerroin, saapumisPiilo ? 0f : 1f, Time.unscaledDeltaTime / SaapumisHaiveS);
+            sytty *= saapumisKerroin;
             if (sytty != Syttyminen) { Syttyminen = sytty; muuttui = true; }
 
             // Eläintäyt koko laudalta (web keraa): näkymän korkeus ≤ 45,3° eikä nappula liiku.
