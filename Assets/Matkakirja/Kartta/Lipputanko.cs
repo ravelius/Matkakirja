@@ -36,6 +36,10 @@ namespace Matkakirja
         /// <summary>Tangon koko piilokynnyksellä suhteessa täyteen (kerroin 1): pienenee lineaarisesti tähän.</summary>
         public const float PieninOsuus = 0.45f;
         bool piilossaZoom;
+        /// <summary>Liioiteltu perspektiivi: tangon kallistus ruudun reunalla (astetta; 0 = pois). Komento `lipputanko perspektiivi a`.</summary>
+        public static float PerspektiiviAste = 55f;
+        /// <summary>Kallistuksen ja kameran oman kallistuksen yhteinen katto (astetta).</summary>
+        public const float PerspektiiviKatto = 70f;
         /// <summary>Lipun korkeus tangon korkeudesta.</summary>
         public const float LipunOsuus = 0.36f;
         /// <summary>Tangon pienin kulma katseeseen (°): ylhäältä katsottuna tanko kallistuu näkyviin.</summary>
@@ -58,7 +62,7 @@ namespace Matkakirja
         public static bool Jatkuva = true;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KorkeusPt = 120f; Jatkuva = true; instanssi = null; }
+        static void Nollaa() { KorkeusPt = 120f; PerspektiiviAste = 55f; Jatkuva = true; instanssi = null; }
 
         /// <summary>Vaihtoehdon vaihto ajossa (A/B-mittaus).</summary>
         public static void AsetaJatkuva(bool j)
@@ -253,6 +257,20 @@ namespace Matkakirja
             // Akseli: normaali, mutta vähintään MinKulma katseesta (normaalin ja katseen tasossa, katseesta poispäin).
             float kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(n, v), -1f, 1f)) * Mathf.Rad2Deg;
             Vector3 akseli = n;
+            // LIIOITELTU PERSPEKTIIVI (omistaja 26.9. klo 21.4x): ruudun keskellä tanko näkyy suoraan ylhäältä, reunoja kohti
+            // se kallistuu poispäin ruudun keskipisteestä (0° → PerspektiiviAste, smootherstep), kuin kamera olisi paljon
+            // alempana; kameran oma kallistus vähennetään, ettei kokonaiskulma ylitä PerspektiiviKatto-arvoa.
+            if (PerspektiiviAste > 0f)
+            {
+                Vector3 vp = kamera.WorldToViewportPoint(p);
+                Vector2 d = new Vector2((vp.x - 0.5f) * kamera.aspect, vp.y - 0.5f);
+                float r = Mathf.Clamp01(d.magnitude / 0.5f);
+                float kallistus = Mathf.Min(PerspektiiviAste * r * r * r * (r * (r * 6f - 15f) + 10f), Mathf.Max(0f, PerspektiiviKatto - kulma));
+                Vector3 ulos = Vector3.ProjectOnPlane(kamera.transform.right * d.x + kamera.transform.up * d.y, n);
+                if (kallistus > 0.01f && ulos.sqrMagnitude > 1e-10f)
+                    akseli = Quaternion.AngleAxis(kallistus, Vector3.Cross(n, ulos.normalized)) * n;
+                kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(akseli, v), -1f, 1f)) * Mathf.Rad2Deg;
+            }
             if (kulma < MinKulma)
             {
                 // Kallistus ruudun ylöspäin (ylhäältä katsottuna tanko "seisoo" kartalla; normaalin oma suunta on silloin satunnainen).
