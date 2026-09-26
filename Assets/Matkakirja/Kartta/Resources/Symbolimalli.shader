@@ -16,6 +16,16 @@
 // tila _Tila = (muste 0–1, piilo 0–1, 0, 0). Muste 1 = löytämätön (kuten _Himmea); 0 = löydetty täysväreinä
 // (0,4 s syttyminen laskee arvoa). Piilo = 1 − NostoKerroksen syttyminen (kerroksen häivähdys ja saapumisen piilotus).
 // Nollatila (0, 0) on sama kuin tason 1 ulkoasu, joten instansoimaton MeshRenderer-polku (taso 1) ei muutu.
+//
+// 1.0.27-KOKEILU (mallit luettaviksi ylhäältä, Linssisepän tyyliohje):
+//  6. Ääriviiva: _Reuna 1 = sama verkko toisena piirtona omalla materiaalillaan (Symbolimallit.ReunaMateriaali: Cull Off,
+//     ZWrite Off, renderQueue mallin ja maakontaktin välissä). Kärki siirtyy vaakatasossa UV1:n suuntaan (osan keskipisteestä
+//     osan puolileveyksillä normitettuna, Rakentaja) kertaa _Tila.z (leveys mallin yksiköissä = 1,2 pt / mallin koko pt),
+//     joten jokainen osa kasvaa vakioleveyden verran ja malli piirtää itsensä päälle; jäljelle jää ääriviiva, myös
+//     suoraan ylhäältä. Väri muste #3b3024 (Linssisepän 0,23 / 0,19 / 0,14 näyttöarvona), alfa 0,85, usva ja piilo kyllä.
+//     Klassinen inverted hull (Cull Front) ei piirrä mitään suoraan ylhäältä, koska malleissa ei ole pohjatahkoja.
+//  7. Valo vaaleammaksi: 0,62 + 0,38 · N·L (ennen 0,55 + 0,45) ja ylöspäin olevat tahkot (katot) puoliksi kohti täyttä
+//     valoa, jotta katto on vaalein valon suunnasta riippumatta (omistaja 26.9.: "toivottavasti mallit ovat vaaleita").
 Shader "Matkakirja/Symbolimalli"
 {
     Properties
@@ -23,6 +33,8 @@ Shader "Matkakirja/Symbolimalli"
         _Himmea("Himmeä (löytämätön)", Float) = 0
         _Paperi("Pergamentti", Color) = (0.93, 0.89, 0.78, 1)
         _Pohja("Maakontaktilevy", Float) = 0
+        _Reuna("Ääriviivapiirto", Float) = 0
+        [Enum(UnityEngine.Rendering.CullMode)] _Cull("Cull", Float) = 2
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 4
         [Enum(Off, 0, On, 1)] _ZWrite("ZWrite", Float) = 1
     }
@@ -35,7 +47,7 @@ Shader "Matkakirja/Symbolimalli"
             Tags { "LightMode" = "UniversalForward" }
             ZWrite [_ZWrite]
             ZTest [_ZTest]
-            Cull Back
+            Cull [_Cull]
             Blend SrcAlpha OneMinusSrcAlpha
 
             HLSLPROGRAM
@@ -50,6 +62,7 @@ Shader "Matkakirja/Symbolimalli"
                 float _Himmea;
                 half4 _Paperi;
                 float _Pohja;
+                float _Reuna;
             CBUFFER_END
 
             UNITY_INSTANCING_BUFFER_START(Symbolit)
@@ -61,6 +74,7 @@ Shader "Matkakirja/Symbolimalli"
                 float4 positionOS : POSITION;
                 float3 normalOS : NORMAL;
                 half4 vari : COLOR;
+                float2 reuna : TEXCOORD1;   // ääriviivan vaakasuunta (Rakentaja, UV1)
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
             struct Valissa
@@ -79,7 +93,10 @@ Shader "Matkakirja/Symbolimalli"
                 Valissa o;
                 UNITY_SETUP_INSTANCE_ID(i);
                 UNITY_TRANSFER_INSTANCE_ID(i, o);
-                float3 maailma = TransformObjectToWorld(i.positionOS.xyz);
+                float3 p = i.positionOS.xyz;
+                // 6. Ääriviivapiirto: osa kasvaa vaakatasossa leveyden _Tila.z (mallin yksiköissä) verran.
+                if (_Reuna > 0.5) p.xz += i.reuna * UNITY_ACCESS_INSTANCED_PROP(Symbolit, _Tila).z;
+                float3 maailma = TransformObjectToWorld(p);
                 o.positionCS = TransformWorldToHClip(maailma);
                 o.n = TransformObjectToWorldNormal(i.normalOS);
                 o.kohti = _WorldSpaceCameraPos - maailma;
@@ -98,6 +115,8 @@ Shader "Matkakirja/Symbolimalli"
                 half nakyvyys = UsvaNakyvyys(i.usvaY) * (1.0 - (half)tila.y);
                 // Maakontaktilevy (kohta 5): kärkiväri ja -alfa sellaisenaan (varjo keskellä 0,42 → reunalla 0), vain usva ja piilo.
                 if (_Pohja > 0.5) return half4(i.vari.rgb, i.vari.a * nakyvyys);
+                // 6. Ääriviiva: muste #3b3024 lineaarisena, alfa 0,85.
+                if (_Reuna > 0.5) return half4(0.0395, 0.0260, 0.0132, 0.85 * nakyvyys);
 
                 const half3 luma = half3(0.2126, 0.7152, 0.0722);
                 const half3 mustevari = half3(0.23, 0.19, 0.14);
@@ -108,11 +127,14 @@ Shader "Matkakirja/Symbolimalli"
                 half l = dot(c, luma);
                 c = lerp(c, l * half3(1.06, 0.98, 0.80), 0.6 * (1.0 - smoothstep(0.04, 0.12, sat)));
 
-                // 2. Valo: 0,55 + 0,45 · N·L, ylöspäin olevat tahkot hieman kirkkaampia, alaspäin tummempia.
+                // 2. + 7. Valo: 0,62 + 0,38 · N·L; ylöspäin olevat tahkot (katot) puoliksi kohti täyttä valoa ja hieman
+                // kirkkaampia, alaspäin olevat tummempia.
                 float3 n = normalize(i.n);
                 half nl = saturate(dot(n, GetMainLight().direction));
-                c *= 0.55 + 0.45 * nl;
-                c *= lerp(0.85, 1.06, saturate(dot(n, normalize(i.ylos))));
+                half ylos = saturate(dot(n, normalize(i.ylos)));
+                half valo = 0.62 + 0.38 * nl;
+                valo = lerp(valo, 1.0, 0.5 * ylos * ylos);
+                c *= valo * lerp(0.88, 1.04, ylos);
 
                 // 4. Löytämätön näyttää samalta kuin löydetty (Fable 26.9. löydös 175: web ei himmennä, omistajan päätös
                 // 21.9.; himmennys oli osasyy harmauteen). _Himmea ja tila.x (muste) jäävät rajapintaan, mutta eivät vaikuta.

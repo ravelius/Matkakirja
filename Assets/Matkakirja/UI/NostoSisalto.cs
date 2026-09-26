@@ -137,6 +137,18 @@ namespace Matkakirja.Natiivi
         static readonly List<Action> mediaOdottajat = new List<Action>();
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
+
+        /// <summary>
+        /// Löydös 170: sisältöpaketti vaihtui kesken istunnon (PakettiPaivitys.SisaltoVaihtui) → kokoelmat, moduulit, karttavalot ja
+        /// media hylätään; seuraava haku lukee uuden version (Sisalto.HaePaketista). Avoin kortti päivittyy seuraavalla avauksella.
+        /// </summary>
+        public static void Hylkaa()
+        {
+            kokoelmat.Clear();
+            moduulit.Clear();
+            valot = null;
+            if (!mediaHaussa) media = null;
+        }
         static string T(Dictionary<string, object> o, string k) => MiniJson.Teksti(o, k);
 
         // --- esilataus (löydös 104) ---------------------------------------------------------

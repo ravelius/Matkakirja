@@ -118,42 +118,38 @@ namespace Matkakirja
             r.Harja(y + Vector3.up * (h + 0.035f), V(0.8f, 0.085f, 0.42f), Pinta, Valo);
         }
 
-        /// <summary>Kirkko: laiva harjakattoineen itä–länsi-suunnassa, länsitorni ja terävä kypärä, itäpään apsis.</summary>
+        /// <summary>
+        /// Kirkko ristikirkkona (1.0.27-kokeilu, Linssisepän tyyliohje A): ylhäältä latinalainen risti. Laiva itä–länsi
+        /// (0,72 × 0,2), poikkilaiva 0,16 × 0,5 idempänä (itävarsi 0,3, länsivarsi tornin kanssa 0,6, pohjois- ja
+        /// eteläsakara 0,25), länsitorni neliönä pyramidikatolla; ei apsista. Katot TerrakottaHimmea vaalealla
+        /// räystäskaistalla, seinät Pinta. Pohjapiirros keskitetty origoon (ääriviiva ja maakontakti mitoitetaan siitä).
+        /// </summary>
         static void AKirkko(Rakentaja r, bool k)
         {
-            var laiva = V(0.08f, 0, 0);
-            r.Laatikko(laiva, V(0.6f, 0.24f, 0.3f), Pinta, Pinta);
-            r.Harja(laiva + Vector3.up * 0.24f, V(0.6f, 0.18f, 0.3f), Terrakotta, Pinta);
-            var torni = V(-0.3f, 0, 0);
-            r.Laatikko(torni, V(0.19f, 0.5f, 0.19f), Valo, Valo);
-            r.Pyramidi(torni + Vector3.up * 0.5f, 0.21f, 0.21f, 0.34f, Terrakotta);
+            const float hs = 0.22f, hh = 0.13f;
+            var laiva = V(0.09f, 0, 0);
+            r.Laatikko(laiva, V(0.72f, hs, 0.2f), Pinta, Pinta);
+            r.HarjaRaystas(laiva + Vector3.up * hs, V(0.72f, hh, 0.2f), true, TerrakottaHimmea, Valo, Pinta);
+            var poikki = V(0.15f, 0, 0);
+            r.Laatikko(poikki, V(0.16f, hs, 0.5f), Pinta, Pinta);
+            r.HarjaRaystas(poikki + Vector3.up * hs, V(0.16f, hh, 0.5f), false, TerrakottaHimmea, Valo, Pinta);
+            var torni = V(-0.36f, 0, 0);
+            r.Laatikko(torni, V(0.18f, 0.46f, 0.18f), Pinta, Valo);
+            r.PyramidiRaystas(torni + Vector3.up * 0.46f, 0.2f, 0.2f, 0.3f, TerrakottaHimmea, Valo);
             if (k) return;
-            // Apsis (8-kulmainen, puolet laivan sisällä) kartiokattoineen.
-            r.Rengaskallio(V(0.38f, 0, 0), new[] { (0f, 0.24f, 0.24f), (0.19f, 0.24f, 0.24f) }, float.NaN, 8, 1, Pinta, Pinta, 0f);
-            r.Kartio(V(0.38f, 0.19f, 0), 0.125f, 0.12f, 8, Terrakotta);
-            // Sivulaivat: matalat laatikot pulpettikattoineen.
-            for (int s = -1; s <= 1; s += 2)
-            {
-                var sl = laiva + V(0.02f, 0, s * 0.2f);
-                r.Laatikko(sl, V(0.5f, 0.14f, 0.1f), Pinta, Varjo);
-                r.NelioKeskelta(sl + V(-0.25f, 0.14f, s * 0.05f), sl + V(0.25f, 0.14f, s * 0.05f), sl + V(0.25f, 0.2f, -s * 0.05f),
-                    sl + V(-0.25f, 0.2f, -s * 0.05f), sl + V(0, 0.05f, -s * 0.05f), Terrakotta);
-            }
-            // Kellotornin äänireiät ja risti kypärän huipulla.
-            float yk = 0.36f;
-            r.NelioUlos(torni + V(-0.04f, yk, -0.097f), torni + V(-0.04f, yk + 0.08f, -0.097f), torni + V(0.04f, yk + 0.08f, -0.097f),
-                torni + V(0.04f, yk, -0.097f), Vector3.back, Muste);
-            r.NelioUlos(torni + V(-0.097f, yk, -0.04f), torni + V(-0.097f, yk + 0.08f, -0.04f), torni + V(-0.097f, yk + 0.08f, 0.04f),
-                torni + V(-0.097f, yk, 0.04f), Vector3.left, Muste);
-            r.Laatikko(torni + Vector3.up * 0.83f, V(0.016f, 0.1f, 0.016f), Varjo, Varjo);
-            r.Laatikko(torni + Vector3.up * 0.88f, V(0.06f, 0.016f, 0.016f), Varjo, Varjo);
-            // Ikkunat eteläisen sivulaivan seinällä.
-            for (int i = 0; i < 3; i++)
-            {
-                float x = laiva.x - 0.16f + i * 0.16f;
-                r.NelioUlos(V(x - 0.022f, 0.04f, -0.252f), V(x - 0.022f, 0.11f, -0.252f), V(x + 0.022f, 0.11f, -0.252f),
-                    V(x + 0.022f, 0.04f, -0.252f), Vector3.back, Muste);
-            }
+            // Kellotornin äänireiät (etelä ja länsi), risti kypärän huipulla, länsiportti ja laivan eteläikkunat.
+            float yk = 0.33f;
+            r.NelioUlos(torni + V(-0.035f, yk, -0.092f), torni + V(-0.035f, yk + 0.07f, -0.092f), torni + V(0.035f, yk + 0.07f, -0.092f),
+                torni + V(0.035f, yk, -0.092f), Vector3.back, Muste);
+            r.NelioUlos(torni + V(-0.092f, yk, -0.035f), torni + V(-0.092f, yk + 0.07f, -0.035f), torni + V(-0.092f, yk + 0.07f, 0.035f),
+                torni + V(-0.092f, yk, 0.035f), Vector3.left, Muste);
+            r.Laatikko(torni + Vector3.up * 0.76f, V(0.014f, 0.09f, 0.014f), Varjo, Varjo);
+            r.Laatikko(torni + Vector3.up * 0.8f, V(0.055f, 0.014f, 0.014f), Varjo, Varjo);
+            r.NelioUlos(torni + V(-0.092f, 0, -0.03f), torni + V(-0.092f, 0.1f, -0.03f), torni + V(-0.092f, 0.1f, 0.03f),
+                torni + V(-0.092f, 0, 0.03f), Vector3.left, Varjo);
+            foreach (float x in new[] { -0.17f, -0.04f, 0.33f })
+                r.NelioUlos(V(x - 0.02f, 0.07f, -0.102f), V(x - 0.02f, 0.15f, -0.102f), V(x + 0.02f, 0.15f, -0.102f),
+                    V(x + 0.02f, 0.07f, -0.102f), Vector3.back, Muste);
         }
 
         /// <summary>Luostari: kirkko pohjoisreunalla ja sen eteläpuolella umpipiha (neljä siipeä, kivetty piha ja puu).
@@ -186,35 +182,40 @@ namespace Matkakirja
                 piha + V(0.04f, 0.1f, -lz * 0.5f - 0.002f), piha + V(0.04f, 0, -lz * 0.5f - 0.002f), Vector3.back, Muste);
         }
 
-        /// <summary>Linna: korkea päätorni hampain, muurikehä ja neljä pyöreää kulmatornia kartiokattoineen.</summary>
+        /// <summary>
+        /// Linna (1.0.27-kokeilu, Linssisepän tyyliohje A): ylhäältä neliö + 4 ympyrää + keskineliö. Neliömuuri 0,7 × 0,7,
+        /// neljä pyöreää kulmatornia kartiokatoin (TerrakottaHimmea, vaalea räystäskaista) ja pieni päätorni keskellä
+        /// (0,22 × 0,22). Muurien ja päätornin laet pergamenttia (vaalein), sivut Pinta, portti Varjo. Piha jää auki,
+        /// jolloin ääriviiva piirtyy myös pihan puolelle (muurien sisäreuna ja päätorni).
+        /// </summary>
         static void ALinna(Rakentaja r, bool k)
         {
-            const float lx = 0.8f, lz = 0.62f, hm = 0.2f, w = 0.06f;
-            // Muurit.
-            r.Laatikko(V(0, 0, -lz * 0.5f), V(lx, hm, w), Pinta, Valo);
-            r.Laatikko(V(0, 0, lz * 0.5f), V(lx, hm, w), Pinta, Valo);
-            r.Laatikko(V(-lx * 0.5f, 0, 0), V(w, hm, lz), Pinta, Valo);
-            r.Laatikko(V(lx * 0.5f, 0, 0), V(w, hm, lz), Pinta, Valo);
-            // Päätorni pohjoispuolella.
-            var paa = V(0.04f, 0, 0.06f);
-            r.Laatikko(paa, V(0.3f, 0.5f, 0.28f), Valo, Varjo);
+            const float l = 0.7f, hm = 0.2f, w = 0.07f;
+            r.Laatikko(V(0, 0, -l * 0.5f), V(l, hm, w), Pinta, Paperi);
+            r.Laatikko(V(0, 0, l * 0.5f), V(l, hm, w), Pinta, Paperi);
+            r.Laatikko(V(-l * 0.5f, 0, 0), V(w, hm, l - w), Pinta, Paperi);
+            r.Laatikko(V(l * 0.5f, 0, 0), V(w, hm, l - w), Pinta, Paperi);
+            // Päätorni keskellä.
+            const float pt = 0.22f, ph = 0.44f;
+            r.Laatikko(Vector3.zero, V(pt, ph, pt), Pinta, Paperi);
             int sivut = k ? 6 : 10;
             for (int i = 0; i < 4; i++)
             {
-                var p = V((i % 2 == 0 ? -1 : 1) * lx * 0.5f, 0, (i < 2 ? -1 : 1) * lz * 0.5f);
-                r.Vaippa(p, 0.085f, 0.075f, 0.32f, sivut, Pinta);
-                r.Kartio(p + Vector3.up * 0.32f, 0.1f, 0.2f, sivut, Terrakotta);
+                var p = V((i % 2 == 0 ? -1 : 1) * l * 0.5f, 0, (i < 2 ? -1 : 1) * l * 0.5f);
+                r.Vaippa(p, 0.1f, 0.09f, 0.32f, sivut, Pinta);
+                if (k) r.Kartio(p + Vector3.up * 0.32f, 0.12f, 0.2f, sivut, TerrakottaHimmea);
+                else r.KartioRaystas(p + Vector3.up * 0.32f, 0.12f, 0.2f, sivut, TerrakottaHimmea, Valo);
             }
             if (k) return;
-            // Päätornin hampaat (3 per sivu) ja etumuurin hampaat, portti.
-            float yt = 0.5f, hx = 0.15f, hz = 0.14f;
-            var hk = V(0.05f, 0.05f, 0.05f);
-            r.Hampaat(paa + V(-hx + 0.025f, yt, -hz + 0.025f), paa + V(hx - 0.025f, yt, -hz + 0.025f), 3, hk, Valo, Valo);
-            r.Hampaat(paa + V(-hx + 0.025f, yt, hz - 0.025f), paa + V(hx - 0.025f, yt, hz - 0.025f), 3, hk, Valo, Valo);
-            r.Hampaat(paa + V(-hx + 0.025f, yt, -hz + 0.1f), paa + V(-hx + 0.025f, yt, hz - 0.1f), 1, hk, Valo, Valo);
-            r.Hampaat(paa + V(hx - 0.025f, yt, -hz + 0.1f), paa + V(hx - 0.025f, yt, hz - 0.1f), 1, hk, Valo, Valo);
-            r.Hampaat(V(-lx * 0.5f + 0.1f, hm, -lz * 0.5f), V(lx * 0.5f - 0.1f, hm, -lz * 0.5f), 6, V(0.045f, 0.04f, w), Pinta, Valo);
-            r.Viuhka(V(0, 0, -lz * 0.5f - w * 0.5f - 0.002f), 0.06f, 0.13f, 5, Vector3.back, Muste);
+            // Päätornin hampaat (2 per sivu), etumuurin hampaat ja portti.
+            var hk = V(0.045f, 0.045f, 0.045f);
+            float e = pt * 0.5f - 0.0225f;
+            r.Hampaat(V(-e, ph, -e), V(e, ph, -e), 2, hk, Pinta, Paperi);
+            r.Hampaat(V(-e, ph, e), V(e, ph, e), 2, hk, Pinta, Paperi);
+            r.Hampaat(V(-e, ph, -e * 0.2f), V(-e, ph, e * 0.2f), 1, hk, Pinta, Paperi);
+            r.Hampaat(V(e, ph, -e * 0.2f), V(e, ph, e * 0.2f), 1, hk, Pinta, Paperi);
+            r.Hampaat(V(-l * 0.5f + 0.13f, hm, -l * 0.5f), V(l * 0.5f - 0.13f, hm, -l * 0.5f), 5, V(0.045f, 0.04f, w), Pinta, Paperi);
+            r.Viuhka(V(0, 0, -l * 0.5f - w * 0.5f - 0.002f), 0.06f, 0.13f, 5, Vector3.back, Varjo);
         }
 
         /// <summary>Kaupunginmuuri: porttirakennus holvikaarineen, kaksi pyöreää sivutornia ja hammastetut muurinpätkät.</summary>
@@ -245,28 +246,31 @@ namespace Matkakirja
             r.Hampaat(V(0.28f, 0.22f, -0.015f), V(0.52f, 0.22f, -0.015f), 3, V(0.04f, 0.04f, 0.02f), Pinta, Valo);
         }
 
-        /// <summary>Majakka: kalliopohja, kapeneva raidallinen torni, parveke, lyhty ja kupoli; vartijan talo.</summary>
+        /// <summary>
+        /// Majakka (1.0.27-kokeilu, Linssisepän tyyliohje A): ylhäältä samankeskiset renkaat, eli jalusta (laki Valo, kyljet Pinta), torni
+        /// (Valo ja vaimennettu terrakotta raitoina), tumma parvekerengas (Varjo), vaalea lyhty ja keskellä pieni lakki
+        /// (TerrakottaHimmea). Kaikki origon ympärillä; vartijan talo pois, jotta ympyrä on puhdas. Torni levenee alas
+        /// (0,17 → 0,1), jotta sen raita näkyy ylhäältä parvekkeen ulkopuolella.
+        /// </summary>
         static void AMajakka(Rakentaja r, bool k)
         {
-            int s = k ? 6 : 10;
-            r.Rengaskallio(Vector3.zero, new[] { (0f, 0.62f, 0.5f), (0.07f, 0.5f, 0.42f) }, float.NaN, k ? 6 : 9, 5, Kivi, Pinta, 0.3f);
-            var p = V(0.04f, 0.07f, 0.02f);
-            // Torni neljänä raitana (valo ja vaimennettu terrakotta vuorotellen), LOD1 kahtena. Ei lippua.
-            float[] y = k ? new[] { 0f, 0.28f, 0.56f } : new[] { 0f, 0.14f, 0.28f, 0.42f, 0.56f };
+            int s = k ? 6 : 12;
+            const float yj = 0.06f;
+            r.Rengaskallio(Vector3.zero, new[] { (0f, 0.58f, 0.58f), (yj, 0.52f, 0.52f) }, float.NaN, k ? 6 : 12, 5, Pinta, Valo, 0.08f);
+            var p = V(0, yj, 0);
+            // Torni neljänä raitana (valo ja vaimennettu terrakotta vuorotellen), LOD1 kahtena.
+            const float ht = 0.5f, r0 = 0.17f, r1 = 0.1f;
+            float[] y = k ? new[] { 0f, 0.25f, 0.5f } : new[] { 0f, 0.125f, 0.25f, 0.375f, 0.5f };
             for (int i = 0; i + 1 < y.Length; i++)
-            {
-                float r0 = Mathf.Lerp(0.13f, 0.085f, y[i] / 0.56f), r1 = Mathf.Lerp(0.13f, 0.085f, y[i + 1] / 0.56f);
-                r.Vaippa(p + Vector3.up * y[i], r0, r1, y[i + 1] - y[i], s, i % 2 == 0 ? Valo : TerrakottaHimmea);
-            }
-            var yla = p + Vector3.up * 0.56f;
-            r.Rengaskallio(yla, new[] { (0f, 0.26f, 0.26f), (0.025f, 0.26f, 0.26f) }, float.NaN, s, 1, Varjo, Varjo, 0f); // parveke
-            r.Pylvas(yla + Vector3.up * 0.025f, 0.06f, 0.08f, s, Valo);                                                     // lyhty
-            r.Kartio(yla + Vector3.up * 0.105f, 0.075f, 0.07f, s, Terrakotta);                                              // kupoli
+                r.Vaippa(p + Vector3.up * y[i], Mathf.Lerp(r0, r1, y[i] / ht), Mathf.Lerp(r0, r1, y[i + 1] / ht), y[i + 1] - y[i], s,
+                    i % 2 == 0 ? Valo : TerrakottaHimmea);
+            var yla = p + Vector3.up * ht;
+            r.Rengaskallio(yla, new[] { (0f, 0.26f, 0.26f), (0.03f, 0.26f, 0.26f) }, float.NaN, s, 1, Varjo, Varjo, 0f); // parveke
+            r.Pylvas(yla + Vector3.up * 0.03f, 0.07f, 0.08f, s, Valo);                                                      // lyhty
+            r.Kartio(yla + Vector3.up * 0.11f, 0.045f, 0.06f, s, TerrakottaHimmea);                                         // lakki
             if (k) return;
-            r.Laatikko(V(-0.2f, 0.07f, -0.06f), V(0.16f, 0.1f, 0.12f), Pinta, Pinta);
-            r.Harja(V(-0.2f, 0.17f, -0.06f), V(0.16f, 0.07f, 0.12f), Terrakotta, Pinta);
-            r.NelioUlos(yla + V(-0.03f, 0.04f, -0.062f), yla + V(-0.03f, 0.09f, -0.062f), yla + V(0.03f, 0.09f, -0.062f),
-                yla + V(0.03f, 0.04f, -0.062f), Vector3.back, Muste); // lyhdyn ikkuna etelään
+            r.NelioUlos(yla + V(-0.03f, 0.045f, -0.072f), yla + V(-0.03f, 0.095f, -0.072f), yla + V(0.03f, 0.095f, -0.072f),
+                yla + V(0.03f, 0.045f, -0.072f), Vector3.back, Muste); // lyhdyn ikkuna etelään
         }
 
         /// <summary>Silta: kolmiaukkoinen kivinen holvisilta (keskiaukko suurin), kansi ja kaiteet.</summary>
