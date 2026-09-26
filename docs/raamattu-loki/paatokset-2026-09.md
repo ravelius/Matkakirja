@@ -7467,3 +7467,7 @@ Natiiviseppa iPad Pro 13 (cd41e4fa): terminate+relaunch 2,4/2,5/2,4 s PASS; ensi
 ## LOYDOS 178: NAHTAVYYSKARTASTA POIS EI-RAKENNUKSET (26.9.2026 klo 21.45)
 
 Omistaja 21.5x (Amsterdam web: Maitotytto, Yovartio kartalla): nahtavyyskartalle vain rakennukset; ei-rakennuksille uusi sijainti. Data KAUPUNKIKARTAT (js/packs/maakartat.js): 193 kaupunkia, 1 581 kohdetta, ei tyyppikenttaa. Fable ajaa luokittelun Sonnet-agentilla → raportti nahtavyydet-ei-rakennukset-20260926.md (maarat alaluokittain, sijaintiehdotus) → omistajan kortti; sitten Pelikoodari lisaa tyyppikentan + suodatuksen, Sisaltokirjuri siirtaa sisallon.
+
+## OMISTAJA HYVAKSYI ARKKITYYPPIEN PALETIN JA ANIMAATIOTAULUKON (1.0.27) (26.9.2026 klo 21.46)
+
+Kortti 21.5x: paletti kuvamerkeista mitattu (paperi #efe4cc, seepia #8a6a44, muste #3b2f22), kaiverrusreuna 1,2 pt, aksentti vain animoidussa osassa; animaatio 16 arkkityypille Tivolin logiikalla ja tauoilla (mylly, majakan keila, laiva keinuu, kello+savu, viiri, savu, vesi+vene, varjo kiertaa, lippu, lepakot, pilvi, lintu); kolmiot puoleen, ruudulla enintaan 3 liikkuvaa, ≤ 0,5 ms, levossa 0 kehysta. Esitys docs/raportit/arkkityypit-paletti-animaatio-20260926.md (d88a88d22) + proto-3d/lokit/ylhaalta-175/animaatioehdotus-1027.md. Kokeilujarjestys mylly+majakka → kirkko+linna → satama+silta → loput; Natiiviseppa varjostin/mallit, Linssiseppa aikataulut/elava kerros.
