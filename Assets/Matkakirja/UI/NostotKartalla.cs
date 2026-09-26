@@ -224,7 +224,7 @@ namespace Matkakirja.Natiivi
             bool loyto = m.Loydetty == false && loydetty && m.JaljenId == s.Id;
             m.Loydetty = loydetty;
             m.JaljenId = s.Id;
-            var jalki = loydetty ? null : MusteJaljet.Hae(s.Id);
+            var jalki = loydetty || s.Taso == 1 ? null : MusteJaljet.Hae(s.Id); // löydös 155: taso 1 ilman jälkeä
             if (jalki != null)
             {
                 if (m.Jalki == null)
@@ -744,7 +744,9 @@ namespace Matkakirja.Natiivi
             if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
             bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
-            bool kuvamerkki = !ryhma && loydetty && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
+            // Löydös 155 (Linssiseppä, Fablen kuittaus): löytämätön taso 1 näkyy kuvamerkkinä (himmeänä, ilman nimeä) kuten
+            // webin maamerkki; tasot 2–3 ovat jälkiä.
+            bool kuvamerkki = !ryhma && (loydetty || s.Taso == 1) && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
             // Ruudun kerroin (web nostot.js ruudunKerroin): ykköstason kuvamerkki 1,6, muu kuvamerkki 0,7 kertoimilla
             // 2,5–4 (löydös 155), muuten 1.
             m.Ruutu = MiniRuutu * (!kuvamerkki ? 1f : m.Taso1 ? KuvamerkinKerroin
