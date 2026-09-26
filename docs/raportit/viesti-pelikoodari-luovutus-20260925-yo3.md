@@ -247,3 +247,17 @@ MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (
   vuoro Julkaisijalta. Docs-PR musiikkisuunnitelman tila "kaikki vaiheet tuotannossa", kun #3314 + natiivi mainissa.
   Siirtosepälle: vie musiikkiaihe/maanosa-taulut vasta #3314:n jälkeen (luvattu ilmoittaa).
 - Worktreet poistettavissa mergen jälkeen: pelikoodari-loydos155, pelikoodari-musiikki-vaihe3, pelikoodari-musiikki-kytkenta2.
+
+## 23. Lisäys 26.9. klo 12.4x
+- MAINISSA: #3314 (musiikki 2+3, v2266), #3311 (155), #3319 (savuke 8l4 vihreäksi). Auki: #3323 (maanosa kaupungeille ilman
+  cityCountryä: Maailma-lauta, Jerusalem, St. Helena; 4378/0). Natiivi junassa: musiikki-vaihe2 dab360d2 (sim PASS
+  lokit/musiikki-v23/todennus.log), loydos155-085, maanosa-kaupungit f81d8368, esilataaja-mittari ff733a40.
+- 162 VALMIS: pelikoodari/saapumisluenta-162 23f262bf (PeliOhjain.SaapumisluentaKesken + SaapumisluentaPaattyi); Linssiseppä
+  yhdisti haaraansa linssiseppa/saapuminen-luennan-jalkeen 9f89bbfa ja vie junaan. Webissä ei vikaa.
+- ESILATAAJA ERÄ 5 (build 22, Fable: kylmä saapumisen osuma ≥ 80 %, pelaaja odotti verkkoa < 3 s):
+  pelikoodari/esilataaja-5 6ced5c90 (juna 3b77d8e3 päällä, 309/309): Tehtava-API Natiivisepän laatoille, LaattaOsumat,
+  mittarin HUDIT-lista, käynnistyksen 44 kokoelman esilataus (Sisalto.KaynnistyksenKokoelmat). Kylmä: 15 % → 62 %,
+  odotus 20,6 → 11,6 s (lokit/esilataaja-5/kylma2). Jäljellä: laatat (aloitusverho 5,4 s + lento-musta 5,0 s, Natiiviseppä),
+  käynnistyksen sisältö 1,5 s (KYSYMYS Fablella: buildin tilannekuva stale-while-revalidate), hero-kuvat saapumisessa,
+  liput/NASA-kuvat. Käännöspalvelun Build-kansio: kopioi .app HETI käännöksen perään (muuten seuraava käännös korvaa).
+- Savukeajot: pyydä vuoro Julkaisijalta (booted < 2, ei hänen Playwright-sarjaansa; muistipaine 26.9. iltapäivällä).
