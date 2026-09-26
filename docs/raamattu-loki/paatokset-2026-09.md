@@ -7679,3 +7679,7 @@ Omistaja 27.9.2026 klo 00.3x kuunneltuaan naytteet: kytketaan xAI:n Grok TTS aan
 ## LIPUN PERSPEKTIIVI KORJATTU (fa874cd0) → JUNAAN; JUNA 6245e385; YLHAALTA-175 OMISTAJALLE (27.9.2026 klo 00.37)
 
 Natiiviseppa 00.4x: lippu natiiviseppa/lippu-176 fa874cd0 omistajan tarkennuksen mukaan (keskella lahes nakymaton, tanko radiaalisesti ulos; kuvat merkittyina lokit/lippu-perspektiivi-3/viisikko-merkitty.jpg) → Fable: junaan, kuva omistajalle. Juna/b13 6245e385: hoyrylaiva, 177, 170, 178, 179, Nostokortti.Avattu, KokoKerroin. Reliefit poistettu; natiiviseppa/kategoriamallit 24c40888 RekisteroiKategoria-rajapinta + Erikoismalli.Kaupunki (Colosseum). ylhaalta-175: luokitin esti myos Natiivisepan oman ajon (Modify Shared Resources) vaikka omistaja antoi luvan → komento omistajalle SSH:lla: cd /Users/Shared/Claude/wt/proto-natiiviseppa-ylhaalta && git merge --no-edit linssiseppa/perspektiivi && git apply /Users/Shared/Claude/proto-3d/lokit/ylhaalta-175/perspektiivi-f5900358.patch. Fable nollaa kontekstinsa 00.4x.
+
+## LIPPU JUNASSA ba90668f (27.9.2026 klo 00.37)
+
+Natiiviseppa: lippu fa874cd0 mergetty juna/b13 ba90668f, unity-tarkistus 0; ylhaalta-175 odottaa omistajan SSH-ajoa, sitten kategoriamallit-haaraan.
