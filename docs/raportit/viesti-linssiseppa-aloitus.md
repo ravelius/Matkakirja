@@ -19,7 +19,7 @@ Lue:
 **Järjestys (tilanne 26.9. klo 04.4x):**
 1. linssiseppa/tehoste-rekisteri 859b937a on merge-pyynnössä (build 19). Seuraa Natiivisepän kuittausta.
 2. Elävä kartta: omistajan palaute ensimmäisestä videosta. Sen jälkeen rajapinnat Natiivisepän kanssa ja pelattava
-   versio build 18:aan. Joet tarvitaan Karttasepältä.
+   versio seuraavaan buildiin. Joet tarvitaan Karttasepältä.
 3. II:n löydökset, pariteettiäänet, laattaesilataus ja radion esikuuntelu ovat build 18 -junassa. Seuraa omistajan
    löydöksiä TestFlightista.
 

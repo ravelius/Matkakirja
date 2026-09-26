@@ -41,7 +41,7 @@ Jatkaja lukee tämän ja viesti-linssiseppa-aloitus.md:n.*
 - **Elävä kartta:** jatko omistajan palautteen mukaan.
   - Rajapinnat sovitaan Natiivisepän kanssa: Paljastus, Viivapiirto, Maakuntavari, Aurinko, Yovalot-maski ja Boidit.
   - Nostojen kokoluokat tulevat datana, ja Pelikoodarilla on haara pelikoodari/elava-kartta junassa.
-  - Pelattava versio tehdään build 18:aan.
+  - Pelattava versio tehdään seuraavaan buildiin (build 18 on jo masterissa).
 
 ## Työkalut (session 15ddf057 scratchpad)
 
