@@ -2,11 +2,11 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 00:27 EEST
+**Päivitetty:** 2026-09-27 00:47 EEST
 
 ## 1) Sessiot
 
-5 h **8 %** (nollautui 00:00, seur. 05:00 EEST), viikko (all models) 56 %, viikko (Fable) 36 %. Effort-tarkistus: kaikki 7 Opus-roolia sääntömukaisia. Ei uusia 70 %-ylityksiä (Pelikoodari jatkaa jo raportoitua nousua, nyt 84 %).
+5 h **13 %** (nollautui 00:00, seur. 05:00 EEST), viikko (all models) 58 %, viikko (Fable) 37 %. **POSTIVAHTI NOLLAUTUU (konteksti 84 %) — luovutus kirjoitettu: `docs/raportit/viesti-postivahti-luovutus-20260927-yo.md`.** Pelikoodari yhä yli 70 % (84 %, ilmoitettu 00:02, ei kuitattu koska Fable nollautui samaan aikaan). **Fablen oma nollaus ei vahvistunut 5 tarkistusyrityksellä (sessio pysyi "unavailable") — jää uuden Postivahdin hoidettavaksi, ks. luovutusraportti.**
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
