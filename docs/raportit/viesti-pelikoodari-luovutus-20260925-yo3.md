@@ -81,3 +81,12 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
     osuma 32 / 84 % (lokit/verkko-odotus/b18-*).
 - Lepopiirto b17:ssä ei toteutunut (Laitetestaaja): Natiiviseppä korjasi build 18:aan (SykeJaatyy = true).
 - Jono tyhjä; odotan Fablen seuraavaa.
+
+## 9. Lisäys 26.9. klo 04.5x (LUOVUTUS, kiintiö täyttymässä)
+- Build 19:n ensimmäiset (Fable: heti build 18 -kierroksen jälkeen, Natiiviseppä mergeää kun Fable ilmoittaa):
+  `pelikoodari/verkko-raja` bd27ed1d (mittarit laitteelle + hakurivit) ja `pelikoodari/humina-muunnelmat` 7d41a3df.
+- KOHTA 1 -analyysi valmis: proto-3d/lokit/kohta1-kaynnistys-20260926.md → Natiiviseppä (buildiin: nostotyyppien merkit,
+  pulun kuva, aloitusnäytön perusdata, satelliitin Z5). Tarjottu Fablelle: uusin.json-tarkistus taustalle (1 259 ms estää
+  käynnistystä) + Esilataajan yhteinen haku (kaupungit.json 4×). ODOTTAA Fablen päätöstä.
+- Worktreet: proto-pelikoodari-{elava,humina,mittarit} (mergeämättömät / junassa, poista kun masterissa), web
+  pelikoodari-{kehyksen-hinta-cpu,loydos135-web,musiikkisuunnitelma} (PR:t #3250/#3274/#3272 auki).
