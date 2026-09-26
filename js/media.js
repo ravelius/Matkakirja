@@ -424,6 +424,8 @@ export const ASSET_KANSIOT = {
   aarteet: 'assets/aarteet',
   nostot: 'assets/kartat/nostot',
   ihmeet: 'assets/kartat/ihmeet',
+  // Maakuntien ja maakuntasalaisuuksien pikkukuvat (löydökset 115 ja 158, Fable 26.9.2026).
+  maakunnat: 'assets/kartat/maakunnat',
 };
 
 /**
@@ -436,6 +438,7 @@ export const R2_ASSETIT = {
   aarteet: true,
   nostot: true,
   ihmeet: true,
+  maakunnat: true,
 };
 
 /**
@@ -463,7 +466,8 @@ export function assetOsoite(laji, tiedosto) {
    */
   if (!tiedosto.includes('/')) {
     if (!ASSET_KANSIOT[laji]) return tiedosto;
-    const pääte = laji === 'miniatyyrit' ? 'png' : 'jpg';
+    // Maakuntien pikkukuvat ovat miniatyyrien tyylisiä leikattuja piirroksia (löydös 115), joten sama poikkeus.
+    const pääte = laji === 'miniatyyrit' || laji === 'maakunnat' ? 'png' : 'jpg';
     return `${PEILI_JUURI}${ASSET_ALIPOLKU}${laji}/${tiedosto}.${pääte}`;
   }
   const osuma = Object.entries(ASSET_KANSIOT)

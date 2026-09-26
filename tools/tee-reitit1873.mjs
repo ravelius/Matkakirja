@@ -10,7 +10,9 @@
 // hylätyt), joiden start_date ≤ 1873 ja end_date puuttuu tai ≥ 1873. OHM:n kattavuus
 // vaihtelee: Brittein saaret, Benelux, Saksa, Italia, Skandinavia ja Venäjä hyvin; Ranskan
 // pääradoilla on usein nykyaikainen start_date (Pariisin säteet puuttuvat) — tunnettu aukko,
-// täydennys myöhemmin. Sivuraiteet (service=*) pois. Reitti = OHM:n `name` (tai 5°-ruutu),
+// täydennys myöhemmin. Erä 2 (26.9.2026): kyselyruutu etelään 27°N, jotta Egyptin radat 1854–69
+// tulevat mukaan; OHM:stä kokonaan puuttuvat 1873 toiminnassa olleet radat (Pireus–Ateena 1869)
+// TAYDENNYKSET-taulukosta asemien koordinaateista (julkiset tosiasiat). Sivuraiteet (service=*) pois. Reitti = OHM:n `name` (tai 5°-ruutu),
 // viivat harvennettu 0,005° ja pyöristetty 1e-3°.
 //
 // LAIVAT: aikakauden höyrylaivalinjat satamajärjestyksinä (julkiset tosiasiat, lähteet
@@ -31,15 +33,17 @@ const pyorista = (v) => Math.round(v * 1000) / 1000;
 
 export const LAHTEET = [
   { id: 'ohm', nimi: 'OpenHistoricalMap-rautatiet (start_date ≤ 1873)', url: 'https://www.openhistoricalmap.org/', lisenssi: OHM_LISENSSI },
-  { id: 'linjat-1873', nimi: 'Höyrylaivalinjojen satamajärjestykset 1873 (Messageries Maritimes, Österreichischer Lloyd, P&O)', url: 'https://en.wikipedia.org/wiki/Messageries_Maritimes', lisenssi: OMA_LISENSSI },
+  { id: 'linjat-1873', nimi: 'Höyrylaivalinjojen satamajärjestykset 1873 (Messageries Maritimes, Österreichischer Lloyd, P&O, ROPiT)', url: 'https://en.wikipedia.org/wiki/Messageries_Maritimes', lisenssi: OMA_LISENSSI },
 ];
 
 const S = {
   marseille: [5.36, 43.30], malta: [14.51, 35.90], aleksandria: [29.88, 31.20], portsaid: [32.30, 31.27],
   beirut: [35.50, 33.90], smyrna: [27.13, 38.43], konstantinopoli: [28.98, 41.01], trieste: [13.76, 45.65],
   korfu: [19.92, 39.62], patras: [21.73, 38.25], pireus: [23.64, 37.94], syros: [24.94, 37.44],
-  southampton: [-1.40, 50.89], gibraltar: [-5.35, 36.14], brindisi: [17.95, 40.64],
+  southampton: [-1.40, 50.89], gibraltar: [-5.35, 36.14], brindisi: [17.95, 40.64], odessa: [30.73, 46.49],
 };
+/* Bosporin läpivienti Mustallemerelle. */
+const BOSPORI = [[29.02, 41.06], [29.06, 41.12], [29.08, 41.18], [29.12, 41.23], [29.25, 41.35]];
 /* Salmien ja kanavan läpivientipisteet (maan yli kulkisi muuten oikotie). */
 const DARDANELLIT = [[26.20, 40.03], [26.68, 40.40], [27.00, 40.55]];
 /* Peloponnesoksen ympäri: Korintin kanavaa ei vielä ollut (avattu 1893). */
@@ -64,6 +68,23 @@ export const LINJAT = [
     id: 'laiva-po-intia', nimi: 'P&O: Southampton – Gibraltar – Malta – Aleksandria (Suez)', vuosi: 1873,
     lahde: 'https://en.wikipedia.org/wiki/P%26O; https://www.benjidog.co.uk/TheShipsList/PAndOLine.php',
     reitti: [S.southampton, [-9.6, 43.2], [-9.6, 37.0], S.gibraltar, S.malta, S.aleksandria, S.portsaid],
+  },
+  {
+    id: 'laiva-ropit-odessa', nimi: 'ROPiT: Odessa – Konstantinopoli', vuosi: 1873,
+    lahde: 'https://en.wikipedia.org/wiki/Russian_Steam_Navigation_and_Trading_Company',
+    reitti: [S.odessa, ...[...BOSPORI].reverse(), S.konstantinopoli],
+  },
+];
+
+/*
+ * OHM:stä puuttuvat radat, jotka olivat liikenteessä 1873: viiva asemalta asemalle
+ * (asemien koordinaatit ovat julkisia tosiasioita, oma digitointi CC0).
+ */
+export const TAYDENNYKSET = [
+  {
+    id: 'rautatie-pireus-ateena', nimi: 'Pireus – Ateena (Thiseio)', vuosi: 1869,
+    lahde: 'https://en.wikipedia.org/wiki/Line_1_(Athens_Metro)',
+    viivat: [[[23.643, 37.948], [23.666, 37.945], [23.680, 37.955], [23.697, 37.961], [23.709, 37.969], [23.721, 37.977]]],
   },
 ];
 
@@ -145,7 +166,7 @@ export function laivareitit(maski) {
 
 /* ------------------------------------------------------------ rautatiet */
 
-export const OHM_KYSELY = `[out:json][timeout:300][bbox:34,-11,66,45];
+export const OHM_KYSELY = `[out:json][timeout:300][bbox:27,-11,66,45];
 way["railway"~"^(rail|abandoned|disused|razed|dismantled)$"]["start_date"][!"service"](if: t["start_date"] < "1874" && (!is_tag("end_date") || t["end_date"] >= "1873"));
 out tags geom;`;
 
@@ -188,7 +209,7 @@ if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
   if (!nePolku) { console.error('Käyttö: node tools/tee-reitit1873.mjs <ne_10m_admin_0_countries.geojson> [--ohm <välimuisti.json>]'); process.exit(1); }
   const maski = maamaski(JSON.parse(readFileSync(nePolku, 'utf8')));
   const laivat = laivareitit(maski);
-  const radat = rautatiet(await haeOhm(valimuisti));
+  const radat = [...rautatiet(await haeOhm(valimuisti)), ...TAYDENNYKSET.map((r) => ({ ...r, laji: 'rautatie', lisenssi: OMA_LISENSSI }))];
   const tulos = { lahteet: LAHTEET, reitit: [...laivat, ...radat] };
   writeFileSync(ULOS, gzipSync(JSON.stringify(tulos), { level: 9 }));
   const pisteita = tulos.reitit.reduce((s, r) => s + r.viivat.reduce((t, v) => t + v.length, 0), 0);

@@ -25,3 +25,18 @@ test('saari (sama maa tai meri molemmin puolin) ei saa rajaa', () => {
   const saari = { features: [{ geometry: { type: 'Polygon', coordinates: [nelio(0, 0, 10, 10)] } }] };
   assert.deepEqual(rajajaksot(tihea(nelio(0, 0, 10, 10)), maamaski(saari, 0.25), 0.5), []);
 });
+
+test('salmi: eri maat kapean meren takana eivät tee rajaa, kun meren rantaviiva annetaan', async () => {
+  const { meriviivat } = await import('../tools/maarajat-maamaa.mjs');
+  // A = 0…10 °E ja B = 10,2…20 °E; välissä 0,2°:n salmi (meri).
+  const ne2 = { features: [
+    { geometry: { type: 'Polygon', coordinates: [nelio(0, 0, 10, 10)] } },
+    { geometry: { type: 'Polygon', coordinates: [nelio(10.2, 0, 20, 10)] } },
+  ] };
+  const meri = { features: [{ geometry: { type: 'Polygon', coordinates: [nelio(10, -5, 10.2, 15)] } }] };
+  const m2 = maamaski(ne2, 0.25);
+  const rengas = tihea(nelio(0, 0, 10, 10));
+  // Ilman rantaviivaa karkea rasteri ei näe salmea (0,5° koepisteet osuvat B:hen).
+  assert.ok(rajajaksot(rengas, m2, 0.5).length >= 1);
+  assert.deepEqual(rajajaksot(rengas, m2, 0.5, meriviivat(meri)), []);
+});

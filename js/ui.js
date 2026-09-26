@@ -281,6 +281,8 @@ import {
   MUSIIKIN_PERUSTASO, asetaMusiikkitila, kuunteleMusiikinKerrointa, musiikinKerroin,
   musiikkiPaalla,
 } from './musiikkivalitsin.js';
+// Saapumistunnus luetaan samasta maa→alue-taulusta kuin alueraita.
+import { saapumistunnus } from './kaupunkimusiikki.js';
 /*
  * Aarteen paljastusaihe on musiikkia, joten sekin kulkee musiikin
  * yhteisen vahvistimen kautta — muuten iOS soittaisi sen tiedoston
@@ -1052,6 +1054,20 @@ const REVEAL_HUUDAHDUS_RIVI = false;
 export const AARRE_MUSIIKKI = {
   tavallinen: musaPolku('musa-aarre'),
   paa: musaPolku('musa-paaaarre'),
+};
+/*
+ * MATKAN AIHEET (musiikkisuunnitelma 26.9.2026, vaihe 1). Kertaraitoja
+ * kuten aarreaiheet, ja ne soivat SAMASSA PAIKASSA samalla soittimella
+ * (soitaAarreMusiikki): pohjaraita ja maisema väistyvät aiheen ajaksi
+ * ja palaavat, kun aihe loppuu. Saapumistunnus asuu alueittain
+ * js/kaupunkimusiikki.js:n SAAPUMISTUNNUKSET-taulussa.
+ *
+ *   aloituslento  Lontoosta ensimmäiseen kaupunkiin, 26 s (doPickStart)
+ *   loppu         kaikki pääaarteet löydetty, 69 s (ajastaMatkanLoppu)
+ */
+export const MATKAN_AIHEET = {
+  aloituslento: musaPolku('musa-aloituslento'),
+  loppu: musaPolku('musa-loppu'),
 };
 /*
  * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
@@ -12672,6 +12688,16 @@ export class UI {
        * väliin osuva render palauttaisi etusivun lähtöaulan.
        */
       if (!this.reducedMotion) this.aloitaLennonAmbienssi();
+      /*
+       * ALOITUSLENNON AIHE (musiikkisuunnitelma 26.9.2026, vaihe 1):
+       * johtoaihe täytenä ja nousevana, one-shot 26 s. Alkaa samasta
+       * napautuksesta kuin kabiini, ja pohjaraita väistyy sen ajaksi
+       * kuten aarteen aiheelle. Liikeherkkyydessä lentoa ei ole, joten
+       * ei aihettakaan; radiotilassa radio on ainoa ääni.
+       */
+      if (!this.reducedMotion && !this.radioPaalla()) {
+        this.soitaAarreMusiikki(MATKAN_AIHEET.aloituslento);
+      }
       // Lukuääni väistyy, kun matka alkaa.
       stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
@@ -14253,6 +14279,17 @@ export class UI {
     const city = game.board.cityById.get(pos.city);
     if (!city) return;
     playPlaceAmbience(city.id, city.ambience ?? null, game.pack?.id, game.pack?.map?.cityCountry ?? null);
+    /*
+     * SAAPUMISTUNNUS vain kaupunkiin, jossa ei ole käyty tällä matkalla
+     * (musiikkisuunnitelma: "lyhyt tunnus uuteen kaupunkiin"). Kaupunki
+     * lisätään heti joukkoon, koska maailmankartan lento kutsuu tätä
+     * kahdesti (kalvon lopussa ja nappulan hypyssä).
+     */
+    const ennen = this.kaydytEnnenSiirtoa;
+    if (ennen && !ennen.has(city.id)) {
+      ennen.add(city.id);
+      this.soitaSaapumistunnus(city);
+    }
   }
 
   /**
@@ -19796,11 +19833,19 @@ export class UI {
    * PUUTTUVA TIEDOSTO ON HILJAINEN: kytkentä on pelissä ennen kuin
    * mp3 on generoitu (.github/workflows/generoi-musiikki.yml), ja
    * silloin virhetapahtuma purkaa väistön eikä mitään muuta tapahdu.
+   *
+   * SAMA PAIKKA MATKAN AIHEILLE (musiikkisuunnitelma 26.9.2026):
+   * aloituslento, saapumistunnus ja loppu soivat tämän kautta
+   * (MATKAN_AIHEET). Taso on sama AARRE_MUSIIKIN_VOIMA: viimeistellyt
+   * raidat ovat paletin tavoin noin −11 LUFS:ssä
+   * (tools/viimeistele-musiikki.mjs), joten korjausta ei tarvita.
+   *
+   * @returns {?HTMLAudioElement} soiva aihe, tai null jos se jäi pois
    */
   soitaAarreMusiikki(lahde) {
     // Paljastusaihe on musiikkia: oma kytkin vaientaa sen erikseen
     // (Raamattu, VIAT v1672) — äänimaisema ja tehosteet jatkavat.
-    if (!sfx.enabled || !musiikkiPaalla()) return;
+    if (!sfx.enabled || !musiikkiPaalla()) return null;
     // Edellinen aihe pois, jos pelaaja ehti seuraavaan paljastukseen:
     // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
     this.pysaytaAarreMusiikki();
@@ -19853,8 +19898,11 @@ export class UI {
      * ja hiljennys puretaan heti — juhla ilman fanfaaria on parempi
      * kuin fanfaari, joka jyrää huudahduksen yli.
      */
-    if (!musiikkiSaaSoida(audio)) { ohi(); return; }
+    if (!musiikkiSaaSoida(audio)) { ohi(); return null; }
     audio.play().catch(ohi);
+    // Viimeinen pääaarre: matkan loppuaihe jatkaa tämän perään.
+    if (lahde === AARRE_MUSIIKKI.paa) this.ajastaMatkanLoppu(audio);
+    return audio;
   }
 
   /** Katkaisee soivan aarremusiikin ja purkaa taustan hiljennyksen. */
@@ -19872,6 +19920,63 @@ export class UI {
     // elementin kiinni destinationissa jokaisen aarteen jälkeen.
     irrotaMusiikinVahvistin(audio);
     palautaAmbienssi(AARRE_MUSIIKIN_SYY);
+  }
+
+  /**
+   * SAAPUMISTUNNUS UUTEEN KAUPUNKIIN (musiikkisuunnitelma 26.9.2026,
+   * vaihe 1: vain Välimeri, js/kaupunkimusiikki.js SAAPUMISTUNNUKSET).
+   *
+   * Kutsuja (ennakoiAmbienssi) on jo todennut, että kaupungissa ei ole
+   * käyty tällä matkalla. Tunnus EI KESKEYTÄ soivaa aihetta: jos
+   * aloituslennon tai aarteen aihe soi vielä, tunnus jää pois — aarre
+   * sen sijaan saa katkaista tunnuksen (soitaAarreMusiikki pysäyttää
+   * edellisen). Aloituslennon kohde ei saa tunnusta lainkaan: lento
+   * päättyy siihen omalla aiheellaan (ks. run, kaydytEnnenSiirtoa).
+   */
+  soitaSaapumistunnus(city) {
+    if (!city || this.aarreMusiikki || this.aloituslentoKesken || this.radioPaalla()) return;
+    const maa = this.game.pack?.map?.cityCountry?.[city.id] ?? null;
+    const tunnus = saapumistunnus(city.id, maa);
+    if (tunnus) this.soitaAarreMusiikki(tunnus);
+  }
+
+  /**
+   * MATKAN LOPPU (musiikkisuunnitelma 26.9.2026: `musa-loppu`, "matkan
+   * loppu, kaikki aarteet"). Kun viimeinen pääaarre paljastuu, sen
+   * fanfaari soi ensin loppuun ja loppuaihe jatkaa perään — kaksi
+   * aihetta päällekkäin olisi sotku, ja katkaistu fanfaari veisi
+   * löydöltä sen hetken.
+   *
+   * Kerran pelikerrassa. Jos toinen aihe ehtii paikalle ennen kuin
+   * fanfaari loppuu, loppuaihe jää pois eikä katkaise sitä.
+   *
+   * @param {?HTMLAudioElement} aihe soiva pääaarteen aihe
+   */
+  ajastaMatkanLoppu(aihe) {
+    if (!aihe || this.katselu || this.matkanLoppuSoitettu) return;
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    if (kaikki.length === 0 || loydetyt.length < kaikki.length) return;
+    this.matkanLoppuSoitettu = true;
+    let jatkettu = false;
+    const jatka = () => {
+      if (jatkettu) return;
+      jatkettu = true;
+      if (this.dead || this.radioPaalla()) return;
+      if (this.aarreMusiikki && this.aarreMusiikki !== aihe) return;
+      this.soitaAarreMusiikki(MATKAN_AIHEET.loppu);
+    };
+    // Myös virhe jatkaa: puuttuva fanfaari ei saa viedä loppuaihetta.
+    aihe.addEventListener('ended', jatka);
+    aihe.addEventListener('error', jatka);
+  }
+
+  /** Kaikkien pelin maailmojen käydyt kaupungit (saapumistunnus). */
+  kaydytKaupungit() {
+    const kaydyt = new Set();
+    for (const maailma of this.game.worlds?.values?.() ?? []) {
+      for (const id of maailma.visited ?? []) kaydyt.add(id);
+    }
+    return kaydyt;
   }
 
   /**
@@ -20507,6 +20612,14 @@ export class UI {
     if (this.busy || this.dead) return;
     this.busy = true;
     this.actionsEl.dataset.busy = 'true';
+    /*
+     * Käydyt kaupungit ENNEN tekoa: peli kirjaa saapumisen käydyksi jo
+     * teossa (js/game.js visitCity), joten saapumistunnus
+     * (ennakoiAmbienssi) ei muuten tietäisi, oliko kaupunki uusi.
+     * Lähtövalinnalle ei kirjata mitään: aloituslennon kohde saa
+     * lennon oman aiheen eikä tunnusta sen päälle.
+     */
+    this.kaydytEnnenSiirtoa = this.game.phase === 'pickstart' ? null : this.kaydytKaupungit();
     try {
       const result = fn();
       if (result && result.ok === false) {

@@ -2190,66 +2190,247 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    * GRC (Sisältökirjuri 25.9.2026, Fablen tilaus löydös 115:n
    * yhteydessä — omistaja pelaa Kreikkaa). Avaimet ovat
    * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.GRC:n tunnuksia
-   * (Natural Earthin `name`-kenttä latinaistettuna). Vain `lyhyt`
-   * tässä erässä, kuten muillakin mailla. `pikkukuva` (löydös 115)
-   * odottaa kuvaputken toimitusta erikseen.
+   * (Natural Earthin `name`-kenttä latinaistettuna). `pikkukuva`
+   * (löydös 115) odottaa kuvaputken toimitusta erikseen.
+   *
+   * KUVA (Sisältökirjuri 26.9.2026, Fablen tilaus löydös 158:n
+   * yhteydessä): yksi aito Wikimedia Commons -valokuva per alue,
+   * ladattu, lisenssi tarkistettu Commonsin API:sta (imageinfo/
+   * extmetadata) ennen latausta, suurennettu enintään 1600 px:iin ja
+   * viety ämpäriin karttanostot/20260926/. Vain PD/CC0/CC BY/CC BY-SA,
+   * ei NC/ND-kuvia. Havainnekuva (1873) tulee myöhemmin erikseen.
+   * `pikkukuva` (Fablen täsmennys 26.9.2026, PR #3307:n skeema): GRC ei
+   * ollut mukana Codexin kuvitetussa pikkukuva-tilauksessa (löydös 115
+   * kattaa vain FRA/ESP/ITA/GBR/DEU/POL/AUT), joten GRC:n pikkukuva
+   * kierrättää samat yllä olevat kuva-osoitteet väliaikaisena
+   * ratkaisuna Fablen luvalla — ei erillistä latausta.
+   * Lähteet (tarkistettu Wikimedia Commons -API:sta 26.9.2026):
+   *   Attiki           — File:Acropolis_Parthenon_Athens_Greece.jpg (Jebulon, CC0)
+   *   Kentriki Makedonia — File:The_White_Tower_of_Thessaloniki,_Greece.jpg (Annatsach, CC BY-SA 4.0)
+   *   Kriti            — File:Samaria_Gorge_03.jpg (Lapplaender, CC BY-SA 3.0 DE)
+   *   Peloponnisos     — File:Corinth_Canal_2.jpg (Alterego, CC BY-SA 3.0)
+   *   Thessalia        — File:Meteora_Main_Monastery.jpg (AngelikiC, CC BY-SA 4.0)
+   *   Ipeiros          — File:Vikos_Gorge_seen_from_Beloi_Viewpoint,_September_2022_02.jpg (Calistemon, CC BY-SA 4.0)
+   *   Dytiki Makedonia — File:Lake_of_Kastoria.jpg (Poli.papazoi, CC BY-SA 4.0)
+   *   Dytiki Ellada    — File:Charilaos_Trikoupis_Bridge_(Rio-Antirrio)_-_panoramio.jpg (darkobajic, CC BY 3.0)
+   *   Stereá Elláda    — File:Temple_of_Apollo_in_Delphi_01.jpg (Bernard Gagnon, CC BY-SA 4.0)
+   *   Anatoliki Makedonia kai Thraki — File:Port_of_Kavala.jpg (Politicslover2, public domain;
+   *     Evros-joesta ei löytynyt vapaasti lisensoitua aitoa valokuvaa, vain karttoja)
+   *   Ionioi Nisoi     — File:The_Old_Fortress_and_the_Old_Town_of_Corfu_-_September_2017.jpg (Martin Falbisoner, CC BY-SA 4.0)
+   *   Notio Aigaio     — File:Santorini_caldera_panorama_from_Skaros.jpg (Yanko Malinov, CC BY-SA 4.0)
+   *   Voreio Aigaio    — File:Petrified_forest_of_Lesbos_12.jpg (Tomisti, CC BY-SA 4.0)
+   *   Ayion Oros       — File:Athos-Berggipfel.jpg (Rosa-Maria Rinkl, CC BY-SA 4.0; kuvattu
+   *     mereltä risteilyveneeltä, ei luostareita tai ihmisiä lähikuvassa)
    */
   GRC: {
     Attiki: {
       lyhyt: 'Ateenan Akropolis kohoaa yhä keskustan yllä, mutta rannikolla Ateenan Riviera houkuttelee uimaan aivan kaupungin kupeessa.',
       pitka: 'Ateena on nykyään yli kolmen miljoonan asukkaan metropoli, mutta kun siitä tehtiin pääkaupunki 1834, se oli sodan runtelema noin 4000 asukkaan pikkukaupunki Akropoliin juurella. Isoisän aikaan 1873 Akropoliin laella seisoi yhä keskiaikainen frankkitorni, joka purettiin vasta 1874–1875 Heinrich Schliemannin rahoilla, jotta kukkula näyttäisi taas antiikkiselta. Samoihin aikoihin koko maa kuohui Lavrionin kaivoksista: ranskalais-italialainen yhtiö rikastui antiikin kaivosmiesten jättämästä kuonasta, ja kiista valtion kanssa ratkesi vasta helmikuussa 1873 tehdyllä sopimuksella. Sounionin niemellä Poseidonin temppelin pylväät katsovat yhä merelle Attikan eteläkärjessä.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-attiki-267cf435.jpg',
+          lahde: 'Jebulon, Wikimedia Commons (CC0 1.0)',
+          tekija: 'Jebulon',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Acropolis_Parthenon_Athens_Greece.jpg',
+          lisenssi: 'CC0 1.0',
+          lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-attiki-267cf435.jpg',
     },
     'Kentriki Makedonia': {
       lyhyt: 'Thessaloniki on Kreikan toiseksi suurin kaupunki, ja sen rantabulevardilla Valkoinen torni katsoo yhä Thermaisenlahdelle.',
       pitka: 'Thessalonikissa bysanttilaiset kirkot, osmanien kylpylät ja 1900-luvun kerrostalot seisovat samoilla kaduilla, ja kaupungin yllä näkyy kirkkaalla säällä Olymposvuori. Vuonna 1873 kaupunki oli osmanien Selanik eikä kuulunut Kreikkaan – se liitettiin Kreikkaan vasta Balkanin sodassa 1912. Rantabulevardin tornia kutsuttiin silloin vielä Veritorniksi, sillä se oli pahamaineinen vankila; valkoiseksi sen kalkitsi vasta 1890 vanki, joka sai työstä vapautensa. Kaupungin suurin väestöryhmä olivat 1400-luvun lopulla Espanjasta karkotettujen juutalaisten jälkeläiset, jotka puhuivat juutalaisespanjaa – yhteisö tuhottiin lähes kokonaan, kun natsit karkottivat sen Auschwitziin 1943.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kentriki-makedonia-5c601f8c.jpg',
+          lahde: 'Annatsach, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Annatsach',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_White_Tower_of_Thessaloniki,_Greece.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kentriki-makedonia-5c601f8c.jpg',
     },
     Kriti: {
       lyhyt: 'Kreeta on Kreikan suurin saari, ja sen vuoristoisella Samarian rotkolla vaeltaa tuhansia retkeilijöitä joka kesä.',
       pitka: 'Kreeta on kuin oma pieni mantereensa: Valkoisten vuorten huiput, oliivilehdot ja oma murre, jolla lauletaan yhä improvisoituja mantinades-säkeitä lyyran säestyksellä. Vuonna 1873 saari kuului vielä Osmanivaltakuntaan, ja suuren kapinan muisto oli tuore: 1866 Arkadin luostarin puolustajat räjäyttivät ruutivarastonsa mieluummin kuin antautuivat, ja uutinen herätti myötätuntoa kaikkialla Euroopassa. Kreeta sai itsehallinnon 1898 ja liitettiin Kreikkaan vasta 1913. Knossoksen palatsi odotti isoisän aikaan vielä maan alla – ensimmäiset kaivaukset tehtiin 1878 ja suuret Arthur Evansin johdolla vasta vuodesta 1900.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kriti-30918314.jpg',
+          lahde: 'Lapplaender, Wikimedia Commons (CC BY-SA 3.0 DE)',
+          tekija: 'Lapplaender',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Samaria_Gorge_03.jpg',
+          lisenssi: 'CC BY-SA 3.0 DE',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/de/deed.en',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kriti-30918314.jpg',
     },
     Peloponnisos: {
       lyhyt: 'Korinton kanava halkaisee Peloponnesoksen niemimaan kapeasta kannaksesta, ja sillalta autoilijat katsovat yli 70 metriä alas.',
       pitka: 'Peloponnesos on vuorten, oliivitarhojen ja pienten satamien niemimaa, jonka eteläkärjessä Manin kivitorneissa asui aikoinaan sukuja, jotka kävivät verikostoa keskenään sukupolvesta toiseen. Täällä on myös itsenäisen Kreikan ensimmäinen pääkaupunki Nafplio, jonka kirkon portailla maan ensimmäinen valtionpäämies Ioannis Kapodistrias murhattiin 1831. Isoisän kulkiessa 1873 laivalla ei vielä päässyt Korintin kannaksen läpi, sillä kanavaa alettiin kaivaa vasta 1881. Myös Mykenen kuninkaanhaudat olivat löytämättä: leijonaportti oli näkyvissä, mutta Heinrich Schliemann kaivoi kultaiset kuolinnaamiot esiin vasta 1876.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-peloponnisos-b4f57b8f.jpg',
+          lahde: 'Alterego, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Alterego',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Corinth_Canal_2.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-peloponnisos-b4f57b8f.jpg',
     },
     Thessalia: {
       lyhyt: 'Thessalian pystyjen kalliopylväiden laella kohoavat Meteoran luostarit, joihin munkit kiipesivät ennen tikapuilla ja köysillä.',
       pitka: 'Thessalia on Kreikan viljakamari: laaja, tasainen tasanko, jota vuoret kiertävät joka puolelta ja jonka keskellä Larisa on kasvanut maakunnan suurimmaksi kaupungiksi. Vuonna 1873 isoisä ei olisi löytänyt täältä Kreikkaa lainkaan, sillä Thessalia kuului yhä Osmanivaltakuntaan ja siirtyi Kreikalle vasta Konstantinopolin sopimuksella 1881. Itärannikolla Volosin sataman yllä kohoaa Pelionin vuori, jonka rinteillä tarun mukaan asuivat kentaurit ja jonka kylissä on yhä kivikattoisia kartanoita. Volosin seudulta myyttinen Iason lähti Argo-laivallaan etsimään kultaista taljaa.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-thessalia-94962e38.jpg',
+          lahde: 'AngelikiC, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'AngelikiC',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Meteora_Main_Monastery.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-thessalia-94962e38.jpg',
     },
     Ipeiros: {
       lyhyt: 'Epeiroksen Vikosin rotko on maailman syvimpiä suhteessa leveyteensä, ja sen reunoilla vanhat kivikylät ovat yhä asuttuja.',
       pitka: 'Epeiros on Kreikan vuoristoisin kolkka: Pindoksen harjanteita, jyrkkiä rotkoja ja Zagorin kylien kivisiä kaarisiltoja, joita pitkin muulit kulkivat ennen teiden aikaa. Alueen pääkaupunki Ioannina lepää Pamvotisjärven rannalla, ja järven saarella tapettiin 1822 mahtava Ali-pasa, joka oli hallinnut Epeirosta lähes kuin omaa valtakuntaansa. Vuonna 1873 koko Epeiros kuului vielä Osmanivaltakuntaan; Artan seutu siirtyi Kreikalle 1881, mutta Ioannina vasta helmikuussa 1913 Balkanin sodassa. Ioanninan hopeasepät jatkavat yhä vuosisataista taitoaan vanhan linnoituksen kujilla.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ipeiros-81904730.jpg',
+          lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Calistemon',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vikos_Gorge_seen_from_Beloi_Viewpoint,_September_2022_02.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ipeiros-81904730.jpg',
     },
     'Dytiki Makedonia': {
       lyhyt: 'Kastorian kaupunki kiertää turkiskaupasta vaurastuneen järven ympäri, ja talvisin sen kapea niemi peittyy usein usvaan.',
       pitka: 'Länsi-Makedonia on Kreikan ainoa maakunta, jolla ei ole rantaviivaa: korkeiden vuorten ja järvien ylänkö, jossa talvet ovat kylmiä ja lumisia. Kastorian turkkurit toimittivat jo Bysantin hoville hermeliininnahkoja, ja kaupungissa on yhä yli 50 bysanttilaista tai keskiaikaista kirkkoa. Vuonna 1873 alue kuului Osmanivaltakuntaan, ja Kastoria liitettiin Kreikkaan vasta 1912. Pohjoisessa Prespajärvet ovat kolmen maan rajalla, ja niiden kaislikoissa pesii kiharapelikaaneja; Kozanin ja Ptolemaidan avolouhoksista taas on kaivettu ruskohiiltä, joka oli pitkään Kreikan tärkein sähkönlähde.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-makedonia-10cd285c.jpg',
+          lahde: 'Poli.papazoi, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Poli.papazoi',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_of_Kastoria.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-makedonia-10cd285c.jpg',
     },
     'Dytiki Ellada': {
       lyhyt: 'Rio–Antirrion silta yhdistää Peloponnesoksen manner-Kreikkaan, ja Patran karnevaali on koko maan suurin katujuhla.',
       pitka: 'Länsi-Kreikka ulottuu Patraksen satamasta Messolonkin laguuneille ja Olympian laaksoon, jossa antiikin kisoja pidettiin yli tuhannen vuoden ajan. Isoisän kulkiessa 1873 alue kuului jo Kreikkaan, mutta Olympia oli yhä jopa kahdeksan metrin maakerroksen alla: saksalaiset aloittivat järjestelmälliset kaivaukset vasta 1875. Patras vaurastui tuohon aikaan korintinrusinoiden viennistä, ja baijerilainen Gustav Clauss oli perustanut kaupungin yläpuolelle viinitilan jo 1861 – sen makeaa mavrodafni-viiniä valmistetaan yhä. Messolongissa taas muistetaan lordi Byronia, joka kuoli siellä kuumeeseen 1824 kesken Kreikan vapaussodan.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-ellada-2c0708f5.jpg',
+          lahde: 'darkobajic, Wikimedia Commons (CC BY 3.0)',
+          tekija: 'darkobajic',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Charilaos_Trikoupis_Bridge_(Rio-Antirrio)_-_panoramio.jpg',
+          lisenssi: 'CC BY 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-ellada-2c0708f5.jpg',
     },
     'Stereá Elláda': {
       lyhyt: 'Delfoin oraakkelin rauniot kohoavat Parnassosvuoren rinteellä – antiikin kreikkalaiset pitivät paikkaa maailman napana.',
       pitka: 'Keski-Kreikka kuului itsenäiseen Kreikkaan alusta asti, ja se ulottuu Parnassoksen rinteiltä Termopylain solaan ja Euboian suurelle saarelle. Isoisän aikaan Delfoissa ei vielä näkynyt Apollonin pyhäkköä, sillä raunioiden päällä seisoi Kastrin kylä noin 400 taloineen; kylä siirrettiin pois vasta 1892, kun ranskalaiset aloittivat suuren kaivauksensa. Termopylain kapeaa solaa, jossa spartalaiset taistelivat 480 eaa., ei enää ole, sillä rantaviiva on siirtynyt jokien kerrostumien myötä paikoin jopa yhdeksän kilometriä kauemmas. Boiotian vuorilla Hosios Loukasin luostarin tuhatvuotiaat kultamosaiikit hohtavat yhä kupolien alla.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-sterea-ellada-b756c201.jpg',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Bernard Gagnon',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Temple_of_Apollo_in_Delphi_01.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-sterea-ellada-b756c201.jpg',
     },
     'Anatoliki Makedonia kai Thraki': {
       lyhyt: 'Traakiassa asuu Kreikan suurin muslimivähemmistö, ja rajajoki Evros erottaa alueen naapurimaasta Turkista.',
       pitka: 'Itä-Makedonia ja Traakia ulottuu Kavalan satamasta Rodopivuorten kautta Evrosjoelle, ja sen kylissä voi kuulla kreikan lisäksi turkkia ja pomakkia. Vuonna 1873 koko seutu kuului Osmanivaltakuntaan: Kavala liitettiin Kreikkaan Balkanin sotien jälkeen 1913, ja Länsi-Traakia oli välillä Bulgarian hallussa ja siirtyi Kreikalle vasta 1920. Kavalassa varttui Muhammad Ali, josta tuli Egyptin hallitsija, ja hänen kotikaupungilleen 1813 rakennuttamansa imaret on nykyään hotelli. Myöhemmin Kavala vaurastui tupakasta, jonka lehtiä kuivattiin ja lajiteltiin sataman suurissa varastoissa.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-anatoliki-makedonia-kai-thraki-c1ab2e80.jpg',
+          lahde: 'Politicslover2, Wikimedia Commons (public domain)',
+          tekija: 'Politicslover2',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Port_of_Kavala.jpg',
+          lisenssi: 'Public domain',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-anatoliki-makedonia-kai-thraki-c1ab2e80.jpg',
     },
     'Ionioi Nisoi': {
       lyhyt: 'Korfun venetsialaistyylinen vanhakaupunki on Unescon listalla, ja Joonianmeren saaristo makaa Kreikan läntisimpänä.',
       pitka: 'Joonianmeren saaret ovat vihreämpiä kuin muu Kreikka, ja niiden kaupungeissa näkyy vuosisatojen venetsialaisvalta: kellotornit, holvikäytävät ja italialaisvaikutteinen musiikki. Isoisän käydessä 1873 saaret olivat olleet osa Kreikkaa vasta yhdeksän vuotta – Britannia oli hallinnut niitä protektoraattina 1815–1864 ja luovuttanut ne lahjaksi Kreikan uudelle kuninkaalle Yrjö I:lle. Brittien perintönä Korfun keskusaukiolla Spianadalla pelataan yhä krikettiä, jota muualla Kreikassa tuskin tunnetaan. Kefalonian vanhoista kaupungeista taas ei ole paljon jäljellä, sillä vuoden 1953 maanjäristys tuhosi lähes kaiken.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ionioi-nisoi-e9284910.jpg',
+          lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Martin Falbisoner',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Old_Fortress_and_the_Old_Town_of_Corfu_-_September_2017.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ionioi-nisoi-e9284910.jpg',
     },
     'Notio Aigaio': {
       lyhyt: 'Etelä-Egean saariin kuuluvat sekä Santorinin tulivuorikaldera että Rodoksen keskiaikainen ritarilinnoitus.',
       pitka: 'Etelä-Egeaan kuuluu kaksi saariryhmää, joiden historia on aivan erilainen: Kykladit, valkoisten kylien ja tuulimyllyjen saaret, sekä idempänä Turkin rannikon tuntumassa Dodekanesia. Kun isoisä matkusti 1873, Kykladit olivat jo Kreikkaa, ja Syroksen Ermoupoli oli koko maan vilkkain satama- ja telakkakaupunki, kunnes Pireus ohitti sen 1800-luvun lopulla. Santorinin kalderassa Nea Kamenin tulivuori oli juuri purkautunut 1866–1870, joten sen laava oli isoisän aikaan vielä tuoretta. Rodos ja muut Dodekanesian saaret taas kuuluivat osmaneille vuoteen 1912, sitten Italialle, ja liitettiin Kreikkaan vasta vuoden 1947 rauhansopimuksen jälkeen.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-notio-aigaio-e7a57c69.jpg',
+          lahde: 'Yanko Malinov, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Yanko Malinov',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Santorini_caldera_panorama_from_Skaros.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-notio-aigaio-e7a57c69.jpg',
     },
     'Voreio Aigaio': {
       lyhyt: 'Lesboksen saaren kivettynyt metsä on 17–20 miljoonaa vuotta vanha, ja saari tunnetaan yhä anisviina ouzon tislauksesta.',
       pitka: 'Pohjois-Egean saaret – Lesbos, Khios, Samos, Ikaria ja Limnos – ovat lähempänä Turkin rannikkoa kuin Ateenaa, ja kirkkaalla säällä niiden satamista näkyvät Anatolian vuoret. Vuonna 1873 saaret eivät kuuluneet Kreikkaan: Lesbos ja Khios olivat osmanien saaria, ja Samos oli erikoinen ruhtinaskunta, jolla oli oma lippu ja sulttaanin nimittämä kristitty ruhtinas ja joka maksoi Konstantinopoliin vuotuista veroa. Saaret liittyivät Kreikkaan Balkanin sodan aikana 1912–1913. Lesboksella syntynyt kansanmaalari Theofilos kiersi myöhemmin saaren kyliä ja maalasi kahviloiden ja kauppojen seiniä usein pelkkää ruokaa vastaan.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-voreio-aigaio-e6e2026d.jpg',
+          lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Tomisti',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Petrified_forest_of_Lesbos_12.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-voreio-aigaio-e6e2026d.jpg',
     },
     'Ayion Oros': {
       lyhyt: 'Athosvuoren munkkitasavaltaan pääsee vain erityisluvalla, eivätkä naiset saa astua sen maaperälle lainkaan.',
       pitka: 'Athoksen niemimaa on metsäinen, jyrkkä vuorenharjanne, jonka rannoilla ja rinteillä on 20 luostaria sekä lukuisia pienempiä munkkiyhteisöjä ja erakkomajoja. Munkkitasavallan juuret ovat vuodessa 963, jolloin Athanasios perusti Suuren Lavran luostarin Bysantin keisarin tuella, ja itsehallinto on säilynyt kaikkien valtojen alla. Vuonna 1873 niemimaa kuului muodollisesti Osmanivaltakuntaan, mutta munkit hallitsivat itse itseään kuten nykyäänkin; Kreikan hallintaan Athos siirtyi Balkanin sodassa 1912. Isoisän aikaan vuorelle virtasi munkkeja erityisesti Venäjältä, ja Pyhän Panteleimonin luostarissa asui 1900-luvun alussa jo lähes 1500 venäläistä munkkia.',
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ayion-oros-f8e6edc2.jpg',
+          lahde: 'Rosa-Maria Rinkl, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Rosa-Maria Rinkl',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Athos-Berggipfel.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ayion-oros-f8e6edc2.jpg',
     },
   },
   /*
@@ -2276,51 +2457,96 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Utrecht          — Dom Tower of Utrecht (112 m, 465 askelmaa, korkein kirkontorni)
    *   Zeeland          — Zeeland ("Sealand", tulva 1953, Deltatyöt)
    */
+  /*
+   * NLD PITKA (Sisältökirjuri 26.9.2026, Fablen tilaus löydös 158:n
+   * yhteydessä). Lähteet (en-Wikipedia, tarkistettu 26.9.2026):
+   *   Bonaire — Bonaire (Cargill-suolatehdas ~400 000 t/v, orjuuden
+   *     lakkautus 1862, valtion plantaasimaan myynti 1868)
+   *   Drenthe — Drenthe (nummimaa >70 %, drentin murre, pronssikauden
+   *     tinahelmikorut)
+   *   Zuid-Holland — South Holland (Westland-kasvihuoneet); Nieuwe
+   *     Waterweg (kaivettu 1866–1872)
+   *   Flevoland — Flevoland (väkiluku 177k→445k); Schokland
+   *     (evakuoitu 1859)
+   *   Friesland — Friesland (terpit, länsifriisi 54,3 %, siirtolaisuus
+   *     Amerikkaan 1870-luvun lopulla)
+   *   Gelderland — Gelderland (Veluwe/Betuwe/Achterhoek, Kröller-Müller)
+   *   Groningen — Groningen (province) (wierden-kummut, kaasukenttä
+   *     1959–2023)
+   *   Limburg — Limburg (Netherlands) (Maastrichtin sopimus 1992,
+   *     kaivosten sulku 1965–1975)
+   *   Overijssel — Overijssel (Twenten puuvilliteollisuus, Hansaliiton
+   *     kaupungit)
+   *   Noord-Brabant — North Brabant (Philips→ASML/NXP, De Biesbosch)
+   *   Noord-Holland — North Holland; North Sea Canal (kaivettu
+   *     1865–1876, avattu isoisän matkan jälkeen)
+   *   Saba — Saba (island) (Mount Scenery 870 m, "Saba lace")
+   *   St. Eustatius — Sint Eustatius (The Quill, vapaasatama 1756,
+   *     väestöromahdus 1781 jälkeen)
+   *   Utrecht — Utrecht (province) (piispankunta 1024, Rietveld
+   *     Schröder -talo)
+   *   Zeeland — Zeeland (1953 tulva, Deltatyöt, Westerscheldetunnel 2003)
+   */
   NLD: {
     Bonaire: {
       lyhyt: 'Bonairen Pekelmeerin suolajärvellä on flamingojen pesimärauhoitusalue, jonne ihmiset eivät saa astua lainkaan.',
+      pitka: `Saaren eteläosaa hallitsevat yhä suola-altaat, joissa merivesi haihtuu auringossa vaaleanpunaisiksi lammikoiksi – juuri niistä flamingot saavat karotenoidivärinsä. Cargillin nykyinen suolatehdas tuottaa vuosittain noin 400 000 tonnia suolaa, ja valkoiset suolapyramidit kohoavat rannalla kymmenien metrien korkuisiksi kasoiksi. Isoisän matkan aikoihin saaren historia oli vasta kääntymässä: orjuus lakkautettiin Bonairella 1862, ja vuodesta 1868 valtion entistä plantaasimaata alettiin myydä yksityisille, mikä siirsi saaren painopistettä suolasta karjatalouteen. Kaduilla ja pensaikoissa harhailee yhä espanjalaisten 1500-luvulla tuomien aasien jälkeläisiä, jotka elävät nykyään puolivilleinä. Ihmisiä on saarella vain reilut 26 000, mutta luonnonsuojelu on tiukkaa: Pekelmeerin flamingoalueelle ei saa astua, ja koko ympäröivä meri on suojeltua riuttaa yli 350 kalalajille.`,
     },
     Drenthe: {
       lyhyt: 'Drenthessä seisoo 53 Alankomaiden 54 dolmenista – kivipaadet kasattiin haudoiksi jo noin 3500 vuotta ennen ajanlaskun alkua.',
+      pitka: `Toisin kuin suuri osa Alankomaista, Drenthe on lähes joki- ja järvetöntä nummi- ja suomaata, jossa laajat kanervakankaat ja Dwingelderveldin kaltaiset luonnonpuistot leviävät silmänkantamattomiin. Yli 70 prosenttia maakunnasta on yhä maataloutta tai metsää, ja hiljaisuus on tehnyt Drenthesta suositun pyöräilymaakunnan. Puolet asukkaista puhuu yhä drentin murretta, alasaksin sukuista kieltä, jota Alankomaiden valtio suojelee virallisesti. Dolmenien lisäksi maaperästä on kaivettu esiin pronssikautisia tinahelmikoruja, jotka kertovat, että tämä näennäisen syrjäinen seutu kuului jo tuhansia vuosia sitten laajaan kauppaverkostoon. Nykyään maakunnan pääkaupunki Assen on rauhallinen, mutta juuri se hiljaisuus – ei jokia, ei suuria järviä, vain taivas ja kanerva – tekee Drenthesta muusta maasta poikkeavan.`,
     },
     'Zuid-Holland': {
       lyhyt: 'Rotterdamin satama on Euroopan vilkkain, ja maakunnan pääkaupunki Haag on koko Alankomaiden hallituksen kotipaikka.',
+      pitka: `Maakunnan rannikolla kohoaa maailman suurin yhtenäinen kasvihuonealue, Westland, jossa yli 2 500 lasitaloa tuottaa vihanneksia ja kukkia ympäri vuoden – lähes puolet koko Alankomaiden kasvihuonetuotannosta syntyy täällä. Rotterdamin satamaan pääsee nykyään suoraan avomereltä Nieuwe Waterweg -kanavaa pitkin, joka kaivettiin vuosina 1866–1872 pelastamaan tukkeutumassa ollut satama – juuri kun isoisän matkapäiväkirja alkoi täyttyä, uusi väylä oli vasta valmistunut ja mullisti koko Rotterdamin. Leiden ja Delft ovat säilyneet opiskelijakaupunkeina satojen vuosien takaa, ja täältä ovat kotoisin niin Rembrandt kuin mikroskoopin kehittäjä Antonie van Leeuwenhoek. Nykyään Haagissa istuu paitsi hallitus myös useita kansainvälisiä tuomioistuimia, mikä tekee muuten vaatimattoman näköisestä kaupungista maailmanpolitiikan näyttämön. Tiheimmin asutulla alueella asuu yli 1 400 ihmistä joka neliökilometrillä, mutta silti maakunnasta löytyy vielä tuulimyllyjen ja lehmälaitumien maisemia aivan kaupunkien liepeiltä.`,
     },
     Flevoland: {
       lyhyt: 'Flevoland on Alankomaiden nuorin maakunta, perustettu 1986, ja lähes koko sen maa kuivattiin entisestä merenpohjasta.',
+      pitka: `Siellä missä nyt kasvaa vehnää ja seisoo tuulivoimaloita, aaltoili isoisän aikaan vielä avoin meri: Zuiderzeen pohjalta on kaivettu esiin satoja hylkyjä, jotka jäivät makaamaan mudan alle vuosisatojen ajaksi ennen kuin maa kuivattiin niiden ympäriltä. Entinen saari Schokland oli niin köyhä ja tulville altis, että kuningas käski vuonna 1859 sen viimeiset noin 430 asukasta muuttamaan pois – kun isoisä matkusti 1873, Schokland oli jo autio saari keskellä merta, vaikka se nykyään seisoo kuivalla maalla keskellä peltoja. Flevolandin eteläosaan syntyi 1980-luvulla vahingossa yksi maan tärkeimmistä luontoalueista, Oostvaardersplassen, kun tehdasalueeksi varattu suoalue täyttyikin itsestään linnuista ja villihevosista ennen rakentamisen alkua. Maakunnan suurin kaupunki Almere on rakennettu tyhjästä vasta 1970-luvulta lähtien, ja se on nykyään yksi Alankomaiden nopeimmin kasvaneista kaupungeista. Koko maakunnan asukasluku on yli kaksinkertaistunut vuodesta 1986, ja moni asukas tietää yhä tarkalleen, monennenko metrin syvyydessä hänen kotinsa alla lepää entinen merenpohja.`,
     },
     Friesland: {
       lyhyt: 'Lähes 200 kilometrin Elfstedentocht-luistelu ajetaan vain, kun luonnonjää kestää koko reitillä – viimeksi niin kävi 1997.',
+      pitka: `Ennen patoja ja pumppuja friisit rakensivat kotinsa keinotekoisille kummuille, terpeille, jotka nousivat tulvien yläpuolelle jo rautakaudella – monen nykyisen kylän keskusta seisoo yhä tällaisen ikivanhan asuinkummun päällä. Maakunnassa puhutaan edelleen omaa kieltä, länsifriisiä, jota äidinkielenään puhuu yli puolet asukkaista, vaikka sitä osaa kirjoittaa sujuvasti vain harva. Friisiläinen hevonen ja mustavalkoinen friisiläiskarja ovat maailmankuuluja maakunnan omia rotuja, ja vihreillä laitumilla niitä näkee yhä runsaasti. 1870-luvun lopulla alkanut maatalouden lama ajoi vuosikymmenen sisällä kymmeniä tuhansia friisejä siirtolaisiksi Amerikkaan – isoisän matkan jälkeinen aika oli monelle maakunnan asukkaalle käännekohta, josta ei ollut paluuta vanhaan elämään. Nykyään maakunnan tuhannet järvet ja kanavat täyttyvät kesäisin purjeveneistä, ja jäätymisen sattuessa koko maa pysähtyy odottamaan, uskaltaako joku vihdoin luvata Elfstedentochtin ajettavaksi.`,
     },
     Gelderland: {
       lyhyt: 'Hoge Veluwen kansallispuistossa ajellaan ilmaisilla puistopyörillä, ja metsän keskellä odottaa Kröller-Müller-museon Van Gogh -kokoelma.',
+      pitka: `Maakunta jakautuu selvästi neljään erilaiseen maisemaan: pohjoisessa mäntymetsäinen Veluwe, lounaassa hedelmätarhojen Betuwe, idässä maalaismainen Achterhoek ja lopuksi Arnhemin ja Nijmegenin kaupunkiseutu. Betuwen omenatarhat kukkivat keväisin niin laajalti vaaleanpunaisina, että alueelle on oma kukkimisreittinsä, ja hedelmänviljely on jatkunut siellä jokivarsien hedelmällisen saven ansiosta vuosisatoja. Nijmegen on Alankomaiden vanhin kaupunki, ja sen roomalaisajan perintö näkyy yhä maan alta löytyvissä kaivauksissa. Hoge Veluwen kansallispuiston keskellä seisova Kröller-Müller-museo kätkee sisäänsä yhden maailman suurimmista Van Gogh -kokoelmista – rikas pariskunta rakensi sen yksityisestä taidekokoelmastaan 1900-luvun alussa keskelle metsää, kaukana kaupungeista. Maakunnassa on yli 5 000 kilometriä pyöräteitä, joten hiekkadyynien ja metsien halki pääsee kulkemaan lähes minne vain kahden pyörän varassa.`,
     },
     Groningen: {
       lyhyt: 'Groningenin kaasukenttä oli maailman suurimpia, mutta sen aiheuttamat maanjäristykset saivat valtion lopettamaan tuotannon 2023.',
+      pitka: `Maakunta on niin tasainen, että sen korkein kohta, Hasseberg Sellingenin lähellä, kohoaa vain reilut 14 metriä merenpinnan yläpuolelle – silti suuri osa Groningenista on itse asiassa merenpinnan alapuolella ja vaatii jatkuvaa pumppausta. Ennen patoja asukkaat rakensivat kylänsä keinotekoisille asuinkummuille, wierdenille, jotka pistivät esiin tulvatasangosta kuin pieniä saaria – monet niistä ovat säilyneet ja näkyvät yhä maaseudulla pyöreinä kyläraitteina. Groningenin yliopisto perustettiin jo 1614, ja kaupunki on säilynyt opiskelijakaupunkina niin, että lähes joka kolmas keskustan asukas on opiskelija. Maan alla lymyillyt valtava maakaasuesiintymä, joka löydettiin Slochterenin lähellä 1959, teki Alankomaista vuosikymmeniksi energiaomavaraisen, mutta kaasunoton aiheuttamat maanjäristykset pakottivat lopulta lopettamaan tuotannon 2023. Nykyään maakunnassa puhutaan yhä omaa murretta, groningeria, ja perinneruokia kuten kaalimuusia tarjoillaan edelleen monessa kodissa.`,
     },
     Limburg: {
       lyhyt: 'Vaalserberg kohoaa 322 metriin, Manner-Alankomaiden korkeimmaksi kohdaksi, ja sen laella kohtaavat Alankomaat, Belgia ja Saksa.',
+      pitka: `Toisin kuin suuressa osassa Alankomaita, Limburgin eteläosassa maasto kumpuilee oikeasti – liuskekivikukkulat ja syvät jokilaaksot tekevät maisemasta lähes keskieurooppalaisen, ja moni hollantilainen tulee tänne nimenomaan mäkien vuoksi. Maakunnan halki virtaava Maas-joki on muovannut aluetta vuosituhansien ajan ja yhdistää sen edelleen Belgiaan ja Ranskaan asti. Maastricht on maakunnan pääkaupunki ja yksi maan vanhimmista kaupungeista, ja siellä allekirjoitettiin 1992 Euroopan unionin perustanut Maastrichtin sopimus. 1960- ja 1970-luvuilla suljetut hiilikaivokset veivät alueelta yli 60 000 työpaikkaa, ja valtio yritti paikata iskua siirtämällä muun muassa tilastokeskuksen toimintoja seudulle – kaivosten jäljet näkyvät yhä maisemassa mustina kekoina ja tyhjinä torneina. Alueella puhutaan limburgia, jota äidinkielenään käyttää yli 1,6 miljoonaa ihmistä sekä Alankomaissa että rajan takana Belgiassa ja Saksassa, ja lähes jokaisella kylällä on oma murteensa sävy.`,
     },
     Overijssel: {
       lyhyt: 'Giethoornin vanhassa kylässä ei ollut teitä lainkaan, vaan kaikki kulki veneillä kanavia pitkin – siltoja on 176.',
+      pitka: `Maakunnan itäosassa, Twentessä, savupiiput ja tehdashallit kertovat 1800-luvun teollisesta noususta: puuvillan kehruusta, kutomisesta ja valkaisusta tuli alueen elinkeino, ja jo isoisän matkan aikoihin Twenten tehtaat jyskyttivät täydellä teholla koko Alankomaiden puuvillateollisuuden ytimenä. Zwolle, Deventer ja Kampen olivat keskiajalla vauraita Hansaliiton kauppakaupunkeja, ja niiden vanhat kauppahuoneet ja kaupunginmuurit ovat säilyneet yllättävän hyvin joenvarsimaisemassa. Maaston vaihtelu on suurta: kaakossa on hiekkamaata pieninä jokilaaksoineen, luoteessa taas savitasankoa ja entisiä soita, ja korkeimman kohdan, Tankenbergin, ja alimman kohdan välillä on eroa vain reilut 85 metriä. Staphorstin kylä on säilyttänyt tiukan kalvinistisen elämäntapansa niin, että perinteiset kansallispuvut näkyvät kadulla yhä arkipäivänä, ei vain juhlissa. Giethoornin läheisyydessä koko maakunnan vesistö kertoo samasta asiasta kuin kanavakylä itsekin: täällä ihminen on aina rakentanut elämänsä veden ehdoilla, ei sen vastapainoksi.`,
     },
     'Noord-Brabant': {
       lyhyt: 'Kaatsheuvelin Efteling avattiin 1952 satumetsänä, ja nyt se on Alankomaiden suurin huvipuisto ja yksi maailman vanhimmista.',
+      pitka: `Maakunnan suurin kaupunki Eindhoven oli 1800-luvulla vielä vaatimaton pikkukaupunki, kunnes Philipsin lamppu- ja myöhemmin elektroniikkatehtaat muuttivat sen 1900-luvulla teknologiakeskukseksi – nykyään alueella toimivat muun muassa ASML, maailman johtava piirilevyjen valmistuslaitteiden valmistaja, ja puolijohdeyhtiö NXP. Katolinen perintö näkyy yhä joka helmikuu, kun karnevaali valtaa kadut ja moni kaupunki vaihtaa väliaikaisesti nimeäkin karnevaalihenkiseksi. Brabantilainen keittiö tunnetaan mehevänä ja runsaana, "burgundialaisena", saksalais-ranskalaisten vaikutteiden ja rikkaiden leivonnaisten sekoituksena – tämä poikkeaa selvästi pohjoisemman Alankomaiden pelkistetystä ruokakulttuurista. De Biesbosch on Länsi-Euroopan suurimpia makeanveden tulva-alueita, yli 7 000 hehtaaria kanavia, ruovikkoa ja pientä saaristoa, joka syntyi keskiajan suurtulvien seurauksena. Maakunta on maan tasaisimpia, mutta poikkeuksellisesti lähes koko sen pinta-ala on merenpinnan yläpuolella, mikä erottaa sen monista muista alavista naapureistaan.`,
     },
     'Noord-Holland': {
       lyhyt: 'Amsterdam on Alankomaiden pääkaupunki ja suurin kaupunki, ja sen kupeessa Schiphol on Euroopan kolmanneksi vilkkain lentoasema.',
+      pitka: `Amsterdamin satama oli 1800-luvun puolivälissä vaarassa kuivua kokoon, kun luonnolliset väylät tukkeutuivat hiekasta – ratkaisuksi ryhdyttiin kaivamaan Noordzeekanaalia IJmuideniin asti, ja työ oli parhaillaan käynnissä juuri isoisän matkan aikoihin 1873: kanava oli alkanut 1865 ja valmistui vasta 1876, jolloin kuningas itse avasi sen juhlallisesti. Vain vähän ennen sitä, 1855, oli kuivattu valtava Haarlemmermeer-järvi pelloksi, ja nykyään sen pohjalla lentää Schiphol, Euroopan kolmanneksi vilkkain lentokenttä. Rannikolla jatkuu Länsi-Friisian saarten ketju, joista Texel on suurin, ja niiden hiekkarannat ja dyynit ovat säilyneet lähes koskemattomina lintujen levähdyspaikkoina. Amsterdamissa asuu nykyään lähes 900 000 ihmistä, mutta koko maakunnasta yli puolet on edelleen alavaa polderimaata, joka on aikoinaan kuivattu tuulimyllyillä ja nykyään pidetään kuivana sähköpumpuilla. Kaupungin talousvaikutus ulottuu kauas: alueella toimivat niin Heineken, KLM kuin Greenpeacen kansainvälinen päämajakin.`,
     },
     Saba: {
       lyhyt: 'Saban lentokentän kiitorata on vain 400 metriä, maailman lyhyin reittiliikenteessä, ja sen molemmissa päissä jyrkänne putoaa mereen.',
+      pitka: `Saaren keskellä kohoaa sammunut tulivuori Mount Scenery, 870 metriä korkea – se on koko Alankomaiden kuningaskunnan korkein kohta, korkeampi kuin mikään paikka Euroopan puoleisessa Alankomaissa. 1800-luvun lopulla, siis pian isoisän matkan jälkeen, saaren naiset alkoivat tehdä "Saban pitsiä", venezuelalaisen nunnan tänne tuomaa neulontatekniikkaa, josta tuli tärkeä tulonlähde ja josta saari sai liikanimen "naisten saari" – suurin osa miehistä oli näet töissä merillä. Pääkylä The Bottom on yhä tavoitettavissa 800 kivestä hakatun portaan kautta, "Tikkaita" pitkin, joita pitkin ennen kannettiin kaikki tavara satamasta ylös. Rantojen edustalla sukeltajat löytävät vedenalaisia tulivuoritorneja, joissa magma on aikoinaan työntynyt merenpohjan läpi, ja alueen suojellut vedet ovat kotia noin 150 kalalajille. Saarella asuu vain runsaat 2 000 ihmistä, mikä tekee siitä väkiluvultaan pienimmän pysyvästi asutun alueen koko Amerikan mantereella.`,
     },
     'St. Eustatius': {
       lyhyt: 'Fort Oranjen tykit vastasivat 1776 amerikkalaisprikin tervehdykseen – varhainen kansainvälinen tunnustus kapinallisten lipulle.',
+      pitka: `Saaren eteläosaa hallitsee sammunut tulivuori De Quill, 602 metriä korkea, jonka nimi juontuu hollannin sanasta "kuil", kuoppa – kraatterin sisällä kasvaa nykyään sademetsä, joka poikkeaa täysin muusta kuivasta saaresta. 1700-luvun puolivälissä saaresta tuli vapaasatama, jonka kautta kulki niin kauppatavaraa kuin orjakauppaa valtavassa mitassa – brittiläinen valtiomies Edmund Burke kutsui sitä "koko maailman kauppapaikaksi", ja parhaimmillaan saarella toimi yli 70 plantaasia. Isoisän matkan aikoihin 1873 tuo kulta-aika oli jo kaukainen muisto: britit olivat ryöstäneet saaren 1781, ja kauppa siirtyi vähitellen Curaçaolle ja Sint Maartenille, minkä seurauksena väkiluku romahti yli 8 000 asukkaasta muutamaan sataan 1900-luvun puoliväliin mennessä. Fort Oranjen muurien sisällä seisoo yhä tykkejä, jotka muistuttavat siitä hetkestä, jolloin saari tunnusti ensimmäisenä ulkomaisena alueena Yhdysvaltain lipun. Nykyään saarella on hiljaista, ja juuri se hiljaisuus – kadut ilman vilskettä, satama ilman laivoja – kertoo parhaiten siitä, miten paljon saari on menettänyt entisestä vauraudestaan.`,
     },
     Utrecht: {
       lyhyt: 'Utrechtin Dom-tornin 465 askelmaa vievät 112 metrin korkeuteen – se on Alankomaiden korkein kirkontorni.',
+      pitka: `Utrecht on pinta-alaltaan Alankomaiden toiseksi pienin maakunta, mutta maasto vaihtelee yllättävän paljon: idässä kohoaa jääkauden muovaama Utrechtse Heuvelrug -harjanne mäntymetsineen, etelässä on jokivarsimaisemaa ja lännessä laajoja niittyjä. Kaupunki oli keskiajalla piispankunnan keskus – piispat saivat 1024 Pyhän saksalais-roomalaisen keisarikunnan ruhtinaan arvon, ja tuosta vallasta muistuttavat yhä kaupungin lukuisat kirkot ja luostarit. Utrecht Centraal on nykyään Alankomaiden vilkkain rautatieasema, josta junat lähtevät joka suuntaan muutaman minuutin välein. Kaupungin laidalla seisoo Rietveldin Schröder-talo, 1920-luvulla rakennettu, väreiltään ja muodoiltaan radikaalin pelkistetty talo, joka on säilynyt lähes muuttumattomana ja on nykyään Unescon maailmanperintökohde. Maakunnan pohjoisosassa entiset turvesuot ovat muuttuneet virkistysjärviksi, joilla kaupunkilaiset viettävät kesäpäivänsä aivan Dom-tornin kupeessa syntyneen historian keskellä.`,
     },
     Zeeland: {
       lyhyt: 'Zeelandin nimi tarkoittaa merimaata, ja vuoden 1953 tuhotulvan jälkeen sen saaria suojaavat Deltatyöt, jättimäiset padot ja sulut.',
+      pitka: `Zeeland on käytännössä saarten ja niemien mosaiikki siinä kohtaa, jossa Rein, Maas ja Schelde-joet laskevat yhdessä mereen – vettä on maakunnan pinta-alasta yli kolmasosa, tarkemmin sanottuna reilut 1 150 neliökilometriä yli 2 900:sta. Simpukoiden ja osterien viljely on ollut rannikkoseudun elinkeino vuosisatoja, ja Zeelannin simpukat tunnetaan Alankomaissa herkkuna edelleen. Vuoden 1953 tulva tappoi alueella yli 1 800 ihmistä yhden ainoan yön aikana, kun myrskyvuoksi mursi useita patoja kerralla – katastrofi käynnisti jättimäisen Deltatöiden rakennusohjelman, joka muutti koko maakunnan rantaviivan padoiksi, silloiksi ja tunneleiksi. Vasta 2003 valmistunut Westerscheldetunnel yhdisti vihdoin joen molemmat rannat ilman lauttaa, päättäen vuosisataisen lauttariippuvuuden. Kesäisin monen rannikkokunnan väkiluku moninkertaistuu turistien myötä, vaikka Zeeland on muuten Alankomaiden harvimmin asuttu maakunta vain noin 391 000 asukkaallaan.`,
     },
   },
   /*
@@ -2354,39 +2580,76 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Walloon Brabant — Walloon Brabant (Waterloon taistelu kesäkuu
    *                     1815, Belgian vaurain provinssi)
    */
+  /*
+   * BEL PITKA (Sisältökirjuri 26.9.2026, Fablen tilaus löydös 158:n
+   * yhteydessä). Lähteet (en-Wikipedia, tarkistettu 26.9.2026):
+   *   Antwerp — Antwerp Province / 1863 in Belgium (Schelden
+   *     tullimaksun poisto 1863); Antwerp diamond district
+   *   Brussels — Brussels' Comic Book Route; Belgian Comic Strip
+   *     Center (Victor Horta); Demographics of Brussels
+   *   Flemish Brabant — Flemish Brabant; Catholic University of
+   *     Leuven (perustettu 1425)
+   *   Hainaut — Borinage; Hainaut Province (Grand-Hornu); Vincent van
+   *     Gogh (Borinage 1878–1880); Mons 2015
+   *   East Flanders — Ghent; Kouter-kukkatori 1772; Ghent Floralies
+   *     1809; Aalst Carnival
+   *   Liege — Liège Province; Eupen-Malmedy (osa Saksaa vuoteen 1920);
+   *     Val-Saint-Lambert 1826
+   *   Limburg — Tongeren (Atuatuca Tungrorum, Ambiorix 54 eaa.);
+   *     South Limburg coal mining basin; Hesbaye (Haspengouw)
+   *   Luxembourg — Battle of the Bulge; Bouillon Castle / Godfrey of
+   *     Bouillon
+   *   West Flanders — Royal Galleries of Ostend; Bruges; Battle of
+   *     Flanders Fields
+   *   Namur — Citadel of Namur; Rocher Bayard; Adolphe Sax
+   *     -elämäkertatiedot
+   *   Walloon Brabant — Villers Abbey 1146; Catholic University of
+   *     Leuven -jako 1968; GSK Belgia (Wavre)
+   */
   BEL: {
     Antwerp: {
       lyhyt: 'Antwerpenin satama on Euroopan toiseksi suurin, ja provinssi on koko Belgian väkirikkain – täällä asuu yli 1,9 miljoonaa ihmistä.',
+      pitka: `Antwerpenin sydämenlyönti kuuluu satamasta, joka on Euroopan toiseksi vilkkain – ja sen nousu käynnistyi kunnolla vuonna 1863, kun Alankomaat luopui vuosisatoja periytyneestä Schelden tullimaksusta juuri isoisän matkan kynnyksellä, ja satama pääsi vihdoin laajenemaan vapaana merelle. Kaduilla kuulee tänään kymmeniä kieliä, sillä satama ja timanttikauppa ovat vetäneet kaupunkiin väkeä joka puolelta maailmaa. Rautatieaseman kupeessa sijaitseva timanttikortteli näyttää ulkoa vaatimattomalta toimistokorttelilta, mutta sen harmaiden ovien takana käsitellään edelleen valtaosa maailman raakatimanteista. Provinssin yli 1,9 miljoonaa asukasta tekevät siitä Belgian väkirikkaimman, mutta arki tuntuu silti yllättävän rauhalliselta vanhojen kanaalien ja kauppahuoneiden katveessa.`,
     },
     Brussels: {
       lyhyt: 'Brysselissä istuvat EU:n tärkeimmät toimielimet ja Naton päämaja, mutta kaupunkia kutsutaan myös sarjakuvan pääkaupungiksi.',
+      pitka: `Brysselissä EU:n virkamiehet ja sarjakuvasankarit elävät kirjaimellisesti samoilla kaduilla: kaupungin sarjakuvareitillä on jo yli 50 seinämaalausta, joissa vilahtavat Tintti, Lucky Luke ja Smurffit. Belgian sarjakuvakeskus toimii entisessä tekstiilitukkuliikkeessä, jonka suunnitteli art nouveau -arkkitehti Victor Horta – rakennus itsessään on yhtä katsomisen arvoinen kuin sen kokoelmat. Lähes 40 prosenttia kaupungin asukkaista on muita kuin Belgian kansalaisia, ja kansainvälisyyden näkee ja maistaa parhaiten Matongen kongolaiskorttelissa tai Marollesin kirpputorilla. Isoisän aikaan Bryssel oli vasta kasvava pääkaupunki ilman EU:ta ja sarjakuvamuseoita, mutta samat mutkittelevat kujat kiertävät yhä Grand Placen ympärillä.`,
     },
     'Flemish Brabant': {
       lyhyt: 'Flanderin Brabant kiertää renkaana Brysselin ympäri, ja Belgian päälentoasema sijaitsee sen puolella eikä pääkaupungissa.',
+      pitka: `Flanderin Brabant on hallinnollisesti nuori provinssi, syntynyt vasta 1995, kun vanha Brabantin maakunta jaettiin kolmeen osaan – mutta sen pääkaupunki Leuven on kaikkea muuta kuin nuori. Leuvenin katolinen yliopisto perustettiin jo vuonna 1425, ja se on vanhin yhä toimiva katolinen yliopisto maailmassa, mikä näkyy kaupungin nuorekkaassa, opiskelijavaltaisessa tunnelmassa. Provinssin 65 kuntaa jakautuvat kahteen hallintoalueeseen, Leuveniin ja Halle-Vilvoordeen, ja juuri Halle-Vilvoordessa, aivan Brysselin liepeillä, kieliraja on erityisen herkkä puheenaihe, sillä osassa kuntia asuu paljon ranskankielisiä flaamilaisella alueella. Leuvenista pääsee Brysselin kansainväliselle lentokentälle junalla vain noin varttitunnissa, mikä kertoo, miten tiiviisti tämä rengasmainen provinssi kietoutuu pääkaupungin ympärille.`,
     },
     Hainaut: {
       lyhyt: 'Scheldejoen varren Tournai on Belgian vanhimpia kaupunkeja – se oli aikanaan frankkien valtakunnan ensimmäinen pääkaupunki.',
+      pitka: `Hainaut'n maisemaa hallitsee yhä hiilikaivosten perintö: Borinagen alue on saanut nimensä murresanasta, joka tarkoittaa kaivoskuilua, ja seudun Grand-Hornun kaivosyhtiö oli 1800-luvulla yksi vastikään itsenäistyneen Belgian suurimmista. Vain muutama vuosi isoisän matkan jälkeen, vuosina 1878–1880, nuori hollantilaistaiteilija Vincent van Gogh asui täällä protestanttisena saarnaajana kaivostyöläisten keskuudessa ja jakoi heidän köyhyytensä niin tosissaan, että häntä alettiin kutsua "hiilikaivoksen Kristukseksi". Charleroi kasvoi teollistumisen myötä provinssin suurimmaksi kaupungiksi, vaikka hallinnollinen pääkaupunki on pienempi Mons, joka toimi Euroopan kulttuuripääkaupunkina vuonna 2015. Nykyään moni entinen kaivosalue on suojeltua Unescon maailmanperintöä, ja rivitalokortteleiden välissä elää yhä sitkeä kaivosseudun yhteisöllisyys, vaikka viimeinen kaivos suljettiin jo vuosikymmeniä sitten.`,
     },
     'East Flanders': {
       lyhyt: 'Gent sijaitsee Schelde- ja Leiejoen yhtymäkohdassa, ja sen vanhoja katuja täyttävät nykyään Gentin yliopiston opiskelijat.',
+      pitka: `Illaisin Gentin vanhat kivikadut täyttyvät enemmän opiskelijoista kuin turisteista – kaupungissa opiskelee yli 65 000 nuorta, mikä tekee tunnelmasta yllättävän nuorekkaan keskiaikaisten kirkontornien katveessa. Kouterin aukion kukkatori on toiminut vuodesta 1772 lähtien, joten se oli auki jo isoisän matkan aikaan ja on edelleen viikonloppuisin gentiläisten suosituin kohtaamispaikka. Joka neljäs vuosi järjestettävät Gentin Floraliat juontavat juurensa vaatimattomasta vuoden 1809 näyttelystä, ja tapahtuma on nykyään merkitty Flanderin aineettomaksi kulttuuriperinnöksi. Naapurikaupunki Aalstissa taas vietetään Belgian suurinta karnevaalia, jonka huipentumana miehet pukeutuvat naisiksi "Voil Jeanetten" -kulkueessa laskiaistiistaina – perinne, joka hämmästyttää monia ensikertaa paikalla olevia.`,
     },
     Liege: {
       lyhyt: 'Liège on Belgian ainoa provinssi, joka rajautuu kolmeen maahan, ja sen itälaidalla Eupenin ja Malmedyn seudulla puhutaan saksaa.',
+      pitka: `Liègen itäisin kolkka on kielellinen erikoisuus vielä nykyäänkin: Eupenin ja Malmedyn seudulla puhutaan saksaa, sillä alue kuului Preussille ja Saksan keisarikunnalle aina vuoteen 1920 asti – isoisän matkustaessa seudun läpi vuonna 1873 se oli siis vielä osa Saksaa, ei Belgiaa. Liège itse on Vallonian viimeinen kaupunki, jossa terästeollisuus edelleen toimii, vaikka suuri osa 1800-luvun tehtaista on jo hävinnyt maisemasta. Val-Saint-Lambertin lasitehdas on valmistanut kristallia entisen sistersiläisluostarin mailla vuodesta 1826 lähtien, joten siellä hiottiin hienoa lasia jo isoisänkin matkan aikaan. Joen rannoilla ja mäkien rinteillä kaupunki tuntuu yhä vahvalta työläiskaupungilta, jossa ranska ja saksa sekoittuvat sekä puheessa että ruokapöydässä.`,
     },
     Limburg: {
       lyhyt: 'Limburgin Tongerenia pidetään Belgian vanhimpana kaupunkina – se on provinssin ainoa roomalaisten aikainen kaupunki.',
+      pitka: `Tongeren on Belgian vanhin kaupunki: roomalaisaikoina se tunnettiin nimellä Atuatuca Tungrorum, ja sen ensimmäiselle vuosisadalle ajoittuvien kaupunginmuurien jäänteitä löytää yhä pelloilta keskustan laidalta. Kaupunki oli jo antiikin aikana kapinan näyttämö, kun paikallinen päällikkö Ambiorix nousi roomalaisia vastaan vuonna 54 eaa. Provinssin eteläosassa, hedelmällisessä Haspengouw'n alueella, kasvatetaan yli puolet koko Belgian hedelmäsadosta, ja keväällä omena- ja päärynätarhojen kukinta muuttaa maiseman valkoiseksi mereksi. Pohjoisempana Genkin seudulla taas hiiltä alettiin kaivaa vasta 1900-luvun alussa, vuosikymmeniä isoisän matkan jälkeen – kaivostoiminta tuli Limburgiin paljon myöhemmin kuin Vallonian teollisuusalueille – ja entiset kaivosyhdyskunnat muistuttavat yhä monikulttuurisesta menneisyydestään.`,
     },
     Luxembourg: {
       lyhyt: 'Luxembourg on Belgian suurin mutta harvimmin asuttu provinssi, ja noin 80 prosenttia siitä kuuluu Ardennien tiheisiin metsiin.',
+      pitka: `Belgian suurin mutta väkiluvultaan pienin provinssi lepää suurelta osin Ardennien synkän metsän alla, ja viime vuosina alueelle on palannut jopa susia peurojen ja villisikojen rinnalle. Bouillonin linna kohoaa jyrkän mutkittelevan Semois-joen yllä; sen juuret ulottuvat 700-luvulle, ja se siirtyi aikanaan ensimmäiselle ristiretkelle lähteneelle Godefroy de Bouillonille, josta tuli myöhemmin Jerusalemin kuningaskunnan ensimmäinen hallitsija. Joulukuussa 1944 juuri tämä metsäinen seutu oli niin sanotun Ardennien offensiivin eli Bulgen taistelun sydäntä, ja monet kylät tuhoutuivat lähes kokonaan ennen kuin saksalaisjoukot vetäytyivät seuraavan tammikuun tienoilla. Nykyään sota näkyy lähinnä museoissa ja muistomerkeissä, ja rauhallisissa kylissä eletään pääosin matkailusta ja metsätaloudesta.`,
     },
     'West Flanders': {
       lyhyt: 'Rannikkoraitiovaunu kulkee koko rannikon Ranskan rajalta Alankomaiden rajalle – 67 kilometriä, maailman pisin laatuaan.',
+      pitka: `West-Vlaanderen on Belgian ainoa rantaprovinssi, jonka hiekkarannat vaihettuvat idempänä nopeasti vihertäviksi pelloiksi ja tiilikattoisiksi kyliksi. Rannikon suosituin kaupunki on Ostende, josta kuningas Leopold II teki vuosikymmenten kuluessa isoisän matkan jälkeen Euroopan aateliston suosiman, muodikkaan kylpyläkaupungin – "rantojen kuningattaren". Brugesin keskiaikaiset kanavat ja mutkittelevat kujat ovat tuoneet kaupungille lisänimen "Pohjolan Venetsia", ja pitsinnypläystä harjoitetaan yhä käsityönä monen ikkunan ääressä. Provinssin eteläosassa Ieperin (Ypresin) ympäristö tunnetaan koko maailmassa ensimmäisen maailmansodan Flanders Fields -taistelukentistä, joissa satojatuhansia sotilaita kuoli vain reilut neljä vuosikymmentä isoisän vierailun jälkeen.`,
     },
     Namur: {
       lyhyt: 'Dinantin jyrkän kallion laella seisoo linnoitus, ja kaupunki muistaa poikaansa Adolphe Saxia, joka patentoi saksofonin 1846.',
+      pitka: `Namurin linnoitus kohoaa jyrkällä kalliolla juuri kohdassa, jossa Sambre-joki yhtyy Meuseen, ja koko kaupunki tuntuu rakentuneen tämän veden ja kallion vastakkainasettelun ympärille. Vähän etelämpänä Dinantissa tunnetaan nykyisen linnoituksen lisäksi outo kalliomuodostelma, Rocher Bayard: legendan mukaan Aymonin neljän pojan taruhevonen halkaisi kallion yhdellä kavion iskulla, vaikka todellisuudessa sen lohkaisivat Ludvig XIV:n sotilaat raivatakseen tietä joen varteen. Dinant on myös saksofonin keksijän Adolphe Saxin syntymäkaupunki, ja pojan lapsuus oli niin täynnä läheltä piti -tilanteita – putoamisia, myrkytyksiä, hukkumisvaaroja – että naapurit kutsuivat häntä "Dinantin aavelapseksi" eikä hänen äitinsä uskonut pojan elävän aikuiseksi. Meusen jyrkät kalkkikalliot houkuttelevat nykyään kiipeilijöitä ja melojia, ja joenrantakylät elävät edelleen matkailusta kalkkikivilouhosten katveessa.`,
     },
     'Walloon Brabant': {
       lyhyt: 'Waterloon taistelu käytiin täällä kesäkuussa 1815, ja nykyään Vallonian Brabant on Belgian vaurain provinssi.',
+      pitka: `Vallonian Brabant on hallinnollisesti nuori mutta monin paikoin ikivanha: Villers-la-Villen keskiaikainen sistersiläisluostari perustettiin jo vuonna 1146 ja hylättiin Ranskan vallankumouksen pyörteissä 1796, ja sen kivikylmät holvit sekä vanhan panimon rauniot ovat säilyneet yllättävän hyvin. Provinssin nuorin kaupunki taas on Louvain-la-Neuve, joka rakennettiin tyhjälle pellolle vuonna 1968, kun kielikiistat halkaisivat vanhan Leuvenin katolisen yliopiston kahtia ja ranskankielinen osa muutti kokonaan uuteen, sitä varten suunniteltuun kaupunkiin. Waterloon kesäkuun 1815 taistelukentät tunnetaan kaikkialla maailmassa, mutta vähemmän tunnettua on, että pienessä Wavren kaupungissa toimii nykyään maailman suurin rokotetehdas – se työllistää noin 7 000 ihmistä ja lähettää yli kaksi miljoonaa rokoteannosta joka päivä 160 maahan. Peltojen ja metsien vaihtelevassa maisemassa vanha ja uusi Belgia elävät siis rinnakkain: luostarirauniot, taisteluhistoria ja huipputeollisuus samalla kapealla alueella Brysselin eteläpuolella.`,
     },
   },
   /*
@@ -2400,21 +2663,40 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Sjaælland    — Møns Klint (120 m, Unesco 13.7.2025); Region Zealand
    *   Syddanmark   — Billund, Denmark; Billund (Billundin kunta, Syddanmark)
    */
+  /*
+   * DNK PITKA (Sisältökirjuri 26.9.2026, Fablen tilaus löydös 158:n
+   * yhteydessä). Lähteet (en-Wikipedia, tarkistettu 26.9.2026):
+   *   Nordjylland — Råbjerg Mile; Skagen Painters (siirtokunta
+   *     1870-luvulta)
+   *   Midtjylland — Mols Bjerge National Park; HDMS Jylland (fregatti,
+   *     palveluksessa 1873)
+   *   Hovedstaden — Tivoli Gardens (avattu 1843); Cycling in
+   *     Copenhagen
+   *   Sjaælland — Roskilde Cathedral (Fredrik VII); Skuldelev ships /
+   *     Viking Ship Museum (nostettu 1962)
+   *   Syddanmark — Duchy of Schleswig (Preussin osa 1864–1920);
+   *     Battle of Dybbøl; Hans Christian Andersen
+   */
   DNK: {
     Nordjylland: {
       lyhyt: 'Skagenin Grenenillä voi seistä hiekkasärkän kärjessä, jossa Skagerrakin ja Kattegatin aallot törmäävät – uiminen siellä on kielletty.',
+      pitka: `Alueen läntinen ranta on jatkuvassa liikkeessä: Råbjerg Mile, Pohjois-Euroopan suurin vaeltava hiekkadyyni, työntyy tuulen voimalla jopa 18 metriä vuodessa ja on jo haudannut allensa metsiä ja teitä. Samasta ilmiöstä kärsi 1700-luvulla Skagenin vanha Pyhän Laurentiuksen kirkko, jonka hiekka pakotti seurakunnan hylkäämään vuonna 1795 – nykyään hiekasta pilkistää enää 18 metriä korkea torni. 1870-luvulla samat rannat alkoivat vetää puoleensa toisenlaista väkeä: taidemaalarit kokoontuivat Skagenin kalastajakylään maalaamaan valoa ja paikallisia, ja pian syntyi kansainvälisesti tunnettu Skagenin maalarien siirtokunta. Nykyään dyynialue on suosittu retkikohde, mutta tuuli jatkaa työtään yhtä hitaasti ja peruuttamattomasti kuin isoisän aikaan.`,
     },
     Midtjylland: {
       lyhyt: 'Aarhusin ARoS-taidemuseon katolla kiertää sateenkaaren värinen lasikäytävä, josta kaupunki näkyy joka askeleella eri sävyssä.',
+      pitka: `Djurslandin niemimaalla kohoavat Mols Bjergen kumpuilevat mäet, jääkauden muovaama maisema, jossa nummet, lehdot ja pikkujärvet vuorottelevat ja metsäkauriit liikkuvat vapaana kansallispuistossa. Rannikon toisella puolella Ebeltoftin satamakaupungissa on kuivatelakalla maailman pisin säilynyt puinen sotalaiva, fregatti Jylland – 102-metrinen höyry- ja purjelaivojen välimuoto, joka selvisi vuoden 1864 Helgolannin taistelusta täynnä osumia. Vuonna 1873 alus oli vielä aktiivisessa laivastopalveluksessa, ja vain vuotta myöhemmin siitä tehtiin kuninkaallinen jahti, joka purjehti Kristian IX:n Färsaarille, Islantiin ja Pietariin. Nykyään laiva lepää kuivalla telakalla museona, ja sen pitkä runko muistuttaa siitä, miten höyry ja purje elivät vielä rinnakkain isoisän matkojen aikaan.`,
     },
     Hovedstaden: {
       lyhyt: 'Kööpenhaminasta Malmöhön ajetaan ensin tunnelissa, noustaan Peberholmin tekosaarelle ja jatketaan lähes kahdeksan kilometrin siltaa.',
+      pitka: `Kaupungin keskellä on yhä auki huvipuisto Tivoli, joka avasi porttinsa vuonna 1843 – kun isoisä kulki Kööpenhaminan läpi vuonna 1873, puisto oli jo kolmekymmentä vuotta vanha nähtävyys. Sen gondolit ja köynnöskujat lumosivat avausvuonna myös sadunkertoja H. C. Andersenia, joka sai niistä innoitusta satuunsa Satakieli. Puiston vanha lampi on osa entistä kaupunginvallihautaa, ja illalla valot syttyvät samalla paikalla kuin isoisän aikaan, vaikka laitteet ovat sittemmin vaihtuneet vuoristoradoiksi ja valoshow'ksi. Ulkopuolella kaupunki on nykyään yksi maailman pyöräilyystävällisimmistä: yli puolet kööpenhaminalaisista pyöräilee töihin tai kouluun, mikä olisi isoisän ajan hevoskaduilla ollut vaikea kuvitella.`,
     },
     'Sjaælland': {
       lyhyt: 'Mønin saaren liitukalliot putoavat paikoin 120 metriä suoraan mereen, ja vuonna 2025 Møns Klint pääsi Unescon maailmanperintölistalle.',
+      pitka: `Roskilden keskiaikainen tuomiokirkko on ollut Tanskan kuninkaiden hautakirkko jo 1400-luvulta lähtien, ja sen holvien alla lepää yli 40 hallitsijaa – kun isoisä kulki seudulla 1873, viimeisin heistä, kuningas Fredrik VII, oli haudattu sinne reilut kymmenen vuotta aiemmin. Kaupungin liepeillä, Roskilden vuonon pohjassa, makasi vuosisatoja viisi viikinkilaivaa, jotka noin vuonna 1070 oli tarkoituksella upotettu sulkemaan väylä vihollislaivastolta. Ne nostettiin esiin vasta vuonna 1962, kun koko lahdenpoukama padottiin kuivaksi, ja nykyään ne ovat esillä Viikinkilaivamuseossa. Fjordin rannalla samassa kaupungissa kohtaavat näin tuhat vuotta sitten upotetut laivat ja kirkko, jonka torneja on näkynyt yli vainioiden jo isoisänkin aikaan.`,
     },
     Syddanmark: {
       lyhyt: 'Pienessä Billundissa on Legon pääkonttori ja maailman ensimmäinen Legoland, joka avasi porttinsa jo vuonna 1968.',
+      pitka: `Alueen eteläosassa, Sønderjyllandissa, rajat ovat siirtyneet historian saatossa: kun isoisä matkasi vuonna 1873, seutu ei kuulunut Tanskaan lainkaan, vaan oli osa Saksan keisarikuntaa – Preussi oli liittänyt sen itseensä vuoden 1864 sodan jälkeen, ja alue palasi Tanskalle vasta kansanäänestyksen kautta vuonna 1920. Sønderborgin liepeillä kohoava Dybbølin mylly muistuttaa yhä sodan verisimmästä taistelusta ja oli vuosina 1864–1920 tanskanmielisten etelänjyylantilaisten vastarinnan symboli. Kauempana idässä, Odensen kaupungissa, syntyi vuonna 1805 satukirjailija H. C. Andersen, joka eli edelleen isoisän matkan aikaan ja kuoli vasta kaksi vuotta myöhemmin, vuonna 1875. Odensen mukulakivikadut ovat samat, joilla suutarinpojasta kasvanut satukirjailija haaveili maailmalle lähdöstä – eteläisellä rajaseudulla sen sijaan muistetaan yhä, miten lähellä koko maakunta oli jäädä pysyvästi Saksan puolelle.`,
     },
   },
   /*
@@ -2434,30 +2716,55 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Žilinský        — Orava Castle (Nosferatu 1922); Oravský Podzámok
    *                     (Dolný Kubínin piiri, Žilinan alue)
    */
+  /*
+   * SVK PITKA (Sisältökirjuri 26.9.2026). Lähteet (en-Wikipedia,
+   * tarkistettu 26.9.2026):
+   *   Banskobystrický — Banská Bystrica Region (Poľana, Nízke Tatry,
+   *     kaivosopisto 1762); Museum of the Slovak National Uprising (1944)
+   *   Bratislavský — Most SNP/UFO; Bratislava Region (pienin, rikkain);
+   *     Devín Castle
+   *   Košický — Košice gold treasure (1935); Košice–Bohumín Railway
+   *     (1870/1872); Košice Region (kulttuuripääkaupunki 2013)
+   *   Nitriansky — Zobor Documents (1111/1113); Zobor; Podhájská (38 °C)
+   *   Prešov — Wooden churches of the Slovak Carpathians; Hervartov;
+   *     Bardejov
+   *   Trenciansky — Trenčín Region (Váh, kylpylät); Bojnice Castle
+   *   Trnavský — University of Trnava (1635); Basilica of the Seven
+   *     Sorrows, Šaštín
+   *   Žilinský — Žilina Region; Painted Village of Čičmany (1977); Kysuce
+   */
   SVK: {
     'Banskobystrický': {
       lyhyt: 'Banská Štiavnican kaivoskaupunki on rakennettu muinaisen, romahtaneen tulivuoren kalderan keskelle, ja se on Unescon maailmanperintöä.',
+      pitka: `Alue on Slovakian vulkaanisin kolkka: Banská Štiavnican lisäksi täällä kohoaa Poľanan tulivuorimassiivi, laaja metsäinen suojelualue, ja etelämmässä Nízke Tatryn eli Matalan Tatran vuoret houkuttelevat nykyään vaeltajia ja hiihtäjiä. Keskiajalla seudun hopea- ja kultakaivokset tekivät Banská Štiavnicasta yhden Euroopan rikkaimmista kaupungeista, ja täällä toimi vuodesta 1762 yksi maailman vanhimmista kaivosopistoista, kauan ennen isoisän matkaa 1870-luvulla. Toisen maailmansodan aikana alueen pääkaupunki Banská Bystrica nousi vastarinnan keskukseksi: elokuussa 1944 sieltä syttyi Slovakian kansallinen nousu, Euroopan toiseksi suurin natsivastainen kansannousu, jota nykyään muistetaan suurella museolla kaupungin sydämessä. Vuoristokylien välissä elää yhä sitkeä kaivos- ja metsäperinne, ja monet pikkukaupungit tuoksuvat edelleen kylpylävedeltä – Dudincen ja Sklené Teplicen lämpimät lähteet ovat hoitaneet väsyneitä vaeltajia vuosisatoja.`,
     },
     'Bratislavský': {
       lyhyt: 'Bratislava on maailman ainoa pääkaupunki, joka rajautuu kahteen valtioon: Itävalta ja Unkari alkavat aivan kaupungin laidalta.',
+      pitka: `Modernin Bratislavan siluettia hallitsee oudon näköinen Nový most eli Uusi silta, jonka yhden pylvään päällä lepää lentävän lautasen muotoinen näköalatasanne UFO. Kaupungin liepeillä, Tonavan ja Moravan jokien yhtymäkohdassa, seisovat Devínin linnan rauniot, yksi Slovakian vanhimmista linnoista ja muinainen rajapaikka, jota on vartioitu roomalaisajoista lähtien. Pohjoiseen avautuvat Pikku-Karpaattien rinteet, joilla viinitarhat kiertyvät kylästä kylään aina Trnavaan asti – Bratislava on Slovakian viinin sydän. Alue on pinta-alaltaan pienin mutta asukasta kohti rikkain kaikista maan kahdeksasta maakunnasta, ja sen halki soljuva Tonava sitoi kaupungin kauppareitteihin jo isoisän aikaan, kun höyrylaivat kulkivat Wienin ja Budapestin väliä.`,
     },
     'Košický': {
       lyhyt: 'Košicen Pyhän Elisabetin katedraali on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista.',
+      pitka: `Košicen vanhankaupungin kivijalkojen alta löytyi vuonna 1935 lähes 3000 kultakolikon aarre, kätkettynä maan alle jo 1600-luvun kapinoiden aikaan – se on suurin koskaan Slovakiasta löydetty kulta-aarre, ja osa siitä on esillä Itä-Slovakian museossa. Kaupunki on rakentunut Hornád-joen varrelle Slovakian rautavuorten itäreunalla, lähellä sekä Unkarin että Ukrainan rajaa, ja seudulla asuu slovakkien rinnalla unkarilaisia, tšekkejä ja romaneja. Rautatie Košicesta pohjoiseen valmistui juuri isoisän matkan kynnyksellä: Košicen ja Prešovin välinen rata avattiin syksyllä 1870 ja koko yhteys Puolan rajalle asti vuonna 1872, joten vuonna 1873 juna oli vielä aivan uusi ihme näillä main. Nykyään noin kolmasosa koko maakunnan väestä asuu Košicen kaupunkiseudulla, joka valittiin vuonna 2013 Euroopan kulttuuripääkaupungiksi yhdessä Ranskan Marseillen kanssa.`,
     },
     Nitriansky: {
       lyhyt: 'Nitran seutu on Slovakian lämpimin kolkka, jonka pelloilla kasvaa vehnää, ja lähes joka neljäs asukas on kansallisuudeltaan unkarilainen.',
+      pitka: `Nitran yllä kohoavan Zobor-vuoren rinteillä toimi keskiajalla benediktiiniläismunkkien luostari, ja sieltä ovat peräisin Slovakian alueen kaksi vanhinta säilynyttä asiakirjaa, vuosilta 1111 ja 1113 – niissä mainitaan yli 150 joen, kylän ja alueen nimeä, monet ensimmäistä kertaa historiassa. Kaupungin juuret ulottuvat vielä kauemmas: Nitra oli 800-luvulla Suur-Määrin valtakunnan keskuksia, ja Zoborin linnavuori oli asutettu jo rautakaudella. Ympäröivä tasanko on Slovakian lämpimintä ja viljavinta seutua, ja sen pelloilta korjataan vehnää siinä missä isoisän aikaankin, joskin sadon kuljettaa nykyään rekka. Alueen eteläosassa maan alta pulppuaa lämmintä kivennäisvettä, ja Podhájskan kylpylässä ihmiset kelluvat 38-asteisessa vedessä, joka koostumukseltaan muistuttaa Kuollutta merta.`,
     },
     'Prešov': {
       lyhyt: 'Korkeiden Tatrain Gerlachovský štít kohoaa 2 654 metriin – se on koko Karpaattien korkein huippu, ja sen laki katoaa usein pilviin.',
+      pitka: `Korkeiden Tatrojen liepeiltä maisema laskeutuu itään kohti Šarišin seutua, missä kyliin kätkeytyy kymmeniä satojen vuosien takaisia puukirkkoja – kahdeksan niistä on Unescon maailmanperintöä, ja vanhin, Hervartovin Pyhän Fransiskus Assisilaisen kirkko, on peräisin jo 1400-luvulta. Kirkot rakensivat pääosin karpaattien rusiinit, kreikkalaiskatolinen paimen- ja metsästäjäväestö, jonka kieltä ja perinteitä kuulee alueella yhä. Pohjoisempana keskiaikainen Bardejovin kaupunki on säilyttänyt renessanssitorinsa ja muurinsa niin ehjinä, että koko vanhakaupunki on omalla Unesco-listallaan. Vuoristo on tehnyt Prešovin maakunnasta Slovakian suurimman pinta-alaltaan, vaikka isoisän aikaan monet näistä kylistä olivat vielä vaikeakulkuisia ja köyhiä vuoristoseutuja.`,
     },
     Trenciansky: {
       lyhyt: 'Trenčínin linnan alla kalliossa on roomalaisten sotilaiden vuonna 179 kaivertama kirjoitus, joka kutsuu paikkaa nimellä Laugaricio.',
+      pitka: `Alueen halki virtaa Slovakian pisin joki Váh, ja sen varrelle on noussut lämpökylpylöitä kuten Trenčianske Teplice ja Nimnica; monet lähteet kuohuivat parantavaa vettä jo isoisän aikaan 1870-luvulla, jolloin kylpymatkailu oli muodissa koko Itävalta-Unkarissa. Pohjoisempana Bojnicen linna kohoaa kuin suoraan sadusta pyöreine torneineen ja koristeellisine kaarikäytävineen – se on Slovakian rakastetuin linna, ja joka kevät sen pihalla juhlitaan kansainvälistä haamujen ja henkien festivaalia. Linnan naapurissa toimii maan vanhin ja suurin eläintarha, joka on viihdyttänyt perheitä 1950-luvulta lähtien. Trenčínin oma linna kohoaa yhä kaupungin yllä kalliolla, jonka juurella roomalaissotilaiden kaiverrus muistuttaa vielä paljon vanhemmasta ajasta, jolloin tämä oli valtakunnan pohjoisin etuvartio.`,
     },
     'Trnavský': {
       lyhyt: 'Trnavaa kutsutaan Pikku-Roomaksi, koska vanhankaupungin muurien sisälle on mahtunut niin monta kirkkoa.',
+      pitka: `Trnavaan perustettiin vuonna 1635 yliopisto, yksi tuon ajan Ylä-Unkarin merkittävimmistä oppilaitoksista, ja se toimi kaupungissa lähes 150 vuotta ennen kuin se siirrettiin Budaan ja lopulta Pestiin – isoisän vieraillessa seudulla 1870-luvulla yliopisto oli jo historiaa, mutta sen tiedekunnat olivat tehneet Trnavasta aikansa oppineisuuden keskuksen. Alue on Slovakian tasaisinta ja viljellyintä maata, Tonavan ja Záhorien tasankojen välissä, ja sen pelloilla ja Pikku-Karpaattien rinteillä kasvaa sekä vehnää että viiniä. Läntisessä Šaštín-Strážen kaupungissa seisoo maan tärkein pyhiinvaelluskohde, barokkinen basilika, jonne on kuljettu Slovakian suojeluspyhimyksen, Seitsemän kivun Neitsyt Marian, juhlaa viettämään jo yli 450 vuoden ajan. Basilikan pihalle kokoontuu syksyisin yhä kymmeniätuhansia pyhiinvaeltajia, aivan kuten isoisänkin aikana.`,
     },
     'Žilinský': {
       lyhyt: 'Oravan linna kohoaa korkealla kalliolla joen yllä, ja moni vuoden 1922 kauhuklassikon Nosferatun kohtaus kuvattiin sen muureilla.',
+      pitka: `Alue on Slovakian vuoristoisin maakunta, ja sen ympärillä kohoavat niin Länsi- ja Matala-Tatra kuin Malá Fatra ja Kysucen Beskydit – laaksoissa asuu yhä sitkeitä paimen- ja metsästäjäyhteisöjä, joiden perinteet elävät festivaaleissa ja käsityössä. Kysucen kapearaiteinen metsärautatie kiemurtelee yhä samoja jokivarsia, joita pitkin puuta kuljetettiin sahoille jo vuosikymmenten ajan. Yksi seudun kummallisimmista näyistä löytyy Čičmanyn kylästä, jonka tummat hirsitalot on koristeltu valkoisilla, kalkilla maalatuilla geometrisilla kuvioilla ylhäältä alas asti – tapa syntyi, kun kosteudelta suojaava kalkki muuttui vuosikymmenten myötä koristetaiteeksi, ja kylästä tuli vuonna 1977 maailman ensimmäinen suojeltu kansanrakennusreservaatti. Oravan linnan tapaan Čičmany muistuttaa siitä, että Žilinän maakunnan aarteet eivät ole vain vuorissa, vaan myös tavassa, jolla ihmiset ovat tehneet arjestaan kaunista.`,
     },
   },
   /*
@@ -2665,21 +2972,38 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Zemgale — Rundāle Palace (Rastrelli, Kuurinmaan herttua Biron,
    *             Semigallia; entisöinti 1972–2015)
    */
+  /*
+   * LVA PITKA (Sisältökirjuri 26.9.2026). Lähteet (en-Wikipedia,
+   * tarkistettu 26.9.2026):
+   *   Kurzeme — Venta Rapid (249 m); Old town of Kuldīga (Unesco 2023);
+   *     Kurzeme Planning Region
+   *   Latgale — Latgale; Basilica of the Assumption, Aglona; Latgalian
+   *     pottery; Latgalian language
+   *   Riga — Art Nouveau architecture in Riga; Albert Street, Riga;
+   *     Mikhail Eisenstein
+   *   Vidzeme — Gaiziņkalns (312 m); Suur Munamägi; Vidzeme Region
+   *   Zemgale — Rundāle Palace (Rastrelli); Jelgava
+   */
   LVA: {
     Kurzeme: {
       lyhyt: 'Kuldīgan Ventas rumba on Euroopan levein vesiputous: vain parin metrin korkuinen mutta 249 metriä leveä, keväällä vielä leveämpi.',
+      pitka: `Kurzemen maisemaa hallitsevat honka- ja kuusimetsät sekä tasainen viljelysseutu, jossa peltoja mittaa nykyäänkin ruis, peruna ja pellava aivan kuin isoisän matka-aikaan. Kuldīgan kohdalla Venta-joki levittäytyy koko uomansa leveydeltä matalaksi koskeksi – putous on tuskin ihmisen mittainen mutta ulottuu lähes kolmensadan metrin levyydeltä rannasta rantaan, ja tulva-aikaan reunat katoavat veden alle kokonaan. Jo 1600-luvulla Kuurinmaan herttua Jaakob keksi pyydystää koskessa ylävirtaan hyppäävät kalat suoraan ilmasta koreilla, ja tapa antoi Kuldīgalle lempinimen kaupunkina, jossa kalat napataan lennosta – ilmiötä käydään ihmettelemässä yhä joka kevät ja syksy. Kuldīgan puutalokeskusta, joka säilytti keskiaikaisen katuverkkonsa lähes koskemattomana, pääsi Unescon maailmanperintöluetteloon vasta 2023, ja sen rauhallisilla kujilla kulkee yhä entisen Kuurinmaan herttuakunnan hallintokaupungin tuntu. Liepāja, alueen suurin kaupunki, katsoo edelleen mereen päin, kalastuksen ja telakoiden perinteitä vaalien.`,
     },
     Latgale: {
       lyhyt: 'Katolisen Latgalen Aglonan basilikaan saapuu joka 15. elokuuta tuhansia pyhiinvaeltajia, ja kaksi paavia on vieraillut siellä.',
+      pitka: `Latgale eroaa muusta Latviasta selvästi: seutu on täynnä pieniä järviä ja mäntymetsiä, ja sen halki mutkittelee Daugava-joki idästä länteen. Kun suuri osa Latviasta on luterilaista, Latgale on pysynyt katolisena jo vastauskonpuhdistuksen ajoista lähtien, ja tämä näkyy kylien tienvarsiristeissä ja kirkkojen tornien tiheydessä. Joka vuoden 15. elokuuta Aglonan barokkibasilikaan saapuu tuhansia pyhiinvaeltajia Neitsyt Marian taivaaseenoton juhlaan, ja paikka on niin merkittävä katolinen pyhättö, että sekä paavi Johannes Paavali II (1993) että paavi Franciscus (2018) ovat vierailleet siellä. Alueella puhutaan yhä latgalin kieltä, jota osa kielitieteilijöistä pitää omana kielenään latvian sijasta, ja sen rinnalla elää vuosisataista savenvalajien perinnettä – latgalilainen keramiikka tunnetaan tummista, ruskeista ja mustista lasitteistaan. Daugavpils, alueen suurin kaupunki ja ainoan yliopiston kotipaikka, on tästä huolimatta monikulttuurinen risteysasema Venäjän ja Valko-Venäjän rajan tuntumassa.`,
     },
     Riga: {
       lyhyt: 'Noin kolmasosa Riian keskustan taloista on jugendia – kaupungissa on kenties maailman tihein jugendrakennusten keskittymä.',
+      pitka: `Riika on Latvian pääkaupunki ja koko Baltian suurin kaupunki, ja sen vanha keskusta levittäytyy Väinäjoen suulle keskiaikaisten kirkontornien ja kivikatujen varaan. Kaupungin ydin on kuitenkin yllättävän nuori tyyliltään: noin kolmasosa keskustan taloista on jugendia, ja Riikaa pidetäänkin yhtenä tiheimmän jugendrakennuskannan kaupunkina koko maailmassa. Komeimmat julkisivut löytyvät Alberta iela -kadulta, jonka viisi taloa suunnitteli arkkitehti Mihail Eisenstein 1900-luvun alussa – hänen poikansa Sergei Eisensteinistä tuli myöhemmin yksi elokuvahistorian tunnetuimmista ohjaajista. Isoisän kulkiessa seudulla 1873 tätä katua ja sen koristeellisia julkisivuja ei vielä ollut: suurin osa jugendtaloista nousi vasta vuosina 1904–1914, kun Riika kasvoi huimaa vauhtia Venäjän keisarikunnan viidenneksi suurimmaksi kaupungiksi. Nykyään koko vanhakaupunki jugendkortteleineen kuuluu Unescon maailmanperintöön, ja Alberta iela on edelleen suosituin kävelyreitti tyylin ihailijoille.`,
     },
     Vidzeme: {
       lyhyt: 'Latvian korkein kohta Gaiziņkalns jää 312 metriin, ja Viron huipun päihittämään rakennettu torni purettiin keskeneräisenä 2012.',
+      pitka: `Vidzeme on Latvian pohjoisosan mäkistä ylänköä, jossa pienet moreenijärvet pilkottavat metsien välistä ja Gauja-joki on kaivertanut laaksoonsa niin jyrkkiä hiekkakivijyrkänteitä, että aluetta kutsutaan Latvian Sveitsiksi. Alue on myös maan etnisesti latvialaisin kolkka – noin 85 prosenttia asukkaista on latvialaisia – ja suurin kaupunki Valmiera tunnetaan vilkkaana opiskelijakaupunkina joen rannalla. Ylängön korkein kohta, 312-metrinen Gaiziņkalns, on koko Latvian korkein piste, mutta jäi silti kolme metriä matalammaksi kuin Viron puolen naapurihuippu Suur Munamägi. Kunnianhimo korjata tämä johti 2000-luvulla 45-metrisen näkötornin rakentamiseen mäen laelle, mutta hanke jäi kesken, torni todettiin vaaralliseksi ja purettiin lopulta 2012. Nykyään Gaiziņkalnsille kiipeää silti retkeilijöitä pelkän maiseman vuoksi, ja Gaujan kansallispuiston jyrkänteet, luolat ja keskiaikaiset linnanraunioit tekevät koko Vidzemestä yhden Latvian suosituimmista retkeilyseuduista.`,
     },
     Zemgale: {
       lyhyt: 'Rundālen barokkipalatsin suunnitteli Bartolomeo Rastrelli Kuurinmaan herttualle, ja sen entisöinti kesti vuodesta 1972 vuoteen 2015.',
+      pitka: `Zemgale on Latvian viljakammio: alue on lähes täysin tasaista, mustan ja hedelmällisen maaperän peittämää lakeutta, jota reunustavat vain joenvarsimetsät ja kylätiet. Keskellä lakeutta kohoaa Rundālen palatsi, jonka Pietarin talvipalatsistakin tunnettu arkkitehti Bartolomeo Rastrelli suunnitteli 1700-luvulla Kuurinmaan herttua Ernst Johann von Bironille – rakennus on niin komea, että sitä kutsutaan usein Latvian Versaillesiksi. Palatsin vaiheet eivät ole olleet pelkkää loistoa: neuvostoaikana herttuan valtaistuinsalissa säilytettiin viljaa ja juhlasalista tehtiin koulun liikuntasali, ja koko rakennuksen kunnostus kesti vuodesta 1972 aina vuoteen 2015 asti. Nykyään palatsin ranskalaispuutarhassa kukkii yksi Pohjois-Euroopan suurimmista ruusutarhoista, yli 2 300 lajiketta, ja Jelgava, alueen suurin kaupunki, oli aikoinaan koko Kuurinmaan ja Semgallian herttuakunnan pääkaupunki – muistuma ajasta, jolloin herttuat hallitsivat tätä lakeutta tästä samasta seudusta käsin.`,
     },
   },
   /*
@@ -2711,36 +3035,60 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Vilniaus     — Užupis (itsenäiseksi tasavallaksi 1.4.1997, lipun
    *                  kämmen vaihtaa väriä vuodenajan mukaan)
    */
+  /*
+   * LTU PITKA (Sisältökirjuri 26.9.2026). Lähteet (en-Wikipedia,
+   * tarkistettu 26.9.2026):
+   *   Alytaus — Dzūkija; Dainava Forest; White Rose Bridge (2016)
+   *   Kauno — Kaunas Castle; Ninth Fort / Ninth Fort massacres (1941)
+   *   Klaipedos — Klaipėda County (Meripihkatie, hallitsijat, liitos 1923)
+   *   Marijampoles — Suvalkija/Sudovia (savimaa, vauraus 1800–1900-l.)
+   *   Panevezio — Juozas Miltinis Drama Theatre
+   *   Šiauliai — Šiauliai (Saulen taistelu 1236, Tyzenhaus, tulipalo 1872)
+   *   Taurages — Panemunė Castle; Convention of Tauroggen (1812)
+   *   Telšiai — Telšiai (Mastis-järvi); Samogitian dialect
+   *   Utenos — Molėtai Astronomical Observatory (1969, 1,65 m kaukoputki)
+   *   Vilniaus — Trakai Island Castle; Trakai Kenesa / Karaite-artikkelit
+   */
   LTU: {
     Alytaus: {
       lyhyt: 'Druskininkain lähellä Grūtasin puistoon on koottu kaadettuja neuvostopatsaita, ja puiston perustaja sai 2001 Ig Nobelin rauhanpalkinnon.',
+      pitka: `Alytusin ympärillä leviää Dzūkijan mäntymetsien meri: lähistöllä kasvaa Dainavan metsä, Liettuan suurin yhtenäinen ikimetsä, ja koko seutu tuoksuu pihkalta ja sienimetsältä. Hiekkainen maaperä on aina ollut karua viljelijälle, joten paikalliset ovat vuosisatoja täydentäneet satoaan metsän antimilla – vanha sanonta väittää, ettei dzūkkitytöllä olisi vaatteita ilman sieniä ja marjoja. Kaupungin halki virtaa Nemunas-joki, jonka yllä kohoaa Valkoisen ruusun silta, Liettuan korkein kävely- ja pyöräilysilta, 38 metriä korkealla ilmassa. Silta avattiin vasta 2016, joten se on aivan uusi lisä maisemaan, joka on muuten pysynyt mäntyjen ja hiekan hallitsemana ties kuinka kauan.`,
     },
     Kauno: {
       lyhyt: 'Kaunas oli sotien välillä Liettuan väliaikainen pääkaupunki, ja sen modernistinen arkkitehtuuri pääsi Unescon listalle 2023.',
+      pitka: `Kaunas kohoaa kahden joen kärjessä, siinä missä Nemunas ja Neris yhtyvät – paikka oli niin strateginen, että tänne nousi jo 1300-luvulla goottilainen Kaunasin linna, yksi Liettuan vanhimmista tiililinnoista ja ainoa, jossa on kaksinkertainen puolustusmuuri. Linnasta on nykyisin pystyssä enää noin kolmasosa, mutta rauniot ja niitä ympäröivä puisto ovat suosittu kohtaamispaikka jokirannassa. Kaupungin toisella laidalla seisoo 1900-luvun alussa valmistunut Yhdeksäs linnake, joka toimi vuodesta 1924 vankilana ja josta tuli natsimiehityksen aikana yksi Euroopan synkimmistä paikoista – siellä surmattiin 45 000–50 000 juutalaista, suurin osa Kaunasin geton asukkaita. Nykyään paikka on museo ja muistomerkki, joka pysäyttää kävijän hiljaisuudellaan, aivan toisenlainen puoli samasta kaupungista, joka 1920-luvulla puki ylleen kevyen modernistisen kasvonsa.`,
     },
     Klaipedos: {
       lyhyt: 'Kapea, 98 kilometrin Kuurinkynnäs erottaa Kuurin lahden Itämerestä, ja sen vaeltavat dyynit hautasivat aikanaan alleen kokonaisia kyliä.',
+      pitka: `Klaipėda syntyi kauppasatamana Meripihkatien varrella jo keskiajalla, ja sen historia on yhtä kerroksellinen kuin sen hallitsijoiden luettelo: kaupunkia ovat vuorotellen hallinneet Saksalainen ritarikunta, Preussi ja Saksan keisarikunta, kunnes se liitettiin Liettuaan vasta vuonna 1923. Satama on jäätön ympäri vuoden, ja se on vuosisatoja ollut koko Liettuan tärkein yhteys merelle – sen kautta on kulkenut kaikki meripihkasta puutavaraan. Kaupungin saksalaisaikainen nimi Memel elää yhä monissa vanhoissa kortteleissa, vaikka valtapiirit ovat vaihtuneet moneen kertaan viimeisen sadan vuoden aikana. Nykyisin Liettuan kolmanneksi suurin kaupunki tuntuu satamakaupungilta joka kolkassa: nosturit, laivat ja suolainen tuuli kuuluvat arkeen aivan yhtä lailla kuin Kuurinkynnäänkin hiekkadyynit.`,
     },
     Marijampoles: {
       lyhyt: 'Marijampolė on kaupan ja kevyen teollisuuden keskus, ja siellä toimii yksi Euroopan suurimmista käytettyjen autojen toreista.',
+      pitka: `Marijampolė sijaitsee Sūduvan eli Suvalkijan sydämessä, ja jos Aukštaitija tunnetaan järvistään ja Žemaitija metsistään, tämä alue tunnetaan pelloistaan: jääkauden jättämä savimaa on yksi Pohjois-Euroopan hedelmällisimmistä, ja seutu on ollut viljan aittaa sukupolvien ajan. Täkäläiset talonpojat vapautuivat maaorjuudesta muuta Liettuaa aiemmin, ja hyvä maaperä sekä ahkeruus tekivät 1800–1900-lukujen vaihteessa sūduvalaisista maan varakkainta maalaisväestöä. Nykyisin sama yritteliäisyys näkyy toisenlaisessa muodossa kaupungin laidalla, missä yksi Euroopan suurimmista käytettyjen autojen kaupoista vetää ostajia ympäri Itä-Eurooppaa. Pellot jatkuvat silmänkantamattomiin joka suuntaan, ja kesäisin maisema muuttuu keltaisen rapsin ja vihreän vehnän täplittämäksi tilkkutäkiksi.`,
     },
     Panevezio: {
       lyhyt: 'Biržain seudulla on noin 9 000 vajoamakuoppaa, jotka syntyvät kun pohjavesi liuottaa kipsiä maan alta – uusia ilmestyy joka vuosi.',
+      pitka: `Panevėžys on tunnettu teatterikaupunkina, ja sen sydämenä sykkii Juozas Miltinis -draamateatteri, jonka maine kantautui aikanaan yli koko Neuvostoliiton. Ohjaaja Miltinis johti teatteria vuodesta 1940 lähtien – välillä ideologisista syistä erotettuna – ja loi siitä niin omaperäisen näyttämötaiteen keskuksen, että katsojat matkustivat sinne kaukaakin pelkän ohjelmiston vuoksi. Kaupunki itse lepää Nevėžis-joen rannalla laakeassa maakunnassa, jonka pellot ja mäntymetsät vaihtelevat rauhallisesti toisikseen. Teatterin rakennus seisoo yhä keskustassa, ja sen katsomo täyttyy edelleen, vaikka Miltinis itse kuoli jo 1994 – teatteri nimettiin hänen mukaansa kunnianosoituksena pian sen jälkeen.`,
     },
     'Šiauliai': {
       lyhyt: 'Šiauliain pohjoispuolella Ristien mäellä seisoo arviolta 100 000 ristiä, joita pyhiinvaeltajat ovat tuoneet sinne 1800-luvulta asti.',
+      pitka: `Šiauliain nimi juontuu muinaisesta aurinkojumalatar Saulėsta, ja kaupungin syntyhetkeksi lasketaan usein vuoden 1236 Saulen taistelu, jossa liettualaiset ja liiviläiset kukistivat Miekkaveljien ritarikunnan. Keskiajan jälkeen kaupunki koki toistuvia sotia ja ruttoepidemioita, kunnes 1700-luvun lopulla kreivi Antoni Tyzenhaus suunnitteli sen uudelleen säännölliseksi, klassistiseksi kaupungiksi – sama ruutukaava näkyy keskustassa yhä. Vuoden 1872 suurpalon jälkeen Šiauliaihin nousi tehtaita, jotka valmistivat kaikkea silkistä suklaaseen, ja vuoteen 1897 mennessä kaupunki oli jo Liettuan toiseksi suurin Kaunasin jälkeen. 'Auringon kaupunki' on nykyään Liettuan neljänneksi suurin, ja sen ruutukaavainen keskusta sekä tiiliset tehdasrakennukset kertovat yhä siitä, miten paljon kaupunki nousi tuhkasta juuri isoisän oman ajan kynnyksellä 1870-luvulla.`,
     },
     Taurages: {
       lyhyt: 'Tauragėssa preussilainen kenraali Yorck julisti 1812 joukkonsa puolueettomiksi, mikä mursi Preussin ja Napoleonin liiton.',
+      pitka: `Tauragės-maakunnan läpi virtaa Nemunas-joki, ja sen oikealla rannalla Jurbarkassa kohoaa Panemunės linna – 1600-luvun alussa rakennettu renessanssilinnoitus, jonka Eperyaszin aatelissuku rakennutti vuosina 1604–1610 kauppareitin suojaksi. Linna vaihtoi omistajaa vuosisatojen varrella ja siirtyi lopulta 1980-luvulla Vilnan taideakatemialle, joka avasi sinne museon ja näyttelytiloja. Samalla seudulla solmittiin vuonna 1812 niin kutsuttu Tauroggenin sopimus, ja se tunnetaan historiankirjoissa käännekohtana, josta alkoi koko Preussin vapaussota Napoleonia vastaan. Nykyisin rauhallinen raja- ja maatalousmaakunta muistuttaa vanhoilla linnoillaan ja hiljaisilla kylillään siitä, että Nemunas on vuosisatojen ajan ollut sekä kauppareitti että valtakuntien raja.`,
     },
     'Telšiai': {
       lyhyt: 'Plateliaijärven lähellä metsässä piilee Neuvostoliiton ensimmäinen maanalainen ydinohjustukikohta – nyt kylmän sodan museo, jonka siiloon pääsee.',
+      pitka: `Telšiai on Žemaitijan eli Samogitian pääkaupunki, ja se lepää kauniisti Mastis-järven rannalla – kaupungin nimikin juontuu vanhasta sanasta telkšoti, joka tarkoittaa veden alle jäämistä tai lammikoitumista. Seudun ihmiset puhuvat žemaičių murretta, joka eroaa yleiskielestä niin paljon, että moni muualta tuleva liettualainen tuskin ymmärtää sitä – murre ja oma identiteetti ovat säilyneet täällä poikkeuksellisen elinvoimaisina. Kaupunki on toiminut katolisen hiippakuntansa keskuksena vuodesta 1926, ja mäellä kohoava tuomiokirkko hallitsee yhä näkymää järven yli. Monelle liettualaiselle Telšiai on Žemaitijan henkinen pääkaupunki siinä missä se on virallinenkin maakuntakeskus.`,
     },
     Utenos: {
       lyhyt: 'Utenan seudulla on yli tuhat järveä, ja Aukštaitijan kansallispuistossa lepää Liettuan syvin järvi Tauragnas, 60,5 metriä syvä.',
+      pitka: `Utenan seutu kuuluu Aukštaitijaan, Liettuan järvirikkaimpaan maisemaan, ja samaa pimeää ja kirkasta taivasta hyödyntää myös Molėtain tähtitieteellinen observatorio, joka on toiminut Vilnan yliopiston tutkimusasemana vuodesta 1969. Sen suurin kaukoputki on halkaisijaltaan 1,65 metriä, ja observatorio ottaa vastaan myös yleisöä tähtitornin kierroksilla. Paikka on valittu juuri tälle Kaldiniai-kukkulalle Molėtain lähelle, koska kaupunkien valosaaste ei täällä häiritse tähtien tarkkailua. Päivällä maisema on täynnä kimaltavia vesiä, mutta pimeän tultua sama taivas avautuu tutkijoille yhtä laajana kuin järvet maassa.`,
     },
     Vilniaus: {
       lyhyt: 'Vilnan Užupis julistautui 1. huhtikuuta 1997 omaksi tasavallakseen, ja sen lipun kämmen vaihtaa väriä vuodenajan mukaan.',
+      pitka: `Noin 28 kilometrin päässä Vilnasta, Galvė-järven saarella, kohoaa Trakain linna – yksi harvoista saarilinnoista koko Euroopassa. Sen rakentaminen alkoi 1300-luvulla suurruhtinas Kęstutiksen aikana, ja hänen poikansa Vytautas Suuri viimeisteli sen punaisesta goottilaisesta tiilestä 1400-luvun alussa; Vytautas myös kuoli tässä samassa linnassa vuonna 1430. Trakaihin toi vuonna 1392 Vytautas myös toisenlaisen aarteen: joukon karaiimeja Krimiltä, ja heidän jälkeläisensä asuvat kaupungissa yhä, puhuvat omaa turkkilaista kieltään ja pitävät Trakaita koko maailman karaiimiyhteisön keskuksena. Vilnan maakunta kätkee siis pääkaupungin lisäksi keskiaikaisen saarilinnan ja yli 600 vuotta säilyneen ainutlaatuisen vähemmistökulttuurin – aivan eri tarinan kuin Užupiksen huhtikuun pila.`,
     },
   },
   /*

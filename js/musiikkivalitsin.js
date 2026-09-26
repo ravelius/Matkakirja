@@ -87,11 +87,26 @@ export const TILARAIDAT = {
  * selailu oman raitansa etusivun rinnalle. EI TARVITSE: pelaaja ei
  * poistu mihinkään pallon ja avaustekstin välillä, ja raidan vaihto
  * kesken saman näkymän kuulostaisi virheeltä. Yksi raita, yksi vaihe.
+ *
+ * ETUSIVULLA SOI ISOISÄN JOHTOAIHE (musiikkisuunnitelma 26.9.2026,
+ * vaihe 1, docs/raportit/musiikki-ja-aanisuunnitelma-20260926.md 1.1:
+ * "täytenä: etusivu, loppu ja pääaarre"). Sama periaate kuin visan
+ * musa-visa-2:lla: vanhaa raitaa ei ylikirjoitettu, `musa-etusivu`
+ * jää ämpäriin, ja PALUU ON TÄMÄN RIVIN VAIHTO takaisin tunnukseen
+ * 'musa-etusivu'. Etusivun raita ei ole ehdokaslistalla
+ * (js/aani-ehdokkaat.js), koska paikkaraitaa ei valita studiosta.
+ *
+ * Johtoaihe ei ole saumaton looppi, mutta pohjavireen soitin kiertää
+ * sen (js/ambience-stream.js `audio.loop`). Mitattu sauma: lopun
+ * hiljainen sointu (≈ 14 dB raidan keskitason alla) häipyy 1,2 s:ssa, ja alussa on 0,7 s
+ * lähes hiljaista ennen ensimmäistä säveltä — kierto kuulostaa siis
+ * fraasin lopulta ja hengähdykseltä, ei leikkaukselta. Oma
+ * looppileikkaus tehdään vasta, jos kuulokoe sitä vaatii.
  */
 export const PAIKKARAIDAT = {
   etusivu: {
-    tunnus: 'musa-etusivu',
-    kuvaus: 'Etusivu ja lähtökaupungin valinta: avara ja odottava, kartan tunnelma.',
+    tunnus: 'musa-johtoaihe',
+    kuvaus: 'Etusivu ja lähtökaupungin valinta: isoisän johtoaihe täytenä, pianolla ja jousilla.',
   },
 };
 
