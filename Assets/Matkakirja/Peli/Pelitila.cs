@@ -117,6 +117,8 @@ namespace Matkakirja.Peli
         public bool PolloLoydetty = true;
         /// <summary>Nähdyt pulmat kaupunki-id:nä (web puzzlesSeen ilman laudan etuliitettä; Peli/Pulmat.cs).</summary>
         public HashSet<string> NahdytPulmat = new HashSet<string>();
+        /// <summary>Löydetyt karttanostot (valo-id; Elävä kartta, KarttaMuste). Valinnainen kenttä "nostotLoydetty", vain natiivi.</summary>
+        public HashSet<string> LoydetytNostot = new HashSet<string>(StringComparer.Ordinal);
         /// <summary>Pelikerran linssit pelaajittain (web game.linssit; Peli/Linssiomistus.cs). Versio 5.</summary>
         public Linssitila Linssit = new Linssitila();
         /// <summary>Luetun tallennuksen versio (0 = ei luettu). Ei tallenneta.</summary>
@@ -205,6 +207,8 @@ namespace Matkakirja.Peli
             Kentta(sb, "polloLoydetty", PolloLoydetty ? "true" : "false");
             // Pulmat: valinnainen kenttä (puuttuu vanhasta tallennuksesta).
             Kentta(sb, "pulmatNahty", "[" + string.Join(",", NahdytPulmat.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti)) + "]");
+            // Elävä kartta (26.9.2026): löydetyt nostot, valinnainen.
+            Kentta(sb, "nostotLoydetty", "[" + string.Join(",", LoydetytNostot.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti)) + "]");
             sb.Append('}');
             return sb.ToString();
         }
@@ -273,6 +277,7 @@ namespace Matkakirja.Peli
             t.PolloLoydetty = !t.PolloAarteena || MiniJson.Totuus(o, "polloLoydetty", true);
             // Pulmat (valinnainen): web puzzlesSeen ?? [].
             foreach (var s in Tekstit(o, "pulmatNahty")) if (s != null) t.NahdytPulmat.Add(s);
+            foreach (var s in Tekstit(o, "nostotLoydetty")) if (s != null) t.LoydetytNostot.Add(s);
             return t;
         }
 

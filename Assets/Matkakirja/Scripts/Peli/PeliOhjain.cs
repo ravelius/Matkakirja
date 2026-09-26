@@ -555,6 +555,7 @@ namespace Matkakirja.Natiivi
             KaynnistaSahke();
             yield return HaeKysymykset();
             yield return HaeLuennat();
+            StartCoroutine(HaeMuste()); // Elävä kartta: karttavalot taustalla (PeliOhjain.Muste.cs)
             EsilataaIntro();
             TilaVaihtui += (_, uusi) => { if (uusi == SilmukanTila.Aloitus) EsilataaIntro(); };
         }
