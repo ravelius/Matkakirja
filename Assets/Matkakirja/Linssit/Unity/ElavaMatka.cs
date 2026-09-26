@@ -28,7 +28,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomennon reitti (voittaa Reitin).</summary>
         static List<string> testiReitti;
 
-        public const float KynanKestoS = 1.1f, ViivaPt = 2.4f;
+        public const float KynanKestoS = 1.1f, ViivaPt = 5.5f;
         /// <summary>Hehku näkyy, kun kamera on vähintään HehkuAlkaaM korkeudella, ja on täysi HehkuTaysiM:ssä.</summary>
         public const double HehkuAlkaaM = 2_500_000, HehkuTaysiM = 6_000_000;
         public const float HehkuPt = 26f;
@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
         void Start()
         {
             var s = Resources.Load<Shader>("Varjostimet/Kynaviiva");
-            if (s != null) { viiva = new Material(s); roskat.Add(viiva); viiva.SetColor("_BaseColor", new Color(0.70f, 0.16f, 0.12f, 0.95f)); viiva.SetFloat("_Paksuus", ViivaPt); }
+            if (s != null) { viiva = new Material(s); roskat.Add(viiva); viiva.SetColor("_BaseColor", new Color(0.45f, 0.07f, 0.06f, 0.5f)); viiva.SetFloat("_Paksuus", ViivaPt); }
             var p = Resources.Load<Shader>("Varjostimet/Pehmeapiste");
             if (p != null) { hehku = new Material(p); roskat.Add(hehku); hehku.SetFloat("_Lahde", (float)BlendMode.One); hehku.SetFloat("_Kohde", (float)BlendMode.One); hehku.SetFloat("_Ydin", 5); hehku.SetFloat("_Halo", 0.5f); }
             viivaMesh = new Mesh { name = "Kuljettu reitti", indexFormat = IndexFormat.UInt32 }; roskat.Add(viivaMesh);
