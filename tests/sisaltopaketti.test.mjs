@@ -1470,3 +1470,18 @@ test('skeema 1.47: maakuntasalaisuudet omana kokoelmana, ei karttavaloissa', asy
   const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
   assert.equal(rajat.find((a) => a.id === 'GRC:Attiki').salaisuus, 'salaisuus:salaisuus-eleusiin-mysteerit');
 });
+
+test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () => {
+  const manifest = JSON.parse(tiedostot.get('manifest.json'));
+  const koko = JSON.parse(tiedostot.get('kokoelmat/kaupunkilehdet.json'));
+  const lista = manifest.kaupunkilehdetKaupungeittain;
+  assert.equal(lista.length, koko.alkiot.length);
+  for (const e of lista.slice(0, 20)) {
+    const k = JSON.parse(tiedostot.get(e.tiedosto));
+    assert.equal(e.tiedosto, `kokoelmat/kaupunkilehdet/${e.id}.json`);
+    assert.equal(k.nimi, 'kaupunkilehdet');
+    assert.equal(k.alkiot.length, 1);
+    assert.deepEqual(k.alkiot[0], koko.alkiot.find((a) => a.id === e.id));
+  }
+});
+

@@ -199,8 +199,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        juuressa lahteet. Elävä kartta, vain natiivi.
  *   1.47 kokoelma maakuntasalaisuudet: maakunnan salaisuus-nosto (lyhyt, teksti, nappi, viite, lat/lon) — Pelikoodari
  *        26.9.2026; oma kokoelma, koska build 16/17 piirtäisi karttavalorivit (Natiiviseppä). Elävä kartta.
+ *   1.48 manifest.kaupunkilehdetKaupungeittain [{ id, tiedosto, sha256, tavuja }]: kokoelmat/kaupunkilehdet/<id>.json
+ *        (sama kokoelmamuoto, yksi alkio) — Pelikoodari, build 19 (16 Mt:n lehtikokoelma kylmänä 1,9 s).
  */
-export const SKEEMAVERSIO_TARKKA = '1.47';
+export const SKEEMAVERSIO_TARKKA = '1.48';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
@@ -320,6 +322,19 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     tiedostot.set(tiedosto, teksti);
     kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti), tavuja: tavuja(teksti) });
   }
+  /*
+   * Skeema 1.48 (Pelikoodari, build 19): kaupunkilehdet myös kaupungeittain (16 Mt kokonaisena, noin 1,9 s kylmänä).
+   * kokoelmat/kaupunkilehdet/<id>.json = sama kokoelmamuoto yhdellä alkiolla, jotta natiivi lataa vain valitun
+   * kaupungin lehden (ESILATAUSPOLITIIKKA kohta 3). Kokonainen kokoelma jää vanhoille buildeille.
+   */
+  const lehdetKaupungeittain = [];
+  for (const a of kokoelmat.kaupunkilehdet?.alkiot ?? []) {
+    const k = kokoelmat.kaupunkilehdet;
+    const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi: 'kaupunkilehdet', ...k, alkiot: [a] }) + '\n';
+    const tiedosto = `kokoelmat/kaupunkilehdet/${a.id}.json`;
+    tiedostot.set(tiedosto, teksti);
+    lehdetKaupungeittain.push({ id: a.id, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) });
+  }
 
   const lisatiedostot = LISATIEDOSTOT.map((polku) => {
     const teksti = readFileSync(join(juuri, polku), 'utf8');
@@ -374,6 +389,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     skeemat: skeemat.map((f) => `skeema/${f}`),
     media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
+    kaupunkilehdetKaupungeittain: lehdetKaupungeittain,
     webNakymat,
     offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
     lisenssit: { tiedosto: 'lisenssit.json', sha256: sha(lisenssiTeksti), tavuja: tavuja(lisenssiTeksti) },
