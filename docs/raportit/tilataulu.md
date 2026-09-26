@@ -2,25 +2,25 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 21:25 EEST
+**Päivitetty:** 2026-09-26 21:37 EEST
 
 ## 1) Sessiot
 
-5 h **33 %** (nollautui 19:00, seur. 20:59), viikko (all models) 42 %, viikko (Fable) 28 %. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. **Natiivi-UI ylitti 70 % — ilmoitettu Fablelle.**
+5 h **37 %** (nollautui 19:00, seur. 20:59), viikko (all models) 43 %, viikko (Fable) 28 %. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Ei uusia 70 %-ylityksiä.
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 34% | running | PR #3308, Natiivi-UI-ilmoitus |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 51% | running | tämä taulu |
-| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 38% | running | — |
-| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 59% | idle | — |
-| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | **70%** | running | **YLITTI 70 % — ilmoitettu Fablelle** |
-| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 48% | idle | — |
-| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 52% | idle | — |
+| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 35% | running | PR #3308 |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 54% | running | tämä taulu |
+| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 39% | idle | — |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 61% | running | — |
+| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | ei luettavissa (idle, ei prosessia) | idle | nollaus odottaa (#174 ensin, Fable) |
+| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 53% | running | — |
+| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 56% | idle | — |
 | Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 38% | idle | — |
-| Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 58% | running | PR #3307 mergetty |
+| Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 59% | idle | PR #3307 mergetty |
 | Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 39% | idle | PR #3304 mergetty |
-| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 20% | idle | PR #3305 mergetty |
+| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 21% | idle | PR #3305 mergetty |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
@@ -53,10 +53,10 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 33 % (nollautui 19:00, seur. nollaus 20:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 42 %.** **Viikko (Fable):** 28 %.
-- **Levy:** 136 Gt vapaana (raja 80/75/70 Gt — kaukana, mutta laskee nopeammin viime kierroksella, 144→136 Gt 12 min:ssa). **Muistipaine: normal (1).** **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 29 kpl.
-- **Simulaattorit boottina:** 2 (linssiseppa-iPhone, iPhone 17 — max 4 päivällä). coreaudiod alle 200 %. **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 0.
-- **Konteksti:** Natiivi-UI 70 % (ylitys, ilmoitettu), Postivahti (self) 51 %, Sisältökirjuri 52 %, Natiiviseppä 59 %, Siirtoseppä 58 %, Linssiseppä 48 %, Julkaisija 38 %, Pelikoodari 39 %, Laitetestaaja 38 %, Fable 34 %, Karttaseppä 20 %.
+- **5 h -kiintiö:** 37 % (nollautui 19:00, seur. nollaus 20:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 43 %.** **Viikko (Fable):** 28 %.
+- **Levy:** 127 Gt vapaana (uusi hälytysraja 100 Gt Fablelta — kaukana vielä, heilahtelee). **Muistipaine: normal (1).** **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 31 kpl.
+- **Simulaattorit boottina:** 0 (max 4 päivällä). coreaudiod 0 %. **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 0.
+- **Konteksti:** Postivahti (self) 54 %, Natiiviseppä 61 %, Siirtoseppä 59 %, Sisältökirjuri 56 %, Linssiseppä 53 %, Julkaisija 39 %, Pelikoodari 39 %, Fable 35 %, Laitetestaaja 38 %, Karttaseppä 21 %, Natiivi-UI ei luettavissa (idle, nollaus odottaa).
 - **Juna:** yhä tauolla (Karttasepän poltto 26.–27.9.) — ei hälytystä, tarkoituksellinen.
 - **Postilaatikko:** ei uutta. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku ~40).
 - **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja tällä kierroksella.
