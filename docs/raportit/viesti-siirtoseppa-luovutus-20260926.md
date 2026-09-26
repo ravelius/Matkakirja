@@ -35,8 +35,10 @@ voimassa.
 - **Palautus:** `gh workflow run vie-sisalto.yml --ref main -f palauta=N` ja peruutus-PR mainiin. Kun peruutus laskee
   skeemaversiota, osoitinvartija ei päästä peruutuksen vientiä läpi, joten sen jälkeen tarvitaan vielä
   `palauta=<peruutuksen versio>`.
-- **Viestiraja:** SendMessage estyy noin 10 viestin jälkeen, kunnes omistaja kirjoittaa. Estoa EI kierretä muilla
-  työkaluilla, vaan tila kirjataan PR-kommenttiin ja kerrotaan omistajalle.
+- **Viestiraja (Fable 26.9., omistaja 24.9. "VIESTIRAJA JA VARAKANAVAT"):** kun SendMessage ilmoittaa rajan (~10/vuoro),
+  käytä varakanavaa mcp__ccd_session_mgmt__send_message (session_id = vastaanottajan local_-id; Fable
+  local_5df52e10-10e4-4b72-9554-0049db300dfe, muut Postivahdin tilataulussa). Omistajaa ei pyydetä kirjoittamaan, eikä tilaa
+  jätetä vain PR-kommenttiin. Jos varakanavakin estyy: docs/raportit/posti-siirtoseppa-<pvm>.md, Postivahti välittää.
 - **Simulaattori:** oma `siirtoseppa-iPhone` F989814A. Pyydä vuoro Julkaisijalta, käynnistä vasta kun booted < 2, ja
   sammuta ajon jälkeen. proto-kaanna.sh:n Build-kansio vaihtuu seuraavasta käännöksestä, joten tarkista heti
   (`strings …/global-metadata.dat | grep <luokka>`) ja asenna itse.
