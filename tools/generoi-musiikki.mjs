@@ -634,8 +634,9 @@ export const RAIDAT = {
     kesto: 70000,
     looppi: true,
     kuvaus: 'Maanosaraita Välimeri ja Balkan (vaihe 2, looppi)',
-    prompt: 'Travelling around the Mediterranean and the Balkans in 1873: a classical guitar and a mandolin (or '
-      + 'bouzouki) play unhurriedly over soft strings, a light tambourine now and then and a clarinet line that '
+    // Lyria hylkäsi 26.9. muotoilun "around the Mediterranean and the Balkans in 1873" (Input blocked: sensitive words).
+    prompt: 'A slow journey along sunny southern European sea coasts and islands in the 1870s: a classical guitar and '
+      + 'a mandolin play unhurriedly over soft strings, a light hand percussion touch now and then and a clarinet line that '
       + 'quietly hints at the grandfather\'s theme (D–G–F–E–D–C–D) once, woven in, never stated loudly. Sunlit '
       + 'stone, sea wind, afternoon. About 72 BPM, even dynamics. It plays UNDER the ambient soundscape of the city '
       + 'and must never pull attention from it. Seamless loop: begin and end on the same quiet sustained chord so the '
