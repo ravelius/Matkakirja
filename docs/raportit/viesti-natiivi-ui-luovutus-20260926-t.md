@@ -20,3 +20,7 @@ Jatkaa luovutusta (s) (lue se ensin: simulaattorit, session id:t, opit). Tämä 
 ## Opit
 - iPhone-simulaattorissa aloitusruudun ohi: tap (201, 630) = "Jatka matkaa" ~25 s launchin jälkeen.
 - `simctl launch --stdout` ei kirjoita scratchpadiin; käytä proto-3d/lokit/<kansio>/konsoli.txt.
+
+## Käännössääntö 26.–27.9. (Fable Natiivisepän kautta, Karttasepän poltto)
+Enintään yksi Xcode/Unity-käännös kerrallaan, vain kun on todennettavaa (ei koekäännöksiä), ja ilmoita Karttasepälle rivillä
+ennen jokaista käännöstä. Junavahti on tauolla (/tmp/matkakirja-juna-tauko), joten Natiiviseppä kääntää junat käsin.
