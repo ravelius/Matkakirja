@@ -6,11 +6,15 @@
 // manifestissa). Jakson tekninen kenttä `maisema` (KertomusJakso.Maisema) valitsee tyypin; null = hiljaisuus (avaus).
 //
 //   SAMA TYYPPI PERÄKKÄIN EI TEE MITÄÄN: kolme savannijaksoa on yksi katkeamaton savanni.
-//   VAIHTO: ristihäivytys RistiS (web RISTI_MS 2500, omistajan mitta 2–3 s).
+//   VAIHTO: ristihäivytys RistiS (web RISTI_MS 2500, omistajan mitta 2–3 s), TASATEHOINEN: taso = sin(k·π/2), jolloin
+//   keskellä kumpikin soi 0,71:llä ja yhteisteho pysyy vakiona. Lineaarinen k antoi keskelle −3 dB:n kuopan, joka kuului
+//   jokaisessa vaihdossa ja silmukan saumassa hetken hiljaisuutena (kenttä-äänitteet ovat keskenään korreloimattomia).
 //   SILMUKAN SAUMA: kenttä-äänitteen alku ja loppu eivät osu yhteen, joten kierroksen lopussa (RistiS ennen) aloitetaan
 //   uusi kierros toisella lähteellä ja vanha häivytetään sen alta (web sama koneisto).
 //   TASO: Voima (web MAISEMAN_VOIMA 0,10) × pelaajan taustataso; kertojan puheen alla väistö (web lisaaVaistaja).
 //   Asetus "Äänimaisema" pois tai sovellus mykistetty → hiljaa. Puuttuva manifesti tai tiedosto on hiljaisuus, ei virhe.
+//   TAUKO (löydös 148): esityksen tauolla maisema hiljenee TaukoTasolle kuten linssin raita (Pysakkiajo.TaukoHimmennys)
+//   TaukoS:ssä ja palaa jatkossa; paikka ei vaikene kokonaan, mutta kertomus odottaa.
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +34,11 @@ namespace Matkakirja.Natiivi
         public const float RistiS = 2.5f;
         /// <summary>Lopetuksen häivytys (s).</summary>
         public const float LoppuS = 1.2f;
+        /// <summary>Taso tauolla (osuus) ja siirtymä (s): sama puolitus kuin linssin raidalla tauolla.</summary>
+        public const float TaukoTaso = (float)Matkakirja.Linssit.Aikajana.Pysakkiajo.TaukoHimmennys, TaukoS = 0.6f;
+        /// <summary>Esitys tauolla (IhmisenMatka2Tehosteet asettaa).</summary>
+        public bool Tauolla;
+        float taukoKerroin = 1f;
 
         static Dictionary<string, string> tiedostot;   // tunnus → tiedosto (manifesti, istunnon välimuisti)
         static bool manifestiHaettu;
@@ -151,17 +160,21 @@ namespace Matkakirja.Natiivi
             // Vain Äänimaisema-kytkin (koko pelin mykistys, web sfx.enabled). EI EsityksenAani.Mykistetty: se on tosi myös,
             // kun pelaaja on ottanut pelkän kertojan pois, eikä kertojan poisto saa vaientaa paikkojen ääniä.
             if (!Asetukset.Paalla(Kytkin.Aanimaisema)) return 0f;
-            float t = MaisemanVoima * Asetukset.Taso(Voima.Tausta);
+            float t = MaisemanVoima * Asetukset.Taso(Voima.Tausta) * taukoKerroin;
             return KertojaSoi != null && KertojaSoi() ? t * Vaisto : t;
         }
 
+        /// <summary>Tasatehoinen käyrä: häivytyksen edistymä 0…1 → äänenvoimakkuuden kerroin (sin(k·π/2)).</summary>
+        public static float Teho(float k) => Mathf.Sin(Mathf.Clamp01(k) * Mathf.PI * 0.5f);
+
         void Update()
         {
+            taukoKerroin = Mathf.MoveTowards(taukoKerroin, Tauolla ? TaukoTaso : 1f, Time.unscaledDeltaTime * (1f - TaukoTaso) / TaukoS);
             float dt = Time.unscaledDeltaTime, taso = Taso();
             if (karki != null)
             {
                 karjenKerroin = Mathf.MoveTowards(karjenKerroin, 1f, dt / RistiS);
-                karki.volume = taso * karjenKerroin;
+                karki.volume = taso * Teho(karjenKerroin);
                 // Silmukan sauma: uusi kierros toisella lähteellä ristihäivytyksen verran ennen loppua.
                 if (karki.clip != null && karki.clip.length > RistiS * 2 && karki.time >= karki.clip.length - RistiS)
                 {
@@ -172,7 +185,7 @@ namespace Matkakirja.Natiivi
             if (hiipuva != null)
             {
                 hiipuvanKerroin = Mathf.MoveTowards(hiipuvanKerroin, 0f, dt / (lopetus ? LoppuS : RistiS));
-                hiipuva.volume = taso * hiipuvanKerroin;
+                hiipuva.volume = taso * Teho(hiipuvanKerroin);
                 if (hiipuvanKerroin <= 0f) { hiipuva.Stop(); hiipuva = null; }
             }
         }

@@ -203,8 +203,17 @@ namespace Matkakirja
             }
         }
 
-        static bool Uusittava(UnityWebRequest r) =>
-            r.responseCode == 429 || r.responseCode >= 500 || r.result == UnityWebRequest.Result.ConnectionError;
+        /// <summary>
+        /// 429, 408, 5xx ja yhteysvirhe uusitaan. Muu 4xx ei koskaan (löydös 149: ämpärin puuttuva kuva vastasi 404
+        /// "Access denied", jonka Unity luokitteli yhteysvirheeksi → neljä turhaa uusintaa ja 15 s varattu paikka).
+        /// </summary>
+        static bool Uusittava(UnityWebRequest r)
+        {
+            long k = r.responseCode;
+            if (k == 429 || k == 408 || k >= 500) return true;
+            if (k >= 400) return false;
+            return r.result == UnityWebRequest.Result.ConnectionError;
+        }
 
         static float? RetryAfter(UnityWebRequest r)
         {

@@ -352,6 +352,7 @@ namespace Matkakirja.Linssit.Aikajana
                 var ajat = AvauksenAjat();
                 if (MustaPaalla && Kulunut >= ajat.Musta) { MustaPaalla = false; nakyma.Musta(false, ajat.Feidi); }
                 if (avausOdottaa && Kulunut >= ajat.ZoomAlku) KaynnistaAvaruusajo(ajat.ZoomLoppu - Kulunut);
+                if (!MustaPaalla) tahtienEsiin = Math.Max(tahtienEsiin, Math.Max(0, Math.Min(1, (Kulunut - ajat.Musta) / Math.Max(1, ajat.Feidi))));
             }
             if (valotOdottaa && AvaruuttaJaljella() <= 0) SytytaValot();
             if (kohdeajonTauko is double t && nyt >= t) { kohdeajonTauko = null; AloitaKohdeajo(); }
@@ -571,13 +572,30 @@ namespace Matkakirja.Linssit.Aikajana
 
         // ── Avaus ─────────────────────────────────────────────────────────
 
+        /// <summary>
+        /// Ihmisen matka II:n avaus (löydös 152, IhmisenMatkaLinssi asettaa): mustan feidi ja syöksy Afrikkaan alkavat samalla
+        /// hetkellä (Esitysmatikka.RauhallinenAvaus). false = webin avaus (I sellaisenaan).
+        /// </summary>
+        public bool RauhallinenAvaus;
+
         public AvauksenVaiheet AvauksenAjat()
         {
             var j = kertomus.Count > 0 ? kertomus[0] : null;
             var l = Leimat(j);
             double kesto = Math.Max(1, Luenta);
-            return Esitysmatikka.Avaus(l?.Lauseet ?? Array.Empty<double>(), SananHetki(j, l, kesto), kesto);
+            var lauseet = l?.Lauseet ?? Array.Empty<double>();
+            var sana = SananHetki(j, l, kesto);
+            return RauhallinenAvaus ? Esitysmatikka.RauhallinenAvaus(lauseet, sana, kesto) : Esitysmatikka.Avaus(lauseet, sana, kesto);
         }
+
+        double tahtienEsiin;
+
+        /// <summary>
+        /// TÄHTIEN FEIDAUS MUSTASTA 0…1 (web tahtienEsiinTulo): avausjaksossa (Kulunut − Musta) / Feidi esityksen kellossa, joten
+        /// tauko pysäyttää sen; luku ei koskaan laske. Avausta ohitettaessa (muisti, hyppy, loppuun) nousu jää siihen, mihin
+        /// se ehti. Vähennetty liike: 1. II:n tähtitaivas nousee tällä samassa feidissä kuin musta laskee (löydös 152).
+        /// </summary>
+        public double TahtienEsiin => y.VahennettyLiike ? 1 : tahtienEsiin;
 
         /// <summary>Sanan "Afrik…" alkuhetki jakson alusta (web sananHetki): aikaleimasta tai tekstin osuudesta.</summary>
         public static double? SananHetki(KertomusJakso j, JaksonLeimat l, double kesto, string haku = AvauksenSana)
