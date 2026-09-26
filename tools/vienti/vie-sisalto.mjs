@@ -229,12 +229,28 @@ const sha = (s) => createHash('sha256').update(s).digest('hex');
 
 /** Nimetyn lisätiedoston muoto (tools/vienti/lahteet.mjs NIMETYT_LISATIEDOSTOT): virhe kaataa viennin. */
 export function tarkistaMuoto(muoto, data, lahde) {
+  if (muoto === 'merikohdat') return tarkistaMerikohdat(data, lahde);
   if (muoto !== 'iso3-lonlat') throw new Error(`${lahde}: tuntematon muoto ${muoto}`);
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${lahde}: odotettiin oliota { ISO3: [lon, lat] }`);
   for (const [iso, p] of Object.entries(data)) {
     const ok = /^[A-Z]{3}$/.test(iso) && Array.isArray(p) && p.length === 2
       && Number.isFinite(p[0]) && Number.isFinite(p[1]) && Math.abs(p[0]) <= 180 && Math.abs(p[1]) <= 90;
     if (!ok) throw new Error(`${lahde}: ${iso}: odotettiin [lon, lat] asteina`);
+  }
+}
+
+/** Merikohdat (tools/tee-merikohdat.mjs): { meret: { id: nimi }, maat: { ISO3: { meret: [id], kohdat: [{ meri, lon, lat, suunta, rannastaKm }] } } }. */
+function tarkistaMerikohdat(data, lahde) {
+  const meret = data?.meret; const maat = data?.maat;
+  if (!meret || typeof meret !== 'object' || !maat || typeof maat !== 'object') throw new Error(`${lahde}: odotettiin { meret, maat }`);
+  for (const [iso, m] of Object.entries(maat)) {
+    if (!/^[A-Z]{3}$/.test(iso) || !Array.isArray(m?.meret) || !Array.isArray(m?.kohdat) || !m.kohdat.length) throw new Error(`${lahde}: ${iso}: odotettiin { meret: [], kohdat: [] }`);
+    for (const k of m.kohdat) {
+      const ok = k && k.meri in meret && m.meret.includes(k.meri) && Number.isFinite(k.lon) && Number.isFinite(k.lat)
+        && Math.abs(k.lon) <= 180 && Math.abs(k.lat) <= 90 && Number.isInteger(k.suunta) && k.suunta >= 0 && k.suunta < 360
+        && Number.isFinite(k.rannastaKm);
+      if (!ok) throw new Error(`${lahde}: ${iso}: kohta ${JSON.stringify(k)}: odotettiin { meri, lon, lat, suunta 0–359, rannastaKm }`);
+    }
   }
 }
 
