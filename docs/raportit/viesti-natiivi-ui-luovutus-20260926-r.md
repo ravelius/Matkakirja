@@ -23,6 +23,11 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
   aluejaon keskipisteessä, todennettu). natiivi-ui/kortti-lehdet 0bdb771b (kaupunkikortin kansikuva LehdetSaapuivat-tapahtumasta,
   pelikoodari/lehdet-perassa päällä) odottaa Pelikoodarin mergeä omaan merge-pyyntöönsä. Maakuntanimet "Attika" tulevat
   paketissa #3297:n jälkeen ilman koodimuutosta (MAAKUNTIEN_NIMET = MAAKUNNAT_KAIKKI + kuratoidut).
+- Klo 08.2x: elävän kartan kohta 2 (build 20) natiivi-ui/nosto-muste fed603b9 merge-pyynnössä (sis. natiiviseppa/nosto-muste
+  ja linssiseppa/muste-jaljet): kokoluokat, löytämätön musteen jälkenä, pääkohteen hehku, löydön käyrä; todennettu 3ec54edd,
+  lepo 244/244. Myös linssit-heti (junassa) ja kortti-lehdet (Pelikoodarin merge-pyynnössä).
+- Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
+  laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
   natiivi-ui/elava-kartussi worktreessä wt/proto-natiivi-ui-nostot: tutkimuspalkki, maakunnan herääminen kartussissa
   (käsialanimi, pikkukuva-leima, merkit x/y), käsialanimi kartalle, salaisuus:-nostot NostoSisalto.Hae:hen, lippu liehuu vasta
