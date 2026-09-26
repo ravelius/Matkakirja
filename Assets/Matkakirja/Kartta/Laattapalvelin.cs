@@ -705,6 +705,7 @@ namespace Matkakirja
                     var b = paketti.Hae(avain);
                     if (b != null && KuvaEhja(polku, b))
                     {
+                        LaattaOsumat.Levylta(polku, false);
                         Interlocked.Increment(ref Paketista);
                         lahde.Nimi = "paketti";
                         return (200, b);
@@ -716,7 +717,7 @@ namespace Matkakirja
             {
                 if (esi) return (200, null);
                 var sisalto = File.ReadAllBytes(f);
-                if (KuvaEhja(polku, sisalto)) { Interlocked.Increment(ref Offline); lahde.Nimi = "offline"; VerkkoOdotus.Osuma("laatta", true); return (200, sisalto); }
+                if (KuvaEhja(polku, sisalto)) { Interlocked.Increment(ref Offline); lahde.Nimi = "offline"; VerkkoOdotus.Osuma("laatta", true); LaattaOsumat.Levylta(polku, false); return (200, sisalto); }
                 Debug.LogWarning($"MATKAKIRJA laattapalvelin: offline-laatta rikki ({sisalto.Length} t), haetaan verkosta: {polku}");
             }
             f = Tiedosto(valimuisti, polku);
@@ -730,6 +731,7 @@ namespace Matkakirja
                     if (esi) return (200, null);
                     Interlocked.Increment(ref Valimuistista);
                     VerkkoOdotus.Osuma("laatta", true);
+                    LaattaOsumat.Levylta(polku, true);
                     try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
                     lahde.Nimi = "valimuisti";
                     return (200, sisalto);
@@ -741,7 +743,7 @@ namespace Matkakirja
             }
             if (esi && esilataus.Peruttu) return (499, null);
             // Osuma-% (Esilataaja erä 1): näkyvän kartan laatta verkosta = huti (esilataus ei ole pyyntö).
-            if (!esi) VerkkoOdotus.Osuma("laatta", false);
+            if (!esi) { VerkkoOdotus.Osuma("laatta", false); LaattaOsumat.Verkosta(); }
             var h = new Haku
             {
                 Polku = polku, Esi = esilataus, Alku = alku, Maasto = maasto,
@@ -793,6 +795,7 @@ namespace Matkakirja
                     string tmp = f + "." + Guid.NewGuid().ToString("N") + ".tmp";
                     File.WriteAllBytes(tmp, data);
                     if (File.Exists(f)) File.Delete(tmp); else File.Move(tmp, f);
+                    if (esi) LaattaOsumat.Esiladattu(polku);
                 }
                 catch (Exception) { /* välimuisti on valinnainen */ }
             }

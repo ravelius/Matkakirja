@@ -50,6 +50,9 @@ namespace Matkakirja
         static Dictionary<string, string> osittainenHakemisto;
         static string osittainenPolku;
         static bool tilannekuvaTuotu;
+        /// <summary>Buildin tilannekuvan versiopolku (TuoTilannekuva) ja sen hakemisto (laiskasti), VANHA SISÄLTÖ -varareitille.</summary>
+        static string tilannekuvanPolku;
+        static Dictionary<string, string> tilannekuvanHakemisto;
 
         public static string Tila { get; private set; } = "ei aloitettu";
 
@@ -59,6 +62,7 @@ namespace Matkakirja
             instanssi = null; havaittuOsoitin = null; kaytossaVersio = 0; viimeisinTarkistus = -1e9f; kaynnissa = false;
             kaytossaHakemisto = null; kaytossaPolku = null; Tila = "ei aloitettu";
             osittainenHakemisto = null; osittainenPolku = null; tilannekuvaTuotu = false;
+            tilannekuvanPolku = null; tilannekuvanHakemisto = null;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -181,6 +185,7 @@ namespace Matkakirja
             if (!File.Exists(kuvausPolku)) return null;
             var o = PakettiPaatokset.LueOsoitin(File.ReadAllText(Path.Combine(kansio, "osoitin.json")));
             if (o == null) return null;
+            tilannekuvanPolku = o.Polku;
             if (tilannekuvaTuotu) return o.Polku;
             tilannekuvaTuotu = true;
             try
@@ -207,6 +212,39 @@ namespace Matkakirja
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: tilannekuva: " + e.Message); }
             return o.Polku;
         }
+
+        /// <summary>
+        /// VANHA SISÄLTÖ KÄYNNISTYKSEEN (Fable 26.9.2026 klo 12.4x, ESILATAUSPOLITIIKKA kohta 2): kylmä käynnistys saa lukea
+        /// buildin tilannekuvan tiedoston heti, kun käytössä olevan version tiedosto puuttuu (sisältö muuttui), jos
+        /// tilannekuva on enintään <see cref="VanhaEnintaan"/> versiota vanhempi; muuten odotetaan verkkoa. Tuore haetaan
+        /// taustalla (Sisalto.KaynnistyksenEsilataus) ja on käytössä seuraavassa käynnistyksessä. Palauttaa varaston
+        /// tiedoston ja tilannekuvan version, tai null.
+        /// </summary>
+        public static string VanhaTilannekuvasta(string versioPolku, string suhteellinen, out int tilannekuvanVersio)
+        {
+            tilannekuvanVersio = 0;
+            try
+            {
+                if (tilannekuvanPolku == null || versioPolku == null || versioPolku == tilannekuvanPolku) return null;
+                int ero = PakettiPaatokset.VersioPolusta(versioPolku) - PakettiPaatokset.VersioPolusta(tilannekuvanPolku);
+                if (ero < 1 || ero > VanhaEnintaan) return null;
+                if (tilannekuvanHakemisto == null)
+                {
+                    string h = HakemistoJson(tilannekuvanPolku);
+                    if (!File.Exists(h)) return null;
+                    tilannekuvanHakemisto = PakettiPaatokset.LueHakemisto(File.ReadAllText(h)).ToDictionary(r => r.Polku, r => r.Sha256);
+                }
+                if (!tilannekuvanHakemisto.TryGetValue(suhteellinen, out var sha)) return null;
+                string p = Path.Combine(Varasto, sha);
+                if (!File.Exists(p)) return null;
+                tilannekuvanVersio = PakettiPaatokset.VersioPolusta(tilannekuvanPolku);
+                return p;
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: vanha tilannekuvasta: " + e.Message); return null; }
+        }
+
+        /// <summary>Tilannekuva saa olla enintään näin monta versiota uusinta vanhempi (Fable 26.9.2026).</summary>
+        public const int VanhaEnintaan = 2;
 
         static HashSet<int> ValmiitVersiot(string pohja)
         {
