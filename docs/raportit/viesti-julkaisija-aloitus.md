@@ -12,4 +12,4 @@ Viestit Fablelle vain valmis erä, jumi tai kysymys, enintään 8 riviä; jumiss
 
 Ensimmäisenä: (1) tarkista gh:lla #3287, #3267, #3288 (luovutuksen "Kesken") ja jatka Siirtosepän pinoa
 #3267 → #3269 → #3285. (2) Luo tuntihaku :17 (Codex-posti claude/postilaatikko, checkpoint 57649f67d; junan
-tarve). (3) Build 18 heti Laitetestaajan PASS-commitista (proto_ref), laskuri 17 → ordinaali 18.
+tarve). (3) Build 19 heti Laitetestaajan PASS-commitista (proto_ref), laskuri 18 → ordinaali 19.

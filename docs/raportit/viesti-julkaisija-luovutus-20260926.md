@@ -12,20 +12,19 @@ HUOLTOKOMENNOT); docs/roolitus.md "Julkaisusäännöt"; tämä luovutus; edellin
 ## Tila
 
 - **TestFlight:** 1.0.13 (ddb3cfb6), 1.0.14 (7f68d1f7), 1.0.15 (4a813e60), 1.0.16 (7f3979b0),
-  **1.0.17 (d04841a0, CFBundleVersion 202609260103, ajo 36206983409)**. Laskuri = 17.
-  Yömerkki `yo-testflight-viimeisin.txt` = 6a65ead1 (proto-master, sama puu kuin 1.0.17).
-- **Build 18:** juna/b13 kasvaa (99eaf8d9+). Kaava: Laitetestaajan PASS-commit →
-  `gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true -f ordinaali=18 -f proto_ref=<PASS>`.
+  1.0.17 (d04841a0), **1.0.18 (43a6347c, CFBundleVersion 202609260152, ajo 36209851560)**. Laskuri = 18.
+  Yömerkki `yo-testflight-viimeisin.txt` = 43a6347c (proto-master).
+- **Build 19:** Kaava: Laitetestaajan PASS-commit →
+  `gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true -f ordinaali=19 -f proto_ref=<PASS tai master-SHA>`.
   Peru ensin PR-savukkeet (sama ajuri!), ilmoita Natiivisepälle alku ja loppu. Viennin jälkeen päivitä
   yömerkki Natiivisepän master-mergen SHA:ksi (työnkulku kirjoittaa merkkiin proto_refin).
-- Web mainissa v2247 asti (juna #3287 menossa). Raamattu synkattu #3262 asti.
+- Web mainissa v2251 asti (05.00): #3287 v2247, #3288 v2248, #3290 v2249 (KOR, maakunnat 138/138 valmiit), #3291 v2250, #3267 v2251. Raamattu synkattu #3262 asti.
 
 ## Kesken (taustaketjut katoavat sessiosta — tarkista gh:lla)
 
-- **Juna #3287** (v2247: #3284 maakunnat 10 + #3286 salaisuuksien nimiöt): merge käynnissä.
-- **Siirtosepän pino:** #3267 (1.45) → #3269 (1.46) → #3285 (1.47), kaikki versionostolla, järjestyksessä;
-  Siirtoseppä korjaa seuraavan ristiriidan jokaisen mergen jälkeen (ilmoita sille). #3267 oli jonossa.
-- **#3288** (miniatyyrien värit 504 erät 8–9): #3267:n jälkeen.
+- **Siirtosepän pino:** #3267 on mainissa (v2251) → seuraavaksi #3269 (1.46) → #3285 (1.47), versionostolla,
+  järjestyksessä; Siirtoseppä yhdistää mainin ennen kutakin (ilmoita sille jokaisen mergen jälkeen).
+- **#3292** (miniatyyrien värit erä 11): odotin ajaa sen jono.sh:lla (tarkista, onko mainissa).
 - Ei jonossa (kukaan ei pyytänyt): #3250 #3272 #3274 #3275 #3278 #3280 #3281, Karttasepän vanhat
   #3102 #3105 #3108 #3117. #3206 punainen. pidossa.pysyva = 3081.
 
