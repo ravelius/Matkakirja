@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
+using Matkakirja.Linssit.Elava;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -46,7 +47,9 @@ namespace Matkakirja.Natiivi
             /// <summary>Värien haalistus kohti pergamenttia (Malli-varjostimen _Haalistus).</summary>
             public float Haalistus;
             // Ajonaikaiset
-            public readonly List<(Transform juuri, Transform roottori, Transform[] lapset, float vaihe)> Oliot = new();
+            public readonly List<Yksilo> Oliot = new();
+            /// <summary>Vaihtelu ja tauot yksilölle i (omistaja 16.5x: ei monotoniaa), siemenellä toistettava.</summary>
+            public Func<int, Vaihtelu> Vaihtelu;
             public readonly List<Transform> Pohjat = new();
             public int Kolmioita;
             public bool Nakyvissa;
@@ -58,6 +61,8 @@ namespace Matkakirja.Natiivi
         {
             new Aihe
             {
+                // Myllyt: puuskat ±35 %, ja joskus yksi seisoo 25–70 s (20 % jaksoista).
+                Vaihtelu = i => new Vaihtelu(101 + i) { KayMinS = 90, KayMaxS = 240, SeisooMinS = 25, SeisooMaxS = 70, TaukoTod = 0.2, Puuska = 0.35 },
                 Nimi = "myllyt", Paikka = new LatLon(52.4735, 4.8166), KokoPt = 34f,   // Zaanse Schans, Zaandam
                 Yksilot = new[] { (-26f, -4f, 0f), (0f, 3f, 2.4f), (25f, -2f, 5.1f) },
                 Runko = MyllyGeometria.Runko, Roottori = MyllyGeometria.Siivet, PohjaSade = 0.45f,
@@ -70,6 +75,8 @@ namespace Matkakirja.Natiivi
             },
             new Aihe
             {
+                // Karuselli: käy 60–150 s, hidastuu, seisoo 20–60 s ja kiihtyy uudelleen.
+                Vaihtelu = i => new Vaihtelu(211 + i) { KayMinS = 60, KayMaxS = 150, SeisooMinS = 20, SeisooMaxS = 60, TaukoTod = 1, Puuska = 0.05 },
                 Nimi = "karuselli", Paikka = new LatLon(55.6737, 12.5681), KokoPt = 38f,   // Tivoli, Kööpenhamina
                 Yksilot = new[] { (0f, 0f, 0f) },
                 Runko = KaruselliGeometria.Runko, Roottori = KaruselliGeometria.Katos, Lapsi = KaruselliGeometria.Istuin,
@@ -88,8 +95,8 @@ namespace Matkakirja.Natiivi
         Camera kamera;
         readonly List<UnityEngine.Object> roskat = new();
         Func<bool> kaynnissa;
-        float nopeus, aika;
-        bool jokinNakyvissa;
+        float liike;
+        bool jokinNakyvissa, jokinLiikkuu;
 
         public static void Kytke(LinssiOhjain o)
         {
@@ -115,7 +122,7 @@ namespace Matkakirja.Natiivi
             if (instanssi == null) return "ei kytketty";
             var osat = new List<string>();
             foreach (var a in Aiheet) osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota");
-            return $"{(Paalla ? "päällä" : "pois")}; {string.Join("; ", osat)}; liike {instanssi.nopeus:F2}, kerros {ElavaKerros.Nyt}";
+            return $"{(Paalla ? "päällä" : "pois")}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
         }
 
         void Start()
@@ -172,7 +179,7 @@ namespace Matkakirja.Natiivi
                         Kappale(lapset[i], "Lapsi", lapsi, a.Materiaali);
                     }
                     juuri.gameObject.SetActive(false);
-                    a.Oliot.Add((juuri, rt, lapset, vaihe));
+                    a.Oliot.Add(new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, Vaihe = vaihe, Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) });
                     a.Animoi(rt, lapset, vaihe, 0f);
                 }
             }
@@ -193,7 +200,7 @@ namespace Matkakirja.Natiivi
 
         void OnEnable()
         {
-            kaynnissa = () => jokinNakyvissa && (nopeus > 0.001f || Liikkuu());
+            kaynnissa = () => jokinNakyvissa && jokinLiikkuu;
             ElavaKerros.Animoi(kaynnissa, "elävät elementit", 30);
         }
 
@@ -222,9 +229,10 @@ namespace Matkakirja.Natiivi
             Vector3 kohtiKameraa = -gt.InverseTransformDirection(kamera.transform.forward).normalized;
             var asento = Quaternion.AngleAxis(SivuKulma, kameraYlos) * Quaternion.LookRotation(kohtiKameraa, kameraYlos);
 
-            // Liike pehmeästi kohti 1/0 (PehmeysS); aika kulkee nopeuden mukaan (animaatiot ajan funktioita).
-            nopeus = Mathf.MoveTowards(nopeus, Liikkuu() ? 1f : 0f, Time.unscaledDeltaTime / PehmeysS);
-            aika += nopeus * Time.unscaledDeltaTime;
+            // Liike pehmeästi kohti 1/0 (PehmeysS): vähennetty liike, Staattinen ja pois-kytkin.
+            liike = Mathf.MoveTowards(liike, Liikkuu() ? 1f : 0f, Time.unscaledDeltaTime / PehmeysS);
+            double seina = Time.unscaledTimeAsDouble;
+            bool liikkuu = false;
 
             bool jokin = false;
             foreach (var a in Aiheet)
@@ -240,7 +248,7 @@ namespace Matkakirja.Natiivi
                 if (nyt != a.Nakyvissa)
                 {
                     a.Nakyvissa = nyt;
-                    foreach (var o in a.Oliot) o.juuri.gameObject.SetActive(nyt);
+                    foreach (var o in a.Oliot) o.Juuri.gameObject.SetActive(nyt);
                     foreach (var po in a.Pohjat) po.gameObject.SetActive(nyt);
                     PallonLepo.Muuttui("elävät elementit");
                 }
@@ -259,7 +267,8 @@ namespace Matkakirja.Natiivi
                 float kerroin = a.KokoPt * pt;
                 for (int i = 0; i < a.Oliot.Count; i++)
                 {
-                    var (j, rt, lapset, vaihe) = a.Oliot[i];
+                    var yk = a.Oliot[i];
+                    var j = yk.Juuri;
                     var (x, y, _) = a.Yksilot[i];
                     // Nosto kameraa kohti rungon syvyyden verran, ettei pop-up-malli painu maaston sisään (ZTest LEqual).
                     Vector3 maassa = juuri + (oikea * x + eteen * y) * pt;
@@ -271,10 +280,20 @@ namespace Matkakirja.Natiivi
                     pj.localScale = Vector3.one * (a.PohjaSade * kerroin);
                     j.localRotation = asento;
                     j.localScale = Vector3.one * kerroin;
-                    if (nopeus > 0.0001f) a.Animoi(rt, lapset, aika * (1f + 0.07f * i) + vaihe, nopeus);
+                    // Vaihtelu ja tauot: yksilön nopeus aikataulusta × liike; aika kulkee nopeuden mukaan.
+                    float tavoite = liike * (float)(yk.Aikataulu?.Tavoite(seina) ?? 1.0);
+                    yk.Nopeus = Mathf.MoveTowards(yk.Nopeus, tavoite, Time.unscaledDeltaTime / PehmeysS);
+                    yk.Aika += yk.Nopeus * Time.unscaledDeltaTime;
+                    if (yk.Nopeus > 0.0001f || tavoite > 0.0001f) liikkuu = true;
+                    if (yk.Nopeus > 0.0001f || !yk.Asetettu)
+                    {
+                        a.Animoi(yk.Roottori, yk.Lapset, yk.Aika + yk.Vaihe, Mathf.Clamp01(yk.Nopeus));
+                        yk.Asetettu = true;
+                    }
                 }
             }
             jokinNakyvissa = jokin;
+            jokinLiikkuu = liikkuu;
         }
 
         /// <summary>Juuri ruudulla RuutuVara-osuuden reunavaralla (aihe ulottuu juuresta noin koon verran).</summary>
@@ -282,6 +301,16 @@ namespace Matkakirja.Natiivi
         {
             var v = kamera.WorldToViewportPoint(maailma);
             return v.z > 0 && v.x > -RuutuVara && v.x < 1 + RuutuVara && v.y > -RuutuVara && v.y < 1 + RuutuVara;
+        }
+
+        /// <summary>Yksi animoitu yksilö: oliot, aikataulu (Vaihtelu) ja oma nopeus ja aika.</summary>
+        sealed class Yksilo
+        {
+            public Transform Juuri, Roottori;
+            public Transform[] Lapset;
+            public float Vaihe, Nopeus, Aika;
+            public Vaihtelu Aikataulu;
+            public bool Asetettu;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)
