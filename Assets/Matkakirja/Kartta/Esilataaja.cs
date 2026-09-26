@@ -131,7 +131,7 @@ namespace Matkakirja
                         o.Pyynto = r;
                         float alku = Time.realtimeSinceStartup;
                         yield return r.SendWebRequest();
-                        VerkkoOdotus.Haku(lahde, (Time.realtimeSinceStartup - alku) * 1000.0, (long)r.downloadedBytes);
+                        VerkkoOdotus.Haku(lahde, (Time.realtimeSinceStartup - alku) * 1000.0, (long)r.downloadedBytes, r.url);
                         if (r.result == UnityWebRequest.Result.Success || !Uusittava(r) || yritys >= Viiveet.Length)
                         {
                             valmis?.Invoke(r);

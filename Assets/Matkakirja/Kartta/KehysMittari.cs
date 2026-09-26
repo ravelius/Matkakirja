@@ -83,7 +83,8 @@ namespace Matkakirja
                 $"\"kehyksia\":{kehyksia},\"piirretty\":{piirretty}," +
                 $"\"tilat\":{{\"taysi\":{nTaysi},\"lepo\":{nLepo},\"paikallaan\":{nPaikallaan},\"peitto\":{nPeitto}}}," +
                 $"\"fps\":{Application.targetFrameRate},\"thermal\":{Lampo.ThermalState},\"lampo\":\"{Lampo.Taso}\"," +
-                $"\"virransaasto\":{(Lampo.Virransaasto ? "true" : "false")},\"akku\":{(akku >= 0 ? F(akku * 100f) : "-1")}" + "}";
+                $"\"virransaasto\":{(Lampo.Virransaasto ? "true" : "false")},\"akku\":{(akku >= 0 ? F(akku * 100f) : "-1")}," +
+                VerkkoOdotus.Rivi() + "}";
             nTaysi = nLepo = nPaikallaan = nPeitto = piirretty = kehyksia = 0;
             if (polku != null) File.AppendAllText(polku, rivi + "\n");
             Debug.Log("MATKAKIRJA kehysajat " + rivi);
