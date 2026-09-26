@@ -46,6 +46,51 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Tle.JasennaJson("rikki{") == null && Tle.JasennaJson(null) == null, "rikki → null");
         }
 
+        static double Kulma(Matkakirja.Linssit.Aikajana.LatLon a, Matkakirja.Linssit.Aikajana.LatLon b)
+        {
+            double r = Math.PI / 180, c = Math.Sin(a.Lat * r) * Math.Sin(b.Lat * r) + Math.Cos(a.Lat * r) * Math.Cos(b.Lat * r) * Math.Cos((a.Lon - b.Lon) * r);
+            return Math.Acos(Math.Max(-1, Math.Min(1, c))) / r;
+        }
+
+        [Testi] static void IssNytIlmanTletaHavainnollinen()
+        {
+            IssNyt.Nollaa();
+            var t0 = new DateTime(2026, 9, 26, 12, 0, 0, DateTimeKind.Utc);
+            Oleta.Tosi(IssNyt.Laatu(t0) == RadanLaatu.Havainnollinen, "ilman TLE:tä havainnollinen");
+            var p0 = IssNyt.Paikka(t0);
+            Oleta.Tosi(Math.Abs(p0.Lat) <= 51.6 + 1e-9, "leveys ≤ 51,6°: " + p0.Lat);
+            // Oikea vauhti: minuutissa noin 360/92,9 ≈ 3,9° radalla (maan kierto lisää ≤ 0,25°).
+            double d = Kulma(p0, IssNyt.Paikka(t0.AddMinutes(1)));
+            Oleta.Tosi(d > 3.5 && d < 4.3, "minuutissa " + d.ToString("F2") + "°");
+        }
+
+        [Testi] static void IssNytTlellaSgp4JaLaatu()
+        {
+            IssNyt.Nollaa();
+            var tle = Tle.Jasenna(I1, I2);
+            Oleta.Tosi(IssNyt.Aseta(tle), "aseta");
+            Oleta.Tosi(!IssNyt.Aseta(Tle.Jasenna(I1, I2)), "sama epookki ei vaihda");
+            // Epookki 2008 päivä 264,51782528 = 20.9.2008 klo 12.25.40 UTC.
+            var ep = new DateTime(2008, 9, 20, 12, 25, 40, DateTimeKind.Utc);
+            var t = ep.AddHours(1);
+            Oleta.Tosi(IssNyt.Laatu(t) == RadanLaatu.Tarkka, "tunti epookista tarkka");
+            Oleta.Tosi(IssNyt.Laatu(ep.AddDays(10)) == RadanLaatu.Arvio, "10 vrk arvio");
+            Oleta.Tosi(IssNyt.Laatu(ep.AddDays(40)) == RadanLaatu.Havainnollinen, "40 vrk havainnollinen");
+            new Rata(tle).Alapiste(Aika.Jd(t), out double lat, out double lon, out _);
+            var p = IssNyt.Paikka(t);
+            Oleta.Tosi(Math.Abs(p.Lat - lat) < 1e-9 && Math.Abs(p.Lon - lon) < 1e-9, "Paikka = SGP4-alapiste");
+            var kaari = new Matkakirja.Linssit.Aikajana.LatLon[Matkakirja.Linssit.Astronautti.Astronauttimatikka.IssKaarenPisteita + 1];
+            var kello = System.Diagnostics.Stopwatch.StartNew();
+            IssNyt.Kaari(t, kaari);
+            double ms = kello.Elapsed.TotalMilliseconds;
+            Oleta.Tosi(Kulma(kaari[kaari.Length / 2], p) < 1e-6, "kaaren keskellä ISS");
+            double suurin = 0;
+            for (int k = 1; k < kaari.Length; k++) suurin = Math.Max(suurin, Kulma(kaari[k - 1], kaari[k]));
+            Oleta.Tosi(suurin < 2.0, "pisteväli ≤ 2° (" + suurin.ToString("F2") + ")");
+            Console.WriteLine($"      maajälki {kaari.Length} pistettä SGP4:llä {ms:F2} ms (ensimmäinen kutsu, JIT mukana)");
+            IssNyt.Nollaa();
+        }
+
         [Testi] static void ValladoVektoritEpookissaJa360Min()
         {
             var r = new Rata(Tle.Jasenna(V1, V2));

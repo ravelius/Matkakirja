@@ -155,11 +155,22 @@ namespace Matkakirja.Linssit.Astronautti
             double t = (nyt - avattu) / 1000;
             nakyma.Pilvet(Astronauttimatikka.PilvienPeitto(s, 1), t / 60 * Astronauttimatikka.PilvienKiertoAstettaMin);
             nakyma.Sumu(Astronauttimatikka.SumunPeitto(s, 1));
-            Astronauttimatikka.IssKaari(t, kaari);
-            nakyma.Iss(Astronauttimatikka.IssPaikka(t), kaari);
+            // ISS-linssi (omistaja 14.4x): todellinen paikka UTC-kellosta (SGP4, tai havainnollinen rata ilman TLE:tä) ja
+            // maajälki puoli kierrosta taakse ja eteen, laskettuna IssNyt.KaarenValiS:n välein.
+            var utc = Iss.IssNyt.Kello();
+            if (!kaariLaskettu.HasValue || kaarenVersio != Iss.IssNyt.Versio
+                || Math.Abs((utc - kaariLaskettu.Value).TotalSeconds) >= Iss.IssNyt.KaarenValiS)
+            {
+                Iss.IssNyt.Kaari(utc, kaari);
+                kaariLaskettu = utc;
+                kaarenVersio = Iss.IssNyt.Versio;
+            }
+            nakyma.Iss(Iss.IssNyt.Paikka(utc), kaari);
         }
 
         readonly LatLon[] kaari = new LatLon[Astronauttimatikka.IssKaarenPisteita + 1];
+        DateTime? kaariLaskettu;
+        int kaarenVersio = -1;
 
         void PaivitaAvaus(double nyt)
         {
