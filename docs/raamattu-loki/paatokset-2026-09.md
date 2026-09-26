@@ -7691,3 +7691,7 @@ Fable 00.5x (sama sessio local_5df52e10): luettu CLAUDE.md, Raamattu kohta 2, lu
 ## OMISTAJA 00.5x: 33 MAAJUTTUA MAALEHTEEN (14 EPASELVAA JAA); YLHAALTA-175 AJAA ITSE MACILLA; PULUA EI ESIGENEROIDA VIELA (27.9.2026 klo 00.59)
 
 Omistajan kortti 00.5x: 1) raportin #3360 33 maa-luokan juttua siirretaan kaupunkilehdista maalehtiin, 14 epaselvaa jaa kaupunkilehteen (Sisaltokirjuri, yksi PR); 2) ylhaalta-175: omistaja ajaa SSH-komennon itse kun on Macilla, TF 1.0.27 lahtee ilman ylhaalta-perspektiivia; 3) Pulun vastauksia EI esigeneroida viela — suunnitelma #3357 oli vain vaihtoehtojen kartoitus; aani- ja kustannuskysymykset (ja Fablen 5-7-paatokset) jaavat odottamaan, kunnes omistaja paattaa esigeneroinnista erikseen.
+
+## NATIIVIPAKETTI V193 (MAAKUNTA C + ASTRO 2); ASTRO ERA 4 PR 3363; MAINISSA #3357-#3360 (27.9.2026 klo 01.00)
+
+Siirtoseppa 00.5x: natiivipaketti v193 tuotannossa (1.50, 6c890b377, ampari 772/772): BLR 7 + ROU 42 pikkukuvaa (527 aluetta 31 maassa), astronautin kohteet 87 → 109. Sisaltokirjuri: astronautin kamera era 3 PR #3362 (16) ja era 4 PR #3363 (16, 3 paallekkaista poistettu) → linssi 141 kohdetta kun mergetty; molemmat Julkaisijan jonoon, jalkimmainen rebase. Julkaisija 00.52: #3357, #3358 (v2289), #3359 (v2290), #3360 mainissa, testit 4411/0. Postivahti 87 % → nollaus kaynnissa (luovutus -20260927-yo c6e0ae19e); Pelikoodari 84 % → nollaus avauskortti-PR:n ja xAI-kytkennan jalkeen.
