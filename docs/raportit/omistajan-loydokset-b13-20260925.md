@@ -197,3 +197,12 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 165 | Maakuntavalitsin toimii oudosti: valinta ei vastaa odotettua (kuvassa Gelderland korostettu vihreänä, vaikka pelaaja on Amsterdamissa; valinta/veto epäselvä). Natiivi-UI tutkii valitsimen ja kartan korostuksen yhteyden laitteella ja kysyy omistajalta tarkennusta vain jos ei toistu. | Natiivi-UI |
 | 166 | Pelaajan nappula nousee kuin ilmaan, kun kameraa kallistaa: kallistetussa näkymässä nappulan jalka irtoaa kaupungin pisteestä (Pariisi: piste ja nimiö jäävät nappulan alle, väliin rako). Ylhäältä katsottuna nappula on oikein pisteen päällä. Nappulan ankkuri pitää olla maaston pinnassa (jalka pisteessä, kolmiulotteinen sijoitus kuten 3D-nostoilla), ei ruutukoordinaatin siirto. Kuvat loydos166-nappula-ilmassa-kallistus.png ja loydos166-nappula-ylhaalta.png. | Natiiviseppä |
 | 167 | Nostomerkki piirtyy pulun päälle (Laitetestaajan b23-raportti 6b6eec040) — 164:n kalusteväistö laajennetaan nostomerkkeihin (pulu, kartussi, Liiku, yläpalkki). Natiivin parannus, web ei tee. | Natiivi-UI (1.0.24) |
+
+## Build 24/25 (1.0.24–1.0.25) — omistajan löydökset 26.9. klo 19.3x (tekstinä, ei kuvaa)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 168 | Kun kartalta avaa noston, sen maakunta värjäytyy jälkeenpäin. Logiikka: elävän kartan kohta 3 "maakunta herää ensimmäisestä löydöstä" (väri + S7:n pysyvä täyttö). OMISTAJA: OTA VÄRJÄYTYMINEN POIS — noston avaus ei saa värjätä maakuntaa; heräämisen muut osat (käsialanimi, pikkukuva kartussiin, löydösmerkit) jäävät. Raamatun kohta 3 päivitetään. | Natiiviseppä (MaaKartan täyttö pois) + Linssiseppä (kohdan 3 käsikirjoitus) |
+| 169 | Maakuntavalitsimeen (165) pitää lisätä "Kaikki"-nappi (koko maa / ei rajausta). | Natiivi-UI |
+| 170 | Maakuntanostojen kuvat puuttuvat laitteella (158 merkitty valmiiksi v2274 — tarkista, onko natiivin paketti päivittynyt ja kattaako 158 kaikki maakuntanostot). OMISTAJA: tee KAIKKI puuttuvat kuvat — oikeita (PD/CC Commons) tai havainnekuvia. Lisäksi pieni kuva minitekstin kyljessä (nostolistan rivi/minikortti). | Sisältökirjuri (kuvat) + Siirtoseppä (paketti natiiviin, kattavuusvartija) + Natiivi-UI (pikkukuva minitekstin viereen) |
+| 171 | Aloituslennossa (saapuminen käynnistyksessä) kohdemaa näkyi pelkkänä vaaleana laattana — 163:n toistuma saapumislennon aikana: laatat eivät ehdi tai kiirejono/vartija ei kata lentoa. P1. | Natiiviseppä (kiirejono + vartija saapumislennon ajaksi, laitemittaus kylmänä) |
