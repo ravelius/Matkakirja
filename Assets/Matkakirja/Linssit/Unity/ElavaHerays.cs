@@ -94,11 +94,12 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Kartta on pelaajan edessä hiljaa (omistaja 26.9. klo 11.5x: elävä kartta ei luennan, pulun puheen eikä kortin aikana):
-        /// silmukka kartalla, ei puhetta (isoisä tai pulu), ei matkakirjakorttia (Natiivi-UI:n KorttiAukiKysely), ei kuvien
+        /// silmukka kartalla, saapumisluenta ei kesken (Pelikoodarin 162, myös jonossa), ei puhetta (isoisä tai pulu), ei matkakirjakorttia (Natiivi-UI:n KorttiAukiKysely), ei kuvien
         /// sumennusta, porttia eikä linssiä.
         /// </summary>
         internal static bool KarttaHiljaa() =>
             PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.Tila == SilmukanTila.Kartta && PeliOhjain.Instanssi.SoivaLuento == null &&
+            !PeliOhjain.Instanssi.SaapumisluentaKesken &&
             !(Puhe.Instanssi != null && Puhe.Instanssi.Soi) && !(KorttiAukiKysely?.Invoke() ?? false) && !PalloKierto.KuvaSumea &&
             !PalloKierto.PorttiSumea && LinssiOhjain.Rekisteri?.Auki == null;
 
