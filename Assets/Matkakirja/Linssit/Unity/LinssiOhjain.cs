@@ -247,7 +247,6 @@ namespace Matkakirja.Natiivi
             // OpenType-tietueet), joten koko nimien merkistö lisätään ennalta (TryAddCharacters) merkki kerrallaan.
             // Natiiviseppä 26.9. b24-lammin: pisin työ kerran 5,6 ms. Raja on nyt ennakoiva: seuraava merkki (tai pala)
             // aloitetaan vain, jos tähänastinen työ + kallein yksittäinen merkki (pala) mahtuu LammitysMs:iin.
-            var puuttuu = new System.Text.StringBuilder();
             int i = 0;
             while (i < Merkisto.Length)
             {
@@ -255,7 +254,7 @@ namespace Matkakirja.Natiivi
                 do
                 {
                     float m0 = Time.realtimeSinceStartup;
-                    if (!fontti.TryAddCharacters(Merkisto.Substring(i, 1), out string p)) puuttuu.Append(p);
+                    fontti.TryAddCharacters(Merkisto.Substring(i, 1), out _);
                     i++;
                     suurinMerkki = Mathf.Max(suurinMerkki, (Time.realtimeSinceStartup - m0) * 1000f);
                     kulunut = (Time.realtimeSinceStartup - alku) * 1000f;
@@ -295,6 +294,10 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             Destroy(go);
+            // TryAddCharacters palauttaa false myös jo atlaksessa olevalle merkille (simulaattori 26.9.: "puuttuu 66" = kartan
+            // nimien kirjaimet), joten todelliset puuttujat tarkistetaan lopuksi atlaksesta.
+            var puuttuu = new System.Text.StringBuilder();
+            foreach (char c in Merkisto) if (!fontti.HasCharacter(c)) puuttuu.Append(c);
             string puuttuvat = puuttuu.ToString();
             Kirjaa($"fonttilämmitys: {Merkisto.Length} merkkiä verhon jälkeen (odotus {(t1 - odotusAlku) * 1000:F0} ms), " +
                 $"{(Time.realtimeSinceStartup - t1) * 1000:F0} ms {kehyksia} kehyksessä, pisin työ {Mathf.Max(ensimmainen, Mathf.Max(pisinLisays, pisinJasennys)):F1} ms " +
