@@ -238,6 +238,12 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
  * moduuli jää ilman tuojaa.
  */
 const NIPUTTAMATTOMAT = new Set([
+  // Elävä kartta (26.9.2026): natiivin datapaketit, joita mikään selainmoduuli ei
+  // vielä tuo (kokoluokat ja maakuntasalaisuudet luetaan sisältöpaketin viennissä).
+  // Palautetaan MODULES-listalle, kun webin ensimmäinen tuoja ilmestyy.
+  'js/packs/nostojen-kokoluokat.js',
+  'js/packs/maakuntasalaisuudet.js',
+  'js/packs/maakuntasalaisuudet-grc.js',
   // Vanha PNG-B-sovitin säilyy vertailuun; pelissä käytetään pikselikasvoa.
   'js/livia-kasvot.js',
   // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
