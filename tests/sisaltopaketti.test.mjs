@@ -1345,7 +1345,7 @@ test('skeema 1.40: kartan nimiöt mahtuvat 18 merkkiin, monumentit.nimio (Sisäl
 test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympärillä (Natiiviseppä, build 13)', () => {
   const o = JSON.parse(tiedostot.get('offline.json'));
   const R = o.lahteet.rasteri;
-  assert.match(R.url, /\/2026-09-25-pohja-20260925\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
+  assert.match(R.url, /\/2026-09-26-pohja-20260926\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
   assert.equal(R.maxzoom, 9);
   assert.deepEqual(R.kaupunkitaso.tasot, [9]);
   const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((c) => c.tyyppi === 'kaupunki');

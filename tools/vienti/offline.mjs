@@ -46,9 +46,11 @@ export const OFFLINE_LAHTEET = {
    * Z8–Z11 (Karttasepän tools/tee-satelliitti.mjs kaupunginLaatikko:
    * kokoelman kaupungit, tyyppi 'kaupunki', säde 60 km). Maan rasteri[9]
    * on siksi LISTA välejä, yksi kaupunkia kohti.
+   * 26.9.2026: sarja 2026-09-26-pohja-20260926 (omistaja hyväksyi pohja 26:n myös natiiviin; kaikki 41 413
+   * offline-laattaa tarkistettu ämpäristä). Ei skeemamuutosta, vain osoite ja koot.
    */
   rasteri: {
-    url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{y}.jpg',
+    url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-26-pohja-20260926/{z}/{x}/{y}.jpg',
     skeema: 'xyz', projektio: 'EPSG:3857', koko: 256, minzoom: 0, maxzoom: 9, globaaliMax: 5, maaMax: 8,
     kaupunkitaso: { tasot: [9], sadeKm: 60, kaupungit: "kokoelma kaupungit, tyyppi 'kaupunki'" },
   },
