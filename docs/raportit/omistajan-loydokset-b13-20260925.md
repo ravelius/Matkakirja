@@ -161,3 +161,11 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | S7 | Elävän kartan kohta 3: maakunnan herääminen käynnistyy (loki), mutta pysyvä väri ei näy — MaaKartan pysyvä täyttö on oletuksena pois. | Natiiviseppä (Linssiseppä) |
 | S8 | Lepopiirto ei laske verkottomassa testitilassa (ui offline -rivi pitää kerroksen likaisena); vain testitila. | Natiivi-UI |
 | S9 | Salaisuuskortille ei ole testilaukaisijaa (Athos 1/1 → Athos-jättiläinen). | Natiiviseppä + Laitetestaaja |
+
+## Build 19 (1.0.19) — omistajan löydökset 26.9. klo 08.4x (kallistettu näkymä, Kreikka; kuva kaappaukset/omistaja-20260926/loydos153-155-kreikka-horisontti.png)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 153 | Nostot (merkit ja nimiöt) saisivat häipyä näkyvistä horisontin kanssa — nyt kaukaiset nostot piirtyvät täydellä voimalla horisontin yläpuolelle (Thessaloniki, Filippoi, Pelion). Etäisyyshäivytys kameran etäisyyden/horisontin mukaan, kuten pohja häipyy. | Natiiviseppä (Pelikoodari: nostokerroksen häivytysraja) |
+| 154 | Horisontti (taivas) hieman sinisemmäksi — nyt pergamentin kermaa. Kuvapari 2–3 sävyllä (utuinen vaaleansininen → pergamentti alhaalla), omistaja valitsee. | Natiiviseppä |
+| 155 | Nostoissa ei näy vielä symboleita (löydös 125 jatkuu): useimmat nostot ovat pelkkiä ympyröitä (Thessaloniki, Epidauros, Monemvasia, Korintin kanava), vain osa saa symbolin (Delfoi kaari, Náfplio salama, tassu). Vertaa webiin: mikä nostotyyppi/luokka jää ympyräksi ja miksi (data vai piirto). | Pelikoodari (data: mitkä tyypit) + Natiiviseppä (piirto) |
