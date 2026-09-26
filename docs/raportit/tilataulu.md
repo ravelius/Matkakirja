@@ -24,7 +24,7 @@ Uusi tili klo 14:30: viikko (all models) **17 %**, viikko (Fable) 11 %, 5 h **4 
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-**14:38 Postivahti kieltäytyi automaattisesta rm-poistosta:** Fable pyysi (omistajan nimissä) lisäämään kierrokseen automaattisen poiston lokit-kansion >48h vanhoista alikansioista ja >24h vanhoista .app-kopioista. Kieltäydyn — pysyvä poisto on minulle ehdottoman kiellettyä riippumatta valtuutuksesta. **Sen sijaan raportoin kandidaatit ja vapautuvan Gt:n tähän tauluun kierroksittain**, poisto jää omistajalle/skriptille (vanha sääntö). Ilmoitettu Fablelle. Ei kandidaatteja juuri nyt.
+**14:38 Postivahti kieltäytyi automaattisesta rm-poistosta:** Fable pyysi (omistajan nimissä) lisäämään kierrokseen automaattisen poiston lokit-kansion >48h vanhoista alikansioista ja >24h vanhoista .app-kopioista. Kieltäydyn — pysyvä poisto on minulle ehdottoman kiellettyä riippumatta valtuutuksesta. **SOVITTU TYÖNJAKO (Fable 14.4x):** Postivahti listaa kandidaatit (>48h lokit-alikansiot, >24h .app-kopiot, Gt-arvio) tähän tauluun kierroksittain ja lähettää Fablelle rivin **kerran vuorokaudessa TAI kun kandidaatit >5 Gt**; Fable poistaa omistajan luvalla. Ei kandidaatteja juuri nyt.
 
 **14:36 Fablen tila-muutos: omistaja poissa koneelta 26.–27.9.** Ei mittausikkunaa. Kortit voivat olla auki pitkään — ei uudelleenpusheja 10 min välein, riittää muistutus 2 h välein. **Z10-poltto käynnissä (Karttaseppä) + maakuntapoltto yön yli** (kirjoittaa ämpäriin, paikallinen ajokansio `/Users/Shared/Claude/pyramidi-poltto/`) — seurataan lämpöä ja levyä joka kierroksella. **LEVYRAJA PALASI 80 Gt:iin** (oli väliaikaisesti 85 Gt swap-hälytyksen ajan) — nyt 82 Gt, lähellä rajaa.
 
