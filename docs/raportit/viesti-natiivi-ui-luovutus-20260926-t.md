@@ -57,3 +57,7 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
 - Siivous odottaa sallintasääntöä (git worktree remove, simctl erase; Julkaisija commitoi mainiin): kun se on pullattu,
   poista proto-worktree wt/proto-natiivi-ui-kuvapakka (git -C proto-3d/Matkakirja-proto worktree remove, mergetty) ja
   simctl erase FB234D08 (oma iPhone 17). Kolme muuta proto-työkopiota jäävät uudelleenkäyttöön (puhtaita, mergetty).
+- 17.1x löydös 167 (Laitetestaaja b23: nostomerkki pulun päällä): `natiivi-ui/nostot-kalusteet` 42183d7d (juna 1356e216):
+  NostotKartalla.PeitaMallienAlta piilottaa kalusteen alle jäävät merkit (KaupunkiMerkit.Kalusteet → paneelin Rect).
+  Käännetty db209758, kuvapari `proto-3d/lokit/natiivi-ui-loydos167/kuvapari-167.png`. Merge-pyyntö 1.0.24.
+  Rajoite: tarkistus nostokerroksen päivittyessä (kamera), ei pulun omassa liikkeessä.
