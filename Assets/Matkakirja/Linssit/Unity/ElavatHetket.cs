@@ -1,7 +1,7 @@
 // ELÄVÄ KARTTA, kohta 5: ELÄVÄT HETKET (Linssiseppä 26.9.2026; suunnitelma §5, Raamattu ELÄVÄ KARTTA kohta 5).
 // Ajastin (Ydin/Elava/Hetket) valitsee 2–5 minuutin välein 3 s:n hetken kartan näkyvältä alueelta, kun kartta on vapaa
 // (ei korttia, luentaa, linssiä, herätystä eikä saapumista), kamera on ollut paikallaan ≥ LevossaS ja sitä on liikutettu
-// viimeisen PoissaS:n aikana (joku katsoo). Piirto herää vain hetken ajaksi (PallonLepo.Animoi, ei joutosykkeen
+// viimeisen PoissaS:n aikana (joku katsoo). Piirto herää vain hetken ajaksi (ElavaKerros.Animoi: vain hetki 30 fps talletetun kartan päälle, ei joutosykkeen
 // aktiivisuutta). Koot ruutupisteinä ja kaikki kameraan päin kuin vanhan kartan kuvituksessa (laiva aina pystyssä):
 //   laiva  Laiva-varjostin (videon SDF-höyrylaiva), savupallot ja vaalea vana
 //   juna   veturi ja kaksi vaunua tummina läiskinä, savupallot
@@ -169,12 +169,12 @@ namespace Matkakirja.Natiivi
         void OnEnable()
         {
             kaynnissa = () => hetki != null;
-            PallonLepo.Animoi(kaynnissa, "elävä hetki");
+            ElavaKerros.Animoi(kaynnissa, "elävä hetki");
         }
 
         void OnDisable()
         {
-            if (kaynnissa != null) PallonLepo.Poista(kaynnissa);
+            if (kaynnissa != null) ElavaKerros.Poista(kaynnissa);
         }
 
         void OnDestroy()
@@ -210,6 +210,7 @@ namespace Matkakirja.Natiivi
         {
             var go = new GameObject(nimi);
             go.transform.SetParent(transform, false);
+            if (ElavaKerros.Taso >= 0) go.layer = ElavaKerros.Taso;   // elävä kerros (161 B): vain hetki piirtyy 30 fps
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var r = go.AddComponent<MeshRenderer>();
             r.sharedMaterial = m;
@@ -266,7 +267,7 @@ namespace Matkakirja.Natiivi
         }
 
         bool Vapaa(float nyt) =>
-            ElavaHerays.KarttaVapaa() && !ElavaHerays.Kaynnissa && !(ohjain != null && ohjain.VahennettyLiike) &&
+            ElavaHerays.KarttaVapaa() && !ElavaHerays.Kaynnissa && !(ohjain != null && ohjain.VahennettyLiike) && !ElavaKerros.Staattinen &&
             nyt - paikallaanAlkaen >= LevossaS && nyt - liikkuiViimeksi <= PoissaS;
 
         bool Aloita(HetkenLaji? pakota, bool testi, out string syy)
