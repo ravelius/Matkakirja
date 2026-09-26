@@ -26,7 +26,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 Ei avoimia jumeja. Fablen oma nollaus vielä kesken (94 %, odottaa pyyntöä).
 
-**T7-Codex-worktree:** HYVÄKSYTTY (Fable 17:5x), ei poikkeama — Codexin oma työtila. #3335 (Codex/ChatGPT-poikkeus) mergetty mainiin 18:05, mutta EI KORJANNUT T7-riviä: awk '{print $2}' katkaisee polun ensimmäiseen välilyöntiin, joten Codex/ChatGPT-grep ei koskaan osu. Ilmoitettu Julkaisijalle (18:1x), jatko-PR odottaa. Ei uusi työtilapoikkeama — tunnettu skriptibugi, seurataan.
+**T7-Codex-worktree:** RATKAISTU. #3337 (sed-korjaus awk:n välilyöntibugille) mergetty mainiin 18:20 — testasin origin/mainista, tyhjä tulos (kunnossa). `tarkista-tyotilat.sh` toimii nyt oikein T7-polulle.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Omistaja poissa koneelta 26.–27.9. — ei mittausikkunaa, kortit voivat olla auki pitkään, muistutus 2 h välein (ei 10 min).
