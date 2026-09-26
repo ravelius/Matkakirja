@@ -2,25 +2,25 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 09:23 EEST
+**Päivitetty:** 2026-09-26 09:36 EEST
 
 ## 1) Sessiot
 
-**TILINVAIHTO klo 09.0x — kaikki 10 roolisessiota luotu uudelleen (Fable 09.12–09.22).** Uusi tili: viikko (all models) 1 %, viikko (Fable) 2 %, 5 h 4 % klo 09.23 (vauhti lasketaan seuraavalla kierroksella, liian vähän dataa nyt).
+**TILINVAIHTO klo 09.0x — kaikki 10 roolisessiota luotu ja kuitanneet (Fable).** Uusi tili klo 09:36: viikko (all models) **3 %**, viikko (Fable) 2 %, 5 h **8 %**. Vauhti (09.16→09.36, 20 min): viikko ~**9 %/h**, 5 h ~18 %/h — 85 %-raja tällä vauhdilla vasta ~18:45 EEST, ei kiirettä.
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 16% | running | — |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 12% | running | tämä taulu |
-| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 10% | idle | — |
-| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 10% | idle, RC päällä | — |
-| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | ? | running, RC päällä | — |
-| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | ? | idle | — |
-| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | ? | running | — |
-| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | ? | idle | — |
-| Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | ? | idle | — |
-| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | ? | running | PR #3304 |
-| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | ? | running | — |
+| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 24% | running | — |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 13% | running | tämä taulu |
+| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 13% | idle | — |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 24% | idle, RC päällä | build 20 -esikierros aed733c9 |
+| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 17% | running, RC päällä | — |
+| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 15% | idle | — |
+| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 22% | running | — |
+| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 14% | idle | — |
+| Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 14% | idle | — |
+| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 22% | running | PR #3304 |
+| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 16% | running | ei delta-polttoa juuri nyt |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
@@ -56,9 +56,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 4 % (uusi tili, nollautuu 10:59 UTC = 13:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 1 %.** **Viikko (Fable):** 2 %.
-- **Levy:** 120 Gt vapaana (Fablen hälytysraja 80 Gt). **Swap:** 5,7 Gt / 7 Gt (hälytys >16 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 33 kpl.
-- **Simulaattorit boottina:** 1 (iPhone 17, max 4 päivällä). coreaudiod 0 %. **Chrome-GPU-prosesseja:** 0.
-- **Konteksti:** Fable 16 %, Postivahti 12 %, Julkaisija 10 %, Natiiviseppä 10 %, muut ei mitattu tällä kierroksella. Ei ylityksiä.
+- **5 h -kiintiö:** 8 % (uusi tili, nollautuu 10:59 UTC = 13:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 3 %** (vauhti ~9 %/h). **Viikko (Fable):** 2 %.
+- **Levy:** 115 Gt vapaana (Fablen hälytysraja 80 Gt, laskenut 141→115 Gt session aikana — seurataan). **Swap:** 5,7 Gt / 7 Gt (hälytys >16 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 38 kpl.
+- **Simulaattorit boottina:** 3 (iPhone 18 Pro, natiiviseppa-iPhone, iPad Pro M5 — max 4 päivällä). coreaudiod 14 %. **Chrome-GPU-prosesseja (type=gpu-process):** 2 (raja >4 → Julkaisijalle).
+- **Konteksti:** Fable 24 %, Natiiviseppä 24 %, Sisältökirjuri 22 %, Pelikoodari 22 %, Natiivi-UI 17 %, Karttaseppä 16 %, Linssiseppä 15 %, Laitetestaaja 14 %, Siirtoseppä 14 %, Julkaisija 13 %, Postivahti 13 %. Ei ylityksiä.
 - **Juna:** proto-kaanna.sh ei käynnissä juuri nyt; viimeisin KÄÄNNETTY aed733c9 09:13, ei hälytystä.
 - **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
