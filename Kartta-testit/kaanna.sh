@@ -32,9 +32,11 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
 ../Assets/Matkakirja/Kartta/Kermasarja.cs
 ../Assets/Matkakirja/Kartta/Laattapaketti.cs
+../Assets/Matkakirja/Kartta/LaattaPortit.cs
 ../Assets/Matkakirja/Kartta/Lampopaatos.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/LennonKamerareitti.cs
+../Assets/Matkakirja/Kartta/LiikeLaatatPaatos.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
 ../Assets/Matkakirja/Kartta/MaastoLaatat.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
@@ -45,6 +47,8 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Pohjapallolaskenta.cs
 ../Assets/Matkakirja/Kartta/Reikakorjaus.cs
 ../Assets/Matkakirja/Kartta/ReittiMitat.cs
+../Assets/Matkakirja/Kartta/SaapumisKiire.cs
+../Assets/Matkakirja/Kartta/SaapumisLaatat.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs
 ../Assets/Matkakirja/Kartta/Siirtokoreografia.cs
 ../Assets/Matkakirja/Kartta/ValmiusEhto.cs

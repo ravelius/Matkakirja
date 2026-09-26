@@ -254,6 +254,9 @@ namespace Matkakirja
             ["joki"] = "merkki-joki.png", ["meri"] = "merkki-meri.png", ["historia"] = "merkki-historia.png",
             ["kulttuuri"] = "merkki-kulttuuri.png", ["ruoka"] = "merkki-ruoka.png", ["kauppa"] = "merkki-kauppa.png",
             ["tekniikka"] = "merkki-tekniikka.png", ["merenkulku"] = "merkki-merenkulku.png",
+            // Löydös 174b (Fable 26.9.2026, Pelikoodarin merkit, web ja natiivi samat tiedostot): skandaalit (kategoria
+            // huuto), eläimet (laji/kategoria elain, myös syvennys → kategoria) ja hetket.
+            ["huuto"] = "merkki-huuto.png", ["elain"] = "merkki-elain.png", ["hetki"] = "merkki-hetki.png",
         };
 
         /// <summary>

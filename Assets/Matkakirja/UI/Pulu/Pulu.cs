@@ -3,8 +3,8 @@
 // Webin js/livia-eleet.js:n käyttäytyminen: yksi ele kerrallaan
 // (LiviaKuva piirtää, LiviaEleet kertoo kestot), lepo, taustaeleet ~8 s
 // kierrolla (30 s joutilaisuuden jälkeen rauhallinen ele, 3 min jälkeen uni),
-// herääminen toiminnasta, leijunta kartan vedon aikana (0→1 260 ms, 1→0
-// 280 ms), puheen aikana rytmitetty nokka ("talk", 1,5 s jakso; ei huulisynkkaa),
+// herääminen toiminnasta, kartan vedon ja nipistyksen aikainen väistö,
+// puheen aikana rytmitetty nokka ("talk", 1,5 s jakso; ei huulisynkkaa),
 // tilanteiden sovittelu (vähintään 2,8 s eleiden väli, liike-eleitä ei
 // keskeytetä, puhe voittaa taustaeleet) ja ensisaapuminen ("handoff",
 // myöhemmin "clumsyLand").
@@ -59,9 +59,12 @@ namespace Matkakirja.Natiivi
         Action eleValmis;
         float eleAlkoi, eleKesto;
         bool nukkuu, ensisaapunut, nakyvissa = true;
-        float viimeTilanne = -1e6f, viimeToimi, viimeEle, leiju;
-        bool leijuTavoite;
-        Vector2 edellinenOsoitin;
+        float viimeTilanne = -1e6f, viimeToimi, viimeEle;
+        PalloKierto kartta;
+        enum Karttavaihe { Ei, Poistuu, Piilossa, Kurkistaa, Palaa }
+        Karttavaihe karttavaihe;
+        float karttavaiheAlkoi, karttaLiikkui, karttaX, karttaY, karttaLahtoX, karttaLahtoY;
+        int paluuTapa, edellinenPaluuTapa = -1;
         int taustaVuoro;
         string edellinenTausta;
         PuluKuplat.Kupla puheKupla;
@@ -146,13 +149,11 @@ namespace Matkakirja.Natiivi
         void Ruutu()
         {
             SeuraaKertojaa();
+            KytkeKartta();
             if (!nakyvissa) return;
             float nyt = Aika;
             SeuraaToimintaa(nyt);
-
-            // Leijunta: sormi vetää karttaa (ei UI:n päällä), pulu levossa.
-            float dt = Mathf.Min(64f, Time.unscaledDeltaTime * 1000f);
-            leiju = Mathf.Clamp01(leiju + dt * (leijuTavoite ? 1f / 260f : -1f / 280f));
+            PaivitaKarttavaisto(nyt);
 
             if (ele != null)
             {
@@ -165,12 +166,17 @@ namespace Matkakirja.Natiivi
                 tila.Ele = nukkuu ? "sleep" : (lepoEle ?? "blink");
                 tila.P = nukkuu ? 0.5f : lepoEle != null ? lepoP : 0f;
             }
+            if (karttavaihe == Karttavaihe.Kurkistaa)
+            {
+                tila.Ele = "glance";
+                tila.P = .55f;
+            }
             // Nokka liikkuu puheen ajan (ei liike-eleissä).
             bool puhuu = Aanet.PuluPuhuu && (ele == null || LiviaEleet.Ryhma(ele) != "Liike");
             if (puhuu && puheAlkoi < 0) puheAlkoi = nyt;
             if (!puhuu) puheAlkoi = -1;
             tila.Puhe = puhuu ? ((nyt - puheAlkoi) % 1500f) / 1500f : -1f;
-            tila.Leiju = leiju;
+            tila.Leiju = 0;
             tila.Astronautti = Astronautti;
             kuva.Aseta(tila);
 
@@ -186,20 +192,128 @@ namespace Matkakirja.Natiivi
         /// <summary>Astronautin kamera (Linssiseppä asettaa): kypärä päähän.</summary>
         public bool Astronautti { get; set; }
 
+        // Kartta herättää väistön vain pelaajan omasta vedosta tai nipistyksestä,
+        // ei kameran käsikirjoitetusta ajosta eikä kortin päältä alkaneesta kosketuksesta.
+        void KytkeKartta()
+        {
+            if (kartta != null) return;
+            kartta = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            if (kartta != null) kartta.PelaajanEle += KartanEleAlkoi;
+        }
+
+        void KartanEleAlkoi()
+        {
+            float nyt = Aika;
+            if (!Rauhallinen() || chatOdotus || Astronautti) return;
+            karttaLiikkui = nyt;
+            if (karttavaihe == Karttavaihe.Piilossa || karttavaihe == Karttavaihe.Poistuu) return;
+            if (ele != null && omistaja != "idle") return;
+            if (omistaja == "idle") Katkaise();
+            nukkuu = false;
+            viimeToimi = nyt;
+            karttaLahtoX = karttaX;
+            karttaLahtoY = karttaY;
+            karttavaiheAlkoi = nyt;
+            karttavaihe = LinssiUi.VahennettyLiike() ? Karttavaihe.Piilossa : Karttavaihe.Poistuu;
+            kosketus.style.display = DisplayStyle.None;
+            if (karttavaihe == Karttavaihe.Piilossa) nayttamo.style.opacity = 0;
+        }
+
+        static float Pehmenna(float t) { t = Mathf.Clamp01(t); return t * t * (3 - 2 * t); }
+        static float Kiihtyy(float t) { t = Mathf.Clamp01(t); return t * t * t; }
+        static float Hidastuu(float t) { t = 1 - Mathf.Clamp01(t); return 1 - t * t * t; }
+
+        void AsetaKarttapaikka(float x, float y, float kulma = 0)
+        {
+            karttaX = x;
+            karttaY = y;
+            nayttamo.style.translate = new Translate(x, y);
+            nayttamo.style.rotate = new Rotate(new Angle(kulma, AngleUnit.Degree));
+        }
+
+        void LopetaKarttavaisto()
+        {
+            karttavaihe = Karttavaihe.Ei;
+            karttaX = karttaY = 0;
+            nayttamo.style.translate = StyleKeyword.Null;
+            nayttamo.style.rotate = StyleKeyword.Null;
+            nayttamo.style.opacity = 1;
+            kosketus.style.display = DisplayStyle.Flex;
+        }
+
+        void PaivitaKarttavaisto(float nyt)
+        {
+            if (karttavaihe == Karttavaihe.Ei) return;
+            if (kartta != null && kartta.Liikkeessa) karttaLiikkui = nyt;
+            float oikea = Oikea(kerros.Reunat(Kerros).z);
+            float ulkona = oikea + 166f;
+            float kurkistus = oikea + 34f; // vain pään ulkoreuna jää näkyviin
+            if (LinssiUi.VahennettyLiike())
+            {
+                if (karttavaihe != Karttavaihe.Piilossa) karttavaiheAlkoi = nyt;
+                karttavaihe = Karttavaihe.Piilossa;
+                nayttamo.style.opacity = 0;
+                if (nyt - Mathf.Max(karttaLiikkui, karttavaiheAlkoi) >= 3000f) LopetaKarttavaisto();
+                return;
+            }
+            float t;
+            switch (karttavaihe)
+            {
+                case Karttavaihe.Poistuu:
+                    t = Mathf.Clamp01((nyt - karttavaiheAlkoi) / 300f);
+                    AsetaKarttapaikka(Mathf.Lerp(karttaLahtoX, ulkona, Kiihtyy(t)),
+                        Mathf.Lerp(karttaLahtoY, -15f, Kiihtyy(t)), -11f * t);
+                    if (t >= 1f)
+                    {
+                        karttavaihe = Karttavaihe.Piilossa;
+                        karttavaiheAlkoi = nyt;
+                        nayttamo.style.opacity = 0;
+                    }
+                    break;
+                case Karttavaihe.Piilossa:
+                    if (nyt - Mathf.Max(karttaLiikkui, karttavaiheAlkoi) < 3000f) break;
+                    karttavaihe = Karttavaihe.Kurkistaa;
+                    karttavaiheAlkoi = nyt;
+                    nayttamo.style.opacity = 1;
+                    break;
+                case Karttavaihe.Kurkistaa:
+                    t = Mathf.Clamp01((nyt - karttavaiheAlkoi) / 1300f);
+                    AsetaKarttapaikka(Mathf.Lerp(ulkona, kurkistus, Hidastuu(t / .48f)),
+                        -15f + 11f * Hidastuu(t / .48f), -11f * (1 - Hidastuu(t / .48f)));
+                    if (t >= 1f)
+                    {
+                        do { paluuTapa = arpa.Next(5); } while (paluuTapa == edellinenPaluuTapa);
+                        edellinenPaluuTapa = paluuTapa;
+                        karttavaihe = Karttavaihe.Palaa;
+                        karttavaiheAlkoi = nyt;
+                    }
+                    break;
+                case Karttavaihe.Palaa:
+                    t = Mathf.Clamp01((nyt - karttavaiheAlkoi) / (paluuTapa == 2 ? 1700f : 1350f));
+                    float etenema = paluuTapa == 2
+                        ? t < .32f ? .14f * Pehmenna(t / .32f) : .14f + .86f * Pehmenna((t - .32f) / .68f)
+                        : Pehmenna(t);
+                    float x = kurkistus * (1 - etenema), y = 0, kulma = 0;
+                    switch (paluuTapa)
+                    {
+                        case 0: y = -21f * Mathf.Sin(Mathf.PI * t); kulma = -7f * Mathf.Sin(Mathf.PI * t); break;
+                        case 1: y = -16f * Mathf.Abs(Mathf.Sin(2 * Mathf.PI * t)); kulma = 5f * Mathf.Sin(2 * Mathf.PI * t); break;
+                        case 2: y = -8f * Mathf.Sin(Mathf.PI * t); kulma = -4f * Mathf.Sin(Mathf.PI * t); break;
+                        case 3: y = -37f * Mathf.Sin(Mathf.PI * t); kulma = -12f * Mathf.Sin(Mathf.PI * t); break;
+                        case 4: x -= 14f * Mathf.Sin(Mathf.PI * Pehmenna((t - .62f) / .38f));
+                            y = -17f * Mathf.Sin(Mathf.PI * t); kulma = 8f * Mathf.Sin(2 * Mathf.PI * t); break;
+                    }
+                    AsetaKarttapaikka(x, y, kulma);
+                    if (t >= 1f) LopetaKarttavaisto();
+                    break;
+            }
+        }
+
         void SeuraaToimintaa(float nyt)
         {
             var o = Pointer.current;
-            if (o == null) { leijuTavoite = false; return; }
-            var paikka = o.position.ReadValue();
+            if (o == null) return;
             if (o.press.wasPressedThisFrame) Toiminta(nyt);
-            bool vetaa = o.press.isPressed && (paikka - edellinenOsoitin).sqrMagnitude > 4f && !UiKerros.Peittaa(paikka);
-            edellinenOsoitin = paikka;
-            if (vetaa)
-            {
-                viimeToimi = nyt;
-                if (Rauhallinen() && (ele == null || omistaja == "idle")) { if (omistaja == "idle") Katkaise(); leijuTavoite = true; }
-            }
-            else if (!o.press.isPressed) leijuTavoite = false;
         }
 
         void Toiminta(float nyt)
@@ -215,7 +329,7 @@ namespace Matkakirja.Natiivi
         void Kierros()
         {
             float nyt = Aika, tauko = nyt - viimeToimi;
-            if (ele != null || !Rauhallinen() || leiju > 0 || leijuTavoite || nukkuu) return;
+            if (ele != null || !Rauhallinen() || karttavaihe != Karttavaihe.Ei || nukkuu) return;
             if (tauko < JoutoMs || nyt - viimeEle < EleValiMs) return;
             if (tauko >= UniMs) { Toista("sleep", "idle"); nukkuu = true; return; }
             string id;
@@ -237,6 +351,7 @@ namespace Matkakirja.Natiivi
         {
             if (id == "owl") id = "flyAway";
             if (!LiviaEleet.Olemassa(id)) return false;
+            if (karttavaihe != Karttavaihe.Ei) LopetaKarttavaisto();
             ele = id;
             eleValmis = valmis;
             omistaja = omistajaNimi;
@@ -246,7 +361,6 @@ namespace Matkakirja.Natiivi
             viimeEle = eleAlkoi;
             if (id != "sleep") nukkuu = false;
             lepoEle = null;
-            leijuTavoite = false;
             return true;
         }
 
@@ -460,6 +574,10 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(teksti)) return null;
             viimeRepliikki = teksti;
             viimeToimi = Aika;
+            // Karttaväistö: puhuva pulu palaa heti näkyviin, myös "blink"-repliikillä, joka ei kutsu Toistaa (muuten ääni
+            // kuuluisi näkymättömästä pulusta eikä piilotettua repliikkiä voisi napauttaa esiin). Väistö ei ala puheen
+            // aikana: KartanEleAlkoi vaatii Rauhallinen() (ei PuluPuhuu, ei kuplia).
+            if (karttavaihe != Karttavaihe.Ei) LopetaKarttavaisto();
             if (nukkuu) { nukkuu = false; Toista("wake"); }
             // Löydös 21 (omistaja 24.9.2026): tekstit oletuksena piilossa — vain ääni ja ele. Napautus pulua avaa
             // viimeisimmän repliikin. Vain naytaAina-kuplat (pulun ensiesittely, joka opastaa valintaan) näkyvät aina;
@@ -573,7 +691,7 @@ namespace Matkakirja.Natiivi
         {
             nakyvissa = nakyy;
             alue.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            if (!nakyy) { Katkaise(); Kuplat.TyhjennaKaikki(); Aanet.Pysayta(AaniKanava.Puhe); }
+            if (!nakyy) { LopetaKarttavaisto(); Katkaise(); Kuplat.TyhjennaKaikki(); Aanet.Pysayta(AaniKanava.Puhe); }
         }
     }
 }

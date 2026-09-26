@@ -434,6 +434,8 @@ namespace Matkakirja
             if (!AloituslentoPerilla) return;
             AloituslentoPerilla = false;
             Paatalento();
+            // VARTIJA 171: lennon esitys purettu kortin alla, pelin kartta latautuu nyt (Saavu ajaa näkymään: odotus "ajo").
+            Saapumisvartija.Vapauta("lento");
         }
 
         /// <summary>Aloituslennon Lento-ajo käynnissä (musta verho tai lento).</summary>
@@ -468,9 +470,12 @@ namespace Matkakirja
             // Löydös 110: aloituslennolla oma dynaaminen aikajana (kaksi lähikäyntiä, kiinteä kesto).
             var jako = aloitus ? LennonAikajana.JaaAloitus(kesto) : LennonAikajana.Jaa(kesto);
             koneMinimi = 0;
+            kaarenPaino = 0;
             // KORKEUSKERROIN (löydös 29): lennon pohja nousee liioitellun maaston yli (reitin näytteet, LennonPohja).
             double reittiM0 = math.radians(ReittiGeometria.Kulma(lat0, lon0, lat1, lon1)) * 6371000.0;
-            double huippu0 = math.min(900000.0, reittiM0 * 0.12);
+            // Löydös 172: kaaren huippu min(150 km, 5 % reitistä) (ennen min(900 km, 12 %)). Sama huippu lentokaarelle,
+            // LennonPohjalle ja koneelle; kone nousee kaarelle vain kaukaa (kaarenPaino).
+            double huippu0 = LennonAikajana.Huippu(reittiM0);
             lentoPohja = KorkeusKerroin.Sovita(nosto);
             var pohjaKysely = new LennonPohja(this, lat0, lon0, lat1, lon1, reittiM0, huippu0);
             // LÄHTÖSUMU (omistaja 24.9. klo 13.5x, LENNON PINTA): usva nousee koneen alle jo zoomin aikana, ja pallon
@@ -480,7 +485,10 @@ namespace Matkakirja
             // Lento päättyy täsmälleen saapumisnäkymään, johon PeliOhjain.Saavu ajaa perillä (aloituslento: webin
             // kaupunkinäkymä ilman maan laatikkoa; kallistus 0, pohjoinen ylös), joten perillä kamera ei hyppää.
             double saapumisKorkeus = lahtoKorkeus, saapumisLat = lat1, saapumisLon = lon1;
-            Laattapalvelin.Esilataus kohdeLataus = null;
+            Laattapalvelin.Esilataus kohdeLataus = null, saapumisLataus = null;
+            // Löydös 171: lennon lisäaika loppuorbitissa (SaapumisKiire.Aikakerroin) ja vartijan alku liu'ussa.
+            double lisattyS = 0;
+            bool vartijaAlkoi = false;
             if (kierto != null)
             {
                 var sn = kierto.SaapumisNakyma(null, lat1, lon1, maaRajaus: false);
@@ -495,6 +503,18 @@ namespace Matkakirja
                 double pk = pl / aspect;
                 kohdeLataus = KarttaKerrokset.Instanssi?.EsilataaKohde(
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
+                // LÖYDÖS 171: kohdemaan PELIN KARTAN laatat (pohja, maasto, kerma + laatat.json) samasta kaupunkinäkymästä, johon
+                // PeliOhjain.Saavu(maaRajaus: false) ajaa kortin alla, jo lennon alusta saapumisjonossa (näkyvän kartan vapaat
+                // paikat näkyvän jonon jälkeen). Ennen kohteesta esiladattiin vain lennon pinta, ja kortin alla koko näkymä tuli
+                // kylmänä verkosta. Kehittäjälippu Saapumisvartija.Paalla.
+                if (aloitus && Saapumisvartija.Paalla && KarttaKerrokset.Instanssi != null)
+                {
+                    var km0 = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
+                    string kid = km0 != null ? km0.LahinId(lat1, lon1) : null;
+                    string kmaa = kid != null ? km0.KaupunginMaa(kid) : null;
+                    saapumisLataus = KarttaKerrokset.Instanssi.EsilataaSaapumisalue(kid ?? "aloituslento", kmaa, lat1, lon1, Taso.Nakyva,
+                        linssi: false, maaRajaus: false, kiire: true);
+                }
             }
             bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false, pilvetPois = false;
             // LENNON ESITYS PÄÄLLE (EsitysPaalle): kartta, merkit, valo, filmipino ja pilvet. Löydös 120 v2: aloituslennolla
@@ -616,6 +636,8 @@ namespace Matkakirja
                     // lennon ensimmäisessä kehyksessä.
                     koneRuudusta = (float)aloitusReitti.Arvo(0).kone;
                     koneMinimi = LennonAikajana.KoneenMinimi(0, jako, LennonAikajana.AloituksenNousu);
+                    // Löydös 172: paino avauksen kamerasta (450 km), jotta nokan kulma on oikea jo verhon lähtiessä.
+                    PaivitaKaarenPaino(kierto.GetComponent<Camera>(), lat0, lon0, 0, huippu0);
                     Siirra(lat0, lon0, KoneenKorkeus(0, huippu0));
                     PaivitaKone(kierto.GetComponent<Camera>(), lat0, lon0, lat1, lon1, 0, huippu0, savuun: false);
                     EsitysPaalle(math.max(2000.0, (lentoPohja + KoneenKorkeus(0, huippu0)) * 0.6));
@@ -691,9 +713,17 @@ namespace Matkakirja
             AsetaVaihe(LennonVaihe.Nousu);
 
             float alku = Time.unscaledTime;
+            float edellinen = alku;
             while (true)
             {
-                float kulunut = Time.unscaledTime - alku;
+                // Löydös 171: loppuorbitissa lennon aika etenee hitaammin (enintään SaapumisKiire.LisaaEnintaanS), jos kohdemaan
+                // laatat eivät vielä ole levyllä; kamera liikkuu koko ajan (ei pysähdystä).
+                float nytT = Time.unscaledTime;
+                double tEnnen = math.saturate((edellinen - alku - lisattyS) / kesto);
+                double osuusNyt = saapumisLataus == null ? -1.0 : saapumisLataus.Peruttu ? 1.0 : saapumisLataus.Osuus;
+                lisattyS += SaapumisKiire.Lisa(nytT - edellinen, SaapumisKiire.Aikakerroin(tEnnen, jako.Kierto, osuusNyt, lisattyS), lisattyS);
+                edellinen = nytT;
+                float kulunut = (float)(nytT - alku - lisattyS);
                 double t = math.saturate(kulunut / kesto);
                 // Koneen tempo: lähikuvassa lähes paikallaan, kiihdytys, tasainen matka, hidastus kaupunkiin. Aloituslennolla
                 // reitin oma eteneminen (löydös 120 v2: lähtö levosta Lontoosta, laskeutuminen kameran mukana).
@@ -703,6 +733,9 @@ namespace Matkakirja
                 // Kone vähintään 10 km lennon pohjan yllä lähikuvista kiertoon (skaalattu kone ei leikkaa maastoa,
                 // ja sivukyljen kamera on koneen tasolla), laskeutuu orbitin aikana.
                 koneMinimi = LennonAikajana.KoneenMinimi(t, jako, aloitus ? LennonAikajana.AloituksenNousu : 1.0);
+                // Löydös 172: kaaren paino kameran etäisyydestä koneeseen; lähikuvissa kone matkalentokorkeudessa (minimi),
+                // kaukaa kaarella. Kamera seuraa konetta (katse = lentoPohja + h), joten nousu kaarelle ei näy hyppynä.
+                PaivitaKaarenPaino(kamera, q.x, q.y, p, huippu);
                 double h = KoneenKorkeus(p, huippu);
                 Siirra(q.x, q.y, h);
                 double suunta = Suuntima(lat0, lon0, lat1, lon1, p);
@@ -712,7 +745,15 @@ namespace Matkakirja
                 {
                     kohdeKirjattu = true;
                     Debug.Log($"MATKAKIRJA lennon pinta: orbit alkaa t={t * kesto:0.0} s, kohdealue {kohdeLataus.Valmis}+{kohdeLataus.Epaonnistui}"
-                              + $"/{kohdeLataus.Yhteensa} ({kohdeLataus.Osuus:P0})");
+                              + $"/{kohdeLataus.Yhteensa} ({kohdeLataus.Osuus:P0})"
+                              + (saapumisLataus != null ? $", kohdemaa {saapumisLataus.Valmis}+{saapumisLataus.Epaonnistui}/{saapumisLataus.Yhteensa} ({saapumisLataus.Osuus:P0})" : ""));
+                }
+                // VARTIJA 171: laskeutumisesta (liuku) kohdemaan näkymän valmistumiseen saapumistila (korjaus päällä) ja mittaus
+                // (aina). Odotus "lento" vapautuu, kun lennon esitys puretaan kortin alla (PaataAloituslento).
+                if (aloitus && !vartijaAlkoi && t >= jako.Liuku)
+                {
+                    vartijaAlkoi = true;
+                    Saapumisvartija.Aloita("aloituslento " + (kohdeId ?? "?"), "lento", saapumisLataus);
                 }
 
                 var (etaisyys, kallistusNyt, suuntimaNyt, kohde, koneOsuus) = aloitusReitti != null
@@ -814,6 +855,11 @@ namespace Matkakirja
                 if (t >= 1) break;
                 yield return null;
             }
+            if (aloitus)
+                Debug.Log($"MATKAKIRJA VARTIJA 171: aloituslento perillä, lisäaika {lisattyS:0.00} s, kohdemaa "
+                          + (saapumisLataus != null ? $"{saapumisLataus.Valmis}+{saapumisLataus.Epaonnistui}/{saapumisLataus.Yhteensa} ({saapumisLataus.Osuus:P0})"
+                              : Saapumisvartija.Paalla ? "- (ei esilatausta)" : "- (korjaus pois)")
+                          + $", pallo {(KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.ComputeLoadProgress().ToString("0.0") : "-")} %");
             if (reittiNaytteet != null)
                 Debug.Log(LennonKamerareitti.Raportti(LennonKamerareitti.Analysoi(reittiNaytteet),
                     $"{(aloitus ? "aloituslento" : "lento")} {kohdeId ?? "?"} {kesto:0.0} s (oikea kamera)"));
@@ -861,8 +907,39 @@ namespace Matkakirja
         /// <summary>Koneen vähimmäiskorkeus lennon pohjasta tässä kehyksessä (LennonAikajana.KoneenMinimi).</summary>
         double koneMinimi;
 
-        /// <summary>Koneen korkeus lennon pohjasta reitin kohdassa p: kaari huippu · sin πp, vähintään koneMinimi (pehmeä maksimi).</summary>
-        double KoneenKorkeus(double p, double huippu) => LennonAikajana.KoneenKorkeus(p, huippu, koneMinimi);
+        /// <summary>
+        /// Kaaren paino k(d) tässä kehyksessä (löydös 172, LennonAikajana.KaarenPaino): 0 lähikuvissa (d ≤ 150 km), 1 kaukaa
+        /// (d ≥ 2000 km). Päivittää <see cref="PaivitaKaarenPaino"/>.
+        /// </summary>
+        double kaarenPaino;
+
+        /// <summary>
+        /// Koneen korkeus lennon pohjasta reitin kohdassa p: kaari huippu · sin πp · kaarenPaino, vähintään koneMinimi (pehmeä
+        /// maksimi). Löydös 172: lähikuvissa kone on matkalentokorkeudessa, kaukaa kaarella.
+        /// </summary>
+        double KoneenKorkeus(double p, double huippu) => KoneenKorkeus(p, huippu, kaarenPaino);
+
+        double KoneenKorkeus(double p, double huippu, double paino) => LennonAikajana.KoneenKorkeus(p, huippu, koneMinimi, paino);
+
+        /// <summary>
+        /// Löydös 172: kaaren paino tähän kehykseen kameran etäisyydestä koneeseen (LennonAikajana.KaarenPaino). Kamera
+        /// asetetaan vasta koneen korkeuden jälkeen (Kuvaa tarvitsee katseen korkeuden), joten etäisyys mitataan kameran
+        /// edellisestä paikasta koneeseen edellisen kehyksen painolla. Paino muuttuu sekunneissa ja kamera seuraa konetta,
+        /// joten kehyksen viive ei näy, eikä takaisinkytkentä heilu (kaaren nousu siirtää konetta alle kymmenesosan d:stä).
+        /// Etäisyys on suora ECEF-etäisyys metreinä (georeferenssin mittakaavasta riippumaton): kamera pallon toisella
+        /// puolella tai hyvin kaukana antaa d ≥ 2000 km eli paino 1; KaarenPaino rajaa välille [0, 1]. Ilman kameraa tai
+        /// epäkelvolla etäisyydellä (NaN) paino pysyy ennallaan.
+        /// </summary>
+        void PaivitaKaarenPaino(Camera kamera, double lat, double lon, double p, double huippu)
+        {
+            if (kamera == null || georeferenssi == null) return;
+            var gt = georeferenssi.transform;
+            double3 silma = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(kamera.transform.position));
+            double3 paikka = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, Pohja + KoneenKorkeus(p, huippu)));
+            double d = math.distance(silma, paikka);
+            if (double.IsNaN(d)) return;
+            kaarenPaino = LennonAikajana.KaarenPaino(d);
+        }
 
         /// <summary>
         /// Kehittäjäloki (löydös 120, komento "kamerareitti paalle|pois"): lennon oikea kamera 0,1 s:n näytteinä lokiin
@@ -890,7 +967,10 @@ namespace Matkakirja
 
         /// <summary>
         /// Koneen reitti viivaksi: aikajanan näytteet t = 0…1, koneen osuus KoneenOsuus(t) ja korkeus
-        /// lentoPohja + LennonAikajana.KoneenKorkeus(p, huippu, KoneenMinimi(t)), eli täsmälleen koneen kulkema kaari.
+        /// lentoPohja + LennonAikajana.KoneenKorkeus(p, huippu, KoneenMinimi(t)), eli koneen kaari kaukaa katsottuna.
+        /// Löydös 172: kaari piirretään ilman kaaren painoa (käsikirjoitus). Kone on kaarella, kun kamera on ≥ 2000 km:n
+        /// päässä (paino 1); lähempää se lentää kaaren alapuolella (lähikuvissa matkalentokorkeudessa), mutta silloin kaari
+        /// on häivytetty (PaivitaLentokaari, koneRuudusta). Välietäisyyksillä (noin 300–2000 km) kone voi näkyä kaaren alla.
         /// </summary>
         void TeeLentokaari(double lat0, double lon0, double lat1, double lon1, double huippu, LennonAikajana.Jako jako)
         {
@@ -955,6 +1035,7 @@ namespace Matkakirja
             }
             koneRuudusta = 0;
             koneMinimi = 0;
+            kaarenPaino = 0;
             if (aloitusMerkit != null)
             {
                 aloitusMerkit.NaytaVain(null);
@@ -989,7 +1070,11 @@ namespace Matkakirja
             return math.degrees(math.atan2(y, x));
         }
 
-        /// <summary>3D-kone (DC-3) paikalleen, nokka lentosuuntaan ja koko ruudulla vakio; ilman mallia kuvan kierto.</summary>
+        /// <summary>
+        /// 3D-kone (DC-3) paikalleen, nokka lentosuuntaan ja koko ruudulla vakio; ilman mallia kuvan kierto. Löydös 172:
+        /// nokka vaakatasossa (pinnan normaalia vasten, ei kallistusta sivuttain) ja nostettuna kaaren kulman mukaan
+        /// LennonAikajana.NokanKulma(kaaren kulma, kaarenPaino): lähikuvassa vaakasuora, kaukaa enintään ±6°.
+        /// </summary>
         void PaivitaKone(Camera kamera, double lat0, double lon0, double lat1, double lon1, double p, double huippu, bool savuun = true)
         {
             if (kamera == null) return;
@@ -1002,9 +1087,26 @@ namespace Matkakirja
             }
             if (malli == null) { Suunta(kamera, a, b); return; }
             var paikka = olio.transform.position;
-            var ylos = (paikka - georeferenssi.transform.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero))).normalized;
-            var eteen = b - a;
-            if (eteen.sqrMagnitude > 1e-6f) malli.transform.SetPositionAndRotation(paikka, Quaternion.LookRotation(eteen.normalized, ylos));
+            Vector3 keski = georeferenssi.transform.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
+            var ylos = (paikka - keski).normalized;
+            // Lentosuunta vaakatasossa: koneen oman reitin jänne (a → b) pinnan normaalia vasten projisoituna.
+            var vaaka = Vector3.ProjectOnPlane(b - a, ylos);
+            if (vaaka.sqrMagnitude > 1e-6f)
+            {
+                // Kaaren kulma kuten ennen nokka: tangentti kahden korkeuspisteen välillä (p1 → p2), mutta piirretyn kaaren
+                // (paino 1) ja jänteen keskikohdan normaalia vasten, jolloin vaakalento on 0° myös pitkällä reitillä.
+                Vector3 ka = Maailmaan(lat0, lon0, lat1, lon1, p1, huippu, 1), kb = Maailmaan(lat0, lon0, lat1, lon1, p2, huippu, 1);
+                var jana = kb - ka;
+                double kaarenKulma = 0;
+                if (jana.sqrMagnitude > 1e-6f)
+                {
+                    var ylosKeski = (0.5f * (ka + kb) - keski).normalized;
+                    kaarenKulma = Mathf.Asin(Mathf.Clamp(Vector3.Dot(jana.normalized, ylosKeski), -1f, 1f)) * Mathf.Rad2Deg;
+                }
+                float nokka = (float)LennonAikajana.NokanKulma(kaarenKulma, kaarenPaino) * Mathf.Deg2Rad;
+                var eteen = vaaka.normalized * Mathf.Cos(nokka) + ylos * Mathf.Sin(nokka);
+                malli.transform.SetPositionAndRotation(paikka, Quaternion.LookRotation(eteen, ylos));
+            }
             else malli.transform.position = paikka;
             float etaisyys = Vector3.Distance(kamera.transform.position, paikka);
             float kerroin = PalloKierto.Pistekerroin;
@@ -1019,10 +1121,12 @@ namespace Matkakirja
             Filmipino.Instanssi?.Kuvaa(koneRuudusta / (float)LennonAikajana.LahiKone, etaisyys, paikka);
         }
 
-        Vector3 Maailmaan(double lat0, double lon0, double lat1, double lon1, double p, double huippu)
+        /// <summary>Koneen paikka maailmassa reitin kohdassa p; paino = kaaren paino (oletus tämän kehyksen, 1 = piirretty kaari).</summary>
+        Vector3 Maailmaan(double lat0, double lon0, double lat1, double lon1, double p, double huippu, double paino = double.NaN)
         {
             var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
-            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(q.y, q.x, lentoPohja + KoneenKorkeus(p, huippu)));
+            double h = KoneenKorkeus(p, huippu, double.IsNaN(paino) ? kaarenPaino : paino);
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(q.y, q.x, lentoPohja + h));
             return georeferenssi.transform.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef));
         }
 
@@ -1124,6 +1228,7 @@ namespace Matkakirja
             Nosta(0);
             PoistaLentokaari();
             if (aloitusKesken) Valmius.KevennysLoppu("musta");
+            Saapumisvartija.Vapauta("lento");
             if (Vaihe != LennonVaihe.Ei || aloitusKesken) Paatalento();
             else if (kierto != null) kierto.SeurantaLoppui();
             Kone(false);
@@ -1149,7 +1254,9 @@ namespace Matkakirja
         /// vakio koko lennolle, joten kaaren muoto pysyy, ja alankolennot (Lontoo) pysyvät ennallaan 5 km:ssä.
         /// Tulos saapuu asynkronisesti: pohja nousee tavoitteeseen pehmeästi (aikavakio 0,6 s). Jos kysely epäonnistuu,
         /// pohja on Sovita(nosto) (kertoimen 1 turvallisuus skaalattuna). Näytteiden väliin jäävät huiput katetaan
-        /// varalla (1 km).
+        /// varalla (1 km). Löydös 172: pohja olettaa koneen kaarelle (paino 1). Lähempää katsottuna kone lentää kaaren
+        /// alapuolella, mutta aina vähintään koneMinimin (10 km syöksystä kiertoon) pohjan yllä, ja lähikuvat ovat reitin
+        /// päissä, joissa kaari on muutenkin matala.
         /// </summary>
         sealed class LennonPohja
         {

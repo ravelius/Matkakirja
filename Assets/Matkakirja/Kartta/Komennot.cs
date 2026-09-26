@@ -53,6 +53,9 @@ namespace Matkakirja
     ///                             matkakirja-valmius-auto tai Documents/valmius-auto.txt, oletus 12 s; voimaan seuraavista
     ///                             verhoista, myös käynnistyksessä; simulaattorissa xcrun simctl spawn &lt;UDID&gt; defaults write …)
     ///   valmius tila | valmius pois   yksi näyte heti / käynnissä olevat seurannat loppuun (yhteenveto)
+    ///   saapuminen vartija paalle|pois|tila   löydös 171 (Saapumisvartija): korjaus (kohdemaan näkymä kiireellä lennon aikana,
+    ///                             saapumistila, lennon hidastus) A/B-mittaukseen; muistetaan (PlayerPrefs matkakirja-saapumisvartija
+    ///                             tai Documents/saapumisvartija-pois.txt). Mittausrivit "VARTIJA 171" tulevat aina.
     ///   valmius kevennys pois|paalle   verhon kevennys (Laattapalvelin: näkyvä jono 24 rinnakkain, tausta tauolla) pois
     ///                             A/B-mittaukseen; muistetaan (PlayerPrefs matkakirja-valmius-kevennys-pois tai
     ///                             Documents/valmius-kevennys-pois.txt), voimaan seuraavista verhoista
@@ -75,6 +78,11 @@ namespace Matkakirja
     ///                             muistetaan tiedostossa Documents/maasto.txt
     ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
     ///   maasto sse <arvo>         tilesetin maximumScreenSpaceError (oletus 16; luo tilesetin uudelleen; löydös 46)
+    ///   maasto liike 32|16|pois|tila   liikkeen laattavalinnan SSE-vastine (LiikeLaatat, löydös S10; oletus 32): eleissä,
+    ///                             liu'ussa ja kamera-ajoissa (ei saapumisessa, lennossa eikä verhossa) Cesium valitsee
+    ///                             laatat varjokameralla, jonka pikselikoko on pohja-SSE / arvo; 16 = varjo täysikokoisena
+    ///                             (mekanismin kontrolli), pois = aina pääkamera; tila lokiin. Ei luo tilesetiä uudelleen
+    ///   ruutu liike 120|60|pois|tila   Ruudunpaivityksen TÄYDEN tilan katto (löydös S10 A/B; pois = näytön taajuus)
     ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
     ///   symbolit tila|pois|paalle|loydetty|himmea|koko <pt>   nostojen 3D-mallit (Symbolimallit, löydös 160); tila = taso 1
@@ -693,6 +701,32 @@ namespace Matkakirja
                     // napauta x y: osuus näytöstä 0–1, origo vasen alakulma
                     kierto.Napauta(new Vector2((float)D(1) * Screen.width, (float)D(2) * Screen.height));
                     break;
+                case "maasto" when o.Length > 1 && o[1] == "liike":
+                {
+                    // maasto liike <arvo>|pois|tila (löydös S10): liikkeen SSE-vastine varjokameralla, ei uudelleenluontia.
+                    if (o.Length > 2 && o[2] != "tila")
+                    {
+                        var v = LiikeLaatatPaatos.LueSse(o[2]);
+                        if (v.HasValue) LiikeLaatat.Sse = v.Value;
+                        else Debug.LogWarning("MATKAKIRJA komento: maasto liike <1–128>|pois|tila");
+                    }
+                    Debug.Log("MATKAKIRJA maasto liike: " + LiikeLaatat.Kuvaus());
+                    break;
+                }
+                case "ruutu" when o.Length > 1 && o[1] == "liike":
+                {
+                    // ruutu liike <hz>|pois|tila (löydös S10): TÄYDEN tilan katto liikkeen A/B-mittaukseen (Ruudunpaivitys).
+                    if (o.Length > 2 && o[2] != "tila")
+                    {
+                        var k = LiikeLaatatPaatos.LueKatto(o[2]);
+                        if (k.HasValue) Ruudunpaivitys.LiikeKatto = k.Value;
+                        else Debug.LogWarning("MATKAKIRJA komento: ruutu liike <20–240>|pois|tila");
+                    }
+                    var rp = Ruudunpaivitys.Instanssi;
+                    Debug.Log("MATKAKIRJA ruutu liike: katto " + (Ruudunpaivitys.LiikeKatto > 0 ? Ruudunpaivitys.LiikeKatto + " Hz" : "ei (näytön taajuus)")
+                              + "; " + (rp != null ? rp.Kuvaus() : "ei ruudunpäivitystä"));
+                    break;
+                }
                 case "maasto" when o.Length > 2 && o[1] == "sse":
                 {
                     // maasto sse <arvo>: tilesetin maximumScreenSpaceError (löydös 46 lisäys 5). Luo tilesetin uudelleen.
@@ -943,12 +977,26 @@ namespace Matkakirja
                 }
                 case "palvelin":
                     // palvelin | palvelin loki paalle|pois | palvelin maastouusinta paalle|pois (löydös 119)
+                    // | palvelin yksiportti paalle|pois (löydös 176: PlayerPrefs, vaikuttaa seuraavasta käynnistyksestä)
                     if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "yksiportti")
+                    {
+                        PlayerPrefs.SetInt(LaattaPortit.YksiPorttiAvain, o[2] == "paalle" ? 1 : 0);
+                        PlayerPrefs.Save();
+                        Debug.Log($"MATKAKIRJA laattapalvelin: yksi-portti {(o[2] == "paalle" ? "päälle" : "pois")} seuraavasta käynnistyksestä " +
+                                  $"(nyt {(Laattapalvelin.YksiPortti ? "yksi portti" : Laattapalvelin.Portteja + " porttia")})");
+                    }
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
                               $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
-                              $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
+                              $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}, " +
+                              $"väritason uusintoja {Laattapalvelin.VariUusintoja} (pelastettu {Laattapalvelin.VariPelastettu}) | {Laattapalvelin.YhteysKuvaus(0)} | {Laattapalvelin.JonoTila()}");
                     Debug.Log(Laattapalvelin.MaastoKuvaus());
+                    break;
+                case "saapuminen" when o.Length > 1 && o[1] == "vartija":
+                    // saapuminen vartija paalle|pois|tila (löydös 171)
+                    if (o.Length > 2 && (o[2] == "paalle" || o[2] == "pois")) Saapumisvartija.Paalla = o[2] == "paalle";
+                    Debug.Log(Saapumisvartija.Kuvaus());
                     break;
                 case "valmius":
                 {
@@ -992,6 +1040,7 @@ namespace Matkakirja
                 {
                     // maakunta <ISO3:tunnus> | maakunta pois | maakunta tila (B17, sama kuin Natiivi-UI:n Maakunnat-valinta)
                     // maakunta maa <ISO3> | maakunta maa pois: kerroksen maa pakotetaan (oletus pelaajan maa, skeema 1.42)
+                    // maakunta herays ab|pois: löydös 168 A/B-lippu (ab = vanha käytös, herääminen värjää maakunnan; oletus pois)
                     var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
                     if (mk == null) break;
                     if (o[1] == "tila")
@@ -1008,6 +1057,14 @@ namespace Matkakirja
                         MaaKartta.ValinnanPeitto = double.Parse(o[2], CultureInfo.InvariantCulture);
                         MaaKartta.PaivitaKaikki();
                         Debug.Log($"MATKAKIRJA maakunnat: valinnan peitto {MaaKartta.ValinnanPeitto:0.00}");
+                        break;
+                    }
+                    if (o[1] == "herays" && o.Length > 2)
+                    {
+                        // maakunta herays ab|pois: löydös 168 A/B-vertailu (ab = vanha käytös, herääminen värjää maakunnan pysyvästi)
+                        MaaKartta.HeraaminenVarjaaTaytonAB = o[2] == "ab";
+                        MaaKartta.PaivitaKaikki();
+                        Debug.Log($"MATKAKIRJA maakunnat: heräyksen täyttö {(MaaKartta.HeraaminenVarjaaTaytonAB ? "AB (vanha, värjää)" : "pois (oletus, ei värjää)")}");
                         break;
                     }
                     if (o[1] == "maski" && o.Length > 2)
@@ -1102,6 +1159,7 @@ namespace Matkakirja
                 case "mittaus":
                 case "palvelin":
                 case "suodatus":
+                case "saapuminen":
                 case "valmius":
                 case "kamerareitti":
                     return false;

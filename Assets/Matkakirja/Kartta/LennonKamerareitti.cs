@@ -166,7 +166,7 @@ namespace Matkakirja
             var l = new Lento { Lat0 = lat0, Lon0 = lon0, Lat1 = lat1, Lon1 = lon1, Aloitus = aloitus, Alku = alku ?? Valintanakyma,
                 SaapumisKorkeus = saapumisKorkeus, SaapumisLat = saapumisLat ?? lat1, SaapumisLon = saapumisLon ?? lon1 };
             l.ReittiM = LennonAikajana.ReittiM(lat0, lon0, lat1, lon1);
-            l.Huippu = Math.Min(900000.0, l.ReittiM * 0.12);
+            l.Huippu = LennonAikajana.Huippu(l.ReittiM);
             l.Jako = aloitus ? LennonAikajana.JaaAloitus(kestoS ?? LennonAikajana.AloituslennonKestoS)
                              : LennonAikajana.Jaa(kestoS ?? LennonAikajana.Kesto(l.ReittiM));
             var maisema = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var k) ? k : LennonAikajana.EiMaisemaa;
@@ -199,9 +199,27 @@ namespace Matkakirja
             var j = l.Jako;
             double p = l.P(t);
             var q = Isoympyra(l.Lat0, l.Lon0, l.Lat1, l.Lon1, p);
-            double h = LennonAikajana.KoneenKorkeus(p, l.Huippu,
-                LennonAikajana.KoneenMinimi(t, j, l.Aloitus ? LennonAikajana.AloituksenNousu : 1.0));
+            double minimi = LennonAikajana.KoneenMinimi(t, j, l.Aloitus ? LennonAikajana.AloituksenNousu : 1.0);
             var a = l.Arvo(t);
+            // Löydös 172: koneen korkeus kaaren painolla k(d), d = silmän etäisyys koneeseen. Nappula käyttää edellisen
+            // kehyksen kameraa; tässä sama kiintopiste muutamalla kierroksella (kaaren nousu siirtää konetta alle
+            // kymmenesosan d:stä, joten kierrokset suppenevat nopeasti).
+            double paino = 1, h = 0;
+            double[] silma = null, kohde = null, kameranYlos = null, kone = null;
+            for (int kierros = 0; kierros < 4; kierros++)
+            {
+                h = LennonAikajana.KoneenKorkeus(p, l.Huippu, minimi, paino);
+                (silma, kohde, kameranYlos) = Silma(l, a, q, h);
+                kone = Kerro(Yks(q.lat, q.lon), R + h);
+                double[] ero = Miinus(silma, kone);
+                paino = LennonAikajana.KaarenPaino(Math.Sqrt(Piste(ero, ero)));
+            }
+            return (silma, kohde, kameranYlos, kone, h);
+        }
+
+        static (double[] silma, double[] kohde, double[] ylos) Silma(Lento l, (double e, double k, double s, double kohde, double kone) a,
+            (double lat, double lon) q, double h)
+        {
             double klat, klon, katse;
             if (a.kohde < 0)
             {
@@ -232,9 +250,8 @@ namespace Matkakirja
             var eteen = Plus(Kerro(pohjoinen, Math.Cos(b)), Kerro(ita, Math.Sin(b)));
             var suunta = Miinus(Kerro(ylos, Math.Cos(k)), Kerro(eteen, Math.Sin(k)));
             var silma = Plus(kohde, Kerro(suunta, Math.Max(100.0, a.e)));
-            var kone = Kerro(Yks(q.lat, q.lon), R + h);
             var kameranYlos = Plus(Kerro(eteen, Math.Cos(k)), Kerro(ylos, Math.Sin(k)));
-            return (silma, kohde, kameranYlos, kone, h);
+            return (silma, kohde, kameranYlos);
         }
 
         /// <summary>Pinnan piste (lat, lon, korkeus m) ECEF-pallona (m).</summary>

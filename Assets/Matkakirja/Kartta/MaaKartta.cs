@@ -172,6 +172,14 @@ namespace Matkakirja
         public static Func<string, bool?> Heraannyt;
         /// <summary>Uinuvan maakunnan täytön peitto herääneen suhteen.</summary>
         public const float UinuvanPeitto = 0.3f;
+        /// <summary>
+        /// Löydös 168 (omistaja 26.9.2026): noston avaus ei saa värjätä maakuntaa. Oletuksena <see cref="Heraannyt"/>
+        /// ja <see cref="Herata"/> eivät enää vaikuta täyttöön eikä väriin (sama näkymä kuin ilman herätystä) —
+        /// rajapinta säilyy ennallaan muille kutsujille (Linssiseppä), mutta <see cref="PaivitaPaletti"/> jättää
+        /// tilan ja piilotuskertoimen huomiotta. Kehittäjälippu true palauttaa vanhan käytöksen (uinuva himmeänä,
+        /// herännyt täydessä sävyssä pysyvästi, herätyksen ajaksi piilotus) A/B-kuvia varten; ei UI:ta, aseta koodista/debuggerista.
+        /// </summary>
+        public static bool HeraaminenVarjaaTaytonAB = false;
         static readonly List<MaaKartta> kaikki = new List<MaaKartta>();
         // Herätyksen ajaksi piilotetut maakunnat: avain → nykyinen kerroin ja tavoite (0 piilossa, 1 näkyy).
         readonly Dictionary<string, (float nyt, float tavoite)> herataan = new Dictionary<string, (float, float)>(StringComparer.Ordinal);
@@ -752,16 +760,23 @@ namespace Matkakirja
                     var t = korostettu ? Maakuntajako.TayttoPeitolla(vari, ValinnanPeitto, lineaarinen)
                         : Maakuntajako.Taytto(vari, false, lineaarinen);
                     // Oletusrajat (löydös 113): ilman valintaa vain rajat, täyttö läpinäkyvä.
-                    // Elävä kartta (kohta 3): uinuva maakunta himmeänä, herätyksen ajaksi piilotettu häivytyksellä.
                     double peitto = t.A;
-                    bool? tila = null;
-                    if (Heraannyt != null) try { tila = Heraannyt(p.Key); } catch (Exception) { tila = null; }
-                    // Linssiseppä 26.9.: herännyt näkyy täysin sävyin aina (myös oletusrajoilla ilman täyttöä); uinuva himmeänä
-                    // vain, kun täyttö on päällä, muuten paperina (ei täyttöä).
-                    // Löydös 157: pelaajan valitsema maakunta näkyy vahvana myös uinuvana (valinta on tarkoituksellinen katse).
-                    if (tila == false && !korostettu) peitto *= UinuvanPeitto;
-                    if (herataan.TryGetValue(p.Key, out var hk)) peitto *= hk.nyt;
-                    bool nakyy = tila == true || TayttoNakyy;
+                    bool nakyy = TayttoNakyy;
+                    // Löydös 168 (omistaja 26.9.2026): herääminen ei enää värjää maakuntaa — täyttö pysyy samana
+                    // riippumatta Heraannyt-tilasta tai käynnissä olevasta herätyksestä (HeraaminenVarjaaTaytonAB
+                    // palauttaa vanhan käytöksen A/B-kuvia varten).
+                    if (HeraaminenVarjaaTaytonAB)
+                    {
+                        // Elävä kartta (kohta 3, vanha käytös): uinuva maakunta himmeänä, herätyksen ajaksi piilotettu häivytyksellä.
+                        bool? tila = null;
+                        if (Heraannyt != null) try { tila = Heraannyt(p.Key); } catch (Exception) { tila = null; }
+                        // Herännyt näkyy täysin sävyin aina (myös oletusrajoilla ilman täyttöä); uinuva himmeänä
+                        // vain, kun täyttö on päällä, muuten paperina (ei täyttöä).
+                        // Löydös 157: pelaajan valitsema maakunta näkyy vahvana myös uinuvana (valinta on tarkoituksellinen katse).
+                        if (tila == false && !korostettu) peitto *= UinuvanPeitto;
+                        if (herataan.TryGetValue(p.Key, out var hk)) peitto *= hk.nyt;
+                        nakyy = tila == true || TayttoNakyy;
+                    }
                     px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), nakyy ? B(peitto) : (byte)0);
                 }
                 else px[p.Value] = C(s.Taytto);

@@ -24,7 +24,7 @@
 // kylläisyys ja kehittäjätila muistetaan PlayerPrefsissä; isoisän linssille 1873 "isoisa tila";
 // linssien äänille "aani tila | keksinto | vuosi | humina [pois]" (soitto ja lähteen aika hetken päästä, humina
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
-// saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta).
+// saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -247,7 +247,6 @@ namespace Matkakirja.Natiivi
             // OpenType-tietueet), joten koko nimien merkistö lisätään ennalta (TryAddCharacters) merkki kerrallaan.
             // Natiiviseppä 26.9. b24-lammin: pisin työ kerran 5,6 ms. Raja on nyt ennakoiva: seuraava merkki (tai pala)
             // aloitetaan vain, jos tähänastinen työ + kallein yksittäinen merkki (pala) mahtuu LammitysMs:iin.
-            var puuttuu = new System.Text.StringBuilder();
             int i = 0;
             while (i < Merkisto.Length)
             {
@@ -255,7 +254,7 @@ namespace Matkakirja.Natiivi
                 do
                 {
                     float m0 = Time.realtimeSinceStartup;
-                    if (!fontti.TryAddCharacters(Merkisto.Substring(i, 1), out string p)) puuttuu.Append(p);
+                    fontti.TryAddCharacters(Merkisto.Substring(i, 1), out _);
                     i++;
                     suurinMerkki = Mathf.Max(suurinMerkki, (Time.realtimeSinceStartup - m0) * 1000f);
                     kulunut = (Time.realtimeSinceStartup - alku) * 1000f;
@@ -295,6 +294,10 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             Destroy(go);
+            // TryAddCharacters palauttaa false myös jo atlaksessa olevalle merkille (simulaattori 26.9.: "puuttuu 66" = kartan
+            // nimien kirjaimet), joten todelliset puuttujat tarkistetaan lopuksi atlaksesta.
+            var puuttuu = new System.Text.StringBuilder();
+            foreach (char c in Merkisto) if (!fontti.HasCharacter(c)) puuttuu.Append(c);
             string puuttuvat = puuttuu.ToString();
             Kirjaa($"fonttilämmitys: {Merkisto.Length} merkkiä verhon jälkeen (odotus {(t1 - odotusAlku) * 1000:F0} ms), " +
                 $"{(Time.realtimeSinceStartup - t1) * 1000:F0} ms {kehyksia} kehyksessä, pisin työ {Mathf.Max(ensimmainen, Mathf.Max(pisinLisays, pisinJasennys)):F1} ms " +
@@ -1027,6 +1030,7 @@ namespace Matkakirja.Natiivi
             public AstronauttiKerros Kerros => kerros;
             public void Avaa(ILinssiYmparisto y)
             {
+                IssTleLataaja.Lataa(o);   // ISS:n todellinen rata (välimuisti ja buildi heti, ämpäri taustalla)
                 using (Merkki("satelliitti", OsaKerros).Auto()) kerros = AstronauttiKerros.Luo(o.kierto);
                 using var _ = Merkki("satelliitti", OsaLinssi).Auto();
                 linssi = new Matkakirja.Linssit.Astronautti.AstronauttiLinssi(aineisto, kerros);
@@ -1302,6 +1306,14 @@ namespace Matkakirja.Natiivi
                 }
                 else if (osat[0] == "elava")
                     ElavaKartta.Komento(osat, this);
+                else if (osat[0] == "iss")
+                {
+                    // "iss lataa" hakee TLE:n (välimuisti, buildi, ämpäri), "iss tila" kertoo lähteen, iän ja laadun.
+                    if (osat.Length > 1 && osat[1] == "lataa") IssTleLataaja.Lataa(this);
+                    var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+                    var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
+                    Kirjaa($"iss: {IssTleLataaja.Tila()}, alapiste {p.Lat:F2}, {p.Lon:F2} ({utc:HH:mm:ss} UTC)");
+                }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)

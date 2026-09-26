@@ -25,26 +25,108 @@ namespace Matkakirja
     /// Näin sama polku toimii striimauksessa ja offline-tilassa, eikä Cesiumin
     /// 4096 kohteen SQLite-välimuisti rajoita.
     ///
-    /// iOS: Info.plistiin NSAllowsLocalNetworking (Rakennus.PaikallinenVerkkoPlist).
+    /// LÖYDÖS 176: palvelin kuuntelee neljää porttia (pohja, maasto, kerma, muu; <see cref="LaattaPortit"/>), jotta iOS:n
+    /// yhteysraja samaan isäntään (noin 6 rinnakkaista) ei jaa kaikkia kerroksia; jonot ovat yhteiset.
+    ///
+    /// iOS: Info.plistiin NSAllowsLocalNetworking (Rakennus.PaikallinenVerkkoPlist; koskee kaikkia 127.0.0.1-portteja).
     /// </summary>
     [DefaultExecutionOrder(-1000)]
     public class Laattapalvelin : MonoBehaviour
     {
         public const string Ampari = "https://media.matkakirja.app/";
         public static Laattapalvelin Instanssi { get; private set; }
-        /// <summary>Paikallinen juuri, esim. http://127.0.0.1:52100/r/ (null ennen käynnistystä).</summary>
+        /// <summary>Paikallinen juuri, esim. http://127.0.0.1:52100/r/ (null ennen käynnistystä). Löydös 176: ensimmäisen
+        /// portin (pohja) juuri; kaikki portit ovat <see cref="Juuret"/>-taulukossa.</summary>
         public static string Juuri { get; private set; }
+        /// <summary>
+        /// LÖYDÖS 176: paikalliset juuret portti-indeksin mukaan (<see cref="LaattaPortit.Luokka"/>: pohja, maasto, kerma, muu).
+        /// Jokainen luokka saa oman portin eli oman isäntäavaimen, joten iOS:n yhteysraja samaan isäntään (noin 6) ei enää jaa
+        /// kaikkia kerroksia. Yhden portin tilassa (<see cref="YksiPortti"/>) kaikki alkiot ovat samat. null ennen käynnistystä.
+        /// </summary>
+        public static string[] Juuret { get; private set; }
+        /// <summary>Löydös 176: vanha yhden portin tila (kehittäjälippu LaattaPortit.YksiPorttiTiedosto / YksiPorttiAvain).</summary>
+        public static bool YksiPortti { get; private set; }
+        /// <summary>Kuunneltavien porttien määrä (1 yhden portin tilassa tai jos lisäportteja ei saatu).</summary>
+        public static int Portteja { get; private set; }
 
         public static string OfflineKansio => Path.Combine(Application.persistentDataPath, "offline");
-        public static string ValimuistiKansio => Path.Combine(Application.temporaryCachePath, "laatat");
+        public static string ValimuistiKansio => valimuistiKansio ?? Path.Combine(Application.temporaryCachePath, "laatat");
+        static string valimuistiKansio;
+
+        /// <summary>
+        /// KYLMÄ KÄYNNISTYS LAITTEELLA ILMAN UUDELLEENASENNUSTA (löydös 171, kehittäjälippu): Documents/laatat-kylma.txt →
+        /// tämä istunto käyttää tyhjää välimuistikansiota Caches/laatat-kylma-&lt;unix-aika&gt; (vanhaa ei poisteta eikä
+        /// siirretä), ja lipputiedosto nimetään laatat-kylma-kaytetty.txt:ksi, joten seuraava käynnistys on taas lämmin
+        /// tavallisesta kansiosta. Laattapaketti (build) pysyy käytössä kuten omistajan ensikäynnistyksessä. Kylmät kansiot
+        /// ovat iOS:n tyhjennettävää välimuistia (Caches); ne jäävät, kunnes iOS tai sovelluksen poisto siivoaa ne.
+        /// Ei App Store -käännöksessä.
+        /// </summary>
+        public const string KylmaTiedosto = "laatat-kylma.txt";
+
+        static void KylmaValimuisti()
+        {
+#if !MATKAKIRJA_APPSTORE
+            try
+            {
+                string lippu = Path.Combine(Application.persistentDataPath, KylmaTiedosto);
+                if (!File.Exists(lippu)) return;
+                string kaytetty = Path.Combine(Application.persistentDataPath, "laatat-kylma-kaytetty.txt");
+                if (File.Exists(kaytetty)) File.Replace(lippu, kaytetty, null); else File.Move(lippu, kaytetty);
+                valimuistiKansio = Path.Combine(Application.temporaryCachePath, "laatat-kylma-" + DateTimeOffset.UtcNow.ToUnixTimeSeconds());
+                Debug.Log("MATKAKIRJA laattapalvelin: KYLMÄ välimuisti tälle istunnolle (kehittäjälippu " + KylmaTiedosto + "): " + valimuistiKansio);
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA laattapalvelin: kylmä välimuisti ei onnistunut: " + e.Message); }
+#endif
+        }
 
         [Tooltip("Rinnakkaiset verkkohaut (UnityWebRequest).")]
         public int rinnakkain = 12;
         [Tooltip("Välimuistin yläraja megatavuina; käynnistyksessä karsitaan vanhimmat 75 %:iin (offline-kansio ei kuulu tähän).")]
         public int valimuistiMt = 600;
 
-        TcpListener kuuntelija;
+        TcpListener[] kuuntelijat;
         CancellationTokenSource lopetus;
+
+        // ---- Löydös 176: varmistuslaskurit (Palvele) ----
+        /// <summary>Avoimet asiakasyhteydet (Cesium ja UnityWebRequest → palvelin) yhteensä ja porteittain.</summary>
+        static readonly LaattaPortit.Huippu yhteydet = new LaattaPortit.Huippu();
+        /// <summary>Käsittelyssä olevat pyynnöt (otsake luettu, vastaus kirjoittamatta; myös paketti- ja välimuistiosumat).</summary>
+        static readonly LaattaPortit.Huippu kasittelyssa = new LaattaPortit.Huippu();
+        static readonly LaattaPortit.Huippu[] yhteydetPortti = UudetHuiput();
+        static readonly LaattaPortit.Huippu[] kasittelyssaPortti = UudetHuiput();
+        /// <summary>Yhteyksiä avattu ja pyyntöjä palveltu porteittain koko istunnossa.</summary>
+        static readonly long[] yhteyksiaPortti = new long[LaattaPortit.Maara], pyyntojaPortti = new long[LaattaPortit.Maara];
+
+        static LaattaPortit.Huippu[] UudetHuiput()
+        {
+            var t = new LaattaPortit.Huippu[LaattaPortit.Maara];
+            for (int i = 0; i < t.Length; i++) t[i] = new LaattaPortit.Huippu();
+            return t;
+        }
+
+        /// <summary>
+        /// Löydös 176: yhteys- ja pyyntölaskurit yhdellä rivinosalla (palvelin- ja valmius-rivit). lukija 0 = komento "palvelin",
+        /// 1 = valmius-rivi: kummankin ikkunan huippu nollautuu, kun se luetaan (maks = huippu edellisen saman lukijan rivin
+        /// jälkeen). Jakauma porteittain luokan nimellä: "auki/maks y" = yhteydet, "käsittelyssä/maks p" = pyynnöt, sitten
+        /// istunnon pyynnöt ja avatut yhteydet (NSURLSession käyttää yhteydet uudelleen, joten yhteyksiä on vähemmän kuin pyyntöjä).
+        /// </summary>
+        public static string YhteysKuvaus(int lukija)
+        {
+            var sb = new StringBuilder();
+            sb.Append("portit ").Append(Portteja).Append(YksiPortti ? " (yksi-portti)" : "")
+              .Append(" yhteydet ").Append(yhteydet.Nyt).Append(" maks ").Append(yhteydet.Ikkuna(lukija)).Append(" (istunto ").Append(yhteydet.Istunto).Append(')')
+              .Append(" käsittelyssä ").Append(kasittelyssa.Nyt).Append(" maks ").Append(kasittelyssa.Ikkuna(lukija)).Append(" (istunto ").Append(kasittelyssa.Istunto).Append(") [");
+            int n = Portteja <= 1 ? 1 : LaattaPortit.Maara;
+            for (int i = 0; i < n; i++)
+            {
+                if (i > 0) sb.Append(", ");
+                sb.Append(n == 1 ? "kaikki" : LaattaPortit.Nimet[i]).Append(' ')
+                  .Append(yhteydetPortti[i].Nyt).Append('/').Append(yhteydetPortti[i].Ikkuna(lukija)).Append(" y ")
+                  .Append(kasittelyssaPortti[i].Nyt).Append('/').Append(kasittelyssaPortti[i].Ikkuna(lukija)).Append(" p ")
+                  .Append(Interlocked.Read(ref pyyntojaPortti[i])).Append(" pyyntöä ").Append(Interlocked.Read(ref yhteyksiaPortti[i])).Append(" yhteyttä");
+            }
+            return sb.Append(']').ToString();
+        }
         readonly ConcurrentQueue<Haku> jono = new ConcurrentQueue<Haku>();
         /// <summary>Huntulaatat (pieniä, 3 kt) ohi jonon: näkyvän alueen huntu ehtii ennen kuin laatta näkyy ilman sitä.</summary>
         readonly ConcurrentQueue<Haku> kiireJono = new ConcurrentQueue<Haku>();
@@ -55,6 +137,45 @@ namespace Matkakirja
         /// näkyvän kartan paikkojen lisäksi, joten se etenee lennon aikana eikä viivästytä näkyviä laattoja.
         /// </summary>
         readonly ConcurrentQueue<Haku> kohdeJono = new ConcurrentQueue<Haku>();
+        /// <summary>
+        /// TAUSTAN ESILATAUS (laattojen esilataus erä 2: kohdekaupunkien saapumisnäkymät, <see cref="Esilataus.Tausta"/>): alin
+        /// prioriteetti. Palvellaan vain, kun näkyvän kartan jono, kiirejono ja tavallinen esilatausjono ovat tyhjiä, kiirejonon
+        /// hakuja ei ole käynnissä eikä yksikään verho odota, ja enintään <see cref="TaustaPaikat"/> hakua kerrallaan, jotta
+        /// näkyvälle kartalle jää aina paikkoja (ESILATAUSPOLITIIKKA: ei hidasta näkyvää jonoa; VARTIJA 163b: ei kiirejonoa).
+        /// </summary>
+        readonly ConcurrentQueue<Haku> taustaJono = new ConcurrentQueue<Haku>();
+        /// <summary>Taustan esilatauksen rinnakkaiset haut (erä 2).</summary>
+        public const int TaustaPaikat = 4;
+        int taustaKaynnissa;
+        /// <summary>
+        /// KOHDEMAAN SAAPUMINEN (löydös 171, <see cref="Esilataus.Saapuminen"/>): aloituslennon kohdemaan saapumisnäkymän pohja
+        /// ja maasto jo lennon aikana. Palvellaan näkyvän kartan vapailla paikoilla (vain kun näkyvä jono on tyhjä, kaksi paikkaa
+        /// jää aina näkyvälle) ennen tavallista esilatausta ja taustaa; verhon aikana tauolla (SaapumisKiire.SaapumisPalvellaan).
+        /// Myös kohdemaan kerma kulkee tässä (ei kiirejonossa), jotta näkyvän jonon etusija säilyy (163b).
+        /// </summary>
+        readonly ConcurrentQueue<Haku> saapumisJono = new ConcurrentQueue<Haku>();
+        int saapumisKaynnissa;
+
+        /// <summary>
+        /// SAAPUMISTILA (löydös 171; Saapumisvartija): laskeutumisesta kohdemaan näkymän valmistumiseen näkyvän kartan jonolla on
+        /// <see cref="VerhoRinnakkain"/> paikkaa kuten verhon kevennyksessä, eikä tavallista esilatausta (paitsi verhon reitti)
+        /// eikä taustaa palvella. Tauolle jääneet palaavat, kun sekä verhot että saapumistila ovat ohi. Vain pääsäikeestä.
+        /// </summary>
+        static readonly HashSet<string> saapumistilat = new HashSet<string>();
+
+        /// <summary>Saapumistila päällä (joku saapuminen odottaa kohdemaan näkymää).</summary>
+        public static bool Saapumistila => saapumistilat.Count > 0;
+
+        /// <summary>Saapumistila alkaa (true) tai päättyy (false) syyn mukaan (Saapumisvartija). Idempotentti syyttäin.</summary>
+        public static void AsetaSaapumistila(string syy, bool alku)
+        {
+            if (string.IsNullOrEmpty(syy)) return;
+            if (alku) saapumistilat.Add(syy); else saapumistilat.Remove(syy);
+            if (!alku) Instanssi?.Palauta();
+        }
+
+        /// <summary>Saapumistilan syyt lokiriville ("pois" tai syyt pilkuin).</summary>
+        public static string SaapumistilaKuvaus() => saapumistilat.Count == 0 ? "pois" : string.Join(",", saapumistilat);
 
         /// <summary>
         /// VERHON KEVENNYS (Fablen päätös BUILD 16, löydös 80; Valmius.KevennysAlku/Loppu): kun jokin verho odottaa pallon
@@ -74,11 +195,20 @@ namespace Matkakirja
         public static void VerhoKevennys(bool alku)
         {
             verhot = Math.Max(0, verhot + (alku ? 1 : -1));
-            var p = Instanssi;
-            if (verhot > 0 || p == null || p.tauolla.Count == 0) return;
-            // Kohdealueen (Etusija) tauolla olleet tulivat kiirejonosta (Sentinel, Update); muut esilatausjonosta.
-            foreach (var h in p.tauolla) (h.Esi != null && h.Esi.Etusija ? p.kiireJono : p.esiJono).Enqueue(h);
-            p.tauolla.Clear();
+            if (!alku) Instanssi?.Palauta();
+        }
+
+        /// <summary>
+        /// Tauolla olleet haut takaisin jonoihinsa, kun yksikään verho ei odota eikä saapumistila ole päällä: kiirejonosta
+        /// tulleet (kohdealueen Sentinel, Update) kiirejonoon, kohdemaan saapumisen laatat saapumisjonoon ja muut
+        /// esilatausjonoon.
+        /// </summary>
+        void Palauta()
+        {
+            if (verhot > 0 || Saapumistila || tauolla.Count == 0) return;
+            foreach (var h in tauolla)
+                (h.Kiireesta ? kiireJono : h.Esi != null && h.Esi.Saapuminen ? saapumisJono : esiJono).Enqueue(h);
+            tauolla.Clear();
         }
         const int KohdePaikat = 4;
         int kaynnissa, kohdeKaynnissa;
@@ -113,6 +243,10 @@ namespace Matkakirja
         /// auki (Reikakorjaus.cs). Laite ilman verkkoa yli 10 s → virhe kuten ennen.
         /// </summary>
         public static bool MaastoUusinta = true;
+        /// <summary>Löydös 176 kohta 3: väritason uusintakierrokset ja niistä onnistuneet (komento "palvelin").</summary>
+        public static int VariUusintoja, VariPelastettu;
+        /// <summary>Löydös 176 kohta 3: väritason uusintakierroksen viive.</summary>
+        public const int VariUusintaViiveMs = 4000;
         /// <summary>
         /// Maastoluokan (.terrain, layer.json) laskurit komennon "palvelin" tulosteeseen (<see cref="MaastoKuvaus"/>):
         /// Cesiumin pyynnöt, verkosta haetut, epäonnistuneet verkkoyritykset, uusinnalla pelastetut, Cesiumille virheenä
@@ -127,8 +261,10 @@ namespace Matkakirja
         {
             Loki = false;
             MaastoUusinta = true;
+            saapumistilat.Clear();
             MaastoPyyntoja = MaastoVerkosta = MaastoYritysVirheita = MaastoPelastettu = MaastoCesiumVirheita = 0;
             Maasto404 = MaastoPeruttu = MaastoPidossa = 0;
+            VariUusintoja = VariPelastettu = 0;
         }
 
         /// <summary>Maastoluokan laskurit ja kytkimet yhdellä rivillä (komento "palvelin").</summary>
@@ -150,7 +286,9 @@ namespace Matkakirja
         /// Näkyvän kartan laattoja haussa (jonossa tai käynnissä): Alueet hidastaa offline-latauksen,
         /// jotta näkyvä näkymä latautuu ensin (omistajan build 5 -löydös 13).
         /// </summary>
-        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa > 0 || !Instanssi.jono.IsEmpty || !Instanssi.kiireJono.IsEmpty);
+        /// <remarks>Taustan esilatauksen (erä 2) haut eivät tee palvelimesta kiireistä: ne väistävät itse kaikkea muuta, eikä niiden
+        /// pidä pysäyttää Esilataajan taustatasoja tai joutilas-tarkkailua.</remarks>
+        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa - Instanssi.taustaKaynnissa > 0 || !Instanssi.jono.IsEmpty || !Instanssi.kiireJono.IsEmpty);
 
         /// <summary>
         /// Pohjalaatan polun alku (Rakennus.LaattaUrl ilman ämpäriä): jos tällainen laatta ei tule
@@ -260,6 +398,16 @@ namespace Matkakirja
             public bool Etusija { get; set; }
             /// <summary>Verho odottaa tätä esilatausta (aloituslennon reitti, Nappula): sitä palvellaan verhon kevennyksen aikanakin.</summary>
             public bool Verholle { get; set; }
+            /// <summary>
+            /// Taustan esilataus (erä 2, kohdekaupunkien saapumisnäkymät): oma jono (taustaJono), jota palvellaan vasta kaiken
+            /// muun jälkeen, enintään <see cref="TaustaPaikat"/> kerrallaan eikä verhon aikana. Ei yhdessä Etusija/Verholle-lipun kanssa.
+            /// </summary>
+            public bool Tausta { get; set; }
+            /// <summary>
+            /// Kohdemaan saapuminen (löydös 171, aloituslennon kohdemaan näkymä): oma saapumisjono näkyvän kartan vapailla
+            /// paikoilla ennen tavallista esilatausta (myös kerma). Ei yhdessä Tausta-lipun kanssa.
+            /// </summary>
+            public bool Saapuminen { get; set; }
             /// <summary>Käsitellyt (valmiit + epäonnistuneet) osuutena, 1 kun tyhjä tai peruttu.</summary>
             public float Osuus { get { int y = Yhteensa; return y == 0 || peruttu ? 1f : (float)(Valmis + Epaonnistui) / y; } }
             /// <summary>Jonossa odottavat haut vapautetaan ilman verkkoa; käynnissä olevat valmistuvat.</summary>
@@ -290,12 +438,35 @@ namespace Matkakirja
             public long Alku = System.Diagnostics.Stopwatch.GetTimestamp();
             /// <summary>Laskettu <see cref="MaastoPidossa"/>-laskuriin (pääsäie).</summary>
             public bool Pidossa;
+            /// <summary>Haku tuli kiirejonosta tauolle (Palauta vie sen takaisin kiirejonoon).</summary>
+            public bool Kiireesta;
             public double KuluS => (System.Diagnostics.Stopwatch.GetTimestamp() - Alku) / (double)System.Diagnostics.Stopwatch.Frequency;
         }
 
-        /// <summary>Muuntaa ämpärin osoitteen paikalliseksi (muut osoitteet sellaisenaan).</summary>
-        public static string Paikallinen(string url) =>
-            Juuri != null && url != null && url.StartsWith(Ampari) ? Juuri + url.Substring(Ampari.Length) : url;
+        /// <summary>
+        /// Muuntaa ämpärin osoitteen paikalliseksi (muut osoitteet sellaisenaan). Löydös 176: portti luokan mukaan
+        /// (<see cref="LaattaPortit.Luokka"/>), jotta jokainen luokka saa oman yhteyspoolinsa.
+        /// </summary>
+        public static string Paikallinen(string url)
+        {
+            var juuret = Juuret;
+            if (juuret == null || url == null || !url.StartsWith(Ampari, StringComparison.Ordinal)) return url;
+            string polku = url.Substring(Ampari.Length);
+            return juuret[LaattaPortit.Luokka(polku)] + polku;
+        }
+
+        /// <summary>
+        /// Paikallisen osoitteen ämpärin polku (mikä tahansa portti), tai null jos osoite ei ole paikallinen. Löydös 176:
+        /// korvaa vertailun <see cref="Juuri"/>-etuliitteeseen, koska kerrokset ovat nyt eri porteissa.
+        /// </summary>
+        public static string PaikallinenPolku(string url)
+        {
+            var juuret = Juuret;
+            if (juuret == null || url == null) return null;
+            foreach (var j in juuret)
+                if (j != null && url.StartsWith(j, StringComparison.Ordinal)) return url.Substring(j.Length);
+            return null;
+        }
 
         /// <summary>
         /// Tiedostopolku ämpärin polulle (kysely mukaan, jotta ?v=-versiot eivät sekoitu). Cesium lisää maastolaattoihin
@@ -404,6 +575,7 @@ namespace Matkakirja
             }
             if (Instanssi != null && Instanssi != this) { Destroy(this); return; }
             Instanssi = this;
+            KylmaValimuisti();
             offline = OfflineKansio;
             valimuisti = ValimuistiKansio;
             Directory.CreateDirectory(offline);
@@ -413,13 +585,34 @@ namespace Matkakirja
 #endif
             try
             {
-                kuuntelija = new TcpListener(IPAddress.Loopback, 0);
-                kuuntelija.Start(64);
-                int portti = ((IPEndPoint)kuuntelija.LocalEndpoint).Port;
+                YksiPortti = YksiPorttiLippu();
+                var ensimmainen = new TcpListener(IPAddress.Loopback, 0);
+                ensimmainen.Start(64);
+                int portti = ((IPEndPoint)ensimmainen.LocalEndpoint).Port;
                 Juuri = $"http://127.0.0.1:{portti}/r/";
+                // Löydös 176: lisäportit (ensisijaisesti peräkkäiset) samalle käsittelijälle. Lisäportin virhe ei kaada
+                // palvelinta: sen luokka jää ensimmäiseen porttiin (kuten ennen).
+                var lista = new List<(TcpListener k, int luokka)> { (ensimmainen, 0) };
+                var juuret = new string[LaattaPortit.Maara];
+                for (int i = 0; i < juuret.Length; i++) juuret[i] = Juuri;
+                for (int i = 1; !YksiPortti && i < LaattaPortit.Maara; i++)
+                {
+                    var k = AvaaLisaportti(LaattaPortit.PorttiEhdokas(portti, i));
+                    if (k == null) continue;
+                    juuret[i] = $"http://127.0.0.1:{((IPEndPoint)k.LocalEndpoint).Port}/r/";
+                    lista.Add((k, i));
+                }
+                kuuntelijat = new TcpListener[lista.Count];
+                for (int i = 0; i < lista.Count; i++) kuuntelijat[i] = lista[i].k;
+                Juuret = juuret;
+                Portteja = lista.Count;
                 lopetus = new CancellationTokenSource();
-                _ = Task.Run(() => Kuuntele(lopetus.Token));
-                Debug.Log("MATKAKIRJA laattapalvelin: " + Juuri);
+                var peru = lopetus.Token;
+                // Laskureiden portti-indeksi = luokka; luokka, jonka lisäportti ei auennut, näkyy ensimmäisen portin (pohja) alla.
+                foreach (var (k, luokka) in lista) _ = Task.Run(() => Kuuntele(k, luokka, peru));
+                var kuvaus = new StringBuilder();
+                for (int i = 0; i < juuret.Length; i++) kuvaus.Append(i == 0 ? "" : ", ").Append(LaattaPortit.Nimet[i]).Append(' ').Append(juuret[i]);
+                Debug.Log($"MATKAKIRJA laattapalvelin: {Juuri} (löydös 176: {Portteja} porttia{(YksiPortti ? ", yksi-portti-lippu" : "")}: {kuvaus})");
                 OhjaaCesium();
                 AvaaPaketti();
                 long raja = (long)valimuistiMt * 1048576;
@@ -428,8 +621,46 @@ namespace Matkakirja
             catch (Exception e)
             {
                 Juuri = null;
+                Juuret = null;
+                Portteja = 0;
                 Debug.LogWarning("MATKAKIRJA laattapalvelin ei käynnistynyt, Cesium hakee suoraan: " + e.Message);
             }
+        }
+
+        /// <summary>Lisäportin kuuntelija ehdokasporttiin, varattuna käyttöjärjestelmän antamaan porttiin; null jos ei onnistu.</summary>
+        static TcpListener AvaaLisaportti(int ehdokas)
+        {
+            foreach (int p in ehdokas > 0 ? new[] { ehdokas, 0 } : new[] { 0 })
+            {
+                TcpListener k = null;
+                try
+                {
+                    k = new TcpListener(IPAddress.Loopback, p);
+                    k.Start(64);
+                    return k;
+                }
+                catch (Exception e)
+                {
+                    try { k?.Stop(); } catch { }
+                    Debug.Log($"MATKAKIRJA laattapalvelin: lisäportti {p} ei auennut: {e.Message}");
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Löydös 176: yhden portin tila (A/B) kehittäjälipusta Documents/yksi-portti.txt (sisältö "0" = porttijako päällä,
+        /// muu = yksi portti; tiedoston voi korvata devicectl:llä mutta ei poistaa) tai, jos tiedostoa ei ole, PlayerPrefsistä.
+        /// </summary>
+        static bool YksiPorttiLippu()
+        {
+            try
+            {
+                string f = Path.Combine(Application.persistentDataPath, LaattaPortit.YksiPorttiTiedosto);
+                if (File.Exists(f)) return File.ReadAllText(f).Trim() != "0";
+                return PlayerPrefs.GetInt(LaattaPortit.YksiPorttiAvain, 0) == 1;
+            }
+            catch (Exception) { return false; }
         }
 
         /// <summary>Karsii välimuistin vanhimmat tiedostot (viimeisin käyttö = muokkausaika), kun koko ylittää rajan.</summary>
@@ -479,24 +710,31 @@ namespace Matkakirja
         {
             if (Instanssi != this) return;
             lopetus?.Cancel();
-            try { kuuntelija?.Stop(); } catch { }
+            if (kuuntelijat != null)
+                foreach (var k in kuuntelijat) { try { k?.Stop(); } catch { } }
             Instanssi = null;
             Juuri = null;
+            Juuret = null;
+            Portteja = 0;
         }
 
-        async Task Kuuntele(CancellationToken peru)
+        async Task Kuuntele(TcpListener kuuntelija, int portti, CancellationToken peru)
         {
             while (!peru.IsCancellationRequested)
             {
                 TcpClient asiakas;
                 try { asiakas = await kuuntelija.AcceptTcpClientAsync(); }
                 catch { if (peru.IsCancellationRequested) return; continue; }
-                _ = Task.Run(() => Palvele(asiakas));
+                _ = Task.Run(() => Palvele(asiakas, portti));
             }
         }
 
-        async Task Palvele(TcpClient asiakas)
+        async Task Palvele(TcpClient asiakas, int portti)
         {
+            // Löydös 176: avoimet yhteydet ja käsittelyssä olevat pyynnöt (yhteensä ja porteittain) varmistuslaskureihin.
+            yhteydet.Lisaa();
+            yhteydetPortti[portti].Lisaa();
+            Interlocked.Increment(ref yhteyksiaPortti[portti]);
             using (asiakas)
             {
                 try
@@ -514,13 +752,29 @@ namespace Matkakirja
                         string kohde = otsake.Substring(eka + 1, toka - eka - 1);
                         bool sulje = otsake.IndexOf("Connection: close", StringComparison.OrdinalIgnoreCase) >= 0;
                         (int tila, byte[] data) vastaus = (404, null);
-                        // Löydös 119: pidossa oleva maastolaatta tarkistaa ennen uusintaa, odottaako Cesium yhä.
-                        if (kohde.StartsWith("/r/")) vastaus = await Hae(kohde.Substring(3), null, () => AsiakasAuki(asiakas));
-                        await Vastaa(virta, vastaus.tila, vastaus.data, kohde, metodi == "HEAD");
+                        kasittelyssa.Lisaa();
+                        kasittelyssaPortti[portti].Lisaa();
+                        Interlocked.Increment(ref pyyntojaPortti[portti]);
+                        try
+                        {
+                            // Löydös 119: pidossa oleva maastolaatta tarkistaa ennen uusintaa, odottaako Cesium yhä.
+                            if (kohde.StartsWith("/r/")) vastaus = await Hae(kohde.Substring(3), null, () => AsiakasAuki(asiakas));
+                            await Vastaa(virta, vastaus.tila, vastaus.data, kohde, metodi == "HEAD");
+                        }
+                        finally
+                        {
+                            kasittelyssa.Vahenna();
+                            kasittelyssaPortti[portti].Vahenna();
+                        }
                         if (sulje) return;
                     }
                 }
                 catch (Exception) { /* asiakas sulki */ }
+                finally
+                {
+                    yhteydet.Vahenna();
+                    yhteydetPortti[portti].Vahenna();
+                }
             }
         }
 
@@ -666,8 +920,9 @@ namespace Matkakirja
         {
             var p = Instanssi;
             if (p == null) return "-";
-            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}, kiire {p.kiireKaynnissa}) jono {p.jono.Count} kiire {p.kiireJono.Count} " +
-                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} tauolla {p.tauolla.Count} nälkä163b {PohjaNalka}";
+            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}, kiire {p.kiireKaynnissa}, tausta {p.taustaKaynnissa}, saapuminen {p.saapumisKaynnissa}) jono {p.jono.Count} " +
+                   $"kiire {p.kiireJono.Count} esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} taustajono {p.taustaJono.Count} " +
+                   $"saapumisjono {p.saapumisJono.Count} tauolla {p.tauolla.Count} nälkä163b {PohjaNalka} saapumistila {SaapumistilaKuvaus()}";
         }
 
         sealed class Lahde { public string Nimi = "?"; }
@@ -767,10 +1022,40 @@ namespace Matkakirja
             // haut jonottivat lennon kohteen Sentinel-esilatauksen takana (lokit/verho-jalkeen: kiire 171 → 47, näkyvä jono 6,
             // käynnissä 28 = kiireen paikat). Nyt vain verhon odottama reitti (Verholle) ja kohdealue (Etusija, verhon ajan
             // tauolla: Update) käyttävät kiirejonoa; aloitusnäytön Sentinel-esilataus kulkee esilatausjonossa muun listan tavoin.
-            (!esi ? (varitasoa ? kiireJono : jono)
-                : varitasoa && (esilataus.Verholle || esilataus.Etusija) ? kiireJono
-                : esilataus.Etusija ? kohdeJono : esiJono).Enqueue(h);
+            // Löydös 171: kohdemaan saapumisen laatat (myös kerma) saapumisjonoon (SaapumisKiire.Valitse).
+            switch (Matkakirja.SaapumisKiire.Valitse(esi, varitasoa, esi && esilataus.Verholle, esi && esilataus.Etusija,
+                        esi && esilataus.Saapuminen, esi && esilataus.Tausta))
+            {
+                case Matkakirja.SaapumisKiire.Jono.Nakyva: jono.Enqueue(h); break;
+                case Matkakirja.SaapumisKiire.Jono.Kiire: kiireJono.Enqueue(h); break;
+                case Matkakirja.SaapumisKiire.Jono.Kohde: kohdeJono.Enqueue(h); break;
+                case Matkakirja.SaapumisKiire.Jono.Saapuminen: saapumisJono.Enqueue(h); break;
+                case Matkakirja.SaapumisKiire.Jono.Tausta: taustaJono.Enqueue(h); break;
+                default: esiJono.Enqueue(h); break;
+            }
             var (tila, data) = await h.Valmis.Task;
+            // LÖYDÖS 176 kohta 3: väritason (kerma, harvat sarjat) Cesium-pyyntö, joka epäonnistui tilapäisesti kaikilla kolmella
+            // yrityksellä, palautuisi läpinäkyvänä laattana, eikä Cesium pyydä sitä uudelleen (se sai vastauksen 200) → laatta
+            // jäisi pysyvästi ilman huntua. Valinta: yksi uusintakierros (kolme yritystä kuten ennen) viiveen
+            // VariUusintaViiveMs jälkeen, jos Cesium yhä odottaa (yhteys auki). Tyhjää ei tallenneta välimuistiin nytkään
+            // (vain onnistunut verkkohaku kirjoitetaan), joten seuraava lataus hakee oikean laatan. Aito 404/403 (merilaatat)
+            // palautuu heti tyhjänä kuten ennen. Odotus pitää kerman portin yhden yhteyden varattuna, ei muiden luokkien.
+            if (tila != 200 && tila != 499 && varitasoa && !esi && pyydetty != null && Reikakorjaus.Uusittava(tila))
+            {
+                Interlocked.Increment(ref VariUusintoja);
+                KirjaaVirhe(h.Luokka, polku, tila, h.Yrityksia, alku, "uusinta " + (VariUusintaViiveMs / 1000) + " s");
+                await Task.Delay(VariUusintaViiveMs);
+                bool odottaa;
+                try { odottaa = pyydetty(); } catch (Exception) { odottaa = false; }
+                if (odottaa)
+                {
+                    var u = new Haku { Polku = polku, Alku = alku, Luokka = h.Luokka, Yrityksia = h.Yrityksia };
+                    kiireJono.Enqueue(u);
+                    (tila, data) = await u.Valmis.Task;
+                    if (tila == 200 && data != null) Interlocked.Increment(ref VariPelastettu);
+                    h = u;
+                }
+            }
             lahde.Nimi = "verkko";
             if (tila == 200 && !KuvaEhja(polku, data))
             {
@@ -851,7 +1136,11 @@ namespace Matkakirja
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
             // Kohdealueen paikat eivät vie näkyvän kartan paikkoja (muut rajat ilman niitä).
             // Verhon kevennys (BUILD 16): näkyvän kartan jonolle enemmän paikkoja, tausta tauolla.
-            int raja = verhot > 0 ? Math.Max(rinnakkain, VerhoRinnakkain) : rinnakkain;
+            // Löydös 171: saapumistilassa (laskeutumisesta kohdemaan näkymän valmistumiseen) sama raja kuin verhossa.
+            bool saapumistila = Saapumistila;
+            // Löydös 176: usealla portilla Cesiumin yhteyksiä on enemmän (4 × ~6), joten näkyvän jonon paikkoja on maltillisesti
+            // enemmän (LaattaPortit.NakyvaRinnakkain: 12 → 16); yhden portin tilassa ennallaan.
+            int raja = Matkakirja.SaapumisKiire.NakyvaRaja(LaattaPortit.NakyvaRinnakkain(rinnakkain, Portteja), VerhoRinnakkain, verhot > 0, saapumistila);
             // LÖYDÖS 163b (Pelikoodarin löytö, Fablen päätös 26.9.): NÄKYVÄN RUUDUN POHJALAATAT AINA ENSIN. Ennen kiirejono
             // (huntu, kerma, Sentinel) sai raja + 4 paikkaa ennen näkyvää jonoa, ja maakuntanäkymässä hunnun pyynnöt
             // nälkiinnyttivät pohjan ja maaston (kohdemaa pergamenttina, naapurit ilman huntua piirtyivät). Nyt näkyvä jono
@@ -867,7 +1156,7 @@ namespace Matkakirja
                 if (k.Esi != null && k.Esi.Peruttu) { k.Valmis.TrySetResult((499, null)); continue; }
                 // Verhon aikana kiirejonon esilatauksista vain verhon odottama (Verholle); kohdealueen Sentinel odottaa verhon
                 // lähtöä kuten kohdealueen muutkin laatat (kohdeJono) ja palaa sitten kiirejonoon (VerhoKevennys).
-                if (verhot > 0 && k.Esi != null && !k.Esi.Verholle) { tauolla.Add(k); continue; }
+                if (verhot > 0 && k.Esi != null && !k.Esi.Verholle) { k.Kiireesta = true; tauolla.Add(k); continue; }
                 StartCoroutine(LataaKiire(k));
             }
             while (verhot == 0 && kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
@@ -875,14 +1164,34 @@ namespace Matkakirja
                 if (c.Esi != null && c.Esi.Peruttu) { c.Valmis.TrySetResult((499, null)); continue; }
                 StartCoroutine(LataaKohde(c));
             }
+            // Kohdemaan saapuminen (löydös 171): näkyvän kartan vapailla paikoilla ennen muuta esilatausta, kaksi paikkaa jää
+            // näkyvälle kuten esilatausjonolla.
+            while (kaynnissa - kohdeKaynnissa < raja - 2 && jono.IsEmpty && saapumisJono.TryDequeue(out var sa))
+            {
+                if (sa.Esi != null && sa.Esi.Peruttu) { sa.Valmis.TrySetResult((499, null)); continue; }
+                if (!Matkakirja.SaapumisKiire.SaapumisPalvellaan(verhot > 0, sa.Esi != null && sa.Esi.Verholle)) { tauolla.Add(sa); continue; }
+                StartCoroutine(LataaSaapuminen(sa));
+            }
             while (kaynnissa - kohdeKaynnissa < raja - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
             {
                 if (e.Esi != null && e.Esi.Peruttu) { e.Valmis.TrySetResult((499, null)); continue; }
-                // Verhon aikana vain verhon odottama esilataus (Esilataus.Verholle); muut odottavat verhon lähtöä.
-                if (verhot > 0 && (e.Esi == null || !e.Esi.Verholle)) { tauolla.Add(e); continue; }
+                // Verhon aikana vain verhon odottama esilataus (Esilataus.Verholle); muut odottavat verhon lähtöä. Saapumistilassa
+                // samoin (löydös 171): aloitusnäytön ja muut esilataukset odottavat kohdemaan näkymää.
+                if (!Matkakirja.SaapumisKiire.EsiPalvellaan(verhot > 0, saapumistila, e.Esi != null && e.Esi.Verholle)) { tauolla.Add(e); continue; }
                 StartCoroutine(Lataa(e));
             }
-            if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
+            // Taustan esilataus (erä 2): perutut pois jonon alusta aina, uudet haut vasta kun kaikki muu on tyhjää ja rauhallista.
+            while (taustaJono.TryPeek(out var pt) && pt.Esi != null && pt.Esi.Peruttu && taustaJono.TryDequeue(out pt))
+                pt.Valmis.TrySetResult((499, null));
+            while (verhot == 0 && !saapumistila && taustaKaynnissa < TaustaPaikat && kaynnissa - kohdeKaynnissa < raja - 2 && jono.IsEmpty
+                   && kiireJono.IsEmpty && kiireKaynnissa == 0 && esiJono.IsEmpty && taustaJono.TryDequeue(out var b))
+            {
+                if (b.Esi != null && b.Esi.Peruttu) { b.Valmis.TrySetResult((499, null)); continue; }
+                StartCoroutine(LataaTausta(b));
+            }
+            // Löydös 171: ei saapumistilassa — pohjan uudelleenlataus irrottaa pohjarasterin jokaisesta laatasta (vaalea kartta),
+            // ja kohdemaassa ei ole huntua peittämässä sitä.
+            if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen && !saapumistila)
             {
                 seuraavaUusinta = Time.unscaledTime + 10f;
                 StartCoroutine(UusiVaralaatat());
@@ -923,6 +1232,22 @@ namespace Matkakirja
             kohdeKaynnissa++;
             try { yield return Lataa(h); }
             finally { kohdeKaynnissa--; }
+        }
+
+        /// <summary>Kohdemaan saapumisen haku (löydös 171: oma laskuri valmius-riveille; paikat ovat näkyvän kartan).</summary>
+        IEnumerator LataaSaapuminen(Haku h)
+        {
+            saapumisKaynnissa++;
+            try { yield return Lataa(h); }
+            finally { saapumisKaynnissa--; }
+        }
+
+        /// <summary>Taustan esilatauksen haku (erä 2: oma laskuri, enintään <see cref="TaustaPaikat"/>).</summary>
+        IEnumerator LataaTausta(Haku h)
+        {
+            taustaKaynnissa++;
+            try { yield return Lataa(h); }
+            finally { taustaKaynnissa--; }
         }
 
         /// <summary>Kiirejonon haku (163b: oma laskuri, jotta kiire ei vie näkyvän jonon paikkoja).</summary>
