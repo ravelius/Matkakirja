@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2264, teksti: 'Löydös 155: nostojen kuvamerkit kertoimesta 2,5 (#3311)' },
   { v: 2263, teksti: 'Sisältöpaketti 1.49: pikkukuva maakunnille ja m… (#3307)' },
   { v: 2262, teksti: 'Maakunnat: NLD/BEL/DNK pitka + GRC:n Commons-ku… (#3309)' },
   { v: 2261, teksti: 'Musiikkisuunnitelma vaihe 1 peliin + viimeistel… (#3304)' },
