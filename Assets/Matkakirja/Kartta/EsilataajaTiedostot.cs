@@ -116,7 +116,7 @@ namespace Matkakirja
                 catch (IOException e) { Debug.LogWarning("MATKAKIRJA esilataaja: tiedosto " + e.Message); ok = false; }
                 Debug.Log(ok ? $"MATKAKIRJA esilataaja: tiedosto {Lyhenna(osoite)} {q.responseCode} alku {alku} +{q.downloadedBytes} t ({kohta}, {ryhma})"
                              : $"MATKAKIRJA esilataaja: tiedosto {Lyhenna(osoite)} {q.responseCode} {q.error} ({kohta}, {ryhma})");
-            }, kohta);
+            }, kohta, osoite);
             if (r.Peruttu) yield break;
             if (ok) { r.Valmiit++; TiedostojaValmiina++; } else r.Virheet++;
             if (--r.Jaljella > 0) yield break;

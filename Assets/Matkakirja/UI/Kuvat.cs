@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
         {
             byte[] tavut = null;
             yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(url); q.timeout = 30; return q; }, taso, "kuva",
-                p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; });
+                p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; }, avain: url);
             esiladataan.Remove(url);
             if (tavut == null || tavut.Length < 16) yield break;
             var tyo = System.Threading.Tasks.Task.Run(() =>
@@ -153,6 +153,7 @@ namespace Matkakirja.Natiivi
             if (muisti.TryGetValue(avain, out var t) && t != null)
             {
                 VerkkoOdotus.Osuma("kuva", true);
+                Esilataaja.NakyvaPyynto(avain, true);
                 // Kiinteä (buildin mukana) ei ole LRU-järjestyksessä eikä saa joutua sinne.
                 if (tavut.ContainsKey(avain)) { jarjestys.Remove(avain); jarjestys.AddFirst(avain); }
                 valmis?.Invoke(t);
@@ -173,7 +174,7 @@ namespace Matkakirja.Natiivi
             var reitit = Reitit(tiedostoTaiUrl, kansio);
             if (reitit.Length == 0) { valmis?.Invoke(null); return; }
             string avain = reitit[0] + "@" + leveys + "x" + korkeus;
-            if (muisti.TryGetValue(avain, out var t) && t != null) { VerkkoOdotus.Osuma("kuva", true); valmis?.Invoke(t); return; }
+            if (muisti.TryGetValue(avain, out var t) && t != null) { VerkkoOdotus.Osuma("kuva", true); Esilataaja.NakyvaPyynto(reitit[0], true); valmis?.Invoke(t); return; }
             if (kesken.TryGetValue(avain, out var odottajat)) { odottajat.Add(valmis); return; }
             kesken[avain] = new List<Action<Texture2D>> { valmis };
             UiKerros.Hae().StartCoroutine(Lataa(avain, reitit, (alkup, valmisPieni) => PienennaTaustalla(alkup, leveys, korkeus, ylaAsento, px =>
@@ -336,6 +337,8 @@ namespace Matkakirja.Natiivi
             string levy = Valimuisti(reitit[0]);
             string mukana = Mukana.Polku(reitit[0]);
             VerkkoOdotus.Osuma("kuva", mukana != null || File.Exists(levy));
+            // Esilataajan mittari: kuvanäkymä on aina Nakyva-pyyntö (esilataus kulkee Esilataa → EsilataaLevylle).
+            Esilataaja.NakyvaPyynto(reitit[0], mukana != null || File.Exists(levy));
             // Löydös 63: Unity ei pura WebP:tä (kohdekarttojen miniatyyripiirrokset ovat ämpärissä vain webp:nä),
             // joten webp kulkee ImageIO-purun kautta (Natiivisepän MatkakirjaKuvat_Pura, iOS 14+).
             if (OnWebpOsoite(reitit[0]))
@@ -399,6 +402,7 @@ namespace Matkakirja.Natiivi
             // Kysely pois lokista: kehittäjän kuratointikuvien osoitteissa on avain (?avain=).
             if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0].Split('?')[0]);
             else Muista(avain, tulos, kiintea);
+            Esilataaja.NakyvaValmis(reitit[0]);
             if (kesken.TryGetValue(avain, out var odottajat))
             {
                 kesken.Remove(avain);
@@ -502,7 +506,7 @@ namespace Matkakirja.Natiivi
             while (MuistissaTavuja > MuistiRaja && jarjestys.Count > AinaMuistissa)
             {
                 string vanha = jarjestys.Last.Value;
-                if (muisti.TryGetValue(vanha, out var vt) && vt != null) UnityEngine.Object.Destroy(vt);
+                if (muisti.TryGetValue(vanha, out var vt) && vt != null && !kiinnitetyt.Contains(vt)) UnityEngine.Object.Destroy(vt);
                 Unohda(vanha);
             }
         }
@@ -534,6 +538,21 @@ namespace Matkakirja.Natiivi
         /// yhä näytti, kun lehtien isot kuvat täyttivät rajan (tuhottu tekstuuri piirtyy valkoisena). Buildin mukana
         /// tulevat pienet kuvakkeet (nostotyyppien merkit, pulu) ovat kiinteitä: muistissa koko istunnon, ei LRU:ssa.
         /// </summary>
+        static readonly HashSet<Texture2D> kiinnitetyt = new HashSet<Texture2D>();
+
+        /// <summary>
+        /// Pitää tekstuurin hengissä LRU:n karsinnassa, kunnes <see cref="Vapauta"/> (löydös 161: kohdemaan lippu, jota
+        /// Liput.Aaltoile lukee jokaisessa aaltopiirrossa kartussissa ja lipputangossa). Karsittu kiinnitetty tekstuuri
+        /// poistuu välimuistista mutta tuhotaan vasta vapautettaessa.
+        /// </summary>
+        public static void Kiinnita(Texture t) { if (t is Texture2D t2) kiinnitetyt.Add(t2); }
+
+        public static void Vapauta(Texture t)
+        {
+            if (!(t is Texture2D t2) || !kiinnitetyt.Remove(t2) || t2 == null) return;
+            if (!muisti.ContainsValue(t2)) UnityEngine.Object.Destroy(t2);
+        }
+
         static void Muista(string avain, Texture2D t, bool kiintea = false)
         {
             if (muisti.ContainsKey(avain)) Unohda(avain);
@@ -546,7 +565,7 @@ namespace Matkakirja.Natiivi
             while (MuistissaTavuja > MuistiRaja && jarjestys.Count > AinaMuistissa)
             {
                 string vanha = jarjestys.Last.Value;
-                if (muisti.TryGetValue(vanha, out var vt) && vt != null) UnityEngine.Object.Destroy(vt);
+                if (muisti.TryGetValue(vanha, out var vt) && vt != null && !kiinnitetyt.Contains(vt)) UnityEngine.Object.Destroy(vt);
                 Unohda(vanha);
             }
         }

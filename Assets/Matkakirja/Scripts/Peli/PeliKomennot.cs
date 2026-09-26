@@ -31,6 +31,8 @@
 //   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
 //   luento kaupunki|intro|lento|lento-alku|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
 //   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
+//   saapumisluenta [tila]     löydös 162: PeliOhjain.SaapumisluentaKesken (kaupunki, luento jonossa/soi, traileri,
+//                             lykätty) ja viimeisin päättyminen "kaupunki (syy)" peli-lokiin
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
 //                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
 //   aani aihe aloituslento|loppu|ratkaisu|epaonnistuminen|kaupunki <id>   musiikkiaihe ilman pelitilannetta
@@ -296,6 +298,9 @@ namespace Matkakirja.Natiivi
                         case "paalle": Puhe.Paalla = true; return null;
                         default: return "käyttö: puhe seis|ohita|pois|paalle";
                     }
+                case "saapumisluenta":
+                    if (A(1) != null && A(1) != "tila") return "käyttö: saapumisluenta [tila]";
+                    return "=" + ohjain.SaapumisluentaTila;
                 case "tila":
                 {
                     var nimi = A(1) == null ? "peli-tila.json" : "peli-tila-" + A(1) + ".json";

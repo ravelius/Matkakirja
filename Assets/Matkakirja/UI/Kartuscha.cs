@@ -237,6 +237,8 @@ namespace Matkakirja.Natiivi
         /// ({ISO3: [lon, lat]}, sisältöpaketissa <see cref="LippuAnkkuritPolku"/>); ilman ankkuria ei tankoa.
         /// Lippu on sama 1873-lipun tekstuuri kuin kartussissa.
         /// </summary>
+        Texture kiinnitettyLippu;
+
         void AsetaLipputanko(MaaTiedot m, Texture lippu)
         {
             string maa = m.Iso3;
@@ -261,7 +263,12 @@ namespace Matkakirja.Natiivi
                 string json = null;
                 yield return LinssiSisalto.Hae(LippuAnkkuritPolku, t => json = t);
                 var d = new Dictionary<string, (double, double)>();
-                if (Matkakirja.Peli.MiniJson.Jasenna(json ?? "") is Dictionary<string, object> o)
+                // Tiedosto puuttuu paketista (ennen Siirtosepän vientiä) → tyhjä: MiniJson heittää tyhjästä merkkijonosta.
+                object juuri = null;
+                if (!string.IsNullOrWhiteSpace(json))
+                    try { juuri = Matkakirja.Peli.MiniJson.Jasenna(json); }
+                    catch (FormatException e) { Debug.LogWarning("MATKAKIRJA ui lipputanko: ankkurit eivät jäsenny: " + e.Message); }
+                if (juuri is Dictionary<string, object> o)
                     foreach (var kv in o)
                         if (kv.Value is List<object> p && p.Count >= 2 && p[0] is double lon && p[1] is double lat) d[kv.Key] = (lat, lon);
                 lippuAnkkurit = d;
@@ -283,6 +290,8 @@ namespace Matkakirja.Natiivi
             lippu.style.backgroundImage = StyleKeyword.None;
             VapautaAalto();
             lippuKuva = null;
+            Kuvat.Vapauta(kiinnitettyLippu);
+            kiinnitettyLippu = null;
             lippuLiehuu = false;
             if (m.Lippu.Count > 0)
                 Kuvat.Hae(m.Lippu[0], t =>
@@ -292,6 +301,10 @@ namespace Matkakirja.Natiivi
                     lippu.style.width = lw;
                     // Elävä kartta: lippu liehuu vasta, kun maan kaikki maakunnat on löydetty (Kartuscha.Muste.cs PaivitaLippu).
                     lippuKuva = t;
+                    // Löydös 161: kohdemaan lippu kiinni Kuvissa (kartussin aalto ja lipputanko lukevat sitä jatkuvasti).
+                    Kuvat.Vapauta(kiinnitettyLippu);
+                    kiinnitettyLippu = t;
+                    Kuvat.Kiinnita(t);
                     lippuLeveys = lw;
                     PaivitaLippu();
                     AsetaLipputanko(m, t);
