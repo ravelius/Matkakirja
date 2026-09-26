@@ -1,5 +1,13 @@
 # Erikoismalli: Stonehenge (speksi, pohja docs/raportit/erikoismalli-speksi-pohja.md)
 
+## 0. ELÄMÄNIDEA
+- Stonehenge on kuuluisa auringosta: juhannusaamuna aurinko nousee kantapääkiven takaa ja säde osuu kehän keskelle.
+  Kivien ympärillä laiduntaa usein lampaita.
+- **Perusliike:** pilven varjot liukuvat hitaasti kivien yli, ja kolme lammasta siirtyy laitumella (hyvin hidas).
+- **Harvinainen (noin 1/10):** auringonnousu ja kultainen säde kehän läpi (osa 1, kohta 6).
+- **Reaktio:** lähestyttäessä lampaat nostavat päänsä ja siirtyvät. Napautus nostaa auringon heti.
+- **Yöllä:** kuunvalo, eli kivien reunat kylmän vaaleina ja tähtien heijastus. Ei omia lamppuja.
+
 ## 1. Tunniste ja paikka
 - `kohde:stonehenge`, avain `stonehenge`. Iso-Britannia, 51,1794 N, 1,8250 W, taso 1 (historia).
 

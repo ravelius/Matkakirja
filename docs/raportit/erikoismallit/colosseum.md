@@ -1,5 +1,13 @@
 # Erikoismalli: Colosseum (speksi, pohja docs/raportit/erikoismalli-speksi-pohja.md)
 
+## 0. ELÄMÄNIDEA
+- Colosseum on kuuluisa areenasta ja kankaisesta velariumista, joka suojasi yleisöä. Nykyään sen kaaret valaistaan
+  yöllä, ja kyyhkyt ja pääskyt kaartelevat seinien yllä.
+- **Perusliike:** pääskyparvi kaartelee hitaasti pohjoisseinän yllä ja laskeutuu (osa 2, kohta 6).
+- **Harvinainen (noin 1/10):** velarium avautuu aaltona (osa 1, kohta 6).
+- **Reaktio:** lähestyttäessä parvi nousee. Napautus avaa velariumin heti.
+- **Yöllä:** kaarien sisäpinnat hehkuvat lämpimästi kerros kerrallaan (kuuluisa yövalaistus).
+
 ## 1. Tunniste ja paikka
 - `kohde:colosseum`, avain `colosseum`. Italia, 41,8902 N, 12,4922 E, taso 1 (urheilu).
 

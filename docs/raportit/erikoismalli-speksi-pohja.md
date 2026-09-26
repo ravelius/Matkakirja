@@ -1,4 +1,4 @@
-# Erikoismallin speksipohja (3D-nostot, omistaja hyväksyi 22.0x)
+# Erikoismallin ja meren koristeen speksipohja (3D-nostot, omistaja hyväksyi 22.0x)
 
 *Linssiseppä 26.9.2026 Fablen tilauksesta. Omistajan kortti 22.0x: kategoriasymbolit ovat staattisia, mutta
 erikoismallit (lista: docs/raportit/arkkityypit-paletti-animaatio-20260926.md, kohta 3) animoidaan Tivolin tapaan
@@ -7,6 +7,21 @@ erikoismallit (lista: docs/raportit/arkkityypit-paletti-animaatio-20260926.md, k
 
 Jokainen erikoismalli kuvataan alla olevilla otsikoilla. Kohta, jota ei tiedetä, merkitään "AVOIN", eikä sitä
 arvata. Mallinseppä kysyy Fablelta ennen koodia.
+
+## 0. ELÄMÄNIDEA (ennen mallinnusta; omistaja hyväksyy kolme kerrallaan)
+
+- **Kolme riviä:** mikä tässä paikassa oikeasti liikkuu tai mistä se on kuuluisa. Esimerkiksi Mont-Saint-Michelissä
+  vuorovesi nousee ja laskee saaren ympärillä, Stonehengessä auringonsäde osuu kiviin harvoin, ja Geysir purkautuu
+  satunnaisesti.
+- **Kolme kerrosta:**
+  1. **Perusliike:** hidas, aina käynnissä Tivolin tapaan (käynti, tauko ja vaihtelu).
+  2. **Harvinainen tapahtuma:** noin joka kymmenes jakso. Kohteen kuuluisin hetki.
+  3. **Reaktio pelaajaan:** kun kamera lähestyy (alle noin 60 km), kohde herää, eli perusliike vilkastuu tai alkaa.
+     Napautus käynnistää harvinaisen tapahtuman heti (enintään kerran 20 s:ssa).
+- **Valot yöllä:** jos kartan yövalot ovat päällä (Black Marble ja terminaattori), kohteessa on hillitty lämmin hehku
+  (valaisematon, ei bloomia). Syttyminen kestää 1,5 s.
+- **Laatukynnys:** tunnistaa sekunnissa, hymyilyttää eikä häiritse karttaa. Jos yksikin ehto ei täyty, ideaa ei
+  mallinneta.
 
 ## 1. Tunniste ja paikka
 - Noston tunnus (esim. `kohde:colosseum`) ja Symbolimallit-avain (tunnuksen loppu, esim. `colosseum`).

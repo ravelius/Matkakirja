@@ -1,5 +1,14 @@
 # Erikoismalli: Mont-Saint-Michel (speksi, pohja docs/raportit/erikoismalli-speksi-pohja.md)
 
+## 0. ELÄMÄNIDEA
+- Mont-Saint-Michel on kuuluisa vuorovedestä: meri nousee hiekkasärkkien yli "laukkaavan hevosen nopeudella" ja
+  tekee saaresta hetkeksi saaren. Luostari kohoaa vedestä kuin laiva.
+- **Perusliike:** vesi nousee ja laskee hitaasti saaren ympärillä (osa 1, kohta 6).
+- **Harvinainen (noin 1/10):** kevätvuoksi, jossa nousu kestää 5 s eikä 14 s, ja vaahtoviiva kiertää saaren. Sen
+  jälkeen Mikael-patsas hehkuu.
+- **Reaktio:** lähestyttäessä vesi alkaa nousta, jos se oli matalalla. Napautus käynnistää kevätvuoksen.
+- **Yöllä:** saaren ja luostarin lämmin valaistus, ikkunat ja muurit hehkuvat hillitysti (kuuluisa yönäkymä).
+
 ## 1. Tunniste ja paikka
 - `kohde:mont-saint-michel`, avain `mont-saint-michel`. Ranska, 48,6352 N, 1,5100 W, taso 1 (kulttuuri).
 
