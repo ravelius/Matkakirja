@@ -8,7 +8,7 @@ Edellinen: -f.md. Löydöslista: docs/raportit/omistajan-loydokset-b13-20260925.
 - **BUILD 17** = proto-master **6a65ead1** (merge juna/b13 d04841a0; puu 6648d8e9 = käännös 6fd19114) = TF **1.0.17**
   (Fablen päätös: lähtee sellaisenaan; Laitetestaajan lepopiirto-FAIL ja löydös 143 build 18:aan). SHA lähetetty Fablelle
   ja Julkaisijalle (pyydetty merkitsemään yo-testflight-viimeisin).
-- **BUILD 18 -juna** juna/b13 **99eaf8d9** (koemerge: unity-tarkistus 0 virhettä, testit Kartta 278 / Peli 279 / Linssit 259):
+- **BUILD 18 -juna** juna/b13 **99bf0fe5** (99eaf8d9 + Linssisepän esilataus 05e54878, ihmisen-matka-2 2850ac37 (II 5, 148/151/152), pariteettiaanet c46ff6e6; testit 278/279/300) (koemerge: unity-tarkistus 0 virhettä, testit Kartta 278 / Peli 279 / Linssit 259):
   linssiseppa/radio-esikuuntelu 9434b244, pelikoodari/loydos149 0e534bef (+ vieritys 059f7709), pelikoodari/tehoste-rekisteri
   ba1547ba, siirtoseppa/paketti-paivitys 99f049ec (simulaattoriloki lokit/siirtoseppa-paketti-paivitys-20260926.txt).
 
@@ -52,7 +52,7 @@ Edellinen: -f.md. Löydöslista: docs/raportit/omistajan-loydokset-b13-20260925.
 
 ## Jono (build 18)
 
-Linssisepän esilataus 05e54878 (odottaa simulaattorilukuja), II 148/151/152; Pelikoodarin elava-kartta; omat 1–3 yllä;
+Pelikoodarin elava-kartta; omat 1–3 yllä;
 verhokoe; napakansi; Elävän kartan pallon rajapinnat. Omistajan valinnat 127/128 odottavat yhä (ks. -f).
 
 ## Käytännöt
