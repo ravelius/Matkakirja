@@ -6255,3 +6255,7 @@ Sessio id säilyy (local_593b89a1).
 ## BUILD 17 PROTO-MASTERISSA 6a65ead1 (= juna d04841a0 = KAANNOS 6fd19114, PUU 6648d8e9); BUILD 18 -HAARAT: 132 PALLOPUOLI sumea-132 9e6c488a, 144 LIPUT liput-144 8324a291 (KOEVIDEO ENNEN TUOTANTOA), suspendUpdate lepo-suspend 651ad27b; VERHO: PITAJA ON PALLO (KATTO 39–64 %), PAAEPAILTY S2:N LUONTI VERHON TAKANA → KOE HUNTU POIS (26.9.2026 klo 04.05)
 
 Uusi Fable jatkaa.
+
+## LINSSISEPPA: II 151/152/148 + PARITEETTIAANET TODENNETTU JA MERGE-PYYNNOSSA BUILD 18 -JUNAAN (linssiseppa/ihmisen-matka-2 2850ac37 273/273, linssiseppa/pariteettiaanet c46ff6e6 269/269; MEDIA proto-3d/lokit/linssiseppa-im2-aanet-20260926/omistajalle/ LAHETETTY OMISTAJALLE); HUMINA RMS 0,042, PELIKOODARIN HUOMIOT (KOMPRESSORI +6,4 dB, HAIVYTYS 1,8 vs 0,6 s) VALITETTY; ESILATAUS TOPOGRAFIA 5,7 → 1,8 s; RADION A/B-MITTAUS UUSIKSI (SKRIPTIVIRHE) (26.9.2026 klo 04.12)
+
+Fable kuittasi 04.1x. Build 17 koottiin ennen näitä; Natiiviseppä mergeää build 18 -junaan. Elävä kartta odottaa omistajan arviota aamun kortissa.
