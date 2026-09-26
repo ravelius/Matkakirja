@@ -3,7 +3,7 @@
 // js/kaupunkimusiikki.js (kaupunginAlue, kaupunginRaidat) puhtaana C#:na.
 //
 // Ketju parhaasta alkaen: tilat (TILARAIDAT-järjestys) → paikkaraita (etusivu) → kaupungin oma
-// kappale → alueen raita → pohjavire; duplikaatit pois. Soitin ottaa ensimmäisen, jota ei ole
+// kappale → alueen raita → maanosan raita (vaihe 2, alueraidan varareitti) → pohjavire; duplikaatit pois. Soitin ottaa ensimmäisen, jota ei ole
 // todettu puuttuvaksi. Kultainen jälki (jäljet 1–4) vartioi kaikki 266 kaupunkia.
 using System;
 using System.Collections.Generic;
@@ -24,17 +24,41 @@ namespace Matkakirja.Peli
             return null;
         }
 
-        /// <summary>Webin musiikkiketju(cityId, maa) tilajoukolla <paramref name="tilat"/> (tuntemattomat nimet ohitetaan).</summary>
-        public List<string> Ketju(IEnumerable<string> tilat, string paikka, string maa)
+        /// <summary>
+        /// Webin kaupunginMaanosa (musiikkisuunnitelma vaihe 2): alueen maanosa (ALUEEN_MAANOSA), jos
+        /// kaupungilla on musiikkialue; muuten maan maanosa (MAAN_MAANOSA); muuten null.
+        /// </summary>
+        public string Maanosa(string kaupunki, string maa)
+        {
+            var alue = Alue(kaupunki, maa);
+            if (alue != null) return t.AlueenMaanosa.TryGetValue(alue, out var a) ? a : null;
+            if (!string.IsNullOrEmpty(maa) && t.MaanMaanosa.TryGetValue(maa, out var b)) return b;
+            return null;
+        }
+
+        /// <summary>
+        /// Webin musiikkiketju(cityId, maa) tilajoukolla <paramref name="tilat"/> (tuntemattomat nimet ohitetaan).
+        /// <paramref name="visaSoi"/> = webin visaSoi-lippu (vaihe 2): VisanAlleJaavat-tilat (kohtaaminen) odottavat.
+        /// </summary>
+        public List<string> Ketju(IEnumerable<string> tilat, string paikka, string maa, bool visaSoi = false)
         {
             var paalla = new HashSet<string>(tilat ?? Array.Empty<string>());
             var polut = new List<string>();
             void Lisaa(string p) { if (p != null && !polut.Contains(p)) polut.Add(p); }
-            foreach (var (nimi, tunnus) in t.Tilaraidat) if (paalla.Contains(nimi)) Lisaa(t.MusaPolku(tunnus));
+            foreach (var (nimi, tunnus) in t.Tilaraidat)
+            {
+                if (!paalla.Contains(nimi)) continue;
+                // Visan aikana kohtaaminen odottaa (web VISA VOITTAA KOHTAAMISEN).
+                if (visaSoi && t.VisanAlleJaavat.Contains(nimi)) continue;
+                Lisaa(t.MusaPolku(tunnus));
+            }
             if (!string.IsNullOrEmpty(paikka) && t.Paikkaraidat.TryGetValue(paikka, out var pt)) Lisaa(t.MusaPolku(pt));
             if (!string.IsNullOrEmpty(paikka) && t.Kaupunkiraidat.Contains(paikka)) Lisaa(t.MusaPolku("musa-kaupunki-" + paikka));
             var alue = Alue(paikka, maa);
             if (alue != null && t.Alueraidat.Contains(alue)) Lisaa(t.MusaPolku("musa-kaupunki-" + alue));
+            // Maanosaraita alueraidan varareittinä (vaihe 2): kuuluu, kun alueraitaa ei ole tai se puuttuu (404).
+            var maanosa = Maanosa(paikka, maa);
+            if (maanosa != null && t.Maanosaraidat.Contains(maanosa)) Lisaa(t.MusaPolku("musa-maanosa-" + maanosa));
             Lisaa(t.MusaPolku(t.Pohjaraita));
             return polut;
         }

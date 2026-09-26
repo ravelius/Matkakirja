@@ -174,7 +174,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, k.Tapahtumia, "lataus kesken: ei mitään");
             k.Koukut.Paivita(new Aanitilanne { Valmis = true, Aloitus = true });
             Oleta.Sama(1, k.Tapahtumia, "etusivu");
-            Oleta.Tosi(k.Url(Kanava.Pohja).Contains("musa-etusivu"), k.Url(Kanava.Pohja));
+            Oleta.Tosi(k.Url(Kanava.Pohja).Contains("musa-johtoaihe"), k.Url(Kanava.Pohja));
             Oleta.Tosi(k.Url(Kanava.Maisema) != null, "lentoaseman maisema");
             k.Koukut.Paivita(new Aanitilanne { Valmis = true, Aloitus = true });
             Oleta.Sama(1, k.Tapahtumia, "sama tilanne: ei kutsua");

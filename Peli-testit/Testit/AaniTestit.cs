@@ -40,7 +40,12 @@ namespace Matkakirja.Peli.Testit
                 if (r[2] is string maa) t.Maat[id] = maa;
             }
             t.LueKaupunkiEhdokkaat(O(V["kaupunkiEhdokkaat"]));
-            if (paketinKorit) t.LueAanitaulut(File.ReadAllText(Path.Combine(KultaisetApu.Paketti, "aanitaulut.json")));
+            if (paketinKorit)
+            {
+                t.LueAanitaulut(File.ReadAllText(Path.Combine(KultaisetApu.Paketti, "aanitaulut.json")));
+                // Koepaketti v30 on musiikkisuunnitelmaa vanhempi (etusivu = musa-etusivu); jälki on webin nykyinen.
+                t.Paikkaraidat = AaniTaulut.Oletus().Paikkaraidat;
+            }
             return t;
         }
 
@@ -91,6 +96,19 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(Yhdista(O(V["oletuskorit"]).Select(p => p.Key + "=" + Yhdista(Tekstit(p.Value)))),
                 Yhdista(t.Oletuskorit.Select(p => p.Key + "=" + Yhdista(p.Value))), "OLETUSKORIT");
             Oleta.Sama((float)MiniJson.Luku(V, "master").Value, Tehostetaulu.Master, "MASTER_PERUSTASO");
+            // Musiikkisuunnitelma vaihe 2: maanosat, maanosaraidat, saapumistunnukset, visan alle jäävät, matkan aiheet.
+            Oleta.Sama(Yhdista(Tekstit(V["maanosat"])), Yhdista(AaniTaulut.Maanosat), "MAANOSAT");
+            string Taulu(IEnumerable<KeyValuePair<string, string>> d) => Yhdista(d.Select(p => p.Key + "=" + p.Value).OrderBy(x => x, StringComparer.Ordinal));
+            Oleta.Sama(Taulu(O(V["alueenMaanosa"]).Select(p => new KeyValuePair<string, string>(p.Key, p.Value as string))), Taulu(t.AlueenMaanosa), "ALUEEN_MAANOSA");
+            Oleta.Sama(Taulu(O(V["maanMaanosa"]).Select(p => new KeyValuePair<string, string>(p.Key, p.Value as string))), Taulu(t.MaanMaanosa), "MAAN_MAANOSA");
+            Oleta.Sama(Yhdista(Tekstit(V["maanosaraidat"]).OrderBy(x => x, StringComparer.Ordinal)), Yhdista(t.Maanosaraidat.OrderBy(x => x, StringComparer.Ordinal)), "MAANOSARAIDAT");
+            Oleta.Sama(Taulu(O(V["saapumistunnukset"]).Select(p => new KeyValuePair<string, string>(p.Key, p.Value as string))), Taulu(t.Saapumistunnukset), "SAAPUMISTUNNUKSET");
+            Oleta.Sama(Yhdista(Tekstit(V["visanAlleJaavat"])), Yhdista(t.VisanAlleJaavat), "VISAN_ALLE_JAAVAT");
+            var aiheet = O(V["matkanAiheet"]);
+            Oleta.Sama(MiniJson.Teksti(aiheet, "aloituslento"), t.AloituslentoAihe, "aloituslento");
+            Oleta.Sama(MiniJson.Teksti(aiheet, "loppu"), t.LoppuAihe, "loppu");
+            Oleta.Sama(MiniJson.Teksti(aiheet, "ratkaisu"), t.RatkaisuAihe, "ratkaisu");
+            Oleta.Sama(MiniJson.Teksti(aiheet, "epaonnistuminen"), t.EpaonnistuminenAihe, "epaonnistuminen");
         }
 
         [Testi] static void PaketinAanitaulutKutenWeb()
@@ -102,7 +120,8 @@ namespace Matkakirja.Peli.Testit
             var korit = t.LueAanitaulut(File.ReadAllText(Path.Combine(KultaisetApu.Paketti, "aanitaulut.json")));
             Oleta.Sama(270, korit, "maisemakori-rivejä (266 kaupunkia + 4 virtuaalipaikkaa)");
             Oleta.Sama(Yhdista(oletus.Tilaraidat.Select(r => r.Nimi + "=" + r.Tunnus)), Yhdista(t.Tilaraidat.Select(r => r.Nimi + "=" + r.Tunnus)));
-            Oleta.Sama(Yhdista(oletus.Paikkaraidat.Select(r => r.Key + "=" + r.Value)), Yhdista(t.Paikkaraidat.Select(r => r.Key + "=" + r.Value)));
+            // Koepaketti v30 on musiikkisuunnitelmaa vanhempi: etusivun raita on vielä musa-etusivu (web #3304: musa-johtoaihe).
+            Oleta.Sama("[etusivu=musa-etusivu]", Yhdista(t.Paikkaraidat.Select(r => r.Key + "=" + r.Value)), "koepaketin paikkaraidat");
             Oleta.Sama(oletus.Pohjaraita, t.Pohjaraita);
             Oleta.Sama(oletus.AarreTavallinen, t.AarreTavallinen);
             Oleta.Sama(oletus.AarrePaa, t.AarrePaa);
@@ -117,7 +136,9 @@ namespace Matkakirja.Peli.Testit
             {
                 var k = MiniJson.Teksti(o, "kaupunki");
                 maat.TryGetValue(k, out var maa);
-                Oleta.Sama(Yhdista(Tekstit(o["ketju"])), Yhdista(valitsin.Ketju(null, k, maa)), k);
+                // Koepaketti v30 on vaihetta 2 vanhempi: sen ketjuissa ei ole maanosaraitaa (musa-maanosa-*),
+                // joka tulee alueraidan jälkeen. Muu ketju on sama (MusiikkiVaihe2Testit vartioi maanosan paikan).
+                Oleta.Sama(Yhdista(Tekstit(o["ketju"])), Yhdista(valitsin.Ketju(null, k, maa).Where(p => !p.Contains("/musa-maanosa-"))), k);
                 ketjuja++;
             }
             Oleta.Sama(266, ketjuja, "musiikkiketjuja");
@@ -134,10 +155,12 @@ namespace Matkakirja.Peli.Testit
             foreach (var joukko in L(Jalki["ketjut"]).Select(O))
             {
                 var tilat = Tekstit(joukko["tilat"]);
+                // Vaihe 2: visaSoi-joukot (web asetaVisaSoi) — kohtaaminen odottaa visan alla.
+                bool visaSoi = MiniJson.Totuus(joukko, "visaSoi");
                 foreach (var r in L(joukko["rivit"]).Select(L))
                 {
-                    var ketju = valitsin.Ketju(tilat, r[0] as string, r[1] as string);
-                    Oleta.Sama(Yhdista(Tekstit(r[2])), Yhdista(ketju), $"{Yhdista(tilat)} {r[0]} {r[1]}");
+                    var ketju = valitsin.Ketju(tilat, r[0] as string, r[1] as string, visaSoi);
+                    Oleta.Sama(Yhdista(Tekstit(r[2])), Yhdista(ketju), $"{Yhdista(tilat)} visa {visaSoi} {r[0]} {r[1]}");
                     n++;
                 }
             }
@@ -158,7 +181,11 @@ namespace Matkakirja.Peli.Testit
         {
             var valitsin = new Musiikkivalitsin(AaniTaulut.Oletus());
             foreach (var r in L(Jalki["alueet"]).Select(L))
+            {
                 Oleta.Sama(r[2] as string, valitsin.Alue(r[0] as string, r[1] as string), $"{r[0]} {r[1]}");
+                // Vaihe 2: neljäs sarake kaupunginMaanosa.
+                Oleta.Sama(r[3] as string, valitsin.Maanosa(r[0] as string, r[1] as string), $"maanosa {r[0]} {r[1]}");
+            }
         }
 
         static double JsLukuJaljesta(object o) => o switch
@@ -437,7 +464,8 @@ namespace Matkakirja.Peli.Testit
             string Aihe() => tila.Toive(Kanava.Aarre).Url;
 
             tila.UusiKaupunki("lontoo");
-            Oleta.Sama(null, Aihe(), "Brittein saarilla ei tunnusta vaiheessa 1");
+            Oleta.Tosi(Aihe()?.Contains("musa-saapuminen-lansi-eurooppa-lyria.mp3") == true, "vaihe 2: Länsi-Euroopan tunnus");
+            tila.AarreLoppui();
             tila.UusiKaupunki("ateena");
             Oleta.Tosi(Aihe()?.Contains("musa-saapuminen-valimeri-lyria.mp3") == true, "Välimeren tunnus");
             Oleta.Tosi(tila.AiheSoi, "aihe soi");
