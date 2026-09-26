@@ -40,6 +40,7 @@ test('GRC: rivit ovat skeeman mukaisia (lyhyt, sijainti, tyyppi, maakunta)', () 
     assert.equal(`GRC:${r.maakunta}`, avain, `${id}: maakunta-kenttä ei täsmää`);
     assert.ok(TYYPIT.includes(r.tyyppi), `${id}: tyyppi ${r.tyyppi}`);
     assert.ok(r.lyhyt.length > 0 && r.lyhyt.length <= 160, `${id}: lyhyt ${r.lyhyt.length} merkkiä`);
+    assert.ok(r.nimio && r.nimio.length <= 18, `${id}: nimio ${r.nimio?.length} merkkiä (raja 18, pääkartan nimiö)`);
     assert.ok(r.lat >= 34 && r.lat <= 42, `${id}: lat ${r.lat}`);
     assert.ok(r.lng >= 19 && r.lng <= 30, `${id}: lng ${r.lng}`);
     for (const k of ['nimi', 'teksti', 'nappi', 'lahde', 'miksiSalaisuus']) {

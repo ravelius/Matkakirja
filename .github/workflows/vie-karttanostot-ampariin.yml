@@ -1,0 +1,86 @@
+# Vie karttanostokuvat Macin levyltä ämpäriin (karttanostot/<pvm>/).
+#
+# Fablen päätös 26.9.2026 (löydös 149): 288 karttanostokuvaa puuttui ämpäristä.
+# Kuvat viedään tällä käsin ajettavalla työnkululla Actions-secreteillä
+# (kuten vaihda-pyramidi-osoitin.yml), ei sessioiden avaimilla eikä toisen
+# roolin kautta. Lähde on vain /Users/Shared/Claude/siirto-sisaltokirjuri/
+# -kansion alla (Sisältökirjurin siirtokansio).
+#
+# Säännöt: oletuksena KUIVA-AJO (listaa, mitä vietäisiin); olemassa olevaa
+# tiedostoa EI ylikirjoiteta (ämpärissä jo olevat ohitetaan); vain .jpg-kuvat,
+# content-type image/jpeg ja muuttumaton välimuisti (nimessä SHA-8).
+# Yhteenvetoon lukumäärät ja sha256-lista.
+
+name: Vie karttanostot ämpäriin
+
+on:
+  workflow_dispatch:
+    inputs:
+      kansio:
+        description: 'Lähdekansio Macilla, vain /Users/Shared/Claude/siirto-sisaltokirjuri/ alta (esim. /Users/Shared/Claude/siirto-sisaltokirjuri/karttanostot-20260921)'
+        type: string
+        required: true
+      pvm:
+        description: 'Kohde karttanostot/<pvm>/ (esim. 20260921)'
+        type: string
+        required: true
+      kuiva:
+        description: 'Kuiva-ajo: vain listaus, ei kirjoitusta ämpäriin'
+        type: boolean
+        default: true
+
+concurrency:
+  group: vie-karttanostot
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 30
+    env:
+      AMPARI: ${{ secrets.R2_BUCKET }}
+      PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      KANSIO: ${{ inputs.kansio }}
+      PVM: ${{ inputs.pvm }}
+      KUIVA: ${{ inputs.kuiva }}
+    steps:
+      - name: Vie puuttuvat kuvat
+        run: |
+          set -euo pipefail
+          PATH="/opt/homebrew/bin:$PATH"
+          case "$PVM" in *[!0-9]*|'') echo "::error::pvm saa sisältää vain numeroita"; exit 1 ;; esac
+          juuri=/Users/Shared/Claude/siirto-sisaltokirjuri
+          k=$(cd "$KANSIO" 2>/dev/null && pwd -P) || { echo "::error::kansiota ei ole: $KANSIO"; exit 1; }
+          case "$k/" in "$(cd $juuri && pwd -P)/"*) ;; *) echo "::error::kansio ei ole $juuri alla"; exit 1 ;; esac
+          kohde="karttanostot/$PVM"
+          # Ämpärissä jo olevat nimet (ei ylikirjoitusta).
+          aws s3 ls "s3://$AMPARI/$kohde/" --endpoint-url "$PAATE" | awk '{print $4}' | sort > olemassa.txt || true
+          : > viety.txt; : > ohitettu.txt
+          for f in "$k"/*.jpg; do
+            [ -e "$f" ] || continue
+            n=$(basename "$f")
+            case "$n" in *[!A-Za-z0-9._-]*) echo "::warning::ohitettu nimi $n"; continue ;; esac
+            if grep -qxF "$n" olemassa.txt; then echo "$n" >> ohitettu.txt; continue; fi
+            echo "$(shasum -a 256 "$f" | cut -d' ' -f1)  $n" >> viety.txt
+            if [ "$KUIVA" != "true" ]; then
+              aws s3 cp "$f" "s3://$AMPARI/$kohde/$n" --endpoint-url "$PAATE" \
+                --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable' \
+                --no-progress >/dev/null
+            fi
+          done
+          {
+            echo "## Karttanostot → $kohde"
+            echo
+            [ "$KUIVA" = "true" ] && echo "**KUIVA-AJO** — mitään ei kirjoitettu."
+            echo "- Lähde: \`$k\`"
+            echo "- Vietäviä: $(wc -l < viety.txt | tr -d ' '), jo ämpärissä (ohitettu): $(wc -l < ohitettu.txt | tr -d ' ')"
+            echo
+            echo '```'
+            cat viety.txt
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"

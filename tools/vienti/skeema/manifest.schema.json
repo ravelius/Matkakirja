@@ -20,6 +20,11 @@
       "type": "array",
       "items": { "type": "object", "required": ["nimi", "tiedosto", "lahde", "lkm", "sha256", "tavuja"] }
     },
+    "kaupunkilehdetKaupungeittain": {
+      "type": "array",
+      "description": "Skeema 1.48: kaupunkilehdet kaupungeittain, kokoelmat/kaupunkilehdet/<id>.json (kokoelmamuoto, yksi alkio).",
+      "items": { "type": "object", "required": ["id", "tiedosto", "sha256", "tavuja"] }
+    },
     "webNakymat": {
       "type": "array",
       "description": "Web-näkymien riippuvuuslistat (skeema 1.3), ks. web-nakyma.schema.json",
