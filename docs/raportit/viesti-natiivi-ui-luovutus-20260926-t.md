@@ -73,3 +73,6 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   (Sano blink-eleellä ei palauta pulua väistöstä; ehdotus LopetaKarttavaisto Sanoon + KartanEleAlkoi palaa kun PuluPuhuu).
   Kuvasarjat proto-3d/lokit/natiivi-ui-pulu-karttavaisto/. Raportti Fablelle+Natiivisepälle. iPad Pro 11:ssä nyt tämä asennus.
   Oppi: vähennetty liike simulaattorissa: simctl spawn <UDID> defaults write app.matkakirja.proto3d matkakirja-kartan-liike -string 0.
+- 18.5x Fablen käskystä blink-korjaus suoraan PR-haaraan proto/natiivi-ui/pulu-karttavaisto-20260926 @ c39797f9 (Sano →
+  LopetaKarttavaisto; väistön esto puheessa oli jo Rauhallinen()-ehdossa). Todennettu 1bb07c50, PR-kommentti #issuecomment-5847662240.
+  Merge-pyyntö Natiivisepälle 1.0.26. Paikallinen haara natiivi-ui/pulu-karttavaisto (wt/proto-natiivi-ui-nostot).
