@@ -120,3 +120,12 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   ottaa uuden sisältöversion käyttöön VAIN seuraavassa käynnistyksessä; "sisältö vaihtui" -tapahtumaa ei ole. Latausta kesken istunnon
   ei voi tehdä UI:ssa ennen kuin Siirtoseppä lisää version vaihdon kesken istunnon + tapahtuman (suunnittelupäätös Fablelle/omistajalle).
   UI-puoli sen jälkeen: MaakuntaTiedot/Maakunnat luonnehdinnat, NostoSisalto-kokoelmat ja Kuvat-välimuisti tyhjiksi tapahtumasta.
+- 21.2x löydös 177 (Uusi peli, P1, Pelikoodarin kanssa): TOISTETTU simulaattorissa (proto-3d/lokit/natiivi-ui-loydos177/: valikko →
+  vahvistus → aloitusnäyttö toimii). Löydös: Paavalikko.KysyUusiPeli → Asetukset.Nollaa poistaa vain Kytkin- ja Voima-avaimet; UI:n
+  muut PlayerPrefsit jäävät (mm. matkakirja-karttatyokalu-maakunta, -maakunnat-pois, -karttaselite-valilehti, -aihemerkit,
+  -laukku-tilastot, -tilastot-jarjestys/-nakyma, -pollo-poiminnat/-aani, -reaktiojono/-aanet, -livia-avaus/-paljastus, -ui-skaala,
+  -ehdotus-avain, -kuljettu-reitti). Web tyhjennaMuistit (js/main.js:1432) poistaa KAIKKI matkakirja*-avaimet paitsi
+  SAILYVAT_ASETUKSET (kehittaja, pollo-kehittajakoodi, puhe-*) ja lataa sivun uudelleen. Ehdotus: UiNollaus-lista (sama joukko,
+  natiivi-versio ja dev-avaimet säilyvät) + muistissa olevien tilojen nollaus (Maakunnat, Karttaselite, Kartuscha, Matkalaukku,
+  Pulu ensisaapuminen). EI ALOITETTU koodia: tarvitaan Pelikoodarin nollauslista (tallennus) ja omistajan "ei ala oikein" -tarkennus
+  (viestiraja esti kysymisen).
