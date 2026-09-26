@@ -43,6 +43,8 @@ namespace Matkakirja.Natiivi
 
         Aanisoitin aanisoitin;
         bool introSoi, kysymysAukiAanille, aanitaulutValmiit;
+        /// <summary>Matka.Saapui kirjasi kaupungin ensimmäistä kertaa; tunnus soi, kun kamera on perillä.</summary>
+        string uusiKaupunki;
         float aanitaulutAlkoi = -1f;
         /// <summary>Äänitaulujen odotus ensimmäisellä käynnistyksellä, ennen kuin paikka lähtee ilman niitä.</summary>
         const float AanitaulujenOdotusS = 3f;
@@ -82,7 +84,14 @@ namespace Matkakirja.Natiivi
                 Ilmoita(IntroLoppui);
                 koukut.IntroLoppui();
             };
-            MatkaPerilla += kaupunki => koukut.MatkaPerilla(kaupunki);
+            MatkaPerilla += kaupunki =>
+            {
+                koukut.MatkaPerilla(kaupunki);
+                // Musiikkisuunnitelma vaihe 1: saapumistunnus vain ensimmäisellä käynnillä (Matka.Saapui uusi).
+                if (kaupunki != null && kaupunki == uusiKaupunki) aanisoitin?.Tila.UusiKaupunki(kaupunki);
+                uusiKaupunki = null;
+            };
+            AloituslentoAlkoi += _ => aanisoitin?.Tila.AloituslentoAlkoi();
             if (puhe != null) puhe.Puhuu += koukut.Puhe;
             if (lehtiNakyma != null)
             {
