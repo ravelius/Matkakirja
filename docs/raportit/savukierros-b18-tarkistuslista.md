@@ -13,3 +13,10 @@ Build 1.0.17 lähti proto_ref d04841a0. Tämä lista koskee build 18:aa. Kuvat P
 5. iPadin ☰ Tekstitys-kytkin + soitin (ei ajettu b17:ssä).
 Muistutus: UITK-napit kuvasta; `siirto`-avain aina peli-tila.jsonista;
 Documents-polku vaihtuu ensikäynnistyksessä — odota bootstatus, käynnistä sovellus, hae polku uudelleen.
+
+## Natiivisepän tieto (26.9.)
+- Lepopiirto-FAIL: idle-syke EI ole syy. "Lepo (ui)" = UiRauhassa on epätosi (UI ei ole
+  rauhassa), pallo itse lepää → ehto riippuu UI-rauhasta; vartijassa tarkista `ruutu`-tila
+  ja että UI on rauhassa (ei avoimia paneeleja/animaatioita) ennen mittausta.
+  Lepopiirto + 143 ohjattu Natiivi-UI:lle build 18:aan.
+- BUILD 17 masterissa 6a65ead1. Build 18 -juna 99eaf8d9 sisältää loydos149:n ja vierityksen.
