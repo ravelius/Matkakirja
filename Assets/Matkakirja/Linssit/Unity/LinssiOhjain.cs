@@ -241,44 +241,70 @@ namespace Matkakirja.Natiivi
             // enintään LammitysMs työtä (vähintään yksi merkki, jotta työ etenee).
             float odotusAlku = Time.realtimeSinceStartup;
             while (Aloitusverho.Nakyvissa && Time.realtimeSinceStartup - odotusAlku < 60f) yield return null;
-            float t1 = Time.realtimeSinceStartup, pisin = 0;
+            float t1 = Time.realtimeSinceStartup, pisinLisays = 0, pisinJasennys = 0, suurinMerkki = 0, suurinPala = 0;
             int kehyksia = 0;
             // Ajo 4 (24.9.): kustannus syntyy jokaisesta UUDESTA merkistä dynaamiseen atlakseen (glyfin rasterointi +
             // OpenType-tietueet), joten koko nimien merkistö lisätään ennalta (TryAddCharacters) merkki kerrallaan.
+            // Natiiviseppä 26.9. b24-lammin: pisin työ kerran 5,6 ms. Raja on nyt ennakoiva: seuraava merkki (tai pala)
+            // aloitetaan vain, jos tähänastinen työ + kallein yksittäinen merkki (pala) mahtuu LammitysMs:iin.
             var puuttuu = new System.Text.StringBuilder();
             int i = 0;
             while (i < Merkisto.Length)
             {
-                float alku = Time.realtimeSinceStartup;
+                float alku = Time.realtimeSinceStartup, kulunut;
                 do
                 {
+                    float m0 = Time.realtimeSinceStartup;
                     if (!fontti.TryAddCharacters(Merkisto.Substring(i, 1), out string p)) puuttuu.Append(p);
                     i++;
-                } while (i < Merkisto.Length && (Time.realtimeSinceStartup - alku) * 1000f < LammitysMs);
-                pisin = Mathf.Max(pisin, (Time.realtimeSinceStartup - alku) * 1000f);
+                    suurinMerkki = Mathf.Max(suurinMerkki, (Time.realtimeSinceStartup - m0) * 1000f);
+                    kulunut = (Time.realtimeSinceStartup - alku) * 1000f;
+                } while (i < Merkisto.Length && kulunut + suurinMerkki < LammitysMs);
+                pisinLisays = Mathf.Max(pisinLisays, kulunut);
                 kehyksia++;
                 yield return null;
             }
-            // Jäsennys (OpenType-tietueet) paloina näkymättömällä tekstillä ruudun ulkopuolella, 16 merkkiä kehyksessä.
+            // Jäsennys (OpenType-tietueet) JasennysPala merkin paloina näkymättömällä tekstillä ruudun ulkopuolella.
             var go = new GameObject("Fonttilämmitys");
             go.transform.position = new Vector3(0, -1e7f, 0);
             var t0 = go.AddComponent<TMPro.TextMeshPro>();
             t0.font = fontti;
-            for (int k = 0; k < Merkisto.Length; k += 16)
+            // Ensimmäinen jäsennys lataa fontin OpenType-taulut kerran (ei pilkottavissa): se tehdään yhdellä merkillä omassa
+            // kehyksessään ja kirjataan erikseen (kylmä käynnistys b24-kylma: pisin 6,2–6,3 ms, todennäköisesti tämä).
+            float ensimmainen = Time.realtimeSinceStartup;
+            t0.text = Merkisto.Substring(0, 1);
+            t0.ForceMeshUpdate(true, true);
+            ensimmainen = (Time.realtimeSinceStartup - ensimmainen) * 1000f;
+            kehyksia++;
+            yield return null;
+            int k = 1;
+            while (k < Merkisto.Length)
             {
-                float alku = Time.realtimeSinceStartup;
-                t0.text = Merkisto.Substring(k, Math.Min(16, Merkisto.Length - k));
-                t0.ForceMeshUpdate(true, true);
-                pisin = Mathf.Max(pisin, (Time.realtimeSinceStartup - alku) * 1000f);
+                float alku = Time.realtimeSinceStartup, kulunut;
+                do
+                {
+                    float p0 = Time.realtimeSinceStartup;
+                    t0.text = Merkisto.Substring(k, Math.Min(JasennysPala, Merkisto.Length - k));
+                    t0.ForceMeshUpdate(true, true);
+                    k += JasennysPala;
+                    suurinPala = Mathf.Max(suurinPala, (Time.realtimeSinceStartup - p0) * 1000f);
+                    kulunut = (Time.realtimeSinceStartup - alku) * 1000f;
+                } while (k < Merkisto.Length && kulunut + suurinPala < LammitysMs);
+                pisinJasennys = Mathf.Max(pisinJasennys, kulunut);
                 kehyksia++;
                 yield return null;
             }
             Destroy(go);
             string puuttuvat = puuttuu.ToString();
             Kirjaa($"fonttilämmitys: {Merkisto.Length} merkkiä verhon jälkeen (odotus {(t1 - odotusAlku) * 1000:F0} ms), " +
-                $"{(Time.realtimeSinceStartup - t1) * 1000:F0} ms {kehyksia} kehyksessä, pisin työ {pisin:F1} ms" +
-                (string.IsNullOrEmpty(puuttuvat) ? "" : $", fontista puuttuu {puuttuvat.Length}"));
+                $"{(Time.realtimeSinceStartup - t1) * 1000:F0} ms {kehyksia} kehyksessä, pisin työ {Mathf.Max(ensimmainen, Mathf.Max(pisinLisays, pisinJasennys)):F1} ms " +
+                $"(lisäys {pisinLisays:F1}, kallein merkki {suurinMerkki:F1}; ensimmäinen jäsennys {ensimmainen:F1}; " +
+                $"jäsennys {pisinJasennys:F1}, kallein pala {suurinPala:F1})" +
+                (string.IsNullOrEmpty(puuttuvat) ? "" : $", fontista puuttuu {puuttuvat.Length}: {puuttuvat}"));
         }
+
+        /// <summary>Fonttilämmityksen jäsennyspala (merkkiä); 16 → 8, jotta yksi pala mahtuu LammitysMs:iin.</summary>
+        const int JasennysPala = 8;
 
         /// <summary>Fonttilämmityksen työ kehyksessä enintään (ms), Natiivisepän pyyntö 26.9.</summary>
         public const float LammitysMs = 4f;
