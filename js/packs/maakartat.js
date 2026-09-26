@@ -3210,6 +3210,26 @@ export const KAUPUNKIKARTAT = {
           + 'syntyhetken. Ympäröivät talot on perinteisesti '
           + 'päällystetty portugalilaistyylisillä atsulejo-kaakeleilla.',
       },
+      /*
+       * LÖYDÖS 178 (26.9.2026): kaupungilla ei ollut yhtään rakennus-
+       * kohdetta poiston jälkeen, joten lisättiin kaksi todennettua.
+       */
+      {
+        nimi: 'Nossa Senhora da Conceição -katedraali', lat: -2.4174, lon: -54.7151,
+        teksti: 'Santarémin vanhin kirkko sai alkunsa 1661 pienenä '
+          + 'kappelina, mutta nykyinen rakennus nousi vasta 1761 alkaen '
+          + 'ja vihittiin käyttöön 1819. Kirkosta tuli katedraali 1903, '
+          + 'kun Santarémiin perustettiin oma katolinen prelatuuri.',
+      },
+      {
+        nimi: 'Museu Dica Frazão', lat: -2.418109, lon: -54.712523,
+        teksti: 'Muotisuunnittelija Dica Frazãon entiseen ompelimoon on '
+          + 'sisustettu museo, joka esittelee hänen sademetsän raaka-'
+          + 'aineista — puunkuoresta, buriti-palmun kuidusta, siemenistä '
+          + 'ja juurista — valmistamiaan vaatteita. Hänen luomuksiaan on '
+          + 'kantanut muun muassa Belgian kuningatar Fabiola ja paavi '
+          + 'Johannes Paavali II.',
+      },
     ],
   },
   /*
@@ -3263,21 +3283,88 @@ export const KAUPUNKIKARTAT = {
       + 'korttelina.',
     kohteet: [
       {
-        nimi: 'Women of Pearling -patsas', tyyppi: 'taide', lat: -17.9628799, lon: 122.2388728,
-        teksti: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
-          + 'odottivat lugger-veneiden palaavan merten takaa, '
-          + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
-          + 'aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka '
-          + 'kädessään — muistomerkki naisille, joita pakotettiin '
-          + 'sukeltamaan simpukoita 1800-luvulla ilman korvausta.',
-      },
-      {
         nimi: 'Chinatown', tyyppi: 'aukio', lat: -17.9544454, lon: 122.2433213,
         teksti: 'Helmisatama veti Broomeen sukeltajia ja kauppiaita '
           + 'Japanista, Kiinasta, Malesiasta ja Filippiineiltä, ja '
           + 'satamalaitureiden ympärille kasvanut kortteli sai lopulta '
           + 'nimen Chinatown. Vuoteen 1910 mennessä noin 3 500 kaupungin '
           + '5 000 asukkaasta sai leipänsä helmiteollisuudesta.',
+      },
+      /*
+       * LÖYDÖS 178 (26.9.2026): kaupungilla ei ollut yhtään rakennus-
+       * kohdetta poiston jälkeen, joten lisättiin kolme todennettua.
+       * 'Women of Pearling -patsas' oli ei-paikka (tyyppi taide) eikä
+       * ole enää kartalla; sen kuva ja teksti siirrettiin Pearl
+       * Luggersin kuvagalleriaan, koska molemmat kertovat samasta
+       * helmenpyyntihistoriasta.
+       */
+      {
+        nimi: 'Sun Pictures', lat: -17.95344, lon: 122.24307,
+        teksti: 'Sun Pictures avasi ovensa jouluteatterina 1916, ja '
+          + 'Guinnessin ennätysten kirja tunnusti sen 2004 maailman '
+          + 'vanhimmaksi yhä toimivaksi ulkoilmaelokuvateatteriksi. '
+          + 'Puiset kangastuolit ja hiekkalattia ovat yhä alkuperäisiä, '
+          + 'ja pari kertaa vuodessa nousuvesi tulvii saliin kesken '
+          + 'näytöksen — katsojat nostavat vain jalkansa ilmaan '
+          + 'eivätkä poistu.',
+        kuvat: [
+          {
+            tiedosto: 'Broome - Sun Pictures 01.jpg',
+            selite: 'Sun Picturesin peltikatto ja vanha kyltti seisovat '
+              + 'yhä samalla paikalla, jossa maailman vanhin toimiva '
+              + 'ulkoilmaelokuvateatteri avattiin 1916.',
+            lahde: 'Dan Arndt, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pearl Luggers', lat: -17.9551818, lon: 122.2446502,
+        teksti: 'Pearl Luggers -näyttelyrakennuksessa on esillä kaksi '
+          + 'entisöityä helmenpyyntialusta, muun muassa vihreä-valkoinen '
+          + 'Sam Male, joka on nimetty Streeter & Male -yhtiön '
+          + 'perustajasukuun kuuluneen Broome-pioneerin mukaan. Yhtiö '
+          + 'oli yksi kaupungin ensimmäisistä ja pitkäikäisimmistä '
+          + 'helmenpyyntifirmoista 1880-luvulta lähtien.',
+        kuvat: [
+          {
+            tiedosto: 'Pearling luggers, Broome.jpg',
+            lyhyt: 'Helmenpyyntialuksia Roebuck Bayssä 1900-luvun alussa — samanlaisia luggereita Pearl Luggers esittelee yhä.',
+            selite: 'Helmenpyyntialuksia eli luggereita Roebuck Bayssä '
+              + '1900-luvun alussa. Pearl Luggers -museossa on esillä '
+              + 'kaksi tällaista entisöityä alusta.',
+            lahde: 'Yasukichi Murakami, Wikimedia Commons (Public domain)',
+          },
+          {
+            tiedosto: 'Women of Pearling monument, Bedford Park, Broome, WA, Australia.jpg',
+            lyhyt: 'Bedford Parkissa, paikassa jossa perheet odottivat lugger-veneiden palaavan, on Women of Pearling -patsas vuodelta 2010.',
+            selite: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
+              + 'odottivat lugger-veneiden palaavan merten takaa, '
+              + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
+              + 'aboriginaalinaisesta helmiäissimpukka kädessään — '
+              + 'muistomerkki naisille, joita pakotettiin sukeltamaan '
+              + 'simpukoita 1800-luvulla ilman korvausta.',
+            lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Broome Courthouse', lat: -17.95695, lon: 122.24033,
+        teksti: 'Rakennus valmistui 1889 telegraafikaapelin '
+          + 'maihinnousuasemaksi, joka yhdisti Broomen — ja koko '
+          + 'Australian — ensi kertaa merenalaisen kaapelin kautta '
+          + 'muuhun maailmaan. Hallitus osti aseman 1921 ja muutti sen '
+          + 'oikeustaloksi; se on nykyään Australian vanhin yhä '
+          + 'pystyssä oleva kaapeliasemarakennus, ja sen puistossa '
+          + 'pidetään yhä lauantaitoreja.',
+        kuvat: [
+          {
+            tiedosto: 'Broome Courthouse, 2019 (01).jpg',
+            selite: 'Vuonna 1889 kaapeliasemaksi valmistunut rakennus '
+              + 'toimii nykyään oikeustalona ja on Australian vanhin '
+              + 'yhä pystyssä oleva kaapeliasemarakennus.',
+            lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
       },
     ],
   },
@@ -3304,19 +3391,29 @@ export const KAUPUNKIKARTAT = {
       + 'North, yksi Golden Milen vanhoista kultakaivoksista.',
     kohteet: [
       {
-        nimi: 'Paddy Hannanin patsas', tyyppi: 'taide', lat: -30.7490175, lon: 121.4705657,
-        teksti: 'Paddy Hannanin pronssipatsas seisoo yhä Kalgoorlien '
-          + 'pääkadulla vesileili sylissään ja toimii juomalähteenä. '
-          + 'Hänen hevosensa kengän irtoaminen tällä paikalla kesäkuussa '
-          + '1893 johti kultalöytöön, joka synnytti koko kaupungin.',
-      },
-      {
         nimi: 'Hannans North -kaivos', lat: -30.7268005, lon: 121.4716290,
         teksti: 'Hannans North oli yksi kymmenistä kaivoksista Golden '
           + 'Milella, maailman rikkaimmalla kultaneliömailin, jonka alla '
           + 'kulki yli kolmetuhatta kilometriä käytäviä. Kaivos on '
           + 'nykyään museo: sen nostotornit seisovat yhä punaisella '
           + 'hiekalla.',
+        /*
+         * LÖYDÖS 178 (26.9.2026): 'Paddy Hannanin patsas' oli ei-paikka
+         * (tyyppi taide) eikä ole enää kartalla; sen kuva ja teksti
+         * siirrettiin tähän lähimmän kohteen kuvagalleriaksi.
+         */
+        kuvat: [
+          {
+            tiedosto: 'Paddy Hannan by John McLeod.jpg',
+            lyhyt: 'Kaivoksen löysi Paddy Hannan; pääkadulla seisoo yhä hänen pronssipatsaansa vesileili sylissään.',
+            selite: 'Kalgoorlien pääkadulla seisoo yhä Paddy Hannanin '
+              + 'pronssipatsas vesileili sylissään, toimien juomalähteenä. '
+              + 'Hänen hevosensa kengän irtoaminen samalla paikalla '
+              + 'kesäkuussa 1893 johti kultalöytöön, joka synnytti koko '
+              + 'kaupungin ja tämän kaivoksen.',
+            lahde: 'SurveyorMJF, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
       },
     ],
   },
@@ -4285,15 +4382,15 @@ export const KAUPUNKIKARTAT = {
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
-       * Glórian köysiradasta ja kansallispanteonista ei ole
-       * suomenkielisiä artikkeleita; molemmat jäävät merkeiksi.
+       * Kansallispanteonista ei ole suomenkielistä artikkelia; se jää
+       * merkiksi. Glórian köysirata siirrettiin löydös 178:ssa Rossion
+       * kuvagalleriaan (26.9.2026, ks. js/packs/nahtavyysjutut.js).
        *
        * Karmeliittiluostari on lehden maanjäristysnoston kohde ja
        * olisi ollut vahva ehdokas, mutta se on 183 metriä Rossiosta
        * eli numerot olisivat menneet päällekkäin. Rossio voitti,
        * koska siitä on artikkeli.
        */
-      { nimi: 'Glórian köysirata', tyyppi: 'esine', lat: 38.7152, lon: -9.1433 },
       { nimi: 'Rossio', lat: 38.7138, lon: -9.1393, wiki: 'Rossio' },
       { nimi: 'São Jorgen linna', lat: 38.7139, lon: -9.1335, wiki: 'Castelo de São Jorge' },
       { nimi: 'Tuomiokirkko', lat: 38.7098, lon: -9.1326, wiki: 'Lissabonin tuomiokirkko' },
@@ -4386,7 +4483,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Arc de Triomf', lat: 41.391, lon: 2.1806, wiki: 'Arc de Triomf' },
       { nimi: 'Musiikkipalatsi', lat: 41.3876, lon: 2.1752, wiki: 'Palau de la Música Catalana' },
       { nimi: 'Boquerian kauppahalli', lat: 41.3817, lon: 2.1716 },
-      { nimi: 'Kolumbuksen patsas', tyyppi: 'taide', lat: 41.3758, lon: 2.1778 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -5417,7 +5513,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Prahan linna', lat: 50.0903, lon: 14.401, wiki: 'Prahan linna' },
       { nimi: 'Kaarlensilta', lat: 50.0866, lon: 14.4106, wiki: 'Kaarlensilta' },
       { nimi: 'Vanhauusi synagoga', lat: 50.09, lon: 14.4186, wiki: 'Vanhauusi synagoga' },
-      { nimi: 'Astronominen kello', tyyppi: 'esine', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
       /*
        * Kuninkaanhovin käsikirjoitukset (`skandaali-...`) LIITETTIIN
        * TÄHÄN pisteeseen eikä omaksi merkikseen: väärennökset löytyivät
@@ -7634,7 +7729,6 @@ export const KAUPUNKIKARTAT = {
        */
       // Patsas istuu kivellä vedessä; piste on rantapromenadilla,
       // jotta se osuu maalle (vesitarkistin).
-      { nimi: 'Pieni merenneito', tyyppi: 'taide', lat: 55.6926, lon: 12.5989, wiki: 'Pieni merenneito (patsas)' },
       { nimi: 'Amalienborg', lat: 55.6841, lon: 12.5934 },
       { nimi: 'Rundetårn', lat: 55.6813, lon: 12.5757, wiki: 'Rundetårn' },
       // Nyhavn on kanava, ja kuuluisa osa on pohjoisen laiturin
@@ -8790,7 +8884,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tromssan tuomiokirkko', lat: 69.6497, lon: 18.956, wiki: 'Tromssan tuomiokirkko' },
       { nimi: 'Jäämerenkatedraali', lat: 69.6489, lon: 18.9976, wiki: 'Jäämerenkatedraali' },
       { nimi: 'Polaria', lat: 69.6455, lon: 18.9515, wiki: 'Polaria (akvaario)' },
-      { nimi: 'Fjellheisenin köysirata', tyyppi: 'esine', lat: 69.6395, lon: 18.9958 },
     ],
   },
   dubai: {
@@ -12940,7 +13033,6 @@ export const KAUPUNKIKARTAT = {
        * palauta sille koordinaattia. Pienin väli on 462 metriä
        * (Bayfront Park – Olympia-teatteri).
        */
-      { nimi: 'Wynwoodin muraalikorttelit', tyyppi: 'taide', lat: 25.804, lon: -80.199 },
       { nimi: 'Esittävän taiteen keskus', lat: 25.7876332, lon: -80.1920912 },
       { nimi: 'Pérezin taidemuseo', lat: 25.785894, lon: -80.186705 },
       { nimi: 'Lyric-teatteri', lat: 25.78188889, lon: -80.198 },
@@ -15378,7 +15470,6 @@ export const KAUPUNKIKARTAT = {
        * pienin on 188 metriä (Braun-Menéndezin palatsi –
        * merisotamuseo), toiseksi pienin 208 metriä.
        */
-      { nimi: 'Lampuripatsas', tyyppi: 'taide', lat: -53.149764, lon: -70.896575 },
       { nimi: 'Sara Braunin hautausmaa', lat: -53.152999, lon: -70.897648 },
       { nimi: 'Salesiaanien museo', lat: -53.155612, lon: -70.902287 },
       { nimi: 'Cerro de la Cruz', tyyppi: 'luonto', lat: -53.160112, lon: -70.915813 },

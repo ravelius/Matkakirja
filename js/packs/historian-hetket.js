@@ -438,7 +438,7 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    lehti: { laji: 'maa', avain: 'ESP' },
     visa: {
       kysymys: 'Miksi Kolumbuksen laivat odottivat Palosin suistossa juuri aamun laskuvettä?',
       vaihtoehdot: [
@@ -523,7 +523,7 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    lehti: { laji: 'maa', avain: 'ESP' },
     visa: {
       kysymys: 'Kuinka moni Magalhãesin viidestä laivasta palasi Sanlúcariin syyskuussa 1522?',
       vaihtoehdot: [
@@ -1282,7 +1282,7 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    lehti: { laji: 'kaupunki', avain: 'kobenhavn' },
+    lehti: { laji: 'maa', avain: 'DNK' },
     visa: {
       kysymys: 'Miksi viisi viikinkilaivaa upotettiin Roskildenvuonoon 1000-luvulla?',
       vaihtoehdot: [

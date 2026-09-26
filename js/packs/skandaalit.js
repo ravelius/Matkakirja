@@ -3315,6 +3315,16 @@ export const SKANDAALIT = {
         + 'neljäänkymmeneen; jäsenillä oli laivan arvonimet, ja joukossa istuivat '
         + 'aikanaan Arthur Guinness ja John Jameson.',
       lahde: 'en-Wikipedia "Ouzel Galley". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-ouzel-galleyn-mysteeri-photo-v1.jpg`,
+          lyhyt: 'Kolmimastoinen kauppagalleija palaa hämärässä satamaan, laituriväki katselee hiljaa.',
+          selite: 'Ouzel palaa Liffeytä ylös hämärässä lasti täynnä, ja laiturille '
+            + 'kerääntynyt väki katselee laivaa, jonka he olivat jo julistaneet '
+            + 'kadonneeksi vuosia sitten.',
+          lahde: 'Matkakirjan havainnekuva.',
+        },
+      ],
       visa: {
         kysymys: 'Mitä Ouzel Galleyn ylimääräiselle saalisrahalle tehtiin, kun '
           + 'omistajat ja vakuuttajat oli hyvitetty?',
