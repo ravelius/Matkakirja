@@ -193,7 +193,10 @@ namespace Matkakirja
             var r = new Rakentaja();
             // Parnassoksen rinne takana (pohjoinen): matala huipukas harjanne kiven sävyin, sage vain alarinteen kaistana.
             r.Kallio(new Vector3(0f, 0f, 0.24f), 0.86f, 0.34f, 0.16f, 0.06f, 0.36f, 13, 3, Varjo, Pinta);
-            r.Kallio(new Vector3(-0.05f, 0f, 0.1f), 0.72f, 0.16f, 0.62f, 0.1f, 0.05f, 9, 8, Sage, Sage);
+            // Oliivipuita alarinteellä (sage vain pieninä kärkiväreinä, Fable: ei sinertävää pintaa).
+            float[,] puut = { { -0.34f, 0.08f }, { -0.24f, 0.12f }, { 0.3f, 0.1f }, { 0.36f, 0.04f }, { -0.4f, -0.02f } };
+            for (int i = 0; i < puut.GetLength(0); i++)
+                r.Kartio(new Vector3(puut[i, 0], 0f, puut[i, 1]), 0.03f, 0.06f, 6, Oliivi);
             // Pengerrys ja Apollon temppeli raunioina: 6 pylvästä edessä eri korkeuksilla, stylobaatti.
             r.Laatikko(new Vector3(0.05f, 0f, -0.1f), new Vector3(0.5f, 0.05f, 0.3f), Pinta, Pinta);
             float[] korkeudet = { 0.16f, 0.1f, 0.16f, 0.16f, 0.07f, 0.16f };
@@ -215,6 +218,8 @@ namespace Matkakirja
         }
 
         static readonly Color Kivi = Hex(0xa89878);
+        /// <summary>Sage lämpimämpänä oliivina (paletin sage #7a9a92 näytti kartalla sinertävältä pinnalta).</summary>
+        static readonly Color Oliivi = Hex(0x7f8f6a);
 
         static Mesh Meteora()
         {
