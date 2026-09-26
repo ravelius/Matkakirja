@@ -52,10 +52,35 @@ namespace Matkakirja.Natiivi
             Tavoite = null;
             Tallenna();
             Debug.Log("MATKAKIRJA peli: maailmahyppy → " + kaupunki);
+            // Löydös 163 (omistaja 1.0.21, Maailma-tila Amsterdamissa): hypyssä ei ole lentoa, joten kohdemaan esilataus
+            // (lennon pinta ja saapumiskuvat) ei käynnistynyt ja pohjalaatat haettiin kylminä hunnun kiirejonon rinnalla.
+            // Sama kuin lennolla (Nappula.cs laskun laatat, Aloitus.cs EsilataaSaapuminen), heti ennen kamera-ajoa.
+            EsilataaSaapuminen(kaupunki);
+            EsilataaKohdealue(kaupunki);
             saapumisKaupunki = kaupunki;
             Tila = SilmukanTila.Matkalla;
             Perilla(false);
             return true;
+        }
+
+        /// <summary>
+        /// Saapumisnäkymän laatat etusijalla (KarttaKerrokset.EsilataaKohde), sama laatikko kuin lennon laskussa
+        /// (Nappula.cs: saapumisnäkymä, leveys NakyvaLeveys, korkeus leveys / kuvasuhde, väljennys 25 %).
+        /// </summary>
+        void EsilataaKohdealue(string kaupunki)
+        {
+            if (kierto == null || verkko == null || !verkko.Kaupungit.TryGetValue(kaupunki, out var k)) return;
+            try
+            {
+                var sn = kierto.SaapumisNakyma(null, k.Lat, k.Lon, maaRajaus: false);
+                var kam = kierto.GetComponent<Camera>();
+                double aspect = kam != null && kam.aspect > 0 ? kam.aspect : 0.7;
+                double pl = 0.5 * 1.25 * sn.NakyvaLeveys * 360.0 / Saapumisnakyma.LaudanLeveys;
+                double pk = pl / aspect;
+                KarttaKerrokset.Instanssi?.EsilataaKohde(Math.Min(k.Lat, sn.Lat - pk), Math.Max(k.Lat, sn.Lat + pk),
+                    sn.Lon - pl, sn.Lon + pl, k.Lat, k.Lon);
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: maailmahypyn kohdealue: " + e.Message); }
         }
     }
 }
