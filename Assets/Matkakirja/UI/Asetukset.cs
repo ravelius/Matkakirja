@@ -126,8 +126,29 @@ namespace Matkakirja.Natiivi
 #endif
         }
 
-        /// <summary>Kuljetun reitin kytkimen PlayerPrefs-avain ("0" = pois); kynäviiva voi lukea sen suoraan.</summary>
+        /// <summary>Kuljetun reitin kytkimen PlayerPrefs-avain ("0" = pois).</summary>
         public const string KuljettuReittiAvain = "matkakirja-kuljettu-reitti";
+
+        static bool? kuljettuReitti;
+
+        /// <summary>
+        /// Linssisepän kynäviiva (ElavaMatka.NakyvissaKysely) kysyy joka kehys: arvo välimuistista, joka nollautuu
+        /// muutoksessa. Muutos herättää pallon piirron (PallonLepo), jotta viiva katoaa tai palaa levosta.
+        /// </summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void KytkeKuljettuReitti()
+        {
+            ElavaMatka.NakyvissaKysely = () => kuljettuReitti ??= Paalla(Kytkin.KuljettuReitti);
+            Muuttui -= KuljettuReittiMuuttui;
+            Muuttui += KuljettuReittiMuuttui;
+        }
+
+        static void KuljettuReittiMuuttui(string nimi)
+        {
+            if (nimi != nameof(Kytkin.KuljettuReitti) && nimi != "kaikki") return;
+            kuljettuReitti = null;
+            PallonLepo.Muuttui("kuljettu reitti");
+        }
 
         static string Avain(Kytkin k) => k switch
         {
