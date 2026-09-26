@@ -7491,3 +7491,7 @@ Kortti 22.0x: (1) 14 kategoriasymbolia 3D-reliefeina (paletti paperi/seepia/must
 ## OMISTAJA: MEREN KORISTEANIMAATIOT (~10 LAJIA, 1–2 PER KOHDE) (26.9.2026 klo 21.58)
 
 Omistaja 22.0x: merelle muutama koristeanimaatio kerralla nakyviin; lopulta kymmenkunta erilaista, joista 1–2 valikoituu kohteen mukaan. Fablen kanta: sopii johtoajatukseen (niukkuus + elava animointi), meri on nyt tyhja pinta; ehdotus Linssisepalle: lista 10 lajista (siipiratashoyrylaiva savulla, purjelaiva, kalastusvene, nykyaikainen lautta/rahtilaiva (AIKA: nykyaika), valas puhaltaa, delfiinit, lokkiparvi, jaavuori pohjoisessa, poiju/majakkalaiva, kartografinen merihirvio hetkeksi), valinta kohdemaan meren mukaan (Valimeri/Atlantti/Itameri/Pohjoinen jaameri), enintaan 2 nakyvissa, Tivoli-logiikka (kaynti, tauko, ei monotoniaa), elava kerros, vain kohdemaan merialueella; kuvasarja + lyhyt video ennen korttia.
+
+## 176 KORJATTU: 4 PORTTIA LAATTAPALVELIMEEN (6 → 24 YHTEYTTA), JUNASSA 83e2fb1e (26.9.2026 klo 21.59)
+
+Natiiviseppa iPad Pro 13: iOS sallii 6 yhteytta per isanta+portti; korjaus 4 porttia (pohja, maasto, kerma, muu) → huippu 24; kylma loitonnus Eurooppaan ilman aukkoja 2 s:ssa, portti PASS (WiFissa hyoty nakyy laskureissa, hitaalla verkolla suurin). Kerman uusinta mukana. Juna/b13 83e2fb1e, kaannos Laitetestaajalle → BUILD 26. Lipun liioiteltu perspektiivi EI 1.0.26:een (kangas litistyy keskella, tanko makaa sivulla) → 1.0.27 symbolien kanssa; lipun piilotus Euroopan mittakaavassa mukana.
