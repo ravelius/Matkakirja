@@ -302,7 +302,8 @@ namespace Matkakirja
             if (k.r.enabled != edessa) { k.r.enabled = k.pohja.enabled = edessa; PallonLepo.Muuttui("symbolimallit"); }
             PaivitaOsat(osat, edessa, p);
             if (!edessa) return;
-            float koko = PisteMaailmassa(etaisyys) * KokoNyt(NostoKerros.Instanssi.ZoomKerroin) / Mathf.Max(1e-9f, gt.lossyScale.x);
+            float kerroin = tieto.Erikois != null && Mallit.TryGetValue(tieto.Erikois, out var em) ? em.KokoKerroin : 1f;
+            float koko = PisteMaailmassa(etaisyys) * KokoNyt(NostoKerros.Instanssi.ZoomKerroin) * kerroin / Mathf.Max(1e-9f, gt.lossyScale.x);
             var sk = Vector3.one * koko;
             if ((k.t.localScale - sk).sqrMagnitude > 1e-6f * koko * koko) k.t.localScale = sk;
             float h = s.Loydetty || PakotaLoydetty ? 0f : 1f;
