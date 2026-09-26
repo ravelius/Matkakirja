@@ -223,3 +223,22 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
 - **ISS-linssin suunnitelma** docs/raportit/iss-linssi-suunnitelma-20260926.md odottaa omistajan kuittausta (poissa 2 pv).
   Toteutus vasta build 22:n ja myllyjen jälkeen.
 - **Seuraavaksi:** Natiivisepän ElavaKerros-haara → siirrä PallonLepo.Animoi-kutsut → myllyt (kokeilu 1).
+
+## Päivitys klo 15.3x
+
+- **Myllyt (elävät elementit, kokeilu 1)** merge-pyynnössä Natiivisepälle build 22:een: linssiseppa/myllyt 383b6d04
+  (wt/proto-linssiseppa). Sisältö:
+  - Linssit/Unity/ElavatElementit.cs: proseduraalinen mylly, 220 kolmiota. MyllyGeometria: runko ja siivet.
+  - Linssit/Resources/Varjostimet/Malli.shader.
+  - Pop-up-asento (ruudun ylös, kameraa kohti 25°, nosto 0,45 × koko) ja koko 34 pt. Näkyy 15–600 km, häivytys 450 km:stä.
+  - Siivet ElavaKerros.Animoi 30 fps:llä, pysähtyvät kun Staattinen tai vähennetty liike.
+  - Komento `elava myllyt tila|0|1`.
+  - Samassa haarassa ElavatHetket ja ElavaMatkan kynänpiirto on siirretty ElavaKerrokselle (Elava-layer).
+  - Kuvat ja video omistajalle: lokit/linssiseppa-myllyt-20260926/omistajalle/.
+- **ElavaKerros** on masterissa (build 21, Natiiviseppä df65ba85): Animoi(käynnissä, nimi, fps, pohja), Taso, Staattinen.
+- **Cupola-kehys** on ämpärissä (karttanostot/20260926/iss-cupola-*, 6 tiedostoa, manifesti postissa bf8a6101d).
+  Kehys peittää noin 40 % ruudusta. Sovitus ja omistajan kuvapari tehdään ISS-toteutuksessa.
+- **Polton aika 26.–27.9.:** yksi käännös kerrallaan, ei koekäännöksiä, ja rivi Karttasepälle ennen jokaista käännöstä.
+- **Seuraavaksi:** omistajan kuittaus myllyistä → Kööpenhaminan karuselli (kokeilu 2) → pallo → gondolit (Karttasepän
+  polku elavat-polut-2026-09-26b) → Lontoo → köysirata ja Etna. Sen jälkeen ISS (SGP4 + kaukonäkymä ensin, TLE-Actions
+  Siirtosepälle).
