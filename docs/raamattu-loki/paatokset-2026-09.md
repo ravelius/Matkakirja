@@ -7787,3 +7787,7 @@ Julkaisija 01.58: #3366 Pulun kaiutinvipu mainissa v2294, testit 4413/0. #3364 (
 ## MAALEHTI-SIIRTO VALMIS PR 3367 (28/28); SISALTOKIRJURI ASTRONAUTIN ERIIN 5–6 (27.9.2026 klo 02.05)
 
 Sisaltokirjuri 02.0x: maalehti-siirto valmis 28/28 (5 poikkeusta jaivat kaupunkiin), PR #3367 Julkaisijan junaan, testit 4431/4431. Seuraavaksi astronautin kameran erat 5–6.
+
+## NATIIVI-UI: KAIUTINVIPU NATIIVIIN 9747aec8, P1 fa30e4a3 TODENNETTU, STRIIMIAANI-VALITSIMEN USS-KORJAUS 3a91d9c6; Z10 302/507 (27.9.2026 klo 02.14)
+
+Natiivi-UI 02.1x: Pulun kaiutinvipu natiivissa natiivi-ui/pulu-kaiutin 9747aec8 PASS iPhonella (kuvapari natiivi-ui-laite-20260927/kuvapari-kaiutin-natiivi.png), merge-pyynto 1.0.28; P1 fa30e4a3 todennettu (v195 → v198 kesken istunnon ilman poikkeuksia); striimiaanen valitsin puristui iPhonella tyhjaksi → USS-korjaus 3a91d9c6 merge-pyynnossa, todennus seuraavasta junakaannoksesta. Karttaseppa 02.13: Z10 osa 2 302/507, 0 kaatumista, 8 ydinta, ~790 laattaa/min, valmis ~05.50.
