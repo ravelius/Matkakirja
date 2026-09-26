@@ -32,8 +32,9 @@ namespace Matkakirja
         /// Tason 1 mallin leveys ruudulla (pt) lähikuvassa (kerroin ≥ <see cref="KokoTaysiKerroin"/>). Löydös 175 (omistaja
         /// 26.9. 1.0.25: 90 pt vakiona oli maatasolla maakuntien kokoinen ja peitti nimistön): koko kasvaa zoomin mukana
         /// kynnyksen <see cref="KokoKynnysPt"/>:stä tähän, enintään kaupunkinimiön leveys (komento `symbolit koko pt`).
+        /// Löydös 175c (Linssiseppä): 44 → 40 pt, enintään 2,5 × kaupunkinimiön fonttikoko eikä koskaan nimeä leveämpi.
         /// </summary>
-        public static float KokoPt = 44f;
+        public static float KokoPt = 40f;
         /// <summary>Tason 1 mallin leveys (pt) 155:n kynnyksellä (kerroin 2,5), josta mallit alkavat näkyä (löydös 175).</summary>
         public static float KokoKynnysPt = 22f;
         /// <summary>Kartan kerroin, jolla malli on täysikokoinen (<see cref="KokoPt"/>).</summary>
@@ -78,7 +79,7 @@ namespace Matkakirja
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
-            KokoPt = 44f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
+            KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             NollaaTasot23();
         }
 
@@ -193,10 +194,10 @@ namespace Matkakirja
         PalloKierto kierto;
         Camera kamera;
         Aurinko aurinko;
-        Material materiaali;
-        /// <summary>Tason 1 kappaleet noston id:llä.</summary>
-        readonly Dictionary<string, (Transform t, MeshRenderer r, Vector3 paikka, Vector3 normaali, float himmea)> kappaleet =
-            new Dictionary<string, (Transform, MeshRenderer, Vector3, Vector3, float)>();
+        Material materiaali, pohjaMateriaali;
+        /// <summary>Tason 1 kappaleet noston id:llä (pohja = maakontaktilevy mallin lapsena, löydös 175c).</summary>
+        readonly Dictionary<string, (Transform t, MeshRenderer r, MeshRenderer pohja, Vector3 paikka, Vector3 normaali, float himmea)> kappaleet =
+            new Dictionary<string, (Transform, MeshRenderer, MeshRenderer, Vector3, Vector3, float)>();
         readonly HashSet<string> nyt = new HashSet<string>();
         MaterialPropertyBlock lohko;
         static readonly int HimmeaId = Shader.PropertyToID("_Himmea");
@@ -206,6 +207,7 @@ namespace Matkakirja
             var s = Resources.Load<Shader>("Symbolimalli");
             if (s == null) { Debug.LogWarning("MATKAKIRJA symbolimallit: varjostin puuttuu"); enabled = false; return; }
             materiaali = new Material(s) { name = "Symbolimalli" };
+            pohjaMateriaali = PohjaMateriaali(materiaali);
             lohko = new MaterialPropertyBlock();
             AloitaTasot23(s);
         }
@@ -232,7 +234,11 @@ namespace Matkakirja
                     Paivita(TietoNostolle(s), s);
                 }
             foreach (var p in kappaleet)
-                if (!nyt.Contains(p.Key) && p.Value.r.enabled) { p.Value.r.enabled = false; PallonLepo.Muuttui("symbolimallit"); }
+                if (!nyt.Contains(p.Key) && p.Value.r.enabled)
+                {
+                    p.Value.r.enabled = p.Value.pohja.enabled = false;
+                    PallonLepo.Muuttui("symbolimallit");
+                }
             PiirraTasot23(sallittu ? nk : null);
         }
 
@@ -273,7 +279,16 @@ namespace Matkakirja
                 Asento(s.OmaLat, s.OmaLon, out var paikka, out var asento, out var nl);
                 go.transform.localPosition = paikka;
                 go.transform.localRotation = asento;
-                k = (go.transform, r, paikka, nl, -1f);
+                // Maakontakti (löydös 175c): varjolevy lapsena mallin juuren tasossa, säde 0,6 × mallin leveys.
+                var pg = new GameObject("Maakontakti");
+                pg.transform.SetParent(go.transform, false);
+                pg.transform.localScale = Vector3.one * (PohjaSade * Leveys(verkko));
+                pg.AddComponent<MeshFilter>().sharedMesh = PohjaVerkko();
+                var pr = pg.AddComponent<MeshRenderer>();
+                pr.sharedMaterial = pohjaMateriaali;
+                pr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                pr.receiveShadows = false;
+                k = (go.transform, r, pr, paikka, nl, -1f);
                 kappaleet[s.Id] = k;
             }
             var gt = georeferenssi.transform;
@@ -281,7 +296,7 @@ namespace Matkakirja
             Vector3 kohti = kamera.transform.position - p;
             float etaisyys = kohti.magnitude;
             bool edessa = Vector3.Dot(gt.TransformDirection(k.normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) > 0.08f;
-            if (k.r.enabled != edessa) { k.r.enabled = edessa; PallonLepo.Muuttui("symbolimallit"); }
+            if (k.r.enabled != edessa) { k.r.enabled = k.pohja.enabled = edessa; PallonLepo.Muuttui("symbolimallit"); }
             if (!edessa) return;
             float koko = PisteMaailmassa(etaisyys) * KokoNyt(NostoKerros.Instanssi.ZoomKerroin) / Mathf.Max(1e-9f, gt.lossyScale.x);
             var sk = Vector3.one * koko;
@@ -291,7 +306,7 @@ namespace Matkakirja
             {
                 lohko.SetFloat(HimmeaId, h);
                 k.r.SetPropertyBlock(lohko);
-                kappaleet[s.Id] = (k.t, k.r, k.paikka, k.normaali, h);
+                kappaleet[s.Id] = (k.t, k.r, k.pohja, k.paikka, k.normaali, h);
                 PallonLepo.Muuttui("symbolimallit");
             }
         }
@@ -318,10 +333,11 @@ namespace Matkakirja
             // Ei Parnassosta (Fable: maasto näyttää vuoren itse, tumma möykky hallitsi): temppeli ja tholos ovat mallin ydin.
             // Pengerrys: matala pyöristetty tasanne.
             r.Rengaskallio(new Vector3(0.04f, 0f, -0.1f), new[] { (0f, 0.62f, 0.4f), (0.045f, 0.58f, 0.36f) }, float.NaN, 12, 8, Pinta, Pinta);
-            // Oliivipuita alarinteellä (sage lämpimämpänä oliivina, Fable/omistaja: ei sinistä).
+            // Oliivipuita alarinteellä varjon sävyssä: löydös 175c (Linssiseppä, yksi aksentti mallia kohden), aksentti on
+            // tholoksen terrakottakatto (ennen oliivi #7f8f6a, jolloin aksentteja oli kaksi).
             float[,] puut = { { -0.34f, 0.08f }, { -0.24f, 0.13f }, { 0.3f, 0.1f }, { 0.37f, 0.03f }, { -0.42f, -0.04f } };
             for (int i = 0; i < puut.GetLength(0); i++)
-                r.Kartio(new Vector3(puut[i, 0], 0.02f, puut[i, 1]), 0.028f, 0.06f, 6, Oliivi);
+                r.Kartio(new Vector3(puut[i, 0], 0.02f, puut[i, 1]), 0.028f, 0.06f, 6, Varjo);
             // Apollon temppeli raunioina: kolmiportainen stylobaatti, 6 + 6 pylvästä pylväänpäineen eri korkeuksilla,
             // arkkitraavin pala kolmen ehjän pylvään päällä.
             var s = new Vector3(0.06f, 0.045f, -0.1f);

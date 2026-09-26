@@ -1,11 +1,19 @@
 // Symbolimalli (Kartta/Symbolimallit.cs, omistajan löydös 160, build 21 -prototyyppi): nostojen low-poly 3D-mallit.
 // Yksi materiaali, värit kärkiväreinä (Sisältökirjurin vari2-paletti), ei tekstuureja. Tasavarjostus (normaalit tahkoittain
-// verkossa) pehmeällä pääsuuntavalolla, hillitty: 0,74 + 0,26 · N·L. Löytämätön (_Himmea 1): väri kohti pergamenttia ja
-// hieman läpikuultava kuten elävän kartan musteen jälki (35 % pergamenttia, peitto 0,88; 1. koe 60 %/0,7 liian haalea). Horisonttiusva (Shaders/Horisonttiusva.hlsl, 153/159).
+// verkossa). Horisonttiusva (Shaders/Horisonttiusva.hlsl, 153/159).
+//
+// LÖYDÖS 175c (Linssisepän ohje, linja NIUKKUUS: malli on kaiverrus kartalla, ei esine):
+//  1. Harmaa pois: neutraali kärkiväri lämmitetään pergamentiksi samalla valoisuudella (kylläisyys likimain sRGB:nä, koska
+//     kärkivärit ovat lineaarisia; muuten tumma muste #4b3a1c luettaisiin harmaaksi ja haalistuisi).
+//  2. Valo 0,55 + 0,45 · N·L ja ylöspäin olevat tahkot hieman kirkkaampia (0,85–1,06 mallin +Y:n mukaan).
+//  3. Ohut kaiverrusreuna: syrjittäiset tahkot musteeksi (smoothstep 0,65–0,92, enintään 0,7).
+//  4. Löytämätön (_Himmea 1 tai _Tila.x): seepia 0,8 (aksenttiväri kokonaan), 15 % pergamenttia, peitto 0,9; valoisuus
+//     enintään löydetyn (ei koskaan löydettyä kirkkaampi).
+//  5. Maakontakti: _Pohja 1 = mallin alla pehmeä varjolevy (kärkiväri sellaisenaan, ei valoa, reunaa eikä seepiaa, usva
+//     kyllä). Levyn materiaali: _ZTest Always, _ZWrite Off ja pienempi renderQueue kuin mallilla.
 //
 // TASOT 2–3 (löydös 160 kohta 11, GPU-instansointi: Graphics.RenderMeshInstanced, Symbolimallit.Tasot23.cs): instanssin
-// tila _Tila = (muste 0–1, piilo 0–1, 0, 0). Muste 1 = löytämätön himmeänä musteena: desaturoitu kohti seepiamustetta,
-// peitto 0,55 ja mustereuna (kameraan nähden syrjittäiset tahkot tummuvat kärkivärin päällä); 0 = löydetty täysväreinä
+// tila _Tila = (muste 0–1, piilo 0–1, 0, 0). Muste 1 = löytämätön (kuten _Himmea); 0 = löydetty täysväreinä
 // (0,4 s syttyminen laskee arvoa). Piilo = 1 − NostoKerroksen syttyminen (kerroksen häivähdys ja saapumisen piilotus).
 // Nollatila (0, 0) on sama kuin tason 1 ulkoasu, joten instansoimaton MeshRenderer-polku (taso 1) ei muutu.
 Shader "Matkakirja/Symbolimalli"
@@ -14,6 +22,9 @@ Shader "Matkakirja/Symbolimalli"
     {
         _Himmea("Himmeä (löytämätön)", Float) = 0
         _Paperi("Pergamentti", Color) = (0.93, 0.89, 0.78, 1)
+        _Pohja("Maakontaktilevy", Float) = 0
+        [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 4
+        [Enum(Off, 0, On, 1)] _ZWrite("ZWrite", Float) = 1
     }
     SubShader
     {
@@ -22,8 +33,8 @@ Shader "Matkakirja/Symbolimalli"
         {
             Name "Symbolimalli"
             Tags { "LightMode" = "UniversalForward" }
-            ZWrite On
-            ZTest LEqual
+            ZWrite [_ZWrite]
+            ZTest [_ZTest]
             Cull Back
             Blend SrcAlpha OneMinusSrcAlpha
 
@@ -38,6 +49,7 @@ Shader "Matkakirja/Symbolimalli"
             CBUFFER_START(UnityPerMaterial)
                 float _Himmea;
                 half4 _Paperi;
+                float _Pohja;
             CBUFFER_END
 
             UNITY_INSTANCING_BUFFER_START(Symbolit)
@@ -58,6 +70,7 @@ Shader "Matkakirja/Symbolimalli"
                 float3 n : TEXCOORD0;
                 float usvaY : TEXCOORD1;
                 float3 kohti : TEXCOORD2;
+                float3 ylos : TEXCOORD3;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
@@ -70,6 +83,8 @@ Shader "Matkakirja/Symbolimalli"
                 o.positionCS = TransformWorldToHClip(maailma);
                 o.n = TransformObjectToWorldNormal(i.normalOS);
                 o.kohti = _WorldSpaceCameraPos - maailma;
+                // Mallin ylös (paikallinen +Y, malli seisoo pinnan normaalin suuntaan) maailmassa: kohta 2:n ylätahkojen valo.
+                o.ylos = TransformObjectToWorldDir(float3(0, 1, 0));
                 o.vari = i.vari;
                 // Usva mallin jalkapisteestä (symboli paikassaan): korkea malli ei haalistu yläpäästään horisonttiin.
                 o.usvaY = UsvaYlhaalta(TransformObjectToHClip(float3(0, 0, 0)));
@@ -80,20 +95,38 @@ Shader "Matkakirja/Symbolimalli"
             {
                 UNITY_SETUP_INSTANCE_ID(i);
                 float4 tila = UNITY_ACCESS_INSTANCED_PROP(Symbolit, _Tila);
+                half nakyvyys = UsvaNakyvyys(i.usvaY) * (1.0 - (half)tila.y);
+                // Maakontaktilevy (kohta 5): kärkiväri ja -alfa sellaisenaan (varjo keskellä 0,42 → reunalla 0), vain usva ja piilo.
+                if (_Pohja > 0.5) return half4(i.vari.rgb, i.vari.a * nakyvyys);
+
+                const half3 luma = half3(0.2126, 0.7152, 0.0722);
+                const half3 mustevari = half3(0.23, 0.19, 0.14);
+                // 1. Harmaa pois: kylläisyys likimain sRGB:nä (neliöjuuri), jotta rajat 0,04–0,12 vastaavat paletin hex-arvoja.
+                half3 c = i.vari.rgb;
+                half3 g = sqrt(max(c, (half3)0));
+                half sat = max(g.r, max(g.g, g.b)) - min(g.r, min(g.g, g.b));
+                half l = dot(c, luma);
+                c = lerp(c, l * half3(1.06, 0.98, 0.80), 0.6 * (1.0 - smoothstep(0.04, 0.12, sat)));
+
+                // 2. Valo: 0,55 + 0,45 · N·L, ylöspäin olevat tahkot hieman kirkkaampia, alaspäin tummempia.
                 float3 n = normalize(i.n);
                 half nl = saturate(dot(n, GetMainLight().direction));
-                // Löydös 175b (omistaja: "ei saa mitään selvää"): selvempi valo ja varjo (0,5 + 0,5 · N·L), jotta muoto
-                // erottuu, ja tumma kaiverrusreuna: tahko lähes syrjittäin kameraan tummuu musteeksi (siluetti).
-                half3 c = i.vari.rgb * (0.5 + 0.5 * nl);
-                half reuna = smoothstep(0.55, 0.9, 1.0 - abs(dot(n, normalize(i.kohti))));
-                const half3 mustevari = half3(0.23, 0.19, 0.14);
-                // Löytämätön (taso 1 _Himmea, tasot 2–3 tila.x): vain sävy seepiaan, valoisuus ja kontrasti säilyvät.
+                c *= 0.55 + 0.45 * nl;
+                c *= lerp(0.85, 1.06, saturate(dot(n, normalize(i.ylos))));
+
+                // 4. Löytämätön (taso 1 _Himmea, tasot 2–3 tila.x): seepia 0,8 (saturoitu aksentti kokonaan seepiaksi), 15 %
+                // pergamenttia; valoisuus enintään löydetyn, joten löytämätön ei ole koskaan löydettyä kirkkaampi.
                 half muste = max((half)_Himmea, (half)tila.x);
-                half l = dot(c, half3(0.2126, 0.7152, 0.0722));
-                c = lerp(c, l * half3(1.02, 0.93, 0.76), 0.8 * muste);
-                c = lerp(c, mustevari, 0.75 * reuna);
-                half a = lerp(1.0, 0.92, muste) * UsvaNakyvyys(i.usvaY);
-                a *= 1.0 - (half)tila.y;
+                half lLoydetty = dot(c, luma);
+                half seepia = lerp(0.8, 1.0, smoothstep(0.22, 0.32, sat));
+                c = lerp(c, dot(c, luma) * half3(1.02, 0.93, 0.76), seepia * muste);
+                c = lerp(c, _Paperi.rgb, 0.15 * muste);
+                c *= min(1.0, lLoydetty / max(dot(c, luma), 1e-4));
+
+                // 3. Ohut kaiverrusreuna: tahko lähes syrjittäin kameraan tummuu musteeksi (siluetti).
+                half reuna = smoothstep(0.65, 0.92, 1.0 - abs(dot(n, normalize(i.kohti))));
+                c = lerp(c, mustevari, 0.7 * reuna);
+                half a = lerp(1.0, 0.9, muste) * nakyvyys;
                 return half4(c, a);
             }
             ENDHLSL

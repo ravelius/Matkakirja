@@ -27,6 +27,9 @@ namespace Matkakirja
     ///  - LEPO (PallonLepo): kehyksessä, jota ei piirretä (OnDemandRendering), ei tehdä mitään. Instanssien matriisit ja
     ///    tilat lasketaan uudelleen vain, kun kamera, näytettävät (NostoKerros.Paivittyi), kerroin, syttyminen tai
     ///    asetukset muuttuvat tai syttyminen on käynnissä; muuten piirretään edelliset taulukot sellaisinaan.
+    ///  - MAAKONTAKTI (löydös 175c kohta 5): jokaisen instanssin alle pehmeä varjolevy (PohjaVerkko, säde 0,6 × arkkityypin
+    ///    LOD0-leveys) yhtenä yhteisenä RenderMeshInstanced-kutsuna samoista matriiseista mallin juuren tasossa;
+    ///    instansoitu pohjamateriaali (ZTest Always, ZWrite Off, renderQueue mallia pienempi, eli piirto ennen malleja).
     /// A/B-mittaus: `symbolit taso23 0|1` (oletus 1).
     /// </summary>
     public sealed partial class Symbolimallit
@@ -66,7 +69,12 @@ namespace Matkakirja
 
         readonly Dictionary<string, Instanssi23> instanssit23 = new Dictionary<string, Instanssi23>(StringComparer.Ordinal);
         bool instansointi;
-        Material instMateriaali;
+        Material instMateriaali, instPohja;
+        /// <summary>Maakontaktilevyt: kaikki instanssit yhdessä erässä (NostoKerroksen katto 120 &lt; EnintaanErassa).</summary>
+        readonly Matrix4x4[] pohjaMatriisit = new Matrix4x4[EnintaanErassa];
+        readonly Vector4[] pohjaTilat = new Vector4[EnintaanErassa];
+        readonly MaterialPropertyBlock pohjaLohko = new MaterialPropertyBlock();
+        int pohjaLkm;
         Matrix4x4[][] matriisit;
         Vector4[][] tilat;
         int[] lkm;
@@ -106,6 +114,7 @@ namespace Matkakirja
             instMateriaali = pohja != null ? new Material(pohja) : new Material(varjostin);
             instMateriaali.name = "Symbolimalli (instanssit)";
             instMateriaali.enableInstancing = true;
+            instPohja = PohjaMateriaali(instMateriaali);
             int n = ArkkityyppiKartoitus.Lukumaara * 2;
             matriisit = new Matrix4x4[n][];
             tilat = new Vector4[n][];
@@ -158,6 +167,7 @@ namespace Matkakirja
         void Tyhjenna23()
         {
             Array.Clear(lkm, 0, lkm.Length);
+            pohjaLkm = 0;
             Array.Clear(tyypeittain, 0, tyypeittain.Length);
             Array.Clear(tasoittain, 0, tasoittain.Length);
             Array.Clear(lodeittain, 0, lodeittain.Length);
@@ -214,6 +224,13 @@ namespace Matkakirja
                 float koko = PisteMaailmassa(etaisyys) * pt / skaala;
                 matriisit[e][lkm[e]] = paikallinen * Matrix4x4.TRS(i.Paikka, i.Asento, Vector3.one * koko);
                 tilat[e][lkm[e]] = new Vector4(muste, piilo, 0f, 0f);
+                if (pohjaLkm < EnintaanErassa)
+                {
+                    // Levy samasta matriisista mallin juuren tasossa; leveys LOD0:sta, ettei levy hyppää LOD-vaihdossa.
+                    float lev = PohjaSade * Leveys(ArkkityypinVerkko(tieto.Tyyppi, 0));
+                    pohjaMatriisit[pohjaLkm] = matriisit[e][lkm[e]] * Matrix4x4.Scale(new Vector3(lev, lev, lev));
+                    pohjaTilat[pohjaLkm++] = new Vector4(0f, piilo, 0f, 0f);
+                }
                 lkm[e]++;
                 var b = new Bounds(p, Vector3.one * (2f * koko * skaala));
                 if (rajatAlussa) { rajat = b; rajatAlussa = false; } else rajat.Encapsulate(b);
@@ -235,6 +252,17 @@ namespace Matkakirja
                 receiveShadows = false,
                 worldBounds = rajat,
             };
+            if (pohjaLkm > 0)
+            {
+                // Maakontaktit ensin (renderQueue joka tapauksessa mallia pienempi): yksi kutsu kaikille instansseille.
+                if (tilatMuuttuivat) pohjaLohko.SetVectorArray(TilaId, pohjaTilat);
+                var rpp = rp;
+                rpp.material = instPohja;
+                rpp.matProps = pohjaLohko;
+                Graphics.RenderMeshInstanced(rpp, PohjaVerkko(), 0, pohjaMatriisit, pohjaLkm);
+                piirtokutsuja++;
+                kolmioita23 += pohjaLkm * (int)(PohjaVerkko().GetIndexCount(0) / 3);
+            }
             for (int e = 0; e < lkm.Length; e++)
             {
                 if (lkm[e] == 0) continue;
@@ -260,7 +288,7 @@ namespace Matkakirja
                 sb.Append("; ");
             }
             sb.Append($"LOD0 {lodeittain[0]}, LOD1 {lodeittain[1]} (raja {Lod1RajaPt:0} pt, LOD2 < {Lod2RajaPt:0} pt TODO), " +
-                      $"piirtokutsuja {piirtokutsuja}, kolmioita {kolmioita23}, syttyy {animoi23}");
+                      $"maakontakteja {pohjaLkm}, piirtokutsuja {piirtokutsuja}, kolmioita {kolmioita23}, syttyy {animoi23}");
         }
     }
 }
