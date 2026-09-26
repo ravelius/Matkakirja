@@ -16,7 +16,10 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
 ## Päivitys klo 05.1x
 - Build 19 -junassa: natiivi-ui/im2-ohjaus d56afbd5 (II:n soitin Linssisepän Ohjaus-rajapintaan, todennettu) ja
   natiivi-ui/linssi-sulkee-s3 198ecc30 (linssin avaus sulkee nosto- ja kaupunkikortin, todennettu).
-- KESKEN: elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
+- Klo 05.4x: elävän kartan Natiivi-UI-osa natiivi-ui/elava-kartussi d525ec5e valmis ja merge-pyynnössä (todennettu 67986944,
+  lepo Paikallaan, kuvapari omistajalle proto-3d/lokit/natiivi-ui-b19-elava/). Avoinna: MaakuntaTiedot.Keskipiste-kytkentä
+  MaakunnatSilta.Kytkeen (MaaKartta.MaakunnanKeskus, natiiviseppa/elava-saapuminen) kun se on junassa; salaisuusdata 1.47; 115.
+- (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
   natiivi-ui/elava-kartussi worktreessä wt/proto-natiivi-ui-nostot: tutkimuspalkki, maakunnan herääminen kartussissa
   (käsialanimi, pikkukuva-leima, merkit x/y), käsialanimi kartalle, salaisuus:-nostot NostoSisalto.Hae:hen, lippu liehuu vasta
   kun maa valmis. Rajapinta PeliOhjain.Muste (Pelikoodari, junassa 3ef13a97). Jos agentin tulos puuttuu: tarkista haara
