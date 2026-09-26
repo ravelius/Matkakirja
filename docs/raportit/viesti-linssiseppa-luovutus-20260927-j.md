@@ -5,6 +5,12 @@
 Natiivi-UI local_44392b3c-86ee-4873-9d76-82f9aaa6b832, Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab.
 SendMessage-raja (10/vuoro) täyttyy → varakanava mcp__ccd_session_mgmt__send_message session id:llä.*
 
+## REBASE 01.4x (Natiiviseppä: natiiviseppa/kategoriamallit ddd9b867 = juna 52ea3d10 + liioiteltu perspektiivi + maastokorjaus)
+
+Uudet kärjet: mallinseppa/pohja **2b8f6dcd**, mallinseppa/kategoriat3d **cc235dd5**, mallinseppa/kategoriat3d-b **5a51c3e1**,
+mallinseppa/tiger-moth **7b1bf9b9** (kaikki unity-tarkistus 0; merge juna/b13 + merikoristeet puhdas). Alla mainitut vanhat
+SHA:t (d7a38f75, 43ce36bd, dba69a3c, f7db782d) ovat ennen tätä rebasea. Klo 02 käännös ottaa uudet kärjet (haaranimillä).
+
 ## OMISTAJAN PÄÄTÖKSET 27.9. klo 01.4x (Fablen kautta) = JONO
 
 1. **Erikoismallit MSM + Stonehenge + Colosseum HYVÄKSYTTY → 1.0.28-junaan.** Merge-pyyntö Natiivisepälle, KUN 1.0.27 on
