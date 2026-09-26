@@ -9,6 +9,7 @@
 //
 // Pelin teot vain PeliOhjaimen julkisen API:n kautta (RAJAPINTA.md):
 // "uusi peli" → PeliOhjain.Instanssi.UusiPeli(null).
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -487,14 +488,8 @@ namespace Matkakirja.Natiivi
                 foreach (var k in v.Luentakuvat) Kuvat.Esilataa(k.Osoite, taso);
                 foreach (var k in v.PuluKuvat) Kuvat.Esilataa(k.Osoite, taso);
             });
-            var tiedot = UiSisalto.Kaupunki(kaupunki);
-            if (tiedot != null)
-            {
-                int n = 0;
-                foreach (var k in tiedot.Avauskuvat) { if (n++ >= 3) break; Kuvat.Esilataa(k.Tiedosto, taso); }
-                if (tiedot.Kansikuvat.Count > 0) Kuvat.Esilataa(tiedot.Kansikuvat[0].Tiedosto, taso);
-            }
-            var maa = tiedot?.Maa;
+            EsilataaAvauskuvat(kaupunki, taso);
+            var maa = UiSisalto.Kaupunki(kaupunki)?.Maa;
             // NostoSisalto pitää jäsennetyn datan muistissa: toinen kutsu samalle maalle ei hae verkosta.
             if (!string.IsNullOrEmpty(maa) && (nostoTaso != Taso.SeuraavaRuutu || maa != esiladattuMaa))
             {
@@ -502,6 +497,41 @@ namespace Matkakirja.Natiivi
                 UiKerros.Hae().StartCoroutine(NostoSisalto.Esilataa(maa, nostoTaso));
             }
             Debug.Log($"MATKAKIRJA ui: saapumisen esilataus {kaupunki} ({taso})");
+        }
+
+        /// <summary>
+        /// Trailerin avaus- ja kansikuvat (kaupunkilehti, skeema 1.48 kaupungeittain). Esilataaja erä 5 (kylmä savuke
+        /// lokit/esilataaja-5/kylma4): lehti saapuu asynkronisesti (UiSisalto.LataaLehti), joten EsilataaSaapuminen näki
+        /// avauskuvat yleensä tyhjinä ja hero-kuvat (julisteet/herokoe, ~1,1 s) haettiin vasta saapumisessa. Nyt odottava
+        /// kaupunki muistetaan ja kuvat pyydetään, kun lehti on liitetty (LehdetSaapuivat). Kaikki avauskuvat (traileri
+        /// näyttää ne kaikki, Ateenalla 4).
+        /// </summary>
+        static void EsilataaAvauskuvat(string kaupunki, Taso taso)
+        {
+            var tiedot = UiSisalto.Kaupunki(kaupunki);
+            if (tiedot == null) return;
+            if (tiedot.Avauskuvat.Count == 0 && tiedot.Kansikuvat.Count == 0)
+            {
+                if (!odottavatAvauskuvat.ContainsKey(kaupunki) || taso < odottavatAvauskuvat[kaupunki]) odottavatAvauskuvat[kaupunki] = taso;
+                if (!avausKuuntelu) { avausKuuntelu = true; UiSisalto.LehdetSaapuivat += AvauskuvatLehdesta; }
+                return;
+            }
+            foreach (var k in tiedot.Avauskuvat) Kuvat.Esilataa(k.Tiedosto, taso);
+            if (tiedot.Kansikuvat.Count > 0) Kuvat.Esilataa(tiedot.Kansikuvat[0].Tiedosto, taso);
+        }
+
+        static readonly Dictionary<string, Taso> odottavatAvauskuvat = new Dictionary<string, Taso>();
+        static bool avausKuuntelu;
+
+        static void AvauskuvatLehdesta()
+        {
+            foreach (var kv in new List<KeyValuePair<string, Taso>>(odottavatAvauskuvat))
+            {
+                var t = UiSisalto.Kaupunki(kv.Key);
+                if (t == null || (t.Avauskuvat.Count == 0 && t.Kansikuvat.Count == 0)) continue;
+                odottavatAvauskuvat.Remove(kv.Key);
+                EsilataaAvauskuvat(kv.Key, kv.Value);
+            }
         }
 
         /// <summary>Kohta 4 (erä 3): joutilaana tämän maan karttanostojen kuvat levylle.</summary>
