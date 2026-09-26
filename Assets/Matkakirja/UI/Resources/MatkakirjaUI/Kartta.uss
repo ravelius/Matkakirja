@@ -491,7 +491,7 @@
     right: 10px;
     width: 221px;
     max-width: 78%;
-    max-height: 60%;
+    max-height: 78%;
     padding: 5.6px;
     background-color: #f5f0e2;
     border-radius: 8px;
@@ -718,8 +718,27 @@
     min-height: 0;
 }
 
+/* Löydös 173 (omistaja 19.5x): Nostot/Maakunnat-paneeli kapeammaksi (≈ 62 % iPhonen leveydestä) ja korkeammaksi
+ * (lähes alareunaan, Liikun yläpuolelle); peitto ≤ 45 % (250 × ~610 pt / 402 × 874 pt ≈ 43 %). */
 .mk-selite.mk-selite--maakunnat {
-    width: 268px;
+    width: 250px;
+    max-height: 78%;
+}
+
+.mk-maakunnat__valinnat {
+    flex-direction: row;
+}
+
+.mk-maakunnat__valinnat > .mk-maakunnat__rivi {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding-right: 42px;
+    padding-left: 12px;
+}
+
+.mk-maakunnat__valinnat > .mk-maakunnat__rivi--kaikki {
+    padding-left: 24px;
+    padding-right: 8px;
 }
 
 /* --- Maakunnat-välilehti (webin .maakunnat-*) ---------------------------------------- */
@@ -838,6 +857,20 @@
     border-radius: 2px;
     background-color: #ded5c2;
     -unity-background-scale-mode: scale-and-crop;
+}
+
+/* Löydös 170b: kuvan paikka ilman kuvaa — vaalea ruutu, pieni himmeä karttaikoni keskellä (ei koristeita). */
+.mk-maakunnat__lkuva {
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-maakunnat__lpaikka {
+    width: 20px;
+    height: 20px;
+    opacity: 0.35;
+    color: #46331f;
+    --mk-ikoni-viiva: 1.4;
 }
 
 .mk-maakunnat__lteksti {

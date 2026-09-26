@@ -66,6 +66,19 @@ namespace Matkakirja.Natiivi
         const string PoisAvain = "matkakirja-karttatyokalu-maakunnat-pois", PoisTunnus = ":pois";
         static bool OnPois(string avain) => avain != null && avain.EndsWith(PoisTunnus, StringComparison.Ordinal);
 
+        /// <summary>
+        /// Löydös 169 (omistaja 19.3x): "Kaikki" = koko maa ilman rajausta (ei yksittäistä maakuntaa, ei Pois). Rivi on valittuna
+        /// aina, kun kumpaakaan ei ole; välilehden ollessa auki kartalla kaikkien maakuntien täyttö ilman korostusta
+        /// (MaakunnatSilta saa avaimen "ISO:kaikki"). Ei tallennu (tallennettu valinta poistetaan).
+        /// </summary>
+        public const string KaikkiTunnus = ":kaikki";
+        const string ValinnatLuokka = "mk-maakunnat__valinnat";
+
+        /// <summary>Rivin maaryhmän rivisäiliö (Kaikki/Pois ovat yhden tason syvemmällä valintarivissä).</summary>
+        static VisualElement Ryhmassa(VisualElement rivi) =>
+            rivi.parent != null && rivi.parent.ClassListContains(ValinnatLuokka) ? rivi.parent.parent : rivi.parent;
+        public static bool OnKaikki(string avain) => avain != null && avain.EndsWith(KaikkiTunnus, StringComparison.Ordinal);
+
         sealed class Maa { public string Iso, Nimi; public List<(string Tunnus, string Nimi)> Alueet = new List<(string, string)>(); }
         sealed class Luonnehdinta { public string Lyhyt, Pitka, Pikkukuva; public List<Dictionary<string, object>> Kuvat = new List<Dictionary<string, object>>(); }
 
@@ -239,8 +252,18 @@ namespace Matkakirja.Natiivi
                 KytkeVeto(ryhmanRivit);
                 if (m.Alueet.Count > 0)
                 {
+                    // Löydös 173: Kaikki ja Pois samalla ylimmällä rivillä (Kaikki vasemmalla); veto valitsee puoliskon x:n mukaan.
+                    var valinnat = Rakenne.El(ValinnatLuokka, ryhmanRivit, PickingMode.Ignore);
+                    valinnat.userData = ValinnatLuokka;
+                    string kaikkiAvain = iso + KaikkiTunnus;
+                    var kaikkiRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois mk-maakunnat__rivi--kaikki", () => Valitse(kaikkiAvain), valinnat);
+                    Kirjasimet.Aseta(Rakenne.Teksti("Kaikki", "mk-maakunnat__nimi", kaikkiRivi), Kirjasin.Luku);
+                    kaikkiRivi.tooltip = "Koko maa, ei rajausta";
+                    kaikkiRivi.pickingMode = PickingMode.Ignore;
+                    kaikkiRivi.userData = kaikkiAvain;
+                    rivit[kaikkiAvain] = kaikkiRivi;
                     string poisAvain = iso + PoisTunnus;
-                    var poisRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(poisAvain), ryhmanRivit);
+                    var poisRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(poisAvain), valinnat);
                     Kirjasimet.Aseta(Rakenne.Teksti("Pois", "mk-maakunnat__nimi", poisRivi), Kirjasin.Luku);
                     poisRivi.tooltip = "Maakunnat pois kartalta";
                     poisRivi.pickingMode = PickingMode.Ignore;
@@ -282,13 +305,13 @@ namespace Matkakirja.Natiivi
                 vedettava = rivit;
                 rivit.CapturePointer(e.pointerId);
                 AsetaVeto(true);
-                ValitseKohdasta(rivit, e.localPosition.y);
+                ValitseKohdasta(rivit, e.localPosition);
                 e.StopPropagation();
             });
             rivit.RegisterCallback<PointerMoveEvent>(e =>
             {
                 if (vedettava != rivit) return;
-                ValitseKohdasta(rivit, e.localPosition.y);
+                ValitseKohdasta(rivit, e.localPosition);
                 e.StopPropagation();
             });
             rivit.RegisterCallback<PointerUpEvent>(e => { if (rivit.HasPointerCapture(e.pointerId)) rivit.ReleasePointer(e.pointerId); LopetaVeto(); });
@@ -311,8 +334,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Rivi sormen korkeudella (säiliön koordinaatit); vedettäessä rivien ohi reunimmainen rivi.</summary>
-        void ValitseKohdasta(VisualElement rivit, float y)
+        void ValitseKohdasta(VisualElement rivit, Vector2 p)
         {
+            float y = p.y;
             VisualElement osuma = null;
             foreach (var r in rivit.Children())
             {
@@ -323,13 +347,26 @@ namespace Matkakirja.Natiivi
                 osuma = r;
                 if (y < l.yMax) break;
             }
-            if (osuma != null) Valitse((string)osuma.userData);
+            // Löydös 173: Kaikki/Pois-rivillä puolisko x:n mukaan.
+            if (osuma != null && osuma.ClassListContains(ValinnatLuokka))
+            {
+                VisualElement puoli = null;
+                float x = p.x - osuma.layout.x;
+                foreach (var c in osuma.Children()) { puoli = c; if (x < c.layout.xMax) break; }
+                osuma = puoli;
+            }
+            if (osuma?.userData is string avain) Valitse(avain);
         }
 
         /// <summary>Pois-tilassa jokaisen maan Pois-rivi näkyy valittuna (tila on maasta riippumaton).</summary>
         void MerkitsePois()
         {
-            foreach (var p in rivit) if (OnPois(p.Key)) p.Value.EnableInClassList("mk-valittu", Pois);
+            foreach (var p in rivit)
+            {
+                if (OnPois(p.Key)) p.Value.EnableInClassList("mk-valittu", Pois);
+                // Löydös 169: Kaikki valittuna, kun ei ole Pois eikä yksittäistä maakuntaa.
+                else if (OnKaikki(p.Key)) p.Value.EnableInClassList("mk-valittu", !Pois && ValittuAvain == null);
+            }
         }
 
         void AsetaRyhma(string iso, bool auki)
@@ -382,6 +419,7 @@ namespace Matkakirja.Natiivi
                 if (rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
                 ValittuAvain = null;
                 PaivitaLuonnehdinta();
+                MerkitsePois();
             }
             SiirraPeukalo();
         }
@@ -401,14 +439,14 @@ namespace Matkakirja.Natiivi
         public void Valitse(string avain)
         {
             if (!Kelpaa(avain)) return;
-            bool pois = OnPois(avain);
-            if (avain == ValittuAvain && pois == Pois) return;
+            bool pois = OnPois(avain), kaikki = OnKaikki(avain);
+            if (kaikki ? ValittuAvain == null && !Pois : avain == ValittuAvain && pois == Pois) return;
             if (ValittuAvain != null && rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
-            ValittuAvain = pois ? null : avain;
-            if (!pois) rivit[avain].AddToClassList("mk-valittu");
+            ValittuAvain = pois || kaikki ? null : avain;
+            if (!pois && !kaikki) rivit[avain].AddToClassList("mk-valittu");
             try
             {
-                if (pois) PlayerPrefs.DeleteKey(TallennusAvain); else PlayerPrefs.SetString(TallennusAvain, avain);
+                if (pois || kaikki) PlayerPrefs.DeleteKey(TallennusAvain); else PlayerPrefs.SetString(TallennusAvain, avain);
                 PlayerPrefs.SetInt(PoisAvain, pois ? 1 : 0);
                 PlayerPrefs.Save();
             }
@@ -419,6 +457,7 @@ namespace Matkakirja.Natiivi
             PaivitaLuonnehdinta();
             SiirraPeukalo();
             // Pois: korostus ja rajat pois (MaakunnatSilta null), ja 113:n oletusrajat kuuntelevat PoisMuuttui.
+            // Kaikki: avain "ISO:kaikki" (täyttö ilman korostusta).
             Valittu?.Invoke(pois ? null : avain);
             if (muuttui) PoisMuuttui?.Invoke(pois);
         }
@@ -432,8 +471,10 @@ namespace Matkakirja.Natiivi
         void SiirraPeukalo()
         {
             string kohde = ValittuAvain;
-            if (kohde == null && Pois) kohde = rivit.Keys.FirstOrDefault(k => OnPois(k) && rivit[k].parent.resolvedStyle.display != DisplayStyle.None);
-            if (kohde == null || !rivit.TryGetValue(kohde, out var r) || r.parent.resolvedStyle.display == DisplayStyle.None
+            if (kohde == null && Pois) kohde = rivit.Keys.FirstOrDefault(k => OnPois(k) && Ryhmassa(rivit[k]).resolvedStyle.display != DisplayStyle.None);
+            // Löydös 169: ei valintaa eikä Pois → peukalo Kaikki-rivillä.
+            else if (kohde == null) kohde = rivit.Keys.FirstOrDefault(k => OnKaikki(k) && Ryhmassa(rivit[k]).resolvedStyle.display != DisplayStyle.None);
+            if (kohde == null || !rivit.TryGetValue(kohde, out var r) || Ryhmassa(r).resolvedStyle.display == DisplayStyle.None
                 || float.IsNaN(r.layout.height))
             {
                 peukalo.style.display = DisplayStyle.None;
@@ -460,12 +501,20 @@ namespace Matkakirja.Natiivi
             // Löydös 158: oma pikkukuva ensin, varana kortin ensimmäinen kuva.
             string pikku = data == null ? null : !string.IsNullOrEmpty(data.Pikkukuva) ? data.Pikkukuva
                 : data.Kuvat.Count > 0 ? MiniJson.Teksti(data.Kuvat[0], "pikku") ?? MiniJson.Teksti(data.Kuvat[0], "osoite") : null;
+            // Löydös 170b (omistaja 19.3x): kuvan paikka näkyy aina minitekstin kyljessä; kuvan puuttuessa (tai haun
+            // epäonnistuessa) vaalea paikkakuva pienellä karttaikonilla, kunnes Sisältökirjurin kuva tulee pakettiin.
+            var kuva = Rakenne.El("mk-maakunnat__lkuva", rivi);
+            var paikka = new SvgIkoni(Ikonit.Viiva["taitekartta"]);
+            paikka.AddToClassList("mk-maakunnat__lpaikka");
+            kuva.Add(paikka);
             if (!string.IsNullOrEmpty(pikku))
-            {
-                var kuva = Rakenne.El("mk-maakunnat__lkuva", rivi);
-                Kuvat.Hae(pikku, tx => { if (tx != null) kuva.style.backgroundImage = new StyleBackground(tx); });
-                kuva.RegisterCallback<ClickEvent>(_ => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain)));
-            }
+                Kuvat.Hae(pikku, tx =>
+                {
+                    if (tx == null) return;
+                    kuva.style.backgroundImage = new StyleBackground(tx);
+                    paikka.RemoveFromHierarchy();
+                });
+            if (data != null) kuva.RegisterCallback<ClickEvent>(_ => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain)));
             var t = Rakenne.Teksti(data?.Lyhyt ?? "Luonnehdinta tulossa.", "mk-maakunnat__lteksti", rivi);
             Kirjasimet.Aseta(t, Kirjasin.Luku);
             if (data != null)
