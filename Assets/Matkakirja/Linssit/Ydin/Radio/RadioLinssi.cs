@@ -34,6 +34,12 @@ namespace Matkakirja.Linssit.Radio
         bool Kuuluu { get; }
         /// <summary>Virheen syy (ei vastaa, katkesi), muuten null.</summary>
         string Virhe { get; }
+        /// <summary>
+        /// ESIKUUNTELU (Raamattu ESILATAUSPOLITIIKKA kohta 6: "radiossa nykyinen ja seuraava asema puskuroituna"):
+        /// seuraavan aseman yhteys ja enintään ~4 s jäsennettyä dataa valmiiksi ilman soittoa; Avaa samalla osoitteella
+        /// ottaa sen käyttöön heti. Yksi kerrallaan, null = pois; liitännäinen sulkee käyttämättömän 60 s:ssa ja tauolla.
+        /// </summary>
+        void Esikuuntele(string url);
     }
 
     /// <summary>Viritysääni (kohina, web viritin.js).</summary>
@@ -453,6 +459,8 @@ namespace Matkakirja.Linssit.Radio
             }
             if (viritin != null) viritin.Voimakkuus = paalle ? 0 : aani;
             virta?.Tauko(paalle);
+            if (paalle) Esikuuntele(null);   // tauko sulkee esikuuntelun (Natiivisepän ehto); jatko aloittaa alusta
+            soiAlkoi = double.NaN;
             if (Tila != null) { Tila.Tauolla = paalle; TilaMuuttui?.Invoke(Tila); }
         }
 
@@ -562,6 +570,12 @@ namespace Matkakirja.Linssit.Radio
             }
             if (soiva == kaupunki && Tila.Vaihe != RadioVaihe.Virhe) return;
 
+            // Liikkeen suunta asteikolla ennustaa seuraavan (esikuuntelu). Avaa ottaa esikuunnellun käyttöön tai
+            // sulkee sen (MatkakirjaRadio.mm), joten merkintä vain nollataan.
+            int uusiKohta = asteikko.IndexOf(kaupunki), vanhaKohta = soiva == null ? -1 : asteikko.IndexOf(soiva);
+            if (uusiKohta >= 0 && vanhaKohta >= 0 && uusiKohta != vanhaKohta) suunta = Math.Sign(uusiKohta - vanhaKohta);
+            Esikuunneltu = null;
+            soiAlkoi = double.NaN;
             LopetaAani(RistihaivytysS, viritysJatkuu: true);
             soiva = kaupunki;
             alkoi = vedetty ? Nyt - SiirtymaMs : Nyt;
@@ -590,6 +604,12 @@ namespace Matkakirja.Linssit.Radio
             if (Tauolla) Tauko(false);
             vetaa = true;
             if (viritin != null) { viritin.Voimakkuus = 0; viritin.Aloita(); }
+            // Liitännäinen sulkee käyttämättömän esikuuntelun 60 s:ssa: veto on merkki, että seuraavaa tarvitaan.
+            if (Esikuunneltu != null && Nyt - esikuunneltuHetki > EsikuuntelunKattoMs && SoiVakaasti())
+            {
+                Esikuunneltu = null;
+                if (SeuraavaAsema() is string url) Esikuuntele(url);
+            }
         }
 
         /// <summary>
@@ -643,10 +663,73 @@ namespace Matkakirja.Linssit.Radio
             Mittari.Paivita(dt, taso, soi, aani, t, y?.VahennettyLiike ?? false);
         }
 
+        // ---- Esikuuntelu (ESILATAUSPOLITIIKKA kohta 6: nykyinen ja seuraava asema puskuroituna) ----
+
+        /// <summary>Soivan aseman soittoaika ennen seuraavan esikuuntelua (ms): nykyinen puskuroi ensin yksin.</summary>
+        public const double EsikuuntelunViiveMs = 3000;
+        /// <summary>Liitännäisen katto käyttämättömälle esikuuntelulle (ms, MatkakirjaRadio.mm EsikuuntelunKattoS).</summary>
+        public const double EsikuuntelunKattoMs = 60000;
+        /// <summary>Kuinka monta asemaa kumpaankin suuntaan haetaan soivaa seuraavaksi.</summary>
+        public const int EsikuuntelunHaku = 3;
+        /// <summary>Saako esikuunnella (Unity: ei kuumana eikä virransäästössä, Esilataaja.Seis).</summary>
+        public Func<bool> EsikuunteluSallittu = () => true;
+        /// <summary>Esikuunneltava osoite tai null.</summary>
+        public string Esikuunneltu { get; private set; }
+        double esikuunneltuHetki, soiAlkoi = double.NaN;
+        int suunta = 1;
+
+        void Esikuuntele(string url)
+        {
+            if (url == Esikuunneltu) return;
+            Esikuunneltu = url;
+            esikuunneltuHetki = Nyt;
+            virta?.Esikuuntele(url);
+        }
+
+        /// <summary>Soiva asema on lukittu ja soinut vähintään viiveen verran.</summary>
+        bool SoiVakaasti() => !double.IsNaN(soiAlkoi) && Nyt - soiAlkoi >= EsikuuntelunViiveMs;
+
+        /// <summary>Asteikon seuraava soiva asema viimeisen liikkeen suuntaan (sitten vastakkaiseen): osoite tai null.</summary>
+        public string SeuraavaAsema()
+        {
+            int i = soiva == null ? -1 : asteikko.IndexOf(soiva);
+            if (i < 0) return null;
+            foreach (int s in new[] { suunta, -suunta })
+                for (int j = i + s, n = 0; j >= 0 && j < asteikko.Count && n < EsikuuntelunHaku; j += s, n++)
+                {
+                    var asema = aineisto.MaanAsema(aineisto.Kaupunki(asteikko[j])?.Iso3);
+                    switch (ToimintoAsemalle(asema))
+                    {
+                        case Toiminto.Soita: return asema.Url;
+                        case Toiminto.Aanite: return asema.VaraUrl;
+                    }
+                }
+            return null;
+        }
+
+        void PaivitaEsikuuntelu()
+        {
+            if (virta == null) return;
+            bool sallittu = EsikuunteluSallittu?.Invoke() ?? true;
+            if (!Auki || Tauolla || soiva == null || Tila?.Vaihe != RadioVaihe.Soi || !sallittu)
+            {
+                soiAlkoi = double.NaN;
+                // Viritys ja veto pitävät esikuuntelun (sitä kohti ollaan menossa); kuumuus ja virransäästö sulkevat.
+                if (!sallittu) Esikuuntele(null);
+                return;
+            }
+            if (double.IsNaN(soiAlkoi)) soiAlkoi = Nyt;
+            // Kerran asemaa kohden: liitännäisen 60 s:n katon jälkeen merkintä jää, eikä taustavirtaa avata uudelleen
+            // (vain VetoAlkaa uusii sen). Tauko, kuumuus ja asemanvaihto nollaavat merkinnän.
+            if (Esikuunneltu != null || !SoiVakaasti()) return;
+            if (SeuraavaAsema() is string url) Esikuuntele(url);
+        }
+
         public void Paivita()
         {
             PaivitaMittari();
             PaivitaMastot();
+            PaivitaEsikuuntelu();
             if (!Auki || soiva == null || Tauolla) return;
             double t = Nyt - alkoi;
             if (Tila.Vaihe == RadioVaihe.Virhe) return;
@@ -693,6 +776,8 @@ namespace Matkakirja.Linssit.Radio
             // Uusi asema, STOP tai sulku purkaa tauon (uusi valinta = soita).
             if (Tauolla) { Tauolla = false; if (viritin != null) viritin.Voimakkuus = aani; }
             virta?.Sulje();
+            // Pysäytys ilman uutta asemaa (STOP, sulku, virhe, linkki): esikuuntelu ei enää palvele mitään.
+            if (!viritysJatkuu) Esikuuntele(null);
             if (!viritysJatkuu) viritin?.Lopeta(haiveS);
             kuuluu = lukittu = false;
             if (!viritysJatkuu) { soiva = null; Korostus(null); }
