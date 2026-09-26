@@ -207,6 +207,7 @@ namespace Matkakirja.Natiivi
             bool vertailu = id == "vertailu", radio = id == "radio";
             ui.Kartuscha.NaytaSallittu(!portti);
             ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
+            ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio));
             ui.OfflineTila.NaytaSallittu(!paalla);
             ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
             ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
@@ -218,6 +219,9 @@ namespace Matkakirja.Natiivi
             bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id);
             ui.Karttaselite.NaytaNappi(!selitePiiloon);
             if (paalla) ui.Karttaselite.Sulje();
+            // Löydös S3 (Laitetestaaja b18): linssin avaus sulkee kartan kortit (nosto, kaupunkikortti, matkakirjan
+            // postikortit), muuten laajennettu nostokortti jäi linssin päälle auki.
+            if (paalla) { ui.Nostokortti.Sulje(); ui.Kaupunkikortti.Sulje(); Postikortti.Sulje(); }
             Valitsin.Sulje();
             Valitsin.Merkitse(id);
             // Linssin vaihtuessa pilleri esiin kuten ennenkin; peittäjät ilmoittavat itsensä uudelleen.

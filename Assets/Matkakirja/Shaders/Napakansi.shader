@@ -57,6 +57,8 @@ Shader "Matkakirja/Napakansi"
             float4 _maaKeski;
             float4 _keila0, _keila1, _keilaRajat, _keila0Vari, _keila1Vari;
             float _keilaHamaryys;
+            // Hunnun paljastus (elävä kartta, Varitaso.Paljastus): sama kaava kuin tileset-varjostimen paikassa 2.
+            float4 _paljastus, _paljastusReuna;
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; half4 vari : COLOR; float2 uv : TEXCOORD0; };
             struct Vali { float4 paikka : SV_POSITION; float3 normaali : TEXCOORD0; float2 uv : TEXCOORD1; half4 vari : COLOR; float3 maailma : TEXCOORD2; };
@@ -96,7 +98,18 @@ Shader "Matkakirja/Napakansi"
                 half a = kuva.a * _BaseColor.a * i.vari.a;
                 // Väritason kerma kuten laatoissa (Cesiumin raster-kerros sekoittuu ennen valaistusta).
                 // Kärkipisteen rgb: reliefikannen väri (NapaKannet ReliefinPohjoisreuna, lineaarisena); muilla valkoinen.
-                half3 vari = lerp(savy * _BaseColor.rgb * i.vari.rgb, _Kerma.rgb, _Kerma.a * maa);
+                half peitto = 1.0;
+                if (_paljastusReuna.w > 0.5)
+                {
+                    float3 pn = normalize(i.maailma - _maaKeski.xyz);
+                    float3 q = pn * _paljastusReuna.z;
+                    float kohina = sin(q.x + 1.7 * sin(q.y * 1.3)) * sin(q.y * 1.1 + 1.3 * sin(q.z * 1.7))
+                        + 0.5 * sin(q.z * 2.3 + 1.1 * sin(q.x * 2.9));
+                    float w = max(_paljastusReuna.x, 1e-6);
+                    peitto = (half)smoothstep(_paljastus.w - 0.5 * w, _paljastus.w + 0.5 * w,
+                        length(pn - _paljastus.xyz) + kohina * _paljastusReuna.y);
+                }
+                half3 vari = lerp(savy * _BaseColor.rgb * i.vari.rgb, _Kerma.rgb, _Kerma.a * maa * peitto);
                 vari *= (half)(1.0 - saturate(_pallonTummuus));
                 // Valokeila ennen radion hämärää: keilan ulkopuolinen perusväri tummuu, keilassa lyhdyn sävy ja hehku
                 // (emissiona, valaistuksen ohi kuten laattojen emissio). Jänne |n − k|, floatina tarkka pienilläkin keiloilla.

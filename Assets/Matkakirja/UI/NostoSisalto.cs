@@ -16,6 +16,9 @@
 //                      (kaupungin oma pooli, esim. Sevilla ja Edinburgh; myös webin merkkitunnus "nosto-<id>")
 //   "syvennys:<kaupunki>-<täky>" kokoelma fokusvirrat → virta.takyt + moduuli syvennyspaikat
 //                      (web js/syvennys.js; myös "syvennys:<kaupunki>:<täky>" ja "syvennys-<kaupunki>-<täky>")
+//   "salaisuus:<tunnus>" kokoelma maakuntasalaisuudet (skeema 1.47, Elävä kartta, vain natiivi: maa, maakunta,
+//                      maakuntaNimi, nimi, nimio, laji, kategoria, aihe, lyhyt, teksti, nappi, viite, lat, lon);
+//                      avain on koko id. Kokoelman puuttuessa (vanha paketti) null.
 // Täkypooli (web nostoKaupunginPooli): kaupungin oma virta.takynostot voittaa, muuten maan NOSTO_MAAT;
 // kokoelman takynostot kenttä kaupungit kertoo valmiiksi, minkä kaupunkien pooliin nosto kuuluu (Pooli).
 // Täkynoston "Katso X kartalla" lukee kohteen nimen ja paikan karttavaloista (kohde:<id>).
@@ -36,7 +39,7 @@ using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
-    public enum NostoLaji { Kohde, Skandaali, Hetki, Elain, Takynosto, Syvennys }
+    public enum NostoLaji { Kohde, Skandaali, Hetki, Elain, Takynosto, Syvennys, Salaisuus }
 
     public sealed class NostoKuva
     {
@@ -122,7 +125,8 @@ namespace Matkakirja.Natiivi
         /// "Katso X kartalla" ja napakohteen laji.</summary>
         sealed class Valo
         {
-            public string Maa, Aihe, Nimi, Lahde;
+            /// <summary>Maakunta "ISO:tunnus" (skeema 1.45) tai null: Elävän kartan nimen varapaikka (MaakunnanPiste).</summary>
+            public string Maa, Aihe, Nimi, Lahde, Maakunta;
             public double Lat, Lon;
         }
 
@@ -349,6 +353,14 @@ namespace Matkakirja.Natiivi
                     }
                     break;
                 }
+                case "salaisuus":
+                {
+                    // Elävä kartta: maakunnan salaisuus (kokoelman avain on koko id "salaisuus:<tunnus>").
+                    Dictionary<string, object> d = null;
+                    yield return Alkio("maakuntasalaisuudet", "salaisuus:" + tunnus, (x, _) => d = x);
+                    if (d != null) n = Salaisuus("salaisuus:" + tunnus, d);
+                    break;
+                }
                 case "syvennys":
                 {
                     // "<kaupunki>-<täky>" tai "<kaupunki>:<täky>": kaupunkitunnuksissa ei ole viivaa.
@@ -516,7 +528,7 @@ namespace Matkakirja.Natiivi
                     if (Ob(a) is Dictionary<string, object> o && T(o, "id") is string id)
                         m[id] = new Valo
                         {
-                            Maa = T(o, "maa"), Aihe = T(o, "aihe"), Nimi = T(o, "nimi"), Lahde = T(o, "lahde"),
+                            Maa = T(o, "maa"), Aihe = T(o, "aihe"), Nimi = T(o, "nimi"), Lahde = T(o, "lahde"), Maakunta = T(o, "maakunta"),
                             Lat = MiniJson.Luku(o, "lat") ?? double.NaN, Lon = MiniJson.Luku(o, "lon") ?? double.NaN,
                         };
             }
@@ -638,6 +650,52 @@ namespace Matkakirja.Natiivi
             Kuvat(n, MiniJson.Kentta(d, "kuvat") ?? MiniJson.Kentta(d, "kuva"), "osoite");
             n.Visa = Visa(d);
             return n;
+        }
+
+        /// <summary>
+        /// Maakunnan salaisuus (ELÄVÄ KARTTA, suunnitelma kohta 3): iso, harvinainen nosto, joka ilmestyy, kun maakunnan kaikki
+        /// nostot on löydetty. Kortti on sama kuin muilla nostoilla (löydös 135: koko sama, vain tyyli eri, mk-nosto--salaisuus).
+        /// Ingressi = Livian repliikki (lyhyt) tai 1873-alaotsikko (nappi); teksti ja lopuksi lähderivi (viite).
+        /// </summary>
+        static Nosto Salaisuus(string id, Dictionary<string, object> d)
+        {
+            string viite = T(d, "viite");
+            var kappaleet = Kappalejako.Jaa(T(d, "teksti"));
+            if (!string.IsNullOrEmpty(viite)) kappaleet.Add("Lähde: " + viite);
+            return new Nosto
+            {
+                Laji = NostoLaji.Salaisuus, Id = id, Iso = T(d, "maa") ?? T(d, "$maa"), Luokka = "MAAKUNNAN SALAISUUS",
+                Symboli = T(d, "aihe") ?? "historia",
+                Otsikko = T(d, "nimi"), Meta = T(d, "maakuntaNimi"), Ingressi = T(d, "lyhyt") ?? T(d, "nappi"),
+                Teksti = string.Join("\n\n", kappaleet),
+            };
+        }
+
+        /// <summary>Maakunnan ("ISO:tunnus") salaisuus-noston id ja nimi kokoelmasta maakuntasalaisuudet, tai null.</summary>
+        public static IEnumerator MaakunnanSalaisuus(string maakunta, Action<string, string> valmis)
+        {
+            yield return LataaKokoelma("maakuntasalaisuudet");
+            foreach (var p in kokoelmat["maakuntasalaisuudet"])
+                if (T(p.Value, "maakunta") == maakunta) { valmis(p.Key, T(p.Value, "nimi")); yield break; }
+            valmis(null, null);
+        }
+
+        /// <summary>
+        /// Elävän kartan käsialanimen VARAPAIKKA (MaakuntaTiedot.Paikka, kunnes Natiiviseppä tuo Maakuntajako-alueen
+        /// keskipisteen): maakunnan karttavalojen leveys- ja pituusasteiden mediaani. Mediaani kestää kaukaiset saaret
+        /// (Attikaan kuuluvat Kythira ja Aigina). null = maakunnalla ei ole paikallisia nostoja.
+        /// </summary>
+        public static IEnumerator MaakunnanPiste(string maakunta, Action<double, double, bool> valmis)
+        {
+            yield return ValojenMaat();
+            var lat = new List<double>();
+            var lon = new List<double>();
+            foreach (var v in valot.Values)
+                if (v.Maakunta == maakunta && !double.IsNaN(v.Lat) && !double.IsNaN(v.Lon)) { lat.Add(v.Lat); lon.Add(v.Lon); }
+            if (lat.Count == 0) { valmis(0, 0, false); yield break; }
+            lat.Sort();
+            lon.Sort();
+            valmis(lat[lat.Count / 2], lon[lon.Count / 2], true);
         }
 
         static Nosto Hetki(string id, string iso, Dictionary<string, object> d)

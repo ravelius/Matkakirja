@@ -450,10 +450,12 @@ namespace Matkakirja.Peli.Testit
             tila.LinssiTausta(humina, 0.45, 2000);
             var m = tila.Toive(Kanava.Maisema);
             Oleta.Sama(humina, m.Url, "humina soi maiseman paikalla");
+            Oleta.Tosi(m.IlmanKompressoria, "ei maiseman kompressoria (web suoraan gainiin)");
             tila.LinssiTausta(humina, 0.45, 2000);
             Oleta.Sama(humina, tila.Toive(Kanava.Maisema).Url, "sama tunnus ei ala alusta");
             tila.LinssiTausta(null, 0, 0);
             Oleta.Sama(null, tila.Toive(Kanava.Maisema).Url, "pois linssin ollessa auki: hiljaa");
+            Oleta.Sama(AaniTila.LinssinTaustanLaskuMs, tila.Toive(Kanava.Maisema).PoisMs, "lasku 600 ms kuten web");
             tila.LinssiPito(false);
             Oleta.Tosi(tila.Toive(Kanava.Maisema).Url != null && tila.Toive(Kanava.Maisema).Url != humina, "paikan maisema palaa");
         }

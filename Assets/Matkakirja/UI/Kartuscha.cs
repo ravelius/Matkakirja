@@ -21,6 +21,7 @@
 // Sulkeutuu, kun karttaa kosketaan. Piilossa, kun pelaaja ei ole kaupungissa, peli ei ole
 // Kartta-/Dialogi-/Matkalla-tilassa tai linssi on päällä (NaytaSallittu).
 // Data: UiSisalto.Maa (Siirtosepän maat-kokoelma).
+// Elävä kartta (tutkimuspalkki, heränneet maakunnat, salaisuusrivi, lippu liehuu valmiissa maassa): Kartuscha.Muste.cs.
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -29,7 +30,7 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class Kartuscha
+    public sealed partial class Kartuscha
     {
         readonly UiKerros kerros;
         readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu, nimirivi;
@@ -86,6 +87,8 @@ namespace Matkakirja.Natiivi
             // Radio kortin oikeaan yläkulmaan (web .maapaneeli-radio: absolute, top/right 0,7rem).
             var radioPaikka = kortti;
             radio = Mediarivi.Radionappi(radioPaikka);
+            // Elävä kartta (Kartuscha.Muste.cs): tutkimuspalkki, heränneet maakunnat ja salaisuusrivi.
+            RakennaMuste();
 
             // Löydös 143: nimen rivitys muuttaa korkeutta ja radio ilmestyy asemahaun jälkeen → tasaus uusiksi.
             kortti.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
@@ -201,6 +204,8 @@ namespace Matkakirja.Natiivi
 
         void Seuraa()
         {
+            KytkeMuste();
+            OdottavaHeraaminen();
             if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu) && lippu.resolvedStyle.width > 0f; // löydös 144
             string uusi = TodellinenMaa();
             // Testimaa (ui kartuscha ISO) raukeaa, kun pelaajan todellinen maa vaihtuu (matka, uusi peli): muuten
@@ -235,13 +240,18 @@ namespace Matkakirja.Natiivi
 
             lippu.style.backgroundImage = StyleKeyword.None;
             VapautaAalto();
+            lippuKuva = null;
+            lippuLiehuu = false;
             if (m.Lippu.Count > 0)
                 Kuvat.Hae(m.Lippu[0], t =>
                 {
                     if (t == null || iso != m.Iso3) return;
                     float lw = 18f * t.width / Mathf.Max(1, t.height);
                     lippu.style.width = lw;
-                    AsetaLippu(t, lw, 18f);
+                    // Elävä kartta: lippu liehuu vasta, kun maan kaikki maakunnat on löydetty (Kartuscha.Muste.cs PaivitaLippu).
+                    lippuKuva = t;
+                    lippuLeveys = lw;
+                    PaivitaLippu();
                 }, "liput");
 
             // Valtiomuoto 1873 ilman "v. 1873" -päätettä (webin valtiomuoto1873).
@@ -296,6 +306,7 @@ namespace Matkakirja.Natiivi
                 b.Add(viiva);
             }
             aiheet.style.display = m.Aiheet.Count > 0 && m.Maalehti != null ? DisplayStyle.Flex : DisplayStyle.None;
+            PaivitaMuste();
         }
 
         void Tilasto(string nimike, string arvo, string sija)
@@ -452,6 +463,7 @@ namespace Matkakirja.Natiivi
             sisus.style.display = DisplayStyle.Flex;
             Asettele();
             AnimoiVertailut();
+            JatkaHeraamista(250); // Elävä kartta: odottava maakunnan herätys, kun kortti on ehtinyt näkyviin
             if (aalto != null) kortti.schedule.Execute(() => { if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu); }); // löydös 144
             NollaaNimenSovitus(); // löydös 143b: avatun koko eri, sovitus uudelleen
             AukiMuuttui?.Invoke(true);

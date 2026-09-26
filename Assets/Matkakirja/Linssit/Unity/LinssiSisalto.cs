@@ -1,9 +1,5 @@
-// LINSSIEN SISÄLTÖ sisältöpaketista: moduulit/js/linssit/*.json ja kokoelmat.
-// Kartan Sisalto.HaeTeksti hakee vain kokoelmat/-kansiosta, joten moduulit
-// haetaan tässä samalla kaavalla (uusin.json → versiopolku → tiedosto,
-// välimuisti persistentDataPath/sisalto/<polku>). Sama välimuisti ja
-// viimeisin.txt kuin Sisalto.cs:llä, joten offline-käynnistys toimii kummallekin.
-// Koekansio Documents/sisalto-koe/<polku> luetaan ensin (sama kuin Sisalto.HaePaketista).
+// LINSSIEN SISÄLTÖ sisältöpaketista: moduulit/js/linssit/*.json ja kokoelmat, Sisalto.HaePaketista-funktiolla (yhteinen
+// haku, välimuisti, versio ja koekansio kartan kanssa). Verkko-odotus mitataan vain, kun linssi on auki.
 using System;
 using System.Collections;
 using System.IO;
@@ -37,27 +33,16 @@ namespace Matkakirja.Natiivi
             valmis(saatu);
         }
 
+        /// <summary>
+        /// Paketin tiedosto Sisalto.HaePaketista-funktiolla (Pelikoodarin yhteinen haku, build 19): sama polku rinnakkain
+        /// haetaan kerran, ja välimuisti, versio ja koekansio ovat yhteiset kartan kanssa (ennen maarajat.json, maat.json ja
+        /// radiot.json tulivat kahdesti, Pelikoodarin käynnistysanalyysi 26.9.2026).
+        /// </summary>
         static IEnumerator HaeSisalto(string polku, Action<string> valmis)
         {
-            // Versiopolku Sisallon kautta (uusin.json kerran istunnossa, Esilataaja erä 1).
-            if (versioPolku == null) yield return Sisalto.VersioPolku(v => versioPolku = v);
-            if (versioPolku == null) { valmis(null); yield break; }
-            string koko = versioPolku + polku;
-            string tiedosto = Valimuisti(koko);
-            bool valimuistissa = File.Exists(tiedosto);
-            VerkkoOdotus.Osuma("linssi", valimuistissa);
-            if (valimuistissa) { valmis(File.ReadAllText(tiedosto)); yield break; }
-            string teksti = null, virhe = null;
-            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Sisalto.Juuri + koko); q.timeout = 20; return q; }, Taso.Nakyva, "linssi",
-                k => { if (k.result == UnityWebRequest.Result.Success) teksti = k.downloadHandler.text; else virhe = k.error; });
-            if (teksti == null)
-            {
-                Debug.LogWarning($"MATKAKIRJA linssit: {koko} epäonnistui: {virhe}");
-                valmis(null);
-                yield break;
-            }
-            Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
-            File.WriteAllText(tiedosto, teksti);
+            string teksti = null;
+            yield return Sisalto.HaePaketista(polku, t => teksti = t, true);
+            if (teksti == null) Debug.LogWarning($"MATKAKIRJA linssit: {polku} ei saatu");
             valmis(teksti);
         }
 

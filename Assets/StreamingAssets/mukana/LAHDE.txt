@@ -4,3 +4,10 @@ Lähde: ämpäri media.matkakirja.app, sama tiedosto kuin pelin striimauksessa (
   musa-etusivu-lyria.mp3  https://media.matkakirja.app/audio/musa-etusivu-lyria.mp3 (2 155 849 t, haettu 25.9.2026)
   puhe-lento-alku.mp3     https://media.matkakirja.app/audio/puhe-lento-alku.mp3?v=2 (aloituslennon repliikki; Esilataaja erä 2, haettu 25.9.2026)
 Päivitys: kun ämpärin tiedosto vaihtuu, kopioi uusi tähän (muuten build soittaa vanhaa).
+Kuvat (build 19, Pelikoodarin kylmämittaus lokit/kohta1-kaynnistys-20260926.md; Kuvat.Hae katsoo tämän ensin), haettu 26.9.2026:
+  merkki-{vuori,saari,jarvi,joki,meri,historia,kulttuuri,ruoka,kauppa,tekniikka,merenkulku}.png
+                          https://matkakirja.app/assets/nostotyypit/  (NostoSaannot.Kuvamerkit, 128 × 128)
+  livia-astronauttikypara-2x.png  https://matkakirja.app/assets/livia/livia-astronauttikypara-2x.png (LiviaKuva.KyparaUrl)
+Tehosteäänet (build 19, kohta 1: Aanet.EsilataaTehosteet haki ne kylmänä verkosta; Tehostetaulu), haettu 26.9.2026:
+  efekti-*.mp3 (19 kpl)   https://media.matkakirja.app/audio/efekti-<nimi>.mp3
+  freesound-{94031,842183,856165,315660}.mp3   https://media.matkakirja.app/aanet/freesound-<id>.mp3 (lisenssit ämpärin mukaan)

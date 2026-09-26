@@ -9,15 +9,15 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void LyhytNimiSarjaksi()
         {
-            Oleta.Sama("2026-09-25-p080", Kermasarja.Oletus, "oletus = nykyinen");
-            Oleta.Sama("2026-09-25-p060", Kermasarja.Nimi("p060"));
-            Oleta.Sama("2026-09-25-p045", Kermasarja.Nimi("p045"));
+            Oleta.Sama("2026-09-26-p060", Kermasarja.Oletus, "oletus = omistajan valinta p060 26-pohjasta");
+            Oleta.Sama("2026-09-26-p060", Kermasarja.Nimi("p060"));
+            Oleta.Sama("2026-09-26-p045", Kermasarja.Nimi("p045"));
             Oleta.Sama(Kermasarja.Oletus, Kermasarja.Nimi("oletus"));
             Oleta.Sama(Kermasarja.Oletus, Kermasarja.Nimi(null));
             Oleta.Sama(Kermasarja.Oletus, Kermasarja.Nimi(" "));
             Oleta.Sama("2026-09-24-23a", Kermasarja.Nimi("/2026-09-24-23a/"), "täysi nimi sellaisenaan");
             Oleta.Sama("p06", Kermasarja.Nimi("p06"), "vain kolme numeroa on lyhyt nimi");
-            Oleta.Sama("2026-09-25-", Kermasarja.Etuliite, "etuliite oletussarjan pohjasta (26-pohjaan vaihdettaessa vain Oletus muuttuu)");
+            Oleta.Sama("2026-09-26-", Kermasarja.Etuliite, "etuliite oletussarjan pohjasta (26-pohjaan vaihdettaessa vain Oletus muuttuu)");
         }
 
         [Testi]

@@ -115,9 +115,9 @@ namespace Matkakirja.Natiivi
 
         static IEnumerator Hae()
         {
-            string kaup = null, lehdet = null, julisteet = null, liput = null;
+            string kaup = null, julisteet = null, liput = null;
             yield return Sisalto.HaeTeksti("kaupungit", t => kaup = t);
-            yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t, valinnainen: true);
+            // Kaupunkilehdet (16 Mt) EIVÄT pidätä Valmis-tilaa: ne luetaan perään (LehdetPerassa).
             yield return Sisalto.HaeTeksti("julisteet", t => julisteet = t, valinnainen: true);
             yield return Sisalto.HaeTeksti("lippumaat", t => liput = t, valinnainen: true);
             string maaTeksti = null, puheet = null;
@@ -134,7 +134,7 @@ namespace Matkakirja.Natiivi
                 Dictionary<string, KaupunkiTiedot> tulos = null;
                 try
                 {
-                    tulos = Jasenna(kaup, lehdet, julisteet, liput);
+                    tulos = Jasenna(kaup, null, julisteet, liput);
                     JasennaMaat(maaTeksti, tulos);
                     foreach (var a in Alkiot(puheet))
                     {
@@ -145,8 +145,93 @@ namespace Matkakirja.Natiivi
                     }
                 }
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: jäsennys epäonnistui: " + e.Message); }
-                UiKerros.PaaSaikeessa(() => Valmistu(tulos));
+                // Lehdet kaupungeittain (skeema 1.48): LataaLehti(id) pelaajan kaupungille, lennon kohteelle ja avatulle
+                // kortille; koko 16 Mt:n kokoelma vain varareittinä vanhalle paketille (LehtiKaupungille → 404).
+                UiKerros.PaaSaikeessa(() => { Valmistu(tulos); if (tulos != null) foreach (var id in odottavatLehdet) LataaLehti(id); odottavatLehdet.Clear(); });
             });
+        }
+
+        static readonly HashSet<string> lehtiLuettu = new HashSet<string>(), lehtiHaussa = new HashSet<string>(), odottavatLehdet = new HashSet<string>();
+        static bool kokoLehtiVaralla;
+
+        /// <summary>
+        /// Kaupungin lehti (skeema 1.48: kokoelmat/kaupunkilehdet/&lt;id&gt;.json, enintään ~100 kt) kaupunkitietoihin: kansikuvat,
+        /// avauskuvat, johdanto ja aiheet. Kerran kaupunkia kohden; ennen Valmis-tilaa pyyntö odottaa. Vanha paketti (404) →
+        /// koko kokoelma kerran (LehdetPerassa). Pelikoodari 26.9., ESILATAUSPOLITIIKKA kohta 3.
+        /// </summary>
+        public static void LataaLehti(string id)
+        {
+            if (string.IsNullOrEmpty(id) || LehdetLuettu || lehtiLuettu.Contains(id) || lehtiHaussa.Contains(id)) return;
+            if (!Valmis) { odottavatLehdet.Add(id); return; }
+            lehtiHaussa.Add(id);
+            UiKerros.Hae().StartCoroutine(LehtiKaupungille(id));
+        }
+
+        static IEnumerator LehtiKaupungille(string id)
+        {
+            string teksti = null;
+            yield return Sisalto.HaeTeksti("kaupunkilehdet/" + id, t => teksti = t, valinnainen: true, taso: Taso.SeuraavaRuutu);
+            lehtiHaussa.Remove(id);
+            if (teksti == null)
+            {
+                // 404: vanha paketti (ei kaupungeittain) tai kaupungilla ei ole lehteä → koko kokoelma kerran.
+                if (!kokoLehtiVaralla) { kokoLehtiVaralla = true; UiKerros.Hae().StartCoroutine(LehdetPerassa()); }
+                yield break;
+            }
+            var tyo = Task.Run(() => JasennaValiaikaiset(teksti));
+            while (!tyo.IsCompleted) yield return null;
+            int n = Liita(tyo.Result);
+            lehtiLuettu.Add(id);
+            Debug.Log($"MATKAKIRJA ui sisältö: kaupunkilehti {id} liitetty ({n})");
+            try { LehdetSaapuivat?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+        }
+
+        static Dictionary<string, KaupunkiTiedot> JasennaValiaikaiset(string lehdet)
+        {
+            var valiaikaiset = new Dictionary<string, KaupunkiTiedot>();
+            try { LueLehdet(lehdet, id => { if (!valiaikaiset.TryGetValue(id, out var v)) valiaikaiset[id] = v = new KaupunkiTiedot { Id = id }; return v; }); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: lehtien jäsennys epäonnistui: " + e.Message); }
+            return valiaikaiset;
+        }
+
+        /// <summary>Pääsäikeessä: väliaikaisten lehtitietojen kopio oikeisiin kaupunkitietoihin.</summary>
+        static int Liita(Dictionary<string, KaupunkiTiedot> valiaikaiset)
+        {
+            int n = 0;
+            if (kaupungit == null) return 0;
+            foreach (var kv in valiaikaiset)
+            {
+                if (!kaupungit.TryGetValue(kv.Key, out var k)) continue;
+                var v = kv.Value;
+                k.Lehti = v.Lehti;
+                if (v.Johdanto != null) k.Johdanto = v.Johdanto;
+                k.Kansikuvat.Clear(); k.Kansikuvat.AddRange(v.Kansikuvat);
+                k.Avauskuvat.Clear(); k.Avauskuvat.AddRange(v.Avauskuvat);
+                k.Aiheet.Clear(); k.Aiheet.AddRange(v.Aiheet);
+                n++;
+            }
+            return n;
+        }
+
+        /// <summary>Kaupunkilehdet on liitetty kaupunkitietoihin (kansikuvat, avauskuvat, johdanto, aiheet); esim. kaupunkikortti päivittyy.</summary>
+        public static event Action LehdetSaapuivat;
+        public static bool LehdetLuettu { get; private set; }
+
+        /// <summary>
+        /// Lehdet Valmis-tilan jälkeen (Pelikoodari 26.9., kylmän käynnistyksen analyysi: 16 Mt, 1,9 s pidätti kaikki UiSisalto-
+        /// odottajat). Jäsennys taustasäikeessä väliaikaisiin olioihin, kopiointi oikeisiin pääsäikeessä (ei kilpailua lukijoiden kanssa).
+        /// </summary>
+        static IEnumerator LehdetPerassa()
+        {
+            string lehdet = null;
+            yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t, valinnainen: true);
+            if (lehdet == null || kaupungit == null) yield break;
+            var tyo = Task.Run(() => JasennaValiaikaiset(lehdet));
+            while (!tyo.IsCompleted) yield return null;
+            int n = Liita(tyo.Result);
+            LehdetLuettu = true;
+            Debug.Log($"MATKAKIRJA ui sisältö: kaupunkilehdet liitetty perään ({n} kaupunkia)");
+            try { LehdetSaapuivat?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
         static void Valmistu(Dictionary<string, KaupunkiTiedot> tulos)
@@ -256,6 +341,44 @@ namespace Matkakirja.Natiivi
             maat = t;
         }
 
+        /// <summary>
+        /// Kaupunkilehtien kansi- ja avauskuvat, johdanto ja aiheet kaupunkiin (hae(id) → kohde tai null). Lehdet luetaan
+        /// Valmis-tilan JÄLKEEN (Pelikoodari 26.9., ESILATAUSPOLITIIKKA: 16 Mt:n kokoelma ei saa pidättää kaupunkitietoja
+        /// kylmässä käynnistyksessä): taustasäikeessä väliaikaisiin olioihin, pääsäikeessä kopioidaan oikeisiin.
+        /// </summary>
+        static void LueLehdet(string lehdet, Func<string, KaupunkiTiedot> hae)
+        {
+            foreach (var a in Alkiot(lehdet))
+            {
+                string id = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id");
+                var k = id != null ? hae(id) : null;
+                if (k == null) continue;
+                // Päätaso ensin (skeema 1.26: aiheet + kansi), raaka data-lista vain Paatason kautta.
+                var kategoriat = Rakenne.Lista(MiniJson.Kentta(a, "aiheet")) ?? Rakenne.Lista(Paataso.RaakaArvo(a));
+                if (kategoriat == null) continue;
+                var kansi = Rakenne.Olio(MiniJson.Kentta(a, "kansi"));
+                foreach (var ko in kategoriat)
+                {
+                    var kat = Rakenne.Olio(ko);
+                    if (kat == null) continue;
+                    if (MiniJson.Teksti(kat, "id") == "kaupunki")
+                    {
+                        k.Lehti = true;
+                        k.Johdanto = MiniJson.Teksti(kat, "johdanto");
+                        var kansikuvat = Rakenne.Lista(MiniJson.Kentta(kansi, "kansikuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "kansikuvat"));
+                        var avauskuvat = Rakenne.Lista(MiniJson.Kentta(kansi, "avauskuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "avauskuvat"));
+                        LueKuvat(kansikuvat ?? avauskuvat, k.Kansikuvat);
+                        LueKuvat(avauskuvat, k.Avauskuvat);
+                    }
+                    else
+                    {
+                        var nimi = MiniJson.Teksti(kat, "nimi");
+                        if (!string.IsNullOrEmpty(nimi)) k.Aiheet.Add(nimi);
+                    }
+                }
+            }
+        }
+
         static Dictionary<string, KaupunkiTiedot> Jasenna(string kaup, string lehdet, string julisteet, string liput)
         {
             var t = new Dictionary<string, KaupunkiTiedot>();
@@ -292,34 +415,7 @@ namespace Matkakirja.Natiivi
             foreach (var k in t.Values)
                 if (k.Maa != null && maat.TryGetValue(k.Maa, out var m)) { k.MaaNimi = m.Nimi; k.Lippu = m.Lippu; }
 
-            foreach (var a in Alkiot(lehdet))
-            {
-                string id = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id");
-                if (id == null || !t.TryGetValue(id, out var k)) continue;
-                // Päätaso ensin (skeema 1.26: aiheet + kansi), raaka data-lista vain Paatason kautta.
-                var kategoriat = Rakenne.Lista(MiniJson.Kentta(a, "aiheet")) ?? Rakenne.Lista(Paataso.RaakaArvo(a));
-                if (kategoriat == null) continue;
-                var kansi = Rakenne.Olio(MiniJson.Kentta(a, "kansi"));
-                foreach (var ko in kategoriat)
-                {
-                    var kat = Rakenne.Olio(ko);
-                    if (kat == null) continue;
-                    if (MiniJson.Teksti(kat, "id") == "kaupunki")
-                    {
-                        k.Lehti = true;
-                        k.Johdanto = MiniJson.Teksti(kat, "johdanto");
-                        var kansikuvat = Rakenne.Lista(MiniJson.Kentta(kansi, "kansikuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "kansikuvat"));
-                        var avauskuvat = Rakenne.Lista(MiniJson.Kentta(kansi, "avauskuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "avauskuvat"));
-                        LueKuvat(kansikuvat ?? avauskuvat, k.Kansikuvat);
-                        LueKuvat(avauskuvat, k.Avauskuvat);
-                    }
-                    else
-                    {
-                        var nimi = MiniJson.Teksti(kat, "nimi");
-                        if (!string.IsNullOrEmpty(nimi)) k.Aiheet.Add(nimi);
-                    }
-                }
-            }
+            LueLehdet(lehdet, id => t.TryGetValue(id, out var k) ? k : null);
 
             var kaikki = new List<JulisteTiedot>();
             foreach (var a in Alkiot(julisteet))

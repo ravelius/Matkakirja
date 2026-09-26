@@ -919,7 +919,7 @@ namespace Matkakirja
                 r.timeout = 15;
                 float hakuAlku = Time.realtimeSinceStartup;
                 yield return r.SendWebRequest();
-                VerkkoOdotus.Haku("laatta", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes);
+                VerkkoOdotus.Haku("laatta", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes, r.url);
                 h.Yrityksia++;
                 if (r.result == UnityWebRequest.Result.Success) { tila = 200; data = r.downloadHandler.data; break; }
                 // Katkennut siirto antaa responseCode 200 ilman dataa: 502 eikä tyhjä 200 (Reikakorjaus.Koodi).

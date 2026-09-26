@@ -20,6 +20,13 @@ namespace Matkakirja.Natiivi
             Maakunnat.Valittu += Valitse;
             var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
             if (mk != null) mk.OletusPois = () => Maakunnat.Pois;
+            // Elävä kartta (Natiivi-UI, build 19): maakunnan käsialanimi kartalle aluejaon keskipisteeseen
+            // (MaaKartta.MaakunnanKeskus, Natiiviseppä); false → UI:n vara (karttavalojen mediaani).
+            MaakuntaTiedot.Keskipiste = a =>
+            {
+                var m = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
+                return m != null && m.MaakunnanKeskus(a, out var la, out var lo) ? (la, lo) : ((double, double)?)null;
+            };
         }
 
         static void Valitse(string avain)

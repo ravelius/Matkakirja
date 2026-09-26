@@ -34,6 +34,12 @@ namespace Matkakirja.Natiivi
             set => taso = float.IsNaN(value) || float.IsInfinity(value) || value < 0f ? 0f : value;
         }
 
+        /// <summary>
+        /// Ohitus (linssin taustaääni, Linssisepän mittaus 26.9.): pelkkä taso rampattuna, ei puristusta eikä makeupia
+        /// (+6,4 dB), kuten webin satelliitti-aani soittaa huminan suoraan gainiin.
+        /// </summary>
+        public volatile bool Ohita;
+
         /// <summary>Kompressorin viimeisin vahvistus (makeup × puristus, ilman tasoa); testikomennoille.</summary>
         public float Vahvistus => kompressori.Vahvistus;
 
@@ -58,7 +64,16 @@ namespace Matkakirja.Natiivi
                 kompressori.Nollaa();
                 edellinenTaso = t;
             }
-            kompressori.Prosessoi(data, kanavia, naytetaajuus, edellinenTaso, t);
+            if (Ohita)
+            {
+                int n = data.Length / Mathf.Max(1, kanavia);
+                for (int i = 0; i < n; i++)
+                {
+                    float g = edellinenTaso + (t - edellinenTaso) * (i + 1) / n;
+                    for (int c = 0; c < kanavia; c++) data[i * kanavia + c] *= g;
+                }
+            }
+            else kompressori.Prosessoi(data, kanavia, naytetaajuus, edellinenTaso, t);
             edellinenTaso = t;
         }
     }
