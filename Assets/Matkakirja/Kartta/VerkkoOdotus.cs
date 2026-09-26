@@ -22,7 +22,8 @@ namespace Matkakirja
     ///
     /// Vaihe: aktiivisen odotuksen vaihe, muuten <see cref="PeliVaihe"/> (PeliOhjain: kaynnistys, aloitus, lento,
     /// saapuminen, kaupunki, matka, lehti, linssi). Yhteenveto testikomennolla `verkko` (peli-komento.txt) →
-    /// persistentDataPath/verkko-yhteenveto.json; `verkko nollaa` tyhjentää summat.
+    /// persistentDataPath/verkko-yhteenveto.json; `verkko nollaa` tyhjentää summat. Sama komento kirjoittaa lokiin
+    /// "MATKAKIRJA esilataaja: mittari osuma …" ja yhteenvedon "esilataaja"/"mittari"-avaimeen (EsilataajaMittari.cs).
     /// </summary>
     public static class VerkkoOdotus
     {
@@ -231,8 +232,11 @@ namespace Matkakirja
                 }
                 sb.Append("},\"esilataaja\":{\"kaynnissa\":").Append(Esilataaja.Kaynnissa).Append(",\"jonossa\":").Append(Esilataaja.Jonossa)
                   .Append(",\"uusintoja\":").Append(Esilataaja.Uusintoja).Append(",\"joutilaita\":").Append(Esilataaja.JoutilaitaHetkia).Append(",\"ennakoituja\":").Append(Esilataaja.Ennakoituja)
-                  .Append(",\"tiedostoja\":").Append(Esilataaja.TiedostojaValmiina).Append("}}");
+                  .Append(",\"tiedostoja\":").Append(Esilataaja.TiedostojaValmiina)
+                  // Esilataajan osuma-% ja Nakyva-pyyntöjen odotus (EsilataajaMittari.cs): kokonaisuus ja vaiheittain.
+                  .Append(",\"mittari\":").Append(Esilataaja.Mittari.Json()).Append("}}");
             }
+            Debug.Log(Esilataaja.MittariRivi());
             var json = sb.ToString();
             try { File.WriteAllText(Path.Combine(Application.persistentDataPath, "verkko-yhteenveto.json"), json); } catch (Exception) { }
             return json;
@@ -296,6 +300,7 @@ namespace Matkakirja
         public static void NollaaSummat()
         {
             lock (lukko) { odotukset.Clear(); haut.Clear(); osumat.Clear(); verkkoaOdotettu.Clear(); }
+            Esilataaja.Mittari.NollaaSummat();
         }
     }
 }

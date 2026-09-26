@@ -79,6 +79,9 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("valimeri", v.Maanosa("sofia", "BGR"), "Balkan");
             Oleta.Sama("ita-eurooppa", v.Maanosa("moskova", "RUS"));
             Oleta.Sama("valimeri", v.Maanosa("nikosia", "CYP"), "maa ilman aluetta");
+            Oleta.Sama("lahi-ita", v.Maanosa("jerusalem", null), "kaupunki ilman maata (web KAUPUNGIN_MAANOSA)");
+            Oleta.Sama("lansi-eurooppa", v.Maanosa("lontoo", null), "Maailma-lauta ilman cityCountryä");
+            Oleta.Sama(null, v.Maanosa("tuntematon", null));
             Oleta.Sama("lahi-ita", v.Maanosa("kairo", "EGY"));
             Oleta.Sama(null, v.Maanosa("etusivu", null), "virtuaalipaikka");
             Oleta.Sama(null, v.Maanosa("x", "ZZZ"), "tuntematon maa");

@@ -767,6 +767,10 @@ namespace Matkakirja.Natiivi
                     m.Symboli.style.scale = new Scale(new Vector3(sykeNyt, sykeNyt, 1f));
                 m.El.Insert(0, m.Symboli);
             }
+            // Löydös 160 (omistaja hyväksyi 3D-symbolinostot): tason 1 nostolla, jolla on 3D-malli (Symbolimallit,
+            // Natiiviseppä), 2D-kuvamerkki piiloon; laatikko jää paikalleen, joten napautus ja nimiö toimivat ennallaan.
+            var nakyvyys = !ryhma && m.Taso1 && Symbolimallit.OnMalli(s.Id) ? Visibility.Hidden : Visibility.Visible;
+            if (m.Symboli.style.visibility != nakyvyys) m.Symboli.style.visibility = nakyvyys;
             // Merkin laatikko = ikoniruutu keskipisteen ympärillä; kuviot (16 yksikköä) keskelle.
             float ruutuPx = 2f * m.Ruutu * m.Mitta, kuvioPx = 16f * m.Mitta;
             m.El.style.width = ruutuPx;

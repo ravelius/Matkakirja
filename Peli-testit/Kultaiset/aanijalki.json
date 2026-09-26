@@ -3183,6 +3183,7 @@
      "jerusalem",
      null,
      [
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -4592,6 +4593,7 @@
      null,
      [
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -5566,6 +5568,7 @@
      null,
      [
       "assets/audio/musa-lehti-lyria.mp3",
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -7150,6 +7153,7 @@
      [
       "assets/audio/musa-lehti-lyria.mp3",
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -8127,6 +8131,7 @@
      null,
      [
       "assets/audio/musa-matkalaukku-lyria.mp3",
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -9711,6 +9716,7 @@
      [
       "assets/audio/musa-matkalaukku-lyria.mp3",
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -10787,6 +10793,7 @@
      [
       "assets/audio/musa-lehti-lyria.mp3",
       "assets/audio/musa-matkalaukku-lyria.mp3",
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -12546,6 +12553,7 @@
       "assets/audio/musa-lehti-lyria.mp3",
       "assets/audio/musa-matkalaukku-lyria.mp3",
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -13626,6 +13634,7 @@
      [
       "assets/audio/musa-lehti-lyria.mp3",
       "assets/audio/musa-matkalaukku-lyria.mp3",
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -15385,6 +15394,7 @@
       "assets/audio/musa-lehti-lyria.mp3",
       "assets/audio/musa-matkalaukku-lyria.mp3",
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -16365,6 +16375,7 @@
      null,
      [
       "assets/audio/musa-kohtaaminen-lyria.mp3",
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -17949,6 +17960,7 @@
      [
       "assets/audio/musa-kohtaaminen-lyria.mp3",
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -19124,6 +19136,7 @@
       "assets/audio/musa-lehti-lyria.mp3",
       "assets/audio/musa-matkalaukku-lyria.mp3",
       "assets/audio/musa-kohtaaminen-lyria.mp3",
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -21058,6 +21071,7 @@
       "assets/audio/musa-matkalaukku-lyria.mp3",
       "assets/audio/musa-kohtaaminen-lyria.mp3",
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -21944,6 +21958,7 @@
      "jerusalem",
      null,
      [
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -23353,6 +23368,7 @@
      null,
      [
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -24329,6 +24345,7 @@
      null,
      [
       "assets/audio/musa-lehti-lyria.mp3",
+      "assets/audio/musa-maanosa-lahi-ita-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -25913,6 +25930,7 @@
      [
       "assets/audio/musa-lehti-lyria.mp3",
       "assets/audio/musa-kaupunki-ateena-lyria.mp3",
+      "assets/audio/musa-maanosa-valimeri-lyria.mp3",
       "assets/audio/musa-pohja-lyria.mp3"
      ]
     ],
@@ -27712,7 +27730,7 @@
    "jerusalem",
    null,
    null,
-   null
+   "lahi-ita"
   ],
   [
    "petra",
@@ -28762,7 +28780,7 @@
    "ateena",
    null,
    null,
-   null
+   "valimeri"
   ],
   [
    "tuntematon",
