@@ -7339,3 +7339,7 @@ Harmaat karkivarit lammitetaan pergamentiksi samalla valoisuudella; paletti 160:
 ## 174B VALMIS PR 3342: MERKKI-HUUTO, -ELAIN, -HETKI (26.9.2026 klo 20.14)
 
 Pelikoodari: kolme uutta kuvamerkkia (huutomerkki, pollonpoikanen, tiimalasi; gpt-image-2 nykyiset merkit tyyliviitteina, 128 px) + webin 155-kytkenta + korjaus: elaintakyilla ei ollut merkkia; testit 4405, tyyppimerkit-savuke 13/13; kuvaparit proto-3d/lokit/loydos174b/. Fable hyvaksyi (istuvat sarjaan). Julkaisijan junaan; #3342 ja #3343 molemmat v2278 → Julkaisija numeroi. Avoin: jos nostomerkit on poltettu laattoihin, nostotaso poltetaan uudelleen (kysytty Karttasepalta).
+
+## Z10 OSA 2 (MAAKUNNAT) KAYNNISSA 20.12, VALMIS ~06 (26.9.2026 klo 20.14)
+
+Karttaseppa: maakuntaosa kaatui 20.05 heti alkuun — Math.min(...s) 270 344 laatan listalla ylitti Noden pinorajan; korjattu silmukaksi f3c00abaa (PR #3325), testit 36/36. Osa 2 kaynnissa v4:lla 20.12, 8 ydinta, free 79 %, 507 shardia, 342 000 laattaa, ~600 laattaa/min → valmis n. klo 06. Tilarivi joka 100. shardi.
