@@ -7335,3 +7335,7 @@ Kortti 20.2x: 172 (kone lahikuvassa vaakasuorassa 10 km, kaari ≤ 150 km) HYVAK
 ## 175 TYYLIOHJE (LINSSISEPPA → NATIIVISEPPA) (26.9.2026 klo 20.14)
 
 Harmaat karkivarit lammitetaan pergamentiksi samalla valoisuudella; paletti 160:n mukainen, yksi aksentti, saturaatio ≤ 0,35; katto vaalenee ja kyljet tummuvat (muoto erottuu ylhaalta), kaiverrusreuna ohuempi; loytamaton seepiaa 15 % kohti paperia, alfa 0,9, ei aksenttia; pehmea maapohja kuten elavissa elementeissa; koko ≤ 2,5 × kaupunkinimion fonttikoko (~40 pt). Viitekuva Pariisin ilmapallon kuvapari.
+
+## 174B VALMIS PR 3342: MERKKI-HUUTO, -ELAIN, -HETKI (26.9.2026 klo 20.14)
+
+Pelikoodari: kolme uutta kuvamerkkia (huutomerkki, pollonpoikanen, tiimalasi; gpt-image-2 nykyiset merkit tyyliviitteina, 128 px) + webin 155-kytkenta + korjaus: elaintakyilla ei ollut merkkia; testit 4405, tyyppimerkit-savuke 13/13; kuvaparit proto-3d/lokit/loydos174b/. Fable hyvaksyi (istuvat sarjaan). Julkaisijan junaan; #3342 ja #3343 molemmat v2278 → Julkaisija numeroi. Avoin: jos nostomerkit on poltettu laattoihin, nostotaso poltetaan uudelleen (kysytty Karttasepalta).
