@@ -37,6 +37,7 @@
 //   vieritys [pois|paalle|nollaa]  ScrollViewien herätys täyteen taajuuteen (löydös 137) ja mittari
 //   nostokuvat [ISO] [max]    savukevartija "nostokuva näkyy" (löydös 149): maan karttanostojen ensimmäiset kuvat, tulos
 //                             lokiin "RAJA nostokuva näkyy: PASS|FAIL" ja Documents/nostokuvat.txt
+//   muste tila|loyda <valo> | muste maakunnat <ISO>  Elävä kartta: noston kokoluokka ja löytötila, löydön kirjaus, laskurit
 //   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
 //   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
@@ -293,6 +294,9 @@ namespace Matkakirja.Natiivi
                     UiKerros.Hae().StartCoroutine(NostoSisalto.TarkistaKuvat(iso, max, null));
                     return null;
                 }
+                case "muste":
+                    // Elävä kartta (PeliOhjain.Muste.cs): muste tila|loyda <valo>, muste maakunnat <ISO>.
+                    return ohjain.MusteKomento(A(1), A(2));
                 case "ruutu":
                     // Dynaaminen ruudunpäivitys ja lämpö (Kartta/Ruudunpaivitys.cs, lämpöerä 25.9.2026).
                     return Ruudunpaivitys.Instanssi != null ? "=" + Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä";

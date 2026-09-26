@@ -180,6 +180,7 @@ namespace Matkakirja.Natiivi
                 napit.Clear();
                 NaytaLisakaupunki(lk);
                 MittaaAvaus(valoId, v);
+                KirjaaLoyto(valoId);
                 jalkeen?.Invoke(true);
                 yield break;
             }
@@ -188,7 +189,7 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.Loppu(odotus, v != versio ? "ohitettu" : n == null ? "ei sisältöä" : null);
             if (v != versio) yield break;
             if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
-            else { Nayta(n); MittaaAvaus(valoId, v); }
+            else { Nayta(n); MittaaAvaus(valoId, v); KirjaaLoyto(valoId); }
             jalkeen?.Invoke(n != null);
         }
 
@@ -219,6 +220,12 @@ namespace Matkakirja.Natiivi
                 Paina();
             });
         }
+
+        /// <summary>
+        /// Elävä kartta (Pelikoodari, build 18): kortti on näkyvissä → löytö kirjataan ja tallennetaan
+        /// (PeliOhjain.NostoAvattu; toinen avaus ei tee mitään). Maakunnan herätys ja laskurit tulevat tapahtumista.
+        /// </summary>
+        static void KirjaaLoyto(string valoId) => PeliOhjain.Instanssi?.NostoAvattu(valoId);
 
         void MittaaAvaus(string valoId, int v)
         {

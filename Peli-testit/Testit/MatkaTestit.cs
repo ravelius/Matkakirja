@@ -377,6 +377,20 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!m.Liiku("c:olematon").Ok, "laiton siirto");
         }
 
+        [Testi] static void LoydetytNostotTallentuvat()
+        {
+            // Elävä kartta (KarttaMuste): löydöt kentässä "nostotLoydetty"; vanha tallennus ilman kenttää = tyhjä.
+            var m = Uusi("ala", 11);
+            m.Tila.LoydetytNostot.Add("kohde:delfoi");
+            m.Tila.LoydetytNostot.Add("skandaali:x");
+            var json = m.Tallenna();
+            var t = Pelitila.FromJson(json);
+            Oleta.Tosi(t.LoydetytNostot.Contains("kohde:delfoi") && t.LoydetytNostot.Count == 2, "löydöt takaisin");
+            Oleta.Sama(json, t.ToJson(), "sama teksti");
+            var vanha = Pelitila.FromJson(json.Replace(",\"nostotLoydetty\":[\"kohde:delfoi\",\"skandaali:x\"]", ""));
+            Oleta.Sama(0, vanha.LoydetytNostot.Count, "vanha tallennus");
+        }
+
         [Testi] static void TallennusMeneeJaPalaa()
         {
             var m = Uusi("ala", 11);
