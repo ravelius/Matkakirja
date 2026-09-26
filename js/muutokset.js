@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2252, teksti: 'Miniatyyrien värikorjaus (#3292)' },
   { v: 2251, teksti: 'Sisältöpaketti 1.45: Elävä kartta — kokoluokka,… (#3267)' },
   { v: 2250, teksti: 'Miniatyyrien värikorjaus (#3291)' },
   { v: 2249, teksti: 'Maakunnat: KOR lyhyt (#3290)' },
