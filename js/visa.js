@@ -21,6 +21,7 @@ import {
 } from './kohtaamiskuvat-data.js';
 import { lueKertojana, playDiaryVoice } from './luenta.js';
 import { asetaKuva } from './media.js';
+import { asetaMusiikkitila } from './musiikkivalitsin.js';
 import { natiiviVastaus } from './natiivi.js';
 import { piirraAfrikanPulma, onAfrikanPulma } from './packs/africa-puzzles.js';
 import { piirraEuroopanPulma } from './packs/europe-puzzles.js';
@@ -164,6 +165,56 @@ function liviaVisaJalkiele(ui,oikein){
  liviaVisaSulut.set(dialog,valmis);dialog.addEventListener('close',valmis,{once:true});
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KOHTAAMISEN MUSIIKKI (musiikkisuunnitelma 26.9.2026, vaihe 2)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * `musa-kohtaaminen` soi henkilön tapaamisen ja tehtävän ajan, ja
+ * tehtävän tulos soittaa lyhyen aiheen (`musa-ratkaisu` tai
+ * `musa-epaonnistuminen`). Web on natiivin malli, joten kytkentäkohdat
+ * ovat tässä kaikki yhdessä tiedostossa:
+ *
+ *   AVAUS   renderQuiz, uuden kortin haara: tila 'kohtaaminen' päälle,
+ *           jos kortilla on henkilö (onKohtaaminen).
+ *   VISA    kysymys() eli Aloita peli -napin jälkeinen kysymyssivu:
+ *           visan raita alkaa ja voittaa kohtaamisen (js/
+ *           musiikkivalitsin.js VISA VOITTAA KOHTAAMISEN). Ilman
+ *           tervehdyssivua visa alkaa heti kuten ennenkin.
+ *   TULOS   answerQuiz ja timeUp: tulosaihe (ui.soitaKohtaamisenTulos)
+ *           ja visan raita pois, jolloin kohtaaminen palaa tuloksen
+ *           ja vastausrepliikin ajaksi.
+ *   SULKU   renderQuiz, kun visa ei ole enää auki: tila pois ENNEN
+ *           visan pysäytystä, ettei kohtaaminen ehdi välähtää.
+ *
+ * MIKÄ ON KOHTAAMINEN WEBISSÄ. Kohtaamiskorttia ei enää piirretä
+ * erikseen (js/fokusvirta.js avaaFokusKohtaaminen, KORTIT POIS
+ * 2.9.2026): vihreän pisteen napautus avaa suoraan laattakysymyksen,
+ * jonka ensimmäinen sivu on henkilön tervehdys ja toinen sivu kysymys.
+ * Kohtaaminen on siis visa, jossa puhuu henkilö: tarinakaaren henkilö
+ * (quiz.kaari, TARINAKAARI) tai tavallisen visan nimetty paikallinen
+ * (KOHTAAMISET). Pulma, väittämä, valokuva, lippu ja rosvon
+ * kaksintaistelu eivät ole kohtaamisia.
+ */
+
+/** Onko tämä visa kohtaaminen — puhuuko kortilla henkilö? */
+export function onKohtaaminen(quiz) {
+  if (!quiz) return false;
+  if (quiz.kaari && TARINAKAARI[quiz.cityId]) return true;
+  return !quiz.kind && Boolean(KOHTAAMISET[quiz.cityId]);
+}
+
+/**
+ * Kohtaamisen kysymykseen vastattiin tai aika loppui: tulosaihe ja
+ * visan raita pois, jotta auki oleva kohtaaminen palaa. Muissa
+ * visoissa visan raita soi kortin loppuun asti kuten ennenkin.
+ */
+function kohtaamisenTulos(ui, quiz, oikein) {
+  if (!onKohtaaminen(quiz)) return;
+  ui.soitaKohtaamisenTulos?.(oikein);
+  stopQuizMusic();
+}
+
 export function renderQuiz(ui) {
   if (ui.dead) return; // kesken jäänyt animaatioketju voi kutsua tätä vielä destroyn jälkeen
   const { game } = ui;
@@ -175,6 +226,8 @@ export function renderQuiz(ui) {
   const quiz = game.quiz;
   if (game.phase !== 'quiz' || !quiz) {
     stopQuizTimer(ui);
+    // Kohtaaminen kiinni ennen visan pysäytystä (ks. KOHTAAMISEN MUSIIKKI).
+    asetaMusiikkitila('kohtaaminen', false);
     stopQuizMusic();
     if (ui.quizDialog.open) ui.quizDialog.close();
     return;
@@ -209,6 +262,8 @@ export function renderQuiz(ui) {
     : (kohtaaminen && !ui.kohtaamisetNahty.has(tervehdysAvain)
       ? kohtaaminen.tervehdys
       : null);
+  // Tervehdyssivu on kohtaamisen oma hetki: visan raita odottaa kysymystä.
+  const kohtaamisSivu = Boolean(tervehdys) && onKohtaaminen(quiz);
   // Pulman piirros ensin, kysymysrivi alla — kortti on isoisän luonnos.
   // HUOM: SVGElement ei peri HTMLElementiä, joten .hidden-ominaisuus ei
   // heijastu attribuuttiin — se jäisi päälle ja [hidden]-sääntö piilottaisi
@@ -302,7 +357,14 @@ export function renderQuiz(ui) {
     // pelkistys ei saa kutistaa tämän kohtaamisen kuvaa.
     pelkistaKysymysvaihe(ui, false);
     sfx.play('quizOpen');
-    startQuizMusic(ui.game.pack.id);
+    /*
+     * KOHTAAMINEN AUKI (ks. KOHTAAMISEN MUSIIKKI). Tervehdyssivulla
+     * soi kohtaaminen, ja visan raita odottaa kysymyssivua; ilman
+     * tervehdystä visa alkaa heti kuten ennenkin. Visa käynnistyy
+     * ENNEN tilaa, jotta kohtaaminen ei ehdi alkaa ja katketa heti.
+     */
+    if (!kohtaamisSivu) startQuizMusic(ui.game.pack.id);
+    asetaMusiikkitila('kohtaaminen', onKohtaaminen(quiz));
     ui.quizQuestion.textContent = '';
     ui.quizKohtaaminen.textContent = '';
     ui.quizKohtaaminen.hidden = !tervehdys;
@@ -353,6 +415,8 @@ export function renderQuiz(ui) {
     const kysymys = () => {
       if (ui.dead || ui.typedQuizFor !== quiz) return;
       ui.quizStage = 1;
+      // Kysymys alkaa: visan raita voittaa kohtaamisen.
+      if (kohtaamisSivu) startQuizMusic(ui.game.pack.id);
       /*
        * KYSYMYSSIVU: tervehdyssivun tekstit pois ja kuva pieneksi,
        * jotta kysymys, vaihtoehdot ja tiimalasi mahtuvat puhelimen
@@ -646,6 +710,8 @@ export function renderDuel(ui) {
   if (ui.typedQuizFor !== duel) {
     ui.typedQuizFor = duel;
     startQuizMusic(ui.game.pack.id);
+    // Kaksintaistelu ei ole kohtaaminen: edellisen kortin tila pois.
+    asetaMusiikkitila('kohtaaminen', false);
     ui.typeText(ui.quizQuestion, duel.question, 'quiz');
   } else if (ui.quizQuestion.textContent !== String(duel.question)) {
     // Sama itsekorjaus kuin tietovisassa: teksti ei saa jäädä eriämään.
@@ -861,6 +927,7 @@ export function timeUp(ui) {
       const quiz = game.quiz;
       if (!quiz) return;
       sfx.play('timeout');
+      kohtaamisenTulos(ui, quiz, false);
       natiiviVastaus(false);
       if(quiz.aarreLukittui)ilmoitaLivianVisaTilanne(ui,quiz,'lukittui');
       liviaVisaJalkiele(ui,false);
@@ -885,6 +952,7 @@ export function answerQuiz(ui, index) {
       const quiz = game.quiz;
       if (!quiz) return;
       sfx.play(quiz.right ? 'correct' : 'wrong');
+      kohtaamisenTulos(ui, quiz, Boolean(quiz.right));
       // Tärähdys ja oikeiden vastausten putki (iOS-kuori).
       natiiviVastaus(Boolean(quiz.right));
       if(quiz.aarreLukittui)ilmoitaLivianVisaTilanne(ui,quiz,'lukittui');

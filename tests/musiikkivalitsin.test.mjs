@@ -44,7 +44,7 @@ const MAAT = lue('../js/packs/europe-countries.js');
 const { MUSIIKIN_PAATE, musaPolku } = await import('../js/media.js');
 const {
   ALUEEN_MAAT, ALUERAIDAT, KAUPUNGIN_ALUE, KAUPUNKIRAIDAT,
-  kaupunginAlue, kaupunginRaidat, kaupunkiraidanTunnus,
+  kaupunginAlue, kaupunginRaidat, kaupunkiraidanTunnus, maanosaraidanTunnus,
 } = await import('../js/kaupunkimusiikki.js');
 const valitsin = await import('../js/musiikkivalitsin.js');
 
@@ -55,6 +55,9 @@ const {
 } = valitsin;
 
 const POHJA = musaPolku(POHJARAITA);
+// Maanosaraidat (vaihe 2): alueraidan varareitti ennen pohjavirettä.
+const MAANOSA_VALIMERI = musaPolku(maanosaraidanTunnus('valimeri'));
+const MAANOSA_LANSI = musaPolku(maanosaraidanTunnus('lansi-eurooppa'));
 // Etusivulla soi 26.9.2026 alkaen isoisän johtoaihe (musiikkisuunnitelma
 // vaihe 1); vanha musa-etusivu jää ämpäriin paluuta varten.
 const ETUSIVU = musaPolku('musa-johtoaihe');
@@ -82,15 +85,20 @@ test('kaupunki menee alueen edelle ja alue pohjavireen edelle', () => {
   assert.deepEqual(musiikkiketju('ateena', 'GRC'), [
     musaPolku(kaupunkiraidanTunnus('ateena')),
     musaPolku(kaupunkiraidanTunnus('valimeri')),
+    MAANOSA_VALIMERI,
     POHJA,
   ]);
-  // Sofialla ei ole omaa kappaletta: alue (Balkan) ottaa paikan.
+  // Sofialla ei ole omaa kappaletta: alue (Balkan) ottaa paikan, ja
+  // Balkan kuuluu Välimeren maanosaan.
   assert.deepEqual(musiikkiketju('sofia', 'BGR'), [
     musaPolku(kaupunkiraidanTunnus('balkan')),
+    MAANOSA_VALIMERI,
     POHJA,
   ]);
-  // Tuntematon maa (vieras lauta): suoraan pohjavireeseen.
-  assert.deepEqual(musiikkiketju('kumasi', 'GHA'), [POHJA]);
+  // Maanosa ilman aluetta (vaihe 3: kaikki kymmenen maanosaa): maanosaraita ja pohjavire.
+  assert.deepEqual(musiikkiketju('kumasi', 'GHA'), [
+    musaPolku(maanosaraidanTunnus('saharan-etelapuoli')), POHJA,
+  ]);
 });
 
 test('kaupunkikohtainen poikkeus voittaa maan', () => {
@@ -126,6 +134,7 @@ test('lehti voittaa matkalaukun, ja tilat väistyvät sulkeutuessaan', () => {
     musaPolku('musa-matkalaukku'),
     musaPolku(kaupunkiraidanTunnus('ateena')),
     musaPolku(kaupunkiraidanTunnus('valimeri')),
+    MAANOSA_VALIMERI,
     POHJA,
   ]);
   asetaMusiikkitila('lehti', false);
@@ -135,6 +144,7 @@ test('lehti voittaa matkalaukun, ja tilat väistyvät sulkeutuessaan', () => {
   assert.deepEqual(musiikkiketju('ateena', 'GRC'), [
     musaPolku(kaupunkiraidanTunnus('ateena')),
     musaPolku(kaupunkiraidanTunnus('valimeri')),
+    MAANOSA_VALIMERI,
     POHJA,
   ]);
 });
@@ -182,6 +192,9 @@ test('puuttuva raita pudottaa ketjun seuraavalle tasolle', () => {
   assert.equal(valitseMusiikki(puuttuvat, 'ateena', 'GRC'),
     musaPolku(kaupunkiraidanTunnus('valimeri')));
   puuttuvat.add(musaPolku(kaupunkiraidanTunnus('valimeri')));
+  // Alueraidan 404: maanosaraita on sen varareitti (vaihe 2).
+  assert.equal(valitseMusiikki(puuttuvat, 'ateena', 'GRC'), MAANOSA_VALIMERI);
+  puuttuvat.add(MAANOSA_VALIMERI);
   assert.equal(valitseMusiikki(puuttuvat, 'ateena', 'GRC'), POHJA);
   // Kun kaikki puuttuvat, peli on hiljainen — eikä yritä uudestaan.
   puuttuvat.add(POHJA);
@@ -216,8 +229,20 @@ test('jokaisella alueraidalla on prompti, kesto ja sama tiedostonimi', () => {
 
 test('jokaisella tilaraidalla on prompti ja sama tiedostonimi kuin pelillä', () => {
   const pelinTilat = { ...TILARAIDAT, ...PAIKKARAIDAT };
-  assert.deepEqual(TILOJEN_RAIDAT, Object.keys(pelinTilat),
+  /*
+   * Suunnitelman raita tilaraitana (kohtaaminen, vaihe 2): työkalussa
+   * se on laji 'suunnitelma' eikä 'tila', joten se ei kuulu
+   * TILOJEN_RAIDAT-ryhmään. Sen tiedosto ja kierto vartioidaan alla.
+   */
+  const suunnitelmasta = Object.keys(pelinTilat).filter((nimi) => RAIDAT[nimi]?.laji !== 'tila'
+    && suunnitelmanRaita(pelinTilat[nimi].tunnus));
+  assert.deepEqual(TILOJEN_RAIDAT, Object.keys(pelinTilat).filter((n) => !suunnitelmasta.includes(n)),
     'työkalu ja js/musiikkivalitsin.js tuntevat eri tilaraidat');
+  for (const nimi of suunnitelmasta) {
+    const raita = suunnitelmanRaita(pelinTilat[nimi].tunnus);
+    assert.equal(raita.looppi, true, `${nimi}: tilaraita on auki minuutteja — raidan on kierrettävä`);
+    assert.ok(pelinTilat[nimi].kuvaus, `${nimi}: kuvaus puuttuu (näkyy Musiikki-lehdessä)`);
+  }
   for (const nimi of TILOJEN_RAIDAT) {
     const raita = RAIDAT[nimi];
     const { tunnus } = pelinTilat[nimi];
@@ -425,18 +450,24 @@ test('kaupunki ilman omaa kappaletta saa alueensa raidan', async () => {
   assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku(kaupunkiraidanTunnus('pohjola')));
 });
 
-test('puuttuva alueraita pudottaa pohjavireeseen, ei hiljaisuuteen', async () => {
+test('puuttuva alueraita pudottaa maanosaan ja pohjavireeseen, ei hiljaisuuteen', async () => {
   const s = await lataaAmbienssi();
   await saavu(s, 'sofia', 'BGR');
-  const alue = s.musiikit().at(-1);
-  // Ämpäri ei vastaa, eikä repon polku myöskään: kaksi virhettä.
-  alue.laukaise('error');
-  await Promise.resolve();
-  alue.laukaise('error');
-  await Promise.resolve();
-  await ajaHaivytykset(s.kello);
+  /** Ämpäri ei vastaa, eikä repon polku myöskään: kaksi virhettä. */
+  const puuttuu = async () => {
+    const soiva = s.musiikit().at(-1);
+    soiva.laukaise('error');
+    await Promise.resolve();
+    soiva.laukaise('error');
+    await Promise.resolve();
+    await ajaHaivytykset(s.kello);
+  };
+  await puuttuu();
+  assert.equal(s.mod.soivaPohjaMusiikki(), MAANOSA_VALIMERI,
+    'puuttuva alueraita ei pudonnut maanosan raitaan (vaihe 2)');
+  await puuttuu();
   assert.equal(s.mod.soivaPohjaMusiikki(), POHJA,
-    'puuttuva alueraita jätti pelin hiljaiseksi');
+    'puuttuva maanosaraita jätti pelin hiljaiseksi');
 });
 
 test('lehti vaihtaa raidan ja sulkeutuminen palauttaa kaupungin', async () => {
@@ -461,7 +492,7 @@ test('lehti vaihtaa raidan ja sulkeutuminen palauttaa kaupungin', async () => {
 
 test('matkalaukku vaihtaa raidan ja palauttaa sen sulkeutuessaan', async () => {
   const s = await lataaAmbienssi();
-  await saavu(s, 'lontoo', 'GBR');
+  await saavu(s, 'edinburgh', 'GBR');
   assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku(kaupunkiraidanTunnus('britteinsaaret')));
   asetaMusiikkitila('matkalaukku', true);
   await Promise.resolve();
@@ -509,19 +540,211 @@ test('kaupunginRaidat ei anna raitoja virtuaalipaikoille', () => {
 
 /* ── 8. musiikkisuunnitelma, vaihe 1 (26.9.2026) ─────────────────── */
 
-test('saapumistunnus on vain Välimeren alueella, sama maa→alue-taulu', async () => {
+test('saapumistunnus maanosittain, sama maa→alue→maanosa-ketju', async () => {
   const { SAAPUMISTUNNUKSET, saapumistunnus } = await import('../js/kaupunkimusiikki.js');
-  const tunnus = musaPolku('musa-saapuminen-valimeri');
-  assert.equal(saapumistunnus('ateena', 'GRC'), tunnus);
-  assert.equal(saapumistunnus('lissabon', 'PRT'), tunnus);
-  // Kaupunkipoikkeus kuten alueraidalla: Marseille on Välimeri.
-  assert.equal(saapumistunnus('marseille', 'FRA'), tunnus);
-  for (const [kaupunki, maa] of [['pariisi', 'FRA'], ['sofia', 'BGR'], ['kumasi', 'GHA'], ['etusivu', null]]) {
-    assert.equal(saapumistunnus(kaupunki, maa), null, `${kaupunki}: tunnus ilman aluetta`);
+  const tunnus = (maanosa) => musaPolku(`musa-saapuminen-${maanosa}`);
+  // Välimeri: alueen kautta, ja kaupunkipoikkeus pätee (Marseille).
+  assert.equal(saapumistunnus('ateena', 'GRC'), tunnus('valimeri'));
+  assert.equal(saapumistunnus('lissabon', 'PRT'), tunnus('valimeri'));
+  assert.equal(saapumistunnus('marseille', 'FRA'), tunnus('valimeri'));
+  // Balkan on alue, mutta maanosana Välimeri.
+  assert.equal(saapumistunnus('sofia', 'BGR'), tunnus('valimeri'));
+  // Kypros: ei aluetta, maanosa suoraan maasta.
+  assert.equal(saapumistunnus('nikosia', 'CYP'), tunnus('valimeri'));
+  assert.equal(saapumistunnus('pariisi', 'FRA'), tunnus('lansi-eurooppa'));
+  assert.equal(saapumistunnus('oslo', 'NOR'), tunnus('lansi-eurooppa'));
+  assert.equal(saapumistunnus('lontoo', 'GBR'), tunnus('lansi-eurooppa'));
+  assert.equal(saapumistunnus('moskova', 'RUS'), tunnus('ita-eurooppa'));
+  assert.equal(saapumistunnus('kairo', 'EGY'), tunnus('lahi-ita'));
+  assert.equal(saapumistunnus('kumasi', 'GHA'), tunnus('saharan-etelapuoli'));
+  assert.equal(saapumistunnus('delhi', 'IND'), tunnus('etela-aasia'));
+  assert.equal(saapumistunnus('tokio', 'JPN'), tunnus('ita-aasia'));
+  assert.equal(saapumistunnus('newyork', 'USA'), tunnus('pohjois-amerikka'));
+  assert.equal(saapumistunnus('lima', 'PER'), tunnus('etela-amerikka'));
+  assert.equal(saapumistunnus('sydney', 'AUS'), tunnus('oseania'));
+  // Virtuaalipaikka ja tuntematon maa: ei tunnusta.
+  for (const [kaupunki, maa] of [['pariisi', null], ['etusivu', null], ['x', 'XXX'], ['toString', 'toString']]) {
+    assert.equal(saapumistunnus(kaupunki, maa), null, `${kaupunki}: tunnus ilman maanosaa`);
   }
-  for (const alue of Object.keys(SAAPUMISTUNNUKSET)) {
-    assert.ok(Object.hasOwn(ALUERAIDAT, alue), `${alue}: tuntematon alue`);
+  // Kymmenen riviä, avaimena maanosa, ja työkalu tekee juuri ne tiedostot.
+  const { MAANOSAT } = await import('../js/kaupunkimusiikki.js');
+  assert.deepEqual(Object.keys(SAAPUMISTUNNUKSET).sort(), [...MAANOSAT].sort());
+  assert.equal(MAANOSAT.length, 10);
+  for (const [maanosa, t] of Object.entries(SAAPUMISTUNNUKSET)) {
+    assert.equal(t, `musa-saapuminen-${maanosa}`);
+    assert.ok(suunnitelmanRaita(t), `${t}: työkalussa ei ole raitaa tälle tunnukselle`);
+    assert.equal(suunnitelmanRaita(t).looppi, false, `${t}: tunnus on one-shot`);
   }
+});
+
+/* ── 9. musiikkisuunnitelma, vaihe 2 (26.9.2026) ─────────────────── */
+
+test('jokaisella pakkojen cityCountry-maalla on maanosa', async () => {
+  const { PACKS, packById } = await import('../js/pack.js');
+  const {
+    ALUEEN_MAANOSA, MAAN_MAANOSA, MAANOSAT, kaupunginMaanosa,
+  } = await import('../js/kaupunkimusiikki.js');
+  let maita = 0;
+  for (const { id } of PACKS) {
+    const pakka = packById(id);
+    for (const [kaupunki, maa] of Object.entries(pakka.map?.cityCountry ?? {})) {
+      maita += 1;
+      const maanosa = kaupunginMaanosa(kaupunki, maa);
+      assert.ok(MAANOSAT.includes(maanosa),
+        `${pakka.id}/${kaupunki} (${maa}): ei maanosaa — lisää maa js/kaupunkimusiikki.js MAAN_MAANOSA-tauluun`);
+    }
+  }
+  assert.ok(maita > 300, `pakoista luettiin vain ${maita} kaupunkia`);
+  // Taulut ovat sisäisesti ehjiä: jokainen alue saa maanosan, eikä
+  // alueellinen maa ole maanosataulussa (se kulkee alueen kautta,
+  // jotta kaupunkipoikkeus pätee myös maanosaan).
+  assert.deepEqual(Object.keys(ALUEEN_MAANOSA).sort(), Object.keys(ALUERAIDAT).sort());
+  for (const maanosa of [...Object.values(ALUEEN_MAANOSA), ...Object.values(MAAN_MAANOSA)]) {
+    assert.ok(MAANOSAT.includes(maanosa), `tuntematon maanosa ${maanosa}`);
+  }
+  for (const maa of Object.keys(MAAN_MAANOSA)) {
+    assert.ok(!Object.hasOwn(ALUEEN_MAAT, maa), `${maa}: sekä alue- että maanosataulussa`);
+  }
+  assert.equal(Object.keys(MAAN_MAANOSA).length, 89, 'määrittelyn maalista: 89 maata ilman aluetta');
+  assert.equal(kaupunginMaanosa('marseille', 'FRA'), 'valimeri');
+  assert.equal(kaupunginMaanosa('etusivu'), null);
+});
+
+test('maanosaraidat: kaikki kymmenen (vaiheet 2 ja 3), tiedostot työkalun mukaan', async () => {
+  const { MAANOSARAIDAT, MAANOSAT, maanosanMusiikki } = await import('../js/kaupunkimusiikki.js');
+  assert.deepEqual(Object.keys(MAANOSARAIDAT).sort(), [...MAANOSAT].sort());
+  for (const maanosa of Object.keys(MAANOSARAIDAT)) {
+    assert.ok(MAANOSAT.includes(maanosa));
+    const tunnus = maanosaraidanTunnus(maanosa);
+    assert.equal(tunnus, `musa-maanosa-${maanosa}`);
+    assert.equal(maanosanMusiikki(maanosa), `assets/audio/${tunnus}${MUSIIKIN_PAATE}.mp3`);
+    const raita = suunnitelmanRaita(tunnus);
+    assert.ok(raita, `${tunnus}: työkalussa ei ole raitaa`);
+    assert.equal(raita.looppi, true, `${tunnus}: maanosaraita soi minuutteja — sen on kierrettävä`);
+    assert.ok(MAANOSARAIDAT[maanosa].kuvaus);
+  }
+  // Kypros: ei aluetta, joten maanosaraita on ketjun ainoa oma raita.
+  assert.deepEqual(musiikkiketju('nikosia', 'CYP'), [MAANOSA_VALIMERI, POHJA]);
+  // Alue voittaa maanosan: Edinburgh → Britteinsaaret → Länsi-Eurooppa.
+  assert.deepEqual(musiikkiketju('edinburgh', 'GBR'), [
+    musaPolku(kaupunkiraidanTunnus('britteinsaaret')), MAANOSA_LANSI, POHJA,
+  ]);
+  // Itä-Euroopalla on alueraita ja (vaihe 3) maanosaraita.
+  assert.deepEqual(musiikkiketju('moskova', 'RUS'), [
+    musaPolku(kaupunkiraidanTunnus('ita-eurooppa')), musaPolku(maanosaraidanTunnus('ita-eurooppa')), POHJA,
+  ]);
+  // Tunnuskaupunki (vaihe 3): oma kappale alueen edellä.
+  assert.equal(musiikkiketju('lontoo', 'GBR')[0], musaPolku(kaupunkiraidanTunnus('lontoo')));
+});
+
+test('tilaraitojen järjestys: lehti, matkalaukku, kohtaaminen', () => {
+  nollaaMusiikkivalitsin();
+  assert.deepEqual(Object.keys(TILARAIDAT), ['lehti', 'matkalaukku', 'kohtaaminen']);
+  assert.equal(TILARAIDAT.kohtaaminen.tunnus, 'musa-kohtaaminen');
+  asetaMusiikkitila('kohtaaminen', true);
+  assert.deepEqual(musiikkiketju('ateena', 'GRC'), [
+    musaPolku('musa-kohtaaminen'),
+    musaPolku(kaupunkiraidanTunnus('ateena')),
+    musaPolku(kaupunkiraidanTunnus('valimeri')),
+    MAANOSA_VALIMERI,
+    POHJA,
+  ]);
+  // Lehti kohtaamisen päälle: pelaaja lukee, lehti voittaa.
+  asetaMusiikkitila('lehti', true);
+  assert.equal(valitseMusiikki(new Set(), 'ateena', 'GRC'), musaPolku('musa-lehti'));
+  asetaMusiikkitila('lehti', false);
+  assert.equal(valitseMusiikki(new Set(), 'ateena', 'GRC'), musaPolku('musa-kohtaaminen'));
+  nollaaMusiikkivalitsin();
+});
+
+test('visa voittaa kohtaamisen, ja kohtaaminen palaa visan jälkeen', () => {
+  nollaaMusiikkivalitsin();
+  let herätyksiä = 0;
+  valitsin.kuunteleMusiikkitilaa(() => { herätyksiä += 1; });
+  asetaMusiikkitila('kohtaaminen', true);
+  valitsin.asetaVisaSoi(true);
+  assert.equal(valitsin.visaSoiNyt(), true);
+  // Visan alla soi se, mikä soisi ilman kohtaamista.
+  assert.equal(valitseMusiikki(new Set(), 'ateena', 'GRC'),
+    musaPolku(kaupunkiraidanTunnus('ateena')));
+  assert.ok(!musiikkiketju('ateena', 'GRC').includes(musaPolku('musa-kohtaaminen')));
+  // Tila ei kadonnut: se on yhä auki.
+  assert.deepEqual(musiikkitilat(), ['kohtaaminen']);
+  // Visa ei koske muihin tiloihin.
+  asetaMusiikkitila('matkalaukku', true);
+  assert.equal(valitseMusiikki(new Set(), 'ateena', 'GRC'), musaPolku('musa-matkalaukku'));
+  asetaMusiikkitila('matkalaukku', false);
+  valitsin.asetaVisaSoi(false);
+  assert.equal(valitseMusiikki(new Set(), 'ateena', 'GRC'), musaPolku('musa-kohtaaminen'));
+  // Sama lippu kahdesti ei herätä uudestaan.
+  const ennen = herätyksiä;
+  valitsin.asetaVisaSoi(false);
+  assert.equal(herätyksiä, ennen);
+  nollaaMusiikkivalitsin();
+  assert.equal(valitsin.visaSoiNyt(), false, 'nollaus ei laskenut visan lippua');
+});
+
+test('soitin: kohtaaminen vaihtaa raidan, visa vie sen alta ja palauttaa', async () => {
+  const s = await lataaAmbienssi();
+  await saavu(s, 'ateena', 'GRC');
+  const ATEENA = musaPolku(kaupunkiraidanTunnus('ateena'));
+  assert.equal(s.mod.soivaPohjaMusiikki(), ATEENA);
+  const vaihe = async () => { await Promise.resolve(); await ajaHaivytykset(s.kello); };
+  asetaMusiikkitila('kohtaaminen', true);
+  await vaihe();
+  assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku('musa-kohtaaminen'), 'kohtaaminen ei alkanut');
+  s.mod.startQuizMusic('maailmankartta');
+  await vaihe();
+  assert.equal(s.mod.soivaPohjaMusiikki(), ATEENA, 'kohtaaminen jäi soimaan visan alle');
+  s.mod.stopQuizMusic();
+  await vaihe();
+  assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku('musa-kohtaaminen'),
+    'kohtaaminen ei palannut kysymyksen jälkeen');
+  asetaMusiikkitila('kohtaaminen', false);
+  await vaihe();
+  assert.equal(s.mod.soivaPohjaMusiikki(), ATEENA, 'kaupunki ei palannut kohtaamisen jälkeen');
+});
+
+test('kohtaamisen kytkennät: avaus, visa, tulos ja sulku (js/visa.js)', async () => {
+  const VISA = lue('../js/visa.js');
+  // Avaus ja sulku.
+  assert.match(VISA, /asetaMusiikkitila\('kohtaaminen', onKohtaaminen\(quiz\)\)/,
+    'renderQuiz ei avaa kohtaamista uudella kortilla');
+  assert.match(VISA, /asetaMusiikkitila\('kohtaaminen', false\);\n\s+stopQuizMusic\(\);/,
+    'sulku: kohtaamisen on sulkeuduttava ENNEN visan pysäytystä');
+  // Visa odottaa tervehdyssivun yli ja alkaa kysymyssivulla.
+  assert.match(VISA, /if \(!kohtaamisSivu\) startQuizMusic\(/);
+  assert.match(VISA, /if \(kohtaamisSivu\) startQuizMusic\(/);
+  // Tulos sekä vastauksesta että ajan loppumisesta.
+  assert.match(VISA, /kohtaamisenTulos\(ui, quiz, Boolean\(quiz\.right\)\)/, 'answerQuiz ei soita tulosta');
+  assert.match(VISA, /kohtaamisenTulos\(ui, quiz, false\)/, 'timeUp ei soita epäonnistumista');
+  // Visan raita kysyy lipun.
+  assert.match(AMBIENSSI, /asetaVisaSoi\(true\)/);
+  assert.match(AMBIENSSI, /asetaVisaSoi\(false\)/);
+  // Kuka on kohtaaminen: henkilö puhuu, muut muodot eivät.
+  const { onKohtaaminen } = await import('../js/visa.js');
+  const { TARINAKAARI } = await import('../js/packs/tarinakaari.js');
+  const { KOHTAAMISET } = await import('../js/packs/kohtaamiset.js');
+  const kaari = Object.keys(TARINAKAARI)[0];
+  const tavallinen = Object.keys(KOHTAAMISET)[0];
+  assert.equal(onKohtaaminen({ cityId: kaari, kaari: true }), true);
+  assert.equal(onKohtaaminen({ cityId: tavallinen }), true);
+  assert.equal(onKohtaaminen({ cityId: tavallinen, kind: 'puzzle' }), false);
+  assert.equal(onKohtaaminen({ cityId: 'eiole' }), false);
+  assert.equal(onKohtaaminen(null), false);
+});
+
+test('ratkaisu ja epäonnistuminen soivat aihekanavalla katkaisematta', () => {
+  assert.match(UI, /ratkaisu: musaPolku\('musa-ratkaisu'\)/);
+  assert.match(UI, /epaonnistuminen: musaPolku\('musa-epaonnistuminen'\)/);
+  assert.match(UI, /soitaKohtaamisenTulos\(oikein\) \{\n\s+if \(this\.aarreMusiikki \|\| this\.radioPaalla\(\)\) return;/,
+    'tulos ei saa katkaista soivaa aihetta');
+  for (const tunnus of ['musa-ratkaisu', 'musa-epaonnistuminen']) {
+    const raita = suunnitelmanRaita(tunnus);
+    assert.ok(raita, `${tunnus}: työkalussa ei ole raitaa`);
+    assert.equal(raita.looppi, false, `${tunnus}: one-shot`);
+  }
+  assert.ok(suunnitelmanRaita('musa-kohtaaminen')?.looppi, 'musa-kohtaaminen: looppi');
 });
 
 test('matkan aiheet soivat aarreaiheen paikassa', () => {
