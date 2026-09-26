@@ -3203,6 +3203,8 @@ export function luoNostot({
       lunastettu: Boolean(r.lunastettu),
       taso: r.taso ?? 2,
       kuvamerkki: r.kuvamerkki ?? null,
+      // Löydös 155: aina kirjoitettuna (myös false), koska merkit.aseta yhdistää vanhaan datumiin.
+      kuvamerkkiPieni: Boolean(r.kuvamerkkiPieni),
       luonnos: Boolean(r.luonnos),
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,

@@ -1,7 +1,8 @@
 /*
  * SAVUKE: NOSTOJEN TYYPPIMERKIT LÄHIZOOMISSA (omistajan päätös 21.9.2026
  * klo 23.05: *"nostojen karttamerkit takaisin"*; nostot.js TYYPPIMERKIT
- * LÄHIZOOMISSA). z8:sta lähemmäs (kartan kerroin ≥ 4) jokainen nosto
+ * LÄHIZOOMISSA). z8:sta lähemmäs (kartan kerroin ≥ 4; löydös 155: jo 2,5:stä,
+ * 2,5–4 merkki 0,7-kokoisena, korkeus z7) jokainen nosto
  * saa tyyppinsä Codexin kuvamerkin pisteen tilalle; kauempana piste;
  * ykköstaso 1,6-kertaisena kaikilla zoomeilla; vaihto häivytyksellä
  * GL-rungolla (glnimiot-sovitin.js `#ikoni-vanha`).
@@ -39,6 +40,8 @@ if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: tr
 const CAMARGUE = { lat: 43.7, lng: 4.6 };
 const KORKEUDET = [
   { tunniste: 'z6', pov: { lat: 46.5, lng: 2.5, altitude: 0.2 }, lahi: false },
+  // Löydös 155: kerroin ~3 (2,5–4) → kuvamerkit jo käytössä, tavallinen merkki 0,7-kokoisena.
+  { tunniste: 'z7', pov: { ...CAMARGUE, altitude: 0.067 }, lahi: true },
   { tunniste: 'z8', pov: { ...CAMARGUE, altitude: 0.05 }, lahi: true },
   { tunniste: 'z9', pov: { ...CAMARGUE, altitude: 0.025 }, lahi: true },
 ];
@@ -96,7 +99,7 @@ const odotaRunko = async () => {
 const lue = () => sivu.evaluate(async () => {
   const ui = window.matkakirja.ui; const l = ui.pallolauta; const s = l.glSovitin();
   const { nostosymKuvamerkki, NOSTOSYM_KUVAMERKIN_KERROIN } = await import('/js/fokusnosto-symbolit.js');
-  const { NOSTOJEN_TYYPPIMERKIN_KERROIN } = await import('/js/pallolauta/nostot.js');
+  const { NOSTOJEN_TYYPPIMERKIN_KERROIN, NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN, NOSTOJEN_TYYPPIMERKIN_PIENI } = await import('/js/pallolauta/nostot.js');
   const datumit = new Map(s.viimeisetNostot().map((d) => [d.avain ?? `${d.laji}:${d.id}`, d]));
   const koti = l.kotelo.getBoundingClientRect();
   const laatikko = (i) => {
@@ -119,7 +122,9 @@ const lue = () => sivu.evaluate(async () => {
     } else if (i.opacity > 0 && d.nimioNakyy) nimiot.push(rivi);
   }
   const kerroin = l.nostot?.karttakerroin?.() ?? null;
-  return { ikonit, nimiot, pov: ui.pallonInstanssi.pointOfView(), kerroin, raja: NOSTOJEN_TYYPPIMERKIN_KERROIN, tasoKerroin: NOSTOSYM_KUVAMERKIN_KERROIN };
+  return { ikonit, nimiot, pov: ui.pallonInstanssi.pointOfView(), kerroin, raja: NOSTOJEN_TYYPPIMERKIN_KERROIN, tasoKerroin: NOSTOSYM_KUVAMERKIN_KERROIN,
+    // Löydös 155: tavallinen merkki on 0,7-kokoinen kertoimilla 2,5–4, joten ykköstason suhde on silloin 1,6 / 0,7.
+    tavallinenKoko: kerroin < NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN ? NOSTOJEN_TYYPPIMERKIN_PIENI : 1 };
 });
 const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
 
@@ -150,7 +155,8 @@ for (const k of KORKEUDET) {
     const tavalliset = merkilliset.filter((i) => i.taso !== 1);
     if (ykkoset.length && tavalliset.length) {
       const suhde = ykkoset[0].leveys / tavalliset[0].leveys;
-      vaadi(`${k.tunniste} 2. ykköstason merkki on ${t.tasoKerroin} × tavallisen merkin ruutu`, Math.abs(suhde - t.tasoKerroin) < 0.05, `suhde ${p(suhde, 2)}`);
+      const odotettu = t.tasoKerroin / t.tavallinenKoko;
+      vaadi(`${k.tunniste} 2. ykköstason merkki on ${p(odotettu, 2)} × tavallisen merkin ruutu (tavallinen ${t.tavallinenKoko})`, Math.abs(suhde - odotettu) < 0.05 * odotettu, `suhde ${p(suhde, 2)}`);
     } else {
       tieto(`${k.tunniste} 2.`, `ykköstasoa ${ykkoset.length}, tavallisia ${tavalliset.length} — suhdetta ei mitattu`);
     }
