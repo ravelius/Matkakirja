@@ -1,6 +1,6 @@
 # Linssisepän luovutus 26.9.2026 ilta (g)
 
-*Linssiseppä (Opus), sessio f0b4fec1, 26.9. klo 09.2x–17.5x. Edellinen: -f.md (sama päivä, jatkettu tähän asti).
+*Päivitetty 26.9. klo 20.3x (sessio a00188e3; SendMessage-raja täynnä → varakanava mcp send_message). Linssiseppä (Opus), sessio f0b4fec1, 26.9. klo 09.2x–17.5x. Edellinen: -f.md (sama päivä, jatkettu tähän asti).
 Fablen session id: local_5df52e10-10e4-4b72-9554-0049db300dfe. Kontekstin 70 % raja, ja käännöstauko on klo 19.00 asti.*
 
 ## Tila lyhyesti
@@ -15,8 +15,12 @@ Fablen session id: local_5df52e10-10e4-4b72-9554-0049db300dfe. Kontekstin 70 % r
 | Aito 3D (pop-up pois), puut pois, 90 lamppua | juna fe86446e → 1.0.24 |
 | Fonttilämmitys verhon jälkeen, 4 ms/kehys | juna fe86446e → 1.0.24 |
 | Fonttilämmitys b: ennakoiva raja, ensimmäinen jäsennys omassa kehyksessään, puuttujat HasCharacterilla | linssiseppa/fonttilammitys-b 6595a5ea, Natiivisepän 1.0.25-jonossa; simulaattori c540fa68: pisin 3,8 ms |
-| Kokeilu 3: Pariisin ilmapallo (536 kolmiota, 24 s:n jakso, köysi, heilunta, vaihtelu) | linssiseppa/ilmapallo; simulaattori c540fa68 OK (kallistettuna nousu näkyy, kerros 30 fps); siirto 40 pt ylös pisteestä kääntämättä → seuraava erä, sitten kuvapari + video omistajalle |
-| ISS-ydin + todellinen rata Astronautin kamerassa (IssNyt, IssTleLataaja, `iss tila\|lataa`) | linssiseppa/iss-sgp4 711372bd; ämpärin TLE käytössä simulaattorissa (laatu Tarkka), testit 335; ei merge-pyynnössä |
+| Kokeilu 3: Pariisin ilmapallo (536 kolmiota) | junassa (2bd6263d), omistaja hyväksyi 20.2x 1.0.26-pelikokeiluun; kuvat lokit/linssiseppa-ilmapallo-20260926-b |
+| Kokeilu 4: Venetsian gondolit (~880 kolmiota, kaavamainen S-mutka, 2 gondolia, odotus päissä) | linssiseppa/gondolit 0aaedd6a, käännös ja ajo (ajo-gondolit.sh) käynnissä; sitten kuvapari + video omistajalle ja merge-pyyntö |
+| Löydös 172 (kone matalammalle, lähikuvassa vaakasuora) | junassa (99e01a78), omistaja hyväksyi 20.2x; kuvapari lokit/linssiseppa-lento-172-jalkeen |
+| Löydös 168 (herätys ilman värjäystä) | linssiseppa/loydos168 41916946 Natiivisepän mergeen 2aba4103:n kanssa |
+| Löydös 175 (arkkityypit) | tyyliohje Natiivisepälle 20.1x (sävy, valo, reuna, maapohja, ≤ 40 pt); koodi Natiivisepän |
+| ISS-ydin + todellinen rata Astronautin kamerassa (IssNyt, IssTleLataaja, `iss tila\|lataa`) | junassa (684ff5a6); kuvapari lokit/linssiseppa-iss-kaukonakyma-20260926; buildin TLE-kytkentä (tools/iss-tle.mjs) Natiivisepälle/Julkaisijalle |
 
 ## Elävät elementit (docs/raportit/elavat-elementit-selvitys-20260926.md)
 
