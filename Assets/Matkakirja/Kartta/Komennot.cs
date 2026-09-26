@@ -766,6 +766,7 @@ namespace Matkakirja
                     if (m == "pois") Lipputanko.Pois();
                     else if (m == "jatkuva" || m == "syke") Lipputanko.AsetaJatkuva(m == "jatkuva");
                     else if (m == "koko" && o.Length > 2) Lipputanko.KorkeusPt = float.Parse(o[2], CultureInfo.InvariantCulture);
+                    else if (m == "perspektiivi" && o.Length > 2) Lipputanko.Perspektiivi = o[2] != "0";
                     else if (m == "koe")
                     {
                         double la = o.Length > 3 ? double.Parse(o[2], CultureInfo.InvariantCulture) : 37.98;
