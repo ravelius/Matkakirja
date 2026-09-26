@@ -37,7 +37,7 @@ namespace Matkakirja.Kartta.Testit
         {
             var l = new Lento { Lat1 = lat1, Lon1 = lon1 };
             l.ReittiM = LennonAikajana.ReittiM(LontooLat, LontooLon, lat1, lon1);
-            l.Huippu = Math.Min(900000.0, l.ReittiM * 0.12);
+            l.Huippu = LennonAikajana.Huippu(l.ReittiM);   // löydös 172: min(150 km, 5 %)
             l.Jako = LennonAikajana.Jaa(kestoS ?? LennonAikajana.Kesto(l.ReittiM));
             l.Maisema = id != null && LennonAikajana.Kaupungit.TryGetValue(id, out var k) ? k : LennonAikajana.EiMaisemaa;
             l.Avaimet = LennonAikajana.Laske(l.ReittiM, l.SaapumisKorkeus, l.Maisema, l.Jako, l.Suunta);
@@ -348,8 +348,9 @@ namespace Matkakirja.Kartta.Testit
             var j = l.Jako;
             double p = l.P(t);
             var q = Isoympyra(LontooLat, LontooLon, l.Lat1, l.Lon1, p);
-            double h = Math.Max(l.Huippu * Math.Sin(Math.PI * p), LennonAikajana.KoneenMinimi(t, j));
             var a = l.Arvo(t);
+            // Löydös 172: kaari painolla k(d); d ≈ avaimen etäisyys (kamera katsoo konetta lähikuvista loittonukseen).
+            double h = Math.Max(l.Huippu * Math.Sin(Math.PI * p) * LennonAikajana.KaarenPaino(a.e), LennonAikajana.KoneenMinimi(t, j));
             // Kohde kuten Nappula: −1 lähtöpiste (Lontoo, maassa) → 0 kone → 1 kaupunki → 2 saapumisnäkymä (≈ kaupunki).
             double klat, klon, katse;
             if (a.kohde < 0) { double s = a.kohde + 1; klat = LontooLat + (q.lat - LontooLat) * s; klon = LontooLon + (q.lon - LontooLon) * s; katse = h * s; }
