@@ -52,6 +52,20 @@ namespace Matkakirja.Linssit.Testit
             return Math.Acos(Math.Max(-1, Math.Min(1, c))) / r;
         }
 
+        // Siirtosepän ensimmäinen ämpäritiedosto (media.matkakirja.app/data/iss-tle.json, 26.9.2026, #3334).
+        const string AmpariNayte = "{\"nimi\": \"ISS (ZARYA)\", \"rivi1\": \"1 25544U 98067A   26269.01266414  .00010261  00000+0  19655-3 0  9997\", \"rivi2\": \"2 25544  51.6303 161.0895 0007829 186.0461 174.0434 15.48628597587381\", \"haettu\": \"2026-09-26T14:57:26.605Z\", \"lahde\": \"CelesTrak GP (NORAD 25544)\"}";
+
+        [Testi] static void TleJsonAmparinNayte()
+        {
+            var t = Tle.JasennaJson(AmpariNayte);
+            Oleta.Tosi(t != null && t.TarkisteOk, "ämpärin näyte jäsentyy");
+            Oleta.Sama(25544, t.Numero);
+            var r = new Rata(t);
+            Oleta.Tosi(r.Kaytettavissa, r.Syy ?? "");
+            Oleta.Tosi(r.Alapiste(t.EpookkiJd, out double lat, out _, out double km), "alapiste");
+            Oleta.Tosi(Math.Abs(lat) <= 52 && km > 350 && km < 450, $"leveys {lat:F1}, korkeus {km:F0} km");
+        }
+
         [Testi] static void IssNytIlmanTletaHavainnollinen()
         {
             IssNyt.Nollaa();
