@@ -237,6 +237,8 @@ namespace Matkakirja.Natiivi
         /// ({ISO3: [lon, lat]}, sisältöpaketissa <see cref="LippuAnkkuritPolku"/>); ilman ankkuria ei tankoa.
         /// Lippu on sama 1873-lipun tekstuuri kuin kartussissa.
         /// </summary>
+        Texture kiinnitettyLippu;
+
         void AsetaLipputanko(MaaTiedot m, Texture lippu)
         {
             string maa = m.Iso3;
@@ -283,6 +285,8 @@ namespace Matkakirja.Natiivi
             lippu.style.backgroundImage = StyleKeyword.None;
             VapautaAalto();
             lippuKuva = null;
+            Kuvat.Vapauta(kiinnitettyLippu);
+            kiinnitettyLippu = null;
             lippuLiehuu = false;
             if (m.Lippu.Count > 0)
                 Kuvat.Hae(m.Lippu[0], t =>
@@ -292,6 +296,10 @@ namespace Matkakirja.Natiivi
                     lippu.style.width = lw;
                     // Elävä kartta: lippu liehuu vasta, kun maan kaikki maakunnat on löydetty (Kartuscha.Muste.cs PaivitaLippu).
                     lippuKuva = t;
+                    // Löydös 161: kohdemaan lippu kiinni Kuvissa (kartussin aalto ja lipputanko lukevat sitä jatkuvasti).
+                    Kuvat.Vapauta(kiinnitettyLippu);
+                    kiinnitettyLippu = t;
+                    Kuvat.Kiinnita(t);
                     lippuLeveys = lw;
                     PaivitaLippu();
                     AsetaLipputanko(m, t);
