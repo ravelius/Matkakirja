@@ -194,7 +194,7 @@ export const RAAMATTU = {
           + 'sessiosta); 7) aloitusviesti kenttään yhdellä rivillä — "Olet <rooli> (<malli>), checkout <polku>, aja ensin '
           + 'git fetch origin && git checkout <haara> && git pull, lue docs/raportit/viesti-<rooli>-aloitus.md kokonaan ja '
           + 'toimi sen mukaan, Fablen session id <id>, kuittaa Fablelle yhdellä rivillä" — ja Return; 8) list_sessions → id, '
-          + 'set_session_title roolinimeksi, id:t lokiin ja Postivahdille tilatauluun. Opit 25.9.: Radix-valikkojen kohteet '
+          + 'set_session_title roolinimeksi, id:t lokiin ja Postivahdille tilatauluun. EFFORT NIMESSÄ (omistaja 26.9.2026 klo 09.5x, sitova): jos Opus-session effort nostetaan korkeammaksi kuin high (xhigh tai max), session nimeen lisätään effort näkyviin — esim. "Linssiseppä (max)" — niin pitkäksi aikaa kuin se on käytössä; palautus highiin poistaa lisäyksen. Nostaja (Fable set_session_effortilla tai omistaja appista) nimeää samalla, Postivahti valvoo kierroksellaan. Opit 25.9.: Radix-valikkojen kohteet '
           + '(Open folder…, Opus 5.5) eivät reagoi System Eventsin click at -klikkiin, näppäimet toimivat; modifier-näppäimiä '
           + '(⌘⇧G) ei käytetä, ne hyppäsivät Chromeen; koordinaatit 2560×1440-näytöllä Avaa {1746,1312}, mallichippi '
           + '{1702,1421}, kirjoituskenttä {1300,1385}, muulla resoluutiolla kuvakaappauksesta. Omistajaa ei tarvita; '
