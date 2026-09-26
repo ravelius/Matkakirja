@@ -1729,6 +1729,167 @@ export const KOHTEET = [
     ],
   },
 
+  /*
+   * ERÄ 3 (27.9.2026): isoisän reitin maisemat, luonnonkohteet ja
+   * sama paikka eri vuosina -parit. Kuvat katsottu ja arvioitu käsin.
+   */
+  {
+    tunnus: 'upsala-jaatikko', nimi: 'Upsalan jäätikkö', seutu: 'Patagonia, Argentiina', lat: -49.88, lon: -73.30,
+    selite: 'Etelä-Patagonian jäätikköalueen kolmanneksi suurin jäätikkö, joka on vetäytynyt nopeasti.',
+    oletus: 'iss021e015243',
+    kuvat: [
+      { id: 'iss021e015243',
+        teksti: 'Upsala-jäätikön pää työntyy Argentino-järveen lokakuussa 2009. Reunasta irtoaa jäävuoria järveen — kaksi niistä kuljettaa mukanaan tummaa moreeniainesta, joka näkyy tummana raitana jään pinnalla. Vasemmalla oleva sininen järvi on jäätikön kuluttaman kallion ympäröimä, kirkkaampi kuin sameampi pääjärvi.' },
+      { id: 'iss037e005104',
+        teksti: 'Sama jäätikön pää neljä vuotta myöhemmin, lokakuussa 2013. Jään reuna on vetäytynyt keskimäärin 3,6 kilometriä vuodesta 2002, ja järven pinta on tuoreen jäänmurtuman jäljiltä valkoisen jäämurskan peitossa; suuremmat jäävuoret näkyvät valkoisina pilkkuina oikealla. Tutkijoiden mukaan vetäytyminen kertoo alueen ilmaston lämpenemisestä.' },
+    ],
+  },
+  {
+    tunnus: 'poopojarvi', nimi: 'Poopó-järvi', seutu: 'Oruro, Bolivia', lat: -18.75, lon: -67.13,
+    selite: 'Andien korkealla ylängöllä oleva matala suolajärvi, joka on kuivunut toistuvasti lähes kokonaan.',
+    oletus: 'iss012e06469',
+    kuvat: [
+      { id: 'iss012e06469',
+        teksti: 'Poopó-järvi marraskuussa 2005, vielä vihertävän veden peittämänä ja valkoisen suolareunuksen kehystämänä. Järvi on niin matala — yleensä alle kolme metriä — että pienetkin sademäärän muutokset ylä-Andeilla näkyvät suoraan sen pinta-alassa.' },
+      { id: 'iss070e098385',
+        teksti: 'Sama järvi helmikuussa 2024, lähes täysin kuivana. Punaiset ja oranssinruskeat sävyt ovat paljastunutta suolaista ja mineraalipitoista pohjaa, ja vain muutama tumma vesiallas on enää jäljellä. Kaivostoiminta ja kastelu ovat vieneet vettä syöttöjoista.' },
+    ],
+  },
+  {
+    tunnus: 'etosha', nimi: 'Etosha-tasanko', seutu: 'Namibia', lat: -18.60, lon: 16.00,
+    selite: 'Suunnaton, yleensä täysin kuiva suolatasanko, joka värjäytyy harvinaisina sadevuosina levien mukaan.',
+    oletus: 'iss030e234965',
+    kuvat: [
+      { id: 'iss030e234965',
+        teksti: 'Etosha-tasangon luoteiskulma, jonka valkoinen suolapinta erottuu ruskeasta savannista. Harvinaisen sadejakson jäljiltä Ekuma-joki on tuonut vettä lampeen oikealla, ja levä värjää sen vaaleanvihreäksi; toinen pieni allas hehkuu kirkkaan vihreänä. Yleensä tasanko on täysin kuiva.' },
+      { id: 'iss011e09504',
+        teksti: 'Sama seutu lähempää: pinkki ja vaaleanvihreä lampi pistävät esiin valkoisen suolakuoren keskeltä. Värin tekevät suolaa sietävät mikrolevät, joiden sävy vaihtelee veden lämpötilan ja suolaisuuden mukaan. Tasanko on 120 kilometriä pitkä ja Namibian suurimman eläinpuiston sydän.' },
+    ],
+  },
+  {
+    tunnus: 'eyrejarvi', nimi: 'Eyre-järven tulva', seutu: 'Etelä-Australia', lat: -28.90, lon: 137.30,
+    selite: 'Yleensä täysin kuiva järvi, joka harvinaisina vuosina värjäytyy suolaa rakastavien mikrobien mukaan.',
+    oletus: 'iss030e009271',
+    kuvat: [
+      { id: 'iss030e009271',
+        teksti: 'Vuoden 2011 poikkeuksellisten sateiden täyttämä Eyre-järvi. Vihreä Belt Bay on syvempää vettä, punainen Madigan Gulf matalampaa ja suolaisempaa — sen mikrobitiheys voi kohota niin suureksi, että solujen karotenoidipigmentti värjää koko lahden. Alareunassa näkyvä lohko on yhä täysin kuiva ja valkoinen suolasta.' },
+    ],
+  },
+  {
+    tunnus: 'sharkbay', nimi: 'Shark Bay', seutu: 'Länsi-Australia', lat: -25.75, lon: 113.60,
+    selite: 'Haarautunut aavikkolahti, jossa kasvaa maailman laajin merikaislaniitty ja elää eläviä stromatoliitteja.',
+    oletus: 'iss064e003722',
+    kuvat: [
+      { id: 'iss064e003722',
+        teksti: 'Shark Bayn syvälle Länsi-Australian rannikkoon pistävät turkoosit haarat. Matala vesi on täynnä merikaislaa, ja lahden pohjalla elää myös eläviä stromatoliitteja — kivimäisiä mikrobimattoja, jotka muistuttavat maapallon varhaisimpia elämänmuotoja.' },
+      { id: 'iss057e105411',
+        teksti: 'Sama rannikko idempää, missä lahti pilkkoutuu saariksi ja matalikoiksi. Vaaleat hiekkasärkät ja tummemmat syvänteet piirtävät lahden pohjan muodon suoraan veden läpi.' },
+    ],
+  },
+  {
+    tunnus: 'pyramidjarvi', nimi: 'Pyramid Lake', seutu: 'Nevada, Yhdysvallat', lat: 40.00, lon: -119.58,
+    selite: 'Jääkautisen jättimäisen Lahontan-järven jäänne aavikon keskellä, nimetty pyramidinmuotoisesta kalkkikivipatsaasta.',
+    oletus: 'iss073e0919979',
+    kuvat: [
+      { id: 'iss073e0919979',
+        teksti: 'Pyramid Lake syysauringossa; vihreät ja siniset pyörteet vedessä ovat levän värjäämiä virtauksia. Järveä ympäröi jyrkkä aavikkomaasto keskellä Nevadaa.' },
+      { id: 'iss025e005259',
+        teksti: 'Sama järvi talvella, jolloin auringon kajastus paljastaa veden pinnalla kaksi suurta pyörrettä — tuulen jättämän jäljen. Ne kertovat pintavirtauksista, jotka muuttavat paikallisesti sitä, kuinka paljon valoa vesi heijastaa takaisin avaruusasemalle.' },
+    ],
+  },
+  {
+    tunnus: 'monojarvi', nimi: 'Mono-järvi', seutu: 'Kalifornia, Yhdysvallat', lat: 38.00, lon: -119.02,
+    selite: 'Laskujoeton suolajärvi Kalifornian korkealla aavikolla, jonka keskellä kohoaa tulivuoritoiminnan synnyttämä saari.',
+    oletus: 'iss069e000859',
+    kuvat: [
+      { id: 'iss069e000859',
+        teksti: 'Lumen ympäröimä Mono-järvi huhtikuussa. Järven keskellä kohoava vaalea Paoha-saari on kolmesta saaresta nuorin ja syntyi tulivuoritoiminnasta alle 400 vuotta sitten. Järvellä ei ole luonnollista laskujokea, joten se on jäänyt suolaiseksi ja emäksiseksi.' },
+    ],
+  },
+  {
+    tunnus: 'saltonjarvi', nimi: 'Salton Sea', seutu: 'Kalifornia, Yhdysvallat', lat: 33.30, lon: -115.80,
+    selite: 'Vahingossa vuonna 1905 syntynyt järvi Kalifornian eteläisellä aavikolla, joka suolaantuu vuosi vuodelta.',
+    oletus: 'iss040e011868',
+    kuvat: [
+      { id: 'iss040e011868',
+        teksti: 'Salton Sea makaa tummana pisarana aavikon keskellä, vihreiden viljelysten ympäröimänä. Järvi syntyi, kun Colorado-joki murtautui kastelukanavan läpi ja täytti kuivan altaan kahdeksi vuodeksi ennen padon korjaamista; ilman jokea uudistuvaa vettä siitä on sittemmin tullut yhä suolaisempi.' },
+    ],
+  },
+  {
+    tunnus: 'etelaalpit-jarvet', nimi: 'Etelä-Alppien jäätikköjärvet', seutu: 'Uusi-Seelanti', lat: -44.13, lon: 170.13,
+    selite: 'Jäätikköjauhon turkoosiksi värjäämiä järviä Uuden-Seelannin korkeimpien vuorten juurella.',
+    oletus: 'iss071e073568',
+    kuvat: [
+      { id: 'iss071e073568',
+        teksti: 'Kolme peräkkäistä jäätikköjärveä samassa kuvassa — Tekapo, Pukaki ja Ohau vasemmalta oikealle. Kunkin sävy on hieman erilainen sen mukaan, kuinka paljon jäätikköjauhoa eli hienoksi jauhautunutta kivipölyä sen oma syöttöjoki kuljettaa; suurin niistä, Pukaki, on Aoraki/Mount Cookin, maan korkeimman vuoren, eteläpuolella.' },
+    ],
+  },
+  {
+    tunnus: 'zion', nimi: 'Zion Canyon', seutu: 'Utah, Yhdysvallat', lat: 37.30, lon: -113.05,
+    selite: 'Virginin joen kaivama punahiekkakivikanjoni, jonka jyrkät seinämät kohoavat satoja metrejä.',
+    oletus: 'iss017e005351',
+    kuvat: [
+      { id: 'iss017e005351',
+        teksti: 'Zion Canyonin punertavat ja vaaleanpinkit hiekkakivijyrkänteet lähes suoraan ylhäältä kuvattuna. Kivi on noin 200 miljoonaa vuotta vanhan aavikon hiekkadyynien jäänne, ja jokien kaivamat pystysuorat railot seuraavat kallion vanhoja säröjä. Vasemmassa alakulmassa erottuu kapea tie, joka kiipeää kanjonin seinämää pitkin.' },
+    ],
+  },
+  {
+    tunnus: 'volgansuisto', nimi: 'Volgan suisto', seutu: 'Astrahanin alue, Venäjä', lat: 45.70, lon: 47.90,
+    selite: 'Euroopan pisimmän joen laaja haarautuva suisto Kaspianmeren rannalla.',
+    oletus: 'iss005e11203',
+    kuvat: [
+      { id: 'iss005e11203',
+        teksti: 'Volga-joki haarautuu kymmeniksi uomiksi ennen laskuaan Kaspianmereen; vihreät suistosaaret erottuvat selvästi ruskeasta maasta pohjoisessa ja vihertävästä merestä etelässä. Suisto on tärkeä pysähdyspaikka muuttolinnuille ja elinympäristö belugasammille, joista saadaan Venäjän kuuluisaa kaviaaria.' },
+      { id: 'iss013e77351',
+        teksti: 'Sama suisto tulvan aikaan syyskuussa 2006, muutama päivä rankkojen sateiden jälkeen. Sameat tulvavedet virtaavat pitkinä juovina laivaväylän molemmin puolin kosteikkojen yli suoraan Kaspianmereen.' },
+    ],
+  },
+  {
+    tunnus: 'irrawaddyn-suisto', nimi: 'Irrawaddyn suisto', seutu: 'Myanmar', lat: 16.00, lon: 95.00,
+    selite: 'Myanmarin tärkeimmän joen mangrovemetsien ja riisipeltojen halkoma suisto Andamaanien merellä.',
+    oletus: 'iss073e1197819',
+    kuvat: [
+      { id: 'iss073e1197819',
+        teksti: 'Irrawaddy-joki haarautuu lukemattomiksi mangrovemetsän reunustamiksi uomiksi ennen laskuaan Andamaanien merelle. Ruskea sedimenttivyöhyke rannikon edustalla paljastaa, kuinka paljon liejua joki kuljettaa mukanaan riisipeltojen ja kosteikkojen halki. Avaruusaseman aurinkopaneeli näkyy kuvan oikeassa reunassa.' },
+    ],
+  },
+  {
+    tunnus: 'colorado-suisto', nimi: 'Colorado-joen suisto', seutu: 'Kalifornianlahti, Meksiko', lat: 31.80, lon: -114.75,
+    selite: 'Kuivunut jokisuisto, joka paljastaa kuinka kastelu vie Colorado-joen veden ennen kuin se ehtii mereen.',
+    oletus: 'iss064e002258',
+    kuvat: [
+      { id: 'iss064e002258',
+        teksti: 'Colorado-joen suisto Kalifornianlahden pohjukassa. Valkoinen alue vasemmalla on entistä jokiuomaa, joka on kuivunut, koska joen vesi käytetään lähes kokonaan kasteluun ennen kuin se ehtii merelle asti. Turkoosi sedimenttipitoinen vesi näyttää, missä vielä virtaava vesi kohtaa lahden. Avaruusaseman rakenteet näkyvät kuvan oikeassa reunassa.' },
+    ],
+  },
+  {
+    tunnus: 'santorini', nimi: 'Santorini', seutu: 'Kykladit, Kreikka', lat: 36.40, lon: 25.40,
+    selite: 'Kalderasaaristo, joka syntyi yhden historian voimakkaimmista tulivuorenpurkauksista.',
+    oletus: 'iss017e005037',
+    kuvat: [
+      { id: 'iss017e005037',
+        teksti: 'Santorinin saariryhmä ylhäältä: oikealla Théran pääsaari, jonka valkoiset kattojen rivit seuraavat jyrkän kalderan reunaa, ja vasemmalla tumma Nea Kamenin saari, joka on kasvanut esiin merestä laavavirroista. Kalderan synnytti noin vuonna 1620 eaa. tapahtunut purkaus, yksi viimeisten 10 000 vuoden voimakkaimmista. Saaren oikeassa yläkulmassa erottuu lentokenttä.' },
+    ],
+  },
+  {
+    tunnus: 'amazonin-suu', nimi: 'Amazonin suu', seutu: 'Pará, Brasilia', lat: -0.60, lon: -49.90,
+    selite: 'Maailman vesirikkaimman joen suualue, jossa virtaukset muovaavat rantaviivaa jatkuvasti uudelleen.',
+    oletus: 'iss010e13029',
+    kuvat: [
+      { id: 'iss010e13029',
+        teksti: 'Punaruskea liejuinen vesi virtaa vehreiden saarien välistä siellä missä Amazon laskee mereen; Perigoso-kanava erottaa saaren mantereesta, ja pilvet peittävät osan näkymästä. NASA:n tutkijat vertasivat vuosien 2000 ja 2005 kuvia ja havaitsivat kanavan siirtyneen satoja metrejä, kun joki syö rantaa toiselta puolelta ja kasaa lietettä toiselle.' },
+    ],
+  },
+  {
+    tunnus: 'fundynlahti', nimi: 'Fundynlahti', seutu: 'Nova Scotia ja New Brunswick, Kanada', lat: 45.30, lon: -64.50,
+    selite: 'Lahti, jossa on maailman suurin vuorovesivaihtelu — vesi voi nousta ja laskea yli kymmenen metriä.',
+    oletus: 'iss059e059149',
+    kuvat: [
+      { id: 'iss059e059149',
+        teksti: 'Fundynlahti erottaa Nova Scotian (oikealla) New Brunswickistä (vasemmalla). Lahden pohjukoissa vesi on punaruskeaa: maailman suurimmat vuorovedet huuhtovat esiin hiekkakiveä ja punaista mutaa kahdesti päivässä. Pilvijuova kulkee lahden yli kuvan alareunassa.' },
+    ],
+  },
+
 ];
 
 /**
