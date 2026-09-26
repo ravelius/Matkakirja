@@ -7751,3 +7751,7 @@ Omistaja 01.4x kortilla (Linssisepan era v2, kaannos 91a4b727, kuvat proto-3d/lo
 ## SISALTOKIRJURI NOLLATTU 01.4x (LUOVUTUS daafa34f4); MAALEHTI-SIIRTO JATKUU HAARASTA (27.9.2026 klo 01.40)
 
 Sisaltokirjuri nollattu 01.4x (93 % → tyhja), luovutus docs/raportit/viesti-sisaltokirjuri-luovutus-20260927.md (haara sisalto-luovutus-20260927 daafa34f4), WIP-haara origin/sisalto-maalehti-siirto-20260927. Aloitusviesti lahetetty: maalehti-siirto loppuun (28 siirtyy, 5 jaa), #3363 Julkaisijalla, sitten astronautin erat 5–6.
+
+## YLHAALTA-175 JA STRIIMIAANI JUNASSA 52ea3d10, KAANNOS d7705537 → LAITETESTAAJAN KIERROS (27.9.2026 klo 01.40)
+
+Natiiviseppa 01.4x: juna/b13 52ea3d10 = ylhaalta-175 d65986ae (junamerge 01b56f53) + natiivi-ui/striimiaani 0677592b; unity-tarkistus 0, Kartta-testit 309/309; kaannos d7705537 Laitetestaajan simulaattoreissa ja FB234D08; savuke FBBD41D7 0 poikkeusta, verho 2,6 s. Laitetestaajan lyhyt kierros (perspektiivi, lippu, savuke, 177) → PASS → master → TF 1.0.27.
