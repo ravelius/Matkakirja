@@ -232,18 +232,43 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Löydös 161 (omistaja, build 21 -koe): kohdemaan 3D-lipputanko (Natiivisepän Lipputanko) pääkaupunkiin samalla
-        /// 1873-lipulla kuin kartussissa. Pääkaupunki = maalehden kartan pääpiste (KarttaKaupungit paa) pelin kaupungeista;
-        /// varana maan pelikaupunkien keskipiste. Ei kaupunkeja → ei tankoa.
+        /// Löydös 161 (omistaja, build 21 -koe; tarkennus 11.4x, sitova): kohdemaan 3D-lipputanko (Natiivisepän
+        /// Lipputanko) maan itäreunaan maalle, ei pääkaupunkiin. Paikka on Karttasepän ankkurista lippu_lonlat
+        /// ({ISO3: [lon, lat]}, sisältöpaketissa <see cref="LippuAnkkuritPolku"/>); ilman ankkuria ei tankoa.
+        /// Lippu on sama 1873-lipun tekstuuri kuin kartussissa.
         /// </summary>
-        static void AsetaLipputanko(MaaTiedot m, Texture lippu)
+        void AsetaLipputanko(MaaTiedot m, Texture lippu)
         {
-            var omat = UiSisalto.Kaikki.Where(k => k.Maa == m.Iso3 && !double.IsNaN(k.Lat) && !double.IsNaN(k.Lon)).ToList();
-            string paaNimi = m.KarttaKaupungit.Where(k => k.Paa).Select(k => k.Nimi).FirstOrDefault();
-            var paa = paaNimi == null ? null : omat.FirstOrDefault(k => string.Equals(k.Nimi, paaNimi, StringComparison.OrdinalIgnoreCase));
-            if (paa != null) { Lipputanko.Aseta(m.Iso3, paa.Lat, paa.Lon, lippu); return; }
-            if (omat.Count == 0) { Lipputanko.Pois(); return; }
-            Lipputanko.Aseta(m.Iso3, omat.Average(k => k.Lat), omat.Average(k => k.Lon), lippu);
+            string maa = m.Iso3;
+            UiKerros.Hae().StartCoroutine(LippuAnkkuri(maa, a =>
+            {
+                if (iso != maa) return;
+                if (a.HasValue) Lipputanko.Aseta(maa, a.Value.Lat, a.Value.Lon, lippu);
+                else Lipputanko.Pois();
+            }));
+        }
+
+        /// <summary>Karttasepän lipputankoankkurit sisältöpaketissa (Siirtoseppä vie; polku vahvistetaan datan tullessa).</summary>
+        public const string LippuAnkkuritPolku = "kartta/lippu_lonlat.json";
+        static Dictionary<string, (double Lat, double Lon)> lippuAnkkurit;
+        static bool lippuAnkkuritHaettu;
+
+        static System.Collections.IEnumerator LippuAnkkuri(string maa, Action<(double Lat, double Lon)?> valmis)
+        {
+            if (!lippuAnkkuritHaettu)
+            {
+                lippuAnkkuritHaettu = true;
+                string json = null;
+                yield return LinssiSisalto.Hae(LippuAnkkuritPolku, t => json = t);
+                var d = new Dictionary<string, (double, double)>();
+                if (Matkakirja.Peli.MiniJson.Jasenna(json ?? "") is Dictionary<string, object> o)
+                    foreach (var kv in o)
+                        if (kv.Value is List<object> p && p.Count >= 2 && p[0] is double lon && p[1] is double lat) d[kv.Key] = (lat, lon);
+                lippuAnkkurit = d;
+                if (d.Count == 0) Debug.Log("MATKAKIRJA ui lipputanko: ankkureita ei ole (" + LippuAnkkuritPolku + "), tanko piilossa");
+            }
+            while (lippuAnkkurit == null) yield return null;
+            valmis(lippuAnkkurit.TryGetValue(maa, out var a) ? a : ((double, double)?)null);
         }
 
         void Tayta(MaaTiedot m)
