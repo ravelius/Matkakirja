@@ -400,6 +400,17 @@ namespace Matkakirja.Natiivi
             Lukijoilta.Unohda();
         }
 
+        /// <summary>Vanhan matkan sisältöikkunat kiinni uuden matkan alkaessa (aloitusnäkymä ja pelin näkymät jäävät).</summary>
+        void SuljeSisaltoikkunat()
+        {
+            Nostokortti.Sulje();
+            Nahtavyydet.SuljeKokonaan();
+            Nahtavyysnakyma.Sulje();
+            Wiki.Sulje();
+            Minipopup.SuljeAuki();
+            Pikkuseloste.Sulje();
+        }
+
         void KytkeOhjain()
         {
             var o = PeliOhjain.Instanssi;
@@ -418,6 +429,9 @@ namespace Matkakirja.Natiivi
             // Löydös 177: Uusi peli tyhjentää pelin muistit (Pelikoodarin TyhjennaMuistit); webissä sivu latautuu
             // uudelleen, joten myös UI:n istuntomuistit alkavat alusta.
             o.MuistitTyhjennetty += NollaaMuistit;
+            // Löydös 177 (Laitetestaajan resepti 1.0.27): uusi matka millä reitillä tahansa (valikko, huipennus,
+            // testikomento uusi-peli) sulkee vanhan pelin sisältöikkunat; webissä sivu latautuu uudelleen.
+            o.MatkaAlkoi += () => UiKerros.PaaSaikeessa(SuljeSisaltoikkunat);
             // Pelin tilanteet puluun (webin ilmoitaLivianTilanne; Pelikoodarin tapahtuma).
             o.LivianTilanne += (laji, tunne, v) =>
             {
