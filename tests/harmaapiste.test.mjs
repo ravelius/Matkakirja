@@ -49,7 +49,8 @@ const {
   NOSTOSYM_PISTE_HARMAA, piirraNostosymMini,
 } = await import('../js/fokusnosto-symbolit.js');
 const {
-  NOSTOJEN_TYYPPIMERKIN_KERROIN, tyyppimerkitKaytossa,
+  NOSTOJEN_TYYPPIMERKIN_KERROIN, NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN, NOSTOJEN_TYYPPIMERKIN_PIENI,
+  tyyppimerkitKaytossa, tyyppimerkkiPieni, ruudunKerroin,
 } = await import('../js/pallolauta/nostot.js');
 
 /** Kiekon luokat piirretystä ryhmästä. */
@@ -75,19 +76,23 @@ test('harmaa on sama varataulussa ja css/styles.css:ssä', () => {
   assert.match(css, /\.nostosym-mini-harmaa\s*\{[^}]*var\(--sym-piste-harmaa\)/);
 });
 
-test('tyyppimerkit: ilman lippua raja z8, lipulla kaikilla zoomeilla', async () => {
+test('tyyppimerkit: kynnys 2,5, pienennetty 2,5–4, täysi koko 4:stä (löydös 155)', () => {
+  assert.equal(NOSTOJEN_TYYPPIMERKIN_KERROIN, 2.5);
   assert.equal(tyyppimerkitKaytossa(1), false, 'kaukana piste');
-  assert.equal(tyyppimerkitKaytossa(NOSTOJEN_TYYPPIMERKIN_KERROIN), true, 'z8 ja lähempänä merkki');
-  /*
-   * Lippu luetaan moduulin latauksessa, joten koe vaatii oman
-   * latauksensa: kyselymerkkijono tekee siitä eri moduulin.
-   */
-  globalThis.location = { search: '?koe=symbolitkaukana' };
-  try {
-    const koe = await import('../js/pallolauta/nostot.js?koe=symbolitkaukana');
-    assert.equal(koe.tyyppimerkitKaytossa(1), true, 'lipulla merkki myös kaukana');
-    assert.equal(koe.tyyppimerkitKaytossa(0.5), true);
-  } finally {
-    delete globalThis.location;
-  }
+  assert.equal(tyyppimerkitKaytossa(2.4), false);
+  assert.equal(tyyppimerkitKaytossa(2.5), true, 'kynnyksellä merkki');
+  assert.equal(tyyppimerkkiPieni(3), true, 'kertoimella 3 pienennetty');
+  assert.equal(tyyppimerkkiPieni(NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN), false, '4:stä täysi koko');
+  assert.equal(tyyppimerkkiPieni(2), false, 'pisteellä ei kokoa');
+  const merkki = { kuvamerkki: 'merkki-historia.png', taso: 2 };
+  assert.equal(ruudunKerroin({ ...merkki, kuvamerkkiPieni: true }), NOSTOJEN_TYYPPIMERKIN_PIENI);
+  assert.equal(NOSTOJEN_TYYPPIMERKIN_PIENI, 0.7);
+  assert.equal(ruudunKerroin(merkki), 1);
+  assert.equal(ruudunKerroin({ ...merkki, taso: 1, kuvamerkkiPieni: true }), 1.6, 'ykköstaso ei pienene');
+  assert.equal(ruudunKerroin({ taso: 2 }), 1, 'piste');
+});
+
+test('koelippu symbolitkaukana on poistettu (löydös 155)', () => {
+  const lahde = readFileSync(new URL('../js/pallolauta/nostot.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(lahde, /has\('symbolitkaukana'\)/);
 });

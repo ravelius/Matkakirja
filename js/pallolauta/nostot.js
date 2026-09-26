@@ -49,7 +49,6 @@ import {
   onKaupunginSisainen,
 } from './kaupunkiliuska.js';
 // Koeliput osoitteesta (?koe=): sama jäsennys kuin laattakerroksella.
-import { laattakerroksenKokeet } from '../pallolaatat.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
@@ -483,7 +482,8 @@ export const NOSTON_TASO1_KERROIN = 1.3;
  * ══ TYYPPIMERKIT LÄHIZOOMISSA (omistajan päätös 21.9.2026 klo 23.05,
  * Fable: *"nostojen karttamerkit takaisin"*) ═══════════════════════
  *
- * z8:sta lähemmäs (kartan kerroin ≥ NOSTOJEN_TYYPPIMERKIN_KERROIN, sama
+ * z8:sta lähemmäs (kartan kerroin ≥ NOSTOJEN_TYYPPIMERKIN_KERROIN, 26.9. alkaen
+ * 2,5 — ks. LÖYDÖS 155 alla; alun perin sama
  * kerroin kuin nimiön katolla: kaksi zoomiporrasta saapumisnäkymästä)
  * JOKAINEN nosto saa tyyppinsä Codexin kuvamerkin (js/fokusnosto-
  * symbolit.js NOSTOSYM_KUVAMERKIT, 11 tyyppiä) pisteen tilalle
@@ -495,30 +495,32 @@ export const NOSTON_TASO1_KERROIN = 1.3;
  * saman ruudun kertoimen (ruudunKerroin), joten ykköstason merkki varaa
  * isomman tilan ja tavallinen merkki pisteen tilan.
  */
-export const NOSTOJEN_TYYPPIMERKIN_KERROIN = 4;
+export const NOSTOJEN_TYYPPIMERKIN_KERROIN = 2.5;
 /*
- * KOELIPPU `?koe=symbolitkaukana` (omistaja 22.9.2026, sanatarkasti:
- * *"Voisi kokeilla vaihtaa nostojen pisteet piirroksiksi jo
- * kaukonäkymässä..."*). Lippu pudottaa kertoimen rajan pois, eli
- * tyyppimerkit ovat käytössä KAIKILLA zoomeilla — omistajan vertailua
- * varten harmaata pistettä vasten (ks. KARTAN PISTE ON HARMAA
- * js/fokusnosto-symbolit.js). Ei muuta mitään muuta: merkki, ruudun
- * kerroin ja laatikot tulevat samasta koodista kuin lähizoomissa.
- *
- * Lippu luetaan KERRAN moduulin latauksessa, koska sama vastaus
- * tarvitaan ladonnassa, rasteripyynnössä ja sovittelun laatikoissa —
- * kesken kehyksen vaihtuva vastaus repisi ne eri tiloihin.
+ * LÖYDÖS 155 (Fablen päätös 26.9.2026 klo 09.0x): kuvamerkit tulevat
+ * lähemmäs saapumisnäkymää. Kynnys 4 → 2,5, ja kertoimilla 2,5–4 merkki
+ * on NOSTOJEN_TYYPPIMERKIN_PIENI kertaa tavallisesta (siirtymä pisteestä
+ * täysikokoiseen merkkiin kahdessa portaassa). Koelippu
+ * `?koe=symbolitkaukana` poistui samalla päätöksellä. Natiivi
+ * (NostoSaannot.cs) muuttui samassa erässä samoihin lukuihin.
  */
-const SYMBOLIT_KAUKANA = laattakerroksenKokeet().has('symbolitkaukana');
-/** Ovatko tyyppimerkit käytössä kartan kertoimella (z8 ja lähempänä). */
+export const NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN = 4;
+export const NOSTOJEN_TYYPPIMERKIN_PIENI = 0.7;
+/** Ovatko tyyppimerkit käytössä kartan kertoimella. */
 export function tyyppimerkitKaytossa(kerroin) {
-  if (SYMBOLIT_KAUKANA) return true;
   return Number.isFinite(kerroin) && kerroin >= NOSTOJEN_TYYPPIMERKIN_KERROIN;
 }
 
-/** Merkin ruudun kerroin: kuvamerkillinen YKKÖSTASO on isompi ruutu; muu kuvamerkki pisteen ruudussa. */
+/** Onko kuvamerkki kertoimella vielä pienennetty (2,5 ≤ kerroin < 4, ks. LÖYDÖS 155). */
+export function tyyppimerkkiPieni(kerroin) {
+  return tyyppimerkitKaytossa(kerroin) && kerroin < NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN;
+}
+
+/** Merkin ruudun kerroin: kuvamerkillinen YKKÖSTASO on isompi ruutu; muu kuvamerkki pisteen ruudussa (lähellä kynnystä pienempi). */
 export function ruudunKerroin(d) {
-  return d?.kuvamerkki && d?.taso === 1 && !d?.poltettu ? NOSTOSYM_KUVAMERKIN_KERROIN : 1;
+  if (!d?.kuvamerkki || d?.poltettu) return 1;
+  if (d.taso === 1) return NOSTOSYM_KUVAMERKIN_KERROIN;
+  return d.kuvamerkkiPieni ? NOSTOJEN_TYYPPIMERKIN_PIENI : 1;
 }
 
 /*
@@ -1356,7 +1358,7 @@ export function asetteleNosto(el, d) {
   // Kuvamerkki: ykköstaso aina, muut lähizoomissa (TYYPPIMERKIT LÄHIZOOMISSA).
   const kuvamerkki = !d.poltettu ? (d.kuvamerkki ?? null) : null;
   const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`
-    + (taso1 || kuvamerkki ? `|${taso1 ? 'taso1' : ''}|${kuvamerkki ?? ''}` : '');
+    + (taso1 || kuvamerkki ? `|${taso1 ? 'taso1' : ''}|${kuvamerkki ?? ''}|${ruudunKerroin(d)}` : '');
   if (g.dataset.resepti !== resepti) {
     /*
      * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ, EI HYPPÄÄMÄLLÄ (KARTAN SULAVUUS ENSIN,
@@ -2019,6 +2021,8 @@ export function luoNostot({
           // Tyyppimerkit lähizoomissa (ks. TYYPPIMERKIT LÄHIZOOMISSA): kaikille.
           kuvamerkki: kohde.taso === 1 || tyyppimerkitKaytossa(nostonKarttakerroin)
             ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
+          // LÖYDÖS 155: kynnyksen ja täyden koon välissä merkki on pienempi (ruudunKerroin).
+          kuvamerkkiPieni: kohde.taso !== 1 && tyyppimerkkiPieni(nostonKarttakerroin),
           // Löytämisen sumu: luonnos, kunnes löydetty (ks. keraa).
           luonnos: luonnos(m.id, kohde.taso === 1 ? 1 : 2, a.lat, a.lon),
           /*
