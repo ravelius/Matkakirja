@@ -81,6 +81,43 @@ export function tallennaPuheAsetukset(asetukset) {
   } catch { /* yksityistila: säädöt elävät vain istunnon */ }
 }
 
+/*
+ * STRIIMIÄÄNI KEHITTÄJÄVALIKOSSA (omistaja 27.9.2026 klo 01.2x: "Lisää
+ * kehittäjä valikkoon äänen valinta xai:n vaihtoehdoista striimille").
+ * Worker lukee striimiluennan xAI:n Grok TTS:llä (oletus 'ara', päätös
+ * 27.9. klo 00.25); tämä lista on workerin XAI_AANET-taulun NÄYTTÖKOPIO
+ * (tools/pollo/worker.js) — tests/puheohjeet.test.mjs valvoo, että ne
+ * ovat samat. Valinta tallentuu samaan laitekohtaiseen persoonatauluun
+ * kuin työhuoneen säädöt (kaikille kolmelle persoonalle kerralla), ja
+ * worker tottelee sitä vain kehittäjäkoodilla kuten muitakin säätöjä.
+ */
+export const STRIIMIAANET_XAI = ['altair', 'ara', 'atlas', 'aurora', 'carina', 'castor',
+  'celeste', 'cosmo', 'eve', 'helios', 'helix', 'iris', 'kepler', 'leo',
+  'liora', 'lumen', 'luna', 'lux', 'naksh', 'orion', 'perseus', 'rex',
+  'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
+export const STRIIMIAANI_OLETUS = 'ara';
+const STRIIMIN_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
+
+/** Kehittäjän valitsema xAI-striimiääni, tai null = workerin oletus (ara). */
+export function striimiaani() {
+  const aani = luePuheAsetukset()?.pollo?.aani;
+  return typeof aani === 'string' && STRIIMIAANET_XAI.includes(aani) ? aani : null;
+}
+
+/** Asettaa xAI-striimiäänen kaikille persoonille; null/'' palauttaa oletuksen. */
+export function asetaStriimiaani(aani) {
+  const valinta = typeof aani === 'string' && STRIIMIAANET_XAI.includes(aani) ? aani : null;
+  const asetukset = luePuheAsetukset();
+  for (const persoona of STRIIMIN_PERSOONAT) {
+    const oma = { ...(asetukset[persoona] ?? {}) };
+    if (valinta) oma.aani = valinta;
+    else delete oma.aani;
+    asetukset[persoona] = oma;
+  }
+  tallennaPuheAsetukset(asetukset);
+  return valinta;
+}
+
 function puheenSaadot(persoona) {
   const oma = luePuheAsetukset()?.[persoona];
   if (!oma || typeof oma !== 'object') return null;

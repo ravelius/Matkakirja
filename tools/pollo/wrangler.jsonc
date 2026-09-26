@@ -29,6 +29,12 @@
     "POLLO_KUUKAUSIRAJA": "1500",
     "POLLO_MALLI": "claude-sonnet-5",
     /*
+     * Striimiluennan moottori (omistaja 27.9.2026): 'xai' = Grok TTS,
+     * ääni ara (vaatii XAI_API_KEY-salaisuuden; ilman sitä pudotaan
+     * OpenAI:hin), 'openai' = gpt-4o-mini-tts kuten ennen 27.9.
+     */
+    "PUHE_MOOTTORI": "xai",
+    /*
      * Kuvageneroinnin päiväraja (omistajan tuotantojaksot 22.8.2026:
      * herokuvat + julistesarjat; illalla tilaus "Generoi kaikki
      * julisteet" — 97 julistetta + herokierrokset eivät mahdu

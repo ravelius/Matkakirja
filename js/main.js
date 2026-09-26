@@ -54,8 +54,9 @@ import { asennaPollo } from './pollo.js';
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
-  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, paivitaLukijanVoima,
-  puheenNopeus, puheenVoima, tallennaPuheAsetukset,
+  asetaPuheenNopeus, asetaPuheenVoima, asetaStriimiaani, luePuheAsetukset,
+  paivitaLukijanVoima, puheenNopeus, puheenVoima, STRIIMIAANET_XAI,
+  STRIIMIAANI_OLETUS, striimiaani, tallennaPuheAsetukset,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
@@ -156,7 +157,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2291';
+const APP_VERSION = '2026-09-21.2292';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -2195,6 +2196,7 @@ function paivitaKehittajaValikko() {
       : 'Pallolauta on pois: pelin lauta on tasokartta — kytke päälle pelataksesi '
         + 'karttapallolla (sivu ladataan uudestaan; sama kuin ?lauta=pallo)';
   }
+  naytaStriimiaani();
   merkitseSiirtymamusiikki();
   if (siirtymaMusiikkiNappi) {
     siirtymaMusiikkiNappi.title = 'Pelin omat musiikkiraidat: löytyykö raita ämpäristä '
@@ -2214,6 +2216,42 @@ function paivitaKehittajaValikko() {
         + 'Kytke päälle kuullaksesi koreografian ajoituksen ennen kuin raidat on '
         + 'sävelletty';
   }
+}
+
+/*
+ * STRIIMIÄÄNEN VALINTA (omistaja 27.9.2026 klo 01.2x). Pudotusvalikko
+ * xAI:n äänistä; tyhjä arvo = workerin oletus (ara). Valinta menee
+ * js/puhe.js asetaStriimiaani-apurin kautta samaan laitekohtaiseen
+ * persoonatauluun kuin työhuoneen säädöt, joten seuraava luenta
+ * (Pulun striimi, lehti, merkinnät) lähtee uudella äänellä ilman
+ * sivun latausta. Valikko ei saa sulkeutua valintaan, siksi
+ * tapahtumat pysäytetään kuten liu'uissa.
+ */
+const striimiaaniValinta = document.getElementById('kehittaja-striimiaani');
+function naytaStriimiaani() {
+  if (!striimiaaniValinta) return;
+  striimiaaniValinta.value = striimiaani() ?? '';
+  striimiaaniValinta.title = 'Striimiluennan ääni (xAI Grok TTS). Oletus ara on omistajan '
+    + 'valinta kaikkeen striimiluentaan; muut äänet ovat kokeilua varten ja '
+    + 'tottelevat vain kehittäjäkoodilla. Tyhjennä palataksesi oletukseen.';
+}
+if (striimiaaniValinta) {
+  striimiaaniValinta.append(new Option(`${STRIIMIAANI_OLETUS} (oletus)`, ''));
+  for (const aani of STRIIMIAANET_XAI) {
+    if (aani !== STRIIMIAANI_OLETUS) striimiaaniValinta.append(new Option(aani, aani));
+  }
+  naytaStriimiaani();
+  striimiaaniValinta.addEventListener('change', (e) => {
+    e.stopPropagation();
+    const valittu = asetaStriimiaani(striimiaaniValinta.value || null);
+    naytaStriimiaani();
+    naytaKehittajaVihje(valittu
+      ? `Striimiääni: ${valittu} — seuraava luenta lähtee tällä äänellä`
+      : `Striimiääni: ${STRIIMIAANI_OLETUS} (oletus)`);
+  });
+  striimiaaniValinta.addEventListener('click', (e) => e.stopPropagation());
+  striimiaaniValinta.addEventListener('pointerdown', (e) => e.stopPropagation());
+  striimiaaniValinta.closest('label')?.addEventListener('click', (e) => e.stopPropagation());
 }
 
 /* Valikon avaus ja sulku — sama kaava kuin hampurilaisella yllä. */
