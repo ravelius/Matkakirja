@@ -53,6 +53,10 @@ const TAVOITE_LUFS = -11;
 // Vahvistus ei saa leikata: huippu enintään −1 dBFS (muuten raita jää hiljemmaksi).
 const HUIPPU_DBFS = -1;
 const SIETO_LU = 0.5;
+// Vaiheen 2 raa'at ovat piikikkäitä (näppäilyt, rummut): pelkkä vahvistus
+// jäisi huippurajaan −15…−16 LUFS:iin. Rajoitin (alimiter −1,5 dBFS) saa
+// painaa yksittäisiä huippuja enintään tämän verran; muu dynamiikka säilyy.
+const RAJOITIN_DB = 3;
 const MEDIA = 'https://media.matkakirja.app/audio/';
 const KANSIO = 'assets/audio';
 
@@ -69,6 +73,23 @@ const RAIDAT = {
   'saapuminen-valimeri': { alku: 0.9, loppu: 10.3, sisaan: 0.05, ulos: 1.8 },
   // Matkan loppu 60–90 s: raaka kelpaa sellaisenaan, vain hiljaisuudet pois.
   loppu: { alku: 1.1, loppu: 70.2, sisaan: 0.05, ulos: 1.5 },
+  // Vaihe 2 (suunnitelma §5 kohta 2). Tunnukset 8–10 s ja lyhyet vihjeet
+  // päättyvät RMS-kuoppaan; kohtaaminen ja maanosat ovat looppeja, joista
+  // leikataan vain alun ja lopun hiljaisuus (Lyria häivyttää itse).
+  kohtaaminen: { alku: 0, loppu: 70.0, sisaan: 0.02, ulos: 0.3 },
+  ratkaisu: { alku: 0, loppu: 4.35, sisaan: 0.02, ulos: 1.0 },
+  epaonnistuminen: { alku: 0.8, loppu: 4.8, sisaan: 0.05, ulos: 0.8 },
+  'saapuminen-lansi-eurooppa': { alku: 0, loppu: 10.6, sisaan: 0.05, ulos: 1.5 },
+  'saapuminen-ita-eurooppa': { alku: 0.5, loppu: 9.1, sisaan: 0.05, ulos: 2.0 },
+  'saapuminen-lahi-ita': { alku: 1.4, loppu: 11.6, sisaan: 0.05, ulos: 2.0 },
+  'saapuminen-saharan-etelapuoli': { alku: 0.2, loppu: 9.6, sisaan: 0.05, ulos: 1.8 },
+  'saapuminen-etela-aasia': { alku: 0, loppu: 10.6, sisaan: 0.05, ulos: 1.5 },
+  'saapuminen-ita-aasia': { alku: 0.7, loppu: 9.35, sisaan: 0.05, ulos: 1.8 },
+  'saapuminen-pohjois-amerikka': { alku: 0.2, loppu: 7.6, sisaan: 0.05, ulos: 1.5 },
+  'saapuminen-etela-amerikka': { alku: 1.9, loppu: 10.6, sisaan: 0.05, ulos: 1.8 },
+  'saapuminen-oseania': { alku: 1.2, loppu: 10.6, sisaan: 0.05, ulos: 1.8 },
+  'maanosa-valimeri': { alku: 1.4, loppu: 67.3, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-lansi-eurooppa': { alku: 0, loppu: 69.3, sisaan: 0.02, ulos: 0.3 },
 };
 
 function ffmpeg(argit) {
@@ -116,12 +137,18 @@ async function viimeistele(nimi) {
   const leikkaus = `atrim=${r.alku}:${r.loppu},asetpts=PTS-STARTPTS,`
     + `afade=t=in:d=${r.sisaan},afade=t=out:st=${(pituus - r.ulos).toFixed(3)}:d=${r.ulos}`;
   const ennen = lueLufs(mittaa(lahde, leikkaus));
-  const vahvistus = Math.min(TAVOITE_LUFS - ennen.lufs, HUIPPU_DBFS - ennen.huippu);
+  const vahvistus = Math.min(TAVOITE_LUFS - ennen.lufs, HUIPPU_DBFS - ennen.huippu + RAJOITIN_DB);
+  const rajoitin = vahvistus > HUIPPU_DBFS - ennen.huippu
+    ? `,alimiter=limit=${(10 ** ((HUIPPU_DBFS - 0.5) / 20)).toFixed(3)}:level=0:attack=5:release=80` : '';
   const kohde = join(KANSIO, `musa-${nimi}-lyria.mp3`);
-  ffmpeg(['-y', '-i', lahde, '-af', `${leikkaus},volume=${vahvistus.toFixed(2)}dB`,
+  ffmpeg(['-y', '-i', lahde, '-af', `${leikkaus},volume=${vahvistus.toFixed(2)}dB${rajoitin}`,
     '-c:a', 'libmp3lame', '-b:a', '192k', '-ar', '44100', kohde]);
   const jalkeen = lueLufs(mittaa(kohde));
-  if (Math.abs(jalkeen.lufs - TAVOITE_LUFS) > SIETO_LU && jalkeen.huippu < HUIPPU_DBFS - 0.5) {
+  // Rajoitin laskee integroitua tasoa hieman (vaihe 1: −11,5…−12,5 LUFS).
+  // Rajoittimen katto (RAJOITIN_DB) voi jättää piikikkään raidan tavoitteen alle: se hyväksytään.
+  const katossa = vahvistus < TAVOITE_LUFS - ennen.lufs - 0.01;
+  const sieto = rajoitin ? 2 * SIETO_LU : SIETO_LU;
+  if (!katossa && Math.abs(jalkeen.lufs - TAVOITE_LUFS) > sieto && jalkeen.huippu < HUIPPU_DBFS - 0.5) {
     throw new Error(`${nimi}: ${jalkeen.lufs} LUFS, tavoite ${TAVOITE_LUFS}`);
   }
   console.log(`${kohde}  ${kesto(kohde).toFixed(1)} s  ${jalkeen.lufs} LUFS  huippu ${jalkeen.huippu} dBFS  (raaka ${ennen.lufs} LUFS, ${vahvistus.toFixed(1)} dB)`);
@@ -136,7 +163,12 @@ async function vie(nimi, tiedosto) {
   { stdio: ['ignore', 'ignore', 'inherit'] });
   const raakaAmparissa = (await fetch(MEDIA + `musa-${nimi}-raaka.mp3`, { method: 'HEAD' })).ok;
   if (!raakaAmparissa) {
-    aws(`s3://${AMPARI}/audio/musa-${nimi}-lyria.mp3`, `s3://${AMPARI}/audio/musa-${nimi}-raaka.mp3`);
+    // Kaatunut generointiajo ei vie raitaa audio/-kansioon: raaka on silloin
+    // vain paikallisena (haettu ajon raaka-kansiosta) ja lähetetään sieltä.
+    const paikallinen = join(KANSIO, `musa-${nimi}-raaka.mp3`);
+    const lyriaAmparissa = (await fetch(MEDIA + `musa-${nimi}-lyria.mp3`, { method: 'HEAD' })).ok;
+    aws(lyriaAmparissa ? `s3://${AMPARI}/audio/musa-${nimi}-lyria.mp3` : paikallinen,
+      `s3://${AMPARI}/audio/musa-${nimi}-raaka.mp3`);
     console.log(`  raaka talteen → ${MEDIA}musa-${nimi}-raaka.mp3`);
   }
   aws(tiedosto, `s3://${AMPARI}/audio/`);
