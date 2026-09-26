@@ -7483,3 +7483,7 @@ Omistaja 21.5x: kategoriasymboleita (3D-nostoja) ei tarvitse animoida — kumoaa
 ## MAAKUNTAPIKKUKUVAT ERA A TUOTANNOSSA: V184, 251 ALUETTA 16 MAASSA (26.9.2026 klo 21.52)
 
 Siirtoseppa: #3348 mainissa, natiivipaketti 1.x v184 (a1579184b), ampari 771/771; pikkukuvat nyt 251 aluetta 16 maassa (+138: CHE 26, PRT 20, HUN 20, SWE 21, NOR 21, IRL 30), osoitteet 200. Era B tarkistetaan samoin.
+
+## OMISTAJA HYVAKSYI KATEGORIASYMBOLIT JA ERIKOISMALLILISTAN; ERIKOISMALLIT ANIMOIDAAN, OPUS MAX, TARKASTUS ERITTAIN (26.9.2026 klo 21.57)
+
+Kortti 22.0x: (1) 14 kategoriasymbolia 3D-reliefeina (paletti paperi/seepia/muste, ≤ 40 pt, ei animaatiota, liioiteltu perspektiivi) HYVAKSYTTY koodaukseen, kaari + vuori ensin. (2) Erikoismallilista 34 maalle HYVAKSYTTY, MUTTA erikoismallit ANIMOIDAAN Tivolin tapaan (aito 3D, ei leijuntaa, valot, ei monotoniaa, elava kerros); tekijaksi Opus MAX-effortilla ja vaatimus mahdollisimman hyvat; muutama malli kerrallaan ja omistaja tarkastaa valissa. Omistaja kysyi, ovatko speksit riittavan tarkat Opukselle → Fable: eivat viela mallikohtaisesti — Linssiseppa kirjoittaa erikoismallin speksipohjan (viitekuva PD, siluetti, jalanjalki ja koko, mika osa animoituu ja miten, valot, kolmiot/LOD, hyvaksymiskriteerit: 3 kuvakulmaa + video) ja tayttaa sen 3 ensimmaiselle (Mont-Saint-Michel, Stonehenge, Colosseum); sitten luodaan erillinen sessio Mallinseppa (Opus, effort max, nimessa) Raamatun kaavalla. Linssisepan liikeydin 71cf5c6d otetaan kayttoon erikoismalleille.
