@@ -24,6 +24,8 @@ Uusi tili klo 15:40: viikko (all models) **22 %**, viikko (Fable) 15 %, 5 h **20
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
+**Fable vapautti lisää 16 Gt proto-3d-välituotteita → levy 87 Gt.** Rajat ennallaan (80/75 Gt). Jatketaan normaalia kiertoa.
+
 **15:59 Pelikoodari poisti worktreet: levy vapautui.** Poistetut: liuska-8l4, loydos155, musiikki-kytkenta2, aanilisenssit (pyydetyt) + musiikki-vaihe3 (meni mainiin #3314) + 16 proto-worktreetä junassa (ei muutoksia, ~1 Gt). Kaikki puhtaita/pushattuja ennen poistoa. Jäljellä: pelikoodari-maanosa-kaupungit (#3323 auki), pelikoodari-loydos135-web (#3274 auki, 1,1 Gt), proto-pelikoodari-esi5 (työn alla), pelikoodari-vanha-checkout (symlinkki, 0 t). Levy nyt **86 Gt vapaana** (yli 80 Gt -rajan).
 
 **Worktree-siivous (Fable, levy lähellä 80 Gt):** Käytiin läpi `git worktree list`, tarkistettiin PR-tila (`gh pr list --head`) — lähetetty poistopyynnöt: Julkaisijalle (pohja-26 #3301 mergetty, vientibudjetti-b4 #3306 mergetty, pr3293 #3293 suljettu), Pelikoodarille (liuska-8l4 #3319, loydos155 #3311, musiikki-kytkenta2 #3314 mergetty, aanilisenssit #2898 mergetty), Sisältökirjurille (linssikatalogi-kuvatekstit-era2 #3138 suljettu). Ei koskettu avoimiin PR:eihin (karttaseppa-syva-monialue #3325, pelikoodari-loydos135-web #3274, pelikoodari-maanosa-kaupungit #3323) eikä karttaseppa-poltto-20260926 (aktiivinen poltto). Fablen 14 agentti-worktreeta (.claude/worktrees/agent-*, 14 Gt) menevät omistajalle — ei roolien toimenpide. **Julkaisija JUMI:** luokitin estää worktreiden poiston (puhtaita, 0 muutosta) — vienyt suoraan Fablelle (JUMI→FABLE-sääntö), ei Postivahdin toimenpide.
