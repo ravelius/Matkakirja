@@ -10,7 +10,7 @@
  * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan
  * ladataan NASAn omasta ämpäristä.
  *
- * Haettu: 2026-09-12. Kohteita 64, kuvia 83.
+ * Haettu: 2026-09-26. Kohteita 87, kuvia 106.
  */
 
 export const SATELLIITTI_LAHDE = {
@@ -19,7 +19,7 @@ export const SATELLIITTI_LAHDE = {
   "lisenssi": "Public domain",
   "osoite": "https://images.nasa.gov/",
   "katalogi": "https://images-api.nasa.gov/search?media_type=image",
-  "haettu": "2026-09-12"
+  "haettu": "2026-09-26"
 };
 
 export const SATELLIITTI_KOHTEET = [
@@ -1969,6 +1969,604 @@ export const SATELLIITTI_KOHTEET = [
         "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/iss018e038182~large.jpg",
         "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/iss018e038182~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss018e038182"
+      }
+    ]
+  },
+  {
+    "tunnus": "pariisi",
+    "nimi": "Pariisi",
+    "seutu": "Ranska",
+    "selite": "Ranskan pääkaupunki, jonka säteittäiset bulevardit erottuvat selvästi yöllä avaruudesta.",
+    "lat": 48.857,
+    "lon": 2.352,
+    "oletus": "iss072e789833",
+    "havainnot": [
+      {
+        "id": "iss072e789833",
+        "aika": "2025-03-14",
+        "teksti": "Pariisi yöllisessä valaistuksessa avaruusasemalta kuvattuna. Eiffel-tornin ja Champs de Marsin kohdalla erottuu kirkas valopilkku kuvan keskellä, ja kaupungin säteittäiset bulevardit haarautuvat siitä joka suuntaan. Seine-joki näkyy tummana, valottomana nauhana kaupungin halki.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e789833/iss072e789833~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e789833/iss072e789833~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e789833"
+      }
+    ]
+  },
+  {
+    "tunnus": "lontoo",
+    "nimi": "Lontoo",
+    "seutu": "Englanti, Yhdistynyt kuningaskunta",
+    "selite": "Yhdistyneen kuningaskunnan pääkaupunki, jonka halki mutkitteleva Thames erottaa sen kahtia myös yöllä.",
+    "lat": 51.507,
+    "lon": -0.128,
+    "oletus": "iss074e0405029",
+    "havainnot": [
+      {
+        "id": "iss074e0405029",
+        "aika": "2026-03-19",
+        "teksti": "Lontoo yöllä avaruusasemalta kuvattuna. Thames-joki mutkittelee kirkkaana valonauhojen välissä kaupungin keskellä ja jakaa sen kahtia. Kuvan alareunassa erottuu Heathrowin lentokentän kiitoratavalaistus ja oikeassa reunassa Gatwickin lentokenttä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0405029/iss074e0405029~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0405029/iss074e0405029~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0405029"
+      }
+    ]
+  },
+  {
+    "tunnus": "rooma",
+    "nimi": "Rooma",
+    "seutu": "Italia",
+    "selite": "Italian pääkaupunki ja antiikin valtakunnan sydän, asutettuna yhtäjaksoisesti tuhansia vuosia.",
+    "lat": 41.893,
+    "lon": 12.483,
+    "oletus": "iss073e0343840",
+    "havainnot": [
+      {
+        "id": "iss073e0343840",
+        "aika": "2025-07-15",
+        "teksti": "Rooma yöllä, avaruusasemalta kuvattuna. Kaupungin tiivis, sokkeloinen valokudos erottuu selvästi ympäröivästä maaseudusta, ja kuvan vasemmassa reunassa näkyy Tyrrhenanmeren pimeä rantaviiva.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0343840/iss073e0343840~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0343840/iss073e0343840~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0343840"
+      }
+    ]
+  },
+  {
+    "tunnus": "venetsia",
+    "nimi": "Venetsia",
+    "seutu": "Italia",
+    "selite": "Italian kanavakaupunki, rakennettu sadan sokkeloisen saaren päälle laguunin keskelle.",
+    "lat": 45.44,
+    "lon": 12.332,
+    "oletus": "iss014e17346",
+    "havainnot": [
+      {
+        "id": "iss014e17346",
+        "aika": "2007-03-15",
+        "teksti": "Venetsia päivänvalossa avaruusasemalta kuvattuna. Kaupungin tunnusomainen kalanmuotoinen saari erottuu selvästi laguunin vihertävästä vedestä, ja Canal Granden S-mutka halkoo sitä keskeltä. Kuvan yläosassa näkyy Muranon saari, ja vasemmassa reunassa rautatiesilta, joka yhdistää Venetsian Italian mantereeseen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss014e17346/iss014e17346~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss014e17346/iss014e17346~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e17346"
+      }
+    ]
+  },
+  {
+    "tunnus": "moskova",
+    "nimi": "Moskova",
+    "seutu": "Venäjä",
+    "selite": "Venäjän pääkaupunki, jonka säteittäis-rengasmainen katuverkko erottuu selvästi avaruudesta.",
+    "lat": 55.751,
+    "lon": 37.617,
+    "oletus": "iss064e024687",
+    "havainnot": [
+      {
+        "id": "iss064e024687",
+        "aika": "2021-01-20",
+        "teksti": "Moskova yöllä avaruusasemalta kuvattuna. Kaupungin säteittäis-rengasmainen katuverkko erottuu kirkkaana valokuviona, ja tiiviisti valaistu keskusta hehkuu selvästi ympäröivää, harvemmin valaistua esikaupunkialuetta vasten. Moskova-joki virtaa keskustan halki tummana, valottomana raitana.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e024687/iss064e024687~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e024687/iss064e024687~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e024687"
+      }
+    ]
+  },
+  {
+    "tunnus": "peking",
+    "nimi": "Peking",
+    "seutu": "Kiina",
+    "selite": "Kiinan pääkaupunki ja Kielletyn kaupungin kotipaikka, ainoa isännöinyt kesä- ja talviolympialaiset.",
+    "lat": 39.904,
+    "lon": 116.408,
+    "oletus": "iss072e444944",
+    "havainnot": [
+      {
+        "id": "iss072e444944",
+        "aika": "2024-12-28",
+        "teksti": "Peking yöllä avaruusasemalta kuvattuna. Kaupungin keskusta erottuu ruudukkomaisena, oranssinsävyisenä valomerenä, jota ympäröivät konsentriset kehätiet. Kuvan keskellä erottuu Kielletyn kaupungin kirkkaasti valaistu Meridiaaniportti, ja oikeassa yläkulmassa näkyvät lentokentän valaistut kiitoradat.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e444944/iss072e444944~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e444944/iss072e444944~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e444944"
+      }
+    ]
+  },
+  {
+    "tunnus": "hongkong",
+    "nimi": "Hongkong",
+    "seutu": "Kiina (erityishallintoalue)",
+    "selite": "Kiinan erityishallintoalue, jonka valot erottuvat selvästi naapurikaupunki Shenzhenin valoista.",
+    "lat": 22.278,
+    "lon": 114.159,
+    "oletus": "iss072e399613",
+    "havainnot": [
+      {
+        "id": "iss072e399613",
+        "aika": "2024-12-20",
+        "teksti": "Hongkong ja naapurikaupunki Shenzhen yöllä avaruusasemalta kuvattuna. Kuvan alaosan Hongkongin rannikko erottuu lämpimän kellertävänä valona, kun taas yläosan Shenzhen hohtaa sinertävänä — ero johtuu kaupunkien erilaisesta valaistushistoriasta ja -tekniikasta rajan molemmin puolin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e399613/iss072e399613~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e399613/iss072e399613~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e399613"
+      }
+    ]
+  },
+  {
+    "tunnus": "singapore",
+    "nimi": "Singapore",
+    "seutu": "Singapore",
+    "selite": "Kaupunkivaltio Malesian kärjessä, jonka lentokenttä ja konttisatama näkyvät selvästi yöllä.",
+    "lat": 1.3,
+    "lon": 103.8,
+    "oletus": "iss073e0763866",
+    "havainnot": [
+      {
+        "id": "iss073e0763866",
+        "aika": "2025-09-21",
+        "teksti": "Singapore erottuu kuvan keskellä, erotettuna Malesian Johor Bahrusta vasemmalla Johorin salmella. Oikealla keskellä siintää Changin lentokenttä, ja kuvan alaosan kirkas suorakulmainen alue on Pasir Panjangin konttisatama, suunniteltu maailman suurimmille konttialuksille. Kuva otettu yöllä ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0763866/iss073e0763866~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0763866/iss073e0763866~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0763866"
+      }
+    ]
+  },
+  {
+    "tunnus": "sydney",
+    "nimi": "Sydney",
+    "seutu": "Australia",
+    "selite": "Australian suurin kaupunki, jonka lentokenttä ja satama-alueet reunustavat Botany Baytä.",
+    "lat": -33.868,
+    "lon": 151.21,
+    "oletus": "iss055e073720",
+    "havainnot": [
+      {
+        "id": "iss055e073720",
+        "aika": "2018-05-19",
+        "teksti": "Kuvassa näkyy Sydneyn lentokenttä kahdella kiitoradallaan Botany Bayn rannalla. Lentokentän ympärillä erottuvat sataman konttiterminaalit ja tiheä ruudukkomainen kaupunkirakenne, joka jatkuu rannikkoa pitkin koilliseen. Kuva otettu päivänvalossa ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 55",
+        "kuvaaja": "Andrew Feustel",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss055e073720/iss055e073720~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss055e073720/iss055e073720~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss055e073720"
+      }
+    ]
+  },
+  {
+    "tunnus": "rio",
+    "nimi": "Rio de Janeiro",
+    "seutu": "Brasilia",
+    "selite": "Brasilian rantakaupunki Guanabaran lahden rannalla, yhdistettynä Niteróihin pitkällä sillalla.",
+    "lat": -22.911,
+    "lon": -43.206,
+    "oletus": "iss070e108427",
+    "havainnot": [
+      {
+        "id": "iss070e108427",
+        "aika": "2024-03-05",
+        "teksti": "Kuvan keskellä avautuu Guanabaran lahti, jonka länsirannalla on Rio de Janeiro ja itärannalla Niterói. Lahden poikki kulkee noin 13 kilometrin pituinen Rio-Niterói-silta, joka yhdistää kaupungit. Kuva otettu päivänvalossa ISS:ltä Atlantin rannikon yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e108427/iss070e108427~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e108427/iss070e108427~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e108427"
+      }
+    ]
+  },
+  {
+    "tunnus": "saopaulo",
+    "nimi": "São Paulo",
+    "seutu": "Brasilia",
+    "selite": "Etelä-Amerikan suurin kaupunki ja Brasilian talouden veturi, levittäytynyt laajana valomerenä.",
+    "lat": -23.55,
+    "lon": -46.634,
+    "oletus": "iss073e0982063",
+    "havainnot": [
+      {
+        "id": "iss073e0982063",
+        "aika": "2025-09-21",
+        "teksti": "São Paulo levittäytyy kuvassa laajana valomerenä yöllä otetussa kuvassa. Kaupungin valot ovat siirtyneet energiatehokkaisiin valkoisiin LED-lamppuihin, jotka näkyvät kuvassa vanhoja oransseja natriumlamppuja kirkkaampina. São Paulon metropolialueella asuu noin 22 miljoonaa ihmistä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0982063/iss073e0982063~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0982063/iss073e0982063~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0982063"
+      }
+    ]
+  },
+  {
+    "tunnus": "losangeles",
+    "nimi": "Los Angeles",
+    "seutu": "Yhdysvallat",
+    "selite": "Yhdysvaltain Tyynenmeren rannikon suurkaupunki, jonka satama on maan vilkkain konttisatama.",
+    "lat": 34.05,
+    "lon": -118.25,
+    "oletus": "iss073e0513936",
+    "havainnot": [
+      {
+        "id": "iss073e0513936",
+        "aika": "2025-08-22",
+        "teksti": "Kuvassa erottuu Los Angelesin rannikkoa ja tiheää ruudukkomaista kaupunkirakennetta aina Long Beachin satama-alueelle ja Terminal Islandille asti oikeassa alakulmassa. Vasemmalla rannikolla näkyy myös lentokenttä- ja satamarakenteita. Kuva otettu päivänvalossa ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0513936/iss073e0513936~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0513936/iss073e0513936~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0513936"
+      }
+    ]
+  },
+  {
+    "tunnus": "sanfrancisco",
+    "nimi": "San Francisco",
+    "seutu": "Yhdysvallat",
+    "selite": "Kalifornian lahtikaupunki, joka tunnetaan Golden Gate -sillasta ja lähellä syntyneestä Piilaaksosta.",
+    "lat": 37.779,
+    "lon": -122.419,
+    "oletus": "iss073e0285002",
+    "havainnot": [
+      {
+        "id": "iss073e0285002",
+        "aika": "2025-07-04",
+        "teksti": "Kuvassa San Franciscon lahti erottuu pimeänä alueena, jonka ympärillä valot piirtävät kaupungin ja sen esikaupunkien, kuten San Josen ja Oaklandin, ääriviivat näkyviin. Lahden yli kulkevat siltayhteydet erottuvat valojuovina veden yllä. Kuva otettu keskiyön aikaan ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0285002/iss073e0285002~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0285002/iss073e0285002~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0285002"
+      }
+    ]
+  },
+  {
+    "tunnus": "chicago",
+    "nimi": "Chicago",
+    "seutu": "Yhdysvallat",
+    "selite": "Yhdysvaltain Keskilännen suurkaupunki Michiganjärven rannalla, pilvenpiirtäjien syntypaikka.",
+    "lat": 41.882,
+    "lon": -87.628,
+    "oletus": "iss073e0080182",
+    "havainnot": [
+      {
+        "id": "iss073e0080182",
+        "aika": "2025-05-15",
+        "teksti": "Chicago erottuu kuvassa kirkkaana valoruudukkona Michiganjärven eteläkärjessä, ja järven pimeä pinta rajaa kaupungin selvästi idässä. Kaupungin ydin pistää esiin ympäröivästä esikaupunkialueesta kirkkaimpana valopilkkuna. Kuva otettu yöllä ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0080182/iss073e0080182~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0080182/iss073e0080182~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0080182"
+      }
+    ]
+  },
+  {
+    "tunnus": "mexico",
+    "nimi": "Mexico City",
+    "seutu": "Meksiko",
+    "selite": "Meksikon pääkaupunki entisen järven pohjalla korkealla vuoristolaaksossa, joka vaipuu vuosi vuodelta.",
+    "lat": 19.411,
+    "lon": -99.131,
+    "oletus": "iss073e0075943",
+    "havainnot": [
+      {
+        "id": "iss073e0075943",
+        "aika": "2025-05-16",
+        "teksti": "Mexico City loistaa yöllä kirkkaana Meksikon laakson pohjalla. Kaupungin valot täyttävät koko altaan, ja niitä reunustavat tummat, valottomat alueet: Texcocon ja Tláhuac-Xicon luonnonsuojelualueet sekä Ajuscon kansallispuiston vuoret. Kuva otettiin Kansainväliseltä avaruusasemalta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0075943/iss073e0075943~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0075943/iss073e0075943~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0075943"
+      }
+    ]
+  },
+  {
+    "tunnus": "kapkaupunki",
+    "nimi": "Kapkaupunki",
+    "seutu": "Etelä-Afrikka",
+    "selite": "Etelä-Afrikan lainsäädäntöpääkaupunki mantereen lounaiskärjessä, Kapniemen vuorten juurella.",
+    "lat": -33.925,
+    "lon": 18.425,
+    "oletus": "iss064e038871",
+    "havainnot": [
+      {
+        "id": "iss064e038871",
+        "aika": "2021-02-28",
+        "teksti": "Kapkaupunki ja sen ympäröivä rannikko näkyvät päivänvalossa Etelä-Afrikan kärjessä, auringon kimmellyksen loistaessa Atlantin pinnalla. Kaupungin katuverkko erottuu vaaleana, tiiviisti rakennettuna alueena rannikon tuntumassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1364
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e038871/iss064e038871~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e038871/iss064e038871~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e038871"
+      }
+    ]
+  },
+  {
+    "tunnus": "mumbai",
+    "nimi": "Mumbai",
+    "seutu": "Intia",
+    "selite": "Intian talouselämän keskus, rakennettu alun perin seitsemälle erilliselle saarelle Arabianmeren rannalla.",
+    "lat": 18.975,
+    "lon": 72.826,
+    "oletus": "iss014e08744",
+    "havainnot": [
+      {
+        "id": "iss014e08744",
+        "aika": "2006-11-28",
+        "teksti": "Mumbain satama ja kaupunkialue täyttävät kapean Salsette-niemekkeen Arabianmeren rannalla. Rakennettu alue jatkuu yhtenäisenä noin 50 kilometrin matkan pohjoisesta etelään, ja kuvassa erottuvat myös rannikon pienet niemet ja lahdet.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss014e08744/iss014e08744~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss014e08744/iss014e08744~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e08744"
+      }
+    ]
+  },
+  {
+    "tunnus": "delhi",
+    "nimi": "Delhi",
+    "seutu": "Intia",
+    "selite": "Intian pääkaupunkialue, maailman toiseksi suurin metropolialue Himalajan eteläpuolella.",
+    "lat": 28.61,
+    "lon": 77.23,
+    "oletus": "iss072e757452",
+    "havainnot": [
+      {
+        "id": "iss072e757452",
+        "aika": "2025-03-06",
+        "teksti": "Delhin valot loistavat kirkkaina lähellä puolta yötä paikallista aikaa, Himalajan reunan tuntumassa. Kaupungin tiivis valoverkko peittää laajan alueen tasaisella tasangolla, ja valojen tiheys vaihtelee vanhan ja uuden kaupunginosan välillä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": "Don Pettit",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e757452/iss072e757452~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e757452/iss072e757452~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e757452"
+      }
+    ]
+  },
+  {
+    "tunnus": "bangkok",
+    "nimi": "Bangkok",
+    "seutu": "Thaimaa",
+    "selite": "Thaimaan pääkaupunki, jonka Chao Phraya -joki jakaa kahtia matkalla Siaminlahteen.",
+    "lat": 13.75,
+    "lon": 100.517,
+    "oletus": "iss072e757257",
+    "havainnot": [
+      {
+        "id": "iss072e757257",
+        "aika": "2025-03-05",
+        "teksti": "Bangkok jakautuu selvästi kahtia Chao Phraya -joen ympärille, joka erottuu kuvassa mustana nauhana kaupungin valojen keskellä. Kuvan keskioikealla erottuu tumma, vähemmän valaistu Bang Krachaon viheralue joen mutkassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": "Don Pettit",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e757257/iss072e757257~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e757257/iss072e757257~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e757257"
+      }
+    ]
+  },
+  {
+    "tunnus": "jakarta",
+    "nimi": "Jakarta",
+    "seutu": "Indonesia",
+    "selite": "Indonesian pääkaupunki, joka vajoaa nopeasti ja jota siksi korvaamaan rakennetaan uutta pääkaupunkia.",
+    "lat": -6.21,
+    "lon": 106.845,
+    "oletus": "iss030e015896",
+    "havainnot": [
+      {
+        "id": "iss030e015896",
+        "aika": "2011-12-25",
+        "teksti": "Kuva on otettu infrapunakameralla, joten Jakartan kaupunkialue hohtaa oranssinpunaisena rannikolla. Tiivis, verkkomainen kaupunkirakenne erottuu selvästi ympäröivästä pimeästä merestä ja harvaan asutusta maaseudusta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e015896/iss030e015896~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e015896/iss030e015896~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e015896"
+      }
+    ]
+  },
+  {
+    "tunnus": "shanghai",
+    "nimi": "Shanghai",
+    "seutu": "Kiina",
+    "selite": "Kiinan väkirikkain kaupunki Jangtse-joen suulla, jonka rannikko värjäytyy joen liejusta.",
+    "lat": 31.224,
+    "lon": 121.476,
+    "oletus": "iss073e0513927",
+    "havainnot": [
+      {
+        "id": "iss073e0513927",
+        "aika": "2025-08-22",
+        "teksti": "Kuva näyttää Shanghain kaupunkialueen päiväsaikaan Jangtse-joen suulla Itä-Kiinan meren rannalla. Ylälaidassa erottuu Pudongin kansainvälisen lentokentän kiitoradat, ja kuvan oikealla puolella näkyy pyöreä Dishui-järvi, Kiinan suurin tekoallas. Mereen laskeva sedimenttipitoinen vesi näkyy vaaleanruskeana rannikon tuntumassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0513927/iss073e0513927~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0513927/iss073e0513927~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0513927"
+      }
+    ]
+  },
+  {
+    "tunnus": "wien",
+    "nimi": "Wien",
+    "seutu": "Itävalta",
+    "selite": "Itävallan pääkaupunki Tonavan rannalla, jonka tiivis keskusta erottuu selvästi yöllä avaruudesta.",
+    "lat": 48.208,
+    "lon": 16.373,
+    "oletus": "iss064e005231",
+    "havainnot": [
+      {
+        "id": "iss064e005231",
+        "aika": "2020-11-21",
+        "teksti": "Kuva näyttää Wienin yöllä avaruusasemalta kuvattuna, katuvalot piirtävät kaupungin tiheän verkkomaisen rakenteen selvästi näkyviin. Tonava-joki erottuu kuvan keskellä pimeänä, valottomana nauhana, joka halkoo valaistua kaupunkialuetta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": "VIV",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e005231/iss064e005231~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e005231/iss064e005231~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e005231"
+      }
+    ]
+  },
+  {
+    "tunnus": "soul",
+    "nimi": "Soul",
+    "seutu": "Etelä-Korea",
+    "selite": "Etelä-Korean pääkaupunki, jonka Han-joki jakaa kaupungin kahtia niemimaan keskiosassa.",
+    "lat": 37.567,
+    "lon": 126.978,
+    "oletus": "iss072e757318",
+    "havainnot": [
+      {
+        "id": "iss072e757318",
+        "aika": "2025-03-05",
+        "teksti": "Kuva näyttää Soulin yöllä, kaupungin tiheä valoverkko peittää laajan alueen Korean niemimaan keskiosassa. Han-joki kulkee kuvan poikki pimeänä nauhana ja jakaa kaupungin selvästi kahteen osaan. Kuva paljastaa myös kaupungin ympärille leviävän esikaupunkialueen tiiviin tieverkoston.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": "Don Pettit",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e757318/iss072e757318~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e757318/iss072e757318~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e757318"
       }
     ]
   }
