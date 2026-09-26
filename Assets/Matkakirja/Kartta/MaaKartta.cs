@@ -307,13 +307,13 @@ namespace Matkakirja
         public void MaaPerussavy(Savy savy) { perus = savy; PaivitaPaletti(); }
 
         /// <summary>
-        /// Löydös 157: valitun maakunnan täytön sRGB-peitto (paletin oma väri; tavallinen 0,34). Komento
+        /// Löydös 157: valitun maakunnan täytön sRGB-peitto (paletin oma väri, oletus 0,45 Fable 26.9.; tavallinen 0,34). Komento
         /// "maakunta valinta &lt;peitto&gt;".
         /// </summary>
-        public static double ValinnanPeitto = 0.6;
+        public static double ValinnanPeitto = 0.45;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaValinta() => ValinnanPeitto = 0.6;
+        static void NollaaValinta() => ValinnanPeitto = 0.45;
 
         /// <summary>Paletti uudelleen kaikille kerroksille (komento: valinnan peitto vaihtui).</summary>
         public static void PaivitaKaikki()

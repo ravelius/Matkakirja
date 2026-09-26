@@ -953,7 +953,7 @@ namespace Matkakirja
                     }
                     if (o[1] == "valinta" && o.Length > 2)
                     {
-                        // maakunta valinta <peitto>: valitun maakunnan täytön peitto (löydös 157, oletus 0,6; tavallinen 0,34)
+                        // maakunta valinta <peitto>: valitun maakunnan täytön peitto (löydös 157, oletus 0,45; tavallinen 0,34)
                         MaaKartta.ValinnanPeitto = double.Parse(o[2], CultureInfo.InvariantCulture);
                         MaaKartta.PaivitaKaikki();
                         Debug.Log($"MATKAKIRJA maakunnat: valinnan peitto {MaaKartta.ValinnanPeitto:0.00}");
