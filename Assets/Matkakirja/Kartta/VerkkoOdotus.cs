@@ -154,11 +154,44 @@ namespace Matkakirja
             catch (Exception) { }
         }
 
+        /// <summary>
+        /// Hakurivit osoitteineen (kehittäjätila tai komento `verkko haut paalle`): persistentDataPath/verkko-haut.jsonl
+        /// {t, vaihe, lahde, url, ms, kt} — mitä käynnistyksessä haetaan verkosta (ESILATAUSPOLITIIKKA kohta 1 -analyysi).
+        /// </summary>
+        public static bool HautTiedostoon { get; private set; }
+        static string hautTiedosto;
+
+        /// <summary>Kytkee hakurivit (pääsäikeestä: polku luetaan täällä, Laattapalvelin kirjaa taustasäikeestä).</summary>
+        public static void KirjaaHaut(bool paalla)
+        {
+            hautTiedosto = Path.Combine(Application.persistentDataPath, "verkko-haut.jsonl");
+            HautTiedostoon = paalla;
+        }
+
+        /// <summary>Kylmän käynnistyksen mittaus: ympäristömuuttuja MATKAKIRJA_HAUT=1 (simctl: SIMCTL_CHILD_MATKAKIRJA_HAUT=1).</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        static void HautYmparistosta()
+        {
+            if (Environment.GetEnvironmentVariable("MATKAKIRJA_HAUT") == "1") KirjaaHaut(true);
+        }
+
         /// <summary>Oikea verkkohaku valmistui (lahde: sisalto, peli, kuva, puhe, laatta, linssi).</summary>
-        public static void Haku(string lahde, double ms, long tavut)
+        public static void Haku(string lahde, double ms, long tavut, string url = null)
         {
             string vaihe;
             lock (lukko) vaihe = Paallimmainen() ?? vaiheKopio;
+            if (HautTiedostoon && url != null)
+            {
+                int q = url.IndexOf('?');
+                string rivi = "{\"t\":" + Nyt.ToString("0.00", CultureInfo.InvariantCulture) + ",\"vaihe\":\"" + vaihe + "\",\"lahde\":\"" + lahde
+                    + "\",\"url\":\"" + Puhdas(q > 0 ? url.Substring(0, q) : url) + "\",\"ms\":" + Math.Round(ms).ToString(CultureInfo.InvariantCulture)
+                    + ",\"kt\":" + (tavut / 1024) + "}";
+                try
+                {
+                    if (hautTiedosto != null) lock (lukko) File.AppendAllText(hautTiedosto, rivi + "\n");
+                }
+                catch (Exception) { }
+            }
             lock (lukko)
             {
                 hakuja++;

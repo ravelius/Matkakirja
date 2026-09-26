@@ -335,6 +335,7 @@ namespace Matkakirja.Natiivi
                     // Verkko-odotusmittari (Kartta/VerkkoOdotus.cs): yhteenveto → verkko-yhteenveto.json; nollaa = summat pois.
                     if (A(1) == "nollaa") { VerkkoOdotus.NollaaSummat(); return null; }
                     // Vartija laitteelle: verkko raja [vaihe] → "RAJA saapuminen 0 ms verkko-odotusta: PASS|FAIL".
+                    if (A(1) == "haut") { VerkkoOdotus.KirjaaHaut(A(2) != "pois"); return "=hakurivit " + (VerkkoOdotus.HautTiedostoon ? "päällä (verkko-haut.jsonl)" : "pois"); }
                     if (A(1) == "raja") { var r = VerkkoOdotus.Raja(A(2) ?? "saapuminen"); Debug.Log("MATKAKIRJA " + r); return "=" + r; }
                     return "=" + VerkkoOdotus.Yhteenveto();
                 case "odota-tila":
