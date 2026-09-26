@@ -7591,3 +7591,7 @@ Julkaisija: #3349 v2283, #3350 v2284, #3351 v2286 mainissa → Euroopan kaikki m
 ## LINSSISEPPA (OPUS, MAX) NOLLATTU JA KAYNNISTETTY (LUOVUTUS -H 131296ddb) (26.9.2026 klo 23.14)
 
 Luovutus -h: elavat elementit linssiseppa/hoyrylaiva b59c99b0 merge-pyynnossa; erikoismallit mallinseppa/pohja 9bb99488 (MSM 1 324, Stonehenge 858, Colosseum 1 420 kolmiota, liikeydin 344/344) odottavat Natiivisepan kaannosta + yhdistelmaa ylhaalta-175:n kanssa; esikatselutyokalut proto-3d/tyokalut/. Aloitusviesti lahetetty 23.1x: 3 mallia → merikokeilu → lento v3 -speksi.
+
+## KAUPUNKILEHTI-MALLI, OMISTAJAN TARKENNUS: NOSTOT-LIUSKA POIS, LEHDEN ETUSIVULLE OSIOLINKIT (26.9.2026 klo 23.16)
+
+Omistaja 23.1x: kollaasimallissa nostot-liuska (kaupungin nostojen liuska) otetaan POIS. Kaupunkilehden etusivulle alas selkeat linkit lehden osioihin, ja jokaisen linkin alla osion yksittaiset jutunotsikot + yksi kuva per osio (historia, luonto, jne.). Fable: valitetty Pelikoodarille web-malliin (kollaasi + lehden etusivun osiohakemisto) — kuvapari omistajan korttiin; Natiivi-UI seuraa webia; 70 tarinakohdetta (178) paatyvat siis kaupunkilehden osioihin liuskan sijaan.
