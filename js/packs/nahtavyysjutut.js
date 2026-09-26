@@ -6595,6 +6595,16 @@ export const NAHTAVYYSJUTUT = {
         + 'maksettiin — sitten koko komeus purjehti takaisin satamaan lasti '
         + 'täynnä. Kenelle kuuluu aarre, jonka omistajille on jo korvattu sen '
         + 'menetys? Dublin perusti kysymyksen ratkomiseen kokonaisen seuran.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-ouzel-galleyn-mysteeri-photo-v1.jpg',
+          lyhyt: 'Kolmimastoinen kauppagalleija palaa hämärässä satamaan, laituriväki katselee hiljaa.',
+          selite: 'Ouzel palaa Liffeytä ylös hämärässä lasti täynnä, ja laiturille '
+            + 'kerääntynyt väki katselee laivaa, jonka he olivat jo julistaneet '
+            + 'kadonneeksi vuosia sitten.',
+          lahde: 'Matkakirjan havainnekuva.',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
