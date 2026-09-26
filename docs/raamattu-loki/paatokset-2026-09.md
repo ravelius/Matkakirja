@@ -7603,3 +7603,7 @@ Omistaja 23.1x: ensin vedokset uudesta kaupungin avauskortista (kolme osaa paall
 ## OMISTAJA: RADIO POIS KAUPUNKILEHDESTA (ON KARTUSSISSA) (26.9.2026 klo 23.17)
 
 Omistaja 23.2x: kaupunkilehden Radio-osio poistetaan, koska radio on siirretty kartussiin. Kuuluu kollaasi/lehtiuudistukseen: lehdesta pois Nahtavyydet, Turisti-info ja Radio. Pelikoodari huomioi mockissa ja toteutuksessa; Natiivi-UI seuraa.
+
+## LOYDOS 179: TAPAA HENKILO -NAPPI POIS NATIIVIN LEHDESTA (26.9.2026 klo 23.19)
+
+Omistaja 23.2x: natiivin kaupunkilehdessa on virheellisesti Tapaa henkilo X -nappi (LehtiTila.TehtavaNappi), vanhaa logiikkaa jota webissa ei ole; webissa henkilo tavataan fokusvirran kautta (oppitunnin jatkonappi → kohtaaminen vihreasta fokuspisteesta). Natiivi-UI poistaa napin lehdesta ja siirtaa kohtaamisen fokusvirtaan webin mukaan; Pelikoodari vahvistaa reitin. Kuuluu lehtiuudistukseen mutta tehdaan heti (1.0.27).
