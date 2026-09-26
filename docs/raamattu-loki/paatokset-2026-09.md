@@ -7399,3 +7399,7 @@ Laitetestaaja: 0 poikkeusta; karttavaisto PASS, 172 PASS (kone matala, vaakataso
 ## P0 LOYDOS 176 PALLO RIKKI LOITONNUKSESSA; P1 177 UUSI PELI EI NOLLAA (26.9.2026 klo 21.05)
 
 Omistaja 1.0.25 (21.0x, kuva loydos176): Kreikka loitonnettuna Euroopaan — laatat puuttuvat laajalta alueelta, ladatut arkkeina, irrallinen laatta; 163:n toistuma loitonnuksessa, vartija ei kata. Kreikan lippu Mustanmeren rannalla (GRC-ankkuri tarkistettava). Natiiviseppa toistaa TF-buildilla iPad Pro 13 + Cesium-loki, juurisyy ennen 1.0.26:n TF:aa. 177: Uusi peli ei tyhjenna kaikkia tietoja eika ala oikein → Pelikoodari nollauslista + PeliOhjain, Natiivi-UI Uusi peli -polku, Laitetestaaja reseptiin (uusi peli kesken pelin; loitonnus Kreikasta Eurooppaan ilman aukkoja).
+
+## 170 JUURISYY: DELTA ASENTUU MUTTA KUVAT PAIVITTYVAT VASTA UUDELLEENKAYNNISTYKSESSA (26.9.2026 klo 21.06)
+
+Omistaja vahvisti 21.0x: taysi uudelleenkaynnistys → Kreikan maakuntakuvat nakyvat (Attika/Akropolis, Jebulon CC0). Juurisyy: taustapaivityksen delta asentuu, mutta kaynnissa oleva sovellus ei lataa uutta luonnehdinta-/kuvadataa ennen uudelleenkaynnistysta. Korjaus 1.0.26: deltan jalkeen sisalto-vaihtui-tapahtuma (Siirtoseppa) → maakuntakortin data ja kuvavalimuisti uudelleen (Natiivi-UI). Siirtosepan paivityspolkutesti jatkuu todentamaan.
