@@ -837,12 +837,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    Barbakaani: 'krakova-barbakaani',
-    'Collegium Maius': 'krakova-collegium-maius',
-    Mariankirkko: 'krakova-mariankirkko',
-    'Wawelin linna': 'krakova-wawelin-linna',
-    'Wawelin lohikäärme': 'krakova-wawelin-lohikaarme',
-    Kazimierz: 'krakova-kazimierz',
+    Barbakaani: 'krakova-barbakaani-vari2',
+    'Collegium Maius': 'krakova-collegium-maius-vari2',
+    Mariankirkko: 'krakova-mariankirkko-vari2',
+    'Wawelin linna': 'krakova-wawelin-linna-vari2',
+    'Wawelin lohikäärme': 'krakova-wawelin-lohikaarme-vari2',
+    Kazimierz: 'krakova-kazimierz-vari2',
   },
   damaskos: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -892,12 +892,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Luxorin temppeli': 'luxor-luxorin-temppeli',
-    'Luxorin museo': 'luxor-luxorin-museo',
-    Sfinksikuja: 'luxor-sfinksikuja',
-    'Mutin temppeli': 'luxor-mutin-temppeli',
-    'Khonsun temppeli': 'luxor-khonsun-temppeli',
-    'Karnakin suuri pylvässali': 'luxor-karnakin-suuri-pylvassali',
+    'Luxorin temppeli': 'luxor-luxorin-temppeli-vari2',
+    'Luxorin museo': 'luxor-luxorin-museo-vari2',
+    Sfinksikuja: 'luxor-sfinksikuja-vari2',
+    'Mutin temppeli': 'luxor-mutin-temppeli-vari2',
+    'Khonsun temppeli': 'luxor-khonsun-temppeli-vari2',
+    'Karnakin suuri pylvässali': 'luxor-karnakin-suuri-pylvassali-vari2',
   },
   halab: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -914,23 +914,23 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Masqatin portti': 'masqat-masqatin-portti',
-    'Al-Miranin linnake': 'masqat-al-miranin-linnake',
-    'Al-Jalalin linnake': 'masqat-al-jalalin-linnake',
-    'Al Alamin palatsi': 'masqat-al-alamin-palatsi',
-    'Bait Al Zubair': 'masqat-bait-al-zubair',
-    'Motishwar Mandir': 'masqat-motishwar-mandir',
+    'Masqatin portti': 'masqat-masqatin-portti-vari2',
+    'Al-Miranin linnake': 'masqat-al-miranin-linnake-vari2',
+    'Al-Jalalin linnake': 'masqat-al-jalalin-linnake-vari2',
+    'Al Alamin palatsi': 'masqat-al-alamin-palatsi-vari2',
+    'Bait Al Zubair': 'masqat-bait-al-zubair-vari2',
+    'Motishwar Mandir': 'masqat-motishwar-mandir-vari2',
   },
   kuwait: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Kuwait-tornit': 'kuwait-kuwait-tornit',
-    'Al Hamra -torni': 'kuwait-al-hamra-torni',
-    'Seifin palatsi': 'kuwait-seifin-palatsi',
-    'Kuwaitin suurmoskeija': 'kuwait-kuwaitin-suurmoskeija',
-    'Mubarakiyan tori': 'kuwait-mubarakiyan-tori',
-    'Sadu House': 'kuwait-sadu-house',
+    'Kuwait-tornit': 'kuwait-kuwait-tornit-vari2',
+    'Al Hamra -torni': 'kuwait-al-hamra-torni-vari2',
+    'Seifin palatsi': 'kuwait-seifin-palatsi-vari2',
+    'Kuwaitin suurmoskeija': 'kuwait-kuwaitin-suurmoskeija-vari2',
+    'Mubarakiyan tori': 'kuwait-mubarakiyan-tori-vari2',
+    'Sadu House': 'kuwait-sadu-house-vari2',
   },
   nikosia: {
     'Selimiyen moskeija': 'nikosia-selimiyen-moskeija-vari2',
@@ -971,12 +971,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    MuCEM: 'marseille-mucem',
-    'Marseillen katedraali': 'marseille-marseillen-katedraali',
-    'Saint-Victorin kirkko': 'marseille-saint-victorin-kirkko',
-    Vanhasatama: 'marseille-vanhasatama',
-    'Notre-Dame de la Garde': 'marseille-notre-dame-de-la-garde',
-    'Saint-Charlesin asema': 'marseille-saint-charlesin-asema',
+    MuCEM: 'marseille-mucem-vari2',
+    'Marseillen katedraali': 'marseille-marseillen-katedraali-vari2',
+    'Saint-Victorin kirkko': 'marseille-saint-victorin-kirkko-vari2',
+    Vanhasatama: 'marseille-vanhasatama-vari2',
+    'Notre-Dame de la Garde': 'marseille-notre-dame-de-la-garde-vari2',
+    'Saint-Charlesin asema': 'marseille-saint-charlesin-asema-vari2',
   },
   venetsia: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1080,24 +1080,24 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Qiblatayn-moskeija': 'medina-qiblatayn-moskeija',
-    'Seitsemän moskeijaa': 'medina-seitseman-moskeijaa',
-    'Profeetan moskeija': 'medina-profeetan-moskeija',
-    'Al-Baqin hautausmaa': 'medina-al-baqin-hautausmaa',
-    'Al-Ghamama-moskeija': 'medina-al-ghamama-moskeija',
-    'Hidžaz-radan asema': 'medina-hidzaz-radan-asema',
-    'Quba-moskeija': 'medina-quba-moskeija',
+    'Qiblatayn-moskeija': 'medina-qiblatayn-moskeija-vari2',
+    'Seitsemän moskeijaa': 'medina-seitseman-moskeijaa-vari2',
+    'Profeetan moskeija': 'medina-profeetan-moskeija-vari2',
+    'Al-Baqin hautausmaa': 'medina-al-baqin-hautausmaa-vari2',
+    'Al-Ghamama-moskeija': 'medina-al-ghamama-moskeija-vari2',
+    'Hidžaz-radan asema': 'medina-hidzaz-radan-asema-vari2',
+    'Quba-moskeija': 'medina-quba-moskeija-vari2',
   },
   mekka: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Jabal al-Nour': 'mekka-jabal-al-nour',
-    'Jannat al-Mu\'alla': 'mekka-jannat-al-mu-alla',
-    'Jinnien moskeija': 'mekka-jinnien-moskeija',
-    'Mekan kirjasto': 'mekka-mekan-kirjasto',
-    'Suuri moskeija': 'mekka-suuri-moskeija',
-    Kellotorni: 'mekka-kellotorni',
+    'Jabal al-Nour': 'mekka-jabal-al-nour-vari2',
+    'Jannat al-Mu\'alla': 'mekka-jannat-al-mu-alla-vari2',
+    'Jinnien moskeija': 'mekka-jinnien-moskeija-vari2',
+    'Mekan kirjasto': 'mekka-mekan-kirjasto-vari2',
+    'Suuri moskeija': 'mekka-suuri-moskeija-vari2',
+    Kellotorni: 'mekka-kellotorni-vari2',
   },
   sana: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1135,13 +1135,13 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Kuyunjikin kumpu': 'mosul-kuyunjikin-kumpu',
-    'Bash Tapian linna': 'mosul-bash-tapian-linna',
-    'Qara Saray': 'mosul-qara-saray',
-    'Nabi Yunusin kumpu': 'mosul-nabi-yunusin-kumpu',
-    'Al-Masfin moskeija': 'mosul-al-masfin-moskeija',
-    'Al-Nabi Jirjisin moskeija': 'mosul-al-nabi-jirjisin-moskeija',
-    'Al-Nurin moskeija': 'mosul-al-nurin-moskeija',
+    'Kuyunjikin kumpu': 'mosul-kuyunjikin-kumpu-vari2',
+    'Bash Tapian linna': 'mosul-bash-tapian-linna-vari2',
+    'Qara Saray': 'mosul-qara-saray-vari2',
+    'Nabi Yunusin kumpu': 'mosul-nabi-yunusin-kumpu-vari2',
+    'Al-Masfin moskeija': 'mosul-al-masfin-moskeija-vari2',
+    'Al-Nabi Jirjisin moskeija': 'mosul-al-nabi-jirjisin-moskeija-vari2',
+    'Al-Nurin moskeija': 'mosul-al-nurin-moskeija-vari2',
   },
   bangkok: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1189,13 +1189,13 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Kaupungin sauna': 'magadan-kaupungin-sauna',
-    'Severovostokzoloton talo': 'magadan-severovostokzoloton-talo',
-    'Leninin valtakatu 18': 'magadan-leninin-valtakatu-18',
-    'Kinoteatteri Gornjak': 'magadan-kinoteatteri-gornjak',
-    Nagajevanlahti: 'magadan-nagajevanlahti',
-    Urheilupalatsi: 'magadan-urheilupalatsi',
-    'Pushkinin kirjasto': 'magadan-pushkinin-kirjasto',
+    'Kaupungin sauna': 'magadan-kaupungin-sauna-vari2',
+    'Severovostokzoloton talo': 'magadan-severovostokzoloton-talo-vari2',
+    'Leninin valtakatu 18': 'magadan-leninin-valtakatu-18-vari2',
+    'Kinoteatteri Gornjak': 'magadan-kinoteatteri-gornjak-vari2',
+    Nagajevanlahti: 'magadan-nagajevanlahti-vari2',
+    Urheilupalatsi: 'magadan-urheilupalatsi-vari2',
+    'Pushkinin kirjasto': 'magadan-pushkinin-kirjasto-vari2',
   },
   delhi: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1412,15 +1412,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Mandalay-kukkula': 'mandalay-mandalay-kukkula',
-    'Kuthodaw-pagodi': 'mandalay-kuthodaw-pagodi',
-    'Kyauktawgyi-pagodi': 'mandalay-kyauktawgyi-pagodi',
-    'Sandamuni-pagodi': 'mandalay-sandamuni-pagodi',
-    'Shwenandaw-luostari': 'mandalay-shwenandaw-luostari',
-    'Mandalayn palatsi': 'mandalay-mandalayn-palatsi',
-    'Zegyo-tori': 'mandalay-zegyo-tori',
-    'Setkyathiha-pagodi': 'mandalay-setkyathiha-pagodi',
-    'Mahamuni-temppeli': 'mandalay-mahamuni-temppeli',
+    'Mandalay-kukkula': 'mandalay-mandalay-kukkula-vari2',
+    'Kuthodaw-pagodi': 'mandalay-kuthodaw-pagodi-vari2',
+    'Kyauktawgyi-pagodi': 'mandalay-kyauktawgyi-pagodi-vari2',
+    'Sandamuni-pagodi': 'mandalay-sandamuni-pagodi-vari2',
+    'Shwenandaw-luostari': 'mandalay-shwenandaw-luostari-vari2',
+    'Mandalayn palatsi': 'mandalay-mandalayn-palatsi-vari2',
+    'Zegyo-tori': 'mandalay-zegyo-tori-vari2',
+    'Setkyathiha-pagodi': 'mandalay-setkyathiha-pagodi-vari2',
+    'Mahamuni-temppeli': 'mandalay-mahamuni-temppeli-vari2',
   },
   taipei: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1470,16 +1470,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Binondon kirkko': 'manila-binondon-kirkko',
-    'Quiapon kirkko': 'manila-quiapon-kirkko',
-    'Escolta-katu': 'manila-escolta-katu',
-    'Jones-silta': 'manila-jones-silta',
-    'Fort Santiago': 'manila-fort-santiago',
-    'Manilan katedraali': 'manila-manilan-katedraali',
-    'San Agustinin kirkko': 'manila-san-agustinin-kirkko',
-    'Kansallinen taidemuseo': 'manila-kansallinen-taidemuseo',
-    'Baluarte de San Diego': 'manila-baluarte-de-san-diego',
-    'Rizal-puisto': 'manila-rizal-puisto',
+    'Binondon kirkko': 'manila-binondon-kirkko-vari2',
+    'Quiapon kirkko': 'manila-quiapon-kirkko-vari2',
+    'Escolta-katu': 'manila-escolta-katu-vari2',
+    'Jones-silta': 'manila-jones-silta-vari2',
+    'Fort Santiago': 'manila-fort-santiago-vari2',
+    'Manilan katedraali': 'manila-manilan-katedraali-vari2',
+    'San Agustinin kirkko': 'manila-san-agustinin-kirkko-vari2',
+    'Kansallinen taidemuseo': 'manila-kansallinen-taidemuseo-vari2',
+    'Baluarte de San Diego': 'manila-baluarte-de-san-diego-vari2',
+    'Rizal-puisto': 'manila-rizal-puisto-vari2',
   },
   kashgar: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1497,13 +1497,13 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Ramoche-temppeli': 'lhasa-ramoche-temppeli',
-    'Potala-palatsi': 'lhasa-potala-palatsi',
-    Norbulingka: 'lhasa-norbulingka',
-    'Jokhang-temppeli': 'lhasa-jokhang-temppeli',
-    Chagpori: 'lhasa-chagpori',
-    'Tiibetin museo': 'lhasa-tiibetin-museo',
-    'Lhasan suuri moskeija': 'lhasa-lhasan-suuri-moskeija',
+    'Ramoche-temppeli': 'lhasa-ramoche-temppeli-vari2',
+    'Potala-palatsi': 'lhasa-potala-palatsi-vari2',
+    Norbulingka: 'lhasa-norbulingka-vari2',
+    'Jokhang-temppeli': 'lhasa-jokhang-temppeli-vari2',
+    Chagpori: 'lhasa-chagpori-vari2',
+    'Tiibetin museo': 'lhasa-tiibetin-museo-vari2',
+    'Lhasan suuri moskeija': 'lhasa-lhasan-suuri-moskeija-vari2',
   },
   kolkata: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
