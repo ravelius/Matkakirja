@@ -242,3 +242,19 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
 - **Seuraavaksi:** omistajan kuittaus myllyistä → Kööpenhaminan karuselli (kokeilu 2) → pallo → gondolit (Karttasepän
   polku elavat-polut-2026-09-26b) → Lontoo → köysirata ja Etna. Sen jälkeen ISS (SGP4 + kaukonäkymä ensin, TLE-Actions
   Siirtosepälle).
+
+## Päivitys klo 17.0x
+
+- **Myllyt:** omistaja hyväksyi ne 15.2x, ja ne ovat build 22:ssa.
+- **Karuselli (kokeilu 2)** on build 23:ssa (7533a651, juna 1356e216). Haara linssiseppa/karuselli 7c943071, jonka
+  worktree wt/proto-linssiseppa on vielä olemassa.
+  - ElavatElementit on yleistetty: Aihe (paikka, KokoPt, yksilöt, Runko, Roottori, Lapsi, LastenPaikat, Animoi(roottori,
+    lapset, t)), MalliRakenne (VaippaRaidat) ja MalliVarit.
+  - Näkyvyys vaatii nyt myös ruudun (RuutuVara 12 %), ja se on todennettu build 23:ssa.
+  - Komento `elava elementit|myllyt tila|0|1`.
+  - Kuvapari ja video on lähetetty omistajalle. Omistajan kuittaus odottaa, ja sen jälkeen tulee kokeilu 3: Pariisin
+    kiinnitetty ilmapallo (Tuileries, nousu ja lasku 24 s, kori heiluu 5 s, terrakotta).
+- **ISS-suunnitelma** on hyväksytty. Siihen on lisätty Cupola-ikkuna 420 km:stä, Kuvaputken tilaus (toimitettu ämpäriin
+  karttanostot/20260926/iss-cupola-*) ja Astronautin kameran jatkoideat 1–4.
+- **Siivous:** proto-worktree wt/proto-linssiseppa-elava poistettu, simulaattorit D0D2… ja 903C… tyhjennetty (erase), ja
+  main on pullattu (sallinnat #3329).
