@@ -4,15 +4,24 @@
  * (musiikki- ja äänisuunnitelma 26.9.2026, vaihe 1 ja siitä eteenpäin).
  *
  * Lyria palauttaa raidan aina pidempänä kuin pyydettiin (saapumistunnus
- * 10 s → 100 s) ja noin −10 LUFS:n tasolla. Suunnitelman päätös on, että
- * musiikkitiedostot ovat −33 LUFS:ssä, ja kestot ovat suunnitelman
- * raitalistan mukaiset. Tämä työkalu tekee molemmat samalla kertaa:
+ * 10 s → 100 s). Kestot tulevat suunnitelman raitalistasta.
+ *
+ * TASO −11 LUFS, EI −33 (mitattu 26.9.2026): suunnitelma olettaa, että
+ * musiikkitiedostot ovat −33 LUFS:ssä, mutta kaikki pelin soittamat
+ * raidat ovat noin −11 LUFS:ssä (musa-pohja −10,8, musa-aarre −11,3,
+ * musa-etusivu −11,4, musa-visa-2 −11,5, musa-kaupunki-valimeri −11,5).
+ * Soittoketju (MUSIIKIN_PERUSTASO 0,034 × kertoimet) on viritetty niille.
+ * −33:ssa uusi raita soisi 22 dB muita hiljempaa. Tavoite on siksi
+ * nykyisten raitojen taso, ja suunnitelman aikomus säilyy: kaikki
+ * musiikkitiedostot ovat samalla tasolla, ja soittotaso tulee pelistä.
+ *
+ * Työkalu tekee samalla kertaa:
  *
  *   1. leikkaa raakaversiosta (musa-<nimi>-raaka.mp3) kohdan alku–loppu,
  *   2. häivyttää alun (lyhyt, vain naksahduksen esto) ja lopun
  *      (fraasin pehmeä loppu),
  *   3. mittaa leikatun integroidun äänekkyyden (EBU R128) ja säätää sen
- *      lineaarisella vahvistuksella −33 LUFS:iin. Ei loudnorm-kompressiota:
+ *      lineaarisella vahvistuksella −11 LUFS:iin. Ei loudnorm-kompressiota:
  *      raidan oma dynamiikka säilyy.
  *   4. tarkistaa tuloksen (±0,5 LU) ja kirjoittaa musa-<nimi>-lyria.mp3.
  *
@@ -40,7 +49,9 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const TAVOITE_LUFS = -33;
+const TAVOITE_LUFS = -11;
+// Vahvistus ei saa leikata: huippu enintään −1 dBFS (muuten raita jää hiljemmaksi).
+const HUIPPU_DBFS = -1;
 const SIETO_LU = 0.5;
 const MEDIA = 'https://media.matkakirja.app/audio/';
 const KANSIO = 'assets/audio';
@@ -105,12 +116,12 @@ async function viimeistele(nimi) {
   const leikkaus = `atrim=${r.alku}:${r.loppu},asetpts=PTS-STARTPTS,`
     + `afade=t=in:d=${r.sisaan},afade=t=out:st=${(pituus - r.ulos).toFixed(3)}:d=${r.ulos}`;
   const ennen = lueLufs(mittaa(lahde, leikkaus));
-  const vahvistus = TAVOITE_LUFS - ennen.lufs;
+  const vahvistus = Math.min(TAVOITE_LUFS - ennen.lufs, HUIPPU_DBFS - ennen.huippu);
   const kohde = join(KANSIO, `musa-${nimi}-lyria.mp3`);
   ffmpeg(['-y', '-i', lahde, '-af', `${leikkaus},volume=${vahvistus.toFixed(2)}dB`,
     '-c:a', 'libmp3lame', '-b:a', '192k', '-ar', '44100', kohde]);
   const jalkeen = lueLufs(mittaa(kohde));
-  if (Math.abs(jalkeen.lufs - TAVOITE_LUFS) > SIETO_LU) {
+  if (Math.abs(jalkeen.lufs - TAVOITE_LUFS) > SIETO_LU && jalkeen.huippu < HUIPPU_DBFS - 0.5) {
     throw new Error(`${nimi}: ${jalkeen.lufs} LUFS, tavoite ${TAVOITE_LUFS}`);
   }
   console.log(`${kohde}  ${kesto(kohde).toFixed(1)} s  ${jalkeen.lufs} LUFS  huippu ${jalkeen.huippu} dBFS  (raaka ${ennen.lufs} LUFS, ${vahvistus.toFixed(1)} dB)`);
