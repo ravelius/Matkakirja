@@ -211,3 +211,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - juna/b13 **cbe64f95**: + natiiviseppa/lepo-peliloki 57f3227d (peli-komento `pallo lepo` → peli-loki.txt, Laitetestaajan pyyntö). Linssiseppä: FRA-diagnoosi ratkesi 07.3x (kohde:-tunnus + vanha v141), tuoreella v151 ketju toimii.
 - Siirtosepän PR #3303 (offline.json → pohja 26): pyydetty julkaisemaan vasta kun 1.0.20 (pohja 26) on TF:ssä (1.0.19 lukee pohjaa 25 → offline-käyttäjä jäisi laattapaketin Z0–Z5-tarkkuuteen). Ilmoita Siirtosepälle build 20:n viennin jälkeen.
 - 08.36 TF 1.0.19 valmis (41dd79c7), vientilippu poistettu.
+- juna/b13 **3f2db11b**: + natiivi-ui/offline-lepo 7d6f7bc3 (C: verkoton lepo 306/306 kaikki 0).
