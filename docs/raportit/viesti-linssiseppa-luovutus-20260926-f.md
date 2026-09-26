@@ -94,3 +94,19 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
     uinuva 13) → lepo.
   - Kuvapari on lähetetty omistajalle ja Fablelle: lokit/linssiseppa-herays-20260926/omistajalle/.
 - Seuraavaksi kohdat 4–5 Fablen järjestyksessä.
+
+## Päivitys klo 07.5x: kohta 2 (nostojen kokoluokat ja himmeät jäljet, build 20)
+
+- **Jako (Natiiviseppä ja Natiivi-UI, sovittu):**
+  - NostoKerros.Muste on Natiivisepän (natiiviseppa/nosto-muste 77bcaed4).
+  - Merkit, koot 1,0 / 0,67 / 0,44 ja hehku piirtää Natiivi-UI (NostotKartalla, UI Toolkit).
+  - Minä teen jäljen ulkoasun ja löydön käyrän.
+- **Haara linssiseppa/muste-jaljet fcbdb97f** (wt/proto-linssiseppa-elava, juna fdc47632 + nosto-muste):
+  - MusteJaljet.Hae(valoId): 10 muunnelman pooli, 128², suora alfa, mipmapit.
+  - Lisäksi Hehku() ja Loyto(t).
+  - NostoKerros.Muste on kytketty Pelikoodarin musteesta (ElavaHerays).
+  - Testit 316/316.
+  - Natiivi-UI mergeää haaran omaansa, ja ne kulkevat yhdessä build 20:een. Simulaattorikuvapari tulee, kun Natiivi-UI:n
+    merkit käyttävät jälkiä.
+- Seuraavaksi kohta 4 (reitti kynänjälkenä, luonnokset käydyissä kaupungeissa, yövalot vain käydyissä: Karttasepän
+  yövalosarja) ja viimeisenä kohta 5 (elävät hetket).
