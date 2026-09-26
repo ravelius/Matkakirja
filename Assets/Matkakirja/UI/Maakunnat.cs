@@ -133,6 +133,30 @@ namespace Matkakirja.Natiivi
 
         public void SuljeKortti() => kortti.Sulje();
 
+        /// <summary>
+        /// Löydös 170: sisältöpaketti vaihtui kesken istunnon → luonnehdinnat ja Pulun kysymykset uudelleen (pikkukuvat uusista
+        /// osoitteista) ja näkyvä luonnehdinta päivitetään. Maalista (nimet) pysyy; se muuttuu vain skeeman mukana.
+        /// </summary>
+        public void SisaltoVaihtui()
+        {
+            if (!rakennettu || !UiKerros.Olemassa) return;
+            UiKerros.Hae().StartCoroutine(LataaLuonnehdinnat());
+        }
+
+        System.Collections.IEnumerator LataaLuonnehdinnat()
+        {
+            string luonn = null, kysymykset = null;
+            yield return LinssiSisalto.Hae("moduulit/js/packs/maakunnat-luonnehdinnat.json", t => luonn = t);
+            yield return LinssiSisalto.Hae("moduulit/js/packs/maakunnat-pulu.json", t => kysymykset = t);
+            try
+            {
+                if (luonn != null) luonnehdinnat = Viennit(luonn, "MAAKUNTIEN_LUONNEHDINNAT");
+                if (kysymykset != null) pulu = Viennit(kysymykset, "MAAKUNTIEN_PULU");
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui maakunnat: uusi sisältö: " + e.Message); }
+            PaivitaLuonnehdinta();
+        }
+
         System.Collections.IEnumerator Lataa()
         {
             string nimet = null, luonn = null, kysymykset = null;
@@ -460,6 +484,25 @@ namespace Matkakirja.Natiivi
             // Kaikki: avain "ISO:kaikki" (täyttö ilman korostusta).
             Valittu?.Invoke(pois ? null : avain);
             if (muuttui) PoisMuuttui?.Invoke(pois);
+        }
+
+        /// <summary>
+        /// Löydös 177 (Uusi peli, PeliOhjain.MuistitTyhjennetty): valinta ja Pois pois muistista kuten webin
+        /// uudelleenlatauksessa (PlayerPrefs on jo tyhjennetty); kartta kuulee Valittu(null) ja PoisMuuttui.
+        /// </summary>
+        public void Nollaa()
+        {
+            if (ValittuAvain != null && rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
+            bool muuttui = Pois;
+            bool oliValinta = ValittuAvain != null;
+            ValittuAvain = null;
+            Pois = false;
+            kortti.Sulje();
+            MerkitsePois();
+            PaivitaLuonnehdinta();
+            SiirraPeukalo();
+            if (oliValinta || muuttui) Valittu?.Invoke(null);
+            if (muuttui) PoisMuuttui?.Invoke(false);
         }
 
         static string LueTallennettu()

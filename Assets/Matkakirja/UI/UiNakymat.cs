@@ -260,6 +260,14 @@ namespace Matkakirja.Natiivi
             Chat = new PuluChat(kerros, Pulu);
             Traileri = new Saapumistraileri(kerros);
             KaupunkiMerkit.Kalusteet = KartanKalusteet; // löydös 164
+            // Löydös 170: sisältöpaketti vaihtui kesken istunnon (Siirtoseppä) → maakunta- ja nostodata uudesta versiosta.
+            PakettiPaivitys.SisaltoVaihtui += (versio, muuttuneet) =>
+            {
+                MaakuntaTiedot.Hylkaa();
+                NostoSisalto.Hylkaa();
+                Karttaselite?.Maakunnat?.SisaltoVaihtui();
+                Debug.Log($"MATKAKIRJA ui: sisältö v{versio} käyttöön kesken istunnon ({muuttuneet?.Count ?? 0} muuttunutta): maakunta- ja nostodata hylätty");
+            };
             // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin pallonäkymässä
             // ison pulun napautus ei avaa pääkeskustelua (löydös 96); kuvanäkymässä keskustelu on minipulun kortissa.
             Pulu.Napautus += Chat.Vaihda;
@@ -362,7 +370,8 @@ namespace Matkakirja.Natiivi
                 var o = PeliOhjain.Instanssi;
                 if (o == null) { Tilarivi.Viesti("Peli ei ole vielä käynnissä"); return; }
                 SuljeKaikki();
-                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka"); PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka-2");
+                // Löydös 177: kaikki pelin muistit pois (web tyhjennaMuistit), myös linssien muistit ja passi.
+                o.TyhjennaMuistit();
                 Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), null);
             };
 
@@ -375,6 +384,21 @@ namespace Matkakirja.Natiivi
 
         bool ohjainKytketty;
         MatkanYhteenveto odottavaHuipennus;
+
+        /// <summary>
+        /// Löydös 177: UI:n muistissa pidetyt tilat alkuun Uusi peli -tyhjennyksen jälkeen (PlayerPrefs on jo pyyhitty):
+        /// maakuntien valinta ja selitteen välilehti, laukun tilastolohko, pulun keskustelu, trailerit ja saapumisen
+        /// istuntomuistit. Kuvanäkymän "nähdyt" jäävät (web sessionStorage säilyy latauksessa).
+        /// </summary>
+        void NollaaMuistit()
+        {
+            Karttaselite.Nollaa();
+            Matkalaukku.Nollaa();
+            Chat.Nollaa();
+            Traileri.Nollaa();
+            Saapuminen.Nollaa();
+            Lukijoilta.Unohda();
+        }
 
         void KytkeOhjain()
         {
@@ -391,6 +415,9 @@ namespace Matkakirja.Natiivi
             if (!o.Kaytossa) Kerros.Nayta(false);
             KorvaaNimikortti(o.Kaytossa);
             Saapuminen.Kytke(o);
+            // Löydös 177: Uusi peli tyhjentää pelin muistit (Pelikoodarin TyhjennaMuistit); webissä sivu latautuu
+            // uudelleen, joten myös UI:n istuntomuistit alkavat alusta.
+            o.MuistitTyhjennetty += NollaaMuistit;
             // Pelin tilanteet puluun (webin ilmoitaLivianTilanne; Pelikoodarin tapahtuma).
             o.LivianTilanne += (laji, tunne, v) =>
             {

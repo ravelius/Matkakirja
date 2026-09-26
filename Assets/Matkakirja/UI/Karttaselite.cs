@@ -111,6 +111,13 @@ namespace Matkakirja.Natiivi
             if (Auki && !maakunnat) Paivita();
         }
 
+        /// <summary>Löydös 177 (Uusi peli): välilehti oletukseen (nostot) ja maakuntien valinta pois, kuten webin uudelleenlatauksessa.</summary>
+        public void Nollaa()
+        {
+            if (maakunnatAuki) { maakunnatAuki = false; NaytaValilehti(); if (Auki) Paivita(); }
+            Maakunnat.Nollaa();
+        }
+
         void NaytaValilehti()
         {
             paneeliNostot.style.display = maakunnatAuki ? DisplayStyle.None : DisplayStyle.Flex;

@@ -384,6 +384,9 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
         }
 
+        /// <summary>Löydös 177 (Uusi peli): tilastolohko oletukseen (kiinni), PlayerPrefs on jo tyhjennetty.</summary>
+        public void Nollaa() => AsetaTilastot(false);
+
         void AsetaTilastot(bool auki)
         {
             tilastoNappi.EnableInClassList("mk-auki", auki);

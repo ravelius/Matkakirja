@@ -31,6 +31,19 @@ namespace Matkakirja.Natiivi
         static readonly Dictionary<string, (double Lat, double Lon)?> paikat = new Dictionary<string, (double, double)?>();
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
+        static bool vanhentunut;
+
+        /// <summary>
+        /// Löydös 170: sisältöpaketti vaihtui kesken istunnon (PakettiPaivitys.SisaltoVaihtui) → nimet, luonnehdinnat ja paikat
+        /// hylätään; seuraava Lataa hakee uuden version. Kesken oleva haku merkitään vanhentuneeksi.
+        /// </summary>
+        public static void Hylkaa()
+        {
+            paikat.Clear();
+            if (haussa) { vanhentunut = true; return; }
+            ladattu = false;
+            nimet = luonnehdinnat = null;
+        }
 
         /// <summary>Lataa nimet ja luonnehdinnat kerran; valmis kutsutaan pääsäikeessä (myös epäonnistuessa).</summary>
         public static void Lataa(Action valmis)
@@ -52,7 +65,8 @@ namespace Matkakirja.Natiivi
             if (tyo.IsFaulted) Debug.LogWarning("MATKAKIRJA ui muste: maakuntadata ei jäsenny: " + tyo.Exception?.GetBaseException().Message);
             else (nimet, luonnehdinnat) = tyo.Result;
             haussa = false;
-            ladattu = true;
+            ladattu = !vanhentunut;
+            vanhentunut = false;
             var kutsut = odottajat.ToArray();
             odottajat.Clear();
             foreach (var k in kutsut)

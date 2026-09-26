@@ -12,7 +12,9 @@
 //      karsiKaupunkikartanNostot, ne asuvat kohdekartalla). Vanhassa paketissa ilman paakartalla-
 //      kenttää vara: kohdekartalle linkitetyt pois paitsi Ranskassa (KOHDEKARTAN_NOSTOT_LAHIZOOMIIN).
 //      Rivin nimi on valon nimi (kohteen nimi, aina täytetty).
-//   2. KOHDEKARTALTA SIIRRETYT: kohdekartan kohteet ilman miniatyyripiirrosta (ei numeroympyräkartoilla),
+//   2. TARINAKOHTEET (löydös 178): kohdekartan kartalla: false -kohteet, joilla on nosto (myös numeroympyrä-
+//      kartoilla); juttu avautuu ilman numeroa (web lisaaTarinakohteet, avaaNahtavyys numero null).
+//   3. KOHDEKARTALTA SIIRRETYT: kohdekartan kohteet ilman miniatyyripiirrosta (ei numeroympyräkartoilla),
 //      joilla on juttu tai wiki. Aihe on kohteen oma (skeema 1.24 kohteet[].aihe = linkkien aihe); vanhassa
 //      paketissa linkitetyn noston valosta; ilman sitä "Muut". Web v2154 (siirretynAihe + hetkiKohdetieto):
 //      kohdekartan hetket eivät ole "Muut"-kasassa; miniatyyrilliset (22 hetkeä) jäävät kartalle, ja
@@ -39,13 +41,20 @@ namespace Matkakirja.Natiivi
         /// <summary>Kohdekartalta siirretty kohde (ValoId = null).</summary>
         public Kohdekartta Kartta;
         public KohdekarttaKohde Kohde;
+        /// <summary>Tarinakohde (löydös 178): ei kartan järjestyksessä, joten juttu avautuu ilman numeroa ja selausta.</summary>
+        public bool Tarina;
 
         /// <summary>Avaa noston: valo → nostokortti, siirretty kohde → nähtävyysjuttu (web avaaNahtavyys).</summary>
         public void Avaa()
         {
             var ui = UiNakymat.Hae();
             if (ui == null) return;
-            if (Kohde != null) ui.Nahtavyydet.AvaaKohde(Kartta, Kohde);
+            if (Kohde != null && Tarina)
+            {
+                if (Kohde.Juttu != null && !string.IsNullOrEmpty(Kohde.Juttu.Teksti)) ui.Nahtavyydet.Avaa(Kohde.Juttu);
+                else if (!string.IsNullOrEmpty(Kohde.Wiki)) ui.Wiki.Avaa(Kohde.Wiki, Kohde.Nimi);
+            }
+            else if (Kohde != null) ui.Nahtavyydet.AvaaKohde(Kartta, Kohde);
             else if (ValoId != null) ui.Nostokortti.Avaa(ValoId);
         }
     }
@@ -145,6 +154,10 @@ namespace Matkakirja.Natiivi
                 foreach (var v in kartalta.OrderByDescending(x => x.Tarkeys).ThenBy(x => x.Jarjestys))
                     ulos.Add(new KaupunkiNosto { Nimi = v.Nimi ?? v.Id, Aihe = v.Aihe ?? MuutAihe, ValoId = v.Id });
             }
+            // Tarinakohteet (löydös 178, web lisaaTarinakohteet): myös numeroympyräkartoilla, ennen siirrettyjä.
+            if (kartta != null)
+                foreach (var kohde in kartta.Tarinakohteet)
+                    if (kohde.Avattava) ulos.Add(new KaupunkiNosto { Nimi = kohde.Nimi, Aihe = SiirretynAihe(kohde), Kartta = kartta, Kohde = kohde, Tarina = true });
             // Kohdekartalta siirretyt (web kaupunkikartanSiirretyt): piirretyt rakennukset jäävät kartalle.
             if (kartta != null && !kartta.Numeroympyrat)
                 foreach (var kohde in kartta.Kohteet)
@@ -197,7 +210,7 @@ namespace Matkakirja.Natiivi
             if (linkitetyt != null) return linkitetyt;
             var s = new HashSet<string>();
             foreach (var kartta in Kohdekartat.Kaikki)
-                foreach (var kohde in kartta.Kohteet)
+                foreach (var kohde in kartta.Kohteet.Concat(kartta.Tarinakohteet))
                     foreach (var n in kohde.Nostot) s.Add(ValoLinkista(n));
             if (Kohdekartat.Ladattu) linkitetyt = s;
             return s;

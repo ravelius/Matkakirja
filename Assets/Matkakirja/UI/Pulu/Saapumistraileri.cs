@@ -52,6 +52,9 @@ namespace Matkakirja.Natiivi
             peite.schedule.Execute(Vahdi).Every(250);
         }
 
+        /// <summary>Löydös 177 (Uusi peli): uudessa pelissä trailerit taas kerran per kaupunki (web: muisti nollautuu latauksessa).</summary>
+        public void Nollaa() => nahty.Clear();
+
         /// <summary>Onko kaupungin traileri jo nähty tässä pelissä (kerran per kaupunki).</summary>
         public bool Nahty(string kaupunki) => kaupunki != null && nahty.Contains(kaupunki);
 
