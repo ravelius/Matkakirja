@@ -24,7 +24,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja. Fable nollautui (96→12 %), Codex-posti ja tyotilat-skripti käsitelty edellisellä kierroksella.
+Ei avoimia jumeja. Fable nollautui (96→12 %), tyotilat-skripti käsitelty edellisellä kierroksella. **Codex-posti KÄSITELTY LOPPUUN:** Fablen vastaus (PASS + 1 korjaus, Natiivi-UI tekee, Natiiviseppä yhdistää 1.0.26-junaan) pushattu `posti/fable-codex-pulu-karttavaisto-vastaus-20260926.md` (f5c6da27e) claude/postilaatikko-haaraan — vahvistettu, normaali postimekanismi hoitaa toimituksen Codexille.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Omistaja poissa koneelta 26.–27.9. — ei mittausikkunaa, kortit voivat olla auki pitkään, muistutus 2 h välein (ei 10 min).
