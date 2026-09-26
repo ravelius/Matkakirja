@@ -7703,3 +7703,7 @@ Omistaja ajoi 01.1x SSH-komennon: proto-natiiviseppa-ylhaalta = natiiviseppa/ylh
 ## OMISTAJA: YLHAALTA-175 NYT 1.0.27:AAN (27.9.2026 klo 01.03)
 
 Omistaja 01.1x ("Nyt"): ylhaalta-175 (69a198a7 + patch) yhdistetaan juna/b13:een heti ja tulee TF 1.0.27:aan — korvaa Fablen 00.5x-linjauksen (seuraavaan buildiin). Natiiviseppa commitoi patchin, mergeaa junaan, kaantaa Linssisepan klo 01 kaannoksen jalkeen.
+
+## OMISTAJA: XAI ARA KYTKETAAN HETI (PELIKOODARI, AVAUSKORTTI TAUOLLE); 177-KORTTIKORJAUS cc33ba3b (27.9.2026 klo 01.04)
+
+Omistaja 01.2x "Kytke heti": xAI Grok TTS (ara) -kytkenta striimiluentaan tehdaan NYT — Pelikoodari keskeyttaa avauskortin (haara pushataan keskeneraisena), worker-reitti + kytkin + varapolku (gpt-4o-mini-tts), avain workerin/CI:n salaisuuksiin, mittaus, PR junaan. Natiivi-UI 01.1x: 177-epaily piti osittain — valikon Uusi peli sulki nostokortin, testikomento uusi-peli ei; korjaus MatkaAlkoi-tapahtumalla natiivi-ui/uusi-peli-kortti-177 cc33ba3b merge-pyynnossa Natiivisepalla ennen 1.0.27; laitetodennukset 174/173/169/170 kaynnissa ba90668f:lla.
