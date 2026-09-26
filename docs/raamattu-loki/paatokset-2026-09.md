@@ -7555,3 +7555,7 @@ Omistaja 22.4x: lipun pitaa olla lahes nakymaton ruudun keskella (nakyma suoraan
 ## MAAKUNTAPIKKUKUVAT ERA B VALMIS: 227 ALUETTA 15 MAASTA (26.9.2026 klo 22.47)
 
 Sisaltokirjuri: #3349 (CZE/HRV/BIH/MNE/ALB/MKD/LUX 96) ja #3350 (SRB/BGR/MLT/ISL 67) mainissa, #3351 (MDA/UKR 64) auki; UKR:n sota-alttiit alueet ja Transnistria neutraalein kuvin. Euroopan kaikki 21 puuttunutta maata katettu (era A 138 + era B 227). Sisaltokirjuri nollataan ennen 178:aa. Julkaisija: #3351, #3353, #3347 junaan; Siirtoseppa delta B-erista.
+
+## NATIIVI-UI ERA VALMIS (5 HAARAA); LUKIJOILTA-AVAIN POISTETAAN UUSI PELISSA (26.9.2026 klo 22.47)
+
+Natiivi-UI: merge-pyynnossa 174 (web-malli, ei himmennysta), 169/170b/173 maakunnat, 170 SisaltoVaihtui-kuuntelija (Siirtosepan kanssa), 178 aukio+luonto kevyt merkki (odottaa #3353), 177-UI (Uusi peli nollaa UI:n istuntomuistit TyhjennaMuistit-haaran paalla); unity-tarkistus 0 virhetta. Fable: Lukijoilta-avain poistetaan Keychainista Uusi pelissa kuten web (web on malli). Natiivi-UI nollataan.
