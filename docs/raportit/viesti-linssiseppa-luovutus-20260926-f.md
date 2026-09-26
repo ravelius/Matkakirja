@@ -273,3 +273,18 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
     ajo-ketju2.sh, joka siirtää aikataulua käyntiin ja tauolle.
 - Selvitykseen on lisätty säännöt 7 (vaihtelu ja tauot) ja 8 (maakontakti).
 - **Seuraavaksi:** omistajan pelikokeilu 1.0.23:lla → Pariisin ilmapallo sääntöjen 7–8 mukaan.
+
+## Päivitys klo 17.3x
+
+- **Kaksi merge-pyyntöä 1.0.24:ään** Natiivisepällä, junan 2e6e6648 päällä. Hän ottaa ne 1.0.23:n master-mergen jälkeen:
+  - linssiseppa/fonttilammitys e33d184b: LinssiOhjain.LammitaFontti alkaa Aloitusverho.Nakyvissa == false jälkeen,
+    LammitysMs 4. Todennettu: 568 ms 17 kehyksessä, pisin 4,2 ms.
+  - linssiseppa/elementit-3d ff1acd0f: aito 3D (pinnan normaali ja Aihe.Suunta, myllyt 210°), pop-up pois, karusellin
+    puut pois, 90 lamppua (MalliRakenne.Nuppi). Kuvat: lokit/linssiseppa-elementit3d-20260926/omistajalle/.
+- **HUOM verhomittaus:** ajo-elava.sh VAIHEET=1 lähettää uusi-peli-komennon verhon aikana (2,5 s), jolloin verho osuu 8 s:n
+  kattoon. Verhon kesto mitataan vain ilman komentoja ennen "aloitusverho: pois" -riviä (Natiiviseppä, verho-96).
+- **Käännöskuri polton aikana (Fable 17.2x):** enintään yksi käännös tunnissa ikkunassa :00–:15, erä koossa ja unity 0,
+  ja rivi Karttasepälle ennen käännöstä.
+- **Worktree:** wt/proto-linssiseppa on haarassa linssiseppa/elementit-3d. Samassa proto-reposssa ovat haarat
+  fonttilammitys ja karuselli (mergetty).
+- **Seuraavaksi:** omistajan pelikokeilu (1.0.23/1.0.24) → Pariisin ilmapallo sääntöjen 7–8 mukaan, aito 3D.
