@@ -24,6 +24,8 @@ namespace Matkakirja
         static readonly Color Muste = Hex(0x4b3a1c);
 
         static readonly Mesh[,] arkkiVerkot = new Mesh[ArkkityyppiKartoitus.Lukumaara, 2];
+        /// <summary>Kolmiot verkoittain (Mesh.triangles kopioi taulukon, joten määrä talteen rakennettaessa).</summary>
+        static readonly int[,] arkkiKolmiot = new int[ArkkityyppiKartoitus.Lukumaara, 2];
 
         /// <summary>Arkkityypin verkko (lod 0 tai 1), rakennetaan ensimmäisellä käytöllä ja pidetään muistissa.</summary>
         public static Mesh ArkkityypinVerkko(Arkkityyppi a, int lod)
@@ -35,12 +37,19 @@ namespace Matkakirja
             Rakenna(r, a, lod == 1);
             if (r.Kolmioita > (lod == 0 ? Lod0Katto : Lod1Katto))
                 Debug.LogWarning($"MATKAKIRJA symbolimallit: {a} LOD{lod} {r.Kolmioita} kolmiota yli budjetin");
+            arkkiKolmiot[(int)a, lod] = r.Kolmioita;
             return arkkiVerkot[(int)a, lod] = r.Verkko(a + (lod == 0 ? "" : "-lod1"));
         }
 
+        /// <summary>Arkkityypin kolmiot (lod 0 tai 1), rakentaa verkon tarvittaessa; ei varaa muistia.</summary>
+        public static int ArkkityypinKolmiot(Arkkityyppi a, int lod)
+        {
+            ArkkityypinVerkko(a, lod);
+            return arkkiKolmiot[(int)a, lod <= 0 ? 0 : 1];
+        }
+
         /// <summary>Kolmiot arkkityypeittäin (LOD0, LOD1), rakentaa verkot tarvittaessa (tila, raportti).</summary>
-        public static (int lod0, int lod1) ArkkityyppiKolmiot(Arkkityyppi a) =>
-            (ArkkityypinVerkko(a, 0).triangles.Length / 3, ArkkityypinVerkko(a, 1).triangles.Length / 3);
+        public static (int lod0, int lod1) ArkkityyppiKolmiot(Arkkityyppi a) => (ArkkityypinKolmiot(a, 0), ArkkityypinKolmiot(a, 1));
 
         static void Rakenna(Rakentaja r, Arkkityyppi a, bool k)
         {

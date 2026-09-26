@@ -8,16 +8,22 @@ namespace Matkakirja
 {
     /// <summary>
     /// 3D-SYMBOLINOSTOT (omistajan löydös 160, suunnitelma proto-3d/lokit/suunnitelma-160-3d-symbolinostot.md hyväksytty
-    /// 26.9.2026; build 21 -prototyyppi): tärkeimmät (tason 1) nostot kartalla liioitellun kokoisina low-poly-malleina.
+    /// 26.9.2026; build 21 -prototyyppi): nostot kartalla liioitellun kokoisina low-poly-malleina.
     /// Omat mallit koodina (ei tiedostoja, ei tekstuureja, ei PD/CC-sekamalleja): yksi materiaali, kärkivärit Sisältökirjurin
     /// vari2-paletista (pinta #c8b898, valo #e8d8b8, varjo #887858, sage #7a9a92, terrakotta #b8785e), tasavarjostus.
-    /// Prototyyppi: Akropolis, Delfoi ja Meteora (GRC taso 1, Pelikoodarin lista lokit/loydos160-arkkityypit.txt).
+    /// Erikoismallit: Akropolis, Delfoi ja Meteora (GRC taso 1, Pelikoodarin lista lokit/loydos160-arkkityypit.txt).
+    ///
+    /// TASO 1: erikoismalli voittaa, muuten arkkityyppi (ArkkityyppiKartoitus, Symbolimallit.Arkkityypit.cs, LOD0), joten
+    /// jokainen tason 1 nosto saa 3D-mallin. Piirto kuten prototyypissä: oma MeshRenderer noston mukaan, koko
+    /// <see cref="KokoPt"/>.
+    /// TASOT 2–3 (omistajan linjaus 26.9. kohta 11): pienet arkkityypit GPU-instansseina, ks. Symbolimallit.Tasot23.cs.
     ///
     /// NÄKYVYYS: malli näkyy, kun sen nosto on NostoKerroksen näytettävissä (samat säännöt kuin 155:n kuvamerkeillä: taso 1
     /// aina), pystyssä pinnan normaalin suuntaan, pohjoinen = mallin +Z, koko vakio ruudulla (<see cref="KokoPt"/>) kuten
     /// KaupunkiMerkit. Löytämätön himmeänä (pergamentti, 70 %). Horisonttiusva kuten 153:n nostoilla. Piilossa lennon, linssin
     /// ja aloitusportin aikana sekä pallon takana. Natiivi-UI piilottaa 2D-kuvamerkin, kun <see cref="OnMalli"/> on tosi.
-    /// Kolmiobudjetti enintään 1 500 mallia kohden (Kolmioita-tila näyttää). Komennot `symbolit tila|pois|paalle|koko pt`.
+    /// Kolmiobudjetti enintään 1 500 mallia kohden (erikoismallit), arkkityypit 600/150 (LOD0/LOD1).
+    /// Komennot `symbolit tila|pois|paalle|loydetty|himmea|koko pt|taso23 0|1`.
     /// </summary>
     [DefaultExecutionOrder(120)]   // NostoKerroksen jälkeen: näytettävät tältä kehykseltä
     public sealed partial class Symbolimallit : MonoBehaviour
@@ -29,7 +35,10 @@ namespace Matkakirja
         public static bool PakotaLoydetty;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KokoPt = 90f; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); }
+        static void Nollaa()
+        {
+            KokoPt = 90f; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
+        }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -45,7 +54,7 @@ namespace Matkakirja
 
         static Symbolimallit instanssi;
 
-        /// <summary>Mallit noston tunnisteen avainsanalla (Nosto.Id tai Tunnus päättyy tähän, esim. "kohde:akropolis").</summary>
+        /// <summary>Erikoismallit noston tunnisteen avainsanalla (Nosto.Id tai Tunnus päättyy tähän, esim. "kohde:akropolis").</summary>
         static readonly Dictionary<string, Func<Mesh>> Mallit = new Dictionary<string, Func<Mesh>>(StringComparer.Ordinal)
         {
             { "akropolis", Akropolis },
@@ -54,8 +63,44 @@ namespace Matkakirja
         };
         static readonly Dictionary<string, Mesh> verkot = new Dictionary<string, Mesh>();
 
-        /// <summary>Onko nostolla 3D-malli (Natiivi-UI: 2D-kuvamerkki pois).</summary>
-        public static bool OnMalli(string nostoId) => Paalla && Avain(nostoId) != null;
+        /// <summary>Noston mallitieto (lasketaan kerran noston id:llä): erikoismallin avain tai null, arkkityyppi ja taso.</summary>
+        sealed class Tieto
+        {
+            public string Erikois;
+            public Arkkityyppi Tyyppi;
+            public ArkkityyppiKartoitus.Peruste Peruste;
+            public int Taso;
+        }
+        static readonly Dictionary<string, Tieto> tiedot = new Dictionary<string, Tieto>(StringComparer.Ordinal);
+
+        static Tieto TietoNostolle(NostoKerros.Nosto s)
+        {
+            if (tiedot.TryGetValue(s.Id, out var t)) return t;
+            t = new Tieto { Erikois = Avain(s.Id) ?? Avain(s.Tunnus), Taso = s.Taso };
+            t.Tyyppi = ArkkityyppiKartoitus.Kartoita(s.Id, s.Nimi, s.Kategoria, s.Laji, out t.Peruste);
+            tiedot[s.Id] = t;
+            return t;
+        }
+
+        /// <summary>Tieto id:llä: välimuistista tai NostoKerroksen näytettävistä (Natiivi-UI kysyy id:llä); null = ei nostoa.</summary>
+        static Tieto TietoIdlla(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return null;
+            if (tiedot.TryGetValue(id, out var t)) return t;
+            var nk = NostoKerros.Instanssi;
+            if (nk == null) return null;
+            foreach (var s in nk.Naytettavat) if (s.Id == id) return TietoNostolle(s);
+            return null;
+        }
+
+        /// <summary>Onko nostolla 3D-malli (Natiivi-UI: 2D-kuvamerkki pois). Taso 1: aina (erikoismalli tai arkkityyppi).</summary>
+        public static bool OnMalli(string nostoId)
+        {
+            if (!Paalla) return false;
+            var t = TietoIdlla(nostoId);
+            if (t == null) return Avain(nostoId) != null || ArkkityyppiKartoitus.Taulussa(nostoId);
+            return t.Taso == 1;
+        }
 
         static string Avain(string id)
         {
@@ -66,16 +111,31 @@ namespace Matkakirja
             return Mallit.ContainsKey(loppu) ? loppu : null;
         }
 
-        /// <summary>Tila lokiin.</summary>
+        /// <summary>Tila lokiin: taso 1 (erikoismallit ja arkkityypit), tasot 2–3 (instanssit, piirtokutsut) ja kolmiot.</summary>
         public static string Tila()
         {
             if (instanssi == null) return "ei luotu";
-            var sb = new System.Text.StringBuilder($"päällä {Paalla}, koko {KokoPt:0} pt, näkyvissä:");
+            var sb = new System.Text.StringBuilder($"päällä {Paalla}, koko {KokoPt:0} pt; taso 1 näkyvissä:");
             int n = 0;
-            foreach (var p in instanssi.kappaleet) if (p.Value.r.enabled) { sb.Append(' ').Append(p.Key); n++; }
+            var taso1 = new int[ArkkityyppiKartoitus.Lukumaara];
+            foreach (var p in instanssi.kappaleet)
+            {
+                if (!p.Value.r.enabled) continue;
+                n++;
+                var t = tiedot.TryGetValue(p.Key, out var tt) ? tt : null;
+                if (t != null && t.Erikois != null) sb.Append(' ').Append(t.Erikois);
+                else if (t != null) taso1[(int)t.Tyyppi]++;
+            }
             if (n == 0) sb.Append(" ei yhtään");
-            sb.Append("; kolmiot:");
+            for (int i = 0; i < taso1.Length; i++) if (taso1[i] > 0) sb.Append(' ').Append((Arkkityyppi)i).Append('×').Append(taso1[i]);
+            sb.Append($" ({n} mallia); erikoismallien kolmiot:");
             foreach (var p in verkot) sb.Append(' ').Append(p.Key).Append('=').Append(p.Value.triangles.Length / 3);
+            sb.Append("; arkkityyppien kolmiot LOD0/LOD1:");
+            for (int i = 0; i < ArkkityyppiKartoitus.Lukumaara; i++)
+            {
+                var (k0, k1) = ArkkityyppiKolmiot((Arkkityyppi)i);
+                sb.Append(' ').Append((Arkkityyppi)i).Append('=').Append(k0).Append('/').Append(k1);
+            }
             return sb.ToString();
         }
 
@@ -84,6 +144,7 @@ namespace Matkakirja
         Camera kamera;
         Aurinko aurinko;
         Material materiaali;
+        /// <summary>Tason 1 kappaleet noston id:llä.</summary>
         readonly Dictionary<string, (Transform t, MeshRenderer r, Vector3 paikka, Vector3 normaali, float himmea)> kappaleet =
             new Dictionary<string, (Transform, MeshRenderer, Vector3, Vector3, float)>();
         readonly HashSet<string> nyt = new HashSet<string>();
@@ -115,37 +176,53 @@ namespace Matkakirja
             if (sallittu)
                 foreach (var s in nk.Naytettavat)
                 {
-                    string a = Avain(s.Id) ?? Avain(s.Tunnus);
-                    if (a == null || nyt.Contains(a)) continue;
-                    nyt.Add(a);
-                    Paivita(a, s);
+                    if (s.Taso != 1 || s.Id == null || nyt.Contains(s.Id)) continue;
+                    nyt.Add(s.Id);
+                    Paivita(TietoNostolle(s), s);
                 }
             foreach (var p in kappaleet)
                 if (!nyt.Contains(p.Key) && p.Value.r.enabled) { p.Value.r.enabled = false; PallonLepo.Muuttui("symbolimallit"); }
         }
 
-        void Paivita(string avain, NostoKerros.Nosto s)
+        /// <summary>Paikka ja asento georeferenssin paikallisessa avaruudessa: pystyssä pinnan normaalin suuntaan, +Z pohjoiseen.</summary>
+        void Asento(double lat, double lon, out Vector3 paikka, out Quaternion asento, out Vector3 normaali)
         {
-            if (!kappaleet.TryGetValue(avain, out var k))
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, 0));
+            var n = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef);
+            normaali = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(n)).normalized;
+            var napa = new double3(0, 0, 1);
+            var poh = math.normalize(napa - n * math.dot(napa, n));
+            var pl = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(poh)).normalized;
+            paikka = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            asento = Quaternion.LookRotation(pl, normaali);
+        }
+
+        /// <summary>Yhden ruutupisteen koko maailmassa etäisyydellä (kameran fov ja PalloKierto.Pistekerroin).</summary>
+        float PisteMaailmassa(float etaisyys) =>
+            2f * etaisyys * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) / (Screen.height / PalloKierto.Pistekerroin);
+
+        void Paivita(Tieto tieto, NostoKerros.Nosto s)
+        {
+            if (!kappaleet.TryGetValue(s.Id, out var k))
             {
-                if (!verkot.TryGetValue(avain, out var verkko)) verkot[avain] = verkko = Mallit[avain]();
-                var go = new GameObject("Symbolimalli-" + avain);
+                Mesh verkko;
+                if (tieto.Erikois != null)
+                {
+                    if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Mallit[tieto.Erikois]();
+                }
+                else verkko = ArkkityypinVerkko(tieto.Tyyppi, 0);
+                var go = new GameObject("Symbolimalli-" + (tieto.Erikois ?? tieto.Tyyppi.ToString()) + "-" + s.Id);
                 go.transform.SetParent(transform, false);
                 go.AddComponent<MeshFilter>().sharedMesh = verkko;
                 var r = go.AddComponent<MeshRenderer>();
                 r.sharedMaterial = materiaali;
                 r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                 r.receiveShadows = false;
-                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(s.OmaLon, s.OmaLat, 0));
-                var n = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef);
-                var nl = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(n)).normalized;
-                var napa = new double3(0, 0, 1);
-                var poh = math.normalize(napa - n * math.dot(napa, n));
-                var pl = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(poh)).normalized;
-                go.transform.localPosition = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-                go.transform.localRotation = Quaternion.LookRotation(pl, nl);
-                k = (go.transform, r, go.transform.localPosition, nl, -1f);
-                kappaleet[avain] = k;
+                Asento(s.OmaLat, s.OmaLon, out var paikka, out var asento, out var nl);
+                go.transform.localPosition = paikka;
+                go.transform.localRotation = asento;
+                k = (go.transform, r, paikka, nl, -1f);
+                kappaleet[s.Id] = k;
             }
             var gt = georeferenssi.transform;
             Vector3 p = gt.TransformPoint(k.paikka);
@@ -154,9 +231,7 @@ namespace Matkakirja
             bool edessa = Vector3.Dot(gt.TransformDirection(k.normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) > 0.08f;
             if (k.r.enabled != edessa) { k.r.enabled = edessa; PallonLepo.Muuttui("symbolimallit"); }
             if (!edessa) return;
-            float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            float piste = 2f * etaisyys * tanPuoli / (Screen.height / PalloKierto.Pistekerroin);
-            float koko = piste * KokoPt / Mathf.Max(1e-9f, gt.lossyScale.x);
+            float koko = PisteMaailmassa(etaisyys) * KokoPt / Mathf.Max(1e-9f, gt.lossyScale.x);
             var sk = Vector3.one * koko;
             if ((k.t.localScale - sk).sqrMagnitude > 1e-6f * koko * koko) k.t.localScale = sk;
             float h = s.Loydetty || PakotaLoydetty ? 0f : 1f;
@@ -164,7 +239,7 @@ namespace Matkakirja
             {
                 lohko.SetFloat(HimmeaId, h);
                 k.r.SetPropertyBlock(lohko);
-                kappaleet[avain] = (k.t, k.r, k.paikka, k.normaali, h);
+                kappaleet[s.Id] = (k.t, k.r, k.paikka, k.normaali, h);
                 PallonLepo.Muuttui("symbolimallit");
             }
         }
