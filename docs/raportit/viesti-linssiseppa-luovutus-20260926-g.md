@@ -14,7 +14,9 @@ Fablen session id: local_5df52e10-10e4-4b72-9554-0049db300dfe. Kontekstin 70 % r
 | Karuselli (kokeilu 2): ketjukaruselli, maapohja, hillityt värit, vaihtelu ja tauot | build 23 / 1.0.23 |
 | Aito 3D (pop-up pois), puut pois, 90 lamppua | juna fe86446e → 1.0.24 |
 | Fonttilämmitys verhon jälkeen, 4 ms/kehys | juna fe86446e → 1.0.24 |
-| ISS-ydin (SGP4, aurinko, varjo) | haara linssiseppa/iss-sgp4 1d2c0872, ei merge-pyynnössä |
+| Fonttilämmitys b: ennakoiva raja, ensimmäinen jäsennys omassa kehyksessään, puuttujat HasCharacterilla | linssiseppa/fonttilammitys-b 6595a5ea, Natiivisepän 1.0.25-jonossa; simulaattori c540fa68: pisin 3,8 ms |
+| Kokeilu 3: Pariisin ilmapallo (536 kolmiota, 24 s:n jakso, köysi, heilunta, vaihtelu) | linssiseppa/ilmapallo; simulaattori c540fa68 OK (kallistettuna nousu näkyy, kerros 30 fps); siirto 40 pt ylös pisteestä kääntämättä → seuraava erä, sitten kuvapari + video omistajalle |
+| ISS-ydin + todellinen rata Astronautin kamerassa (IssNyt, IssTleLataaja, `iss tila\|lataa`) | linssiseppa/iss-sgp4 711372bd; ämpärin TLE käytössä simulaattorissa (laatu Tarkka), testit 335; ei merge-pyynnössä |
 
 ## Elävät elementit (docs/raportit/elavat-elementit-selvitys-20260926.md)
 
