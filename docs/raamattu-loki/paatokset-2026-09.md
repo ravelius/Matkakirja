@@ -7355,3 +7355,7 @@ Linssiseppa: ISS-kaukonakyma SGP4-radalla (TLE #3334), kuvapari havainnollinen �
 ## V2278 (174B) JA V2279 (170 EUROOPPA) TUOTANNOSSA (26.9.2026 klo 20.31)
 
 Julkaisija: #3342 mainissa v2278 20.23, #3343 v2279 20.30, testit 4405/0; jonossa #3345 (ISS-TLE TF-vientiin, Natiivisepan ehdotus). Karttasepalle lupa nostotason uudelleenpolttoon.
+
+## KORJAUS: KUVAMERKIT EIVAT OLE POLTETUSSA NOSTOTASOSSA — EI UUDELLEENPOLTTOA (26.9.2026 klo 20.41)
+
+Karttaseppa: generoi-laattapyramidi.mjs piirtaa kuvamerkin vain tason 1 nostolle ja vain --nostotasot-tiedoston ＠kuvat-kentalla, jota tuotanto ei kayta; poltettuna ovat vain tyyppisymbolit, kuvamerkit piirtaa elavana pallolauta/nostot.js (155-kynnys). 174b:n merkit nakyvat siis heti v2278:ssa. Koepoltto 2026-09-27-nostot (eacd14790, 3 974 laattaa, 13 min) erosi tuotannosta vain 9 FRA-laatalla (uudet tyyppisymbolit) → Fable: ei vieda, tulevat seuraavan polton mukana.
