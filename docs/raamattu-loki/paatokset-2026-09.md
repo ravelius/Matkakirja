@@ -7407,3 +7407,7 @@ Omistaja vahvisti 21.0x: taysi uudelleenkaynnistys → Kreikan maakuntakuvat nak
 ## OMISTAJA HYVAKSYI 175:N; LIPPU PIENENEE LOITONNETTAESSA (26.9.2026 klo 21.08)
 
 Kortti 21.2x: 175 (kynnys 2,5 + kallistus ≥ 25°, mallit 22–40 pt, pergamentti, terrakottakatot, kaiverrusreuna; loydetty = loytamaton) HYVAKSYTTY 1.0.26:een (juna fc182b57, kaannos bbbc410d, 0 poikkeusta; kuvaparit proto-3d/lokit/loydos175d/). Kreikan lippu: GRC-ankkuri [26.01, 41.08] oikein, syy Lipputanko.KorkeusPt vakio ruudulla → Fable: lippu pienenee loitonnettaessa ja piiloutuu Euroopan mittakaavassa (Natiiviseppa). TF 1.0.26 -portit: verho ≤ 3,5 s (regressio 4,7–8,0 s, A/B 171-vartija/laattaera 2) ja 176 juurisyy. Laitetestaaja lisasi reseptiin 176+177 (7ee44db3a).
+
+## OMISTAJAN TILAUS: PAREMPI STRIIMAAVA PUHEAANI (VERTAILUERA) (26.9.2026 klo 21.09)
+
+Omistaja 21.1x: etsii parempaa striimiaanta kuin nykyinen (gpt-4o-mini-tts striimissa, eleven_v3 esigeneroituna); pelaajan pitaisi kuulla tietoja pelin aikana lukemisen sijaan; kysyi Grokista. Fable: Pelikoodari tekee vertailueran suomeksi (ElevenLabs Flash/v3 striimaus, OpenAI Realtime, xAI Grok Voice API jos TTS+suomi, Google Chirp 3 HD, Azure Neural fi-FI, Cartesia): ensimmainen tavu, luontevuus, hinta, valimuisti → mp3-linkit + taulukko → omistajan kortti.
