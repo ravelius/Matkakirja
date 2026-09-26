@@ -7623,3 +7623,7 @@ Sisaltokirjuri: 9 ei-paikkaa (tarkka luku, ei 11) museon/rakennuksen galleriaan 
 ## XAI-AVAIN MACIN YMPARISTOON (EI REPOON), KOKEILU LIVIAN AANELLA (26.9.2026 klo 23.25)
 
 Omistaja antoi 23.3x xAI:n API-avaimen kokeiluun (vaihdetaan myohemmin); riittaa Livian aani. Fable tallensi avaimen koodaus-kayttajan yksityiseen tiedostoon (~/.matkakirja-avaimet-koodaus.zsh, 600, sourcetaan ~/.zshenv:sta; samireivisen .matkakirja-avaimet.zsh ei ole koodaus-kayttajan kirjoitettavissa) — arvo ei lokiin eika repoon. Pelikoodari ajaa Livian repliikin wss://api.x.ai/v1/tts:lla (auto/fi, eve), mp3 ampariin, ensimmainen tavu + sanatarkkuus.
+
+## STRIIMIAANEN KUSTANNUSARVIO JA HINNOITTELU (FABLEN ARVIO OMISTAJALLE) (26.9.2026 klo 23.28)
+
+Omistaja 23.3x kysyi, paljonko pelaajalta pitaisi veloittaa, jotta ElevenLabs Flashin kulut katetaan (Pulun chat + nostojen luku joka 3. kerta). Fable: Flash 0,5 krediittia/merkki → 0,06–0,11 $/1 000 merkkia tasosta riippuen (tarkistettava). Tavallinen pelaaja ~32 000 merkkia/kk (40 Pulu-vastausta a 400 + 20 nostoa a 800) = 2–3 $/kk, ahkera ~96 000 = 6–10 $/kk ilman valimuistia. Ratkaisu: nostot esigeneroidaan kerran (2 800 x 800 merkkia ~130–220 $ kertakulu) ja jaetaan mp3:na, Pulun vastaukset valimuistiin kysymyksen mukaan → muuttuva kulu 0,5–1,5 $/kk tavalliselta, 2–4 $ ahkeralta. Hinnoittelu 3,99–4,99 EUR/kk kattaa myos App Storen osuuden; ilman valimuistia tarvittaisiin 6–8 EUR/kk. Nykyinen OpenAI-aani ~0,3 $/kk.
