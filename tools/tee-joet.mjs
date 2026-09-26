@@ -119,7 +119,7 @@ if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
   }
   const ne = JSON.parse(readFileSync(nePolku, 'utf8'));
   const maski = maamaski(ne);
-  const isot = ne.features.map((f) => (f.properties.ISO_A3 !== '-99' ? f.properties.ISO_A3 : f.properties.ADM0_A3));
+  const isot = ne.features.map((f) => f.properties.ADM0_A3); // pelin avaimet ovat ADM0_A3 (esim. SDS, FRA)
   const maaIso = (lon, lat) => { const id = maski.maa(lon, lat); return id ? isot[id - 1] : null; };
   const ketjut = ketjuta(lueUomat(gpkg, valuma));
   const features = [];
