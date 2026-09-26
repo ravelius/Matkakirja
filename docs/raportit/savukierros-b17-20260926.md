@@ -18,6 +18,8 @@ päällä, kuvat pysäytyskuvia (ruutu).
   (0,88), nimen laatikon korkeus 35,5 → 31,5 (0,89) — kuten Natiivi-UI odotti. Kuva 7.
 - **Maakunnat iPad:** vain oma maa (Britannia), "Pois" ensimmäisenä; Englanti värittää, Pois poistaa. Kuvat 9–11.
 
+- **Rajat 126–128 (iPad, kuva 11):** rantaviiva pois; ainoa näkyvä raja on maa–maa (Pohjois-Irlanti–Irlanti), ei rantaviivaa saarten ympärillä — PASS. Maakuntien oletusrajat näkyvät kun maakunta valitaan (Englanti, kuva 10).
+
 ## FAIL / avoinna
 1. **Lepopiirto (lämpövartija) FAIL:** levossa (taysi=0, 80 s + 65 s) `paikallaan`=0, `piirretty`=`kehyksia`
    (150/150; b16: 2–3/151). `ruutu`: "tila Lepo (ui)", ei "Paikallaan". Vaatimus ≤ 3/150 ei täyty.
