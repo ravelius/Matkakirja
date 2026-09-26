@@ -187,9 +187,11 @@ namespace Matkakirja.Natiivi
         static IEnumerator Lataa(string url)
         {
             AudioClip klippi = null;
-            string levy = Levy(url);
+            // Kohta 1 (build 19): tehosteet ovat buildissa (StreamingAssets/mukana) → suoraan sieltä, ei verkkoa.
+            string mukana = Mukana.Polku(url);
+            string levy = mukana ?? Levy(url);
             // 1) Tavut laitteelle (kerran), 2) klippi levyltä: sama reitti verkossa ja ilman.
-            yield return Levylle(url, levy);
+            if (mukana == null) yield return Levylle(url, levy);
             if (File.Exists(levy))
             {
                 using var p = UnityWebRequestMultimedia.GetAudioClip("file://" + levy, AudioType.MPEG);
@@ -197,7 +199,7 @@ namespace Matkakirja.Natiivi
                 // toimi pakatulle klipille ("Cannot get data on compressed samples", 24.9.). Tehosteet ovat lyhyitä.
                 yield return p.SendWebRequest();
                 if (p.result == UnityWebRequest.Result.Success) klippi = DownloadHandlerAudioClip.GetContent(p);
-                else { Debug.LogWarning($"MATKAKIRJA ui ääni ei purkautunut: {levy} ({p.error})"); File.Delete(levy); }
+                else { Debug.LogWarning($"MATKAKIRJA ui ääni ei purkautunut: {levy} ({p.error})"); if (mukana == null) File.Delete(levy); }
             }
             if (klippi != null)
             {
@@ -586,6 +588,7 @@ namespace Matkakirja.Natiivi
             foreach (var u in osoitteet)
             {
                 string url = Osoite(u);
+                if (Mukana.Polku(url) != null) continue;   // buildissa (kohta 1)
                 yield return Levylle(url, Levy(url));
             }
             // Käyttöliittymän tehosteet (efekti-*.mp3, ≤ 57 kt) myös muistiin ja suojaan, yksi ruutua kohden: purku
