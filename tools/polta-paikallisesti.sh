@@ -896,6 +896,7 @@ syva_sarakkeet () {
   fi
   node "$JUURI/tools/generoi-laattapyramidi.mjs" "$ULOS/syva-lista" \
     --tasoja 11 --tasot 10 $SYVA_LIPPU --vain-lista >/dev/null
+  rm -f "$ULOS/syva-sarakkeet-lista.txt" # uusi ala = uusi sarakelista (ks. TYHJÄT KAISTAT POIS)
   rivi="$(node -e '
     const j = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
     const s = j.laatat.map((l) => l[1]);
@@ -1046,16 +1047,26 @@ shardit () {
       sarakkeet="$(syva_sarakkeet)" || return 1
       eka="${sarakkeet% *}"; vika="${sarakkeet#* }"
       local syvaarg="--tasoja 11 $SYVA_LIPPU --dem $DEM --kaariminuutit $KORKEUS$pohjaarg"
+      # TYHJÄT KAISTAT POIS (26.9.2026): laattalistan (--syva-laatat) kaistoista
+      # iso osa on tyhjiä, ja tyhjänkin shardin alustus (1′-ruudukko, DEM-ikkuna)
+      # vei ~12 min prosessoria. Kaista ajetaan vain, jos siinä on z10-sarake;
+      # numerointi pysyy paikan mukaisena, joten valmis-merkit säilyvät.
+      local sarakelista="$ULOS/syva-sarakkeet-lista.txt"
+      [ -s "$sarakelista" ] || node -e '
+        const j = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
+        console.log([...new Set(j.laatat.map((l) => l[1]))].sort((x, y) => x - y).join("\n"));
+      ' "$ULOS/syva-lista/laatat.json" > "$sarakelista"
+      kaistalla () { awk -v a="$1" -v b="$2" '$1 >= a && $1 <= b { l = 1; exit } END { exit !l }' "$sarakelista"; }
       a="$eka"; n=1
       while [ "$a" -le "$vika" ]; do
         b=$((a + SYVA_KAISTA - 1))
-        printf 'syva-z10-%03d|--tasot 10 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
+        kaistalla "$a" "$b" && printf 'syva-z10-%03d|--tasot 10 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
         a=$((b + 1)); n=$((n + 1))
       done
       a="$eka"; n=1
       while [ "$a" -le "$vika" ]; do
         b=$((a + SYVA_KAISTA * 2 - 1))
-        printf 'syva-z9-%03d|--tasot 9 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
+        kaistalla "$a" "$b" && printf 'syva-z9-%03d|--tasot 9 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
         a=$((b + 1)); n=$((n + 1))
       done
       ;;
@@ -2198,7 +2209,16 @@ fi
 # version alle ei kirjoiteta eri sisältöä (laatat ovat vuoden
 # välimuistissa). Ja koska pohjan versio vaihtuu, pallon sarja on
 # poltettava samasta versiosta tai lepokerros sammuu.
-if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ]; then
+# SYVÄ SARJA (26.9.2026) ei polta viiva-, nosto- eikä pallotasoa eikä vie
+# luetteloa (PELIN_SYVIN_TASO), joten nämä ehdot eivät koske sitä; sen oma
+# versio tarkistetaan samoin (ei ämpärin nykyinen).
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" = "syva" ]; then
+  [ "$VERSIO" != "$A_VERSIO" ] || {
+    echo "VIRHE: --versio $VERSIO on ämpärin nykyinen versio; syvä sarja rannattomalle" >&2
+    echo "pohjalle menee omaan versioonsa (esim. <pohja>s-pohja, z0-z8 palvelinkopiona)." >&2
+    exit 2 ; }
+fi
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" != "syva" ]; then
   [ "$VERSIO" != "$A_VERSIO" ] || {
     echo "VIRHE: --versio $VERSIO on ämpärin nykyinen versio. Rannaton pohja" >&2
     echo "tarvitsee oman polkunsa; anna uusi --versio." >&2
