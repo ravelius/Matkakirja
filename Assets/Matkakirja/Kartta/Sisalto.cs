@@ -216,11 +216,11 @@ namespace Matkakirja
             "moduulit/js/linssit/vertailu.json",
         };
 
-        /// <summary>Käynnistyksen kokoelmat (listan alku): vain näille VANHA SISÄLTÖ -varareitti (PakettiPaivitys.VanhaTilannekuvasta).</summary>
+        /// <summary>Käynnistyksen kokoelmat (listan alku): vain näille VANHA SISÄLTÖ -varareitti (PakettiPaivitys.VanhaSisalto).</summary>
         public const int KaynnistyksenOsuus = 11;
         static readonly HashSet<string> kaynnistyksenJoukko = new HashSet<string>(new ArraySegment<string>(KaynnistyksenKokoelmat, 0, KaynnistyksenOsuus));
         /// <summary>Tässä istunnossa tilannekuvasta luetut vanhat kokoelmat (mittarin "vanhaa sisältöä käytetty").</summary>
-        public static readonly List<string> VanhaaKaytetty = new List<string>();
+        public static readonly List<(string Kohde, string Lahde, double IkaVrk)> VanhaaKaytetty = new List<(string, string, double)>();
 
         static string esiladattuVersio;
         public static int KaynnistyksenEsilatauksia { get; private set; }
@@ -264,20 +264,20 @@ namespace Matkakirja
             string polku = versioPolku + suhteellinen;
             string tiedosto = PakettiPaivitys.Varastosta(versioPolku, suhteellinen) ?? Valimuisti(polku);
             string teksti = null;
-            // VANHA SISÄLTÖ (Fable 26.9. klo 12.4x): käynnistyksen kokoelma puuttuu tästä versiosta → buildin tilannekuva
-            // heti, jos se on enintään 2 versiota vanhempi; tuore on jo haussa (KaynnistyksenEsilataus) seuraavaa kertaa varten.
+            // VANHA SISÄLTÖ (Fable 26.9. klo 12.4x/13.0x): käynnistyksen kokoelma puuttuu tästä versiosta → pelaajan oma
+            // vanhempi levyltä aina, buildin tilannekuva enintään 14 vrk; tuore on jo haussa (KaynnistyksenEsilataus) seuraavaa kertaa varten.
             // Varaston tiedosto luetaan omasta muuttujastaan: epäonnistunut luku ei saa johtaa siihen, että verkkohaku
             // kirjoittaa tuoreen sisällön vanhan tiivisteen nimelle (tiedosto-muuttuja jää tämän version polkuun).
             if (!File.Exists(tiedosto) && taso == Taso.Nakyva && kaynnistyksenJoukko.Contains(suhteellinen))
             {
-                var vanha = PakettiPaivitys.VanhaTilannekuvasta(versioPolku, suhteellinen, out int tkVersio);
+                var vanha = PakettiPaivitys.VanhaSisalto(versioPolku, suhteellinen, out string vanhanLahde, out double ikaVrk);
                 if (vanha != null)
                 {
                     yield return Taustalla(() => File.ReadAllText(vanha), t => teksti = t);
                     if (teksti != null)
                     {
-                        if (!VanhaaKaytetty.Contains(suhteellinen)) VanhaaKaytetty.Add(suhteellinen);
-                        Debug.Log($"MATKAKIRJA sisältö: vanhaa sisältöä käytetty {suhteellinen} (tilannekuva v{tkVersio}, käytössä {versioPolku})");
+                        if (!VanhaaKaytetty.Exists(x => x.Kohde == suhteellinen)) VanhaaKaytetty.Add((suhteellinen, vanhanLahde, ikaVrk));
+                        Debug.Log($"MATKAKIRJA sisältö: vanhaa sisältöä käytetty {suhteellinen} ({vanhanLahde}, {ikaVrk:0.0} vrk, käytössä {versioPolku})");
                     }
                 }
             }
