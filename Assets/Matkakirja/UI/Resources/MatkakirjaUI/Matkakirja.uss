@@ -946,11 +946,15 @@
 
 .mk-kytkinrivi__nimi {
     flex-grow: 1;
+    flex-shrink: 1;
+    white-space: normal; /* "Kuljettu reitti": pitkä nimi rivittyy eikä osu tilaan */
     font-size: 13.5px;
     letter-spacing: 5.93px; /* web 0.8px */
 }
 
 .mk-kytkinrivi__tila {
+    flex-shrink: 0;
+    margin-left: 8px;
     font-size: 11.5px;
     letter-spacing: 13.04px; /* web 1.5px */
     opacity: 0.8;
