@@ -6,6 +6,7 @@
 //   kokeilu 3  Pariisin kiinnitetty ilmapallo Tuileries'ssa (nousu ja lasku 24 s, kori heiluu 5 s, köysi vintturiin)
 //   kokeilu 4  Venetsian gondolit Canal Grandella (kaksi vastakkaisiin suuntiin, matka 30 s airon tahdissa, odotus päissä)
 //   kokeilu 5  Lontoon maailmanpyörä (kierros 40 s, 16 koria pysyvät pystyssä, pysähtyy välillä koreja täyttämään)
+//              ja Thamesin siipiratashöyry (matka 22–30 s, odottaa laiturissa 25–45 s, rattaat ja savu)
 //
 // Mallit ovat proseduraalisia low-poly-malleja löydöksen 160 paletilla (MalliVarit) ja varjostimella
 // Matkakirja/Linssit/Malli. Natiivisepän Blender-mallit voivat korvata ne myöhemmin (sama juuri ja sama pyörivä osa).
@@ -45,6 +46,8 @@ namespace Matkakirja.Natiivi
             public Func<Mesh> Lapsi;          // valinnainen: pyörivän osan lapset (karusellin istuimet)
             public Func<Mesh> Valot;          // valinnainen: roottorin lamput (hillitty hehku, ei valaistusta)
             public Vector3[] LastenPaikat;    // lasten paikat roottorin avaruudessa
+            public Func<Mesh> Lapsi2;         // valinnainen toinen lapsityyppi (höyrylaivan savupallot), lapset-taulukon perässä
+            public int Lapsia2;
             public Action<Transform, Transform[], float, float> Animoi;   // (roottori, lapset, aika s, nopeus 0–1)
             /// <summary>Maapohjan säde mallin yksiköissä (omistaja 16.5x: ei leijuntaa, jokainen aihe istuu maahan).</summary>
             public float PohjaSade = 0.6f;
@@ -133,6 +136,19 @@ namespace Matkakirja.Natiivi
                 PohjaSade = 0.55f, Haalistus = 0.25f, Suunta = 0f,
                 Animoi = MaailmanpyoraGeometria.Animoi,
             },
+            new Aihe
+            {
+                // Höyrylaiva: omat matkat ja laituriodotukset HoyryGeometria.Animoissa; tämä vaihtelu vain hiljentää koneen
+                // välillä (harvoin) ja vaihtelee tahtia ±8 %.
+                Vaihtelu = i => new Vaihtelu(601 + i) { KayMinS = 120, KayMaxS = 300, SeisooMinS = 10, SeisooMaxS = 20, TaukoTod = 0.2, Puuska = 0.08 },
+                Nimi = "hoyrylaiva", Paikka = new LatLon(51.5055, -0.1150), KokoPt = 50f,   // Thames, Waterloo Bridge
+                // Pisteen alapuolelle (pyörä on vasemmalla, nimi oikealla), ettei kumpikaan peitä pistettä.
+                Yksilot = new[] { (6f, -46f, 0f) },
+                Runko = HoyryGeometria.Joki, Roottori = HoyryGeometria.Laiva, Lapsi = HoyryGeometria.Siipiratas,
+                LastenPaikat = new Vector3[2], Lapsi2 = HoyryGeometria.Savupallo, Lapsia2 = HoyryGeometria.Palloja,
+                PohjaSade = 0.8f, Haalistus = 0.25f, Suunta = 0f,
+                Animoi = HoyryGeometria.Animoi,
+            },
         };
 
         static ElavatElementit instanssi;
@@ -201,7 +217,8 @@ namespace Matkakirja.Natiivi
                 roskat.Add(a.PohjaMateriaali);
                 var pohja = MaaPohja.Mesh(); roskat.Add(pohja);
                 var runko = a.Runko(); var roottori = a.Roottori(); var lapsi = a.Lapsi?.Invoke(); var valot = a.Valot?.Invoke();
-                roskat.Add(runko); roskat.Add(roottori); if (lapsi != null) roskat.Add(lapsi);
+                var lapsi2 = a.Lapsia2 > 0 ? a.Lapsi2?.Invoke() : null;
+                roskat.Add(runko); roskat.Add(roottori); if (lapsi != null) roskat.Add(lapsi); if (lapsi2 != null) roskat.Add(lapsi2);
                 Material valoMateriaali = null;
                 if (valot != null)
                 {
@@ -212,9 +229,9 @@ namespace Matkakirja.Natiivi
                     roskat.Add(valoMateriaali);
                     a.ValoMateriaali = valoMateriaali;
                 }
-                int lapsia = a.LastenPaikat?.Length ?? 0;
+                int lapsia = a.LastenPaikat?.Length ?? 0, lapsia2 = lapsi2 != null ? a.Lapsia2 : 0;
                 a.Kolmioita = (runko.triangles.Length + roottori.triangles.Length + (valot != null ? valot.triangles.Length : 0)
-                    + (lapsi != null ? lapsi.triangles.Length * lapsia : 0)) / 3;
+                    + (lapsi != null ? lapsi.triangles.Length * lapsia : 0) + (lapsi2 != null ? lapsi2.triangles.Length * lapsia2 : 0)) / 3;
                 foreach (var (_, _, vaihe) in a.Yksilot)
                 {
                     var pt = new GameObject(a.Nimi + " pohja").transform;
@@ -229,12 +246,12 @@ namespace Matkakirja.Natiivi
                     rt.SetParent(juuri, false);
                     Kappale(rt, "Roottori", roottori, a.Materiaali);
                     if (valot != null) Kappale(rt, "Valot", valot, valoMateriaali);
-                    var lapset = new Transform[lapsia];
-                    for (int i = 0; i < lapsia; i++)
+                    var lapset = new Transform[lapsia + lapsia2];
+                    for (int i = 0; i < lapset.Length; i++)
                     {
                         lapset[i] = new GameObject("Lapsi").transform;
                         lapset[i].SetParent(rt, false);
-                        Kappale(lapset[i], "Lapsi", lapsi, a.Materiaali);
+                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : lapsi2, a.Materiaali);
                     }
                     juuri.gameObject.SetActive(false);
                     a.Oliot.Add(new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, Vaihe = vaihe, Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) });
@@ -1117,6 +1134,187 @@ namespace Matkakirja.Natiivi
             r.Laatikko(new Vector3(0, -0.004f, 0), new Vector3(0.022f, 0.012f, 0.014f), MalliVarit.SageVaalea);
             r.Laatikko(new Vector3(0, -0.018f, 0), new Vector3(0.016f, 0.003f, 0.011f), MalliVarit.Varjo);
             return r.Mesh("Maailmanpyörä: kori");
+        }
+    }
+
+    /// <summary>
+    /// Proseduraalinen Thames-vinjetti ja siipiratashöyry (kokeilu 5, Lontoon toinen aihe; selvitys: matka 25 s, tauko, rattaat
+    /// pyörivät ja savupallot nousevat). Runko (Joki): kaavamainen Thamesin mutka (oma käyrä), rantamuurit, laiturit
+    /// päissä ja muutama rantarakennus. Roottori (Laiva) kulkee joen keskiviivaa: runko, kansirakennus, piippu ja
+    /// siipiratakotelot. Lapset: kaksi siipiratasta (pyörivät matkan mukaan) ja viisi savupalloa (kasvavat ja häipyvät
+    /// piipusta taaksepäin). Aikataulu: matka 22–30 s smootherstepillä, odotus laiturissa 25–45 s, suunta vuorottelee.
+    /// </summary>
+    public static class HoyryGeometria
+    {
+        public const int Palloja = 5;
+        const float Leveys = 0.12f, Muuri = 0.016f, VesiY = 0.005f, MuuriY = 0.014f;
+        static readonly Vector2[] Ohjaus =
+        {
+            new(-0.48f, -0.30f), new(-0.40f, -0.04f), new(-0.26f, 0.16f), new(-0.02f, 0.24f), new(0.24f, 0.20f), new(0.48f, 0.08f),
+        };
+        static Vector3[] polku;
+        static float[] pituudet;
+
+        static void Varmista()
+        {
+            if (polku != null) return;
+            var p = new List<Vector3>();
+            for (int i = 0; i < Ohjaus.Length - 1; i++)
+            {
+                Vector2 a = Ohjaus[Mathf.Max(0, i - 1)], b = Ohjaus[i], c = Ohjaus[i + 1], d = Ohjaus[Mathf.Min(Ohjaus.Length - 1, i + 2)];
+                for (int k = 0; k < 10; k++)
+                {
+                    float t = k / 10f, t2 = t * t, t3 = t2 * t;
+                    var q = 0.5f * (2 * b + (c - a) * t + (2 * a - 5 * b + 4 * c - d) * t2 + (3 * b - a - 3 * c + d) * t3);
+                    p.Add(new Vector3(q.x, 0, q.y));
+                }
+            }
+            var v = Ohjaus[Ohjaus.Length - 1];
+            p.Add(new Vector3(v.x, 0, v.y));
+            polku = p.ToArray();
+            pituudet = new float[polku.Length];
+            for (int i = 1; i < polku.Length; i++) pituudet[i] = pituudet[i - 1] + Vector3.Distance(polku[i - 1], polku[i]);
+        }
+
+        static (Vector3 p, Vector3 suunta) Kohta(float u)
+        {
+            Varmista();
+            float s = Mathf.Clamp01(u) * pituudet[pituudet.Length - 1];
+            int i = 1;
+            while (i < pituudet.Length - 1 && pituudet[i] < s) i++;
+            float w = Mathf.InverseLerp(pituudet[i - 1], pituudet[i], s);
+            var d = polku[i] - polku[i - 1];
+            return (Vector3.Lerp(polku[i - 1], polku[i], w), d.sqrMagnitude > 1e-10f ? d.normalized : Vector3.forward);
+        }
+
+        static float Pehmea(float x) { x = Mathf.Clamp01(x); return x * x * x * (x * (x * 6 - 15) + 10); }
+
+        /// <summary>Laivan osuus joella (0,08–0,92), kulkusuunta (+1/−1) ja liikkuuko se hetkellä t (siemenellä toistettava).</summary>
+        static int viimeN;
+        static float viimeAlku = -12f;
+
+        public static (float u, float suunta, bool liikkuu) Osuus(float t)
+        {
+            // Jakso n: matka (22–30 s) ja odotus (25–45 s); pituudet siemenestä 733 + n, joten aikataulu ei toistu samana.
+            // Haku jatkuu edellisestä jaksosta (aika kulkee eteenpäin), taaksepäin alusta.
+            if (t < viimeAlku) { viimeN = 0; viimeAlku = -12f; }
+            float alku = viimeAlku;
+            for (int n = viimeN; n < 100000; n++)
+            {
+                var arpa = new System.Random(733 + n);
+                float matka = 22f + (float)arpa.NextDouble() * 8f, odotus = 25f + (float)arpa.NextDouble() * 20f;
+                if (t < alku + matka + odotus)
+                {
+                    viimeN = n; viimeAlku = alku;
+                    float x = Pehmea((t - alku) / matka);
+                    bool eteen = n % 2 == 0;
+                    float u = Mathf.Lerp(0.08f, 0.92f, x);
+                    return (eteen ? u : 1 - u, eteen ? 1 : -1, t - alku < matka);
+                }
+                alku += matka + odotus;
+            }
+            return (0.08f, 1, false);
+        }
+
+        public static void Animoi(Transform laiva, Transform[] lapset, float t, float nopeus)
+        {
+            var (u, suunta, liikkuu) = Osuus(t);
+            var (p, tangentti) = Kohta(u);
+            var kulku = tangentti * suunta;
+            laiva.localPosition = p + Vector3.up * VesiY;
+            laiva.localRotation = Quaternion.LookRotation(kulku, Vector3.up);
+            if (lapset == null || lapset.Length < 2) return;
+            // Rattaat pyörivät kuljetun matkan mukaan (seisoessa eivät); kierto akselin (x) ympäri.
+            float ratas = u * pituudet[pituudet.Length - 1] * 900f * suunta;
+            lapset[0].localPosition = new Vector3(-0.034f, 0.014f, 0.005f);
+            lapset[1].localPosition = new Vector3(0.034f, 0.014f, 0.005f);
+            lapset[0].localRotation = lapset[1].localRotation = Quaternion.Euler(ratas, 0, 0);
+            // Savupallot: ikä 0–1 (2,4 s:n jakso, porrastettuna), piipusta ylös ja taaksepäin; laiturissa pienemmät.
+            float voima = liikkuu ? 1f : 0.35f;
+            for (int k = 2; k < lapset.Length; k++)
+            {
+                float ika = Mathf.Repeat(t / 2.4f + (k - 2) / (float)Palloja, 1f);
+                lapset[k].localPosition = new Vector3(0, 0.05f + ika * 0.09f * voima, -0.012f - ika * (liikkuu ? 0.10f : 0.02f));
+                lapset[k].localScale = Vector3.one * (Mathf.Sin(Mathf.PI * ika) * (0.6f + 0.8f * ika) * voima);
+            }
+        }
+
+        public static Mesh Joki()
+        {
+            Varmista();
+            var r = new MalliRakenne();
+            Color vesi = Color.Lerp(MalliVarit.Sage, MalliVarit.Valo, 0.2f);
+            for (int i = 1; i < polku.Length; i++)
+            {
+                Vector3 a = polku[i - 1], b = polku[i], na = Normaali(i - 1), nb = Normaali(i);
+                Nauha(r, a, b, na, nb, -Leveys / 2, Leveys / 2, VesiY, vesi);
+                Nauha(r, a, b, na, nb, Leveys / 2, Leveys / 2 + Muuri, MuuriY, MalliVarit.Pinta);
+                Nauha(r, a, b, na, nb, -Leveys / 2 - Muuri, -Leveys / 2, MuuriY, MalliVarit.Pinta);
+            }
+            // Laiturit päissä (odotuspaikat) ja rantarakennukset.
+            foreach (float u in new[] { 0.08f, 0.92f })
+            {
+                var (p, s) = Kohta(u);
+                var n = Vector3.Cross(Vector3.up, s).normalized;
+                r.Laatikko(p + n * (Leveys / 2 - 0.006f) + Vector3.up * MuuriY, new Vector3(0.012f, 0.004f, 0.012f), MalliVarit.Varjo);
+            }
+            for (int k = 0; k < 8; k++)
+            {
+                float u = 0.1f + 0.8f * k / 7f;
+                var (p, s) = Kohta(u);
+                var n = Vector3.Cross(Vector3.up, s).normalized;
+                float puoli = k % 2 == 0 ? 1 : -1, h = 0.02f + 0.01f * (k % 3);
+                var keski = p + n * puoli * (Leveys / 2 + Muuri + 0.03f) + Vector3.up * (MuuriY + h);
+                r.Laatikko(keski, new Vector3(0.026f, h, 0.02f), k % 3 == 1 ? MalliVarit.Valo : MalliVarit.Pinta);
+            }
+            return r.Mesh("Thames: joki");
+        }
+
+        static Vector3 Normaali(int i)
+        {
+            var d = polku[Mathf.Min(polku.Length - 1, i + 1)] - polku[Mathf.Max(0, i - 1)];
+            return Vector3.Cross(Vector3.up, d).normalized;
+        }
+
+        static void Nauha(MalliRakenne r, Vector3 a, Vector3 b, Vector3 na, Vector3 nb, float o0, float o1, float y, Color c)
+        {
+            var yy = Vector3.up * y;
+            r.Nelio(a + na * o0 + yy, a + na * o1 + yy, b + nb * o1 + yy, b + nb * o0 + yy, c);
+        }
+
+        /// <summary>Siipiratashöyry: +z eteen, runko 0,13 pitkä; valkoinen kansi, tumma runko, terrakotta piippu (ainoa aksentti).</summary>
+        public static Mesh Laiva()
+        {
+            var r = new MalliRakenne();
+            Color runko = new Color(0.24f, 0.21f, 0.17f);
+            r.Laatikko(new Vector3(0, 0.006f, 0), new Vector3(0.022f, 0.006f, 0.058f), runko);                     // runko
+            r.Kolmio(new Vector3(-0.022f, 0.012f, 0.058f), new Vector3(0.022f, 0.012f, 0.058f), new Vector3(0, 0.012f, 0.08f), MalliVarit.Valo);   // keula (kansi)
+            r.Kolmio(new Vector3(-0.022f, 0.0f, 0.058f), new Vector3(0, 0.0f, 0.08f), new Vector3(0.022f, 0.0f, 0.058f), runko);
+            r.Laatikko(new Vector3(0, 0.02f, -0.012f), new Vector3(0.016f, 0.008f, 0.03f), MalliVarit.Valo);          // kansirakennus
+            r.Laatikko(new Vector3(0, 0.038f, -0.004f), new Vector3(0.005f, 0.012f, 0.005f), MalliVarit.TerrakottaHimmea);   // piippu
+            foreach (float x in new[] { -0.03f, 0.03f })
+                r.Laatikko(new Vector3(x, 0.016f, 0.005f), new Vector3(0.004f, 0.012f, 0.016f), MalliVarit.Pinta);          // ratakotelo
+            return r.Mesh("Thames: höyrylaiva");
+        }
+
+        /// <summary>Siipiratas: kuusi lapaa akselin (x) ympäri; origo akselilla.</summary>
+        public static Mesh Siipiratas()
+        {
+            var r = new MalliRakenne();
+            for (int i = 0; i < 6; i++)
+            {
+                var q = Quaternion.Euler(i * 60f, 0, 0);
+                r.Tanko(q * new Vector3(0, 0.002f, 0), q * new Vector3(0, 0.016f, 0), 0.0028f, new Color(0.30f, 0.26f, 0.21f));
+            }
+            return r.Mesh("Thames: siipiratas");
+        }
+
+        /// <summary>Savupallo: vaalea oktaedri (säde 0,012), skaalataan iän mukaan.</summary>
+        public static Mesh Savupallo()
+        {
+            var r = new MalliRakenne();
+            r.Nuppi(Vector3.zero, 0.012f, Color.Lerp(MalliVarit.Valo, MalliVarit.Pinta, 0.3f));
+            return r.Mesh("Thames: savu");
         }
     }
 }
