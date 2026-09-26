@@ -7599,3 +7599,7 @@ Omistaja 23.1x: kollaasimallissa nostot-liuska (kaupungin nostojen liuska) oteta
 ## OMISTAJA HALUAA ENSIN VEDOKSET KAUPUNGIN AVAUSKORTISTA (26.9.2026 klo 23.16)
 
 Omistaja 23.1x: ensin vedokset uudesta kaupungin avauskortista (kolme osaa paallekkain: hero + esittely + lehtilinkki, nahtavyyskartta, turisti-info). Pelikoodari tekee staattiset mockit oikealla datalla (Pariisi, Ateena; iPhone + iPad, 2–3 mittasuhdevaihtoehtoa) etusijalla; lehden osiohakemisto sen jalkeen.
+
+## OMISTAJA: RADIO POIS KAUPUNKILEHDESTA (ON KARTUSSISSA) (26.9.2026 klo 23.17)
+
+Omistaja 23.2x: kaupunkilehden Radio-osio poistetaan, koska radio on siirretty kartussiin. Kuuluu kollaasi/lehtiuudistukseen: lehdesta pois Nahtavyydet, Turisti-info ja Radio. Pelikoodari huomioi mockissa ja toteutuksessa; Natiivi-UI seuraa.
