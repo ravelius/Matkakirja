@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2284, teksti: 'Maakunta-erä B2: SRB/BGR/MLT/ISL pikkukuvat (#3350)' },
+  { v: 2283, teksti: 'Maakunta-erä B1: CZE/HRV/BIH/MNE/ALB/MKD/LUX pi… (#3349)' },
   { v: 2282, teksti: 'Maakunta-erä A: CHE/PRT/HUN/SWE/NOR/IRL pikkuku… (#3348)' },
   { v: 2281, teksti: 'PRT: maakuntien pitkä-teksti (#3344)' },
   { v: 2280, teksti: 'Maakunta-erä 2: HUN/SWE/NOR/IRL pitkä-teksti (#3346)' },
