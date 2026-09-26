@@ -1504,3 +1504,19 @@ test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luo
   const kuvat = JSON.stringify(m).match(/"pikkukuva":("[^"]*"|null)/g) ?? [];
   for (const p of kuvat) assert.match(p, /^"pikkukuva":(null|"https:\/\/[^"]+")$/);
 });
+
+test('skeema 1.50: musiikkiaiheet ja kaupungin maanosa äänitauluissa', async () => {
+  const { MATKAN_AIHEET } = await import('../js/ui.js');
+  const { SAAPUMISTUNNUKSET, kaupunginMaanosa } = await import('../js/kaupunkimusiikki.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot;
+  const aiheet = k.filter((a) => a.laji === 'musiikkiaihe');
+  assert.equal(aiheet.length, Object.keys(MATKAN_AIHEET).length + Object.keys(SAAPUMISTUNNUKSET).length);
+  for (const a of aiheet) {
+    assert.ok(a.url.startsWith('https://') && a.url.endsWith('.mp3'), a.id);
+    assert.ok(a.tunnus.startsWith('musa-') && !a.tunnus.endsWith('-lyria'), a.id);
+  }
+  for (const m of Object.keys(SAAPUMISTUNNUKSET)) assert.ok(aiheet.some((a) => a.nimi === `saapuminen-${m}`), m);
+  const ateena = k.find((a) => a.id === 'musiikkiketju:ateena');
+  assert.equal(ateena.maanosa, kaupunginMaanosa('ateena', 'GRC'));
+  assert.ok(ateena.maanosa);
+});
