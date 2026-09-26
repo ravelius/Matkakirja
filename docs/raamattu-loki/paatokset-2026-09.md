@@ -7735,3 +7735,7 @@ Fable 01.2x: xAI-era valmis haarassa fable-xai-ara 2a0b68162 → PR #3365 (v2292
 ## 1.0.27-JUNA KAANNETTY ILMAN YLHAALTA-175:TA → UUSI KAANNOS; 177 PASS; STRIIMIAANI NATIIVIIN 0677592b (27.9.2026 klo 01.23)
 
 Natiiviseppa 01.2x: juna/b13 5cbd7870 (kaannos 16be7e44, mukana 177-korjaus cc33ba3b) savuke 0 poikkeusta, verho 5,8 s kuormassa; Laitetestaaja kierroksessa. Fable totesi: ylhaalta-175 d65986ae EI ole junassa vaikka omistaja paatti 01.1x "Nyt" → Natiiviseppa mergeaa ja kaantaa uudestaan (yhteinen kaannos klo 02 Natiivi-UI:n kanssa), Laitetestaaja uusi kierros, sitten master + TF 1.0.27. Natiivi-UI: 177 PASS 16be7e44:lla (kuvapari kuvapari-177-kortti.png); natiivin kehittajavalikon striimiaani-valitsin natiivi-ui/striimiaani 0677592b, todennus klo 02 kaannoksella.
+
+## MAAJUTTUJEN SIIRTO: 5 POIKKEUSTA JAAVAT KAUPUNKIIN (FABLEN PAATOS), ~28 SIIRTYY (27.9.2026 klo 01.23)
+
+Sisaltokirjuri 01.2x: 33 maajutusta 5 ei siirry suoraan — Dublin sakkipilli (duplikaatti IRL-musiikissa + Dublinin saapumisvisa), Marseille hymni, Lissabon azulejot, Barcelona ihmistorni (saapumisvisat nojaavat juttuun), Praha Dvorak (CZE:lla ei musiikkikategoriaa). Fable paatti: kaikki 5 jaavat kaupunkilehteen tassa erassa, uusia visoja ei kirjoiteta nyt; duplikaatit poistetaan vain kaupungista. Loput ~28 siirtyvat (9 puhtaat, 8 orpokorjauksin, 3 historian hetkea lehti-kentalla, 6–7 duplikaattia).
