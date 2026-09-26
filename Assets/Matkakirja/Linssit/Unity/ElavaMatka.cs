@@ -42,10 +42,19 @@ namespace Matkakirja.Natiivi
         Mesh viivaMesh, hehkuMesh;
         readonly List<UnityEngine.Object> roskat = new List<UnityEngine.Object>();
         List<string> piirretty = new List<string>();
-        List<LatLon> valot = new List<LatLon>();
+        static readonly List<string> Tyhja = new List<string>();
+        readonly List<LatLon> valot = new List<LatLon>();
         float aika, uusiAlku = -100;
         Vector3 edellinenKamera;
         float edellinenHehku = -1;
+        // Hehkun joukko lasketaan uudelleen vain, kun reitti rakennetaan tai käytyjen joukko muuttuu (ei kehysvarauksia).
+        bool valotLikaiset = true;
+        HashSet<string> kaydytViite;
+        int kaydytMaara = -1;
+        readonly List<Vector3> hPaikat = new List<Vector3>();
+        readonly List<Color> hVarit = new List<Color>();
+        readonly List<Vector2> hKulmat = new List<Vector2>();
+        readonly List<int> hKolmiot = new List<int>();
 
         public static void Kytke(LinssiOhjain o)
         {
@@ -108,9 +117,10 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             aika += Time.unscaledDeltaTime;
-            var reitti = testiReitti ?? Reitti?.Invoke()?.ToList();
-            if (reitti != null && !reitti.SequenceEqual(piirretty)) RakennaReitti(reitti);
-            if (georeferenssi == null || kamera == null) return;
+            if (georeferenssi == null || kamera == null || PeliOhjain.Instanssi?.Verkko == null) return;
+            // Reitti kopioidaan vain muuttuessaan; asettamaton tai "pois" tyhjentää viivan.
+            IReadOnlyList<string> reitti = testiReitti ?? Reitti?.Invoke();
+            if (!Sama(reitti ?? Tyhja, piirretty)) RakennaReitti(reitti?.ToList() ?? Tyhja);
             // Maan keskipiste georeferenssin avaruudessa (origo on pinnalla, ei keskellä) ja kameran korkeus.
             var keskus = (Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             var kameraL = georeferenssi.transform.InverseTransformPoint(kamera.transform.position);
@@ -126,9 +136,17 @@ namespace Matkakirja.Natiivi
             PaivitaHehku(reitti, keskus, kameraL, korkeus);
         }
 
+        static bool Sama(IReadOnlyList<string> a, List<string> b)
+        {
+            if (a.Count != b.Count) return false;
+            for (int i = 0; i < a.Count; i++) if (a[i] != b[i]) return false;
+            return true;
+        }
+
         /// <summary>Reitti isoympyräkaarina (0,5° välein); uusin osuus piirtyy nyt, vanhat valmiina.</summary>
         void RakennaReitti(List<string> reitti)
         {
+            valotLikaiset = true;
             bool jatkuu = reitti.Count > piirretty.Count && piirretty.Count > 0 && reitti.Take(piirretty.Count).SequenceEqual(piirretty);
             piirretty = reitti;
             uusiAlku = jatkuu ? aika : -100;
@@ -173,20 +191,31 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Käytyjen kaupunkien hehku kaukana: rakennetaan vain, kun kamera tai joukko muuttuu (lepo säilyy).</summary>
-        void PaivitaHehku(List<string> reitti, Vector3 keskus, Vector3 kameraL, double korkeus)
+        void PaivitaHehku(IReadOnlyList<string> reitti, Vector3 keskus, Vector3 kameraL, double korkeus)
         {
             if (hehkuMesh == null) return;
-            var po = PeliOhjain.Instanssi;
-            var kaydyt = reitti ?? po?.Matka?.Tila?.Pelaaja?.Kaydyt?.ToList();
-            var uudet = new List<LatLon>();
-            if (kaydyt != null) foreach (var id in kaydyt.Distinct()) if (Kaupunki(id, out var q)) uudet.Add(q);
+            // Lähde: reitti tai (ilman reittiä) käydyt kaupungit.
+            var kaydyt = reitti == null ? PeliOhjain.Instanssi?.Matka?.Tila?.Pelaaja?.Kaydyt : null;
+            if (!ReferenceEquals(kaydyt, kaydytViite) || (kaydyt?.Count ?? -1) != kaydytMaara)
+            {
+                kaydytViite = kaydyt; kaydytMaara = kaydyt?.Count ?? -1; valotLikaiset = true;
+            }
+            bool joukko = valotLikaiset;
+            if (valotLikaiset)
+            {
+                valotLikaiset = false;
+                valot.Clear();
+                IEnumerable<string> lahde = (IEnumerable<string>)reitti ?? kaydyt;
+                if (lahde != null) foreach (var id in lahde.Distinct()) if (Kaupunki(id, out var q)) valot.Add(q);
+            }
             float voima = Mathf.Clamp01((float)((korkeus - HehkuAlkaaM) / (HehkuTaysiM - HehkuAlkaaM)));
-            bool muuttui = !uudet.SequenceEqual(valot) || (kameraL - edellinenKamera).sqrMagnitude > 1f || Mathf.Abs(voima - edellinenHehku) > 0.01f;
+            bool muuttui = joukko || (kameraL - edellinenKamera).sqrMagnitude > 1f || Mathf.Abs(voima - edellinenHehku) > 0.01f;
             if (!muuttui) return;
-            valot = uudet; edellinenKamera = kameraL; edellinenHehku = voima;
+            edellinenKamera = kameraL; edellinenHehku = voima;
             hehkuMesh.Clear();
             if (voima <= 0.001f || valot.Count == 0) return;
-            var paikat = new List<Vector3>(); var varit = new List<Color>(); var kulmat = new List<Vector2>(); var kolmiot = new List<int>();
+            var paikat = hPaikat; var varit = hVarit; var kulmat = hKulmat; var kolmiot = hKolmiot;
+            paikat.Clear(); varit.Clear(); kulmat.Clear(); kolmiot.Clear();
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
             foreach (var q in valot)
             {
