@@ -269,7 +269,15 @@ namespace Matkakirja.Natiivi
             go.transform.position = new Vector3(0, -1e7f, 0);
             var t0 = go.AddComponent<TMPro.TextMeshPro>();
             t0.font = fontti;
-            int k = 0;
+            // Ensimmäinen jäsennys lataa fontin OpenType-taulut kerran (ei pilkottavissa): se tehdään yhdellä merkillä omassa
+            // kehyksessään ja kirjataan erikseen (kylmä käynnistys b24-kylma: pisin 6,2–6,3 ms, todennäköisesti tämä).
+            float ensimmainen = Time.realtimeSinceStartup;
+            t0.text = Merkisto.Substring(0, 1);
+            t0.ForceMeshUpdate(true, true);
+            ensimmainen = (Time.realtimeSinceStartup - ensimmainen) * 1000f;
+            kehyksia++;
+            yield return null;
+            int k = 1;
             while (k < Merkisto.Length)
             {
                 float alku = Time.realtimeSinceStartup, kulunut;
@@ -289,8 +297,9 @@ namespace Matkakirja.Natiivi
             Destroy(go);
             string puuttuvat = puuttuu.ToString();
             Kirjaa($"fonttilämmitys: {Merkisto.Length} merkkiä verhon jälkeen (odotus {(t1 - odotusAlku) * 1000:F0} ms), " +
-                $"{(Time.realtimeSinceStartup - t1) * 1000:F0} ms {kehyksia} kehyksessä, pisin työ {Mathf.Max(pisinLisays, pisinJasennys):F1} ms " +
-                $"(lisäys {pisinLisays:F1}, kallein merkki {suurinMerkki:F1}; jäsennys {pisinJasennys:F1}, kallein pala {suurinPala:F1})" +
+                $"{(Time.realtimeSinceStartup - t1) * 1000:F0} ms {kehyksia} kehyksessä, pisin työ {Mathf.Max(ensimmainen, Mathf.Max(pisinLisays, pisinJasennys)):F1} ms " +
+                $"(lisäys {pisinLisays:F1}, kallein merkki {suurinMerkki:F1}; ensimmäinen jäsennys {ensimmainen:F1}; " +
+                $"jäsennys {pisinJasennys:F1}, kallein pala {suurinPala:F1})" +
                 (string.IsNullOrEmpty(puuttuvat) ? "" : $", fontista puuttuu {puuttuvat.Length}: {puuttuvat}"));
         }
 
