@@ -53,3 +53,6 @@ Tämän sessio nollataan (clear_session self) Fablen pyynnöstä 26.9. ~00.15; F
 
 ## Päivitys 26.9. klo 00.2x (Fable)
 YÖVAUHTI PURETTU (purkuviesti lähetetty kaikille 9 roolille 00.2x). Normaali vauhti, max 3 agenttia/rooli. Uusi tilinvaihtosääntö: viikko ≥ 90 % → lähetä kaikille rooleille "kirjoita luovutus + aloitusviesti nyt ja pushaa (tilinvaihto lähestyy), jatka sitten työtä" ja ilmoita Fablelle; viikko ≥ 97 % → PushNotification omistajalle "Viikkokiintiö täynnä — vaihda tili". 85 % hälytys Fablelle + Push säilyy.
+
+## Päivitys 26.9. klo 05.0x (Fable)
+Codexin 504/503-värikorjauserät (posti/codex-fable-miniatyyrien-varit-*) ilmoitetaan jatkossa SUORAAN Sisältökirjurille (local_256f6a15-b806-4259-97bd-b2ba8d342f86, send_message-kanava); Fablelle vain yksi rivi kierrosraportissa. Erä 11 välitetty (Fable). Fable id ennallaan, RC päällä; build 17 TestFlightissa (1.0.17). Ei pushia omistajalle ennen klo 08 (paitsi viikko ≥97 %).
