@@ -1,13 +1,14 @@
 /*
- * LÖYDÖS 178 (omistaja 26.9.2026, Fablen päätös vaihtoehto A): nähtävyyskartalla
- * vain paikat — rakennus, aukio, luonto — sekä tarinakohteet (karttanosto), kunnes
- * Sisältökirjuri siirtää ne. Vartija: yksikään kaupunki ei jää ilman kartan kohdetta.
+ * LÖYDÖS 178 (omistaja 26.9.2026 klo 22.4x): nähtävyyskartalla vain paikat —
+ * rakennus, aukio, luonto. Tarinakohteet (karttanosto) ovat kaupungin nostoissa
+ * (kaupunkiliuska). Vartija: yksikään kaupunki ei jää ilman kartan kohdetta.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  KAUPUNKIKARTAT, KOHDETYYPIT, kaupunkikartanKohteet, kohdeKartalla, kohteenTyyppi,
+  KAUPUNKIKARTAT, KOHDETYYPIT, kaupunginTarinakohteet, kaupunkikartanKohteet, kohdeKartalla, kohteenTyyppi,
 } from '../js/packs/maakartat.js';
+import { kaupunkikartanSiirretyt } from '../js/nahtavyydet.js';
 
 const kaikki = Object.entries(KAUPUNKIKARTAT).flatMap(([kaupunki, k]) => (k.kohteet ?? []).map((kohde) => ({ kaupunki, kohde })));
 
@@ -16,12 +17,20 @@ test('jokaisen kohteen tyyppi on tunnettu (puuttuva = rakennus)', () => {
   assert.deepEqual(vieraat.map(({ kaupunki, kohde }) => `${kaupunki}/${kohde.nimi}`), []);
 });
 
-test('ei-paikka ilman karttanostoa ei ole kartalla; tarinakohde pysyy', () => {
+test('kartalla vain paikat; jokainen tarinakohde on kaupungin nostoissa (liuska)', () => {
   for (const { kohde } of kaikki) {
-    const paikka = ['rakennus', 'aukio', 'luonto'].includes(kohteenTyyppi(kohde));
-    assert.equal(kohdeKartalla(kohde), paikka || Boolean(kohde.nosto), kohde.nimi);
+    assert.equal(kohdeKartalla(kohde), ['rakennus', 'aukio', 'luonto'].includes(kohteenTyyppi(kohde)), kohde.nimi);
   }
-  assert.ok(kaikki.some(({ kohde }) => !kohdeKartalla(kohde)), 'suodatin ei piilota mitään — testi ei mittaa');
+  let tarinoita = 0;
+  for (const [kaupunki, kartta] of Object.entries(KAUPUNKIKARTAT)) {
+    const liuskassa = new Set(kaupunkikartanSiirretyt(null, kaupunki).map((r) => r.id));
+    for (const k of kaupunginTarinakohteet(kartta)) {
+      tarinoita += 1;
+      const tunnus = Array.isArray(k.nosto) ? k.nosto[0] : k.nosto;
+      assert.ok(liuskassa.has(tunnus), `${kaupunki}/${k.nimi} (${tunnus}) puuttuu kaupungin nostoista`);
+    }
+  }
+  assert.ok(tarinoita >= 60, `tarinakohteita vain ${tarinoita}`);
 });
 
 test('vartija: jokaisella kaupunkikartalla vähintään yksi kohde kartalla', () => {

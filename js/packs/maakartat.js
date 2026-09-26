@@ -3622,7 +3622,7 @@ export const KAUPUNKIKARTAT = {
        * puutarhasta ja Nanjing-kadusta ei ole fi-artikkelia, joten
        * ne nojaavat omaan juttuunsa. Ei myöskään kolmesta uudesta.
        */
-      { nimi: 'Bund', tyyppi: 'esine', lat: 31.238, lon: 121.4861 },
+      { nimi: 'Bund', tyyppi: 'aukio', lat: 31.238, lon: 121.4861 },
       // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
       // sillan keskellä Suzhou-puron päällä, koska juuri se on kohde.
       { nimi: 'Waibaidun silta', lat: 31.2431, lon: 121.49 },
@@ -7383,7 +7383,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-odessa-ooppera',
       },
       { nimi: 'Kaupunginpuisto', tyyppi: 'luonto', lat: 46.4848, lon: 30.7344 },
-      { nimi: 'Privozin tori', tyyppi: 'esine', lat: 46.4699, lon: 30.7368 },
+      { nimi: 'Privozin tori', tyyppi: 'aukio', lat: 46.4699, lon: 30.7368 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -16540,7 +16540,8 @@ export function mittakaava(kartta) {
  *   henkilo   henkilö tai tapahtuma          — EI kartalla
  *   ilmio     ilmiö                          — EI kartalla
  *
- * Ei-paikat SÄILYVÄT DATASSA (tarinakohteet myös kartalla, ks. kohdeKartalla), kunnes Sisältökirjuri siirtää ne (museon
+ * Ei-paikat EIVÄT OLE KARTALLA. Tarinakohteet (karttanosto) ovat kaupungin nostoissa
+ * (kaupunginTarinakohteet); muut säilyvät datassa, kunnes Sisältökirjuri siirtää ne (museon
  * juttuun galleriana tai kaupunkilehden tarina-osioon). Kaikki kartan
  * käyttäjät (piirto, numerointi, liuska, valikko, vienti natiiviin)
  * lukevat kohteet `kaupunkikartanKohteet`-funktiolla, jotta numero on
@@ -16554,17 +16555,20 @@ export const KEVYET_KOHDETYYPIT = new Set(['aukio', 'luonto']);
 
 /** Kohteen tyyppi; puuttuva kenttä on rakennus. */
 export const kohteenTyyppi = (kohde) => kohde?.tyyppi ?? 'rakennus';
-/**
- * Piirretäänkö kohde kaupunkikartalle. TARINAKOHDE JÄÄ (Fablen päätös 26.9.2026,
- * vaihtoehto A): ei-paikka, joka kantaa karttanoston (`nosto`: skandaali,
- * historian hetki, syvennys), pysyy kartalla, koska kaupunkikartta on sen
- * ainoa paikka (omistaja 2.9.2026, kaupunkikatto) — kunnes Sisältökirjuri
- * siirtää sen ja poistaa linkin. Nyt piiloon menevät 11 ei-paikkaa ilman nostoa.
- */
-export const kohdeKartalla = (kohde) => KARTAN_KOHDETYYPIT.has(kohteenTyyppi(kohde)) || Boolean(kohde?.nosto);
-/** Kaupunkikartan näkyvät kohteet järjestyksessään (numero = indeksi + 1). */
+/** Piirretäänkö kohde kaupunkikartalle (vain paikat). */
+export const kohdeKartalla = (kohde) => KARTAN_KOHDETYYPIT.has(kohteenTyyppi(kohde));
 export function kaupunkikartanKohteet(kartta) {
   return (kartta?.kohteet ?? []).filter(kohdeKartalla);
+}
+/**
+ * TARINAKOHTEET SUORAAN KAUPUNGIN NOSTOIHIN (omistaja 26.9.2026 klo 22.4x):
+ * ei-paikka, joka kantaa karttanoston (`nosto`: skandaali, historian hetki,
+ * syvennys, nosto), ei ole kartalla vaan kaupunkiliuskassa — kaupungin kortti
+ * kokoaa kaikki kaupungin nostot, joten kaupunkikatto ei enää rajoita.
+ * Ei-paikat ilman nostoa odottavat Sisältökirjuria (museo, tarina-osio).
+ */
+export function kaupunginTarinakohteet(kartta) {
+  return (kartta?.kohteet ?? []).filter((k) => !kohdeKartalla(k) && k.nosto);
 }
 
 export function karttapiste(kartta, lat, lon) {

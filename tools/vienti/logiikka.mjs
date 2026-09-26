@@ -113,6 +113,7 @@ export const LOGIIKKA = {
   [`${P}maakartat.js#kohteenTyyppi`]: saanto('kohde.tyyppi ?? "rakennus" (löydös 178).'),
   [`${P}maakartat.js#kohdeKartalla`]: esilaskettu('kohdekartat#kohteet'),
   [`${P}maakartat.js#kaupunkikartanKohteet`]: esilaskettu('kohdekartat#kohteet'),
+  [`${P}maakartat.js#kaupunginTarinakohteet`]: esilaskettu('kohdekartat#kohteet'),
   [`${P}maakartat.js#mittakaava`]: logiikka('kartta:mittakaava'),
   [`${P}maakartat.js#ydinAla`]: saanto('Ydinrajaus (rajat) prosentteina piirtorajauksesta (piirtoRajat ?? rajat): x = (r.lansi - p.lansi) / (p.ita - p.lansi) * 100, y = (p.pohjoinen - r.pohjoinen) / (p.pohjoinen - p.etela) * 100, leveys ja korkeus samoin.'),
 };
