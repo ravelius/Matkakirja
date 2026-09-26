@@ -490,6 +490,65 @@ export const RAIDAT = {
       + 'without a seam. '
       + `${TYYLI}`,
   },
+
+  /*
+   * ----------------------------------------------------------------
+   * MUSIIKKI- JA ÄÄNISUUNNITELMA, VAIHE 1 (docs/raportit/musiikki-ja-aanisuunnitelma-20260926.md; omistaja hyväksyi 26.9.
+   * klo 05.0x kaikki 8 suositusta). Johtoaihe ja kolme koeraitaa; omistaja kuuntelee erän ennen seuraavaa. Raidat EIVÄT
+   * soi pelissä ennen kuin pelidata viittaa niihin (kuuntelusääntö), joten vienti ämpäriin on turvallinen.
+   * Johtoaihe Lyrian likimääräisenä (päätös 1): D–G–F–E–D–C–D, nouseva kvartti ja laskeva askelkulku.
+   * ----------------------------------------------------------------
+   */
+  johtoaihe: {
+    laji: 'suunnitelma',
+    tiedosto: 'musa-johtoaihe.mp3',
+    kesto: 25000,
+    looppi: false,
+    kuvaus: 'Isoisän johtoaihe täytenä (vaihe 1, kuunneltava)',
+    prompt: 'The grandfather\'s theme, stated once, simply and completely: a short singable melody of seven notes, '
+      + 'D–G–F–E–D–C–D in D minor turning to F major — a rising fourth like a question, then a stepwise descent home '
+      + 'like an answer. Solo piano states it first, then soft strings repeat it with a clarinet counter-line. Wistful '
+      + 'but warm, a family memory opening. Tempo about 70 BPM. Starts immediately and ends on a soft sustained chord. '
+      + `${TYYLI}`,
+  },
+  aloituslento: {
+    laji: 'suunnitelma',
+    tiedosto: 'musa-aloituslento.mp3',
+    kesto: 25000,
+    looppi: false,
+    kuvaus: 'Aloituslento Lontoosta kohteeseen (vaihe 1)',
+    prompt: 'Departure: an old propeller plane lifts off from London and turns towards the first destination; the '
+      + 'journey begins. The grandfather\'s theme (D–G–F–E–D–C–D, rising fourth then stepwise descent) sounds in full, '
+      + 'rising and widening as the plane climbs, strings and piano with a light woodwind lift, then settles into a calm, '
+      + 'hopeful descent for the landing. About 80 BPM. Leaves space for a narrator voice; no sudden peaks. Starts '
+      + 'immediately and ends softly. '
+      + `${TYYLI}`,
+  },
+  'saapuminen-valimeri': {
+    laji: 'suunnitelma',
+    tiedosto: 'musa-saapuminen-valimeri.mp3',
+    kesto: 10000,
+    looppi: false,
+    kuvaus: 'Saapumistunnus Välimeren kaupunkiin (vaihe 1, maanosaversioiden malli)',
+    prompt: 'A short arrival signature for a Mediterranean city: the first two bars of the grandfather\'s theme '
+      + '(D–G–F–E, a rising fourth then a step down) played by a classical guitar with mandolin tremolo, a light '
+      + 'tambourine touch and a clarinet answer, warm Mediterranean sunlight. About 90 BPM. Starts immediately with no '
+      + 'lead-in and ends cleanly on an open chord. '
+      + `${TYYLI}`,
+  },
+  loppu: {
+    laji: 'suunnitelma',
+    tiedosto: 'musa-loppu.mp3',
+    kesto: 75000,
+    looppi: false,
+    kuvaus: 'Matkan loppu, kaikki aarteet löydetty (vaihe 1)',
+    prompt: 'The journey\'s end: every forgotten treasure has been found and the grandfather\'s diary is complete. '
+      + 'The grandfather\'s theme (D–G–F–E–D–C–D) returns in full, first alone on piano, then carried by the whole '
+      + 'chamber orchestra — strings singing it, horn support, clarinet and flute weaving around it — moved and grateful '
+      + 'rather than triumphant. Gradual build to one warm climax at about two thirds, then a long, quiet close on solo '
+      + 'piano and a final sustained chord. About 66 BPM. No drum kit. '
+      + `${TYYLI}`,
+  },
 };
 
 /** Onko raita kaupungin oma kappale vai paletin raita? */
@@ -500,6 +559,9 @@ const onAlue = (raita) => raita?.laji === 'alue';
 
 /** Onko raita näkymän tai virtuaalipaikan oma raita? */
 const onTila = (raita) => raita?.laji === 'tila';
+
+/** Onko raita musiikkisuunnitelman erän raita (vaihe 1 …)? */
+const onSuunnitelma = (raita) => raita?.laji === 'suunnitelma';
 
 /** Paletin neljä raitaa — `kaikki` tarkoittaa näitä. */
 export const PALETIN_RAIDAT = Object.keys(RAIDAT).filter((id) => !RAIDAT[id].laji);
@@ -512,6 +574,9 @@ export const ALUEIDEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onAlue(RAIDAT[
 
 /** Tilaraidat (lehti, matkalaukku, etusivu) — `tilat` tarkoittaa näitä. */
 export const TILOJEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onTila(RAIDAT[id]));
+
+/** Musiikkisuunnitelman vaihe 1 — `vaihe1` tarkoittaa näitä. */
+export const VAIHE1_RAIDAT = Object.keys(RAIDAT).filter((id) => onSuunnitelma(RAIDAT[id]));
 
 /**
  * Raitalista argumenteista.
@@ -529,6 +594,7 @@ export const RYHMAT = {
   kaupungit: () => [...KAUPUNKIEN_RAIDAT, ...ALUEIDEN_RAIDAT],
   alueet: () => [...ALUEIDEN_RAIDAT],
   tilat: () => [...TILOJEN_RAIDAT],
+  vaihe1: () => [...VAIHE1_RAIDAT],
 };
 
 export function valitseRaidat(argumentit) {
