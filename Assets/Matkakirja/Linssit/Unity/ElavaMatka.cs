@@ -6,13 +6,15 @@
 //
 // Reitti: ElavaMatka.Reitti, oletuksena pelin kuljettu reitti (Pelikoodarin PeliOhjain.KuljettuReitti: uusi osuus
 // lisätään vasta, kun kamera on perillä, KuljettuReittiKasvoi). Hehku tulee käytyjen kaupunkien joukosta
-// (Pelaaja.Kaydyt), testissä reitistä. Testi: "elava reitti <kaupunki> <kaupunki> …" (korvaa reitin) ja "elava reitti pois".
+// (Pelaaja.Kaydyt), testissä reitistä. Osuus kulkee laudan reittiviivaa pitkin (PeliApu.ReittiPiste, lyhin maa- tai
+// meripolku kulkutavan mukaan), lento ja polkua vailla oleva osuus isoympyränä. Testi: "elava reitti <kaupunki> <kaupunki> …" (korvaa reitin) ja "elava reitti pois".
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Elava;
+using Matkakirja.Peli;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -38,6 +40,7 @@ namespace Matkakirja.Natiivi
         // Pelin reitti ilman kehysvarauksia: kopio kasvaa KuljettuReittiKasvoi-tapahtumasta (kamera perillä), ja koko
         // reitti tahdistetaan, kun pelaaja tai peli vaihtuu (listan viite) tai reitti lyhenee.
         static readonly List<string> kuljettu = new List<string>();
+        static readonly List<Kulkutapa?> kuljettuTavat = new List<Kulkutapa?>();
         static object kuljettuLahde;
         static PeliOhjain kytkettyOhjain;
 
@@ -50,7 +53,7 @@ namespace Matkakirja.Natiivi
                 kytkettyOhjain = po;
                 po.KuljettuReittiKasvoi += (a, b, tapa) =>
                 {
-                    if (b != null && (kuljettu.Count == 0 || kuljettu[kuljettu.Count - 1] != b)) kuljettu.Add(b);
+                    if (b != null && (kuljettu.Count == 0 || kuljettu[kuljettu.Count - 1] != b)) { kuljettu.Add(b); kuljettuTavat.Add(tapa); }
                 };
             }
             var r = po.KuljettuReitti;
@@ -58,8 +61,9 @@ namespace Matkakirja.Natiivi
             {
                 kuljettuLahde = r;
                 kuljettu.Clear();
+                kuljettuTavat.Clear();
                 foreach (var p in r)
-                    if (p?.Kaupunki != null && (kuljettu.Count == 0 || kuljettu[kuljettu.Count - 1] != p.Kaupunki)) kuljettu.Add(p.Kaupunki);
+                    if (p?.Kaupunki != null && (kuljettu.Count == 0 || kuljettu[kuljettu.Count - 1] != p.Kaupunki)) { kuljettu.Add(p.Kaupunki); kuljettuTavat.Add(p.Tapa); }
             }
             return kuljettu;
         }
@@ -72,6 +76,10 @@ namespace Matkakirja.Natiivi
         readonly List<UnityEngine.Object> roskat = new List<UnityEngine.Object>();
         List<string> piirretty = new List<string>();
         static readonly List<string> Tyhja = new List<string>();
+        // Laudan reittiviivat eivät olleet vielä valmiina (ReittiPiste null): rakennetaan uudelleen ilman piirtoa.
+        static bool viivatKesken;
+        int uusintoja;
+        float seuraavaUusinta;
         readonly List<LatLon> valot = new List<LatLon>();
         float aika, uusiAlku = -100;
         Vector3 edellinenKamera;
@@ -149,7 +157,13 @@ namespace Matkakirja.Natiivi
             if (georeferenssi == null || kamera == null || PeliOhjain.Instanssi?.Verkko == null) return;
             // Reitti kopioidaan vain muuttuessaan; asettamaton tai "pois" tyhjentää viivan.
             IReadOnlyList<string> reitti = testiReitti ?? Reitti?.Invoke();
-            if (!Sama(reitti ?? Tyhja, piirretty)) RakennaReitti(reitti?.ToList() ?? Tyhja);
+            if (!Sama(reitti ?? Tyhja, piirretty))
+                RakennaReitti(reitti?.ToList() ?? Tyhja, testiReitti == null && ReferenceEquals(reitti, kuljettu) ? new List<Kulkutapa?>(kuljettuTavat) : null);
+            else if (viivatKesken && uusintoja < 10 && aika >= seuraavaUusinta)
+            {
+                viivatKesken = false; uusintoja++; seuraavaUusinta = aika + 2;
+                piirretty = new List<string>();   // seuraava kehys rakentaa koko reitin uudelleen (ei piirtoanimaatiota)
+            }
             // Maan keskipiste georeferenssin avaruudessa (origo on pinnalla, ei keskellä) ja kameran korkeus.
             var keskus = (Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             var kameraL = georeferenssi.transform.InverseTransformPoint(kamera.transform.position);
@@ -173,7 +187,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Reitti isoympyräkaarina (0,5° välein); uusin osuus piirtyy nyt, vanhat valmiina.</summary>
-        void RakennaReitti(List<string> reitti)
+        void RakennaReitti(List<string> reitti, List<Kulkutapa?> tavat)
         {
             valotLikaiset = true;
             bool jatkuu = reitti.Count > piirretty.Count && piirretty.Count > 0 && reitti.Take(piirretty.Count).SequenceEqual(piirretty);
@@ -183,15 +197,19 @@ namespace Matkakirja.Natiivi
             var piirto = new List<Vector4>(); var kolmiot = new List<int>();
             for (int i = 1; i < reitti.Count; i++)
             {
-                if (!Kaupunki(reitti[i - 1], out var a) || !Kaupunki(reitti[i], out var b)) continue;
-                double kulma = Kameramatikka.KulmaAsteina(a, b);
-                if (kulma < 1e-6) continue;
-                int osia = Math.Max(1, (int)Math.Ceiling(kulma / 0.5));
+                var viiva = OsuudenPisteet(reitti[i - 1], reitti[i], tavat != null && i < tavat.Count ? tavat[i] : null);
+                if (viiva == null) continue;
                 bool uusin = i == reitti.Count - 1;
-                float alku = uusin ? uusiAlku : -100, kesto = uusin ? KynanKestoS : 0.01f;
                 var u = new List<Vector3>();
                 var matkat = new List<float>();
-                for (int s = 0; s <= osia; s++) { u.Add(Paikka(Kameramatikka.IsoympyranPiste(a, b, (double)s / osia), 1800)); matkat.Add((float)(kulma * s / osia)); }
+                double kulma = 0;
+                for (int s = 0; s < viiva.Count; s++)
+                {
+                    if (s > 0) kulma += Kameramatikka.KulmaAsteina(viiva[s - 1], viiva[s]);
+                    u.Add(Paikka(viiva[s], 1800)); matkat.Add((float)kulma);
+                }
+                if (kulma < 1e-6) continue;
+                float alku = uusin ? uusiAlku : -100, kesto = uusin ? KynanKestoS : 0.01f;
                 int pohja = paikat.Count;
                 for (int k = 0; k < u.Count; k++)
                 {
@@ -217,6 +235,68 @@ namespace Matkakirja.Natiivi
             if (jatkuu) PallonLepo.Herata(KynanKestoS + 0.2f, "elävä reitti");
             else PallonLepo.Muuttui("elävä reitti");
             ohjain?.Kirjaa($"elävä: kuljettu reitti {reitti.Count} kaupunkia{(jatkuu ? ", uusi osuus piirtyy" : "")}");
+        }
+
+        /// <summary>Osuuden a → b pisteet: laudan reittiviivaa pitkin lyhintä maa- tai meripolkua (kulkutavan mukaan; tuntematon
+        /// tapa hyväksyy molemmat), lento ja polkua vailla oleva osuus isoympyränä 0,5°:n välein. null = kaupunki puuttuu.</summary>
+        static List<LatLon> OsuudenPisteet(string a, string b, Kulkutapa? tapa)
+        {
+            if (!Kaupunki(a, out var pa) || !Kaupunki(b, out var pb)) return null;
+            var v = PeliOhjain.Instanssi?.Verkko;
+            if (tapa != Kulkutapa.Lento && v != null && PeliApu.ReittiPiste != null)
+            {
+                var polku = LyhinPolku(v, a, b, tapa);
+                if (polku != null)
+                {
+                    var pisteet = new List<LatLon>();
+                    for (int i = 1; i < polku.Count && pisteet != null; i++)
+                    {
+                        if (!Kaupunki(polku[i - 1], out var q0) || !Kaupunki(polku[i], out var q1)) { pisteet = null; break; }
+                        int n = Mathf.Clamp((int)Math.Ceiling(Kameramatikka.KulmaAsteina(q0, q1) / 0.2), 6, 120);
+                        for (int k = i == 1 ? 0 : 1; k <= n; k++)
+                        {
+                            var p = PeliApu.ReittiPiste(polku[i - 1] + "|" + polku[i], (double)k / n);
+                            if (!p.HasValue) { pisteet = null; viivatKesken = true; break; }
+                            pisteet.Add(new LatLon(p.Value.Lat, p.Value.Lon));
+                        }
+                    }
+                    if (pisteet != null && pisteet.Count >= 2) return pisteet;
+                }
+            }
+            double kulma = Kameramatikka.KulmaAsteina(pa, pb);
+            int osia = Math.Max(1, (int)Math.Ceiling(kulma / 0.5));
+            var ympyra = new List<LatLon>(osia + 1);
+            for (int s = 0; s <= osia; s++) ympyra.Add(Kameramatikka.IsoympyranPiste(pa, pb, (double)s / osia));
+            return ympyra;
+        }
+
+        /// <summary>Lyhin polku (kaarien määrä) laudan maa- tai merireittejä pitkin; null, jos yli 12 kaarta tai ei yhteyttä.</summary>
+        static List<string> LyhinPolku(IReittiverkko v, string a, string b, Kulkutapa? tapa)
+        {
+            if (a == b) return null;
+            var edellinen = new Dictionary<string, string> { [a] = null };
+            var jono = new Queue<string>();
+            jono.Enqueue(a);
+            while (jono.Count > 0 && !edellinen.ContainsKey(b))
+            {
+                var c = jono.Dequeue();
+                var naapurit = v.Naapurireitit(c);
+                if (naapurit == null) continue;
+                foreach (var id in naapurit)
+                {
+                    if (!v.Reitit.TryGetValue(id, out var r)) continue;
+                    if (tapa == Kulkutapa.Meri ? r.Laji != ReitinLaji.Meri : tapa.HasValue && r.Laji != ReitinLaji.Maa) continue;
+                    string n = r.A == c ? r.B : r.A;
+                    if (n == null || edellinen.ContainsKey(n)) continue;
+                    edellinen[n] = c;
+                    jono.Enqueue(n);
+                }
+            }
+            if (!edellinen.ContainsKey(b)) return null;
+            var polku = new List<string>();
+            for (var c = b; c != null; c = edellinen[c]) polku.Add(c);
+            polku.Reverse();
+            return polku.Count <= 13 ? polku : null;
         }
 
         /// <summary>Käytyjen kaupunkien hehku kaukana: rakennetaan vain, kun kamera tai joukko muuttuu (lepo säilyy).</summary>
