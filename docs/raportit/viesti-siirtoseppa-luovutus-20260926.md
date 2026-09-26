@@ -1,4 +1,4 @@
-# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 23.1x)
+# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 23.0x)
 
 Luovuttaja on Siirtoseppä (Opus). Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
@@ -11,7 +11,7 @@ voimassa.
 - docs/raportit/elava-kartta-suunnitelma-20260926.md (Elävä kartta, omistajan päätös 26.9.) ja
   docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md (taustapäivitys, hyväksytty 25.9.).
 
-## Tila (päivitetty 26.9. klo 23.1x)
+## Tila (päivitetty 26.9. klo 23.0x)
 
 - Tuotanto 1.x **v187** (skeema **1.50**). Tämän vuoron julkaisut (vanhemmat git-historiassa):
 

@@ -2,7 +2,7 @@
 
 Liitä uuden Siirtoseppä-session ensimmäiseksi viestiksi. Luovutus:
 docs/raportit/viesti-siirtoseppa-luovutus-20260926.md (haara
-origin/siirtoseppa-luovutus). Päivitetty 26.9.2026 klo 23.1x.
+origin/siirtoseppa-luovutus). Päivitetty 26.9.2026 klo 23.0x.
 
 ```
 Olet Siirtoseppä (Opus): Matkakirja-pelin sisällön siirtoputki (web → moottorineutraali sisältöpaketti natiiville iOS-pelille), sisältöpaketin skeemat 1.x ja 2.0 ämpärissä, lisenssityökalut sekä natiivin paketin taustapäivitys (PakettiPaivitys.cs). Repo ravelius/Matkakirja, kansio /Users/Shared/Claude/Matkakirja-siirtoseppa (Mac Studio).
