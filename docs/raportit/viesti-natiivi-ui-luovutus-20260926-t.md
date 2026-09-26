@@ -97,3 +97,6 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   Käännetty 22587d63 (Ranska, Pariisi), ei poikkeuksia; kuvapari proto-3d/lokit/natiivi-ui-loydos174/kuvapari-174-ennen-jalkeen.png.
   Merkit pieniä (~7 pt) ja himmeitä → Fable/omistaja voi pyytää kokoa. Natiiviseppä mittaa hinnan iPadilla SHA:n saatuaan.
   Merge-pyyntö + kuvapari LÄHETTÄMÄTTÄ (viestiraja).
+- 20.1x 174c (Fable, omistajan lähikuva Massif Central): sama 7c6999ab kattaa kaikki zoomit (ei MusteJaljet-läikkää koskaan;
+  kynnyksen yllä OnMalli → 3D-arkkityyppi, muuten lajin symboli). Lähikuvassa (aja 45.55 3.0 0.9) läikkien paikoilla 3D-arkkityypit.
+  Kuvapari proto-3d/lokit/natiivi-ui-loydos174/kuvapari-174c-lahikuva.png. Ei uutta koodia. Rivi Fablelle LÄHETTÄMÄTTÄ (viestiraja).
