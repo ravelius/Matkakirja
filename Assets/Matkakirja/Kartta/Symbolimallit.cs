@@ -81,6 +81,7 @@ namespace Matkakirja
         {
             KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             NollaaTasot23();
+            NollaaLiikkuvat();
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -97,13 +98,8 @@ namespace Matkakirja
 
         static Symbolimallit instanssi;
 
-        /// <summary>Erikoismallit noston tunnisteen avainsanalla (Nosto.Id tai Tunnus päättyy tähän, esim. "kohde:akropolis").</summary>
-        static readonly Dictionary<string, Func<Mesh>> Mallit = new Dictionary<string, Func<Mesh>>(StringComparer.Ordinal)
-        {
-            { "akropolis", Akropolis },
-            { "delfoi", Delfoi },
-            { "meteora", Meteora },
-        };
+        // Erikoismallit noston tunnisteen avainsanalla (Nosto.Id tai Tunnus päättyy tähän, esim. "kohde:akropolis"):
+        // rekisteröinti ja liikkuvat osat Symbolimallit.Erikoismallit.cs:ssä.
         static readonly Dictionary<string, Mesh> verkot = new Dictionary<string, Mesh>();
 
         /// <summary>Noston mallitieto (lasketaan kerran noston id:llä): erikoismallin avain tai null, arkkityyppi ja taso.</summary>
@@ -181,6 +177,10 @@ namespace Matkakirja
             instanssi.Tasot23Tila(sb);
             sb.Append("; erikoismallien kolmiot:");
             foreach (var p in verkot) sb.Append(' ').Append(p.Key).Append('=').Append(p.Value.triangles.Length / 3);
+            int osiaNakyy = 0;
+            foreach (var o in liikkuvat) if (o.Nakyy) osiaNakyy++;
+            sb.Append($"; liikkuvat osat {osiaNakyy}/{liikkuvat.Count} (versio {LiikkuvatVersio})");
+            foreach (var p in osaVerkot) if (p.Value != null) sb.Append(' ').Append(p.Key).Append('=').Append(p.Value.triangles.Length / 3);
             sb.Append("; arkkityyppien kolmiot LOD0/LOD1:");
             for (int i = 0; i < ArkkityyppiKartoitus.Lukumaara; i++)
             {
@@ -237,6 +237,7 @@ namespace Matkakirja
                 if (!nyt.Contains(p.Key) && p.Value.r.enabled)
                 {
                     p.Value.r.enabled = p.Value.pohja.enabled = false;
+                    if (osatNostolla.TryGetValue(p.Key, out var osat)) PaivitaOsat(osat, false, default);
                     PallonLepo.Muuttui("symbolimallit");
                 }
             PiirraTasot23(sallittu ? nk : null);
@@ -266,7 +267,7 @@ namespace Matkakirja
                 Mesh verkko;
                 if (tieto.Erikois != null)
                 {
-                    if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Mallit[tieto.Erikois]();
+                    if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Mallit[tieto.Erikois].Runko();
                 }
                 else verkko = ArkkityypinVerkko(tieto.Tyyppi, 0);
                 var go = new GameObject("Symbolimalli-" + (tieto.Erikois ?? tieto.Tyyppi.ToString()) + "-" + s.Id);
@@ -290,13 +291,16 @@ namespace Matkakirja
                 pr.receiveShadows = false;
                 k = (go.transform, r, pr, paikka, nl, -1f);
                 kappaleet[s.Id] = k;
+                LuoOsat(s.Id, tieto.Erikois, go.transform);
             }
+            var osat = osatNostolla.TryGetValue(s.Id, out var oo) ? oo : eiOsia;
             var gt = georeferenssi.transform;
             Vector3 p = gt.TransformPoint(k.paikka);
             Vector3 kohti = kamera.transform.position - p;
             float etaisyys = kohti.magnitude;
             bool edessa = Vector3.Dot(gt.TransformDirection(k.normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) > 0.08f;
             if (k.r.enabled != edessa) { k.r.enabled = k.pohja.enabled = edessa; PallonLepo.Muuttui("symbolimallit"); }
+            PaivitaOsat(osat, edessa, p);
             if (!edessa) return;
             float koko = PisteMaailmassa(etaisyys) * KokoNyt(NostoKerros.Instanssi.ZoomKerroin) / Mathf.Max(1e-9f, gt.lossyScale.x);
             var sk = Vector3.one * koko;
@@ -306,6 +310,7 @@ namespace Matkakirja
             {
                 lohko.SetFloat(HimmeaId, h);
                 k.r.SetPropertyBlock(lohko);
+                HimmennaOsat(osat, lohko);
                 kappaleet[s.Id] = (k.t, k.r, k.pohja, k.paikka, k.normaali, h);
                 PallonLepo.Muuttui("symbolimallit");
             }
