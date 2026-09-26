@@ -309,7 +309,19 @@ function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
 export function piirraKaupunkiKartta(ui, kohde, {
   cityId = null, esittely = true, selitelista = true, kuvagalleria = true,
   otsikko = true, zoomiNapit = true, opasteet = true, kokoruutuNappi = false,
+  pelkkaKartta = false,
 } = {}) {
+  /*
+   * PELKKÄ KARTTA (kaupungin avauskortti, omistaja 27.9.2026 klo 23.4x):
+   * kortin kartan päällä EI OLE YHTÄÄN TEKSTIÄ — ei legendaa, ei
+   * "Napauta nähtävyyttä" -vihjettä, ei mittakaavaa, ei Kokoruutu-nappia
+   * — ja kartan MINKÄ TAHANSA kohdan napautus (myös piirroksen) avaa
+   * suurennoksen, jossa nähtävyydet avataan. Muut latojat ennallaan.
+   */
+  if (pelkkaKartta) {
+    esittely = false; selitelista = false; kuvagalleria = false; otsikko = false;
+    zoomiNapit = false; opasteet = false; kokoruutuNappi = false;
+  }
   const kaupunkiId = cityId ?? ui.lehtitila.arrivalShownFor;
   const kartta = KAUPUNKIKARTAT[kaupunkiId];
   if (!kartta) return;
@@ -406,6 +418,8 @@ export function piirraKaupunkiKartta(ui, kohde, {
   if (laajennettu) {
     kehys.classList.add('kartta-laajennettu');
     kehys.style.aspectRatio = String(karttaKuvasuhde(kartta.rajat));
+    // Avauskortin kiinteä kaista rajaa kartan tällä suhteella (css/kaupunkinosto.css).
+    kehys.style.setProperty('--kartta-suhde', String(karttaKuvasuhde(kartta.rajat)));
     kotelo.classList.add('kartta-laajennettu');
     kotelo.style.aspectRatio = String(karttaKuvasuhde(kartta.piirtoRajat));
     kotelo.style.width = `${(10000 / ydin.leveys).toFixed(4)}%`;
@@ -444,6 +458,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     const mitoitaKehys = () => {
       if (kuva.naturalWidth && kuva.naturalHeight) {
         kehys.style.aspectRatio = `${kuva.naturalWidth} / ${kuva.naturalHeight}`;
+        kehys.style.setProperty('--kartta-suhde', String(kuva.naturalWidth / kuva.naturalHeight));
       }
     };
     if (kuva.complete) mitoitaKehys();
@@ -475,7 +490,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
    * heti ensimmäisellä kokomuutoksella. Prosentti pitää janan
    * oikeana joka leveydellä.
    */
-  const jana = mittakaava(kartta);
+  const jana = pelkkaKartta ? null : mittakaava(kartta);
   if (jana) {
     const mitta = html('div', 'kartta-mittajana');
     mitta.style.width = `${jana.osuus.toFixed(2)}%`;
@@ -902,6 +917,23 @@ export function piirraKaupunkiKartta(ui, kohde, {
    *     tuplanapautuksen palautukselle;
    *   - useamman sormen ele (nipistys), joka ei ole napautus lainkaan.
    */
+  if (pelkkaKartta) {
+    /*
+     * Kortissa napautus ei valitse piirrosta eikä avaa juttua: se avaa
+     * aina suurennoksen (kaappausvaiheessa, ennen kohteiden omia
+     * kuuntelijoita). Raahaus ei ole napautus (6 px:n raja kuten alla).
+     */
+    lohko.classList.add('kaupunkikartta-pelkka');
+    let alku = null;
+    kehys.addEventListener('pointerdown', (e) => { alku = e.isPrimary ? { x: e.clientX, y: e.clientY } : null; }, true);
+    kehys.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (alku && Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > 6) return;
+      sfx.play('paper');
+      avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit: true, kortista: true });
+    }, true);
+  }
   let napautus = null;
   kehys.addEventListener('pointerdown', (e) => {
     if (!e.isPrimary || (e.pointerType === 'mouse' && e.button !== 0)) {
@@ -912,6 +944,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
   });
   kehys.addEventListener('pointercancel', () => { napautus = null; });
   kehys.addEventListener('pointerup', (e) => {
+    if (pelkkaKartta) return;
     const alku = napautus;
     napautus = null;
     if (!alku || !e.isPrimary || alku.valinta) return;
@@ -1515,7 +1548,22 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     e.stopPropagation();
     ui.suljeKulttuuriKuva();
   });
-  ui.suurennosIsanta().appendChild(kortti);
+  /*
+   * AVAUSKORTISTA AVATTU SUURENNOS (omistaja 27.9.2026 klo 23.4x): lähes
+   * koko ruudun popup sumennetun taustan päällä, kartan ulkopuoli
+   * vaalea. Kaupunkikortti ei ole dialogi, joten isäntä on body ja
+   * huntu on oma (suljeKulttuuriKuva purkaa molemmat).
+   */
+  if (asetukset.kortista) {
+    kortti.classList.add('kartta-suurennos-kortista');
+    const huntu = html('div', 'kartta-suurennos-huntu');
+    huntu.addEventListener('click', () => ui.suljeKulttuuriKuva());
+    document.body.appendChild(huntu);
+    ui.lehtitila.kulttuuriHuntuEl = huntu;
+    document.body.appendChild(kortti);
+  } else {
+    ui.suurennosIsanta().appendChild(kortti);
+  }
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
   /*
