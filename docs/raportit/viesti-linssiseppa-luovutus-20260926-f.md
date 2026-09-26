@@ -127,3 +127,18 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   Lepopiirto säilyy, ja tapahtuma herättää piirron vain 3 s:ksi.
 - Worktreet: wt/proto-linssiseppa (lykatty-data, junassa), wt/proto-linssiseppa-aanet (tehoste-rekisteri, junassa),
   wt/proto-linssiseppa-elava (muste-jaljet). Mergetyt haarat voi poistaa, kun build 19 on masterissa.
+
+## Päivitys klo 08.3x: kohta 4, oma osuus koodattu (build 19 = master 41dd79c7)
+
+- **Haara linssiseppa/kirjoitettu-maailma 89b054e8** (wt/proto-linssiseppa-elava, juna/b13 427e1a1a:n päällä):
+  - Linssit/Unity/ElavaMatka.cs: kuljettu reitti Kynaviiva-kynänjälkenä (punainen muste, isoympyräkaaret). Uusin osuus
+    piirtyy 1,1 s:ssa, kun reitti kasvaa. Muuten viiva on staattinen, ja PallonLepo herää vain piirron ajaksi.
+  - Hehku: käydyt kaupungit hehkuvat kaukana (Pehmeapiste lisäävänä). Hehku alkaa 2 500 km:stä ja on täysi 6 000 km:ssä,
+    ja takapuoli karsitaan. Viiva häipyy alle 25 km:n korkeudella.
+  - Kynaviiva: valinnainen horisonttirajaus `_Keskus.w = 1`. Videon viivat ovat ennallaan.
+  - Komento: `elava reitti <kaupungit…> | pois`.
+  - ElavaMatka.Reitti (Func) odottaa Pelikoodarin KuljettuReittiä, joka on pyydetty 08.0x. Ilman sitä hehku tulee
+    joukosta Pelaaja.Kaydyt.
+- **Käännös:** jonossa TestFlight-lukon (08.28) ja junan 427e1a1a jälkeen. Taustalla ketjutettuna on scratchpad
+  `ajo-matka.sh`, joka ottaa kuvat kaukaa, Euroopasta, piirtymisestä, läheltä, takapuolelta ja pois-tilasta
+  (lokit/linssiseppa-matka-20260926/). Sitten kuvapari omistajalle ja Fablelle, .meta Unitylta ja merge-pyyntö.
