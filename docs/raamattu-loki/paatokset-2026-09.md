@@ -7287,3 +7287,7 @@ Omistaja 19.4x: maakunta-asiat (170:n puuttuvat maakuntanostokuvat, maakunta-era
 ## SISALTOKIRJURI NOLLATTU JA KAYNNISTETTY (LUOVUTUS -C 5D32676ED) (26.9.2026 klo 19.48)
 
 Sisaltokirjurin sessio nollattu 19.4x; aloitusviesti lahetetty luovutuksesta -c (5d32676ed). Jono: 170 Euroopan puuttuvat maakuntanostokuvat yhtena erana → maakunta-era 2 → astronautin erat 2–4.
+
+## 170 EUROOPPA: 21 (+6) KUVAA (26.9.2026 klo 19.48)
+
+Siirtoseppa: Euroopassa 21 maakuntanostoa 14 maassa ilman kuvaa (19 skandaalia, 2 takynostoa; SWE 3, FRA/HUN/LTU/NOR/PRT 2, muut 1); lisaksi CYP/TUR/RUS 2 kukin manner-rajauksen ulkopuolella. Fable: Sisaltokirjuri tekee 27 kuvaa yhtena PR:na (Eurooppa + CYP/TUR/RUS).
