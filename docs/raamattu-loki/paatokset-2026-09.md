@@ -7763,3 +7763,7 @@ Julkaisija 01.37: #3365 mainissa v2292, testit 4413/0, Pollon julkaisu -ajo 3627
 ## OMISTAJA HYVAKSYI PULUN KAIUTINVIVUN (PR 3366) → JUNAAN; NATIIVI-UI TEKEE NATIIVIN (27.9.2026 klo 01.43)
 
 Omistaja 01.4x kortilla: Pulun paneelin kaiutinnappi (pois himmea + yliviivattu, paalla kulta + aaniaallot) hyvaksytty → #3366 Julkaisijan junaan; Natiivi-UI tekee natiivin saman mallin mukaan 1.0.28-junaan.
+
+## MAASTOKORKEUS c581b2ba 1.0.28:AAN (SYMBOLIT ELLIPSOIDIN KORKEUDELLA 0 → x2 MAASTO PEITTAA); 1.0.27 LAHTEE 52ea3d10 (27.9.2026 klo 01.44)
+
+Natiiviseppa 01.4x: Mallinsepan loydoksen juurisyy — kaikki symbolimallit (arkkityypit, Kreikan erikoismallit) istuvat ellipsoidin korkeudella 0, jolloin x2 liioiteltu maasto peittaa ne vuorilla (Olympos); korjaus natiiviseppa/maastokorkeus c581b2ba (pinnan korkeus Cesiumista erissa, tasot 1–3), kaannos 0 virhetta, laitteella todentamatta. Fable paatti: 1.0.28:aan (Laitetestaajan kierros d7705537 4/4 PASS ilman hautautuneita), TF 1.0.27 lahtee junasta 52ea3d10 nyt. Kategoriamallit ddd9b867 = juna + perspektiivi + maasto, Mallinseppa rebasettaa.
