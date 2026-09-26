@@ -59,6 +59,11 @@ namespace Matkakirja
             public Func<Mesh> Lod1;
             /// <summary>Valinnainen kolmioarvio (tarkistukseen; oikea luku `symbolit tila` -rivillä).</summary>
             public int Kolmiot0;
+            /// <summary>
+            /// Ruutukoko suhteessa tason 1 malliin (<see cref="KokoNyt"/>). Omistajan hyväksymä esitys 21.5x: erikoismalli
+            /// 1,5 × kategoriasymboli (≈ 60 pt), löydös 175c: enintään 40 pt; oletus 1 = 175c, Mallinseppä asettaa mallikohtaisesti.
+            /// </summary>
+            public float KokoKerroin = 1f;
         }
 
         /// <summary>Yksi näkyvä liikkuva osa kartalla (Linssisepän animoijalle).</summary>
