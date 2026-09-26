@@ -17,7 +17,9 @@ namespace Matkakirja
     ///       targetTexture antaa leveyden; Cesium lukee pixelWidth/pixelHeight/fieldOfView). Suunta ei ole vielä tiedossa.
     ///   lennon alku (Nappula, kohde tiedossa): yksi tarkka kamera avausasentoon, kiilat pois.
     ///   mustan loppu: kaikki pois.
-    /// Kehittäjälippu A/B: PlayerPrefs matkakirja-avauskamerat 0 = pois (oletus päällä).
+    /// KOKEILU, OLETUS POIS (kehittäjälippu matkakirja-avauskamerat 1): mitattuna huonompi kuin ilman (lokit/laatta-esilataus/
+    /// b-taysi-kamera: avaus 16,8 s, ilman 7,3–8,1 s; kiilat 18,7 s). Geometrinen esilataus (KarttaKerrokset.EsilataaAvaus)
+    /// on käytössä.
     /// </summary>
     public static class AvausKamerat
     {
@@ -32,7 +34,7 @@ namespace Matkakirja
             get
             {
 #if !MATKAKIRJA_APPSTORE
-                if (lippu < 0) lippu = PlayerPrefs.GetInt("matkakirja-avauskamerat", 1);
+                if (lippu < 0) lippu = PlayerPrefs.GetInt("matkakirja-avauskamerat", 0);
                 return lippu != 0;
 #else
                 return true;

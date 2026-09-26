@@ -16,7 +16,9 @@ namespace Matkakirja
     /// z* = ⌈log2(<see cref="Kerroin"/> / d) + siirto⌉ (d = laatan etäisyys kamerasta km; maasto: geometrinen virhe
     /// 77 067 m / 2^z ≤ 16 px SSE 2 400 px:n ruudulla ja fov 50°: 2^z ≈ 98 000 / d; rasterit ovat Web Mercatorissa noin
     /// 0,7 tasoa maastoa tarkempia samalla etäisyydellä, siirto 0,7). Esivanhemmat tulevat mukaan (Cesium lataa tason
-    /// kerrallaan). Järjestys: karkein taso ensin, kamerasta lähin ensin.
+    /// kerrallaan). Järjestys: karkein taso ensin, kamerasta lähin ensin. kiila = false: vain lähialue (suunnasta riippumaton
+    /// osa; aloitusnäyttö ennen kohteen valintaa). Tarkkuus 34 % (867 haettua, noin 500 tarvittua), mutta lennon alussa
+    /// haettuna avaus valmistui kylmänä 5,3 s:ssa (ilman 7,3–8,1 s; lokit/laatta-esilataus/b-geom, b-pois).
     /// Puhdas funktio (ei Unityä): Peli-testit/Testit/AvausLaatatTestit.cs.
     /// </summary>
     public static class AvausLaatat
@@ -29,7 +31,7 @@ namespace Matkakirja
         /// muuten Web Mercator XYZ (y pohjoisesta). siirto = tasosiirto maastoon nähden (rasterit 0,7).
         /// </summary>
         public static List<(int z, int x, int y)> Laatat(bool maantieteellinen, int zMin, int zMax, double siirto,
-            double lat0, double lon0, double etaisyysKm, double kallistus, double suunta)
+            double lat0, double lon0, double etaisyysKm, double kallistus, double suunta, bool kiila = true)
         {
             double maa = etaisyysKm * Math.Sin(Rad(kallistus)), alt = etaisyysKm * Math.Cos(Rad(kallistus));
             var (cla, clo) = Kohde(lat0, lon0, (suunta + 180.0) % 360.0, maa);
@@ -58,7 +60,7 @@ namespace Matkakirja
                         // Horisontti: pinnan normaali ei saa osoittaa kamerasta poispäin.
                         if (Dot(w, P) / (dc * Pit(P)) > 0.05) continue;
                         bool lahella = Pit(Sub(P, T)) < Lahiala;
-                        if (!lahella && Dot(w, f) / dc < ck) continue;
+                        if (!lahella && (!kiila || Dot(w, f) / dc < ck)) continue;
                         int tarve = (int)Math.Ceiling(Math.Log(Kerroin / dc, 2) + siirto + Lisa);
                         if (z <= Math.Min(tarve, zMax)) tulos.Add((z, x, y, dc));
                     }

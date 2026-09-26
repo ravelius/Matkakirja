@@ -1322,10 +1322,7 @@ namespace Matkakirja
         /// <summary>Käynnissä oleva aloituslennon avausnäkymän esilataus (EsilataaAvaus); null = ei aloitettu.</summary>
         public Laattapalvelin.Esilataus AvausEsilataus { get; private set; }
 
-        /// <summary>
-        /// Kehittäjälippu: geometrinen avauksen esilataus päälle (PlayerPrefs matkakirja-avaus-esilataus 1). Oletus pois:
-        /// malli ennusti 2–3-kertaisen joukon (tarkkuus 20–35 %), ja AvausKamerat antaa Cesiumin valita laatat itse.
-        /// </summary>
+        /// <summary>Kehittäjälippu A/B-mittaukseen: avauksen esilataus pois (PlayerPrefs matkakirja-avaus-esilataus 0).</summary>
         public static bool AvausEsilatausPaalla
         {
             get
@@ -1333,7 +1330,7 @@ namespace Matkakirja
 #if !MATKAKIRJA_APPSTORE
                 if (avausLippu < 0)
                 {
-                    avausLippu = PlayerPrefs.GetInt("matkakirja-avaus-esilataus", 0);
+                    avausLippu = PlayerPrefs.GetInt("matkakirja-avaus-esilataus", 1);
                     AvausLaatat.Saada(PlayerPrefs.GetString("matkakirja-avaus-malli", ""));
                 }
                 return avausLippu != 0;
@@ -1351,10 +1348,10 @@ namespace Matkakirja
         /// (AvausLaatat: lähialue ja katseen kiila): pohja Z6–Z9, lennon pinta (Blue Marble) Z6–huippu ja maasto Z6–Z8.
         /// Verholle = tosi (palvellaan verhon kevennyksessäkin). Edellinen perutaan.
         /// </summary>
-        public Laattapalvelin.Esilataus EsilataaAvaus(double lat0, double lon0, double etaisyysM, double kallistus, double suunta)
+        public Laattapalvelin.Esilataus EsilataaAvaus(double lat0, double lon0, double etaisyysM, double kallistus, double suunta,
+            bool kiila = true)
         {
-            AvausEsilataus?.Peru();
-            AvausEsilataus = null;
+            if (kiila) { AvausEsilataus?.Peru(); AvausEsilataus = null; }
             if (!AvausEsilatausPaalla) return null;
             double km = etaisyysM / 1000.0;
             var polut = new List<string>();
@@ -1376,7 +1373,7 @@ namespace Matkakirja
             int maastoN = 0;
             if (maastoPohja != null && Laattapalvelin.MaastoPolku != null)
             {
-                foreach (var (z, x, y) in AvausLaatat.Laatat(true, 6, 8, 0.0, lat0, lon0, km, kallistus, suunta))
+                foreach (var (z, x, y) in AvausLaatat.Laatat(true, 6, 8, 0.0, lat0, lon0, km, kallistus, suunta, kiila))
                 {
                     if (!MaastoLaatat.Saatavilla(maastoSaatavuus, z, x, y)) continue;
                     string p = Laattapalvelin.MaastoPolku + maastoPohja.Replace("{z}", z.ToString()).Replace("{x}", x.ToString())
@@ -1385,15 +1382,32 @@ namespace Matkakirja
                 }
             }
             int ennen = polut.Count;
-            Lisaa(PohjaMalli(), true, AvausLaatat.Laatat(false, 6, 9, 0.7, lat0, lon0, km, kallistus, suunta));
+            Lisaa(PohjaMalli(), true, AvausLaatat.Laatat(false, 6, 9, 0.7, lat0, lon0, km, kallistus, suunta, kiila));
             int pohjaN = polut.Count - ennen;
-            Lisaa(pinta, true, AvausLaatat.Laatat(false, 6, huippu, 0.7, lat0, lon0, km, kallistus, suunta));
-            var e = Laattapalvelin.Esilataa(polut);
-            e.Verholle = true;
-            AvausEsilataus = e;
-            Debug.Log($"MATKAKIRJA aloituslento: avauksen esilataus {polut.Count} laattaa (maasto {maastoN}, pohja {pohjaN}, " +
-                      $"pinta {polut.Count - ennen - pohjaN}; {km:0} km {kallistus:0}° {suunta:0}°)");
+            Lisaa(pinta, true, AvausLaatat.Laatat(false, 6, huippu, 0.7, lat0, lon0, km, kallistus, suunta, kiila));
+            var e = new Laattapalvelin.Esilataus { Verholle = kiila };
+            if (kiila) AvausEsilataus = e;
+            // Esilataajan jonossa (build 22): lähialue aloitusnäytössä tasolla SeuraavaRuutu, kiila lennon alussa Nakyva
+            // (musta verho odottaa sitä). Laattapalvelin hakee itse; tehtävä pitää paikan, kunnes erä on käsitelty.
+            StartCoroutine(Esilataaja.Tehtava(kiila ? Taso.Nakyva : Taso.SeuraavaRuutu, kiila ? "avaus-kiila" : "avaus-lahi",
+                () => LaattaEra(polut, e), laatta: true, peruttu: () => e.Peruttu));
+            Debug.Log($"MATKAKIRJA aloituslento: avauksen esilataus {(kiila ? "kiila" : "lähialue")} {polut.Count} laattaa (maasto {maastoN}, " +
+                      $"pohja {pohjaN}, pinta {polut.Count - ennen - pohjaN}; {km:0} km {kallistus:0}° {suunta:0}°)");
             return e;
+        }
+
+        System.Collections.IEnumerator AvausLahialue()
+        {
+            float raja = Time.unscaledTime + 20f;
+            while (maastoPohja == null && Time.unscaledTime < raja) yield return null;
+            EsilataaAvaus(AloitusLahtoLat, AloitusLahtoLon, LennonAikajana.AloitusAvausM, LennonAikajana.AloitusAvausKallistus, 0, kiila: false);
+        }
+
+        /// <summary>Esilataaja.Tehtava-korutiini: laatat Laattapalvelimen esilataukseen ja odotus, kunnes ne on käsitelty.</summary>
+        static System.Collections.IEnumerator LaattaEra(List<string> polut, Laattapalvelin.Esilataus e)
+        {
+            Laattapalvelin.Esilataa(polut, e);
+            while (!e.Peruttu && e.Osuus < 1f) yield return null;
         }
 
         /// <summary>Maaston tiles-pohja ja saatavuus (EsilataaAloitusMaasto lukee layer.jsonin; EsilataaAvaus käyttää).</summary>
@@ -1583,7 +1597,10 @@ namespace Matkakirja
             {
                 aloitusEsiladattu = true;
                 EsilataaAloituslahto();
-                // Avausnäkymän virtuaalikamerat (build 22): Cesium lataa aloituslennon avauksen laatat kaikkiin suuntiin.
+                // Aloituslennon avauksen lähialue (build 22): suunnasta riippumaton osa jo aloitusnäytössä; kiila lennon alussa.
+                // Vaatii maaston layer.jsonin (EsilataaAloitusMaasto), joten odottaa sitä.
+                StartCoroutine(AvausLahialue());
+                // Avausnäkymän virtuaalikamerat (kokeilu, kehittäjälippu): Cesium lataa avauksen laatat kaikkiin suuntiin.
                 if (avausKierto == null) avausKierto = FindAnyObjectByType<PalloKierto>();
                 AvausKamerat.Kiilat(avausKierto, pallo, AloitusLahtoLat, AloitusLahtoLon, LennonAikajana.AloitusAvausM,
                     LennonAikajana.AloitusAvausKallistus);
