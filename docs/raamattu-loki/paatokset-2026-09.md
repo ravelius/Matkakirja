@@ -7755,3 +7755,7 @@ Sisaltokirjuri nollattu 01.4x (93 % → tyhja), luovutus docs/raportit/viesti-si
 ## YLHAALTA-175 JA STRIIMIAANI JUNASSA 52ea3d10, KAANNOS d7705537 → LAITETESTAAJAN KIERROS (27.9.2026 klo 01.40)
 
 Natiiviseppa 01.4x: juna/b13 52ea3d10 = ylhaalta-175 d65986ae (junamerge 01b56f53) + natiivi-ui/striimiaani 0677592b; unity-tarkistus 0, Kartta-testit 309/309; kaannos d7705537 Laitetestaajan simulaattoreissa ja FB234D08; savuke FBBD41D7 0 poikkeusta, verho 2,6 s. Laitetestaajan lyhyt kierros (perspektiivi, lippu, savuke, 177) → PASS → master → TF 1.0.27.
+
+## XAI ARA TUOTANNOSSA (#3365 v2292, POLLON JULKAISU OK); 1.0.27 PASS 4/4 → MASTER + TF; KAIUTINVIPU PR 3366; #3364 BUILD-KORJAUS (27.9.2026 klo 01.43)
+
+Julkaisija 01.37: #3365 mainissa v2292, testit 4413/0, Pollon julkaisu -ajo 36276852325 ok, XAI_API_KEY workerin salaisuutena; puhepyynto (persoona pollo) 200 audio/mpeg, ensimmainen tavu 0,59 s workerin kautta, 24 kHz mono — moottori ei nay vastauksessa (jatkokehitys: x-puhe-moottori-otsake). #3363 mergessa; #3364 odottaa Pelikoodarin build-korjausta (lehtiosiot.js puuttuu MODULES-listalta). Laitetestaaja 01.4x: d7705537 painopistekierros 4/4 PASS (ylhaalta-perspektiivi, lippu, savuke, 177; raportti savukierros-tf1027b-20260927.md b61b29bdf) → Natiiviseppa mergeaa masteriin ja lahettaa TF 1.0.27. Pelikoodari: Pulun kaiutinvipu PR #3366 (paalla kulta + aaniaallot, pois himmea + vinoviiva; kuvaparit pulu-kaiutin-web/) → omistajan kortti.
