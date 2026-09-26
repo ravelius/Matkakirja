@@ -11119,4 +11119,1831 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Muharraqin helmipolku kulkee 3,5 kilometriä helmikauppiaiden talojen ohi, ja se on Unescon maailmanperintöä.',
     },
   },
+  /*
+   * AGO (erä 9A). Avaimet MAAKUNNAT_KAIKKI.AGO:n tunnuksia TÄSMÄLLEEN
+   * ("Bié", "Huíla", "Uíge" diakriitteineen). Vain `lyhyt`. Vältetty
+   * maastokohteet-ago.js:n aiheet (Morro de Moco, Cuanza, M'banza-Kongo,
+   * São Miguel, Kalandula, Quiçama, Iona, Moçâmedes, Benguelan rata,
+   * Cuito Cuanavale). Lähteet (en-/pt-Wikipedia ja haku 25.9.2026):
+   *   Bengo — Bengo Province (Angolatitan); Benguela — Lobito; Bié —
+   *   Kuito; Cabinda — Cabinda Province; Cuando Cubango — Okavango River;
+   *   Cuanza Norte — Church of Nossa Senhora da Victoria (Massangano);
+   *   Cuanza Sul — Cachoeiras do Binga (verangola.net); Cunene — Cunene
+   *   Province; Huambo — Huambo; Huíla — Tundavala Gap; Luanda — Ilha de
+   *   Luanda; Lunda Norte — Dundo Museum; Lunda Sul — Catoca diamond mine;
+   *   Malanje — Cangandala National Park; Moxico — Zambezi; Namibe —
+   *   Welwitschia; Uíge — Uíge; Zaire — Soyo
+   */
+  AGO: {
+    Bengo: {
+      lyhyt: 'Bengosta kaivettiin Angolatitan adamastor, ensimmäinen Angolasta löydetty dinosauruksen luuranko.',
+    },
+    Benguela: {
+      lyhyt: 'Lobiton satama on Afrikan parhaita luonnonsatamia, ja sitä suojaa noin viiden kilometrin mittainen hiekkasärkkä.',
+    },
+    "Bié": {
+      lyhyt: 'Kuito on Bién ylängöllä lähes 1 700 metrin korkeudessa, ja siksi kaupungin vuoden keskilämpö on vain noin 18 astetta.',
+    },
+    Cabinda: {
+      lyhyt: 'Cabinda on Angolan erillisalue: Kongon demokraattisen tasavallan kapea rannikkokaistale erottaa sen muusta maasta.',
+    },
+    "Cuando Cubango": {
+      lyhyt: 'Cubango-joki virtaa täältä kohti Botswanaa, jossa se Okavangona levittäytyy Kalaharin suistoksi eikä koskaan saavu mereen.',
+    },
+    "Cuanza Norte": {
+      lyhyt: 'Massanganon Nossa Senhora da Vitória -kirkko rakennettiin 1580-luvulla, ja se on Unescon maailmanperinnön alustavalla listalla.',
+    },
+    "Cuanza Sul": {
+      lyhyt: 'Keve-joen Bingan putoukset Sumben lähellä ovat maakunnan suosituimpia retkikohteita, ja rannalla on piknikpaikkoja.',
+    },
+    Cunene: {
+      lyhyt: 'Cunenen asukkaat ovat enimmäkseen ovambopaimentolaisia, jotka siirtävät karjalaumojaan laitumelta toiselle vuodenaikojen mukaan.',
+    },
+    Huambo: {
+      lyhyt: 'Huambo perustettiin 1912 yli 1 700 metrin korkeuteen, ja siirtomaa-aikana kaupunki tunnettiin nimellä Nova Lisboa.',
+    },
+    "Huíla": {
+      lyhyt: 'Lubangon lähellä Tundavalan rotkon reunalta putoaa noin tuhannen metrin jyrkänne alas tasangolle.',
+    },
+    Luanda: {
+      lyhyt: 'Luandan Ilhalla on rantaravintoloita ja yökerhoja, ja sen Nossa Senhora do Cabo -kirkko oli portugalilaisten ensimmäinen Angolassa.',
+    },
+    "Lunda Norte": {
+      lyhyt: 'Dundon museo avattiin 1936 Angolan ensimmäisenä museona, ja sen kokoelmissa on tuhansia tšokwe-kansan esineitä.',
+    },
+    "Lunda Sul": {
+      lyhyt: 'Saurimon lähellä on Catocan timanttikaivos, maailman neljänneksi suurin, ja siellä louhitaan kimberliittipiippua.',
+    },
+    Malanje: {
+      lyhyt: 'Cangandalan kansallispuisto perustettiin 1970 suojelemaan mustahevosantiloopin jättiläisalalajia, Angolan kansallista tunnusta.',
+    },
+    Moxico: {
+      lyhyt: 'Sambesi syntyy Sambiassa, mutta ennen paluutaan se mutkittelee Moxicon kautta noin 240 kilometriä Angolan puolella.',
+    },
+    Namibe: {
+      lyhyt: 'Namiben aavikolla kasvaa welwitschia, jolla on koko elämänsä ajan vain kaksi lehteä; vanhimmat yksilöt voivat olla 2 000-vuotiaita.',
+    },
+    "Uíge": {
+      lyhyt: 'Noin 860 metrin korkeudella sijaitseva Uíge kasvoi 1950-luvulla Angolan kahvinviljelyn keskukseksi.',
+    },
+    Zaire: {
+      lyhyt: 'Kongojoen suulla sijaitseva Soyo on nykyään Angolan suurinta öljyntuotantoaluetta.',
+    },
+  },
+  /*
+   * COD (erä 9A). Avaimet MAAKUNNAT_KAIKKI.COD:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin vanha 11 provinssin jako: "Bandundu", "Bas-Congo",
+   * "Kinshasa City", "Orientale" ym.). Vain `lyhyt`. Vältetty
+   * maastokohteet-cod.js:n aiheet (Stanley, Tanganjika, Kongo, Inga,
+   * Boyoma, Virunga, Kahuzi-Biéga, Salonga, Garamba, Upemba, Lubumbashin
+   * kaivokset). Lähteet (en-Wikipedia 25.9.2026):
+   *   Bandundu — Lake Mai-Ndombe; Équateur — Mbandaka; Sud-Kivu — Idjwi;
+   *   Kasaï-Occidental — Kuba textiles; Kasaï-Oriental — Mbuji-Mayi;
+   *   Katanga — Katanga Cross; Bas-Congo — Matadi; Kinshasa City —
+   *   Congolese rumba; Maniema — Kindu; Orientale — Okapi Wildlife
+   *   Reserve; Nord-Kivu — Lake Kivu
+   */
+  COD: {
+    Bandundu: {
+      lyhyt: 'Mai-Ndombe-järven nimi tarkoittaa mustaa vettä, ja sadekaudella järvi voi paisua kaksin- tai kolminkertaiseksi.',
+    },
+    "Équateur": {
+      lyhyt: 'Mbandakan kaupungintalolta on vain noin neljä kilometriä päiväntasaajalle, ja Stanley antoi paikalle 1883 nimen Équateurville.',
+    },
+    "Sud-Kivu": {
+      lyhyt: 'Kivujärven Idjwi on Afrikan toiseksi suurin järvisaari, ja sinne pääsee veneellä Bukavusta.',
+    },
+    "Kasaï-Occidental": {
+      lyhyt: 'Kuba-kansan miehet kutovat raffiakankaan, ja naiset kirjovat siihen samettimaisia geometrisia kuvioita.',
+    },
+    "Kasaï-Oriental": {
+      lyhyt: 'Mbuji-Mayin nimi tarkoittaa tshilubaksi vuohivettä, ja kaupunki on rakentunut maailman suurimpiin kuuluvan timanttiesiintymän päälle.',
+    },
+    Katanga: {
+      lyhyt: 'Katangan ristit, noin kilon painoiset ristinmuotoiset kupariharkot, kelpasivat maksuvälineinä vielä 1900-luvun alussa.',
+    },
+    "Bas-Congo": {
+      lyhyt: 'Matadi tarkoittaa kikongoksi kiveä: kaupunki on rakennettu jyrkille rinteille, ja sinne asti valtamerilaivat pääsevät jokea ylös.',
+    },
+    "Kinshasa City": {
+      lyhyt: 'Kongolainen rumba, Kinshasan tunnetuin musiikkityyli, lisättiin 2021 Unescon aineettoman kulttuuriperinnön luetteloon.',
+    },
+    Maniema: {
+      lyhyt: 'Kindussa Lubumbashista tuleva rautatie päättyy Lualaba-joen rantaan, ja tavarat siirretään junasta jokiveneisiin.',
+    },
+    Orientale: {
+      lyhyt: 'Iturin sademetsän okapireservaatissa elää tuhansia okapeja, kirahvin sukulaisia; se on Unescon maailmanperintöä vuodesta 1996.',
+    },
+    "Nord-Kivu": {
+      lyhyt: 'Gomaan rajautuvan Kivujärven syvänteisiin on liuennut valtavasti metaania, jota voidaan pumpata ylös sähköntuotantoon.',
+    },
+  },
+  /*
+   * CMR (erä 9A). Avaimet MAAKUNNAT_KAIKKI.CMR:n tunnuksia TÄSMÄLLEEN
+   * (ranskankieliset "Extrême-Nord", "Nord-Ouest" ym.). Vain `lyhyt`.
+   * Vältetty maastokohteet-cmr.js:n aiheet (Kamerunvuori, Sanaga,
+   * Foumban, Dja, Bimbia, Rhumsiki, Waza, Kribi, Korup, Ngaoundéré).
+   * Lähteet (en-/fr-Wikipedia ja haku 25.9.2026):
+   *   Adamaoua — Adamawa Plateau; Centre — Yaoundé; Est — Lobéké
+   *   National Park; Extrême-Nord — Musgum mud huts; Littoral — La
+   *   Nouvelle Liberté; Nord-Ouest — Fon of Bafut; Nord — Bénoué National
+   *   Park; Sud — Campo Ma'an National Park; Sud-Ouest — Limbe Botanic
+   *   Garden; Ouest — Bandjoun
+   */
+  CMR: {
+    Adamaoua: {
+      lyhyt: 'Adamawan ylänkö kohoaa keskimäärin tuhanteen metriin, ja sen ruohoisilla laitumilla karjankasvatus on pääelinkeino.',
+    },
+    Centre: {
+      lyhyt: 'Yaoundéta kutsutaan seitsemän kukkulan kaupungiksi, ja noin 730 metrin korkeudessa se on rannikkoa viileämpi.',
+    },
+    Est: {
+      lyhyt: 'Lobéken sademetsän aukeille, baihin, kerääntyy eläimiä kivennäispitoisen maan ja veden äärelle.',
+    },
+    "Extrême-Nord": {
+      lyhyt: 'Musgum-kansan savimajat kohoavat jopa yhdeksään metriin, ja niiden kylkien kohokuviot toimivat rakentajien askelmina.',
+    },
+    Littoral: {
+      lyhyt: 'Doualan Deïdon liikenneympyrässä seisoo La Nouvelle Liberté, 12-metrinen romumetallista koottu veistos vuodelta 1996.',
+    },
+    "Nord-Ouest": {
+      lyhyt: 'Bafutin fonin palatsissa on Achum, pyramidimaisen olkikaton pyhäkkö, jonne saavat astua vain fon ja kylän arvohenkilöt.',
+    },
+    Nord: {
+      lyhyt: 'Bénouén kansallispuisto on harvoja paikkoja, joissa voi nähdä jättiläisilandin, Afrikan suurimman antiloopin.',
+    },
+    Sud: {
+      lyhyt: "Campo Ma'anin kansallispuistossa sademetsä ulottuu Atlantin rantaan asti Päiväntasaajan Guinean rajalla.",
+    },
+    "Sud-Ouest": {
+      lyhyt: 'Limben kasvitieteellinen puutarha perustettiin 1892, ja sitä pidettiin aikanaan yhtenä maailman tärkeimmistä trooppisista puutarhoista.',
+    },
+    Ouest: {
+      lyhyt: 'Bandjounin päällikkökunta on bamilekejen suurimpia, ja sen suuren majan olkikattoa kannattelevat veistetyt puupylväät.',
+    },
+  },
+  /*
+   * TCD (erä 9A). Avaimet MAAKUNNAT_KAIKKI.TCD:n tunnuksia TÄSMÄLLEEN
+   * ("Ville de N'Djamena" suoralla heittomerkillä, "Guéra", "Ouaddaï",
+   * "Tandjilé"). Vain `lyhyt`. Vältetty maastokohteet-tcd.js:n aiheet
+   * (Emi Koussi, Tšadjärvi, Chari, Guelta d'Archei ja kalliomaalaukset,
+   * Aloba, Ounianga, Zakouma, Fitri, Manda, Abéché ja Ouara, Iro).
+   * Lähteet (en-/fr-Wikipedia ja haku 25.9.2026):
+   *   Barh El Gazel — Bahr el-Ghazal (wadi in Chad); Batha — Ouadi
+   *   Rimé-Ouadi Achim Faunal Reserve; Borkou — Bodélé Depression;
+   *   Chari-Baguirmi — Massenya; Ennedi — Ennedi Plateau; Guéra —
+   *   Hadjarai; Hadjer-Lamis — Hadjer-Lamis (fr) ja Hadjer el Hamis
+   *   (haku); Kanem — dihé (Slow Food, UNESCO); Lac — Kuri cattle; Logone
+   *   Occidental — Moundou; Logone Oriental — Chad–Cameroon pipeline;
+   *   Mandoul — Mandoul Region; Mayo-Kebbi Est — Bongor (fr); Mayo-Kebbi
+   *   Ouest — Gauthiot Falls; Moyen-Chari — Sarh; N'Djamena —
+   *   N'Djamena; Ouaddaï — Wadai Sultanate; Salamat — Am Timan; Sila —
+   *   Goz Beïda; Tandjilé — Laï (fr); Tibesti — Trou au Natron; Wadi
+   *   Fira — Wadi Fira Region, Iriba
+   */
+  TCD: {
+    "Barh El Gazel": {
+      lyhyt: 'Bahr el Ghazal on kuiva uoma, jossa vesi virtaa vain harvoin rankkasateiden jälkeen, Tšadjärveltä poispäin kohti koillista.',
+    },
+    Batha: {
+      lyhyt: 'Ouadi Rimé–Ouadi Achimin valtavalle suojelualueelle on vuodesta 2016 palautettu luonnosta hävinneitä sapelibeisoja.',
+    },
+    Borkou: {
+      lyhyt: 'Bodélén painanne on maapallon pölyisimpiä paikkoja, ja sen tuulten nostama pöly lannoittaa Amazonin sademetsää Atlantin takana.',
+    },
+    "Chari-Baguirmi": {
+      lyhyt: 'Massenya oli Baguirmin kuningaskunnan pääkaupunki, ja sen perinteinen hallitsija kantaa yhä mbang-arvonimeä.',
+    },
+    Ennedi: {
+      lyhyt: 'Ennedin hiekkakivimassiivi merkittiin 2016 Unescon maailmanperintöluetteloon sekä luonnon- että kulttuurikohteena.',
+    },
+    "Guéra": {
+      lyhyt: 'Guéran vuoristossa asuvia kansoja kutsutaan hadjaraiksi, kivien kansaksi, ja moni uskoo yhä margai-henkiin.',
+    },
+    "Hadjer-Lamis": {
+      lyhyt: 'Alue on nimetty Hadjer el Hamisin kalliopilareista, jotka kohoavat noin sata metriä tasangolta Tšadjärven eteläpuolella.',
+    },
+    Kanem: {
+      lyhyt: 'Kanemin lammista kanembunaiset kuorivat spirulinalevää ja kuivaavat sen dihé-kakuiksi; miehiä ei päästetä veteen.',
+    },
+    Lac: {
+      lyhyt: 'Tšadjärven saarilla laiduntaa kuri-karjaa, jonka paksut, pullistuneet sarvet auttavat sitä uimaan saarelta toiselle.',
+    },
+    "Logone Occidental": {
+      lyhyt: 'Moundou on Tšadin toiseksi suurin kaupunki, ja siellä pannaan Gala-olutta, maan suosituinta.',
+    },
+    "Logone Oriental": {
+      lyhyt: 'Doban öljykentiltä lähtee 1 070 kilometriä pitkä putki, joka kuljettaa öljyn Kamerunin rannikolle.',
+    },
+    Mandoul: {
+      lyhyt: 'Mandoulin savanneilla viljellään omavaraisviljelyn ohella puuvillaa, ja maakunnassa asuu useita sara-kansoja.',
+    },
+    "Mayo-Kebbi Est": {
+      lyhyt: "Bongorista näkee joen yli Kamerunin puolelle Yagouaan, ja kaupunki on puolivälissä N'Djamenan ja Moundoun välillä.",
+    },
+    "Mayo-Kebbi Ouest": {
+      lyhyt: "Mayo Kébbi -joen Gauthiot'n putoukset ovat Tšadin luonnonihme, vaikka ne laskevat yhteensä vain noin 17 metriä.",
+    },
+    "Moyen-Chari": {
+      lyhyt: 'Sarh on Tšadin kolmanneksi suurin kaupunki, ja siirtomaa-aikana sen nimi oli Fort-Archambault.',
+    },
+    "Ville de N'Djamena": {
+      lyhyt: "N'Djamenan nimi tarkoittaa arabiaksi lepopaikkaa, ja joen toisella puolella on kamerunilainen Kousséri.",
+    },
+    "Ouaddaï": {
+      lyhyt: 'Ouaddain sulttaanikunnan perusti 1635 maba-kansan Abd al-Karim, ja sen sulttaania kutsutaan yhä kolakiksi.',
+    },
+    Salamat: {
+      lyhyt: 'Bahr Salamat virtaa vain sadekaudella, ja kuivana aikana vettä kaivetaan uoman pohjaan tehdyistä kaivoista.',
+    },
+    Sila: {
+      lyhyt: 'Sila-maakunnan pääkaupungin Goz Beïdan nimi tarkoittaa tšadinarabiaksi valkoista hiekkaa.',
+    },
+    "Tandjilé": {
+      lyhyt: 'Maakunnan pääkaupunki Laï levittäytyy Logone-joen vartta, ja rantatasangoilla viljellään riisiä.',
+    },
+    Tibesti: {
+      lyhyt: 'Trou au Natronin kalderan pohja on valkoisen natronikuoren peitossa, ja kuoppa on paikoin tuhat metriä syvä.',
+    },
+    "Wadi Fira": {
+      lyhyt: 'Wadi Firassa savanni vaihtuu pohjoista kohti Saharan hiekaksi, ja Iriban asukkaat puhuvat zaghawan kieltä.',
+    },
+  },
+  /*
+   * SDS (erä 9A). Avaimet MAAKUNNAT_KAIKKI.SDS:n tunnuksia TÄSMÄLLEEN
+   * (vanha kymmenen osavaltion jako). Vain `lyhyt`, ei konflikteja.
+   * Vältetty maastokohteet-sds.js:n aiheet (Kinyeti, Valkoinen Niili,
+   * Sudd, Gondokoro, Lado, Jonglein kanava, Boma ja kob-vaellus,
+   * Bandingilo, Wau, Nzara ja zandet, Nimule). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Eastern Equatoria — Kapoeta; Jonglei — Jonglei State; Central
+   *   Equatoria — Jebel Kujur (haku, 684 m); Lakes — Lake Yirol; Western
+   *   Equatoria — Maridi County (CSRF); Western Bahr el Ghazal — Raja
+   *   County (CSRF), Dar Fertit; Northern Bahr el Ghazal — Lol River;
+   *   Unity — Bentiu; Warrap — Manute Bol; Upper Nile — Shilluk Kingdom
+   */
+  SDS: {
+    "Eastern Equatoria": {
+      lyhyt: 'Kapoetan tasangoilla toposat paimentavat karjaa, kun taas didingat viljelevät kosteampia kukkuloita.',
+    },
+    Jonglei: {
+      lyhyt: 'Jonglei oli Etelä-Sudanin kymmenen osavaltion jaossa pinta-alaltaan suurin, noin 122 600 neliökilometriä.',
+    },
+    "Central Equatoria": {
+      lyhyt: 'Jubaa katsoo Jebel Kujur, lähes 700-metrinen kalliovuori, jonka huipulle kiivetään jyrkkiä polkuja pitkin.',
+    },
+    Lakes: {
+      lyhyt: 'Osavaltio on nimetty järviensä mukaan, ja Yirolin järven rannoilla on riisipeltoja ja soita.',
+    },
+    "Western Equatoria": {
+      lyhyt: 'Länsi-Ekvatorian metsissä mehiläistenhoito ja hunajankeruu ovat monelle perheelle tärkeä elinkeino.',
+    },
+    "Western Bahr el Ghazal": {
+      lyhyt: 'Ragan seudulla asuu kymmeniä pieniä kansoja, joista monet kutsuvat itseään yhteisnimellä fertit.',
+    },
+    "Northern Bahr el Ghazal": {
+      lyhyt: 'Lol-joki syntyy Nyamlellin länsipuolella kahden joen yhtymäkohdassa ja virtaa Aweilin ohi sen eteläpuolelta.',
+    },
+    Unity: {
+      lyhyt: 'Bentiu on Bahr el Ghazal -joen etelärannalla, ja El Salaam -silta yhdistää sen vastarannan Rubkonaan.',
+    },
+    Warrap: {
+      lyhyt: 'Warrapin Turaleista oli kotoisin Manute Bol, yksi NBA:n kahdesta kaikkien aikojen pisimmästä pelaajasta.',
+    },
+    "Upper Nile": {
+      lyhyt: 'Shillukien kuninkaalla, rethillä, on yhä perinteinen asema, ja kuninkaiden asuinpaikka on ollut Fashodassa 1700-luvulta asti.',
+    },
+  },
+  /*
+   * SDN (erä 9A). Avaimet MAAKUNNAT_KAIKKI.SDN:n tunnuksia TÄSMÄLLEEN
+   * (englanninkieliset "Gezira", "Red Sea", "Northern" ym.). Vain
+   * `lyhyt`, ei konflikteja. Vältetty maastokohteet-sdn.js:n aiheet
+   * (Jebel Marra, Punainenmeri, Niili, Meroë, Jebel Barkal, Kerma, Vanha
+   * Dongola, Soleb, Naqa, Dinder, Sennarin kaupunki) ja pelikaupunki
+   * Suakin. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Gezira — Gezira Scheme; Gedarif — Al Qadarif State (haku); Red
+   *   Sea — Sanganeb and Dungonab Bay (UNESCO 2016); White Nile — Kenana
+   *   Sugar Company; Blue Nile — Roseires Dam; Northern — Merowe Dam;
+   *   Southern Darfur — Radom National Park; South Kordufan — Nuba
+   *   wrestling; Eastern Darfur — Ed Daein; Kassala — Taka Mountains;
+   *   Central Darfur — Zalingei (haku); Khartoum — Hamed al-Nil (haku);
+   *   Western Darfur — Geneina; River Nile — Atbara (haku); North
+   *   Darfur — Meidob volcanic field, Malha; North Kordufan — El-Obeid;
+   *   Sennar — Gezira Scheme (Sennar Dam 1925)
+   */
+  SDN: {
+    Gezira: {
+      lyhyt: 'Gezira-hanke on maailman suurimpia kastelujärjestelmiä, ja se kattaa noin puolet Sudanin kastellusta maasta.',
+    },
+    Gedarif: {
+      lyhyt: 'Gedarifin savitasangoilla viljellään koneellisesti durraa ja seesamia, ja seutua kutsutaan Sudanin leipäkoriksi.',
+    },
+    "Red Sea": {
+      lyhyt: 'Dungonabin lahdella elää yksi maailman merkittävimmistä dugongikannoista, ja lahti on Unescon maailmanperintöä.',
+    },
+    "White Nile": {
+      lyhyt: 'Kenanan sokeriplantaasi Kostin kaakkoispuolella on maailman suurimpia valkoisen sokerin tuottajia.',
+    },
+    "Blue Nile": {
+      lyhyt: 'Roseiresin pato Ed Damazinissa valmistui 1966, ja 2013 sitä korotettiin 68 metristä 78 metriin.',
+    },
+    Northern: {
+      lyhyt: 'Neljännen kaihin kohdalle valmistui 2009 Meroween pato, jonka voimalan teho on 1 250 megawattia.',
+    },
+    "Southern Darfur": {
+      lyhyt: 'Radomin kansallispuisto Sudanin lounaiskulmassa on ollut Unescon biosfäärialue vuodesta 1979.',
+    },
+    "South Kordufan": {
+      lyhyt: 'Nubavuorten kylät kilpailevat painiturnauksissa, jotka liittyvät kylvö- ja sadonkorjuujuhliin.',
+    },
+    "Eastern Darfur": {
+      lyhyt: 'Itä-Darfurin pääkaupungin Ed Daeinin toreilla käydään kauppaa maapähkinöillä, vehnällä ja karjalla.',
+    },
+    Kassala: {
+      lyhyt: 'Kassalan yllä kohoavat Takan graniittivuoret, joiden juurella kahvilat ja kojut odottavat retkeilijöitä.',
+    },
+    "Central Darfur": {
+      lyhyt: 'Zalingei on Wadi Azumin laaksossa, ja sadekaudella kuiva uoma muuttuu vihreäksi käytäväksi.',
+    },
+    Khartoum: {
+      lyhyt: 'Omdurmanissa Hamed al-Nilin haudalla sufeilla on tapana kokoontua perjantaisin ennen auringonlaskua zikr-rituaaliin.',
+    },
+    "Western Darfur": {
+      lyhyt: 'Geneinan nimi tarkoittaa arabiaksi puutarhaa, ja sadekaudella seudulle syntyy lampia ja järviä.',
+    },
+    "River Nile": {
+      lyhyt: 'Atbara-joen ja Niilin yhtymäkohdassa oleva Atbara on Sudanin rautateiden päämaja, ja sitä kutsutaan rautatiekaupungiksi.',
+    },
+    "North Darfur": {
+      lyhyt: 'Meidobin kukkuloilla Malhan kraatterin pohjalla on suolainen järvi, ja nimi Malha tarkoittaa suolaista.',
+    },
+    "North Kordufan": {
+      lyhyt: 'El Obeid on Sudanin arabikumikaupan tärkeitä keskuksia; kumi on akaasiapuiden kovettunutta mahlaa.',
+    },
+    Sennar: {
+      lyhyt: 'Sennarin pato valmistui Siniselle Niilille 1925, ja sen altaasta johdetaan vettä Gezira-tasangon kanaviin.',
+    },
+  },
+  /*
+   * MDG (erä 9B). Avaimet MAAKUNNAT_KAIKKI.MDG:n tunnuksia TÄSMÄLLEEN
+   * (22 aluetta; Vatovavy-Fitovinany on yhä yksi alue, vaikka se
+   * jaettiin 2021 kahtia). Vain `lyhyt`. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026): Amoron'i Mania — Ambositra; Androy — Androy; Anosy —
+   * Tôlanaro; Analamanga — Rova of Antananarivo; Bongolava —
+   * Tsiroanomandidy; Vakinankaratra — Antsirabe; Itasy — Lake Itasy;
+   * Atsimo-Andrefana — Toliara; Atsimo-Atsinanana — Canal des
+   * Pangalanes; Betsiboka — Betsiboka River; Boeny — Ankarafantsika
+   * National Park; Diana — Nosy Be; Haute Matsiatra — Ambalavao;
+   * Ihorombe — Ihorombe; Melaky — Barren Isles; Menabe — Malagasy giant
+   * rat; Sava — Sava Region; Sofia — Sofia Region; Analanjirofo —
+   * Analanjirofo (nimen merkitys hausta); Atsinanana — Toamasina;
+   * Alaotra-Mangoro — Lake Alaotra; Vatovavy-Fitovinany —
+   * Fianarantsoa-Côte Est railway
+   */
+  MDG: {
+    "Amoron'i Mania": {
+      lyhyt: 'Ambositra on Madagaskarin puunveiston keskus, ja lähikylien zafimaniry-kansan puutyötaito on Unescon aineetonta kulttuuriperintöä.',
+    },
+    Androy: {
+      lyhyt: 'Androyn nimi käännetään yleensä piikkimaaksi, ja sen asukkaat tandroyt ovat nimensä mukaan piikkipensaikon kansaa.',
+    },
+    Anosy: {
+      lyhyt: 'Tolagnaroa kutsutaan yhä myös Fort-Dauphiniksi: kaupunki sai alkunsa 1643 Ranskan ensimmäisenä siirtokuntana Madagaskarilla.',
+    },
+    Analamanga: {
+      lyhyt: 'Antananarivon korkeimmalla kukkulalla kohoaa kuningattaren palatsi Manjakamiadana, joka on rakennettu uudelleen vuoden 1995 tulipalon jälkeen.',
+    },
+    Bongolava: {
+      lyhyt: 'Tsiroanomandidyssa on Madagaskarin suurin zebutori, ja karjakauppa tuo kaupungille yli kolmanneksen sen verotuloista.',
+    },
+    Vakinankaratra: {
+      lyhyt: 'Antsirabe on Madagaskarin kolmanneksi suurin kaupunki, ja sen kaduilla kulkee tuhansia pousse-pousse-riksoja.',
+    },
+    Itasy: {
+      lyhyt: 'Itasyjärvi syntyi, kun laavavirta patosi joen, ja sen ympäristöä kirjovat yhä vanhat tuhkakartiot.',
+    },
+    "Atsimo-Andrefana": {
+      lyhyt: 'Toliaraa kutsutaan auringon kaupungiksi, ja siltä on saanut nimensä myös pörröinen coton de tuléar -koirarotu.',
+    },
+    "Atsimo-Atsinanana": {
+      lyhyt: 'Farafanganaan päättyy Pangalanesin kanava, yli 600 kilometrin laguunien ja järvien ketju, joka alkaa Toamasinasta.',
+    },
+    Betsiboka: {
+      lyhyt: 'Betsiboka-joki kuljettaa niin paljon punaista lietettä, että sen värjäämä suisto näkyy avaruuteen asti.',
+    },
+    Boeny: {
+      lyhyt: 'Ankarafantsikan kansallispuiston kuivissa metsissä elää kahdeksan lemurilajia ja yli sata lintulajia.',
+    },
+    Diana: {
+      lyhyt: 'Nosy Be on Madagaskarin vilkkain lomasaari, ja ylang-ylang-viljelmiensä vuoksi sitä kutsutaan tuoksujen saareksi.',
+    },
+    "Haute Matsiatra": {
+      lyhyt: 'Ambalavaon verstaissa valmistetaan yhä käsin antaimoro-paperia mulperipuun kuoresta.',
+    },
+    Ihorombe: {
+      lyhyt: 'Ihorombe on Madagaskarin harvimmin asuttuja alueita, ja sen asukkaista neljä viidestä on bara-kansaa.',
+    },
+    Melaky: {
+      lyhyt: 'Maintiranon edustan Barren-saarilla leiriytyy kausittain vezo-kalastajia, jotka purjehtivat sinne jopa 600 kilometrin päästä.',
+    },
+    Menabe: {
+      lyhyt: 'Kirindyn metsässä elää jättiloikkarotta, jota ei tavata luonnossa missään muualla kuin tällä pienellä Menaben kaistaleella.',
+    },
+    Sava: {
+      lyhyt: 'Savan nimi on koottu sen neljän kaupungin alkukirjaimista, ja alue tuottaa enemmän vaniljaa kuin mikään muu seutu maailmassa.',
+    },
+    Sofia: {
+      lyhyt: 'Sofian rannikolla on Madagaskarin tihein mangrovemetsien keskittymä, yhteensä noin 450 neliökilometriä.',
+    },
+    Analanjirofo: {
+      lyhyt: 'Analanjirofo tarkoittaa neilikkametsää, ja valtaosa Madagaskarin mausteneilikasta kasvatetaan täällä.',
+    },
+    Atsinanana: {
+      lyhyt: 'Toamasina on Madagaskarin tärkein satama ja saaren toiseksi suurin kaupunki.',
+    },
+    "Alaotra-Mangoro": {
+      lyhyt: 'Alaotrajärvi on Madagaskarin suurin järvi, ja sen ruovikoissa elää alaotranbambulemuri, jota ei tavata missään muualla.',
+    },
+    "Vatovavy-Fitovinany": {
+      lyhyt: 'Manakarassa Fianarantsoasta tuleva rautatie ylittää lentokentän kiitotien, mikä on maailmassa hyvin harvinaista.',
+    },
+  },
+  /*
+   * MOZ (erä 9B). Avaimet MAAKUNNAT_KAIKKI.MOZ:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Cabo Delgado — Ibo Island; Gaza — Limpopo National Park;
+   *   Inhambane — Bazaruto Archipelago; Manica — Chimoio (Cabeça do
+   *   Velho); Maputo — Maputo National Park; Nampula — Island of
+   *   Mozambique; Niassa — Niassa Reserve (haku); Sofala — Port of
+   *   Beira; Tete — Samora Machel Bridge; Zambezia — Gurúè
+   */
+  MOZ: {
+    "Cabo Delgado": {
+      lyhyt: 'Quirimbasin saariston Ibo tunnetaan hopeasepistään, ja mantereelta saarelle kuljetaan perinteisillä dhow-veneillä.',
+    },
+    Gaza: {
+      lyhyt: 'Limpopon kansallispuisto on osa rajat ylittävää Suurta Limpopon puistoa, joka jatkuu Etelä-Afrikan Krugerin puistoon.',
+    },
+    Inhambane: {
+      lyhyt: 'Bazaruton saariston kansallispuiston vesissä elää noin 120 dugongia, Mosambikin suurin jäljellä oleva kanta.',
+    },
+    Manica: {
+      lyhyt: 'Chimoion kaupungin yllä kohoaa Cabeça do Velho, kallio, jonka muoto muistuttaa vanhan miehen päätä.',
+    },
+    Maputo: {
+      lyhyt: 'Maputon kansallispuisto perustettiin 1932 rannikon norsujen suojaksi, ja nyt niitä elää siellä noin 400.',
+    },
+    Nampula: {
+      lyhyt: 'Mosambikin saarelle, maan entiseen pääkaupunkiin, johtaa mantereelta 3,8 kilometriä pitkä silta.',
+    },
+    Niassa: {
+      lyhyt: 'Niassan riistansuojelualue on yli 42 000 neliökilometrin laajuisena Mosambikin suurin suojelualue.',
+    },
+    Sofala: {
+      lyhyt: 'Beiran satama on Mosambikin toiseksi suurin, ja sen radat vievät tavaraa Zimbabween ja Malawiin.',
+    },
+    Tete: {
+      lyhyt: 'Teten kaupungissa Sambesin ylittää 1972 valmistunut Samora Machelin riippusilta, joka on yli 750 metriä pitkä.',
+    },
+    Zambezia: {
+      lyhyt: 'Gurúèn teeviljelmät ovat Mosambikin laajimmat, ja kaupungin yllä kohoaa maan toiseksi korkein vuori Namuli.',
+    },
+  },
+  /*
+   * ZWE (erä 9B). Avaimet MAAKUNNAT_KAIKKI.ZWE:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Bulawayo — Bulawayo; Harare — Mbare Musika; Manicaland — Mutarazi
+   *   Falls; Mashonaland Central — Mazowe ja Mazoe Orange Crush (haku);
+   *   Mashonaland East — Ewanrigg Botanical Garden (haku); Mashonaland
+   *   West — Lake Kariba; Masvingo — Gonarezhou National Park;
+   *   Matabeleland North — Binga District; Matabeleland South —
+   *   Beitbridge (haku); Midlands — Great Dyke
+   */
+  ZWE: {
+    Bulawayo: {
+      lyhyt: 'Bulawayon keskustan kadut tehtiin aikanaan niin leveiksi, että härkävaljakot pystyivät kääntymään niillä.',
+    },
+    Harare: {
+      lyhyt: 'Hararen Mbare Musika on maan tärkein vihannestori ja maaseudulle lähtevien linja-autojen pääasema.',
+    },
+    Manicaland: {
+      lyhyt: 'Mutarazin putoukset syöksyvät itäisen vuoriston reunalta kahdessa portaassa yhteensä noin 770 metriä.',
+    },
+    "Mashonaland Central": {
+      lyhyt: 'Mazowen laakson appelsiinitarhat antoivat nimensä Zimbabwen tunnetuimmalle mehujuomalle, Mazoe-appelsiinitiivisteelle.',
+    },
+    "Mashonaland East": {
+      lyhyt: 'Ewanriggin kasvitieteellisessä puutarhassa on yksi maailman suurimmista aloekokoelmista, ja se kukkii toukokuusta heinäkuuhun.',
+    },
+    "Mashonaland West": {
+      lyhyt: 'Karibajärvi on tilavuudeltaan maailman suurin tekojärvi, ja siihen tuotiin Tanganjikajärvestä sardiinimaista kapenta-kalaa.',
+    },
+    Masvingo: {
+      lyhyt: 'Gonarezhoun puistossa Runde-joen varrella kohoavat punaiset Chilojon hiekkakivijyrkänteet, jopa 180 metriä korkeat.',
+    },
+    "Matabeleland North": {
+      lyhyt: 'Bingan lähellä Karibajärven rannalla pulppuavat Chibwatatatan kuumat lähteet, ja seutu on tonga-kansan kotia.',
+    },
+    "Matabeleland South": {
+      lyhyt: 'Beitbridgen raja-asema Limpopon yli Etelä-Afrikkaan on eteläisen Afrikan vilkkain maaraja.',
+    },
+    Midlands: {
+      lyhyt: 'Midlandsin halki kulkee Great Dyke, noin 550 kilometriä pitkä kallioperän vyöhyke, josta louhitaan kromia ja platinaa.',
+    },
+  },
+  /*
+   * NAM (erä 9B). Avaimet MAAKUNNAT_KAIKKI.NAM:n tunnuksia TÄSMÄLLEEN
+   * (vanha jako: "Caprivi" = 2013 alkaen Sambesin alue, "Kavango" =
+   * 2013 jaettu Itä- ja Länsi-Kavangoon, "Karas" = nyk. ǁKaras).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Caprivi — Zambezi Region; Erongo — Walvis Bay; Hardap — Hardap
+   *   Dam; Karas — Namib Desert horse; Kavango — Rundu; Khomas —
+   *   Christuskirche (haku); Kunene — Twyfelfontein; Ohangwena —
+   *   Ohangwena Region; Omaheke — Gobabis; Omusati — Ombalantu baobab
+   *   tree; Oshana — Oshana Region; Oshikoto — Lake Otjikoto;
+   *   Otjozondjupa — Waterberg Plateau Park
+   */
+  NAM: {
+    Caprivi: {
+      lyhyt: 'Nykyisen Sambesin alueen itäkärjessä Namibian, Sambian ja Botswanan rajat kohtaavat alle sadan metrin päässä Zimbabwesta.',
+    },
+    Erongo: {
+      lyhyt: 'Walvis Bayssa on Namibian ainoa luonnollinen syväsatama, ja sen laguunissa ruokailee flamingoja.',
+    },
+    Hardap: {
+      lyhyt: 'Marientalin lähellä oleva Hardapin pato valmistui 1963 ja oli yli viisikymmentä vuotta Namibian suurin.',
+    },
+    Karas: {
+      lyhyt: 'Ausin lähellä Namibin aavikolla elää villiintyneitä hevosia, joiden alkuperästä kiistellään yhä.',
+    },
+    Kavango: {
+      lyhyt: 'Rundu on Kavango-joen rannalla, jonka toisella puolella on jo Angola, ja kaupunki tunnetaan puunveistäjistään.',
+    },
+    Khomas: {
+      lyhyt: 'Windhoekin Christuskirche vihittiin 1910, ja sen lasimaalaukset olivat Saksan keisarin lahja.',
+    },
+    Kunene: {
+      lyhyt: 'Twyfelfonteinin hiekkakiviin on kaiverrettu tuhansia kalliopiirroksia, ja paikka oli Namibian ensimmäinen maailmanperintökohde.',
+    },
+    Ohangwena: {
+      lyhyt: 'Ohangwenan hiekkamailla viljellään ennen kaikkea mahangua eli helmihirssiä, ja karjanhoito on toinen pääelinkeino.',
+    },
+    Omaheke: {
+      lyhyt: 'Gobabisin sisääntuloa vartioi härän patsas tekstillä "Cattle Country", sillä seutu on karjatilojen sydänmaata.',
+    },
+    Omusati: {
+      lyhyt: 'Outapin Ombalantun baobabin onttoa runkoa on käytetty kappelina, postina ja piilopaikkana.',
+    },
+    Oshana: {
+      lyhyt: 'Oshakati, Ongwediva ja Ondangwa muodostavat yhdessä Namibian toiseksi suurimman asutuskeskittymän.',
+    },
+    Oshikoto: {
+      lyhyt: 'Otjikotojärvi syntyi karstiluolan sortuessa, ja sen pohjassa on yhä saksalaisten 1915 upottamia tykkejä.',
+    },
+    Otjozondjupa: {
+      lyhyt: 'Waterbergin ylänkö kohoaa Kalaharin tasangolta, ja sen kallioissa on noin 200 miljoonaa vuotta vanhoja dinosauruksen jälkiä.',
+    },
+  },
+  /*
+   * UGA (erä 9B). Avaimet MAAKUNNAT_KAIKKI.UGA:n tunnuksia TÄSMÄLLEEN
+   * (neljä aluetta). Vain `lyhyt`. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026): Eastern — Sipi Falls; Central — Namugongo (Martyrs'
+   * Day, haku); Western — Bwindi Impenetrable National Park; Northern —
+   * Vitellaria paradoxa subsp. nilotica (haku)
+   */
+  UGA: {
+    Eastern: {
+      lyhyt: 'Elgonvuoren rinteellä Sipin putoukset laskeutuvat kolmessa osassa, ja ympäröivillä rinteillä kasvatetaan arabicakahvia.',
+    },
+    Central: {
+      lyhyt: 'Namugongon marttyyrien pyhäkköön kokoontuu joka 3. kesäkuuta satojatuhansia pyhiinvaeltajia eri puolilta Afrikkaa.',
+    },
+    Western: {
+      lyhyt: 'Bwindin läpipääsemättömässä metsässä elää noin puolet maailman vuorigorilloista.',
+    },
+    Northern: {
+      lyhyt: 'Pohjoisen savanneilla kasvaa sheapuuta, jonka pähkinöistä tehty nilotica-voi on pehmeämpää kuin Länsi-Afrikan sheavoi.',
+    },
+  },
+  /*
+   * SEN (erä 9B). Avaimet MAAKUNNAT_KAIKKI.SEN:n tunnuksia TÄSMÄLLEEN
+   * diakriitteineen. Vain `lyhyt`. Lähteet (en-/fr-Wikipedia ja haku
+   * 25.9.2026): Dakar — Lake Retba; Diourbel — Diourbel (fr); Fatick —
+   * Kingdom of Sine; Kaffrine — Région de Kaffrine (fr); Kaolack —
+   * Kaolack (fr); Kédougou — Bassari Country; Kolda — Kolda (fr);
+   * Louga — Désert de Lompoul (haku); Matam — Région de Matam (fr);
+   * Saint-Louis — Richard Toll; Sédhiou — anacarde (haku); Tambacounda —
+   * Niokolo-Koba National Park; Thiès — Manufactures sénégalaises des
+   * arts décoratifs (haku); Ziguinchor — Mlomp (fr)
+   */
+  SEN: {
+    Dakar: {
+      lyhyt: 'Retban eli Lac Rosen suolajärvi hehkuu vaaleanpunaisena levän väriaineen ansiosta, ja sen pohjasta kerätään suolaa.',
+    },
+    Diourbel: {
+      lyhyt: 'Diourbel on vanhan Baolin sydänmaata, ja sen suuri moskeija valmistui 1918.',
+    },
+    Fatick: {
+      lyhyt: 'Sinen serer-kuningaskunta palautettiin seremoniallisena 2019, ja kuningas kruunattiin vanhassa pääkaupungissa Diakhaossa.',
+    },
+    Kaffrine: {
+      lyhyt: 'Kaffrine erotettiin Kaolackista omaksi alueekseen 2008, ja se vei mukanaan noin kaksi kolmasosaa emoalueen pinta-alasta.',
+    },
+    Kaolack: {
+      lyhyt: 'Kaolackin Médina Bayen kaupunginosassa on suuri moskeija, jonka rakennutti sufijohtaja Ibrahim Niasse.',
+    },
+    "Kédougou": {
+      lyhyt: 'Kédougoun vuorilla asuvien bassari-, bedik- ja fulbe-kansojen kulttuurimaisemat ovat Unescon maailmanperintöä.',
+    },
+    Kolda: {
+      lyhyt: 'Kolda on Ylä-Casamancen pääkaupunki lähellä Guinea-Bissaun rajaa, ja sen asukkaista suurin osa on fulbeja.',
+    },
+    Louga: {
+      lyhyt: 'Lompoulin pieni aavikko kohoaa oranssinpunaisina, jopa 50-metrisinä dyyneinä alle kymmenen kilometrin päässä Atlantista.',
+    },
+    Matam: {
+      lyhyt: 'Matamin Ndendoryssa on fosfaattiesiintymä, jonka varannoiksi arvioidaan noin 40 miljoonaa tonnia.',
+    },
+    "Saint-Louis": {
+      lyhyt: 'Richard-Tollissa Senegal-joen varrella viljellään sokeriruokoa, ja kaupungin sokeritehdas toimittaa sokeria koko maahan.',
+    },
+    "Sédhiou": {
+      lyhyt: 'Sédhiou on Senegalin suurin cashewpähkinöiden tuottaja: arviolta 70 prosenttia maan sadosta tulee täältä.',
+    },
+    Tambacounda: {
+      lyhyt: 'Niokolo-Koba on Senegalin suurin kansallispuisto, ja sen savanneilla elää yhä leijonia ja simpansseja.',
+    },
+    "Thiès": {
+      lyhyt: 'Thièsin kuvakudostehtaalla on kudottu käsin seinävaatteita vuodesta 1966, ja se on laatuaan ainoa Afrikassa.',
+    },
+    Ziguinchor: {
+      lyhyt: 'Mlompin kylän harvinaiset kaksikerroksiset savitalot suojeltiin historiallisina muistomerkkeinä vuonna 2003.',
+    },
+  },
+  /*
+   * SLE (erä 9B). Avaimet MAAKUNNAT_KAIKKI.SLE:n tunnuksia TÄSMÄLLEEN
+   * (vanha jako ennen vuotta 2017: "Northern" sisältää nykyisen
+   * Luoteisen provinssin, jossa Lungi on). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026): Eastern — Star of Sierra Leone
+   * Diamond; Northern — Freetown International Airport; Southern —
+   * sowei-naamio (haku); Western — Tacugama Chimpanzee Sanctuary (haku)
+   */
+  SLE: {
+    Eastern: {
+      lyhyt: 'Koidun timanttikaivoksilta löytyi 1972 Sierra Leonen tähti, lähes 969 karaatin timantti, suurin koskaan löydetty jokisoran timantti.',
+    },
+    Northern: {
+      lyhyt: 'Maan ainoa kansainvälinen lentoasema on Lungissa, ja Freetowniin jatketaan yleensä lautalla tai vesitaksilla joensuun yli.',
+    },
+    Southern: {
+      lyhyt: 'Mende-naisten Sande-seuran mustat sowei-naamiot ovat harvinaisia, sillä niitä kantavat tanssissa naiset itse.',
+    },
+    Western: {
+      lyhyt: 'Freetownin laitamien vuoristometsässä toimii vuonna 1995 perustettu Tacugaman simpanssien turvakoti.',
+    },
+  },
+  /*
+   * LBR (erä 9B). Avaimet MAAKUNNAT_KAIKKI.LBR:n tunnuksia TÄSMÄLLEEN
+   * ("Gbapolu" = Gbarpolu, "River Cess" = Rivercess). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja haku 25.9.2026): Bomi — Blue Lake (haku);
+   * Bong — Cuttington University; Gbapolu — Gbarpolu County; Grand
+   * Bassa — Bassa people (haku); Grand Cape Mount — Lake Piso; Grand
+   * Gedeh — Grebo-Krahn National Park; Grand Kru — Grand Kru County;
+   * Lofa — Lofa County; Margibi — Roberts International Airport;
+   * Maryland — Maryland County; Montserrado — Montserrado County;
+   * Nimba — Ganta; River Gee — Fish Town; River Cess — Rivercess County;
+   * Sinoe — Greenville, Liberia
+   */
+  LBR: {
+    Bomi: {
+      lyhyt: 'Tubmanburgin lähellä on Blue Lake, hylättyyn rautamalmikuoppaan syntynyt syvä ja kirkkaan sininen järvi.',
+    },
+    Bong: {
+      lyhyt: 'Suacocossa toimii Cuttingtonin yliopisto, joka perustettiin 1889 ja on Saharan eteläpuolisen Afrikan vanhimpia yksityisyliopistoja.',
+    },
+    Gbapolu: {
+      lyhyt: 'Gbarpolu erotettiin Lofasta 2001, joten se on Liberian nuorin maakunta, ja valtaosa sen pinta-alasta on metsää.',
+    },
+    "Grand Bassa": {
+      lyhyt: 'Grand Bassa on bassa-kansan ydinaluetta, ja bassat ovat yksi Liberian suurimmista kansoista.',
+    },
+    "Grand Cape Mount": {
+      lyhyt: 'Pisojärvi on Liberian suurin järvi, oikeastaan pitkänomainen vuorovesilaguuni, ja sen kosteikot on suojeltu.',
+    },
+    "Grand Gedeh": {
+      lyhyt: 'Grand Gedehin sademetsissä on vuonna 2017 perustettu Grebo-Krahnin kansallispuisto, jossa elää kääpiövirtahepoja.',
+    },
+    "Grand Kru": {
+      lyhyt: 'Grand Kru syntyi 1984, kun Sasstownin ja Kru Coastin alueet yhdistettiin, ja arkikieli on yhä kru.',
+    },
+    Lofa: {
+      lyhyt: 'Lofa on Liberian tärkeimpiä riisimaakuntia: vuonna 2011 noin kuudesosa maan riisipelloista oli täällä.',
+    },
+    Margibi: {
+      lyhyt: 'Harbelin lähellä on Liberian päälentoasema Roberts International, jonka kiitotie on yli kolme kilometriä pitkä.',
+    },
+    Maryland: {
+      lyhyt: 'Maryland on Liberian kaupungistuneimpia maakuntia: noin kuusi asukasta kymmenestä asuu kaupungeissa.',
+    },
+    Montserrado: {
+      lyhyt: 'Montserrado on Liberian pienin maakunta, mutta siellä asuu Monrovian ansiosta noin kolmannes koko maan väestöstä.',
+    },
+    Nimba: {
+      lyhyt: 'Ganta on Liberian toiseksi väkirikkain kaupunki, ja sen pohjoislaidalla virtaava Mano-joki on raja Guineaan.',
+    },
+    "River Gee": {
+      lyhyt: 'Pääkaupunki Fish Town on käännös grebonkielisestä nimestä, joka viittaa kylän vieressä virtaavaan kalapuroon.',
+    },
+    "River Cess": {
+      lyhyt: 'Rivercessin sademetsiin sataa vuodessa noin 4 500 millimetriä vettä, moninkertaisesti Suomeen verrattuna.',
+    },
+    Sinoe: {
+      lyhyt: 'Pääkaupunki Greenvillen satama on Liberian kolmanneksi suurin, ja sen kautta kulkee nykyään lähinnä puutavaraa.',
+    },
+  },
+  /*
+   * LBY (erä 9C). Avaimet MAAKUNNAT_KAIKKI.LBY:n tunnuksia TÄSMÄLLEEN
+   * ("Ash Shati'", "Tajura' wa an Nawahi al Arba"). Natural Earthin jako on
+   * sekoitus vanhoja piirikuntia: Tripoli on "Tajura'"-alueella, Derna
+   * "Al Qubbah"-alueella, Nalut "Ghadamis"-alueella ja Gharyan "Mizdah"-
+   * alueella (tarkistettu alueiden rajauslaatikoista). Vain `lyhyt`.
+   * Neutraali sävy. Vältetty maastokohteet-lby.js:n ja fokuskohteet-lby.js:n
+   * aiheet (Leptis Magna, Sabratha, Kyrene, Ghadames, Akakus, Garama,
+   * Ubarin hiekkameri, Syrtti). Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Ajdabiya — Atiq Mosque (Awjila); Al Butnan — Tobruk; Al Jabal al
+   *   Akhdar — Jebel Akhdar (Libya); Al Jifarah — ʽAziziya; Al Kufrah —
+   *   Kufra; Al Marj — Marj; Al Marqab — Villa Silin (Livius, ICOMOS);
+   *   Al Qubbah — Derna waterfalls; Ash Shati' — Wadi al Shatii District;
+   *   Benghazi — University of Benghazi; Ghadamis — Nalut; Ghat — Ghat,
+   *   Libya; Al Jufrah — Haruj; Misratah — Misrata; Mizdah — Gharyan;
+   *   Murzuq — Waw an Namus; An Nuqat al Khams — Zuwara; Sabha — Sabha,
+   *   Libya; Surt — Sirte (Madinat Sultan); Tajura' — Tripoli, Libya
+   *   (Arch of Marcus Aurelius); Wadi al Hayaa — Wadi al Hayaa District;
+   *   Az Zawiyah — Zawiya, Libya
+   */
+  LBY: {
+    "Ajdabiya": {
+      lyhyt: 'Awjilan keitaan Atiq-moskeija on 1100-luvulta, ja sen savitiilistä ja kalkkikivestä muurattua kattoa kruunaa 21 kartiomaista kupolia.',
+    },
+    "Al Butnan": {
+      lyhyt: 'Tobrukin syvä ja luonnostaan suojainen satama on ehkä koko Pohjois-Afrikan rannikon paras luonnonsatama.',
+    },
+    "Al Jabal al Akhdar": {
+      lyhyt: 'Vihreä vuori on Libyan sateisin seutu, ja sen rinteillä kasvaa metsää, jossa viihtyvät muun muassa foinikiankataja ja johanneksenleipäpuu.',
+    },
+    "Al Jifarah": {
+      lyhyt: 'Aziziyassa mitattiin 1922 lukema 58 astetta, jota pidettiin 90 vuotta maailman kuumimpana, kunnes WMO hylkäsi sen 2012.',
+    },
+    "Al Kufrah": {
+      lyhyt: 'Kufran keitaan pyöreät, noin kilometrin levyiset pellot näkyvät avaruuteen asti, ja niitä kastellaan syvältä pumpatulla fossiilisella pohjavedellä.',
+    },
+    "Al Marj": {
+      lyhyt: 'Kun maanjäristys tuhosi Marjin 1963, uusi kaupunki rakennettiin noin viiden kilometrin päähän vanhasta.',
+    },
+    "Al Marqab": {
+      lyhyt: 'Khomsin lähellä meren rannalla on Silinin roomalainen huvila, jonka lattioita peittää noin 800 neliömetriä mosaiikkeja.',
+    },
+    "Al Qubbah": {
+      lyhyt: 'Dernan eteläpuolella Vihreän vuoren rinteellä on noin 20 metriä korkea vesiputous, harvinaisuus kuivassa Libyassa.',
+    },
+    "Ash Shati'": {
+      lyhyt: 'Brakin ympäristössä Wadi ash-Shatin painanteessa on valtavat mutta köyhät rautamalmiesiintymät, jotka löydettiin 1943.',
+    },
+    "Benghazi": {
+      lyhyt: 'Benghazin yliopisto perustettiin 1955 Libyan yliopistona, ja se on maan vanhimpia korkeakouluja.',
+    },
+    "Ghadamis": {
+      lyhyt: 'Nalutin qasr on linnoitettu vilja-aitta, johon kylän perheet säilöivät viljansa; nyt se on tyhjillään mutta avoinna kävijöille.',
+    },
+    "Ghat": {
+      lyhyt: 'Ghatin vanhaa kaupunkia vartioi Koukemenin kukkulalla italialaisten rakentama linnoitus.',
+    },
+    "Al Jufrah": {
+      lyhyt: 'Jufraan ulottuu Harujin tulivuorikenttä, jossa on noin 150 tulivuorta – Pohjois-Afrikan suurin basalttinen tulivuorikenttä.',
+    },
+    "Misratah": {
+      lyhyt: 'Misrataa kutsutaan Libyan kaupan pääkaupungiksi, ja sen keskustorin laidalla myydään yhä mattoja ja perinteisiä vaatteita.',
+    },
+    "Mizdah": {
+      lyhyt: 'Gharyanin ensimmäiset asukkaat asuivat maan alle kaivetuissa luolissa, ja kaupunki tunnetaan yhä keramiikastaan.',
+    },
+    "Murzuq": {
+      lyhyt: 'Waw an-Namusin tulivuoren kraatterissa on pieniä järviä, ja musta tuhka peittää ympäriltä vaalean Saharan hiekan.',
+    },
+    "An Nuqat al Khams": {
+      lyhyt: 'Zuwarassa puhutaan omaa berberikieltä, ja kaupunki tunnetaan hiekkarannoistaan ja kala-aterioistaan.',
+    },
+    "Sabha": {
+      lyhyt: 'Sabhan kaupunkikuvaa hallitsee kukkulalla seisova Elenan linnake, jonka italialaiset rakensivat siirtomaa-aikanaan.',
+    },
+    "Surt": {
+      lyhyt: 'Sirten itäpuolella ovat keskiaikaisen Surtin rauniot, Madinat Sultan, jonka muurit ja portit on kaivettu esiin.',
+    },
+    "Tajura' wa an Nawahi al Arba": {
+      lyhyt: 'Tripolin vanhankaupungin laidalla seisoo 100-luvun Marcus Aureliuksen riemukaari, kaupungin ainoa näkyvä roomalainen muistomerkki.',
+    },
+    "Wadi al Hayaa": {
+      lyhyt: 'Wadi al-Hayat tarkoittaa Elämän laaksoa, sillä tässä aavikon painanteessa pohjavesi riittää taatelipalmuille ja pelloille.',
+    },
+    "Az Zawiyah": {
+      lyhyt: 'Zawiyassa on toinen Libyan kahdesta tärkeimmästä öljynjalostamosta.',
+    },
+  },
+  /*
+   * MLI (erä 9C). Avaimet MAAKUNNAT_KAIKKI.MLI:n tunnuksia TÄSMÄLLEEN
+   * ("Ségou"); Natural Earthin vanha kahdeksan alueen ja Bamakon jako.
+   * Vain `lyhyt`. Neutraali sävy. Vältetty maastokohteet-mli.js:n aiheet
+   * (Djenné, Dogonmaa, Askian hauta, Médine, Sikasson tata, Ségoun
+   * historia, Bamakon perustaminen, Hombori). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Bamako — African Photography Encounters; Gao — Gao (La Dune Rose);
+   *   Kayes — Kayes; Kidal — Essouk; Koulikoro — Kangaba (Kamablon);
+   *   Mopti — Mopti; Ségou — Markala Dam; Sikasso — Sikasso Region
+   *   (Koutiala); Timbuktu — Djinguereber Mosque
+   */
+  MLI: {
+    "Bamako": {
+      lyhyt: 'Bamakossa järjestetään joka toinen vuosi Afrikan valokuvabiennaali Rencontres de Bamako, jonka ensimmäinen kerta oli 1994.',
+    },
+    "Gao": {
+      lyhyt: 'Gaon lähellä kohoaa La Dune Rose, hiekkadyyni, joka on saanut nimensä vaaleanpunaisesta hehkustaan aamu- ja iltavalossa.',
+    },
+    "Kayes": {
+      lyhyt: 'Kayesia kutsutaan Afrikan painekattilaksi, ja huhtikuussa 2024 siellä mitattiin 48,5 astetta, Malin korkein lämpötila.',
+    },
+    "Kidal": {
+      lyhyt: 'Kidalin lähellä ovat Tadmekkan rauniot, ja niiden hautakivissä on Länsi-Afrikan vanhimpia päivättyjä arabiankielisiä tekstejä.',
+    },
+    "Koulikoro": {
+      lyhyt: 'Kangaban Kamablon-pyhätön olkikatto uusitaan seitsemän vuoden välein juhlassa, jossa griotit kertaavat seudun suullista historiaa.',
+    },
+    "Mopti": {
+      lyhyt: 'Tulvakaudella Mopti muuttuu pengerteiden yhdistämiksi saariksi, ja sen satamassa käydään kauppaa Taoudennin vuorisuolalla.',
+    },
+    "Ségou": {
+      lyhyt: 'Markalan pato ohjaa Nigerin vettä 135 kilometriä pohjoiseen ulottuvaan kanavistoon, jonka varrella viljellään riisiä.',
+    },
+    "Sikasso": {
+      lyhyt: 'Pohjoisosan Koutiala on Malin puuvillateollisuuden keskus, ja puuvilla on maan harvoja vientituotteita.',
+    },
+    "Timbuktu": {
+      lyhyt: 'Timbuktun Djinguereberin moskeija rakennettiin savesta, oljista ja puusta vuonna 1327, ja siihen mahtuu 2 000 rukoilijaa.',
+    },
+  },
+  /*
+   * SOM (erä 9C). Avaimet MAAKUNNAT_KAIKKI.SOM:n tunnuksia TÄSMÄLLEEN
+   * (somalinkieliset "Jubbada Hoose", "Shabeellaha Dhexe" ym.). Vain
+   * `lyhyt`. Neutraali sävy; Puntlandin alueista (Bari, Nugaal, Mudug)
+   * vain maisema ja kulttuuri. Vältetty maastokohteet-som.js:n aiheet
+   * (Bosaso, Hobyo, Barawa, Hamar Weyne, Jubba, Ras Hafun). Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Jubbada Hoose — Kismayo; Bakool — Hudur, Maay language; Banaadir —
+   *   Mogadishu (Lido Beach); Bari — Cape Guardafui; Bay — Buur Heybe;
+   *   Galguduud — El Buur (sepiolite, mindat), Dabqaad; Gedo — Bardera;
+   *   Hiiraan — Beledweyne; Jubbada Dhexe — Middle Juba; Mudug — Mudug,
+   *   Somalia terrain (country-data); Nugaal — Nugaal Valley; Shabeellaha
+   *   Dhexe — Jowhar; Shabeellaha Hoose — Istunka
+   */
+  SOM: {
+    "Jubbada Hoose": {
+      lyhyt: 'Kismayon sataman niemi oli ennen yksi Bajunisaarista, kunnes se yhdistettiin mantereeseen pengertiellä 1964.',
+    },
+    "Bakool": {
+      lyhyt: 'Bakoolin pääkaupungissa Hudurissa puhutaan maayta, joka eroaa pohjoisen somalista suunnilleen kuin espanja portugalista.',
+    },
+    "Banaadir": {
+      lyhyt: 'Mogadishun Lidon hiekkaranta on kaupunkilaisten suosituin rantapaikka, ja sen varrella on kalaravintoloita.',
+    },
+    "Bari": {
+      lyhyt: 'Guardafuin niemi on Afrikan sarven kärki, ja sen nimen arvellaan tulevan merimiesten sanoista "katso ja pakene".',
+    },
+    "Bay": {
+      lyhyt: 'Buur Heyben graniittikallion kalliosuojista on löydetty Afrikan sarven vanhimmat kiistattomat hautaukset.',
+    },
+    "Galguduud": {
+      lyhyt: 'El Buurin tasangolla louhitaan kalkkikiven alta merivahaa, josta veistetään perinteisiä dabqaad-suitsutusastioita.',
+    },
+    "Gedo": {
+      lyhyt: 'Baardheeren nimi tarkoittaa korkeaa palmua, ja palmut reunustavat yhä kaupungin kohdalla joen rantoja ja peltoja.',
+    },
+    "Hiiraan": {
+      lyhyt: 'Beledweynen kaupunki on rakennettu Shabelle-joen molemmin puolin, ja joki jakaa sen itä- ja länsiosaan.',
+    },
+    "Jubbada Dhexe": {
+      lyhyt: 'Keski-Juban jokilaakso on maanviljelyseutua, ja yksi sen tärkeimmistä viljelykasveista on seesami.',
+    },
+    "Mudug": {
+      lyhyt: 'Mudugin tasangolla Haudin ruohomaat vaihtuvat puoliaavikoksi, jonka pensaikossa paimentolaiset laiduntavat kameleitaan.',
+    },
+    "Nugaal": {
+      lyhyt: 'Nugaalin laakson uomassa virtaa vettä vain sateiden jälkeen, ja laakson luonnonvaraisista puista kerätään myrhaa ja suitsuketta.',
+    },
+    "Shabeellaha Dhexe": {
+      lyhyt: 'Jowharin nimi tarkoittaa jalokiveä, ja se viittaa Shabelle-joen varren hedelmällisiin peltoihin.',
+    },
+    "Shabeellaha Hoose": {
+      lyhyt: 'Afgooyessa joen kummankin rannan asukkaat ottavat somalialaisena uutenavuotena mittaa toisistaan istunka-keppitaistelussa.',
+    },
+  },
+  /*
+   * GTM (erä 9C). Avaimet MAAKUNNAT_KAIKKI.GTM:n tunnuksia TÄSMÄLLEEN
+   * ("Petén", "Quezaltenango", "Sacatepéquez", "Sololá" ym.). Vain
+   * `lyhyt`. Vältetty maastokohteet-gtm.js:n aiheet (Tikal, El Mirador,
+   * Atitlán, Chichicastenango, Iximche, Quiriguá, Semuc Champey,
+   * Tajumulco, San Felipe, Motaguan jade). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Alta Verapaz — cardamom (USDA, Heifer); Baja Verapaz — Biotopo del
+   *   Quetzal; Chimaltenango — San Juan Comalapa; Chiquimula — Black
+   *   Christ of Esquipulas; El Progreso — El Progreso Department;
+   *   Escuintla — Monte Alto culture, La Democracia; Guatemala —
+   *   Kaminaljuyu; Huehuetenango — Todos Santos Cuchumatán; Izabal —
+   *   Livingston, Guatemala; Jalapa — Jalapa Department; Jutiapa — Jutiapa
+   *   Department; Petén — Flores, Petén; Quezaltenango — Quetzaltenango;
+   *   Quiché — Ixil; Retalhuleu — Takalik Abaj; Sacatepéquez — Antigua
+   *   alfombras; San Marcos — La Blanca (archaeological site); Santa Rosa
+   *   — Monterrico; Sololá — Sololá; Suchitepéquez — Mazatenango;
+   *   Totonicapán — Totonicapán Department; Zacapa — Museo de
+   *   Paleontología de Estanzuela
+   */
+  GTM: {
+    "Alta Verapaz": {
+      lyhyt: 'Guatemala on maailman suurin kardemumman tuottaja, ja noin kaksi kolmasosaa sadosta kasvaa Alta Verapazin rinteillä.',
+    },
+    "Baja Verapaz": {
+      lyhyt: 'Baja Verapazin pilvimetsään perustettiin 1976 Quetzal-biotooppi suojelemaan Guatemalan kansallislintua ketsaalia.',
+    },
+    "Chimaltenango": {
+      lyhyt: 'San Juan Comalapaa kutsutaan Amerikan Firenzeksi, sillä kylässä maalaa noin 500 kaqchikel-taiteilijaa.',
+    },
+    "Chiquimula": {
+      lyhyt: 'Esquipulasin basilikan Mustan Kristuksen luo saapuu joka 15. tammikuuta arviolta jopa miljoona pyhiinvaeltajaa.',
+    },
+    "El Progreso": {
+      lyhyt: 'Sierra de las Minasin Cerro El Pinalón kohoaa 2 962 metriin, ja se on El Progreson korkein kohta.',
+    },
+    "Escuintla": {
+      lyhyt: 'La Democracian puistossa on esillä Monte Alton pyylevät kivihahmot ja jättiläispäät, jotka veistettiin noin 500–200 eaa.',
+    },
+    "Guatemala": {
+      lyhyt: 'Pääkaupungin länsiosan korttelien alle on jäänyt Kaminaljuyú, suuri mayakaupunki, josta on säilynyt puistona vain pieni osa.',
+    },
+    "Huehuetenango": {
+      lyhyt: 'Todos Santos Cuchumatánissa 2 500 metrin korkeudella myös miehet käyttävät yhä arjessa perinteistä asua.',
+    },
+    "Izabal": {
+      lyhyt: 'Karibianrannan Livingstoniin ei johda tietä, vaan sinne tullaan veneellä, ja kaupungin kaduilla kuulee garifunaa.',
+    },
+    "Jalapa": {
+      lyhyt: 'Jalapan viileää vuoristoa hallitsee 2 176 metriin kohoava Jumayn tulivuori.',
+    },
+    "Jutiapa": {
+      lyhyt: 'Güijajärven poikki kulkee Guatemalan ja El Salvadorin raja, ja kummallakin maalla on oma rantansa.',
+    },
+    "Petén": {
+      lyhyt: 'Floresin vanhakaupunki on Petén Itzá -järven saarella, jonne pääsee lyhyttä pengertietä pitkin.',
+    },
+    "Quezaltenango": {
+      lyhyt: 'Quetzaltenangon kʼicheʼ-kielinen nimi Xelajú tarkoittaa "kymmenen vuoren alla", ja arjessa kaupunki on Xela.',
+    },
+    "Quiché": {
+      lyhyt: 'Nebajin, Chajulin ja Cotzalin vuoristokylissä puhutaan ixiliä, mayakieltä, joka on tämän seudun oma.',
+    },
+    "Retalhuleu": {
+      lyhyt: 'Takalik Abaj oli olmeekkien ja mayojen kohtauspaikka, ja se liitettiin Unescon maailmanperintöluetteloon 2023.',
+    },
+    "Sacatepéquez": {
+      lyhyt: 'Antiguassa kadut peitetään pääsiäisviikolla värjätystä sahanpurusta tehdyillä matoilla, jotka kulkueet tallaavat.',
+    },
+    "San Marcos": {
+      lyhyt: 'La Blancan 25-metrinen kumpu oli noin 900–600 eaa. yksi Mesoamerikan ensimmäisistä pyramiditemppeleistä.',
+    },
+    "Santa Rosa": {
+      lyhyt: 'Monterricon mustalle tuliperäiselle hiekkarannalle nousee heinä–joulukuussa merikilpikonnia munimaan.',
+    },
+    "Sololá": {
+      lyhyt: 'Sololán kaupungissa 600 metriä Atitlánin yläpuolella pidetään tiistaisin ja perjantaisin yksi Guatemalan suurimmista toreista.',
+    },
+    "Suchitepéquez": {
+      lyhyt: 'Mazatenangon karnevaali on Guatemalan vanhin ja suurin, ja sitä on vietetty vuodesta 1885.',
+    },
+    "Totonicapán": {
+      lyhyt: 'Totonicapánin ylänköjen havumetsissä kasvaa uhanalaista guatemalanpihtaa.',
+    },
+    "Zacapa": {
+      lyhyt: 'Estanzuelan paleontologisessa museossa on koottuina mastodontin ja jättiläislaiskiaisen luurangot.',
+    },
+  },
+  /*
+   * NIC (erä 9C). Avaimet MAAKUNNAT_KAIKKI.NIC:n tunnuksia TÄSMÄLLEEN
+   * ("Atlántico Norte"/"Atlántico Sur" = nykyiset Costa Caribe Norte/Sur,
+   * "Rio San Juan" ilman aksenttia). Vain `lyhyt`. Vältetty
+   * maastokohteet-nic.js:n aiheet (Bilwi, Bluefields, Ciudad Darío,
+   * Cosigüina, El Castillo, Granadan ja Leónin kaupungit, Ometepe, San
+   * Juan -joki, Solentiname, Somoton kanjoni). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Atlántico Norte — Bosawás Biosphere Reserve; Atlántico Sur — Corn
+   *   Islands; Boaco — Boaco; Carazo — El Güegüense; Chinandega — Corinto;
+   *   Chontales — Museo Gregorio Aguilar Barea; Estelí — cigar industry;
+   *   Granada — Isletas de Granada; Jinotega — Jinotega; León — Cerro
+   *   Negro; Madriz — Somoto (rosquillas); Managua — Ancient footprints of
+   *   Acahualinca; Masaya — Masaya (Monimbó); Matagalpa — cerámica negra;
+   *   Nueva Segovia — Ocotal; Rio San Juan — Indio Maíz Biological
+   *   Reserve; Rivas — Rivas Isthmus (Britannica)
+   */
+  NIC: {
+    "Atlántico Norte": {
+      lyhyt: 'Bosawásin biosfäärialue ulottuu tänne, ja se on Amazonin pohjoispuolen suurin yhtenäinen koskematon sademetsä.',
+    },
+    "Atlántico Sur": {
+      lyhyt: 'Corn Islands -saaret ovat noin 70 kilometrin päässä rannikolta, ja niillä puhutaan arjessa englantipohjaista kreolia.',
+    },
+    "Boaco": {
+      lyhyt: 'Mäkistä Boacoa kutsutaan kaksikerroksiseksi kaupungiksi, sillä sen ainoat tasaiset paikat ovat puisto ja pesäpallokenttä.',
+    },
+    "Carazo": {
+      lyhyt: 'Diriambassa esitetään tammikuun San Sebastián -juhlissa El Güegüense -näytelmää, jonka Unesco nimesi ihmiskunnan perinnöksi 2005.',
+    },
+    "Chinandega": {
+      lyhyt: 'Corinto on Nicaraguan suurin satama, ja sen kautta kulkee valtaosa maan meriteitse kulkevasta ulkomaankaupasta.',
+    },
+    "Chontales": {
+      lyhyt: 'Juigalpan arkeologisessa museossa on yli 120 kivipatsasta, Nicaraguan suurin alkuperäiskansojen veistoskokoelma.',
+    },
+    "Estelí": {
+      lyhyt: 'Estelíä kutsutaan Nicaraguan sikaripääkaupungiksi, ja sikareita kääritään käsin niin suurissa tehtaissa kuin takapihoillakin.',
+    },
+    "Granada": {
+      lyhyt: 'Granadan edustalla Nicaraguajärvessä on noin 365 pientä saarta, jotka syntyivät Mombachon tulivuoren sortuman jäänteistä.',
+    },
+    "Jinotega": {
+      lyhyt: 'Jinotegaa kutsutaan sumujen kaupungiksi, sillä pilvet ajelehtivat jatkuvasti vuorten ympäröimän laakson läpi.',
+    },
+    "León": {
+      lyhyt: 'Cerro Negro ilmestyi maan pinnalle vasta 1850, ja sen mustaa tuhkarinnettä lasketaan nykyään alas laudalla.',
+    },
+    "Madriz": {
+      lyhyt: 'Somotossa leivotaan puu-uuneissa rosquillas-maissikeksejä, ja kaupunkia pidetään niiden syntysijana.',
+    },
+    "Managua": {
+      lyhyt: 'Acahualincassa Managuanjärven rannalla on tuhkaan painuneita ihmisten jalanjälkiä, jotka ovat ainakin 2 100 vuotta vanhoja.',
+    },
+    "Masaya": {
+      lyhyt: 'Masaya on nimetty Nicaraguan kansanperinteen pääkaupungiksi, ja sen Monimbón kaupunginosassa on käsityöpaja lähes joka kadulla.',
+    },
+    "Matagalpa": {
+      lyhyt: 'Matagalpan seudulla tehdään yhä mustaa keramiikkaa, jonka kiilto tulee kasvipihkasta tehdystä pinnoitteesta.',
+    },
+    "Nueva Segovia": {
+      lyhyt: 'Nueva Segovian pääkaupunki Ocotal on saanut nimensä ocote-männyistä, joita seudun vuorilla kasvaa runsaasti.',
+    },
+    "Rio San Juan": {
+      lyhyt: 'Indio Maízin suojelualue on yksi Keski-Amerikan parhaiten säilyneistä alankosademetsistä.',
+    },
+    "Rivas": {
+      lyhyt: 'Rivasin kannaksella Nicaraguajärveä ja Tyyntämerta erottaa vain noin 20 kilometrin kaistale maata.',
+    },
+  },
+  /*
+   * CUB (erä 9D). Avaimet MAAKUNNAT_KAIKKI.CUB:n tunnuksia TÄSMÄLLEEN,
+   * kopioitu koneellisesti ("Ciudad de la Habana" = Havanna). Vain `lyhyt`.
+   * Maastokohteiden (Turquino, Cauto, Nuorisonsaari, Trinidad, Viñales,
+   * San Pedro de la Roca, Cienfuegosin kaupunki, Camagüeyn tinajón,
+   * Baracoa, Hersheyn rata, Bayamo) aiheita vältetty. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Artemisa — Las Terrazas; Camagüey — Playa Santa Lucía (haku);
+   *   Ciego de Ávila — Cayo Coco; Cienfuegos — Jardín Botánico de
+   *   Cienfuegos; Granma — Desembarco del Granma National Park;
+   *   Guantánamo — Alejandro de Humboldt National Park; Ciudad de la
+   *   Habana — Malecón, Havana; Holguín — El Chorro de Maita; Isla de la
+   *   Juventud — Presidio Modelo; Las Tunas — Las Tunas (city);
+   *   Matanzas — Varadero; Mayabeque — Mayabeque Province; Pinar del
+   *   Río — Vuelta Abajo; Sancti Spíritus — Zaza Reservoir; Santiago de
+   *   Cuba — El Cobre (Basílica de la Caridad del Cobre); Villa Clara —
+   *   Parrandas, Remedios
+   */
+  CUB: {
+    "Artemisa": {
+      lyhyt: "Las Terrazasin kylä on Sierra del Rosarion rinteillä, joiden paljaaksi hakatut mäet metsitettiin uudelleen erosiota estävien terassien avulla.",
+    },
+    "Camagüey": {
+      lyhyt: "Santa Lucían hiekkarantoja suojaa koralliriutta, joka kulkee lähes kahden kilometrin päässä rannasta – sinne mennään veneellä.",
+    },
+    "Ciego de Ávila": {
+      lyhyt: "Cayo Cocon saarelle ajetaan 27 kilometrin pengertietä suoraan Perros-lahden yli; tie avattiin vuonna 1988.",
+    },
+    "Cienfuegos": {
+      lyhyt: "Cienfuegosin kasvitieteellinen puutarha perustettiin 1901 sokeriruokotutkimusta varten, ja sen 97 hehtaarilla kasvaa yli 1 400 lajia.",
+    },
+    "Granma": {
+      lyhyt: "Cabo Cruzin rannikolla kalkkikiviterassit nousevat portaittain merestä vuorille, ja ne ovat Unescon maailmanperintöä.",
+    },
+    "Guantánamo": {
+      lyhyt: "Alejandro de Humboldtin kansallispuiston vuoristometsissä elää poikkeuksellisen paljon kasveja ja eläimiä, joita ei tavata muualla.",
+    },
+    "Ciudad de la Habana": {
+      lyhyt: "Havannan Malecón kiertää rantaa kahdeksan kilometriä, ja iltaisin sen muurilla istutaan katsomassa aaltojen iskuja.",
+    },
+    "Holguín": {
+      lyhyt: "Guardalavacan lähellä Chorro de Maítassa on kaivettu esiin alkuperäisasukkaiden kylä ja hautausmaa noin vuosilta 1300–1550.",
+    },
+    "Isla de la Juventud": {
+      lyhyt: "Saaren Presidio Modelo -vankila rakennettiin 1926–1931 viidestä pyöreästä sellirakennuksesta, ja nyt se on museo.",
+    },
+    "Las Tunas": {
+      lyhyt: "Las Tunasia kutsutaan veistosten kaupungiksi, sillä sen keskustan kaduilla ja aukioilla on paljon julkisia veistoksia.",
+    },
+    "Matanzas": {
+      lyhyt: "Varaderon kapea Hicacosin niemimaa työntyy yli 20 kilometriä mereen, ja sen kärki on Kuuban pohjoisin kohta.",
+    },
+    "Mayabeque": {
+      lyhyt: "Mayabeque sai nimensä joestaan, ja sen etelärannalle uskotaan perustetun vuonna 1514 ensimmäinen Havanna.",
+    },
+    "Pinar del Río": {
+      lyhyt: "Vuelta Abajon tasangoilla kasvatetaan tupakkaa, jota moni sikarinpolttaja pitää maailman parhaana.",
+    },
+    "Sancti Spíritus": {
+      lyhyt: "Zazan tekojärvi on Kuuban suurin: vuonna 1971 valmistunut pato pidättää noin 750 miljoonaa kuutiometriä vettä.",
+    },
+    "Santiago de Cuba": {
+      lyhyt: "El Cobren kylässä vanhan kuparikaivoksen vieressä on basilika, jossa on Kuuban suojeluspyhimyksen Caridad del Cobren kuva.",
+    },
+    "Villa Clara": {
+      lyhyt: "Remediosin parrandoissa jouluaattona kaupunginosat San Salvador ja El Carmen kilpailevat valaistuilla lavoilla ja ilotulituksilla.",
+    },
+  },
+  /*
+   * PAN (erä 9D). Avaimet MAAKUNNAT_KAIKKI.PAN:n tunnuksia TÄSMÄLLEEN
+   * (vanhat Natural Earth -nimet: "Kuna Yala" = Guna Yala, "Emberá" =
+   * Emberá-Wounaanin comarca, "Ngöbe Buglé" = Ngäbe-Buglé; Panamá Oeste
+   * puuttuu jaosta). Vain `lyhyt`. Maastokohteiden (Barú, Coiba, Chagres,
+   * Portobelo, rautatie, El Caño, Guna Yala, Los Santos, Bocas del Toro,
+   * Dariénin aukko, Helmisaaret) aiheita vältetty. Lähteet (en-Wikipedia
+   * ja haku 25.9.2026):
+   *   Bocas del Toro — Oophaga pumilio; Chiriquí — Geisha (coffee);
+   *   Coclé — El Valle de Antón; Colón — Colón Free Trade Zone; Darién —
+   *   Darién National Park; Emberá — Emberá-Wounaan Comarca; Kuna Yala —
+   *   Mola (art form); Herrera — Sarigua National Park; Los Santos — Las
+   *   Tablas, Los Santos; Ngöbe Buglé — Ngäbe-Buglé Comarca; Panama —
+   *   Panamá Viejo; Veraguas — Veraguas Province
+   */
+  PAN: {
+    "Bocas del Toro": {
+      lyhyt: "Saariston pienen mansikkamyrkkysammakon väritys vaihtelee saaresta toiseen, koska eristyneet kannat ovat kehittyneet kukin omaan suuntaansa.",
+    },
+    "Chiriquí": {
+      lyhyt: "Boqueten rinteiltä tuleva geisha-kahvi on myyty huutokaupoissa ennätyshintoihin, parhaimmillaan yli tuhannella dollarilla kilolta.",
+    },
+    "Coclé": {
+      lyhyt: "El Vallen kaupunki on rakennettu sammuneen tulivuoren kuuden kilometrin levyiseen kalderaan noin 600 metrin korkeudelle.",
+    },
+    "Colón": {
+      lyhyt: "Kanavan Karibian puoleiseen suuhun vuonna 1948 perustettu Colónin vapaakauppa-alue on Amerikan suurin vapaasatama.",
+    },
+    "Darién": {
+      lyhyt: "Dariénin kansallispuisto on 5 790 neliökilometrin Unescon maailmanperintökohde, jonka sisällä asuu yhä alkuperäiskansoja.",
+    },
+    "Emberá": {
+      lyhyt: "Emberá-Wounaanin comarca perustettiin 1983, ja se koostuu kahdesta erillisestä osasta Dariénin sademetsissä.",
+    },
+    "Kuna Yala": {
+      lyhyt: "Gunanaisten mola-paneelit tehdään leikkaamalla päällekkäisiä kangaskerroksia niin, että alempien kerrosten värit tulevat esiin.",
+    },
+    "Herrera": {
+      lyhyt: "Parita-lahden rannalla Sariguan kansallispuistossa on vuosisatojen metsänraivauksen autioittamaa maata, jota kutsutaan Panaman aavikoksi.",
+    },
+    "Los Santos": {
+      lyhyt: "Las Tablasin karnevaaleissa Calle Arriba ja Calle Abajo kilpailevat keskenään, ja kummallakin puolella on oma kuningattarensa.",
+    },
+    "Ngöbe Buglé": {
+      lyhyt: "Ngäbe-Buglé on Panaman kuudesta comarcasta suurin ja väkirikkain, ja sen vuoristossa asuu yli 200 000 ihmistä.",
+    },
+    "Panama": {
+      lyhyt: "Panamá Viejon rauniot ovat jäänteitä vuonna 1519 perustetusta ensimmäisestä pysyvästä eurooppalaisesta kaupungista Tyynenmeren rannalla.",
+    },
+    "Veraguas": {
+      lyhyt: "Veraguas on Panaman ainoa maakunta, jolla on rantaa sekä Karibianmerellä että Tyynellämerellä.",
+    },
+  },
+  /*
+   * HKG (erä 9D). Avaimet MAAKUNNAT_KAIKKI.HKG:n tunnuksia TÄSMÄLLEEN
+   * (Hongkongin 18 piiriä englanniksi, myös nimiFi suomentamatta). Vain
+   * `lyhyt`. Maastokohteiden (muurikaupunki, Tai O, Tung Chungin linnake,
+   * Tai Fu Tai, Tai Mo Shan, Lantau) aiheita vältetty. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Central and Western — Central–Mid-Levels escalator; Eastern —
+   *   Monster Building; Islands — Cheung Chau Bun Festival; Kowloon City —
+   *   Kai Tak Airport; Kwai Tsing — Kwai Tsing Container Terminals; Kwun
+   *   Tong — Lei Yue Mun; North — Lung Yeuk Tau; Sai Kung — Hong Kong
+   *   UNESCO Global Geopark; Sha Tin — Ten Thousand Buddhas Monastery;
+   *   Sham Shui Po — Shek Kip Mei fire; Southern — Ocean Park Hong Kong;
+   *   Tai Po — Hong Kong Railway Museum; Tsuen Wan — Sam Tung Uk Museum;
+   *   Tuen Mun — Tsing Shan Monastery; Wan Chai — Happy Valley Racecourse;
+   *   Wong Tai Sin — Wong Tai Sin Temple; Yau Tsim Mong — Clock Tower,
+   *   Hong Kong; Yuen Long — Mai Po Marshes
+   */
+  HKG: {
+    "Central and Western": {
+      lyhyt: "Centralista Mid-Levelsiin nousee 800 metrin katettu liukuporrasreitti, joka kulkee aamulla alamäkeen ja muun päivän ylämäkeen.",
+    },
+    "Eastern": {
+      lyhyt: "Quarry Bayn viisi toisiinsa kiinni rakennettua kerrostaloa, lempinimeltään Monster Building, ovat noin 10 000 ihmisen koti.",
+    },
+    "Islands": {
+      lyhyt: "Cheung Chaun pullajuhlassa pystytetään pullilla peitettyjä torneja, ja juhlan aikana koko saari syö kolme päivää kasvisruokaa.",
+    },
+    "Kowloon City": {
+      lyhyt: "Kai Takin lentoasema suljettiin 1998, ja sen vanhan kiitotien kärjessä on nyt risteilyalusten satama.",
+    },
+    "Kwai Tsing": {
+      lyhyt: "Kwai Chungin ja Tsing Yin väliselle täytemaalle on rakennettu yhdeksän konttiterminaalia, joissa on yhteensä 27 laituripaikkaa.",
+    },
+    "Kwun Tong": {
+      lyhyt: "Lei Yue Munin kalastajakylä Victorian sataman itäsuulla on tunnettu kalatoristaan ja merenelävien ravintoloistaan.",
+    },
+    "North": {
+      lyhyt: "Fanlingin Lung Yeuk Taussa kulkee perintöpolku, joka yhdistää Tang-suvun viisi muurein ympäröityä kylää.",
+    },
+    "Sai Kung": {
+      lyhyt: "High Islandin rantakallioissa näkyy kuusikulmaisia vulkaanisia kivipylväitä, jotka kuuluvat Hongkongin Unesco-geopuistoon.",
+    },
+    "Sha Tin": {
+      lyhyt: "Kymmenentuhannen Buddhan luostariin kiivetään 431 porrasta, ja Buddha-patsaita on lopulta lähes 13 000.",
+    },
+    "Sham Shui Po": {
+      lyhyt: "Shek Kip Mein hökkelikylän tulipalo jouluna 1953 jätti yli 53 000 ihmistä kodittomiksi ja käynnisti julkisen asuntorakentamisen.",
+    },
+    "Southern": {
+      lyhyt: "Ocean Park -huvipuisto avattiin 1977, ja sen puolentoista kilometrin köysirata kulkee rannalta niemen huipulle.",
+    },
+    "Tai Po": {
+      lyhyt: "Tai Po Marketin vanha rautatieasema vuodelta 1913 on nykyään rautatiemuseo.",
+    },
+    "Tsuen Wan": {
+      lyhyt: "Sam Tung Uk on hakkalaisen Chan-suvun 1786 rakentama muurikylä, joka toimii nykyään museona.",
+    },
+    "Tuen Mun": {
+      lyhyt: "Castle Peakin juurella on Tsing Shanin luostari, jonka taru kertoo maljalla matkanneesta munkki Pui Tosta.",
+    },
+    "Wan Chai": {
+      lyhyt: "Happy Valleyn laukkaradalla kilpaillaan yleensä keskiviikkoiltaisin, ja katsomoihin mahtuu noin 55 000 ihmistä.",
+    },
+    "Wong Tai Sin": {
+      lyhyt: "Wong Tai Sinin temppelissä ravistellaan bambuputkea, kunnes yksi ennustetikku putoaa ja tulkitsija kertoo sen merkityksen.",
+    },
+    "Yau Tsim Mong": {
+      lyhyt: "Tsim Sha Tsuin rannassa seisoo 44-metrinen kellotorni vuodelta 1915, ainoa jäänne puretusta Kowloonin rautatieasemasta.",
+    },
+    "Yuen Long": {
+      lyhyt: "Mai Pon soilla talvehtii kymmeniä tuhansia muuttolintuja, ja niiden ruoaksi hoidetaan perinteisiä gei wai -katkaraputekolampia.",
+    },
+  },
+  /*
+   * TWN (erä 9D). Avaimet MAAKUNNAT_KAIKKI.TWN:n tunnuksia TÄSMÄLLEEN
+   * (piirikunnat ja kaupungit erikseen, esim. "Chiayi" ja "Chiayi City").
+   * Vain `lyhyt`. Maastokohteiden (Yu Shan, salmi, Taroko, Santo Domingo,
+   * Jiufen, Lukang, Chaotian, Fort Zeelandia, Wushantou, Sanxiantai,
+   * Penghun saaristo) aiheita vältetty. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026):
+   *   Changhua — Changhua Roundhouse; Chiayi — Alishan National Scenic
+   *   Area; Chiayi City — Hinoki Village; Hsinchu — Beipu, Hsinchu;
+   *   Hsinchu City — Hsinchu (Windy City) ja haku (riisinuudelit);
+   *   Hualien — Liushidan Mountain (haku, East Rift Valley NSA); Kaohsiung
+   *   City — Dragon and Tiger Pagodas; Keelung City — Keelung; Kinmen —
+   *   wind lion gods (haku, Kinmen Travel); Miaoli — Sanyi, Miaoli;
+   *   Nantou — Sun Moon Lake; Penghu — Twin Hearts Stone Weir (haku);
+   *   Pingtung — Kenting National Park; Taichung City — National Taichung
+   *   Theater; Tainan City — Tainan Confucian Temple; Taipei City — Taipei
+   *   101; Taitung — Orchid Island; Taoyuan — Taoyuan International
+   *   Airport; New Taipei City — Yehliu; Yilan — Guishan Island;
+   *   Yunlin — Xiluo Bridge
+   */
+  TWN: {
+    "Changhua": {
+      lyhyt: "Changhuan viuhkanmuotoinen veturitalli vuodelta 1922 on Taiwanin ainoa säilynyt, ja sen kääntöpöydän ympärillä huolletaan yhä vetureita.",
+    },
+    "Chiayi": {
+      lyhyt: "Alishanin vuorilla aamuaurinko nousee pilvimeren yläpuolelle, ja metsissä kasvaa ikivanhoja jättiläissypressejä.",
+    },
+    "Chiayi City": {
+      lyhyt: "Hinoki Villagessa on kunnostettu 28 japanilaisajan puutaloa, joissa asuivat aikoinaan Alishanin metsätalouden virkailijat.",
+    },
+    "Hsinchu": {
+      lyhyt: "Beipun pikkukaupungin asukkaista 98 prosenttia on hakkoja, ja siellä juodaan lei chaa, teestä ja pähkinöistä jauhettua juomaa.",
+    },
+    "Hsinchu City": {
+      lyhyt: "Hsinchu on tuulen kaupunki: syksyn koillismonsuuni puhaltaa niin tasaisesti, että sen riisinuudelit on perinteisesti kuivattu tuulessa.",
+    },
+    "Hualien": {
+      lyhyt: "Fulin Liushidan-vuoren ylätasanko muuttuu loppukesällä oranssiksi, kun päivänliljat kukkivat – kukista keitetään myös keittoa.",
+    },
+    "Kaohsiung City": {
+      lyhyt: "Lootusjärvellä seisovat 1976 rakennetut seitsenkerroksiset Lohikäärme- ja Tiikeripagodit, joille kuljetaan siksak-siltaa pitkin.",
+    },
+    "Keelung City": {
+      lyhyt: "Keelungia kutsutaan sadesatamaksi, sillä vettä sataa keskimäärin yli 3 700 millimetriä vuodessa.",
+    },
+    "Kinmen": {
+      lyhyt: "Kinmenin kylien laidoilla seisoo kymmeniä kivisiä tuulileijonia, joiden uskotaan suojaavan kylää tuulelta ja pahalta.",
+    },
+    "Miaoli": {
+      lyhyt: "Sanyita kutsutaan Taiwanin puunveiston kuningaskunnaksi, ja kaupungin puuveistosmuseo kertoo taidon historiasta.",
+    },
+    "Nantou": {
+      lyhyt: "Aurinko- ja kuujärvi on Taiwanin suurin vesistö, ja sen keskellä olevaa Lalun saarta thao-kansa pitää pyhänä.",
+    },
+    "Penghu": {
+      lyhyt: "Qimein saaren Kaksoissydänten kalapato on kivistä ja korallista ladottu allaspari, johon kalat jäävät laskuveden aikaan.",
+    },
+    "Pingtung": {
+      lyhyt: "Kentingin kansallispuisto perustettiin 1984 Taiwanin ensimmäiseksi, ja siellä elää 26 maarapulajia.",
+    },
+    "Taichung City": {
+      lyhyt: "Toyo Iton suunnittelema Taichungin kansallisteatteri vihittiin 2016, ja sen kaarevat seinät muodostavat luolamaisia tiloja.",
+    },
+    "Tainan City": {
+      lyhyt: "Tainanin Konfutsen temppeli rakennettiin 1665, ja se oli Taiwanin ensimmäinen konfutselainen oppilaitos.",
+    },
+    "Taipei City": {
+      lyhyt: "Taipei 101 on 508 metriä korkea, ja vuosina 2004–2010 se oli maailman korkein rakennus.",
+    },
+    "Taitung": {
+      lyhyt: "Orkideasaarella tao-kansa rakentaa yhä tatala-kanootteja, ja lentokalat ovat keskeinen osa saaren ruokaa ja perinteitä.",
+    },
+    "Taoyuan": {
+      lyhyt: "Taoyuanin kansainvälinen lentoasema avattiin 1979, ja se on Taiwanin suurin ja vilkkain lentoasema.",
+    },
+    "New Taipei City": {
+      lyhyt: "Yehliun niemellä meri on kuluttanut kivestä Kuningattaren pään, jonka kapea kaula ohenee vuosi vuodelta.",
+    },
+    "Yilan": {
+      lyhyt: "Guishanin saari Yilanin edustalla muistuttaa uivaa kilpikonnaa, ja se on Taiwanin ainoa aktiivinen tulivuori.",
+    },
+    "Yunlin": {
+      lyhyt: "Xiluon silta ylittää Zhuoshui-joen 1 939 metrin matkalta, ja se vihittiin käyttöön tammikuussa 1953.",
+    },
+  },
+  /*
+   * PRK (erä 9D). Avaimet MAAKUNNAT_KAIKKI.PRK:n tunnuksia TÄSMÄLLEEN
+   * (McCune–Reischauer-latinisointi, ŏ = U+014F, heittomerkki ASCII).
+   * Vain `lyhyt`, vain maisema, kulttuuri ja historia. Lähteet
+   * (en-Wikipedia 25.9.2026):
+   *   Chagang-do — Chagang Province; Hamgyŏng-namdo — Hamhung Royal
+   *   Villa; Hwanghae-namdo — Mount Kuwol; P'yŏngan-namdo — Songam
+   *   Cavern; Kangwŏn-do — Kumgangsan; P'yŏngyang — Pyongyang Metro;
+   *   Hamgyŏng-bukto — Chilbosan (North Hamgyong); Hwanghae-bukto —
+   *   Historic Monuments and Sites in Kaesong; P'yŏngan-bukto — Pohyonsa;
+   *   Rasŏn — North Korea–Russia border; Ryanggang — Heaven Lake
+   */
+  PRK: {
+    "Chagang-do": {
+      lyhyt: "Chagangin maakunnasta 98 prosenttia on vuoristoa, ja sen rajaa Kiinaa vasten seuraa Amnok- eli Yalujoki.",
+    },
+    "Hamgyŏng-namdo": {
+      lyhyt: "Hamhŭngin kuninkaallisessa huvilassa asui Joseon-dynastian perustaja Yi Seong-gye ennen kuin hänestä tuli kuningas.",
+    },
+    "Hwanghae-namdo": {
+      lyhyt: "Kuwolsan-vuoren nimi viittaa kuukalenterin yhdeksänteen kuukauteen, jolloin vuoren sanotaan olevan kauneimmillaan.",
+    },
+    "P'yŏngan-namdo": {
+      lyhyt: "Songamin tippukiviluola löydettiin 1964 malminetsinnässä, ja sen käytäviä on yhteensä yli viisi kilometriä.",
+    },
+    "Kangwŏn-do": {
+      lyhyt: "Kŭmgangsanin eli Timanttivuorten korkein huippu kohoaa itärannikolla 1 638 metriin, ja vanhastaan huippuja on sanottu olevan 12 000.",
+    },
+    "P'yŏngyang": {
+      lyhyt: "Pjongjangin metro kulkee yli sadan metrin syvyydessä, ja liukuportailla laiturille kestää noin kolme ja puoli minuuttia.",
+    },
+    "Hamgyŏng-bukto": {
+      lyhyt: "Ch'ilbosan eli Seitsemän aarteen vuori jakautuu sisä-, ulko- ja meri-Ch'ilboon, ja sen rinteillä on 800-luvulta periytyvä temppeli.",
+    },
+    "Hwanghae-bukto": {
+      lyhyt: "Kaesŏng oli Koryŏ-dynastian pääkaupunki 900–1300-luvuilla, ja sen palatsien ja hautojen jäänteet ovat Unescon maailmanperintöä.",
+    },
+    "P'yŏngan-bukto": {
+      lyhyt: "Myohyangsanin vuorilla on vuonna 1024 perustettu Pohyŏnin luostari, jonka yhdeksänkerroksinen pagodi on vuodelta 1044.",
+    },
+    "Rasŏn": {
+      lyhyt: "Rasŏnissa Tumenjoen suulla kulkee Pohjois-Korean ja Venäjän raja, jonka maaosuus on vain 17 kilometriä.",
+    },
+    "Ryanggang": {
+      lyhyt: "Paektusanin kraaterissa 2 189 metrin korkeudella on Taivaanjärvi, joka syntyi tulivuoren purkauksessa vuonna 946.",
+    },
+  },
+  /*
+   * TJK (erä 9D). Avaimet MAAKUNNAT_KAIKKI.TJK:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin vanhat nimet: "Leninabad" = Sughdin alue,
+   * "Tadzhikistan Territories" = tasavallan alaiset piirit). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Dushanbe — Dushanbe; Gorno-Badakhshan — Pamir Highway;
+   *   Tadzhikistan Territories — Hisor Fortress (haku, Hisor,
+   *   Tajikistan); Khatlon — Nurek Dam; Leninabad — Khujand
+   */
+  TJK: {
+    "Dushanbe": {
+      lyhyt: "Dušanbe tarkoittaa persiaksi maanantaita, sillä kaupunki kasvoi paikalle, jossa pidettiin joka maanantai suuret markkinat.",
+    },
+    "Gorno-Badakhshan": {
+      lyhyt: "Pamirin valtatie kiipeää Ak-Baitalin solaan 4 655 metriin, ja se on maailman toiseksi korkein kansainvälinen maantie.",
+    },
+    "Tadzhikistan Territories": {
+      lyhyt: "Hisorin laaksossa Dušanben länsipuolella seisoo linnoituksen portti kahden pyöreän tornin välissä, ja vieressä on 1500-luvun madrasa.",
+    },
+    "Khatlon": {
+      lyhyt: "Nurekissa Vahš-jokea patoaa 300 metriä korkea pato, joka tuottaa noin 70 prosenttia Tadžikistanin sähköstä.",
+    },
+    "Leninabad": {
+      lyhyt: "Hudžandin paikalle Aleksanteri Suuri perusti vuonna 329 eaa. kaupungin, jonka nimi oli Aleksandria Eshate eli Äärimmäinen Aleksandria.",
+    },
+  },
+  /*
+   * KGZ (erä 9D). Avaimet MAAKUNNAT_KAIKKI.KGZ:n tunnuksia TÄSMÄLLEEN
+   * ("Ysyk-Köl" ö = U+00F6). Vain `lyhyt`. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026):
+   *   Batken — Aigul-Tash / Fritillaria eduardii (haku); Bishkek —
+   *   Bishkek; Chuy — Burana Tower; Naryn — Tash Rabat; Osh — Sulayman
+   *   Mountain; Talas — Manas Ordo / Gumbez of Manas (haku); Ysyk-Köl —
+   *   Issyk-Kul; Jalal-Abad — Arslanbob
+   */
+  KGZ: {
+    "Batken": {
+      lyhyt: "Aigul-Tashin rinne Batkenin lähellä muuttuu huhtikuussa parin viikon ajaksi oranssiksi, kun aigul-kukat aukeavat, ja vuori on suojeltu niiden vuoksi.",
+    },
+    "Bishkek": {
+      lyhyt: "Biškekin nimi tulee puisesta männästä, jolla käyvää tammanmaitoa kirnutaan, ja kaupungin takana kohoaa Kirgisian Ala-Toon vuorijono.",
+    },
+    "Chuy": {
+      lyhyt: "Tokmokin lähellä seisoo 1000-luvulla rakennettu Buranan minareetti, jonka korkeus on maanjäristysten jäljiltä enää 25 metriä.",
+    },
+    "Naryn": {
+      lyhyt: "Tash Rabatin kivinen karavaaniseraiji on 3 200 metrin korkeudella vuoristolaaksossa, ja sen sisällä on 31 huonetta.",
+    },
+    "Osh": {
+      lyhyt: "Sulaiman-Too-vuori keskellä Ošia on Kirgisian ainoa kokonaan maan omalla alueella oleva Unescon maailmanperintökohde.",
+    },
+    "Talas": {
+      lyhyt: "Talasin Manas-kumbez on 1300-luvun hautamuistomerkki, jonka kirjoitus omistaa sen naiselle, vaikka kansa pitää sitä Manaksen hautana.",
+    },
+    "Ysyk-Köl": {
+      lyhyt: "Ysyk-Köl on 1 607 metrin korkeudella vuorten keskellä, mutta suolaisen vetensä vuoksi se jäätyy vain harvoin.",
+    },
+    "Jalal-Abad": {
+      lyhyt: "Arslanbobin 11 000 hehtaarin saksanpähkinämetsä on maailman suurin, ja syyskuussa kylä lähtee keräämään pähkinöitä.",
+    },
+  },
+  /*
+   * PNG (erä 10). Avaimet MAAKUNNAT_KAIKKI.PNG:n tunnuksia TÄSMÄLLEEN
+   * (esim. "North Solomons" = Bougainville, "Northern" = Oro,
+   * "National Capital District" = Port Moresby). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   North Solomons — 2019 Bougainvillean independence referendum;
+   *   Chimbu — Chimbu skeleton dancers (haku); East Sepik — Iatmul
+   *   crocodile scarification (haku); Eastern Highlands — Goroka (haku,
+   *   Coffee Industry Corporation); Enga — Enga Province; Gulf — Gulf
+   *   Province; East New Britain — Baining people; Central — Varirata
+   *   National Park (haku); West New Britain — Kimbe Bay; Madang — Manam
+   *   2004 (haku, ReliefWeb); Manus — Papustyla pulcherrima; Milne Bay —
+   *   Kenu and Kundu Festival (haku); Morobe — YUS Conservation Area;
+   *   Northern — Queen Alexandra's birdwing; National Capital District —
+   *   National Parliament House, Port Moresby (haku); Sandaun — Sandaun
+   *   Province; Southern Highlands — Lake Kutubu; New Ireland — shark
+   *   calling, Kontu (haku); Western — Ok Tedi Mine; Western Highlands —
+   *   Mount Hagen
+   */
+  PNG: {
+    "North Solomons": {
+      lyhyt: "Bougainvillen kansanäänestyksessä vuonna 2019 yli 97 prosenttia äänestäjistä kannatti itsenäisyyttä Papua-Uudesta-Guineasta.",
+    },
+    "Chimbu": {
+      lyhyt: "Simbun luurankotanssijat maalaavat mustan vartalonsa päälle valkoiset luut ja kallon, ja tanssi nähdään nykyään sing-sing-juhlissa.",
+    },
+    "East Sepik": {
+      lyhyt: "Keski-Sepikin iatmul-kylissä nuorukaisten ihoon viilletään yhä krokotiilin suomuja muistuttavat arvet aikuisuuden merkiksi.",
+    },
+    "Eastern Highlands": {
+      lyhyt: "Goroka on ylänköjen arabicakahvin keskus: ympäröiviltä rinteiltä kerätty kahvi kootaan ja ostetaan siellä ennen vientiä.",
+    },
+    "Enga": {
+      lyhyt: "Engan kaikissa viidessä piirissä puhutaan samaa enga-kieltä, mikä on harvinaista maassa, jossa kieliä on yli 800.",
+    },
+    "Gulf": {
+      lyhyt: "Kikori, Turama, Purari ja Vailala laskevat kaikki Gulfin maakunnassa Papuanlahteen, ja rannikko on yhtä jokisuistojen verkkoa.",
+    },
+    "East New Britain": {
+      lyhyt: "Baining-kansan tulitanssissa naamioidut tanssijat juoksevat ja hyppivät nuotion hiilloksen läpi läpi yön aamunkoittoon asti.",
+    },
+    "Central": {
+      lyhyt: "Port Moresbyn lähellä oleva Varirata oli Papua-Uuden-Guinean ensimmäinen kansallispuisto, ja sen metsissä näkee paratiisilintuja.",
+    },
+    "West New Britain": {
+      lyhyt: "Kimbenlahden riutoilla elää yli 860 riuttakalalajia, ja lahti on yksi maan suosituimmista sukelluskohteista.",
+    },
+    "Madang": {
+      lyhyt: "Manamin tulivuorisaarelta evakuoitiin vuonna 2004 yli 9 000 ihmistä mantereelle, ja moni asui leireissä vielä vuosikymmen myöhemmin.",
+    },
+    "Manus": {
+      lyhyt: "Manuksen sademetsän puissa elää smaragdikotilo, jonka kirkkaanvihreä väri on vain ohuessa pintakalvossa keltaisen kuoren päällä.",
+    },
+    "Milne Bay": {
+      lyhyt: "Alotaussa pidetään joka marraskuu Kenu ja Kundu -festivaali, jossa perinteiset kanootit kilpailevat kundu-rumpujen tahdissa.",
+    },
+    "Morobe": {
+      lyhyt: "Huonin niemimaan YUS-alue oli Papua-Uuden-Guinean ensimmäinen suojelualue, ja sen kylät suojelevat uhanalaista Matschien puukengurua.",
+    },
+    "Northern": {
+      lyhyt: "Popondettan rannikkometsissä elää maailman suurin perhonen, kuningatar Aleksandran lintusiipi, jonka siipiväli ylittää 25 senttiä.",
+    },
+    "National Capital District": {
+      lyhyt: "Port Moresbyn parlamenttitalo on rakennettu Sepikin haus tambaran -henkitalojen mallin mukaan, ja se avattiin vuonna 1984.",
+    },
+    "Sandaun": {
+      lyhyt: "Sandaun tarkoittaa tok pisiniksi auringonlaskua, koska maakunta on maan länsilaidalla – sen raja on Indonesiaa vasten.",
+    },
+    "Southern Highlands": {
+      lyhyt: "Kutubujärvi on Papua-Uuden-Guinean toiseksi suurin järvi, ja siinä elää 13 kalalajia, joita ei ole missään muualla.",
+    },
+    "New Ireland": {
+      lyhyt: "Kontun kylässä haita kutsutaan yhä: kalastaja helistää kookoskuorista tehtyä helistintä vedessä ja houkuttelee hain kanoottinsa viereen.",
+    },
+    "Western": {
+      lyhyt: "Ok Tedin avolouhoksesta Fubilan-vuorelta kaivetaan kuparia ja kultaa, ja kaivos tuo noin neljänneksen koko maan vientituloista.",
+    },
+    "Western Highlands": {
+      lyhyt: "Mount Hagen on Papua-Uuden-Guinean kolmanneksi suurin kaupunki, ja se on saanut nimensä läheisestä kuluneesta tulivuoresta.",
+    },
+  },
+  /*
+   * SLB (erä 10). Avaimet MAAKUNNAT_KAIKKI.SLB:n tunnuksia TÄSMÄLLEEN
+   * ("Capital Territory (Honiara)"). Vain `lyhyt`. Lähteet (en-Wikipedia
+   * ja haku 25.9.2026):
+   *   Central — Savo Island; Choiseul — Choiseul Island; Guadalcanal —
+   *   Guadalcanal Province; Capital Territory (Honiara) — Honiara;
+   *   Isabel — Diocese of Ysabel (haku); Makira — Makira-Ulawa Province;
+   *   Malaita — Malaita Province; Rennell and Bellona — Laticauda
+   *   crockeri; Temotu — Tevau (haku, museokokoelmat); Western — Western
+   *   Province (Solomon Islands), 2007 earthquake
+   */
+  SLB: {
+    "Central": {
+      lyhyt: "Savon saaren kuumaan hiekkaan isojalkakanat hautaavat munansa hautoutumaan, ja kyläläiset keräävät isot munat ruoaksi.",
+    },
+    "Choiseul": {
+      lyhyt: "Choiseulin omakielinen nimi on Lauru, ja Maetamben vuoren ympärillä kasvaa Salomonsaarten parhaiten säilynyttä kalkkikivimetsää.",
+    },
+    "Guadalcanal": {
+      lyhyt: "Guadalcanalin maastosta löytyy yhä toisen maailmansodan räjähtämättömiä ammuksia, ja niiden raivaus jatkuu edelleen.",
+    },
+    "Capital Territory (Honiara)": {
+      lyhyt: "Honiaran kartion muotoinen parlamenttitalo valmistui vuonna 1993 Yhdysvaltain avustuksella kaupungin yläpuolelle.",
+    },
+    "Isabel": {
+      lyhyt: "Isabelin pääkylä Buala on sekä maakunnan hallintokeskus että Melanesian anglikaanisen kirkon Ysabelin hiippakunnan kotipaikka.",
+    },
+    "Makira": {
+      lyhyt: "Makiralla on enemmän sisämaan soita – ja suistokrokotiileja – kuin millään muulla Salomonsaarten saarella.",
+    },
+    "Malaita": {
+      lyhyt: "Malaita on Salomonsaarten väkirikkain maakunta, ja siihen kuuluu myös kaukana pohjoisessa oleva polynesialainen Ontong Javan atolli.",
+    },
+    "Rennell and Bellona": {
+      lyhyt: "Rennellin Teganojärven murtovedessä elää merikäärmelaji, jota ei tavata missään muualla maailmassa.",
+    },
+    "Temotu": {
+      lyhyt: "Santa Cruzin saarilla kierrettiin tevau-rahaa punaisista höyhenistä, ja yhteen rullaan kului yli 300 linnun höyhenet.",
+    },
+    "Western": {
+      lyhyt: "Vuoden 2007 maanjäristys nosti Läntisen maakunnan Ranonggan saarta kerralla 2,5–3 metriä ylemmäs merenpinnasta.",
+    },
+  },
+  /*
+   * FJI (erä 10). Avaimet MAAKUNNAT_KAIKKI.FJI:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia 25.9.2026):
+   *   Central — Suva; Eastern — Lau Islands; Northern — Savusavu;
+   *   Rotuma — Rotuma; Western — Lautoka
+   */
+  FJI: {
+    "Central": {
+      lyhyt: "Suvan Laucalanlahden rannalla on Etelä-Tyynenmeren yliopiston pääkampus, jonka omistavat useat saarivaltiot yhdessä.",
+    },
+    "Eastern": {
+      lyhyt: "Lau-saarilla kriketti on suositumpaa kuin rugby, ja saaret ovat koko Fidžin kriketin keskus.",
+    },
+    "Northern": {
+      lyhyt: "Savusavun Nakaman kuumissa lähteissä vesi on lähes kiehuvaa, ja kyläläiset keittävät niissä taroa ja leipäpuun hedelmiä.",
+    },
+    "Rotuma": {
+      lyhyt: "Rotuman maata saavat omistaa ja käyttää vain rotumalaiset, vaikka saari kuuluu Fidžiin 646 kilometrin päässä Suvasta.",
+    },
+    "Western": {
+      lyhyt: "Lautokaa sanotaan Sokerikaupungiksi: sen sokeritehdas on toiminut vuodesta 1903 ja on kaupungin suurin työnantaja.",
+    },
+  },
+  /*
+   * VUT (erä 10). Avaimet MAAKUNNAT_KAIKKI.VUT:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Malampa — Malampa Province; Penama — Maewo; Sanma — SS President
+   *   Coolidge; Shefa — Hideaway Island underwater post office (haku,
+   *   Vanuatu Post); Tafea — John Frum; Torba — Torba Province
+   */
+  VUT: {
+    "Malampa": {
+      lyhyt: "Malampan nimi on koottu sen kolmen pääsaaren alkutavuista: MALakula, AMbrym ja PAama.",
+    },
+    "Penama": {
+      lyhyt: "Penamaan kuuluva Maewo on Vanuatun sateisin saari, noin 3 500 millimetriä vuodessa, ja sen rinteiltä syöksyy vesiputouksia.",
+    },
+    "Sanma": {
+      lyhyt: "Espiritu Santon edustalla makaa miinaan 1942 ajanut SS President Coolidge, ja hylkyyn sukelletaan suoraan rannalta.",
+    },
+    "Shefa": {
+      lyhyt: "Hideaway Islandin edustalla Port Vilan lähellä on vedenalainen posti, johon sukeltajat pudottavat vedenkestäviä postikortteja.",
+    },
+    "Tafea": {
+      lyhyt: "Tannalla John Frumin liikkeen kannattajat marssivat yhä joka 15. helmikuuta ja odottavat John Frumin paluuta.",
+    },
+    "Torba": {
+      lyhyt: "Torban pienillä saarilla puhutaan 17:ää eri kieltä, ja kutakin niistä puhuu keskimäärin vain noin 550 ihmistä.",
+    },
+  },
+  /*
+   * NCL (erä 10). Avaimet MAAKUNNAT_KAIKKI.NCL:n tunnuksia TÄSMÄLLEEN
+   * ("Îles Loyauté" Î = U+00CE, é = U+00E9). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Sud — Tjibaou Cultural Centre; Îles Loyauté — Loyalty Islands
+   *   Province; Nord — Hienghène, La Poule Couveuse (haku, New Caledonia
+   *   Tourism)
+   */
+  NCL: {
+    "Sud": {
+      lyhyt: "Nouméan Tjibaou-kulttuurikeskuksen kymmenen paviljonkia muistuttavat kanakien perinteisiä suurmajoja; korkein on 28 metriä.",
+    },
+    "Îles Loyauté": {
+      lyhyt: "Loyaltysaarten asukkaista noin 95 prosenttia on kanakeja, ja saarilla puhutaan drehua, iaaita ja nengonea.",
+    },
+    "Nord": {
+      lyhyt: "Hienghènen lahden suulla merestä nousee musta kalkkikivikallio, jota kutsutaan hautovaksi kanaksi, La Poule Couveuse.",
+    },
+  },
+  /*
+   * GRL (erä 10). Avaimet MAAKUNNAT_KAIKKI.GRL:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin kuntajako: Qaasuitsup jaettiin 2018 Avannaataan ja
+   * Qeqertalikiin). Vain `lyhyt`. Lähteet (en-Wikipedia 25.9.2026):
+   *   Nationalparken — Sirius Dog Sled Patrol; Kommune Kujalleq —
+   *   Alluitsup Paa (Uunartoq); Pituffik — Pituffik Space Base;
+   *   Qaasuitsup Kommunia — Qaasuitsup, Qaanaaq; Qeqqata Kommunia —
+   *   Aasivissuit – Nipisat; Kommuneqarfik Sermersooq — Nuuk Airport
+   */
+  GRL: {
+    "Nationalparken": {
+      lyhyt: "Tanskan Sirius-partio kiertää Koillis-Grönlannin rannikkoa koiravaljakoilla: kaksi partiolaista ja 11–15 koiraa jopa neljä kuukautta kerrallaan.",
+    },
+    "Kommune Kujalleq": {
+      lyhyt: "Uunartoqin saarella Alluitsup Paan lähellä kumpuaa 34–38-asteisia kuumia lähteitä, joissa kylpijät istuvat ulkona Etelä-Grönlannin kesässä.",
+    },
+    "Pituffik": {
+      lyhyt: "Entinen Thulen lentotukikohta on vuodesta 2023 ollut Pituffikin avaruustukikohta, Yhdysvaltain puolustusministeriön pohjoisin asema.",
+    },
+    "Qaasuitsup Kommunia": {
+      lyhyt: "Qaasuitsupin kunta jaettiin vuonna 2018 kahtia, ja sen pohjoisessa Qaanaaqissa narvalia metsästetään yhä kajakista.",
+    },
+    "Qeqqata Kommunia": {
+      lyhyt: "Aasivissuit–Nipisatin maailmanperintöalueella on Grönlannin suurin karibujen ajojärjestelmä, 3,9 kilometriä pitkä.",
+    },
+    "Kommuneqarfik Sermersooq": {
+      lyhyt: "Nuukin lentokentän kiitotie pidennettiin 2 200 metriin marraskuussa 2024, ja nyt pääkaupunkiin lennetään suoraan Kööpenhaminasta.",
+    },
+  },
+  /*
+   * BMU (erä 10). Avaimet MAAKUNNAT_KAIKKI.BMU:n tunnuksia TÄSMÄLLEEN
+   * (avaimissa suora heittomerkki U+0027, teksteissä typografinen).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   City of Hamilton — Hamilton, Bermuda; City of Saint George —
+   *   St. George's, Bermuda; Devonshire — Devonshire Parish; Hamilton —
+   *   Crystal Cave, Bermuda (haku); Paget — Paget Parish; Pembroke —
+   *   Pembroke Parish; Saint George's — L.F. Wade International Airport;
+   *   Sandys — Somerset Bridge; Smith's — Spittal Pond Nature Reserve
+   *   (haku, Bermuda National Trust); Southampton — Gibbs Hill
+   *   Lighthouse; Warwick — Warwick Academy
+   */
+  BMU: {
+    "City of Hamilton": {
+      lyhyt: "Bermudan pääkaupungissa Hamiltonissa asuu vain noin 850 ihmistä, ja koko kaupunki mahtuu alle neliökilometrille.",
+    },
+    "City of Saint George": {
+      lyhyt: "St. George’sin St. Peter’s Church on läntisen pallonpuoliskon vanhin säilynyt anglikaaninen kirkko, ja siellä pidetään yhä jumalanpalveluksia.",
+    },
+    "Devonshire": {
+      lyhyt: "Devonshiren keskellä on Devonshire Marsh, jonka suota suojelee kaksi luonnonsuojelualuetta, Firefly ja Freer Cox.",
+    },
+    "Hamilton": {
+      lyhyt: "Hamiltonin seurakunnan Crystal Caven löysi kaksi krikettipalloa etsinyttä poikaa, ja sen pohjalla on kirkas maanalainen järvi.",
+    },
+    "Paget": {
+      lyhyt: "Pagetissa on King Edward VII Memorial Hospital, koko Bermudan ainoa sairaala.",
+    },
+    "Pembroke": {
+      lyhyt: "Pembroke on Bermudan tiheimmin asuttu seurakunta: sen viidellä neliökilometrillä asuu noin 11 000 ihmistä.",
+    },
+    "Saint George's": {
+      lyhyt: "Bermudan lentoasema on St. David’s Islandilla, ja sitä varten tasoitettiin sodan aikana kokonainen saari ja täytettiin salmia.",
+    },
+    "Sandys": {
+      lyhyt: "Sandysin Somerset Bridgeä sanotaan maailman pienimmäksi toimivaksi läppäsillaksi: aukko on vain noin 80 senttiä, juuri maston mentävä.",
+    },
+    "Smith's": {
+      lyhyt: "Smith’sin Spittal Pond on Bermudan suurin luonnonsuojelualue, ja muuttolinnut pysähtyvät sen murtovesilammelle keväin ja syksyin.",
+    },
+    "Southampton": {
+      lyhyt: "Southamptonin Gibbs Hillin majakka on valurautaa, ja sen huipulle kiivetään 185 askelmaa.",
+    },
+    "Warwick": {
+      lyhyt: "Warwick Academy on perustettu vuonna 1662, ja se on Bermudan vanhin koulu.",
+    },
+  },
+  /*
+   * SHN (erä 10). Avaimet MAAKUNNAT_KAIKKI.SHN:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Ascension — Green Mountain (haku, Ascension Island Government);
+   *   Saint Helena — Jacob's Ladder (Saint Helena); Tristan da Cunha —
+   *   Tristan da Cunha
+   */
+  SHN: {
+    "Ascension": {
+      lyhyt: "Ascensionin Green Mountainin huipulla kasvaa ihmisen istuttama pilvimetsä, joka syntyi Joseph Hookerin suunnitelmasta 1800-luvulla.",
+    },
+    "Saint Helena": {
+      lyhyt: "Jamestownista nousee Ladder Hillin rinnettä suoraan ylös Jacob’s Ladder, 699 askelman porraskuja.",
+    },
+    "Tristan da Cunha": {
+      lyhyt: "Tristan da Cunhalla ei ole kiitotietä, joten ainoa kylä Edinburgh of the Seven Seas on saavutettavissa vain laivalla Kapkaupungista.",
+    },
+  },
+  /*
+   * KOR. Avaimet MAAKUNNAT_KAIKKI.KOR:n tunnuksia TÄSMÄLLEEN (kopioitu
+   * koneellisesti). Vain `lyhyt`. Vältetty maastokohteet-kor.js:n
+   * aiheita (Hallasan, Nakdong, Gyeongju, Haeinsa, Hwaseong, Hahoe,
+   * Gochang, Jeonju, Baekje, Songgwangsa). Lähteet (en-Wikipedia ja
+   * haku 26.9.2026):
+   *   Busan — Jagalchi Market; Daegu — Yangnyeongsi; Daejeon —
+   *   Sungsimdang; South Chungcheong — Boryeong Mud Festival; South
+   *   Gyeongsang — Jinju Namgang Yudeung Festival; South Jeolla —
+   *   Boseong County; Gangwon — Alpensia Resort; Gwangju — Gwangju
+   *   Biennale; Gyeonggi — Everland; Incheon — Chinatown, Incheon;
+   *   Jeju — Haenyeo; North Chungcheong — North Chungcheong Province;
+   *   North Gyeongsang — Homigot; North Jeolla — Saemangeum Seawall;
+   *   Sejong — Sejong City; Seoul — Cheonggyecheon; Ulsan — haku
+   *   (Autocar: Inside Ulsan, the world's biggest car factory)
+   */
+  KOR: {
+    "Busan": {
+      lyhyt: "Busanin Jagalchin kalatori on Etelä-Korean suurin, ja sen tunnetuimpia myyjiä ovat yhä jagalchi-ajummat, kalaa kauppaavat naiset.",
+    },
+    "Daegu": {
+      lyhyt: "Daegun yrttitori Yangnyeongsi on toiminut vuodesta 1658, ja sen Yakjeon-kujalla on yhä noin 180 perinteisen lääkinnän liikettä.",
+    },
+    "Daejeon": {
+      lyhyt: "Sungsimdang-leipomo perustettiin Daejeoniin 1956, ja sen soboro-pullaa saa vain sieltä, sillä leipomolla ei ole myymälöitä muualla.",
+    },
+    "South Chungcheong": {
+      lyhyt: "Boryeongin Daecheonin rannalla pidetään joka heinäkuu mutafestivaali, jossa väki kieriskelee rannikon mutatasankojen mudassa.",
+    },
+    "South Gyeongsang": {
+      lyhyt: "Jinjussa Nam-joelle lasketaan joka lokakuu lyhtyjä muistoksi niille, jotka kuolivat kaupungin piirityksissä Imjin-sodassa 1590-luvulla.",
+    },
+    "South Jeolla": {
+      lyhyt: "Boseongin rinteiden terassimaiset teeviljelmät tuottavat noin 40 prosenttia koko Etelä-Korean teestä.",
+    },
+    "Gangwon": {
+      lyhyt: "Pyeongchangin Alpensiassa ovat yhä vuoden 2018 talviolympialaisten mäkihyppytornit ja kelkkarata.",
+    },
+    "Gwangju": {
+      lyhyt: "Gwangjussa järjestetään joka toinen vuosi nykytaiteen biennaali, joka perustettiin 1995 ja tuo kaupunkiin taiteilijoita ympäri maailmaa.",
+    },
+    "Gyeonggi": {
+      lyhyt: "Yonginissa sijaitseva Everland on Etelä-Korean suurin teemapuisto, ja sen puinen T Express -vuoristorata syöksyy alas 77 asteen kulmassa.",
+    },
+    "Incheon": {
+      lyhyt: "Incheonin Chinatownin jajangmyeon-museo toimii Gonghwachunissa, ravintolassa, jonka katsotaan tarjonneen mustapapunuudeleita Koreassa ensimmäisenä.",
+    },
+    "Jeju": {
+      lyhyt: "Jejun haenyeo-sukeltajat, enimmäkseen iäkkäitä naisia, sukeltavat ilman happilaitteita jopa 20 metrin syvyyteen merikorvien ja merisiilien perässä.",
+    },
+    "North Chungcheong": {
+      lyhyt: "Pohjois-Chungcheong on Etelä-Korean ainoa maakunta, jolla ei ole lainkaan merenrantaa.",
+    },
+    "North Gyeongsang": {
+      lyhyt: "Homigot-niemen edustalla nousee merestä 8,5 metriä korkea käsiveistos, ja uudenvuodenaamuna rannalle kerääntyy tuhansia katsomaan auringonnousua.",
+    },
+    "North Jeolla": {
+      lyhyt: "Saemangeumin merivalli Gunsanin ja Buanin välillä on 33 kilometriä pitkä, maailman pisin ihmisen rakentama pato.",
+    },
+    "Sejong": {
+      lyhyt: "Sejong perustettiin 2007 uudeksi hallintokaupungiksi, ja nykyään siellä toimivat pääministerin kanslia ja kymmenkunta ministeriötä.",
+    },
+    "Seoul": {
+      lyhyt: "Soulin keskustassa virtaa Cheonggyecheon-puro, joka avattiin 2005 uudelleen puretun moottoritien alta, ja sen rantoja voi kävellä lähes 11 kilometriä.",
+    },
+    "Ulsan": {
+      lyhyt: "Hyundain Ulsanin tehdas on maailman suurin yksittäinen autotehdas, ja sillä on oma satama, josta valmiit autot lastataan suoraan laivoihin.",
+    },
+  },
 };
