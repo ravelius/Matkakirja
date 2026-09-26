@@ -77,9 +77,14 @@ namespace Matkakirja.Natiivi
             var k = lykkaysKaupunki;
             var l = lykattyLuento;
             PeruLykkays();
-            if (k == null || l == null || LuentoOhitettu || PelaajanKaupunki != k) return false;
+            if (k == null || l == null || LuentoOhitettu || PelaajanKaupunki != k)
+            {
+                // Löydös 162: lykätty luento ei soi → saapumisluenta päättyy (ohitus ja lähtö päättivät sen jo).
+                if (k != null) saapumisluenta.Paata(k, LuentoOhitettu ? "ohita" : l == null ? "ei luentaa" : "lähtö");
+                return false;
+            }
             // Löydökset 86/89: ei paikkarivin ilmoitusta (web aloitaLykattyLuenta vain soittaa luennan).
-            return SoitaLuento(l, 0f) == null;
+            return SoitaSaapumisluento(k, l, 0f) == null;
         }
     }
 }
