@@ -108,3 +108,15 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
   MITTAAMATTA LUOTETTAVASTI (paketti v141 julkaistiin kesken) → mittaa vakaalla paketilla: kylmä ajo, sitten 3 lämmintä
   SAMALLA käännöksellä molemmille (LAMMIN=1 ei asenna uudelleen! ennen-käännös pitää asentaa kylmällä ajolla ensin).
 - JONO 2 (yhteinen haku Esilataajaan) ja JONO 3 (kaupunkilehdet/linssidata/II-kuvat pois käynnistyksestä) AVOINNA.
+
+## 12. Lisäys 26.9. klo 05.1x
+- Build 19 -junassa myös osoitin-taustalle b74983a6. Natiiviseppä tekee kohdan 1 tilannekuvan (osoitin buildiin kylmälle).
+- JONO 2 (yhteinen haku) koodattu: `pelikoodari/yhteinen-haku` 1967620d-käännös (Sisalto.HaePaketista jakaa käynnissä olevan
+  haun; PeliOhjain.HaeTiedosto sen kautta). Päällekkäiset: kaupungit.json 4→1, karttavalot 2→1, reitit 2→1 (lokit/verkko-odotus/
+  yhteinen-kylma). Jäljellä linssien oma reitti (LinssiSisalto: maarajat, maat, radiot) → Linssiseppä. Vertailuajot
+  vert-{raja,yhteinen}-1..4 käynnissä: kylmä sisältöodotus 3,3 s yhdessä ajossa (paketti v143 vaihtui) → tarkista ennen
+  merge-pyyntöä, ettei jaettu odotus pidennä käynnistystä.
+- OMISTAJA HYVÄKSYI musiikki- ja äänisuunnitelman kaikki 8 suositusta (Fable 05.0x). GENEROINTI ERISSÄ: vaihe 1
+  (johtoaihe + 3 koeraitaa: aloituslento, saapuminen Välimeri, loppu) ensin, jokainen erä omistajalle (mp3-linkit + rivi/raita)
+  ennen seuraavaa. Avaimet vain Macin ympäristöstä (GOOGLE_API_KEY), ei lokiin. Työkalut tools/lyria.mjs, generoi-musiikki.mjs,
+  generoi-siirtymamusiikki.mjs. Aloita kun kiintiö sallii.
