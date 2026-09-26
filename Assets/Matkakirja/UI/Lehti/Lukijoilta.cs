@@ -37,6 +37,12 @@ namespace Matkakirja.Natiivi
         static string avain = "";
         static bool luettu;
 
+        /// <summary>
+        /// Löydös 177 (Fable 26.9.: web on malli, uusi peli = puhdas alku): Uusi peli poistaa kuratointiavaimen
+        /// Keychainista kuten web tyhjennaMuistit poistaa matkakirja-ehdotus-avaimen.
+        /// </summary>
+        public static void Unohda() => Avain = "";
+
         /// <summary>Lue: Keychainista kerran käynnistyksessä. Tallenna: Keychainiin; tyhjä = poisto (hylätty avain).</summary>
         static string Avain
         {

@@ -167,6 +167,7 @@ namespace Matkakirja
             KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             Ylhaalta3D = true; PerspektiiviAste = (float)LiioiteltuPerspektiivi.KulmaMax; ReunaPt = 1.2f;
             NollaaTasot23();
+            NollaaLiikkuvat();
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -183,13 +184,8 @@ namespace Matkakirja
 
         static Symbolimallit instanssi;
 
-        /// <summary>Erikoismallit noston tunnisteen avainsanalla (Nosto.Id tai Tunnus päättyy tähän, esim. "kohde:akropolis").</summary>
-        static readonly Dictionary<string, Func<Mesh>> Mallit = new Dictionary<string, Func<Mesh>>(StringComparer.Ordinal)
-        {
-            { "akropolis", Akropolis },
-            { "delfoi", Delfoi },
-            { "meteora", Meteora },
-        };
+        // Erikoismallit noston tunnisteen avainsanalla (Nosto.Id tai Tunnus päättyy tähän, esim. "kohde:akropolis"):
+        // rekisteröinti ja liikkuvat osat Symbolimallit.Erikoismallit.cs:ssä.
         static readonly Dictionary<string, Mesh> verkot = new Dictionary<string, Mesh>();
 
         /// <summary>Noston mallitieto (lasketaan kerran noston id:llä): erikoismallin avain tai null, arkkityyppi ja taso.</summary>
@@ -268,6 +264,10 @@ namespace Matkakirja
             instanssi.Tasot23Tila(sb);
             sb.Append("; erikoismallien kolmiot:");
             foreach (var p in verkot) sb.Append(' ').Append(p.Key).Append('=').Append(p.Value.triangles.Length / 3);
+            int osiaNakyy = 0;
+            foreach (var o in liikkuvat) if (o.Nakyy) osiaNakyy++;
+            sb.Append($"; liikkuvat osat {osiaNakyy}/{liikkuvat.Count} (versio {LiikkuvatVersio})");
+            foreach (var p in osaVerkot) if (p.Value != null) sb.Append(' ').Append(p.Key).Append('=').Append(p.Value.triangles.Length / 3);
             sb.Append("; arkkityyppien kolmiot LOD0/LOD1:");
             for (int i = 0; i < ArkkityyppiKartoitus.Lukumaara; i++)
             {
@@ -339,6 +339,7 @@ namespace Matkakirja
                 if (!nyt.Contains(p.Key) && p.Value.R.enabled)
                 {
                     Nayta(p.Value, false);
+                    if (osatNostolla.TryGetValue(p.Key, out var osat)) PaivitaOsat(osat, false, default);
                     PallonLepo.Muuttui("symbolimallit");
                 }
             PiirraTasot23(sallittu ? nk : null);
@@ -387,7 +388,7 @@ namespace Matkakirja
                 Mesh verkko;
                 if (tieto.Erikois != null)
                 {
-                    if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Mallit[tieto.Erikois]();
+                    if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Mallit[tieto.Erikois].Runko();
                 }
                 else verkko = ArkkityypinVerkko(tieto.Tyyppi, 0);
                 var go = new GameObject("Symbolimalli-" + (tieto.Erikois ?? tieto.Tyyppi.ToString()) + "-" + s.Id);
@@ -409,15 +410,19 @@ namespace Matkakirja
                 // Ääriviiva (1.0.27-kokeilu): sama verkko ääriviivamateriaalilla, leveys lohkon _Tila.z:ssa.
                 k.Reuna = Lapsi(go.transform, "Aariviiva", verkko, reunaMateriaali);
                 kappaleet[s.Id] = k;
+                LuoOsat(s.Id, tieto.Erikois, go.transform);
             }
+            var osat = osatNostolla.TryGetValue(s.Id, out var oo) ? oo : eiOsia;
             var gt = georeferenssi.transform;
             Vector3 p = gt.TransformPoint(k.Paikka);
             Vector3 kohti = kamera.transform.position - p;
             float etaisyys = kohti.magnitude;
             bool edessa = Vector3.Dot(gt.TransformDirection(k.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) > 0.08f;
             if (k.R.enabled != edessa) { Nayta(k, edessa); PallonLepo.Muuttui("symbolimallit"); }
+            PaivitaOsat(osat, edessa, p);
             if (!edessa) return;
-            float pt = KokoNyt(NostoKerros.Instanssi.ZoomKerroin);
+            float kerroin = tieto.Erikois != null && Mallit.TryGetValue(tieto.Erikois, out var em) ? em.KokoKerroin : 1f;
+            float pt = KokoNyt(NostoKerros.Instanssi.ZoomKerroin) * kerroin;
             float koko = PisteMaailmassa(etaisyys) * pt / Mathf.Max(1e-9f, gt.lossyScale.x);
             if (Mathf.Abs(koko - k.Koko) > 1e-3f * koko)
             {
@@ -448,6 +453,7 @@ namespace Matkakirja
             {
                 lohko.SetFloat(HimmeaId, h);
                 k.R.SetPropertyBlock(lohko);
+                HimmennaOsat(osat, lohko);
                 k.Himmea = h;
                 PallonLepo.Muuttui("symbolimallit");
             }

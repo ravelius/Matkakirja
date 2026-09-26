@@ -25,8 +25,14 @@ namespace Matkakirja
     /// valmis, muuten käytössä olleen valmiin (palautus toimii ilman latausta); ilman valmista luetaan laiskasti kuten ennen.
     /// Taustalla (<see cref="KaynnistysViive"/> s käynnistyksestä ja taustalta palatessa, enintään kerran <see cref="VaaliH"/> h:ssa)
     /// haetaan kohdeversion hakemisto ja puuttuvat tiedostot Esilataajan kautta (Taso.Muu, Kohta.Kaynnistys: kaikilla verkoilla,
-    /// myös kuumana), tarkistetaan sha256 ja kirjoitetaan valmis.json. Uusi versio tulee käyttöön SEURAAVASSA käynnistyksessä,
-    /// ei kesken pelin. Käyttöönoton jälkeen siivotaan muut kuin käytössä oleva, edellinen valmis ja kesken oleva uudempi.
+    /// myös kuumana), tarkistetaan sha256 ja kirjoitetaan valmis.json. Käyttöönoton jälkeen siivotaan muut kuin käytössä
+    /// oleva, edellinen valmis ja kesken oleva uudempi.
+    ///
+    /// SISÄLTÖ VAIHTUU KESKEN ISTUNNON (löydös 170, Fable 26.9.2026): omistajan 1.0.24 → 1.0.25 -laite sai v181-deltan, mutta
+    /// käynnissä oleva peli näytti Kreikan maakunnat ilman kuvia täyteen uudelleenkäynnistykseen asti. Nyt juuri valmistunut
+    /// UUDEMPI versio otetaan heti käyttöön (Sisalto.VaihdaVersio: seuraavat haut lukevat sen) ja <see cref="SisaltoVaihtui"/>
+    /// kertoo version ja muuttuneet polut; välimuistinsa pitävät kuuntelijat (Natiivi-UI: MaakuntaTiedot, Maakunnat,
+    /// NostoSisalto …) hylkäävät ne ja lukevat uudelleen. Vanhempi kohde (palautus) odottaa yhä seuraavaa käynnistystä.
     /// </summary>
     public sealed class PakettiPaivitys : MonoBehaviour
     {
@@ -56,10 +62,21 @@ namespace Matkakirja
 
         public static string Tila { get; private set; } = "ei aloitettu";
 
+        /// <summary>
+        /// SISÄLTÖ VAIHTUI: (versio, muuttuneet polut paketin juuresta, esim. "moduulit/js/packs/maakunnat-luonnehdinnat.json",
+        /// "kokoelmat/karttavalot.json"). Kutsutaan pääsäikeessä, kun uudempi valmis versio on otettu käyttöön kesken istunnon.
+        /// Kuuntelija, joka pitää paketin dataa muistissa, hylkää muuttuneet ja lukee ne uudelleen (Sisalto.HaePaketista antaa
+        /// jo uuden version). Poikkeus kuuntelijassa kirjataan eikä estä muita.
+        /// </summary>
+        public static event Action<int, IReadOnlyList<string>> SisaltoVaihtui;
+
+        /// <summary>Istunnossa käytössä oleva valmis versio (0 = laiska tila).</summary>
+        public static int KaytossaVersio => kaytossaVersio;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
-            instanssi = null; havaittuOsoitin = null; kaytossaVersio = 0; viimeisinTarkistus = -1e9f; kaynnissa = false;
+            instanssi = null; havaittuOsoitin = null; kaytossaVersio = 0; viimeisinTarkistus = -1e9f; kaynnissa = false; SisaltoVaihtui = null;
             kaytossaHakemisto = null; kaytossaPolku = null; Tila = "ei aloitettu";
             osittainenHakemisto = null; osittainenPolku = null; tilannekuvaTuotu = false;
             tilannekuvanPolku = null; tilannekuvanHakemisto = null; tilannekuvanJulkaistu = null;
@@ -343,7 +360,16 @@ namespace Matkakirja
             int kohde = PakettiPaatokset.KohdeVersio(uusin, SisaltoTaso);
             if (kohde <= 0) { Tila = $"ei tasolle {SisaltoTaso} sopivaa versiota"; Debug.Log("MATKAKIRJA paketti: " + Tila); yield break; }
             string polku = PakettiPaatokset.VersionPolku(uusin.Polku, kohde);
-            if (File.Exists(ValmisJson(polku))) { Tila = $"v{kohde} valmis"; yield break; }
+            if (File.Exists(ValmisJson(polku)))
+            {
+                Tila = $"v{kohde} valmis";
+                // Valmis jo ennen tätä istuntoa (lämmin käynnistys valitsi edellisen osoittimen version): vaihto nyt.
+                List<PakettiPaatokset.Rivi> valmiinRivit = null;
+                string hp = HakemistoJson(polku);
+                yield return Taustalla(() => valmiinRivit = File.Exists(hp) ? PakettiPaatokset.LueHakemisto(File.ReadAllText(hp)) : null);
+                if (valmiinRivit != null) OtaKayttoonKeskenIstunnon(polku, kohde, valmiinRivit, teksti);
+                yield break;
+            }
 
             var o = uusin;
             if (kohde != uusin.Versio)
@@ -424,6 +450,40 @@ namespace Matkakirja
             File.WriteAllText(ValmisJson(polku), $"{{\"versio\":{kohde},\"polku\":\"{polku}\",\"sha256\":\"{o.Sha256}\",\"valmistui\":\"{DateTime.UtcNow:o}\"}}\n");
             Tila = $"v{kohde} valmis, käyttöön seuraavassa käynnistyksessä";
             Debug.Log("MATKAKIRJA paketti: " + Tila);
+            OtaKayttoonKeskenIstunnon(polku, kohde, rivit, teksti);
+        }
+
+        /// <summary>SISÄLTÖ VAIHTUU KESKEN ISTUNNON (ks. luokan kuvaus): uudempi valmis versio käyttöön ja tapahtuma.</summary>
+        static void OtaKayttoonKeskenIstunnon(string polku, int versio, List<PakettiPaatokset.Rivi> rivit, string osoitinTeksti)
+        {
+            string vanhaPolku = Sisalto.IstunnonPolku;
+            int vanha = vanhaPolku != null ? PakettiPaatokset.VersioPolusta(vanhaPolku) : 0;
+            if (vanhaPolku == polku || !PakettiPaatokset.VaihdaKeskenIstunnon(versio, vanha)) return;
+            List<string> muuttuneet;
+            try
+            {
+                IDictionary<string, string> vanhaHakemisto = vanhaPolku == kaytossaPolku ? kaytossaHakemisto
+                    : vanhaPolku == osittainenPolku ? osittainenHakemisto : null;
+                if (vanhaHakemisto == null && vanhaPolku != null && File.Exists(HakemistoJson(vanhaPolku)))
+                    vanhaHakemisto = PakettiPaatokset.LueHakemisto(File.ReadAllText(HakemistoJson(vanhaPolku))).ToDictionary(r => r.Polku, r => r.Sha256);
+                muuttuneet = PakettiPaatokset.Muuttuneet(vanhaHakemisto, rivit);
+                kaytossaHakemisto = rivit.ToDictionary(r => r.Polku, r => r.Sha256);
+                kaytossaPolku = polku; kaytossaVersio = versio;
+                osittainenHakemisto = null; osittainenPolku = null;
+                File.WriteAllText(KaytossaTxt, polku);
+                Sisalto.VaihdaVersio(polku, osoitinTeksti);
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: vaihto kesken istunnon epäonnistui: " + e.Message); return; }
+            Tila = $"v{versio} käytössä (vaihtui kesken istunnon)";
+            Debug.Log($"MATKAKIRJA paketti: sisältö vaihtui v{vanha} → v{versio} kesken istunnon, {muuttuneet.Count} tiedostoa muuttui"
+                + (muuttuneet.Count > 0 ? ": " + string.Join(", ", muuttuneet.Take(8)) + (muuttuneet.Count > 8 ? " …" : "") : ""));
+            var kuuntelijat = SisaltoVaihtui;
+            if (kuuntelijat == null) return;
+            foreach (Action<int, IReadOnlyList<string>> k in kuuntelijat.GetInvocationList())
+            {
+                try { k(versio, muuttuneet); }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: SisaltoVaihtui-kuuntelija: " + e.Message); }
+            }
         }
 
         /// <summary>Muut versiot ja orvot varastotiedostot pois (vain kun käytössä on valmis versio).</summary>

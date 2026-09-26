@@ -36,6 +36,8 @@ namespace Matkakirja
         /// <summary>Tangon koko piilokynnyksellä suhteessa täyteen (kerroin 1): pienenee lineaarisesti tähän.</summary>
         public const float PieninOsuus = 0.45f;
         bool piilossaZoom;
+        /// <summary>Liioiteltu perspektiivi päällä (komento `lipputanko perspektiivi 0|1`); käyrä LiioiteltuPerspektiivi.</summary>
+        public static bool Perspektiivi = true;
         /// <summary>Lipun korkeus tangon korkeudesta.</summary>
         public const float LipunOsuus = 0.36f;
         /// <summary>Tangon pienin kulma katseeseen (°): ylhäältä katsottuna tanko kallistuu näkyviin.</summary>
@@ -58,7 +60,7 @@ namespace Matkakirja
         public static bool Jatkuva = true;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KorkeusPt = 120f; Jatkuva = true; instanssi = null; }
+        static void Nollaa() { KorkeusPt = 120f; Perspektiivi = true; Jatkuva = true; instanssi = null; }
 
         /// <summary>Vaihtoehdon vaihto ajossa (A/B-mittaus).</summary>
         public static void AsetaJatkuva(bool j)
@@ -253,7 +255,30 @@ namespace Matkakirja
             // Akseli: normaali, mutta vähintään MinKulma katseesta (normaalin ja katseen tasossa, katseesta poispäin).
             float kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(n, v), -1f, 1f)) * Mathf.Rad2Deg;
             Vector3 akseli = n;
-            if (kulma < MinKulma)
+            // LIIOITELTU PERSPEKTIIVI (omistaja 26.9. klo 21.4x, tarkennus 22.4x Fablen kautta; yhteinen käyrä Linssisepän
+            // LiioiteltuPerspektiivi.Kallistus, häipyy kameran kallistuksen mukana 0 → 40°): tanko kallistuu säteittäin POISPÄIN
+            // ruudun keskipisteestä käyrän kulman verran (0° keskellä → 55° reunalla), joten suoraan ylhäältä katsottuna tanko on
+            // keskellä piste ja kangas ohut (lähes näkymätön), ja näkyvä pituus kasvaa reunaa kohti: yläosassa tanko osoittaa
+            // ylös, alaosassa alas, sivuilla sivulle (kuin kamera olisi matalalla). Kangas kääntyy tangon mukana.
+            // Ilman perspektiiviä (komento `lipputanko perspektiivi 0`) entinen sääntö: vähintään MinKulma katseesta.
+            bool pers = false;
+            if (Perspektiivi)
+            {
+                Vector3 sp = kamera.WorldToScreenPoint(p);
+                var (k, dx, dy) = Matkakirja.Linssit.Kamera.LiioiteltuPerspektiivi.Kallistus(sp.x, sp.y, Screen.width, Screen.height,
+                    kierto != null ? kierto.KaytettyKallistus : 0.0);
+                Vector3 oikeaT = Vector3.ProjectOnPlane(kamera.transform.right, n).normalized;
+                Vector3 ylosT = Vector3.ProjectOnPlane(kamera.transform.up, n).normalized;
+                Vector3 ulos = oikeaT * (float)dx + ylosT * (float)dy;
+                if (ulos.sqrMagnitude > 1e-10f)
+                {
+                    float kr = (float)k * Mathf.Deg2Rad;
+                    akseli = (n * Mathf.Cos(kr) + ulos.normalized * Mathf.Sin(kr)).normalized;
+                }
+                // Kameran kallistus häivyttää käyrän: silloin aito perspektiivi näyttää tangon, eikä MinKulmaa tarvita.
+                pers = true;
+            }
+            if (!pers && kulma < MinKulma)
             {
                 // Kallistus ruudun ylöspäin (ylhäältä katsottuna tanko "seisoo" kartalla; normaalin oma suunta on silloin satunnainen).
                 Vector3 t = Vector3.ProjectOnPlane(kamera.transform.up, v).normalized;
@@ -261,7 +286,7 @@ namespace Matkakirja
                 akseli = (v * Mathf.Cos(a) + t * Mathf.Sin(a)).normalized;
             }
             Vector3 eteen = Vector3.ProjectOnPlane(v, akseli);
-            if (eteen.sqrMagnitude < 1e-8f) eteen = Vector3.ProjectOnPlane(-kamera.transform.forward, akseli);
+            if (eteen.sqrMagnitude < 1e-8f) eteen = Vector3.ProjectOnPlane(-kamera.transform.up, akseli);   // keskellä: tanko katseen suuntainen
             var suunta = Quaternion.LookRotation(eteen.normalized, akseli);
 
             // Vakio ruutukoko (KaupunkiMerkit): yksi piste tällä etäisyydellä.

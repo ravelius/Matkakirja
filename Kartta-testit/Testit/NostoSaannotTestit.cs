@@ -132,8 +132,10 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama("merkki-historia.png", NostoSaannot.Kuvamerkki("ihme", "historia"), "Rodoksen kolossi");
             Oleta.Sama("merkki-kauppa.png", NostoSaannot.Kuvamerkki("kauppa", "kaupunki"), "Ermoupoli");
             Oleta.Sama(null, NostoSaannot.Kuvamerkki("ihme", null));
-            Oleta.Sama(null, NostoSaannot.Kuvamerkki("elain", "elain"));
-            Oleta.Sama(null, NostoSaannot.Kuvamerkki("huuto", "skandaali"));
+            // Löydös 174b (26.9.): eläimet, skandaalit (kategoria huuto) ja hetket saivat omat merkit.
+            Oleta.Sama("merkki-elain.png", NostoSaannot.Kuvamerkki("elain", "elain"));
+            Oleta.Sama("merkki-huuto.png", NostoSaannot.Kuvamerkki("huuto", "skandaali"));
+            Oleta.Sama("merkki-hetki.png", NostoSaannot.Kuvamerkki("hetki", "hetki"));
             Oleta.Sama("merkki-vuori.png", NostoSaannot.Kuvamerkki("luonto", null), "väliaikainen vara datalle ilman lajia");
             Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(1, 0.52), "taso 1 aina");
             // Löydös 155 (build 20): kynnys 4 → 2,5 (NostoSaannot.TyyppimerkinKerroin, web samassa erässä).
@@ -210,6 +212,8 @@ namespace Matkakirja.Kartta.Testit
         /// lajilla natiivin säännöt antavat saman minimerkin, kuvamerkin ja kaupunkikoon kuin web kaikille Kreikan
         /// nostoille. Ilman lajia (karttavalot v127) listataan erot: ne ovat datan puutteita (Pelikoodarille).
         /// </summary>
+        static readonly HashSet<string> Uudet174b = new HashSet<string> { "merkki-huuto.png", "merkki-elain.png", "merkki-hetki.png" };
+
         [Testi]
         static void WebinKreikanSymbolit()
         {
@@ -223,8 +227,10 @@ namespace Matkakirja.Kartta.Testit
             {
                 string kat = MiniJson.Teksti(d, "kategoria"), laji = MiniJson.Teksti(d, "laji"), nimi = MiniJson.Teksti(d, "nimi");
                 Oleta.Sama(MiniJson.Teksti(d, "minimerkki"), NostoSaannot.MiniTunnus(kat, laji), nimi);
-                string wk = MiniJson.Teksti(d, "kuvamerkki");
-                Oleta.Sama(wk == null ? null : Path.GetFileName(wk), NostoSaannot.Kuvamerkki(kat, laji), nimi + " kuvamerkki");
+                string wk = MiniJson.Teksti(d, "kuvamerkki"), nk = NostoSaannot.Kuvamerkki(kat, laji);
+                // Webin mittaus on 25.9. eli ennen löydöstä 174b: silloin huuto-, eläin- ja hetki-merkkejä ei ollut.
+                if (wk == null && Uudet174b.Contains(nk ?? "")) continue;
+                Oleta.Sama(wk == null ? null : Path.GetFileName(wk), nk, nimi + " kuvamerkki");
                 Oleta.Sama(MiniJson.Kentta(d, "kaupunki") is bool kb && kb, NostoSaannot.OnKaupunkimerkki(MiniJson.Teksti(d, "aihe"), kat, laji), nimi + " kaupunki");
             }
             if (!File.Exists(kv)) return;
