@@ -23,8 +23,22 @@ ISS on siellä, missä se on juuri nyt, ja liikkuu todellisella vauhdilla (7,66 
    katkoviivana (Kynäviiva-varjostin, kuten kuljettu reitti).
 2. **Seuranta:** kamera ISS:n takana ja yllä (noin 1 200 km). Maa liukuu todellisella nopeudella, ja kamera-ajot
    tehdään yhteisellä käyräkirjastolla.
-3. **Ikkuna:** Cupolan näkymä noin 420 km:stä, 20° eteenpäin viistossa. Horisontissa ilmakehän kaari
-   (Ilmakeha-varjostin) ja yöpuolella kaupunkien valot.
+3. **Ikkuna (Cupola, omistaja 14.5x, sitova):** realistinen näkymä ISS:n korkeudelta, ei koko palloa.
+   - Kamera on ISS:n todellisessa paikassa ja korkeudessa (SGP4:n korkeus, noin 420 km) ja katsoo radan suuntaan.
+   - Horisontti on noin 2 350 km:n päässä ja 20,3° vaakatason alapuolella. Maa täyttää 139° näkökentästä (kulmasäde
+     69,7°), joten kaarevuus näkyy loivana kaarena ruudun yläosassa.
+   - Ilmakehän kaari on ohut: noin 100 km:n sininen kaista horisontin yllä (Ilmakeha-varjostin ohuena kuorena) ja
+     musta avaruus sen yläpuolella.
+   - Kenttäkulma on Cupolan keskilasin mukainen. Lasin halkaisija on 80 cm ja silmä noin 45 cm:n päässä, joten
+     pystykenttä on noin 80° (iPhone pystyssä) ja vaakakenttä lasin mukaan. Kamera kallistuu 55° alaspäin, joten
+     horisontti asettuu ruudun ylimpään neljännekseen.
+   - Maa liukuu todellisella nopeudella: 7,66 km/s maan pinnalla on noin 1°/s näkymässä. Pienet ISS:n asennon
+     heilahdukset jätetään pois.
+   - Etualalla Cupola-kehys rekvisiittana (Kuvaputken tekstuurit, ks. tilaus alla): keskimmäinen pyöreä lasi ja sen
+     ympärillä kuuden trapetsilasin pokat ja tuet. Maa näkyy lasien läpi. Lasissa on kevyt heijastus omana
+     kerroksenaan, ja se liikkuu hitaasti 0,5°:n heilunnalla. Kehys on UI-kerros (Natiivi-UI) tai kameran
+     lähitaso (Linssiseppä), ja valinta tehdään mittauksen perusteella.
+   - Yöpuolella näkyvät kaupunkien valot, ja päiväpuolella pilvet ja topografia.
 
 ## Efektit
 
@@ -69,6 +83,25 @@ Aurinko ja terminaattori ovat aina oikein, koska ne tarvitsevat vain kellon.
   - tietokortit paperilla ja käsialafontilla
   - kompassiruusu kaukonäkymän kulmassa
   - aikaleima "26.9.2026 klo 14.47 UTC+3" samassa kortissa kuin matkakirjan päiväys
+
+## Kuvaputken tilaus: Cupola-kehys (Sisältökirjuri välittää Codex-postiin)
+
+- **Aihe:** ISS:n Cupola-näköalamoduulin sisäpuoli etualan kehyksenä, jonka lasiaukot ovat läpinäkyviä.
+  Todenmukainen, ei 1873-tyyliä: vaalea alumiini, harmaat pokat, pultit, luukkujen saranat ja tuet.
+  Ei tekstejä eikä logoja.
+- **Viitekuvat:** NASA Image and Video Library, haku "Cupola window" / "Cupola interior" (NASAn kuvat ovat PD NASAn
+  mediaohjeiden mukaan). Viitekuvien osoitteet ja kuvatunnukset kirjataan lahde-kenttään.
+- **Toimitus, läpinäkyvä PNG (RGBA, suora alfa), kaksi kokoa kustakin:**
+  1. `cupola-keski.png`: keskilasin pyöreä kehys (aukon halkaisija 72 % leveydestä, aukko täysin läpinäkyvä),
+     2048 × 2048 ja 1024 × 1024.
+  2. `cupola-kokonainen.png`: keskilasi ja kuusi trapetsilasia pokineen pystynäkymään, 1536 × 2732 (iPad) ja
+     1206 × 2622 (iPhone). Lasiaukot ovat läpinäkyviä, ja kehyksen reunat ulottuvat ruudun reunoihin.
+  3. `cupola-heijastus.png`: lasin heijastus omana kerroksenaan (valkoinen tai sininen, alfa 5–12 %), samat koot kuin
+     kohdassa 2.
+- **Valaistus:** neutraali ja pehmeä ylhäältä sisätilan valona. Kehyksen reunat ovat hieman tummat, jotta maa on kuvan
+  kirkkain osa.
+- **Hyväksyntä:** Linssiseppä sovittaa kehyksen simulaattorissa, ja omistaja hyväksyy kuvaparin (ikkuna ilman kehystä
+  ja kehyksen kanssa).
 
 ## Työnjako
 
