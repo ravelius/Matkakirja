@@ -415,14 +415,14 @@ namespace Matkakirja.Natiivi
         {
             double u = hetki.Osuus(t), pituusM = hetki.Rata.Pituus * ElavaKohtaus.KmAsteella * 1000;
             var veturi = Paikka(hetki.Rata.Piste(u), 200);
-            double valiU = pituusM > 0 ? 6.5 * Pt(veturi) / pituusM : 0;
+            double valiU = pituusM > 0 ? 8 * Pt(veturi) / pituusM : 0;
             var muste = new Color(0.16f, 0.12f, 0.09f, 0.9f * peitto);
             for (int k = 2; k >= 0; k--)
             {
                 double uk = Math.Max(0, u - k * valiU);
                 var q = hetki.Rata.Piste(uk);
                 double s = HetkenGeometria.Suuntima(hetki.Rata.Piste(Math.Max(0, uk - 0.02)), hetki.Rata.Piste(Math.Min(1, uk + 0.02)));
-                Laiska(teravat, Paikka(q, 200), RuutuKulma(q, s), k == 0 ? 2.8f : 2.3f, 1.25f, muste);
+                Laiska(teravat, Paikka(q, 200), RuutuKulma(q, s), k == 0 ? 3.6f : 3f, 1.5f, muste);
             }
             float suunta = Mathf.Cos(kulma) >= 0 ? 1 : -1;
             Savua(t, Siirra(veturi, 0, 1.8f), suunta, peitto, new Color(0.55f, 0.53f, 0.50f, 1), 1.4f, 5f);
@@ -456,12 +456,12 @@ namespace Matkakirja.Natiivi
             {
                 int rivi = (i + 1) / 2;
                 float puoli = i == 0 ? 0 : (i % 2 == 0 ? 1 : -1);
-                float pitkin = -rivi * 6f + Mathf.Sin(t * 2.1f + i) * 0.8f, sivu = puoli * rivi * 4.2f + Mathf.Cos(t * 1.7f + i * 1.3f) * 0.6f;
+                float pitkin = -rivi * 8f + Mathf.Sin(t * 2.1f + i) * 1f, sivu = puoli * rivi * 6f + Mathf.Cos(t * 1.7f + i * 1.3f) * 0.8f;
                 var lintu = Siirra(johtaja, ca * pitkin - sa * sivu, sa * pitkin + ca * sivu);
                 // Siivet: "v" ruudulla pystyssä, avautuu ja sulkeutuu (lyönti 2,2 Hz, linnuittain eri vaiheessa).
                 float nousu = (25f + 20f * Mathf.Sin(t * Mathf.PI * 2 * 2.2f + i * 0.7f)) * Mathf.Deg2Rad;
-                Laiska(teravat, Siirra(lintu, -Mathf.Cos(nousu) * 1.6f, Mathf.Sin(nousu) * 1.6f), Mathf.PI - nousu, 1.7f, 0.45f, muste);
-                Laiska(teravat, Siirra(lintu, Mathf.Cos(nousu) * 1.6f, Mathf.Sin(nousu) * 1.6f), nousu, 1.7f, 0.45f, muste);
+                Laiska(teravat, Siirra(lintu, -Mathf.Cos(nousu) * 2.3f, Mathf.Sin(nousu) * 2.3f), Mathf.PI - nousu, 2.6f, 0.6f, muste);
+                Laiska(teravat, Siirra(lintu, Mathf.Cos(nousu) * 2.3f, Mathf.Sin(nousu) * 2.3f), nousu, 2.6f, 0.6f, muste);
             }
         }
 
@@ -473,12 +473,12 @@ namespace Matkakirja.Natiivi
             Laiska(pehmeat, Siirra(c, -15f, 4f), 0, 20f, 11f, pilvi);
             Laiska(pehmeat, Siirra(c, 16f, 3f), 0, 22f, 12f, pilvi);
             // Juovat putoavat pilven alta, kallistuvat tuulen suuntaan.
-            float kallistus = (90f - 12f * Mathf.Sign(Mathf.Cos(kulma))) * Mathf.Deg2Rad;
+            float kallistus = (90f + 12f * Mathf.Sign(Mathf.Cos(kulma))) * Mathf.Deg2Rad;
             for (int i = 0; i < juovaX.Length; i++)
             {
                 float putous = (juovaVaihe[i] + t * 1.6f) % 1f;
                 var q = Siirra(c, juovaX[i] * 30f - Mathf.Cos(kallistus) * putous * 26f, -4f - putous * 26f);
-                Laiska(teravat, q, kallistus, 3.2f, 0.5f, new Color(0.35f, 0.42f, 0.52f, 0.55f * (1 - putous) * peitto));
+                Laiska(teravat, q, kallistus, 4f, 0.55f, new Color(0.35f, 0.42f, 0.52f, 0.55f * (1 - putous) * peitto));
             }
         }
     }
