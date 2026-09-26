@@ -7695,3 +7695,7 @@ Omistajan kortti 00.5x: 1) raportin #3360 33 maa-luokan juttua siirretaan kaupun
 ## NATIIVIPAKETTI V193 (MAAKUNTA C + ASTRO 2); ASTRO ERA 4 PR 3363; MAINISSA #3357-#3360 (27.9.2026 klo 01.00)
 
 Siirtoseppa 00.5x: natiivipaketti v193 tuotannossa (1.50, 6c890b377, ampari 772/772): BLR 7 + ROU 42 pikkukuvaa (527 aluetta 31 maassa), astronautin kohteet 87 → 109. Sisaltokirjuri: astronautin kamera era 3 PR #3362 (16) ja era 4 PR #3363 (16, 3 paallekkaista poistettu) → linssi 141 kohdetta kun mergetty; molemmat Julkaisijan jonoon, jalkimmainen rebase. Julkaisija 00.52: #3357, #3358 (v2289), #3359 (v2290), #3360 mainissa, testit 4411/0. Postivahti 87 % → nollaus kaynnissa (luovutus -20260927-yo c6e0ae19e); Pelikoodari 84 % → nollaus avauskortti-PR:n ja xAI-kytkennan jalkeen.
+
+## OMISTAJA AJOI YLHAALTA-175-KOMENNON (69a198a7 + PATCH TYOPUUSSA); LAITETESTAAJAN 1.0.27-RESEPTI dc069a234 (27.9.2026 klo 01.03)
+
+Omistaja ajoi 01.1x SSH-komennon: proto-natiiviseppa-ylhaalta = natiiviseppa/ylhaalta-175 @ 69a198a7 (merge linssiseppa/perspektiivi, LiioiteltuPerspektiivi.cs + testit) ja patch perspektiivi-f5900358 tyopuussa commitoimatta → Natiiviseppa commitoi ja yhdistaa kategoriamallien haaraan seuraavaan buildiin (ei 1.0.27). Laitetestaaja: 1.0.27-resepti dc069a234 (178, 179, 170, lipun perspektiivi, hoyrylaiva, 177+nostokortti); epaily ettei uusi peli sulje avointa nostokorttia → Natiivi-UI tarkistaa ennen kaannosta. Postivahti nollattu 01.0x (id ennallaan). Fablen RC paalle omistajan pyynnosta 01.0x.
