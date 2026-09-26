@@ -185,3 +185,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - Siirtoseppä 06.4x: 1.47 tuotannossa (1.x v149, 2.0 v89), kokoelma maakuntasalaisuudet (14) → Natiivi-UI:n/Pelikoodarin salaisuus-nostot saavat datan. 1.48 (kaupunkilehdet kaupungeittain) seuraavana.
 - juna/b13 **b2a5fb4a**: + linssiseppa/elava-kartta ed136705 (**ELÄVÄ KARTTA KOHTA 1 KOKONAAN JUNASSA**: saapuminen ≤ 4,8 s ohitettava, verkkohuntu, kynäviivat, syttyminen, nostopudotukset; simulaattori 189c9f36 mediaani 17,7 ms; testit 278/284/314). Laitetestaajan kierroksella: lepopiirto animaation jälkeen.
 - juna/b13 **d4f3fa25**: + linssiseppa/lykatty-data 0693c0d8 (linssien ~20 aineistoa joutilaaseen, ei kylmään käynnistykseen; LinssiOhjain.LataaAineistoHeti Natiivi-UI:lle).
+- juna/b13 **d706da81**: + natiivi-ui/linssit-heti (Linssivalitsin.Avaa → LataaAineistoHeti).
