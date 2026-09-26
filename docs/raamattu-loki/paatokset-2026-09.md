@@ -7447,3 +7447,7 @@ Natiiviseppa (iPad, proto-3d/lokit/loydos176/RAPORTTI.md): vika vain kylmalla va
 ## OMISTAJA: LIIOITELTU PERSPEKTIIVI LIPULLE JA 3D-NOSTOILLE (SITOVA) (26.9.2026 klo 21.35)
 
 Omistaja 21.4x: lipun (ja samalla logiikalla nostojen 3D-mallien) pitaa nakya perspektiivissa liioitellusti — kun kamera on suoraan kohteen ylapuolella (kohde ruudun keskella), kohde nakyy suoraan ylhaalta; siita poispain kohde nakyy hieman liioitellun hyvin sivusta, kuin kamera olisi paljon alempana kuin oikeasti, jolloin lippu ja tanko (ja mallin kylki) nakyvat helpommin. Toteutus: kohteen oma kallistus kasvaa etaisyyden mukaan ruudun keskipisteesta (0° → ~50–60° reunoilla, poispain keskipisteesta); korvaa 15°-pystykamera-idean. Natiiviseppa: lippu ensin (1.0.26 jos ehtii, muuten 1.0.27), arkkityypit ja elavat elementit samalla kaavalla 1.0.27; Linssiseppa sopii kayran. Raamattuun seuraavassa PR:ssa (JOHTOAJATUS/AITO 3D -kohtaan).
+
+## LEVYN HEILUNTA = SWAP (27–37 GT), POLTTO TASAINEN (26.9.2026 klo 21.37)
+
+Karttaseppa: vapaa levy seuraa swapin kokoa minuutin tahdissa (vm.swapusage 29,6/30,7 Gt, aamulla 20); osa 2 siivoaa shardit viennin jalkeen (7–9 Gt kerrallaan valiaikaisesti), lokit eivat kasva; v4 pysayttaa < 70 Gt ja jatkaa ≥ 75 Gt. Fable: pidetaan 8 ydinta ja seurataan; Linssiseppa (16 Gt) ja Natiiviseppa (8 Gt) siivoavat omat scratchpadinsa /private/tmp/claude-502/.
