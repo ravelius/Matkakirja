@@ -352,9 +352,18 @@ namespace Matkakirja.Natiivi
 
         static IEnumerator Kytke(LinssiOhjain ohjain)
         {
+            // Natiivisepän pallopuoli (natiiviseppa/elava-saapuminen, sovittu 26.9.): koukut sen staattisiin rajapintoihin.
+            ElavaPallo.Paljastus = (lat, lon, sadeKm, reunaKm) => Varitaso.Paljastus(lat, lon, sadeKm, reunaKm);
+            ElavaPallo.PaljastusPois = Varitaso.PaljastusPois;
+            ElavaPallo.PysyvatKerrokset = nakyvissa => { MaaKartta.Saapuminen(!nakyvissa); NostoKerros.Saapuminen(!nakyvissa); };
+            PalloKierto.SaapuminenAlkaa += (maa, kestoS) => ElavaPallo.IlmoitaSaapuminenAlkaa(kestoS);
+            PalloKierto.SaapuminenPaattyi += (maa, keskeytetty) => ElavaPallo.IlmoitaSaapuminenPaattyi();
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
-            po.MatkaPerilla += kaupunki => Saavu(kaupunki, ohjain);
+            // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
+            // MatkaPerilla käynnistää 0,5 s:n päästä, jos saapuminen ei ole jo alkanut.
+            PalloKierto.SaapuminenAlkaa += (maa, kestoS) => Saavu(po.PelaajanKaupunki, ohjain, maa);
+            po.MatkaPerilla += kaupunki => ohjain.StartCoroutine(SaavuMyohemmin(kaupunki, ohjain));
             po.LennonVaiheMuuttui += (v, suunnitelma) =>
             {
                 // ESILATAUSPOLITIIKKA: kohdemaan joet lennon aikana.
@@ -366,11 +375,18 @@ namespace Matkakirja.Natiivi
             yield return VarmistaKarttavalot();
         }
 
-        static void Saavu(string kaupunki, LinssiOhjain ohjain)
+        static IEnumerator SaavuMyohemmin(string kaupunki, LinssiOhjain ohjain)
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
+            Saavu(kaupunki, ohjain, null);
+        }
+
+        static void Saavu(string kaupunki, LinssiOhjain ohjain, string ajonMaa)
         {
             var po = PeliOhjain.Instanssi;
             if (!SaapumisetPaalla || kaupunki == null || po?.Verkko == null || Instanssi != null) return;
             if (!po.Verkko.Kaupungit.TryGetValue(kaupunki, out var k) || string.IsNullOrEmpty(k.Maa)) return;
+            if (ajonMaa != null && ajonMaa != k.Maa) return;   // saapumisajo toiseen maahan kuin pelaaja (esim. esikatselu)
             if (LinssiOhjain.Rekisteri?.Auki != null || ohjain.VahennettyLiike) return;
             var pelaaja = po.Matka?.Tila?.Pelaaja;
             bool kayty = pelaaja != null && pelaaja.Kaydyt.Any(c => c != kaupunki && po.Verkko.Kaupungit.TryGetValue(c, out var kk) && kk.Maa == k.Maa);
