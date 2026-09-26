@@ -51,6 +51,11 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
   Pariteettityökalu PR #3324 (rivit 2/24/35) Julkaisijalla. Rivi 2 (aloitusvalinnan nimet) = Natiiviseppä (Fable).
   Kortin tila saapumisanimaatioon (ElavaHerays.KorttiAukiKysely) Linssisepän haarassa. 160 odottaa omistajaa.
   Avoinna: iPhone-vaaka- ja iPad 13 -pariteetti (Fable päättää), lipputangon todennus kun paketti tuotannossa.
+- Klo 13.5x: UI-pariteetti ajettu kaikilla koilla (b20-ui-1 iPhone, b21-ui-vaaka, b21-ui-ipad, b21-ui-ipad13; luokittelu.md
+  kussakin). Merge-pyynnössä Natiivisepällä: ipad-visa f3dec87a, ipad-maalehti 8a88ef60, ipad-sahke f15b238c,
+  ipad-nostokortti 51338a36 (Fable: nostokortti ≤ 620 pt) ja lippu-kiinnitys a3a40cd6. iPad 13 ennen/jälkeen:
+  pariteetti-ajo/b21-ui-ipad13-2/. #3324 mainissa. Uusinta-ajo koko kierroksesta, kun erät junassa.
+  iPad 13 = Pelikoodarin pariteetti-iPad13 88939C12 (lupa 26.9.); ÄLÄ aja siivoa-pariteettisimut.sh --aja (koskee kaikkia).
 - (Vanha) Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
   laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
