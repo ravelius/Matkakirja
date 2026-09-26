@@ -700,7 +700,8 @@ export const RAIDAT = {
   }])),
   // Vaihe 3: tunnuskaupungit (suunnitelma 2.2, "johtoaihe paikallisella soittimella", matkan pääkaupungit). Tiedosto on
   // kaupunkiraidan nimisäännöllä (js/kaupunkimusiikki.js kaupunkiraidanTunnus), jotta hyväksytty raita kytketään
-  // KAUPUNKIRAIDAT-riviksi; laji on suunnitelma, kunnes omistaja on kuunnellut (vartija: tests/kaupunkimusiikki.test.mjs).
+  // KAUPUNKIRAIDAT-riviksi (omistaja hyväksyi 26.9. klo 11.0x; vartija: tests/kaupunkimusiikki.test.mjs). Ryhmä
+  // `kaupungit` generoi ne uudelleen, `vaihe3` ei enää (laji kaupunki).
   ...Object.fromEntries([
     ['pariisi', 'Paris in the 1870s: boulevards, cafés and gas lamps after rain',
       'a salon piano and a violin carry the theme, soft strings and a musette accordion colour underneath', 84],
@@ -715,9 +716,9 @@ export const RAIDAT = {
       'an oud and a ney flute carry the theme over soft strings, a quiet riq tambourine touch now and then', 74],
     ['pietari', 'Saint Petersburg in the 1870s: wide frozen canals, palace façades, white-night light',
       'a balalaika tremolo and a solo piano carry the theme, a warm cello and strings underneath', 68],
-  ].map(([id, kuva, soittimet, bpm]) => [`kaupunki-${id}`, {
-    laji: 'suunnitelma',
-    vaihe: 3,
+  ].map(([id, kuva, soittimet, bpm]) => [id, {
+    laji: 'kaupunki',
+    kaupunki: id,
     tiedosto: `musa-kaupunki-${id}.mp3`,
     kesto: 75000,
     looppi: true,

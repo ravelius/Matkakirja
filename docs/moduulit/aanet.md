@@ -251,7 +251,8 @@ pakkojen `cityCountry`-maalla on maanosa (testi vartioi).
 | raita | missä soi | soitin |
 |---|---|---|
 | `musa-saapuminen-<maanosa>` (10) | ensimmäinen saapuminen kaupunkiin, maanosan mukaan; ehdot kuten vaiheessa 1 | aarreaiheen paikka, ei katkaise |
-| `musa-maanosa-valimeri`, `musa-maanosa-lansi-eurooppa` | alueraidan varareitti: ketjussa alueraidan jälkeen, ennen pohjavirettä (Kypros; tai alueraidan 404) | pohjavirekoneisto, `MAANOSARAIDAT` |
+| `musa-maanosa-<maanosa>` (10; vaihe 2: valimeri, lansi-eurooppa, vaihe 3: loput 8) | alueraidan varareitti: ketjussa alueraidan jälkeen, ennen pohjavirettä (Euroopan ulkopuolella maanosaraita on paikan raita; Euroopassa alueraita voittaa) | pohjavirekoneisto, `MAANOSARAIDAT` |
+| `musa-kaupunki-<id>` tunnuskaupungit (vaihe 3): pariisi, lontoo, rooma, istanbul, kairo, pietari | kaupungin oma kappale kuten Ateena | `KAUPUNKIRAIDAT` |
 | `musa-kohtaaminen` | henkilön kohtaaminen: visan kortti, jolla puhuu tarinakaaren henkilö tai nimetty paikallinen (`js/visa.js` `onKohtaaminen`), tervehdyssivulta kortin sulkuun | pohjavirekoneisto, tilaraita `kohtaaminen` |
 | `musa-ratkaisu` | kohtaamisen kysymys oikein | aarreaiheen paikka, ei katkaise; aarteen paljastus katkaisee sen |
 | `musa-epaonnistuminen` | kohtaamisen kysymys väärin tai aika loppui | sama |
@@ -296,7 +297,7 @@ automaattisesti. Peli ei ole hetkeäkään hiljainen. Vaihto on aina
 | `musa-johtoaihe` | 60 s | etusivu, avausteksti, pallon selailu, lähtökaupungin valinta (26.9.2026 alkaen; vanha `musa-etusivu` jää ämpäriin, paluu on `PAIKKARAIDAT.etusivu.tunnus`-rivin vaihto) |
 | `musa-kaupunki-<id>` | 60–90 s | kaupungin oma kappale (Ateena) |
 | `musa-kaupunki-<alue>` | 75 s | alueen raita: `britteinsaaret`, `pohjola`, `keski-eurooppa`, `valimeri`, `balkan`, `ita-eurooppa` |
-| `musa-maanosa-<maanosa>` | 66–69 s | maanosan raita, alueraidan varareitti: `valimeri`, `lansi-eurooppa` (vaihe 2) |
+| `musa-maanosa-<maanosa>` | 50–72 s | maanosan raita, alueraidan varareitti: kaikki 10 maanosaa (vaiheet 2 ja 3) |
 | `musa-pohja` | 80 s | kaikkialla muualla |
 
 **Mistä tila tulee.** Kaksi lähdettä, kumpikin jo olemassa olevaa

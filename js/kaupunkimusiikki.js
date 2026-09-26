@@ -89,6 +89,35 @@ export const KAUPUNKIRAIDAT = {
     kuvaus: 'Ateenaan saapuminen iltapäivällä: bouzouki ja kitara hillitysti, '
       + 'Välimeren ilta pohjaäänimaiseman alla.',
   },
+  /*
+   * TUNNUSKAUPUNGIT (musiikkisuunnitelma 2.2, vaihe 3, omistaja hyväksyi
+   * 26.9.2026 klo 11.0x): matkan pääkaupungit, joissa pelaaja viipyy
+   * pisimpään; johtoaihe paikallisella soittimella.
+   */
+  pariisi: {
+    kuvaus: 'Pariisi: salonkipiano ja viulu kantavat johtoaihetta, musette-harmonikan '
+      + 'väri ja bulevardien sadeilta pohjaäänimaiseman alla.',
+  },
+  lontoo: {
+    kuvaus: 'Lontoo: sello ja klarinetti kantavat johtoaihetta, celestan kellosävy, '
+      + 'sumu joella pohjaäänimaiseman alla.',
+  },
+  rooma: {
+    kuvaus: 'Rooma: mandoliini ja kitara kantavat johtoaihetta, oboe vastaa, '
+      + 'piazzan iltapäivä pohjaäänimaiseman alla.',
+  },
+  istanbul: {
+    kuvaus: 'Istanbul: kanun ja ney-huilu kantavat johtoaihetta modaalisesti, '
+      + 'lautat salmella pohjaäänimaiseman alla.',
+  },
+  kairo: {
+    kuvaus: 'Kairo: oud ja ney-huilu kantavat johtoaihetta, hiljainen riq, '
+      + 'Niili hämärässä pohjaäänimaiseman alla.',
+  },
+  pietari: {
+    kuvaus: 'Pietari: balalaikan tremolo ja soolopiano kantavat johtoaihetta, '
+      + 'jäätyneet kanavat ja valkoinen yö pohjaäänimaiseman alla.',
+  },
 };
 
 /**
@@ -326,6 +355,15 @@ export const MAANOSARAIDAT = {
     kuvaus: 'Pohjois- ja Länsi-Eurooppa: piano, sello ja harmoni, huilu vihjaa '
       + 'johtoaiheeseen kerran, sade ikkunassa pohjaäänimaiseman alla.',
   },
+  // Vaihe 3 (omistaja hyväksyi 26.9.2026 klo 11.0x): loput maanosat.
+  'ita-eurooppa': { kuvaus: 'Itä-Eurooppa: balalaikan tremolo ja sello, cimbalom, koivumetsien lumivalo pohjaäänimaiseman alla.' },
+  'lahi-ita': { kuvaus: 'Lähi-itä ja Pohjois-Afrikka: oud ja ney-huilu, kanunin väre, hämärä tasakattojen yllä pohjaäänimaiseman alla.' },
+  'saharan-etelapuoli': { kuvaus: 'Saharan eteläpuoli: kora ja balafon, käsirummut, avaran savannin valo pohjaäänimaiseman alla.' },
+  'etela-aasia': { kuvaus: 'Etelä-Aasia: bansuri ja hiljainen sitar-bordun, tabla, kostea ilta joen rannalla pohjaäänimaiseman alla.' },
+  'ita-aasia': { kuvaus: 'Itä-Aasia: guzheng ja erhu, shakuhachi vastaa, aamusumu satamassa pohjaäänimaiseman alla.' },
+  'pohjois-amerikka': { kuvaus: 'Pohjois-Amerikka: viulu ja 1870-luvun banjo, huuliharppu, jokikaupunki ja preeria pohjaäänimaiseman alla.' },
+  'etela-amerikka': { kuvaus: 'Etelä-Amerikka: charango ja kitara, quena-huilu, vuoriston ilma ja siestan aukio pohjaäänimaiseman alla.' },
+  oseania: { kuvaus: 'Oseania: klassinen kitara ja näppäilty ukulele, slide-kitara, pasaatituuli maailman toisella puolella pohjaäänimaiseman alla.' },
 };
 
 /** Maanosaraidan tunnus tiedostonimeä varten: `valimeri` → `musa-maanosa-valimeri`. */

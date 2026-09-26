@@ -95,8 +95,10 @@ test('kaupunki menee alueen edelle ja alue pohjavireen edelle', () => {
     MAANOSA_VALIMERI,
     POHJA,
   ]);
-  // Maanosa ilman omaa raitaa (vaihe 2: vain kaksi): suoraan pohjavireeseen.
-  assert.deepEqual(musiikkiketju('kumasi', 'GHA'), [POHJA]);
+  // Maanosa ilman aluetta (vaihe 3: kaikki kymmenen maanosaa): maanosaraita ja pohjavire.
+  assert.deepEqual(musiikkiketju('kumasi', 'GHA'), [
+    musaPolku(maanosaraidanTunnus('saharan-etelapuoli')), POHJA,
+  ]);
 });
 
 test('kaupunkikohtainen poikkeus voittaa maan', () => {
@@ -490,7 +492,7 @@ test('lehti vaihtaa raidan ja sulkeutuminen palauttaa kaupungin', async () => {
 
 test('matkalaukku vaihtaa raidan ja palauttaa sen sulkeutuessaan', async () => {
   const s = await lataaAmbienssi();
-  await saavu(s, 'lontoo', 'GBR');
+  await saavu(s, 'edinburgh', 'GBR');
   assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku(kaupunkiraidanTunnus('britteinsaaret')));
   asetaMusiikkitila('matkalaukku', true);
   await Promise.resolve();
@@ -608,9 +610,9 @@ test('jokaisella pakkojen cityCountry-maalla on maanosa', async () => {
   assert.equal(kaupunginMaanosa('etusivu'), null);
 });
 
-test('maanosaraidat: vaiheen 2 kaksi, tiedostot työkalun mukaan', async () => {
+test('maanosaraidat: kaikki kymmenen (vaiheet 2 ja 3), tiedostot työkalun mukaan', async () => {
   const { MAANOSARAIDAT, MAANOSAT, maanosanMusiikki } = await import('../js/kaupunkimusiikki.js');
-  assert.deepEqual(Object.keys(MAANOSARAIDAT).sort(), ['lansi-eurooppa', 'valimeri']);
+  assert.deepEqual(Object.keys(MAANOSARAIDAT).sort(), [...MAANOSAT].sort());
   for (const maanosa of Object.keys(MAANOSARAIDAT)) {
     assert.ok(MAANOSAT.includes(maanosa));
     const tunnus = maanosaraidanTunnus(maanosa);
@@ -621,17 +623,18 @@ test('maanosaraidat: vaiheen 2 kaksi, tiedostot työkalun mukaan', async () => {
     assert.equal(raita.looppi, true, `${tunnus}: maanosaraita soi minuutteja — sen on kierrettävä`);
     assert.ok(MAANOSARAIDAT[maanosa].kuvaus);
   }
-  assert.equal(maanosanMusiikki('oseania'), null, 'vaiheen 3 maanosa ilman raitaa');
   // Kypros: ei aluetta, joten maanosaraita on ketjun ainoa oma raita.
   assert.deepEqual(musiikkiketju('nikosia', 'CYP'), [MAANOSA_VALIMERI, POHJA]);
-  // Alue voittaa maanosan: Lontoo → Britteinsaaret → Länsi-Eurooppa.
-  assert.deepEqual(musiikkiketju('lontoo', 'GBR'), [
+  // Alue voittaa maanosan: Edinburgh → Britteinsaaret → Länsi-Eurooppa.
+  assert.deepEqual(musiikkiketju('edinburgh', 'GBR'), [
     musaPolku(kaupunkiraidanTunnus('britteinsaaret')), MAANOSA_LANSI, POHJA,
   ]);
-  // Itä-Euroopalla on alueraita mutta ei vielä maanosaraitaa.
+  // Itä-Euroopalla on alueraita ja (vaihe 3) maanosaraita.
   assert.deepEqual(musiikkiketju('moskova', 'RUS'), [
-    musaPolku(kaupunkiraidanTunnus('ita-eurooppa')), POHJA,
+    musaPolku(kaupunkiraidanTunnus('ita-eurooppa')), musaPolku(maanosaraidanTunnus('ita-eurooppa')), POHJA,
   ]);
+  // Tunnuskaupunki (vaihe 3): oma kappale alueen edellä.
+  assert.equal(musiikkiketju('lontoo', 'GBR')[0], musaPolku(kaupunkiraidanTunnus('lontoo')));
 });
 
 test('tilaraitojen järjestys: lehti, matkalaukku, kohtaaminen', () => {
