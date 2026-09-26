@@ -7291,3 +7291,7 @@ Sisaltokirjurin sessio nollattu 19.4x; aloitusviesti lahetetty luovutuksesta -c 
 ## 170 EUROOPPA: 21 (+6) KUVAA (26.9.2026 klo 19.48)
 
 Siirtoseppa: Euroopassa 21 maakuntanostoa 14 maassa ilman kuvaa (19 skandaalia, 2 takynostoa; SWE 3, FRA/HUN/LTU/NOR/PRT 2, muut 1); lisaksi CYP/TUR/RUS 2 kukin manner-rajauksen ulkopuolella. Fable: Sisaltokirjuri tekee 27 kuvaa yhtena PR:na (Eurooppa + CYP/TUR/RUS).
+
+## LOYDOS 173: MAAKUNTAVALIKKO KAPEAMMAKSI JA KORKEAMMAKSI (26.9.2026 klo 19.49)
+
+Omistaja 19.5x (kuva, Ranska iPhone): NOSTOT/MAAKUNNAT-paneeli kapeammaksi ja korkeammaksi; nyt lahes koko leveys ja loppuu ruudun puolivalissa. Natiivi-UI 1.0.26-junaan yhdessa 169:n Kaikki-napin kanssa (kuvassa ylin rivi Pois). Kuvapari Fablelle.
