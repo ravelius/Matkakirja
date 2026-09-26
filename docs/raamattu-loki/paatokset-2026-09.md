@@ -7211,3 +7211,7 @@ Codex toimitti Pulun karttavaiston Unity-natiiviin (haara proto/natiivi-ui/pulu-
 ## RAAMATTU-PR 3338: EI MONOTONIAA JA AITO 3D (26.9.2026 klo 18.31)
 
 Omistajan 13.4x-13.5x-saannot (vaihtelu kaikkiin animoituihin kohteisiin; 3D-nostot aidosti kolmiulotteisia, katselukulmaan reagoivia, maan pinnalla, pienet valot, hillityt varit) lisatty Raamatun JOHTOAJATUS VISUAALISUUDESTA -kohtaan PR:na #3338 Julkaisijan junaan. Karttasepan sessio nollattu ja kaynnistetty uudelleen luovutuksesta -b (Z10 v3 8 ydinta). Fablen checkout synkattu mainiin.
+
+## Z10-POLTTOVAHTI V4: OMISTAJA HYVAKSYY KARTTASEPAN SESSIOSSA (26.9.2026 klo 18.38)
+
+Vahti v3 pudotti 4 ytimeen 18.31 (memory pressure warn clang-kaannoksen aikana, ei swap). Karttasepan v4: free > 40 % → 8 ydinta, < 20 % → 4, pysaytys vain free < 10 %, critical tai levy < 70 Gt; warn- ja swap-liipaisimet pois. Luokitin esti Karttasepalta tiedoston kirjoituksen ja pkillin; Fable ei kiertanyt. Omistaja valitsi kortilla: hyvaksyy kirjoituksen ja kaynnistyksen suoraan Karttasepan sessiossa Remote Controlilla. Z10 120/419 klo 18.4x.
