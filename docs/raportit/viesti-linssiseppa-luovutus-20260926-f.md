@@ -174,3 +174,21 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   (5f50d3f2) ja .metat lisätty (f9bf44ed). Ensimmäisen ajon kuvat: lokit/linssiseppa-matka-20260926-v1/.
 - Käännös `kaanna.sh hetket2` ja uusi `ajo-matka.sh` ketjutettuna taustalla (vanha scratchpad 15ddf057) →
   kuvapari omistajalle ja Fablelle → merge-pyyntö Natiivisepälle (build 20).
+
+## Päivitys klo 10.4x
+
+- **Merge-pyyntö Natiivisepällä (build 20):** linssiseppa/usva-159 16c9ee36 (wt/proto-linssiseppa) = natiiviseppa/usva-153
+  + elavat-hetket (kohdat 4+5, omistaja hyväksyi kohdan 5) + löydös 159 (Horisonttiusva.hlsl Kynäviivaan, Vanaan, Laivaan,
+  Pehmeapisteeseen) + juna 12679a12 koemergettynä (MusteJaljet-metat junasta).
+- Testit: Peli 288/288, Linssit 321/321, unity-tarkistus 0. Simulaattori cc198e66: usva toimii, 0 poikkeusta
+  (lokit/linssiseppa-usva159-20260926/).
+- **Reitin väri (omistaja 09.5x: tummanpunainen, läpikuultava, leveä):** 5,5 pt. Ensimmäinen versio (0,45, 0,07, 0,06, 0,5)
+  näytti kermalla ruskehtavan roosalta, joten oletus on nyt (0,50, 0,02, 0,03, 0,65). Komento
+  `elava reitti vari r g b a [pt]`. Vaihtoehtojen A/B/C käännös ja ajo ovat taustalla (scratchpad f0b4fec1 ajo-vari.sh →
+  lokit/linssiseppa-reittivari-20260926/) → kuvapari Fablelle ja omistajalle.
+- **Elävä kerros:** Natiivisepän rajapinta on lukittu (proto-3d/lokit/elava-kerros-rajapinta.md, 6 tarkennustani hyväksytty),
+  ja toteutus tulee build 20:n jälkeen. Siirrä PallonLepo.Animoi-kutsut ElavaKerros.Animoi-kutsuiksi, kun haara tulee.
+- **Elävät elementit:** omistaja hyväksyi selvityksen docs/raportit/elavat-elementit-selvitys-20260926.md. Järjestys on myllyt →
+  karuselli → pallo → gondolit → Lontoo (pyörä + siipiratashöyry) → köysirata + Etna, ja kokeilut alkavat build 20:n
+  jälkeen. AIKA-sääntö: kartta elää nykyajassa, joten 1873-tarkistusta ei tehdä.
+- Lipputanko 161: liehunta on Natiivisepän Liput.Aaltoile. Minulta tarvitaan vain ajastus, kun hän pyytää.
