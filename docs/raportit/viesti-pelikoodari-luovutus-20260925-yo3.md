@@ -173,7 +173,7 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
   PR Julkaisijan junaan.
 - Vaihe 2: kysytty Fablelta laajuus (käsky "maanosat + tunnuskaupungit" vs suunnitelman §5 jako).
 
-## 18. Lisäys 26.9. klo 09.1x — SEURAAJALLE (kiintiö ~98 %)
+## 18. Lisäys 26.9. klo 08.5x — SEURAAJALLE (kiintiö ~98 %)
 MERGE-PYYNNÖT NATIIVISEPÄLLE (build 20), kaikki juna/b13 fdc47632:n päällä, 285/285, unity 0:
 - `pelikoodari/musiikki-vaihe1` 4218bbd8: musiikin vaihe 1 natiiviin. TODENNETTU simulaattorilla A2FD9C9F (f994e4eb,
   lokit/musiikki-v1/ajo1): aloituslento soi lennolla 0,07 pohjan väistäessä 0,01, Välimeren tunnus Ateenassa,
