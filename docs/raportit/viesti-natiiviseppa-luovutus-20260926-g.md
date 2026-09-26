@@ -8,7 +8,7 @@ Edellinen: -f.md. Löydöslista: docs/raportit/omistajan-loydokset-b13-20260925.
 - **BUILD 17** = proto-master **6a65ead1** (merge juna/b13 d04841a0; puu 6648d8e9 = käännös 6fd19114) = TF **1.0.17**
   (Fablen päätös: lähtee sellaisenaan; Laitetestaajan lepopiirto-FAIL ja löydös 143 build 18:aan). SHA lähetetty Fablelle
   ja Julkaisijalle (pyydetty merkitsemään yo-testflight-viimeisin).
-- **BUILD 18 -juna** juna/b13 **99bf0fe5** (99eaf8d9 + Linssisepän esilataus 05e54878, ihmisen-matka-2 2850ac37 (II 5, 148/151/152), pariteettiaanet c46ff6e6; testit 278/279/300) (koemerge: unity-tarkistus 0 virhettä, testit Kartta 278 / Peli 279 / Linssit 259):
+- **BUILD 18 -juna** juna/b13 **4bdab584** (+ natiivi-ui/sumea-132 37316c6c ja 150, kartussi-143b b499b6ef; 99eaf8d9 + Linssisepän esilataus 05e54878, ihmisen-matka-2 2850ac37 (II 5, 148/151/152), pariteettiaanet c46ff6e6; testit 278/279/300) (koemerge: unity-tarkistus 0 virhettä, testit Kartta 278 / Peli 279 / Linssit 259):
   linssiseppa/radio-esikuuntelu 9434b244, pelikoodari/loydos149 0e534bef (+ vieritys 059f7709), pelikoodari/tehoste-rekisteri
   ba1547ba, siirtoseppa/paketti-paivitys 99f049ec (simulaattoriloki lokit/siirtoseppa-paketti-paivitys-20260926.txt).
 
@@ -60,5 +60,15 @@ verhokoe; napakansi; Elävän kartan pallon rajapinnat. Omistajan valinnat 127/1
 Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /tmp/natiiviseppa-vienti-tulossa oli päällä
 03.45 alkaen). Worktreet (3/3 käytössä yllä olevilla haaroilla). Unity-työkopio Matkakirja-proto: puhdas master 6a65ead1.
 
-**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 99bf0fe5 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
+**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 4bdab584 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
 132 yhdessä Natiivi-UI:n kanssa, verhokoe huntu pois, napakansi.
+
+## Päivitys klo 04.2x
+
+- 132 + 150 junassa (Natiivi-UI todensi laitteella). 144: natiivi-ui/liput-144 a6da2b0a (sisältää 8324a291:n, Komennot-ristiriita
+  ratkaistu OK) odottaa Fablen koevideon hyväksyntää → sitten koemerge.
+- LEPOPIIRRON FAIL -juurisyy (Natiivi-UI): nostomerkkien hehkusyke (125) seuraa Joutosykettä, joka on jatkuva (Lampopaatos.SykeJaatyy
+  = false); kerros 12 likainen 230/244. Päätös Fablella (sama kello ohjaa lippuja).
+- Taustalla yhdistelmäkäännös juna + sumea-132 + liput-144 + lepo-suspend (odottaa vahdin junakäännöstä) → FBBD41D7 (vuoro
+  Julkaisijalta kuitattu ~30 min): suspend-A/B `pallo tauko pois|paalle` levossa.
+- Siirtosepän 1.47 (maakuntasalaisuudet omana kokoelmana) kuitattu OK natiiville.
