@@ -2,27 +2,31 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 14:43 EEST
+**Päivitetty:** 2026-09-26 14:55 EEST
 
 ## 1) Sessiot
 
-Uusi tili klo 14:43: viikko (all models) **19 %**, viikko (Fable) 12 %, 5 h **9 %**. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Ei ylityksiä (Fable ja Pelikoodari 66 %, lähellä 70 % — seurataan). Levyraja 80 Gt palasi voimaan (omistaja poissa 26.–27.9., ks. kohta 2). Ei poistokandidaatteja tällä kierroksella.
+Uusi tili klo 14:55: viikko (all models) **19 %**, viikko (Fable) 13 %, 5 h **12 %**. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Ei kontekstiylityksiä (Fable/Pelikoodari 67 %, lähellä 70 %). Ei poistokandidaatteja.
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 66% | running | PR #3308 |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 65% | running | tämä taulu |
-| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 26% | idle | PR #3306 mergetty |
-| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 40% | running | — |
-| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 16% | running | PR #3324 mergetty |
-| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 48% | running | — |
-| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 24% | idle | — |
-| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 45% | idle | — |
-| Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 35% | idle | PR #3307 mergetty |
-| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 66% | idle | vakaa |
-| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 60% | idle | PR #3305 mergetty |
+| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 67% | running | PR #3308 |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 68% | running | tämä taulu |
+| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 27% | idle | PR #3306 mergetty |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 41% | idle | — |
+| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 16% | idle | PR #3324 mergetty |
+| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 52% | running | — |
+| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 30% | idle | — |
+| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 50% | idle | — |
+| Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 36% | running | PR #3307 mergetty |
+| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 67% | idle | vakaa |
+| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 61% | idle | PR #3305 mergetty |
 
 ## 2) Jumit ja avoimet kortit omistajalle
+
+**14:55 HÄLYTYS: swap nousi 12,2 Gt:sta 20,5 Gt:aan / 21,5 Gt (raja 24 Gt) ~12 minuutissa** — Z10-poltto + maakuntapoltto (pyramidi-poltto/, 13 Gt ja kasvaa) syövät muistia nopeasti. Levy laski 91→81 Gt (raja 80 Gt, hyvin lähellä). Ei vielä ylitystä kummassakaan, mutta trendi on jyrkkä — ilmoitettu Fablelle, seurataan tiiviisti (5 min).
+
+**14:55 Postilaatikossa uusi ei-Fable-viesti:** af811bdc3 "Kuvaputken tilaus: ISS Cupola-kehys" (Sisältökirjuri → Kuvaputki, Linssiseppä välittää, Fablen käsky, omistaja 14.5x) — ilmoitettu Fablelle.
 
 **14:38 Postivahti kieltäytyi automaattisesta rm-poistosta:** Fable pyysi (omistajan nimissä) lisäämään kierrokseen automaattisen poiston lokit-kansion >48h vanhoista alikansioista ja >24h vanhoista .app-kopioista. Kieltäydyn — pysyvä poisto on minulle ehdottoman kiellettyä riippumatta valtuutuksesta. **SOVITTU TYÖNJAKO (Fable 14.4x):** Postivahti listaa kandidaatit (>48h lokit-alikansiot, >24h .app-kopiot, Gt-arvio) tähän tauluun kierroksittain ja lähettää Fablelle rivin **kerran vuorokaudessa TAI kun kandidaatit >5 Gt**; Fable poistaa omistajan luvalla. Ei kandidaatteja juuri nyt.
 
@@ -74,12 +78,12 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 9 % (nollautui 14:00, seur. nollaus 18:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 19 %.** **Viikko (Fable):** 12 %.
-- **Levy:** 91 Gt vapaana (**raja palasi 80 Gt:iin** — omistaja poissa 26.–27.9., ks. kohta 2; yli rajan, ei toimenpidettä). **Swap: 12,2 Gt / 13 Gt (raja 24 Gt, vakaa). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 51 kpl.
-- **Simulaattorit boottina:** 1 (iPhone 18 Pro — max 4 päivällä). coreaudiod 7 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
-- **Konteksti:** Fable 66 %, Pelikoodari 66 % (molemmat lähellä 70 %), Karttaseppä 60 %, Postivahti 65 %, Linssiseppä 48 %, Laitetestaaja 45 %, Natiiviseppä 40 %, Siirtoseppä 35 %, Julkaisija 26 %, Sisältökirjuri 24 %, Natiivi-UI 16 %.
+- **5 h -kiintiö:** 12 % (nollautui 14:00, seur. nollaus 18:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 19 %.** **Viikko (Fable):** 13 %.
+- **Levy:** **81 Gt vapaana — laskee nopeasti (91→81, 12 min), raja 80 Gt hyvin lähellä.** **Swap: 20,5 Gt / 21,5 Gt — NOUSSU JYRKÄSTI (12,2→20,5), raja 24 Gt lähellä.** Syy: Z10-poltto + maakuntapoltto (pyramidi-poltto/ 13 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 50 kpl.
+- **Simulaattorit boottina:** 2 (iPhone 18 Pro, linssiseppa-iPhone — max 4 päivällä). coreaudiod 9 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
+- **Konteksti:** Fable 67 %, Pelikoodari 67 % (molemmat lähellä 70 %), Karttaseppä 61 %, Postivahti 68 %, Linssiseppä 52 %, Laitetestaaja 50 %, Natiiviseppä 41 %, Siirtoseppä 36 %, Julkaisija 27 %, Sisältökirjuri 30 %, Natiivi-UI 16 %.
 - **Juna:** ei uutta commitia 14:02 jälkeen, ei proto-kaanna.sh käynnissä — jono tyhjä, ei hälytystä.
-- **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
+- **Postilaatikko:** UUSI ei-Fable-viesti af811bdc3, ilmoitettu Fablelle. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
 - **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja tällä kierroksella.
 
 ## 6) proto-3d/lokit — 10 suurinta alikansiota yli 24 h vanhoja (Fablen pyyntö 11:3x, ei poistoja)
