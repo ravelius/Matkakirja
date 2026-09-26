@@ -24,6 +24,9 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
 
+        /// <summary>Avautui (true) tai alkoi sulkeutua (false); nostokortti pehmentää itsensä taustaksi (löydös 132).</summary>
+        public event Action<bool> AukiMuuttui;
+
         /// <summary>
         /// Löydös 102 (omistaja, build 13): noston kuvasuurennos niin isona kuin mahtuu (web fokuskohteet.js
         /// avaaKohdeSuurennos mitoita + ui-apurit.js suurennoksenMitat tayteen: 0,97 ruudusta, reunavara 16 pt, kuva
@@ -66,8 +69,10 @@ namespace Matkakirja.Natiivi
             sarja = new List<LehtiKuva>(kuvat ?? Array.Empty<LehtiKuva>());
             if (sarja.Count == 0) return;
             Nayta(alku);
+            bool oli = Auki;
             Auki = true;
             Rakenne.Nayta(kerros, true, 220);
+            if (!oli) AukiMuuttui?.Invoke(true);
         }
 
         public void Sulje()
@@ -76,6 +81,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             versio++;
             Rakenne.Nayta(kerros, false, 180);
+            AukiMuuttui?.Invoke(false);
         }
 
         /// <summary>Täyttötila: kuvan koko contain-periaatteella; kehyksen muu tila (paperi, teksti) vähennetään varasta.</summary>

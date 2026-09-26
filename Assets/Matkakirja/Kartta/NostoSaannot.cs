@@ -202,6 +202,187 @@ namespace Matkakirja
             alkio != null && alkio.TryGetValue("puoli", out var o) && o is string p
             && (p == "oikea" || p == "vasen" || p == "yla" || p == "ala") ? p : null;
 
+        // ==== ELÄINTÄYT KOKO LAUDALTA (löydös 125, web js/pallolauta/nostot.js keraa ja :390 ELAINTAKY_*) ====
+
+        /// <summary>
+        /// ELAINTAKY_NAKYY_KORKEUS = ELAINTAKY_MAANOSAN_ASTEET 34 / ALUEEN_VAHIN_OSUUS 0,75 = 45,3°: eläintäkymerkit
+        /// näkyvät, kun näkymän korkeus leveysasteina on enintään tämä (Eurooppa täyttää ruudun, ei yleiskuvaa).
+        /// </summary>
+        public const double ElaintakyNakyyKorkeus = 34.0 / 0.75;
+
+        /// <summary>Web `alueenMerkitNakyvat(nakyva, ELAINTAKY_NAKYY_KORKEUS) &amp;&amp; !liikkuu` (liikkuu = nappula siirtyy).</summary>
+        public static bool ElaintaytNakyvat(double nakyvaKorkeusAsteina, bool nappulaLiikkuu) =>
+            !nappulaLiikkuu && nakyvaKorkeusAsteina > 0 && nakyvaKorkeusAsteina <= ElaintakyNakyyKorkeus;
+
+        // ==== SYMBOLIT (löydös 125, web js/fokusnosto-symbolit.js; mitattu proto-3d/lokit/nostot-125/web) ====
+
+        /// <summary>
+        /// NOSTOSYM_MINI_LUONNOS-taulun tunnukset: viisi viivamerkkiä (vuori, meri, huuto = salama, elain = tassu,
+        /// ihme = kompassiruusu) ja yksitoista pistettä (<see cref="OnPistemerkki"/>).
+        /// </summary>
+        static readonly HashSet<string> MiniTunnukset = new HashSet<string>
+        {
+            "vuori", "meri", "huuto", "elain", "ihme",
+            "silma", "historia", "ruoka", "kulttuuri", "tekniikka", "kauppa", "sana", "merenkulku", "urheilu", "kaupunki", "hetki",
+        };
+
+        /// <summary>NOSTOSYM_PISTEET: kategoriat, joiden kartan merkki on harmaa hehkupiste (muoto ei erota, väri erottaa).</summary>
+        static readonly HashSet<string> PisteTunnukset = new HashSet<string>
+        {
+            "silma", "historia", "ruoka", "kulttuuri", "tekniikka", "kauppa", "sana", "merenkulku", "urheilu", "kaupunki", "hetki",
+        };
+
+        /// <summary>
+        /// Kartan minimerkin tunnus (web nostosymMiniTunnus + NOSTOSYM_MINI_LAJIT): luonto lajin mukaan — meri ja joki
+        /// kahtena aaltona ("meri"), muut (vuori, saari, järvi) ja tuntematon laji kolmiona ("vuori", webin oma
+        /// oletus); muut kategoriat sellaisenaan, jos taulussa on merkki, ja tuntematon "huuto" (webin varamerkki).
+        /// Laji = kohteen tyyppi (web datumin symLaji); karttavalot.json ei vielä vie sitä (löydös 125, data).
+        /// </summary>
+        public static string MiniTunnus(string kategoria, string laji)
+        {
+            if (kategoria == "luonto") return laji == "meri" || laji == "joki" ? "meri" : "vuori";
+            return kategoria != null && MiniTunnukset.Contains(kategoria) ? kategoria : "huuto";
+        }
+
+        /// <summary>Onko minimerkki piste (NOSTOSYM_PISTEET), eli harmaa hehkupiste eikä viivamerkki.</summary>
+        public static bool OnPistemerkki(string tunnus) => tunnus != null && PisteTunnukset.Contains(tunnus);
+
+        /// <summary>NOSTOSYM_KUVAMERKIT: tyyppi (luonnon laji tai kategoria) → assets/nostotyypit/merkki-*.png.</summary>
+        static readonly Dictionary<string, string> Kuvamerkit = new Dictionary<string, string>
+        {
+            ["vuori"] = "merkki-vuori.png", ["saari"] = "merkki-saari.png", ["jarvi"] = "merkki-jarvi.png",
+            ["joki"] = "merkki-joki.png", ["meri"] = "merkki-meri.png", ["historia"] = "merkki-historia.png",
+            ["kulttuuri"] = "merkki-kulttuuri.png", ["ruoka"] = "merkki-ruoka.png", ["kauppa"] = "merkki-kauppa.png",
+            ["tekniikka"] = "merkki-tekniikka.png", ["merenkulku"] = "merkki-merenkulku.png",
+        };
+
+        /// <summary>
+        /// Kuvamerkin tiedosto (web nostosymKuvamerkki: laji ensin, sitten kategoria) tai null, jos tyypillä ei ole
+        /// merkkiä (silloin minimerkki). VÄLIAIKAINEN VARA datalle ilman lajia: luonto → vuoren merkki (natiivin
+        /// entinen valinta, karttaselitteen ensimmäinen luontomerkki); webissä tätä haaraa ei ole, koska laji on aina.
+        /// </summary>
+        public static string Kuvamerkki(string kategoria, string laji)
+        {
+            if (laji != null && Kuvamerkit.TryGetValue(laji, out var k)) return k;
+            if (kategoria != null && Kuvamerkit.TryGetValue(kategoria, out k)) return k;
+            return laji == null && kategoria == "luonto" ? Kuvamerkit["vuori"] : null;
+        }
+
+        /// <summary>NOSTOJEN_TYYPPIMERKIN_KERROIN (js/pallolauta/nostot.js:498).</summary>
+        public const double TyyppimerkinKerroin = 4.0;
+
+        /// <summary>
+        /// Kuvamerkki käytössä (nostot.js:2020): ykköstasolla aina, muuten kartan kertoimesta 4 alkaen
+        /// (tyyppimerkitKaytossa). Kutsuja tarkistaa lisäksi, että tyypillä on merkki (<see cref="Kuvamerkki"/>).
+        /// </summary>
+        public static bool KuvamerkkiKaytossa(int taso, double kerroin) => taso == 1 || kerroin >= TyyppimerkinKerroin;
+
+        /// <summary>
+        /// Kaupunkimerkki (web datumin kaupunki = kohde.tyyppi === 'kaupunki', nostot.js merkinKerroin: nimiö 11,5 px):
+        /// lajista, kun se on datassa (Marathon, Ermoupoli, Kalamata ovat kaupunkeja muissa aiheissa); ilman lajia
+        /// aihe kaupungit tai kategoria kaupunki (natiivin entinen sääntö).
+        /// </summary>
+        public static bool OnKaupunkimerkki(string aihe, string kategoria, string laji) =>
+            laji != null ? laji == "kaupunki" : aihe == "kaupungit" || kategoria == "kaupunki";
+
+        /// <summary>Meren nimiö (NOSTOSYM_NIMIO_LAJIT { meri }): harvennettu versaali haaleammalla musteella.</summary>
+        public static bool OnMerenNimio(string laji) => laji == "meri";
+
+        // ---- Musteet (css/styles.css .nostosym-*, NOSTOSYM_*; sRGB 0–1, alfa erikseen) ----
+
+        /// <summary>--sym-piste-harmaa #6f6a61: kartan pistemerkin kiekko ja hehku (väri vain karttaselitteen valossa).</summary>
+        public static readonly double[] PisteHarmaa = { 111 / 255.0, 106 / 255.0, 97 / 255.0 };
+        /// <summary>.nostosym-mini fill rgba(58, 40, 25, 0,86): viivamerkin runko ja pisteen musterengas.</summary>
+        public static readonly double[] Muste = { 58 / 255.0, 40 / 255.0, 25 / 255.0 };
+        public const double MusteenPeitto = 0.86, OhuenPeitto = 0.52;
+        /// <summary>.nostosym-nimio fill rgba(74, 52, 33, 0,92), ei haloa.</summary>
+        public static readonly double[] NimionMuste = { 74 / 255.0, 52 / 255.0, 33 / 255.0 };
+        public const double NimionPeitto = 0.92;
+        /// <summary>NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98).</summary>
+        public static readonly double[] Taso1Muste = { 46 / 255.0, 30 / 255.0, 14 / 255.0 };
+        public const double Taso1Peitto = 0.98;
+        /// <summary>.nostosym-nimio-meri fill rgba(120, 108, 84, 0,72), letter-spacing 0,28 em, versaali.</summary>
+        public static readonly double[] MerenMuste = { 120 / 255.0, 108 / 255.0, 84 / 255.0 };
+        public const double MerenPeitto = 0.72, MerenHarvennus = 0.28;
+
+        // ---- HEHKUPISTE (web piirraNostosymMiniCanvas, omistaja 21.9.2026: "saisi olla hehkuvan näköinen") ----
+
+        /// <summary>NOSTOSYM_PISTE_R (kirjaston yksikköä) ja NOSTOSYM_HEHKUN_SADE (pisteen säteinä).</summary>
+        public const double PisteR = 3.4, HehkunSade = 2.1;
+        /// <summary>NOSTOSYM_HEHKUN_ALFA (häiveen peitto sisäreunalla), _SISUS (sisuksen vaalennus), NOSTOSYM_PISTE_HIMMEYS.</summary>
+        public const double HehkunAlfa = 0.45, HehkunSisus = 0.42, PisteenHimmeys = 0.86;
+        /// <summary>Häiveen sisäsäde pisteen säteinä (createRadialGradient(0, 0, r · 0,7, 0, 0, r · 2,1)).</summary>
+        public const double HehkunAlku = 0.7;
+
+        /// <summary>
+        /// Häiveen peitto etäisyydellä d keskeltä (pisteen säteinä): canvasin säteittäinen gradientti antaa
+        /// sisäympyrän (0,7 r) sisällä ensimmäisen värin (0,45) ja siitä lineaarisesti nollaan 2,1 r:ssä.
+        /// </summary>
+        public static double HehkunPeitto(double d)
+        {
+            if (d <= HehkunAlku) return HehkunAlfa;
+            if (d >= HehkunSade) return 0;
+            return HehkunAlfa * (1 - (d - HehkunAlku) / (HehkunSade - HehkunAlku));
+        }
+
+        /// <summary>
+        /// Sisuksen gradientin kohta ω pisteessä (x, y) pisteen säteinä (y alas kuten canvasilla): web
+        /// createRadialGradient(−0,25 r, −0,25 r, 0, 0, 0, r) on kahden ympyrän kartio (polttopiste säde 0 → origo
+        /// säde 1). ω = suurin ratkaisu yhtälöstä |p − (1 − ω) f| = ω; 0 = vaalennettu polttopiste, 1 = harmaa reuna.
+        /// </summary>
+        public static double SisuksenOsuus(double x, double y)
+        {
+            const double fx = -0.25, fy = -0.25;
+            double qx = x - fx, qy = y - fy, dx = -fx, dy = -fy;
+            double a = dx * dx + dy * dy - 1.0, qd = qx * dx + qy * dy, qq = qx * qx + qy * qy;
+            double w = (qd - Math.Sqrt(Math.Max(0, qd * qd - a * qq))) / a;
+            return Math.Min(1.0, Math.Max(0.0, w));
+        }
+
+        /// <summary>NOSTOSYM_SYKKEEN_OSUUS 0,07, NOSTOSYM_SYKKEEN_JAKSO_MS 2400 ja glSykeKerroin-nousu 600 ms (sekunteina).</summary>
+        public const double SykkeenOsuus = 0.07, SykkeenJaksoS = 2.4, SykkeenNousuS = 0.6;
+
+        /// <summary>
+        /// Hehkupisteen sykähdys (web js/pallolauta/glnimiot-sovitin.js glSykeKerroin): koko 1 + 0,07 · a ·
+        /// sin(2π t / 2,4 s), a = amplitudi 0–1 (webissä nousu 0,6 s levon alusta, liikkeessä 0). Natiivissa t ja a:n
+        /// katto tulevat Joutosykkeestä (Lampopaatos.SykeJaatyy: syke jäätyy levossa, jotta pallo ja UI saavat levätä).
+        /// </summary>
+        public static double PisteenSyke(double aikaS, double amplitudi) =>
+            1.0 + SykkeenOsuus * Math.Min(1.0, Math.Max(0.0, amplitudi)) * Math.Sin(2 * Math.PI * aikaS / SykkeenJaksoS);
+
+        /// <summary>Noston taso datasta (web nostot.js `kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2`): oletus 2.</summary>
+        public static int Taso(double? arvo) => arvo == 1.0 ? 1 : arvo == 3.0 ? 3 : 2;
+
+        /// <summary>Väri valkoista kohti osuudella t (web nostosymVaalenna, kanavat pyöristetään 0–255-asteikolla).</summary>
+        public static double[] Vaalenna(double[] c, double t)
+        {
+            var v = new double[3];
+            for (int i = 0; i < 3; i++) v[i] = Math.Round((c[i] * 255 + (255 - c[i] * 255) * t)) / 255.0;
+            return v;
+        }
+
+        /// <summary>
+        /// Hehkupisteen kiekko ja häive yhtenä sRGB-värinä (suora alfa) pisteessä (x, y) pisteen säteinä, kuten web
+        /// piirtää: häive ensin (harmaa, <see cref="HehkunPeitto"/>), kiekko sen päälle (sisuksen gradientti, peitto
+        /// 0,86 × <paramref name="kiekko"/> eli reunan kattavuus 0–1). Musterengas piirretään erikseen päälle.
+        /// </summary>
+        public static (double R, double G, double B, double A) Hehkupiste(double x, double y, double kiekko)
+        {
+            double d = Math.Sqrt(x * x + y * y);
+            double ah = HehkunPeitto(d), ak = PisteenHimmeys * Math.Min(1.0, Math.Max(0.0, kiekko));
+            var vaalea = Vaalenna(PisteHarmaa, HehkunSisus);
+            double w = SisuksenOsuus(x, y);
+            double A = ak + ah * (1 - ak);
+            if (A <= 0) return (PisteHarmaa[0], PisteHarmaa[1], PisteHarmaa[2], 0);
+            double[] c = new double[3];
+            for (int i = 0; i < 3; i++)
+            {
+                double sisus = vaalea[i] + (PisteHarmaa[i] - vaalea[i]) * w;
+                c[i] = (sisus * ak + PisteHarmaa[i] * ah * (1 - ak)) / A;
+            }
+            return (c[0], c[1], c[2], A);
+        }
+
         /// <summary>Merinimien tunnukset aluenimet.json:sta (luokka meri tai valtameri) ja merinimet.json:sta (id).</summary>
         public static void LisaaMerinimet(IEnumerable<Dictionary<string, object>> alkiot, bool vainMeriluokka, ISet<string> ulos)
         {

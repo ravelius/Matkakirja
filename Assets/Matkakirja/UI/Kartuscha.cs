@@ -32,10 +32,13 @@ namespace Matkakirja.Natiivi
     public sealed class Kartuscha
     {
         readonly UiKerros kerros;
-        readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu;
+        readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu, nimirivi;
         readonly Button masto, radio;
         readonly Label nimi, alarivi, valtiomuoto;
         readonly VisualElement valtiomuotoRivi;
+        /// <summary>Löydös 142: vertailupalkit (raita + täyte) riveittäin avausanimaatiota varten.</summary>
+        readonly List<(VisualElement Raita, VisualElement Taytto)> vertailut = new List<(VisualElement, VisualElement)>();
+        IVisualElementScheduledItem vertailuAjo;
         string iso, testiIso;
         /// <summary>Pelaajan todellinen maa testimaan asetushetkellä: kun se vaihtuu, testi raukeaa.</summary>
         string testinTodellinen;
@@ -52,7 +55,7 @@ namespace Matkakirja.Natiivi
 
             // Ylhäältä alas (web): masto (nimi + lippu, viiva, alarivi) ja sen alla sisus (rivit, aiheet).
             masto = Rakenne.Nappi(null, "mk-kartuscha__masto", Vaihda, kortti);
-            var nimirivi = Rakenne.El("mk-kartuscha__nimirivi", masto, PickingMode.Ignore);
+            nimirivi = Rakenne.El("mk-kartuscha__nimirivi", masto, PickingMode.Ignore);
             nimi = Rakenne.Teksti("", "mk-kartuscha__nimi", nimirivi);
             lippu = Rakenne.El("mk-kartuscha__lippu", nimirivi);
             // Lipun napautus → lipun tarina (web maapaneeli avaaLippuikkuna); muuten masto kuten ennen.
@@ -82,6 +85,11 @@ namespace Matkakirja.Natiivi
             var radioPaikka = kortti;
             radio = Mediarivi.Radionappi(radioPaikka);
 
+            // Löydös 143: nimen rivitys muuttaa korkeutta ja radio ilmestyy asemahaun jälkeen → tasaus uusiksi.
+            kortti.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
+            nimi.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
+            radio.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
+
             kerros.TurvaMuuttui += Asettele;
             kerros.JokaRuutu += TarkistaOhiNapautus;
             // Pelaajan maa tarkistetaan harvakseltaan (kaupunki vaihtuu vain saapuessa).
@@ -98,6 +106,41 @@ namespace Matkakirja.Natiivi
             kortti.style.bottom = reuna;
             kortti.style.right = auki && !UiKerros.Tabletti ? reuna : StyleKeyword.Null;
             kortti.EnableInClassList("mk-kartuscha--tabletti", UiKerros.Tabletti);
+        }
+
+        /// <summary>
+        /// Löydös 143 (omistaja, build 16): pitkä maannimi (BOSNIA JA HERTSEGOVINA) rivittyy sanavälistä kahdelle
+        /// riville, ja lippu sekä radio tasataan YLIMMÄN nimirivin keskelle (ei kaksirivisen lohkon keskelle).
+        /// Avattuna nimi ei mene radion alle: nimirivin oikea täyte varaa radion kohdan (+ 6 pt väli).
+        /// </summary>
+        void TasaaNimirivi()
+        {
+            if (kortti.panel == null || kortti.resolvedStyle.display == DisplayStyle.None) return;
+            float riviK = nimi.MeasureTextSize("Å", 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).y;
+            if (float.IsNaN(riviK) || riviK <= 0) return;
+            float nimiY = nimi.ChangeCoordinatesTo(kortti, Vector2.zero).y;
+
+            float lippuK = lippu.layout.height; // 0 = lippu piilossa (kiinni), tasataan avattaessa
+            if (lippuK > 0) Aseta(lippu.style.marginTop, v => lippu.style.marginTop = v, Mathf.Max(0f, (riviK - lippuK) / 2f));
+
+            bool radioNakyy = auki && radio.resolvedStyle.display != DisplayStyle.None && radio.layout.height > 0;
+            if (radioNakyy)
+            {
+                // Absoluuttinen top lasketaan reunan sisäpuolelta.
+                float top = nimiY - kortti.resolvedStyle.borderTopWidth + (riviK - radio.layout.height) / 2f;
+                Aseta(radio.style.top, v => radio.style.top = v, Mathf.Max(0f, top));
+                float sisaOikea = kortti.worldBound.xMax - kortti.resolvedStyle.borderRightWidth - kortti.resolvedStyle.paddingRight;
+                Aseta(nimirivi.style.paddingRight, v => nimirivi.style.paddingRight = v, Mathf.Max(0f, sisaOikea - radio.worldBound.xMin + 6f));
+            }
+            else if (nimirivi.style.paddingRight.keyword != StyleKeyword.Null)
+                nimirivi.style.paddingRight = StyleKeyword.Null;
+        }
+
+        /// <summary>Asettaa pituuden vain, kun se muuttuu yli 0,5 pt (GeometryChanged ei jää kiertämään).</summary>
+        static void Aseta(StyleLength nyt, System.Action<StyleLength> aseta, float arvo)
+        {
+            if (nyt.keyword == StyleKeyword.Undefined && Mathf.Abs(nyt.value.value - arvo) < 0.5f) return;
+            aseta(arvo);
         }
 
         /// <summary>Linssi päällä tai muu koko ruudun näkymä: kartuscha piiloon.</summary>
@@ -170,6 +213,7 @@ namespace Matkakirja.Natiivi
             // Web: avattuna ei valtiomuotoriviä eikä "Nyt"-väliotsikkoa (display: none), vain rivit.
             valtiomuotoRivi.style.display = DisplayStyle.None;
             foreach (var vanha in tilastot.Query(className: "mk-kartuscha__rivi").ToList()) vanha.RemoveFromHierarchy();
+            vertailut.Clear();
             if (m.OnTiedot)
             {
                 Tilasto("VÄKILUKU", m.Vakiluku, m.VakilukuSija);
@@ -224,6 +268,70 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti(nimike, "mk-kartuscha__nimike", r), Kirjasin.Kone);
             Kirjasimet.Aseta(Rakenne.Teksti(arvo, "mk-kartuscha__arvo", r), Kirjasin.Kone);
             if (!string.IsNullOrEmpty(sija)) Rakenne.Teksti(sija, "mk-kartuscha__sija", r);
+            // Löydös 142 (omistaja, build 16): vertailutieto lukujen perään palkkina. Sija "23./195" → osuus
+            // 1 − (23 − 1) / (195 − 1): ykkössija (suurin väkiluku/pinta-ala, demokraattisin, suurin tulo) = täysi palkki.
+            // Raita on kiinteän levyinen, joten palkit ovat keskenään vertailukelpoisia; tarkka sija napautuksesta kuten ennen.
+            float? osuus = SijaOsuus(sija);
+            if (osuus == null) return;
+            var raita = Rakenne.El("mk-kartuscha__vertailu", r, PickingMode.Ignore);
+            var viiva = new Pisteviiva();
+            viiva.AddToClassList("mk-kartuscha__vertailuraita");
+            raita.Add(viiva);
+            var taytto = Rakenne.El("mk-kartuscha__vertailupalkki", raita, PickingMode.Ignore);
+            taytto.style.width = Length.Percent(Mathf.Max(0.04f, osuus.Value) * 100f);
+            taytto.style.transformOrigin = new TransformOrigin(0, Length.Percent(50));
+            vertailut.Add((raita, taytto));
+        }
+
+        /// <summary>"23./195" → 0..1 (1 = ykkössija), muuten null.</summary>
+        static float? SijaOsuus(string sija)
+        {
+            if (string.IsNullOrEmpty(sija)) return null;
+            int kautta = sija.IndexOf('/');
+            if (kautta < 0) return null;
+            if (!int.TryParse(sija.Substring(0, kautta).Trim().TrimEnd('.'), out int n)) return null;
+            if (!int.TryParse(sija.Substring(kautta + 1).Trim(), out int kaikki) || kaikki < 2 || n < 1) return null;
+            return Mathf.Clamp01(1f - (n - 1f) / (kaikki - 1f));
+        }
+
+        // Löydös 142: avausanimaatio. Palkit kasvavat nollasta arvoonsa riveittäin porrastettuna: kortti ehtii ensin
+        // näkyviin (viive 120 ms), sitten rivi kerrallaan 80 ms:n välein, kukin 480 ms kuutiollisella ease-in-outilla
+        // → neljä riviä valmiina 0,84 s:ssa. Kasvu scale-muunnoksella (ei asettelua joka ruudussa → ei nykimistä).
+        const float VertailuViive = 0.12f, VertailuPorras = 0.08f, VertailuKesto = 0.48f;
+
+        static float EaseInOut(float t) => t < 0.5f ? 4f * t * t * t : 1f - Mathf.Pow(-2f * t + 2f, 3f) / 2f;
+
+        /// <summary>Rivin i palkki vaiheeseen 0..1; raita häivyttyy esiin palkkia nopeammin (valmis 40 %:ssa).</summary>
+        void AsetaVertailu(int i, float vaihe)
+        {
+            var (raita, taytto) = vertailut[i];
+            raita.style.opacity = Mathf.Clamp01(vaihe * 2.5f);
+            taytto.style.scale = new Scale(new Vector3(vaihe, 1f, 1f));
+        }
+
+        void AnimoiVertailut()
+        {
+            vertailuAjo?.Pause();
+            vertailuAjo = null;
+            // Vähennetty liike: palkit suoraan valmiina.
+            if (vertailut.Count == 0 || LinssiUi.VahennettyLiike())
+            {
+                for (int i = 0; i < vertailut.Count; i++) AsetaVertailu(i, 1f);
+                return;
+            }
+            for (int i = 0; i < vertailut.Count; i++) AsetaVertailu(i, 0f);
+            float alku = Time.unscaledTime;
+            float loppu = VertailuViive + (vertailut.Count - 1) * VertailuPorras + VertailuKesto;
+            vertailuAjo = kortti.schedule.Execute(() =>
+            {
+                // Ei pyöritä piilossa (linssi, kartta pois, kortti kiinni): palkit valmiiksi ja ajo seis.
+                float t = Time.unscaledTime - alku;
+                bool valmis = t >= loppu || !auki || !Rakenne.Naytetaan(kortti);
+                if (!valmis) Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
+                for (int i = 0; i < vertailut.Count; i++)
+                    AsetaVertailu(i, valmis ? 1f : EaseInOut(Mathf.Clamp01((t - VertailuViive - i * VertailuPorras) / VertailuKesto)));
+                if (valmis) { vertailuAjo?.Pause(); vertailuAjo = null; }
+            }).Every(16);
         }
 
         /// <summary>Aiheen alleviivausväri webin aiheperheistä (--sym-*).</summary>
@@ -306,6 +414,7 @@ namespace Matkakirja.Natiivi
             kortti.AddToClassList("mk-auki");
             sisus.style.display = DisplayStyle.Flex;
             Asettele();
+            AnimoiVertailut();
             AukiMuuttui?.Invoke(true);
         }
 

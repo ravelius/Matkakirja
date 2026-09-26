@@ -26,7 +26,13 @@ namespace Matkakirja
     ///    näkyvät solut ovat valmiita (web piilottaa vanhan heti), enintään <see cref="VaihdonOdotusSek"/>.
     ///
     /// Runko (solut, lataus, verkot, näkyvyys) on yhteinen Rajojen kanssa: <see cref="Vektorikerros"/> (E2).
-    /// Kun rannikko piirtyy, pelaajan maan kehä (Maaraja) väistyy (omistajan päätös 25.9.2026 klo 00.0x).
+    ///
+    /// LÖYDÖS 126 (omistaja 25.9.2026 klo 22.3x, build 16 → 17, sitova): meren ja maan välissä näkyi tuplaraja (pohjan
+    /// antialiasoitu väriraja + tämä vektorirantaviiva). PERUSKARTAN RESEPTI: "RANTAVIIVA vektorina himmeänä tai kokonaan
+    /// pois — maan ja meren rajan tekee pohjan antialiasoitu väriraja"; omistaja valitsi nyt POIS. Kerros on siksi
+    /// oletuksena pois (<see cref="OletusPaalla"/>), ja komento "rannikko paalle" tuo sen vertailuun (peitto 0,25, ks.
+    /// <see cref="OmistajanPeitto"/>). Aineisto (luettelo ja pohjapaketin l0–l2) jää ennalleen; pois olevana kerros ei
+    /// hae soluja.
     ///
     /// NÄKYVYYS: karttatilassa päällä. Pois lennon satelliittipinnalla (KarttaKerrokset.SatelliittiLento) ja linssissä,
     /// jolla on oma pohja (KarttaKerrokset.LinssiPaalla), ellei linssi pyydä <see cref="LinssinPaalla"/>. Yleinen
@@ -51,8 +57,10 @@ namespace Matkakirja
         public static bool Nakyvissa = true;
         /// <summary>Linssi, jolla on oma pohja, haluaa rannikon päälleen (oletus: ei, rannikko väistyy).</summary>
         public static bool LinssinPaalla;
-        /// <summary>Komento "rannikko pois|paalle" (mittaukseen).</summary>
-        public static bool Sallittu = true;
+        /// <summary>Löydös 126: rantaviiva oletuksena pois (maan ja meren rajan tekee pohjan antialiasoitu väriraja).</summary>
+        public const bool OletusPaalla = false;
+        /// <summary>Komento "rannikko pois|paalle" (vertailuun ja mittaukseen); oletus <see cref="OletusPaalla"/>.</summary>
+        public static bool Sallittu = OletusPaalla;
         /// <summary>Pakotettu taso (komento "rannikko taso &lt;n&gt;"); &lt; 0 = webin sääntö.</summary>
         public static int PakotettuTaso = -1;
         /// <summary>Peiton ohitus (komento "rannikko peitto &lt;a&gt;|oletus"); NaN = <see cref="PeittoNatiivi"/>.</summary>
@@ -60,6 +68,8 @@ namespace Matkakirja
         /// <summary>
         /// Omistajan valinta 25.9.2026 (kortti, löydös 46: vaihtoehto 3 "himmeä"): rantaviiva natiivin peitolla 0,25,
         /// maiden rajat täydellä webin voimalla. Webin voima <see cref="PeittoNatiivi"/> komennolla "rannikko peitto web".
+        /// Löydös 126 (25.9. klo 22.3x) korvasi valinnan: rantaviiva pois; tämä peitto on voimassa, kun kerros tuodaan
+        /// komennolla takaisin.
         /// </summary>
         public const float OmistajanPeitto = 0.25f;
         public static Rannikko Instanssi { get; private set; }
@@ -67,7 +77,7 @@ namespace Matkakirja
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
-            Nakyvissa = true; LinssinPaalla = false; Sallittu = true; PakotettuTaso = -1; PeittoOhitus = float.NaN; Instanssi = null;
+            Nakyvissa = true; LinssinPaalla = false; Sallittu = OletusPaalla; PakotettuTaso = -1; PeittoOhitus = float.NaN; Instanssi = null;
         }
 
         protected override void Awake() => Instanssi = this;
@@ -86,6 +96,8 @@ namespace Matkakirja
         protected override double LeveysPt(double tiheys) => Viivaleveys.Pt(tiheys, Viivaleveys.RannikkoKaukana, Viivaleveys.RannikkoLahella);
         protected override int Pakotettu => PakotettuTaso;
         protected override bool LinssinPaallaOma => LinssinPaalla;
-        protected override string OmaSyy() => !Sallittu ? "komento pois" : !Nakyvissa ? "Rannikko.Nakyvissa = false" : null;
+        protected override string OmaSyy() =>
+            !Sallittu ? (OletusPaalla ? "komento pois" : "löydös 126: pois (komento rannikko paalle)")
+            : !Nakyvissa ? "Rannikko.Nakyvissa = false" : null;
     }
 }

@@ -138,6 +138,22 @@ namespace Matkakirja
             else koneEl.style.filter = StyleKeyword.Null;
         }
 
+        /// <summary>
+        /// KEHYKSEN HINTA LEVOSSA (korjaus 1, 25.9.2026; docs/raportit/kehyksen-hinta-20260925.md): suotimet pois, kun kerros
+        /// ei näy. UI Toolkit 6.3 piirtää display:none-vanhemman alla olevien elementtien suotimet silti joka kehys: iPad
+        /// Pro 13:lla neljä koko ruudun sumennuspassia, 46–50 ms GPU-aikaa kehyksessä koko pelin ajan portin jälkeen.
+        /// Elementit ja dokumentti säilyvät (kone ja viiva palaavat portin avautuessa); asetettuSumennus = −1, jotta
+        /// <see cref="AsetaSuodin"/> asettaa suotimet uudelleen samassa kehyksessä, jossa kerros tulee näkyviin.
+        /// StyleKeyword.Null kuten AsetaSuotimessa (StyleKeyword.None kaataa RenderTreeCompositorin).
+        /// </summary>
+        void PoistaSuotimet()
+        {
+            if (asetettuSumennus < 0f) return;
+            asetettuSumennus = -1f;
+            if (viivaEl != null) viivaEl.style.filter = StyleKeyword.Null;
+            if (koneEl != null) koneEl.style.filter = StyleKeyword.Null;
+        }
+
         void LateUpdate()
         {
             if (kierto == null) return;
@@ -147,6 +163,7 @@ namespace Matkakirja
             if (peitto <= 0f)
             {
                 if (kerros != null && kerros.style.display != DisplayStyle.None) kerros.style.display = DisplayStyle.None;
+                PoistaSuotimet();
                 if (KirjaaTila) { KirjaaTila = false; Debug.Log(Tila()); }
                 return;
             }
