@@ -145,8 +145,72 @@ namespace Matkakirja.Natiivi
                     }
                 }
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: jäsennys epäonnistui: " + e.Message); }
-                UiKerros.PaaSaikeessa(() => { Valmistu(tulos); if (tulos != null) UiKerros.Hae().StartCoroutine(LehdetPerassa()); });
+                // Lehdet kaupungeittain (skeema 1.48): LataaLehti(id) pelaajan kaupungille, lennon kohteelle ja avatulle
+                // kortille; koko 16 Mt:n kokoelma vain varareittinä vanhalle paketille (LehtiKaupungille → 404).
+                UiKerros.PaaSaikeessa(() => { Valmistu(tulos); if (tulos != null) foreach (var id in odottavatLehdet) LataaLehti(id); odottavatLehdet.Clear(); });
             });
+        }
+
+        static readonly HashSet<string> lehtiLuettu = new HashSet<string>(), lehtiHaussa = new HashSet<string>(), odottavatLehdet = new HashSet<string>();
+        static bool kokoLehtiVaralla;
+
+        /// <summary>
+        /// Kaupungin lehti (skeema 1.48: kokoelmat/kaupunkilehdet/&lt;id&gt;.json, enintään ~100 kt) kaupunkitietoihin: kansikuvat,
+        /// avauskuvat, johdanto ja aiheet. Kerran kaupunkia kohden; ennen Valmis-tilaa pyyntö odottaa. Vanha paketti (404) →
+        /// koko kokoelma kerran (LehdetPerassa). Pelikoodari 26.9., ESILATAUSPOLITIIKKA kohta 3.
+        /// </summary>
+        public static void LataaLehti(string id)
+        {
+            if (string.IsNullOrEmpty(id) || LehdetLuettu || lehtiLuettu.Contains(id) || lehtiHaussa.Contains(id)) return;
+            if (!Valmis) { odottavatLehdet.Add(id); return; }
+            lehtiHaussa.Add(id);
+            UiKerros.Hae().StartCoroutine(LehtiKaupungille(id));
+        }
+
+        static IEnumerator LehtiKaupungille(string id)
+        {
+            string teksti = null;
+            yield return Sisalto.HaeTeksti("kaupunkilehdet/" + id, t => teksti = t, valinnainen: true, taso: Taso.SeuraavaRuutu);
+            lehtiHaussa.Remove(id);
+            if (teksti == null)
+            {
+                // 404: vanha paketti (ei kaupungeittain) tai kaupungilla ei ole lehteä → koko kokoelma kerran.
+                if (!kokoLehtiVaralla) { kokoLehtiVaralla = true; UiKerros.Hae().StartCoroutine(LehdetPerassa()); }
+                yield break;
+            }
+            var tyo = Task.Run(() => JasennaValiaikaiset(teksti));
+            while (!tyo.IsCompleted) yield return null;
+            int n = Liita(tyo.Result);
+            lehtiLuettu.Add(id);
+            Debug.Log($"MATKAKIRJA ui sisältö: kaupunkilehti {id} liitetty ({n})");
+            try { LehdetSaapuivat?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+        }
+
+        static Dictionary<string, KaupunkiTiedot> JasennaValiaikaiset(string lehdet)
+        {
+            var valiaikaiset = new Dictionary<string, KaupunkiTiedot>();
+            try { LueLehdet(lehdet, id => { if (!valiaikaiset.TryGetValue(id, out var v)) valiaikaiset[id] = v = new KaupunkiTiedot { Id = id }; return v; }); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: lehtien jäsennys epäonnistui: " + e.Message); }
+            return valiaikaiset;
+        }
+
+        /// <summary>Pääsäikeessä: väliaikaisten lehtitietojen kopio oikeisiin kaupunkitietoihin.</summary>
+        static int Liita(Dictionary<string, KaupunkiTiedot> valiaikaiset)
+        {
+            int n = 0;
+            if (kaupungit == null) return 0;
+            foreach (var kv in valiaikaiset)
+            {
+                if (!kaupungit.TryGetValue(kv.Key, out var k)) continue;
+                var v = kv.Value;
+                k.Lehti = v.Lehti;
+                if (v.Johdanto != null) k.Johdanto = v.Johdanto;
+                k.Kansikuvat.Clear(); k.Kansikuvat.AddRange(v.Kansikuvat);
+                k.Avauskuvat.Clear(); k.Avauskuvat.AddRange(v.Avauskuvat);
+                k.Aiheet.Clear(); k.Aiheet.AddRange(v.Aiheet);
+                n++;
+            }
+            return n;
         }
 
         /// <summary>Kaupunkilehdet on liitetty kaupunkitietoihin (kansikuvat, avauskuvat, johdanto, aiheet); esim. kaupunkikortti päivittyy.</summary>
@@ -162,26 +226,9 @@ namespace Matkakirja.Natiivi
             string lehdet = null;
             yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t, valinnainen: true);
             if (lehdet == null || kaupungit == null) yield break;
-            var tyo = Task.Run(() =>
-            {
-                var valiaikaiset = new Dictionary<string, KaupunkiTiedot>();
-                try { LueLehdet(lehdet, id => { if (!valiaikaiset.TryGetValue(id, out var v)) valiaikaiset[id] = v = new KaupunkiTiedot { Id = id }; return v; }); }
-                catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: lehtien jäsennys epäonnistui: " + e.Message); }
-                return valiaikaiset;
-            });
+            var tyo = Task.Run(() => JasennaValiaikaiset(lehdet));
             while (!tyo.IsCompleted) yield return null;
-            int n = 0;
-            foreach (var kv in tyo.Result)
-            {
-                if (!kaupungit.TryGetValue(kv.Key, out var k)) continue;
-                var v = kv.Value;
-                k.Lehti = v.Lehti;
-                if (v.Johdanto != null) k.Johdanto = v.Johdanto;
-                k.Kansikuvat.Clear(); k.Kansikuvat.AddRange(v.Kansikuvat);
-                k.Avauskuvat.Clear(); k.Avauskuvat.AddRange(v.Avauskuvat);
-                k.Aiheet.Clear(); k.Aiheet.AddRange(v.Aiheet);
-                n++;
-            }
+            int n = Liita(tyo.Result);
             LehdetLuettu = true;
             Debug.Log($"MATKAKIRJA ui sisältö: kaupunkilehdet liitetty perään ({n} kaupunkia)");
             try { LehdetSaapuivat?.Invoke(); } catch (Exception e) { Debug.LogException(e); }

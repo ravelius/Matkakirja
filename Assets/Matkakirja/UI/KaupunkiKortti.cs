@@ -268,6 +268,8 @@ namespace Matkakirja.Natiivi
 
         public void Nayta(string kaupunkiId, string nimi, KaupunkiToiminnot t)
         {
+            // Lehti kaupungeittain (Pelikoodari 26.9.): kansikuva saapuu LehdetSaapuivat-tapahtumana, jos ei ole jo luettu.
+            UiSisalto.LataaLehti(kaupunkiId);
             if (kaupunki != kaupunkiId) nostoOdottajat.Clear();
             kaupunki = kaupunkiId;
             this.nimi = nimi ?? kaupunkiId ?? "";
