@@ -134,3 +134,10 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 150 | Nostokuva suurenee napautuksesta koko sivun kokoiseksi (yhdessä 130–132:n kanssa). | Natiivi-UI |
 | 151 | II: luenta-animaation kameraliikkeet ovat liian äkkinäisiä, kun kartta väistää tulevaa kuvaa → pehmeämmin (KAMERA-AJOT: ease in/out, yhtenäinen käyrä). | Linssiseppä (Natiiviseppä: Linssisiirto) |
 | 152 | II:n alku: kun ruudulla on vain musta ja ensimmäinen lause, tähdet ja maapallo feidautuvat rauhassa mustasta esiin, ja samalla maapallo zoomautuu jo lähemmäs pelaajaa. | Linssiseppä (Natiiviseppä) |
+
+## Build 17 -savukierros (Laitetestaaja 26.9. klo 04.0x, raportti a147973d8) — sisäiset löydökset
+
+| # | Löydös | Rooli |
+|---|---|---|
+| S1 | Lepopiirto ei toteudu build 17:ssä: levossa piirretty 150/150, tila "Lepo (ui)" (build 16: 2–3/151). Jokin UI-elementti pitää isDirtyn päällä (epäily: II:n Tekstitys-kytkimen tai soittimen animaatio, postikortti). Ei estänyt vientiä (kehys on nyt 13 ms). | Natiivi-UI (Natiiviseppä) |
+| S2 | 143: "Bosnia ja Hertsegovina" rivittyy 3 riville (odotus 2). | Natiivi-UI |
