@@ -160,3 +160,8 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   PalloKierto.SaapuminenAlkaa/Paattyi → ElavaPallo.IlmoitaSaapuminenAlkaa(kesto)/IlmoitaSaapuminenPaattyi().
 - juna/b13 **827248ed**: + kohta1-mukana afe25e63 (tehosteäänet 19 efekti + 4 freesound buildiin, Aanet käyttää Mukana-polkua).
 - Linssiseppä kytki ElavaKartan suoraan rajapintoihini haarassa linssiseppa/elava-kartta 8e5eef7c (sisältää elava-saapuminen 98d0db40) → erillistä kytkentäcommitia EI tarvita. Mergejärjestys: natiiviseppa/elava-saapuminen (tippi 041b98b4) ensin, sitten linssiseppa/elava-kartta, kun Linssiseppä ilmoittaa simulaattorikuvat.
+- **Klo 06.0x juna/b13 fd29a2ae**: + natiiviseppa/elava-saapuminen 041b98b4 (käännös e3f50cbc; HUNTU TODENNETTU simulaattorissa
+  lokit/huntu-paljastus-b19/izmir/vertailu.jpg: Izmir 60/200/450 km, aaltoileva reuna, pois palauttaa; skripti
+  natiiviseppa-skriptit/huntu.sh) + natiivi-ui/elava-kartussi d525ec5e (laitteella todennettu, lepo 0). Seuraavaksi
+  linssiseppa/elava-kartta (8e5eef7c+), kun Linssiseppä ilmoittaa simulaattorikuvat. Huom Linssisepälle: pelaajan oma maa ei ole
+  hunnun alla → saapumismaan kuivuminen näkyy vain, jos Varitaso peittää sen.
