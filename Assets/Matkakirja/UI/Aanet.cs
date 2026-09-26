@@ -329,22 +329,31 @@ namespace Matkakirja.Natiivi
         /// luodaan kerran PCM-klipeiksi (AudioClip.Create) ja rekisteröidään tähän. Ne soivat Tehoste(nimi)-väylällä samalla
         /// Masterilla, voimalla, mykistyksellä ja sanelutauolla kuin taulun tehosteet. Siivu on koko klippi (alusta).
         /// </summary>
-        public static void RekisteroiTehoste(string nimi, AudioClip klippi, float gain = 0.35f, bool tasavire = true)
+        public static void RekisteroiTehoste(string nimi, AudioClip klippi, float gain = 0.35f, bool tasavire = true) =>
+            RekisteroiTehoste(nimi, klippi == null ? null : new[] { klippi }, gain, tasavire);
+
+        /// <summary>
+        /// Muunnelmat (Linssiseppä: keksinnöllä 4, vuodella 8, webin ±3 %:n heiton sijaan): jokainen soitto arpoo yhden.
+        /// Tyhjä tai null lista poistaa rekisteröinnin.
+        /// </summary>
+        public static void RekisteroiTehoste(string nimi, IReadOnlyList<AudioClip> klipit, float gain = 0.35f, bool tasavire = true)
         {
             if (string.IsNullOrEmpty(nimi)) return;
-            if (klippi == null) { omatTehosteet.Remove(nimi); return; }
-            omatTehosteet[nimi] = (klippi, gain, tasavire);
+            var lista = klipit?.Where(k => k != null).ToArray();
+            if (lista == null || lista.Length == 0) { omatTehosteet.Remove(nimi); return; }
+            omatTehosteet[nimi] = (lista, gain, tasavire);
         }
 
-        static readonly Dictionary<string, (AudioClip Klippi, float Gain, bool Tasavire)> omatTehosteet =
-            new Dictionary<string, (AudioClip, float, bool)>();
+        static readonly Dictionary<string, (AudioClip[] Klipit, float Gain, bool Tasavire)> omatTehosteet =
+            new Dictionary<string, (AudioClip[], float, bool)>();
 
         public static bool Tehoste(string nimi, float voima = 1f, float viive = 0f)
         {
             if (nimi != null && omatTehosteet.TryGetValue(nimi, out var oma))
             {
-                if (Mykistetty || sanelussa || oma.Klippi == null) return oma.Klippi != null;
-                SoitaSiivu(oma.Klippi, "oma:" + nimi, "alusta", oma.Klippi.length, oma.Gain * voima, null, oma.Tasavire, viive);
+                if (Mykistetty || sanelussa) return true;
+                var klippi = oma.Klipit[UnityEngine.Random.Range(0, oma.Klipit.Length)];
+                SoitaSiivu(klippi, "oma:" + nimi, "alusta", klippi.length, oma.Gain * voima, null, oma.Tasavire, viive);
                 return true;
             }
             TehosteRivi t = Tehostetaulu.Hae(nimi);

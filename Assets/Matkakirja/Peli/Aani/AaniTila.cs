@@ -46,6 +46,8 @@ namespace Matkakirja.Peli
         public double Alku;
         /// <summary>AudioSource.loop (musiikki saumaton master; maisema vaihtaa kierroksen ristiin).</summary>
         public bool Silmukka;
+        /// <summary>Linssin taustaääni: ei maiseman kompressoria (web satelliitti-aani soittaa suoraan gainiin).</summary>
+        public bool IlmanKompressoria;
 
         public override string ToString() =>
             $"{Kanava}: {Url ?? "-"} taso {Tavoite} kesto {KestoMs?.ToString() ?? "-"} uusi {Uusi} pois {PoisMs?.ToString() ?? "-"} tauko {Tauko} alku {Alku}";
@@ -68,6 +70,7 @@ namespace Matkakirja.Peli
             public bool Silmukka;
             public bool Hypatty, ArvottuAlku, Soinut, VarareittiKokeiltu, TaustaTauolla;
             public bool Vapautettu, Kuollut;
+            public bool IlmanKompressoria;             // linssin taustaääni (LinssiTausta)
             public string Polku;                       // pohja: ketjun polku; siirtymä: laji; visa: alkuperäinen
         }
 
@@ -269,6 +272,9 @@ namespace Matkakirja.Peli
             oma.Audio = LuoMaisemaSoitin(oma, false, nousuMs);
         });
 
+        /// <summary>Web js/linssit/satelliitti-aani.js LASKU_MS: linssin taustaäänen ulosfeidi.</summary>
+        public const int LinssinTaustanLaskuMs = 600;
+
         double LinssinVaimennus(MaisemaOma oma, double k) =>
             oma.Linssi && hiljennykset.Contains(AaniVakiot.LinssinHiljennys) ? pyydetty : k;
 
@@ -396,6 +402,7 @@ namespace Matkakirja.Peli
                 w.Tauko = s?.Tauko ?? false;
                 w.Alku = s?.Alku ?? 0;
                 w.Silmukka = s?.Silmukka ?? false;
+                w.IlmanKompressoria = s?.IlmanKompressoria ?? false;
             }
         }
 
@@ -627,6 +634,7 @@ namespace Matkakirja.Peli
         {
             var s = Uusi(Kanava.Maisema, AaniOsoite.Url(oma.Osoite), false);
             s.ArvottuAlku = arvottuAlku;
+            s.IlmanKompressoria = oma.Linssi;
             SoitaMaisema(oma, s, nouse);
             return s;
         }
@@ -647,8 +655,10 @@ namespace Matkakirja.Peli
             var vanha = nykyinen;
             nykyinen = null;
             if (vanha == null) return;
-            if (vanha.Vaistyva != null) { Ramppi(vanha.Vaistyva, 0, AaniVakiot.HaivytysMs); Vapauta(vanha.Vaistyva); }
-            Ramppi(vanha.Audio, 0, AaniVakiot.HaivytysMs);
+            // Linssin taustaääni laskee webin tahtiin (satelliitti-aani LASKU_MS 600), maisema omaansa.
+            int lasku = vanha.Linssi ? LinssinTaustanLaskuMs : AaniVakiot.HaivytysMs;
+            if (vanha.Vaistyva != null) { Ramppi(vanha.Vaistyva, 0, lasku); Vapauta(vanha.Vaistyva); }
+            Ramppi(vanha.Audio, 0, lasku);
             Vapauta(vanha.Audio);
         }
 
