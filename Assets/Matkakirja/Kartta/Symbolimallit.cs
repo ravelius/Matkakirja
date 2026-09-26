@@ -191,29 +191,39 @@ namespace Matkakirja
         static Mesh Delfoi()
         {
             var r = new Rakentaja();
-            // Parnassoksen rinne takana (pohjoinen): matala huipukas harjanne kiven sävyin, sage vain alarinteen kaistana.
-            r.Kallio(new Vector3(0f, 0f, 0.24f), 0.86f, 0.34f, 0.16f, 0.06f, 0.36f, 13, 3, Varjo, Pinta);
-            // Oliivipuita alarinteellä (sage vain pieninä kärkiväreinä, Fable: ei sinertävää pintaa).
-            float[,] puut = { { -0.34f, 0.08f }, { -0.24f, 0.12f }, { 0.3f, 0.1f }, { 0.36f, 0.04f }, { -0.4f, -0.02f } };
+            // Parnassos takana: pyöreähkö huipukas vuori (renkaat alhaalta ylös, huippu pisteenä), kiven sävyin.
+            r.Rengaskallio(new Vector3(-0.02f, 0f, 0.26f), new[] { (0f, 0.88f, 0.4f), (0.12f, 0.7f, 0.3f), (0.26f, 0.42f, 0.18f), (0.36f, 0.16f, 0.08f) },
+                0.42f, 14, 3, Varjo, Pinta);
+            // Pengerrys: matala pyöristetty tasanne.
+            r.Rengaskallio(new Vector3(0.04f, 0f, -0.1f), new[] { (0f, 0.62f, 0.4f), (0.045f, 0.58f, 0.36f) }, float.NaN, 12, 8, Pinta, Pinta);
+            // Oliivipuita alarinteellä (sage lämpimämpänä oliivina, Fable/omistaja: ei sinistä).
+            float[,] puut = { { -0.34f, 0.08f }, { -0.24f, 0.13f }, { 0.3f, 0.1f }, { 0.37f, 0.03f }, { -0.42f, -0.04f } };
             for (int i = 0; i < puut.GetLength(0); i++)
-                r.Kartio(new Vector3(puut[i, 0], 0f, puut[i, 1]), 0.03f, 0.06f, 6, Oliivi);
-            // Pengerrys ja Apollon temppeli raunioina: 6 pylvästä edessä eri korkeuksilla, stylobaatti.
-            r.Laatikko(new Vector3(0.05f, 0f, -0.1f), new Vector3(0.5f, 0.05f, 0.3f), Pinta, Pinta);
-            float[] korkeudet = { 0.16f, 0.1f, 0.16f, 0.16f, 0.07f, 0.16f };
-            r.Laatikko(new Vector3(0.05f, 0.05f, -0.1f), new Vector3(0.4f, 0.025f, 0.18f), Valo, Valo);
+                r.Kartio(new Vector3(puut[i, 0], 0.02f, puut[i, 1]), 0.028f, 0.06f, 6, Oliivi);
+            // Apollon temppeli raunioina: kolmiportainen stylobaatti, 6 + 6 pylvästä pylväänpäineen eri korkeuksilla,
+            // arkkitraavin pala kolmen ehjän pylvään päällä.
+            var s = new Vector3(0.06f, 0.045f, -0.1f);
+            r.Laatikko(s, new Vector3(0.44f, 0.012f, 0.22f), Valo, Valo);
+            r.Laatikko(s + Vector3.up * 0.012f, new Vector3(0.42f, 0.012f, 0.2f), Valo, Valo);
+            r.Laatikko(s + Vector3.up * 0.024f, new Vector3(0.4f, 0.012f, 0.18f), Valo, Valo);
+            var y = s + Vector3.up * 0.036f;
+            float[] etu = { 0.15f, 0.15f, 0.15f, 0.09f, 0.15f, 0.05f };
+            float[] taka = { 0.07f, 0.15f, 0.04f, 0.12f, 0.15f, 0.15f };
             for (int i = 0; i < 6; i++)
-                r.Pylvas(new Vector3(-0.13f + i * 0.072f, 0.075f, -0.17f), 0.017f, korkeudet[i], 6, Valo);
-            for (int i = 0; i < 6; i += 2)
-                r.Pylvas(new Vector3(-0.13f + i * 0.072f, 0.075f, -0.03f), 0.017f, korkeudet[5 - i] * 0.8f, 6, Valo);
-            // Tholos alempana: pyöreä pylväskehä ja kartiokatto.
-            var t = new Vector3(-0.3f, 0f, -0.28f);
-            r.Kartio(t, 0.08f, 0.01f, 10, Pinta);
-            for (int i = 0; i < 8; i++)
             {
-                float a = i * Mathf.PI * 2f / 8f;
-                r.Pylvas(t + new Vector3(Mathf.Cos(a), 0, Mathf.Sin(a)) * 0.055f, 0.01f, 0.09f, 5, Valo);
+                r.Doorilainen(y + new Vector3(-0.16f + i * 0.064f, 0, -0.07f), 0.014f, etu[i], Valo, etu[i] >= 0.15f);
+                r.Doorilainen(y + new Vector3(-0.16f + i * 0.064f, 0, 0.07f), 0.014f, taka[i], Valo, taka[i] >= 0.15f);
             }
-            r.Kartio(t + Vector3.up * 0.09f, 0.075f, 0.04f, 10, Terrakotta);
+            r.Laatikko(y + new Vector3(-0.096f, 0.162f, -0.07f), new Vector3(0.16f, 0.022f, 0.036f), Valo, Valo);
+            // Tholos alempana: pyöreä pohja, pylväskehä ja terrakotta kartiokatto.
+            var t = new Vector3(-0.3f, 0.02f, -0.3f);
+            r.Rengaskallio(t, new[] { (0f, 0.17f, 0.17f), (0.012f, 0.17f, 0.17f) }, float.NaN, 12, 1, Valo, Valo);
+            for (int i = 0; i < 10; i++)
+            {
+                float a = i * Mathf.PI * 2f / 10f;
+                r.Doorilainen(t + new Vector3(Mathf.Cos(a), 0, Mathf.Sin(a)) * 0.06f + Vector3.up * 0.012f, 0.009f, 0.085f, Valo, true);
+            }
+            r.Rengaskallio(t + Vector3.up * 0.1f, new[] { (0f, 0.15f, 0.15f), (0.008f, 0.15f, 0.15f) }, 0.05f, 12, 1, Terrakotta, Terrakotta);
             return r.Verkko("Delfoi");
         }
 
@@ -224,17 +234,26 @@ namespace Matkakirja
         static Mesh Meteora()
         {
             var r = new Rakentaja();
-            // Kolme pyöreähköä kalliopylvästä (kivi, tasanne pinta), luostari korkeimman päällä.
-            r.Kallio(new Vector3(-0.22f, 0f, 0.06f), 0.26f, 0.22f, 0.2f, 0.17f, 0.4f, 9, 11, Kivi, Pinta);
-            r.Kallio(new Vector3(0.14f, 0f, -0.08f), 0.32f, 0.27f, 0.25f, 0.21f, 0.52f, 10, 5, Kivi, Pinta);
-            r.Kallio(new Vector3(0.04f, 0f, 0.26f), 0.22f, 0.18f, 0.16f, 0.13f, 0.3f, 8, 3, Kivi, Pinta);
-            // Suuri Meteoron: päärakennus, punainen katto ja kupoli.
-            var y = new Vector3(0.14f, 0.52f, -0.08f);
-            r.Laatikko(y, new Vector3(0.18f, 0.06f, 0.11f), Valo, Valo);
-            r.Harja(y + Vector3.up * 0.06f, new Vector3(0.18f, 0.045f, 0.11f), Terrakotta, Valo);
-            r.Pylvas(y + new Vector3(-0.055f, 0.06f, 0f), 0.032f, 0.045f, 8, Valo);
-            r.Kartio(y + new Vector3(-0.055f, 0.105f, 0f), 0.036f, 0.032f, 8, Terrakotta);
+            // Kolme pyöreää, pullistuvaa kalliopilaria (renkaat, kupolimainen laki), luostari korkeimman päällä.
+            Pilari(r, new Vector3(-0.22f, 0f, 0.07f), 0.13f, 0.4f, 11);
+            Pilari(r, new Vector3(0.14f, 0f, -0.08f), 0.16f, 0.52f, 5);
+            Pilari(r, new Vector3(0.05f, 0f, 0.27f), 0.1f, 0.3f, 3);
+            // Suuri Meteoron: päärakennus, punainen harjakatto, kupoli ja pieni kellotorni.
+            var y = new Vector3(0.14f, 0.53f, -0.08f);
+            r.Laatikko(y, new Vector3(0.16f, 0.055f, 0.1f), Valo, Valo);
+            r.Harja(y + Vector3.up * 0.055f, new Vector3(0.16f, 0.04f, 0.1f), Terrakotta, Valo);
+            r.Pylvas(y + new Vector3(-0.05f, 0.055f, 0f), 0.03f, 0.04f, 10, Valo);
+            r.Rengaskallio(y + new Vector3(-0.05f, 0.095f, 0f), new[] { (0f, 0.064f, 0.064f), (0.015f, 0.05f, 0.05f) }, 0.035f, 10, 1, Terrakotta, Terrakotta);
+            r.Laatikko(y + new Vector3(0.06f, 0.055f, 0.03f), new Vector3(0.03f, 0.06f, 0.03f), Valo, Terrakotta);
             return r.Verkko("Meteora");
+        }
+
+        /// <summary>Meteoran kalliopilari: hieman pullistuva, kupolimainen laki, pystysuuntaiset uurteet kohinasta.</summary>
+        static void Pilari(Rakentaja r, Vector3 p, float sade, float h, int siemen)
+        {
+            float d = sade * 2f;
+            r.Rengaskallio(p, new[] { (0f, d * 1.05f, d), (h * 0.35f, d * 1.12f, d * 1.06f), (h * 0.75f, d * 1.0f, d * 0.95f), (h * 0.95f, d * 0.8f, d * 0.76f) },
+                h * 1.02f, 12, siemen, Kivi, Pinta);
         }
 
         /// <summary>Tasavarjostettu verkko (kärjet tahkoittain, normaali tahkosta), kärkivärit lineaarisina.</summary>
@@ -327,6 +346,47 @@ namespace Matkakirja
                     Nelio(ala[i], yla[i], yla[j], ala[j], sivu);
                     Kolmio(keski, yla[j], yla[i], katto);
                 }
+            }
+
+            /// <summary>
+            /// Monirenkainen kallio (siistimpi, vähemmän laatikkomainen kuin Kallio): renkaat (korkeus, halkaisija x, halkaisija z)
+            /// alhaalta ylös samalla kulmajaolla ja toistettavalla säteen kohinalla (siemen). huippu = lakipisteen korkeus
+            /// (NaN = tasainen laki ylimmän renkaan keskipisteestä). Sivut sivuvärillä, laki kattovärillä.
+            /// </summary>
+            public void Rengaskallio(Vector3 p, (float h, float dx, float dz)[] renkaat, float huippu, int k, int siemen, Color sivu, Color katto)
+            {
+                var sat = new System.Random(siemen);
+                var kohina = new float[k];
+                for (int i = 0; i < k; i++) kohina[i] = 0.9f + 0.2f * (float)sat.NextDouble();
+                var pisteet = new Vector3[renkaat.Length, k];
+                for (int j = 0; j < renkaat.Length; j++)
+                    for (int i = 0; i < k; i++)
+                    {
+                        float a = i * Mathf.PI * 2f / k;
+                        float s = Mathf.Lerp(kohina[i], kohina[(i + 1) % k], 0.3f * j / Mathf.Max(1, renkaat.Length - 1));
+                        pisteet[j, i] = p + new Vector3(Mathf.Cos(a) * renkaat[j].dx * 0.5f * s, renkaat[j].h, Mathf.Sin(a) * renkaat[j].dz * 0.5f * s);
+                    }
+                for (int j = 0; j + 1 < renkaat.Length; j++)
+                    for (int i = 0; i < k; i++)
+                    {
+                        int q = (i + 1) % k;
+                        Nelio(pisteet[j, i], pisteet[j + 1, i], pisteet[j + 1, q], pisteet[j, q], sivu);
+                    }
+                int y = renkaat.Length - 1;
+                Vector3 keski = Vector3.zero;
+                for (int i = 0; i < k; i++) keski += pisteet[y, i];
+                keski /= k;
+                if (!float.IsNaN(huippu)) keski = new Vector3(keski.x, p.y + huippu, keski.z);
+                for (int i = 0; i < k; i++) Kolmio(keski, pisteet[y, (i + 1) % k], pisteet[y, i], katto);
+            }
+
+            /// <summary>Doorilainen pylväs: 8-kulmainen runko, ehjänä pylväänpää (echinus + abakus).</summary>
+            public void Doorilainen(Vector3 p, float r, float h, Color vari, bool paa)
+            {
+                Pylvas(p, r, h, 8, vari);
+                if (!paa) return;
+                Rengaskallio(p + Vector3.up * h, new[] { (0f, r * 2f, r * 2f), (0.008f, r * 2.8f, r * 2.8f) }, float.NaN, 8, 1, vari, vari);
+                Laatikko(p + Vector3.up * (h + 0.008f), new Vector3(r * 3f, 0.006f, r * 3f), vari, vari);
             }
 
             /// <summary>Temppeli: keskipohja p, leveys (itä–länsi) l, syvyys s, pylväiden korkeus h, pylväitä päädyssä ja sivulla.</summary>
