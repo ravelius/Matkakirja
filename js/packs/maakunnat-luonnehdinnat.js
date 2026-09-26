@@ -4587,129 +4587,591 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ROU: {
     Alba: {
       lyhyt: 'Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan, ja päivä on yhä maan kansallispäivä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-alba-c3cded12.jpg",
+          lahde: "Ela Vaida, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Ela Vaida",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Catedrala_Reintregirii_Neamului_-_Alba_Iulia.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-alba-c3cded12.jpg",
     },
     Arad: {
       lyhyt: 'Aradissa teloitettiin lokakuussa 1849 kolmetoista Unkarin vapaussodan kenraalia, ja heitä muistetaan kaupungissa yhä joka syksy.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arad-7acd6593.jpg",
+          lahde: "Attilavago, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Attilavago",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Statuia_Libertatii_Maghiare_-_Arad.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arad-7acd6593.jpg",
     },
     Arges: {
       lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli kahden kilometrin korkeuteen, ja tie on auki vain kesäisin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arges-03850653.jpg",
+          lahde: "Cristian Bortes, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Cristian Bortes",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Transfagarasan_twisty_road.jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arges-03850653.jpg",
     },
     Bacau: {
       lyhyt: 'Oneștin kaupungissa kasvoi ja harjoitteli Nadia Comăneci, joka sai Montrealissa 1976 voimistelun ensimmäisen täyden kympin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bacau-58ab250d.jpg",
+          lahde: "Nushu74, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nushu74",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Onești_-_Pictura_murală_Nadia_Comăneci_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bacau-58ab250d.jpg",
     },
     Bihor: {
       lyhyt: 'Chișcăun Karhuluola aukesi 1975, kun louhoksen räjäytys puhkaisi sen suuaukon, ja sisältä löytyi 140 luolakarhun luurankoa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bihor-bf04a2b4.jpg",
+          lahde: "Zátonyi Sándor, (ifj.) Fizped, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Zátonyi Sándor, (ifj.) Fizped",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Medvebarlang09.jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bihor-bf04a2b4.jpg",
     },
     'Bistrita-Nasaud': {
       lyhyt: 'Bram Stokerin Draculassa Jonathan Harker yöpyy Bistritzissa, ja kreivin linnaan vievä Borgon sola on täkäläinen Tihuțan sola.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bistrita-nasaud-1b52fbeb.jpg",
+          lahde: "Andrei Dan Suciu, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Andrei Dan Suciu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hotel_Dracula,_Pasul_Tihuta,_Romania_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bistrita-nasaud-1b52fbeb.jpg",
     },
     Botosani: {
       lyhyt: 'Kansallisrunoilija Mihai Eminescu vietti lapsuutensa Ipoteștin kylässä, ja hänen kotitalonsa on nykyään muistomuseo.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-botosani-558fbdb4.jpg",
+          lahde: "Curcan ionel, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Curcan ionel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Casa_Memorială_Mihai_Eminescu_din_Ipotești,_foto_Ionel_Curcan_(1).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-botosani-558fbdb4.jpg",
     },
     Braila: {
       lyhyt: 'Brăilan kohdalla Tonavan ylittää 2023 avattu riippusilta, Romanian pisin – ennen sitä joen yli pääsi täällä vain lautalla.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-braila-bf6d12b4.jpg",
+          lahde: "Raducu.popa, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Raducu.popa",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pod_Braila.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-braila-bf6d12b4.jpg",
     },
     Brasov: {
       lyhyt: 'Brașovin Musta kirkko sai nimensä vuoden 1689 suurpalosta, joka nokesi sen muurit, ja goottilainen jättiläinen hallitsee yhä vanhaakaupunkia.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-brasov-69d40fd0.jpg",
+          lahde: "Vlad Moldovean, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Vlad Moldovean",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biserica_Neagra,_Brasov,_Romania.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-brasov-69d40fd0.jpg",
     },
     Bucharest: {
       lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
+          lahde: "Andrei Stroe, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Andrei Stroe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:RO_B_Village_museum_Dumbraveni_homestead_2.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
     },
     Buzau: {
       lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
+          lahde: "Radu Ana Maria, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Radu Ana Maria",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:RO_BZ_Berca_Mud_Volcanoes_7.JPG",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
     },
     Calarasi: {
       lyhyt: 'Oltenițassa Argeș laskee Tonavaan, ja kaupungin lähellä on Gumelnițan kumpu, jolla asuttiin jo noin 6 000 vuotta sitten.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-calarasi-cc559d16.jpg",
+          lahde: "Leontin l, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Leontin l",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dunarea_la_Chiciu_2006.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-calarasi-cc559d16.jpg",
     },
     'Caras-Severin': {
       lyhyt: 'Băile Herculanen kuumia lähteitä käyttivät jo roomalaiset, ja kylpyläkaupungin tunnuksena seisoo Herkuleen patsas.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-caras-severin-02684952.jpg",
+          lahde: "Kvmgz, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Kvmgz",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Statuia_lui_Hercules,_Băile_Herculane.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-caras-severin-02684952.jpg",
     },
     Cluj: {
       lyhyt: 'Turdan vanhaan suolakaivokseen on rakennettu maailmanpyörä, minigolfrata ja soutuvenelampi syvälle maan alle.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-cluj-cd50d877.jpg",
+          lahde: "7oanna, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "7oanna",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Salina_Turda,_Romania.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-cluj-cd50d877.jpg",
     },
     Constanta: {
       lyhyt: 'Constanțan satama on Mustanmeren suurin, ja 64 kilometrin kanava oikaisee sieltä suoraan Tonavalle.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-constanta-6bd4a85d.jpg",
+          lahde: "Sîmbotin, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Sîmbotin",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dig_portuar.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-constanta-6bd4a85d.jpg",
     },
     Covasna: {
       lyhyt: 'Covasnan kylpylässä sydänpotilaita hoidetaan hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-covasna-0f30dec1.jpg",
+          lahde: "Stipkovits Fülöp, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Stipkovits Fülöp",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mofeta_Bardócz.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-covasna-0f30dec1.jpg",
     },
     'Dâmbovita': {
       lyhyt: 'Târgoviștessa Nicolae ja Elena Ceaușescu tuomittiin ja ammuttiin joulupäivänä 1989, ja varuskunnan rakennus on nyt museo.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dambovita-b78b949a.jpg",
+          lahde: "Nicubunu, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Nicubunu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chindia-tower-wide.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dambovita-b78b949a.jpg",
     },
     Dolj: {
       lyhyt: 'Craiovan Romanescu-puiston suunnitteli ranskalainen Édouard Redont, ja sen järven yli kaartuu yli sata vuotta vanha riippusilta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dolj-a08748ef.jpg",
+          lahde: "Calusarul, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Calusarul",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pilon_pod_suspendat_3.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dolj-a08748ef.jpg",
     },
     Galati: {
       lyhyt: 'Galațin terästehdas on Romanian suurin, ja Tonavan rannan telakalla rakennetaan yhä laivoja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-galati-fb570cd4.jpg",
+          lahde: "Sludge G, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Sludge G",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Galaţi_-_Sidex_Steelworks_by_day_2001_(3179105750).jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-galati-fb570cd4.jpg",
     },
     Giurgiu: {
       lyhyt: 'Giurgiun ja Rusen välinen Ystävyyden silta valmistui 1954, ja se oli vuoteen 2013 ainoa silta Romaniasta Bulgariaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-giurgiu-4d32bfba.jpg",
+          lahde: "Mark Voorendt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mark Voorendt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Danube_bridge_Ruse-Giurgiu.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-giurgiu-4d32bfba.jpg",
     },
     Gorj: {
       lyhyt: 'Târgu Jiun puistossa kohoaa Constantin Brâncușin Loputon pylväs, lähes 30 metriä päällekkäisiä valurautamoduuleja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-gorj-0a8fc38a.jpg",
+          lahde: "Vlad Tamnos, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vlad Tamnos",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Coloana_la_apus.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-gorj-0a8fc38a.jpg",
     },
     Harghita: {
       lyhyt: 'Pyhän Annan järvi täyttää sammuneen tulivuoren kraatterin, ja se on Romanian ainoa tulivuorijärvi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-harghita-780de56c.jpg",
+          lahde: "Várkonyi Tibor, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Várkonyi Tibor",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Szent_Anna-tó-1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-harghita-780de56c.jpg",
     },
     Hunedoara: {
       lyhyt: 'Hunedoaran Corvinin linna on yksi Euroopan suurimmista, ja sen portille johtaa pitkä puusilta korkeiden kivipilarien päällä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-hunedoara-a617ef42.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hunedoara_Castle_(Vajdahunyadi_vár)_by_Pudelek.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-hunedoara-a617ef42.jpg",
     },
     Ialomita: {
       lyhyt: 'Amaran suolaisen järven pohjamutaa käytetään kylpylässä reuman ja ihotautien hoitoon.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ialomita-c369f0cf.jpg",
+          lahde: "Maryusss2011, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Maryusss2011",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lacul_Amara.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ialomita-c369f0cf.jpg",
     },
     Iasi: {
       lyhyt: 'Iașin kulttuuripalatsi on neogoottinen jättirakennus, jossa toimii nykyään neljä museota.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-iasi-4a2ec737.jpg",
+          lahde: "Rosenborg BK Fan, Wikimedia Commons (CC0)",
+          tekija: "Rosenborg BK Fan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:The_Palace_of_Culture_in_Iași,_Romania_(front_view).jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-iasi-4a2ec737.jpg",
     },
     Ilfov: {
       lyhyt: 'Snagovinjärven saarella seisoo luostari, jonne perimätiedon mukaan Vlad Seivästäjä on haudattu.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ilfov-94013699.jpg",
+          lahde: "Madalinfocsa, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Madalinfocsa",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mânăstirea_Snagov.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ilfov-94013699.jpg",
     },
     Maramures: {
       lyhyt: 'Săpânțan Iloisella hautausmaalla ristit ovat kirkkaansinisiä, ja niihin on maalattu vainajan elämästä leikillinen kuva ja runo.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-maramures-6ea79799.jpg",
+          lahde: "DimiTalen, Wikimedia Commons (CC0)",
+          tekija: "DimiTalen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Merry_Cemetery,_Săpânța,_2017.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-maramures-6ea79799.jpg",
     },
     Mehedinti: {
       lyhyt: 'Rautaportin kallioon on hakattu 55 metriä korkeat daakialaiskuningas Decebaluksen kasvot, Euroopan korkein kallioreliefi.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mehedinti-a84eee19.jpg",
+          lahde: "Yanko Malinov, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Yanko Malinov",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Frontal_view_of_the_Decebalus_rock_sculpture.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mehedinti-a84eee19.jpg",
     },
     Mures: {
       lyhyt: 'Sighișoaran linnoituksen muurien sisällä asutaan yhä, ja kellotornin lähellä on talo, jossa Vlad Seivästäjän kerrotaan syntyneen.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mures-1112f822.jpg",
+          lahde: "Kwan Ng, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Kwan Ng",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sighișoara,_Romania.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mures-1112f822.jpg",
     },
     Neamt: {
       lyhyt: 'Neamțin linnoitus kesti 1476 sulttaani Mehmed II:n piirityksen, ja kunnostettu linna kohoaa yhä Târgu Neamțin yllä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-neamt-14aec22a.jpg",
+          lahde: "Losy, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Losy",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Ceatatea_Neamtului_01.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-neamt-14aec22a.jpg",
     },
     Olt: {
       lyhyt: 'Slatinan Alro-tehdas on yksi Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-olt-b65c6f1c.jpg",
+          lahde: "Ischek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ischek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Штаб-квартира_компании_Alro_S.A._в_г._Слатина_(Румыния),_входящей_в_структуру_холдинга_\"Виметко\".JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-olt-b65c6f1c.jpg",
     },
     Prahova: {
       lyhyt: 'Sinaian Peleșin linna oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa – virran tuotti oma voimala.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-prahova-96182ca6.jpg",
+          lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Pudelek (Marcin Szala)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Castle_Peleş_in_2009.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-prahova-96182ca6.jpg",
     },
     Salaj: {
       lyhyt: 'Moigradin kukkuloilla ovat Porolissumin rauniot, Rooman Dakian maakunnan luoteisrajan suuren linnoituskaupungin jäänteet.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-salaj-56a973fa.jpg",
+          lahde: "Cristian Bortes from Cluj-Napoca, Romania, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Cristian Bortes from Cluj-Napoca, Romania",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cetatea_Porolissum_2.jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-salaj-56a973fa.jpg",
     },
     'Satu Mare': {
       lyhyt: 'Satu Maren keskustaa vartioi 1904 rakennettu 47-metrinen palokunnan torni, josta vahdit aikanaan tähyilivät tulipaloja.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-satu-mare-a11090e4.jpg",
+          lahde: "Gabidanea, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Gabidanea",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Turnul_Pompierilor_Satu_Mare.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-satu-mare-a11090e4.jpg",
     },
     Sibiu: {
       lyhyt: 'Sibiun kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-sibiu-230cd6b0.jpg",
+          lahde: "DimiTalen, Wikimedia Commons (CC0)",
+          tekija: "DimiTalen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Close-up_of_the_Old_Town_Hostel,_Piața_Mică_26,_with_eyebrow_dormers,_Sibiu,_2017.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-sibiu-230cd6b0.jpg",
     },
     Suceava: {
       lyhyt: 'Voronețin luostarin ulkoseinät on maalattu täyteen raamatunkertomuksia, ja niiden syvä sävy tunnetaan Voronețin sinisenä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-suceava-1a353ae6.jpg",
+          lahde: "Valeria23, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Valeria23",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Manastirea_Voronet-Judecata_de_Apoi.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-suceava-1a353ae6.jpg",
     },
     Teleorman: {
       lyhyt: 'Teleormanin nimi tarkoittaa kumaanien kielellä ”hullua metsää”, ja maakunnan Zimnicea on Romanian eteläisin paikkakunta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-teleorman-1adcdd08.jpg",
+          lahde: "Ogchivu, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Ogchivu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Peisaj_Zimnicea.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-teleorman-1adcdd08.jpg",
     },
     Timis: {
       lyhyt: 'Timișoaran kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-timis-6d5dcdaf.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Union_Square,_Timișoara,_Banat_02.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-timis-6d5dcdaf.jpg",
     },
     Tulcea: {
       lyhyt: 'Tulcean takana Tonava hajoaa suistoksi, jonka kaislikoissa pesii Euroopan suurin pelikaanikanta.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-tulcea-a692d3f9.jpg",
+          lahde: "Thepinkfluffy1211, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Thepinkfluffy1211",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pelicans_at_the_Danube_Delta,_Romania.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-tulcea-a692d3f9.jpg",
     },
     Vaslui: {
       lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
+          lahde: "Bogdan Muraru, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bogdan Muraru",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biserica_Tăierea_Capului_Sfântului_Ioan_Botezătorul_din_Vaslui.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
     },
     'Vâlcea': {
       lyhyt: 'Horezun luostari on Unescon maailmanperintöä, ja kylän savenvalajat koristavat astiansa yhä kukko- ja spiraalikuvioin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-valcea-e4f56c14.jpg",
+          lahde: "ChristianMancas, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "ChristianMancas",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mânăstirea_Hurezi-19.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-valcea-e4f56c14.jpg",
     },
     Vrancea: {
       lyhyt: 'Vrancean vuorten alla syvällä maankuoressa syntyvät Romanian pahimmat maanjäristykset – vuoden 1977 järistys tuhosi osia Bukarestista.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vrancea-bbd1554c.jpg",
+          lahde: "ElenaLoredana, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "ElenaLoredana",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Monumentul_Unirii_1.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vrancea-bbd1554c.jpg",
     },
   },
   /*
@@ -8249,24 +8711,101 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BLR: {
     Brest: {
       lyhyt: 'Belovežin aarniometsässä, jonka Valko-Venäjä jakaa Puolan kanssa, elää yli 800 visenttiä – Euroopan painavinta maaeläintä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-brest-530d8b42.jpg",
+          lahde: "Eternal Beginner, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Eternal Beginner",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:European_bison_in_the_National_Park_„Belovezhskaya_Pushcha“_aviary_-_Sep_2023.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-brest-530d8b42.jpg",
     },
     Gomel: {
       lyhyt: 'Homelin palatsin ympärille Sož-joen rannalle perusti ruhtinas Ivan Paskevitš 1800-luvulla englantilaisen puiston, joka on yhä paikallaan.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-gomel-19a2bfdd.jpg",
+          lahde: "diluted88, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "diluted88",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Гомельскі_палацава-паркавы_ансамбль_..._Gomel_Palace_and_Park_Ensemble_-_panoramio.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-gomel-19a2bfdd.jpg",
     },
     Grodno: {
       lyhyt: 'Mirin linnaa alettiin rakentaa 1500-luvun alussa goottilaiseksi linnoitukseksi, ja se on Unescon maailmanperintöä vuodesta 2000.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
+          lahde: "Mike1979 Russia, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mike1979 Russia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mir_Castle_2023-07-02_5838.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
     },
     Mogilev: {
       lyhyt: 'Mahiljoun Pyhän Nikolauksen luostarin katedraali valmistui 1668, ja sen alkuperäinen ikonostaasi on säilynyt.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
+          lahde: "Alena2026, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alena2026",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Saint_Nicholas_monastery,_Mogilev,_2025.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
     },
     Minsk: {
       lyhyt: 'Njasvižin linna oli vuosisatoja Radziwiłłien suvun kotilinna, ja se on Unescon maailmanperintöä vuodesta 2005.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
+          lahde: "Alexxx1979, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alexxx1979",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Belarus_Nesvizh_Castle_7259_2050.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
     },
     'City of Minsk': {
       lyhyt: 'Minskin kansalliskirjasto on 73,6 metriä korkea rombikuboktaedri, kuin timantiksi hiottu talo, ja se avattiin 2006.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-city-of-minsk-835329e5.jpg",
+          lahde: "Agbarto, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Agbarto",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2024.04.11_National_Library_of_Belarus_Building_Minsk.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-city-of-minsk-835329e5.jpg",
     },
     Vitebsk: {
       lyhyt: 'Vitsebskin Pokrovskaja-kadulla on talo, jossa Marc Chagall vietti lapsuutensa – nykyään siinä toimii hänen kotimuseonsa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
+          lahde: "Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Adam Jones from Kelowna, BC, Canada",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Marc_Chagall_House_-_Vitebsk_-_Belarus_(27430073700).jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
     },
   },
   /*
