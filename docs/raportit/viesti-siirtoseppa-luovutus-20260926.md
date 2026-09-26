@@ -1,4 +1,4 @@
-# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x
+# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 06.1x)
 
 Luovuttaja on Siirtoseppä (Opus). Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
@@ -38,12 +38,22 @@ voimassa.
 2. **#3285 (1.47)** kokoelma `maakuntasalaisuudet` (14 GRC). Oma kokoelma karttavalorivien sijaan, koska build 16/17
    piirtäisi karttavalorivit (Natiiviseppä). Natiiviseppä on kuitannut. Worktree `wt/siirtoseppa-salaisuudet`.
    Sisältökirjurin nimiöt (#3286) ovat jo mainissa, joten `nimio` täyttyy itsestään.
+3. **#3298 (1.48)** kaupunkilehdet kaupungeittain: kokoelmat/kaupunkilehdet/<id>.json ja
+   manifest.kaupunkilehdetKaupungeittain (Pelikoodari, build 19). Natiiviseppä on kuitannut. Worktree
+   `wt/siirtoseppa-lehdet-kaupungeittain`.
+4. **#3299** tools/vienti/tilannekuva.mjs (buildin tilannekuva). Riippumaton pinosta.
 
 Julkaisija ilmoittaa jokaisen mergen, minkä jälkeen yhdistetään main seuraavaan: skeemariveistä pidetään haaran puoli,
 **sw.js ja tools/build-standalone.mjs otetaan aina mainista** (`git checkout origin/main -- …`). Tarkista lopuksi
 `git diff --name-only origin/main`, jotta mainista eroavat vain omat tiedostot.
 
 ## Kesken — tee nämä ensin
+
+0. **Natiivin merge-pyyntö Natiivisepällä:** proto-haara `siirtoseppa/tilannekuva` 8603b496 (juna/b13 fd29a2ae:n päällä):
+   buildin tilannekuva ja osittainen laiska tila, HaeHakemistoKylmana (Sisalto.cs yksi rivi) sekä korjaus, jolla
+   taustapäivitys hakee aina tuoreen osoittimen (lämmin käynnistys b74983a6 antoi vanhan). Loki
+   proto-3d/lokit/siirtoseppa-tilannekuva-20260926.txt. Natiiviseppä tekee buildivaiheen (tilannekuva.mjs →
+   Data/Raw/sisalto/tilannekuva/).
 
 1. Pinon mergejen jälkeen: tuotannon ämpäritarkistus (`amparitarkistus.mjs --url …/sisalto/1/v<N>/`), sitten versio
    Natiivisepälle, Natiivi-UI:lle ja Pelikoodarille sekä rivi Fablelle.
@@ -72,6 +82,9 @@ Julkaisija ilmoittaa jokaisen mergen, minkä jälkeen yhdistetään main seuraav
 - Kartta-testit (natiivi): `Kartta-testit/kaanna.sh PakettiPaatokset`, oikea paketti `PAKETTI_KOE=<versiokansio>`.
 
 ## Velat ja opetukset
+
+0. Maakuntanimien suomennokset (Attika jne.) tulevat Sisältökirjurin #3297:stä (maakunnat-nimet.js ja
+   maakuntarajat.json.gz samassa PR:ssä), eikä skeemaa muuteta. Ilmoita versio Natiivi-UI:lle, kun #3297 on tuotannossa.
 
 1. `lisenssitarkistus.mjs` ei lue lisenssiä äänen nimestä, kun osoitteessa on `#voima=`-osa (neljä CC0-tehostetta ovat
    "tuntematon"). Korjaamatta.
