@@ -94,13 +94,19 @@ namespace Matkakirja
             return null;
         }
 
-        /// <summary>Onko nostolla 3D-malli (Natiivi-UI: 2D-kuvamerkki pois). Taso 1: aina (erikoismalli tai arkkityyppi).</summary>
+        /// <summary>
+        /// Onko nostolla 3D-malli (Natiivi-UI: 2D-kuvamerkki ja musteläikkä pois). Taso 1: aina (erikoismalli tai
+        /// arkkityyppi). Tasot 2–3: kun <see cref="Taso23"/> on päällä ja kartan kerroin on 155:n kuvamerkkien kynnyksellä
+        /// (NostoSaannot.KuvamerkkiKaytossa, 2,5), eli samoin kuin <see cref="PiirraTasot23"/> piirtää.
+        /// HUOM (26.9.): Natiivi-UI:n NostotKartalla piilottaa symbolin vain tasolla 1 (ehto m.Taso1) eikä piilota
+        /// musteen jälkeä (AsetaMuste); tasoille 2–3 tarvittava muutos: proto-3d/lokit/loydos160-arkkityypit-RAPORTTI.md.
+        /// </summary>
         public static bool OnMalli(string nostoId)
         {
             if (!Paalla) return false;
             var t = TietoIdlla(nostoId);
             if (t == null) return Avain(nostoId) != null || ArkkityyppiKartoitus.Taulussa(nostoId);
-            return t.Taso == 1;
+            return t.Taso == 1 || Taso23Kaytossa(t.Taso);
         }
 
         static string Avain(string id)
