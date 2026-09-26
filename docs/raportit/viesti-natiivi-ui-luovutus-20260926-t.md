@@ -129,3 +129,8 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   natiivi-versio ja dev-avaimet säilyvät) + muistissa olevien tilojen nollaus (Maakunnat, Karttaselite, Kartuscha, Matkalaukku,
   Pulu ensisaapuminen). EI ALOITETTU koodia: tarvitaan Pelikoodarin nollauslista (tallennus) ja omistajan "ei ala oikein" -tarkennus
   (viestiraja esti kysymisen).
+- 21.3x 170 KORJATTU Siirtosepän tapahtuman päälle: `natiivi-ui/sisalto-vaihtui` 544e0ce3 (siirtoseppa/sisalto-vaihtui 42b790c2 päällä):
+  PakettiPaivitys.SisaltoVaihtui → MaakuntaTiedot.Hylkaa, NostoSisalto.Hylkaa (kokoelmat, moduulit, karttavalot, media) ja
+  Maakunnat.SisaltoVaihtui (luonnehdinnat + pulu uudelleen, luonnehdinta päivittyy). Käännetty 4e795b9a; savukkeessa oikea vaihto
+  v182 → v183 (luonnehdinnat muuttui) → käsittelijä laukesi, ei poikkeuksia (proto-3d/lokit/natiivi-ui-loydos170/konsoli-vaihtui.txt).
+  Siirtoseppä kääntää molemmat yhdessä ja ajaa jälkeen-kierroksen: HAARAN NIMI hänelle LÄHETTÄMÄTTÄ (viestiraja).
