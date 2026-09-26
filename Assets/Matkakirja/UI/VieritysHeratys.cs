@@ -65,14 +65,26 @@ namespace Matkakirja.Natiivi
         public static string Koe()
         {
             if (instanssi == null) return "ei käynnissä";
+            // Näkyvistä (koko vanhempiketju esillä) se, jossa on eniten vieritettävää.
             ScrollView kohde = null;
+            float paras = 10f;
             foreach (var s in instanssi.seuratut)
-                if (s != null && s.panel != null && s.resolvedStyle.display == DisplayStyle.Flex && s.contentContainer.layout.height > s.layout.height + 50)
-                { kohde = s; break; }
+            {
+                if (s == null || s.panel == null || !Naytetaan(s)) continue;
+                float vara = s.contentContainer.layout.height - s.contentViewport.layout.height;
+                if (vara > paras) { paras = vara; kohde = s; }
+            }
             if (kohde == null) return "ei vieritettävää ScrollView'tä näkyvissä";
             NollaaLaskurit();
             instanssi.StartCoroutine(Liu(kohde));
             return null;
+        }
+
+        static bool Naytetaan(VisualElement e)
+        {
+            for (; e != null; e = e.hierarchy.parent)
+                if (e.resolvedStyle.display == DisplayStyle.None || e.resolvedStyle.visibility == Visibility.Hidden) return false;
+            return true;
         }
 
         static System.Collections.IEnumerator Liu(ScrollView s)
