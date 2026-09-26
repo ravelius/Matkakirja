@@ -176,6 +176,7 @@ namespace Matkakirja
                 }
                 // Taustapäivitys (Siirtoseppä): valmis versio varastosta, muuten laiska tila (PakettiPaivitys.cs).
                 versioPolku = PakettiPaivitys.Valitse(osoitin, versioPolku);
+                yield return PakettiPaivitys.HaeHakemistoKylmana(osoitin, versioPolku);
                 osoitinHaussa = false;
                 istunnonPolku = versioPolku;
             }
