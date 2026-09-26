@@ -75,3 +75,13 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
     näkyä, vaikka täyttö olisi pois. Korjaus kysytty Natiivisepältä. Kuvapari omistajalle vasta sen jälkeen.
 - Kohta 2 (nostojen kokoluokat ja himmeät jäljet) on Natiivisepän ja Pelikoodarin NostoKerros-työtä. Minulta ei
   vielä pyydetty mitään. Kohdat 4–5 (yövalomaski sekä laiva ja boidit) ovat seuraavaksi.
+
+## Päivitys klo 07.2x
+
+- **Kohta 3** on build 19 -junassa: linssiseppa/maakunta-heraa c05835ef + Natiivisepän korjaus, juna/b13 6697be58.
+  Herännyt maakunta näkyy täysin sävyin myös oletusrajoilla.
+- **JUMI (data):** paketin karttavaloista puuttuu "maakunta"-kenttä, joten muste sanoo "nosto:marathon (ei maakuntaa
+  0/0)" eikä MaakuntaHeraa laukea. Asia on Fablella: Siirtoseppä vie kentän, tai Pelikoodari laskee sen ajossa.
+  Kun data on paikallaan, testaa `vari GRC` + `aja 38.4 23.4 7 1.5` + peli-komento `muste loyda nosto:marathon`
+  (skripti ajo-herays.sh) ja lähetä kuvapari omistajalle.
+- Seuraavaksi kohdat 4–5 (yövalomaski käydyille sekä laiva ja boidit) Fablen järjestyksessä.
