@@ -86,7 +86,7 @@ test('tyyppimerkit: kynnys 2,5, pienennetty 2,5–4, täysi koko 4:stä (löydö
   assert.equal(tyyppimerkkiPieni(2), false, 'pisteellä ei kokoa');
   const merkki = { kuvamerkki: 'merkki-historia.png', taso: 2 };
   assert.equal(ruudunKerroin({ ...merkki, kuvamerkkiPieni: true }), NOSTOJEN_TYYPPIMERKIN_PIENI);
-  assert.equal(NOSTOJEN_TYYPPIMERKIN_PIENI, 0.7);
+  assert.equal(NOSTOJEN_TYYPPIMERKIN_PIENI, 0.85, 'omistaja 26.9. klo 10.4x');
   assert.equal(ruudunKerroin(merkki), 1);
   assert.equal(ruudunKerroin({ ...merkki, taso: 1, kuvamerkkiPieni: true }), 1.6, 'ykköstaso ei pienene');
   assert.equal(ruudunKerroin({ taso: 2 }), 1, 'piste');

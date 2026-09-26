@@ -502,10 +502,11 @@ export const NOSTOJEN_TYYPPIMERKIN_KERROIN = 2.5;
  * on NOSTOJEN_TYYPPIMERKIN_PIENI kertaa tavallisesta (siirtymä pisteestä
  * täysikokoiseen merkkiin kahdessa portaassa). Koelippu
  * `?koe=symbolitkaukana` poistui samalla päätöksellä. Natiivi
- * (NostoSaannot.cs) muuttui samassa erässä samoihin lukuihin.
+ * (NostoSaannot.cs) muuttui samassa erässä samoihin lukuihin. Koko 0,85
+ * on omistajan valinta kuvaparista (26.9.2026 klo 10.4x; ehdotus oli 0,7).
  */
 export const NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN = 4;
-export const NOSTOJEN_TYYPPIMERKIN_PIENI = 0.7;
+export const NOSTOJEN_TYYPPIMERKIN_PIENI = 0.85;
 /** Ovatko tyyppimerkit käytössä kartan kertoimella. */
 export function tyyppimerkitKaytossa(kerroin) {
   return Number.isFinite(kerroin) && kerroin >= NOSTOJEN_TYYPPIMERKIN_KERROIN;
