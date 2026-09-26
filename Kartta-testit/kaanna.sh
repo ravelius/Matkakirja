@@ -45,6 +45,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Pohjapallolaskenta.cs
 ../Assets/Matkakirja/Kartta/Reikakorjaus.cs
 ../Assets/Matkakirja/Kartta/ReittiMitat.cs
+../Assets/Matkakirja/Kartta/SaapumisKiire.cs
 ../Assets/Matkakirja/Kartta/SaapumisLaatat.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs
 ../Assets/Matkakirja/Kartta/Siirtokoreografia.cs

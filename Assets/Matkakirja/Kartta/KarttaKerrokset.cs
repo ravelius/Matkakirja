@@ -1433,11 +1433,11 @@ namespace Matkakirja
         /// Kohdemaan saapumisnäkymä (PalloKierto.SaapumisNakyma maan laatikolla, kuten PeliOhjain.Saavu matkan lopussa) ja sen
         /// avain (SaapumisLaatat.Avain): sama avain = sama laattajoukko. null, jos kameraa ei vielä ole.
         /// </summary>
-        public (Saapumisnakyma.Tulos nakyma, string avain)? SaapumisNakyma(string maa, double lat, double lon)
+        public (Saapumisnakyma.Tulos nakyma, string avain)? SaapumisNakyma(string maa, double lat, double lon, bool maaRajaus = true)
         {
             var kierto = nappula != null ? nappula.kierto : null;
             if (kierto == null) return null;
-            var t = kierto.SaapumisNakyma(maa, lat, lon, maaRajaus: true);
+            var t = kierto.SaapumisNakyma(maa, lat, lon, maaRajaus);
             return (t, SaapumisLaatat.Avain(maa, t.Lat, t.Lon, t.Korkeus * Saapumisnakyma.Sade / 1000.0));
         }
 
@@ -1452,10 +1452,16 @@ namespace Matkakirja
         /// koko pallon korkeus), kuten LinssienEsilataaja joutilaana. Palauttaa peruttavan esilatauksen (kutsuja perii sen, kun
         /// kohde vaihtuu tai matka on perillä), tai null, jos lippu on pois tai kameraa ei ole.
         /// </summary>
-        public Laattapalvelin.Esilataus EsilataaSaapumisalue(string kaupunki, string maa, double lat, double lon, Taso taso, bool linssi)
+        /// <param name="maaRajaus">false = webin kaupunkinäkymä ilman maan laatikkoa (aloituslento: PeliOhjain.Saavu(maaRajaus:
+        /// false) kortin alla ja Nappulan lennon loppunäkymä).</param>
+        /// <param name="kiire">Löydös 171: kohdemaan saapuminen KIIREELLÄ (Laattapalvelin.Esilataus.Saapuminen: näkyvän kartan
+        /// vapaat paikat ennen muuta esilatausta, myös kerma) taustan sijaan; ei riipu erä 2:n lipusta vaan
+        /// Saapumisvartija.Paalla-lipusta (kutsuja).</param>
+        public Laattapalvelin.Esilataus EsilataaSaapumisalue(string kaupunki, string maa, double lat, double lon, Taso taso, bool linssi,
+            bool maaRajaus = true, bool kiire = false)
         {
-            if (!SaapumisLaatatPaalla) return null;
-            var sn = SaapumisNakyma(maa, lat, lon);
+            if (!kiire && !SaapumisLaatatPaalla) return null;
+            var sn = SaapumisNakyma(maa, lat, lon, maaRajaus);
             if (sn == null) return null;
             var t = sn.Value.nakyma;
             var kierto = nappula.kierto;
@@ -1497,9 +1503,10 @@ namespace Matkakirja
                 reliefi = Matkakirja.Linssit.Laattalista.Polut(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
                     new Matkakirja.Linssit.Nakyma(Math.Max(-55.0, Math.Min(55.0, t.Lat)), t.Lon, kierto.MaxKorkeus()), fov, kuvasuhde,
                     Screen.height, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, Laattapalvelin.Ampari, SaapumisLinssiKatto);
-            var e = new Laattapalvelin.Esilataus { Tausta = true };
+            var e = new Laattapalvelin.Esilataus { Tausta = !kiire, Saapuminen = kiire };
             float alku = Time.realtimeSinceStartup;
-            Debug.Log($"MATKAKIRJA saapumislaatat: {kaupunki} ({maa}, {taso}) pohja {pohjaN} (z{SaapumisLaatat.Tasot(rasteri).min}–{rasteri}), " +
+            Debug.Log($"MATKAKIRJA saapumislaatat: {kaupunki} ({maa}, {taso}{(kiire ? ", KIIRE" : "")}{(maaRajaus ? "" : ", kaupunkinäkymä")}) " +
+                      $"pohja {pohjaN} (z{SaapumisLaatat.Tasot(rasteri).min}–{rasteri}), " +
                       $"maasto {maastoN}, reliefi {reliefi?.Count ?? 0}; näkymä {ala}");
             PyyntoLoki.Merkki($"saapumislaatat {kaupunki} alkaa {polut.Count} + kerma + reliefi {reliefi?.Count ?? 0}");
             StartCoroutine(Esilataaja.Tehtava(taso, "saapuminen-" + kaupunki,
@@ -1522,7 +1529,7 @@ namespace Matkakirja
             {
                 // Maan huntusarjan luettelo levylle samasta taustajonosta; Varitaso lukee sen saapuessa välimuistista.
                 string luettelo = Varitaso.Kansio + maa + "/laatat.json";
-                var j = Laattapalvelin.Esilataa(new[] { luettelo }, new Laattapalvelin.Esilataus { Tausta = true });
+                var j = Laattapalvelin.Esilataa(new[] { luettelo }, new Laattapalvelin.Esilataus { Tausta = !e.Saapuminen, Saapuminen = e.Saapuminen });
                 while (!e.Peruttu && j.Osuus < 1f) yield return null;
                 if (e.Peruttu) { j.Peru(); yield break; }
                 var l = LueKermaLuettelo(luettelo);
@@ -1538,6 +1545,12 @@ namespace Matkakirja
                     var kerma = new List<string>();
                     foreach (var (z, x, y) in SaapumisLaatat.Mercator(ala, Math.Max(z0, min), z1))
                         kerma.Add(Varitaso.Kansio + maa + "/" + z + "/" + x + "/" + y + ".webp");
+                    // Löydös 171 (kiire): väritason luonti kortin alla pyytää kerman karkeat tasot koko pallolta ennen näkymän
+                    // omia (SaapumisKiire.KermaMaailma); samat polut kuin Cesiumilla (Laattapalvelin ohjaa alueen ulkopuolen
+                    // _maailma-sarjaan, välimuistin avain on ohjattu polku). Näkymän laatat ensin, nämä perään.
+                    if (e.Saapuminen)
+                        foreach (var (z, x, y) in SaapumisKiire.KermaMaailma(ala.Lat, ala.Lon))
+                            if (z >= min && z <= max) kerma.Add(Varitaso.Kansio + maa + "/" + z + "/" + x + "/" + y + ".webp");
                     kermaN = kerma.Count;
                     if (kerma.Count > 0) Laattapalvelin.Esilataa(kerma, e);
                 }

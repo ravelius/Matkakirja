@@ -53,6 +53,9 @@ namespace Matkakirja
     ///                             matkakirja-valmius-auto tai Documents/valmius-auto.txt, oletus 12 s; voimaan seuraavista
     ///                             verhoista, myös käynnistyksessä; simulaattorissa xcrun simctl spawn &lt;UDID&gt; defaults write …)
     ///   valmius tila | valmius pois   yksi näyte heti / käynnissä olevat seurannat loppuun (yhteenveto)
+    ///   saapuminen vartija paalle|pois|tila   löydös 171 (Saapumisvartija): korjaus (kohdemaan näkymä kiireellä lennon aikana,
+    ///                             saapumistila, lennon hidastus) A/B-mittaukseen; muistetaan (PlayerPrefs matkakirja-saapumisvartija
+    ///                             tai Documents/saapumisvartija-pois.txt). Mittausrivit "VARTIJA 171" tulevat aina.
     ///   valmius kevennys pois|paalle   verhon kevennys (Laattapalvelin: näkyvä jono 24 rinnakkain, tausta tauolla) pois
     ///                             A/B-mittaukseen; muistetaan (PlayerPrefs matkakirja-valmius-kevennys-pois tai
     ///                             Documents/valmius-kevennys-pois.txt), voimaan seuraavista verhoista
@@ -950,6 +953,11 @@ namespace Matkakirja
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
                     Debug.Log(Laattapalvelin.MaastoKuvaus());
                     break;
+                case "saapuminen" when o.Length > 1 && o[1] == "vartija":
+                    // saapuminen vartija paalle|pois|tila (löydös 171)
+                    if (o.Length > 2 && (o[2] == "paalle" || o[2] == "pois")) Saapumisvartija.Paalla = o[2] == "paalle";
+                    Debug.Log(Saapumisvartija.Kuvaus());
+                    break;
                 case "valmius":
                 {
                     // valmius seuraa [s] | valmius auto paalle [s] | valmius auto pois | valmius kevennys pois|paalle | valmius tila | valmius pois
@@ -1102,6 +1110,7 @@ namespace Matkakirja
                 case "mittaus":
                 case "palvelin":
                 case "suodatus":
+                case "saapuminen":
                 case "valmius":
                 case "kamerareitti":
                     return false;
