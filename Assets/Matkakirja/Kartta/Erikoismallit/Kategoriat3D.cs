@@ -46,7 +46,9 @@ namespace Matkakirja
             float s = KsSauma * 0.5f;
             // Sauma kulmasuunnassa (säteellä r) ja säteen suunnassa.
             float da = s / Mathf.Max(0.05f, (r0 + r1) * 0.5f);
-            a0 += da; a1 -= da; r0 += s; r1 -= s; d -= s;
+            // Kavennus kiven keskustaa kohti (kulmat voivat kulkea kumpaan suuntaan tahansa).
+            float suunta = a1 > a0 ? 1f : -1f;
+            a0 += suunta * da; a1 -= suunta * da; r0 += s; r1 -= s; d -= s;
             Vector3 P(float a, float rr, float z) => c + new Vector3(Mathf.Cos(a) * rr, Mathf.Sin(a) * rr, z);
             var k = c + new Vector3(Mathf.Cos((a0 + a1) * 0.5f), Mathf.Sin((a0 + a1) * 0.5f), 0f) * ((r0 + r1) * 0.5f);
             r.AloitaOsa();
