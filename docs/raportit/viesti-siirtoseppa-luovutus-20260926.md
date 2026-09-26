@@ -22,8 +22,7 @@ voimassa.
 | 1.50 (v167) | #3317 | aanitaulut laji musiikkiaihe (14) ja musiikkiketju.maanosa |
 | v169 | #3320 (+ Karttasepän #3321) | NIMETYT_LISATIEDOSTOT: assets/data/lippu-lonlat.json → kartta/lippu_lonlat.json (138 maata), ei skeemamuutosta |
 
-- **Junassa:** #3327 tilannekuva.mjs 15 tiedostoa (14,2 Mt, Natiiviseppä kuitannut). Worktree wt/siirtoseppa-tilannekuva-kylma, poista mergen jälkeen.
-- **Odottaa pyyntöä:** ISS-linssi (Linssiseppä): Actions-työnkulku CelesTrak ISS-TLE (NORAD 25544) 6 h välein ämpäriin data/iss-tle.json + sama tiedosto pakettiin (NIMETYT_LISATIEDOSTOT sopii).
+- **Mainissa myöhemmin:** #3327 tilannekuva.mjs 15 tiedostoa (14,2 Mt); #3334 ISS-TLE: .github/workflows/iss-tle.yml 6 h välein → data/iss-tle.json (tools/iss-tle.mjs, --ampari buildille). Ei omia avoimia PR:iä eikä worktreitä.
 - **Peruttu/ei tilattu:** offline-lataus pois simulaattorissa (Documents/offline oli tyhjä; levyn täyttäjät Build, DerivedData, git-pack, worktreet). Z9 satama- ym. kaupungeille (88/134 maata ilman Z9:ää, koska kaupunkitaso ottaa vain tyypin kaupunki).
 - Taustapäivitys: siivouskorjaus build 19:ssä; seuraa edelleen laitetestiä.
 
