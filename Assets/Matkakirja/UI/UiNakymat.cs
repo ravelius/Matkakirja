@@ -430,16 +430,23 @@ namespace Matkakirja.Natiivi
             // Huipennus vasta, kun viimeisen aarteen kysymys (ja sen paljastus) on suljettu: tapahtuma
             // tulee löytöhetkellä, ennen paljastusta, eikä huipennus saa jäädä paljastuksen alle.
             // Web: voittoikkuna aukeaa → sfx.play('win').
+            // Musiikkisuunnitelma vaihe 1: matkan loppu (musa-loppu) soi huipennuksen alla.
+            void NaytaHuipennus(MatkanYhteenveto yv)
+            {
+                Aanet.Tehoste("win");
+                Aanisoitin.MatkaLoppui();
+                Huipennus.Nayta(yv, () => UusiMatka(o));
+            }
             o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() =>
             {
-                if (!Kysymys.Auki && !Paljastus.Auki) { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); return; }
+                if (!Kysymys.Auki && !Paljastus.Auki) { NaytaHuipennus(yv); return; }
                 odottavaHuipennus = yv;
             });
             Kysymys.Piilotettu += () =>
             {
                 var yv = odottavaHuipennus;
                 odottavaHuipennus = null;
-                if (yv != null) { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); }
+                if (yv != null) NaytaHuipennus(yv);
             };
             // Pelin tehosteet (webin sfx.play-tunnukset) ja lennon moottoriääni (startFlight/stopFlight),
             // B7 §1.8: siivut UI:n äänimoottorilla.

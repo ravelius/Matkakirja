@@ -63,6 +63,7 @@ Shader "Matkakirja/Rajaviiva"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Assets/Matkakirja/Shaders/Horisonttiusva.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _BaseColor;
@@ -97,7 +98,7 @@ Shader "Matkakirja/Rajaviiva"
             }
 
             struct Syote { float4 paikka : POSITION; float3 toinen : TEXCOORD0; float2 puoli : TEXCOORD1; float3 lisa : TEXCOORD2; };
-            struct Vali { float4 paikka : SV_POSITION; float reuna : TEXCOORD0; float2 pitkin : TEXCOORD1; float matka : TEXCOORD2; };
+            struct Vali { float4 paikka : SV_POSITION; float reuna : TEXCOORD0; float2 pitkin : TEXCOORD1; float matka : TEXCOORD2; float usvaY : TEXCOORD3; };
 
             Vali vert(Syote i)
             {
@@ -128,6 +129,7 @@ Shader "Matkakirja/Rajaviiva"
                 // Liian pieni rengas (vain ääriviivalla, y ≠ 0) pois kuten takapuoli; tiheys 0 = ei mitattu → kaikki näkyvät (web).
                 if (paa != 0 && _Tiheys > 0 && (abs(i.puoli.y) - 1.0) * _Tiheys < _PieninRengas) a = float4(2, 2, 2, 1);
                 o.paikka = a;
+                o.usvaY = UsvaYlhaalta(a);   // horisonttiusva (löydös 159)
                 o.reuna = i.puoli.x * px;
                 o.matka = i.lisa.x;
                 // Paikka janan suunnassa a:sta (a-pään kärjet −jatke, b-pään kärjet pituus + jatke) ja janan pituus.
@@ -154,6 +156,7 @@ Shader "Matkakirja/Rajaviiva"
                     kuvio = lerp(kuvio, _Katko / jakso, saturate(fw * 2.0 / jakso - 1.0));
                     alfa *= kuvio;
                 }
+                alfa *= UsvaNakyvyys(i.usvaY);
                 return half4(_BaseColor.rgb, alfa);
             }
             ENDHLSL

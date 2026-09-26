@@ -54,6 +54,20 @@ namespace Matkakirja.Peli
         public List<string> LoytoMantereet = new List<string>();
         /// <summary>Löydön maa (ISO3) samoin indeksein (web findMaa).</summary>
         public List<string> LoytoMaat = new List<string>();
+        /// <summary>
+        /// Kuljettu reitti aikajärjestyksessä (Elävä kartta kohta 4, vain natiivi): kaupunki ja kulkutapa, jolla
+        /// sinne tultiin (ensimmäinen = aloituskaupunki, tapa null). Web pitää vain joukon (world.visited), joten
+        /// tämä on natiivin oma valinnainen tallennuskenttä "kuljettu". Sama kaupunki peräkkäin kirjataan kerran.
+        /// </summary>
+        public List<KuljettuPiste> Kuljettu = new List<KuljettuPiste>();
+    }
+
+    /// <summary>Kuljetun reitin piste: kaupunki ja kulkutapa, jolla sinne saavuttiin (null = aloitus tai siirto ilman tapaa).</summary>
+    public sealed class KuljettuPiste
+    {
+        public string Kaupunki;
+        public Kulkutapa? Tapa;
+        public KuljettuPiste(string kaupunki, Kulkutapa? tapa) { Kaupunki = kaupunki; Tapa = tapa; }
     }
 
     /// <summary>
@@ -189,6 +203,9 @@ namespace Matkakirja.Peli
                 Kentta(sb, "loydot", "[" + string.Join(",", p.Loydot.Select(Teksti)) + "]");
                 Kentta(sb, "loytoMantereet", "[" + string.Join(",", p.LoytoMantereet.Select(Teksti)) + "]");
                 Kentta(sb, "loytoMaat", "[" + string.Join(",", p.LoytoMaat.Select(Teksti)) + "]");
+                // Elävä kartta (26.9.2026): kuljettu reitti [[kaupunki, tapa|null], …], valinnainen.
+                Kentta(sb, "kuljettu", "[" + string.Join(",", p.Kuljettu.Select(k =>
+                    "[" + Teksti(k.Kaupunki) + "," + (k.Tapa.HasValue ? Teksti(k.Tapa.Value.ToString()) : "null") + "]")) + "]");
                 sb.Append('}');
             }
             sb.Append(']');
@@ -262,6 +279,15 @@ namespace Matkakirja.Peli
                 };
                 foreach (var kay in MiniJson.Taulukko(MiniJson.Kentta(pd, "kaydyt") ?? new List<object>()))
                     p.Kaydyt.Add((string)kay);
+                // Kuljettu reitti (valinnainen): vanhassa tallennuksessa reitti alkaa nykyisestä kaupungista.
+                foreach (var r in MiniJson.Taulukko(MiniJson.Kentta(pd, "kuljettu") ?? new List<object>()))
+                {
+                    var pari = MiniJson.Taulukko(r);
+                    if (pari.Count < 1 || !(pari[0] is string kk)) continue;
+                    var tapa = pari.Count > 1 && pari[1] is string ts && Enum.TryParse<Kulkutapa>(ts, out var kt) ? kt : (Kulkutapa?)null;
+                    p.Kuljettu.Add(new KuljettuPiste(kk, tapa));
+                }
+                if (p.Kuljettu.Count == 0 && p.Sijainti.Kaupungissa) p.Kuljettu.Add(new KuljettuPiste(p.Sijainti.Kaupunki, null));
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");

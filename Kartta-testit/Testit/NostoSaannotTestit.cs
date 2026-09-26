@@ -136,8 +136,9 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(null, NostoSaannot.Kuvamerkki("huuto", "skandaali"));
             Oleta.Sama("merkki-vuori.png", NostoSaannot.Kuvamerkki("luonto", null), "väliaikainen vara datalle ilman lajia");
             Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(1, 0.52), "taso 1 aina");
-            Oleta.Tosi(!NostoSaannot.KuvamerkkiKaytossa(2, 3.99), "taso 2 alle kertoimen 4");
-            Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(2, 4.0), "taso 2 kertoimesta 4");
+            // Löydös 155 (build 20): kynnys 4 → 2,5 (NostoSaannot.TyyppimerkinKerroin, web samassa erässä).
+            Oleta.Tosi(!NostoSaannot.KuvamerkkiKaytossa(2, 2.49), "taso 2 alle kertoimen 2,5");
+            Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(2, 2.5), "taso 2 kertoimesta 2,5");
         }
 
         [Testi]

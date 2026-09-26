@@ -124,6 +124,8 @@ namespace Matkakirja
             kameraKomp = transform.parent != null ? transform.parent.GetComponent<Camera>() : null;
             kierto = transform.parent != null ? transform.parent.GetComponent<PalloKierto>() : null;
             if (kameraKomp != null) perusTausta = kameraKomp.backgroundColor;
+            // Kartan taivas kallistuksessa (löydös 154): oletus pois, komento "taivas kartta …".
+            if (kameraKomp != null && kameraKomp.GetComponent<Karttataivas>() == null) kameraKomp.gameObject.AddComponent<Karttataivas>();
             perusOn = true;
         }
 
@@ -218,6 +220,17 @@ namespace Matkakirja
             }
             Taivas(kameraKomp);
 
+            // Ruudun usva UI-merkeille (löydös 153): vain horisonttiusva, ei lennon sumu.
+            Horisonttiusva.RuutuVoima = !(sumu && !SumuEstetty) && Usva > 0.001f ? Usva : 0f;
+            if (Horisonttiusva.RuutuVoima > 0f)
+            {
+                double y = Horisonttiusva.RajanRuutuY(kierto.korkeus, kierto.KaytettyKallistus, kameraKomp.fieldOfView * 0.5,
+                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaRaja);
+                Horisonttiusva.RuutuRajaY = double.IsNaN(y) ? 0f : Mathf.Clamp01((float)((1.0 - y) * 0.5));
+            }
+            // Sama usva varjostimille (löydös 159, Shaders/Horisonttiusva.hlsl): reitit, kynäviivat, Overlay-nimet.
+            var usvaRuutu = new Vector4(Horisonttiusva.RuutuRajaY, Horisonttiusva.RuutuVoima, (float)Horisonttiusva.Liuku, 0f);
+            if (usvaRuutu != edellinenUsvaRuutu) { edellinenUsvaRuutu = usvaRuutu; Shader.SetGlobalVector(UsvaRuutuId, usvaRuutu); }
             if (sumu && !SumuEstetty)
             {
                 RenderSettings.fog = true;
@@ -281,6 +294,8 @@ namespace Matkakirja
         }
 
         bool taivasPaalla;
+        static readonly int UsvaRuutuId = Shader.PropertyToID("_UsvaRuutu");
+        Vector4 edellinenUsvaRuutu = new Vector4(-1f, -1f, -1f, -1f);
 
         /// <summary>
         /// Sininen taivas lennon ajaksi (häivytys samalla osuudella kuin aurinko): kameran tausta vaihtuu

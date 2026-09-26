@@ -46,14 +46,22 @@ namespace Matkakirja.Natiivi
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             MaaKartta.Heraannyt = Tila;
-            po.MusteValmis += () => { laskurit.Clear(); lasketutMaat.Clear(); MaaKartta.PaivitaHeraaminen(); };
+            // Kohta 2: nostojen kokoluokka, löydetty ja näkyvyys NostoKerrokselle (Natiivisepän rajapinta, merkit Natiivi-UI:lla).
+            NostoKerros.Muste = valoId =>
+            {
+                if (!po.MusteLuettu || string.IsNullOrEmpty(valoId)) return null;
+                var m = po.NostonMuste(valoId);
+                return ((int)m.Luokka, m.Loydetty, m.Nakyy);
+            };
+            po.MusteValmis += () => { laskurit.Clear(); lasketutMaat.Clear(); MaaKartta.PaivitaHeraaminen(); NostoKerros.PaivitaMuste(); };
             po.NostoLoytyi += t =>
             {
                 viimeLoyto = (t.Id, t.Maakunta);
+                NostoKerros.PaivitaMuste();
                 if (t.Maakunta != null) lasketutMaat.Remove(Maakuntajako.MaaTunnuksesta(t.Maakunta));
             };
             po.MaakuntaHeraa += maakunta => Heraa(maakunta, viimeLoyto.Maakunta == maakunta ? viimeLoyto.Id : null);
-            if (po.MusteLuettu) MaaKartta.PaivitaHeraaminen();
+            if (po.MusteLuettu) { MaaKartta.PaivitaHeraaminen(); NostoKerros.PaivitaMuste(); }
         }
 
         /// <summary>MaaKartta.Heraannyt: true herännyt, false uinuva, null ennallaan (ei mustetta tai maakunnassa ei nostoja).</summary>
@@ -79,7 +87,10 @@ namespace Matkakirja.Natiivi
             ohjain?.Kirjaa($"elävä: herätys jonossa {maakunta} (nosto {nostoId ?? "-"})");
         }
 
-        static bool KarttaVapaa() =>
+        /// <summary>Herätys käynnissä (elävät hetket väistävät).</summary>
+        internal static bool Kaynnissa => nykyinen != null;
+
+        internal static bool KarttaVapaa() =>
             PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.Tila == SilmukanTila.Kartta && !PalloKierto.KuvaSumea &&
             !PalloKierto.PorttiSumea && LinssiOhjain.Rekisteri?.Auki == null && ElavaKartta.Instanssi == null;
 

@@ -85,6 +85,10 @@ namespace Matkakirja.Natiivi
             /// <summary>Löydös 125: nimiön asu viimeksi asetettuna (muste, reuna, pohja, harvennus px), jottei tyyli likaannu turhaan.</summary>
             public Color Muste;
             public float Reuna = -1f, ReunaLeveys = -1f, Pohja = -1f, Harvennus;
+            /// <summary>Elävä kartta, kohta 2: musteen jälki (löytämätön), pääkohteen hehku ja edellinen löydetty-tila (löydön käyrä).</summary>
+            public VisualElement Jalki, Hehku;
+            public bool? Loydetty;
+            public string JaljenId;
         }
 
         // Löydös 125: nimiön musteet (css/styles.css .nostosym-nimio, NOSTOSYM_TASO1_MUSTE, .nostosym-nimio-meri) peitot
@@ -121,8 +125,8 @@ namespace Matkakirja.Natiivi
 
         // Web js/pallolauta/nostot.js:398 NOSTON_MITTA (8,5 / 11), fokusnosto-symbolit.js NOSTOSYM_NIMIO_KOKO 11,
         // NOSTOSYM_MINI_RUUTU 7,4, NOSTOSYM_PISTE_R 3,4, NOSTOSYM_NIMIO_X 8,9, NOSTOSYM_NIMIO_Y 0,36 × 11,
-        // NOSTOSYM_KUVAMERKIN_KERROIN 1,6, NOSTON_TASO1_KERROIN 1,3, kaupunki 11,5 / 8,5; tyyppimerkin kerroin 4
-        // NostoSaannot.KuvamerkkiKaytossa (löydös 125).
+        // NOSTOSYM_KUVAMERKIN_KERROIN 1,6, NOSTON_TASO1_KERROIN 1,3, kaupunki 11,5 / 8,5; tyyppimerkin kerroin 2,5
+        // (0,7-kokoisena 4:ään asti) NostoSaannot.KuvamerkkiKaytossa / KuvamerkkiPieni (löydökset 125 ja 155).
         const float NostonMitta = 8.5f / 11f, NimioK = 11f, MiniRuutu = 7.4f, NimioX = 8.9f, NimioY = 0.36f * 11f,
             KuvamerkinKerroin = 1.6f, Taso1Kerroin = 1.3f, KaupunginKerroin = 11.5f / 8.5f,
             NimioMerkkeja = 18f, Nousu = 0.891f, Hystereesi = 6f;
@@ -199,6 +203,90 @@ namespace Matkakirja.Natiivi
         {
             sallittu = sallitaan;
             Paivita();
+        }
+
+        // ELÄVÄ KARTTA, KOHTA 2 (build 20): kokoluokka ja löydetty-tila tulevat NostoKerros.Nosto-kentistä (Natiiviseppä), joihin
+        // Linssisepän ElavaHerays kytkee Pelikoodarin musteen; jäljet, hehku ja löydön käyrä MusteJaljetista (Linssiseppä).
+        /// <summary>Kokoluokan kerroin suhteessa kohteeseen (pääkohde 1,0 : kohde 0,67 : pieni 0,44; kohde = nykyinen koko).</summary>
+        static float LuokanKerroin(int luokka) =>
+            luokka == NostoKerros.MusteLuokka.Paakohde ? 1f / 0.67f : luokka == NostoKerros.MusteLuokka.Pieni ? 0.44f / 0.67f : 1f;
+
+        /// <summary>Löytämätön nosto: himmeä musteen jälki ilman nimeä (MusteJalki.JaljenPeitto 0,5).</summary>
+        const float LoytamatonPeitto = 0.5f, JaljenKoko = 1.35f, HehkunKoko = 2.6f, LoytoS = 0.3f;
+
+        /// <summary>
+        /// Elävä kartta, kohta 2: löytämätön = Linssisepän musteen jälki (MusteJaljet.Hae, muunnelman kierto ja peilaus) peitolla
+        /// 0,5 symbolin tilalla; löydetty = täysi merkki, ja löydön hetkellä käyrä MusteJaljet.Loyto (0,3 s, mittakaava ja peitto);
+        /// pääkohteella staattinen kultainen hehku merkin alla. Tyylit kirjoitetaan vain muutoksessa (lepopiirto).
+        /// </summary>
+        void AsetaMuste(Merkki m, NostoKerros.Nosto s, bool loydetty, bool ryhma, float ruutuPx)
+        {
+            bool loyto = m.Loydetty == false && loydetty && m.JaljenId == s.Id;
+            m.Loydetty = loydetty;
+            m.JaljenId = s.Id;
+            var jalki = loydetty || s.Taso == 1 ? null : MusteJaljet.Hae(s.Id); // löydös 155: taso 1 ilman jälkeä
+            if (jalki != null)
+            {
+                if (m.Jalki == null)
+                {
+                    m.Jalki = new VisualElement { pickingMode = PickingMode.Ignore };
+                    m.Jalki.AddToClassList("mk-nosto-merkki__jalki");
+                    m.El.Insert(0, m.Jalki);
+                }
+                int mu = MusteJaljet.Muunnelma(s.Id);
+                float koko = ruutuPx * JaljenKoko;
+                m.Jalki.style.backgroundImage = new StyleBackground(jalki);
+                m.Jalki.style.width = m.Jalki.style.height = koko;
+                m.Jalki.style.left = m.Jalki.style.top = (ruutuPx - koko) / 2f;
+                m.Jalki.style.rotate = new Rotate(new Angle(mu * 36f));
+                m.Jalki.style.scale = new Scale(new Vector2(mu % 2 == 0 ? 1f : -1f, 1f));
+                m.Jalki.style.display = DisplayStyle.Flex;
+            }
+            else if (m.Jalki != null) m.Jalki.style.display = DisplayStyle.None;
+            // Symboli piiloon jäljen ajaksi; ilman valmista poolia löytämätön on himmeä symboli.
+            if (m.Symboli != null) m.Symboli.style.display = jalki != null ? DisplayStyle.None : DisplayStyle.Flex;
+            float peitto = loydetty ? 1f : LoytamatonPeitto;
+            if (!loyto && !Mathf.Approximately(m.El.resolvedStyle.opacity, peitto)) m.El.style.opacity = peitto;
+            bool hehku = loydetty && !ryhma && s.Luokka == NostoKerros.MusteLuokka.Paakohde;
+            var hehkuTex = hehku ? MusteJaljet.Hehku() : null;
+            if (hehkuTex != null)
+            {
+                if (m.Hehku == null)
+                {
+                    m.Hehku = new VisualElement { pickingMode = PickingMode.Ignore };
+                    m.Hehku.AddToClassList("mk-nosto-merkki__hehku");
+                    m.Hehku.style.backgroundImage = new StyleBackground(hehkuTex);
+                    m.El.Insert(0, m.Hehku);
+                }
+                float koko = ruutuPx * HehkunKoko;
+                m.Hehku.style.width = m.Hehku.style.height = koko;
+                m.Hehku.style.left = m.Hehku.style.top = (ruutuPx - koko) / 2f;
+                m.Hehku.style.display = DisplayStyle.Flex;
+            }
+            else if (m.Hehku != null) m.Hehku.style.display = DisplayStyle.None;
+            if (loyto && !LinssiUi.VahennettyLiike()) AnimoiLoyto(m, s.Id);
+        }
+
+        /// <summary>Löydön käyrä (MusteJaljet.Loyto, 0,3 s): merkki kasvaa jousella ja peitto nousee; herättää ruudunpäivityksen.</summary>
+        static void AnimoiLoyto(Merkki m, string id)
+        {
+            float alku = Time.unscaledTime;
+            IVisualElementScheduledItem ajo = null;
+            ajo = m.El.schedule.Execute(() =>
+            {
+                float t = Time.unscaledTime - alku;
+                if (m.Id != id || t >= LoytoS)
+                {
+                    ajo.Pause();
+                    m.El.style.scale = StyleKeyword.Null;
+                    m.El.style.opacity = 1f;
+                    return;
+                }
+                Ruudunpaivitys.Herata(0.1f);
+                var (k, p) = MusteJaljet.Loyto(t);
+                m.El.style.scale = new Scale(new Vector2(k, k));
+                m.El.style.opacity = p;
+            }).Every(16);
         }
 
         void Kytke()
@@ -294,6 +382,7 @@ namespace Matkakirja.Natiivi
             int n = 0;
             bool viuhkaLoytyi = false;
             float kerroin = ZoomKerroin(k);
+            float korkeus = paneeli.visualTree.layout.height;
             foreach (var kasa in Aihemerkit ? Ryhmita(lista, pisteet) : Yksittain(lista.Count))
             {
                 var karki = kasa[0];
@@ -320,6 +409,9 @@ namespace Matkakirja.Natiivi
                 bool liikkuu = lepoKierto != null && !lepoKierto.Levossa;
                 m.El.style.translate = liikkuu ? new Translate(m.Piste.x, m.Piste.y)
                     : new Translate(Mathf.Round(m.Piste.x), Mathf.Round(m.Piste.y));
+                // Löydös 153: horisonttiusva peittää merkin kuten webin paperiusva GL-merkit.
+                float usva = korkeus > 0f ? Horisonttiusva.Peitto(m.Piste.y / korkeus) : 0f;
+                m.El.style.opacity = 1f - usva;
             }
             for (int i = n; i < merkit.Count; i++) merkit[i].El.style.display = DisplayStyle.None;
             if (viuhkanAvain != null && !viuhkaLoytyi) SuljeViuhka();
@@ -652,9 +744,17 @@ namespace Matkakirja.Natiivi
             bool kaupunki = s.Kaupunkimerkki;
             m.Taso1 = s.Taso == 1 && !ryhma;
             float oma = kaupunki ? KaupunginKerroin : m.Taso1 ? Taso1Kerroin : 1f;
+            // Elävä kartta, kohta 2: kokoluokka (ei kaupunkimerkkeihin eikä ryhmiin).
+            if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
+            bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
-            bool kuvamerkki = !ryhma && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
-            m.Ruutu = MiniRuutu * (m.Taso1 && kuvamerkki ? KuvamerkinKerroin : 1f);
+            // Löydös 155 (Linssiseppä, Fablen kuittaus): löytämätön taso 1 näkyy kuvamerkkinä (himmeänä, ilman nimeä) kuten
+            // webin maamerkki; tasot 2–3 ovat jälkiä.
+            bool kuvamerkki = !ryhma && (loydetty || s.Taso == 1) && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
+            // Ruudun kerroin (web nostot.js ruudunKerroin): ykköstason kuvamerkki 1,6, muu kuvamerkki 0,7 kertoimilla
+            // 2,5–4 (löydös 155), muuten 1.
+            m.Ruutu = MiniRuutu * (!kuvamerkki ? 1f : m.Taso1 ? KuvamerkinKerroin
+                : NostoSaannot.KuvamerkkiPieni(s.Taso, kerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
             string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);
@@ -680,7 +780,8 @@ namespace Matkakirja.Natiivi
             }
             // Meren nimiö (web NOSTOSYM_NIMIO_ASUT.meri): lyhennys, sitten versaali ja harvennus 0,28 em.
             bool meri = !ryhma && NostoSaannot.OnMerenNimio(s.Laji);
-            string nimi = nimio ?? Lyhenna(s.Nimio ?? "");
+            string nimi = loydetty ? nimio ?? Lyhenna(s.Nimio ?? "") : ""; // löytämätön ilman nimeä
+            AsetaMuste(m, s, loydetty, ryhma, ruutuPx);
             if (meri) nimi = nimi.ToUpperInvariant();
             if (m.Nimio.text != nimi) m.Nimio.text = nimi;
             m.Nimio.style.display = nimi.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;

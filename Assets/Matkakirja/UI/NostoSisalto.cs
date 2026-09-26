@@ -662,13 +662,17 @@ namespace Matkakirja.Natiivi
             string viite = T(d, "viite");
             var kappaleet = Kappalejako.Jaa(T(d, "teksti"));
             if (!string.IsNullOrEmpty(viite)) kappaleet.Add("Lähde: " + viite);
-            return new Nosto
+            var n = new Nosto
             {
                 Laji = NostoLaji.Salaisuus, Id = id, Iso = T(d, "maa") ?? T(d, "$maa"), Luokka = "MAAKUNNAN SALAISUUS",
                 Symboli = T(d, "aihe") ?? "historia",
                 Otsikko = T(d, "nimi"), Meta = T(d, "maakuntaNimi"), Ingressi = T(d, "lyhyt") ?? T(d, "nappi"),
                 Teksti = string.Join("\n\n", kappaleet),
             };
+            // Löydös 158: kortin kuva kentästä kuva (yksi tai lista), varana pikkukuva (ämpäriosoite).
+            Kuvat(n, MiniJson.Kentta(d, "kuva"), "osoite");
+            if (n.Kuvat.Count == 0 && T(d, "pikkukuva") is string pk && pk.Length > 0) n.Kuvat.Add(new NostoKuva { Lahde = pk });
+            return n;
         }
 
         /// <summary>Maakunnan ("ISO:tunnus") salaisuus-noston id ja nimi kokoelmasta maakuntasalaisuudet, tai null.</summary>

@@ -3,7 +3,8 @@
 // piirron alku, kesto ja viivan pituus (TEXCOORD2). _Aika = kohtauksen aika (s); piirretty osuus kulkee pehmeästi
 // (smootherstep, sama kuin ElavaKayrat.Pehmea), ja märkä muste tummenee kynän kärjessä. Paksuus ruutupisteinä.
 // ZTest Always: viiva on vain 1,5 km pinnan yllä, jotta kallistus ei siirrä sitä maastosta (ei syvyyskilpaa vuorilla);
-// kohtauksen viivat ovat aina pallon näkyvällä puolella.
+// kohtauksen viivat ovat aina pallon näkyvällä puolella. Koko pallon viivat (ElavaMatka: kuljettu reitti) asettavat
+// _Keskus = (maan keskipiste maailmassa, 1), jolloin horisontin taakse jäävä osa häipyy (w = 0: ei rajausta).
 Shader "Matkakirja/Linssit/Kynaviiva"
 {
     Properties
@@ -14,6 +15,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
         _Aika("Kohtauksen aika (s)", Float) = 0
         _Karki("Märän kärjen pituus (astetta)", Float) = 0.08
         _Peitto("Peitto", Range(0, 1)) = 1
+        _Keskus("Maan keskipiste (maailma), w = 1: takapuoli pois", Vector) = (0, 0, 0, 0)
     }
     SubShader
     {
@@ -31,6 +33,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Assets/Matkakirja/Shaders/Horisonttiusva.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _BaseColor;
@@ -39,10 +42,11 @@ Shader "Matkakirja/Linssit/Kynaviiva"
                 float _Aika;
                 float _Karki;
                 half _Peitto;
+                float4 _Keskus;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float3 seuraava : TEXCOORD0; float2 puoli : TEXCOORD1; float4 piirto : TEXCOORD2; };
-            struct Vali { float4 paikka : SV_POSITION; float matka : TEXCOORD0; float reuna : TEXCOORD1; float3 piirto : TEXCOORD2; };
+            struct Vali { float4 paikka : SV_POSITION; float matka : TEXCOORD0; float reuna : TEXCOORD1; float3 piirto : TEXCOORD2; float horisontti : TEXCOORD3; float usvaY : TEXCOORD4; };
 
             Vali vert(Syote i)
             {
@@ -59,9 +63,13 @@ Shader "Matkakirja/Linssit/Kynaviiva"
                 float px = 0.5 * _Paksuus * _Kerroin + 0.75;
                 a.xy += normaali * i.puoli.x * px * 2.0 / ruutu * a.w;
                 o.paikka = a;
+                o.usvaY = UsvaYlhaalta(a);   // horisonttiusva (löydös 159)
                 o.matka = i.puoli.y;
                 o.reuna = i.puoli.x * px;
                 o.piirto = i.piirto.xyz;
+                // Horisontti: pinnan normaalin ja kameran suunnan kosini (Rajaviivan tapaan); > 0 = näkyvällä puolella.
+                float3 maailma = TransformObjectToWorld(i.paikka.xyz);
+                o.horisontti = _Keskus.w > 0.5 ? dot(normalize(maailma - _Keskus.xyz), normalize(_WorldSpaceCameraPos - maailma)) : 1;
                 return o;
             }
 
@@ -85,6 +93,8 @@ Shader "Matkakirja/Linssit/Kynaviiva"
                 alfa *= saturate(px - abs(i.reuna));
                 // Käsin vedetyn viivan pieni vaihtelu (musteen määrä) matkan mukaan.
                 alfa *= 0.86 + 0.14 * Kohina(i.matka * 55.0);
+                alfa *= saturate((i.horisontti - 0.01) * 40.0);
+                alfa *= UsvaNakyvyys(i.usvaY);
                 // Märkä muste kärjessä: tummempi, kuivuu 0,08°:n matkalla (vain piirron aikana).
                 half3 vari = _BaseColor.rgb;
                 float mark = u < 1 ? exp(-max(0, -yli) / max(_Karki, 1e-4)) : 0;

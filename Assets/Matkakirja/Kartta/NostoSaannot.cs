@@ -268,14 +268,28 @@ namespace Matkakirja
             return laji == null && kategoria == "luonto" ? Kuvamerkit["vuori"] : null;
         }
 
-        /// <summary>NOSTOJEN_TYYPPIMERKIN_KERROIN (js/pallolauta/nostot.js:498).</summary>
-        public const double TyyppimerkinKerroin = 4.0;
+        /// <summary>
+        /// NOSTOJEN_TYYPPIMERKIN_KERROIN (js/pallolauta/nostot.js). Löydös 155 (Fable 26.9.2026 klo 09.0x): 4 → 2,5,
+        /// ja kertoimilla 2,5–4 (<see cref="TyyppimerkinTaysiKerroin"/>) merkki on <see cref="TyyppimerkinPieniKoko"/>
+        /// kertaa tavallisesta; web ja natiivi samassa erässä.
+        /// </summary>
+        public const double TyyppimerkinKerroin = 2.5;
+
+        /// <summary>NOSTOJEN_TYYPPIMERKIN_TAYSI_KERROIN: tästä kertoimesta kuvamerkki on täysikokoinen (löydös 155).</summary>
+        public const double TyyppimerkinTaysiKerroin = 4.0;
+
+        /// <summary>NOSTOJEN_TYYPPIMERKIN_PIENI: kuvamerkin ruudun kerroin kynnyksen ja täyden koon välissä (löydös 155).</summary>
+        public const float TyyppimerkinPieniKoko = 0.7f;
 
         /// <summary>
-        /// Kuvamerkki käytössä (nostot.js:2020): ykköstasolla aina, muuten kartan kertoimesta 4 alkaen
-        /// (tyyppimerkitKaytossa). Kutsuja tarkistaa lisäksi, että tyypillä on merkki (<see cref="Kuvamerkki"/>).
+        /// Kuvamerkki käytössä (web nostot.js tyyppimerkitKaytossa): ykköstasolla aina, muuten kartan kertoimesta 2,5 alkaen.
+        /// Kutsuja tarkistaa lisäksi, että tyypillä on merkki (<see cref="Kuvamerkki"/>).
         /// </summary>
         public static bool KuvamerkkiKaytossa(int taso, double kerroin) => taso == 1 || kerroin >= TyyppimerkinKerroin;
+
+        /// <summary>Onko ykköstason ulkopuolinen kuvamerkki pienennetty (web tyyppimerkkiPieni, 2,5 ≤ kerroin &lt; 4).</summary>
+        public static bool KuvamerkkiPieni(int taso, double kerroin) =>
+            taso != 1 && kerroin >= TyyppimerkinKerroin && kerroin < TyyppimerkinTaysiKerroin;
 
         /// <summary>
         /// Kaupunkimerkki (web datumin kaupunki = kohde.tyyppi === 'kaupunki', nostot.js merkinKerroin: nimiö 11,5 px):

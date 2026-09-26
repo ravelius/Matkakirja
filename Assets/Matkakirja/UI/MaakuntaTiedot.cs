@@ -2,7 +2,7 @@
 // käsikirjoitus 8,0–11,5 s "Maakunta herää"). Kartussin maakuntarivi ja kartan käsialanimi tarvitsevat avaimella
 // "ISO:tunnus" (sama kuin Maakunnat.cs ja KarttaMuste) kolme asiaa:
 //   Nimi        MAAKUNTIEN_NIMET (moduulit/js/karttatyokalu-maakunnat.json; puuttuessa tunnus)
-//   Pikkukuva   luonnehdinnan kuva[0].pikku, varana .osoite (löydös 115, sama sääntö kuin Maakunnat.PaivitaLuonnehdinta);
+//   Pikkukuva   luonnehdinnan pikkukuva (löydös 158, ämpäriosoite), varana kuva[0].pikku / .osoite (löydös 115, sama sääntö kuin Maakunnat.PaivitaLuonnehdinta);
 //               puuttuessa null = ei kuvaa
 //   Paikka      maakunnan keskipiste nimen paikaksi: Natiivisepän Maakuntajako-alueen KeskusLat/KeskusLon, kun
 //               rajapinta kytketään (Keskipiste); siihen asti vara NostoSisalto.MaakunnanPiste (karttavalojen mediaani)
@@ -81,11 +81,13 @@ namespace Matkakirja.Natiivi
             return MiniJson.Kentta(Ob(MiniJson.Kentta(nimet, iso ?? "")), tunnus ?? "") as string ?? tunnus ?? "";
         }
 
-        /// <summary>Löydös 115: luonnehdinnan ensimmäisen kuvan pikku, varana osoite; null = ei kuvaa.</summary>
+        /// <summary>Löydös 158: luonnehdinnan pikkukuva; varana ensimmäisen kuvan pikku tai osoite (115); null = ei kuvaa.</summary>
         public static string Pikkukuva(string avain)
         {
             var (iso, tunnus) = Jaa(avain);
             var o = Ob(MiniJson.Kentta(Ob(MiniJson.Kentta(luonnehdinnat, iso ?? "")), tunnus ?? ""));
+            string oma = MiniJson.Teksti(o, "pikkukuva");
+            if (!string.IsNullOrEmpty(oma)) return oma;
             var k = MiniJson.Kentta(o, "kuva");
             var eka = Ob(k) ?? (k is List<object> lista && lista.Count > 0 ? Ob(lista[0]) : null);
             if (eka == null) return null;
