@@ -69,3 +69,7 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   Käännetty yhdessä natiiviseppa/arkkityypit-160:n kanssa (2bd98f51), ei poikkeuksia. TODENNETTU Kreikassa 18.2x (aja 38.9 22.0 1.3 1.5,
   kallista 50): läiskät pois, napautus mallin kohdalle avaa kortin; kuvasarja natiivi-ui-loydos160-arkkityypit/. (Amsterdamissa instansseja
   0 kaarilla 0,7–0,15.) Merge-pyyntö 1.0.25; napautus säilyy (Visibility vain m.Symbolille).
+- 18.4x Codexin pulun karttaväistö 303a32ec (PR ravelius/Matkakirja-natiivi#1, ei mergetty): arvioitu PASS + 1 huomio
+  (Sano blink-eleellä ei palauta pulua väistöstä; ehdotus LopetaKarttavaisto Sanoon + KartanEleAlkoi palaa kun PuluPuhuu).
+  Kuvasarjat proto-3d/lokit/natiivi-ui-pulu-karttavaisto/. Raportti Fablelle+Natiivisepälle. iPad Pro 11:ssä nyt tämä asennus.
+  Oppi: vähennetty liike simulaattorissa: simctl spawn <UDID> defaults write app.matkakirja.proto3d matkakirja-kartan-liike -string 0.
