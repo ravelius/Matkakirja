@@ -90,3 +90,13 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
   käynnistystä) + Esilataajan yhteinen haku (kaupungit.json 4×). ODOTTAA Fablen päätöstä.
 - Worktreet: proto-pelikoodari-{elava,humina,mittarit} (mergeämättömät / junassa, poista kun masterissa), web
   pelikoodari-{kehyksen-hinta-cpu,loydos135-web,musiikkisuunnitelma} (PR:t #3250/#3274/#3272 auki).
+
+## 10. JONO build 19:ään (Fable 26.9. klo 04.5x, hyväksytty)
+1. uusin.json-versiotarkistus taustalle (ei estä pelaamista, nyt 1 259 ms käynnistyksessä). TARKISTA ENSIN Siirtosepän
+   taustapäivitys vaihe 2 (`siirtoseppa/paketti-paivitys` 99f049ec, merge-pyynnössä), ettei synny kahta mekanismia; jos se
+   kattaa tarkistuksen, vain kytkentä.
+2. Yhteinen haku Esilataajaan: sama osoite rinnakkain = yksi haku (kaupungit.json 4× → 1×, karttavalot/maarajat/reitit 2×).
+3. Käynnistyksestä pois kohtien 3 ja 6 sisältö: kaupunkilehdet.json (16 Mt) vasta valitun kaupungin lennolla; linssien ~20
+   datatiedostoa ja Ihmisen matka II:n kuvat vasta linssiä avattaessa (koko kaari pienenä heti, kaksi pysäkkiä täysinä).
+Mittaus: `SIMCTL_CHILD_MATKAKIRJA_HAUT=1 Peli-testit/verkko-savuke.sh …` (haara verkko-raja) → verkko-haut.jsonl; vertailu
+lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
