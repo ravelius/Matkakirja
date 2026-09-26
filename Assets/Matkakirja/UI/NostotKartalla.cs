@@ -216,7 +216,7 @@ namespace Matkakirja.Natiivi
             luokka == NostoKerros.MusteLuokka.Paakohde ? 1f / 0.67f : luokka == NostoKerros.MusteLuokka.Pieni ? 0.44f / 0.67f : 1f;
 
         /// <summary>Löytämätön nosto: himmeä musteen jälki ilman nimeä (MusteJalki.JaljenPeitto 0,5).</summary>
-        const float LoytamatonPeitto = 0.5f, HehkunKoko = 2.6f, LoytoS = 0.3f;
+        const float LoytamatonPeitto = 1f, HehkunKoko = 2.6f, LoytoS = 0.3f;
 
         /// <summary>
         /// Elävä kartta, kohta 2: löytämätön = lajin merkki peitolla 0,5 (löydös 174: ei enää musteläikkää); löydetty = täysi merkki, ja löydön hetkellä käyrä MusteJaljet.Loyto (0,3 s, mittakaava ja peitto);
@@ -228,7 +228,8 @@ namespace Matkakirja.Natiivi
             m.Loydetty = loydetty;
             m.JaljenId = s.Id;
             // Löydös 174 (omistaja 19.5x, P1): musteläikkää ei piirretä missään zoomissa; löytämätön nosto on lajin kuvamerkki
-            // (tai minimerkki / kaupunkimerkki, kun lajilla ei ole kuvaa) himmeänä. Kynnyksen yllä 3D-malli (Symbolimallit).
+            // (tai minimerkki / kaupunkimerkki, kun lajilla ei ole kuvaa) TÄYSIN mustein kuten tuotantowebissä (Fable 26.9.:
+            // löytösumu vain lipulla, omistaja 21.9.). 3D-malli Symbolimallit.OnMalli-ehdoin (Natiivisepän 175).
             if (m.Jalki != null) m.Jalki.style.display = DisplayStyle.None;
             if (m.Symboli != null) m.Symboli.style.display = DisplayStyle.Flex;
             float peitto = loydetty ? 1f : LoytamatonPeitto;
@@ -791,14 +792,15 @@ namespace Matkakirja.Natiivi
             if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
             bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
-            // Löydös 155: löytämätön taso 1 näkyy kuvamerkkinä (himmeänä, ilman nimeä) kuten webin maamerkki. Löydös 174
-            // (omistaja 19.5x): lajin kuvamerkki KAIKILLE tasoille ja kaikilla zoomeilla (ei webin kerroin 2,5 -kynnystä eikä
-            // läikkää); ilman lajin kuvaa minimerkki (huuto, eläin, hetki, ihme) tai kaupunkimerkki kuten ennen.
+            // Löydös 155: taso 1 aina kuvamerkkinä kuten webin maamerkki. Löydös 174 (omistaja 19.5x, web on malli 26.9.): lajin
+            // kuvamerkki KAIKILLE tasoille ilman läikkää — kertoimesta 2,5 webin kuvamerkkinä, sen alla pienenä minikuvakkeena;
+            // ilman lajin kuvaa minimerkki (ihme) tai kaupunkimerkki kuten ennen.
             bool kuvamerkki = !ryhma && Kuva(s) != null;
-            // Ruudun kerroin: ykköstason kuvamerkki 1,6; muu kuvamerkki 0,85 kertoimeen 4 asti (löydös 155:n pieni koko myös
-            // kynnyksen alla, 174), täysi kerroimesta 4; minimerkki 1.
+            // Ruudun kerroin webin koossa (Pelikoodarin mittaus 26.9., 390 × 844): ykköstason kuvamerkki 1,6 (24 → 47 px), muu
+            // kuvamerkki 0,85 kertoimilla 2,5–4 (22 px) ja täysi kertoimesta 4 (30 px). Kertoimen 2,5 alla tasot 2–3 ovat lajin
+            // minikuvake (sama kuvamerkki, mitta skaalautuu kertoimen mukana ~12–16 px): webin piste ei käy (Fable 26.9.).
             m.Ruutu = MiniRuutu * (!kuvamerkki ? 1f : m.Taso1 ? KuvamerkinKerroin
-                : kerroin < NostoSaannot.TyyppimerkinTaysiKerroin ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
+                : NostoSaannot.KuvamerkkiPieni(s.Taso, kerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
             string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);
@@ -893,9 +895,23 @@ namespace Matkakirja.Natiivi
             if (kuva != null)
             {
                 alue.AddToClassList("mk-nosto-merkki__symboli--kuva");
-                Kuvat.Hae(NostoMerkit.KuvaJuuri + kuva, t => { if (t != null) alue.style.backgroundImage = new StyleBackground(t); });
+                Kuvat.Hae(NostoMerkit.KuvaJuuri + kuva, t =>
+                {
+                    if (t != null) { alue.style.backgroundImage = new StyleBackground(t); return; }
+                    // Löydös 174b: merkin kuva puuttuu paketista (uudet merkki-huuto/-elain/-hetki ennen vientiä) → minimerkki,
+                    // ei tyhjää ruutua.
+                    alue.RemoveFromClassList("mk-nosto-merkki__symboli--kuva");
+                    Minimerkki(alue, s);
+                });
                 return alue;
             }
+            Minimerkki(alue, s);
+            return alue;
+        }
+
+        /// <summary>Webin minimerkki (viivamerkki tai hehkupiste) symbolin sisään.</summary>
+        void Minimerkki(VisualElement alue, NostoKerros.Nosto s)
+        {
             string tunnus = s.Minimerkki;
             bool piste = NostoSaannot.OnPistemerkki(tunnus) || !NostoMerkit.Viivamerkit.ContainsKey(tunnus);
             alue.EnableInClassList("mk-nosto-merkki__symboli--piste", piste);
@@ -907,12 +923,11 @@ namespace Matkakirja.Natiivi
                 hehku.style.backgroundImage = new StyleBackground(NostoHehku.Kuva);
                 alue.Add(hehku);
                 alue.Add(Kuvio(NostoMerkit.PisteRengas, "mk-nosto-merkki__rengas"));
-                return alue;
+                return;
             }
             var (vahva, ohut) = NostoMerkit.Viivamerkit[tunnus];
             if (ohut != null) alue.Add(Kuvio(ohut, "mk-nosto-merkki__vektori-ohut"));
             alue.Add(Kuvio(vahva, "mk-nosto-merkki__vektori"));
-            return alue;
         }
 
         /// <summary>Minimerkin kuvio (viewBox −8 −8 16 16, täyttö), Hae asettaa koon ja paikan (mk-nosto-merkki__kuvio).</summary>
