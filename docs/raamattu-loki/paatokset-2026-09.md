@@ -7203,3 +7203,7 @@ Linssikatalogin X4-rivi lupasi kysymykset, toteutus puuttui.
 ## KORJAUS (PELIKOODARI): ASTRONAUTIN KAMERALLA ON JO 2 KYSYMYSTA KAIKILLA 64 KOHTEELLA (js/linssit/astronaut-kysymykset.js, satelliitti.js NAYTTAA PULUKORTISSA EHDOTUSPILLEREINA, EI MALLIKUTSUA) → YLEISTYSTA EI TARVITA; UUDET KOHTEET tools/astronaut/qa-<era>.json NYKYMUODOSSA (SISALTOKIRJURI), PELIKOODARI LAAJENTAA build-questions.mjs:N LUKEMAAN KAIKKI ERAT (WEB-PR KUN ERA 1 ON); NATIIVI SAMASTA TAULUSTA (26.9.2026 klo 18.24)
 
 Sisältökirjurin havainto koski aikajana.js:n pulunLinssikysymyksiä, eri mekanismi.
+
+## CODEX: PULUN KARTTAVAISTO NATIIVIIN LAITEARVIOON (26.9.2026 klo 18.29)
+
+Codex toimitti Pulun karttavaiston Unity-natiiviin (haara proto/natiivi-ui/pulu-karttavaisto-20260926, 303a32ec, PR ravelius/Matkakirja-natiivi#1, ei mergetty; kaanna.sh 321/321). Fable valitti Natiivi-UI:lle katselmointiin ja simulaattoriarvioon (veto, nipistys, uusi veto kesken paluun, puhe-/dialogikeskeytys, reduced motion, kurkistuksen rajaus iPad, 5 paluuta) ja Natiivisepalle: PASSin jalkeen 1.0.25-junaan ja laitemittaus; merge-, asennus- ja laitetila ilmoitetaan erikseen. Fablen checkout synkattu mainiin (tarkista-tyotilat.sh #3337 mukana).
