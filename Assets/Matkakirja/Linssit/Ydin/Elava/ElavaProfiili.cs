@@ -39,7 +39,7 @@ namespace Matkakirja.Linssit.Elava
 
         /// <summary>
         /// Saapuminen ≤ 5 s: huntu kuivuu 1,6 s:ssa, kynä vetää joet ja rajat 0,4–2,5 s, maakunnat syttyvät 2,0–3,2 s,
-        /// nostot putoavat 2,6–3,8 s, aurinko pyyhkäisee 0,3–4,2 s, ja 4,3–4,8 s omat kerrokset häipyvät pelin pysyviin.
+        /// nostot putoavat 2,6–3,8 s, aurinko laskee ja nousee 0–4,2 s, ja 4,3–4,8 s omat kerrokset häipyvät pelin pysyviin.
         /// </summary>
         public static readonly ElavaProfiili Saapuminen = new ElavaProfiili
         {

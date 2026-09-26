@@ -208,6 +208,8 @@ namespace Matkakirja.Natiivi
             LinssienEsilataaja.Kytke(this, rekisteri);
             // Syntetisoidut tehosteet (ESILATAUSPOLITIIKKA kohta 1: efektiäänet ilman verkkoa) taustasäikeessä heti.
             tehosteet = LinssiTehosteet.Luo(transform);
+            // Elävä kartta: saapuminen uuteen maahan (≤ 5 s, ohitettava) ja aineiston esilataus taustalla.
+            ElavaKartta.KytkeSaapumiset(this);
             rekisteri.Vaihtui += _ =>
             {
                 bool nyt = rekisteri.EstaaKartan;
