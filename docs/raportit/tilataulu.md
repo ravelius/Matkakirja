@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 04:14 EEST
+**Päivitetty:** 2026-09-26 04:29 EEST
 
 ## 1) Sessiot
 
@@ -20,7 +20,7 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 50% | idle | PR #3155 |
 | Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 58% | running | Nollattu ja palannut käyntiin |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 48% | running | Nollattu ja palannut käyntiin (8 %) |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, 04.08: viikko 87 %, 5 h 20 %, swap 8,0 Gt, levy 130 Gt; juna: KÄÄNNETTY 6fd19114 03.48) |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, 04.27: viikko 88 %, 5 h 25 %, swap 7,9 Gt, levy 130 Gt; juna: KÄÄNNETTY 6fd19114 03.48, 99bf0fe5 odottaa niputusta|
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
