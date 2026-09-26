@@ -145,3 +145,11 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
   saapuminen-valimeri,loppu}-lyria.mp3. Lyria EI noudattanut kestoja (63/62/100/72 s) → lyhyet tunnukset leikataan hyväksynnän
   jälkeen. Työkalu: web-haara pelikoodari-musiikki-vaihe1 (ryhmä vaihe1 + lyria.mjs mkdir-korjaus) — tee PR kun omistaja
   kuunnellut. Ajo: gh workflow run generoi-musiikki.yml -R ravelius/Matkakirja --ref <haara> -f raidat=vaihe1 -f moottori=lyria.
+
+## 16. Lisäys 26.9. klo 07.2x
+- Junassa: lehdet-perassa 0bdb771b (+ Natiivi-UI kortti-lehdet). Elävän kartan ketju todennettu tuotantodatalla v146/v149
+  (lokit/elava-kartta-v146, -v149): 14 GRC-maakuntaa, kokoluokat datasta, Ayion Oros 1/1 → salaisuus "Athos-jättiläinen" näkyviin.
+- `pelikoodari/lehti-kaupungeittain` 3779473c (skeema 1.48, v151) → merge-pyyntö: UiSisalto.LataaLehti(id) pelaajan kaupungille,
+  lennon kohteelle, ennakoiduille ja avatulle kortille; 404 → koko kokoelma kerran. Kylmä: ateena 81 kt lennolla, aloitusverho 4 052 ms.
+- Havainto Siirtosepälle: PakettiPaivitys lataa v151:n kokonaan taustalla (266 lehteä + koko 16 Mt) → kysytty rajausta.
+- Musiikki vaihe 1: odottaa omistajan kuuntelua (Fablen kautta), PR työkalumuutoksista kun hyväksytty.
