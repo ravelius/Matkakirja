@@ -18,7 +18,7 @@ namespace Matkakirja
     /// 0,3 s:ssa, ja aika jatkaa siitä, mihin se jäi.
     ///
     /// Varjostimet lukevat globaalit _SykeAika (Unityn _Time.y:n tilalla) ja _SykeVoima (0 = keskiasento); C# lukee
-    /// <see cref="Aika"/> ja <see cref="Voima"/>. Kytkin: <see cref="Lampopaatos.SykeJaatyy"/> (oletus jatkuva kehyksen hinta -erästä alkaen) ja
+    /// <see cref="Aika"/> ja <see cref="Voima"/>. Kytkin: <see cref="Lampopaatos.SykeJaatyy"/> (oletus jäätyy, Fable 26.9.; kehyksen hinta -erässä hetken jatkuva) ja
     /// ajossa <see cref="Jaatyy"/> (komento syke jaatyy|jatkuva|tila).
     /// </summary>
     public static class Joutosyke
