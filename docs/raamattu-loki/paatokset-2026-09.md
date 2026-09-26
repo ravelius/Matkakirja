@@ -7707,3 +7707,7 @@ Omistaja 01.1x ("Nyt"): ylhaalta-175 (69a198a7 + patch) yhdistetaan juna/b13:een
 ## OMISTAJA: XAI ARA KYTKETAAN HETI (PELIKOODARI, AVAUSKORTTI TAUOLLE); 177-KORTTIKORJAUS cc33ba3b (27.9.2026 klo 01.04)
 
 Omistaja 01.2x "Kytke heti": xAI Grok TTS (ara) -kytkenta striimiluentaan tehdaan NYT — Pelikoodari keskeyttaa avauskortin (haara pushataan keskeneraisena), worker-reitti + kytkin + varapolku (gpt-4o-mini-tts), avain workerin/CI:n salaisuuksiin, mittaus, PR junaan. Natiivi-UI 01.1x: 177-epaily piti osittain — valikon Uusi peli sulki nostokortin, testikomento uusi-peli ei; korjaus MatkaAlkoi-tapahtumalla natiivi-ui/uusi-peli-kortti-177 cc33ba3b merge-pyynnossa Natiivisepalla ennen 1.0.27; laitetodennukset 174/173/169/170 kaynnissa ba90668f:lla.
+
+## OMISTAJA: KEHITTAJAVALIKKOON XAI-AANEN VALINTA STRIIMILLE; PELIKOODARI 93 % → NOLLAUS ENNEN XAI-TYOTA (27.9.2026 klo 01.05)
+
+Omistaja 01.2x: kehittajavalikkoon (web + natiivi) aanen valinta xAI:n aanivaihtoehdoista striimiluentaa varten (oletus ara); kuuluu xAI-kytkentaeraan. Postivahti: Pelikoodari 93 % → Fable kaski luovutuksen (avauskortti-haara pushataan keskeneraisena, xAI-suunnitelma luovutukseen) ja clear_session self; xAI-kytkenta tehdaan tuoreella kontekstilla heti nollauksen jalkeen. Linssiseppa 81 % (nollaus erikoismallikuvien jalkeen), Sisaltokirjuri 81 % (nollaus maajuttu-PR:n jalkeen).
