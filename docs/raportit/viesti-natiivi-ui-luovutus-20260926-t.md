@@ -31,3 +31,12 @@ ennen jokaista käännöstä. Junavahti on tauolla (/tmp/matkakirja-juna-tauko),
 nostoikonien jälkeen, NostoIkoneita sisältää ne; UiNakymat.KartanKalusteet muuntaa paneelin laatikot ruudulle (+4 pt).
 Käännetty 7994e1df, todennettu iPhone 17:ssä (Brussel otsikon kohdalla: nimiö väistyy, piste jää). Kuvapari
 `proto-3d/lokit/natiivi-ui-loydos164/kuvapari-164-ennen-jalkeen.png`. Merge-pyyntö Natiivisepälle 15.36 (build 22).
+
+## Löydös 165 (omistaja 15.3x, maakuntavalitsin) — merge-pyynnössä
+Juurisyy: vihreä Gelderland oli maakuntavalitsimen valinta (paletin oma väri, 157:n peitto 0,45), joka jäi kartalle
+paneelin sulkeuduttua ja palasi PlayerPrefsistä käynnistyksessä; web ei värjää karttaa valinnasta. Erikseen: Amsterdamin
+fokusvirran "Loevesteinin arkku" (nosto:kirja-arkku) on paikannettu Gelderlandiin → sen avaus herättää Gelderlandin (data).
+Korjaus `natiivi-ui/maakunta-korostus` de3fed4c (juna/b13 45398ff8): Maakunnat.Nakyvissa (Karttaselite asettaa), MaakunnatSilta
+korostaa vain näkyvissä ja palauttaa oletustilan (koskee Natiivisepän tiedostoa). Käännetty 3d972a0f, todennettu.
+Kuvat `proto-3d/lokit/natiivi-ui-loydos165/` (kuvasarja-165.png, kuvasarja-165-korjaus.png). Merge-pyyntö 15.53.
+Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testitila).
