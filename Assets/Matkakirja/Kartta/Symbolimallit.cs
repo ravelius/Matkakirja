@@ -191,9 +191,7 @@ namespace Matkakirja
         static Mesh Delfoi()
         {
             var r = new Rakentaja();
-            // Parnassos takana: pyöreähkö huipukas vuori (renkaat alhaalta ylös, huippu pisteenä), kiven sävyin.
-            r.Rengaskallio(new Vector3(-0.02f, 0f, 0.26f), new[] { (0f, 0.88f, 0.4f), (0.12f, 0.7f, 0.3f), (0.26f, 0.42f, 0.18f), (0.36f, 0.16f, 0.08f) },
-                0.42f, 14, 3, Varjo, Pinta);
+            // Ei Parnassosta (Fable: maasto näyttää vuoren itse, tumma möykky hallitsi): temppeli ja tholos ovat mallin ydin.
             // Pengerrys: matala pyöristetty tasanne.
             r.Rengaskallio(new Vector3(0.04f, 0f, -0.1f), new[] { (0f, 0.62f, 0.4f), (0.045f, 0.58f, 0.36f) }, float.NaN, 12, 8, Pinta, Pinta);
             // Oliivipuita alarinteellä (sage lämpimämpänä oliivina, Fable/omistaja: ei sinistä).
@@ -235,11 +233,11 @@ namespace Matkakirja
         {
             var r = new Rakentaja();
             // Kolme pyöreää, pullistuvaa kalliopilaria (renkaat, kupolimainen laki), luostari korkeimman päällä.
-            Pilari(r, new Vector3(-0.22f, 0f, 0.07f), 0.13f, 0.4f, 11);
-            Pilari(r, new Vector3(0.14f, 0f, -0.08f), 0.16f, 0.52f, 5);
-            Pilari(r, new Vector3(0.05f, 0f, 0.27f), 0.1f, 0.3f, 3);
-            // Suuri Meteoron: päärakennus, punainen harjakatto, kupoli ja pieni kellotorni.
-            var y = new Vector3(0.14f, 0.53f, -0.08f);
+            Pilari(r, new Vector3(-0.22f, 0f, 0.07f), 0.13f, 0.4f, 11, false);
+            Pilari(r, new Vector3(0.14f, 0f, -0.08f), 0.16f, 0.52f, 5, true);
+            Pilari(r, new Vector3(0.05f, 0f, 0.27f), 0.1f, 0.3f, 3, false);
+            // Suuri Meteoron korkeimman pilarin tasaisella laella: päärakennus, punainen harjakatto, kupoli ja kellotorni.
+            var y = new Vector3(0.14f, 0.52f * 0.95f, -0.08f);
             r.Laatikko(y, new Vector3(0.16f, 0.055f, 0.1f), Valo, Valo);
             r.Harja(y + Vector3.up * 0.055f, new Vector3(0.16f, 0.04f, 0.1f), Terrakotta, Valo);
             r.Pylvas(y + new Vector3(-0.05f, 0.055f, 0f), 0.03f, 0.04f, 10, Valo);
@@ -248,12 +246,15 @@ namespace Matkakirja
             return r.Verkko("Meteora");
         }
 
-        /// <summary>Meteoran kalliopilari: hieman pullistuva, kupolimainen laki, pystysuuntaiset uurteet kohinasta.</summary>
-        static void Pilari(Rakentaja r, Vector3 p, float sade, float h, int siemen)
+        /// <summary>
+        /// Meteoran kalliopilari: 7 fasettia vahvalla säteen vaihtelulla (pystysärmät, Fable: ei sileitä kapseleita), hieman
+        /// pullistuva; laki pyöristetty tai tasainen (luostari).
+        /// </summary>
+        static void Pilari(Rakentaja r, Vector3 p, float sade, float h, int siemen, bool tasainen)
         {
             float d = sade * 2f;
-            r.Rengaskallio(p, new[] { (0f, d * 1.05f, d), (h * 0.35f, d * 1.12f, d * 1.06f), (h * 0.75f, d * 1.0f, d * 0.95f), (h * 0.95f, d * 0.8f, d * 0.76f) },
-                h * 1.02f, 12, siemen, Kivi, Pinta);
+            r.Rengaskallio(p, new[] { (0f, d * 1.05f, d), (h * 0.35f, d * 1.1f, d * 1.04f), (h * 0.75f, d * 1.0f, d * 0.95f), (h * 0.95f, d * 0.84f, d * 0.8f) },
+                tasainen ? float.NaN : h * 1.02f, 7, siemen, Kivi, Pinta, 0.5f);
         }
 
         /// <summary>Tasavarjostettu verkko (kärjet tahkoittain, normaali tahkosta), kärkivärit lineaarisina.</summary>
@@ -353,11 +354,12 @@ namespace Matkakirja
             /// alhaalta ylös samalla kulmajaolla ja toistettavalla säteen kohinalla (siemen). huippu = lakipisteen korkeus
             /// (NaN = tasainen laki ylimmän renkaan keskipisteestä). Sivut sivuvärillä, laki kattovärillä.
             /// </summary>
-            public void Rengaskallio(Vector3 p, (float h, float dx, float dz)[] renkaat, float huippu, int k, int siemen, Color sivu, Color katto)
+            public void Rengaskallio(Vector3 p, (float h, float dx, float dz)[] renkaat, float huippu, int k, int siemen, Color sivu, Color katto,
+                float vaihtelu = 0.2f)
             {
                 var sat = new System.Random(siemen);
                 var kohina = new float[k];
-                for (int i = 0; i < k; i++) kohina[i] = 0.9f + 0.2f * (float)sat.NextDouble();
+                for (int i = 0; i < k; i++) kohina[i] = 1f - vaihtelu * 0.5f + vaihtelu * (float)sat.NextDouble();
                 var pisteet = new Vector3[renkaat.Length, k];
                 for (int j = 0; j < renkaat.Length; j++)
                     for (int i = 0; i < k; i++)
