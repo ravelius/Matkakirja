@@ -18,14 +18,15 @@ HUOLTOKOMENNOT); docs/roolitus.md "Julkaisusäännöt"; tämä luovutus; edellin
   `gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true -f ordinaali=19 -f proto_ref=<PASS tai master-SHA>`.
   Peru ensin PR-savukkeet (sama ajuri!), ilmoita Natiivisepälle alku ja loppu. Viennin jälkeen päivitä
   yömerkki Natiivisepän master-mergen SHA:ksi (työnkulku kirjoittaa merkkiin proto_refin).
-- Web mainissa v2251 asti (05.00): #3287 v2247, #3288 v2248, #3290 v2249 (KOR, maakunnat 138/138 valmiit), #3291 v2250, #3267 v2251. Raamattu synkattu #3262 asti.
+- Web mainissa v2258 asti (06.5x); aiemmin v2251 (05.00): #3287 v2247, #3288 v2248, #3290 v2249 (KOR, maakunnat 138/138 valmiit), #3291 v2250, #3267 v2251. Raamattu synkattu #3262 asti.
 
 ## Kesken (taustaketjut katoavat sessiosta — tarkista gh:lla)
 
 - **Siirtosepän pino:** #3267 on mainissa (v2251) → seuraavaksi #3269 (1.46) → #3285 (1.47), versionostolla,
   järjestyksessä; Siirtoseppä yhdistää mainin ennen kutakin (ilmoita sille jokaisen mergen jälkeen).
-- **Taustalla klo 05.1x:** #3292 mainissa v2252; #3269 (1.46) → #3293 (värit erä 12) jonossa
-  jono.sh:lla; #3294 (Fablen Raamattu-teksti, ei versionostoa) mergaa.sh:lla. Tarkista gh:lla.
+- **Klo 06.5x kaikki jono mainissa:** #3269 v2253, #3296 v2254, #3297 v2255, #3299 (ei nostoa), #3285 v2256,
+  juna #3300 v2257 (#3293), #3298 v2258 (paketti 1.48). Siirtosepän pino #3260–#3298 valmis. Ei taustaketjuja.
+- Opittu: pgrep -f "jono.sh N" osuu odottimen omaan komentoriviin → käytä ketjua peräkkäin tai hakasulkutemppua.
 - Ei jonossa (kukaan ei pyytänyt): #3250 #3272 #3274 #3275 #3278 #3280 #3281, Karttasepän vanhat
   #3102 #3105 #3108 #3117. #3206 punainen. pidossa.pysyva = 3081.
 
