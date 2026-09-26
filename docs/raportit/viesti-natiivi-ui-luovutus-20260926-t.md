@@ -104,3 +104,9 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   + huuto/elain/hetki (NATIIVISEPÄN TIEDOSTO, kerro merge-pyynnössä), Kartta-testit päivitetty 289/289; NostotKartalla: merkin kuvan
   lataus epäonnistuu → minimerkki (ei tyhjää). Kuvat haetaan matkakirja.app/assets/nostotyypit/ → näkyvät kun #3342 on tuotannossa.
   Käännetty b21b808f, ei poikkeuksia, näkymä ennallaan varamerkein. Merge-pyyntö (174+174b = a41f2f77) LÄHETTÄMÄTTÄ (viestiraja).
+- 20.3x 174b tarkistettu: merkki-huuto/-elain/-hetki ovat nyt tuotantowebissä (matkakirja.app/assets/nostotyypit/, HTTP 200);
+  b21b808f lataa ne ilman virheitä (natiivi hakee webistä NostoMerkit.KuvaJuuri, ei paketista v181).
+- Pelikoodarin webmittaus (390×844, Ranska) vs 174: web taso 2–3 kuvamerkki vasta kertoimesta 2,5 (alle: piste/minikuvake 12–16 px;
+  2,5–4: 22 px ×0,85; ≥4: 30 px), taso 1: 24→47 px; tuotantoweb EI himmennä löytämättömiä (löytösumu pois, omistaja 21.9.).
+  Natiivi 174 Fablen ohjeen mukaan: kuvamerkki kaikilla zoomeilla + löytämätön 0,5. PÄÄTÖS FABLELLE (a) kynnys 2,5, (b) himmennys.
+  Muutos pieni: NostotKartalla Hae: kuvamerkki-ehto + KuvamerkkiKaytossa, LoytamatonPeitto 1.
