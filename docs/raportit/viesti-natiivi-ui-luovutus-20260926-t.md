@@ -50,3 +50,5 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
 - 16.1x: 165 MERGETTY junaan 60cfadda (1.0.23-juna; 1.0.22 leikattiin 45398ff8:sta, jossa valikkonapit ja 164 ovat).
   Levysiivous (Fable): siivoa-pariteettisimut.sh --aja ei vapauttanut mitään (uninstall vaatii käynnissä olevan laitteen);
   iPad Pro 11 503000D1 -erase estettiin luokittimella → Fablelle vaihtoehdot, ei uusintaa.
+  Omistaja tyhjensi 993F8873, 88939C12, C1D5E34C ja iPad Pro 11 503000D1 (sovellus+data pois, laitteet säilyvät): iPadilla
+  ajo vaatii ensin proto-kaanna.sh-asennuksen. A2FD9C9F jäi (oli boottina). simctl erase -sallinta tulossa mainin kautta.
