@@ -52,9 +52,11 @@
 import { nostosymAsetaKuorenKatto, nostosymMitanKatto, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
-  avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
+  LEHDEN_VAKIOESITTELY, avaaTiivisLehtiarkki, kaupunginEsittely, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
   suljeTiivisLehtiarkki,
 } from './lehti.js';
+import { asetaKuva, julisteUrl } from './media.js';
+import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { ensimmainenLause } from './lauseraja.js';
 import {
   avaaNahtavyys, kaupunginNahtavyysteksti, piirraKaupunkiKartta, piirraMatkailijalle,
@@ -644,6 +646,99 @@ function avaaKortti(ui, city, {
  * sen uudestaan joka asemoinnilla — kortti seuraa merkkiään, kun pallo
  * pysähtyy (js/pallolauta/lauta.js).
  */
+/*
+ * ══ KAUPUNGIN AVAUSKORTTI (omistaja 27.9.2026 klo 23.4x, kortilla hyväksytty mock) ══
+ *
+ * Kaupungin napautus avaa KORTIN, jossa on kolme osaa päällekkäin:
+ *   1. herokuva + kaksi ensimmäistä lausetta esittelystä + "Lue kaupunkilehti"
+ *   2. nähtävyyskartta ilman tekstejä (piirraKaupunkiKartta pelkkaKartta);
+ *      minkä tahansa kohdan napautus avaa suurennoksen
+ *   3. turisti-info: oppaan otsikko, 1–2 lausetta ja kuva → avaa oppaan
+ * Kortti korvaa kaupunkiliuskan. Sisältö luetaan samasta lehtidatasta
+ * kuin ennenkin; uutta tekstiä ei kirjoiteta.
+ */
+/** Tekstin n ensimmäistä lausetta ilman lihavointimerkkejä. */
+export function avauskortinLauseet(teksti, n = 2) {
+  const puhdas = String(teksti ?? '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
+  const lauseet = puhdas.match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? (puhdas ? [puhdas] : []);
+  return lauseet.slice(0, n).join(' ').trim();
+}
+
+/** Kortin herokuva: avauskuvista ensimmäinen, muuten kansikuvista. */
+function avauskortinHero(city) {
+  const kansi = kaupunginKansi(city.id);
+  const teos = kansi?.avauskuvat?.[0] ?? kansi?.kansikuvat?.[0] ?? null;
+  if (!teos) return null;
+  const kuva = document.createElement('img');
+  kuva.className = 'avauskortti-hero-kuva';
+  kuva.alt = kuvatekstiLyhyt(teos) || city.name;
+  kuva.decoding = 'async';
+  kuva.draggable = false;
+  if (teos.ampari) asetaKuva(kuva, julisteUrl(teos.ampari), null);
+  else asetaKuva(kuva, valokuvaUrl(teos.tiedosto, 900), valokuvaVara(teos.tiedosto, 900));
+  return kuva;
+}
+
+function latoAvauskortti(ui, sisalto, city) {
+  const hero = html('div', 'avauskortti-hero');
+  const heroKuva = avauskortinHero(city);
+  if (heroKuva) hero.appendChild(heroKuva);
+  hero.appendChild(html('h2', 'avauskortti-nimi', city.name));
+  sisalto.appendChild(hero);
+  const esittely = html('div', 'avauskortti-esittely');
+  esittely.appendChild(html('p', 'avauskortti-teksti', avauskortinLauseet(kaupunginEsittely(city)) || LEHDEN_VAKIOESITTELY));
+  if (typeof ui?.avaaTutkinta === 'function') {
+    const lehti = html('button', 'avauskortti-lehti', 'Lue kaupunkilehti \u2192');
+    lehti.type = 'button';
+    lehti.addEventListener('click', () => {
+      suljeKaupunkipopup(ui);
+      ui.avaaTutkinta(city);
+    });
+    esittely.appendChild(lehti);
+  }
+  sisalto.appendChild(esittely);
+  const kartta = html('div', 'avauskortti-kartta');
+  sisalto.appendChild(kartta);
+  piirraKaupunkiKartta(ui, kartta, { cityId: city.id, pelkkaKartta: true });
+  if (!kartta.childElementCount) kartta.hidden = true;
+  const opas = turistiOppaanArtikkeli(city.id);
+  if (opas) {
+    const rivi = html('button', 'avauskortti-opas');
+    rivi.type = 'button';
+    const kuvaTeos = kaupunginMatkailijalle(city.id)?.kuva ?? null;
+    if (kuvaTeos?.tiedosto || kuvaTeos?.ampari) {
+      const kuva = document.createElement('img');
+      kuva.className = 'avauskortti-opas-kuva';
+      kuva.alt = '';
+      kuva.decoding = 'async';
+      if (kuvaTeos.ampari) asetaKuva(kuva, julisteUrl(kuvaTeos.ampari), null);
+      else asetaKuva(kuva, valokuvaUrl(kuvaTeos.tiedosto, 320), valokuvaVara(kuvaTeos.tiedosto, 320));
+      rivi.appendChild(kuva);
+    }
+    const tekstit = html('span', 'avauskortti-opas-tekstit');
+    tekstit.appendChild(html('span', 'avauskortti-opas-laji', TURISTI_INFO_NIMIO));
+    tekstit.appendChild(html('span', 'avauskortti-opas-otsikko', opas.nimi ?? TURISTI_INFO_NIMIO));
+    tekstit.appendChild(html('span', 'avauskortti-opas-teksti', avauskortinLauseet(opas.teksti, 2)));
+    rivi.appendChild(tekstit);
+    rivi.addEventListener('click', () => {
+      sfx.play('paper');
+      suljeKaupunkipopup(ui);
+      avaaTuristiOpas(ui, city);
+    });
+    sisalto.appendChild(rivi);
+  }
+}
+
+/** Avaa kaupungin avauskortin (korvaa kaupunkiliuskan). */
+export function avaaAvauskortti(ui, city, { ankkuri = null } = {}) {
+  return avaaKortti(ui, city, {
+    laji: 'avaus',
+    otsikko: city?.name ?? '',
+    ankkuri,
+    lato: latoAvauskortti,
+  });
+}
+
 export function avaaKaupunkipopup(ui, city, { ankkuri = null } = {}) {
   return avaaKortti(ui, city, {
     laji: 'kaupunki',

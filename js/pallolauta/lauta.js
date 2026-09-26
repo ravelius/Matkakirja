@@ -108,7 +108,7 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
  */
 import {
-  TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo,
+  TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo, avaaAvauskortti,
   avaaKaupunkiesittely, avaaNahtavyysnakyma, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
   kaupungillaKohdekartta, kaupunginMatkailijalle, suljeKaupunkipopup, turistiOppaanArtikkeli,
   turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
@@ -179,6 +179,9 @@ import { luoAloituslennonKohtaus } from './avaus.js';
  * eli kaukana avaruudessa. Kerros elää vain kertomusesityksen avauksen
  * ajan ja tyhjennetään heti sen jälkeen.
  */
+/** Kaupunkiliuska kaupungin napautuksesta (pois 27.9.2026: avauskortti korvaa sen). */
+export const KAUPUNKILIUSKA = false;
+
 export const PALLOLAUDAN_KERROKSET = [
   'pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData', 'particlesData',
 ];
@@ -2877,6 +2880,16 @@ export async function avaaPallolauta(ui) {
        */
       if (siirto && !ui.katselu && !(oma && oma.id === city.id)) {
         return valitseSiirto(siirto.key);
+      }
+      /*
+       * KAUPUNGIN AVAUSKORTTI KORVAA LIUSKAN (omistaja 27.9.2026 klo 23.4x):
+       * napautus avaa kortin (herokuva + esittely, nähtävyyskartta,
+       * turisti-info); kaupungin nostot ovat kaupunkilehden osioissa.
+       * Vanha liuskan avaus jää alle kytkimen taakse (KAUPUNKILIUSKA).
+       */
+      if (!KAUPUNKILIUSKA) {
+        avaaAvauskortti(ui, city);
+        return true;
       }
       void (async () => {
         /*
