@@ -104,6 +104,12 @@ if os.path.exists(p):
                     f"ei esiladattu {s['eiEsiladattu']}, hukattu {s['hukattu']}; levyllä {s['levylla']}, toistoja {s['toistoja']}")
         print("\nESILATAAJA " + mrivi(m) + f", avoimia {m['avoimia']}")
         for k, s in m.get("vaiheet", {}).items(): print(f"  {k:<11} " + mrivi(s))
+        # VARTIJA (Fable 26.9.2026, erä 5): kylmänä sisällön osuma ≥ 80 % ja Esilataajan odotus < 3 s. Kuormaherkkä
+        # (verkko, CDN, Macin kuorma) → INFO eikä FAIL: raportissa näkyy poikkeama, savuke ei kaadu.
+        if not os.environ.get("LAMMIN"):
+            ok = m["pros"] >= 80 and m["odotusMs"] < 3000
+            print(f"VARTIJA (INFO) sisällön osuma kylmänä ≥ 80 % ja odotus < 3 s: {'OK' if ok else 'POIKKEAMA'} "
+                  f"({m['pros']} %, {m['odotusMs']} ms)")
         hs = m.get("hudit", [])
         if hs:
             print(f"  HUDIT pisimmästä (25/{len(hs)}):")
