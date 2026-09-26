@@ -128,3 +128,10 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
   (ja Taustalla-kierros). EI merge-pyyntöä. SEURAAVA KOE: pelkkä Sisalto-sisäinen jako (peru PeliOhjain-muutos, commit
   "Yhteinen haku: …" → jätä vain Sisalto.cs:n haussa/Jaa), mittaa samoin (4 vuorotellen kylmää, SIMCTL_CHILD_MATKAKIRJA_HAUT=1).
 - JONO 3 (kaupunkilehdet/linssidata/II-kuvat pois käynnistyksestä) avoinna. Musiikin generointi vaihe 1 avoinna.
+
+## 14. Lisäys 26.9. klo 05.4x — JONO 2 merge-pyynnössä
+- `pelikoodari/yhteinen-haku` 7875bd13 (vain Sisalto-sisäinen jako; PeliOhjain-reititys peruttu): ajoitus neutraali
+  (vert2-*: ennen 930/1 274, jälkeen 1 346/1 006 ms), kaksoishaut kaupungit 4→2, karttavalot 2→1 → merge-pyyntö Natiivisepälle.
+- Jäljellä kaksoishaut: peli-reitti (kaupungit, reitit) ja LinssiSisalto (maarajat, maat, radiot) — kerro Linssisepälle.
+- AVOINNA: jono 3 (kaupunkilehdet 16 Mt, linssidata, II-kuvat pois käynnistyksestä), musiikin generointi vaihe 1,
+  osoitin-taustalle-ajoitusuusinta kun Natiivisepän kohta 1 -tilannekuva on junassa.
