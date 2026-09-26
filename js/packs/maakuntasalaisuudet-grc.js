@@ -20,6 +20,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-deinokrateen-vuori': {
     maakunta: 'Ayion Oros',
     nimi: 'Deinokrateen vuoripatsas',
+    nimio: 'Athos-jättiläinen',
     tyyppi: 'vuori',
     // en-Wikipedia "Mount Athos"
     lat: 40.158333,
@@ -44,6 +45,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-eleusiin-mysteerit': {
     maakunta: 'Attiki',
     nimi: 'Eleusiin mysteerit',
+    nimio: 'Eleusiin mysteerit',
     tyyppi: 'historia',
     // en-Wikipedia "Telesterion"
     lat: 38.0408,
@@ -67,6 +69,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-nekromanteion': {
     maakunta: 'Ipeiros',
     nimi: 'Kuolleiden oraakkeli Akheronin rannalla',
+    nimio: 'Nekromanteion',
     tyyppi: 'historia',
     // en-Wikipedia "Necromanteion of Acheron"
     lat: 39.2362,
@@ -91,6 +94,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-keros': {
     maakunta: 'Notio Aigaio',
     nimi: 'Keros ja rikotut marmorihahmot',
+    nimio: 'Keros',
     tyyppi: 'saari',
     // en-Wikipedia "Keros" (saaren karkea piste)
     lat: 36.89,
@@ -115,6 +119,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-abdera': {
     maakunta: 'Anatoliki Makedonia kai Thraki',
     nimi: 'Abdera, hölmöjen ja atomien kaupunki',
+    nimio: 'Abdera',
     tyyppi: 'historia',
     // en-Wikipedia "Abdera, Thrace"
     lat: 40.933333,
@@ -137,6 +142,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-melissani': {
     maakunta: 'Ionioi Nisoi',
     nimi: 'Melissanin luolajärvi ja kadonnut meri',
+    nimio: 'Melissani',
     tyyppi: 'luonto',
     // en-Wikipedia "Melissani Cave"
     lat: 38.257,
@@ -159,6 +165,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-gla': {
     maakunta: 'Stereá Elláda',
     nimi: 'Gla, kuivatun järven linnoitus',
+    nimio: 'Glan linnoitus',
     tyyppi: 'historia',
     // en-Wikipedia "Gla"
     lat: 38.483333,
@@ -182,6 +189,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-kastan-kumpu': {
     maakunta: 'Kentriki Makedonia',
     nimi: 'Kastan kumpu Amfipoliissa',
+    nimio: 'Kastan kumpu',
     tyyppi: 'historia',
     // en-Wikipedia "Kasta Tomb"
     lat: 40.839722,
@@ -207,6 +215,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-gortynin-laki': {
     maakunta: 'Kriti',
     nimi: 'Gortynin lakikivi',
+    nimio: 'Gortynin lakikivi',
     tyyppi: 'historia',
     // en-Wikipedia "Gortyn code"
     lat: 35.063221,
@@ -231,6 +240,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-chlemoutsi': {
     maakunta: 'Dytiki Ellada',
     nimi: 'Chlemoutsin ristiretkilinna',
+    nimio: 'Chlemoutsin linna',
     tyyppi: 'historia',
     // en-Wikipedia "Chlemoutsi"
     lat: 37.8901,
@@ -256,6 +266,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-dispilio': {
     maakunta: 'Dytiki Makedonia',
     nimi: 'Dispilion paalukylä ja puulaatta',
+    nimio: 'Dispilion paalut',
     tyyppi: 'historia',
     // en-Wikipedia "Dispilio"
     lat: 40.480556,
@@ -280,6 +291,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-pavlopetri': {
     maakunta: 'Peloponnisos',
     nimi: 'Pavlopetri, meren alle vajonnut kaupunki',
+    nimio: 'Pavlopetri',
     tyyppi: 'meri',
     // en-Wikipedia "Pavlopetri"
     lat: 36.516,
@@ -303,6 +315,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-poliokhni': {
     maakunta: 'Voreio Aigaio',
     nimi: 'Poliokhni, Troijaa vanhempi kaupunki',
+    nimio: 'Poliokhni',
     tyyppi: 'historia',
     // en-Wikipedia "Poliochni"
     lat: 39.854167,
@@ -326,6 +339,7 @@ export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-munkkihylkeet': {
     maakunta: 'Thessalia',
     nimi: 'Alonnisoksen munkkihylkeet',
+    nimio: 'Munkkihylkeet',
     tyyppi: 'elain',
     // en-Wikipedia "Alonissos" (saaren karkea piste)
     lat: 39.15,
