@@ -148,3 +148,13 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   Käännöspalvelu käännöksessä 05.3x (shadergraphin käännös todentamatta ennen sitä). SEURAAVAKSI: simulaattorikuva
   `huntu paljastus 37.98 23.73 150 40` (Ateena) Kreikassa → kuva Linssisepälle/Fablelle → merge Linssisepän
   linssiseppa/elava-saapuminen -haaran kanssa.
+- **Klo 05.5x juna/b13 d2e21ee0** (testit 278/284/300): natiiviseppa/kerma-p060 071b7127 (**128 TEHTY**: Kermasarja.Oletus =
+  2026-09-26-p060, Karttaseppä poltti 26-pohjasta; lyhyet p080/p045 eivät nyt löydy 26-pohjasta), natiiviseppa/kohta1-mukana
+  6b382f35 (**kohta 1 osat 1, 2, 4**: 11 nostotyyppikuvaketta + pulun kuva StreamingAssets/mukana/, Mukana PNG:t, Kuvat.Hae
+  katsoo ensin; bmng Z5 laattapakettiin BmngMax 5, Varmista rakentaa uudelleen tasomuutoksesta → käännöspalvelun ja TF:n
+  ensimmäinen käännös lataa ~6 Mt lisää), pelikoodari/yhteinen-haku 7875bd13. KOHTA 1 OSA 3 (aloitusdatan tilannekuva) TEKEMÄTTÄ:
+  kytkeytyy Siirtosepän paketinpäivitykseen (PakettiPaivitys/osoitin) → sovi Siirtosepän kanssa.
+- natiiviseppa/elava-saapuminen: + 041b98b4 MaaKartta.MaakunnanKeskus (Natiivi-UI:n elava-kartussi). Linssisepän koukut
+  (Linssit/Ydin/Elava/ElavaPallo.cs, linssiseppa/elava-kartta 899ff2f5): kytkentä yhdellä commitilla, kun molemmat junassa:
+  ElavaPallo.Paljastus/PaljastusPois → Varitaso, PysyvatKerrokset → MaaKartta/NostoKerros.Saapuminen(!n),
+  PalloKierto.SaapuminenAlkaa/Paattyi → ElavaPallo.IlmoitaSaapuminenAlkaa(kesto)/IlmoitaSaapuminenPaattyi().
