@@ -56,6 +56,9 @@ namespace Matkakirja
             }
         }
         static int verhoTaysi = -1;
+        /// <summary>Löydös 163: PAIKALLAAN-tilassa valmistuneet laattahaut, jotka herättivät piirron.</summary>
+        public static int Vartija163 { get; private set; }
+        long paikallaanHaut;
         /// <summary>UI rauhassa: ei animaatiota, kirjoituskonetta, pulun liikettä tai siirtymää (Natiivi-UI asettaa).</summary>
         public static Func<bool> UiRauhassa;
         /// <summary>Lisäehdot täydelle taajuudelle (esim. linssin ajo): mikä tahansa tosi = TÄYSI.</summary>
@@ -153,6 +156,17 @@ namespace Matkakirja
             if (uusi == Tila.Paikallaan && !kameraPois && ElavaKerros.Tarvitaan(out kerrosFps)) { uusi = Tila.Kerros; Syy = "elävä kerros"; }
             else if (ElavaKerros.Pakota == ElavaKerros.Pakotus.Kerros && !kameraPois && uusi == Tila.Lepo && ElavaKerros.Tarvitaan(out kerrosFps)) { uusi = Tila.Kerros; Syy = "elävä kerros (pakotettu)"; }
             ElavaKerros.Pyyda(uusi == Tila.Kerros, kerrosFps);
+            // VARTIJA 163: Cesiumin laattoja valmistui, kun ruutu ei piirrä (PAIKALLAAN). PallonLepo huomaa asteen muutoksen
+            // yleensä itse; tämä kirjaa ja korjaa aukon (laatat saapuivat, ruutu ei päivittynyt).
+            long haut = Laattapalvelin.CesiumValmiita;
+            if (uusi == Tila.Paikallaan && Nyt == Tila.Paikallaan && haut != paikallaanHaut)
+            {
+                Vartija163++;
+                if (Vartija163 <= 20 || Vartija163 % 100 == 0)
+                    Debug.Log($"MATKAKIRJA VARTIJA 163: {haut - paikallaanHaut} laattaa saapui paikallaan-tilassa → herätys (#{Vartija163})");
+                PallonLepo.Valmistui("vartija 163");
+            }
+            paikallaanHaut = haut;
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
             int fps = Math.Min(uusi == Tila.Taysi ? Naytto : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
