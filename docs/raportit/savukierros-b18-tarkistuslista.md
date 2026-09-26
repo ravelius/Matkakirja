@@ -1,22 +1,20 @@
-# Savukierros build 18: tarkistuslista (Fable 26.9., päätös b17 → TF sellaisenaan)
+# Savukierros build 18: LYHYT kierros (≤ 25 min, kuvat, ei videoita)
 
-Build 1.0.17 lähti proto_ref d04841a0. Tämä lista koskee build 18:aa. Kuvat PNG.
+Fable 26.9. ~04.4x. SHA (juna/b13 541092d9) tulee Natiivisepältä; tarkista juna.log +
+`git merge-base --is-ancestor`. Kuvat PNG ruudun kokoisina. PASS/FAIL raportti a-numerolla
+(savukierros-b18-<pvm>.md). Jos kiintiö katkeaa, kirjaa mihin jäit (alla "Edistyminen").
 
-1. Lepopiirto (b17 FAIL): levossa `paikallaan` > 0 ja `piirretty` ≤ 3 / 150
-   (kehysajat.jsonl; ruutu → "Paikallaan"). Idle-syke jatkuva mutta ei täyttä piirtoa.
-2. Löydös 143: `ui kartuscha BIH auki` iPadilla → nimi 2 riville
-   ("BOSNIA JA / HERTSEGOVINA"), lippu+radio ylärivillä, palkit porrastuvat.
-3. Uudet vartijat (pelikoodari/loydos149): `nostokuvat GRC 60` → lokirivi
-   "RAJA nostokuva näkyy: PASS|FAIL (n/m)", Documents/nostokuvat.txt; `vieritys koe`
-   + `vieritys` → hitaat askeleet 0–1.
-4. Ydinkulku iPhone + iPad kuten b17 + löydös 82 (pysyvä).
-5. iPadin ☰ Tekstitys-kytkin + soitin (ei ajettu b17:ssä).
-Muistutus: UITK-napit kuvasta; `siirto`-avain aina peli-tila.jsonista;
-Documents-polku vaihtuu ensikäynnistyksessä — odota bootstatus, käynnistä sovellus, hae polku uudelleen.
+## Painopiste (järjestys)
+S1. Lepopiirto levossa Ateenassa: tila Paikallaan, `piirretty` ≤ 3 / 150 (kehysajat.jsonl,
+    `ruutu`); UI rauhassa (ei paneeleja/animaatioita) ennen mittausta.
+S2. 143: iPad `ui kartuscha BIH auki` → "BOSNIA JA / HERTSEGOVINA" 2 riville (ei "…OVIN / A"),
+    nimi pienenee ≤ 25 %; 143b myös kiinni-tila.
+S3. 132 sumea tausta + 150 kokoruutu ilman kuvatekstiä (nostokuva).
+S4. 144: lippu aaltoilee kartussin auetessa ja asettuu levossa.
+S5. Ihmisen matka II: 148 ohjaus, 151 pehmeät kamerat, 152 avaus (`linssi ihmisen-matka-2`).
+S6. Esilataus: topografia ≤ 2 s (`linssi topografia`, mittaa aika lokista).
+S7. Perussavuke: lento 12 s + Ohita, saapuminen, nosto aukeaa heti, äänet (`aani mittaa`).
+Lisäksi: `nostokuvat GRC 60`, `vieritys koe` + `vieritys` (loydos149 junassa).
 
-## Natiivisepän tieto (26.9.)
-- Lepopiirto-FAIL: idle-syke EI ole syy. "Lepo (ui)" = UiRauhassa on epätosi (UI ei ole
-  rauhassa), pallo itse lepää → ehto riippuu UI-rauhasta; vartijassa tarkista `ruutu`-tila
-  ja että UI on rauhassa (ei avoimia paneeleja/animaatioita) ennen mittausta.
-  Lepopiirto + 143 ohjattu Natiivi-UI:lle build 18:aan.
-- BUILD 17 masterissa 6a65ead1. Build 18 -juna 99eaf8d9 sisältää loydos149:n ja vierityksen.
+## Edistyminen (päivitä kierroksella)
+- [ ] S1 [ ] S2 [ ] S3 [ ] S4 [ ] S5 [ ] S6 [ ] S7 [ ] nostokuvat/vieritys
