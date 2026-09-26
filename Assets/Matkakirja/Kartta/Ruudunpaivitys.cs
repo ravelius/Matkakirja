@@ -68,10 +68,19 @@ namespace Matkakirja
 
         /// <summary>
         /// LÖYDÖS S10 (Natiiviseppä 26.9.2026): TÄYDEN tilan katto hertseinä liikkeen A/B-mittaukseen (120 vs 60 Hz,
-        /// lämpö); 0 = näytön taajuus (oletus, ennallaan). Verhon aikana ei kattoa (Cesium etenee kehys kerrallaan).
+        /// lämpö); 0 = näytön taajuus, oletus 60 Hz (Fable 26.9., LiikeKattoOletus). Verhon aikana ei kattoa (Cesium etenee kehys kerrallaan).
         /// Komento `ruutu liike 120|60|pois` (Komennot.cs); KehysMittari kirjaa sen riville ("liikeKatto").
         /// </summary>
-        public static int LiikeKatto;
+        public static int LiikeKatto = LiikeKattoOletus;   // kehittäjäasetus luetaan Awakessa (PlayerPrefs ei staattisessa alustuksessa)
+
+        /// <summary>
+        /// Fablen päätös S10 (26.9.2026): liikkeen oletuskatto 60 Hz (LÄMPÖ-sääntö: halpa kehys; 120 Hz vei iPad Pro 13:n kuumaan
+        /// tilaan 6 minuutissa). Kehittäjäasetus 120 Hz mittausta varten: PlayerPrefs "matkakirja-liike-120" = "1" (defaults write
+        /// sovellus kiinni) tai komento `ruutu liike 120|60|pois`.
+        /// </summary>
+        public const int LiikeKattoOletus = 60;
+        public const string Liike120Avain = "matkakirja-liike-120";
+        static int OletusLiikeKatto() => PlayerPrefs.GetString(Liike120Avain, "") == "1" ? 0 : LiikeKattoOletus;
 
         public Tila Nyt { get; private set; } = Tila.Taysi;
         public int Naytto { get; private set; } = 60;
@@ -97,7 +106,7 @@ namespace Matkakirja
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = 0; LiikeKatto = 0; }
+        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = 0; LiikeKatto = LiikeKattoOletus; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -110,6 +119,7 @@ namespace Matkakirja
 
         void Awake()
         {
+            LiikeKatto = OletusLiikeKatto();   // S10: 60 Hz, kehittäjäasetuksella 120 Hz (näytön taajuus)
             Instanssi = this;
             var t = Screen.currentResolution.refreshRateRatio.value;
             Naytto = t > 1 ? (int)Math.Round(t) : 60;
