@@ -62,16 +62,36 @@ namespace Matkakirja
                 (pallo == null ? lepo : pallo.Peitetty ? peitto : pallo.Liikkeessa ? liike : lepo).Add(ms);
             kehyksia++;
             if (UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender) piirretty++;
+            Gpu();
             var r = Ruudunpaivitys.Instanssi;
             if (pallo != null && pallo.Peitetty) nPeitto++;
             else if (r == null || r.Nyt == Ruudunpaivitys.Tila.Taysi) nTaysi++;
             else if (r.Nyt == Ruudunpaivitys.Tila.Lepo) nLepo++;
+            else if (r.Nyt == Ruudunpaivitys.Tila.Kerros) nKerros++;
             else nPaikallaan++;
             if (Time.realtimeSinceStartup - alku >= jakso)
             {
                 Kirjaa();
                 alku = Time.realtimeSinceStartup;
             }
+        }
+
+        // GPU-aika (löydös 161 A/B-mittaus): FrameTimingManager, vaatii PlayerSettings enableFrameTimingStats. Vain piirretyt
+        // kehykset tuottavat ajan; sama kehys (frameStartTimestamp) lasketaan kerran.
+        readonly FrameTiming[] ajat = new FrameTiming[1];
+        ulong edellinenGpuKehys;
+        double gpuSumma;
+        int gpuN, nKerros;
+
+        void Gpu()
+        {
+            FrameTimingManager.CaptureFrameTimings();
+            if (FrameTimingManager.GetLatestTimings(1, ajat) == 0) return;
+            var a = ajat[0];
+            if (a.gpuFrameTime <= 0 || a.frameStartTimestamp == edellinenGpuKehys) return;
+            edellinenGpuKehys = a.frameStartTimestamp;
+            gpuSumma += a.gpuFrameTime;
+            gpuN++;
         }
 
         void Kirjaa()
@@ -81,11 +101,13 @@ namespace Matkakirja
                 $"\"t\":{F(Time.realtimeSinceStartup)},\"tavoiteMs\":{F(tavoite)}," +
                 $"\"liike\":{Tilasto(liike, tavoite)},\"lepo\":{Tilasto(lepo, 1000f / Ruudunpaivitys.LepoFps)},\"peitto\":{Tilasto(peitto, 1000f / Ruudunpaivitys.LepoFps)}," +
                 $"\"kehyksia\":{kehyksia},\"piirretty\":{piirretty}," +
-                $"\"tilat\":{{\"taysi\":{nTaysi},\"lepo\":{nLepo},\"paikallaan\":{nPaikallaan},\"peitto\":{nPeitto}}}," +
+                $"\"tilat\":{{\"taysi\":{nTaysi},\"lepo\":{nLepo},\"paikallaan\":{nPaikallaan},\"kerros\":{nKerros},\"peitto\":{nPeitto}}}," +
+                $"\"gpuMs\":{(gpuN > 0 ? F((float)(gpuSumma / gpuN)) : "null")},\"gpuKehyksia\":{gpuN}," +
                 $"\"fps\":{Application.targetFrameRate},\"thermal\":{Lampo.ThermalState},\"lampo\":\"{Lampo.Taso}\"," +
                 $"\"virransaasto\":{(Lampo.Virransaasto ? "true" : "false")},\"akku\":{(akku >= 0 ? F(akku * 100f) : "-1")}," +
                 VerkkoOdotus.Rivi() + "}";
-            nTaysi = nLepo = nPaikallaan = nPeitto = piirretty = kehyksia = 0;
+            nTaysi = nLepo = nPaikallaan = nKerros = nPeitto = piirretty = kehyksia = 0;
+            gpuSumma = 0; gpuN = 0;
             if (polku != null) File.AppendAllText(polku, rivi + "\n");
             Debug.Log("MATKAKIRJA kehysajat " + rivi);
             liike.Clear();

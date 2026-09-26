@@ -238,6 +238,7 @@ namespace Matkakirja
             foreach (var (ehto, nimi) in animaatiot)
                 if (Kysy(ehto, nimi)) { sb.Append(' ').Append(nimi); kaynnissa++; }
             if (kaynnissa == 0) sb.Append(" ei yhtään");
+            sb.Append("; ").Append(ElavaKerros.Kuvaus());
             return sb.ToString();
         }
 
@@ -253,7 +254,9 @@ namespace Matkakirja
             // Joutosykkeen aito aktiivisuus: kosketus (myös UI:n päällä) ja nappulan liike; kamera alempana.
             bool aktiivisuus = Kosketetaan() || (nappula != null && nappula.Liikkeessa);
 
-            bool paalla = kamera != null && kamera.isActiveAndEnabled;
+            // Elävä kerros (ElavaKerros.KerrosPaalla): pääkamera on pois vain, koska kartta on talletettu; näkymä on sama,
+            // joten lepo lasketaan kuten kameran ollessa päällä (herätys ja muutos palauttavat täyden piirron).
+            bool paalla = kamera != null && (kamera.isActiveAndEnabled || ElavaKerros.KerrosPaalla);
             if (!paalla)
             {
                 // Pallon kamera pois (peitto, Ruudunpaivitys) tai puuttuu: pallosta ei piirretä mitään. Laattanäytteet

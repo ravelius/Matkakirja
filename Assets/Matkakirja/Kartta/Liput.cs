@@ -58,6 +58,7 @@ namespace Matkakirja
 
         static readonly List<Aalto> kahvat = new List<Aalto>();
         static readonly Func<bool> muuttuuEhto = Muuttuu;
+        static readonly Func<bool> jatkuvaEhto = MuuttuuJatkuva;
         static Material materiaali;
         static bool varjostinHaettu;
         static LiputAjuri ajuri;
@@ -89,6 +90,10 @@ namespace Matkakirja
                     if (value) likainen = true;
                 }
             }
+
+            /// <summary>Tosi: liehuu aina täydellä voimalla omalla kellolla, ei seuraa Joutosykettä (löydös 161: kohdemaan
+            /// lipputanko liehuu koko ajan elävällä kerroksella). Oletus epätosi.</summary>
+            public bool Jatkuva;
 
             internal bool nakyy, likainen, vapautettu, staattinen;
             internal float vaihe, piirrettyAika = float.NaN, piirrettyVoima = float.NaN;
@@ -172,7 +177,7 @@ namespace Matkakirja
         public static string Kuvaus()
         {
             var ic = CultureInfo.InvariantCulture;
-            Tila(out float aika, out float voima);
+            float aika = SeuraaSyketta ? Joutosyke.Aika : Time.unscaledTime, voima = SeuraaSyketta ? Joutosyke.Voima : 1f;
             return $"liput: {kahvat.Count} kahvaa, {Nakyvia} näkyvissä, piirtoja {piirtoja}, varjostin " +
                    $"{(Materiaali() != null ? "ok" : "PUUTTUU (suora kuva)")}, kello {(SeuraaSyketta ? "joutosyke" : "jatkuva")} " +
                    $"(aika {aika.ToString("0.0", ic)} s, voima {voima.ToString("0.00", ic)}), muuttuu {Muuttuu()}";
@@ -243,14 +248,16 @@ namespace Matkakirja
 
         internal static void Rekisteroi(bool paalle)
         {
-            if (paalle) PallonLepo.Animoi(muuttuuEhto, "liput");
-            else PallonLepo.Poista(muuttuuEhto);
+            // Jatkuvat (lipputanko) elävällä kerroksella: kartta ei piirry niiden takia (löydös 161 B).
+            if (paalle) { PallonLepo.Animoi(muuttuuEhto, "liput"); ElavaKerros.Animoi(jatkuvaEhto, "lippu", Fps); }
+            else { PallonLepo.Poista(muuttuuEhto); ElavaKerros.Poista(jatkuvaEhto); }
         }
 
         /// <summary>Aaltoilun kello ja voima tällä hetkellä.</summary>
-        static void Tila(out float aika, out float voima)
+        static void Tila(Aalto k, out float aika, out float voima)
         {
-            if (SeuraaSyketta) { aika = Joutosyke.Aika; voima = Joutosyke.Voima; }
+            // Jatkuva lippu seuraa silti sykettä, kun animaatiot ovat staattisia (lämpö, virransäästö; ElavaKerros.Staattinen).
+            if ((SeuraaSyketta && !k.Jatkuva) || (k.Jatkuva && ElavaKerros.Staattinen)) { aika = Joutosyke.Aika; voima = Joutosyke.Voima; }
             else { aika = Time.unscaledTime; voima = 1f; }
         }
 
@@ -262,9 +269,24 @@ namespace Matkakirja
         static bool Muuttuu()
         {
             if (kahvat.Count == 0) return false;
-            Tila(out float aika, out float voima);
             foreach (var k in kahvat)
-                if (k.nakyy && (k.likainen || (!k.staattinen && !Sama(k, aika, voima)))) return true;
+            {
+                if (!k.nakyy || (k.Jatkuva && !ElavaKerros.Staattinen)) continue;
+                Tila(k, out float aika, out float voima);
+                if (k.likainen || (!k.staattinen && !Sama(k, aika, voima))) return true;
+            }
+            return false;
+        }
+
+        /// <summary>Elävän kerroksen ehto: jatkuva näkyvä lippu muuttuisi (lipputanko, löydös 161).</summary>
+        static bool MuuttuuJatkuva()
+        {
+            if (ElavaKerros.Staattinen) return false;
+            foreach (var k in kahvat)
+            {
+                // Jatkuva lippu liehuu aina (ajuri on voinut piirtää sen jo tässä kehyksessä ennen Ruudunpaivitystä).
+                if (k.nakyy && k.Jatkuva && (!k.staattinen || k.likainen)) return true;
+            }
             return false;
         }
 
@@ -280,7 +302,6 @@ namespace Matkakirja
             const float vali = 1f / Fps;
             // Katto: 30 fps:n kehykset osuvat väliin pienellä värinällä, joten neljänneksen jousto (muuten joka toinen jäisi).
             bool vuoro = nyt >= seuraava - vali * 0.25f;
-            Tila(out float aika, out float voima);
             bool piirsi = false;
             // Tapahtuman kuuntelija voi vapauttaa kahvan: kopio ennen kierrosta.
             var lista = kahvat.ToArray();
@@ -290,6 +311,7 @@ namespace Matkakirja
                 bool rt = k.Kuva != null && !k.Kuva.IsCreated();
                 if (rt) k.Kuva.Create();
                 if (k.staattinen && !rt && !k.likainen) continue;
+                Tila(k, out float aika, out float voima);
                 if (!rt && !k.likainen && (!vuoro || Sama(k, aika, voima))) continue;
                 Piirra(k, aika, voima);
                 piirsi = true;
