@@ -35,7 +35,10 @@ SHA:t (d7a38f75, 43ce36bd, dba69a3c, f7db782d) ovat ennen tätä rebasea. Klo 02
    - **A/B KÄYNNISSÄ klo 02.00** (ajastettu taustalle): käännös `juna/b13+mallinseppa/kategoriat3d-b+linssiseppa/merikoristeet`
      (.app $S/mallit3-app) → ajo VAIHEET 1,4,5,3
      → kuvat /Users/Shared/Claude/proto-3d/lokit/mallinseppa-laite-20260927-c/ (lahi-<olympos|parnassos|taygetos|thermopylai|
-     sounion>-<40|75>-<0|27|55>.png, kat-*.png). Vertaa A-kuviin mallinseppa-laite-20260927-b/ (laitteella A-kivet
+     sounion>-<40|75>-<0|27|55>.png, kat-*.png). KOOSTE: `python3 /Users/Shared/Claude/proto-3d/tyokalut/linssiseppa-ajot/koosta_kat.py
+     /Users/Shared/Claude/proto-3d/lokit/mallinseppa-laite-20260927-b /Users/Shared/Claude/proto-3d/lokit/mallinseppa-laite-20260927-c
+     /Users/Shared/Claude/proto-3d/lokit/mallinseppa-toimitus-20260927` → kategoriat-lahi-*.png (A/B rinnakkain) ja meri-v3.png
+     → rivi Fablelle (kulma ja versio kuvissa). Vertaa A-kuviin mallinseppa-laite-20260927-b/ (laitteella A-kivet
      harmahtavia, kuvamerkki lämmintä seepiaa). Valitse A tai B ja kerro Fablelle yhdellä rivillä.
    - Vuori ei näkynyt Olympoksella: Natiiviseppä korjasi (natiiviseppa/maastokorkeus c581b2ba, `symbolit maasto 0|1`), mutta se
      menee ristiin kategoriamallit-haaran kanssa (Komennot.cs, Tasot23.cs, Symbolimallit.cs) → hän yhdistää ensin; rebasetaa
