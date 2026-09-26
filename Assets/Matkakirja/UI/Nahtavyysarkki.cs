@@ -23,6 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -593,7 +594,8 @@ namespace Matkakirja.Natiivi
         void VaihdaLuenta()
         {
             if (luetaan) { PysaytaLuenta(); return; }
-            var palat = luettavat.Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
+            // Lukijan putkitus (Pelikoodari 27.9.): otsikko kappaleen alkuun, seuraavat palat esihaetaan.
+            var palat = Lukijaaani.LuennanPalat(luettavat.Where(x => !string.IsNullOrWhiteSpace(x)));
             var puhe = Puhe.Hae();
             if (palat.Count == 0 || puhe == null) return;
             luetaan = true;
@@ -603,6 +605,7 @@ namespace Matkakirja.Natiivi
             {
                 if (v != lukuVersio || i >= palat.Count) { if (v == lukuVersio) PysaytaLuenta(); return; }
                 puhe.Lue(palat[i++], "kertoja", 0, Seuraava);
+                KortinLukija.Esihae(puhe, palat, i);
             }
             Seuraava();
         }
