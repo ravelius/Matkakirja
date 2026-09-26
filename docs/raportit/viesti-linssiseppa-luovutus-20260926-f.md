@@ -258,3 +258,18 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   karttanostot/20260926/iss-cupola-*) ja Astronautin kameran jatkoideat 1–4.
 - **Siivous:** proto-worktree wt/proto-linssiseppa-elava poistettu, simulaattorit D0D2… ja 903C… tyhjennetty (erase), ja
   main on pullattu (sallinnat #3329).
+
+## Päivitys klo 17.1x
+
+- **Karusellin korjaukset (omistaja 16.5x)** ovat merge-pyynnössä 1.0.23:een: linssiseppa/karuselli 469ae8fe.
+  - Maapohja ja varjo kaikille aiheille: MaaPohja-mesh ja Malli-varjostimen _ZTest, _ZWrite ja _Haalistus.
+  - MalliVarit.SageVaalea ja TerrakottaHimmea, kaksi puuta ja lamput (Aihe.Valot, valaisematon materiaali).
+  - Ketjukaruselli: KaruselliGeometria.Animoi(katos, istuimet, t, nopeus), 12 istuinta, keinunta
+    30° ± aalto ± oma värinä, ja kehä aaltoilee 7 s:n jaksolla.
+  - Vaihtelu ja tauot: Linssit/Ydin/Elava/Vaihtelu.cs (testit VaihteluTestit). Yksilö-luokka (oma nopeus, aika ja
+    aikataulu), Aihe.Vaihtelu(i). Karuselli käy 60–150 s ja seisoo 20–60 s. Myllyillä puuska 0,35 ja tauko 20 %.
+  - Komento `elava elementit tila | siirra <s> | 0|1`. Tila-rivillä yksilön nopeus ja seuraava tauko.
+  - Kuvat ja videot: lokit/linssiseppa-ketjukaruselli-20260926/omistajalle/. Skripti scratchpadissa f0b4fec1:
+    ajo-ketju2.sh, joka siirtää aikataulua käyntiin ja tauolle.
+- Selvitykseen on lisätty säännöt 7 (vaihtelu ja tauot) ja 8 (maakontakti).
+- **Seuraavaksi:** omistajan pelikokeilu 1.0.23:lla → Pariisin ilmapallo sääntöjen 7–8 mukaan.
