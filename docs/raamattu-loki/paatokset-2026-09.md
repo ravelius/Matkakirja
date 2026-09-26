@@ -7275,3 +7275,7 @@ Siirtoseppa: paketti v177 (1.50) sisaltaa 158:n (salaisuudet 14/14, luonnehdinna
 ## PULUN KARTTAVAISTO LAITTEELLA OK (IPAD PRO 13) (26.9.2026 klo 19.43)
 
 Natiiviseppa: iPad Pro 13, laitekaannos juna 31e3cbd4: veto → 1,2 s poissa → 7 s kurkistaa oikeasta reunasta (paa ja silma, rajaus siisti) → 10 s kotona; 5 perakkaista vetoa ilman poikkeuksia. Vahennetty liike vain Natiivi-UI:n simulaattori-PASSilla (ei komentoa laitteella). iPhone-mittaus odottaa kytkentaa. Tila: merge junassa, asennettu simulaattoreihin 18.58 ja iPadiin 19.37, laitteella oikein. Kuvat proto-3d/lokit/natiiviseppa-pulu-laite-2/pulu-aikasarja.jpg. Omistajalle 1.0.26:n push-tekstiin.
+
+## 168 JA 172 TOTEUTUKSESSA (LINSSISEPPA) (26.9.2026 klo 19.44)
+
+Linssiseppa: 168 tulvavari poistettu ElavaHerays.cs:sta (linssiseppa/loydos168 41916946), mergetaan Natiivisepan 2aba4103:n kanssa, Natiiviseppa ottaa kuvaparin. 172 spesifikaatio kamerakasikirjoituksessa: lahikuvassa kone 10 km:ssa vaakasuorassa; kaukaa kaari, huippu min(150 km, 5 %) (ennen 290 km), nokka enintaan ±6°; kaavat ja testit linssiseppa/lento-172 57836c2e; Natiiviseppa kytkee Nappulaan 168:n ja 171:n jalkeen, kuvapari Fablelle.
