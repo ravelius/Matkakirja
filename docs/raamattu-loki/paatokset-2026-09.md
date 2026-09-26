@@ -7727,3 +7727,7 @@ Omistaja 01.4x kortilla: avauskortti webiin (Pelikoodari PR #3364, v2291; kuvasa
 ## NATIIVI-UI LAITE-ERA VALMIS: 174 MITATTU, 173/169, 170, 179, 178 PASS (JUNA ba90668f) (27.9.2026 klo 01.20)
 
 Natiivi-UI 01.2x: juna/b13 ba90668f (kaannos da5c85d4) iPhone 17 + iPad Pro 11, kuvat proto-3d/lokit/natiivi-ui-laite-20260927/ (versio+kulma kuvassa). 174 iPad Ranskan maataso: veto/nipistys mediaani 16,6 ms, p95 33,4 ms, max 34,9 ms, levossa 30 fps. 173/169 PASS (Kaikki|Pois samalla rivilla, Kaikki varjaa koko maan). 170 PASS (v176 → v194 kesken istunnon, Attikan kuva heti). 179 PASS (Tapaa-nappi pois). 178 PASS (Ateenan 4 tarinakohdetta nostoissa). Avoinna 177-korjaus cc33ba3b seuraavasta junakaannoksesta. Seuraava era: Pulun lukijanapin tila (webin mallin jalkeen) ja kehittajavalikon striimiaani natiiviin.
+
+## XAI STRIIMILUENTA PR 3365 (v2292) JULKAISIJAN JUNAAN; TESTIT 4413/0 (27.9.2026 klo 01.22)
+
+Fable 01.2x: xAI-era valmis haarassa fable-xai-ara 2a0b68162 → PR #3365 (v2292): worker xAI-reitti + PUHE_MOOTTORI + varapolku OpenAI (8 s), kehittajavalikon striimiaani (28 xAI-aanta, oletus ara), workflow vie XAI_API_KEY:n workerille (GitHub-salaisuus asetettu 01.1x), OHJE.md, testit. npm test 4413/0, kaksoisavaimet ok, standalone ok. Julkaisija mergeaa #3364:n jalkeen; merge laukaisee Pollon julkaisu -workflown → xAI ara tuotannossa webissa ja natiivissa samalla. Natiivin kehittajavalikon striimiaani-valitsin Natiivi-UI:n jonossa. Postivahti 01.2x: Pelikoodari 11 % (nollaus onnistui), Sisaltokirjuri 87 % → nollauskasky eran jalkeen.
