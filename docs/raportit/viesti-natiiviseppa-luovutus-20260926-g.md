@@ -212,3 +212,23 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - Siirtosepän PR #3303 (offline.json → pohja 26): pyydetty julkaisemaan vasta kun 1.0.20 (pohja 26) on TF:ssä (1.0.19 lukee pohjaa 25 → offline-käyttäjä jäisi laattapaketin Z0–Z5-tarkkuuteen). Ilmoita Siirtosepälle build 20:n viennin jälkeen.
 - 08.36 TF 1.0.19 valmis (41dd79c7), vientilippu poistettu.
 - juna/b13 **3f2db11b**: + natiivi-ui/offline-lepo 7d6f7bc3 (C: verkoton lepo 306/306 kaikki 0).
+
+## OMISTAJAN LÖYDÖKSET 153–155 (Fable 08.4x, build 20) — SEURAAJALLE, aloittamatta (kiintiö 97 %)
+
+Kuva: docs/raportit/kaappaukset/omistaja-20260926/loydos153-155-kreikka-horisontti.png (Fablen haara).
+- **153** nostot (merkit + nimiöt) häipyvät horisontin kanssa; nyt kaukaiset piirtyvät täysin horisontin yläpuolelle. Ehdotus:
+  NostoKerros.LisaaRuudulta laskee Nosto.Horisontti 0–1 (pinnan normaali · suunta kameraan, smoothstep ~0,05–0,25; vrt.
+  PallonLepo.PinnallaRuudulla-kynnys) ja UI (NostotKartalla, Natiivi-UI) kertoo merkin + nimiön peiton sillä. Rajasta sovi
+  Pelikoodarin kanssa (Fable: "Pelikoodarin kanssa raja").
+- **154** taivas horisontissa sinisemmäksi kuin pergamentin kerma: KUVAPARI 2–3 sävyllä (utuinen vaaleansininen ylhäällä →
+  pergamentti horisontissa) omistajalle valittavaksi. Shaders/Taivas.shader (+ Filmipino); tee komento sävyn vaihtoon ja
+  kuvaa sama kallistettu Kreikka-näkymä.
+- **155** nostojen symbolit: useimmat ympyröitä (Thessaloniki, Epidauros, Monemvasia, Korintin kanava); vain Delfoi/Náfplio/
+  tassu saavat symbolin. NostoSaannot.Kuvamerkki/MiniTunnus (laji → kategoria → minimerkki) + UI:n NostoMerkit piirto.
+  Pelikoodari selvittää datasta, mitkä tyypit jäävät ympyräksi (laji puuttuu?), piirto Natiiviseppä/Natiivi-UI.
+
+## BUILD 20 -TILA (luovutushetki)
+
+juna/b13 **3f2db11b**: pohja-26, nosto-muste (kohta 2 + Linssisepän jäljet), pallo lepo peli-lokiin, offline-lepo (C). Fablen A (laite-
+aloitusverho) Laitetestaajan kierroksella, B todennettu (Attiki), D laukaisu Laitetestaajalla. Jonossa: 153–155, lepo-suspend A/B.
+Siirtosepän #3303 (offline.json → pohja 26) PIDOSSA kunnes 1.0.20 on TF:ssä → ilmoita Siirtosepälle.
