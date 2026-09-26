@@ -157,3 +157,18 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
   266 kpl 2,9 Mt), kerran per versio. Koko kaupunkilehdet.json jää, kunnes LehtiSisalto.cs:144 (kaupungin lehti → kaupungeittain)
   ja PuluHaku.cs:252 (indeksi kaikista 266) eivät enää lue sitä (Natiivi-UI); sitten Siirtoseppä ohittaa kokonaisen PakettiPaivityksessä.
 - Linssisepän "maakunta puuttuu" oli väärä tunnus (nosto:marathon ↔ karttavalo kohde:marathon); v151: 2 782/2 963 riviä maakunnalla.
+
+## 17. Lisäys 26.9. klo 08.2x — MUSIIKKI VAIHE 1 HYVÄKSYTTY, leikattu ja kytketty
+- Omistaja hyväksyi vaiheen 1 (06.0x). Valmiit ämpärissä nimillä musa-{johtoaihe,aloituslento,saapuminen-valimeri,loppu}-lyria.mp3
+  (60,5 / 26,0 / 9,4 / 69,1 s); raa'at -raaka.mp3. Cloudflare-reuna tyhjennetty (CLOUDFLARE_API_TOKEN Macin ympäristöstä).
+- TASO −11 LUFS, EI −33 (Fable hyväksyi): pelin nykyiset musiikkiraidat mitattu noin −11 LUFS. Docs-PR #3302 (suunnitelma 1.3).
+- Työkalu `tools/viimeistele-musiikki.mjs [nimi] [--vie]` (web-haara pelikoodari-musiikki-vaihe1): leikkaus RAIDAT-taulusta,
+  häivytys, lineaarinen −11 LUFS, huippu ≤ −1 dBFS, raaka talteen -raaka, reunan tyhjennys. Uusi generointi samalle tunnukselle
+  ylikirjoittaa valmiin → poista vanha -raaka ja aja työkalu perään.
+- Natiivi: `pelikoodari/musiikki-vaihe1` bec3e2e2 (junan fdc47632 päällä) → build 20 (Fable: ei build 19). AaniTila.Aihe
+  (aarreaiheen paikka), AloituslentoAlkoi, UusiKaupunki (vain ensimmäinen käynti, ei katkaise soivaa aihetta), MatkaLoppui
+  (huipennuksen alla, UiNakymat.NaytaHuipennus). Paketin tuleva rivi `musiikkiaihe` (Siirtoseppä). Etusivun johtoaihe tulee
+  paketin paikkaraita-rivistä, kun web julkaistaan (natiivin oletus jätetty musa-etusivuksi: kultaiset = web). 285/285, unity 0.
+- Web-kytkentä: agentti samassa web-worktreessä (etusivu → musa-johtoaihe, aloituslento, saapuminen Välimeri, loppu) →
+  PR Julkaisijan junaan.
+- Vaihe 2: kysytty Fablelta laajuus (käsky "maanosat + tunnuskaupungit" vs suunnitelman §5 jako).
