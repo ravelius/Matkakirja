@@ -38,6 +38,27 @@ namespace Matkakirja
         public enum Tila { Taysi, Lepo, Paikallaan, Kerros }
 
         public static Ruudunpaivitys Instanssi { get; private set; }
+
+        /// <summary>
+        /// Verhon aikana täysi taajuus (Valmius.Verhossa): Cesium etenee pääsäikeessä kehys kerrallaan, joten lepotilan 30 fps
+        /// hidasti mustan ja aloitusverhon latausta. Kehittäjälippu A/B: PlayerPrefs matkakirja-verho-taysi 0 = pois.
+        /// </summary>
+        public static bool VerhoTaysi
+        {
+            get
+            {
+#if !MATKAKIRJA_APPSTORE
+                if (verhoTaysi < 0) verhoTaysi = PlayerPrefs.GetInt("matkakirja-verho-taysi", 1);
+                return verhoTaysi != 0;
+#else
+                return true;
+#endif
+            }
+        }
+        static int verhoTaysi = -1;
+        /// <summary>Löydös 163: PAIKALLAAN-tilassa valmistuneet laattahaut, jotka herättivät piirron.</summary>
+        public static int Vartija163 { get; private set; }
+        long paikallaanHaut;
         /// <summary>UI rauhassa: ei animaatiota, kirjoituskonetta, pulun liikettä tai siirtymää (Natiivi-UI asettaa).</summary>
         public static Func<bool> UiRauhassa;
         /// <summary>Lisäehdot täydelle taajuudelle (esim. linssin ajo): mikä tahansa tosi = TÄYSI.</summary>
@@ -135,6 +156,17 @@ namespace Matkakirja
             if (uusi == Tila.Paikallaan && !kameraPois && ElavaKerros.Tarvitaan(out kerrosFps)) { uusi = Tila.Kerros; Syy = "elävä kerros"; }
             else if (ElavaKerros.Pakota == ElavaKerros.Pakotus.Kerros && !kameraPois && uusi == Tila.Lepo && ElavaKerros.Tarvitaan(out kerrosFps)) { uusi = Tila.Kerros; Syy = "elävä kerros (pakotettu)"; }
             ElavaKerros.Pyyda(uusi == Tila.Kerros, kerrosFps);
+            // VARTIJA 163: Cesiumin laattoja valmistui, kun ruutu ei piirrä (PAIKALLAAN). PallonLepo huomaa asteen muutoksen
+            // yleensä itse; tämä kirjaa ja korjaa aukon (laatat saapuivat, ruutu ei päivittynyt).
+            long haut = Laattapalvelin.CesiumValmiita;
+            if (uusi == Tila.Paikallaan && Nyt == Tila.Paikallaan && haut != paikallaanHaut)
+            {
+                Vartija163++;
+                if (Vartija163 <= 20 || Vartija163 % 100 == 0)
+                    Debug.Log($"MATKAKIRJA VARTIJA 163: {haut - paikallaanHaut} laattaa saapui paikallaan-tilassa → herätys (#{Vartija163})");
+                PallonLepo.Valmistui("vartija 163");
+            }
+            paikallaanHaut = haut;
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
             int fps = Math.Min(uusi == Tila.Taysi ? Naytto : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
@@ -151,6 +183,7 @@ namespace Matkakirja
             if (kierto != null && kierto.Liikkeessa && !kierto.Peitetty) return "pallo";
             if (nappula != null && nappula.Liikkeessa) return "lento";
             if (Time.unscaledTime < herattyAsti) return "herätys";
+            if (VerhoTaysi && Valmius.Verhossa) return "verho";
             for (int i = 0; i < Aktiivinen.Count; i++)
             {
                 bool a;

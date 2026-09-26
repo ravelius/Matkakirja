@@ -483,8 +483,18 @@ namespace Matkakirja
         /// maakunta/nykyalue > meri > valtameri, NimiLadonta.Lado). Nostojen nimiöt eivät ole varauksia.
         /// </summary>
         public readonly Ruutuvaraukset Varaukset = new Ruutuvaraukset();
-        /// <summary>Tämän kehyksen <see cref="Varaukset"/>-listan alussa olevien nostoikonien määrä (loput: kaupungit, aluenimet).</summary>
+        /// <summary>
+        /// Tämän kehyksen <see cref="Varaukset"/>-listan alussa olevien kiinteiden varausten määrä: nostoikonit ja
+        /// <see cref="Kalusteet"/> (loput: kaupungit, aluenimet).
+        /// </summary>
         public int NostoIkoneita { get; private set; }
+
+        /// <summary>
+        /// Löydös 164 (omistaja 1.0.21, Alankomaat: "Brussel" maan otsikkorivin päällä): ruudun kalusteet (kartussi,
+        /// Liiku, pulu, yläpalkki) ruutupikseleinä, y ylös. Natiivi-UI asettaa; ne varataan nostoikonien jälkeen ennen
+        /// kaupunkeja, joten kaupunkien ja alueiden nimiöt väistävät niitä (pisteet pysyvät paikallaan).
+        /// </summary>
+        public static System.Func<IReadOnlyList<Ruutulaatikko>> Kalusteet;
         readonly List<Merkki> nakyvat = new List<Merkki>();
         readonly List<NimiLadonta.KaupunkiEhdokas> ehdokkaat = new List<NimiLadonta.KaupunkiEhdokas>();
         readonly List<bool> naytetaan = new List<bool>();
@@ -721,6 +731,13 @@ namespace Matkakirja
             //    vain linssinimissä (Natiivi-UI NostotKartalla.NaytaSallittu).
             var nk = NostoKerros.Instanssi;
             NostoIkoneita = nk != null && (!LinssiTila || nk.LinssiNimet) ? nk.VaraaIkonit(Varaukset, kerroin) : 0;
+            // Löydös 164: ruudun kalusteet kiinteinä varauksina (kuten ikonit) ennen kaupunkeja.
+            var kalusteet = Kalusteet?.Invoke();
+            if (kalusteet != null && kalusteet.Count > 0)
+            {
+                foreach (var k in kalusteet) Varaukset.Varaa(k);
+                NostoIkoneita = Varaukset.Maara;
+            }
 
             // 2) Paikat ja ehdokkaat tärkeysjärjestyksessä (valintamerkit ensin: jarjestys, muuten merkit).
             nakyvat.Clear();
@@ -733,8 +750,12 @@ namespace Matkakirja
                 float etaisyys = kohti.magnitude;
                 Vector3 normaali = gt.TransformDirection(m.normaali);
                 // Aloitusportissa (PalloKierto.PorttiSumea) ei merkkejä eikä nimiöitä, kuten webin etusivupallossa.
+                Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
                 bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && Suodatettu(m.kaupunki.id)
-                    && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
+                    && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f
+                    // Löydös 164 jatko (Fable 26.9.): kalusteen (kartussi, Liiku, pulu, yläpalkki) alle jäävä piste ja sen
+                    // nimi piiloon; valittavan kaupungin merkki näkyy aina.
+                    && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) { m.lukittu = false; continue; }
 
@@ -747,7 +768,6 @@ namespace Matkakirja
                 m.juuri.SetPositionAndRotation(edusta, kt.rotation);
                 m.juuri.localScale = Vector3.one * mk;
 
-                Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
                 // Lukko vapautuu vasta, kun kaupunki poistuu ruudulta (web LUKKO SÄILYY YHDEN VÄLIIN JÄÄNEEN LADONNAN YLI).
                 if (ruutu.x < 0 || ruutu.y < 0 || ruutu.x > Screen.width || ruutu.y > Screen.height) m.lukittu = false;
                 // Valittavan nimi näkyy aina (web kohdeElementti piirtää nimen joka merkille).
@@ -805,6 +825,15 @@ namespace Matkakirja
                 if (m.nimio.enabled != mahtuu) m.nimio.enabled = mahtuu;
             }
             Naytetty = naytetty;
+        }
+
+        /// <summary>Onko ruutupiste jonkin <see cref="Kalusteet"/>-laatikon sisällä (kameran takana ei).</summary>
+        static bool KalusteenAlla(IReadOnlyList<Ruutulaatikko> kalusteet, Vector3 ruutu)
+        {
+            if (kalusteet == null || ruutu.z <= 0f) return false;
+            foreach (var k in kalusteet)
+                if (ruutu.x > k.X0 && ruutu.x < k.X1 && ruutu.y > k.Y0 && ruutu.y < k.Y1) return true;
+            return false;
         }
 
         /// <summary>Nimiö ladottuun paikkaan (TMP:n tasaus ja pivot ankkurin mukaan; vain muuttuessa).</summary>

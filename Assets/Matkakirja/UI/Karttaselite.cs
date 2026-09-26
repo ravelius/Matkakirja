@@ -119,6 +119,7 @@ namespace Matkakirja.Natiivi
             valilehtiMaakunnat.EnableInClassList("mk-valittu", maakunnatAuki);
             paneeli.EnableInClassList("mk-selite--maakunnat", maakunnatAuki);
             if (maakunnatAuki && Auki) Maakunnat.Avautui();
+            Maakunnat.AsetaNakyvissa(Auki && maakunnatAuki); // löydös 165
         }
 
         void LuoRivi(NostoMerkit.Rivi r)
@@ -191,6 +192,7 @@ namespace Matkakirja.Natiivi
             if (maakunnatAuki) Maakunnat.Avautui();
             Rakenne.Nayta(paneeli, true, 220);
             nappi.AddToClassList("mk-valittu");
+            Maakunnat.AsetaNakyvissa(maakunnatAuki); // löydös 165
             AukiMuuttui?.Invoke(true);
         }
 
@@ -200,6 +202,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             Rakenne.Nayta(paneeli, false, 220);
             nappi.RemoveFromClassList("mk-valittu");
+            Maakunnat.AsetaNakyvissa(false); // löydös 165: kartan korostus pois, valinta säilyy listassa
             AukiMuuttui?.Invoke(false);
         }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using CesiumForUnity;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.Rendering;
@@ -150,6 +151,7 @@ namespace Matkakirja
                     sb.Append(" (viimeisin ").Append((Time.unscaledTime - instanssi.kaapattuAika).ToString("0.0", CultureInfo.InvariantCulture)).Append(" s sitten, ")
                       .Append(instanssi.vari != null ? instanssi.vari.width + "×" + instanssi.vari.height : "-").Append(')');
                 sb.Append(", kerroskehyksiä ").Append(instanssi.kerrosKehyksia);
+                sb.Append(", Cesium-näkymä ").Append(instanssi.nakymaPidetty ? "pidetty" : "pääkamera").Append(", vartija 163 ").Append(Vartija);
             }
             return sb.ToString();
         }
@@ -245,9 +247,16 @@ namespace Matkakirja
             {
                 if (kaapattu)
                 {
+                    // LÖYDÖS 163: Cesium valitsee laatat Camera.mainista, joka on pois käytöstä kerroksen ajan. Ilman näkymää
+                    // se ei käy läpi yhtään laattaa (käyty 0), aste on silti 100 %, ja laitteella muistipaine purkaa laatat:
+                    // seuraava kaappaus tallensi pelkän pohjapallon. Pääkamera Cesiumin lisäkameraksi (käytetään myös pois
+                    // käytöstä olevana), joten valinta, lataus ja aste pysyvät oikeina koko kerroksen ajan.
+                    PidaNakyma(true);
                     paa.enabled = false;
                     paa.cullingMask = alkuMaski;
                     tila = Tila.Kerros;
+                    kaappausHaut = Laattapalvelin.CesiumValmiita;
+                    kaappausAste = pallo != null ? pallo.ComputeLoadProgress() : 100f;
                 }
                 else kaappausPyydetty = true;   // edellinen kehys ei ehtinyt (esim. piirto ohitettiin): uudelleen
             }
@@ -258,7 +267,44 @@ namespace Matkakirja
                 if (elava.nearClipPlane != paa.nearClipPlane) elava.nearClipPlane = paa.nearClipPlane;
                 if (elava.farClipPlane != paa.farClipPlane) elava.farClipPlane = paa.farClipPlane;
             }
-            if (tila == Tila.Kerros) kerrosKehyksia++;
+            if (tila == Tila.Kerros)
+            {
+                kerrosKehyksia++;
+                // VARTIJA 163: laatat saapuivat tai pallo muuttui kaappauksen jälkeen, mutta ruutu näyttää talletettua kuvaa.
+                // Uusi kaappaus (täysi piirto, kunnes PallonLepo taas lepää); lokiin kerran jaksoa kohden.
+                long haut = Laattapalvelin.CesiumValmiita;
+                float aste = pallo != null ? pallo.ComputeLoadProgress() : 100f;
+                if (haut != kaappausHaut || aste < kaappausAste - 0.5f)
+                {
+                    Vartija++;
+                    Debug.Log($"MATKAKIRJA VARTIJA 163: laatat muuttuivat kerroksen aikana ({haut - kaappausHaut} uutta hakua, aste {aste:0.0} %) → täysi piirto ja uusi kaappaus (#{Vartija})");
+                    Palauta();
+                    PallonLepo.Muuttui("vartija 163");
+                }
+            }
+        }
+
+        /// <summary>Löydös 163: kerroksen keskeyttäneet vartijan havainnot (laatat muuttuivat talletetun kuvan aikana).</summary>
+        public static int Vartija { get; private set; }
+        long kaappausHaut;
+        float kaappausAste = 100f;
+        Cesium3DTileset pallo;
+        CesiumCameraManager hallinta;
+        bool nakymaPidetty;
+
+        /// <summary>Löydös 163: pääkamera Cesiumin lisäkameraksi kerroksen ajaksi (päällä) tai pois (Palauta).</summary>
+        void PidaNakyma(bool paalle)
+        {
+            if (paalle == nakymaPidetty || paa == null) return;
+            if (hallinta == null)
+            {
+                pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
+                if (pallo != null) hallinta = CesiumCameraManager.GetOrCreate(pallo.gameObject);
+            }
+            if (hallinta == null) return;
+            if (paalle) { if (!hallinta.additionalCameras.Contains(paa)) hallinta.additionalCameras.Add(paa); }
+            else hallinta.additionalCameras.Remove(paa);
+            nakymaPidetty = paalle;
         }
 
         void Etsi()
@@ -304,6 +350,7 @@ namespace Matkakirja
         /// <summary>Takaisin täyteen piirtoon: pääkamera päälle (ellei peitto), maski ennalleen, ElavaKamera pois.</summary>
         void Palauta()
         {
+            PidaNakyma(false);
             if (paa != null)
             {
                 if (tila != Tila.Taysi) paa.cullingMask = alkuMaski;

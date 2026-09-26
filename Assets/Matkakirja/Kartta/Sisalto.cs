@@ -151,6 +151,7 @@ namespace Matkakirja
                     osoitinHaussa = false;
                     istunnonPolku = versioPolku;
                     Esilataaja.AjaTaustalla(PaivitaOsoitinTaustalla());
+                    KaynnistyksenEsilataus(versioPolku);
                     valmis(versioPolku);
                     yield break;
                 }
@@ -179,8 +180,80 @@ namespace Matkakirja
                 yield return PakettiPaivitys.HaeHakemistoKylmana(osoitin, versioPolku);
                 osoitinHaussa = false;
                 istunnonPolku = versioPolku;
+                KaynnistyksenEsilataus(versioPolku);
             }
             valmis(versioPolku);
+        }
+
+        /*
+         * KÄYNNISTYKSEN ESILATAUS (ESILATAUSPOLITIIKKA kohta 2 "käynnistys verhon takana", Fable 26.9.2026 klo 12.2x;
+         * Esilataaja erä 5). Kylmä verkko-savuke (lokit/esilataaja-5/kylma, käännös 4cce8281): 44 kokoelmaa haettiin
+         * laiskasti vasta tarpeessa ja pelaaja odotti niitä yhteensä ~15 s (käynnistys 5,4 s, aloitus 7,6 s, lento 4,8 s).
+         * Ne pyydetään nyt kaikki heti, kun paketin versio tiedetään, siinä järjestyksessä kuin peli ne tarvitsee
+         * (jonon Nro): Nakyva-pyyntö löytää ne levyltä (osuma) tai liittyy keskeneräiseen hakuun (YHTEINEN HAKU alla).
+         * Taso SeuraavaRuutu: ei odota laattoja eikä pysähdy lämpöön; Nakyva ohittaa aina. Levyllä jo oleva ohitetaan
+         * (lämmin käynnistys ei lue 3–11 Mt:n tiedostoja turhaan). Lista on mitattu; uusi laiska kokoelma näkyy
+         * verkko-savukkeen HUDIT-listassa vaiheella kaynnistys/aloitus/lento, ja se lisätään tähän.
+         */
+        public static readonly string[] KaynnistyksenKokoelmat =
+        {
+            // käynnistys
+            "kokoelmat/kaupungit.json", "offline.json", "kokoelmat/lippumaat.json", "kokoelmat/karttavalot.json",
+            "kokoelmat/maakuntarajat.json", "kokoelmat/laatat.json", "kokoelmat/maamerkit.json", "kokoelmat/aanitaulut.json",
+            "moduulit/js/packs/maakunnat-luonnehdinnat.json", "moduulit/js/karttatyokalu-maakunnat.json", "kokoelmat/julisteet.json",
+            // aloitus (uusi matka)
+            "kokoelmat/kysymykset.json", "kokoelmat/maat.json", "kokoelmat/saapumispuheet.json", "kokoelmat/tarinakaari.json",
+            "kokoelmat/merinimet.json", "kokoelmat/fokusvirrat.json", "kokoelmat/paikallisaarteet.json", "kokoelmat/kohtaamiset.json",
+            "kokoelmat/kohtaamiskuvat.json", "kokoelmat/kuvakysymykset.json", "kokoelmat/pulmat.json", "kokoelmat/elaintayt.json",
+            "kokoelmat/paikkatiedot.json", "kokoelmat/saannot.json", "kokoelmat/luennat.json", "kokoelmat/lehtitehtavat.json",
+            // aloituslento ja saapuminen
+            "kokoelmat/saapumistekstit.json", "moduulit/js/packs/nimisto-1873.json", "moduulit/js/packs/maailmankartta-nimet.json",
+            "moduulit/js/packs/maailmankartta-maasto.json", "moduulit/js/packs/viritysaanet.json", "moduulit/js/packs/radiot.json",
+            "kokoelmat/radiot.json", "moduulit/js/linssit/radio.json", "moduulit/js/linssit/ihmisen-matka-kertomus.json",
+            "moduulit/js/linssit/satelliitti-data.json", "moduulit/js/linssit/keksinnot.json", "moduulit/js/linssit/vesistot.json",
+            "moduulit/js/linssit/astronaut-kysymykset.json", "moduulit/js/linssit/ihmisen-matka-data.json",
+            "moduulit/js/linssit/maatiedot.json", "moduulit/js/linssit/ihmisen-matka.json", "kokoelmat/linssiaineisto.json",
+            "moduulit/js/linssit/vertailu.json",
+        };
+
+        /// <summary>Käynnistyksen kokoelmat (listan alku): vain näille VANHA SISÄLTÖ -varareitti (PakettiPaivitys.VanhaSisalto).</summary>
+        public const int KaynnistyksenOsuus = 11;
+        static readonly HashSet<string> kaynnistyksenJoukko = VanhanJoukko();
+
+        /// <summary>
+        /// Laattojen määrittely (kokoelmat/laatat.json: kerrokset, versiot, polut) ja offline-alueet eivät saa tulla vanhasta
+        /// versiosta: vanha pyramidiversio voisi osoittaa poistettuihin laattoihin (löydös 163:n tarkistus, Fable 26.9. klo
+        /// 15.3x). Ne esiladataan kuten muutkin, mutta odotetaan aina tuoreina.
+        /// </summary>
+        static HashSet<string> VanhanJoukko()
+        {
+            var j = new HashSet<string>(new ArraySegment<string>(KaynnistyksenKokoelmat, 0, KaynnistyksenOsuus));
+            j.Remove("kokoelmat/laatat.json");
+            j.Remove("offline.json");
+            return j;
+        }
+        /// <summary>Tässä istunnossa tilannekuvasta luetut vanhat kokoelmat (mittarin "vanhaa sisältöä käytetty").</summary>
+        public static readonly List<(string Kohde, string Lahde, double IkaVrk)> VanhaaKaytetty = new List<(string, string, double)>();
+
+        static string esiladattuVersio;
+        public static int KaynnistyksenEsilatauksia { get; private set; }
+
+        static void KaynnistyksenEsilataus(string versioPolku)
+        {
+            if (versioPolku == null || versioPolku == esiladattuVersio) return;
+            esiladattuVersio = versioPolku;
+            int n = 0;
+            foreach (var suht in KaynnistyksenKokoelmat)
+            {
+                string polku = versioPolku + suht;
+                if (haussa.ContainsKey(polku)) continue;
+                string tiedosto = PakettiPaivitys.Varastosta(versioPolku, suht) ?? Valimuisti(polku);
+                if (File.Exists(tiedosto)) continue;
+                n++;
+                Esilataaja.AjaTaustalla(HaePaketista(suht, _ => { }, true, Taso.SeuraavaRuutu));
+            }
+            KaynnistyksenEsilatauksia = n;
+            Debug.Log($"MATKAKIRJA sisältö: käynnistyksen esilataus {n}/{KaynnistyksenKokoelmat.Length} kokoelmaa ({versioPolku})");
         }
 
         public static IEnumerator HaePaketista(string suhteellinen, Action<string> valmis, bool valinnainen, Taso taso = Taso.Nakyva)
@@ -204,7 +277,24 @@ namespace Matkakirja
             string polku = versioPolku + suhteellinen;
             string tiedosto = PakettiPaivitys.Varastosta(versioPolku, suhteellinen) ?? Valimuisti(polku);
             string teksti = null;
-            if (File.Exists(tiedosto))
+            // VANHA SISÄLTÖ (Fable 26.9. klo 12.4x/13.0x): käynnistyksen kokoelma puuttuu tästä versiosta → pelaajan oma
+            // vanhempi levyltä aina, buildin tilannekuva enintään 14 vrk; tuore on jo haussa (KaynnistyksenEsilataus) seuraavaa kertaa varten.
+            // Varaston tiedosto luetaan omasta muuttujastaan: epäonnistunut luku ei saa johtaa siihen, että verkkohaku
+            // kirjoittaa tuoreen sisällön vanhan tiivisteen nimelle (tiedosto-muuttuja jää tämän version polkuun).
+            if (!File.Exists(tiedosto) && taso == Taso.Nakyva && kaynnistyksenJoukko.Contains(suhteellinen))
+            {
+                var vanha = PakettiPaivitys.VanhaSisalto(versioPolku, suhteellinen, out string vanhanLahde, out double ikaVrk);
+                if (vanha != null)
+                {
+                    yield return Taustalla(() => File.ReadAllText(vanha), t => teksti = t);
+                    if (teksti != null)
+                    {
+                        if (!VanhaaKaytetty.Exists(x => x.Kohde == suhteellinen)) VanhaaKaytetty.Add((suhteellinen, vanhanLahde, ikaVrk));
+                        Debug.Log($"MATKAKIRJA sisältö: vanhaa sisältöä käytetty {suhteellinen} ({vanhanLahde}, {ikaVrk:0.0} vrk, käytössä {versioPolku})");
+                    }
+                }
+            }
+            if (teksti == null && File.Exists(tiedosto))
             {
                 // Välimuistitiedosto on 3–11 Mt: luku ja purku pääsäikeessä maksoi 25–58 ms:n kehyksen
                 // jokaisella kokoelmalla (Natiivi-UI:n piikkimittaus 24.9.), joten luetaan taustasäikeessä.

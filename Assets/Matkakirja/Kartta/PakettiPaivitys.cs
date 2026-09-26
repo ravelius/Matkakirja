@@ -50,6 +50,9 @@ namespace Matkakirja
         static Dictionary<string, string> osittainenHakemisto;
         static string osittainenPolku;
         static bool tilannekuvaTuotu;
+        /// <summary>Buildin tilannekuvan versiopolku (TuoTilannekuva) ja sen hakemisto (laiskasti), VANHA SISÄLTÖ -varareitille.</summary>
+        static string tilannekuvanPolku;
+        static Dictionary<string, string> tilannekuvanHakemisto;
 
         public static string Tila { get; private set; } = "ei aloitettu";
 
@@ -59,6 +62,7 @@ namespace Matkakirja
             instanssi = null; havaittuOsoitin = null; kaytossaVersio = 0; viimeisinTarkistus = -1e9f; kaynnissa = false;
             kaytossaHakemisto = null; kaytossaPolku = null; Tila = "ei aloitettu";
             osittainenHakemisto = null; osittainenPolku = null; tilannekuvaTuotu = false;
+            tilannekuvanPolku = null; tilannekuvanHakemisto = null; tilannekuvanJulkaistu = null;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -179,8 +183,11 @@ namespace Matkakirja
         {
             string kansio = TilannekuvaKansio, kuvausPolku = Path.Combine(kansio, "tilannekuva.json");
             if (!File.Exists(kuvausPolku)) return null;
-            var o = PakettiPaatokset.LueOsoitin(File.ReadAllText(Path.Combine(kansio, "osoitin.json")));
+            string osoitinTeksti = File.ReadAllText(Path.Combine(kansio, "osoitin.json"));
+            var o = PakettiPaatokset.LueOsoitin(osoitinTeksti);
             if (o == null) return null;
+            tilannekuvanPolku = o.Polku;
+            tilannekuvanJulkaistu = LueJulkaistu(osoitinTeksti);
             if (tilannekuvaTuotu) return o.Polku;
             tilannekuvaTuotu = true;
             try
@@ -206,6 +213,76 @@ namespace Matkakirja
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: tilannekuva: " + e.Message); }
             return o.Polku;
+        }
+
+        /// <summary>
+        /// VANHA SISÄLTÖ KÄYNNISTYKSEEN (Fable 26.9.2026 klo 12.4x ja 13.0x, ESILATAUSPOLITIIKKA kohta 2): kun käytössä olevan
+        /// version tiedosto puuttuu (sisältö muuttui), kylmä käynnistys saa lukea vanhemman heti:
+        ///   1) pelaajan OMA levyllä oleva vanhempi versio aina (valmiiksi ladattu versio tai laiskasti haettu tiedosto),
+        ///   2) buildin tilannekuva, jos sen julkaisusta on enintään <see cref="TilannekuvaEnintaanVrk"/> vrk,
+        /// muuten odotetaan verkkoa. Tuore haetaan taustalla (Sisalto.KaynnistyksenEsilataus) ja on käytössä seuraavassa
+        /// käynnistyksessä. Palauttaa luettavan tiedoston, lähteen ("levy v166" / "tilannekuva v160") ja iän vuorokausina.
+        /// </summary>
+        public static string VanhaSisalto(string versioPolku, string suhteellinen, out string lahde, out double ikaVrk)
+        {
+            lahde = null; ikaVrk = 0;
+            try
+            {
+                if (versioPolku == null) return null;
+                int nyky = PakettiPaatokset.VersioPolusta(versioPolku);
+                // 1) Pelaajan oma levy, uusin vanhempi versio ensin.
+                string paa = Path.GetDirectoryName(VersioKansio(versioPolku));
+                if (Directory.Exists(paa))
+                {
+                    var versiot = Directory.GetDirectories(paa, "v*")
+                        .Select(d => (d, v: PakettiPaatokset.VersioPolusta(d.Replace(Path.DirectorySeparatorChar, '/'))))
+                        .Where(x => x.v > 0 && x.v < nyky).OrderByDescending(x => x.v);
+                    foreach (var (d, v) in versiot)
+                    {
+                        // Laiskasti haettu tiedosto tämän pelaajan edellisestä istunnosta (Sisalto.Valimuisti-polku).
+                        string laiska = Path.Combine(d, suhteellinen.Replace('/', Path.DirectorySeparatorChar));
+                        if (File.Exists(laiska)) { lahde = $"levy v{v}"; ikaVrk = Ika(File.GetLastWriteTimeUtc(laiska)); return laiska; }
+                        // Valmiiksi ladattu versio: hakemisto + valmis.json (tilannekuvan pelkkä hakemisto ei ole pelaajan oma).
+                        string h = Path.Combine(d, "hakemisto.json");
+                        if (!File.Exists(Path.Combine(d, "valmis.json")) || !File.Exists(h)) continue;
+                        var sha = PakettiPaatokset.LueHakemisto(File.ReadAllText(h)).FirstOrDefault(r => r.Polku == suhteellinen)?.Sha256;
+                        string p = sha != null ? Path.Combine(Varasto, sha) : null;
+                        if (p != null && File.Exists(p)) { lahde = $"levy v{v}"; ikaVrk = Ika(File.GetLastWriteTimeUtc(Path.Combine(d, "valmis.json"))); return p; }
+                    }
+                }
+                // 2) Buildin tilannekuva, enintään 14 vrk julkaisusta.
+                if (tilannekuvanPolku == null || tilannekuvanPolku == versioPolku || tilannekuvanJulkaistu == null) return null;
+                double ika = Ika(tilannekuvanJulkaistu.Value);
+                if (ika > TilannekuvaEnintaanVrk) return null;
+                if (tilannekuvanHakemisto == null)
+                {
+                    string h = HakemistoJson(tilannekuvanPolku);
+                    if (!File.Exists(h)) return null;
+                    tilannekuvanHakemisto = PakettiPaatokset.LueHakemisto(File.ReadAllText(h)).ToDictionary(r => r.Polku, r => r.Sha256);
+                }
+                if (!tilannekuvanHakemisto.TryGetValue(suhteellinen, out var tsha)) return null;
+                string tp = Path.Combine(Varasto, tsha);
+                if (!File.Exists(tp)) return null;
+                lahde = $"tilannekuva v{PakettiPaatokset.VersioPolusta(tilannekuvanPolku)}";
+                ikaVrk = ika;
+                return tp;
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: vanha sisältö: " + e.Message); return null; }
+        }
+
+        /// <summary>Buildin tilannekuva kelpaa käynnistykseen enintään näin monen vuorokauden ikäisenä (Fable 26.9.2026).</summary>
+        public const double TilannekuvaEnintaanVrk = 14;
+        /// <summary>Tilannekuvan osoittimen julkaistu-aika (UTC), TuoTilannekuva lukee.</summary>
+        static DateTime? tilannekuvanJulkaistu;
+
+        static double Ika(DateTime utc) => Math.Max(0, (DateTime.UtcNow - utc).TotalDays);
+
+        /// <summary>Osoittimen "julkaistu" (ISO 8601) tai null.</summary>
+        static DateTime? LueJulkaistu(string osoitinTeksti)
+        {
+            var m = System.Text.RegularExpressions.Regex.Match(osoitinTeksti ?? "", "\"julkaistu\"\\s*:\\s*\"([^\"]+)\"");
+            return m.Success && DateTime.TryParse(m.Groups[1].Value, System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.AdjustToUniversal | System.Globalization.DateTimeStyles.AssumeUniversal, out var t) ? t : (DateTime?)null;
         }
 
         static HashSet<int> ValmiitVersiot(string pohja)

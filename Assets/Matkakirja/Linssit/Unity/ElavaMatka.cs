@@ -142,6 +142,11 @@ namespace Matkakirja.Natiivi
             o.Kirjaa("elävä: testireitti " + (testiReitti == null ? "pois" : string.Join(" → ", testiReitti)));
         }
 
+        /// <summary>Uusin osuus piirtyy (elävä kerros 30 fps vain viivalle; muuten viiva on osa talletettua karttaa).</summary>
+        bool Piirtyy() => aika - uusiAlku < KynanKestoS + 0.2f;
+        void OnEnable() => ElavaKerros.Animoi(Piirtyy, "elävä reitti");
+        void OnDisable() => ElavaKerros.Poista(Piirtyy);
+
         void Start()
         {
             var s = Resources.Load<Shader>("Varjostimet/Kynaviiva");
@@ -150,7 +155,11 @@ namespace Matkakirja.Natiivi
             if (p != null) { hehku = new Material(p); roskat.Add(hehku); hehku.SetFloat("_Lahde", (float)BlendMode.One); hehku.SetFloat("_Kohde", (float)BlendMode.One); hehku.SetFloat("_Ydin", 5); hehku.SetFloat("_Halo", 0.5f); }
             viivaMesh = new Mesh { name = "Kuljettu reitti", indexFormat = IndexFormat.UInt32 }; roskat.Add(viivaMesh);
             hehkuMesh = new Mesh { name = "Käydyt kaupungit" }; roskat.Add(hehkuMesh);
-            if (viiva != null) viivaOlio = Kappale("Kuljettu reitti", viivaMesh, viiva);
+            if (viiva != null)
+            {
+                viivaOlio = Kappale("Kuljettu reitti", viivaMesh, viiva);
+                if (ElavaKerros.Taso >= 0) viivaOlio.layer = ElavaKerros.Taso;   // kynän piirto elävällä kerroksella (161 B)
+            }
             if (hehku != null) Kappale("Käydyt kaupungit", hehkuMesh, hehku);
         }
 
@@ -274,8 +283,7 @@ namespace Matkakirja.Natiivi
             viivaMesh.SetTriangles(kolmiot, 0);
             viivaMesh.RecalculateBounds();
             // Lepopiirto: vain uuden osuuden piirron ajan.
-            if (jatkuu) PallonLepo.Herata(KynanKestoS + 0.2f, "elävä reitti");
-            else PallonLepo.Muuttui("elävä reitti");
+            if (!jatkuu) PallonLepo.Muuttui("elävä reitti");   // uusi osuus piirtyy elävällä kerroksella (Piirtyy)
             ohjain?.Kirjaa($"elävä: kuljettu reitti {reitti.Count} kaupunkia{(jatkuu ? ", uusi osuus piirtyy" : "")}");
         }
 

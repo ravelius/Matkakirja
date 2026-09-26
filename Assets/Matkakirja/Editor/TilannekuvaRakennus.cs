@@ -35,6 +35,11 @@ namespace Matkakirja.Editori
         {
             "kokoelmat/kaupungit.json", "kokoelmat/reitit.json", "kokoelmat/maarajat.json", "kokoelmat/aluenimet.json",
             "moduulit/js/ui-tekstit.json",
+            // Käynnistyksen kokoelmat (Fable 26.9.2026 VANHA SISÄLTÖ, Natiiviseppä kuittasi +12,3 Mt; web #3327):
+            // Sisalto.KaynnistyksenKokoelmat alku, luetaan tilannekuvasta heti, jos enintään 14 vrk vanha.
+            "kokoelmat/lippumaat.json", "kokoelmat/karttavalot.json", "kokoelmat/maakuntarajat.json", "kokoelmat/laatat.json",
+            "kokoelmat/maamerkit.json", "kokoelmat/aanitaulut.json", "kokoelmat/julisteet.json", "offline.json",
+            "moduulit/js/packs/maakunnat-luonnehdinnat.json", "moduulit/js/karttatyokalu-maakunnat.json",
         };
 
         public static string Kansio => Path.GetFullPath(Path.Combine("Build", "tilannekuva"));

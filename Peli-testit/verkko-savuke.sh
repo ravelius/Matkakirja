@@ -91,7 +91,7 @@ if os.path.exists(p):
     if "osumat" in y:
         print("\nOSUMA-% (välimuistista / pyynnöt) VAIHEITTAIN JA LÄHTEITTÄIN")
         for k, o in y["osumat"].items(): print(f"  {k:<22} {o['osumia']:>5}/{o['n']:<5} {o['pros']:>3} %")
-    if "esilataaja" in y: print("\nESILATAAJA", {k: v for k, v in y["esilataaja"].items() if k != "mittari"})
+    if "esilataaja" in y: print("\nESILATAAJA", {k: v for k, v in y["esilataaja"].items() if k not in ("mittari", "laatat")})
     # Esilataajan oma mittari (Kartta/EsilataajaMittari.cs): Nakyva-pyyntö löysi kohteen esilatauksen jäljiltä = osuma.
     # Hudit: kesken (esilataus jonossa/haussa), ei esiladattu, hukattu (esiladattu, ei löytynyt). "Levyllä" = valmiina
     # ilman tämän istunnon esilatausta (edellinen ajo, paketti, buildi): ei osuma-%:iin. Vain raportti, ei rajaa.
@@ -104,6 +104,17 @@ if os.path.exists(p):
                     f"ei esiladattu {s['eiEsiladattu']}, hukattu {s['hukattu']}; levyllä {s['levylla']}, toistoja {s['toistoja']}")
         print("\nESILATAAJA " + mrivi(m) + f", avoimia {m['avoimia']}")
         for k, s in m.get("vaiheet", {}).items(): print(f"  {k:<11} " + mrivi(s))
+        hs = m.get("hudit", [])
+        if hs:
+            print(f"  HUDIT pisimmästä (25/{len(hs)}):")
+            for h in hs[:25]: print(f"    {h['ms']:>6} ms  {h['vaihe']:<11} {h['luokka']:<13} {h['kohde'][-90:]}")
+    # Laatat omana rivinään (Kartta/LaattaOsumat.cs, build 22): näkyvä laatta tämän istunnon esilatauksesta = osuma.
+    lt = y.get("esilataaja", {}).get("laatat")
+    if lt:
+        lp = "–" if lt["pros"] < 0 else f"{lt['pros']} %"
+        print(f"LAATAT     OSUMA-% {lp:>5} ({lt['osumia']}/{lt['osumia'] + lt['huteja']})  levyllä {lt['levylla']}, esiladattuja {lt['esiladattuja']}")
+    va = y.get("esilataaja", {}).get("vanhaaKaytetty")
+    if va is not None: print(f"VANHAA SISÄLTÖÄ KÄYTETTY (oma levy aina, tilannekuva ≤ 14 vrk): {len(va)}" + (": " + ", ".join(f"{v['kohde']} ({v['lahde']}, {v['ikaVrk']} vrk)" for v in va) if va else ""))
 # RAJA (Raamattu ESILATAUSPOLITIIKKA kohta 3, Fable 25.9.): saapumisessa nolla verkko-odotusta, kylmänä ja lämpimänä.
 # Odotus lasketaan verkko-odotukseksi, kun sen aikana valmistui verkkohaku (haut > 0) tai se on puheen lataus.
 saap = [r for r in rivit if r['vaihe'] == 'saapuminen' and (r.get('haut', 0) > 0 or r['mita'].startswith('puhe:'))]

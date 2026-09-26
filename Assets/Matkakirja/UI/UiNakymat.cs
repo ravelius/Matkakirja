@@ -258,6 +258,7 @@ namespace Matkakirja.Natiivi
             Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
             Chat = new PuluChat(kerros, Pulu);
             Traileri = new Saapumistraileri(kerros);
+            KaupunkiMerkit.Kalusteet = KartanKalusteet; // löydös 164
             // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin pallonäkymässä
             // ison pulun napautus ei avaa pääkeskustelua (löydös 96); kuvanäkymässä keskustelu on minipulun kortissa.
             Pulu.Napautus += Chat.Vaihda;
@@ -708,6 +709,41 @@ namespace Matkakirja.Natiivi
                 ? Mathf.Min(Mathf.Max(h / 2f, ylaRaja + puolikas), alaRaja - puolikas)
                 : (ylaRaja + alaRaja) / 2f;
             return new Vector2(Screen.width * 0.25f, Screen.height * (1f - y / h));
+        }
+
+        readonly System.Collections.Generic.List<Ruutulaatikko> kalusteet = new System.Collections.Generic.List<Ruutulaatikko>();
+
+        /// <summary>
+        /// Löydös 164 (omistaja 1.0.21, Alankomaat): kaupunkien ja alueiden nimiöt väistävät ruudun kalusteita kuten
+        /// webissä (lauta.js LIUSKAN_KALUSTEET: yläpalkki, kartuutsi, toimintorivin Liiku, pulu). Laatikot paneelista
+        /// ruutupikseleiksi (y ylös) + 4 pt vara; KaupunkiMerkit varaa ne joka piirrettävässä kehyksessä.
+        /// </summary>
+        System.Collections.Generic.IReadOnlyList<Ruutulaatikko> KartanKalusteet()
+        {
+            kalusteet.Clear();
+            var juuri = Kerros.Juuri(UiKerros.Valikot);
+            var paneeli = juuri.panel;
+            float w = juuri.layout.width;
+            if (paneeli == null || float.IsNaN(w) || w <= 0) return kalusteet;
+            // Paneeli → ruutu: ScreenToPanel kulmista (kaikki kerrokset samalla skaalalla, vrt. LiuskanRuutupiste).
+            var a = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(paneeli, Vector2.zero);
+            var b = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(Screen.width, Screen.height));
+            if (b.x - a.x <= 0 || b.y - a.y <= 0) return kalusteet;
+            float sx = Screen.width / (b.x - a.x), sy = Screen.height / (b.y - a.y);
+            const float Vara = 4f;
+            void Lisaa(Rect r)
+            {
+                if (r.width <= 0 || r.height <= 0) return;
+                float x0 = (r.xMin - Vara - a.x) * sx, x1 = (r.xMax + Vara - a.x) * sx;
+                float yla = (r.yMin - Vara - a.y) * sy, ala = (r.yMax + Vara - a.y) * sy;
+                kalusteet.Add(new Ruutulaatikko(x0, Screen.height - ala, x1, Screen.height - yla));
+            }
+            if (!Ylapalkki.PalkkiPiilossa) Lisaa(new Rect(0, 0, w, Kerros.Reunat(UiKerros.Valikot).y + Ylapalkki.Varaus));
+            var kortti = Kartuscha?.NakyvaKortti;
+            if (kortti != null) Lisaa(kortti.worldBound);
+            if (Matkavalinta != null) Lisaa(Matkavalinta.LiikuLaatikko);
+            if (Pulu != null) Lisaa(Pulu.Laatikko);
+            return kalusteet;
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

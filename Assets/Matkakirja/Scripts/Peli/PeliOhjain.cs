@@ -463,6 +463,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Versiokansion tiedosto (esim. kokoelmat/reitit.json). hiljaa = puuttuminen ei ole virhe.</summary>
         IEnumerator HaeTiedosto(string suhteellinen, bool ohitaValimuisti, bool hiljaa, Action<string> valmis)
         {
+            // Esilataaja erä 5 (kylmä savuke lokit/esilataaja-5/kylma3): tämä oma välimuistihaku ei nähnyt
+            // PakettiPaivityksen varastoa (buildin tilannekuva, laiskan tilan jaetut tiedostot) eikä Sisallon yhteistä
+            // hakua, joten tilannekuvassa olevat laatat/aanitaulut/maamerkit/kaupungit haettiin kylmänä verkosta (~0,8 s
+            // kukin). Sama kansio (Documents/sisalto) → Sisalto.HaePaketista hoitaa varaston, jaetun haun, vanhan
+            // sisällön ja välimuistiin kirjoituksen. Ohitettava välimuisti (tuore pakotettuna) kulkee vanhaa polkua.
+            if (!ohitaValimuisti)
+            {
+                yield return Sisalto.HaePaketista(suhteellinen, valmis, hiljaa);
+                yield break;
+            }
             string polku = versioPolku + suhteellinen;
             string tiedosto = Valimuisti(polku);
             bool valimuistissa = !ohitaValimuisti && File.Exists(tiedosto);

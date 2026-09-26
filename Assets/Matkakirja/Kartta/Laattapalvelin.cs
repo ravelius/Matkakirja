@@ -382,6 +382,7 @@ namespace Matkakirja
 
         void Awake()
         {
+            PyyntoLoki.Alusta();
             if (varakuva == null)
             {
                 var t = new Texture2D(256, 256, TextureFormat.RGB24, false);
@@ -605,6 +606,7 @@ namespace Matkakirja
         async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null, Func<bool> pyydetty = null)
         {
             var lahde = new Lahde();
+            long alkuT = System.Diagnostics.Stopwatch.GetTimestamp();
             // Valmiusdiagnostiikka: HTTP-pyynnöt (Cesium ja omat haut, ei esilatausta) luokittain kesken / valmiit / verkosta.
             var luokka = esilataus == null ? Luokat.GetOrAdd(Luokka(polku), _ => new int[4]) : null;
             if (luokka != null) Interlocked.Increment(ref luokka[0]);
@@ -613,6 +615,9 @@ namespace Matkakirja
                 var tulos = await HaeSisalto(polku, esilataus, lahde, pyydetty);
                 if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
                     SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
+                if (esilataus == null && PyyntoLoki.Paalla)
+                    PyyntoLoki.Kirjaa(Luokka(polku), polku, lahde.Nimi, tulos.Item1,
+                        (System.Diagnostics.Stopwatch.GetTimestamp() - alkuT) * 1000.0 / System.Diagnostics.Stopwatch.Frequency);
                 return tulos;
             }
             finally
@@ -633,6 +638,12 @@ namespace Matkakirja
         /// Esilataus ei kuulu tähän.
         /// </summary>
         public static readonly ConcurrentDictionary<string, int[]> Luokat = new ConcurrentDictionary<string, int[]>();
+
+        /// <summary>Cesiumin valmistuneet laattahaut yhteensä (Luokat [1]; ei esilatausta). Vartija 163 vertaa kehysten välillä.</summary>
+        public static long CesiumValmiita
+        {
+            get { long n = 0; foreach (var kv in Luokat) n += Volatile.Read(ref kv.Value[1]); return n; }
+        }
 
         /// <summary>
         /// Ämpärin polun luokka diagnostiikkaan: pohja (pallo/laatat), maasto, kerma (väritaso), sat/&lt;sarja&gt;
@@ -705,6 +716,7 @@ namespace Matkakirja
                     var b = paketti.Hae(avain);
                     if (b != null && KuvaEhja(polku, b))
                     {
+                        LaattaOsumat.Levylta(polku, false);
                         Interlocked.Increment(ref Paketista);
                         lahde.Nimi = "paketti";
                         return (200, b);
@@ -716,7 +728,7 @@ namespace Matkakirja
             {
                 if (esi) return (200, null);
                 var sisalto = File.ReadAllBytes(f);
-                if (KuvaEhja(polku, sisalto)) { Interlocked.Increment(ref Offline); lahde.Nimi = "offline"; VerkkoOdotus.Osuma("laatta", true); return (200, sisalto); }
+                if (KuvaEhja(polku, sisalto)) { Interlocked.Increment(ref Offline); lahde.Nimi = "offline"; VerkkoOdotus.Osuma("laatta", true); LaattaOsumat.Levylta(polku, false); return (200, sisalto); }
                 Debug.LogWarning($"MATKAKIRJA laattapalvelin: offline-laatta rikki ({sisalto.Length} t), haetaan verkosta: {polku}");
             }
             f = Tiedosto(valimuisti, polku);
@@ -730,6 +742,7 @@ namespace Matkakirja
                     if (esi) return (200, null);
                     Interlocked.Increment(ref Valimuistista);
                     VerkkoOdotus.Osuma("laatta", true);
+                    LaattaOsumat.Levylta(polku, true);
                     try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
                     lahde.Nimi = "valimuisti";
                     return (200, sisalto);
@@ -741,7 +754,7 @@ namespace Matkakirja
             }
             if (esi && esilataus.Peruttu) return (499, null);
             // Osuma-% (Esilataaja erä 1): näkyvän kartan laatta verkosta = huti (esilataus ei ole pyyntö).
-            if (!esi) VerkkoOdotus.Osuma("laatta", false);
+            if (!esi) { VerkkoOdotus.Osuma("laatta", false); LaattaOsumat.Verkosta(); }
             var h = new Haku
             {
                 Polku = polku, Esi = esilataus, Alku = alku, Maasto = maasto,
@@ -793,6 +806,7 @@ namespace Matkakirja
                     string tmp = f + "." + Guid.NewGuid().ToString("N") + ".tmp";
                     File.WriteAllBytes(tmp, data);
                     if (File.Exists(f)) File.Delete(tmp); else File.Move(tmp, f);
+                    if (esi) LaattaOsumat.Esiladattu(polku);
                 }
                 catch (Exception) { /* välimuisti on valinnainen */ }
             }
