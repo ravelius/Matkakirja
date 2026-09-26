@@ -6,6 +6,69 @@ Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia s
 löytyi 26.9.2026 build 20:n testauksessa: kamera-, usva- ja maakuntakomennot ovat siinä, ja se toimii
 samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama konsoli kaikissa käännöksissä).
 
+## TF 1.0.27 -kierroksen valmisteltu resepti (Fable 27.9.2026, ennen buildia)
+
+Kaikki kuusi haaraa ovat MERGE-PYYNTÖTILASSA proto-3d/Matkakirja-proto:ssa, eivät vielä nykyisessä
+käännöksessä. Kun Natiiviseppä ilmoittaa 1.0.27:n SHA:n, aja suoraan alla olevat. Kaikkiin kuviin
+build-numero/SHA + kuvakulma suoraan kuvaan (ks. yllä oleva pysyvä sääntö).
+
+**178 (nähtävyyskartalla vain paikat, 70 tarinakohdetta):**
+```
+echo "ui nahtavyydet amsterdam" > ui-komento.txt
+```
+Onnistuminen: Maitotyttö/Yövartio (EI-RAKENNUS-kohteet) eivät näy enää numeroituina pinneinä
+kartalla, löytyvät sen sijaan kaupungin nostojen haitarista numeroimattomana. Ei lokiriviä,
+puhtaasti visuaalinen. Vertailukuva: kaappaukset/omistaja-20260926/loydos178-nahtavyydet-ei-rakennus-amsterdam.png.
+
+**179 (Tapaa-nappi pois lehdestä):**
+```
+echo "lehti firenze" > ui-komento.txt
+```
+Vanha testikomento `ui lehti tehtava` on POISTETTU tässä haarassa — jos se palauttaa
+tuntematon-virheen, se itsessään vahvistaa haaran olevan buildissa. Onnistuminen: ei kultaista
+"Tapaa X"/"Etsi kätkö" -nappia alapalkissa millään lehden sivulla, aidossa aktiivisen
+kohtaamis/kätkö-tehtävän kaupungissa.
+
+**170 (kuva vaihtuu kesken istunnon):**
+EI konsolikomentoa — automaattinen taustatarkistus (käynnistyksen jälkeen + taustalta palatessa).
+Vaatii uudemman sisältöpaketin saatavilla session aikana; vie sovellus Home-napilla taustalle ja
+takaisin käynnistääkseen tarkistuksen. Onnistumisen lokirivit:
+```
+MATKAKIRJA paketti: sisältö vaihtui vX → vY kesken istunnon, N tiedostoa muuttui: ...
+MATKAKIRJA ui: sisältö vY käyttöön kesken istunnon (N muuttunutta): maakunta- ja nostodata hylätty
+```
+Visuaalisesti: maakuntakuvat (esim. Attika/Akropolis) ilmestyvät ilman uudelleenkäynnistystä.
+
+**Lipun perspektiivi (keskellä lähes näkymätön, tanko säteittäin ulos, alaosassa alas):**
+```
+echo "aja 48.87 2.3275 0.4 1.2" > komento.txt   # Pariisi, keskellä (lähes suoraan ylhäältä)
+echo "aja 48.66 2.3275 0.4 1.2" > komento.txt   # puolivälissä
+echo "aja 48.52 2.3275 0.4 1.2" > komento.txt   # reunalla
+```
+Vaihtoehto Lontoo: `aja 51.50 -0.12 0.4 1.2` → `51.29` → `51.15` (sama kaava). Perustesti
+(vahvistettu aiemmin): `aja 41.08 25.95 2 1.5` (Traakia). Ei lokiriviä. Kriteeri: suoraan ylhäältä
+lippu lähes näkymätön (piste + ohut kangas), reunoilla tanko säteittäin poispäin ruudun keskeltä,
+näkymän alaosassa tanko osoittaa alas, kangas kääntyy tangon mukana.
+
+**Höyrylaiva (elävä elementti, Thames):**
+```
+echo "aja 51.503 -0.12 1.5 1.5" > komento.txt
+echo "elava elementit tila" > linssi-komento.txt
+echo "elava elementit siirra 300" > linssi-komento.txt
+```
+Sijainti tarkasti 51.50767°N / -0.10192°E. Onnistumisen lokirivi: `hoyrylaiva näkyvissä (peitto
+0.xx), 199 kolmiota, nopeus 1.00` (ei "ei näkyvissä, nopeus 0,00"). Visuaalisesti: siipiratashöyry
+kulkee Thamesia, ratas pyörii, savupalloja piipusta.
+
+**177-variantti (uusi peli, nostokortti avattuna) — todennäköinen FAIL-kandidaatti:**
+```
+echo "ui nosto skandaali:shakkiturkkilainen" > ui-komento.txt
+# kuvakaappaus kortin ollessa auki, sitten:
+echo "uusi-peli 1 ateena" > peli-komento.txt
+```
+Kumpikaan 177-haara ei erikseen mainitse avoinna olevan nostokortin sulkemista uuden pelin
+alkaessa — testaa erikseen jääkö kortti vanhan pelin päälle. Poikkeama = FAIL.
+
 ## PYSYVÄ KOHTA: omistajalle päätyvien kuvien merkintä (omistaja 27.9.2026 klo 00.2x, Raamattu-PR #3361)
 
 Kaikkiin omistajalle päätyviin esimerkki-/vertailukuviin (esim. löydös175-tyyppiset ennen/jälkeen-
