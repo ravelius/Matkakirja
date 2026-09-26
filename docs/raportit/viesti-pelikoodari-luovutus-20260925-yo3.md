@@ -261,3 +261,18 @@ MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (
   käynnistyksen sisältö 1,5 s (KYSYMYS Fablella: buildin tilannekuva stale-while-revalidate), hero-kuvat saapumisessa,
   liput/NASA-kuvat. Käännöspalvelun Build-kansio: kopioi .app HETI käännöksen perään (muuten seuraava käännös korvaa).
 - Savukeajot: pyydä vuoro Julkaisijalta (booted < 2, ei hänen Playwright-sarjaansa; muistipaine 26.9. iltapäivällä).
+
+## 24. Lisäys 26.9. klo 16.0x — ESILATAAJA ERÄ 5 TAVOITE SAAVUTETTU
+- Kylmä (lokit/esilataaja-5/kylma4): sisällön osuma 82 % (tavoite ≥ 80), Esilataajan odotus 2,2 s (tavoite < 3; alussa
+  20,6 s), aloitus/lento 100 %. Näkyvät: sisältö 1,2 s (osoitin+hakemisto), aloitusverho 3,8 s; laatat (lennon musta 5,0 s,
+  satelliitti 1,8 s, LAATAT 20 %) Natiivisepän erä. Jäännös: hero-kuvat (julisteet/herokoe, Natiivi-UI:n traileri) ~1,1 s.
+- Junassa (juna/b13 6464eb0f, 1.0.23): esilataaja-5 f6b7ca05 = Tehtava-API, LaattaOsumat, HUDIT, käynnistyksen esilataus,
+  VANHA SISÄLTÖ (oma levy aina, tilannekuva ≤ 14 vrk julkaistu-kentästä; laatat.json/offline.json aina tuoreina),
+  tilannekuvan C#-lista (TilannekuvaRakennus, web #3327), PeliOhjain.HaeTiedosto → Sisalto.HaePaketista.
+  Merge-pyynnössä: 02ce33d2 (163: MaailmaHyppy esilataa kohdealueen kuten lento).
+- 163 juurisyy (Natiiviseppä): kiirejono vei näkyvän jonon paikat (Laattapalvelin :849, :80) + ElavaKerros; korjaus a9ca03c9.
+  Natiivin "Maailma-tila" = kehittäjän maailmahyppy (ei webin Maailma-lauta).
+- Auki: #3323 (maanosa-kaupungit, web). Jonossa (ei kiire): Astronautin kamera Arvaa kohde + aikasarjat (webin arvio riveinä,
+  kun Linssiseppä kirjannut suunnitelman).
+- Worktreet siivottu (Postivahti): jäljellä maanosa-kaupungit, loydos135-web (#3274), proto-pelikoodari-esi5, vanha-checkout.
+- SendMessage-raja: varakanava mcp__ccd_session_mgmt__send_message session id:llä (Fable sitova 26.9.).
