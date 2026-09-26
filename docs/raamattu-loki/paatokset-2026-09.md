@@ -7375,3 +7375,7 @@ Pelikoodari osoitti ristiriidan: web ei himmenna loytamatonta (omistaja 21.9., l
 ## P0: NRE Symbolimallit.LateUpdate 1.0.26-JUNASSA (c5e329a9) (26.9.2026 klo 20.48)
 
 Laitetestaaja: esikierros keskeytyi — NullReferenceException Symbolimallit.LateUpdate() 610×/10 s aloitusruudulla, verho 6,0 s; epailty 175c f362c74a; raportti savukierros-b26-poikkeama-20260926.md 62d2e434c. Natiiviseppa korjaa ennen 175-kuvapareja; Laitetestaaja odottaa uutta kaannosta.
+
+## MAAKUNTAPIKKUKUVAT: 10 MAASSA, 21 EUROOPAN MAATA ILMAN (26.9.2026 klo 20.49)
+
+Siirtoseppa v181: pikkukuvat BEL DNK EST FIN GRC LTU LVA NLD SVK SVN (113 aluetta); AUT DEU ESP FRA GBR ITA POL kortin kuva[0] varana; kokonaan ilman ALB BGR BIH BLR CHE CZE HRV HUN IRL ISL LUX MDA MKD MLT MNE NOR PRT ROU SRB SWE UKR (~400 aluetta). GRC 14/14 osoitetta 200 → laitteen puute piirrossa/paketissa (Natiivi-UI tutkii, Siirtoseppa laitekierros). Fable: maakunta-era 2 sisaltaa pikkukuvan jokaiselle maakunnalle, erat 3–5 lopuille 15 maalle reitin jarjestyksessa.
