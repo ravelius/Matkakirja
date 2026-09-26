@@ -7643,3 +7643,7 @@ Omistaja 23.4x: kartalla kohdekaupungin ja pelaajan merkin vieressa ylaviistossa
 ## LENTO V3 HYVAKSYTTY (TIGER MOTH SEEPIANA, KUVAUSLINJA, LASKU RENKAALLE, UTU); XAI-AVAIN VAIHDETTU (27.9.2026 klo 00.00)
 
 Kortti 23.5x: lento v3 -speksi (docs/raportit/lento-v3-speksi.md, linssiseppa-tyo-20260923 7f3d81cf8): kone Tiger Moth seepiana (vain matkustajan punainen huivi aksenttina), lahestymissuunta kaupungin kuvauslinja (Ateena etelasta), loppu lasku ja rullaus renkaalle kameran loitontuessa 80 → 45 km, pilvet pelkka utu. Fablen paatokset: odotus = kaynnistysaani + sykkiva rengas (teksti vain > 2 s); KAANON: etumainen matkustaja punaisella huivilla on Fogg (pelaaja), lentaja nimeton. V3 korvaa hyvaksyttaessa Raamatun LENNON PINTA (satelliitti), DC-3, savujana/pilvisumu, ELOKUVALLINEN ALOITUSLENTO, ALOITUSLENNON KAMERAKASIKIRJOITUS, kestot 12 s ja 16–26 s; sailyvat KAMERA-AJOT, TEMPO, kone aina nakyvissa, LENNON KARTTA, saapumissekvenssi, AIKA → Raamattu-PR seuraavaan eraan. Toteutus Linssiseppa (malli + kamera) + Natiiviseppa (esilatauskaytava, kytkin) 1.0.28, 3 erikoismallia ja merikokeilu edella. Ensimmainen xAI-avain oli vaara (UUID); omistaja antoi oikean xai-avaimen 23.5x → vaihdettu ymparistoon, Pelikoodari ajaa kokeilun.
+
+## V2287 (OUZEL GALLEY) JA V2288 (178 EI-PAIKAT MUSEOON) MAINISSA; JULKAISIJAN JONO TYHJA (27.9.2026 klo 00.01)
+
+Julkaisija 23.52: #3354 v2287, #3355 v2288 (kaksi korjauskierrosta: orvot miniatyyrit, SHELL-rivit), #3347 mainissa; jono tyhja → Fablen docs-haara mainiin, Z10-osoitinvaihto luettelon jalkeen, Raamattu-PR tulossa.
