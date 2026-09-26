@@ -38,7 +38,7 @@ namespace Matkakirja
         /// <summary>Löydetyn syttyminen musteesta täysiin väreihin (s).</summary>
         public const float SyttyminenS = 0.4f;
         /// <summary>LOD0 ≥ tämä (pt), muuten LOD1; nousu takaisin LOD0:aan (1 + LodHystereesi) × raja.</summary>
-        public const float Lod1RajaPt = 48f, LodHystereesi = 0.1f;
+        public const float Lod1RajaPt = 14f, LodHystereesi = 0.1f;   // löydös 175b: LOD0 lähikuvassa (ennen 48 pt)
         /// <summary>TODO LOD2 (siluettikvadi atlaksesta) tämän alle; atlas vaatii editorin, joten nyt LOD1.</summary>
         public const float Lod2RajaPt = 18f;
         /// <summary>Instansseja enintään per arkkityyppi ja LOD (NostoKerroksen katto on 120).</summary>
@@ -49,7 +49,7 @@ namespace Matkakirja
         /// <summary>Piirretäänkö tason 2–3 nostolle arkkityyppi nyt (OnMalli ja piirto käyttävät samaa ehtoa).</summary>
         static bool Taso23Kaytossa(int taso)
         {
-            if (!Taso23 || taso < 2 || instanssi == null || !instanssi.instansointi) return false;
+            if (!Taso23 || taso < 2 || instanssi == null || !instanssi.instansointi || !Kallistettu()) return false;
             var nk = NostoKerros.Instanssi;
             return nk != null && NostoSaannot.KuvamerkkiKaytossa(taso, nk.ZoomKerroin);
         }

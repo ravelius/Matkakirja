@@ -82,20 +82,17 @@ Shader "Matkakirja/Symbolimalli"
                 float4 tila = UNITY_ACCESS_INSTANCED_PROP(Symbolit, _Tila);
                 float3 n = normalize(i.n);
                 half nl = saturate(dot(n, GetMainLight().direction));
-                half3 c = i.vari.rgb * (0.74 + 0.26 * nl);
-                c = lerp(c, _Paperi.rgb * (0.86 + 0.14 * nl), _Himmea * 0.35);
-                half a = lerp(1.0, 0.88, _Himmea) * UsvaNakyvyys(i.usvaY);
-                // Tasot 2–3: löytämätön musteena. Harmaa seepiaan, tummennus 0,8; reuna = tahko lähes syrjittäin kameraan.
-                half muste = (half)tila.x;
-                if (muste > 0.001)
-                {
-                    half l = dot(c, half3(0.2126, 0.7152, 0.0722));
-                    half3 seepia = l * half3(0.86, 0.8, 0.68);
-                    half reuna = 1.0 - saturate(abs(dot(n, normalize(i.kohti))) * 2.5);
-                    half3 m = lerp(c, seepia, 0.85) * (1.0 - 0.45 * reuna);
-                    c = lerp(c, m, muste);
-                    a *= lerp(1.0, 0.55, muste);
-                }
+                // Löydös 175b (omistaja: "ei saa mitään selvää"): selvempi valo ja varjo (0,5 + 0,5 · N·L), jotta muoto
+                // erottuu, ja tumma kaiverrusreuna: tahko lähes syrjittäin kameraan tummuu musteeksi (siluetti).
+                half3 c = i.vari.rgb * (0.5 + 0.5 * nl);
+                half reuna = smoothstep(0.55, 0.9, 1.0 - abs(dot(n, normalize(i.kohti))));
+                const half3 mustevari = half3(0.23, 0.19, 0.14);
+                // Löytämätön (taso 1 _Himmea, tasot 2–3 tila.x): vain sävy seepiaan, valoisuus ja kontrasti säilyvät.
+                half muste = max((half)_Himmea, (half)tila.x);
+                half l = dot(c, half3(0.2126, 0.7152, 0.0722));
+                c = lerp(c, l * half3(1.02, 0.93, 0.76), 0.8 * muste);
+                c = lerp(c, mustevari, 0.75 * reuna);
+                half a = lerp(1.0, 0.92, muste) * UsvaNakyvyys(i.usvaY);
                 a *= 1.0 - (half)tila.y;
                 return half4(c, a);
             }

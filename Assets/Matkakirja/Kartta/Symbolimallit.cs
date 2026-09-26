@@ -53,7 +53,23 @@ namespace Matkakirja
         static bool Taso1Kaytossa()
         {
             var nk = NostoKerros.Instanssi;
-            return nk != null && nk.ZoomKerroin >= NostoSaannot.TyyppimerkinKerroin;
+            return nk != null && nk.ZoomKerroin >= NostoSaannot.TyyppimerkinKerroin && Kallistettu();
+        }
+
+        /// <summary>Kallistusraja (astetta): pystysuorasta näkyy vain katto, joten sen alla lajin 2D-symboli (Fable 175).</summary>
+        public static float KallistusRajaAste = 25f;
+        const float KallistusHystereesi = 3f;
+        static bool kallistettu;
+
+        /// <summary>Onko kamera kallistettu niin, että mallin kylki näkyy (hystereesi ±3°, ettei vaihto värise).</summary>
+        static bool Kallistettu()
+        {
+            var k = instanssi != null ? instanssi.kierto : null;
+            if (k == null) return false;
+            double a = k.KaytettyKallistus;
+            if (kallistettu && a < KallistusRajaAste - KallistusHystereesi) kallistettu = false;
+            else if (!kallistettu && a >= KallistusRajaAste + KallistusHystereesi) kallistettu = true;
+            return kallistettu;
         }
         public static bool Paalla = true;
         /// <summary>Esikatselu (komento `symbolit loydetty|himmea`): kaikki löydettyinä.</summary>
@@ -62,7 +78,7 @@ namespace Matkakirja
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
-            KokoPt = 44f; KokoKynnysPt = 22f; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
+            KokoPt = 44f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             NollaaTasot23();
         }
 
