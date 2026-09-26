@@ -3,7 +3,8 @@
 // hallinnolliset alueet maittain ja Livian luonnehdinta kustakin.
 //
 //   Lista      maaotsikko (▸, yksi maa auki kerrallaan) + rivi per alue; rivin
-//              napautus valitsee (valinta muistetaan: PlayerPrefs
+//              napautus tai sormen veto rivien yli valitsee kuten Nostot-välilehden
+//              peukalolevy (löydös 156; valinta muistetaan: PlayerPrefs
 //              matkakirja-karttatyokalu-maakunta, avain "ISO:tunnus").
 //              Auki on pelaajan nykyisen maan ryhmä (löydös 70, Fablen linjaus
 //              25.9.2026); maassa ilman maakuntia pelkkä teksti "Tälle maalle
@@ -42,6 +43,10 @@ namespace Matkakirja.Natiivi
         /// oletusrajat, Natiiviseppä kuuntelee PoisMuuttui). Muistetaan (PlayerPrefs); maakunnan valinta kumoaa.
         /// </summary>
         public static bool Pois { get; private set; }
+
+        /// <summary>Löydös 156: sormi vetää rivien yli (valinta vaihtuu rivi kerrallaan); kartta voi kuunnella irrotusta.</summary>
+        public static bool Vedossa { get; private set; }
+        public static event Action<bool> VetoMuuttui;
         public static event Action<bool> PoisMuuttui;
         const string PoisAvain = "matkakirja-karttatyokalu-maakunnat-pois", PoisTunnus = ":pois";
         static bool OnPois(string avain) => avain != null && avain.EndsWith(PoisTunnus, StringComparison.Ordinal);
@@ -59,6 +64,7 @@ namespace Matkakirja.Natiivi
         List<Maa> maat;
         Dictionary<string, object> luonnehdinnat, pulu;
         bool haussa, rakennettu;
+        VisualElement vedettava;
         string sovellettuIso = "";
         Matka kuunneltu;
 
@@ -212,13 +218,17 @@ namespace Matkakirja.Natiivi
                 otsikko.Add(nuoli);
                 var ot = Rakenne.Teksti((m.Nimi ?? iso).ToUpperInvariant(), "mk-maakunnat__maanimi", otsikko);
                 Kirjasimet.Aseta(ot, Kirjasin.Kone);
-                var ryhmanRivit = Rakenne.El("mk-maakunnat__rivit", ryhma, PickingMode.Ignore);
+                // Löydös 156: rivien säiliö on osuman kohde, rivit eivät (kuten Karttaselitteen lista, löydös 69).
+                var ryhmanRivit = Rakenne.El("mk-maakunnat__rivit", ryhma);
+                KytkeVeto(ryhmanRivit);
                 if (m.Alueet.Count > 0)
                 {
                     string poisAvain = iso + PoisTunnus;
                     var poisRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(poisAvain), ryhmanRivit);
                     Kirjasimet.Aseta(Rakenne.Teksti("Pois", "mk-maakunnat__nimi", poisRivi), Kirjasin.Luku);
                     poisRivi.tooltip = "Maakunnat pois kartalta";
+                    poisRivi.pickingMode = PickingMode.Ignore;
+                    poisRivi.userData = poisAvain;
                     rivit[poisAvain] = poisRivi;
                 }
                 foreach (var a in m.Alueet)
@@ -228,6 +238,8 @@ namespace Matkakirja.Natiivi
                     var n = Rakenne.Teksti(a.Nimi, "mk-maakunnat__nimi", rivi);
                     Kirjasimet.Aseta(n, Kirjasin.Luku);
                     rivi.tooltip = a.Nimi;
+                    rivi.pickingMode = PickingMode.Ignore;
+                    rivi.userData = avain;
                     rivit[avain] = rivi;
                 }
                 ryhmat[iso] = (otsikko, ryhmanRivit);
@@ -240,6 +252,62 @@ namespace Matkakirja.Natiivi
             peukalo.BringToFront();
             PaivitaLuonnehdinta();
             if (ValittuAvain != null && !OnPois(ValittuAvain)) Valittu?.Invoke(ValittuAvain);
+        }
+
+        /// <summary>
+        /// Löydös 156 (omistaja, build 19): sormen veto rivien yli valitsee samalla eleellä kuin Nostot-välilehti
+        /// (Karttaselite.ValitseKohdasta): painallus valitsee heti, veto vaihtaa valinnan rivi kerrallaan, peukalo seuraa
+        /// ilman siirtymää (mk-vetaa), eikä ScrollView vieritä vedon aikana.
+        /// </summary>
+        void KytkeVeto(VisualElement rivit)
+        {
+            rivit.RegisterCallback<PointerDownEvent>(e =>
+            {
+                vedettava = rivit;
+                rivit.CapturePointer(e.pointerId);
+                AsetaVeto(true);
+                ValitseKohdasta(rivit, e.localPosition.y);
+                e.StopPropagation();
+            });
+            rivit.RegisterCallback<PointerMoveEvent>(e =>
+            {
+                if (vedettava != rivit) return;
+                ValitseKohdasta(rivit, e.localPosition.y);
+                e.StopPropagation();
+            });
+            rivit.RegisterCallback<PointerUpEvent>(e => { if (rivit.HasPointerCapture(e.pointerId)) rivit.ReleasePointer(e.pointerId); LopetaVeto(); });
+            rivit.RegisterCallback<PointerCaptureOutEvent>(_ => LopetaVeto());
+        }
+
+        void LopetaVeto()
+        {
+            if (vedettava == null) return;
+            vedettava = null;
+            AsetaVeto(false);
+        }
+
+        void AsetaVeto(bool veto)
+        {
+            peukalo.EnableInClassList("mk-vetaa", veto);
+            if (Vedossa == veto) return;
+            Vedossa = veto;
+            VetoMuuttui?.Invoke(veto);
+        }
+
+        /// <summary>Rivi sormen korkeudella (säiliön koordinaatit); vedettäessä rivien ohi reunimmainen rivi.</summary>
+        void ValitseKohdasta(VisualElement rivit, float y)
+        {
+            VisualElement osuma = null;
+            foreach (var r in rivit.Children())
+            {
+                if (!(r.userData is string) || r.resolvedStyle.display == DisplayStyle.None) continue;
+                var l = r.layout;
+                if (float.IsNaN(l.height)) continue;
+                if (osuma == null && y < l.yMin) { osuma = r; break; }
+                osuma = r;
+                if (y < l.yMax) break;
+            }
+            if (osuma != null) Valitse((string)osuma.userData);
         }
 
         /// <summary>Pois-tilassa jokaisen maan Pois-rivi näkyy valittuna (tila on maasta riippumaton).</summary>
