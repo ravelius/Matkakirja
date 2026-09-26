@@ -2,20 +2,20 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 13:50 EEST
+**Päivitetty:** 2026-09-26 14:04 EEST
 
 ## 1) Sessiot
 
-Uusi tili klo 13:50: viikko (all models) **16 %**, viikko (Fable) 10 %, 5 h **60 %** (nollautuu ~9 min kuluttua, ~14:00 EEST). Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Ei uusia kontekstiylityksiä (Natiivi-UI ja Pelikoodari 66 %, molemmat vakaita alle 70 %).
+**5 h -KIINTIÖ NOLLAUTUI klo 14:00 EEST (0 %, seur. nollaus 15:59:59 UTC = 18:59:59 EEST HUOM tarkista oikea aikavyöhyke — resetsAt raaka 15:59:59Z = 18:59 EEST).** Uusi tili klo 14:04: viikko (all models) **16 %**, viikko (Fable) 10 %, 5 h **0 %**. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Ei uusia kontekstiylityksiä (Natiivi-UI ja Pelikoodari 66 %, vakaita alle 70 %).
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
 | Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 60% | running | PR #3308 |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 56% | running | tämä taulu |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 58% | running | tämä taulu |
 | Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 25% | idle | PR #3306 mergetty |
-| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 36% | running | — |
-| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 66% | running | PR #3324 mergetty |
-| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 41% | running | — |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 36% | idle | — |
+| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 66% | idle | PR #3324 mergetty |
+| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 41% | idle | — |
 | Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 24% | idle | — |
 | Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 37% | idle | — |
 | Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 35% | idle | PR #3307 mergetty |
@@ -70,11 +70,11 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 60 % (nollautuu ~9 min kuluttua, ~14:00 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 16 %.** **Viikko (Fable):** 10 %.
-- **Levy:** 85 Gt vapaana (raja 85 Gt, rajalla — ei purge-toistoa Fablen ohjeen mukaan). **Swap: 12,3 Gt / 13 Gt (raja 24 Gt, vakaa). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 50 kpl.
-- **Simulaattorit boottina:** 1 (linssiseppa-iPhone — max 4 päivällä). coreaudiod 6 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
-- **Konteksti:** Natiivi-UI 66 %, Pelikoodari 66 % (molemmat vakaita), Fable 60 %, Karttaseppä 59 %, Postivahti 56 %, Linssiseppä 41 %, Laitetestaaja 37 %, Natiiviseppä 36 %, Siirtoseppä 35 %, Julkaisija 25 %, Sisältökirjuri 24 %.
-- **Juna:** ei uutta KÄÄNNETTY-riviä 12:57 jälkeen, ei proto-kaanna.sh käynnissä — jono tyhjä, ei hälytystä.
+- **5 h -kiintiö:** **NOLLAUTUI — 0 %** (seur. nollaus 18:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 16 %.** **Viikko (Fable):** 10 %.
+- **Levy:** 83 Gt vapaana (raja 85 Gt, hieman alle — ei purge-toistoa Fablen ohjeen mukaan). **Swap: 12,25 Gt / 13 Gt (raja 24 Gt, vakaa). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 51 kpl.
+- **Simulaattorit boottina:** 2 (linssiseppa-iPhone, iPhone 17 — max 4 päivällä). coreaudiod 6 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
+- **Konteksti:** Natiivi-UI 66 %, Pelikoodari 66 % (molemmat vakaita), Fable 60 %, Karttaseppä 59 %, Postivahti 58 %, Linssiseppä 41 %, Laitetestaaja 37 %, Natiiviseppä 36 %, Siirtoseppä 35 %, Julkaisija 25 %, Sisältökirjuri 24 %.
+- **Juna:** viimeisin KÄÄNNETTY 837ba1c4 14:02 — ei hälytystä.
 - **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
 
 ## 6) proto-3d/lokit — 10 suurinta alikansiota yli 24 h vanhoja (Fablen pyyntö 11:3x, ei poistoja)
