@@ -1237,12 +1237,7 @@ namespace Matkakirja
             int huippu = string.IsNullOrEmpty(versio) ? 8 : 7;
             if (!malli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal)) return null;
             string pintaPolku = malli.Substring(Laattapalvelin.Ampari.Length);
-            string pohjaMalli = pohja is CesiumUrlTemplateRasterOverlay pu ? pu.templateUrl : null;
-            if (pohjaMalli != null && Laattapalvelin.Juuri != null && pohjaMalli.StartsWith(Laattapalvelin.Juuri, StringComparison.Ordinal))
-                pohjaMalli = pohjaMalli.Substring(Laattapalvelin.Juuri.Length);
-            else if (pohjaMalli != null && pohjaMalli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal))
-                pohjaMalli = pohjaMalli.Substring(Laattapalvelin.Ampari.Length);
-            else pohjaMalli = null;
+            string pohjaMalli = PohjaMalli();
 
             var polut = new List<string>();
             var nahty = new HashSet<string>();
@@ -1309,6 +1304,95 @@ namespace Matkakirja
         /// esivanhemmat, joiden läpi Cesium laskeutuu taso kerrallaan (lapsi vasta vanhemman latauduttua). Nykyisessä
         /// maastossa (2026-09-24-maailma) nämä ovat kaikki saatavilla (Z7 säde 2 osuisi Pohjanmereen, 7/128/103 ei ole).
         /// </summary>
+        /// <summary>Pohjakartan laattamalli ämpärin polkuna ({z}/{x}/{reverseY}), null jos pohja ei ole ämpärissä.</summary>
+        string PohjaMalli()
+        {
+            string m = pohja is CesiumUrlTemplateRasterOverlay pu ? pu.templateUrl : null;
+            if (m != null && Laattapalvelin.Juuri != null && m.StartsWith(Laattapalvelin.Juuri, StringComparison.Ordinal))
+                return m.Substring(Laattapalvelin.Juuri.Length);
+            if (m != null && m.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal))
+                return m.Substring(Laattapalvelin.Ampari.Length);
+            return null;
+        }
+
+        /// <summary>Käynnissä oleva aloituslennon avausnäkymän esilataus (EsilataaAvaus); null = ei aloitettu.</summary>
+        public Laattapalvelin.Esilataus AvausEsilataus { get; private set; }
+
+        /// <summary>Kehittäjälippu A/B-mittaukseen: avauksen esilataus pois (PlayerPrefs matkakirja-avaus-esilataus 0).</summary>
+        public static bool AvausEsilatausPaalla
+        {
+            get
+            {
+#if !MATKAKIRJA_APPSTORE
+                if (avausLippu < 0)
+                {
+                    avausLippu = PlayerPrefs.GetInt("matkakirja-avaus-esilataus", 1);
+                    AvausLaatat.Saada(PlayerPrefs.GetString("matkakirja-avaus-malli", ""));
+                }
+                return avausLippu != 0;
+#else
+                return true;
+#endif
+            }
+        }
+        static int avausLippu = -1;
+
+        /// <summary>
+        /// ALOITUSLENNON AVAUSNÄKYMÄN ESILATAUS (Natiiviseppä 26.9., build 22; ESILATAUSPOLITIIKKA kohta 2): mustan verhon
+        /// avausvaihe odotti Cesiumin tason kerrallaan etenevää latausta (kylmänä 5 s katto, pallo 46–57 %). Kun avauksen
+        /// asento on laskettu (Nappula, ennen mustaan häivytystä), sen laatat haetaan levylle kaikilla tasoilla yhtä aikaa
+        /// (AvausLaatat: lähialue ja katseen kiila): pohja Z6–Z9, lennon pinta (Blue Marble) Z6–huippu ja maasto Z6–Z8.
+        /// Verholle = tosi (palvellaan verhon kevennyksessäkin). Edellinen perutaan.
+        /// </summary>
+        public Laattapalvelin.Esilataus EsilataaAvaus(double lat0, double lon0, double etaisyysM, double kallistus, double suunta)
+        {
+            AvausEsilataus?.Peru();
+            AvausEsilataus = null;
+            if (!AvausEsilatausPaalla) return null;
+            double km = etaisyysM / 1000.0;
+            var polut = new List<string>();
+            var nahty = new HashSet<string>();
+            void Lisaa(string m, bool reverseY, List<(int z, int x, int y)> laatat)
+            {
+                if (m == null) return;
+                foreach (var (z, x, y) in laatat)
+                {
+                    string p = m.Replace("{z}", z.ToString()).Replace("{x}", x.ToString())
+                        .Replace(reverseY ? "{reverseY}" : "{y}", y.ToString());
+                    if (nahty.Add(p)) polut.Add(p);
+                }
+            }
+            string versio = SatelliittiVersio;
+            string malli = string.IsNullOrEmpty(versio) ? SileaUrl : SatelliittiJuuri + versio + "/" + SatelliittiMeri + "/{z}/{x}/{reverseY}.jpg";
+            int huippu = string.IsNullOrEmpty(versio) ? 8 : 7;
+            string pinta = malli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal) ? malli.Substring(Laattapalvelin.Ampari.Length) : null;
+            int maastoN = 0;
+            if (maastoPohja != null && Laattapalvelin.MaastoPolku != null)
+            {
+                foreach (var (z, x, y) in AvausLaatat.Laatat(true, 6, 8, 0.0, lat0, lon0, km, kallistus, suunta))
+                {
+                    if (!MaastoLaatat.Saatavilla(maastoSaatavuus, z, x, y)) continue;
+                    string p = Laattapalvelin.MaastoPolku + maastoPohja.Replace("{z}", z.ToString()).Replace("{x}", x.ToString())
+                        .Replace("{y}", y.ToString());
+                    if (nahty.Add(p)) { polut.Add(p); maastoN++; }
+                }
+            }
+            int ennen = polut.Count;
+            Lisaa(PohjaMalli(), true, AvausLaatat.Laatat(false, 6, 9, 0.7, lat0, lon0, km, kallistus, suunta));
+            int pohjaN = polut.Count - ennen;
+            Lisaa(pinta, true, AvausLaatat.Laatat(false, 6, huippu, 0.7, lat0, lon0, km, kallistus, suunta));
+            var e = Laattapalvelin.Esilataa(polut);
+            e.Verholle = true;
+            AvausEsilataus = e;
+            Debug.Log($"MATKAKIRJA aloituslento: avauksen esilataus {polut.Count} laattaa (maasto {maastoN}, pohja {pohjaN}, " +
+                      $"pinta {polut.Count - ennen - pohjaN}; {km:0} km {kallistus:0}° {suunta:0}°)");
+            return e;
+        }
+
+        /// <summary>Maaston tiles-pohja ja saatavuus (EsilataaAloitusMaasto lukee layer.jsonin; EsilataaAvaus käyttää).</summary>
+        string maastoPohja;
+        List<(int x0, int y0, int x1, int y1)>[] maastoSaatavuus;
+
         static readonly (int z, int sade)[] AloitusMaasto = { (6, 1), (7, 1), (8, 2), (9, 2), (10, 3) };
 
         /// <summary>
@@ -1337,8 +1421,14 @@ namespace Matkakirja
             }
             int maxTaso = 0;
             foreach (var (z, _) in AloitusMaasto) maxTaso = Math.Max(maxTaso, z);
-            var tehtava = System.Threading.Tasks.Task.Run(() => MaastoLaatat.Ymparilta(kansio, MaastoLaatat.TilesPohja(json),
-                MaastoLaatat.Saatavuus(json, maxTaso), AloitusLahtoLat, AloitusLahtoLon, AloitusMaasto));
+            var tehtava = System.Threading.Tasks.Task.Run(() =>
+            {
+                string tp = MaastoLaatat.TilesPohja(json);
+                var saat = MaastoLaatat.Saatavuus(json, maxTaso);
+                maastoPohja = tp;
+                maastoSaatavuus = saat;
+                return MaastoLaatat.Ymparilta(kansio, tp, saat, AloitusLahtoLat, AloitusLahtoLon, AloitusMaasto);
+            });
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted || e.Peruttu)
             {

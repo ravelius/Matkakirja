@@ -546,6 +546,9 @@ namespace Matkakirja
                 var maisema = aloitusKohde != null && LennonAikajana.Kaupungit.TryGetValue(aloitusKohde, out var km) ? km : LennonAikajana.EiMaisemaa;
                 aloitusReitti = LennonAikajana.LaskeAloitus(reittiM0, saapumisKorkeus, maisema, jako,
                     pp => Suuntima(lat0, lon0, lat1, lon1, pp));
+                // Avausnäkymän laatat levylle heti, kun asento tiedetään (build 22): musta verho odottaa niitä.
+                var av = aloitusReitti.Avaus;
+                KarttaKerrokset.Instanssi?.EsilataaAvaus(lat0, lon0, av.etaisyys, av.kallistus, av.suunta);
             }
             if (aloitus)
             {
@@ -620,8 +623,10 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA aloituslento: lähikuvan laatat {lahi:0.0} s, avaus {avaus.etaisyys / 1000:0} km {avaus.kallistus:0}° {avaus.suunta:0}°");
                 }
                 else yield return Lataa(MustanKatto, "valinta");
+                var avEsi = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.AvausEsilataus : null;
                 Debug.Log($"MATKAKIRJA aloituslento: musta {Time.unscaledTime - odotus:0.0} s, esilataus "
                           + (esilataus != null ? $"{esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa}" : "-")
+                          + (avEsi != null ? $", avaus {avEsi.Valmis}+{avEsi.Epaonnistui}/{avEsi.Yhteensa}" : ", avaus -")
                           + $", pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %, {pinta ?? "pinta -"}");
                 Valmius.VerhoLoppu("musta", lataaSyy, (Time.unscaledTime - odotus) * 1000.0,
                     pallo != null ? pallo.ComputeLoadProgress() : -1f, pinta);
@@ -823,7 +828,20 @@ namespace Matkakirja
         }
 
         /// <summary>Löydös 84: pisin musta odotus (s) lennon pinnan latautumista, vaikka laatat eivät olisi valmiita.</summary>
-        public const float MustanKatto = 5f;
+        public static float MustanKatto
+        {
+            get
+            {
+#if !MATKAKIRJA_APPSTORE
+                // Kehittäjälippu mittaukseen (Natiiviseppä 26.9., laattojen esilataus): avausnäkymän koko laattajoukko ja
+                // aika 100 %:iin. defaults write app.matkakirja.proto3d matkakirja-mustan-katto -int 30 (sovellus kiinni).
+                if (mustanKattoKoe < 0f) mustanKattoKoe = PlayerPrefs.GetInt("matkakirja-mustan-katto", 0);
+                if (mustanKattoKoe > 0f) return mustanKattoKoe;
+#endif
+                return 5f;
+            }
+        }
+        static float mustanKattoKoe = -1f;
         /// <summary>
         /// Lontoon lähikuvan latausodotuksen katto (s) mustan alla (BUILD 16; ennen MustanKatto × 0,6 = 3 s, sitten 1,2 s).
         /// Lähikuvan laatat esiladataan jo aloitusnäytössä (KarttaKerrokset.EsilataaAloituslahto: rasterit ja maasto), ja
