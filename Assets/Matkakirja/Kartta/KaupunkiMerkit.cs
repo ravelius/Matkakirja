@@ -483,8 +483,18 @@ namespace Matkakirja
         /// maakunta/nykyalue > meri > valtameri, NimiLadonta.Lado). Nostojen nimiöt eivät ole varauksia.
         /// </summary>
         public readonly Ruutuvaraukset Varaukset = new Ruutuvaraukset();
-        /// <summary>Tämän kehyksen <see cref="Varaukset"/>-listan alussa olevien nostoikonien määrä (loput: kaupungit, aluenimet).</summary>
+        /// <summary>
+        /// Tämän kehyksen <see cref="Varaukset"/>-listan alussa olevien kiinteiden varausten määrä: nostoikonit ja
+        /// <see cref="Kalusteet"/> (loput: kaupungit, aluenimet).
+        /// </summary>
         public int NostoIkoneita { get; private set; }
+
+        /// <summary>
+        /// Löydös 164 (omistaja 1.0.21, Alankomaat: "Brussel" maan otsikkorivin päällä): ruudun kalusteet (kartussi,
+        /// Liiku, pulu, yläpalkki) ruutupikseleinä, y ylös. Natiivi-UI asettaa; ne varataan nostoikonien jälkeen ennen
+        /// kaupunkeja, joten kaupunkien ja alueiden nimiöt väistävät niitä (pisteet pysyvät paikallaan).
+        /// </summary>
+        public static System.Func<IReadOnlyList<Ruutulaatikko>> Kalusteet;
         readonly List<Merkki> nakyvat = new List<Merkki>();
         readonly List<NimiLadonta.KaupunkiEhdokas> ehdokkaat = new List<NimiLadonta.KaupunkiEhdokas>();
         readonly List<bool> naytetaan = new List<bool>();
@@ -721,6 +731,13 @@ namespace Matkakirja
             //    vain linssinimissä (Natiivi-UI NostotKartalla.NaytaSallittu).
             var nk = NostoKerros.Instanssi;
             NostoIkoneita = nk != null && (!LinssiTila || nk.LinssiNimet) ? nk.VaraaIkonit(Varaukset, kerroin) : 0;
+            // Löydös 164: ruudun kalusteet kiinteinä varauksina (kuten ikonit) ennen kaupunkeja.
+            var kalusteet = Kalusteet?.Invoke();
+            if (kalusteet != null && kalusteet.Count > 0)
+            {
+                foreach (var k in kalusteet) Varaukset.Varaa(k);
+                NostoIkoneita = Varaukset.Maara;
+            }
 
             // 2) Paikat ja ehdokkaat tärkeysjärjestyksessä (valintamerkit ensin: jarjestys, muuten merkit).
             nakyvat.Clear();
