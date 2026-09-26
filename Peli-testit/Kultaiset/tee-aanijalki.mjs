@@ -174,6 +174,10 @@ const OLETUSKORIT = new Function(`${poimi('aani-ehdokkaat.js', /const OLETUSKORI
 const YHDISTETYT = new Function(`${poimi('aani-ehdokkaat.js', /const YHDISTETYT = \{[^]*?\n\};\n/, 'YHDISTETYT')} return YHDISTETYT;`)();
 const VAKIOPAIKAT = [...new Function(`${poimi('ambience-stream.js', /const VAKIOPAIKAT = new Set\([^)]*\);/, 'VAKIOPAIKAT')} return VAKIOPAIKAT;`)()];
 const AARRE_MUSIIKKI = new Function('musaPolku', `${poimi('ui.js', /const AARRE_MUSIIKKI = \{[^]*?\n\};\n/, 'AARRE_MUSIIKKI')} return AARRE_MUSIIKKI;`)(media.musaPolku);
+// Musiikkisuunnitelma (vaiheet 1–2): matkan aiheet ui.js:stä (aloituslento, loppu, ratkaisu, epaonnistuminen).
+const MATKAN_AIHEET = /const MATKAN_AIHEET = \{/.test(lahde('ui.js'))
+  ? new Function('musaPolku', `${poimi('ui.js', /const MATKAN_AIHEET = \{[^]*?\n\};\n/, 'MATKAN_AIHEET')} return MATKAN_AIHEET;`)(media.musaPolku)
+  : {};
 
 const vakiot = {
   aaniJuuri: media.AANI_JUURI,
@@ -198,6 +202,14 @@ const vakiot = {
   kaupunkiEhdokkaat: Object.fromEntries(Object.entries(ehd.KAUPUNKI_EHDOKKAAT).map(([lauta, t]) => [lauta,
     Object.fromEntries(Object.entries(t).map(([id, l]) => [id, l.map((e) => (e.alku ? { url: e.url, alku: e.alku } : { url: e.url }))]))])),
   kaupungit: kaupungit.map((k) => [k.id, k.tyyppi, maat[k.id] ?? null]),
+  // Musiikkisuunnitelma vaihe 2 (26.9.2026): maanosat, maanosaraidat, saapumistunnukset, visan alle jäävät tilat.
+  maanosat: kmus.MAANOSAT ?? [],
+  alueenMaanosa: kmus.ALUEEN_MAANOSA ?? {},
+  maanMaanosa: kmus.MAAN_MAANOSA ?? {},
+  maanosaraidat: Object.keys(kmus.MAANOSARAIDAT ?? {}),
+  saapumistunnukset: Object.fromEntries(Object.entries(kmus.SAAPUMISTUNNUKSET ?? {}).map(([k, v]) => [k, media.musaPolku(v)])),
+  visanAlleJaavat: valitsin.VISAN_ALLE_JAAVAT ?? [],
+  matkanAiheet: MATKAN_AIHEET,
 };
 
 // --- 1. ketjut ---------------------------------------------------------------
@@ -205,7 +217,10 @@ const vakiot = {
 // Soittimet eivät saa syntyä puhtaiden jälkien aikana (tilan vaihto herättää pohjaraidan kuuntelijan).
 sfx.enabled = false;
 sfx.loadRealSamples = () => {};
-const TILAJOUKOT = [[], ['lehti'], ['matkalaukku'], ['lehti', 'matkalaukku'], ['matkalaukku', 'lehti', 'pollo']];
+const TILAJOUKOT = [[], ['lehti'], ['matkalaukku'], ['lehti', 'matkalaukku'], ['matkalaukku', 'lehti', 'pollo'],
+  ['kohtaaminen'], ['kohtaaminen', 'matkalaukku', 'lehti']];
+// Vaihe 2: visan raita soi (asetaVisaSoi) — kohtaaminen odottaa ketjussa (VISAN_ALLE_JAAVAT), lehti ei.
+const VISAJOUKOT = [['kohtaaminen'], ['kohtaaminen', 'lehti']];
 const PAIKAT = [...kaupungit.map((k) => [k.id, maat[k.id] ?? null]), ...VIRTUAALIT.map(([p]) => [p, null]),
   [null, null], ['marseille', null], ['ateena', null], ['tuntematon', 'GRC'], ['tuntematon', 'XXX'], ['etusivu', 'FIN']];
 function asetaTilat(tilat) {
@@ -216,6 +231,14 @@ const ketjut = TILAJOUKOT.map((tilat) => {
   asetaTilat(tilat);
   return { tilat, rivit: PAIKAT.map(([p, maa]) => [p, maa, valitsin.musiikkiketju(p, maa)]) };
 });
+if (valitsin.asetaVisaSoi) {
+  for (const tilat of VISAJOUKOT) {
+    asetaTilat(tilat);
+    valitsin.asetaVisaSoi(true);
+    ketjut.push({ tilat, visaSoi: true, rivit: PAIKAT.map(([p, maa]) => [p, maa, valitsin.musiikkiketju(p, maa)]) });
+    valitsin.asetaVisaSoi(false);
+  }
+}
 
 // --- 2. valinnat -------------------------------------------------------------
 
@@ -232,7 +255,8 @@ asetaTilat([]);
 
 // --- 3. alueet ---------------------------------------------------------------
 
-const alueet = PAIKAT.map(([p, maa]) => [p, maa, kmus.kaupunginAlue(p, maa)]);
+// Neljäs sarake (vaihe 2): kaupunginMaanosa.
+const alueet = PAIKAT.map(([p, maa]) => [p, maa, kmus.kaupunginAlue(p, maa), kmus.kaupunginMaanosa?.(p, maa) ?? null]);
 
 // --- 4. liuku ----------------------------------------------------------------
 
@@ -344,7 +368,9 @@ const Aarre = new Function('sfx', 'musiikkiPaalla', 'aaniUrl', 'liitaMusiikkiin'
   'musiikinKerroin', 'hiljennaAmbienssi', 'palautaAmbienssi', 'kuunteleMusiikinKerrointa', 'musiikkiSaaSoida',
   'irrotaMusiikinVahvistin', 'onAarre', 'AARRE_MUSIIKKI', `${AARRE_MUSIIKIN_VOIMA_L}\n${AARRE_MUSIIKIN_SYY_L}
   return class { ${metodi('soitaAarreMusiikki')} ${metodi('pysaytaAarreMusiikki')}
-    aiheTyypille(type) { ${aiheLauseke} return aihe; } };`)(
+    aiheTyypille(type) { ${aiheLauseke} return aihe; }
+    // Matkan loppu (vaihe 1) vaatii kaikki pääaarteet löydetyiksi; jäljen koneessa niitä ei ole.
+    ajastaMatkanLoppu() {} };`)(
   sfx, valitsin.musiikkiPaalla, media.aaniUrl, vahvistin.liitaMusiikkiin, vahvistin.asetaMusiikinTaso, valitsin.MUSIIKIN_PERUSTASO,
   valitsin.musiikinKerroin, virta.hiljennaAmbienssi, virta.palautaAmbienssi, valitsin.kuunteleMusiikinKerrointa,
   vahvistin.musiikkiSaaSoida, vahvistin.irrotaMusiikinVahvistin, onAarre, AARRE_MUSIIKKI);
@@ -526,6 +552,18 @@ const KONE = [
   { e: 'visa', auki: false },
   { e: 'hiljennys', syy: 'pollo', auki: false },
   { e: 'liuku', arvo: 35 },
+  // Kohtaaminen (vaihe 2, js/visa.js): tervehdyssivu, kysymyssivu (visa voittaa), tulos, sulku; ilman tervehdystä
+  // visa ensin ja kohtaaminen sen alle, sulku kohtaaminen ennen visaa. Lehti kohtaamisen päällä voittaa.
+  { e: 'tila', nimi: 'kohtaaminen', auki: true },
+  { e: 'visa', auki: true },
+  { e: 'visa', auki: false },
+  { e: 'hiljennys', syy: 'lehti', auki: true },
+  { e: 'hiljennys', syy: 'lehti', auki: false },
+  { e: 'tila', nimi: 'kohtaaminen', auki: false },
+  { e: 'visa', auki: true },
+  { e: 'tila', nimi: 'kohtaaminen', auki: true },
+  { e: 'tila', nimi: 'kohtaaminen', auki: false },
+  { e: 'visa', auki: false },
   // Aarre
   { e: 'aarre', tyyppi: 'pieniAarre' },
   { e: 'liuku', arvo: 50 },

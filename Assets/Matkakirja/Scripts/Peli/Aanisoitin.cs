@@ -100,6 +100,8 @@ namespace Matkakirja.Natiivi
         public static void AloituslentoAlkoi() => Instanssi?.Tila.AloituslentoAlkoi();
         public static void UusiKaupunki(string kaupunki) => Instanssi?.Tila.UusiKaupunki(kaupunki);
         public static void MatkaLoppui() => Instanssi?.Tila.MatkaLoppui();
+        /// <summary>Vaihe 2: tehtävän tulos (oikein → musa-ratkaisu, muuten musa-epaonnistuminen), ei katkaise aihetta.</summary>
+        public static void TehtavanTulos(bool oikein) => Instanssi?.Tila.TehtavanTulos(oikein);
 
         static bool puluPuhuu, nayteSoi;
 

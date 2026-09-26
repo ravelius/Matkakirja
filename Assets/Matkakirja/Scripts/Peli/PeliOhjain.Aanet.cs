@@ -8,6 +8,11 @@
 //   IntroLoppui                intron luenta päättyi (soivaLuento == luennat.Intro)
 //   MatkaAlkoi                 uusi matka (UusiPeli: aloitusnäkymä, huipennuksen Uusi matka)
 //
+// Musiikkisuunnitelma vaihe 2 (26.9.2026, web js/visa.js KOHTAAMISEN MUSIIKKI): Aanitilanne.Kohtaaminen (visa,
+// jossa puhuu henkilö → tilaraita 'kohtaaminen'), Aanitilanne.VisaOdottaa (tervehdyssivu ja tulos: visan raita ei
+// soi, kohtaaminen kuuluu) ja kohtaamisen tulos (oikein → musa-ratkaisu, väärin/aika loppui → musa-epaonnistuminen;
+// PeliOhjain.Vastaa ja PaivitaKysymysAika).
+//
 // Äänisoitin (Aanisoitin.cs) syntyy PeliOhjaimen lapseksi. Ruudun lopussa PaivitaAanet kokoaa
 // Aanitilanteen (webin syncAmbience jokaisella renderillä) ja Aanikoukut lähettää AaniTilalle vain
 // muutokset. Lisäksi AaniTila saa: MatkaPerilla (siirtymäraidan loppu), Puhe.Puhuu (väistö),
@@ -133,6 +138,17 @@ namespace Matkakirja.Natiivi
             aanisoitin?.Koukut.UusiMatka(pysayta: Tila != SilmukanTila.Aloitus);
         }
 
+        /// <summary>
+        /// Kohtaamisen tulos (vaihe 2, web visa.js kohtaamisenTulos answerQuizissa ja timeUpissa): vain kohtaamisen
+        /// kysymyksessä ratkaisu- tai epäonnistumisaihe aihekanavalle ei-katkaisevana. Visan raita loppuu ruudun
+        /// lopussa (Aanitilanne.VisaOdottaa), jolloin kohtaaminen palaa. Oikein/väärin-tehosteet ennallaan (Aanita).
+        /// </summary>
+        void KohtaamisenTulosAani(bool oikein)
+        {
+            if (aanisoitin == null || !KysymysApu.OnKohtaaminen(matka?.Tila.Kysely.Kysymys, kohtaamiset)) return;
+            aanisoitin.Tila.TehtavanTulos(oikein);
+        }
+
         /// <summary>Sisältö latautui: kaupunkien maa ja tyyppi heti, aanitaulut ja aani-ehdokkaat taustalla.</summary>
         void AloitaAanitaulut()
         {
@@ -183,6 +199,7 @@ namespace Matkakirja.Natiivi
             if (aanisoitin == null) return;
             bool taulut = aanitaulutValmiit || (aanitaulutAlkoi >= 0 && Time.unscaledTime - aanitaulutAlkoi > AanitaulujenOdotusS);
             var sijainti = matka?.Tila.Pelaaja.Sijainti;
+            bool kohtaaminen = auki && AvoinTehtava == Tehtava.Kysymys && KysymysApu.OnKohtaaminen(matka?.Tila.Kysely.Kysymys, kohtaamiset);
             var s = new Aanitilanne
             {
                 Valmis = taulut && verkko != null && Tila != SilmukanTila.Lataa && Tila != SilmukanTila.Virhe
@@ -194,6 +211,10 @@ namespace Matkakirja.Natiivi
                 Kaupunki = PelaajanKaupunki,
                 Merireitti = sijainti.HasValue && !sijainti.Value.Kaupungissa && matka.Tila.Kulkutapa == Kulkutapa.Meri,
                 KysymysAuki = auki,
+                // Vaihe 2 (web visa.js onKohtaaminen, kohtaamisSivu, kohtaamisenTulos): kohtaamisen visa ja
+                // sen tervehdyssivu tai tulos, jolloin visan raita odottaa ja kohtaaminen soi.
+                Kohtaaminen = kohtaaminen,
+                VisaOdottaa = kohtaaminen && KysymysTila != null && (KysymysTila.TervehdysVaihe || KysymysTila.Vastattu),
             };
             try { aanisoitin.Koukut.Paivita(s); } catch (Exception e) { Debug.LogException(e); }
         }

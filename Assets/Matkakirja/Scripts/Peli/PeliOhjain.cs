@@ -1813,6 +1813,7 @@ namespace Matkakirja.Natiivi
             if (r == null && KysymysTila != null)
             {
                 Aanita(KysymysTila.Oikein ? Aanitunnukset.Oikein : Aanitunnukset.Vaarin);
+                KohtaamisenTulosAani(KysymysTila.Oikein);
                 var q = matka.Tila.Kysely.Kysymys;
                 Livia(KysymysTila.Oikein ? "success" : "retry");
                 if (KysymysTila.Tuloslaji != null) Livia("tunne", kohtaamiset?.Tunne(q?.Kaupunki, KysymysTila.Tuloslaji, false));
@@ -1903,7 +1904,7 @@ namespace Matkakirja.Natiivi
             kysymysJaljella = 0;
             kysymysNakyma.PaivitaAika(0);
             Aanita(Aanitunnukset.AikaLoppui);
-            KysymysTeko(() => kysely.AikaLoppui());
+            if (KysymysTeko(() => kysely.AikaLoppui()) == null) KohtaamisenTulosAani(false);
         }
 
         // --- kamera -----------------------------------------------------------

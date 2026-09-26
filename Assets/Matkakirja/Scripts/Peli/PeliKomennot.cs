@@ -33,6 +33,9 @@
 //   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
 //                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
+//   aani aihe aloituslento|loppu|ratkaisu|epaonnistuminen|kaupunki <id>   musiikkiaihe ilman pelitilannetta
+//                             (lokiin "MATKAKIRJA aani: aihe <osoite>|ei soi")
+//   aani tila kohtaaminen|lehti|matkalaukku paalle|pois   musiikkitila (tilaraita) ilman näkymää (lokiin tilat ja pohja)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
 //   vieritys [pois|paalle|nollaa]  ScrollViewien herätys täyteen taajuuteen (löydös 137) ja mittari
 //   nostokuvat [ISO] [max]    savukevartija "nostokuva näkyy" (löydös 149): maan karttanostojen ensimmäiset kuvat, tulos
@@ -237,10 +240,24 @@ namespace Matkakirja.Natiivi
                         case "aloituslento": Aanisoitin.AloituslentoAlkoi(); break;
                         case "loppu": Aanisoitin.MatkaLoppui(); break;
                         case "kaupunki": Aanisoitin.UusiKaupunki(A(3)); break;
-                        default: return "käyttö: aani aihe aloituslento|loppu|kaupunki <id>";
+                        // Vaihe 2: tehtävän tulos (ei katkaise soivaa aihetta, kuten pelissä).
+                        case "ratkaisu": Aanisoitin.TehtavanTulos(true); break;
+                        case "epaonnistuminen": Aanisoitin.TehtavanTulos(false); break;
+                        default: return "käyttö: aani aihe aloituslento|loppu|ratkaisu|epaonnistuminen|kaupunki <id>";
                     }
                     var t = ohjain.Aanisoitin?.Tila;
                     Debug.Log("MATKAKIRJA aani: aihe " + (t?.Toive(Matkakirja.Peli.Kanava.Aarre).Url ?? "ei soi"));
+                    return null;
+                }
+                case "aani" when A(1) == "tila":
+                {
+                    // Musiikkisuunnitelma vaihe 2: tilaraita (kohtaaminen) päälle/pois ilman näkymää (todennus: aani mittaa).
+                    if (A(2) == null || (A(3) != "paalle" && A(3) != "pois")) return "käyttö: aani tila kohtaaminen|lehti|matkalaukku paalle|pois";
+                    var t = ohjain.Aanisoitin?.Tila;
+                    if (t == null) return "äänisoitin ei ole valmis";
+                    t.Tila(A(2), A(3) == "paalle");
+                    Debug.Log("MATKAKIRJA aani: tila " + A(2) + " " + A(3) + ", tilat [" + string.Join(",", t.Musiikkitilat)
+                              + "], pohja " + (t.Toive(Matkakirja.Peli.Kanava.Pohja).Url ?? "ei soi"));
                     return null;
                 }
                 case "aani" when A(1) == "sini":

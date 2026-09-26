@@ -457,6 +457,20 @@ namespace Matkakirja.Natiivi
         /// kaaren aarreteksti oikeasta vastauksesta ja uuden yrityksen ohje.
         /// Palauttaa true, jos kaupungin tavallinen tervehdys näytettiin nyt.
         /// </summary>
+        /// <summary>
+        /// Onko avoin kysymys kohtaaminen (musiikkisuunnitelma vaihe 2, tilaraita 'kohtaaminen'): tarinakaaren
+        /// kysymys (web quiz.kaari → TARINAKAARI) tai tavallinen visa kaupungissa, jolla on nimetty paikallinen
+        /// hahmo (web visa.js: !quiz.kind ? KOHTAAMISET[quiz.cityId]). Muut muodot pitävät omat kehyksensä.
+        /// </summary>
+        public static bool OnKohtaaminen(AvoinKysymys q, Kohtaamiset kohtaamiset)
+        {
+            if (q == null) return false;
+            if (q.Kaari) return true;
+            if (q.Laji != KysymysMuoto.Visa) return false;
+            var x = kohtaamiset?.Kaupunki(q.Kaupunki);
+            return x != null && !string.IsNullOrEmpty(x.Tervehdys);
+        }
+
         public static bool LisaaKohtaaminen(KysymysNaytto d, AvoinKysymys q, Kohtaamiset kohtaamiset, bool tervehdysNahty)
         {
             if (kohtaamiset == null || q == null) return false;
