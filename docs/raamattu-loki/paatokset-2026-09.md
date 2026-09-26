@@ -7259,3 +7259,7 @@ Pelikoodari: #3339 (build-questions.mjs lukee kaikki qa-*.json) mainissa; Sisalt
 ## LOYDOS 172: LENTOKONE MATALAMMALLE, LAHIKUVASSA VAAKASUORAAN (26.9.2026 klo 19.32)
 
 Omistaja 19.3x: saapumislennon lentokone saisi lentaa matalammalla ja lahikuvassa olla vaakasuorassa. Linssiseppa paivittaa saapumisen kasikirjoituksen (korkeus, asento kameran etaisyyden mukaan), Natiiviseppa toteuttaa 1.0.26-junaan, kuvapari omistajalle.
+
+## S10 GPU-PROFILOINTI: LAATTOJEN TARKKUUS AINOA SELVA SAASTO (26.9.2026 klo 19.33)
+
+Natiiviseppa (iPad Pro 13, build 25, proto-3d/lokit/S10-gpu-profilointi/RAPORTTI.md): kuorma paaosin Cesiumin laattageometriaa. maximumScreenSpaceError 16 → 32: liike p50 20 → 13 ms, GPU −8,8 ms. Resoluutio 0,8 → 0,7: −2,4 ms. HDR, utu, taivas, nimet, symbolit, kerrokset kukin < 1 ms. 120 Hz liike vie iPadin kuumaan tilaan 6 minuutissa. Fable: (1) dynaaminen tarkkuus 32 liikkeessa / 16 levossa jos vaihdettavissa ajossa → A/B + lampo, 1.0.26; (2) muuten pysyva 20–24 kuvaparilla omistajan korttiin; (3) liikkeen 60 Hz -katto A/B:na lammon takia.
