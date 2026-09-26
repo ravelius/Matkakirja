@@ -1890,6 +1890,243 @@ export const KOHTEET = [
     ],
   },
 
+  /*
+   * ERÄ 4 (27.9.2026): isoisän reitin maisemat, luonnonkohteet ja
+   * sama paikka eri vuosina -parit. Kuvat katsottu ja arvioitu käsin.
+   */
+  {
+    tunnus: 'falklandinsaaret', nimi: 'Falklandinsaaret', seutu: 'Etelä-Atlantti, Britannian merentakainen alue', lat: -51.7, lon: -59.5,
+    selite: 'Kahden pääsaaren ja satojen pienempien saarten ryhmä keskellä eteläistä Atlanttia, kaukana lähimmästä mantereesta.',
+    oletus: 'iss071e582470',
+    kuvat: [
+      {
+        id: 'iss071e582470',
+        teksti: 'Länsi- ja Itä-Falkland erottuvat tummina, repaleisina saarina kirkkaan sinisen valtameren '
+          + 'keskeltä. Saarilla asuu vain runsaat 3 700 ihmistä mutta moninkertainen määrä lampaita, ja '
+          + 'rannikon lahdet ovat pingviinien ja merileijonien suosimia poikuupaikkoja.',
+      },
+      {
+        id: 'iss066e091560',
+        teksti: 'Sama saaristo runsaat kaksi vuotta aiemmin, pilvien raosta kuvattuna. Saarten välistä '
+          + 'kulkeva salmi erottaa Länsi- ja Itä-Falklandin toisistaan. Saariryhmän kaksi nimeä — '
+          + 'brittiläinen Falklandinsaaret ja argentiinalainen Malvinas — kertovat kiistasta, joka johti sotaan 1982.',
+      },
+    ],
+  },
+  {
+    tunnus: 'etela-georgia', nimi: 'Etelä-Georgia', seutu: 'Eteläinen Atlantti, Britannian merentakainen alue', lat: -54.3, lon: -36.5,
+    selite: 'Jäätikköinen vuorisaari, jonne Ernest Shackleton käveli hakemaan apua pelastusretkellään 1916.',
+    oletus: 'iss011e12148',
+    kuvat: [
+      {
+        id: 'iss011e12148',
+        teksti: 'Lumihuippuiset vuoret laskevat suoraan jäätiköinä mereen, ja niiden välissä tumma vuono '
+          + 'heijastaa taivasta. Saari on niin jyrkkä ja jäätikköinen, ettei sen halki ole koskaan '
+          + 'rakennettu tietä — Shackleton ja kaksi toveria ylittivät samankaltaisen maaston jalan '
+          + 'vuonna 1916 pelastaakseen haaksirikkoutuneen miehistönsä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'dasht-e-lut', nimi: 'Dasht-e Lutin kaluutit', seutu: 'Kerman, Iran', lat: 30.7, lon: 58.5,
+    selite: 'Yksi Maan kuumimmista paikoista, jonka tuuli on veistänyt pitkiksi, harjanteisiksi yardangeiksi.',
+    oletus: 'iss012e18779',
+    kuvat: [
+      {
+        id: 'iss012e18779',
+        teksti: 'Kaluutit eli tuulen kuluttamat harjanteet piirtyvät aavikkoon kymmenien kilometrien '
+          + 'pituisina riveinä, kultaisina iltapäivän valossa. Satelliitit ovat mitanneet Dasht-e Lutin '
+          + 'pintalämpötilaksi yli 70 astetta — yhden korkeimmista koskaan mitatuista maanpinnan '
+          + 'lämpötiloista. Pilvet kuvassa ovat harvinaisia: alueella ei sada juuri koskaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'damavand', nimi: 'Damavand', seutu: 'Mazandaran, Iran', lat: 35.951, lon: 52.109,
+    selite: 'Iranin ja koko Lähi-idän korkein huippu, lähes symmetrinen lumihuippuinen tulivuori.',
+    oletus: 'iss010e13393',
+    kuvat: [
+      {
+        id: 'iss010e13393',
+        teksti: 'Vuoren rinteiltä laskeutuu säteittäin lumiuurteita joka suuntaan kuin valtava valkoinen '
+          + 'sateenvarjo. Damavand on yli 5 600 metriä korkea ja yhä toimiva tulivuori — huipulla '
+          + 'purkautuu rikkikaasua — vaikka viimeisestä laavapurkauksesta on kulunut tuhansia vuosia.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sarezjarvi', nimi: 'Sarezjärvi', seutu: 'Pamir, Tadžikistan', lat: 38.264, lon: 72.573,
+    selite: 'Maanjäristyksen padottu vuoristojärvi, jonka luonnollinen pato uhkaa yhä pettää.',
+    oletus: 'iss074e0814815',
+    kuvat: [
+      {
+        id: 'iss074e0814815',
+        teksti: 'Turkoosi järvi täyttää Pamirin vuoristolaakson mutkitellen yli 60 kilometrin matkan. Se '
+          + 'syntyi 1911, kun voimakas maanjäristys irrotti kalliovyöryn, joka tukki laakson — Usoin '
+          + 'sortuma on yhä yksi maailman korkeimmista luonnollisista padoista. Geologit seuraavat patoa '
+          + 'jatkuvasti, sillä sen pettäminen uhkaisi satojatuhansia ihmisiä alajuoksulla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'toktogul', nimi: 'Toktogulin tekojärvi', seutu: 'Tien-shan, Kirgisia', lat: 41.72, lon: 73.0,
+    selite: 'Keski-Aasian suurimpiin kuuluva tekojärvi, joka varastoi vuoriston sulamisvedet vuoriston sisään.',
+    oletus: 'iss074e0825692',
+    kuvat: [
+      {
+        id: 'iss074e0825692',
+        teksti: 'Kirkkaan turkoosi tekojärvi täyttää joenlaakson Tien-shanin vuorten keskellä. Pato '
+          + 'valmistui 1974, ja järvi tuottaa suuren osan Kirgisian sähköstä. Kesken talven päästetty '
+          + 'vesi on toistuvasti riidan aihe naapurimaiden kanssa, jotka tarvitsisivat saman veden '
+          + 'keväällä kastelukauden alkuun.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kljutsevskaja', nimi: 'Kljutševskaja Sopka', seutu: 'Kamtšatka, Venäjä', lat: 56.056, lon: 160.642,
+    selite: 'Euraasian korkein toimiva tulivuori, joka purkautuu useita kertoja vuosikymmenessä.',
+    oletus: 'iss038e005515',
+    kuvat: [
+      {
+        id: 'iss038e005515',
+        teksti: 'Tuhkapatsas nousee suoraan huipulta ja taittuu tuulen mukana sivulle — purkaus oli '
+          + 'käynnissä juuri kun avaruusasema lensi ylitse. Vuori on lähes 4 800 metriä korkea ja kasvaa '
+          + 'joka purkauksen myötä. Vasemmalla näkyy lumihuippuinen naapuritulivuori, jonka purkauspilvi jättää varjoonsa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'reunion', nimi: 'Réunion', seutu: 'Intian valtameri, Ranska', lat: -21.13, lon: 55.54,
+    selite: 'Ranskan merentakainen departementti, jonka keskellä kohoaa yksi maailman aktiivisimmista tulivuorista.',
+    oletus: 'iss055e020372',
+    kuvat: [
+      {
+        id: 'iss055e020372',
+        teksti: 'Saaren pyöreä muoto ja rosoiset laaksot paljastavat sen synnyn: koko saari on yhden '
+          + 'ainoan kilpitulivuoren, Piton des Neigesin, rakentama. Vuoren jyrkät valurenkaat erottuvat '
+          + 'kuvan vasemmassa reunassa vihreinä syvänteinä. Saaren toisella laidalla purkautuu säännöllisesti '
+          + 'Piton de la Fournaise, joka purkautuu keskimäärin kerran vuodessa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'villarrica', nimi: 'Villarrica', seutu: 'Araucanía, Chile', lat: -39.42, lon: -71.93,
+    selite: 'Yksi Etelä-Amerikan aktiivisimmista tulivuorista, jonka kraatterissa lipuu pysyvä laavajärvi.',
+    oletus: 'iss068e040596',
+    kuvat: [
+      {
+        id: 'iss068e040596',
+        teksti: 'Lumihuippu piirtää täydellisen kartion kahden järven, Villarrican ja Calafquénin, '
+          + 'väliin. Rinteiltä laskeutuvat tummat juovat ovat vanhoja laavavirtoja ja mutavirtojen uria. '
+          + 'Huipun kraatterissa kiehuu jatkuvasti näkyvä laavajärvi — yksi vain viidestä koko maailmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'laguna-verde', nimi: 'Laguna Verde', seutu: 'Atacama, Chile', lat: -26.98, lon: -68.55,
+    selite: 'Turkoosi korkean vuoriston järvi maailman korkeimman aktiivisen tulivuoren, Ojos del Saladon, juurella.',
+    oletus: 'iss074e0760459',
+    kuvat: [
+      {
+        id: 'iss074e0760459',
+        teksti: 'Järven vesi hohtaa kirkkaan turkoosina liuenneiden mineraalien ansiosta, yli 4 300 '
+          + 'metrin korkeudessa. Ympäröivä maasto on täynnä pieniä tulivuorenkartioita ja tuoreita '
+          + 'laavavirtoja. Vain muutaman kilometrin päässä kohoaa Ojos del Salado, 6 893 metriä korkea '
+          + 'maailman korkein aktiivinen tulivuori.',
+      },
+    ],
+  },
+  {
+    tunnus: 'laguna-colorada', nimi: 'Laguna Colorada', seutu: 'Potosí, Bolivia', lat: -22.2, lon: -67.78,
+    selite: 'Veripunainen suolajärvi Andien ylätasangolla, jonka rannoilla pesii tuhansia flamingoja.',
+    oletus: 'iss066e110899',
+    kuvat: [
+      {
+        id: 'iss066e110899',
+        teksti: 'Järven pinta hohtaa veripunaisena keskellä ruskeaa ylätasankoa, ja valkoiset '
+          + 'boraattisaarekkeet pilkottavat sen läpi. Punainen väri syntyy pigmentistä, jota levät ja '
+          + 'mikrobit tuottavat suojautuakseen kirkkaalta auringolta yli 4 200 metrin korkeudessa. Kolme '
+          + 'flamingolajia ruokailee järven levillä ja äyriäisillä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'san-rafael', nimi: 'San Rafaelin jäätikkö', seutu: 'Aysén, Chile', lat: -46.68, lon: -73.83,
+    selite: 'Patagonian pohjoisen jäätikköalueen jäätikkö, joka laskee suoraan laguuniin ja kalvaa siihen jäävuoria.',
+    oletus: 'iss063e081907',
+    kuvat: [
+      {
+        id: 'iss063e081907',
+        teksti: 'Jäätikön sininen, rikkonainen etureuna työntyy suoraan laguuniin, ja sen edestä '
+          + 'irronneet jäävuoret kelluvat vedessä satoina valkoisina lohkareina. San Rafael on eteläisen '
+          + 'pallonpuoliskon matalimmilla leveysasteilla oleva jäätikkö, joka ulottuu lähes '
+          + 'sademetsävyöhykkeeseen asti — ja on vetäytynyt viime vuosikymmeninä useita kilometrejä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'simienit', nimi: 'Simienin vuoret', seutu: 'Amhara, Etiopia', lat: 13.19, lon: 38.24,
+    selite: 'Jyrkkiin huippuihin ja syviin rotkoihin kulunut ylätasanko, jota kutsutaan Afrikan Grand Canyoniksi.',
+    oletus: 'iss016e010784',
+    kuvat: [
+      {
+        id: 'iss016e010784',
+        teksti: 'Vuosimiljoonien sadevedet ovat uurtaneet rotkoja, jotka haarautuvat ylätasangosta kuin '
+          + 'puun juuret, ja jyrkät reunat erottuvat terävinä varjoina. Ylätasanko on jäänne paljon '
+          + 'suuremmasta laavakerrostumasta, josta eroosio on jättänyt jäljelle vain kovimmat, sakaraiset '
+          + 'huiput. Alueella elää geladapaviaani, jota ei tavata luonnossa missään muualla maailmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'everglades', nimi: 'Everglades', seutu: 'Florida, Yhdysvallat', lat: 25.4, lon: -80.9,
+    selite: 'Valtavan matalana virtaava "ruohon joki", yksi maailman suurimmista kosteikoista.',
+    oletus: 'iss015e08920',
+    kuvat: [
+      {
+        id: 'iss015e08920',
+        teksti: 'Turkoosin ja tummanvihreän kirjava kuvio on satojen tuhansien hehtaarien laajuinen '
+          + 'saraikko, jonka läpi vesi virtaa niin hitaasti — vain muutaman sadan metrin päivässä — että '
+          + 'aluetta kutsutaan "ruohon joeksi". Kansallispuisto on maailman ainoa paikka, jossa '
+          + 'amerikanalligaattori ja amerikankrokotiili elävät luonnossa samalla alueella.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ennedi', nimi: 'Ennedin ylänkö', seutu: 'Ennedi, Tšad', lat: 17.42, lon: 21.75,
+    selite: 'UNESCOn suojelema hiekkakivimuodostuma Saharan keskellä, jonka pinnalla on myös muinaisen meteoriitin jättämä kraatteri.',
+    oletus: 'iss074e0320315',
+    kuvat: [
+      {
+        id: 'iss074e0320315',
+        teksti: 'Gweni-Fadan kraatteri erottuu lähes täydellisenä ympyränä aavikon keskeltä — NASA '
+          + 'tunnistaa sen eroosion paljastamaksi, meteoriitin törmäyksestä syntyneeksi rakenteeksi, '
+          + 'halkaisijaltaan yli kolme kilometriä. Sen ympärillä mutkittelevat kuivat jokiuomat täyttyvät '
+          + 'vedellä vain harvoin sadekausina.',
+      },
+      {
+        id: 'iss072e404551',
+        teksti: 'Laajempi näkymä samasta ylängöstä: punertava hiekkakivi on kulunut sokkeloiseksi '
+          + 'labyrintiksi kanjoneita ja pylväitä. Muodostuma on satoja miljoonia vuosia vanha, ja sen '
+          + 'kallioseinillä on tuhansia vuosia vanhoja maalauksia ajalta, jolloin Sahara oli vihreä ja märkä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'nevado-del-ruiz', nimi: 'Nevado del Ruiz', seutu: 'Kolumbia', lat: 4.892, lon: -75.324,
+    selite: 'Jäätikköinen tulivuori, jonka vuoden 1985 purkaus suli jäätikköä ja hautasi kokonaisen kaupungin mutavirran alle.',
+    oletus: 'iss023e027737',
+    kuvat: [
+      {
+        id: 'iss023e027737',
+        teksti: 'Lumi- ja jäätikkökupu peittää huipun, ja sen keskellä erottuu tumma, pyöreä kraatteri, '
+          + 'josta nousee yhä höyryä. Rinteiltä laskeutuvat syvät, säteittäiset uurteet ovat vanhojen '
+          + 'mutavirtojen jälkiä. Vuoden 1985 purkaus suli osan jäätiköstä ja synnytti laharin, joka '
+          + 'hautasi Armeron kaupungin ja surmasi yli 23 000 ihmistä.',
+      },
+    ],
+  },
+
 ];
 
 /**

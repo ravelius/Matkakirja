@@ -1221,11 +1221,18 @@ const VALMISKYSYMYKSET_KAYTOSSA = false;
  * mutta oma vakionsa: pöllö ei saa riippua lukijan kuvakkeesta, ja
  * yhden tiedoston koonti on yhtä näkyvyysaluetta, jossa kaksi samaa
  * nimeä törmäisi.
+ *
+ * VIPUN TILA NÄKYY KUVAKKEESSA (omistaja 27.9.2026): pois-tilassa
+ * ääniaallot piiloutuvat ja kaiuttimen yli kulkee vinoviiva, päällä
+ * aallot näkyvät ja viiva piiloutuu. Molemmat osat ovat samassa
+ * kuvakkeessa, ja CSS valitsee ne vivun .paalla-luokan mukaan
+ * (css/styles.css .pollo-kaiutin-aalto / -vino).
  */
 const POLLO_KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '<path d="M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z"/>'
-  + '<path d="M14.8 9.4a3.7 3.7 0 0 1 0 5.2"/>'
-  + '<path d="M17.4 6.9a7.3 7.3 0 0 1 0 10.2"/>'
+  + '<path class="pollo-kaiutin-aalto" d="M14.8 9.4a3.7 3.7 0 0 1 0 5.2"/>'
+  + '<path class="pollo-kaiutin-aalto" d="M17.4 6.9a7.3 7.3 0 0 1 0 10.2"/>'
+  + '<path class="pollo-kaiutin-vino" d="M3.4 3.4l17.2 17.2"/>'
   + '</svg>';
 
 /**
