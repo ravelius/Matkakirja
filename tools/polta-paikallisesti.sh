@@ -267,6 +267,16 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              julisteet/pallo/laatat/<v>-<t>/ tai levyllä):
                              pallosta piirretään vain muuttuneita pyramidin
                              laattoja lukevat laatat, loput kopioidaan
+  --kuiva <vertailuversio>   DELTAN KUIVAHARJOITUS (ei kirjoita ämpäriin):
+                             suunnitelma, palvelinkopio --dryrun, delta-lista
+                             ja vertailu ämpärissä jo olevaa TÄYTENÄ
+                             poltettua versiota vastaan (sama resepti) —
+                             kopioitavien on oltava siinä bitilleen lähde
+  --delta-aineisto-sama "<peruste>"
+                             lähdeluettelossa ei ole aineistotiivistettä
+                             (poltettu ennen 26.9.2026): vakuutus, että DEM
+                             ja --data eivät ole muuttuneet lähteen poltosta
+                             (peruste kirjataan lokiin, esim. ctime-tarkistus)
   --syva-alue lon0,lat0,lon1,lat1
                              syvien tasojen ala (oletus Ranska
                              -5.5,41,9.8,51.5)
@@ -396,7 +406,7 @@ DEM=""; SYVA_ALUE="-5.5,41,9.8,51.5"; PALLO_ALUE=""
 RESEPTI=""; DEM90=""; PALLOLIPUT=""; PALLO_TASOT_ANNETTU=0
 # DELTA-POLTTO (Karttaseppä 26.9.2026, ks. DELTA alempana).
 DELTA=""; DELTA_LAHDE=""; DELTA_LUETTELO=""; DELTA_LAHDE_KANSIO=""; DELTA_TARKISTUS=""
-PALLO_DELTA_LAHDE=""
+PALLO_DELTA_LAHDE=""; KUIVA=""; DELTA_AINEISTO_SAMA=""
 DEM_NAS="/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem"
 
 while [ $# -gt 0 ]; do
@@ -436,6 +446,8 @@ while [ $# -gt 0 ]; do
     --delta-lahde-kansio) DELTA_LAHDE_KANSIO="$2"; shift 2 ;;
     --delta-tarkistus) DELTA_TARKISTUS="$2"; shift 2 ;;
     --pallo-delta-lahde) PALLO_DELTA_LAHDE="$2"; shift 2 ;;
+    --kuiva) KUIVA="$2"; shift 2 ;;
+    --delta-aineisto-sama) DELTA_AINEISTO_SAMA="$2"; shift 2 ;;
     --syva-alue) SYVA_ALUE="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
@@ -1589,12 +1601,57 @@ delta_tasot () {
 #    luettelon on kuvattava --delta-lahde-versiota, ja laadun, patinan,
 #    muodon ja laattakoon on oltava samat — kopioitu ja piirretty laatta
 #    ovat vierekkäin samalla kartalla.
+# AINEISTOTIIVISTE (26.9.2026, kuivaharjoituksen oppi): delta kopioi
+# lähteen laatat, joten lähde on poltettava SAMASTA aineistosta kuin uusi
+# versio. Pohja 25 poltettiin ennen kuin 24 791 GLO-30-ruutua saapui
+# (25.9. klo 12–23), pohja 26 niiden jälkeen: 1 577 maalaattaa erosi,
+# vaikka resepti muutti vain merta. Tiiviste = DEM-kansioiden ja --datan
+# tiedostonimet ja koot (ei ._-metatiedostoja; NAS:n mtime on S3:n
+# alkuperäinen, joten saapuminen näkyy vain uutena nimenä). Luettelo
+# kantaa sen kentässä `aineisto`, ja delta vertaa lähteen kenttää nykyiseen.
+aineiston_tiiviste () {
+  local tulos="$ULOS/lokit/aineisto.json"
+  [ -s "$tulos" ] && { cat "$tulos"; return 0; }
+  mkdir -p "$ULOS/lokit"
+  local d osat="" rivi
+  for d in "$DATA" "${DEM:-}" "${DEM90:-}"; do
+    [ -n "$d" ] && [ -d "$d" ] || continue
+    rivi="$(find "$d" -maxdepth 1 -type f ! -name '._*' -print0 | xargs -0 stat -f '%N %z' \
+      | sed "s#^$d/##" | LC_ALL=C sort | shasum -a 256 | cut -c1-16)"
+    osat="$osat$(basename "$d")=$(find "$d" -maxdepth 1 -type f ! -name '._*' | wc -l | tr -d ' '):$rivi "
+  done
+  node -e 'const o=process.argv[1].trim().split(" ").filter(Boolean);const c=require("crypto").createHash("sha256").update(o.join(" ")).digest("hex").slice(0,16);console.log(JSON.stringify({tiiviste:c,osat:o}))' "$osat" > "$tulos"
+  cat "$tulos"
+}
+
+# Lähteen aineisto = nykyinen aineisto, tai tiiviste puuttuu ja vakuutus annettu.
+tarkista_delta_aineisto () {
+  local luettelo="$1" nyt lahde
+  nyt="$(aineiston_tiiviste | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).tiiviste))')"
+  lahde="$(node -e 'const j=JSON.parse(require("fs").readFileSync(process.argv[1]));console.log(j.aineisto?.tiiviste ?? "")' "$luettelo")"
+  if [ -z "$lahde" ]; then
+    if [ -n "$DELTA_AINEISTO_SAMA" ]; then
+      echo "::warning::delta: lähteen $DELTA_LAHDE luettelossa ei ole aineistotiivistettä — vakuutus: $DELTA_AINEISTO_SAMA"
+      echo "$DELTA_AINEISTO_SAMA" > "$ULOS/lokit/delta-aineisto-vakuutus.txt"
+      return 0
+    fi
+    echo "VIRHE: delta: lähteen $DELTA_LAHDE luettelossa ei ole aineistotiivistettä (poltettu ennen 26.9.2026)." >&2
+    echo "  Jos DEM ja --data ovat varmasti samat kuin lähteen poltossa, anna --delta-aineisto-sama \"<peruste>\"." >&2
+    return 1
+  fi
+  [ "$lahde" = "$nyt" ] || {
+    echo "VIRHE: delta: aineisto on muuttunut lähteen $DELTA_LAHDE poltosta ($lahde → $nyt) — kopio ja piirto eroaisivat; polta täytenä" >&2
+    return 1; }
+  echo "· delta: aineisto sama kuin lähteessä ($nyt)"
+}
+
 delta_suunnittele () {
   local luettelo="${DELTA_LUETTELO:-$ULOS/ampari-luettelo.json}" ulos="$ULOS/lokit/delta-suunnitelma.env"
   [ -s "$luettelo" ] || { echo "VIRHE: delta: lähdeluettelo $luettelo puuttuu (--delta-luettelo)" >&2; return 1; }
   rm -f "$ulos"
   node "$JUURI/tools/paikkaa-pyramidi.mjs" suunnittele --luettelo "$luettelo" \
     --lahdeversio "$DELTA_LAHDE" --versio "$VERSIO" --delta "$DELTA" --ulos "$ulos" || return 1
+  tarkista_delta_aineisto "$luettelo" || return 1
   local l_laatu l_patina l_muoto l_laatta
   l_laatu="$(awk -F= '$1 == "LAATU" { print $2 }' "$ulos")"
   l_patina="$(awk -F= '$1 == "PATINA" { print $2 }' "$ulos")"
@@ -1706,6 +1763,51 @@ kokoa_lahde_delta () {
   PALLON_LAHDE="$lahde"
 }
 
+# DELTAN KUIVAHARJOITUS (--kuiva, Fable 26.9.2026): ämpärivaiheet ilman
+# yhtäkään kirjoitusta, jotta seuraava oikea resepti menee suoraan
+# valvottuun ajoon. Vertailuversio on ämpärissä jo oleva TÄYSI poltto
+# samasta reseptistä (esim. pohja 26 = meri-muutos 25:stä): deltan
+# kopioitavien laattojen on oltava siinä bitilleen lähdeversion laattoja,
+# eli sama `vertaa`, jonka oikea ajo tekee kopion ja piirron jälkeen.
+kuivaharjoitus () {
+  local alkoi lahde_z uusi_z kopioitavia lista
+  alkoi="$(date +%s)"
+  echo "· KUIVA: delta $DELTA $DELTA_LAHDE -> $VERSIO, vertailu $KUIVA (ei kirjoitusta)"
+  vaadi_avaimet || return 1
+  delta_suunnittele || return 1
+  rivit () { aws s3 ls "s3://$AMPARI/julisteet/pyramidi/$1/" --endpoint-url "$PAATE" \
+    --cli-connect-timeout "$AWS_YHTEYSAIKA" 2>/dev/null || true; }
+  [ "$(rivit "$DELTA_LAHDE" | grep -c ' PRE z')" -gt 0 ] || { echo "VIRHE: KUIVA: lähdettä $DELTA_LAHDE ei ole ämpärissä" >&2; return 1; }
+  [ "$(rivit "$VERSIO" | grep -c ' PRE z')" -eq 0 ] || { echo "VIRHE: KUIVA: versiossa $VERSIO on jo pohjalaattoja" >&2; return 1; }
+  [ "$(rivit "$KUIVA" | grep -c ' PRE z')" -gt 0 ] || { echo "VIRHE: KUIVA: vertailuversiota $KUIVA ei ole ämpärissä" >&2; return 1; }
+  aws s3api list-objects-v2 --bucket "$AMPARI" --prefix "julisteet/pyramidi/$DELTA_LAHDE/z" \
+    --endpoint-url "$PAATE" --cli-connect-timeout "$AWS_YHTEYSAIKA" > "$ULOS/lokit/kuiva-lahde-listaus.json" || return 1
+  aws s3api list-objects-v2 --bucket "$AMPARI" --prefix "julisteet/pyramidi/$KUIVA/z" \
+    --endpoint-url "$PAATE" --cli-connect-timeout "$AWS_YHTEYSAIKA" > "$ULOS/lokit/kuiva-vertailu-listaus.json" || return 1
+  lahde_z="$(node -e 'console.log(JSON.parse(require("fs").readFileSync(process.argv[1])).Contents?.length ?? 0)' "$ULOS/lokit/kuiva-lahde-listaus.json")"
+  # Palvelinkopio täsmälleen oikean ajon lipuilla, --dryrun: rajaus ja määrä.
+  kopioitavia="$(aws s3 cp --recursive --dryrun \
+    "s3://$AMPARI/julisteet/pyramidi/$DELTA_LAHDE/" \
+    "s3://$AMPARI/julisteet/pyramidi/$VERSIO/" \
+    --endpoint-url "$PAATE" --exclude '*' --include 'z[0-9]*' \
+    --metadata-directive COPY --cli-connect-timeout "$AWS_YHTEYSAIKA" 2>&1 | grep -c '(dryrun) copy:')"
+  echo "· KUIVA: palvelinkopio kopioisi $kopioitavia / $lahde_z lähteen z-objektia"
+  [ "$kopioitavia" -eq "$lahde_z" ] || { echo "VIRHE: KUIVA: kopion rajaus ei kata lähteen z-tasoja" >&2; return 1; }
+  lista="$(delta_lista)" || return 1
+  node -e 'const l=JSON.parse(require("fs").readFileSync(process.argv[1]));console.log(`· KUIVA: delta-lista: piirrettäviä ${l.laatat.length}, tarkistusotos ${(l.tarkistus??[]).length}`)' "$lista"
+  node "$JUURI/tools/paikkaa-pyramidi.mjs" vertaa \
+    --lahde "$ULOS/lokit/kuiva-lahde-listaus.json" \
+    --paikattu "$ULOS/lokit/kuiva-vertailu-listaus.json" --lista "$lista" || return 1
+  if [ -n "$PALLO_DELTA_LAHDE" ] && [ ! -d "$PALLO_DELTA_LAHDE" ]; then
+    local pl="${PALLO_DELTA_LAHDE%/}/" pn
+    pn="$(aws s3 cp --recursive --dryrun "s3://$AMPARI/$pl" "s3://$AMPARI/${pl%/}-kuiva/" \
+      --endpoint-url "$PAATE" --exclude '*' --include '[0-9]*' --metadata-directive COPY \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" 2>&1 | grep -c '(dryrun) copy:')"
+    echo "· KUIVA: pallon palvelinkopio kopioisi $pn objektia ($pl)"
+  fi
+  echo "· KUIVA valmis $(( $(date +%s) - alkoi )) s — ämpäriin ei kirjoitettu"
+}
+
 # Pallon delta-liput (tee-pallolaatat --delta); tyhjä ilman pallon deltaa.
 pallon_delta_liput () {
   [ -n "$PALLO_DELTA_LAHDE" ] || return 0
@@ -1794,6 +1896,9 @@ kokoa_luettelo () {
     --viivaversio "$VIIVAVERSIO" --kaariminuutit "$KORKEUS" \
     --laatu "$LAATU" --patina "$PATINA" $lisa $YHTEISLIPUT $POHJALIPUT $VIIVALIPUT $RANTALIPUT --vain-luettelo \
     > "$ULOS/lokit/luettelo.log" 2>&1
+  # Aineistotiiviste luetteloon (ks. AINEISTOTIIVISTE): seuraava delta vertaa siihen.
+  node -e 'const fs=require("fs");const p=process.argv[1];const j=JSON.parse(fs.readFileSync(p));j.aineisto=JSON.parse(process.argv[2]);fs.writeFileSync(p,JSON.stringify(j))' \
+    "$kansio/pyramidi.json" "$(aineiston_tiiviste)" || return 1
   echo "· luettelo koottu: $kansio/pyramidi.json"
   kokoa_nimiotaso "$kansio/pyramidi.json"
 }
@@ -2654,6 +2759,7 @@ fi
 # DELTA: asetukset lähteestä ja palvelinkopio ENNEN shardeja (ks. DELTA).
 if [ -n "$DELTA" ]; then
   echo "· delta $DELTA: lähde $DELTA_LAHDE -> $VERSIO${DELTA_LAHDE_KANSIO:+ (levyllä $DELTA_LAHDE_KANSIO)}"
+  if [ -n "$KUIVA" ]; then kuivaharjoitus; exit $?; fi
   delta_suunnittele || exit 1
   if [ "$VIE" -eq 1 ]; then vaadi_avaimet; kopioi_delta_pohja || exit 1; fi
 fi

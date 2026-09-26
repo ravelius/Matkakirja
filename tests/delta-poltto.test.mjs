@@ -478,3 +478,18 @@ test('pallon delta-sarja on tavulleen sama kuin täysi sarja (meri ja maa)', { s
   assert.match(r.stderr, /ei ole tämän sarjan edeltäjä/);
   assert.ok(existsSync(join(vanha, 'laatat.json')));
 });
+
+test('ajuri: aineistotiiviste luetteloon ja deltan aineistovartija; --kuiva ei kirjoita ämpäriin', () => {
+  const sh = readFileSync(POLTTO, 'utf8');
+  // Luettelo kantaa aineistotiivisteen, delta vertaa lähteen kenttää nykyiseen.
+  assert.match(sh, /j\.aineisto=JSON\.parse\(process\.argv\[2\]\)/);
+  assert.match(sh, /tarkista_delta_aineisto "\$luettelo" \|\| return 1/);
+  assert.match(sh, /aineisto on muuttunut lähteen \$DELTA_LAHDE poltosta/);
+  assert.match(sh, /--delta-aineisto-sama\) DELTA_AINEISTO_SAMA="\$2"/);
+  // AppleDouble-metatiedostot eivät kuulu tiivisteeseen (NAS kirjoitti niitä 25.9.).
+  assert.match(sh, /! -name '\._\*'/);
+  // Kuiva: ennen palvelinkopiota, palvelinkopio vain --dryrun-tilassa.
+  const kuiva = sh.slice(sh.indexOf('kuivaharjoitus () {'), sh.indexOf('# Pallon delta-liput'));
+  assert.doesNotMatch(kuiva.replace(/aws s3 cp --recursive --dryrun/g, ''), /aws s3 (cp|sync|mv|rm)\b/);
+  assert.match(sh, /if \[ -n "\$KUIVA" \]; then kuivaharjoitus; exit \$\?; fi\n  delta_suunnittele/);
+});
