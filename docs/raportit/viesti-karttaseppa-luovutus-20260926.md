@@ -40,10 +40,10 @@ Paikallinen ajokansio `/Users/Shared/Claude/pyramidi-poltto/ajo-20260926/` PIDET
 
 ## AVOIMET ASIAT
 
-- OpenHistoricalMap (1873-rautatiet, CC0) puuttuu `js/lahteet.js`:stä ja README:stä (lisenssit.mjs:ssä on) — lisää.
+- OpenHistoricalMap (1873-rautatiet, CC0) lisätty `js/lahteet.js`:ään ja READMEen #3281:ssä (mergeä se).
 - 1873-rautatiet: Ranskan pääradat (Pariisin säteet) puuttuvat OHM:stä (nykyaikainen start_date) → täydennys.
 - Delta-poltto: arvio pyramidi meri 71 % / maa 34 % piirretään, pallo meri ~89 % / maa ~32 %. Ensimmäinen ajo valvottuna.
 - Kermahuntu pitää polttaa uudelleen aina kun pohja vaihtuu (R−B-luokitus lukee pohjaa) → delta `maa`.
 - astro-pallo-puhelin 43/47b, ±180°-sauma, web GRC/JPN-täyttö (vanhat, ks. 25-d).
-- Worktreet nyt: `wt/karttaseppa-poltto-20260926` (26-poltto, pidä kunnes ajokansio NAS:issa), `-maamaa-salmet` (#3278),
-  `-delta-poltto` (#3280), `-joet` (#3281), `-reitit1873` (mergetty → poista).
+- Worktreet nyt (3): `wt/karttaseppa-poltto-20260926` (26-poltto, pidä kunnes ajokansio NAS:issa), `-delta-poltto` (#3280),
+  `-joet` (#3281). #3278:n worktree poistettu (haara pushattu).
