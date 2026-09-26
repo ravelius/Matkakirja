@@ -389,6 +389,7 @@ namespace Matkakirja.Natiivi
             Chat.Nollaa();
             Traileri.Nollaa();
             Saapuminen.Nollaa();
+            Lukijoilta.Unohda();
         }
 
         void KytkeOhjain()
