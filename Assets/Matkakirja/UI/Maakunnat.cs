@@ -48,6 +48,21 @@ namespace Matkakirja.Natiivi
         public static bool Vedossa { get; private set; }
         public static event Action<bool> VetoMuuttui;
         public static event Action<bool> PoisMuuttui;
+
+        /// <summary>
+        /// Löydös 165 (omistaja 1.0.21: valittu Gelderland jäi kartalle vihreäksi pelaajan ollessa Amsterdamissa): välilehti
+        /// on näkyvissä (karttaselite auki MAAKUNNAT-välilehdellä). Kartan korostus (MaakunnatSilta) vain silloin; webissä
+        /// valinta näkyy vain listassa ja luonnehdinnassa. Valinta itse muistetaan edelleen (PlayerPrefs).
+        /// </summary>
+        public static bool Nakyvissa { get; private set; }
+        public static event Action<bool> NakyvissaMuuttui;
+
+        public static void AsetaNakyvissa(bool nakyy)
+        {
+            if (Nakyvissa == nakyy) return;
+            Nakyvissa = nakyy;
+            NakyvissaMuuttui?.Invoke(nakyy);
+        }
         const string PoisAvain = "matkakirja-karttatyokalu-maakunnat-pois", PoisTunnus = ":pois";
         static bool OnPois(string avain) => avain != null && avain.EndsWith(PoisTunnus, StringComparison.Ordinal);
 
