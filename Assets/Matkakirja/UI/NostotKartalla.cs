@@ -216,12 +216,10 @@ namespace Matkakirja.Natiivi
             luokka == NostoKerros.MusteLuokka.Paakohde ? 1f / 0.67f : luokka == NostoKerros.MusteLuokka.Pieni ? 0.44f / 0.67f : 1f;
 
         /// <summary>Löytämätön nosto: himmeä musteen jälki ilman nimeä (MusteJalki.JaljenPeitto 0,5).</summary>
-        /// <summary>Löydös 174: tasojen 2–3 minikuvake kertoimen 2,5 alla (webin 12–16 px).</summary>
-        const float MinikuvakkeenKoko = 1.5f;
         const float LoytamatonPeitto = 1f, HehkunKoko = 2.6f, LoytoS = 0.3f;
 
         /// <summary>
-        /// Elävä kartta, kohta 2: löytämätön = lajin merkki peitolla 0,5 (löydös 174: ei enää musteläikkää); löydetty = täysi merkki, ja löydön hetkellä käyrä MusteJaljet.Loyto (0,3 s, mittakaava ja peitto);
+        /// Elävä kartta, kohta 2: löytämätön = lajin merkki täysin mustein (löydös 174: ei musteläikkää eikä himmennystä); löydetty = täysi merkki, ja löydön hetkellä käyrä MusteJaljet.Loyto (0,3 s, mittakaava ja peitto);
         /// pääkohteella staattinen kultainen hehku merkin alla. Tyylit kirjoitetaan vain muutoksessa (lepopiirto).
         /// </summary>
         void AsetaMuste(Merkki m, NostoKerros.Nosto s, bool loydetty, bool ryhma, float ruutuPx)
@@ -794,17 +792,13 @@ namespace Matkakirja.Natiivi
             if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
             bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
-            // Löydös 155: taso 1 aina kuvamerkkinä kuten webin maamerkki. Löydös 174 (omistaja 19.5x, web on malli 26.9.): lajin
-            // kuvamerkki KAIKILLE tasoille ilman läikkää — kertoimesta 2,5 webin kuvamerkkinä, sen alla pienenä minikuvakkeena;
-            // ilman lajin kuvaa minimerkki (ihme) tai kaupunkimerkki kuten ennen.
-            bool kuvamerkki = !ryhma && Kuva(s) != null;
+            // Löydös 155: taso 1 aina kuvamerkkinä kuten webin maamerkki. Löydös 174 (Fable 26.9., web on malli, omistaja 2.9.):
+            // ei läikkää; tasot 2–3 kertoimesta 2,5 lajin kuvamerkkinä webin koossa, sen alla PISTE (web minimerkki) — vuori,
+            // meri, huuto (skandaali), eläin (tassu) ja ihme omalla viivamerkillään (NostoMerkit.Viivamerkit), muut hehkupisteenä.
+            bool kuvamerkki = !ryhma && Kuva(s) != null && (m.Taso1 || NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin));
             // Ruudun kerroin webin koossa (Pelikoodarin mittaus 26.9., 390 × 844): ykköstason kuvamerkki 1,6 (24 → 47 px), muu
-            // kuvamerkki 0,85 kertoimilla 2,5–4 (22 px) ja täysi kertoimesta 4 (30 px). Kertoimen 2,5 alla tasot 2–3 ovat lajin
-            // minikuvake (sama kuvamerkki, mitta skaalautuu kertoimen mukana ~12–16 px): webin piste ei käy (Fable 26.9.).
-            // Minikuvake on webissä ruudulla vakiokokoinen: mitta kertoimella 1 × MinikuvakkeenKoko (mitattu 9 pt → ~13,5 pt).
-            bool minikuvake = kuvamerkki && !m.Taso1 && !NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
-            m.Ruutu = minikuvake ? MiniRuutu * MinikuvakkeenKoko * NostonMitta * oma / Mathf.Max(0.0001f, m.Mitta)
-                : MiniRuutu * (!kuvamerkki ? 1f : m.Taso1 ? KuvamerkinKerroin
+            // kuvamerkki 0,85 kertoimilla 2,5–4 (22 px) ja täysi kertoimesta 4 (30 px); minimerkki 1.
+            m.Ruutu = MiniRuutu * (!kuvamerkki ? 1f : m.Taso1 ? KuvamerkinKerroin
                 : NostoSaannot.KuvamerkkiPieni(s.Taso, kerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
