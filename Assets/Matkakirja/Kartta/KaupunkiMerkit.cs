@@ -111,6 +111,7 @@ namespace Matkakirja
             // TMP:n characterSpacing on em/100.
             n.characterSpacing = l ? linssiValistysEm * 100f : 0f;
             n.color = l ? linssiMuste : musteenVari;
+            m.usva = -1f;   // väri nollautui: horisonttiusvan peitto uudelleen (LateUpdate)
             if (m.valintamerkki && !l)
             {
                 // Valittavan nimi kohdemerkin asussa (web .target-nimi): lihava, 13 pt, keskellä huomiorenkaan
@@ -222,23 +223,27 @@ namespace Matkakirja
         {
             var m = merkit.Find(x => x.kaupunki.id == id);
             if (m == null) return;
-            var r = m.pisteT.GetComponent<MeshRenderer>();
             m.korostettu = vari.HasValue;
-            if (vari.HasValue)
-            {
-                korostusLohko ??= new MaterialPropertyBlock();
-                korostusLohko.SetColor("_BaseColor", vari.Value);
-                r.SetPropertyBlock(korostusLohko);
-                m.pisteT.localScale = new Vector3(m.pisteKoko * 1.5f, m.pisteKoko * 1.5f, 1);
-            }
-            else
-            {
-                r.SetPropertyBlock(null);
-                m.pisteT.localScale = new Vector3(m.pisteKoko, m.pisteKoko, 1);
-            }
+            m.korostus = vari;
+            AsetaPisteenVari(m);
+            float k = vari.HasValue ? 1.5f : 1f;
+            m.pisteT.localScale = new Vector3(m.pisteKoko * k, m.pisteKoko * k, 1);
             PallonLepo.Muuttui("kaupungit");
         }
         MaterialPropertyBlock korostusLohko;
+
+        /// <summary>Pisteen väri: korostus tai materiaalin oma, alfa × horisonttiusvan näkyvyys (löydös 153).</summary>
+        void AsetaPisteenVari(Merkki m)
+        {
+            var r = m.pisteT.GetComponent<MeshRenderer>();
+            float nak = m.usva < 0f ? 1f : m.usva;
+            if (!m.korostus.HasValue && nak >= 0.999f) { r.SetPropertyBlock(null); return; }
+            var v = m.korostus ?? (pisteMateriaali != null ? pisteMateriaali.GetColor("_BaseColor") : Color.black);
+            v.a *= nak;
+            korostusLohko ??= new MaterialPropertyBlock();
+            korostusLohko.SetColor("_BaseColor", v);
+            r.SetPropertyBlock(korostusLohko);
+        }
 
         [Header("Aloitusvalinnan kohdemerkki (web js/pallolauta/merkit.js kohdeElementti, huomio: true)")]
         // WEB ON MALLI, MITATTUNA (Pelikoodarin löydös 24.9.2026: natiivissa valittavilla oli vain kultapiste ja
@@ -455,6 +460,8 @@ namespace Matkakirja
             public float pisteKoko;
             public int tyyli; // Tarkeys 0–2: pisteen ja nimiön asu
             public bool korostettu; // Korosta: piste 1,5-kertainen
+            public Color? korostus; // Korosta-väri
+            public float usva = -1f; // horisonttiusvan jälkeen näkyvä osuus 0–1 (löydös 153), −1 = asettamatta
             public Transform kohdemerkki; // aloitusvalinnan kohdemerkki renkaan sisällä, luodaan tarvittaessa
             public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
             public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
@@ -745,6 +752,14 @@ namespace Matkakirja
                 if (ruutu.x < 0 || ruutu.y < 0 || ruutu.x > Screen.width || ruutu.y > Screen.height) m.lukittu = false;
                 // Valittavan nimi näkyy aina (web kohdeElementti piirtää nimen joka merkille).
                 bool valinta = m.valintamerkki && !LinssiTila;
+                // Horisonttiusva (löydös 153): webin paperiusva peittää GL-pisteet ja -nimet; sumu ei koske näitä varjostimia.
+                float nak = valinta ? 1f : 1f - Horisonttiusva.Peitto(1f - ruutu.y / Mathf.Max(1f, Screen.height));
+                if (Mathf.Abs(nak - m.usva) > 0.01f || (nak >= 1f && m.usva < 1f))
+                {
+                    m.usva = nak;
+                    m.nimio.alpha = nak;
+                    AsetaPisteenVari(m);
+                }
                 var ala = NimenAla(m, ruutu, kerroin);
                 var suorakulmio = new Rect(ala.x - 4 * kerroin, ala.y - 2 * kerroin, ala.width + 8 * kerroin, ala.height + 4 * kerroin);
                 float pp = m.pisteKoko * kerroin * (m.korostettu ? 1.5f : 1f);
