@@ -95,6 +95,26 @@ kerros. Puhtaat osat: `Kartta/NimiLadonta.cs` (testit `Kartta-testit/Testit/Nimi
 | `bool paalla`, `bool valtameret` | Koko kerros; valtameret pois oletuksena, koska pohjasarja 2026-09-23a sisältää ne poltettuina Z1–Z4. |
 | `int Taso`, `double JatkuvaTaso`, `int Naytetty`, `string Kuvaus()` | Pallotaso ja mittarit. Testi: `nimet paalle|pois|laske`, `nimet valtameret paalle`, `nimet siirto 0.6`. |
 
+## 3e. Liput tuulessa — `Liput` (staattinen, `Kartta/Liput.cs`), löydös 144
+
+Lipun arvokas aaltoilu UI Toolkitin taustakuvaksi (kartussin lippu, tervehdysten pikkuliput). Natiivi-UI hakee
+tekstuurin (`Kuvat.Hae`) ja näyttää kahvan RT:n; Kartta piirtää sen `Graphics.Blit`illä aaltovarjostimen
+(`Resources/Lippuaalto.shader`) läpi pieneen RT:hen, ilman kameraa ja verkkoa. Yksi yhteinen ajuri, enintään 30
+päivitystä sekunnissa ja vain näkyville; kun mikään ei näy, ei GPU-työtä. Aaltoilu seuraa Joutosykettä: levossa
+(3 s ilman aktiivisuutta) lippu asettuu suoraksi ja päivitys loppuu, kosketus jatkaa. Varjostimen puuttuessa kahva
+näyttää alkuperäisen kuvan (varoitus lokiin).
+
+| Jäsen | Merkitys |
+|---|---|
+| `Liput.Aalto Liput.Aaltoile(Texture lahde, int w, int h)` | Uusi kahva; w × h RT:n pikseleinä (UI-koko × paneelin skaala, rajataan 2–1024). Kuva piirretään heti kerran suorana. (Metodi ei voi olla `Aalto`, koska sisäkkäinen tyyppi on `Aalto`.) |
+| `RenderTexture Aalto.Kuva` | Piirretty lippu (sRGB, tavallinen alfa, läpinäkyvä marginaali). UI: `new StyleBackground(Background.FromRenderTexture(a.Kuva))`. Sama olio koko eliniän. |
+| `event Action Aalto.Paivittyi` | Kuva piirrettiin uudelleen (UI: `MarkDirtyRepaint`). |
+| `bool Aalto.Nakyy` | UI asettaa: tosi vain, kun lippu on ruudulla (oletus epätosi). Näkyviin tullessa kuva päivittyy heti. |
+| `void Liput.Vapauta(Aalto a)` | Vapauttaa RT:n ja irrottaa kuuntelijat (lähdetekstuuri jää Kuvat-välimuistiin). Kutsu, kun elementti poistuu tai lippu vaihtuu. |
+| `const float Liput.Reuna` (0,04) | Marginaali joka reunalla: lippu on 92 % RT:stä, jotta aalto ei leikkaa kuvaa. Sama näkyvä koko kuin ennen: elementti × 1 / (1 − 2 · Reuna). |
+
+Testi: `liput tila | jatkuva | syke`, `liput koe nimi [aika]` (Documents/nimi.png ilman UI:ta).
+
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
 Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
