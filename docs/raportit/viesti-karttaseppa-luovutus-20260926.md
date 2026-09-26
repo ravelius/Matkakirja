@@ -33,6 +33,17 @@ nostot 25c, viivat/ranta 25, nimiöt 22g kannettu) → webin koe `?pyramidi=2026
 Paikallinen ajokansio `/Users/Shared/Claude/pyramidi-poltto/ajo-20260926/` PIDETÄÄN delta-polton ensimmäiseen ajoon
 (`--delta-lahde-kansio …/lahde-levylta`), sitten NAS:iin (`nas-ajo-*.sh`-kaava).
 
+## PÄIVÄN PÄÄTÖKSET (26.9. aamupäivä)
+
+- Omistaja hyväksyi pohja 26:n natiiviin ja webiin (08.1x); Natiiviseppä vaihtoi (haara natiiviseppa/pohja-26), Julkaisija
+  vaihtaa webin osoittimen (koe/2026-09-26 → pyramidi.json). Kermahuntu p060 natiivissa (build 19).
+- Webin kuvapari Kreikka: `ajo-20260926/kuvapari/web-tuotanto-vs-26-kreikka.png`. Ero pieni, koska Egea matala
+  (Egea −3,4, Kreetanmeri −6,2, Joonianmeri −12,5 luminanssia). Matalan meren kontrasti = mahdollinen resepti 27,
+  VAIN omistajan pyynnöstä.
+- Väritasot (tasoitus) EIVÄT vaadi uudelleenpolttoa: koe GRC meri alfa 0 (`2026-09-26m-tasoitus`, `koe/2026-09-26m`,
+  haara `karttaseppa-tasoitus-meri` ilman PR:ää) antoi tavulleen saman näkymän — webi ei näytä harsoa meren päällä.
+- `?pyramidi=`-lippu hyväksyy vain `YYYY-MM-DD[a-z]` (js/media.js pyramidiKoe); pallon kansio johdetaan nimestä.
+
 ## AVOIMET PR:t
 
 #3278 salmet (maamaa) · #3280 delta-poltto LUONNOS (ensimmäinen ajo valvottuna päivällä; ämpärivaiheet ajamatta) ·
@@ -45,5 +56,5 @@ Paikallinen ajokansio `/Users/Shared/Claude/pyramidi-poltto/ajo-20260926/` PIDET
 - Delta-poltto: arvio pyramidi meri 71 % / maa 34 % piirretään, pallo meri ~89 % / maa ~32 %. Ensimmäinen ajo valvottuna.
 - Kermahuntu pitää polttaa uudelleen aina kun pohja vaihtuu (R−B-luokitus lukee pohjaa) → delta `maa`.
 - astro-pallo-puhelin 43/47b, ±180°-sauma, web GRC/JPN-täyttö (vanhat, ks. 25-d).
-- Worktreet nyt (3): `wt/karttaseppa-poltto-20260926` (26-poltto, pidä kunnes ajokansio NAS:issa), `-delta-poltto` (#3280),
-  `-joet` (#3281). #3278:n worktree poistettu (haara pushattu).
+- Worktreet nyt (2): `wt/karttaseppa-poltto-20260926` (26-poltto, pidä kunnes ajokansio NAS:issa), `-delta-poltto` (#3280).
+  #3278 ja #3281 worktreet poistettu (haarat pushattu).
