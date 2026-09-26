@@ -1,7 +1,8 @@
 # Elävät elementit kaupungeissa: selvitys (Linssiseppä 26.9.2026)
 
 *Fablen tilaus klo 10.0x. Johtoajatus: niukkuus ja sulava, elävä animointi. Kaupunkien aiheet vahvistaa
-Sisältökirjuri, ja tässä ovat visuaalit. Toteutus alkaa vasta build 20:n jälkeen, yksi elementti kerrallaan
+Sisältökirjuri, ja tässä ovat visuaalit. Omistaja hyväksyi listan ja järjestyksen klo 10.0x. AIKA-säännön
+mukaan kartassa eletään nykyajassa ja vain estetiikka on vanhaa, joten 1873-tarkistusta ei tehdä. Toteutus alkaa vasta build 20:n jälkeen, yksi elementti kerrallaan
 laitteella. Mallit tekee Natiiviseppä löydöksen 160 tyyliin: omat low-poly-mallit, kärkivärit ja paletti
 pinta #c8b898, valo #e8d8b8, varjo #887858, aksentit sage #7a9a92 ja terrakotta #b8785e. Piirto tapahtuu
 elävällä kerroksella (161-B).*
@@ -28,8 +29,8 @@ elävällä kerroksella (161-B).*
 | **Kööpenhamina** (Tivoli 1843) | karusellin katos ja hevoset pyörivät, ja hevoset nousevat ja laskevat vuorotellen | kierto 10 s, nousu 2,5 s | 1 800 (8 hevosta, kartiokatos, raidat terrakotta ja valo) | Pyöriminen on paikallaan pysyvä kehä, joten liike ei vaella kartalla. |
 | **Pariisi** (Giffardin kiinnitetty ilmapallo, Tuileries 1867/1878) | pallo nousee köyden varassa ja laskee, ja kori heiluu hieman tuulessa | 1 nousu + lasku / 24 s, heilunta 5 s | 900 (pallo, verkko, kori, köysi viivana) | Hidas pystyliike. Terrakottainen kangas on kaupungin ainoa värikäs piste. |
 | **Venetsia** | 2 gondolia liukuu Canal Grandella vastakkaisiin suuntiin, ja airo keinuu | matka 30 s splinellä, airo 3 s | 2 × 250 | Vesiväylää pitkin kulkeva liike toistaa kaupungin luonnetta. Kun gondolit ovat pieniä ja tummia, ne eivät kilpaile nimien kanssa. |
-| **Lontoo** (omistajan idea) | maailmanpyörä pyörii hitaasti hieman kaupunkipisteen sivussa | 1 kierros / 40 s | 2 000 (kehä, pinnat, 16 koria kiertonsa mukaan pystyssä) | Pyörä on suurin elementti, joten se on myös hitain. **Huom. 1873:** pyörää ei silloin ollut (Great Wheel 1895, London Eye 2000). Sisältökirjuri ja Fable päättävät. 1873-vaihtoehto on Thamesin siipiratashöyry ja savu (400). |
-| **Alpit** (Rigin hammasrata 1871, Vitznau) | veturi työntää vaunua rinnettä ylös, ja savupallot nousevat | nousu 20 s, tauko 10 s, paluu | 600 + savu (ElavatHetket.Savua ja Pehmeapiste valmiina) | Köysirataa ei 1873 vielä ollut, mutta hammasrata on aito ja uusi aikansa ihme. Liike on yksi viiva rinteessä. |
+| **Lontoo** (omistajan idea) | maailmanpyörä pyörii hitaasti hieman kaupunkipisteen sivussa | 1 kierros / 40 s | 2 000 (kehä, pinnat, 16 koria kiertonsa mukaan pystyssä) | Pyörä on suurin elementti, joten se on myös hitain. Sivuun siirrettynä se ei peitä kaupunkipistettä eikä nimeä. |
+| **Alpit** (köysirata, Chamonix–Aiguille du Midi) | kaksi hyttiä liukuu vaijeria pitkin vastakkaisiin suuntiin ja kohtaa puolivälissä, ja hytti heilahtaa pysähtyessään | matka 20 s, tauko 6 s | 500 (2 hyttiä, 2 asemaa, vaijeri viivana) | Suora vaijeri laakson yli on selkeämpi kuin rinteen hammasrata, eikä siinä ole savua. Sykli on symmetrinen ja rauhallinen. |
 | **Napoli** (Vesuvius, purkaus 1872) | kraaterista nousee hidas savupatsas, joka kaartuu tuulen mukana | jatkuva; pallo 6 s:n välein | 0 kolmiota (Pehmeapiste-läiskät, ≤ 12 kerrallaan) | Savua on vähän ja se on vaaleaa. Liike on hitaampaa kuin mikään muu kartalla. |
 | *Myöhemmin: Afrikka* | norsu- tai kamelijono (3–5 eläintä) kävelee savannia pitkin | askel 1,4 s, siirtymä 0,3 pt/s | 5 × 400; jalat kärkivarjostimen heiluntana | Kulkue on niin hidas, että sen huomaa vasta katsoessaan. Kaukaa se näkyy pelkkänä pistejonona. |
 
@@ -38,14 +39,14 @@ elävällä kerroksella (161-B).*
 - **Natiiviseppä:** mallit Blenderissä ja sijoitus maastoon 160:n tapaan, pyörivät osat omina kappaleinaan
   (pivot valmiina). Lisäksi elävän kerroksen rekisteröinti ja mittaus (kolmiot, ms, lämpö 10 min).
 - **Linssiseppä:** animaatioiden ajastus ja käyrät (yhteinen käyräkirjasto, ease 0,6 s), polut splineinä
-  (gondolit, hammasrata, kulkue), savu (ElavatHetket-koodi uudelleenkäytettynä) sekä näkyvyysehdot (ruudulla,
+  (gondolit, köysirata, kulkue), savu (ElavatHetket-koodi uudelleenkäytettynä) sekä näkyvyysehdot (ruudulla,
   zoom, vähennetty liike). Äänet vain, jos omistaja haluaa (myllyn narina, höyrypilli), ja silloin samalla
   hiljaisella tasolla kuin elävissä hetkissä.
-- **Sisältökirjuri:** kaupunkien aiheet ja 1873-tarkistus, sekä tarvittaessa kaupungin lehteen yksi rivi siitä, mikä
+- **Sisältökirjuri:** kaupunkien aiheet, sekä tarvittaessa kaupungin lehteen yksi rivi siitä, mikä
   kartalla liikkuu.
 
 ## Kokeilujärjestys
 
 1) Amsterdamin myllyt, joilla testataan kerros, kierto ja 0 kehystä levossa. 2) Kööpenhaminan karuselli. 3) Pariisin
-pallo. 4) Venetsian gondolit (spline). 5) Lontoo (omistajan päätös pyörästä). 6) Rigi ja Vesuvius (savu). Jokaisesta
+pallo. 4) Venetsian gondolit (spline). 5) Lontoon maailmanpyörä. 6) Alppien köysirata ja Vesuviuksen savu. Jokaisesta
 kuvapari ja lyhyt video (liike) omistajalle sekä kehysmittaus ennen seuraavaa.
