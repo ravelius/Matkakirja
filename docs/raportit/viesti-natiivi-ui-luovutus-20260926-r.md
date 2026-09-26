@@ -32,7 +32,12 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
   todennettu 9a677a78, lepo Paikallaan 0 kehystä; merge-pyyntö Natiivisepälle. Todisteet proto-3d/lokit/natiivi-ui-b20-155/.
   Testikomennot: peli-komento.txt (peli), ui-komento.txt (rivit alkavat "ui "), komento.txt (kartta, kuva).
   Siirtosepän siivous-korjaus 13e5bcf4 on BUILD 19:ssä → salaisuus/Attika todennettavissa.
-- Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
+- Klo 09.5x: 155b f8cd2f38 (c09aacc3:n päällä, korvaa d262c1e2:n) junassa e86fd248. 156 natiivi-ui/maakunnat-veto 9ae176c9
+  (maakuntien selain vedolla, Maakunnat.Vedossa/VetoMuuttui) todennettu 7f37e1d6, menee junaan 157:n (natiiviseppa/valinta-157)
+  kanssa Fablen OK:lla. 158 natiivi-ui/pikkukuva-158 68e9dc2f (kenttä `pikkukuva`, salaisuuskortin kuva) merge-pyynnössä.
+  Salaisuuskortti ja "Attika" TODENNETTU build 19 -datalla. Todisteet proto-3d/lokit/natiivi-ui-b20-156/.
+  Konsoli: simctl launch --terminate-running-process --stdout=<tiedosto> (Debug.Log, esim. komento.txt "maakunta tila").
+- (Vanha) Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
   laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
   natiivi-ui/elava-kartussi worktreessä wt/proto-natiivi-ui-nostot: tutkimuspalkki, maakunnan herääminen kartussissa
