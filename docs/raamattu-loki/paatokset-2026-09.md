@@ -7427,3 +7427,7 @@ Siirtoseppa: ennen-tilanne toistuu (b25, v157 kaytossa, v182 varastossa): Attika
 ## LAITETESTAAJA cd41e4fa: 175 PARANNUS, LIPPU PIILOSSA EUROOPASSA, LAATAT 5 S (26.9.2026 klo 21.23)
 
 Laitetestaaja b28 (bf53d10a4): 0 poikkeusta; 175 selva parannus (nimet luettavissa, ei jattimalleja); lippu piilossa Euroopan mittakaavassa; loitonnus Kreikasta Eurooppaan laatat 5 s:ssa simulaattorissa; S10 liike sulava. 176:n laitejuurisyy yha Natiivisepan agentilla.
+
+## MAAKUNTAPIKKUKUVAT ERA A VALMIS PR 3348 (138 ALUETTA) (26.9.2026 klo 21.25)
+
+Sisaltokirjuri: CHE/PRT/HUN/SWE/NOR/IRL kuva[] + pikkukuva Commonsista, PR #3348 v2282, testit 4423, kuvat amparissa karttanostot/20260926/; 6 rinnakkaista agenttia + oma lisenssitarkistus. Era B (15 maata) 2–3 PR:na reitin jarjestyksessa. Julkaisija junaan, Siirtoseppa delta natiiviin.
