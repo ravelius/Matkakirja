@@ -426,6 +426,38 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(tila.Toive(Kanava.Pohja).Url != null, "pohja soi");
         }
 
+        /// <summary>Musiikkisuunnitelma vaihe 1 (26.9.2026): aiheet aarreaiheen paikalla, tunnus ei katkaise aihetta.</summary>
+        [Testi] static void SuunnitelmanAiheet()
+        {
+            var t = Taulut();
+            t.Maat["ateena"] = "GRC";
+            t.Maat["lontoo"] = "GBR";
+            var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
+            tila.Paikka("lontoo", "kaupunki");
+            string Aihe() => tila.Toive(Kanava.Aarre).Url;
+
+            tila.UusiKaupunki("lontoo");
+            Oleta.Sama(null, Aihe(), "Brittein saarilla ei tunnusta vaiheessa 1");
+            tila.UusiKaupunki("ateena");
+            Oleta.Tosi(Aihe()?.Contains("musa-saapuminen-valimeri-lyria.mp3") == true, "Välimeren tunnus");
+            Oleta.Tosi(tila.AiheSoi, "aihe soi");
+            tila.AarreLoppui();
+            Oleta.Tosi(!tila.AiheSoi, "tunnus soi loppuun");
+
+            tila.AloituslentoAlkoi();
+            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-lyria.mp3") == true, "aloituslento");
+            tila.UusiKaupunki("ateena");
+            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-lyria.mp3") == true, "tunnus ei katkaise aloituslentoa");
+            tila.AarrePaljastui("star");
+            Oleta.Tosi(Aihe()?.Contains("musa-paaaarre-lyria.mp3") == true, "aarre katkaisee");
+            tila.MatkaLoppui();
+            Oleta.Tosi(Aihe()?.Contains("musa-loppu-lyria.mp3") == true, "loppu");
+
+            // Paketin rivi korvaa oletuksen.
+            t.LueAanitaulut("{\"nimi\":\"aanitaulut\",\"alkiot\":[{\"id\":\"musiikkiaihe:saapuminen-pohjola\",\"laji\":\"musiikkiaihe\",\"nimi\":\"saapuminen-pohjola\",\"tunnus\":\"musa-saapuminen-pohjola\"}]}");
+            Oleta.Tosi(t.Saapumistunnukset["pohjola"].EndsWith("musa-saapuminen-pohjola-lyria.mp3"), "paketin saapumistunnus");
+        }
+
         [Testi] static void LinssinPitoOnIdempotentti()
         {
             var tila = new AaniTila(Taulut(), new Satunnainen(1).Seuraava);

@@ -902,6 +902,7 @@ namespace Matkakirja.Natiivi
             linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
             kytkettyRekisteri = null;
             KytkeRekisteri();
+            m.Saapui += (_, k, uusi) => { if (m == matka) uusiKaupunki = uusi ? k : null; };
             m.Tapahtui += (laji, teksti) => { tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
             m.Loysi += (p, l) =>
             {

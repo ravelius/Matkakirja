@@ -145,6 +145,13 @@ namespace Matkakirja.Peli
         /// <summary>Visamusiikin oletusvalinta (EHDOKKAAT['musiikki:tietovisa'].oletus); '' = pois.</summary>
         public string VisaOletus;
         public string AarreTavallinen, AarrePaa;
+        /// <summary>
+        /// Musiikkisuunnitelman one-shot-aiheet (vaihe 1, omistaja 26.9.2026): aloituslento ja matkan loppu.
+        /// Soivat aarreaiheen paikalla (AaniTila.Aihe). null = ei aihetta.
+        /// </summary>
+        public string AloituslentoAihe, LoppuAihe;
+        /// <summary>Saapumistunnus musiikkialueelle (Musiikkivalitsin.Alue → polku); vaiheessa 1 vain valimeri.</summary>
+        public Dictionary<string, string> Saapumistunnukset = new Dictionary<string, string>();
         public HashSet<string> Aarretyypit = new HashSet<string>();
         public HashSet<string> Vakiopaikat = new HashSet<string>();
         public Dictionary<string, string[]> Yhdistetyt = new Dictionary<string, string[]>();
@@ -200,6 +207,9 @@ namespace Matkakirja.Peli
             t.VisaOletus = t.MusaPolku("musa-visa-2");
             t.AarreTavallinen = t.MusaPolku("musa-aarre");
             t.AarrePaa = t.MusaPolku("musa-paaaarre");
+            t.AloituslentoAihe = t.MusaPolku("musa-aloituslento");
+            t.LoppuAihe = t.MusaPolku("musa-loppu");
+            t.Saapumistunnukset["valimeri"] = t.MusaPolku("musa-saapuminen-valimeri");
             foreach (var a in new[] { "star", "mannerAarre", "isoAarre", "pieniAarre" }) t.Aarretyypit.Add(a);
             t.Vakiopaikat.Add("etusivu");
             t.Vakiopaikat.Add("lentomatka");
@@ -314,6 +324,14 @@ namespace Matkakirja.Peli
                     case "aarreaihe":
                         if (nimi == "paa") AarrePaa = MusaPolku(MiniJson.Teksti(o, "tunnus"));
                         else if (nimi == "tavallinen") AarreTavallinen = MusaPolku(MiniJson.Teksti(o, "tunnus"));
+                        break;
+                    // Musiikkisuunnitelman aiheet (paketin tuleva rivi; puuttuessa Oletus-taulun arvot):
+                    // nimi aloituslento | loppu | saapuminen-<alue>, tunnus ilman -lyria-päätettä.
+                    case "musiikkiaihe":
+                        var aihe = MusaPolku(MiniJson.Teksti(o, "tunnus"));
+                        if (nimi == "aloituslento") AloituslentoAihe = aihe;
+                        else if (nimi == "loppu") LoppuAihe = aihe;
+                        else if (nimi != null && nimi.StartsWith("saapuminen-")) Saapumistunnukset[nimi.Substring(11)] = aihe;
                         break;
                     case "maisemakori":
                         var paikka = MiniJson.Teksti(o, "paikka");
