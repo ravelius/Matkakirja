@@ -11,7 +11,7 @@ ylimääräisiä worktreitä ei.
 - b18 avoinna: (1) **144 lipun aaltoilu** ei todennettavissa still-kuvista (vaatii videon/Natiivi-UI:n todistuksen);
   (2) **löydös: laajennettu nostokortti jää auki linssin avauksen yli** (sulkeutuu vain ulkopuolelle napautuksella);
   (3) `vieritys koe` vaatii vieritettävän ScrollView'n (aja laajennetun nostokortin päällä).
-- Ei ajettu b18:ssa: iPadin II/CC-kytkin ("Tekstitys" ☰:ssa) + soitin; Pelikoodarin `verkko raja` (haara
+- iPadin II + Tekstitys + soitin: AJETTU 05.3x, PASS (7fc314fa7). Ei ajettu b18:ssa: `vieritys koe` nostokortin päällä; Pelikoodarin `verkko raja` (haara
   pelikoodari/verkko-raja, "RAJA saapuminen 0 ms verkko-odotusta: PASS|FAIL"; menee junaan b18:n jälkeen).
 
 ## 2. Seuraava kierros (build 19) — kysy Fablelta/kutsu; tarkistuslistat ja opit
