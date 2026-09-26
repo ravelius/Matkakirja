@@ -115,7 +115,9 @@ import {
   arvonimenPaikkaMaalle, nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS,
   suurennoksenMitat, lehtipalstaKotelo,
 } from './ui-apurit.js';
-import { nostokuvaAloita, nostokuvaKortissa, nostokuvaTurvaAlue } from './nostokuva.js';
+import {
+  nostokuvaAloita, nostokuvaKortissa, nostokuvaTurvaAlue, nostokuvaVakiokortti,
+} from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -4783,6 +4785,12 @@ function asetaKohteenPaikka(ui) {
    * pysähtyy tai ikkuna vaihtaa kokoa.
    */
   if (nostokuvaKortissa(auki.popup)) return;
+  /*
+   * KUVATON KORTTI KESKELLE (löydös 135): kaikki karttanostot aukeavat
+   * samaan kokoon ja paikkaan kuin kuva edellä -kortti. Merkin viereen
+   * asemointi alla jää vain korteille, jotka eivät ole vakiokortteja.
+   */
+  if (auki.popup.nostokuvaVakioAsemoi) { auki.popup.nostokuvaVakioAsemoi(); return; }
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
@@ -6241,12 +6249,16 @@ function raahausTaiSulku(ui, popup, alku) {
     if (!raahaa) {
       if (Math.hypot(dx, dy) < KOHDE_RAAHAUSKYNNYS) return;
       raahaa = true;
+      // Vakiokortti (löydös 135) ei enää palaa keskelle raahauksen jälkeen.
+      popup.nostokuvaVakioLukittu = true;
       popup.classList.add('raahauksessa');
       try { popup.setPointerCapture(alku.pointerId); } catch { /* ei pakollinen */ }
     }
+    // Kiinteä (position: fixed) vakiokortti: offsetParent on null ja
+    // paikka on ruudun koordinaateissa, joten raja on ikkuna.
     const koti = popup.offsetParent;
-    const maxVasen = Math.max(0, (koti?.clientWidth ?? Infinity) - popup.offsetWidth);
-    const maxYlin = Math.max(0, (koti?.clientHeight ?? Infinity) - popup.offsetHeight);
+    const maxVasen = Math.max(0, (koti?.clientWidth ?? globalThis.innerWidth ?? Infinity) - popup.offsetWidth);
+    const maxYlin = Math.max(0, (koti?.clientHeight ?? globalThis.innerHeight ?? Infinity) - popup.offsetHeight);
     popup.style.left = `${Math.round(Math.min(Math.max(0, lahtoVasen + dx), maxVasen))}px`;
     popup.style.top = `${Math.round(Math.min(Math.max(0, lahtoYlin + dy), maxYlin))}px`;
   };
@@ -6613,7 +6625,12 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
     kaksipalstaTaitto: true,
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoKohde(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoKohde(sisalto, undefined);
+    // Kuvaton kohde samaan kokoon ja paikkaan kuin kuvallinen (löydös 135,
+    // js/nostokuva.js nostokuvaVakiokortti) — ei enää merkin viereen.
+    nostokuvaVakiokortti({ kortti: popup, sisalto });
+  }
   // Kaiutin kortin otsikkoriville (omistaja 6.9.2026: "Kaikissa missä
   // on tekstiä, saisi olla striimi lukijan symboli") — js/lukija.js
   // lisaaLukijanappi. Kutsu on sisällön JÄLKEEN: teksitön kortti (pelkkä

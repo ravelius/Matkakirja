@@ -60,6 +60,7 @@ import {
   avaaNahtavyys, kaupunginNahtavyysteksti, piirraKaupunkiKartta, piirraMatkailijalle,
 } from './nahtavyydet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
+import { nostokuvaVakiokortti } from './nostokuva.js';
 import { sfx } from './sound.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, kuunteleSulkevaNapautus } from './ui-apurit.js';
@@ -409,6 +410,9 @@ function kaupunkinostonAnkkurinLaatikko(auki, pane) {
 export function asemoiKaupunkipopup(ui) {
   const auki = ui?.kaupunkipopupAuki;
   if (!auki?.popup?.isConnected) return;
+  // Lisäkaupungin kortti on karttanosto: sama koko ja paikka kuin kuvallisella
+  // nostolla (löydös 135, js/nostokuva.js nostokuvaVakiokortti).
+  if (auki.popup.nostokuvaVakioAsemoi) { auki.popup.nostokuvaVakioAsemoi(); return; }
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
@@ -520,6 +524,7 @@ export function suljeKaupunkipopup(ui) {
   ui.kaupunkipopupAuki = null;
   document.body.classList.remove('nosto-popup-auki');
   auki.purku?.();
+  auki.popup?.nostokuvaPurku?.();
   auki.popup?.remove();
 }
 
@@ -583,7 +588,9 @@ function kuunteleKaupunkipopupia(ui, popup) {
  * täyttää sisällön, joten iso pop-up ja turisti-info ovat sama kortti
  * eri sisällöllä — yksi kehys, yksi sulkusopimus, yksi asemointi.
  */
-function avaaKortti(ui, city, { laji, otsikko, ankkuri, lato }) {
+function avaaKortti(ui, city, {
+  laji, otsikko, ankkuri, lato, vakio = false,
+}) {
   if (typeof document === 'undefined' || !city) return null;
   sfx.play('popup');
   lataaKaupunkiTyyli();
@@ -621,6 +628,7 @@ function avaaKortti(ui, city, { laji, otsikko, ankkuri, lato }) {
   // ruutulaatikoita (js/nahtavyydet.js mitoitaKehys, hajautaPiirrospisteet),
   // eikä irrallisella elementillä ole sellaisia.
   lato(ui, sisalto, city);
+  if (vakio) nostokuvaVakiokortti({ kortti: popup, sisalto });
   ui.kaupunkipopupAuki.purku = kuunteleKaupunkipopupia(ui, popup);
   asemoiKaupunkipopup(ui);
   // Mitta uudelleen, kun asettelu ja tyyli ovat valmiit: ensimmäinen
@@ -1157,5 +1165,14 @@ export function avaaLisakaupunginKortti(ui, kohde, { ankkuri = null } = {}) {
     otsikko: kohde.nimi ?? '',
     ankkuri,
     lato: (u, sisalto) => latoLisakaupunginKortti(u, sisalto, kohde),
+    /*
+     * KARTTANOSTON KOKO JA PAIKKA (Fablen päätös 26.9.2026, löydös 135:
+     * *"Kaikki karttanostot aukeavat samaan kokoon ja tyyliin"*).
+     * Lisäkaupunki avautuu kartan napautuksesta kuten kohde, joten se on
+     * karttanosto: keskelle, kuvallisen noston levyisenä ja samalla
+     * himmennyksellä. Kaupunkilehden oma pop-up ja turisti-info eivät ole
+     * nostoja ja pitävät merkin viereen asemoinnin.
+     */
+    vakio: true,
   });
 }
