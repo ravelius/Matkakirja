@@ -1,0 +1,462 @@
+[
+  {
+    "id": "singapore-sultan-moskeija",
+    "replacement_id": "singapore-sultan-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-sultan-moskeija-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-sultan-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-sultan-moskeija-vari2.png",
+    "sha256": "8353c428d6a2a54ef76404e22c50993021c509a2e686d53cbf537c6cfd7d4b7d",
+    "bytes": 1619345,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sultan Mosque Singapore, large onion dome, four slim corner minarets and arched prayer hall. Preserve exact original ink-drawn isometric cutout, architecture/landscape, silhouette, viewpoint, size, placement, boats, arches and original openings. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream/white colonial walls, muted dusty terracotta roofs, soft sage foliage and blue-gray river where present. For the mosque, subdued gold on existing dome only. Airy delicate hand-tinted watercolor, historically/material appropriate, never oversaturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-raffles-hotel",
+    "replacement_id": "singapore-raffles-hotel-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-raffles-hotel-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-raffles-hotel-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-raffles-hotel-vari2.png",
+    "sha256": "5c631d770399a9d51189bdc0d72118319967c80f2acd8d18b14964799269eac9",
+    "bytes": 1685285,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Raffles Hotel Singapore, broad colonial white hotel around central portico and long verandas. Preserve exact original ink-drawn isometric cutout, architecture/landscape, silhouette, viewpoint, size, placement, boats, arches and original openings. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream/white colonial walls, muted dusty terracotta roofs, soft sage foliage and blue-gray river where present. For the mosque, subdued gold on existing dome only. Airy delicate hand-tinted watercolor, historically/material appropriate, never oversaturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-fort-canningin-kukkula",
+    "replacement_id": "singapore-fort-canningin-kukkula-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-fort-canningin-kukkula-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-fort-canningin-kukkula-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-fort-canningin-kukkula-vari2.png",
+    "sha256": "9ccf470526be9ea6eec6be38ac5d2c11e6da4cda8d37f0740578cbe9f262f50a",
+    "bytes": 1942381,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Fort Canning Hill, tree-covered hill inside old brick perimeter with historic arched entrance gate. Preserve exact original ink-drawn isometric cutout, architecture/landscape, silhouette, viewpoint, size, placement, boats, arches and original openings. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream/white colonial walls, muted dusty terracotta roofs, soft sage foliage and blue-gray river where present. For the mosque, subdued gold on existing dome only. Airy delicate hand-tinted watercolor, historically/material appropriate, never oversaturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-clarke-quay",
+    "replacement_id": "singapore-clarke-quay-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-clarke-quay-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-clarke-quay-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-clarke-quay-vari2.png",
+    "sha256": "923734b6aeecbc916b566c620a2067ad9bf481fa41ad3f6db93c59ca4363136b",
+    "bytes": 1233611,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Clarke Quay, three riverside colonial shophouses beside moored sampans. Preserve exact original ink-drawn isometric cutout, architecture/landscape, silhouette, viewpoint, size, placement, boats, arches and original openings. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream/white colonial walls, muted dusty terracotta roofs, soft sage foliage and blue-gray river where present. For the mosque, subdued gold on existing dome only. Airy delicate hand-tinted watercolor, historically/material appropriate, never oversaturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-empress-place",
+    "replacement_id": "singapore-empress-place-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-empress-place-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-empress-place-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-empress-place-vari2.png",
+    "sha256": "df253a0a7aafff555f43db515277b9d1543e7d3ddf692030bd1f06df25dfd563",
+    "bytes": 1536736,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Empress Place colonial waterfront civic building with central clock tower and long wings. Preserve exact original ink-drawn isometric cutout, architecture/landscape, silhouette, viewpoint, size, placement, boats, arches and original openings. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace dark uniform sepia with fine warm-gray ink, pale cool cream/white colonial walls, muted dusty terracotta roofs, soft sage foliage and blue-gray river where present. For the mosque, subdued gold on existing dome only. Airy delicate hand-tinted watercolor, historically/material appropriate, never oversaturated. No new structures, figures or text. Empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tabriz-tabrizin-basaari",
+    "replacement_id": "tabriz-tabrizin-basaari-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tabriz-tabrizin-basaari.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tabriz-tabrizin-basaari-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tabriz-tabrizin-basaari-vari2.png",
+    "sha256": "b925386beb20b08fe6686df0de8413baa58c462319d9776222ac543cea40f55c",
+    "bytes": 1441319,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Tabriz Historic Bazaar: compact oblique cluster of interlocking low brick vaulted bazaar halls with many little masonry domes and open arcades, exact original footprint and viewpoint. Cream and pale dusty terracotta brick, soft sage-grey shade. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tabriz-perustuslakitalo",
+    "replacement_id": "tabriz-perustuslakitalo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tabriz-perustuslakitalo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tabriz-perustuslakitalo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tabriz-perustuslakitalo-vari2.png",
+    "sha256": "91846b6e5cd69e8b3668cdbba4472cda2104be516bc56ade5ba8708537f71593",
+    "bytes": 1222403,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Constitution House of Tabriz: two-story historic Iranian house with arched windows, central entrance and small roof cupola, exact original three-quarter view. Cream plaster, soft terracotta brick and muted sage-grey window shade. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tabriz-arg",
+    "replacement_id": "tabriz-arg-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tabriz-arg.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tabriz-arg-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tabriz-arg-vari2.png",
+    "sha256": "c6b1aceae919e1e949039077c8d214fe2252629978ab381cb9bfbb3c8cbfe1ac",
+    "bytes": 1272737,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Arg of Tabriz: single massive surviving ruined brick citadel wall with tall pointed central opening and jagged broken top, original near-frontal isolated silhouette. Pale dusty terracotta brick, ivory worn edges and grey recesses. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tabriz-saat-torni",
+    "replacement_id": "tabriz-saat-torni-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tabriz-saat-torni.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tabriz-saat-torni-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tabriz-saat-torni-vari2.png",
+    "sha256": "60e757c3f01ee5cae37d1bb25e4fede702e4b0dd5d0a697827e2703199b76716",
+    "bytes": 976519,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Tabriz Clock Tower municipal building: symmetrical historic corner building with long wings extending both sides of a tall central clock tower, exact original frontal three-quarter shape. Ivory stone, restrained dusty terracotta roofs and sage-grey shadows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tabriz-azerbaidzanin-museo",
+    "replacement_id": "tabriz-azerbaidzanin-museo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tabriz-azerbaidzanin-museo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tabriz-azerbaidzanin-museo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tabriz-azerbaidzanin-museo-vari2.png",
+    "sha256": "bafb37d76655cb2589a56a5ba0ee3b578082288889afaabddbaa9a6b097a5615",
+    "bytes": 729690,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Azerbaijan Museum in Tabriz: low two-story rectangular modernist stone museum with simple flat roof and closely spaced tall window arches, exact original three-quarter silhouette. Pale warm cream stone and cool sage-grey glass. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-bogd-khanin-talvipalatsi",
+    "replacement_id": "ulanbator-bogd-khanin-talvipalatsi-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-bogd-khanin-talvipalatsi.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-bogd-khanin-talvipalatsi-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-bogd-khanin-talvipalatsi-vari2.png",
+    "sha256": "23d7c55532a7f9e46016203cf79bc1baaf28a9998df14f97a3b39d1d1820b9ea",
+    "bytes": 1320743,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-bogd-khanin-talvipalatsi map miniature, preserving the original subject's architecture or monument, roof profile, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-choijin-laman-temppeli",
+    "replacement_id": "ulanbator-choijin-laman-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-choijin-laman-temppeli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-choijin-laman-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-choijin-laman-temppeli-vari2.png",
+    "sha256": "3c446797611f5cbbc7aec9bd5d25f4945ddc624235e49f2fb59aefe12b203f88",
+    "bytes": 1145082,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-choijin-laman-temppeli map miniature, preserving the original subject's architecture, roof profile, ornament, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. Sacred buildings remain accurate and dignified. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-gandantegchinlenin-luostari",
+    "replacement_id": "ulanbator-gandantegchinlenin-luostari-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-gandantegchinlenin-luostari.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-gandantegchinlenin-luostari-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-gandantegchinlenin-luostari-vari2.png",
+    "sha256": "35d297d2a8a0c89308084ae4855f876d5f109da08b53d4150fc6244e9bebb4cf",
+    "bytes": 1166973,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-gandantegchinlenin-luostari map miniature, preserving the original subject's architecture, roof profile, ornament, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. Sacred buildings remain accurate and dignified. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-kansallisstadion",
+    "replacement_id": "ulanbator-kansallisstadion-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-kansallisstadion.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-kansallisstadion-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-kansallisstadion-vari2.png",
+    "sha256": "3f85ef46a3498f8d9f4f8c0bffece93af116c3f2df9ffe77867460a07fae9d60",
+    "bytes": 1131729,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-kansallisstadion map miniature, preserving the original subject's architecture or monument, roof profile, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-mongolian-kansallismuseo",
+    "replacement_id": "ulanbator-mongolian-kansallismuseo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-mongolian-kansallismuseo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-mongolian-kansallismuseo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-mongolian-kansallismuseo-vari2.png",
+    "sha256": "3ea6f36c42a5d9fde1c3221f0e6274bfbaf2d821b1c7beb06ffb32f84443ab70",
+    "bytes": 971892,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-mongolian-kansallismuseo map miniature, preserving the original subject's architecture, roof profile, ornament, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. Sacred buildings remain accurate and dignified. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-rautatieasema",
+    "replacement_id": "ulanbator-rautatieasema-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-rautatieasema.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-rautatieasema-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-rautatieasema-vari2.png",
+    "sha256": "73a23bbc251e127731da8e6291c728fac6ce6cb11dadb1e8b1d58c2b5c6851c2",
+    "bytes": 888281,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-rautatieasema map miniature, preserving the original subject's architecture or monument, roof profile, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-sukhbaatarin-aukio",
+    "replacement_id": "ulanbator-sukhbaatarin-aukio-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-sukhbaatarin-aukio.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-sukhbaatarin-aukio-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-sukhbaatarin-aukio-vari2.png",
+    "sha256": "2ddd0dc9884d47d4b76b4aa7ca30f353e8a8df491168daecbf136c1df60b660b",
+    "bytes": 1117054,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-sukhbaatarin-aukio map miniature, preserving the original subject's architecture, roof profile, ornament, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. Sacred buildings remain accurate and dignified. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "ulanbator-zaisanin-muistomerkki",
+    "replacement_id": "ulanbator-zaisanin-muistomerkki-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/ulanbator-zaisanin-muistomerkki.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/ulanbator-zaisanin-muistomerkki-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ulanbator-zaisanin-muistomerkki-vari2.png",
+    "sha256": "f46db94efde3c9df4bfa70ea9d78a97890bdc110568a4b594acef3c5aa2760b3",
+    "bytes": 1198674,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Recolor this exact ulanbator-zaisanin-muistomerkki map miniature, preserving the original subject's architecture or monument, roof profile, geometry, camera angle, composition, silhouette and full framing. Keep delicate antique brown ink lines and translucent watercolor. Replace dark monotone sepia with the established airy palette for the game's old miniatures: light cream plaster and stone, faded terracotta and muted ochre on existing roof/brick areas, soft blue-gray/slate shadows, restrained sage only on plants already present. No new people, icons, banners, script, text, architecture or background. Not photorealistic or oversharpened. Place only the isolated hand-painted miniature on perfectly uniform flat pure #FF00FF chroma-key, with no shadows, checkerboard or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "varanasi-chaukhandi-stupa",
+    "replacement_id": "varanasi-chaukhandi-stupa-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-chaukhandi-stupa.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-chaukhandi-stupa-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-chaukhandi-stupa-vari2.png",
+    "sha256": "942d62d6709c5bce6d1cdd612ab1bc84e1b80c74af6e14344a148f98ce892eec",
+    "bytes": 1143378,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-chaukhandi-stupa. Preserve the original sacred site, stupa/temple/ghat architecture, steps, towers, river edge if present, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "varanasi-dashashwamedh-ghat",
+    "replacement_id": "varanasi-dashashwamedh-ghat-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-dashashwamedh-ghat.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-dashashwamedh-ghat-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-dashashwamedh-ghat-vari2.png",
+    "sha256": "a0b3fc7a009cef64c725f8f481fc68cc74fb7cd8c27ac72d28cd31c2ba9082e3",
+    "bytes": 1288135,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-dashashwamedh-ghat. Preserve the original historic site, steps, towers, river edge or boats if present, architecture, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible; use gentle pale blue-grey for water where already depicted. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "varanasi-dhamek-stupa",
+    "replacement_id": "varanasi-dhamek-stupa-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-dhamek-stupa.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-dhamek-stupa-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-dhamek-stupa-vari2.png",
+    "sha256": "4263893f33e7fc36e00dba3c6dd00314ccb377df0882ae1fab33831856380c26",
+    "bytes": 1307705,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-dhamek-stupa. Preserve the original sacred site, stupa/temple/ghat architecture, steps, towers, river edge if present, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "varanasi-kashi-vishwanath-temppeli",
+    "replacement_id": "varanasi-kashi-vishwanath-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-kashi-vishwanath-temppeli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-kashi-vishwanath-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-kashi-vishwanath-temppeli-vari2.png",
+    "sha256": "cfca6ff2c31e229a8d3eb948c127421b7015b8d3094c94fc8b1fe77e95025804",
+    "bytes": 1158214,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-kashi-vishwanath-temppeli. Preserve the original sacred site, stupa/temple/ghat architecture, steps, towers, river edge if present, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "varanasi-manikarnika-ghat",
+    "replacement_id": "varanasi-manikarnika-ghat-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-manikarnika-ghat.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-manikarnika-ghat-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-manikarnika-ghat-vari2.png",
+    "sha256": "c6ac20d657093f84cc53f25ab8ff06324ef196666646da966466e364899be7d6",
+    "bytes": 1398859,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-manikarnika-ghat. Preserve the original sacred site, stupa/temple/ghat architecture, steps, towers, river edge if present, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
