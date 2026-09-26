@@ -8569,35 +8569,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muotokuvassa vuodelta 1852.',
           lahde: 'Franz Xaver Winterhalter 1852, Wikimedia Commons (public domain)',
         },
-        /*
-         * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026): skandaali
-         * `skandaali-osmanien-vararikko-1875` jäi v1421:ssä
-         * siirtämättä, koska lehtimalli vaatii kuvan eikä
-         * skandaalidatassa ollut sellaista. Kuva on nyt Matkakirjan
-         * oma havainnekuva (ks. KULTTUURI_HAVAINNEKUVAJUURI), ja
-         * kartan skandaalimerkki visoineen jää ennalleen.
-         */
-        {
-          otsikko: 'Valtio ilmoitti maksavansa vain puolet',
-          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-osmanien-vararikko-1875.jpg`,
-          teksti: 'Osmanien valtakunta otti ensimmäisen ulkomaisen lainansa '
-            + 'Krimin sodan aikana 1854, ja parikymmentä vuotta myöhemmin '
-            + 'velanhoito söi valtaosan valtion tuloista. Lokakuun 6. '
-            + 'päivänä 1875 hallitus julkaisi ramazan-asetuksen: seuraavat '
-            + 'viisi vuotta velasta maksettaisiin vain puolet käteisenä ja '
-            + 'loput uusina viiden prosentin obligaatioina. Seuraavana '
-            + 'vuonna maksut loppuivat kokonaan. Sopu syntyi vasta 1881 '
-            + 'muharrem-asetuksella, joka perusti eurooppalaisten velkojien '
-            + 'johtaman velkahallinnon; se keräsi suoraan itselleen muun '
-            + 'muassa suola-, tupakka-, leimavero- ja alkoholitulot. '
-            + 'Virasto jäi Istanbuliin vuosikymmeniksi, ja sen talossa '
-            + 'toimii nykyään Istanbul Erkek Lisesi -lukio.',
-          lyhyt: 'Osmanihallinnon virkamiehet ja velkojat saman pöydän ääressä tyhjän kassalippaan edessä.',
-          selite: 'Osmanihallinnon virkamiehet ja velkojat saman pöydän '
-            + 'ääressä: kassalipas on tyhjä ja tarjottimella on kourallinen '
-            + 'kolikoita.',
-          lahde: 'Matkakirjan havainnekuva: velkaneuvottelu Konstantinopolissa',
-        },
       ],
       tehtava: {
         kysymys: 'Kuinka monta kappaletta mehter-soittokunnassa oli kutakin '
@@ -9475,23 +9446,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Fringe-festivaalin ohjelmaa ei valitse kukaan: kuka tahansa '
             + 'saa esiintyä, jos löytää itselleen esityspaikan.',
           lahde: 'Brian McNeil, Wikimedia Commons (CC BY 3.0)',
-        },
-        {
-          otsikko: 'Haggis, lanttu ja peruna',
-          tiedosto: 'Haggis neeps tatties.JPG',
-          teksti: 'Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja '
-            + 'mausteista tehty makkara, joka keitetään perinteisesti lampaan '
-            + 'mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert '
-            + 'Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi '
-            + 'joka 25. tammikuuta istutaan Burns-illalliselle: makkara '
-            + 'kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja '
-            + 'puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.',
-          lyhyt: 'Haggis tehdään lampaan sisäelimistä, kaurasta, sipulista ja mausteista lantun ja perunan kera.',
-          selite: 'Haggis tehdään lampaan sisäelimistä, kaurasuurimoista, '
-            + 'sipulista ja mausteista, ja se syödään lantun ja perunan '
-            + 'kanssa.',
-          lahde: 'Metukkalihis, Wikimedia Commons (CC BY-SA 3.0)',
-          wiki: 'Haggis',
         },
         {
           otsikko: 'Linna seisoo tulivuoren tulpalla',
@@ -10960,28 +10914,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       },
       nostot: [
-        {
-          otsikko: 'Sardanassa askeleet lasketaan',
-          tiedosto: 'Sardana Pla de la Seu.jpg',
-          teksti: 'Sardana tanssitaan piirissä käsi kädessä, ja askeleet '
-            + 'lasketaan tarkasti: jokaisessa sävelmässä on oma määrä lyhyitä '
-            + 'ja pitkiä askelia, eikä määrä ole aina sama. Siksi piirissä on '
-            + 'yleensä yksi, joka laskee ne muiden puolesta ja antaa merkin. '
-            + 'Säestäjänä on cobla, jossa on yksitoista soittajaa mutta '
-            + 'kaksitoista soitinta — flabiol-huilun soittaja lyö samalla '
-            + 'käsivarteensa sidottua pikkurumpua. Barcelonassa piiri syntyy '
-            + 'usein katedraalin edustalle.',
-          lyhyt: 'Sardanaa tanssittaessa laukut ja takit jätetään piirin keskelle, usein katedraalin aukiolla.',
-          selite: 'Sardanaa tanssittaessa laukut ja takit jätetään piirin '
-            + 'keskelle, ja Barcelonassa piiri syntyy usein katedraalin '
-            + 'aukiolle.',
-          lahde: 'Canaan, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Sardana',
-          musiikki: 'https://music.apple.com/fi/search?term=sardana%20cobla',
-          musiikkiNimi: 'Sardana-musiikkia Apple Musicissa',
-          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/Emigrant.ogg/Emigrant.ogg.mp3',
-          musiikkiNayteNimi: 'Sardana "L\'Emigrant" — Mauné i els seus dinàmics, CC BY-SA (Wikimedia Commons)',
-        },
         {
           otsikko: 'Ihmistornin huipulla on lapsi',
           tiedosto: '4de9f-Colla Jove Xiquets de Tarragona-Concurs2010.jpg',
@@ -16937,27 +16869,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Sofian synagoga avattiin 1909 ja on Kaakkois-Euroopan '
             + 'suurin, ja sen kattokruunu painaa 1,7 tonnia.',
           lahde: 'DMY, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          otsikko: 'Gaida — säkkipilli Balkanilla',
-          tiedosto: 'Kostadin Varimezov playing the gaida.jpg',
-          teksti: 'Sofian kaduilla soittajien mukana kulkee gaida: vuohennahasta '
-            + 'tehty säkkipilli, jota soitetaan häissä ja tansseissa. '
-            + 'Rodopeilta kotoisin oleva iso kaba gaida soi matalasti ja '
-            + 'käheästi. Soittaja täyttää säkin puhaltamalla ja puristaa '
-            + 'siitä ilmaa kainalollaan, jottei ääni katkea hengenvedon '
-            + 'ajaksi. Tahtilajit ovat suomalaiseen korvaan outoja: yleisiä '
-            + 'ovat 7/8 ja 11/16, joten askel menee pitkä–lyhyt–lyhyt.',
-          lyhyt: 'Gaida on vuohennahasta tehty säkkipilli, jota soittaja puhaltaa ja puristaa kainalollaan.',
-          selite: 'Gaida on vuohennahasta tehty säkkipilli, jonka soittaja '
-            + 'täyttää puhaltamalla ja josta hän puristaa ilmaa '
-            + 'kainalollaan, jottei ääni katkea hengenvedon ajaksi.',
-          lahde: 'Martha Forsyth, Wikimedia Commons (CC BY 4.0)',
-          wiki: 'Säkkipilli',
-          aani: 'https://archive.org/download/aporee_34245_39372/streetmusicianssofia.mp3',
-          aaniLahde: '"Sofia Center — street musicians: voice, gaida and drum" — dohfoh, radio aporee (public domain)',
-          musiikki: 'https://music.apple.com/fi/search?term=bulgarian%20folk%20gaida',
-          musiikkiNimi: 'Bulgarialaista kansanmusiikkia Apple Musicissa',
         },
         /*
          * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
@@ -26514,21 +26425,6 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'Griegin Peer Gynt Apple Musicissa',
           musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Hall_of_the_Mountain_King_%28ISRC_USUAN1200072%29.mp3',
           musiikkiNayteNimi: 'Grieg: Vuorenkuninkaan luolassa — Kevin MacLeod, CC BY',
-        },
-        {
-          tyyppi: 'kuva',
-          otsikko: 'Ruskea juusto keitetään herasta',
-          tiedosto: 'Brunost - Brown cheese.jpg',
-          teksti: 'Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. '
-            + 'Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja '
-            + 'massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna '
-            + '1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin '
-            + 'juusto. Leivän päälle se leikataan juustohöylällä — myös se on '
-            + 'norjalainen keksintö, vuodelta 1925.',
-          selite: 'Brunostin väri ei tule väriaineesta vaan kuumennuksessa '
-            + 'karamellisoituneesta maitosokerista.',
-          lahde: 'color line, Wikimedia Commons (CC BY 2.0)',
-          wiki: 'Gudbrandsdalsost',
         },
         {
           tyyppi: 'kuva',

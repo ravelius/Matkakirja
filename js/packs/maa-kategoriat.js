@@ -3265,6 +3265,24 @@ export const MAA_KATEGORIAT = {
           lahde: '0x010C, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lontoon metro',
         },
+        {
+          otsikko: 'Haggis, lanttu ja peruna',
+          aika: '1786',
+          tiedosto: 'Haggis neeps tatties.JPG',
+          teksti: 'Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja '
+            + 'mausteista tehty makkara, joka keitetään perinteisesti lampaan '
+            + 'mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert '
+            + 'Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi '
+            + 'joka 25. tammikuuta istutaan Burns-illalliselle: makkara '
+            + 'kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja '
+            + 'puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.',
+          lyhyt: 'Haggis tehdään lampaan sisäelimistä, kaurasta, sipulista ja mausteista lantun ja perunan kera.',
+          selite: 'Haggis tehdään lampaan sisäelimistä, kaurasuurimoista, '
+            + 'sipulista ja mausteista, ja se syödään lantun ja perunan '
+            + 'kanssa.',
+          lahde: 'Metukkalihis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Haggis',
+        },
       ],
     },
     {
@@ -6681,6 +6699,29 @@ export const MAA_KATEGORIAT = {
             + 'pääsiäisen jälkeen ja kestää kuusi päivää.',
           lahde: 'Sandra Vallaure, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Feria de Abril',
+        },
+        {
+          otsikko: 'Sardanassa askeleet lasketaan',
+          aika: 'Sunnuntaisin',
+          tiedosto: 'Sardana Pla de la Seu.jpg',
+          teksti: 'Sardana tanssitaan piirissä käsi kädessä, ja askeleet '
+            + 'lasketaan tarkasti: jokaisessa sävelmässä on oma määrä lyhyitä '
+            + 'ja pitkiä askelia, eikä määrä ole aina sama. Siksi piirissä on '
+            + 'yleensä yksi, joka laskee ne muiden puolesta ja antaa merkin. '
+            + 'Säestäjänä on cobla, jossa on yksitoista soittajaa mutta '
+            + 'kaksitoista soitinta — flabiol-huilun soittaja lyö samalla '
+            + 'käsivarteensa sidottua pikkurumpua. Barcelonassa piiri syntyy '
+            + 'usein katedraalin edustalle.',
+          lyhyt: 'Sardanaa tanssittaessa laukut ja takit jätetään piirin keskelle, usein katedraalin aukiolla.',
+          selite: 'Sardanaa tanssittaessa laukut ja takit jätetään piirin '
+            + 'keskelle, ja Barcelonassa piiri syntyy usein katedraalin '
+            + 'aukiolle.',
+          lahde: 'Canaan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sardana',
+          musiikki: 'https://music.apple.com/fi/search?term=sardana%20cobla',
+          musiikkiNimi: 'Sardana-musiikkia Apple Musicissa',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/Emigrant.ogg/Emigrant.ogg.mp3',
+          musiikkiNayteNimi: 'Sardana "L\'Emigrant" — Mauné i els seus dinàmics, CC BY-SA (Wikimedia Commons)',
         },
       ],
       tehtava: {
@@ -12665,6 +12706,21 @@ export const MAA_KATEGORIAT = {
             + 'ulkomuseoita, ja siellä on lähes 200 rakennusta.',
           lahde: 'אמא של, Wikimedia Commons (CC0)',
         },
+        {
+          otsikko: 'Ruskea juusto keitetään herasta',
+          aika: '1863',
+          tiedosto: 'Brunost - Brown cheese.jpg',
+          teksti: 'Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. '
+            + 'Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja '
+            + 'massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna '
+            + '1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin '
+            + 'juusto. Leivän päälle se leikataan juustohöylällä — myös se on '
+            + 'norjalainen keksintö, vuodelta 1925.',
+          selite: 'Brunostin väri ei tule väriaineesta vaan kuumennuksessa '
+            + 'karamellisoituneesta maitosokerista.',
+          lahde: 'color line, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Gudbrandsdalsost',
+        },
       ],
       tehtava: {
         kysymys: 'Minä vuonna Holmenkollenissa hypättiin ensimmäisen kerran?',
@@ -17957,7 +18013,8 @@ export const MAA_KATEGORIAT = {
       johdanto: 'Turkin vanhimmat tarinat ovat kiven ja saven varassa: pystyyn '
         + 'nostettu pylväs, savitaulu, yhdeksän kaupunkia päällekkäin ja '
         + 'liitutaulu, jonka ääressä koko maa opetteli kirjoittamaan '
-        + 'uudestaan.',
+        + 'uudestaan — ja lähempänä nykypäivää valtio, joka ilmoitti '
+        + 'maksavansa velkansa vain puoliksi.',
       nostot: [
         {
           otsikko: 'Pylväät nostettiin ennen kyliä',
@@ -18039,6 +18096,28 @@ export const MAA_KATEGORIAT = {
             + 'maalliseksi kansallisvaltioksi, ja niihin kuului myös '
             + 'siirtyminen latinalaisiin kirjaimiin.',
           lahde: 'Turkin tasavallan presidentin kanslia, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Valtio ilmoitti maksavansa vain puolet',
+          aika: '1875',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-osmanien-vararikko-1875.jpg',
+          teksti: 'Osmanien valtakunta otti ensimmäisen ulkomaisen lainansa '
+            + 'Krimin sodan aikana 1854, ja parikymmentä vuotta myöhemmin '
+            + 'velanhoito söi valtaosan valtion tuloista. Lokakuun 6. '
+            + 'päivänä 1875 hallitus julkaisi ramazan-asetuksen: seuraavat '
+            + 'viisi vuotta velasta maksettaisiin vain puolet käteisenä ja '
+            + 'loput uusina viiden prosentin obligaatioina. Seuraavana '
+            + 'vuonna maksut loppuivat kokonaan. Sopu syntyi vasta 1881 '
+            + 'muharrem-asetuksella, joka perusti eurooppalaisten velkojien '
+            + 'johtaman velkahallinnon; se keräsi suoraan itselleen muun '
+            + 'muassa suola-, tupakka-, leimavero- ja alkoholitulot. '
+            + 'Virasto jäi Istanbuliin vuosikymmeniksi, ja sen talossa '
+            + 'toimii nykyään Istanbul Erkek Lisesi -lukio.',
+          lyhyt: 'Osmanihallinnon virkamiehet ja velkojat saman pöydän ääressä tyhjän kassalippaan edessä.',
+          selite: 'Osmanihallinnon virkamiehet ja velkojat saman pöydän '
+            + 'ääressä: kassalipas on tyhjä ja tarjottimella on kourallinen '
+            + 'kolikoita.',
+          lahde: 'Matkakirjan havainnekuva: velkaneuvottelu Konstantinopolissa',
         },
       ],
       tehtava: {
@@ -20551,6 +20630,26 @@ export const MAA_KATEGORIAT = {
             + 'piiritanssia horoa 1780-luvulla; kaiverrus julkaistiin '
             + 'kirjassa 1810.',
           lahde: 'Luigi Mayer, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Gaida — säkkipilli Balkanilla',
+          aika: 'Häissä ja tansseissa',
+          tiedosto: 'Kostadin Varimezov playing the gaida.jpg',
+          teksti: 'Gaida on vuohennahasta tehty säkkipilli, jota soitetaan '
+            + 'häissä ja tansseissa. Rodopeilta kotoisin oleva iso kaba '
+            + 'gaida soi matalasti ja käheästi. Soittaja täyttää säkin '
+            + 'puhaltamalla ja puristaa siitä ilmaa kainalollaan, jottei '
+            + 'ääni katkea hengenvedon ajaksi. Tahtilajit ovat '
+            + 'suomalaiseen korvaan outoja: yleisiä ovat 7/8 ja 11/16, '
+            + 'joten askel menee pitkä–lyhyt–lyhyt.',
+          lyhyt: 'Gaida on vuohennahasta tehty säkkipilli, jota soittaja puhaltaa ja puristaa kainalollaan.',
+          selite: 'Gaida on vuohennahasta tehty säkkipilli, jonka soittaja '
+            + 'täyttää puhaltamalla ja josta hän puristaa ilmaa '
+            + 'kainalollaan, jottei ääni katkea hengenvedon ajaksi.',
+          lahde: 'Martha Forsyth, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Säkkipilli',
+          musiikki: 'https://music.apple.com/fi/search?term=bulgarian%20folk%20gaida',
+          musiikkiNimi: 'Bulgarialaista kansanmusiikkia Apple Musicissa',
         },
       ],
       tehtava: {
