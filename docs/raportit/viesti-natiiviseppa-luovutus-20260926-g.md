@@ -180,3 +180,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   (Varmista ennen vientiä, KopioiBuildiin PostProcessBuild 185). Käännöspalvelussa 06.2x → tarkista Build/tilannekuva/ (5 tiedostoa)
   ja .app/Data/Raw/sisalto/tilannekuva/, vertaa node tools/vienti/tilannekuva.mjs --ulos <tmp> -tulokseen → junaan.
 - juna/b13 **0249a248**: + natiiviseppa/tilannekuva-build 03860cc4 (**KOHTA 1 OSA 3 VALMIS**: käännös d7927c6c tuotti v145-tilannekuvan 1,9 Mt, tavu tavulta sama kuin tilannekuva.mjs; .app/Data/Raw/sisalto/tilannekuva/). Kohta 1 kokonaan junassa.
+- Siirtoseppä 06.3x: skeema 1.46 tuotannossa (1.x v146, 2.0 v87), uusi kokoelma **reitit1873** (4 laivalinjaa + 1364 rataa, CC0) → elävän kartan kohta 5 (1873-laiva) voi lukea sen. 1.47 maakuntasalaisuudet Julkaisijalla seuraavana.
