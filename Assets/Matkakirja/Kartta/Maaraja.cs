@@ -85,7 +85,7 @@ namespace Matkakirja
         /// osuudet, joiden toisella puolella on toinen maa (myös pelin ulkopuoliset naapurit). Gzip, 307 kt. Myös
         /// offline-latauksen "maailma"-alueessa.
         /// </summary>
-        public const string MaamaaPolku = "julisteet/pallo/vektorit/maarajat-2026-09-25/maamaa.geojson";
+        public const string MaamaaPolku = "julisteet/pallo/vektorit/maarajat-2026-09-26/maamaa.geojson";
 
         /// <summary>Kehä sallittu (komento "maaraja pois" = false; oletus true).</summary>
         public static bool Sallittu = true;
