@@ -71,6 +71,18 @@ export const LAHTEET = [
         lisenssi: 'LGPL 3+',
       },
       {
+        nimi: 'GEOGLOWS v2 (TDX-Hydro) — jokiverkko natiivin elävään karttaan',
+        tekija: 'GEOGLOWS ECMWF Streamflow Service (BYU, ECMWF); jokiviivat NGA TDX-Hydro',
+        lisenssi: 'CC BY-SA 4.0',
+        huom: 'Contains information from the GEOGLOWS ECMWF Streamflow Service (CC BY 4.0), derived from NGA TDX-Hydro (CC BY-SA 4.0). Johdetut jokiviivat julkaistaan samalla lisenssillä. Tarkistettu 26.9.2026 s3://geoglows-v2/licenses.md.',
+      },
+      {
+        nimi: 'OpenHistoricalMap — vuoden 1873 rautatiet elävään karttaan',
+        tekija: 'OpenHistoricalMap-yhteisö, openhistoricalmap.org',
+        lisenssi: 'CC0 1.0',
+        huom: 'Radat, joiden start_date ≤ 1873 (tools/tee-reitit1873.mjs). Lisenssi tarkistettu 26.9.2026 wiki.openstreetmap.org/wiki/OpenHistoricalMap/License.',
+      },
+      {
         nimi: 'ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — '
           + 'pääkartan varjostus ja meren syvyys sekä maaston korkeustiedot',
         tekija: 'Amante & Eakins 2009, NOAA NGDC / NCEI '

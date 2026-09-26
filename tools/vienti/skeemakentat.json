@@ -26,10 +26,12 @@
   "1.45": "f2f2e3b5ee71c11f",
   "1.46": "e04def76b9069363",
   "1.47": "293c3b3783dd4ab6",
-  "1.48": "e46e9962636f79b9"
+  "1.48": "e46e9962636f79b9",
+  "1.49": "a157da8dd145220b",
+  "1.50": "aa44f1467fd52867"
  },
  "uusin": {
-  "skeemaversio": "1.48",
+  "skeemaversio": "1.50",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -45,6 +47,7 @@
     "laji",
     "laskuMs",
     "lisenssi",
+    "maanosa",
     "naytte",
     "nimi",
     "nousuMs",
@@ -450,6 +453,8 @@
     "nappi",
     "nimi",
     "nimio",
+    "pikkukuva",
+    "pikkukuvaLahde",
     "teksti",
     "tunnus",
     "viite"

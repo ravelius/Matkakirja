@@ -1345,7 +1345,7 @@ test('skeema 1.40: kartan nimiöt mahtuvat 18 merkkiin, monumentit.nimio (Sisäl
 test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympärillä (Natiiviseppä, build 13)', () => {
   const o = JSON.parse(tiedostot.get('offline.json'));
   const R = o.lahteet.rasteri;
-  assert.match(R.url, /\/2026-09-25-pohja-20260925\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
+  assert.match(R.url, /\/2026-09-26-pohja-20260926\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
   assert.equal(R.maxzoom, 9);
   assert.deepEqual(R.kaupunkitaso.tasot, [9]);
   const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((c) => c.tyyppi === 'kaupunki');
@@ -1485,3 +1485,38 @@ test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () =>
   }
 });
 
+
+test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luonnehdinnoissa', async () => {
+  const { pikkukuvaOsoite } = await import('../tools/vienti/elava-kartta.mjs');
+  const juuri = 'https://media.matkakirja.app/';
+  assert.equal(pikkukuvaOsoite('assets/kartat/maakunnat/grc-attiki.webp'), `${juuri}kohtaamiset/maakunnat/grc-attiki.webp`);
+  assert.equal(pikkukuvaOsoite('grc-attiki'), `${juuri}kohtaamiset/maakunnat/grc-attiki.png`);
+  assert.equal(pikkukuvaOsoite('Meteora, Greece (2016).jpg'), `${juuri}kuvat/meteora-greece-2016.jpg`);
+  assert.equal(pikkukuvaOsoite(`${juuri}x.jpg`), `${juuri}x.jpg`);
+  assert.equal(pikkukuvaOsoite(null), null);
+  assert.throws(() => pikkukuvaOsoite('ei kuva'), /https-osoitetta/);
+  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
+  for (const s of k) {
+    assert.ok('pikkukuva' in s && (s.pikkukuva === null || s.pikkukuva.startsWith('https://')), s.id);
+    assert.ok(s.pikkukuva === null || s.pikkukuvaLahde, `${s.id}: kuvalla pitää olla tekijä ja lisenssi (pikkukuvaLahde)`);
+  }
+  const m = JSON.parse(tiedostot.get('moduulit/js/packs/maakunnat-luonnehdinnat.json')).exportit;
+  const kuvat = JSON.stringify(m).match(/"pikkukuva":("[^"]*"|null)/g) ?? [];
+  for (const p of kuvat) assert.match(p, /^"pikkukuva":(null|"https:\/\/[^"]+")$/);
+});
+
+test('skeema 1.50: musiikkiaiheet ja kaupungin maanosa äänitauluissa', async () => {
+  const { MATKAN_AIHEET } = await import('../js/ui.js');
+  const { SAAPUMISTUNNUKSET, kaupunginMaanosa } = await import('../js/kaupunkimusiikki.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot;
+  const aiheet = k.filter((a) => a.laji === 'musiikkiaihe');
+  assert.equal(aiheet.length, Object.keys(MATKAN_AIHEET).length + Object.keys(SAAPUMISTUNNUKSET).length);
+  for (const a of aiheet) {
+    assert.ok(a.url.startsWith('https://') && a.url.endsWith('.mp3'), a.id);
+    assert.ok(a.tunnus.startsWith('musa-') && !a.tunnus.endsWith('-lyria'), a.id);
+  }
+  for (const m of Object.keys(SAAPUMISTUNNUKSET)) assert.ok(aiheet.some((a) => a.nimi === `saapuminen-${m}`), m);
+  const ateena = k.find((a) => a.id === 'musiikkiketju:ateena');
+  assert.equal(ateena.maanosa, kaupunginMaanosa('ateena', 'GRC'));
+  assert.ok(ateena.maanosa);
+});

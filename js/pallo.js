@@ -1771,7 +1771,16 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     const piiloon = eiPohjaa || (pohjanPiilotus && kerrosKaytossa && kerros.peittaaKokonaan());
     if (piiloon === moottori.pohjaPiilossa) return;
     moottori.pohjaPiilossa = piiloon;
-    moottori.visible = !piiloon;
+    /*
+     * KIRJASTON OMA SULKU VOITTAA (savuke-astro-pallo 43/47b, 26.9.2026).
+     * Astronautin kamera sulkee moottorin `globeTileEngineUrl(null)`:lla
+     * (js/linssit/satelliitti-avaruus.js) ja piilottaa kerroksen; silloin
+     * `peittaaKokonaan` kääntyy epätodeksi ja palautus kirjoitti
+     * `visible = true` suljetun moottorin päälle — pelin z2-laatat ja
+     * napakansi piirtyivät linssin reliefipallon päälle. Palautetaan vain,
+     * jos kirjastolla on laattaosoite.
+     */
+    moottori.visible = !piiloon && Boolean(pallo.globeTileEngineUrl?.());
   };
   const kehyspurku = kerros
     ? kytkePallonKehys(pallo, kotelo, (kehys) => {

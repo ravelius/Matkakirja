@@ -537,6 +537,7 @@ function aaniKokoelma(ns, hae) {
   const aani = hae('js/sound.js');
   const siirtyma = hae('js/siirtymamusiikki.js');
   const valitsin = hae('js/musiikkivalitsin.js');
+  const kaupunkimusa = hae('js/kaupunkimusiikki.js');
   const P = ns.MAAILMANKARTTA;
   // Radioerä (skeema 1.16): viritysäänet (radion haku), pelin osoitteella.
   const viritys = hae('js/packs/viritysaanet.js');
@@ -562,6 +563,8 @@ function aaniKokoelma(ns, hae) {
     ...P.cities.map((c) => ({
       id: `musiikkiketju:${c.id}`, laji: 'musiikkiketju', kaupunki: c.id,
       ketju: valitsin.musiikkiketju(c.id, P.map.cityCountry?.[c.id] ?? null),
+      // Skeema 1.50: kaupungin maanosa (saapumistunnus = musiikkiaihe saapuminen-<maanosa>).
+      maanosa: kaupunkimusa.kaupunginMaanosa(c.id, P.map.cityCountry?.[c.id] ?? null) ?? null,
     })),
     // B7 (Pelikoodari 23.9.2026): äänimaiseman korit pelin omilla funktioilla
     // (js/ambience-stream.js arvoAani: kaupunkiKori → maaKori → tyyppiKori).
@@ -569,6 +572,18 @@ function aaniKokoelma(ns, hae) {
     // Tilaraidat ja aarreaiheet täysin poluin (musaPolku + aaniUrl).
     ...Object.entries(valitsin.TILARAIDAT).map(([nimi, v]) => ({
       id: `tilaraitaUrl:${nimi}`, laji: 'tilaraitaUrl', nimi, url: aaniUrl(musaPolku(v.tunnus)),
+    })),
+    /*
+     * Skeema 1.50 (Pelikoodari 26.9.2026, musiikkisuunnitelman vaihe 2): matkan aiheet (js/ui.js MATKAN_AIHEET:
+     * aloituslento, loppu, ratkaisu, epaonnistuminen) ja saapumistunnukset maanosittain (js/kaupunkimusiikki.js
+     * SAAPUMISTUNNUKSET: nimi saapuminen-<maanosa>). tunnus ilman -lyria-päätettä kuten aarreaiheissa.
+     */
+    ...[
+      ...Object.entries(hae('js/ui.js').MATKAN_AIHEET),
+      ...Object.entries(kaupunkimusa.SAAPUMISTUNNUKSET).map(([maanosa, t]) => [`saapuminen-${maanosa}`, musaPolku(t)]),
+    ].map(([nimi, polku]) => ({
+      id: `musiikkiaihe:${nimi}`, laji: 'musiikkiaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
+      url: aaniUrl(polku),
     })),
     ...Object.entries(hae('js/ui.js').AARRE_MUSIIKKI).map(([nimi, polku]) => ({
       id: `aarreaihe:${nimi}`, laji: 'aarreaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
@@ -584,7 +599,8 @@ function aaniKokoelma(ns, hae) {
       + '(B7): kaupungin tai virtuaalipaikan (etusivu, lentomatka, jalkamatka, merimatka) äänimaisema = kori (url-lista '
       + '#alku/#voima-fragmentein, js/aani-ehdokkaat.js jaaAlku), porras (kaupunki | maa | tyyppi), tyyppi; vakio = true → '
       + 'soita kori[0], muuten arvo satunnaisesti. tilaraitaUrl ja aarreaihe (tavallinen = musa-aarre, paa = musa-paaaarre '
-      + 'tähtilaatalle): valmiit osoitteet.',
+      + 'tähtilaatalle): valmiit osoitteet. Skeema 1.50: musiikkiaihe (nimi aloituslento | loppu | ratkaisu | epaonnistuminen | '
+      + 'saapuminen-<maanosa>; tunnus, url) ja musiikkiketju.maanosa (kaupungin maanosa, js/kaupunkimusiikki.js kaupunginMaanosa).',
     { kaupunki: 'kaupungit' }, rivit);
 }
 

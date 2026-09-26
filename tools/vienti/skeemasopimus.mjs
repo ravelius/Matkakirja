@@ -64,6 +64,8 @@ export const VAATIMUKSET = {
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
+  '1.50': ['aanitaulut.maanosa'],
+  '1.49': ['maakuntasalaisuudet.pikkukuva', 'maakuntasalaisuudet.pikkukuvaLahde'],
   '1.48': ['manifest.kaupunkilehdetKaupungeittain'],
   '1.47': ['kokoelma:maakuntasalaisuudet'],
   '1.46': ['kokoelma:reitit1873', 'reitit1873/lahteet'],
