@@ -91,6 +91,13 @@ namespace Matkakirja.Natiivi
 
             kortti = new Kortti("mk-kysymys");
             himmennys.Add(kortti);
+            // UI-pariteetti iPad (b21-ui-ipad rivi 16): webin puhelinsäännöt (@media max-width: 560px) vain kapealla;
+            // leveämmällä dialogi enintään 620 px ja vaihtoehdot 2 × 2 (.dialog, .quiz-options).
+            himmennys.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                bool levea = e.newRect.width > 560f;
+                if (kortti.ClassListContains("mk-kysymys--levea") != levea) kortti.EnableInClassList("mk-kysymys--levea", levea);
+            });
             var sisus = kortti.Sisus;
 
             // --- otsikkorivi: leima, kaupunki ja tiimalasi ---

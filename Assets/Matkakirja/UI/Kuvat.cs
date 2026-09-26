@@ -506,7 +506,7 @@ namespace Matkakirja.Natiivi
             while (MuistissaTavuja > MuistiRaja && jarjestys.Count > AinaMuistissa)
             {
                 string vanha = jarjestys.Last.Value;
-                if (muisti.TryGetValue(vanha, out var vt) && vt != null) UnityEngine.Object.Destroy(vt);
+                if (muisti.TryGetValue(vanha, out var vt) && vt != null && !kiinnitetyt.Contains(vt)) UnityEngine.Object.Destroy(vt);
                 Unohda(vanha);
             }
         }
@@ -538,6 +538,21 @@ namespace Matkakirja.Natiivi
         /// yhä näytti, kun lehtien isot kuvat täyttivät rajan (tuhottu tekstuuri piirtyy valkoisena). Buildin mukana
         /// tulevat pienet kuvakkeet (nostotyyppien merkit, pulu) ovat kiinteitä: muistissa koko istunnon, ei LRU:ssa.
         /// </summary>
+        static readonly HashSet<Texture2D> kiinnitetyt = new HashSet<Texture2D>();
+
+        /// <summary>
+        /// Pitää tekstuurin hengissä LRU:n karsinnassa, kunnes <see cref="Vapauta"/> (löydös 161: kohdemaan lippu, jota
+        /// Liput.Aaltoile lukee jokaisessa aaltopiirrossa kartussissa ja lipputangossa). Karsittu kiinnitetty tekstuuri
+        /// poistuu välimuistista mutta tuhotaan vasta vapautettaessa.
+        /// </summary>
+        public static void Kiinnita(Texture t) { if (t is Texture2D t2) kiinnitetyt.Add(t2); }
+
+        public static void Vapauta(Texture t)
+        {
+            if (!(t is Texture2D t2) || !kiinnitetyt.Remove(t2) || t2 == null) return;
+            if (!muisti.ContainsValue(t2)) UnityEngine.Object.Destroy(t2);
+        }
+
         static void Muista(string avain, Texture2D t, bool kiintea = false)
         {
             if (muisti.ContainsKey(avain)) Unohda(avain);
@@ -550,7 +565,7 @@ namespace Matkakirja.Natiivi
             while (MuistissaTavuja > MuistiRaja && jarjestys.Count > AinaMuistissa)
             {
                 string vanha = jarjestys.Last.Value;
-                if (muisti.TryGetValue(vanha, out var vt) && vt != null) UnityEngine.Object.Destroy(vt);
+                if (muisti.TryGetValue(vanha, out var vt) && vt != null && !kiinnitetyt.Contains(vt)) UnityEngine.Object.Destroy(vt);
                 Unohda(vanha);
             }
         }

@@ -1072,9 +1072,24 @@ namespace Matkakirja.Natiivi
         {
             // Web avaaMaalehti: suoraan kartta otsikkorivin "KREIKKA 🇬🇷" alla, ei nimiösivua.
             var m = UiSisalto.Maa(lehti.Maa);
+            // UI-pariteetti iPad (rivit 9/36): web .maakartta-kehys kelluu oikealla (leveys min(58 %, 340 px), yli 900 px
+            // min(58 %, 660 × suhde)), perustiedot ja tervehdykset vasemmalla; alle 560 px kartta täysleveänä ylimpänä.
+            // UITK ei kelluta: rivi (kartta oikealla) leveällä, sarake (kartta ensin) kapealla.
+            var yla = Rakenne.El("mk-lehti__maayla", s, PickingMode.Ignore);
+            var karttaPalsta = Rakenne.El("mk-lehti__maayla-kartta", yla, PickingMode.Ignore);
+            var tiedot = Rakenne.El("mk-lehti__maayla-tiedot", yla, PickingMode.Ignore);
+            yla.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                float w = e.newRect.width;
+                if (float.IsNaN(w) || w <= 0) return;
+                bool levea = w > 560f;
+                if (yla.ClassListContains("mk-lehti__maayla--levea") != levea) yla.EnableInClassList("mk-lehti__maayla--levea", levea);
+                float kl = levea ? Mathf.Round(Mathf.Min(0.58f * w, 340f)) : w;
+                if (!Mathf.Approximately(karttaPalsta.resolvedStyle.width, kl)) karttaPalsta.style.width = levea ? kl : StyleKeyword.Null;
+            });
             if (m?.KarttaUrl != null)
             {
-                var kehys = Rakenne.El("mk-lehti__maakartta", s);
+                var kehys = Rakenne.El("mk-lehti__maakartta", karttaPalsta);
                 var kuva = Rakenne.El("mk-lehti__maakarttakuva", kehys, PickingMode.Ignore);
                 float suhde = 1f;
                 void Mitoita() { float w = kehys.resolvedStyle.width; if (w > 0 && !float.IsNaN(w)) kehys.style.height = Mathf.Round(w * suhde); }
@@ -1104,9 +1119,9 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(vihjeTeksti, Kirjasin.Kone);
                 string url = m.KarttaUrl, lahde = m.KarttaLahde, nimiKartta = lehti.Nimi + " — korkokartta";
                 kehys.RegisterCallback<ClickEvent>(_ => suurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = url, Selite = nimiKartta, LahdeRivi = lahde } }));
-                if (!string.IsNullOrEmpty(lahde)) Kirjasimet.Aseta(Rakenne.Teksti(lahde, "mk-lehti__lahde", s), Kirjasin.Kone);
+                if (!string.IsNullOrEmpty(lahde)) Kirjasimet.Aseta(Rakenne.Teksti(lahde, "mk-lehti__lahde", karttaPalsta), Kirjasin.Kone);
             }
-            Maaosasto(s, m, LehtiSisalto.Nosto(m?.KarttaNosto), true);
+            Maaosasto(s, m, LehtiSisalto.Nosto(m?.KarttaNosto), true, tiedot);
         }
 
         /// <summary>
@@ -1114,12 +1129,13 @@ namespace Matkakirja.Natiivi
         /// keskitulolle mittaripalkki), HYVÄÄ PÄIVÄÄ -rivi lippuineen, maan esittely (ARTIKKELIT intro), kartan
         /// nosto ja lopuksi uutiset ja mediarivi (maa-oikea). Kapealla luvut allekkain, leveällä kahteen palstaan.
         /// </summary>
-        void Maaosasto(VisualElement s, MaaTiedot m, LehtiNosto nosto = null, bool esittely = false)
+        void Maaosasto(VisualElement s, MaaTiedot m, LehtiNosto nosto = null, bool esittely = false, VisualElement tiedot = null)
         {
             if (m == null) { if (nosto != null) Nosto(s, nosto); return; }
+            tiedot ??= s; // etusivulla perustiedot ja tervehdykset kartan viereen (MaaEtusivu)
             if (m.Vakiluku != null || m.PintaAla != null || m.Demokratia != null || m.Keskitulo != null)
             {
-                var luvut = Rakenne.El("mk-maa__luvut", s, PickingMode.Ignore);
+                var luvut = Rakenne.El("mk-maa__luvut", tiedot, PickingMode.Ignore);
                 Rakenne.El("mk-maa__tuplaviiva", luvut, PickingMode.Ignore);
                 Kirjasimet.Aseta(Rakenne.Teksti("PERUSTIEDOT", "mk-maa__otsake", luvut), Kirjasin.Kone);
                 var ruudukko = Rakenne.El("mk-maa__ruudukko", luvut, PickingMode.Ignore);
@@ -1159,7 +1175,7 @@ namespace Matkakirja.Natiivi
             }
             if (m.Tervehdykset.Count > 0)
             {
-                var laatikko = Rakenne.El("mk-maa__tervehdykset", s, PickingMode.Ignore);
+                var laatikko = Rakenne.El("mk-maa__tervehdykset", tiedot, PickingMode.Ignore);
                 Kirjasimet.Aseta(Rakenne.Teksti("HYVÄÄ PÄIVÄÄ", "mk-maa__otsake", laatikko), Kirjasin.Kone);
                 var terv = Rakenne.El("mk-maa__tervehdysrivi", laatikko, PickingMode.Ignore);
                 foreach (var t in m.Tervehdykset)

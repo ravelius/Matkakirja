@@ -131,6 +131,7 @@ namespace Matkakirja
         /// <summary>Verho alkaa: seuranta käyntiin, jos kehittäjälippu on päällä.</summary>
         public static void VerhoAlku(string nimi)
         {
+            PyyntoLoki.Merkki("verho " + nimi + " alkaa");
             float s = AutoS;
             if (s > 0f) Seuraa(nimi, s);
         }
@@ -144,6 +145,7 @@ namespace Matkakirja
         {
             Debug.Log($"MATKAKIRJA valmius: verho {nimi} lähti {syy} {ms:0} ms aste {(aste < 0 ? "-" : aste.ToString("0.0"))} % " +
                       $"kevennys {KevennysTila()}" + (string.IsNullOrEmpty(lisa) ? "" : " | " + lisa));
+            PyyntoLoki.Merkki($"verho {nimi} lähti {syy} {ms:0} ms aste {aste:0.0}");
             if (instanssi == null) return;
             foreach (var x in instanssi.seurannat)
                 if (x.Nimi == nimi) x.VerhoLahti = Time.realtimeSinceStartup - x.Alku;
@@ -215,6 +217,12 @@ namespace Matkakirja
             if (instanssi == null || !instanssi.kevennykset.Remove(nimi)) return;
             Laattapalvelin.VerhoKevennys(false);
         }
+
+        /// <summary>
+        /// Jokin verho odottaa pallon laattoja (kevennys päällä): Ruudunpaivitys pitää täyden taajuuden (build 22, Natiiviseppä
+        /// 26.9.: lepotilan 30 fps puolitti Cesiumin pääsäikeen latauskierrokset verhon aikana, kun kamera on paikallaan).
+        /// </summary>
+        public static bool Verhossa => instanssi != null && instanssi.kevennykset.Count > 0;
 
         /// <summary>Kevennyksen tila lokiriveille: "paalle (aloitusverho, musta)", "pois" tai "pois (lippu)".</summary>
         public static string KevennysTila()

@@ -2835,6 +2835,28 @@
 
 /* --- maalehden etusivu: korkokartta kaupunkipisteineen (web .maakartta-*) -------------- */
 
+/* Maan etusivun ylälohko (UI-pariteetti iPad): kapealla kartta ylimpänä, leveällä kartta oikealla (web float: right,
+   margin 0.15rem 0 0.6rem 1rem) ja perustiedot vasemmalla. */
+.mk-lehti__maayla {
+    flex-direction: column;
+}
+
+.mk-lehti__maayla--levea {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.mk-lehti__maayla--levea > .mk-lehti__maayla-kartta {
+    flex-shrink: 0;
+    margin: 2.4px 0 9.6px 16px;
+}
+
+.mk-lehti__maayla-tiedot {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
 .mk-lehti__maakartta {
     margin: 4px 0 4px 0;
     border-width: 1px;

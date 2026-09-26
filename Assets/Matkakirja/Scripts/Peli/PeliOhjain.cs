@@ -172,7 +172,7 @@ namespace Matkakirja.Natiivi
         /// Kortin Ohita-nappi (web ohitaSaapumisluenta): ohituslippu ensin, sitten kertoja ja pulu vaikenevat ja kuplat
         /// lähtevät (VaiennaPaikanPuhe). LuentoLoppui herää, mutta LuentoOhitettu estää pulun kommentin.
         /// </summary>
-        public void OhitaLuento() => VaiennaPaikanPuhe();
+        public void OhitaLuento() => VaiennaPaikanPuhe("ohita");
 
         /// <summary>Soiva luento, tai null.</summary>
         public Luento SoivaLuento => soivaLuento;
@@ -733,11 +733,13 @@ namespace Matkakirja.Natiivi
             }
             else if (soivaLuento != null)
             {
-                var kaupunki = soivaLuento.Kaupunki;
+                var loppunut = soivaLuento;
+                var kaupunki = loppunut.Kaupunki;
                 soivaLuento = null;
                 reaktioJono = null;
                 Livia("narrationEnd");
                 try { LuentoLoppui?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
+                SaapumisluentoLoppui(loppunut); // löydös 162: vain saapumisen oma luento päättää
             }
         }
 
@@ -1422,6 +1424,8 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = null;
             // Uusi paikka: edellisen kaupungin ohitus ei koske tämän kerrontaa (web luennanOhitus per saapuminen).
             if (kaupunki != null) LuentoOhitettu = false;
+            // Löydös 162: saapumisluenta kesken heti, ENNEN MatkaPerilla-tapahtumaa (kartan saapumisanimaatio odottaa sitä).
+            SaapumisluentaAlkaa(kaupunki);
             // C16: aloituslennon kohteen luenta voi odottaa pulun paljastusta (PeliOhjain.Lykkays.cs).
             AsetaLykkays(kaupunki, aloituslento);
             // Nappula laskeutui: reitit lähtöpaikasta pois; toisessa kaupungissa sessio päättyy (B9, löydös 60).
@@ -1498,11 +1502,12 @@ namespace Matkakirja.Natiivi
             Kartalle(false);
             if (kaupunki == null) return;
             var l = luennat.OtaLuento(kaupunki);
-            if (l != null && LykkaaLuento(kaupunki, l)) return;
+            if (l != null && LykkaaLuento(kaupunki, l)) return; // saapumisluenta pysyy kesken lykkäyksen ajan (löydös 162)
             // Löydökset 86/89 (omistaja, build 13): ei paikkarivin ilmoitusta luennan alkaessa (web aloitaMerkinta ei näytä
             // ilmoitusta; tumma laatikko "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta." näytti väärän väriseltä
             // matkakirjalta). Paikkarivi on matkakirjan merkinnässä.
-            if (l != null) SoitaLuento(l, 0.6f);
+            // Löydös 162: luento jonoon saapumisluennaksi; ei luentoa tai kertoja pois → saapumisluenta päättyy heti.
+            SoitaSaapumisluento(kaupunki, l, 0.6f);
         }
 
         /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>
@@ -2014,6 +2019,7 @@ namespace Matkakirja.Natiivi
             if (noppaLiike != null && Time.unscaledTime > noppaLoppuu) NoppaValmis();
             KytkeRekisteri();
             PaivitaReaktiot();
+            VahdiSaapumisluentaa();
             PaivitaKysymysAika();
             PaivitaSahke();
             PaivitaLento();

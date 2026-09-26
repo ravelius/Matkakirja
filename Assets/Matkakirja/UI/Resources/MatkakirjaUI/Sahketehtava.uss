@@ -21,6 +21,11 @@
     max-height: 100%;
 }
 
+/* UI-pariteetti iPad rivi 21c: web .fokusvirta-kortti.keskella width min(37rem, 100% - 1.2rem), ei korttikehyksen 420 px. */
+.mk-kortti-kehys.mk-st {
+    max-width: 592px;
+}
+
 .mk-st > .mk-kortti {
     flex-shrink: 1;
     padding: 13px 14px 12px 14px;

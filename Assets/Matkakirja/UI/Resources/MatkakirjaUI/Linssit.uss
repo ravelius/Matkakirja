@@ -2878,7 +2878,9 @@
 }
 
 /* ☰-valikon yläosa (omistaja 24.9.2026 klo 13.3x): kaksi tiivistä nappiriviä — äänikytkimet ja
- * Uusi peli · Muut · Kehittäjä. Napit jakavat rivin tasan; kytkin päällä = kultareuna ja -täyttö. */
+ * Uusi peli · Muut · Kehittäjä. Kytkin päällä = kultareuna ja -täyttö. Fablen erä 26.9. klo 14.4x: tasan jaettuna
+ * "Äänimaisema" ja "Kehittäjä" katkesivat iPhonella (300 pt paneeli, ~55 pt tekstille) → napit nimensä levyisiksi
+ * (flex-basis auto) ja ylijäävä tila tasan; kapeampi sisäreunus, ikoni 15 px ja nimi 12 px (12,5 px:llä rivi 1 ylitti ~10 pt). */
 .mk-valikkorivi {
     flex-direction: row;
     margin: 2px 0;
@@ -2886,13 +2888,13 @@
 
 .mk-valikkonappi {
     flex-grow: 1;
-    flex-basis: 0;
+    flex-basis: auto;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 34px;
-    margin: 0 2px;
-    padding: 3px 6px;
+    margin: 0 1.5px;
+    padding: 3px 3px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.3);
     border-radius: 8px;
@@ -2905,15 +2907,15 @@
 }
 
 .mk-valikkonappi__ikoni {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
     flex-shrink: 0;
     --mk-ikoni-viiva: 1.6;
 }
 
 .mk-valikkonappi__nimi {
-    font-size: 12.5px;
+    font-size: 12px;
     color: #3a2812;
     white-space: nowrap;
     overflow: hidden;

@@ -154,6 +154,9 @@ namespace Matkakirja.Natiivi
             // (web aloituslentoKesken = false ja paataAloituslennonSignaali('loppu') kortin jälkeen).
             Lentoaani(false);
             PaataLento();
+            // Löydös 162: saapuminen alkaa jo välikortista — kamera asettuu kortin alla saapumisnäkymään (Saavu), joten
+            // kartan saapumisanimaatio näkee Kesken-tilan jo nyt. Perilla jatkaa samaa saapumista.
+            SaapumisluentaAlkaa(kohde);
             int oma = ++saapumiskorttiTunnus;
             bool Voimassa() => oma == saapumiskorttiTunnus && AloituslentoKaynnissa && Tila == SilmukanTila.Matkalla;
             bool kameraPerilla = false;
