@@ -96,6 +96,9 @@ namespace Matkakirja
         /// <summary>Käynnistää palvelun (joutilas-tarkkailu) ennen ensimmäistä hakua.</summary>
         public static void Kaynnista() => Varmista();
 
+        /// <summary>Korutiini palvelun omalla isännällä (staattisille lukijoille, esim. Sisalto.PaivitaOsoitinTaustalla).</summary>
+        public static void AjaTaustalla(IEnumerator ajo) { Varmista(); instanssi.StartCoroutine(ajo); }
+
         static void Varmista()
         {
             if (instanssi != null) return;
