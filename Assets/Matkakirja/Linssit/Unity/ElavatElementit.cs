@@ -193,6 +193,8 @@ namespace Matkakirja.Natiivi
         static ElavatElementit instanssi;
         public static bool Paalla = true;
         static double AikaSiirto;
+        /// <summary>Arviointikuvien koko (komento "elava elementit koko <kerroin>", oletus 1): mallit isommiksi lähikuviin.</summary>
+        static float KokoKerroin = 1f;
 
         LinssiOhjain ohjain;
         CesiumGeoreference georeferenssi;
@@ -214,13 +216,15 @@ namespace Matkakirja.Natiivi
             instanssi.kamera = kierto.GetComponent<Camera>();
         }
 
-        /// <summary>Testikomento "elava elementit tila|0|1".</summary>
+        /// <summary>Testikomento "elava elementit tila|0|1|siirra s|koko k|nayta aihe [harvinainen]".</summary>
         public static void Testi(string arvo, LinssiOhjain o)
         {
             // "elava elementit siirra <s>": aikataulun kello siirtyy (todennus: hidastus ja tauko videolle).
             if (arvo != null && arvo.StartsWith("siirra ") && double.TryParse(arvo.Substring(7), System.Globalization.NumberStyles.Float,
                 System.Globalization.CultureInfo.InvariantCulture, out var siirto)) AikaSiirto += siirto;
             if (arvo == "0" || arvo == "1") { Paalla = arvo == "1"; PallonLepo.Muuttui("elävät elementit"); }
+            if (arvo != null && arvo.StartsWith("koko ") && float.TryParse(arvo.Substring(5), System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out var koko)) { KokoKerroin = Mathf.Clamp(koko, 0.2f, 6f); PallonLepo.Muuttui("elävät elementit"); }
             // "elava elementit nayta <aihe> [harvinainen]": näytöksellisen aiheen (meren koristeet) aika siirtyy seuraavan näytöksen
             // alkuun (todennus videolle); harvinainen pakottaa sen näytöksen harvinaiseksi muunnelmaksi.
             if (arvo != null && arvo.StartsWith("nayta ") && instanssi != null)
@@ -407,7 +411,7 @@ namespace Matkakirja.Natiivi
                 Vector3 ruutuYlos = gt.InverseTransformDirection(kamera.transform.up);
                 ruutuYlos = (ruutuYlos - ylos * Vector3.Dot(ruutuYlos, ylos)).normalized;
                 float kameranKallistus = Vector3.Angle(gt.InverseTransformDirection(kamera.transform.forward), -ylos);
-                float kerroin = a.KokoPt * pt;
+                float kerroin = a.KokoPt * pt * KokoKerroin;
                 for (int i = 0; i < a.Oliot.Count; i++)
                 {
                     var yk = a.Oliot[i];
