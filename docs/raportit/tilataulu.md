@@ -2,22 +2,22 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 14:18 EEST
+**Päivitetty:** 2026-09-26 14:30 EEST
 
 ## 1) Sessiot
 
-Uusi tili klo 14:18: viikko (all models) **16 %**, viikko (Fable) 10 %, 5 h **1 %** (nollautui 14:00). Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Ei ylityksiä (Natiivi-UI 68 %, lähestyy 70 % — seurataan).
+Uusi tili klo 14:30: viikko (all models) **17 %**, viikko (Fable) 11 %, 5 h **4 %**. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Ei ylityksiä (Natiivi-UI nollautui itse 68→9 %).
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 60% | running | PR #3308 |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 60% | running | tämä taulu |
+| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 62% | running | PR #3308 |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 62% | running | tämä taulu |
 | Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 25% | idle | PR #3306 mergetty |
-| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 36% | running | — |
-| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | **68%** | idle | PR #3324 mergetty — lähestyy 70 % |
-| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 43% | running | — |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 38% | running | — |
+| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 9% | running | nollattu (68→9), PR #3324 mergetty |
+| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 45% | idle | — |
 | Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 24% | idle | — |
-| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 37% | idle | — |
+| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 39% | idle | — |
 | Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 35% | idle | PR #3307 mergetty |
 | Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 66% | idle | vakaa |
 | Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 59% | idle | PR #3305 mergetty |
@@ -70,11 +70,11 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 1 % (nollautui 14:00, seur. nollaus 18:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 16 %.** **Viikko (Fable):** 10 %.
-- **Levy:** 85 Gt vapaana (raja 85 Gt, rajalla — ei purge-toistoa Fablen ohjeen mukaan). **Swap: 12,2 Gt / 13 Gt (raja 24 Gt, vakaa). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 50 kpl.
-- **Simulaattorit boottina:** 0 (max 4 päivällä). coreaudiod 0 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
-- **Konteksti:** Natiivi-UI 68 % (lähestyy 70 %), Pelikoodari 66 %, Fable 60 %, Postivahti 60 %, Karttaseppä 59 %, Linssiseppä 43 %, Laitetestaaja 37 %, Natiiviseppä 36 %, Siirtoseppä 35 %, Julkaisija 25 %, Sisältökirjuri 24 %.
-- **Juna:** juna/b13+natiivi-ui/jalki-mallin-alta käynnissä, viimeisin KÄÄNNETTY 837ba1c4 14:02 — ei hälytystä.
+- **5 h -kiintiö:** 4 % (nollautui 14:00, seur. nollaus 18:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 17 %.** **Viikko (Fable):** 11 %.
+- **Levy:** 83 Gt vapaana (raja 85 Gt, hieman alle — ei purge-toistoa Fablen ohjeen mukaan). **Swap: 12,2 Gt / 13 Gt (raja 24 Gt, vakaa). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 51 kpl.
+- **Simulaattorit boottina:** 0 (max 4 päivällä). coreaudiod 7 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
+- **Konteksti:** Pelikoodari 66 %, Karttaseppä 59 %, Fable 62 %, Postivahti 62 %, Linssiseppä 45 %, Laitetestaaja 39 %, Natiiviseppä 38 %, Siirtoseppä 35 %, Julkaisija 25 %, Sisältökirjuri 24 %, Natiivi-UI 9 % (nollattu).
+- **Juna:** proto-kaanna.sh käynnissä (juna/b13), viimeisin KÄÄNNETTY 837ba1c4 14:02 — ei hälytystä.
 - **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
 
 ## 6) proto-3d/lokit — 10 suurinta alikansiota yli 24 h vanhoja (Fablen pyyntö 11:3x, ei poistoja)
