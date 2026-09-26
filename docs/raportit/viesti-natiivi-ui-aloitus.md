@@ -9,6 +9,9 @@ Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 (JUMI → FABLE) ja docs/raportit/vi
 SITOVA: WEB ON MALLI, MITATTUNA (omistajan löydökset voittavat webin). Omistajalle PNG-kuvat laitteen ruudun kokoisina,
 video vain liikkeelle. Levossa ei piirtoa (ui rauha -mittaus). Käännä proto-kaanna.sh:lla. Erät pieninä.
 
-Ensimmäisenä: Fablen seuraava erä linjaustarkistuksesta (☰-valikon katkeavat napit, yläpalkin vieritys-piilotus);
+Ensimmäisenä (Fable 26.9. klo 14.4x): 1) ☰-valikon (LinssiValikko) pikanapit "Äänim…" ja "Kehitt…" katkeavat iPhonella:
+lyhennä tekstit tai pienennä fontti/leveys niin, että kaikki mahtuvat, kuvapari; 2) kirjaa Laitetestaajan TF-kierroksen
+reseptiin rivi: yläpalkin piiloutuminen karttaa vieritettäessä (vaaka ja pysty) laitteella. Sitten luovutus ja odota
+(mahdollisesti omistajan 1.0.21-löydöksiä). Myös:
 tarkista merge-pyyntö jalki-mallin-alta 46d394f2 ja lipputangon näkyvyys paketin ankkureilla.
 Viestit Fablelle vain valmiista erästä, jumista tai kysymyksestä, enintään 8 riviä.
