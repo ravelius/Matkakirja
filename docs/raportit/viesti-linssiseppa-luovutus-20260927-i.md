@@ -4,6 +4,15 @@
 Fable local_5df52e10-10e4-4b72-9554-0049db300dfe, Natiiviseppä local_674b9ec4-e2f3-48e9-a810-a129f20a4f03,
 Natiivi-UI local_44392b3c-86ee-4873-9d76-82f9aaa6b832, Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab.*
 
+## PÄIVITYS 01.4x: TOIMITETTU FABLELLE — odottaa omistajan kommentteja
+
+- Kansio /Users/Shared/Claude/proto-3d/lokit/mallinseppa-toimitus-20260927/: mont-saint-michel-, stonehenge- ja colosseum-v2.png
+  (+ -v2-video.mp4), kategoriat-kaari-vuori-esikatselu-v2.png, kategoriat-laite-kaari-*.png, meri-v2.png, meri-*-rajattu.mp4,
+  colosseum-esikatselu-v1.png. Käännös 91a4b727 (juna/b13 + mallinseppa/kategoriat3d + linssiseppa/merikoristeet).
+- Natiivisepälle: vuorisymboli ei näy Olympoksella (jalka maaston sisällä?), kuvat mallinseppa-laite-20260927-b/lahi-*.
+- Kuvien kokoaminen: tyokalut/linssiseppa-ajot/koosta.py <kansio> <ulos> <versio>; kategoriaesikatselu
+  tyokalut/kategoria-esikatselu/ (kaanna.sh kategoriat → python3 kat2.py <ulos.png> "<versio> · ").
+
 ## PÄIVITYS 00.45: Fablen uusi järjestys (00.3x)
 
 - Omistaja hylkäsi Natiivisepän reliefit → MALLINSEPPÄ tekee kategoriasymbolit OIKEINA 3D-ESINEINÄ (kaari + vuori ensin,
