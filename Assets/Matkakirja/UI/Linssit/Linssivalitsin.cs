@@ -167,6 +167,9 @@ namespace Matkakirja.Natiivi
 
         public void Avaa()
         {
+            // Linssisepän lykätty aineisto (linssiseppa/lykatty-data): valitsimen avaus lataa linssit heti, jos joutilas hetki
+            // ei ole vielä tullut (noin 15–20 s käynnistyksestä); idempotentti.
+            LinssiOhjain.LataaAineistoHeti();
             if (Auki) return;
             Auki = true;
             bool v = Valikkona;
