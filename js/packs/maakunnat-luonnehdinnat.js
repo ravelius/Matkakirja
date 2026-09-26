@@ -3557,27 +3557,92 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *     Mikhail Eisenstein
    *   Vidzeme — Gaiziņkalns (312 m); Suur Munamägi; Vidzeme Region
    *   Zemgale — Rundāle Palace (Rastrelli); Jelgava
+   *
+   * LVA KUVA + PIKKUKUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko):
+   * sama kaava — Commons-kuva lisenssi tarkistettu API:sta, ämpäri
+   * karttanostot/20260926/, pikkukuva kierrättää saman osoitteen.
+   * Lähteet:
+   *   Kurzeme — File:Kuldiga_Ventas_rumba_22.JPG (Zairon, CC BY-SA 4.0)
+   *   Latgale — File:Aglona_Basilica.jpg (Dainis Matisons, CC BY 2.0)
+   *   Riga — File:Riga_Alberta_iela_8.jpg (Pierre André Leclercq, CC BY-SA 4.0)
+   *   Vidzeme — File:Gauja near Cīrulīši Nature Trails (2).jpg (AgrisR, CC BY-SA 4.0)
+   *   Zemgale — File:Rundāle Palace.JPG (DavidConFran, CC BY-SA 3.0)
    */
   LVA: {
     Kurzeme: {
       lyhyt: 'Kuldīgan Ventas rumba on Euroopan levein vesiputous: vain parin metrin korkuinen mutta 249 metriä leveä, keväällä vielä leveämpi.',
       pitka: `Kurzemen maisemaa hallitsevat honka- ja kuusimetsät sekä tasainen viljelysseutu, jossa peltoja mittaa nykyäänkin ruis, peruna ja pellava aivan kuin isoisän matka-aikaan. Kuldīgan kohdalla Venta-joki levittäytyy koko uomansa leveydeltä matalaksi koskeksi – putous on tuskin ihmisen mittainen mutta ulottuu lähes kolmensadan metrin levyydeltä rannasta rantaan, ja tulva-aikaan reunat katoavat veden alle kokonaan. Jo 1600-luvulla Kuurinmaan herttua Jaakob keksi pyydystää koskessa ylävirtaan hyppäävät kalat suoraan ilmasta koreilla, ja tapa antoi Kuldīgalle lempinimen kaupunkina, jossa kalat napataan lennosta – ilmiötä käydään ihmettelemässä yhä joka kevät ja syksy. Kuldīgan puutalokeskusta, joka säilytti keskiaikaisen katuverkkonsa lähes koskemattomana, pääsi Unescon maailmanperintöluetteloon vasta 2023, ja sen rauhallisilla kujilla kulkee yhä entisen Kuurinmaan herttuakunnan hallintokaupungin tuntu. Liepāja, alueen suurin kaupunki, katsoo edelleen mereen päin, kalastuksen ja telakoiden perinteitä vaalien.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-kurzeme-e5f15942.jpg',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Zairon',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kuldiga_Ventas_rumba_22.JPG',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-kurzeme-e5f15942.jpg',
     },
     Latgale: {
       lyhyt: 'Katolisen Latgalen Aglonan basilikaan saapuu joka 15. elokuuta tuhansia pyhiinvaeltajia, ja kaksi paavia on vieraillut siellä.',
       pitka: `Latgale eroaa muusta Latviasta selvästi: seutu on täynnä pieniä järviä ja mäntymetsiä, ja sen halki mutkittelee Daugava-joki idästä länteen. Kun suuri osa Latviasta on luterilaista, Latgale on pysynyt katolisena jo vastauskonpuhdistuksen ajoista lähtien, ja tämä näkyy kylien tienvarsiristeissä ja kirkkojen tornien tiheydessä. Joka vuoden 15. elokuuta Aglonan barokkibasilikaan saapuu tuhansia pyhiinvaeltajia Neitsyt Marian taivaaseenoton juhlaan, ja paikka on niin merkittävä katolinen pyhättö, että sekä paavi Johannes Paavali II (1993) että paavi Franciscus (2018) ovat vierailleet siellä. Alueella puhutaan yhä latgalin kieltä, jota osa kielitieteilijöistä pitää omana kielenään latvian sijasta, ja sen rinnalla elää vuosisataista savenvalajien perinnettä – latgalilainen keramiikka tunnetaan tummista, ruskeista ja mustista lasitteistaan. Daugavpils, alueen suurin kaupunki ja ainoan yliopiston kotipaikka, on tästä huolimatta monikulttuurinen risteysasema Venäjän ja Valko-Venäjän rajan tuntumassa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-latgale-a66101c1.jpg',
+          lahde: 'Dainis Matisons, Wikimedia Commons (CC BY 2.0)',
+          tekija: 'Dainis Matisons',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aglona_Basilica.jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-latgale-a66101c1.jpg',
     },
     Riga: {
       lyhyt: 'Noin kolmasosa Riian keskustan taloista on jugendia – kaupungissa on kenties maailman tihein jugendrakennusten keskittymä.',
       pitka: `Riika on Latvian pääkaupunki ja koko Baltian suurin kaupunki, ja sen vanha keskusta levittäytyy Väinäjoen suulle keskiaikaisten kirkontornien ja kivikatujen varaan. Kaupungin ydin on kuitenkin yllättävän nuori tyyliltään: noin kolmasosa keskustan taloista on jugendia, ja Riikaa pidetäänkin yhtenä tiheimmän jugendrakennuskannan kaupunkina koko maailmassa. Komeimmat julkisivut löytyvät Alberta iela -kadulta, jonka viisi taloa suunnitteli arkkitehti Mihail Eisenstein 1900-luvun alussa – hänen poikansa Sergei Eisensteinistä tuli myöhemmin yksi elokuvahistorian tunnetuimmista ohjaajista. Isoisän kulkiessa seudulla 1873 tätä katua ja sen koristeellisia julkisivuja ei vielä ollut: suurin osa jugendtaloista nousi vasta vuosina 1904–1914, kun Riika kasvoi huimaa vauhtia Venäjän keisarikunnan viidenneksi suurimmaksi kaupungiksi. Nykyään koko vanhakaupunki jugendkortteleineen kuuluu Unescon maailmanperintöön, ja Alberta iela on edelleen suosituin kävelyreitti tyylin ihailijoille.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-riga-86314b3c.jpg',
+          lahde: 'Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Pierre André Leclercq',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Riga_Alberta_iela_8.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-riga-86314b3c.jpg',
     },
     Vidzeme: {
       lyhyt: 'Latvian korkein kohta Gaiziņkalns jää 312 metriin, ja Viron huipun päihittämään rakennettu torni purettiin keskeneräisenä 2012.',
       pitka: `Vidzeme on Latvian pohjoisosan mäkistä ylänköä, jossa pienet moreenijärvet pilkottavat metsien välistä ja Gauja-joki on kaivertanut laaksoonsa niin jyrkkiä hiekkakivijyrkänteitä, että aluetta kutsutaan Latvian Sveitsiksi. Alue on myös maan etnisesti latvialaisin kolkka – noin 85 prosenttia asukkaista on latvialaisia – ja suurin kaupunki Valmiera tunnetaan vilkkaana opiskelijakaupunkina joen rannalla. Ylängön korkein kohta, 312-metrinen Gaiziņkalns, on koko Latvian korkein piste, mutta jäi silti kolme metriä matalammaksi kuin Viron puolen naapurihuippu Suur Munamägi. Kunnianhimo korjata tämä johti 2000-luvulla 45-metrisen näkötornin rakentamiseen mäen laelle, mutta hanke jäi kesken, torni todettiin vaaralliseksi ja purettiin lopulta 2012. Nykyään Gaiziņkalnsille kiipeää silti retkeilijöitä pelkän maiseman vuoksi, ja Gaujan kansallispuiston jyrkänteet, luolat ja keskiaikaiset linnanraunioit tekevät koko Vidzemestä yhden Latvian suosituimmista retkeilyseuduista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-vidzeme-cca1f570.jpg',
+          lahde: 'AgrisR, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'AgrisR',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gauja near Cīrulīši Nature Trails (2).jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-vidzeme-cca1f570.jpg',
     },
     Zemgale: {
       lyhyt: 'Rundālen barokkipalatsin suunnitteli Bartolomeo Rastrelli Kuurinmaan herttualle, ja sen entisöinti kesti vuodesta 1972 vuoteen 2015.',
       pitka: `Zemgale on Latvian viljakammio: alue on lähes täysin tasaista, mustan ja hedelmällisen maaperän peittämää lakeutta, jota reunustavat vain joenvarsimetsät ja kylätiet. Keskellä lakeutta kohoaa Rundālen palatsi, jonka Pietarin talvipalatsistakin tunnettu arkkitehti Bartolomeo Rastrelli suunnitteli 1700-luvulla Kuurinmaan herttua Ernst Johann von Bironille – rakennus on niin komea, että sitä kutsutaan usein Latvian Versaillesiksi. Palatsin vaiheet eivät ole olleet pelkkää loistoa: neuvostoaikana herttuan valtaistuinsalissa säilytettiin viljaa ja juhlasalista tehtiin koulun liikuntasali, ja koko rakennuksen kunnostus kesti vuodesta 1972 aina vuoteen 2015 asti. Nykyään palatsin ranskalaispuutarhassa kukkii yksi Pohjois-Euroopan suurimmista ruusutarhoista, yli 2 300 lajiketta, ja Jelgava, alueen suurin kaupunki, oli aikoinaan koko Kuurinmaan ja Semgallian herttuakunnan pääkaupunki – muistuma ajasta, jolloin herttuat hallitsivat tätä lakeutta tästä samasta seudusta käsin.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-zemgale-056e13fb.jpg',
+          lahde: 'DavidConFran, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'DavidConFran',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rundāle Palace.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-zemgale-056e13fb.jpg',
     },
   },
   /*
