@@ -91,3 +91,9 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   (Ranska: 248 × 556 pt, peitto ~39 %, kaikki 13 maakuntaa näkyvät); Kaikki | Pois yhdellä rivillä (veto valitsee puoliskon x:n
   mukaan, Ryhmassa-apu). Käännetty d94d2321, ei poikkeuksia; kuvapari proto-3d/lokit/natiivi-ui-loydos173/kuvapari-173-ennen-jalkeen.png.
   Merge-pyyntö (169+170b+173 = 0c9a3555) ja kuvaparit Fablelle LÄHETTÄMÄTTÄ (viestiraja).
+- 20.0x löydös 174 (P1, ennen 173/169): `natiivi-ui/kuvamerkit-174` 7c6999ab (juna 99e01a78, vain NostotKartalla.cs):
+  ei musteläikkää; lajin kuvamerkki (NostoSaannot.Kuvamerkki) kaikille tasoille ja zoomeille, löytämätön peitolla 0,5, koko
+  0,85 kertoimeen 4 asti (taso 1: 1,6); ilman lajin kuvaa minimerkki/kaupunkimerkki; 3D-malli kynnyksen yllä ennallaan.
+  Käännetty 22587d63 (Ranska, Pariisi), ei poikkeuksia; kuvapari proto-3d/lokit/natiivi-ui-loydos174/kuvapari-174-ennen-jalkeen.png.
+  Merkit pieniä (~7 pt) ja himmeitä → Fable/omistaja voi pyytää kokoa. Natiiviseppä mittaa hinnan iPadilla SHA:n saatuaan.
+  Merge-pyyntö + kuvapari LÄHETTÄMÄTTÄ (viestiraja).
