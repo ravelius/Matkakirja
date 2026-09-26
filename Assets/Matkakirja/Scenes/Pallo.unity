@@ -364,7 +364,7 @@ MonoBehaviour:
   _maximumTextureSize: 2048
   _maximumSimultaneousTileLoads: 20
   _subTileCacheBytes: 16777216
-  _templateUrl: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{reverseY}.jpg
+  _templateUrl: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-26-pohja-20260926/{z}/{x}/{reverseY}.jpg
   _projection: 0
   _specifyTilingScheme: 0
   _rootTilesX: 1
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3404d6b5f4f77461e9c32cf758d81d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Alueet
-  rasteriPohja: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{y}.jpg
+  rasteriPohja: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-26-pohja-20260926/{z}/{x}/{y}.jpg
   maastoLayer: https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/layer.json
   rinnakkain: 8
   rinnakkainKiireessa: 2

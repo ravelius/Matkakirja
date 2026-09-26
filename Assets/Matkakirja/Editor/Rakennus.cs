@@ -29,7 +29,7 @@ namespace Matkakirja.Editori
         /// Cesiumin {y} eteläisin, joten osoitteessa on {reverseY}.
         /// </summary>
         public const string LaattaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-26-pohja-20260926/{z}/{x}/{reverseY}.jpg";
         public const int LaattaMaxTaso = 9;
 
         /// <summary>
