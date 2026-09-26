@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2277';
+const CACHE = 'matkakirja-2026-09-21.2279';
 const SHELL = [
   './',
   './index.html',
@@ -516,6 +516,9 @@ const SHELL = [
   './assets/nostotyypit/merkki-kauppa.png',
   './assets/nostotyypit/merkki-tekniikka.png',
   './assets/nostotyypit/merkki-merenkulku.png',
+  './assets/nostotyypit/merkki-huuto.png',
+  './assets/nostotyypit/merkki-elain.png',
+  './assets/nostotyypit/merkki-hetki.png',
   './assets/kartat/symbolit/sym-elain.webp',
   './assets/kartat/symbolit/sym-historia.webp',
   './assets/kartat/symbolit/sym-huuto.webp',
