@@ -33,6 +33,8 @@ namespace Matkakirja.Peli
             var alue = Alue(kaupunki, maa);
             if (alue != null) return t.AlueenMaanosa.TryGetValue(alue, out var a) ? a : null;
             if (!string.IsNullOrEmpty(maa) && t.MaanMaanosa.TryGetValue(maa, out var b)) return b;
+            // Web KAUPUNGIN_MAANOSA: kaupungit ilman maata (Maailma-lauta, Jerusalem, St. Helena).
+            if (!string.IsNullOrEmpty(kaupunki) && t.KaupunginMaanosa.TryGetValue(kaupunki, out var c)) return c;
             return null;
         }
 
