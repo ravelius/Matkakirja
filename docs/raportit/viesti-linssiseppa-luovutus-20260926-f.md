@@ -110,3 +110,20 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
     merkit käyttävät jälkiä.
 - Seuraavaksi kohta 4 (reitti kynänjälkenä, luonnokset käydyissä kaupungeissa, yövalot vain käydyissä: Karttasepän
   yövalosarja) ja viimeisenä kohta 5 (elävät hetket).
+
+## Päivitys klo 08.0x (viikko 95 %, lepokäsky 98 %:ssa; työ jatkuu tilinvaihdon jälkeen)
+
+- **Kohta 2:** muste-jaljet fcbdb97f on mergetty Natiivi-UI:n haaraan natiivi-ui/nosto-muste fed603b9. Siinä merkit
+  käyttävät jälkiä (Hae, kierto ja peilaus), hehkua ja Loyto-käyrää. Natiivi-UI tekee yhteisen merge-pyynnön kuvineen
+  build 20:een. NostoKerros.Muste kytketään vain ElavaHeraysissa.
+- **Kohta 4, jako hyväksytty (Fable 08.0x):**
+  - Pelikoodari: webin kuljettu reitti natiiviin (PeliOhjain.KuljettuReitti, lista (kaupunki, kulkutapa) ja
+    tapahtuma KuljettuReittiKasvoi). Pyydetty 08.0x, vastausta odotetaan.
+  - MINÄ: reitti kynänjälkenä (Kynaviiva, uusi osuus piirtyy noin 1 s saapumisen jälkeen, levossa staattinen). Lisäksi
+    käytyjen kaupunkien hehku kaukana pallolla (Pehmeapiste, staattinen, säde löydösten mukaan, häipyy lähelle
+    zoomatessa). Hehku on väliaikainen, ja Natiivisepän yövalomaski korvaa sen.
+  - Natiivi-UI: luonnokset (Karttasepän miniatyyrit) käytyjen kaupunkien merkeissä.
+- **Kohta 5 viimeisenä:** elävät hetket, eli laivat 1873-reiteillä (paketti 1.46), lintuparvet, junan savu ja sade.
+  Lepopiirto säilyy, ja tapahtuma herättää piirron vain 3 s:ksi.
+- Worktreet: wt/proto-linssiseppa (lykatty-data, junassa), wt/proto-linssiseppa-aanet (tehoste-rekisteri, junassa),
+  wt/proto-linssiseppa-elava (muste-jaljet). Mergetyt haarat voi poistaa, kun build 19 on masterissa.
