@@ -6,6 +6,35 @@ Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia s
 löytyi 26.9.2026 build 20:n testauksessa: kamera-, usva- ja maakuntakomennot ovat siinä, ja se toimii
 samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama konsoli kaikissa käännöksissä).
 
+## 02:00-käännöksen (jälkeen TF 1.0.27) valmisteltu resepti (Fable 27.9.2026, ennen buildia)
+
+Lyhyt kierros: ylhäältä-perspektiivi (löydös 175 jatko, omistajan "Nyt"), lipun perspektiivi, savuke
+(0 poikkeusta + perus), 177. Komennot löytyivät suoraan Kartta/Komennot.cs:n kommenteista (Symbolimallit
+ja Lipputanko saavat molemmat saman "LiioiteltuPerspektiivi"-käyrän tässä käännöksessä).
+
+**Ylhäältä-perspektiivi (symbolit, 175 jatko):**
+```
+echo "symbolit ylhaalta 3d" > komento.txt   # pakota 3D pystykamerassakin (oletus tässä kokeiluhaarassa)
+echo "symbolit perspektiivi 55" > komento.txt   # liioitellun perspektiivin kulma reunalla (0-80, 55=oletus)
+echo "aja 46.5 2.5 0.4 1.5" > komento.txt   # Ranska, lähes suoraan ylhäältä (kallistus 0 oletuksena)
+```
+Kriteeri: Linna/Kirkko/Majakka näkyvät 3D-malleina myös pystysuorasta kamerasta (ei enää litteä
+2D-symboli kuten 1.0.26:ssa), liioiteltu perspektiivi kasvaa ruudun reunaa kohti. Vertaa
+`symbolit perspektiivi 0` (pois) samasta kamera-asemasta nähdäksesi eron. Ei lokiriviä — visuaalinen.
+
+**Lipun perspektiivi (sama käyrä, pikakomento testilipulle):**
+```
+echo "lipputanko koe" > komento.txt          # testilippu oletuspaikkaan (Ateena 37.98, 23.73)
+echo "lipputanko perspektiivi 1" > komento.txt   # varmista päällä (oletus)
+```
+Yhdistä kameran sijoitteluun kuten aiemmin (41.08 25.95 sivulta, 0.4 arc ylhäältä). `lipputanko
+perspektiivi 0` pois-vertailuun jos aikaa jää.
+
+**Savuke:** perus 0-poikkeusta-tarkistus + `pallo lepo` -rivin "Cesium-näkymä pidetty" (C/D/163).
+
+**177:** kuten aiemmin, `uusi-peli 1 <kaupunki>` — tarkista ettei regressiota tullut edellisen
+korjauksen (cc33ba3b) päälle.
+
 ## TF 1.0.27 -kierroksen valmisteltu resepti (Fable 27.9.2026, ennen buildia)
 
 Kaikki kuusi haaraa ovat MERGE-PYYNTÖTILASSA proto-3d/Matkakirja-proto:ssa, eivät vielä nykyisessä

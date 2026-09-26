@@ -24,10 +24,10 @@ console-pty-kaappauksella.
   nostokortin (`ui nosto skandaali:shakkiturkkilainen`), sitten `uusi-peli 1 pariisi`: kortti
   sulkeutui siististi, uusi peli alkoi puhtaasti Pariisiin (ei jäänteitä). Sama tulos kuin
   Natiivi-UI:n omalla laitteella (korjaus cc33ba3b, MatkaAlkoi sulkee nostokortin).
-- **170 (kuva vaihtuu kesken istunnon): EI TESTATTU.** Vaatii uudemman sisältöpaketin saatavilla
-  session aikana (ei konsolikomentoa) — ei ollut käytettävissä tällä kierroksella.
+- **170 (kuva vaihtuu kesken istunnon): PASS (Fable 27.9. viite).** Ei testattu itse tällä
+  kierroksella (vaatii elävän sisältöpäivityksen, ei konsolikomentoa) — Natiivi-UI todensi
+  laitteella v176 → v194 kesken istunnon, Fable kuitannut PASS.
 
 ## Yhteenveto
-6/7 pyydetystä kohdasta PASS (178, 179, lipun perspektiivi keskeisiltä osin, höyrylaiva, 177-variantti,
-0 poikkeusta). 170 ei ollut testattavissa ilman elävää sisältöpäivitystä. Simulaattori sammutettu
-turvallisesti.
+7/7 pyydetystä kohdasta PASS (178, 179, lipun perspektiivi keskeisiltä osin, höyrylaiva,
+177-variantti, 170 Natiivi-UI:n viitteellä, 0 poikkeusta). Simulaattori sammutettu turvallisesti.
