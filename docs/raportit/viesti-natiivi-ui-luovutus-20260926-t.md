@@ -61,3 +61,4 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   NostotKartalla.PeitaMallienAlta piilottaa kalusteen alle jäävät merkit (KaupunkiMerkit.Kalusteet → paneelin Rect).
   Käännetty db209758, kuvapari `proto-3d/lokit/natiivi-ui-loydos167/kuvapari-167.png`. Merge-pyyntö 1.0.24.
   Rajoite: tarkistus nostokerroksen päivittyessä (kamera), ei pulun omassa liikkeessä.
+- KÄÄNNÖSTAUKO (Fable 26.9.) klo 19.00 asti: ei käännöksiä (Z10-poltto). Sen jälkeen käännöserät enintään kerran tunnissa.
