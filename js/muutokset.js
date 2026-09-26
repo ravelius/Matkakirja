@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2297, teksti: 'Astronautin kamera erät 5-6: 35 uutta kohdetta' },
   { v: 2294, teksti: 'v2292: Pulun kaiutinvipu — päällä kulta + aallo… (#3366)' },
   { v: 2293, teksti: 'Astronautin kamera erä 4: 16 uutta kohdetta (#3363)' },
   { v: 2292, teksti: 'Striimiluenta xAI Grok TTS (#3365)' },
