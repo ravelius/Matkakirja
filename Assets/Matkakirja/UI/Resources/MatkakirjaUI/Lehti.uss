@@ -835,26 +835,6 @@
     -unity-text-align: middle-center;
 }
 
-/* Tehtävänappi (web #arrival-yes, primary) täysleveänä rivinä alapalkin alla. */
-.mk-lehti__tehtavanappi {
-    min-height: 0;
-    margin-top: 8px;
-    padding: 7px 13px;
-    border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.6);
-    border-radius: 10px;
-    color: #2a1a08;
-}
-
-.mk-lehti__tehtavanappi .mk-nappi__teksti {
-    font-size: 14px;
-}
-
-.mk-lehti__tehtavanappi--pois {
-    opacity: 0.55;
-    -unity-background-image-tint-color: rgb(170, 170, 170);
-}
-
 /* "Maa-liite" kaupunkilehden viimeisellä sivulla (web .maa-liite-nappi). */
 .mk-lehti__liite {
     min-height: 0;

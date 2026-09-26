@@ -13,9 +13,10 @@
 //             Menovinkit-listat, lopuksi lehden minitehtävä (+10 £) tai sivulle sidottu fokustehtävä
 //             (AARTEEN AVAUS / JULISTE, +50 £, pullavinkki; LehtiFokus.cs)
 // Alapalkki (web paivitaTutkiAlapalkki): Poistu (himmeä, vasemmalla) · maalehdessä ☰ · Edellinen /
-// Seuraava (kaksi riviä: suunta ja sivun nimi); kaupunkilehdessä sen alla täysleveä tehtävänappi
-// (LehtiTila.TehtavaNappi: "Tapaa X" / "Etsi kätkö", harmaa = loppuun pelattu) jokaisella sivulla
-// ja viimeisellä sivulla "Maa-liite" (→ maalehti). Ylärivin ☰ (sisällys) molemmissa lehdissä, kun
+// Seuraava (kaksi riviä: suunta ja sivun nimi); kaupunkilehden viimeisellä sivulla "Maa-liite" (→ maalehti).
+// EI TEHTÄVÄNAPPIA (löydös 179, web paivitaTehtavaNappi: omistaja 6.9.2026 "Tapaa nappi pitää ottaa pois"):
+// kohtaaminen ja kätkö alkavat kartan vihreästä pisteestä ja fokusvirrasta (PeliOhjain.AvaaAarrepiste),
+// eivät lehdestä. Ylärivin ☰ (sisällys) molemmissa lehdissä, kun
 // sivuja on vähintään kaksi.
 // Sivunkääntö: vaakapyyhkäisy (≥ 60 pt ja |dx| ≥ 2|dy|) tai napit; sivu liukuu (300 ms),
 // paperiääni ja vieritys alkuun. Kaiutin lukee sivun leipätekstit kertojan äänellä
@@ -46,7 +47,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement peite, arkki, sivupaikka, alapalkki, sisallys, sisallysLista;
         readonly VisualElement ylaosa, ylaLippu;
         readonly Label ylaNimi, nimioYla;
-        readonly Button kaiutin, sisallysNappi, alaSisallys, poistu, edellinen, seuraava, tehtavaNappi, liite;
+        readonly Button kaiutin, sisallysNappi, alaSisallys, poistu, edellinen, seuraava, liite;
         readonly Kuvasuurennos suurennos;
         readonly LehtiFokus fokus;
         ScrollView sivu;
@@ -151,9 +152,6 @@ namespace Matkakirja.Natiivi
             edellinen = Selausnappi("Edellinen", "mk-lehti__selaus--edellinen", () => Kaanna(nyt - 1), navi);
             seuraava = Selausnappi("Seuraava", "mk-lehti__selaus--seuraava", () => Kaanna(nyt + 1), navi);
             navi.RegisterCallback<GeometryChangedEvent>(_ => MitoitaAlanapit());
-            tehtavaNappi = Rakenne.Nappi("", "mk-lehti__tehtavanappi", EtsiKatko, alapalkki);
-            Rakenne.Tausta(tehtavaNappi, Kuviot.Kulta);
-            Kirjasimet.Aseta(tehtavaNappi, Kirjasin.KoneLihava);
             liite = Rakenne.Nappi("", "mk-lehti__liite", AvaaLiite, alapalkki);
             Kirjasimet.Aseta(liite, Kirjasin.Kone);
 
@@ -486,16 +484,6 @@ namespace Matkakirja.Natiivi
         string SivunNimi(int i) =>
             i < 0 || i >= lehti.Sivut.Count ? "" : lehti.Sivut[i].Laji == LehtiSivuLaji.Etusivu ? "Etusivu" : lehti.Sivut[i].Otsikko ?? lehti.Sivut[i].Lyhyt ?? "";
 
-        /// <summary>Web etsiKatko: lehti kiinni ja kohtaaminen tai kysymys alkaa (ohjain sulkee lehden).</summary>
-        void EtsiKatko()
-        {
-            if (tila == null || tila.TehtavaNappiPois || lehti == null) return;
-            Aanet.PulunTehoste("paper");
-            var r = Teko(new LehtiTeko { Laji = LehtiTekoLaji.EtsiKatko, Kaupunki = lehti.Omistaja });
-            if (r != null && !r.Ok) UiNakymat.Hae()?.Tilarivi.Viesti(r.Virhe);
-            else if (Auki) Sulje();
-        }
-
         /// <summary>"Maa-liite" kaupunkilehden viimeiseltä sivulta → maan oma lehti (web avaaMaalehti).</summary>
         void AvaaLiite()
         {
@@ -515,15 +503,6 @@ namespace Matkakirja.Natiivi
             seuraava.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt + 1).ToUpperInvariant();
             alaSisallys.style.display = maalehti && sivut.Count >= 3 ? DisplayStyle.Flex : DisplayStyle.None;
             poistu.Q<Label>().text = maalehti || viimeinen ? "POISTU" : "POISTU LEHDESTÄ"; // web text-transform uppercase
-            // Tehtävänappi jokaisen kaupunkisivun alareunassa (omistaja 9.8.2026); maalehdessä ei.
-            string teksti = maalehti ? null : tila?.TehtavaNappi;
-            tehtavaNappi.style.display = teksti != null ? DisplayStyle.Flex : DisplayStyle.None;
-            if (teksti != null)
-            {
-                tehtavaNappi.Q<Label>().text = teksti;
-                tehtavaNappi.EnableInClassList("mk-lehti__tehtavanappi--pois", tila.TehtavaNappiPois);
-                tehtavaNappi.pickingMode = tila.TehtavaNappiPois ? PickingMode.Ignore : PickingMode.Position;
-            }
             string maaNimi = lehti.MaaNimi;
             bool liiteNakyy = !maalehti && viimeinen && !string.IsNullOrEmpty(lehti.Maa) && !string.IsNullOrEmpty(maaNimi);
             liite.style.display = liiteNakyy ? DisplayStyle.Flex : DisplayStyle.None;
@@ -1704,8 +1683,8 @@ namespace Matkakirja.Natiivi
         // --- testi ---------------------------------------------------------------------------------
 
         /// <summary>
-        /// Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen (ylärivin ☰, "sisallys-ala" alapalkin), "kuva" suurennoksen, "tehtava(-pois)" keksityn
-        /// tehtävänapin, "viimeinen" viimeiselle sivulle, "fokus-vastaa n" / "fokus-pulla" napauttaa fokustehtävää.
+        /// Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen (ylärivin ☰, "sisallys-ala" alapalkin), "kuva" suurennoksen,
+        /// "viimeinen" viimeiselle sivulle, "fokus-vastaa n" / "fokus-pulla" napauttaa fokustehtävää.
         /// </summary>
         public string Testaa(string mita, int n)
         {
@@ -1715,10 +1694,6 @@ namespace Matkakirja.Natiivi
                 case "fokus-vastaa":
                 case "fokus-pulla": return LehtiFokus.Testaa(sivu?.contentContainer, mita, n);
                 case "sivu": Kaanna(n); break;
-                case "tehtava":
-                case "tehtava-pois":
-                    PaivitaTila(new LehtiTila { Matkapaiva = 12, TehtavaNappi = mita == "tehtava" ? "Tapaa gondolieeri" : "Gondolieeri ei tavattavissa", TehtavaNappiPois = mita != "tehtava" });
-                    break;
                 case "viimeinen": if (lehti != null) Kaanna(lehti.Sivut.Count - 1); break;
                 case "sisallys":
                 case "sisallys-ala": if (lehti != null && lehti.Sivut.Count >= 2) VaihdaSisallys(mita == "sisallys"); break;
