@@ -423,6 +423,25 @@ namespace Matkakirja.Natiivi
             if (muuttui) PoisMuuttui?.Invoke(pois);
         }
 
+        /// <summary>
+        /// Löydös 177 (Uusi peli, PeliOhjain.MuistitTyhjennetty): valinta ja Pois pois muistista kuten webin
+        /// uudelleenlatauksessa (PlayerPrefs on jo tyhjennetty); kartta kuulee Valittu(null) ja PoisMuuttui.
+        /// </summary>
+        public void Nollaa()
+        {
+            if (ValittuAvain != null && rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
+            bool muuttui = Pois;
+            bool oliValinta = ValittuAvain != null;
+            ValittuAvain = null;
+            Pois = false;
+            kortti.Sulje();
+            MerkitsePois();
+            PaivitaLuonnehdinta();
+            SiirraPeukalo();
+            if (oliValinta || muuttui) Valittu?.Invoke(null);
+            if (muuttui) PoisMuuttui?.Invoke(false);
+        }
+
         static string LueTallennettu()
         {
             var s = PlayerPrefs.GetString(TallennusAvain, null);

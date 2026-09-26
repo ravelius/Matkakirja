@@ -65,6 +65,17 @@ namespace Matkakirja.Natiivi
         readonly HashSet<string> aarreOdottaa = new HashSet<string>();
         readonly HashSet<string> aarreKerrottu = new HashSet<string>();
 
+        /// <summary>
+        /// Löydös 177 (Uusi peli): istunnon muistit pois kuten webin uudelleenlatauksessa — pulun kaupunkikommentit,
+        /// alkaneet luennot ja viimeksi luettu saapuminen (aarteet ja kortti nollautuvat jo uuden matkan tunnistuksessa).
+        /// </summary>
+        public void Nollaa()
+        {
+            kommentoitu.Clear();
+            luentoAlkanut.Clear();
+            luettuSaapuminen = null;
+        }
+
         public Saapumisesitys(Matkakirjakortti kortti, Pulu pulu)
         {
             this.kortti = kortti;

@@ -377,6 +377,20 @@ namespace Matkakirja.Natiivi
         bool ohjainKytketty;
         MatkanYhteenveto odottavaHuipennus;
 
+        /// <summary>
+        /// Löydös 177: UI:n muistissa pidetyt tilat alkuun Uusi peli -tyhjennyksen jälkeen (PlayerPrefs on jo pyyhitty):
+        /// maakuntien valinta ja selitteen välilehti, laukun tilastolohko, pulun keskustelu, trailerit ja saapumisen
+        /// istuntomuistit. Kuvanäkymän "nähdyt" jäävät (web sessionStorage säilyy latauksessa).
+        /// </summary>
+        void NollaaMuistit()
+        {
+            Karttaselite.Nollaa();
+            Matkalaukku.Nollaa();
+            Chat.Nollaa();
+            Traileri.Nollaa();
+            Saapuminen.Nollaa();
+        }
+
         void KytkeOhjain()
         {
             var o = PeliOhjain.Instanssi;
@@ -392,6 +406,9 @@ namespace Matkakirja.Natiivi
             if (!o.Kaytossa) Kerros.Nayta(false);
             KorvaaNimikortti(o.Kaytossa);
             Saapuminen.Kytke(o);
+            // Löydös 177: Uusi peli tyhjentää pelin muistit (Pelikoodarin TyhjennaMuistit); webissä sivu latautuu
+            // uudelleen, joten myös UI:n istuntomuistit alkavat alusta.
+            o.MuistitTyhjennetty += NollaaMuistit;
             // Pelin tilanteet puluun (webin ilmoitaLivianTilanne; Pelikoodarin tapahtuma).
             o.LivianTilanne += (laji, tunne, v) =>
             {
