@@ -4189,6 +4189,8 @@ export function luoNostot({
       sisaisia: (sisaisetKaupungeittain.get(r.avain) ?? []).length,
     })),
     /** Auki olevan liuskan kaupunkirivin avain tai null. */
+    /** Kaupungin sisäiset nostot riveinä (id, nimi, aihe, avaa): lehden osiohakemisto (js/lehtiosiot.js). */
+    kaupunginNostoRivit: (cityId) => sisaisetKaupungeittain.get(`lauta:${cityId}`) ?? [],
     liuskaAuki: () => liuska?.avain ?? null,
     /**
      * Auki olevan liuskan KAUPUNGIN tunnus tai null (kohta 14 c).
