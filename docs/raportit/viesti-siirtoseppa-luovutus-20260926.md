@@ -1,4 +1,4 @@
-# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 07.1x)
+# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty iltapäivällä)
 
 Luovuttaja on Siirtoseppä (Opus). Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
@@ -11,43 +11,21 @@ voimassa.
 - docs/raportit/elava-kartta-suunnitelma-20260926.md (Elävä kartta, omistajan päätös 26.9.) ja
   docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md (taustapäivitys, hyväksytty 25.9.).
 
-## Tila
+## Tila (päivitetty 26.9. iltapäivä)
 
-- **main v2258.** Tuotanto 1.x **v151** (skeema **1.48**) ja 2.0 **v92**. Pino #3269 (1.46), #3285 (1.47), #3298 (1.48), #3299 (tilannekuva.mjs) ja Sisältökirjurin #3297 (maakuntanimet suomeksi, v148) ovat mainissa ja tuotannossa.
-- Tässä vuorossa julkaistut:
+- Tuotanto 1.x **v169** (skeema **1.50**). Tämän vuoron julkaisut:
 
-| Skeema | PR | Sisältö |
+| Skeema/versio | PR | Sisältö |
 |---|---|---|
-| 1.40 | #3165 (juna #3168) | monumentit.nimio, kartan nimiöt ≤ 18 merkkiä (Sisältökirjurin #3162) |
-| 1.41 | #3155 | offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympärillä |
-| 1.42 | #3185, peruttu #3191, takaisin #3225 | maakuntarajat 138 maasta, juuren `maat`, lähde maakuntarajat.json.gz |
-| 1.43 | #3237 | maakuntarajat.vari (webin väri-indeksi) |
-| 1.44 | #3260 | karttavalot.laji (webin symLaji, löydös 125) |
-| 1.45 | #3267 | Elävä kartta: karttavalot.kokoluokka, .maakunta (+Lahde), maakuntarajat.salaisuus |
-| – | #3247 | taustapäivitys vaihe 1: hakemisto.json, osoittimen hakemisto/tavuja/siirto/tasoittain |
-| – | #3246 | README: äänien lisenssit ilman CC BY-NC |
-| – | #3192, #3200 | taustapäivityksen selvitys ja suunnitelma |
+| v162 | #3303 | natiivin offline-rasteri pohja 26 (build 20 TF:ssä) |
+| 1.49 (v159) | #3307 (+ Sisältökirjurin #3309) | pikkukuva (https) maakuntasalaisuuksille (+ pikkukuvaLahde) ja luonnehdinnat-moduulin alueille; asset-perhe maakunnat |
+| 1.50 (v167) | #3317 | aanitaulut laji musiikkiaihe (14) ja musiikkiketju.maanosa |
+| v169 | #3320 (+ Karttasepän #3321) | NIMETYT_LISATIEDOSTOT: assets/data/lippu-lonlat.json → kartta/lippu_lonlat.json (138 maata), ei skeemamuutosta |
 
-- **Natiivi:** taustapäivityksen vaihe 2 (proto-haara `siirtoseppa/paketti-paivitys` 99f049ec) on build 18 -junassa
-  (juna/b13 99eaf8d9). Simulaattoriloki: `/Users/Shared/Claude/proto-3d/lokit/siirtoseppa-paketti-paivitys-20260926.txt`.
-
-## Pushatut, julkaisemattomat PR:t
-
-- **#3303 (LUONNOS, pidossa)** natiivin offline-rasteri sarjaan 2026-09-26-pohja-20260926 (omistaja hyväksyi pohja 26:n).
-  Vapauta (`gh pr ready 3303`, korjaa otsikko), kun Natiiviseppä ilmoittaa build 20:n (natiiviseppa/pohja-26 c4c46662)
-  olevan TestFlightissa. Build 19 lukee pohjaa 25, joten aiempi merge jättäisi sen offline-kartan tarkkuuteen Z0–Z5.
-  Worktree `wt/siirtoseppa-offline-pohja26`. Ennen vapautusta yhdistä main.
-
-## Kesken — tee nämä ensin
-
-0. Siivouskorjaus 13e5bcf4 on build 19 -junassa (juna/b13 e5ed36bd). **TF 1.0.18 -laitteet jäävät ensimmäiseen valmiiseen
-   versioonsa**, kunnes build 19 asennetaan (paketti-paivitys on build 18:ssa ilman korjausta). Palvelimelta ei voi auttaa.
-   Seuraa build 19:n laitetestiä: lokissa "käytössä vN" pitää vaihtua toisella käynnistyksellä.
-
-1. Pinon mergejen jälkeen: tuotannon ämpäritarkistus (`amparitarkistus.mjs --url …/sisalto/1/v<N>/`), sitten versio
-   Natiivisepälle, Natiivi-UI:lle ja Pelikoodarille sekä rivi Fablelle.
-2. Taustapäivitys, vaihe 3 (siivous) on jo vaiheen 2 koodissa. Seuraa build 18:n laitetestiä ja korjaa, jos Laitetestaaja
-   löytää jotain.
+- **Junassa:** #3327 tilannekuva.mjs 15 tiedostoa (14,2 Mt, Natiiviseppä kuitannut). Worktree wt/siirtoseppa-tilannekuva-kylma, poista mergen jälkeen.
+- **Odottaa pyyntöä:** ISS-linssi (Linssiseppä): Actions-työnkulku CelesTrak ISS-TLE (NORAD 25544) 6 h välein ämpäriin data/iss-tle.json + sama tiedosto pakettiin (NIMETYT_LISATIEDOSTOT sopii).
+- **Peruttu/ei tilattu:** offline-lataus pois simulaattorissa (Documents/offline oli tyhjä; levyn täyttäjät Build, DerivedData, git-pack, worktreet). Z9 satama- ym. kaupungeille (88/134 maata ilman Z9:ää, koska kaupunkitaso ottaa vain tyypin kaupunki).
+- Taustapäivitys: siivouskorjaus build 19:ssä; seuraa edelleen laitetestiä.
 
 ## Voimassa olevat työtavat (tämän vuoron uudet)
 
@@ -71,6 +49,9 @@ voimassa.
 - Kartta-testit (natiivi): `Kartta-testit/kaanna.sh PakettiPaatokset`, oikea paketti `PAKETTI_KOE=<versiokansio>`.
 
 ## Velat ja opetukset
+
+- Opetus 26.9.: älä pushaa PR:n haaraan, kun Julkaisija on ilmoittanut ottavansa sen junaan (#3320:n head vaihtui kesken mergen). Kaksi PR:ää, jotka lisäävät saman tiedoston eri muotoilulla, konfliktoivat: data kuuluu tuottajan PR:ään.
+- Opetus 26.9.: natiivi hakee Saapumistunnukset alueella, paketti antaa maanosan (vanhoissa buildeissa ita-eurooppa osuu).
 
 0. Maakuntanimien suomennokset (Attika jne.) tulevat Sisältökirjurin #3297:stä (maakunnat-nimet.js ja
    maakuntarajat.json.gz samassa PR:ssä), eikä skeemaa muuteta. Ilmoita versio Natiivi-UI:lle, kun #3297 on tuotannossa.
