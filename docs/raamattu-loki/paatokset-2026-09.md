@@ -7795,3 +7795,7 @@ Natiivi-UI 02.1x: Pulun kaiutinvipu natiivissa natiivi-ui/pulu-kaiutin 9747aec8 
 ## MAALEHTI-SIIRTO MAINISSA V2295 (#3367); LINSSISEPAN A/B-ERA c931ac98, NOLLAUS (27.9.2026 klo 02.17)
 
 Julkaisija 02.17: #3367 (28 maajuttua maalehtiin) mainissa v2295, testit 4413/0. Linssiseppa 02.15: A/B-era laitteella (kaannos c931ac98): kaari Thermopylaissa/Sounionissa, vuori Olympoksella/Parnassoksella/Taygetoksella — vuori NAKYY maastokorjauksella; tason 2 symbolit ~20 pt, A/B-ero ei erotu → uusi sessio tekee tiukat rajaukset ennen valintaa; meri v3 pelikoossa laiva 39 pt, valas 50 pt, pyrsto nakyy. Luovutus -j bbee24237, clear_session self → aloitusviesti Fablelta.
+
+## LINSSISEPPA NOLLATTU JA KAYNNISTETTY 02.2x (LUOVUTUS -J bbee24237) (27.9.2026 klo 02.18)
+
+Linssiseppa (Opus, max) = Mallinseppa nollattu 02.2x (89 % → tyhja), id ennallaan; aloitusviesti lahetetty: A/B tiukat rajaukset, meri v3 rajaukset, merge-pyynnot 1.0.28:aan, Segovia/Brandenburg/Kinderdijk, 12 symbolia, lento v3.
