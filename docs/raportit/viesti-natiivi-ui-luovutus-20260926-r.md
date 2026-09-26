@@ -13,6 +13,15 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
 - Lepopiirto: syy oli 125:n hehkusyke + jatkuva Joutosyke; Fablen päätös SykeJaatyy = true. Mitattu 688e1f5c:
   kartta, kartussi auki ja kaupunkikortti auki hiljaa levossa (Paikallaan). Todisteet `proto-3d/lokit/natiivi-ui-b18-lepo/`.
 
+## Päivitys klo 05.1x
+- Build 19 -junassa: natiivi-ui/im2-ohjaus d56afbd5 (II:n soitin Linssisepän Ohjaus-rajapintaan, todennettu) ja
+  natiivi-ui/linssi-sulkee-s3 198ecc30 (linssin avaus sulkee nosto- ja kaupunkikortin, todennettu).
+- KESKEN: elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
+  natiivi-ui/elava-kartussi worktreessä wt/proto-natiivi-ui-nostot: tutkimuspalkki, maakunnan herääminen kartussissa
+  (käsialanimi, pikkukuva-leima, merkit x/y), käsialanimi kartalle, salaisuus:-nostot NostoSisalto.Hae:hen, lippu liehuu vasta
+  kun maa valmis. Rajapinta PeliOhjain.Muste (Pelikoodari, junassa 3ef13a97). Jos agentin tulos puuttuu: tarkista haara
+  (git log natiivi-ui/elava-kartussi), käännä, todenna lepo (ui rauha) ja kuvapari omistajalle, merge-pyyntö Natiivisepälle.
+
 ## Jono (Fable 26.9. klo 04.4x)
 1. Build 19:n ensimmäinen erä: Linssisepän Ohjaus-rajapinta II:n soittimeen (IhmisenMatkaLinssi.Ohjaus
    Soi/Tauolla/Tutkimus, ToistaTaiTauko(), Alkuun(), Loppuun(), OhjausMuuttui; haara linssiseppa/ihmisen-matka-2).

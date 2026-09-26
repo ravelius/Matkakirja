@@ -9,6 +9,6 @@ Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 (JUMI → FABLE) ja docs/raportit/vi
 SITOVA: WEB ON MALLI, MITATTUNA (omistajan löydökset voittavat webin). Omistajalle PNG-kuvat laitteen ruudun kokoisina,
 video vain liikkeelle. Levossa ei piirtoa (ui rauha -mittaus). Käännä proto-kaanna.sh:lla. Erät pieninä.
 
-Ensimmäisenä (build 19): Linssisepän Ohjaus-rajapinta Ihmisen matka II:n soittimeen (luovutuksen jono 1).
-Elävä kartta vasta omistajan videoarvion jälkeen; 115 odottaa dataa.
+Ensimmäisenä (build 19): elävän kartan Natiivi-UI-osa, haara natiivi-ui/elava-kartussi (luovutuksen "Päivitys klo 05.1x").
+Ohjaus-rajapinta ja S3 ovat jo junassa. 115 odottaa dataa.
 Viestit Fablelle vain valmiista erästä, jumista tai kysymyksestä, enintään 8 riviä.
