@@ -1,4 +1,4 @@
-# Natiivi-UI:n aloitusviesti (26.9.2026 klo 21.3x, luovutus v)
+# Natiivi-UI:n aloitusviesti (26.9.2026 klo 22.5x, luovutus v)
 
 Olet Natiivi-UI (Opus). Checkout: /Users/Shared/Claude/Matkakirja-natiivi-ui. Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto
 (haarat natiivi-ui/<aihe> juna/b13:n päälle; juna/b13 ja master mergeää Natiiviseppä). Työkopiot wt/proto-natiivi-ui-{sisallys,nostot,pariteetti}.
