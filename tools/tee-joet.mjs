@@ -133,7 +133,7 @@ if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
   }
   features.sort((a, b) => b.properties.valuma_km2 - a.properties.valuma_km2);
   writeFileSync(ulos, JSON.stringify({
-    type: 'FeatureCollection', lahde: `GEOGLOWS v2 hydrography vpu=${vpu} (TDX-Hydro), valuma ≥ ${valuma} km², pääuomiksi ketjutettu`,
+    type: 'FeatureCollection', lahde: `GEOGLOWS v2 (TDX-Hydro), CC BY-SA 4.0 — hydrography vpu=${vpu}, valuma ≥ ${valuma} km², pääuomiksi ketjutettu`,
     lisenssi: LISENSSI, attribuutio: ATTRIBUUTIO, features,
   }));
   const pisteita = features.reduce((s, f) => s + f.geometry.coordinates.length, 0);

@@ -357,6 +357,7 @@ pakettien otsikkokommentit).
 | Aineisto | Tekijä / julkaisija | Lisenssi |
 | --- | --- | --- |
 | Natural Earth — rannikot, maarajat, joet, järvet ja meri (1:10m, 1:50m, 1:110m) | Natural Earth, naturalearthdata.com | Public domain |
+| GEOGLOWS v2 (TDX-Hydro) — jokiverkko natiivin elävään karttaan | GEOGLOWS ECMWF Streamflow Service; jokiviivat NGA TDX-Hydro | CC BY-SA 4.0 |
 | ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — korkeus, syvyys, varjostus, reliefikartta | Amante & Eakins 2009, NOAA NGDC/NCEI, doi:10.7289/V5C8276M; haettu NOAA CoastWatch ERDDAPista | Public domain (Yhdysvaltain liittovaltion virasto) |
 | Earth at Night (Black Marble) 2016 — yökartan valot | NASA Earth Observatory / Visible Earth; NASA GSFC, Miguel Román, kuvankäsittely Joshua Stevens (SSAI) | Public domain (NASA), maininta ehtona |
 
