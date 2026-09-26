@@ -23,7 +23,8 @@
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
 // kylläisyys ja kehittäjätila muistetaan PlayerPrefsissä; isoisän linssille 1873 "isoisa tila";
 // linssien äänille "aani tila | keksinto | vuosi | humina [pois]" (soitto ja lähteen aika hetken päästä, humina
-// Pelikoodarin maisemakanavalla ilman linssiä).
+// Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
+// saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -207,6 +208,8 @@ namespace Matkakirja.Natiivi
             LinssienEsilataaja.Kytke(this, rekisteri);
             // Syntetisoidut tehosteet (ESILATAUSPOLITIIKKA kohta 1: efektiäänet ilman verkkoa) taustasäikeessä heti.
             tehosteet = LinssiTehosteet.Luo(transform);
+            // Elävä kartta: saapuminen uuteen maahan (≤ 5 s, ohitettava) ja aineiston esilataus taustalla.
+            ElavaKartta.KytkeSaapumiset(this);
             rekisteri.Vaihtui += _ =>
             {
                 bool nyt = rekisteri.EstaaKartan;
@@ -1208,6 +1211,8 @@ namespace Matkakirja.Natiivi
                     rekisteri.Sulje();
                 else if (osat[0] == "linssi" && osat.Length > 1)
                     rekisteri.Valitse(osat[1]);
+                else if (osat[0] == "elava")
+                    ElavaKartta.Komento(osat, this);
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)
