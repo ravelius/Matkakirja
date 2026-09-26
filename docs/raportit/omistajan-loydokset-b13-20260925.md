@@ -141,3 +141,12 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 |---|---|---|
 | S1 | Lepopiirto ei toteudu build 17:ssä: levossa piirretty 150/150, tila "Lepo (ui)" (build 16: 2–3/151). Jokin UI-elementti pitää isDirtyn päällä (epäily: II:n Tekstitys-kytkimen tai soittimen animaatio, postikortti). Ei estänyt vientiä (kehys on nyt 13 ms). | Natiivi-UI (Natiiviseppä) |
 | S2 | 143: "Bosnia ja Hertsegovina" rivittyy 3 riville (odotus 2). | Natiivi-UI |
+
+## Build 18 -savukierros (Laitetestaaja 26.9. klo 04.5x, raportti 6e344dd41) — sisäiset löydökset
+
+| # | Löydös | Rooli |
+|---|---|---|
+| S1 | KORJATTU build 18:ssa: lepopiirto toteutuu (Paikallaan ~40 s levon jälkeen, 2–3/150). Syy oli nostomerkkien hehkusyke, jonka kehyksen hinta -erä oli palauttanut jatkuvaksi; SykeJaatyy = true. | — |
+| S2 | KORJATTU build 18:ssa (143b): pitkä maannimi kahdelle riville, pienennys 22 %. | — |
+| S3 | Laajennettu nostokortti jää auki linssin avauksen yli; sulkeutuu vain ulkopuolelle napautuksella → linssin avaus sulkee kortin (ja postikortin) automaattisesti. | Natiivi-UI (build 19) |
+| S4 | 144 lipun aaltoilua ei voi todentaa pysäytyskuvista (levossa suora ✓) — todennus videosta Natiivi-UI:n k144-lippu.mp4:stä (Fable hyväksyi 04.2x). | — |
