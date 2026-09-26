@@ -115,6 +115,12 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        /// <summary>
+        /// Natiivi-UI asettaa: luennan kuvapakka lähtee heti (Luentakuvasarja.Hiljeni(0)). Saapuminen kutsuu, kun puhe ja kortit
+        /// ovat ohi ja vain pakan kuvasumennus on jäljellä (omistaja 26.9.: animaatio heti kortin/luennan jälkeen, ei 6 s:n pakkaa).
+        /// </summary>
+        public static Action KuvapakkaLahtee;
+
         /// <summary>Natiivi-UI asettaa: matkakirjakortti (tai muu saapumisen kortti) on auki.</summary>
         public static Func<bool> KorttiAukiKysely;
 

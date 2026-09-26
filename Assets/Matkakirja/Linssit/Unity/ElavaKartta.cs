@@ -128,7 +128,8 @@ namespace Matkakirja.Natiivi
         bool odotaHiljaisuutta;
         float hiljaaAlkaen = -1, odotusAlkoi;
         string edellinenEste;
-        public const float VapaaS = 0.6f, OdotusMaxS = 600f;
+        bool pakkaPyydetty;
+        public const float VapaaS = 0.6f, VapaaPakanJalkeenS = 0.2f, OdotusMaxS = 600f;
         string maa;
         LatLon keskus;
 
@@ -963,9 +964,16 @@ namespace Matkakirja.Natiivi
             float nyt = Time.realtimeSinceStartup;
             string este = ElavaHerays.HiljaisuudenEste();
             if (este != edellinenEste) { Kirjaa($"odottaa {nyt - odotusAlkoi:F1} s: {este ?? "hiljaa"}"); edellinenEste = este; }
+            // Puhe ja kortit ohi, vain luennan kuvapakka sumentaa: pakka lähtee heti (ei 6 s:n loppuviivettä).
+            if (este == "kuvasumennus" && !pakkaPyydetty && ElavaHerays.KuvapakkaLahtee != null)
+            {
+                pakkaPyydetty = true;
+                Kirjaa("kuvapakka lähtee (vain kuvasumennus jäljellä)");
+                ElavaHerays.KuvapakkaLahtee();
+            }
             if (este != null) { hiljaaAlkaen = -1; return; }
             if (hiljaaAlkaen < 0) { hiljaaAlkaen = nyt; return; }
-            if (nyt - hiljaaAlkaen < VapaaS) return;
+            if (nyt - hiljaaAlkaen < (pakkaPyydetty ? VapaaPakanJalkeenS : VapaaS)) return;
             // Kartta hiljaa: kamera saapumisnäkymään (sama ajo kuin laskussa) ja kohtaus soi alusta.
             Kirjaa($"hiljaa {nyt - odotusAlkoi:F1} s:n jälkeen: soi");
             kierto?.AjaSaapumisnakymaan(maa, keskus.Lat, keskus.Lon, 1.6f, null);
