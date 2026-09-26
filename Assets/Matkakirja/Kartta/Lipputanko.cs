@@ -38,6 +38,8 @@ namespace Matkakirja
         bool piilossaZoom;
         /// <summary>Liioiteltu perspektiivi päällä (komento `lipputanko perspektiivi 0|1`); käyrä LiioiteltuPerspektiivi.</summary>
         public static bool Perspektiivi = true;
+        /// <summary>Tangon vähimmäiskulma katseeseen perspektiivin kanssa (ruudun keskellä).</summary>
+        public const float PerspektiiviMinKulma = 15f;
         /// <summary>Lipun korkeus tangon korkeudesta.</summary>
         public const float LipunOsuus = 0.36f;
         /// <summary>Tangon pienin kulma katseeseen (°): ylhäältä katsottuna tanko kallistuu näkyviin.</summary>
@@ -273,11 +275,14 @@ namespace Matkakirja
                     kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(akseli, v), -1f, 1f)) * Mathf.Rad2Deg;
                 }
             }
-            if (kulma < MinKulma)
+            // Perspektiivin kanssa ruudun keskellä lähes suoraan ylhäältä (omistajan sääntö), vain PerspektiiviMinKulma, ettei
+            // tanko ole pelkkä piste; ilman perspektiiviä entinen MinKulma.
+            float minKulma = Perspektiivi ? PerspektiiviMinKulma : MinKulma;
+            if (kulma < minKulma)
             {
                 // Kallistus ruudun ylöspäin (ylhäältä katsottuna tanko "seisoo" kartalla; normaalin oma suunta on silloin satunnainen).
                 Vector3 t = Vector3.ProjectOnPlane(kamera.transform.up, v).normalized;
-                float a = MinKulma * Mathf.Deg2Rad;
+                float a = minKulma * Mathf.Deg2Rad;
                 akseli = (v * Mathf.Cos(a) + t * Mathf.Sin(a)).normalized;
             }
             Vector3 eteen = Vector3.ProjectOnPlane(v, akseli);
