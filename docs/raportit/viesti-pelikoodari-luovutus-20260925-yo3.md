@@ -49,3 +49,15 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
   `vieritys [koe|pois|paalle|nollaa]`) — MITTAUS KESKEN (käännös jonossa; simulaattorin kosketuslupaa ei ole, siksi `vieritys koe`).
 - 122: odottaa Natiivi-UI:n tekstin piilotusta, sitten todennus että luenta kuuluu.
 - Linssisepän äänitoiveet (linssien-aanitoiveet-20260925.md) tulivat minulle: Fablelta ei ole annettu äänisuunnitelmaa — kysy.
+
+## 6. Lisäys 26.9. klo 04.0x
+- Build 17 leikattiin 03.43 (d04841a0). Build 18:n ensimmäiseen erään (merge-pyynnöt Natiivisepällä):
+  `pelikoodari/loydos149` 0e534bef (sis. `pelikoodari/vieritys` 059f7709; 137 mitattu 31 → 60 fps, 149 media.json/atominen
+  levy/4xx ei uusita/vartija `nostokuvat ISO`) ja `pelikoodari/tehoste-rekisteri` ba1547ba (Aanet.RekisteroiTehoste).
+- Junassa (build 17): linssi-aani f12c0448 (ILinssiYmparisto.Tehoste/Taustaaani, astro-humina), nosto-avaus, loydos145, cpu-mittari, kehys-cpu.
+- 122 todennettu (lokit/loydos122): ei tekstiä lennolla, luenta kuuluu.
+- Web-PR:t: #3272 musiikki- ja äänisuunnitelma (8 omistajan päätöstä), #3274 löydös 135 web (agentti), #3250 kehyksen hinta CPU.
+- Datavirhe: GRC heraion ja korintin-apollon-temppeli puuttuvat ämpäristä (Sisältökirjuri).
+- Opit: proto-kaanna.sh ei tulosta merge-konfliktia stdoutiin (exit 13) — katso kaannospalvelu/<aika>.log; Burst AotLinkerException oli ohimenevä.
+- SEURAAVA: Elävä kartta — nostojen kokoluokat (pääkohde/kohde/pieni) ja "unohdettu" tila (himmeä musteen jälki), maakunnan
+  laskuri ja salaisuus-nosto; logiikka web+natiivi, piirto Natiiviseppä, data Siirtoseppä (skeema 1.45), GRC-taulu #3263.
