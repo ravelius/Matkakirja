@@ -122,7 +122,7 @@ namespace Matkakirja
         public static string Tila()
         {
             if (instanssi == null) return "ei luotu";
-            var sb = new System.Text.StringBuilder($"päällä {Paalla}, koko {KokoPt:0} pt; taso 1 näkyvissä:");
+            var sb = new System.Text.StringBuilder($"päällä {Paalla}, koko {KokoPt:0} pt, taso23 {(Taso23 ? 1 : 0)}; taso 1 näkyvissä:");
             int n = 0;
             var taso1 = new int[ArkkityyppiKartoitus.Lukumaara];
             foreach (var p in instanssi.kappaleet)
@@ -135,7 +135,9 @@ namespace Matkakirja
             }
             if (n == 0) sb.Append(" ei yhtään");
             for (int i = 0; i < taso1.Length; i++) if (taso1[i] > 0) sb.Append(' ').Append((Arkkityyppi)i).Append('×').Append(taso1[i]);
-            sb.Append($" ({n} mallia); erikoismallien kolmiot:");
+            sb.Append($" ({n} mallia); ");
+            instanssi.Tasot23Tila(sb);
+            sb.Append("; erikoismallien kolmiot:");
             foreach (var p in verkot) sb.Append(' ').Append(p.Key).Append('=').Append(p.Value.triangles.Length / 3);
             sb.Append("; arkkityyppien kolmiot LOD0/LOD1:");
             for (int i = 0; i < ArkkityyppiKartoitus.Lukumaara; i++)

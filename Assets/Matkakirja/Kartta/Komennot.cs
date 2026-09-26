@@ -77,7 +77,10 @@ namespace Matkakirja
     ///   maasto sse <arvo>         tilesetin maximumScreenSpaceError (oletus 16; luo tilesetin uudelleen; löydös 46)
     ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
-    ///   symbolit tila|pois|paalle|loydetty|himmea|koko <pt>   tason 1 nostojen 3D-mallit (Symbolimallit, löydös 160)
+    ///   symbolit tila|pois|paalle|loydetty|himmea|koko <pt>   nostojen 3D-mallit (Symbolimallit, löydös 160); tila = taso 1
+    ///                             (erikoismallit, arkkityypit), tasot 2–3 (instanssit tyypeittäin, LOD, piirtokutsut) ja
+    ///                             arkkityyppien kolmiot LOD0/LOD1
+    ///   symbolit taso23 0|1       tasojen 2–3 arkkityypit pois/päälle (A/B-mittaus, oletus 1)
     ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
@@ -710,11 +713,14 @@ namespace Matkakirja
                     break;
                 case "symbolit":
                 {
-                    // symbolit tila|pois|paalle|koko <pt> (löydös 160, 3D-symbolinostot)
+                    // symbolit tila|pois|paalle|koko <pt>|taso23 0|1 (löydös 160, 3D-symbolinostot)
                     string m = o.Length > 1 ? o[1] : "tila";
                     if (m == "pois" || m == "paalle") Symbolimallit.Paalla = m == "paalle";
+                    else if (m == "taso23" && o.Length > 2) Symbolimallit.Taso23 = o[2] != "0" && o[2] != "pois";
                     else if (m == "loydetty" || m == "himmea") Symbolimallit.PakotaLoydetty = m == "loydetty";
                     else if (m == "koko" && o.Length > 2) Symbolimallit.KokoPt = float.Parse(o[2], CultureInfo.InvariantCulture);
+                    // Natiivi-UI kysyy OnMallia merkkejä päivittäessään: näytettävät uudelleen, jotta 2D-merkit palaavat tai lähtevät.
+                    if (m != "tila") NostoKerros.Instanssi?.Herata();
                     PallonLepo.Muuttui("symbolit");
                     Debug.Log("MATKAKIRJA symbolit " + m + ": " + Symbolimallit.Tila());
                     break;
