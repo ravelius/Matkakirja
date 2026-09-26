@@ -180,3 +180,9 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 159 | Vektorireitit (1873-reitit, kuljettu reitti) häipyvät horisontin lähellä enemmän — sama etäisyyshäivytys kuin 153:ssa nostoille. | Natiiviseppä (Linssiseppä kynäviiva) |
 | 160 | Kolmiulotteiset symbolinostot: tason 1 nostoille (esim. Delfoi, Akropolis) 3D-mallit kartalle, kun mallit on tehty tai tilattu (PD/CC tai omat); niille sama horisonttihäivytys kuin muille kohteille. Ensin suunnitelma: mitkä nostot, mallien lähde/tekotapa, koko ja hinta kehykselle. | Natiiviseppä (suunnitelma) + Fable (tilaus omistajalle) |
 | 161 | Kolmiulotteinen, liioitellun iso lipputanko kohdemaan pääkaupungissa/keskipisteessä, kohdemaan 1873-lippu liehuu oikeissa väreissään (kartan ainoa täysvärinen kohde); vain yksi maa kerrallaan. Liehuu saapumisen ajan ja kosketuksen jälkeen muutaman sekunnin, jähmettyy levossa (lepopiirto 0). Häipyy horisontin mukana kuten 153. Koe build 21. | Natiiviseppä (Linssiseppä liehunta 144:n pohjalta) |
+
+## Build 20 (1.0.20) — omistajan löydökset 26.9. klo 11.5x
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 162 | Kartan saapumisanimaatio (elävä kartta kohta 1) käynnistyy vasta pulun luennan jälkeen — nyt se pyörii luennan ja kortin aikana eikä näy pelaajalle. Sama elävien hetkien tapahtumille. | Linssiseppä (ajoitus) + Pelikoodari (tapahtuma luenta päättyi) |
