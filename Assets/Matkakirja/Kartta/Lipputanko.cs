@@ -38,8 +38,14 @@ namespace Matkakirja
         bool piilossaZoom;
         /// <summary>Liioiteltu perspektiivi päällä (komento `lipputanko perspektiivi 0|1`); käyrä LiioiteltuPerspektiivi.</summary>
         public static bool Perspektiivi = true;
-        /// <summary>Tangon vähimmäiskulma katseeseen perspektiivin kanssa (ruudun keskellä).</summary>
-        public const float PerspektiiviMinKulma = 15f;
+        /// <summary>
+        /// Perspektiivin ruutukallistus käyrän kulmasta (0,45: reunalla 55° → tanko nojaa ruudulla 25° ulospäin). Kolmikko
+        /// 26.9. (lokit/lippu-perspektiivi/kolmikko.jpg): koko kulma tangon omana kallistuksena kaatoi tangon makaamaan
+        /// sivuttain ja litisti kankaan keskellä, joten tanko seisoo ruudulla (MinKulma) ja nojaa vain ruudun tasossa.
+        /// </summary>
+        public const float PerspektiiviNojaus = 0.45f;
+        /// <summary>Pystysuunta (dy): ruudun yläosassa tanko näkyy pidempänä, alaosassa lyhyempänä (kulma katseeseen ± tämä × k).</summary>
+        public const float PerspektiiviPysty = 0.3f;
         /// <summary>Lipun korkeus tangon korkeudesta.</summary>
         public const float LipunOsuus = 0.36f;
         /// <summary>Tangon pienin kulma katseeseen (°): ylhäältä katsottuna tanko kallistuu näkyviin.</summary>
@@ -257,33 +263,35 @@ namespace Matkakirja
             // Akseli: normaali, mutta vähintään MinKulma katseesta (normaalin ja katseen tasossa, katseesta poispäin).
             float kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(n, v), -1f, 1f)) * Mathf.Rad2Deg;
             Vector3 akseli = n;
-            // LIIOITELTU PERSPEKTIIVI (omistaja 26.9. klo 21.4x; yhteinen käyrä Linssisepän LiioiteltuPerspektiivi.Kallistus):
-            // ruudun keskellä suoraan ylhäältä, reunoja kohti tanko kallistuu poispäin keskipisteestä (0 → 55°, smootherstep),
-            // liioittelu häipyy kameran oman kallistuksen mukana (0 → 40°).
+            // LIIOITELTU PERSPEKTIIVI (omistaja 26.9. klo 21.4x; yhteinen käyrä Linssisepän LiioiteltuPerspektiivi.Kallistus,
+            // häipyy kameran kallistuksen mukana 0 → 40°). Lipulle kevennettynä (Fable 26.9. klo 22.3x): tanko seisoo ruudulla
+            // kuten ennen (vähintään MinKulma katseesta, kallistus ruudun ylöspäin), ja perspektiivi vain nojauttaa sitä ruudun
+            // tasossa keskeltä poispäin (vaakasuunta dx) sekä pidentää ruudun yläosassa ja lyhentää alaosassa (dy).
+            float k = 0f, dx = 0f, dy = 0f;
             if (Perspektiivi)
             {
                 Vector3 sp = kamera.WorldToScreenPoint(p);
-                var (k, dx, dy) = Matkakirja.Linssit.Kamera.LiioiteltuPerspektiivi.Kallistus(sp.x, sp.y, Screen.width, Screen.height,
+                var (kk0, dx0, dy0) = Matkakirja.Linssit.Kamera.LiioiteltuPerspektiivi.Kallistus(sp.x, sp.y, Screen.width, Screen.height,
                     kierto != null ? kierto.KaytettyKallistus : 0.0);
-                Vector3 oikeaT = Vector3.ProjectOnPlane(kamera.transform.right, n).normalized;
-                Vector3 ylosT = Vector3.ProjectOnPlane(kamera.transform.up, n).normalized;
-                Vector3 ulos = oikeaT * (float)dx + ylosT * (float)dy;
-                if (k > 0.01 && ulos.sqrMagnitude > 1e-10f)
-                {
-                    float kr = (float)k * Mathf.Deg2Rad;
-                    akseli = (n * Mathf.Cos(kr) + ulos.normalized * Mathf.Sin(kr)).normalized;
-                    kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(akseli, v), -1f, 1f)) * Mathf.Rad2Deg;
-                }
+                k = (float)kk0; dx = (float)dx0; dy = (float)dy0;
             }
-            // Perspektiivin kanssa ruudun keskellä lähes suoraan ylhäältä (omistajan sääntö), vain PerspektiiviMinKulma, ettei
-            // tanko ole pelkkä piste; ilman perspektiiviä entinen MinKulma.
-            float minKulma = Perspektiivi ? PerspektiiviMinKulma : MinKulma;
+            float minKulma = Mathf.Clamp(MinKulma + PerspektiiviPysty * k * dy, 25f, 85f);
+            Vector3 ylos = Vector3.ProjectOnPlane(kamera.transform.up, v).normalized;
             if (kulma < minKulma)
             {
                 // Kallistus ruudun ylöspäin (ylhäältä katsottuna tanko "seisoo" kartalla; normaalin oma suunta on silloin satunnainen).
-                Vector3 t = Vector3.ProjectOnPlane(kamera.transform.up, v).normalized;
                 float a = minKulma * Mathf.Deg2Rad;
-                akseli = (v * Mathf.Cos(a) + t * Mathf.Sin(a)).normalized;
+                akseli = (v * Mathf.Cos(a) + ylos * Mathf.Sin(a)).normalized;
+            }
+            if (k > 0.01f && Mathf.Abs(dx) > 1e-4f)
+            {
+                // Nojaus ruudun tasossa: akselin katseeseen kohtisuora osa kiertyy kulman θ verran kohti ruudun oikeaa (dx > 0)
+                // tai vasenta; katseen suuntainen osa ja siten tangon näkyvä pituus pysyvät.
+                Vector3 oikea = Vector3.Cross(v, ylos).normalized;
+                if (Vector3.Dot(oikea, kamera.transform.right) < 0f) oikea = -oikea;
+                float th = PerspektiiviNojaus * k * dx * Mathf.Deg2Rad;
+                float av = Vector3.Dot(akseli, v), at = Vector3.Dot(akseli, ylos), ar = Vector3.Dot(akseli, oikea);
+                akseli = (v * av + ylos * (at * Mathf.Cos(th) - ar * Mathf.Sin(th)) + oikea * (at * Mathf.Sin(th) + ar * Mathf.Cos(th))).normalized;
             }
             Vector3 eteen = Vector3.ProjectOnPlane(v, akseli);
             if (eteen.sqrMagnitude < 1e-8f) eteen = Vector3.ProjectOnPlane(-kamera.transform.forward, akseli);
