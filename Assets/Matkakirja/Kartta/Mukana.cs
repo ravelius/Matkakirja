@@ -7,8 +7,9 @@ namespace Matkakirja
     /// <summary>
     /// BUILDIIN MUKANA (Raamattu ESILATAUSPOLITIIKKA kohta 1, Fable 25.9.2026 löydös 118): tiedostot, jotka soivat ilman
     /// verkkoa (StreamingAssets/mukana/, lähteet LAHDE.txt). Polku(url) palauttaa mukana olevan tiedoston polun, jos
-    /// osoitteen tiedostonimi (ilman kyselyä) löytyy sieltä, muuten null. Kutsujat (Puhe, Aanisoitin) käyttävät sitä
-    /// ennen välimuistia ja verkkoa.
+    /// osoitteen tiedostonimi (ilman kyselyä) löytyy sieltä, muuten null. Kutsujat (Puhe, Aanisoitin, Kuvat) käyttävät sitä
+    /// ennen välimuistia ja verkkoa. Build 19 (Pelikoodarin kylmämittaus, kohta 1): myös PNG-kuvat — nostotyyppien
+    /// kuvakkeet (merkki-*.png) ja pulun kypäräkuva — joita haettiin kylmänä verkosta jopa 1,4 s.
     /// </summary>
     public static class Mukana
     {
@@ -24,7 +25,8 @@ namespace Matkakirja
                 try
                 {
                     if (Directory.Exists(kansio))
-                        foreach (var f in Directory.GetFiles(kansio, "*.mp3")) tiedostot[Path.GetFileName(f)] = f;
+                        foreach (var malli in new[] { "*.mp3", "*.png" })
+                            foreach (var f in Directory.GetFiles(kansio, malli)) tiedostot[Path.GetFileName(f)] = f;
                 }
                 catch (IOException) { }
                 Debug.Log($"MATKAKIRJA mukana: {tiedostot.Count} tiedostoa buildissa");

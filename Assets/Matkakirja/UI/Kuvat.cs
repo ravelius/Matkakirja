@@ -333,7 +333,8 @@ namespace Matkakirja.Natiivi
         {
             Texture2D tulos = null;
             string levy = Valimuisti(reitit[0]);
-            VerkkoOdotus.Osuma("kuva", File.Exists(levy));
+            string mukana = Mukana.Polku(reitit[0]);
+            VerkkoOdotus.Osuma("kuva", mukana != null || File.Exists(levy));
             // Löydös 63: Unity ei pura WebP:tä (kohdekarttojen miniatyyripiirrokset ovat ämpärissä vain webp:nä),
             // joten webp kulkee ImageIO-purun kautta (Natiivisepän MatkakirjaKuvat_Pura, iOS 14+).
             if (OnWebpOsoite(reitit[0]))
@@ -341,7 +342,14 @@ namespace Matkakirja.Natiivi
                 var w = LataaWebp(avain, reitit, levy, t => tulos = t);
                 while (w.MoveNext()) yield return w.Current;
             }
-            else if (File.Exists(levy))
+            else if (mukana != null && mukana.EndsWith(".png"))
+            {
+                // Kohta 1: buildissa mukana (nostotyyppien kuvakkeet, pulun kuva) → ei verkkoa eikä välimuistia.
+                using var l = UnityWebRequestTexture.GetTexture("file://" + mukana, true);
+                yield return l.SendWebRequest();
+                tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
+            }
+            if (tulos == null && !OnWebpOsoite(reitit[0]) && File.Exists(levy))
             {
                 using var l = UnityWebRequestTexture.GetTexture("file://" + levy, true);
                 yield return l.SendWebRequest();

@@ -7,7 +7,7 @@
 // käännettävää peliä:
 //   pohja        Rakennus.LaattaUrl                        Z0–Z5   (Web Mercator, jpg)
 //   maasto       Rakennus.MaastoUrl (layer.json)           Z0–Z5   (quantized-mesh, layer.jsonin available-alueet)
-//   bmng         KarttaKerrokset.SatelliittiVersio/Meri    Z0–Z4   (lennon Blue Marble: valintanäkymä ja musta verho)
+//   bmng         KarttaKerrokset.SatelliittiVersio/Meri    Z0–Z5   (lennon Blue Marble: valintanäkymä ja musta verho)
 //   vektorit     Vektorikerros.OletusVersio                luettelo + l0–l2 (rannikko, rajat)
 //   napakalotit  NapaKannet.KalottiVersio/KalottiPaate     pohjoinen, etela
 //
@@ -22,7 +22,7 @@ import { fileURLToPath } from 'node:url';
 
 const AMPARI = 'https://media.matkakirja.app/';
 const JUURI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const TASOT = { pohja: [0, 5], maasto: [0, 5], bmng: [0, 4], vektorit: 2 };
+const TASOT = { pohja: [0, 5], maasto: [0, 5], bmng: [0, 5], vektorit: 2 };
 
 const arg = (nimi, oletus) => {
   const i = process.argv.indexOf(nimi);
