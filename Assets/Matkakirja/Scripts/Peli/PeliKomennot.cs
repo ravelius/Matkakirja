@@ -34,6 +34,7 @@
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
 //                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
+//   jatka-matka               aloitusnäkymän "Jatka matkaa" (tallennettu matka)
 //   muste tila|loyda <valo> | muste maakunnat <ISO>  Elävä kartta: noston kokoluokka ja löytötila, löydön kirjaus, laskurit
 //   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
 //   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
@@ -276,6 +277,9 @@ namespace Matkakirja.Natiivi
                     if (A(1) == "profiler") return "=" + CpuMittari.Profiloi(A(2) != "pois");
                     if (A(1) == "mittaa") return CpuMittari.Mittaa(float.TryParse(A(2), out var cs) ? cs : 10f, A(3), A(4) == "piirto");
                     return "cpu lista | cpu profiler [pois] | cpu mittaa [s] [suodatin|-|kaikki] [piirto] | cpu tila";
+                case "jatka-matka":
+                    // Aloitusnäkymän "Jatka matkaa" (tallennettu matka), esim. muste-tilan säilymisen todennus.
+                    return ohjain.Jatka();
                 case "muste":
                     // Elävä kartta (PeliOhjain.Muste.cs): muste tila|loyda <valo>, muste maakunnat <ISO>.
                     return ohjain.MusteKomento(A(1), A(2));

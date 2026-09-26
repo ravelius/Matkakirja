@@ -1,8 +1,9 @@
 // PeliOhjain.Muste — ELÄVÄ KARTTA, "isoisän muste" (omistaja 26.9.2026; docs/raportit/elava-kartta-suunnitelma-20260926.md
 // kohdat 2–3; Pelikoodari). Säännöt ovat Peli/KarttaMuste.cs:ssä; tämä lukee datan, pitää löydöt tallennuksessa ja kertoo
 // tapahtumat piirrolle (Natiiviseppä: NostonMuste) ja kartussille (Natiivi-UI: MaakuntaHeraa, MaakuntaValmis, NostoLoytyi).
-// Data: kokoelma karttavalot — kokoluokka ("paakohde" | "kohde" | "pieni", skeema 1.45; puuttuessa taso), maakunta
-// ("ISO:tunnus") ja salaisuus (true = maakunnan salaisuus-nosto). Jäsennys taustasäikeessä kerran.
+// Data: kokoelma karttavalot — kokoluokka ("paakohde" | "kohde" | "pieni", skeema 1.45; puuttuessa taso) ja maakunta
+// ("ISO:tunnus"); salaisuudet kokoelmasta maakuntasalaisuudet (id "salaisuus:<tunnus>", maakunta; skeema 1.47) tai
+// karttavalorivin salaisuus: true. Jäsennys taustasäikeessä kerran.
 // Testikomento: muste tila <valo> | muste loyda <valo> | muste maakunnat <ISO>.
 using System;
 using System.Collections;
@@ -62,10 +63,13 @@ namespace Matkakirja.Natiivi
         {
             if (muste != null || musteHaussa) yield break;
             musteHaussa = true;
-            string teksti = null;
+            string teksti = null, salaisuudet = null;
             yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, true, Taso.TamaKaupunki);
             if (teksti == null) { musteHaussa = false; yield break; }
-            var tyo = Task.Run(() => LueMuste(teksti));
+            // Maakuntien salaisuudet omana kokoelmanaan (skeema 1.47, Siirtoseppä #3285): ei karttavaloina, ettei vanha
+            // build piirrä niitä tavallisina nostoina. Valinnainen.
+            yield return Sisalto.HaeTeksti("maakuntasalaisuudet", t => salaisuudet = t, true, Taso.TamaKaupunki);
+            var tyo = Task.Run(() => LueMuste(teksti, salaisuudet));
             while (!tyo.IsCompleted) yield return null;
             musteHaussa = false;
             if (tyo.IsFaulted) { Debug.LogWarning("MATKAKIRJA peli: muste ei jäsenny: " + tyo.Exception?.GetBaseException().Message); yield break; }
@@ -74,7 +78,7 @@ namespace Matkakirja.Natiivi
             try { MusteValmis?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
-        static KarttaMuste LueMuste(string json)
+        static KarttaMuste LueMuste(string json, string salaisuudet)
         {
             var m = new KarttaMuste();
             var juuri = MiniJson.Jasenna(json) as Dictionary<string, object>;
@@ -86,6 +90,10 @@ namespace Matkakirja.Natiivi
                 var taso = MiniJson.Luku(o, "taso") is double d ? (int)d : (int?)null;
                 m.LisaaNosto(id, maakunta, KarttaMuste.Luokka(MiniJson.Teksti(o, "kokoluokka"), taso));
             }
+            if (salaisuudet != null)
+                foreach (var a in MiniJson.Kentta(MiniJson.Jasenna(salaisuudet) as Dictionary<string, object>, "alkiot") as List<object> ?? new List<object>())
+                    if (a is Dictionary<string, object> o && MiniJson.Teksti(o, "id") is string id)
+                        m.LisaaSalaisuus(MiniJson.Teksti(o, "maakunta"), id);
             return m;
         }
 
