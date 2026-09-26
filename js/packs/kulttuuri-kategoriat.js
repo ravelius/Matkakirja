@@ -115486,6 +115486,281 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Americo-Liberians',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Kap Palmasin niemi ja
+       * sen kaupunki Harper, Marylandin piirikunnan pääkaupunki. Taustatiedot
+       * englannin Wikipediasta (Harper, Liberia; Cape Palmas; Maryland County;
+       * Cavalla River; Pleebo; William Tubman; William V. S. Tubman University;
+       * Cuttington University; Diocese of Cape Palmas; Cape Palmas Airport;
+       * J. J. Dossen; Partners In Health: Liberia) ja Wikivoyagesta (Harper,
+       * Liberia) — teksti omaa. Turvallisuus Wikivoyagen Liberia-artikkelin
+       * Stay safe- ja Stay healthy -osioista; osio on YK:n Liberian-operaation
+       * (päättyi 2018) ajalta ja koskee lähinnä Monroviaa, ja se sanotaan
+       * tekstissä suoraan. Hinnat, aikataulut ja aukioloajat jätetty pois, koska
+       * Wikivoyagen Harper-artikkeli on keskeneräinen ja tiedot vuosien takaa.
+       * Nostojen ja gallerioiden aiheita (grebot, siirtokunnan perustaminen,
+       * majakka, laguuni ja kalastajakanootit, vapaamuurarien maja ja New
+       * Orleansin kaltaiset talot, Russwurm, lippu, uudisraivaajien muistomerkki,
+       * vuosien 1856–57 sota, litografia 1853) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja wikitekstistä, ja kuvat
+       * katsottu silmin. Pystykuva: auringonlasku Harperin rannassa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Harper River.jpg',
+          lyhyt: 'Poika katsoo auringonlaskua Harperin rannassa, ja kalastusvene kelluu lahdella.',
+          selite: 'Poika seisoo siluettina matalassa rantavedessä Harperissa, ja '
+            + 'auringonlaskun edessä kelluu puinen kalastusvene. Taustalla on '
+            + 'palmujen peittämä niemi. Kuvaaja on otsikoinut kuvan Harperin '
+            + 'kalastajista ja kalakaupasta. Kuva on otettu maaliskuussa '
+            + '2020.',
+          lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kap Palmas tarkoittaa nykyään käytännössä Harperia, Marylandin '
+          + 'piirikunnan pääkaupunkia Liberian kaakkoiskärjessä. Perille on '
+          + 'pitkä matka: pääkaupunki Monroviasta ajetaan tänne maanteitse '
+          + 'parikymmentä tuntia, ja Wikivoyage mainitsee vaihtoehtoina '
+          + 'veneen ja lähetyslentojärjestö MAF:n pienkoneet. '
+          + 'Norsunluurannikon puolelta kaupunkiin pääsee Taboun kautta. '
+          + 'Liberian viisumia haettaessa tarvitaan '
+          + 'keltakuumerokotustodistus. Paras matka-aika on kuiva kausi '
+          + 'marraskuusta huhtikuuhun, sillä toukokuusta lokakuuhun sataa '
+          + 'runsaasti ja matka-ajat venyvät. Kortilla ei pitkälle pääse, '
+          + 'joten mukaan otetaan Yhdysvaltain dollareita käteisenä. '
+          + 'Wikivoyagen Liberia-opas muistuttaa, että Monrovian '
+          + 'ulkopuolella matkustaminen on vaikeaa eikä sitä kannata tehdä '
+          + 'yksin, joten paikallinen yhteyshenkilö tai opas on tärkein '
+          + 'matkavaruste.',
+        artikkeli: {
+          nimi: 'Matkailijan Kap Palmas',
+          teksti: 'Liberian kaakkoiskärjen rantakaupunki palkitsee pitkän matkan tekijän.',
+          nosto: 'Kap Palmas on Guineanlahden länsiraja: kansainvälisen '
+            + 'hydrografisen järjestön mukaan lahti alkaa juuri tästä '
+            + 'niemestä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rantoja niemen molemmin puolin',
+              teksti: 'Wikivoyage luonnehtii Harperia ennen kaikkea kauniiden '
+                + 'rantojensa ja rantatalojensa kaupungiksi. Monet talot ovat '
+                + 'rapistuneet, mutta rannat ovat ennallaan, ja ne ovat '
+                + 'kaupunkilaisten omaa vapaa-ajan aluetta. Sataman vieressä on '
+                + 'Cape Palmas Beach, ja niemen länsipuolella Hoffman-joki laskee '
+                + 'mereen suistona. Itään päin rannikkoa riittää noin 21 '
+                + 'kilometriä Cavalla-joen suulle, jossa Liberian ja '
+                + 'Norsunluurannikon raja kohtaa meren. Välissä vuorottelevat '
+                + 'kaartuvat hiekkalahdet, palmurivit ja tummat kalliolaatat, ja '
+                + 'Marylandin piirikunnan kylärannoilla, kuten Fishtownissa, '
+                + 'palmut kurottuvat lähes vesirajaan asti. Paikalliset '
+                + 'kokoontuvat rannoille uimaan ja leikkimään, ja rantavedessä '
+                + 'voi olla kymmeniä ihmisiä yhtä aikaa, kuten Change Beachilla '
+                + 'otetusta ilmakuvasta näkyy. Niemenkärjessä seisova on '
+                + 'maantieteellisessä kulmapisteessä: täällä Länsi-Afrikan '
+                + 'rannikko lakkaa kulkemasta etelään ja kääntyy itään, ja '
+                + 'kansainvälinen hydrografinen järjestö pitää niemeä '
+                + 'Guineanlahden länsirajana. Uimaan kannattaa silti mennä '
+                + 'harkiten. Wikivoyagen Liberia-opas varoittaa maan rannikon '
+                + 'voimakkaista virtauksista ja kovasta aallokosta, ja Monrovian '
+                + 'suosituimmillakin rannoilla uimapaikat on rajattu erikseen. '
+                + 'Harperin rannoista vastaavia tietoja ei ole, joten uimaan '
+                + 'mennään vain paikallisten neuvomiin kohtiin, ei yksin eikä '
+                + 'pimeällä. Paras rantasää osuu kuivalle kaudelle, mutta '
+                + 'marras–maaliskuussa puhaltava kuiva harmattan-tuuli voi tuoda '
+                + 'ilmaan pölyä.',
+              kuva: [
+                {
+                  tiedosto: 'Photo of Residents of Harper District playing in the Change Beach, Harper district, Maryland County, Liberia.jpg',
+                  lyhyt: 'Harperilaisia uimassa ja leikkimässä Change Beachin rantavedessä ylhäältä kuvattuna.',
+                  selite: 'Ilmakuvassa kymmenet ihmiset kahlaavat, uivat ja leikkivät '
+                    + 'aaltojen huuhtoessa hiekkarantaa, ja vesi vaihtuu rannan '
+                    + 'ruskeasta ulapan vihreään. Kuvaajan mukaan he ovat Harperin '
+                    + 'piirin asukkaita Change Beachilla. Kuva on otettu maaliskuussa '
+                    + '2020.',
+                  lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Photo of Fish town Beach and waves.jpg',
+                  lyhyt: 'Kookospalmut kaartuvat Fishtownin hiekkarannan ylle Marylandin piirikunnassa.',
+                  selite: 'Kookospalmut kaartuvat hiekkarannan ylle, ja matalat aallot '
+                    + 'huuhtovat rantaa. Kauempana rantaa reunustaa kivikko, ja '
+                    + 'horisontissa näkyy metsäinen rannikko. Kuva on otettu '
+                    + 'maaliskuussa 2020 Fishtownin rannalla Marylandin '
+                    + 'piirikunnassa.',
+                  lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'At Maryland County, Liberia.jpg',
+                  lyhyt: 'Tummat kalliolaatat ja palmumetsä reunustavat hiekkalahtea Marylandin piirikunnassa.',
+                  selite: 'Etualalla hiekkaan painuneita tummia kalliolaattoja, taustalla '
+                    + 'kaartuva lahti ja tiheä palmumetsä ukkospilvien alla. Oikealla '
+                    + 'rantaan laskee tyyni joensuu. Kuva on otettu helmikuussa 2020.',
+                  lahde: 'Bethel Anthony Chisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Parikymmentä tuntia tietä',
+              teksti: 'Harper on Liberian syrjäisimpiä kaupunkeja. Avustusjärjestö '
+                + 'Partners In Healthin mukaan Marylandin piirikuntaan on '
+                + 'Monroviasta noin 20 tunnin ajomatka, ja Wikivoyage varoittaa, '
+                + 'että sadekaudella matka-ajat pitenevät huomattavasti ja maan '
+                + 'huonokuntoisilla teillä nelivetoauto voi olla välttämätön. '
+                + 'Nopeammin pääsee meritse tai ilmateitse: Wikivoyage mainitsee '
+                + 'Monroviasta lähtevät veneet ja lähetyslentojärjestö MAF:n '
+                + 'lennot, ja kaupunkia palvelee Cape Palmasin lentokenttä. '
+                + 'Yhteydet ja aikataulut tarkistetaan paikan päällä, sillä '
+                + 'kirjalliset tiedot vanhenevat nopeasti. Idästä tultaessa '
+                + 'Harperiin pääsee Norsunluurannikon Taboun kautta. Raja kulkee '
+                + 'Cavalla-jokea pitkin: 515 kilometrin pituinen joki on Liberian '
+                + 'pisin, ja nimi on peräisin sen suulla elävästä '
+                + 'piikkimakrillista. Paikan päällä liikutaan '
+                + 'moottoripyörätakseilla, joita liberialaiset kutsuvat '
+                + 'pen-peniksi. Wikivoyagen mukaan Harperissa voi pysäyttää '
+                + 'käytännössä minkä tahansa moottoripyörän, jonka kyydissä ei '
+                + 'ole matkustajaa. Samat kuljettajat vievät myös Pleeboon, '
+                + 'piirikunnan suurimpaan kaupunkiin ja maaseudun kauppapaikkaan, '
+                + 'jonne kulkevat lisäksi yhteistaksit ja kuorma-autot. Valtion '
+                + 'liikennelaitos NTA ilmoitti vuonna 2024 avaavansa Harperin ja '
+                + 'Pleebon välisen linjansa uudelleen, ja paikallisen senaattorin '
+                + 'mukaan taksit kulkevat välin nykyään sadekaudellakin. Pimeällä '
+                + 'liikkumista kannattaa silti välttää, sillä Wikivoyage neuvoo, '
+                + 'ettei Liberiassa kuljeta jalan pimeän tultua.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 011 - An unpaved road from Zwedru to Harper. A white Renault 4 - Grand Gedeh County, Liberia, 1978.tiff',
+                lyhyt: 'Valkoinen Renault 4 hiekkatiellä Zwedrusta Harperiin vuonna 1978.',
+                selite: 'Päällystämätön tie ylittää pienen sillan tiheän metsän halki, '
+                  + 'ja tiellä ajaa valkoinen pikkuauto. Kuva on otettu vuonna 1978 '
+                  + 'Grand Gedehin piirikunnassa Zwedrun ja Harperin välisellä '
+                  + 'tiellä.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Presidentin kotikaupunki',
+              teksti: 'Harper on Liberian pitkäaikaisimman presidentin, William V. S. '
+                + 'Tubmanin, kotikaupunki. Tubman syntyi täällä marraskuussa 1895 '
+                + 'ja kävi koulunsa Harperissa ja metodistien Cape Palmas '
+                + 'Seminaryssa. Hänen isoisänsä Alexander Tubman oli '
+                + 'kivenhakkaaja, kenraali, edustajainhuoneen puhemies ja '
+                + 'metodistisaarnaaja, ja hänen patsaansa on kuvattu kaupungissa '
+                + '1970-luvulla. Nuori Tubman valittiin vuonna 1923 Marylandin '
+                + 'piirikunnan senaattoriksi vain 28-vuotiaana, ja hän on yhä '
+                + 'Liberian historian nuorin senaattori. Presidenttinä vuosina '
+                + '1944–1971 hän houkutteli maahan ulkomaisia sijoituksia '
+                + 'avointen ovien politiikallaan, ja häntä kutsutaan modernin '
+                + 'Liberian isäksi. Hänen kaudellaan Liberia alkoi rekisteröidä '
+                + 'ulkomaisten varustamoiden laivoja, ja Wikivoyagen mukaan maan '
+                + 'laivarekisteri on yhä maailman toiseksi suurin '
+                + 'mukavuuslippurekisteri. Hallinto oli kuitenkin itsevaltainen, '
+                + 'ja poliittisia vastustajia vainottiin. Tubmanin kartano seisoo '
+                + 'meren rannalla South Baltimore Streetillä, jonka nimi '
+                + 'muistuttaa siirtokunnan juurista Yhdysvaltain Marylandissa. '
+                + 'Wikivoyage kuvaa taloa pahasti rapistuneeksi mutta yhä yhdeksi '
+                + 'kaupungin vaikuttavimmista rakennuksista, ja Wikipedian mukaan '
+                + 'raunioissa asui vuonna 2021 valtaajia. Koska talossa asutaan, '
+                + 'sisälle ei mennä kysymättä, eikä asukkaita kuvata ilman lupaa. '
+                + 'Tubman-ajan vauraus näkyy nykyään lähinnä raunioina: '
+                + 'Wikivoyagen mukaan vuosina 1989–2003 käydyt sisällissodat '
+                + 'tuhosivat lähes kaiken hänen aikanaan rakennetun '
+                + 'infrastruktuurin, ja ennen sotia tärkeä hallintokeskus Harper '
+                + 'toipuu yhä.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 018 - Tubman Mansion of William V. S. Tubman (Liberian president from 1944-1971), South Baltimore Street - Harper, Maryland County, Liberia, 1978.tiff',
+                lyhyt: 'Presidentti Tubmanin kartano palmujen keskellä Atlantin rannalla Harperissa vuonna 1978.',
+                selite: 'Vaalea, tasakattoinen kartano seisoo palmujen ja korkeiden '
+                  + 'puiden keskellä meren rannalla, ja sen ohi kulkee päällystetty '
+                  + 'tie, jolla on pysäköitynä valkoinen Renault 4. Kuva on otettu '
+                  + 'South Baltimore Streetillä vuonna 1978, jolloin Tubman oli '
+                  + 'kuollut seitsemän vuotta aiemmin.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kirkontornit ja kampus',
+              teksti: 'Harperin keskustassa kirkot ovat yhä kaupunkikuvan '
+                + 'maamerkkejä. Wikivoyage nostaa nähtävyyksiksi episkopaalisen '
+                + 'Pyhän Markuksen kirkon ja Mount Scottin yhdistyneen '
+                + 'metodistikirkon, jotka ovat vain parinsadan metrin päässä '
+                + 'toisistaan ja Tubmanin kartanosta. Kaksitorninen Mount Scott '
+                + 'erottuu kauas, ja se seisoo korkealla pengerryksellä kadun '
+                + 'yläpuolella. Myös katolisella kirkolla on niemellä vahva '
+                + 'asema: Cape Palmasin hiippakunta on yksi Liberian kolmesta '
+                + 'katolisesta hiippakunnasta, ja se sai nykyisen asemansa vuonna '
+                + '1981. Kouluilla on Kap Palmasissa pitkät perinteet. '
+                + 'Episkopaalikirkko perusti tänne vuonna 1889 Cuttington '
+                + 'Collegen, jota pidetään Saharan eteläpuolisen Afrikan '
+                + 'vanhimpana yksityisenä, molemmille sukupuolille avoimena '
+                + 'nelivuotisena korkeakouluna. Se muutti myöhemmin Bongin '
+                + 'piirikuntaan Suacocoon, jossa se toimii yhä yliopistona. '
+                + 'Nykyään Harperin oma korkeakoulu on William V. S. Tubmanin '
+                + 'yliopisto noin neljän kilometrin päässä keskustasta '
+                + 'koilliseen. Se perustettiin vuonna 1978 teknilliseksi '
+                + 'opistoksi, mutta sisällissota sulki sen koko 1990-luvuksi. '
+                + 'Presidentti Ellen Johnson Sirleaf avasi opiston uudelleen '
+                + 'vuonna 2008, ja seuraavana vuonna se sai yliopiston aseman. Se '
+                + 'on yksi Liberian kahdesta julkisesta yliopistosta, ja sen '
+                + 'kuudessa tiedekunnassa opiskellaan esimerkiksi maataloutta, '
+                + 'terveystieteitä ja tekniikkaa. Ensimmäiset tutkinnot jaettiin '
+                + 'kesäkuussa 2014, ja vuonna 2016 yliopistosta valmistui '
+                + 'Liberian ensimmäinen naispuolinen koneinsinööri. Kampukselle '
+                + 'kannattaa sopia vierailu etukäteen.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 015 - Mount Scott United Methodist Church with palm trees - Harper, Maryland County, Liberia, 1978.tiff',
+                lyhyt: 'Mount Scottin metodistikirkon kaksoistornit siluettina Harperin taivasta vasten.',
+                selite: 'Kirkon kaksi suippoa, ristein kruunattua tornia ja päätykolmio '
+                  + 'erottuvat tummana siluettina pilvistä taivasta vasten, ja '
+                  + 'vasemmalla kohoaa hoikka palmu. Kirkko seisoo korkealla '
+                  + 'pengerryksellä. Kuva on otettu vuonna 1978.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Palmuvoita, käteistä ja varovaisuutta',
+              teksti: 'Harperin ruokapaikat ovat pieniä ja yksinkertaisia. Wikivoyage '
+                + 'mainitsee kaupungin kahvikojut, joissa tarjotaan paikallisin '
+                + 'mausteisiin paistettuja munia ja leipää, pikakahvia, '
+                + 'säilykelihaa, sardiineja ja tulista spagettia. Liberialaisessa '
+                + 'keittiössä perusruokaa ovat riisi ja kastikkeet, kuten '
+                + 'öljypalmun hedelmistä keitetty palmuvoi, kassavanlehtikastike '
+                + 'ja bataatinlehdet, sekä kassavasta tehty fufu keiton kera. '
+                + 'Oluista yleisin on paikallinen Club. Juomavesi ostetaan '
+                + 'pullotettuna, sillä kaduilla myytävän pussiveden puhtaudesta '
+                + 'ei ole takeita. Wikivoyagen mukaan kortteja voi Liberiassa '
+                + 'käyttää vain vähän, joten mukaan otetaan Yhdysvaltain '
+                + 'dollareita ja pieniin ostoksiin Liberian dollareita. '
+                + 'Terveysasiat hoidetaan ennen lähtöä: malaria ja lavantauti '
+                + 'ovat maassa yleisiä, ja ulkomaalaisille sopivia lääkäreitä on '
+                + 'vähän. Harperin J. J. Dossenin muistosairaala on yksi '
+                + 'Kaakkois-Liberian sairaaloista, ja Partners In Health on '
+                + 'vuodesta 2015 auttanut rakentamaan piirikunnan '
+                + 'terveydenhuoltoa uudelleen ebolaepidemian jälkeen. '
+                + 'Turvallisuudesta on sanottava suoraan. Wikivoyagen '
+                + 'Liberia-oppaan turvallisuusosio on kirjoitettu YK:n '
+                + 'rauhanturvaoperaation aikaan, joka päättyi 2018, ja se koskee '
+                + 'lähinnä Monroviaa, mutta sen neuvot ovat selvät: pimeällä ei '
+                + 'kävellä, autonovet pidetään lukittuina, autioita paikkoja '
+                + 'vältetään ja liikutaan porukassa. Oppaan mukaan aseelliset '
+                + 'ryöstöt ja raiskaukset ovat yleisiä, ja Monrovian ulkopuolella '
+                + 'se ei suosittele liikkumaan yksin. Matkasta kannattaa '
+                + 'ilmoittaa oman maan edustustolle ja tarkistaa ajantasainen '
+                + 'matkustustiedote. Oppaan mukaan valtaosa liberialaisista on '
+                + 'silti ystävällisiä ja helposti lähestyttäviä: jokaista '
+                + 'tervehditään, suoraa kieltäytymistä pidetään töykeänä, eikä '
+                + 'sisällissodista kannata aloittaa keskustelua, koska ne '
+                + 'herättävät yhä kipeitä muistoja.',
+              kuva: {
+                tiedosto: 'A prepared dish of palm butter soup.jpg',
+                lyhyt: 'Kulhollinen riisiä ja palmuvoikastiketta kalan kera punaisella tarjottimella.',
+                selite: 'Punaisella tarjottimella on kulhollinen valkoista riisiä ja '
+                  + 'toinen kulho oranssinruskeaa palmuvoikastiketta, jossa on '
+                  + 'kalaa ja tomaattia. Kuva on otettu Liberiassa huhtikuussa 2025 '
+                  + 'koululaisten wikikilpailua varten.',
+                lahde: 'Foundation Digital Schools Liberia, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -115624,6 +115899,243 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Boa Vista, Roraima',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Pelin boavista on Roraiman
+       * pääkaupunki Brasiliassa (southamerica-pakka, BRA), ei Kap Verden
+       * saari. Taustatiedot englannin Wikipediasta (Boa Vista, Roraima;
+       * Roraima; BR-174 (Brazil highway); Boa Vista International Airport;
+       * Takutu River Bridge; Bonfim, Roraima; Pacaraima; Waimiri-Atroari;
+       * Tepequém; Lake Caracaranã), Wikivoyagen Boa Vista- ja Roraima-
+       * sivuilta sekä portugalin Wikipediasta (Boa Vista (Roraima): kulttuuri
+       * ja gastronomia; Roraima: keittiö, musiikki, juhlat ja aikavyöhyke;
+       * Orla Taumanan; Serra do Tepequém; Lago Caracaranã) — teksti omaa.
+       * Wikivoyagen hinnat ja aikataulut ovat vanhoja, joten ne jätettiin
+       * pois. Nostojen aiheita (karjatila ja seurakunta, Rio Branco
+       * kulkuväylänä, viuhkakaava, kuivan kauden hiekkasärkät,
+       * garimpeiro-patsas, päiväntasaajan pohjoispuoli ja rantapromenadi,
+       * lavrado ja termiittikeot, sadekauden tulvat, Roraima-vuori, im
+       * Thurnin ensinousu, Kadonnut maailma) eikä valokuva- ja
+       * saapumistekstien aiheita (Pintolândian vastaanottokeskus, Igarapé
+       * Água Boa, paistettu piraija) toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Funilin putouksen kallioleikkaus Tepequémin ylängöllä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cachoeira do Funil.jpg',
+          lyhyt: 'Funilin puro virtaa kapeassa kallioleikkauksessa Tepequémin ylängön reunalla.',
+          selite: 'Funilin putouksen puro Serra do Tepequémin ylängöllä kulkee '
+            + 'kapeassa, punertavassa kallioleikkauksessa, jonka uomaa '
+            + 'timantinkaivajat aikanaan muokkasivat dynamiitilla; taustalla '
+            + 'aukeaa metsäinen laakso.',
+          lahde: 'Ingrid Torres de Macedo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Boa Vistaan saavutaan useimmiten lentäen Manausin tai '
+          + 'Brasílian kautta, sillä Roraimasta muualle Brasiliaan vie vain '
+          + 'yksi päällystetty maantie, ja sekin suljetaan öisin '
+          + 'Waimiri-Atroarien alueen kohdalla. Kaupunki on silti portti kahteen '
+          + 'naapurimaahan: Guyanan rajalle Bonfimiin on reilut sata '
+          + 'kilometriä ja Venezuelan rajalle Pacaraimaan parisataa. '
+          + 'Kesäkuussa kaupunki tanssii quadrilhaa koillisbrasilialaiseen '
+          + 'tapaan, ja pöydässä maistuu paçoca, keltaisen maniokkijauhon '
+          + 'kanssa survottu kuivaliha. Savannin takana odottavat Tepequémin '
+          + 'ylängön vesiputoukset ja Caracaranã-järven rannat, joita '
+          + 'reunustavat cashewpuut.',
+        artikkeli: {
+          nimi: 'Matkailijan Boa Vista',
+          teksti: 'Boa Vistaan tullaan taivaalta tai yhtä ainoaa maantietä, '
+            + 'ja sieltä jatketaan kolmeen maahan.',
+          nosto: 'Takutu-joen rajasillalla auto vaihtaa tien puolta: '
+            + 'Guyanassa ajetaan vasemmalla, Brasiliassa oikealla.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen tai BR-174:ää pitkin',
+              teksti: 'Useimmat matkailijat saapuvat Boa Vistaan lentäen. '
+                + 'Kaupungin lentoasema on Brasilian pohjoisin, jolle lennetään '
+                + 'säännöllisiä vuoroja, ja lennot kulkevat tavallisesti '
+                + 'Manausin tai Brasílian kautta. Kenttä on nimetty vuodesta 2009 '
+                + 'lentäjä ja poliitikko Atlas Brasil Cantanhedeen mukaan, joka '
+                + 'raivasi 1950-luvulla tietä ilmailulle Roraimassa, ja '
+                + 'keskustaan on vain noin neljä kilometriä. Maitse Boa Vistaan '
+                + 'tullaan Manausista BR-174-tietä, joka on ainoa päällystetty '
+                + 'tie Roraimasta muualle Brasiliaan. Bussilla matka kestää '
+                + 'reilusti yli kymmenen tuntia, ja matkan varrella '
+                + 'liittovaltion poliisi tarkastaa matkustajien henkilöpaperit. '
+                + 'Tie halkaisee Waimiri-Atroarien alkuperäiskansan alueen, ja '
+                + 'sen kohdalla tie suljetaan joka ilta puoli seitsemältä ja '
+                + 'avataan vasta aamukuudelta. Alueella ei ole suotavaa '
+                + 'pysähtyä, sillä metsän eläimet ja osa asukkaista liikkuvat '
+                + 'öisin, ja eläinonnettomuuksia sattuu päivälläkin. '
+                + 'Kaukoliikenteen bussit lähtevät José Amador de Oliveira – '
+                + 'Batonin kansainväliseltä linja-autoasemalta, josta pääsee '
+                + 'Roraiman pikkukaupunkeihin, Amazonasin osavaltioon, Guyanaan '
+                + 'ja Venezuelaan. Kello kannattaa siirtää heti perillä: '
+                + 'Roraima on tunnin jäljessä Brasílian virallisesta ajasta.',
+              kuva: [
+                {
+                  tiedosto: 'Entrada do Aeroporto Internacional de Boa Vista - Atlas Brasil Cantanhede, Boa Vista RR.jpg',
+                  lyhyt: 'Boa Vistan kansainvälisen lentoaseman sisäänkäynti ja lennonjohtotorni.',
+                  selite: 'Boa Vistan lentoaseman terminaalin kaareva katos ja '
+                    + 'sininen nimikyltti toukokuussa 2011; katon takana kohoaa '
+                    + 'lennonjohtotorni, ja edustalla on pysäköityjä autoja.',
+                  lahde: 'Jorge Andrade, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Rodoviária Internacional de Boa Vista - panoramio.jpg',
+                  lyhyt: 'Kansainväliseltä linja-autoasemalta bussit lähtevät Manausiin ja naapurimaihin.',
+                  selite: 'Boa Vistan kansainvälisen linja-autoaseman julkisivu '
+                    + 'iltahämärissä huhtikuussa 2007: katoksen edessä seisovat '
+                    + 'mopo ja katukeittiön kärry, ja taivaalla on tummia '
+                    + 'pilviä.',
+                  lahde: 'Rogério Regis, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'BR-174 Sul.jpg',
+                  lyhyt: 'BR-174 kulkee mäkisessä sademetsässä Waimiri-Atroarien alueella.',
+                  selite: 'Päällystetty kaksikaistainen BR-174 nousee ja laskee '
+                    + 'sademetsän halki Waimiri-Atroarien alkuperäiskansan '
+                    + 'alueella; tien oikealla puolella punainen maa paljastuu '
+                    + 'leikkauksessa.',
+                  lahde: 'SallesNeto BR, Wikimedia Commons (Public domain)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Rajan yli Guyanaan ja Venezuelaan',
+              teksti: 'Boa Vistasta pääsee maanteitse kolmeen maahan, ja moni '
+                + 'ulkomaalainen kulkee kaupungin läpi matkalla Manausin ja '
+                + 'Venezuelan välillä. Itään lähtee BR-401, joka ylittää Rio '
+                + 'Brancon heti kaupungin kohdalla Macuxien sillalla ja päättyy '
+                + 'noin 115 kilometrin päässä Bonfimin rajakaupunkiin. '
+                + 'Takutu-joen yli Guyanan Lethemiin vie silta, jonka Brasilia '
+                + 'rakensi ja maksoi ja joka avattiin vuonna 2009. Se on koko '
+                + 'Amerikan ainoa maaraja, jolla autoilija vaihtaa tien puolta: '
+                + 'Guyanassa ajetaan vasemmalla ja Brasiliassa oikealla, ja '
+                + 'vaihto tehdään Guyanan puolella ylikulkusillan avulla. '
+                + 'Lethemistä tie jatkuu Georgetowniin Atlantin rannikolle. '
+                + 'Bonfimin seudulla asuu wapishana- ja macuxi-kansaa, ja moni '
+                + 'puhuu omaa kieltään, portugalia ja englantia. Pohjoiseen '
+                + 'BR-174 nousee noin 220 kilometriä Pacaraimaan Venezuelan '
+                + 'rajalle. Pacaraima on 920 metrin korkeudessa koko '
+                + 'Pohjois-Brasilian korkeimmalla sijaitseva kunta, ja sen '
+                + 'vuoristoilma on selvästi viileämpää kuin kuuman savannin '
+                + 'pääkaupungissa. Rajan takana on Santa Elena de Uairén, ja '
+                + 'sieltä lähtevät myös Roraima-vuoren vaellukset, sillä '
+                + 'vuorelle noustaan vain Venezuelan puolelta.',
+              kuva: {
+                tiedosto: 'Vgm Guiana 054.JPG',
+                lyhyt: 'Tie nousee Takutu-joen rajasillalle, joka vie Bonfimista Guyanan Lethemiin.',
+                selite: 'Katuvalojen reunustama tie nousee Takutu-joen sillalle '
+                  + 'Bonfimin puolella helmikuussa 2012; vihreä kyltti ilmoittaa '
+                  + 'sillan pituudeksi 230 metriä.',
+                lahde: 'SallesNeto BR, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kesäkuussa tanssitaan quadrilhaa',
+              teksti: 'Boa Vistan kulttuuri on paljolti koillisbrasilialaista ja '
+                + 'alkuperäiskansojen perintöä. Roraimaan muutti 1900-luvulla '
+                + 'paljon väkeä etenkin Koillis-Brasiliasta, ja muuttajien '
+                + 'mukana tulivat forró ja sertanejo, jotka ovat yhä kaupungin '
+                + 'kuunnelluimmat musiikkityylit. Boa Vistalla on myös '
+                + 'ystävyyssuhde Caruaruun, Pernambucon osavaltion kaupunkiin '
+                + 'Koillis-Brasiliassa. Vuoden kohokohta on kesäkuun festa '
+                + 'junina. Portugalilaisten tuoma juhla alkaa perinteisesti 12. '
+                + 'kesäkuuta Pyhän Antoniuksen aattona, huipentuu Johannes '
+                + 'Kastajan päivänä 24. kesäkuuta ja päättyy Pyhän Pietarin '
+                + 'päivään 29. kesäkuuta. Juhlaan kuuluvat kokot, ilotulitukset '
+                + 'ja kaduilla tanssittavat kansantanssit. Kaupungin oma juhla '
+                + 'on nimeltään Boa Vista Junina: kojut myyvät ruokaa ja '
+                + 'juomaa, ja lavalla esiintyvät quadrilha-ryhmät värikkäissä '
+                + 'maalaisasuissa. Quadrilha on alun perin eurooppalaisten '
+                + 'hovien tanssi, ja sen askelilla on yhä ranskankieliset '
+                + 'nimet, mikä kertoo hovielämän ja maalaiskulttuurin '
+                + 'vuorovaikutuksesta. Ennen maaseudun juhla on nykyään '
+                + 'Brasiliassa ennen kaikkea kaupunkien juhla. Lokakuun '
+                + 'viides päivä on Roraiman ainoa osavaltion oma vapaapäivä: '
+                + 'silloin muistetaan, että liittovaltion alueesta tuli '
+                + 'osavaltio vuoden 1988 perustuslailla.',
+              kuva: {
+                tiedosto: 'Portal do Arraial 2008 - panoramio.jpg',
+                lyhyt: 'Boa Vista Junina -juhlan portti kesäkuussa 2008 ja sen takana kojujen rivi.',
+                selite: 'Sininen, värikkäin kolmioin koristeltu portti Boa Vista '
+                  + 'Junina -juhlan alueelle kesäkuussa 2008; portin pielissä '
+                  + 'seisoo tanssivia maalaishahmoja esittäviä veistoksia, ja '
+                  + 'taustalla palavat kojujen valot.',
+                lahde: 'Rogério Regis, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Paçocaa, damuridaa ja pepitoja',
+              teksti: 'Roraiman keittiö yhdistää macuxi- ja wapixana-kansojen '
+                + 'perinteitä sekä naapuriosavaltioiden Amazonasin, Parán ja '
+                + 'Maranhãon ruokia. Arjen perusta on riisi ja maniokkijauho eli '
+                + 'farinha, ja joista pyydetään tambaquia, pirarukua ja pacua. '
+                + 'Boa Vistan oma ylpeys on paçoca, jossa kuivattu liha '
+                + 'survotaan keltaisen maniokkijauhon kanssa murumaiseksi '
+                + 'seokseksi. Vuonna 2025 kaupunki sai arvonimen Brasilian '
+                + 'lihapaçocan pääkaupunkina. Macuxien perinneruoka on '
+                + 'damurida-keitto, ja jokikaloista tehdään tambaquipataa ja '
+                + 'grillattua tambaquia. Cuscuz ja tapioka kuuluvat '
+                + 'aamiaispöytään, ja kaduilla myydään pepitoa, Venezuelasta '
+                + 'tullutta täytettyä voileipää. Iltaisin joenrannan Orla '
+                + 'Taumananilla soi brasilialainen populaarimusiikki ja '
+                + 'roraimeira, paikallinen musiikki, jonka lauluissa kerrotaan '
+                + 'Roraiman luonnosta, alkuperäiskansoista, tavoista ja '
+                + 'muuttoliikkeestä. Sen oma rytmi makunaimeira sekoittaa '
+                + 'alkuperäiskansojen parixara-rituaalien, karibialaisen '
+                + 'merenguen ja salsan sekä Amazonin rytmejä. Viikonlopun '
+                + 'ostokset kannattaa hoitaa ajoissa, sillä monet kaupat '
+                + 'sulkeutuvat lauantaina aikaisin ja pysyvät sunnuntaina '
+                + 'kiinni.',
+              kuva: {
+                tiedosto: 'Paçoca salgada.JPG',
+                lyhyt: 'Suolaista paçocaa: kuivalihaa survottuna keltaisen maniokkijauhon kanssa.',
+                selite: 'Rasiallinen suolaista paçocaa, jonka keltaisesta '
+                  + 'jauhosta erottuu punertavia lihasuikaleita; kauha on '
+                  + 'jätetty seokseen tarjoilua varten.',
+                lahde: 'Mizunoryu, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Ylängön putoukset ja cashewpuiden järvi',
+              teksti: 'Boa Vistan parhaat retkikohteet ovat parin sadan '
+                + 'kilometrin päässä. Luoteessa Amajarin kunnassa kohoaa Serra '
+                + 'do Tepequém, ylänkö, jonka laki nousee noin tuhanteen '
+                + 'metriin. Asfalttitie vie ylös Vila do Paivan kylään, jossa on '
+                + 'majataloja, ravintoloita ja leirintäpaikkoja. Ylängöllä '
+                + 'vaelletaan ja pyöräillään, laskeudutaan köysillä, tutkitaan '
+                + 'luolia, tarkkaillaan lintuja ja uidaan Paivan, Sobralin, '
+                + 'Baratan ja Funilin putouksilla. Maisemassa näkyy yhä '
+                + 'timanttikuumeen jälki: kaivaminen alkoi virallisesti '
+                + '1930-luvulla ja oli vilkkaimmillaan 1940- ja 1950-luvuilla. '
+                + 'Nyt ylängön talous nojaa matkailuun ja käsitöihin, kuten '
+                + 'vuolukiviesineisiin. Idässä BR-401:n varrella, noin 180 '
+                + 'kilometrin päässä Normandian kunnassa, on Caracaranã-järvi, '
+                + 'jota kiertävät hienohiekkaiset rannat ja luonnonvaraiset '
+                + 'cashewpuut. Järvi on Raposa Serra do Solin alkuperäiskansojen '
+                + 'alueella, ja se avattiin matkailijoille uudelleen vuonna '
+                + '2013. Kävijät maksavat pienen pääsymaksun, alkoholi on '
+                + 'alueella kielletty, eikä rannalla ole enää majoitusta, joten '
+                + 'yöksi ajetaan 18 kilometrin päähän Normandiaan. Pacaraiman '
+                + 'kunnassa on Pedra Pintada, noin 40 metriä korkea '
+                + 'graniittimonoliitti, jonka kylkeä peittävät punaiset '
+                + 'kalliomaalaukset. Se on alkuperäiskansojen maalla, ja '
+                + 'käynnille tarvitaan alkuperäiskansaviraston FUNAIn lupa.',
+              kuva: {
+                tiedosto: 'Crespusculo.jpg',
+                lyhyt: 'Ilta laskeutuu Caracaranã-järvelle Raposa Serra do Solin alueella.',
+                selite: 'Pitkällä valotuksella kuvattu iltanäkymä '
+                  + 'Caracaranã-järveltä kesäkuussa 2013: rantapuun siluetti '
+                  + 'kaartuu veden ylle, ja horisontissa siintää vuorijono '
+                  + 'pilvisen taivaan alla.',
+                lahde: 'Guignipper, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -121716,6 +122228,290 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Arrau turtle',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on jokisaari ja
+       * kansallispuisto, ei kaupunki, joten opas kulkee porttikaupunkien,
+       * joen ja vuodenaikojen kautta. Taustatiedot englannin Wikipediasta
+       * (Bananal Island, Araguaia National Park, Araguaia River, Cantão
+       * State Park, Karajá, Palmas (Tocantins), World Indigenous Games,
+       * Bananal antbird, Arapaima, Peacock bass, Potamotrygonidae, FUNAI),
+       * Wikivoyagesta (Araguaia National Park, Tocantins, Palmas, Brazil:
+       * Stay healthy ja Stay safe) ja portugalin Wikipediasta (Ilha do
+       * Bananal: Transbananal, Mata do Mamãon avá-canoeirot, ilmasto;
+       * Parque Nacional do Araguaia: ICMBion toimisto Piumissa; Parque
+       * Estadual do Cantão: järvet, igapó, piranheira, palot; Caseara, Pium
+       * (nimen tupi-etymologia), Rio do Côco (Praia do Sol), Araguacema
+       * (Praia da Gaivota), São Miguel do Araguaia (Luiz Alves,
+       * Carnaraguaia), Rio Javaés (kalalajit), Piracema, Período de
+       * defeso, Praça dos Girassóis, Aeroporto de São Félix do Araguaia,
+       * Juanahu Karajá, Jogos Mundiais dos Povos Indígenas, Narubia
+       * Werreria) — teksti omaa. Hinnat, aukioloajat ja aikataulut jätetty
+       * pois. Nostojen ja gallerioiden aiheita (saaren synty ja koko,
+       * löytöhistoria ja Villas Bôas, suojelu 1959/1973/Unesco, tulvapulssi
+       * yleisesti, jättiläissaukot ja jaguaari, jokidelfiini,
+       * kilpikonnarannat, inyjen kieli ja väkiluku, ritxoko-nuket,
+       * sulkakoristeet) ei toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta, kuvat katsottu silmin ja
+       * tiedostonimet tarkistettu käyttämättömiksi. Pystykuva: jabiru
+       * Cantãon hiekkasärkällä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Parque Estadual do Cantão - Jorge Lansarin(01).jpg',
+          lyhyt: 'Jabiru Araguaian hiekkasärkällä Cantãon puistossa saaren pohjoiskärjen naapurissa.',
+          selite: 'Suuri valkoinen haikaralintu, jolla on musta paljas pää '
+            + 'ja kaula sekä punainen kaulus, seisoo pitkillä jaloillaan '
+            + 'hiekalla kuivan pensaikon edessä. Kuva on otettu toukokuussa '
+            + '2022 Cantãon osavaltionpuistossa, jonka Javaés-joki erottaa '
+            + 'Araguaian kansallispuistosta.',
+          lahde: 'Jorge Lansarin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ilha do Bananalille ei johda siltaa, joten matka päättyy '
+          + 'aina veneeseen. Tavallisin reitti kulkee Tocantinsin '
+          + 'pääkaupungin Palmasin kautta itärannan pikkukaupunkeihin, mutta '
+          + 'saarelle pääsee myös lännestä Mato Grosson São Félix do '
+          + 'Araguaiasta ja etelästä Goiásin Luiz Alvesista. Pohjoinen '
+          + 'kolmannes on Araguaian kansallispuistoa ja loput kaksi '
+          + 'kolmannesta alkuperäiskansojen maata, jonne mennään vain luvan ja '
+          + 'paikallisen oppaan kanssa. Paras matka-aika on kuiva kausi '
+          + 'toukokuusta lokakuuhun, kun joesta nousee valkoisia hiekkasärkkiä '
+          + 'ja rannoille pystytetään kesäleirejä. Marraskuusta huhtikuuhun '
+          + 'sataa, ja alkuvuodesta osa saaresta on veden alla. Kalastajat '
+          + 'tulevat tucunarén perässä, lintuharrastajat etsivät saaren omaa '
+          + 'muurahaislintua. Hyttyskarkote ja aurinkosuoja kuuluvat '
+          + 'varustukseen, ja keltakuumerokotusta kannattaa harkita.',
+        artikkeli: {
+          nimi: 'Matkailijan Ilha do Bananal',
+          teksti: 'Maailman suurimmalle jokisaarelle mennään veneellä, oppaan kanssa ja joen aikataulussa.',
+          nosto: 'Kansallispuiston toimisto on Piumissa, kaupungissa, jonka '
+            + 'nimi tulee vanhan tupin kielen mäkärää tarkoittavasta sanasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Joen yli, ei sillalla',
+              teksti: 'Useimmat matkat alkavat Palmasista, Tocantinsin '
+                + 'pääkaupungista, joka rakennettiin tyhjälle maalle vuodesta '
+                + '1990 alkaen Brasílian mallin mukaan. Wikivoyagen mukaan '
+                + 'kaupunkiin pääsee parhaiten etelästä Brasílian kautta niin '
+                + 'lentäen kuin bussilla, ja lentoasema on muutaman '
+                + 'kymmenen kilometrin päässä keskustasta. Kaupungin sydän on '
+                + 'valtava Praça dos Girassóis -aukio, jolla seisoo '
+                + 'osavaltion hallituspalatsi Palácio Araguaia. Sen aulassa voi '
+                + 'asettua valokuvaan Brasilian geodeettiseen keskipisteeseen. '
+                + 'Palmasista jatketaan maanteitse länteen. Noin 124 '
+                + 'kilometrin päässä olevassa Piumissa on kansallispuistoa '
+                + 'hoitavan ICMBio-viraston paikallistoimisto, ja 256 '
+                + 'kilometrin päässä oleva Caseara on Cantãon '
+                + 'osavaltionpuiston pääportti. Kalastajien perustamassa '
+                + 'kylässä on lauttasatama, ja Wikivoyage neuvoo vuokraamaan '
+                + 'sieltä veneen ja oppaan saaren pohjoiskärkeen. Mato Grosson '
+                + 'puolella São Félix do Araguaialla on oma lentokenttänsä, ja '
+                + 'joen toisella puolella on saaren suurin kylä, Santa Isabel '
+                + 'do Morro. Etelässä Goiásin Luiz Alvesin rannasta lähtee '
+                + 'veneitä jokiretkille ja kalaan. Saaren poikki kulkee '
+                + 'liittovaltion valtatie BR-242, paikallisesti Transbananal, '
+                + 'mutta se on päällystämätön maantie, jota sadekaudella ei '
+                + 'käytännössä pysty ajamaan. Sen päällystämisestä '
+                + 'alkuperäiskansojen maan halki on kiistelty vuosia. '
+                + 'Kuivimpina viikkoina kesä–elokuussa joen voi ylittää '
+                + 'nelivetoautolla kahlaten, muulloin vene on ainoa keino. '
+                + 'Saarella liikutaan jalan, polkupyörällä tai hevosella.',
+              kuva: [
+                {
+                  tiedosto: 'Cascata Pca Girassois Palmas TO.jpg',
+                  lyhyt: 'Tekoputous ja Palácio Araguaia Praça dos Girassóis -aukiolla Palmasissa.',
+                  selite: 'Kivilohkareiden välistä valuva tekoputous laskee '
+                    + 'vihreään altaaseen, ja sen takana näkyy osavaltion '
+                    + 'hallituspalatsi Palácio Araguaia vaakunoineen. Putous '
+                    + 'kuvaa Tocantinsin jokia ja vesiputouksia. Kuva on '
+                    + 'otettu maaliskuussa 2018.',
+                  lahde: 'Flávio André / MTur Destinos, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Rio Araguaia durante Travessia na Balsa 01.jpg',
+                  lyhyt: 'Leveä Araguaia lautan kannelta Tocantinsin ja Parán välillä.',
+                  selite: 'Leveä, harmaa Araguaia-joki virtaa pilvisen taivaan '
+                    + 'alla, ja vasemmalla rannalla kasvaa tiheää metsää. Kuva '
+                    + 'on otettu maaliskuussa 2017 lautalta, joka ylittää '
+                    + 'joen Tocantinsin ja Parán osavaltioiden välillä.',
+                  lahde: 'Ruan Lion, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Porto de Luis Alves, barco dos pirangueiros passeio de turistas e pesca esportiva - panoramio.jpg',
+                  lyhyt: 'Moottoriveneitä Luiz Alvesin rantatörmän juurella Araguaia-joella.',
+                  selite: 'Kapeita moottoriveneitä on vedetty Luiz Alvesin '
+                    + 'rantatörmän juurelle ruskeaan jokiveteen, ja törmän '
+                    + 'yläpuolella näkyy taloja ja bambupensaita. Veneillä '
+                    + 'viedään matkailijoita jokiretkille ja kalaan. Kuva on '
+                    + 'otettu toukokuussa 2012.',
+                  lahde: 'Angelo Vieira, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tucunaré ja kutukauden kielto',
+              teksti: 'Araguaia on urheilukalastajien joki. Pelkästään '
+                + 'saaren itäpuolella virtaavasta Javaés-haarasta pyydetään '
+                + 'muun muassa tucunaréa, pintadoa, pacua, piraijaa, suurta '
+                + 'pirarara-monnia ja pirarucua. Halutuin saalis on '
+                + 'tucunaré eli englanniksi peacock bass, kirjoahventen '
+                + 'sukuun kuuluva taistelija, jonka suvun suurimmat lajit '
+                + 'kasvavat metrin mittaisiksi. Urheilukalastajat matkustavat '
+                + 'sen vuoksi Brasiliaan varta vasten. Casearan '
+                + 'viereisessä Coco-joessa pyydetään tucunarén lisäksi jaú- ja '
+                + 'curimatã-kaloja. Saaren pohjoispuolen Cantãon noin 900 '
+                + 'järveä ovat entisiä joenmutkia, jotka jäävät kuivana '
+                + 'kautena erilleen joesta. Niissä kutevat tucunaré ja moni muu '
+                + 'laji, ja siksi aluetta kutsutaan Araguaian lastenkamariksi. '
+                + 'Samat syrjäiset järvet ovat yksi pirarucun viimeisistä '
+                + 'turvapaikoista. Maailman suurimpiin makean veden kaloihin '
+                + 'kuuluva pirarucu nousee pintaan hengittämään ilmaa, mikä '
+                + 'tekee siitä helpon saaliin. Brasilia kielsi sen '
+                + 'kalastuksen vuonna 1996, kun kannat olivat hupenemassa. '
+                + 'Pyydä ja päästä -kalastuksessa suuri kala pidetään '
+                + 'vedessä, sillä pirarucun nostaminen kokonaan ilmaan '
+                + 'valokuvaa varten voi repiä sen selkärangan vierellä '
+                + 'kulkevan suuren verisuonen. Kalastusta säätelee myös '
+                + 'piracema, kalojen kutuvaellus, jonka nimi tulee tupin '
+                + 'sanoista kala ja lähtö. Kutuaikana marraskuusta helmikuuhun '
+                + 'ympäristövirasto Ibaman määräämä kausi kieltää tai rajoittaa '
+                + 'kalastusta, joten kalamatka kannattaa ajoittaa kuivaan '
+                + 'kauteen.',
+              kuva: {
+                tiedosto: 'Pesca na Área de Proteção Ambiental Meandros do Araguaia (01).jpg',
+                lyhyt: 'Kaksi kalastajaa kahlaa Araguaian matalikossa suuren kalan roiskiessa vettä.',
+                selite: 'Kaksi lippalakkista miestä seisoo ruskeassa, '
+                  + 'matalassa jokivedessä, ja heidän edessään suuri kala '
+                  + 'roiskii vettä pinnalla. Taustalla on hiekkasärkkä ja '
+                  + 'rantametsää. Kuva on otettu heinäkuussa 2020 Araguaian '
+                  + 'mutkien suojelualueella saaren eteläpuolella.',
+                lahde: 'Cuia Elias, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vieraana inyjen maalla',
+              teksti: 'Saaren kaksi eteläistä kolmannesta on alkuperäiskansojen '
+                + 'aluetta, jota hoitaa liittovaltion alkuperäiskansavirasto '
+                + 'FUNAI, ja kansallispuiston päällekin ulottuu kaksi '
+                + 'alkuperäiskansojen aluetta. Kyliin ei mennä omin '
+                + 'päin: Wikivoyage neuvoo käyttämään luvanvaraista ja '
+                + 'hyvämaineista matkanjärjestäjää, ja kuvaamiseen kysytään '
+                + 'aina lupa. Saaren keskiosan Mata do Mamão -metsässä elää '
+                + 'pieni avá-canoeiro-ryhmä, joka torjuu kaiken yhteyden '
+                + 'ulkomaailmaan, jopa naapurikyliin. Se on Tocantinsin ainoa '
+                + 'eristäytyneenä elävä alkuperäiskansojen ryhmä, eikä sitä '
+                + 'pidä yrittää etsiä. Karajá-perheet leiriytyvät kuivana '
+                + 'kautena kalastamaan joen rannoille ja viettävät silloin '
+                + 'juhlansa, ja sadekaudeksi ne siirtyvät korkeammalla '
+                + 'sijaitseviin kyliin. Tärkein juhla on Hetohokỹ, poikien '
+                + 'aikuistumisriitti. Siitä kertoo O Povo que Veio do Fundo do '
+                + 'Rio eli Kansa, joka tuli joen pohjasta. Juanahu Karaján '
+                + 'vuonna 2014 valmistunut elokuva on ensimmäinen karajá-'
+                + 'ohjaajan tekemä pitkä elokuva omasta kulttuurista. '
+                + 'Kehomaalaus on yhä elävää taidetta, ja sen tekijät ovat '
+                + 'enimmäkseen naisia. Värit saadaan genipapuhedelmän '
+                + 'mehusta, puuhiilestä ja urukusta. Inyjen kulttuuria näkee '
+                + 'myös Palmasissa, joka järjesti lokakuussa 2015 '
+                + 'ensimmäiset alkuperäiskansojen maailmankisat. Niihin '
+                + 'osallistui yli 2 000 urheilijaa ja kulttuurivierasta, ja '
+                + 'lajeina olivat esimerkiksi tukkijuoksu, keihäänheitto ja '
+                + 'xikunahati, pallopeli jossa palloa saa koskettaa vain '
+                + 'päällä. Kisat saivat myös arvostelua: Ilha do Bananalin '
+                + 'karajá-perheestä lähtöisin oleva aktivisti Narubia '
+                + 'Werreria moitti niitä siitä, ettei suurin osa Brasilian '
+                + 'kansoista päässyt mukaan.',
+              kuva: {
+                tiedosto: 'Xambioas.jpg',
+                lyhyt: 'Xambioá-kansan edustajia sulkakoristein ja kehomaalauksin Palmasissa 2015.',
+                selite: 'Poika ja nainen seisovat sulkakoristeissa ja '
+                  + 'helmikaulakoruissa, ja heidän vartaloihinsa on maalattu '
+                  + 'tummia kuvioita. Taustalla nuori mies kantaa selässään '
+                  + 'suurta sulkaviuhkaa. Xambioá on yksi karajan kielen '
+                  + 'murteista ja sitä puhuvan ryhmän nimi. Kuva on otettu lokakuussa 2015 alkuperäiskansojen '
+                  + 'maailmankisoissa Palmasissa.',
+                lahde: 'Marcelo Camargo/Agência Brasil, Wikimedia Commons (CC BY 3.0 br)',
+              },
+            },
+            {
+              otsikko: 'Saaren oma lintu ja tulvametsät',
+              teksti: 'Lintuharrastajan tärkein laji on bananalinmuurahaislintu '
+                + '(Cercomacra ferdinandi), jonka levinneisyysalue keskittyy '
+                + 'juuri Ilha do Bananalille. Noin 16-senttinen koiras on '
+                + 'lähes kokomusta, siivissä valkoisia täpliä, ja naaras on '
+                + 'harmaa. Lintu piileskelee köynnösten tiheiköissä '
+                + 'rantametsissä ja vanhojen joenmutkien järvien lähellä, ja '
+                + 'sen hätäinen, vinkuva laulu on kuvattu tavuina tudr-tudr-'
+                + 'tudr. Laji on luokiteltu silmälläpidettäväksi, sillä '
+                + 'vesivoimaloiden padot uhkaavat hukuttaa sen kapeaa '
+                + 'elinympäristöä. Saaren savanneilla elää nanduja, '
+                + 'ja kansallispuistossa elää muun muassa suohirviä, '
+                + 'harjasusia, jättiläismuurahaiskarhuja ja kapybaroita. '
+                + 'Rantapuissa pesii hoatsin, jonka poikasilla on '
+                + 'siivissään kaksi kynttä kiipeilyä varten, ja vesissä elävät '
+                + 'anakonda ja mustakaimaani. Pohjoiskärjen naapurissa '
+                + 'Cantãon osavaltionpuistossa on vierailukeskus, majoitusta '
+                + 'ja opastettuja polkuja. Yhdessä selvityksessä puistosta '
+                + 'laskettiin 317 lintulajia. Sen igapó-tulvametsissä vesi '
+                + 'seisoo maaliskuun huipputulvan aikaan viidestä '
+                + 'kahdeksaan metriä syvänä ja virtaa muutaman kilometrin '
+                + 'tuntivauhtia puiden välissä. Helmikuussa piranheira-puu '
+                + 'pudottaa lehtensä, ja uusiin lehtiin kerääntyy toukkia. '
+                + 'Kun tuuli ravistaa latvoja, toukat putoavat veteen ja '
+                + 'houkuttelevat paikalle piraijaparvia, joista puu on '
+                + 'saanut nimensä.',
+              kuva: {
+                tiedosto: 'Cercomacra ferdinandi - Bananal antbird (male).jpg',
+                lyhyt: 'Bananalinmuurahaislinnun musta koiras oksalla Piumissa Tocantinsissa.',
+                selite: 'Lähes kokomusta pieni lintu istuu vaakasuoralla '
+                  + 'oksalla, ja sen siivessä erottuu valkoisia täpliä ja '
+                  + 'reunuksia. Kuva on otettu syyskuussa 2015 Canguçun '
+                  + 'luonnonsuojelualueella Piumin kunnassa.',
+                lahde: 'Marco Cruz, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Rantakausi, rauskut ja savu',
+              teksti: 'Saarella on kaksi selvää vuodenaikaa. Marraskuusta '
+                + 'huhtikuuhun sataa, ja tammi–maaliskuussa joki tulvii niin, '
+                + 'että osa saaresta jää veden alle. Toukokuusta lokakuuhun on '
+                + 'kuivaa. Heinäkuussa lämpötila laskee alimmillaan noin 22 '
+                + 'asteeseen, ja elo–syyskuussa päivälämpö nousee 38 '
+                + 'asteeseen. Kuiva kausi on myös rantakausi. Joen laskiessa '
+                + 'esiin nousevat valkoiset hiekkasärkät, joille pystytetään '
+                + 'heinäkuun lomakaudeksi olkikattoisia katoksia, kioskeja ja '
+                + 'telttaleirejä. Pohjoisempana Araguacemassa kaupungin '
+                + 'edustan saaren Praia da Gaivota -ranta vetää heinäkuussa '
+                + 'tuhansia kävijöitä, Casearan Coco-joen Praia do Sol on '
+                + 'auki kesäkuusta syyskuuhun, ja Luiz Alvesissa vietetään '
+                + 'heinäkuussa Carnaraguaia-karnevaalia. Hiekkapohjaisella '
+                + 'matalikolla kannattaa kävellä jalkoja laahaten, sillä '
+                + 'makean veden rauskut lepäävät pohjassa ja pistävät '
+                + 'myrkkypiikillään yleensä silloin, kun uimari astuu niiden '
+                + 'päälle. Kuivan kauden varjopuoli ovat maastopalot. '
+                + 'Salaman sytyttämät palot sammuvat yleensä pian '
+                + 'seuraavaan sateeseen, mutta ihmisen sytyttämät leviävät '
+                + 'paahteessa laajoiksi, ja Ilha do Bananalilla niitä on '
+                + 'usein. Hyttyset ja mäkärät kuuluvat maisemaan, ja '
+                + 'kansallispuiston toimistokaupungin Piumin nimikin tulee '
+                + 'vanhan tupin kielen mäkärää tarkoittavasta sanasta. '
+                + 'Wikivoyagen mukaan keltakuumerokotus ja malarialääkitys '
+                + 'voivat olla tarpeen Mato Grossossa ja Pohjois-Brasiliassa. '
+                + 'Särkillä on vähän '
+                + 'varjoa, joten juomavesi, lierihattu ja pitkähihaiset '
+                + 'vaatteet kuuluvat päiväretkelle.',
+              kuva: {
+                tiedosto: 'Casas de Palha.jpg',
+                lyhyt: 'Olkikattoisia katoksia Araguaian hiekkarannalla heinäkuun rantakaudella.',
+                selite: 'Tyynen joen takana kaartuu vaalea hiekkaranta, '
+                  + 'jolle on rakennettu useita olkikattoisia katoksia, ja '
+                  + 'rannan takana kasvaa vehreää metsää. Kuva on otettu '
+                  + 'heinäkuun alussa 2013 Araguaia-joella Tocantinsissa.',
+                lahde: 'Edivaldo Alves de Sousa, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kulttuuri',
