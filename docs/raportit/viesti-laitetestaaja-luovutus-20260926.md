@@ -14,7 +14,12 @@ ylimääräisiä worktreitä ei.
 - iPadin II + Tekstitys + soitin: AJETTU 05.3x, PASS (7fc314fa7). Ei ajettu b18:ssa: `vieritys koe` nostokortin päällä; Pelikoodarin `verkko raja` (haara
   pelikoodari/verkko-raja, "RAJA saapuminen 0 ms verkko-odotusta: PASS|FAIL"; menee junaan b18:n jälkeen).
 
-## 2. Seuraava kierros (build 19) — kysy Fablelta/kutsu; tarkistuslistat ja opit
+## 1b. Build 19 (fdc47632, käännös 343ca803) — AJETTU 26.9. ~08.3x (raportti savukierros-b19-20260926.md, b117edc23)
+PASS: taustapäivitys (v151 säilyy 2.–3. käynnistyksessä), verkko raja 0 ms, saapuminen 4,8 s + Ohita + verkoton, lepopiirto 2–3/150 (verkon kanssa).
+Avoinna Natiivisepälle/Natiivi-UI:lle: kylmäkäynnistys 5,4–6,1 s (laitemittaus), lepopiirto ei laske `ui offline verkoton`:ssa, Marathon→Attika väri ei näy stillistä
+(loki "herää GRC:Attiki"), `huntu paljastus` ei mene läpi (komento.txt ei kirjaudu), Athos-salaisuuskortti ilman laukaisijaa. Odotan Fablen päätöstä/ohjetta build 20:lle.
+
+## 2. Seuraava kierros (build 20 / seuraava kutsu) — kysy Fablelta/kutsu; tarkistuslistat ja opit
 - Lista: `docs/raportit/savukierros-b18-tarkistuslista.md` (S1–S7 + nostokuvat/vieritys) → päivitä b19:lle;
   pysyvät kohdat: löydös 82 (valintanäkymässä vain kohdekaupungit), lämpövartija (levossa 30 fps, paikallaan>0,
   piirretty ≤3/150), ydinkulku iPhone+iPad, ihmisen-matka-2 + Tekstitys.
