@@ -393,5 +393,25 @@ namespace Matkakirja
 
         static bool osoitinHaussa;
         static string istunnonPolku;
+
+        /// <summary>Istunnon versiopolku (null ennen ensimmäistä VersioPolku-kutsua).</summary>
+        public static string IstunnonPolku => istunnonPolku;
+
+        /// <summary>
+        /// SISÄLTÖ VAIHTUU KESKEN ISTUNNON (PakettiPaivitys, löydös 170): seuraavat haut lukevat uuden valmiin version, ja
+        /// tuore osoitin tallennetaan, jotta seuraava lämmin käynnistys valitsee saman version.
+        /// </summary>
+        public static void VaihdaVersio(string versioPolku, string osoitinTeksti)
+        {
+            if (string.IsNullOrEmpty(versioPolku)) return;
+            istunnonPolku = versioPolku;
+            try
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(ViimeisinPolku));
+                Kirjoita(ViimeisinPolku, versioPolku);
+                if (!string.IsNullOrEmpty(osoitinTeksti) && OsoittimenPolku(osoitinTeksti) != null) Kirjoita(OsoitinValimuisti, osoitinTeksti);
+            }
+            catch (Exception) { }
+        }
     }
 }

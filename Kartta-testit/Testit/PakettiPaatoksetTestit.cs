@@ -103,5 +103,19 @@ namespace Matkakirja.Kartta.Testit
                 using (var f = File.OpenRead(p)) Oleta.Sama(r.Sha256, PakettiPaatokset.Sha256(f), r.Polku);
             }
         }
+
+        [Testi]
+        static void MuuttuneetJaVaihtoKeskenIstunnon()
+        {
+            var vanha = new Dictionary<string, string> { ["kokoelmat/a.json"] = A, ["moduulit/js/packs/maakunnat-luonnehdinnat.json"] = A, ["pois.json"] = B };
+            var uusi = new[] { R("kokoelmat/a.json", A), R("moduulit/js/packs/maakunnat-luonnehdinnat.json", B), R("uusi.json", A) };
+            var m = PakettiPaatokset.Muuttuneet(vanha, uusi);
+            Oleta.Sama("moduulit/js/packs/maakunnat-luonnehdinnat.json,uusi.json,pois.json", string.Join(",", m), "muuttunut, uusi, poistunut");
+            Oleta.Sama(3, PakettiPaatokset.Muuttuneet(null, uusi).Count, "ei vanhaa hakemistoa: kaikki muuttuivat");
+            Oleta.Tosi(PakettiPaatokset.VaihdaKeskenIstunnon(181, 173), "uudempi valmis vaihtuu heti (omistajan 1.0.24 → v181)");
+            Oleta.Tosi(PakettiPaatokset.VaihdaKeskenIstunnon(181, 0), "laiska tila (ei versiota) vaihtuu");
+            Oleta.Tosi(!PakettiPaatokset.VaihdaKeskenIstunnon(179, 181), "palautus odottaa seuraavaa käynnistystä");
+            Oleta.Tosi(!PakettiPaatokset.VaihdaKeskenIstunnon(181, 181), "sama versio");
+        }
     }
 }
