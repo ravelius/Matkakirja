@@ -38,6 +38,7 @@ namespace Matkakirja
         static void Nollaa()
         {
             KokoPt = 90f; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
+            NollaaTasot23();
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -157,6 +158,7 @@ namespace Matkakirja
             if (s == null) { Debug.LogWarning("MATKAKIRJA symbolimallit: varjostin puuttuu"); enabled = false; return; }
             materiaali = new Material(s) { name = "Symbolimalli" };
             lohko = new MaterialPropertyBlock();
+            AloitaTasot23(s);
         }
 
         void LateUpdate()
@@ -182,6 +184,7 @@ namespace Matkakirja
                 }
             foreach (var p in kappaleet)
                 if (!nyt.Contains(p.Key) && p.Value.r.enabled) { p.Value.r.enabled = false; PallonLepo.Muuttui("symbolimallit"); }
+            PiirraTasot23(sallittu ? nk : null);
         }
 
         /// <summary>Paikka ja asento georeferenssin paikallisessa avaruudessa: pystyssä pinnan normaalin suuntaan, +Z pohjoiseen.</summary>
