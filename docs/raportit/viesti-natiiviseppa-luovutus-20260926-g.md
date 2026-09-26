@@ -60,7 +60,7 @@ verhokoe; napakansi; Elävän kartan pallon rajapinnat. Omistajan valinnat 127/1
 Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /tmp/natiiviseppa-vienti-tulossa oli päällä
 03.45 alkaen). Worktreet (3/3 käytössä yllä olevilla haaroilla). Unity-työkopio Matkakirja-proto: puhdas master 6a65ead1.
 
-**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 4bdab584 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
+**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 622f99f3 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
 132 yhdessä Natiivi-UI:n kanssa, verhokoe huntu pois, napakansi.
 
 ## Päivitys klo 04.2x
@@ -72,3 +72,8 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
 - Taustalla yhdistelmäkäännös juna + sumea-132 + liput-144 + lepo-suspend (odottaa vahdin junakäännöstä) → FBBD41D7 (vuoro
   Julkaisijalta kuitattu ~30 min): suspend-A/B `pallo tauko pois|paalle` levossa.
 - Siirtosepän 1.47 (maakuntasalaisuudet omana kokoelmana) kuitattu OK natiiville.
+- Klo 04.25: Fablen päätös SykeJaatyy = true (natiiviseppa/syke-jaatyy 5367e436, juna/b13 d5285af0) + pelikoodari/elava-kartta
+  3ef13a97 (pelilogiikka, tallennuskenttä nostotLoydetty) → juna/b13 **622f99f3** (testit 278/284/300). Fable pyysi mittaamaan
+  lepopiirron (tavoite build 16:n 2–3/151) → yhdistelmäkäännöksen simulaattorikierroksella `ruutu`/`pallo lepo` levossa.
+  Natiivi-UI kääntää liput-144:n junan päälle ja mittaa lipun hiljaisuuden, sitten merge-pyyntö (Fable hyväksyi 144 lepoehdolla).
+  Saapuminen-worktree on nyt haarassa natiiviseppa/syke-jaatyy.

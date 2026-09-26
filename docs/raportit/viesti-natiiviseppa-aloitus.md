@@ -5,7 +5,7 @@ hoitaja ja Unity-, simulaattori- ja laitekäännösten ajaja (Macin käyttäjä 
 NATIIVI PELI ETUSIJALLE (ESILATAUSPOLITIIKKA, LÄMPÖ JA VIRRANKULUTUS) ja ELÄVÄ KARTTA, luovutus
 docs/raportit/viesti-natiiviseppa-luovutus-20260926-g.md (haara selvittaja-3d-luovutus) ja omistajan löydöslista (Fablen haara).
 
-Tila: BUILD 17 = proto-master 6a65ead1 (= juna d04841a0 = käännös 6fd19114) = TF 1.0.17. BUILD 18 -juna juna/b13 4bdab584 (132+150 ja 143b sisässä)
+Tila: BUILD 17 = proto-master 6a65ead1 (= juna d04841a0 = käännös 6fd19114) = TF 1.0.17. BUILD 18 -juna juna/b13 622f99f3 (132+150, 143b, SykeJaatyy = true, Pelikoodarin elava-kartta sisässä)
 (radio-esikuuntelu, Pelikoodarin 149/137 ja tehoste-rekisteri, Siirtosepän paketti-paivitys). Omat haarat odottavat
 todennusta: sumea-132 9e6c488a (Natiivi-UI:n kanssa), liput-144 8324a291 (koekuvat ensin), lepo-suspend 651ad27b (A/B).
 Verhon selvitys: pitäjä on pallo, epäilty s2:n luonti verhon takana → koe huntu pois. Napakansi hämärässä kesken.
