@@ -3261,41 +3261,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Astronominen kello': {
-      aika: '1410',
-      teksti: 'Prahan astronominen kello eli Orloj on maailman vanhin yhä '
-          + 'toimiva astronominen kello — sen vanhin osa valmistui jo '
-          + 'vuonna 1410, ja sen suunnittelivat kellomestari Mikuláš '
-          + 'Kadaňista ja matemaatikko Jan Šindel. Kello ei näytä '
-          + 'pelkästään kellonaikaa, vaan myös Auringon ja Kuun paikan '
-          + 'taivaalla sekä kalenterivuoden.'
-        + '\n\n'
-        + 'Joka tunti kellon yläpuolella avautuu kaksi pientä '
-          + 'ikkunaa, joista kulkee ohi kaikki kaksitoista apostolia. '
-          + 'Samalla luurankona kuvattu Kuolema-hahmo soittaa kelloaan, '
-          + 'ja muutkin kellon vieressä seisovat patsaat liikahtavat. '
-          + 'Legendan mukaan Prahalle käy huonosti, jos kelloa '
-          + 'laiminlyödään.'
-        + '\n\n'
-        + 'Kellon kuunkiertoa näyttävä osa toimii pelkän painovoiman '
-          + 'ja ruuvikierteen avulla eikä tarvitse erillistä moottoria, '
-          + 'ja se osuu kuun vaiheen kohdalleen niin tarkasti, että '
-          + 'virhe on vain noin yksi päivä viidessä vuodessa. Kello '
-          + 'selvisi elossa myös toisen maailmansodan pommituksista '
-          + 'vuonna 1945 ja saatiin korjattua toimintaan jälleen vuonna '
-          + '1948.',
-      kuvat: [
-        {
-          tiedosto: 'Prague - Astronomical Clock Detail 1.JPG',
-          lyhyt: 'Prahan Orloj valmistui 1410 ja on maailman vanhin yhä toimiva astronominen kello.',
-          selite: 'Orlojin vanhin osa valmistui jo vuonna 1410, ja se on maailman '
-            + 'vanhin yhä toimiva astronominen kello: kellonajan lisäksi se '
-            + 'näyttää Auringon ja Kuun paikan taivaalla.',
-          lahde: 'Maros Mraz, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Kansallismuseo: {
       aika: '1885–1891',
       teksti: 'Prahan kansallismuseo perustettiin jo vuonna 1818, mutta '
@@ -3364,6 +3329,14 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Klementinumin barokkikirjaston sali, joka valmistui vuosien 1709 '
             + 'ja 1726 välisessä rakennusvaiheessa.',
           lahde: 'Václav Jiroušek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Prague - Astronomical Clock Detail 1.JPG',
+          lyhyt: 'Vanhankaupungintalon Orloj on kivenheiton päässä: maailman vanhin yhä toimiva astronominen kello, 1410.',
+          selite: 'Kivenheiton päässä Vanhankaupungintalolla tikittää Orloj, '
+            + 'maailman vanhin yhä toimiva astronominen kello — sen vanhin '
+            + 'osa valmistui jo vuonna 1410.',
+          lahde: 'Maros Mraz, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -7577,40 +7550,6 @@ export const NAHTAVYYSJUTUT = {
         + 'kartan Kastilian hoviin, sitten uudelleen ja uudelleen, kunnes '
         + 'joku vihdoin sanoo kyllä.',
     },
-    'Glórian köysirata': {
-      aika: '1885',
-      teksti: 'Osa Lissabonin kaduista nousee niin jyrkkinä mäkinä, että '
-          + 'niitä olisi työlästä kiivetä jalan. Siksi kaupunkiin '
-          + 'rakennettiin hassunhauska kulkuneuvo, joka on osittain '
-          + 'raitiovaunu ja osittain hissi - Glórian köysirata. Se '
-          + 'avattiin vuonna 1885, ja se vie matkustajat '
-          + 'Restauradoresin aukiolta ylös Bairro Alton kaupunginosaan.'
-        + '\n\n'
-        + 'Matka on lyhyt, vain 275 metriä, mutta rinne on niin '
-          + 'jyrkkä - lähes 18 astetta - että matkaan kuluu silti pari '
-          + 'minuuttia. Aluksi pieniä vaunuja liikutti veden '
-          + 'painovoima, sitten höyry, ja lopulta 1910-luvulla rata sai '
-          + 'sähkömoottorit.'
-        + '\n\n'
-        + 'Radan suunnitteli insinööri Raoul Mesnier du Ponsard, ja '
-          + 'saksalaisessa tehtaassa rakennettuihin keltaisiin '
-          + 'vaunuihin mahtuu kerralla 42 matkustajaa ja kuljettaja. '
-          + 'Rata on säilynyt niin hyvin alkuperäisessä asussaan, että '
-          + 'siitä tehtiin Portugalin kansallinen muistomerkki vuonna '
-          + '2002.',
-      kuvat: [
-        {
-          tiedosto: 'Elevador da Glória, Lisbon, 20250604 1603 9346.jpg',
-          lyhyt: 'Vuonna 1885 avattu köysirata nousee 275 metriä Restauradoresilta Bairro Altoon 18 asteen rinnettä.',
-          selite: 'Vuonna 1885 avattu köysirata nousee 275 metrin matkan '
-            + 'Restauradoresin aukiolta Bairro Altoon lähes 18 asteen '
-            + 'rinnettä pitkin, ja sen keltaisiin vaunuihin mahtuu 42 '
-            + 'matkustajaa.',
-          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Rossio: {
       aika: '1755–1874',
       teksti: 'Rossio on yksi Lissabonin vanhimmista aukioista - täällä '
@@ -7647,6 +7586,14 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Aukion keskelle pystytettiin vuonna 1874 korkea pylväs, '
             + 'jonka huipulla seisoo kuningas Pedro IV:n patsas.',
           lahde: 'Felix König, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Elevador da Glória, Lisbon, 20250604 1603 9346.jpg',
+          lyhyt: 'Rossion kupeesta lähtee 1885 avattu köysirata Glória, joka nousee 275 metriä Bairro Altoon.',
+          selite: 'Rossion kupeessa Restauradoresin aukiolta lähtee vuonna '
+            + '1885 avattu köysirata Glória, joka nousee 275 metrin matkan '
+            + 'Bairro Altoon lähes 18 asteen rinnettä pitkin.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -8099,40 +8046,13 @@ export const NAHTAVYYSJUTUT = {
             + 'päälle nostettiin näyttävä metallikatto.',
           lahde: 'Nicholas Gemini, Wikimedia Commons (CC BY-SA 4.0)',
         },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Kolumbuksen patsas': {
-      aika: '1882–1888',
-      teksti: 'Kolumbuksen patsas kohoaa Barcelonan satamassa siinä, '
-          + 'missä La Rambla -katu päättyy mereen. Se rakennettiin '
-          + 'vuosina 1882–1888 suurta maailmannäyttelyä varten, joka '
-          + 'järjestettiin Barcelonassa vuonna 1888, ja arkkitehti '
-          + 'Gaietà Buigas voitti kilpailun patsaan suunnittelusta.'
-        + '\n\n'
-        + 'Koko monumentti on 60 metriä korkea – lähes kahdenkymmenen '
-          + 'kerroksisen talon mittainen! Huipulla seisoo 7,2 metrin '
-          + 'korkuinen pronssinen Kolumbus-patsas, joka osoittaa '
-          + 'kädellään kohti merta ja pitää toisessa kädessä '
-          + 'karttakääröä. Pylvästä koristavat muun muassa siivekkäät '
-          + 'voitonjumalattaret ja mytologiset griipit.'
-        + '\n\n'
-        + 'Hauska yksityiskohta: monet luulevat Kolumbuksen '
-          + 'osoittavan kohti Amerikkaa, mutta todellisuudessa sormi '
-          + 'näyttää suuntaan, joka vie kartalla Pohjois-Afrikkaan '
-          + 'asti. Todennäköisin selitys on, että patsas haluttiin '
-          + 'yksinkertaisesti kääntää kohti avomerta korostamaan '
-          + 'Kolumbuksen mainetta merenkulkijana. Pylvään sisällä on '
-          + 'jopa pieni hissi, jolla pääsee näköalatasanteelle aivan '
-          + 'patsaan jalustan alle.',
-      kuvat: [
         {
           tiedosto: 'Mirador de Colom - panoramio.jpg',
-          lyhyt: 'Kolumbuksen 60 metrin monumentti pystytettiin 1882–1888, patsas osoittaa kohti avomerta.',
-          selite: 'Kolumbuksen 60 metriä korkea monumentti pystytettiin '
-            + 'vuosina 1882–1888 maailmannäyttelyä varten, ja huipun 7,2 '
-            + 'metriä korkea pronssipatsas osoittaa kädellään kohti '
-            + 'avomerta.',
+          lyhyt: 'La Ramblan toisessa päässä, satamassa, kohoaa 60-metrinen Kolumbuksen patsas vuosilta 1882–1888.',
+          selite: 'Samaa La Rambla -katua alaspäin, siinä missä se '
+            + 'päättyy mereen, kohoaa 60 metriä korkea Kolumbuksen '
+            + 'monumentti vuosilta 1882–1888, jonka huipun pronssipatsas '
+            + 'osoittaa kädellään kohti avomerta.',
           lahde: 'Mister No, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -12920,6 +12840,15 @@ export const NAHTAVYYSJUTUT = {
             + '”Kristuksen paluu”.',
           lahde: 'Henrik, Wikimedia Commons (CC BY 2.5)',
         },
+        {
+          tiedosto: 'Fjellheisen, Tromsø 2019.jpg',
+          lyhyt: 'Katedraalin kupeesta lähtee Fjellheisenin köysirata, joka nostaa neljässä minuutissa 420 metriin.',
+          selite: 'Katedraalin vieressä on Fjellheisenin köysiradan '
+            + 'alaasema: rata nostaa matkustajat Storsteinen-vuorelle '
+            + '420 metrin korkeuteen neljässä minuutissa, ja se avattiin '
+            + 'yleisölle 1961.',
+          lahde: 'Olivier Bruchez, Wikimedia Commons (CC BY-SA 2.0)',
+        },
       ],
       lahde: 'Wikipedia',
     },
@@ -12959,52 +12888,6 @@ export const NAHTAVYYSJUTUT = {
             + 'katsella altaan reunalta tai läpinäkyvästä tunnelista altaan '
             + 'pohjan alta.',
           lahde: 'Lee Dyer, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Fjellheisenin köysirata': {
-      aika: '1961',
-      teksti: 'Fjellheisen on köysirata, joka nostaa matkustajat Tromssan '
-          + 'laidalta ylös Storsteinen-vuorelle, 420 metrin korkeuteen '
-          + 'merenpinnasta. Matka kestää vain neljä minuuttia, mutta '
-          + 'näkymä ylhäältä palkitsee: koko kaupunki, saaret ja vuonot '
-          + 'avautuvat jalkojen alle.'
-        + '\n\n'
-        + 'Köysirata rakennettiin laivayhtiö Brødrene Jakobsens '
-          + 'Rederin toimesta, ja se avattiin yleisölle 22. helmikuuta '
-          + '1961 - siis lähes sata vuotta isoisän matkan jälkeen. '
-          + 'Ylhäällä on Fjellstua-niminen ravintola, ja monet jatkavat '
-          + 'matkaa jalan vielä korkeammalle, Tromsdalstindenin '
-          + 'huipulle (1238 metriä).'
-        + '\n\n'
-        + 'Kesäisin ylhäältä näkee yötöntä yötä eli keskiyön '
-          + 'aurinkoa, ja talvella paikka on yksi parhaista revontulien '
-          + 'katselupaikoista koko kaupungissa.',
-      kuvat: [
-        {
-          tiedosto: 'Fjellheisen, Tromsø 2019.jpg',
-          lyhyt: 'Köysirata nostaa matkustajat Storsteinenille 420 metrin korkeuteen neljässä minuutissa.',
-          selite: 'Köysirata nostaa matkustajat Storsteinen-vuorelle 420 metrin '
-            + 'korkeuteen merenpinnasta, ja matka kestää vain neljä '
-            + 'minuuttia.',
-          lahde: 'Olivier Bruchez, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          tiedosto: 'Fjellheisen view Tromsø 02.jpg',
-          lyhyt: 'Ylhäällä on Fjellstua-ravintola, monet jatkavat jalan Tromsdalstindenin huipulle 1238 metriin.',
-          selite: 'Ylhäällä on Fjellstua-niminen ravintola, ja monet jatkavat '
-            + 'matkaa jalan vielä korkeammalle Tromsdalstindenin huipulle '
-            + '1238 metriin.',
-          lahde: 'weisserstier, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Tromsø Cable cars Fjellheisen 06.jpg',
-          lyhyt: 'Laivayhtiön rakennuttama köysirata avattiin 1961, lähes sata vuotta isoisän matkan jälkeen.',
-          selite: 'Laivayhtiö Brødrene Jakobsens Rederin rakennuttama köysirata '
-            + 'avattiin yleisölle 22. helmikuuta 1961 – lähes sata vuotta '
-            + 'isoisän matkan jälkeen.',
-          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -14346,57 +14229,6 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   kobenhavn: {
-    'Pieni merenneito': {
-      aika: '1913',
-      teksti: 'Pieni merenneito -patsas istuu kalliolla Langelinien '
-          + 'rannassa Kööpenhaminassa. Se on valettu pronssista, vain '
-          + '1,25 metriä korkea ja painaa 175 kiloa. Panimomiljonääri '
-          + 'Carl Jacobsen tilasi patsaan innostuttuaan baletista, joka '
-          + 'kertoi H. C. Andersenin sadun pienestä merenneidosta. '
-          + 'Kuvanveistäjä Edvard Eriksen sai tilauksen vuonna 1909, ja '
-          + 'patsas paljastettiin 23. elokuuta 1913.'
-        + '\n\n'
-        + 'Hauska yksityiskohta liittyy patsaan malliin: baleriina, '
-          + 'jonka tanssi oli koko idean innoittaja, ei halunnut '
-          + 'poseerata patsasta varten, joten Eriksen käytti mallina '
-          + 'omaa vaimoaan Eline Eriksenia.'
-        + '\n\n'
-        + 'Pieni merenneito on kokenut yllättävän kovaa kohtelua '
-          + 'vuosien varrella. Pää on sahattu irti kahdesti, vuosina '
-          + '1964 ja 1998, käsi katkaistiin 1984 ja koko patsas jopa '
-          + 'räjäytettiin veteen vuonna 2003. Siitä huolimatta se on '
-          + 'aina nostettu takaisin paikalleen, ja sen kopioita on '
-          + 'pystytetty yli kolmeentoista kaupunkiin ympäri maailmaa.',
-      kuvat: [
-        {
-          tiedosto: 'The Little Mermaid - 4668118032.jpg',
-          lyhyt: '1,25-metrinen pronssipatsas syntyi panimomiljonääri Carl Jacobsenin innostuttua merenneitobaletista.',
-          selite: 'Pronssipatsas on vain 1,25 metriä korkea ja painaa 175 '
-            + 'kiloa. Panimomiljonääri Carl Jacobsen tilasi sen '
-            + 'innostuttuaan baletista, joka kertoi H. C. Andersenin '
-            + 'sadun pienestä merenneidosta.',
-          lahde: 'Andrea Lai, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26.jpg',
-          lyhyt: 'Kuvanveistäjä Edvard Eriksen sai tilauksen 1909, ja mallina oli hänen vaimonsa Eline Eriksen.',
-          selite: 'Kuvanveistäjä Edvard Eriksen sai tilauksen vuonna 1909, ja '
-            + 'koska baleriina ei halunnut poseerata, mallina oli hänen '
-            + 'oma vaimonsa Eline Eriksen.',
-          lahde: 'Richardmaackphotography, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: '1913-Edvard Eriksen-Den lillie Havfrue.jpg',
-          lyhyt: 'Patsas paljastettiin 1913; sen pää on sahattu irti kahdesti ja koko patsas räjäytetty veteen 2003.',
-          selite: 'Patsas paljastettiin 23. elokuuta 1913. Sen jälkeen sen pää '
-            + 'on sahattu irti kahdesti, käsi katkaistiin 1984 ja koko '
-            + 'patsas räjäytettiin veteen 2003 — mutta se on aina '
-            + 'nostettu takaisin paikalleen.',
-          lahde: 'Tuntematon (postikorttikustantajien kokoelma), Wikimedia Commons (Public domain)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Amalienborg: {
       aika: '1750–1760',
       teksti: 'Amalienborg on Tanskan kuninkaallisen perheen koti '
@@ -14852,6 +14684,16 @@ export const NAHTAVYYSJUTUT = {
             + 'portin saksalaiset joukot räjäyttivät 9. huhtikuuta 1940 '
             + 'ottaessaan linnoituksen haltuunsa.',
           lahde: 'Christen Købke, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'The Little Mermaid - 4668118032.jpg',
+          lyhyt: 'Kastelletin muurien kupeessa Langelinien rannassa istuu Pieni merenneito -patsas vuodelta 1913.',
+          selite: 'Samalla Langelinien rannalla, jolle saksalaisjoukot '
+            + 'nousivat maihin 1940, istuu kalliolla Pieni merenneito '
+            + '-patsas: pronssiveistos paljastettiin vuonna 1913, ja '
+            + 'baletista innostunut panimomiljonääri Carl Jacobsen '
+            + 'tilasi sen H. C. Andersenin sadun kunniaksi.',
+          lahde: 'Andrea Lai, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -44852,36 +44694,6 @@ export const NAHTAVYYSJUTUT = {
    * miami-lohkossa eikä matkakirjan valokuvataulussa.
    */
   miami: {
-    'Wynwoodin muraalikorttelit': {
-      aika: '2009',
-      teksti: 'Wynwood oli pitkään teollisuus- ja varastokortteli, jota '
-          + 'kutsuttiin nimillä Little San Juan ja El Barrio: '
-          + 'puertoricolaisia muutti alueelle 1950-luvulla sekä '
-          + 'saarelta että koillisen kaupungeista. Puertoricolaisten '
-          + 'ravintolat, kaupat ja torit reunustavat katuja yhä.'
-          + '\n\n'
-          + 'Kun Midtown Miamin rakennustyöt alkoivat 2005 vanhan '
-          + 'ratapihan paikalla, huomio palasi alueelle ja taiteilijat '
-          + 'alkoivat asettua tyhjiin varastoihin. Vuonna 2009 '
-          + 'kaupunkikehittäjä Tony Goldman tilasi taiteilijoilta '
-          + 'Wynwood Wallsin. Ajatus oli yksinkertainen: muuttaa '
-          + 'varastorakennukset teoksiksi.'
-          + '\n\n'
-          + 'Wynwood Walls on ulkoilmanäyttely, jonka teokset '
-          + 'vaihtuvat, ja se on maailman suurin ulkoilmassa oleva '
-          + 'katutaidemuseo. Kaupunginosan rajat ovat selvät: 20th '
-          + 'Street etelässä, moottoritie I-195 pohjoisessa, I-95 '
-          + 'lännessä ja Florida East Coast Railwayn rata idässä.',
-      kuvat: [
-        {
-          tiedosto: 'Wynwood Walls Miami Florida October 2013.jpg',
-          selite: 'Portin takana avautuu pihamaa, jonka jokainen '
-            + 'seinä on maalattu.',
-          lahde: 'Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Esittävän taiteen keskus': {
       aika: '2006',
       teksti: 'Adrienne Arsht Center on yksi Yhdysvaltain suurimmista '
@@ -44938,6 +44750,16 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Riippuvat kasvipylväät varjostavat museon '
             + 'julkisivua lahden puolelta.',
           lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Wynwood Walls Miami Florida October 2013.jpg',
+          lyhyt: 'Miamin toinen suuri taidekohde on Wynwoodin ulkoilmanäyttely Wynwood Walls, avattu 2009.',
+          selite: 'Miamin toinen suuri taidekohde on muutaman kilometrin '
+            + 'päässä Wynwoodin entisessä varastokorttelissa: '
+            + 'kaupunkikehittäjä Tony Goldmanin vuonna 2009 tilaama '
+            + 'Wynwood Walls on maailman suurin ulkoilmassa oleva '
+            + 'katutaidemuseo.',
+          lahde: 'Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -58367,39 +58189,6 @@ export const NAHTAVYYSJUTUT = {
    * helmikuusta 1983. Molemmat kerrotaan.
    */
   puntaarenas: {
-    'Lampuripatsas': {
-      aika: '1944 ja 1962',
-      teksti: 'Avenida Bulnesin keskikaistalla seisoo '
-          + 'kaksitoistaosainen veistosryhmä luonnollisessa koossa. '
-          + 'Siinä lampuri kestää pampan tuulta hevosensa ohjakset '
-          + 'toisessa kädessä ja ruoska toisessa, jolla hän ohjaa '
-          + 'lampaitaan. Ryhmä on kaupungin tunnetuin ulkoveistos ja '
-          + 'seisoo juuri sillä kadulla, jonka varrella ovat myös '
-          + 'salesiaanien museo ja hautausmaa.'
-          + '\n\n'
-          + 'Aloite tuli kenraali Ramón Cañas Montalvalta, ja teoksen '
-          + 'lahjoitti Francisco Campos Torreblanca. Ensimmäinen '
-          + 'versio oli graniittia, ja se paljastettiin 1944 '
-          + 'tasavallan presidentin Juan Antonio Ríosin läsnä '
-          + 'ollessa.'
-          + '\n\n'
-          + 'Nykyinen pronssiveistos paljastettiin 1. huhtikuuta '
-          + '1962, jotta teos kestäisi ikuisesti. Graniittinen '
-          + 'ensimmäinen versio ei joutunut varastoon: Punta Arenas '
-          + 'lahjoitti sen naapurialueen pääkaupungille Coyhaiquelle, '
-          + 'jossa se seisoo nykyään Avenida Baquedanon '
-          + 'keskikaistalla joen rinnalla kaupungin pohjoislaidassa.',
-      kuvat: [
-        {
-          tiedosto: 'Monumento al Ovejero Punta Arenas.jpg',
-          lyhyt: 'Pronssinen lammaslauma kulkee kadun keskikaistaa lampurin johdattamana.',
-          selite: 'Pronssinen lammaslauma kulkee kadun keskikaistaa '
-            + 'pitkin, ja lampuri johtaa sitä hevosineen ja koirineen.',
-          lahde: 'Micah MacAllen from Travel Bums, Latin America, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
-    },
     'Sara Braunin hautausmaa': {
       aika: '1894',
       teksti: 'Avenida Bulnesin varrella on neljän hehtaarin '
@@ -58573,6 +58362,16 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Palatsin liuskekivikatto ja pyöreä kulmatorni näkyvät '
             + 'katua reunustavan takorauta-aidan takaa.',
           lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Monumento al Ovejero Punta Arenas.jpg',
+          lyhyt: 'Avenida Bulnesin keskikaistalla on kaksitoistaosainen lampuripatsas, muistomerkki lammastiloille jotka vaurastuttivat myös tämän palatsin.',
+          selite: 'Avenida Bulnesin keskikaistalla seisoo kaksitoistaosainen '
+            + 'lampuripatsas: pronssinen lammaslauma kulkee lampurin '
+            + 'johdattamana — muistomerkki sille lammastilojen '
+            + 'vaurastuttamalle Patagonialle, joka teki myös tästä '
+            + 'palatsista mahdollisen.',
+          lahde: 'Micah MacAllen from Travel Bums, Latin America, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',

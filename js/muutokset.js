@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2288, teksti: 'Löydös 178: ei-paikat galleriaksi, uudet rakennukset' },
   { v: 2287, teksti: 'Ouzel Galley: tekoälyhavainnekuva (#3354)' },
   { v: 2286, teksti: 'Maakunta-erä B3: MDA/UKR pikkukuvat (#3351)' },
   { v: 2285, teksti: 'Löydös 178: nähtävyyskartalla vain paikat, tari… (#3353)' },
