@@ -79,6 +79,9 @@ namespace Matkakirja.Natiivi
         string edellinen;
         bool lentoKuultu;
 
+        /// <summary>Uusi peli (löydös 177): saapumisluento saa soida samassa kaupungissa uudelleen.</summary>
+        public void Nollaa() { edellinen = null; lentoKuultu = false; }
+
         public Luento Intro { get; private set; } = OletusIntro;
         public Luento LentoAlku { get; private set; } = OletusLentoAlku;
         public int Saapumispuheita => saapumispuheet.Count;
