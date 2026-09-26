@@ -7351,3 +7351,7 @@ Karttaseppa: merkit on poltettu nostotasoon z5–z8 (2026-09-25c-nostot, 112 maa
 ## ISS-KAUKONAKYMA TODELLISELLA RADALLA VALMIS (iss-sgp4 711372bd) (26.9.2026 klo 20.17)
 
 Linssiseppa: ISS-kaukonakyma SGP4-radalla (TLE #3334), kuvapari havainnollinen → todellinen proto-3d/lokit/linssiseppa-iss-kaukonakyma-20260926/; merge-pyynto Natiivisepalle 1.0.26-junaan. Fable lahetti kuvaparin omistajalle tiedoksi (ISS hyvaksytty jo kortilla). Seuraavaksi Venetsian gondolit.
+
+## V2278 (174B) JA V2279 (170 EUROOPPA) TUOTANNOSSA (26.9.2026 klo 20.31)
+
+Julkaisija: #3342 mainissa v2278 20.23, #3343 v2279 20.30, testit 4405/0; jonossa #3345 (ISS-TLE TF-vientiin, Natiivisepan ehdotus). Karttasepalle lupa nostotason uudelleenpolttoon.
