@@ -7641,84 +7641,149 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Zürich                 — Cabaret Voltaire (Zurich) (dadan syntypaikka
    *                            1916, Spiegelgasse, Lenin samalla kadulla)
    */
+  /*
+   * CHE PITKA (Sisältökirjuri 26.9.2026, maakunta-erä 2). Lähteet
+   * (en-Wikipedia, tarkistettu 26.9.2026, osa faktoista WebSearchilla
+   * varmistettu erikseen):
+   *   Aargau — Habsburg Castle (suvun alkuperä, menetti alueen 1415)
+   *   Appenzell Ausserrhoden — Henry Dunant (köyhyysvuodet, Heiden 1887,
+   *     Nobel 1901)
+   *   Appenzell Innerrhoden — Landsgemeinde; Gossau–Wasserauen railway
+   *     line (juna vasta 1886)
+   *   Basel-Landschaft — Canton of Basel (jako 1833, kansanäänestykset
+   *     1969/2014)
+   *   Basel-Stadt — Mittlere Brücke (ainoa Reinin silta vuoteen 1905)
+   *   Bern — Swiss Federal Constitution (kokonaisuudistus 1874)
+   *   Fribourg — Grand Pont Suspendu (1834–1923, hetken maailman pisin
+   *     riippusilta)
+   *   Genève — International Committee of the Red Cross (perustettu
+   *     1863, Geneven sopimus 1864)
+   *   Glarus — Great Fire of Glarus 1861 (uudelleenrakennus ruutukaavaan)
+   *   Graubünden — Davos (parantola 1868); Rhaetian Railway (1889 alkaen)
+   *   Jura — Kulturkampf (piispan erottaminen 1870-l.); Canton of Jura
+   *     (1979)
+   *   Lucerne — Richard Wagner Museum Tribschen (Wagner lähti 1872)
+   *   Neuchâtel — Absinthe; Val-de-Travers (liittovaltiokielto 1908)
+   *   Nidwalden — Stanserhorn (ensimmäinen rata 1893)
+   *   Obwalden — Pilatus railway (avattu 1889, Eduard Locher)
+   *   Schaffhausen — Rhine Falls (Grand Tour -reitti)
+   *   Schwyz — Vitznau–Rigi railway line (avattu 1871, Euroopan
+   *     ensimmäinen vuoristorautatie)
+   *   Solothurn — Solothurn (Ranskan lähettilään kausi 1530–1792)
+   *   Sankt Gallen — St. Gallen (pitsikirjonta, luostari lakkautettu
+   *     1805)
+   *   Thurgau — Arenenberg; Napoleon III (kuoli maanpaossa 1873)
+   *   Ticino — Gotthard Rail Tunnel (louhinta alkoi syyskuussa 1872)
+   *   Uri — Gotthard Rail Tunnel (läpimurto 1880, avaus 1882)
+   *   Valais — Matterhorn; 1865 Matterhorn disaster
+   *   Vaud — Henri Nestlé; Nestlé (Vevey, maitojauhe 1860-l. lopulla)
+   *   Zug — Vorstadtkatastrophe 5.7.1887 (Katastrophenbucht)
+   *   Zürich — Nadezhda Suslova (Euroopan ensimmäinen naislääkäri 1867)
+   */
   CHE: {
     Aargau: {
       lyhyt: 'Habsburgin kylän kukkulalla seisoo noin 1020 rakennettu linna, josta yksi Euroopan mahtavimmista hallitsijasuvuista sai nimensä.',
+      pitka: `Aargau on nykyään Sveitsin niin sanottu Vesilinna — Aare, Reuss ja Limmat yhtyvät kantonin alueella, ja rannoilla kasvaa maan suurimmat omenatarhat, samalla kun Beznaun ydinvoimala Döttingenin lähellä on käynnissä ollein maailman vanhimpia yhä toimivia kaupallisia ydinvoimaloita. Habsburgin linnankukkulalla käy nykyään lähinnä retkeilijöitä ja museovieraita, ei valtiaita: suku menetti Aargaun alueensa sveitsiläisille jo 1415, minkä jälkeen sen painopiste siirtyi Wieniin. Isoisän matkan aikaan 1873 Habsburgit hallitsivat Itävalta-Unkarin suurvaltaa Wienistä käsin, mutta perheen alkuperäinen nimikkolinna oli silloin jo lähes 460 vuotta ollut osa Sveitsiä — vaatimaton maaseutumaisema, ei minkään valtakunnan keskus.`,
     },
     'Appenzell Ausserrhoden': {
       lyhyt: 'Punaisen Ristin perustaja Henry Dunant vietti viimeiset vuotensa Heidenin kylässä, ja siellä asuessaan hän sai ensimmäisen Nobelin rauhanpalkinnon.',
+      pitka: `Appenzell Ausserrhodenin vihreät kumpuilevat niityt ja ruskeat karjalaumat ovat nykyään tuttu näky matkailukuvista, ja Heidenin pieni kylä Bodenjärven yllä elää edelleen siitä, että Punaisen Ristin perustaja Henry Dunant vietti siellä elämänsä viimeiset vuodet ja sai 1901 ensimmäisen Nobelin rauhanpalkinnon. Isoisän vuonna 1873 Dunant ei kuitenkaan asunut vielä Heidenissä eikä missään pysyvässä osoitteessa: hän oli konkurssin runtelemana köyhä ja unohdettu, kierteli Euroopan kaupunkeja ja joutui ajoittain nukkumaan kaduilla Pariisissa. Heidenin idylliin hän löysi tiensä vasta 1887, ja maailma "löysi" hänet uudelleen vasta 1895 — kaksikymmentäkaksi vuotta isoisän matkan jälkeen.`,
     },
     'Appenzell Innerrhoden': {
       lyhyt: 'Appenzellin aukiolle kokoontuu joka huhtikuu tuhansia kansalaisia päättämään kantonin asioista – naiset pääsivät mukaan vasta 1991.',
+      pitka: `Appenzellin kylän aukio täyttyy huhtikuisin sadoista miekkaa kantavista äänestäjistä, kun Landsgemeinde päättää kantonin asioista käsien nostolla — perinne, joka jatkuu, vaikka naiset pääsivät mukaan vasta 1991. Alpstein-vuoriston ja Säntis-huipun juurella eletään edelleen karjatalouden ja alppijuuston tahdissa, ja kylän värikkäät talonjulkisivut houkuttelevat nykyään turisteja ympäri maailmaa. Isoisän aikaan 1873 tähän syrjäiseen vuoristokantoniin ei ollut vielä rautatietä: ensimmäinen juna kolisi Appenzelliin vasta 1886, joten viimeiset kilometrit laaksoon olisi pitänyt kulkea jalan tai hevosella.`,
     },
     'Basel-Landschaft': {
       lyhyt: 'Augusta Rauricassa oli Alppien pohjoispuolen suurin roomalainen teatteri, ja kaupungista vietiin savustettua sianlihaa ympäri valtakuntaa.',
+      pitka: `Baselin maaseutukantonissa Augusta Raurican roomalaisrauniot houkuttelevat nykyään retkeilijöitä ja koululaisryhmiä, ja pääkaupunki Liestal sekä ympäröivät viinitilat elävät tiiviissä kytköksessä naapurikaupunkiin Baseliin — vaikka poliittinen raja kantonien välillä on jyrkkä. Raja syntyi verissä: maaseudun asukkaat nousivat kapinaan kaupungin herruutta vastaan, ja 1833 Basel jaettiin kahtia, Basel-Landschaftiksi ja Basel-Stadtiksi. Isoisän matkan aikaan 1873 jako oli vain neljäkymmentä vuotta vanha, ja nuori maaseutukantoni rakensi vielä omaa hallintoaan mahtavan kaupunkivaltion rinnalla — kansanäänestykset uudesta yhdistymisestä hylättiin sekä 1969 että 2014.`,
     },
     'Basel-Stadt': {
       lyhyt: 'Baselin Rein-lossit kulkevat ilman moottoria: lossari kääntää veneen vinoon virtaan, ja virta työntää sen vaijeria pitkin toiselle rannalle.',
+      pitka: `Basel on nykyään sveitsiläisen taiteen ja lääketeollisuuden keskus, jonka kapeat kujat ja Reinin rannat täyttyvät kesäisin uimareista, jotka antavat virran kuljettaa itsensä alavirtaan. Reinin ylitys on ollut kaupungille elinehto vuosisatoja, ja lossit täydensivät liikennettä, koska pitkään riitti yksi ainoa silta. Isoisän aikaan 1873 keskiaikainen Mittlere Brücke, rakennettu jo 1225, oli edelleen Baselin ainoa Reinin ylittävä silta, eikä tilanne muuttunut ennen kuin kasvava liikenne pakotti sen purkamaan ja rakentamaan uudelleen vasta 1905.`,
     },
     Bern: {
       lyhyt: 'Bernin Kramgassen talossa 49 Albert Einstein kirjoitti 1905 artikkelit, joissa hän esitteli suhteellisuusteoriansa – päivät hän teki töitä patenttivirastossa.',
+      pitka: `Bern on nykyään Sveitsin liittovaltion pääkaupunki, jonka UNESCO-suojeltu vanhakaupunki, Zytglogge-kellotorni ja karhupuisto houkuttelevat miljoonia matkailijoita vuosittain — Einsteinin asunto Kramgassella on yksi suosituimmista pysähdyspaikoista. Vuonna 1873 Bern oli jo vakiintunut liittovaltion hallintokaupunki, mutta liittovaltion valta oli vielä paljon suppeampi kuin nykyään: vasta seuraavana vuonna, 1874, Sveitsi uudisti perustuslakinsa kokonaan ja antoi liittovaltiolle lisää valtaa esimerkiksi puolustuksen, kaupan ja lainsäädännön alalla sekä otti käyttöön kansanäänestykset. Isoisä matkusti siis Berniin juuri sillä hetkellä, kun kantonien liitto oli muuttumassa nykyistä muistuttavammaksi liittovaltioksi.`,
     },
     Fribourg: {
       lyhyt: 'Fribourgin köysirataa on vuodesta 1899 liikuttanut jätevesi: yläpään vaunuun lasketaan viemärivettä, ja painava vaunu vetää toisen ylös.',
+      pitka: `Fribourgin vanhakaupunki roikkuu edelleen jyrkän Sarine-joen kanjonin päällä, ja köysirataa pyörittää nykyään viemärivesi, samalla kun kaupungin kaksikielisyys — ranska ja saksa — näkyy kaduilla ja yliopistossa. Isoisän aikaan 1873 kaupungin ylitti Grand Pont Suspendu, vuonna 1834 valmistunut riippusilta, joka oli hetken maailman pisin riippusilta ennen kuin amerikkalainen Wheelingin silta ohitti sen 1849. Fribourgin silta pysyi silti käytössä ja kaupungin ylpeytenä isoisän matkan aikaan ja vielä pitkään sen jälkeen, kunnes se purettiin vasta 1923.`,
     },
     'Genève': {
       lyhyt: 'Genevessä CERNissä syntyi 1989 World Wide Web, ja 27 kilometrin hiukkaskiihdytin kiertää maan alla Ranskan rajan yli.',
+      pitka: `Geneve on nykyään kansainvälisen diplomatian pääkaupunki, jonka CERN-tutkimuskeskuksessa syntyi 1989 World Wide Web, ja YK:n Euroopan-päämaja sekä sadat kansainväliset järjestöt työllistävät kaupungissa kymmeniätuhansia. Isoisän aikaan 1873 Geneven kansainvälinen rooli oli vasta alkamassa: Punaisen Ristin kansainvälinen komitea oli perustettu kaupunkiin 1863 ja ensimmäinen Geneven sopimus allekirjoitettu 1864, vain yhdeksän vuotta ennen isoisän matkaa — humanitaarisen Geneven maine oli silloin vielä uusi ja vasta vuosikymmenen ikäinen.`,
     },
     Glarus: {
       lyhyt: 'Glarus laski äänestysiän 16 vuoteen 2007 ensimmäisenä Sveitsin kantonina, ja asioista päättää yhä Landsgemeinde-kansankokous.',
+      pitka: `Glarus on nykyään kapea vuoristolaakso, jossa liuskekaivokset ja Sardonan tektoninen UNESCO-maailmanperintöalue kertovat kantonin geologisesta erikoislaadusta, ja Landsgemeinde-kansankokous päättää edelleen suoraan asioista kylän aukiolla. Isoisän saapuessa 1873 kaupunki näytti silti vielä varsin nuorelta: föhn-tuulen kiihdyttämä tulipalo tuhosi 1861 kaksi kolmasosaa Glaruksesta, ja kaupunki rakennettiin sen jälkeen uudelleen tiiviiseen ruutukaavaan arkkitehtien Johann Caspar Wolffin ja Bernhard Simonin suunnitelmien mukaan. Isoisä olisi siis kävellyt kaduilla, jotka olivat vain kymmenisen vuotta vanhoja — suorat ja säännölliset, toisin kuin useimpien sveitsiläisten kaupunkien mutkittelevat vanhatkaupungit.`,
     },
     'Graubünden': {
       lyhyt: 'Graubünden on Sveitsin ainoa kolmikielinen kantoni ja ainoa, jossa maan neljäs kansalliskieli retoromaani on virallinen kieli.',
+      pitka: `Nykyään Graubünden on Sveitsin suurin kantoni pinta-alaltaan ja maan ainoa kolmikielinen alue, jossa saksan ja italian rinnalla puhutaan retoromaania – neljättä kansalliskieltä, joka on virallinen vain täällä. Vuoristolaaksot kuten Engadin ja Prättigau elävät nykyisin talviurheilusta ja terveysmatkailusta, Davosin ja St. Moritzin loisto tunnetaan ympäri maailman. Isoisän aikaan 1873 Davos oli vasta muutaman vuoden ollut ilmastoparannuspaikka: ensimmäinen keuhkotautisille tarkoitettu parantola avattiin siellä 1868, ja rikkaat eurooppalaiset alkoivat vasta löytää laakson raikasta ilmaa. Rautatiet eivät vielä ulottuneet syvälle vuoristoon – Rhaetian rata rakennettiin vasta 1889 alkaen – niin isoisä olisi kulkenut Graubündenin läpi hevosvaunulla, ei junalla.`,
     },
     Jura: {
       lyhyt: 'Jura on Sveitsin nuorin kantoni: se irtautui Bernistä pitkän ja paikoin kiivaan kamppailun jälkeen ja liittyi valaliittoon 1979.',
+      pitka: `Jura on nykyisin Sveitsin nuorin kantoni ja ranskankielinen saareke, joka tunnetaan hevoskasvatuksesta – Franches-Montagnes on maan ainoa oma hevosrotu – ja keskiaikaisesta Saint-Ursannen kaupungista Doubs-joen mutkassa. Kantonin oma identiteetti syntyi vuosikymmenten kamppailussa Bernin vallan alla, ja se johti vuonna 1979 eroon ja liittymiseen valaliittoon omana kantonina. Isoisän aikaan 1873 alue oli yhä osa Bernia, ja juuri tuolloin kuohui: Sveitsin "kulttuuritaistelu" katolisen kirkon ja liittovaltion välillä repi erityisesti Juraa, kun Baselin hiippakunnan piispa erotettiin virastaan ja katolinen väestö jakautui. Livia muistuttaa, että se kiista kylvi siemenen, joka itäisi vasta sata vuotta myöhemmin.`,
     },
     Lucerne: {
       lyhyt: 'Luzernin Kapellbrücke on Euroopan vanhin katettu puusilta, mutta tulipalo tuhosi 1993 suuren osan siitä ja sen 1600-luvun maalauksista.',
+      pitka: `Luzernin läpi virtaavan Reussin yli kaartuva Kapellbrücke on Euroopan vanhin katettu puusilta, mutta suuri osa siitä ja sen 1600-luvun kattomaalauksista tuhoutui tulipalossa 1993 – nykyinen silta on osittain jälleenrakennettu. Kaupunki elää edelleen matkailusta, jota vauhditti 1800-luvulla brittiläisten ja saksalaisten yläluokan matkustajien innostus Pilatus- ja Rigi-vuorten näköalapaikkoihin. Isoisän aikaan 1873 Luzern oli juuri menettänyt kuuluisan asukkaansa: säveltäjä Richard Wagner asui Tribschenin huvilassa vuoteen 1872, ja isoisä ehti kaupunkiin vain vuotta liian myöhään tavatakseen hänet enää siellä.`,
     },
     'Neuchâtel': {
       lyhyt: 'Absintti syntyi Neuchâtelissa, ja Môtiers’n absinttimuseo toimii entisessä oikeustalossa, jossa kiellon aikana tuomittiin tislaajia.',
+      pitka: `Neuchâtel on nykyään tunnettu kellonvalmistuksen keskuksena ja viinitarhoistaan Neuchâtelinjärven rannalla, mutta kantonin erikoisin vientituote syntyi Val-de-Traversin laaksossa: absintti. Môtiers'n kylän absinttimuseo toimii entisessä oikeustalossa, jossa myöhemmin, kieltolain aikana, tuomittiin salatislaajia. Isoisän aikaan 1873 absintti ei ollut vielä minkään kiellon alla – päinvastoin, Val-de-Travers'n tislaamot kukoistivat vapaasti ja veivät vihreää juomaa ympäri Eurooppaa, sillä liittovaltion absinttikielto säädettiin perustuslakiin vasta 1908. Samaan aikaan Neuchâtelin kellotehtaat kasvattivat vientiään, ja kanton oli jo silloin yksi Sveitsin teollisimmista.`,
     },
     Nidwalden: {
       lyhyt: 'Stanserhornille nousevassa köysiradassa on avoin yläkansi – se oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata.',
+      pitka: `Stanserhornille nousevassa köysiradassa matkustaa nykyään avokattoisessa "CabriO"-vaunussa, joka oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata – matkalla näkymä avautuu Vierwaldstättersee'lle asti. Pieni Nidwalden elää nykyisin pitkälti tästä näköalamatkailusta sekä pienteollisuudesta Alppien rinteiden juurella. Isoisän aikaan 1873 Stanserhornille ei ollut muuta tietä kuin jalkapolku, ja huipulle kiipeäminen oli varattu harvoille alppivaeltajille – ensimmäinen rautatie sen kupeeseen avattiin vasta 1893.`,
     },
     Obwalden: {
       lyhyt: 'Alpnachstadista Pilatukselle kiipeävä hammasrata on maailman jyrkin: jyrkimmässä kohdassa kaltevuus on 48 prosenttia.',
+      pitka: `Alpnachstadista Pilatukselle kiipeävä hammasrata on nykyään maailman jyrkin rautatie, jonka jyrkimmässä kohdassa kaltevuus on 48 prosenttia – matka ylös vie parisenkymmentä minuuttia näkymien vaihtuessa jyrkästi. Obwalden tunnetaan myös Sachslenista, jonne on haudattu Sveitsin suojeluspyhimys Niklaus von Flüe. Isoisän aikaan 1873 Pilatuksen huipulle ei ollut junaa lainkaan – insinööri Eduard Locherin rohkea hammasratasuunnitelma toteutui vasta 1889, ja isoisä olisi joutunut kiipeämään koko matkan omin jaloin tai muulin selässä.`,
     },
     Schaffhausen: {
       lyhyt: 'Schaffhausenilla on pidempi raja Saksan kuin muiden kantonien kanssa, ja sen kupeessa on Büsingen, Saksalle kuuluva saareke.',
+      pitka: `Schaffhausen työntyy nykyään kuin niemi Saksan sisään, ja sen kupeessa on Büsingen am Hochrhein, Saksalle kuuluva saareke, jonka ympäröi kokonaan sveitsiläistä aluetta – kantonilla on pidempi raja Saksan kuin minkään muun kantonin kanssa. Kaupungin tunnetuin nähtävyys on Reinin putous, Euroopan suurin tasangolla sijaitseva vesiputous, joka on vetänyt matkailijoita puoleensa vuosisatoja. Isoisän aikaan 1873 putous oli jo vakiintunut osa "Grand Tourin" reittiä – romantiikan ajan matkailijat olivat vuosikymmeniä aiemmin tehneet siitä yhden Euroopan ihailluimmista luonnonnähtävyyksistä, ja isoisä näki saman veden pauhun kuin nykyinen matkailija.`,
     },
     Schwyz: {
       lyhyt: 'Koko Sveitsi on saanut nimensä ja lippunsa Schwyzin kantonilta, ja vuoden 1291 liittokirja on yhä nähtävillä Schwyzin museossa.',
+      pitka: `Koko Sveitsi on saanut nimensä ja punavalkoisen lippunsa Schwyzin kantonilta, ja Schwyzin kaupungin liittokirjamuseossa on yhä nähtävillä vuoden 1291 liittokirja, joka pitää maata kokoavaa tarinaa yllä. Nykyisin kantonin maisemaa hallitsee Rigi, "vuorten kuningatar", jonka laelta avautuu näkymä kymmenille järville ja Alpeille. Isoisän aikaan 1873 Rigille pääsi jo junalla: Euroopan ensimmäinen vuoristorautatie, Vitznau–Rigi-rata, avattiin vain kaksi vuotta aiemmin, 1871, ja isoisä olisi hyvinkin voinut nousta huipulle höyryveturin vetämässä vaunussa, kun aiemmat sukupolvet joutuivat kiipeämään.`,
     },
     Solothurn: {
       lyhyt: 'Solothurn oli 1530–1792 Ranskan Sveitsin-lähettilään kotipaikka, ja sen autoton vanhakaupunki on täynnä barokkirakennuksia.',
+      pitka: `Solothurnin autoton, barokkirakennusten täyttämä vanhakaupunki tunnetaan nykyään "yhdentoista luvusta" – kaupungissa kerrotaan olevan yksitoista kirkkoa, tornia ja suihkulähdettä, koska Solothurn liittyi valaliittoon yhdentenätoista kantonina. Kaupunkikuva on peräisin ajalta, jolloin Solothurn oli 1530–1792 Ranskan kuninkaan Sveitsin-lähettilään virka-asuinpaikka, ja Ambassadorenhofin kaltaiset rakennukset muistuttavat siitä yhä. Isoisän aikaan 1873 lähettilään aika oli jo lähes sata vuotta sitten päättynyt Ranskan vallankumouksen myötä, mutta juuri se loisto, jonka lähettiläät toivat mukanaan, oli jättänyt kaupungille sen ylellisen barokkiasun, jota isoisä käveli ihmetellen samoin kuin nykyinen matkailija.`,
     },
     'Sankt Gallen': {
       lyhyt: 'St. Gallenin luostarikirjasto on maailman vanhimpia, ja sen rokokoosalissa lepää keskiaikaisten käsikirjoitusten seassa egyptiläinen muumio.',
+      pitka: `St. Gallenin luostarikirjasto on nykyään Unescon maailmanperintöä, ja sen rokokoosalissa turistit ihailevat keskiaikaisia käsikirjoituksia – ja hätkähtävät hyllyjen välissä lepäävää egyptiläistä muumiota. Kaupunki eli isoisän aikaan toisenlaista kulta-aikaa: 1800-luvun loppupuolella St. Gallenista kasvoi koneellisen pitsikirjonnan maailmanpääkaupunki, ja vuonna 1873 teollisuus oli juuri nousuvaiheessa kohti vuosisadan vaihteen huippuaan. Luostari itse oli lakkautettu jo 1805, joten isoisä näki kirjaston yhtä lailla kantonin hallinnoimana aarteena kuin nykyinen kävijä. Kirjonta on hiipunut, mutta pitsiperinne elää yhä muutamissa erikoistuneissa tekstiilifirmoissa kaupungin laidalla.`,
     },
     Thurgau: {
       lyhyt: 'Thurgaussa kasvaa omenaa ja päärynää niin paljon, että suurin osa hedelmätarhojen sadosta puristetaan siideriksi.',
+      pitka: `Thurgaun hedelmätarhat kukkivat keväällä valtoimenaan, ja syksyllä suuri osa sadosta puristetaan siideriksi – kantoni tunnetaan leikkimielisesti nimellä "Mostindien", siiderin Intia. Järven rannalla kohoava Arenenbergin linna oli 1800-luvulla Ranskan entisen keisarisuvun turvapaikka: sen kasvatti, pieni Louis-Napoleon, vietti täällä osan lapsuudestaan ennen kuin hänestä tuli aikuisena keisari Napoleon III. Isoisän lähtiessä matkaan tammikuussa 1873 Napoleon III kuoli maanpaossa Englannissa – Thurgaun linna oli näin yhä elossa muistona miehestä, jonka aika Euroopassa päättyi juuri sinä vuonna. Nykyään Arenenberg on museo, ja sen puutarhassa kasvavat samat hedelmäpuulajit kuin ympäröivissä kantonin tarhoissa.`,
     },
     Ticino: {
       lyhyt: 'Luganonjärven yllä kohoavasta Monte San Giorgiosta on kaivettu yli 21 000 fossiilia triaskauden merestä – vuori on Unescon maailmanperintöä.',
+      pitka: `Luganonjärven yllä kohoava Monte San Giorgio kätkee triaskauden meren fossiileja, joita on kaivettu esiin yli 21 000 – vuori on siksi Unescon maailmanperintöä vuodesta 2003. Kantonin pohjoisosassa, Airolon kylän liepeillä, alkoi syyskuussa 1872 toinen, aivan erilainen kaivaus: Gotthardin rautatietunnelin louhinta, joka etenisi vuoriston läpi Uriin päin seuraavan vuosikymmenen ajan. Nykyään alppikylät ja palmuja kasvava Lugano elävät rinnakkain, ja Ticino tuntuu enemmän Italialta kuin muu Sveitsi – kieli, ruoka ja arkkitehtuuri ovat italialaisia. Vuoren fossiilimuseo Meridessa näyttää nykyään kävijöille samoja kalalisko- ja meripihka-löytöjä, jotka tekivät alueesta tiedemaailman kiinnostuksen kohteen jo 1800-luvulla.`,
     },
     Uri: {
       lyhyt: 'Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli, ja kalliota on enimmillään 2 450 metriä yllä.',
+      pitka: `Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometrin pituudellaan maailman pisin rautatietunneli, ja junat sukeltavat sen kohdalla enimmillään 2 450 metriä kalliota syvemmälle kuin vuoren huippu. Kantonin toisessa päässä, Göschenenin kylässä, alkoi syyskuussa 1872 louhintatyö toista, vanhempaa Gotthard-tunnelia varten – vuonna 1873, isoisän kulkiessa seudulla, työmiehet porasivat yhä vuorta molemmin puolin, ja läpimurto saataisiin vasta 1880, junaliikenteen alkaessa kaksi vuotta myöhemmin. Työ vaati satojen louhijoiden hengen malariaan, onnettomuuksiin ja pölykeuhkoon, ja seudun kylät elivät vuosia rakennustyömaan ehdoilla. Nykyään Uri on hiljainen vuoristokantoni, jonka läpi kulkee sekä vanha että uusi Gotthard-yhteys, mutta arkea leimaavat edelleen enemmän laidunlehmät ja vuoripolut kuin junaliikenne.`,
     },
     Valais: {
       lyhyt: 'Valais’n Hérens-lehmät ottelevat keväisin sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan kuningattarien kuningattareksi.',
+      pitka: `Valais'n Hérens-lehmät ottelevat keväisin laumahierarkiasta sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan jokavuotisessa Combat des Reines -tapahtumassa kuningattarien kuningattareksi. Vuorten juurella hiihtokylät kuten Zermatt ja Verbier täyttyvät nykyään ympäri vuoden ulkomaalaisista matkailijoista, mutta ilmiö juontuu jo isoisän ajalta: Matterhornin ensimmäinen valtaus 1865 päättyi neljän kiipeäjän kuolemaan laskeutuessa, ja tragedia teki vuoresta ja koko Zermattin laaksosta hetkessä koko Euroopan tuntemat nimet. Kun isoisä kulki seudulla 1873, englantilaiset alpinistit olivat jo löytäneet Valais'n vuoret kesäkohteekseen, ja ensimmäiset kestohotellit palvelivat heitä samoilla paikoilla, joilla nykyiset hiihtohotellit seisovat. Rinteiden alla laaksot ovat yhä täynnä perinteisiä ruskeita puuaittoja ja viinitarhoja, jotka kiipeävät jyrkkiä etelänrinteitä kohti aurinkoa.`,
     },
     Vaud: {
       lyhyt: 'Lausanne on maailman pienin kaupunki, jolla on oma metro, ja siellä on myös Kansainvälisen olympiakomitean päämaja.',
+      pitka: `Lausanne on nykyään maailman pienin kaupunki, jolla on oma metro, ja sen rinteillä sijaitsee myös Kansainvälisen olympiakomitean päämaja – kaupunkia kutsutaan siksi leikkimielisesti olympialiikkeen pääkaupungiksi. Vaudin viinirinteet Lavaux'ssa kiertyvät Genevenjärven yllä terasseina, jotka on viljelty samalla tavalla satojen vuosien ajan, ja alue on ollut Unescon maailmanperintöä vuodesta 2007. Järven toisella puolella Vevey'ssä apteekkari Henri Nestlé oli 1860-luvun lopulla kehittänyt pienessä yrityksessään lapsille tarkoitetun maitojauheen – vuonna 1873 yritys oli vielä nuori, mutta tuote alkoi jo levitä muualle Eurooppaan. Nykyään Nestlé on maailman suurin elintarvikeyhtiö, ja sen päämaja seisoo yhä samalla Veveyn rantakadulla, mistä kaikki alkoi.`,
     },
     Zug: {
       lyhyt: 'Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse frangeiksi.',
+      pitka: `Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse takaisin frangeiksi, ja seutu tunnetaan nykyään lempinimellä Crypto Valley. Pieni järvenrantakaupunki näyttää nykyään idylliseltä, mutta 5. heinäkuuta 1887 – vain reilut kymmenen vuotta isoisän matkan jälkeen – osa rantakorttelia luhistui iltaseitsemältä järveen maanvyörynä, ja onnettomuus tuhosi kymmeniä taloja ja vei yhdentoista ihmisen hengen. Kaupunki rakennettiin vyöryn jälkeen uudelleen tukevammalle perustalle, ja nykyinen rantaraitti kulkee samalla paikalla, jossa vanhat talot kerran katosivat veteen — lahtea kutsutaan yhä Katastrophenbuchtiksi, tuhon lahdeksi. Zug on Sveitsin pienimpiä ja vauraimpia kantoneita, ja sen alhaiset verot ovat houkutelleet tuhansia yrityksiä pieneen kaupunkiin järven rannalle.`,
     },
     'Zürich': {
       lyhyt: 'Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen – samalla kadulla asui samaan aikaan Lenin.',
+      pitka: `Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen, ja samalla kadulla asui samaan aikaan pakolainen Lenin – kaksi maailmaa mullistavaa ideaa syntyi parin talon päässä toisistaan. Kaupunki oli isoisän aikaan jo eurooppalaisittain edistyksellinen: Zürichin yliopisto oli vuonna 1867 myöntänyt Euroopan ensimmäisen lääketieteen tohtorin arvon naiselle, venäläiselle Nadežda Suslovalle, ja 1870-luvun alussa kaupunkiin virtasi satoja venäläisiä naisopiskelijoita, joille yliopistoura oli kotimaassa mahdoton. Nykyään Zürich on Sveitsin suurin kaupunki ja yksi maailman johtavista pankki- ja vakuutuskeskuksista, ja Limmatin rantaa reunustavat sekä keskiaikaiset kirkontornit että lasiset pankkitornit. Niederdorfin kapeat kujat, joilla Cabaret Voltaire ja Lenin kerran asuivat, ovat nykyään täynnä baareja ja ravintoloita, mutta talojen julkisivut ovat monin paikoin samat kuin sata vuotta sitten.`,
     },
   },
   /*
