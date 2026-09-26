@@ -42,7 +42,8 @@ test('pohja piiloon vain kun kerros peittää koko ruudun; koelippu pohjavanha',
   assert.match(pallo, /const piiloon = eiPohjaa \|\| \(pohjanPiilotus && kerrosKaytossa && kerros\.peittaaKokonaan\(\)\);/);
   // Paljas kartta (`eipohja`, omistaja 23.9.2026): pohja aina piilossa.
   assert.match(pallo, /const eiPohjaa = laattakerroksenKokeet\(\)\.has\('eipohja'\);/);
-  assert.match(pallo, /moottori\.visible = !piiloon;/);
+  // Kirjaston oma sulku voittaa (Astronautin kamera: globeTileEngineUrl(null), savuke-astro-pallo 43/47b).
+  assert.match(pallo, /moottori\.visible = !piiloon && Boolean\(pallo\.globeTileEngineUrl\?\.\(\)\);/);
   assert.match(pallo, /laattakerroksenKokeet\(\)\.has\('pohjavanha'\)/);
   // Vapautetun kerroksen jälkeen pohja palaa (kutsu myös kun kerros ei ole käytössä).
   assert.match(pallo, /if \(!kerrosKaytossa\) \{ tahdistaPohjanNakyvyys\(\); return; \}/);
