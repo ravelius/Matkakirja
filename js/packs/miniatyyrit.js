@@ -870,11 +870,11 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Tabrizin basaari': 'tabriz-tabrizin-basaari',
-    Perustuslakitalo: 'tabriz-perustuslakitalo',
-    Arg: 'tabriz-arg',
-    'Saat-torni': 'tabriz-saat-torni',
-    'Azerbaidžanin museo': 'tabriz-azerbaidzanin-museo',
+    'Tabrizin basaari': 'tabriz-tabrizin-basaari-vari2',
+    Perustuslakitalo: 'tabriz-perustuslakitalo-vari2',
+    Arg: 'tabriz-arg-vari2',
+    'Saat-torni': 'tabriz-saat-torni-vari2',
+    'Azerbaidžanin museo': 'tabriz-azerbaidzanin-museo-vari2',
     'Sininen moskeija': 'tabriz-sininen-moskeija',
   },
   riad: {
@@ -1277,11 +1277,11 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Sultan-moskeija': 'singapore-sultan-moskeija',
-    'Raffles Hotel': 'singapore-raffles-hotel',
-    'Fort Canningin kukkula': 'singapore-fort-canningin-kukkula',
-    'Clarke Quay': 'singapore-clarke-quay',
-    'Empress Place': 'singapore-empress-place',
+    'Sultan-moskeija': 'singapore-sultan-moskeija-vari2',
+    'Raffles Hotel': 'singapore-raffles-hotel-vari2',
+    'Fort Canningin kukkula': 'singapore-fort-canningin-kukkula-vari2',
+    'Clarke Quay': 'singapore-clarke-quay-vari2',
+    'Empress Place': 'singapore-empress-place-vari2',
     'Boat Quay': 'singapore-boat-quay',
     'Merlion-puisto': 'singapore-merlion-puisto',
     'Gardens by the Bay': 'singapore-gardens-by-the-bay',
@@ -1320,11 +1320,11 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Dhamek-stupa': 'varanasi-dhamek-stupa',
-    'Chaukhandi-stupa': 'varanasi-chaukhandi-stupa',
-    'Manikarnika Ghat': 'varanasi-manikarnika-ghat',
-    'Kashi Vishwanath -temppeli': 'varanasi-kashi-vishwanath-temppeli',
-    'Dashashwamedh Ghat': 'varanasi-dashashwamedh-ghat',
+    'Dhamek-stupa': 'varanasi-dhamek-stupa-vari2',
+    'Chaukhandi-stupa': 'varanasi-chaukhandi-stupa-vari2',
+    'Manikarnika Ghat': 'varanasi-manikarnika-ghat-vari2',
+    'Kashi Vishwanath -temppeli': 'varanasi-kashi-vishwanath-temppeli-vari2',
+    'Dashashwamedh Ghat': 'varanasi-dashashwamedh-ghat-vari2',
     'Assi Ghat': 'varanasi-assi-ghat',
     'Durga Kund -temppeli': 'varanasi-durga-kund-temppeli',
     'Ramnagarin linnoitus': 'varanasi-ramnagarin-linnoitus',
@@ -1346,14 +1346,14 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Gandantegchinlenin luostari': 'ulanbator-gandantegchinlenin-luostari',
-    'Mongolian kansallismuseo': 'ulanbator-mongolian-kansallismuseo',
-    'Sükhbaatarin aukio': 'ulanbator-sukhbaatarin-aukio',
-    'Choijin Laman temppeli': 'ulanbator-choijin-laman-temppeli',
-    Rautatieasema: 'ulanbator-rautatieasema',
-    Kansallisstadion: 'ulanbator-kansallisstadion',
-    'Bogd Khanin talvipalatsi': 'ulanbator-bogd-khanin-talvipalatsi',
-    'Zaisanin muistomerkki': 'ulanbator-zaisanin-muistomerkki',
+    'Gandantegchinlenin luostari': 'ulanbator-gandantegchinlenin-luostari-vari2',
+    'Mongolian kansallismuseo': 'ulanbator-mongolian-kansallismuseo-vari2',
+    'Sükhbaatarin aukio': 'ulanbator-sukhbaatarin-aukio-vari2',
+    'Choijin Laman temppeli': 'ulanbator-choijin-laman-temppeli-vari2',
+    Rautatieasema: 'ulanbator-rautatieasema-vari2',
+    Kansallisstadion: 'ulanbator-kansallisstadion-vari2',
+    'Bogd Khanin talvipalatsi': 'ulanbator-bogd-khanin-talvipalatsi-vari2',
+    'Zaisanin muistomerkki': 'ulanbator-zaisanin-muistomerkki-vari2',
   },
   kathmandu: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
