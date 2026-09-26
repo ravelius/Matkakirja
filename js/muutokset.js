@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2290, teksti: 'Astronautin kamera erä 2: 22 uutta kohdetta (#3359)' },
   { v: 2289, teksti: 'Maakunta-erä C: BLR+ROU kuvat+pikkukuvat (#3358)' },
   { v: 2288, teksti: 'Löydös 178: 9 ei-paikkaa galleriaksi, Santarém+… (#3355)' },
   { v: 2287, teksti: 'Ouzel Galley: tekoälyhavainnekuva (#3354)' },

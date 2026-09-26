@@ -1380,6 +1380,355 @@ export const KOHTEET = [
       },
     ],
   },
+  /*
+   * ERÄ 2 (26.9.2026): isoisän reitin maisemat, luonnonkohteet ja
+   * sama paikka eri vuosina -parit. Kuvat katsottu ja arvioitu käsin.
+   */
+  {
+    tunnus: 'kilimanjaro', nimi: 'Kilimanjaro', seutu: 'Tansania', lat: -3.07, lon: 37.35,
+    selite: 'Afrikan korkein vuori, jonka huipun jää on kutistunut 85 prosenttia sadan vuoden aikana.',
+    oletus: 'iss014e18950',
+    kuvat: [
+      {
+        id: 'iss014e18950',
+        teksti: 'Kraatterin reuna suoraan ylhäältä kuvattuna. Lumi ja jää peittävät enää osan Kibon '
+          + 'huipusta, ja tumma kivikko pilkistää esiin rengasmaisen jäätikön keskeltä. Vuoren jää oli '
+          + 'vuonna 1912 vielä 11,4 neliökilometrin kokoinen korkki; tässä kuvassa siitä on jäljellä hajanaisia läiskiä.',
+      },
+      {
+        id: 'iss056e098062',
+        teksti: 'Sama vuori yksitoista vuotta myöhemmin, pilvirenkaan ympäröimänä kuin silmä. '
+          + 'Lumihuippu erottuu tumman rinteen keskeltä pienenä valkoisena kolmiona. Kenian raja jää '
+          + 'kuvan taakse pohjoiseen, ja Kilimanjaro nousee tasangosta ilman yhtäkään vieressään kilpailevaa huippua.',
+      },
+    ],
+  },
+  {
+    tunnus: 'victorianputous', nimi: 'Victorianputous', seutu: 'Sambia ja Zimbabwe', lat: -17.92, lon: 25.86,
+    selite: 'Maailman suurin yhtenäinen putoavan veden verho, 1708 metriä leveä.',
+    oletus: 'iss007e14361',
+    kuvat: [
+      {
+        id: 'iss007e14361',
+        teksti: 'Putous näkyy ohuena valkoisena raitana Zambezi-joen poikki, ja sen alapuolella joki '
+          + 'jatkaa matkaansa terävinä sik-sakkeina — samoja basalttirotkoja, jotka putous on kaivertanut '
+          + 'itselleen perääntyessään vuosituhansien varrella. Victoria Falls -kaupunki näkyy oikealla partaalla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'iso-valliriutta', nimi: 'Iso valliriutta', seutu: 'Queensland, Australia', lat: -16.5, lon: 145.7,
+    selite: 'Maailman suurin koralliriuttajärjestelmä, yli 2300 kilometrin matkalla.',
+    oletus: 'iss068e004262',
+    kuvat: [
+      {
+        id: 'iss068e004262',
+        teksti: 'Queenslandin rannikko oikealla, ja sen edustalla riuttojen laikukas turkoosi vyöhyke '
+          + 'jatkuu kuvan reunalle asti. Jokainen vaaleampi laikku on oma matala riuttansa, jonka ympärillä '
+          + 'syvempi vesi tummuu siniseksi — tässä kuvassa näkyy vain murto-osa yli 2900 erillisestä riutasta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kata-tjuta', nimi: 'Kata Tjuta', seutu: 'Pohjoisterritorio, Australia', lat: -25.31, lon: 130.74,
+    selite: 'Kolmisenkymmentä punaista kivikupolia aution tasangon keskellä, Uluru-Kata Tjuta -kansallispuistossa.',
+    oletus: 'iss023e029806',
+    kuvat: [
+      {
+        id: 'iss023e029806',
+        teksti: 'Iltapäivän valo korostaa Kata Tjutan pyöristyneitä kivikupoleja, joiden väliin varjot '
+          + 'piirtävät syviä rakoja. Korkein kupoli, Mount Olga, on 206 metriä naapuriaan Ulurua korkeampi, '
+          + 'vaikka Uluru on niistä kahdesta kuuluisampi. Vihreä kasvillisuus seuraa kuivia puronuomia alaosassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kuollutmeri', nimi: 'Kuollut meri', seutu: 'Israel, Jordania ja Länsiranta', lat: 31.4, lon: 35.5,
+    selite: 'Maapallon matalin kohta merenpinnasta, ja järvi joka kutistuu vuosi vuodelta.',
+    oletus: 'iss062e078990',
+    kuvat: [
+      {
+        id: 'iss062e078990',
+        teksti: 'Meren eteläpää, jossa luonnollinen sininen vesi (vasen) vaihtuu geometrisiksi '
+          + 'haihdutusaltaiksi (oikea): niissä auringossa haihdutetaan suolavettä potaskaksi. Altaiden '
+          + 'vihertävä ja vaaleanpunainen sävy syntyy eri suolapitoisuuksista.',
+      },
+      {
+        id: 'iss073e0425936',
+        teksti: 'Laajempi näkymä samalta seudulta: Galileanjärvi (vasemmalla) ja Kuollut meri (oikealla) '
+          + 'yhdistää Jordan-joki, ohut tumma viiva kuvan keskellä. Galileanjärvi on maailman matalin '
+          + 'makeanveden järvi, Kuollut meri matalin suolajärvi — molemmat samassa hautavajoamassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'tsadjarvi', nimi: 'Tšadjärvi', seutu: 'Tšad, Niger, Nigeria ja Kamerun', lat: 13.15, lon: 14.3,
+    selite: 'Järvi, joka on kutistunut noin 90 prosenttia 1960-luvulta.',
+    oletus: 'iss037e015757',
+    kuvat: [
+      {
+        id: 'iss037e015757',
+        teksti: 'Auringon heijastus vedestä paljastaa matalan, pirstoutuneen järven ääriviivat '
+          + 'paremmin kuin suora kuva pystyisi. 1960-luvulla järvi peitti 25 000 neliökilometriä; nyt '
+          + 'siitä on jäljellä enää murto-osa, ja vesi on hajonnut saarekkeiden ja ruovikon verkoksi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'fitrijarvi', nimi: 'Fitrijärvi', seutu: 'Tšad', lat: 12.83, lon: 17.43,
+    selite: 'Umpijärvi keskellä Saheliä, josta ei lähde ainuttakaan jokea mereen.',
+    oletus: 'iss030e059398',
+    kuvat: [
+      {
+        id: 'iss030e059398',
+        teksti: 'Mutainen keltaruskea vesi täyttää autiomaan painanteen keskeltä, ja sen ympärillä '
+          + 'tummempi rengas on paljastunut, palaneen kasvillisuuden peittämä järvenpohja. Kaikki '
+          + 'Fitrijärveen tuleva vesi joko haihtuu tai imeytyy hiekkaan — mereen ei johda yksikään puro.',
+      },
+    ],
+  },
+  {
+    tunnus: 'dardanellit', nimi: 'Dardanellit', seutu: 'Turkki', lat: 40.14, lon: 26.4,
+    selite: 'Kapea salmi, joka yhdistää Egeanmeren Marmarameren kautta Mustallemerelle.',
+    oletus: 'iss014e08138',
+    kuvat: [
+      {
+        id: 'iss014e08138',
+        teksti: 'Gallipolin kaupunki kuvan keskellä salmen suulla. Vesi virtaa yhtä aikaa koilliseen '
+          + 'ja lounaaseen, sillä pinta- ja pohjavirtaus kulkevat vastakkaisiin suuntiin, ja muutama '
+          + 'laiva näkyy tummina pilkkuina salmessa kaupungin lounaispuolella.',
+      },
+      {
+        id: 'iss002e7758',
+        teksti: 'Laajempi näkymä samalta salmelta viisi vuotta aiemmin: Gelibolun niemimaa työntyy '
+          + 'alas vasemmalla, Egeanmeren saaria pilkottaa oikealla, ja avaruuden musta reuna kaartuu ylhäällä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'okavango', nimi: 'Okavango-suisto', seutu: 'Botswana', lat: -19.28, lon: 22.97,
+    selite: 'Joki joka ei koskaan tavoita merta vaan haihtuu aavikon keskellä viuhkamaiseksi kosteikoksi.',
+    oletus: 'iss073e0604445',
+    kuvat: [
+      {
+        id: 'iss073e0604445',
+        teksti: 'Angolasta virtaava Okavango-joki haarautuu Kalaharin hiekalle lukemattomiksi tummiksi '
+          + 'suoniksi vaaleaa hiekkaa vasten, kuin puun juuristo. Vesi ei koskaan saavuta merta: se haihtuu '
+          + 'ja imeytyy kokonaan, ja suisto ylläpitää yhtä Afrikan lajirikkaimmista ekosysteemeistä.',
+      },
+      {
+        id: 'iss040e008209',
+        teksti: 'Auringon heijastus vedestä muuttaa suiston yhdeksi kirkkaaksi hopeajuovaksi tummaa '
+          + 'maata vasten — tekniikka, jolla miehistö saa esiin veden hienoimmatkin yksityiskohdat. Aseman '
+          + 'oma aurinkopaneeli reunustaa kuvan oikeaa laitaa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kolmen-rotkon-pato', nimi: 'Kolmen rotkon pato', seutu: 'Kiina', lat: 30.82, lon: 111.0,
+    selite: 'Maailman suurin pato, jonka tekojärvi on yli 600 kilometriä pitkä.',
+    oletus: 'iss019e007720',
+    kuvat: [
+      {
+        id: 'iss019e007720',
+        teksti: 'Pato näkyy vasemmassa reunassa kapeana valkoisena viivana joen poikki, ja sen takana '
+          + 'Jangtse-joki on juuri alkanut täyttää laaksoaan uudeksi, kapeaksi tekojärveksi — kuva on yksi '
+          + 'ensimmäisistä, jotka tallensivat täyttymisen vuonna 2009. Vuoristoinen maasto selittää altaan mutkittelun.',
+      },
+    ],
+  },
+  {
+    tunnus: 'vesuvius', nimi: 'Vesuvius', seutu: 'Italia', lat: 40.82, lon: 14.43,
+    selite: 'Tulivuori joka tuhosi Pompejin vuonna 79, ja asuu nyt kolmen miljoonan ihmisen naapurina.',
+    oletus: 'iss067e010622',
+    kuvat: [
+      {
+        id: 'iss067e010622',
+        teksti: 'Vesuviuksen pyöreä kraatteri erottuu Napolinlahden rannalla, ja kaupunki on '
+          + 'levittäytynyt aivan rinteille asti. Capri ja Ischia näkyvät saarina lahden suulla. Vuori '
+          + 'purkautui viimeksi 1944, mutta se on yhä yksi maailman tarkimmin valvotuista tulivuorista.',
+      },
+      {
+        id: 'iss061e006435',
+        teksti: 'Naapurikaupunki Pompeiji jää kuvassa vuoren juurelle: se hautautui tuhkaan vuonna 79 '
+          + 'purkauksessa, joka tappoi tuhansia. Kolme miljoonaa ihmistä asuu nykyään alueella, jonka '
+          + 'Vesuvius voisi vielä joskus haudata uudelleen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ounianga', nimi: 'Ouniangan järvet', seutu: 'Tšad', lat: 19.05, lon: 20.49,
+    selite: 'Kymmenen makean veden järveä keskellä Saharaa, jäänteinä muinaisesta suurjärvestä.',
+    oletus: 'iss021e026475',
+    kuvat: [
+      {
+        id: 'iss021e026475',
+        teksti: 'Oranssit hiekkadyynit ovat tunkeutuneet järven poikki ja pilkkoneet sen tummiksi '
+          + 'kaistaleiksi, jotka näyttävät puun oksilta. Järvet ovat jäänteitä yhdestä isosta järvestä, '
+          + 'joka peitti alueen 14 800–5 500 vuotta sitten kun Sahara oli vihreä; nyt pohjavesi pitää ne '
+          + 'täynnä keskellä autiomaata.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sokotra', nimi: 'Sokotra', seutu: 'Jemen', lat: 12.46, lon: 53.82,
+    selite: 'Saari niin eristyksissä, että 37 prosenttia sen kasveista ei kasva missään muualla.',
+    oletus: 'iss069e004768',
+    kuvat: [
+      {
+        id: 'iss069e004768',
+        teksti: 'Sokotran eteläisen rannikon vuoristo laskeutuu jyrkkinä laaksoina turkoosiin mereen. '
+          + 'Saari erosi mantereesta miljoonia vuosia sitten ja on siksi oma evoluution laboratorionsa: '
+          + 'sen sateenvarjonmuotoiset lohikäärmeenveripuut eivät kasva luonnossa missään muualla maailmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'titicaca', nimi: 'Titicaca-järvi', seutu: 'Peru ja Bolivia', lat: -15.78, lon: -69.34,
+    selite: 'Maailman korkeimmalla sijaitseva suuri purjehduskelpoinen järvi, Andien huipuilla.',
+    oletus: 'iss055e071030',
+    kuvat: [
+      {
+        id: 'iss055e071030',
+        teksti: 'Järvi täyttää Andien ylätasangon painanteen, ja sen luoteisreunaa vasten kohoavat '
+          + 'lumihuippuiset vuoret. Järvi sijaitsee noin 3812 metrin korkeudessa ja jakautuu Perun ja '
+          + 'Bolivian kesken rajaviivaa pitkin keskeltä vettä.',
+      },
+      {
+        id: 'iss067e149915',
+        teksti: 'Lähempi kuva samasta järvestä: auringon kimallus vedessä piirtää vaaleita raitoja, '
+          + 'jotka paljastavat pintavirtausten suunnan. Niemet ja lahdet erottuvat terävinä rantaviivoina — '
+          + 'järvi on niin suuri, että sen tuulet ja aallot muistuttavat merta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'gizan-pyramidit', nimi: 'Gizan pyramidit', seutu: 'Egypti', lat: 29.87, lon: 30.95,
+    selite: 'Muinaisen maailman seitsemästä ihmeestä ainoa, joka on vielä pystyssä.',
+    oletus: 'iss032e009123',
+    kuvat: [
+      {
+        id: 'iss032e009123',
+        teksti: 'Kolme pyramidia näkyy tummina kolmiovarjoineen aivan siinä kohtaa, missä Kairon '
+          + 'tiheä kaupunkikudos loppuu ja aavikko alkaa — raja on käytännössä suora viiva. Suurin '
+          + 'pyramideista, 146,6 metriä valmistuessaan noin 2560 eaa., oli maailman korkein rakennelma '
+          + 'yli 3700 vuotta.',
+      },
+      {
+        id: 'iss068e006657',
+        teksti: 'Laajempi näkymä kymmenen vuotta myöhemmin: pyramidit näkyvät pieninä kolmioina '
+          + 'kuvan yläosassa, ja alhaalla Niilin vihreä laakso ja joki itse leikkaavat aavikon halki. '
+          + 'Kaupunki on levinnyt entistä lähemmäs pyramideja.',
+      },
+    ],
+  },
+  {
+    tunnus: 'tshernobyl', nimi: 'Tšernobyl', seutu: 'Ukraina', lat: 51.39, lon: 30.10,
+    selite: 'Ydinvoimala, jonka ympärille jäi kielletty vyöhyke vuoden 1986 onnettomuuden jälkeen.',
+    oletus: 'iss057e051419',
+    kuvat: [
+      {
+        id: 'iss057e051419',
+        teksti: 'Voimalan rakennukset ja niitä ympäröivät jäähdytysaltaat erottuvat Pripjat-joen '
+          + 'mutkassa. Räjähtäneen neljännen reaktorin päälle rakennettu uusi teräskaari näkyy vaaleana '
+          + 'suorakulmiona. Rajan taakse Valko-Venäjälle perustettiin oma suojelualueensa säteilylle '
+          + 'altistuneelle alueelle — luonto on vallannut molemmat puolet takaisin ihmisen lähdettyä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'everest', nimi: 'Mount Everest', seutu: 'Nepal ja Kiina', lat: 27.99, lon: 86.93,
+    selite: 'Maapallon korkein kohta merenpinnasta, 8849 metriä.',
+    oletus: 'iss069e003192',
+    kuvat: [
+      {
+        id: 'iss069e003192',
+        teksti: 'Terävät lumihuiput työntyvät pilvimeren yläpuolelle Nepalin puolella Himalajaa, '
+          + 'Everest kuvan keskellä muiden jättiläisten joukossa. Pilvet kasautuvat vuorten eteläpuolelle, '
+          + 'koska kostea ilma nousee ja jäähtyy törmätessään Himalajan seinämään.',
+      },
+    ],
+  },
+  {
+    tunnus: 'aletsch', nimi: 'Aletschin jäätikkö', seutu: 'Sveitsi', lat: 46.43, lon: 8.02,
+    selite: 'Alppien pisin jäätikkö, 23 kilometriä, joka virtaa kolmen tunnetun huipun juurelta.',
+    oletus: 'iss013e77377',
+    kuvat: [
+      {
+        id: 'iss013e77377',
+        teksti: 'Jäätikkö mutkittelee laaksossa Jungfrau-, Mönch- ja Eiger-huippujen juurelta '
+          + 'alaspäin, ja sen keskellä kulkevat tummat raidat ovat moreeneja: kolmen erillisen jäävirran '
+          + 'mukanaan tuomaa kivi- ja soraröykkiötä, joka on puristunut yhteen jäätiköiden sulautuessa. '
+          + 'Kuvan yläreunassa siintää Brienzinjärvi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'torres-del-paine', nimi: 'Torres del Paine', seutu: 'Chile', lat: -50.95, lon: -73.03,
+    selite: 'Patagonian graniittitornit ja niitä ympäröivät jäätiköt, jotka kalvavat vuosi vuodelta.',
+    oletus: 'iss056e096830',
+    kuvat: [
+      {
+        id: 'iss056e096830',
+        teksti: 'Jäätikkö päättyy jyrkkään, siniseen jäärintamaan järveen, joka on täynnä juuri '
+          + 'irronneita jäälohkareita. Ympärillä jyrkät vuoret kohoavat suoraan jäästä — koko '
+          + 'kansallispuisto on graniittihuippujen ja jään yhteispeliä.',
+      },
+      {
+        id: 'iss016e012047',
+        teksti: 'Tyndall-jäätikkö yksitoista vuotta aiemmin: 32 kilometriä pitkä jäävirta, jonka '
+          + 'keskellä näkyy tumma moreeniviiva ja lähempänä reunaa rikkonaisia railokenttiä — kohtia, '
+          + 'joissa jää halkeilee virratessaan kallionkielekkeen ohi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kilauea', nimi: 'Kilauea', seutu: 'Havaiji, Yhdysvallat', lat: 19.42, lon: -155.29,
+    selite: 'Yksi maailman aktiivisimmista tulivuorista, joka muokkaa Ison saaren rantaviivaa yhä uudelleen.',
+    oletus: 'iss055e070297',
+    kuvat: [
+      {
+        id: 'iss055e070297',
+        teksti: 'Vaalea tuhka- ja kaasupilvi valuu Ison saaren itärannikolta merelle päin — tämä on '
+          + 'toukokuussa 2018 alkaneen purkauksen alkuvaiheita, jolloin laava tuhosi yli 700 kotia ja '
+          + 'loi saarelle kokonaan uutta rantaviivaa. Vuoren rinteet näkyvät tummina laavavirtojen uurtamina.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ararat', nimi: 'Ararat', seutu: 'Turkki', lat: 39.70, lon: 44.30,
+    selite: 'Turkin korkein vuori, kaksoishuippu joka näkyy kolmen maan rajaseudulta.',
+    oletus: 'iss064e029480',
+    kuvat: [
+      {
+        id: 'iss064e029480',
+        teksti: 'Vinosta kuvakulmasta otettu näkymä paljastaa Araratin kaksi huippua selvästi: '
+          + 'suurempi, 5137-metrinen Suur-Ararat etualalla ja pienempi kartiomainen Pikku-Ararat sen '
+          + 'takana. Lumi peittää molemmat huiput kokonaan, ja rinteiltä laskeutuvat tummat laavavirrat '
+          + 'erottuvat terävinä juovina lumen alta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'crater-lake', nimi: 'Crater Lake', seutu: 'Oregon, Yhdysvallat', lat: 42.94, lon: -122.11,
+    selite: 'Yhdysvaltain syvin järvi, 592 metriä, syntynyt kun tulivuori romahti sisäänpäin.',
+    oletus: 'iss013e54243',
+    kuvat: [
+      {
+        id: 'iss013e54243',
+        teksti: 'Poikkeuksellisen syvänsininen järvi täyttää pyöreän kalderan, joka syntyi kun '
+          + 'Mount Mazama -tulivuori räjähti ja romahti noin 7700 vuotta sitten. Wizard Island, pieni '
+          + 'tulivuorikartio järven sisällä, näkyy tummana pilkkuna eteläreunan lähellä.',
+      },
+      {
+        id: 'iss062e152575',
+        teksti: 'Sama kaldera talvella, lähes 14 vuotta myöhemmin: lumi peittää kraatterin reunat '
+          + 'kauttaaltaan, mutta järven pinta pysyy sulana ja yhtä tummansinisenä kuin kesällä. Wizard '
+          + 'Island erottuu nyt valkoisena lumihuippuna tumman veden keskeltä.',
+      },
+    ],
+  },
+
 ];
 
 /**
