@@ -7347,3 +7347,7 @@ Karttaseppa: maakuntaosa kaatui 20.05 heti alkuun — Math.min(...s) 270 344 laa
 ## NOSTOTASON UUDELLEENPOLTTO 174B:N MERKEILLA RINNALLE 2 YTIMELLA (26.9.2026 klo 20.16)
 
 Karttaseppa: merkit on poltettu nostotasoon z5–z8 (2026-09-25c-nostot, 112 maata; 3 974 laattaa, 9 Mt), peli vaientaa poltetun merkin elavan version → vanha tyyppikuvake nakyy kunnes poltetaan uudelleen. Fable: poltto Z10:n rinnalle 2 ytimella heti kun #3342 mainissa; versio 2026-09-27-nostot + nostotasot-tiivisteet; Julkaisija vaihtaa osoittimen.
+
+## ISS-KAUKONAKYMA TODELLISELLA RADALLA VALMIS (iss-sgp4 711372bd) (26.9.2026 klo 20.17)
+
+Linssiseppa: ISS-kaukonakyma SGP4-radalla (TLE #3334), kuvapari havainnollinen → todellinen proto-3d/lokit/linssiseppa-iss-kaukonakyma-20260926/; merge-pyynto Natiivisepalle 1.0.26-junaan. Fable lahetti kuvaparin omistajalle tiedoksi (ISS hyvaksytty jo kortilla). Seuraavaksi Venetsian gondolit.
