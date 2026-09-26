@@ -7547,3 +7547,7 @@ Pelikoodari: docs/raportit/puhe-striimivertailu-20260926.md, 21 mp3 amparissa au
 ## LIPUN PERSPEKTIIVI KORJATTU (9d6682d1) → 1.0.27; S11 KOODATTU (26.9.2026 klo 22.43)
 
 Natiiviseppa: tanko seisoo 55°, perspektiivi nojauttaa ulospain ruudun tasossa (reunalla 25°) ja pidentaa/lyhentaa, kangas aina kameraan; kuvat proto-3d/lokit/lippu-perspektiivi-2/kuusikko.jpg → omistajalle tiedoksi, junaan pelikokeiluun. Rajapinta junassa (0c271500), kaari+vuori-reliefit agentilla, S11 esilammitys koodattu (natiiviseppa/s11-lammitys 237b9042, GraphicsStateCollection) — vaatii iPad-nauhoituksen + kylmamittauksen.
+
+## LIIOITELTU PERSPEKTIIVI, OMISTAJAN TARKENNUS: KESKELLA LAHES NAKYMATON, TANKO RADIAALISESTI ULOS (26.9.2026 klo 22.46)
+
+Omistaja 22.4x: lipun pitaa olla lahes nakymaton ruudun keskella (nakyma suoraan ylhaalta), ja kun kamera menee sen yli (lippu ruudun alaosassa), tanko piirtyy ALASPAIN. Fable: tangon suunta radiaalisesti poispain keskipisteesta (ylos/alas/sivuille), nakyva pituus 0 → taysi keskelta reunaan, kangas kaantyy mukana; sama kaava nostojen 3D-symboleille. Natiivisepan 9d6682d1 (tanko aina pystyssa 55°, nojaa ulospain) ei riita → korjataan ennen 1.0.27-junaa.
