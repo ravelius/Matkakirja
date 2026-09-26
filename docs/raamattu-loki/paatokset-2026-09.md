@@ -7303,3 +7303,7 @@ Omistaja 19.5x (kuva Ranska): valtaosa nostoista yha ruskeina laikkina maatason 
 ## 174 VASTAUS: KUVA 1.0.24, KAUKOSYMBOLIT 1.0.26 (26.9.2026 klo 19.51)
 
 Natiiviseppa: omistajan kuva on 1.0.24 (tason 1 nostot 2D-merkkeina; 1.0.25:ssa kaikki 182 tason 1 nostoa 3D:na). Tasojen 2–3 mallit tulevat 155:n kynnyksella (kerroin ≥ 2,5), maatason zoomissa jaa alle → laikat; siluettiraja ei syy. Toteutus: kynnyksen alla lajin 2D-kuvamerkki kaikille tasoille (loytamaton himmeana), yllä 3D; laikkaa ei missaan. Natiivi-UI NostotKartalla ~2–3 h (P1, aloittaa nyt), Natiiviseppa laji→symboli-kartoitus ~1 h + mittaus maatasolla 100+ merkkia. Tavoite 1.0.26.
+
+## 174 DATA TAYSI: LAIKKA TULEE NostotKartalla.cs:232:STA (26.9.2026 klo 19.52)
+
+Pelikoodari: jokaisella nostolla on symboli datassa (taso 1: 177 kuvamerkki + 8 tyyppikuvake; taso 2: 2 068 + 710; laji puuttuu 0/119 maata). Natiivissa NostoSaannot.cs:ssa sama 11 kuvamerkin taulu kuin webissa + tyyppikuvakkeen varamerkki. Laikka syntyy NostotKartalla.cs:232 (loytamaton taso 2–3 → MusteJaljet-laikka, elavan kartan kohta 2). Korjaus: kaukaa kuvamerkki/tyyppikuvake himmeana, lahella malli — Natiivi-UI; Natiivisepan kartoitus peruttu, vain mittaus.
