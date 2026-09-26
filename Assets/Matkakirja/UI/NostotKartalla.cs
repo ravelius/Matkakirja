@@ -201,8 +201,38 @@ namespace Matkakirja.Natiivi
             Paivita();
         }
 
+        // ELÄVÄ KARTTA, KOHTA 2 (build 20; Natiiviseppä NostoKerros.Muste, Pelikoodari PeliOhjain.NostonMuste): kokoluokka ja
+        // löydetty-tila merkkeihin. Kytketään kerran, kun pelisilmukka on olemassa; muutokset (löytö, data) → PaivitaMuste.
+        bool musteKytketty;
+
+        void KytkeMuste()
+        {
+            if (musteKytketty) return;
+            var o = PeliOhjain.Instanssi;
+            if (o == null) return;
+            musteKytketty = true;
+            NostoKerros.Muste = id =>
+            {
+                var p = PeliOhjain.Instanssi;
+                if (p == null || !p.MusteLuettu || string.IsNullOrEmpty(id)) return null;
+                var m = p.NostonMuste(id);
+                return ((int)m.Luokka, m.Loydetty, m.Nakyy);
+            };
+            o.NostoLoytyi += _ => NostoKerros.PaivitaMuste();
+            o.MusteValmis += NostoKerros.PaivitaMuste;
+            NostoKerros.PaivitaMuste();
+        }
+
+        /// <summary>Kokoluokan kerroin suhteessa kohteeseen (pääkohde 1,0 : kohde 0,67 : pieni 0,44; kohde = nykyinen koko).</summary>
+        static float LuokanKerroin(int luokka) =>
+            luokka == NostoKerros.MusteLuokka.Paakohde ? 1f / 0.67f : luokka == NostoKerros.MusteLuokka.Pieni ? 0.44f / 0.67f : 1f;
+
+        /// <summary>Löytämätön nosto: himmeä musteen jälki ilman nimeä (Linssisepän MusteJaljet-tekstuuri tulee tilalle).</summary>
+        const float LoytamatonPeitto = 0.5f;
+
         void Kytke()
         {
+            KytkeMuste();
             // Ladottujen nimien laatikot (web nimet.laatikot()): uusi ladonta levossa → sovittelu uudelleen.
             var nk = Nimikerros.Instanssi;
             if (nk != nimikerros)
@@ -652,8 +682,11 @@ namespace Matkakirja.Natiivi
             bool kaupunki = s.Kaupunkimerkki;
             m.Taso1 = s.Taso == 1 && !ryhma;
             float oma = kaupunki ? KaupunginKerroin : m.Taso1 ? Taso1Kerroin : 1f;
+            // Elävä kartta, kohta 2: kokoluokka (ei kaupunkimerkkeihin eikä ryhmiin).
+            if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
+            bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
-            bool kuvamerkki = !ryhma && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
+            bool kuvamerkki = !ryhma && loydetty && Kuva(s) != null && NostoSaannot.KuvamerkkiKaytossa(s.Taso, kerroin);
             m.Ruutu = MiniRuutu * (m.Taso1 && kuvamerkki ? KuvamerkinKerroin : 1f);
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
@@ -680,7 +713,11 @@ namespace Matkakirja.Natiivi
             }
             // Meren nimiö (web NOSTOSYM_NIMIO_ASUT.meri): lyhennys, sitten versaali ja harvennus 0,28 em.
             bool meri = !ryhma && NostoSaannot.OnMerenNimio(s.Laji);
-            string nimi = nimio ?? Lyhenna(s.Nimio ?? "");
+            string nimi = loydetty ? nimio ?? Lyhenna(s.Nimio ?? "") : ""; // löytämätön ilman nimeä
+            float peitto = loydetty ? 1f : LoytamatonPeitto;
+            if (!Mathf.Approximately(m.El.resolvedStyle.opacity, peitto)) m.El.style.opacity = peitto;
+            m.El.EnableInClassList("mk-nosto-merkki--loytamaton", !loydetty);
+            m.El.EnableInClassList("mk-nosto-merkki--paakohde", loydetty && !ryhma && s.Luokka == NostoKerros.MusteLuokka.Paakohde);
             if (meri) nimi = nimi.ToUpperInvariant();
             if (m.Nimio.text != nimi) m.Nimio.text = nimi;
             m.Nimio.style.display = nimi.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
