@@ -195,3 +195,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - **juna/b13 e5ed36bd**: + siirtoseppa/siivous-korjaus 13e5bcf4 (KRIITTINEN: TF 1.0.18:n taustapäivitys poisti ladatun uuden version → laite jumissa vanhassa sisällössä). Fablelle ehdotettu build 19:n leikkausta tästä (ilman pohja-26:ta ja maakunta-heraata).
 - Pohja 26 kuvapari valmis 07.1x: lokit/pohja-26/kuvapari.jpg (+ täydet kuvat); ero hienovarainen, ei regressiota → Fablelle päätettäväksi (build 19 vai 20).
 - juna/b13 **6697be58**: + linssiseppa/maakunta-heraa c05835ef (sis. natiiviseppa/maakunta-heraa 9d9eb1bd). Ilman dataa inertti: paketin karttavaloista puuttuu "maakunta"-kenttä (diagnostiikka FRA: 0/0/13) → Fable/Siirtoseppä/Pelikoodari.
+- juna/b13 **fdc47632**: + pelikoodari/lehti-kaupungeittain 3779473c (1.48: lehti 81 kt kaupungittain, kylmä aloitusverho 4,1 s).
