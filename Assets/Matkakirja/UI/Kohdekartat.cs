@@ -10,6 +10,11 @@
 // Skeema 1.24: kohteen linkit [{tunnus, laji, aihe, kategoria, nimi}] (laji fokuskohde | skandaalit |
 // historianHetket | syvennys | takynosto | maalehtinosto) ja aihe = ensimmäisen linkin aihe (sama kaava
 // kuin webin kaupunkiliuskassa: kohteenKategoria → nostosymPaakategoria). Vanhassa paketissa vain nosto.
+//
+// Löydös 178 (web #3353): kohteet[] sisältää ensin kartan paikat (kartalla: true) samassa järjestyksessä kuin
+// web (numerointi niistä) ja sitten tarinakohteet (kartalla: false), joilla on karttanosto: ne eivät ole kartalla
+// vaan kaupungin nostoissa (web kaupunginTarinakohteet → kaupunkikartanSiirretyt). Kenttä tyyppi (rakennus |
+// aukio | luonto | taide | esine | henkilo | ilmio); aukio ja luonto kevyellä merkillä.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,6 +42,10 @@ namespace Matkakirja.Natiivi
         public int Numero;
         /// <summary>Miniatyyripiirroksen osoite (läpinäkyvä webp) tai null.</summary>
         public string Piirros;
+        /// <summary>Paikan tyyppi (löydös 178, kohteet[].tyyppi): rakennus | aukio | luonto; puuttuva = rakennus.</summary>
+        public string Tyyppi = "rakennus";
+        /// <summary>Kevyt merkki (web KEVYET_KOHDETYYPIT): aukio ja luonto piirretään rakennusta keveämpinä.</summary>
+        public bool Kevyt => Tyyppi == "aukio" || Tyyppi == "luonto";
         /// <summary>Nähtävyysjuttu (teksti ja kuvat) tai null (pelkkä wiki-kohde).</summary>
         public NahtavyysKohde Juttu;
         /// <summary>Selattava (web): juttu, jossa on teksti ja vähintään yksi kuva.</summary>
@@ -61,6 +70,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Numeroympyräkartta (web numeroympyrat: luxemburg, bryssel, ljubljana, kosice, valletta).</summary>
         public bool Numeroympyrat;
         public List<KohdekarttaKohde> Kohteet = new List<KohdekarttaKohde>();
+        /// <summary>Tarinakohteet (löydös 178, kartalla: false + nosto): vain kaupungin nostoissa, ei numeroa.</summary>
+        public List<KohdekarttaKohde> Tarinakohteet = new List<KohdekarttaKohde>();
         /// <summary>Mittakaavajanan leveys osuutena koko kuvan leveydestä (0–1), tai 0 (ei janaa); JanaTeksti "500 m".</summary>
         public float JanaOsuus;
         public string JanaTeksti;
@@ -182,12 +193,17 @@ namespace Matkakirja.Natiivi
                 foreach (var o in (Rakenne.Lista(MiniJson.Kentta(a, "kohteet")) ?? new List<object>()).Select(Ob).Where(x => x != null))
                 {
                     string nimi = T(o, "nimi");
-                    if (nimi == null || !(MiniJson.Luku(o, "x") is double x) || !(MiniJson.Luku(o, "y") is double y)) continue;
+                    if (nimi == null) continue;
+                    // Puuttuva kartalla = kartalla (vanha paketti); tarinakohteella ei tarvita paikkaa.
+                    bool kartalla = !(MiniJson.Kentta(o, "kartalla") is bool kb) || kb;
+                    double x = MiniJson.Luku(o, "x") ?? double.NaN, y = MiniJson.Luku(o, "y") ?? double.NaN;
+                    if (kartalla && (double.IsNaN(x) || double.IsNaN(y))) continue;
                     var siirto = Ob(MiniJson.Kentta(o, "siirto"));
                     var kohde = new KohdekarttaKohde
                     {
                         Nimi = nimi, Wiki = T(o, "wiki"), NimiPuoli = T(o, "nimiPuoli"), Aika = T(o, "aika"),
-                        X = (float)x, Y = (float)y, Numero = ++numero,
+                        Tyyppi = T(o, "tyyppi") ?? "rakennus",
+                        X = (float)x, Y = (float)y, Numero = kartalla ? ++numero : 0,
                         Siirto = siirto != null ? new Vector2((float)(MiniJson.Luku(siirto, "x") ?? 0), (float)(MiniJson.Luku(siirto, "y") ?? 0)) : Vector2.zero,
                     };
                     // Nostolinkki on tunnus tai taulukko (Tuileriain rauniot: syvennys + tuileries).
@@ -205,7 +221,8 @@ namespace Matkakirja.Natiivi
                     if (!string.IsNullOrEmpty(T(o, "teksti"))) kohde.Juttu = Juttu(nimi, o);
                     else if (jutut.TryGetValue(avain, out var j)) kohde.Juttu = j;
                     if (kohde.Juttu != null && string.IsNullOrEmpty(kohde.Juttu.Aika)) kohde.Juttu.Aika = kohde.Aika;
-                    k.Kohteet.Add(kohde);
+                    if (kartalla) k.Kohteet.Add(kohde);
+                    else if (kohde.Nosto != null) k.Tarinakohteet.Add(kohde);
                 }
                 t[id] = k;
             }
