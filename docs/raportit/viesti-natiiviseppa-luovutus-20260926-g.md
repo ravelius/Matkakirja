@@ -90,3 +90,8 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
 - **Klo 04.38 BUILD 18 KÄÄNNETTY e85255cd** (= master 6a65ead1 + juna 541092d9, puu d3206794), asennettu Laitetestaajan ja pariteetin
   simulaattoreihin; SHA Laitetestaajalle ja Fablelle. SEURAAVAKSI: Laitetestaajan PASS → Matkakirja-proto: `git merge --no-ff
   juna/b13` (tarkista puu = d3206794) → SHA Fablelle + Julkaisijalle.
+- Build 19 -jono (Pelikoodarin mittaus, lokit/kohta1-kaynnistys-20260926.md; ESILATAUSPOLITIIKKA kohta 1): verkosta haetaan kylmänä
+  nostotyyppien kuvakkeet (8 kpl, jopa 1,4 s), pulun livia-astronauttikypara-2x.png, aloitusdata (kaupungit, reitit, maarajat 984 kt,
+  aluenimet, ui-tekstit, maamaa.geojson 913 kt) ja bmng-bathy Z5 (9 laattaa puuttuu laattapaketista). Ehdotettu jako Fablelle:
+  Natiiviseppä 1–3 tilannekuvana buildiin + 4 Karttasepän kanssa; Pelikoodari yhteinen haku (kaupungit.json 4× rinnakkain) ja
+  uusin.json taustalle (estää 1,3–1,4 s, kohta 2). Tarkista efektiäänten (Aanet) latausreitti.
