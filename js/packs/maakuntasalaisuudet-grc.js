@@ -14,7 +14,38 @@
  * coordinates-rajapinnasta (Keroksen, Alonnisoksen ja Abderan piste on
  * artikkelin karkea piste, ei tarkka kohde). `lyhyt` on Livian
  * (nykyaika) ääni, `nappi` 1873-näkökulman alaotsikko kuten
- * hahmotelma-grc.js:ssä. Kuvia ei ole tässä vaiheessa.
+ * hahmotelma-grc.js:ssä.
+ *
+ * PIKKUKUVA (Sisältökirjuri 26.9.2026, Fablen tilaus löydös 158:n
+ * yhteydessä, PR #3307:n skeema 1.49): yksi aito Wikimedia Commons
+ * -valokuva kohdekohtaisesti (ei maakunnan yleiskuva), lisenssi
+ * tarkistettu Commonsin API:sta ennen latausta, suurennettu enintään
+ * 1600 px:iin, viety ämpäriin karttanostot/20260926/. Vain PD/CC0/
+ * CC BY/CC BY-SA. Lähteet (tarkistettu 26.9.2026):
+ *   deinokrateen-vuori — File:Mt._Athos_(3939757657).jpg (Dave Proffer, CC BY 2.0;
+ *     kuvattu kaukaa, ei luostareita lähikuvassa)
+ *   eleusiin-mysteerit — File:General_view_of_sanctuary_of_Demeter_and_Kore_and_
+ *     the_Telesterion_(Initiation_Hall),_center_for_the_Eleusinian_Mysteries,_
+ *     Eleusis_(8191841684).jpg (Carole Raddato, CC BY-SA 2.0)
+ *   nekromanteion — File:Nekromanteion_Main_Sanctuary.jpg (Evilemperorzorg, CC BY-SA 3.0)
+ *   keros — File:Idol_fragment_Keros_Hoard,_MCA_ET16_081005.jpg (Zde, CC BY-SA 3.0;
+ *     Keroksen aarteen idolinkatkelma, Kykladisen taiteen museo)
+ *   abdera — File:Abdera.JPG (Papatrexas, public domain)
+ *   melissani — File:Melissani_Cave,_Kefalonia_1.jpg (Matt Sims, CC BY 2.0)
+ *   gla — File:Citadel_of_Gla,_central_Greece.jpg (Kjn1961, CC BY-SA 3.0)
+ *   kastan-kumpu — File:Kasta_tumulus_-_view_from_Amphipolis.jpg (Neptuul, CC BY-SA 4.0)
+ *   gortynin-laki — File:The_Law_Code_of_Gortyn_dated_to_the_early_5th_century_BC,_
+ *     Gortyn.jpg (Carole Raddato, CC BY-SA 2.0)
+ *   chlemoutsi — File:Chlemoutsi1.JPG (Roman Klementschitz, CC BY-SA 3.0)
+ *   dispilio — File:Kastoria,_the_prehistoric_lakeside_settlement_of_Dispilio.jpg
+ *     (Efthimios Tsilikidis, CC BY-SA 4.0)
+ *   pavlopetri — File:Pounta_beach_(view_from_Elafonisos_ferry_boat).jpg (annagkai,
+ *     CC BY-SA 4.0; vedenalaista PD/CC-kuvaa ei löytynyt, sama ranta-alue jonka
+ *     edustalla vedenalainen kaupunki sijaitsee)
+ *   poliokhni — File:Poliochne.jpg (ale3andro, CC BY-SA 2.0)
+ *   munkkihylkeet — File:Monachus_monachus_DSC_0274.jpg (Marinko Babić, CC BY-SA 4.0;
+ *     lajikuva Pulasta, Kroatiasta — Alonnisokselta ei löytynyt sopivalla
+ *     lisenssillä olevaa kuvaa)
  */
 export const MAAKUNTASALAISUUDET_GRC = {
   'nosto:salaisuus-deinokrateen-vuori': {
@@ -40,6 +71,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
       + '(osiot City proposal of Mount Athos ja Plan of Alexandria), haettu 26.9.2026.',
     miksiSalaisuus: 'Athoksen tavallinen nosto kertoo luostareista; harva tietää, että koko '
       + 'vuori oli vähällä muuttua jättiläispatsaaksi.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-deinokrateen-vuori-e1daa824.jpg',
+      lahde: 'Dave Proffer, Wikimedia Commons (CC BY 2.0)',
+      tekija: 'Dave Proffer',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mt._Athos_(3939757657).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    },
   },
 
   'nosto:salaisuus-eleusiin-mysteerit': {
@@ -64,6 +103,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
       + 'of Eleusis", haettu 26.9.2026.',
     miksiSalaisuus: 'Antiikin tunnetuin salaisuus: tuhannet vihityt vaikenivat vuosisadasta '
       + 'toiseen, eikä menojen ydintä tunneta vieläkään.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-eleusiin-mysteerit-78480493.jpg',
+      lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+      tekija: 'Carole Raddato',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:General_view_of_sanctuary_of_Demeter_and_Kore_and_the_Telesterion_(Initiation_Hall),_center_for_the_Eleusinian_Mysteries,_Eleusis_(8191841684).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
   },
 
   'nosto:salaisuus-nekromanteion': {
@@ -89,6 +136,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Necromanteion of Acheron", haettu 26.9.2026.',
     miksiSalaisuus: 'Harva tietää, että tarujen tuonelan portti on merkitty oikealle '
       + 'kartalle – ja että tiede on kyseenalaistanut koko löydön.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-nekromanteion-32c8f571.jpg',
+      lahde: 'Evilemperorzorg, Wikimedia Commons (CC BY-SA 3.0)',
+      tekija: 'Evilemperorzorg',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nekromanteion_Main_Sanctuary.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
 
   'nosto:salaisuus-keros': {
@@ -114,6 +169,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Keros" (osiot Keros hoard ja Daskalio), haettu 26.9.2026.',
     miksiSalaisuus: 'Saarelle ei saa nousta, eikä kukaan tiedä varmasti, miksi '
       + 'pronssikauden ihmiset kuljettivat sinne tahallaan rikottuja veistoksia.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-keros-8e165a82.jpg',
+      lahde: 'Zde, Wikimedia Commons (CC BY-SA 3.0)',
+      tekija: 'Zde',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Idol_fragment_Keros_Hoard,_MCA_ET16_081005.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
 
   'nosto:salaisuus-abdera': {
@@ -137,6 +200,13 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Abdera, Thrace", "Democritus" ja "Protagoras", haettu 26.9.2026.',
     miksiSalaisuus: 'Harva tietää, että atomiteorian isä tuli kaupungista, jota koko '
       + 'antiikki piti vitsinä.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-abdera-b714c1a0.jpg',
+      lahde: 'Papatrexas, Wikimedia Commons (public domain)',
+      tekija: 'Papatrexas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Abdera.JPG',
+      lisenssi: 'Public domain',
+    },
   },
 
   'nosto:salaisuus-melissani': {
@@ -160,6 +230,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Melissani Cave" ja "Argostoli", haettu 26.9.2026.',
     miksiSalaisuus: 'Meri, joka katoaa maan alle ja tulee kahden viikon päästä esiin saaren '
       + 'toisella puolella, on ilmiö, jonka harva matkailija huomaa.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-melissani-ab2ab4fd.jpg',
+      lahde: 'Matt Sims, Wikimedia Commons (CC BY 2.0)',
+      tekija: 'Matt Sims',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Melissani_Cave,_Kefalonia_1.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    },
   },
 
   'nosto:salaisuus-gla': {
@@ -184,6 +262,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Gla" ja "Lake Copais" (osio Drainage), haettu 26.9.2026.',
     miksiSalaisuus: 'Linnoitus on kymmenen kertaa Tirynsiä suurempi, mutta sen nimi on '
       + 'kadonnut eikä Homeros mainitse sitä, joten harva on kuullut siitä.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-gla-23e954a6.jpg',
+      lahde: 'Kjn1961, Wikimedia Commons (CC BY-SA 3.0)',
+      tekija: 'Kjn1961',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Citadel_of_Gla,_central_Greece.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
 
   'nosto:salaisuus-kastan-kumpu': {
@@ -210,6 +296,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Kasta Tomb", haettu 26.9.2026.',
     miksiSalaisuus: 'Kreikan suurin antiikin hautakumpu löytyi vasta 2012, eikä kukaan '
       + 'tiedä varmasti, kuka sinne haudattiin.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-kastan-kumpu-70ebcbcf.jpg',
+      lahde: 'Neptuul, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'Neptuul',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kasta_tumulus_-_view_from_Amphipolis.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
 
   'nosto:salaisuus-gortynin-laki': {
@@ -235,6 +329,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Gortyn code", haettu 26.9.2026.',
     miksiSalaisuus: 'Harva Kreetan matkaaja tietää, että muurissa on pisin säilynyt '
       + 'antiikin kreikkalainen lakiteksti tavallisten ihmisten oikeuksista.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-gortynin-laki-9362c70f.jpg',
+      lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+      tekija: 'Carole Raddato',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Law_Code_of_Gortyn_dated_to_the_early_5th_century_BC,_Gortyn.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
   },
 
   'nosto:salaisuus-chlemoutsi': {
@@ -261,6 +363,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
       + '26.9.2026.',
     miksiSalaisuus: 'Yksi Kreikan parhaiten säilyneistä linnoista on ranskalaisten '
       + 'ristiretkeläisten jälki, jota harva Kreikan-matkaaja osaa etsiä.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-chlemoutsi-7cf7ee80.jpg',
+      lahde: 'Roman Klementschitz, Wikimedia Commons (CC BY-SA 3.0)',
+      tekija: 'Roman Klementschitz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chlemoutsi1.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
 
   'nosto:salaisuus-dispilio': {
@@ -286,6 +396,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Dispilio" ja "Dispilio Tablet", haettu 26.9.2026.',
     miksiSalaisuus: 'Yli 7000 vuotta vanha kylä ja arvoituksellinen puulaatta ovat Kastorian '
       + 'kupeessa, mutta harva kävijä tietää niistä.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-dispilio-f0c1b413.jpg',
+      lahde: 'Efthimios Tsilikidis, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'Efthimios Tsilikidis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kastoria,_the_prehistoric_lakeside_settlement_of_Dispilio.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
 
   'nosto:salaisuus-pavlopetri': {
@@ -310,6 +428,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Pavlopetri", haettu 26.9.2026.',
     miksiSalaisuus: 'Maailman vanhin tunnettu vedenalainen kaupunki on pienen lahden '
       + 'pohjassa, ja sen näkee vain pinnan alle katsomalla.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-pavlopetri-d7d7f491.jpg',
+      lahde: 'annagkai, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'annagkai',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pounta_beach_(view_from_Elafonisos_ferry_boat).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
 
   'nosto:salaisuus-poliokhni': {
@@ -334,6 +460,14 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Poliochni" ja "Priam\'s Treasure", haettu 26.9.2026.',
     miksiSalaisuus: 'Kaikki tuntevat Troijan, mutta harva tietää, että sen vanhempi '
       + 'kilpailija on Limnoksen rannalla.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-poliokhni-067bdbfe.jpg',
+      lahde: 'ale3andro, Wikimedia Commons (CC BY-SA 2.0)',
+      tekija: 'ale3andro',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Poliochne.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
   },
 
   'nosto:salaisuus-munkkihylkeet': {
@@ -357,5 +491,13 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lahde: 'en-Wikipedia "Mediterranean monk seal" ja "Alonnisos", haettu 26.9.2026.',
     miksiSalaisuus: 'Maailman harvinaisimman hylkeen näkee vain onnekas – se pysyy '
       + 'piilossa rantaluolissa.',
+    pikkukuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-munkkihylkeet-1685bc39.jpg',
+      lahde: 'Marinko Babić, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'Marinko Babić',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Monachus_monachus_DSC_0274.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
 };

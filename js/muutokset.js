@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2262, teksti: 'Maakunnat: NLD/BEL/DNK pitka + GRC:n Commons-ku… (#3309)' },
   { v: 2261, teksti: 'Musiikkisuunnitelma vaihe 1 peliin + viimeistel… (#3304)' },
   { v: 2260, teksti: 'Pelin maiden joet vektoreina, Kreikka ensin (#3281)' },
   { v: 2259, teksti: 'Peruskartta 2026-09-26 webin palloon (#3301)' },
