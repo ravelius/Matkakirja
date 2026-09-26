@@ -238,7 +238,8 @@ namespace Matkakirja
                   // Laatat omana rivinään (LaattaOsumat.cs, build 22).
                   .Append(",\"laatat\":").Append(LaattaOsumat.Json())
                   // VANHA SISÄLTÖ (Fable 26.9.): käynnistyksen kokoelmat, jotka luettiin buildin tilannekuvasta.
-                  .Append(",\"vanhaaKaytetty\":[").Append(string.Join(",", Sisalto.VanhaaKaytetty.ConvertAll(x => "\"" + x + "\""))).Append("]}}");
+                  .Append(",\"vanhaaKaytetty\":[").Append(string.Join(",", Sisalto.VanhaaKaytetty.ConvertAll(x =>
+                      $"{{\"kohde\":\"{x.Kohde}\",\"lahde\":\"{x.Lahde}\",\"ikaVrk\":{x.IkaVrk.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture)}}}"))).Append("]}}");
             }
             Debug.Log(Esilataaja.MittariRivi());
             var json = sb.ToString();

@@ -114,7 +114,7 @@ if os.path.exists(p):
         lp = "–" if lt["pros"] < 0 else f"{lt['pros']} %"
         print(f"LAATAT     OSUMA-% {lp:>5} ({lt['osumia']}/{lt['osumia'] + lt['huteja']})  levyllä {lt['levylla']}, esiladattuja {lt['esiladattuja']}")
     va = y.get("esilataaja", {}).get("vanhaaKaytetty")
-    if va is not None: print(f"VANHAA SISÄLTÖÄ KÄYTETTY (tilannekuvasta, enintään 2 versiota): {len(va)}" + (f": {', '.join(va)}" if va else ""))
+    if va is not None: print(f"VANHAA SISÄLTÖÄ KÄYTETTY (oma levy aina, tilannekuva ≤ 14 vrk): {len(va)}" + (": " + ", ".join(f"{v['kohde']} ({v['lahde']}, {v['ikaVrk']} vrk)" for v in va) if va else ""))
 # RAJA (Raamattu ESILATAUSPOLITIIKKA kohta 3, Fable 25.9.): saapumisessa nolla verkko-odotusta, kylmänä ja lämpimänä.
 # Odotus lasketaan verkko-odotukseksi, kun sen aikana valmistui verkkohaku (haut > 0) tai se on puheen lataus.
 saap = [r for r in rivit if r['vaihe'] == 'saapuminen' and (r.get('haut', 0) > 0 or r['mita'].startswith('puhe:'))]
