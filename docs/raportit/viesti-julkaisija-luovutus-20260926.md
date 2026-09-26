@@ -12,7 +12,7 @@ HUOLTOKOMENNOT); docs/roolitus.md "Julkaisusäännöt"; tämä luovutus; edellin
 ## Tila
 
 - **TestFlight:** 1.0.13 (ddb3cfb6), 1.0.14 (7f68d1f7), 1.0.15 (4a813e60), 1.0.16 (7f3979b0),
-  1.0.17 (d04841a0), **1.0.18 (43a6347c, CFBundleVersion 202609260152, ajo 36209851560)**. Laskuri = 18.
+  1.0.17 (d04841a0), **1.0.18 (43a6347c, CFBundleVersion 202609260152, ajo 36209851560)**. Laskuri = 18 → **1.0.19 viennissä klo 08.26** (ajo 36220773751, proto 41dd79c7 = master, puu adcf61d8 = juna fdc47632; korvaa viallisen 1.0.18:n). Tarkista tulos: gh run view 36220773751; jos onnistui, laskuri 19 ja yömerkki 41dd79c7.
   Yömerkki `yo-testflight-viimeisin.txt` = 43a6347c (proto-master).
 - **Build 19:** Kaava: Laitetestaajan PASS-commit →
   `gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true -f ordinaali=19 -f proto_ref=<PASS tai master-SHA>`.
@@ -29,6 +29,11 @@ HUOLTOKOMENNOT); docs/roolitus.md "Julkaisusäännöt"; tämä luovutus; edellin
 - Opittu: pgrep -f "jono.sh N" osuu odottimen omaan komentoriviin → käytä ketjua peräkkäin tai hakasulkutemppua.
 - Ei jonossa (kukaan ei pyytänyt): #3250 #3272 #3274 #3275 #3278 #3280 #3281, Karttasepän vanhat
   #3102 #3105 #3108 #3117. #3206 punainen. pidossa.pysyva = 3081.
+
+- **Pohja 26 webiin (omistaja hyväksyi 26.9. klo 08.1x):** PR #3301 (PALLO_LAATTAVERSIO 2026-09-26-pohja,
+  TUNNISTE 20260926, sw.js LAATTAKANSIO) odottaa Pelikoodarin kuittausta. Sitten jono.sh 3301 → odota
+  Julkaise peli -ajo vihreäksi → `gh workflow run vaihda-pyramidi-osoitin.yml --ref main -f sarja=2026-09-26`
+  → tarkista CDN:stä, että pyramidi.json = koe/2026-09-26 → rivi Fablelle. Natiivin offline-sarja on Siirtosepän.
 
 ## Tänään tehdyt työkalut
 
