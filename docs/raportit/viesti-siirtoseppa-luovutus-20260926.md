@@ -1,4 +1,4 @@
-# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty iltapäivällä)
+# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 23.1x)
 
 Luovuttaja on Siirtoseppä (Opus). Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
@@ -11,20 +11,33 @@ voimassa.
 - docs/raportit/elava-kartta-suunnitelma-20260926.md (Elävä kartta, omistajan päätös 26.9.) ja
   docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md (taustapäivitys, hyväksytty 25.9.).
 
-## Tila (päivitetty 26.9. iltapäivä)
+## Tila (päivitetty 26.9. klo 23.1x)
 
-- Tuotanto 1.x **v169** (skeema **1.50**). Tämän vuoron julkaisut:
+- Tuotanto 1.x **v187** (skeema **1.50**). Tämän vuoron julkaisut (vanhemmat git-historiassa):
 
-| Skeema/versio | PR | Sisältö |
+| Versio | PR | Sisältö |
 |---|---|---|
-| v162 | #3303 | natiivin offline-rasteri pohja 26 (build 20 TF:ssä) |
-| 1.49 (v159) | #3307 (+ Sisältökirjurin #3309) | pikkukuva (https) maakuntasalaisuuksille (+ pikkukuvaLahde) ja luonnehdinnat-moduulin alueille; asset-perhe maakunnat |
-| 1.50 (v167) | #3317 | aanitaulut laji musiikkiaihe (14) ja musiikkiketju.maanosa |
-| v169 | #3320 (+ Karttasepän #3321) | NIMETYT_LISATIEDOSTOT: assets/data/lippu-lonlat.json → kartta/lippu_lonlat.json (138 maata), ei skeemamuutosta |
+| v162 | #3303 | natiivin offline-rasteri pohja 26 |
+| v159 (1.49) | #3307 + #3309 | pikkukuva maakunnille ja maakuntasalaisuuksille |
+| v167 (1.50) | #3317 | aanitaulut musiikkiaihe + musiikkiketju.maanosa |
+| v169 | #3320 + #3321 | NIMETYT_LISATIEDOSTOT: kartta/lippu_lonlat.json (138 maata) |
+| – | #3327, #3334 | tilannekuva.mjs 15 tiedostoa; ISS-TLE 6 h (iss-tle.yml → data/iss-tle.json) |
+| v181 | #3342/#3343 | Euroopan maakuntanostokuvat (170), 174b-merkkikuvat (natiivi: NostoSaannot) |
+| v184 | #3348 | maakuntapikkukuvat 251 (16 maata) |
+| v187 | #3352 | kartta/merikohdat.json (Karttaseppä, 29 maata, 129 kohtaa) |
 
-- **Mainissa myöhemmin:** #3327 tilannekuva.mjs 15 tiedostoa (14,2 Mt); #3334 ISS-TLE: .github/workflows/iss-tle.yml 6 h välein → data/iss-tle.json (tools/iss-tle.mjs, --ampari buildille). Ei omia avoimia PR:iä eikä worktreitä.
-- **Peruttu/ei tilattu:** offline-lataus pois simulaattorissa (Documents/offline oli tyhjä; levyn täyttäjät Build, DerivedData, git-pack, worktreet). Z9 satama- ym. kaupungeille (88/134 maata ilman Z9:ää, koska kaupunkitaso ottaa vain tyypin kaupunki).
-- Taustapäivitys: siivouskorjaus build 19:ssä; seuraa edelleen laitetestiä.
+- **Natiivi, löydös 170 (sisältö vaihtuu kesken istunnon):** proto-haara `siirtoseppa/sisalto-vaihtui` 42b790c2
+  (PakettiPaivitys.SisaltoVaihtui + Sisalto.VaihdaVersio) ja Natiivi-UI:n `natiivi-ui/sisalto-vaihtui` 544e0ce3 (kuuntelijat).
+  Todennettu simulaattorissa (käännös 62b29c02; v157 → v186 kesken istunnon, Attikan kuva heti):
+  proto-3d/lokit/siirtoseppa-paivityspolku/ (ennen/, jalkeen/, 170-ennen-jalkeen.png, skriptit scratchpadissa: polku2.sh +
+  vanha-v157.py siemen). Merge 1.0.27-junaan Natiivisepän kautta.
+- **Odottaa mergeä (Julkaisija ilmoittaa):** #3351 (B3-pikkukuvat MDA/UKR; #3349/#3350 jo mainissa) ja #3353 (löydös 178:
+  kohdekartat.kohteet[].tyyppi + kartalla; esitarkistettu PR-haarasta: 70 tarinakohdetta, kaikki natiivin Avattava,
+  skeema 1.50 ok, testit 96/0). Mergen jälkeen: ämpäritarkistus, pikkukuvien ja tarinakohteiden määrä tuotannosta, rivi Fablelle.
+- **ISS-TLE:** ajastettu 18.17 UTC -ajo ei lähtenyt (uuden työnkulun viive?). Julkaisija tarkistaa 00.17 UTC -ajon; jos ei lähde,
+  lisää varmistus vie-sisalto.yml:n rinnalle (TLE > 6 h vanha → haku).
+- Raportti docs/raportit/maakuntanostot-ilman-kuvaa-20260926.md (170, Eurooppa-osio erikseen) tässä haarassa.
+- Omat worktreet: ei. Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-vaihto (siirtoseppa/sisalto-vaihtui) — poista mergen jälkeen.
 
 ## Voimassa olevat työtavat (tämän vuoron uudet)
 
@@ -50,6 +63,11 @@ voimassa.
 - Kartta-testit (natiivi): `Kartta-testit/kaanna.sh PakettiPaatokset`, oikea paketti `PAKETTI_KOE=<versiokansio>`.
 
 ## Velat ja opetukset
+
+- Opetus 26.9. ilta: iPad-vuoro alkaa vasta laitteen omistajan erillisellä "vapaa"-rivillä; devicectl --terminate-existing
+  katkaisee toisen ajon. Pitkät käännökset (proto-kaanna.sh) nohupilla, ei Bash-työkalun 10 min rajalla.
+- Opetus 26.9. ilta: tuore asennus lukee laiskasti uusinta versiota, joten omistajan "vanha asennus" -tapaus toistetaan
+  siementämällä vanha valmis versio (vanha-v157.py) — ei vanhalla buildilla.
 
 - Opetus 26.9.: älä pushaa PR:n haaraan, kun Julkaisija on ilmoittanut ottavansa sen junaan (#3320:n head vaihtui kesken mergen). Kaksi PR:ää, jotka lisäävät saman tiedoston eri muotoilulla, konfliktoivat: data kuuluu tuottajan PR:ään.
 - Opetus 26.9.: natiivi hakee Saapumistunnukset alueella, paketti antaa maanosan (vanhoissa buildeissa ita-eurooppa osuu).
