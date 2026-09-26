@@ -6,6 +6,14 @@ Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia s
 löytyi 26.9.2026 build 20:n testauksessa: kamera-, usva- ja maakuntakomennot ovat siinä, ja se toimii
 samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama konsoli kaikissa käännöksissä).
 
+## PYSYVÄ KOHTA: omistajalle päätyvien kuvien merkintä (omistaja 27.9.2026 klo 00.2x, Raamattu-PR #3361)
+
+Kaikkiin omistajalle päätyviin esimerkki-/vertailukuviin (esim. löydös175-tyyppiset ennen/jälkeen-
+kuvaparit) merkitään **SUORAAN KUVAAN** — ei vain tiedostonimeen tai raporttitekstiin — build-numero
+(tai käännöksen SHA) ja kuvakulma/kohta (esim. "BUILD 26, Ranska maataso, kallistus 45°" tai
+"cd41e4fa, ennen"/"83e2fb1e, jälkeen"). Käytä esim. `sips`/`ImageMagick`-tekstileimaa tai vastaavaa
+kuvan päälle — kuvatekstiä raportissa EI lasketa merkinnäksi.
+
 ## PYSYVÄ KOHTA: arkkityyppien maatason kokotarkistus (löydös 175, Fable 26.9.2026)
 
 Aina kun testataan tason 1–3 arkkityyppejä/nostoja (esim. 160-tyyppiset kohdat), ota AINA myös
