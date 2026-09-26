@@ -1,3 +1,4 @@
+using System;
 using CesiumForUnity;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,7 +11,10 @@ namespace Matkakirja
     /// kohde, yksi maa kerrallaan. Natiivi-UI asettaa sen, kun maa vaihtuu (<see cref="Aseta"/>: maa, paikka ja lipun
     /// tekstuuri Kuvat.Hae-haulta, kuten kartussi); <see cref="Pois"/> poistaa.
     ///
-    /// LIEHUNTA (vaihtoehto A, oletus): lippu on 144:n aaltoileva RT (Liput.Aaltoile). Se seuraa Joutosykettä, joten se liehuu
+    /// LIPPU 3D-KANKAANA (omistaja 26.9. klo 12.0x): jaettu verkko (24 × 12), jota Resources/Lippu3D.shader taivuttaa 144:n
+    /// aalloilla, valo kankaan normaaleista (laskosten varjo, kiilto, reunahohde); tekstuuri suoraan lipun kuvasta (Natiivi-UI
+    /// kiinnittää sen Kuvissa). Aika: elävän kerroksen animaationa unscaledTime (Jatkuva, omistajan päätös B) tai Joutosyke.
+    /// ENTINEN LIEHUNTA (vaihtoehto A): lippu seurasi Joutosykettä, joten se liehui
     /// saapumisen ja kosketuksen jälkeen muutaman sekunnin, asettuu levossa suoraksi 0,3 s:ssa ja jähmettyy (lepopiirto 0
     /// kehystä). Vaihtoehto B (eristetty kerros: kartta kerran talteen, vain lippu 30 fps) on mittausta varten erikseen.
     ///
@@ -38,6 +42,8 @@ namespace Matkakirja
         /// (kaapattu kartta + Elava-kohteet) ovat samannäköisiä (kerroksella Elava-kohteet piirtyvät aina kaappauksen päälle).
         /// </summary>
         public const int Jono = 3400;
+        /// <summary>Lipun kierto tangon ympäri kamerasta poispäin (°), jotta 3D-kangas näkyy viistosti.</summary>
+        public const float LipunKierto = 28f;
         const float Sade = 0.013f, NupinSade = 0.03f;
 
         /// <summary>
@@ -53,7 +59,7 @@ namespace Matkakirja
         public static void AsetaJatkuva(bool j)
         {
             Jatkuva = j;
-            if (instanssi != null && instanssi.aalto != null) instanssi.aalto.Jatkuva = j;
+
             PallonLepo.Muuttui("lipputanko");
         }
 
@@ -118,7 +124,10 @@ namespace Matkakirja
         MeshRenderer tanko, nuppi, lippu;
         Transform lippuT;
         Material tankoMat, nuppiMat, lippuMat;
-        Liput.Aalto aalto;
+        static readonly int AikaId = Shader.PropertyToID("_Aika"), VoimaId = Shader.PropertyToID("_Voima"),
+            LeveysId = Shader.PropertyToID("_Leveys"), KorkeusId = Shader.PropertyToID("_Korkeus");
+        Func<bool> kerrosEhto, sykeEhto;
+        float piirrettyAika = float.NaN, piirrettyVoima = float.NaN;
         Texture lahde;
         string maa;
         bool asetettu, nakyi;
@@ -133,12 +142,20 @@ namespace Matkakirja
             tankoMat.SetColor("_BaseColor", new Color(0.33f, 0.26f, 0.19f));
             nuppiMat = new Material(shader) { name = "Lipputanko-nuppi" };
             nuppiMat.SetColor("_BaseColor", new Color(0.80f, 0.63f, 0.28f));
-            lippuMat = new Material(shader) { name = "Lipputanko-lippu" };
+            var lippuVarjostin = Resources.Load<Shader>("Lippu3D");
+            lippuMat = new Material(lippuVarjostin != null ? lippuVarjostin : shader) { name = "Lipputanko-lippu" };
             tankoMat.renderQueue = nuppiMat.renderQueue = lippuMat.renderQueue = Jono;
             tanko = Osa("Tanko", Sylinteri(Sade, 1f, 8), tankoMat);
             nuppi = Osa("Nuppi", Nuppi(NupinSade, 1f + NupinSade * 0.6f), nuppiMat);
-            lippu = Osa("Lippu", Nelio(), lippuMat);
+            lippu = Osa("Lippu", Kangas(), lippuMat);
+            kerrosEhto = () => nakyi && lahde != null && Jatkuva && !ElavaKerros.Staattinen;
+            sykeEhto = () => nakyi && lahde != null && !(Jatkuva && !ElavaKerros.Staattinen) && Joutosyke.Voima > 0f
+                             && (Joutosyke.Aika != piirrettyAika || Joutosyke.Voima != piirrettyVoima);
+            ElavaKerros.Animoi(kerrosEhto, "lippu", 30);
+            PallonLepo.Animoi(sykeEhto, "lippu (syke)");
             lippuT = lippu.transform;
+            // Lippu hieman viistossa kameraan nähden (tangon ympäri): kankaan aallot ja valo näkyvät muotoina.
+            lippuT.localRotation = Quaternion.Euler(0f, LipunKierto, 0f);
             Nayta(false);
         }
 
@@ -161,18 +178,14 @@ namespace Matkakirja
             maa = iso3; lat = la; lon = lo; korkeus = korkeusM;
             if (kuva != lahde)
             {
-                if (aalto != null) { Liput.Vapauta(aalto); aalto = null; }
                 lahde = kuva;
+                lippuMat.mainTexture = kuva;
                 if (kuva != null)
                 {
-                    // RT:n koko lipun ruutukoosta (pisteet × pistekerroin), marginaali mukaan; katto 512.
-                    float hPx = KorkeusPt * LipunOsuus * PalloKierto.Pistekerroin / (1f - 2f * Liput.Reuna);
                     float suhde = kuva.width / (float)Mathf.Max(1, kuva.height);
-                    int h = Mathf.Clamp(Mathf.CeilToInt(hPx), 16, 512), w = Mathf.Clamp(Mathf.CeilToInt(hPx * suhde), 16, 512);
-                    aalto = Liput.Aaltoile(kuva, w, h);
-                    aalto.Jatkuva = Jatkuva;
-                    lippuMat.mainTexture = aalto.Kuva;
-                    lippu.GetComponent<MeshFilter>().sharedMesh = Nelio(suhde);
+                    lippu.GetComponent<MeshFilter>().sharedMesh = Kangas(suhde);
+                    lippuMat.SetFloat(LeveysId, LipunOsuus * suhde);
+                    lippuMat.SetFloat(KorkeusId, LipunOsuus);
                 }
             }
             var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lo, la, 0));
@@ -189,7 +202,6 @@ namespace Matkakirja
         void PoisNyt()
         {
             asetettu = false;
-            if (aalto != null) { Liput.Vapauta(aalto); aalto = null; }
             lahde = null;
             Nayta(false);
             PallonLepo.Muuttui("lipputanko");
@@ -198,9 +210,8 @@ namespace Matkakirja
         void Nayta(bool n)
         {
             if (tanko != null && tanko.enabled != n) { tanko.enabled = n; nuppi.enabled = n; }
-            bool l = n && aalto != null;
+            bool l = n && lahde != null;
             if (lippu != null && lippu.enabled != l) lippu.enabled = l;
-            if (aalto != null) aalto.Nakyy = l;
             nakyi = n;
         }
 
@@ -218,6 +229,15 @@ namespace Matkakirja
             bool edessa = Vector3.Dot(n, v) > 0.12f;
             if (!sallittu || !edessa) { if (nakyi) { Nayta(false); PallonLepo.Muuttui("lipputanko"); } return; }
             if (!nakyi) { Nayta(true); PallonLepo.Muuttui("lipputanko"); }
+            // Kankaan aalto: elävällä kerroksella oma kello, muuten Joutosyke (jähmettyy levossa).
+            bool jatkuvaNyt = Jatkuva && !ElavaKerros.Staattinen;
+            float aika = jatkuvaNyt ? Time.unscaledTime : Joutosyke.Aika, voima = jatkuvaNyt ? 1f : Joutosyke.Voima;
+            if (aika != piirrettyAika || voima != piirrettyVoima)
+            {
+                lippuMat.SetFloat(AikaId, aika);
+                lippuMat.SetFloat(VoimaId, voima);
+                piirrettyAika = aika; piirrettyVoima = voima;
+            }
 
             // Akseli: normaali, mutta vähintään MinKulma katseesta (normaalin ja katseen tasossa, katseesta poispäin).
             float kulma = Mathf.Acos(Mathf.Clamp(Vector3.Dot(n, v), -1f, 1f)) * Mathf.Rad2Deg;
@@ -247,11 +267,12 @@ namespace Matkakirja
 
         string Kuvaus() =>
             $"maa {maa ?? "-"}, paikka {lat:0.00} {lon:0.00}, näkyy {nakyi}, lippu {(lahde != null ? lahde.width + "×" + lahde.height : "-")}" +
-            $"{(aalto != null ? $" (RT {aalto.Kuva.width}×{aalto.Kuva.height})" : "")}, korkeus {KorkeusPt:0} pt";
+            $", kangas 3D ({(Jatkuva ? "jatkuva" : "syke")}), korkeus {KorkeusPt:0} pt";
 
         void OnDestroy()
         {
-            if (aalto != null) Liput.Vapauta(aalto);
+            ElavaKerros.Poista(kerrosEhto);
+            PallonLepo.Poista(sykeEhto);
             Destroy(tankoMat); Destroy(nuppiMat); Destroy(lippuMat);
             if (instanssi == this) instanssi = null;
         }
@@ -300,23 +321,33 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Lipun nelikulmio: RT:ssä on Liput.Reuna-marginaali joka reunalla, joten nelikulmio on 1 / (1 − 2 · Reuna) kertaa
-        /// näkyvä lippu. Lippu liehuu paikallista −X:ää kohti (ruudulla oikealle, kun +Z katsoo kameraan), tankopuoli
-        /// (u = 0) tangossa ja yläreuna tangon latvan alla.
+        /// Lipun kangas: 24 × 12 ruudun verkko (Lippu3D taivuttaa sen), paikallisesti x = −u · leveys (liehuu −x:ään eli ruudulla
+        /// oikealle, kun +z katsoo kameraan), y = latvasta alaspäin lipun korkeus, uv (u, v) tankopuolelta.
         /// </summary>
-        static Mesh Nelio(float suhde = 1.5f)
+        static Mesh Kangas(float suhde = 1.5f)
         {
-            float hn = LipunOsuus, wn = LipunOsuus * suhde, R = Liput.Reuna, k = 1f / (1f - 2f * R);
-            float H = hn * k, W = wn * k, yla = 0.985f;
-            float x0 = W * R, x1 = -W * (1f - R), y1 = yla + H * R, y0 = y1 - H;
-            var m = new Mesh
-            {
-                name = "Lipputanko-lippu",
-                vertices = new[] { new Vector3(x0, y0, 0), new Vector3(x1, y0, 0), new Vector3(x0, y1, 0), new Vector3(x1, y1, 0) },
-                normals = new[] { Vector3.forward, Vector3.forward, Vector3.forward, Vector3.forward },
-                uv = new[] { new Vector2(0, 0), new Vector2(1, 0), new Vector2(0, 1), new Vector2(1, 1) },
-                triangles = new[] { 0, 2, 1, 1, 2, 3 },
-            };
+            const int nx = 24, ny = 12;
+            float h = LipunOsuus, w = LipunOsuus * suhde, yla = 0.985f;
+            var v = new Vector3[(nx + 1) * (ny + 1)];
+            var uv = new Vector2[v.Length];
+            for (int j = 0; j <= ny; j++)
+                for (int i = 0; i <= nx; i++)
+                {
+                    float u = i / (float)nx, s = j / (float)ny;
+                    v[j * (nx + 1) + i] = new Vector3(-u * w, yla - h + s * h, 0f);
+                    uv[j * (nx + 1) + i] = new Vector2(u, s);
+                }
+            var t = new int[nx * ny * 6];
+            int k = 0;
+            for (int j = 0; j < ny; j++)
+                for (int i = 0; i < nx; i++)
+                {
+                    int a = j * (nx + 1) + i, b = a + 1, c = a + nx + 1, d = c + 1;
+                    t[k++] = a; t[k++] = c; t[k++] = b; t[k++] = b; t[k++] = c; t[k++] = d;
+                }
+            var m = new Mesh { name = "Lipputanko-kangas", vertices = v, uv = uv, triangles = t };
+            // Aalto siirtää kärkiä z-suunnassa enintään ~0,06: rajat väljästi.
+            m.bounds = new Bounds(new Vector3(-w * 0.5f, yla - h * 0.5f, 0f), new Vector3(w + 0.1f, h + 0.1f, 0.3f));
             return m;
         }
     }
