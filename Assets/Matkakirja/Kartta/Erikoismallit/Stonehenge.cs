@@ -203,6 +203,6 @@ namespace Matkakirja
         };
 
         static readonly bool stonehenge = Rekisteroi("stonehenge",
-            new Erikoismalli { Runko = StonehengeRunko, Osat = StonehengeOsat, Kolmiot0 = 900 });
+            new Erikoismalli { Runko = StonehengeRunko, Osat = StonehengeOsat, Kolmiot0 = 858, KokoKerroin = 1.5f });
     }
 }

@@ -236,6 +236,6 @@ namespace Matkakirja
         };
 
         static readonly bool montSaintMichel = Rekisteroi("mont-saint-michel",
-            new Erikoismalli { Runko = MontSaintMichelRunko, Osat = MontSaintMichelOsat, Kolmiot0 = 1076 });
+            new Erikoismalli { Runko = MontSaintMichelRunko, Osat = MontSaintMichelOsat, Kolmiot0 = 1324, KokoKerroin = 1.5f });
     }
 }

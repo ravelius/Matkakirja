@@ -38,12 +38,14 @@ namespace Matkakirja
         sealed partial class Rakentaja
         {
             /// <summary>
-            /// Ääriviivan osajako (ylhaalta-175:n Rakentaja: Alku/Loppu, UV1): jokainen apurimuoto on yksi osa. Junan
-            /// Rakentajassa ei ole osajakoa, joten nämä ovat tyhjiä osittaismetodeja; kun ylhaalta-175 on junassa, sen
-            /// Rakentajaan lisätään toteutukset <c>partial void EmOsaAlku() => Alku(); partial void EmOsaLoppu() => Loppu();</c>
+            /// Ääriviivan osajako (ylhaalta-175:n Rakentaja: Alku/Loppu, UV1): jokainen apurimuoto on yksi osa. Toteutus on
+            /// tässä (Natiiviseppä 27.9.: yhdistelmähaara natiiviseppa/kategoriat-reliefi, Rakentaja on sealed partial), joten
+            /// muita tiedostoja ei muokata. Pohjalla ilman osajakoa toteutusrivit poistetaan (metodit jäävät tyhjiksi).
             /// </summary>
             partial void EmOsaAlku();
             partial void EmOsaLoppu();
+            partial void EmOsaAlku() => Alku();
+            partial void EmOsaLoppu() => Loppu();
 
             /// <summary>Kokonaisen rakenteen (rengasmuuri, katsomo, luostari) aloitus yhtenä ääriviivaosana: sisäkkäiset muodot
             /// kuuluvat siihen, joten ääriviiva kiertää rakenteen ulkoreunaa eikä jokaista segmenttiä (ei sahalaitaa).</summary>
