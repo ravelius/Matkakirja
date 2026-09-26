@@ -7251,3 +7251,7 @@ Karttaseppa: v4 8 ytimella 3,4 shardia/min, free 77 %, ei pysaytyksia. Osa 1 val
 ## ASTRONAUTIN KAMERA ERA 1 PR 3340 JUNAAN (26.9.2026 klo 19.21)
 
 Pelikoodari: #3339 (build-questions.mjs lukee kaikki qa-*.json) mainissa; Sisaltokirjurin era 1 = PR #3340 (23 kaupunkia, kohteita 64 → 87, testit vihreat) rebasoitu sen paalle. Fable: Julkaisijan junaan ja versioon kun vihrea. Sisaltokirjuri jatkaa maakunta-era 2:lla; astronautin erat 2–4 sen jalkeen.
+
+## OMISTAJAN LOYDOKSET 168-171 (1.0.24/25) KLO 19.3X (26.9.2026 klo 19.31)
+
+168: noston avaus varjaa maakunnan (elavan kartan kohta 3 + S7) → OMISTAJA: varjaytyminen POIS, heraamisen muut osat jaavat; Raamatun ELAVA KARTTA kohta 3 paivitetaan seuraavassa Raamattu-PR:ssa (Natiiviseppa koodi, Linssiseppa kasikirjoitus). 169: maakuntavalitsimeen Kaikki-nappi (Natiivi-UI). 170: maakuntanostojen kuvat puuttuvat laitteella vaikka 158 valmis v2274 → Siirtoseppa tarkistaa paketin ja kattavuuden, Sisaltokirjuri tekee KAIKKI puuttuvat kuvat (oikeita PD/CC tai havainnekuvia), Natiivi-UI pikkukuva minitekstin kylkeen. 171 P1: aloituslennossa kohdemaa vaalea laatta (163:n toistuma saapumislennossa) → Natiiviseppa kiirejono+vartija lennon ajaksi. Omistajan kysymys 3D-nostoista: ovat pelissa 1.0.25:sta alkaen (TF 18.51).
