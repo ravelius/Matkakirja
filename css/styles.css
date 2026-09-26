@@ -17965,6 +17965,16 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   border: 0;
 }
 
+/*
+ * KEVYT MERKKI (löydös 178, omistaja 26.9.2026): aukio ja luonto jäävät
+ * nähtävyyskartalle, mutta rakennusta keveämpinä — piirros pienempi ja
+ * haaleampi, jotta rakennukset kantavat kartan.
+ */
+.maakartta-piste.kohde-kevyt .kohde-piirros-kuva {
+  transform: scale(0.72);
+  opacity: 0.78;
+}
+
 .kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
   width: 100%;
   height: 100%;
