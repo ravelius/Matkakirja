@@ -121,6 +121,17 @@ namespace Matkakirja.Natiivi
         public static bool? PakotaKuvaSumea;
 
         /// <summary>
+        /// Löydös 132: sumennuksen taso (Ei / Kortti / Kokoruutu). Kokoruutu = kuva koko ruudulla: pallo vahvemmin sumeaksi,
+        /// ja kun sumennus on täysi, pallo pysähtyy pysäytyskuvaksi (PalloKierto.Pysaytyskuva, PysaytysValmis/PysaytysPoistui).
+        /// Runko (Natiiviseppä): Kortti aina kun KuvaSumea; Natiivi-UI lisää Kokoruudun laskennan.
+        /// </summary>
+        public static event System.Action<KuvaSumennus> KuvaTasoMuuttui;
+        public static KuvaSumennus KuvaTaso { get; private set; }
+
+        /// <summary>Testikomento (ui kuvasumea kokoruutu): null = näkymien mukaan.</summary>
+        public static KuvaSumennus? PakotaKuvaTaso;
+
+        /// <summary>
         /// ☰-valikon rivit linssien alle (omistaja ja Fable 24.9.2026, löydös 20; kaikki laitteet löydös 65): pelaajan asetukset,
         /// vanhan päävalikon komennot ja kehittäjätilassa viimeisenä Kehittäjä (ei App Store -käännöksessä).
         /// </summary>
@@ -211,6 +222,9 @@ namespace Matkakirja.Natiivi
         {
             // Kaikilla laitteilla (Fable 24.9.: omistajan ohje koski karttaa yleisesti, ei vain iPhonea).
             bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki);
+            var taso = PakotaKuvaTaso ?? (s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
+            if (taso != KuvaSumennus.Ei) s = true;
+            if (taso != KuvaTaso) { KuvaTaso = taso; KuvaTasoMuuttui?.Invoke(taso); }
             if (s == KuvaSumea) return;
             KuvaSumea = s;
             KuvaSumeaMuuttui?.Invoke(s);
@@ -285,7 +299,8 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
             kerros.JokaRuutu += PaivitaKuvaSumea;
             // Löydös 19: kameran puolen mieto sumennus (Natiiviseppä, 2,25 pt, 0,3 s; portti voittaa).
-            KuvaSumeaMuuttui += a => PalloKierto.KuvaSumea = a;
+            // Löydös 132: taso (Kortti / Kokoruutu) kameralle; KuvaSumea on tason yhteensopiva bool.
+            KuvaTasoMuuttui += t => PalloKierto.KuvaTaso = t;
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
             // Löytö päätyy matkalaukkuun: laukku heilahtaa paljastuksen sulkeutuessa (web elavoitaLaukku).
