@@ -7711,3 +7711,7 @@ Omistaja 01.2x "Kytke heti": xAI Grok TTS (ara) -kytkenta striimiluentaan tehdaa
 ## OMISTAJA: KEHITTAJAVALIKKOON XAI-AANEN VALINTA STRIIMILLE; PELIKOODARI 93 % → NOLLAUS ENNEN XAI-TYOTA (27.9.2026 klo 01.05)
 
 Omistaja 01.2x: kehittajavalikkoon (web + natiivi) aanen valinta xAI:n aanivaihtoehdoista striimiluentaa varten (oletus ara); kuuluu xAI-kytkentaeraan. Postivahti: Pelikoodari 93 % → Fable kaski luovutuksen (avauskortti-haara pushataan keskeneraisena, xAI-suunnitelma luovutukseen) ja clear_session self; xAI-kytkenta tehdaan tuoreella kontekstilla heti nollauksen jalkeen. Linssiseppa 81 % (nollaus erikoismallikuvien jalkeen), Sisaltokirjuri 81 % (nollaus maajuttu-PR:n jalkeen).
+
+## OMISTAJA: FABLE KYTKEE XAI:N ITSE; PULUN LUKIJANAPPIIN KYTKIMEN TILAN VISUAALI; PELIKOODARI NOLLATTU (27.9.2026 klo 01.15)
+
+Omistaja 01.2x "Kytke sinä se": Fable tekee xAI ara -kytkennan itse worktreessa fable-xai-ara (worker: XAI_API_KEY + PUHE_MOOTTORI=xai, varapolku OpenAI 8 s aikarajalla, xAI-aanet 28 kpl /v1/tts/voices; web: kehittajavalikon striimiaani-valitsin; workflow: XAI_API_KEY-salaisuus workerille; GitHub-salaisuus XAI_API_KEY asetettu gh:lla). Mittaus 01.1x: /v1/tts ara suomeksi 200, ttfb 0,18 s, mp3 24 kHz 128 kbps, speed-kentta toimii. Omistaja 01.3x (kuvakaappaus Pulun paneelista): kaiutin/lukija-nappi tarvitsee visuaalisen vahvistuksen kytkimen tilasta → Pelikoodari web, Natiivi-UI natiivi webin mallin mukaan. Pelikoodari nollattu 01.3x (luovutus -20260927 971b18ba5, avauskortti PR #3364), aloitusviesti lahetetty.
