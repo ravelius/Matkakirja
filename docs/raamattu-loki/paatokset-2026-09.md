@@ -7415,3 +7415,7 @@ Omistaja 21.1x: etsii parempaa striimiaanta kuin nykyinen (gpt-4o-mini-tts strii
 ## 175 JATKO: MALLIT LUETTAVIKSI MYOS YLHAALTA, VAALEINA (26.9.2026 klo 21.10)
 
 Omistaja 21.3x: paras ratkaisu olisi 3D-mallit jarkevina myos ylhaalta; toivoo vaaleita malleja; puhelimella kuvaparit liian pienia. Fable: 1.0.26 lahtee 2D-ylhaalta-saannolla; 1.0.27:aan kokeilu 3 arkkityypilla (linna, kirkko, majakka): katot lajin mukaan tunnistettaviksi, tumma aariviiva + maavarjo, mallin oma 15° kallistus pystykamerassa, vaalea pergamenttipaletti (nykyiset seinat viela harmahtavat) — Natiiviseppa + Linssiseppa, kuvat isoina rajattuina. Saanto omistajan kuviin: malli ≥ 300 px rajattuna, ei pienia kuvapareja.
+
+## VERHO 4,7–8,0 s EI REGRESSIO VAAN MACIN KUORMA (LOAD 353) (26.9.2026 klo 21.13)
+
+Natiiviseppa: build 25 samassa simulaattorissa nyt 6,3/8,0/2,8 s, 1.0.26-juna 5,0/3,3/2,6 s — vaihtelu 2,6–8,0 s kaikissa, kytkimet eivat erota; Macin load average ~353 (Z10-poltto, Playwright/Chromium, node). Fable: verhoportti mitataan laitteella (iPad Pro 13, 3× kylma, ≤ 3,5 s); simulaattorin verhoajat hylataan polton aikana.
