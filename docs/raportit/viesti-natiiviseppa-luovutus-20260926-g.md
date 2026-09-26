@@ -175,3 +175,7 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
 - juna/b13 **3fec84c7**: + kohta1-maamaa 30056ed0 (käännös 19099766 todensi Editor-koodin; laattapaketti 27,3 Mt: Z5 + maarajat).
 - juna/b13 **05d68639**: + natiivi-ui/maakunta-keskus a3fa7854 (MaakunnatSilta → MaakunnanKeskus, todennettu 39a99aea).
 - juna/b13 **99162d67**: + pelikoodari/lehdet-perassa 0bdb771b (+ natiivi-ui/kortti-lehdet; kaupunkilehdet perään, kylmä aloitusverho 5,3 s).
+- juna/b13 **4f34ca3b**: + siirtoseppa/tilannekuva 8603b496 (tilannekuvan lukupuoli + taustapäivityksen osoitinkorjaus).
+- natiiviseppa/tilannekuva-build **03860cc4**: Editor/TilannekuvaRakennus.cs (tilannekuva.mjs:n muoto C#:na, ei Nodea) + Rakennus-kutsut
+  (Varmista ennen vientiä, KopioiBuildiin PostProcessBuild 185). Käännöspalvelussa 06.2x → tarkista Build/tilannekuva/ (5 tiedostoa)
+  ja .app/Data/Raw/sisalto/tilannekuva/, vertaa node tools/vienti/tilannekuva.mjs --ulos <tmp> -tulokseen → junaan.
