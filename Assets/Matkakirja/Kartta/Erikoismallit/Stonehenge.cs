@@ -9,9 +9,9 @@ namespace Matkakirja
     /// viisi trilithonia hevosenkengän muodossa, joka avautuu koilliseen; kantapääkivi akselilla koillisessa; matala valli.
     /// Mittakaava tarkennettu speksistä (1,0 = 60 m, ei 110 m): sarsenkehä 33 m → halkaisija 0,55, jotta kehä erottuu 60 pt:ssä
     /// renkaana eikä pisteinä; valli ja kantapääkivi tuotu kehän lähelle (0,44–0,5). Pystyliioittelu 1,8.
-    /// Musteella piirretään vain kivet: nurmi ja valli ovat osia ilman ääriviivaa (kartta, ei mitali).
+    /// Musteella piirretään vain kivet: valli on osa ilman ääriviivaa, ja ruoho on kartta (ei mitali).
     /// Liikkuvat osat:
-    ///   nurmi, valli  paikallaan (ei ääriviivaa)
+    ///   valli         paikallaan (ei ääriviivaa); ruoho on kartta (ei nurmilevyä)
     ///   lammas1–3     kolme lammasta laiduntaa (perusliike: askel, pysähdys, käännös; lähestyttäessä päät ylös)
     ///   aurinko       auringonnousu kantapääkiven takaa (harvinainen ~1/10 ja napautus)
     ///   sade          kultainen säde maassa kantapääkiveltä kehän läpi (auringonnousun aikana)
@@ -41,6 +41,8 @@ namespace Matkakirja
 
         static readonly Color[] ShKivet = { Hex(0xc4b18c), Hex(0xb7a47f), Hex(0xcdbb96), Hex(0xbba985) };
         static readonly Color ShKiviLaki = Hex(0xe2d6b6);
+        /// <summary>Valli vaaleana seepiana ja ruoho paperina eli karttana (speksi kohta 5; ei vihreää levyä, kartta, ei mitali).</summary>
+        static readonly Color ShValli = Hex(0xc9b58c), ShVallinLaki = Hex(0xdccba5);
 
         static Mesh StonehengeRunko()
         {
@@ -111,14 +113,6 @@ namespace Matkakirja
             return r.Verkko("Stonehenge");
         }
 
-        /// <summary>Nurmi vallin sisällä (osa ilman ääriviivaa).</summary>
-        static Mesh StonehengeNurmi()
-        {
-            var r = new Rakentaja();
-            r.Kiekko(new Vector3(0f, 0.002f, 0f), 0.44f, 0.44f, 28, EmRuoho);
-            return r.Verkko("Stonehenge-nurmi");
-        }
-
         /// <summary>Valli: matala rengas (sisärinne, laki, ulkorinne) 0,44–0,5 ja aukko koillisessa akselin kohdalla.</summary>
         static Mesh StonehengeValli()
         {
@@ -137,7 +131,7 @@ namespace Matkakirja
                 {
                     Vector3 p00 = ShSuunta(a0) * sade[k] + Vector3.up * kork[k], p01 = ShSuunta(a1) * sade[k] + Vector3.up * kork[k];
                     Vector3 p10 = ShSuunta(a0) * sade[k + 1] + Vector3.up * kork[k + 1], p11 = ShSuunta(a1) * sade[k + 1] + Vector3.up * kork[k + 1];
-                    r.NelioUlos(p00, p10, p11, p01, Vector3.up, k == 1 ? EmVallinLaki : EmValli);
+                    r.NelioUlos(p00, p10, p11, p01, Vector3.up, k == 1 ? ShVallinLaki : ShValli);
                 }
             }
             return r.Verkko("Stonehenge-valli");
@@ -180,7 +174,13 @@ namespace Matkakirja
         }
 
         /// <summary>Lampaiden lepopaikat (vallin sisällä lounaassa ja etelässä).</summary>
-        static readonly Vector3[] ShLampaat = { ShSuunta(200f) * 0.36f, ShSuunta(225f) * 0.38f, ShSuunta(160f) * 0.37f };
+        static readonly Vector3[] ShLampaat = { ShSuunta(200f) * 0.36f + ShMaataso, ShSuunta(225f) * 0.38f + ShMaataso, ShSuunta(160f) * 0.37f + ShMaataso };
+
+        /// <summary>
+        /// Maatason osien nosto (laite 27.9.: liioiteltu maasto peitti 0,002:n korkeudella olevan nurmilevyn ja vallin osittain,
+        /// koska malli on kartalla kymmenien kilometrien levyinen): valli, lampaat ja säde 0,006 yksikköä maan yläpuolella.
+        /// </summary>
+        static readonly Vector3 ShMaataso = new Vector3(0f, 0.006f, 0f);
 
         /// <summary>
         /// Liikkuvat osat (Natiivisepän rajapinta). Liikkeen laskee Linssisepän liikeydin avaimen ja osan nimen mukaan.
@@ -188,8 +188,7 @@ namespace Matkakirja
         /// </summary>
         static LiikkuvaOsaMaaritys[] StonehengeOsat() => new[]
         {
-            new LiikkuvaOsaMaaritys { Nimi = "nurmi", Verkko = StonehengeNurmi, Pivot = Vector3.zero, Liike = Liike.Liuku },
-            new LiikkuvaOsaMaaritys { Nimi = "valli", Verkko = StonehengeValli, Pivot = Vector3.zero, Liike = Liike.Liuku },
+            new LiikkuvaOsaMaaritys { Nimi = "valli", Verkko = StonehengeValli, Pivot = ShMaataso, Liike = Liike.Liuku },
             new LiikkuvaOsaMaaritys { Nimi = "lammas1", Verkko = StonehengeLammas, Pivot = ShLampaat[0], Liike = Liike.Liuku, Akseli = Vector3.forward,
                 Laajuus = 0.04f, KayS = 6f, TaukoS = 20f },
             new LiikkuvaOsaMaaritys { Nimi = "lammas2", Verkko = StonehengeLammas, Pivot = ShLampaat[1], Liike = Liike.Liuku, Akseli = Vector3.forward,
@@ -198,7 +197,7 @@ namespace Matkakirja
                 Laajuus = 0.04f, KayS = 6f, TaukoS = 30f },
             new LiikkuvaOsaMaaritys { Nimi = "aurinko", Verkko = StonehengeAurinko, Pivot = ShAkseli * 0.5f, Liike = Liike.Nousu, Akseli = Vector3.up,
                 Laajuus = 0.11f, KayS = 28f, TaukoS = 80f },
-            new LiikkuvaOsaMaaritys { Nimi = "sade", Verkko = StonehengeSade, Pivot = ShKantapaa, Liike = Liike.Aalto, Akseli = -ShAkseli, Laajuus = 1f },
+            new LiikkuvaOsaMaaritys { Nimi = "sade", Verkko = StonehengeSade, Pivot = ShKantapaa + ShMaataso, Liike = Liike.Aalto, Akseli = -ShAkseli, Laajuus = 1f },
             new LiikkuvaOsaMaaritys { Nimi = "kuu", Verkko = StonehengeKuu, Pivot = ShAkseli * 0.5f + Vector3.up * 0.1f, Liike = Liike.Valahdys },
         };
 

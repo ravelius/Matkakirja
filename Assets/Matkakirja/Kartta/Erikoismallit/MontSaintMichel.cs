@@ -102,7 +102,7 @@ namespace Matkakirja
             r.Talo(Ranta(-90f) + new Vector3(0f, 0f, 0.004f), 0f, 0.058f, 0.034f, 0.078f, 0.024f, EmPaperi, EmKatto);
             r.LopetaOsa();
             // Silta etelään (pysyy korkean veden yläpuolella).
-            r.Laatikko(new Vector3(0f, 0f, -0.42f), new Vector3(0.028f, 0.016f, 0.16f), EmPaperi, EmPaperi);
+            r.Laatikko(new Vector3(0f, 0f, -0.42f), new Vector3(0.028f, 0.024f, 0.16f), EmPaperi, EmPaperi);
 
             // Kylä: talot kierteisen kadun varrella, seinät vuorotellen paperi ja valo, tummat katot.
             var talot = MsmTalot();
@@ -175,6 +175,10 @@ namespace Matkakirja
             return r.Verkko("MontSaintMichel-hiekka");
         }
 
+        /// <summary>Maatason osien nosto (laite 27.9.: liioiteltu rannikon maasto peitti hiekkalevyn reunaa): hiekka, vesi ja vaahto
+        /// 0,006 ylempänä; silta on sen vuoksi 0,024 korkea, jotta se pysyy korkean veden yläpuolella.</summary>
+        static readonly Vector3 MsmMaataso = new Vector3(0f, 0.006f, 0f);
+
         /// <summary>Hiekan korkeus rannassa (reunalla 0).</summary>
         const float MsmHiekkaRanta = 0.009f;
 
@@ -225,10 +229,10 @@ namespace Matkakirja
         /// </summary>
         static LiikkuvaOsaMaaritys[] MontSaintMichelOsat() => new[]
         {
-            new LiikkuvaOsaMaaritys { Nimi = "hiekka", Verkko = MontSaintMichelHiekka, Pivot = Vector3.zero, Liike = Liike.Liuku, Laajuus = 0f },
-            new LiikkuvaOsaMaaritys { Nimi = "vesi", Verkko = MontSaintMichelVesi, Pivot = Vector3.zero, Liike = Liike.Nousu,
+            new LiikkuvaOsaMaaritys { Nimi = "hiekka", Verkko = MontSaintMichelHiekka, Pivot = MsmMaataso, Liike = Liike.Liuku, Laajuus = 0f },
+            new LiikkuvaOsaMaaritys { Nimi = "vesi", Verkko = MontSaintMichelVesi, Pivot = MsmMaataso, Liike = Liike.Nousu,
                 Akseli = Vector3.up, Nopeus = 1f / 60f, Laajuus = 0.013f, KayS = 105f, TaukoS = 60f },
-            new LiikkuvaOsaMaaritys { Nimi = "vaahto", Verkko = MontSaintMichelVaahto, Pivot = Vector3.zero, Liike = Liike.Aalto,
+            new LiikkuvaOsaMaaritys { Nimi = "vaahto", Verkko = MontSaintMichelVaahto, Pivot = MsmMaataso, Liike = Liike.Aalto,
                 Akseli = Vector3.up, Laajuus = 0.16f },
             new LiikkuvaOsaMaaritys { Nimi = "patsas", Verkko = MontSaintMichelPatsas, Pivot = MsmPatsas, Liike = Liike.Valahdys,
                 Akseli = Vector3.up },

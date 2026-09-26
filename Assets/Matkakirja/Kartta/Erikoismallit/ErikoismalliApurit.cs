@@ -30,8 +30,6 @@ namespace Matkakirja
         static readonly Color EmKulta = Hex(0xdcb466);
         /// <summary>Yövalo ikkunoissa (lämmin, hillitty).</summary>
         static readonly Color EmIkkunavalo = Hex(0xf0c878);
-        /// <summary>Ruoho ja valli (hillitty oliivi paperiin sekoitettuna).</summary>
-        static readonly Color EmRuoho = Hex(0xa9ae7c), EmValli = Hex(0x979c6a), EmVallinLaki = Hex(0xb6ba88);
         /// <summary>Kangas (velarium): --sym-historia #a05c3f 35 % paperiin.</summary>
         static readonly Color EmKangas = Hex(0xd2a888);
 
