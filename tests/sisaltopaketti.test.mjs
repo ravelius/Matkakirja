@@ -1485,3 +1485,19 @@ test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () =>
   }
 });
 
+
+test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luonnehdinnoissa', async () => {
+  const { pikkukuvaOsoite } = await import('../tools/vienti/elava-kartta.mjs');
+  const juuri = 'https://media.matkakirja.app/';
+  assert.equal(pikkukuvaOsoite('assets/kartat/maakunnat/grc-attiki.webp'), `${juuri}kohtaamiset/maakunnat/grc-attiki.webp`);
+  assert.equal(pikkukuvaOsoite('grc-attiki'), `${juuri}kohtaamiset/maakunnat/grc-attiki.png`);
+  assert.equal(pikkukuvaOsoite('Meteora, Greece (2016).jpg'), `${juuri}kuvat/meteora-greece-2016.jpg`);
+  assert.equal(pikkukuvaOsoite(`${juuri}x.jpg`), `${juuri}x.jpg`);
+  assert.equal(pikkukuvaOsoite(null), null);
+  assert.throws(() => pikkukuvaOsoite('ei kuva'), /https-osoitetta/);
+  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
+  for (const s of k) assert.ok('pikkukuva' in s && (s.pikkukuva === null || s.pikkukuva.startsWith('https://')), s.id);
+  const m = JSON.parse(tiedostot.get('moduulit/js/packs/maakunnat-luonnehdinnat.json')).exportit;
+  const kuvat = JSON.stringify(m).match(/"pikkukuva":("[^"]*"|null)/g) ?? [];
+  for (const p of kuvat) assert.match(p, /^"pikkukuva":(null|"https:\/\/[^"]+")$/);
+});
