@@ -87,3 +87,7 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   pikkukuva v175–v178); simulaattorissa (b9fd4936, paketti v178) GRC-salaisuuden sekä NLD:n kohde:krollermuller ja
   nosto:kirja-arkku kortit näyttävät kuvan. Todennäköinen syy: laitteen vanhempi paketti (simulaattorikin oli v176:lla, vaikka
   osoitin tarjosi v178:aa; vaihto vasta käynnistyksessä). Kuvasarja proto-3d/lokit/natiivi-ui-loydos170/. Rivi Fablelle LÄHETTÄMÄTTÄ (viestiraja).
+- 19.5x löydös 173 samaan haaraan `natiivi-ui/maakunnat-kaikki` @ 0c9a3555: paneeli 250 pt (≈ 62 %), max-height 78 %
+  (Ranska: 248 × 556 pt, peitto ~39 %, kaikki 13 maakuntaa näkyvät); Kaikki | Pois yhdellä rivillä (veto valitsee puoliskon x:n
+  mukaan, Ryhmassa-apu). Käännetty d94d2321, ei poikkeuksia; kuvapari proto-3d/lokit/natiivi-ui-loydos173/kuvapari-173-ennen-jalkeen.png.
+  Merge-pyyntö (169+170b+173 = 0c9a3555) ja kuvaparit Fablelle LÄHETTÄMÄTTÄ (viestiraja).
