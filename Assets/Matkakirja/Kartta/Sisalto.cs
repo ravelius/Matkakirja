@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -165,8 +166,20 @@ namespace Matkakirja
                 yield return Taustalla(() => File.ReadAllText(tiedosto), t => teksti = t);
             }
             VerkkoOdotus.Osuma("sisalto", teksti != null);
+            // YHTEINEN HAKU (Fablen jono 26.9., kohta 1 -analyysi: kaupungit.json haettiin kylmänä 3× rinnakkain tästä
+            // funktiosta): sama polku jo haussa → odotetaan sen tulosta, ei toista verkkohakua.
+            if (teksti == null && haussa.TryGetValue(polku, out var odottajat))
+            {
+                bool saatu = false;
+                string jaettu = null;
+                odottajat.Add(t => { jaettu = t; saatu = true; });
+                while (!saatu) yield return null;
+                valmis(jaettu);
+                yield break;
+            }
             if (teksti == null)
             {
+                haussa[polku] = new List<Action<string>>();
                 byte[] tavut = null;
                 long koodi = 0;
                 string virhe = null;
@@ -181,6 +194,7 @@ namespace Matkakirja
                         Debug.Log($"MATKAKIRJA sisältö: {polku} ei ole tässä paketissa (valinnainen)");
                     else
                         Debug.LogError($"MATKAKIRJA sisältö: {polku} epäonnistui: {virhe}");
+                    Jaa(polku, null);
                     valmis(null);
                     yield break;
                 }
@@ -200,8 +214,19 @@ namespace Matkakirja
                     catch (Exception) { /* välimuisti on valinnainen */ }
                     return s;
                 }, t => teksti = t);
+                Jaa(polku, teksti);
             }
             valmis(teksti);
+        }
+
+        /// <summary>Käynnissä olevat verkkohaut polun mukaan ja niitä odottavat (pääsäie).</summary>
+        static readonly Dictionary<string, List<Action<string>>> haussa = new Dictionary<string, List<Action<string>>>();
+
+        static void Jaa(string polku, string teksti)
+        {
+            if (!haussa.TryGetValue(polku, out var odottajat)) return;
+            haussa.Remove(polku);
+            foreach (var o in odottajat) { try { o(teksti); } catch (Exception e) { Debug.LogException(e); } }
         }
 
         /// <summary>Kirjoitus väliaikaistiedostoon ja siirto paikalleen (lukija ei näe puolikasta tiedostoa).</summary>
