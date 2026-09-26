@@ -345,6 +345,36 @@ namespace Matkakirja.Peli
             if (aihe != null) SoitaAarre(aihe);
         });
 
+        /// <summary>
+        /// Musiikkisuunnitelman one-shot-aihe (aloituslento, saapumistunnus, loppu) aarreaiheen paikalla:
+        /// pohja ja maisema väistyvät aiheen ajaksi ja palaavat sen loputtua. <paramref name="keskeyta"/> = false
+        /// (saapumistunnus) ei katkaise soivaa aihetta, vaan jää pois. Aarreaihe katkaisee aina.
+        /// </summary>
+        public void Aihe(string polku, bool keskeyta = true) => Tee(() =>
+        {
+            if (polku == null || (!keskeyta && aarre != null)) return;
+            SoitaAarre(polku);
+        });
+
+        /// <summary>Aloituslennon aihe (Lontoosta ensimmäiseen kaupunkiin, 26 s; päättyy perillä laskuun).</summary>
+        public void AloituslentoAlkoi() => Aihe(t.AloituslentoAihe);
+
+        /// <summary>Kaikki aarteet löytyivät: matkan loppu (johtoaihe täytenä).</summary>
+        public void MatkaLoppui() => Aihe(t.LoppuAihe);
+
+        /// <summary>
+        /// Ensimmäinen käynti kaupungissa: kaupungin musiikkialueen saapumistunnus (suunnitelma: "uuteen
+        /// kaupunkiin"). Ei katkaise soivaa aihetta (aloituslento päättyy ensimmäiseen kaupunkiin).
+        /// </summary>
+        public void UusiKaupunki(string kaupunki)
+        {
+            var alue = valitsin.Alue(kaupunki, t.Maa(kaupunki));
+            if (alue != null && t.Saapumistunnukset.TryGetValue(alue, out var polku)) Aihe(polku, keskeyta: false);
+        }
+
+        /// <summary>Aihe (aarre- tai suunnitelman aihe) soi nyt.</summary>
+        public bool AiheSoi => aarre != null;
+
         /// <summary>Aarreaihe soi loppuun (ended).</summary>
         public void AarreLoppui() => Tee(() =>
         {

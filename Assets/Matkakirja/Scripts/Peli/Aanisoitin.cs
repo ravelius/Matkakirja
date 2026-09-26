@@ -96,6 +96,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Paljastuskortti näkyy (laattatyyppi: star, mannerAarre, isoAarre, pieniAarre; muut = ei aihetta).</summary>
         public static void AarrePaljastui(string tyyppi) => Instanssi?.Tila.AarrePaljastui(tyyppi);
 
+        /// <summary>Musiikkisuunnitelman aiheet (vaihe 1, 26.9.2026): aloituslento, uusi kaupunki ja matkan loppu.</summary>
+        public static void AloituslentoAlkoi() => Instanssi?.Tila.AloituslentoAlkoi();
+        public static void UusiKaupunki(string kaupunki) => Instanssi?.Tila.UusiKaupunki(kaupunki);
+        public static void MatkaLoppui() => Instanssi?.Tila.MatkaLoppui();
+
         static bool puluPuhuu, nayteSoi;
 
         /// <summary>Pulun puhe soi (web merkitsePuhuja PUHUJA_PULU): vain reunat välitetään.</summary>
