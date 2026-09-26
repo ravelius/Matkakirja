@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
         {
             byte[] tavut = null;
             yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(url); q.timeout = 30; return q; }, taso, "kuva",
-                p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; });
+                p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; }, avain: url);
             esiladataan.Remove(url);
             if (tavut == null || tavut.Length < 16) yield break;
             var tyo = System.Threading.Tasks.Task.Run(() =>
@@ -153,6 +153,7 @@ namespace Matkakirja.Natiivi
             if (muisti.TryGetValue(avain, out var t) && t != null)
             {
                 VerkkoOdotus.Osuma("kuva", true);
+                Esilataaja.NakyvaPyynto(avain, true);
                 // Kiinteä (buildin mukana) ei ole LRU-järjestyksessä eikä saa joutua sinne.
                 if (tavut.ContainsKey(avain)) { jarjestys.Remove(avain); jarjestys.AddFirst(avain); }
                 valmis?.Invoke(t);
@@ -173,7 +174,7 @@ namespace Matkakirja.Natiivi
             var reitit = Reitit(tiedostoTaiUrl, kansio);
             if (reitit.Length == 0) { valmis?.Invoke(null); return; }
             string avain = reitit[0] + "@" + leveys + "x" + korkeus;
-            if (muisti.TryGetValue(avain, out var t) && t != null) { VerkkoOdotus.Osuma("kuva", true); valmis?.Invoke(t); return; }
+            if (muisti.TryGetValue(avain, out var t) && t != null) { VerkkoOdotus.Osuma("kuva", true); Esilataaja.NakyvaPyynto(reitit[0], true); valmis?.Invoke(t); return; }
             if (kesken.TryGetValue(avain, out var odottajat)) { odottajat.Add(valmis); return; }
             kesken[avain] = new List<Action<Texture2D>> { valmis };
             UiKerros.Hae().StartCoroutine(Lataa(avain, reitit, (alkup, valmisPieni) => PienennaTaustalla(alkup, leveys, korkeus, ylaAsento, px =>
@@ -336,6 +337,8 @@ namespace Matkakirja.Natiivi
             string levy = Valimuisti(reitit[0]);
             string mukana = Mukana.Polku(reitit[0]);
             VerkkoOdotus.Osuma("kuva", mukana != null || File.Exists(levy));
+            // Esilataajan mittari: kuvanäkymä on aina Nakyva-pyyntö (esilataus kulkee Esilataa → EsilataaLevylle).
+            Esilataaja.NakyvaPyynto(reitit[0], mukana != null || File.Exists(levy));
             // Löydös 63: Unity ei pura WebP:tä (kohdekarttojen miniatyyripiirrokset ovat ämpärissä vain webp:nä),
             // joten webp kulkee ImageIO-purun kautta (Natiivisepän MatkakirjaKuvat_Pura, iOS 14+).
             if (OnWebpOsoite(reitit[0]))
@@ -399,6 +402,7 @@ namespace Matkakirja.Natiivi
             // Kysely pois lokista: kehittäjän kuratointikuvien osoitteissa on avain (?avain=).
             if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0].Split('?')[0]);
             else Muista(avain, tulos, kiintea);
+            Esilataaja.NakyvaValmis(reitit[0]);
             if (kesken.TryGetValue(avain, out var odottajat))
             {
                 kesken.Remove(avain);

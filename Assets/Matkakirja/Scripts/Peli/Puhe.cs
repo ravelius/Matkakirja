@@ -359,7 +359,7 @@ namespace Matkakirja.Natiivi
             {
                 downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true },
                 timeout = 60,
-            }, taso, "puhe", r => ok = r.result == UnityWebRequest.Result.Success);
+            }, taso, "puhe", r => ok = r.result == UnityWebRequest.Result.Success, avain: url);
             try
             {
                 if (ok && !File.Exists(tiedosto)) File.Move(valiaikainen, tiedosto);
@@ -377,11 +377,14 @@ namespace Matkakirja.Natiivi
             string mukana = sailo && !synteesi ? Mukana.Polku(url) : null;
             bool valimuistista = mukana != null || (sailo && File.Exists(Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))));
             if (sailo) VerkkoOdotus.Osuma("puhe", valimuistista);
+            // Esilataajan mittari: soitto on Nakyva-pyyntö (esilataus: Esilataa → EsilataaTiedosto samalla url:lla).
+            if (sailo) Esilataaja.NakyvaPyynto(url, valimuistista);
             string kansio = sailo ? Kansio : Application.temporaryCachePath;
             string tiedosto = mukana ?? (sailo ? Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))
                 : Path.Combine(kansio, "puhenayte-" + oma + ".mp3"));
             // Esilataus kesken (Esilataa): odotetaan sitä, ettei samaa tiedostoa ladata kahdesti rinnakkain.
             while (sailo && esiladataan.Contains(url)) yield return null;
+            if (sailo && File.Exists(tiedosto)) Esilataaja.NakyvaValmis(url);
             if (oma != tunnus) yield break;
             if (!sailo || !File.Exists(tiedosto))
             {
@@ -400,6 +403,7 @@ namespace Matkakirja.Natiivi
                     return r;
                 }, Taso.Nakyva, "puhe", r => { ok = r.result == UnityWebRequest.Result.Success; virhe = r.error; });
                 VerkkoOdotus.Kirjaa(vaihe, "puhe:" + Path.GetFileName(url.Split('?')[0]), (Time.realtimeSinceStartup - odotusAlku) * 1000.0, 1, ok ? null : "virhe");
+                if (sailo) Esilataaja.NakyvaValmis(url);
                 if (oma != tunnus) yield break;
                 if (!ok)
                 {

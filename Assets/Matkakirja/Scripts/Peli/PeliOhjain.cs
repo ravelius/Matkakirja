@@ -467,6 +467,7 @@ namespace Matkakirja.Natiivi
             string tiedosto = Valimuisti(polku);
             bool valimuistissa = !ohitaValimuisti && File.Exists(tiedosto);
             VerkkoOdotus.Osuma("peli", valimuistissa);
+            Esilataaja.NakyvaPyynto(Sisalto.Juuri + polku, valimuistissa);
             if (valimuistissa)
             {
                 valmis(File.ReadAllText(tiedosto));
@@ -479,6 +480,7 @@ namespace Matkakirja.Natiivi
                 koodi = k.responseCode;
                 if (k.result == UnityWebRequest.Result.Success) teksti = k.downloadHandler.text; else virhe = k.error;
             });
+            Esilataaja.NakyvaValmis(Sisalto.Juuri + polku);
             if (teksti == null)
             {
                 if (hiljaa) Debug.Log($"MATKAKIRJA peli: {polku} ei saatavilla ({koodi})");

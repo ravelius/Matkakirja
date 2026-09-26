@@ -8,7 +8,8 @@
 #   LAMMIN=1 Peli-testit/verkko-savuke.sh …   lämmin käynnistys (välimuistit edellisestä ajosta)
 #   ENNAKOINTI=1 …   lisäksi Esilataaja erä 3: joutilas kaupungissa (kohta 4) ja liftauksen siirtokohteet (kohta 5)
 #
-# Tulos: <tuloskansio>/{verkko-odotus.jsonl, verkko-yhteenveto.json, konsoli.log, RAPORTTI.txt}. Vain omiin
+# Tulos: <tuloskansio>/{verkko-odotus.jsonl, verkko-yhteenveto.json, konsoli.log, RAPORTTI.txt}. RAPORTTI:n
+# "ESILATAAJA OSUMA-% … ODOTUS ms …" on esilataajan oma mittari (Kartta/EsilataajaMittari.cs), vaiheittain alla. Vain omiin
 # simulaattoreihin (Raamattu, SIMULAATTORIEN OMISTUS); simulaattori sammutetaan lopuksi, jos se ei ollut päällä.
 setopt null_glob
 APP=${1:?app}; UDID=${2:?UDID}; OUT=${3:?tuloskansio}
@@ -90,7 +91,19 @@ if os.path.exists(p):
     if "osumat" in y:
         print("\nOSUMA-% (välimuistista / pyynnöt) VAIHEITTAIN JA LÄHTEITTÄIN")
         for k, o in y["osumat"].items(): print(f"  {k:<22} {o['osumia']:>5}/{o['n']:<5} {o['pros']:>3} %")
-    if "esilataaja" in y: print("\nESILATAAJA", y["esilataaja"])
+    if "esilataaja" in y: print("\nESILATAAJA", {k: v for k, v in y["esilataaja"].items() if k != "mittari"})
+    # Esilataajan oma mittari (Kartta/EsilataajaMittari.cs): Nakyva-pyyntö löysi kohteen esilatauksen jäljiltä = osuma.
+    # Hudit: kesken (esilataus jonossa/haussa), ei esiladattu, hukattu (esiladattu, ei löytynyt). "Levyllä" = valmiina
+    # ilman tämän istunnon esilatausta (edellinen ajo, paketti, buildi): ei osuma-%:iin. Vain raportti, ei rajaa.
+    m = y.get("esilataaja", {}).get("mittari")
+    if m:
+        def mrivi(s):
+            pros = "–" if s["pros"] < 0 else f"{s['pros']} %"
+            return (f"OSUMA-% {pros:>5} ({s['osumia']}/{s['osumia'] + s['huteja']})  ODOTUS ms {s['odotusMs']} "
+                    f"(mediaani {s['mediaaniMs']}, p95 {s['p95Ms']}, max {s['maxMs']})  hudit: kesken {s['kesken']}, "
+                    f"ei esiladattu {s['eiEsiladattu']}, hukattu {s['hukattu']}; levyllä {s['levylla']}, toistoja {s['toistoja']}")
+        print("\nESILATAAJA " + mrivi(m) + f", avoimia {m['avoimia']}")
+        for k, s in m.get("vaiheet", {}).items(): print(f"  {k:<11} " + mrivi(s))
 # RAJA (Raamattu ESILATAUSPOLITIIKKA kohta 3, Fable 25.9.): saapumisessa nolla verkko-odotusta, kylmänä ja lämpimänä.
 # Odotus lasketaan verkko-odotukseksi, kun sen aikana valmistui verkkohaku (haut > 0) tai se on puheen lataus.
 saap = [r for r in rivit if r['vaihe'] == 'saapuminen' and (r.get('haut', 0) > 0 or r['mita'].startswith('puhe:'))]
