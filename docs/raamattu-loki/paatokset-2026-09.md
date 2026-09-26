@@ -7575,3 +7575,7 @@ Pelikoodari: #3353 paivitetty omistajan 22.4x-malliin — kartalla rakennus/auki
 ## 170 TODENNETTU: KUVA TULEE SAMASSA ISTUNNOSSA (SISALTO VAIHTUI v157 → v186) (26.9.2026 klo 22.59)
 
 Siirtoseppa (sim 62b29c02 = juna + natiivi-ui/sisalto-vaihtui + siirtoseppa/sisalto-vaihtui): omistajan lahtotila toistettu (v157, ei Kreikan kuvia); jalkeen: lokissa sisalto vaihtui v157 → v186 kesken istunnon, maakunta- ja nostodata hylatty, Attikan kortissa Akropolis-kuva SAMASSA istunnossa; uudelleenkaynnistys pysyy v186:ssa. Kuvapari proto-3d/lokit/siirtoseppa-paivityspolku/170-ennen-jalkeen.png. → 1.0.27-junaan (Natiivisepan merge). Merikohdat tuotannossa natiivissa v187 (772/772).
+
+## V2285 (178) MAINISSA 23.02; MYOS #3352, #3348, #3350 (26.9.2026 klo 23.02)
+
+Julkaisija: #3353 v2285 (4411/0), #3352 merikohdat, #3348 v2282 (era A), #3350 v2284 (B2) mainissa; jonossa #3351 (B3) ja #3347 (puhevertailu). Natiivi-UI:n 178-haara junaan.
