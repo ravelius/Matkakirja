@@ -279,7 +279,7 @@ namespace Matkakirja
         public const double TyyppimerkinTaysiKerroin = 4.0;
 
         /// <summary>NOSTOJEN_TYYPPIMERKIN_PIENI: kuvamerkin ruudun kerroin kynnyksen ja täyden koon välissä (löydös 155).</summary>
-        public const float TyyppimerkinPieniKoko = 0.7f;
+        public const float TyyppimerkinPieniKoko = 0.85f; // omistaja 26.9. klo 10.4x (ehdotus 0,7)
 
         /// <summary>
         /// Kuvamerkki käytössä (web nostot.js tyyppimerkitKaytossa): ykköstasolla aina, muuten kartan kertoimesta 2,5 alkaen.
