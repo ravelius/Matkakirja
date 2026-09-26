@@ -7731,3 +7731,7 @@ Natiivi-UI 01.2x: juna/b13 ba90668f (kaannos da5c85d4) iPhone 17 + iPad Pro 11, 
 ## XAI STRIIMILUENTA PR 3365 (v2292) JULKAISIJAN JUNAAN; TESTIT 4413/0 (27.9.2026 klo 01.22)
 
 Fable 01.2x: xAI-era valmis haarassa fable-xai-ara 2a0b68162 → PR #3365 (v2292): worker xAI-reitti + PUHE_MOOTTORI + varapolku OpenAI (8 s), kehittajavalikon striimiaani (28 xAI-aanta, oletus ara), workflow vie XAI_API_KEY:n workerille (GitHub-salaisuus asetettu 01.1x), OHJE.md, testit. npm test 4413/0, kaksoisavaimet ok, standalone ok. Julkaisija mergeaa #3364:n jalkeen; merge laukaisee Pollon julkaisu -workflown → xAI ara tuotannossa webissa ja natiivissa samalla. Natiivin kehittajavalikon striimiaani-valitsin Natiivi-UI:n jonossa. Postivahti 01.2x: Pelikoodari 11 % (nollaus onnistui), Sisaltokirjuri 87 % → nollauskasky eran jalkeen.
+
+## 1.0.27-JUNA KAANNETTY ILMAN YLHAALTA-175:TA → UUSI KAANNOS; 177 PASS; STRIIMIAANI NATIIVIIN 0677592b (27.9.2026 klo 01.23)
+
+Natiiviseppa 01.2x: juna/b13 5cbd7870 (kaannos 16be7e44, mukana 177-korjaus cc33ba3b) savuke 0 poikkeusta, verho 5,8 s kuormassa; Laitetestaaja kierroksessa. Fable totesi: ylhaalta-175 d65986ae EI ole junassa vaikka omistaja paatti 01.1x "Nyt" → Natiiviseppa mergeaa ja kaantaa uudestaan (yhteinen kaannos klo 02 Natiivi-UI:n kanssa), Laitetestaaja uusi kierros, sitten master + TF 1.0.27. Natiivi-UI: 177 PASS 16be7e44:lla (kuvapari kuvapari-177-kortti.png); natiivin kehittajavalikon striimiaani-valitsin natiivi-ui/striimiaani 0677592b, todennus klo 02 kaannoksella.
