@@ -33,3 +33,15 @@ test('kapea itäkärki: alue laajenee länteen, kunnes 15 km täyttyy', () => {
   assert.equal(perustelu.ehdot.itaosa, false);
   assert.equal(perustelu.ehdot.reuna15km, true);
 });
+
+test('assets/data/lippu-lonlat.json: {ISO3: [lon, lat]} kaikille maakuntamaille', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { gunzipSync } = await import('node:zlib');
+  const j = JSON.parse(readFileSync(new URL('../assets/data/lippu-lonlat.json', import.meta.url), 'utf8'));
+  const maat = Object.values(JSON.parse(gunzipSync(readFileSync(new URL('../tools/vienti/maakuntarajat.json.gz', import.meta.url))).toString('utf8')).maat).map((m) => m.iso3);
+  assert.deepEqual(Object.keys(j).sort(), [...maat].sort());
+  for (const [iso, v] of Object.entries(j)) {
+    assert.ok(/^[A-Z]{3}$/.test(iso) && v.length === 2, iso);
+    assert.ok(v[0] >= -180 && v[0] <= 180 && v[1] >= -90 && v[1] <= 90, iso);
+  }
+});
