@@ -992,6 +992,7 @@ namespace Matkakirja
                 {
                     // maakunta <ISO3:tunnus> | maakunta pois | maakunta tila (B17, sama kuin Natiivi-UI:n Maakunnat-valinta)
                     // maakunta maa <ISO3> | maakunta maa pois: kerroksen maa pakotetaan (oletus pelaajan maa, skeema 1.42)
+                    // maakunta herays ab|pois: löydös 168 A/B-lippu (ab = vanha käytös, herääminen värjää maakunnan; oletus pois)
                     var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
                     if (mk == null) break;
                     if (o[1] == "tila")
@@ -1008,6 +1009,14 @@ namespace Matkakirja
                         MaaKartta.ValinnanPeitto = double.Parse(o[2], CultureInfo.InvariantCulture);
                         MaaKartta.PaivitaKaikki();
                         Debug.Log($"MATKAKIRJA maakunnat: valinnan peitto {MaaKartta.ValinnanPeitto:0.00}");
+                        break;
+                    }
+                    if (o[1] == "herays" && o.Length > 2)
+                    {
+                        // maakunta herays ab|pois: löydös 168 A/B-vertailu (ab = vanha käytös, herääminen värjää maakunnan pysyvästi)
+                        MaaKartta.HeraaminenVarjaaTaytonAB = o[2] == "ab";
+                        MaaKartta.PaivitaKaikki();
+                        Debug.Log($"MATKAKIRJA maakunnat: heräyksen täyttö {(MaaKartta.HeraaminenVarjaaTaytonAB ? "AB (vanha, värjää)" : "pois (oletus, ei värjää)")}");
                         break;
                     }
                     if (o[1] == "maski" && o.Length > 2)
