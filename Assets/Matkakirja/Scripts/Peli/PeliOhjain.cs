@@ -903,6 +903,7 @@ namespace Matkakirja.Natiivi
             kytkettyRekisteri = null;
             KytkeRekisteri();
             KytkeReitti(m);
+            m.Saapui += (_, k, uusi) => { if (m == matka) uusiKaupunki = uusi ? k : null; };
             m.Tapahtui += (laji, teksti) => { tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
             m.Loysi += (p, l) =>
             {
