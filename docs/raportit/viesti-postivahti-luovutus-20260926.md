@@ -56,3 +56,6 @@ YÖVAUHTI PURETTU (purkuviesti lähetetty kaikille 9 roolille 00.2x). Normaali v
 
 ## Päivitys 26.9. klo 05.0x (Fable)
 Codexin 504/503-värikorjauserät (posti/codex-fable-miniatyyrien-varit-*) ilmoitetaan jatkossa SUORAAN Sisältökirjurille (local_256f6a15-b806-4259-97bd-b2ba8d342f86, send_message-kanava); Fablelle vain yksi rivi kierrosraportissa. Erä 11 välitetty (Fable). Fable id ennallaan, RC päällä; build 17 TestFlightissa (1.0.17). Ei pushia omistajalle ennen klo 08 (paitsi viikko ≥97 %).
+
+## Päivitys 26.9. klo 05.3x (omistaja via Fable: "Jatka 98 asti")
+Roolit jatkavat työtä viikkokiintiön 98 %:iin (ei pysähdystä 90 %:ssa; luovutukset ajan tasalla, pyyntö 05.21 lähetetty ja kuitattu). UUSI RAJA: viikko ≥98 % → lepokäsky KAIKILLE 9 roolille ("vie käsillä oleva erä pushiin ja lepää") + PushNotification omistajalle "Viikkokiintiö täynnä — vaihda tili" + ilmoitus Fablelle. (Aiempi 97 %:n push korvattu 98 %:lla.) Välitys 9 roolille lähetetty 05.3x. 5 h nollautui 05.30.
