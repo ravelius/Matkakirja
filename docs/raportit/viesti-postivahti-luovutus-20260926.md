@@ -59,3 +59,5 @@ Codexin 504/503-värikorjauserät (posti/codex-fable-miniatyyrien-varit-*) ilmoi
 
 ## Päivitys 26.9. klo 05.3x (omistaja via Fable: "Jatka 98 asti")
 Roolit jatkavat työtä viikkokiintiön 98 %:iin (ei pysähdystä 90 %:ssa; luovutukset ajan tasalla, pyyntö 05.21 lähetetty ja kuitattu). UUSI RAJA: viikko ≥98 % → lepokäsky KAIKILLE 9 roolille ("vie käsillä oleva erä pushiin ja lepää") + PushNotification omistajalle "Viikkokiintiö täynnä — vaihda tili" + ilmoitus Fablelle. (Aiempi 97 %:n push korvattu 98 %:lla.) Välitys 9 roolille lähetetty 05.3x. 5 h nollautui 05.30.
+
+KORJAUS 05.32: 5 h -kiintiö nollautuu seuraavaksi klo **08.30 EEST** (resetsAt 05:30Z), ei 05.30. Viikkoraja ti 29.9. klo 02.00 EEST. Viikko 91 % klo 05.32 (~5 %/h → 98 % ~06.55–07.10).
