@@ -46,6 +46,7 @@ import { logiikkaLista } from './logiikka.mjs';
 import { kokoaOffline } from './offline.mjs';
 import { lueKuvamitat } from './kuvamitat.mjs';
 import { kokoaLisenssit } from './lisenssit.mjs';
+import { pikkukuvaOsoite } from './elava-kartta.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -201,8 +202,26 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        26.9.2026; oma kokoelma, koska build 16/17 piirtäisi karttavalorivit (Natiiviseppä). Elävä kartta.
  *   1.48 manifest.kaupunkilehdetKaupungeittain [{ id, tiedosto, sha256, tavuja }]: kokoelmat/kaupunkilehdet/<id>.json
  *        (sama kokoelmamuoto, yksi alkio) — Pelikoodari, build 19 (16 Mt:n lehtikokoelma kylmänä 1,9 s).
+ *   1.49 pikkukuva = ämpäriosoite (https) tai null: maakuntasalaisuudet.pikkukuva (+ pikkukuvaLahde) ja moduulin
+ *        js/packs/maakunnat-luonnehdinnat.js alueiden pikkukuva (datan polku/tunnus muunnetaan osoitteeksi,
+ *        tools/vienti/elava-kartta.mjs pikkukuvaOsoite) — Fable 26.9.2026, löydökset 115 ja 158. Elävä kartta.
  */
-export const SKEEMAVERSIO_TARKKA = '1.48';
+export const SKEEMAVERSIO_TARKKA = '1.49';
+
+/*
+ * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
+ * tämä on ainoa poikkeus, jotta natiivi saa maakunnan pikkukuvan ilman omaa polkusääntöä.
+ */
+const PIKKUKUVAMODUULIT = new Set(['js/packs/maakunnat-luonnehdinnat.js']);
+function osoitteiksiPikkukuvat(puu, missa) {
+  if (Array.isArray(puu)) { puu.forEach((x, i) => osoitteiksiPikkukuvat(x, `${missa}/${i}`)); return; }
+  if (!puu || typeof puu !== 'object') return;
+  for (const [k, v] of Object.entries(puu)) {
+    if (k === 'pikkukuva' && v && typeof v === 'object') v.osoite = pikkukuvaOsoite(v.osoite, `${missa}/${k}/osoite`);
+    else if (k === 'pikkukuva') puu[k] = pikkukuvaOsoite(v, `${missa}/${k}`);
+    else osoitteiksiPikkukuvat(v, `${missa}/${k}`);
+  }
+}
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
@@ -274,6 +293,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
           mediat.get(teksti).esiintymat.push({ moduuli: polku, export: nimi, polku: kohta });
         },
       });
+      if (PIKKUKUVAMODUULIT.has(polku)) osoitteiksiPikkukuvat(puu, `${polku}#${nimi}`);
       const teksti = JSON.stringify(puu);
       funktioita = (teksti.match(/\{"\$funktio":/g) || []).length;
       exportit[nimi] = puu;
