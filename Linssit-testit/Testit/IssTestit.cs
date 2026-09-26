@@ -30,6 +30,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Tle.Jasenna(I1, I2).Bstar < 0, "negatiivinen B*");
         }
 
+        [Testi] static void TleJsonSiirtosepanMuodossa()
+        {
+            string J(string r1, string r2) =>
+                "{\"nimi\":\"ISS (ZARYA)\",\"rivi1\":\"" + r1 + "\",\"rivi2\":\"" + r2 + "\",\"haettu\":\"2026-09-26T15:00:00Z\",\"lahde\":\"CelesTrak\"}";
+            var t = Tle.JasennaJson(J(I1, I2));
+            Oleta.Tosi(t != null, "kelvollinen json");
+            Oleta.Sama(25544, t.Numero);
+            Oleta.Sama("ISS (ZARYA)", t.Nimi);
+            Oleta.Sama("2026-09-26T15:00:00Z", t.Haettu);
+            Oleta.Sama("CelesTrak", t.Lahde);
+            Oleta.Tosi(Tle.JasennaJson(J(I1, I2.Substring(0, 68) + "0")) == null, "väärä tarkiste → null");
+            Oleta.Tosi(Tle.JasennaJson(J(I1, "2 25544")) == null, "lyhyt rivi → null");
+            Oleta.Tosi(Tle.JasennaJson("{\"nimi\":\"ISS\"}") == null, "rivit puuttuvat → null");
+            Oleta.Tosi(Tle.JasennaJson("rikki{") == null && Tle.JasennaJson(null) == null, "rikki → null");
+        }
+
         [Testi] static void ValladoVektoritEpookissaJa360Min()
         {
             var r = new Rata(Tle.Jasenna(V1, V2));

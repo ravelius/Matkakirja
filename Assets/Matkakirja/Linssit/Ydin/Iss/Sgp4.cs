@@ -59,6 +59,30 @@ namespace Matkakirja.Linssit.Iss
             for (int i = 0; i < 68; i++) { char c = rivi[i]; if (c >= '0' && c <= '9') summa += c - '0'; else if (c == '-') summa += 1; }
             return rivi[68] - '0' == summa % 10;
         }
+
+        /// <summary>Haun aikaleima ja lähde iss-tle.json-tiedostosta (null, jos TLE on annettu riveinä).</summary>
+        public string Haettu, Lahde;
+
+        /// <summary>
+        /// Siirtosepän iss-tle.json (PR #3334: Actions 6 h → media.matkakirja.app/data/iss-tle.json, buildiin
+        /// StreamingAssets/mukana/iss-tle.json): {nimi, rivi1, rivi2, haettu, lahde}. Palauttaa null, jos tiedosto
+        /// on rikki tai tarkiste ei täsmää, jolloin kutsuja käyttää edellistä (buildin) TLE:tä.
+        /// </summary>
+        public static Tle JasennaJson(string json)
+        {
+            if (string.IsNullOrEmpty(json)) return null;
+            try
+            {
+                if (!(Matkakirja.Peli.MiniJson.Jasenna(json) is System.Collections.Generic.Dictionary<string, object> d)) return null;
+                string S(string avain) => d.TryGetValue(avain, out var v) ? v as string : null;
+                var t = Jasenna(S("rivi1"), S("rivi2"), S("nimi"));
+                if (!t.TarkisteOk) return null;
+                t.Haettu = S("haettu");
+                t.Lahde = S("lahde");
+                return t;
+            }
+            catch (Exception) { return null; }
+        }
     }
 
     /// <summary>Juliaaninen päivä ja Greenwichin keskimääräinen tähtiaika.</summary>
