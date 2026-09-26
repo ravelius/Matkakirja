@@ -60,13 +60,21 @@ Kulttuurilainassa noudatetaan rajausta: soittimet ja moodit, ei pyhiä lauluja e
   - Linssit 50–66 bpm (sykkeen tahti).
   - Visa ja kohtaaminen 90–100 bpm, kevyt pulssi.
 - **Äänekkyys, nykyinen linja** (kaikki Lyria-raidat, docs/moduulit/aanet.md):
-  - musiikkitiedostot −33 LUFS ja soivat voimilla 0,03–0,13 (`MUSIIKIN_PERUSTASO` 0,034 × liuku × `MUSIIKIN_KATTO` 8)
+  - musiikkitiedostot noin −11 LUFS (MITATTU 26.9.2026, ks. alla) ja soivat voimilla 0,03–0,13 (`MUSIIKIN_PERUSTASO` 0,034 ×
+    liuku × `MUSIIKIN_KATTO` 8)
   - äänimaisemat ja taustaäänet −30 LUFS
   - Pulun puhe −17 LUFS
 - **Fablen tehtävänanto:** musiikki −18 LUFS ja ambienssi −30. [PÄÄTÖS] Suositus: tiedostot pidetään −33 LUFS:ssä. Kaikki
   soittovoimat (40+ vakiota webissä ja natiivissa) on kuunneltu tätä tasoa vasten, joten −18 vaatisi ne uusiksi.
   - −18 LUFS on hyvä *kuultava tavoite*: musiikin soiva taso pelissä liukusäätimen keskellä on noin −18…−20 LUFS-S.
   - Tämä varmistetaan mittaamalla koko miksaus (tools/aanitasot.json-putki), ei tiedostoja nostamalla.
+- **Korjaus 26.9.2026 (Pelikoodari, mitattu; Fable hyväksyi):** "−33 LUFS" oli väärä oletus. Pelin soittamat musiikkitiedostot
+  mittaavat EBU R128:lla noin −11 LUFS: musa-pohja −10,8, musa-aarre −11,3, musa-etusivu −11,4, musa-visa-2 −11,5 ja
+  musa-kaupunki-valimeri −11,5 (kaikki `-lyria.mp3`). Soittovoimat on kuunneltu näitä vasten. Päätöksen henki ("sama taso kuin
+  nykyisillä raidoilla") tarkoittaa siis −11 LUFS:ää. −33:ssa uudet raidat soisivat 22 dB muita hiljempaa. Uudet raidat
+  viimeistellään työkalulla `tools/viimeistele-musiikki.mjs`: leikkaus, häivytys ja lineaarinen vahvistus −11 LUFS:iin, huippu
+  enintään −1 dBFS, ei kompressiota. Luku −33 LUFS on tools/aanitasot.json:n tavoite Freesound-äänitteille, joiden taso
+  asetetaan soittovoimalla (ei tiedostoon).
 
 ### 1.4 Lyria 3.5 -kehotepohja
 ```
