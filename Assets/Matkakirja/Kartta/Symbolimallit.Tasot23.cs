@@ -73,7 +73,9 @@ namespace Matkakirja
         /// <summary>Maakontaktilevyt: kaikki instanssit yhdessä erässä (NostoKerroksen katto 120 &lt; EnintaanErassa).</summary>
         readonly Matrix4x4[] pohjaMatriisit = new Matrix4x4[EnintaanErassa];
         readonly Vector4[] pohjaTilat = new Vector4[EnintaanErassa];
-        readonly MaterialPropertyBlock pohjaLohko = new MaterialPropertyBlock();
+        // Luodaan AloitaTasot23:ssa: MaterialPropertyBlockia ei saa luoda MonoBehaviourin kenttäalustuksessa (Unity heittää
+        // konstruktorissa, jolloin myöhemmät kentät jäivät nulliksi → NullReferenceException joka kehys, Laitetestaaja 26.9.).
+        MaterialPropertyBlock pohjaLohko;
         int pohjaLkm;
         Matrix4x4[][] matriisit;
         Vector4[][] tilat;
@@ -115,6 +117,7 @@ namespace Matkakirja
             instMateriaali.name = "Symbolimalli (instanssit)";
             instMateriaali.enableInstancing = true;
             instPohja = PohjaMateriaali(instMateriaali);
+            pohjaLohko = new MaterialPropertyBlock();
             int n = ArkkityyppiKartoitus.Lukumaara * 2;
             matriisit = new Matrix4x4[n][];
             tilat = new Vector4[n][];
