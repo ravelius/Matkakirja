@@ -34,7 +34,8 @@
  * käynnistävät itsensä uudelleen lipun kanssa).
  */
 
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { dirname } from 'node:path';
 
 export const LYRIA_OSOITE = 'https://generativelanguage.googleapis.com/v1beta/interactions';
 export const LYRIA_MALLI = 'lyria-3.5';
@@ -134,6 +135,9 @@ export async function haeLyriasta({ prompt, kestoMs, looppi = true }, avain, koh
     throw new Error(`Lyria: vastauksessa ei audio-lohkoa (${JSON.stringify(json).slice(0, 300)})`);
   }
   const data = Buffer.from(lohkot[0].data, 'base64');
+  // Kansio luodaan: repossa ei ole äänitiedostoja (Raamattu 11.9.), joten assets/audio/ puuttuu ajokoneelta
+  // (26.9. vaihe 1: generointi onnistui, kirjoitus kaatui ENOENT:iin).
+  mkdirSync(dirname(kohde), { recursive: true });
   writeFileSync(kohde, data);
   return data.length;
 }
