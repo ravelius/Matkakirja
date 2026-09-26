@@ -506,6 +506,28 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
    * `destination-out`-polulla kuin erän 1b feidaus, reuna on
    * pehmennetty samasta polusta eikä rajalle jää viivaa.
    */
+  /*
+   * MERI VAPAAKSI (`leikkuri.meri`, generoi-laattapyramidi.mjs
+   * --tasoitus-meri vapaa): harso pyyhitään meren renkaiden kohdalta
+   * (parillisuussääntö: mantereet ja saaret ovat renkaiden reikiä), jolloin
+   * pohjan meri näkyy laatikossa samana kuin sen ulkopuolella.
+   */
+  if (feidattu && leikkuri.meri?.length) {
+    const fctx = feidattu.getContext('2d');
+    fctx.globalCompositeOperation = 'destination-out';
+    fctx.fillStyle = '#fff';
+    fctx.beginPath();
+    for (const rengas of leikkuri.meri) {
+      for (const dx of siirrot) {
+        for (let i = 0; i < rengas.length; i += 1) {
+          const x = kx(rengas[i][0] + dx); const y = ky(rengas[i][1]);
+          if (i === 0) fctx.moveTo(x, y); else fctx.lineTo(x, y);
+        }
+        fctx.closePath();
+      }
+    }
+    fctx.fill('evenodd');
+  }
   if (leikkuri.tasoitus) {
     ctx.clearRect(0, 0, W, H);
     if (feidattu) ctx.drawImage(feidattu, 0, 0);

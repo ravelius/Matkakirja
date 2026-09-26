@@ -89,7 +89,7 @@ import {
 } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
+import { ikkunanRajat, keraaMaailma, rannikot, meriRenkaat } from './fokuskartta/maailma.mjs';
 import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
 import { demIkkuna, demVali } from './maasto/dem-ikkuna.mjs';
 import {
@@ -1428,6 +1428,34 @@ if (NOSTOTASO && NOSTO_MAA) {
 const { projektio } = LAUTA;
 const kaava = laudanProjektio(projektio);
 
+/*
+ * TASOITUKSEN MERI VAPAAKSI (`--tasoitus-meri vapaa`, KOE; Fable 26.9.2026,
+ * resepti 2026-09-26). Tasoitusharso (päätös 4, 13.9.2026) peittää kaiken
+ * kohdemaan ulkopuolisen kermalla, myös meren: laatikon sisällä pohjan
+ * syvyysliuku näkyy vain ~12 %:sti, ulkopuolella täysin, joten resepti 26:n
+ * meri ei näy kohdemaanäkymässä. Tällä lipulla harso pyyhitään meren kohdalta
+ * (alfa 0) samoista meren renkaista kuin pohjan rantaviiva (ne_10m_ocean,
+ * sama --rannikon-harvennus), kuten natiivin kermahuntu on vain maalla.
+ * Oletus `peitto` = entinen harso tavulleen. Omistajan päätös ratkaisee,
+ * tuleeko tästä oletus (kumoaisi päätöksen 4 kohdan "aluevesi tasoitetaan
+ * muun meren mukana").
+ */
+const TASOITUS_MERI_VAPAA = valitsin('tasoitus-meri', 'peitto') === 'vapaa';
+/** Meren renkaat laudan koordinaateissa, vain laatikon lähellä olevat. */
+function tasoituksenMeri() {
+  const renkaat = meriRenkaat(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  const L = VARI_LAATIKKO; const reuna = (VARI_FEIDAUSREUNA || 0) + 50;
+  const ulos = [];
+  for (const r of renkaat) {
+    const lauta = r.map(([lon, lat]) => [kaava.lautaX(lon), kaava.lautaY(lat)]);
+    let x0 = Infinity; let x1 = -Infinity; let y0 = Infinity; let y1 = -Infinity;
+    for (const [x, y] of lauta) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+    if (L && (x1 < L.x - reuna || x0 > L.x + L.w + reuna || y1 < L.y - reuna || y0 > L.y + L.h + reuna)) continue;
+    ulos.push(lauta);
+  }
+  return ulos;
+}
+
 /* ------------------------------------------------- väritason alue */
 
 /*
@@ -1550,6 +1578,7 @@ if (VARITASO) {
     feidausReuna: VARI_FEIDAUSREUNA,
     laatikko: VARI_LAATIKKO,
     laudanLeveys: polygonit?.lauta?.leveys > 0 ? polygonit.lauta.leveys : 12000,
+    ...(TASOITUS_MERI_VAPAA ? { meri: tasoituksenMeri() } : {}),
   };
   console.log(`  väritaso        ${VARI_MAA} · laatikko laudalla `
     + `x ${x0.toFixed(1)}..${x1.toFixed(1)} y ${y0.toFixed(1)}..${y1.toFixed(1)} `
