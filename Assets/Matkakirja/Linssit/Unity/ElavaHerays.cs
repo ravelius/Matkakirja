@@ -288,7 +288,10 @@ namespace Matkakirja.Natiivi
                 ngo.transform.SetParent(transform, false);
                 nimi = ngo.AddComponent<TextMeshPro>();
                 nimi.font = fontti;
-                nimi.text = m.Nimi ?? avain;
+                // Aineiston nimi voi olla tunnus ("FRA:Occitanie"): maatunnus pois.
+                string teksti = m.Nimi ?? avain;
+                int kaksoispiste = teksti.IndexOf(':');
+                nimi.text = kaksoispiste >= 0 ? teksti.Substring(kaksoispiste + 1) : teksti;
                 nimi.fontSize = 36;
                 nimi.alignment = TextAlignmentOptions.Center;
                 nimi.textWrappingMode = TextWrappingModes.NoWrap;
