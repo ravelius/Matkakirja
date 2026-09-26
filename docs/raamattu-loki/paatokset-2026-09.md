@@ -7227,3 +7227,7 @@ Natiiviseppa: BUILD 25 = proto-master 31fd6d5f (puu 3e7520aa, kaannos 2d82476e),
 ## PULUN KARTTAVAISTO: NATIIVI-UI PASS, BLINK-KORJAUS, 1.0.26 (26.9.2026 klo 18.46)
 
 Natiivi-UI: Codexin PR ravelius/Matkakirja-natiivi#1 (303a32ec) PASS iPhone 17 + iPad Pro 11 (veto, nipistys, uusi veto kesken paluun, dialogikeskeytys, vahennetty liike, iPadin kurkistus, 6 paluuta). Yksi korjaus: blink-ele ei kutsu Toistaa → Livia voi puhua nakymattomana vaiston aikana; Natiivi-UI korjaa suoraan PR-haaraan (Sano lopettaa vaiston, KartanEleAlkoi vaistaa jos PuluPuhuu) ja kommentoi PR:aan. Natiiviseppa yhdistaa 1.0.26-junaan. Vastaus Codexille posti/fable-codex-pulu-karttavaisto-vastaus-20260926.md (claude/postilaatikko f5c6da27e). Kuvasarjat proto-3d/lokit/natiivi-ui-pulu-karttavaisto/.
+
+## TF 1.0.25 ULKONA 18.51 (26.9.2026 klo 18.52)
+
+Julkaisija: TF 1.0.25 lahetetty ja ASC:ssa kasitelty, ajo 36252890020, CFBundleVersion 202609261542, proto 31fd6d5f, laskuri 25. Sisalto: 160 arkkityypit + laikkapiilotus, fonttilammitys-b + verho (kylma kaynnistys 2,1–2,2 s). Push omistajalle 18.5x. 1.0.26-juna alkaa: Pulun karttavaisto (blink-korjaus), laattaesilataus 2, Pariisin ilmapallo, S10-profilointi.
