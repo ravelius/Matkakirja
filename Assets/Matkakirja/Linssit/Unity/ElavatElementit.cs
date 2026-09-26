@@ -170,8 +170,8 @@ namespace Matkakirja.Natiivi
                 // länsirannikolla. Näytös (matka 25–40 s) ja tauko (30–90 s) tulevat MeriGeometrian aikataulusta, joten
                 // Vaihtelua ei tarvita; vähennetty liike ja Staattinen pysäyttävät ajan kuten muillakin.
                 Nimi = "merilaiva", Paikka = new LatLon(MeriGeometria.NorLat, MeriGeometria.NorLon), KokoPt = MeriGeometria.LaivaKokoPt,
-                // Rannikon suunnassa 120 pt pohjoiseen ankkurista ja valas 80 pt etelään: reitti (±80 pt) pysyy ≥ 120 pt:n päässä.
-                Yksilot = new[] { (0f, 120f, 0f) }, SiirtoIlmansuuntiin = true,
+                // Rannikon suunnassa 170 pt pohjoiseen ankkurista ja valas 110 pt etelään: reitti (±0,35 × 280 ≈ ±100 pt) pysyy ≥ 120 pt:n päässä.
+                Yksilot = new[] { (0f, 170f, 0f) }, SiirtoIlmansuuntiin = true,
                 Runko = HoyryGeometria.Joki, Roottori = MeriGeometria.Laiva, Lapsi = HoyryGeometria.Siipiratas,
                 LastenPaikat = new Vector3[2], Lapsi2 = HoyryGeometria.Savupallo, Lapsia2 = HoyryGeometria.Palloja,
                 PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = MeriGeometria.NorRannikko, KallistaVainRoottori = true,
@@ -181,7 +181,7 @@ namespace Matkakirja.Natiivi
             {
                 // Valas: nousee, puhaltaa kahdesti ja sukeltaa pyrstö pystyssä (näytös 12–16 s, tauko 60–150 s).
                 Nimi = "valas", Paikka = new LatLon(MeriGeometria.NorLat, MeriGeometria.NorLon), KokoPt = MeriGeometria.ValasKokoPt,
-                Yksilot = new[] { (-6f, -80f, 0f) }, SiirtoIlmansuuntiin = true,
+                Yksilot = new[] { (-6f, -110f, 0f) }, SiirtoIlmansuuntiin = true,
                 Runko = HoyryGeometria.Joki, Roottori = HoyryGeometria.Joki, Lapsi = MeriGeometria.ValaanSelka,
                 LastenPaikat = new Vector3[1], Lapsi2 = MeriGeometria.Suihku, Lapsia2 = MeriGeometria.Suihkuja,
                 Lapsi3 = MeriGeometria.Pyrsto, Lapsia3 = 1,
@@ -1414,9 +1414,9 @@ namespace Matkakirja.Natiivi
         public const double NorLat = 61.013, NorLon = 4.113;
         /// <summary>Rannikon suunta pohjoisesta: merikohdan 265° osoittaa merelle, joten rannikko kulkee suuntaan 355°.</summary>
         public const float NorRannikko = 355f;
-        /// <summary>Laiva 0,14 yksikköä → noin 22 pt ja valaan selkä 0,2 → noin 28 pt. Lajilistan 8–12 pt ja 14 pt olivat laitteella
-        /// (27.9. klo 00.1x) liian pienet tunnistettaviksi (pilkku merellä, suihku ei erottunut), joten kokeilussa kaksinkertaiset.</summary>
-        public const float LaivaKokoPt = 160f, ValasKokoPt = 140f;
+        /// <summary>Laiva 0,14 yksikköä → noin 39 pt ja valaan selkä 0,2 → noin 50 pt (omistaja 27.9. klo 01.4x: 1,5–2 × v2:n 22/28 pt;
+        /// lajilistan 11/14 pt olivat laitteella pilkkuja ja suihku ei erottunut).</summary>
+        public const float LaivaKokoPt = 280f, ValasKokoPt = 250f;
         public const int Suihkuja = 4;
 
         static readonly Color Vaahto = new Color(0.96f, 0.94f, 0.88f, 1f);
@@ -1549,8 +1549,8 @@ namespace Matkakirja.Natiivi
             bool pohjoiseen = Laivat.Arvo(n, 3) < 0.5f;
             float v = pohjoiseen ? s / pituus : 1f - s / pituus, w = 2f * v - 1f;
             float kaari = 0.05f + 0.04f * Laivat.Arvo(n, 4);
-            laiva.localPosition = new Vector3(-kaari * (1f - w * w), 0f, 0.5f * w);
-            var suunta = new Vector3(4f * kaari * w, 0f, 1f).normalized * (pohjoiseen ? 1f : -1f);
+            laiva.localPosition = new Vector3(-kaari * (1f - w * w), 0f, 0.35f * w);
+            var suunta = new Vector3(4f * kaari * w, 0f, 0.7f).normalized * (pohjoiseen ? 1f : -1f);
             float vaihe = Laivat.Arvo(n, 5) * 10f;
             laiva.localRotation = Quaternion.LookRotation(suunta, Vector3.up)
                 * Quaternion.Euler(1f * Mathf.Sin((t + vaihe) * 2.4f), 0f, 2.5f * Mathf.Sin((t + vaihe) * 1.9f));
@@ -1639,7 +1639,7 @@ namespace Matkakirja.Natiivi
         public static Mesh Suihku()
         {
             var r = new MalliRakenne();
-            r.Nuppi(Vector3.zero, 0.018f, SuihkuVari);
+            r.Nuppi(Vector3.zero, 0.026f, SuihkuVari);
             return r.Mesh("Meri: suihku");
         }
 
