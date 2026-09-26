@@ -62,6 +62,7 @@ const ODOTETUT_MAARAT = {
   VNM: 63,
   MYS: 16,
   SGP: 5,
+  KOR: 17,
   ARG: 24,
   COL: 34,
   ECU: 24,
@@ -106,6 +107,40 @@ const ODOTETUT_MAARAT = {
   QAT: 7,
   KWT: 6,
   BHR: 5,
+  AGO: 18,
+  COD: 11,
+  CMR: 10,
+  TCD: 22,
+  SDS: 10,
+  SDN: 17,
+  MDG: 22,
+  MOZ: 10,
+  ZWE: 10,
+  NAM: 13,
+  UGA: 4,
+  SEN: 14,
+  SLE: 4,
+  LBR: 15,
+  LBY: 22,
+  MLI: 9,
+  SOM: 13,
+  GTM: 22,
+  NIC: 17,
+  CUB: 16,
+  PAN: 12,
+  HKG: 18,
+  TWN: 21,
+  PRK: 11,
+  TJK: 5,
+  KGZ: 8,
+  PNG: 20,
+  SLB: 10,
+  FJI: 5,
+  VUT: 6,
+  NCL: 3,
+  GRL: 6,
+  BMU: 11,
+  SHN: 3,
 };
 
 /*
@@ -117,7 +152,7 @@ const ODOTETUT_MAARAT = {
  * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN sekä erässä 3A MDA, UKR,
  * BLR ja ISL.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA', 'AFG', 'MNG', 'KAZ', 'UZB', 'TKM', 'KHM', 'LAO', 'MMR', 'BTN', 'TLS', 'GEO', 'ARM', 'AZE', 'YEM', 'OMN', 'ARE', 'QAT', 'KWT', 'BHR']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA', 'AFG', 'MNG', 'KAZ', 'UZB', 'TKM', 'KHM', 'LAO', 'MMR', 'BTN', 'TLS', 'GEO', 'ARM', 'AZE', 'YEM', 'OMN', 'ARE', 'QAT', 'KWT', 'BHR', 'AGO', 'COD', 'CMR', 'TCD', 'SDS', 'SDN', 'MDG', 'MOZ', 'ZWE', 'NAM', 'UGA', 'SEN', 'SLE', 'LBR', 'LBY', 'MLI', 'SOM', 'GTM', 'NIC', 'CUB', 'PAN', 'HKG', 'TWN', 'PRK', 'TJK', 'KGZ', 'PNG', 'SLB', 'FJI', 'VUT', 'NCL', 'GRL', 'BMU', 'SHN', 'KOR']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {

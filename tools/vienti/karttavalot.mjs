@@ -173,7 +173,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
        */
       const lukko = lukittuAnkkuri(`nosto:${m.id}`, iso);
       lisaa({
-        id, tunnus: m.id, aihe, kategoria: m.kategoria, nimi: kohde.nimi || m.nimi || m.id, nimio: m.nimi || null, ...oma,
+        id, tunnus: m.id, aihe, kategoria: m.kategoria, laji: m.laji ?? null, nimi: kohde.nimi || m.nimi || m.id, nimio: m.nimi || null, ...oma,
         ladottu: asteiksi(P.id, m.x, m.y), maa: iso, kaupunki, kaupunkiAvain: m.kaupunkiAvain ?? null,
         ankkuri: lukko ? { lat: lukko.lat, lon: lukko.lng } : null, puoli: m.puoli ?? null,
         tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (kohde.taso ?? 1),
@@ -189,7 +189,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const oma = Number.isFinite(d.lat) && Number.isFinite(d.lon) ? { lat: d.lat, lon: d.lon } : asteiksi(P.id, t.x, t.y);
     if (!oma) continue;
     lisaa({
-      id: `elaintaky:${t.iso}`, tunnus: t.tunnus, aihe: 'elaimet', kategoria: 'elain', nimi: d.elain ?? d.otsikko ?? t.nimio,
+      id: `elaintaky:${t.iso}`, tunnus: t.tunnus, aihe: 'elaimet', kategoria: 'elain', laji: 'elain', nimi: d.elain ?? d.otsikko ?? t.nimio,
       nimio: t.nimio || null,
       ...oma, ladottu: asteiksi(P.id, t.x, t.y), maa: t.iso, kaupunki: null, kaupunkiAvain: null, tarkeys: 1, taso: 2,
       lahizoom: false, paakartalla: true, kohdekartta: null, paikka: null, lahde: 'elaintaky',
@@ -202,7 +202,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       const r = napanostonRivi(tynka, kohde, { avain: `${napa.toLowerCase()}:${kohde.id}` });
       if (!r?.aihe) continue;
       lisaa({
-        id: `kohde:${kohde.id}`, tunnus: kohde.id, aihe: r.aihe, kategoria: r.kategoria, nimi: kohde.nimi || r.nimi,
+        id: `kohde:${kohde.id}`, tunnus: kohde.id, aihe: r.aihe, kategoria: r.kategoria, laji: r.symLaji ?? null, nimi: kohde.nimi || r.nimi,
         nimio: r.nimi || null,
         ...pyorista({ lat: r.lat, lon: r.lng }), ladottu: null, maa: kohde.iso ?? (napa === 'ATA' ? 'ATA' : null),
         kaupunki: null, kaupunkiAvain: null, tarkeys: kohde.taso ?? 1, taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
@@ -222,7 +222,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const { lahde, id } = luokittele(tunnus, kohdeIdt);
     const maa = P.map.cityCountry?.[kk.kaupunki] ?? null;
     lisaa({
-      id, tunnus, aihe, kategoria, nimi: kohde.nimi || kohde.nimio || tunnus, nimio: null, ...pyorista({ lat: kk.lat, lon: kk.lng }),
+      id, tunnus, aihe, kategoria, laji: kohde.tyyppi ?? null, nimi: kohde.nimi || kohde.nimio || tunnus, nimio: null, ...pyorista({ lat: kk.lat, lon: kk.lng }),
       ladottu: null, maa, kaupunki: lahde === 'fokuskohde' ? kaupunkiKohteelle(kohde) : null, kaupunkiAvain: kk.kaupunki,
       tarkeys: kohde.taso ?? 1, taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
       lahizoom: false, paakartalla: false, kohdekartta: kk.kaupunki, paikka: lahdePaikka(tunnus, kohde), lahde,
@@ -231,7 +231,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
   const k = taulukko('js/pallolauta/nostot.js keraa (maanKohdemerkit + eläintäyt + navat) + kohdekartanNostopaikat',
     'Karttavalot pallolle: sama joukko kuin webin pallon nostokerros, pelin omilla funktioilla (skeema 1.24). aihe = valon '
       + 'aihe (kaupungit, luonto, elaimet, historia, ihmeet, hetket, kulttuuri, kauppa, skandaalit; js/karttavalot.js '
-      + 'KARTTAVALO_AIHEET) = nostosymPaakategoria(kategoria), kategoria = merkin symbolikategoria, nimi = kohteen nimi, '
+      + 'KARTTAVALO_AIHEET) = nostosymPaakategoria(kategoria), kategoria = merkin symbolikategoria, laji = webin symLaji (skeema 1.44: kohteen tyyppi, esim. vuori, saari, jarvi, meri, joki, ruoka, tekniikka; eläintäky elain; null = ei lajia; kuvamerkki NOSTOSYM_KUVAMERKIT[laji] ?? [kategoria]), nimi = kohteen nimi, '
       + 'nimio = kartan nimiö (null = web ei näytä nimeä), paikka = paikan nimi, aina täytetty (paikkaLahde: data = noston tai kortin oma paikka, alue = napa-alue, kaupunki = kaupunkijäsenyyden kaupunki, maa = maan nimi), '
       + 'lat/lon = noston oma paikka (kohdekartan piste, jos nosto on kohdekartalla, muuten laudan datapiste asteina), ladottu = '
       + '{ lat, lon } webin ladonnan jälkeen (kasaus ja erottelu; null kun ei pallolla ladottu), '

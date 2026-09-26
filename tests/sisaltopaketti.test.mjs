@@ -1413,3 +1413,75 @@ test('taustapäivitys vaihe 1: tasoittain periytyy ja uusi taso jättää vanhan
   assert.ok(validoiNimella({ ...eka, tasoittain: { ios: { x: 1 } } }, 'osoitin.schema.json').length);
 });
 
+test('skeema 1.44: karttavalot.laji = webin symLaji (löydös 125, Kreikka)', () => {
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  assert.ok(valot.every((v) => 'laji' in v), 'laji jokaisella rivillä');
+  const laji = (tunnus) => valot.find((v) => v.maa === 'GRC' && v.tunnus === tunnus)?.laji;
+  assert.equal(laji('parnassos'), 'vuori');
+  assert.equal(laji('santorini'), 'saari');
+  assert.equal(laji('egeanmeri'), 'meri');
+  assert.equal(laji('aliakmonas'), 'joki');
+  assert.ok(valot.filter((v) => v.lahde === 'elaintaky').every((v) => v.laji === 'elain'));
+});
+
+test('skeema 1.45: Elävä kartta — kokoluokka, maakunta ja salaisuus', async () => {
+  const { NOSTOJEN_KOKOLUOKAT } = await import('../js/packs/nostojen-kokoluokat.js');
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  assert.ok(valot.every((v) => ['paakohde', 'kohde', 'pieni'].includes(v.kokoluokka)), 'kokoluokka jokaisella');
+  const grc = Object.entries(NOSTOJEN_KOKOLUOKAT.GRC);
+  for (const [avain, luokka] of grc) {
+    const v = valot.find((x) => x.maa === 'GRC' && `nosto:${x.tunnus}` === avain);
+    if (v) assert.equal(v.kokoluokka, luokka, avain);
+  }
+  assert.ok(valot.filter((v) => v.kokoluokkaLahde === 'data').length >= grc.length * 0.9);
+  const alueet = new Set(JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot.map((a) => a.id));
+  assert.ok(valot.every((v) => v.maakunta === null || (alueet.has(v.maakunta) && v.maakunta.startsWith(`${v.maa}:`))));
+  const maakunta = (t) => valot.find((v) => v.maa === 'GRC' && v.tunnus === t)?.maakunta;
+  assert.equal(maakunta('hahmotelma-sounion'), 'GRC:Attiki');
+  assert.equal(maakunta('egeanmeri'), null);
+  const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
+  assert.ok(rajat.every((a) => 'salaisuus' in a));
+});
+
+test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () => {
+  const k = JSON.parse(tiedostot.get('kokoelmat/reitit1873.json'));
+  assert.ok(k.alkiot.length > 100);
+  assert.ok(k.lahteet.length && k.lahteet.every((l) => l.id && l.lisenssi));
+  for (const r of k.alkiot) {
+    assert.ok(['laiva', 'rautatie'].includes(r.laji), r.id);
+    assert.ok(r.lisenssi && typeof r.lahde === 'string' && r.lahde.length, r.id);
+    assert.ok(r.viivat.length && r.viivat.every((v) => v.length >= 2 && v.every(([lon, lat]) => Math.abs(lon) <= 180 && Math.abs(lat) <= 90)), r.id);
+  }
+  assert.ok(k.alkiot.some((r) => r.laji === 'laiva') && k.alkiot.some((r) => r.laji === 'rautatie'));
+});
+
+test('skeema 1.47: maakuntasalaisuudet omana kokoelmana, ei karttavaloissa', async () => {
+  const { MAAKUNTASALAISUUDET } = await import('../js/packs/maakuntasalaisuudet.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
+  assert.equal(k.length, Object.keys(MAAKUNTASALAISUUDET).length);
+  for (const s of k) {
+    assert.ok(s.id.startsWith('salaisuus:') && s.kokoluokka === 'paakohde' && s.maakunta && s.teksti && s.lyhyt, s.id);
+    assert.ok(Number.isFinite(s.lat) && Number.isFinite(s.lon) && s.aihe, s.id);
+    assert.equal(MAAKUNTASALAISUUDET[s.maakunta], `nosto:${s.tunnus}`);
+    assert.ok(s.nimio === null || s.nimio.length <= 18, s.id);
+  }
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  assert.ok(!valot.some((v) => v.id.startsWith('salaisuus:') || 'salaisuus' in v), 'ei karttavaloissa (build 16/17 piirtäisi)');
+  const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
+  assert.equal(rajat.find((a) => a.id === 'GRC:Attiki').salaisuus, 'salaisuus:salaisuus-eleusiin-mysteerit');
+});
+
+test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () => {
+  const manifest = JSON.parse(tiedostot.get('manifest.json'));
+  const koko = JSON.parse(tiedostot.get('kokoelmat/kaupunkilehdet.json'));
+  const lista = manifest.kaupunkilehdetKaupungeittain;
+  assert.equal(lista.length, koko.alkiot.length);
+  for (const e of lista.slice(0, 20)) {
+    const k = JSON.parse(tiedostot.get(e.tiedosto));
+    assert.equal(e.tiedosto, `kokoelmat/kaupunkilehdet/${e.id}.json`);
+    assert.equal(k.nimi, 'kaupunkilehdet');
+    assert.equal(k.alkiot.length, 1);
+    assert.deepEqual(k.alkiot[0], koko.alkiot.find((a) => a.id === e.id));
+  }
+});
+
