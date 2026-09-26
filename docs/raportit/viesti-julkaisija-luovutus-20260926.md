@@ -24,7 +24,8 @@ HUOLTOKOMENNOT); docs/roolitus.md "Julkaisusäännöt"; tämä luovutus; edellin
 
 - **Siirtosepän pino:** #3267 on mainissa (v2251) → seuraavaksi #3269 (1.46) → #3285 (1.47), versionostolla,
   järjestyksessä; Siirtoseppä yhdistää mainin ennen kutakin (ilmoita sille jokaisen mergen jälkeen).
-- **#3292** (miniatyyrien värit erä 11): odotin ajaa sen jono.sh:lla (tarkista, onko mainissa).
+- **Taustalla klo 05.1x:** #3292 mainissa v2252; #3269 (1.46) → #3293 (värit erä 12) jonossa
+  jono.sh:lla; #3294 (Fablen Raamattu-teksti, ei versionostoa) mergaa.sh:lla. Tarkista gh:lla.
 - Ei jonossa (kukaan ei pyytänyt): #3250 #3272 #3274 #3275 #3278 #3280 #3281, Karttasepän vanhat
   #3102 #3105 #3108 #3117. #3206 punainen. pidossa.pysyva = 3081.
 
