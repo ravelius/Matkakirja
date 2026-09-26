@@ -153,3 +153,7 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
   lennon kohteelle, ennakoiduille ja avatulle kortille; 404 → koko kokoelma kerran. Kylmä: ateena 81 kt lennolla, aloitusverho 4 052 ms.
 - Havainto Siirtosepälle: PakettiPaivitys lataa v151:n kokonaan taustalla (266 lehteä + koko 16 Mt) → kysytty rajausta.
 - Musiikki vaihe 1: odottaa omistajan kuuntelua (Fablen kautta), PR työkalumuutoksista kun hyväksytty.
+- Junassa: lehti-kaupungeittain 3779473c (Natiiviseppä). Siirtoseppä: taustapäivitys siirtää lehtiä pakattuna vain ~5 Mt (koko 2,1 +
+  266 kpl 2,9 Mt), kerran per versio. Koko kaupunkilehdet.json jää, kunnes LehtiSisalto.cs:144 (kaupungin lehti → kaupungeittain)
+  ja PuluHaku.cs:252 (indeksi kaikista 266) eivät enää lue sitä (Natiivi-UI); sitten Siirtoseppä ohittaa kokonaisen PakettiPaivityksessä.
+- Linssisepän "maakunta puuttuu" oli väärä tunnus (nosto:marathon ↔ karttavalo kohde:marathon); v151: 2 782/2 963 riviä maakunnalla.
