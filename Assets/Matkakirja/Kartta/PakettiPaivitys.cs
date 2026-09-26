@@ -43,6 +43,13 @@ namespace Matkakirja
         /// <summary>Käytössä olevan valmiin version hakemisto: suhteellinen polku → sha256 (null = laiska tila).</summary>
         static Dictionary<string, string> kaytossaHakemisto;
         static string kaytossaPolku;
+        /// <summary>
+        /// Laiskan tilan version hakemisto (ei valmis): varastossa jo olevat tiedostot (tilannekuva, aiemmat versiot)
+        /// luetaan varastosta, muut laiskasti verkosta. null = ei tiedossa.
+        /// </summary>
+        static Dictionary<string, string> osittainenHakemisto;
+        static string osittainenPolku;
+        static bool tilannekuvaTuotu;
 
         public static string Tila { get; private set; } = "ei aloitettu";
 
@@ -51,6 +58,7 @@ namespace Matkakirja
         {
             instanssi = null; havaittuOsoitin = null; kaytossaVersio = 0; viimeisinTarkistus = -1e9f; kaynnissa = false;
             kaytossaHakemisto = null; kaytossaPolku = null; Tila = "ei aloitettu";
+            osittainenHakemisto = null; osittainenPolku = null; tilannekuvaTuotu = false;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -79,8 +87,9 @@ namespace Matkakirja
             try
             {
                 havaittuOsoitin = osoitinTeksti;
+                string tilannekuvanPolku = TuoTilannekuva();
                 var o = osoitinTeksti != null ? PakettiPaatokset.LueOsoitin(osoitinTeksti) : null;
-                string pohja = o?.Polku ?? osoitinPolku ?? (File.Exists(KaytossaTxt) ? File.ReadAllText(KaytossaTxt).Trim() : null);
+                string pohja = o?.Polku ?? osoitinPolku ?? (File.Exists(KaytossaTxt) ? File.ReadAllText(KaytossaTxt).Trim() : null) ?? tilannekuvanPolku;
                 if (pohja == null) return osoitinPolku;
                 int kohde = o != null ? PakettiPaatokset.KohdeVersio(o, SisaltoTaso) : PakettiPaatokset.VersioPolusta(pohja);
                 int kaytossa = File.Exists(KaytossaTxt) ? PakettiPaatokset.VersioPolusta(File.ReadAllText(KaytossaTxt).Trim()) : 0;
@@ -97,7 +106,9 @@ namespace Matkakirja
                     return polku;
                 }
                 string laiska = kohde > 0 ? PakettiPaatokset.VersionPolku(pohja, kohde) : (osoitinPolku ?? pohja);
-                Debug.Log($"MATKAKIRJA paketti: ei valmista versiota, luetaan laiskasti {laiska} (kohde v{kohde})");
+                AsetaOsittainen(laiska);
+                Debug.Log($"MATKAKIRJA paketti: ei valmista versiota, luetaan laiskasti {laiska} (kohde v{kohde}"
+                    + (osittainenHakemisto != null ? $", hakemisto tiedossa: {osittainenHakemisto.Values.Count(sha => File.Exists(Path.Combine(Varasto, sha)))} tiedostoa varastosta)" : ")"));
                 return laiska;
             }
             catch (Exception e)
@@ -111,8 +122,90 @@ namespace Matkakirja
         /// <summary>Käytössä olevan valmiin version tiedosto varastossa (null = ei valmista versiota tai polkua ei hakemistossa).</summary>
         public static string Varastosta(string versioPolku, string suhteellinen)
         {
-            if (kaytossaHakemisto == null || versioPolku != kaytossaPolku) return null;
-            return kaytossaHakemisto.TryGetValue(suhteellinen, out var sha) ? Path.Combine(Varasto, sha) : null;
+            if (kaytossaHakemisto != null && versioPolku == kaytossaPolku)
+                return kaytossaHakemisto.TryGetValue(suhteellinen, out var sha) ? Path.Combine(Varasto, sha) : null;
+            // Laiska tila: vain varastossa jo oleva tiedosto (sisällön mukaan avain, joten versio ei voi sekoittua).
+            if (osittainenHakemisto != null && versioPolku == osittainenPolku && osittainenHakemisto.TryGetValue(suhteellinen, out var s2))
+            {
+                string p = Path.Combine(Varasto, s2);
+                return File.Exists(p) ? p : null;
+            }
+            return null;
+        }
+
+        static void AsetaOsittainen(string versioPolku)
+        {
+            osittainenHakemisto = null; osittainenPolku = null;
+            string h = HakemistoJson(versioPolku);
+            if (!File.Exists(h)) return;
+            osittainenHakemisto = new Dictionary<string, string>();
+            foreach (var r in PakettiPaatokset.LueHakemisto(File.ReadAllText(h))) osittainenHakemisto[r.Polku] = r.Sha256;
+            osittainenPolku = versioPolku;
+        }
+
+        /// <summary>
+        /// KYLMÄ KÄYNNISTYS (Sisalto.VersioPolku, verkosta haettu osoitin): laiskan version hakemisto verkosta (noin 80 kt,
+        /// siirrossa noin 20 kt), jotta buildin tilannekuvan ja aiempien versioiden tiedostot luetaan varastosta. Tarkistetaan
+        /// osoittimen tiivisteitä vasten; epäonnistuminen jättää tavallisen laiskan tilan.
+        /// </summary>
+        public static IEnumerator HaeHakemistoKylmana(string osoitinTeksti, string versioPolku)
+        {
+            if (versioPolku == null || versioPolku == kaytossaPolku || versioPolku == osittainenPolku || osoitinTeksti == null) yield break;
+            var o = PakettiPaatokset.LueOsoitin(osoitinTeksti);
+            if (o == null || o.Polku != versioPolku || string.IsNullOrEmpty(o.HakemistoSha256)) yield break;
+            byte[] tavut = null;
+            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Sisalto.Juuri + versioPolku + "hakemisto.json"); q.timeout = 5; return q; },
+                Taso.Nakyva, "paketti", q => { if (q != null && q.result == UnityWebRequest.Result.Success) tavut = q.downloadHandler.data; });
+            if (tavut == null || PakettiPaatokset.TarkistaHakemisto(o, tavut, out _) != null) yield break;
+            try
+            {
+                Directory.CreateDirectory(VersioKansio(versioPolku));
+                File.WriteAllBytes(HakemistoJson(versioPolku), tavut);
+                AsetaOsittainen(versioPolku);
+                Debug.Log($"MATKAKIRJA paketti: {versioPolku} hakemisto kylmänä, {osittainenHakemisto.Values.Count(sha => File.Exists(Path.Combine(Varasto, sha)))} tiedostoa varastosta");
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: hakemisto kylmänä: " + e.Message); }
+        }
+
+        static string TilannekuvaKansio => Path.Combine(Application.streamingAssetsPath, "sisalto", "tilannekuva");
+
+        /// <summary>
+        /// Buildin tilannekuva (tools/vienti/tilannekuva.mjs, Natiivisepän buildivaihe): StreamingAssets/sisalto/tilannekuva/
+        /// = osoitin.json, hakemisto.json, tiedostot/&lt;sha256&gt;, tilannekuva.json. Tiedostot siirretään varastoon
+        /// (sha256 tarkistettuna) kerran prosessia kohden, ja tilannekuvan version hakemisto kirjoitetaan levylle, jotta
+        /// offline-ensikäynnistys löytää ne. Palauttaa tilannekuvan versiopolun tai null.
+        /// </summary>
+        static string TuoTilannekuva()
+        {
+            string kansio = TilannekuvaKansio, kuvausPolku = Path.Combine(kansio, "tilannekuva.json");
+            if (!File.Exists(kuvausPolku)) return null;
+            var o = PakettiPaatokset.LueOsoitin(File.ReadAllText(Path.Combine(kansio, "osoitin.json")));
+            if (o == null) return null;
+            if (tilannekuvaTuotu) return o.Polku;
+            tilannekuvaTuotu = true;
+            try
+            {
+                Directory.CreateDirectory(Varasto);
+                int uusia = 0;
+                foreach (var f in Directory.GetFiles(Path.Combine(kansio, "tiedostot")))
+                {
+                    string sha = Path.GetFileName(f), kohde = Path.Combine(Varasto, sha);
+                    if (File.Exists(kohde)) continue;
+                    using (var v = File.OpenRead(f)) if (PakettiPaatokset.Sha256(v) != sha) continue;
+                    File.Copy(f, kohde + ".tmp", true);
+                    File.Move(kohde + ".tmp", kohde);
+                    uusia++;
+                }
+                string hakemisto = HakemistoJson(o.Polku);
+                if (!File.Exists(hakemisto))
+                {
+                    Directory.CreateDirectory(VersioKansio(o.Polku));
+                    File.Copy(Path.Combine(kansio, "hakemisto.json"), hakemisto);
+                }
+                if (uusia > 0) Debug.Log($"MATKAKIRJA paketti: tilannekuva v{o.Versio}, {uusia} tiedostoa varastoon");
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA paketti: tilannekuva: " + e.Message); }
+            return o.Polku;
         }
 
         static HashSet<int> ValmiitVersiot(string pohja)
@@ -160,13 +253,13 @@ namespace Matkakirja
 
         IEnumerator Paivita()
         {
-            // Osoitin: sama teksti kuin istunnon alussa (Sisalto.VersioPolku); ilman sitä haetaan itse.
-            string teksti = havaittuOsoitin;
-            if (teksti == null)
+            // Osoitin haetaan aina tuoreena: istunnon alun osoitin voi olla edellisen käynnistyksen tallenne
+            // (Sisalto.VersioPolku, lämmin käynnistys) tai buildin tilannekuva. Ilman verkkoa käytetään istunnon osoitinta.
+            string teksti = null;
             {
                 byte[] b = null;
                 yield return HaeTeksti(Sisalto.Osoitin, t => b = t);
-                teksti = b == null ? null : Encoding.UTF8.GetString(b);
+                teksti = b == null ? havaittuOsoitin : Encoding.UTF8.GetString(b);
             }
             var uusin = teksti != null ? PakettiPaatokset.LueOsoitin(teksti) : null;
             if (uusin == null) { Tila = "ei osoitinta (ei verkkoa?)"; yield break; }

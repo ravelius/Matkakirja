@@ -32,6 +32,8 @@ namespace Matkakirja.Natiivi
         public readonly Karttaselite Karttaselite;
         public readonly OfflineTilaUi OfflineTila;
         public readonly Kartuscha Kartuscha;
+        /// <summary>Elävä kartta: heränneiden maakuntien käsialanimet kartalla (kartussin maa).</summary>
+        public readonly MaakuntanimetKartalla MaakuntaNimet;
         /// <summary>Nostomerkit kartalla (Natiivisepän NostoKerros → merkit, nimiöt, napautus).</summary>
         public readonly NostotKartalla Nostot;
         public readonly Pulu Pulu;
@@ -247,6 +249,7 @@ namespace Matkakirja.Natiivi
             Nostot = new NostotKartalla(kerros);
             Kartuscha = new Kartuscha(kerros);
             Kartuscha.AukiMuuttui += auki => Matkavalinta?.VaistaLiiku(auki);
+            MaakuntaNimet = new MaakuntanimetKartalla(kerros, Kartuscha);
             Karttaselite = new Karttaselite(kerros);
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);

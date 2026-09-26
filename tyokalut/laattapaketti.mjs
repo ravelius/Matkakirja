@@ -10,6 +10,7 @@
 //   bmng         KarttaKerrokset.SatelliittiVersio/Meri    Z0–Z5   (lennon Blue Marble: valintanäkymä ja musta verho)
 //   vektorit     Vektorikerros.OletusVersio                luettelo + l0–l2 (rannikko, rajat)
 //   napakalotit  NapaKannet.KalottiVersio/KalottiPaate     pohjoinen, etela
+//   maarajat     Maaraja.MaamaaPolku                        maamaa.geojson (build 19)
 //
 // Käyttö:
 //   node tyokalut/laattapaketti.mjs [--ulos <polku>] [--rinnakkain 24] [--mittaa]
@@ -51,6 +52,7 @@ const satVersio = vakio(kerrokset, 'SatelliittiVersio', 'KarttaKerrokset.cs');
 const satMeri = vakio(kerrokset, 'SatelliittiMeri', 'KarttaKerrokset.cs');
 const vektoriVersio = vakio(vektorit, 'OletusVersio', 'Vektorikerros.cs');
 const kalottiVersio = vakio(navat, 'KalottiVersio', 'NapaKannet.cs');
+const maamaaPolku = vakio(lahde('Kartta/Maaraja.cs'), 'MaamaaPolku', 'Maaraja.cs');
 const kalottiPaate = vakio(navat, 'KalottiPaate', 'NapaKannet.cs');
 
 const kansio = (malli) => malli.slice(0, malli.indexOf('{z}'));
@@ -134,6 +136,8 @@ function sarja(nimi, etuliite, polut) { sarjat.push({ nimi, etuliite, polut }); 
   const et = `julisteet/pallo/napakalotit/${kalottiVersio}/`;
   sarja('napakalotit', et, ['pohjoinen', 'etela'].map((n) => `${et}${n}.${kalottiPaate}`));
 }
+// maa–maa-rajat (build 19, kohta 1; LaattapakettiRakennus sama järjestys)
+sarja('maarajat', maamaaPolku.slice(0, maamaaPolku.lastIndexOf('/') + 1), [maamaaPolku]);
 
 // ---- Ajo ----
 const rivit = [];

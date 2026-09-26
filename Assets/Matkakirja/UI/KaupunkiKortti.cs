@@ -123,6 +123,7 @@ namespace Matkakirja.Natiivi
 
             kerros.JokaRuutu += Asemoi;
             kerros.JokaRuutu += Animoi;
+            UiSisalto.LehdetSaapuivat += LehdetSaapuivat; // kylmäkäynnistys: kansikuva lehdistä myöhemmin
             kerros.JokaRuutu += TarkistaOhiNapautus;
         }
 
@@ -305,6 +306,32 @@ namespace Matkakirja.Natiivi
             UiSisalto.Lataa(() => { if (Auki && kaupunki == kaupunkiId) Tayta(UiSisalto.Kaupunki(kaupunkiId)); });
         }
 
+        /// <summary>Näkyvän herokuvan tiedosto (kansikuva tai juliste), jotta myöhään saapuva kansikuva voi korvata julisteen.</summary>
+        string kuvanTiedosto;
+
+        /// <summary>
+        /// Kylmäkäynnistys (Pelikoodari: kaupunkilehdet luetaan Valmis-tilan jälkeen, UiSisalto.LehdetSaapuivat): jos kortti avattiin
+        /// ennen lehtiä ja näyttää julistetta tai ei kuvaa, kansikuva vaihtuu tilalle 120 ms:n feidillä; rivit eivät rakennu uudelleen.
+        /// </summary>
+        void LehdetSaapuivat()
+        {
+            if (!Auki || string.IsNullOrEmpty(kaupunki)) return;
+            var k = UiSisalto.Kaupunki(kaupunki);
+            var kansi = k != null && k.Kansikuvat.Count > 0 ? k.Kansikuvat[0] : null;
+            if (kansi?.Tiedosto == null || kansi.Tiedosto == kuvanTiedosto) return;
+            string id = k.Id, tiedosto = kansi.Tiedosto;
+            Kuvat.Hae(tiedosto, tex =>
+            {
+                if (tex == null || !Auki || kaupunki != id) return;
+                kuvanTiedosto = tiedosto;
+                if (!kuvallinen) { kuvallinen = true; kuvanimi.text = nimi; kuva.style.display = DisplayStyle.Flex; RakennaRivit(tiedot); }
+                kuvapinta.style.backgroundImage = new StyleBackground(tex);
+                bool oma = !LinssiUi.VahennettyLiike();
+                kuvapinta.style.opacity = oma ? 0f : 1f;
+                kuvaAlku = oma ? -1f : float.NaN;
+            });
+        }
+
         void Tayta(KaupunkiTiedot k)
         {
             if (k == null) return;
@@ -316,6 +343,7 @@ namespace Matkakirja.Natiivi
             // tekstuuri saapuu; jos lataus epäonnistuu, nimi palaa omaksi rivikseen.
             var kansi = k.Kansikuvat.Count > 0 ? k.Kansikuvat[0] : null;
             string tiedosto = kansi?.Tiedosto ?? k.JulisteTiedosto;
+            kuvanTiedosto = tiedosto;
             kuvallinen = tiedosto != null;
             if (kuvallinen)
             {

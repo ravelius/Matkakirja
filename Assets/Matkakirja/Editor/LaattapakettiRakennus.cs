@@ -27,6 +27,7 @@ namespace Matkakirja.Editori
     ///                Pelikoodarin kylmämittaus: 9 Z5-laattaa haettiin verkosta, ~1 024 laattaa ≈ 6 Mt)
     ///   vektorit     Vektorikerros.OletusVersio                      luettelo + l0–l2 (rannikko, rajat)
     ///   napakalotit  NapaKannet.OfflinePolut                         2 kuvaa
+    ///   maarajat     Maaraja.MaamaaPolku                             maa–maa-rajat (build 19, kohta 1: 913 kt verkosta kylmänä)
     ///
     /// Paketti EI kuulu gitiin (repossa ei Git LFS:ää): se on projektin Build/laattapaketti/laattapaketti.bin:ssä
     /// (Build/ on .gitignoressa) tai ympäristömuuttujan MATKAKIRJA_LAATTAPAKETTI polussa. Rakennus.Kaanna kutsuu
@@ -74,6 +75,7 @@ namespace Matkakirja.Editori
                     KarttaKerrokset.SatelliittiMeri),
                 ("julisteet/pallo/vektorit/" + Vektorikerros.OletusVersio + "/", "vektorit"),
                 (kalotti.Substring(0, kalotti.LastIndexOf('/') + 1), "napakalotit"),
+                (Maaraja.MaamaaPolku.Substring(0, Maaraja.MaamaaPolku.LastIndexOf('/') + 1), "maarajat"),
             };
         }
 
@@ -198,6 +200,12 @@ namespace Matkakirja.Editori
             {
                 var s = new Sarja { Nimi = et[4].nimi, Etuliite = et[4].etuliite };
                 s.Polut.AddRange(NapaKannet.OfflinePolut());
+                sarjat.Add(s);
+            }
+            // maa–maa-rajat (Maaraja lataa Laattapalvelimen kautta, joten paketti vastaa ensin)
+            {
+                var s = new Sarja { Nimi = et[5].nimi, Etuliite = et[5].etuliite };
+                s.Polut.Add(Maaraja.MaamaaPolku);
                 sarjat.Add(s);
             }
 

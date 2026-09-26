@@ -599,6 +599,8 @@ namespace Matkakirja.Editori
             // Laattapaketti (pallon kaukonäkymä, löydös 80): ladataan ämpäristä, jos puuttuu tai sarjat vaihtuivat;
             // KopioiLaattapaketti vie sen Xcode-projektin Data/Raw/:iin. Ei gitissä (ei LFS:ää).
             LaattapakettiRakennus.Varmista();
+            // Sisältöpaketin tilannekuva (kohta 1 osa 3, build 19): aloitusdata buildiin, PakettiPaivitys tuo sen varastoon.
+            TilannekuvaRakennus.Varmista();
             var asetukset = new BuildPlayerOptions
             {
                 scenes = new[] { PalloKohtaus },
@@ -713,6 +715,7 @@ namespace Matkakirja.Editori
         {
             if (kohde != BuildTarget.iOS) return;
             LaattapakettiRakennus.KopioiBuildiin(polku);
+            TilannekuvaRakennus.KopioiBuildiin(polku);
         }
 
         /// <summary>Laattapalvelin (127.0.0.1) vaatii ATS-poikkeuksen paikalliselle verkolle.</summary>
