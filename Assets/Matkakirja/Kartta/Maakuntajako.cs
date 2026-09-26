@@ -644,14 +644,28 @@ namespace Matkakirja
         {
             var p = Paletti[((vari % Paletti.Length) + Paletti.Length) % Paletti.Length];
             double k = valittu ? ValittuPeitto / Peitto : 1;
-            var c = new[] { Math.Min(1, p[0] * k), Math.Min(1, p[1] * k), Math.Min(1, p[2] * k) };
-            if (!lineaarinen) return (c[0], c[1], c[2], Peitto);
+            return Taytto(new[] { Math.Min(1, p[0] * k), Math.Min(1, p[1] * k), Math.Min(1, p[2] * k) }, Peitto, lineaarinen, pohja);
+        }
+
+        /// <summary>
+        /// Täyttö paletin omalla värillä annetulla sRGB-peitolla (omistajan löydös 157: valittu maakunta vahvistuu
+        /// värinä, ei vaalene eikä saa korostusrajaa; MaaKartta.ValinnanPeitto).
+        /// </summary>
+        public static (double R, double G, double B, double A) TayttoPeitolla(int vari, double peitto, bool lineaarinen, double[] pohja = null)
+        {
+            var p = Paletti[((vari % Paletti.Length) + Paletti.Length) % Paletti.Length];
+            return Taytto(new[] { p[0], p[1], p[2] }, Math.Min(1, Math.Max(0, peitto)), lineaarinen, pohja);
+        }
+
+        static (double R, double G, double B, double A) Taytto(double[] c, double peitto, bool lineaarinen, double[] pohja)
+        {
+            if (!lineaarinen) return (c[0], c[1], c[2], peitto);
             pohja ??= NimiLadonta.PohjaMaa;
-            double a = NimiLadonta.LineaarinenAlfa(c, Peitto, pohja);
+            double a = NimiLadonta.LineaarinenAlfa(c, peitto, pohja);
             double Kanava(int i)
             {
                 double t = Lineaarinen(pohja[i]);
-                double tavoite = Lineaarinen(Peitto * c[i] + (1 - Peitto) * pohja[i]);
+                double tavoite = Lineaarinen(peitto * c[i] + (1 - peitto) * pohja[i]);
                 return Srgb(Math.Min(1, Math.Max(0, (tavoite - t * (1 - a)) / a)));
             }
             return (Kanava(0), Kanava(1), Kanava(2), a);
