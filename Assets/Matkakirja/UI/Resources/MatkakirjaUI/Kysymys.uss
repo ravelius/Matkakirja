@@ -267,6 +267,22 @@
     opacity: 1;
 }
 
+/* Leveä ruutu (yli 560 pt, iPad): web .dialog max-width 620px, .quiz-options 2 saraketta, gap 0.6rem. */
+.mk-kysymys.mk-kysymys--levea {
+    max-width: 620px;
+}
+
+.mk-kysymys--levea .mk-kysymys__vaihtoehdot {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mk-kysymys--levea .mk-nappi.mk-kysymys__vaihtoehto {
+    width: 48.7%;
+    margin-bottom: 9.6px;
+}
+
 .mk-kysymys__vaihtoehdot--tiivis > .mk-nappi.mk-kysymys__vaihtoehto {
     min-height: 48px;
     margin-bottom: 6px;

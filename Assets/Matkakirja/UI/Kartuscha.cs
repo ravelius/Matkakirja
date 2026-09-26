@@ -22,6 +22,7 @@
 // Kartta-/Dialogi-/Matkalla-tilassa tai linssi on päällä (NaytaSallittu).
 // Data: UiSisalto.Maa (Siirtosepän maat-kokoelma).
 // Elävä kartta (tutkimuspalkki, heränneet maakunnat, salaisuusrivi, lippu liehuu valmiissa maassa): Kartuscha.Muste.cs.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -220,6 +221,7 @@ namespace Matkakirja.Natiivi
             {
                 Sulje();
                 kortti.style.display = DisplayStyle.None;
+                Lipputanko.Pois();
                 return;
             }
             Tayta(UiSisalto.Maa(iso));
@@ -227,6 +229,53 @@ namespace Matkakirja.Natiivi
             Mediarivi.AsetaRadionMaa(radio, iso, mt?.Nimi ?? iso);
             Asettele();
             kortti.style.display = DisplayStyle.Flex;
+        }
+
+        /// <summary>
+        /// Löydös 161 (omistaja, build 21 -koe; tarkennus 11.4x, sitova): kohdemaan 3D-lipputanko (Natiivisepän
+        /// Lipputanko) maan itäreunaan maalle, ei pääkaupunkiin. Paikka on Karttasepän ankkurista lippu_lonlat
+        /// ({ISO3: [lon, lat]}, sisältöpaketissa <see cref="LippuAnkkuritPolku"/>); ilman ankkuria ei tankoa.
+        /// Lippu on sama 1873-lipun tekstuuri kuin kartussissa.
+        /// </summary>
+        Texture kiinnitettyLippu;
+
+        void AsetaLipputanko(MaaTiedot m, Texture lippu)
+        {
+            string maa = m.Iso3;
+            UiKerros.Hae().StartCoroutine(LippuAnkkuri(maa, a =>
+            {
+                if (iso != maa) return;
+                if (a.HasValue) Lipputanko.Aseta(maa, a.Value.Lat, a.Value.Lon, lippu);
+                else Lipputanko.Pois();
+            }));
+        }
+
+        /// <summary>Karttasepän lipputankoankkurit sisältöpaketissa (Siirtoseppä vie; polku vahvistetaan datan tullessa).</summary>
+        public const string LippuAnkkuritPolku = "kartta/lippu_lonlat.json";
+        static Dictionary<string, (double Lat, double Lon)> lippuAnkkurit;
+        static bool lippuAnkkuritHaettu;
+
+        static System.Collections.IEnumerator LippuAnkkuri(string maa, Action<(double Lat, double Lon)?> valmis)
+        {
+            if (!lippuAnkkuritHaettu)
+            {
+                lippuAnkkuritHaettu = true;
+                string json = null;
+                yield return LinssiSisalto.Hae(LippuAnkkuritPolku, t => json = t);
+                var d = new Dictionary<string, (double, double)>();
+                // Tiedosto puuttuu paketista (ennen Siirtosepän vientiä) → tyhjä: MiniJson heittää tyhjästä merkkijonosta.
+                object juuri = null;
+                if (!string.IsNullOrWhiteSpace(json))
+                    try { juuri = Matkakirja.Peli.MiniJson.Jasenna(json); }
+                    catch (FormatException e) { Debug.LogWarning("MATKAKIRJA ui lipputanko: ankkurit eivät jäsenny: " + e.Message); }
+                if (juuri is Dictionary<string, object> o)
+                    foreach (var kv in o)
+                        if (kv.Value is List<object> p && p.Count >= 2 && p[0] is double lon && p[1] is double lat) d[kv.Key] = (lat, lon);
+                lippuAnkkurit = d;
+                if (d.Count == 0) Debug.Log("MATKAKIRJA ui lipputanko: ankkureita ei ole (" + LippuAnkkuritPolku + "), tanko piilossa");
+            }
+            while (lippuAnkkurit == null) yield return null;
+            valmis(lippuAnkkurit.TryGetValue(maa, out var a) ? a : ((double, double)?)null);
         }
 
         void Tayta(MaaTiedot m)
@@ -241,6 +290,8 @@ namespace Matkakirja.Natiivi
             lippu.style.backgroundImage = StyleKeyword.None;
             VapautaAalto();
             lippuKuva = null;
+            Kuvat.Vapauta(kiinnitettyLippu);
+            kiinnitettyLippu = null;
             lippuLiehuu = false;
             if (m.Lippu.Count > 0)
                 Kuvat.Hae(m.Lippu[0], t =>
@@ -250,9 +301,15 @@ namespace Matkakirja.Natiivi
                     lippu.style.width = lw;
                     // Elävä kartta: lippu liehuu vasta, kun maan kaikki maakunnat on löydetty (Kartuscha.Muste.cs PaivitaLippu).
                     lippuKuva = t;
+                    // Löydös 161: kohdemaan lippu kiinni Kuvissa (kartussin aalto ja lipputanko lukevat sitä jatkuvasti).
+                    Kuvat.Vapauta(kiinnitettyLippu);
+                    kiinnitettyLippu = t;
+                    Kuvat.Kiinnita(t);
                     lippuLeveys = lw;
                     PaivitaLippu();
+                    AsetaLipputanko(m, t);
                 }, "liput");
+            else Lipputanko.Pois();
 
             // Valtiomuoto 1873 ilman "v. 1873" -päätettä (webin valtiomuoto1873).
             valtiomuoto.text = vm != null ? vm.Replace(" v. 1873", "") : "";

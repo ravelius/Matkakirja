@@ -13,6 +13,8 @@ Shader "Matkakirja/MaaTaytto"
     Properties
     {
         _Tunnus("Tunnuskartta", 2D) = "black" {}
+        _Maski("Maamaski (löydös 157)", 2D) = "white" {}
+        _MaskiPaalla("Maski päällä", Float) = 0
         _Paletti("Paletti", 2D) = "black" {}
         _ReunaLeveys("Rajan leveys (px)", Float) = 0.5
         _Alue("Rajaus", Vector) = (-180, 90, 360, 180)
@@ -39,10 +41,12 @@ Shader "Matkakirja/MaaTaytto"
 
             TEXTURE2D(_Tunnus); SAMPLER(sampler_point_repeat);
             TEXTURE2D(_Paletti); SAMPLER(sampler_point_clamp);
+            TEXTURE2D(_Maski); SAMPLER(sampler_linear_clamp);
             CBUFFER_START(UnityPerMaterial)
                 float _ReunaLeveys;
                 float4 _Tunnus_TexelSize;
                 float4 _Alue; // länsi, pohjoinen, pituusväli, leveysväli (asteina)
+                float _MaskiPaalla;
                 float _TayttoEksponentti;
                 float _Haive;
                 // Elävän kartan saapuminen (MaaKartta.Saapuminen): täyttö JA reuna piiloon ja takaisin 0,3 s:ssa.
@@ -106,9 +110,18 @@ Shader "Matkakirja/MaaTaytto"
                     r.a *= _Saapuminen;
                     if (r.a > 0) return r;
                 }
+                // Löydös 157: maamaski (tarkempi kuin tunnuskartta) leikkaa täytön rantaan; maalla oleva tunnuksen aukko
+                // (porras sisäänpäin) saa naapurialueen.
+                half m = 1;
+                if (_MaskiPaalla > 0.5)
+                {
+                    m = SAMPLE_TEXTURE2D_LOD(_Maski, sampler_linear_clamp, saturate(i.uv), 0).r;
+                    if (k <= 0 && m > 0.5 && naapuri > 0) k = naapuri;
+                    m = smoothstep(0.2, 0.8, m);
+                }
                 if (k <= 0) discard;
                 half4 t = Vari(k, 0.25, _TayttoEksponentti);
-                t.a *= _Haive * _Saapuminen;
+                t.a *= _Haive * _Saapuminen * m;
                 if (t.a <= 0) discard;
                 return t;
             }

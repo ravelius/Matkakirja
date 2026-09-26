@@ -53,7 +53,7 @@ namespace Matkakirja.Natiivi
         const double LaivanPituus = 16000, SavunNousu = 2200, SavunAjelehdus = 1800;
         const float ValonKokoPx = 46f;
 
-        enum Vaihe { Lataa, Soi, Kuva, Loppu }
+        enum Vaihe { Lataa, Odottaa, Soi, Kuva, Loppu }
 
         /// <summary>
         /// Säädöt ilman käännöstä (komento "elava saato [nimi arvo]"; kertoimet, 1 = oletus): läikkien, viivojen, nimen,
@@ -120,6 +120,16 @@ namespace Matkakirja.Natiivi
         public static bool KaikkiMaat;
         static readonly HashSet<string> nahdytMaat = new HashSet<string>();
         bool saapuminen, luovutettu, pysyvatPiilossa, paljastusKaytossa;
+        /// <summary>
+        /// Pelin saapuminen odottaa luennan, pulun puheen ja kortin loppua (omistaja 26.9. klo 11.5x): kohtaus pysyy
+        /// ajassa 0 (huntu päällä, pysyvät kerrokset piilossa), ja kun kartta on ollut hiljaa VapaaS, kamera ajaa
+        /// saapumisnäkymään ja kohtaus soi kokonaisena.
+        /// </summary>
+        bool odotaHiljaisuutta;
+        float hiljaaAlkaen = -1, odotusAlkoi;
+        string edellinenEste;
+        bool pakkaPyydetty;
+        public const float VapaaS = 0.6f, VapaaPakanJalkeenS = 0.2f, OdotusMaxS = 600f;
         string maa;
         LatLon keskus;
 
@@ -163,7 +173,7 @@ namespace Matkakirja.Natiivi
                         $", aurinko aamu {ElavaKohtaus.AamuAtsimuutti:0}°/{ElavaKohtaus.AamuKorkeus:0}° päivä {ElavaKohtaus.PaivaAtsimuutti:0}°/{ElavaKohtaus.PaivaKorkeus:0}°");
                     break;
                 case "saapuminen":
-                    if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain);
+                    if (osat.Length > 2) TestiSaapuminen(osat[2], ohjain, osat.Length > 3 && osat[3] == "odota");
                     break;
                 case "hetki":
                     ElavatHetket.Testi(osat.Length > 2 ? osat[2] : null, ohjain);
@@ -266,7 +276,9 @@ namespace Matkakirja.Natiivi
             Rakenna(verkot);
             TilaTalteen();
             t = Math.Max(0, Math.Min(kohtaus.KestoS, alkuPyynto));
-            vaihe = kuvaPyynto ? Vaihe.Kuva : Vaihe.Soi;
+            vaihe = kuvaPyynto ? Vaihe.Kuva : odotaHiljaisuutta ? Vaihe.Odottaa : Vaihe.Soi;
+            odotusAlkoi = Time.realtimeSinceStartup;
+            if (vaihe == Vaihe.Odottaa) Sovella(t);
             Kirjaa($"valmis {(Time.realtimeSinceStartup - alku) * 1000:F0} ms (maakunnat {(tMaakunnat - alku) * 1000:F0}, valot {(tValot - tMaakunnat) * 1000:F0}, " +
                    $"joet {(tJoet - tValot) * 1000:F0}, kolmiot {(tKolmiot - tJoet) * 1000:F0}): {(saapuminen ? "saapuminen " + maa + ", " : "")}{kohtaus.Maakunnat.Count} maakuntaa, " +
                    $"{kohtaus.Rajat.Count} rajaa, {kohtaus.Joet.Count} jokea, {kohtaus.Nostot.Count} nostoa ({kohtaus.HeraavanNostoja} heräävässä), " +
@@ -472,20 +484,21 @@ namespace Matkakirja.Natiivi
             bool kayty = pelaaja != null && pelaaja.Kaydyt.Any(c => c != kaupunki && po.Verkko.Kaupungit.TryGetValue(c, out var kk) && kk.Maa == k.Maa);
             if (!KaikkiMaat && (kayty || nahdytMaat.Contains(k.Maa))) return;
             nahdytMaat.Add(k.Maa);
-            AloitaSaapuminen(ohjain, k.Maa, new LatLon(k.Lat, k.Lon));
+            AloitaSaapuminen(ohjain, k.Maa, new LatLon(k.Lat, k.Lon), true);
         }
 
-        static void AloitaSaapuminen(LinssiOhjain ohjain, string iso, LatLon paikka)
+        static void AloitaSaapuminen(LinssiOhjain ohjain, string iso, LatLon paikka, bool odota = false)
         {
             var e = Luo(ohjain);
             e.saapuminen = true;
+            e.odotaHiljaisuutta = odota;
             e.maa = iso;
             e.keskus = paikka;
             e.StartCoroutine(e.Valmistele());
         }
 
-        /// <summary>Testikomento "elava saapuminen <kaupunki>": saapumisajo kuten pelissä (kamera Natiivisepän ajolla) ja kohtaus.</summary>
-        static void TestiSaapuminen(string kaupunki, LinssiOhjain ohjain)
+        /// <summary>Testikomento "elava saapuminen <kaupunki> [odota]" (odota: kuten pelissä luennan ja kortin jälkeen, 162): saapumisajo kuten pelissä (kamera Natiivisepän ajolla) ja kohtaus.</summary>
+        static void TestiSaapuminen(string kaupunki, LinssiOhjain ohjain, bool odota = false)
         {
             var po = PeliOhjain.Instanssi;
             if (po?.Verkko == null || !po.Verkko.Kaupungit.TryGetValue(kaupunki, out var k) || string.IsNullOrEmpty(k.Maa))
@@ -493,7 +506,7 @@ namespace Matkakirja.Natiivi
             Instanssi?.Lopeta();
             var kierto = FindAnyObjectByType<PalloKierto>();
             kierto?.AjaSaapumisnakymaan(k.Maa, k.Lat, k.Lon, 1.6f, null);
-            AloitaSaapuminen(ohjain, k.Maa, new LatLon(k.Lat, k.Lon));
+            AloitaSaapuminen(ohjain, k.Maa, new LatLon(k.Lat, k.Lon), odota);
         }
 
         Vector3 Paikka(LatLon p, double korkeus)
@@ -902,6 +915,7 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (kohtaus == null || vaihe == Vaihe.Lataa) return;
+            if (vaihe == Vaihe.Odottaa) { Odota(); return; }
             if (vaihe == Vaihe.Soi)
             {
                 t += Time.unscaledDeltaTime * nopeus;
@@ -932,6 +946,39 @@ namespace Matkakirja.Natiivi
             Sovella(t);
             // Video päättyy pitoon ja kartta palautuu 4 s:n päästä ("elava pois" heti); saapuminen päättyy luovutukseen heti.
             if (vaihe == Vaihe.Loppu && (saapuminen || Time.realtimeSinceStartupAsDouble - loppuHetki > 4)) Lopeta();
+        }
+
+        /// <summary>Odottaa hiljaista karttaa; peruu, jos pelaaja lähtee maasta (maa jää uudeksi seuraavaa kertaa varten).</summary>
+        void Odota()
+        {
+            var po = PeliOhjain.Instanssi;
+            string k = po?.PelaajanKaupunki;
+            bool samassaMaassa = k != null && po.Verkko != null && po.Verkko.Kaupungit.TryGetValue(k, out var kk) && kk.Maa == maa;
+            if (!samassaMaassa || Time.realtimeSinceStartup - odotusAlkoi > OdotusMaxS)
+            {
+                Kirjaa(samassaMaassa ? "odotus aikakatkaistiin" : "pelaaja lähti maasta ennen hiljaisuutta: peruttu");
+                nahdytMaat.Remove(maa);
+                Lopeta();
+                return;
+            }
+            float nyt = Time.realtimeSinceStartup;
+            string este = ElavaHerays.HiljaisuudenEste();
+            if (este != edellinenEste) { Kirjaa($"odottaa {nyt - odotusAlkoi:F1} s: {este ?? "hiljaa"}"); edellinenEste = este; }
+            // Puhe ja kortit ohi, vain luennan kuvapakka sumentaa: pakka lähtee heti (ei 6 s:n loppuviivettä).
+            if (este == "kuvasumennus" && !pakkaPyydetty && ElavaHerays.KuvapakkaLahtee != null)
+            {
+                pakkaPyydetty = true;
+                Kirjaa("kuvapakka lähtee (vain kuvasumennus jäljellä)");
+                ElavaHerays.KuvapakkaLahtee();
+            }
+            if (este != null) { hiljaaAlkaen = -1; return; }
+            if (hiljaaAlkaen < 0) { hiljaaAlkaen = nyt; return; }
+            if (nyt - hiljaaAlkaen < (pakkaPyydetty ? VapaaPakanJalkeenS : VapaaS)) return;
+            // Kartta hiljaa: kamera saapumisnäkymään (sama ajo kuin laskussa) ja kohtaus soi alusta.
+            Kirjaa($"hiljaa {nyt - odotusAlkoi:F1} s:n jälkeen: soi");
+            kierto?.AjaSaapumisnakymaan(maa, keskus.Lat, keskus.Lon, 1.6f, null);
+            t = 0;
+            vaihe = Vaihe.Soi;
         }
 
         /// <summary>

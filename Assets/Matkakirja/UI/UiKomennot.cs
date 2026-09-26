@@ -140,6 +140,7 @@
 //   ui tila teksti                            tilarivin teksti
 //   ui pois | ui paalle                       koko UI piiloon / näkyviin
 //   ui osuma x y                              osuuko piste (pikseleinä, origo vasen ala) UI:hin
+//   ui kuvat [raja Mt]                        kuvamuistin tila (Mt, kpl, kiinteät) ja valinnaisesti LRU-raja (testi)
 //   ui livia [ele] [p] [astro|leiju|puhe|mini] Livia (152 × 304) keskellä kerrosta 40 (oletus blink 0.5)
 //   ui livia kierros [astro|leiju|puhe]       kaikki eleet peräkkäin oikeassa ajassa (videotarkistus)
 //   ui livia pois                             Livia pois
@@ -979,6 +980,12 @@ namespace Matkakirja.Natiivi
                     var xy = loput.Split(' ');
                     var p = new Vector2(float.Parse(xy[0], CultureInfo.InvariantCulture), float.Parse(xy[1], CultureInfo.InvariantCulture));
                     return UiKerros.Peittaa(p) ? "peittää" : "vapaa";
+                }
+                case "kuvat":
+                {
+                    var o = loput.Split(' ');
+                    if (o.Length >= 2 && o[0] == "raja" && long.TryParse(o[1], out var mt)) Kuvat.AsetaRaja(mt);
+                    return Kuvat.Tila();
                 }
                 default: return "tuntematon ui-komento";
             }

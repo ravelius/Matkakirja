@@ -614,6 +614,8 @@ namespace Matkakirja
                 kuori.sharedMaterial.SetVector("_Alue", alue);
             }
             if (vanha != null) Destroy(vanha);
+            // Löydös 157: maamaski leikkaa täytön rantaviivaan (uusi maa: maski pois, kunnes valmis).
+            if (maakohtainen) { kuori.sharedMaterial.SetFloat(MaskiPaallaId, 0f); StartCoroutine(RakennaMaski(maa, rj)); }
             if (janat != null) TeeRajat(janat);
             PaivitaPaletti();
             if (rj.AlueitaPois > 0)
@@ -622,6 +624,55 @@ namespace Matkakirja
                       $"(teksel {rj.Teksel * 111.2:0.0} km, {rj.Lon0:0.#}…{rj.Lon0 + rj.LonVali:0.#}°), rypäitä {rj.Rypaita} " +
                       $"(+{rj.RypaitaPois} pois), {janat?.Count ?? 0} rajajanaa, {(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
             PaivitaNakyvyys();
+        }
+
+        static readonly int MaskiId = Shader.PropertyToID("_Maski"), MaskiPaallaId = Shader.PropertyToID("_MaskiPaalla");
+        Texture2D maski;
+
+        /// <summary>
+        /// LÖYDÖS 157 (build 21): rantaviivan maski (Maamaski, Karttasepän GSHHG-polygonit) maan rajaukseen Maamaski.Kerroin
+        /// kertaa tunnuskarttaa tarkempana; MaaTaytto kertoo täytön peiton sillä (bilineaarinen), joten 1,2 km:n porras
+        /// katoaa rannasta. Rakennetaan taustasäikeessä; jos maa ehti vaihtua, tulos hylätään.
+        /// </summary>
+        IEnumerator RakennaMaski(string maa, Maakuntajako.Rajaus rj)
+        {
+            if (!Maamaski.Paalla || rj == null) yield break;
+            Maamaski.Lahde l = null;
+            yield return Maamaski.Hae(maa, x => l = x);
+            if (l == null || NykyinenMaa != maa || kuori == null) yield break;
+            float alku = Time.realtimeSinceStartup;
+            int w = Math.Min(Maamaski.SuurinSivu, rj.W * Maamaski.Kerroin);
+            int h = Math.Max(1, Math.Min(Maamaski.SuurinSivu, (int)Math.Round((double)w * rj.H / rj.W)));
+            byte[] data = null;
+            var tehtava = Task.Run(() => data = Maamaski.Rasteroi(l, w, h, rj.Lon0, rj.Lat1, rj.LonVali, rj.LatVali));
+            while (!tehtava.IsCompleted) yield return null;
+            if (tehtava.IsFaulted || data == null || NykyinenMaa != maa || kuori == null)
+            {
+                if (tehtava.IsFaulted) Debug.LogWarning($"MATKAKIRJA maamaski {maa}: rasterointi kaatui: {tehtava.Exception?.GetBaseException().Message}");
+                yield break;
+            }
+            var vanha = maski;
+            maski = new Texture2D(w, h, TextureFormat.R8, false, true)
+            {
+                name = "Maamaski " + maa, filterMode = FilterMode.Bilinear,
+                wrapModeU = TextureWrapMode.Clamp, wrapModeV = TextureWrapMode.Clamp,
+            };
+            maski.SetPixelData(data, 0);
+            maski.Apply(false, true);
+            kuori.sharedMaterial.SetTexture(MaskiId, maski);
+            kuori.sharedMaterial.SetFloat(MaskiPaallaId, 1f);
+            if (vanha != null) Destroy(vanha);
+            PallonLepo.Valmistui(kokoelma);
+            Debug.Log($"MATKAKIRJA maamaski {maa}: {w}×{h}, {l.Maa.Count} maarengasta, {l.Jarvet.Count} järveä, " +
+                      $"{(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
+        }
+
+        /// <summary>Maski pois tai päälle (komento `maakunta maski pois|paalle`).</summary>
+        public void MaskiNakyy(bool paalla)
+        {
+            Maamaski.Paalla = paalla;
+            if (kuori != null) kuori.sharedMaterial.SetFloat(MaskiPaallaId, paalla && maski != null ? 1f : 0f);
+            PallonLepo.Muuttui("maamaski");
         }
 
         /// <summary>

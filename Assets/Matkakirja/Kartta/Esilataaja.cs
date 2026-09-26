@@ -23,6 +23,8 @@ namespace Matkakirja
     /// Kutsuja luo pyynnön (luo) jokaiselle yritykselle erikseen ja lukee tuloksen valmis-kutsussa ennen vapautusta
     /// (luo → null peruu; valmis saa silloin null). Tiedostot ja ryhmät: EsilataajaTiedostot.cs (erä 4).
     /// Erä 1 ei lisää uutta esilatausta: se on mittauspohja (osuma-% VerkkoOdotus.Osuma).
+    /// Esilataajan oma osuma-% ja odotus: <see cref="Mittari"/> (EsilataajaMittari.cs; Hae kirjaa esilataukset ja
+    /// valmistumiset, kutsujat Nakyva-pyynnöt <see cref="NakyvaPyynto"/>-kutsulla välimuistitarkistuksensa kohdalla).
     /// </summary>
     public sealed partial class Esilataaja : MonoBehaviour
     {
@@ -77,6 +79,23 @@ namespace Matkakirja
         public static int Ennakoituja { get; private set; }
         public static void KirjaaEnnakointi() => Ennakoituja++;
 
+        /// <summary>Esilataajan osuma-% ja Nakyva-pyyntöjen odotus (suunnitelma, "Mittarit"); yhteenveto VerkkoOdotus.Yhteenveto.</summary>
+        public static readonly EsilataajaMittari Mittari = new EsilataajaMittari();
+        static double NytMs => Time.realtimeSinceStartupAsDouble * 1000.0;
+
+        /// <summary>
+        /// Nakyva-pyyntö kohteelle (osoite) kutsujan välimuistitarkistuksen kohdalla: valmiina = löytyi muistista, levyltä
+        /// tai buildista. Luokka (osuma / kesken / ei esiladattu / hukattu / levyllä / toisto): EsilataajaMittari.
+        /// Hudin odotus päättyy, kun saman osoitteen haku valmistuu tai kutsuja kutsuu <see cref="NakyvaValmis"/>.
+        /// </summary>
+        public static EsilataajaMittari.Luokka NakyvaPyynto(string osoite, bool valmiina) => Mittari.Nakyva(osoite, valmiina, VerkkoOdotus.Vaihe, NytMs);
+
+        /// <summary>Kutsujan Nakyva-pyyntö sai kohteen (tai luovutti): hudin odotus päättyy.</summary>
+        public static void NakyvaValmis(string osoite) => Mittari.NakyvaValmis(osoite, NytMs);
+
+        /// <summary>Testikomennon `verkko` lokirivi: "MATKAKIRJA esilataaja: mittari osuma …".</summary>
+        public static string MittariRivi() => "MATKAKIRJA esilataaja: mittari " + Mittari.Rivi();
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
@@ -91,6 +110,7 @@ namespace Matkakirja
             joutilasViritetty = true;
             JoutilaitaHetkia = 0;
             Ennakoituja = 0;
+            Mittari.Nollaa();
         }
 
         /// <summary>Käynnistää palvelun (joutilas-tarkkailu) ennen ensimmäistä hakua.</summary>
@@ -110,10 +130,14 @@ namespace Matkakirja
         /// <summary>
         /// Hakee (luo) jonon kautta; valmis(r) saa viimeisen yrityksen pyynnön ennen sen vapautusta (r.result kertoo,
         /// onnistuiko). Pääsäikeestä coroutinena: <c>yield return Esilataaja.Hae(...)</c>.
+        /// avain = kohteen osoite mittarille (<see cref="Mittari"/>): annettuna esilataus kirjataan jo jonoon mennessä
+        /// (Nakyva-pyyntö sen aikana on "kesken"), muuten ensimmäisen yrityksen osoitteesta.
         /// </summary>
-        public static IEnumerator Hae(Func<UnityWebRequest> luo, Taso taso, string lahde, Action<UnityWebRequest> valmis, Kohta? kohta = null)
+        public static IEnumerator Hae(Func<UnityWebRequest> luo, Taso taso, string lahde, Action<UnityWebRequest> valmis, Kohta? kohta = null, string avain = null)
         {
             Varmista();
+            bool esilataus = taso != Taso.Nakyva;
+            if (esilataus) Mittari.EsilatausAlkoi(avain);
             var o = new Odottaja { Taso = taso, Nro = nro++, Paketti = kohta == Kohta.Kaynnistys };
             if (taso != Taso.Nakyva)
             {
@@ -128,15 +152,17 @@ namespace Matkakirja
                     float viive;
                     // luo voi palauttaa null (esim. peruttu ryhmä): valmis(null) ja paikka vapaaksi.
                     var uusi = luo();
-                    if (uusi == null) { valmis?.Invoke(null); yield break; }
+                    if (uusi == null) { Mittari.HakuValmis(avain, esilataus, false, NytMs); valmis?.Invoke(null); yield break; }
                     using (var r = uusi)
                     {
+                        if (avain == null) { avain = r.url; if (esilataus) Mittari.EsilatausAlkoi(avain); }
                         o.Pyynto = r;
                         float alku = Time.realtimeSinceStartup;
                         yield return r.SendWebRequest();
                         VerkkoOdotus.Haku(lahde, (Time.realtimeSinceStartup - alku) * 1000.0, (long)r.downloadedBytes, r.url);
                         if (r.result == UnityWebRequest.Result.Success || !Uusittava(r) || yritys >= Viiveet.Length)
                         {
+                            Mittari.HakuValmis(avain, esilataus, r.result == UnityWebRequest.Result.Success, NytMs);
                             valmis?.Invoke(r);
                             yield break;
                         }

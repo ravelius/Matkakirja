@@ -172,7 +172,7 @@ namespace Matkakirja.Natiivi
         /// Kortin Ohita-nappi (web ohitaSaapumisluenta): ohituslippu ensin, sitten kertoja ja pulu vaikenevat ja kuplat
         /// lähtevät (VaiennaPaikanPuhe). LuentoLoppui herää, mutta LuentoOhitettu estää pulun kommentin.
         /// </summary>
-        public void OhitaLuento() => VaiennaPaikanPuhe();
+        public void OhitaLuento() => VaiennaPaikanPuhe("ohita");
 
         /// <summary>Soiva luento, tai null.</summary>
         public Luento SoivaLuento => soivaLuento;
@@ -467,6 +467,7 @@ namespace Matkakirja.Natiivi
             string tiedosto = Valimuisti(polku);
             bool valimuistissa = !ohitaValimuisti && File.Exists(tiedosto);
             VerkkoOdotus.Osuma("peli", valimuistissa);
+            Esilataaja.NakyvaPyynto(Sisalto.Juuri + polku, valimuistissa);
             if (valimuistissa)
             {
                 valmis(File.ReadAllText(tiedosto));
@@ -479,6 +480,7 @@ namespace Matkakirja.Natiivi
                 koodi = k.responseCode;
                 if (k.result == UnityWebRequest.Result.Success) teksti = k.downloadHandler.text; else virhe = k.error;
             });
+            Esilataaja.NakyvaValmis(Sisalto.Juuri + polku);
             if (teksti == null)
             {
                 if (hiljaa) Debug.Log($"MATKAKIRJA peli: {polku} ei saatavilla ({koodi})");
@@ -731,11 +733,13 @@ namespace Matkakirja.Natiivi
             }
             else if (soivaLuento != null)
             {
-                var kaupunki = soivaLuento.Kaupunki;
+                var loppunut = soivaLuento;
+                var kaupunki = loppunut.Kaupunki;
                 soivaLuento = null;
                 reaktioJono = null;
                 Livia("narrationEnd");
                 try { LuentoLoppui?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
+                SaapumisluentoLoppui(loppunut); // löydös 162: vain saapumisen oma luento päättää
             }
         }
 
@@ -1420,6 +1424,8 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = null;
             // Uusi paikka: edellisen kaupungin ohitus ei koske tämän kerrontaa (web luennanOhitus per saapuminen).
             if (kaupunki != null) LuentoOhitettu = false;
+            // Löydös 162: saapumisluenta kesken heti, ENNEN MatkaPerilla-tapahtumaa (kartan saapumisanimaatio odottaa sitä).
+            SaapumisluentaAlkaa(kaupunki);
             // C16: aloituslennon kohteen luenta voi odottaa pulun paljastusta (PeliOhjain.Lykkays.cs).
             AsetaLykkays(kaupunki, aloituslento);
             // Nappula laskeutui: reitit lähtöpaikasta pois; toisessa kaupungissa sessio päättyy (B9, löydös 60).
@@ -1496,11 +1502,12 @@ namespace Matkakirja.Natiivi
             Kartalle(false);
             if (kaupunki == null) return;
             var l = luennat.OtaLuento(kaupunki);
-            if (l != null && LykkaaLuento(kaupunki, l)) return;
+            if (l != null && LykkaaLuento(kaupunki, l)) return; // saapumisluenta pysyy kesken lykkäyksen ajan (löydös 162)
             // Löydökset 86/89 (omistaja, build 13): ei paikkarivin ilmoitusta luennan alkaessa (web aloitaMerkinta ei näytä
             // ilmoitusta; tumma laatikko "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta." näytti väärän väriseltä
             // matkakirjalta). Paikkarivi on matkakirjan merkinnässä.
-            if (l != null) SoitaLuento(l, 0.6f);
+            // Löydös 162: luento jonoon saapumisluennaksi; ei luentoa tai kertoja pois → saapumisluenta päättyy heti.
+            SoitaSaapumisluento(kaupunki, l, 0.6f);
         }
 
         /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>
@@ -1813,6 +1820,7 @@ namespace Matkakirja.Natiivi
             if (r == null && KysymysTila != null)
             {
                 Aanita(KysymysTila.Oikein ? Aanitunnukset.Oikein : Aanitunnukset.Vaarin);
+                KohtaamisenTulosAani(KysymysTila.Oikein);
                 var q = matka.Tila.Kysely.Kysymys;
                 Livia(KysymysTila.Oikein ? "success" : "retry");
                 if (KysymysTila.Tuloslaji != null) Livia("tunne", kohtaamiset?.Tunne(q?.Kaupunki, KysymysTila.Tuloslaji, false));
@@ -1903,7 +1911,7 @@ namespace Matkakirja.Natiivi
             kysymysJaljella = 0;
             kysymysNakyma.PaivitaAika(0);
             Aanita(Aanitunnukset.AikaLoppui);
-            KysymysTeko(() => kysely.AikaLoppui());
+            if (KysymysTeko(() => kysely.AikaLoppui()) == null) KohtaamisenTulosAani(false);
         }
 
         // --- kamera -----------------------------------------------------------
@@ -2011,6 +2019,7 @@ namespace Matkakirja.Natiivi
             if (noppaLiike != null && Time.unscaledTime > noppaLoppuu) NoppaValmis();
             KytkeRekisteri();
             PaivitaReaktiot();
+            VahdiSaapumisluentaa();
             PaivitaKysymysAika();
             PaivitaSahke();
             PaivitaLento();
