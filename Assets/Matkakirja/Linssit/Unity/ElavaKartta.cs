@@ -409,6 +409,8 @@ namespace Matkakirja.Natiivi
             ohjain.StartCoroutine(VarmistaKarttavalot());
             // Kohta 3: maakunta herää (pysyvä tila MaaKartalle ja herätysanimaatio).
             ElavaHerays.Kytke(ohjain);
+            // Kohta 2: löytämättömien nostojen musteen jäljet tekstuureina Natiivi-UI:lle (taustasäikeessä).
+            MusteJaljet.Valmistele();
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
