@@ -2,25 +2,25 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 16:46 EEST
+**Päivitetty:** 2026-09-26 17:01 EEST
 
 ## 1) Sessiot
 
-Uusi tili klo 16:46: viikko (all models) **25 %**, viikko (Fable) 18 %, 5 h **35 %**. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. **Karttaseppä 70 % — ilmoitettu Fablelle.** Fable 83 % (informaationa). Postivahti (self) 85 %.
+Uusi tili klo 17:01: viikko (all models) **27 %**, viikko (Fable) 19 %, 5 h **39 %**. Effort-tarkistus: kaikki 7 Opus-roolia `high`, ei nimilisäyksiä — sääntömukaista. Karttaseppä nollautunut itse (70→7 %). Fable 86 %, Postivahti (self) 88 % (informaationa).
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 83% | running | PR #3308 |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 85% | running | tämä taulu |
+| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 86% | running | PR #3308 |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 88% | running | tämä taulu |
 | Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 32% | idle | PR #3306 mergetty |
-| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 64% | running | — |
+| Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 66% | idle | — |
 | Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 36% | idle | PR #3324 mergetty |
-| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 59% | idle | — |
+| Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 64% | running | — |
 | Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 36% | idle | — |
-| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 64% | idle | — |
+| Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 62% | idle | — |
 | Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 39% | idle | PR #3307 mergetty |
 | Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 9% | idle | nollattu |
-| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | **70%** | idle | **YLITTI 70 % — ilmoitettu Fablelle** |
+| Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 7% | idle | nollattu (70→7) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
@@ -94,10 +94,10 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 35 % (nollautui 14:00, seur. nollaus 18:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 25 %.** **Viikko (Fable):** 18 %.
-- **Levy:** 161 Gt vapaana (raja 80/75/70 Gt — kaukana). **Muistipaine: normal (1)** — swap-Gt ei enää seurata absoluuttisena rajana (uusi Fable-sääntö 16:33). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 14 kpl.
-- **Simulaattorit boottina:** 1 (natiiviseppa-iPhone — max 4 päivällä). coreaudiod 5 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
-- **Konteksti:** Postivahti (self) 85 %, Fable 83 %, Karttaseppä 70 % (ylitys, ilmoitettu), Laitetestaaja 64 %, Natiiviseppä 64 %, Linssiseppä 59 %, Siirtoseppä 39 %, Sisältökirjuri 36 %, Natiivi-UI 36 %, Julkaisija 32 %, Pelikoodari 9 %.
+- **5 h -kiintiö:** 39 % (nollautui 14:00, seur. nollaus 18:59 EEST). extraUsage pois päältä. **Viikko (kaikki mallit): 27 %.** **Viikko (Fable):** 19 %.
+- **Levy:** 165 Gt vapaana (raja 80/75/70 Gt — kaukana). **Muistipaine: normal (1).** **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 15 kpl.
+- **Simulaattorit boottina:** 2 (iPhone 18 Pro, natiiviseppa-iPhone — max 4 päivällä). coreaudiod 6 %. **Chrome-GPU-prosesseja (type=gpu-process):** 0.
+- **Konteksti:** Postivahti (self) 88 %, Fable 86 %, Natiiviseppä 66 %, Linssiseppä 64 %, Laitetestaaja 62 %, Sisältökirjuri 36 %, Natiivi-UI 36 %, Siirtoseppä 39 %, Julkaisija 32 %, Pelikoodari 9 %, Karttaseppä 7 % (nollattu).
 - **Juna:** yhä tauolla (Karttasepän poltto 26.–27.9.) — ei hälytystä, tarkoituksellinen.
 - **Postilaatikko:** ei uutta (kärki päivitetty). **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku 11).
 - **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja tällä kierroksella.
