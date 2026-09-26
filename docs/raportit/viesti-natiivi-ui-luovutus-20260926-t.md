@@ -76,3 +76,10 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
 - 18.5x Fablen käskystä blink-korjaus suoraan PR-haaraan proto/natiivi-ui/pulu-karttavaisto-20260926 @ c39797f9 (Sano →
   LopetaKarttavaisto; väistön esto puheessa oli jo Rauhallinen()-ehdossa). Todennettu 1bb07c50, PR-kommentti #issuecomment-5847662240.
   Merge-pyyntö Natiivisepälle 1.0.26. Paikallinen haara natiivi-ui/pulu-karttavaisto (wt/proto-natiivi-ui-nostot).
+- 19.4x löydökset 169 + 170b (Fable 19.3x, raportti a3f42eb2a): `natiivi-ui/maakunnat-kaikki` e45f9b90 (juna 31e3cbd4):
+  169 Kaikki-rivi Pois-rivin jälkeen (ISO:kaikki; valittuna kun ei valintaa eikä Pois; välilehti auki → täyttö ilman korostusta,
+  MaakunnatSilta; ei tallennu). 170b luonnehdinnan kuvapaikka aina (paikkakuva: vaalea ruutu + himmeä taitekartta-ikoni;
+  paketissa kuva puuttuu 2331/2541 maakunnalta). Käännetty b9fd4936, ei poikkeuksia; kuvasarja
+  proto-3d/lokit/natiivi-ui-loydos169-170b/kuvasarja-169-170b.png (Kaikki | Athos kuvalla | Alba paikkakuvalla).
+  AVOIN: merge-pyyntö Natiivisepälle ja kuvasarja Fablelle LÄHETTÄMÄTTÄ (istuntojen viestiraja 10, odottaa omistajan viestiä).
+- 18.5x pulun blink-korjauksen rivi Fablelle jäi myös lähettämättä (sama raja); Natiiviseppä sai merge-pyynnön.
