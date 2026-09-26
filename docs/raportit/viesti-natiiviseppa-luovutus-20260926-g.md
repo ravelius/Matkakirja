@@ -165,3 +165,8 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   natiiviseppa-skriptit/huntu.sh) + natiivi-ui/elava-kartussi d525ec5e (laitteella todennettu, lepo 0). Seuraavaksi
   linssiseppa/elava-kartta (8e5eef7c+), kun Linssiseppä ilmoittaa simulaattorikuvat. Huom Linssisepälle: pelaajan oma maa ei ole
   hunnun alla → saapumismaan kuivuminen näkyy vain, jos Varitaso peittää sen.
+- KOHTA 1 OSA 3 SOVITTU Siirtosepän kanssa 06.0x: StreamingAssets/sisalto/tilannekuva/ (osoitin.json, hakemisto.json, tiedostot/<sha256>),
+  tiedostot kaupungit, reitit, maarajat, aluenimet, ui-tekstit. Siirtoseppä: lukupuoli (PakettiPaivitys/Valitse) + node-työkalu
+  tools/vienti/tilannekuva.mjs --versio N --ulos <kansio> (Matkakirja-repo). NATIIVISEPPÄ: buildivaihe laattapaketin tapaan (ei gitiin;
+  Build/tilannekuva/ käännöksen alussa uusin.jsonin versiolla → Data/Raw/sisalto/tilannekuva/ PostProcessBuildissa, ks.
+  LaattapakettiRakennus.Varmista/KopioiBuildiin) + maamaa.geojson Mukana-kansioon (Maaraja lukee sen; ei paketissa). 1.48 kuitattu ok.
