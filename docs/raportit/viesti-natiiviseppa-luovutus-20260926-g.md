@@ -142,3 +142,9 @@ NATIIVISEPÄN TOTEUTETTAVAT:
 3. `PalloKierto.SaapuminenAlkaa(float kestoS)` + `SaapuminenPaattyi` -tapahtumat AjaSaapumisnakymaan-ajon ympärille
    (PalloKierto.cs ~1167); kamera pysyy Natiivisepällä.
 Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
+- **Klo 05.3x elävän kartan saapumisen pallopuoli koodattu**: natiiviseppa/elava-saapuminen **98d0db40** (wt/proto-natiiviseppa-loydos46,
+  juna bbb8583b:n päällä, unity-tarkistus 0): 013499fd MaaKartta/NostoKerros.Saapuminen + PalloKierto.SaapuminenAlkaa/Paattyi;
+  98d0db40 Varitaso.Paljastus/PaljastusPois (tee_tileset.py → kaaviot generoitu, Napakansi.shader, komento `huntu paljastus`).
+  Käännöspalvelu käännöksessä 05.3x (shadergraphin käännös todentamatta ennen sitä). SEURAAVAKSI: simulaattorikuva
+  `huntu paljastus 37.98 23.73 150 40` (Ateena) Kreikassa → kuva Linssisepälle/Fablelle → merge Linssisepän
+  linssiseppa/elava-saapuminen -haaran kanssa.
