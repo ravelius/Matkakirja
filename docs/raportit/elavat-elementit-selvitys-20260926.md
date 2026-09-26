@@ -21,6 +21,17 @@ elävällä kerroksella (161-B).*
    30 fps:llä; erikoismalli ≤ 3 000 kolmiota; eläin ≤ 500 kolmiota ja ≤ 8 yksilöä ruudulla; koko kerros ≤ 0,5 ms.
    Animaatio on kappaleiden kiertoa, kärkivarjostin tai splinellä liikkuvaa. Luurankoa ei käytetä.
 
+7. **Vaihtelu ja tauot (omistaja 16.5x, sitova):** ei monotoniaa, joten tasaista looppia ei ole. Jokaisella yksilöllä on oma
+   siemenellä toistettava aikataulu (Ydin/Elava/Vaihtelu): käynti ja tauko vuorottelevat, siirtymät ovat pehmeitä
+   (hidastus 3 s, kiihdytys 4 s), ja käynnin aikana nopeus vaihtelee puuskina. Esimerkit:
+   - karuselli käy 60–150 s ja seisoo 20–60 s
+   - myllyt vaihtelevat ±35 % puuskissa, ja joskus yksi seisoo 25–70 s
+   - laiva odottaa laiturissa
+   - eläinjono pysähtyy välillä
+   Kun mikään ei liiku, myös elävä kerros pysähtyy (0 kehystä).
+8. **Maakontakti (omistaja 16.5x):** jokainen aihe istuu maassa. Sen alla on pehmeäreunainen maapohja ja pehmeä varjo,
+   eikä aihe leiju.
+
 ## Ideat
 
 | Kaupunki | Mikä liikkuu | Sykli | Malli ja kolmiot | Miksi ei sekava |
