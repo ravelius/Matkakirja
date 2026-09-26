@@ -89,12 +89,15 @@ namespace Matkakirja
         // Fablen 20.1x:n jäädytys oli väliaikainen; purettu, kun kehys ≤ 16 ms (kehyksen hinta -erä): syke on taas jatkuva
         // 30 fps:llä webin mukaan (natiiviseppa/kehys-hinta-1: portin piilotetut suotimet ja laattojen alpha-testi pois,
         // iPad Pro 13:n staattinen kehys 14,1 ms; docs/raportit/kehyksen-hinta-20260925.md).
+        // FABLEN PÄÄTÖS 26.9. (build 18, Laitetestaajan b17-löydös S1): jäädytys TAKAISIN. Jatkuva syke piti nostomerkkien
+        // hehkun (löydös 125, UI-kerros 12) likaisena 230/244 kehyksessä, joten lepopiirto ei toteutunut (150/150 piirretty,
+        // build 16:ssa 2–3/151). Omistajan sääntö "levossa ei piirtoa" on sitova; sama lepoehto koskee lippuja (144).
 
         /// <summary>
-        /// Jäädytyksen kytkin (oletus): tosi = idle-animaatiot pysähtyvät levossa keskiasentoon, epätosi = jatkuva syke
-        /// (oletus kehyksen hinta -erästä alkaen). Ajossa Joutosyke.Jaatyy (komento syke jaatyy|jatkuva|tila).
+        /// Jäädytyksen kytkin (oletus): tosi = idle-animaatiot pysähtyvät levossa keskiasentoon (oletus, Fable 26.9.),
+        /// epätosi = jatkuva syke. Ajossa Joutosyke.Jaatyy (komento syke jaatyy|jatkuva|tila).
         /// </summary>
-        public const bool SykeJaatyy = false;
+        public const bool SykeJaatyy = true;
         /// <summary>Lepo ennen jäädytystä (s viimeisestä aidosta aktiivisuudesta).</summary>
         public const float SykeLepoS = 3f;
         /// <summary>Liuku keskiasentoon ja takaisin täyteen sykkeeseen (s).</summary>

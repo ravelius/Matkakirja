@@ -31,6 +31,16 @@
 //                                      −1 vain avplayer-polulla (tasoa ei saada) → Unityn varakuvio
 //   MatkakirjaRadio_Huippu()           sama huippuarvosta (|näyte| max), vaimennus ~1 s
 //   MatkakirjaRadio_Rms()              raaka lineaarinen RMS 0…1 (~30 ms), ei tasoitusta (VuMittari tasoittaa)
+//   MatkakirjaRadio_Esikuuntele(url)   seuraavan aseman yhteys valmiiksi (ks. ESIKUUNTELU); NULL = pois
+//
+// ESIKUUNTELU (Raamattu ESILATAUSPOLITIIKKA kohta 6: "radiossa nykyinen ja seuraava asema puskuroituna"; Linssiseppä
+// 26.9.2026 Natiivisepän ehdoin, build 18): toinen MKVirta yhdistää ja JÄSENTÄÄ paketit renkaaseen (enintään
+// EsikuuntelunRengasS), mutta ei muunna eikä ajasta: moottoriin ja soittimeen se ei koske. Avaa samalla osoitteella
+// ottaa yhteyden ja renkaan käyttöön, syöttää renkaan muuntimelle kerralla, ja soitto alkaa heti ilman yhdistämistä ja
+// alkupuskurointia. Esikuuntelua on yksi kerrallaan (uusi korvaa vanhan); Avaa toisella osoitteella, tauko ja
+// EsikuuntelunKattoS ilman käyttöönottoa sulkevat sen; HLS ja muu kuin http(s) eivät esikuuntele. Sulje EI sulje
+// esikuuntelua, koska RadioLinssi kutsuu Sulje-Avaa-parin asemaa vaihtaessaan. Virhe esikuuntelussa (HTTP, muoto,
+// katkos) vain luopuu siitä: varapolulle mennään vasta, kun asema oikeasti avataan.
 //
 // SÄIKEET
 //   Pääsäie (Unity) vain lukee atomisia muuttujia ja lähettää käskyt dispatch_asyncilla sarjajonoon
@@ -63,6 +73,7 @@
 #include <mach/mach_time.h>
 #include <atomic>
 #include <cmath>
+#include <deque>
 #include <vector>
 
 #if !__has_feature(objc_arc)
@@ -190,6 +201,19 @@ static std::atomic<bool> testiMykka(false);
 
 static const OSStatus kEiDataa = 'mkEd';   // syötekutsu: tämän erän paketit on annettu
 
+// ---- Esikuuntelu (ks. otsikko) ----
+static const double EsikuuntelunRengasS = 4.0;   // renkaan pituus (Natiivisepän ehto: enintään ~4 s)
+static const double EsikuuntelunKattoS = 60.0;   // käyttämätön esikuuntelu suljetaan (ei ikuisia taustavirtoja)
+static std::atomic<long> esikuuntelustaAvattu(0);  // diagnoosi: montako asemaa avattiin esikuuntelusta
+
+// Yksi jäsennetty paketti renkaassa (kuvauksen mStartOffset 0 omassa datassaan).
+struct MKPaketti
+{
+    std::vector<uint8_t> data;
+    AudioStreamPacketDescription kuvaus;
+    double kesto;
+};
+
 // Ajastettujen puskurien laskuri yhtä soittokertaa kohti: valmistumiskutsut vähentävät omaa laskuriaan,
 // joten soitinsolmun stop (joka kutsuu vanhojen puskurien valmistumiset) ei sotke uutta laskentaa.
 @interface MKLaskuri : NSObject
@@ -218,6 +242,12 @@ static const OSStatus kEiDataa = 'mkEd';   // syötekutsu: tämän erän paketit
     double kynnys;                  // soiton aloituskynnys s: 1,5, jokainen alivuoto +1 (enintään 4)
     std::atomic<bool> suljettu, aaniKuultu;
     std::atomic<long> tavut, pudotetut, alivuodot, muunnosvirheet;
+    // Esikuuntelu: jäsennys renkaaseen ilman muunnosta ja ajastusta. Rengas vain jonossa; atomit pääsäikeen kuvaukseen.
+    std::atomic<bool> esikuuntelu;
+    std::deque<MKPaketti> rengas;
+    double renkaanKesto;
+    std::atomic<double> renkaanSek;
+    std::atomic<long> renkaanPaketit;
 }
 @property (nonatomic, strong) NSURL* osoite;
 @property (nonatomic, strong) NSURLSession* istunto;
@@ -234,6 +264,7 @@ static const OSStatus kEiDataa = 'mkEd';   // syötekutsu: tämän erän paketit
 // Pääsäie
 @property (nonatomic) int polku;       // 0 ei virtaa, 1 engine, 2 avplayer
 @property (nonatomic, strong) MKVirta* virta;
+@property (nonatomic, strong) MKVirta* esikuuntelija;   // esikuuntelu (ks. otsikko), muuten nil
 @property (nonatomic) uint64_t seuraavaTunnus;
 @property (nonatomic, strong) AVPlayer* soitin;
 @property (nonatomic, strong) id loppuTarkkailija;
@@ -315,6 +346,37 @@ static void OminaisuusKutsu(void* asiakas, AudioFileStreamID, AudioFileStreamPro
         [[MatkakirjaRadio jaettu] muotoValmis:(__bridge MKVirta*)asiakas];
 }
 
+// Esikuuntelu: paketit renkaaseen (kopio), vanhimmat pois, kun rengas ylittää EsikuuntelunRengasS. Jonossa.
+static void Talleta(MKVirta* v, UInt32 paketteja, const void* data, const AudioStreamPacketDescription* kuvaukset)
+{
+    const AudioStreamBasicDescription& m = v->sisaanMuoto;
+    double taajuus = m.mSampleRate > 0 ? m.mSampleRate : 44100.0;
+    for (UInt32 i = 0; i < paketteja; i++)
+    {
+        const AudioStreamPacketDescription& k = kuvaukset[i];
+        if (k.mDataByteSize == 0) continue;
+        MKPaketti p;
+        const uint8_t* alku = (const uint8_t*)data + k.mStartOffset;
+        p.data.assign(alku, alku + k.mDataByteSize);
+        p.kuvaus = k;
+        p.kuvaus.mStartOffset = 0;
+        UInt32 kehyksia = k.mVariableFramesInPacket > 0 ? k.mVariableFramesInPacket
+            : m.mFramesPerPacket > 0 ? m.mFramesPerPacket : 1152;
+        p.kesto = kehyksia / taajuus;
+        v->renkaanKesto += p.kesto;
+        v->rengas.push_back(std::move(p));
+    }
+    while (!v->rengas.empty() && v->renkaanKesto - v->rengas.front().kesto >= EsikuuntelunRengasS)
+    {
+        v->renkaanKesto -= v->rengas.front().kesto;
+        v->rengas.pop_front();
+    }
+    v->renkaanSek.store(v->renkaanKesto);
+    v->renkaanPaketit.store((long)v->rengas.size());
+}
+
+static void Muunna(MKVirta* v, UInt32 paketteja, const void* data, AudioStreamPacketDescription* kuvaukset);
+
 static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const void* data,
                          AudioStreamPacketDescription* kuvaukset)
 {
@@ -330,6 +392,14 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
         for (UInt32 i = 0; i < paketteja; i++) tehdyt[i] = { (SInt64)i * koko, 0, koko };
         kuvaukset = tehdyt.data();
     }
+    // Esikuuntelu ei muunna eikä ajasta (Natiivisepän ehto 3): paketit vain talteen.
+    if (v->esikuuntelu.load()) { Talleta(v, paketteja, data, kuvaukset); return; }
+    Muunna(v, paketteja, data, kuvaukset);
+}
+
+// Paketit Float32-puskureiksi ja ajastukseen (soiva virta). Jonossa.
+static void Muunna(MKVirta* v, UInt32 paketteja, const void* data, AudioStreamPacketDescription* kuvaukset)
+{
     MKSyote s = { (const uint8_t*)data, kuvaukset, paketteja, 0, v->sisaanMuoto.mChannelsPerFrame, {} };
     AVAudioChannelCount kanavia = v.ulosMuoto.channelCount;
     std::vector<uint8_t> tila(offsetof(AudioBufferList, mBuffers) + sizeof(AudioBuffer) * kanavia);
@@ -379,6 +449,10 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
         alivuodot.store(0);
         muunnosvirheet.store(0);
         kynnys = 1.5;
+        esikuuntelu.store(false);
+        renkaanKesto = 0;
+        renkaanSek.store(0);
+        renkaanPaketit.store(0);
     }
     return self;
 }
@@ -393,6 +467,10 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
     if (jasennin != NULL) { AudioFileStreamClose(jasennin); jasennin = NULL; }
     if (muunnin != NULL) { AudioConverterDispose(muunnin); muunnin = NULL; }
     self.kesken = nil;
+    rengas.clear();
+    renkaanKesto = 0;
+    renkaanSek.store(0);
+    renkaanPaketit.store(0);
 }
 
 - (void)dealloc
@@ -484,12 +562,19 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
     if (self.varaSyy == nil && !muotoValmis && tavut.load() > 256 * 1024)
         self.varaSyy = @"AudioFileStream ei tunnista muotoa (256 kt)";
     if (self.varaSyy != nil) { [radio varapolku:self syy:self.varaSyy]; return; }
-    [radio tarkista];
+    if (!esikuuntelu.load()) [radio tarkista];   // esikuuntelu ei koske soittimen tilakoneeseen
 }
 
 - (void)URLSession:(NSURLSession*)istunto task:(NSURLSessionTask*)tehtava didCompleteWithError:(NSError*)virhe
 {
     if (suljettu.load()) return;
+    if (esikuuntelu.load())
+    {
+        // Esikuuntelun katkos: vain luovutaan (Avaa avaa aseman tavalliseen tapaan).
+        NSLog(@"MATKAKIRJA radio: esikuuntelu päättyi (%@): %@", virhe.localizedDescription ?: @"yhteys päättyi", self.osoite);
+        [self vapauta];
+        return;
+    }
     if (!aaniKuultu.load())
     {
         [[MatkakirjaRadio jaettu] varapolku:self syy:virhe
@@ -562,6 +647,23 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
     self.nayttoTaso = 0;
     self.nayttoHuippu = 0;
     self.varaSyy = nil;
+    MKVirta* esi = self.esikuuntelija;
+    if (esi != nil)
+    {
+        self.esikuuntelija = nil;
+        if (!esi->suljettu.load() && [esi.osoite.absoluteString isEqualToString:osoite])
+        {
+            // Esikuunneltu asema: yhteys ja renkaan paketit käyttöön heti (otaKayttoon jonossa).
+            esikuuntelustaAvattu.fetch_add(1);
+            self.virta = esi;
+            self.polku = 1;
+            tilaSana.store((esi->tunnus << 8) | 1);
+            dispatch_async(RadioJono(), ^{ [self otaKayttoon:esi]; });
+            return;
+        }
+        esi->suljettu.store(true);   // toinen asema: esikuuntelu ei enää palvele
+        dispatch_async(RadioJono(), ^{ [esi vapauta]; });
+    }
     NSString* skeema = url.scheme.lowercaseString;
     NSString* polku = url.path.lowercaseString ?: @"";
     if (!([skeema isEqualToString:@"http"] || [skeema isEqualToString:@"https"]))
@@ -606,6 +708,107 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
     self.nykyinen = v;
     v->alku = CACurrentMediaTime();
     [self istuntoKuntoon];
+    [self yhdista:v];
+    [self varmistaAjastin];
+}
+
+// ---- Esikuuntelu (ks. otsikko) ----
+
+static BOOL EnginePolulle(NSURL* url, NSString* osoite)
+{
+    NSString* skeema = url.scheme.lowercaseString;
+    NSString* polku = url.path.lowercaseString ?: @"";
+    if (!([skeema isEqualToString:@"http"] || [skeema isEqualToString:@"https"])) return NO;
+    return !([polku hasSuffix:@".m3u8"] || [polku hasSuffix:@".m3u"] || [osoite.lowercaseString containsString:@".m3u8"]);
+}
+
+// Pääsäie. Sama osoite kuin soiva tai esikuunneltava: ei mitään. HLS ja ei-http: ei esikuuntelua.
+- (void)esikuuntele:(NSString*)osoite
+{
+    MKVirta* vanha = self.esikuuntelija;
+    if (osoite.length == 0) { [self suljeEsikuuntelu]; return; }
+    if (vanha != nil && !vanha->suljettu.load() && [vanha.osoite.absoluteString isEqualToString:osoite]) return;
+    if (self.virta != nil && [self.virta.osoite.absoluteString isEqualToString:osoite]) return;
+    [self suljeEsikuuntelu];
+    NSURL* url = [NSURL URLWithString:osoite];
+    if (self.tauolla || url == nil || !EnginePolulle(url, osoite)) return;
+    MKVirta* v = [MKVirta new];
+    v->tunnus = ++self.seuraavaTunnus;
+    v->esikuuntelu.store(true);
+    v.osoite = url;
+    self.esikuuntelija = v;
+    dispatch_async(RadioJono(), ^{ [self aloitaEsikuuntelu:v]; });
+    __weak MatkakirjaRadio* heikko = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(EsikuuntelunKattoS * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        MatkakirjaRadio* r = heikko;
+        if (r != nil && r.esikuuntelija == v)
+        {
+            NSLog(@"MATKAKIRJA radio: esikuuntelu suljettu käyttämättömänä (%.0f s): %@", EsikuuntelunKattoS, v.osoite);
+            [r suljeEsikuuntelu];
+        }
+    });
+}
+
+// Pääsäie.
+- (void)suljeEsikuuntelu
+{
+    MKVirta* v = self.esikuuntelija;
+    if (v == nil) return;
+    self.esikuuntelija = nil;
+    v->suljettu.store(true);
+    dispatch_async(RadioJono(), ^{ [v vapauta]; });
+}
+
+// Jono: yhteys ilman ääni-istuntoa, moottoria ja tilakoneen ajastinta.
+- (void)aloitaEsikuuntelu:(MKVirta*)v
+{
+    if (v->suljettu.load()) return;
+    v->alku = CACurrentMediaTime();
+    [self yhdista:v];
+}
+
+// Jono: esikuunneltu virta soivaksi. Moottori valmiiksi ja rengas kerralla muuntimelle; tilakone aloittaa soiton,
+// kun kynnys täyttyy (rengas on jo sitä pidempi), eikä yhdistämistä eikä alkupuskurointia odoteta.
+- (void)otaKayttoon:(MKVirta*)v
+{
+    if (v->suljettu.load()) return;
+    v->esikuuntelu.store(false);
+    self.nykyinen = v;
+    v->alku = CACurrentMediaTime();
+    [self istuntoKuntoon];
+    long paketteja = 0;
+    double sekunteja = v->renkaanKesto;
+    if (v->muotoValmis && v.ulosMuoto != nil && v->muunnin != NULL)
+    {
+        [self valmisteleMoottori:v.ulosMuoto];
+        std::vector<uint8_t> data;
+        std::vector<AudioStreamPacketDescription> kuvaukset;
+        kuvaukset.reserve(v->rengas.size());
+        for (const MKPaketti& p : v->rengas)
+        {
+            AudioStreamPacketDescription k = p.kuvaus;
+            k.mStartOffset = (SInt64)data.size();
+            data.insert(data.end(), p.data.begin(), p.data.end());
+            kuvaukset.push_back(k);
+        }
+        paketteja = (long)kuvaukset.size();
+        if (paketteja > 0) Muunna(v, (UInt32)paketteja, data.data(), kuvaukset.data());
+    }
+    v->rengas.clear();
+    v->renkaanKesto = 0;
+    v->renkaanSek.store(0);
+    v->renkaanPaketit.store(0);
+    double ajastettu = self.laskuri != nil && self.liitettyMuoto.sampleRate > 0
+        ? self.laskuri->jonossa.load() / self.liitettyMuoto.sampleRate : 0;
+    NSLog(@"MATKAKIRJA radio: esikuuntelu käyttöön: %ld pakettia (%.1f s) renkaasta, ajastettu %.2f s, moottori %@, %@",
+          paketteja, sekunteja, ajastettu, self.moottori.isRunning ? @"käy" : @"seis", v.osoite);
+    [self varmistaAjastin];
+    [self tarkista];
+}
+
+// Jono: URLSession-datatehtävä virralle (soiva tai esikuuntelu).
+- (void)yhdista:(MKVirta*)v
+{
     NSURLSessionConfiguration* asetukset = [NSURLSessionConfiguration ephemeralSessionConfiguration];
     asetukset.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
     asetukset.URLCache = nil;
@@ -618,15 +821,18 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
     pyynto.timeoutInterval = 8;   // ei Icy-MetaData-otsaketta: puhdas ääni
     v.tehtava = [v.istunto dataTaskWithRequest:pyynto];
     [v.tehtava resume];
-    if (self.ajastin == nil)
-    {
-        dispatch_source_t a = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, RadioJono());
-        dispatch_source_set_timer(a, dispatch_time(DISPATCH_TIME_NOW, 100 * NSEC_PER_MSEC), 100 * NSEC_PER_MSEC, 20 * NSEC_PER_MSEC);
-        __weak MatkakirjaRadio* heikko = self;
-        dispatch_source_set_event_handler(a, ^{ [heikko tarkista]; });
-        dispatch_resume(a);
-        self.ajastin = a;
-    }
+}
+
+// Jono: tilakoneen 100 ms ajastin soivalle virralle.
+- (void)varmistaAjastin
+{
+    if (self.ajastin != nil) return;
+    dispatch_source_t a = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, RadioJono());
+    dispatch_source_set_timer(a, dispatch_time(DISPATCH_TIME_NOW, 100 * NSEC_PER_MSEC), 100 * NSEC_PER_MSEC, 20 * NSEC_PER_MSEC);
+    __weak MatkakirjaRadio* heikko = self;
+    dispatch_source_set_event_handler(a, ^{ [heikko tarkista]; });
+    dispatch_resume(a);
+    self.ajastin = a;
 }
 
 - (void)pysayta:(MKVirta*)v
@@ -659,6 +865,13 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
 - (void)varapolku:(MKVirta*)v syy:(NSString*)syy
 {
     if (v->suljettu.load()) return;
+    if (v->esikuuntelu.load())
+    {
+        // Esikuuntelu ei vaihda soitinta: yhteys pois. Avaa menee tälle asemalle varapolulle vasta avattaessa.
+        NSLog(@"MATKAKIRJA radio: esikuuntelu luopui (%@): %@", syy, v.osoite);
+        [v vapauta];
+        return;
+    }
     NSURL* url = v.osoite;
     NSLog(@"MATKAKIRJA radio: varapolku AVPlayeriin (%@): %@", syy, url);
     [self pysayta:v];
@@ -713,7 +926,8 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
     v->kapasiteetti = kap < 2048 ? 2048 : kap;
     v->muotoValmis = true;
     v.muotoTeksti = [NSString stringWithFormat:@"%@ %.0f Hz %u kan", NeljaMerkkia(sisaan.mFormatID), sisaan.mSampleRate, (unsigned)sisaan.mChannelsPerFrame];
-    [self valmisteleMoottori:ulos];
+    // Esikuuntelu ei koske moottoriin: se valmistellaan käyttöönotossa (otaKayttoon).
+    if (!v->esikuuntelu.load()) [self valmisteleMoottori:ulos];
 }
 
 - (void)valmisteleMoottori:(AVAudioFormat*)muoto
@@ -1013,12 +1227,28 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
 {
     self.tauolla = paalle;
     taukoAtomi.store(paalle);
+    if (paalle) [self suljeEsikuuntelu];   // Natiivisepän ehto 4: tauko sulkee esikuuntelun
     if (self.polku == 2 && self.soitin != nil) { if (paalle) [self.soitin pause]; else [self.soitin play]; }
     MKVirta* v = self.virta;
     if (self.polku == 1 && v != nil) dispatch_async(RadioJono(), ^{ [self taukoJonossa:paalle virta:v]; });
 }
 
+// Pääsäie: esikuuntelun tila kuvaukseen (atomit).
+- (NSString*)esikuunteluTeksti
+{
+    MKVirta* e = self.esikuuntelija;
+    NSString* nyt = e == nil || e->suljettu.load() ? @"-"
+        : [NSString stringWithFormat:@"%@ %.1f s (%ld pakettia, %ld kt)", e.osoite.host ?: @"?", e->renkaanSek.load(),
+            e->renkaanPaketit.load(), e->tavut.load() / 1024];
+    return [NSString stringWithFormat:@"esikuuntelu %@, esikuuntelusta avattu %ld", nyt, esikuuntelustaAvattu.load()];
+}
+
 - (NSString*)kuvaus
+{
+    return [NSString stringWithFormat:@"%@, %@", [self kuvausIlmanEsikuuntelua], [self esikuunteluTeksti]];
+}
+
+- (NSString*)kuvausIlmanEsikuuntelua
 {
 #if TARGET_OS_IOS
     AVAudioSession* istunto = [AVAudioSession sharedInstance];
@@ -1103,6 +1333,12 @@ float MatkakirjaRadio_Huippu(void)
 void MatkakirjaRadio_Tauko(int paalle)
 {
     [[MatkakirjaRadio jaettu] tauko:paalle != 0];
+}
+
+// Seuraavan aseman esikuuntelu (RadioLinssi); NULL tai tyhjä = pois.
+void MatkakirjaRadio_Esikuuntele(const char* osoite)
+{
+    [[MatkakirjaRadio jaettu] esikuuntele:osoite != NULL ? [NSString stringWithUTF8String:osoite] : nil];
 }
 
 #ifdef MATKAKIRJA_RADIO_TESTI

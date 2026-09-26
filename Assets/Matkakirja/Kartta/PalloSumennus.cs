@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.RenderGraphModule;
 using UnityEngine.Rendering.RenderGraphModule.Util;
@@ -24,6 +25,11 @@ namespace Matkakirja
     ///
     /// UI Toolkit ei sumene: URP piirtää ruudun UI:n (overlay) takapuskuriin vasta
     /// loppuskaalauksen jälkeen täydellä resoluutiolla, ja tämä vaihe koskee vain kameran kuvaa.
+    ///
+    /// KAAPPAUS (löydös 132): <see cref="PyydaKaappaus"/> kopioi seuraavan piirretyn kehyksen sumennetun kuvan pieneen
+    /// RenderTextureen (<see cref="Kaappaus"/>) jälkikäsittelyn jälkeen (Filmipinon sävykartoitus ja bloom mukana),
+    /// jotta kokoruudun kuvan ajaksi pallon kamera voidaan sammuttaa ja UI näyttää pysäytyskuvan. Kuva on pienen
+    /// kuvan kokoinen (renderScale), joten muistia kuluu vähän; se on valmiiksi sumea, joten skaalaus ei näy.
     /// </summary>
     sealed class PalloSumennus
     {
@@ -35,6 +41,7 @@ namespace Matkakirja
         readonly Camera kamera;
         readonly Material materiaali;
         readonly Vaihe vaihe;
+        readonly Kaappausvaihe kaappausvaihe;
         UniversalRenderPipelineAsset asetus;
         float alkuperainenSkaala = -1f;
         UpscalingFilterSelection alkuperainenSuodin;
@@ -51,6 +58,28 @@ namespace Matkakirja
             this.kamera = kamera;
             this.materiaali = materiaali;
             vaihe = new Vaihe { materiaali = materiaali };
+            kaappausvaihe = new Kaappausvaihe();
+        }
+
+        /// <summary>Kaapattu sumea kuva (null ennen ensimmäistä kaappausta ja <see cref="VapautaKaappaus"/>-kutsun jälkeen).</summary>
+        public RenderTexture Kaappaus => kaappausvaihe.kuva;
+        /// <summary>Pyydetty kaappaus on kirjattu piirtoon (kuva on käytettävissä tästä kehyksestä alkaen).</summary>
+        public bool Kaapattu => kaappausvaihe.kaapattu;
+
+        /// <summary>Kopioi seuraavan piirretyn kehyksen kuvan <see cref="Kaappaus"/>-tekstuuriin (kerran).</summary>
+        public void PyydaKaappaus()
+        {
+            kaappausvaihe.kaapattu = false;
+            kaappausvaihe.pyydetty = true;
+            if (!kytketty) { RenderPipelineManager.beginCameraRendering += Ennen; kytketty = true; }
+        }
+
+        /// <summary>Pyyntö pois ja tekstuuri vapaaksi (UI on jo irrottanut sen).</summary>
+        public void VapautaKaappaus()
+        {
+            kaappausvaihe.pyydetty = false;
+            kaappausvaihe.kaapattu = false;
+            kaappausvaihe.Vapauta();
         }
 
         /// <summary>
@@ -94,6 +123,7 @@ namespace Matkakirja
         public void Palauta()
         {
             Paalla = false;
+            kaappausvaihe.pyydetty = false;
             if (kytketty) { RenderPipelineManager.beginCameraRendering -= Ennen; kytketty = false; }
             if (asetus != null && alkuperainenSkaala > 0f)
             {
@@ -106,9 +136,56 @@ namespace Matkakirja
 
         void Ennen(ScriptableRenderContext _, Camera c)
         {
-            if (c != kamera || !Paalla || vaihe.osuus <= 0f) return;
+            if (c != kamera) return;
             var data = c.GetUniversalAdditionalCameraData();
-            data?.scriptableRenderer?.EnqueuePass(vaihe);
+            if (Paalla && vaihe.osuus > 0f) data?.scriptableRenderer?.EnqueuePass(vaihe);
+            if (kaappausvaihe.pyydetty) data?.scriptableRenderer?.EnqueuePass(kaappausvaihe);
+        }
+
+        /// <summary>
+        /// Jälkikäsittelyn jälkeinen kopio pieneen sRGB-tekstuuriin (lineaarinen väriavaruus: kirjoitus koodaa, UI:n
+        /// näytteistys purkaa). Jos kuva menee jo suoraan takapuskuriin (ei välikuvaa), yritetään seuraavassa kehyksessä.
+        /// </summary>
+        sealed class Kaappausvaihe : ScriptableRenderPass
+        {
+            public bool pyydetty, kaapattu;
+            public RenderTexture kuva;
+            RTHandle kahva;
+
+            public Kaappausvaihe()
+            {
+                renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
+                requiresIntermediateTexture = true;
+            }
+
+            public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData)
+            {
+                var resurssit = frameData.Get<UniversalResourceData>();
+                if (!pyydetty || resurssit.isActiveTargetBackBuffer) return;
+                var kuvaus = frameData.Get<UniversalCameraData>().cameraTargetDescriptor;
+                int w = Mathf.Max(1, kuvaus.width), h = Mathf.Max(1, kuvaus.height);
+                if (kuva == null || kuva.width != w || kuva.height != h)
+                {
+                    Vapauta();
+                    kuva = new RenderTexture(w, h, GraphicsFormat.R8G8B8A8_SRGB, GraphicsFormat.None)
+                        { name = "Matkakirja pysäytyskuva", filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp };
+                    kuva.Create();
+                    kahva = RTHandles.Alloc(kuva);
+                }
+                var kohde = renderGraph.ImportTexture(kahva);
+                renderGraph.AddBlitPass(resurssit.activeColorTexture, kohde, Vector2.one, Vector2.zero, passName: "Matkakirja pysäytyskuva");
+                pyydetty = false;
+                kaapattu = true;
+                Debug.Log($"MATKAKIRJA pallo: pysäytyskuva kaapattu {w}×{h}");
+            }
+
+            public void Vapauta()
+            {
+                kahva?.Release();
+                kahva = null;
+                if (kuva != null) { kuva.Release(); Object.Destroy(kuva); }
+                kuva = null;
+            }
         }
 
         sealed class Vaihe : ScriptableRenderPass

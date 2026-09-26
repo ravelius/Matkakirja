@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
     {
         readonly UiKerros kerros;
         readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu, nimirivi;
+        /// <summary>Löydös 144: aaltoileva lippu (Natiiviseppä, Liput.Aaltoile); null = staattinen kuva.</summary>
+        Liput.Aalto aalto;
         readonly Button masto, radio;
         readonly Label nimi, alarivi, valtiomuoto;
         readonly VisualElement valtiomuotoRivi;
@@ -119,6 +121,7 @@ namespace Matkakirja.Natiivi
             float riviK = nimi.MeasureTextSize("Å", 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).y;
             if (float.IsNaN(riviK) || riviK <= 0) return;
             float nimiY = nimi.ChangeCoordinatesTo(kortti, Vector2.zero).y;
+            if (SovitaNimi(riviK)) return; // pienennetty: uusi asettelu kutsuu tämän uudelleen
 
             float lippuK = lippu.layout.height; // 0 = lippu piilossa (kiinni), tasataan avattaessa
             if (lippuK > 0) Aseta(lippu.style.marginTop, v => lippu.style.marginTop = v, Mathf.Max(0f, (riviK - lippuK) / 2f));
@@ -134,6 +137,36 @@ namespace Matkakirja.Natiivi
             }
             else if (nimirivi.style.paddingRight.keyword != StyleKeyword.Null)
                 nimirivi.style.paddingRight = StyleKeyword.Null;
+        }
+
+        // Löydös 143b (Laitetestaaja build 17, iPad): BOSNIA JA HERTSEGOVINA rivittyi kolmelle riville. Enintään kaksi riviä:
+        // fonttia ja harvennusta pienennetään 8 %:n askelin (enintään 25 %), kunnes nimi mahtuu; uusi maa palauttaa koon.
+        const int NimenRivitMax = 2;
+        const float NimenAskel = 0.92f, NimenMinimi = 0.75f;
+        float nimenKerroin = 1f, nimenFontti, nimenHarvennus;
+
+        void NollaaNimenSovitus()
+        {
+            nimenKerroin = 1f;
+            nimi.style.fontSize = StyleKeyword.Null;
+            nimi.style.letterSpacing = StyleKeyword.Null;
+        }
+
+        /// <summary>True, jos nimeä pienennettiin (kolme tai useampia rivejä riviK:n korkuisina).</summary>
+        bool SovitaNimi(float riviK)
+        {
+            float h = nimi.layout.height, w = nimi.contentRect.width;
+            if (float.IsNaN(h) || h <= 0f || float.IsNaN(w) || w <= 0f || nimenKerroin * NimenAskel < NimenMinimi) return false;
+            // Myös pisin sana yksinään riville (muuten UITK katkaisee sanan: "HERTSEGOVIN / A", Laitetestaaja b17).
+            float pisin = 0f;
+            foreach (var sana in (nimi.text ?? "").Split(' '))
+                if (sana.Length > 0) pisin = Mathf.Max(pisin, nimi.MeasureTextSize(sana, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x);
+            if (h <= riviK * (NimenRivitMax + 0.5f) && pisin <= w + 0.5f) return false;
+            if (nimenKerroin >= 1f) { nimenFontti = nimi.resolvedStyle.fontSize; nimenHarvennus = nimi.resolvedStyle.letterSpacing; }
+            nimenKerroin *= NimenAskel;
+            nimi.style.fontSize = nimenFontti * nimenKerroin;
+            nimi.style.letterSpacing = nimenHarvennus * nimenKerroin;
+            return true;
         }
 
         /// <summary>Asettaa pituuden vain, kun se muuttuu yli 0,5 pt (GeometryChanged ei jää kiertämään).</summary>
@@ -168,6 +201,7 @@ namespace Matkakirja.Natiivi
 
         void Seuraa()
         {
+            if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu) && lippu.resolvedStyle.width > 0f; // löydös 144
             string uusi = TodellinenMaa();
             // Testimaa (ui kartuscha ISO) raukeaa, kun pelaajan todellinen maa vaihtuu (matka, uusi peli): muuten
             // testin KREIKKA jäi kartalle Lontooseen ja lennolle (Laitetestaaja 24.9., 161fa35).
@@ -193,18 +227,21 @@ namespace Matkakirja.Natiivi
         void Tayta(MaaTiedot m)
         {
             nimi.text = (m.Nimi ?? m.Iso3).ToUpperInvariant();
+            NollaaNimenSovitus();
             string vm = m.Valtiomuoto;
             alarivi.text = string.IsNullOrEmpty(m.Paikallinen) && string.IsNullOrEmpty(vm) ? ""
                 : (m.Paikallinen ?? m.Nimi) + (string.IsNullOrEmpty(vm) ? "" : " · " + vm);
             alarivi.style.display = alarivi.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
 
             lippu.style.backgroundImage = StyleKeyword.None;
+            VapautaAalto();
             if (m.Lippu.Count > 0)
                 Kuvat.Hae(m.Lippu[0], t =>
                 {
                     if (t == null || iso != m.Iso3) return;
-                    lippu.style.backgroundImage = new StyleBackground(t);
-                    lippu.style.width = 18f * t.width / Mathf.Max(1, t.height);
+                    float lw = 18f * t.width / Mathf.Max(1, t.height);
+                    lippu.style.width = lw;
+                    AsetaLippu(t, lw, 18f);
                 }, "liput");
 
             // Valtiomuoto 1873 ilman "v. 1873" -päätettä (webin valtiomuoto1873).
@@ -415,13 +452,45 @@ namespace Matkakirja.Natiivi
             sisus.style.display = DisplayStyle.Flex;
             Asettele();
             AnimoiVertailut();
+            if (aalto != null) kortti.schedule.Execute(() => { if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu); }); // löydös 144
+            NollaaNimenSovitus(); // löydös 143b: avatun koko eri, sovitus uudelleen
             AukiMuuttui?.Invoke(true);
+        }
+
+        /// <summary>
+        /// Löydös 144 (omistaja: liput aaltoilemaan arvokkaasti kuin tuulessa): lippu Natiivisepän aaltovarjostimen
+        /// RenderTextureen (Liput.Aaltoile, pikseleinä UI-koko × paneelin skaala). RT:n reunoilla on Liput.Reuna-marginaali
+        /// (lippu 92 %), joten elementti skaalataan 1 / 0,92:lla (scale ei muuta asettelua, TasaaNimirivi ennallaan).
+        /// Aalto piirtyy vain, kun lippu näkyy (Seuraa: Nakyy); ilman aaltoa staattinen kuva kuten ennen.
+        /// </summary>
+        void AsetaLippu(Texture2D t, float leveys, float korkeus)
+        {
+            float k = 1f / (1f - 2f * Liput.Reuna), px = Mathf.Max(1f, UiKerros.PikseliaPisteessa);
+            aalto = Liput.Aaltoile(t, Mathf.CeilToInt(leveys * k * px), Mathf.CeilToInt(korkeus * k * px));
+            if (aalto?.Kuva == null) { VapautaAalto(); lippu.style.backgroundImage = new StyleBackground(t); return; }
+            aalto.Paivittyi += lippu.MarkDirtyRepaint;
+            aalto.Nakyy = Rakenne.Naytetaan(lippu);
+            lippu.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(aalto.Kuva));
+            lippu.style.scale = new Scale(new Vector2(k, k));
+            lippu.style.borderTopWidth = lippu.style.borderBottomWidth = lippu.style.borderLeftWidth = lippu.style.borderRightWidth = 0f; // aaltoileva lippu ilman jäykkää kehystä
+        }
+
+        void VapautaAalto()
+        {
+            if (aalto == null) return;
+            aalto.Paivittyi -= lippu.MarkDirtyRepaint;
+            Liput.Vapauta(aalto);
+            aalto = null;
+            lippu.style.scale = StyleKeyword.Null;
+            lippu.style.borderTopWidth = lippu.style.borderBottomWidth = lippu.style.borderLeftWidth = lippu.style.borderRightWidth = StyleKeyword.Null;
         }
 
         public void Sulje()
         {
             if (!auki) return;
             auki = false;
+            if (aalto != null) aalto.Nakyy = false; // löydös 144: ei aaltoa kiinni
+            NollaaNimenSovitus(); // löydös 143b
             sijatAuki = false;
             tilastot.RemoveFromClassList("mk-sijat-auki");
             kortti.RemoveFromClassList("mk-auki");

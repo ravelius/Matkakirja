@@ -22,6 +22,8 @@ namespace Matkakirja.Linssit.Testit
         public void Avaa(string url, string tyyppi) { Loki.Add("avaa " + tyyppi); Auki = url; Kuuluu = false; Virhe = null; }
         public void Sulje() { Loki.Add("sulje"); Auki = null; Kuuluu = false; }
         public void Tauko(bool p) => Loki.Add("tauko " + p);
+        public string Esikuunneltu;
+        public void Esikuuntele(string url) { Loki.Add("esikuuntele " + (url ?? "-")); Esikuunneltu = url; }
     }
 
     public sealed class ValeViritin : IViritin
@@ -456,6 +458,89 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(l.MaanAsema("FIN") != null && l.MaanAsema("XXX") == null, "kartuscha");
             // Asemanvaihto: vanha virta suljetaan, viritys jatkuu.
             Oleta.Tosi(v.Loki.Count(x => x == "sulje") >= 2, "vanhat virrat suljettu");
+        }
+
+        // ---- Esikuuntelu (ESILATAUSPOLITIIKKA kohta 6: nykyinen ja seuraava asema puskuroituna) ----
+
+        static string AsemanOsoite(RadioLinssi l, string kaupunki) => S().MaanAsema(S().Kaupunki(kaupunki)?.Iso3)?.Url;
+
+        /// <summary>Soita asteikon kohta i lukitukseen asti (nopea asema).</summary>
+        static void Soita(RadioLinssi l, ValeYmparisto y, ValeVirta v, int i)
+        {
+            l.SoitaKaupunki(l.Asteikko[i]);
+            v.Kuuluu = true;
+            Aja(l, y, 3.2);
+            Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe, "soi");
+        }
+
+        [Testi] static void EsikuunteleeSeuraavanKunAsemaOnSoinutKolmeSekuntia()
+        {
+            var (l, y, v, w, k, tilat) = Luo();
+            int i = l.Asteikko.Count / 2;
+            Soita(l, y, v, i);   // soi ~0,6 s (lukitus 2,28 s + 0,32 s)
+            Aja(l, y, 2.0);
+            Oleta.Tosi(v.Esikuunneltu == null, "ei vielä: nykyinen puskuroi ensin yksin");
+            Aja(l, y, 0.6);
+            Oleta.Sama(AsemanOsoite(l, l.Asteikko[i + 1]), v.Esikuunneltu, "oletussuunta ylös asteikolla");
+            Oleta.Sama(v.Esikuunneltu, l.Esikuunneltu);
+            int ennen = v.Loki.Count(x => x.StartsWith("esikuuntele "));
+            Aja(l, y, 70);
+            Oleta.Sama(ennen, v.Loki.Count(x => x.StartsWith("esikuuntele ")), "kerran asemaa kohden, ei uudelleen 60 s:n jälkeen");
+        }
+
+        [Testi] static void SuuntaSeuraaViimeistaVaihtoaJaVaihtoEiSuljeEsikuuntelua()
+        {
+            var (l, y, v, w, k, tilat) = Luo();
+            int i = l.Asteikko.Count / 2;
+            Soita(l, y, v, i);
+            Soita(l, y, v, i - 1);   // alas asteikolla
+            Aja(l, y, 3.1);
+            string seuraava = AsemanOsoite(l, l.Asteikko[i - 2]);
+            Oleta.Sama(seuraava, v.Esikuunneltu, "suunta alas");
+            v.Loki.Clear();
+            l.SoitaKaupunki(l.Asteikko[i - 2]);
+            Oleta.Tosi(!v.Loki.Contains("esikuuntele -"), "vaihto esikuunneltuun ei sulje sitä ennen Avaa-kutsua: " + string.Join(", ", v.Loki));
+            Oleta.Sama(seuraava, v.Auki, "Avaa samalla osoitteella (liitännäinen ottaa esikuuntelun käyttöön)");
+            Oleta.Tosi(l.Esikuunneltu == null, "merkintä nollattu");
+        }
+
+        [Testi] static void TaukoKuumuusJaStopSulkevatEsikuuntelun()
+        {
+            var (l, y, v, w, k, tilat) = Luo();
+            Soita(l, y, v, 3);
+            Aja(l, y, 3.1);
+            Oleta.Tosi(v.Esikuunneltu != null, "esikuuntelu alkoi");
+            l.Tauko(true);
+            Oleta.Tosi(v.Esikuunneltu == null, "tauko sulkee");
+            l.Tauko(false);
+            Aja(l, y, 3.2);
+            Oleta.Tosi(v.Esikuunneltu != null, "jatkon jälkeen uudelleen");
+            bool kuuma = true;
+            l.EsikuunteluSallittu = () => !kuuma;
+            Aja(l, y, 0.1);
+            Oleta.Tosi(v.Esikuunneltu == null, "kuumuus sulkee");
+            kuuma = false;
+            Aja(l, y, 3.2);
+            Oleta.Tosi(v.Esikuunneltu != null, "viilennyttyä uudelleen");
+            l.Keskeyta();
+            Oleta.Tosi(v.Esikuunneltu == null, "STOP sulkee");
+        }
+
+        [Testi] static void VetoUusiiVanhentuneenEsikuuntelun()
+        {
+            var (l, y, v, w, k, tilat) = Luo();
+            Soita(l, y, v, 4);
+            Aja(l, y, 3.1);
+            string eka = v.Esikuunneltu;
+            Oleta.Tosi(eka != null, "esikuuntelu");
+            int ennen = v.Loki.Count(x => x.StartsWith("esikuuntele "));
+            l.VetoAlkaa();
+            Oleta.Sama(ennen, v.Loki.Count(x => x.StartsWith("esikuuntele ")), "tuore esikuuntelu jää");
+            l.VetoLoppuu(l.Asteikko[4]);
+            Aja(l, y, 61);
+            l.VetoAlkaa();
+            Oleta.Sama(ennen + 1, v.Loki.Count(x => x.StartsWith("esikuuntele ")), "60 s:n jälkeen veto uusii");
+            Oleta.Sama(eka, v.Esikuunneltu);
         }
     }
 }

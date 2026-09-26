@@ -7,7 +7,11 @@
 // VALO: kuoret lukevat valokeilan (KarttaKerrokset.PaaKeila, ToinenKeila, KeilanHamaryys) ja himmenevät sen ulkopuolella
 // kuten pallo, joten aamunkoitto ja hämärä pysyvät. SEUTU vaihtuu häivyttämällä vanha pois ennen uutta sävyä.
 // AJELEHTIMINEN maan akselin ympäri; aikahypyn pyörre katsekohteen ympäri. Vähennetty liike: ei avausta, ei liikettä.
+// AIKAHYPPY (erä 5): jakso on kahden virkkeen mittainen, ja tavallinen vaihto (vanha pois 1,25 s, uusi sisään 1,25 s)
+// söi siitä puolet, joten pyörre näkyi vain hetken. Pyörre tulee nopeasti (PyorreSisaanS), pyörii aluksi kiihkeästi
+// ja hidastuu kuin kelautuva kello (PyorreSyoksy, PyorreHidastusS) ja pysyy vähintään PyorreMinS seuraavan jakson alkuun.
 // Komento "sumu pois|paalle" (LinssiOhjain): kehysaikojen vertailu samasta jaksosta sumun kanssa ja ilman.
+// TAUKO (löydös 148): esityksen tauolla ajelehtiminen, pyörre ja häivytykset seisovat (oma kello), jatko jatkaa niitä.
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -22,9 +26,17 @@ namespace Matkakirja.Natiivi
         public const float SiirtymaS = 2.5f;
         /// <summary>Pilvien hämäryyden liuku (s) keilan hämäryyden perässä.</summary>
         public const float HamaraS = 1.5f;
+        /// <summary>Aikahypyn pyörre: vaihto sisään (vanha pois ja pyörre sisään kumpikin, s), vähimmäisnäkyvyys (s),
+        /// alun lisänopeus ajelehtimisen kerrannaisina ja sen hiipumisen aikavakio (s).</summary>
+        public const float PyorreSisaanS = 0.4f, PyorreMinS = 6f, PyorreSyoksy = 4f, PyorreHidastusS = 2.5f;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa() => Pois = false;
+
+        /// <summary>Esitys tauolla (IhmisenMatka2Tehosteet asettaa): sumu seisoo.</summary>
+        public bool Tauolla;
+        /// <summary>Sumun oma kello (s): etenee vain, kun esitys ei ole tauolla (pyörteen hidastus ja vähimmäisaika).</summary>
+        float kello;
 
         PalloKierto kierto;
         CesiumGeoreference georeferenssi;
@@ -33,6 +45,7 @@ namespace Matkakirja.Natiivi
         Pilvikuori seutu;
         bool avausPaalla;
         float avausVoima, seutuPeitto, seutuKulma, pyorreKulma, hamaryys;
+        float pyorreAlku = -1f;   // kun pyörre tuli näkyviin (sumun kello), muuten −1
         Sumukuva tavoite = Sumukuva.Ei, nyt = Sumukuva.Ei;
         string jaksoId;
 
@@ -78,12 +91,14 @@ namespace Matkakirja.Natiivi
         {
             avausPaalla = false;
             tavoite = Sumukuva.Ei;
+            pyorreAlku = -1f;   // loppu ei odota pyörteen vähimmäisaikaa
         }
 
-        void Update() => Paivita(Time.unscaledDeltaTime);
+        void Update() => Paivita(Tauolla ? 0f : Time.unscaledDeltaTime);
 
         void Paivita(float dt)
         {
+            kello += dt;
             bool vahennetty = LinssiOhjain.Instanssi != null && LinssiOhjain.Instanssi.VahennettyLiike;
             hamaryys = Mathf.MoveTowards(hamaryys, KarttaKerrokset.KeilanHamaryys, dt / HamaraS);
             // Keilat lasketaan vain, kun jokin kuori näkyy (Cesium-muunnokset).
@@ -118,20 +133,32 @@ namespace Matkakirja.Natiivi
             // SEUTU: vanha häipyy ennen uutta sävyä; sama sävy jatkuu katkeamatta.
             if (seutu == null) return;
             // Avauksen aikana ei seutusumua: kerrallaan enintään kaksi kuorta (Natiivisepän ehto: kevyt).
-            bool sama = Sama(nyt, tavoite);
-            float kohde = Pois || !sama || avausPaalla ? 0f : tavoite.Peitto;
-            seutuPeitto = Mathf.MoveTowards(seutuPeitto, kohde, dt / (SiirtymaS * 0.5f));
+            // Näkyvä pyörre pitää paikkansa vähimmäisajan, vaikka seuraava jakso jo alkoi.
+            bool pyorrePitaa = nyt.Pyorre && pyorreAlku >= 0f && kello - pyorreAlku < PyorreMinS;
+            bool sama = Sama(nyt, tavoite) || (pyorrePitaa && !Pois && !avausPaalla);
+            float kohde = Pois || !sama || avausPaalla ? 0f : (pyorrePitaa ? nyt.Peitto : tavoite.Peitto);
+            float vaihto = tavoite.Pyorre && !nyt.Pyorre || nyt.Pyorre && sama ? PyorreSisaanS : SiirtymaS * 0.5f;
+            seutuPeitto = Mathf.MoveTowards(seutuPeitto, kohde, dt / vaihto);
             if (!sama && seutuPeitto <= 0.001f)
             {
                 nyt = tavoite;
                 seutu.Savy(new Color(nyt.R, nyt.G, nyt.B, 1f));
                 seutuKulma += 137.5f;   // uusi seutu, uusi pilvikuvio
+                pyorreAlku = nyt.Pyorre ? kello : -1f;
+                // Pyörteen kierto on kameran katseen akselilla: seuraava seutu ei saa periä sitä (kuvio liukuisi
+                // kameran mukana). Vaihto tapahtuu peiton ollessa 0, joten nollaus ei näy.
+                if (!nyt.Pyorre) pyorreKulma = 0f;
             }
             seutu.Peitto(seutuPeitto);
             if (seutuPeitto <= 0.001f) return;
             if (!vahennetty)
             {
-                if (nyt.Pyorre) pyorreKulma += nyt.Ajelehtiminen * dt;
+                if (nyt.Pyorre)
+                {
+                    // Kelautuva kello: kiihkeä alku, joka hidastuu ajelehtimisen nopeuteen.
+                    float t = pyorreAlku >= 0f ? kello - pyorreAlku : PyorreMinS;
+                    pyorreKulma += nyt.Ajelehtiminen * (1f + PyorreSyoksy * Mathf.Exp(-t / PyorreHidastusS)) * dt;
+                }
                 else seutuKulma += nyt.Ajelehtiminen * dt;
             }
             var q = Quaternion.AngleAxis(seutuKulma, seutu.Akseli);

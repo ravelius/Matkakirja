@@ -95,6 +95,26 @@ kerros. Puhtaat osat: `Kartta/NimiLadonta.cs` (testit `Kartta-testit/Testit/Nimi
 | `bool paalla`, `bool valtameret` | Koko kerros; valtameret pois oletuksena, koska pohjasarja 2026-09-23a sisältää ne poltettuina Z1–Z4. |
 | `int Taso`, `double JatkuvaTaso`, `int Naytetty`, `string Kuvaus()` | Pallotaso ja mittarit. Testi: `nimet paalle|pois|laske`, `nimet valtameret paalle`, `nimet siirto 0.6`. |
 
+## 3e. Liput tuulessa — `Liput` (staattinen, `Kartta/Liput.cs`), löydös 144
+
+Lipun arvokas aaltoilu UI Toolkitin taustakuvaksi (kartussin lippu, tervehdysten pikkuliput). Natiivi-UI hakee
+tekstuurin (`Kuvat.Hae`) ja näyttää kahvan RT:n; Kartta piirtää sen `Graphics.Blit`illä aaltovarjostimen
+(`Resources/Lippuaalto.shader`) läpi pieneen RT:hen, ilman kameraa ja verkkoa. Yksi yhteinen ajuri, enintään 30
+päivitystä sekunnissa ja vain näkyville; kun mikään ei näy, ei GPU-työtä. Aaltoilu seuraa Joutosykettä: levossa
+(3 s ilman aktiivisuutta) lippu asettuu suoraksi ja päivitys loppuu, kosketus jatkaa. Varjostimen puuttuessa kahva
+näyttää alkuperäisen kuvan (varoitus lokiin).
+
+| Jäsen | Merkitys |
+|---|---|
+| `Liput.Aalto Liput.Aaltoile(Texture lahde, int w, int h)` | Uusi kahva; w × h RT:n pikseleinä (UI-koko × paneelin skaala, rajataan 2–1024). Kuva piirretään heti kerran suorana. (Metodi ei voi olla `Aalto`, koska sisäkkäinen tyyppi on `Aalto`.) |
+| `RenderTexture Aalto.Kuva` | Piirretty lippu (sRGB, tavallinen alfa, läpinäkyvä marginaali). UI: `new StyleBackground(Background.FromRenderTexture(a.Kuva))`. Sama olio koko eliniän. |
+| `event Action Aalto.Paivittyi` | Kuva piirrettiin uudelleen (UI: `MarkDirtyRepaint`). |
+| `bool Aalto.Nakyy` | UI asettaa: tosi vain, kun lippu on ruudulla (oletus epätosi). Näkyviin tullessa kuva päivittyy heti. |
+| `void Liput.Vapauta(Aalto a)` | Vapauttaa RT:n ja irrottaa kuuntelijat (lähdetekstuuri jää Kuvat-välimuistiin). Kutsu, kun elementti poistuu tai lippu vaihtuu. |
+| `const float Liput.Reuna` (0,04) | Marginaali joka reunalla: lippu on 92 % RT:stä, jotta aalto ei leikkaa kuvaa. Sama näkyvä koko kuin ennen: elementti × 1 / (1 − 2 · Reuna). |
+
+Testi: `liput tila | jatkuva | syke`, `liput koe nimi [aika]` (Documents/nimi.png ilman UI:ta).
+
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
 Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
@@ -180,6 +200,7 @@ varapallo (z0–z2), jos verkkoa ei ole ensimmäisellä kerralla.
 | `float MatkakirjaRadio_Taso()` | valmis | Soivan virran RMS-taso 0…1 (~30 ms ikkuna, dBFS −60…0 → 0…1) ENNEN voimakkuutta; nopea nousu, vaimennus ~0,3 s; 0 kun ei soi (tila ≠ 2) tai tauolla. **−1** vain AVPlayer-varapolulla (HLS/.m3u8, Ogg/Opus tai muu tuntematon muoto, URLSessionin varhainen virhe, ei ääntä 8 s:ssa) → webin ajastettu varakuvio. Halpa: luetaan joka kehys (atomit, ei lukkoja). |
 | `float MatkakirjaRadio_Huippu()` | valmis | Sama huippuarvosta (\|näyte\| max), vaimennus ~1 s. |
 | `float MatkakirjaRadio_Rms()` | valmis | Raaka lineaarinen RMS 0…1 (~30 ms), ei tasoitusta eikä dB-asteikkoa, ennen voimakkuutta; 0 ei soi, −1 varapolku. VuMittari tasoittaa itse. |
+| `void MatkakirjaRadio_Esikuuntele(const char* url)` | build 18 (Linssiseppä, Natiiviseppä katselmoi 26.9.) | Seuraavan aseman esikuuntelu (ESILATAUSPOLITIIKKA kohta 6): toinen virta jäsentää paketit enintään 4 s:n renkaaseen ilman muunnosta ja ajastusta; `MatkakirjaRadio_Avaa` samalla osoitteella ottaa sen käyttöön heti. NULL = pois. Yksi kerrallaan; Avaa toisella osoitteella, tauko ja 60 s ilman käyttöönottoa sulkevat; HLS ja ei-http eivät esikuuntele; `Sulje` ei sulje (asemanvaihdon Sulje–Avaa-pari). Linssit: `IRadioVirta.Esikuuntele`, RadioLinssi valitsee seuraavan. |
 
 Mittaus (build 8): progressiiviset http(s)-virrat (Icecast/Shoutcast mp3, aac/aacp ADTS, myös Shoutcast v1
 "ICY 200 OK") soitetaan omalla moottorilla URLSession → AudioFileStream → AudioConverter (Float32) →

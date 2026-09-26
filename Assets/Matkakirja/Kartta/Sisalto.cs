@@ -128,6 +128,8 @@ namespace Matkakirja
                     versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
                     Debug.LogWarning($"MATKAKIRJA sisältö: osoitin ei vastaa ({osoitinVirhe}), käytetään {versioPolku}");
                 }
+                // Taustapäivitys (Siirtoseppä): valmis versio varastosta, muuten laiska tila (PakettiPaivitys.cs).
+                versioPolku = PakettiPaivitys.Valitse(osoitin, versioPolku);
                 osoitinHaussa = false;
                 istunnonPolku = versioPolku;
             }
@@ -153,7 +155,7 @@ namespace Matkakirja
             if (versioPolku == null) { valmis(null); yield break; }
 
             string polku = versioPolku + suhteellinen;
-            string tiedosto = Valimuisti(polku);
+            string tiedosto = PakettiPaivitys.Varastosta(versioPolku, suhteellinen) ?? Valimuisti(polku);
             string teksti = null;
             if (File.Exists(tiedosto))
             {

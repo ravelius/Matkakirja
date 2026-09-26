@@ -39,7 +39,7 @@ namespace Matkakirja.Linssit.Testit
 
         static VirtaAineisto virrat;
         static VanatTulos vanat;
-        static (VirtaAineisto, VanatTulos) Virrat()
+        internal static (VirtaAineisto, VanatTulos) Virrat()
         {
             if (vanat != null) return (virrat, vanat);
             var moduuli = (Dictionary<string, object>)Lue("paketti/ihmisen-matka.json");

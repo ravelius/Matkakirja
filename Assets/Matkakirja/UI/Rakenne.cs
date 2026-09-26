@@ -368,6 +368,10 @@ namespace Matkakirja.Natiivi
         Vector2 alku;
         int osoitin = -1;
         bool kulutettu;
+        /// <summary>Selaus pois (esim. zoomattu kokoruutukuva, löydös 150); null = aina käytössä.</summary>
+        public Func<bool> Esta;
+        /// <summary>Vain pyyhkäisy selaa; reunanapautus ei (kokoruudussa napautus sulkee, löydös 150).</summary>
+        public bool VainPyyhkaisy;
 
         public KuvaSelaus(VisualElement kohde, Func<int> maara, Action<int> askel, Func<VisualElement> mitta = null)
         {
@@ -384,11 +388,11 @@ namespace Matkakirja.Natiivi
         {
             if (e.pointerId != osoitin) return;
             osoitin = -1;
-            if (maara() < 2) return;
+            if (maara() < 2 || Esta?.Invoke() == true) return;
             var d = (Vector2)e.position - alku;
             int s = 0;
             if (Mathf.Abs(d.x) >= PyyhkaisyPx && Mathf.Abs(d.x) > Mathf.Abs(d.y)) s = d.x < 0 ? 1 : -1;
-            else if (d.magnitude < 8f)
+            else if (d.magnitude < 8f && !VainPyyhkaisy)
             {
                 var r = (mitta?.Invoke() ?? kohde).worldBound;
                 if (r.width <= 0 || !r.Contains(e.position)) return;
