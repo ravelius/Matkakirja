@@ -235,5 +235,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(h.KerrostenPeitto(1.9) == 1 && h.KerrostenPeitto(Herays.Kesto) < 1e-9, "luovutus pysyvälle täytölle");
             Oleta.Tosi(Math.Abs(h.TulvaMaxKm - (Math.Sqrt(0.5) * ElavaKohtaus.KmAsteella + 5)) < 1, "kauimmainen kulma");
         }
+
+        [Testi] static void MusteenJalkiJaLoyto()
+        {
+            var (p, t) = MusteJalki.Laske(64, 12345);
+            Oleta.Tosi(p[32 * 64 + 32] > 0.6, "keskellä mustetta");
+            Oleta.Tosi(p[0] == 0 && p[63] == 0, "kulmat tyhjiä");
+            Oleta.Tosi(t.Max() > 0.05 && t[32 * 64 + 32] < 0.05, "tummuma reunassa, ei keskellä");
+            var (q, _) = MusteJalki.Laske(64, 12345);
+            Oleta.Tosi(p.SequenceEqual(q), "sama siemen = sama jälki");
+            var (r, _) = MusteJalki.Laske(64, 999);
+            Oleta.Tosi(!p.SequenceEqual(r), "eri siemen = eri jälki");
+            var h = MusteJalki.Hehku(32);
+            Oleta.Tosi(h[16 * 32 + 16] > 0.9 && h[0] < 0.01, "hehku keskellä");
+            Oleta.Tosi(Math.Abs(MusteJalki.Loyto(0).Peitto - MusteJalki.JaljenPeitto) < 1e-9 && Math.Abs(MusteJalki.Loyto(0.3).Peitto - 1) < 1e-9, "jäljestä täyteen");
+            Oleta.Tosi(Math.Abs(MusteJalki.Loyto(0.3).Mittakaava - 1) < 1e-9 && Enumerable.Range(0, 31).Max(i => MusteJalki.Loyto(i / 100.0).Mittakaava) > 1.0, "jousi yli 1:n");
+        }
     }
 }
