@@ -42,6 +42,8 @@ namespace Matkakirja
         /// (kaapattu kartta + Elava-kohteet) ovat samannäköisiä (kerroksella Elava-kohteet piirtyvät aina kaappauksen päälle).
         /// </summary>
         public const int Jono = 3400;
+        /// <summary>Lipun kierto tangon ympäri kamerasta poispäin (°), jotta 3D-kangas näkyy viistosti.</summary>
+        public const float LipunKierto = 28f;
         const float Sade = 0.013f, NupinSade = 0.03f;
 
         /// <summary>
@@ -152,6 +154,8 @@ namespace Matkakirja
             ElavaKerros.Animoi(kerrosEhto, "lippu", 30);
             PallonLepo.Animoi(sykeEhto, "lippu (syke)");
             lippuT = lippu.transform;
+            // Lippu hieman viistossa kameraan nähden (tangon ympäri): kankaan aallot ja valo näkyvät muotoina.
+            lippuT.localRotation = Quaternion.Euler(0f, LipunKierto, 0f);
             Nayta(false);
         }
 

@@ -17,8 +17,8 @@ Shader "Matkakirja/Lippu3D"
         _Voima("Voima 0–1", Float) = 1
         _Leveys("Lipun leveys (paikallinen)", Float) = 0.54
         _Korkeus("Lipun korkeus (paikallinen)", Float) = 0.36
-        _Amplitudi("Aallon amplitudi × korkeus", Float) = 0.16
-        _Kiilto("Kiilto", Float) = 0.22
+        _Amplitudi("Aallon amplitudi × korkeus", Float) = 0.2
+        _Kiilto("Kiilto", Float) = 0.32
         _Hohde("Reunahohde", Float) = 0.12
     }
     SubShader
@@ -53,7 +53,7 @@ Shader "Matkakirja/Lippu3D"
             static const float VINOUS = 0.35;   // aaltorintama hieman vino (lippu ei heilu kuin levy)
 
             struct Tulo { float4 positionOS : POSITION; float2 uv : TEXCOORD0; };
-            struct Valissa { float4 positionCS : SV_POSITION; float2 uv : TEXCOORD0; float3 nWS : TEXCOORD1; float3 pWS : TEXCOORD2; float usvaY : TEXCOORD3; };
+            struct Valissa { float4 positionCS : SV_POSITION; float2 uv : TEXCOORD0; float3 nWS : TEXCOORD1; float3 pWS : TEXCOORD2; float usvaY : TEXCOORD3; float taite : TEXCOORD4; };
 
             // Siirtymä z ja sen derivaatat u:n ja v:n suhteen (u, v 0–1).
             float3 Aalto(float u, float v)
@@ -82,6 +82,7 @@ Shader "Matkakirja/Lippu3D"
                 o.pWS = TransformObjectToWorld(p);
                 o.nWS = TransformObjectToWorldNormal(nOS);
                 o.uv = i.uv;
+                o.taite = nOS.x;   // kankaan kaltevuus: taitteen valo/varjo katselukulmasta riippumatta
                 o.usvaY = UsvaYlhaalta(TransformObjectToHClip(float3(0, 0, 0)));
                 return o;
             }
@@ -95,9 +96,11 @@ Shader "Matkakirja/Lippu3D"
                 float3 v = normalize(GetWorldSpaceViewDir(i.pWS));
                 float nl = dot(n, l);
                 // Diffuusi: laskokset varjoon, mutta ei mustaksi (kangas läpikuultaa hieman: takavalo 0,35 ·).
-                half diff = 0.62 + 0.38 * saturate(nl) + 0.1 * saturate(-nl);
+                half diff = 0.5 + 0.5 * saturate(nl) + 0.12 * saturate(-nl);
+                // Taitteet: aallon rinne toiselta puolelta vaaleampi, toiselta tummempi (±20 %), kuten valo kankaan poimuissa.
+                diff *= 1.0 + 0.2 * clamp(i.taite * 3.0, -1.0, 1.0);
                 float3 h = normalize(l + v);
-                half kiilto = _Kiilto * pow(saturate(dot(n, h)), 28.0) * saturate(nl * 4.0);
+                half kiilto = _Kiilto * pow(saturate(dot(n, h)), 20.0) * saturate(nl * 4.0);
                 half hohde = _Hohde * pow(1.0 - saturate(abs(dot(n, v))), 3.0);
                 c.rgb = c.rgb * diff + (kiilto + hohde) * valo.color;
                 c.a *= UsvaNakyvyys(i.usvaY);
