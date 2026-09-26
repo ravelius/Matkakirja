@@ -7647,3 +7647,7 @@ Kortti 23.5x: lento v3 -speksi (docs/raportit/lento-v3-speksi.md, linssiseppa-ty
 ## V2287 (OUZEL GALLEY) JA V2288 (178 EI-PAIKAT MUSEOON) MAINISSA; JULKAISIJAN JONO TYHJA (27.9.2026 klo 00.01)
 
 Julkaisija 23.52: #3354 v2287, #3355 v2288 (kaksi korjauskierrosta: orvot miniatyyrit, SHELL-rivit), #3347 mainissa; jono tyhja → Fablen docs-haara mainiin, Z10-osoitinvaihto luettelon jalkeen, Raamattu-PR tulossa.
+
+## AVAUSKORTIN VEDOKSET (35/45 %) JA KAARI+VUORI-RELIEFIT OMISTAJALLE; S11 EI MERGETA (27.9.2026 klo 00.14)
+
+Pelikoodari: avauskortin vedokset oikealla datalla proto-3d/lokit/kaupunkikortti-mock/ (iPhone 390x844, iPad 834x1194; kartta 35 % / 45 %), suositus iPhone 35, iPad 45; lehden osiohakemisto vertailu-lehti-osiot-*.png (Pariisi 6 osiota, Ateena 4; osa osiokuvista lainattuja). Natiiviseppa: kaari + vuori reliefeina (natiiviseppa/kategoriat-reliefi 63ccbad3; kolmiot 224/100, 147/77; kooste-kaari-vuori.png) — avoimet: vuoren taysi siluetti, jalusta pois + maavarjo, rampin kiintea valo; liioiteltu perspektiivi puuttuu (ylhaalta-175 odottaa omistajan vastausta Natiivisepan sessiossa; Fable ei anna lupaa vertaisviestilla). S11 GraphicsStateCollection.WarmUp PAHENSI kylmaa verhoa 4,9 → 7,2 s → ei mergeta (proto-3d/lokit/s11/TULOS.md). Juna 8a90b51f: rajapinta, 174, 169/170b/173.
