@@ -63,3 +63,15 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   - minä: MaakuntaHeraa → ≤ 2,5 s:n herätys, jossa väri valuu, käsialanimi ja merkit tulevat ja lopuksi luovutus
   - Natiiviseppä: MaaKartta piirtää heränneet täysin sävyin ja muut paperina sekä Herata(maakunta, piilossa)
   - Natiivi-UI: kartussi
+
+## Päivitys klo 07.0x
+
+- **Kohta 3 (maakunta herää)** on merge-pyynnössä: linssiseppa/maakunta-heraa d7395a81 (wt/proto-linssiseppa-elava),
+  mukana natiiviseppa/maakunta-heraa.
+  - Sisältö: MaaKartta.Heraannyt musteesta ja ElavaHerays (≤ 2,4 s), joka käynnistyy MaakuntaHeraa-tapahtumasta, kun
+    kartta on vapaa. Komento `elava herata <ISO:tunnus>`.
+  - Simulaattori: Occitanie herää, ja pallo lepää lopuksi.
+  - **Avoin:** pelin pysyvä maakuntatäyttö ei näy pelinäkymässä (oletuksena vain rajat), joten heränneen värin pitää
+    näkyä, vaikka täyttö olisi pois. Korjaus kysytty Natiivisepältä. Kuvapari omistajalle vasta sen jälkeen.
+- Kohta 2 (nostojen kokoluokat ja himmeät jäljet) on Natiivisepän ja Pelikoodarin NostoKerros-työtä. Minulta ei
+  vielä pyydetty mitään. Kohdat 4–5 (yövalomaski sekä laiva ja boidit) ovat seuraavaksi.
