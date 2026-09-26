@@ -7699,3 +7699,7 @@ Siirtoseppa 00.5x: natiivipaketti v193 tuotannossa (1.50, 6c890b377, ampari 772/
 ## OMISTAJA AJOI YLHAALTA-175-KOMENNON (69a198a7 + PATCH TYOPUUSSA); LAITETESTAAJAN 1.0.27-RESEPTI dc069a234 (27.9.2026 klo 01.03)
 
 Omistaja ajoi 01.1x SSH-komennon: proto-natiiviseppa-ylhaalta = natiiviseppa/ylhaalta-175 @ 69a198a7 (merge linssiseppa/perspektiivi, LiioiteltuPerspektiivi.cs + testit) ja patch perspektiivi-f5900358 tyopuussa commitoimatta → Natiiviseppa commitoi ja yhdistaa kategoriamallien haaraan seuraavaan buildiin (ei 1.0.27). Laitetestaaja: 1.0.27-resepti dc069a234 (178, 179, 170, lipun perspektiivi, hoyrylaiva, 177+nostokortti); epaily ettei uusi peli sulje avointa nostokorttia → Natiivi-UI tarkistaa ennen kaannosta. Postivahti nollattu 01.0x (id ennallaan). Fablen RC paalle omistajan pyynnosta 01.0x.
+
+## OMISTAJA: YLHAALTA-175 NYT 1.0.27:AAN (27.9.2026 klo 01.03)
+
+Omistaja 01.1x ("Nyt"): ylhaalta-175 (69a198a7 + patch) yhdistetaan juna/b13:een heti ja tulee TF 1.0.27:aan — korvaa Fablen 00.5x-linjauksen (seuraavaan buildiin). Natiiviseppa commitoi patchin, mergeaa junaan, kaantaa Linssisepan klo 01 kaannoksen jalkeen.
