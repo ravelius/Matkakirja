@@ -415,7 +415,20 @@ namespace Matkakirja.Natiivi
                 if (v == LennonVaihe.Nousu && suunnitelma?.Kohde != null) ohjain.StartCoroutine(Esivalmistele(suunnitelma.Kohde));
             };
             po.AloituslentoAlkoi += kohde => ohjain.StartCoroutine(Esivalmistele(kohde));
-            if (po.PelaajanKaupunki != null) ohjain.StartCoroutine(Esivalmistele(po.PelaajanKaupunki));
+            // Pelaajan kaupungin maa heti, kun se tunnetaan (uuden matkan lähtö ja aloituslento: AloituslentoAlkoi ei aina
+            // tule ennen laskua), ja joka siirtymän jälkeen; välimuistissa oleva maa ohitetaan heti.
+            ohjain.StartCoroutine(SeuraaPelaajanMaata(po, ohjain));
+        }
+
+        static IEnumerator SeuraaPelaajanMaata(PeliOhjain po, LinssiOhjain ohjain)
+        {
+            string edellinen = null;
+            while (ohjain != null)
+            {
+                string k = po.PelaajanKaupunki;
+                if (k != null && k != edellinen) { edellinen = k; ohjain.StartCoroutine(Esivalmistele(k)); }
+                yield return new WaitForSecondsRealtime(1f);
+            }
         }
 
         static IEnumerator SaavuMyohemmin(string kaupunki, LinssiOhjain ohjain)
