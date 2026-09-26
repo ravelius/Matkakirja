@@ -3149,7 +3149,7 @@ if (HARVA) {
   }
   // Työlista ja lohkot uusiksi karsitusta joukosta.
   tyot.length = 0;
-  tyot.push(...jaljelle);
+  for (const t of jaljelle) tyot.push(t); // ei push(...): suuri lista ylittäisi pinon
   tarvitaan.clear();
   lohkot.clear();
   for (const t of tyot) {

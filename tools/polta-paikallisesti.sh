@@ -899,9 +899,11 @@ syva_sarakkeet () {
   rm -f "$ULOS/syva-sarakkeet-lista.txt" # uusi ala = uusi sarakelista (ks. TYHJÄT KAISTAT POIS)
   rivi="$(node -e '
     const j = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
-    const s = j.laatat.map((l) => l[1]);
-    if (!s.length) process.exit(1);
-    console.log(`${Math.floor(Math.min(...s) / 8) * 8} ${Math.max(...s)}`);
+    if (!j.laatat.length) process.exit(1);
+    // Silmukka, ei Math.min(...s): maakuntalista (270 000 laattaa) ylitti pinon.
+    let a = Infinity, b = -Infinity;
+    for (const l of j.laatat) { if (l[1] < a) a = l[1]; if (l[1] > b) b = l[1]; }
+    console.log(`${Math.floor(a / 8) * 8} ${b}`);
   ' "$ULOS/syva-lista/laatat.json")" || { echo "VIRHE: syvällä alalla $SYVA_TUNNUS ei ole z10-laattoja" >&2; return 1; }
   echo "$SYVA_TUNNUS $rivi" > "$valimuisti"
   echo "$rivi"
