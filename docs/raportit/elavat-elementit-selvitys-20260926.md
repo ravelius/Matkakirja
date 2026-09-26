@@ -32,8 +32,18 @@ elävällä kerroksella (161-B).*
 | **Lontoo** (omistajan idea) | maailmanpyörä pyörii hitaasti hieman kaupunkipisteen sivussa | 1 kierros / 40 s | 2 000 (kehä, pinnat, 16 koria kiertonsa mukaan pystyssä) | Pyörä on suurin elementti, joten se on myös hitain. Sivuun siirrettynä se ei peitä kaupunkipistettä eikä nimeä. |
 | **Lontoo, toinen aihe** (omistaja 10.1x) | siipiratashöyry kulkee Thamesia pitkin, rattaat pyörivät ja savupallot nousevat (ElavatHetket.Savua) | matka 25 s ja tauko 40 s, eli laiva ei ole aina näkyvissä | 600 + savu | Pyörä pyörii paikallaan ja hitaasti sivussa, laiva kulkee joella omalla tempollaan, eikä kumpikaan peitä pistettä. Tämä on ainoa kaupunki, jossa on kaksi aihetta, ja siksi laiva vuorottelee taukojen kanssa. Jos Lontoon kokeessa näkymä on sekava, laiva siirtyy Tonavalle Budapestiin. |
 | **Alpit** (köysirata, Chamonix–Aiguille du Midi) | kaksi hyttiä liukuu vaijeria pitkin vastakkaisiin suuntiin ja kohtaa puolivälissä, ja hytti heilahtaa pysähtyessään | matka 20 s, tauko 6 s | 500 (2 hyttiä, 2 asemaa, vaijeri viivana) | Suora vaijeri laakson yli on selkeämpi kuin rinteen hammasrata, eikä siinä ole savua. Sykli on symmetrinen ja rauhallinen. |
-| **Napoli** (Vesuvius, purkaus 1872) | kraaterista nousee hidas savupatsas, joka kaartuu tuulen mukana | jatkuva; pallo 6 s:n välein | 0 kolmiota (Pehmeapiste-läiskät, ≤ 12 kerrallaan) | Savua on vähän ja se on vaaleaa. Liike on hitaampaa kuin mikään muu kartalla. |
-| *Myöhemmin: Afrikka* | norsu- tai kamelijono (3–5 eläintä) kävelee savannia pitkin | askel 1,4 s, siirtymä 0,3 pt/s | 5 × 400; jalat kärkivarjostimen heiluntana | Kulkue on niin hidas, että sen huomaa vasta katsoessaan. Kaukaa se näkyy pelkkänä pistejonona. |
+| **Sisilia** (Etna) | kraaterista nousee hidas savupatsas, joka kaartuu tuulen mukana | jatkuva; pallo 6 s:n välein | 0 kolmiota (Pehmeapiste-läiskät, ≤ 12 kerrallaan) | Savua on vähän ja se on vaaleaa. Liike on hitaampaa kuin mikään muu kartalla. |
+| *Myöhemmin: Afrikka* (Sisältökirjuri: Sahara/Ahaggar kamelikaravaani, Kilimanjaro/Nairobi norsut, Namib/Kapkaupunki kirahvit) | 3–5 eläimen jono kävelee maastoa pitkin | askel 1,4 s, siirtymä 0,3 pt/s | 5 × 400; jalat kärkivarjostimen heiluntana | Kulkue on niin hidas, että sen huomaa vasta katsoessaan. Kaukaa se näkyy pelkkänä pistejonona. |
+
+## Varalla (Sisältökirjurin aiheet 26.9., kokeillaan listan jälkeen)
+
+- **Lissabon:** raitiovaunu nousee mäkeä (spline, nousu 18 s ja tauko, 400). Aihe on selkeä, koska pieni keltainen
+  vaunu on ainoa väri, ja se sopii paletin terrakottaan tai valoon.
+- **Praha:** Orlojin apostolikulkue laukeaa tunnin lyönnillä ja kaupunkiin saavuttaessa (luukut aukeavat ja 12 hahmoa
+  kiertää 8 s, 1 200). Tapahtuma on harvinainen, joten se ei lisää jatkuvaa liikettä.
+- **Tukholma:** purjevene luovii saariston selällä (käännös 12 s:n välein, 300).
+- **Wien:** Riesenrad. Se toistaisi Lontoon pyörää, joten Wien vain, jos Lontoon pyörä jää pois; muuten Wienin
+  aihe on Tonavan höyry (Lontoon varapaikka).
 
 ## Tekninen toteutus ja työnjako
 
@@ -49,5 +59,5 @@ elävällä kerroksella (161-B).*
 ## Kokeilujärjestys
 
 1) Amsterdamin myllyt, joilla testataan kerros, kierto ja 0 kehystä levossa. 2) Kööpenhaminan karuselli. 3) Pariisin
-pallo. 4) Venetsian gondolit (spline). 5) Lontoon maailmanpyörä ja siipiratashöyry samassa kokeessa. 6) Alppien köysirata ja Vesuviuksen savu. Jokaisesta
+pallo. 4) Venetsian gondolit (spline). 5) Lontoon maailmanpyörä ja siipiratashöyry samassa kokeessa. 6) Alppien köysirata ja Etnan savu. Jokaisesta
 kuvapari ja lyhyt video (liike) omistajalle sekä kehysmittaus ennen seuraavaa.
