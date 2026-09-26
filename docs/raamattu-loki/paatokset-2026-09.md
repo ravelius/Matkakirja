@@ -6319,3 +6319,7 @@ Fable 04.5x. Löydösraporttiin S3.
 ## BUILD 18 PROTO-MASTERISSA 43a6347c (= juna 541092d9 = KAANNOS e85255cd, PUU d3206794), SHA JULKAISIJALLE; JUNA AVAUTUU BUILD 19:LLE (PELIKOODARIN verkko-raja + humina-muunnelmat ENSIN, SITTEN im2-ohjaus, lepo-suspend A/B:N JALKEEN) (26.9.2026 klo 04.52)
 
 Fable 04.5x.
+
+## BUILD 19 -JUNA 4586288e (NATIIVISEPPA): verkko-raja bd27ed1d, humina-muunnelmat 7d41a3df, im2-ohjaus d56afbd5 (0 VIRHETTA, 278/284/300), VAHTI JONOTTAA 1.0.18-VIENNIN PERAAN; S3 natiivi-ui/linssi-sulkee-s3 198ecc30 JUNAAN LAITETODENNUKSEN JALKEEN; 144-VIDEO lokit/natiivi-ui-b18/k144-lippu-rajattu-4x-silmukka.mp4 OMISTAJALLE (26.9.2026 klo 04.53)
+
+Fable 04.5x.
