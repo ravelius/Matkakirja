@@ -7267,3 +7267,7 @@ Natiiviseppa (iPad Pro 13, build 25, proto-3d/lokit/S10-gpu-profilointi/RAPORTTI
 ## ASTRONAUTIN KAMERA ERA 1 TUOTANNOSSA V2276 (26.9.2026 klo 19.33)
 
 Julkaisija: #3340 (era 1, 23 kaupunkia, kohteita 64 → 87) mainissa v2276 klo 19.32, testit 4405/0; #3339 (qa-*.json-yleistys) ja #3274 v2275 edella. Sisaltokirjuri jatkaa nollauksen jalkeen maakunta-era 2:lla ja 170:n kuvilla, sitten astronautin erat 2–4.
+
+## 170 KATTAVUUS: 996/2782 MAAKUNTANOSTOA ILMAN KUVAA (26.9.2026 klo 19.34)
+
+Siirtoseppa: paketti v177 (1.50) sisaltaa 158:n (salaisuudet 14/14, luonnehdinnat 113 aluetta, GRC 0 puuttuvaa) → deltaa ei tarvita; jos omistaja nakee GRC-nostoja ilman kuvaa, syy natiivin piirrossa (Natiivi-UI tarkistaa). Kattavuus kaikissa maissa: 2782 maakuntanostosta 996 ilman kuvaa (fokuskohde 807, skandaali 187, takynosto 2), paaosin Euroopan ulkopuolella 8–13/maa, Euroopassa ≤ 3/maa; syventavat, elaintayt, hetket ja maalehtinostot 100 %. Lista docs/raportit/maakuntanostot-ilman-kuvaa-20260926.md (siirtoseppa-luovutus 0fdd6b3d2). Omistaja kaski tehda KAIKKI puuttuvat (oikeita PD/CC tai havainnekuvia) → Sisaltokirjuri erina reitin jarjestyksessa (Eurooppa ensin), agenttiparvella; jokainen era PR:na Julkaisijan junaan, kuvien lahde ja lisenssi vartijalla.
