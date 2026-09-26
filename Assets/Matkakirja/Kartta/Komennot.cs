@@ -968,6 +968,14 @@ namespace Matkakirja
                                   $"leveys {mk.RajaLaitePx:0.00} laitepx (web taso z{Viivaleveys.AluerajaTaso(mk.RajaTiheys)})");
                         break;
                     }
+                    if (o[1] == "valinta" && o.Length > 2)
+                    {
+                        // maakunta valinta <peitto>: valitun maakunnan täytön peitto (löydös 157, oletus 0,45; tavallinen 0,34)
+                        MaaKartta.ValinnanPeitto = double.Parse(o[2], CultureInfo.InvariantCulture);
+                        MaaKartta.PaivitaKaikki();
+                        Debug.Log($"MATKAKIRJA maakunnat: valinnan peitto {MaaKartta.ValinnanPeitto:0.00}");
+                        break;
+                    }
                     if (o[1] == "maa")
                     {
                         mk.Pakotettu = o.Length > 2 && o[2] != "pois" ? o[2].ToUpperInvariant() : null;
