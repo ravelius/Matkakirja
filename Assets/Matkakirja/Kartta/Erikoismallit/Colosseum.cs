@@ -243,6 +243,6 @@ namespace Matkakirja
         }
 
         static readonly bool colosseum = Rekisteroi("colosseum",
-            new Erikoismalli { Runko = ColosseumRunko, Osat = ColosseumOsat, Kolmiot0 = 1420, KokoKerroin = 1.5f });
+            new Erikoismalli { Runko = ColosseumRunko, Osat = ColosseumOsat, Kolmiot0 = 1420, KokoKerroin = 1.5f, Kaupunki = "rooma" });
     }
 }
