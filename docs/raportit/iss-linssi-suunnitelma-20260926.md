@@ -103,6 +103,21 @@ Aurinko ja terminaattori ovat aina oikein, koska ne tarvitsevat vain kellon.
 - **Hyväksyntä:** Linssiseppä sovittaa kehyksen simulaattorissa, ja omistaja hyväksyy kuvaparin (ikkuna ilman kehystä
   ja kehyksen kanssa).
 
+## Astronautin kamera: jatkoideat ISS-linssin jälkeen (omistaja 15.5x)
+
+Omistaja hyväksyi nämä jonoon ISS-linssin jälkeen. Koodia ei tehdä ennen ISS-kaukonäkymää.
+1. **ISS-kytkentä:** kun todellinen ISS on havaintopisteen yllä (etäisyys ≤ 600 km radan maajäljestä), pisteestä
+   tulee korostettu ja kortti "Astronautti näki tämän juuri tästä". Napautus avaa kuvan.
+2. **Arvaa kohde:** Pulu näyttää astronautin kuvan, pelaaja napauttaa palloa, ja pisteet tulevat etäisyydestä samalla
+   kaavalla kuin Lippuarvauksessa. Kierroksessa on 5 kuvaa.
+3. **Aikasarjat:** sama kohde eri vuosina (esim. Aralmeri, Dubain rannikko), ja aikaselaimen liuku vaihtaa kuvan
+   pehmeällä ristihäivytyksellä.
+4. **Kamera-ajo kuvan kuvakulmaan:** pallo kääntyy ISS:n kuvauspisteeseen kuvan metatiedoista (nadir-piste,
+   kallistus ja kenttäkulma polttovälistä). Kuva häivyttyy pallon päälle samaan kohtaan ja sitten täysikokoiseksi.
+   Ajossa käytetään yhteistä käyräkirjastoa.
+- **Työnjako:** Linssiseppä tekee natiivin osuuden, Pelikoodari webin osuuden (kohdat 2–3), ja Sisältökirjuri kuratoi
+  noin 100 uutta kohdetta erissä, metatiedot mukaan lukien (NASA Gateway to Astronaut Photography, PD).
+
 ## Työnjako
 
 - Linssiseppä: SGP4-ydin testeineen, kamerat, rata, varjo, ylilennot.
