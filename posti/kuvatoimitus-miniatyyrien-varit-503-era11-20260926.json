@@ -1,0 +1,462 @@
+[
+  {
+    "id": "singapore-boat-quay",
+    "replacement_id": "singapore-boat-quay-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-boat-quay-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-boat-quay-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-boat-quay-vari2.png",
+    "sha256": "72a5ef49119d1a2b3531c7d59c17bef633b45a875357c9acf5e407265c107970",
+    "bytes": 1974505,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Boat Quay Singapore, continuous riverside shophouse row on curved stone embankment. Preserve exact original ink-drawn cutout, every roof, arch, curve, building count, silhouette, angle, size and position. Image 2 is ONLY the approved light COLOR and ink-watercolor STYLE reference. Replace sepia with fine warm-gray ink, pale cream walls, restrained dusty terracotta tile roofs, muted sage and blue-gray river edge. Keep the original composition and all transparent holes. No new objects or text. Entire empty exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-merlion-puisto",
+    "replacement_id": "singapore-merlion-puisto-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-merlion-puisto-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-merlion-puisto-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-merlion-puisto-vari2.png",
+    "sha256": "a8b36e6660e7daf3cc2657c793dc914c337b0acf873995e57a53cee9943236c2",
+    "bytes": 1582152,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Merlion Park, exact lion-fish fountain statue spouting a narrow water arc into circular basin. Preserve exact original ink-drawn cutout, geometry, silhouette, angle, scale, position, every tier/roof/tree, and genuine transparent openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace sepia with fine warm-gray ink, pale cream masonry, restrained dusty terracotta tile roof, gentle sage trees and muted blue-gray water or glass where relevant. Soft airy hand-tinted miniature; no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-gardens-by-the-bay",
+    "replacement_id": "singapore-gardens-by-the-bay-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-gardens-by-the-bay-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-gardens-by-the-bay-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-gardens-by-the-bay-vari2.png",
+    "sha256": "24854bbc775625e26ade95469c91d30fcddcde003d2cbc03de075a865d69c535",
+    "bytes": 1793033,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Gardens by the Bay, three exact Supertrees and two ribbed conservatory domes. Preserve exact original ink-drawn cutout, geometry, silhouette, angle, scale, position, every tier/roof/tree, and genuine transparent openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace sepia with fine warm-gray ink, pale cream masonry, restrained dusty terracotta tile roof, gentle sage trees and muted blue-gray water or glass where relevant. Soft airy hand-tinted miniature; no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-sri-mariamman-temppeli",
+    "replacement_id": "singapore-sri-mariamman-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-sri-mariamman-temppeli-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-sri-mariamman-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-sri-mariamman-temppeli-vari2.png",
+    "sha256": "2846b7ca86fe79b66acca195aa5d760b9289ffaa87d38a88a294bd6a2fa9b046",
+    "bytes": 1551592,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sri Mariamman Temple, ornate many-tiered South Indian gopuram gateway with intricate sculpted figures. Preserve exact original ink-drawn cutout, geometry, silhouette, angle, scale, position, every tier/roof/tree, and genuine transparent openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace sepia with fine warm-gray ink, pale cream masonry, restrained dusty terracotta tile roof, gentle sage trees and muted blue-gray water or glass where relevant. Soft airy hand-tinted miniature; no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "singapore-thian-hock-keng-temppeli",
+    "replacement_id": "singapore-thian-hock-keng-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/singapore-thian-hock-keng-temppeli-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/singapore-thian-hock-keng-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/singapore-thian-hock-keng-temppeli-vari2.png",
+    "sha256": "2b6f201c4a35d3f3f1809e62ac581493deec21ee685d06de2ee92164b85b6035",
+    "bytes": 1755536,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Thian Hock Keng Temple, traditional Chinese layered curved tiled roofs enclosing a small court. Preserve exact original ink-drawn cutout, geometry, silhouette, angle, scale, position, every tier/roof/tree, and genuine transparent openings. Image 2 is ONLY approved light ink-watercolor COLOR STYLE reference. Replace sepia with fine warm-gray ink, pale cream masonry, restrained dusty terracotta tile roof, gentle sage trees and muted blue-gray water or glass where relevant. Soft airy hand-tinted miniature; no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-sydney-harbour-bridge",
+    "replacement_id": "sydney-sydney-harbour-bridge-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-sydney-harbour-bridge-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-sydney-harbour-bridge-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-sydney-harbour-bridge-vari2.png",
+    "sha256": "80ac4133086499453ae9bcf32b4ec4b79fa74b033839c4987eb881083789921c",
+    "bytes": 1069292,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney Harbour Bridge, complete steel arch between two monumental stone pylons. Preserve exact original ink-drawn cutout, structure, geometry, silhouette, angle, scale, placement, all arches/shells/stone details and transparent gaps. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cream stone, restrained dusty terracotta brick/roof accents, blue-gray steel/water/shadows where relevant and tiny sage vegetation only where original. Soft airy hand-tinted miniature, natural materials, no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-sydneyn-oopperatalo",
+    "replacement_id": "sydney-sydneyn-oopperatalo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-sydneyn-oopperatalo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-sydneyn-oopperatalo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-sydneyn-oopperatalo-vari2.png",
+    "sha256": "beca74146f528f2d69075ea10d769e4fafeb924a8cf0a93ba673121b40b1157a",
+    "bytes": 1207333,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney Opera House, exact fan of shell roofs on low waterfront podium. Preserve exact original ink-drawn cutout, structure, geometry, silhouette, angle, scale, placement, all arches/shells/stone details and transparent gaps. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cream stone, restrained dusty terracotta brick/roof accents, blue-gray steel/water/shadows where relevant and tiny sage vegetation only where original. Soft airy hand-tinted miniature, natural materials, no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-mrs-macquarie-s-chair",
+    "replacement_id": "sydney-mrs-macquarie-s-chair-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-mrs-macquarie-s-chair-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-mrs-macquarie-s-chair-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-mrs-macquarie-s-chair-vari2.png",
+    "sha256": "7e4ce02c6dcfbb28d5948e3efba6345b4e88c93dfa2fbef7e244e8c2999e8c32",
+    "bytes": 1404711,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Mrs Macquarie's Chair, carved stone bench embedded in natural sandstone rock shelf. Preserve exact original ink-drawn cutout, structure, geometry, silhouette, angle, scale, placement, all arches/shells/stone details and transparent gaps. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cream stone, restrained dusty terracotta brick/roof accents, blue-gray steel/water/shadows where relevant and tiny sage vegetation only where original. Soft airy hand-tinted miniature, natural materials, no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-sydneyn-konservatorio",
+    "replacement_id": "sydney-sydneyn-konservatorio-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-sydneyn-konservatorio-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-sydneyn-konservatorio-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-sydneyn-konservatorio-vari2.png",
+    "sha256": "ce8bade047cbb00e976ceed6c0e4caa1d1c47f69f41903a718027f44ca1c9bb4",
+    "bytes": 1565067,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney Conservatorium of Music, castellated Gothic stone building with corner turrets. Preserve exact original ink-drawn cutout, structure, geometry, silhouette, angle, scale, placement, all arches/shells/stone details and transparent gaps. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cream stone, restrained dusty terracotta brick/roof accents, blue-gray steel/water/shadows where relevant and tiny sage vegetation only where original. Soft airy hand-tinted miniature, natural materials, no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-hyde-park-barracks",
+    "replacement_id": "sydney-hyde-park-barracks-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-hyde-park-barracks-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-hyde-park-barracks-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-hyde-park-barracks-vari2.png",
+    "sha256": "2e6f730829a2019358b74527e1d4e815fda1c06349f6a38136a029c82e0ca085",
+    "bytes": 1566501,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Hyde Park Barracks, three-story Georgian brick block with centered clock in roof gable. Preserve exact original ink-drawn cutout, structure, geometry, silhouette, angle, scale, placement, all arches/shells/stone details and transparent gaps. Image 2 is ONLY approved light watercolor COLOR STYLE reference. Replace uniform sepia with fine warm-gray ink, pale cream stone, restrained dusty terracotta brick/roof accents, blue-gray steel/water/shadows where relevant and tiny sage vegetation only where original. Soft airy hand-tinted miniature, natural materials, no oversaturation. No new objects or text. Exterior and genuine through-openings perfectly flat chroma-key magenta RGB #FF00FF, no checkerboard, shadow, gradient or paper. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-pyrmontin-silta",
+    "replacement_id": "sydney-pyrmontin-silta-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-pyrmontin-silta-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-pyrmontin-silta-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-pyrmontin-silta-vari2.png",
+    "sha256": "c99da32c3fea437d9cb934f301f8999a5760f217d44aa620c81f5209e7fd6f14",
+    "bytes": 1272712,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney Pyrmont Bridge historic swing bridge, maintain exact bridge geometry and viewing angle. This is a color restoration of an existing isolated map miniature, not a redesign. Preserve Image 1's exact composition, camera angle, proportions, silhouette, object outlines, architectural details, and all visible subjects. Image 2 is ONLY a reference for the APPROVED light watercolor COLOR STYLE. Apply delicate colored ink and watercolor washes: warm ivory stone, muted sage foliage, light terracotta brick and roofs, dusty blue-gray shadows, restrained antique brass. Keep thin hand-inked lines and gentle texture. Avoid monochrome sepia, dark brown wash, saturated colors, photorealism, 3D render, and heavy contrast. Empty exterior and genuine through-openings are perfectly flat pure chroma-key magenta RGB #FF00FF, with no texture, gradient, white paper, chessboard, shadow or halo there; keep the subject free of magenta. No text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-pyhan-marian-katedraali",
+    "replacement_id": "sydney-pyhan-marian-katedraali-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-pyhan-marian-katedraali-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-pyhan-marian-katedraali-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-pyhan-marian-katedraali-vari2.png",
+    "sha256": "e398a905cb2f3076aefd9e8aac28cebc4660ad99bee2f239d62f787affe7fb6f",
+    "bytes": 1389191,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney St Mary's Cathedral, preserve Gothic twin spires and exact silhouette. This is a color restoration of an existing isolated map miniature, not a redesign. Preserve Image 1's exact composition, camera angle, proportions, silhouette, object outlines, architectural details, and all visible subjects. Image 2 is ONLY a reference for the APPROVED light watercolor COLOR STYLE. Apply delicate colored ink and watercolor washes: warm ivory stone, muted sage foliage, light terracotta brick and roofs, dusty blue-gray shadows, restrained antique brass. Keep thin hand-inked lines and gentle texture. Avoid monochrome sepia, dark brown wash, saturated colors, photorealism, 3D render, and heavy contrast. Empty exterior and genuine through-openings are perfectly flat pure chroma-key magenta RGB #FF00FF, with no texture, gradient, white paper, chessboard, shadow or halo there; keep the subject free of magenta. No text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-pyhan-andreaksen-katedraali",
+    "replacement_id": "sydney-pyhan-andreaksen-katedraali-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-pyhan-andreaksen-katedraali-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-pyhan-andreaksen-katedraali-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-pyhan-andreaksen-katedraali-vari2.png",
+    "sha256": "13597c0ab7429cadc5c488fcc3319d27a5b364a8bf2cd182481d2f4fbd45084a",
+    "bytes": 1408554,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney St Andrew's Cathedral, preserve Gothic church architecture and exact perspective. This is a color restoration of an existing isolated map miniature, not a redesign. Preserve Image 1's exact composition, camera angle, proportions, silhouette, object outlines, architectural details, and all visible subjects. Image 2 is ONLY a reference for the APPROVED light watercolor COLOR STYLE. Apply delicate colored ink and watercolor washes: warm ivory stone, muted sage foliage, light terracotta brick and roofs, dusty blue-gray shadows, restrained antique brass. Keep thin hand-inked lines and gentle texture. Avoid monochrome sepia, dark brown wash, saturated colors, photorealism, 3D render, and heavy contrast. Empty exterior and genuine through-openings are perfectly flat pure chroma-key magenta RGB #FF00FF, with no texture, gradient, white paper, chessboard, shadow or halo there; keep the subject free of magenta. No text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-australian-museo",
+    "replacement_id": "sydney-australian-museo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-australian-museo-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-australian-museo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-australian-museo-vari2.png",
+    "sha256": "9e33b63b37d6c77acd8f3c4c38237fe3833bc3d3d1904ec42bcb9bdf6b60ac42",
+    "bytes": 1499987,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney Australian Museum historic building, preserve exact facade and silhouette. This is a color restoration of an existing isolated map miniature, not a redesign. Preserve Image 1's exact composition, camera angle, proportions, silhouette, object outlines, architectural details, and all visible subjects. Image 2 is ONLY a reference for the APPROVED light watercolor COLOR STYLE. Apply delicate colored ink and watercolor washes: warm ivory stone, muted sage foliage, light terracotta brick and roofs, dusty blue-gray shadows, restrained antique brass. Keep thin hand-inked lines and gentle texture. Avoid monochrome sepia, dark brown wash, saturated colors, photorealism, 3D render, and heavy contrast. Empty exterior and genuine through-openings are perfectly flat pure chroma-key magenta RGB #FF00FF, with no texture, gradient, white paper, chessboard, shadow or halo there; keep the subject free of magenta. No text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "sydney-anzac-muistomerkki",
+    "replacement_id": "sydney-anzac-muistomerkki-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-23/sydney-anzac-muistomerkki-original.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/sydney-anzac-muistomerkki-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/sydney-anzac-muistomerkki-vari2.png",
+    "sha256": "074a1040d332a642bd71a57e8c6d9236db4de73151aa5dc75b277fa394bf15c1",
+    "bytes": 1273700,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Precisely RECOLOR Image 1: Sydney ANZAC Memorial, preserve exact monument architecture and perspective. This is a color restoration of an existing isolated map miniature, not a redesign. Preserve Image 1's exact composition, camera angle, proportions, silhouette, object outlines, architectural details, and all visible subjects. Image 2 is ONLY a reference for the APPROVED light watercolor COLOR STYLE. Apply delicate colored ink and watercolor washes: warm ivory stone, muted sage foliage, light terracotta brick and roofs, dusty blue-gray shadows, restrained antique brass. Keep thin hand-inked lines and gentle texture. Avoid monochrome sepia, dark brown wash, saturated colors, photorealism, 3D render, and heavy contrast. Empty exterior and genuine through-openings are perfectly flat pure chroma-key magenta RGB #FF00FF, with no texture, gradient, white paper, chessboard, shadow or halo there; keep the subject free of magenta. No text. Square canvas.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "tabriz-sininen-moskeija",
+    "replacement_id": "tabriz-sininen-moskeija-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/tabriz-sininen-moskeija.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/tabriz-sininen-moskeija-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/tabriz-sininen-moskeija-vari2.png",
+    "sha256": "8c699c2582630f1dc1f45f6010f62cc83989887bc78c7386733c25df912565f9",
+    "bytes": 1158366,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Blue Mosque of Tabriz: compact ruined mosque with broad dome and tall ornate pointed front portal flanked by surviving brick piers, exact original three-quarter form. Ivory and dusty terracotta brick, restrained faded blue-turquoise tile in pointed entrance, soft sage-grey dome. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-baoan-temppeli",
+    "replacement_id": "taipei-baoan-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-baoan-temppeli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-baoan-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-baoan-temppeli-vari2.png",
+    "sha256": "0f3d59a1f78f33b99a0755b5e5c62824f9317323ebd72c859bbfbed547f33505",
+    "bytes": 1322901,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei Baoan Temple: richly carved traditional Chinese temple front with multiple elaborate upturned roof tiers and central entrance steps, exact original frontal silhouette. Muted terracotta columns, soft sage-grey tiled roofs, tiny faded teal accents. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-dihua-katu",
+    "replacement_id": "taipei-dihua-katu-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-dihua-katu.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-dihua-katu-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-dihua-katu-vari2.png",
+    "sha256": "8b7b5486ff821b98bb2471a85225301c6a70c49e29ca6d8606a38ec1e876228c",
+    "bytes": 1153095,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei Dihua Street: single long row of historic two-story arcaded shophouses, repeated five upper facades and ground-floor arches, exact original near-frontal isolated strip. Ivory and dusty terracotta masonry, muted sage-grey windows. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-pohjoisportti",
+    "replacement_id": "taipei-pohjoisportti-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-pohjoisportti.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-pohjoisportti-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-pohjoisportti-vari2.png",
+    "sha256": "80e46f4cdbda7c15d0886302f3657c8a7fa8ca54d598297c5564b7e444725577",
+    "bytes": 1231163,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei North Gate: squat ancient stone fortified gate with large open central arch and broad upturned Chinese tiled roof, exact original near-frontal silhouette. Cream stone base, muted terracotta timber and sage-grey roof. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-presidentinlinna",
+    "replacement_id": "taipei-presidentinlinna-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-presidentinlinna.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-presidentinlinna-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-presidentinlinna-vari2.png",
+    "sha256": "95de66521422d8715f516e5e412ea792dd845705000335b1a6d0f2d5350277b9",
+    "bytes": 873649,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei Presidential Office Building: long symmetrical historic red-brick government facade with tall central clock tower and lower corner pavilions, exact original frontal view. Muted terracotta brick, ivory trim and pale grey roofs. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-punainen-talo",
+    "replacement_id": "taipei-punainen-talo-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-punainen-talo.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-punainen-talo-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-punainen-talo-vari2.png",
+    "sha256": "1d7816b45134412000a68ff92d9833a71cc9b28c605db6596838e050c2a641d4",
+    "bytes": 905829,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei Red House: historic red-brick octagonal entrance building connected to long low rear wings, a short square tower rising behind, exact original elevated three-quarter geometry. Restrained dusty terracotta brick, cool sage-grey roof. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "taipei-lungshan-temppeli",
+    "replacement_id": "taipei-lungshan-temppeli-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-24/taipei-lungshan-temppeli.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/taipei-lungshan-temppeli-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/taipei-lungshan-temppeli-vari2.png",
+    "sha256": "f7d59633c07b645f90a634e2d28e0162e719a45541b950f758ba229a5e4d7261",
+    "bytes": 1084218,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Repaint the exact object in image 1 as a delicate historic game-map miniature: Taipei Lungshan Temple: ornate broad Chinese temple with deep columned front porch, layered sweeping roofs and two wings behind, exact original frontal three-quarter silhouette. Warm cream stone, muted terracotta timber and soft sage-grey tiles. Image 2 gives watercolor STYLE AND PALETTE ONLY: airy brown ink, pale creamy stone and paper, soft sage/gray shadows and restrained terracotta accents. Preserve original composition, silhouette and camera angle; no redesign or extra objects. No text. Put the entire isolated object on a perfectly uniform SOLID PURE #FF00FF MAGENTA background for clean color-key extraction; absolutely no checkerboard, gradients or cast shadow.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "varanasi-assi-ghat",
+    "replacement_id": "varanasi-assi-ghat-vari2",
+    "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/batch-25/original/varanasi-assi-ghat.png",
+    "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/color-audit-bukarest/recolor-504/delivered/varanasi-assi-ghat-vari2.png",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/varanasi-assi-ghat-vari2.png",
+    "sha256": "8b8e190e53ad02d9f85d50a8369c9e90740abf8c4cba355918c26669f8bfb408",
+    "bytes": 1481273,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "prompt": "Faithfully recolor the supplied exact Varanasi miniature varanasi-assi-ghat. Preserve the original historic site, steps, towers, river edge or boats if present, architecture, geometry, silhouette, viewpoint and full framing. Keep fine antique brown ink drawing and transparent watercolor washes. Light restrained game-map palette: cream and pale warm stone, dusty ochre, muted terracotta or rose sandstone on existing masonry, faint desaturated slate shade, tiny sage accents only where existing greenery is visible; use gentle pale blue-grey for water where already depicted. Airy, historical and dignified; never uniform dark sepia, photorealism, sharp digital contrast or saturated colors. Do not invent, remove, or alter architectural or religious details; no people, text, signs, script or border. Place only the isolated cutout illustration on perfectly flat uniform pure #FF00FF chroma-key background with no checkerboard, shadow or paper texture.",
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
