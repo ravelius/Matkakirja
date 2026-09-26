@@ -1,7 +1,11 @@
-# 3D-nostot: paletti ja animaatiotaulukko 16 arkkityypille (luonnos omistajan korttiin)
+# 3D-nostot: paletti, kategoriasymbolit 3D:nä ja erikoismallit (luonnos omistajan korttiin)
 
 *Linssiseppä ja Natiiviseppä 26.9.2026 klo 21.5x Fablen tilauksesta (omistaja 21.4x). Yhteinen esitys; Natiivisepän
 tausta on tiedostossa proto-3d/lokit/ylhaalta-175/animaatioehdotus-1027.md. Ei koodia ennen omistajan korttia.*
+
+**Omistajan korjaus 21.5x (sitova):** 3D-nostot ovat NOSTOT-paneelin kategoriasymbolit 3D:nä, samat joka maassa, ja
+lisäksi muutama erikoismalli maata kohden suurimpina. Rakennusarkkityyppejä ei käytetä. Paletti ja animaatiologiikka
+pysyvät (hyväksytty 21.4x, d88a88d22). Alla kohdat 2 ja 3 on kirjoitettu tämän mukaan uudelleen.
 
 **Omistajan linja 21.4x:**
 - 3D-nostot 2D-kuvamerkkien (seepiakaiverrus) tai nähtävyyskartan kohteiden sävyisiksi.
@@ -40,36 +44,84 @@ tausta on tiedostossa proto-3d/lokit/ylhaalta-175/animaatioehdotus-1027.md. Ei k
   10 min kuten 161). Tauot ovat 20–60 s, joten usein kaikki seisovat ja kerros lepää.
 - Animaatio vain 3D-kynnyksen yllä (kerroin ≥ 2,5). Kaukana näkyy 2D-kuvamerkki, joka ei animoidu.
 
-| # | Arkkityyppi | Aksentti (animoidussa osassa) | Mitä liikkuu (yksinkertaisin muoto) | Käynti / tauko | Kolmiot LOD0 nyt → tavoite (+ liike) |
-|---|---|---|---|---|---|
-| 1 | Mylly | historia #a05c3f | siivet pyörivät 7–9 s/kierros, puuskat ±35 % | 60–180 s / 25–70 s | 164 → 120 (+40) |
-| 2 | Majakka | merenkulku #34566d | lyhdyn kapea valokeila (valaisematon sektori) kiertää 6 s/kierros | 90–240 s / 20–40 s | 195 → 110 (+16) |
-| 3 | Satama | merenkulku #34566d | pieni vene lähtee laiturista, kaartaa ja palaa (20 s), keinuu 3 s | matka 20 s / odotus 30–90 s | 134 → 100 (+30) |
-| 4 | Kirkko | sana #47597f | tornin kello heilahtaa kolme kertaa (3 × 1,6 s) | 1 soitto / 60–150 s | 116 → 90 (+12) |
-| 5 | Linna | historia #a05c3f | tornin viiri lepattaa puuskittain (taipuu 2 s:n jaksolla) | 40–120 s / 15–40 s | 315 → 150 (+8) |
-| 6 | Silta | kaupunki #8a6d4a | vene alittaa sillan (18 s) | 1 ylitys / 40–120 s | 222 → 110 (+20) |
-| 7 | Temppeli | historia #a05c3f | alttarilta nousee kolme savupalloa hitaasti ja häipyy | 30–90 s / 20–60 s | 382 → 160 (+24) |
-| 8 | Luola | luonto #4f7d6f | kolme lepakkoa lentää suulta kaaren ja palaa (8 s) | 1 lento / 60–150 s | 161 → 90 (+12) |
-| 9 | Muistomerkki | historia #a05c3f | kyyhky laskeutuu huipulle, istuu 10–30 s ja lähtee | 1 käynti / 60–120 s | 110 → 70 (+10) |
-| 10 | Raunio | historia #a05c3f | kaksi lintua kiertää raunion yllä (kaari 10 s) | 20–60 s / 40–120 s | 252 → 120 (+12) |
-| 11 | Kaupunkitalo | kaupunki #8a6d4a | savupiipusta 2–3 savupalloa puuskittain | 40–120 s / 20–60 s | 128 → 90 (+16) |
-| 12 | Vuori | luonto-vuori #8a6849 | pilvi liukuu huipun ohi (30 s) ja häipyy | 1 pilvi / 40–90 s | 157 → 90 (+24) |
-| 13 | Meteora | historia #a05c3f | luostarin nostokori nousee köydellä kalliolle (12 s) ja laskee | 1 nosto / 30–90 s | erikoismalli ≤ 1 500 (+20) |
-| 14 | Merkkikivi | kaupunki #8a6d4a | lintu istahtaa kiven päälle ja lähtee | 1 käynti / 60–150 s | 92 → 50 (+10) |
-| 15 | Luostari | sana #47597f | kellotapulin kello heilahtaa, hitaampi ja harvempi kuin kirkossa (2 × 2,2 s) | 1 soitto / 90–200 s | 122 → 90 (+12) |
-| 16 | Kaupunginmuuri | kaupunki #8a6d4a | vartija kulkee muurin päällä edestakaisin (20 s), pysähtyy portilla | 20 s / 20–60 s | 258 → 120 (+10) |
+Kategoriat ovat NOSTOT-paneelin rivit (web js/karttaselite.js KARTTASELITE_JARJESTYS, natiivi Karttaselite), ja
+muodot ovat paneelin ja kartan kuvamerkit (assets/nostotyypit/merkki-*.png, minimerkit NOSTOSYM_MINI_LUONNOS)
+kolmiulotteisina: paksu kaiverrettu reliefi jalustalla, kuin pöydälle nostettu kuvamerkki.
 
-## 3. Yksinkertaistus ja toteutusjärjestys
+| Paneelin rivi | Merkki → 3D-muoto | Mitä liikkuu | Käynti / tauko | Kolmiot (+ liike) |
+|---|---|---|---|---|
+| Historia | raunioitunut kaari (kaksi pilaria, toinen katkennut, kaarikivet) | kyyhky laskeutuu kaaren laelle, istuu 10–30 s ja lähtee | 1 käynti / 60–120 s | 70 (+10) |
+| Kadonneet ihmeet | tähti, 5 sakaraa, pystyssä matalalla jalustalla | tähti kiertyy hitaasti pystyakselinsa ympäri (12 s/kierros); aksentti vanha kulta `--sym-ihme` | 40–90 s / 30–60 s | 40 |
+| Historian hetket | tiimalasi | hiekka valuu (yläkartio pienenee, keko kasvaa); tyhjänä lasi kääntyy 1,5 s:ssa | valuu 30–50 s, tauko 10–30 s | 60 (+16) |
+| Skandaalit | salama, paksu ja pystyssä | keinuu hitaasti ±8° (4 s), välillä pehmeä nytkähdys (ei välähdystä, sääntö 2) | 20–60 s / 30–90 s | 20 |
+| Luonto: vuori | kolmiopyramidi, huippu paperinvaalea | pilvi liukuu huipun ohi ja häipyy | 1 pilvi / 40–90 s | 12 (+24) |
+| Luonto: tulivuori | katkaistu kartio ja kraatteri | savupallot nousevat hitaasti ja kaartuvat tuulessa | 30–90 s / 20–60 s | 30 (+24) |
+| Luonto: vesi (meri, joki, järvi, saari) | kaksi aaltoa (kuvamerkin aalto) | aallot liukuvat ja keinuvat (3 s) | 60–180 s / 20–40 s | 40 |
+| Eläimet | tassu, anturat kohollaan | tassu astuu kolme askelta (nousee ja laskee), sitten lepää | 1 askelsarja / 40–90 s | 36 |
+| Kulttuuri | kellotorni | kello heilahtaa kolme kertaa | 1 soitto / 60–150 s | 60 (+12) |
+| Ruoka | malja ja leipä | maljasta nousee kaksi pientä höyrykiehkuraa | 30–60 s / 30–90 s | 50 (+16) |
+| Kauppa | vaaka | kupit keinuvat tasapainoon (vaimeneva heilahdus 6 s) | 1 punnitus / 40–120 s | 50 (+12) |
+| Tekniikka | ratas | ratas pyörii 8 s/kierros puuskittain | 60–180 s / 25–70 s | 48 |
+| Merenkulku | ankkuri | ankkuri keinuu kuin aallossa (±6°, 5 s) | 60–180 s / 20–60 s | 40 |
+| Kaupungit | piste (matala kiekko) | ei liikettä: kaupungilla on oma elävä elementti (myllyt, karuselli, ilmapallo…) | – | 16 |
 
-- **Mallit.** Pohjapiirros tunnistetaan ylhäältä (Natiivisepän ylhaalta-175, A–E). Sivuja on 6–8, ei hampaita eikä
-  ikkunoita LOD0:ssa. Ikkunat ja ovet ovat ääriviivaa, eivät verkkoa.
+- **Koko:** kategoriasymboli on enintään 40 pt (175c). Erikoismalli on 1,5 × kategoriasymboli ja maan suurin.
+- **Liikkuva osa** (kyyhky, tiimalasin hiekka, kello, vaa'an kupit, pilvi, savu) on oma kappale, jolla on pivot.
+  Kokonaan liikkuvissa (tähti, salama, ratas, ankkuri, tassu) liikkuu symboli ja jalusta pysyy.
+
+## 3. Erikoismallit maittain (Eurooppa, 2–3 maata kohden)
+
+Pelin tason 1 nostoista (Pelikoodarin lista, 185 kohdetta) valitaan tunnetuin siluetti. Malli on oma ja
+yksinkertainen (≤ 1 500 kolmiota, sama paletti ja reuna). Animaatio on kategorian mukainen, tai oma, jos se on merkitty
+tähdellä (*).
+
+| Maa | Erikoismallit (ensimmäinen ensin) |
+|---|---|
+| Kreikka | Akropolis, Delfoi, Meteora* (nostokori) — valmiina |
+| Ranska | Mont-Saint-Michel, Pont du Gard, Carcassonne |
+| Iso-Britannia | Stonehenge, Edinburghin linna, Ironbridge |
+| Italia | Colosseum, Pisan torni, Vesuvius* (savu) |
+| Espanja | Segovian akvedukti, Córdoban moskeijakatedraali, Santiago de Compostela |
+| Saksa | Brandenburgin portti, Kölnin tuomiokirkko, Wartburg |
+| Alankomaat | Kinderdijkin myllyt* (siivet), Afsluitdijk |
+| Belgia | Bruggen kellotorni* (kello), Menin Gate |
+| Sveitsi | Matterhorn* (pilvi), Chillonin linna, Kapellbrücke |
+| Itävalta | Hohensalzburg, Großglockner |
+| Tšekki | Český Krumlov, Kutná Hora |
+| Puola | Malborkin linna, Rysy |
+| Unkari | Pannonhalma, Eger |
+| Tanska | Kronborg, Jellingin kivet |
+| Ruotsi | Visbyn muuri, Kiruna |
+| Norja | Nidarosin tuomiokirkko, Preikestolen, Nordkapp |
+| Suomi | Olavinlinna, Turun linna |
+| Islanti | Geysir* (purkaus höyrynä), Þingvellir |
+| Irlanti | Newgrange, Skellig Michael, Moherin kalliot |
+| Portugali | Batalhan luostari, Sintra |
+| Kroatia | Pulan areena, Stonin muurit |
+| Romania | Branin linna, Peleșin linna |
+| Venäjä | Kizhin pogosta, Peterhof, Elbrus |
+| Bosnia ja Hertsegovina | Mostarin silta, Višegradin silta |
+| Bulgaria | Rilan luostari, Nesebar |
+| Slovakia | Spišin linna, Bojnicen linna |
+| Slovenia | Bledin saarikirkko, Triglav |
+| Viro, Latvia, Liettua | Kuressaaren linna; Rundālen palatsi; Trakain saarilinna |
+| Kypros, Malta, Luxemburg | Kourion; Ħaġar Qim, Mdina; Viandenin linna |
+| Turkki | Kappadokia* (kuumailmapallo nousee), Efesos |
+
+Ensimmäisessä erässä tehdään yksi malli maata kohden (ensimmäinen sarakkeessa) ja myöhemmin loput.
+
+## 4. Yksinkertaistus ja toteutusjärjestys
+
+- **Mallit.** 14 kategoriasymbolia ovat reliefejä (pursotettu kuvamerkin ääriviiva, paksuus 0,15, viistetty reuna).
+  Ne tunnistetaan myös ylhäältä, koska ylhäältä näkyy kuvamerkin oma siluetti. Liioiteltu perspektiivi näyttää
+  kyljen reunoilla. Ikkunat ja ovet ovat ääriviivaa, eivät verkkoa.
 - **Liikkuva osa** on oma pieni kappale (pivot valmiina), kuten elävissä elementeissä. Taso 1 animoidaan
   transformeilla heti. Tasot 2–3 (GPU-instanssit) animoidaan toisessa vaiheessa kärkivarjostimella
   instanssikohtaisella vaiheella (_Tila.z), ilman luurankoa.
-- **Kokeilujärjestys (yksi kuvapari ja video kukin):** mylly ja majakka (jatkoa myllyille) → kirkko ja linna → satama
-  ja silta → loput erinä à 4.
+- **Kokeilujärjestys (yksi kuvapari ja video kukin):** historia (kaari) ja luonto (vuori) ovat yleisimmät (547 ja 294
+  nostoa) → tiimalasi ja tähti → vaaka, ratas ja ankkuri → loput → erikoismallit maa kerrallaan.
 - **Työnjako (sovittu):**
-  - Natiiviseppä: varjostin (seepiaramppi, reuna), instanssianimaatio ja arkkityyppien yksinkertaistus.
+  - Natiiviseppä: varjostin (seepiaramppi, reuna), instanssianimaatio, kategoriasymbolien reliefit ja erikoismallit.
   - Linssiseppä: Vaihtelu-aikataulut, elävän kerroksen kytkentä ja 3 samanaikaisen liikkeen koordinaattori. Liioiteltu
     perspektiivi eläviin elementteihin on jo tehty (8ceb8b97).
   - Kuvasarja isona ja rajattuna: kohde keskellä, puolivälissä ja reunassa.
