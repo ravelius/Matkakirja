@@ -35,7 +35,12 @@
       "Bash(sudo killall coreaudiod)",
       "Bash(sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService)",
       "Bash(sudo killall mDNSResponder)",
-      "Bash(sudo purge)"
+      "Bash(sudo purge)",
+      "Bash(git worktree remove:*)",
+      "Bash(git worktree prune:*)",
+      "Bash(tools/uusi-worktree.sh --poista:*)",
+      "Bash(xcrun simctl erase:*)",
+      "Bash(xcrun simctl delete:*)"
     ]
   }
 }

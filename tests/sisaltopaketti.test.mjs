@@ -1345,7 +1345,7 @@ test('skeema 1.40: kartan nimiöt mahtuvat 18 merkkiin, monumentit.nimio (Sisäl
 test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympärillä (Natiiviseppä, build 13)', () => {
   const o = JSON.parse(tiedostot.get('offline.json'));
   const R = o.lahteet.rasteri;
-  assert.match(R.url, /\/2026-09-25-pohja-20260925\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
+  assert.match(R.url, /\/2026-09-26-pohja-20260926\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
   assert.equal(R.maxzoom, 9);
   assert.deepEqual(R.kaupunkitaso.tasot, [9]);
   const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((c) => c.tyyppi === 'kaupunki');
@@ -1413,3 +1413,110 @@ test('taustapäivitys vaihe 1: tasoittain periytyy ja uusi taso jättää vanhan
   assert.ok(validoiNimella({ ...eka, tasoittain: { ios: { x: 1 } } }, 'osoitin.schema.json').length);
 });
 
+test('skeema 1.44: karttavalot.laji = webin symLaji (löydös 125, Kreikka)', () => {
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  assert.ok(valot.every((v) => 'laji' in v), 'laji jokaisella rivillä');
+  const laji = (tunnus) => valot.find((v) => v.maa === 'GRC' && v.tunnus === tunnus)?.laji;
+  assert.equal(laji('parnassos'), 'vuori');
+  assert.equal(laji('santorini'), 'saari');
+  assert.equal(laji('egeanmeri'), 'meri');
+  assert.equal(laji('aliakmonas'), 'joki');
+  assert.ok(valot.filter((v) => v.lahde === 'elaintaky').every((v) => v.laji === 'elain'));
+});
+
+test('skeema 1.45: Elävä kartta — kokoluokka, maakunta ja salaisuus', async () => {
+  const { NOSTOJEN_KOKOLUOKAT } = await import('../js/packs/nostojen-kokoluokat.js');
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  assert.ok(valot.every((v) => ['paakohde', 'kohde', 'pieni'].includes(v.kokoluokka)), 'kokoluokka jokaisella');
+  const grc = Object.entries(NOSTOJEN_KOKOLUOKAT.GRC);
+  for (const [avain, luokka] of grc) {
+    const v = valot.find((x) => x.maa === 'GRC' && `nosto:${x.tunnus}` === avain);
+    if (v) assert.equal(v.kokoluokka, luokka, avain);
+  }
+  assert.ok(valot.filter((v) => v.kokoluokkaLahde === 'data').length >= grc.length * 0.9);
+  const alueet = new Set(JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot.map((a) => a.id));
+  assert.ok(valot.every((v) => v.maakunta === null || (alueet.has(v.maakunta) && v.maakunta.startsWith(`${v.maa}:`))));
+  const maakunta = (t) => valot.find((v) => v.maa === 'GRC' && v.tunnus === t)?.maakunta;
+  assert.equal(maakunta('hahmotelma-sounion'), 'GRC:Attiki');
+  assert.equal(maakunta('egeanmeri'), null);
+  const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
+  assert.ok(rajat.every((a) => 'salaisuus' in a));
+});
+
+test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () => {
+  const k = JSON.parse(tiedostot.get('kokoelmat/reitit1873.json'));
+  assert.ok(k.alkiot.length > 100);
+  assert.ok(k.lahteet.length && k.lahteet.every((l) => l.id && l.lisenssi));
+  for (const r of k.alkiot) {
+    assert.ok(['laiva', 'rautatie'].includes(r.laji), r.id);
+    assert.ok(r.lisenssi && typeof r.lahde === 'string' && r.lahde.length, r.id);
+    assert.ok(r.viivat.length && r.viivat.every((v) => v.length >= 2 && v.every(([lon, lat]) => Math.abs(lon) <= 180 && Math.abs(lat) <= 90)), r.id);
+  }
+  assert.ok(k.alkiot.some((r) => r.laji === 'laiva') && k.alkiot.some((r) => r.laji === 'rautatie'));
+});
+
+test('skeema 1.47: maakuntasalaisuudet omana kokoelmana, ei karttavaloissa', async () => {
+  const { MAAKUNTASALAISUUDET } = await import('../js/packs/maakuntasalaisuudet.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
+  assert.equal(k.length, Object.keys(MAAKUNTASALAISUUDET).length);
+  for (const s of k) {
+    assert.ok(s.id.startsWith('salaisuus:') && s.kokoluokka === 'paakohde' && s.maakunta && s.teksti && s.lyhyt, s.id);
+    assert.ok(Number.isFinite(s.lat) && Number.isFinite(s.lon) && s.aihe, s.id);
+    assert.equal(MAAKUNTASALAISUUDET[s.maakunta], `nosto:${s.tunnus}`);
+    assert.ok(s.nimio === null || s.nimio.length <= 18, s.id);
+  }
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  assert.ok(!valot.some((v) => v.id.startsWith('salaisuus:') || 'salaisuus' in v), 'ei karttavaloissa (build 16/17 piirtäisi)');
+  const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
+  assert.equal(rajat.find((a) => a.id === 'GRC:Attiki').salaisuus, 'salaisuus:salaisuus-eleusiin-mysteerit');
+});
+
+test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () => {
+  const manifest = JSON.parse(tiedostot.get('manifest.json'));
+  const koko = JSON.parse(tiedostot.get('kokoelmat/kaupunkilehdet.json'));
+  const lista = manifest.kaupunkilehdetKaupungeittain;
+  assert.equal(lista.length, koko.alkiot.length);
+  for (const e of lista.slice(0, 20)) {
+    const k = JSON.parse(tiedostot.get(e.tiedosto));
+    assert.equal(e.tiedosto, `kokoelmat/kaupunkilehdet/${e.id}.json`);
+    assert.equal(k.nimi, 'kaupunkilehdet');
+    assert.equal(k.alkiot.length, 1);
+    assert.deepEqual(k.alkiot[0], koko.alkiot.find((a) => a.id === e.id));
+  }
+});
+
+
+test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luonnehdinnoissa', async () => {
+  const { pikkukuvaOsoite } = await import('../tools/vienti/elava-kartta.mjs');
+  const juuri = 'https://media.matkakirja.app/';
+  assert.equal(pikkukuvaOsoite('assets/kartat/maakunnat/grc-attiki.webp'), `${juuri}kohtaamiset/maakunnat/grc-attiki.webp`);
+  assert.equal(pikkukuvaOsoite('grc-attiki'), `${juuri}kohtaamiset/maakunnat/grc-attiki.png`);
+  assert.equal(pikkukuvaOsoite('Meteora, Greece (2016).jpg'), `${juuri}kuvat/meteora-greece-2016.jpg`);
+  assert.equal(pikkukuvaOsoite(`${juuri}x.jpg`), `${juuri}x.jpg`);
+  assert.equal(pikkukuvaOsoite(null), null);
+  assert.throws(() => pikkukuvaOsoite('ei kuva'), /https-osoitetta/);
+  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
+  for (const s of k) {
+    assert.ok('pikkukuva' in s && (s.pikkukuva === null || s.pikkukuva.startsWith('https://')), s.id);
+    assert.ok(s.pikkukuva === null || s.pikkukuvaLahde, `${s.id}: kuvalla pitää olla tekijä ja lisenssi (pikkukuvaLahde)`);
+  }
+  const m = JSON.parse(tiedostot.get('moduulit/js/packs/maakunnat-luonnehdinnat.json')).exportit;
+  const kuvat = JSON.stringify(m).match(/"pikkukuva":("[^"]*"|null)/g) ?? [];
+  for (const p of kuvat) assert.match(p, /^"pikkukuva":(null|"https:\/\/[^"]+")$/);
+});
+
+test('skeema 1.50: musiikkiaiheet ja kaupungin maanosa äänitauluissa', async () => {
+  const { MATKAN_AIHEET } = await import('../js/ui.js');
+  const { SAAPUMISTUNNUKSET, kaupunginMaanosa } = await import('../js/kaupunkimusiikki.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot;
+  const aiheet = k.filter((a) => a.laji === 'musiikkiaihe');
+  assert.equal(aiheet.length, Object.keys(MATKAN_AIHEET).length + Object.keys(SAAPUMISTUNNUKSET).length);
+  for (const a of aiheet) {
+    assert.ok(a.url.startsWith('https://') && a.url.endsWith('.mp3'), a.id);
+    assert.ok(a.tunnus.startsWith('musa-') && !a.tunnus.endsWith('-lyria'), a.id);
+  }
+  for (const m of Object.keys(SAAPUMISTUNNUKSET)) assert.ok(aiheet.some((a) => a.nimi === `saapuminen-${m}`), m);
+  const ateena = k.find((a) => a.id === 'musiikkiketju:ateena');
+  assert.equal(ateena.maanosa, kaupunginMaanosa('ateena', 'GRC'));
+  assert.ok(ateena.maanosa);
+});

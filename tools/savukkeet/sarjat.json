@@ -451,13 +451,7 @@
       },
       "kuvakansio": true,
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 390 px. TUNNETTU PUNAINEN (Pelikoodari/Julkaisija 21.9.2026, v1984): 8l4 puhelin — liuska x nimio (Skandaalit). Sovittelun lukko luettiin ennen merkit.aseta-kutsua, jolloin ruutu nayttaa datan kyljen eika lasketun asennon (14/68 lappua eri asennossa mitattu 1400 px); piilotustesti ei silloin osu oikeaan nimioon. Korjaus (pelikoodari-camargue) mergetty, mutta rivi on yha punainen CI:n kuormassa 21.9.2026 aamuyolla - seurataan.",
-      "tunnetutPunaisetMac": [
-        "8l4\\. puhelin: liuska on ruudussa eikä leikkaa"
-      ],
-      "tunnetutPunaiset": [
-        "8k\\. puhelin: keskitetty liuska on merkin korkeudella"
-      ],
-      "huomautus8k": "TUNNETTU PUNAINEN (Julkaisija 24.9.2026): 8k punainen jokaisessa ajossa viimeistaan 22.9.2026 klo 23.40 alkaen (run 35781826724), myos paikallisesti ilman kuormaa mainissa 3671682e5: listan keskipiste 78 px merkin ylapuolella (sieto 30 px), lista merkin oikealla. Ei kuormaherkka eika PR-jonon aiheuttama. Pelikoodarille: korjaa asemointi tai paivita odotus, ja poista tama rivi."
+      "huomautus8l4": "KORJATTU (Pelikoodari 26.9.2026): 8l4 punainen oli vartion ajoituskilpailu - esteet luettiin ennen kuin sovittelu piilotti liuskan alle jaavat nimiot (36 estetta/3 leikkausta, heti peraan 32/0). Vartio lukee esteet uudelleen kunnes tulos asettuu (enintaan ~3 s) ja ohittaa nakymattoman musteen. 8k meni samalla paikallisesti lapi. Liuska-lohko 3/3 x 17/17 paikallisesti (Chromium, 390 px). Tunnetut punaiset 8l4 ja 8k poistettu."
     },
     "savuke-pariisi-lahizoom.mjs#1400-perus": {
       "env": {
@@ -736,7 +730,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "webkit"
       },
-      "huomautus": "KOE ?koe=vientibudjetti (omistaja 22.9.2026 klo 23.45: ei oletukseksi). Laattojen vienti vedon aikana budjetilla (omistajan iPad-kierros v2135/v2136 23.9.2026: eivienti pudotti >20 ms kehykset 25 % -> 8 %). Liikkeessa 1 vienti/kehys vain nakyvalle laatalle, ennakko 50 ms valein; levossa 2/kehys. Sama synteettinen veto 3 x 1,5 s, 500 px/s, Ranska alt 0,35, vain liikkeen kehykset: B0 esiehto vastakokeessa >= 10 vientia, B1 vastakoe oletus vie kaksi samassa kehyksessa, B2 budjetilla <= 1/kehys, B3 ennakkoja <= 21/s (kerroksen laskuri vedonEnnakkoja), B4 pohja (dc > 200) <= 15 % kehyksista, B5 levossa jono tyhja ja nakyvat taysin scenessa, B6 ei sivuvirheita. WebKit 7/7 useita kertoja; budjetti 37-43 vientia vs vanha 196-199; vanhalla koodilla B2 FAIL. Vanha tahti: pohja piirrossa 52-82 % vetokehyksista (haive kesken) = omistajan dc 431."
+      "huomautus": "KOE ?koe=vientibudjetti (omistaja 22.9.2026 klo 23.45: ei oletukseksi). Laattojen vienti vedon aikana budjetilla (omistajan iPad-kierros v2135/v2136 23.9.2026: eivienti pudotti >20 ms kehykset 25 % -> 8 %). Liikkeessa 1 vienti/kehys vain nakyvalle laatalle, ennakko 50 ms valein; levossa 2/kehys. Sama synteettinen veto 3 x 1,5 s, 500 px/s, Ranska alt 0,35, vain liikkeen kehykset: B0 esiehto vastakokeessa >= 10 vientia, B1 vastakoe oletus vie kaksi samassa kehyksessa, B2 budjetilla <= 1/kehys, B3 ennakkoja <= 21/s (kerroksen laskuri vedonEnnakkoja), B4 pohja (dc > 200) <= 15 % kehyksista vain WebKitilla (Chromium-varapolulla INFO, Fable 26.9.2026), B5 levossa jono tyhja ja nakyvat taysin scenessa, B6 ei sivuvirheita. WebKit 7/7 useita kertoja; budjetti 37-43 vientia vs vanha 196-199; vanhalla koodilla B2 FAIL. Vanha tahti: pohja piirrossa 52-82 % vetokehyksista (haive kesken) = omistajan dc 431."
     },
     "savuke-paljas-kartta.mjs": {
       "env": {
