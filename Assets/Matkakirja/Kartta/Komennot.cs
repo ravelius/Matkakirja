@@ -432,6 +432,11 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA huntu: paljastus ({plat}, {plon}) säde {pkm} km, reuna {preuna} km");
                     break;
                 }
+                case "naytto":
+                    // naytto valvo|oletus: näyttö ei lukitu mittausten aikana (löydös 161 A/B, 10 min lepojaksot)
+                    Screen.sleepTimeout = o.Length > 1 && o[1] == "valvo" ? SleepTimeout.NeverSleep : SleepTimeout.SystemSetting;
+                    Debug.Log("MATKAKIRJA naytto: sleepTimeout " + Screen.sleepTimeout);
+                    break;
                 case "pallo" when o.Length > 1 && o[1] == "kerros":
                 {
                     // pallo kerros tila|pois|paalle|pakota taysi|kerros|auto (elävä kerros, löydös 161 B)
