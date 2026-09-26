@@ -7307,3 +7307,7 @@ Natiiviseppa: omistajan kuva on 1.0.24 (tason 1 nostot 2D-merkkeina; 1.0.25:ssa 
 ## 174 DATA TAYSI: LAIKKA TULEE NostotKartalla.cs:232:STA (26.9.2026 klo 19.52)
 
 Pelikoodari: jokaisella nostolla on symboli datassa (taso 1: 177 kuvamerkki + 8 tyyppikuvake; taso 2: 2 068 + 710; laji puuttuu 0/119 maata). Natiivissa NostoSaannot.cs:ssa sama 11 kuvamerkin taulu kuin webissa + tyyppikuvakkeen varamerkki. Laikka syntyy NostotKartalla.cs:232 (loytamaton taso 2–3 → MusteJaljet-laikka, elavan kartan kohta 2). Korjaus: kaukaa kuvamerkki/tyyppikuvake himmeana, lahella malli — Natiivi-UI; Natiivisepan kartoitus peruttu, vain mittaus.
+
+## 174B: KOLME UUTTA KUVAMERKKIA (HUUTO, ELAIN, HETKI) (26.9.2026 klo 19.53)
+
+Natiiviseppa: tasojen 2–3 paakartan nostoista 1 972/2 590 saa symbolin webin 155-kaavalla (11 merkki-*.png); 618 ilman kuvamerkkia myos webissa: huuto 256, elain 189, kaupunki 138 (kaupunkimerkki), hetki 24, luonto 10 (vuori/meri). Fable: Pelikoodari tekee merkki-huuto, merkki-elain ja merkki-hetki samaan kaiverrustyyliin, web + natiivi samat tiedostot, PR junaan; siihen asti minimerkki.
