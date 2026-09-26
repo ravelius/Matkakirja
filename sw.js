@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2290';
+const CACHE = 'matkakirja-2026-09-21.2288';
 const SHELL = [
   './',
   './index.html',
@@ -1032,7 +1032,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/praha-prahan-linna.webp',
   './assets/kartat/miniatyyrit/praha-kaarlensilta.webp',
   './assets/kartat/miniatyyrit/praha-vanhauusi-synagoga.webp',
-  './assets/kartat/miniatyyrit/praha-astronominen-kello.webp',
   './assets/kartat/miniatyyrit/praha-kansallismuseo.webp',
   './assets/kartat/miniatyyrit/amsterdam-keskusrautatieasema.webp',
   './assets/kartat/miniatyyrit/amsterdam-anne-frankin-talo.webp',
@@ -1046,7 +1045,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tukholma-kuninkaanlinna.webp',
   './assets/kartat/miniatyyrit/tukholma-vasa-museo.webp',
   './assets/kartat/miniatyyrit/tukholma-skansen.webp',
-  './assets/kartat/miniatyyrit/kobenhavn-pieni-merenneito.webp',
   './assets/kartat/miniatyyrit/kobenhavn-amalienborg.webp',
   './assets/kartat/miniatyyrit/kobenhavn-rundetarn.webp',
   './assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
@@ -1213,7 +1211,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/budapest-pyhan-tapanin-kirkko.webp',
   './assets/kartat/miniatyyrit/budapest-sankarien-aukio.webp',
   './assets/kartat/miniatyyrit/budapest-suuri-kauppahalli.webp',
-  './assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
   './assets/kartat/miniatyyrit/lissabon-kansallispanteoni.webp',
   './assets/kartat/miniatyyrit/lissabon-kauppatori.webp',
   './assets/kartat/miniatyyrit/lissabon-rossio.webp',
@@ -1234,7 +1231,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/barcelona-arc-de-triomf.webp',
   './assets/kartat/miniatyyrit/barcelona-boquerian-kauppahalli.webp',
   './assets/kartat/miniatyyrit/barcelona-casa-batllo.webp',
-  './assets/kartat/miniatyyrit/barcelona-kolumbuksen-patsas.webp',
   './assets/kartat/miniatyyrit/barcelona-musiikkipalatsi.webp',
   './assets/kartat/miniatyyrit/barcelona-sagrada-familia.webp',
   './assets/kartat/miniatyyrit/dublin-dublinin-linna.webp',
