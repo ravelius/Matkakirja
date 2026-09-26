@@ -91,6 +91,13 @@ namespace Matkakirja
             return Mathf.Max(0.1f, Mathf.Max(s.x, s.z));
         }
 
+        /// <summary>Mallin pohjan ulottuma origosta (X, Z) verkon rajoista: jalan nosto liioitellussa perspektiivissä.</summary>
+        static Vector2 Puoli(Mesh m)
+        {
+            var b = m.bounds;
+            return new Vector2(Mathf.Max(Mathf.Abs(b.min.x), Mathf.Abs(b.max.x)), Mathf.Max(Mathf.Abs(b.min.z), Mathf.Abs(b.max.z)));
+        }
+
         /// <summary>Levyn materiaali mallin materiaalista: _Pohja 1, ZTest Always, ZWrite Off, piirto ensimmäisenä (ennen
         /// ääriviivaa ja mallia).</summary>
         static Material PohjaMateriaali(Material malli)
