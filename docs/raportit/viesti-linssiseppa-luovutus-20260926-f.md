@@ -85,3 +85,12 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   Kun data on paikallaan, testaa `vari GRC` + `aja 38.4 23.4 7 1.5` + peli-komento `muste loyda nosto:marathon`
   (skripti ajo-herays.sh) ja lähetä kuvapari omistajalle.
 - Seuraavaksi kohdat 4–5 (yövalomaski käydyille sekä laiva ja boidit) Fablen järjestyksessä.
+
+## Päivitys klo 07.3x
+
+- **Kohta 3 on todennettu koko ketjuna** (juna/b13 fdc47632, paketti v151, tuore asennus `PUHDAS=1`). Data-JUMI on purettu:
+  karttavalon tunnus on `kohde:marathon`, ja Siirtosepän korjaukset ovat junassa.
+  - Ketju: löytö → GRC:Attiki 1/14 → herätys (tulva 83 km, käsialanimi) → Attika jää herääneeksi (herännyt 1,
+    uinuva 13) → lepo.
+  - Kuvapari on lähetetty omistajalle ja Fablelle: lokit/linssiseppa-herays-20260926/omistajalle/.
+- Seuraavaksi kohdat 4–5 Fablen järjestyksessä.
