@@ -130,6 +130,11 @@
 //                                             Saapumistekstit (skeema 1.24): lokiin valokuvien määrä ja äänite (kairo)
 //                                             tai lukijan pituus; esim. kairo, fes (havainto kokoelmasta)
 //   ui kartuscha [ISO3] [auki] | pois         kartuscha maalle ilman peliä (oletus ITA); raukeaa pelaajan maan vaihtuessa
+//   ui muste heraa <ISO:tunnus> [l/k]         Elävä kartta ilman peliä: kartussi auki maalle, maakunnan rivi herää
+//                                             (käsialanimi 1,2 s, pikkukuva leimautuu 0,3 s, pisteet l/k, oletus 1/datan
+//                                             määrä tai 7) ja nimi kirjoittuu kartalle maakunnan kohdalle
+//   ui muste valmis <ISO> | salaisuus <ISO:tunnus> | pois | tila   maa valmis → lippu liehuu; salaisuusrivi
+//                                             kartussiin (napautus avaa kortin salaisuus:<tunnus>); testitila pois; tila lokiin
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
 //   ui tila teksti                            tilarivin teksti
@@ -931,6 +936,14 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "selite": ui.Karttaselite.Avaa(); ui.Karttaselite.VaihdaValilehti(false); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
+                case "muste":
+                {
+                    // Maakunnan tunnuksessa voi olla välilyönti (GRC:Notio Aigaio): loput annetaan kokonaisena.
+                    var mo = loput.Trim().Split(new[] { ' ' }, 2, System.StringSplitOptions.RemoveEmptyEntries);
+                    string ali = mo.Length > 0 ? mo[0] : "tila";
+                    if (ali == "tila") return ui.Kartuscha.MusteTesti("tila", null) + "; " + ui.MaakuntaNimet.Kuvaus();
+                    return ui.Kartuscha.MusteTesti(ali, mo.Length > 1 ? mo[1].Trim() : null);
+                }
                 case "kartuscha":
                 {
                     var ks = loput.Split(' ');
