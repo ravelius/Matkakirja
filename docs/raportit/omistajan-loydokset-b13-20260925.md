@@ -177,3 +177,5 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 156 | Maakuntien selain saisi toimia samalla tavalla vetämällä kuin nostojen selain (sama ele ja tuntuma). | Natiivi-UI |
 | 157 | Valitussa maakunnassa ei näytetä vahvennettuja rajoja, vaan maakunnan väri vahvistuu kartalla. | Natiiviseppä (MaaKartta) + Natiivi-UI (valinnan ohjaus) |
 | 158 | Kuvat kaikkiin maakuntanostoihin ja pikkukuviin (115:n pikkukuvadata) — nyt osa ilman kuvaa. | Sisältökirjuri (kuvat PD/CC Commonsista) + Siirtoseppä (pikkukuvadata pakettiin) + Natiivi-UI (näyttö) |
+| 159 | Vektorireitit (1873-reitit, kuljettu reitti) häipyvät horisontin lähellä enemmän — sama etäisyyshäivytys kuin 153:ssa nostoille. | Natiiviseppä (Linssiseppä kynäviiva) |
+| 160 | Kolmiulotteiset symbolinostot: tason 1 nostoille (esim. Delfoi, Akropolis) 3D-mallit kartalle, kun mallit on tehty tai tilattu (PD/CC tai omat); niille sama horisonttihäivytys kuin muille kohteille. Ensin suunnitelma: mitkä nostot, mallien lähde/tekotapa, koko ja hinta kehykselle. | Natiiviseppä (suunnitelma) + Fable (tilaus omistajalle) |
