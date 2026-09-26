@@ -2199,6 +2199,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    * extmetadata) ennen latausta, suurennettu enintään 1600 px:iin ja
    * viety ämpäriin karttanostot/20260926/. Vain PD/CC0/CC BY/CC BY-SA,
    * ei NC/ND-kuvia. Havainnekuva (1873) tulee myöhemmin erikseen.
+   * `pikkukuva` (Fablen täsmennys 26.9.2026, PR #3307:n skeema): GRC ei
+   * ollut mukana Codexin kuvitetussa pikkukuva-tilauksessa (löydös 115
+   * kattaa vain FRA/ESP/ITA/GBR/DEU/POL/AUT), joten GRC:n pikkukuva
+   * kierrättää samat yllä olevat kuva-osoitteet väliaikaisena
+   * ratkaisuna Fablen luvalla — ei erillistä latausta.
    * Lähteet (tarkistettu Wikimedia Commons -API:sta 26.9.2026):
    *   Attiki           — File:Acropolis_Parthenon_Athens_Greece.jpg (Jebulon, CC0)
    *   Kentriki Makedonia — File:The_White_Tower_of_Thessaloniki,_Greece.jpg (Annatsach, CC BY-SA 4.0)
@@ -2231,6 +2236,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-attiki-267cf435.jpg',
     },
     'Kentriki Makedonia': {
       lyhyt: 'Thessaloniki on Kreikan toiseksi suurin kaupunki, ja sen rantabulevardilla Valkoinen torni katsoo yhä Thermaisenlahdelle.',
@@ -2245,6 +2251,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kentriki-makedonia-5c601f8c.jpg',
     },
     Kriti: {
       lyhyt: 'Kreeta on Kreikan suurin saari, ja sen vuoristoisella Samarian rotkolla vaeltaa tuhansia retkeilijöitä joka kesä.',
@@ -2259,6 +2266,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/de/deed.en',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kriti-30918314.jpg',
     },
     Peloponnisos: {
       lyhyt: 'Korinton kanava halkaisee Peloponnesoksen niemimaan kapeasta kannaksesta, ja sillalta autoilijat katsovat yli 70 metriä alas.',
@@ -2273,6 +2281,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-peloponnisos-b4f57b8f.jpg',
     },
     Thessalia: {
       lyhyt: 'Thessalian pystyjen kalliopylväiden laella kohoavat Meteoran luostarit, joihin munkit kiipesivät ennen tikapuilla ja köysillä.',
@@ -2287,6 +2296,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-thessalia-94962e38.jpg',
     },
     Ipeiros: {
       lyhyt: 'Epeiroksen Vikosin rotko on maailman syvimpiä suhteessa leveyteensä, ja sen reunoilla vanhat kivikylät ovat yhä asuttuja.',
@@ -2301,6 +2311,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ipeiros-81904730.jpg',
     },
     'Dytiki Makedonia': {
       lyhyt: 'Kastorian kaupunki kiertää turkiskaupasta vaurastuneen järven ympäri, ja talvisin sen kapea niemi peittyy usein usvaan.',
@@ -2315,6 +2326,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-makedonia-10cd285c.jpg',
     },
     'Dytiki Ellada': {
       lyhyt: 'Rio–Antirrion silta yhdistää Peloponnesoksen manner-Kreikkaan, ja Patran karnevaali on koko maan suurin katujuhla.',
@@ -2329,6 +2341,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-ellada-2c0708f5.jpg',
     },
     'Stereá Elláda': {
       lyhyt: 'Delfoin oraakkelin rauniot kohoavat Parnassosvuoren rinteellä – antiikin kreikkalaiset pitivät paikkaa maailman napana.',
@@ -2343,6 +2356,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-sterea-ellada-b756c201.jpg',
     },
     'Anatoliki Makedonia kai Thraki': {
       lyhyt: 'Traakiassa asuu Kreikan suurin muslimivähemmistö, ja rajajoki Evros erottaa alueen naapurimaasta Turkista.',
@@ -2356,6 +2370,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssi: 'Public domain',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-anatoliki-makedonia-kai-thraki-c1ab2e80.jpg',
     },
     'Ionioi Nisoi': {
       lyhyt: 'Korfun venetsialaistyylinen vanhakaupunki on Unescon listalla, ja Joonianmeren saaristo makaa Kreikan läntisimpänä.',
@@ -2370,6 +2385,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ionioi-nisoi-e9284910.jpg',
     },
     'Notio Aigaio': {
       lyhyt: 'Etelä-Egean saariin kuuluvat sekä Santorinin tulivuorikaldera että Rodoksen keskiaikainen ritarilinnoitus.',
@@ -2384,6 +2400,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-notio-aigaio-e7a57c69.jpg',
     },
     'Voreio Aigaio': {
       lyhyt: 'Lesboksen saaren kivettynyt metsä on 17–20 miljoonaa vuotta vanha, ja saari tunnetaan yhä anisviina ouzon tislauksesta.',
@@ -2398,6 +2415,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-voreio-aigaio-e6e2026d.jpg',
     },
     'Ayion Oros': {
       lyhyt: 'Athosvuoren munkkitasavaltaan pääsee vain erityisluvalla, eivätkä naiset saa astua sen maaperälle lainkaan.',
@@ -2412,6 +2430,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ayion-oros-f8e6edc2.jpg',
     },
   },
   /*
