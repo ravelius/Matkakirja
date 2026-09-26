@@ -875,7 +875,7 @@ export const MINIATYYRIT = {
     Arg: 'tabriz-arg-vari2',
     'Saat-torni': 'tabriz-saat-torni-vari2',
     'Azerbaidžanin museo': 'tabriz-azerbaidzanin-museo-vari2',
-    'Sininen moskeija': 'tabriz-sininen-moskeija',
+    'Sininen moskeija': 'tabriz-sininen-moskeija-vari2',
   },
   riad: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1282,11 +1282,11 @@ export const MINIATYYRIT = {
     'Fort Canningin kukkula': 'singapore-fort-canningin-kukkula-vari2',
     'Clarke Quay': 'singapore-clarke-quay-vari2',
     'Empress Place': 'singapore-empress-place-vari2',
-    'Boat Quay': 'singapore-boat-quay',
-    'Merlion-puisto': 'singapore-merlion-puisto',
-    'Gardens by the Bay': 'singapore-gardens-by-the-bay',
-    'Sri Mariamman -temppeli': 'singapore-sri-mariamman-temppeli',
-    'Thian Hock Keng -temppeli': 'singapore-thian-hock-keng-temppeli',
+    'Boat Quay': 'singapore-boat-quay-vari2',
+    'Merlion-puisto': 'singapore-merlion-puisto-vari2',
+    'Gardens by the Bay': 'singapore-gardens-by-the-bay-vari2',
+    'Sri Mariamman -temppeli': 'singapore-sri-mariamman-temppeli-vari2',
+    'Thian Hock Keng -temppeli': 'singapore-thian-hock-keng-temppeli-vari2',
   },
   samarkand: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1325,7 +1325,7 @@ export const MINIATYYRIT = {
     'Manikarnika Ghat': 'varanasi-manikarnika-ghat-vari2',
     'Kashi Vishwanath -temppeli': 'varanasi-kashi-vishwanath-temppeli-vari2',
     'Dashashwamedh Ghat': 'varanasi-dashashwamedh-ghat-vari2',
-    'Assi Ghat': 'varanasi-assi-ghat',
+    'Assi Ghat': 'varanasi-assi-ghat-vari2',
     'Durga Kund -temppeli': 'varanasi-durga-kund-temppeli',
     'Ramnagarin linnoitus': 'varanasi-ramnagarin-linnoitus',
   },
@@ -1426,12 +1426,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Baoan-temppeli': 'taipei-baoan-temppeli',
-    'Dihua-katu': 'taipei-dihua-katu',
-    Pohjoisportti: 'taipei-pohjoisportti',
-    Presidentinlinna: 'taipei-presidentinlinna',
-    'Punainen talo': 'taipei-punainen-talo',
-    'Lungshan-temppeli': 'taipei-lungshan-temppeli',
+    'Baoan-temppeli': 'taipei-baoan-temppeli-vari2',
+    'Dihua-katu': 'taipei-dihua-katu-vari2',
+    Pohjoisportti: 'taipei-pohjoisportti-vari2',
+    Presidentinlinna: 'taipei-presidentinlinna-vari2',
+    'Punainen talo': 'taipei-punainen-talo-vari2',
+    'Lungshan-temppeli': 'taipei-lungshan-temppeli-vari2',
     'Bopiliaon vanha kortteli': 'taipei-bopiliaon-vanha-kortteli',
     'Chiang Kai-shek -muistosali': 'taipei-chiang-kai-shek-muistosali',
     'Kasvitieteellinen puutarha': 'taipei-kasvitieteellinen-puutarha',
@@ -1641,16 +1641,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Sydney Harbour Bridge': 'sydney-sydney-harbour-bridge',
-    'Sydneyn oopperatalo': 'sydney-sydneyn-oopperatalo',
-    'Mrs Macquarie\'s Chair': 'sydney-mrs-macquarie-s-chair',
-    'Sydneyn konservatorio': 'sydney-sydneyn-konservatorio',
-    'Hyde Park Barracks': 'sydney-hyde-park-barracks',
-    'Pyrmontin silta': 'sydney-pyrmontin-silta',
-    'Pyhän Marian katedraali': 'sydney-pyhan-marian-katedraali',
-    'Pyhän Andreaksen katedraali': 'sydney-pyhan-andreaksen-katedraali',
-    'Australian museo': 'sydney-australian-museo',
-    'Anzac-muistomerkki': 'sydney-anzac-muistomerkki',
+    'Sydney Harbour Bridge': 'sydney-sydney-harbour-bridge-vari2',
+    'Sydneyn oopperatalo': 'sydney-sydneyn-oopperatalo-vari2',
+    'Mrs Macquarie\'s Chair': 'sydney-mrs-macquarie-s-chair-vari2',
+    'Sydneyn konservatorio': 'sydney-sydneyn-konservatorio-vari2',
+    'Hyde Park Barracks': 'sydney-hyde-park-barracks-vari2',
+    'Pyrmontin silta': 'sydney-pyrmontin-silta-vari2',
+    'Pyhän Marian katedraali': 'sydney-pyhan-marian-katedraali-vari2',
+    'Pyhän Andreaksen katedraali': 'sydney-pyhan-andreaksen-katedraali-vari2',
+    'Australian museo': 'sydney-australian-museo-vari2',
+    'Anzac-muistomerkki': 'sydney-anzac-muistomerkki-vari2',
   },
   rio: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
