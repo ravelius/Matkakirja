@@ -574,6 +574,10 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(teksti)) return null;
             viimeRepliikki = teksti;
             viimeToimi = Aika;
+            // Karttaväistö: puhuva pulu palaa heti näkyviin, myös "blink"-repliikillä, joka ei kutsu Toistaa (muuten ääni
+            // kuuluisi näkymättömästä pulusta eikä piilotettua repliikkiä voisi napauttaa esiin). Väistö ei ala puheen
+            // aikana: KartanEleAlkoi vaatii Rauhallinen() (ei PuluPuhuu, ei kuplia).
+            if (karttavaihe != Karttavaihe.Ei) LopetaKarttavaisto();
             if (nukkuu) { nukkuu = false; Toista("wake"); }
             // Löydös 21 (omistaja 24.9.2026): tekstit oletuksena piilossa — vain ääni ja ele. Napautus pulua avaa
             // viimeisimmän repliikin. Vain naytaAina-kuplat (pulun ensiesittely, joka opastaa valintaan) näkyvät aina;
