@@ -87,7 +87,10 @@ namespace Matkakirja.Natiivi
             ohjain?.Kirjaa($"elävä: herätys jonossa {maakunta} (nosto {nostoId ?? "-"})");
         }
 
-        static bool KarttaVapaa() =>
+        /// <summary>Herätys käynnissä (elävät hetket väistävät).</summary>
+        internal static bool Kaynnissa => nykyinen != null;
+
+        internal static bool KarttaVapaa() =>
             PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.Tila == SilmukanTila.Kartta && !PalloKierto.KuvaSumea &&
             !PalloKierto.PorttiSumea && LinssiOhjain.Rekisteri?.Auki == null && ElavaKartta.Instanssi == null;
 
