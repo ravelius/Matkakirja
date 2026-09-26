@@ -48,7 +48,8 @@ Shader "Matkakirja/Lipputanko"
                 o.positionCS = TransformObjectToHClip(i.positionOS.xyz);
                 o.uv = i.uv;
                 o.n = TransformObjectToWorldNormal(i.normalOS);
-                o.usvaY = UsvaYlhaalta(o.positionCS);
+                // Usva tangon jalasta: lippu ei haalistu latvastaan horisonttiin (sama kuin Symbolimalli).
+                o.usvaY = UsvaYlhaalta(TransformObjectToHClip(float3(0, 0, 0)));
                 return o;
             }
 
