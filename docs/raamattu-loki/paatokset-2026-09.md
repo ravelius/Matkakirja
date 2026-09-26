@@ -7775,3 +7775,7 @@ Fable 01.4x: Julkaisijalle VIE — TF 1.0.27 = build 27 = proto-master 65f725ce 
 ## OMISTAJA: LUENNASSA PITKA TAUKO OTSIKON JA KAPPALEIDEN VALISSA → PALAT NIPUKSI + ESIHAKU (PELIKOODARI) (27.9.2026 klo 01.49)
 
 Omistaja 01.5x (xAI ara tuotannossa): otsikon ja kappaleiden valiin tulee todella pitka tauko; kysyy voiko tekstit vieda yhtena nippuna. Syy: lukija hakee jokaisen palan omana pyyntona vasta edellisen paatyttya. Fable → Pelikoodari etusijalle: otsikko + kappale samaan palaan, palakatto ylos (~2 500 merkkia, worker PUHE_TEKSTIN_KATTO), seuraavien 1–2 palan esihaku edellisen soidessa, mittaus ennen/jalkeen; natiivin lukijalle sama speksi Natiivi-UI:lle.
+
+## TF 1.0.27 TESTFLIGHTISSA (BUILD 27, PROTO 65f725ce, AJO 36277251380); #3363 v2293 MAINISSA (27.9.2026 klo 01.56)
+
+Julkaisija 01.55: TF 1.0.27 lahetetty ja ASC:ssa kasitelty, ajo 36277251380, CFBundleVersion 202609262244, proto 65f725ce, laskuri 27. Sisalto: 178, 179, 170, 174, 173/169, lipun perspektiivi, ylhaalta-175 liioiteltu perspektiivi, hoyrylaiva, 177 + nostokortin sulku, nostokortti-avattu, natiivin striimiaani-valitsin. Mainissa myos #3363 (astro era 4, v2293) ja #3365 (xAI, v2292). Seuraava: 1.0.28 (P1 nosto-hylkaa-170, maastokorkeus, erikoismallit, kategoriamallit, kaiutinvipu).
