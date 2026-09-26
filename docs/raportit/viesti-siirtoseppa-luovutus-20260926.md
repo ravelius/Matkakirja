@@ -33,7 +33,10 @@ voimassa.
 
 ## Pushatut, julkaisemattomat PR:t
 
-Ei avoimia web-PR:iä. Omat worktreet on poistettu.
+- **#3303 (LUONNOS, pidossa)** natiivin offline-rasteri sarjaan 2026-09-26-pohja-20260926 (omistaja hyväksyi pohja 26:n).
+  Vapauta (`gh pr ready 3303`, korjaa otsikko), kun Natiiviseppä ilmoittaa build 20:n (natiiviseppa/pohja-26 c4c46662)
+  olevan TestFlightissa. Build 19 lukee pohjaa 25, joten aiempi merge jättäisi sen offline-kartan tarkkuuteen Z0–Z5.
+  Worktree `wt/siirtoseppa-offline-pohja26`. Ennen vapautusta yhdistä main.
 
 ## Kesken — tee nämä ensin
 
