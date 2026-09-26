@@ -7743,3 +7743,7 @@ Sisaltokirjuri 01.2x: 33 maajutusta 5 ei siirry suoraan — Dublin sakkipilli (d
 ## LAITETESTAAJA: 1.0.27-KIERROS 16be7e44 6/7 PASS (170 NATIIVI-UI:N LAITETODENNUS); UUSI SHA KLO 02 (27.9.2026 klo 01.28)
 
 Laitetestaaja 01.2x: TF 1.0.27 -kierros kaannokselle 16be7e44: 178, 179, lipun perspektiivi, hoyrylaiva, 177+kortti PASS, 0 poikkeusta; 170 ei konsolikomennolla testattavissa → Natiivi-UI:n laitetodennus (v176 → v194) lasketaan PASSiksi. Raportti docs/raportit/savukierros-tf1027-20260927.md 8e5783164. Koska ylhaalta-175 tulee omistajan paatoksella junaan, klo 02 kaannoksesta lyhyt uusintakierros (perspektiivi, lippu, savuke, 177) ennen master-mergea ja TF:aa.
+
+## OMISTAJA HYVAKSYI ERIKOISMALLIT V2 (MSM, STONEHENGE, COLOSSEUM), KAARI+VUORI-SUUNNAN JA MEREN ISOMMAN KOKEILUN (27.9.2026 klo 01.39)
+
+Omistaja 01.4x kortilla (Linssisepan era v2, kaannos 91a4b727, kuvat proto-3d/lokit/mallinseppa-toimitus-20260927/): 1) erikoismallit Mont-Saint-Michel (kevatvuoksi), Stonehenge (auringonnousu, nurmi pois) ja Colosseum Rooman maamerkkina (velarium, yovalot) HYVAKSYTTY → 1.0.28-junaan; Linssiseppa jatkaa listan seuraaviin 3 maahan samalla tyylilla; 2) kategoriasymbolit oikeina 3D-esineina: kaari + vuori suunta oikea → loput 12 symbolia samoin (vuori jaa Olympoksella maaston sisaan → Natiivisepan sijoituskorjaus); 3) meren koristeet: isompi koko (valas ja laiva 1,5–2 ×, suihku nakyvaksi pelikoossa) → uusi kokeilu. Julkaisija: #3363 ja #3365 molemmat v2292 → #3365 nostetaan ennen mergea. Sisaltokirjuri 93 % → WIP-push + luovutus + nollaus kaskettu.
