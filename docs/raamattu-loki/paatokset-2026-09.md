@@ -7611,3 +7611,7 @@ Omistaja 23.2x: natiivin kaupunkilehdessa on virheellisesti Tapaa henkilo X -nap
 ## NATIIVIPAKETTI V189: PIKKUKUVAT 478 ALUETTA 29 MAASSA; ERA C BLR + ROU (26.9.2026 klo 23.19)
 
 Siirtoseppa: B-erat tuotannossa 1.x v189 (14b828f8e), 478 aluetta 29 maassa, osoitteet 200; Euroopasta puuttuvat BLR 7 ja ROU 42 → Sisaltokirjurin era C; AUT/DEU/ESP/FRA/GBR/ITA/POL kortin kuva varana (riittaa toistaiseksi). 178-delta seuraavaksi (#3353 mainissa).
+
+## 179 TEHTY: LEHDEN TAPAA-NAPPI POIS (natiivi-ui/tapaa-nappi-179 1287c7f7) (26.9.2026 klo 23.21)
+
+Natiivi-UI: lehden tehtavanappi poistettu, kohtaaminen alkaa vain vihreasta fokuspisteesta kuten webissa; merge-pyynto Natiivisepalla 1.0.27-junaan, kuvapari kaannoksen jalkeen. 178 tuotannossa natiivipaketissa v189 ilman erillista deltaa.
