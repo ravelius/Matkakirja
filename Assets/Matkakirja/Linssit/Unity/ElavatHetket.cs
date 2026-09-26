@@ -415,7 +415,7 @@ namespace Matkakirja.Natiivi
         {
             double u = hetki.Osuus(t), pituusM = hetki.Rata.Pituus * ElavaKohtaus.KmAsteella * 1000;
             var veturi = Paikka(hetki.Rata.Piste(u), 200);
-            double valiU = pituusM > 0 ? 13 * Pt(veturi) / pituusM : 0;
+            double valiU = pituusM > 0 ? 10.5f * Pt(veturi) / pituusM : 0;
             var muste = new Color(0.16f, 0.12f, 0.09f, 0.9f * peitto);
             for (int k = 2; k >= 0; k--)
             {
@@ -425,7 +425,7 @@ namespace Matkakirja.Natiivi
                 Laiska(teravat, Paikka(q, 200), RuutuKulma(q, s), k == 0 ? 6f : 5f, 2.4f, muste);
             }
             float suunta = Mathf.Cos(kulma) >= 0 ? 1 : -1;
-            Savua(t, Siirra(veturi, 0, 3f), suunta, peitto, new Color(0.55f, 0.53f, 0.50f, 1), 2.2f, 7f);
+            Savua(t, Siirra(veturi, 0, 3f), suunta, peitto, new Color(0.47f, 0.43f, 0.38f, 1), 2.2f, 7f);
         }
 
         /// <summary>Savupallot: syntyvät SavuValiS:n välein, nousevat ruudulla ylös, ajelehtivat perään ja haalenevat.</summary>

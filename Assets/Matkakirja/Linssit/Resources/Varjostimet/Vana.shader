@@ -48,6 +48,7 @@ Shader "Matkakirja/Vana"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Assets/Matkakirja/Shaders/Horisonttiusva.hlsl"
 
             // VanaPiirto.VanaTaulukko (24 vanaa + 8 kotipesää) ja VirtojaMax.
             #define VANOJA 32
@@ -92,6 +93,7 @@ Shader "Matkakirja/Vana"
             {
                 float4 paikkaCS : SV_POSITION;
                 nointerpolation uint jana : TEXCOORD0;
+                float usvaY : TEXCOORD1;
             };
 
             struct Ulos
@@ -131,6 +133,7 @@ Shader "Matkakirja/Vana"
                 uint n = vid / 6;
                 Jana j = _Janat[n];
                 o.jana = n;
+                o.usvaY = 0;
                 float2 kulma = KULMAT[vid - n * 6];
                 float3 a = j.p1.xyz;
                 float3 b = j.p2.xyz;
@@ -155,6 +158,7 @@ Shader "Matkakirja/Vana"
                 float nosto = length(keski) + (H * H) * 0.5 + 0.001;
                 paikka = normalize(paikka) * nosto;
                 o.paikkaCS = TransformWorldToHClip(mul(_YksikostaMaailmaan, float4(paikka, 1.0)).xyz);
+                o.usvaY = UsvaYlhaalta(o.paikkaCS);   // horisonttiusva (löydös 159)
                 return o;
             }
 
@@ -269,6 +273,7 @@ Shader "Matkakirja/Vana"
                     float sisalla = 1.0 - smoothstep(-_KuvanHaivytys.y, _KuvanHaivytys.y, max(ulko2.x, ulko2.y));
                     alfa *= 1.0 - _KuvanHaivytys.x * sisalla;
                 }
+                alfa *= UsvaNakyvyys(i.usvaY);
                 if (alfa < 0.004) discard;
 
                 // Syvyys pinnan pisteestä kameraa kohti vedettynä (maasto), vahvempi hitusen lähemmäs; peitto

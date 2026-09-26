@@ -28,6 +28,7 @@ Shader "Matkakirja/Linssit/Laiva"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Assets/Matkakirja/Shaders/Horisonttiusva.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _Muste;
@@ -38,13 +39,14 @@ Shader "Matkakirja/Linssit/Laiva"
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
-            struct Vali { float4 paikka : SV_POSITION; float2 uv : TEXCOORD0; };
+            struct Vali { float4 paikka : SV_POSITION; float2 uv : TEXCOORD0; float usvaY : TEXCOORD1; };
 
             Vali vert(Syote i)
             {
                 Vali o;
                 o.paikka = TransformObjectToHClip(i.paikka.xyz);
                 o.uv = i.uv;
+                o.usvaY = UsvaYlhaalta(o.paikka);   // horisonttiusva (löydös 159)
                 return o;
             }
 
@@ -88,7 +90,7 @@ Shader "Matkakirja/Linssit/Laiva"
                 float kuohu = (1 - smoothstep(0.004, 0.012, vesi)) * smoothstep(0.0, 1.0, p.x) * (0.6 + 0.4 * sin(p.x * 90 - _Aika * 9));
                 kuohu *= step(p.x, 1.02);
                 half3 vari = lerp(_Kuohu.rgb, _Muste.rgb, muste);
-                half alfa = saturate(muste + kuohu * 0.8 * (1 - muste)) * _Peitto;
+                half alfa = saturate(muste + kuohu * 0.8 * (1 - muste)) * _Peitto * UsvaNakyvyys(i.usvaY);
                 return half4(vari, alfa);
             }
             ENDHLSL

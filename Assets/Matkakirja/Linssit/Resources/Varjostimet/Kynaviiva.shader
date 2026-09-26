@@ -33,6 +33,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Assets/Matkakirja/Shaders/Horisonttiusva.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _BaseColor;
@@ -45,7 +46,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float3 seuraava : TEXCOORD0; float2 puoli : TEXCOORD1; float4 piirto : TEXCOORD2; };
-            struct Vali { float4 paikka : SV_POSITION; float matka : TEXCOORD0; float reuna : TEXCOORD1; float3 piirto : TEXCOORD2; float horisontti : TEXCOORD3; };
+            struct Vali { float4 paikka : SV_POSITION; float matka : TEXCOORD0; float reuna : TEXCOORD1; float3 piirto : TEXCOORD2; float horisontti : TEXCOORD3; float usvaY : TEXCOORD4; };
 
             Vali vert(Syote i)
             {
@@ -62,6 +63,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
                 float px = 0.5 * _Paksuus * _Kerroin + 0.75;
                 a.xy += normaali * i.puoli.x * px * 2.0 / ruutu * a.w;
                 o.paikka = a;
+                o.usvaY = UsvaYlhaalta(a);   // horisonttiusva (löydös 159)
                 o.matka = i.puoli.y;
                 o.reuna = i.puoli.x * px;
                 o.piirto = i.piirto.xyz;
@@ -92,6 +94,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
                 // Käsin vedetyn viivan pieni vaihtelu (musteen määrä) matkan mukaan.
                 alfa *= 0.86 + 0.14 * Kohina(i.matka * 55.0);
                 alfa *= saturate((i.horisontti - 0.01) * 40.0);
+                alfa *= UsvaNakyvyys(i.usvaY);
                 // Märkä muste kärjessä: tummempi, kuivuu 0,08°:n matkalla (vain piirron aikana).
                 half3 vari = _BaseColor.rgb;
                 float mark = u < 1 ? exp(-max(0, -yli) / max(_Karki, 1e-4)) : 0;
