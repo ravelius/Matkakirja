@@ -80,10 +80,10 @@ namespace Matkakirja
             int i = Pala(t);
             var a = Avaimet[i]; var b = Avaimet[i + 1];
             double h = b.T - a.T, u = (t - a.T) / h;
-            double LnE(int k) => Math.Log(Avaimet[k].EtaisyysKm * Math.Pow(s, Avaimet[k].Skaala));
-            double ln = Hermite5(u, h, LnE(i), LnE(i + 1), Derivaatta(i, LnE), Derivaatta(i + 1, LnE));
-            double th = Hermite5(u, h, a.Theta, b.Theta, Derivaatta(i, k => Avaimet[k].Theta), Derivaatta(i + 1, k => Avaimet[k].Theta));
-            double kk = Hermite5(u, h, a.Korkeuskulma, b.Korkeuskulma, Derivaatta(i, k => Avaimet[k].Korkeuskulma), Derivaatta(i + 1, k => Avaimet[k].Korkeuskulma));
+            // Natiiviseppä 27.9.: kanavat indeksillä (ei s:ää kaappaavaa delegaattia), jotta joka kehyksen kutsu ei varaa muistia.
+            double ln = Hermite5(u, h, Arvo(i, KanavaLn, s), Arvo(i + 1, KanavaLn, s), Derivaatta(i, KanavaLn, s), Derivaatta(i + 1, KanavaLn, s));
+            double th = Hermite5(u, h, a.Theta, b.Theta, Derivaatta(i, KanavaTheta, s), Derivaatta(i + 1, KanavaTheta, s));
+            double kk = Hermite5(u, h, a.Korkeuskulma, b.Korkeuskulma, Derivaatta(i, KanavaKorkeus, s), Derivaatta(i + 1, KanavaKorkeus, s));
             return new Kehys
             {
                 EtaisyysM = Math.Exp(ln) * 1000.0, Theta = th, Korkeuskulma = kk, Fov = Fov,
@@ -106,14 +106,21 @@ namespace Matkakirja
 
         /// <summary>Kanavan derivaatta avaimessa k: keskusero (Catmull-Rom epätasavälisenä), alussa etuero (kamera liukuu heti)
         /// ja lopussa 0 (lepo).</summary>
-        static double Derivaatta(int k, Func<int, double> arvo)
+        static double Derivaatta(int k, int kanava, double s)
         {
             int n = Avaimet.Length;
             if (k == n - 1) return 0.0;
-            if (k == 0) return (arvo(1) - arvo(0)) / (Avaimet[1].T - Avaimet[0].T);
+            if (k == 0) return (Arvo(1, kanava, s) - Arvo(0, kanava, s)) / (Avaimet[1].T - Avaimet[0].T);
             // 8–11 s ajelehdinta: kaukoavainten välillä sama arvo → derivaatta pieni mutta jatkuva.
-            return (arvo(k + 1) - arvo(k - 1)) / (Avaimet[k + 1].T - Avaimet[k - 1].T);
+            return (Arvo(k + 1, kanava, s) - Arvo(k - 1, kanava, s)) / (Avaimet[k + 1].T - Avaimet[k - 1].T);
         }
+
+        const int KanavaLn = 0, KanavaTheta = 1, KanavaKorkeus = 2;
+
+        /// <summary>Avaimen k kanavan arvo: ln-etäisyys (km, kaukoskaalalla s), θ tai korkeuskulma.</summary>
+        static double Arvo(int k, int kanava, double s) =>
+            kanava == KanavaLn ? Math.Log(Avaimet[k].EtaisyysKm * Math.Pow(s, Avaimet[k].Skaala))
+            : kanava == KanavaTheta ? Avaimet[k].Theta : Avaimet[k].Korkeuskulma;
 
         /// <summary>Viidennen asteen Hermite (arvot, derivaatat, toiset derivaatat 0 päissä): u 0–1, h palan kesto.</summary>
         static double Hermite5(double u, double h, double p0, double p1, double v0, double v1)
@@ -247,11 +254,23 @@ namespace Matkakirja
 
         /// <summary>Paikka ja suunta reitillä osuudessa u (0–1) kaarenpituuden mukaan; kulmat pyöristetty (kaarre 30–60 km:n
         /// säteellä, tässä lineaarinen interpolaatio suuntimassa ±0,06 osuuden ikkunassa, jotta kallistus on jatkuva).</summary>
-        public static (double Lat, double Lon, double Suunta) ReitinKohta(List<(double Lat, double Lon)> p, double u)
+        public static (double Lat, double Lon, double Suunta) ReitinKohta(List<(double Lat, double Lon)> p, double u) =>
+            ReitinKohta(p, Pituudet(p), u);
+
+        /// <summary>Reitin kertyvät pituudet (m) pisteittäin (0 ensimmäisessä): <see cref="ReitinKohta(List{ValueTuple{double, double}}, double[], double)"/>
+        /// ja <see cref="Kallistus(List{ValueTuple{double, double}}, double[], double)"/> ilman kehyskohtaista varausta (Natiiviseppä 27.9.).</summary>
+        public static double[] Pituudet(List<(double Lat, double Lon)> p)
         {
-            double yht = 0;
             var pit = new double[p.Count];
+            double yht = 0;
             for (int i = 1; i < p.Count; i++) { yht += Etaisyys(p[i - 1], p[i]); pit[i] = yht; }
+            return pit;
+        }
+
+        /// <summary>Kuten <see cref="ReitinKohta(List{ValueTuple{double, double}}, double)"/>, valmiiksi lasketuilla pituuksilla (<see cref="Pituudet"/>).</summary>
+        public static (double Lat, double Lon, double Suunta) ReitinKohta(List<(double Lat, double Lon)> p, double[] pit, double u)
+        {
+            double yht = pit[p.Count - 1];
             double s = Rajaa(u, 0, 1) * yht;
             int k = 1;
             while (k < p.Count - 1 && pit[k] < s) k++;
@@ -276,11 +295,14 @@ namespace Matkakirja
 
         /// <summary>Kallistus (°, + oikealle) hetkellä t: suuntiman muutosnopeus 0,3 s eteenpäin katsottuna × 1 °/(°/s),
         /// enintään ±22°, ja kosketuksen jälkeen 0.</summary>
-        public static double Kallistus(List<(double Lat, double Lon)> reitti, double t)
+        public static double Kallistus(List<(double Lat, double Lon)> reitti, double t) => Kallistus(reitti, Pituudet(reitti), t);
+
+        /// <summary>Kuten <see cref="Kallistus(List{ValueTuple{double, double}}, double)"/>, valmiiksi lasketuilla pituuksilla.</summary>
+        public static double Kallistus(List<(double Lat, double Lon)> reitti, double[] pit, double t)
         {
             if (t >= KosketusS) return 0.0;
             double te = Math.Min(KestoS, t + KallistusEnnakko), dt = 0.1;
-            double s0 = ReitinKohta(reitti, KoneenOsuus(te)).Suunta, s1 = ReitinKohta(reitti, KoneenOsuus(Math.Min(KestoS, te + dt))).Suunta;
+            double s0 = ReitinKohta(reitti, pit, KoneenOsuus(te)).Suunta, s1 = ReitinKohta(reitti, pit, KoneenOsuus(Math.Min(KestoS, te + dt))).Suunta;
             double nopeus = Kulmaero(s0, s1) / dt;
             return Rajaa(nopeus * KallistusKerroin, -KallistusRaja, KallistusRaja);
         }

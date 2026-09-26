@@ -900,6 +900,7 @@ namespace Matkakirja.Natiivi
             (Valmius.AutoAvain, 'i'), (Valmius.KevennysPoisAvain, 'i'), (PyyntoLoki.Avain, 'i'),
             ("matkakirja-verho-taysi", 'i'), ("matkakirja-mustan-katto", 'i'),
             ("matkakirja-avaus-esilataus", 'i'), ("matkakirja-avaus-malli", 's'),
+            (Nappula.LentoV3Avain, 'i'),
             (IhmisenMatkaKerros.TekstitysAvain, 'i'), (LinssiOhjain.KyllaisyysAvain, 'f'),
         };
 
@@ -1482,7 +1483,9 @@ namespace Matkakirja.Natiivi
                 // Pelinappula (Natiiviseppä, B16): liftaus, laiva ja bussi ajavat reitin pisteet
                 // (autokyyti), lento lentää kaaren; kamera seuraa nappulaa (seuraaKamera).
                 if (t.Tapa == Kulkutapa.Lento)
-                    NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Lat, b.Lon, kesto, v), kesto, Perilla);
+                    // Lento v3 (Natiiviseppä 27.9.): 15 s + odotus, joten varakello sen mukaan (Nappula.LentoV3VaraS).
+                    NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Lat, b.Lon, kesto, v),
+                        Nappula.LentoV3 ? Nappula.LentoV3VaraS : kesto, Perilla);
                 else
                 {
                     // Webin koreografia (Natiiviseppä, RAJAPINTA 3b; pariteetti A20, A21, B12–B16): ennakkozoomi,

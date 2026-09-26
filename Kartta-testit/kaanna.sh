@@ -37,6 +37,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/LennonKamerareitti.cs
 ../Assets/Matkakirja/Kartta/LennonV3.cs
+../Assets/Matkakirja/Kartta/LennonV3Kaytava.cs
 ../Assets/Matkakirja/Kartta/LiikeLaatatPaatos.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
 ../Assets/Matkakirja/Kartta/MaastoLaatat.cs

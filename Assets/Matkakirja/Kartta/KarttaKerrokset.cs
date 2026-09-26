@@ -933,6 +933,9 @@ namespace Matkakirja
                 return;
             }
             pintaVapautus = false;
+            // LENTO V3 (Natiiviseppä 27.9.): lento on pelin omalla pergamenttikartalla, joten satelliittipintaa ei luoda
+            // valmiiksi (sen rasterit latautuisivat turhaan valintanäkymän laattoihin).
+            if (Nappula.LentoV3) return;
             if (pintaValmiiksi || silea != null || sentinel != null) return;
             if (rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled) return;
             string versio = SatelliittiVersio;
@@ -1400,6 +1403,116 @@ namespace Matkakirja
             EsilataaAvaus(AloitusLahtoLat, AloitusLahtoLon, LennonAikajana.AloitusAvausM, LennonAikajana.AloitusAvausKallistus, 0, kiila: false);
         }
 
+        // ---- LENTO V3: esilatauskäytävä (Natiiviseppä 27.9.2026; speksi docs/raportit/lento-v3-speksi.md kohta 5) ----
+
+        /// <summary>
+        /// Lento v3:n käytävän lataus: alun 5 s:n laatat (<see cref="Alku"/>) ja loput (<see cref="Loput"/>) omina erinään.
+        /// Osuudet lasketaan odotetuista määristä (erä kirjaa laattansa vasta, kun Esilataajan tehtävä alkaa), joten tyhjää
+        /// alkua ei lueta valmiiksi ennen aikojaan.
+        /// </summary>
+        public sealed class KaytavaLataus
+        {
+            public readonly Laattapalvelin.Esilataus Alku = new Laattapalvelin.Esilataus { Etusija = true };
+            public readonly Laattapalvelin.Esilataus Loput = new Laattapalvelin.Esilataus { Etusija = true };
+            public int AlkuN, LoputN, PohjaN, MaastoN;
+            public int Yhteensa => AlkuN + LoputN;
+            static float Osa(Laattapalvelin.Esilataus e, int n) =>
+                n == 0 || e.Peruttu ? 1f : Math.Min(1f, (float)(e.Valmis + e.Epaonnistui) / n);
+            /// <summary>Alun 5 s:n laatat käsitelty (0–1).</summary>
+            public float AlkuOsuus => Osa(Alku, AlkuN);
+            /// <summary>Koko käytävä käsitelty (0–1; puuttuva merilaatta 404 = käsitelty).</summary>
+            public float Osuus => Yhteensa == 0 ? 1f
+                : Math.Min(1f, (float)(Alku.Valmis + Alku.Epaonnistui + Loput.Valmis + Loput.Epaonnistui) / Yhteensa);
+            public int Valmis => Alku.Valmis + Loput.Valmis;
+            public int Epaonnistui => Alku.Epaonnistui + Loput.Epaonnistui;
+            public void Peru() { Alku.Peru(); Loput.Peru(); }
+        }
+
+        /// <summary>Käynnissä oleva v3-käytävä (edellinen perutaan uuden alkaessa); null = ei lentoa.</summary>
+        public KaytavaLataus LentoV3Kaytava { get; private set; }
+
+        /// <summary>Laatan polku ämpärissä: pohja ({z}/{x}/{reverseY}) tai saatavilla oleva maasto; null = ei haeta.</summary>
+        string KaytavanPolku(LennonV3Kaytava.Laatta l, string pohjaMalli)
+        {
+            if (l.Maasto)
+            {
+                if (maastoPohja == null || Laattapalvelin.MaastoPolku == null) return null;
+                if (!MaastoLaatat.Saatavilla(maastoSaatavuus, l.Z, l.X, l.Y)) return null;
+                return Laattapalvelin.MaastoPolku + maastoPohja.Replace("{z}", l.Z.ToString()).Replace("{x}", l.X.ToString())
+                    .Replace("{y}", l.Y.ToString());
+            }
+            return pohjaMalli?.Replace("{z}", l.Z.ToString()).Replace("{x}", l.X.ToString()).Replace("{reverseY}", l.Y.ToString());
+        }
+
+        /// <summary>
+        /// LENTO V3 -KÄYTÄVÄ (speksi kohta 5): pelin oman kartan pohja- ja maastolaatat koneen reitiltä (LennonV3Kaytava.Laatat:
+        /// Z6 ±2, Z7 ±2, Z8 ±1 koko osuudelta, Z9 ±1 alusta ja lopusta) levylle ennen leikkausta. Alun 5 s tasolla Nakyva
+        /// (pelaaja odottaa sitä), loput SeuraavaRuutu; molemmat Laattapalvelimen etusijajonossa (Etusija: omat paikat, ei
+        /// jonota näkyvän kartan perässä). Satelliittipintaa ja kermaa ei haeta (v3 lentää pohjan päällä). Nappula odottaa
+        /// käytävää ≥ 96 % ja alkua 100 % (LennonV3Kaytava.Leikkaa). Edellinen käytävä perutaan.
+        /// </summary>
+        public KaytavaLataus EsilataaLentoV3(List<(double Lat, double Lon)> reitti)
+        {
+            LentoV3Kaytava?.Peru();
+            var k = new KaytavaLataus();
+            LentoV3Kaytava = k;
+            string pm = PohjaMalli();
+            var alku = new List<string>();
+            var loput = new List<string>();
+            foreach (var l in LennonV3Kaytava.Laatat(reitti))
+            {
+                string p = KaytavanPolku(l, pm);
+                if (p == null) continue;
+                (l.Alku ? alku : loput).Add(p);
+                if (l.Maasto) k.MaastoN++; else k.PohjaN++;
+            }
+            k.AlkuN = alku.Count;
+            k.LoputN = loput.Count;
+            if (alku.Count > 0)
+                StartCoroutine(Esilataaja.Tehtava(Taso.Nakyva, "lento-v3-alku", () => LaattaEra(alku, k.Alku), laatta: true,
+                    peruttu: () => k.Alku.Peruttu));
+            if (loput.Count > 0)
+                StartCoroutine(Esilataaja.Tehtava(Taso.SeuraavaRuutu, "lento-v3", () => LaattaEra(loput, k.Loput), laatta: true,
+                    peruttu: () => k.Loput.Peruttu));
+            Debug.Log($"MATKAKIRJA lento v3: käytävä {k.Yhteensa} laattaa (alku {k.AlkuN}, pohja {k.PohjaN}, maasto {k.MaastoN}"
+                      + $"{(pm == null ? ", pohja ei ämpärissä" : "")}{(maastoPohja == null ? ", maaston layer.json puuttuu" : "")})");
+            return k;
+        }
+
+        /// <summary>
+        /// LENTO V3 -ESILÄMMITYS (speksi kohta 5): aloitusnäytössä aloituskohteiden (LennonAikajana.Kaupungit) lähikuvien
+        /// tarkat laatat (LennonV3Kaytava.Esilammitettavat: alun 5 s, Z8–Z9) taustajonoon, jotta lämpimänä odotus on
+        /// lyhyt. Karkeat tasot tulevat lennon alussa (ne ovat pääosin valintanäkymän välimuistissa). Odottaa maaston
+        /// layer.jsonia kuten AvausLahialue.
+        /// </summary>
+        System.Collections.IEnumerator EsilammitaLentoV3()
+        {
+            float raja = Time.unscaledTime + 20f;
+            bool OnKaupunkeja() { if (merkit != null) foreach (var _ in merkit.Kaupungit()) return true; return false; }
+            while ((maastoPohja == null || !OnKaupunkeja()) && Time.unscaledTime < raja) yield return null;
+            if (merkit == null) yield break;
+            string pm = PohjaMalli();
+            var polut = new List<string>();
+            var nahty = new HashSet<string>();
+            int kohteita = 0;
+            foreach (var kp in merkit.Kaupungit())
+            {
+                if (kp == null || kp.id == null || !LennonAikajana.Kaupungit.ContainsKey(kp.id)) continue;
+                kohteita++;
+                var reitti = LennonV3.Reitti(kp.id, AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon);
+                foreach (var l in LennonV3Kaytava.Esilammitettavat(LennonV3Kaytava.Laatat(reitti)))
+                {
+                    string p = KaytavanPolku(l, pm);
+                    if (p != null && nahty.Add(p)) polut.Add(p);
+                }
+            }
+            if (polut.Count == 0) yield break;
+            var e = new Laattapalvelin.Esilataus { Tausta = true };
+            Debug.Log($"MATKAKIRJA lento v3: esilämmitys {kohteita} aloituskohdetta, {polut.Count} laattaa");
+            yield return Esilataaja.Tehtava(Taso.Kohdekaupungit, "lento-v3-esilammitys", () => LaattaEra(polut, e), laatta: true,
+                peruttu: () => e.Peruttu);
+        }
+
         /// <summary>Esilataaja.Tehtava-korutiini: laatat Laattapalvelimen esilataukseen ja odotus, kunnes ne on käsitelty.</summary>
         static System.Collections.IEnumerator LaattaEra(List<string> polut, Laattapalvelin.Esilataus e)
         {
@@ -1767,7 +1880,9 @@ namespace Matkakirja
                 EsilataaAloituslahto();
                 // Aloituslennon avauksen lähialue (build 22): suunnasta riippumaton osa jo aloitusnäytössä; kiila lennon alussa.
                 // Vaatii maaston layer.jsonin (EsilataaAloitusMaasto), joten odottaa sitä.
-                StartCoroutine(AvausLahialue());
+                if (!Nappula.LentoV3) StartCoroutine(AvausLahialue());
+                // Lento v3: aloituskohteiden lähikuvat (alun 5 s) taustalla (EsilammitaLentoV3).
+                else StartCoroutine(EsilammitaLentoV3());
             }
             // Valinta sulkeutui (LentoPohjaValmiiksi(false)): valmis pinta pois, kun aloituslentoa ei ole käynnissä. Valinnan
             // Valitse käynnistää lennon samassa kutsussa, jolloin pinta odottaa lentoa (LentoPohja(true) tai keskeytys).

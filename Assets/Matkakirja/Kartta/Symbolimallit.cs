@@ -323,8 +323,9 @@ namespace Matkakirja
             }
             var kk = KarttaKerrokset.Instanssi;
             var nk = NostoKerros.Instanssi;
+            // Lento v3 (Natiiviseppä 27.9., speksi kohta 3): symbolit piilossa lennon ajan (vanhalla lennolla aurinko.Paalla).
             bool sallittu = Paalla && nk != null && nk.Nakyvissa && !PalloKierto.PorttiSumea && !(kk != null && kk.LinssiPaalla)
-                            && !(aurinko != null && aurinko.Paalla);
+                            && !(aurinko != null && aurinko.Paalla) && !(kk != null && kk.nappula != null && kk.nappula.LentoV3Esitys);
             nyt.Clear();
             if (sallittu && Taso1Zoom())
                 foreach (var s in nk.Naytettavat)
