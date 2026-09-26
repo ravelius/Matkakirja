@@ -38,6 +38,7 @@ import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
 import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
+import { rikastaElavaKartta } from './elava-kartta.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
 import { maamerkkiKokoelma } from './maamerkit.mjs';
@@ -973,6 +974,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
   const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
   kokoelmat.karttavalot = valot.kokoelma;
+  // Skeema 1.45 (Elävä kartta): kokoluokka ja maakunta valoille, salaisuus maakunnille (tools/vienti/elava-kartta.mjs).
+  rikastaElavaKartta(kokoelmat);
   rikastaNippu4(kokoelmat, ns);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
