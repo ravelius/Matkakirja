@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2278, teksti: 'Löydös 174b: kuvamerkit skandaaleille, eläimille ja hetkille' },
+  { v: 2278, teksti: 'Löydös 174b: kuvamerkit skandaaleille, eläimill… (#3342)' },
   { v: 2277, teksti: 'CHE: maakuntien pitkä-teksti (#3341)' },
   { v: 2276, teksti: 'Astronautin kamera erä 1: pelin kaupungit (#3340)' },
   { v: 2275, teksti: 'Löydös 135 (#3274)' },
