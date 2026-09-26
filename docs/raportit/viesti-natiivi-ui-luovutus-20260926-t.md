@@ -63,3 +63,4 @@ Huom: simulaattorin tallennuksessa nyt Amsterdam-peli ja arkku löydetty (testit
   Rajoite: tarkistus nostokerroksen päivittyessä (kamera), ei pulun omassa liikkeessä.
 - KÄÄNNÖSTAUKO (Fable 26.9.) klo 19.00 asti: ei Xcode- eikä Unity-käännöksiä eikä simulaattoriasennuksia (Z10-poltto). Sen jälkeen käännöserät enintään kerran tunnissa.
 - 167 (nostot-kalusteet) MERGETTY 1.0.24-junaan fe86446e. Kaikki erät junassa.
+- 17.40: käännöstauko PURETTU (Fable; Z10 v2-vahdilla ei väistä). Käännä tarpeen mukaan, mieluiten kootuin erin.
