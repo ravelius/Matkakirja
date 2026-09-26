@@ -16498,14 +16498,13 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja tavat',
-      johdanto: 'Moskovalainen kulkee töihin mosaiikkiholvien alitse, ja '
-        + 'laskiaisviikolla koko kaupunki syö aurinkoja.',
+      johdanto: 'Moskovalainen kulkee töihin mosaiikkiholvien alitse.',
       tehtava: {
-        kysymys: 'Mitä laskiaisviikon lopuksi poltetaan?',
-        vaihtoehdot: ['Oljista tehty nukke', 'Kuivunut kuusenoksa', 'Talven viimeinen halko', 'Vanha puinen kelkka'],
-        oikea: 0,
-        fakta: 'Maslenitsa-viikon päätteeksi poltetaan oljista tehty nukke, joka '
-          + 'kuvaa väistyvää talvea.',
+        kysymys: 'Minä vuonna Majakovskajan metroasema avattiin?',
+        vaihtoehdot: ['1935', '1938', '1941', '1957'],
+        oikea: 1,
+        fakta: 'Aseman suunnittelija Aleksei Dushkin sai New Yorkin '
+          + 'maailmannäyttelyn pääpalkinnon vuonna 1939.',
       },
       nostot: [
         {
@@ -16526,21 +16525,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neuvostotaivaalla.',
           lahde: 'Andrey Kryuchenko, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Moskovan metro',
-        },
-        {
-          otsikko: 'Laskiaisviikolla syödään aurinkoja',
-          tiedosto: 'Tea party with pancakes and a samovar.jpg',
-          teksti: 'Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon '
-            + 'suurta paastoa, ja sen ruoka on blini: ohut lettu, joka '
-            + 'esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa '
-            + 'tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon '
-            + 'lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. '
-            + 'Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on '
-            + 'vuoden mittaan loukannut.',
-          selite: 'Maslenitsan ruoka on blini, ohut lettu, joka esittää '
-            + 'aurinkoa, ja teevesi keitetään samovaarissa.',
-          lahde: 'Avsolov, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Maslenitsa',
         },
       ],
     },
@@ -22441,8 +22425,8 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Tromssa',
       johdanto: 'Kaupunki napapiirin pohjoispuolella: aurinko katoaa kahdeksi '
-        + 'kuukaudeksi, turska tulee itse rannikolle, ja pimeimpään aikaan '
-        + 'tehtiin kellareissa musiikkia, joka kuultiin maailmalla.',
+        + 'kuukaudeksi, ja pimeimpään aikaan tehtiin kellareissa musiikkia, '
+        + 'joka kuultiin maailmalla.',
       kansikuvat: [
         {
           tiedosto: 'Aurora Borealis Tromsø Norway.jpg',
@@ -22670,21 +22654,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'napapiiristä pohjoiseen.',
           lahde: 'Beyond My Ken (talk), Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Röyksopp',
-        },
-        {
-          otsikko: 'Turska, joka tulee itse käymään',
-          tiedosto: 'Tørrfisk.jpg',
-          teksti: 'Skrei on turska, joka ui joka talvi Barentsinmereltä Norjan '
-            + 'rannikolle kutemaan. Osa syödään heti mølje-ateriana: kalaa, '
-            + 'mätiä, maksaa ja perunaa. Osa ripustetaan telineille '
-            + 'helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. '
-            + 'Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia '
-            + 'vedestä, ja sen jälkeen se säilyy vuosia.',
-          lyhyt: 'Kapakala kuivuu telineillä helmikuusta, ja kolmessa kuukaudessa siitä haihtuu noin 70 % vedestä.',
-          selite: 'Kapakala ripustetaan telineille helmikuussa, ja kolmessa '
-            + 'kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Kapakala',
         },
         {
           otsikko: 'Aurinkopäivä on 21. tammikuuta',
@@ -24449,9 +24418,8 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Alpit',
-      johdanto: 'Vuoristo, jossa torvi kantaa laaksosta toiseen, kansallisruoka '
-        + 'piti keksiä mainoskampanjalla, ja lumivyöryn kanssa on opittu '
-        + 'elämään.',
+      johdanto: 'Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn '
+        + 'kanssa on opittu elämään.',
       kansikuvat: [
         {
           tiedosto: 'CH.VS.Zermatt 2021-10-17 Matterhorn 8726.jpg',
@@ -24683,22 +24651,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'irrotettavasta osasta.',
           lahde: 'Walter Schärer, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Alppitorvi',
-        },
-        {
-          otsikko: 'Kansallisruoka, joka piti keksiä',
-          tiedosto: 'Full cheese fondue set - in Switzerland.JPG',
-          teksti: 'Juustofondue oli 1900-luvun alussa tuttu vain muutamassa '
-            + 'laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan '
-            + 'mainoskampanjalla, ja armeijan keittokirja levitti reseptin '
-            + 'koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: '
-            + 'puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä '
-            + 'maksaa laulun.',
-          lyhyt: 'Fondue syödään caquelon-padasta, jota lämmitetään pöydässä juuston pysyessä sulana.',
-          selite: 'Fondue syödään caquelon-nimisestä padasta, jota pidetään '
-            + 'pöydässä pienen lämmittimen päällä, jotta juusto pysyy '
-            + 'sulana koko aterian ajan.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Fondue',
         },
         {
           otsikko: 'Vuoren kanssa opitaan elämään',
@@ -25516,24 +25468,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           tyyppi: 'kuva',
-          otsikko: 'Kaapissa on 268 815 lappua',
-          tiedosto: 'Dainu skapja oriģināls LNB.jpg',
-          teksti: 'Daina on nelisäkeinen latvialainen kansanlaulu. Krišjānis '
-            + 'Barons keräsi niitä ja järjesti ne itse piirtämäänsä kaappiin: '
-            + '160 senttiä korkea, 70 laatikkoa, jokaisessa 20 lokeroa. '
-            + 'Lappuja on 268 815, kukin 3 × 11 senttiä. Unesco liitti kaapin '
-            + 'maailman muisti -rekisteriin 2001.',
-          lyhyt: 'Krišjānis Baronsin dainakaapissa on 268 815 laululippua, Unescon muistin maailmanperintöä.',
-          selite: 'Krišjānis Baronsin dainakaapissa on 70 laatikkoa ja 268 '
-            + '815 laululippua, ja Unesco liitti sen maailman muisti '
-            + '-rekisteriin 2001.',
-          lahde: 'Savannah Rivka, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Daina',
-          musiikki: 'https://music.apple.com/fi/search?term=latvian%20folk%20songs',
-          musiikkiNimi: 'Latvialaisia kansanlauluja Apple Musicissa',
-        },
-        {
-          tyyppi: 'kuva',
           otsikko: 'Ruispohja, porkkanaa ja kuminaa',
           tiedosto: 'Sklandrausis (10890919013).jpg',
           teksti: 'Sklandrausis on kämmenen kokoinen avoin piirakka, jonka pohja '
@@ -25969,41 +25903,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           tyyppi: 'kuva',
-          otsikko: 'Sutartinė soi tahallaan riitasointuisena',
-          tiedosto: 'Sutartinės.jpg',
-          teksti: 'Sutartinė on liettualainen moniääninen laulu, jota esittää '
-            + 'kaksi, kolme tai neljä naista. Äänet kulkevat sekunnin päässä '
-            + 'toisistaan — siis niin lähellä, että sointi hankaa korvaa '
-            + 'tahallaan. Laji on kotoisin Aukštaitijasta, ja Unesco otti sen '
-            + 'ihmiskunnan perintöluetteloon vuonna 2010.',
-          lyhyt: 'Sutartinėssä äänet kulkevat sekunnin päässä toisistaan, ja laululla on usein oma koreografiansa.',
-          selite: 'Sutartinėssä äänet kulkevat sekunnin päässä toisistaan, '
-            + 'ja laululla on usein oma yksinkertainen koreografiansa.',
-          lahde: 'Bcecilija, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Liettua',
-          musiikki: 'https://music.apple.com/fi/search?term=sutartines',
-          musiikkiNimi: 'Sutartinės-lauluja Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/EDIS-SRP-0197-03/EDIS-SRP-0197-03.mp3',
-          musiikkiNayteNimi: 'Liettualainen kansanlaulu kanteleilla — CC0',
-        },
-        {
-          tyyppi: 'kuva',
-          otsikko: 'Kirkkaanpinkki keitto ja kuumat perunat',
-          tiedosto: 'Lithuanian cold beetroot soup, 11 April 2018.png',
-          teksti: 'Šaltibarščiai on kylmä keitto, jossa on punajuurta, kefiiriä, '
-            + 'kurkkua, tilliä ja keitetty muna. Kefiiri värjää sen '
-            + 'kirkkaanpinkiksi. Keitto tarjotaan jääkylmänä, mutta vieressä '
-            + 'on aina lautasellinen höyryäviä keitettyjä perunoita — niitä '
-            + 'syödään vuorotellen keiton kanssa.',
-          lyhyt: 'Šaltibarščiaissa on punajuurta, kefiiriä, kurkkua ja munaa; tarjotaan jääkylmänä perunoiden kanssa.',
-          selite: 'Šaltibarščiaissa on punajuurta, kefiiriä, kurkkua, tilliä '
-            + 'ja keitetty muna, ja se tarjotaan jääkylmänä kuumien '
-            + 'perunoiden kanssa.',
-          lahde: 'Ke an, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Borssi',
-        },
-        {
-          tyyppi: 'kuva',
           otsikko: 'Tasavalta, jonka perustuslaissa on 41 pykälää',
           tiedosto: 'Uzupis Constitution - panoramio.jpg',
           teksti: 'Užupis on Vilnian kaupunginosa joen toisella puolen. '
@@ -26096,20 +25995,18 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'oppi',
       nimi: 'Oppi',
-      johdanto: 'Vilnassa on opiskeltu ja tutkittu satoja vuosia. Välillä oppiminen '
-        + 'oli helppoa, välillä omalla kielellä painettu kirja piti kantaa '
-        + 'maahan selässä.',
+      johdanto: 'Vilnassa on opiskeltu ja tutkittu satoja vuosia.',
       tehtava: {
-        kysymys: 'Miten liettuankieliset kirjat saatiin maahan 1800-luvun lopulla?',
+        kysymys: 'Minä vuonna Vilnan yliopisto sai yliopiston oikeudet?',
         vaihtoehdot: [
-          'Ne painettiin yliopiston kellarissa',
-          'Ne kirjoitettiin käsin kouluissa',
-          'Ne lähetettiin postissa Siperiaan',
-          'Kantajat toivat ne rajan yli',
+          '1570',
+          '1579',
+          '1753',
+          '1864',
         ],
-        oikea: 3,
-        fakta: 'Kielto kesti neljäkymmentä vuotta, vuodesta 1864 vuoteen 1904. '
-          + 'Liettuassa vietetään kirjankantajan päivää 16. maaliskuuta.',
+        oikea: 1,
+        fakta: 'Yliopiston kirjasto aloitti jo 1570, ja rakennusten väliin '
+          + 'jäi vuosisatojen mittaan kolmetoista sisäpihaa.',
       },
       nostot: [
         {
@@ -26128,22 +26025,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennusten väliin jäi vuosisatojen mittaan kolmetoista '
             + 'sisäpihaa.',
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          otsikko: 'Kirjat kannettiin rajan yli selässä',
-          tiedosto: 'Lithuanian book carrier Kazys Ūdra (1857–1937).jpg',
-          teksti: 'Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen '
-            + 'painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa '
-            + 'rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä '
-            + 'kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi '
-            + 'knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja '
-            + 'säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai '
-            + 'karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä '
-            + 'vuotta, kunnes kielto kumottiin vuonna 1904.',
-          lyhyt: 'Kazys Ūdra oli knygnešys, joka kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli selässään.',
-          selite: 'Kazys Ūdra oli knygnešys eli kirjankantaja, joka kuljetti '
-            + 'kiellettyjä liettuankielisiä kirjoja rajan yli selässään.',
-          lahde: 'tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
         {
           otsikko: 'Tähtitorni yliopiston pihan laidalla',
@@ -26443,31 +26324,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ihmishahmoa vuosina 1929–1943.',
           lahde: 'The original uploader was DIMSFIKAS at Greek Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vigelandin puisto',
-        },
-        /*
-         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
-         * syvennystarina `syvennys-oslo-unionilippu` putosi Oslon
-         * nostoruuhkasta.
-         */
-        {
-          otsikko: 'Lipun kannossa oli silakkasalaatti',
-          tiedosto: 'LAROUSSE - H.Chartier (1859-1924) SUÈDE ET NORVÈGE Armes, drapeaux, armee (Sweden and Norway historical Coat of arms, flags 1890s) Nouveau Larousse Illustré Paris 1898-1901 Vol 07 (detail).jpg',
-          teksti: 'Norjan nykyinen lippu suunniteltiin jo 1821; sen teki '
-            + 'suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli '
-            + 'punaista, valkoista ja sinistä sillä, että ne merkitsivät '
-            + 'silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain '
-            + 'pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli '
-            + 'käytettävä unionin yhteistä kauppalippua, koska suoja '
-            + 'Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna '
-            + '1844 molempien maiden lippujen kantoon pantiin yhteinen '
-            + 'unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen '
-            + 'sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki '
-            + 'katosi vuoden 1899 lopussa.',
-          lyhyt: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina sama, tasan jaettu unionimerkki.',
-          selite: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina '
-            + 'kummassakin sama unionimerkki, jossa maiden värit on jaettu '
-            + 'tasan.',
-          lahde: 'Henri-Georges Chartier, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
           /*
@@ -27777,21 +27633,6 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Carl Nielsen',
           musiikki: 'https://music.apple.com/fi/search?term=Carl%20Nielsen',
           musiikkiNimi: 'Carl Nielsen Apple Musicissa',
-        },
-        {
-          tyyppi: 'kuva',
-          otsikko: 'Voileipä syödään haarukalla',
-          tiedosto: 'Smørrebrød in Copenhagen 01.jpg',
-          teksti: 'Smørrebrød on avoin voileipä tummalla ruisleivällä, ja se '
-            + 'syödään veitsellä ja haarukalla. Järjestyskin on tarkka: ensin '
-            + 'kala, sitten liha, viimeisenä juusto — eikä päällisiä '
-            + 'sekoiteta keskenään. Vanhoissa lounasravintoloissa listalla '
-            + 'voi olla yli kaksikymmentä eri leipää, ja jokaisella on oma '
-            + 'nimensä ja vakiintunut kuormansa.',
-          selite: 'Smørrebrødin nimi tulee leivälle levitetystä voista: smør '
-            + 'on voi ja brød leipä.',
-          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Smørrebrød',
         },
         {
           tyyppi: 'kuva',

@@ -12295,6 +12295,23 @@ export const MAA_KATEGORIAT = {
           lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
           wiki: 'Suklaa',
         },
+        {
+          otsikko: 'Kansallisruoka, joka piti keksiä',
+          aika: '1950-luku',
+          tiedosto: 'Full cheese fondue set - in Switzerland.JPG',
+          teksti: 'Juustofondue oli 1900-luvun alussa tuttu vain muutamassa '
+            + 'laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan '
+            + 'mainoskampanjalla, ja armeijan keittokirja levitti reseptin '
+            + 'koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: '
+            + 'puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä '
+            + 'maksaa laulun.',
+          lyhyt: 'Fondue syödään caquelon-padasta, jota lämmitetään pöydässä juuston pysyessä sulana.',
+          selite: 'Fondue syödään caquelon-nimisestä padasta, jota pidetään '
+            + 'pöydässä pienen lämmittimen päällä, jotta juusto pysyy '
+            + 'sulana koko aterian ajan.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Fondue',
+        },
       ],
       tehtava: {
         kysymys: 'Mitä Rodolphe Lindt teki vahingossa vuonna 1879?',
@@ -12630,6 +12647,27 @@ export const MAA_KATEGORIAT = {
             + 'Pohjanmerellä yli 200 koereiän jälkeen.',
           lahde: 'Telemuseet, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Lipun kannossa oli silakkasalaatti',
+          aika: '1844',
+          tiedosto: 'LAROUSSE - H.Chartier (1859-1924) SUÈDE ET NORVÈGE Armes, drapeaux, armee (Sweden and Norway historical Coat of arms, flags 1890s) Nouveau Larousse Illustré Paris 1898-1901 Vol 07 (detail).jpg',
+          teksti: 'Norjan nykyinen lippu suunniteltiin jo 1821; sen teki '
+            + 'suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli '
+            + 'punaista, valkoista ja sinistä sillä, että ne merkitsivät '
+            + 'silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain '
+            + 'pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli '
+            + 'käytettävä unionin yhteistä kauppalippua, koska suoja '
+            + 'Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna '
+            + '1844 molempien maiden lippujen kantoon pantiin yhteinen '
+            + 'unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen '
+            + 'sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki '
+            + 'katosi vuoden 1899 lopussa.',
+          lyhyt: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina sama, tasan jaettu unionimerkki.',
+          selite: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina '
+            + 'kummassakin sama unionimerkki, jossa maiden värit on jaettu '
+            + 'tasan.',
+          lahde: 'Henri-Georges Chartier, Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka monta päivää Amundsenin jälkeen Scott saapui '
@@ -12720,6 +12758,22 @@ export const MAA_KATEGORIAT = {
             + 'karamellisoituneesta maitosokerista.',
           lahde: 'color line, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Gudbrandsdalsost',
+        },
+        {
+          otsikko: 'Turska, joka tulee itse käymään',
+          aika: 'Helmikuussa',
+          tiedosto: 'Tørrfisk.jpg',
+          teksti: 'Skrei on turska, joka ui joka talvi Barentsinmereltä Norjan '
+            + 'rannikolle kutemaan. Osa syödään heti mølje-ateriana: kalaa, '
+            + 'mätiä, maksaa ja perunaa. Osa ripustetaan telineille '
+            + 'helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. '
+            + 'Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia '
+            + 'vedestä, ja sen jälkeen se säilyy vuosia.',
+          lyhyt: 'Kapakala kuivuu telineillä helmikuusta, ja kolmessa kuukaudessa siitä haihtuu noin 70 % vedestä.',
+          selite: 'Kapakala ripustetaan telineille helmikuussa, ja kolmessa '
+            + 'kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Kapakala',
         },
       ],
       tehtava: {
@@ -13154,6 +13208,21 @@ export const MAA_KATEGORIAT = {
             + 'hiivataikinaleivonnainen, ja tekniikan uskotaan tulleen '
             + 'Tanskaan itävaltalaisten leipurien mukana.',
           lahde: 'RhinoMind, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Voileipä syödään haarukalla',
+          aika: 'Lounaalla',
+          tiedosto: 'Smørrebrød in Copenhagen 01.jpg',
+          teksti: 'Smørrebrød on avoin voileipä tummalla ruisleivällä, ja se '
+            + 'syödään veitsellä ja haarukalla. Järjestyskin on tarkka: ensin '
+            + 'kala, sitten liha, viimeisenä juusto — eikä päällisiä '
+            + 'sekoiteta keskenään. Vanhoissa lounasravintoloissa listalla '
+            + 'voi olla yli kaksikymmentä eri leipää, ja jokaisella on oma '
+            + 'nimensä ja vakiintunut kuormansa.',
+          selite: 'Smørrebrødin nimi tulee leivälle levitetystä voista: smør '
+            + 'on voi ja brød leipä.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Smørrebrød',
         },
       ],
       tehtava: {
@@ -16589,6 +16658,24 @@ export const MAA_KATEGORIAT = {
             + 'tiiviimpi, tummempi ja kuitupitoisempi.',
           lahde: 'TravelerMK, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Kaapissa on 268 815 lappua',
+          aika: '2001',
+          tiedosto: 'Dainu skapja oriģināls LNB.jpg',
+          teksti: 'Daina on nelisäkeinen latvialainen kansanlaulu. Krišjānis '
+            + 'Barons keräsi niitä ja järjesti ne itse piirtämäänsä kaappiin: '
+            + '160 senttiä korkea, 70 laatikkoa, jokaisessa 20 lokeroa. '
+            + 'Lappuja on 268 815, kukin 3 × 11 senttiä. Unesco liitti kaapin '
+            + 'maailman muisti -rekisteriin 2001.',
+          lyhyt: 'Krišjānis Baronsin dainakaapissa on 268 815 laululippua, Unescon muistin maailmanperintöä.',
+          selite: 'Krišjānis Baronsin dainakaapissa on 70 laatikkoa ja 268 '
+            + '815 laululippua, ja Unesco liitti sen maailman muisti '
+            + '-rekisteriin 2001.',
+          lahde: 'Savannah Rivka, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Daina',
+          musiikki: 'https://music.apple.com/fi/search?term=latvian%20folk%20songs',
+          musiikkiNimi: 'Latvialaisia kansanlauluja Apple Musicissa',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka usein Latvian laulujuhlat järjestetään?',
@@ -17068,6 +17155,25 @@ export const MAA_KATEGORIAT = {
             + 'omistautuneisuuden ansiosta tullut lajin perinteinen suurmaa.',
           lahde: 'globalite, Wikimedia Commons (CC BY-SA 2.0)',
         },
+        {
+          otsikko: 'Sutartinė soi tahallaan riitasointuisena',
+          aika: '2010',
+          tiedosto: 'Sutartinės.jpg',
+          teksti: 'Sutartinė on liettualainen moniääninen laulu, jota esittää '
+            + 'kaksi, kolme tai neljä naista. Äänet kulkevat sekunnin päässä '
+            + 'toisistaan — siis niin lähellä, että sointi hankaa korvaa '
+            + 'tahallaan. Laji on kotoisin Aukštaitijasta, ja Unesco otti sen '
+            + 'ihmiskunnan perintöluetteloon vuonna 2010.',
+          lyhyt: 'Sutartinėssä äänet kulkevat sekunnin päässä toisistaan, ja laululla on usein oma koreografiansa.',
+          selite: 'Sutartinėssä äänet kulkevat sekunnin päässä toisistaan, '
+            + 'ja laululla on usein oma yksinkertainen koreografiansa.',
+          lahde: 'Bcecilija, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liettua',
+          musiikki: 'https://music.apple.com/fi/search?term=sutartines',
+          musiikkiNimi: 'Sutartinės-lauluja Apple Musicissa',
+          musiikkiNayte: 'https://archive.org/download/EDIS-SRP-0197-03/EDIS-SRP-0197-03.mp3',
+          musiikkiNayteNimi: 'Liettualainen kansanlaulu kanteleilla — CC0',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka monta kertaa viranomaiset raivasivat Ristien kukkulan?',
@@ -17172,6 +17278,23 @@ export const MAA_KATEGORIAT = {
             + 'itsenäisyyttä.',
           lahde: 'Jonas Kernagis, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Baltian ketju',
+        },
+        {
+          otsikko: 'Kirjat kannettiin rajan yli selässä',
+          aika: '1864',
+          tiedosto: 'Lithuanian book carrier Kazys Ūdra (1857–1937).jpg',
+          teksti: 'Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen '
+            + 'painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa '
+            + 'rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä '
+            + 'kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi '
+            + 'knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja '
+            + 'säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai '
+            + 'karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä '
+            + 'vuotta, kunnes kielto kumottiin vuonna 1904.',
+          lyhyt: 'Kazys Ūdra oli knygnešys, joka kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli selässään.',
+          selite: 'Kazys Ūdra oli knygnešys eli kirjankantaja, joka kuljetti '
+            + 'kiellettyjä liettuankielisiä kirjoja rajan yli selässään.',
+          lahde: 'tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
       ],
       tehtava: {
@@ -19061,6 +19184,22 @@ export const MAA_KATEGORIAT = {
           selite: 'Kiehuva karpalokisseli kattilassa; paksu, kiiltävä pinta '
             + 'on tyypillinen tälle vanhalle jälkiruoalle.',
           lahde: 'Dmitri Grigorjev, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Laskiaisviikolla syödään aurinkoja',
+          aika: 'Laskiaisviikolla',
+          tiedosto: 'Tea party with pancakes and a samovar.jpg',
+          teksti: 'Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon '
+            + 'suurta paastoa, ja sen ruoka on blini: ohut lettu, joka '
+            + 'esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa '
+            + 'tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon '
+            + 'lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. '
+            + 'Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on '
+            + 'vuoden mittaan loukannut.',
+          selite: 'Maslenitsan ruoka on blini, ohut lettu, joka esittää '
+            + 'aurinkoa, ja teevesi keitetään samovaarissa.',
+          lahde: 'Avsolov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maslenitsa',
         },
       ],
       tehtava: {
