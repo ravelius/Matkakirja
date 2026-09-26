@@ -179,7 +179,22 @@ namespace Matkakirja
         /// <summary>Maakuntien tila muuttui (Heraannyt): paletit uusiksi.</summary>
         public static void PaivitaHeraaminen()
         {
-            foreach (var m in kaikki) if (m != null && m.maakohtainen) m.PaivitaPaletti();
+            foreach (var m in kaikki)
+            {
+                if (m == null || !m.maakohtainen) continue;
+                m.PaivitaPaletti();
+                // Diagnostiikka (avainmuodon täsmäys musteen kanssa): montako maakuntaa kussakin tilassa ja esimerkkiavain.
+                int h = 0, u = 0, n = 0;
+                string esim = null;
+                foreach (var a in m.indeksi.Keys)
+                {
+                    esim ??= a;
+                    bool? t = null;
+                    if (Heraannyt != null) try { t = Heraannyt(a); } catch (Exception) { }
+                    if (t == true) h++; else if (t == false) u++; else n++;
+                }
+                Debug.Log($"MATKAKIRJA maakunnat: herääminen {m.NykyinenMaa ?? "-"}: herännyt {h}, uinuva {u}, ei tilaa {n} (avain esim. {esim ?? "-"})");
+            }
         }
 
         /// <summary>
@@ -672,9 +687,12 @@ namespace Matkakirja
                     double peitto = t.A;
                     bool? tila = null;
                     if (Heraannyt != null) try { tila = Heraannyt(p.Key); } catch (Exception) { tila = null; }
+                    // Linssiseppä 26.9.: herännyt näkyy täysin sävyin aina (myös oletusrajoilla ilman täyttöä); uinuva himmeänä
+                    // vain, kun täyttö on päällä, muuten paperina (ei täyttöä).
                     if (tila == false) peitto *= UinuvanPeitto;
                     if (herataan.TryGetValue(p.Key, out var hk)) peitto *= hk.nyt;
-                    px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), TayttoNakyy || tila.HasValue ? B(peitto) : (byte)0);
+                    bool nakyy = tila == true || TayttoNakyy;
+                    px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), nakyy ? B(peitto) : (byte)0);
                 }
                 else px[p.Value] = C(s.Taytto);
                 // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan.
