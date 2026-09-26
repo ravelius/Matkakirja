@@ -217,6 +217,26 @@ erässä tehtiin.
 | pääaarre ja pelin loppu | `musa-paaaarre` samasta soittimesta; pelin päätyttyä pohjavire | — (soi jo) |
 | työhuoneen Musiikki-lehti | kuunneltava raita, ambienssi hiljennetty (`musiikkisivu`) | uudet raidat listautuvat lehteen itsestään |
 
+## Matkan aiheet (musiikkisuunnitelma, vaihe 1, 26.9.2026)
+
+Suunnitelma: `docs/raportit/musiikki-ja-aanisuunnitelma-20260926.md`.
+Kaikki musiikkitiedostot (paletti ja suunnitelman raidat) ovat noin
+−11 LUFS:ssä; suunnitelman raidat leikataan ja normalisoidaan
+`tools/viimeistele-musiikki.mjs`:llä. Soittotaso tulee siis samoista
+voimista ja samasta säätimestä (`musiikinKerroin`) kuin muullakin
+musiikilla.
+
+| raita | milloin | soitin |
+|---|---|---|
+| `musa-johtoaihe` | etusivu (kiertää; ei saumaton looppi, sauma on fraasin loppu ja 0,7 s hengähdys) | pohjavirekoneisto, `PAIKKARAIDAT.etusivu` |
+| `musa-aloituslento` | Lontoosta ensimmäiseen kaupunkiin, napautuksesta (ei liikeherkkyydessä) | aarreaiheen paikka (`soitaAarreMusiikki`, `MATKAN_AIHEET`) |
+| `musa-saapuminen-valimeri` | ensimmäinen saapuminen kaupunkiin, jonka alue on `valimeri`; ei aloituslennon kohteeseen, ei soivan aiheen päälle | sama; `js/kaupunkimusiikki.js` `SAAPUMISTUNNUKSET` |
+| `musa-loppu` | kaikki pääaarteet löydetty: viimeisen pääaarteen fanfaarin perään | sama; `ajastaMatkanLoppu` |
+
+Aiheen ajan pohjaraita ja äänimaisema väistyvät (`hiljennaAmbienssi`,
+0,45) ja palaavat aiheen loputtua. Aarreaihe saa katkaista
+saapumistunnuksen, tunnus ei katkaise mitään.
+
 ## Pohjaraidan valitsin (5.9.2026 yö)
 
 Pelissä on **yksi musiikin paikka sekoituksessa**: ambienssiäänten alla,
@@ -243,7 +263,7 @@ automaattisesti. Peli ei ole hetkeäkään hiljainen. Vaihto on aina
 |---|---|---|
 | `musa-lehti` | 90 s | lehti auki (kaupunki-, maa- ja kehittäjän lehti) |
 | `musa-matkalaukku` | 45 s | matkalaukku auki |
-| `musa-etusivu` | 90 s | etusivu, avausteksti, pallon selailu, lähtökaupungin valinta |
+| `musa-johtoaihe` | 60 s | etusivu, avausteksti, pallon selailu, lähtökaupungin valinta (26.9.2026 alkaen; vanha `musa-etusivu` jää ämpäriin, paluu on `PAIKKARAIDAT.etusivu.tunnus`-rivin vaihto) |
 | `musa-kaupunki-<id>` | 60–90 s | kaupungin oma kappale (Ateena) |
 | `musa-kaupunki-<alue>` | 75 s | alueen raita: `britteinsaaret`, `pohjola`, `keski-eurooppa`, `valimeri`, `balkan`, `ita-eurooppa` |
 | `musa-pohja` | 80 s | kaikkialla muualla |

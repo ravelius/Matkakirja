@@ -55,6 +55,17 @@ const {
 } = valitsin;
 
 const POHJA = musaPolku(POHJARAITA);
+// Etusivulla soi 26.9.2026 alkaen isoisän johtoaihe (musiikkisuunnitelma
+// vaihe 1); vanha musa-etusivu jää ämpäriin paluuta varten.
+const ETUSIVU = musaPolku('musa-johtoaihe');
+
+/**
+ * Musiikkisuunnitelman raita, jonka tiedosto on tämä tunnus, tai
+ * undefined. Paikkaraita voi siirtyä tilaraidasta suunnitelman raitaan
+ * (etusivu → johtoaihe) samalla periaatteella kuin musa-visa-2.
+ */
+const suunnitelmanRaita = (tunnus) => Object.values(RAIDAT)
+  .find((r) => r.laji === 'suunnitelma' && r.tiedosto === `${tunnus}.mp3`);
 
 /* ── 1. ketju ────────────────────────────────────────────────────── */
 
@@ -95,10 +106,10 @@ test('kaupunkikohtainen poikkeus voittaa maan', () => {
 
 test('etusivun raita voittaa pohjavireen mutta väistyy lehden alta', () => {
   nollaaMusiikkivalitsin();
-  assert.deepEqual(musiikkiketju('etusivu'), [musaPolku('musa-etusivu'), POHJA]);
+  assert.deepEqual(musiikkiketju('etusivu'), [ETUSIVU, POHJA]);
   asetaMusiikkitila('lehti', true);
   assert.deepEqual(musiikkiketju('etusivu'),
-    [musaPolku('musa-lehti'), musaPolku('musa-etusivu'), POHJA]);
+    [musaPolku('musa-lehti'), ETUSIVU, POHJA]);
   nollaaMusiikkivalitsin();
 });
 
@@ -211,6 +222,9 @@ test('jokaisella tilaraidalla on prompti ja sama tiedostonimi kuin pelillä', ()
     const raita = RAIDAT[nimi];
     const { tunnus } = pelinTilat[nimi];
     assert.equal(raita.tila, nimi, `${nimi}: työkalun tila-kenttä ei vastaa avainta`);
+    // Suunnitelman raidalle siirtynyt paikka: vanha tilaraita jää
+    // työkaluun (ja ämpäriin) paluuta varten, eikä kiertoa vaadita.
+    if (suunnitelmanRaita(tunnus)) continue;
     assert.equal(raita.tiedosto, `${tunnus}.mp3`,
       `${nimi}: työkalu kirjoittaisi tiedoston, jota peli ei hae`);
     assert.equal(lyria.raidanTiedosto(raita, 'lyria'), `${tunnus}-lyria.mp3`);
@@ -232,8 +246,12 @@ test('kaikki uudet polut kulkevat MUSIIKIN_PAATE-kytkimen läpi', () => {
   for (const tunnus of tunnukset) {
     assert.equal(musaPolku(tunnus), `assets/audio/${tunnus}${MUSIIKIN_PAATE}.mp3`);
   }
-  // Ja työkalun tiedostonimet ovat samat tunnukset .mp3-päätteellä.
+  // Ja työkalun tiedostonimet ovat samat tunnukset .mp3-päätteellä —
+  // paitsi tilaraidalla, jonka paikka on siirtynyt suunnitelman raidalle.
+  const siirtyneet = new Set(Object.entries(PAIKKARAIDAT)
+    .filter(([, r]) => suunnitelmanRaita(r.tunnus)).map(([nimi]) => nimi));
   for (const nimi of [...ALUEIDEN_RAIDAT, ...TILOJEN_RAIDAT]) {
+    if (siirtyneet.has(nimi)) continue;
     assert.ok(tunnukset.includes(RAIDAT[nimi].tiedosto.replace(/\.mp3$/, '')),
       `${nimi}: työkalun tiedostonimi ei ole yhdenkään pelin raidan tunnus`);
   }
@@ -477,7 +495,7 @@ test('etusivulla soi etusivun raita, ja lähtö vaihtaa sen kaupunkiin', async (
   await Promise.resolve();
   await Promise.resolve();
   await ajaHaivytykset(s.kello);
-  assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku('musa-etusivu'),
+  assert.equal(s.mod.soivaPohjaMusiikki(), ETUSIVU,
     'etusivun raita ei alkanut');
   await saavu(s, 'ateena', 'GRC');
   assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku(kaupunkiraidanTunnus('ateena')));
@@ -487,4 +505,33 @@ test('kaupunginRaidat ei anna raitoja virtuaalipaikoille', () => {
   for (const paikka of ['jalkamatka', 'merimatka', 'lentomatka', 'etusivu', null, undefined]) {
     assert.deepEqual(kaupunginRaidat(paikka), [], `${paikka}: sai raidan tyhjästä`);
   }
+});
+
+/* ── 8. musiikkisuunnitelma, vaihe 1 (26.9.2026) ─────────────────── */
+
+test('saapumistunnus on vain Välimeren alueella, sama maa→alue-taulu', async () => {
+  const { SAAPUMISTUNNUKSET, saapumistunnus } = await import('../js/kaupunkimusiikki.js');
+  const tunnus = musaPolku('musa-saapuminen-valimeri');
+  assert.equal(saapumistunnus('ateena', 'GRC'), tunnus);
+  assert.equal(saapumistunnus('lissabon', 'PRT'), tunnus);
+  // Kaupunkipoikkeus kuten alueraidalla: Marseille on Välimeri.
+  assert.equal(saapumistunnus('marseille', 'FRA'), tunnus);
+  for (const [kaupunki, maa] of [['pariisi', 'FRA'], ['sofia', 'BGR'], ['kumasi', 'GHA'], ['etusivu', null]]) {
+    assert.equal(saapumistunnus(kaupunki, maa), null, `${kaupunki}: tunnus ilman aluetta`);
+  }
+  for (const alue of Object.keys(SAAPUMISTUNNUKSET)) {
+    assert.ok(Object.hasOwn(ALUERAIDAT, alue), `${alue}: tuntematon alue`);
+  }
+});
+
+test('matkan aiheet soivat aarreaiheen paikassa', () => {
+  // Kolme kertaraitaa, yksi soitin (soitaAarreMusiikki).
+  assert.match(UI, /aloituslento: musaPolku\('musa-aloituslento'\)/);
+  assert.match(UI, /loppu: musaPolku\('musa-loppu'\)/);
+  assert.match(UI, /this\.soitaAarreMusiikki\(MATKAN_AIHEET\.aloituslento\)/,
+    'aloituslento ei soita aihettaan');
+  assert.match(UI, /this\.soitaSaapumistunnus\(city\)/, 'saapuminen ei soita tunnusta');
+  assert.match(UI, /this\.soitaAarreMusiikki\(MATKAN_AIHEET\.loppu\)/, 'loppuaihe puuttuu');
+  // Tunnus ei katkaise soivaa aihetta eikä soi aloituslennon kohteessa.
+  assert.match(UI, /soitaSaapumistunnus\(city\) \{\n\s+if \(!city \|\| this\.aarreMusiikki \|\| this\.aloituslentoKesken/);
 });

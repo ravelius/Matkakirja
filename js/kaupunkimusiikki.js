@@ -223,3 +223,37 @@ export function kaupunginRaidat(cityId, maa = null) {
   return [kaupunginMusiikki(cityId), alueenMusiikki(kaupunginAlue(cityId, maa))]
     .filter(Boolean);
 }
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * SAAPUMISTUNNUKSET — lyhyt aihe uuteen kaupunkiin
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Musiikkisuunnitelma 26.9.2026 (docs/raportit/musiikki-ja-
+ * aanisuunnitelma-20260926.md 2.2 kohta 2): `musa-saapuminen` on
+ * johtoaiheen kaksi ensimmäistä tahtia maanosan soittimella, one-shot
+ * 8–10 s, kun pelaaja saapuu UUTEEN kaupunkiin. Soittaja on js/ui.js
+ * (soitaSaapumistunnus); tämä taulu kertoo vain, millä alueella on
+ * oma tunnuksensa.
+ *
+ * AVAIN ON ALUE, joka luetaan samasta maa→alue-taulusta kuin alueraita
+ * (kaupunginAlue: ALUEEN_MAAT ja KAUPUNGIN_ALUE, joten Marseille kuuluu
+ * Välimereen). Vaihe 1 tuo vain Välimeren; maanosaversiot (vaihe 2)
+ * lisätään tähän riveinä. Alueella ilman riviä tunnusta ei soi.
+ */
+export const SAAPUMISTUNNUKSET = {
+  valimeri: 'musa-saapuminen-valimeri',
+};
+
+/**
+ * Kaupungin saapumistunnuksen polku, tai null jos kaupungin alueella
+ * ei ole tunnusta.
+ *
+ * @param {?string} cityId laudan kaupungin id
+ * @param {?string} maa kaupungin ISO-3-maakoodi pakan cityCountry-taulusta
+ */
+export function saapumistunnus(cityId, maa = null) {
+  const alue = kaupunginAlue(cityId, maa);
+  if (!alue || !Object.hasOwn(SAAPUMISTUNNUKSET, alue)) return null;
+  return musaPolku(SAAPUMISTUNNUKSET[alue]);
+}
