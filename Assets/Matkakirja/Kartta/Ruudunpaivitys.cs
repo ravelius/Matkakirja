@@ -23,6 +23,8 @@ namespace Matkakirja
     /// Lämpö (Lampo): Kuuma → katto 30 fps, renderScale 0,7 (PalloSumennus.PerusSkaala), bloom pois;
     /// Kriittinen → katto 20 fps.
     /// Testikomento `ruutu` (peli-komento.txt) kertoo tilan; `lampo …` pakottaa lämpötason.
+    /// Löydös S10 (Natiiviseppä 26.9.): TÄYDEN tilan katto <see cref="LiikeKatto"/> A/B-mittaukseen (komento `ruutu liike
+    /// 120|60` komento.txt:ssä, Komennot.cs).
     /// </summary>
     [DefaultExecutionOrder(10000)]
     public sealed class Ruudunpaivitys : MonoBehaviour
@@ -64,6 +66,13 @@ namespace Matkakirja
         /// <summary>Lisäehdot täydelle taajuudelle (esim. linssin ajo): mikä tahansa tosi = TÄYSI.</summary>
         public static readonly List<Func<bool>> Aktiivinen = new List<Func<bool>>();
 
+        /// <summary>
+        /// LÖYDÖS S10 (Natiiviseppä 26.9.2026): TÄYDEN tilan katto hertseinä liikkeen A/B-mittaukseen (120 vs 60 Hz,
+        /// lämpö); 0 = näytön taajuus (oletus, ennallaan). Verhon aikana ei kattoa (Cesium etenee kehys kerrallaan).
+        /// Komento `ruutu liike 120|60|pois` (Komennot.cs); KehysMittari kirjaa sen riville ("liikeKatto").
+        /// </summary>
+        public static int LiikeKatto;
+
         public Tila Nyt { get; private set; } = Tila.Taysi;
         public int Naytto { get; private set; } = 60;
         public string Syy { get; private set; } = "";
@@ -88,7 +97,7 @@ namespace Matkakirja
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = 0; }
+        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = 0; LiikeKatto = 0; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -169,7 +178,8 @@ namespace Matkakirja
             paikallaanHaut = haut;
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
-            int fps = Math.Min(uusi == Tila.Taysi ? Naytto : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
+            int taysi = Syy == "verho" ? Naytto : LiikeLaatatPaatos.Katto(Naytto, LiikeKatto);   // löydös S10: liikkeen katto
+            int fps = Math.Min(uusi == Tila.Taysi ? taysi : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
             int vali = uusi == Tila.Paikallaan ? PaikallaanVali : 1;
             if (Application.targetFrameRate != fps) Application.targetFrameRate = fps;
             if (OnDemandRendering.renderFrameInterval != vali) OnDemandRendering.renderFrameInterval = vali;
@@ -226,7 +236,7 @@ namespace Matkakirja
         /// <summary>Tila testikomennolle `ruutu`.</summary>
         public string Kuvaus() =>
             $"tila {Nyt} ({Syy}), fps {Application.targetFrameRate}, piirtoväli {OnDemandRendering.renderFrameInterval}, " +
-            $"näyttö {Naytto} Hz, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
+            $"näyttö {Naytto} Hz, liikkeen katto {(LiikeKatto > 0 ? LiikeKatto + " Hz" : "ei")}, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
             $"kamera {(kameraPois ? "pois" : "päällä")}, renderScale {(asetus != null ? asetus.renderScale : -1f):0.##}";
     }
 }

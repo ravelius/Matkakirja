@@ -75,6 +75,11 @@ namespace Matkakirja
     ///                             muistetaan tiedostossa Documents/maasto.txt
     ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
     ///   maasto sse <arvo>         tilesetin maximumScreenSpaceError (oletus 16; luo tilesetin uudelleen; löydös 46)
+    ///   maasto liike 32|16|pois|tila   liikkeen laattavalinnan SSE-vastine (LiikeLaatat, löydös S10; oletus 32): eleissä,
+    ///                             liu'ussa ja kamera-ajoissa (ei saapumisessa, lennossa eikä verhossa) Cesium valitsee
+    ///                             laatat varjokameralla, jonka pikselikoko on pohja-SSE / arvo; 16 = varjo täysikokoisena
+    ///                             (mekanismin kontrolli), pois = aina pääkamera; tila lokiin. Ei luo tilesetiä uudelleen
+    ///   ruutu liike 120|60|pois|tila   Ruudunpaivityksen TÄYDEN tilan katto (löydös S10 A/B; pois = näytön taajuus)
     ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
     ///   symbolit tila|pois|paalle|loydetty|himmea|koko <pt>   nostojen 3D-mallit (Symbolimallit, löydös 160); tila = taso 1
@@ -693,6 +698,32 @@ namespace Matkakirja
                     // napauta x y: osuus näytöstä 0–1, origo vasen alakulma
                     kierto.Napauta(new Vector2((float)D(1) * Screen.width, (float)D(2) * Screen.height));
                     break;
+                case "maasto" when o.Length > 1 && o[1] == "liike":
+                {
+                    // maasto liike <arvo>|pois|tila (löydös S10): liikkeen SSE-vastine varjokameralla, ei uudelleenluontia.
+                    if (o.Length > 2 && o[2] != "tila")
+                    {
+                        var v = LiikeLaatatPaatos.LueSse(o[2]);
+                        if (v.HasValue) LiikeLaatat.Sse = v.Value;
+                        else Debug.LogWarning("MATKAKIRJA komento: maasto liike <1–128>|pois|tila");
+                    }
+                    Debug.Log("MATKAKIRJA maasto liike: " + LiikeLaatat.Kuvaus());
+                    break;
+                }
+                case "ruutu" when o.Length > 1 && o[1] == "liike":
+                {
+                    // ruutu liike <hz>|pois|tila (löydös S10): TÄYDEN tilan katto liikkeen A/B-mittaukseen (Ruudunpaivitys).
+                    if (o.Length > 2 && o[2] != "tila")
+                    {
+                        var k = LiikeLaatatPaatos.LueKatto(o[2]);
+                        if (k.HasValue) Ruudunpaivitys.LiikeKatto = k.Value;
+                        else Debug.LogWarning("MATKAKIRJA komento: ruutu liike <20–240>|pois|tila");
+                    }
+                    var rp = Ruudunpaivitys.Instanssi;
+                    Debug.Log("MATKAKIRJA ruutu liike: katto " + (Ruudunpaivitys.LiikeKatto > 0 ? Ruudunpaivitys.LiikeKatto + " Hz" : "ei (näytön taajuus)")
+                              + "; " + (rp != null ? rp.Kuvaus() : "ei ruudunpäivitystä"));
+                    break;
+                }
                 case "maasto" when o.Length > 2 && o[1] == "sse":
                 {
                     // maasto sse <arvo>: tilesetin maximumScreenSpaceError (löydös 46 lisäys 5). Luo tilesetin uudelleen.
