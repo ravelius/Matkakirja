@@ -238,3 +238,4 @@ Siirtosepän #3303 (offline.json → pohja 26) PIDOSSA kunnes 1.0.20 on TF:ssä 
   kerro niillekin Peitto. **155**: symbolit kuten webissä; riski NostotKartalla.cs:747 (kuvamerkki vain löydetylle → tason 1
   kuvamerkit katoavat ennen löytöä; web: taso 1 aina) → ehdotus `|| s.Taso == 1` (Natiivi-UI + Linssiseppä päättävät).
   Raportti proto-3d/lokit/loydos155-symbolit.md.
+- juna/b13 **63984096**: + pelikoodari/musiikki-vaihe1 4218bbd8 (musiikkisuunnitelma vaihe 1, todennettu lokit/musiikki-v1/ajo1) + pelikoodari/kuljettu-reitti e5ee31dc (Linssisepän rajapinta, ei näkyvää). 153 tulee Pelikoodarin (tai seuraajan) merge-pyyntönä.
