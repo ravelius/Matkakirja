@@ -174,14 +174,15 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, k.Tapahtumia, "lataus kesken: ei mitään");
             k.Koukut.Paivita(new Aanitilanne { Valmis = true, Aloitus = true });
             Oleta.Sama(1, k.Tapahtumia, "etusivu");
-            Oleta.Tosi(k.Url(Kanava.Pohja).Contains("musa-etusivu"), k.Url(Kanava.Pohja));
+            Oleta.Tosi(k.Url(Kanava.Pohja).Contains("musa-johtoaihe"), k.Url(Kanava.Pohja));
             Oleta.Tosi(k.Url(Kanava.Maisema) != null, "lentoaseman maisema");
             k.Koukut.Paivita(new Aanitilanne { Valmis = true, Aloitus = true });
             Oleta.Sama(1, k.Tapahtumia, "sama tilanne: ei kutsua");
             k.Koukut.Paivita(Kaupungissa("pariisi"));
             Oleta.Sama(3, k.Tapahtumia, "avauksen purku + paikka");
             Oleta.Sama("pariisi", k.Koukut.LahetettyPaikka);
-            Oleta.Tosi(k.Url(Kanava.Pohja).Contains("musa-kaupunki-keski-eurooppa"), k.Url(Kanava.Pohja));
+            // Vaihe 3: Pariisilla on oma tunnuskaupungin kappale (web KAUPUNKIRAIDAT), joka voittaa alueraidan.
+            Oleta.Tosi(k.Url(Kanava.Pohja).Contains("musa-kaupunki-pariisi"), k.Url(Kanava.Pohja));
         }
 
         [Testi] static void KysymysAvaaJaSulkeeVisan()

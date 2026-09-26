@@ -992,6 +992,13 @@ namespace Matkakirja
                         Debug.Log($"MATKAKIRJA maakunnat: valinnan peitto {MaaKartta.ValinnanPeitto:0.00}");
                         break;
                     }
+                    if (o[1] == "maski" && o.Length > 2)
+                    {
+                        // maakunta maski pois|paalle: rantaviivan maski (löydös 157) vertailuun
+                        mk.MaskiNakyy(o[2] == "paalle");
+                        Debug.Log($"MATKAKIRJA maakunnat: maamaski {(Maamaski.Paalla ? "päällä" : "pois")}");
+                        break;
+                    }
                     if (o[1] == "maa")
                     {
                         mk.Pakotettu = o.Length > 2 && o[2] != "pois" ? o[2].ToUpperInvariant() : null;

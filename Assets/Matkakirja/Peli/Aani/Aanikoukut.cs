@@ -2,8 +2,8 @@
 //
 // Web kutsuu syncAmbiencea jokaisella renderillä ja laskee paikan pelin tilasta (§1.3). Natiivissa
 // PeliOhjain antaa ruudun lopussa Aanitilanteen, ja Paivita lähettää AaniTilalle vain muutokset:
-// paikka (maisema + pohjaraita), avauksen purku aloitusnäkymästä poistuttaessa ja kysymyksen
-// visamusiikki. Hetkelliset tapahtumat (liike alkaa, perillä, uusi matka, puhe, lehti, linssin pito,
+// paikka (maisema + pohjaraita), avauksen purku aloitusnäkymästä poistuttaessa, kysymyksen
+// visamusiikki ja kohtaamisen tilaraita (vaihe 2). Hetkelliset tapahtumat (liike alkaa, perillä, uusi matka, puhe, lehti, linssin pito,
 // intron loppu) tulevat omina kutsuinaan. Kaikki AaniTilan Siirtyma-kutsut kulkevat tätä kautta,
 // jotta perillä-sääntö (jalan jatkaa reitin varrella) ei katkaise linssin raitaa.
 using System;
@@ -33,6 +33,16 @@ namespace Matkakirja.Peli
         public bool Merireitti;
         /// <summary>Kysymys (tai muu tehtävä) auki.</summary>
         public bool KysymysAuki;
+        /// <summary>
+        /// Kohtaaminen auki (musiikkisuunnitelma vaihe 2, tilaraita 'kohtaaminen'): visa, jossa puhuu paikallinen
+        /// tai tarinakaaren henkilö (web visa.js onKohtaaminen: KOHTAAMISET / TARINAKAARI). Visan raita voittaa sen.
+        /// </summary>
+        public bool Kohtaaminen;
+        /// <summary>
+        /// Kysymys on auki, mutta visan raita ei soi (vaihe 2): kohtaamisen tervehdyssivu (web kohtaamisSivu:
+        /// visa alkaa vasta kysymyssivulla) ja kohtaamisen tulos (web kohtaamisenTulos → stopQuizMusic).
+        /// </summary>
+        public bool VisaOdottaa;
     }
 
     public sealed class Aanikoukut
@@ -44,7 +54,7 @@ namespace Matkakirja.Peli
 
         bool lahetetty;
         string paikka, tyyppi;
-        bool aloitus, visa, puhuu, lehti, pito;
+        bool aloitus, visa, kohtaaminen, puhuu, lehti, pito;
         Kulkutapa? liike;
         int askeleita;
         string siirtymaLaji;
@@ -112,7 +122,12 @@ namespace Matkakirja.Peli
             // Pelaaja etenee aloitusnäkymästä kartalle (webin aloitaKartalta): avauksen sekoitus puretaan.
             if (aloitus && !s.Aloitus) tila.Avaus(false);
             aloitus = s.Aloitus;
-            if (s.KysymysAuki != visa) { visa = s.KysymysAuki; tila.Visa(visa); }
+            // Web visa.js: kohtaaminen kiinni ENNEN visan pysäytystä ja auki visan käynnistyksen JÄLKEEN, ettei
+            // kohtaaminen ehdi välähtää soimaan.
+            if (!s.Kohtaaminen && kohtaaminen) { kohtaaminen = false; tila.Kohtaaminen(false); }
+            bool visaSoi = s.KysymysAuki && !s.VisaOdottaa;
+            if (visaSoi != visa) { visa = visaSoi; tila.Visa(visa); }
+            if (s.Kohtaaminen && !kohtaaminen) { kohtaaminen = true; tila.Kohtaaminen(true); }
             if (pito) return; // linssin pito: paikka lähetetään pidon päätyttyä
             var p = Paikka(s, JalkamatkaKaynnissa, LentoKaynnissa, Tyyppi);
             if (!p.HasValue) return;

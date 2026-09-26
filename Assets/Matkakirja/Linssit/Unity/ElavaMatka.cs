@@ -29,6 +29,14 @@ namespace Matkakirja.Natiivi
         static List<string> testiReitti;
 
         public const float KynanKestoS = 1.1f, ViivaPt = 5.5f;
+        /// <summary>Tummanpunainen, läpikuultava (omistaja 26.9. klo 09.5x).</summary>
+        static readonly Color Vari = new Color(0.50f, 0.02f, 0.03f, 0.65f);
+        /// <summary>Katkoviiva (omistaja 26.9. klo 10.5x): jakso noin 16 pt (kahden potenssiin asteina), viivaa 60 %.</summary>
+        public const float KatkoJaksoPt = 16f, KatkoViivaOsuus = 0.6f;
+
+        /// <summary>Asetus "näytä kuljettu reitti" (Natiivi-UI:n ☰ → Kartta -kytkin asettaa); null = näkyy.</summary>
+        public static Func<bool> NakyvissaKysely;
+        static bool? testiNakyy;
         /// <summary>Hehku näkyy, kun kamera on vähintään HehkuAlkaaM korkeudella, ja on täysi HehkuTaysiM:ssä.</summary>
         public const double HehkuAlkaaM = 2_500_000, HehkuTaysiM = 6_000_000;
         public const float HehkuPt = 26f;
@@ -73,6 +81,7 @@ namespace Matkakirja.Natiivi
         Camera kamera;
         Material viiva, hehku;
         Mesh viivaMesh, hehkuMesh;
+        GameObject viivaOlio;
         readonly List<UnityEngine.Object> roskat = new List<UnityEngine.Object>();
         List<string> piirretty = new List<string>();
         static readonly List<string> Tyhja = new List<string>();
@@ -106,9 +115,29 @@ namespace Matkakirja.Natiivi
             instanssi.kamera = kierto.GetComponent<Camera>();
         }
 
-        /// <summary>Testikomento "elava reitti <kaupungit…> | pois".</summary>
+        /// <summary>Testikomento "elava reitti <kaupungit…> | pois | vari r g b a [pt]".</summary>
         public static void Testi(string[] kaupungit, LinssiOhjain o)
         {
+            if (kaupungit.Length == 2 && kaupungit[0] == "nakyy")
+            {
+                testiNakyy = kaupungit[1] == "oletus" ? null : kaupungit[1] == "1";
+                o.Kirjaa("elävä: reitti näkyy " + (testiNakyy?.ToString() ?? "asetuksen mukaan"));
+                return;
+            }
+            if (kaupungit.Length >= 5 && kaupungit[0] == "vari")
+            {
+                float F(int i) => float.Parse(kaupungit[i], System.Globalization.CultureInfo.InvariantCulture);
+                var vari = new Color(F(1), F(2), F(3), F(4));
+                float pt = kaupungit.Length >= 6 ? F(5) : ViivaPt;
+                if (instanssi != null && instanssi.viiva != null)
+                {
+                    instanssi.viiva.SetColor("_BaseColor", vari);
+                    instanssi.viiva.SetFloat("_Paksuus", pt);
+                    PallonLepo.Muuttui("elävä reitti");
+                }
+                o.Kirjaa($"elävä: reitin väri {vari}, {pt} pt");
+                return;
+            }
             testiReitti = kaupungit.Length == 1 && kaupungit[0] == "pois" ? null : kaupungit.ToList();
             o.Kirjaa("elävä: testireitti " + (testiReitti == null ? "pois" : string.Join(" → ", testiReitti)));
         }
@@ -116,16 +145,16 @@ namespace Matkakirja.Natiivi
         void Start()
         {
             var s = Resources.Load<Shader>("Varjostimet/Kynaviiva");
-            if (s != null) { viiva = new Material(s); roskat.Add(viiva); viiva.SetColor("_BaseColor", new Color(0.45f, 0.07f, 0.06f, 0.5f)); viiva.SetFloat("_Paksuus", ViivaPt); }
+            if (s != null) { viiva = new Material(s); roskat.Add(viiva); viiva.SetColor("_BaseColor", Vari); viiva.SetFloat("_Paksuus", ViivaPt); }
             var p = Resources.Load<Shader>("Varjostimet/Pehmeapiste");
             if (p != null) { hehku = new Material(p); roskat.Add(hehku); hehku.SetFloat("_Lahde", (float)BlendMode.One); hehku.SetFloat("_Kohde", (float)BlendMode.One); hehku.SetFloat("_Ydin", 5); hehku.SetFloat("_Halo", 0.5f); }
             viivaMesh = new Mesh { name = "Kuljettu reitti", indexFormat = IndexFormat.UInt32 }; roskat.Add(viivaMesh);
             hehkuMesh = new Mesh { name = "Käydyt kaupungit" }; roskat.Add(hehkuMesh);
-            if (viiva != null) Kappale("Kuljettu reitti", viivaMesh, viiva);
+            if (viiva != null) viivaOlio = Kappale("Kuljettu reitti", viivaMesh, viiva);
             if (hehku != null) Kappale("Käydyt kaupungit", hehkuMesh, hehku);
         }
 
-        void Kappale(string nimi, Mesh mesh, Material m)
+        GameObject Kappale(string nimi, Mesh mesh, Material m)
         {
             var go = new GameObject(nimi);
             go.transform.SetParent(transform, false);
@@ -134,6 +163,7 @@ namespace Matkakirja.Natiivi
             r.sharedMaterial = m;
             r.shadowCastingMode = ShadowCastingMode.Off;
             r.receiveShadows = false;
+            return go;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)
@@ -175,6 +205,18 @@ namespace Matkakirja.Natiivi
                 viiva.SetFloat("_Peitto", Mathf.Clamp01((float)((korkeus - ViivaAlkaaM) / (ViivaTaysiM - ViivaAlkaaM))));
                 var kw = georeferenssi.transform.TransformPoint(keskus);
                 viiva.SetVector("_Keskus", new Vector4(kw.x, kw.y, kw.z, 1));
+                // Katkojakso: ruutupisteen pituus asteina näkymän keskellä (kameran korkeudelta), pyöristys kahden potenssiin.
+                float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+                double ptM = 2.0 * LinssiOhjain.Pistekerroin * Math.Max(korkeus, 1000) * tanPuoli / Mathf.Max(1, Screen.height);
+                double jakso = KatkoJaksoPt * ptM / (ElavaKohtaus.KmAsteella * 1000);
+                jakso = Math.Pow(2, Math.Round(Math.Log(jakso, 2)));
+                viiva.SetVector("_Katko", new Vector4((float)jakso, KatkoViivaOsuus, 0, 0));
+            }
+            bool nakyy = testiNakyy ?? NakyvissaKysely?.Invoke() ?? true;
+            if (viivaOlio != null && viivaOlio.activeSelf != nakyy)
+            {
+                viivaOlio.SetActive(nakyy);
+                PallonLepo.Muuttui("elävä reitti");
             }
             PaivitaHehku(reitti, keskus, kameraL, korkeus);
         }

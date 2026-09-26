@@ -1094,6 +1094,14 @@ namespace Matkakirja.Natiivi
                     var n = Rakenne.Teksti(nimi ?? "", x > 60 ? "mk-lehti__maapistenimi mk-lehti__maapistenimi--vasen" : "mk-lehti__maapistenimi", piste);
                     Kirjasimet.Aseta(n, paa ? Kirjasin.KoneLihava : Kirjasin.Kone);
                 }
+                // Web kartta-suurennusvihje "⤢ Kokoruutu" kuvan oikeassa alakulmassa (UI-pariteetti rivi 9).
+                var vihje = Rakenne.El("mk-lehti__suurennusvihje", kehys, PickingMode.Ignore);
+                var ikoni = new SvgIkoni(Ikonit.Kokoruutu) { pickingMode = PickingMode.Ignore };
+                ikoni.AddToClassList("mk-lehti__suurennusvihje-ikoni");
+                vihje.Add(ikoni);
+                var vihjeTeksti = Rakenne.Teksti("Kokoruutu", "mk-lehti__suurennusvihje-teksti", vihje);
+                vihjeTeksti.pickingMode = PickingMode.Ignore;
+                Kirjasimet.Aseta(vihjeTeksti, Kirjasin.Kone);
                 string url = m.KarttaUrl, lahde = m.KarttaLahde, nimiKartta = lehti.Nimi + " — korkokartta";
                 kehys.RegisterCallback<ClickEvent>(_ => suurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = url, Selite = nimiKartta, LahdeRivi = lahde } }));
                 if (!string.IsNullOrEmpty(lahde)) Kirjasimet.Aseta(Rakenne.Teksti(lahde, "mk-lehti__lahde", s), Kirjasin.Kone);

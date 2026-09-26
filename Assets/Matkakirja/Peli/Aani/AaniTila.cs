@@ -206,11 +206,15 @@ namespace Matkakirja.Peli
         /// <summary>Ääninäyte (kulttuurinäyte, zoom) soi: tausta 0,15:een (web vaimennaTausta/palautaTausta).</summary>
         public void Nayte(bool soi, double kerroin = AaniVakiot.VaistoNayte) => Tee(() => SaadaVaistoa(soi ? kerroin : 1));
 
-        /// <summary>Kysymys auki/kiinni (web startQuizMusic/stopQuizMusic).</summary>
+        /// <summary>
+        /// Visan raita alkaa/loppuu (web startQuizMusic/stopQuizMusic). Vaihe 2: VisaAuki on myös webin visaSoi-lippu
+        /// (asetaVisaSoi), jonka muutos valitsee pohjan uudelleen: kohtaaminen väistyy visan ajaksi ja palaa sen jälkeen.
+        /// </summary>
         public void Visa(bool auki) => Tee(() =>
         {
+            bool muuttui = VisaAuki != auki;
             VisaAuki = auki;
-            if (auki) AloitaVisa(); else LopetaVisa();
+            if (auki) AloitaVisa(muuttui); else LopetaVisa(muuttui);
         });
 
         /// <summary>Siirtymä- tai linssiraita (jalan, laiva, lento, keksinnot, ihmisen-matka); null = lopeta.</summary>
@@ -363,14 +367,30 @@ namespace Matkakirja.Peli
         public void MatkaLoppui() => Aihe(t.LoppuAihe);
 
         /// <summary>
-        /// Ensimmäinen käynti kaupungissa: kaupungin musiikkialueen saapumistunnus (suunnitelma: "uuteen
-        /// kaupunkiin"). Ei katkaise soivaa aihetta (aloituslento päättyy ensimmäiseen kaupunkiin).
+        /// Ensimmäinen käynti kaupungissa: kaupungin maanosan saapumistunnus (suunnitelma: "uuteen
+        /// kaupunkiin"; vaihe 2: avain maanosa, web SAAPUMISTUNNUKSET). Ei katkaise soivaa aihetta
+        /// (aloituslento päättyy ensimmäiseen kaupunkiin).
         /// </summary>
         public void UusiKaupunki(string kaupunki)
         {
-            var alue = valitsin.Alue(kaupunki, t.Maa(kaupunki));
-            if (alue != null && t.Saapumistunnukset.TryGetValue(alue, out var polku)) Aihe(polku, keskeyta: false);
+            var maanosa = valitsin.Maanosa(kaupunki, t.Maa(kaupunki));
+            if (maanosa != null && t.Saapumistunnukset.TryGetValue(maanosa, out var polku)) Aihe(polku, keskeyta: false);
         }
+
+        /// <summary>
+        /// Kohtaamisen tulos (vaihe 2, web ui.soitaKohtaamisenTulos): oikein → musa-ratkaisu, väärin tai aika
+        /// loppui → musa-epaonnistuminen. Ei katkaise soivaa aihetta (kuten saapumistunnus); aarteen paljastus
+        /// katkaisee tämän.
+        /// </summary>
+        public void TehtavanTulos(bool oikein) => Aihe(oikein ? t.RatkaisuAihe : t.EpaonnistuminenAihe, keskeyta: false);
+
+        /// <summary>Kohtaaminen auki/kiinni (vaihe 2, web visa.js asetaMusiikkitila('kohtaaminen')); visan raita voittaa sen.</summary>
+        public void Kohtaaminen(bool auki) => Tila(TilaKohtaaminen, auki);
+
+        public const string TilaKohtaaminen = "kohtaaminen";
+
+        /// <summary>Päällä olevat musiikkitilat (testit ja testikomento).</summary>
+        public IReadOnlyCollection<string> Musiikkitilat => tilat;
 
         /// <summary>Aihe (aarre- tai suunnitelman aihe) soi nyt.</summary>
         public bool AiheSoi => aarre != null;
@@ -581,7 +601,7 @@ namespace Matkakirja.Peli
             musiikinPaikka = cityId;
             musiikinMaa = maa;
             if (!Aanimaisema || !Musiikki || pito) { LopetaPohja(); return; }
-            var polku = Musiikkivalitsin.Valitse(valitsin.Ketju(tilat, cityId, maa), puuttuvat);
+            var polku = Musiikkivalitsin.Valitse(valitsin.Ketju(tilat, cityId, maa, VisaAuki), puuttuvat);
             if (polku == null || (pohja != null && pohjaPolku == polku)) return;
             var vaistyva = pohja;
             pohja = null;
@@ -712,9 +732,11 @@ namespace Matkakirja.Peli
 
         // --- visamusiikki ---------------------------------------------------------
 
-        void AloitaVisa()
+        void AloitaVisa(bool lippuMuuttui = false)
         {
             SaadaVaistoa(AaniVakiot.VaistoVisa);
+            // Web asetaVisaSoi(true) ennen kytkimiä: lippu kertoo, että kysymys on auki.
+            if (lippuMuuttui) MusiikkitilaMuuttui();
             if (!Aanimaisema || !Musiikki || visa != null) return;
             var valinta = t.VisaOletus;
             if (valinta == "") return;
@@ -734,11 +756,22 @@ namespace Matkakirja.Peli
             Ramppi(s, VisaTaso(Voimassa), AaniVakiot.HaivytysMs);
         });
 
-        void LopetaVisa() => LopetaVisaSoitin();
+        void LopetaVisa(bool lippuMuuttui)
+        {
+            SaadaVaistoa(1);
+            // Web asetaVisaSoi(false): auki oleva kohtaaminen palaa ketjun kärkeen.
+            if (lippuMuuttui) MusiikkitilaMuuttui();
+            PoistaVisaSoitin();
+        }
 
         void LopetaVisaSoitin()
         {
             SaadaVaistoa(1);
+            PoistaVisaSoitin();
+        }
+
+        void PoistaVisaSoitin()
+        {
             var vanha = visa;
             visa = null;
             if (vanha == null) return;

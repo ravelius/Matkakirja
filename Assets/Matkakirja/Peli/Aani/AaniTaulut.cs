@@ -5,7 +5,8 @@
 // C#:n vakioina, ja kultainen jälki (Kultaiset/aanijalki.json, erityisesti jälki 10 = koko
 // sekoitus tynkäsoittimella) punastuu, jos web muuttaa niitä.
 //
-// Taulut: sisäänrakennettu oletus (AaniTaulut.Oletus) vastaa webiä a55f2a813. Paketista luetaan
+// Taulut: sisäänrakennettu oletus (AaniTaulut.Oletus) vastaa webiä a55f2a813 + musiikkisuunnitelman vaiheet 1–2
+// (26.9.2026: aiheet, maanosat, maanosaraidat, kohtaaminen; jälki regeneroitu). Paketista luetaan
 // kokoelma aanitaulut (skeema ≥ 1.22: siirtyma, tilaraita, paikkaraita, pulu, pohjaraita, maisemakori,
 // aarreaihe) ja kaupungit (maa, tyyppi); moduuli aani-ehdokkaat.json antaa KAUPUNKI_EHDOKKAAT,
 // joilla maisemakori lasketaan, jos paketissa ei ole valmiita maisemakori-rivejä.
@@ -131,6 +132,11 @@ namespace Matkakirja.Peli
         public string Pohjaraita = "musa-pohja";
         /// <summary>TILARAIDAT prioriteettijärjestyksessä (nimi, tunnus).</summary>
         public List<(string Nimi, string Tunnus)> Tilaraidat = new List<(string, string)>();
+        /// <summary>
+        /// Web VISAN_ALLE_JAAVAT (vaihe 2): tilat, jotka väistyvät ketjusta visan raidan soidessa (kohtaaminen);
+        /// tila ei katoa, vaan palaa visan loputtua (Musiikkivalitsin.Ketju visaSoi).
+        /// </summary>
+        public HashSet<string> VisanAlleJaavat = new HashSet<string> { "kohtaaminen" };
         public Dictionary<string, string> Paikkaraidat = new Dictionary<string, string>();
         /// <summary>Tila- ja paikkaraitojen kuvaukset (nimi → kuvaus) paketista; oletuksessa tyhjä.</summary>
         public Dictionary<string, string> Raitakuvaukset = new Dictionary<string, string>();
@@ -140,8 +146,23 @@ namespace Matkakirja.Peli
         public Dictionary<string, string> KaupunginAlue = new Dictionary<string, string>();
         public HashSet<string> Alueraidat = new HashSet<string>();
         public Dictionary<string, string> AlueenMaat = new Dictionary<string, string>();
+        /// <summary>
+        /// Musiikkisuunnitelma vaihe 2 (26.9.2026): maanosa = saapumistunnuksen ja maanosaraidan avain
+        /// (web kaupunkimusiikki.js ALUEEN_MAANOSA ja MAAN_MAANOSA; Musiikkivalitsin.Maanosa).
+        /// </summary>
+        public Dictionary<string, string> AlueenMaanosa = new Dictionary<string, string>();
+        /// <summary>Maa (ISO3) → maanosa niille maille, joilla ei ole musiikkialuetta (web MAAN_MAANOSA).</summary>
+        public Dictionary<string, string> MaanMaanosa = new Dictionary<string, string>();
+        /// <summary>Maanosat, joilla on oma looppi musa-maanosa-&lt;maanosa&gt; (web MAANOSARAIDAT; vaihe 3 lisää loput).</summary>
+        public HashSet<string> Maanosaraidat = new HashSet<string>();
         /// <summary>RAIDAT järjestyksessä.</summary>
         public List<SiirtymaRaita> Siirtymat = new List<SiirtymaRaita>();
+        /// <summary>Maanosien tunnukset (web MAANOSAT): saapumistunnuksen ja maanosaraidan avaimet.</summary>
+        public static readonly string[] Maanosat =
+        {
+            "lansi-eurooppa", "valimeri", "ita-eurooppa", "lahi-ita", "saharan-etelapuoli",
+            "etela-aasia", "ita-aasia", "pohjois-amerikka", "etela-amerikka", "oseania",
+        };
         /// <summary>Visamusiikin oletusvalinta (EHDOKKAAT['musiikki:tietovisa'].oletus); '' = pois.</summary>
         public string VisaOletus;
         public string AarreTavallinen, AarrePaa;
@@ -150,7 +171,12 @@ namespace Matkakirja.Peli
         /// Soivat aarreaiheen paikalla (AaniTila.Aihe). null = ei aihetta.
         /// </summary>
         public string AloituslentoAihe, LoppuAihe;
-        /// <summary>Saapumistunnus musiikkialueelle (Musiikkivalitsin.Alue → polku); vaiheessa 1 vain valimeri.</summary>
+        /// <summary>
+        /// Musiikkisuunnitelma vaihe 2: tehtävän tulos (web ui.js soitaAarreMusiikki, ei-katkaiseva kuten
+        /// saapumistunnus). Ratkaisu = oikea vastaus, epäonnistuminen = väärä vastaus tai aika loppui.
+        /// </summary>
+        public string RatkaisuAihe, EpaonnistuminenAihe;
+        /// <summary>Saapumistunnus maanosalle (Musiikkivalitsin.Maanosa → polku; web SAAPUMISTUNNUKSET, vaihe 2).</summary>
         public Dictionary<string, string> Saapumistunnukset = new Dictionary<string, string>();
         public HashSet<string> Aarretyypit = new HashSet<string>();
         public HashSet<string> Vakiopaikat = new HashSet<string>();
@@ -183,8 +209,14 @@ namespace Matkakirja.Peli
             var t = new AaniTaulut();
             t.Tilaraidat.Add(("lehti", "musa-lehti"));
             t.Tilaraidat.Add(("matkalaukku", "musa-matkalaukku"));
-            t.Paikkaraidat["etusivu"] = "musa-etusivu";
+            // Kohtaaminen viimeisenä (vaihe 2, web TILARAIDAT): pelin tapahtuma, jonka päälle avattu lehti tai
+            // matkalaukku vie musiikin mukanaan. Visa voittaa sen VisanAlleJaavat-säännöllä (ei rivijärjestyksellä).
+            t.Tilaraidat.Add(("kohtaaminen", "musa-kohtaaminen"));
+            // Vaihe 1 (web #3304): etusivulla soi isoisän johtoaihe (paketti ≤ v41 antaa vielä musa-etusivu).
+            t.Paikkaraidat["etusivu"] = "musa-johtoaihe";
             t.Kaupunkiraidat.Add("ateena");
+            // Vaihe 3 (omistaja 26.9. klo 11.0x): tunnuskaupungit (web KAUPUNKIRAIDAT).
+            foreach (var k in new[] { "pariisi", "lontoo", "rooma", "istanbul", "kairo", "pietari" }) t.Kaupunkiraidat.Add(k);
             t.KaupunginAlue["marseille"] = "valimeri";
             foreach (var a in new[] { "britteinsaaret", "pohjola", "keski-eurooppa", "valimeri", "balkan", "ita-eurooppa" }) t.Alueraidat.Add(a);
             void Alue(string alue, params string[] maat) { foreach (var m in maat) t.AlueenMaat[m] = alue; }
@@ -194,6 +226,21 @@ namespace Matkakirja.Peli
             Alue("valimeri", "ESP", "PRT", "ITA", "GRC", "MLT");
             Alue("balkan", "HRV", "BIH", "BGR", "ROU", "TUR");
             Alue("ita-eurooppa", "RUS", "UKR", "EST", "LVA", "LTU");
+            // Maanosat (vaihe 2): Euroopan alueet maanosiin, muut maat suoraan (1873:n matkailijan jako).
+            foreach (var a in new[] { "britteinsaaret", "pohjola", "keski-eurooppa" }) t.AlueenMaanosa[a] = "lansi-eurooppa";
+            foreach (var a in new[] { "valimeri", "balkan" }) t.AlueenMaanosa[a] = "valimeri";
+            t.AlueenMaanosa["ita-eurooppa"] = "ita-eurooppa";
+            void Maanosa(string maanosa, params string[] maat) { foreach (var m in maat) t.MaanMaanosa[m] = maanosa; }
+            Maanosa("valimeri", "CYP");
+            Maanosa("lahi-ita", "ARE", "DZA", "EGY", "IRN", "IRQ", "JOR", "KWT", "LBY", "MAR", "OMN", "QAT", "SAU", "SDN", "SYR", "TUN", "YEM", "KAZ", "UZB");
+            Maanosa("saharan-etelapuoli", "AGO", "CMR", "COD", "ETH", "GHA", "KEN", "LBR", "MDG", "MLI", "MOZ", "NAM", "NGA", "SEN", "SHN", "SLE", "SOM", "SDS", "TCD", "TZA", "UGA", "ZAF", "ZWE");
+            Maanosa("etela-aasia", "AFG", "IND", "LKA", "NPL", "PAK", "MMR");
+            Maanosa("ita-aasia", "CHN", "HKG", "JPN", "KOR", "MNG", "TWN", "VNM", "THA", "PHL", "IDN", "SGP");
+            Maanosa("oseania", "AUS", "NZL", "FJI", "NCL", "NFK", "PNG", "SLB", "VUT", "TLS");
+            Maanosa("pohjois-amerikka", "USA", "CAN", "MEX", "CUB", "GTM", "NIC", "PAN", "PRI", "BMU", "GRL");
+            Maanosa("etela-amerikka", "ARG", "BOL", "BRA", "CHL", "COL", "ECU", "FLK", "GUF", "PER", "PRY", "URY", "VEN");
+            // Maanosaraidat: vaihe 2 (valimeri, lansi-eurooppa) ja vaihe 3 (loput 8) = kaikki maanosat (web MAANOSARAIDAT).
+            foreach (var m in Maanosat) t.Maanosaraidat.Add(m);
             SiirtymaRaita R(string laji, string ryhma, double voima, int nousu = AaniVakiot.SiirtymaNousuMs, int lasku = AaniVakiot.SiirtymaLaskuMs)
             {
                 var tunnus = (ryhma == "linssi" ? "linssi-" : "siirtyma-") + laji + "-lyria.mp3";
@@ -209,7 +256,9 @@ namespace Matkakirja.Peli
             t.AarrePaa = t.MusaPolku("musa-paaaarre");
             t.AloituslentoAihe = t.MusaPolku("musa-aloituslento");
             t.LoppuAihe = t.MusaPolku("musa-loppu");
-            t.Saapumistunnukset["valimeri"] = t.MusaPolku("musa-saapuminen-valimeri");
+            t.RatkaisuAihe = t.MusaPolku("musa-ratkaisu");
+            t.EpaonnistuminenAihe = t.MusaPolku("musa-epaonnistuminen");
+            foreach (var m in Maanosat) t.Saapumistunnukset[m] = t.MusaPolku("musa-saapuminen-" + m);
             foreach (var a in new[] { "star", "mannerAarre", "isoAarre", "pieniAarre" }) t.Aarretyypit.Add(a);
             t.Vakiopaikat.Add("etusivu");
             t.Vakiopaikat.Add("lentomatka");
@@ -326,11 +375,14 @@ namespace Matkakirja.Peli
                         else if (nimi == "tavallinen") AarreTavallinen = MusaPolku(MiniJson.Teksti(o, "tunnus"));
                         break;
                     // Musiikkisuunnitelman aiheet (paketin tuleva rivi; puuttuessa Oletus-taulun arvot):
-                    // nimi aloituslento | loppu | saapuminen-<alue>, tunnus ilman -lyria-päätettä.
+                    // nimi aloituslento | loppu | ratkaisu | epaonnistuminen | saapuminen-<maanosa>, tunnus ilman
+                    // -lyria-päätettä (vaiheesta 2 saapumisen avain on maanosa, ei enää alue).
                     case "musiikkiaihe":
                         var aihe = MusaPolku(MiniJson.Teksti(o, "tunnus"));
                         if (nimi == "aloituslento") AloituslentoAihe = aihe;
                         else if (nimi == "loppu") LoppuAihe = aihe;
+                        else if (nimi == "ratkaisu") RatkaisuAihe = aihe;
+                        else if (nimi == "epaonnistuminen") EpaonnistuminenAihe = aihe;
                         else if (nimi != null && nimi.StartsWith("saapuminen-")) Saapumistunnukset[nimi.Substring(11)] = aihe;
                         break;
                     case "maisemakori":
@@ -345,9 +397,30 @@ namespace Matkakirja.Peli
                         break;
                 }
             }
-            if (tilat.Count > 0) Tilaraidat = tilat;
+            if (tilat.Count > 0) Tilaraidat = YhdistaTilaraidat(tilat, Tilaraidat);
             if (siirtymat.Count > 0) Siirtymat = siirtymat;
             return korit;
+        }
+
+        /// <summary>
+        /// Paketin tilaraidat voittavat, mutta paketista puuttuva oletuksen tila (vanha paketti ennen vaihetta 2:
+        /// kohtaaminen) säilyy oletuksen kohdallaan: se lisätään ennen oletusjärjestyksessä seuraavaa paketin tilaa.
+        /// </summary>
+        static List<(string Nimi, string Tunnus)> YhdistaTilaraidat(List<(string Nimi, string Tunnus)> paketti, List<(string Nimi, string Tunnus)> oletus)
+        {
+            var tulos = new List<(string Nimi, string Tunnus)>(paketti);
+            for (int i = 0; i < oletus.Count; i++)
+            {
+                if (tulos.Exists(r => r.Nimi == oletus[i].Nimi)) continue;
+                int kohta = tulos.Count;
+                for (int j = i + 1; j < oletus.Count; j++)
+                {
+                    int k = tulos.FindIndex(r => r.Nimi == oletus[j].Nimi);
+                    if (k >= 0) { kohta = k; break; }
+                }
+                tulos.Insert(kohta, oletus[i]);
+            }
+            return tulos;
         }
 
         /// <summary>Kaupunkien maa (ISO3) ja äänimaisematyyppi paketin kokoelmasta kaupungit.</summary>
