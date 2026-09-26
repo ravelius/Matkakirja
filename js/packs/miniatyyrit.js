@@ -1031,12 +1031,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    Polaarimuseo: 'tromssa-polaarimuseo',
-    'Tromssan silta': 'tromssa-tromssan-silta',
-    'Tromssan tuomiokirkko': 'tromssa-tromssan-tuomiokirkko',
-    'Jäämerenkatedraali': 'tromssa-jaamerenkatedraali',
-    Polaria: 'tromssa-polaria',
-    'Fjellheisenin köysirata': 'tromssa-fjellheisenin-koysirata',
+    Polaarimuseo: 'tromssa-polaarimuseo-vari2',
+    'Tromssan silta': 'tromssa-tromssan-silta-vari2',
+    'Tromssan tuomiokirkko': 'tromssa-tromssan-tuomiokirkko-vari2',
+    'Jäämerenkatedraali': 'tromssa-jaamerenkatedraali-vari2',
+    Polaria: 'tromssa-polaria-vari2',
+    'Fjellheisenin köysirata': 'tromssa-fjellheisenin-koysirata-vari2',
   },
   jerusalem: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1326,8 +1326,8 @@ export const MINIATYYRIT = {
     'Kashi Vishwanath -temppeli': 'varanasi-kashi-vishwanath-temppeli-vari2',
     'Dashashwamedh Ghat': 'varanasi-dashashwamedh-ghat-vari2',
     'Assi Ghat': 'varanasi-assi-ghat',
-    'Durga Kund -temppeli': 'varanasi-durga-kund-temppeli',
-    'Ramnagarin linnoitus': 'varanasi-ramnagarin-linnoitus',
+    'Durga Kund -temppeli': 'varanasi-durga-kund-temppeli-vari2',
+    'Ramnagarin linnoitus': 'varanasi-ramnagarin-linnoitus-vari2',
   },
   hanoi: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1432,10 +1432,10 @@ export const MINIATYYRIT = {
     Presidentinlinna: 'taipei-presidentinlinna',
     'Punainen talo': 'taipei-punainen-talo',
     'Lungshan-temppeli': 'taipei-lungshan-temppeli',
-    'Bopiliaon vanha kortteli': 'taipei-bopiliaon-vanha-kortteli',
-    'Chiang Kai-shek -muistosali': 'taipei-chiang-kai-shek-muistosali',
-    'Kasvitieteellinen puutarha': 'taipei-kasvitieteellinen-puutarha',
-    'Taipei 101': 'taipei-taipei-101',
+    'Bopiliaon vanha kortteli': 'taipei-bopiliaon-vanha-kortteli-vari2',
+    'Chiang Kai-shek -muistosali': 'taipei-chiang-kai-shek-muistosali-vari2',
+    'Kasvitieteellinen puutarha': 'taipei-kasvitieteellinen-puutarha-vari2',
+    'Taipei 101': 'taipei-taipei-101-vari2',
   },
   hongkong: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
