@@ -26,6 +26,8 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
 - Klo 08.2x: elävän kartan kohta 2 (build 20) natiivi-ui/nosto-muste fed603b9 merge-pyynnössä (sis. natiiviseppa/nosto-muste
   ja linssiseppa/muste-jaljet): kokoluokat, löytämätön musteen jälkenä, pääkohteen hehku, löydön käyrä; todennettu 3ec54edd,
   lepo 244/244. Myös linssit-heti (junassa) ja kortti-lehdet (Pelikoodarin merge-pyynnössä).
+- Klo 08.4x: build 20 -junassa myös offline-lepo 7d6f7bc3 (Natiiviseppä mergeää; offline-pillerin vuorottelu seisoo levossa,
+  todennettu 306/306). Build 20 -junassa nosto-muste fed603b9 (juna/b13 427e1a1a).
 - Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
   laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
