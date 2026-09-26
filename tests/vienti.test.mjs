@@ -191,7 +191,9 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     aanitaulut: P.cities.length + 4 + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length + 2 + ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
       + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
-      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length,
+      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length
+      // Skeema 1.50: musiikkiaiheet (matkan aiheet + saapumistunnukset maanosittain).
+      + Object.keys(ns('js/ui.js').MATKAN_AIHEET).length + Object.keys(ns('js/kaupunkimusiikki.js').SAAPUMISTUNNUKSET).length,
     kuvakysymykset: P.cities.filter((c) => !ns('js/sisaltotaulut.js').EI_VALOKUVAKYSYMYKSEEN.has(c.id)
       && (ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.uusi?.tiedosto || ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.tiedosto)).length,
     lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
