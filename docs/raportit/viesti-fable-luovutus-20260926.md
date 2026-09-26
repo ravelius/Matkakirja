@@ -33,3 +33,12 @@ Kehyksen hinnan korjaus (piilotettu blur-kerros 70 % GPU → ≤ 16 ms; idle-syk
 2. Musiikkisuunnitelman PR → omistajan hyväksyntä → Lyria-generointi erissä.
 3. Elävän kartan pelattava versio build 18:aan videon hyväksynnän jälkeen; Karttasepän delta-tila ja 26-sarjan osoitinvaihto (web + natiivi) kuvaparilla.
 4. Löydökset 153 → raporttiin ja rooleille.
+
+## Päivitys klo 04.0x (ennen Fablen nollausta, konteksti 70 %)
+- BUILD 17 leikattu ja käännetty (juna/b13 d04841a0, käännös 6fd19114), Laitetestaajan kierros PASS kahdella poikkeamalla (S1 lepopiirto ei toteudu "Lepo (ui)", S2 143 rivittyy 3 riville → build 18, Natiivi-UI + Natiiviseppä). BUILD 1.0.17 annettu Julkaisijalle 04.0x (proto_ref d04841a0) — TARKISTA: gh run list "proto-3d TestFlight" → jos success, push omistajalle "Build 17 TestFlightissa: 1.0.17 — lämpökorjaus (kehys 50 → 13 ms), postikortti, nostot, rajat, II:n soitin" ja Natiivisepän master-merge SHA lokiin.
+- Sisältö build 17:ssä: kehyksen hinta -korjaus + PiiloVartija, 121–124, 125 kokonaan, 126–128 + 113, 130–143 (146 v2), 147–148 + Ken Burns, lento v2, jumivahti.
+- Build 18 -jono: S1, S2, 137/149/122 (Pelikoodari, valmiit), 150 (A: kokoruutu contain, ei kuvatekstiä), 132/144, 148/151/152 + pariteettiäänet (Linssiseppä, käännöksessä), taustapäivitys vaihe 2 (99f049ec), navan kansi hämärässä, Esilataaja 4.
+- Löydös 149: 288 nostokuvaa puuttuu ämpäristä → Julkaisija ajaa vie-karttanostot-ampariin (#3282 mainissa; kuiva → oikea) build 17:n jälkeen, vartija #3283 junaan.
+- Omistajalle aamulla KORTIT: 1) elävän kartan video (lokit/linssiseppa-elava-20260926/omistajalle/, lähetetty), 2) 127 maarajan paino Kevyt/Kevein/Web (127-saksa-painot.png), 3) 128 huntu p080/p060/p045 (128-kerma-laaja.png), 4) musiikki- ja äänisuunnitelma PR #3272 (8 päätöstä: johtoaihe Lyria vs käsin, −33 vs −18 LUFS, tunnuskaupungit, yöversiot, topografian/vesistöjen taustaäänet + Astron suljin, zoom-ääni pois, haptiikka + kytkin, budjettikatto) — ei generointia ennen hyväksyntää. Lisäksi tilinvaihto kun viikko täyttyy (86 % 04.04, hidastunut).
+- Muuta: 26-poltto valmis (2026-09-26-pohja), osoitinvaihto kuvaparilla myöhemmin; Kreikan joet CC BY-SA ämpärissä (#3281), delta-poltto luonnos #3280; skeemat #3260/#3267/#3269 Julkaisijalla; Natiiviseppä effort high, Linssiseppä max videon ajan.
+- Oppi: Fable ei mergeä koodi-/paketti-PR:iä (#3263 rikkoi mainin 3 h) — vain dokumentit; kuvat ennen videoita.
