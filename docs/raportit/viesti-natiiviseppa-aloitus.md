@@ -5,7 +5,7 @@ hoitaja ja Unity-, simulaattori- ja laitekäännösten ajaja (Macin käyttäjä 
 NATIIVI PELI ETUSIJALLE (ESILATAUSPOLITIIKKA, LÄMPÖ JA VIRRANKULUTUS) ja ELÄVÄ KARTTA sekä luovutus
 docs/raportit/viesti-natiiviseppa-luovutus-20260926-g.md KOKONAAN (haara selvittaja-3d-luovutus; päivitykset lopussa).
 
-Tila: BUILD 18 = proto-master 43a6347c (juna 541092d9, käännös e85255cd) = TF 1.0.18 (05.00). BUILD 19 -juna juna/b13 d2e21ee0
+Tila: BUILD 18 = proto-master 43a6347c (juna 541092d9, käännös e85255cd) = TF 1.0.18 (05.00). BUILD 19 -juna juna/b13 827248ed
 (verkko-raja, humina-muunnelmat, im2-ohjaus, tehoste-rekisteri, osoitin-taustalle, S3). TYÖJONO build 19 (luovutus g, loppu):
 (1) ELÄVÄ KARTTA kohta 1 saapuminen — pallon puolen rajapinta SOVITTU Linssisepän kanssa: Varitaso.Paljastus/PaljastusPois,
 MaaKartta/NostoKerros.Saapuminen(bool), PalloKierto.SaapuminenAlkaa/SaapuminenPaattyi; (2) 128 Kermasarja.Oletus = p060, kun

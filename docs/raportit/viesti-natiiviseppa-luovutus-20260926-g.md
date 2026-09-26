@@ -158,3 +158,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   (Linssit/Ydin/Elava/ElavaPallo.cs, linssiseppa/elava-kartta 899ff2f5): kytkentä yhdellä commitilla, kun molemmat junassa:
   ElavaPallo.Paljastus/PaljastusPois → Varitaso, PysyvatKerrokset → MaaKartta/NostoKerros.Saapuminen(!n),
   PalloKierto.SaapuminenAlkaa/Paattyi → ElavaPallo.IlmoitaSaapuminenAlkaa(kesto)/IlmoitaSaapuminenPaattyi().
+- juna/b13 **827248ed**: + kohta1-mukana afe25e63 (tehosteäänet 19 efekti + 4 freesound buildiin, Aanet käyttää Mukana-polkua).
