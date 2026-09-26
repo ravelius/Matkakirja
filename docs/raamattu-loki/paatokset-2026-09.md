@@ -7607,3 +7607,7 @@ Omistaja 23.2x: kaupunkilehden Radio-osio poistetaan, koska radio on siirretty k
 ## LOYDOS 179: TAPAA HENKILO -NAPPI POIS NATIIVIN LEHDESTA (26.9.2026 klo 23.19)
 
 Omistaja 23.2x: natiivin kaupunkilehdessa on virheellisesti Tapaa henkilo X -nappi (LehtiTila.TehtavaNappi), vanhaa logiikkaa jota webissa ei ole; webissa henkilo tavataan fokusvirran kautta (oppitunnin jatkonappi → kohtaaminen vihreasta fokuspisteesta). Natiivi-UI poistaa napin lehdesta ja siirtaa kohtaamisen fokusvirtaan webin mukaan; Pelikoodari vahvistaa reitin. Kuuluu lehtiuudistukseen mutta tehdaan heti (1.0.27).
+
+## NATIIVIPAKETTI V189: PIKKUKUVAT 478 ALUETTA 29 MAASSA; ERA C BLR + ROU (26.9.2026 klo 23.19)
+
+Siirtoseppa: B-erat tuotannossa 1.x v189 (14b828f8e), 478 aluetta 29 maassa, osoitteet 200; Euroopasta puuttuvat BLR 7 ja ROU 42 → Sisaltokirjurin era C; AUT/DEU/ESP/FRA/GBR/ITA/POL kortin kuva varana (riittaa toistaiseksi). 178-delta seuraavaksi (#3353 mainissa).
