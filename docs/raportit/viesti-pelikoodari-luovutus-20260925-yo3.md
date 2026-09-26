@@ -172,3 +172,27 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
 - Web-kytkentä: agentti samassa web-worktreessä (etusivu → musa-johtoaihe, aloituslento, saapuminen Välimeri, loppu) →
   PR Julkaisijan junaan.
 - Vaihe 2: kysytty Fablelta laajuus (käsky "maanosat + tunnuskaupungit" vs suunnitelman §5 jako).
+
+## 18. Lisäys 26.9. klo 09.1x — SEURAAJALLE (kiintiö ~98 %)
+MERGE-PYYNNÖT NATIIVISEPÄLLE (build 20), kaikki juna/b13 fdc47632:n päällä, 285/285, unity 0:
+- `pelikoodari/musiikki-vaihe1` 4218bbd8: musiikin vaihe 1 natiiviin. TODENNETTU simulaattorilla A2FD9C9F (f994e4eb,
+  lokit/musiikki-v1/ajo1): aloituslento soi lennolla 0,07 pohjan väistäessä 0,01, Välimeren tunnus Ateenassa,
+  Lontoossa ei mitään, loppu soi. Komento `aani aihe aloituslento|loppu|kaupunki <id>` (tulos lokiin). Merge-pyyntöä EI vielä lähetetty.
+- `pelikoodari/kuljettu-reitti` e5ee31dc: Linssisepän rajapinta (PeliOhjain.KuljettuReitti, KuljettuReittiKasvoi(a,b,tapa)
+  kamera perillä, tallennuskenttä "kuljettu"). Linssiseppä sai rajapinnan. Web EI pidä järjestettyä reittiä (vain visited).
+- `pelikoodari/loydos153` e6a2f829: nostomerkit häipyvät horisonttiusvaan (Horisonttiusva.Peitto = webin paperiusvan
+  kaava, Aurinko kirjoittaa RuutuRajaY/RuutuVoima). Käännös lokit/loydos153-kaanna.txt. TODENTAMATTA: aja uusi-matka ateena,
+  `kallista 40` (Documents/komento.txt), kuvapari ennen/jälkeen (ennen = lokit/musiikki-v1/Matkakirja3D-f994.app), sitten
+  merge-pyyntö Natiivisepälle (hän on kuitannut). Natiiviseppä: TMP-nimiöt (Distance Field Overlay) eivät ota sumua →
+  Peitto sopii myös KaupunkiMerkit/Nimikerros-nimiöihin (seuraava askel).
+LÖYDÖS 155 (Fablen päätös 09.0x): kuvamerkkien kynnys 4 → 2,5 webiin (js/pallolauta/nostot.js:498, :514–517) ja natiiviin
+  (NostoSaannot.cs:272, :278) samalla erällä, kertoimella 2,5–4 merkki 70 % koosta, koelippu ?koe=symbolitkaukana pois,
+  kuvapari (web + natiivi Kreikka kertoimella 3) omistajalle ennen tuotantoa. Taso 1 -kuvamerkit AINA näkyvissä (muste
+  himmentää vain tasot 2–3; välitetty Natiivi-UI:lle ja Linssisepälle). Analyysi lokit/loydos155-symbolit.md. EI ALOITETTU.
+WEB: PR #3304 (musiikki vaihe 1 peliin + työkalut, 4356/0) Julkaisijan junaan; docs-PR #3302 (−11 LUFS) Fable mergeää.
+  PR #3301 (pallo 26-pohja) kuitattu Julkaisijalle.
+MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (kohtaaminen, ratkaisu, epäonnistuminen,
+  saapuminen-lansi-eurooppa, -ita-eurooppa) ja kaatui Lyrian suodattimeen (lahi-ita-kehote, korjattu). Loput 9: ajo
+  36222088349. Seuraavaksi: kestot ffprobella → RAIDAT-taulu tools/viimeistele-musiikki.mjs:ään (tunnukset 8–10 s,
+  ratkaisu 4–6, epäonnistuminen 3–4, kohtaaminen ja maanosat looppeja: ei leikkausta, vain taso) → `--vie` → linkit + 1 rivi/raita
+  Fablelle omistajalle. Vaihe 3 vasta kuuntelun jälkeen.
