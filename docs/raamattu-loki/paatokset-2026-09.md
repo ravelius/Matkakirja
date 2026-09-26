@@ -7279,3 +7279,7 @@ Natiiviseppa: iPad Pro 13, laitekaannos juna 31e3cbd4: veto → 1,2 s poissa →
 ## 168 JA 172 TOTEUTUKSESSA (LINSSISEPPA) (26.9.2026 klo 19.44)
 
 Linssiseppa: 168 tulvavari poistettu ElavaHerays.cs:sta (linssiseppa/loydos168 41916946), mergetaan Natiivisepan 2aba4103:n kanssa, Natiiviseppa ottaa kuvaparin. 172 spesifikaatio kamerakasikirjoituksessa: lahikuvassa kone 10 km:ssa vaakasuorassa; kaukaa kaari, huippu min(150 km, 5 %) (ennen 290 km), nokka enintaan ±6°; kaavat ja testit linssiseppa/lento-172 57836c2e; Natiiviseppa kytkee Nappulaan 168:n ja 171:n jalkeen, kuvapari Fablelle.
+
+## OMISTAJA: MAAKUNTATYOT TOISTAISEKSI VAIN EUROOPPAAN (26.9.2026 klo 19.47)
+
+Omistaja 19.4x: maakunta-asiat (170:n puuttuvat maakuntanostokuvat, maakunta-erat, maakuntanostot) tehdaan toistaiseksi vain Eurooppaan. 170: Euroopan maissa puuttuu ≤ 3 kuvaa/maa → Sisaltokirjuri tekee Euroopan puutteet yhtena erana; Euroopan ulkopuoliset 900+ odottavat. Maakunta-era 2 (CHE/PRT/HUN/SWE/NOR/IRL) on Eurooppaa, jatkuu.
