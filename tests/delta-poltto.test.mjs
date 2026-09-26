@@ -88,7 +88,7 @@ function laattaPisteessa(r, lon, lat) {
 
 /* ============================================================ luokitus */
 
-test('luokitus: manner maata, ulappa vettä, ranta ja järvi molempia, kehys ei kumpaakaan', () => {
+test('luokitus: manner maata, ulappa vettä, ranta ja järvi molempia, kartan ulkopuoli vettä', () => {
   const r = pyramidinRuudukko(LUETTELO, taso(5));
   const luokat = LUOKITIN.luokitteleRuudukko(r, { marginaaliPx: MARGINAALI });
   const luokka = (lon, lat) => { const { s, rv } = laattaPisteessa(r, lon, lat); return luokat[rv * r.sarakkeita + s]; };
@@ -96,8 +96,10 @@ test('luokitus: manner maata, ulappa vettä, ranta ja järvi molempia, kehys ei 
   assert.equal(luokka(-150, 0), VESI, 'Tyynellämerellä');
   assert.equal(luokka(-100, 20), VESI | MAA, 'rantaviiva lon −100');
   assert.equal(luokka(-15, 15), VESI | MAA, 'järvi on molempia');
-  assert.equal(luokat[0], 0, 'ylin rivi on kehyksen paperia');
-  assert.equal(luokat[luokat.length - 1], 0, 'alin rivi on kehyksen paperia');
+  // Valvottu koeajo 26.9.2026: täyttö kartan rajauksen yli seuraa meren sävyä
+  // (25 → 26 muutti z6:n ylimmän ja alimman rivin), joten reunarivit ovat vettä.
+  assert.ok(luokat[0] & VESI, 'ylin rivi seuraa meren sävyä');
+  assert.ok(luokat[luokat.length - 1] & VESI, 'alin rivi seuraa meren sävyä');
 });
 
 test('luokitus: marginaali ulottuu reunan yli juuri pikselimääränsä', () => {

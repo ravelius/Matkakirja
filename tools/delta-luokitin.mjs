@@ -248,7 +248,15 @@ export function pyramidinRuudukko(geometria, taso) {
     yLat: (lat) => ((millerY(lat) - yP) * sk - arkki.y) * px,
     latY: (y) => lautaLat(y / px + arkki.y),
     kartta: [(rajaus.y - arkki.y) * px, (rajaus.y + rajaus.h - arkki.y) * px],
-    ulkona: 0,
+    /*
+     * KARTAN YLÄ- JA ALAREUNAN YLI ULOTTUVAT LAATAT OVAT VETTÄ (valvottu
+     * koeajo 26.9.2026, Karttaseppä): arkin täyttö kartan rajauksen
+     * ulkopuolella seuraa meren sävyä, joten 25 → 26 (vain meri) muutti
+     * jokaisen tason ensimmäisen ja viimeisen rivin (z6: 31/31 laattaa),
+     * vaikka niissä ei ole rantaa. Ilman tätä meren delta kopioisi ne
+     * vanhoina. Maan deltassa ne kopioidaan kuten ennen.
+     */
+    ulkona: VESI,
   };
 }
 
