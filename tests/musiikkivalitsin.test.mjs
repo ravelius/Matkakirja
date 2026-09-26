@@ -758,3 +758,20 @@ test('matkan aiheet soivat aarreaiheen paikassa', () => {
   // Tunnus ei katkaise soivaa aihetta eikä soi aloituslennon kohteessa.
   assert.match(UI, /soitaSaapumistunnus\(city\) \{\n\s+if \(!city \|\| this\.aarreMusiikki \|\| this\.aloituslentoKesken/);
 });
+
+test('jokaisella pakkojen kaupungilla on maanosa (myös ilman cityCountryä)', async () => {
+  const { PACKS } = await import('../js/pack.js');
+  const { kaupunginMaanosa, MAANOSAT } = await import('../js/kaupunkimusiikki.js');
+  const puuttuu = [];
+  for (const pakka of PACKS) {
+    const cc = pakka.map?.cityCountry ?? {};
+    for (const kaupunki of pakka.cities ?? pakka.map?.cities ?? []) {
+      const id = kaupunki.id ?? kaupunki;
+      const m = kaupunginMaanosa(id, cc[id] ?? null);
+      if (!m || !MAANOSAT.includes(m)) puuttuu.push(`${pakka.id}:${id}`);
+    }
+  }
+  assert.deepEqual(puuttuu, [], 'kaupunki ilman maanosaa: ei saapumistunnusta eikä maanosaraitaa');
+  // Jerusalem (Siirtosepän vienti 26.9.2026): Lähi-itä.
+  assert.equal(kaupunginMaanosa('jerusalem', null), 'lahi-ita');
+});
