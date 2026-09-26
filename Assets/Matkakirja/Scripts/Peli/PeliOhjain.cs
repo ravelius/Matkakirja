@@ -463,14 +463,6 @@ namespace Matkakirja.Natiivi
         /// <summary>Versiokansion tiedosto (esim. kokoelmat/reitit.json). hiljaa = puuttuminen ei ole virhe.</summary>
         IEnumerator HaeTiedosto(string suhteellinen, bool ohitaValimuisti, bool hiljaa, Action<string> valmis)
         {
-            // Yhteinen haku (Fablen jono 26.9.): tavallinen luku kulkee Sisalto.HaePaketista-reittiä — sama tiedosto
-            // haetaan kerran, vaikka Sisalto, linssit ja peli pyytäisivät sitä rinnakkain (kaupungit.json kylmänä 4× → 1×),
-            // pakettivarasto (PakettiPaivitys) ja taustasäikeen luku ovat mukana. Ohitus (uusi versio) hakee suoraan.
-            if (!ohitaValimuisti)
-            {
-                yield return Sisalto.HaePaketista(suhteellinen, valmis, hiljaa);
-                yield break;
-            }
             string polku = versioPolku + suhteellinen;
             string tiedosto = Valimuisti(polku);
             bool valimuistissa = !ohitaValimuisti && File.Exists(tiedosto);
