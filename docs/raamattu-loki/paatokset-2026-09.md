@@ -7323,3 +7323,7 @@ Omistaja 1.0.25 Ranska (20.0x–20.1x): maatasolla tason 1 arkkityypit valtavia 
 ## 175 JUURISYY: KOKO VAKIO 90 PT, EI KYNNYSTA TASOLLE 1, YLHAALTA VAIN KATTO (26.9.2026 klo 20.07)
 
 Natiiviseppa: muodot ovat tason 1 arkkityyppeja suoraan ylhaalta (kupoli = luola/vuori, nelio 4 tornilla = linna, punainen stadion = luostari, palkki = silta/muuri). Syyt: Symbolimallit.KokoPt vakio 90 pt zoomista riippumatta; tasolla 1 ei zoomikynnysta (OnMalli aina); harmaa = loytamattoman himmennys 70 % + tasainen varjostus ylhaalta. Korjaus: kynnys kerroin ≥ 2,5 kaikille tasoille (alla 2D-symboli), koko 18–24 pt kynnyksella kasvaen enintaan kaupunkinimion leveyteen, savy Linssisepalta. Fable lisasi: kameran kallistus < ~25° → 2D-symboli mallin sijaan (katto ei ole luettava). Kuvaparit maataso + lahikuva + kallistettu → omistajan kortti ennen TF 1.0.26.
+
+## 175/175b KOODATTU natiiviseppa/loydos175 76d3b05c (26.9.2026 klo 20.10)
+
+Natiiviseppa: mallit vasta kertoimesta 2,5 JA kallistuksesta ≥ 25° (hystereesi 3°), muuten lajin 2D-symboli OnMallin kautta; koko 22 → 44 pt zoomin mukana (tasot 2–3 × 0,6/0,45), LOD0 lahikuvassa (raja 14 pt); varjostin valo 0,5 + 0,5 N·L, musteinen kaiverrusreuna, loytamattoman himmennys vain savyyn. Testikaannos kaynnissa; kuvaparit Ranska (maataso, keskitaso, lahi, lahi 2; ylhaalta + kallistettuna) omistajan kuvia vasten → Fable → omistajan kortti ennen TF 1.0.26.
