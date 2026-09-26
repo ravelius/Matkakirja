@@ -26,6 +26,14 @@
 //     Klassinen inverted hull (Cull Front) ei piirrä mitään suoraan ylhäältä, koska malleissa ei ole pohjatahkoja.
 //  7. Valo vaaleammaksi: 0,62 + 0,38 · N·L (ennen 0,55 + 0,45) ja ylöspäin olevat tahkot (katot) puoliksi kohti täyttä
 //     valoa, jotta katto on vaalein valon suunnasta riippumatta (omistaja 26.9.: "toivottavasti mallit ovat vaaleita").
+//
+// KATEGORIASYMBOLIT (omistaja 26.9. klo 21.5x; esitys arkkityypit-paletti-animaatio-20260926.md §1, Symbolimallit.Kategoriat.cs):
+//  8. Seepiaramppi, kun kärjen alfa < 0,5 (reliefit; arkkityypit ja erikoismallit alfa 1 → kohdat 1, 2 ja 7 ennallaan):
+//     kärkiväri → rampin kohta s (valoisuudesta: 0 muste #3b2f22, 1 seepia #8a6a44, 2 paperi #efe4cc) → valo siirtää
+//     kohtaa alaspäin s − 1,25 · (1 − v) → väri rampista (ei harmaata: varjo on seepiaa, ei tummennettua paperia).
+//     Valo v on kuvamerkin oma kiinteä valo vasemmalta ylhäältä mallin avaruudessa (−0,45, 0,8, 0,4): reliefin
+//     varjopuoli on sama kuin 2D-merkissä kartan kierrosta, kamerasta ja pelin auringosta riippumatta. v = 0,2 + 0,8 · N·L,
+//     ylöspäin olevat tahkot nostetaan kohti täyttä valoa (ylös²), joten yläkasvo on paperia ja varjon kylki seepiaa.
 Shader "Matkakirja/Symbolimalli"
 {
     Properties
@@ -85,6 +93,7 @@ Shader "Matkakirja/Symbolimalli"
                 float usvaY : TEXCOORD1;
                 float3 kohti : TEXCOORD2;
                 float3 ylos : TEXCOORD3;
+                float3 nOS : TEXCOORD4;   // mallin avaruuden normaali (kohta 8: kuvamerkin kiinteä valo)
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
@@ -103,6 +112,7 @@ Shader "Matkakirja/Symbolimalli"
                 // Mallin ylös (paikallinen +Y, malli seisoo pinnan normaalin suuntaan) maailmassa: kohta 2:n ylätahkojen valo.
                 o.ylos = TransformObjectToWorldDir(float3(0, 1, 0));
                 o.vari = i.vari;
+                o.nOS = i.normalOS;
                 // Usva mallin jalkapisteestä (symboli paikassaan): korkea malli ei haalistu yläpäästään horisonttiin.
                 o.usvaY = UsvaYlhaalta(TransformObjectToHClip(float3(0, 0, 0)));
                 return o;
@@ -120,6 +130,27 @@ Shader "Matkakirja/Symbolimalli"
 
                 const half3 luma = half3(0.2126, 0.7152, 0.0722);
                 const half3 mustevari = half3(0.23, 0.19, 0.14);
+                float3 n = normalize(i.n);
+                // 3. Ohut kaiverrusreuna: tahko lähes syrjittäin kameraan tummuu musteeksi (siluetti).
+                half reuna = smoothstep(0.65, 0.92, 1.0 - abs(dot(n, normalize(i.kohti))));
+
+                // 8. Seepiaramppi (kategoriasymbolit, kärjen alfa 0).
+                if (i.vari.a < 0.5)
+                {
+                    const half3 P = half3(0.8632, 0.7758, 0.6038), S = half3(0.2542, 0.1441, 0.0578), M = half3(0.0437, 0.0284, 0.0160);
+                    const half lP = 0.7820, lS = 0.1613, lM = 0.0308;
+                    half lv = dot(i.vari.rgb, luma);
+                    half s0 = lv >= lS ? 1.0 + (lv - lS) / (lP - lS) : (lv - lM) / (lS - lM);
+                    float3 nos = normalize(i.nOS);
+                    half v = 0.2 + 0.8 * saturate(dot(nos, float3(-0.4592, 0.8163, 0.4082)));
+                    half yl = saturate(nos.y);
+                    v = lerp(v, 1.0, yl * yl);
+                    half sr = clamp(s0 - 1.25 * (1.0 - v), 0.0, 2.0);
+                    half3 cr = sr >= 1.0 ? lerp(S, P, sr - 1.0) : lerp(M, S, sr);
+                    cr = lerp(cr, mustevari, 0.7 * reuna);
+                    return half4(cr, nakyvyys);
+                }
+
                 // 1. Harmaa pois: kylläisyys likimain sRGB:nä (neliöjuuri), jotta rajat 0,04–0,12 vastaavat paletin hex-arvoja.
                 half3 c = i.vari.rgb;
                 half3 g = sqrt(max(c, (half3)0));
@@ -129,7 +160,6 @@ Shader "Matkakirja/Symbolimalli"
 
                 // 2. + 7. Valo: 0,62 + 0,38 · N·L; ylöspäin olevat tahkot (katot) puoliksi kohti täyttä valoa ja hieman
                 // kirkkaampia, alaspäin olevat tummempia.
-                float3 n = normalize(i.n);
                 half nl = saturate(dot(n, GetMainLight().direction));
                 half ylos = saturate(dot(n, normalize(i.ylos)));
                 half valo = 0.62 + 0.38 * nl;
@@ -140,8 +170,7 @@ Shader "Matkakirja/Symbolimalli"
                 // 21.9.; himmennys oli osasyy harmauteen). _Himmea ja tila.x (muste) jäävät rajapintaan, mutta eivät vaikuta.
                 const half muste = 0;
 
-                // 3. Ohut kaiverrusreuna: tahko lähes syrjittäin kameraan tummuu musteeksi (siluetti).
-                half reuna = smoothstep(0.65, 0.92, 1.0 - abs(dot(n, normalize(i.kohti))));
+                // 3. Kaiverrusreuna (laskettu yllä).
                 c = lerp(c, mustevari, 0.7 * reuna);
                 half a = lerp(1.0, 0.9, muste) * nakyvyys;
                 return half4(c, a);
