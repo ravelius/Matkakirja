@@ -708,9 +708,10 @@ export const RAIDAT = {
       'a cello and a clarinet carry the theme over soft strings, a church-bell-like celesta touch now and then', 76],
     ['rooma', 'Rome in the 1870s: warm stone, fountains in a piazza, late afternoon light',
       'a mandolin and a guitar carry the theme, a warm oboe answers over soft strings', 80],
-    ['istanbul', 'Istanbul in the 1870s: the Bosphorus ferries, a covered market, seagulls over domes',
+    // Lyria hylkäsi 26.9. muotoilun "Istanbul in the 1870s … seagulls over domes" (Input blocked: sensitive words).
+    ['istanbul', 'A great harbour city on a strait between two continents in the 1870s: ferries crossing, a covered market, seagulls',
       'a kanun and a ney flute carry the theme in a modal colour, a soft oud and strings underneath', 72],
-    ['kairo', 'Cairo in the 1870s: the Nile at dusk, feluccas, a lively old market street',
+    ['kairo', 'A great river city at the edge of the desert in the 1870s: the Nile at dusk, sailing boats, a lively market street',
       'an oud and a ney flute carry the theme over soft strings, a quiet riq tambourine touch now and then', 74],
     ['pietari', 'Saint Petersburg in the 1870s: wide frozen canals, palace façades, white-night light',
       'a balalaika tremolo and a solo piano carry the theme, a warm cello and strings underneath', 68],
