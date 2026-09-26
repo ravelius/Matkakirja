@@ -297,3 +297,38 @@ test('pallon luettelo: alue kirjataan vain aluesarjalle', () => {
     rmSync(k, { recursive: true, force: true });
   }
 });
+
+/* ------------------------------------------------ syvä laattalista (26.9.2026) */
+
+test('--syva-laatat: työlista = listan z10 + niiden z9-vanhemmat; ristiriita --syva-alueen kanssa torjutaan', () => {
+  const k = mkdtempSync(join(tmpdir(), 'syva-'));
+  try {
+    const lista = join(k, 'laatat.json');
+    const z10 = [[744, 326], [745, 326], [744, 327], [900, 200]];
+    writeFileSync(lista, JSON.stringify({ z: 10, laatat: z10 }));
+    const r = aja([join(k, 'u'), '--tasoja', '11', '--tasot', '9-10', '--syva-laatat', lista, '--vain-lista']);
+    assert.equal(r.status, 0, r.stderr);
+    const l = JSON.parse(readFileSync(join(k, 'u', 'laatat.json'), 'utf8')).laatat;
+    assert.deepEqual(l.filter((x) => x[0] === 10).map((x) => `${x[1]}:${x[2]}`).sort(), z10.map((x) => x.join(':')).sort());
+    assert.deepEqual(l.filter((x) => x[0] === 9).map((x) => `${x[1]}:${x[2]}`).sort(), ['372:163', '450:100']);
+    const r2 = aja([join(k, 'v'), '--tasoja', '11', '--tasot', '10', '--syva-laatat', lista, '--syva-alue', RANSKA, '--vain-lista']);
+    assert.notEqual(r2.status, 0);
+    assert.match(r2.stderr, /joko --syva-alue tai --syva-laatat/);
+  } finally {
+    rmSync(k, { recursive: true, force: true });
+  }
+});
+
+test('tee-syva-laatat: sama ruudukko kuin generaattorin --syva-alue (Ateena ±1°)', async () => {
+  const { kaupunkiLaatat } = await import('../tools/tee-syva-laatat.mjs');
+  const k = mkdtempSync(join(tmpdir(), 'syva-'));
+  try {
+    const r = aja([join(k, 'u'), '--tasoja', '11', '--tasot', '10', '--syva-alue', '22.7,37,24.7,39', '--vain-lista']);
+    assert.equal(r.status, 0, r.stderr);
+    const gen = new Set(JSON.parse(readFileSync(join(k, 'u', 'laatat.json'), 'utf8')).laatat.map((x) => `${x[1]}:${x[2]}`));
+    const oma = kaupunkiLaatat([{ lat: 38, lon: 23.7 }], 1);
+    assert.deepEqual([...oma].sort(), [...gen].sort());
+  } finally {
+    rmSync(k, { recursive: true, force: true });
+  }
+});

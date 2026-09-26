@@ -248,6 +248,9 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              tasoittain ja DEM-kaistoittain. Vaatii --sarjat
                              kaikki (tai pallo). DEM-oletukset NAS:ilta:
                              …/Matkakirja-arkisto/dem/copernicus-glo30 ja -glo90.
+  --syva-laatat <json>       syvän sarjan tarkka z10-laattalista suorakaiteen
+                             sijaan (tools/tee-syva-laatat.mjs: kaupungit ±1°
+                             + maat); z9 on sen vanhemmat
   --syva-alue lon0,lat0,lon1,lat1
                              syvien tasojen ala (oletus Ranska
                              -5.5,41,9.8,51.5)
@@ -372,7 +375,7 @@ VAHTI_PID=""; RAPORTOI=0; EDISTYMISVAROITUS=0
 DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT=""; NIMIOLIPUT=""
 NIMIOVERSIO=""; NIMIOT=""; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
 # SYVÄT TASOT z9-z10 (Karttaseppä 23.9.2026, ks. SYVÄT TASOT alempana).
-DEM=""; SYVA_ALUE="-5.5,41,9.8,51.5"; PALLO_ALUE=""
+DEM=""; SYVA_ALUE="-5.5,41,9.8,51.5"; SYVA_LAATAT=""; PALLO_ALUE=""
 # NIMETTY RESEPTI (Karttaseppä 25.9.2026, ks. RESEPTI alempana).
 RESEPTI=""; DEM90=""; PALLOLIPUT=""; PALLO_TASOT_ANNETTU=0
 DEM_NAS="/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem"
@@ -409,6 +412,7 @@ while [ $# -gt 0 ]; do
     --dem90) DEM90="$2"; shift 2 ;;
     --resepti) RESEPTI="$2"; shift 2 ;;
     --syva-alue) SYVA_ALUE="$2"; shift 2 ;;
+    --syva-laatat) SYVA_LAATAT="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
     --pallo-luettelo) PALLO_LUETTELO="$2"; shift 2 ;;
@@ -472,6 +476,7 @@ if [ "$LAPSI" -eq 1 ]; then
   [ "$ILMAN_NIMIOITA" -eq 1 ] || ILMAN_NIMIOITA="${POLTTO_ILMAN_NIMIOITA:-0}"
   [ -n "$DEM" ] || DEM="${POLTTO_DEM:-}"
   SYVA_ALUE="${POLTTO_SYVA_ALUE:-$SYVA_ALUE}"
+  SYVA_LAATAT="${POLTTO_SYVA_LAATAT:-$SYVA_LAATAT}"
   [ -n "$PALLO_ALUE" ] || PALLO_ALUE="${POLTTO_PALLO_ALUE:-}"
   # Resepti on jo purettu lippuihin vanhemmassa (POLTTO_POHJALIPUT ym.);
   # lapsi tarvitsee nimen shardilistaan ja tunnukseen, ei purkua uudestaan.
@@ -484,7 +489,7 @@ vie_lapsille () {
   export POLTTO_VIIVALIPUT="$VIIVALIPUT" POLTTO_RANTALIPUT="$RANTALIPUT" POLTTO_NOSTOLIPUT="$NOSTOLIPUT" POLTTO_NIMIOLIPUT="$NIMIOLIPUT"
   export POLTTO_NIMIOVERSIO="$NIMIOVERSIO" POLTTO_NIMIOT="$NIMIOT" POLTTO_PALLOTUNNISTE="$PALLOTUNNISTE"
   export POLTTO_HAHMOTELMAT="$HAHMOTELMAT" POLTTO_ILMAN_NOSTOJA="$ILMAN_NOSTOJA" POLTTO_ILMAN_NIMIOITA="$ILMAN_NIMIOITA"
-  export POLTTO_DEM="$DEM" POLTTO_SYVA_ALUE="$SYVA_ALUE" POLTTO_PALLO_ALUE="$PALLO_ALUE"
+  export POLTTO_DEM="$DEM" POLTTO_SYVA_ALUE="$SYVA_ALUE" POLTTO_SYVA_LAATAT="$SYVA_LAATAT" POLTTO_PALLO_ALUE="$PALLO_ALUE"
   export POLTTO_RESEPTI="$RESEPTI" POLTTO_DEM90="$DEM90" POLTTO_PALLOLIPUT="$PALLOLIPUT"
 }
 # Aineistokansio absoluuttiseksi; oletus on ULOS/ne-data (hae_aineisto).
@@ -523,9 +528,11 @@ if [ -n "$RESEPTI" ] && [ "$LAPSI" -eq 0 ]; then
   reseptin_liput="$(node "$JUURI/tools/polttoresepti.mjs" liput "$RESEPTI")" \
     || { echo "VIRHE: --resepti $RESEPTI" >&2; exit 2; }
   eval "$reseptin_liput"
-  if [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" != "kaikki" ]; then
-    echo "VIRHE: --resepti $RESEPTI polttaa koko pohjan (--sarjat kaikki)" >&2
-    echo "tai pelkän pallon sarjan (--sarjat pallo / --vain-pallo)." >&2
+  # Syvä sarja (z9-z10, 26.9.2026) saa samat reseptin liput kuin pohja:
+  # muuten z10 olisi eri reseptiä kuin sen alla oleva z8.
+  if [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" != "kaikki" ] && [ "$SARJAT" != "syva" ]; then
+    echo "VIRHE: --resepti $RESEPTI polttaa koko pohjan (--sarjat kaikki), syvän sarjan" >&2
+    echo "(--sarjat syva) tai pelkän pallon sarjan (--sarjat pallo / --vain-pallo)." >&2
     exit 2
   fi
   for kielletty in $R_KIELLETYT; do
@@ -538,7 +545,7 @@ if [ -n "$RESEPTI" ] && [ "$LAPSI" -eq 0 ]; then
   done
   [ -n "$DEM" ] || DEM="$DEM_NAS/copernicus-glo30"
   [ -n "$DEM90" ] || DEM90="$DEM_NAS/copernicus-glo90"
-  if [ "$SARJAT" = "kaikki" ]; then
+  if [ "$SARJAT" = "kaikki" ] || [ "$SARJAT" = "syva" ]; then
     for d in "$DEM" "$DEM90"; do
       [ -d "$d" ] || { echo "VIRHE: DEM-kansio $d puuttuu (NAS irti?)" >&2; exit 2; }
       case "$d" in *" "*) echo "VIRHE: DEM-polussa ei saa olla välilyöntejä: $d" >&2; exit 2 ;; esac
@@ -587,6 +594,20 @@ done
 case "$SYVA_ALUE" in
   *[!0-9.,-]*|'') echo "VIRHE: --syva-alue on muotoa lon0,lat0,lon1,lat1" >&2; exit 2 ;;
 esac
+# SYVÄ LAATTALISTA (--syva-laatat, 26.9.2026): suorakaiteen sijaan tarkka
+# z10-laattajoukko (tools/tee-syva-laatat.mjs), esim. kaupungit ±1° + maat.
+# SYVA_LIPPU on se, mikä generaattorille annetaan kaikissa kolmessa
+# kohdassa (kaistat, shardit, luettelo), ja SYVA_TUNNUS erottaa ajot.
+if [ -n "$SYVA_LAATAT" ]; then
+  [ -s "$SYVA_LAATAT" ] || { echo "VIRHE: --syva-laatat $SYVA_LAATAT puuttuu" >&2; exit 2; }
+  SYVA_LAATAT="$(cd "$(dirname "$SYVA_LAATAT")" && pwd)/$(basename "$SYVA_LAATAT")"
+  case "$SYVA_LAATAT" in *" "*) echo "VIRHE: --syva-laatat-polussa ei saa olla välilyöntejä" >&2; exit 2 ;; esac
+  SYVA_LIPPU="--syva-laatat $SYVA_LAATAT"
+  SYVA_TUNNUS="laatat:$(shasum -a 256 "$SYVA_LAATAT" | cut -c1-16)"
+else
+  SYVA_LIPPU="--syva-alue $SYVA_ALUE"
+  SYVA_TUNNUS="$SYVA_ALUE"
+fi
 if [ "$SARJAT" = "syva" ]; then
   [ -n "$DEM" ] || { echo "VIRHE: --sarjat syva vaatii --dem <GLO-30-kansio>" >&2; exit 2; }
   [ -d "$DEM" ] || { echo "VIRHE: --dem $DEM ei ole kansio" >&2; exit 2; }
@@ -604,7 +625,7 @@ fi
 # täytettäisiin merisävyllä — kaistale merta keskellä maata. Kavennus
 # takaa, että jokaisen syvän pallolaatan jokainen pikseli on poltetulla
 # alalla (z9-laatta ulottuu alan yli 0-0,53°, pallolaatta 0-0,35°).
-if [ -z "$PALLO_ALUE" ] && { [ "$SARJAT" = "syva" ] || [ "$PALLO_MIN" -ge 9 ]; }; then
+if [ -z "$PALLO_ALUE" ] && [ -z "$SYVA_LAATAT" ] && { [ "$SARJAT" = "syva" ] || [ "$PALLO_MIN" -ge 9 ]; }; then
   PALLO_ALUE="$(echo "$SYVA_ALUE" | awk -F, '{ printf "%g,%g,%g,%g", $1 + 0.4, $2 + 0.4, $3 - 0.4, $4 - 0.4 }')"
 fi
 
@@ -617,8 +638,9 @@ fi
 # on poltettu samasta versiosta — siksi --pallo on pakollinen.
 if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && ! { [ -n "$RESEPTI" ] && [ "$VAIN_PALLO" -eq 1 ]; }; then
   case "$SARJAT" in
-    kaikki|z0-z7) ;;
-    *) echo "VIRHE: --ilman-rantaviivaa vaatii --sarjat kaikki (tai z0-z7):" >&2
+    # syva: saman rannattoman pohjan z9-z10 omaan versioonsa (26.9.2026).
+    kaikki|z0-z7|syva) ;;
+    *) echo "VIRHE: --ilman-rantaviivaa vaatii --sarjat kaikki (tai z0-z7, syva):" >&2
        echo "pohjan sisältö muuttuu, joten koko pyramidi on poltettava." >&2
        exit 2 ;;
   esac
@@ -870,17 +892,17 @@ syva_sarakkeet () {
   local valimuisti="$ULOS/syva-sarakkeet.txt" rivi
   if [ -s "$valimuisti" ]; then
     rivi="$(cat "$valimuisti")"
-    if [ "${rivi%% *}" = "$SYVA_ALUE" ]; then echo "${rivi#* }"; return 0; fi
+    if [ "${rivi%% *}" = "$SYVA_TUNNUS" ]; then echo "${rivi#* }"; return 0; fi
   fi
   node "$JUURI/tools/generoi-laattapyramidi.mjs" "$ULOS/syva-lista" \
-    --tasoja 11 --tasot 10 --syva-alue "$SYVA_ALUE" --vain-lista >/dev/null
+    --tasoja 11 --tasot 10 $SYVA_LIPPU --vain-lista >/dev/null
   rivi="$(node -e '
     const j = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
     const s = j.laatat.map((l) => l[1]);
     if (!s.length) process.exit(1);
     console.log(`${Math.floor(Math.min(...s) / 8) * 8} ${Math.max(...s)}`);
-  ' "$ULOS/syva-lista/laatat.json")" || { echo "VIRHE: syvällä alalla $SYVA_ALUE ei ole z10-laattoja" >&2; return 1; }
-  echo "$SYVA_ALUE $rivi" > "$valimuisti"
+  ' "$ULOS/syva-lista/laatat.json")" || { echo "VIRHE: syvällä alalla $SYVA_TUNNUS ei ole z10-laattoja" >&2; return 1; }
+  echo "$SYVA_TUNNUS $rivi" > "$valimuisti"
   echo "$rivi"
 }
 
@@ -1023,7 +1045,7 @@ shardit () {
       local sarakkeet eka vika a b n
       sarakkeet="$(syva_sarakkeet)" || return 1
       eka="${sarakkeet% *}"; vika="${sarakkeet#* }"
-      local syvaarg="--tasoja 11 --syva-alue $SYVA_ALUE --dem $DEM --kaariminuutit $KORKEUS$pohjaarg"
+      local syvaarg="--tasoja 11 $SYVA_LIPPU --dem $DEM --kaariminuutit $KORKEUS$pohjaarg"
       a="$eka"; n=1
       while [ "$a" -le "$vika" ]; do
         b=$((a + SYVA_KAISTA - 1))
@@ -1270,7 +1292,7 @@ ajon_tunnus () {
     "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}"
   # Syvä sarja: ala ja DEM-kansio kuuluvat tunnukseen (eri ala = eri
   # kaistat, uusi DEM = eri laatat). Muille sarjoille tunnus on entinen.
-  if [ "${SARJAT:-}" = "syva" ]; then printf '/s%s/d%s' "$SYVA_ALUE" "$DEM"; fi
+  if [ "${SARJAT:-}" = "syva" ]; then printf '/s%s/d%s' "$SYVA_TUNNUS" "$DEM"; fi
   if [ -n "${PALLO_ALUE:-}" ]; then printf '/a%s' "$PALLO_ALUE"; fi
   # Nimetty resepti: eri resepti = eri laatat (vanhan ajon valmis-merkit
   # eivät kelpaa). Ilman reseptiä tunnus on entinen.
@@ -1483,7 +1505,7 @@ kokoa_luettelo () {
     # Syvä sarja: luettelo z0-z10; syvien tasojen bittikartta tulee
     # syvästä alasta (generoi-laattapyramidi syvaLaatastoBase64) ja
     # korkeus.syvat kirjaa DEM:n lähdemaininnan.
-    syva) tasot="0-10"; tasoja="--tasoja 11 --syva-alue $SYVA_ALUE --dem $DEM" ;;
+    syva) tasot="0-10"; tasoja="--tasoja 11 $SYVA_LIPPU --dem $DEM" ;;
   esac
   local lisa=""
   [ "$PIIRIT" = "ei" ] && lisa="--eipiirit"
@@ -2163,7 +2185,7 @@ esac
 # pohjalipuilla kuin versio poltettiin (aja-*.sh: --data, --yhteisliput,
 # --pohjaliput). Rantaviiva on ainoa, jonka luettelo kertoo varmasti:
 # rannaton pohja + rantaviivallinen z9 olisi eri kartta.
-if [ "$SARJAT" = "syva" ] && [ "${A_POHJA_RANTA:-kylla}" = "ei" ]; then
+if [ "$SARJAT" = "syva" ] && [ "${A_POHJA_RANTA:-kylla}" = "ei" ] && [ "$ILMAN_RANTAVIIVAA" -ne 1 ]; then
   case " $POHJALIPUT " in
     *" --ilman-rantaviivaa "*) ;;
     *) echo "VIRHE: ämpärin pohja $VERSIO on rannaton; anna syvälle sarjalle" >&2
