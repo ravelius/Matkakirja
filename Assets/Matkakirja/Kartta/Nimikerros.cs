@@ -391,6 +391,9 @@ namespace Matkakirja
                     // Lukusuunta ruudulla (kääntö 180°, jos nimi olisi ylösalaisin).
                     Vector3 k0 = kamera.WorldToScreenPoint(keski), k1 = kamera.WorldToScreenPoint(keski + oikea * p.puoliL);
                     if (k0.z <= 0f || k1.z <= 0f) continue;
+                    // Horisonttiusva (löydös 153): webin paperiusva peittää myös GL-nimet; sumu ei koske Overlay-varjostinta.
+                    peitto *= 1f - Horisonttiusva.Peitto(1f - k0.y / Mathf.Max(1f, Screen.height));
+                    if (peitto <= 0.01f) continue;
                     bool kaannetty = NimiLadonta.Kaannetty(r.taso == rt && r.kaannetty, k1.x - k0.x, k1.y - k0.y);
                     // Käännetyssä nimessä tekstin akselit ovat −oikea ja −pysty (aalto on silloinkin tekstin alla).
                     float s = kaannetty ? -1f : 1f;
