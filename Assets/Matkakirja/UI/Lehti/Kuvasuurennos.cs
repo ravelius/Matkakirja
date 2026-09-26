@@ -260,12 +260,13 @@ namespace Matkakirja.Natiivi
                 Nostokortti.SovitaNauha(kuva, nauha, t);
             });
             teksti.text = k.Selite ?? k.Lyhyt ?? "";
-            teksti.style.display = teksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            // Löydös 150: kokoruudussa ei kuvatekstiä eikä lähderiviä (inline-tyyli voittaisi USS:n, siksi täällä).
+            teksti.style.display = teksti.text.Length > 0 && !kokoruutu ? DisplayStyle.Flex : DisplayStyle.None;
             lahde.text = k.LahdeRivi ?? "";
             lahdeUrl = string.IsNullOrEmpty(k.LahdeUrl) ? null : k.LahdeUrl;
             lahde.pickingMode = lahdeUrl != null ? PickingMode.Position : PickingMode.Ignore;
             lahde.EnableInClassList("mk-nosto__lahde--linkki", lahdeUrl != null);
-            lahde.style.display = lahde.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            lahde.style.display = lahde.text.Length > 0 && !kokoruutu ? DisplayStyle.Flex : DisplayStyle.None;
             bool monta = sarja.Count > 1;
             // Löydös 34: ei nuolia kuvan päällä; selaus reunanapautuksella ja pyyhkäisyllä (KuvaSelaus).
             edellinen.style.display = seuraava.style.display = DisplayStyle.None;
