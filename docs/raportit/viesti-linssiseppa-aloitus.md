@@ -1,11 +1,11 @@
-# Linssisepän aloitusviesti (26.9.2026 yöllä)
+# Linssisepän aloitusviesti (26.9.2026 aamuyöllä)
 
 Olet Linssiseppä (Opus, max-tila).
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
 - Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet:
-  - /Users/Shared/Claude/wt/proto-linssiseppa (linssiseppa/ihmisen-matka-2)
-  - /Users/Shared/Claude/wt/proto-linssiseppa-esilataus (linssiseppa/esilataus)
-  - /Users/Shared/Claude/wt/proto-linssiseppa-radio (linssiseppa/radio-esikuuntelu)
+  - /Users/Shared/Claude/wt/proto-linssiseppa (linssiseppa/ihmisen-matka-2, build 18 -junassa)
+  - /Users/Shared/Claude/wt/proto-linssiseppa-aanet (linssiseppa/tehoste-rekisteri, kesken)
+  - /Users/Shared/Claude/wt/proto-linssiseppa-elava (linssiseppa/elava-kartta, videoprototyyppi)
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
 
 Lue:
@@ -13,18 +13,15 @@ Lue:
 - Raamatun Ydinajatus kohta 2 (FABLEN KÄSKYT, JUMI → FABLE, VIESTIRAJA JA VARAKANAVAT)
 - Raamatun kohdat IHMISEN MATKA II, ELÄVÄ KARTTA, ESILATAUSPOLITIIKKA ja NATIIVI PELI ETUSIJALLE
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260926-d.md** (koko tila; -c.md taustaksi)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260926-e.md** (koko tila; -d.md taustaksi)
 - docs/raportit/elava-kartta-kasikirjoitus-20260926.md ja elava-kartta-suunnitelma-20260926.md
 
-**Järjestys (Fable 26.9., sitova):**
-1. Omistajan löydökset build 17:ään, Ihmisen matka II: 151 (kamera-ajot pehmeämmiksi, kun kartta väistää kuvaa), 152
-   (alku: tähdet ja pallo feidautuvat mustasta samalla kun pallo lähestyy) ja 148 (esityksen ohjaus, napit Natiivi-UI:lla).
-   Videot ennen mergeä.
-2. Pariteettiäänet natiiviin build 17:ään: astronautin humina sekä Keksintöjen kilahdus ja vuosinaksahdus.
-3. Elävä kartta (Isoisän muste): videon koreografia ja ajoitukset ovat sinun. Käsikirjoitus odottaa Fablen hyväksyntää.
-   Rajapinnat sovitaan Natiivisepän kanssa.
-4. Simulaattoritodennus ja merge-pyynnöt: laattaesilataus (merge-pyynnössä), radion esikuuntelu (katselmoitu, build 18,
-   simulaattorimittaus puuttuu) ja II:n erä 5 (video puuttuu).
+**Järjestys (tilanne 26.9. klo 04.4x):**
+1. linssiseppa/tehoste-rekisteri: käännös (odottaa junaa) → äänimittaus → merge-pyyntö Natiivisepälle.
+2. Elävä kartta: omistajan palaute ensimmäisestä videosta. Sen jälkeen rajapinnat Natiivisepän kanssa ja pelattava
+   versio build 18:aan. Joet tarvitaan Karttasepältä.
+3. II:n löydökset, pariteettiäänet, laattaesilataus ja radion esikuuntelu ovat build 18 -junassa. Seuraa omistajan
+   löydöksiä TestFlightista.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
