@@ -208,7 +208,7 @@ MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (
 - Musiikki vaihe 2: ajo 36222088349 käynnissä klo 08.56 (loput 9 raitaa).
 - Simulaattori A2FD9C9F sammutettu.
 
-## 20. Lisäys 26.9. klo 10.0x (uusi sessio)
+## 20. Lisäys 26.9. klo 09.5x (uusi sessio)
 - MUSIIKKI VAIHE 2 VALMIS kuunneltavaksi: 14 raitaa ämpärissä, lista docs/raportit/musiikki-vaihe2-kuunneltavaksi.md
   (Fablelle lähetetty). Lyria hylkäsi myös maanosa-valimeri-kehotteen → uusi muotoilu. Työkalu (web-haara
   pelikoodari-musiikki-vaihe1 d3bdf38f5, PR #3304): RAIDAT-taulu vaihe 2, huippurajoitin ≤ 3 dB (RAJOITIN_DB),
