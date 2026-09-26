@@ -18,19 +18,20 @@ karttaseppa <aihe>` → `/Users/Shared/Claude/wt/`, poisto mergen jälkeen `--po
 | Mitä | Polku `media.matkakirja.app/…` | Määrä / tila |
 | --- | --- | --- |
 | Peruskartta 2026-09-25 (osoitin 25.9. 19.00) | `julisteet/pyramidi/pyramidi.json` | tuotanto, ennallaan |
-| Pallo 26-pohja (resepti 2026-09-26: meriliuku litistys 1 + kontrasti 1,35) | `julisteet/pallo/laatat/2026-09-26-pohja-20260926/` | 349 525 jpg; vienti alkoi 03.34 → TARKISTA `ajo-20260926/vie-pallo.out` rivi "ämpärissä: … jpg (odotettu 349525)", sitten sarjan nimi Natiivisepälle |
-| Kermahuntu p060 26-pohjasta (omistajan valinta 128) | `julisteet/pallo/kerma/2026-09-26-p060/` | 34 216 webp + 28 json, vienti käynnissä 05.2x → määrä + Natiivisepälle |
+| Pallo 26-pohja (resepti 2026-09-26: meriliuku litistys 1 + kontrasti 1,35) | `julisteet/pallo/laatat/2026-09-26-pohja-20260926/` | 349 525 jpg TARKISTETTU 06.57, Natiivisepälle ilmoitettu (vaihto hänen) |
+| Kermahuntu p060 26-pohjasta (omistajan valinta 128) | `julisteet/pallo/kerma/2026-09-26-p060/` | 34 216 webp + 28 json TARKISTETTU; natiivi käyttää (build 19) |
 | Kerma vaihtoehdot (25-pohja) | `julisteet/pallo/kerma/2026-09-25-p060/`, `-p045/` | 33 948 + 28 json kumpikin |
 | Maa–maa-rajat (127) | `julisteet/pallo/vektorit/maarajat-2026-09-26/maamaa.geojson` | salmet pois; natiivi käyttää (build 17). 25-versio vanha |
 | Joet GEOGLOWS v2 (TDX-Hydro) CC BY-SA 4.0 | `julisteet/pallo/vektorit/joet-2026-09-26b/<ISO>.geojson` + `hakemisto.json` | 127 maata (puuttuu ISL GRL SGP MLT HKG SHN FJI VUT); Linssiseppä käyttää. Vanha `joet-2026-09-26/GRC.geojson` = sama sisältö, eri lahde-teksti |
 | 1873 reitit | `julisteet/pallo/vektorit/reitit1873-2026-09-26/reitit1873.json` + repo `tools/vienti/reitit1873.json.gz` | 4 laivalinjaa + OHM-rautatiet (Siirtoseppä skeema 1.46) |
 | Yövalot Black Marble Z0–Z6 | `julisteet/pallo/yovalot/2026-09-25/` | 5 461 (valmis 25.9.) |
 
-Paikallinen pohja 26 (ei ämpärissä!): `/Users/Shared/Claude/pyramidi-poltto/ajo-20260926/` (pohja z0–z8 shardeina,
-`luettelo/pyramidi.json`, `lahde-levylta/`, `pallo-viivaton/`). Webin koeluettelo `koe/2026-09-26/pyramidi.json` puuttuu:
-poltin `--ilman-nostoja`, joten luettelosta puuttuvat väritasot/nostotasot → kanna ne tuotannon luettelosta
-(`ajo-20260926/ampari-luettelo.json`), vie pohja `julisteet/pyramidi/2026-09-26-pohja/` ja koeluettelo. Vasta sitten
-webin PALLO_LAATTAVERSIO-vaihto (Pelikoodari/Julkaisija). Sen jälkeen ajokansio NAS:iin (`nas-ajo-*.sh`-kaava).
+Webin pohja 26 ÄMPÄRISSÄ: `julisteet/pyramidi/2026-09-26-pohja/` 92 968 webp (tarkistettu 06.32) + koeluettelo
+`julisteet/pyramidi/koe/2026-09-26/pyramidi.json` (tuotannon luettelo + 26:n versio/patinaMuutos/pohja; väritasot 27,
+nostot 25c, viivat/ranta 25, nimiöt 22g kannettu) → webin koe `?pyramidi=2026-09-26`. Tuotanto-osoitin ennallaan; vaihto
+(osoitin `vaihda-pyramidi-osoitin.yml` + PALLO_LAATTAVERSIO) Fablen/Julkaisijan päätöksellä.
+Paikallinen ajokansio `/Users/Shared/Claude/pyramidi-poltto/ajo-20260926/` PIDETÄÄN delta-polton ensimmäiseen ajoon
+(`--delta-lahde-kansio …/lahde-levylta`), sitten NAS:iin (`nas-ajo-*.sh`-kaava).
 
 ## AVOIMET PR:t
 
