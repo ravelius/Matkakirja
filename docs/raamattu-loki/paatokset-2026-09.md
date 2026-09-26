@@ -7343,3 +7343,7 @@ Pelikoodari: kolme uutta kuvamerkkia (huutomerkki, pollonpoikanen, tiimalasi; gp
 ## Z10 OSA 2 (MAAKUNNAT) KAYNNISSA 20.12, VALMIS ~06 (26.9.2026 klo 20.14)
 
 Karttaseppa: maakuntaosa kaatui 20.05 heti alkuun — Math.min(...s) 270 344 laatan listalla ylitti Noden pinorajan; korjattu silmukaksi f3c00abaa (PR #3325), testit 36/36. Osa 2 kaynnissa v4:lla 20.12, 8 ydinta, free 79 %, 507 shardia, 342 000 laattaa, ~600 laattaa/min → valmis n. klo 06. Tilarivi joka 100. shardi.
+
+## NOSTOTASON UUDELLEENPOLTTO 174B:N MERKEILLA RINNALLE 2 YTIMELLA (26.9.2026 klo 20.16)
+
+Karttaseppa: merkit on poltettu nostotasoon z5–z8 (2026-09-25c-nostot, 112 maata; 3 974 laattaa, 9 Mt), peli vaientaa poltetun merkin elavan version → vanha tyyppikuvake nakyy kunnes poltetaan uudelleen. Fable: poltto Z10:n rinnalle 2 ytimella heti kun #3342 mainissa; versio 2026-09-27-nostot + nostotasot-tiivisteet; Julkaisija vaihtaa osoittimen.
