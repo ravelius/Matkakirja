@@ -528,7 +528,12 @@ namespace Matkakirja.Natiivi
             foreach (var kv in new List<KeyValuePair<string, Taso>>(odottavatAvauskuvat))
             {
                 var t = UiSisalto.Kaupunki(kv.Key);
-                if (t == null || (t.Avauskuvat.Count == 0 && t.Kansikuvat.Count == 0)) continue;
+                if (t == null || (t.Avauskuvat.Count == 0 && t.Kansikuvat.Count == 0))
+                {
+                    // Lehti liitetty, mutta siinä ei ole kuvia: ei jäädä odottamaan (Natiivi-UI:n katselmointi 26.9.).
+                    if (UiSisalto.LehtiLuettu(kv.Key)) odottavatAvauskuvat.Remove(kv.Key);
+                    continue;
+                }
                 odottavatAvauskuvat.Remove(kv.Key);
                 EsilataaAvauskuvat(kv.Key, kv.Value);
             }
