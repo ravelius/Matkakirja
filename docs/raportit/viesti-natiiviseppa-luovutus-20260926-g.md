@@ -98,3 +98,8 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
 - Build 19 -merge-pyynnöt (junaan heti build 18 -master-mergen jälkeen, koemergellä): natiivi-ui/im2-ohjaus d56afbd5 (II:n soitin
   Linssisepän Ohjaus-rajapinnalla; todennettu 911791cc, kuvat lokit/natiivi-ui-b19-ohjaus/), natiiviseppa/lepo-suspend 651ad27b
   (A/B ensin).
+- **BUILD 18 PASS** (Laitetestaaja, savukierros-b18-20260926.md 6e344dd41: lepopiirto 2–3/150 Paikallaan, 143b, 132/150, II,
+  esilataus 1,0 s, nostokuvat 60/60, vieritys) → **proto-master 43a6347c** (puu d3206794 = käännös e85255cd). SHA Fablelle ja
+  Julkaisijalle (TF 1.0.18 Fablen ohjeesta; aseta /tmp/natiiviseppa-vienti-tulossa kun vienti alkaa, poista kun valmis).
+  Avoinna build 19: 144 aaltoilu videotodennus; löydös "laajennettu nostokortti jää auki linssin avauksen yli" (Natiivi-UI).
+  Build 19 -merget (im2-ohjaus, lepo-suspend) junaan vasta 1.0.18-viennin JÄLKEEN, ettei vahdin käännös viivästytä vientiä.
