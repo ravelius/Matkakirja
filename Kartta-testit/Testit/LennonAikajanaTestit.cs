@@ -51,6 +51,36 @@ namespace Matkakirja.Kartta.Testit
         // ---- Kesto ja vaihejako ----
 
         [Testi]
+        static void Loydos172MatalaJaVaakasuoraLahikuvassa()
+        {
+            double reitti = LennonAikajana.ReittiM(LontooLat, LontooLon, 37.98, 23.73);
+            double huippu = LennonAikajana.Huippu(reitti);
+            Oleta.Tosi(huippu <= 150_000 && huippu > 100_000, $"Lontoo–Ateena huippu {huippu / 1000:0} km");
+            Oleta.Tosi(LennonAikajana.Huippu(20_000_000) == 150_000, "pitkän reitin huippu 150 km");
+            // Lähikuvat (sivukylki 30 km, loittonuksen alku 150 km): matkalentokorkeus ja vaakasuora nokka.
+            foreach (double d in new[] { 30_000.0, 150_000.0 })
+            {
+                double k = LennonAikajana.KaarenPaino(d);
+                Oleta.Tosi(k == 0, $"paino {d / 1000:0} km: {k}");
+                double h = LennonAikajana.KoneenKorkeus(0.5, huippu, LennonAikajana.MinKoneKorkeusM, k);
+                Oleta.Tosi(Math.Abs(h - LennonAikajana.MinKoneKorkeusM) < 150, $"korkeus {h:0} m (pehmeä maksimi)");
+                Oleta.Tosi(LennonAikajana.NokanKulma(21, k) == 0, "nokka vaakasuora");
+            }
+            // Kaukaa kaari ja nokka enintään 6°; paino kasvaa monotonisesti.
+            Oleta.Tosi(LennonAikajana.KaarenPaino(2_000_000) == 1 && LennonAikajana.KaarenPaino(9_000_000) == 1, "kaukana 1");
+            Oleta.Tosi(Math.Abs(LennonAikajana.NokanKulma(21, 1) - 6) < 1e-9 && Math.Abs(LennonAikajana.NokanKulma(-21, 1) + 6) < 1e-9, "±6°");
+            double edellinen = 0;
+            for (double d = 150_000; d <= 2_000_000; d *= 1.1)
+            {
+                double k = LennonAikajana.KaarenPaino(d);
+                Oleta.Tosi(k >= edellinen - 1e-12, $"monotoninen {d / 1000:0} km");
+                edellinen = k;
+            }
+            double kaukana = LennonAikajana.KoneenKorkeus(0.5, huippu, LennonAikajana.MinKoneKorkeusM, 1);
+            Oleta.Tosi(Math.Abs(kaukana - huippu) < 100, $"kaaren huippu kaukaa {kaukana:0} m");
+        }
+
+        [Testi]
         static void KestoLontooAteenaOn20s()
         {
             double k = LennonAikajana.Kesto(LennonAikajana.ReittiM(LontooLat, LontooLon, 37.98, 23.73));
