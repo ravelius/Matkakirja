@@ -218,7 +218,20 @@ namespace Matkakirja
 
         /// <summary>Käynnistyksen kokoelmat (listan alku): vain näille VANHA SISÄLTÖ -varareitti (PakettiPaivitys.VanhaSisalto).</summary>
         public const int KaynnistyksenOsuus = 11;
-        static readonly HashSet<string> kaynnistyksenJoukko = new HashSet<string>(new ArraySegment<string>(KaynnistyksenKokoelmat, 0, KaynnistyksenOsuus));
+        static readonly HashSet<string> kaynnistyksenJoukko = VanhanJoukko();
+
+        /// <summary>
+        /// Laattojen määrittely (kokoelmat/laatat.json: kerrokset, versiot, polut) ja offline-alueet eivät saa tulla vanhasta
+        /// versiosta: vanha pyramidiversio voisi osoittaa poistettuihin laattoihin (löydös 163:n tarkistus, Fable 26.9. klo
+        /// 15.3x). Ne esiladataan kuten muutkin, mutta odotetaan aina tuoreina.
+        /// </summary>
+        static HashSet<string> VanhanJoukko()
+        {
+            var j = new HashSet<string>(new ArraySegment<string>(KaynnistyksenKokoelmat, 0, KaynnistyksenOsuus));
+            j.Remove("kokoelmat/laatat.json");
+            j.Remove("offline.json");
+            return j;
+        }
         /// <summary>Tässä istunnossa tilannekuvasta luetut vanhat kokoelmat (mittarin "vanhaa sisältöä käytetty").</summary>
         public static readonly List<(string Kohde, string Lahde, double IkaVrk)> VanhaaKaytetty = new List<(string, string, double)>();
 
