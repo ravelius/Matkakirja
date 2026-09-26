@@ -2,6 +2,92 @@
 
 Siirtoseppä 26.9.2026. Karttavalot, joilla on maakunta: 2782/2963. **Ilman kuvaa 996** (fokuskohde 807, skandaali 187, täkynosto 2). Kuvalliset: syventävät 118/118, eläintäyt 109/109, historian hetket 47/47, maalehtinostot 18/18. Kuva = kohteen kuva/kuvat/ihme (moduuli), skandaalin data.kuva(t), täkynoston kuva. Puute on datassa (sama webissä), ei viennissä: paketti on ajan tasalla.
 
+## EUROOPPA — yksi erä (omistaja 26.9. klo 19.4x: maakuntatyöt toistaiseksi vain Eurooppaan)
+
+Euroopan maat (offline.json manner = europe, 38 maata). Ilman kuvaa **21 nostoa 14 maassa**; muut Euroopan maat ovat valmiita (GRC, DEU, ESP, AUT, CHE, BEL, DNK, EST, FIN, SVK, SVN, …).
+
+| Maa | Puuttuu |
+|---|---|
+| SWE | 3 |
+| FRA | 2 |
+| HUN | 2 |
+| LTU | 2 |
+| NOR | 2 |
+| PRT | 2 |
+| GBR | 1 |
+| IRL | 1 |
+| ISL | 1 |
+| ITA | 1 |
+| LVA | 1 |
+| NLD | 1 |
+| POL | 1 |
+| ROU | 1 |
+
+### SWE (3)
+
+- skandaali:palmstruchin-setelipankki — Setelipankki (SWE:Stockholm; js/packs/skandaalit*.js)
+- skandaali:naamiaisten-laukaus — Naamiaislaukaus (SWE:Stockholm; js/packs/skandaalit*.js)
+- skandaali:kreugerin-romahdus — Kreuger (SWE:Stockholm; js/packs/skandaalit*.js)
+
+### FRA (2)
+
+- skandaali:vrain-lucas-kirjevaarennokset — Vrain-Lucas (FRA:Île-de-France; js/packs/skandaalit*.js)
+- nosto:pariisin-vuosisadat — Vuosisadat (FRA:Île-de-France; takynostot)
+
+### HUN (2)
+
+- skandaali:elmyr-de-hory-vaarentaja — Elmyr de Hory (HUN:Budapest; js/packs/skandaalit*.js)
+- skandaali:seuso-aarteen-kiista — Seuson hopeat (HUN:Budapest; js/packs/skandaalit*.js)
+
+### LTU (2)
+
+- skandaali:barbora-salainen-avioliitto — Salattu avioliitto (LTU:Vilniaus; js/packs/skandaalit*.js)
+- skandaali:boratynka-kuparikohu — Boratynka (LTU:Vilniaus; js/packs/skandaalit*.js)
+
+### NOR (2)
+
+- skandaali:huudon-varkaus — Huudon varkaus (NOR:Oslo; js/packs/skandaalit*.js)
+- skandaali:boheemikirjan-takavarikko — Boheemikirja (NOR:Oslo; js/packs/skandaalit*.js)
+
+### PRT (2)
+
+- skandaali:alves-dos-reis-setelihuijaus — Alves dos Reis (PRT:Lisboa; js/packs/skandaalit*.js)
+- skandaali:vaaleanpunainen-kartta-1890 — Ultimaatum 1890 (PRT:Lisboa; js/packs/skandaalit*.js)
+
+### GBR (1)
+
+- nosto:exchange-alleyn-kupla — Exchange Alley (GBR:England; takynostot)
+
+### IRL (1)
+
+- skandaali:ouzel-galleyn-mysteeri — Ouzel Galley (IRL:Dublin; js/packs/skandaalit*.js)
+
+### ISL (1)
+
+- skandaali:baskivainot-1615 — Baskivainot 1615 (ISL:Vestfirðir; js/packs/skandaalit*.js)
+
+### ITA (1)
+
+- skandaali:banca-romana-1893 — Banca Romana (ITA:Lazio; js/packs/skandaalit*.js)
+
+### LVA (1)
+
+- skandaali:riian-kalenterikahakat — Kalenterikahakat (LVA:Riga; js/packs/skandaalit*.js)
+
+### NLD (1)
+
+- skandaali:naundorff-delftin-valekuningas — Naundorff (NLD:Zuid-Holland; js/packs/skandaalit*.js)
+
+### POL (1)
+
+- skandaali:szczerbiec-odysseia — Szczerbiec (POL:Lesser Poland; js/packs/skandaalit*.js)
+
+### ROU (1)
+
+- skandaali:kultakanan-ryosto-1875 — Kultakana (ROU:Bucharest; js/packs/skandaalit*.js)
+
+## MUUT MAANOSAT (ei nyt tilattu)
+
 Maittain (eniten puuttuvia ensin):
 
 ## ARE (13)
