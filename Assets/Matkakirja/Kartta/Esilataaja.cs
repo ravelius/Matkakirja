@@ -36,6 +36,8 @@ namespace Matkakirja
             public Taso Taso; public long Nro; public bool Saa, Vapautettu;
             /// <summary>Paketin päivitys (kohta 2) jatkaa kuumana ja virransäästössä (Fable 25.9.).</summary>
             public bool Paketti;
+            /// <summary>Tehtävä (<see cref="Tehtava"/>): ajaa oman korutiininsa paikalla; laattatehtävä ei väistä laattakiirettä.</summary>
+            public bool OnTehtava, Laatta;
             /// <summary>Käynnissä oleva yritys, tai null tauolla / ennen ensimmäistä yritystä.</summary>
             public UnityWebRequest Pyynto;
             /// <summary>Ilman pyyntöä paikka on laillisesti varattu tähän hetkeen asti (tauko, vuoron alku).</summary>
@@ -94,7 +96,7 @@ namespace Matkakirja
         public static void NakyvaValmis(string osoite) => Mittari.NakyvaValmis(osoite, NytMs);
 
         /// <summary>Testikomennon `verkko` lokirivi: "MATKAKIRJA esilataaja: mittari osuma …".</summary>
-        public static string MittariRivi() => "MATKAKIRJA esilataaja: mittari " + Mittari.Rivi();
+        public static string MittariRivi() => "MATKAKIRJA esilataaja: mittari " + Mittari.Rivi() + "; " + LaattaOsumat.Rivi();
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
@@ -110,6 +112,8 @@ namespace Matkakirja
             joutilasViritetty = true;
             JoutilaitaHetkia = 0;
             Ennakoituja = 0;
+            laattatehtavia = 0;
+            TehtaviaValmiina = 0;
             Mittari.Nollaa();
         }
 
@@ -178,6 +182,60 @@ namespace Matkakirja
             finally { Vapauta(o); }
         }
 
+        /// <summary>
+        /// TEHTÄVÄ (build 22, ESILATAUSPOLITIIKKA kohdat 2–3; Natiivisepän pallon laatat ja lennon pinta): varaa jonosta
+        /// paikan tasolla <paramref name="taso"/> ja ajaa <paramref name="ajo"/>-korutiinin sen sisällä, jotta laattojen
+        /// ja sisällön esilataus jakavat saman kaistan ja prioriteetit (Nakyva ohittaa aina). Paikka pysyy varattuna koko
+        /// ajon ajan (Siivoa ei vapauta sitä). <paramref name="laatta"/> = tosi: tehtävä hakee itse laattoja, joten
+        /// Laattapalvelimen kiire ei pysäytä sitä (muuten se estäisi itsensä), mutta laattatehtäviä ajetaan enintään
+        /// <see cref="LaattatehtaviaEnintaan"/> kerrallaan. <paramref name="peruttu"/> tarkistetaan ennen alkua ja
+        /// joka askeleella (esim. matka vaihtui). Pääsäikeestä: <c>StartCoroutine(Esilataaja.Tehtava(...))</c>.
+        /// </summary>
+        public static IEnumerator Tehtava(Taso taso, string ryhma, Func<IEnumerator> ajo, bool laatta = false, Func<bool> peruttu = null)
+        {
+            Varmista();
+            var o = new Odottaja { Taso = taso, Nro = nro++, OnTehtava = true, Laatta = laatta };
+            if (taso != Taso.Nakyva)
+            {
+                jono.Add(o);
+                while (!o.Saa)
+                {
+                    if (peruttu != null && peruttu()) { jono.Remove(o); yield break; }
+                    yield return null;
+                }
+            }
+            else { Anna(o); if (laatta) laattatehtavia++; }   // jonosta tultaessa Update varasi laattapaikan jo
+            float alku = Time.realtimeSinceStartup;
+            try
+            {
+                if (peruttu != null && peruttu()) yield break;
+                var e = ajo?.Invoke();
+                while (e != null)
+                {
+                    // Tehtävän askel voi odottaa pitkään (laattaerä): paikka vapautuu vasta finallyssä tai, jos korutiini
+                    // kuoli ilman finallyä (isäntä tuhottiin), Siivoa-kierroksella 30 s viimeisen askeleen jälkeen.
+                    o.Odottaa = Time.realtimeSinceStartup + 30f;
+                    bool jatkuu;
+                    try { jatkuu = e.MoveNext(); }
+                    catch (Exception ex) { Debug.LogException(ex); break; }
+                    if (!jatkuu || (peruttu != null && peruttu())) break;
+                    yield return e.Current;
+                }
+            }
+            finally
+            {
+                Vapauta(o);
+                TehtaviaValmiina++;
+                if (Time.realtimeSinceStartup - alku > 5f)
+                    Debug.Log($"MATKAKIRJA esilataaja: tehtävä {ryhma} ({taso}) {Time.realtimeSinceStartup - alku:0.#} s");
+            }
+        }
+
+        /// <summary>Laattatehtäviä (<see cref="Tehtava"/> laatta=true) kerrallaan: Laattapalvelimella on oma rinnakkaisuutensa.</summary>
+        public const int LaattatehtaviaEnintaan = 2;
+        static int laattatehtavia;
+        public static int TehtaviaValmiina { get; private set; }
+
         static void Anna(Odottaja o)
         {
             o.Saa = true;
@@ -191,6 +249,7 @@ namespace Matkakirja
             if (o.Vapautettu || !o.Saa) { jono.Remove(o); return; }
             o.Vapautettu = true;
             kaynnissa--;
+            if (o.Laatta) laattatehtavia--;   // yksi paikka: myös Siivoa-vapautus (kuollut korutiini) palauttaa laattapaikan
             aktiiviset.Remove(o);
         }
 
@@ -277,7 +336,8 @@ namespace Matkakirja
                 for (int i = 0; i < jono.Count; i++)
                 {
                     var o = jono[i];
-                    if (laatatKiireessa && o.Taso >= Taso.TamaKaupunki) continue;
+                    if (o.Laatta) { if (laattatehtavia >= LaattatehtaviaEnintaan) continue; }
+                    else if (laatatKiireessa && o.Taso >= Taso.TamaKaupunki) continue;
                     if (kuuma && o.Taso >= Taso.Kohdekaupungit && !o.Paketti) continue;
                     if (paras < 0 || o.Taso < jono[paras].Taso || (o.Taso == jono[paras].Taso && o.Nro < jono[paras].Nro)) paras = i;
                 }
@@ -285,6 +345,7 @@ namespace Matkakirja
                 var valittu = jono[paras];
                 jono.RemoveAt(paras);
                 Anna(valittu);
+                if (valittu.Laatta) laattatehtavia++;   // varaus heti; Vapauta palauttaa
             }
         }
     }

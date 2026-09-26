@@ -38,6 +38,24 @@ namespace Matkakirja
         public enum Tila { Taysi, Lepo, Paikallaan, Kerros }
 
         public static Ruudunpaivitys Instanssi { get; private set; }
+
+        /// <summary>
+        /// Verhon aikana täysi taajuus (Valmius.Verhossa): Cesium etenee pääsäikeessä kehys kerrallaan, joten lepotilan 30 fps
+        /// hidasti mustan ja aloitusverhon latausta. Kehittäjälippu A/B: PlayerPrefs matkakirja-verho-taysi 0 = pois.
+        /// </summary>
+        public static bool VerhoTaysi
+        {
+            get
+            {
+#if !MATKAKIRJA_APPSTORE
+                if (verhoTaysi < 0) verhoTaysi = PlayerPrefs.GetInt("matkakirja-verho-taysi", 1);
+                return verhoTaysi != 0;
+#else
+                return true;
+#endif
+            }
+        }
+        static int verhoTaysi = -1;
         /// <summary>UI rauhassa: ei animaatiota, kirjoituskonetta, pulun liikettä tai siirtymää (Natiivi-UI asettaa).</summary>
         public static Func<bool> UiRauhassa;
         /// <summary>Lisäehdot täydelle taajuudelle (esim. linssin ajo): mikä tahansa tosi = TÄYSI.</summary>
@@ -151,6 +169,7 @@ namespace Matkakirja
             if (kierto != null && kierto.Liikkeessa && !kierto.Peitetty) return "pallo";
             if (nappula != null && nappula.Liikkeessa) return "lento";
             if (Time.unscaledTime < herattyAsti) return "herätys";
+            if (VerhoTaysi && Valmius.Verhossa) return "verho";
             for (int i = 0; i < Aktiivinen.Count; i++)
             {
                 bool a;
