@@ -4,6 +4,22 @@
 Fable local_5df52e10-10e4-4b72-9554-0049db300dfe, Natiiviseppä local_674b9ec4-e2f3-48e9-a810-a129f20a4f03,
 Natiivi-UI local_44392b3c-86ee-4873-9d76-82f9aaa6b832, Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab.*
 
+## PÄIVITYS 00.45: Fablen uusi järjestys (00.3x)
+
+- Omistaja hylkäsi Natiivisepän reliefit → MALLINSEPPÄ tekee kategoriasymbolit OIKEINA 3D-ESINEINÄ (kaari + vuori ensin,
+  sitten tähti, tiimalasi, salama, tulivuori, aallot, tassu, kellotorni, malja+leipä, vaaka, ratas, ankkuri, piste).
+  Rajapinta: Natiivisepän natiiviseppa/kategoriamallit 24c40888, ohje proto-3d/lokit/mallinseppa-rajapinta.md §5–6
+  (RekisteroiKategoria, Runko ≤ 800, Lod1 ≤ 200, kärkialfa 0 = seepiaramppi, 1 = kärkiväri).
+- Kaari + vuori: proto-haara `mallinseppa/kategoriat3d` 43ce36bd (worktree /Users/Shared/Claude/wt/proto-mallinseppa-lento;
+  tiger-moth-haara on tallessa commitoituna), tiedostot Kartta/Kategoriamallit/{Kaari,Vuori,KategoriaApurit}.cs.
+  Esikatselu: scratchpad kategoria/ (kaanna.sh kategoriat, kat.py/kat2.py; Natiivisepän esikatselu.py). Kolmiot kaari
+  410/196, vuori 338/60.
+- Colosseum: Fable valitsi A → Rooman kaupunkipisteen maamerkki (Erikoismalli.Kaupunki = "rooma"), mallinseppa/pohja d7a38f75
+  (rebasetu kategoriamallit-haaran päälle).
+- Käännös klo 01.00 `juna/b13+mallinseppa/kategoriat3d+linssiseppa/merikoristeet` → ajo VAIHEET 1,2 (MSM, Stonehenge,
+  Colosseum Roomassa), 4 (kategoriat Kreikassa), 3 (meri) → koosta.py (kulma ja versio kuvaan, omistajan sääntö 00.2x) →
+  Fablelle erikoismallit + kaari/vuori + meri.
+
 ## Jono (omistaja 22.3x, Fable) ja tila 27.9. klo 00.3x
 
 1. **Kolme erikoismallia**: laitteella ajettu 00.08 (käännös 292e7a51), korjaukset tehty, UUSI KÄÄNNÖS klo 01.00
