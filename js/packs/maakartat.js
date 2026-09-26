@@ -3101,7 +3101,7 @@ export const KAUPUNKIKARTAT = {
           + '1600-luvun lopulla.',
       },
       {
-        nimi: 'Place des Palmistes', lat: 4.9395938, lon: -52.3338290,
+        nimi: 'Place des Palmistes', tyyppi: 'aukio', lat: 4.9395938, lon: -52.3338290,
         teksti: 'Kun Cayennea ympäröinyt puolustusmuuri purettiin '
           + '1810-luvulla, sen paikalle raivattiin aukio ja istutettiin '
           + 'komeita kuningaspalmuja. Aukiosta tuli nopeasti '
@@ -3195,7 +3195,7 @@ export const KAUPUNKIKARTAT = {
       + 'lähellä on kaupungin vanha keskusaukio.',
     kohteet: [
       {
-        nimi: 'Vesien kohtaamisen näköalapaikka (Orla)', lat: -2.4179024, lon: -54.7172252,
+        nimi: 'Vesien kohtaamisen näköalapaikka (Orla)', tyyppi: 'luonto', lat: -2.4179024, lon: -54.7172252,
         teksti: 'Santarémin edustalla Amazonin sameanruskea vesi kohtaa '
           + 'Tapajós-joen tumman, kirkkaan veden, ja kaksi väriä virtaa '
           + 'vierekkäin kilometrien matkan sekoittumatta juuri lainkaan. '
@@ -3203,7 +3203,7 @@ export const KAUPUNKIKARTAT = {
           + 'sen näkee parhaiten.',
       },
       {
-        nimi: 'Praça Tiradentes', lat: -2.4194012, lon: -54.7235362,
+        nimi: 'Praça Tiradentes', tyyppi: 'aukio', lat: -2.4194012, lon: -54.7235362,
         teksti: 'Santarémin vanhan kaupunginosan keskusaukio lähellä '
           + 'paikkaa, jossa jesuiittapappi João Felipe Bettendorff '
           + 'perusti lähetysaseman 1661 — kaupungin virallisen '
@@ -3263,7 +3263,7 @@ export const KAUPUNKIKARTAT = {
       + 'korttelina.',
     kohteet: [
       {
-        nimi: 'Women of Pearling -patsas', lat: -17.9628799, lon: 122.2388728,
+        nimi: 'Women of Pearling -patsas', tyyppi: 'taide', lat: -17.9628799, lon: 122.2388728,
         teksti: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
           + 'odottivat lugger-veneiden palaavan merten takaa, '
           + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
@@ -3272,7 +3272,7 @@ export const KAUPUNKIKARTAT = {
           + 'sukeltamaan simpukoita 1800-luvulla ilman korvausta.',
       },
       {
-        nimi: 'Chinatown', lat: -17.9544454, lon: 122.2433213,
+        nimi: 'Chinatown', tyyppi: 'aukio', lat: -17.9544454, lon: 122.2433213,
         teksti: 'Helmisatama veti Broomeen sukeltajia ja kauppiaita '
           + 'Japanista, Kiinasta, Malesiasta ja Filippiineiltä, ja '
           + 'satamalaitureiden ympärille kasvanut kortteli sai lopulta '
@@ -3304,7 +3304,7 @@ export const KAUPUNKIKARTAT = {
       + 'North, yksi Golden Milen vanhoista kultakaivoksista.',
     kohteet: [
       {
-        nimi: 'Paddy Hannanin patsas', lat: -30.7490175, lon: 121.4705657,
+        nimi: 'Paddy Hannanin patsas', tyyppi: 'taide', lat: -30.7490175, lon: 121.4705657,
         teksti: 'Paddy Hannanin pronssipatsas seisoo yhä Kalgoorlien '
           + 'pääkadulla vesileili sylissään ja toimii juomalähteenä. '
           + 'Hänen hevosensa kengän irtoaminen tällä paikalla kesäkuussa '
@@ -3350,7 +3350,7 @@ export const KAUPUNKIKARTAT = {
           + 'seisoo yhä kaupungin symbolina.',
       },
       {
-        nimi: 'City Lookout', lat: -20.7235054, lon: 139.4984195,
+        nimi: 'City Lookout', tyyppi: 'luonto', lat: -20.7235054, lon: 139.4984195,
         teksti: 'Kaupungin lounaisreunalla kohoava City Lookout on '
           + 'paikallisten ja matkailijoiden näköalapaikka, josta avautuu '
           + 'näkymä koko Mount Isaan ja sen kaivosalueen piippuihin '
@@ -3489,7 +3489,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tokion kansallismuseo', lat: 35.7191, lon: 139.7758 },
       { nimi: 'Ueno Tōshō-gū', lat: 35.7154, lon: 139.7706 },
       { nimi: 'Uenon asema', lat: 35.7134, lon: 139.7767 },
-      { nimi: 'Uenon puisto', lat: 35.7122, lon: 139.7711 },
+      { nimi: 'Uenon puisto', tyyppi: 'luonto', lat: 35.7122, lon: 139.7711 },
       { nimi: 'Shitamachi-museo', lat: 35.7102, lon: 139.7726 },
       { nimi: 'Kyū-Iwasaki-tei', lat: 35.7097, lon: 139.7678 },
     ],
@@ -3557,7 +3557,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Jongmyo', lat: 37.5747, lon: 126.9936, wiki: 'Jongmyo' },
       { nimi: 'Insadong', lat: 37.573, lon: 126.9862 },
       { nimi: 'Jogyesa', lat: 37.5739, lon: 126.9819 },
-      { nimi: 'Tapgol-puisto', lat: 37.5711, lon: 126.9885 },
+      { nimi: 'Tapgol-puisto', tyyppi: 'luonto', lat: 37.5711, lon: 126.9885 },
       { nimi: 'Bosingak', lat: 37.5699, lon: 126.9834 },
     ],
   },
@@ -3622,15 +3622,15 @@ export const KAUPUNKIKARTAT = {
        * puutarhasta ja Nanjing-kadusta ei ole fi-artikkelia, joten
        * ne nojaavat omaan juttuunsa. Ei myöskään kolmesta uudesta.
        */
-      { nimi: 'Bund', lat: 31.238, lon: 121.4861 },
+      { nimi: 'Bund', tyyppi: 'esine', lat: 31.238, lon: 121.4861 },
       // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
       // sillan keskellä Suzhou-puron päällä, koska juuri se on kohde.
       { nimi: 'Waibaidun silta', lat: 31.2431, lon: 121.49 },
       { nimi: 'Rauhanhotelli', lat: 31.2411, lon: 121.4846 },
-      { nimi: 'Yu-puutarha', lat: 31.2292, lon: 121.4875 },
+      { nimi: 'Yu-puutarha', tyyppi: 'luonto', lat: 31.2292, lon: 121.4875 },
       { nimi: 'Kaupunginjumalan temppeli', lat: 31.2278, lon: 121.4881 },
       { nimi: 'Fuyoun moskeija', lat: 31.2298, lon: 121.4842 },
-      { nimi: 'Nanjing-katu', lat: 31.2347, lon: 121.4744 },
+      { nimi: 'Nanjing-katu', tyyppi: 'aukio', lat: 31.2347, lon: 121.4744 },
       { nimi: 'Shanghain museo', lat: 31.2303, lon: 121.4706 },
       { nimi: 'Dajingin pavilonki', lat: 31.2265, lon: 121.4788 },
     ],
@@ -3719,7 +3719,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Teheranin basaari', lat: 35.675, lon: 51.4194 },
       { nimi: 'Golestanin palatsi', lat: 35.6797, lon: 51.4203 },
       { nimi: 'Dar al-Fonun', lat: 35.6838, lon: 51.4219 },
-      { nimi: 'Toopkhanen aukio', lat: 35.6857, lon: 51.4215 },
+      { nimi: 'Toopkhanen aukio', tyyppi: 'aukio', lat: 35.6857, lon: 51.4215 },
       { nimi: 'Iranin kansallismuseo', lat: 35.687, lon: 51.4146 },
       { nimi: 'Bagh-e Mellin portti', lat: 35.6877, lon: 51.4168 },
       { nimi: 'Masoudiehin talo', lat: 35.689, lon: 51.4281 },
@@ -3975,7 +3975,7 @@ export const KAUPUNKIKARTAT = {
        * al-Wazir menee 12–15 % päällekkäin museon ja Mustansiriyan
        * kanssa, mikä on työkalun asteikolla "tavallista".
        */
-      { nimi: 'Mutanabbin katu', lat: 33.3410, lon: 44.3888 },
+      { nimi: 'Mutanabbin katu', tyyppi: 'aukio', lat: 33.3410, lon: 44.3888 },
       { nimi: 'Qushlan kellotorni', lat: 33.3412, lon: 44.3860 },
       { nimi: 'Abbasidipalatsi', lat: 33.3431, lon: 44.3835 },
       { nimi: 'Haydarkhanan moskeija', lat: 33.3425, lon: 44.3894 },
@@ -4052,7 +4052,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Al Hamra -torni', lat: 29.3790, lon: 47.9932 },
       { nimi: 'Seifin palatsi', lat: 29.3808, lon: 47.9711 },
       { nimi: 'Kuwaitin suurmoskeija', lat: 29.3789, lon: 47.9747 },
-      { nimi: 'Mubarakiyan tori', lat: 29.3748, lon: 47.9741 },
+      { nimi: 'Mubarakiyan tori', tyyppi: 'aukio', lat: 29.3748, lon: 47.9741 },
       { nimi: 'Sadu House', lat: 29.3744, lon: 47.9672 },
     ],
   },
@@ -4146,7 +4146,7 @@ export const KAUPUNKIKARTAT = {
        * rannalle — se osoittaisi väärään paikkaan.
        */
       { nimi: 'Islamilaisen taiteen museo', lat: 25.2950, lon: 51.5393 },
-      { nimi: 'Corniche', lat: 25.2904, lon: 51.5352 },
+      { nimi: 'Corniche', tyyppi: 'aukio', lat: 25.2904, lon: 51.5352 },
       { nimi: 'Souq Waqif', lat: 25.2882, lon: 51.5332 },
       { nimi: 'Qatarin kansallismuseo', lat: 25.2868, lon: 51.5495 },
       { nimi: 'Al Koot -linnake', lat: 25.2866, lon: 51.5310 },
@@ -4225,7 +4225,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki istanbul).
        */
       {
-        nimi: 'Vararikko 1875', lat: 41.0122, lon: 28.9739,
+        nimi: 'Vararikko 1875', tyyppi: 'henkilo', lat: 41.0122, lon: 28.9739,
         nosto: 'skandaali-osmanien-vararikko-1875',
       },
       {
@@ -4293,11 +4293,11 @@ export const KAUPUNKIKARTAT = {
        * eli numerot olisivat menneet päällekkäin. Rossio voitti,
        * koska siitä on artikkeli.
        */
-      { nimi: 'Glórian köysirata', lat: 38.7152, lon: -9.1433 },
+      { nimi: 'Glórian köysirata', tyyppi: 'esine', lat: 38.7152, lon: -9.1433 },
       { nimi: 'Rossio', lat: 38.7138, lon: -9.1393, wiki: 'Rossio' },
       { nimi: 'São Jorgen linna', lat: 38.7139, lon: -9.1335, wiki: 'Castelo de São Jorge' },
       { nimi: 'Tuomiokirkko', lat: 38.7098, lon: -9.1326, wiki: 'Lissabonin tuomiokirkko' },
-      { nimi: 'Kauppatori', lat: 38.7076, lon: -9.1365, wiki: 'Praça do Comércio' },
+      { nimi: 'Kauppatori', tyyppi: 'aukio', lat: 38.7076, lon: -9.1365, wiki: 'Praça do Comércio' },
       { nimi: 'Kansallispanteoni', lat: 38.715, lon: -9.1247 },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
@@ -4336,18 +4336,18 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Alves dos Reis', lat: 38.7085, lon: -9.139,
+        nimi: 'Alves dos Reis', tyyppi: 'henkilo', lat: 38.7085, lon: -9.139,
         nosto: 'skandaali-alves-dos-reis-setelihuijaus',
       },
       {
-        nimi: 'Ultimaatum 1890', lat: 38.716, lon: -9.1414,
+        nimi: 'Ultimaatum 1890', tyyppi: 'henkilo', lat: 38.716, lon: -9.1414,
         nosto: 'skandaali-vaaleanpunainen-kartta-1890',
       },
       // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026):
       // Juhana II:n hovi istui Paço da Ribeirassa nykyisen Kauppatorin
       // paikalla; hetken oma sivu on lehdessä, tämä on sen karttapaikka.
       {
-        nimi: 'Kolumbus 1484', lat: 38.7066, lon: -9.1352,
+        nimi: 'Kolumbus 1484', tyyppi: 'henkilo', lat: 38.7066, lon: -9.1352,
         nosto: 'hetki-kolumbus-portugali-1484',
       },
     ],
@@ -4386,7 +4386,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Arc de Triomf', lat: 41.391, lon: 2.1806, wiki: 'Arc de Triomf' },
       { nimi: 'Musiikkipalatsi', lat: 41.3876, lon: 2.1752, wiki: 'Palau de la Música Catalana' },
       { nimi: 'Boquerian kauppahalli', lat: 41.3817, lon: 2.1716 },
-      { nimi: 'Kolumbuksen patsas', lat: 41.3758, lon: 2.1778 },
+      { nimi: 'Kolumbuksen patsas', tyyppi: 'taide', lat: 41.3758, lon: 2.1778 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -4401,11 +4401,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Font de Canaletes', lat: 41.3853, lon: 2.1701,
+        nimi: 'Font de Canaletes', tyyppi: 'esine', lat: 41.3853, lon: 2.1701,
         nosto: 'syvennys-barcelona-rambla',
       },
       {
-        nimi: 'Roviran aukio', lat: 41.4076, lon: 2.1584,
+        nimi: 'Roviran aukio', tyyppi: 'aukio', lat: 41.4076, lon: 2.1584,
         nosto: 'syvennys-barcelona-kilpailu',
       },
     ],
@@ -4437,7 +4437,7 @@ export const KAUPUNKIKARTAT = {
        * koska talosta ei ole omaa artikkelia — sama ratkaisu kuin
        * Wienin jättirattaalla, joka linkittää Prateriin.
        */
-      { nimi: 'Sacromonten luolat', lat: 37.1831, lon: -3.5843 },
+      { nimi: 'Sacromonten luolat', tyyppi: 'luonto', lat: 37.1831, lon: -3.5843 },
       { nimi: 'Albaicínin näköalapaikka', lat: 37.181, lon: -3.5927, wiki: 'Albayzín' },
       { nimi: 'Generalife', lat: 37.1769, lon: -3.5851, wiki: 'Generalife' },
       { nimi: 'Granadan katedraali', lat: 37.1765, lon: -3.5992 },
@@ -4511,11 +4511,11 @@ export const KAUPUNKIKARTAT = {
        * piste Uudenkaupungin ruutukaavan puolella — ilman sitä kartan
        * juoni jäisi kertomatta selitelistassa.
        */
-      { nimi: 'Charlotte Square', lat: 55.9514, lon: -3.2086 },
+      { nimi: 'Charlotte Square', tyyppi: 'aukio', lat: 55.9514, lon: -3.2086 },
       { nimi: 'Edinburghin linna', lat: 55.9487, lon: -3.2004, wiki: 'Edinburghin linna' },
       { nimi: 'St Gilesin katedraali', lat: 55.9495, lon: -3.1909, wiki: 'St Gilesin katedraali' },
       {
-        nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby',
+        nimi: 'Greyfriars Bobby', tyyppi: 'henkilo', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby',
         nosto: 'syvennys-edinburgh-bobby',
       },
       { nimi: 'Calton Hill', lat: 55.9553, lon: -3.1828, wiki: 'Calton Hill' },
@@ -4681,7 +4681,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Linnanmäki', lat: 60.1869, lon: 24.9401, wiki: 'Linnanmäki' },
       { nimi: 'Päärautatieasema', lat: 60.1719, lon: 24.9414, wiki: 'Helsingin päärautatieasema' },
-      { nimi: 'Kaisaniemen puisto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
+      { nimi: 'Kaisaniemen puisto', tyyppi: 'luonto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
       { nimi: 'Kallion kirkko', lat: 60.1842, lon: 24.9492, wiki: 'Kallion kirkko' },
       { nimi: 'Tuomiokirkko', lat: 60.1703, lon: 24.9522, wiki: 'Helsingin tuomiokirkko' },
       { nimi: 'Uspenskin katedraali', lat: 60.1683, lon: 24.96, wiki: 'Uspenskin katedraali' },
@@ -4702,11 +4702,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Löyly ja avanto', lat: 60.18647, lon: 24.95728,
+        nimi: 'Löyly ja avanto', tyyppi: 'ilmio', lat: 60.18647, lon: 24.95728,
         nosto: 'syvennys-helsinki-sauna',
       },
       {
-        nimi: 'Kantele', lat: 60.1699, lon: 24.9384,
+        nimi: 'Kantele', tyyppi: 'esine', lat: 60.1699, lon: 24.9384,
         nosto: 'syvennys-helsinki-kantele',
       },
       {
@@ -4714,11 +4714,11 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-helsinki-finlandia',
       },
       {
-        nimi: 'Pirtukuningas', lat: 60.1676, lon: 24.9547,
+        nimi: 'Pirtukuningas', tyyppi: 'henkilo', lat: 60.1676, lon: 24.9547,
         nosto: 'skandaali-kieltolaki-ja-pirtukuningas',
       },
       {
-        nimi: 'Nurmen kohu', lat: 60.1875, lon: 24.9272,
+        nimi: 'Nurmen kohu', tyyppi: 'henkilo', lat: 60.1875, lon: 24.9272,
         nosto: 'skandaali-nurmen-amatoorikohu',
       },
       /*
@@ -4731,7 +4731,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Ruotsalainen teatteri; sama piste kuin syvennys Finlandia, nimiö oikealle.
       {
-        nimi: 'Suomi herää 1899', lat: 60.16722, lon: 24.94333,
+        nimi: 'Suomi herää 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
         nosto: 'hetki-sibelius-finlandia-1899',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -4827,7 +4827,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331,
         wiki: 'Olympoksen Zeuksen temppeli', nosto: 'olympieion',
       },
-      { nimi: 'Sýntagman aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
+      { nimi: 'Sýntagman aukio', tyyppi: 'aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
       { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328, nosto: 'syvennys-ateena-schliemann' },
       { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
       { nimi: 'Kallimarmaro', lat: 37.9683, lon: 23.7411, wiki: 'Panathinaïkó-stadion' },
@@ -4845,17 +4845,17 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki ateena).
        */
       {
-        nimi: 'Maratonhuijaus', lat: 37.9683, lon: 23.7410,
+        nimi: 'Maratonhuijaus', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7410,
         nosto: 'skandaali-belokas-maratonhuijaus-1896', nimiPuoli: 'vasen',
         siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Elginin marmorit', lat: 37.9715, lon: 23.7267,
+        nimi: 'Elginin marmorit', tyyppi: 'taide', lat: 37.9715, lon: 23.7267,
         nosto: 'skandaali-elginin-marmorit', nimiPuoli: 'oikea',
         siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Diogeneen astia', lat: 37.9750, lon: 23.7233,
+        nimi: 'Diogeneen astia', tyyppi: 'esine', lat: 37.9750, lon: 23.7233,
         nosto: 'syvennys-ateena-diogenes', nimiPuoli: 'oikea',
         siirto: { x: 26, y: 0 },
       },
@@ -4875,7 +4875,7 @@ export const KAUPUNKIKARTAT = {
       // sama piste kuin Kallimarmaro ja Maratonhuijaus (siirto vasemmalle): nimiö
       // oikealle.
       {
-        nimi: 'Louis 1896', lat: 37.9683, lon: 23.7411,
+        nimi: 'Louis 1896', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7411,
         nosto: 'hetki-olympia-ateena-1896',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -4925,7 +4925,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-amsterdam-haikarat',
       },
       { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
-      { nimi: 'Artis-eläintarha', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
+      { nimi: 'Artis-eläintarha', tyyppi: 'luonto', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
       { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -4941,11 +4941,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Timanttihiomo', lat: 52.3696, lon: 4.904,
+        nimi: 'Timanttihiomo', tyyppi: 'ilmio', lat: 52.3696, lon: 4.904,
         nosto: 'syvennys-amsterdam-timantit',
       },
       {
-        nimi: 'Amsterdam-laiva', lat: 52.3714, lon: 4.9147,
+        nimi: 'Amsterdam-laiva', tyyppi: 'esine', lat: 52.3714, lon: 4.9147,
         nosto: 'syvennys-amsterdam-voc-hylky',
       },
       /*
@@ -4962,12 +4962,12 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-kapein-talo',
       },
       {
-        nimi: 'Maitotyttö', lat: 52.3599, lon: 4.885,
+        nimi: 'Maitotyttö', tyyppi: 'taide', lat: 52.3599, lon: 4.885,
         nosto: 'nosto-amsterdamin-maitotytto',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Kissalaiva', lat: 52.3781, lon: 4.8931,
+        nimi: 'Kissalaiva', tyyppi: 'esine', lat: 52.3781, lon: 4.8931,
         nosto: 'nosto-amsterdamin-kissalaiva',
       },
       {
@@ -4975,7 +4975,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-puupaalut',
       },
       {
-        nimi: 'Yövartio', lat: 52.3731, lon: 4.8913,
+        nimi: 'Yövartio', tyyppi: 'taide', lat: 52.3731, lon: 4.8913,
         nosto: 'nosto-amsterdamin-yovartio',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -5120,14 +5120,14 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
-      { nimi: 'Concorden aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
+      { nimi: 'Concorden aukio', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
         nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre',
         nosto: 'skandaali-mona-lisan-varkaus-1911',
       },
       // Puiston keskipiste on suuri kahdeksankulmainen allas
       // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
-      { nimi: 'Luxembourgin puisto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
+      { nimi: 'Luxembourgin puisto', tyyppi: 'luonto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
       { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
       { nimi: 'Panthéon', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
       { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali' },
@@ -5147,7 +5147,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Orsayn taidemuseo', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
       { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
-      { nimi: 'Place des Vosges', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
+      { nimi: 'Place des Vosges', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -5162,10 +5162,10 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
        */
       {
-        nimi: 'Carmenin ensi-ilta', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
+        nimi: 'Carmenin ensi-ilta', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
       },
       {
-        nimi: 'Kirahvin kävelymatka', lat: 48.8447, lon: 2.3597,
+        nimi: 'Kirahvin kävelymatka', tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
@@ -5174,15 +5174,15 @@ export const KAUPUNKIKARTAT = {
         siirto: { x: -6, y: -25 },
       },
       {
-        nimi: 'Vrain-Lucas', lat: 48.8573, lon: 2.3372,
+        nimi: 'Vrain-Lucas', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
         nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
       },
       {
-        nimi: 'Impressionistit', lat: 48.8705, lon: 2.3280,
+        nimi: 'Impressionistit', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
         nosto: 'syvennys-pariisi-impressionistit', nimiPuoli: 'vasen',
       },
       {
-        nimi: 'Kyyhkyposti', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
+        nimi: 'Kyyhkyposti', tyyppi: 'ilmio', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
       },
       /*
        * KAKSI NOSTOA SAMASSA PAIKASSA. Syvennystarina `syvennys-pariisi-
@@ -5226,17 +5226,17 @@ export const KAUPUNKIKARTAT = {
        */
       // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
       {
-        nimi: 'Curie 1898', lat: 48.842, lon: 2.3476,
+        nimi: 'Curie 1898', tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
         nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
       },
       // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
       {
-        nimi: 'Lavoisier 1780', lat: 48.8503, lon: 2.3635,
+        nimi: 'Lavoisier 1780', tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
         nosto: 'hetki-lavoisier-laboratorio-1780',
       },
       // École normale supérieure, rue d'Ulm.
       {
-        nimi: 'Pasteur 1862', lat: 48.8419, lon: 2.3444,
+        nimi: 'Pasteur 1862', tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
         nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
       },
       // sama piste kuin Eiffel-torni ja Torni romuraudaksi: nimiö alas oikealle.
@@ -5247,14 +5247,14 @@ export const KAUPUNKIKARTAT = {
       },
       // sama piste kuin kohde Bastilji: nimiö oikealle.
       {
-        nimi: 'Bastilji 1789', lat: 48.85333, lon: 2.36917,
+        nimi: 'Bastilji 1789', tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
         nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
       {
-        nimi: 'Lumière 1895', lat: 48.8703, lon: 2.3294,
+        nimi: 'Lumière 1895', tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
         nosto: 'hetki-lumiere-elokuva-1895',
         nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
       },
@@ -5306,7 +5306,7 @@ export const KAUPUNKIKARTAT = {
       // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
       // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
       {
-        nimi: 'Pariisin vuosisadat', lat: 48.8462, lon: 2.3464,
+        nimi: 'Pariisin vuosisadat', tyyppi: 'luonto', lat: 48.8462, lon: 2.3464,
         nosto: 'nosto-pariisin-vuosisadat',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
@@ -5349,11 +5349,11 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kalastajanlinnake', lat: 47.5023, lon: 19.0347, wiki: 'Kalastajanlinnake' },
       { nimi: 'Ketjusilta', lat: 47.499, lon: 19.0436, wiki: 'Széchenyin ketjusilta' },
       { nimi: 'Parlamenttitalo', lat: 47.507, lon: 19.0459, wiki: 'Unkarin parlamenttitalo' },
-      { nimi: 'Gellértinvuori', lat: 47.4869, lon: 19.0446, wiki: 'Gellértinvuori' },
+      { nimi: 'Gellértinvuori', tyyppi: 'luonto', lat: 47.4869, lon: 19.0446, wiki: 'Gellértinvuori' },
       { nimi: 'Pyhän Tapanin kirkko', lat: 47.5008, lon: 19.054, wiki: 'Pyhän Tapanin kirkko (Budapest)' },
       { nimi: 'Suuri kauppahalli', lat: 47.4866, lon: 19.059 },
       // Kainalossa oikeassa ylänurkassa.
-      { nimi: 'Sankarien aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
+      { nimi: 'Sankarien aukio', tyyppi: 'aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -5368,15 +5368,15 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Maanalainen', lat: 47.5057, lon: 19.0631,
+        nimi: 'Maanalainen', tyyppi: 'luonto', lat: 47.5057, lon: 19.0631,
         nosto: 'syvennys-budapest-kisfoldalatti',
       },
       {
-        nimi: 'Elmyr de Hory', lat: 47.4979, lon: 19.0402,
+        nimi: 'Elmyr de Hory', tyyppi: 'henkilo', lat: 47.4979, lon: 19.0402,
         nosto: 'skandaali-elmyr-de-hory-vaarentaja',
       },
       {
-        nimi: 'Seuson hopeat', lat: 47.4912, lon: 19.0625,
+        nimi: 'Seuson hopeat', tyyppi: 'esine', lat: 47.4912, lon: 19.0625,
         nosto: 'skandaali-seuso-aarteen-kiista',
       },
     ],
@@ -5417,7 +5417,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Prahan linna', lat: 50.0903, lon: 14.401, wiki: 'Prahan linna' },
       { nimi: 'Kaarlensilta', lat: 50.0866, lon: 14.4106, wiki: 'Kaarlensilta' },
       { nimi: 'Vanhauusi synagoga', lat: 50.09, lon: 14.4186, wiki: 'Vanhauusi synagoga' },
-      { nimi: 'Astronominen kello', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
+      { nimi: 'Astronominen kello', tyyppi: 'esine', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
       /*
        * Kuninkaanhovin käsikirjoitukset (`skandaali-...`) LIITETTIIN
        * TÄHÄN pisteeseen eikä omaksi merkikseen: väärennökset löytyivät
@@ -5521,7 +5521,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Valtionooppera', lat: 48.2033, lon: 16.3692, wiki: 'Wienin valtionooppera' },
       { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
       { nimi: 'Belvedere', lat: 48.1915, lon: 16.3809, wiki: 'Belvedere' },
-      { nimi: 'Jättiratas', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
+      { nimi: 'Jättiratas', tyyppi: 'luonto', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
       { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
@@ -5539,7 +5539,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki wien).
        */
       {
-        nimi: 'Vuoristovesijohto', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+        nimi: 'Vuoristovesijohto', tyyppi: 'luonto', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -5572,13 +5572,13 @@ export const KAUPUNKIKARTAT = {
        */
       // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
       {
-        nimi: 'Yhdeksäs 1824', lat: 48.2033, lon: 16.3708,
+        nimi: 'Yhdeksäs 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
         nosto: 'hetki-beethoven-yhdeksas-1824',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
       {
-        nimi: 'Figaro 1786', lat: 48.2078, lon: 16.3665,
+        nimi: 'Figaro 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -5592,7 +5592,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Rattaan kulmat', lat: 48.2167, lon: 16.3959,
+        nimi: 'Rattaan kulmat', tyyppi: 'henkilo', lat: 48.2167, lon: 16.3959,
         nosto: 'nosto-praterin-ratas',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -5606,7 +5606,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-taikahuilu-wiedenissa',
       },
       {
-        nimi: 'Tonava kaunoinen', lat: 48.2046, lon: 16.3793,
+        nimi: 'Tonava kaunoinen', tyyppi: 'ilmio', lat: 48.2046, lon: 16.3793,
         nosto: 'nosto-tonava-kaunoinen',
       },
     ],
@@ -5643,7 +5643,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Kairon torni', lat: 30.0459, lon: 31.2243 },
       { nimi: 'Egyptin museo', lat: 30.0478, lon: 31.2336 },
-      { nimi: 'Tahririn aukio', lat: 30.0444, lon: 31.2357, wiki: 'Tahririn aukio' },
+      { nimi: 'Tahririn aukio', tyyppi: 'aukio', lat: 30.0444, lon: 31.2357, wiki: 'Tahririn aukio' },
       /*
        * Täydennys 6 → 10 kohteeseen (18.8.2026, Kairon lehden
        * viimeistely nykystandardiin): Abdeenin palatsi, Sulttaani
@@ -5661,7 +5661,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Bab Zuweila', lat: 30.0428, lon: 31.2579 },
       { nimi: 'Saladinin linnoitus', lat: 30.0287, lon: 31.2599, wiki: 'Saladinin linnoitus' },
       { nimi: 'Khan el-Khalili', lat: 30.0477, lon: 31.2622, wiki: 'Khan el-Khalili' },
-      { nimi: 'Al-Azhar-puisto', lat: 30.0401, lon: 31.2641 },
+      { nimi: 'Al-Azhar-puisto', tyyppi: 'luonto', lat: 30.0401, lon: 31.2641 },
     ],
   },
   tripoli: {
@@ -5773,7 +5773,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Buckinghamin palatsi',
       },
       {
-        nimi: 'Trafalgar Square',
+        nimi: 'Trafalgar Square', tyyppi: 'aukio',
         lat: 51.508,
         lon: -0.1281,
         wiki: 'Trafalgar Square',
@@ -5829,7 +5829,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
        */
       {
-        nimi: 'Etelämeren kupla', lat: 51.5146, lon: -0.0837, nosto: 'skandaali-etelameren-kupla',
+        nimi: 'Etelämeren kupla', tyyppi: 'henkilo', lat: 51.5146, lon: -0.0837, nosto: 'skandaali-etelameren-kupla',
       },
       {
         nimi: 'Cheapsiden kätkö', lat: 51.5141, lon: -0.0937,
@@ -5867,28 +5867,28 @@ export const KAUPUNKIKARTAT = {
        */
       // Royal Institution, Albemarle Street.
       {
-        nimi: 'Faraday 1831', lat: 51.5098, lon: -0.1425,
+        nimi: 'Faraday 1831', tyyppi: 'henkilo', lat: 51.5098, lon: -0.1425,
         nosto: 'hetki-faraday-luento-1831',
       },
       // St Mary's, Praed Street — kartan länsireunassa, nimiö oikealle.
       {
-        nimi: 'Fleming 1928', lat: 51.5174, lon: -0.172,
+        nimi: 'Fleming 1928', tyyppi: 'henkilo', lat: 51.5174, lon: -0.172,
         nosto: 'hetki-fleming-malja-1928', nimiPuoli: 'oikea',
       },
       // Rotherhithen kuilu (Brunel Museum).
       {
-        nimi: 'Tunneli 1827', lat: 51.5031, lon: -0.0544,
+        nimi: 'Tunneli 1827', tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
         nosto: 'hetki-brunel-thames-tunnel-1827',
       },
       // Pudding Lane; Vanha London Bridge ja Etelämeren kupla vieressä, nimiö
       // oikealle.
       {
-        nimi: 'Palo 1666', lat: 51.5102, lon: -0.0853,
+        nimi: 'Palo 1666', tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
         nosto: 'hetki-lontoon-palo-1666', nimiPuoli: 'oikea',
       },
       // alkuperäisen Globen tontti Southwarkissa.
       {
-        nimi: 'Globe 1599', lat: 51.5067, lon: -0.0947,
+        nimi: 'Globe 1599', tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
         nosto: 'hetki-shakespeare-globe-1599',
       },
       /*
@@ -5901,16 +5901,16 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Metron höyryveturi', lat: 51.5226, lon: -0.1571,
+        nimi: 'Metron höyryveturi', tyyppi: 'esine', lat: 51.5226, lon: -0.1571,
         nosto: 'nosto-lontoon-metro-1863',
       },
       {
-        nimi: 'Exchange Alley', lat: 51.5131, lon: -0.0871,
+        nimi: 'Exchange Alley', tyyppi: 'aukio', lat: 51.5131, lon: -0.0871,
         nosto: 'nosto-exchange-alleyn-kupla',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Canaletto Lontoossa', lat: 51.501, lon: -0.1219,
+        nimi: 'Canaletto Lontoossa', tyyppi: 'taide', lat: 51.501, lon: -0.1219,
         nosto: 'nosto-canaletto-lontoossa',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5919,7 +5919,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-the-george-pubi',
       },
       {
-        nimi: 'Abbey Roadin suojatie', lat: 51.5117, lon: -0.1403,
+        nimi: 'Abbey Roadin suojatie', tyyppi: 'aukio', lat: 51.5117, lon: -0.1403,
         nosto: 'nosto-abbey-roadin-suojatie',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5928,7 +5928,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-leake-streetin-tunneli',
       },
       {
-        nimi: 'Neljäs jalusta', lat: 51.508, lon: -0.1281,
+        nimi: 'Neljäs jalusta', tyyppi: 'esine', lat: 51.508, lon: -0.1281,
         nosto: 'nosto-neljas-jalusta',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -5938,7 +5938,7 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Liukumäkiveistos', lat: 51.504, lon: -0.135,
+        nimi: 'Liukumäkiveistos', tyyppi: 'taide', lat: 51.504, lon: -0.135,
         nosto: 'nosto-orbitin-liukumaki',
       },
     ],
@@ -6079,7 +6079,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Hattupäinen ukkeli', lat: 52.505, lon: 13.335,
+        nimi: 'Hattupäinen ukkeli', tyyppi: 'esine', lat: 52.505, lon: 13.335,
         nosto: 'nosto-hattupainen-ukkeli',
       },
       {
@@ -6138,9 +6138,9 @@ export const KAUPUNKIKARTAT = {
        * suomenkielistä artikkelia.
        */
       { nimi: 'Kuninkaanlinna', lat: 40.418, lon: -3.7143, wiki: 'Palacio Real de Madrid' },
-      { nimi: 'Plaza Mayor', lat: 40.4155, lon: -3.7074, wiki: 'Plaza Mayor' },
+      { nimi: 'Plaza Mayor', tyyppi: 'aukio', lat: 40.4155, lon: -3.7074, wiki: 'Plaza Mayor' },
       { nimi: 'Puerta del Sol', lat: 40.4169, lon: -3.7033, wiki: 'Puerta del Sol' },
-      { nimi: 'Cibeleen aukio', lat: 40.4192, lon: -3.6931, wiki: 'Plaza de Cibeles' },
+      { nimi: 'Cibeleen aukio', tyyppi: 'aukio', lat: 40.4192, lon: -3.6931, wiki: 'Plaza de Cibeles' },
       { nimi: 'Prado-museo', lat: 40.4138, lon: -3.6921, wiki: 'Museo del Prado' },
       { nimi: 'Alcalán portti', lat: 40.42, lon: -3.6889, wiki: 'Puerta de Alcalá' },
       /*
@@ -6177,11 +6177,11 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-madrid-casadefieras',
       },
       {
-        nimi: 'Filipin patsas', lat: 40.418538, lon: -3.71224,
+        nimi: 'Filipin patsas', tyyppi: 'taide', lat: 40.418538, lon: -3.71224,
         nosto: 'syvennys-madrid-felipe',
       },
       {
-        nimi: 'Baldomera', lat: 40.4089, lon: -3.7009,
+        nimi: 'Baldomera', tyyppi: 'henkilo', lat: 40.4089, lon: -3.7009,
         nosto: 'skandaali-baldomera-larra-pyramidi',
       },
       /*
@@ -6194,12 +6194,12 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Tapaskierros', lat: 40.4154, lon: -3.7089,
+        nimi: 'Tapaskierros', tyyppi: 'ilmio', lat: 40.4154, lon: -3.7089,
         nosto: 'nosto-madridin-tapaskierros',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Goyan kansankuvat', lat: 40.4138, lon: -3.6921,
+        nimi: 'Goyan kansankuvat', tyyppi: 'taide', lat: 40.4138, lon: -3.6921,
         nosto: 'nosto-goyan-kansankuvat',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -6268,7 +6268,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Kaupungintalo', lat: 59.3275, lon: 18.0542, wiki: 'Tukholman kaupungintalo' },
       { nimi: 'Riddarholmenin kirkko', lat: 59.3247, lon: 18.064, wiki: 'Riddarholmskyrkan' },
-      { nimi: 'Sergelin tori', lat: 59.3326, lon: 18.0649, wiki: 'Sergelin tori' },
+      { nimi: 'Sergelin tori', tyyppi: 'aukio', lat: 59.3326, lon: 18.0649, wiki: 'Sergelin tori' },
       { nimi: 'Kuninkaanlinna', lat: 59.3268, lon: 18.0717, wiki: 'Tukholman kuninkaanlinna' },
       { nimi: 'Vasa-museo', lat: 59.328, lon: 18.0915, wiki: 'Vasa-museo' },
       { nimi: 'Skansen', lat: 59.3255, lon: 18.1035, wiki: 'Skansen' },
@@ -6286,7 +6286,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki tukholma).
        */
       {
-        nimi: 'Vädersolstavlan', lat: 59.3258, lon: 18.0703,
+        nimi: 'Vädersolstavlan', tyyppi: 'taide', lat: 59.3258, lon: 18.0703,
         nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen',
       },
       {
@@ -6314,7 +6314,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'skandaali-naamiaisten-laukaus',
       },
       {
-        nimi: 'Kreuger', lat: 59.3318, lon: 18.0696,
+        nimi: 'Kreuger', tyyppi: 'henkilo', lat: 59.3318, lon: 18.0696,
         nosto: 'skandaali-kreugerin-romahdus',
       },
     ],
@@ -6356,7 +6356,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Canal Grande', lat: 45.4415, lon: 12.3283, wiki: 'Canal Grande' },
       { nimi: 'La Fenicen oopperatalo', lat: 45.4336, lon: 12.3336, wiki: 'La Fenice' },
       { nimi: 'Rialton silta', lat: 45.438, lon: 12.3359, wiki: 'Rialton silta' },
-      { nimi: 'Pyhän Markuksen tori', lat: 45.4341, lon: 12.3387, wiki: 'Pyhän Markuksen tori' },
+      { nimi: 'Pyhän Markuksen tori', tyyppi: 'aukio', lat: 45.4341, lon: 12.3387, wiki: 'Pyhän Markuksen tori' },
       { nimi: 'San Giorgio Maggiore', lat: 45.4294, lon: 12.3433, wiki: 'San Giorgio Maggiore' },
       // Portin edusta eikä altaan reuna: entinen piste osui
       // telakka-altaaseen (vesitarkistin 9.8.2026).
@@ -6425,7 +6425,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pietarinkirkko', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
       { nimi: 'Castel Sant’Angelo', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
       { nimi: 'Espanjalaiset portaat', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
-      { nimi: 'Trevin suihkulähde', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
+      { nimi: 'Trevin suihkulähde', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
       { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
       /*
        * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
@@ -6506,7 +6506,7 @@ export const KAUPUNKIKARTAT = {
       // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
       // nimiö vasemmalle.
       {
-        nimi: 'Sikstus 1510', lat: 41.9029, lon: 12.4545,
+        nimi: 'Sikstus 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
         nosto: 'hetki-michelangelo-sikstus-1510',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6520,7 +6520,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Kolikko olan yli', lat: 41.9008, lon: 12.4831,
+        nimi: 'Kolikko olan yli', tyyppi: 'henkilo', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-rooman-kolikko',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -6540,7 +6540,7 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Nasone', lat: 41.8986, lon: 12.4769,
+        nimi: 'Nasone', tyyppi: 'esine', lat: 41.8986, lon: 12.4769,
         nosto: 'nosto-rooman-nasone',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6636,7 +6636,7 @@ export const KAUPUNKIKARTAT = {
        * kansallismuseo on olemassa mutta kertoo museoverkostosta eikä
        * tästä rakennuksesta — älä linkitä siihen.
        */
-      { nimi: 'Vanhankaupungin tori', lat: 52.2498, lon: 21.0122 },
+      { nimi: 'Vanhankaupungin tori', tyyppi: 'aukio', lat: 52.2498, lon: 21.0122 },
       {
         nimi: 'Varsovan linna', lat: 52.2479, lon: 21.0152, wiki: 'Varsovan linna',
         nosto: 'syvennys-varsova-canaletto',
@@ -6710,7 +6710,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Paksu Margareeta', lat: 59.4426, lon: 24.7496 },
       { nimi: 'Olevisten kirkko', lat: 59.4413, lon: 24.7479, wiki: 'Olevisten kirkko' },
       {
-        nimi: 'Raatihuoneentori', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone',
+        nimi: 'Raatihuoneentori', tyyppi: 'aukio', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone',
         nosto: 'syvennys-tallinna-kama',
       },
       {
@@ -6743,7 +6743,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-tallinna-kaksi-kaupunkia',
       },
       {
-        nimi: 'Pirtulaivat', lat: 59.4433, lon: 24.7511,
+        nimi: 'Pirtulaivat', tyyppi: 'esine', lat: 59.4433, lon: 24.7511,
         nosto: 'skandaali-pirtukauppa-suomenlahdella',
       },
     ],
@@ -6834,7 +6834,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Aleksanteri Nevskin katedraali (Sofia)',
       },
       { nimi: 'Sofian yliopisto', lat: 42.69354, lon: 23.33528, wiki: 'Sofian yliopisto' },
-      { nimi: 'Borisovan puutarha', lat: 42.6893, lon: 23.3372 },
+      { nimi: 'Borisovan puutarha', tyyppi: 'luonto', lat: 42.6893, lon: 23.3372 },
       { nimi: 'Kansalliskulttuuripalatsi', lat: 42.68476, lon: 23.31894 },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
@@ -6850,7 +6850,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki sofia).
        */
       {
-        nimi: 'Sofia-patsas', lat: 42.6978, lon: 23.3215,
+        nimi: 'Sofia-patsas', tyyppi: 'taide', lat: 42.6978, lon: 23.3215,
         nosto: 'syvennys-sofia-pollopatsas', nimiPuoli: 'vasen',
         siirto: { x: -25, y: -9 },
       },
@@ -6929,8 +6929,8 @@ export const KAUPUNKIKARTAT = {
        * Bukarestin ensimmäinen maininta.
        */
       { nimi: 'Romanian ateneum', lat: 44.44136, lon: 26.09736 },
-      { nimi: 'Cișmigiun puutarha', lat: 44.4372, lon: 26.0906 },
-      { nimi: 'Yliopiston aukio', lat: 44.43497, lon: 26.10088 },
+      { nimi: 'Cișmigiun puutarha', tyyppi: 'luonto', lat: 44.4372, lon: 26.0906 },
+      { nimi: 'Yliopiston aukio', tyyppi: 'aukio', lat: 44.43497, lon: 26.10088 },
       { nimi: 'Stavropoleoksen kirkko', lat: 44.43178, lon: 26.09883 },
       {
         nimi: 'Vanha ruhtinaanhovi', lat: 44.43011, lon: 26.10131, wiki: 'Vlad III',
@@ -6968,7 +6968,7 @@ export const KAUPUNKIKARTAT = {
        * (kattoVapaa).
        */
       {
-        nimi: 'Szathmárin studio', lat: 44.4305, lon: 26.1010,
+        nimi: 'Szathmárin studio', tyyppi: 'henkilo', lat: 44.4305, lon: 26.1010,
         nosto: 'syvennys-bukarest-szathmari', nimiPuoli: 'vasen',
         siirto: { x: -13, y: -22 },
       },
@@ -7112,7 +7112,7 @@ export const KAUPUNKIKARTAT = {
        * ilman täsmennettä ohjautuu täsmennyssivulle.
        */
       {
-        nimi: 'Kontraktovan aukio', lat: 50.4636, lon: 30.5178,
+        nimi: 'Kontraktovan aukio', tyyppi: 'aukio', lat: 50.4636, lon: 30.5178,
         nosto: 'syvennys-kiova-tsumakit',
       },
       {
@@ -7135,7 +7135,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-sofian-mosaiikit',
       },
       {
-        nimi: 'Itsenäisyyden aukio',
+        nimi: 'Itsenäisyyden aukio', tyyppi: 'aukio',
         lat: 50.45,
         lon: 30.5242,
         wiki: 'Itsenäisyyden aukio (Kiova)',
@@ -7197,7 +7197,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Kristuksen ylösnousemuksen katedraali',
       },
       {
-        nimi: 'Vaskiratsastaja', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja',
+        nimi: 'Vaskiratsastaja', tyyppi: 'taide', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja',
         nosto: 'syvennys-pietari-ukkoskivi',
       },
       { nimi: 'Kazanin katedraali', lat: 59.9343, lon: 30.3245, wiki: 'Kazanin katedraali' },
@@ -7230,12 +7230,12 @@ export const KAUPUNKIKARTAT = {
       // Jänissaaren länsipää; Pietari-Paavalin linnoituksen piste on saman saaren
       // keskellä.
       {
-        nimi: 'Jänissaari 1703', lat: 59.9515, lon: 30.312,
+        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9515, lon: 30.312,
         nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
       },
       // Pietarin yliopisto, Vasilinsaari.
       {
-        nimi: 'Mendelejev 1869', lat: 59.942, lon: 30.299,
+        nimi: 'Mendelejev 1869', tyyppi: 'henkilo', lat: 59.942, lon: 30.299,
         nosto: 'hetki-mendelejev-kortit-1869',
       },
     ],
@@ -7279,7 +7279,7 @@ export const KAUPUNKIKARTAT = {
        * merkkiä eli pidempi kuin yksikään muu kartan kohde.
        */
       { nimi: 'Bolšoi-teatteri', lat: 55.7603, lon: 37.6186, wiki: 'Bolšoi-teatteri' },
-      { nimi: 'Punainen tori', lat: 55.7542, lon: 37.62, wiki: 'Punainen tori' },
+      { nimi: 'Punainen tori', tyyppi: 'aukio', lat: 55.7542, lon: 37.62, wiki: 'Punainen tori' },
       {
         nimi: 'Pyhän Vasilin katedraali',
         lat: 55.7525,
@@ -7316,7 +7316,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki moskova).
        */
       {
-        nimi: 'Näyttely 1872', lat: 55.7577, lon: 37.6295, nosto: 'syvennys-moskova-nayttely1872',
+        nimi: 'Näyttely 1872', tyyppi: 'henkilo', lat: 55.7577, lon: 37.6295, nosto: 'syvennys-moskova-nayttely1872',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -7382,8 +7382,8 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
         nosto: 'syvennys-odessa-ooppera',
       },
-      { nimi: 'Kaupunginpuisto', lat: 46.4848, lon: 30.7344 },
-      { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
+      { nimi: 'Kaupunginpuisto', tyyppi: 'luonto', lat: 46.4848, lon: 30.7344 },
+      { nimi: 'Privozin tori', tyyppi: 'esine', lat: 46.4699, lon: 30.7368 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -7473,13 +7473,13 @@ export const KAUPUNKIKARTAT = {
         nosto: 'skandaali-huudon-varkaus',
       },
       {
-        nimi: 'Boheemikirja', lat: 59.9135, lon: 10.741,
+        nimi: 'Boheemikirja', tyyppi: 'esine', lat: 59.9135, lon: 10.741,
         nosto: 'skandaali-boheemikirjan-takavarikko',
       },
       // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026): Fram
       // lähti Pipervikasta, nykyisen kaupungintalon edustalta.
       {
-        nimi: 'Fram 1893', lat: 59.9098, lon: 10.7318,
+        nimi: 'Fram 1893', tyyppi: 'henkilo', lat: 59.9098, lon: 10.7318,
         nosto: 'hetki-nansen-fram-1893',
       },
     ],
@@ -7551,7 +7551,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Torre del Oro', lat: 37.3824, lon: -5.9965, wiki: 'Torre del Oro' },
       { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983, wiki: 'Maestranza (Seville)' },
       { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023, wiki: 'Puente de Isabel II' },
-      { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869, wiki: 'Plaza de España, Seville' },
+      { nimi: 'Plaza de España', tyyppi: 'aukio', lat: 37.3769, lon: -5.9869, wiki: 'Plaza de España, Seville' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -7634,14 +7634,14 @@ export const KAUPUNKIKARTAT = {
        */
       // Patsas istuu kivellä vedessä; piste on rantapromenadilla,
       // jotta se osuu maalle (vesitarkistin).
-      { nimi: 'Pieni merenneito', lat: 55.6926, lon: 12.5989, wiki: 'Pieni merenneito (patsas)' },
+      { nimi: 'Pieni merenneito', tyyppi: 'taide', lat: 55.6926, lon: 12.5989, wiki: 'Pieni merenneito (patsas)' },
       { nimi: 'Amalienborg', lat: 55.6841, lon: 12.5934 },
       { nimi: 'Rundetårn', lat: 55.6813, lon: 12.5757, wiki: 'Rundetårn' },
       // Nyhavn on kanava, ja kuuluisa osa on pohjoisen laiturin
       // värikkäät talot — piste on laiturilla eikä vedessä.
       { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
       { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
-      { nimi: 'Tivoli', lat: 55.6737, lon: 12.5681 },
+      { nimi: 'Tivoli', tyyppi: 'luonto', lat: 55.6737, lon: 12.5681 },
       /*
        * KOLME LISÄKOHDETTA (paketti K1) — kartan numerointi tulee
        * järjestyksestä, joten nämä tulevat listan loppuun eivätkä
@@ -7696,11 +7696,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Vararikko 1813', lat: 55.6756, lon: 12.5839,
+        nimi: 'Vararikko 1813', tyyppi: 'henkilo', lat: 55.6756, lon: 12.5839,
         nosto: 'skandaali-tanskan-valtionvararikko-1813',
       },
       {
-        nimi: 'Alberti', lat: 55.6772, lon: 12.5731,
+        nimi: 'Alberti', tyyppi: 'esine', lat: 55.6772, lon: 12.5731,
         nosto: 'skandaali-alberti-skandaali',
       },
     ],
@@ -7868,7 +7868,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Guillaume II:n aukio', lat: 49.6108, lon: 6.1303,
+        nimi: 'Guillaume II:n aukio', tyyppi: 'aukio', lat: 49.6108, lon: 6.1303,
         teksti: 'Guillaume II:n aukio eli kansanomaisesti Knuedler on '
           + 'vanhankaupungin pääaukio. Paikalla seisoi keskiajalta asti '
           + 'fransiskaaniluostari, jonka Ranskan vallankumoussotilaat '
@@ -7950,7 +7950,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Chemin de la Corniche', lat: 49.6098, lon: 6.1345,
+        nimi: 'Chemin de la Corniche', tyyppi: 'aukio', lat: 49.6098, lon: 6.1345,
         teksti: 'Chemin de la Corniche kulkee entisten muurien harjalla '
           + 'Bock-kalliolta Pyhän Hengen linnoituksen suuntaan, ja siltä '
           + 'avautuu näkymä alas Alzette-joen mutkaan, Grundin '
@@ -8056,7 +8056,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Galeries Royales Saint-Hubert',
       },
       {
-        nimi: 'Mont des Arts', lat: 50.84377, lon: 4.3569,
+        nimi: 'Mont des Arts', tyyppi: 'aukio', lat: 50.84377, lon: 4.3569,
         aika: '1910',
         teksti: 'Mont des Arts eli Kunstberg on Brysselin keskustan kukkulaan '
           + 'rakennettu kulttuurikortteli. Isoisän matkan aikaan sitä ei ole '
@@ -8118,7 +8118,7 @@ export const KAUPUNKIKARTAT = {
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
-        nimi: 'Tivoli-puisto', lat: 46.05404, lon: 14.49574,
+        nimi: 'Tivoli-puisto', tyyppi: 'luonto', lat: 46.05404, lon: 14.49574,
         aika: '1813',
         teksti: 'Tivoli on Ljubljanan suurin puisto. Sen suunnitteli ranskalainen '
           + 'insinööri Jean Blanchard vuonna 1813, kun kaupunki oli Napoleonin '
@@ -8162,7 +8162,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Prešernin aukio', lat: 46.05165, lon: 14.50575,
+        nimi: 'Prešernin aukio', tyyppi: 'aukio', lat: 46.05165, lon: 14.50575,
         aika: '1646–1660',
         teksti: 'Prešernin aukio on Ljubljanan keskeinen aukio. Isoisän aikaan se '
           + 'on vanhankaupungin porttien edessä sijaitseva suppilomainen '
@@ -8191,7 +8191,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ljubljanan tuomiokirkko', lat: 46.05076, lon: 14.50825, wiki: 'Ljubljanan tuomiokirkko' },
       { nimi: 'Ljubljanan linna', lat: 46.04885, lon: 14.50857, wiki: 'Ljubljanan linna' },
       {
-        nimi: 'Keskustori', lat: 46.0512, lon: 14.50966,
+        nimi: 'Keskustori', tyyppi: 'aukio', lat: 46.0512, lon: 14.50966,
         aika: '1940–1942',
         teksti: 'Vodnikin aukiolla ei ole isoisän aikaan toria. Paikalla seisoo '
           + 'vanha luostari, jossa toimii hiippakunnan tyttökoulu. Se tuhoutuu '
@@ -8280,7 +8280,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Hlavná-katu', lat: 48.72118, lon: 21.25762,
+        nimi: 'Hlavná-katu', tyyppi: 'aukio', lat: 48.72118, lon: 21.25762,
         teksti: 'Hlavná eli Pääkatu on Košicen keskuskatu, ja lähes koko katu on '
           + 'nykyään kävelyaluetta. Se on syntynyt keskiaikaisena toriaukiona, ja '
           + 'siksi sen pohjapiirros on kara: keskeltä leveä ja päistä kapea. '
@@ -8466,7 +8466,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Suurmestarin palatsi (Valletta)',
       },
       {
-        nimi: 'Yläbarrakan puutarhat', lat: 35.894722, lon: 14.512222,
+        nimi: 'Yläbarrakan puutarhat', tyyppi: 'luonto', lat: 35.894722, lon: 14.512222,
         aika: '1661',
         teksti: 'Yläbarrakan puutarha rakennettiin vuonna 1661 Italian '
           + 'ritarikieliryhmän yksityiseksi puistoksi Grand Harbourin '
@@ -8574,7 +8574,7 @@ export const KAUPUNKIKARTAT = {
       // Puutarha on iso; piste on sen pohjoispäässä Pitti-palatsin
       // takana, jotta se ei osu kartan vasempaan alanurkkaan
       // mittakaavajanan päälle.
-      { nimi: 'Bobolin puutarha', lat: 43.7645, lon: 11.25 },
+      { nimi: 'Bobolin puutarha', tyyppi: 'luonto', lat: 43.7645, lon: 11.25 },
       // Via Ricasoli 58–60. Piste on rajauksen pohjoisreunan
       // tuntumassa (43,778) mutta reilut sata metriä sen sisällä.
       { nimi: 'Galleria dell\'Accademia', lat: 43.7769, lon: 11.2589 },
@@ -8722,7 +8722,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vilnan tuomiokirkko', lat: 54.6858, lon: 25.2874, wiki: 'Vilnan tuomiokirkko' },
       { nimi: 'Pyhän Annan kirkko', lat: 54.6829, lon: 25.2942 },
       { nimi: 'Vilnan yliopisto', lat: 54.6819, lon: 25.2867, wiki: 'Vilnan yliopisto' },
-      { nimi: 'Užupis', lat: 54.681, lon: 25.2977, wiki: 'Užupis' },
+      { nimi: 'Užupis', tyyppi: 'aukio', lat: 54.681, lon: 25.2977, wiki: 'Užupis' },
       { nimi: 'Aamuportti', lat: 54.6733, lon: 25.2896 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -8738,15 +8738,15 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Kirjankantajat', lat: 54.6825, lon: 25.2872,
+        nimi: 'Kirjankantajat', tyyppi: 'luonto', lat: 54.6825, lon: 25.2872,
         nosto: 'syvennys-vilna-knygnesiai',
       },
       {
-        nimi: 'Salattu avioliitto', lat: 54.6862, lon: 25.289,
+        nimi: 'Salattu avioliitto', tyyppi: 'henkilo', lat: 54.6862, lon: 25.289,
         nosto: 'skandaali-barbora-salainen-avioliitto',
       },
       {
-        nimi: 'Boratynka', lat: 54.6861, lon: 25.2833,
+        nimi: 'Boratynka', tyyppi: 'esine', lat: 54.6861, lon: 25.2833,
         nosto: 'skandaali-boratynka-kuparikohu',
       },
     ],
@@ -8790,7 +8790,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tromssan tuomiokirkko', lat: 69.6497, lon: 18.956, wiki: 'Tromssan tuomiokirkko' },
       { nimi: 'Jäämerenkatedraali', lat: 69.6489, lon: 18.9976, wiki: 'Jäämerenkatedraali' },
       { nimi: 'Polaria', lat: 69.6455, lon: 18.9515, wiki: 'Polaria (akvaario)' },
-      { nimi: 'Fjellheisenin köysirata', lat: 69.6395, lon: 18.9958 },
+      { nimi: 'Fjellheisenin köysirata', tyyppi: 'esine', lat: 69.6395, lon: 18.9958 },
     ],
   },
   dubai: {
@@ -8846,11 +8846,11 @@ export const KAUPUNKIKARTAT = {
        * (25.2671 / 55.3056). Aineiston mukainen laituripiste
        * 25.2664 / 55.3058 jäi noin 50 metriä veden puolelle.
        */
-      { nimi: 'Kultasuuk', lat: 25.2701, lon: 55.2982 },
+      { nimi: 'Kultasuuk', tyyppi: 'aukio', lat: 25.2701, lon: 55.2982 },
       { nimi: 'Dhow-satama', lat: 25.2671, lon: 55.3056, wiki: 'Dhow' },
       { nimi: 'Al Shindagha', lat: 25.2665, lon: 55.289 },
       { nimi: 'Abra-laiturit', lat: 25.265, lon: 55.2953 },
-      { nimi: 'Bastakian kaupunginosa', lat: 25.2639, lon: 55.3 },
+      { nimi: 'Bastakian kaupunginosa', tyyppi: 'aukio', lat: 25.2639, lon: 55.3 },
       { nimi: 'Al Fahidin linnoitus', lat: 25.2632, lon: 55.2972, wiki: 'Dubain museo' },
       /*
        * Neljä lisäkohdetta 18.8.2026 (6 → 10, lehden viimeistely).
@@ -8873,7 +8873,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Al Ahmadiyan koulu', lat: 25.2684, lon: 55.2949 },
       { nimi: 'Maustesuuk', lat: 25.2676, lon: 55.2971 },
       { nimi: 'Suuri moskeija', lat: 25.2644, lon: 55.2968 },
-      { nimi: 'Tekstiilisuuk', lat: 25.2635, lon: 55.294 },
+      { nimi: 'Tekstiilisuuk', tyyppi: 'aukio', lat: 25.2635, lon: 55.294 },
     ],
   },
 
@@ -8995,7 +8995,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Qasr al-Bint', lat: 30.3295, lon: 35.4401 },
       { nimi: 'Suuri temppeli', lat: 30.3288, lon: 35.4423 },
       { nimi: 'Teatteri', lat: 30.3248, lon: 35.447 },
-      { nimi: 'Siq', lat: 30.3232, lon: 35.4567 },
+      { nimi: 'Siq', tyyppi: 'luonto', lat: 30.3232, lon: 35.4567 },
       /*
        * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
        * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
@@ -9190,7 +9190,7 @@ export const KAUPUNKIKARTAT = {
       + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Petrassa. */
-      { nimi: 'Jabal al-Nour', lat: 21.4581, lon: 39.8614 },
+      { nimi: 'Jabal al-Nour', tyyppi: 'luonto', lat: 21.4581, lon: 39.8614 },
       { nimi: 'Jannat al-Mu\'alla', lat: 21.4369, lon: 39.8292 },
       { nimi: 'Jinnien moskeija', lat: 21.4334, lon: 39.829 },
       { nimi: 'Mekan kirjasto', lat: 21.425, lon: 39.83 },
@@ -9261,7 +9261,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Al-Bakiriyyan moskeija', lat: 15.35599, lon: 44.21975 },
-      { nimi: 'Suolatori', lat: 15.35496, lon: 44.21584 },
+      { nimi: 'Suolatori', tyyppi: 'aukio', lat: 15.35496, lon: 44.21584 },
       { nimi: 'Talhan moskeija', lat: 15.35399, lon: 44.21238 },
       { nimi: 'Suuri moskeija', lat: 15.35315, lon: 44.2149 },
       { nimi: 'Al-Mahdin moskeija', lat: 15.35308, lon: 44.20922 },
@@ -9339,7 +9339,7 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään; kainalo ensin, kuten Mekassa. */
       { nimi: 'Steamer Point', lat: 12.789904, lon: 44.98151 },
       { nimi: 'Kansallismuseo', lat: 12.77892, lon: 45.04306 },
-      { nimi: 'Craterin tori', lat: 12.77755, lon: 45.03497 },
+      { nimi: 'Craterin tori', tyyppi: 'aukio', lat: 12.77755, lon: 45.03497 },
       { nimi: 'Tawilan altaat', lat: 12.77459, lon: 45.02912 },
     ],
   },
@@ -9400,7 +9400,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Al-Haffan basaari', lat: 17.0029, lon: 54.1025 },
       { nimi: 'Nabi Umranin hauta', lat: 17.0214, lon: 54.1113 },
       { nimi: 'Burj an-Nahda', lat: 17.025, lon: 54.1118 },
-      { nimi: 'Al-Baleedin puisto', lat: 17.0069, lon: 54.1335 },
+      { nimi: 'Al-Baleedin puisto', tyyppi: 'luonto', lat: 17.0069, lon: 54.1335 },
       { nimi: 'Suitsukemuseo', lat: 17.0094, lon: 54.1361 },
     ],
   },
@@ -9480,7 +9480,7 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Bash Tapian linna', lat: 36.3554, lon: 43.1216 },
       { nimi: 'Qara Saray', lat: 36.3528, lon: 43.1257 },
-      { nimi: 'Nabi Yunusin kumpu', lat: 36.3481, lon: 43.1594 },
+      { nimi: 'Nabi Yunusin kumpu', tyyppi: 'luonto', lat: 36.3481, lon: 43.1594 },
       { nimi: 'Al-Masfin moskeija', lat: 36.3464, lon: 43.1322 },
       { nimi: 'Al-Nabi Jirjisin moskeija', lat: 36.3443, lon: 43.1303 },
       { nimi: 'Al-Nurin moskeija', lat: 36.3431, lon: 43.1267 },
@@ -9536,7 +9536,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Sanam Luang', lat: 13.755, lon: 100.4931 },
-      { nimi: 'Wat Saket ja Kultainen vuori', lat: 13.7539, lon: 100.5083 },
+      { nimi: 'Wat Saket ja Kultainen vuori', tyyppi: 'luonto', lat: 13.7539, lon: 100.5083 },
       { nimi: 'Sao Ching Cha', lat: 13.7519, lon: 100.5014 },
       { nimi: 'Wat Phra Kaew', lat: 13.7514, lon: 100.4925 },
       { nimi: 'Suurpalatsi', lat: 13.7501, lon: 100.492 },
@@ -9619,7 +9619,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Yonghe-temppeli', lat: 39.9469, lon: 116.4111 },
       { nimi: 'Nanluoguxiang', lat: 39.9425, lon: 116.3964 },
       { nimi: 'Rumpu- ja kellotorni', lat: 39.9402, lon: 116.3896 },
-      { nimi: 'Jingshanin puisto', lat: 39.9236, lon: 116.3906 },
+      { nimi: 'Jingshanin puisto', tyyppi: 'luonto', lat: 39.9236, lon: 116.3906 },
       { nimi: 'Kielletty kaupunki', lat: 39.9158, lon: 116.3908 },
       { nimi: 'Tiananmen', lat: 39.9073, lon: 116.3911 },
       { nimi: 'Zhengyangmen', lat: 39.8992, lon: 116.3915 },
@@ -9755,9 +9755,9 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Kaupungin sauna', lat: 59.5693, lon: 150.7943 },
       { nimi: 'Severovostokzoloton talo', lat: 59.5658, lon: 150.8101 },
-      { nimi: 'Leninin valtakatu 18', lat: 59.5651, lon: 150.804 },
+      { nimi: 'Leninin valtakatu 18', tyyppi: 'aukio', lat: 59.5651, lon: 150.804 },
       { nimi: 'Kinoteatteri Gornjak', lat: 59.5633, lon: 150.8035 },
-      { nimi: 'Nagajevanlahti', lat: 59.5622, lon: 150.7763 },
+      { nimi: 'Nagajevanlahti', tyyppi: 'luonto', lat: 59.5622, lon: 150.7763 },
       { nimi: 'Urheilupalatsi', lat: 59.561, lon: 150.8071 },
       { nimi: 'Pushkinin kirjasto', lat: 59.5592, lon: 150.8148 },
     ],
@@ -9878,9 +9878,9 @@ export const KAUPUNKIKARTAT = {
       + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
-      { nimi: 'Pokrovskin puisto', lat: 43.1258, lon: 131.8914 },
+      { nimi: 'Pokrovskin puisto', tyyppi: 'luonto', lat: 43.1258, lon: 131.8914 },
       { nimi: 'Linnoitusmuseo', lat: 43.1225, lon: 131.8766 },
-      { nimi: 'Kotkanpesän kukkula', lat: 43.1224, lon: 131.899 },
+      { nimi: 'Kotkanpesän kukkula', tyyppi: 'luonto', lat: 43.1224, lon: 131.899 },
       { nimi: 'Funikulaari', lat: 43.1166, lon: 131.9004 },
       { nimi: 'Arsenjevin museo', lat: 43.1164, lon: 131.8822 },
       { nimi: 'GUM-tavaratalo', lat: 43.1156, lon: 131.8879 },
@@ -9963,7 +9963,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vanha rautatieasema', lat: 56.85879, lon: 60.60074 },
       { nimi: 'Kharitonovin kartano', lat: 56.84414, lon: 60.60953 },
       { nimi: 'Uralin valtionyliopisto', lat: 56.8404, lon: 60.6168 },
-      { nimi: 'Historiallinen aukio', lat: 56.83805, lon: 60.60453 },
+      { nimi: 'Historiallinen aukio', tyyppi: 'aukio', lat: 56.83805, lon: 60.60453 },
       { nimi: 'Kuvataidemuseo', lat: 56.83513, lon: 60.60324 },
       { nimi: 'Suuri Zlatoust', lat: 56.83466, lon: 60.60052 },
       { nimi: 'Kolminaisuuden katedraali', lat: 56.82733, lon: 60.61437 },
@@ -10111,7 +10111,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Taivaaseenastumisen kirkko', lat: 52.29045, lon: 104.28246 },
       { nimi: 'Rautatieasema', lat: 52.28293, lon: 104.25981 },
       { nimi: 'Ristin ylentämisen kirkko', lat: 52.27636, lon: 104.28837 },
-      { nimi: '130. kortteli', lat: 52.27394, lon: 104.28987 },
+      { nimi: '130. kortteli', tyyppi: 'aukio', lat: 52.27394, lon: 104.28987 },
       /*
        * TÄMÄ PISTE ON VEDESSÄ, JA SE ON OIKEIN.
        * tools/tarkista-karttapisteet.mjs merkitsee sen vedeksi, kuten
@@ -10185,7 +10185,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ginkaku-ji', lat: 35.0267, lon: 135.7983 },
       { nimi: 'Keisarillinen palatsi', lat: 35.0253, lon: 135.7622 },
       { nimi: 'Nijō-linna', lat: 35.0142, lon: 135.7475 },
-      { nimi: 'Nishiki-tori', lat: 35.005, lon: 135.7661 },
+      { nimi: 'Nishiki-tori', tyyppi: 'aukio', lat: 35.005, lon: 135.7661 },
       { nimi: 'Gion', lat: 35.0035, lon: 135.7751 },
       { nimi: 'Kiyomizu-dera', lat: 34.995, lon: 135.785 },
       { nimi: 'Sanjūsangen-dō', lat: 34.9878, lon: 135.7717 },
@@ -10250,12 +10250,12 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Sultan-moskeija', lat: 1.3022, lon: 103.859 },
       { nimi: 'Raffles Hotel', lat: 1.29468, lon: 103.85464 },
-      { nimi: 'Fort Canningin kukkula', lat: 1.29444, lon: 103.84694 },
+      { nimi: 'Fort Canningin kukkula', tyyppi: 'luonto', lat: 1.29444, lon: 103.84694 },
       { nimi: 'Clarke Quay', lat: 1.29002, lon: 103.84609 },
       { nimi: 'Empress Place', lat: 1.28722, lon: 103.85167 },
       { nimi: 'Boat Quay', lat: 1.28685, lon: 103.84951 },
-      { nimi: 'Merlion-puisto', lat: 1.28681, lon: 103.8545 },
-      { nimi: 'Gardens by the Bay', lat: 1.28472, lon: 103.865 },
+      { nimi: 'Merlion-puisto', tyyppi: 'luonto', lat: 1.28681, lon: 103.8545 },
+      { nimi: 'Gardens by the Bay', tyyppi: 'luonto', lat: 1.28472, lon: 103.865 },
       { nimi: 'Sri Mariamman -temppeli', lat: 1.28261, lon: 103.84528 },
       { nimi: 'Thian Hock Keng -temppeli', lat: 1.28106, lon: 103.84753 },
     ],
@@ -10315,7 +10315,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hazrat Khizrin moskeija', lat: 39.66343, lon: 66.98324 },
       { nimi: 'Shah-i-Zindan hautakuja', lat: 39.66306, lon: 66.98778 },
       { nimi: 'Bibi-Khanymin moskeija', lat: 39.66056, lon: 66.97917 },
-      { nimi: 'Registanin aukio', lat: 39.65472, lon: 66.97556 },
+      { nimi: 'Registanin aukio', tyyppi: 'aukio', lat: 39.65472, lon: 66.97556 },
       { nimi: 'Gur-e-Amir', lat: 39.64833, lon: 66.96889 },
       { nimi: 'Ishratkhanan mausoleumi', lat: 39.6431, lon: 66.991 },
     ],
@@ -10396,7 +10396,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri moskeija', lat: 34.26333, lon: 108.93639 },
       { nimi: 'Rumpitorni', lat: 34.26167, lon: 108.93861 },
       { nimi: 'Kellotorni', lat: 34.261, lon: 108.942 },
-      { nimi: 'Steelametsä', lat: 34.25517, lon: 108.94812 },
+      { nimi: 'Steelametsä', tyyppi: 'luonto', lat: 34.25517, lon: 108.94812 },
       { nimi: 'Yongning-portti', lat: 34.2531, lon: 108.94232 },
       { nimi: 'Shaanxin historiallinen museo', lat: 34.22528, lon: 108.95139 },
       { nimi: 'Suuri villihanhipagoda', lat: 34.219842, lon: 108.959354 },
@@ -10474,7 +10474,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Manikarnika Ghat', lat: 25.31087, lon: 83.01409 },
       { nimi: 'Kashi Vishwanath -temppeli', lat: 25.31077, lon: 83.01061 },
       { nimi: 'Dashashwamedh Ghat', lat: 25.30717, lon: 83.01034 },
-      { nimi: 'Assi Ghat', lat: 25.28865, lon: 83.00676 },
+      { nimi: 'Assi Ghat', tyyppi: 'luonto', lat: 25.28865, lon: 83.00676 },
       { nimi: 'Durga Kund -temppeli', lat: 25.28861, lon: 82.99927 },
       { nimi: 'Ramnagarin linnoitus', lat: 25.2697, lon: 83.0245 },
     ],
@@ -10608,7 +10608,7 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Xi'anissa. */
       { nimi: 'Gandantegchinlenin luostari', lat: 47.92306, lon: 106.895 },
       { nimi: 'Mongolian kansallismuseo', lat: 47.9208, lon: 106.9154 },
-      { nimi: 'Sükhbaatarin aukio', lat: 47.91889, lon: 106.9175 },
+      { nimi: 'Sükhbaatarin aukio', tyyppi: 'aukio', lat: 47.91889, lon: 106.9175 },
       { nimi: 'Choijin Laman temppeli', lat: 47.915, lon: 106.91833 },
       { nimi: 'Rautatieasema', lat: 47.90833, lon: 106.88389 },
       { nimi: 'Kansallisstadion', lat: 47.90214, lon: 106.91625 },
@@ -10683,12 +10683,12 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Boudhanath', lat: 27.72139, lon: 85.36194 },
       { nimi: 'Swayambhunath', lat: 27.715, lon: 85.29 },
-      { nimi: 'Unelmien puutarha', lat: 27.71417, lon: 85.31472 },
+      { nimi: 'Unelmien puutarha', tyyppi: 'luonto', lat: 27.71417, lon: 85.31472 },
       { nimi: 'Pashupatinath', lat: 27.7106957, lon: 85.3480682 },
       { nimi: 'Rani Pokhari', lat: 27.707847, lon: 85.315447 },
-      { nimi: 'Kathmandun Durbar-aukio', lat: 27.70415, lon: 85.30647 },
+      { nimi: 'Kathmandun Durbar-aukio', tyyppi: 'aukio', lat: 27.70415, lon: 85.30647 },
       { nimi: 'Dharahara', lat: 27.7007, lon: 85.3119 },
-      { nimi: 'Patanin Durbar-aukio', lat: 27.6734, lon: 85.325 },
+      { nimi: 'Patanin Durbar-aukio', tyyppi: 'aukio', lat: 27.6734, lon: 85.325 },
     ],
   },
   /*
@@ -10752,7 +10752,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Astana Opera', lat: 51.135556, lon: 71.410917 },
       { nimi: 'Khan Shatyr', lat: 51.132222, lon: 71.403889 },
       { nimi: 'Bajterek', lat: 51.128333, lon: 71.430556 },
-      { nimi: 'Nurjol-bulevardi', lat: 51.127208, lon: 71.436947 },
+      { nimi: 'Nurjol-bulevardi', tyyppi: 'aukio', lat: 51.127208, lon: 71.436947 },
       { nimi: 'Akorda', lat: 51.125833, lon: 71.446389 },
       { nimi: 'Hazrat Sultanin moskeija', lat: 51.125, lon: 71.4722 },
       { nimi: 'Rauhan ja sovinnon palatsi', lat: 51.123056, lon: 71.463611 },
@@ -10813,7 +10813,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Huaisheng-moskeija', lat: 23.1253, lon: 113.2536 },
       { nimi: 'Pyhän sydämen katedraali', lat: 23.1173, lon: 113.2548 },
       { nimi: 'Kolmentoista faktorian paikka', lat: 23.109743, lon: 113.251607 },
-      { nimi: 'Shamianin saari', lat: 23.1094, lon: 113.2394 },
+      { nimi: 'Shamianin saari', tyyppi: 'luonto', lat: 23.1094, lon: 113.2394 },
     ],
   },
   /*
@@ -10874,7 +10874,7 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Chaukhtatgyin temppeli', lat: 16.811623, lon: 96.163764 },
       { nimi: 'Shwedagon-pagodi', lat: 16.798354, lon: 96.149705 },
-      { nimi: 'Kandawgyi-järvi ja Karaweik', lat: 16.7986, lon: 96.1657 },
+      { nimi: 'Kandawgyi-järvi ja Karaweik', tyyppi: 'luonto', lat: 16.7986, lon: 96.1657 },
       { nimi: 'Yangonin keskusasema', lat: 16.7817, lon: 96.1611 },
       { nimi: 'Bogyoken markkinat', lat: 16.78038, lon: 96.1556 },
       { nimi: 'Sihteeristö', lat: 16.77556, lon: 96.16583 },
@@ -10937,13 +10937,13 @@ export const KAUPUNKIKARTAT = {
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
-      { nimi: 'Mandalay-kukkula', lat: 22.014167, lon: 96.1075 },
+      { nimi: 'Mandalay-kukkula', tyyppi: 'luonto', lat: 22.014167, lon: 96.1075 },
       { nimi: 'Kuthodaw-pagodi', lat: 22.004712, lon: 96.112902 },
       { nimi: 'Kyauktawgyi-pagodi', lat: 22.004474, lon: 96.106582 },
       { nimi: 'Sandamuni-pagodi', lat: 22.00347, lon: 96.109758 },
       { nimi: 'Shwenandaw-luostari', lat: 22.000675, lon: 96.113722 },
       { nimi: 'Mandalayn palatsi', lat: 21.992942, lon: 96.095911 },
-      { nimi: 'Zegyo-tori', lat: 21.9826, lon: 96.0771 },
+      { nimi: 'Zegyo-tori', tyyppi: 'aukio', lat: 21.9826, lon: 96.0771 },
       { nimi: 'Setkyathiha-pagodi', lat: 21.9768, lon: 96.075 },
       { nimi: 'Mahamuni-temppeli', lat: 21.951869, lon: 96.078619 },
     ],
@@ -11016,14 +11016,14 @@ export const KAUPUNKIKARTAT = {
        * koska se on kainalossa eikä pääkuvassa (Bukarestin malli).
        */
       { nimi: 'Baoan-temppeli', lat: 25.073173, lon: 121.515562, wiki: 'Dalongdong Baoan Temple' },
-      { nimi: 'Dihua-katu', lat: 25.066552, lon: 121.509948, wiki: 'Dihua Street' },
+      { nimi: 'Dihua-katu', tyyppi: 'aukio', lat: 25.066552, lon: 121.509948, wiki: 'Dihua Street' },
       { nimi: 'Pohjoisportti', lat: 25.04772, lon: 121.51121, wiki: 'Taipei North Gate' },
       { nimi: 'Presidentinlinna', lat: 25.04, lon: 121.511944, wiki: 'Presidential Office Building, Taipei' },
       { nimi: 'Punainen talo', lat: 25.041987, lon: 121.506739, wiki: 'Red House Theater' },
       { nimi: 'Lungshan-temppeli', lat: 25.037222, lon: 121.499444, wiki: 'Longshan Temple (Taipei)' },
-      { nimi: 'Bopiliaon vanha kortteli', lat: 25.03693, lon: 121.50214, wiki: 'Bopiliao Historic Block' },
+      { nimi: 'Bopiliaon vanha kortteli', tyyppi: 'aukio', lat: 25.03693, lon: 121.50214, wiki: 'Bopiliao Historic Block' },
       { nimi: 'Chiang Kai-shek -muistosali', lat: 25.034444, lon: 121.521667, wiki: 'Chiang Kai-shek Memorial Hall' },
-      { nimi: 'Kasvitieteellinen puutarha', lat: 25.032286, lon: 121.509519, wiki: 'Taipei Botanical Garden' },
+      { nimi: 'Kasvitieteellinen puutarha', tyyppi: 'luonto', lat: 25.032286, lon: 121.509519, wiki: 'Taipei Botanical Garden' },
       { nimi: 'Taipei 101', lat: 25.0336, lon: 121.5647, wiki: 'Taipei 101' },
     ],
   },
@@ -11101,7 +11101,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Man Mo -temppeli', lat: 22.283982, lon: 114.150239 },
       { nimi: 'Tai Kwun', lat: 22.2813, lon: 114.154 },
       { nimi: 'Pyhän Johanneksen katedraali', lat: 22.27885, lon: 114.15956 },
-      { nimi: 'Victoria Peak', lat: 22.27556, lon: 114.14389 },
+      { nimi: 'Victoria Peak', tyyppi: 'luonto', lat: 22.27556, lon: 114.14389 },
       { nimi: 'Sininen talo', lat: 22.273897, lon: 114.174146 },
       { nimi: 'Vaunuradan alaterminaali', lat: 22.27204, lon: 114.15487 },
     ],
@@ -11195,7 +11195,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sunda Kelapan satama', lat: -6.125014, lon: 106.809755 },
       { nimi: 'Merenkulkumuseo', lat: -6.126983, lon: 106.8083 },
       { nimi: 'Kota Intanin nostosilta', lat: -6.1312475, lon: 106.8105445 },
-      { nimi: 'Fatahillah-aukio', lat: -6.1347, lon: 106.8133 },
+      { nimi: 'Fatahillah-aukio', tyyppi: 'aukio', lat: -6.1347, lon: 106.8133 },
       { nimi: 'Toko Merah', lat: -6.135955, lon: 106.811285 },
       { nimi: 'Jakarta Kotan asema', lat: -6.137579, lon: 106.814634 },
       { nimi: 'Kim Tek Ie -temppeli', lat: -6.143889, lon: 106.812778 },
@@ -11262,14 +11262,14 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Binondon kirkko', lat: 14.60021, lon: 120.9747 },
       { nimi: 'Quiapon kirkko', lat: 14.598782, lon: 120.983783 },
-      { nimi: 'Escolta-katu', lat: 14.59778, lon: 120.97851 },
+      { nimi: 'Escolta-katu', tyyppi: 'aukio', lat: 14.59778, lon: 120.97851 },
       { nimi: 'Jones-silta', lat: 14.595833, lon: 120.977306 },
       { nimi: 'Fort Santiago', lat: 14.595, lon: 120.969444 },
       { nimi: 'Manilan katedraali', lat: 14.59147, lon: 120.97356 },
       { nimi: 'San Agustinin kirkko', lat: 14.588889, lon: 120.975278 },
       { nimi: 'Kansallinen taidemuseo', lat: 14.5869, lon: 120.9812 },
       { nimi: 'Baluarte de San Diego', lat: 14.5854, lon: 120.9756 },
-      { nimi: 'Rizal-puisto', lat: 14.5825, lon: 120.978333 },
+      { nimi: 'Rizal-puisto', tyyppi: 'luonto', lat: 14.5825, lon: 120.978333 },
     ],
   },
   /*
@@ -11333,7 +11333,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri basaari', lat: 39.47469, lon: 76.00526 },
       { nimi: 'Id Kahin moskeija', lat: 39.47227, lon: 75.984106 },
       { nimi: 'Vanhakaupunki', lat: 39.46997, lon: 75.99979 },
-      { nimi: 'Kansanpuisto', lat: 39.46335, lon: 75.98988 },
+      { nimi: 'Kansanpuisto', tyyppi: 'luonto', lat: 39.46335, lon: 75.98988 },
       { nimi: 'Yusuf Khass Hajibin mausoleumi', lat: 39.4592, lon: 75.99195 },
     ],
   },
@@ -11530,9 +11530,9 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Timur Shahin mausoleumi', lat: 34.516401, lon: 69.175368 },
       { nimi: 'Shah-Do Shamshiran moskeija', lat: 34.515556, lon: 69.171389 },
-      { nimi: 'Ka Faroshin lintutori', lat: 34.514286, lon: 69.179718 },
+      { nimi: 'Ka Faroshin lintutori', tyyppi: 'aukio', lat: 34.514286, lon: 69.179718 },
       { nimi: 'Bala Hissar', lat: 34.505556, lon: 69.191667 },
-      { nimi: 'Baburin puutarhat', lat: 34.503, lon: 69.158 },
+      { nimi: 'Baburin puutarhat', tyyppi: 'luonto', lat: 34.503, lon: 69.158 },
       { nimi: 'Kabulin vanha kaupunginmuuri', lat: 34.501497, lon: 69.172033 },
       { nimi: 'Chihil Sutunin palatsi', lat: 34.468506, lon: 69.152186 },
       { nimi: 'Darul Amanin palatsi', lat: 34.465217, lon: 69.119297 },
@@ -11727,7 +11727,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Punainen moskeija', lat: 6.9385, lon: 79.8518 },
       { nimi: 'Fortin kellotorni', lat: 6.934722, lon: 79.842778 },
       { nimi: 'Fortin rautatieasema', lat: 6.933611, lon: 79.850833 },
-      { nimi: 'Beira-järvi', lat: 6.929434, lon: 79.854182 },
+      { nimi: 'Beira-järvi', tyyppi: 'luonto', lat: 6.929434, lon: 79.854182 },
       { nimi: 'Galle Face Hotel', lat: 6.92, lon: 79.8462 },
       { nimi: 'Gangaramayan temppeli', lat: 6.916389, lon: 79.856389 },
       { nimi: 'Colombon kansallismuseo', lat: 6.91, lon: 79.860833 },
@@ -11848,7 +11848,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Amerikan luonnonhistoriallinen museo', lat: 40.78083, lon: -73.97444 },
       { nimi: 'Metropolitan-museo', lat: 40.7794, lon: -73.9631 },
       { nimi: 'Pyhän Patrickin katedraali', lat: 40.75861, lon: -73.97639 },
-      { nimi: 'Times Square', lat: 40.7575, lon: -73.9858 },
+      { nimi: 'Times Square', tyyppi: 'aukio', lat: 40.7575, lon: -73.9858 },
       { nimi: 'New Yorkin pääkirjasto', lat: 40.753333, lon: -73.982222 },
       { nimi: 'Empire State Building', lat: 40.7483, lon: -73.9856 },
       { nimi: 'Flatiron Building', lat: 40.74111, lon: -73.98972 },
@@ -11865,7 +11865,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Brooklyn Bridge, Manhattanin puoleinen torni.
       {
-        nimi: 'Brooklyn 1883', lat: 40.7061, lon: -73.9969,
+        nimi: 'Brooklyn 1883', tyyppi: 'henkilo', lat: 40.7061, lon: -73.9969,
         nosto: 'hetki-brooklyn-bridge-1883',
       },
     ],
@@ -11979,14 +11979,14 @@ export const KAUPUNKIKARTAT = {
        * Aucklandissa ja New Yorkissa. Koordinaatit en-Wikipedian
        * coordinates-rajapinnasta 6.9.2026.
        */
-      { nimi: 'Baldwin Street', lat: -45.84944, lon: 170.53472 },
-      { nimi: 'Kasvitieteellinen puutarha', lat: -45.8575, lon: 170.5225 },
+      { nimi: 'Baldwin Street', tyyppi: 'aukio', lat: -45.84944, lon: 170.53472 },
+      { nimi: 'Kasvitieteellinen puutarha', tyyppi: 'luonto', lat: -45.8575, lon: 170.5225 },
       { nimi: 'Otagon museo', lat: -45.86568, lon: 170.51084 },
       { nimi: 'Knoxin kirkko', lat: -45.867152, lon: 170.507083 },
       { nimi: 'Otago Boys High School', lat: -45.871597, lon: 170.495051 },
       { nimi: 'Dunedinin rautatieasema', lat: -45.87528, lon: 170.50889 },
       { nimi: 'Speightsin panimo', lat: -45.876374, lon: 170.499959 },
-      { nimi: 'Queens Gardens', lat: -45.87778, lon: 170.50417 },
+      { nimi: 'Queens Gardens', tyyppi: 'luonto', lat: -45.87778, lon: 170.50417 },
     ],
   },
   /*
@@ -12020,7 +12020,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Pyhän sydämen katedraali', lat: -18.1416, lon: 178.442 },
       { nimi: 'Hallintorakennukset', lat: -18.145858, lon: 178.424413 },
-      { nimi: 'Thurston Gardens', lat: -18.1491, lon: 178.4247 },
+      { nimi: 'Thurston Gardens', tyyppi: 'luonto', lat: -18.1491, lon: 178.4247 },
       { nimi: 'Valtionpäämiehen talo', lat: -18.151892, lon: 178.42614 },
     ],
   },
@@ -12120,7 +12120,7 @@ export const KAUPUNKIKARTAT = {
        * osu laiturin päähän vaan niemen keskelle.
        */
       { nimi: 'Salomonsaarten kansallismuseo', lat: -9.431111, lon: 159.954167 },
-      { nimi: 'Point Cruz', lat: -9.433333, lon: 159.950000 },
+      { nimi: 'Point Cruz', tyyppi: 'luonto', lat: -9.433333, lon: 159.950000 },
       { nimi: 'Parlamenttitalo', lat: -9.433611, lon: 159.955833 },
       { nimi: 'Holy Crossin katedraali', lat: -9.436252, lon: 159.963472 },
       { nimi: 'Guadalcanalin muistomerkki', lat: -9.442609, lon: 159.957515 },
@@ -12218,7 +12218,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Afroantillilainen museo', lat: 8.963, lon: -79.5392 },
       { nimi: 'Nykytaiteen museo', lat: 8.96092, lon: -79.54304 },
       { nimi: 'Kansallisinstituutti', lat: 8.957583, lon: -79.542944 },
-      { nimi: 'Ancónin kukkula', lat: 8.957278, lon: -79.549444 },
+      { nimi: 'Ancónin kukkula', tyyppi: 'luonto', lat: 8.957278, lon: -79.549444 },
       { nimi: 'Presidentinlinna', lat: 8.953966, lon: -79.534364 },
       { nimi: 'Smithsonianin tutkimuslaitos', lat: 8.9624308, lon: -79.5525621 },
       { nimi: 'Fort Amador', lat: 8.938056, lon: -79.547778 },
@@ -12377,9 +12377,9 @@ export const KAUPUNKIKARTAT = {
        * coordinates-rajapinnasta 6.9.2026; pienin väli on 257 metriä
        * (Saint-Sulpicen seminaari–Pointe-à-Callière).
        */
-      { nimi: 'Saint-Louis’n aukio', lat: 45.517015, lon: -73.569968 },
+      { nimi: 'Saint-Louis’n aukio', tyyppi: 'aukio', lat: 45.517015, lon: -73.569968 },
       { nimi: 'Château Ramezay', lat: 45.508611, lon: -73.553333 },
-      { nimi: 'Kiinalaiskaupunki', lat: 45.50759, lon: -73.5608 },
+      { nimi: 'Kiinalaiskaupunki', tyyppi: 'aukio', lat: 45.50759, lon: -73.5608 },
       { nimi: 'Saint-Sulpicen seminaari', lat: 45.503889, lon: -73.556944 },
       { nimi: 'Pyhän Patrickin basilika', lat: 45.5035, lon: -73.5647 },
       { nimi: 'Pointe-à-Callièren museo', lat: 45.5026, lon: -73.5542 },
@@ -12446,7 +12446,7 @@ export const KAUPUNKIKARTAT = {
        * Embarcaderon julkisivulla, jossa sisäänkäynti on (Lontoon
        * silmän ja Venetsian Arsenaalin ratkaisu).
        */
-      { nimi: 'Ghirardelli Square', lat: 37.8059, lon: -122.423 },
+      { nimi: 'Ghirardelli Square', tyyppi: 'aukio', lat: 37.8059, lon: -122.423 },
       { nimi: 'Coit Tower', lat: 37.8025, lon: -122.40583 },
       { nimi: 'Ferry Building', lat: 37.7955, lon: -122.3944 },
       { nimi: 'Transamerica Pyramid', lat: 37.7952, lon: -122.4028 },
@@ -12454,7 +12454,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: "Old St. Mary's -katedraali", lat: 37.79265, lon: -122.40575 },
       { nimi: 'Grace Cathedral', lat: 37.7919, lon: -122.413 },
       { nimi: 'Palace Hotel', lat: 37.7884, lon: -122.402 },
-      { nimi: 'Union Square', lat: 37.788056, lon: -122.4075 },
+      { nimi: 'Union Square', tyyppi: 'aukio', lat: 37.788056, lon: -122.4075 },
       { nimi: 'San Franciscon kaupungintalo', lat: 37.77919, lon: -122.41914 },
     ],
   },
@@ -12512,7 +12512,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Pilarin basilika', lat: -34.5873, lon: -58.3911 },
-      { nimi: 'Plaza San Martín', lat: -34.595, lon: -58.375556 },
+      { nimi: 'Plaza San Martín', tyyppi: 'aukio', lat: -34.595, lon: -58.375556 },
       { nimi: 'Palacio de Aguas Corrientes', lat: -34.600556, lon: -58.395 },
       { nimi: 'Museo Mitre', lat: -34.60411, lon: -58.37397 },
       { nimi: 'Buenos Airesin katedraali', lat: -34.607408, lon: -58.373277 },
@@ -12711,7 +12711,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Katedraalibasilika', lat: 39.74028056, lon: -104.98193889 },
       { nimi: 'Denverin taidemuseo', lat: 39.73718806, lon: -104.989345 },
       { nimi: 'Molly Brownin talo', lat: 39.7375, lon: -104.98072222 },
-      { nimi: 'Kasvitieteellinen puutarha', lat: 39.7325, lon: -104.96083333 },
+      { nimi: 'Kasvitieteellinen puutarha', tyyppi: 'luonto', lat: 39.7325, lon: -104.96083333 },
     ],
   },
   /*
@@ -12762,9 +12762,9 @@ export const KAUPUNKIKARTAT = {
        * 6.9.2026, ja kaikki välit on mitattu uudelleen: pienin on
        * 300 metriä (Sam Houstonin puisto – Julia Idesonin talo).
        */
-      { nimi: 'Market Squaren puisto', lat: 29.76266, lon: -95.36234 },
-      { nimi: 'Buffalo Bayoun puisto', lat: 29.761, lon: -95.384 },
-      { nimi: 'Sam Houstonin puisto', lat: 29.76, lon: -95.372 },
+      { nimi: 'Market Squaren puisto', tyyppi: 'luonto', lat: 29.76266, lon: -95.36234 },
+      { nimi: 'Buffalo Bayoun puisto', tyyppi: 'luonto', lat: 29.761, lon: -95.384 },
+      { nimi: 'Sam Houstonin puisto', tyyppi: 'luonto', lat: 29.76, lon: -95.372 },
       { nimi: 'Julia Idesonin kirjastotalo', lat: 29.75888889, lon: -95.36916667 },
       { nimi: 'Astrosin stadion', lat: 29.75694444, lon: -95.35555556 },
       { nimi: 'Kongressikeskus', lat: 29.75222222, lon: -95.35777778 },
@@ -12826,7 +12826,7 @@ export const KAUPUNKIKARTAT = {
        * (kaupungintalo – District Six -museo).
        */
       { nimi: 'V&A Waterfront', lat: -33.903056, lon: 18.422778 },
-      { nimi: 'Greenmarket Square', lat: -33.922222, lon: 18.42 },
+      { nimi: 'Greenmarket Square', tyyppi: 'aukio', lat: -33.922222, lon: 18.42 },
       { nimi: 'Iziko Slave Lodge', lat: -33.92506, lon: 18.420393 },
       { nimi: 'Kaupungintalo', lat: -33.925278, lon: 18.423889 },
       { nimi: 'Hyväntoivonlinnoitus', lat: -33.9259, lon: 18.4278 },
@@ -12890,7 +12890,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Nairobin arboretum', lat: -1.2743, lon: 36.8131 },
       { nimi: 'Kenian kansallismuseo', lat: -1.273889, lon: 36.815 },
       { nimi: 'Nairobin yliopisto', lat: -1.279722, lon: 36.816667 },
-      { nimi: 'Jeevanjeen puutarha', lat: -1.281014, lon: 36.819476 },
+      { nimi: 'Jeevanjeen puutarha', tyyppi: 'luonto', lat: -1.281014, lon: 36.819476 },
       { nimi: 'Kenian kansallisarkisto', lat: -1.2849, lon: 36.8259 },
       { nimi: 'Nairobi Gallery', lat: -1.286789, lon: 36.817833 },
       { nimi: 'Kenyattan kongressikeskus', lat: -1.288611, lon: 36.823056 },
@@ -12940,7 +12940,7 @@ export const KAUPUNKIKARTAT = {
        * palauta sille koordinaattia. Pienin väli on 462 metriä
        * (Bayfront Park – Olympia-teatteri).
        */
-      { nimi: 'Wynwoodin muraalikorttelit', lat: 25.804, lon: -80.199 },
+      { nimi: 'Wynwoodin muraalikorttelit', tyyppi: 'taide', lat: 25.804, lon: -80.199 },
       { nimi: 'Esittävän taiteen keskus', lat: 25.7876332, lon: -80.1920912 },
       { nimi: 'Pérezin taidemuseo', lat: 25.785894, lon: -80.186705 },
       { nimi: 'Lyric-teatteri', lat: 25.78188889, lon: -80.198 },
@@ -13000,7 +13000,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vanha kellotorni', lat: 44.64722222, lon: -63.5775 },
       { nimi: 'Pyhän Paavalin kirkko', lat: 44.6475, lon: -63.57472222 },
       { nimi: 'Atlantin merimuseo', lat: 44.64769444, lon: -63.57105556 },
-      { nimi: 'Julkinen puutarha', lat: 44.64277778, lon: -63.58222222 },
+      { nimi: 'Julkinen puutarha', tyyppi: 'luonto', lat: 44.64277778, lon: -63.58222222 },
       { nimi: 'Vanha hautausmaa', lat: 44.6434, lon: -63.5728 },
       { nimi: 'Pier 21', lat: 44.63777778, lon: -63.56583333 },
       { nimi: 'Point Pleasant Park', lat: 44.62277778, lon: -63.56916667 },
@@ -13225,7 +13225,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'St Johnin katedraali', lat: -27.46398, lon: 153.030061 },
       { nimi: 'Spring Hillin vesisäiliöt', lat: -27.4661, lon: 153.0231 },
-      { nimi: 'ANZAC-aukio', lat: -27.4665, lon: 153.0266 },
+      { nimi: 'ANZAC-aukio', tyyppi: 'aukio', lat: -27.4665, lon: 153.0266 },
       { nimi: 'MacArthurin talo', lat: -27.4684, lon: 153.0273 },
       { nimi: 'Wheat Creekin holvi', lat: -27.4689, lon: 153.0245 },
       { nimi: 'Naldham House', lat: -27.4701, lon: 153.0301 },
@@ -13311,7 +13311,7 @@ export const KAUPUNKIKARTAT = {
        * numeroympyrän halkaisija, eikä se muuta kohteen paikkaa
        * korttelin tarkkuudella.
        */
-      { nimi: 'Sun Yat-senin puutarha', lat: 49.2794, lon: -123.1038 },
+      { nimi: 'Sun Yat-senin puutarha', tyyppi: 'luonto', lat: 49.2794, lon: -123.1038 },
     ],
   },
   /*
@@ -13367,7 +13367,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Ontarion kuninkaallinen museo', lat: 43.667679, lon: -79.394809 },
       { nimi: 'University College', lat: 43.66277778, lon: -79.39555556 },
-      { nimi: 'Kensingtonin tori', lat: 43.65477222, lon: -79.40067778 },
+      { nimi: 'Kensingtonin tori', tyyppi: 'aukio', lat: 43.65477222, lon: -79.40067778 },
       { nimi: 'Ontarion taidegalleria', lat: 43.65361111, lon: -79.39277778 },
       { nimi: 'Kaupungintalo', lat: 43.65333333, lon: -79.38388889 },
       { nimi: 'Elgin ja Winter Garden', lat: 43.653056, lon: -79.379167 },
@@ -13430,7 +13430,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Merchandise Mart', lat: 41.8884, lon: -87.6355 },
       { nimi: 'Chicago Theatre', lat: 41.88527778, lon: -87.62777778 },
-      { nimi: 'Haymarketin aukio', lat: 41.88488889, lon: -87.64413889 },
+      { nimi: 'Haymarketin aukio', tyyppi: 'aukio', lat: 41.88488889, lon: -87.64413889 },
       { nimi: 'Kulttuurikeskus', lat: 41.88388889, lon: -87.625 },
       { nimi: 'Marquette Building', lat: 41.8795, lon: -87.63006944 },
       { nimi: 'Taideinstituutti', lat: 41.87944444, lon: -87.62388889 },
@@ -13494,7 +13494,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Angels Flight', lat: 34.05133889, lon: -118.25021111 },
       { nimi: 'Pääkirjasto', lat: 34.05027778, lon: -118.255 },
       { nimi: 'Japanilaisamerikkalainen museo', lat: 34.04963889, lon: -118.23858333 },
-      { nimi: 'Pershing Square', lat: 34.04825, lon: -118.25301 },
+      { nimi: 'Pershing Square', tyyppi: 'aukio', lat: 34.04825, lon: -118.25301 },
       { nimi: 'Eastern Columbia', lat: 34.0428, lon: -118.2555 },
     ],
   },
@@ -13602,7 +13602,7 @@ export const KAUPUNKIKARTAT = {
        * palatsi), toiseksi pienin 266 metriä (Baburizzan palatsi –
        * anglikaaninen katedraali).
        */
-      { nimi: 'Plaza Sotomayor', lat: -33.03846667, lon: -71.62876667 },
+      { nimi: 'Plaza Sotomayor', tyyppi: 'aukio', lat: -33.03846667, lon: -71.62876667 },
       { nimi: 'Baburizzan palatsi', lat: -33.0404, lon: -71.6289 },
       { nimi: 'Anglikaaninen katedraali', lat: -33.04234, lon: -71.62723 },
       { nimi: 'Valparaíson yliopisto', lat: -33.04388889, lon: -71.6175 },
@@ -13859,7 +13859,7 @@ export const KAUPUNKIKARTAT = {
        * pienin 244 metriä (festivaalikeskus – kuvernöörintalo).
        */
       { nimi: 'St Peterin katedraali', lat: -34.91277778, lon: 138.59805556 },
-      { nimi: 'Eläintarha', lat: -34.91416667, lon: 138.60583333 },
+      { nimi: 'Eläintarha', tyyppi: 'luonto', lat: -34.91416667, lon: 138.60583333 },
       { nimi: 'Festivaalikeskus', lat: -34.91944444, lon: 138.59777778 },
       { nimi: 'Kuvernöörintalo', lat: -34.920126, lon: 138.600321 },
       { nimi: 'Etelä-Australian museo', lat: -34.920783, lon: 138.603017 },
@@ -13915,11 +13915,11 @@ export const KAUPUNKIKARTAT = {
        * (San Franciscon basilika – Plaza Vieja), toiseksi pienin 249
        * metriä (El Capitolio – Intiaanittaren lähde).
        */
-      { nimi: 'Katedraaliaukio', lat: 23.140892, lon: -82.351628 },
-      { nimi: 'Plaza de Armas', lat: 23.14, lon: -82.349167 },
+      { nimi: 'Katedraaliaukio', tyyppi: 'aukio', lat: 23.140892, lon: -82.351628 },
+      { nimi: 'Plaza de Armas', tyyppi: 'aukio', lat: 23.14, lon: -82.349167 },
       { nimi: 'Bacardí-talo', lat: 23.1389, lon: -82.3571 },
       { nimi: 'San Franciscon basilika', lat: 23.136944, lon: -82.348333 },
-      { nimi: 'Plaza Vieja', lat: 23.136078, lon: -82.350061 },
+      { nimi: 'Plaza Vieja', tyyppi: 'aukio', lat: 23.136078, lon: -82.350061 },
       { nimi: 'El Capitolio', lat: 23.135278, lon: -82.359444 },
       { nimi: 'Intiaanittaren lähde', lat: 23.133272, lon: -82.358361 },
       { nimi: 'Pyhän Hengen kirkko', lat: 23.1325, lon: -82.3504 },
@@ -13971,8 +13971,8 @@ export const KAUPUNKIKARTAT = {
        * luostarikirkko), toiseksi pienin 310 metriä (San Ildefonso –
        * Kansojen museo).
        */
-      { nimi: 'Plaza Garibaldi', lat: 19.441, lon: -99.139 },
-      { nimi: 'Santo Domingon aukio', lat: 19.438378, lon: -99.133717 },
+      { nimi: 'Plaza Garibaldi', tyyppi: 'aukio', lat: 19.441, lon: -99.139 },
+      { nimi: 'Santo Domingon aukio', tyyppi: 'aukio', lat: 19.438378, lon: -99.133717 },
       { nimi: 'Kaupunginteatteri', lat: 19.436561, lon: -99.137267 },
       { nimi: 'San Ildefonson kollegio', lat: 19.43605, lon: -99.130658 },
       { nimi: 'Postipalatsi', lat: 19.435686, lon: -99.1404 },
@@ -14097,10 +14097,10 @@ export const KAUPUNKIKARTAT = {
        * Bicentennial-puisto).
        */
       { nimi: 'Meren tähden katedraali', lat: -12.45913, lon: 130.838199 },
-      { nimi: 'Bicentennial-puisto', lat: -12.460945, lon: 130.837061 },
+      { nimi: 'Bicentennial-puisto', tyyppi: 'luonto', lat: -12.460945, lon: 130.837061 },
       { nimi: 'Vic-hotelli', lat: -12.46199444, lon: 130.84261944 },
       { nimi: 'Star-teatteri', lat: -12.46409, lon: 130.84306 },
-      { nimi: 'Lameroon ranta', lat: -12.4652, lon: 130.8386 },
+      { nimi: 'Lameroon ranta', tyyppi: 'luonto', lat: -12.4652, lon: 130.8386 },
       { nimi: 'Hotel Darwin', lat: -12.465814, lon: 130.840987 },
       { nimi: 'Parlamenttitalo', lat: -12.46666667, lon: 130.84277778 },
       { nimi: 'Mutamaja', lat: -12.46776, lon: 130.844704 },
@@ -14157,7 +14157,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Las Nazarenasin pyhäkkö', lat: -12.04556389, lon: -77.03736694 },
       { nimi: 'Inkvisition museo', lat: -12.04808, lon: -77.02634 },
       { nimi: 'Torre Taglen palatsi', lat: -12.04884, lon: -77.02931 },
-      { nimi: 'Plaza San Martín', lat: -12.0515, lon: -77.0345 },
+      { nimi: 'Plaza San Martín', tyyppi: 'aukio', lat: -12.0515, lon: -77.0345 },
       { nimi: 'Casona de San Marcos', lat: -12.0545, lon: -77.0322 },
     ],
   },
@@ -14929,12 +14929,12 @@ export const KAUPUNKIKARTAT = {
        * metriä (Vapauden puisto – King's College).
        */
       { nimi: 'Lagosin keskusmoskeija', lat: 6.457222, lon: 3.388056 },
-      { nimi: 'Tinubun aukio', lat: 6.4538, lon: 3.3894 },
+      { nimi: 'Tinubun aukio', tyyppi: 'aukio', lat: 6.4538, lon: 3.3894 },
       { nimi: 'Ajelen hautausmaa', lat: 6.4515, lon: 3.3942 },
       { nimi: 'Kristuksen katedraali', lat: 6.4508, lon: 3.3902 },
       { nimi: 'King\'s College', lat: 6.44961, lon: 3.39905 },
-      { nimi: 'Vapauden puisto', lat: 6.4489, lon: 3.3965 },
-      { nimi: 'Tafawa Balewan aukio', lat: 6.447222, lon: 3.401389 },
+      { nimi: 'Vapauden puisto', tyyppi: 'luonto', lat: 6.4489, lon: 3.3965 },
+      { nimi: 'Tafawa Balewan aukio', tyyppi: 'aukio', lat: 6.447222, lon: 3.401389 },
       { nimi: 'Nigerian kansallismuseo', lat: 6.444444, lon: 3.403333 },
     ],
   },
@@ -14980,11 +14980,11 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Vanha apteekki', lat: -6.1584, lon: 39.1926 },
       { nimi: 'Sulttaanin palatsi', lat: -6.1599, lon: 39.1905 },
-      { nimi: 'Darajanin tori', lat: -6.1621, lon: 39.1935 },
+      { nimi: 'Darajanin tori', tyyppi: 'aukio', lat: -6.1621, lon: 39.1935 },
       { nimi: 'Hamamnin kylpylä', lat: -6.1623, lon: 39.1910 },
       { nimi: 'Pyhän Joosefin katedraali', lat: -6.162778, lon: 39.188889 },
       { nimi: 'Tippu Tipin talo', lat: -6.1640, lon: 39.1870 },
-      { nimi: 'Michenzanin korttelit', lat: -6.16526, lon: 39.1988 },
+      { nimi: 'Michenzanin korttelit', tyyppi: 'aukio', lat: -6.16526, lon: 39.1988 },
       { nimi: 'Sansibarin valtionyliopisto', lat: -6.165833, lon: 39.191667 },
     ],
   },
@@ -15102,10 +15102,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pasteur-instituutti', lat: 14.65618, lon: -17.43503 },
       { nimi: 'Théodore Monod -museo', lat: 14.66367, lon: -17.43828 },
       { nimi: 'Dakarin katedraali', lat: 14.66545, lon: -17.43761 },
-      { nimi: 'Riippumattomuuden aukio', lat: 14.66953, lon: -17.43206 },
+      { nimi: 'Riippumattomuuden aukio', tyyppi: 'aukio', lat: 14.66953, lon: -17.43206 },
       { nimi: 'Dakarin rautatieasema', lat: 14.67646, lon: -17.43368 },
       { nimi: 'Suuri moskeija', lat: 14.67821, lon: -17.44246 },
-      { nimi: 'Soumbédiounen käsityökylä', lat: 14.67685, lon: -17.45781 },
+      { nimi: 'Soumbédiounen käsityökylä', tyyppi: 'aukio', lat: 14.67685, lon: -17.45781 },
       { nimi: 'Cheikh Anta Diop -yliopisto', lat: 14.68694, lon: -17.46333 },
     ],
   },
@@ -15207,10 +15207,10 @@ export const KAUPUNKIKARTAT = {
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
        */
-      { nimi: 'Salpietarilaituri', lat: -23.6435, lon: -70.3977 },
+      { nimi: 'Salpietarilaituri', tyyppi: 'luonto', lat: -23.6435, lon: -70.3977 },
       { nimi: 'Antofagastan museo', lat: -23.64416667, lon: -70.39777778 },
       { nimi: 'Bolivian kauppapankin talo', lat: -23.64502, lon: -70.397358 },
-      { nimi: 'Colónin aukio', lat: -23.64611111, lon: -70.39777778 },
+      { nimi: 'Colónin aukio', tyyppi: 'aukio', lat: -23.64611111, lon: -70.39777778 },
       { nimi: 'Gibbsin talo', lat: -23.64611111, lon: -70.40055556 },
       { nimi: 'Kaupunginteatteri', lat: -23.64654167, lon: -70.39658333 },
       { nimi: 'Antofagastan katedraali', lat: -23.64716667, lon: -70.39738889 },
@@ -15272,7 +15272,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Grönlannin kansallismuseo', lat: 64.1772, lon: -51.7462 },
       { nimi: 'Hans Egeden talo', lat: 64.1782, lon: -51.7448 },
       { nimi: 'Nuukin katedraali', lat: 64.17972, lon: -51.74417 },
-      { nimi: 'Kalaaliaraq-tori', lat: 64.17861, lon: -51.7425 },
+      { nimi: 'Kalaaliaraq-tori', tyyppi: 'aukio', lat: 64.17861, lon: -51.7425 },
       { nimi: 'Inatsisartut', lat: 64.1783, lon: -51.7406 },
       { nimi: 'Katuaq', lat: 64.17722, lon: -51.73889 },
       { nimi: 'Grönlannin kansalliskirjasto', lat: 64.17556, lon: -51.73917 },
@@ -15378,14 +15378,14 @@ export const KAUPUNKIKARTAT = {
        * pienin on 188 metriä (Braun-Menéndezin palatsi –
        * merisotamuseo), toiseksi pienin 208 metriä.
        */
-      { nimi: 'Lampuripatsas', lat: -53.149764, lon: -70.896575 },
+      { nimi: 'Lampuripatsas', tyyppi: 'taide', lat: -53.149764, lon: -70.896575 },
       { nimi: 'Sara Braunin hautausmaa', lat: -53.152999, lon: -70.897648 },
       { nimi: 'Salesiaanien museo', lat: -53.155612, lon: -70.902287 },
-      { nimi: 'Cerro de la Cruz', lat: -53.160112, lon: -70.915813 },
+      { nimi: 'Cerro de la Cruz', tyyppi: 'luonto', lat: -53.160112, lon: -70.915813 },
       { nimi: 'Sagrado Corazónin katedraali', lat: -53.162000, lon: -70.909000 },
       { nimi: 'Braun-Menéndezin palatsi', lat: -53.162177, lon: -70.905893 },
       { nimi: 'Merisotamuseo', lat: -53.163581, lon: -70.904302 },
-      { nimi: 'Salmen rantabulevardi', lat: -53.164567, lon: -70.900459 },
+      { nimi: 'Salmen rantabulevardi', tyyppi: 'luonto', lat: -53.164567, lon: -70.900459 },
     ],
   },
   /*
@@ -15430,11 +15430,11 @@ export const KAUPUNKIKARTAT = {
        * Kaikki 28 väliä on mitattu haversinilla: pienin on 114 metriä
        * (aukio – katedraali), toiseksi pienin 433 metriä.
        */
-      { nimi: 'Avión Pirata', lat: -17.775674, lon: -63.174000 },
+      { nimi: 'Avión Pirata', tyyppi: 'luonto', lat: -17.775674, lon: -63.174000 },
       { nimi: 'Gabriel René Moreno -yliopisto', lat: -17.775749, lon: -63.195902 },
-      { nimi: 'El Arenalin puisto', lat: -17.778800, lon: -63.180600 },
+      { nimi: 'El Arenalin puisto', tyyppi: 'luonto', lat: -17.778800, lon: -63.180600 },
       { nimi: 'Yleinen hautausmaa', lat: -17.781409, lon: -63.172133 },
-      { nimi: 'Plaza 24 de Septiembre', lat: -17.783255, lon: -63.182119 },
+      { nimi: 'Plaza 24 de Septiembre', tyyppi: 'aukio', lat: -17.783255, lon: -63.182119 },
       { nimi: 'San Lorenzon katedraali', lat: -17.784200, lon: -63.181700 },
       { nimi: 'Noel Kempff Mercadon museo', lat: -17.792713, lon: -63.181884 },
       { nimi: 'Tahuichi Aguileran stadion', lat: -17.796100, lon: -63.183900 },
@@ -15543,10 +15543,10 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Santa Anan kirkko', lat: 20.975846, lon: -89.621209 },
       { nimi: 'Peón Contrerasin teatteri', lat: 20.969489, lon: -89.622476 },
-      { nimi: 'La Mejoradan puisto', lat: 20.968346, lon: -89.616398 },
+      { nimi: 'La Mejoradan puisto', tyyppi: 'luonto', lat: 20.968346, lon: -89.616398 },
       { nimi: 'Casa de los Montejo', lat: 20.966195, lon: -89.624388 },
       { nimi: 'Méridan kaupunginmuseo', lat: 20.964452, lon: -89.621377 },
-      { nimi: 'San Juanin puisto ja kaari', lat: 20.962616, lon: -89.626035 },
+      { nimi: 'San Juanin puisto ja kaari', tyyppi: 'luonto', lat: 20.962616, lon: -89.626035 },
       { nimi: 'San Cristóbalin kirkko', lat: 20.961151, lon: -89.617410 },
       { nimi: 'Santa Isabelin ermita', lat: 20.957247, lon: -89.629632 },
     ],
@@ -15602,7 +15602,7 @@ export const KAUPUNKIKARTAT = {
        * – ihmisoikeusmuseo).
        */
       { nimi: 'Manitoban museo', lat: 49.9, lon: -97.136667 },
-      { nimi: 'Pörssikortteli', lat: 49.8985, lon: -97.1403 },
+      { nimi: 'Pörssikortteli', tyyppi: 'aukio', lat: 49.8985, lon: -97.1403 },
       { nimi: 'Burton Cummings -teatteri', lat: 49.895833, lon: -97.143611 },
       { nimi: 'Manitoba Hydro Place', lat: 49.892397, lon: -97.1464 },
       { nimi: 'Kanadan ihmisoikeusmuseo', lat: 49.890797, lon: -97.130997 },
@@ -15732,8 +15732,8 @@ export const KAUPUNKIKARTAT = {
        * museo – eläintarha), seuraavat 422 ja 447 metriä.
        */
       { nimi: 'Prempeh II:n museo', lat: 6.700639, lon: -1.629194 },
-      { nimi: 'Kumasin eläintarha', lat: 6.701000, lon: -1.626000 },
-      { nimi: 'Kejetian tori', lat: 6.698639, lon: -1.619139 },
+      { nimi: 'Kumasin eläintarha', tyyppi: 'luonto', lat: 6.701000, lon: -1.626000 },
+      { nimi: 'Kejetian tori', tyyppi: 'aukio', lat: 6.698639, lon: -1.619139 },
       { nimi: 'Komfo Anokyen sairaala', lat: 6.697479, lon: -1.631690 },
       /*
        * LINNAKE KANTAA MYÖS KULTAJAKKARAN SODAN KARTTANOSTON
@@ -15755,7 +15755,7 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Ramseyerin muistokirkko', lat: 6.689400, lon: -1.621600 },
       { nimi: 'Baba Yaran stadion', lat: 6.682681, lon: -1.605111 },
-      { nimi: 'Rattrayn puisto', lat: 6.681781, lon: -1.626117 },
+      { nimi: 'Rattrayn puisto', tyyppi: 'luonto', lat: 6.681781, lon: -1.626117 },
     ],
   },
   /*
@@ -15814,9 +15814,9 @@ export const KAUPUNKIKARTAT = {
        * pienin on 335 metriä (suurmoskeija – Gidan Rumfa),
        * toiseksi pienin 357 metriä (Kofar Mata – stadion).
        */
-      { nimi: 'Sabon Garin tori', lat: 12.015400, lon: 8.539900 },
-      { nimi: 'Dala-kukkula', lat: 12.009280, lon: 8.506980 },
-      { nimi: 'Kofar Matan värjäämöt', lat: 12.000853, lon: 8.526099 },
+      { nimi: 'Sabon Garin tori', tyyppi: 'aukio', lat: 12.015400, lon: 8.539900 },
+      { nimi: 'Dala-kukkula', tyyppi: 'luonto', lat: 12.009280, lon: 8.506980 },
+      { nimi: 'Kofar Matan värjäämöt', tyyppi: 'aukio', lat: 12.000853, lon: 8.526099 },
       { nimi: 'Sani Abachan stadion', lat: 11.999722, lon: 8.529167 },
       { nimi: 'Kanon suurmoskeija', lat: 11.994855, lon: 8.517640 },
       { nimi: 'Gidan Rumfa', lat: 11.992300, lon: 8.516000 },
@@ -15938,14 +15938,14 @@ export const KAUPUNKIKARTAT = {
        * ja kaikki välit on mitattu uudelleen: pienin on 271 metriä
        * (Pioneer-teatteri–kaupunginkirjasto).
        */
-      { nimi: 'ANZAC Hill', lat: -23.694730, lon: 133.882110 },
+      { nimi: 'ANZAC Hill', tyyppi: 'luonto', lat: -23.694730, lon: 133.882110 },
       { nimi: 'Totem-teatteri', lat: -23.694852, lon: 133.885016 },
       { nimi: 'Rautatieasema', lat: -23.697417, lon: 133.873389 },
       { nimi: 'Stuart Town Gaol', lat: -23.698470, lon: 133.881290 },
       { nimi: 'Pioneer-teatteri', lat: -23.699357, lon: 133.883917 },
       { nimi: 'Kaupunginkirjasto', lat: -23.701667, lon: 133.883056 },
       { nimi: 'Australian naisten museo', lat: -23.704100, lon: 133.876900 },
-      { nimi: 'Olive Pinkin puutarha', lat: -23.706400, lon: 133.884900 },
+      { nimi: 'Olive Pinkin puutarha', tyyppi: 'luonto', lat: -23.706400, lon: 133.884900 },
     ],
   },
   /*
@@ -16117,7 +16117,7 @@ export const KAUPUNKIKARTAT = {
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
        */
-      { nimi: 'Queens Gardens', lat: -19.2531, lon: 146.81 },
+      { nimi: 'Queens Gardens', tyyppi: 'luonto', lat: -19.2531, lon: 146.81 },
       { nimi: 'Tobruk Memorial Baths', lat: -19.2533, lon: 146.8198 },
       { nimi: 'Vanha tullitalo', lat: -19.2556, lon: 146.8219 },
       { nimi: 'St James -katedraali', lat: -19.2555, lon: 146.8167 },
@@ -16179,7 +16179,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hotel Palace', lat: -3.750688, lon: -73.243716 },
       { nimi: 'Malecón Tarapacá', lat: -3.7525346, lon: -73.2464037 },
       { nimi: 'Casa Strassberger', lat: -3.7528833, lon: -73.2444139 },
-      { nimi: 'Plaza 28 de Julio', lat: -3.7545969, lon: -73.2493161 },
+      { nimi: 'Plaza 28 de Julio', tyyppi: 'aukio', lat: -3.7545969, lon: -73.2493161 },
     ],
   },
   /*
@@ -16276,7 +16276,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Back Bayn hautausmaa', lat: 62.4691, lon: -114.3626 },
       { nimi: 'Wildcat Cafe', lat: 62.46652, lon: -114.34889 },
       { nimi: 'Weaver & Devoren kauppa', lat: 62.46444, lon: -114.35028 },
-      { nimi: 'Ragged Ass Road', lat: 62.46063, lon: -114.35256 },
+      { nimi: 'Ragged Ass Road', tyyppi: 'aukio', lat: 62.46063, lon: -114.35256 },
       { nimi: 'Luoteisterritorioiden parlamenttitalo', lat: 62.45944, lon: -114.38194 },
       { nimi: 'Prince of Walesin pohjoinen perintökeskus', lat: 62.45611, lon: -114.38 },
       { nimi: 'Hirsikoulu', lat: 62.45194, lon: -114.37667 },
@@ -16329,7 +16329,7 @@ export const KAUPUNKIKARTAT = {
        * (Inuksuk-lukio – Astro Hill), seuraavat 230 ja 276 metriä.
        */
       { nimi: 'Iqaluitin lentoasema', lat: 63.75667, lon: -68.55611 },
-      { nimi: 'Sylvia Grinnellin puisto', lat: 63.74861, lon: -68.56389 },
+      { nimi: 'Sylvia Grinnellin puisto', tyyppi: 'luonto', lat: 63.74861, lon: -68.56389 },
       { nimi: 'Nunavutin parlamenttitalo', lat: 63.75028, lon: -68.52306 },
       { nimi: 'Inuksuk-lukio', lat: 63.74917, lon: -68.51389 },
       { nimi: 'Pyhän Juudaksen katedraali', lat: 63.7475, lon: -68.51667 },
@@ -16524,6 +16524,41 @@ export function mittakaava(kartta) {
       ? `${paras} m`
       : `${String(paras / 1000).replace('.', ',')} km`,
   };
+}
+
+/*
+ * ══ KOHTEEN TYYPPI: VAIN PAIKAT KARTALLA (LÖYDÖS 178, omistaja 26.9.2026) ══
+ *
+ * Nähtävyyskartta on paikkojen kartta. Kohteen `tyyppi` kertoo, mikä se
+ * on (luokittelu docs/raportit/nahtavyydet-ei-rakennukset-20260926.md):
+ *
+ *   (puuttuu) rakennus — oletus, 1331 kohdetta
+ *   aukio     tori, aukio, katu, kortteli    — kartalla, kevyt merkki
+ *   luonto    puisto, ranta, vuori, joki     — kartalla, kevyt merkki
+ *   taide     maalaus tai veistos            — EI kartalla
+ *   esine     laiva, soitin, aarre, vaunu    — EI kartalla
+ *   henkilo   henkilö tai tapahtuma          — EI kartalla
+ *   ilmio     ilmiö                          — EI kartalla
+ *
+ * Ei-paikat SÄILYVÄT DATASSA, kunnes Sisältökirjuri siirtää ne (museon
+ * juttuun galleriana tai kaupunkilehden tarina-osioon). Kaikki kartan
+ * käyttäjät (piirto, numerointi, liuska, valikko, vienti natiiviin)
+ * lukevat kohteet `kaupunkikartanKohteet`-funktiolla, jotta numero on
+ * sama joka paikassa.
+ */
+export const KOHDETYYPIT = ['rakennus', 'aukio', 'luonto', 'taide', 'esine', 'henkilo', 'ilmio'];
+/** Tyypit, jotka piirretään kaupunkikartalle. */
+export const KARTAN_KOHDETYYPIT = new Set(['rakennus', 'aukio', 'luonto']);
+/** Kartalla kevyemmällä merkillä (ei piirrosta, pienempi piste). */
+export const KEVYET_KOHDETYYPIT = new Set(['aukio', 'luonto']);
+
+/** Kohteen tyyppi; puuttuva kenttä on rakennus. */
+export const kohteenTyyppi = (kohde) => kohde?.tyyppi ?? 'rakennus';
+/** Piirretäänkö kohde kaupunkikartalle. */
+export const kohdeKartalla = (kohde) => KARTAN_KOHDETYYPIT.has(kohteenTyyppi(kohde));
+/** Kaupunkikartan näkyvät kohteet järjestyksessään (numero = indeksi + 1). */
+export function kaupunkikartanKohteet(kartta) {
+  return (kartta?.kohteet ?? []).filter(kohdeKartalla);
 }
 
 export function karttapiste(kartta, lat, lon) {
