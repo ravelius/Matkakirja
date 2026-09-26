@@ -7395,3 +7395,7 @@ Siirtoseppa (sim b26b-c15d4487, tuore asennus): v181 730/730, Kreugerin kortti (
 ## LAITETESTAAJA f583f1c2: NRE POISSA, VAISTO/172/168 PASS; VERHO 4,7–8,0 s (26.9.2026 klo 21.03)
 
 Laitetestaaja: 0 poikkeusta; karttavaisto PASS, 172 PASS (kone matala, vaakatasossa), 168 PASS, 171 vartija aktiivinen; 175 nakyy yha (korjaus ei mukana). Poikkeama: verho kylmasta 4,7–8,0 s (1.0.25: 2,1–2,2) → Natiiviseppa selvittaa (175 alustus / S10 varjokamera / kohina) ennen TF:aa. Raportti savukierros-b27-20260926.md 1a2fcd4e2.
+
+## P0 LOYDOS 176 PALLO RIKKI LOITONNUKSESSA; P1 177 UUSI PELI EI NOLLAA (26.9.2026 klo 21.05)
+
+Omistaja 1.0.25 (21.0x, kuva loydos176): Kreikka loitonnettuna Euroopaan — laatat puuttuvat laajalta alueelta, ladatut arkkeina, irrallinen laatta; 163:n toistuma loitonnuksessa, vartija ei kata. Kreikan lippu Mustanmeren rannalla (GRC-ankkuri tarkistettava). Natiiviseppa toistaa TF-buildilla iPad Pro 13 + Cesium-loki, juurisyy ennen 1.0.26:n TF:aa. 177: Uusi peli ei tyhjenna kaikkia tietoja eika ala oikein → Pelikoodari nollauslista + PeliOhjain, Natiivi-UI Uusi peli -polku, Laitetestaaja reseptiin (uusi peli kesken pelin; loitonnus Kreikasta Eurooppaan ilman aukkoja).
