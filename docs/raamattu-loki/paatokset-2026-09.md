@@ -7459,3 +7459,7 @@ Omistaja 21.4x: 3D-nostot samaan savyyn kuin 2D-kuvamerkit (seepia-kaiverrus) ta
 ## LINSSISEPPA: SCRATCHPAD 17 → 0,9 GT; PERSPEKTIIVIKAYRA SOVITTU dce8c373 (26.9.2026 klo 21.40)
 
 Linssiseppa vapautti ~16 Gt (38 .app-kopiota, 7 raakavideota). Liioitellun perspektiivin yhteinen kayra sovittu Natiivisepan kanssa (dce8c373): lippu ja nostot Natiivisepalla, elavat elementit Linssisepalla (8ceb8b97, kaannos jonossa). Web-linsseissa ei 3D-kohteita.
+
+## VERHOPORTTI LAITTEELLA PASS 2,4–2,5 s; S11 ENSIKAYNNISTYS 5 s (26.9.2026 klo 21.43)
+
+Natiiviseppa iPad Pro 13 (cd41e4fa): terminate+relaunch 2,4/2,5/2,4 s PASS; ensikaynnistys heti asennuksen jalkeen 5,0/4,9 s (0–3 s Metal-varjostimien ja Cesiumin ensialustusta, ei verkkoa). Fable: TF-portti = relaunch; ensikaynnistys = loydos S11 → ShaderVariantCollection-esilammitys tai varjostinvalimuisti buildiin 1.0.27.
