@@ -25,8 +25,9 @@
  *
  * Valitsin ei palauta yhtä raitaa vaan KETJUN parhaasta alkaen:
  *
- *   tila (lehti, matkalaukku) → paikan raita (etusivu)
- *   → kaupungin oma kappale → kaupungin alueen raita → pohjavire
+ *   tila (lehti, matkalaukku, kohtaaminen) → paikan raita (etusivu)
+ *   → kaupungin oma kappale → kaupungin alueen raita
+ *   → kaupungin maanosan raita → pohjavire
  *
  * Soittimen tehtävä on ottaa ensimmäinen, joka ei ole todettu
  * puuttuvaksi. Juuri siksi ketju eikä valinta: raidat generoidaan
@@ -51,6 +52,8 @@
  * lehden kaikki kolme avauskohtaa ja yksi sulkukohta jo kutsuvat —
  * uutta koukkua ei tarvittu. Matkalaukku ei hiljennä ambienssia (se ei
  * ole lukunäkymä), joten se kertoo tilansa suoraan js/ui.js:stä.
+ * Kohtaaminen (vaihe 2) kertoo tilansa js/visa.js:stä, jossa henkilön
+ * kortti avautuu ja sulkeutuu (renderQuiz).
  */
 import { musaPolku } from './media.js';
 import { kaupunginRaidat } from './kaupunkimusiikki.js';
@@ -64,6 +67,17 @@ export const POHJARAITA = 'musa-pohja';
  *
  * Lehti ennen matkalaukkua, koska lehti on iso lukunäkymä ja
  * matkalaukku pieni väline: jos molemmat ovat auki, pelaaja lukee.
+ *
+ * KOHTAAMINEN VIIMEISENÄ (musiikkisuunnitelma 26.9.2026, vaihe 2).
+ * Kohtaaminen on pelin tapahtuma eikä näkymä, jonka pelaaja itse avaa:
+ * jos lehti tai matkalaukku avataan sen päälle, pelaaja on siirtynyt
+ * lukemaan tai tutkimaan, ja musiikki seuraa häntä. Kun näkymä
+ * sulkeutuu ja kohtaaminen on yhä auki, kohtaaminen palaa.
+ *
+ * VISA VOITTAA KOHTAAMISEN, mutta visan raita ei ole tässä taulussa:
+ * se soi omalla soittimellaan (js/ambience-stream.js startQuizMusic),
+ * koska sen valitsee studio laudoittain. Siksi voitto on oma sääntönsä
+ * (VISAN_ALLE_JAAVAT ja asetaVisaSoi alempana) eikä rivi tässä.
  */
 export const TILARAIDAT = {
   lehti: {
@@ -74,7 +88,34 @@ export const TILARAIDAT = {
     tunnus: 'musa-matkalaukku',
     kuvaus: 'Matkalaukku auki: nahka ja messinki, lyhyt ja hyvin hiljainen kierto.',
   },
+  kohtaaminen: {
+    tunnus: 'musa-kohtaaminen',
+    kuvaus: 'Kohtaaminen: henkilön tapaaminen ja tehtävä, kevyt pizzicato-pulssi, '
+      + 'klarinetti kysyy ja piano vastaa.',
+  },
 };
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * VISA VOITTAA KOHTAAMISEN (musiikkisuunnitelma 26.9.2026, vaihe 2;
+ * määrittely: "kun kysymys alkaa, visan oma raita soi kuten nyt;
+ * kysymyksen jälkeen, jos kohtaaminen on yhä auki, kohtaaminen palaa")
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Visan raita ja pohjaraita ovat KAKSI SOITINTA: kysymyksen aikana
+ * pohjaraita jää soimaan visan alle väistöllä 0,15 (js/ambience-
+ * stream.js startQuizMusic). Kaupungin kappale visan alla on hiljainen
+ * väri, mutta kohtaamisen pulssi visan alla olisi kaksi kohtausraitaa
+ * päällekkäin — eri tempo, eri sävellaji. Siksi kohtaaminen väistyy
+ * ketjusta koko sen ajan, kun visan raita on päällä, ja ketju antaa
+ * sen alle sen, mikä soisi ilman kohtaamista (kaupunki, alue, maanosa).
+ *
+ * Tila ei katoa: kohtaaminen on yhä auki, ja kun visa loppuu
+ * (stopQuizMusic), sama heräte palauttaa sen. Siksi tämä on oma lippu
+ * eikä kohtaamistilan purku — kutsujan ei tarvitse muistaa, oliko
+ * kohtaaminen auki ennen kysymystä.
+ */
+export const VISAN_ALLE_JAAVAT = ['kohtaaminen'];
 
 /**
  * PAIKKARAIDAT — virtuaalipaikat, joilla on oma kappale. 'etusivu' on
@@ -115,6 +156,7 @@ export const PAIKKARAIDAT = {
 let paikka = null;
 let paikanMaa = null;
 const tilat = new Set();
+let visaSoi = false;
 const musiikkiKuuntelijat = new Set();
 /*
  * Musiikin TASON kuuntelijat (kuunteleMusiikinKerrointa). Eri joukko
@@ -162,6 +204,22 @@ export function asetaMusiikkitila(nimi, paalla) {
 
 /** Päällä olevat tilat prioriteettijärjestyksessä (testit ja lehti). */
 export const musiikkitilat = () => Object.keys(TILARAIDAT).filter((n) => tilat.has(n));
+
+/**
+ * Visan raita alkoi tai loppui (js/ambience-stream.js startQuizMusic ja
+ * stopQuizMusic). Herättää kuuntelijat vain, kun lippu todella vaihtuu.
+ *
+ * @param {boolean} paalla
+ */
+export function asetaVisaSoi(paalla) {
+  const uusi = Boolean(paalla);
+  if (uusi === visaSoi) return;
+  visaSoi = uusi;
+  for (const fn of musiikkiKuuntelijat) fn();
+}
+
+/** Soiko visan raita juuri nyt (testit). */
+export const visaSoiNyt = () => visaSoi;
 
 /**
  * Ilmoita minulle, kun soivan raidan pitää vaihtua. Kuuntelija on
@@ -482,7 +540,10 @@ export function musiikinLiuunTeksti(liuku = musiikinLiukuArvo) {
 export function musiikkiketju(cityId = paikka, maa = paikanMaa) {
   const polut = [];
   for (const nimi of Object.keys(TILARAIDAT)) {
-    if (tilat.has(nimi)) polut.push(musaPolku(TILARAIDAT[nimi].tunnus));
+    if (!tilat.has(nimi)) continue;
+    // Visan aikana kohtaaminen odottaa (ks. VISA VOITTAA KOHTAAMISEN).
+    if (visaSoi && VISAN_ALLE_JAAVAT.includes(nimi)) continue;
+    polut.push(musaPolku(TILARAIDAT[nimi].tunnus));
   }
   if (cityId && Object.hasOwn(PAIKKARAIDAT, cityId)) {
     polut.push(musaPolku(PAIKKARAIDAT[cityId].tunnus));
@@ -517,6 +578,7 @@ export function nollaaMusiikkivalitsin() {
   paikka = null;
   paikanMaa = null;
   tilat.clear();
+  visaSoi = false;
   musiikkiKuuntelijat.clear();
   kerroinKuuntelijat.clear();
 }

@@ -90,6 +90,21 @@ const RAIDAT = {
   'saapuminen-oseania': { alku: 1.2, loppu: 10.6, sisaan: 0.05, ulos: 1.8 },
   'maanosa-valimeri': { alku: 1.4, loppu: 67.3, sisaan: 0.02, ulos: 0.3 },
   'maanosa-lansi-eurooppa': { alku: 0, loppu: 69.3, sisaan: 0.02, ulos: 0.3 },
+  // Vaihe 3 (§5 kohta 3): loopit, vain alun ja lopun hiljaisuus pois (loppu = −45 dB:n raja + 0,5 s).
+  'maanosa-ita-eurooppa': { alku: 0, loppu: 62.0, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-lahi-ita': { alku: 0.2, loppu: 69.25, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-saharan-etelapuoli': { alku: 0.2, loppu: 50.5, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-etela-aasia': { alku: 0.45, loppu: 69.75, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-ita-aasia': { alku: 0.7, loppu: 72.75, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-pohjois-amerikka': { alku: 0, loppu: 71.0, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-etela-amerikka': { alku: 0.2, loppu: 68.5, sisaan: 0.02, ulos: 0.3 },
+  'maanosa-oseania': { alku: 0.95, loppu: 59.0, sisaan: 0.02, ulos: 0.3 },
+  'kaupunki-pariisi': { alku: 0.7, loppu: 70.75, sisaan: 0.02, ulos: 0.3 },
+  'kaupunki-lontoo': { alku: 0.7, loppu: 72.75, sisaan: 0.02, ulos: 0.3 },
+  'kaupunki-rooma': { alku: 0.2, loppu: 73.75, sisaan: 0.02, ulos: 0.3 },
+  'kaupunki-istanbul': { alku: 0.7, loppu: 65.0, sisaan: 0.02, ulos: 0.3 },
+  'kaupunki-kairo': { alku: 0, loppu: 69.0, sisaan: 0.02, ulos: 0.3 },
+  'kaupunki-pietari': { alku: 0.95, loppu: 68.75, sisaan: 0.02, ulos: 0.3 },
 };
 
 function ffmpeg(argit) {

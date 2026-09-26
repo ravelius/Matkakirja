@@ -1059,15 +1059,19 @@ export const AARRE_MUSIIKKI = {
  * MATKAN AIHEET (musiikkisuunnitelma 26.9.2026, vaihe 1). Kertaraitoja
  * kuten aarreaiheet, ja ne soivat SAMASSA PAIKASSA samalla soittimella
  * (soitaAarreMusiikki): pohjaraita ja maisema väistyvät aiheen ajaksi
- * ja palaavat, kun aihe loppuu. Saapumistunnus asuu alueittain
+ * ja palaavat, kun aihe loppuu. Saapumistunnus asuu maanosittain
  * js/kaupunkimusiikki.js:n SAAPUMISTUNNUKSET-taulussa.
  *
- *   aloituslento  Lontoosta ensimmäiseen kaupunkiin, 26 s (doPickStart)
- *   loppu         kaikki pääaarteet löydetty, 69 s (ajastaMatkanLoppu)
+ *   aloituslento     Lontoosta ensimmäiseen kaupunkiin, 26 s (doPickStart)
+ *   loppu            kaikki pääaarteet löydetty, 69 s (ajastaMatkanLoppu)
+ *   ratkaisu         kohtaamisen kysymys oikein, 4,3 s (soitaKohtaamisenTulos)
+ *   epaonnistuminen  kohtaamisen kysymys väärin tai aika loppui, 4,0 s (sama)
  */
 export const MATKAN_AIHEET = {
   aloituslento: musaPolku('musa-aloituslento'),
   loppu: musaPolku('musa-loppu'),
+  ratkaisu: musaPolku('musa-ratkaisu'),
+  epaonnistuminen: musaPolku('musa-epaonnistuminen'),
 };
 /*
  * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
@@ -4690,6 +4694,9 @@ export class UI {
     this.vapautaPohja();
     this.taideLahde = null;
     stopPlaceStream();
+    // Kohtaaminen kiinni ENNEN visan pysäytystä: muuten visan loppu
+    // nostaisi kohtaamisen hetkeksi soimaan kuolleen pelin päälle.
+    asetaMusiikkitila('kohtaaminen', false);
     stopQuizMusic();
     sfx.stopFlight();
     stopIntroVoice(this);
@@ -19923,8 +19930,9 @@ export class UI {
   }
 
   /**
-   * SAAPUMISTUNNUS UUTEEN KAUPUNKIIN (musiikkisuunnitelma 26.9.2026,
-   * vaihe 1: vain Välimeri, js/kaupunkimusiikki.js SAAPUMISTUNNUKSET).
+   * SAAPUMISTUNNUS UUTEEN KAUPUNKIIN (musiikkisuunnitelma 26.9.2026;
+   * vaihe 2: kaikki kymmenen maanosaa, js/kaupunkimusiikki.js
+   * SAAPUMISTUNNUKSET ja kaupunginMaanosa).
    *
    * Kutsuja (ennakoiAmbienssi) on jo todennut, että kaupungissa ei ole
    * käyty tällä matkalla. Tunnus EI KESKEYTÄ soivaa aihetta: jos
@@ -19938,6 +19946,29 @@ export class UI {
     const maa = this.game.pack?.map?.cityCountry?.[city.id] ?? null;
     const tunnus = saapumistunnus(city.id, maa);
     if (tunnus) this.soitaAarreMusiikki(tunnus);
+  }
+
+  /**
+   * KOHTAAMISEN TULOS (musiikkisuunnitelma 26.9.2026, vaihe 2):
+   * `musa-ratkaisu` oikeasta vastauksesta, `musa-epaonnistuminen`
+   * väärästä tai ajan loppumisesta. Kutsuja on js/visa.js (answerQuiz
+   * ja timeUp) ja vain kohtaamisen kysymyksessä (onKohtaaminen).
+   *
+   * EI KATKAISE: sama sääntö kuin saapumistunnuksella. Jos aarre- tai
+   * matkan aihe soi yhä, tulos jää pois. Toisin päin aarre voittaa:
+   * kun oikea vastaus avaa aarteen, paljastuksen aihe (playTokenReveal
+   * → soitaAarreMusiikki) katkaisee ratkaisun hetken päästä, ja juuri
+   * niin kuuluu — löytö on isompi hetki kuin oikea vastaus.
+   *
+   * Oikein/väärin-tehosteet (sfx correct/wrong/timeout) soivat
+   * ennallaan; tämä on musiikkia niiden päällä, joten musiikin kytkin
+   * ja säädin koskevat sitä soitaAarreMusiikin kautta.
+   *
+   * @param {boolean} oikein
+   */
+  soitaKohtaamisenTulos(oikein) {
+    if (this.aarreMusiikki || this.radioPaalla()) return;
+    this.soitaAarreMusiikki(oikein ? MATKAN_AIHEET.ratkaisu : MATKAN_AIHEET.epaonnistuminen);
   }
 
   /**
