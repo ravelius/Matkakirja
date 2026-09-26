@@ -1443,3 +1443,15 @@ test('skeema 1.45: Elävä kartta — kokoluokka, maakunta ja salaisuus', async 
   assert.ok(rajat.every((a) => 'salaisuus' in a));
 });
 
+test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () => {
+  const k = JSON.parse(tiedostot.get('kokoelmat/reitit1873.json'));
+  assert.ok(k.alkiot.length > 100);
+  assert.ok(k.lahteet.length && k.lahteet.every((l) => l.id && l.lisenssi));
+  for (const r of k.alkiot) {
+    assert.ok(['laiva', 'rautatie'].includes(r.laji), r.id);
+    assert.ok(r.lisenssi && typeof r.lahde === 'string' && r.lahde.length, r.id);
+    assert.ok(r.viivat.length && r.viivat.every((v) => v.length >= 2 && v.every(([lon, lat]) => Math.abs(lon) <= 180 && Math.abs(lat) <= 90)), r.id);
+  }
+  assert.ok(k.alkiot.some((r) => r.laji === 'laiva') && k.alkiot.some((r) => r.laji === 'rautatie'));
+});
+
