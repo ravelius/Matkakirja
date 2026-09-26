@@ -207,3 +207,16 @@ MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (
   (Matkakirja3D-f994.app) ja jälkeen (-153.app), kuvapari → merge-pyyntö Natiivisepälle (kuitannut odottavansa).
 - Musiikki vaihe 2: ajo 36222088349 käynnissä klo 08.56 (loput 9 raitaa).
 - Simulaattori A2FD9C9F sammutettu.
+
+## 20. Lisäys 26.9. klo 10.0x (uusi sessio)
+- MUSIIKKI VAIHE 2 VALMIS kuunneltavaksi: 14 raitaa ämpärissä, lista docs/raportit/musiikki-vaihe2-kuunneltavaksi.md
+  (Fablelle lähetetty). Lyria hylkäsi myös maanosa-valimeri-kehotteen → uusi muotoilu. Työkalu (web-haara
+  pelikoodari-musiikki-vaihe1 d3bdf38f5, PR #3304): RAIDAT-taulu vaihe 2, huippurajoitin ≤ 3 dB (RAJOITIN_DB),
+  raa'an vienti paikallisesta kun ajo kaatui ennen vientiä. Tasot −11,3…−13,0 LUFS. Vaihe 3 vasta kuuntelun jälkeen.
+- LÖYDÖS 155 TEHTY: web `pelikoodari-loydos155` 6ad5b1f65 (4355/0, savuke-nostojen-tyyppimerkit 13/13 uudella z7-tasolla),
+  natiivi `pelikoodari/loydos155` c09aacc3 (288/288, unity 0; NostoSaannot nyt Peli-testeissä). Kynnys 2,5, koko 0,7
+  kertoimilla 2,5–4, koelippu pois. Natiiviseppä ottaa c09aacc3 + 153 e6a2f829 junaan kun kuvapari omistajalla;
+  Kaukana-kerrointa EI tehdä (sovittu). Web-kuvapari lokit/loydos155/web-kuvapari.png. PR webiin vasta omistajan kuvaparin jälkeen.
+- 153+155 natiivikuvat: skriptit lokit/loydos155/kreikka-natiivi.sh (kerroin 3 iteroiden, valinnainen kallistus) ja
+  lokit/loydos153/kallistus-kuva.sh (korjattu: ui sulje + aja kaari 6,2). Yhdistetty käännös proto-kaanna.sh
+  pelikoodari/loydos153+pelikoodari/loydos155; ennen = lokit/musiikki-v1/Matkakirja3D-f994.app.
