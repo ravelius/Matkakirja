@@ -135,3 +135,13 @@ lokit/verkko-odotus/b18-kylma-haut/. Kohta 1 -paketointi on Natiivisepän.
 - Jäljellä kaksoishaut: peli-reitti (kaupungit, reitit) ja LinssiSisalto (maarajat, maat, radiot) — kerro Linssisepälle.
 - AVOINNA: jono 3 (kaupunkilehdet 16 Mt, linssidata, II-kuvat pois käynnistyksestä), musiikin generointi vaihe 1,
   osoitin-taustalle-ajoitusuusinta kun Natiivisepän kohta 1 -tilannekuva on junassa.
+
+## 15. Lisäys 26.9. klo 05.5x
+- JONO 3 (osa): `pelikoodari/lehdet-perassa` 37ad3444 (UiSisalto: kaupunkilehdet Valmis-tilan jälkeen, LehdetSaapuivat) →
+  merge-pyyntö; kylmä aloitusverho 5 336 ms (aiemmin 8–9,8 s; mukana Natiivisepän kohta 1). Natiivi-UI: KaupunkiKortti
+  kuuntelee LehdetSaapuivat. Seuraava: Siirtosepän skeema 1.48 kaupunkilehdet/<id>.json → vain valitun kaupungin lehti lennolla.
+  Linssien käynnistyslataukset tekee Linssiseppä (lupasi); yhteinen-haku d2e21ee0 junassa → LinssiSisalto siirtyy siihen.
+- MUSIIKKI VAIHE 1 GENEROITU ja ämpärissä (omistajalle Fablen kautta kuunneltavaksi): musa-{johtoaihe,aloituslento,
+  saapuminen-valimeri,loppu}-lyria.mp3. Lyria EI noudattanut kestoja (63/62/100/72 s) → lyhyet tunnukset leikataan hyväksynnän
+  jälkeen. Työkalu: web-haara pelikoodari-musiikki-vaihe1 (ryhmä vaihe1 + lyria.mjs mkdir-korjaus) — tee PR kun omistaja
+  kuunnellut. Ajo: gh workflow run generoi-musiikki.yml -R ravelius/Matkakirja --ref <haara> -f raidat=vaihe1 -f moottori=lyria.
