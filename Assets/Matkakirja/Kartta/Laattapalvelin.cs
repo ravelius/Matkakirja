@@ -55,6 +55,16 @@ namespace Matkakirja
         /// näkyvän kartan paikkojen lisäksi, joten se etenee lennon aikana eikä viivästytä näkyviä laattoja.
         /// </summary>
         readonly ConcurrentQueue<Haku> kohdeJono = new ConcurrentQueue<Haku>();
+        /// <summary>
+        /// TAUSTAN ESILATAUS (laattojen esilataus erä 2: kohdekaupunkien saapumisnäkymät, <see cref="Esilataus.Tausta"/>): alin
+        /// prioriteetti. Palvellaan vain, kun näkyvän kartan jono, kiirejono ja tavallinen esilatausjono ovat tyhjiä, kiirejonon
+        /// hakuja ei ole käynnissä eikä yksikään verho odota, ja enintään <see cref="TaustaPaikat"/> hakua kerrallaan, jotta
+        /// näkyvälle kartalle jää aina paikkoja (ESILATAUSPOLITIIKKA: ei hidasta näkyvää jonoa; VARTIJA 163b: ei kiirejonoa).
+        /// </summary>
+        readonly ConcurrentQueue<Haku> taustaJono = new ConcurrentQueue<Haku>();
+        /// <summary>Taustan esilatauksen rinnakkaiset haut (erä 2).</summary>
+        public const int TaustaPaikat = 4;
+        int taustaKaynnissa;
 
         /// <summary>
         /// VERHON KEVENNYS (Fablen päätös BUILD 16, löydös 80; Valmius.KevennysAlku/Loppu): kun jokin verho odottaa pallon
@@ -150,7 +160,9 @@ namespace Matkakirja
         /// Näkyvän kartan laattoja haussa (jonossa tai käynnissä): Alueet hidastaa offline-latauksen,
         /// jotta näkyvä näkymä latautuu ensin (omistajan build 5 -löydös 13).
         /// </summary>
-        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa > 0 || !Instanssi.jono.IsEmpty || !Instanssi.kiireJono.IsEmpty);
+        /// <remarks>Taustan esilatauksen (erä 2) haut eivät tee palvelimesta kiireistä: ne väistävät itse kaikkea muuta, eikä niiden
+        /// pidä pysäyttää Esilataajan taustatasoja tai joutilas-tarkkailua.</remarks>
+        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa - Instanssi.taustaKaynnissa > 0 || !Instanssi.jono.IsEmpty || !Instanssi.kiireJono.IsEmpty);
 
         /// <summary>
         /// Pohjalaatan polun alku (Rakennus.LaattaUrl ilman ämpäriä): jos tällainen laatta ei tule
@@ -260,6 +272,11 @@ namespace Matkakirja
             public bool Etusija { get; set; }
             /// <summary>Verho odottaa tätä esilatausta (aloituslennon reitti, Nappula): sitä palvellaan verhon kevennyksen aikanakin.</summary>
             public bool Verholle { get; set; }
+            /// <summary>
+            /// Taustan esilataus (erä 2, kohdekaupunkien saapumisnäkymät): oma jono (taustaJono), jota palvellaan vasta kaiken
+            /// muun jälkeen, enintään <see cref="TaustaPaikat"/> kerrallaan eikä verhon aikana. Ei yhdessä Etusija/Verholle-lipun kanssa.
+            /// </summary>
+            public bool Tausta { get; set; }
             /// <summary>Käsitellyt (valmiit + epäonnistuneet) osuutena, 1 kun tyhjä tai peruttu.</summary>
             public float Osuus { get { int y = Yhteensa; return y == 0 || peruttu ? 1f : (float)(Valmis + Epaonnistui) / y; } }
             /// <summary>Jonossa odottavat haut vapautetaan ilman verkkoa; käynnissä olevat valmistuvat.</summary>
@@ -666,8 +683,9 @@ namespace Matkakirja
         {
             var p = Instanssi;
             if (p == null) return "-";
-            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}, kiire {p.kiireKaynnissa}) jono {p.jono.Count} kiire {p.kiireJono.Count} " +
-                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} tauolla {p.tauolla.Count} nälkä163b {PohjaNalka}";
+            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}, kiire {p.kiireKaynnissa}, tausta {p.taustaKaynnissa}) jono {p.jono.Count} " +
+                   $"kiire {p.kiireJono.Count} esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} taustajono {p.taustaJono.Count} " +
+                   $"tauolla {p.tauolla.Count} nälkä163b {PohjaNalka}";
         }
 
         sealed class Lahde { public string Nimi = "?"; }
@@ -769,7 +787,7 @@ namespace Matkakirja
             // tauolla: Update) käyttävät kiirejonoa; aloitusnäytön Sentinel-esilataus kulkee esilatausjonossa muun listan tavoin.
             (!esi ? (varitasoa ? kiireJono : jono)
                 : varitasoa && (esilataus.Verholle || esilataus.Etusija) ? kiireJono
-                : esilataus.Etusija ? kohdeJono : esiJono).Enqueue(h);
+                : esilataus.Etusija ? kohdeJono : esilataus.Tausta ? taustaJono : esiJono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             lahde.Nimi = "verkko";
             if (tila == 200 && !KuvaEhja(polku, data))
@@ -882,6 +900,15 @@ namespace Matkakirja
                 if (verhot > 0 && (e.Esi == null || !e.Esi.Verholle)) { tauolla.Add(e); continue; }
                 StartCoroutine(Lataa(e));
             }
+            // Taustan esilataus (erä 2): perutut pois jonon alusta aina, uudet haut vasta kun kaikki muu on tyhjää ja rauhallista.
+            while (taustaJono.TryPeek(out var pt) && pt.Esi != null && pt.Esi.Peruttu && taustaJono.TryDequeue(out pt))
+                pt.Valmis.TrySetResult((499, null));
+            while (verhot == 0 && taustaKaynnissa < TaustaPaikat && kaynnissa - kohdeKaynnissa < raja - 2 && jono.IsEmpty
+                   && kiireJono.IsEmpty && kiireKaynnissa == 0 && esiJono.IsEmpty && taustaJono.TryDequeue(out var b))
+            {
+                if (b.Esi != null && b.Esi.Peruttu) { b.Valmis.TrySetResult((499, null)); continue; }
+                StartCoroutine(LataaTausta(b));
+            }
             if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
             {
                 seuraavaUusinta = Time.unscaledTime + 10f;
@@ -923,6 +950,14 @@ namespace Matkakirja
             kohdeKaynnissa++;
             try { yield return Lataa(h); }
             finally { kohdeKaynnissa--; }
+        }
+
+        /// <summary>Taustan esilatauksen haku (erä 2: oma laskuri, enintään <see cref="TaustaPaikat"/>).</summary>
+        IEnumerator LataaTausta(Haku h)
+        {
+            taustaKaynnissa++;
+            try { yield return Lataa(h); }
+            finally { taustaKaynnissa--; }
         }
 
         /// <summary>Kiirejonon haku (163b: oma laskuri, jotta kiire ei vie näkyvän jonon paikkoja).</summary>

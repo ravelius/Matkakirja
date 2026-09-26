@@ -1406,6 +1406,164 @@ namespace Matkakirja
             while (!e.Peruttu && e.Osuus < 1f) yield return null;
         }
 
+        // ---- Laattojen esilataus erä 2: kohdekaupunkien saapumisnäkymät (Natiiviseppä 26.9.2026) ----
+
+        /// <summary>
+        /// Kehittäjälippu A/B-mittaukseen: kohdekaupunkien saapumisnäkymän esilataus pois (defaults write … matkakirja-saapumislaatat
+        /// -int 0, sovellus kiinni; App Store -käännöksessä aina päällä).
+        /// </summary>
+        public static bool SaapumisLaatatPaalla
+        {
+            get
+            {
+#if !MATKAKIRJA_APPSTORE
+                if (saapumisLippu < 0) saapumisLippu = PlayerPrefs.GetInt("matkakirja-saapumislaatat", 1);
+                return saapumisLippu != 0;
+#else
+                return true;
+#endif
+            }
+        }
+        static int saapumisLippu = -1;
+
+        /// <summary>Astronautin kameran avausnäkymän reliefilaattoja enintään (sama kuin LinssienEsilataaja.JoutilasKatto).</summary>
+        public const int SaapumisLinssiKatto = 150;
+
+        /// <summary>
+        /// Kohdemaan saapumisnäkymä (PalloKierto.SaapumisNakyma maan laatikolla, kuten PeliOhjain.Saavu matkan lopussa) ja sen
+        /// avain (SaapumisLaatat.Avain): sama avain = sama laattajoukko. null, jos kameraa ei vielä ole.
+        /// </summary>
+        public (Saapumisnakyma.Tulos nakyma, string avain)? SaapumisNakyma(string maa, double lat, double lon)
+        {
+            var kierto = nappula != null ? nappula.kierto : null;
+            if (kierto == null) return null;
+            var t = kierto.SaapumisNakyma(maa, lat, lon, maaRajaus: true);
+            return (t, SaapumisLaatat.Avain(maa, t.Lat, t.Lon, t.Korkeus * Saapumisnakyma.Sade / 1000.0));
+        }
+
+        /// <summary>
+        /// KOHDEKAUPUNGIN SAAPUMISNÄKYMÄN ESILATAUS (laattojen esilataus erä 2; ESILATAUSPOLITIIKKA kohdat 3 ja 5): kohdemaan
+        /// saapumisnäkymän pohja-, maasto- ja kermahuntulaatat (SaapumisLaatat, mitoitus pyyntölokilla) levylle TAUSTAN
+        /// esilatauksena (Laattapalvelin.Esilataus.Tausta: vasta kun näkyvä jono, kiirejono ja muu esilataus ovat tyhjiä, enintään
+        /// Laattapalvelin.TaustaPaikat kerrallaan, ei verhon aikana). Esilataajan laattatehtävänä tasolla <paramref name="taso"/>
+        /// (matkan alku SeuraavaRuutu, ennakointi Kohdekaupungit: kuumana seis). Kerma vasta, kun maan laatat.json on levyllä
+        /// (sama VariAlue kuin Varitaso rekisteröi saapuessa: alueen ulkopuoli _maailma-sarjasta). <paramref name="linssi"/> = tosi:
+        /// lopuksi astronautin kameran avausnäkymän reliefi saapumisnäkymän keskipisteen yllä (AstronauttiLinssi.Avaa: sama paikka,
+        /// koko pallon korkeus), kuten LinssienEsilataaja joutilaana. Palauttaa peruttavan esilatauksen (kutsuja perii sen, kun
+        /// kohde vaihtuu tai matka on perillä), tai null, jos lippu on pois tai kameraa ei ole.
+        /// </summary>
+        public Laattapalvelin.Esilataus EsilataaSaapumisalue(string kaupunki, string maa, double lat, double lon, Taso taso, bool linssi)
+        {
+            if (!SaapumisLaatatPaalla) return null;
+            var sn = SaapumisNakyma(maa, lat, lon);
+            if (sn == null) return null;
+            var t = sn.Value.nakyma;
+            var kierto = nappula.kierto;
+            var kam = kierto.GetComponent<Camera>();
+            double fov = kam != null ? kam.fieldOfView : Saapumisnakyma.PalloFov;
+            double kuvasuhde = kam != null && kam.aspect > 0 ? kam.aspect : (double)Screen.width / Math.Max(1, Screen.height);
+            double h = t.Korkeus * Saapumisnakyma.Sade / 1000.0;
+            var ala = SaapumisLaatat.Alue(t.Lat, t.Lon, h, fov, kuvasuhde);
+            var polut = new List<string>();
+            var nahty = new HashSet<string>();
+            int pohjaN = 0, maastoN = 0;
+            // Pohja (Web Mercator, {reverseY} = XYZ-rivi): päätaso ja kaksi esivanhempaa.
+            string pm = PohjaMalli();
+            int pohjaMax = pohja is CesiumUrlTemplateRasterOverlay pu ? pu.maximumLevel : 9;
+            int rasteri = SaapumisLaatat.Taso(h, SaapumisLaatat.RasteriKerroin, 0, pohjaMax);
+            if (pm != null)
+            {
+                var (z0, z1) = SaapumisLaatat.Tasot(rasteri);
+                foreach (var (z, x, y) in SaapumisLaatat.Mercator(ala, z0, z1))
+                {
+                    string p = pm.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{reverseY}", y.ToString());
+                    if (nahty.Add(p)) { polut.Add(p); pohjaN++; }
+                }
+            }
+            // Maasto (quantized-mesh, TMS): vain saatavilla olevat (layer.json luettu aloitusnäytössä, tasot ≤ 10).
+            if (maastoPohja != null && Laattapalvelin.MaastoPolku != null && maastoSaatavuus != null)
+            {
+                var (z0, z1) = SaapumisLaatat.Tasot(SaapumisLaatat.Taso(h, SaapumisLaatat.MaastoKerroin, 0, maastoSaatavuus.Length - 1));
+                foreach (var (z, x, y) in SaapumisLaatat.Maantieteellinen(ala, z0, z1))
+                {
+                    if (!MaastoLaatat.Saatavilla(maastoSaatavuus, z, x, y)) continue;
+                    string p = Laattapalvelin.MaastoPolku + maastoPohja.Replace("{z}", z.ToString()).Replace("{x}", x.ToString())
+                        .Replace("{y}", y.ToString());
+                    if (nahty.Add(p)) { polut.Add(p); maastoN++; }
+                }
+            }
+            List<string> reliefi = null;
+            if (linssi)
+                reliefi = Matkakirja.Linssit.Laattalista.Polut(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
+                    new Matkakirja.Linssit.Nakyma(Math.Max(-55.0, Math.Min(55.0, t.Lat)), t.Lon, kierto.MaxKorkeus()), fov, kuvasuhde,
+                    Screen.height, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, Laattapalvelin.Ampari, SaapumisLinssiKatto);
+            var e = new Laattapalvelin.Esilataus { Tausta = true };
+            float alku = Time.realtimeSinceStartup;
+            Debug.Log($"MATKAKIRJA saapumislaatat: {kaupunki} ({maa}, {taso}) pohja {pohjaN} (z{SaapumisLaatat.Tasot(rasteri).min}–{rasteri}), " +
+                      $"maasto {maastoN}, reliefi {reliefi?.Count ?? 0}; näkymä {ala}");
+            PyyntoLoki.Merkki($"saapumislaatat {kaupunki} alkaa {polut.Count} + kerma + reliefi {reliefi?.Count ?? 0}");
+            StartCoroutine(Esilataaja.Tehtava(taso, "saapuminen-" + kaupunki,
+                () => SaapumisEra(polut, maa, ala, rasteri, reliefi, e, kaupunki, alku), laatta: true, peruttu: () => e.Peruttu));
+            return e;
+        }
+
+        [Serializable] class KermaAlue { public double lon0, lon1, lat0, lat1; }
+        [Serializable] class KermaTieto { public KermaAlue alue; }
+        [Serializable] class KermaTasot { public int min, max; }
+        [Serializable] class KermaLuettelo { public KermaTieto varitaso; public KermaTasot tasot; }
+
+        /// <summary>Esilataaja.Tehtava-korutiini: näkymän laatat, maan kermahuntu laatat.json-tiedoston jälkeen, lopuksi reliefi.</summary>
+        System.Collections.IEnumerator SaapumisEra(List<string> polut, string maa, SaapumisLaatat.Ala ala, int rasteri,
+            List<string> reliefi, Laattapalvelin.Esilataus e, string kaupunki, float alku)
+        {
+            Laattapalvelin.Esilataa(polut, e);
+            int kermaN = 0;
+            if (!string.IsNullOrEmpty(maa))
+            {
+                // Maan huntusarjan luettelo levylle samasta taustajonosta; Varitaso lukee sen saapuessa välimuistista.
+                string luettelo = Varitaso.Kansio + maa + "/laatat.json";
+                var j = Laattapalvelin.Esilataa(new[] { luettelo }, new Laattapalvelin.Esilataus { Tausta = true });
+                while (!e.Peruttu && j.Osuus < 1f) yield return null;
+                if (e.Peruttu) { j.Peru(); yield break; }
+                var l = LueKermaLuettelo(luettelo);
+                var a = l?.varitaso?.alue;
+                if (a != null)
+                {
+                    bool tasotOk = l.tasot != null && l.tasot.max > 0;
+                    int min = Math.Max(Varitaso.AlinKaytetty, tasotOk ? l.tasot.min : Varitaso.AlinKaytetty);
+                    int max = tasotOk ? l.tasot.max : 8;
+                    // Sama rekisteröinti kuin Varitaso.Vaihda saapuessa: alueen ulkopuoli _maailma-sarjasta, alin taso tyhjänä.
+                    Laattapalvelin.VariAlue(Varitaso.Kansio + maa + "/", a.lon0, a.lat0, a.lon1, a.lat1, Varitaso.Kansio + "_maailma/", min);
+                    var (z0, z1) = SaapumisLaatat.Tasot(Math.Min(rasteri, max));
+                    var kerma = new List<string>();
+                    foreach (var (z, x, y) in SaapumisLaatat.Mercator(ala, Math.Max(z0, min), z1))
+                        kerma.Add(Varitaso.Kansio + maa + "/" + z + "/" + x + "/" + y + ".webp");
+                    kermaN = kerma.Count;
+                    if (kerma.Count > 0) Laattapalvelin.Esilataa(kerma, e);
+                }
+            }
+            if (reliefi != null && reliefi.Count > 0 && !e.Peruttu) Laattapalvelin.Esilataa(reliefi, e);
+            while (!e.Peruttu && e.Osuus < 1f) yield return null;
+            Debug.Log($"MATKAKIRJA saapumislaatat: {kaupunki} {(e.Peruttu ? "peruttu" : "valmis")} {e.Valmis}/{e.Yhteensa} " +
+                      $"(kerma {kermaN}), epäonnistui {e.Epaonnistui}, {Time.realtimeSinceStartup - alku:0.0} s");
+            PyyntoLoki.Merkki($"saapumislaatat {kaupunki} {(e.Peruttu ? "peruttu" : "valmis")} {e.Valmis}/{e.Yhteensa}");
+        }
+
+        /// <summary>Kermasarjan luettelo levyltä (offline tai välimuisti), null jos puuttuu tai rikki.</summary>
+        static KermaLuettelo LueKermaLuettelo(string polku)
+        {
+            foreach (var juuri in new[] { Laattapalvelin.OfflineKansio, Laattapalvelin.ValimuistiKansio })
+            {
+                try
+                {
+                    string f = Laattapalvelin.Tiedosto(juuri, polku);
+                    if (System.IO.File.Exists(f)) return JsonUtility.FromJson<KermaLuettelo>(System.IO.File.ReadAllText(f));
+                }
+                catch (Exception) { }
+            }
+            return null;
+        }
+
         /// <summary>Maaston tiles-pohja ja saatavuus (EsilataaAloitusMaasto lukee layer.jsonin; EsilataaAvaus käyttää).</summary>
         string maastoPohja;
         List<(int x0, int y0, int x1, int y1)>[] maastoSaatavuus;
