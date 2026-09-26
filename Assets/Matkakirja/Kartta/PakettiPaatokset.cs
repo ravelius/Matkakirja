@@ -174,8 +174,10 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Säilytettävät versiot: käytössä oleva, edellinen valmis sitä vanhempi (palautus ilman latausta) ja kesken olevat
-        /// uudemmat (hakemisto ladattu, ei vielä valmis). Muut poistetaan.
+        /// Säilytettävät versiot: käytössä oleva, edellinen valmis sitä vanhempi (palautus ilman latausta) sekä KAIKKI
+        /// käytössä olevaa uudemmat, valmiit ja kesken olevat. Taustapäivitys lataa seuraavan version valmiiksi samalla
+        /// käynnistyksellä, ja se otetaan käyttöön vasta seuraavalla (Natiivi-UI 26.9.: siivous poisti juuri valmistuneen
+        /// v151:n, ja laite jäi v145:een). Muut poistetaan.
         /// </summary>
         public static HashSet<int> Sailytettavat(int kaytossa, ICollection<int> valmiit, ICollection<int> kesken)
         {
@@ -184,6 +186,7 @@ namespace Matkakirja
             s.Add(kaytossa);
             int edellinen = valmiit.Where(v => v < kaytossa).DefaultIfEmpty(0).Max();
             if (edellinen > 0) s.Add(edellinen);
+            foreach (var v in valmiit) if (v > kaytossa) s.Add(v);
             foreach (var v in kesken) if (v > kaytossa) s.Add(v);
             return s;
         }
