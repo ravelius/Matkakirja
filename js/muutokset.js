@@ -13,6 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2274, teksti: 'FIN/EST/SVN: maakuntien kuva- ja pikkukuva-kent… (#3336)' },
+  { v: 2273, teksti: 'LTU: maakuntien kuva- ja pikkukuva-kentät (#3333)' },
+  { v: 2272, teksti: 'LVA: maakuntien kuva- ja pikkukuva-kentät (#3332)' },
+  { v: 2271, teksti: 'SVK: maakuntien kuva- ja pikkukuva-kentät (#3331)' },
+  { v: 2270, teksti: 'DNK: maakuntien kuva- ja pikkukuva-kentät (#3330)' },
   { v: 2269, teksti: 'BEL: maakuntien kuva- ja pikkukuva-kentät (#3328)' },
   { v: 2268, teksti: 'NLD: maakuntien kuva- ja pikkukuva-kentät (#3318)' },
   { v: 2267, teksti: 'Maakunnat: FIN/EST/SVN pitka-tekstit (#3313)' },

@@ -3008,27 +3008,92 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *     Viking Ship Museum (nostettu 1962)
    *   Syddanmark — Duchy of Schleswig (Preussin osa 1864–1920);
    *     Battle of Dybbøl; Hans Christian Andersen
+   *
+   * DNK KUVA + PIKKUKUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko
+   * BEL:n jälkeen): sama kaava — Commons-kuva lisenssi tarkistettu
+   * API:sta, ämpäri karttanostot/20260926/, pikkukuva kierrättää saman
+   * osoitteen. Lähteet:
+   *   Nordjylland — File:Skagen Zusammenfluss von Nordsee & Ostsee 2.JPG (Zairon, CC BY-SA 3.0)
+   *   Midtjylland — File:Rainbow_Panorama_Rooftop_Walk_ARoS_Art_Museum_Aarhus.jpg (ThomasLendt, CC BY-SA 4.0)
+   *   Hovedstaden — File:Øresund Bridge from the air in September 2015.jpg (Nick-D, CC BY-SA 4.0)
+   *   Sjaælland — File:Møns Klint.1.JPG (Erik Christensen, CC BY-SA 3.0)
+   *   Syddanmark — File:Lego_House_Billund.jpg (MPhernambucq, CC BY-SA 4.0)
    */
   DNK: {
     Nordjylland: {
       lyhyt: 'Skagenin Grenenillä voi seistä hiekkasärkän kärjessä, jossa Skagerrakin ja Kattegatin aallot törmäävät – uiminen siellä on kielletty.',
       pitka: `Alueen läntinen ranta on jatkuvassa liikkeessä: Råbjerg Mile, Pohjois-Euroopan suurin vaeltava hiekkadyyni, työntyy tuulen voimalla jopa 18 metriä vuodessa ja on jo haudannut allensa metsiä ja teitä. Samasta ilmiöstä kärsi 1700-luvulla Skagenin vanha Pyhän Laurentiuksen kirkko, jonka hiekka pakotti seurakunnan hylkäämään vuonna 1795 – nykyään hiekasta pilkistää enää 18 metriä korkea torni. 1870-luvulla samat rannat alkoivat vetää puoleensa toisenlaista väkeä: taidemaalarit kokoontuivat Skagenin kalastajakylään maalaamaan valoa ja paikallisia, ja pian syntyi kansainvälisesti tunnettu Skagenin maalarien siirtokunta. Nykyään dyynialue on suosittu retkikohde, mutta tuuli jatkaa työtään yhtä hitaasti ja peruuttamattomasti kuin isoisän aikaan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-nordjylland-2bba5d12.jpg',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Zairon',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Skagen Zusammenfluss von Nordsee & Ostsee 2.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-nordjylland-2bba5d12.jpg',
     },
     Midtjylland: {
       lyhyt: 'Aarhusin ARoS-taidemuseon katolla kiertää sateenkaaren värinen lasikäytävä, josta kaupunki näkyy joka askeleella eri sävyssä.',
       pitka: `Djurslandin niemimaalla kohoavat Mols Bjergen kumpuilevat mäet, jääkauden muovaama maisema, jossa nummet, lehdot ja pikkujärvet vuorottelevat ja metsäkauriit liikkuvat vapaana kansallispuistossa. Rannikon toisella puolella Ebeltoftin satamakaupungissa on kuivatelakalla maailman pisin säilynyt puinen sotalaiva, fregatti Jylland – 102-metrinen höyry- ja purjelaivojen välimuoto, joka selvisi vuoden 1864 Helgolannin taistelusta täynnä osumia. Vuonna 1873 alus oli vielä aktiivisessa laivastopalveluksessa, ja vain vuotta myöhemmin siitä tehtiin kuninkaallinen jahti, joka purjehti Kristian IX:n Färsaarille, Islantiin ja Pietariin. Nykyään laiva lepää kuivalla telakalla museona, ja sen pitkä runko muistuttaa siitä, miten höyry ja purje elivät vielä rinnakkain isoisän matkojen aikaan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-midtjylland-ac105237.jpg',
+          lahde: 'ThomasLendt, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'ThomasLendt',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rainbow_Panorama_Rooftop_Walk_ARoS_Art_Museum_Aarhus.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-midtjylland-ac105237.jpg',
     },
     Hovedstaden: {
       lyhyt: 'Kööpenhaminasta Malmöhön ajetaan ensin tunnelissa, noustaan Peberholmin tekosaarelle ja jatketaan lähes kahdeksan kilometrin siltaa.',
       pitka: `Kaupungin keskellä on yhä auki huvipuisto Tivoli, joka avasi porttinsa vuonna 1843 – kun isoisä kulki Kööpenhaminan läpi vuonna 1873, puisto oli jo kolmekymmentä vuotta vanha nähtävyys. Sen gondolit ja köynnöskujat lumosivat avausvuonna myös sadunkertoja H. C. Andersenia, joka sai niistä innoitusta satuunsa Satakieli. Puiston vanha lampi on osa entistä kaupunginvallihautaa, ja illalla valot syttyvät samalla paikalla kuin isoisän aikaan, vaikka laitteet ovat sittemmin vaihtuneet vuoristoradoiksi ja valoshow'ksi. Ulkopuolella kaupunki on nykyään yksi maailman pyöräilyystävällisimmistä: yli puolet kööpenhaminalaisista pyöräilee töihin tai kouluun, mikä olisi isoisän ajan hevoskaduilla ollut vaikea kuvitella.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-hovedstaden-cf25dfff.jpg',
+          lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Nick-D',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Øresund Bridge from the air in September 2015.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-hovedstaden-cf25dfff.jpg',
     },
     'Sjaælland': {
       lyhyt: 'Mønin saaren liitukalliot putoavat paikoin 120 metriä suoraan mereen, ja vuonna 2025 Møns Klint pääsi Unescon maailmanperintölistalle.',
       pitka: `Roskilden keskiaikainen tuomiokirkko on ollut Tanskan kuninkaiden hautakirkko jo 1400-luvulta lähtien, ja sen holvien alla lepää yli 40 hallitsijaa – kun isoisä kulki seudulla 1873, viimeisin heistä, kuningas Fredrik VII, oli haudattu sinne reilut kymmenen vuotta aiemmin. Kaupungin liepeillä, Roskilden vuonon pohjassa, makasi vuosisatoja viisi viikinkilaivaa, jotka noin vuonna 1070 oli tarkoituksella upotettu sulkemaan väylä vihollislaivastolta. Ne nostettiin esiin vasta vuonna 1962, kun koko lahdenpoukama padottiin kuivaksi, ja nykyään ne ovat esillä Viikinkilaivamuseossa. Fjordin rannalla samassa kaupungissa kohtaavat näin tuhat vuotta sitten upotetut laivat ja kirkko, jonka torneja on näkynyt yli vainioiden jo isoisänkin aikaan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-sjaelland-87868893.jpg',
+          lahde: 'Erik Christensen, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Erik Christensen',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Møns Klint.1.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-sjaelland-87868893.jpg',
     },
     Syddanmark: {
       lyhyt: 'Pienessä Billundissa on Legon pääkonttori ja maailman ensimmäinen Legoland, joka avasi porttinsa jo vuonna 1968.',
       pitka: `Alueen eteläosassa, Sønderjyllandissa, rajat ovat siirtyneet historian saatossa: kun isoisä matkasi vuonna 1873, seutu ei kuulunut Tanskaan lainkaan, vaan oli osa Saksan keisarikuntaa – Preussi oli liittänyt sen itseensä vuoden 1864 sodan jälkeen, ja alue palasi Tanskalle vasta kansanäänestyksen kautta vuonna 1920. Sønderborgin liepeillä kohoava Dybbølin mylly muistuttaa yhä sodan verisimmästä taistelusta ja oli vuosina 1864–1920 tanskanmielisten etelänjyylantilaisten vastarinnan symboli. Kauempana idässä, Odensen kaupungissa, syntyi vuonna 1805 satukirjailija H. C. Andersen, joka eli edelleen isoisän matkan aikaan ja kuoli vasta kaksi vuotta myöhemmin, vuonna 1875. Odensen mukulakivikadut ovat samat, joilla suutarinpojasta kasvanut satukirjailija haaveili maailmalle lähdöstä – eteläisellä rajaseudulla sen sijaan muistetaan yhä, miten lähellä koko maakunta oli jäädä pysyvästi Saksan puolelle.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-syddanmark-9ab3a946.jpg',
+          lahde: 'MPhernambucq, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'MPhernambucq',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lego_House_Billund.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/dnk-maakunta-syddanmark-9ab3a946.jpg',
     },
   },
   /*
@@ -3064,39 +3129,140 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Trnavský — University of Trnava (1635); Basilica of the Seven
    *     Sorrows, Šaštín
    *   Žilinský — Žilina Region; Painted Village of Čičmany (1977); Kysuce
+   *
+   * SVK KUVA + PIKKUKUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko):
+   * sama kaava — Commons-kuva lisenssi tarkistettu API:sta, ämpäri
+   * karttanostot/20260926/, pikkukuva kierrättää saman osoitteen.
+   * Lähteet:
+   *   Banskobystrický — File:Banská Štiavnica zhora.jpg (Rudo Mlich, CC BY-SA 4.0)
+   *   Bratislavský — File:Panoramic_view_from_Bratislava_castle.jpg (Lukáš Perný, CC BY-SA 4.0)
+   *   Košický — File:St_Elisabeth_Cathedral_Kosice.jpeg (Ingo Mehling, CC BY-SA 3.0)
+   *   Nitriansky — File:Nitriansky_hrad_1.jpg (Tomáš Bartovič, CC BY-SA 4.0)
+   *   Prešov — File:Market_Square_of_Bardejov.jpg (Michał Rawlik, CC BY-SA 4.0)
+   *   Trenciansky — File:Trencin_Castle_030.jpg (Ingo Mehling, CC BY-SA 4.0)
+   *   Trnavský — File:Trojičné námestie.jpg (Pavel Briatka, CC BY-SA 2.5)
+   *   Žilinský — File:Orava_Castle.jpg (Juraj Bednárik, CC BY-SA 4.0)
    */
   SVK: {
     'Banskobystrický': {
       lyhyt: 'Banská Štiavnican kaivoskaupunki on rakennettu muinaisen, romahtaneen tulivuoren kalderan keskelle, ja se on Unescon maailmanperintöä.',
       pitka: `Alue on Slovakian vulkaanisin kolkka: Banská Štiavnican lisäksi täällä kohoaa Poľanan tulivuorimassiivi, laaja metsäinen suojelualue, ja etelämmässä Nízke Tatryn eli Matalan Tatran vuoret houkuttelevat nykyään vaeltajia ja hiihtäjiä. Keskiajalla seudun hopea- ja kultakaivokset tekivät Banská Štiavnicasta yhden Euroopan rikkaimmista kaupungeista, ja täällä toimi vuodesta 1762 yksi maailman vanhimmista kaivosopistoista, kauan ennen isoisän matkaa 1870-luvulla. Toisen maailmansodan aikana alueen pääkaupunki Banská Bystrica nousi vastarinnan keskukseksi: elokuussa 1944 sieltä syttyi Slovakian kansallinen nousu, Euroopan toiseksi suurin natsivastainen kansannousu, jota nykyään muistetaan suurella museolla kaupungin sydämessä. Vuoristokylien välissä elää yhä sitkeä kaivos- ja metsäperinne, ja monet pikkukaupungit tuoksuvat edelleen kylpylävedeltä – Dudincen ja Sklené Teplicen lämpimät lähteet ovat hoitaneet väsyneitä vaeltajia vuosisatoja.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-banskobystricky-a7d04f80.jpg',
+          lahde: 'Rudo Mlich, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Rudo Mlich',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Banská Štiavnica zhora.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-banskobystricky-a7d04f80.jpg',
     },
     'Bratislavský': {
       lyhyt: 'Bratislava on maailman ainoa pääkaupunki, joka rajautuu kahteen valtioon: Itävalta ja Unkari alkavat aivan kaupungin laidalta.',
       pitka: `Modernin Bratislavan siluettia hallitsee oudon näköinen Nový most eli Uusi silta, jonka yhden pylvään päällä lepää lentävän lautasen muotoinen näköalatasanne UFO. Kaupungin liepeillä, Tonavan ja Moravan jokien yhtymäkohdassa, seisovat Devínin linnan rauniot, yksi Slovakian vanhimmista linnoista ja muinainen rajapaikka, jota on vartioitu roomalaisajoista lähtien. Pohjoiseen avautuvat Pikku-Karpaattien rinteet, joilla viinitarhat kiertyvät kylästä kylään aina Trnavaan asti – Bratislava on Slovakian viinin sydän. Alue on pinta-alaltaan pienin mutta asukasta kohti rikkain kaikista maan kahdeksasta maakunnasta, ja sen halki soljuva Tonava sitoi kaupungin kauppareitteihin jo isoisän aikaan, kun höyrylaivat kulkivat Wienin ja Budapestin väliä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-bratislavsky-39e167c3.jpg',
+          lahde: 'Lukáš Perný, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Lukáš Perný',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panoramic_view_from_Bratislava_castle.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-bratislavsky-39e167c3.jpg',
     },
     'Košický': {
       lyhyt: 'Košicen Pyhän Elisabetin katedraali on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista.',
       pitka: `Košicen vanhankaupungin kivijalkojen alta löytyi vuonna 1935 lähes 3000 kultakolikon aarre, kätkettynä maan alle jo 1600-luvun kapinoiden aikaan – se on suurin koskaan Slovakiasta löydetty kulta-aarre, ja osa siitä on esillä Itä-Slovakian museossa. Kaupunki on rakentunut Hornád-joen varrelle Slovakian rautavuorten itäreunalla, lähellä sekä Unkarin että Ukrainan rajaa, ja seudulla asuu slovakkien rinnalla unkarilaisia, tšekkejä ja romaneja. Rautatie Košicesta pohjoiseen valmistui juuri isoisän matkan kynnyksellä: Košicen ja Prešovin välinen rata avattiin syksyllä 1870 ja koko yhteys Puolan rajalle asti vuonna 1872, joten vuonna 1873 juna oli vielä aivan uusi ihme näillä main. Nykyään noin kolmasosa koko maakunnan väestä asuu Košicen kaupunkiseudulla, joka valittiin vuonna 2013 Euroopan kulttuuripääkaupungiksi yhdessä Ranskan Marseillen kanssa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-kosicky-e3cee3fc.jpg',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Ingo Mehling',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:St_Elisabeth_Cathedral_Kosice.jpeg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-kosicky-e3cee3fc.jpg',
     },
     Nitriansky: {
       lyhyt: 'Nitran seutu on Slovakian lämpimin kolkka, jonka pelloilla kasvaa vehnää, ja lähes joka neljäs asukas on kansallisuudeltaan unkarilainen.',
       pitka: `Nitran yllä kohoavan Zobor-vuoren rinteillä toimi keskiajalla benediktiiniläismunkkien luostari, ja sieltä ovat peräisin Slovakian alueen kaksi vanhinta säilynyttä asiakirjaa, vuosilta 1111 ja 1113 – niissä mainitaan yli 150 joen, kylän ja alueen nimeä, monet ensimmäistä kertaa historiassa. Kaupungin juuret ulottuvat vielä kauemmas: Nitra oli 800-luvulla Suur-Määrin valtakunnan keskuksia, ja Zoborin linnavuori oli asutettu jo rautakaudella. Ympäröivä tasanko on Slovakian lämpimintä ja viljavinta seutua, ja sen pelloilta korjataan vehnää siinä missä isoisän aikaankin, joskin sadon kuljettaa nykyään rekka. Alueen eteläosassa maan alta pulppuaa lämmintä kivennäisvettä, ja Podhájskan kylpylässä ihmiset kelluvat 38-asteisessa vedessä, joka koostumukseltaan muistuttaa Kuollutta merta.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-nitriansky-73593719.jpg',
+          lahde: 'Tomáš Bartovič, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Tomáš Bartovič',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nitriansky_hrad_1.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-nitriansky-73593719.jpg',
     },
     'Prešov': {
       lyhyt: 'Korkeiden Tatrain Gerlachovský štít kohoaa 2 654 metriin – se on koko Karpaattien korkein huippu, ja sen laki katoaa usein pilviin.',
       pitka: `Korkeiden Tatrojen liepeiltä maisema laskeutuu itään kohti Šarišin seutua, missä kyliin kätkeytyy kymmeniä satojen vuosien takaisia puukirkkoja – kahdeksan niistä on Unescon maailmanperintöä, ja vanhin, Hervartovin Pyhän Fransiskus Assisilaisen kirkko, on peräisin jo 1400-luvulta. Kirkot rakensivat pääosin karpaattien rusiinit, kreikkalaiskatolinen paimen- ja metsästäjäväestö, jonka kieltä ja perinteitä kuulee alueella yhä. Pohjoisempana keskiaikainen Bardejovin kaupunki on säilyttänyt renessanssitorinsa ja muurinsa niin ehjinä, että koko vanhakaupunki on omalla Unesco-listallaan. Vuoristo on tehnyt Prešovin maakunnasta Slovakian suurimman pinta-alaltaan, vaikka isoisän aikaan monet näistä kylistä olivat vielä vaikeakulkuisia ja köyhiä vuoristoseutuja.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-presov-30ab73d3.jpg',
+          lahde: 'Michał Rawlik, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Michał Rawlik',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Market_Square_of_Bardejov.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-presov-30ab73d3.jpg',
     },
     Trenciansky: {
       lyhyt: 'Trenčínin linnan alla kalliossa on roomalaisten sotilaiden vuonna 179 kaivertama kirjoitus, joka kutsuu paikkaa nimellä Laugaricio.',
       pitka: `Alueen halki virtaa Slovakian pisin joki Váh, ja sen varrelle on noussut lämpökylpylöitä kuten Trenčianske Teplice ja Nimnica; monet lähteet kuohuivat parantavaa vettä jo isoisän aikaan 1870-luvulla, jolloin kylpymatkailu oli muodissa koko Itävalta-Unkarissa. Pohjoisempana Bojnicen linna kohoaa kuin suoraan sadusta pyöreine torneineen ja koristeellisine kaarikäytävineen – se on Slovakian rakastetuin linna, ja joka kevät sen pihalla juhlitaan kansainvälistä haamujen ja henkien festivaalia. Linnan naapurissa toimii maan vanhin ja suurin eläintarha, joka on viihdyttänyt perheitä 1950-luvulta lähtien. Trenčínin oma linna kohoaa yhä kaupungin yllä kalliolla, jonka juurella roomalaissotilaiden kaiverrus muistuttaa vielä paljon vanhemmasta ajasta, jolloin tämä oli valtakunnan pohjoisin etuvartio.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trenciansky-cfc2a7c3.jpg',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Ingo Mehling',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trencin_Castle_030.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trenciansky-cfc2a7c3.jpg',
     },
     'Trnavský': {
       lyhyt: 'Trnavaa kutsutaan Pikku-Roomaksi, koska vanhankaupungin muurien sisälle on mahtunut niin monta kirkkoa.',
       pitka: `Trnavaan perustettiin vuonna 1635 yliopisto, yksi tuon ajan Ylä-Unkarin merkittävimmistä oppilaitoksista, ja se toimi kaupungissa lähes 150 vuotta ennen kuin se siirrettiin Budaan ja lopulta Pestiin – isoisän vieraillessa seudulla 1870-luvulla yliopisto oli jo historiaa, mutta sen tiedekunnat olivat tehneet Trnavasta aikansa oppineisuuden keskuksen. Alue on Slovakian tasaisinta ja viljellyintä maata, Tonavan ja Záhorien tasankojen välissä, ja sen pelloilla ja Pikku-Karpaattien rinteillä kasvaa sekä vehnää että viiniä. Läntisessä Šaštín-Strážen kaupungissa seisoo maan tärkein pyhiinvaelluskohde, barokkinen basilika, jonne on kuljettu Slovakian suojeluspyhimyksen, Seitsemän kivun Neitsyt Marian, juhlaa viettämään jo yli 450 vuoden ajan. Basilikan pihalle kokoontuu syksyisin yhä kymmeniätuhansia pyhiinvaeltajia, aivan kuten isoisänkin aikana.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trnavsky-4f6d1181.jpg',
+          lahde: 'Pavel Briatka, Wikimedia Commons (CC BY-SA 2.5)',
+          tekija: 'Pavel Briatka',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trojičné námestie.jpg',
+          lisenssi: 'CC BY-SA 2.5',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-trnavsky-4f6d1181.jpg',
     },
     'Žilinský': {
       lyhyt: 'Oravan linna kohoaa korkealla kalliolla joen yllä, ja moni vuoden 1922 kauhuklassikon Nosferatun kohtaus kuvattiin sen muureilla.',
       pitka: `Alue on Slovakian vuoristoisin maakunta, ja sen ympärillä kohoavat niin Länsi- ja Matala-Tatra kuin Malá Fatra ja Kysucen Beskydit – laaksoissa asuu yhä sitkeitä paimen- ja metsästäjäyhteisöjä, joiden perinteet elävät festivaaleissa ja käsityössä. Kysucen kapearaiteinen metsärautatie kiemurtelee yhä samoja jokivarsia, joita pitkin puuta kuljetettiin sahoille jo vuosikymmenten ajan. Yksi seudun kummallisimmista näyistä löytyy Čičmanyn kylästä, jonka tummat hirsitalot on koristeltu valkoisilla, kalkilla maalatuilla geometrisilla kuvioilla ylhäältä alas asti – tapa syntyi, kun kosteudelta suojaava kalkki muuttui vuosikymmenten myötä koristetaiteeksi, ja kylästä tuli vuonna 1977 maailman ensimmäinen suojeltu kansanrakennusreservaatti. Oravan linnan tapaan Čičmany muistuttaa siitä, että Žilinän maakunnan aarteet eivät ole vain vuorissa, vaan myös tavassa, jolla ihmiset ovat tehneet arjestaan kaunista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-zilinsky-6bf5c376.jpg',
+          lahde: 'Juraj Bednárik, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Juraj Bednárik',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Orava_Castle.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svk-maakunta-zilinsky-6bf5c376.jpg',
     },
   },
   /*
@@ -3168,78 +3334,301 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Uusimaa — Porkkala (vuokraus 1944, palautus 1956)
    *   Finland Proper — Archipelago Sea (saarimäärä, maannousu)
    */
+  /*
+   * FIN KUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko NLD/BEL/DNK/
+   * SVK/LVA/LTU:n jälkeen): yksi aito Wikimedia Commons -valokuva per
+   * alue, lisenssi tarkistettu Commonsin API:sta ennen latausta,
+   * suurennettu enintään 1600 px:iin, viety ämpäriin
+   * karttanostot/20260926/. Vain PD/CC0/CC BY/CC BY-SA. Lähteet:
+   *   South Karelia — File:Imatrankoski_kuohuu.jpg (J-P Kärnä, CC BY-SA 3.0)
+   *   Southern Ostrobothnia — File:Seinäjoen_kirkko.jpg (Zache, CC BY 4.0)
+   *   Southern Savonia — File:Pusa_hispida_saimensis.jpg (Linda Lötjönen, CC BY 4.0)
+   *   Kainuu — File:The_Silent_People_(25538158145).jpg (Timo Newton-Syms, CC BY-SA 2.0)
+   *   Tavastia Proper — File:Glass_factory_in_Iittala,_1968.jpg (Szilas, CC0)
+   *   Central Ostrobothnia — File:Englantilainen_barkassi.jpg (Jukka Kolppanen, CC BY-SA 3.0)
+   *   Central Finland — File:Kris_Meeke_Rally_Finland_2016_Äänekoski–Valtra.JPG (Antti Leppänen, CC BY 4.0)
+   *   Kymenlaakso — File:Langinkoski_Imperial_Fishing_Lodge.jpg (Alexei Kouprianov, CC BY 2.5)
+   *   Lapland — File:Lake_Inari.jpg (Karlis Strazdins, public domain)
+   *   Pirkanmaa — File:Rajaportti_sauna1.jpg (Visa580, CC BY 2.5)
+   *   Ostrobothnia — File:Kvarken_Archipelago.jpg (kallerna, CC BY-SA 4.0)
+   *   North Karelia — File:Panorama_view_to_Lake_Pielinen_at_Koli_National_Park.jpg (Lakleland Finland, CC BY 4.0)
+   *   Northern Ostrobothnia — File:Air_Guitar_World_Championships_20130823.jpg (Antti Kultanen, CC BY 2.0)
+   *   Northern Savonia — File:Sälevä_lake_Sonkajärvi_May_2021.jpg (Kotivalo, CC BY-SA 4.0)
+   *   Päijät-Häme — File:Lahti_Ski_Jumping_Hills.jpg (Tiia Monto, CC BY-SA 4.0)
+   *   Satakunta — File:Sammallahdenmäki_panorama_1.jpg (kallerna, CC BY-SA 3.0)
+   *   Uusimaa — File:Porkkala_aerial.jpg (Migro, public domain)
+   *   Finland Proper — File:Morze_Archipelagowe_aerial_1.jpg (Andrzej Otrębski, CC BY-SA 4.0)
+   */
   FIN: {
     'South Karelia': {
       lyhyt: 'Imatrankoski on ollut padottuna vuodesta 1929, mutta kesäiltaisin padon luukut avataan ja vesi ryöppyää taas vanhaan uomaansa.',
       pitka: `Imatrankosken pauhu vaientui vuonna 1929, kun voimalaitos valjasti virran sähköksi – mutta kesäiltaisin, keskiviikosta sunnuntaihin kello kuudelta, padon luukut avataan ja koski pääsee hetkeksi takaisin vanhaan uomaansa. Paikka oli kuuluisa jo kauan ennen patoa: Katariina Suuri kävi ihailemassa sitä 1772, ja keisari Nikolai I perusti rannalle Kruununpuiston, Suomen vanhimman luonnonpuiston, vuonna 1842. 1800-luvun lopulla Imatrankoski oli yksi Euroopan tunnetuimmista luontonähtävyyksistä, ja vuonna 1876 siellä kävi jopa Brasilian keisari Pedro II, joka kaiversi nimikirjaimensa kalliolle. Isoisän matkapäiväkirjan aikoihin 1870-luvulla koski oli siis jo täydessä turistiloistossaan, aivan kuten venäläinen ylhäisö sen tunsi.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-south-karelia-86bd95d9.jpg',
+          lahde: 'J-P Kärnä, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'J-P Kärnä',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Imatrankoski_kuohuu.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-south-karelia-86bd95d9.jpg',
     },
     'Southern Ostrobothnia': {
       lyhyt: 'Seinäjoen Tangomarkkinat on maailman vanhin tangofestivaali, ja joka heinäkuu siellä etsitään Suomen parhaita tangolaulajia.',
       pitka: `Seinäjoella heinäkuu tarkoittaa tangoa: Tangomarkkinat on maailman vanhin tangofestivaali, perustettu 1985 sen jälkeen, kun kaupungin päättäjät saivat idean junamatkalla Helsinkiin. Ensimmäiseen festivaaliin kaupunki uskalsi sijoittaa 60 000 silloista markkaa, ja paikalle saapui yllättävän moni, noin 18 000 kävijää. Nykyään laulukilpailussa etsitään vuosittain Suomen Tangokuningas ja -kuningatar – kilpailijat karsiutuvat maakuntien osakilpailujen ja Raision välierän kautta finaaliin, jossa yleisö äänestää suosikkinsa. Etelä-Pohjanmaan tasaisilla lakeuksilla tango on siis muuttunut paikalliseksi ylpeydenaiheeksi, ei vain tuontitanssiksi Argentiinasta.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-southern-ostrobothnia-34de725d.jpg',
+          lahde: 'Zache, Wikimedia Commons (CC BY 4.0)',
+          tekija: 'Zache',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sein%C3%A4joen_kirkko.jpg',
+          lisenssi: 'CC BY 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-southern-ostrobothnia-34de725d.jpg',
     },
     'Southern Savonia': {
       lyhyt: 'Saimaannorppa elää vain Saimaassa, eristyksissä muista norpista jo noin 9 500 vuotta – jäljellä on vain noin 500 yksilöä.',
       pitka: `Saimaannorppa on elänyt eristyksissä Saimaan järvialtaassa jo noin 9 500 vuotta, siitä asti kun mannerjää perääntyi ja maa kohosi sen tieltä pois – tuoreen geenitutkimuksen mukaan laji erkani lähisukulaisistaan jopa 60 000 vuotta sitten. Kannan tila oli 1980-luvulla lähes toivoton, vain 100–150 yksilöä, mutta suojelutyö on nostanut määrän noin 500 norppaan; verkkokalastus ja leudot, lumettomat talvet ovat yhä suurimmat uhat. Ihmiset auttavat nykyään kinoksia kolaamalla: kun luonnon lumi ei riitä pesäkuopan kaivamiseen, vapaaehtoiset tekevät norpille keinotekoisia lumikinoksia jäälle. Yksi norppayksilö, Pullervo, tuli koko Suomelle tutuksi Norppalive-verkkokameran kautta, kun sen kuvaa seurasi parhaimmillaan 180 000 katsojaa yhtä aikaa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-southern-savonia-0299c4be.jpg',
+          lahde: 'Linda Lötjönen, Wikimedia Commons (CC BY 4.0)',
+          tekija: 'Linda Lötjönen',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pusa_hispida_saimensis.jpg',
+          lisenssi: 'CC BY 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-southern-savonia-0299c4be.jpg',
     },
     Kainuu: {
       lyhyt: 'Suomussalmella valtatien varren pellolla seisoo Hiljainen kansa, turvepäisten hahmojen joukko, jonka vaatteet vaihdetaan vuodenajan mukaan.',
       pitka: `Suomussalmella valtatien varren pellolla seisoo pimeän tullen aavemainen näky: noin tuhat turvepäistä hahmoa, Hiljainen kansa, taiteilija Reijo Kelan teos, joka löysi nykyisen paikkansa vuonna 1994 vaellettuaan sitä ennen Helsingin Lassilasta Senaatintorille asti. Suomussalmen nuorisotyöpaja vaihtaa hahmojen vaatteet kahdesti vuodessa lahjoitetuista vaatteista – joukossa on morsiuspukuja, kumisaappaita ja pukuja, jotka tekevät väkijoukosta yhä uudelleen erilaisen. Kela ei ole koskaan selittänyt, keitä hahmot esittävät, ja kävijät ovatkin nähneet niissä niin talvisodan kaatuneita kuin unohdettua kansaa yleensä. Kainuun hiljaisilla teillä tämä äänetön väkijoukko on tullut yhtä tutuksi kuin alueen metsät ja järvet.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-kainuu-8bc0332c.jpg',
+          lahde: 'Timo Newton-Syms, Wikimedia Commons (CC BY-SA 2.0)',
+          tekija: 'Timo Newton-Syms',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Silent_People_(25538158145).jpg',
+          lisenssi: 'CC BY-SA 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-kainuu-8bc0332c.jpg',
     },
     'Tavastia Proper': {
       lyhyt: 'Hämeenlinnaan kuuluvassa Iittalan kylässä on puhallettu lasia vuodesta 1881, ja kylän nimi on nyt maailmalla tunnettu muotoilumerkki.',
       pitka: `Iittalan kylässä Hämeenlinnan liepeillä on puhallettu lasia vuodesta 1881, jolloin ruotsalainen liikemies Peter Magnus Abrahamson perusti sinne lasitehtaan lähdettyään Nuutajärveltä. Pienestä kyläpajasta kasvoi muotoilun suurvalta: Aino Aallon pinottavat lasit 1930-luvulta ja Alvar Aallon aaltoileva Savoy-maljakko 1936 tekivät Iittalasta suomalaisen muotoilun tunnuskuvia jo ennen sotia. Timo Sarpanevan 1956 suunnittelema punainen i-ympyrälogo oli tuotteiden tunnus lähes seitsemänkymmentä vuotta, kunnes se vaihdettiin keltaiseen vuonna 2024. Nykyään Iittala kuuluu Fiskarsiin ja osa tuotannosta on siirtynyt ulkomaille, mutta osa lasista puhalletaan yhä samalla kylällä, jonka nimen koko maailma tuntee kaupan hyllyltä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-tavastia-proper-51e61eab.jpg',
+          lahde: 'Szilas, Wikimedia Commons (CC0)',
+          tekija: 'Szilas',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glass_factory_in_Iittala,_1968.jpg',
+          lisenssi: 'CC0',
+          lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-tavastia-proper-51e61eab.jpg',
     },
     'Central Ostrobothnia': {
       lyhyt: 'Kokkolan Englantilaisessa puistossa on brittien tykkivene, joka kaapattiin 1854 – kaupunki ei ole palauttanut sitä pyynnöistä huolimatta.',
       pitka: `Kokkolan Englantilaisessa puistossa lojuu yhä brittiläinen tykkivene, joka jäi paikallisten saaliiksi Halkokarin kahakassa kesäkuussa 1854 – Krimin sodan sivunäyttämöllä metsästyskiväärein ja tykein aseistautuneet kokkolalaiset torjuivat brittilaivaston maihinnousuyrityksen. Vene on ollut kaupungin ylpeys siitä lähtien, eikä Lontoon pormestarinkaan toistuvat palautuspyynnöt ole tehonneet: kaupunginvaltuusto on kieltäytynyt luovuttamasta sitä. Kummallista kyllä, Britannian valtiovarainministeriö maksaa yhä vuosittain pienen summan paikalliselle seurakunnalle kahakassa kaatuneiden yhdeksän merijalkaväen sotilaan hautojen hoidosta. Niin kaukana Lontoosta kuin Kokkola onkin, sen ja Ison-Britannian välillä on siis säilynyt omalaatuinen, yli 170-vuotias side.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-central-ostrobothnia-006f30d5.jpg',
+          lahde: 'Jukka Kolppanen, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Jukka Kolppanen',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Englantilainen_barkassi.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-central-ostrobothnia-006f30d5.jpg',
     },
     'Central Finland': {
       lyhyt: 'Keski-Suomen soratiet ajetaan Rally Finlandissa, MM-rallin nopeimmassa osakilpailussa, jossa autot lentävät harjanteilta pitkiä hyppyjä.',
       pitka: `Keski-Suomen soratiet muuttuvat heinä-elokuun vaihteessa maailman nopeimmaksi ralliradaksi: Rallia on ajettu Jyväskylässä vuodesta 1951, jolloin se tunnettiin nimellä Jyväskylän Suurajot, ja MM-sarjaan se liittyi 1973. Ralli tunnetaan lempinimillä "tuhannen hypyn ralli" ja soran Grand Prix, sillä sileät, leveät tiet ja loivat harjanteet lennättävät autot ilmaan yhä uudelleen. Vuonna 2015 kilpailun keskinopeus oli 125,4 km/h, mikä tekee siitä koko MM-sarjan nopeimman osakilpailun. Kesän kuumimpina viikonloppuina satojatuhansia katsojia asettuu metsäteiden varsille seuraamaan, kun paikalliset kuskit lentävät tutuilla harjanteillaan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-central-finland-26b0d101.jpg',
+          lahde: 'Antti Leppänen, Wikimedia Commons (CC BY 4.0)',
+          tekija: 'Antti Leppänen',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kris_Meeke_Rally_Finland_2016_%C3%84%C3%A4nekoski%E2%80%93Valtra.JPG',
+          lisenssi: 'CC BY 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-central-finland-26b0d101.jpg',
     },
     Kymenlaakso: {
       lyhyt: 'Kotkan Langinkoskella seisoo keisari Aleksanteri III:n kalastusmaja, jossa tsaarin perhe vietti kesiä lohikosken rannalla.',
       pitka: `Kotkan Langinkoskella seisoo keisari Aleksanteri III:n kalastusmaja, joka valmistui 1889 sen jälkeen, kun keisari oli ihastunut koskeen jo vuonna 1880. Majan sisustus tilattiin tarkoituksella kotimaisilta valmistajilta – Tampellan kankaita, Arabian astioita, Karhulan lasia – ja perhe eli siellä yllättävän vaatimatonta elämää: keisarinna Maria Fjodorovna muun muassa harrasti ruoanlaittoa, vaikka astianpesusta hän ei pitänyt lainkaan. Suomen itsenäistymisen jälkeen maja rapistui, kunnes yksityiset kotkalaiset perustivat sinne museon 1933 ja pelastivat sen unohdukselta. Nykyään lohikosken rannalla käy vuosittain yli 12 000 kävijää, joista kolmasosa saapuu ulkomailta ihailemaan tsaariperheen kesäidylliä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-kymenlaakso-1c2a5a17.jpg',
+          lahde: 'Alexei Kouprianov, Wikimedia Commons (CC BY 2.5)',
+          tekija: 'Alexei Kouprianov',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Langinkoski_Imperial_Fishing_Lodge.jpg',
+          lisenssi: 'CC BY 2.5',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-kymenlaakso-1c2a5a17.jpg',
     },
     Lapland: {
       lyhyt: 'Inari on Suomen suurin kunta, ja siellä on peräti neljä virallista kieltä: suomi sekä pohjois-, inarin- ja koltansaame.',
       pitka: `Inari on Suomen suurin kunta pinta-alaltaan, yli 17 000 neliökilometriä, mutta asukkaita on silti vain reilut 7 000. Täällä puhutaan virallisesti neljää kieltä – suomen lisäksi pohjoissaamea, inarinsaamea ja koltansaamea – enemmän kuin missään muussa Suomen kunnassa, ja saamelaiskulttuuri elää vahvana Siida-museossa ja Sajos-kulttuurikeskuksessa. Inarijärvi, Suomen kolmanneksi suurin järvi, hallitsee maisemaa yli tuhannen neliökilometrin alalla. Ilmasto tekee elämästä ääripäiden peliä: kesällä lämpötila on noussut lähelle 32 astetta, talvella painunut lähelle -49:ää – harva Suomen kolkka näyttää yhtä erilaiselta vuodenajasta toiseen.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-lapland-8892e43d.jpg',
+          lahde: 'Karlis Strazdins, Wikimedia Commons (Public domain)',
+          tekija: 'Karlis Strazdins',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_Inari.jpg',
+          lisenssi: 'Public domain',
+          lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-lapland-8892e43d.jpg',
     },
     Pirkanmaa: {
       lyhyt: 'Tampere on julistettu maailman saunapääkaupungiksi, koska missään muualla maailmassa ei ole yhtä paljon yleisiä saunoja.',
       pitka: `Tampere julistautui vuonna 2018 maailman saunapääkaupungiksi, eikä liioittele: alueella lämpiää vuoden ympäri lähes 70 yleistä saunaa, enemmän kuin missään muualla Suomessa saati maailmassa. Vanhin yhä toimiva julkinen sauna löytyy Pispalan kaupunginosasta: Hermanni ja Maria Lahtinen perustivat Rajaportin saunan jo 1906, ja se lämpiää edelleen samalla paikalla yli sata vuotta myöhemmin. Suomalainen saunakulttuuri sai vuonna 2020 paikan Unescon aineettoman kulttuuriperinnön listalla, ja Tampereella tuo perintö näkyy arjessa: saunassa käydään yhtä luontevasti kuin kahvilla. Höyryn keskellä kaupungin tehdaspiiput ja punatiiliset tehtaat muistuttavat, että Tampereen historia on aina ollut yhtä lailla työn kuin löylynkin kaupunkia.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-pirkanmaa-438d8ac3.jpg',
+          lahde: 'Visa580, Wikimedia Commons (CC BY 2.5)',
+          tekija: 'Visa580',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rajaportti_sauna1.jpg',
+          lisenssi: 'CC BY 2.5',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-pirkanmaa-438d8ac3.jpg',
     },
     Ostrobothnia: {
       lyhyt: 'Merenkurkun saaristo kohoaa merestä lähes sentin vuodessa, ja tämän maannousun vuoksi se on vuodesta 2006 ollut Unescon maailmanperintöä.',
       pitka: `Merenkurkun saaristo nousee merestä lähes sentin vuodessa – ilmiö johtuu siitä, että jäätikön aikoinaan painama maankuori ponnahtaa yhä takaisin ylöspäin, ja yhteensä maa on noussut jo 285 metriä viimeisen jääkauden jälkeen. Tämä poikkeuksellisen nopea maannousu teki saaristosta vuonna 2006 osan Unescon maailmanperintöä yhdessä Ruotsin Korkean rannikon kanssa. Alueella on yli 5 600 pientä saarta ja luotoa suurempien Replotin ja Björkön lisäksi, ja tutkijoiden mukaan noin 2000 vuoden kuluttua nousu on erottanut Perämeren omaksi järvekseen Merenkurkun kohdalta. Kalastajakylien ja siirtolohkareiden täyttämä saaristo on siis yhä kirjaimellisesti kesken, muotoutumassa vuosikymmen kerrallaan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-ostrobothnia-05d20f77.jpg',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'kallerna',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kvarken_Archipelago.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-ostrobothnia-05d20f77.jpg',
     },
     'North Karelia': {
       lyhyt: 'Kolin vaaroilta avautuu näkymä Pielisjärvelle, ja samaa maisemaa ovat ihailleet Sibelius, Juhani Aho ja taidemaalari Eero Järnefelt.',
       pitka: `Kolin Ukko-Kolin laelta avautuu näkymä Pielisjärvelle, jota on ihasteltu jo yli sata vuotta: säveltäjä Jean Sibelius, kirjailija Juhani Aho ja taidemaalari Eero Järnefelt hakivat kaikki maisemasta innoitusta 1890-luvun taiteessaan, ja Järnefeltin Kolilta maalaamat näkymät kuuluvat suomalaisen kansallismaiseman ikoneihin. Alueesta tuli kansallispuisto vasta 1991, mutta perinnemaisemaa vaalitaan yhä vanhoin keinoin: laidunniityillä käy kesäisin lampaita ja perinteisiä suomenkarjan lehmiä. Puisto houkuttelee nykyään lähes 250 000 kävijää vuodessa – yhtä moni ihailee samaa näkymää, joka sata vuotta sitten sai koko sukupolven taiteilijoita tarttumaan sivellintä ja kynää.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-north-karelia-23b1a3c5.jpg',
+          lahde: 'Lakleland Finland, Wikimedia Commons (CC BY 4.0)',
+          tekija: 'Lakleland Finland',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panorama_view_to_Lake_Pielinen_at_Koli_National_Park.jpg',
+          lisenssi: 'CC BY 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-north-karelia-23b1a3c5.jpg',
     },
     'Northern Ostrobothnia': {
       lyhyt: 'Oulussa ratkotaan joka vuosi ilmakitaran maailmanmestaruus: soittimena on pelkkä kuviteltu kitara, ja kisa on pidetty vuodesta 1996.',
       pitka: `Oulussa ratkotaan heinäkuussa ilmakitaransoiton MM-mestaruutta, ja kisa on hurjan vakavasti otettu leikki: soittimena on pelkkä kuviteltu kitara, mutta esiintyminen arvioidaan yhtä tarkasti kuin oikeassa rock-keikalla. Kilpailun keksi muusikko Jukka Takalo osana Oulun musiikkivideofestivaalia vuonna 1996, ja siitä kasvoi vuosien saatossa oma tapahtumansa, jota vuodesta 2011 on järjestänyt Airnest Productions. Kisan tunnuslause "Make Air Not War" ei ole pelkkä sanaleikki: järjestäjät uskovat vakavissaan, että maailma paranisi, jos kaikki soittaisivat ilmakitaraa. Nykyään yli kymmenessä maassa järjestetään omat karsintakilpailut ennen kuin parhaat pääsevät Ouluun mittelemään maailman parhaasta ilmasoolosta.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-northern-ostrobothnia-4246cad8.jpg',
+          lahde: 'Antti Kultanen, Wikimedia Commons (CC BY 2.0)',
+          tekija: 'Antti Kultanen',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Air_Guitar_World_Championships_20130823.jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-northern-ostrobothnia-4246cad8.jpg',
     },
     'Northern Savonia': {
       lyhyt: 'Sonkajärvellä kisataan joka vuosi eukonkannon maailmanmestaruudesta, ja voittaja on se, joka kantaa toisen ihmisen esteradan läpi nopeimmin.',
       pitka: `Sonkajärvellä kisataan heinäkuussa eukonkannon MM-mestaruudesta, laji jonka juuret ulottuvat legendaan 1800-luvun lopun rosvopäälliköstä Herkko "Rosvo-Ronkaisesta" – tarinan mukaan hän joko ryösti ruokaa ja naisia lähikylistä tai harjoitutti miehiään kantamalla painavia säkkejä, joista laji myöhemmin syntyi. Nykyään kilpailussa ei katsota sukupuolta eikä siviilisäätyä: pariskunta juoksee esteradan läpi kolmella sallitulla otteella, joista virolaistyyli tarkoittaa kannettavan roikkumista pää alaspäin kantajan selässä. Voittajapari palkitaan kannettavan painon verran olutta, mikä on tehnyt kisasta suositun myös ulkomaisten joukkueiden keskuudessa. Pohjois-Savon vaatimattomasta pikkupitäjästä on näin tullut yllättävä maailmanurheilun keskus, jonne matkataan Japanista ja Yhdysvalloista asti kilpailemaan säkkien sijaan puolisoista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-northern-savonia-ece931f2.jpg',
+          lahde: 'Kotivalo, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Kotivalo',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:S%C3%A4lev%C3%A4_lake_Sonkaj%C3%A4rvi_May_2021.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-northern-savonia-ece931f2.jpg',
     },
     'Päijät-Häme': {
       lyhyt: 'Lahden hyppyrimäet nousevat Salpausselältä, jääkauden reunalle kasaamalta harjulta – vuodesta 2022 seutu on ollut Unescon geopuisto.',
       pitka: `Lahden mäet ovat jääkauden jättämä lahja: ensimmäinen Salpausselkä, jääkauden reunamuodostuma, halkoo kaupunkia lännestä itään ja tarjoaa luontevan alustan hyppyrimäille. Vuonna 2022 Salpausselän alue liitettiin Unescon geopuistoverkostoon – yksi neljästä suomalaisesta geopuistosta. Lahti on ainoa kaupunki maailmassa, joka on isännöinyt pohjoismaisen hiihdon MM-kisoja peräti seitsemän kertaa, vuosina 1926, 1938, 1958, 1978, 1989, 2001 ja 2017, ja vuotuiset Lahden Hiihdot pitävät perinnettä yllä joka talvi. Jääkauden muovaama harju ja sen päälle rakennetut mäet ovat siis tehneet tästä lakeuksien kaupungista talviurheilun pysyvän keskuksen.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-paijat-hame-d438cf52.jpg',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Tiia Monto',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lahti_Ski_Jumping_Hills.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-paijat-hame-d438cf52.jpg',
     },
     Satakunta: {
       lyhyt: 'Rauman Sammallahdenmäellä on 33 yli 3 000 vuotta vanhaa pronssikautista hautaröykkiötä, ja paikka on Unescon maailmanperintökohde.',
       pitka: `Rauman Sammallahdenmäellä lepää 33 harmaakivistä hautaröykkiötä, joista vanhimmat on kasattu jo noin 1500 eaa. ja nuorimmat rautakauden alussa – yhteensä lähes 3000 vuoden ajalta. Erikoisin niistä on Kirkonlaattia, 16 metriä pitkä ja 19 metriä leveä suorakulmainen, tasapintainen röykkiö, jonka kaltaista ei tunneta muualta Pohjolasta. Röykkiöiden uskotaan liittyneen pronssikauden aurinkoa palvoneisiin rituaaleihin ja samalla merkinneen viljelijäyhteisöjen aluerajoja rannikolla. Paikka luetteloitiin jo vuonna 1878 ja kaivettiin ensin auki 1891, mutta maailmanperintöasemansa se sai vasta 1999 – yksi Suomen vanhimmista ihmiskäden jäljistä, joka on nyt virallisesti koko ihmiskunnan perintöä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-satakunta-f8062fd4.jpg',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'kallerna',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sammallahdenm%C3%A4ki_panorama_1.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-satakunta-f8062fd4.jpg',
     },
     Uusimaa: {
       lyhyt: 'Porkkalan niemi oli 1944–1956 Neuvostoliiton laivastotukikohta, ja sen läpi ajavien suomalaisjunien ikkunat piti sulkea luukuilla.',
       pitka: `Porkkalan niemi vuokrattiin Neuvostoliitolle laivastotukikohdaksi syyskuussa 1944, ja noin 7 200 asukasta joutui jättämään kotinsa kymmenessä päivässä; parhaimmillaan alueella asui jopa 30 000 neuvostosotilasta ja siviiliä. Helsingin ja Turun välillä kulkeneiden junien piti ajaa 40 kilometrin matka tukikohdan läpi ikkunaluukut suljettuina, eikä matkustajat saaneet valokuvata mitään ohi vilahtavasta maisemasta. Vuoden 1952 olympialaisissakin neuvostojoukkue majoitettiin poikkeuksellisesti omalle tukikohdalleen Porkkalaan, ei olympiakylään muiden maiden tapaan. Alue palautettiin Suomelle jo tammikuussa 1956, yksitoista vuotta ennen sovittua määräaikaa, mutta neuvostojoukot olivat ehtineet tuhota lähtiessään puolet asuinrakennuksista ja neljä viidesosaa liikerakennuksista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-uusimaa-d50cbf26.jpg',
+          lahde: 'Migro, Wikimedia Commons (Public domain)',
+          tekija: 'Migro',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Porkkala_aerial.jpg',
+          lisenssi: 'Public domain',
+          lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-uusimaa-d50cbf26.jpg',
     },
     'Finland Proper': {
       lyhyt: 'Saaristomerellä on joidenkin laskutapojen mukaan maailman eniten saaria, noin 50 000, ja moni niistä on vain pieni luoto.',
       pitka: `Saaristomerellä on joidenkin laskutapojen mukaan enemmän saaria kuin missään muualla maailmassa, jopa noin 50 000 – suurempia, yli neliökilometrin saaria on 257, mutta yli puolen hehtaarin luotoja ja kareja lasketaan olevan noin 17 700. Saaret nousivat merestä vasta noin 10 000 vuotta sitten, ja maa kohoaa yhä 4–10 millimetriä vuodessa, kun jääkauden painama kallioperä ponnistaa hitaasti takaisin ylöspäin. Turusta lähtevä Saariston rengastie kiemurtelee 160–190 kilometriä maanteitä ja 30–50 kilometriä lauttavesiä pitkin suurimpien asuttujen saarten läpi. Moni näistä tuhansista saarista on silti vain paljas graniittiluoto, jolla mahtuu istumaan korkeintaan lokki – siinä missä toisilla on kokonaisia kyliä ja kesäasutusta.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-finland-proper-ed43d5f8.jpg',
+          lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Andrzej Otrębski',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Morze_Archipelagowe_aerial_1.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-finland-proper-ed43d5f8.jpg',
     },
   },
   /*
@@ -3300,66 +3689,255 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Viljandi — Viljandi County; Viljandi (linna 1224, järvisoutu 1928)
    *   Võru — Võru County (võrolaiset/setot, leelo 2009, savusauna 2014)
    */
+  /*
+   * EST KUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko). Yksi aito
+   * Wikimedia Commons -valokuva per alue, lisenssi tarkistettu
+   * Commonsin API:sta ennen latausta, suurennettu enintään 1600 px:iin,
+   * viety ämpäriin karttanostot/20260926/. Vain PD/CC0/CC BY/CC BY-SA.
+   * Kaksi täsmäkohdetta (Jõgevan kylmyysmonumentti, Rakveren Tarvas-
+   * alkuhärkäpatsas) ei löytynyt Commonsista yhtään kuvana millään
+   * hakutavalla — korvattu alueen yleiskuvalla. Lähteet:
+   *   Harju — File:Old_town_of_Tallinn_06-03-2012.jpg (Ivar Leidus, CC BY-SA 3.0 EE)
+   *   Hiiu — File:Kõpu_tuletorn_Hiiumaal.jpg (Abrget47j, CC BY-SA 3.0 EE)
+   *   Ida-Viru — File:Narva_Hermann_Castle_and_Ivangorod_Fortress.jpg (Ad Meskens, CC BY-SA 4.0)
+   *   Jõgeva — File:Jõgeva_Linn.jpg (Williamson.est, CC BY-SA 4.0) — KORVAUS, ks. yllä
+   *   Järva — File:Paide_vallitorn.jpg (RobertRSMN, CC BY 3.0)
+   *   Lääne-Viru — File:Rakvere_Castle_from_Vallimägi.jpg (Ymblanter, CC BY-SA 4.0) — KORVAUS, ks. yllä
+   *   Lääne — File:Haapsalu_Castle.jpg (Sander Säde, CC BY 3.0)
+   *   Põlva — File:Suur_Taevaskoda_2010_01.jpg (Vaido Otsar, CC BY-SA 3.0)
+   *   Pärnu — File:Pärnu_beach_-_panorama.jpg (Pudelek, CC BY-SA 3.0)
+   *   Rapla — File:Rapla_church.jpg (Peter Van den Bossche, CC BY-SA 2.0)
+   *   Saare — File:Kaali_crater_panorama.jpg (Kaspars Priede, CC BY-SA 3.0)
+   *   Tartu — File:Main_building_of_Tartu_University.JPG (Ivo Kruusamägi, CC BY-SA 3.0)
+   *   Valga — File:Valga-Valka,_Pedeli-Pedele.JPG (Flying Saucer, CC BY-SA 3.0)
+   *   Viljandi — File:Viljandi_ordulinnuse_varemed.jpg (Ivar Leidus, CC BY-SA 3.0 EE)
+   *   Võru — File:Suur_Munamagi_Tower.jpg (Marcus Vegas, CC BY-SA 2.0)
+   */
   EST: {
     Harju: {
       lyhyt: 'Tallinnan vanhankaupungin 1200-luvun katuverkko on säilynyt lähes ehjänä muurien sisällä, ja se on ollut Unescon listalla vuodesta 1997.',
       pitka: `Harjumaahan kuuluu myös Lahemaan kansallispuisto, joka perustettiin 1971 Neuvostoliiton ensimmäisenä kansallispuistona ja jonka rantaniityillä ja metsissä liikkuu nykyään yhtä lailla patikoijia kuin hirviä. Lähes puolet koko Viron väestöstä asuu tällä yhdellä maakunnalla, ja Tallinnan satama tekee siitä maan vilkkaimman solmukohdan mereltä maalle. Kun isoisä kulki 1870-luvulla vanhan kaupungin kujilla, Viro oli osa Venäjän keisarikuntaa, mutta katujen keskiaikainen linjaus ja hansakauppiaiden kivitalot olivat jo tuolloin vuosisatoja vanhoja. Toisen maailmansodan pommitukset tuhosivat maaliskuussa 1944 kymmenesosan vanhan kaupungin rakennuksista, mutta jälleenrakennettu keskusta säilytti tunnelmansa niin hyvin, että Unesco otti sen maailmanperintöluetteloon 1997. Rannikon edustalla pieni Kerin saari sai vuonna 1907 maailman ensimmäisen maakaasulla toimivan majakan – pieni yksityiskohta, joka kertoo Tallinnasta jo tuolloin teknisenä edelläkävijänä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-harju-061e3aae.jpg',
+          lahde: 'Ivar Leidus, Wikimedia Commons (CC BY-SA 3.0 EE)',
+          tekija: 'Ivar Leidus',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Old_town_of_Tallinn_06-03-2012.jpg',
+          lisenssi: 'CC BY-SA 3.0 EE',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-harju-061e3aae.jpg',
     },
     Hiiu: {
       lyhyt: 'Hiidenmaan Kõpun majakka on ollut käytössä yhtäjaksoisesti vuodesta 1531 – se on yksi maailman vanhimmista yhä toimivista majakoista.',
       pitka: `Hiidenmaata peittää lähes kokonaan metsä – mänty, koivu, kuusi ja leppä vuorottelevat soiden ja rantaniittyjen kanssa, ja saarella elää kolmisenkymmentä nisäkäslajia hirvistä ilveksiin sekä lähes 250 lintulajia. Ihmisiä täällä asuu vain reilut 9 500, mikä tekee Hiidenmaasta Viron pienimmän maakunnan sekä väkiluvultaan että pinta-alaltaan. Kõpun majakka muurattiin 1500-luvun alussa paikallisesta kalkkikivestä ja jättiläislohkareista ilman laastia, ja sen valo kantaa nykyään 26 meripeninkulman päähän – kirkkaampana kuin minkään muun majakan valo maailmassa. Isoisän matkan aikaan 1870-luvulla Kõpu oli ollut käytössä jo lähes 350 vuotta, mutta vasta 2020-luvulla siihen asennettiin maailman tehokkain LED-valo. Pühalepan kirkko, jonka rakentaminen alkoi jo 1225, muistuttaa siitä, että saarella on eletty meren armoilla vuosisatojen ajan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-hiiu-0ccf709f.jpg',
+          lahde: 'Abrget47j, Wikimedia Commons (CC BY-SA 3.0 EE)',
+          tekija: 'Abrget47j',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:K%C3%B5pu_tuletorn_Hiiumaal.jpg',
+          lisenssi: 'CC BY-SA 3.0 EE',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-hiiu-0ccf709f.jpg',
     },
     'Ida-Viru': {
       lyhyt: 'Narvan Hermannin linna ja Ivangorodin linnoitus katsovat toisiaan joen yli, ja Narvajoki on nyt Viron ja Venäjän välinen raja.',
       pitka: `Narvan lisäksi Ida-Virumaata leimaa maan alla lepäävä palavakivi, jonka louhinta ja polttaminen ovat tehneet alueesta Viron energiantuotannon sydämen – savupiiput ja voimalaitokset hallitsevat maisemaa siellä missä muualla Virossa näkee vain metsää ja peltoa. Väestö on tässä maakunnassa poikkeuksellinen: yli kaksi kolmasosaa asukkaista on etnisiltä juuriltaan venäläisiä, ainoana maakuntana koko Virossa. Narvan naapurisaarella toimi 1800-luvulta lähtien Kreenholmin puuvillatehdas, joka työllisti parhaimmillaan yli 10 000 ihmistä ja tuotti kymmenesosan koko Venäjän keisarikunnan puuvillakankaasta. Vuonna 1872, vain vuotta ennen isoisän omaa matkaa, kolera tappoi tehtaalla yli 300 työläistä, ja elokuussa satoja kutojia lakkoili paremman kohtelun puolesta – syksyllä paikalle piti lopulta kutsua kokonainen keisarillinen rykmentti rauhoittamaan tilannetta. Nykyään entisten tehtaiden ja liuskekivilouhosten rinnalle on noussut uutta teollisuutta, mutta hiljentynyt Kreenholmin tehdasalue seisoo yhä joen rannalla muistona ajasta, jolloin Narva oli koko keisarikunnan tehokkain tehdaskaupunki.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-ida-viru-196bd8a8.jpg',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Ad Meskens',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Narva_Hermann_Castle_and_Ivangorod_Fortress.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-ida-viru-196bd8a8.jpg',
     },
     'Jõgeva': {
       lyhyt: 'Jõgeva on Viron kylmin paikka: siellä mitattiin 1940 maan pakkasennätys, −43,5 astetta, ja kylmyydelle on pystytetty oma muistomerkki.',
       pitka: `Jõgevamaan itälaitaa reunustaa Peipsijärvi, Euroopan suurin valtioiden välinen järvi, jonka rannoilla kalastus on elättänyt kyliä vuosisatojen ajan. Maakunta on harvaan asuttua ja rauhallista – vain reilut 27 000 ihmistä asuu alueella, joka ulottuu laajalle Keski-Viron tasangolle. Kuremaan kartano rakennettiin vuosina 1837–1843 saksalaissyntyisen von Oettingenin suvun tilalle, ja vaikka päärakennus tuhoutui tulipalossa 1986, se rakennettiin tarkasti samaan asuun uudelleen – nykyään siellä on sekä museo että kokoustiloja järven rannalla. Vanha Põltsamaan linna, jonka juuret ovat 1200-luvulla, muistuttaa siitä, että keskiajalla täälläkin käytiin valtataisteluja, vaikka nykyään rauniot ovat lähinnä kesätapahtumien näyttämö. Kesäisin järven rannalla vietetään vilkasta elämää, muun muassa vuosittaisessa Jõgevatreff-moottoripyöräleirissä, joka kerää yli tuhat kävijää.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-jogeva-c17f6221.jpg',
+          lahde: 'Williamson.est, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Williamson.est',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:J%C3%B5geva_Linn.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-jogeva-c17f6221.jpg',
     },
     'Järva': {
       lyhyt: 'Paiden linnan kuusikerroksinen Vallitorni räjäytettiin 1941, ja se rakennettiin uudelleen vasta vuosina 1990–1993.',
       pitka: `Järvamaa sijaitsee aivan Viron keskellä, ja maan tärkeimmät tie- ja rautatieyhteydet pohjoisesta etelään kulkevat sen halki. Paiden linna sai aikoinaan saksankielisen nimensä Weißenstein, valkoinen kivi, samasta paikallisesta kalkkikivestä, josta koko linnoitus 1200-luvulla muurattiin. Kaupungin tunnetuin lapsi on säveltäjä Arvo Pärt, joka syntyi Paidessa 1935 ja on sittemmin noussut yhdeksi maailman esitetyimmistä nykysäveltäjistä. Naapurikaupunki Türi on juhlinut toukokuista kukkamarkkinaansa vuodesta 1977 ja sai virallisen Viron kevätpääkaupungin arvonimen 2000 – ennen sitä kaupungin maamerkkinä oli 197-metrinen radiomasto, jonka neuvostojoukot räjäyttivät jo 1941. Maaseutu on muuten harvaan asuttua: Türi-Alliku on maakunnan suurin kylä, mutta siinäkin asuu vain reilut 350 ihmistä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-jarva-59f7e89a.jpg',
+          lahde: 'RobertRSMN, Wikimedia Commons (CC BY 3.0)',
+          tekija: 'RobertRSMN',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Paide_vallitorn.jpg',
+          lisenssi: 'CC BY 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-jarva-59f7e89a.jpg',
     },
     'Lääne-Viru': {
       lyhyt: 'Rakveren linnavuoren laidalla seisoo pronssinen alkuhärkä Tarvas, seitsemän metriä pitkä ja Baltian suurimmaksi eläinpatsaaksi sanottu.',
       pitka: `Rakveren linnavuori on ollut linnoitettuna jo 500–600-luvuilta lähtien, ja vuosisatojen saatossa se on kuulunut vuoroin Tanskan kuninkaille, Liivinmaan ritarikunnalle sekä Ruotsin ja Puolan valtakunnille – puolalaiset joukot vaurioittivat sen pahoin 1605, eikä sitä ole sen jälkeen jälleenrakennettu. Maakunnan pohjoisrannikolla levittäytyy osa Lahemaan kansallispuistoa, jonka Palmsen kartano on entisöity näyttämään 1700-luvun loistoltaan ja avattu yleisölle. Väkeä maakunnassa asuu reilut 58 000, ja lähes yhdeksän kymmenestä on virolaisia – maaseudulla eletään yhä paljolti maataloudesta ja kartanomatkailusta. Rakvere tunnettiin jo vuonna 1226 nimellä Tarvanpea, "härän pää", mistä koko kaupungin nimikin lopulta juontuu. Vaikka vanha linna seisoo raunioina, kaupungin keskiaikainen ydin ja sitä ympäröivä Vallimägi ovat nykyään suosittu kesätapahtumien näyttämö.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-laane-viru-c7ad3563.jpg',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Ymblanter',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rakvere_Castle_from_Vallim%C3%A4gi.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-laane-viru-c7ad3563.jpg',
     },
     'Lääne': {
       lyhyt: 'Haapsalun piispanlinnan kappelin seinälle ilmestyy tarun mukaan elokuun täydenkuun öinä Valkoinen neito, ja silloin kaupunki juhlii.',
       pitka: `Haapsalu nousi 1800-luvulla Venäjän ylhäisön suosituksi kylpyläkaupungiksi, kun lääkäri Carl Abraham Hunnius avasi ensimmäisen mutahoitolan 1825 – tieto parantavasta mudasta levisi nopeasti Pietarin yläluokan keskuuteen, ja Venäjän keisariperhe kävi täällä toistuvasti levolla. Säveltäjä Pjotr Tšaikovski vietti Haapsalussa kesän 1867, vain muutama vuosi ennen isoisän omaa matkaa, ja sävelsi rannalla istuessaan pianosarjan nimeltä Souvenir de Hapsal. Maakuntaan kuuluu myös pieni Vormsin saari, jota asuttivat vuosisatojen ajan rannikkoruotsalaiset – ennen toista maailmansotaa saarella asui noin 3 000 ruotsinkielistä, mutta lähes koko yhteisö joutui pakenemaan tai siirtymään Ruotsiin sodan aikana. Vormsin hautausmaalla erottuvat yhä pyöreät kiviset aurinkoristit, rannikkoruotsalaisten omaperäinen hautamerkkien perinne. Nykyään Lääne maakunta on harvaan asuttu ja rauhallinen, ja Haapsalun vanha rautatieasema – aikanaan rakennettu tsaarien mittasuhteisiin – tunnetaan yhä poikkeuksellisen pitkästä katetusta laituristaan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-laane-7e906402.jpg',
+          lahde: 'Sander Säde, Wikimedia Commons (CC BY 3.0)',
+          tekija: 'Sander Säde',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Haapsalu_Castle.jpg',
+          lisenssi: 'CC BY 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-laane-7e906402.jpg',
     },
     'Põlva': {
       lyhyt: 'Taevaskojan kylässä Ahjajoen rannoilla paljastuu devonikauden hiekkakiveä, joka kerrostui satoja miljoonia vuosia sitten.',
       pitka: `Suuri Taevaskoja on lähes 150 metriä pitkä ja paikoin 24 metriä korkea hiekkakivimuuri, joka paljastaa Ahjajoen rannalla devonikauden kerrostumia – ne syntyivät 419–359 miljoonaa vuotta sitten, kauan ennen kuin mitään Viron nimistä maata oli olemassa. Koko Ahjajoen laakso on nykyään suojeltu maisema-alue, jossa vaeltajat kulkevat samoja polkuja kuin sukupolvet ennen heitä. Etelämpänä Räpinan kylässä toimii Viron vanhin yhä käytössä oleva yritys, paperitehdas, joka on valmistanut paperia keskeytyksettä vuodesta 1734 – se oli toiminnassa jo kauan ennen isoisän matkaa ja seisoo yhä samalla paikalla. Maakunta on muuten harvaan asuttua metsä- ja järvimaisemaa, jossa yhdeksän kymmenestä asukkaasta on virolaisia ja elanto tulee yhä paljolti maa- ja metsätaloudesta. Taevaskojan hiekkakivikerrostumat ja Räpinan vanha tehdas muistuttavat kumpikin siitä, kuinka pitkä aika – olipa kyse kivestä tai ihmiskädenjäljestä – tässä maakunnassa yhä näkyy.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-polva-45a70595.jpg',
+          lahde: 'Vaido Otsar, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Vaido Otsar',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Suur_Taevaskoda_2010_01.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-polva-45a70595.jpg',
     },
     'Pärnu': {
       lyhyt: 'Pärnua kutsutaan Viron kesäpääkaupungiksi, ja sen pitkillä hiekkarannoilla ja kylpylöissä on käyty lomailemassa jo 1800-luvulta asti.',
       pitka: `Pärnujoen rannalla sijaitseva Pullin asuinpaikka on Viron vanhin tunnettu ihmisasutus, ajoitettu noin 8500 eaa. eli yli kymmenentuhatta vuotta sitten – pitkä historia yllättävän moderniksi mielletyssä rantakaupungissa. Kun Tarton yliopisto suljettiin sotien jaloista 1699, se toimi vuoteen 1710 asti juuri Pärnussa, ennen kuin palasi takaisin Tartoon. Kaupungin jäätön satama on tehnyt siitä tärkeän kauppapaikan Hansaliiton ajoista lähtien, ja hiekkarannat sekä mutahoidot alkoivat houkutella lomailijoita jo 1838, kun ensimmäinen kylpylaitos avattiin. Maakunnan sisämaassa Soomaa kansallispuisto suojelee laajoja soita ja tulva-alueita, joilla paikalliset ovat perinteisesti liikkuneet keväisin kanooteilla kylästä toiseen. Nykyään Pärnu tunnetaan yhtä lailla rauhallisista rantakävelyistä kuin kesäisin järjestettävästä Pohjoismaiden ja Baltian suurimmasta elektronisen tanssimusiikin festivaalista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-parnu-930aa80c.jpg',
+          lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Pudelek (Marcin Szala)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:P%C3%A4rnu_beach_-_panorama.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-parnu-930aa80c.jpg',
     },
     Rapla: {
       lyhyt: 'Raplan kirkko valmistui 1901 romaaniseen tyyliin, ja sitä pidetään yhtenä tyylin puhtaimmista esimerkeistä koko Virossa.',
       pitka: `Raplasta on ensimmäinen kirjallinen maininta jo vuodelta 1241, jolloin se kirjattiin Tanskan maakirjaan – kylästä kasvoi kaupunki kuitenkin vasta 1990-luvulla. Maaperä on maakunnan vaurauden lähde: kalkkikivi-, dolomiitti- ja turveesiintymät ovat ruokkineet paikallista teollisuutta, ja 1800-luvun loppupuolella kirkonkylään nousivat vuoron perään apteekki, koulu, sairaala ja tiilitehdas. Rautatie Viljandiin valmistui 1900, ja se sitoi pienen kirkonkylän osaksi laajempaa Viron rautatieverkkoa. Reilut 33 000 asukasta asuu nykyään harvassa, metsäisessä maisemassa, ja moni tunnettu virolainen – muun muassa näyttelijä Helle Meri ja koomikko Märt Avandi – on kotoisin juuri täältä. Kirkonkylän rauhallisuudesta huolimatta Rapla on aina ollut risteysasema, paikka josta tiet ja radat haarautuvat moneen suuntaan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-rapla-d1dce9ae.jpg',
+          lahde: 'Peter Van den Bossche, Wikimedia Commons (CC BY-SA 2.0)',
+          tekija: 'Peter Van den Bossche',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rapla_church.jpg',
+          lisenssi: 'CC BY-SA 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-rapla-d1dce9ae.jpg',
     },
     Saare: {
       lyhyt: 'Saarenmaan Kaalissa on yhdeksän meteoriittikraatteria, ja suurimman, 110 metriä leveän kraatterin pohjalla lepää pyöreä järvi.',
       pitka: `Kaali kraatteri syntyi pronssikaudella, noin 1500 vuotta ennen ajanlaskumme alkua, kun meteoriitti räjähti muutaman kilometrin korkeudessa ja iski maahan energialla, joka vastasi Hiroshiman pommia – tapahtuma jätti jälkensä myös suomalaiseen Kalevalaan, jossa kerrotaan taivaalta pudonneesta tulesta. Saarenmaan asukkaat, viikinkiaikaiset oeselilaiset, tunnettiin naapurikansojen keskuudessa pelätyistä merirosvoretkistään, ja saari taipui kristityksi vasta 1200-luvun sotien jälkeen. Anglan kylän tuulimyllymäellä seisoo yhä viisi myllyä, joista vanhimmat on rakennettu jo 1800-luvun lopulla ja nuorin 1920-luvulla, ja ne ovat säilyneet osana Saarenmaan maisemaa aina tähän päivään asti. Maakunnassa asuu reilut 31 000 ihmistä, joista lähes kaikki ovat virolaisia, ja saaren rauhallinen maaseutu tuulimyllyineen ja kiviaitoineen on tehnyt siitä suositun kesäkohteen. Kaalin kraatterijärvi on nykyään vaatimaton lampi keskellä peltoja, mutta sen synty muistuttaa siitä, että saarikin on joskus ollut osa suurempaa taivaallista draamaa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-saare-72c1bda8.jpg',
+          lahde: 'Kaspars Priede, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Kaspars Priede',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kaali_crater_panorama.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-saare-72c1bda8.jpg',
     },
     Tartu: {
       lyhyt: 'Tartun yliopisto perustettiin 1632, ja maan vanhimpana yliopistona se tekee Tartusta Viron henkisen pääkaupungin.',
       pitka: `Tarton kaupungista on kirjallinen maininta jo vuodelta 1030, jolloin Kiovan-Venäjän suuriruhtinas Jaroslav Viisas perusti tänne linnoituksen retkellään tšuudien maille – kaupunki on siis yksi koko Baltian vanhimmista. Emajõgi, Viron ainoa purjehduskelpoinen joki, yhdistää kaksi suurta järveä ja virtaa kaupungin halki, mikä teki Tartosta kauppapaikan jo vuosisatoja sitten. 1980-luvun lopulla juuri Tarton opiskelijat olivat käynnistämässä laulavaa vallankumousta, joka johti lopulta Viron itsenäisyyden palauttamiseen 1991. Kaupungissa toimii yli kolmekymmentä museota, joista suurin, vuonna 1909 perustettu Viron kansallismuseo, kertoo koko kansan tarinaa maatalouden työkaluista nykypäivän teknologiaan asti. Kaupungissa asuu paljon opiskelijoita eri puolilta Viroa ja maailmaa, ja yliopistokaupungin nuorekas ilmapiiri erottaa Tarton selvästi hiljaisemmasta maaseudusta sen ympärillä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-tartu-e85c03fe.jpg',
+          lahde: 'Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Ivo Kruusamägi',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Main_building_of_Tartu_University.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-tartu-e85c03fe.jpg',
     },
     Valga: {
       lyhyt: 'Valga ja Latvian Valka olivat yksi kaupunki vuoteen 1920, ja nyt niiden välinen raja ylitetään ilman aitoja ja tarkastuksia.',
       pitka: `Maakunnan itäosassa kohoava Otepää on Viron ylin kaupunki, reilut 170 metriä merenpinnan yläpuolella, ja sen linnanmäelle rakennettiin jo 1224 maan ensimmäinen kivilinnoitus. Kesäkuussa 1884 juuri Otepään Nuustakun kirkossa siunattiin lippu, josta myöhemmin tuli sinimustavalkoinen Viron lippu – vaatimattomasta maalaispitäjästä kasvoi näin koko kansallisen heräämisen symbolinen syntypaikka. Nykyään Otepää tunnetaan Viron talvipääkaupunkina, ja sen hiihtokeskukset ja -ladut houkuttelevat urheilijoita ympäri Eurooppaa. Maakunta on tuottanut myös muita merkkihenkilöitä: painonnostaja Alfred Neuland toi Virolle ensimmäisen olympiakultamitalin 1920, ja täältä kotoisin oleva taidemaalari Konrad Mägi on yksi Viron tunnetuimmista maalareista. Valgan ja Latvian Valkan välinen vanha raja-alue on siis vain yksi osa maakuntaa, jonka metsät, järvet ja mäet tekevät siitä suositun retkeily- ja hiihtoseudun.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-valga-fcf0861d.jpg',
+          lahde: 'Flying Saucer, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Flying Saucer',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Valga-Valka,_Pedeli-Pedele.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-valga-fcf0861d.jpg',
     },
     Viljandi: {
       lyhyt: 'Viljandin kansanmusiikkifestivaali on Viron suurin vuotuinen musiikkijuhla, ja heinäkuun lopussa linnanraunioiden kaupunki täyttyy soitosta.',
       pitka: `Viljandin linna alkoi nousta jo 1224 Liivinmaan ritarikunnan toimesta, ja parhaimmillaan siitä kasvoi yksi koko Baltian alueen suurimmista linnoituksista – nykyään jäljellä on vaikuttavia raunioita, jotka toimivat kesäisin sekä kansanmusiikkifestivaalin että muiden tapahtumien näyttämönä. Kaupunki liittyi Hansaliittoon jo 1300-luvun alkupuolella ja toimi tärkeänä kauppapysäkkinä matkalla Venäjälle, mutta Liivinmaan sodan tuho 1500-luvulla pysäytti kasvun pitkäksi aikaa – elpyminen alkoi vasta 1700-luvulla Venäjän vallan alla. Kaupungin laidalla siintävä Viljandin järvi on ollut soutajien suosiossa jo vuodesta 1928, jolloin ensimmäinen järven ympäri soudettava kilpailu järjestettiin – nykyään tapahtuma kerää yhä noin 1 300 osallistujaa. Maakunnassa asuu reilut 45 000 ihmistä, joista yli 95 prosenttia on virolaisia, ja maaseudulla Sakalan ylängön loivat mäet vaihtuvat paikoin soihin ja järviin. Näin vanha linnakaupunki ja sen ympärillä avautuva rauhallinen maalaismaisema kertovat yhdessä Etelä-Viron pitkästä historiasta.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-viljandi-cc11d8de.jpg',
+          lahde: 'Ivar Leidus, Wikimedia Commons (CC BY-SA 3.0 EE)',
+          tekija: 'Ivar Leidus',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Viljandi_ordulinnuse_varemed.jpg',
+          lisenssi: 'CC BY-SA 3.0 EE',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-viljandi-cc11d8de.jpg',
     },
     'Võru': {
       lyhyt: 'Suur Munamägi eli Iso Munamäki kohoaa 318 metriin, Baltian maiden korkeimmaksi huipuksi, ja sen laella seisoo näkötorni.',
       pitka: `Võrumaa on Viron ainoa maakunta, joka rajautuu sekä Latviaan että Venäjään, ja aivan rajaseudulla elää kaksi omaleimaista kansanryhmää, võrolaiset ja setot, joilla molemmilla on oma kielensä ja perinteensä. Setojen moniäänistä laulua, leeloa, on lauleltu polvesta toiseen ilman nuotteja, ja Unesco lisäsi sen ihmiskunnan aineettoman kulttuuriperinnön listalle 2009. Alueen savusaunaperinne – saunominen ilman piippua, savun täyttäessä koko tuvan ennen kylpyä – pääsi samalle listalle 2014, ja moni perhe lämmittää saunaansa yhä isoisiltaan opituilla tavoilla. Metsätalous, puunjalostus ja huonekaluteollisuus ovat maakunnan tärkeimpiä elinkeinoja, ja rajan läheisyys Pihkovaan ja Riikaan on perinteisesti tehnyt Võrumaasta kauppareittien risteysseutua. Vaikka Suur Munamäki nostaa maakunnan Baltian ylimmäksi kolkaksi, arkea täällä leimaa ennen kaikkea hiljainen metsäseutu ja sitkeä paikalliskulttuuri, joka on säilynyt muusta Virosta poikkeavana vuosisatojen ajan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-voru-b3810b88.jpg',
+          lahde: 'Marcus Vegas, Wikimedia Commons (CC BY-SA 2.0)',
+          tekija: 'Marcus Vegas',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Suur_Munamagi_Tower.jpg',
+          lisenssi: 'CC BY-SA 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-voru-b3810b88.jpg',
     },
   },
   /*
@@ -3391,27 +3969,92 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *     Mikhail Eisenstein
    *   Vidzeme — Gaiziņkalns (312 m); Suur Munamägi; Vidzeme Region
    *   Zemgale — Rundāle Palace (Rastrelli); Jelgava
+   *
+   * LVA KUVA + PIKKUKUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko):
+   * sama kaava — Commons-kuva lisenssi tarkistettu API:sta, ämpäri
+   * karttanostot/20260926/, pikkukuva kierrättää saman osoitteen.
+   * Lähteet:
+   *   Kurzeme — File:Kuldiga_Ventas_rumba_22.JPG (Zairon, CC BY-SA 4.0)
+   *   Latgale — File:Aglona_Basilica.jpg (Dainis Matisons, CC BY 2.0)
+   *   Riga — File:Riga_Alberta_iela_8.jpg (Pierre André Leclercq, CC BY-SA 4.0)
+   *   Vidzeme — File:Gauja near Cīrulīši Nature Trails (2).jpg (AgrisR, CC BY-SA 4.0)
+   *   Zemgale — File:Rundāle Palace.JPG (DavidConFran, CC BY-SA 3.0)
    */
   LVA: {
     Kurzeme: {
       lyhyt: 'Kuldīgan Ventas rumba on Euroopan levein vesiputous: vain parin metrin korkuinen mutta 249 metriä leveä, keväällä vielä leveämpi.',
       pitka: `Kurzemen maisemaa hallitsevat honka- ja kuusimetsät sekä tasainen viljelysseutu, jossa peltoja mittaa nykyäänkin ruis, peruna ja pellava aivan kuin isoisän matka-aikaan. Kuldīgan kohdalla Venta-joki levittäytyy koko uomansa leveydeltä matalaksi koskeksi – putous on tuskin ihmisen mittainen mutta ulottuu lähes kolmensadan metrin levyydeltä rannasta rantaan, ja tulva-aikaan reunat katoavat veden alle kokonaan. Jo 1600-luvulla Kuurinmaan herttua Jaakob keksi pyydystää koskessa ylävirtaan hyppäävät kalat suoraan ilmasta koreilla, ja tapa antoi Kuldīgalle lempinimen kaupunkina, jossa kalat napataan lennosta – ilmiötä käydään ihmettelemässä yhä joka kevät ja syksy. Kuldīgan puutalokeskusta, joka säilytti keskiaikaisen katuverkkonsa lähes koskemattomana, pääsi Unescon maailmanperintöluetteloon vasta 2023, ja sen rauhallisilla kujilla kulkee yhä entisen Kuurinmaan herttuakunnan hallintokaupungin tuntu. Liepāja, alueen suurin kaupunki, katsoo edelleen mereen päin, kalastuksen ja telakoiden perinteitä vaalien.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-kurzeme-e5f15942.jpg',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Zairon',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kuldiga_Ventas_rumba_22.JPG',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-kurzeme-e5f15942.jpg',
     },
     Latgale: {
       lyhyt: 'Katolisen Latgalen Aglonan basilikaan saapuu joka 15. elokuuta tuhansia pyhiinvaeltajia, ja kaksi paavia on vieraillut siellä.',
       pitka: `Latgale eroaa muusta Latviasta selvästi: seutu on täynnä pieniä järviä ja mäntymetsiä, ja sen halki mutkittelee Daugava-joki idästä länteen. Kun suuri osa Latviasta on luterilaista, Latgale on pysynyt katolisena jo vastauskonpuhdistuksen ajoista lähtien, ja tämä näkyy kylien tienvarsiristeissä ja kirkkojen tornien tiheydessä. Joka vuoden 15. elokuuta Aglonan barokkibasilikaan saapuu tuhansia pyhiinvaeltajia Neitsyt Marian taivaaseenoton juhlaan, ja paikka on niin merkittävä katolinen pyhättö, että sekä paavi Johannes Paavali II (1993) että paavi Franciscus (2018) ovat vierailleet siellä. Alueella puhutaan yhä latgalin kieltä, jota osa kielitieteilijöistä pitää omana kielenään latvian sijasta, ja sen rinnalla elää vuosisataista savenvalajien perinnettä – latgalilainen keramiikka tunnetaan tummista, ruskeista ja mustista lasitteistaan. Daugavpils, alueen suurin kaupunki ja ainoan yliopiston kotipaikka, on tästä huolimatta monikulttuurinen risteysasema Venäjän ja Valko-Venäjän rajan tuntumassa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-latgale-a66101c1.jpg',
+          lahde: 'Dainis Matisons, Wikimedia Commons (CC BY 2.0)',
+          tekija: 'Dainis Matisons',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aglona_Basilica.jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-latgale-a66101c1.jpg',
     },
     Riga: {
       lyhyt: 'Noin kolmasosa Riian keskustan taloista on jugendia – kaupungissa on kenties maailman tihein jugendrakennusten keskittymä.',
       pitka: `Riika on Latvian pääkaupunki ja koko Baltian suurin kaupunki, ja sen vanha keskusta levittäytyy Väinäjoen suulle keskiaikaisten kirkontornien ja kivikatujen varaan. Kaupungin ydin on kuitenkin yllättävän nuori tyyliltään: noin kolmasosa keskustan taloista on jugendia, ja Riikaa pidetäänkin yhtenä tiheimmän jugendrakennuskannan kaupunkina koko maailmassa. Komeimmat julkisivut löytyvät Alberta iela -kadulta, jonka viisi taloa suunnitteli arkkitehti Mihail Eisenstein 1900-luvun alussa – hänen poikansa Sergei Eisensteinistä tuli myöhemmin yksi elokuvahistorian tunnetuimmista ohjaajista. Isoisän kulkiessa seudulla 1873 tätä katua ja sen koristeellisia julkisivuja ei vielä ollut: suurin osa jugendtaloista nousi vasta vuosina 1904–1914, kun Riika kasvoi huimaa vauhtia Venäjän keisarikunnan viidenneksi suurimmaksi kaupungiksi. Nykyään koko vanhakaupunki jugendkortteleineen kuuluu Unescon maailmanperintöön, ja Alberta iela on edelleen suosituin kävelyreitti tyylin ihailijoille.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-riga-86314b3c.jpg',
+          lahde: 'Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Pierre André Leclercq',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Riga_Alberta_iela_8.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-riga-86314b3c.jpg',
     },
     Vidzeme: {
       lyhyt: 'Latvian korkein kohta Gaiziņkalns jää 312 metriin, ja Viron huipun päihittämään rakennettu torni purettiin keskeneräisenä 2012.',
       pitka: `Vidzeme on Latvian pohjoisosan mäkistä ylänköä, jossa pienet moreenijärvet pilkottavat metsien välistä ja Gauja-joki on kaivertanut laaksoonsa niin jyrkkiä hiekkakivijyrkänteitä, että aluetta kutsutaan Latvian Sveitsiksi. Alue on myös maan etnisesti latvialaisin kolkka – noin 85 prosenttia asukkaista on latvialaisia – ja suurin kaupunki Valmiera tunnetaan vilkkaana opiskelijakaupunkina joen rannalla. Ylängön korkein kohta, 312-metrinen Gaiziņkalns, on koko Latvian korkein piste, mutta jäi silti kolme metriä matalammaksi kuin Viron puolen naapurihuippu Suur Munamägi. Kunnianhimo korjata tämä johti 2000-luvulla 45-metrisen näkötornin rakentamiseen mäen laelle, mutta hanke jäi kesken, torni todettiin vaaralliseksi ja purettiin lopulta 2012. Nykyään Gaiziņkalnsille kiipeää silti retkeilijöitä pelkän maiseman vuoksi, ja Gaujan kansallispuiston jyrkänteet, luolat ja keskiaikaiset linnanraunioit tekevät koko Vidzemestä yhden Latvian suosituimmista retkeilyseuduista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-vidzeme-cca1f570.jpg',
+          lahde: 'AgrisR, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'AgrisR',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gauja near Cīrulīši Nature Trails (2).jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-vidzeme-cca1f570.jpg',
     },
     Zemgale: {
       lyhyt: 'Rundālen barokkipalatsin suunnitteli Bartolomeo Rastrelli Kuurinmaan herttualle, ja sen entisöinti kesti vuodesta 1972 vuoteen 2015.',
       pitka: `Zemgale on Latvian viljakammio: alue on lähes täysin tasaista, mustan ja hedelmällisen maaperän peittämää lakeutta, jota reunustavat vain joenvarsimetsät ja kylätiet. Keskellä lakeutta kohoaa Rundālen palatsi, jonka Pietarin talvipalatsistakin tunnettu arkkitehti Bartolomeo Rastrelli suunnitteli 1700-luvulla Kuurinmaan herttua Ernst Johann von Bironille – rakennus on niin komea, että sitä kutsutaan usein Latvian Versaillesiksi. Palatsin vaiheet eivät ole olleet pelkkää loistoa: neuvostoaikana herttuan valtaistuinsalissa säilytettiin viljaa ja juhlasalista tehtiin koulun liikuntasali, ja koko rakennuksen kunnostus kesti vuodesta 1972 aina vuoteen 2015 asti. Nykyään palatsin ranskalaispuutarhassa kukkii yksi Pohjois-Euroopan suurimmista ruusutarhoista, yli 2 300 lajiketta, ja Jelgava, alueen suurin kaupunki, oli aikoinaan koko Kuurinmaan ja Semgallian herttuakunnan pääkaupunki – muistuma ajasta, jolloin herttuat hallitsivat tätä lakeutta tästä samasta seudusta käsin.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-zemgale-056e13fb.jpg',
+          lahde: 'DavidConFran, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'DavidConFran',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rundāle Palace.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/lva-maakunta-zemgale-056e13fb.jpg',
     },
   },
   /*
@@ -3456,47 +4099,175 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Telšiai — Telšiai (Mastis-järvi); Samogitian dialect
    *   Utenos — Molėtai Astronomical Observatory (1969, 1,65 m kaukoputki)
    *   Vilniaus — Trakai Island Castle; Trakai Kenesa / Karaite-artikkelit
+   *
+   * LTU KUVA + PIKKUKUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko):
+   * sama kaava — Commons-kuva lisenssi tarkistettu API:sta, ämpäri
+   * karttanostot/20260926/, pikkukuva kierrättää saman osoitteen. Kaksi
+   * alkuperäistä ehdokasta vaihdettu: Taurages (Panemunės pilis 2009 oli
+   * vain GFDL, ei CC — korvattu vuoden 2020 CC BY-SA 3.0 -kuvalla) ja
+   * Telšiai (tiedostonimi ei löytynyt Commonsista — korvattu toisella
+   * Mastis-järven kuvalla). Lähteet:
+   *   Alytaus — File:Grūto parkas - Lenin.JPG (Adriao, CC BY-SA 3.0)
+   *   Kauno — File:Kaunas_Castle_-_panorama.JPG (Pudelek/Marcin Szala, CC BY-SA 3.0)
+   *   Klaipedos — File:Parnidis dune.jpg (Bernt Rostad, CC BY 2.0)
+   *   Marijampoles — File:Sūduvos aukštuma1.JPG (Hugo.arg, CC BY-SA 4.0)
+   *   Panevezio — File:Panevėžys001.JPG (Hugo.arg, CC BY-SA 4.0)
+   *   Šiauliai — File:Lithuania Hill of Crosses 4.jpg (Wojsyl, CC BY-SA 3.0)
+   *   Taurages — File:2020, Panemunės pilis.JPG (Vilensija, CC BY-SA 3.0)
+   *   Telšiai — File:Footsteps on frozen Lake Mastis (4387262604).jpg (Charlie Phillips, CC BY 2.0)
+   *   Utenos — File:Lithuania Ladakalnis.jpg (Wojsyl, CC BY-SA 3.0)
+   *   Vilniaus — File:Trakai Island Castle, Lithuania - Diliff.jpg (Diliff, CC BY-SA 3.0)
    */
   LTU: {
     Alytaus: {
       lyhyt: 'Druskininkain lähellä Grūtasin puistoon on koottu kaadettuja neuvostopatsaita, ja puiston perustaja sai 2001 Ig Nobelin rauhanpalkinnon.',
       pitka: `Alytusin ympärillä leviää Dzūkijan mäntymetsien meri: lähistöllä kasvaa Dainavan metsä, Liettuan suurin yhtenäinen ikimetsä, ja koko seutu tuoksuu pihkalta ja sienimetsältä. Hiekkainen maaperä on aina ollut karua viljelijälle, joten paikalliset ovat vuosisatoja täydentäneet satoaan metsän antimilla – vanha sanonta väittää, ettei dzūkkitytöllä olisi vaatteita ilman sieniä ja marjoja. Kaupungin halki virtaa Nemunas-joki, jonka yllä kohoaa Valkoisen ruusun silta, Liettuan korkein kävely- ja pyöräilysilta, 38 metriä korkealla ilmassa. Silta avattiin vasta 2016, joten se on aivan uusi lisä maisemaan, joka on muuten pysynyt mäntyjen ja hiekan hallitsemana ties kuinka kauan.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-alytaus-989f23a6.jpg',
+          lahde: 'Adriao, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Adriao',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grūto parkas - Lenin.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-alytaus-989f23a6.jpg',
     },
     Kauno: {
       lyhyt: 'Kaunas oli sotien välillä Liettuan väliaikainen pääkaupunki, ja sen modernistinen arkkitehtuuri pääsi Unescon listalle 2023.',
       pitka: `Kaunas kohoaa kahden joen kärjessä, siinä missä Nemunas ja Neris yhtyvät – paikka oli niin strateginen, että tänne nousi jo 1300-luvulla goottilainen Kaunasin linna, yksi Liettuan vanhimmista tiililinnoista ja ainoa, jossa on kaksinkertainen puolustusmuuri. Linnasta on nykyisin pystyssä enää noin kolmasosa, mutta rauniot ja niitä ympäröivä puisto ovat suosittu kohtaamispaikka jokirannassa. Kaupungin toisella laidalla seisoo 1900-luvun alussa valmistunut Yhdeksäs linnake, joka toimi vuodesta 1924 vankilana ja josta tuli natsimiehityksen aikana yksi Euroopan synkimmistä paikoista – siellä surmattiin 45 000–50 000 juutalaista, suurin osa Kaunasin geton asukkaita. Nykyään paikka on museo ja muistomerkki, joka pysäyttää kävijän hiljaisuudellaan, aivan toisenlainen puoli samasta kaupungista, joka 1920-luvulla puki ylleen kevyen modernistisen kasvonsa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-kauno-fb8737bc.jpg',
+          lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Pudelek (Marcin Szala)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kaunas_Castle_-_panorama.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-kauno-fb8737bc.jpg',
     },
     Klaipedos: {
       lyhyt: 'Kapea, 98 kilometrin Kuurinkynnäs erottaa Kuurin lahden Itämerestä, ja sen vaeltavat dyynit hautasivat aikanaan alleen kokonaisia kyliä.',
       pitka: `Klaipėda syntyi kauppasatamana Meripihkatien varrella jo keskiajalla, ja sen historia on yhtä kerroksellinen kuin sen hallitsijoiden luettelo: kaupunkia ovat vuorotellen hallinneet Saksalainen ritarikunta, Preussi ja Saksan keisarikunta, kunnes se liitettiin Liettuaan vasta vuonna 1923. Satama on jäätön ympäri vuoden, ja se on vuosisatoja ollut koko Liettuan tärkein yhteys merelle – sen kautta on kulkenut kaikki meripihkasta puutavaraan. Kaupungin saksalaisaikainen nimi Memel elää yhä monissa vanhoissa kortteleissa, vaikka valtapiirit ovat vaihtuneet moneen kertaan viimeisen sadan vuoden aikana. Nykyisin Liettuan kolmanneksi suurin kaupunki tuntuu satamakaupungilta joka kolkassa: nosturit, laivat ja suolainen tuuli kuuluvat arkeen aivan yhtä lailla kuin Kuurinkynnäänkin hiekkadyynit.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-klaipedos-e3a3f789.jpg',
+          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+          tekija: 'Bernt Rostad',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Parnidis dune.jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-klaipedos-e3a3f789.jpg',
     },
     Marijampoles: {
       lyhyt: 'Marijampolė on kaupan ja kevyen teollisuuden keskus, ja siellä toimii yksi Euroopan suurimmista käytettyjen autojen toreista.',
       pitka: `Marijampolė sijaitsee Sūduvan eli Suvalkijan sydämessä, ja jos Aukštaitija tunnetaan järvistään ja Žemaitija metsistään, tämä alue tunnetaan pelloistaan: jääkauden jättämä savimaa on yksi Pohjois-Euroopan hedelmällisimmistä, ja seutu on ollut viljan aittaa sukupolvien ajan. Täkäläiset talonpojat vapautuivat maaorjuudesta muuta Liettuaa aiemmin, ja hyvä maaperä sekä ahkeruus tekivät 1800–1900-lukujen vaihteessa sūduvalaisista maan varakkainta maalaisväestöä. Nykyisin sama yritteliäisyys näkyy toisenlaisessa muodossa kaupungin laidalla, missä yksi Euroopan suurimmista käytettyjen autojen kaupoista vetää ostajia ympäri Itä-Eurooppaa. Pellot jatkuvat silmänkantamattomiin joka suuntaan, ja kesäisin maisema muuttuu keltaisen rapsin ja vihreän vehnän täplittämäksi tilkkutäkiksi.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-marijampoles-bdeea32c.jpg',
+          lahde: 'Hugo.arg, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Hugo.arg',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sūduvos aukštuma1.JPG',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-marijampoles-bdeea32c.jpg',
     },
     Panevezio: {
       lyhyt: 'Biržain seudulla on noin 9 000 vajoamakuoppaa, jotka syntyvät kun pohjavesi liuottaa kipsiä maan alta – uusia ilmestyy joka vuosi.',
       pitka: `Panevėžys on tunnettu teatterikaupunkina, ja sen sydämenä sykkii Juozas Miltinis -draamateatteri, jonka maine kantautui aikanaan yli koko Neuvostoliiton. Ohjaaja Miltinis johti teatteria vuodesta 1940 lähtien – välillä ideologisista syistä erotettuna – ja loi siitä niin omaperäisen näyttämötaiteen keskuksen, että katsojat matkustivat sinne kaukaakin pelkän ohjelmiston vuoksi. Kaupunki itse lepää Nevėžis-joen rannalla laakeassa maakunnassa, jonka pellot ja mäntymetsät vaihtelevat rauhallisesti toisikseen. Teatterin rakennus seisoo yhä keskustassa, ja sen katsomo täyttyy edelleen, vaikka Miltinis itse kuoli jo 1994 – teatteri nimettiin hänen mukaansa kunnianosoituksena pian sen jälkeen.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-panevezio-d1bd0abb.jpg',
+          lahde: 'Hugo.arg, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Hugo.arg',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panevėžys001.JPG',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-panevezio-d1bd0abb.jpg',
     },
     'Šiauliai': {
       lyhyt: 'Šiauliain pohjoispuolella Ristien mäellä seisoo arviolta 100 000 ristiä, joita pyhiinvaeltajat ovat tuoneet sinne 1800-luvulta asti.',
       pitka: `Šiauliain nimi juontuu muinaisesta aurinkojumalatar Saulėsta, ja kaupungin syntyhetkeksi lasketaan usein vuoden 1236 Saulen taistelu, jossa liettualaiset ja liiviläiset kukistivat Miekkaveljien ritarikunnan. Keskiajan jälkeen kaupunki koki toistuvia sotia ja ruttoepidemioita, kunnes 1700-luvun lopulla kreivi Antoni Tyzenhaus suunnitteli sen uudelleen säännölliseksi, klassistiseksi kaupungiksi – sama ruutukaava näkyy keskustassa yhä. Vuoden 1872 suurpalon jälkeen Šiauliaihin nousi tehtaita, jotka valmistivat kaikkea silkistä suklaaseen, ja vuoteen 1897 mennessä kaupunki oli jo Liettuan toiseksi suurin Kaunasin jälkeen. 'Auringon kaupunki' on nykyään Liettuan neljänneksi suurin, ja sen ruutukaavainen keskusta sekä tiiliset tehdasrakennukset kertovat yhä siitä, miten paljon kaupunki nousi tuhkasta juuri isoisän oman ajan kynnyksellä 1870-luvulla.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-siauliai-32728ccf.jpg',
+          lahde: 'Wojsyl, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Wojsyl',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lithuania Hill of Crosses 4.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-siauliai-32728ccf.jpg',
     },
     Taurages: {
       lyhyt: 'Tauragėssa preussilainen kenraali Yorck julisti 1812 joukkonsa puolueettomiksi, mikä mursi Preussin ja Napoleonin liiton.',
       pitka: `Tauragės-maakunnan läpi virtaa Nemunas-joki, ja sen oikealla rannalla Jurbarkassa kohoaa Panemunės linna – 1600-luvun alussa rakennettu renessanssilinnoitus, jonka Eperyaszin aatelissuku rakennutti vuosina 1604–1610 kauppareitin suojaksi. Linna vaihtoi omistajaa vuosisatojen varrella ja siirtyi lopulta 1980-luvulla Vilnan taideakatemialle, joka avasi sinne museon ja näyttelytiloja. Samalla seudulla solmittiin vuonna 1812 niin kutsuttu Tauroggenin sopimus, ja se tunnetaan historiankirjoissa käännekohtana, josta alkoi koko Preussin vapaussota Napoleonia vastaan. Nykyisin rauhallinen raja- ja maatalousmaakunta muistuttaa vanhoilla linnoillaan ja hiljaisilla kylillään siitä, että Nemunas on vuosisatojen ajan ollut sekä kauppareitti että valtakuntien raja.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-taurages-b17b2e91.jpg',
+          lahde: 'Vilensija, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Vilensija',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2020, Panemunės pilis.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-taurages-b17b2e91.jpg',
     },
     'Telšiai': {
       lyhyt: 'Plateliaijärven lähellä metsässä piilee Neuvostoliiton ensimmäinen maanalainen ydinohjustukikohta – nyt kylmän sodan museo, jonka siiloon pääsee.',
       pitka: `Telšiai on Žemaitijan eli Samogitian pääkaupunki, ja se lepää kauniisti Mastis-järven rannalla – kaupungin nimikin juontuu vanhasta sanasta telkšoti, joka tarkoittaa veden alle jäämistä tai lammikoitumista. Seudun ihmiset puhuvat žemaičių murretta, joka eroaa yleiskielestä niin paljon, että moni muualta tuleva liettualainen tuskin ymmärtää sitä – murre ja oma identiteetti ovat säilyneet täällä poikkeuksellisen elinvoimaisina. Kaupunki on toiminut katolisen hiippakuntansa keskuksena vuodesta 1926, ja mäellä kohoava tuomiokirkko hallitsee yhä näkymää järven yli. Monelle liettualaiselle Telšiai on Žemaitijan henkinen pääkaupunki siinä missä se on virallinenkin maakuntakeskus.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-telsiai-20619651.jpg',
+          lahde: 'Charlie Phillips, Wikimedia Commons (CC BY 2.0)',
+          tekija: 'Charlie Phillips',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Footsteps on frozen Lake Mastis (4387262604).jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-telsiai-20619651.jpg',
     },
     Utenos: {
       lyhyt: 'Utenan seudulla on yli tuhat järveä, ja Aukštaitijan kansallispuistossa lepää Liettuan syvin järvi Tauragnas, 60,5 metriä syvä.',
       pitka: `Utenan seutu kuuluu Aukštaitijaan, Liettuan järvirikkaimpaan maisemaan, ja samaa pimeää ja kirkasta taivasta hyödyntää myös Molėtain tähtitieteellinen observatorio, joka on toiminut Vilnan yliopiston tutkimusasemana vuodesta 1969. Sen suurin kaukoputki on halkaisijaltaan 1,65 metriä, ja observatorio ottaa vastaan myös yleisöä tähtitornin kierroksilla. Paikka on valittu juuri tälle Kaldiniai-kukkulalle Molėtain lähelle, koska kaupunkien valosaaste ei täällä häiritse tähtien tarkkailua. Päivällä maisema on täynnä kimaltavia vesiä, mutta pimeän tultua sama taivas avautuu tutkijoille yhtä laajana kuin järvet maassa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-utenos-9d591a62.jpg',
+          lahde: 'Wojsyl, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Wojsyl',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lithuania Ladakalnis.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-utenos-9d591a62.jpg',
     },
     Vilniaus: {
       lyhyt: 'Vilnan Užupis julistautui 1. huhtikuuta 1997 omaksi tasavallakseen, ja sen lipun kämmen vaihtaa väriä vuodenajan mukaan.',
       pitka: `Noin 28 kilometrin päässä Vilnasta, Galvė-järven saarella, kohoaa Trakain linna – yksi harvoista saarilinnoista koko Euroopassa. Sen rakentaminen alkoi 1300-luvulla suurruhtinas Kęstutiksen aikana, ja hänen poikansa Vytautas Suuri viimeisteli sen punaisesta goottilaisesta tiilestä 1400-luvun alussa; Vytautas myös kuoli tässä samassa linnassa vuonna 1430. Trakaihin toi vuonna 1392 Vytautas myös toisenlaisen aarteen: joukon karaiimeja Krimiltä, ja heidän jälkeläisensä asuvat kaupungissa yhä, puhuvat omaa turkkilaista kieltään ja pitävät Trakaita koko maailman karaiimiyhteisön keskuksena. Vilnan maakunta kätkee siis pääkaupungin lisäksi keskiaikaisen saarilinnan ja yli 600 vuotta säilyneen ainutlaatuisen vähemmistökulttuurin – aivan eri tarinan kuin Užupiksen huhtikuun pila.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-vilniaus-c621c586.jpg',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Diliff',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trakai Island Castle, Lithuania - Diliff.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/ltu-maakunta-vilniaus-c621c586.jpg',
     },
   },
   /*
@@ -3552,54 +4323,207 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Spodnjeposavska — Krško Nuclear Power Plant
    *   Zasavska — Trbovlje Power Station (kaivosyhtiö 1872)
    */
+  /*
+   * SVN KUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko). Yksi aito
+   * Wikimedia Commons -valokuva per alue, lisenssi tarkistettu
+   * Commonsin API:sta ennen latausta, suurennettu enintään 1600 px:iin,
+   * viety ämpäriin karttanostot/20260926/. Vain PD/CC0/CC BY/CC BY-SA.
+   * Gorenjska: alkuperäinen ehdokas (File:Full_pletna_in_front_of_Bled_
+   * Castle,_Bled,_2013.jpg) hylätty, koska kuvassa täysi vene turisteja —
+   * korvattu ihmisettömällä Bled-panoraamalla. Lähteet:
+   *   Gorenjska — File:Lake_Bled_panorama_with_island_church_Slovenia_2025.jpg (Furkan Akkurt, CC BY-SA 4.0)
+   *   Goriška — File:Trg_Evrope,_Piazza_Transalpina,_Gorizia,_Nova_Gorica.jpg (Naturpuur, CC BY-SA 4.0)
+   *   Jugovzhodna Slovenija — File:Breg_Novo_mesto_Panorama.jpg (Andrej Jakobčič, CC BY-SA 3.0)
+   *   Koroška — File:Dom_na_Peci.jpg (JakobZ, CC BY-SA 3.0)
+   *   Notranjsko-kraška — File:Slivnica_z_oblaki_in_odsevom_v_Cerkniškem_jezeru.jpg (JožeStrašišar, CC BY 4.0)
+   *   Obalno-kraška — File:Lipica_horses_(7198969516).jpg (Gorupka, CC BY 2.0)
+   *   Osrednjeslovenska — File:Ljubljana_Marshes_Wheel_with_axle_(oldest_wooden_wheel_yet_discovered).jpg (Petar Milošević, CC BY-SA 4.0)
+   *   Podravska — File:Stara_trta,_Maribor.jpg (Marco Almbauer, CC BY-SA 4.0)
+   *   Pomurska — File:Prekmurska_gibanica_01.jpg (Superchilum, CC BY-SA 4.0)
+   *   Savinjska — File:Celje_Castle_panorama.jpg (Vid Pogacnik, CC BY-SA 4.0)
+   *   Spodnjeposavska — File:Krško_Nuclear_Power_Plant_01.jpg (Janezdrilc, CC0)
+   *   Zasavska — File:Trbovlje_chimney.jpg (MdeVicente, CC BY-SA 4.0)
+   */
   SVN: {
     Gorenjska: {
       lyhyt: 'Bledinjärven saarelle soudetaan käsin tehdyillä pletna-veneillä, ja kirkolle nousee 99 kiviaskelmaa – perillä voi soittaa toivekelloa.',
       pitka: `Alue leviää Slovenian koillisosaan Alpeille, ja sen taivaanrantaa hallitsee Triglav, koko maan korkein huippu ja niin tärkeä kansallissymboli, että se komeilee myös maan lipussa ja vaakunassa. Kranj on alueen suurin kaupunki, mutta yhtä tunnettuja ovat keskiaikainen Škofja Loka ja rautatehtaistaan kasvanut Jesenice aivan Itävallan rajan tuntumassa. Alueella vietetään lähes viidennes koko Slovenian matkailuöistä, ja suurin osa yöpyjistä tulee ulkomailta – harva kolkka tarjoaa yhtä tiivistä pakettia jylhiä huippuja, kirkkaita järviä ja vanhoja kyliä. Melkein koko Gorenjska kuuluu alppimaastoon, ja moni patikoi täällä nimenomaan tavoitellakseen Triglavin huippua, jonne pääsy on pitkään ollut eräänlainen kansallinen kunnia-asia.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-gorenjska-faf93a44.jpg',
+          lahde: 'Furkan Akkurt, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Furkan Akkurt',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_Bled_panorama_with_island_church_Slovenia_2025.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-gorenjska-faf93a44.jpg',
     },
     'Goriška': {
       lyhyt: 'Nova Gorica ja italialainen Gorizia olivat yhdessä Euroopan kulttuuripääkaupunki 2025, ja rautatieaseman aukiolla raja kulkee keskeltä.',
       pitka: `Alue kulkee Italian rajaa pitkin, ja sen tunnetuimpia maisemia ovat Sočan kirkkaanturkoosi laakso Julian Alppien juurella sekä eteläisempi, viinitarhojen peittämä Vipavan laakso. Isoisän aikaan 1870-luvulla koko seutu kuului yhteen ainoaan Itävalta-Unkarin kaupunkiin, Goriziaan – vasta toisen maailmansodan jälkeen, Pariisin rauhansopimuksessa 1947, raja piirrettiin niin, että vanha Gorizia jäi Italialle ja Jugoslavian puolelle rakennettiin kokonaan uusi kaupunki, Nova Gorica. Vuonna 2025 näistä kahdesta naapurikaupungista tuli historian ensimmäinen yhteinen, rajat ylittävä Euroopan kulttuuripääkaupunki, ja koko juhlavuoden teemana oli rajattomuus. Kivinen raja kulkee yhä kaupunkien halki, mutta nykyisin sen yli kävellään huomaamatta, kahvikupposen tai junan perässä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-goriska-077eb3d7.jpg',
+          lahde: 'Naturpuur, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Naturpuur',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trg_Evrope,_Piazza_Transalpina,_Gorizia,_Nova_Gorica.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-goriska-077eb3d7.jpg',
     },
     'Jugovzhodna Slovenija': {
       lyhyt: 'Krkan mutkaan rakennettua Novo Mestoa kutsutaan situlojen kaupungiksi, sillä sen maista on kaivettu esiin rautakautisia pronssiastioita.',
       pitka: `Krkajoki tekee kaupungin kohdalla jyrkkiä mutkia, ja vanha keskusta kohoaa niiden keskellä kuin saarelle – nimikin, Novo Mesto, tarkoittaa yksinkertaisesti "uutta kaupunkia". Alueen rautakautiset asukkaat olivat täällä kauan ennen keskiaikaista kaupunkia: Novo Mestoa kutsutaan "situlojen kaupungiksi", koska sen ympäristön kalmistoista on kaivettu esiin enemmän koristeltuja pronssiämpäreitä kuin mistään muualta Euroopasta samalta ajalta. Ämpäreiden kylkiin on lyöty kulkueita, eläimiä ja juhlamenoja niin tarkasti, että tutkijat pystyvät niistä lukemaan yli 2000 vuoden takaisen yhteiskunnan arkea. Nykyään kaupunkia elättävät pikemminkin tehtaat kuin pronssiseppien pajat – Novo Mesto on Slovenian autoteollisuuden ja lääketeollisuuden yksi keskus, ja sen vaurauden juuret ovat yhtä lailla liukuhihnoissa kuin muinaisissa kauppareiteissä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-jugovzhodna-slovenija-5dbc1f9c.jpg',
+          lahde: 'Andrej Jakobčič, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Andrej Jakobčič',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Breg_Novo_mesto_Panorama.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-jugovzhodna-slovenija-5dbc1f9c.jpg',
     },
     'Koroška': {
       lyhyt: 'Pecan vuoren luolaan on asetettu pronssinen kuningas Matjaž, sillä tarun mukaan hän nukkuu vuoren uumenissa Itävallan rajalla.',
       pitka: `Koroška on Slovenian pohjoisin kolkka, ahdas ja vuoristoinen kaista Itävallan rajaa vasten – niin syrjäinen, että sitä pidetään yhä huonoiten muuhun Sloveniaan yhteydessä olevana alueena. Suurin kaupunki on Slovenj Gradec, mutta laaksoja on vuosisatoja hallinnut raskas teollisuus: Pecan juurella sijaitsevasta Mežican kaivoksesta louhittiin lyijyä ja sinkkiä yli vuosisadan ajan, ja kaivostoiminta muovasi koko seudun maisemaa. Legenda uinuvasta kuningas Matjažista syntyi juuri tässä ahtaudessa: tarinan mukaan hän vetäytyi satapäisine sotureineen Pecan luoliin hävittyään sodan, ja hänen sanotaan heräävän vasta kun hänen partansa on kiertänyt yhdeksän kertaa kivipöydän ympäri. Vaikka moni kaivos on jo sammunut, tarina elää yhä matkailuesitteissä ja lasten iltasaduissa koko Sloveniassa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-koroska-ecb34565.jpg',
+          lahde: 'JakobZ, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'JakobZ',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dom_na_Peci.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-koroska-ecb34565.jpg',
     },
     'Notranjsko-kraška': {
       lyhyt: 'Cerknicanjärvi on täytenä Slovenian suurin järvi, mutta kuivina kesinä sen vesi voi valua kokonaan maanalaisiin onkaloihin.',
       pitka: `Notranjsko-kraška-alueen sydämessä makaa Cerknicanjärvi, joka ei ole tavallinen järvi lainkaan: se täyttyy sateiden mukana ja tyhjenee jälleen maan alle vievien kuilujen kautta, ja täytenä se voi kasvaa Slovenian suurimmaksi järveksi. Ilmiön kuvasi tieteellisesti jo 1600-luvulla paikallinen luonnontutkija Janez Vajkard Valvasor, jonka havainnot järven ajoittaisesta katoamisesta veivät hänet Lontoon Royal Societyn jäseneksi asti – ja juuri täältä ovat peräisin kansainvälisetkin termit kuten "karst-polje". Isoisän matka-aikana 1870-luvulla Valvasorin kuvaukset olivat jo vakiintunutta lukemistoa Krainin herttuakunnasta kiinnostuneille, joten hän saattoi tuntea järven maineen jo ennen saapumistaan. Kun vesi laskee kesällä, pohjalle jää vehreä niitty laiduneläimille, ja kun sateet palaavat syksyllä, kalat ja linnut ilmestyvät järvelle uudestaan ikään kuin tyhjästä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-notranjsko-kraska-df40e431.jpg',
+          lahde: 'JožeStrašišar, Wikimedia Commons (CC BY 4.0)',
+          tekija: 'JožeStrašišar',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Slivnica_z_oblaki_in_odsevom_v_Cerkni%C5%A1kem_jezeru.jpg',
+          lisenssi: 'CC BY 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-notranjsko-kraska-df40e431.jpg',
     },
     'Obalno-kraška': {
       lyhyt: 'Karstin Lipicaan perustettiin hevostila 1580, ja siellä syntyi lipizzanrotu – tilalla kasvatetaan yhä ratsuja kouluratsastukseen.',
       pitka: `Vaikka Obalno-kraška-aluetta hallitsee kalkkikivinen Karst-ylänkö täynnä maanalaisia luolastoja, sen läntinen reuna avautuu mereen: rannalla kohoavat keskiaikainen Piranin niemi ja Koperin satamakaupunki. Lipican hevostilalle tuotiin perustamisvuonna yhdeksän oritta ja 24 tammaa Espanjasta, ja juuri näistä eläimistä polveutuu koko lipizzanerrotu, joka syntyy tummana ja vaalenee vasta vuosien myötä valkoiseksi. Isoisän aikaan 1870-luvulla Lipican hevoset olivat jo vuosisatojen ajan toimittaneet ratsujaan Wienin kuuluisaan espanjalaiseen ratsastuskouluun, joten samojen sukulinjojen edustajat saattoivat esiintyä keisarikunnan pääkaupungin areenalla juuri silloin kun isoisä matkasi Eurooppaa. Tila on kasvattanut samaa hevossukua katkeamatta jo yli neljä vuosisataa, mikä tekee siitä Euroopan vanhimman yhä toimivan hevoskasvattamon.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-obalno-kraska-ffd332be.jpg',
+          lahde: 'Gorupka, Wikimedia Commons (CC BY 2.0)',
+          tekija: 'Gorupka',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lipica_horses_(7198969516).jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-obalno-kraska-ffd332be.jpg',
     },
     Osrednjeslovenska: {
       lyhyt: 'Ljubljanan suolta löytyi 2002 yli 5 000 vuotta vanha puupyörä, vanhin koskaan löydetty – sen voi nähdä kaupunginmuseossa.',
       pitka: `Ljubljana, koko Slovenian pääkaupunki, kasvoi kerran roomalaisesta Emona-nimisestä kaupungista Ljubljanica-joen rannalle, siihen kohtaan jossa joki laskee alavalle suoalueelle, Ljubljansko barjelle. Isoisän matkatessa Eurooppaa 1870-luvulla kaupunki tunnettiin vielä saksankielisellä nimellään Laibach ja toimi Krainin herttuakunnan pääkaupunkina osana Itävalta-Unkaria; sen läpi kulki jo tuolloin Wienin ja Triesten välinen rautatie, jonka viimeinenkin osuus valmistui vuonna 1857 ja teki Laibachista tärkeän pysähdyspaikan matkalla etelään kohti Adrianmerta. Kaupungin tunnuksena liehuu yhä lohikäärme, jonka legenda yhdistää kreikkalaiseen sankari Jasoniin: tarun mukaan Argonautit purjehtivat Ljubljanicaa pitkin ja Jason kukisti täällä hirviön, josta myöhemmin tuli kaupungin vaakunaeläin. Suuri maanjäristys tuhosi vuonna 1895 kymmenesosan kaupungin rakennuksista, ja jälleenrakennuksen myötä keskustaan nousi runsaasti art nouveau -julkisivuja, jotka antavat Ljubljanalle yhä sen tunnusomaisen ilmeen.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-osrednjeslovenska-8b534af1.jpg',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Petar Milošević',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ljubljana_Marshes_Wheel_with_axle_(oldest_wooden_wheel_yet_discovered).jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-osrednjeslovenska-8b534af1.jpg',
     },
     Podravska: {
       lyhyt: 'Mariborin Lentin rannassa kasvaa yli 400 vuotta vanha žametovka-köynnös, jota pidetään maailman vanhimpana viiniköynnöksenä.',
       pitka: `Podravska-alue seuraa Draava-jokea, ja sen laajoja rinteitä peittää Pohorjen metsäinen vuoristo, mutta maakunnan sydän sykkii Mariborissa, Slovenian toiseksi suurimmassa kaupungissa. Kaupungin vanha köynnös kasvaa yhä samalla paikalla kuin isoisän aikaan 1870-luvulla, sillä se juurtui talon seinustalle jo keskiajan lopulla ottomaanien uhatessa seutua – Guinnessin ennätyskirja tuntee sen nykyään maailman vanhimpana viininä, joka yhä antaa satoa. Joka syksy köynnöksestä korjataan vain 35–55 kiloa rypäleitä, ja niistä puristettu viini pullotetaan pieniin, taiteilija Oskar Kogojin suunnittelemiin 2,5 desilitran pulloihin, joita jaetaan protokollalahjoina – vain sata pulloa vuodessa. Mariborin ympärillä levittäytyy muutenkin viininviljelyn maisema, ja kaupungin oma viinitie kiemurtelee mäkien halki aina Itävallan rajalle asti.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-podravska-ba8f05f6.jpg',
+          lahde: 'Marco Almbauer, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Marco Almbauer',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stara_trta,_Maribor.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-podravska-ba8f05f6.jpg',
     },
     Pomurska: {
       lyhyt: 'Prekmurje kuului vuosisatoja Unkariin ja liitettiin vasta 1919, ja sen monikerroksinen gibanica-leivos on EU:n suojaama herkku.',
       pitka: `Pomurska on Slovenian koillisin kolkka, tasainen Muran ja sen sivujokien muovaama lakeus, jota pohjoisessa reunustavat Goričkon kumpuilevat kukkulat ja etelässä viinitarhat. Isoisän aikaan 1870-luvulla koko seutu kuului Unkarin kuningaskuntaan osana Itävalta-Unkaria eikä Sloveniaan lainkaan – vasta ensimmäisen maailmansodan jälkeen, vuosina 1919–1920, alue irrotettiin Unkarista ja liitettiin uuteen eteläslaavien valtioon. Tuo pitkä unkarilaisvaihe näkyy yhä paikallisessa ruokakulttuurissa: alueen oma monikerroksinen leivos, unikko-, omena-, raejuusto- ja pähkinätäytteillä kerrostettu prekmurska gibanica, sai vuonna 2010 EU:n perinnetuotesuojan, joka vaatii tarkkaa reseptiuskollisuutta. Vaikka pellot tuottavat täällä enemmän viljaa kuin missään muualla Sloveniassa, alue kärsii silti heikoimmasta liikenneyhteydestä ja bruttokansantuotteesta koko maassa – rikkaus kasvaa maasta, mutta ei aina taskuun asti.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-pomurska-ece04758.jpg',
+          lahde: 'Superchilum, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Superchilum',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Prekmurska_gibanica_01.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-pomurska-ece04758.jpg',
     },
     Savinjska: {
       lyhyt: 'Slovenian vaakunan kolme kultaista tähteä sinisellä pohjalla ovat Celjen keskiaikaisten kreivien perintöä – ne otettiin vaakunaan 1991.',
       pitka: `Savinjska-alueen sydämessä sijaitseva Celje oli keskiajalla paljon nykyistä merkittävämpi kaupunki: siellä hallitsi Celjen kreivien suku, joka 1400-luvulla kohosi Pyhän saksalais-roomalaisen keisarikunnan ruhtinaiksi asti ja hallitsi maita aina nykyisen Kroatian ja Bosnian alueelle saakka. Suvun viimeinen jäsen, Ulrich II, murhattiin Belgradissa vuonna 1456, ja kun miespuolinen linja sammui, kreivikunnan perintö siirtyi Habsburgeille perintösopimuksen nojalla. Isoisän aikaan 1870-luvulla kreivien vanha vaakuna – kolme kultaista tähteä sinisellä pohjalla – oli enää paikallinen heraldinen kuriositeetti Celjen linnan raunioilla, sillä siitä tuli koko itsenäisen Slovenian kansallistunnus vasta vuonna 1991. Nykyisin samat tähdet loistavat Slovenian lipussa ja vaakunassa, ja Celjen linnan tornista avautuu näkymä koko Savinja-joen laaksoon, joka kerran kuului yhdelle keskiajan mahtavimmista aatelissuvuista.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-savinjska-27e3b6cf.jpg',
+          lahde: 'Vid Pogacnik, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Vid Pogacnik',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Celje_Castle_panorama.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-savinjska-27e3b6cf.jpg',
     },
     Spodnjeposavska: {
       lyhyt: 'Krškon ydinvoimala on Slovenian ja Kroatian yhteinen, ja se tuottaa yli neljänneksen koko Slovenian sähköstä.',
       pitka: `Spodnjeposavska on Slovenian toiseksi pienin alue, jota Sava- ja Krka-joet virtaavat kukkuloiden ja viinitarhojen läpi kohti Kroatian rajaa. Suurin kaupunki on Brežice, mutta seudun tunnetuin rakennelma sijaitsee Krškossa: siellä toimii maan ainoa ydinvoimala, jonka Slovenia ja Kroatia rakensivat yhdessä 1970-luvulla silloisen Jugoslavian aikana ja joka tuottaa yhä yli neljänneksen koko Slovenian sähköstä ja viidenneksen Kroatian sähköstä. Maiden hallitukset sopivat vuonna 2020 voimalan käytön jatkamisesta aina vuoteen 2043 saakka, joten rakennus, joka kytkettiin verkkoon jo 1981, on määrä pysyä käynnissä yli kuusi vuosikymmentä. Aivan voimalan liepeillä kylpylävieraat uppoutuvat sen sijaan Čatežin lämpimiin altaisiin, sillä sama Sava-joen laakso tunnetaan yhtä lailla Slovenian suosittuna kylpylä- ja viinimatkailun kolkkana.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-spodnjeposavska-5ca30f57.jpg',
+          lahde: 'Janezdrilc, Wikimedia Commons (CC0)',
+          tekija: 'Janezdrilc',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kr%C5%A1ko_Nuclear_Power_Plant_01.jpg',
+          lisenssi: 'CC0',
+          lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-spodnjeposavska-5ca30f57.jpg',
     },
     Zasavska: {
       lyhyt: 'Trbovljen voimalan 360-metrinen savupiippu on Euroopan korkein, ja se seisoo yhä laakson maamerkkinä, vaikka voimala on suljettu.',
       pitka: `Zasavska on Slovenian pienin ja taloudellisesti köyhin alue, ahdas laakso Savan varrella Ljubljanan ja Celjen välissä. Hiiltä alettiin louhia Trbovljessa vuonna 1804, ja seudusta tuli 1800-luvun puolivälissä koko silloisen alueen hiiliteollisuuden keskus – erityisesti sen jälkeen, kun rautatie Celjestä Trbovljen kautta Ljubljanaan valmistui vuonna 1849 ja avasi hiilelle markkinat. Trbovljen kaivosyhtiö perustettiin Wienissä vuonna 1872, vain vuotta ennen kuin isoisä lähti omalle matkalleen, ja yhtiö johti seudun kaivoksia aina toiseen maailmansotaan asti. Kaivokset ovat jo sammuneet ja viimeinenkin voimala suljettiin 2016, mutta laakson yllä kohoaa yhä 360-metrinen savupiippu, Euroopan korkein – yksi ainoa valettiin 210 päivässä, ja se näkyy koko laaksoon kuin muistomerkki ajalle, jolloin hiili piti seutua hengissä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-zasavska-2cd23774.jpg',
+          lahde: 'MdeVicente, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'MdeVicente',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trbovlje_chimney.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-zasavska-2cd23774.jpg',
     },
   },
   /*
