@@ -210,6 +210,22 @@ namespace Matkakirja
         public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || pohjoiseen
                                   || LinssisiirtoLiukuu || Palautuu || PyoriiItse;
 
+        /// <summary>
+        /// LÖYDÖS S10 (<see cref="LiikeLaatat"/>): liike, jonka aikana Cesium saa valita laatat karkeammin (SSE 32). Pelaajan
+        /// ele, joka on ylittänyt napautuksen rajan ja liikuttanut näkymää tässä tai edellisessä kehyksessä (napautus tai
+        /// paikallaan pidetty sormi ei karkeuta), heiton liuku ja kamera-ajo paitsi saapumisajo (saapumisnäkymän laatat
+        /// tarkkoina koko laskeutumisen ajan, löydökset 163 ja 171). Ei lennon seurantaa, portin tai oman pyörityksen
+        /// liikettä eikä suuntiman palautusta: ne eivät ole pelaajan eleitä, joten tarkka valinta pysyy.
+        /// </summary>
+        public bool KarkeaLiike => (edellinenSormia > 0 && eleIlmoitettu && nakymaKehys >= Time.frameCount - 1)
+                                   || math.lengthsq(liuku) > 1e-4 || (ajo != null && ajo != saapumisAjo);
+
+        /// <summary>Saapumisajo (<see cref="AjaSaapumisnakymaan"/>) käynnissä: LiikeLaatat pitää tarkan valinnan.</summary>
+        public bool Saapumassa => saapumisAjo != null && ajo == saapumisAjo;
+
+        /// <summary>Kehys (Time.frameCount), jossa näkymä viimeksi muuttui (<see cref="KarkeaLiike"/>).</summary>
+        int nakymaKehys = -10;
+
         /// <summary>Lennon suuntima tai katseen korkeus palautuu (Update → Palauta).</summary>
         bool Palautuu => !Seurataan && ((lennonSuuntima && suuntima != 0) || katseKorkeus != 0);
 
@@ -536,7 +552,7 @@ namespace Matkakirja
             Aseta();
             if (Application.isPlaying) PaivitaPorttiLinssi(Time.unscaledDeltaTime);
             var nakyma = new double4(pituus, leveys, korkeus, KaytettyKallistus + suuntima * 1000.0);
-            if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; NakymaMuuttui?.Invoke(); }
+            if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; nakymaKehys = Time.frameCount; NakymaMuuttui?.Invoke(); }
             bool lepo = !Liikkeessa && !Peitetty;
             if (lepo != Levossa) { Levossa = lepo; LepoMuuttui?.Invoke(lepo); }
         }

@@ -23,6 +23,8 @@ namespace Matkakirja
     /// Lämpö (Lampo): Kuuma → katto 30 fps, renderScale 0,7 (PalloSumennus.PerusSkaala), bloom pois;
     /// Kriittinen → katto 20 fps.
     /// Testikomento `ruutu` (peli-komento.txt) kertoo tilan; `lampo …` pakottaa lämpötason.
+    /// Löydös S10 (Natiiviseppä 26.9.): TÄYDEN tilan katto <see cref="LiikeKatto"/> A/B-mittaukseen (komento `ruutu liike
+    /// 120|60` komento.txt:ssä, Komennot.cs).
     /// </summary>
     [DefaultExecutionOrder(10000)]
     public sealed class Ruudunpaivitys : MonoBehaviour
@@ -64,6 +66,22 @@ namespace Matkakirja
         /// <summary>Lisäehdot täydelle taajuudelle (esim. linssin ajo): mikä tahansa tosi = TÄYSI.</summary>
         public static readonly List<Func<bool>> Aktiivinen = new List<Func<bool>>();
 
+        /// <summary>
+        /// LÖYDÖS S10 (Natiiviseppä 26.9.2026): TÄYDEN tilan katto hertseinä liikkeen A/B-mittaukseen (120 vs 60 Hz,
+        /// lämpö); 0 = näytön taajuus, oletus 60 Hz (Fable 26.9., LiikeKattoOletus). Verhon aikana ei kattoa (Cesium etenee kehys kerrallaan).
+        /// Komento `ruutu liike 120|60|pois` (Komennot.cs); KehysMittari kirjaa sen riville ("liikeKatto").
+        /// </summary>
+        public static int LiikeKatto = LiikeKattoOletus;   // kehittäjäasetus luetaan Awakessa (PlayerPrefs ei staattisessa alustuksessa)
+
+        /// <summary>
+        /// Fablen päätös S10 (26.9.2026): liikkeen oletuskatto 60 Hz (LÄMPÖ-sääntö: halpa kehys; 120 Hz vei iPad Pro 13:n kuumaan
+        /// tilaan 6 minuutissa). Kehittäjäasetus 120 Hz mittausta varten: PlayerPrefs "matkakirja-liike-120" = "1" (defaults write
+        /// sovellus kiinni) tai komento `ruutu liike 120|60|pois`.
+        /// </summary>
+        public const int LiikeKattoOletus = 60;
+        public const string Liike120Avain = "matkakirja-liike-120";
+        static int OletusLiikeKatto() => PlayerPrefs.GetString(Liike120Avain, "") == "1" ? 0 : LiikeKattoOletus;
+
         public Tila Nyt { get; private set; } = Tila.Taysi;
         public int Naytto { get; private set; } = 60;
         public string Syy { get; private set; } = "";
@@ -88,7 +106,7 @@ namespace Matkakirja
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = 0; }
+        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = 0; LiikeKatto = LiikeKattoOletus; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -101,6 +119,7 @@ namespace Matkakirja
 
         void Awake()
         {
+            LiikeKatto = OletusLiikeKatto();   // S10: 60 Hz, kehittäjäasetuksella 120 Hz (näytön taajuus)
             Instanssi = this;
             var t = Screen.currentResolution.refreshRateRatio.value;
             Naytto = t > 1 ? (int)Math.Round(t) : 60;
@@ -169,7 +188,8 @@ namespace Matkakirja
             paikallaanHaut = haut;
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
-            int fps = Math.Min(uusi == Tila.Taysi ? Naytto : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
+            int taysi = Syy == "verho" ? Naytto : LiikeLaatatPaatos.Katto(Naytto, LiikeKatto);   // löydös S10: liikkeen katto
+            int fps = Math.Min(uusi == Tila.Taysi ? taysi : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
             int vali = uusi == Tila.Paikallaan ? PaikallaanVali : 1;
             if (Application.targetFrameRate != fps) Application.targetFrameRate = fps;
             if (OnDemandRendering.renderFrameInterval != vali) OnDemandRendering.renderFrameInterval = vali;
@@ -226,7 +246,7 @@ namespace Matkakirja
         /// <summary>Tila testikomennolle `ruutu`.</summary>
         public string Kuvaus() =>
             $"tila {Nyt} ({Syy}), fps {Application.targetFrameRate}, piirtoväli {OnDemandRendering.renderFrameInterval}, " +
-            $"näyttö {Naytto} Hz, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
+            $"näyttö {Naytto} Hz, liikkeen katto {(LiikeKatto > 0 ? LiikeKatto + " Hz" : "ei")}, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
             $"kamera {(kameraPois ? "pois" : "päällä")}, renderScale {(asetus != null ? asetus.renderScale : -1f):0.##}";
     }
 }
