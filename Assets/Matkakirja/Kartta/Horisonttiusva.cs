@@ -31,6 +31,31 @@ namespace Matkakirja
         /// <summary>Katto: usvan raja saa laskea ruudulla enintään tälle korkeudelle (osuus puolikorkeudesta).</summary>
         public const double RajanY = 0.5;
 
+        // ---- RUUDUN USVA MERKEILLE (omistajan löydös 153, build 19): webin paperiusva (js/pallolauta/kallistus.js
+        // asetaUsva, .pallolauta-usva z-index 3) peittää laattojen lisäksi GL-nimiöt ja -symbolit, mutta natiivin
+        // sumu koskee vain 3D:tä, joten UI-merkit (NostotKartalla) jäivät täysin näkyviin usvan päälle. Aurinko
+        // kirjoittaa joka kehys rajan ruudulla ja voiman; merkit kertovat peittävyytensä (1 − Peitto).
+
+        /// <summary>Usvan raja ruudun korkeuden osuutena ylhäältä (0–1; web: y / H, raja ruudun yllä → 0).</summary>
+        public static float RuutuRajaY;
+        /// <summary>Usvan voima tässä kehyksessä (0 = ei usvaa; web: min(1, kulma / 8), Aurinko.Usva).</summary>
+        public static float RuutuVoima;
+
+        /// <summary>
+        /// Webin usvan peitto ruudun kohdassa y (osuus ylhäältä): täysi rajan yläpuolella, lineaarisesti nollaan
+        /// <see cref="Liuku"/>:n matkalla rajan alla (linear-gradient kerma → 0 %), kerrottuna voimalla.
+        /// </summary>
+        public static double Peitto(double yYlhaalta, double rajaY, double voima)
+        {
+            if (!(voima > 0)) return 0;
+            if (yYlhaalta <= rajaY) return voima;
+            double t = (yYlhaalta - rajaY) / Liuku;
+            return t >= 1 ? 0 : voima * (1 - t);
+        }
+
+        /// <summary>Tämän kehyksen peitto ruudun kohdassa y (osuus ylhäältä).</summary>
+        public static float Peitto(float yYlhaalta) => (float)Peitto(yYlhaalta, RuutuRajaY, RuutuVoima);
+
         /// <summary>Usvan voimakkuus kallistuksen mukaan (web: min(1, kulma / 8)).</summary>
         public static double Vahvuus(double kallistusAst) => Math.Max(0.0, Math.Min(1.0, kallistusAst / TaysiKallistus));
 

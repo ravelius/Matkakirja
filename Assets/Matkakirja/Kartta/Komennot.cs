@@ -77,6 +77,8 @@ namespace Matkakirja
     ///   maasto sse <arvo>         tilesetin maximumScreenSpaceError (oletus 16; luo tilesetin uudelleen; löydös 46)
     ///   valo pois|paalle|oletus|tila | valo kulma <atsimuutti> <korkeus> | valo voima <v>   kartan rinnevalo (Aurinko)
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
+    ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
+    ///                             löydös 154; oletus utu, omistaja 26.9.)
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
     ///   suodatus                  ladattujen laattojen tekstuurien suodatus lokiin
     ///   maaraja pois|paalle|auto | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja); auto = vain kun vektoriranta
@@ -688,6 +690,32 @@ namespace Matkakirja
                 case "usva":
                     Usva(o);
                     break;
+                case "taivas" when o.Length > 2 && o[1] == "kartta":
+                {
+                    // taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari] (löydös 154)
+                    double Luku(int i) => double.Parse(o[i], CultureInfo.InvariantCulture);
+                    int loput = 3;
+                    switch (o[2])
+                    {
+                        case "pois": Karttataivas.Savy = null; break;
+                        case "utu": Karttataivas.Savy = Karttataivas.Utu; break;
+                        case "vaalea": Karttataivas.Savy = Karttataivas.Vaalea; break;
+                        case "sini": Karttataivas.Savy = Karttataivas.Sini; break;
+                        default:
+                            if (o.Length > 4)
+                            {
+                                double r = Luku(2), g = Luku(3), b = Luku(4);
+                                double k = r > 1.0 || g > 1.0 || b > 1.0 ? 1.0 / 255.0 : 1.0;
+                                Karttataivas.Savy = new Color((float)(r * k), (float)(g * k), (float)(b * k));
+                                loput = 5;
+                            }
+                            break;
+                    }
+                    if (o.Length > loput) Karttataivas.Voima = Mathf.Clamp01((float)Luku(loput));
+                    if (o.Length > loput + 1) Karttataivas.Kaari = Mathf.Clamp((float)Luku(loput + 1), 0.1f, 5f);
+                    Debug.Log("MATKAKIRJA taivas kartta: " + Karttataivas.Tila());
+                    break;
+                }
                 case "kallistus":
                     // kallistus pois|paalle | kallistus katto pois|paalle (löydös 46, PalloKierto.KallistusSallittu/-KattoPaalla)
                     if (o.Length > 2 && o[1] == "katto") PalloKierto.KallistusKattoPaalla = o[2] == "paalle";
