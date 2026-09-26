@@ -40,3 +40,9 @@ test('tilannekuva: sama tiivistesääntö kuin julkaisussa, ja väärä tiedosto
   ampari.set(`${J}sisalto/1/uusin.json`, JSON.stringify({ ...osoitin, hakemisto: undefined }));
   await assert.rejects(kokoaTilannekuva({ juuri: J, hae }), /ei hakemistoa/);
 });
+
+test('tilannekuvan tiedostot ovat paketissa (vienti)', async () => {
+  const { kokoaVienti } = await import('../tools/vienti/vie-sisalto.mjs');
+  const { tiedostot } = await kokoaVienti();
+  for (const p of TILANNEKUVAN_TIEDOSTOT) assert.ok(tiedostot.has(p), `${p} puuttuu paketista`);
+});
