@@ -191,7 +191,7 @@ namespace Matkakirja
                 float etaisyys = kohti.magnitude;
                 if (Vector3.Dot(gt.TransformDirection(i.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) <= 0.08f) continue;
 
-                float pt = KokoPt * (s.Taso == 2 ? Taso2Koko : Taso3Koko)
+                float pt = KokoNyt(nk.ZoomKerroin) * (s.Taso == 2 ? Taso2Koko : Taso3Koko)
                            * (NostoSaannot.KuvamerkkiPieni(s.Taso, nk.ZoomKerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
                 if (i.Lod < 0) i.Lod = pt >= Lod1RajaPt ? 0 : 1;
                 else if (i.Lod == 0 && pt < Lod1RajaPt) i.Lod = 1;

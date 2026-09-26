@@ -28,8 +28,33 @@ namespace Matkakirja
     [DefaultExecutionOrder(120)]   // NostoKerroksen jälkeen: näytettävät tältä kehykseltä
     public sealed partial class Symbolimallit : MonoBehaviour
     {
-        /// <summary>Mallin leveys ruudulla (pt), liioiteltu (omistaja).</summary>
-        public static float KokoPt = 90f;
+        /// <summary>
+        /// Tason 1 mallin leveys ruudulla (pt) lähikuvassa (kerroin ≥ <see cref="KokoTaysiKerroin"/>). Löydös 175 (omistaja
+        /// 26.9. 1.0.25: 90 pt vakiona oli maatasolla maakuntien kokoinen ja peitti nimistön): koko kasvaa zoomin mukana
+        /// kynnyksen <see cref="KokoKynnysPt"/>:stä tähän, enintään kaupunkinimiön leveys (komento `symbolit koko pt`).
+        /// </summary>
+        public static float KokoPt = 44f;
+        /// <summary>Tason 1 mallin leveys (pt) 155:n kynnyksellä (kerroin 2,5), josta mallit alkavat näkyä (löydös 175).</summary>
+        public static float KokoKynnysPt = 22f;
+        /// <summary>Kartan kerroin, jolla malli on täysikokoinen (<see cref="KokoPt"/>).</summary>
+        public const double KokoTaysiKerroin = 6.0;
+
+        /// <summary>Tason 1 mallin ruutukoko kartan kertoimella (tasot 2–3 kertovat tämän Taso2Koko/Taso3Koko:lla).</summary>
+        public static float KokoNyt(double kerroin)
+        {
+            double u = (kerroin - NostoSaannot.TyyppimerkinKerroin) / (KokoTaysiKerroin - NostoSaannot.TyyppimerkinKerroin);
+            return Mathf.Lerp(KokoKynnysPt, KokoPt, Mathf.Clamp01((float)u));
+        }
+
+        /// <summary>
+        /// Tason 1 mallit vasta 155:n kynnyksellä kuten tasot 2–3 (löydös 175): sen alla Natiivi-UI piirtää lajin 2D-symbolin
+        /// (OnMalli epätosi), ei 3D-mallia.
+        /// </summary>
+        static bool Taso1Kaytossa()
+        {
+            var nk = NostoKerros.Instanssi;
+            return nk != null && nk.ZoomKerroin >= NostoSaannot.TyyppimerkinKerroin;
+        }
         public static bool Paalla = true;
         /// <summary>Esikatselu (komento `symbolit loydetty|himmea`): kaikki löydettyinä.</summary>
         public static bool PakotaLoydetty;
@@ -37,7 +62,7 @@ namespace Matkakirja
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
-            KokoPt = 90f; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
+            KokoPt = 44f; KokoKynnysPt = 22f; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             NollaaTasot23();
         }
 
@@ -95,8 +120,8 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Onko nostolla 3D-malli (Natiivi-UI: 2D-kuvamerkki ja musteläikkä pois). Taso 1: aina (erikoismalli tai
-        /// arkkityyppi). Tasot 2–3: kun <see cref="Taso23"/> on päällä ja kartan kerroin on 155:n kuvamerkkien kynnyksellä
+        /// Onko nostolla 3D-malli (Natiivi-UI: 2D-kuvamerkki ja musteläikkä pois). Taso 1: kertoimesta 2,5 (löydös 175;
+        /// erikoismalli tai arkkityyppi). Tasot 2–3: kun <see cref="Taso23"/> on päällä ja kartan kerroin on 155:n kuvamerkkien kynnyksellä
         /// (NostoSaannot.KuvamerkkiKaytossa, 2,5), eli samoin kuin <see cref="PiirraTasot23"/> piirtää.
         /// HUOM (26.9.): Natiivi-UI:n NostotKartalla piilottaa symbolin vain tasolla 1 (ehto m.Taso1) eikä piilota
         /// musteen jälkeä (AsetaMuste); tasoille 2–3 tarvittava muutos: proto-3d/lokit/loydos160-arkkityypit-RAPORTTI.md.
@@ -105,8 +130,8 @@ namespace Matkakirja
         {
             if (!Paalla) return false;
             var t = TietoIdlla(nostoId);
-            if (t == null) return Avain(nostoId) != null || ArkkityyppiKartoitus.Taulussa(nostoId);
-            return t.Taso == 1 || Taso23Kaytossa(t.Taso);
+            if (t == null) return Taso1Kaytossa() && (Avain(nostoId) != null || ArkkityyppiKartoitus.Taulussa(nostoId));
+            return t.Taso == 1 ? Taso1Kaytossa() : Taso23Kaytossa(t.Taso);
         }
 
         static string Avain(string id)
@@ -183,7 +208,7 @@ namespace Matkakirja
             bool sallittu = Paalla && nk != null && nk.Nakyvissa && !PalloKierto.PorttiSumea && !(kk != null && kk.LinssiPaalla)
                             && !(aurinko != null && aurinko.Paalla);
             nyt.Clear();
-            if (sallittu)
+            if (sallittu && Taso1Kaytossa())
                 foreach (var s in nk.Naytettavat)
                 {
                     if (s.Taso != 1 || s.Id == null || nyt.Contains(s.Id)) continue;
@@ -242,7 +267,7 @@ namespace Matkakirja
             bool edessa = Vector3.Dot(gt.TransformDirection(k.normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) > 0.08f;
             if (k.r.enabled != edessa) { k.r.enabled = edessa; PallonLepo.Muuttui("symbolimallit"); }
             if (!edessa) return;
-            float koko = PisteMaailmassa(etaisyys) * KokoPt / Mathf.Max(1e-9f, gt.lossyScale.x);
+            float koko = PisteMaailmassa(etaisyys) * KokoNyt(NostoKerros.Instanssi.ZoomKerroin) / Mathf.Max(1e-9f, gt.lossyScale.x);
             var sk = Vector3.one * koko;
             if ((k.t.localScale - sk).sqrMagnitude > 1e-6f * koko * koko) k.t.localScale = sk;
             float h = s.Loydetty || PakotaLoydetty ? 0f : 1f;
