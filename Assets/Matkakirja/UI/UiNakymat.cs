@@ -302,6 +302,11 @@ namespace Matkakirja.Natiivi
             // Pulun puhekanavan reunat soittimelle (soitin suodattaa toistot).
             kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
             kerros.JokaRuutu += PaivitaKuvaSumea;
+            // Omistaja 11.5x (Linssiseppä, ElavaHerays): elävän kartan saapuminen, elävät hetket ja maakunnan herätys odottavat,
+            // kunnes saapumisen kortit ovat kiinni: matkakirjakortti auki (ei lappuna), saapumiskortti, paljastus, nostokortti,
+            // lehti ja kysymys. Puheen ja kuvasumennuksen Linssiseppä lukee itse.
+            ElavaHerays.KorttiAukiKysely = () => (Matkakirja.Nakyy && !Matkakirja.Lappuna) || Saapumiskortti.Auki || Paljastus.Auki
+                || Nostokortti.Auki || Lehti.Auki || Kysymys.Auki;
             kerros.JokaRuutu += ChatinKerros;
             // Löydös 19: kameran puolen mieto sumennus (Natiiviseppä, 2,25 pt, 0,3 s; portti voittaa).
             // Löydös 132: taso (Kortti / Kokoruutu) kameralle; KuvaSumea on tason yhteensopiva bool.
