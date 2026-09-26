@@ -382,6 +382,7 @@ namespace Matkakirja.Natiivi
             int n = 0;
             bool viuhkaLoytyi = false;
             float kerroin = ZoomKerroin(k);
+            float korkeus = paneeli.visualTree.layout.height;
             foreach (var kasa in Aihemerkit ? Ryhmita(lista, pisteet) : Yksittain(lista.Count))
             {
                 var karki = kasa[0];
@@ -408,6 +409,9 @@ namespace Matkakirja.Natiivi
                 bool liikkuu = lepoKierto != null && !lepoKierto.Levossa;
                 m.El.style.translate = liikkuu ? new Translate(m.Piste.x, m.Piste.y)
                     : new Translate(Mathf.Round(m.Piste.x), Mathf.Round(m.Piste.y));
+                // Löydös 153: horisonttiusva peittää merkin kuten webin paperiusva GL-merkit.
+                float usva = korkeus > 0f ? Horisonttiusva.Peitto(m.Piste.y / korkeus) : 0f;
+                m.El.style.opacity = 1f - usva;
             }
             for (int i = n; i < merkit.Count; i++) merkit[i].El.style.display = DisplayStyle.None;
             if (viuhkanAvain != null && !viuhkaLoytyi) SuljeViuhka();

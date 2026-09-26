@@ -218,6 +218,14 @@ namespace Matkakirja
             }
             Taivas(kameraKomp);
 
+            // Ruudun usva UI-merkeille (löydös 153): vain horisonttiusva, ei lennon sumu.
+            Horisonttiusva.RuutuVoima = !(sumu && !SumuEstetty) && Usva > 0.001f ? Usva : 0f;
+            if (Horisonttiusva.RuutuVoima > 0f)
+            {
+                double y = Horisonttiusva.RajanRuutuY(kierto.korkeus, kierto.KaytettyKallistus, kameraKomp.fieldOfView * 0.5,
+                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaRaja);
+                Horisonttiusva.RuutuRajaY = double.IsNaN(y) ? 0f : Mathf.Clamp01((float)((1.0 - y) * 0.5));
+            }
             if (sumu && !SumuEstetty)
             {
                 RenderSettings.fog = true;
