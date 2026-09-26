@@ -56,6 +56,8 @@ Jatkaa luovutusta (q). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-prot
   ipad-nostokortti 51338a36 (Fable: nostokortti ≤ 620 pt) ja lippu-kiinnitys a3a40cd6. iPad 13 ennen/jälkeen:
   pariteetti-ajo/b21-ui-ipad13-2/. #3324 mainissa. Uusinta-ajo koko kierroksesta, kun erät junassa.
   iPad 13 = Pelikoodarin pariteetti-iPad13 88939C12 (lupa 26.9.); ÄLÄ aja siivoa-pariteettisimut.sh --aja (koskee kaikkia).
+- Klo 14.1x: iPad-erät junassa (juna/b13 38887fd3), lippu-kiinnitys junassa. Uusinta b21-uusinta-{pysty,vaaka}: ei
+  regressioita puhelimella, vaaka parani (9/16/21c). UI-pariteettikierros valmis; jäljellä hyväksytyt poikkeamat.
 - (Vanha) Avoin: salaisuuskortti ja "Attika" odottavat Siirtosepän paketin siivouskorjausta (siirtoseppa/siivous-korjaus 13e5bcf4);
   laite jäi v145:een. Koodi valmis (NostoSisalto salaisuus:-etuliite, MAAKUNTIEN_NIMET).
 - (Aiempi merkintä:) elävä kartta, Natiivi-UI:n osa (omistaja hyväksyi videon 05.0x, build 19). Opus-agentti työstää haaraa
