@@ -31,6 +31,13 @@ namespace Matkakirja
         public const float LipunOsuus = 0.36f;
         /// <summary>Tangon pienin kulma katseeseen (°): ylhäältä katsottuna tanko kallistuu näkyviin.</summary>
         public const float MinKulma = 55f;
+        /// <summary>Tangon jalka ruudulla sivuun paikasta (pt): pelinappula seisoo usein samassa kaupungissa.</summary>
+        public const float SivuPt = 12f;
+        /// <summary>
+        /// Piirtojärjestys: kaikkien kartan läpinäkyvien (nimet, merkit, nappula) jälkeen, jotta täysi piirto ja elävä kerros
+        /// (kaapattu kartta + Elava-kohteet) ovat samannäköisiä (kerroksella Elava-kohteet piirtyvät aina kaappauksen päälle).
+        /// </summary>
+        public const int Jono = 3400;
         const float Sade = 0.013f, NupinSade = 0.03f;
 
         /// <summary>
@@ -116,7 +123,7 @@ namespace Matkakirja
         string maa;
         bool asetettu, nakyi;
         double lat, lon, korkeus;
-        Vector3 normaaliPaikallinen;
+        Vector3 normaaliPaikallinen, perusPaikka;
 
         void Rakenna()
         {
@@ -127,6 +134,7 @@ namespace Matkakirja
             nuppiMat = new Material(shader) { name = "Lipputanko-nuppi" };
             nuppiMat.SetColor("_BaseColor", new Color(0.80f, 0.63f, 0.28f));
             lippuMat = new Material(shader) { name = "Lipputanko-lippu" };
+            tankoMat.renderQueue = nuppiMat.renderQueue = lippuMat.renderQueue = Jono;
             tanko = Osa("Tanko", Sylinteri(Sade, 1f, 8), tankoMat);
             nuppi = Osa("Nuppi", Nuppi(NupinSade, 1f + NupinSade * 0.6f), nuppiMat);
             lippu = Osa("Lippu", Nelio(), lippuMat);
@@ -170,8 +178,9 @@ namespace Matkakirja
             var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lo, la, 0));
             var n = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef);
             normaaliPaikallinen = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(n)).normalized;
-            transform.localPosition = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef)
-                                      + (float3)normaaliPaikallinen * (float)KorkeusKerroin.Lisays(korkeusM);
+            perusPaikka = (Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef)
+                          + normaaliPaikallinen * (float)KorkeusKerroin.Lisays(korkeusM);
+            transform.localPosition = perusPaikka;
             asetettu = true;
             PallonLepo.Muuttui("lipputanko");
             Debug.Log("MATKAKIRJA lipputanko: " + Kuvaus());
@@ -201,7 +210,7 @@ namespace Matkakirja
             var kk = KarttaKerrokset.Instanssi;
             bool sallittu = !PalloKierto.PorttiSumea && !(kk != null && kk.LinssiPaalla) && !(aurinko != null && aurinko.Paalla);
             var gt = georeferenssi.transform;
-            Vector3 p = transform.position;
+            Vector3 p = gt.TransformPoint(perusPaikka);
             Vector3 n = gt.TransformDirection(normaaliPaikallinen).normalized;
             Vector3 kohti = kamera.transform.position - p;
             float etaisyys = kohti.magnitude;
@@ -229,6 +238,9 @@ namespace Matkakirja
             float piste = 2f * etaisyys * tanPuoli / (Screen.height / PalloKierto.Pistekerroin);
             float koko = piste * KorkeusPt / Mathf.Max(1e-9f, gt.lossyScale.x);
             if (transform.rotation != suunta) transform.rotation = suunta;
+            // Jalka sivuun nappulasta ruudun oikealle (vakio pisteinä).
+            Vector3 paikka = p + kamera.transform.right * (piste * SivuPt);
+            if ((transform.position - paikka).sqrMagnitude > piste * piste * 0.01f) transform.position = paikka;
             var s = Vector3.one * koko;
             if ((transform.localScale - s).sqrMagnitude > 1e-6f * koko * koko) transform.localScale = s;
         }

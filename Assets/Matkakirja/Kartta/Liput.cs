@@ -284,9 +284,8 @@ namespace Matkakirja
             if (ElavaKerros.Staattinen) return false;
             foreach (var k in kahvat)
             {
-                if (!k.nakyy || !k.Jatkuva) continue;
-                Tila(k, out float aika, out float voima);
-                if (k.likainen || (!k.staattinen && !Sama(k, aika, voima))) return true;
+                // Jatkuva lippu liehuu aina (ajuri on voinut piirtää sen jo tässä kehyksessä ennen Ruudunpaivitystä).
+                if (k.nakyy && k.Jatkuva && (!k.staattinen || k.likainen)) return true;
             }
             return false;
         }
