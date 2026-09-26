@@ -7531,3 +7531,7 @@ Pelikoodari (76dc1d7a0, ei pushattu): tyyppikentta 250 kohteelle, web + natiivi 
 ## SELVITYS: GROKIN STRIIMAAVA PUHESYNTEESI — ON, MUTTA EI SUOMEA (26.9.2026 klo 22.38)
 
 Omistaja 22.3x: ei naytteita, vain selvitys onko Grokilla striimaava puheaani. Fable (docs.x.ai 26.9.2026): xAI:lla on erillinen TTS-rajapinta (huhtikuu 2026) ja WebSocket-striimaus wss://api.x.ai/v1/tts (text.delta → audio.delta, ei pituusrajaa, barge-in text.clear, optimize_streaming_latency 0–2, 50 yhteytta/tiimi), hinta 4,20 $/M merkkia, aanet mm. eve/ara/leo/rex/sal + 21 uutta (7/2026), sub-second-latenssi ilman tarkkoja lukuja. TUETUT KIELET 20: en, ar, bn, zh, fr, de, hi, id, it, ja, ko, pt, ru, es, tr, vi (+auto) — SUOMI EI OLE LISTALLA. Johtopaatos: Grok ei sovi Livian suomenkieliseen striimipuheeseen nyt; nykyinen (gpt-4o-mini-tts striimissa, eleven_v3 esigeneroituna) sailyy; jos halutaan parempi, vaihtoehdot ElevenLabs Flash v2.5 -striimaus tai Azure fi-FI. Pelikoodarin naytevertailu peruttu.
+
+## 178 OMISTAJA: 70 TARINAKOHDETTA SUORAAN KAUPUNGIN NOSTOIHIN (26.9.2026 klo 22.39)
+
+Omistaja 22.4x: 70 tarinakohdetta (skandaalit, historian hetket, taustat) siirretaan suoraan kaupungin nostoihin — kaupunkikatto ei rajoita, koska kaupungilla on oma kortti, joka kokoaa kaikki nostot. Fable: piilotetaan kaikki 81 nahtavyyskartalta; Pelikoodari liittaa 70 kaupungin nostolistaan (data, testit 953/3985 paivitetaan), web + natiivi; Sisaltokirjurille jaa 11 ei-tarinakohdetta (museon juttuun) ja Santarem + Broome.
