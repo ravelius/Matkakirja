@@ -166,3 +166,11 @@ Postivahti 05.3x: viikkokiintiö 90 %, tilinvaihto lähestyy.*
   ketjutettuna `ajo-matka.sh` ajaa kohdan 4 ja kohdan 5 lajit (laiva, parvi ja sade Kreikassa, juna Lontoossa)
   sekä `pallo lepo`. Kuvat tulevat hakemistoon lokit/linssiseppa-matka-20260926/, ja niistä kuvapari omistajalle ja
   Fablelle. Unityn .metat (ElavaMatka, ElavatHetket, Hetket, HetkienAanet) otetaan käännöksen -metat-kansiosta.
+
+## Päivitys klo 09.3x (uusi sessio f0b4fec1, Fable local_5df52e10)
+
+- Kohtien 4+5 ajo (bc093f2f = master 41dd79c7 + elavat-hetket 26d13476): 0 poikkeusta, lepo toimii, reitti
+  piirtyy ja hehku näkyy, laiva erottuu. Parvi, sade ja juna olivat 334 km:n näkymässä liian pieniä → suurennettu
+  (5f50d3f2) ja .metat lisätty (f9bf44ed). Ensimmäisen ajon kuvat: lokit/linssiseppa-matka-20260926-v1/.
+- Käännös `kaanna.sh hetket2` ja uusi `ajo-matka.sh` ketjutettuna taustalla (vanha scratchpad 15ddf057) →
+  kuvapari omistajalle ja Fablelle → merge-pyyntö Natiivisepälle (build 20).
