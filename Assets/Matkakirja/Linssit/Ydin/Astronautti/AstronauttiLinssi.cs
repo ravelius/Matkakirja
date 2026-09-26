@@ -42,6 +42,12 @@ namespace Matkakirja.Linssit.Astronautti
         public const float PaluuAjoS = 1.6f;
 
         public const string Kerros = "astronautti";
+        /// <summary>
+        /// Linssin taustaääni (ILinssiYmparisto.Taustaaani; web js/linssit/satelliitti-aani.js ASTRONAUTIN_HUMINA): aseman
+        /// humina 84 s, −30,48 LUFS. Taustaääni, ei musiikkia (Äänimaisema-kytkin ja taustaäänten säädin, omistaja 20.9.);
+        /// osoite, voima 0,45 ja nousu 2 s ovat Pelikoodarin taulussa (Aanisoitin.LinssiTaustat). Musiikki on pidossa.
+        /// </summary>
+        public const string Humina = "astro-humina";
         public const double MaanSade = 6_371_000;
         public const double PaljastuksenMinimiMs = 1800, PaljastuksenKattoMs = 12000;
         public const int PaljastuksenKehykset = 3;
@@ -129,6 +135,8 @@ namespace Matkakirja.Linssit.Astronautti
             });
             y.Kerrokset.Nakyvyys(Topografia.Pohja, false);
             y.MusiikkiPitoon(true);
+            // Oma ääni vasta muiden vaientamisen jälkeen (web satelliitti.js: linssiaani-vaihe aanet-vaiheen jälkeen).
+            y.Taustaaani(Humina);
             // Pimeässä kamera avauskorkeuteen saman paikan yllä (lat rajattu ±55°, ettei napa jää keskelle).
             y.AjaKamera(new Nakyma(Math.Max(-55, Math.Min(55, talteen.Lat)), talteen.Lon, avaus), 0f);
             y.ZoomiKatto(avaus * Astronauttimatikka.ZoominKauin);
@@ -220,6 +228,8 @@ namespace Matkakirja.Linssit.Astronautti
             foreach (var k in new[] { "reitit", "napakannet" }) y.Kerrokset.Nakyvyys(k, true);
             y.Pelikerrokset(true);
             y.ZoomiKatto(null);
+            // Humina häipyy ennen kuin pito vapautuu (web pura: linssin ääni ensin, sitten muut äänet takaisin).
+            y.Taustaaani(null);
             y.MusiikkiPitoon(false);
             // Pallo palaa täsmälleen lähtötilaan (web pura()); webissä hyppy, natiivissa pehmeä paluu
             // (Raamattu KAMERA-AJOT, omistaja 24.9.: ei hyppyjä), vähennetyllä liikkeellä heti.

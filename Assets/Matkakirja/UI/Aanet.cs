@@ -324,8 +324,29 @@ namespace Matkakirja.Natiivi
         /// Pelin tai UI:n tehoste webin sfx.play-nimellä (correct, wrong, quizOpen, paper, popup …).
         /// voima kertoo gainiin (webin pen/clack { voima }). Tuntematon nimi = hiljaisuus (§2.10).
         /// </summary>
+        /// <summary>
+        /// Ajonaikaiset tehosteet (Pelikoodari 26.9.2026, Linssisepän pyyntö): esim. webin syntetisoimat keksinto ja vuosi
+        /// luodaan kerran PCM-klipeiksi (AudioClip.Create) ja rekisteröidään tähän. Ne soivat Tehoste(nimi)-väylällä samalla
+        /// Masterilla, voimalla, mykistyksellä ja sanelutauolla kuin taulun tehosteet. Siivu on koko klippi (alusta).
+        /// </summary>
+        public static void RekisteroiTehoste(string nimi, AudioClip klippi, float gain = 0.35f, bool tasavire = true)
+        {
+            if (string.IsNullOrEmpty(nimi)) return;
+            if (klippi == null) { omatTehosteet.Remove(nimi); return; }
+            omatTehosteet[nimi] = (klippi, gain, tasavire);
+        }
+
+        static readonly Dictionary<string, (AudioClip Klippi, float Gain, bool Tasavire)> omatTehosteet =
+            new Dictionary<string, (AudioClip, float, bool)>();
+
         public static bool Tehoste(string nimi, float voima = 1f, float viive = 0f)
         {
+            if (nimi != null && omatTehosteet.TryGetValue(nimi, out var oma))
+            {
+                if (Mykistetty || sanelussa || oma.Klippi == null) return oma.Klippi != null;
+                SoitaSiivu(oma.Klippi, "oma:" + nimi, "alusta", oma.Klippi.length, oma.Gain * voima, null, oma.Tasavire, viive);
+                return true;
+            }
             TehosteRivi t = Tehostetaulu.Hae(nimi);
             if (t == null || Mykistetty) return false;
             SoitaSiivu(t.Url, t.Aloitus, t.Kesto, t.Gain * voima, t.Vire, t.Tasavire, viive);

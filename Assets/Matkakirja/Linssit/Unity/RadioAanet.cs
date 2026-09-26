@@ -23,6 +23,7 @@ namespace Matkakirja.Natiivi
         [DllImport("__Internal")] static extern void MatkakirjaRadio_Tauko(int paalle);
         [DllImport("__Internal")] static extern string MatkakirjaRadio_Kuvaus();
         [DllImport("__Internal")] static extern float MatkakirjaRadio_Rms();
+        [DllImport("__Internal")] static extern void MatkakirjaRadio_Esikuuntele(string osoite);
 #else
         float aukesi = -1;
         static void MatkakirjaRadio_Voimakkuus(float arvo) { }
@@ -62,6 +63,11 @@ namespace Matkakirja.Natiivi
             if (omistaja != null && !Oma) omistaja.auki = false;   // edellinen menettää soittimen
             omistaja = this;
             auki = true;
+            // Asemanvaihdon viive (Natiivisepän ehto 5): Avaa → ensimmäinen Kuuluu, esikuunneltu vai uusi yhteys.
+            avattu = Time.realtimeSinceStartup;
+            viiveKirjattu = false;
+            esikuunneltuna = url != null && url == esikuunneltu;
+            esikuunneltu = null;   // liitännäinen ottaa sen käyttöön tai sulkee sen
 #if UNITY_IOS && !UNITY_EDITOR
             MatkakirjaRadio_Avaa(url);
 #else
@@ -109,7 +115,40 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        public bool Kuuluu => Tila == 2;
+        public bool Kuuluu
+        {
+            get
+            {
+                bool k = Tila == 2;
+                if (k && !viiveKirjattu)
+                {
+                    viiveKirjattu = true;
+                    LinssiOhjain.Instanssi?.Kirjaa($"radio: kuuluu {(Time.realtimeSinceStartup - avattu) * 1000:F0} ms "
+                        + (esikuunneltuna ? "(esikuuntelusta)" : "(uusi yhteys)"));
+                }
+                return k;
+            }
+        }
+
+        float avattu;
+        bool viiveKirjattu, esikuunneltuna;
+        string esikuunneltu;
+
+        /// <summary>
+        /// ESIKUUNTELU (RadioLinssi, ESILATAUSPOLITIIKKA kohta 6): seuraavan aseman yhteys ja ~4 s dataa valmiiksi
+        /// (MatkakirjaRadio.mm), null = pois. Vain radiolinssin virta (Etusija): lehden mediarivi ei esikuuntele.
+        /// </summary>
+        public void Esikuuntele(string url)
+        {
+            if (!Etusija) return;
+            esikuunneltu = url;
+#if UNITY_IOS && !UNITY_EDITOR
+            MatkakirjaRadio_Esikuuntele(url);
+#else
+            Debug.Log($"MATKAKIRJA radio: (editori) esikuuntele {url ?? "-"}");
+#endif
+            LinssiOhjain.Instanssi?.Kirjaa("radio: esikuuntele " + (url ?? "-"));
+        }
 
         /// <summary>
         /// Lähetyksen raaka RMS 0…1 VU-mittarille (BUILD 7, Natiiviseppä: MatkakirjaRadio_Rms, ~30 ms, ennen

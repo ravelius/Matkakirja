@@ -200,6 +200,7 @@ varapallo (z0–z2), jos verkkoa ei ole ensimmäisellä kerralla.
 | `float MatkakirjaRadio_Taso()` | valmis | Soivan virran RMS-taso 0…1 (~30 ms ikkuna, dBFS −60…0 → 0…1) ENNEN voimakkuutta; nopea nousu, vaimennus ~0,3 s; 0 kun ei soi (tila ≠ 2) tai tauolla. **−1** vain AVPlayer-varapolulla (HLS/.m3u8, Ogg/Opus tai muu tuntematon muoto, URLSessionin varhainen virhe, ei ääntä 8 s:ssa) → webin ajastettu varakuvio. Halpa: luetaan joka kehys (atomit, ei lukkoja). |
 | `float MatkakirjaRadio_Huippu()` | valmis | Sama huippuarvosta (\|näyte\| max), vaimennus ~1 s. |
 | `float MatkakirjaRadio_Rms()` | valmis | Raaka lineaarinen RMS 0…1 (~30 ms), ei tasoitusta eikä dB-asteikkoa, ennen voimakkuutta; 0 ei soi, −1 varapolku. VuMittari tasoittaa itse. |
+| `void MatkakirjaRadio_Esikuuntele(const char* url)` | build 18 (Linssiseppä, Natiiviseppä katselmoi 26.9.) | Seuraavan aseman esikuuntelu (ESILATAUSPOLITIIKKA kohta 6): toinen virta jäsentää paketit enintään 4 s:n renkaaseen ilman muunnosta ja ajastusta; `MatkakirjaRadio_Avaa` samalla osoitteella ottaa sen käyttöön heti. NULL = pois. Yksi kerrallaan; Avaa toisella osoitteella, tauko ja 60 s ilman käyttöönottoa sulkevat; HLS ja ei-http eivät esikuuntele; `Sulje` ei sulje (asemanvaihdon Sulje–Avaa-pari). Linssit: `IRadioVirta.Esikuuntele`, RadioLinssi valitsee seuraavan. |
 
 Mittaus (build 8): progressiiviset http(s)-virrat (Icecast/Shoutcast mp3, aac/aacp ADTS, myös Shoutcast v1
 "ICY 200 OK") soitetaan omalla moottorilla URLSession → AudioFileStream → AudioConverter (Float32) →

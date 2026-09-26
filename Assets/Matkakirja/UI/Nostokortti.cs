@@ -64,6 +64,8 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
+        /// <summary>Löydös 132/150: noston kuva kokoruudulla (sumennuksen taso Kokoruutu).</summary>
+        public bool KuvaKokoruudulla => suurennos != null && suurennos.Auki && suurennos.Kokoruutu;
 
         const float Napautuskynnys = 6f, NapautusMs = 700f;
         // Napautuksen alku (sulku napautuksesta, NapautusKorttiin).
@@ -108,7 +110,7 @@ namespace Matkakirja.Natiivi
             // TrickleDown-vaiheessa, joten vaakapyyhkäisy jää kuvasarjalle (KuvaSelaus) ja napautus napeille.
             Kosketusvieritys.Liita(kortti, () => sisus);
 
-            suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true }; // löydös 102
+            suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true }; // löydökset 102 ja 150
             suurennos.AukiMuuttui += Pehmenna;
         }
 
@@ -178,6 +180,7 @@ namespace Matkakirja.Natiivi
                 napit.Clear();
                 NaytaLisakaupunki(lk);
                 MittaaAvaus(valoId, v);
+                KirjaaLoyto(valoId);
                 jalkeen?.Invoke(true);
                 yield break;
             }
@@ -186,7 +189,7 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.Loppu(odotus, v != versio ? "ohitettu" : n == null ? "ei sisältöä" : null);
             if (v != versio) yield break;
             if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
-            else { Nayta(n); MittaaAvaus(valoId, v); }
+            else { Nayta(n); MittaaAvaus(valoId, v); KirjaaLoyto(valoId); }
             jalkeen?.Invoke(n != null);
         }
 
@@ -217,6 +220,12 @@ namespace Matkakirja.Natiivi
                 Paina();
             });
         }
+
+        /// <summary>
+        /// Elävä kartta (Pelikoodari, build 18): kortti on näkyvissä → löytö kirjataan ja tallennetaan
+        /// (PeliOhjain.NostoAvattu; toinen avaus ei tee mitään). Maakunnan herätys ja laskurit tulevat tapahtumista.
+        /// </summary>
+        static void KirjaaLoyto(string valoId) => PeliOhjain.Instanssi?.NostoAvattu(valoId);
 
         void MittaaAvaus(string valoId, int v)
         {

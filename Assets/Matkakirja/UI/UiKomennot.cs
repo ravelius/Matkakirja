@@ -89,6 +89,7 @@
 //   ui ylapalkki veto|napautus                iPhonen palkki piiloon kuin kartan vedosta / takaisin kuin napautuksesta
 //   ui lentopiilo [pois]                      löydös 23: lennon piilotus käsin (pois = palauta)
 //   ui kuvasumea paalle|pois|auto           löydös 19: kartan kevyt sumennus kuvien aikana pakotettuna / näkymien mukaan
+//   ui kuvasumea kokoruutu                  löydös 132: kokoruudun taso (4 pt + pysäytyskuva, pallon kamera pois); auto palauttaa
 //   ui ylapalkki saari x,y,w,h|pois           saaririvin Dynamic Island pisteinä (ei lovea: 0,0,0,0); pois = laitteen mukaan
 //   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
@@ -828,8 +829,9 @@ namespace Matkakirja.Natiivi
                     ui.LentoPiilo(loput != "pois");
                     return null;
                 case "kuvasumea":
-                    UiNakymat.PakotaKuvaSumea = loput == "paalle" ? true : loput == "pois" ? false : (bool?)null;
-                    return null;
+                    UiNakymat.PakotaKuvaSumea = loput == "paalle" || loput == "kokoruutu" ? true : loput == "pois" ? false : (bool?)null;
+                    UiNakymat.PakotaKuvaTaso = loput == "kokoruutu" ? KuvaSumennus.Kokoruutu : loput == "pois" ? KuvaSumennus.Ei : (KuvaSumennus?)null;
+                    return loput == "kokoruutu" ? $"pysäytyskuva {(PalloKierto.Pysaytyskuva != null ? "päällä" : "tulossa")}" : null;
                 case "ylapalkki":
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
                     if (loput == "veto" || loput == "napautus") { ui.Tilarivi.TestaaVeto(loput == "veto"); return Ylapalkki.VetoPiilossa ? "palkki piilossa (veto)" : "palkki näkyvissä"; }
