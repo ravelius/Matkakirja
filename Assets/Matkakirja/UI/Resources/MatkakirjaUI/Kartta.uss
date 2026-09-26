@@ -1705,20 +1705,29 @@
     height: 18px;
 }
 
+/* Löydös 125 (web piirraNostosymMiniCanvas): pistemerkin harmaa häive 2,1 r ja vaalea sisus yhtenä kuvana
+ * (Kartta/NostoHehku, peitot jo lineaarisina); musterengas päällä. Väri vain karttaselitteen valossa. */
+.mk-nosto-merkki__hehku {
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+/* Web .nostosym-mini rgba(58, 40, 25, 0,86): musterengas ja viivamerkin runko. Peitto lineaariseen sekoitukseen
+ * korjattuna (NimiLadonta.LineaarinenAlfa pergamentilla: 0,86 → 0,95), kuten nimikerroksen värit. */
 .mk-nosto-merkki__rengas {
-    color: #4b3a1c;
+    color: rgb(58, 40, 25);
+    opacity: 0.95;
 }
 
-/* Web NOSTOSYM_PISTE_HARMAA #6f6a61, kiekon peitto 0,86 (css 25420); väri vain karttaselitteen valossa. */
-.mk-nosto-merkki__kiekko {
-    color: #6f6a61;
-    opacity: 0.86;
-}
-
-/* Web vektori-ikonit (vuori, aalto, tassu, huutomerkki, ruusu) musteella. */
+/* Web viivamerkit (vuori, aalto, salama, tassu, ruusu) musteella, ei aiheväriä. */
 .mk-nosto-merkki__vektori {
     color: rgb(58, 40, 25);
-    opacity: 0.86;
+    opacity: 0.95;
+}
+
+/* Web .nostosym-mini-ohut rgba(58, 40, 25, 0,52): aallon alempi veto (lineaarisena 0,72). */
+.mk-nosto-merkki__vektori-ohut {
+    color: rgb(58, 40, 25);
+    opacity: 0.72;
 }
 
 /* Ryhmämerkki (web css .pallolauta-aihemerkki-pohja/-lautanen/-keha): levy r 3,4 px ilman sisäsymbolia. */
@@ -1738,22 +1747,28 @@
 }
 
 /* Web .nostosym-nimio: --font-atlas (Liberation Serif) kursiivi, rgba(74, 52, 33, 0,92), ei haloa, ei harvennusta;
- * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). */
+ * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). Löydös 125: peitto lineaarisena 0,97 ja
+ * SDF-reunan vahvistus samalla musteella asetetaan C#:ssa (NostotKartalla.AsetaMuste, NostoKerros.NimionReuna*). */
 .mk-nosto-merkki__nimio {
     position: absolute;
     font-size: 8.5px;
     white-space: nowrap;
     padding: 0;
     margin: 0;
-    color: rgb(74, 52, 33);
+    color: rgba(74, 52, 33, 0.97);
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.18s;
 }
 
-/* Web NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98). */
+/* Web NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98) (lineaarisena 1,0). */
 .mk-nosto-merkki__nimio--taso1 {
     color: rgb(46, 30, 14);
+}
+
+/* Web .nostosym-nimio-meri: versaali, harvennus 0,28 em (C#), rgba(120, 108, 84, 0,72) (merellä lineaarisena 0,8). */
+.mk-nosto-merkki__nimio--meri {
+    color: rgba(120, 108, 84, 0.8);
 }
 
 /* Viuhka (web .pallolauta-viuhka-pohja, VIUHKAN_POHJAN_VYOT): kehyksetön paperipohja, reuna pehmennetty
