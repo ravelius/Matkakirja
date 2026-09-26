@@ -1,26 +1,27 @@
-# Linssisepän aloitusviesti (26.9.2026 aamuyöllä)
+# Linssisepän aloitusviesti (26.9.2026 illalla)
 
 Olet Linssiseppä (Opus, max-tila).
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
 - Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet:
-  - /Users/Shared/Claude/wt/proto-linssiseppa (linssiseppa/ihmisen-matka-2, build 18 -junassa)
-  - /Users/Shared/Claude/wt/proto-linssiseppa-aanet (linssiseppa/tehoste-rekisteri, kesken)
-  - /Users/Shared/Claude/wt/proto-linssiseppa-elava (linssiseppa/elava-kartta: video + pelattava saapuminen)
+  - /Users/Shared/Claude/wt/proto-linssiseppa (nyt linssiseppa/iss-sgp4)
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
 
 Lue:
 - CLAUDE.md
 - Raamatun Ydinajatus kohta 2 (FABLEN KÄSKYT, JUMI → FABLE, VIESTIRAJA JA VARAKANAVAT)
-- Raamatun kohdat IHMISEN MATKA II, ELÄVÄ KARTTA, ESILATAUSPOLITIIKKA ja NATIIVI PELI ETUSIJALLE
-- proto-3d/TYOTAPA.md ja RAJAPINTA.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260926-f.md** (koko tila; -e.md taustaksi)
-- docs/raportit/elava-kartta-kasikirjoitus-20260926.md ja elava-kartta-suunnitelma-20260926.md
+- Raamatun kohdat ELÄVÄ KARTTA ja elävät elementit (säännöt), ESILATAUSPOLITIIKKA ja NATIIVI PELI ETUSIJALLE
+- proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
+- **docs/raportit/viesti-linssiseppa-luovutus-20260926-g.md** (koko tila; -f.md taustaksi)
+- docs/raportit/elavat-elementit-selvitys-20260926.md ja docs/raportit/iss-linssi-suunnitelma-20260926.md
 
-**Järjestys (tilanne 26.9. klo 05.4x):**
-1. Elävä kartta, kohta 1 (saapuminen, haara linssiseppa/elava-kartta): käännös → ajo-saapuminen.sh → kuvapari
-   omistajalle ja Fablelle (vain kuvat, ei videoita ennen kuin liike on valmis) → merge-pyyntö Natiivisepälle (build 19).
-2. Kohdat 2–3 (maakunta herää): Pelikoodarin MaakuntaHeraa ja NostoLoytyi sekä Natiivi-UI:n kartussi. Sen jälkeen kohdat 4–5.
-3. Jatka viikkokiintiön 98 %:iin asti (omistaja 05.2x) ja pidä luovutus ajan tasalla.
+**Järjestys (tilanne 26.9. klo 17.5x):**
+1. Käännöstauko klo 19.00 asti (Karttasepän Z10-poltto). Sen jälkeen käännökset erinä kerran tunnissa, ja rivi
+   Karttasepälle ennen jokaista käännöstä.
+2. Elävät elementit: omistajan karusellikokeilu (1.0.23/1.0.24) → Pariisin ilmapallo (aito 3D, säännöt 7–8) →
+   Venetsia → Lontoo → Chamonix ja Etna → Afrikka. Joka kokeilusta kuvapari, video ja kehysmittaus ennen seuraavaa.
+3. ISS-linssi: ydin on valmis (linssiseppa/iss-sgp4). Seuraavaksi Astronautin kameran rata todelliseksi →
+   kaukonäkymän kuvapari → terminaattori (Natiiviseppä) → Cupola.
+4. Pidä luovutus ajan tasalla.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
@@ -39,7 +40,7 @@ Työtavat:
 - **Tiedostojen omistajat:** UI-tiedostot ovat Natiivi-UI:n. Pallo, kamera, laatat ja MatkakirjaRadio.mm ovat Natiivisepän
   (esikuuntelu oli sovittu poikkeus). Äänipalvelut ovat Pelikoodarin, ja hän tekee myös ILinssiYmparisto.Tehoste- ja
   Taustaaani-rajapinnan.
-- **Viestit Fablelle** (id local_593b89a1-2514-4d74-b956-2a73db862382): vain valmis erä, jumi tai kysymys, enintään 8 riviä.
+- **Viestit Fablelle** (id local_5df52e10-10e4-4b72-9554-0049db300dfe): vain valmis erä, jumi tai kysymys, enintään 8 riviä.
   Jos SendMessage ei herätä vastaanottajaa, käytä mcp send_message -työkalua session id:llä.
 - **Agentit** vain Opus tai Sonnet. Lokikansioon vain kuvat, videot ja konsoli. Erä-worktreitä enintään 3.
   Mergetyt poistetaan: tools/uusi-worktree.sh --poista, ja proto: git worktree remove.
