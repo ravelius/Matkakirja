@@ -18,15 +18,20 @@ namespace Matkakirja
     /// NOSTO → ARKKITYYPPI puhtaana funktiona (ilman UnityEngineä; Kartta-testit/ArkkityyppiKartoitusTestit).
     /// Pelikoodarin ehdotus proto-3d/lokit/loydos160-arkkityypit.txt (data v153, 2963 alkiota):
     ///   1) KIINTEÄ TAULU tason 1 id:ille (185 riviä). Merkinnät: P = Pelikoodarin ehdotus sellaisenaan (kirkko/luostari
-    ///      jaettu nimen mukaan), K = Pelikoodarin käsin korjaama (Delfoi, Knossos, Olympia, Santorini), N = Natiivisepän
-    ///      tarkennus: uudet arkkityypit (majakka, silta, mylly, luola, muistomerkki, kaupunkitalo), joita ehdotuksessa ei
-    ///      vielä ollut, ja rivit, joilla lajin oletus osui huonosti (esim. palatsit raunioina, luolat vuorina). Pelikoodari
-    ///      tarkistaa N-rivit.
+    ///      jaettu nimen mukaan), K = Pelikoodarin käsin korjaama (Delfoi, Knossos, Olympia, Santorini; 26.9. illalla
+    ///      lisäksi Nordkapp, Skagen, Jellingin kivet, Vredespaleis, Luxembourgin kaupunki, Birka), N = Natiivisepän
+    ///      tarkennus uusille arkkityypeille (majakka, silta, mylly, luola, muistomerkki, kaupunkitalo) ja riveille, joilla
+    ///      lajin oletus osui huonosti; Pelikoodari tarkisti N-rivit 26.9. (74 ok, 6 korjattu K-riveiksi).
     ///   2) NIMISÄÄNTÖ (järjestyksessä, ensimmäinen osuma voittaa; kirjainkoko ei ratkaise): Pelikoodarin säännöt, joihin
     ///      on lisätty uusien arkkityyppien sanat; luostari erotettu kirkosta ja majakka satamasta.
-    ///   3) LAJIN OLETUS (laji, datassa puuttuessa kategoria): vuori → vuori, merenkulku → satama, historia → raunio
-    ///      (Pelikoodari) ja kaupunki → kaupunkitalo (Natiiviseppä).
-    ///   4) muu → merkkikivi.
+    ///   3) LAJIN OLETUS (laji skeemasta 1.44): vuori → vuori, merenkulku → satama, historia → raunio (Pelikoodari),
+    ///      tekniikka → silta, kauppa → satama, kaupunki → kaupunkitalo, meri → satama (koordinaattori 26.9.) sekä
+    ///      kulttuuri ja skandaali → kaupunkitalo (Natiiviseppä: kulttuuri ja skandaali eivät saa päätyä suoraan
+    ///      merkkikiveksi; nimet ovat enimmäkseen kaupunkeja, paikkoja ja tarinoita). Joki ei saa oletusta: nimet ovat
+    ///      jokia, koskia ja kansallispuistoja, eivät siltoja (silta tulee nimisäännöstä, jos nimessä on silta).
+    ///   4) KATEGORIAN OLETUS, jos lajilla ei ole oletusta tai laji puuttuu: historia → raunio, kulttuuri ja huuto
+    ///      (skandaalit) → kaupunkitalo, kauppa → satama, kaupunki → kaupunkitalo.
+    ///   5) muu (luonto ilman vuorta, eläimet, saaret, järvet, joet …) → merkkikivi.
     /// </summary>
     public static class ArkkityyppiKartoitus
     {
@@ -45,7 +50,7 @@ namespace Matkakirja
                 foreach (var (saanto, tyyppi) in Nimisaannot)
                     if (saanto.IsMatch(nimi)) { peruste = Peruste.Nimi; return tyyppi; }
             if (laji != null && LajinOletus.TryGetValue(laji, out a)) { peruste = Peruste.Laji; return a; }
-            if (kategoria != null && LajinOletus.TryGetValue(kategoria, out a)) { peruste = Peruste.Kategoria; return a; }
+            if (kategoria != null && KategorianOletus.TryGetValue(kategoria, out a)) { peruste = Peruste.Kategoria; return a; }
             peruste = Peruste.Oletus;
             return Arkkityyppi.Merkkikivi;
         }
@@ -77,12 +82,27 @@ namespace Matkakirja
             (S(@"vuori|vuoret|tunturi|tulivuor|kraatteri|huippu|massiivi|rotko"), Arkkityyppi.Vuori),
         };
 
-        /// <summary>Lajin (tai kategorian) oletus: Pelikoodarin kolme + kaupunki → kaupunkitalo.</summary>
+        /// <summary>Lajin oletus (ks. luokan kuvaus kohta 3).</summary>
         static readonly Dictionary<string, Arkkityyppi> LajinOletus = new Dictionary<string, Arkkityyppi>(StringComparer.Ordinal)
         {
             ["vuori"] = Arkkityyppi.Vuori,
             ["merenkulku"] = Arkkityyppi.Satama,
             ["historia"] = Arkkityyppi.Raunio,
+            ["tekniikka"] = Arkkityyppi.Silta,
+            ["kauppa"] = Arkkityyppi.Satama,
+            ["kaupunki"] = Arkkityyppi.Kaupunkitalo,
+            ["meri"] = Arkkityyppi.Satama,
+            ["kulttuuri"] = Arkkityyppi.Kaupunkitalo,
+            ["skandaali"] = Arkkityyppi.Kaupunkitalo,
+        };
+
+        /// <summary>Kategorian oletus (ks. luokan kuvaus kohta 4).</summary>
+        static readonly Dictionary<string, Arkkityyppi> KategorianOletus = new Dictionary<string, Arkkityyppi>(StringComparer.Ordinal)
+        {
+            ["historia"] = Arkkityyppi.Raunio,
+            ["kulttuuri"] = Arkkityyppi.Kaupunkitalo,
+            ["huuto"] = Arkkityyppi.Kaupunkitalo,
+            ["kauppa"] = Arkkityyppi.Satama,
             ["kaupunki"] = Arkkityyppi.Kaupunkitalo,
         };
 
@@ -144,10 +164,10 @@ namespace Matkakirja
             // DNK
             ["kohde:billund"] = Arkkityyppi.Merkkikivi, // P Billund
             ["kohde:hahmotelma-odense"] = Arkkityyppi.Kaupunkitalo, // N Odense
-            ["kohde:jellingin-kivet"] = Arkkityyppi.Muistomerkki, // N Jellingin kivet
+            ["kohde:jellingin-kivet"] = Arkkityyppi.Merkkikivi, // K Jellingin kivet
             ["kohde:kronborg"] = Arkkityyppi.Linna, // P Kronborg
             ["kohde:mons-klint"] = Arkkityyppi.Vuori, // P Møns Klint
-            ["kohde:skagen"] = Arkkityyppi.Majakka, // N Skagen
+            ["kohde:skagen"] = Arkkityyppi.Kirkko, // K Skagen
             // ESP
             ["kohde:altamiran-luola"] = Arkkityyppi.Luola, // N Altamiran luola
             ["kohde:cordoban-moskeijakatedraali"] = Arkkityyppi.Kirkko, // P Córdoban moskeijakatedraali
@@ -233,7 +253,7 @@ namespace Matkakirja
             // LUX
             ["kohde:hahmotelma-echternach"] = Arkkityyppi.Luostari, // N Echternach
             ["kohde:hahmotelma-esch"] = Arkkityyppi.Merkkikivi, // P Esch-sur-Alzette
-            ["kohde:hahmotelma-luxembourg"] = Arkkityyppi.Linna, // N Luxembourgin kaupunki
+            ["kohde:hahmotelma-luxembourg"] = Arkkityyppi.Kaupunginmuuri, // K Luxembourgin kaupunki
             ["kohde:hahmotelma-vianden"] = Arkkityyppi.Linna, // P Viandenin linna
             // LVA
             ["kohde:hahmotelma-jurmala"] = Arkkityyppi.Kaupunkitalo, // N Jūrmala
@@ -251,14 +271,14 @@ namespace Matkakirja
             ["kohde:hahmotelma-gouda"] = Arkkityyppi.Kaupunkitalo, // N Gouda
             ["kohde:hahmotelma-keukenhof"] = Arkkityyppi.Mylly, // N Keukenhof
             ["kohde:hahmotelma-kinderdijk"] = Arkkityyppi.Mylly, // N Kinderdijkin myllyt
-            ["kohde:vredespaleis"] = Arkkityyppi.Linna, // N Vredespaleis
+            ["kohde:vredespaleis"] = Arkkityyppi.Kaupunkitalo, // K Vredespaleis
             // NOR
             ["kohde:hahmotelma-geirangerfjord"] = Arkkityyppi.Vuori, // N Geirangervuono
             ["kohde:hahmotelma-lofoten"] = Arkkityyppi.Vuori, // N Lofootit
             ["kohde:hahmotelma-preikestolen"] = Arkkityyppi.Vuori, // P Preikestolen
             ["kohde:hahmotelma-trollstigen"] = Arkkityyppi.Vuori, // N Trollstigen
             ["kohde:nidaros"] = Arkkityyppi.Kirkko, // P Nidarosin tuomiokirkko
-            ["kohde:nordkapp"] = Arkkityyppi.Majakka, // N Nordkapp
+            ["kohde:nordkapp"] = Arkkityyppi.Vuori, // K Nordkapp
             // POL
             ["kohde:auschwitz"] = Arkkityyppi.Muistomerkki, // N Auschwitz-Birkenau
             ["kohde:elblaginkanava"] = Arkkityyppi.Satama, // P Elblągin kanava
@@ -294,7 +314,7 @@ namespace Matkakirja
             ["kohde:hahmotelma-postojna"] = Arkkityyppi.Luola, // N Postojnan luola
             ["kohde:hahmotelma-triglav"] = Arkkityyppi.Vuori, // P Triglav
             // SWE
-            ["kohde:birka"] = Arkkityyppi.Raunio, // N Birka
+            ["kohde:birka"] = Arkkityyppi.Satama, // K Birka
             ["kohde:kebnekaise"] = Arkkityyppi.Vuori, // P Kebnekaise
             ["kohde:kiruna"] = Arkkityyppi.Merkkikivi, // P Kiruna
             ["kohde:vanern"] = Arkkityyppi.Merkkikivi, // P Vänern

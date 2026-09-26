@@ -31,6 +31,13 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(Arkkityyppi.Mylly, K("kohde:hahmotelma-kinderdijk", "Kinderdijkin myllyt", "kauppa", null, out _), "Kinderdijk");
             Oleta.Sama(Arkkityyppi.Silta, K("kohde:mostar", "Mostar", "kaupunki", null, out _), "Mostar");
             Oleta.Sama(Arkkityyppi.Luola, K("kohde:hahmotelma-postojna", "Postojnan luola", "luonto", null, out _), "Postojna");
+            // Pelikoodarin korjaukset N-riveihin (26.9. ilta).
+            Oleta.Sama(Arkkityyppi.Vuori, K("kohde:nordkapp", "Nordkapp", "kauppa", "merenkulku", out _), "Nordkapp");
+            Oleta.Sama(Arkkityyppi.Kirkko, K("kohde:skagen", "Skagen", "kulttuuri", "kulttuuri", out _), "Skagen");
+            Oleta.Sama(Arkkityyppi.Merkkikivi, K("kohde:jellingin-kivet", "Jellingin kivet", "historia", "historia", out _), "Jelling");
+            Oleta.Sama(Arkkityyppi.Kaupunkitalo, K("kohde:vredespaleis", "Vredespaleis", "historia", "historia", out _), "Vredespaleis");
+            Oleta.Sama(Arkkityyppi.Kaupunginmuuri, K("kohde:hahmotelma-luxembourg", "Luxembourgin kaupunki", "historia", "historia", out _), "Luxemburg");
+            Oleta.Sama(Arkkityyppi.Satama, K("kohde:birka", "Birka", "kauppa", "kauppa", out _), "Birka");
             // Taulu voittaa nimen: Knossoksen "palats" osuisi linnaan.
             Oleta.Sama(Arkkityyppi.Linna, K("kohde:ei-taulussa", "Knossoksen palatsi", "historia", null, out p), "sama nimi taulun ulkopuolella");
             Oleta.Sama(ArkkityyppiKartoitus.Peruste.Nimi, p);
@@ -59,8 +66,9 @@ namespace Matkakirja.Kartta.Testit
                 ("Kristiansand", Arkkityyppi.Merkkikivi),         // \bristi ei osu sanan keskeltä
                 ("Mostarin kaupunki", Arkkityyppi.Merkkikivi),    // \bmost\b ei osu Mostariin
             };
+            // Kategoria ilman oletusta (luonto), jotta osumaton nimi päätyy merkkikiveksi.
             foreach (var (nimi, odotus) in tapaukset)
-                Oleta.Sama(odotus, K("kohde:x", nimi, "kulttuuri", null, out _), nimi);
+                Oleta.Sama(odotus, K("kohde:x", nimi, "luonto", null, out _), nimi);
         }
 
         [Testi]
@@ -75,10 +83,27 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(Arkkityyppi.Kaupunkitalo, K("kohde:x", "Thessaloniki", "kaupunki", null, out _), "kategoria kaupunki");
             // Laji voittaa kategorian.
             Oleta.Sama(Arkkityyppi.Vuori, K("kohde:x", "Parnassos", "historia", "vuori", out _), "laji ennen kategoriaa");
+            // Koordinaattorin lisäykset (skeema 1.44, laji kaikilla): tekniikka, kauppa, kaupunki, meri; kulttuuri ja
+            // skandaali eivät suoraan merkkikiveksi.
+            Oleta.Sama(Arkkityyppi.Silta, K("kohde:x", "Semmering", "kauppa", "tekniikka", out _), "laji tekniikka");
+            Oleta.Sama(Arkkityyppi.Satama, K("kohde:x", "Hansa", "kauppa", "kauppa", out _), "laji kauppa");
+            Oleta.Sama(Arkkityyppi.Satama, K("kohde:x", "Egeanmeri", "luonto", "meri", out _), "laji meri");
+            Oleta.Sama(Arkkityyppi.Kaupunkitalo, K("kohde:x", "Bad Ischl", "kulttuuri", "kulttuuri", out _), "laji kulttuuri");
+            Oleta.Sama(Arkkityyppi.Kaupunkitalo, K("kohde:x", "Piltdownin ihminen", "huuto", "skandaali", out _), "laji skandaali");
+            // Laji ilman oletusta → kategoria ennen merkkikiveä.
+            Oleta.Sama(Arkkityyppi.Kaupunkitalo, K("kohde:x", "Nimetön", "huuto", "nosto", out p), "laji nosto → kategoria huuto");
+            Oleta.Sama(ArkkityyppiKartoitus.Peruste.Kategoria, p);
+            Oleta.Sama(Arkkityyppi.Satama, K("kohde:x", "Nimetön", "kauppa", "syvennys", out _), "laji syvennys → kategoria kauppa");
+            Oleta.Sama(Arkkityyppi.Kaupunkitalo, K("kohde:x", "Olut", "kulttuuri", "ruoka", out _), "laji ruoka → kategoria kulttuuri");
+            // Joki ei saa siltaa ilman nimeä (joet, kosket, kansallispuistot); nimessä silta → silta.
+            Oleta.Sama(Arkkityyppi.Merkkikivi, K("kohde:x", "Tonava", "luonto", "joki", out _), "joki ilman siltaa");
+            Oleta.Sama(Arkkityyppi.Silta, K("kohde:x", "Vanha silta", "luonto", "joki", out _), "joki, nimessä silta");
             Oleta.Sama(Arkkityyppi.Merkkikivi, K("kohde:x", "Saimaa", "luonto", "jarvi", out p), "muu → merkkikivi");
             Oleta.Sama(ArkkityyppiKartoitus.Peruste.Oletus, p);
             Oleta.Sama(Arkkityyppi.Merkkikivi, K(null, null, null, null, out _), "tyhjä nosto");
         }
+
+        static readonly string[] EiMerkkikiveksi = { "kulttuuri", "skandaali", "huuto", "tekniikka", "kauppa" };
 
         /// <summary>Paketin jakauma tasoittain ja perusteittain lokiin; tason 1 id:t kaikki taulussa.</summary>
         [Testi]
@@ -89,7 +114,7 @@ namespace Matkakirja.Kartta.Testit
             var alkiot = MiniJson.Alkiot(File.ReadAllText(polku)).ToList();
             var jakauma = new SortedDictionary<string, int>();
             var perusteet = new SortedDictionary<string, int>();
-            int taso1 = 0, puuttuu = 0;
+            int taso1 = 0, puuttuu = 0, suoraanKiveksi = 0;
             foreach (var a in alkiot)
             {
                 if (a.GetValueOrDefault("paakartalla") is bool pk && !pk) continue;
@@ -100,12 +125,16 @@ namespace Matkakirja.Kartta.Testit
                 string k = "taso " + taso + " " + t;
                 jakauma[k] = jakauma.GetValueOrDefault(k) + 1;
                 perusteet["taso " + taso + " " + p] = perusteet.GetValueOrDefault("taso " + taso + " " + p) + 1;
+                string laji = MiniJson.Teksti(a, "laji") ?? MiniJson.Teksti(a, "symLaji"), kat = MiniJson.Teksti(a, "kategoria");
+                if (p == ArkkityyppiKartoitus.Peruste.Oletus && (Array.IndexOf(EiMerkkikiveksi, laji) >= 0 || Array.IndexOf(EiMerkkikiveksi, kat) >= 0))
+                { suoraanKiveksi++; Console.WriteLine("      suoraan merkkikiveksi " + id + " " + laji + "/" + kat); }
                 if (taso == 1) { taso1++; if (!ArkkityyppiKartoitus.Taulussa(id)) { puuttuu++; Console.WriteLine("      taulusta puuttuu " + id); } }
             }
             Console.WriteLine("      " + polku + ": " + alkiot.Count + " alkiota");
             Console.WriteLine("      perusteet: " + string.Join(", ", perusteet.Select(x => x.Key + " " + x.Value)));
             Console.WriteLine("      jakauma: " + string.Join(", ", jakauma.Select(x => x.Key + " " + x.Value)));
             Oleta.Sama(0, puuttuu, "tason 1 id:t taulussa (" + taso1 + ")");
+            Oleta.Sama(0, suoraanKiveksi, "kulttuuri, skandaali, tekniikka ja kauppa eivät suoraan merkkikiveksi");
         }
     }
 }
