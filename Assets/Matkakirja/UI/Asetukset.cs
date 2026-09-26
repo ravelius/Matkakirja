@@ -7,6 +7,8 @@
 //     Musiikki     matkakirja-musiikki     "0"/"1"           oletus päällä
 //     Äänimaisema  matkakirja-aanimaisema  "0"/"1"           oletus päällä (myös koko pelin mykistys; webissä sound.js:n tila, avain natiivin oma)
 //     Pieni liike  matkakirja-kartan-liike "0"/"1"           oletus päällä
+//     Kuljettu reitti matkakirja-kuljettu-reitti "0"/"1"     oletus päällä (vain natiivi; omistaja 26.9.2026, kynäviiva
+//                  lukee PlayerPrefsistä tai Paalla(Kytkin.KuljettuReitti) ja kuuntelee Muuttui("KuljettuReitti"))
 //   ratas "Äänentasot", js/main.js AANIVOIMAT + js/kehittajan-voimat.js
 //   (avain matkakirja-dev-voima-<laji>, 0…1, tallennetaan vain oletuksesta poikkeava):
 //     tehosteet 1,0 · pulu 1,0 · lukija 0,9 · musiikki 0,35 · tausta 1,0
@@ -18,7 +20,7 @@ using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
-    public enum Kytkin { Kertoja, Musiikki, Aanimaisema, PieniLiike }
+    public enum Kytkin { Kertoja, Musiikki, Aanimaisema, PieniLiike, KuljettuReitti }
     public enum Voima { Tehosteet, Pulu, Lukija, Musiikki, Tausta }
 
     public static class Asetukset
@@ -124,11 +126,36 @@ namespace Matkakirja.Natiivi
 #endif
         }
 
+        /// <summary>Kuljetun reitin kytkimen PlayerPrefs-avain ("0" = pois).</summary>
+        public const string KuljettuReittiAvain = "matkakirja-kuljettu-reitti";
+
+        static bool? kuljettuReitti;
+
+        /// <summary>
+        /// Linssisepän kynäviiva (ElavaMatka.NakyvissaKysely) kysyy joka kehys: arvo välimuistista, joka nollautuu
+        /// muutoksessa. Muutos herättää pallon piirron (PallonLepo), jotta viiva katoaa tai palaa levosta.
+        /// </summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void KytkeKuljettuReitti()
+        {
+            ElavaMatka.NakyvissaKysely = () => kuljettuReitti ??= Paalla(Kytkin.KuljettuReitti);
+            Muuttui -= KuljettuReittiMuuttui;
+            Muuttui += KuljettuReittiMuuttui;
+        }
+
+        static void KuljettuReittiMuuttui(string nimi)
+        {
+            if (nimi != nameof(Kytkin.KuljettuReitti) && nimi != "kaikki") return;
+            kuljettuReitti = null;
+            PallonLepo.Muuttui("kuljettu reitti");
+        }
+
         static string Avain(Kytkin k) => k switch
         {
             Kytkin.Kertoja => "matkakirja-kertoja",
             Kytkin.Musiikki => "matkakirja-musiikki",
             Kytkin.Aanimaisema => "matkakirja-aanimaisema",
+            Kytkin.KuljettuReitti => KuljettuReittiAvain,
             _ => "matkakirja-kartan-liike",
         };
 
@@ -205,6 +232,7 @@ namespace Matkakirja.Natiivi
             Kytkin.Kertoja => "Kertoja",
             Kytkin.Musiikki => "Musiikki",
             Kytkin.Aanimaisema => "Äänimaisema",
+            Kytkin.KuljettuReitti => "Kuljettu reitti",
             _ => "Pieni liike",
         };
 
@@ -213,6 +241,7 @@ namespace Matkakirja.Natiivi
             Kytkin.Kertoja => "Kertoja lukee matkakirjan merkinnät ja avaustekstin",
             Kytkin.Musiikki => "Pelin omat raidat: pohjavire, kaupunkien kappaleet, matkat ja visa",
             Kytkin.Aanimaisema => "Paikkojen äänitykset ja tehosteet — myös koko pelin mykistys",
+            Kytkin.KuljettuReitti => "Jo kuljettu matka viivana kartalla",
             _ => "Pulu, pilven varjo ja kellonajan sävy kartalla",
         };
 

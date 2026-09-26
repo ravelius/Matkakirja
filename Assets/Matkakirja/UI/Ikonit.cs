@@ -28,6 +28,8 @@ namespace Matkakirja.Natiivi
 
         // js/main.js kartta-valikko (~rivi 693): "Pieni liike" -kytkin.
         public const string PieniLiike = "<path d=\"M4 15.5c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0\"/><path d=\"M4 10.5c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0\"/>";
+        /// <summary>Kuljettu reitti: mutkitteleva viiva lähtö- ja tulopisteineen (☰ Kartta).</summary>
+        public const string KuljettuReitti = "<path d=\"M5.5 17.5c3.5 0 3-6 6.5-6s3-5 6.5-5\"/><circle cx=\"4\" cy=\"18\" r=\"1.7\"/><circle cx=\"20\" cy=\"6\" r=\"1.7\"/>";
 
         // js/ui.js renderTurnPill (~rivi 10942-10946): matkalaukun kahva.
         public const string Laukku = "<rect x=\"4\" y=\"8\" width=\"16\" height=\"11.5\" rx=\"4\"/><path d=\"M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8\"/><path d=\"M6.6 9.6h10.8\"/><circle cx=\"12\" cy=\"9.6\" r=\"0.85\"/><path d=\"M7 13.6 10.3 16.4 13.7 13.6 17 16.4\"/>";
