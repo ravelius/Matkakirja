@@ -2799,51 +2799,189 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *     -elämäkertatiedot
    *   Walloon Brabant — Villers Abbey 1146; Catholic University of
    *     Leuven -jako 1968; GSK Belgia (Wavre)
+   *
+   * BEL KUVA + PIKKUKUVA (Sisältökirjuri 26.9.2026, löydös 158:n jatko
+   * NLD:n jälkeen): sama kaava — Commons-kuva lisenssi tarkistettu
+   * API:sta, ämpäri karttanostot/20260926/, pikkukuva kierrättää saman
+   * osoitteen (BEL ei ole Codexin pikkukuva-tilauksessa). Lähteet:
+   *   Antwerp — File:View_of_Antwerp_Cathedral_from_the_Groenplaats.jpg (Rolf Kranz, CC BY-SA 4.0)
+   *   Brussels — File:Grand-Place, Brussels - panorama, June 2018.jpg (Celuici, CC BY-SA 4.0)
+   *   Flemish Brabant — File:Historic_Leuven_Town_Hall.jpg (Thaler Tamas, CC BY-SA 4.0)
+   *   Hainaut — File:Tournai_pan.jpg (Jean-Pol Grandmont, CC BY 2.5)
+   *   East Flanders — File:Ghent_3towers.jpg (William Helsen, CC BY 2.0)
+   *   Liege — File:Liège skyline early morning.jpg (Dominic Nelson, CC BY-SA 4.0)
+   *   Limburg — File:Tongeren_Moerenpoort_2.JPG (Torsade de Pointes, CC0 1.0)
+   *   Luxembourg — File:Bouillon_Castle_03.jpg (Ad Meskens, CC BY-SA 4.0)
+   *   West Flanders — File:Rozenhoedkaai (canal) and Belfry of Bruges,
+   *     Bruges, Belgium (Ank Kumar, Infosys Limited) 07.jpg (Ank Kumar, CC BY-SA 4.0)
+   *   Namur — File:Dinant_reflected.jpg (Jiuguang Wang, CC BY-SA 2.0)
+   *   Walloon Brabant — File:Butte_du_Lion_de_Waterloo.jpg (Glaurent, CC BY-SA 3.0)
    */
   BEL: {
     Antwerp: {
       lyhyt: 'Antwerpenin satama on Euroopan toiseksi suurin, ja provinssi on koko Belgian väkirikkain – täällä asuu yli 1,9 miljoonaa ihmistä.',
       pitka: `Antwerpenin sydämenlyönti kuuluu satamasta, joka on Euroopan toiseksi vilkkain – ja sen nousu käynnistyi kunnolla vuonna 1863, kun Alankomaat luopui vuosisatoja periytyneestä Schelden tullimaksusta juuri isoisän matkan kynnyksellä, ja satama pääsi vihdoin laajenemaan vapaana merelle. Kaduilla kuulee tänään kymmeniä kieliä, sillä satama ja timanttikauppa ovat vetäneet kaupunkiin väkeä joka puolelta maailmaa. Rautatieaseman kupeessa sijaitseva timanttikortteli näyttää ulkoa vaatimattomalta toimistokorttelilta, mutta sen harmaiden ovien takana käsitellään edelleen valtaosa maailman raakatimanteista. Provinssin yli 1,9 miljoonaa asukasta tekevät siitä Belgian väkirikkaimman, mutta arki tuntuu silti yllättävän rauhalliselta vanhojen kanaalien ja kauppahuoneiden katveessa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-antwerp-0c3c6b28.jpg',
+          lahde: 'Rolf Kranz, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Rolf Kranz',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Antwerp_Cathedral_from_the_Groenplaats.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-antwerp-0c3c6b28.jpg',
     },
     Brussels: {
       lyhyt: 'Brysselissä istuvat EU:n tärkeimmät toimielimet ja Naton päämaja, mutta kaupunkia kutsutaan myös sarjakuvan pääkaupungiksi.',
       pitka: `Brysselissä EU:n virkamiehet ja sarjakuvasankarit elävät kirjaimellisesti samoilla kaduilla: kaupungin sarjakuvareitillä on jo yli 50 seinämaalausta, joissa vilahtavat Tintti, Lucky Luke ja Smurffit. Belgian sarjakuvakeskus toimii entisessä tekstiilitukkuliikkeessä, jonka suunnitteli art nouveau -arkkitehti Victor Horta – rakennus itsessään on yhtä katsomisen arvoinen kuin sen kokoelmat. Lähes 40 prosenttia kaupungin asukkaista on muita kuin Belgian kansalaisia, ja kansainvälisyyden näkee ja maistaa parhaiten Matongen kongolaiskorttelissa tai Marollesin kirpputorilla. Isoisän aikaan Bryssel oli vasta kasvava pääkaupunki ilman EU:ta ja sarjakuvamuseoita, mutta samat mutkittelevat kujat kiertävät yhä Grand Placen ympärillä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-brussels-e793d6ae.jpg',
+          lahde: 'Celuici, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Celuici',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grand-Place, Brussels - panorama, June 2018.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-brussels-e793d6ae.jpg',
     },
     'Flemish Brabant': {
       lyhyt: 'Flanderin Brabant kiertää renkaana Brysselin ympäri, ja Belgian päälentoasema sijaitsee sen puolella eikä pääkaupungissa.',
       pitka: `Flanderin Brabant on hallinnollisesti nuori provinssi, syntynyt vasta 1995, kun vanha Brabantin maakunta jaettiin kolmeen osaan – mutta sen pääkaupunki Leuven on kaikkea muuta kuin nuori. Leuvenin katolinen yliopisto perustettiin jo vuonna 1425, ja se on vanhin yhä toimiva katolinen yliopisto maailmassa, mikä näkyy kaupungin nuorekkaassa, opiskelijavaltaisessa tunnelmassa. Provinssin 65 kuntaa jakautuvat kahteen hallintoalueeseen, Leuveniin ja Halle-Vilvoordeen, ja juuri Halle-Vilvoordessa, aivan Brysselin liepeillä, kieliraja on erityisen herkkä puheenaihe, sillä osassa kuntia asuu paljon ranskankielisiä flaamilaisella alueella. Leuvenista pääsee Brysselin kansainväliselle lentokentälle junalla vain noin varttitunnissa, mikä kertoo, miten tiiviisti tämä rengasmainen provinssi kietoutuu pääkaupungin ympärille.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-flemish-brabant-b7391d14.jpg',
+          lahde: 'Thaler Tamas, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Thaler Tamas',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Historic_Leuven_Town_Hall.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-flemish-brabant-b7391d14.jpg',
     },
     Hainaut: {
       lyhyt: 'Scheldejoen varren Tournai on Belgian vanhimpia kaupunkeja – se oli aikanaan frankkien valtakunnan ensimmäinen pääkaupunki.',
       pitka: `Hainaut'n maisemaa hallitsee yhä hiilikaivosten perintö: Borinagen alue on saanut nimensä murresanasta, joka tarkoittaa kaivoskuilua, ja seudun Grand-Hornun kaivosyhtiö oli 1800-luvulla yksi vastikään itsenäistyneen Belgian suurimmista. Vain muutama vuosi isoisän matkan jälkeen, vuosina 1878–1880, nuori hollantilaistaiteilija Vincent van Gogh asui täällä protestanttisena saarnaajana kaivostyöläisten keskuudessa ja jakoi heidän köyhyytensä niin tosissaan, että häntä alettiin kutsua "hiilikaivoksen Kristukseksi". Charleroi kasvoi teollistumisen myötä provinssin suurimmaksi kaupungiksi, vaikka hallinnollinen pääkaupunki on pienempi Mons, joka toimi Euroopan kulttuuripääkaupunkina vuonna 2015. Nykyään moni entinen kaivosalue on suojeltua Unescon maailmanperintöä, ja rivitalokortteleiden välissä elää yhä sitkeä kaivosseudun yhteisöllisyys, vaikka viimeinen kaivos suljettiin jo vuosikymmeniä sitten.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-hainaut-129e8bc8.jpg',
+          lahde: 'Jean-Pol Grandmont, Wikimedia Commons (CC BY 2.5)',
+          tekija: 'Jean-Pol Grandmont',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tournai_pan.jpg',
+          lisenssi: 'CC BY 2.5',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-hainaut-129e8bc8.jpg',
     },
     'East Flanders': {
       lyhyt: 'Gent sijaitsee Schelde- ja Leiejoen yhtymäkohdassa, ja sen vanhoja katuja täyttävät nykyään Gentin yliopiston opiskelijat.',
       pitka: `Illaisin Gentin vanhat kivikadut täyttyvät enemmän opiskelijoista kuin turisteista – kaupungissa opiskelee yli 65 000 nuorta, mikä tekee tunnelmasta yllättävän nuorekkaan keskiaikaisten kirkontornien katveessa. Kouterin aukion kukkatori on toiminut vuodesta 1772 lähtien, joten se oli auki jo isoisän matkan aikaan ja on edelleen viikonloppuisin gentiläisten suosituin kohtaamispaikka. Joka neljäs vuosi järjestettävät Gentin Floraliat juontavat juurensa vaatimattomasta vuoden 1809 näyttelystä, ja tapahtuma on nykyään merkitty Flanderin aineettomaksi kulttuuriperinnöksi. Naapurikaupunki Aalstissa taas vietetään Belgian suurinta karnevaalia, jonka huipentumana miehet pukeutuvat naisiksi "Voil Jeanetten" -kulkueessa laskiaistiistaina – perinne, joka hämmästyttää monia ensikertaa paikalla olevia.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-east-flanders-7d0ca0df.jpg',
+          lahde: 'William Helsen, Wikimedia Commons (CC BY 2.0)',
+          tekija: 'William Helsen',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ghent_3towers.jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-east-flanders-7d0ca0df.jpg',
     },
     Liege: {
       lyhyt: 'Liège on Belgian ainoa provinssi, joka rajautuu kolmeen maahan, ja sen itälaidalla Eupenin ja Malmedyn seudulla puhutaan saksaa.',
       pitka: `Liègen itäisin kolkka on kielellinen erikoisuus vielä nykyäänkin: Eupenin ja Malmedyn seudulla puhutaan saksaa, sillä alue kuului Preussille ja Saksan keisarikunnalle aina vuoteen 1920 asti – isoisän matkustaessa seudun läpi vuonna 1873 se oli siis vielä osa Saksaa, ei Belgiaa. Liège itse on Vallonian viimeinen kaupunki, jossa terästeollisuus edelleen toimii, vaikka suuri osa 1800-luvun tehtaista on jo hävinnyt maisemasta. Val-Saint-Lambertin lasitehdas on valmistanut kristallia entisen sistersiläisluostarin mailla vuodesta 1826 lähtien, joten siellä hiottiin hienoa lasia jo isoisänkin matkan aikaan. Joen rannoilla ja mäkien rinteillä kaupunki tuntuu yhä vahvalta työläiskaupungilta, jossa ranska ja saksa sekoittuvat sekä puheessa että ruokapöydässä.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-liege-edaa7ac9.jpg',
+          lahde: 'Dominic Nelson, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Dominic Nelson',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Liège skyline early morning.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-liege-edaa7ac9.jpg',
     },
     Limburg: {
       lyhyt: 'Limburgin Tongerenia pidetään Belgian vanhimpana kaupunkina – se on provinssin ainoa roomalaisten aikainen kaupunki.',
       pitka: `Tongeren on Belgian vanhin kaupunki: roomalaisaikoina se tunnettiin nimellä Atuatuca Tungrorum, ja sen ensimmäiselle vuosisadalle ajoittuvien kaupunginmuurien jäänteitä löytää yhä pelloilta keskustan laidalta. Kaupunki oli jo antiikin aikana kapinan näyttämö, kun paikallinen päällikkö Ambiorix nousi roomalaisia vastaan vuonna 54 eaa. Provinssin eteläosassa, hedelmällisessä Haspengouw'n alueella, kasvatetaan yli puolet koko Belgian hedelmäsadosta, ja keväällä omena- ja päärynätarhojen kukinta muuttaa maiseman valkoiseksi mereksi. Pohjoisempana Genkin seudulla taas hiiltä alettiin kaivaa vasta 1900-luvun alussa, vuosikymmeniä isoisän matkan jälkeen – kaivostoiminta tuli Limburgiin paljon myöhemmin kuin Vallonian teollisuusalueille – ja entiset kaivosyhdyskunnat muistuttavat yhä monikulttuurisesta menneisyydestään.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-limburg-339ed4e2.jpg',
+          lahde: 'Torsade de Pointes, Wikimedia Commons (CC0 1.0)',
+          tekija: 'Torsade de Pointes',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tongeren_Moerenpoort_2.JPG',
+          lisenssi: 'CC0 1.0',
+          lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-limburg-339ed4e2.jpg',
     },
     Luxembourg: {
       lyhyt: 'Luxembourg on Belgian suurin mutta harvimmin asuttu provinssi, ja noin 80 prosenttia siitä kuuluu Ardennien tiheisiin metsiin.',
       pitka: `Belgian suurin mutta väkiluvultaan pienin provinssi lepää suurelta osin Ardennien synkän metsän alla, ja viime vuosina alueelle on palannut jopa susia peurojen ja villisikojen rinnalle. Bouillonin linna kohoaa jyrkän mutkittelevan Semois-joen yllä; sen juuret ulottuvat 700-luvulle, ja se siirtyi aikanaan ensimmäiselle ristiretkelle lähteneelle Godefroy de Bouillonille, josta tuli myöhemmin Jerusalemin kuningaskunnan ensimmäinen hallitsija. Joulukuussa 1944 juuri tämä metsäinen seutu oli niin sanotun Ardennien offensiivin eli Bulgen taistelun sydäntä, ja monet kylät tuhoutuivat lähes kokonaan ennen kuin saksalaisjoukot vetäytyivät seuraavan tammikuun tienoilla. Nykyään sota näkyy lähinnä museoissa ja muistomerkeissä, ja rauhallisissa kylissä eletään pääosin matkailusta ja metsätaloudesta.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-luxembourg-d666e9ab.jpg',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Ad Meskens',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bouillon_Castle_03.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-luxembourg-d666e9ab.jpg',
     },
     'West Flanders': {
       lyhyt: 'Rannikkoraitiovaunu kulkee koko rannikon Ranskan rajalta Alankomaiden rajalle – 67 kilometriä, maailman pisin laatuaan.',
       pitka: `West-Vlaanderen on Belgian ainoa rantaprovinssi, jonka hiekkarannat vaihettuvat idempänä nopeasti vihertäviksi pelloiksi ja tiilikattoisiksi kyliksi. Rannikon suosituin kaupunki on Ostende, josta kuningas Leopold II teki vuosikymmenten kuluessa isoisän matkan jälkeen Euroopan aateliston suosiman, muodikkaan kylpyläkaupungin – "rantojen kuningattaren". Brugesin keskiaikaiset kanavat ja mutkittelevat kujat ovat tuoneet kaupungille lisänimen "Pohjolan Venetsia", ja pitsinnypläystä harjoitetaan yhä käsityönä monen ikkunan ääressä. Provinssin eteläosassa Ieperin (Ypresin) ympäristö tunnetaan koko maailmassa ensimmäisen maailmansodan Flanders Fields -taistelukentistä, joissa satojatuhansia sotilaita kuoli vain reilut neljä vuosikymmentä isoisän vierailun jälkeen.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-west-flanders-4bd62d5f.jpg',
+          lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
+          tekija: 'Ank Kumar',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rozenhoedkaai (canal) and Belfry of Bruges, Bruges, Belgium (Ank Kumar, Infosys Limited) 07.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-west-flanders-4bd62d5f.jpg',
     },
     Namur: {
       lyhyt: 'Dinantin jyrkän kallion laella seisoo linnoitus, ja kaupunki muistaa poikaansa Adolphe Saxia, joka patentoi saksofonin 1846.',
       pitka: `Namurin linnoitus kohoaa jyrkällä kalliolla juuri kohdassa, jossa Sambre-joki yhtyy Meuseen, ja koko kaupunki tuntuu rakentuneen tämän veden ja kallion vastakkainasettelun ympärille. Vähän etelämpänä Dinantissa tunnetaan nykyisen linnoituksen lisäksi outo kalliomuodostelma, Rocher Bayard: legendan mukaan Aymonin neljän pojan taruhevonen halkaisi kallion yhdellä kavion iskulla, vaikka todellisuudessa sen lohkaisivat Ludvig XIV:n sotilaat raivatakseen tietä joen varteen. Dinant on myös saksofonin keksijän Adolphe Saxin syntymäkaupunki, ja pojan lapsuus oli niin täynnä läheltä piti -tilanteita – putoamisia, myrkytyksiä, hukkumisvaaroja – että naapurit kutsuivat häntä "Dinantin aavelapseksi" eikä hänen äitinsä uskonut pojan elävän aikuiseksi. Meusen jyrkät kalkkikalliot houkuttelevat nykyään kiipeilijöitä ja melojia, ja joenrantakylät elävät edelleen matkailusta kalkkikivilouhosten katveessa.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-namur-958776f4.jpg',
+          lahde: 'Jiuguang Wang, Wikimedia Commons (CC BY-SA 2.0)',
+          tekija: 'Jiuguang Wang',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dinant_reflected.jpg',
+          lisenssi: 'CC BY-SA 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-namur-958776f4.jpg',
     },
     'Walloon Brabant': {
       lyhyt: 'Waterloon taistelu käytiin täällä kesäkuussa 1815, ja nykyään Vallonian Brabant on Belgian vaurain provinssi.',
       pitka: `Vallonian Brabant on hallinnollisesti nuori mutta monin paikoin ikivanha: Villers-la-Villen keskiaikainen sistersiläisluostari perustettiin jo vuonna 1146 ja hylättiin Ranskan vallankumouksen pyörteissä 1796, ja sen kivikylmät holvit sekä vanhan panimon rauniot ovat säilyneet yllättävän hyvin. Provinssin nuorin kaupunki taas on Louvain-la-Neuve, joka rakennettiin tyhjälle pellolle vuonna 1968, kun kielikiistat halkaisivat vanhan Leuvenin katolisen yliopiston kahtia ja ranskankielinen osa muutti kokonaan uuteen, sitä varten suunniteltuun kaupunkiin. Waterloon kesäkuun 1815 taistelukentät tunnetaan kaikkialla maailmassa, mutta vähemmän tunnettua on, että pienessä Wavren kaupungissa toimii nykyään maailman suurin rokotetehdas – se työllistää noin 7 000 ihmistä ja lähettää yli kaksi miljoonaa rokoteannosta joka päivä 160 maahan. Peltojen ja metsien vaihtelevassa maisemassa vanha ja uusi Belgia elävät siis rinnakkain: luostarirauniot, taisteluhistoria ja huipputeollisuus samalla kapealla alueella Brysselin eteläpuolella.`,
+      kuva: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-walloon-brabant-fc70f1f9.jpg',
+          lahde: 'Glaurent, Wikimedia Commons (CC BY-SA 3.0)',
+          tekija: 'Glaurent',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Butte_du_Lion_de_Waterloo.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+        },
+      ],
+      pikkukuva: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-walloon-brabant-fc70f1f9.jpg',
     },
   },
   /*
