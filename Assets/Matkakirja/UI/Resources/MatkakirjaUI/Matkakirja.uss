@@ -2847,6 +2847,35 @@
     -unity-background-scale-mode: stretch-to-fill;
 }
 
+/* Web .kartta-suurennusvihje: right/bottom 0.35rem, padding 0.16rem 0.42rem, 0.6rem, reuna 1px, kulma 2px. */
+.mk-lehti__suurennusvihje {
+    position: absolute;
+    right: 5.6px;
+    bottom: 5.6px;
+    flex-direction: row;
+    align-items: center;
+    padding: 2.5px 6.7px;
+    background-color: rgba(247, 240, 222, 0.82);
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 2px;
+}
+
+.mk-lehti__suurennusvihje-ikoni {
+    width: 9.6px;
+    height: 9.6px;
+    margin-right: 3px;
+    color: rgba(44, 35, 24, 0.92);
+}
+
+.mk-lehti__suurennusvihje-teksti {
+    font-size: 9.6px;
+    letter-spacing: 4px; /* web 0.04em */
+    color: rgba(44, 35, 24, 0.92);
+    padding: 0;
+    margin: 0;
+}
+
 .mk-lehti__maapiste {
     position: absolute;
     width: 9px;
