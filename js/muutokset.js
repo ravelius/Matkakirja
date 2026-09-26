@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2285, teksti: 'Löydös 178: nähtävyyskartalla vain paikat ja tarinakohteet' },
   { v: 2284, teksti: 'Maakunta-erä B2: SRB/BGR/MLT/ISL pikkukuvat (#3350)' },
   { v: 2283, teksti: 'Maakunta-erä B1: CZE/HRV/BIH/MNE/ALB/MKD/LUX pi… (#3349)' },
   { v: 2282, teksti: 'Maakunta-erä A: CHE/PRT/HUN/SWE/NOR/IRL pikkuku… (#3348)' },

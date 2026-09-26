@@ -16540,7 +16540,7 @@ export function mittakaava(kartta) {
  *   henkilo   henkilö tai tapahtuma          — EI kartalla
  *   ilmio     ilmiö                          — EI kartalla
  *
- * Ei-paikat SÄILYVÄT DATASSA, kunnes Sisältökirjuri siirtää ne (museon
+ * Ei-paikat SÄILYVÄT DATASSA (tarinakohteet myös kartalla, ks. kohdeKartalla), kunnes Sisältökirjuri siirtää ne (museon
  * juttuun galleriana tai kaupunkilehden tarina-osioon). Kaikki kartan
  * käyttäjät (piirto, numerointi, liuska, valikko, vienti natiiviin)
  * lukevat kohteet `kaupunkikartanKohteet`-funktiolla, jotta numero on
@@ -16554,8 +16554,14 @@ export const KEVYET_KOHDETYYPIT = new Set(['aukio', 'luonto']);
 
 /** Kohteen tyyppi; puuttuva kenttä on rakennus. */
 export const kohteenTyyppi = (kohde) => kohde?.tyyppi ?? 'rakennus';
-/** Piirretäänkö kohde kaupunkikartalle. */
-export const kohdeKartalla = (kohde) => KARTAN_KOHDETYYPIT.has(kohteenTyyppi(kohde));
+/**
+ * Piirretäänkö kohde kaupunkikartalle. TARINAKOHDE JÄÄ (Fablen päätös 26.9.2026,
+ * vaihtoehto A): ei-paikka, joka kantaa karttanoston (`nosto`: skandaali,
+ * historian hetki, syvennys), pysyy kartalla, koska kaupunkikartta on sen
+ * ainoa paikka (omistaja 2.9.2026, kaupunkikatto) — kunnes Sisältökirjuri
+ * siirtää sen ja poistaa linkin. Nyt piiloon menevät 11 ei-paikkaa ilman nostoa.
+ */
+export const kohdeKartalla = (kohde) => KARTAN_KOHDETYYPIT.has(kohteenTyyppi(kohde)) || Boolean(kohde?.nosto);
 /** Kaupunkikartan näkyvät kohteet järjestyksessään (numero = indeksi + 1). */
 export function kaupunkikartanKohteet(kartta) {
   return (kartta?.kohteet ?? []).filter(kohdeKartalla);
