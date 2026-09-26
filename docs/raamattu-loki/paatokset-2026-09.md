@@ -7367,3 +7367,7 @@ Natiiviseppa (natiiviseppa/s10-sse f3c15204, iPad Pro 13): SSE vaihtuu ajossa il
 ## V181 (1.50) DELTA TUOTANNOSSA: 170-KUVAT MUKANA, 174B-MERKIT VAATIVAT NATIIVIN KOODIMUUTOKSEN (26.9.2026 klo 20.45)
 
 Siirtoseppa: delta v2278+v2279 → 1.x v181 (812aa429d) ilman skeemamuutosta; Euroopan 21 nostosta 20 kuvallisia (IRL ouzel-galleyn-mysteeri puuttuu), osoitteet 200. Merkit huuto/elain/hetki ovat amparissa mutta natiivi valitsee merkin kovakoodatusta NostoSaannot.Kuvamerkit-taulusta (NostoSaannot.cs:250) → Natiivi-UI lisaa avaimet + elaintayn kytkennan 174-erassa; Siirtoseppa ajaa simulaattorikierroksen sen jalkeen ja todentaa taustapaivityksen laitteella.
+
+## NOSTOSAANTO YHTENAISTETTY: LOYTAMATON EI HIMMEA, KYNNYS 2,5 MYOS NATIIVIIN (26.9.2026 klo 20.48)
+
+Pelikoodari osoitti ristiriidan: web ei himmenna loytamatonta (omistaja 21.9., loytosumu vain ?loytosumu=1), natiivin 174 himmensi ja elavan kartan suunnitelma sanoi himmeina musteen jalkina; web nayttaa kuvamerkin vasta kertoimesta 2,5, natiivi kaikilla zoomeilla. Fable: web on malli — loytamaton EI himmea missaan (myos 3D-mallit samat loydetylle ja loytamattomalle), kerroin ≥ 2,5 → kuvamerkki webin koossa (24/42/47, 22/30 px), alle → lajin minikuvake 12–16 px (ei piste, ei laikka; webiin minikuvake oletukseksi), 3D-malli vain ≥ 2,5 ja kallistus ≥ 25°. Elavan kartan kohta 4 (reittihistoria kynaviivana) valmis natiivissa; webiin ei tehda (web yllapidossa). Kysymysvartija riittava (tasan 2/kohde).
