@@ -3,7 +3,7 @@
 // niiden asennon Linssisepän liikeytimestä (Ydin/Elava/ErikoisLiike: perusliike, harvinainen tapahtuma, reaktio, yövalot).
 // Tivolin säännöt: ruudulla liikkuu enintään 3 mallia (keskustaa lähimmät, hystereesi), vähennetty liike ja Staattinen
 // pysäyttävät pehmeästi (0,6 s), ja kun mikään ei liiku, elävä kerros lepää (0 kehystä). Reaktio: kamera alle 60 km:n päässä
-// herättää mallin, ja noston löytö (PeliOhjain.NostoLoytyi) käynnistää kohteen kuuluisan hetken. Yö = todellinen paikallinen
+// herättää mallin, ja kortin jokainen avaus (Nostokortti.Avattu) käynnistää kohteen kuuluisan hetken. Yö = todellinen paikallinen
 // yö kohteessa (Aurinko.AurinkoEcef, aurinko alle −6°).
 // Komento: "erikois tila | tapahtuma <avain> | yo 0|1|auto | 0|1".
 using System;
@@ -58,19 +58,15 @@ namespace Matkakirja.Natiivi
             instanssi.ohjain = o;
             instanssi.georeferenssi = kierto.georeferenssi;
             instanssi.kamera = kierto.GetComponent<Camera>();
-            o.StartCoroutine(instanssi.KytkeLoydot());
+            Nostokortti.Avattu += instanssi.Avattu;
         }
 
-        /// <summary>Noston löytö (ensimmäinen avaus) käynnistää kohteen tapahtuman: pelaaja löytää Mont-Saint-Michelin →
-        /// kevätvuoksi, Stonehengen → auringonnousu, Colosseumin → velarium.</summary>
-        System.Collections.IEnumerator KytkeLoydot()
+        /// <summary>Kortin jokainen avaus (napautus, Natiivi-UI:n Nostokortti.Avattu 27.9.; myös toinen avaus ja lisäkaupungin
+        /// kortti) käynnistää kohteen tapahtuman: Mont-Saint-Michel → kevätvuoksi, Stonehenge → auringonnousu, Colosseum →
+        /// velarium. Tapahtuma odottaa, kunnes malli näkyy (kortin sulkeuduttua kartalla).</summary>
+        void Avattu(string id)
         {
-            while (PeliOhjain.Instanssi == null) yield return null;
-            PeliOhjain.Instanssi.NostoLoytyi += t =>
-            {
-                if (t == null || t.Id == null) return;
-                if (mallit.TryGetValue(t.Id, out var m)) m.Tapahtuma = true;
-            };
+            if (id != null && mallit.TryGetValue(id, out var m)) m.Tapahtuma = true;
         }
 
         public static void Testi(string arvo, LinssiOhjain o)
@@ -102,7 +98,7 @@ namespace Matkakirja.Natiivi
         }
 
         void OnDisable() { if (kaynnissa != null) ElavaKerros.Poista(kaynnissa); }
-        void OnDestroy() { if (instanssi == this) instanssi = null; }
+        void OnDestroy() { Nostokortti.Avattu -= Avattu; if (instanssi == this) instanssi = null; }
 
         void Rakenna()
         {
