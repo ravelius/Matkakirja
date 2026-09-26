@@ -7327,3 +7327,7 @@ Natiiviseppa: muodot ovat tason 1 arkkityyppeja suoraan ylhaalta (kupoli = luola
 ## 175/175b KOODATTU natiiviseppa/loydos175 76d3b05c (26.9.2026 klo 20.10)
 
 Natiiviseppa: mallit vasta kertoimesta 2,5 JA kallistuksesta ≥ 25° (hystereesi 3°), muuten lajin 2D-symboli OnMallin kautta; koko 22 → 44 pt zoomin mukana (tasot 2–3 × 0,6/0,45), LOD0 lahikuvassa (raja 14 pt); varjostin valo 0,5 + 0,5 N·L, musteinen kaiverrusreuna, loytamattoman himmennys vain savyyn. Testikaannos kaynnissa; kuvaparit Ranska (maataso, keskitaso, lahi, lahi 2; ylhaalta + kallistettuna) omistajan kuvia vasten → Fable → omistajan kortti ennen TF 1.0.26.
+
+## OMISTAJA HYVAKSYI 172 JA PARIISIN ILMAPALLON 1.0.26:EEN; 170 EUROOPPA PR 3343 (26.9.2026 klo 20.13)
+
+Kortti 20.2x: 172 (kone lahikuvassa vaakasuorassa 10 km, kaari ≤ 150 km) HYVAKSYTTY → junassa 99e01a78; Pariisin ilmapallo (kokeilu 3, 536 kolmiota, 30 fps, 26 s jakso) HYVAKSYTTY 1.0.26:een pelikokeiluun (merge-pyynto 89e921be Natiivisepalla). Kuvaparit proto-3d/lokit/linssiseppa-lento-172-jalkeen/ ja linssiseppa-ilmapallo-20260926-b/. Sisaltokirjuri: 170 Eurooppa valmis PR #3343 v2278, 26/27 Commons-kuvaa (IRL ouzel-galleyn-mysteeri ilman lisenssikelpoista kuvaa → havainnekuva myohemmin), testit 4423; jatkaa maakunta-era 2 (HUN/SWE/NOR/IRL). Linssiseppa seuraavaksi ISS-kaukonakyman kuvapari, sitten Venetsian gondolit.
