@@ -97,11 +97,23 @@ namespace Matkakirja.Natiivi
         /// silmukka kartalla, saapumisluenta ei kesken (Pelikoodarin 162, myös jonossa), ei puhetta (isoisä tai pulu), ei matkakirjakorttia (Natiivi-UI:n KorttiAukiKysely), ei kuvien
         /// sumennusta, porttia eikä linssiä.
         /// </summary>
-        internal static bool KarttaHiljaa() =>
-            PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.Tila == SilmukanTila.Kartta && PeliOhjain.Instanssi.SoivaLuento == null &&
-            !PeliOhjain.Instanssi.SaapumisluentaKesken &&
-            !(Puhe.Instanssi != null && Puhe.Instanssi.Soi) && !(KorttiAukiKysely?.Invoke() ?? false) && !PalloKierto.KuvaSumea &&
-            !PalloKierto.PorttiSumea && LinssiOhjain.Rekisteri?.Auki == null;
+        internal static bool KarttaHiljaa() => HiljaisuudenEste() == null;
+
+        /// <summary>Ensimmäinen syy, miksi kartta ei ole hiljaa (lokiin odotuksen ajalta), tai null.</summary>
+        internal static string HiljaisuudenEste()
+        {
+            var po = PeliOhjain.Instanssi;
+            if (po == null) return "ei peliä";
+            if (po.Tila != SilmukanTila.Kartta) return "tila " + po.Tila;
+            if (po.SoivaLuento != null) return "luento soi";
+            if (po.SaapumisluentaKesken) return "saapumisluenta kesken";
+            if (Puhe.Instanssi != null && Puhe.Instanssi.Soi) return "puhe soi";
+            if (KorttiAukiKysely?.Invoke() ?? false) return "kortti auki";
+            if (PalloKierto.KuvaSumea) return "kuvasumennus";
+            if (PalloKierto.PorttiSumea) return "portti";
+            if (LinssiOhjain.Rekisteri?.Auki != null) return "linssi auki";
+            return null;
+        }
 
         /// <summary>Natiivi-UI asettaa: matkakirjakortti (tai muu saapumisen kortti) on auki.</summary>
         public static Func<bool> KorttiAukiKysely;

@@ -127,6 +127,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         bool odotaHiljaisuutta;
         float hiljaaAlkaen = -1, odotusAlkoi;
+        string edellinenEste;
         public const float VapaaS = 0.6f, OdotusMaxS = 600f;
         string maa;
         LatLon keskus;
@@ -960,7 +961,9 @@ namespace Matkakirja.Natiivi
                 return;
             }
             float nyt = Time.realtimeSinceStartup;
-            if (!ElavaHerays.KarttaHiljaa()) { hiljaaAlkaen = -1; return; }
+            string este = ElavaHerays.HiljaisuudenEste();
+            if (este != edellinenEste) { Kirjaa($"odottaa {nyt - odotusAlkoi:F1} s: {este ?? "hiljaa"}"); edellinenEste = este; }
+            if (este != null) { hiljaaAlkaen = -1; return; }
             if (hiljaaAlkaen < 0) { hiljaaAlkaen = nyt; return; }
             if (nyt - hiljaaAlkaen < VapaaS) return;
             // Kartta hiljaa: kamera saapumisnäkymään (sama ajo kuin laskussa) ja kohtaus soi alusta.
