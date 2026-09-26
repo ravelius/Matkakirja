@@ -903,7 +903,8 @@ test('pallon poltto: osat rinnakkain, vienti rinnakkain, ei yhtä prosessia', ()
   assert.match(poltto, /lokit\/\$nimi\.valmis/, 'valmista osaa ei ohiteta uusinnassa');
   // Vienti: rinnakkaisuus ja aikakatkaisu jokaiseen kutsuun.
   assert.match(poltto, /max_concurrent_requests/, 'viennin rinnakkaisuutta ei nosteta');
-  const kutsuja = (poltto.match(/aws s3 (sync|cp)/g) ?? []).length;
+  // Kaikki ämpärikutsut (myös delta-polton cp/ls/s3api, 26.9.2026).
+  const kutsuja = (poltto.match(/aws s3(api)? /g) ?? []).length;
   const katkaisuja = (poltto.match(/--cli-connect-timeout/g) ?? []).length;
   assert.equal(katkaisuja, kutsuja, 'jokainen aws-kutsu tarvitsee --cli-connect-timeout');
   // Pelkkä pallo ilman pyramidia (myös työnkulun sarjat-syötteestä).

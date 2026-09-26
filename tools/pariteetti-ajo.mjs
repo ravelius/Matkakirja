@@ -190,6 +190,7 @@ async function webTekstit(nakyma, kokoEnsin, kattoMs = 10 * 60 * 1000) {
  */
 async function tunnisteet(r, l, natiivinPerus) {
   if (r.tunniste) return [normalisoi(r.tunniste)];
+  if (r.vartioimaton) return [];
   if (!r.web) return [];
   const [nakyma, kartta] = await Promise.all([webTekstit(r.web, koko(l)), webTekstit('kartta', koko(l))]);
   if (!nakyma) return [];

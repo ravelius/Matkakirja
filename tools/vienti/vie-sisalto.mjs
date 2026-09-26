@@ -205,8 +205,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.49 pikkukuva = ämpäriosoite (https) tai null: maakuntasalaisuudet.pikkukuva (+ pikkukuvaLahde) ja moduulin
  *        js/packs/maakunnat-luonnehdinnat.js alueiden pikkukuva (datan polku/tunnus muunnetaan osoitteeksi,
  *        tools/vienti/elava-kartta.mjs pikkukuvaOsoite) — Fable 26.9.2026, löydökset 115 ja 158. Elävä kartta.
+ *   1.50 aanitaulut: laji musiikkiaihe (aloituslento, loppu, ratkaisu, epaonnistuminen, saapuminen-<maanosa>; tunnus, url)
+ *        ja musiikkiketju.maanosa — Pelikoodari 26.9.2026, musiikkisuunnitelman vaihe 2 (#3304, #3314).
  */
-export const SKEEMAVERSIO_TARKKA = '1.49';
+export const SKEEMAVERSIO_TARKKA = '1.50';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
