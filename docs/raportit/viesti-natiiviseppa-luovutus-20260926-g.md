@@ -60,7 +60,7 @@ verhokoe; napakansi; Elävän kartan pallon rajapinnat. Omistajan valinnat 127/1
 Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /tmp/natiiviseppa-vienti-tulossa oli päällä
 03.45 alkaen). Worktreet (3/3 käytössä yllä olevilla haaroilla). Unity-työkopio Matkakirja-proto: puhdas master 6a65ead1.
 
-**Alin rivi:** build 17 masterissa (6a65ead1), build 18 -juna 541092d9 käynnissä. Seuraavaksi: 144-koekuvat, suspend-A/B,
+**Alin rivi:** build 17 masterissa (6a65ead1), BUILD 18 -juna LEIKATTU 541092d9 (Fable 04.4x). Seuraavaksi: 144-koekuvat, suspend-A/B,
 132 yhdessä Natiivi-UI:n kanssa, verhokoe huntu pois, napakansi.
 
 ## Päivitys klo 04.2x
@@ -81,3 +81,9 @@ Kuten -f (koemerge, jumivahti, simulaattorin mutex ja ikkunalippu, vientilippu /
   käännös 688e1f5c, lokit/natiivi-ui-b18-lepo/merge-pyynto-144.md): kartta 247/247 kaikki UI-kerrokset 0 → Paikallaan; kartussi
   + lippu auki Paikallaan. SHA Fablelle. Laitetestaajan kierros ja BUILD 18 vasta Fablen ohjeesta (omistajan herättyä, kiintiö).
   Omista haaroista jäljellä vain lepo-suspend 651ad27b (A/B yhdistelmäkäännöksellä taustalla).
+- **Klo 04.4x BUILD 18 LEIKATTU juna/b13 541092d9** (Fablen käsky: kiintiö täyttyy ~05.00). Juna ei ota muuta ennen kierrosta.
+  Vahdin käännös 04.31 oli 622f99f3 (ilman liput-144:ää); 541092d9:n käännös käynnistetty juna-ajo.sh:lla sen perään (jonottaa
+  lukkoa) → Laitetestaajan ja pariteetin simulaattorit. JOS KESKEN: tarkista lokit/kaannospalvelu/juna.log viimeinen
+  "KÄÄNNETTY <käännös> juna/b13" -rivi, varmista käännöksen toinen vanhempi = 541092d9 (git -C Matkakirja-proto-kaannos log -1
+  --format=%p <käännös>), ilmoita käännös-SHA Laitetestaajalle ja Fablelle. Master-merge vasta PASSin jälkeen (puu = käännöksen puu).
+  Yhdistelmäkäännös (suspend-A/B) peruttu; lepo-suspend 651ad27b odottaa build 19:ää.
