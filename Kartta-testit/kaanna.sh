@@ -1,6 +1,6 @@
 #!/bin/sh
 # Kartan puhtaat funktiot (Assets/Matkakirja/Kartta/*.cs ilman UnityEngineä: Saapumisnakyma.cs, NimiLadonta.cs,
-# LennonAikajana.cs, Panorointi.cs, NostoSaannot.cs, Maakuntajako.cs + Linssien Kamerakoreografia.cs, MaatAineisto.cs + MastoGeometria.cs; lista LAHTEET: yksi tiedosto per rivi,
+# LennonAikajana.cs, Panorointi.cs, NostoSaannot.cs, Maakuntajako.cs, ArkkityyppiKartoitus.cs + Linssien Kamerakoreografia.cs, MaatAineisto.cs + MastoGeometria.cs; lista LAHTEET: yksi tiedosto per rivi,
 # jotta haarojen lisäykset yhdistyvät junassa rivien unionina) ja
 # testit Unityn mukana tulevalla dotnetilla ja Roslynilla ilman editoria. Sama kaava kuin
 # Peli-testit/kaanna.sh (oma testiajuri Testit/Ajuri.cs); JSON luetaan pelin MiniJsonilla.
@@ -24,6 +24,7 @@ VIITTEET="$VIITTEET -r:$REF/System.Private.CoreLib.dll -r:$REF/netstandard.dll -
 # Lähteet yksi per rivi (juna yhdistää haarojen lisäykset rivien unionina).
 LAHTEET="
 ../Assets/Matkakirja/Peli/MiniJson.cs
+../Assets/Matkakirja/Kartta/ArkkityyppiKartoitus.cs
 ../Assets/Matkakirja/Kartta/EtusivunLento.cs
 ../Assets/Matkakirja/Kartta/Geojson.cs
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs

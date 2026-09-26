@@ -33,9 +33,13 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void NousuEstaa()
         {
-            // 90 → 100 % tahdilla 5 %/s: nousee 1,5 %-yks / 300 ms, joten kelpaa vasta 100 %:ssa (t = 2 s).
+            // 90 → 100 % tahdilla 5 %/s: nousee 1,5 %-yks / 300 ms (> Nousu), joten alle KorkeaRajan ei kelpaa; 96 %:ssa
+            // (t = 1,2 s) nousu ≤ KorkeaNousu kelpaa (verho-96).
             double t = EnsimmainenValmis(s => (float)System.Math.Min(100.0, 90.0 + 5.0 * s));
-            Oleta.Tosi(System.Math.Abs(t - 2.0) < 0.02, $"t {t:0.000}");
+            Oleta.Tosi(System.Math.Abs(t - 1.2) < 0.02, $"t {t:0.000}");
+            // Nopea nousu 10 %/s (3 %-yks / 300 ms > KorkeaNousu) ei kelpaa 96 %:ssa, vaan vasta 100 %:ssa (t = 1 s).
+            double n = EnsimmainenValmis(s => (float)System.Math.Min(100.0, 90.0 + 10.0 * s));
+            Oleta.Tosi(System.Math.Abs(n - 1.0) < 0.02, $"nopea t {n:0.000}");
             // Hidas nousu 2 %/s (0,6 %-yks / 300 ms) kelpaa, kun ikkuna on katettu.
             double h = EnsimmainenValmis(s => (float)System.Math.Min(99.0, 91.0 + 2.0 * s));
             Oleta.Tosi(h >= 0.3 - 1e-9 && h < 0.35, $"hidas t {h:0.000}");
