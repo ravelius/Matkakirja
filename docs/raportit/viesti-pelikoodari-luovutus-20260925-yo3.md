@@ -220,3 +220,15 @@ MUSIIKKI VAIHE 2 (§5 kohta 2, 14 raitaa): ensimmäinen ajo 36221821019 teki 5 (
 - 153+155 natiivikuvat: skriptit lokit/loydos155/kreikka-natiivi.sh (kerroin 3 iteroiden, valinnainen kallistus) ja
   lokit/loydos153/kallistus-kuva.sh (korjattu: ui sulje + aja kaari 6,2). Yhdistetty käännös proto-kaanna.sh
   pelikoodari/loydos153+pelikoodari/loydos155; ennen = lokit/musiikki-v1/Matkakirja3D-f994.app.
+
+## 21. Lisäys 26.9. klo 10.4x
+- #3304 mainissa (v2261), mukana vaihe 2 -työkalut; web-worktree musiikki-vaihe1 poistettu.
+- 155 + 153 KUVAPARIT valmiit ja omistajalla (SendUserFile) + Fablella: lokit/loydos155/{web,natiivi}-kuvapari.png,
+  lokit/loydos153/kuvapari-kallistus.png. Natiivikäännös 372cb505 (lokit/loydos155/Matkakirja3D-153-155.app).
+  Web-savukkeeseen löytyi ja korjattiin: kuvamerkkiPieni piti kantaa GL-datumiin (nostot.js datumkopio). Web-PR vasta
+  omistajan hyväksynnän jälkeen. Natiiviseppä otti 153+155 juna/b13 e86fd248:aan.
+- Build 20 E (saapuminen-valimeri): EI VIKAA, todennettu (lokit/loydos155/e-musiikki.log); Laitetestaajan FAIL = edellisen
+  testin loppu-aihe soi vielä (tunnus ei katkaise aihetta, kuten web). Natiivisepälle kerrottu.
+- 160 (3D-symbolinostot, Natiiviseppä): data lokit/loydos160-arkkityypit.txt (GRC taso 1 + sääntöehdotus + 185 taso 1 -riviä).
+- Skriptit: lokit/loydos155/kreikka-natiivi.sh (muste loyda kaikki GRC → aja → nipistys kerroin ~3 → [kallistus]),
+  kreikka-web.mjs (web, kerroin iteroiden), e-musiikki.sh.
