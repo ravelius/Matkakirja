@@ -159,3 +159,4 @@ Kohdat 4–5 (yövalomaski, laiva, boidit) myöhemmin.
   ElavaPallo.Paljastus/PaljastusPois → Varitaso, PysyvatKerrokset → MaaKartta/NostoKerros.Saapuminen(!n),
   PalloKierto.SaapuminenAlkaa/Paattyi → ElavaPallo.IlmoitaSaapuminenAlkaa(kesto)/IlmoitaSaapuminenPaattyi().
 - juna/b13 **827248ed**: + kohta1-mukana afe25e63 (tehosteäänet 19 efekti + 4 freesound buildiin, Aanet käyttää Mukana-polkua).
+- Linssiseppä kytki ElavaKartan suoraan rajapintoihini haarassa linssiseppa/elava-kartta 8e5eef7c (sisältää elava-saapuminen 98d0db40) → erillistä kytkentäcommitia EI tarvita. Mergejärjestys: natiiviseppa/elava-saapuminen (tippi 041b98b4) ensin, sitten linssiseppa/elava-kartta, kun Linssiseppä ilmoittaa simulaattorikuvat.
