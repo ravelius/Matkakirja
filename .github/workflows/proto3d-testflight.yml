@@ -218,6 +218,18 @@ jobs:
             mv Build/yo "$sivu" && { rm -rf "$sivu" >/dev/null 2>&1 & }
             echo "::warning::Build/yo ei poistunut viidellä yrityksellä; siirretty sivuun ($sivu)"
           fi
+          # ISS-rata mukaan buildiin (Natiiviseppä 26.9.2026, Linssisepän ISS/SGP4): julkaistu
+          # media.matkakirja.app/data/iss-tle.json (#3334, CI päivittää 6 h välein). Ei pakollinen:
+          # ilman tiedostoa lataaja hakee ämpäristä tai käyttää havainnollista rataa. Palautus alla
+          # (git clean) poistaa tiedoston viennin jälkeen.
+          mkdir -p Assets/StreamingAssets/mukana
+          if curl -fsS --max-time 20 "https://media.matkakirja.app/data/iss-tle.json?t=$(date +%s)" -o Assets/StreamingAssets/mukana/iss-tle.json \
+             && grep -q '"rivi1":"1 25544U' Assets/StreamingAssets/mukana/iss-tle.json; then
+            echo "ISS-TLE mukana: $(grep -o '"haettu":"[^"]*"' Assets/StreamingAssets/mukana/iss-tle.json)"
+          else
+            rm -f Assets/StreamingAssets/mukana/iss-tle.json
+            echo "::warning::ISS-TLE ei saatu ämpäristä; build ilman sitä (lataaja hakee ajossa)"
+          fi
           # Kohtaus generoidaan koodista ennen vientiä kuten käännöspalvelussa (proto-kaanna.sh):
           # masterin Pallo.unity ei ole aina tuore (build 13: kohtausta ei committoitu mergessä),
           # ja IosTestFlight kutsuu LuoPalloa vain, jos kohtaustiedosto puuttuu.
