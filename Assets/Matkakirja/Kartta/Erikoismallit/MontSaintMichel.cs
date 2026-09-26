@@ -156,16 +156,30 @@ namespace Matkakirja
             return r.Verkko("MontSaintMichel");
         }
 
-        /// <summary>Vuorovesihiekka: kiekko saaren alla ja ympärillä (osa ilman ääriviivaa, ettei malli näytä mitalilta).</summary>
+        /// <summary>
+        /// Vuorovesihiekka: loiva kartio, joka nousee reunalta (y 0, säde 0,5) rantaan (y 0,009, saaren ellipsi). Nouseva vesi
+        /// (tasainen levy) peittää sen siksi vähitellen ulkoreunalta kohti saarta, kuten vuoksi hiekkasärkillä. Osa ilman
+        /// ääriviivaa, ettei malli näytä mitalilta.
+        /// </summary>
         static Mesh MontSaintMichelHiekka()
         {
             var r = new Rakentaja();
-            r.Kiekko(new Vector3(0f, 0.002f, 0f), 0.5f, 0.5f, 32, EmHiekka);
+            const int n = 32;
+            for (int i = 0; i < n; i++)
+            {
+                float a0 = i * Mathf.PI * 2f / n, a1 = (i + 1) * Mathf.PI * 2f / n;
+                Vector3 s0 = new Vector3(Mathf.Cos(a0) * 0.385f, MsmHiekkaRanta, Mathf.Sin(a0) * 0.315f), s1 = new Vector3(Mathf.Cos(a1) * 0.385f, MsmHiekkaRanta, Mathf.Sin(a1) * 0.315f);
+                Vector3 u0 = new Vector3(Mathf.Cos(a0) * 0.5f, 0f, Mathf.Sin(a0) * 0.5f), u1 = new Vector3(Mathf.Cos(a1) * 0.5f, 0f, Mathf.Sin(a1) * 0.5f);
+                r.NelioUlos(s0, u0, u1, s1, Vector3.up, EmHiekka);
+            }
             return r.Verkko("MontSaintMichel-hiekka");
         }
 
-        /// <summary>Vesi: rengas saaren rannasta hiekkakiekon reunaan. Animaatio siirtää sitä pystysuunnassa hiekan alta (−0,012)
-        /// sen päälle (+0,010).</summary>
+        /// <summary>Hiekan korkeus rannassa (reunalla 0).</summary>
+        const float MsmHiekkaRanta = 0.009f;
+
+        /// <summary>Vesi: tasainen rengas saaren rannasta hiekan reunaan. Animaatio nostaa sitä hiekan alta (−0,002) rannan yli
+        /// (+0,011): vesiraja etenee hiekkakartiolla reunalta saarta kohti.</summary>
         static Mesh MontSaintMichelVesi()
         {
             var r = new Rakentaja();
@@ -173,8 +187,8 @@ namespace Matkakirja
             return r.Verkko("MontSaintMichel-vesi");
         }
 
-        /// <summary>Kevätvuoksen vaahtoviiva: kapea vaalea rengas hiekkakiekon reunalla. Animaatio kutistaa sen kohti rantaa
-        /// (vaakaskaala 1 → 0,84) ja nostaa veden mukana.</summary>
+        /// <summary>Kevätvuoksen vaahtoviiva: kapea vaalea rengas hiekan reunalla (keskisäde 0,4825). Animaatio kutistaa sen
+        /// vesirajan mukana kohti rantaa ja nostaa veden mukana.</summary>
         static Mesh MontSaintMichelVaahto()
         {
             var r = new Rakentaja();
@@ -213,7 +227,7 @@ namespace Matkakirja
         {
             new LiikkuvaOsaMaaritys { Nimi = "hiekka", Verkko = MontSaintMichelHiekka, Pivot = Vector3.zero, Liike = Liike.Liuku, Laajuus = 0f },
             new LiikkuvaOsaMaaritys { Nimi = "vesi", Verkko = MontSaintMichelVesi, Pivot = Vector3.zero, Liike = Liike.Nousu,
-                Akseli = Vector3.up, Nopeus = 1f / 60f, Laajuus = 0.022f, KayS = 105f, TaukoS = 60f },
+                Akseli = Vector3.up, Nopeus = 1f / 60f, Laajuus = 0.013f, KayS = 105f, TaukoS = 60f },
             new LiikkuvaOsaMaaritys { Nimi = "vaahto", Verkko = MontSaintMichelVaahto, Pivot = Vector3.zero, Liike = Liike.Aalto,
                 Akseli = Vector3.up, Laajuus = 0.16f },
             new LiikkuvaOsaMaaritys { Nimi = "patsas", Verkko = MontSaintMichelPatsas, Pivot = MsmPatsas, Liike = Liike.Valahdys,

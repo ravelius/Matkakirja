@@ -41,10 +41,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(a.Kevat, "kevätvuoksi alkoi");
             Aja(a, 2.5, Normaali);
             var v = a.Asento("vaahto");
-            Oleta.Tosi(v.Skaala < 1 && v.Skaala > 0.84, "vaahto kiertää kohti rantaa: " + v.Skaala);
-            Aja(a, 3, Normaali);
-            Oleta.Tosi(a.Taso > 0.99, "nousu 5 s:ssa");
+            Oleta.Tosi(v.Skaala < 1.03 && v.Skaala > 0.8, "vaahto kiertää kohti rantaa: " + v.Skaala);
             Aja(a, 1.5, Normaali);
+            Oleta.Tosi(a.Asento("vaahto").Skaala < v.Skaala, "vesiraja etenee saarta kohti");
+            Aja(a, 1.2, Normaali);
+            Oleta.Tosi(a.Taso > 0.99, "nousu 5 s:ssa");
+            Aja(a, 1.2, Normaali);
             Oleta.Tosi(a.Asento("patsas").Skaala > 1.2, "patsas hehkuu huipulla");
         }
 

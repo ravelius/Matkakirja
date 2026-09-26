@@ -133,7 +133,9 @@ namespace Matkakirja.Linssit.Elava
     /// </summary>
     public sealed class MontSaintMichelLiike : ErikoisAnimaatio
     {
-        public const double Matalalla = -0.012, Nousu = 0.022, NousuS = 14, KevatNousuS = 5, LaskuS = 14, PulssiS = 3;
+        /// <summary>Veden korkeus matalalla (hiekan alla) ja nousu (rannan yli); hiekka nousee reunalta (0) rantaan (0,009),
+        /// joten vesiraja etenee reunalta saarta kohti. Vaahtoviivan keskisäde on 0,4825 ja ranta noin 0,39.</summary>
+        public const double Matalalla = -0.002, Nousu = 0.013, HiekkaRanta = 0.009, NousuS = 14, KevatNousuS = 5, LaskuS = 14, PulssiS = 3;
         enum Vaihe { Matala, Nousee, Korkea, Laskee }
         Vaihe vaihe = Vaihe.Matala;
         double aika, kesto, alkuTaso, taso, pulssi = -1;
@@ -175,9 +177,14 @@ namespace Matkakirja.Linssit.Elava
             {
                 case "vesi": return new OsanAsento { Qw = 1, Skaala = 1, Y = Matalalla + Nousu * taso };
                 case "vaahto":
+                {
                     if (!(kevat && vaihe == Vaihe.Nousee)) return OsanAsento.Piilossa;
-                    double p = Pehmea(aika / kesto);
-                    return new OsanAsento { Qw = 1, Skaala = 1 - 0.16 * p, Y = Matalalla + Nousu * taso + 0.0005 };
+                    // Vesiraja hiekkakartiolla: korkeus y peittää säteeseen 0,5 − 0,11 · y / ranta asti.
+                    double y = Matalalla + Nousu * taso;
+                    double raja = 0.5 - 0.11 * Math.Max(0, Math.Min(1, y / HiekkaRanta));
+                    if (y < 0) return OsanAsento.Piilossa;
+                    return new OsanAsento { Qw = 1, Skaala = raja / 0.4825, Y = y + 0.0004 };
+                }
                 case "patsas": return new OsanAsento { Qw = 1, Skaala = pulssi >= 0 ? 1 + 0.45 * Math.Sin(Math.PI * pulssi / PulssiS) : 1 };
                 case "valot": return Valot();
                 default: return OsanAsento.Lepo;
