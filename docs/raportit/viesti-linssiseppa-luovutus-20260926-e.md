@@ -33,11 +33,11 @@ Jatkaja lukee tämän ja viesti-linssiseppa-aloitus.md:n.*
 
 ## Kesken
 
-- **linssiseppa/tehoste-rekisteri** 22fb1aae (wt/proto-linssiseppa-aanet): keksinto (4) ja vuosi (8) rekisteröidään
-  Pelikoodarin Aanet.RekisteroiTehoste-väylälle. Haara riippuu pelikoodari/humina-muunnelmista: niissä on huminan
-  kompressori pois ja 600 ms:n ulosfeidi. Testit 300/300. Käännös odottaa junaa (scratchpad kaanna.sh rekisteri …).
-  Sen jälkeen ajetaan äänimittaus (`APPNIMI=rekisteri VAIHEET=15 ajo-im2.sh`) ja tehdään merge-pyyntö Natiivisepälle.
-  Odotus: soivissa `oma:keksinto`, ja huminan RMS noin 0,021 (ennen 0,042).
+- **linssiseppa/tehoste-rekisteri** 859b937a on merge-pyynnössä Natiivisepällä build 19 -junaan (klo 04.5x). Build 18 on
+  masterissa 43a6347c. Mittaus:
+  - väylä hyväksyy soitot
+  - klikkien RMS 0,00732 → 0,00799 (odotus 0,0081)
+  - humina 0,042 → 0,020, kun kompressori on pois kuten webissä
 - **Elävä kartta:** jatko omistajan palautteen mukaan.
   - Rajapinnat sovitaan Natiivisepän kanssa: Paljastus, Viivapiirto, Maakuntavari, Aurinko, Yovalot-maski ja Boidit.
   - Nostojen kokoluokat tulevat datana, ja Pelikoodarilla on haara pelikoodari/elava-kartta junassa.
