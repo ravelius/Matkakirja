@@ -7495,3 +7495,7 @@ Omistaja 22.0x: merelle muutama koristeanimaatio kerralla nakyviin; lopulta kymm
 ## 176 KORJATTU: 4 PORTTIA LAATTAPALVELIMEEN (6 → 24 YHTEYTTA), JUNASSA 83e2fb1e (26.9.2026 klo 21.59)
 
 Natiiviseppa iPad Pro 13: iOS sallii 6 yhteytta per isanta+portti; korjaus 4 porttia (pohja, maasto, kerma, muu) → huippu 24; kylma loitonnus Eurooppaan ilman aukkoja 2 s:ssa, portti PASS (WiFissa hyoty nakyy laskureissa, hitaalla verkolla suurin). Kerman uusinta mukana. Juna/b13 83e2fb1e, kaannos Laitetestaajalle → BUILD 26. Lipun liioiteltu perspektiivi EI 1.0.26:een (kangas litistyy keskella, tanko makaa sivulla) → 1.0.27 symbolien kanssa; lipun piilotus Euroopan mittakaavassa mukana.
+
+## 178 PAATOS: NAHTAVYYSKARTALTA POIS EI-PAIKAT (81), AUKIOT JA LUONTO JAAVAT (26.9.2026 klo 22.01)
+
+Luokittelu (Sonnet-agentti, raportti nahtavyydet-ei-rakennukset-20260926.md): 1 581 kohteesta 250 ei-rakennusta: aukio/katu/alue 91, luonto 78, henkilo/tapahtuma 39, esine/laiva 20, veistos 9, maalaus 8, muu 5; eniten Pariisi 14, Lontoo 13; Santarem ja Broome jaisivat tyhjiksi. Omistaja valitsi kortilla: pois vain ei-paikat (81: taide, esineet, veistokset, henkilot, ilmiot); aukiot ja luonto jaavat kartalle kevyemmalla merkilla. Pelikoodari: tyyppikentta + suodatus (web + natiivi), vartija ≥ 1 kohde/kaupunki; Sisaltokirjuri: siirto museon juttuun galleriana / kaupunkilehden tarina-osioon, Santarem + Broome 2–3 rakennusta.
