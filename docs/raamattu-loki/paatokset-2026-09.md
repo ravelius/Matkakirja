@@ -7311,3 +7311,7 @@ Pelikoodari: jokaisella nostolla on symboli datassa (taso 1: 177 kuvamerkki + 8 
 ## 174B: KOLME UUTTA KUVAMERKKIA (HUUTO, ELAIN, HETKI) (26.9.2026 klo 19.53)
 
 Natiiviseppa: tasojen 2–3 paakartan nostoista 1 972/2 590 saa symbolin webin 155-kaavalla (11 merkki-*.png); 618 ilman kuvamerkkia myos webissa: huuto 256, elain 189, kaupunki 138 (kaupunkimerkki), hetki 24, luonto 10 (vuori/meri). Fable: Pelikoodari tekee merkki-huuto, merkki-elain ja merkki-hetki samaan kaiverrustyyliin, web + natiivi samat tiedostot, PR junaan; siihen asti minimerkki.
+
+## Z10 OSA 1 VALMIS 20.00: 419/419 AMPARISSA (26.9.2026 klo 20.02)
+
+Karttaseppa: Z10 osa 1 (kaupungit ±1° + fokusmaat) valmis 20.00, 419/419 shardia amparissa: z10 27 991 laattaa (1,25 Gt), z9 8 346 (0,35 Gt), tasmaavat luetteloon; kesto 1,0 h v4:lla, ei kaatumisia. Ajo paattyi koodiin 1 (luettelon vienti estettiin: paikallisesta luettelosta puuttuivat varitasot, amparissa 27 maata) — vahti toimi oikein, ei koske laattoja; luettelo tehdaan ketjun lopuksi koekansioon. Maakunnat (ajo-20260927m) kaynnistetty kasin v4:lla 20.01. Kuvapari GRC z8 vs z10 pyramidi-poltto/kuvat/grc-z8-vs-z10-20260926.png → omistajalle.
