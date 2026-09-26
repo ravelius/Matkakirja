@@ -7403,3 +7403,7 @@ Omistaja 1.0.25 (21.0x, kuva loydos176): Kreikka loitonnettuna Euroopaan — laa
 ## 170 JUURISYY: DELTA ASENTUU MUTTA KUVAT PAIVITTYVAT VASTA UUDELLEENKAYNNISTYKSESSA (26.9.2026 klo 21.06)
 
 Omistaja vahvisti 21.0x: taysi uudelleenkaynnistys → Kreikan maakuntakuvat nakyvat (Attika/Akropolis, Jebulon CC0). Juurisyy: taustapaivityksen delta asentuu, mutta kaynnissa oleva sovellus ei lataa uutta luonnehdinta-/kuvadataa ennen uudelleenkaynnistysta. Korjaus 1.0.26: deltan jalkeen sisalto-vaihtui-tapahtuma (Siirtoseppa) → maakuntakortin data ja kuvavalimuisti uudelleen (Natiivi-UI). Siirtosepan paivityspolkutesti jatkuu todentamaan.
+
+## OMISTAJA HYVAKSYI 175:N; LIPPU PIENENEE LOITONNETTAESSA (26.9.2026 klo 21.08)
+
+Kortti 21.2x: 175 (kynnys 2,5 + kallistus ≥ 25°, mallit 22–40 pt, pergamentti, terrakottakatot, kaiverrusreuna; loydetty = loytamaton) HYVAKSYTTY 1.0.26:een (juna fc182b57, kaannos bbbc410d, 0 poikkeusta; kuvaparit proto-3d/lokit/loydos175d/). Kreikan lippu: GRC-ankkuri [26.01, 41.08] oikein, syy Lipputanko.KorkeusPt vakio ruudulla → Fable: lippu pienenee loitonnettaessa ja piiloutuu Euroopan mittakaavassa (Natiiviseppa). TF 1.0.26 -portit: verho ≤ 3,5 s (regressio 4,7–8,0 s, A/B 171-vartija/laattaera 2) ja 176 juurisyy. Laitetestaaja lisasi reseptiin 176+177 (7ee44db3a).
