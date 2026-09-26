@@ -66,6 +66,22 @@ echo "aani mittaa" > peli-komento.txt   # rms/huippu + soivien url-lista peli-lo
 HUOM (Pelikoodari): tunnus (`kaupunki <id>`) ei katkaise jo soivaa aihetta — testaa tuoreella pelillä
 ennen muita `aani aihe` -kutsuja, tai odota edellisen aiheen loppuvan.
 
+### Musiikki vaihe 2/3 (build 21)
+
+`ratkaisu`/`epaonnistuminen`/`kohtaaminen`/mannerraidat EIVÄT MYÖSKÄÄN katkaise jo soivaa aihetta (sama
+sääntö kuin webissä, kuten yllä). AINA tuoreessa pelisessiossa, ENNEN `aloituslento`/`loppu`-testejä:
+```
+echo "uusi-peli 1 ateena" > peli-komento.txt
+echo "aani aihe ratkaisu" > peli-komento.txt         # tai epaonnistuminen
+echo "aani mittaa 2" > peli-komento.txt              # HETI perään (raita kestää vain 4 s)
+echo "aani tila kohtaaminen paalle" > peli-komento.txt
+echo "aani mittaa 2" > peli-komento.txt
+echo "aani aihe kaupunki kairo" > peli-komento.txt   # manner/tunnuskaupunki (musa-saapuminen-lahi-ita)
+echo "aani mittaa 2" > peli-komento.txt
+```
+Jos näitä ajaa `aloituslento`/`loppu`-testien JÄLKEEN samassa sessiossa, tulos näyttää FAILilta (aihe ei
+soi) vaikka on PASS — vain testijärjestys oli väärä (Fable/Pelikoodari 26.9., löydös build21-kierroksesta).
+
 ## Lipputanko (161, build 21)
 
 Kreikan itäreunassa Traakiassa, 41,08° N / 25,95° E (Aleksandroupolin luoteispuolella). Kamera:
