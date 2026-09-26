@@ -7283,3 +7283,7 @@ Linssiseppa: 168 tulvavari poistettu ElavaHerays.cs:sta (linssiseppa/loydos168 4
 ## OMISTAJA: MAAKUNTATYOT TOISTAISEKSI VAIN EUROOPPAAN (26.9.2026 klo 19.47)
 
 Omistaja 19.4x: maakunta-asiat (170:n puuttuvat maakuntanostokuvat, maakunta-erat, maakuntanostot) tehdaan toistaiseksi vain Eurooppaan. 170: Euroopan maissa puuttuu ≤ 3 kuvaa/maa → Sisaltokirjuri tekee Euroopan puutteet yhtena erana; Euroopan ulkopuoliset 900+ odottavat. Maakunta-era 2 (CHE/PRT/HUN/SWE/NOR/IRL) on Eurooppaa, jatkuu.
+
+## SISALTOKIRJURI NOLLATTU JA KAYNNISTETTY (LUOVUTUS -C 5D32676ED) (26.9.2026 klo 19.48)
+
+Sisaltokirjurin sessio nollattu 19.4x; aloitusviesti lahetetty luovutuksesta -c (5d32676ed). Jono: 170 Euroopan puuttuvat maakuntanostokuvat yhtena erana → maakunta-era 2 → astronautin erat 2–4.
