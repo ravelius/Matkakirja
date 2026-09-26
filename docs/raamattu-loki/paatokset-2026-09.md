@@ -7559,3 +7559,7 @@ Sisaltokirjuri: #3349 (CZE/HRV/BIH/MNE/ALB/MKD/LUX 96) ja #3350 (SRB/BGR/MLT/ISL
 ## NATIIVI-UI ERA VALMIS (5 HAARAA); LUKIJOILTA-AVAIN POISTETAAN UUSI PELISSA (26.9.2026 klo 22.47)
 
 Natiivi-UI: merge-pyynnossa 174 (web-malli, ei himmennysta), 169/170b/173 maakunnat, 170 SisaltoVaihtui-kuuntelija (Siirtosepan kanssa), 178 aukio+luonto kevyt merkki (odottaa #3353), 177-UI (Uusi peli nollaa UI:n istuntomuistit TyhjennaMuistit-haaran paalla); unity-tarkistus 0 virhetta. Fable: Lukijoilta-avain poistetaan Keychainista Uusi pelissa kuten web (web on malli). Natiivi-UI nollataan.
+
+## NATIIVI-UI JA SISALTOKIRJURI NOLLATTU; STRIIMIPUHENAYTTEET OMISTAJALLE (26.9.2026 klo 22.54)
+
+Natiivi-UI luovutus v (d60b571e3): 174 piste-saannolla (1857e8d5) ja maakunnat-kaikki (0c9a3555) junassa juna/b13 8a90b51f; 178 odottaa #3353, 177-UI Pelikoodarin haaran kanssa; Lukijoilta-avain poistuu Uusi pelissa (43ee8146). Sessio nollattu, aloitusviesti lahetetty (vanha jonoviesti valui tyhjaan kontekstiin, kasiteltiin oikein). Sisaltokirjuri luovutus -d (cc379bd0f, mainissa) ja nollaus kaynnissa. Omistaja kuuntelee Flash v2.5 vs gpt-4o-mini-tts -naytteet (samat 3 repliikkia) ja hankkii xAI-avaimen (console.x.ai) → XAI_API_KEY ymparistoon → Pelikoodari generoi samat repliikit Grokilla.
