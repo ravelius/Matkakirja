@@ -205,6 +205,30 @@ namespace Matkakirja
         }
 
         /// <summary>Lähimmän kaupungin id annetusta pisteestä (enintään maxAste asteen päässä), muuten null.</summary>
+        /// <summary>
+        /// LÖYDÖS 166 (omistaja 1.0.21, Pariisi: nappula "nousee ilmaan" kallistettaessa): kaupungin pisteen korkeus
+        /// ellipsoidista (m) — pinta + <see cref="nosto"/> + korkeuskertoimen lisäys, kuten piste piirretään. Pisteen
+        /// ulkopuolella kahden lähimmän kaupungin (≤ 3°) etäisyydellä painotettu keskiarvo, jotta nappula liikkuu
+        /// kaupunkien välillä ilman hyppyä. NaN, jos merkkejä ei ole lähellä.
+        /// </summary>
+        public double PisteenKorkeus(double lat, double lon)
+        {
+            double d1 = double.MaxValue, d2 = double.MaxValue, h1 = double.NaN, h2 = double.NaN;
+            double c = math.cos(math.radians(lat));
+            foreach (var m in merkit)
+            {
+                double dl = m.kaupunki.lat - lat, dp = (m.kaupunki.lon - lon) * c;
+                double d = dl * dl + dp * dp;
+                double h = m.pohjaKorkeus + nosto + KorkeusKerroin.Lisays(m.kaupunki.korkeus);
+                if (d < d1) { d2 = d1; h2 = h1; d1 = d; h1 = h; }
+                else if (d < d2) { d2 = d; h2 = h; }
+            }
+            if (double.IsNaN(h1) || d1 > 9.0) return double.NaN;
+            if (d1 < 1e-8 || double.IsNaN(h2) || d2 > 9.0) return h1;
+            double w1 = 1.0 / math.sqrt(d1), w2 = 1.0 / math.sqrt(d2);
+            return (h1 * w1 + h2 * w2) / (w1 + w2);
+        }
+
         public string LahinId(double lat, double lon, double maxAste = 0.5)
         {
             string id = null;
@@ -455,6 +479,7 @@ namespace Matkakirja
             public TextMeshPro nimio;
             public Vector3 normaali;
             public Vector3 pinta; // paikka georeferenssin koordinaateissa
+            public double pohjaKorkeus; // pinnan korkeus ellipsoidista ennen nostoa (paketti tai maastonäyte), löydös 166
             public int tarkeys;
             public Vector2 koko; // nimiön koko pisteinä
             public float pisteKoko;
@@ -569,6 +594,7 @@ namespace Matkakirja
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
                     new double3(k.lon, k.lat, korkeudet[i] + nosto));
                 kohteet[i].pinta = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+                kohteet[i].pohjaKorkeus = korkeudet[i];
             }
             PallonLepo.Valmistui("kaupungit");
         }
@@ -629,7 +655,7 @@ namespace Matkakirja
                     kaupunki = k, juuri = juuri, pisteT = p, nimio = n, tarkeys = Jarjestys(k, paketinTarkeys),
                     tyyli = tarkeys,
                     normaali = (float3)math.normalize(u - keskus),
-                    pinta = (float3)u,
+                    pinta = (float3)u, pohjaKorkeus = k.korkeus,
                 };
                 // Koko, asu ja nimiön mitat (pelin asu tai linssinimet, jos tila on jo päällä).
                 Tyyli(merkki);
