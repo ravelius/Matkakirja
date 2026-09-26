@@ -7423,3 +7423,7 @@ Natiiviseppa: build 25 samassa simulaattorissa nyt 6,3/8,0/2,8 s, 1.0.26-juna 5,
 ## 170 TOISTETTU SIMULAATTORISSA; SISALTO-VAIHTUI-TAPAHTUMA VALMIS 42b790c2 (26.9.2026 klo 21.18)
 
 Siirtoseppa: ennen-tilanne toistuu (b25, v157 kaytossa, v182 varastossa): Attikan kortti kuvaton myos paivityksen jalkeen samassa istunnossa, kuva vasta uudelleenkaynnistyksessa (kuvat proto-3d/lokit/siirtoseppa-paivityspolku/ennen/). Korjaus siirtoseppa/sisalto-vaihtui 42b790c2: PakettiPaivitys.SisaltoVaihtui(versio, muuttuneet) + Sisalto.VaihdaVersio — uudempi valmis versio kayttoon heti, palautus odottaa kaynnistysta; testit 7/7. Natiivi-UI tekee kuuntelijan valimuisteihin; jalkeen-kierros ja 1.0.26-juna sen jalkeen.
+
+## LAITETESTAAJA cd41e4fa: 175 PARANNUS, LIPPU PIILOSSA EUROOPASSA, LAATAT 5 S (26.9.2026 klo 21.23)
+
+Laitetestaaja b28 (bf53d10a4): 0 poikkeusta; 175 selva parannus (nimet luettavissa, ei jattimalleja); lippu piilossa Euroopan mittakaavassa; loitonnus Kreikasta Eurooppaan laatat 5 s:ssa simulaattorissa; S10 liike sulava. 176:n laitejuurisyy yha Natiivisepan agentilla.
