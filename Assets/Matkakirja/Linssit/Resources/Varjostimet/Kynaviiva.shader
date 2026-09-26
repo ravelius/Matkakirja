@@ -16,6 +16,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
         _Karki("Märän kärjen pituus (astetta)", Float) = 0.08
         _Peitto("Peitto", Range(0, 1)) = 1
         _Keskus("Maan keskipiste (maailma), w = 1: takapuoli pois", Vector) = (0, 0, 0, 0)
+        _Katko("Katkoviiva: jakso (astetta), viivan osuus jaksosta; x = 0 yhtenäinen", Vector) = (0, 0.6, 0, 0)
     }
     SubShader
     {
@@ -43,6 +44,7 @@ Shader "Matkakirja/Linssit/Kynaviiva"
                 float _Karki;
                 half _Peitto;
                 float4 _Keskus;
+                float4 _Katko;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float3 seuraava : TEXCOORD0; float2 puoli : TEXCOORD1; float4 piirto : TEXCOORD2; };
@@ -93,6 +95,15 @@ Shader "Matkakirja/Linssit/Kynaviiva"
                 alfa *= saturate(px - abs(i.reuna));
                 // Käsin vedetyn viivan pieni vaihtelu (musteen määrä) matkan mukaan.
                 alfa *= 0.86 + 0.14 * Kohina(i.matka * 55.0);
+                // Katkoviiva (kuljettu reitti, omistaja 26.9. klo 10.5x): jakso asteina CPU:lta (ruutupisteistä kahden
+                // potenssiin pyöristettynä, jotta katkot eivät liu'u zoomatessa); reunat pikselin levyisellä liu'ulla.
+                if (_Katko.x > 0)
+                {
+                    float v = i.matka / _Katko.x;
+                    float f = frac(v);
+                    float sisalla = min(f, _Katko.y - f);
+                    alfa *= saturate(sisalla / max(fwidth(v), 1e-6) + 0.5);
+                }
                 alfa *= saturate((i.horisontti - 0.01) * 40.0);
                 alfa *= UsvaNakyvyys(i.usvaY);
                 // Märkä muste kärjessä: tummempi, kuivuu 0,08°:n matkalla (vain piirron aikana).
