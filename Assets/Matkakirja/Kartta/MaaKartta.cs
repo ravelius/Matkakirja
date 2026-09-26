@@ -707,7 +707,8 @@ namespace Matkakirja
                     if (Heraannyt != null) try { tila = Heraannyt(p.Key); } catch (Exception) { tila = null; }
                     // Linssiseppä 26.9.: herännyt näkyy täysin sävyin aina (myös oletusrajoilla ilman täyttöä); uinuva himmeänä
                     // vain, kun täyttö on päällä, muuten paperina (ei täyttöä).
-                    if (tila == false) peitto *= UinuvanPeitto;
+                    // Löydös 157: pelaajan valitsema maakunta näkyy vahvana myös uinuvana (valinta on tarkoituksellinen katse).
+                    if (tila == false && !korostettu) peitto *= UinuvanPeitto;
                     if (herataan.TryGetValue(p.Key, out var hk)) peitto *= hk.nyt;
                     bool nakyy = tila == true || TayttoNakyy;
                     px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), nakyy ? B(peitto) : (byte)0);
