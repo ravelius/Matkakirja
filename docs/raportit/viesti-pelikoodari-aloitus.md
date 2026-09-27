@@ -4,11 +4,11 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260927-d.md`](viesti-pelikoodari-luovutus-20260927-d.md) (27.9. klo 16.2x, kontekstin nollaus):
-   #3399–#3415 mainissa; auki #3422 (luenta aina pyynnöstä, junaan), luonnokset #3421 (elämäpalkki) ja #3410
-   (projektisivusto) omistajan korttia varten; natiivi 1.0.31 `pelikoodari/luenta-aina` f4ab9dc2 Natiivisepällä.
-   Jono: elämäpalkin kuvapari Fablelle → projektisivusto mainiin + kuvat Fablelle → havainnekuva-avoin kysymys →
-   puhemittaus odottaa omistajan kehittäjäkoodia. Edellinen: `viesti-pelikoodari-luovutus-20260927-tilinvaihto.md`.
+   [`viesti-pelikoodari-luovutus-20260927-e.md`](viesti-pelikoodari-luovutus-20260927-e.md) (27.9. klo 21.0x, kontekstin nollaus):
+   #3438 tekijämerkinnät, #3439 pollo-KV, #3469 Pulun ramppi mainissa/junassa; #3475 (salaisuudet nostoiksi, yhdessä
+   Siirtosepän #3479:n kanssa) ja #3480 (raha "400 £") junassa; #3485 saavutettavuus C LUONNOS (Fable vie kuvaparin
+   omistajalle). Jono: puhemittaus natiivissa säilötyllä tekstillä (käännös valmiina proto-3d/lokit/puhemittaus/) →
+   #3485 junaan kuittauksen jälkeen. Puhetestit ≤ 5 000 mrk/vrk. Edellinen: `viesti-pelikoodari-luovutus-20260927-d.md`.
    - Simulaattoriajo vain Julkaisijan "nyt"-kuittauksella ja kun booted < 2. Viestit roolisessioille NIMELLÄ
      (`Julkaisija (Opus)`, `Natiiviseppä (Opus)`, `Natiivi-UI (Opus)`); Fablelle session id:llä (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc),
      ja kun raja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
