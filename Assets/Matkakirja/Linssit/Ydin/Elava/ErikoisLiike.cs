@@ -69,6 +69,7 @@ namespace Matkakirja.Linssit.Elava
             "segovian-akvedukti" => new SegovianAkveduktiLiike(id),
             "brugge-belfry" => new BruggenKellotorniLiike(id),
             "hohensalzburg" => new HohensalzburgLiike(id),
+            "matterhorn" => new MatterhornLiike(id),
             _ => null,
         };
 
