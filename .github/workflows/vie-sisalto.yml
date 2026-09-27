@@ -136,6 +136,21 @@ jobs:
           echo "suurin=${suurin:-0}" >> "$GITHUB_OUTPUT"
           echo "Suurin ämpärissä oleva versio: ${suurin:-ei yhtään}"
 
+      # Skeema 1.52: offline.json maat.*.mediaKuvat osoittaa pienennettyihin kuviin (pieni/…), joten ne tehdään ja
+      # viedään ennen pakettia. mediakuvat.mjs mittaa uudet ehdokkaat (tools/vienti/mediakuvat.json täydentyy tämän
+      # ajon ajaksi) ja tekee ämpäristä puuttuvat pienet; vienti ajetaan sen jälkeen uudelleen alla.
+      - name: Pienennä ja vie mediaKuvat
+        if: env.PALAUTA == ''
+        run: |
+          set -euo pipefail
+          python3 -c 'import PIL' 2>/dev/null || sudo apt-get install -y -qq python3-pil >/dev/null
+          node tools/vienti/vie-sisalto.mjs > /dev/null
+          node tools/vienti/mediakuvat.mjs --paivita --varmista --ulos dist/pienet
+          if [ -d dist/pienet/pieni ]; then
+            aws s3 sync dist/pienet/pieni "s3://$AMPARI/pieni/" --endpoint-url "$PAATE" \
+              --cache-control 'public, max-age=86400' --no-progress --only-show-errors
+          fi
+
       - name: Vie sisältö ja valmistele paketti
         if: env.PALAUTA == ''
         id: julkaisu

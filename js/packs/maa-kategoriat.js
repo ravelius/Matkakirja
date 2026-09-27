@@ -11817,7 +11817,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Zorbaksen tanssi keksittiin elokuvaa varten',
           aika: '1964',
-          tiedosto: 'Mikis Theodorakis in Helsinki 1972 (JOKAHBL3F C23-3).tif',
+          tiedosto: 'Mikis Theodorakis Fabrik 070004.jpg',
           teksti: 'Sirtaki ei ole vanha kansantanssi. Se koottiin vanhoista '
             + 'tansseista vuonna 1964 elokuvaa Kerro minulle, Zorbas varten. '
             + 'Pääosan näyttelijä Anthony Quinn kertoi, ettei pystynyt '
@@ -11829,7 +11829,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Mikis Theodorakis sävelsi yli tuhat teosta, muun muassa elokuviin Kreikkalainen Zorbas ja Z.',
           selite: 'Mikis Theodorakis (1925–2021) sävelsi yli tuhat teosta, '
             + 'muun muassa elokuviin Kreikkalainen Zorbas, Z ja Serpico.',
-          lahde: 'Hugo Sundström, Museovirasto, Wikimedia Commons (CC BY 4.0)',
+          lahde: 'Heinrich Klaffs, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Míkis Theodorákis',
           musiikki: 'https://music.apple.com/fi/search?term=theodorakis%20zorba',
           musiikkiNimi: 'Theodorakiksen Zorbas Apple Musicissa',
@@ -12697,7 +12697,7 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'E-Pics Bildarchiv — ETH-kirjaston kuva-arkisto',
-              tiedosto: 'ETH-BIB-Luzern, Altstadt, Wasserturm, Kapellbrücke-Inlandflüge-LBS MH01-001755.tif',
+              tiedosto: 'Mittelholzer Ilanz 1923.jpg',
               teksti: 'ETH-korkeakoulun kirjaston kuva-arkistossa on 3,5 '
                 + 'miljoonaa valokuvaa. Mukana ovat Swissairin oma arkisto, '
                 + 'Comet Photo AG:n uutiskuvat, postikorttikokoelmia ja '
@@ -14386,8 +14386,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Jäähän mennään löylyn jälkeen',
-          aika: '1954',
-          tiedosto: 'Matti Jämsä ice swimming in Humallahti 1954 (JOKAUAS2 2343-13).tif',
+          tiedosto: 'Hole in the ice on Vatioja in Muonio, Finland, 2019 January.jpg',
           teksti: 'Talvella jäähän sahataan neliön muotoinen aukko, avanto, ja '
             + 'siihen laskeudutaan portaita pitkin. Vesi on silloin nollan ja '
             + 'neljän asteen välillä, ja uinti kestää harvoin minuuttia '
@@ -14398,7 +14397,7 @@ export const MAA_KATEGORIAT = {
             + 'koko talven.',
           selite: 'Talviuinnissa uidaan avovedessä kylmimpään aikaan, ja '
             + 'jään peittäessä pinnan siihen sahataan avanto.',
-          lahde: 'U. A. Saarinen, Wikimedia Commons (CC BY 4.0)',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Metsä on kaikkien',
