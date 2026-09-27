@@ -1046,7 +1046,7 @@ namespace Matkakirja
             if (File.Exists(f))
             {
                 if (esi) return (200, null);
-                var sisalto = File.ReadAllBytes(f);
+                var sisalto = Pura(File.ReadAllBytes(f));
                 if (KuvaEhja(polku, sisalto)) { Interlocked.Increment(ref Offline); lahde.Nimi = "offline"; VerkkoOdotus.Osuma("laatta", true); LaattaOsumat.Levylta(polku, false); return (200, sisalto); }
                 Debug.LogWarning($"MATKAKIRJA laattapalvelin: offline-laatta rikki ({sisalto.Length} t), haetaan verkosta: {polku}");
             }
@@ -1417,27 +1417,61 @@ namespace Matkakirja
         /// Tallentaa yhden ämpärin polun offline-kansioon (Alueet). Palauttaa tavut tai -1.
         /// Käytetään korutiinina pääsäikeessä.
         /// </summary>
-        public static IEnumerator LataaOffline(string polku, Action<long> valmis)
+        static bool OnMaastoTiedosto(string polku)
+        {
+            int q = polku.IndexOf('?');
+            return (q < 0 ? polku : polku.Substring(0, q)).EndsWith(".terrain", StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>Gzip (offline-maasto levylle); jo pakattu (1F 8B) sellaisenaan.</summary>
+        public static byte[] Pakkaa(byte[] data)
+        {
+            if (data == null || (data.Length > 1 && data[0] == 0x1F && data[1] == 0x8B)) return data;
+            using var m = new MemoryStream();
+            using (var g = new System.IO.Compression.GZipStream(m, System.IO.Compression.CompressionLevel.Fastest, true)) g.Write(data, 0, data.Length);
+            return m.ToArray();
+        }
+
+        /// <summary>Gzip-tiedoston purku (offline-maasto); muut sellaisenaan.</summary>
+        public static byte[] Pura(byte[] data)
+        {
+            if (data == null || data.Length < 2 || data[0] != 0x1F || data[1] != 0x8B) return data;
+            try
+            {
+                using var s = new System.IO.Compression.GZipStream(new MemoryStream(data), System.IO.Compression.CompressionMode.Decompress);
+                using var m = new MemoryStream();
+                s.CopyTo(m);
+                return m.ToArray();
+            }
+            catch (Exception) { return data; }
+        }
+
+        public static IEnumerator LataaOffline(string polku, Action<long> valmis, string lahde = null)
         {
             string f = Tiedosto(OfflineKansio, polku);
             if (File.Exists(f)) { valmis(new FileInfo(f).Length); yield break; }
             // Buildin paketissa: offline-kansioon ei tarvitse kopiota (paketti on aina mukana).
             if (Paketti != null && Paketti.Onko(Laattapaketti.Avain(polku))) { valmis(0); yield break; }
             string v = Tiedosto(ValimuistiKansio, polku);
-            if (File.Exists(v))
+            // Pienennetty lähde (mediaKuvat.pieni): ei kopioida välimuistin isoa alkuperäistä (maan media ≤ 100 Mt).
+            if (lahde == null && File.Exists(v))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(f));
-                File.Copy(v, f, true);
+                if (OnMaastoTiedosto(polku)) File.WriteAllBytes(f, Pakkaa(File.ReadAllBytes(v)));
+                else File.Copy(v, f, true);
                 valmis(new FileInfo(f).Length);
                 yield break;
             }
-            using var r = UnityWebRequest.Get(Ampari + polku);
+            using var r = UnityWebRequest.Get(Ampari + (lahde ?? polku));
             r.timeout = 30;
             yield return r.SendWebRequest();
             if (r.result != UnityWebRequest.Result.Success) { valmis(r.responseCode == 404 ? 0 : -1); yield break; }
             Directory.CreateDirectory(Path.GetDirectoryName(f));
-            File.WriteAllBytes(f, r.downloadHandler.data);
-            valmis(r.downloadHandler.data.Length);
+            // Maasto gzipattuna levylle (Fablen C 27.9.): iOS purkaa Content-Encoding: gzip -siirron, joten pakataan uudelleen
+            // (~3× pienempi); luku purkaa (Pura). Muut tiedostot sellaisenaan.
+            var tavut = OnMaastoTiedosto(polku) ? Pakkaa(r.downloadHandler.data) : r.downloadHandler.data;
+            File.WriteAllBytes(f, tavut);
+            valmis(tavut.Length);
         }
     }
 }

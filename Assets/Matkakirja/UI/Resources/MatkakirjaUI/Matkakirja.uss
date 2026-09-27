@@ -1074,6 +1074,27 @@
     margin: -5px 8px;
 }
 
+/* Kehittäjäosan säädin (pohjan sävy): nimi + arvo ylärivillä, säädin alla koko leveydeltä. */
+.mk-saadinrivi--pino {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 8px;
+}
+
+.mk-saadinrivi__yla {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-saadinrivi--pino .mk-saadinrivi__nimi {
+    width: auto;
+    flex-grow: 1;
+}
+
+.mk-saadinrivi--pino .mk-saadin {
+    margin: 2px 0 0 0;
+}
+
 .mk-saadin .unity-base-slider__input {
     height: 26px;
 }
@@ -1645,6 +1666,17 @@
 .mk-elamapalkki__lohko--kulunut {
     background-color: rgba(192, 57, 43, 0.12);
     border-color: rgba(158, 44, 33, 0.45);
+}
+
+/* Viisi oikeanpuoleista oransseina (web #3443 v2335): palava #d97a2b / #a8561a, sammunut .12 / .45. */
+.mk-elamapalkki__lohko--oranssi {
+    background-color: #d97a2b;
+    border-color: #a8561a;
+}
+
+.mk-elamapalkki__lohko--oranssi.mk-elamapalkki__lohko--kulunut {
+    background-color: rgba(217, 122, 43, 0.12);
+    border-color: rgba(168, 86, 26, 0.45);
 }
 
 .mk-elamapalkki__teksti {

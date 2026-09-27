@@ -56,6 +56,8 @@ namespace Matkakirja.Editori
             pallo.tilesetSource = CesiumDataSource.FromUrl;
             pallo.url = MaastoUrl;
             pallo.showCreditsOnScreen = false;
+            // Vakiotarkkuus (omistaja 27.9.2026, LiikeLaatatPaatos.VakioSse): ei tarkentumista liikkeen jälkeen.
+            pallo.maximumScreenSpaceError = LiikeLaatatPaatos.VakioSse;
             // Peli ei käytä fysiikkaa: Cesium paistoi jokaiselle laatalle törmäysverkon (iPad-loki 23.9.).
             pallo.createPhysicsMeshes = false;
             // Ei reikiä lataamattomien laattojen kohdalle (lennon lähikuva 24.9.: taivas näkyi maaston läpi):

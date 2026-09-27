@@ -1032,7 +1032,7 @@ namespace Matkakirja.Natiivi
             {
                 if (osat.Count > 1 && osat[1] == "peru") { LivianAvaus.Peru(); return null; }
                 if (osat.Count > 1 && osat[1] == "nollaa") LivianAvaus.NollaaLippu();
-                return LivianAvaus.Nayta() ? null : LivianAvaus.Kaynnissa ? "avaus jo käynnissä" : "avaus jo nähty (ui livia avaus nollaa)";
+                return LivianAvaus.Nayta() ? null : LivianAvaus.Kaynnissa ? "avaus jo käynnissä" : "pulu ei näkyvissä";   // nähty → lyhyt tervehdys (KERRAN + OHITA)
             }
             // C16: ui livia paljastus nollaa → seuraava aloituslento näyttää tuurauspaljastuksen uudelleen.
             if (osat.Count > 0 && osat[0] == "paljastus")

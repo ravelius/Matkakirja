@@ -17,6 +17,14 @@ namespace Matkakirja
     {
         /// <summary>Liikkeen SSE-vastine oletuksena (Fablen päätös 26.9.; S10-mittaus: liikkeen p50 20 → 13 ms).</summary>
         public const float OletusSse = 32f;
+        /// <summary>
+        /// VAKIOTARKKUUS (omistajan löydös 27.9. klo 17.2x: kartta tarkentui liikkeen jälkeen ja nimiöt näyttivät liikahtavan,
+        /// kun maasto vaihtui niiden alla): pohja-SSE 20 ilman liikkeen vaihtoa. iPad Pro 13 -mittaus (lokit/tarkennus-ab-ipad13):
+        /// liike p50 16,7 / p95 16,8 ms kuten ennen (SSE 16 ilman vaihtoa: p95 25, p99 50 ms), 0 vaihtoa, thermal 0.
+        /// </summary>
+        public const float VakioSse = 20f;
+        /// <summary>Kehittäjälippu: defaults write … matkakirja-vakio-sse -int 0 (sovellus kiinni) = vanha 16/32-vaihto.</summary>
+        public const string VakioAvain = "matkakirja-vakio-sse";
         /// <summary>Lepoon (pääkameran valinta) vasta, kun karkeaa liikettä ei ole ollut näin kauan (s). Pienempi kuin
         /// Ruudunpaivitys.TaysiPitoS (0,5), joten tarkennus alkaa vielä täydellä taajuudella.</summary>
         public const float LepoViiveS = 0.35f;

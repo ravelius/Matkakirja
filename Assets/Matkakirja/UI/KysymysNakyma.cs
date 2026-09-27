@@ -418,6 +418,8 @@ namespace Matkakirja.Natiivi
             })));
             var kuva = Rakenne.El("mk-kysymys__kuva", kehys, PickingMode.Ignore);
             Label lahdeRivi = null;
+            // Tekijä ja lisenssi Commonsista, jos lähteestä puuttuu (web ui.js kuvalahde taytaLahderivi, #3438).
+            lahde = Kuvatekija.Taydenna(lahde, url);
             if (!string.IsNullOrEmpty(lahde))
             {
                 lahdeRivi = Rakenne.Teksti(lahde, "mk-kysymys__kuvalahde", s);

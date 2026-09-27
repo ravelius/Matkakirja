@@ -47,6 +47,8 @@ namespace Matkakirja.Natiivi
         public event Action Suljettava;
 
         public bool Auki { get; private set; }
+        /// <summary>Paneeli (UiNakymat: koko ruudun peitto sammuttaa pallon kameran).</summary>
+        public VisualElement Paneeli => paneeli;
         public event Action<bool> AukiMuuttui;
 
         /// <summary>

@@ -550,7 +550,17 @@ print("paikka 1 ← lennon varakartta (_lentoVara, _lentoVaraKartta); paikka 2 �
 # Tekstuurien nimet viitataan suoraan (Shader Graph julistaa ne kaavion ominaisuuksista samoilla nimillä), UV-kanavat
 # tulevat UV-solmuista 0–3. Näyte _GRAD-muodossa, derivaatat ennen haarautumista.
 HAMARA_RUNKO = (
-    "variOut = vari.rgb * (1.0 - saturate(tummuus)); emisOut = emis;\n"
+    "// Base map tone (owner 27.9.2026 17.2x, Kartta/Pohjasavy.cs): pohjaSavy.x = contrast change around the paper tone 0.78\n"
+    "// (0 = as before, -0.3 = softer), pohjaSavy.y = black lift towards white 0..1 ('milky'); in sRGB space.\n"
+    "float3 pv = vari.rgb;\n"
+    "if (pohjaSavy.x != 0.0 || pohjaSavy.y != 0.0)\n"
+    "{\n"
+    "    float3 sv = pow(max(pv, 1e-6), 0.4545);\n"
+    "    sv = (sv - 0.78) * (1.0 + pohjaSavy.x) + 0.78;   // pivot at the parchment tone: softer darks, paper unchanged\n"
+    "    sv = sv + saturate(pohjaSavy.y) * (1.0 - sv);\n"
+    "    pv = pow(saturate(sv), 2.2);\n"
+    "}\n"
+    "variOut = pv * (1.0 - saturate(tummuus)); emisOut = emis;\n"
     "// Spotlight (Ihmisen matka II, KarttaKerrokset.Valokeila): the globe outside one or two beams dims by keilaHamaryys;\n"
     "// chord |n - k| against chord limits (acos-free, precise in float even for small beams); brighter beam wins.\n"
     "// Applied to the base colour only, before the radio dusk: emission (night lights, ground glow) never dims.\n"
@@ -622,6 +632,8 @@ ham_slotit += [slotti("Vector4MaterialSlot", 15, "keski", 0, v4()), slotti("Vect
                slotti("Vector4MaterialSlot", 17, "keila1", 0, v4()), slotti("Vector4MaterialSlot", 18, "keilaRajat", 0, v4()),
                slotti("Vector4MaterialSlot", 19, "keila0Vari", 0, v4()), slotti("Vector4MaterialSlot", 20, "keila1Vari", 0, v4()),
                slotti("Vector1MaterialSlot", 21, "keilaHamaryys", 0, 0.0)]
+# Pohjan sävy (27.9.2026): 22 = _pohjaSavy (x kontrastin muutos, y mustan nosto; 0 = ennallaan).
+ham_slotit.append(slotti("Vector4MaterialSlot", 22, "pohjaSavy", 0, v4()))
 for s in ham_slotit: s["m_StageCapability"] = 2
 ham_cf = solmupohja("CustomFunctionNode", "RadioHamara (Custom Function)", FX, FY, ham_slotit, m_SGVersion=1,
                     synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="RadioHamara", m_FunctionSource="",
@@ -638,12 +650,14 @@ krajat_om = vektori_ominaisuus("keilaRajat", "_keilaRajat")
 kvari0_om = vektori_ominaisuus("keila0Vari", "_keila0Vari")
 kvari1_om = vektori_ominaisuus("keila1Vari", "_keila1Vari")
 khamaryys_om = kellu_ominaisuus("keilaHamaryys", "_keilaHamaryys", True); khamaryys_om["m_Value"] = 0.0
+savy_om = vektori_ominaisuus("pohjaSavy", "_pohjaSavy")
 keski3_solmu, keski3_ulos = vektori_ominaisuussolmu(keski_om, FX - 300.0, FY + 1060.0)
 keila_solmut, keila_ulot = [], []
 for i, om in enumerate((keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om)):
     ks, ku = vektori_ominaisuussolmu(om, FX - 300.0, FY + 1120.0 + 60.0 * i)
     keila_solmut.append(ks); keila_ulot.append(ku)
 khamaryys_solmu, khamaryys_ulos = ominaisuussolmu(khamaryys_om, FX - 300.0, FY + 1420.0)
+savy_solmu, savy_ulos = vektori_ominaisuussolmu(savy_om, FX - 300.0, FY + 1480.0)
 ham_solmu, ham_ulos = ominaisuussolmu(ham_om, FX - 300.0, FY + 120.0)
 tumma_solmu, tumma_ulos = ominaisuussolmu(tumma_om, FX - 300.0, FY + 1000.0)
 maavalo_solmu, maavalo_ulos = vektori_ominaisuussolmu(maavalo_om, FX - 300.0, FY + 180.0)
@@ -673,21 +687,23 @@ G["m_Edges"] += [reuna(vari_reuna["m_OutputSlot"]["m_Node"]["m_Id"], vari_reuna[
                  reuna(H, 7, vari_reuna["m_InputSlot"]["m_Node"]["m_Id"], vari_reuna["m_InputSlot"]["m_SlotId"]),
                  reuna(H, 8, emis_reuna["m_InputSlot"]["m_Node"]["m_Id"], emis_reuna["m_InputSlot"]["m_SlotId"])]
 G["m_Edges"] += [reuna(uv_solmut[i]["m_ObjectId"], 0, H, 10 + i) for i in range(4)]
-G["m_Edges"] += [reuna(keski3_solmu["m_ObjectId"], 0, H, 15), reuna(khamaryys_solmu["m_ObjectId"], 0, H, 21)]
+G["m_Edges"] += [reuna(keski3_solmu["m_ObjectId"], 0, H, 15), reuna(khamaryys_solmu["m_ObjectId"], 0, H, 21),
+                 reuna(savy_solmu["m_ObjectId"], 0, H, 22)]
 G["m_Edges"] += [reuna(keila_solmut[i]["m_ObjectId"], 0, H, 16 + i) for i in range(5)]
 for om in (ham_om, maavalo_om, maavari_om, yon_om, yovalot_om, tumma_om, keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om,
-           khamaryys_om):
+           khamaryys_om, savy_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
 hsolmut = [ham_cf, ham_solmu, tumma_solmu, maavalo_solmu, maavari_solmu, yon_solmu, yovalot_solmu, hpaikka_solmu] + uv_solmut
-hsolmut += [keski3_solmu, khamaryys_solmu] + keila_solmut
+hsolmut += [keski3_solmu, khamaryys_solmu, savy_solmu] + keila_solmut
 for s in hsolmut:
     G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
 lisat += [ham_om, tumma_om, tumma_ulos, maavalo_om, maavari_om, yon_om, yovalot_om, ham_ulos, maavalo_ulos, maavari_ulos, yon_ulos, yovalot_ulos,
           hpaikka_ulos] + uv_ulot + hsolmut + ham_slotit
 lisat += [keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om, khamaryys_om, keski3_ulos, khamaryys_ulos] + keila_ulot
+lisat += [savy_om, savy_ulos]
 print("fragmentti → RadioHamara (_radioHamara, _radioMaavalo, _radioMaavaloVari, _radioYonValot, _radioYovalot + UV 0–3,"
-      " valokeila _keila0/1, _keilaRajat, _keila0Vari/_keila1Vari, _keilaHamaryys)")
+      " valokeila _keila0/1, _keilaRajat, _keila0Vari/_keila1Vari, _keilaHamaryys, pohjan sävy _pohjaSavy)")
 
 kaavio += lisat
 kirjoita(os.path.join(kohde, "MatkakirjaTileset.shadergraph"), kaavio)

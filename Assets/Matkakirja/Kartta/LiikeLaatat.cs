@@ -75,7 +75,19 @@ namespace Matkakirja
         float kerroin = 1f;
         string syy = "alku";
 
-        void Awake() => Instanssi = this;
+        void Awake()
+        {
+            Instanssi = this;
+            // Vakiotarkkuus (LiikeLaatatPaatos.VakioSse): kohtauksen pohja-SSE on 20 (Rakennus) eikä liikkeen varjokameraa
+            // käytetä. Lippu 0 = vanha 16/32-vaihto (pohja 16 ajossa: luo tilesetin uudelleen kerran käynnistyksessä).
+            if (PlayerPrefs.GetInt(LiikeLaatatPaatos.VakioAvain, 1) != 0) Sse = 0f;
+            else
+            {
+                Sse = LiikeLaatatPaatos.OletusSse;
+                var t = FindAnyObjectByType<Cesium3DTileset>();
+                if (t != null && Mathf.Abs(t.maximumScreenSpaceError - 16f) > 1e-3f) t.maximumScreenSpaceError = 16f;
+            }
+        }
 
         void OnDestroy()
         {
