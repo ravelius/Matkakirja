@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 02:09 EEST — **Postivahti kierto normaali, ei hälytyksiä.**
+**Päivitetty:** 2026-09-28 02:20 EEST — **Postivahti kierto normaali, ei hälytyksiä.**
 
 ## 1) Sessiot
 
@@ -22,9 +22,9 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 | Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | ei luettavissa (idle) | — |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 40% | running |
 
-## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 02:09)
+## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 02:20)
 
-Vahti PID 82063 elossa (1 h 22 min), aja.out ennallaan (ei "2 koodi" -riviä vaiheen 2 alusta — viimeisin 00:51 "2 syvä z9–z10 alkaa"). vahti.out palautunut normaaliksi klo 02:08 (6 ydintä, kone vapaa), ei uutta muistipaine-notkahdusta 01:53 jälkeen. 2.log etenee (shardit 94/507, 19%, arvio 04:35 UTC). Seuraajan tarkistettava tämä joka kierroksella.
+Vahti PID 82063 elossa (1 h 33 min), aja.out ennallaan (ei "2 koodi" -riviä vaiheen 2 alusta — viimeisin 00:51 "2 syvä z9–z10 alkaa"). vahti.out normaali, ytimet 10 (kone vapaa), ei uutta muistipaine-notkahdusta 01:53 jälkeen. 2.log etenee (shardit 99/507, 20%, arvio 05:10 UTC). Seuraajan tarkistettava tämä joka kierroksella.
 
 Koodi 1 klo 00:39 oli **odotettu** — vain luettelon vientivartion ilmoitus, ei virhe. Laatat/eheys kunnossa (119 495/119 495). Vaihe 1 merkitty valmiiksi. **Uusi vahti PID 82063 (v5e)** käynnistää vaiheen 2 (syvä, T7) ~00:52. Karttaseppä odottaa vaiheen 2 päättyvän todennäköisesti riviin "2 koodi 1" samasta vartiosta — **se on OK jos `2.log`:n lopussa on "eheystarkistus: laattojen määrä täsmää luetteloon".** **Seurataan PID 82063:a ja aja.out:ia — herätä Karttaseppä (local_4bd7c316-55bc-423a-9da1-821fdd123cab) JOKA TAPAUKSESSA kun "2 koodi" ilmestyy tai vahti kuolee**, riippumatta koodin arvosta (tarkista 2.log-eheysrivi ennen viestiä).
 
@@ -74,15 +74,15 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (02:09)
+## 5) Resurssit (02:20)
 
 - **5 h -kiintiö:** ~35 %. **Viikko (kaikki mallit): 93 % — kynnys ylittyi, ilmoitettu Fablelle.** **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 85 Gi vapaana (palautunut 83:sta). wt/-worktreet 27 kpl.
-- **Muistipaine:** normal (1), ei uutta notkahdusta 01:53 jälkeen. **Load average matala: 6.21/7.85/10.17.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
+- **Levy:** 83 Gi vapaana (vaihtelee 83–85 välillä, raja 80 Gt — seurataan). wt/-worktreet 27 kpl.
+- **Muistipaine:** normal (1). **Load average matala: 14.20/11.74/10.96.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
 - **Liput:** `/tmp/matkakirja-julkaisu` EI löydy. `/tmp/matkakirja-juna-tauko` PÄÄLLÄ — tarkoituksellinen, EI hälytystä.
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
-- **Juna:** tauolla, poltto käynnissä (vaihe 2, 19%, arvio 04:35 UTC).
-- **Karttasepän vahti-PID 82063 elossa 02:09, aja.out ei muuttunut (ei "2 koodi"), vahti.out normaali (6 ydintä, nousussa).**
+- **Juna:** tauolla, poltto käynnissä (vaihe 2, 20%, arvio 05:10 UTC).
+- **Karttasepän vahti-PID 82063 elossa 02:20, aja.out ei muuttunut (ei "2 koodi"), vahti.out normaali (10 ydintä).**
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
