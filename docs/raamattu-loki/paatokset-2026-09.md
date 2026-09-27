@@ -8203,3 +8203,7 @@ Omistaja 27.9.2026 klo 13.5x: tehdaan nyt pelkkaa Eurooppaa, ei mitaan muuta; va
 ## OMISTAJA: MEREN LAATUTASO ERA 1 HYVAKSYTTY (9a2a60c1), PURJEET RAMPISSA, HAALISTUMISKYNNYS ENNALLAAN; LOPUT 7 LAJIA HETI (27.9.2026 klo 15.09)
 
 Kortti 14.2x (kuvaparit meri-laatu-{merilaiva,purjelaiva,valas}-ennen-jalkeen.png): uusi MeriMalli-varjostin (B-seepiaramppi, kaiverrusreuna, aariviiva, vesikerros), LOD0 2 911/2 520/2 655, 0,005–0,03 ms/laji → 1.0.30-junaan; purjeet seepia + kaiverrus; elavat elementit haalistuvat 450–600 km:ssa kuten nyt; loput 7 lajia samalla tyylilla. Muut: muutosloki-natiivi v225 (29 rivia, uusin 1.0.29); Sisaltokirjuri #3419 (Valletta 2 juttua + MLT/LUX 2 skandaalia), Lappi/Sisilia/Kreeta uusi lehtiaihe, historian hetket havainnekuvatilauksella.
+
+## OMISTAJA: TALOUDEN ELAMAPALKKI — PUNAISET 6 h LOHKOT KARTAN YLAREUNAAN KUN RAHAT LOPUSSA (WEB + NATIIVI) (27.9.2026 klo 15.12)
+
+Omistaja 27.9.2026 klo 15.1x natiivin talous-UI:n kuvapareista (kassarivi, loppukortti, varoituskupla): lisapalkki kartan ylareunaan, tuntilaskurina punaiset palkit 6 h jaksoissa — paljonko elamaa jaljella ilman rahaa (2 vrk = 8 lohkoa pelin aikaa). Fablen tulkinta: nakyy vain rahat lopussa, katoaa kun rahaa tulee, kevyt. Pelikoodari web ensin, Natiivi-UI natiivi mitoilla; talous-UI:n muut osat (lyhyt kassarivi iPhonella, Jaa-nappi, varoituskupla) jaavat; kaikki yhdessa 1.0.30:aan. Sisaltokirjuri: #3419 lisaksi Lappi (saamelaiskulttuuri), Sisilia (mosaiikit), Kreeta (historia); 5 historian hetken havainnekuvatilaus postilaatikossa.
