@@ -7827,3 +7827,7 @@ Karttaseppa 07.4x: Z10 tuotannossa, osoitin vaihdettu 07.32, CDN:n pyramidi.json
 ## PULUN VIRKEVALI 220 ms (#3374 v2299); PELIKOODARILLE WEBIN ZOOMIKATTO Z10-SELVITYS (27.9.2026 klo 07.42)
 
 Pelikoodari 07.4x: Pulun striimivirkkeiden vali 450 → 220 ms, #3374 (v2299) junassa, mitattu tuotannon workerilla. Fable antoi seuraavan eran: webin zoomikaton nosto kaupunkien lahizoomissa z10:een (#3371:n jalkeen) — mittaus laatta- ja siirtomaarista, kuvapari Pariisi z9 vs z10, suositus Fablelle ennen tuotantoa; savukkeeseen x-puhe-moottori = xai -tarkistus.
+
+## MERI V3 1.0.29:AAN (8 UUTTA LAJIA ~09.3x); ERIKOISMALLIT2 01810d0c 1.0.28-JUNAAN; SEURAAVAT MAAT BEL/CHE/AUT (27.9.2026 klo 07.44)
+
+Linssiseppa 07.5x: meri tuotantoon vaatii 8 uutta lajia + valintalogiikan (maan meret → 1–2 lajia, ≤ 2 ruudulla; merikohdat.json 29 maata/129 kohtaa) → laitekuvat ~09.3x, merge 1.0.29. Era 2 merge-pyynto mallinseppa/erikoismallit2 01810d0c lahetetty → Fable: 1.0.28-junaan jos unity-tarkistus 0, kaannos heti. Seuraavat maat: Belgia (Bruggen kellotorni), Sveitsi (Matterhorn), Itavalta (Hohensalzburg), elamanideat ensin Fablelle.
