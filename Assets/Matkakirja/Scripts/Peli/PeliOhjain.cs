@@ -935,7 +935,7 @@ namespace Matkakirja.Natiivi
             Viimeisin = null;
             linssit = null;
             kytkettyRekisteri = null;
-            foreach (var polku in new[] { TallennusPolku, TavoitePolku, PassiPolku })
+            foreach (var polku in new[] { TallennusPolku, TurvaPolku, TavoitePolku, PassiPolku })
                 try { if (File.Exists(polku)) File.Delete(polku); }
                 catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tyhjennys ei poistanut " + Path.GetFileName(polku) + ": " + e.Message); }
             var sailyvat = SailyvatAsetukset.Where(a => PlayerPrefs.HasKey(a.Avain))
@@ -1002,6 +1002,7 @@ namespace Matkakirja.Natiivi
             KytkeReitti(m);
             m.Saapui += (_, k, uusi) => { if (m == matka) uusiKaupunki = uusi ? k : null; };
             m.Tapahtui += (laji, teksti) => { tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
+            KytkeTalous(m);
             m.Loysi += (p, l) =>
             {
                 kysymysLoyto = l;
@@ -1071,13 +1072,16 @@ namespace Matkakirja.Natiivi
             try
             {
                 using var __ = Ajoita("tallennus.kirjoitus");
-                PeliApu.KirjoitaAtomisesti(TallennusPolku, matka.Tallenna());
+                var json = matka.Tallenna();
+                PeliApu.KirjoitaAtomisesti(TallennusPolku, json);
                 PeliApu.KirjoitaAtomisesti(TavoitePolku, Tavoite ?? "");
+                TallennaTurva(json);
             }
             catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tallennus epäonnistui: " + e.Message); }
             PaivitaAarrepiste();
             SahkeTallennettu();
             IlmoitaRaha();
+            IlmoitaMatkanLoppu();
             using (Ajoita("tallennus.tilaMuuttui"))
                 try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }

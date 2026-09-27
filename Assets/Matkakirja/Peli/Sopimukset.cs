@@ -73,8 +73,13 @@ namespace Matkakirja.Peli
         public List<Sijainti> Polku;   // askeleet kohteeseen, lähtö EI mukana (web path; pituus = käytetyt askeleet)
     }
 
-    /// <summary>Kulkutapa (web travelMode). Pysy = 'stay' (tehtävä kaupungissa).</summary>
-    public enum Kulkutapa { Maa, Meri, Lento, Bussi, Pysy }
+    /// <summary>
+    /// Kulkutapa (web travelMode). Pysy = 'stay' (tehtävä kaupungissa). Odota = 'wait'
+    /// (talouden vaihe 1, 27.9.2026): tarjolla vain, kun mikään muu kuin Pysy ei ole
+    /// mahdollinen (saari ilman laivarahaa); vuoro kuluu paikallaan. Ei noppatapa.
+    /// Uusi arvo lopussa: tallennus kirjoittaa tavan nimenä, joten järjestys ei riko vanhoja.
+    /// </summary>
+    public enum Kulkutapa { Maa, Meri, Lento, Bussi, Pysy, Odota }
 
     /// <summary>
     /// Pelin vaihe (web phase). Webin 'duel' (rosvolaatat, Raamattu 25.8.2026) ja 'event'
@@ -89,11 +94,14 @@ namespace Matkakirja.Peli
     /// <summary>Hinnat ja vakiot (js/rules.js, js/game.js).</summary>
     public static class Vakiot
     {
-        public const int AloitusRaha = 300;   // START_MONEY
+        // 300 → 400 (omistaja 27.9.2026, talouden vaihe 1): päiväkulut alkavat heti,
+        // joten aloituskassan on kestettävä ensimmäinen viikko ja yksi lento.
+        public const int AloitusRaha = 400;   // START_MONEY
         public const int BussiHinta = 50;     // BUS_FARE
         public const int MeriHinta = 100;     // SEA_FARE = SEA_FEE
         public const int LentoHinta = 300;    // FLIGHT_PRICE
-        public const int HataApu = 100;       // STRANDED_AID
+        // STRANDED_AID (pankin apu 100) poistettu talouden vaiheessa 1: tilalla päiväkulut
+        // ja rahattomuus (Peli/Talous.cs).
         public const int VuoronTunnit = 6;    // TURN_HOURS
     }
 

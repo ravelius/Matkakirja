@@ -172,6 +172,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(1, m.Tila.VuoroLaskuri, "bussi ei kuluta aikaa");
             Oleta.Tosi(m.Tila.Pelaaja.Kaydyt.Contains("lontoo"));
             // Lontoossa on lentokenttä: lento on tarjolla lentokohteisiin, kun rahaa riittäisi (250 < 300 → ei).
+            m.Tila.Pelaaja.Raha = 250;
             Oleta.Tosi(!PeliApu.Vaihtoehdot(m, m.Verkko.Lennot.First(r => r.A == "lontoo" || r.B == "lontoo").B)
                 .Any(x => x.Tapa == Kulkutapa.Lento), "lento ilman rahaa");
         }
@@ -241,7 +242,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void TilarivinTekstiJaTavat()
         {
             var m = UusiPariisissa();
-            Oleta.Sama("300 puntaa · päivä 1 · aamu · Pariisi", PeliApu.TilaTeksti(m.Verkko, m.Tila));
+            Oleta.Sama($"{Vakiot.AloitusRaha} puntaa · päivä 1 · aamu · Pariisi", PeliApu.TilaTeksti(m.Verkko, m.Tila));
             Oleta.Sama("Lontoo–Pariisi", PeliApu.SijaintiNimi(m.Verkko, Sijainti.ReitillaSijainti("lontoo|pariisi", 1)));
             Oleta.Sama(Kulkutapa.Bussi, PeliApu.TapaTekstista("bussi"));
             Oleta.Sama(Kulkutapa.Maa, PeliApu.TapaTekstista("Liftaus"));
@@ -258,7 +259,7 @@ namespace Matkakirja.Peli.Testit
             var o = MiniJson.Objekti(MiniJson.Jasenna(json));
             Oleta.Sama("Kartta", MiniJson.Teksti(o, "silmukka"));
             Oleta.Sama("c:lontoo", MiniJson.Teksti(o, "sijainti"));
-            Oleta.Sama(250.0, MiniJson.Luku(o, "raha"));
+            Oleta.Sama((double)(Vakiot.AloitusRaha - Vakiot.BussiHinta), MiniJson.Luku(o, "raha"));
             Oleta.Sama("lontoo", MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(o, "viimeisin")), "saapui"));
             Oleta.Tosi(MiniJson.Taulukko(MiniJson.Kentta(o, "vaihtoehdot")).Count > 0, "vaihtoehdot");
             Oleta.Sama("Bussimatka \"−50\"", MiniJson.Teksti(o, "viesti"));

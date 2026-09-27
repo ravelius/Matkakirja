@@ -1,7 +1,7 @@
 // MATKA: matkustuksen tilakone, suora portti verkkopelin js/game.js
 // Game-luokasta (beginTurn, endTurn, travelModes, busDestinations,
 // airportDestinations, actionTravel, actionCancelTravel, actionRoll,
-// actionMove, actionBus, actionFly, needsAid, rollDie) sekä erästä 3
+// actionMove, actionBus, actionFly, rollDie) sekä erästä 3
 // laattojen jako konstruktorissa (enterWorld), revealToken, lukitseAarre:n
 // laattaosa, noteRecord ja duelArmed-lippu. Kultaiset jäljet
 // Kultaiset/matkajalki.json (matkustus) ja Kultaiset/pelijalki.json (koko
@@ -13,14 +13,16 @@
 // saapumisista ja löydöistä). Kysely (Peli/Kysely.cs) kytkeytyy koukkuihin:
 //   TehtavaTarjolla  — web tehtavaTarjolla: tuo 'stay'-tavan (Pysy)
 //   Tutki            — web actionQuiz: mitä Pysy tekee
-//   Tavoitteet       — web needsAid: ohitus; oletus = kääntämättömät laatat
-//                      (ilman laattamaailmaa kaikki kaupungit)
 //   PysaytaSaapuessa — web offerQuiz: tosi → vuoro ei pääty saapumiseen
 //   Saapui           — web visitCity: XP, arrivalFact ja lehti kuuntelevat tätä
 // Laattojen koukut (null = ei toteutettu):
 //   LinssiKylkiaisena   — web linssiAarteenKylkiaisena (passi ei kuulu tänne; Linssiseppä)
 // Muualla: pulmat (Pulmat.cs), kaupat ja mannerlennot (Kaupat.cs). Moninpelin
 // voitto, tekoälypelaaja ja tapahtumakortit on poistettu (Fablen tarkastus A3, C1).
+// TALOUS (talouden vaihe 1, 27.9.2026; Peli/Talous.cs): pankin apu (needsAid,
+// STRANDED_AID) on poistettu. Tilalla päiväkulut vuorokauden vaihtuessa
+// (VeloitaPaivakulut), rahattomuuden kahden vuorokauden varoitus
+// (TarkistaRahattomuus), matkan loppu (PaataMatka) ja Odota-tapa.
 // Puuttuu: porttikaupungit ja muut laudat (worlds), botit.
 using System;
 using System.Collections.Generic;
@@ -60,8 +62,6 @@ namespace Matkakirja.Peli
         public Func<Pelaaja, bool> TehtavaTarjolla;
         /// <summary>Pysy-tavan teko (web actionQuiz). Ilman koukkua Pysy ei ole käytettävissä.</summary>
         public Func<Pelaaja, TekoTulos> Tutki;
-        /// <summary>Pankkiavun tavoitekaupungit, ohitus. null = kääntämättömät laatat (web tokens.keys()), ilman laattamaailmaa kaikki kaupungit.</summary>
-        public Func<IEnumerable<string>> Tavoitteet;
         /// <summary>Saapumispysähdys (web offerQuiz). Tosi → vuoro ei pääty.</summary>
         public Func<Pelaaja, bool> PysaytaSaapuessa;
         /// <summary>Web linssiAarteenKylkiaisena(pelaaja, kaupunki, tyyppi): tavallisen löydön jälkeen.</summary>
@@ -72,8 +72,23 @@ namespace Matkakirja.Peli
 
         /// <summary>Pelaaja saapui kaupunkiin (pelaaja, kaupunki, ensikäynti). Web visitCity.</summary>
         public event Action<Pelaaja, string, bool> Saapui;
-        /// <summary>Näytölle animoitava tapahtuma (web emit): 'fare', 'flight', 'aid', 'stuck', 'treasure'.</summary>
+        /// <summary>Näytölle animoitava tapahtuma (web emit): 'fare', 'flight', 'aid', 'stuck', 'treasure', 'rahat'.</summary>
         public event Action<string, string> Tapahtui;
+
+        /// <summary>
+        /// Rahatilanne muuttui (web emit 'rahat' + tilanne): (pelaaja, tilanne, otsikko, alaotsikko|null).
+        /// Tilanne on Pulun avain: 'peli.vararikko.varoitus' (rahat loppuivat, kaksi päivää aikaa),
+        /// 'peli.vararikko.selvisi' (kassa kunnossa, rästi maksettu) tai 'peli.vararikko.loppu'
+        /// (moninpelissä pelaaja putosi). Sama otsikko tulee myös Tapahtui("rahat", otsikko).
+        /// Matkan päättyminen (yksinpeli) näkyy tilasta: Vaihe Ohi ja Tila.MatkaPaattyi.
+        /// </summary>
+        public event Action<Pelaaja, string, string, string> Rahatilanne;
+
+        /// <summary>
+        /// Vuorokauden päiväkulu veloitettiin (pelaaja, kulu, maksettu): web say-rivi "Yö kaupungissa X:
+        /// ruoka a £, majoitus b £". Maksettu &lt; kulu.Yhteensa, kun rahat eivät riittäneet (loput rästiin).
+        /// </summary>
+        public event Action<Pelaaja, Paivakulu, int> PaivakuluVeloitettiin;
 
         public Matka(IReittiverkko verkko, Satunnainen satunnainen, Pelitila tila = null)
         {
@@ -245,6 +260,10 @@ namespace Matkakirja.Peli
             if (reitit.Any(r => r.Laji == ReitinLaji.Meri) && p.Raha >= Vakiot.MeriHinta) tavat.Add(Kulkutapa.Meri);
             if (LentoKohteet(p).Count > 0) tavat.Add(Kulkutapa.Lento);
             if (TehtavaTarjolla != null && TehtavaTarjolla(p)) tavat.Add(Kulkutapa.Pysy);
+            // ODOTA (talouden vaihe 1): pankin apu poistui, joten rahaton pelaaja voi jäädä
+            // kaupunkiin, josta ei pääse ilmaiseksi (saari ilman laivarahaa). Silloin vuoron voi
+            // kuluttaa odottamalla — muuten aika ei kulkisi eikä kahden vuorokauden sääntö ratkeaisi.
+            if (!tavat.Any(t => t != Kulkutapa.Pysy)) tavat.Add(Kulkutapa.Odota);
             return tavat;
         }
 
@@ -301,7 +320,7 @@ namespace Matkakirja.Peli
 
         // --- vuoron kulku ---------------------------------------------------
 
-        /// <summary>Web beginTurn: nollaus, pankkiapu ja automaattivalinta.</summary>
+        /// <summary>Web beginTurn: nollaus, pudonneen ohitus, rahattomuuden tarkistus ja automaattivalinta.</summary>
         public void AloitaVuoro()
         {
             if (Tila.Vaihe == Vaihe.Ohi) return;
@@ -314,14 +333,24 @@ namespace Matkakirja.Peli
             Tila.AutoMatka = false;
             Tila.JatkaAutomaattisesti = false;
 
-            if (TarvitseeApua(p))
+            // Pudonnut pelaaja (rahat loppuivat, moninpeli) ei enää pelaa: vuoro siirtyy.
+            if (p.Pudonnut)
             {
-                p.Raha += Vakiot.HataApu;
-                Tapahtui?.Invoke("aid", $"{p.Nimi} sai pankilta {Vakiot.HataApu} puntaa");
+                PaataVuoro();
+                return;
+            }
+            // Rahattomuuden varoitus: selvisikö kassa, vai päättyykö matka (talouden vaihe 1).
+            TarkistaRahattomuus(p);
+            if (Tila.Vaihe == Vaihe.Ohi) return;
+            if (p.Pudonnut)
+            {
+                PaataVuoro();
+                return;
             }
 
-            // Automaattivalinta lasketaan NOPPATAVOISTA: bussilla ei heitetä.
-            var noppaTavat = Kulkutavat(p).Where(t => t != Kulkutapa.Bussi).ToList();
+            // Automaattivalinta lasketaan NOPPATAVOISTA: bussilla ei heitetä, ja odotus
+            // ei ole kulkutapa (pelaaja valitsee sen itse).
+            var noppaTavat = Kulkutavat(p).Where(t => t != Kulkutapa.Bussi && t != Kulkutapa.Odota).ToList();
             Tila.AutoMatka = noppaTavat.Count == 1 && noppaTavat[0] != Kulkutapa.Pysy;
             if (Tila.AutoMatka) ValitseKulkutapa(noppaTavat[0]);
 
@@ -330,33 +359,149 @@ namespace Matkakirja.Peli
         }
 
         /// <summary>
-        /// Web needsAid: ei yhtään kulkutapaa, tai mikään tavoite ei ole
-        /// rahoilla saavutettavissa. Vaellustilassa tavoitteet ovat laatat
-        /// (tokens.keys()); kun kaikki on käännetty, apua ei tule.
-        /// </summary>
-        public bool TarvitseeApua(Pelaaja p)
-        {
-            if (!Kulkutavat(p).Any(t => t != Kulkutapa.Pysy)) return true;
-            var tavoitteet = new HashSet<string>(Tavoitteet?.Invoke()
-                ?? (Laatat != null ? Laatat.Laatat.Keys : Verkko.Kaupungit.Keys));
-            if (tavoitteet.Count == 0) return false;
-            // Web reachableCities(board, pos, money): sama BFS myös reitin varrelta.
-            var saavutettavat = Verkko.Saavutettavat(p.Sijainti, p.Raha);
-            return !tavoitteet.Any(saavutettavat.Contains);
-        }
-
-        /// <summary>
         /// Web endTurn: vuoro vaihtuu. aikaKuluu=false (bussi) jättää
-        /// kierroslaskurin, eli kellon, paikalleen.
+        /// kierroslaskurin, eli kellon, paikalleen. Uuden vuorokauden alkaessa
+        /// kaikki pudottamattomat maksavat ruoan ja majoituksen (VeloitaPaivakulut).
         /// </summary>
         public void PaataVuoro(bool aikaKuluu = true)
         {
             if (Tila.Vaihe == Vaihe.Ohi) return;
             Tila.Vaihe = Vaihe.Toiminta;
             Tila.Vuorossa = (Tila.Vuorossa + 1) % Tila.Pelaajat.Count;
-            if (Tila.Vuorossa == 0 && aikaKuluu) Tila.VuoroLaskuri++;
+            if (Tila.Vuorossa == 0 && aikaKuluu)
+            {
+                int paivaEnnen = Tila.Paiva();
+                Tila.VuoroLaskuri++;
+                if (Tila.Paiva() > paivaEnnen) VeloitaPaivakulut();
+            }
             // Web updateSchedule (isoisän aikataulu) tulee sisältöerässä.
             AloitaVuoro();
+        }
+
+        // --- talous: päiväkulut ja rahattomuus (web game.js, talouden vaihe 1) ----
+
+        /// <summary>Kaupungin maan hintataso (web hintataso(cityId)): Kaupunki.Maa = web pack.map.cityCountry.</summary>
+        public Hintataso HintatasoKaupungissa(string kaupunki) =>
+            kaupunki != null && Verkko.Kaupungit.TryGetValue(kaupunki, out var k) ? Talous.MaanTaso(k.Maa) : Hintataso.Keski;
+
+        /// <summary>
+        /// Pelaajan päiväkulu nyt (web paivakulu). Kaupungissa ruoka + majoitus maan
+        /// hintatasolla; reitillä yö kuluu kulkuneuvossa, joten vain ruoka (lähtöpään A hintataso).
+        /// </summary>
+        public Paivakulu PaivakuluNyt(Pelaaja p = null)
+        {
+            p ??= P;
+            bool matkalla = !p.Sijainti.Kaupungissa;
+            string paikka = matkalla
+                ? (p.Sijainti.Reitti != null && Verkko.Reitit.TryGetValue(p.Sijainti.Reitti, out var r) ? r.A : null)
+                : p.Sijainti.Kaupunki;
+            var taso = paikka != null ? HintatasoKaupungissa(paikka) : Hintataso.Keski;
+            double kerroin = Talous.Kerroin(taso);
+            int ruoka = Talous.Pyorista(Talous.PaivakuluRuoka * kerroin);
+            int majoitus = matkalla ? 0 : Talous.Pyorista(Talous.PaivakuluMajoitus * kerroin);
+            return new Paivakulu(ruoka, majoitus, taso, matkalla);
+        }
+
+        /// <summary>Montako päivää kassa riittää nykyisellä päiväkululla (web kassaRiittaa; kassarivin arvio).</summary>
+        public int KassaRiittaa(Pelaaja p = null)
+        {
+            p ??= P;
+            int k = PaivakuluNyt(p).Yhteensa;
+            return k > 0 ? Math.Max(0, p.Raha - p.Rasti) / k : int.MaxValue;
+        }
+
+        /// <summary>
+        /// Vuorokautta jäljellä ennen matkan päättymistä (web rahattomuuttaJaljella;
+        /// kassarivin "rahat loppu · N vrk"); null ilman varoitusta.
+        /// </summary>
+        public int? RahattomuuttaJaljella(Pelaaja p = null)
+        {
+            p ??= P;
+            if (p.Rahaton == null) return null;
+            int vuoroja = Math.Max(0, Talous.RahattomuusVuoroja - (Tila.VuoroLaskuri - p.Rahaton.AlkuVuoro));
+            int vuorojaPaivassa = 24 / Vakiot.VuoronTunnit;
+            return (vuoroja + vuorojaPaivassa - 1) / vuorojaPaivassa;
+        }
+
+        void IlmoitaRahat(Pelaaja p, string tilanne, string otsikko, string ala = null)
+        {
+            Tapahtui?.Invoke("rahat", otsikko);
+            Rahatilanne?.Invoke(p, tilanne, otsikko, ala);
+        }
+
+        /// <summary>
+        /// Web veloitaPaivakulut: vuorokausi vaihtui, jokainen pudottamaton pelaaja
+        /// maksaa ruoan ja majoituksen. Jos rahat eivät riitä, maksetaan mitä on, loppu
+        /// jää rästiin ja alkaa kahden vuorokauden varoitus (TarkistaRahattomuus).
+        /// </summary>
+        public void VeloitaPaivakulut()
+        {
+            foreach (var p in Tila.Pelaajat)
+            {
+                if (p.Pudonnut) continue;
+                var k = PaivakuluNyt(p);
+                if (p.Raha >= k.Yhteensa)
+                {
+                    p.Raha -= k.Yhteensa;
+                    PaivakuluVeloitettiin?.Invoke(p, k, k.Yhteensa);
+                    continue;
+                }
+                int maksettu = p.Raha;
+                p.Raha = 0;
+                p.Rasti += k.Yhteensa - maksettu;
+                PaivakuluVeloitettiin?.Invoke(p, k, maksettu);
+                if (p.Rahaton == null)
+                {
+                    p.Rahaton = new Rahattomuus { AlkuVuoro = Tila.VuoroLaskuri, Paiva = Tila.Paiva() };
+                    IlmoitaRahat(p, "peli.vararikko.varoitus", "Rahat lopussa — kaksi päivää aikaa",
+                        "Tehtävät, visat ja aarteet tuovat rahaa. Maateitse pääsee ilmaiseksi.");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Web tarkistaRahattomuus: vuoron alussa kassa selvisi (rästi maksetaan, kun
+        /// raha ≥ rästi + päiväkulu), vai ovatko kaksi vuorokautta kuluneet, jolloin matka päättyy.
+        /// </summary>
+        public void TarkistaRahattomuus(Pelaaja p = null)
+        {
+            p ??= P;
+            if (p.Rahaton == null) return;
+            int rasti = p.Rasti;
+            if (p.Raha >= rasti + PaivakuluNyt(p).Yhteensa)
+            {
+                p.Raha -= rasti;
+                p.Rasti = 0;
+                p.Rahaton = null;
+                IlmoitaRahat(p, "peli.vararikko.selvisi", "Kassa kunnossa");
+                return;
+            }
+            if (Tila.VuoroLaskuri - p.Rahaton.AlkuVuoro >= Talous.RahattomuusVuoroja) PaataMatka(p);
+        }
+
+        /// <summary>
+        /// Web paataMatka: rahat loppuivat eikä kassa noussut kahdessa vuorokaudessa.
+        /// Yksinpelissä matka päättyy (Vaihe Ohi, Tila.MatkaPaattyi; loppukortti ja jatko
+        /// viimeisestä turvatallennuksesta). Moninpelissä vain tämä pelaaja putoaa;
+        /// viimeinen jäljellä oleva voittaa (Tila.ViimeinenMatkalla).
+        /// </summary>
+        public void PaataMatka(Pelaaja p)
+        {
+            p.Pudonnut = true;
+            var kaupunki = p.Sijainti.Kaupungissa && Verkko.Kaupungit.TryGetValue(p.Sijainti.Kaupunki, out var k) ? k.Nimi : null;
+            var jaljella = Tila.Pelaajat.Where(x => !x.Pudonnut).ToList();
+            if (jaljella.Count == 0)
+            {
+                Tila.MatkaPaattyi = new MatkanLoppu { Pelaaja = p.Id, Kaupunki = kaupunki, Paiva = Tila.Paiva() };
+                Tila.Vaihe = Vaihe.Ohi;
+                return;
+            }
+            if (jaljella.Count == 1 && Tila.Pelaajat.Count > 1)
+            {
+                Tila.Vaihe = Vaihe.Ohi;
+                return;
+            }
+            IlmoitaRahat(p, "peli.vararikko.loppu", $"{p.Nimi} putosi pelistä");
         }
 
         /// <summary>Web visitCity: kirjaa käydyksi ja kertoo saapumisesta.</summary>
@@ -406,6 +551,12 @@ namespace Matkakirja.Peli
             if (!Kulkutavat().Contains(tapa)) return TekoTulos.Epaonnistui("Tuo matkustustapa ei ole nyt käytettävissä");
             if (tapa == Kulkutapa.Pysy)
                 return Tutki != null ? Tutki(P) : TekoTulos.Epaonnistui("Tutkiminen tulee myöhemmässä erässä");
+            // Odota (web 'wait'): vuoro kuluu paikallaan.
+            if (tapa == Kulkutapa.Odota)
+            {
+                PaataVuoro();
+                return TekoTulos.Onnistui();
+            }
             if (tapa == Kulkutapa.Bussi) return TekoTulos.Epaonnistui("Bussin kohde valitaan erikseen");
 
             var p = P;

@@ -70,7 +70,7 @@ namespace Matkakirja.Peli.Testit
         public static string Web(Kulkutapa t) => t switch
         {
             Kulkutapa.Maa => "land", Kulkutapa.Bussi => "bus", Kulkutapa.Meri => "sea",
-            Kulkutapa.Lento => "fly", _ => "stay",
+            Kulkutapa.Lento => "fly", Kulkutapa.Odota => "wait", _ => "stay",
         };
 
         static string Web(Vaihe v) => v switch
@@ -163,7 +163,7 @@ namespace Matkakirja.Peli.Testit
                 Vertaa("raha:" + (int)raha);
             }
             var kasikirjoitus = new Kasikirjoitus { Valinnat = (int)(MiniJson.Luku(ajo, "alkuValinta") ?? 0) };
-            for (int n = 0; n < MaxTeot && m.Tila.VuoroLaskuri <= vuorot; n++)
+            for (int n = 0; n < MaxTeot && m.Tila.VuoroLaskuri <= vuorot && m.Tila.Vaihe != Vaihe.Ohi; n++)
             {
                 Vertaa(kasikirjoitus.Seuraava(m));
                 if (tallennaVali > 0 && (n + 1) % tallennaVali == 0)
@@ -179,7 +179,8 @@ namespace Matkakirja.Peli.Testit
             var ajot = MiniJson.Taulukko(MiniJson.Kentta(Jalki, "jaljet")).Select(MiniJson.Objekti).ToList();
             Oleta.Tosi(ajot.Count >= 6, "ajoja");
             foreach (var ajo in ajot) yht += ToistaAjo(ajo, 0);
-            Oleta.Tosi(yht > 500, "askelia " + yht);
+            // Talouden vaihe 1: osa ajoista päättyy rahattomuuteen (jälki lyheni 758 → 384 askeleeseen).
+            Oleta.Tosi(yht > 300, "askelia " + yht);
         }
 
         [Testi] static void KultainenMatkajalkiTallennuksenYli()
@@ -219,10 +220,10 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(Kulkutapa.Meri, m.Tila.Kulkutapa.Value);
             Oleta.Sama(Vakiot.MeriHinta, m.Tila.OdottavaMaksu);
             Oleta.Tosi(!m.Tila.JatkaAutomaattisesti, "kaupungissa noppa kuuluu napille");
-            Oleta.Sama(300, m.Tila.Pelaaja.Raha, "ei vielä veloitettu");
+            Oleta.Sama(Vakiot.AloitusRaha, m.Tila.Pelaaja.Raha, "ei vielä veloitettu");
             Oleta.Tosi(m.Heita().Ok, "heitto");
             Oleta.Tosi(m.Liiku(m.Tila.Siirrot.Keys.First()).Ok, "siirto");
-            Oleta.Sama(200, m.Tila.Pelaaja.Raha);
+            Oleta.Sama(Vakiot.AloitusRaha - Vakiot.MeriHinta, m.Tila.Pelaaja.Raha);
             Oleta.Sama(2, m.Tila.VuoroLaskuri);
         }
 
@@ -266,7 +267,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("bee", string.Join(",", m.BussiKohteet()), "vain maareitit");
             Oleta.Tosi(!m.Bussi("saari").Ok, "bussi ei aja laivareittiä");
             Oleta.Tosi(m.Bussi("bee").Ok, "bussi");
-            Oleta.Sama(250, m.Tila.Pelaaja.Raha);
+            Oleta.Sama(Vakiot.AloitusRaha - Vakiot.BussiHinta, m.Tila.Pelaaja.Raha);
             Oleta.Sama(1, m.Tila.VuoroLaskuri, "aika ei kulu");
             Oleta.Sama("c:bee", m.Tila.Pelaaja.Sijainti.Avain);
             Oleta.Sama("bee+", string.Join(",", saapumiset));
@@ -280,7 +281,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("bee+,ala+", string.Join(",", saapumiset), "ala oli aloitus, ei käyty");
             Oleta.Tosi(m.Bussi("bee").Ok, "uudestaan");
             Oleta.Sama("bee+,ala+,bee", string.Join(",", saapumiset));
-            Oleta.Sama(150, m.Tila.Pelaaja.Raha);
+            Oleta.Sama(Vakiot.AloitusRaha - 3 * Vakiot.BussiHinta, m.Tila.Pelaaja.Raha);
         }
 
         /// <summary>Elävä kartta kohta 4: kuljettu reitti järjestyksessä, tapa mukana, tallennus ja vanha tallennus.</summary>
@@ -324,7 +325,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!m.Lenna("bee").Ok, "ei lentoa");
             Oleta.Tosi(m.Tila.Kulkutapa == null, "hylätty lento ei jätä tapaa");
             Oleta.Tosi(m.Lenna("cee").Ok, "lento");
-            Oleta.Sama(0, m.Tila.Pelaaja.Raha);
+            Oleta.Sama(Vakiot.AloitusRaha - Vakiot.LentoHinta, m.Tila.Pelaaja.Raha);
             Oleta.Sama(2, m.Tila.VuoroLaskuri);
             Oleta.Tosi(m.Tila.Pelaaja.Kaydyt.Contains("cee"), "käyty");
             Oleta.Sama(0, m.LentoKohteet().Count, "ei rahaa uuteen lentoon");
@@ -345,28 +346,30 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("stuck", string.Join(",", tapahtumat));
         }
 
-        [Testi] static void PankkiapuJumissa()
+        [Testi] static void JumissaEiPankkiapuaVaanOdota()
         {
+            // Talouden vaihe 1: saarella ilman laivarahaa ei tule pankin apua; ainoa tapa on Odota.
             var m = Uusi("saari");
             var tapahtumat = new List<string>();
             m.Tapahtui += (laji, _) => tapahtumat.Add(laji);
             m.Tila.Pelaaja.Raha = 40;
             m.Tila.Vaihe = Vaihe.Toiminta;
             m.AloitaVuoro();
-            Oleta.Sama(140, m.Tila.Pelaaja.Raha);
-            Oleta.Sama("aid", string.Join(",", tapahtumat));
-            Oleta.Sama(Kulkutapa.Meri, m.Tila.Kulkutapa.Value);
-            // Tavoitteet ratkaisevat myös: tavoite vain laivan takana ja rahat alle lipun.
-            var m2 = Uusi("bee");
-            m2.Tila.Vaihe = Vaihe.Toiminta;   // web travelModes vaatii vaiheen 'action'
-            m2.Tavoitteet = () => new[] { "saari" };
-            m2.Tila.Pelaaja.Raha = 60;
-            Oleta.Tosi(m2.TarvitseeApua(m2.Tila.Pelaaja), "saari laivan takana");
-            m2.Tila.Pelaaja.Raha = 100;
-            Oleta.Tosi(!m2.TarvitseeApua(m2.Tila.Pelaaja), "lippuraha riittää");
-            m2.Tavoitteet = () => new string[0];
-            m2.Tila.Pelaaja.Raha = 0;
-            Oleta.Tosi(!m2.TarvitseeApua(m2.Tila.Pelaaja), "ei tavoitteita");
+            Oleta.Sama(40, m.Tila.Pelaaja.Raha, "ei pankkiapua");
+            Oleta.Sama("", string.Join(",", tapahtumat));
+            Oleta.Sama("Odota", string.Join(",", m.Kulkutavat()));
+            Oleta.Tosi(!m.Tila.AutoMatka && m.Tila.Kulkutapa == null, "odotus ei ole esivalinta");
+            Oleta.Tosi(!m.ValitseKulkutapa(Kulkutapa.Meri).Ok, "laiva ei käy ilman lippurahaa");
+            Oleta.Tosi(m.ValitseKulkutapa(Kulkutapa.Odota).Ok, "odota");
+            Oleta.Sama(2, m.Tila.VuoroLaskuri, "vuoro kului");
+            Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe);
+            Oleta.Sama("c:saari", m.Tila.Pelaaja.Sijainti.Avain, "paikallaan");
+            // Pysy ei poista odotusta: odota tulee, kun mikään muu kuin Pysy ei käy.
+            m.TehtavaTarjolla = _ => true;
+            Oleta.Sama("Pysy,Odota", string.Join(",", m.Kulkutavat()));
+            // Lippurahalla laiva on tarjolla eikä odotusta ole.
+            m.Tila.Pelaaja.Raha = 100;
+            Oleta.Sama("Meri,Pysy", string.Join(",", m.Kulkutavat()));
         }
 
         [Testi] static void KoukutPysyJaSaapumisPysahdys()

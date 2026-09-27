@@ -52,7 +52,7 @@ const AJOT = [
   { seed: 5, start: 'lontoo', alkuValinta: 3 },   // lento heti alkuun
   { seed: 99, start: 'istanbul' },
   { seed: 13, start: 'manila', alkuValinta: 1 },  // saarelta lentäen
-  { seed: 11, start: 'dublin', raha: 40 },        // pankkiapu (STRANDED_AID)
+  { seed: 11, start: 'dublin', raha: 40 },        // vähissä rahoissa (ennen pankkiapu; talouden vaihe 1: rahattomuus)
 ];
 
 function tila(g, teko) {
@@ -129,6 +129,9 @@ for (const { seed, start, alkuValinta = 0, raha = null } of AJOT) {
       const avain = [...g.moves.keys()].sort(ordinaali)[0];
       teko = `move:${avain}`;
       tulos = g.actionMove(avain);
+    } else if (g.phase === 'over') {
+      // Talouden vaihe 1 (27.9.2026): rahat loppuivat ja matka päättyi — jälki loppuu tähän.
+      break;
     } else {
       throw new Error(`odottamaton vaihe ${g.phase}`);
     }

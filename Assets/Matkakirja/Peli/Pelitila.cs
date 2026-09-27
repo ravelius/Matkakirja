@@ -21,6 +21,8 @@
 // uudempi versio heittää UudempiTallennus-poikkeuksen (PeliOhjain säilyttää
 // tiedoston). VERSIOPOLKU: uusi kenttä tai merkityksen muutos = uusi versio,
 // askel Paivita-metodiin ja testi (Peli-testit/Testit/TallennusTestit.cs).
+// Versio 6 (27.9.2026, talouden vaihe 1): pelaajan rasti, rahaton ja pudonnut sekä
+// pelin matkaPaattyi (Peli/Talous.cs). Vanha tallennus: ei velkaa, ei varoitusta.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -60,6 +62,12 @@ namespace Matkakirja.Peli
         /// tämä on natiivin oma valinnainen tallennuskenttä "kuljettu". Sama kaupunki peräkkäin kirjataan kerran.
         /// </summary>
         public List<KuljettuPiste> Kuljettu = new List<KuljettuPiste>();
+        /// <summary>Maksamatta jääneet päiväkulut (web rasti; talouden vaihe 1).</summary>
+        public int Rasti;
+        /// <summary>Rahat loppuivat: kahden vuorokauden varoitus käynnissä (web rahaton), muuten null.</summary>
+        public Rahattomuus Rahaton;
+        /// <summary>Rahat loppuivat eikä kassa noussut: pelaaja ei enää pelaa (web pudonnut).</summary>
+        public bool Pudonnut;
     }
 
     /// <summary>Kuljetun reitin piste: kaupunki ja kulkutapa, jolla sinne saavuttiin (null = aloitus tai siirto ilman tapaa).</summary>
@@ -84,7 +92,7 @@ namespace Matkakirja.Peli
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 5;
+        public const int TallennusVersio = 6;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -135,6 +143,17 @@ namespace Matkakirja.Peli
         public HashSet<string> LoydetytNostot = new HashSet<string>(StringComparer.Ordinal);
         /// <summary>Pelikerran linssit pelaajittain (web game.linssit; Peli/Linssiomistus.cs). Versio 5.</summary>
         public Linssitila Linssit = new Linssitila();
+        /// <summary>Rahat loppuivat ja matka päättyi (web matkaPaattyi; kaikki pelaajat pudonneet), muuten null.</summary>
+        public MatkanLoppu MatkaPaattyi;
+        /// <summary>
+        /// Moninpelissä viimeisenä matkalle jäänyt (web winner, kun muut putosivat rahattomina).
+        /// Johdetaan tilasta: peli ohi, pelaajia useampi ja täsmälleen yksi pudottamaton.
+        /// </summary>
+        public Pelaaja ViimeinenMatkalla =>
+            Vaihe == Vaihe.Ohi && Pelaajat.Count > 1 && Pelaajat.Count(x => !x.Pudonnut) == 1
+                ? Pelaajat.First(x => !x.Pudonnut) : null;
+        /// <summary>Onko jollakulla rahattomuuden varoitus tai onko joku pudonnut (turvatallennuksen ehto).</summary>
+        public bool Rahattomuutta => Pelaajat.Any(x => x.Rahaton != null || x.Pudonnut);
         /// <summary>Luetun tallennuksen versio (0 = ei luettu). Ei tallenneta.</summary>
         public int LuettuVersio;
 
@@ -206,6 +225,12 @@ namespace Matkakirja.Peli
                 // Elävä kartta (26.9.2026): kuljettu reitti [[kaupunki, tapa|null], …], valinnainen.
                 Kentta(sb, "kuljettu", "[" + string.Join(",", p.Kuljettu.Select(k =>
                     "[" + Teksti(k.Kaupunki) + "," + (k.Tapa.HasValue ? Teksti(k.Tapa.Value.ToString()) : "null") + "]")) + "]");
+                // Talous (versio 6): rästi, rahattomuuden varoitus {alkuVuoro, paiva} tai null, pudonnut.
+                Kentta(sb, "rasti", p.Rasti.ToString(CultureInfo.InvariantCulture));
+                Kentta(sb, "rahaton", p.Rahaton == null ? "null"
+                    : "{\"alkuVuoro\":" + p.Rahaton.AlkuVuoro.ToString(CultureInfo.InvariantCulture)
+                      + ",\"paiva\":" + p.Rahaton.Paiva.ToString(CultureInfo.InvariantCulture) + "}");
+                Kentta(sb, "pudonnut", p.Pudonnut ? "true" : "false");
                 sb.Append('}');
             }
             sb.Append(']');
@@ -226,6 +251,11 @@ namespace Matkakirja.Peli
             Kentta(sb, "pulmatNahty", "[" + string.Join(",", NahdytPulmat.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti)) + "]");
             // Elävä kartta (26.9.2026): löydetyt nostot, valinnainen.
             Kentta(sb, "nostotLoydetty", "[" + string.Join(",", LoydetytNostot.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti)) + "]");
+            // Talous (versio 6): matka päättyi rahattomuuteen {pelaaja, kaupunki, paiva} tai null.
+            Kentta(sb, "matkaPaattyi", MatkaPaattyi == null ? "null"
+                : "{\"pelaaja\":" + MatkaPaattyi.Pelaaja.ToString(CultureInfo.InvariantCulture)
+                  + ",\"kaupunki\":" + Teksti(MatkaPaattyi.Kaupunki)
+                  + ",\"paiva\":" + MatkaPaattyi.Paiva.ToString(CultureInfo.InvariantCulture) + "}");
             sb.Append('}');
             return sb.ToString();
         }
@@ -288,6 +318,15 @@ namespace Matkakirja.Peli
                     p.Kuljettu.Add(new KuljettuPiste(kk, tapa));
                 }
                 if (p.Kuljettu.Count == 0 && p.Sijainti.Kaupungissa) p.Kuljettu.Add(new KuljettuPiste(p.Sijainti.Kaupunki, null));
+                // Talous (versio 6); vanhassa tallennuksessa ei velkaa eikä varoitusta.
+                p.Rasti = (int)(MiniJson.Luku(pd, "rasti") ?? 0);
+                if (MiniJson.Kentta(pd, "rahaton") is Dictionary<string, object> ro)
+                    p.Rahaton = new Rahattomuus
+                    {
+                        AlkuVuoro = (int)(MiniJson.Luku(ro, "alkuVuoro") ?? 0),
+                        Paiva = (int)(MiniJson.Luku(ro, "paiva") ?? 0),
+                    };
+                p.Pudonnut = MiniJson.Totuus(pd, "pudonnut");
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
@@ -304,6 +343,13 @@ namespace Matkakirja.Peli
             // Pulmat (valinnainen): web puzzlesSeen ?? [].
             foreach (var s in Tekstit(o, "pulmatNahty")) if (s != null) t.NahdytPulmat.Add(s);
             foreach (var s in Tekstit(o, "nostotLoydetty")) if (s != null) t.LoydetytNostot.Add(s);
+            if (MiniJson.Kentta(o, "matkaPaattyi") is Dictionary<string, object> mp)
+                t.MatkaPaattyi = new MatkanLoppu
+                {
+                    Pelaaja = (int)(MiniJson.Luku(mp, "pelaaja") ?? 0),
+                    Kaupunki = MiniJson.Teksti(mp, "kaupunki"),
+                    Paiva = (int)(MiniJson.Luku(mp, "paiva") ?? 0),
+                };
             return t;
         }
 
@@ -321,6 +367,9 @@ namespace Matkakirja.Peli
             // 4 → 5 (linssien hankinta, B8/B9): linssit (pelikerran linssit, peninkulma) puuttuu → tyhjä.
             // 3 → 4 (versionosto): kaupat, voittaja, avoinKaksintaistelu, pulmatNahty ja
             //   tapahtumakortti olivat valinnaisia; puuttuva = tyhjä (lukija hoitaa).
+            // 5 → 6 (talouden vaihe 1): pelaajan rasti (0), rahaton (null), pudonnut (false) ja
+            //   matkaPaattyi (null) puuttuvat → oletukset (lukija hoitaa). Pankin apua ei enää ole;
+            //   vanha peli jatkuu nykyisellä kassalla, päiväkulu veloitetaan seuraavasta vuorokaudesta.
             for (int v = versio; v < TallennusVersio; v++)
             {
                 switch (v)

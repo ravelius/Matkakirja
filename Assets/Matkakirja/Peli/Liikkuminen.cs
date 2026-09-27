@@ -11,7 +11,7 @@ namespace Matkakirja.Peli
     /// <summary>Yksi Liiku-liu'un nappi (web iconButton + estaNappi).</summary>
     public sealed class KulkutapaNappi
     {
-        /// <summary>Maa (liftaus), Bussi, Meri (laiva) tai Lento.</summary>
+        /// <summary>Maa (liftaus), Bussi, Meri (laiva) tai Lento; Odota liftauksen paikalla (talouden vaihe 1).</summary>
         public Kulkutapa Laji;
         /// <summary>Web napin nimi: "Liftaus", "Bussilla", "Laivalla", "Lentäen".</summary>
         public string Teksti;
@@ -29,6 +29,8 @@ namespace Matkakirja.Peli
     {
         /// <summary>Monitoiminapin nimi (web iconButton('kompassi', 'Liiku')).</summary>
         public const string LiikuTeksti = "Liiku";
+        /// <summary>Odota-napin nimi (web iconButton('saapas', 'Odota', 'primary')).</summary>
+        public const string OdotaTeksti = "Odota";
 
         /// <summary>
         /// Web renderTravelChoice vaihe A, järjestys liftaus, bussi, laiva, lento. Vain vaiheessa
@@ -44,7 +46,10 @@ namespace Matkakirja.Peli
             int manner = (mannerlennot ?? new Kaupat(m).MannerLennot()).Count;
             bool maa = tavat.Contains(Kulkutapa.Maa);
             bool lento = m.LentoKohteet().Count > 0 || manner > 0;
-            napit.Add(Nappi(Kulkutapa.Maa, "Liftaus", 0, maa, MaaEste(m), maa && !tavat.Contains(Kulkutapa.Pysy)));
+            // ODOTA (talouden vaihe 1, web ui.js): kun mihinkään ei pääse (saari ilman laivarahaa),
+            // liftauksen paikalla on korostettu Odota — vuoro kuluu ja rahattomuuden varoitus etenee.
+            if (tavat.Contains(Kulkutapa.Odota)) napit.Add(Nappi(Kulkutapa.Odota, OdotaTeksti, 0, true, null, true));
+            else napit.Add(Nappi(Kulkutapa.Maa, "Liftaus", 0, maa, MaaEste(m), maa && !tavat.Contains(Kulkutapa.Pysy)));
             napit.Add(Nappi(Kulkutapa.Bussi, "Bussilla", Vakiot.BussiHinta, tavat.Contains(Kulkutapa.Bussi), BussiEste(m), false));
             napit.Add(Nappi(Kulkutapa.Meri, "Laivalla", Vakiot.MeriHinta, tavat.Contains(Kulkutapa.Meri), LaivaEste(m), false));
             napit.Add(Nappi(Kulkutapa.Lento, "Lentäen", Vakiot.LentoHinta, lento, LentoEste(m), false));
