@@ -85,6 +85,62 @@ if (Z10) {
 // tiedostonimet ja ulkoiset kuva-, ääni- ja video-URLit (hahmotelmien
 // viitekuvat, lähdelinkit) eivät ole pelin omaa mediaa.
 const EI_MEDIAA = new Set(['linkki', 'tiedosto', 'kuva-url', 'aani-url', 'video-url']);
+/*
+ * Eheystarkistus 27.9.2026: absoluuttinen kuva- tai ääniosoite PELIN OMAAN ämpäriin (fokuskohteiden ja maakuntien
+ * nostokuvat, saapumis- ja Livian puheet, aikajanat) on pelin omaa mediaa, vaikka laji on kuva-url/aani-url.
+ * Ennen tätä ne jäivät offline-latauksesta pois (4 142 kuvaa ja 56 ääntä koko paketissa).
+ */
+const OMA_AMPARI = 'https://media.matkakirja.app/';
+/*
+ * Natiiviseppä 27.9.2026: vanhat buildit (≤ 1.0.31) lataavat maat.*.media-listan offline-kansioon, mutta natiivin Kuvat
+ * ja Puhe eivät lue sitä, joten nämä lisäykset olisivat niille pelkkää latausta. Siksi ne ovat OMASSA avaimessa
+ * maat.*.mediaKuvat (+ tavuja.mediaKuvat, ei yht:ssä); natiivi lukee sen 1.0.32:sta (Kuvat/Puhe offline-kansiosta).
+ */
+/*
+ * Skeema 1.52: MERENTAKAISET ALUEET omiksi offline-kohteikseen (Fable 27.9.2026: VAIN EUROOPPA on maantieteellinen;
+ * Bermuda, Falkland, Cayenne ja Nouméa eivät kuulu emämaan GBR/FRA pakettiin, jotta maakatto pysyy mielekkäänä).
+ * Kaupungin maa on kokoelmassa emämaa; offline-jaossa alue saa oman ISO3-koodinsa, rasterin ± ALUE_ASTE kaupungin
+ * ympäriltä ja maanosan kaupungin mantereesta.
+ */
+export const MERENTAKAISET = {
+  bermuda: { iso: 'BMU', iso2: 'BM', nimi: 'Bermuda' },
+  falkland: { iso: 'FLK', iso2: 'FK', nimi: 'Falklandinsaaret' },
+  cayenne: { iso: 'GUF', iso2: 'GF', nimi: 'Ranskan Guayana' },
+  noumea: { iso: 'NCL', iso2: 'NC', nimi: 'Uusi-Kaledonia' },
+};
+const ALUE_ASTE = 1.5;
+function alueenMaa(c) { return MERENTAKAISET[c.id]?.iso ?? c.maa; }
+
+/** Skeema 1.52: mediaKuvat-asetukset (Fable 27.9.2026: pienennetyt, katto 100 Mt maata kohden). */
+export const MEDIAKUVAT = {
+  katto: 100_000_000,
+  pieni: { juuri: 'pieni/', pitkaSivu: 1280, laatu: 80, kynnysTavut: 300_000 },
+  // Järjestys katon sisällä (Fable 27.9.): karttanostot → miniatyyrit → Livian ja saapumisen puheet → luennat → muut.
+  jarjestys: { karttavalot: 1, takynostot: 1, fokusvirrat: 1, maakuntasalaisuudet: 1, miniatyyrit: 2, livianpuhe: 3,
+    livianrepliikit: 3, saapumispuheet: 3, saapuminen: 3, luennat: 4 },
+};
+const MEDIAKUVAT_TIEDOSTO = join(TAMA, 'mediakuvat.json');
+/** tools/vienti/mediakuvat.json (tools/vienti/mediakuvat.mjs --paivita): { tiedostot: { avain: [alkuperäinen, pieni|null] } }. */
+export function lueMediakuvat(tiedosto = MEDIAKUVAT_TIEDOSTO) {
+  return existsSync(tiedosto) ? JSON.parse(readFileSync(tiedosto, 'utf8')).tiedostot ?? {} : {};
+}
+/** Ämpärin avain osoitteesta (ilman kyselyä) ja pienennetyn kuvan avain. */
+export const ampariAvain = (url) => url.slice(OMA_AMPARI.length).split(/[?#]/)[0];
+export const pieniAvain = (avain) => `${MEDIAKUVAT.pieni.juuri}${avain.replace(/\.[a-z0-9]+$/i, '')}.jpg`;
+const MEDIAKUVAT_KUVAUS = {
+  kuvaus: 'Pelin omat tiedostot ämpärissä, jotka eivät ole maat.*.media-listalla: karttanostojen, fokuskohteiden ja '
+    + 'maakuntien kuvat, miniatyyrit, lehtien valmiit kuvaosoitteet, saapumis- ja Livian puheet eleineen, luentojen '
+    + 'äänet ja aikaleimat. Alkio { url, pieni? }: lataa pieni jos on, tallenna url:n polulle (natiivi 1.0.32+).',
+  pieniKaava: `https://media.matkakirja.app/${MEDIAKUVAT.pieni.juuri}<avain ilman päätettä>.jpg `
+    + `(pitkä sivu ${MEDIAKUVAT.pieni.pitkaSivu} px, JPEG ${MEDIAKUVAT.pieni.laatu}, kun alkuperäinen > ${MEDIAKUVAT.pieni.kynnysTavut} t)`,
+  katto: MEDIAKUVAT.katto,
+  jarjestys: 'karttanostot → miniatyyrit → Livian ja saapumisen puheet → luennat → muut; yli katon jäävät pois',
+};
+const SUORA_TIEDOSTO = /\.(jpe?g|png|webp|gif|svg|mp3|ogg|m4a|json|glb)$/i;
+/** Skeema 1.52: mediaKuviin kuuluva viite (oma ämpäri, mutta laji kuva-url/aani-url tai kokoelmavaiheen suora osoite). */
+export const onLisamedia = (v) => Boolean(v.url) && (v.laji === 'ampari-suora'
+  || ((v.laji === 'kuva-url' || v.laji === 'aani-url') && v.url.startsWith(OMA_AMPARI)));
+export const onOffline = (v) => Boolean(v.url) && (!EI_MEDIAA.has(v.laji) || onLisamedia(v));
 
 /* ------------------------------------------------------------ geometria */
 
@@ -184,11 +240,11 @@ function kaupunkitasonValit(kaupungit, taso) {
   for (const c of kaupungit) {
     if (c.tyyppi !== 'kaupunki' || !c.maa || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) continue;
     const b = kaupunginLaatikko(c.lon, c.lat, taso.sadeKm);
-    if (!maat.has(c.maa)) maat.set(c.maa, new Map());
+    if (!maat.has(alueenMaa(c))) maat.set(alueenMaa(c), new Map());
     for (const z of taso.tasot) {
       const x0 = rajaa(xyzX(b.w, z), z); const x1 = rajaa(xyzX(b.e, z), z);
       const y0 = rajaa(xyzY(b.n, z), z); const y1 = rajaa(xyzY(b.s, z), z);
-      const m = maat.get(c.maa);
+      const m = maat.get(alueenMaa(c));
       if (!m.has(z)) m.set(z, { valit: [], laatat: new Set() });
       m.get(z).valit.push([x0, y0, x1, y1]);
       for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) m.get(z).laatat.add(`${x}/${y}`);
@@ -207,8 +263,8 @@ function syvanTasonValit(kaupungit, maat, syva, joukko) {
     const a = syva.laatikkoAste;
     const x0 = rajaa(xyzX(Math.max(-180, c.lon - a), 10), 10); const x1 = rajaa(xyzX(Math.min(180, c.lon + a), 10), 10);
     const y0 = rajaa(xyzY(Math.min(MERCATOR_MAX, c.lat + a), 10), 10); const y1 = rajaa(xyzY(Math.max(-MERCATOR_MAX, c.lat - a), 10), 10);
-    if (!maat.has(c.maa)) maat.set(c.maa, new Map());
-    const m = maat.get(c.maa);
+    if (!maat.has(alueenMaa(c))) maat.set(alueenMaa(c), new Map());
+    const m = maat.get(alueenMaa(c));
     if (!m.has(10)) m.set(10, { valit: [], laatat: new Set() });
     const t = m.get(10);
     for (let y = y0; y <= y1; y++) {
@@ -253,21 +309,42 @@ function maastoLaatat(renkaat, b, z, saatavilla) {
  */
 export function jaaMedia(tiedostot, manifest) {
   const lue = (p) => JSON.parse(tiedostot.get(p));
-  const kaupungit = new Map(lue('kokoelmat/kaupungit.json').alkiot.map((k) => [k.id, k.maa]));
+  const kaupungit = new Map(lue('kokoelmat/kaupungit.json').alkiot.map((k) => [k.id, alueenMaa(k)]));
   const { viitteet } = lue(manifest.media.tiedosto);
-  const omat = viitteet.filter((v) => v.url && !EI_MEDIAA.has(v.laji));
+  const omat = viitteet.filter(onOffline);
   const arvot = new Map(omat.map((v) => [v.arvo, v]));
   const maat = new Set(Object.keys(lue('moduulit/js/packs/maailmankartta.json').exportit.MAAILMANKARTTA.map.countryShapes));
   for (const m of kaupungit.values()) if (m) maat.add(m);
   const jako = new Map();
-  const lisaa = (maa, arvo) => { if (!jako.has(maa)) jako.set(maa, new Set()); jako.get(maa).add(arvo); };
+  // Skeema 1.52: (maa, arvo) → pienin järjestysnumero (MEDIAKUVAT.jarjestys; 5 = muu).
+  const jarjestys = new Map();
+  const lisaa = (maa, arvo, j = 5) => {
+    if (!jako.has(maa)) jako.set(maa, new Set());
+    jako.get(maa).add(arvo);
+    const k = `${maa}\t${arvo}`;
+    jarjestys.set(k, Math.min(jarjestys.get(k) ?? 9, j));
+  };
   for (const k of manifest.kokoelmat) {
     if (k.nimi === 'esilasketut') continue;
     for (const a of lue(k.tiedosto).alkiot) {
-      const maa = (typeof a.maa === 'string' && maat.has(a.maa)) ? a.maa : (a.kaupunki ? kaupungit.get(a.kaupunki) : null);
+      // Skeema 1.52: merentakaisen alueen kaupungin alkio kuuluu alueelle, vaikka maa on emämaa.
+      const maa = MERENTAKAISET[a.kaupunki] ? MERENTAKAISET[a.kaupunki].iso
+        : (typeof a.maa === 'string' && maat.has(a.maa)) ? a.maa : (a.kaupunki ? kaupungit.get(a.kaupunki) : null);
       if (!maa) continue;
+      const j = MEDIAKUVAT.jarjestys[k.nimi] ?? 5;
       const kay = (o) => {
-        if (typeof o === 'string') { if (arvot.has(o)) lisaa(maa, o); } else if (o && typeof o === 'object') for (const v of Object.values(o)) kay(v);
+        if (typeof o === 'string') {
+          // Eheystarkistus 27.9.2026: kokoelmavaiheessa johdetut suorat osoitteet omaan ämpäriin (miniatyyrit, Livian
+          // puheet ja eleet, luentojen äänet ja aikaleimat, lehtien valmiit kuvaosoitteet) eivät ole media.jsonissa.
+          if (!arvot.has(o) && o.startsWith(OMA_AMPARI) && SUORA_TIEDOSTO.test(o.split(/[?#]/)[0])) {
+            arvot.set(o, { arvo: o, laji: 'ampari-suora', url: o, esiintymat: [] });
+          }
+          if (arvot.has(o)) lisaa(maa, o, j);
+        } else if (Array.isArray(o)) for (const v of o) kay(v);
+        else if (o && typeof o === 'object') {
+          // `<kenttä>Tila: 'puuttuu'` (livianpuhe.eleetTila): tiedostoa ei ole tarkoituksella, ei offline-listalle.
+          for (const [avain, v] of Object.entries(o)) if (o[`${avain}Tila`] !== 'puuttuu') kay(v);
+        }
       };
       kay(a);
     }
@@ -276,6 +353,7 @@ export function jaaMedia(tiedostot, manifest) {
     const paate = e.moduuli.match(/-([a-z]{3})\.js$/);
     if (paate && maat.has(paate[1].toUpperCase())) return paate[1].toUpperCase();
     for (const osa of e.polku.split('/')) {
+      if (MERENTAKAISET[osa]) return MERENTAKAISET[osa].iso;
       if (maat.has(osa)) return osa;
       if (kaupungit.get(osa)) return kaupungit.get(osa);
     }
@@ -283,7 +361,8 @@ export function jaaMedia(tiedostot, manifest) {
   };
   for (const v of omat) for (const e of v.esiintymat) { const m = esiintymanMaa(e); if (m) lisaa(m, v.arvo); }
   const sidotut = new Set([...jako.values()].flatMap((s) => [...s]));
-  return { jako, globaali: omat.filter((v) => !sidotut.has(v.arvo)).map((v) => v.arvo), arvot };
+  // Skeema 1.52: maahan sitomaton lisamedia ei mene valinnaisiin ryhmiin (vanhat buildit lataavat ne).
+  return { jako, jarjestys, globaali: omat.filter((v) => !sidotut.has(v.arvo) && !onLisamedia(v)).map((v) => v.arvo), arvot };
 }
 
 /* ------------------------------------------------------------------ kokoaja */
@@ -326,13 +405,15 @@ export function maidenMaanosat({ countryShapes, cities, cityCountry, cityManner 
 }
 
 function summaa(lista) {
-  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}) };
+  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), mediaKuvat: 0, levy: 0 };
   for (const x of lista) for (const k of Object.keys(t)) t[k] += x[k] ?? 0;
   return t;
 }
 
-export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null, mannerNimet = {}, koot = lueKoot() }) {
-  const { jako, globaali, arvot } = jaaMedia(tiedostot, manifest);
+export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null, mannerNimet = {}, koot = lueKoot(),
+  mediakuvat = lueMediakuvat() }) {
+  const { jako, jarjestys, globaali, arvot } = jaaMedia(tiedostot, manifest);
+  const ehdokkaat = {};
   const mediaTavut = (lista) => lista.reduce((a, arvo) => a + (koot.media[arvot.get(arvo).laji] ?? koot.media.muu ?? 0), 0);
   const url = (arvo) => arvot.get(arvo).url;
   const R = OFFLINE_LAHTEET.rasteri; const M = OFFLINE_LAHTEET.maasto;
@@ -343,11 +424,12 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     globaaliRasteri[z] = [0, 0, 2 ** z - 1, 2 ** z - 1];
     globaaliRasteriTavut += 4 ** z * (koot.rasteri.keskitavut[z] ?? 0);
   }
-  const globaaliMaasto = {}; let globaaliMaastoTavut = 0;
+  const globaaliMaasto = {}; let globaaliMaastoTavut = 0; let globaaliMaastoLevy = 0;
   for (let z = 0; z <= M.globaaliMax && z < saatavilla.length; z++) {
     globaaliMaasto[z] = saatavilla[z].map((a) => [a.startX, a.startY, a.endX, a.endY]);
-    globaaliMaastoTavut += saatavilla[z].reduce((s, a) => s + (a.endX - a.startX + 1) * (a.endY - a.startY + 1), 0)
-      * (koot.maasto.keskitavut[z] ?? 0);
+    const n = saatavilla[z].reduce((s, a) => s + (a.endX - a.startX + 1) * (a.endY - a.startY + 1), 0);
+    globaaliMaastoTavut += n * (koot.maasto.keskitavut[z] ?? 0);
+    globaaliMaastoLevy += n * (koot.maasto.purettu?.[z] ?? koot.maasto.keskitavut[z] ?? 0);
   }
   // Maahan sitomaton media ei kuulu "kerran kaikille" -osaan (Natiiviseppä
   // 23.9.2026): se jaetaan valinnaisiksi ryhmiksi, jotka pelaaja voi ladata
@@ -386,12 +468,17 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
   const syvatValit = new Map();
   if (Z10) syvanTasonValit(kaupunkiLista, syvatValit, R.kaupunkiRasteri, Z10);
   const maat = {};
-  for (const [iso, maa] of Object.entries(countryShapes)) {
-    if (!maa.renkaat?.length) continue;
-    const renkaat = renkaatAsteina(maa);
+  // Skeema 1.52: merentakaiset alueet omina kohteinaan (renkaana laatikko ± ALUE_ASTE kaupungin ympärillä).
+  const alueet = Object.fromEntries(kaupunkiLista.filter((c) => MERENTAKAISET[c.id] && Number.isFinite(c.lat))
+    .map((c) => [MERENTAKAISET[c.id].iso, { nimi: MERENTAKAISET[c.id].nimi, manner: c.manner ?? null, asteina: [[
+      [c.lon - ALUE_ASTE, c.lat - ALUE_ASTE], [c.lon + ALUE_ASTE, c.lat - ALUE_ASTE], [c.lon + ALUE_ASTE, c.lat + ALUE_ASTE],
+      [c.lon - ALUE_ASTE, c.lat + ALUE_ASTE], [c.lon - ALUE_ASTE, c.lat - ALUE_ASTE]]] }]));
+  for (const [iso, maa] of [...Object.entries(countryShapes), ...Object.entries(alueet)]) {
+    if (!maa.renkaat?.length && !maa.asteina) continue;
+    const renkaat = maa.asteina ?? renkaatAsteina(maa);
     const b = bbox(renkaat);
     const rasteri = {}; const maasto = {}; const laattoja = { rasteri: 0, maasto: 0 };
-    let rTavut = 0; let mTavut = 0;
+    let rTavut = 0; let mTavut = 0; let mLevy = 0;
     for (let z = R.globaaliMax + 1; z <= R.maaMax; z++) {
       const t = rasteriLaatat(renkaat, b, z);
       rasteri[z] = t.vali; laattoja.rasteri += t.laattoja; rTavut += t.laattoja * (koot.rasteri.keskitavut[z] ?? 0);
@@ -411,32 +498,65 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       const t = maastoLaatat(renkaat, b, z, saatavilla[z]);
       if (!t) continue;
       maasto[z] = t.vali; laattoja.maasto += t.laattoja; mTavut += t.laattoja * (koot.maasto.keskitavut[z] ?? 0);
+      mLevy += t.laattoja * (koot.maasto.purettu?.[z] ?? koot.maasto.keskitavut[z] ?? 0);
     }
-    const media = [...(jako.get(iso) ?? [])].sort();
+    const kaikkiMedia = [...(jako.get(iso) ?? [])].sort();
+    const media = kaikkiMedia.filter((a) => !onLisamedia(arvot.get(a)));
+    // Skeema 1.52: mediaKuvat järjestyksessä, ilman media-listan osoitteita, katon (MEDIAKUVAT.katto) sisällä.
+    // Koko tools/vienti/mediakuvat.json:sta; mittaamaton tai puuttuva (alkuperäinen 0) jää pois.
+    const mediassa = new Set(media.map(url));
+    const urlinJarjestys = new Map();
+    for (const a of kaikkiMedia) {
+      if (!onLisamedia(arvot.get(a)) || mediassa.has(url(a))) continue;
+      const j = jarjestys.get(`${iso}\t${a}`) ?? 5;
+      urlinJarjestys.set(url(a), Math.min(urlinJarjestys.get(url(a)) ?? 9, j));
+    }
+    const jarj = [...urlinJarjestys].sort((a, b) => a[1] - b[1] || (a[0] < b[0] ? -1 : 1));
+    if (jarj.length) ehdokkaat[iso] = jarj;
+    const mediaKuvat = []; let kuvaTavut = 0;
+    for (const [u] of jarj) {
+      const koko = mediakuvat[ampariAvain(u)];
+      if (!koko || !(koko[0] > 0)) continue;
+      const t = koko[1] ?? koko[0];
+      if (kuvaTavut + t > MEDIAKUVAT.katto) continue;
+      kuvaTavut += t;
+      mediaKuvat.push(koko[1] != null
+        ? { url: u, pieni: OMA_AMPARI + pieniAvain(ampariAvain(u)).replace(/\.jpg$/, `.${koko[2] ?? 'jpg'}`) } : { url: u });
+    }
     // Skeema 1.33: maan kaupunkien 3D-maamerkit (tarkka koko kokoelmasta).
     const mallit = (maamerkit.get(iso) ?? []).sort((a, b) => (a.url < b.url ? -1 : 1));
     const medTavut = mediaTavut(media) + mallit.reduce((s, m) => s + m.tavuja, 0);
     maat[iso] = {
-      iso2: ISO2[iso] ?? null, nimi: maa.nimi, rasteri, ...(Object.keys(kaupunkiRasteri).length ? { kaupunkiRasteri } : {}), maasto, laattoja,
+      iso2: ISO2[iso] ?? Object.values(MERENTAKAISET).find((a) => a.iso === iso)?.iso2 ?? null, nimi: maa.nimi, rasteri, ...(Object.keys(kaupunkiRasteri).length ? { kaupunkiRasteri } : {}), maasto, laattoja,
       media: [...media.map(url), ...mallit.map((m) => m.url)],
+      ...(mediaKuvat.length ? { mediaKuvat } : {}),
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
-        yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}) },
+        yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}),
+        mediaKuvat: kuvaTavut,
+        // Skeema 1.52 (Natiiviseppä 27.9.): levykoko = yht, jossa maasto purettuna (iOS purkaa gzipin latauksessa).
+        levy: Math.round(rTavut + mLevy + medTavut) },
     };
   }
   const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
-    media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut) };
-  return {
+    media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut),
+    levy: Math.round(globaaliRasteriTavut + globaaliMaastoLevy) };
+  const tulos = {
     $skeema: 'matkakirja-vienti/1/offline',
     arvio: true,
     koot: { haettu: koot.haettu, otos: koot.otos },
-    lahteet: OFFLINE_LAHTEET,
+    lahteet: { ...OFFLINE_LAHTEET, mediaKuvat: MEDIAKUVAT_KUVAUS },
     globaali: {
       rasteri: globaaliRasteri, maasto: globaaliMaasto, media: [], tavuja: globaaliTavut,
     },
     valinnaiset,
     maat,
-    ...(kartta ? { ryhmat: kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut) } : {}),
+    ...(kartta ? { ryhmat: kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut,
+      Object.fromEntries(Object.entries(alueet).map(([iso, a]) => [iso, a.manner]))) } : {}),
   };
+  // Ei pakettiin: kaikki mediaKuvat-ehdokkaat maittain järjestyksessä [[url, järjestys], …] ennen kattoa ja kokoja
+  // (tools/vienti/mediakuvat.mjs --paivita mittaa ja pienentää niistä).
+  Object.defineProperty(tulos, 'mediaKuvaEhdokkaat', { value: ehdokkaat, enumerable: false });
+  return tulos;
 }
 
 /*
@@ -446,8 +566,8 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
  * kaikki = maailma + kaikki maat. maat-rivit jäävät Natiivisepän
  * sisäiseen käyttöön (lataaja käy ryhmän maat läpi).
  */
-function kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut) {
-  const maanosa = maidenMaanosat(kartta);
+function kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut, alueidenManner = {}) {
+  const maanosa = { ...maidenMaanosat(kartta), ...alueidenManner };
   const ryhmat = { maailma: { nimi: 'Maailma', maat: [], tavuja: globaaliTavut } };
   const mantereet = [...new Set(Object.values(maanosa).filter(Boolean))]
     .sort((a, b) => Object.keys(mannerNimet).indexOf(a) - Object.keys(mannerNimet).indexOf(b));
@@ -515,7 +635,7 @@ async function paivitaKoot(vienti, n = 24) {
   const { viitteet } = JSON.parse(readFileSync(join(vienti, 'media.json'), 'utf8'));
   const lajeittain = new Map();
   for (const v of viitteet) {
-    if (!v.url || EI_MEDIAA.has(v.laji)) continue;
+    if (!onOffline(v)) continue;
     if (!lajeittain.has(v.laji)) lajeittain.set(v.laji, []);
     lajeittain.get(v.laji).push(v.url);
   }
@@ -526,7 +646,9 @@ async function paivitaKoot(vienti, n = 24) {
   const tulos = {
     haettu: new Date().toISOString().slice(0, 10), otos: n,
     rasteri: { poltto: R.url.split('/').at(-4), keskitavut: rasteri },
-    maasto: { poltto: M.layer.split('/').at(-2), available: layer.available, keskitavut: maasto },
+    // purettu (levykoko) mitataan GET-otoksella erikseen (27.9.2026); säilytetään edellisestä.
+    maasto: { poltto: M.layer.split('/').at(-2), available: layer.available, keskitavut: maasto,
+      ...(lueKoot().maasto.purettu ? { purettu: lueKoot().maasto.purettu } : {}) },
     media,
   };
   writeFileSync(KOOT_TIEDOSTO, `${JSON.stringify(tulos, null, 1)}\n`);

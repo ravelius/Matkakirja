@@ -213,6 +213,27 @@
         },
         "laattoja": {
           "type": "object"
+        },
+        "mediaKuvat": {
+          "type": "array",
+          "description": "Skeema 1.52: pelin omat tiedostot offline-lataukseen (vanhat buildit ohittavat). Lataa pieni jos on, tallenna url:n polulle. Katto lahteet.mediaKuvat.katto tavua maata kohden.",
+          "items": {
+            "type": "object",
+            "required": [
+              "url"
+            ],
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "pieni": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          }
         }
       }
     }
