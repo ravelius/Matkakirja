@@ -70,6 +70,7 @@ namespace Matkakirja.Linssit.Elava
             "brugge-belfry" => new BruggenKellotorniLiike(id),
             "hohensalzburg" => new HohensalzburgLiike(id),
             "matterhorn" => new MatterhornLiike(id),
+            "pannonhalma" => new PannonhalmaLiike(id),
             _ => null,
         };
 
