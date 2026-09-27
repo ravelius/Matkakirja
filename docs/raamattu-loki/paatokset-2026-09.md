@@ -8171,3 +8171,7 @@ Kortti 12.4x (kuvaparit kuvapari-kutsu/lehti-web-natiivi.png): webin avauskortti
 ## OMISTAJA: MAAKUNTIEN NIMET POIS NAKYVISTA NATIIVIN KARTALTA (27.9.2026 klo 12.40)
 
 Omistaja 27.9.2026 klo 12.4x (kuvakaappaus iPhone, Kreikka): isot kursiiviset maakuntanimiot (Keski-Makedonia, Thessalia, Attika, Peloponnesos ...) hairitsevat → pois kaikilla zoomeilla. Kaupunkien, kohteiden, vuorten, merien ja maan nimet jaavat; maakuntien pohjavari ja rajat jaavat. Natiiviseppa 1.0.30-junaan (sopii Natiivi-UI:n/Linssisepan kanssa jos niiden koodia), kuvapari Fablelle. Pelikoodari: #3399 pelikatalogi.html valivaiheena tuotantoon Pelistreak-kortin korjauksen jalkeen (hyvaksytyt luvut + armopaiva), yhteinen projektisivusto sen paalle.
+
+## OMISTAJA: TASATUT NAHTAVYYSKUVAT PELIIN, SITTEN CODEX ARVIOI JA KORJAA RAIKEIMMAT; BUILD 29b (PUHEVIRTA POIS) (27.9.2026 klo 12.48)
+
+Kortti 12.5x (kontaktiarkit Pariisi, Helsinki, Lontoo; #3408): 413 kuvaa tasattu (poikkeamat 42 → 23, Codex-kohtaukset 0 poikkeamaa) → tuotantoon versionostolla; sen jalkeen Codex arvioi tuotannon kuvat ja korjaa raikeimmat (23 + 7 maalattua taustaa samaan tilaukseen). Natiivi: laitteella puhevirta kaatuu Download Handler -virheeseen → synteesipuhe aaneton; Fable valitsi A: TF 1.0.29 -ajo 36309389916 keskeytetaan, BUILD 29b = master 6809d5ae + puhevirta-pois 49ea64ee; Pelikoodari korjaa virran 1.0.30:aan. iPhonen nostokortin ylarivi (ratas, kaiutin, VU) puuttuu → Natiivi-UI 1.0.30. Pelistreak armopaiva valmis (#3401 aff13a5e6, natiivi 70bebdde).
