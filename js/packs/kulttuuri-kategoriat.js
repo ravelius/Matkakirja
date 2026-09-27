@@ -2161,6 +2161,80 @@ export const KULTTUURI_KATEGORIAT = {
           + 'ja on ottanut vastaan vapaakappaleet vuodesta 1782.',
       },
     },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Kirjailija, joka ei koskaan halunnut julkaista mitään — ja '
+        + 'jonka nimestä tuli oma adjektiivinsa.',
+      tehtava: {
+        kysymys: 'Mitä Franz Kafka pyysi ystäväänsä Max Brodia tekemään '
+          + 'käsikirjoituksilleen kuolemansa jälkeen?',
+        vaihtoehdot: [
+          'Julkaisemaan ne heti',
+          'Polttamaan ne lukematta',
+          'Lähettämään ne sisarelleen',
+          'Kääntämään ne saksasta tšekkiin',
+        ],
+        oikea: 1,
+        fakta: 'Kafka pyysi polttamaan käsikirjoitukset, mutta Brod ei '
+          + 'totellut — ilman häntä Prosessi ja Linna eivät olisi koskaan '
+          + 'ilmestyneet.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pyörivä pää, joka hajoaa ja kokoaa itsensä',
+          tiedosto: 'Head of Franz Kafka - kinetic sculpture 04.jpg',
+          teksti: 'Franz Kafka syntyi Prahassa 1883 ja vietti lähes koko '
+            + 'elämänsä kaupungissa, työskennellen päivätyönään '
+            + 'tapaturmavakuutuslaitoksessa ja kirjoittaen öisin. '
+            + 'Kauppakeskus Quadrion edustalla pyörii kuvanveistäjä David '
+            + 'Černýn 2014 valmistunut yksitoistametrinen pää: '
+            + 'neljäkymmentäkaksi ruostumatonta teräskerrosta pyörii '
+            + 'toisistaan riippumatta ja muodostavat Kafkan kasvot hetkeksi '
+            + 'ennen kuin hajoavat taas irtonaisiksi levyiksi.',
+          lyhyt: 'David Černýn 2014 valmistunut pyörivä teräspää muodostaa Kafkan kasvot hetkeksi kerrallaan.',
+          selite: 'David Černýn vuonna 2014 valmistunut yksitoistametrinen '
+            + 'pyörivä teräspää muodostaa Kafkan kasvot hetkeksi kerrallaan '
+            + 'ennen kuin kerrokset taas hajoavat.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Head of Franz Kafka',
+        },
+        {
+          otsikko: 'Suihkulähde museon edessä',
+          tiedosto: 'Pissing Men fountain at the Franz Kafka Museum in Prague.jpg',
+          teksti: 'Franz Kafka -museon pihalla seisoo kaksi pronssista '
+            + 'miestä, jotka kääntyvät lantiostaan ja kirjoittavat '
+            + 'virtsallaan altaaseen — allas on veistetty Tšekin '
+            + 'muotoiseksi. Saman David Černýn teos vuodelta 2004 on '
+            + 'kevyt vastapaino Kafkan omalle vakavalle maineelle: veistos '
+            + 'ei viittaa suoraan mihinkään Kafkan teokseen, vaan '
+            + 'kaupungin tapaan käsitellä raskaita aiheita huumorilla.',
+          lyhyt: 'Museon pihan pronssiveistos vuodelta 2004 esittää kahta miestä, jotka "kirjoittavat" Tšekin muotoiseen altaaseen.',
+          selite: 'Franz Kafka -museon pihan pronssiveistos vuodelta 2004 '
+            + 'esittää kahta kääntyvää miestä, jotka kirjoittavat '
+            + 'Tšekin muotoiseen altaaseen.',
+          lahde: 'BabelStone, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Piss (Černý)',
+        },
+        {
+          otsikko: 'Museo hämärässä kartanossa',
+          tiedosto: 'Franz Kafka Museum Prague.jpg',
+          teksti: 'Kafkan museo sijaitsee 1500-luvun Herget-tiilitehtaan '
+            + 'rakennuksessa Malá Strana -kaupunginosassa, lähellä '
+            + 'Kaarlensiltaa. Näyttely on tietoisesti ahdistavan '
+            + 'hämärä ja sokkeloinen — tila itsessään on suunniteltu '
+            + 'heijastamaan Kafkan tuotannon tunnelmaa. Kafka ei koskaan '
+            + 'asunut tässä rakennuksessa, mutta hän vietti suuren osan '
+            + 'elämästään kävellen samoja Prahan katuja, joita museon '
+            + 'ikkunoista näkyy.',
+          lyhyt: 'Kafka-museo sijaitsee 1500-luvun tiilitehtaan rakennuksessa lähellä Kaarlensiltaa.',
+          selite: 'Kafka-museo sijaitsee 1500-luvun Herget-tiilitehtaan '
+            + 'rakennuksessa Malá Strana -kaupunginosassa lähellä '
+            + 'Kaarlensiltaa.',
+          lahde: 'Volkov, Wikimedia Commons (PD)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
@@ -12367,6 +12441,83 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'uskonto',
+      nimi: 'Uskonto',
+      johdanto: 'Euroopan suurin synagoga, rakennettu maurilaistyyliin '
+        + 'kristillisen kaupungin keskelle — ja pihalla puu, jonka '
+        + 'lehdissä on nimiä.',
+      tehtava: {
+        kysymys: 'Mistä rakennustyylistä Dohány-kadun synagoga ammensi '
+          + 'vaikutteita?',
+        vaihtoehdot: [
+          'Goottilaisesta',
+          'Maurilaisesta',
+          'Barokista',
+          'Bysanttilaisesta',
+        ],
+        oikea: 1,
+        fakta: 'Arkkitehti Ludwig Förster otti mallia Espanjan Alhambrasta '
+          + 'ja Pohjois-Afrikan islamilaisesta arkkitehtuurista '
+          + 'synagogan kaksoistorneihin ja koristeluun.',
+      },
+      nostot: [
+        {
+          otsikko: 'Euroopan suurin synagoga',
+          tiedosto: 'Budapest - Dohány utcai Zsinagóga (38379870696).jpg',
+          teksti: 'Dohány-kadun synagoga valmistui vuosina 1854–1859 '
+            + 'arkkitehti Ludwig Försterin suunnitelmien mukaan, ja se on '
+            + 'Euroopan suurin ja maailman toiseksi suurin synagoga — '
+            + 'siihen mahtuu lähes kolmetuhatta istumapaikkaa. '
+            + 'Kaksi kahdeksankulmaista, sipulikupolista kruunattua '
+            + 'tornia nousevat neljäkymmentäkolme metriä ja ovat yksi '
+            + 'Budapestin tunnetuimmista siluettikuvista. Synagoga oli '
+            + 'aikoinaan ensimmäinen suuri merkki juutalaisen yhteisön '
+            + 'läsnäolosta Pestin puolella kaupunkia.',
+          lyhyt: 'Dohány-kadun synagoga valmistui 1854–1859 ja on Euroopan suurin, lähes 3000 istumapaikkaa.',
+          selite: 'Dohány-kadun synagoga valmistui vuosina 1854–1859 ja '
+            + 'on Euroopan suurin synagoga, jossa on lähes kolmetuhatta '
+            + 'istumapaikkaa.',
+          lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Dohány Street Synagogue',
+        },
+        {
+          otsikko: 'Sali, jossa urut soivat',
+          tiedosto: 'Great Synagogue Interior Budapest Hungary.jpeg',
+          teksti: 'Synagogan sisätila muistuttaa enemmän kirkkoa kuin '
+            + 'perinteistä synagogaa: siinä on urut, ja se rakennettiin '
+            + 'reformijuutalaisen liikkeen tarpeisiin, jossa musiikilla '
+            + 'oli suurempi rooli jumalanpalveluksessa. Ferenc Liszt ja '
+            + 'Camille Saint-Saëns ovat molemmat soittaneet sen uruilla. '
+            + 'Naisten galleria kiertää salia yläkerrassa, tyylillä joka '
+            + 'lainaa kristillisistä kirkoista tavallista enemmän kuin '
+            + 'ajan muut synagogat.',
+          lyhyt: 'Synagogassa on urut, joilla ovat soittaneet sekä Liszt että Saint-Saëns.',
+          selite: 'Synagogassa on urut reformijuutalaisen liikkeen '
+            + 'perinteen mukaisesti, ja niillä ovat soittaneet sekä '
+            + 'Liszt että Saint-Saëns.',
+          lahde: 'scheimann, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Puu, jonka lehdissä on nimiä',
+          tiedosto: 'Mémorial holocauste Budapest.jpg',
+          teksti: 'Synagogan takapihalla, joukkohaudan päällä, seisoo '
+            + 'kuvanveistäjä Imre Vargan metallinen itkuraita-patsas, '
+            + 'jonka jokaiseen hopeiseen lehteen on kaiverrettu holokaustissa '
+            + 'menehtyneen unkarinjuutalaisen nimi. Patsas paljastettiin '
+            + '1991, ja sen rahoittamista tuki osaltaan '
+            + 'unkarilaissyntyinen Hollywood-näyttelijä Tony Curtis, '
+            + 'jonka isä oli kotoisin Unkarista. Muistomerkki tunnetaan '
+            + 'Elämän puuna.',
+          lyhyt: 'Imre Vargan 1991 valmistunut Elämän puu -muistomerkki kantaa holokaustin uhrien nimiä hopeisissa lehdissä.',
+          selite: 'Imre Vargan vuonna 1991 valmistunut Elämän puu '
+            + '-muistomerkki kantaa holokaustissa menehtyneiden nimiä '
+            + 'hopeisissa lehdissä.',
+          lahde: 'Yelkrokoyade, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Emanuel Memorial',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
@@ -13601,6 +13752,81 @@ export const KULTTUURI_KATEGORIAT = {
           + 'keisari Frans Joosef oli 1905 käskenyt joukkonsa pois '
           + 'kukkulalta.',
       },
+    },
+    {
+      id: 'uskonto',
+      nimi: 'Uskonto',
+      johdanto: 'Piispa, joka rukoili tässä katedraalissa neljä kertaa '
+        + 'elämänsä käännekohdissa — ja nousi lopulta paaviksi.',
+      tehtava: {
+        kysymys: 'Missä virassa Karol Wojtyła toimi Krakovassa ennen '
+          + 'paaviksi valintaansa 1978?',
+        vaihtoehdot: [
+          'Kaupunginjohtajana',
+          'Yliopiston rehtorina',
+          'Arkkipiispana',
+          'Muusikkona oopperassa',
+        ],
+        oikea: 2,
+        fakta: 'Wojtyła oli Krakovan arkkipiispa vuodesta 1964, ja '
+          + 'kardinaalikollegio valitsi hänet paaviksi lokakuussa 1978 — '
+          + 'ensimmäisenä ei-italialaisena paavina 455 vuoteen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Katedraali, jossa neljä käännekohtaa',
+          tiedosto: 'Wawel Cathedral, Cracovia, Poland2.jpg',
+          teksti: 'Karol Wojtyłan elämän neljä ratkaisevaa hetkeä '
+            + 'tapahtuivat samassa Wawelin katedraalissa: ensimmäinen messu '
+            + 'Pyhän Leonardin kryptassa marraskuussa 1946, piispaksi '
+            + 'vihkiminen 1958, arkkipiispaksi asettaminen 1964 ja lopulta '
+            + 'hyvästijättö kotikaupungille ennen matkaa Roomaan 1978. '
+            + 'Katedraali on ollut Puolan kuninkaiden kruunauskirkko '
+            + 'vuosisatojen ajan, ja Wojtyła tunsi sen käytävät ja kryptat '
+            + 'kuin oman kotinsa.',
+          lyhyt: 'Wojtyłan elämän neljä käännekohtaa — ensimmäisestä messusta paaviksi lähtöön — tapahtuivat Wawelin katedraalissa.',
+          selite: 'Karol Wojtyłan elämän neljä käännekohtaa, '
+            + 'ensimmäisestä messusta paaviksi lähtöön, tapahtuivat '
+            + 'Wawelin katedraalissa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wawel Cathedral',
+        },
+        {
+          otsikko: 'Arkkipiispa, josta tuli paavi',
+          tiedosto: 'John Paul II statue at Wawel Cathedral.JPG',
+          teksti: 'Wojtyła syntyi Wadowicessa, viisikymmentä kilometriä '
+            + 'Krakovasta, ja toimi Krakovan arkkipiispana neljätoista '
+            + 'vuotta ennen paaviksi valintaansa. Hänet muistetaan Wawelin '
+            + 'katedraalin patsaassa juuri tässä roolissa, ennen kuin '
+            + 'maailma tunsi hänet Johannes Paavali II:na. Patsas on yksi '
+            + 'lukuisista Krakovassa, jotka kertovat kaupungin '
+            + 'ylpeydestä omasta paavistaan.',
+          lyhyt: 'Wojtyła toimi Krakovan arkkipiispana 14 vuotta ennen paaviksi valintaansa 1978.',
+          selite: 'Karol Wojtyła toimi Krakovan arkkipiispana '
+            + 'neljätoista vuotta ennen paaviksi valintaansa vuonna '
+            + '1978.',
+          lahde: 'Yohan euan o4, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ikkuna, josta paavi jutteli nuorille',
+          tiedosto: 'Pope John Paul II monument (general view),Krakow Archbishop\'s Palace courtyard, 3 Franciszkanska street,Old Town, Krakow, Poland.jpg',
+          teksti: 'Kesäkuussa 1979, ensimmäisellä paavinvierailullaan '
+            + 'kotimaahansa, Johannes Paavali II kiipesi yöllä '
+            + 'entisen kotinsa, arkkipiispan palatsin, ikkunalaudalle '
+            + 'puhumaan alla laulaville nuorille — kardinaali piti häntä '
+            + 'kiinni, ettei hän putoaisi. "Kun asuin täällä Krakovassa, '
+            + 'olin melko kunnollinen ihminen. En koskaan kiivennyt '
+            + 'ikkunoihin", paavi vitsaili yleisölle. Tapahtumasta tuli '
+            + 'perinne, jota toistettiin jokaisella hänen '
+            + 'vierailullaan kuolemaansa 2005 asti, ja ikkuna vetää '
+            + 'yhä pyhiinvaeltajia.',
+          lyhyt: 'Paavin ikkunaperinne alkoi 1979, kun Johannes Paavali II jutteli yöllä nuorille arkkipiispan palatsin ikkunasta.',
+          selite: 'Paavin ikkunaperinne alkoi vuonna 1979, kun Johannes '
+            + 'Paavali II jutteli yöllä nuorille arkkipiispan palatsin '
+            + 'ikkunasta.',
+          lahde: 'Zygmunt Put, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
   ],
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa:
@@ -17136,6 +17362,80 @@ export const KULTTUURI_KATEGORIAT = {
           + '1862 yli seitsemänsataa. Pääsy maksoi juhlapäivinä kymmenen '
           + 'kopeekkaa mutta torstaisin viisikymmentä.',
       },
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Kauppa',
+      johdanto: 'Kauppahalli, joka on ollut tavaratalo, hallintotoimisto '
+        + 'ja museopala — ja jonka lasikatto oli aikansa insinööritaidon '
+        + 'huippu.',
+      tehtava: {
+        kysymys: 'Kuka suunnitteli GUM-tavaratalon lasikaton vuonna 1893?',
+        vaihtoehdot: [
+          'Alexander Pomerantsev',
+          'Vladimir Šuhov',
+          'Konstantin Melnikov',
+          'Fjodor Šehtel',
+        ],
+        oikea: 1,
+        fakta: 'Insinööri Vladimir Šuhov suunnitteli teräsrunkoisen '
+          + 'lasikaton, johon tarvittiin kuusikymmentätuhatta erillistä '
+          + 'lasipalaa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kauppahalli, joka oli aikansa suurin',
+          tiedosto: 'GUM department store.jpg',
+          teksti: 'Ylempien kauppariviensä nimellä tunnettu rakennus '
+            + 'valmistui Punaisen torin laidalle vuosina 1890–1893 '
+            + 'arkkitehti Alexander Pomerantsevin suunnitelmien mukaan. '
+            + 'Avautuessaan joulukuussa 1893 se oli Euroopan suurin '
+            + 'kauppahalli: lähes kahdensadan viidenkymmenen metrin '
+            + 'pituinen julkisivu yhdistää venäläistä keskiaikaista '
+            + 'tyyliä teräsrakenteiseen, rautatieasemia muistuttavaan '
+            + 'runkoon.',
+          lyhyt: 'GUM valmistui Punaiselle torille 1893 ja oli avautuessaan Euroopan suurin kauppahalli.',
+          selite: 'GUM valmistui Punaiselle torille vuonna 1893, ja se '
+            + 'oli avautuessaan Euroopan suurin kauppahalli.',
+          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'GUM (department store)',
+        },
+        {
+          otsikko: 'Kuusikymmentätuhatta lasipalaa',
+          tiedosto: 'ГУМ, Москва. Фото 3.jpg',
+          teksti: 'Rakennuksen kolme pitkää kauppakäytävää kattaa yhtenäinen '
+            + 'lasikatto, jonka suunnitteli insinööri Vladimir Šuhov, sama '
+            + 'mies joka myöhemmin tunnettiin verkkomaisista '
+            + 'radiotorneistaan. Katto tarvitsi kuusikymmentätuhatta '
+            + 'erillistä lasipalaa teräskehikkoon kiinnitettynä, ja se '
+            + 'päästi luonnonvalon virtaamaan sisään päiväsaikaan — '
+            + 'illalla käytävät valaisivat kaupungin yötaivaan '
+            + 'näkyviin katon läpi.',
+          lyhyt: 'Vladimir Šuhovin suunnittelemaan lasikattoon tarvittiin 60 000 lasipalaa.',
+          selite: 'Insinööri Vladimir Šuhovin suunnittelemaan '
+            + 'lasikattoon tarvittiin kuusikymmentätuhatta erillistä '
+            + 'lasipalaa.',
+          lahde: 'Alina Vozna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vessa, joka suljettiin liiasta ylellisyydestä',
+          tiedosto: 'ГУМ, Москва. Фото 19.jpg',
+          teksti: 'Vuoden 1917 vallankumouksen jälkeen rakennuksen '
+            + 'marmoripintainen, ylellinen vessatila suljettiin '
+            + 'porvarilliseksi tuomittuna ylellisyytenä, ja tilassa toimi '
+            + 'pitkään varasto. Koko rakennus muutettiin '
+            + 'hallintotoimistoiksi Neuvostoliiton alkuvuosina, eikä se '
+            + 'toiminut kauppana lainkaan ennen kuin Stalinin kuoleman '
+            + 'jälkeen 1953. Historiallinen vessa kunnostettiin vasta '
+            + '2006 vanhojen piirustusten mukaan, ja siellä käynti '
+            + 'maksaa nykyään pääsymaksun kuin museossa.',
+          lyhyt: 'Ylellinen marmorivessa suljettiin 1917 vallankumouksen jälkeen ja kunnostettiin museoksi vasta 2006.',
+          selite: 'Rakennuksen ylellinen marmorivessa suljettiin '
+            + 'vallankumouksen jälkeen vuonna 1917 ja kunnostettiin '
+            + 'museoksi vasta vuonna 2006.',
+          lahde: 'Alina Vozna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
@@ -64408,6 +64708,77 @@ export const KULTTUURI_KATEGORIAT = {
             + 'klassisen musiikin esiintymispaikoista.',
           lahde: 'Anual, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Flamenco',
+        },
+      ],
+    },
+    {
+      id: 'katedraali',
+      nimi: 'Katedraali',
+      johdanto: 'Maailman suurin goottilainen kirkko — ja sen sisällä '
+        + 'löytöretkeilijä, joka ei tiedä missä lepää.',
+      tehtava: {
+        kysymys: 'Kuinka monta kuninkaan hahmoa kantaa Kolumbuksen '
+          + 'arkkua Sevillan katedraalissa?',
+        vaihtoehdot: ['Kaksi', 'Kolme', 'Neljä', 'Kuusi'],
+        oikea: 2,
+        fakta: 'Neljä pronssista kuninkaanheraldia, jotka edustavat '
+          + 'Kastilian, Leónin, Aragonian ja Navarran historiallisia '
+          + 'kuningaskuntia, kantavat arkkua olkapäillään.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kirkko moskeijan paikalla',
+          tiedosto: 'Seville Cathedral (48911401451).jpg',
+          teksti: 'Sevillan katedraali on maailman suurin goottilainen '
+            + 'kirkko pinta-alaltaan, yli 11 500 neliömetriä, rakennettu '
+            + 'vuosina 1402–1517. Se seisoo entisen almohadimoskeijan '
+            + 'paikalla: kaupungin kristityt valloittajat purkivat '
+            + 'moskeijan mutta säästivät sen minareetin, joka tunnetaan '
+            + 'nykyään Giraldana ja toimii katedraalin kellotornina. '
+            + 'Rakentajien tarina kertoo, että he halusivat kirkon, '
+            + 'josta jälkipolvet luulisivat heitä hulluiksi.',
+          lyhyt: 'Sevillan katedraali on maailman suurin goottilainen kirkko, rakennettu 1402–1517 moskeijan paikalle.',
+          selite: 'Sevillan katedraali on maailman suurin goottilainen '
+            + 'kirkko, rakennettu vuosina 1402–1517 entisen '
+            + 'almohadimoskeijan paikalle.',
+          lahde: 'Paul VanDerWerf, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sevillan katedraali',
+        },
+        {
+          otsikko: 'Holvi, jonka alla mahtuu kulkemaan',
+          tiedosto: 'Interior of Gothic Cathedral - Seville - Spain.jpg',
+          teksti: 'Katedraalin sisätila on niin valtava, että sen '
+            + 'keskilaivan holvi kohoaa yli neljänkymmenen metrin '
+            + 'korkeuteen. Rakennustyö kesti yli sata vuotta, ja '
+            + 'valmistuttuaan 1500-luvun alussa se ohitti kokonsa '
+            + 'puolesta lähes kaikki tuolloin tunnetut kirkot '
+            + 'kristikunnassa. Sisällä on yli seitsemänkymmentä '
+            + 'sivukappelia, ja pääalttarin kultakoristeinen retabeli '
+            + 'on yksi maailman suurimmista.',
+          lyhyt: 'Katedraalin keskilaivan holvi kohoaa yli 40 metrin korkeuteen, rakennustyö kesti yli sata vuotta.',
+          selite: 'Katedraalin keskilaivan holvi kohoaa yli neljänkymmenen '
+            + 'metrin korkeuteen, ja rakennustyö kesti yli sata vuotta.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Löytöretkeilijä, joka ei tiedä missä lepää',
+          tiedosto: 'Tomb of Christopher Columbus in Seville, Spain 1.jpg',
+          teksti: 'Kristoffer Kolumbuksen jäänteet tuotiin Sevillan '
+            + 'katedraaliin 1899 pitkän, mutkikkaan matkan päätteeksi: '
+            + 'hän kuoli Valladolidissa 1506, ja hänen jäännöksensä '
+            + 'kulkivat sen jälkeen Sevillan, Santo Domingon ja Havannan '
+            + 'kautta ennen paluuta. Arkkua kantavat neljä pronssista '
+            + 'kuninkaanheraldia symboloivat Espanjan historiallisia '
+            + 'kuningaskuntia. DNA-testit vuonna 2006 vahvistivat, että '
+            + 'ainakin osa Sevillan jäännöksistä on todella Kolumbuksen '
+            + 'omia — täydellistä varmuutta ei silti koskaan saatu, '
+            + 'koska osa jäännöksistä jäi mahdollisesti Santo Domingoon.',
+          lyhyt: 'Kolumbuksen jäänteet tuotiin Sevillaan 1899; DNA-testit 2006 vahvistivat osan aidoksi.',
+          selite: 'Kristoffer Kolumbuksen jäänteet tuotiin Sevillan '
+            + 'katedraaliin vuonna 1899, ja DNA-testit vuonna 2006 '
+            + 'vahvistivat osan niistä aidoiksi.',
+          lahde: 'Karsten Wentink, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kristoffer Kolumbuksen hauta',
         },
       ],
     },
