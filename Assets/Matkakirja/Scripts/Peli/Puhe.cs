@@ -184,10 +184,17 @@ namespace Matkakirja.Natiivi
             set => Asetukset.Aseta(Kytkin.Kertoja, value);
         }
 
+        /// <summary>
+        /// PULUN PUHE ILMAN ÄÄNIKYTKIMIÄ (omistaja 27.9.2026 klo 09.2x, sitova; web js/lukija.js pulunPuhe): persoonan
+        /// pollo puhetta ohjaa vain Pulun kaiutinvipu (PuluChat.AaniPaalla). Kertoja-kytkin ja pelin mykistys
+        /// (Kytkin.Aanimaisema) eivät estä, hiljennä eivätkä katkaise sitä.
+        /// </summary>
+        public static bool PulunPuhe(string persoona) => persoona == "pollo";
+
         void AsetuksetMuuttuivat(string nimi)
         {
             PaivitaVahvistus();
-            if (!Paalla && (puhuu || lataus != null)) { Pysayta(0.3f); return; }
+            if (!Paalla && (puhuu || lataus != null) && !PulunPuhe(SoivaPersoona)) { Pysayta(0.3f); return; }
             if (lahde != null && lahde.isPlaying && haivytys == null) lahde.volume = Kohdetaso;
         }
 
@@ -195,7 +202,7 @@ namespace Matkakirja.Natiivi
         /// AudioSource.volume soivalle: äänite = Voimakkuus (Lukija-taso), synteesi = 1 (taso on
         /// vahvistimessa, jotta se saa ylittää ykkösen). Mykistettynä kumpikin 0.
         /// </summary>
-        float Kohdetaso => synteesi ? (Asetukset.Paalla(Kytkin.Aanimaisema) ? 1f : 0f) : Voimakkuus;
+        float Kohdetaso => synteesi ? (Asetukset.Paalla(Kytkin.Aanimaisema) || PulunPuhe(SoivaPersoona) ? 1f : 0f) : Voimakkuus;
 
         void PaivitaVahvistus()
         {
@@ -262,7 +269,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null)
         {
-            if (!Paalla) return false;
+            if (!Paalla && !PulunPuhe(persoona)) return false;
             return Syntetisoi(teksti, persoona, Lukijaaani.OletusLohko(persoona), true, viiveS, loppu);
         }
 
@@ -320,7 +327,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void Esihae(string teksti, string persoona = "kertoja")
         {
-            if (!Paalla || string.IsNullOrWhiteSpace(teksti)) return;
+            if ((!Paalla && !PulunPuhe(persoona)) || string.IsNullOrWhiteSpace(teksti)) return;
             persoona ??= "kertoja";
             teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
             string avain = Saadot.Valimuistiavain(persoona, teksti);
