@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 02:31 EEST — **Postivahti kierto normaali, ei hälytyksiä.**
+**Päivitetty:** 2026-09-28 02:42 EEST — **Postivahti kierto normaali, ei hälytyksiä.**
 
 ## 1) Sessiot
 
@@ -22,9 +22,9 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 | Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | ei luettavissa (idle) | — |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 40% | running |
 
-## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 02:31)
+## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 02:42)
 
-Vahti PID 82063 elossa (1 h 44 min), aja.out ennallaan (ei "2 koodi" -riviä vaiheen 2 alusta — viimeisin 00:51 "2 syvä z9–z10 alkaa"). vahti.out: kolmas muistipaine-notkahdus klo 02:25 (12→4 ydintä, sääntö 2b) — toistuva n. 35–39 min välein (01:14, 01:53, 02:25), sysctl palautuu joka kerta normaaliksi (1), ei kriittinen (4) → ei hälytystä, seurataan toistuuko tiheämmin tai muuttuuko kriittiseksi. 2.log etenee normaalisti. Seuraajan tarkistettava tämä joka kierroksella.
+Vahti PID 82063 elossa (1 h 55 min), aja.out ennallaan (ei "2 koodi" -riviä vaiheen 2 alusta — viimeisin 00:51 "2 syvä z9–z10 alkaa"). Ei uutta muistipaine-notkahdusta 02:25 jälkeen (17 min ilman) — toistuva kuvio ei kiihtynyt, ei kriittinen (4) missään vaiheessa. 2.log etenee (shardit 124/507, 25%). Seuraajan tarkistettava tämä joka kierroksella.
 
 Koodi 1 klo 00:39 oli **odotettu** — vain luettelon vientivartion ilmoitus, ei virhe. Laatat/eheys kunnossa (119 495/119 495). Vaihe 1 merkitty valmiiksi. **Uusi vahti PID 82063 (v5e)** käynnistää vaiheen 2 (syvä, T7) ~00:52. Karttaseppä odottaa vaiheen 2 päättyvän todennäköisesti riviin "2 koodi 1" samasta vartiosta — **se on OK jos `2.log`:n lopussa on "eheystarkistus: laattojen määrä täsmää luetteloon".** **Seurataan PID 82063:a ja aja.out:ia — herätä Karttaseppä (local_4bd7c316-55bc-423a-9da1-821fdd123cab) JOKA TAPAUKSESSA kun "2 koodi" ilmestyy tai vahti kuolee**, riippumatta koodin arvosta (tarkista 2.log-eheysrivi ennen viestiä).
 
@@ -74,15 +74,15 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (02:31)
+## 5) Resurssit (02:42)
 
 - **5 h -kiintiö:** ~35 %. **Viikko (kaikki mallit): 93 % — kynnys ylittyi, ilmoitettu Fablelle.** **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 82 Gi vapaana (vaihtelee 82–85 välillä, raja 80 Gt — seurataan tiiviisti). wt/-worktreet 27 kpl.
-- **Muistipaine:** normal (1) (kolmas hetkellinen piikki 2 klo 02:25, ohi — toistuva kuvio ~35–39 min välein, ei kriittinen). **Load average matala: 10.13/13.12/12.66.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
+- **Levy:** 88 Gi vapaana (palautunut, raja 80 Gt). wt/-worktreet 27 kpl.
+- **Muistipaine:** normal (1), ei uutta notkahdusta 02:25 jälkeen. **Load average matala: 10.06/9.22/10.37.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
 - **Liput:** `/tmp/matkakirja-julkaisu` EI löydy. `/tmp/matkakirja-juna-tauko` PÄÄLLÄ — tarkoituksellinen, EI hälytystä.
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
-- **Juna:** tauolla, poltto käynnissä (vaihe 2, normaali eteneminen).
-- **Karttasepän vahti-PID 82063 elossa 02:31, aja.out ei muuttunut (ei "2 koodi"), vahti.out: toistuva muistipaine-notkahdus (01:14, 01:53, 02:25) — vahti reagoi oikein joka kerta, ei hälytystä vielä.**
+- **Juna:** tauolla, poltto käynnissä (vaihe 2, 25%).
+- **Karttasepän vahti-PID 82063 elossa 02:42, aja.out ei muuttunut (ei "2 koodi"), vahti.out normaali — muistipaine-kuvio ei jatkunut/kiihtynyt.**
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
