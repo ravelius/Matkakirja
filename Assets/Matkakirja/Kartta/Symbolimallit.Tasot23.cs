@@ -251,7 +251,7 @@ namespace Matkakirja
                 else if (i.Lod == 1 && pt >= Lod1RajaPt * (1f + LodHystereesi)) i.Lod = 0;
 
                 // Syttyminen: ensimmäinen näkeminen asettaa tilan suoraan, löytö näkyvissä käynnistää 0,4 s:n siirtymän.
-                bool loydetty = s.Loydetty || PakotaLoydetty;
+                bool loydetty = s.Taysi || PakotaLoydetty;   // ulkoasu Taysi-kentästä (Pelikoodari 27.9., maailma auki)
                 if (!i.Nahty) { i.Nahty = true; i.Loydetty = loydetty; i.SyttyAlku = -1f; }
                 else if (loydetty && !i.Loydetty) { i.Loydetty = true; i.SyttyAlku = nyt; }
                 else if (!loydetty) { i.Loydetty = false; i.SyttyAlku = -1f; }

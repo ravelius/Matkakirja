@@ -555,7 +555,7 @@ namespace Matkakirja
                 k.Reuna.SetPropertyBlock(reunaLohko);
                 k.ReunaLeveys = lev;
             }
-            float h = s.Loydetty || PakotaLoydetty ? 0f : 1f;
+            float h = s.Taysi || PakotaLoydetty ? 0f : 1f;   // ulkoasu Taysi-kentästä (Pelikoodari 27.9., maailma auki)
             if (h != k.Himmea)
             {
                 lohko.SetFloat(HimmeaId, h);

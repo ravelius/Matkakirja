@@ -112,6 +112,12 @@ namespace Matkakirja
             /// </summary>
             public int Luokka = MusteLuokka.Kohde;
             public bool Loydetty = true;
+            /// <summary>
+            /// Piirretäänkö täysi merkki nimineen (Pelikoodarin NostonMuste.Taysi, omistaja 27.9. maailma auki: nostot täytenä
+            /// heti). Ulkoasu luetaan tästä, <see cref="Loydetty"/> jää laskurille ja kartussille. NostonMuste.Taysi = Nakyy, ja
+            /// näkymättömät nostot eivät ole näytettävissä, joten näytettävillä tämä on tosi.
+            /// </summary>
+            public bool Taysi = true;
         }
 
         /// <summary>Elävän kartan kokoluokat (Pelikoodarin Kokoluokka-järjestys, karttavalot.kokoluokka / taso 1–3).</summary>
@@ -561,6 +567,7 @@ namespace Matkakirja
             if (Muste != null) try { m = Muste(s.Id); } catch (Exception) { m = null; }
             s.Luokka = m?.luokka ?? MusteLuokka.Kohde;
             s.Loydetty = m?.loydetty ?? true;
+            s.Taysi = m?.nakyy ?? true;
             return m?.nakyy ?? true;
         }
 
