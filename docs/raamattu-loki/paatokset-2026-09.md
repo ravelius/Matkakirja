@@ -7871,3 +7871,7 @@ Linssiseppa nollattu 08.1x (79 % → tyhja), aloitusviesti: luovutus -l, meri 8 
 ## OMISTAJA 08.2x: MAANOSITTAIN ETENEVA AVAUTUMINEN POIS (1.0.29 + WEB); NOSTOJEN PIILOTUS JAA (27.9.2026 klo 08.15)
 
 Omistaja kysyi 08.1x poistuvatko maanosaeteneminen ja nostojen piilotus seuraavassa buildissa; lokista ei loytynyt paatosta → kortti. Omistaja paatti: VAIN maanosittain eteneva avautuminen pois (koko maailma avoinna alusta asti), muiden maiden nostojen piilotus kohdemaan ulkopuolelta (14.9.) JAA. Toteutus: Pelikoodari web, Natiivi-UI/Natiiviseppa natiivi, 1.0.29. Ei 1.0.28:ssa.
+
+## OMISTAJA 08.2x: KOHDEMAAN KAIKKI NOSTOT NAKYVIIN HETI (EI VAIHEITTAISTA PALJASTUMISTA) (27.9.2026 klo 08.15)
+
+Omistaja 08.2x lisays: kohdemaan kaikki nostot pitaa nakya heti saapuessa — ei vaiheittaista paljastumista; muiden maiden nostot pysyvat piilossa (14.9.). Sama era kuin maanosaetenemisen poisto: Pelikoodari web + speksi, Natiivi-UI natiivi, 1.0.29. Elavan kartan salaisuudet (palkinnot) jaavat, ellei omistaja toisin sano.
