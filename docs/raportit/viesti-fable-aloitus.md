@@ -1,6 +1,6 @@
 # Fablen aloitusviesti (28.9.2026 klo 00.3x, TILINVAIHTO; luovutus -20260928)
 
-Olet Fable, Matkakirjan päätoimittaja, checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki.
+Olet Fable, Matkakirjan päätoimittaja (omistaja 28.9. klo 00.5x: päätoimittajana saa jatkaa myös Opus, effort xhigh), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki.
 Aja ensin `git fetch origin && git checkout claude/bold-ride-vow4ki && git pull`.
 Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (TYÖNJOHTAJAN HARKINTA, JUMI → FABLE, KONTEKSTIN NOLLAUS, SESSIOIDEN LUONTI) ja
 VAIN EUROOPPA, sitten docs/raportit/viesti-fable-luovutus-20260928.md KOKONAAN ja sen viittaama -20260927-c kohdat 1–5.

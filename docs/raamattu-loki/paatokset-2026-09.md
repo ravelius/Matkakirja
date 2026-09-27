@@ -8427,3 +8427,7 @@ Julkaisija 00.3x: TF 1.0.34 sisäisessä ryhmässä (ajo 36351716395), What to t
 ## YOPOLTTO: VAIHE 1 (z0–z8) VALMIS 00.39, EHEYS 119 495/119 495; 'KOODI 1' OLI LUETTELON VIENTIVARTIO, EI POLTTOVIKA; VAIHE 2 (SYVA T7) KAYNNISSA (28.9.2026 klo 00.47)
 
 Karttaseppa: --ilman-nostoja-ajo ei kanna ampärin varitasot/nostotasot/erat/nimiotaso-kenttia luetteloon → vartio 1. Aamun viennissa luettelo yhdistetaan ampärin luettelosta (kortissa omistajalle). Tyokaluvika polta-paikallisesti.sh ~r.2948 korjataan PR:na polton jalkeen. Vaihe 2 uudella vahdilla PID 82063 noin 00.52 alkaen.
+
+## OMISTAJA: TILINVAIHDON JALKEEN PAATOIMITTAJANA (FABLE-ROOLI) SAA JATKAA MYOS OPUS (28.9.2026 klo 00.56)
+
+Omistaja 00.56: "Seuraava sessio voi jatkaa myös opus päätoimittajana". Fable-rooli ei vaadi Fable-mallia; Opus (effort xhigh) kelpaa. Aloitusviesti päivitetty.
