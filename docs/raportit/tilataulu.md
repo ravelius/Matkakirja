@@ -22,9 +22,9 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 | Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | ei luettavissa (idle) | — |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 35% | running |
 
-## 1a-3) Karttasepän yöpoltto — vahtiseuranta (Fable, vain luku)
+## 1a-3) Karttasepän yöpoltto — POLTTO PÄÄTTYI VIRHEESEEN 00:39, ILMOITETTU
 
-`pyramidi-poltto/ajo-20260927y/aja.out` (2-vaiheinen poltto) + `vahti.out` (polttovahti v5e, PID 85590). Tarkistettu 00:1x: vahti elossa, aja.out näyttää toistaiseksi "1 pohja z0–z8 + ranta + viivat alkaa" (kahdesti, 20:41 ja 22:19) — ei vielä "2 koodi 0". **Kun loki näyttää "2 koodi 0" TAI vahti kuolee → yksi rivi Karttasepälle (local_4bd7c316-55bc-423a-9da1-821fdd123cab) ja Fablelle.** Karttasepän oma monitori pois käytöstä, tämä on ainoa seuranta.
+`aja.out` 00:39: **"1 koodi 1"** (ei "0" — vaihe 1 epäonnistui). `vahti.out` 00:39: **"poltto päättyi koodi 145"**. **Vahti-PID 85590 EI ENÄÄ ELOSSA** (prosessi kuollut kokonaan, ei jäljellä mitään aja.sh/polttovahti-prosessia). Molemmat Fablen antamat hälytysehdot täyttyivät samanaikaisesti. **Ilmoitettu Karttasepälle (local_4bd7c316-55bc-423a-9da1-821fdd123cab) ja Fablelle 00:45.** Karttasepän oma monitori pois käytöstä — tämä oli ainoa seuranta, ei automaattista uudelleenkäynnistystä.
 
 ## 1a-2) Omistajan 23.58: vain striimiluenta-julkaisu, muut kirjoittavat luovutuksia
 
