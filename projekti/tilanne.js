@@ -12,7 +12,7 @@ import { PELITILAT, PELI_IKONIT } from './pelit.js';
 
 // Osa-alueiden kuvat (assets/projekti/, pienennetyt kuvakaappaukset pelistä).
 const KUVAT = {
-  pallo: { src: 'assets/projekti/pallokartta.jpg', w: 900, h: 853, alt: 'Pergamenttityylinen pallokartta, jolla näkyvät Euroopan, Afrikan ja Aasian kaupungit', teksti: 'Pallokartta: koko maapallo omana, pergamenttityylisenä laattakarttana.' },
+  pallo: { src: 'assets/projekti/pallokartta.jpg', w: 900, h: 853, alt: 'Pergamenttityylinen pallokartta, jonka keskellä on Eurooppa', teksti: 'Pallokartta: koko maapallo omana, pergamenttityylisenä laattakarttana — keskellä Eurooppa.' },
   kreikka: { src: 'assets/projekti/kreikka-maasto.jpg', w: 431, h: 900, alt: 'Kallistettu karttanäkymä Kreikasta: vuoret kohoavat kolmiulotteisina, kartalla Delfoi, Korintin kanava ja Epidauros', teksti: 'iOS-sovelluksen kallistettu näkymä: Kreikan vuoret kolmiulotteisina ja kohteet kartalla.' },
   lehti: { src: 'assets/projekti/kaupunkilehti-pariisi.jpg', w: 414, h: 900, alt: 'Pariisin kaupunkilehden etusivu: Eiffel-torni ja Invalidien kupoli, alla lehden teksti', teksti: 'Kaupunkilehti: Pariisin etusivu, jonka tekstin voi myös kuunnella.' },
   chartres: { src: 'assets/projekti/lehti-chartres.jpg', w: 585, h: 900, alt: 'Chartresin katedraalia käsittelevä juttu kahdessa palstassa ja ilmakuva kaupungista', teksti: 'Nähtävyysjuttu kahdessa palstassa: Chartresin katedraali, kuva ja lähteet.' },
