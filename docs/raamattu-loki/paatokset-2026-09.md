@@ -8147,3 +8147,7 @@ Kortit 12.xx: natiivin avauskortin korjaukset (kuvaparit 35262df2: miniatyyri ka
 ## OMISTAJA: LIPUN SUUNTA MAAILMAAN SIDOTTU (AINA ITAAN, 88362285 → 1.0.30) (27.9.2026 klo 12.18)
 
 Kortti kuvapareista kuvapari-ylhaalta.jpg ja -kallistus40.jpg (A kameraan / B itaan): B valittu. Lippu ei kaanny kun kamera kulkee ylitse; suuntimalla 180 kangas liehuu ruudulla vasemmalle (hyvaksytty). Natiiviseppa mergeaa 1.0.30-junaan.
+
+## OMISTAJA: NAHTAVYYSKUVAT YHTENAISTETAAN KONEELLISESTI VARI2-TASOLLE + 7 MAALATTUA TAUSTAA CODEXILLE (27.9.2026 klo 12.22)
+
+Sisaltokirjurin tyylitarkastus #3398 (raportti nahtavyyskuvien-tyyli-20260927.md): 449 paikallista kuvaa kahta sukupolvea — vanhat 363 liian haaleita (S 0,243), Codex-kohtaukset 86 liian varikkaita (0,417), vari2-referenssi 565 (0,332); 27 kaupunkia sekoittaa korjattua ja korjaamatonta samalla kartalla; 42 poikkeavaa; 36 orpoa tiedostoa. Omistajan kortti (kontaktiarkit Helsinki, Pariisi): koneellinen tasaus kaikille 449 vari2-tasolle, ennen/jalkeen-kontaktiarkit omistajalle ennen korvausta; Codex korjaa vain 7 maalattua taustaa; orvot pois. #3397 (pelisuunnitelmakortit) mergetty (Fable, docs); #3398 + #3402 (hintatasot 49 maata) Julkaisijan junaan; natiivin hintatasot-portti Pelikoodarille.
