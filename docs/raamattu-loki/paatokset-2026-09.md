@@ -8035,3 +8035,7 @@ Omistaja 10.1x: luennan saatimissa ratas hieman lahemmas kaiutinta; muuten hyva 
 ## OMISTAJA 10.2x: LUKIJAN AANILLE OMAT PELINIMET (EI XAI-VIITTEITA) — TAULUKKO (27.9.2026 klo 10.17)
 
 Omistaja 10.2x: aanille omat nimet, jotta ne eivat yhdisty xAI:n moottoriin. Fable nimesi 1870-luvun suomalaisilla etunimilla (alkukirjain sailyy, sukupuoli sailyy): ara→Aino (oletus), aurora→Aamu, carina→Kerttu, celeste→Siiri, eve→Helmi, iris→Ilta, liora→Lyyli, luna→Vieno, ursa→Saima; altair→Aarne, atlas→Antero, castor→Kalle, cosmo→Kosti, helios→Heikki, helix→Herman, kepler→Kaarlo, leo→Lauri, lumen→Lassi, lux→Luukas, naksh→Niilo, orion→Onni, perseus→Pekka, rex→Reino, rigel→Risto, sal→Sulo, sirius→Simo, zagan→Sakari, zenith→Vaino. Asiakas nayttaa vain pelinimen; xAI-tunnus sisainen (worker). Pelikoodari #3388, Natiivi-UI speksi.
+
+## PUHERAJA-PR 3389: 400 000 mrk/IP/vrk, 6 M/kk, 429 PYSAYTTAA LUENNAN (VAHVISTETTU); #3388 PIDOSSA KORJAUKSIIN ASTI (27.9.2026 klo 10.17)
+
+Pelikoodari 10.1x: #3389 (v2311) PUHE_PAIVARAJA 60 000 → 400 000 mrk/IP/vrk, PUHE_KUUKAUSIRAJA 900 000 → 6 000 000; 429/5xx pysayttaa luennan (ei laitteen aanta, ei aanetonta ohitusta), workerin viesti kerran/istunto, myos Pulun striimi; vaatii Pollon julkaisun. Fable vahvisti luvut. Julkaisijan jarjestys: #3386 → #3389 → #3388 (pidossa kunnes VU/ratas/nimet korjattu ja omistaja kuitannut). Pelikoodarin jono: #3388-korjaukset → talous-suunnitelma → natiivin progressiivinen soitto.
