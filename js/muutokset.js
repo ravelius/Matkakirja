@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2299, teksti: 'Turistiopas erä 19: Bananal, Boa Vista, Kap Palmas' },
   { v: 2297, teksti: 'v2297: Lukijaääni — pitkä kappale yhtenä palana (#3368)' },
   { v: 2296, teksti: 'v2296: Kaupungin avauskortti korvaa liuskan, ku… (#3364)' },
   { v: 2295, teksti: 'Maalehti-siirto: 28 kaupunkijuttua maalehtiin (#3367)' },
