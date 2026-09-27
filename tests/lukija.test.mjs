@@ -520,19 +520,13 @@ test('mykkä peli ei lue mitään kummallakaan sisäänkäynnillä', () => {
   }
 });
 
-test('mykistysportti on molempien sisäänkäyntien ensimmäinen ehto', () => {
+test('lukijan sisäänkäynneissä ei ole mykistysporttia (luenta kuuluu aina pyynnöstä, 27.9. klo 15.5x)', () => {
   const lahde = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
   for (const nimi of ['lueAaneen', 'lueVirtana']) {
     const kohta = lahde.indexOf(`export function ${nimi}(`);
     assert.ok(kohta > 0, `${nimi} ei löytynyt`);
-    // Portin on oltava rungon alussa, ennen kuin mitään
-    // taustajärjestelmää kysytään.
     const runko = lahde.slice(kohta, kohta + 900);
-    // Pulu ohittaa portin (omistaja 27.9.2026 klo 09.2x): sen puhetta ohjaa vain oma kaiutinvipu.
-    assert.match(runko, /if \(!pulunPuhe\(persoona\) && !aanetPaalla\(\)\)/, `${nimi} ei kysy pelin äänivalintaa`);
-    const portti = runko.indexOf('aanetPaalla()');
-    const tausta = runko.indexOf('puheTuettu()');
-    assert.ok(tausta < 0 || portti < tausta, `${nimi} kysyy taustajärjestelmää ennen mykistystä`);
+    assert.doesNotMatch(runko, /aanetPaalla\(\)/, `${nimi} kysyy yhä äänimaisemaa`);
   }
 });
 
@@ -551,25 +545,15 @@ test('mykistys lähettää tapahtuman, jota lukija kuuntelee', () => {
  * Pulun striimipuhetta ja valmista vastausta ohjaa vain Pulun kaiutinvipu.
  * Pelin mykistys ja kertojakytkin eivät estä eivätkä katkaise sitä.
  */
-test('Pulun puhe ohittaa pelin äänikytkimet, muu luenta ei', () => {
+test('Äänimaisema/mykistys ei vaienna luentaa — vain musiikin ja tehosteet (omistaja 27.9. klo 15.5x)', () => {
   const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
-  assert.match(lukija, /function pulunPuhe\(persoona\) \{\s*return persoona === 'pollo';/);
-  assert.match(lukija, /export function vaiennaAanikytkimella\(\) \{\s*if \(ajossa && ajossaPulu\) return;\s*pysaytaLukija\(\);/);
-  // Molemmat sisäänkäynnit merkitsevät soivan luennan Pulun omaksi.
-  assert.equal((lukija.match(/ajossaPulu = pulunPuhe\(persoona\);/g) ?? []).length, 2);
-  // Äänikytkimet vaientavat vaiennaAanikytkimella-kahvalla, eivät pysaytaLukija-kutsulla.
+  // Äänikytkimen kahva ei pysäytä mitään (ennen: kaikki paitsi Pulu).
+  assert.match(lukija, /export function vaiennaAanikytkimella\(\) \{\}/);
+  // Kortin kaiutin ei näy mykistettynä äänimaiseman mukaan.
+  assert.match(lukija, /const mykka = false;/);
+  // Kutsujat käyttävät yhä kahvaa (rajapinta säilyy).
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
   assert.match(main, /stopIntroVoice\(ui\); vaiennaAanikytkimella\(\); \}/);
-  const valikko = readFileSync(new URL('../js/aikajana-valikko.js', import.meta.url), 'utf8');
-  assert.match(valikko, /pysaytaLinssiluenta\(ui\); vaiennaAanikytkimella\(\); \}/);
-  // Mykkä peli ei silti lue kertojana.
-  const oli = sfx.enabled;
-  try {
-    sfx.enabled = false;
-    assert.equal(lueAaneen('Tokiossa astuin risteykseen.', null, { persoona: 'kertoja' }), false);
-  } finally {
-    sfx.enabled = oli;
-  }
 });
 
 /*

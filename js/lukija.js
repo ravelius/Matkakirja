@@ -140,28 +140,23 @@ function aanetPaalla() {
 }
 
 /*
- * PULUN PUHE ILMAN ÄÄNIKYTKIMIÄ (omistaja 27.9.2026 klo 09.2x, sitova):
- * Pulun puhetta — striimattua (lueVirtana) ja valmista vastausta
- * (lueAaneen persoonalla 'pollo') — ohjaa VAIN Pulun oma kaiutinvipu
- * (js/pollo.js aaniPaalla). Pelin mykistys ja kertojakytkin eivät estä
- * sitä eivätkä katkaise sitä kesken. Lippu kertoo, onko soiva luenta
- * Pulun; vaiennaAanikytkimella jättää sen soimaan.
+ * ── LUENTA KUULUU AINA PYYNNÖSTÄ (omistaja 27.9.2026 klo 15.5x, sitova) ──
+ *
+ * Yllä kuvattu mykistysportti (22.8.2026) on KUMOTTU: kun pelaaja painaa
+ * noston tai lehden kaiutinta, nostojen ja isoisän luenta soi myös
+ * Äänimaisema/mykistys pois -tilassa — kuten Pulun puhe (#3386).
+ * Äänimaisema mykistää vain musiikin ja tehosteet. Automaattista luentaa
+ * ohjaa kertojakytkin (js/luenta.js luentaKytkinPaalla), ei äänimaisema.
+ * aanetPaalla jää vain muiden moduulien käyttöön; lukija ei kysy sitä.
  */
-let ajossaPulu = false;
-
-/** Ohjaako luentaa vain Pulun kaiutinvipu (ei pelin äänikytkimiä). */
-function pulunPuhe(persoona) {
-  return persoona === 'pollo';
-}
 
 /**
- * Pelin äänikytkin (mykistys tai kertoja pois) vaientaa soivan luennan —
- * paitsi Pulun puheen, jota ohjaa vain Pulun kaiutinvipu.
+ * Pelin äänikytkin (Äänimaisema/mykistys pois) EI vaienna luentaa
+ * (omistaja 27.9.2026 klo 15.5x; ennen vain Pulun puhe, #3386). Funktio
+ * jää kutsujien rajapinnaksi: se ei pysäytä mitään. Luennan pysäyttää
+ * kaiutin itse tai kertojakytkin (js/ui.js factKuuntele).
  */
-export function vaiennaAanikytkimella() {
-  if (ajossa && ajossaPulu) return;
-  pysaytaLukija();
-}
+export function vaiennaAanikytkimella() {}
 
 /**
  * Luettavan tekstin katto merkkeinä.
@@ -1177,7 +1172,6 @@ export function pysaytaLukija() {
   if (!nyt) return;
   ajossa = null;
   talletaKortinKohta(nyt);
-  ajossaPulu = false;
   try {
     nyt.lopeta();
   } catch {
@@ -1289,11 +1283,8 @@ export function lueAaneen(teksti, nappi = null, {
   persoona = 'kertoja', sailio, onLoppu, kohdat = null, aloitusKappale = 0, aloitusAlku = 0, jatko = null,
 } = {}) {
   pysaytaLukija();
-  // Pelin mykistys ensin: mykkä peli ei lue mitään, millään
-  // taustajärjestelmällä (ks. aanetPaalla) — paitsi Pulu, jota ohjaa
-  // vain sen oma kaiutinvipu (ks. ajossaPulu).
-  if (!pulunPuhe(persoona) && !aanetPaalla()) return false;
-  ajossaPulu = pulunPuhe(persoona);
+  // Ei mykistysporttia: luenta kuuluu Äänimaisema/mykistys pois -tilassakin
+  // (omistaja 27.9.2026 klo 15.5x, ks. LUENTA KUULUU AINA PYYNNÖSTÄ).
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
@@ -1560,11 +1551,7 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'ke
  */
 export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   pysaytaLukija();
-  // Sama mykistysportti kuin lueAaneenissa (Pulu ohittaa sen: striimi-
-  // puhetta ohjaa vain Pulun kaiutinvipu). null kertoo kutsujalle, ettei
-  // virtaluentaa ole — sama paluuarvo kuin ilman taustajärjestelmää.
-  if (!pulunPuhe(persoona) && !aanetPaalla()) return null;
-  ajossaPulu = pulunPuhe(persoona);
+  // Ei mykistysporttia (kuten lueAaneen, omistaja 27.9.2026 klo 15.5x).
   // Sama pehmeä taustan väistö kuin valmiin tekstin luennassa
   // (lueAaneen) — kerran-kääre kattaa kaikki loppupolut.
   const vapautaVaisto = kerran(puheLoppui);
@@ -2419,7 +2406,9 @@ function varustaKortinSaatimet(koti, nappi) {
 /** Kortin kaiuttimen mykistysmerkki ja nimi pelin äänivalinnan mukaan. */
 function paivitaKortinKaiutin(nappi) {
   if (!nappi) return;
-  const mykka = !aanetPaalla();
+  // Kaiutin ei näy mykistettynä äänimaiseman mukaan: luenta kuuluu silti
+  // (omistaja 27.9.2026 klo 15.5x).
+  const mykka = false;
   nappi.classList.toggle('mykistetty', mykka);
   nappi.dataset.lukijaNimi = mykka
     ? KORTIN_MYKKA_OTSIKKO
