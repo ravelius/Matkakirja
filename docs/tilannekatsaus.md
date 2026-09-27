@@ -21,8 +21,8 @@ lisätoiminnoista.
 
 Seuraavaksi:
 - iOS-sovelluksen julkaisu App Storeen
-- pelin sisäinen talous ja ensimmäiset minipelit
-- lisää linssejä ja kohteita Euroopan ulkopuolelle
+- ensimmäisten minipelien toteutus
+- Euroopan viimeistely: kaikki kaupungit ja maat samalle sisältötasolle ennen muita maanosia
 
 ## Kartta ja maailma
 
@@ -55,7 +55,7 @@ omaan tyyliin. Kuvien lisenssit on inventoitu; tekijämerkinnät tulevat näkyvi
 
 Seuraavaksi:
 - nähtävyyskuvien tyylin yhtenäistäminen koko pelissä
-- lehtien ja nostojen laajennus Euroopan ulkopuolelle
+- lehtien ja nostojen täydennys Euroopan ohuimpiin kaupunkeihin ja alueisiin
 - luennan säätimet (nopeus, jatko samasta kohdasta) molempiin versioihin
 
 ## Linssit
@@ -78,7 +78,7 @@ Tila: suunnitteilla, ensimmäiset 10 valittu
 
 Peliin tulee Euroopan perinteisiä pelejä, joita pelataan tietokonetta tai kaveria vastaan
 siinä maassa, josta peli on kotoisin: esimerkiksi mölkky Suomessa, kubb Ruotsissa,
-pétanque Ranskassa ja tavli Kreikassa. Pelikatalogissa on 117 peliä kahdeksasta
+pétanque Ranskassa ja tavli Kreikassa. Pelikatalogissa on 116 peliä kahdeksasta
 maantieteellisestä osasta, ja kymmenelle ensimmäiselle on tehty pelisuunnitelma.
 Pelit ovat yhtä merkittävä osa kokonaisuutta kuin linssit. Katso Pelit-välilehti.
 
@@ -98,6 +98,6 @@ Uusi testiversio on viime viikkoina julkaistu sisäiseen testaukseen lähes päi
 testataan laitteilla ennen jakelua.
 
 Seuraavaksi:
-- pelin talous ja uusi aloitusnäkymä seuraavaan testiversioon
+- viimeisimmässä testiversiossa pelin talous, uusi aloitusnäkymä ja uusi lento; seuraavaksi viimeistely
 - suorituskyvyn viimeistely iPadille
 - App Store -julkaisun valmistelu

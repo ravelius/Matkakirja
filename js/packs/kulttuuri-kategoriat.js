@@ -9626,6 +9626,82 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Kaupunki, joka nimesi kadut kirjailijoidensa mukaan ja '
+        + 'pystytti kirjailijalle korkeimman patsaan, minkä se osasi rakentaa.',
+      tehtava: {
+        kysymys: 'Minä vuonna Edinburghista tuli maailman ensimmäinen '
+          + 'Unescon kirjallisuuden kaupunki?',
+        vaihtoehdot: ['1996', '2004', '2010', '2012'],
+        oikea: 1,
+        fakta: 'Nimitys myönnettiin vuonna 2004, ja se tunnusti sekä '
+          + 'kaupungin kirjallisen menneisyyden että sen elävän nykyisen '
+          + 'kirjailija- ja kustannuskentän.',
+      },
+      nostot: [
+        {
+          otsikko: 'Torni, jonka rakensi itseoppinut kirvesmies',
+          tiedosto: 'The Scott Monument, Princes Street Gardens.jpg',
+          teksti: 'Kun Walter Scott kuoli 1832, Edinburgh päätti pystyttää '
+            + 'hänelle muistomerkin, jommoista ei ollut aiemmin annettu '
+            + 'yhdellekään kirjailijalle. Suunnittelukilpailun voitti George '
+            + 'Meikle Kemp, itseoppinut arkkitehti, joka oli aiemmin tehnyt '
+            + 'työkseen kirvesmiehen hommia ja jätti kilpailuun ehdotuksensa '
+            + 'salanimellä. Goottilainen 61-metrinen torni valmistui 1844 — '
+            + 'Kemp ei ehtinyt nähdä sitä valmiina, sillä hän hukkui '
+            + 'kanavaan samana vuonna matkalla työmaalta kotiin. Torni on '
+            + 'yhä maailman suurin yksittäiselle kirjailijalle pystytetty '
+            + 'muistomerkki.',
+          lyhyt: 'Scott Monument valmistui 1844, ja se on maailman suurin yksittäiselle kirjailijalle pystytetty muistomerkki.',
+          selite: 'Scott Monument valmistui vuonna 1844 itseoppineen '
+            + 'arkkitehti George Meikle Kempin suunnitelmien mukaan, ja se '
+            + 'on maailman suurin yksittäiselle kirjailijalle pystytetty '
+            + 'muistomerkki.',
+          lahde: 'Enrohm1963, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Scott Monument',
+        },
+        {
+          otsikko: 'Kolme kirjailijaa saman katon alla',
+          tiedosto: 'Three great men of Scottish literature.JPG',
+          teksti: 'Kirjailijamuseo toimii 1600-luvulla rakennetussa Lady '
+            + 'Stairin talossa Kuninkaantien varrella. Sisällä on esineitä '
+            + 'kolmelta Skotlannin tunnetuimmalta kirjailijalta: Robert '
+            + 'Burnsin kirjoituspöytä, painokone, jolla Walter Scottin '
+            + 'Waverley-romaanit ensin painettiin, ja esineitä Robert Louis '
+            + 'Stevensonin matkoilta ympäri maailmaa. Kolmen kirjailijan '
+            + 'rintakuvat seisovat samassa huoneessa, vaikka he elivät eri '
+            + 'aikoina — Burns kuoli 1796 Scottin ollessa vielä '
+            + 'kaksikymmentäviisivuotias, ja Stevenson syntyi 1850, '
+            + 'kahdeksantoista vuotta Scottin kuoleman jälkeen.',
+          lyhyt: 'Kirjailijamuseossa on Burnsin, Scottin ja Stevensonin esineitä samassa huoneessa.',
+          selite: 'Kirjailijamuseo Lady Stairin talossa säilyttää Robert '
+            + 'Burnsin, Walter Scottin ja Robert Louis Stevensonin esineitä '
+            + 'samassa huoneessa.',
+          lahde: 'Kim Traynor, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Writers\' Museum',
+        },
+        {
+          otsikko: 'Katukivet, joihin on kaiverrettu lainauksia',
+          tiedosto: 'Makars\' Court, Sir Walter Scott.jpg',
+          teksti: 'Kirjailijamuseon ulkopuolella Makars\' Courtin '
+            + 'katukiviin on kaiverrettu lainauksia skotlantilaisilta '
+            + 'kirjailijoilta — makar on vanha skottilainen sana runoilijalle. '
+            + 'Walter Scottin kivessä lukee rivi hänen runostaan Lay of the '
+            + 'Last Minstrel vuodelta 1805: "Breathes there the man, with '
+            + 'soul so dead, who never to himself hath said, this is my own, '
+            + 'my native land." Uusia kiviä on lisätty pihaan vuosien '
+            + 'varrella, ja piha kasvaa yhä kaupungin kirjallisuushistorian '
+            + 'mukana.',
+          lyhyt: 'Makars\' Courtin katukiviin on kaiverrettu lainauksia skotlantilaisilta kirjailijoilta.',
+          selite: 'Makars\' Courtin katukiviin on kaiverrettu lainauksia '
+            + 'skotlantilaisilta kirjailijoilta, ja Walter Scottin kivessä '
+            + 'lukee rivi hänen vuoden 1805 runostaan.',
+          lahde: 'Stefan Schäfer, Lich, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -11191,6 +11267,80 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Palau de la Música Catalana',
           musiikki: 'https://music.apple.com/fi/search?term=orfe%C3%B3%20catal%C3%A0',
           musiikkiNimi: 'Orfeó Català Apple Musicissa',
+        },
+      ],
+    },
+    {
+      id: 'castellit',
+      nimi: 'Castellit',
+      johdanto: 'Yli kaksisataa vuotta vanha perinne, jossa kaupunki rakentaa '
+        + 'itsestään tornin: ihminen ihmisen päälle, kunnes ylimpänä on lapsi.',
+      tehtava: {
+        kysymys: 'Kuka kiipeää castell-tornin huipulle?',
+        vaihtoehdot: [
+          'Joukkueen vahvin jäsen',
+          'Pienin lapsi, anxaneta',
+          'Palkattu akrobaatti',
+          'Joukkueen perustaja',
+        ],
+        oikea: 1,
+        fakta: 'Huipulle kiipeävää lasta kutsutaan anxanetaksi. Hän nostaa '
+          + 'kädet ilmaan tornin huipulla ennen kuin koko rakennelma '
+          + 'puretaan alhaalta ylöspäin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Torni, joka on tehty ihmisistä',
+          tiedosto: 'Castells bcn 01.jpg',
+          teksti: 'Castell tarkoittaa katalaaniksi linnaa, ja se on ihmisistä '
+            + 'rakennettu torni: joukkue kiipeää toistensa hartioille kerros '
+            + 'kerrokselta, kunnes tornissa voi olla kahdeksan, yhdeksän tai '
+            + 'jopa kymmenen kerrosta. Perinne juontaa 1700-luvun lopun '
+            + 'Vallsiin, lähelle Tarragonaa, mutta levisi sieltä koko '
+            + 'Kataloniaan. Unesco lisäsi castellit ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön luetteloon vuonna 2010. Torni ei ole '
+            + 'kilpailu voimasta vaan tasapainosta: mitä useampi kerros, sitä '
+            + 'enemmän koko joukkue harjoittelee yhdessä ennen onnistumista.',
+          lyhyt: 'Castell on ihmisistä rakennettu torni, ja Unesco lisäsi perinteen luetteloonsa 2010.',
+          selite: 'Castell on ihmisistä rakennettu torni, jossa voi olla '
+            + 'kymmenen kerrosta, ja Unesco lisäsi perinteen aineettoman '
+            + 'kulttuuriperinnön luetteloonsa vuonna 2010.',
+          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Satojen ihmisten kannattama paino',
+          tiedosto: 'Castells bcn 12.jpg',
+          teksti: 'Tornin pohjalla on pinya, tiivis ihmisjoukko, joka ottaa '
+            + 'vastaan koko rakennelman painon ja pehmentää mahdollisen '
+            + 'kaatumisen. Pinyaan voi kuulua satoja ihmisiä, eikä siihen '
+            + 'tarvita erityistaitoa — kuka tahansa katsoja voi kävellä '
+            + 'joukkoon mukaan ja työntää olkapäänsä tueksi. Vasta pinyan '
+            + 'päälle nousee tronc, varsinainen runko, jonka jäsenet on '
+            + 'valittu voiman ja tasapainon mukaan. Harjoituksissa joukkue '
+            + 'opettelee tunnistamaan, milloin torni alkaa horjua liikaa.',
+          lyhyt: 'Pinya on tornin pohjalla oleva ihmisjoukko, joka kannattaa painon ja pehmentää kaatumisen.',
+          selite: 'Pinya on tornin pohjalla oleva tiivis ihmisjoukko, joka '
+            + 'kannattaa koko rakennelman painon ja pehmentää mahdollisen '
+            + 'kaatumisen.',
+          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Castells',
+        },
+        {
+          otsikko: 'Kaupungintalon aukio täyttyy syyskuussa',
+          tiedosto: 'Mercè 2016 - Castellers a la Plaça de Sant Jaume 04.jpg',
+          teksti: 'Barcelonan suurin castell-päivä osuu syyskuun La Mercè '
+            + '-juhlaan, kaupungin suojeluspyhimykselle omistettuun '
+            + 'kaupunkijuhlaan. Silloin kaikki kaupungin joukkueet kokoontuvat '
+            + 'samalle aukiolle, Plaça de Sant Jaumelle kaupungintalon eteen, '
+            + 'ja rakentavat torninsa vuorotellen yleisön edessä. Castellers '
+            + 'de Barcelona, kaupungin vanhin joukkue, on isännöinyt '
+            + 'tapahtumaa vuosikymmenten ajan. Aukio on ollut sama paikka '
+            + 'lähes puoli vuosisataa.',
+          lyhyt: 'La Mercè -juhlassa syyskuussa kaupungin castell-joukkueet kokoontuvat Plaça de Sant Jaumelle.',
+          selite: 'La Mercè -juhlassa syyskuussa Barcelonan castell-joukkueet '
+            + 'kokoontuvat Plaça de Sant Jaumelle, kaupungintalon eteen, '
+            + 'rakentamaan torninsa vuorotellen.',
+          lahde: 'Jordiferrer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -13832,6 +13982,82 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki, jonka natsit tuhosivat tarkoituksella melkein '
+        + 'kokonaan — ja jonka asukkaat rakensivat takaisin maalausten '
+        + 'avulla.',
+      tehtava: {
+        kysymys: 'Miltä vuosisadalta ovat maalaukset, joita arkkitehdit '
+          + 'käyttivät vanhankaupungin jälleenrakennuksen pohjana?',
+        vaihtoehdot: ['1600-luvulta', '1700-luvulta', '1800-luvulta', '1900-luvulta'],
+        oikea: 1,
+        fakta: 'Hovimaalari Bernardo Bellotto maalasi noin kolmekymmentä '
+          + 'näkymää Varsovasta 1760-luvulta lähtien, ja ne säilyivät sodan '
+          + 'yli kaupungin ulkopuolella.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, joka tuhottiin rangaistukseksi',
+          tiedosto: 'Rynek Starego Miasta widok w kierunku ul. Nowomiejskiej 1945.jpg',
+          teksti: 'Elokuussa 1944 Varsovan asukkaat nousivat kapinaan '
+            + 'saksalaismiehittäjää vastaan. Kapina kesti '
+            + 'kuusikymmentäkolme päivää ennen kuin se murskattiin, ja '
+            + 'taisteluissa kuoli noin kaksisataatuhatta siviiliä. '
+            + 'Kapinan jälkeen saksalaisjoukot saivat käskyn tuhota kaupunki '
+            + 'talo talolta rangaistukseksi — yli 85 prosenttia '
+            + 'vanhastakaupungista raunioitui. Kuvassa on Vanhan '
+            + 'kaupungintorin rauniot vuodelta 1945, valokuvaaja Leonard '
+            + 'Sempolińskin ottamana pian sodan päätyttyä.',
+          lyhyt: 'Varsovan vanhakaupunki raunioitui yli 85-prosenttisesti kapinan murskaamisen jälkeen 1944.',
+          selite: 'Varsovan vanhakaupunki raunioitui yli 85-prosenttisesti, '
+            + 'kun saksalaisjoukot tuhosivat sen tarkoituksella kapinan '
+            + 'murskaamisen jälkeen vuonna 1944.',
+          lahde: 'Leonard Sempoliński, Wikimedia Commons (PD)',
+          wiki: 'Varsovan kansannousu',
+        },
+        {
+          otsikko: 'Maalaukset, joista tuli pohjapiirustus',
+          tiedosto: 'Bellotto View of Warsaw from Praga 02.jpg',
+          teksti: 'Vuonna 1767 italialainen Bernardo Bellotto, joka käytti '
+            + 'setänsä Canaletton tavaramerkkinimeä, tuli Puolan kuninkaan '
+            + 'hovimaalariksi ja maalasi lähes kolmekymmentä näkymää '
+            + 'Varsovasta niin tarkasti, että ikkunat, koristelistat ja '
+            + 'talojen mittasuhteet erottuvat yksitellen. Taulut olivat '
+            + 'sodan aikana muualla kuin Varsovassa ja säilyivät ehjinä. '
+            + 'Jälleenrakennuksessa arkkitehdit käyttivät niitä '
+            + 'pohjapiirustuksina: talo toisensa jälkeen rakennettiin '
+            + 'takaisin täsmälleen sellaisena kuin Bellotto oli sen '
+            + 'kaksisataa vuotta aiemmin maalannut.',
+          lyhyt: 'Bellotto maalasi 1767 lähtien lähes 30 näkymää Varsovasta, ja niitä käytettiin jälleenrakennuksen pohjana.',
+          selite: 'Bernardo Bellotto maalasi vuodesta 1767 lähtien lähes '
+            + 'kolmekymmentä tarkkaa näkymää Varsovasta, ja niitä käytettiin '
+            + 'jälleenrakennuksen pohjapiirustuksina.',
+          lahde: 'Bernardo Bellotto, Wikimedia Commons (PD)',
+          wiki: 'Bernardo Bellotto',
+        },
+        {
+          otsikko: 'Kaupunki nousi raunioista',
+          tiedosto: '2018-07-08 Old Town Market Square in Warsaw.jpg',
+          teksti: 'Jälleenrakennus alkoi heti sodan jälkeen, ja se jatkui '
+            + 'aina 1960-luvun puoliväliin asti — vanhankaupungin '
+            + 'keskeisimmät osat saatiin valmiiksi noin kymmenessä vuodessa. '
+            + 'Ulkoasu rakennettiin Bellotton maalausten ja säilyneiden '
+            + 'valokuvien mukaan, mutta sisätilat suunniteltiin '
+            + 'nykyaikaisiksi, jotta ihmiset houkuteltaisiin muuttamaan '
+            + 'takaisin autioituneeseen kaupunginosaan. Unesco lisäsi '
+            + 'Varsovan vanhankaupungin maailmanperintöluetteloonsa vuonna '
+            + '1980 — poikkeuksellisesti juuri jälleenrakennuksen ansiosta, '
+            + 'ei alkuperäisyyden.',
+          lyhyt: 'Vanhakaupunki jälleenrakennettiin 1960-luvun puoliväliin mennessä, ja Unesco listasi sen 1980.',
+          selite: 'Varsovan vanhakaupunki jälleenrakennettiin 1960-luvun '
+            + 'puoliväliin mennessä Bellotton maalausten mukaan, ja Unesco '
+            + 'lisäsi sen maailmanperintöluetteloonsa vuonna 1980.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -15672,6 +15898,79 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'Štšedryk Apple Musicissa',
           musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/Shchedryk%27s_%22Carol_of_the_Bells%22_%281922%29.oga/Shchedryk%27s_%22Carol_of_the_Bells%22_%281922%29.oga.mp3',
           musiikkiNayteNimi: 'Štšedryk vuoden 1922 levytyksenä — Ukrainan kansalliskuoro, johtajana Oleksandr Košyts (PD)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Luola joesta rinteessä kasvoi tuhat vuotta sitten luostariksi, '
+        + 'jonka käytävät ovat yhä täynnä vuosisatojen historiaa.',
+      tehtava: {
+        kysymys: 'Mistä munkki Antonius palasi, kun hän asettui Kiovan '
+          + 'luoliin vuonna 1051?',
+        vaihtoehdot: [
+          'Roomasta',
+          'Athos-vuorelta',
+          'Konstantinopolista',
+          'Jerusalemista',
+        ],
+        oikea: 1,
+        fakta: 'Antonius oli elänyt munkkina Athos-vuorella Kreikassa ja '
+          + 'palasi sieltä kaivamaan luolan Dnipro-joen rantatörmään.',
+      },
+      nostot: [
+        {
+          otsikko: 'Luola, josta kasvoi luostari',
+          tiedosto: '2008-08-24 Kiev Pechersk Lavra - 2.jpg',
+          teksti: 'Vuonna 1051 munkki Antonius asettui Athos-vuorelta '
+            + 'palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen '
+            + 'askeettinen elämänsä veti puoleensa seuraajia, ja pian '
+            + 'luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, '
+            + 'Teodosios, järjesti yhteisölle omat säännöt ja rakennutti '
+            + 'ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. '
+            + 'Nimi Petšerska tulee sanasta petšera, luola — ja koko '
+            + 'luostarikompleksi kantaa sitä nimeä yhä.',
+          lyhyt: 'Munkki Antonius kaivoi luolan Dnipro-joen rantaan 1051, ja luostari kasvoi sen ympärille.',
+          selite: 'Munkki Antonius kaivoi luolan Dnipro-joen rantatörmään '
+            + 'vuonna 1051, ja hänen ympärilleen kokoontuneesta '
+            + 'munkkiyhteisöstä kasvoi koko luostari.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Käytävät täynnä vuosisatoja',
+          tiedosto: 'Kiev Pechersk Lavra (8600719515).jpg',
+          teksti: 'Luolakäytävät ovat kapeita, vain metrin tai puolitoista '
+            + 'leveitä, ja niiden seiniin on kaiverrettu pieniä koppeja '
+            + 'munkeille ja hautanišejä. Lähiluolissa lepää noin kahdeksankymmentä '
+            + 'ja kaukoluolissa noin neljäkymmentäviisi pyhäksi julistettua '
+            + 'munkkia, ja kuiva luolailma on säilyttänyt monet heidän '
+            + 'jäännöksensä vuosisatojen ajan. Käytävät toimivat yhä '
+            + 'hautausmaana ja pyhiinvaelluskohteena, ja kynttilät ovat ainoa '
+            + 'valonlähde niiden mutkittelevissa kaarissa.',
+          lyhyt: 'Kapeat luolakäytävät ovat toimineet hautana ja pyhiinvaelluskohteena tuhat vuotta.',
+          selite: 'Kapeat, metrin levyiset luolakäytävät ovat toimineet '
+            + 'munkkien hautana ja pyhiinvaelluskohteena luostarin koko '
+            + 'tuhatvuotisen historian ajan.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kellotorni, joka näkyy joelle',
+          tiedosto: 'Great Lavra Bell Tower. Listed ID 80-382-0290. From Dnieper River. - 9 Lavrska Street, Pechersk Raion, Kiev.jpg',
+          teksti: 'Luostarin kellotorni rakennettiin vuosina 1731–1745 '
+            + 'saksalaisen arkkitehti Johann Gottfried Schädelin '
+            + 'suunnitelmien mukaan, ja se oli valmistuessaan maailman korkein '
+            + 'vapaasti seisova kellotorni. Ristin kanssa se nousee 96,5 '
+            + 'metrin korkeuteen ja sen kullattu kupoli näkyy kauas '
+            + 'Dnipro-joelle. Koko luostarikompleksi, luolat ja maanpäälliset '
+            + 'rakennukset yhdessä, on ollut Unescon maailmanperintökohde '
+            + 'vuodesta 1990.',
+          lyhyt: 'Kellotorni valmistui 1745 ja nousi 96,5 metriin — maailman korkein kellotorni valmistuessaan.',
+          selite: 'Luostarin kellotorni valmistui vuonna 1745 ja nousi 96,5 '
+            + 'metrin korkeuteen, mikä teki siitä maailman korkeimman '
+            + 'vapaasti seisovan kellotornin valmistumishetkellään.',
+          lahde: 'Wadco2, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Great Lavra Bell Tower',
         },
       ],
     },
@@ -25974,6 +26273,81 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Orlandon patsaan kyynärvarren pituus oli Dubrovnikin '
             + 'virallinen mitta, ja se on kaiverrettu myös patsaan jalustaan.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'muurit',
+      nimi: 'Muurit',
+      johdanto: 'Melkein kaksi kilometriä kiveä, joka piti sotalaivat '
+        + 'loitolla vuosisatoja — ja jonka asukkaat korjasivat itse, kun '
+        + 'kranaatit repivät katot 1990-luvulla.',
+      tehtava: {
+        kysymys: 'Minä vuonna Dubrovnikin muurit lisättiin Unescon '
+          + 'maailmanperintöluetteloon?',
+        vaihtoehdot: ['1969', '1979', '1991', '2000'],
+        oikea: 1,
+        fakta: 'Muurit lisättiin luetteloon vuonna 1979, ja sen jälkeen '
+          + 'Dubrovnik on ollut myös Unescon vaarassa olevien kohteiden '
+          + 'listalla — 1990-luvun sodan seurauksena, mutta ei enää.',
+      },
+      nostot: [
+        {
+          otsikko: 'Melkein kaksi kilometriä kiveä',
+          tiedosto: 'City walls of Dubrovnik 02.jpg',
+          teksti: 'Muuri kiertää koko vanhankaupungin lähes kahden '
+            + 'kilometrin matkalta ja nousee paikoin 25 metrin korkeuteen. '
+            + 'Rakentaminen alkoi jo 800-luvulla, mutta nykyinen muoto '
+            + 'vahvistui pääosin 1300–1600-luvuilla, kun Ottomaanien valta '
+            + 'levisi lähelle ja Dubrovnikin kauppatasavalta halusi '
+            + 'varmistaa itsenäisyytensä. Muurissa on kuusitoista tornia, '
+            + 'kolme linnoitusta ja lukuisia ulokkeisia vartiokoppeja, joista '
+            + 'yksi näkyy kuvassa lähellä Pilen porttia. Muuria kiertää '
+            + 'nykyään suosittu kävelyreitti, jolta näkee koko vanhankaupungin '
+            + 'kattojen yli.',
+          lyhyt: 'Dubrovnikin muuri on lähes kaksi kilometriä pitkä ja nousee paikoin 25 metriin.',
+          selite: 'Dubrovnikin muuri kiertää vanhankaupungin lähes kahden '
+            + 'kilometrin matkalta ja nousee paikoin 25 metrin korkeuteen.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Walls of Dubrovnik',
+        },
+        {
+          otsikko: 'Torni, jonka rakennutti paavi',
+          tiedosto: 'Croatia-01550 - Minčeta Tower in the Morning (10008001305).jpg',
+          teksti: 'Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee '
+            + 'kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II '
+            + 'lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun '
+            + 'Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli '
+            + 'oli kaatunut vain kymmenen vuotta aiemmin. Alun perin '
+            + 'nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska '
+            + 'pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. '
+            + 'Torni ei koskaan joutunut todelliseen taisteluun — se riitti, '
+            + 'että se näytti vahvalta.',
+          lyhyt: 'Minčeta-torni rakennettiin 1463 paavi Pius II:n lähettämien rakentajien voimin.',
+          selite: 'Pyöreä Minčeta-torni rakennettiin vuonna 1463 paavi '
+            + 'Pius II:n lähettämien rakentajien voimin, kun Ottomaanien '
+            + 'uhka oli suurimmillaan.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Minčeta Tower',
+        },
+        {
+          otsikko: 'Katot korjattiin kranaattien jäljiltä',
+          tiedosto: 'Dubrovnik Old Town Roof Tops (4059913617).jpg',
+          teksti: 'Vuosina 1991–1992 jugoslavialaisjoukot piirittivät '
+            + 'Dubrovnikia ja ampuivat vanhaakaupunkia kranaateilla '
+            + 'kuukausien ajan, vaikka kaupunki oli jo silloin Unescon '
+            + 'maailmanperintökohde. Noin seitsemänkymmentä prosenttia '
+            + 'vanhankaupungin kattotiilistä vaurioitui tai tuhoutui. '
+            + 'Sodan jälkeen katot korjattiin tiili tiileltä, ja koska '
+            + 'vanhaa tiilimallia ei enää valmistettu, uudet tiilet piti '
+            + 'suunnitella vastaamaan alkuperäisten väriä ja muotoa '
+            + 'mahdollisimman tarkasti. Dubrovnik poistettiin Unescon '
+            + 'vaarassa olevien kohteiden listalta vuonna 1998.',
+          lyhyt: 'Noin 70 % vanhankaupungin katoista vaurioitui piirityksessä 1991–92, ja ne korjattiin tiili tiileltä.',
+          selite: 'Noin seitsemänkymmentä prosenttia vanhankaupungin '
+            + 'katoista vaurioitui vuosien 1991–1992 piirityksessä, ja ne '
+            + 'korjattiin sodan jälkeen tiili tiileltä.',
+          lahde: 'Tony Hisgett, Wikimedia Commons (CC BY 2.0)',
         },
       ],
     },
