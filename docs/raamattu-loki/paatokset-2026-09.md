@@ -8227,3 +8227,7 @@ Kortti 16.1x (kuvaparit kuvapari-elamapalkki-iphone/ipad.png, web #3421 44deb9e2
 ## OMISTAJA: 1.0.31:N JALKEEN ENSIN APP STORE -VALMISTELU; AJETTAVAT KOMENNOT SUORAAN FABLEN KESKUSTELUUN (27.9.2026 klo 16.18)
 
 Kortti 16.3x: seuraava isompi askel App Store -valmistelu (iPadin suorituskyky, julkaisuaineisto, kuvien tekijamerkinnat pelissa) ennen pelien toteutusta. Omistaja: kun hanen toimiaan tarvitaan, selkea ilmoitus (kortti TOIMI TARVITAAN + push) ja suoraan ajettava komento Fablen keskusteluun (Run-nappi). Kehittajakoodi (POLLO_KEHITTAJAKOODI, GitHub-salaisuus 13.8.) avaintiedostoon omistajan ajamalla read -s -komennolla; ampärin pyramidisarjojen poistokomento Julkaisijalta.
+
+## OMISTAJA: PROJEKTISIVUSTO JULKAISTAAN KORJATTUNA; OMISTAJAN LOYDOKSET 16.3x: LENTOKOHTEEN VALINNASTA PISTEET POIS JA PULU TAKAISIN (27.9.2026 klo 16.41)
+
+Kortti 16.4x (kuvat projekti-*-v2.png): projektisivusto #3410 (Tilanne, Linssit, Pelit, Kartta ja maailma, Sisalto ja oppiminen, Natiivi iOS; suomi, noindex) julkaistaan kun iOS-luku 1.0.30 korjattu ja #3424 (tilannekatsaus: Eurooppa-linjaus, 116 pelia, seuraavat askeleet) mainissa. Omistaja 16.3x (TF 1.0.30, pallo): ensimmaisen lentokohteen valinnasta pois kohdekaupunkien mustat pisteet, vain lennettavat kohteet jaavat; Pulun repliikit ja animaatiot takaisin tahan valintaan webin mukaan → Natiivi-UI 1.0.31. Pallo-Z10-poltto kaynnissa vahti v5:lla (omistaja hyvaksyi kill 72301). Ampärin pyramidisarjojen poistokomento annettu omistajalle (KYLLÄ-vahvistus).
