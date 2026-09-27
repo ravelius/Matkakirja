@@ -4,13 +4,14 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260927-tilinvaihto.md`](viesti-pelikoodari-luovutus-20260927-tilinvaihto.md) (27.9. klo 11.3x, tilinvaihto; = -c + zoomikatto): #3384–#3389
-   mainissa, #3388 + #3394 (talouden vaihe 1) junassa; agenteilla natiivin talousportti, astro-pallo-VASTAKOE ja
-   pelikatalogi.html (tarkista haarat); jono: natiiviportin merge + UI-speksi, avauskortin web-kevennys, pelistreak,
-   natiivin puhemittaus. Edellinen: `viesti-pelikoodari-luovutus-20260927-b.md`.
-   - Simulaattoriajo vain Julkaisijan "nyt"-kuittauksella ja kun booted < 2. SendMessage-raja → varakanava
-     mcp__ccd_session_mgmt__send_message session id:llä (Fable local_5df52e10-10e4-4b72-9554-0049db300dfe,
-     Julkaisija local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914).
+   [`viesti-pelikoodari-luovutus-20260927-d.md`](viesti-pelikoodari-luovutus-20260927-d.md) (27.9. klo 16.2x, kontekstin nollaus):
+   #3399–#3415 mainissa; auki #3422 (luenta aina pyynnöstä, junaan), luonnokset #3421 (elämäpalkki) ja #3410
+   (projektisivusto) omistajan korttia varten; natiivi 1.0.31 `pelikoodari/luenta-aina` f4ab9dc2 Natiivisepällä.
+   Jono: elämäpalkin kuvapari Fablelle → projektisivusto mainiin + kuvat Fablelle → havainnekuva-avoin kysymys →
+   puhemittaus odottaa omistajan kehittäjäkoodia. Edellinen: `viesti-pelikoodari-luovutus-20260927-tilinvaihto.md`.
+   - Simulaattoriajo vain Julkaisijan "nyt"-kuittauksella ja kun booted < 2. Viestit roolisessioille NIMELLÄ
+     (`Julkaisija (Opus)`, `Natiiviseppä (Opus)`, `Natiivi-UI (Opus)`); Fablelle session id:llä (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc),
+     ja kun raja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
 
