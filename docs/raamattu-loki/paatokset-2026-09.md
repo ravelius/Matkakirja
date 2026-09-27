@@ -7915,3 +7915,7 @@ Pelikoodari 08.3x: silmukan syy — kosketuslaitteen 96 Mt kiintio tayttyi nakyv
 ## ERIKOISMALLIEN SISALTOTARKISTUS PR 3381: 3 LISATTY (KINDERDIJK, HOHENSALZBURG, MATTERHORN); COLOSSEUM JA BRANDENBURG JAAVAT FOKUSKOHTEISIIN (27.9.2026 klo 08.39)
 
 Sisaltokirjuri 08.4x: 7/10 erikoismallista sisalto kunnossa (Tivoli taydellinen; MSM/Stonehenge/Segovia/Brugge elamanidea-fakta tekstissa), 3 puuttui ja lisattiin (#3381, 4440/4440): Kinderdijk (myllypaiva), Hohensalzburg (Salzburgin harka), Matterhorn (alppihehku, ei minitehtavaa). Colosseum ja Brandenburgin portti: taysi sisalto (velarium, kvadriga) on fokuskohteet-ita/deu.js -karttapisteissa (siirretty lehdesta) → Fable: jaa sinne, siirto oli tarkoituksellinen (178). #3206 ajautuu epasynkkaan → Julkaisija ottaa sen ensin. Sisaltokirjurille valissa maalehtien 28 siirretyn jutun johdantojen tarkistus (CZE, IRL, NOR, LTU, SVK).
+
+## MAALEHTI-QA PR 3382 (5 MAALEHTEA LUETTU, 2 PIENTA KORJAUSTA); #3206 JULKAISIJA REBASOI ITSE (27.9.2026 klo 08.51)
+
+Sisaltokirjuri 08.4x: maalehti-QA #3382 (4441/4441): CZE/IRL/NOR/LTU/SVK luettu, ei orpoja viittauksia; Vilnan oppi-johdanto laajennettu, SVK Kapustnica-sisennys. #3206 ajautui 5. kerran epasynkkaan → Julkaisija yhdistaa mainin itse junassa ja mergeaa; Sisaltokirjuri ei rebasoi enaa. Seuraava sisaltotyo odottaa omistajan suuntaa (kysytty 08.4x).
