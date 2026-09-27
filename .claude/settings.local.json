@@ -6,10 +6,7 @@
       "Bash(aws s3 ls:*)",
       "Bash(source:*)",
       "Read(//Users/Shared/Claude/wt-julkaisija-tyotilat/**)",
-      "Bash(python3 -)",
-      "Bash(osascript:*)",
-      "Bash(screencapture:*)",
-      "Bash(sleep:*)"
+      "Bash(python3 -)"
     ]
   }
 }
