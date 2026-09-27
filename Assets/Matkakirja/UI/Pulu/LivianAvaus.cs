@@ -195,7 +195,7 @@ namespace Matkakirja.Natiivi
                 // Web jaaKappaleiksi: ≥ 3 virkettä → kaksi kappaletta ("Taas matkaan? Hyvä." | loput).
                 string teksti = UudenMatkanRepliikki();
                 var kupla = pulu.Sano(string.Join("\n\n", Kappalejako.Jaa(teksti)), null, null, () => Lopeta(true));
-                if (kupla != null) pulu.Kuplat.LisaaOhita(kupla);
+                if (kupla != null) { pulu.Kuplat.Avauskupla(kupla); pulu.Kuplat.LisaaOhita(kupla); }
                 nakyi = true;
                 Aanet.PulunOhjelma("saapuu");
                 Ajasta(() => Lopeta(false), (long)PuluKuplat.Lukuaika(teksti));
@@ -235,6 +235,7 @@ namespace Matkakirja.Natiivi
             var kupla = pulu.Sano(teksti, Pulu.AaniOsoite("avaus", indeksi, Aaniversiot[indeksi]), null,
                 () => Seuraava(i + 1, v), klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f, naytaAina: true);
             if (kupla == null) { Lopeta(true); return; }
+            pulu.Kuplat.Avauskupla(kupla);
             if (indeksi == MuotokuvanRepliikki) pulu.Kuplat.LisaaMuotokuva(kupla, MuotokuvaUrl);
             // Lippu vasta kun sarja oikeasti näkyi.
             if (i == 0) { PlayerPrefs.SetInt(Avain, 1); PlayerPrefs.Save(); }

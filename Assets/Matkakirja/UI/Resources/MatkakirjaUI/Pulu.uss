@@ -94,6 +94,28 @@
     margin-bottom: 4px;
 }
 
+/* Livian avauskupla (web .pollo-vihje-maadoitus + .pollo-vihje-lause 0,88 rem / 1,4): leveämpi kaista. */
+.mk-kupla.mk-kupla--avaus {
+    max-width: 336px;
+    padding: 8.8px 12px 9.6px 12px;
+}
+
+.mk-kupla--avaus .mk-kupla__kappale {
+    font-size: 14.08px;
+    margin-bottom: 0;
+}
+
+/* Opaslupauksen muotokuvakupla samassa kaistassa (web .pollo-vihje-muotokuva width min(21rem, 100vw − 1,6rem),
+ * kuvasarake clamp(4,5rem, 24vw, 5,6rem) → 89,6 px iPhone 17:llä ja iPadilla, 2:3). */
+.mk-kupla.mk-kupla--avaus.mk-kupla--muotokuva {
+    width: 336px;
+}
+
+.mk-kupla--avaus .mk-kupla__muotokuva {
+    width: 89.6px;
+    height: 134.4px;
+}
+
 /* Ohita (web .pollo-vihje-ohita, Livian uuden matkan lyhyt tervehdys, iPad 834 mitattu): tekstinappi oikeassa
  * alakulmassa ilman kehystä, 12,48 px alleviivattuna, kuplan muste, opacity 0,75, kosketusala ≥ 32 px. */
 .mk-kupla__ohita {

@@ -92,6 +92,19 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// Livian avauskupla (web .pollo-vihje-maadoitus: kokonainen puheenvuoro, 21 rem = 336 px, pehmuste 8,8/12/9,6,
+        /// lause 14,08 px, kappaleväli 7,2 px vain kappaleiden välissä). Koko esittely ja uuden matkan lyhyt tervehdys.
+        /// </summary>
+        public void Avauskupla(Kupla k)
+        {
+            if (k == null) return;
+            k.El.AddToClassList("mk-kupla--avaus");
+            int i = 0;
+            foreach (var kappale in k.El.Query<Label>(className: "mk-kupla__kappale").ToList())
+                kappale.style.marginTop = i++ > 0 ? 7.2f : 0f;
+        }
+
+        /// <summary>
         /// Ohita-tekstinappi kuplan oikeaan alakulmaan (web .pollo-vihje-ohita, Livian uuden matkan lyhyt tervehdys):
         /// kuittaa kuplan kuten napautus, mutta kertoo sen näkyvästi.
         /// </summary>
