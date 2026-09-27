@@ -13,6 +13,21 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2315, teksti: 'v2313: Nostokortin luennan säätimet — ratas, VU… (#3388)' },
+  { v: 2314, teksti: 'v2313: Talouden vaihe 1 — päiväkulut, 400 £, ro… (#3394)' },
+  { v: 2313, teksti: 'Raamattu: pelit, talous ja luenta 27.9.; pelika… (#3392)' },
+  { v: 2312, teksti: 'v2312: Lukijaäänen raja 400 000 mrk/IP/vrk, 429… (#3389)' },
+  { v: 2311, teksti: 'v2309: Pulun puhe ilman pelin äänikytkimiä — va… (#3386)' },
+  { v: 2310, teksti: 'v2309: Löytämisen sumu pois, maakuntasalaisuude… (#3385)' },
+  { v: 2309, teksti: 'v2307: Progressiivinen lukijaääni — pala alkaa… (#3384)' },
+  { v: 2308, teksti: 'Pelin syvin taso 10: z9–z10 käyttöön (#3371)' },
+  { v: 2307, teksti: 'v2303: Pallon laattakerros — tukitaso vain jos… (#3380)' },
+  { v: 2306, teksti: 'Maalehti-QA: 5 maalehteä luettu, 2 pientä korja… (#3382)' },
+  { v: 2305, teksti: 'Erikoismalli-sisältötarkistus: 3 puuttuvaa nost… (#3381)' },
+  { v: 2304, teksti: 'Turistiopas erä 19: Ilha do Bananal, Boa Vista,… (#3206)' },
+  { v: 2303, teksti: 'v2299: Pulun striimivastaus yhtenä puheenvuoron… (#3374)' },
+  { v: 2302, teksti: 'Pallon versiovahti: sama pohja eri nimellä (#3376)' },
+  { v: 2301, teksti: 'v2299: Lukijamittari — worker kertoo puhemootto… (#3372)' },
   { v: 2300, teksti: 'Astronautin kamera erä 7: 13 kohdetta, tilaus t… (#3375)' },
   { v: 2299, teksti: 'v2298: Musiikki: maanosa myös kaupungeille ilma… (#3323)' },
   { v: 2298, teksti: 'Astronautin kamera erät 5-6: 35 uutta kohdetta (#3370)' },

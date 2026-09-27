@@ -50,7 +50,7 @@ import { HAMPURILAISEN_POLKU } from './vakasikoni.js';
 import { asetaLuentaKytkin, luentaKytkinPaalla } from './luenta.js';
 import { asetaMusiikkiPaalla, musiikkiPaalla } from './musiikkivalitsin.js';
 import { pysaytaLinssiluenta } from './linssipuhe.js';
-import { pysaytaLukija } from './lukija.js';
+import { vaiennaAanikytkimella } from './lukija.js';
 
 /** Pudotusvalikon tunnus (aria-controls, js/ui-apurit.js VALIKKOKERROKSET). */
 export const VALIKON_TUNNUS = 'aikajana-valikko';
@@ -177,7 +177,7 @@ export function luoLinssivalikko({
    */
   const kertojaNappi = kytkin('aikajana-valikko-kertoja', 'Kertoja', luentaKytkinPaalla, (paalla) => {
     asetaLuentaKytkin(paalla);
-    if (!paalla) { pysaytaLinssiluenta(ui); pysaytaLukija(); }
+    if (!paalla) { pysaytaLinssiluenta(ui); vaiennaAanikytkimella(); }
   });
   /*
    * 4. Taustamusiikki. Kytkin on pelin oma (js/musiikkivalitsin.js), ja

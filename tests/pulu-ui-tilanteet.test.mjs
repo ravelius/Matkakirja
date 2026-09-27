@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { Game, STRANDED_AID, mulberry32 } from '../js/game.js';
+import { Game, mulberry32 } from '../js/game.js';
 
 const UI = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
 
-test('pankkiapu saa vakaan tilannetunnisteen mutta muut aid-tapahtumat eivät', () => {
+// Pankin apu poistui (talouden vaihe 1, omistaja 27.9.2026): rahattomuus on varoitus.
+test('rahattomuuden varoitus saa vakaan tilannetunnisteen mutta muut aid-tapahtumat eivät', () => {
   const game = new Game({
     players: [
       { name: 'A', color: '#f00', start: 'tanger' },
@@ -16,10 +17,10 @@ test('pankkiapu saa vakaan tilannetunnisteen mutta muut aid-tapahtumat eivät', 
   game.player.money = 0;
   game.player.pos = { type: 'city', city: 'sansibar' };
   game.beginTurn();
-
-  assert.equal(game.player.money, STRANDED_AID);
-  const pankkiapu = game.takeEvents().find((event) => event.kind === 'aid');
-  assert.equal(pankkiapu?.tilanne, 'peli.vararikko.pankkiapu');
+  assert.equal(game.player.money, 0, 'pankki ei enää anna rahaa');
+  game.veloitaPaivakulut();
+  const varoitus = game.takeEvents().find((event) => event.kind === 'rahat');
+  assert.equal(varoitus?.tilanne, 'peli.vararikko.varoitus');
 
   game.emit('aid', 'Tavallinen rahapalkkio', { icon: 'kukkaro' });
   assert.equal(game.takeEvents()[0].tilanne, undefined);
@@ -35,9 +36,9 @@ test('aarteen ilo laukeaa kuvan nousussa tasan kerran kummallakin liikepolulla',
   assert.match(kohta, /pohja\.classList\.add\('shown'\);\s*\n\s*kuvaEl\?\.classList\.add\('shown'\);\s*\n\s*if \(onAarre\(type\)\)/);
 });
 
-test('pankkiapu reagoi vain vakaaseen metadataan tapahtumakuplan hetkellä', () => {
+test('rahattomuuden varoitus reagoi vain vakaaseen metadataan tapahtumakuplan hetkellä', () => {
   const kohta = UI.slice(UI.indexOf('  async playEvents()'), UI.indexOf('  async naytaTietajaNousut()'));
-  assert.match(kohta, /const box = this\.buildToast\(event\);\s*\n\s*if \(event\.tilanne === 'peli\.vararikko\.pankkiapu'\)/);
+  assert.match(kohta, /const box = this\.buildToast\(event\);\s*\n\s*if \(event\.tilanne === 'peli\.vararikko\.varoitus'\)/);
   assert.match(kohta, /tunne: 'lammin', voimakkuus: 0\.5/);
   assert.doesNotMatch(kohta, /event\.text/);
 });

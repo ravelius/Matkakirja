@@ -2836,3 +2836,74 @@ test('worker: natiivin chat kuluttaa samaa 30/vrk per IP -rajaa kuin selain', as
     globalThis.fetch = alkuperainen;
   }
 });
+
+test('worker: puhevastaus kertoo moottorin ja lähteen otsakkeissa (xai, varapolku openai)', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const alkuperainen = globalThis.fetch;
+  let xaiKaatuu = false;
+  globalThis.fetch = async (osoite) => {
+    if (String(osoite).includes('api.x.ai') && xaiKaatuu) return new Response('ei', { status: 500 });
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const env = { POLLO_ORIGINIT: 'https://matkakirja.app', XAI_API_KEY: 'x', OPENAI_API_KEY: 'o' };
+  const pyynto = () => worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app' },
+    body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei maailma.', persoona: 'kertoja' }),
+  }), env, {});
+  try {
+    const xai = await pyynto();
+    assert.equal(xai.status, 200);
+    assert.equal(xai.headers.get('x-puhe-moottori'), 'xai');
+    assert.equal(xai.headers.get('x-puhe-lahde'), 'generoitu');
+    assert.match(xai.headers.get('access-control-expose-headers') ?? '', /x-puhe-moottori/);
+    xaiKaatuu = true;
+    const vara = await pyynto();
+    assert.equal(vara.status, 200);
+    assert.equal(vara.headers.get('x-puhe-moottori'), 'openai', 'varapolku kertoo oikean moottorin');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+});
+
+test('julkaisun puhemoottoritarkistus: vaatii xai:n, uusii kunnes salaisuus on levinnyt', async () => {
+  const { tarkistaPuhemoottori } = await import('../tools/pollo/tarkista-puhemoottori.mjs');
+  const vastaus = (moottori) => new Response(new Uint8Array([1]), { status: 200, headers: { 'x-puhe-moottori': moottori } });
+  const jono = ['openai', 'xai'];
+  const ok = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { viiveMs: 0, haku: async () => vastaus(jono.shift()) });
+  assert.equal(ok.ok, true);
+  const ei = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { yrityksia: 2, viiveMs: 0, haku: async () => vastaus('openai') });
+  assert.equal(ei.ok, false);
+  assert.equal(ei.moottori, 'openai');
+});
+
+test('worker: lukijan xAI-ääni on pelaajan valinta ilman kehittäjäkoodia (omistaja 27.9.2026)', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const alkuperainen = globalThis.fetch;
+  const aanet = [];
+  globalThis.fetch = async (osoite, init) => {
+    if (String(osoite).includes('api.x.ai')) aanet.push(JSON.parse(init.body).voice_id ?? JSON.parse(init.body).voice);
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const env = { POLLO_ORIGINIT: 'https://matkakirja.app', XAI_API_KEY: 'x', OPENAI_API_KEY: 'o' };
+  const pyynto = (aani) => worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app' },
+    body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei maailma.', persoona: 'kertoja', aani }),
+  }), env, {});
+  try {
+    assert.equal((await pyynto('eve')).status, 200);
+    assert.equal((await pyynto('ei-aani')).status, 200);
+    assert.deepEqual(aanet, ['eve', 'ara'], 'listan ääni kelpaa, tuntematon palaa oletukseen');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+});
+
+test('lukijaäänen rajat: päivä 400 000 mrk/IP, kuukausi 6 000 000 (27.9.2026)', async () => {
+  const { PUHE_PAIVARAJA_OLETUS, PUHE_KUUKAUSIRAJA_OLETUS, tarkistaPuheRajat } = await import('../tools/pollo/rajat.js');
+  assert.equal(PUHE_PAIVARAJA_OLETUS, 400000);
+  assert.equal(PUHE_KUUKAUSIRAJA_OLETUS, 6000000);
+  assert.equal(tarkistaPuheRajat({ paiva: 399999, kuukausi: 0 }).ok, true);
+  assert.equal(tarkistaPuheRajat({ paiva: 400000, kuukausi: 0 }).syy, 'paivaraja');
+});

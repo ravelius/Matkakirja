@@ -914,7 +914,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * laudan avaimella ja näkyvyys on pelkkä lippu.
    */
   /*
-   * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js, prototyyppi): käymättömien
+   * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js poistettu 27.9.2026 — piirtokyky jäi ilman kytkentää; prototyyppi): käymättömien
    * maiden rajat vaaleammalla (rajamateriaalin peitto × kerroin) ja
    * käytyjen maiden renkaat normaalilla rajapeitolla omana
    * viivajoukkonaan (`kaydyt`, sama katkoviiva kuin rajoilla).
