@@ -235,7 +235,7 @@ namespace Matkakirja.Natiivi
             // Löydös 132 (Natiivi-UI): Kokoruutu, kun noston kuva on kokoruudulla (löydös 150); muut näkymät Kortti.
             // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää ≥ 70 % ruudusta (iPhone 17: opas 77 %), kartta
             // pysäytetään kuten kokoruudun kuvan alla (kaappaus kerran, pallon kamera pois; reunat pysäytyskuvana), jolloin
-            // vieritys ei maksa pallon, Cesiumin ja elävien elementtien piirtoa. iPadin kapeampi arkki ei pysäytä.
+            // vieritys ei maksa pallon, Cesiumin ja elävien elementtien piirtoa (iPhone ja iPad).
             bool arkkiPeittaa = (Nahtavyydet.Auki && Peittoosuus(Nahtavyydet.Arkki) >= ArkkiPeittoRaja)
                 || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && Peittoosuus(Linssit.Valitsin.Paneeli) >= ArkkiPeittoRaja);
             var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
@@ -585,7 +585,7 @@ namespace Matkakirja.Natiivi
             } : (System.Action)null, () => UusiMatka(o));
         }
 
-        /// <summary>Arkin peitto, josta kartta pysäytetään (iPhone 17 opas 0,77; iPadin kapea arkki ~0,5 ei pysäytä).</summary>
+        /// <summary>Arkin peitto, josta kartta pysäytetään (mitattu: iPhone 17 opas 0,77, iPad Pro 11 opas 0,80; kartta on peitteen alla).</summary>
         const float ArkkiPeittoRaja = 0.7f;
 
         /// <summary>Elementin osuus paneelin pinta-alasta (0 = ei näy).</summary>
