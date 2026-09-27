@@ -101,6 +101,8 @@ namespace Matkakirja
         public int KaupunkiLaatikoita { get; private set; }
         /// <summary>Herää ladonnan jälkeen, kun <see cref="Laatikot"/> muuttui (ei joka ladonnassa levossa).</summary>
         public event System.Action LaatikotMuuttuivat;
+        /// <summary>LaatikotMuuttuivat-tapahtumien määrä käynnistyksestä (Natiiviseppä 27.9.: kasvaako levossa, `nimet`-rivi).</summary>
+        public int LaatikkoMuutoksia { get; private set; }
 
         sealed class Paikka
         {
@@ -444,6 +446,7 @@ namespace Matkakirja
             edellisetLaatikot.AddRange(nimiLaatikot);
             laatikot.Clear();
             foreach (var l in nimiLaatikot) laatikot.Add(Rect.MinMaxRect(l.X0, l.Y0, l.X1, l.Y1));
+            LaatikkoMuutoksia++;
             LaatikotMuuttuivat?.Invoke();
         }
 
@@ -646,7 +649,7 @@ namespace Matkakirja
             foreach (var p in luokat) sb.Append($", {p.Key} {p.Value}");
             var vr = merkit != null ? merkit.Varaukset : omat;
             sb.Append($"), taso {Taso} (jatkuva {JatkuvaTaso:0.00}, korkeus {kierto.korkeus / 1000.0:0} km), ");
-            sb.Append($"varauksia {vr.Maara}, laatikoita {laatikot.Count} (kaupunkeja {KaupunkiLaatikoita}), pooli {kaytossa}+{pooli.Count}/{enintaan}, ladonta {LadontaMs:0.00} ms, ");
+            sb.Append($"varauksia {vr.Maara}, laatikoita {laatikot.Count} (kaupunkeja {KaupunkiLaatikoita}), pooli {kaytossa}+{pooli.Count}/{enintaan}, ladonta {LadontaMs:0.00} ms, laatikkomuutoksia {LaatikkoMuutoksia}, ");
             sb.Append($"päällä {paalla}, valtameret {valtameret}, nimiä {rivit.Count}");
             return sb.ToString();
         }
