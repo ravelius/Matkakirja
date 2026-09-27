@@ -8079,3 +8079,7 @@ Omistaja 11.1x: natiivin pallon Z10-laattojen (13 856, 266 kaupunkia, poltto klo
 ## TALOUS VAIHE 1 WEB PR 3394: PAIVAKULU 12/20/32, 400 £, ROSVO 50 %, 2 VRK → LOPPUKORTTI → JATKO, ODOTA-KULKUTAPA (27.9.2026 klo 11.15)
 
 Pelikoodari 11.2x: #3394 (v2313): paivakulu js/packs/hintatasot.js (karkea 3-portainen maataulu, Sisaltokirjuri tarkentaa), aloitusraha 400 £, rosvo 50 %, pankin apu pois, 2 vrk varoitus (kassa punaisena) → loppukortti → jatko turvatallennuksesta (moninpelissa pudotus); loydos: rahaton saarella ei voinut tehda mitaan → Odota-kulkutapa lisatty, liftaus ilmainen; 4440/0. Natiivin portti (Matka/Kaupat + UI-speksi) seuraavaksi. Julkaisija: #3392 → #3394.
+
+## OMISTAJA 11.2x: NAHTAVYYSKUVAT YHDENMUKAISIKSI — CODEXIN 503/504-ERAT OVAT MAINISSA, MUTTA TYYLITARKASTUS TEHDAAN (SISALTOKIRJURI) (27.9.2026 klo 11.17)
+
+Omistaja 11.2x: nahtavyydet pitaa korjata yhdenmukaisen nakoisiksi (osa kuvakaappauksissa liian varikkaita); kysyi onko Codexin tyo siirretty peliin. Tila: Codexin miniatyyrien varikorjauserat 503/504 ovat mainissa (erat 1–12, #3279–#3300, viimeisin v2257; #3265 suljettiin sisaltojunan hyvaksi). Fable → Sisaltokirjuri: kontaktiarkki kaikista nahtavyyskuvista kaupungeittain, mittarit (kyllaisyys, taytto, tausta, tyylisukupolvi), poikkeavien lista raporttiin docs/raportit/nahtavyyskuvien-tyyli-20260927.md, ehdotus Codex-tilaukseksi 503/504-paletilla; omistaja katsoo listan ennen uusia kuvia. Siirtoseppa 70 % → luovutus + nollaus offline.jsonin jalkeen.
