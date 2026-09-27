@@ -354,7 +354,7 @@ namespace Matkakirja.Natiivi
             string url = d.MuotokuvaUrl, pitka = d.MuotokuvaKuvateksti ?? d.MuotokuvaLyhyt;
             kuva.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
             {
-                new LehtiKuva { Lahde = url, Selite = pitka, LahdeRivi = string.IsNullOrEmpty(pitka) ? null : "Matkakirjan kuvitus" },
+                new LehtiKuva { Lahde = url, Selite = pitka, LahdeRivi = string.IsNullOrEmpty(pitka) ? null : "Matkakirjan havainnekuva" },
             })));
             if (iso)
             {
@@ -365,7 +365,7 @@ namespace Matkakirja.Natiivi
                     l.enableRichText = false;
                     Kirjasimet.Aseta(l, Kirjasin.LukuKursiivi);
                 }
-                Kirjasimet.Aseta(Rakenne.Teksti("Matkakirjan kuvitus", "mk-kysymys__muotokuvalahde", teksti), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti("Matkakirjan havainnekuva", "mk-kysymys__muotokuvalahde", teksti), Kirjasin.Kone);
             }
             string odotettu = avain;
             Kuvat.Hae(d.MuotokuvaUrl, t =>
