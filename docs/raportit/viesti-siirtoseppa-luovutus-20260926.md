@@ -27,7 +27,7 @@ voimassa.
    Alueet lukee rasteri["10"]-listan? Laattapalvelin maxzoomista vai kiinteä 9? koko ~0,4 Gt / maa ≤ ~30 Mt);
    (e) yhdistä main, gh pr ready, Julkaisijan junaan, ämpäritarkistus, rivi Fablelle.
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
-   Tuotanto nyt **1.x v201+** (1.50). Seuraavaksi #3394:n jälkeinen delta (Fable 27.9. klo 11.3x). #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
+   Tuotanto nyt **1.x v219** (1.50). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
 5. **Pelikoodarin pyyntö (27.9. klo 11.3x), #3394 (main v2314) sääntövakiot:** START_MONEY 300 → 400, STRANDED_AID
    poistui, uudet PAIVAKULU_RUOKA 8, PAIVAKULU_MAJOITUS 12, HINTATASON_KERTOIMET, RAHATTOMUUS_VUOROJA 8 ja data
@@ -51,7 +51,7 @@ voimassa.
   `palauta=<peruutuksen versio>`.
 - **Viestiraja (Fable 26.9., omistaja 24.9. "VIESTIRAJA JA VARAKANAVAT"):** kun SendMessage ilmoittaa rajan (~10/vuoro),
   käytä varakanavaa mcp__ccd_session_mgmt__send_message (session_id = vastaanottajan local_-id; Fable
-  local_5df52e10-10e4-4b72-9554-0049db300dfe, muut Postivahdin tilataulussa). Omistajaa ei pyydetä kirjoittamaan, eikä tilaa
+  local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc, muut Postivahdin tilataulussa). Omistajaa ei pyydetä kirjoittamaan, eikä tilaa
   jätetä vain PR-kommenttiin. Jos varakanavakin estyy: docs/raportit/posti-siirtoseppa-<pvm>.md, Postivahti välittää.
 - **Simulaattori:** oma `siirtoseppa-iPhone` F989814A. Pyydä vuoro Julkaisijalta, käynnistä vasta kun booted < 2, ja
   sammuta ajon jälkeen. proto-kaanna.sh:n Build-kansio vaihtuu seuraavasta käännöksestä, joten tarkista heti
