@@ -237,10 +237,6 @@ namespace Matkakirja.Natiivi
         {
             "mk-ikoninappi", "mk-vakasnappi", "mk-pilleri", "mk-aikajana-nappi", "mk-lehti__ikoninappi", "mk-chat__nappula",
             "mk-nahtavyys__valikkonappi", "mk-tiedeliite__ikoninappi", "mk-tiedeliite__navinappi", "mk-linssivalikko__nappi",
-            // Saavutettavuusmittaus 27.9.2026 (docs/raportit/natiivi-saavutettavuus-20260927.md): alle 44 pt:n napit,
-            // joiden ala mahtuu kasvamaan ilman ulkoasun muutosta.
-            "mk-lukija", "mk-matkakirja__kaiutin", "mk-nahtavyys__kaiutin", "mk-seliteNappi", "mk-seloste-nappi", "mk-liiku__nappi",
-            "mk-lehti__maalinkki", "mk-valikkonappi", "mk-aloitus__aanet", "mk-aloitus__linkki", "mk-kartuscha__masto", "mk-laukku__lohkonappi",
         };
 
         VisualElement ala;
