@@ -69,6 +69,9 @@ namespace Matkakirja.Natiivi
             public float Haalistus;
             /// <summary>Liioiteltu perspektiivi vain roottorille (höyrylaiva: juuren kallistus nostaisi joen polun irti kartasta).</summary>
             public bool KallistaVainRoottori;
+            /// <summary>Meren koristeet (27.9.): lapset (toinen lautta, poijut, lokit, vana) kallistuvat oman vesipisteensä ympäri
+            /// eivätkä roottorin, jottei kaukana roottorista oleva lapsi nouse tai uppoa liioitellussa perspektiivissä.</summary>
+            public bool LapsetOmaanPisteeseen;
             /// <summary>Meren koriste (MeriKoristeet): paikka, suunta ja siirto kohdemaan merikohdista kehyksittäin.</summary>
             public MeriKoristeet.Laji Meri;
             // Ajonaikaiset
@@ -181,7 +184,8 @@ namespace Matkakirja.Natiivi
                     Nimi = l.Nimi, Meri = l, KokoPt = l.KokoPt, Yksilot = new[] { (0f, 0f, 0f) }, SiirtoIlmansuuntiin = true,
                     Runko = HoyryGeometria.Joki, Roottori = l.Roottori, Lapsi = l.Lapsi, LastenPaikat = l.Lapsi != null ? new Vector3[l.Lapsia] : null,
                     Lapsi2 = l.Lapsi2, Lapsia2 = l.Lapsia2, Lapsi3 = l.Lapsi3, Lapsia3 = l.Lapsia3,
-                    PohjaSade = 0.001f, Haalistus = 0.25f, KallistaVainRoottori = true, Naytos = l.Nakyy, Animoi = l.Animoi,
+                    PohjaSade = 0.001f, Haalistus = 0.25f, KallistaVainRoottori = true, LapsetOmaanPisteeseen = true,
+                    Naytos = l.Nakyy, Animoi = l.Animoi,
                 });
             return kaikki.ToArray();
         }
@@ -326,8 +330,11 @@ namespace Matkakirja.Natiivi
                         Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali);
                     }
                     juuri.gameObject.SetActive(false);
-                    a.Oliot.Add(new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, Vaihe = vaihe, Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) });
+                    var yksilo = new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, LapsiPerus = new Vector3[lapset.Length], Vaihe = vaihe,
+                        Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) };
+                    a.Oliot.Add(yksilo);
                     a.Animoi(rt, lapset, vaihe, 0f);
+                    for (int i = 0; i < lapset.Length; i++) yksilo.LapsiPerus[i] = lapset[i].localPosition;
                 }
             }
             Debug.Log($"MATKAKIRJA elävät elementit: {Tila()}");
@@ -487,13 +494,29 @@ namespace Matkakirja.Natiivi
                     if (a.Naytos == null && AikaEteen(yk, seina)) liikkuu = true;
                     if (yk.Nopeus > 0.0001f || !yk.Asetettu)
                     {
+                        // Lasten kallistus omaan pisteeseen (alla) siirtää niitä: Animoi saa perusasennot takaisin ennen askelta.
+                        if (a.LapsetOmaanPisteeseen) for (int li = 0; li < yk.Lapset.Length; li++) yk.Lapset[li].localPosition = yk.LapsiPerus[li];
                         a.Animoi(yk.Roottori, yk.Lapset, yk.Aika + yk.Vaihe, Mathf.Clamp01(yk.Nopeus));
                         yk.Asetettu = true;
                         yk.RoottoriPerus = yk.Roottori.localRotation;
+                        if (a.LapsetOmaanPisteeseen) for (int li = 0; li < yk.Lapset.Length; li++) yk.LapsiPerus[li] = yk.Lapset[li].localPosition;
                     }
                     // Roottorin oma kallistus (juuren avaruudessa) Animoin asennon päälle, joka kehys ilman kertymistä.
                     if (a.KallistaVainRoottori)
+                    {
                         yk.Roottori.localRotation = Quaternion.Inverse(perus) * kallistus * perus * yk.RoottoriPerus;
+                        // Lapset kallistuvat oman vesipisteensä (roottorin tasossa y = 0) ympäri: vesipiste g pysyy kallistamattomana ja
+                        // korkeus kallistuu, eli paikka = Q·g + (0, y, 0), jossa Q = (T·R)⁻¹·R (T kallistus, R Animoin asento).
+                        if (a.LapsetOmaanPisteeseen)
+                        {
+                            var q = Quaternion.Inverse(yk.Roottori.localRotation) * yk.RoottoriPerus;
+                            for (int li = 0; li < yk.Lapset.Length; li++)
+                            {
+                                var b = yk.LapsiPerus[li];
+                                yk.Lapset[li].localPosition = q * new Vector3(b.x, 0f, b.z) + new Vector3(0f, b.y, 0f);
+                            }
+                        }
+                    }
                 }
             }
             jokinNakyvissa = jokin;
@@ -525,6 +548,8 @@ namespace Matkakirja.Natiivi
             public Vaihtelu Aikataulu;
             public bool Asetettu;
             public Quaternion RoottoriPerus = Quaternion.identity;
+            /// <summary>Lasten Animoin asettamat paikat (LapsetOmaanPisteeseen), joista kallistus lasketaan joka kehys.</summary>
+            public Vector3[] LapsiPerus;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)
@@ -1755,8 +1780,9 @@ namespace Matkakirja.Natiivi
         float Tauko(int k) => k == 0 ? 3f + 5f * MeriGeometria.Arpa(siemen, 0, 0) : Mathf.Lerp(taukoMin, taukoMax, MeriGeometria.Arpa(siemen, k, 0));
         float Pituus(int k) => Mathf.Lerp(naytosMin, naytosMax, MeriGeometria.Arpa(siemen, k, 1));
         public float Arvo(int k, int kanava) => MeriGeometria.Arpa(siemen, k, kanava);
-        /// <summary>Harvinainen muunnelma noin joka kymmenennessä näytöksessä (tai pakotettuna komennolla).</summary>
-        public bool Harvinainen(int k) => k == pakotettu || MeriGeometria.Arpa(siemen, k, 2) < 0.1f;
+        /// <summary>Harvinainen muunnelma noin joka kymmenennessä näytöksessä (tai pakotettuna komennolla). Ensimmäinen näytös ei
+        /// ole koskaan harvinainen, jotta pelaaja näkee ensin perusmuodon (27.9.: purjelaivan siemen 913 antoi puuskan heti).</summary>
+        public bool Harvinainen(int k) => k == pakotettu || (k > 0 && MeriGeometria.Arpa(siemen, k, 2) < 0.1f);
 
         /// <summary>Jakso hetkellä t: numero, aika näytöksen alusta (negatiivinen = tauolla) ja näytöksen pituus.</summary>
         public (int n, float s, float pituus) Kohta(float t)
