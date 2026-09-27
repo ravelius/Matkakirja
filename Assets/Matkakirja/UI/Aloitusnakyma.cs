@@ -889,9 +889,9 @@ namespace Matkakirja.Natiivi
             valintaIdt.Clear();
             foreach (var (id, _) in kohteet) if (id != null && id != Lahto) valintaIdt.Add(id);
             var nakyvat = new HashSet<string>(valintaIdt) { Lahto };
-            // Kehittäjän maailmatila (liikkumisen pariteetti D6): kaikki kaupungit näkyvät ja kelpaavat
-            // lähdöksi (web lauta.js:2794 ohittaa pickstart-rajauksen, doKehittajaSiirto → doPickStart).
-            valintaMerkit.NaytaVain(Paavalikko.Maailma ? null : nakyvat);
+            // Vain Lontoo ja valittavat näkyvät AINA, myös kehittäjän maailmatilassa (omistaja 27.9. klo 16.3x, TF 1.0.30:
+            // "jätä näkyviin vain kohdekaupungit, joihin voi lentää"; korvaa pariteetin D6 maailmatilapoikkeuksen tässä näkymässä).
+            valintaMerkit.NaytaVain(nakyvat);
             // Valittavien hehkurenkaat (web .pallolauta-huomio; Natiivisepän KaupunkiMerkit.Renkaat).
             valintaMerkit.Renkaat(valintaIdt);
             // Ei erillistä kultaista Valopistettä (Karttapisteet): webissä valittavan merkki on kohdemerkki
