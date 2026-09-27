@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2344, teksti: 'Maakunta-pulu: NLD 15 aluetta (CHE kesken)' },
   { v: 2343, teksti: 'Alonnisoksen nosto merikansallispuistoksi (#3490)' },
   { v: 2342, teksti: 'v2342: Raha muotoon 400 £ (#3480)' },
   { v: 2341, teksti: 'v2341: Tekijämerkinnät — jokaisen kuvan tekijä,… (#3438)' },

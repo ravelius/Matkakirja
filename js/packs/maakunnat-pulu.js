@@ -531,4 +531,199 @@ export const MAAKUNTIEN_PULU = {
       { q: "Kaivoiko Persian kuningas todella kanavan Athoksen niemen poikki?", a: "Kyllä: Kserkses I kaivatti kolmen vuoden ajan kanavan niemimaan kapean kannaksen poikki, jotta hänen laivastonsa välttäisi Athoksen myrskyisen kärjen, jossa persialaisten laivasto oli haaksirikkoutunut 492 eaa. Kanava valmistui ennen Kreikkaan hyökkäämistä 480 eaa. Sen jäljet näkyvät yhä maastossa Nea Rodan kylän lähellä." },
     ],
   },
+  /*
+   * NLD (Sisältökirjuri 27.9.2026). Avaimet TÄSMÄLLEEN kuin
+   * MAAKUNTIEN_LUONNEHDINNAT.NLD:ssä (15 aluetta: 12 maakuntaa +
+   * Karibian erityiskunnat Bonaire, Saba, St. Eustatius). Eri
+   * kulma/faktat kuin samojen alueiden lyhyt/pitka-teksteissä sekä
+   * js/packs/nahtavyysjutut.js:n amsterdam-kohteissa ja
+   * maa-kategoriat.js/maakartat.js:n NLD-sisällössä (esim. Amsterdamin
+   * asema/Anne Frank/Rijksmuseum, Delft/Leeuwenhoek, Kinderdijk,
+   * Afsluitdijk, stroopwafel/Gouda, tulppaanimania, Schokland,
+   * Barentsz, Zaanse Schans -sahamylly) — faktat tarkistettu
+   * en-Wikipediasta 27.9.2026.
+   */
+  NLD: {
+    Bonaire: [
+      { q: "Miksi Bonairella maksetaan dollareilla eikä eurolla?", a: "Bonaire on yksi Alankomaiden kolmesta Karibian erityiskunnasta yhdessä Saban ja St. Eustatiuksen kanssa, ja vuodesta 2011 niissä on käytetty Yhdysvaltain dollaria euron sijaan. Mantereen Alankomaissa maksetaan eurolla, mutta täällä raha kulkee samalla valuutalla kuin naapurisaarilla." },
+      { q: "Miksi sukeltajat pitävät Bonairea erityisen hyvänä?", a: "Koko saaren ympärillä oleva riutta kuuluu jo 1979 perustettuun merensuojelualueeseen, yhteen maailman vanhimmista. Rannalta pääsee sukeltamaan suoraan ilman venettä lähes missä tahansa saarella, minkä ansiosta Bonairea kutsutaan usein maailman rantasukelluspääkaupungiksi." },
+      { q: "Mistä Bonairen jatkuva tuuli on tehnyt saaren kuuluisan?", a: "Tasaiset passaatituulet puhaltavat Lac Bayn matalalla lahdella lähes ympäri vuoden, ja siitä on tullut yksi maailman parhaista windsurffauspaikoista. Lahti on isännöinyt useita nuorten maailmanmestaruuskilpailuja, ja nykyään rannalla on kymmeniä lautakouluja." },
+    ],
+    Drenthe: [
+      { q: "Mistä valtavat dolmenikivet oikein tulivat, kun Drenthessä ei ole kallioita?", a: "Kivet ovat jääkauden aikana mannerjään mukana Skandinaviasta kulkeutuneita siirtolohkareita, jotka jäivät maahan jään sulaessa. Kivikautiset ihmiset käyttivät juuri näitä paikalla valmiina lojuneita järkäleitä hautojensa rakennusaineena noin 3500 eaa." },
+      { q: "Miksi moottoripyöräfanit tuntevat Assenin nimeltä?", a: "TT Circuit Assenilla on ajettu huippuluokan moottoripyöräkilpailuja jo vuodesta 1925, mikä tekee siitä yhden maailman vanhimmista yhä käytössä olevista radoista. Rataa kutsutaan kunnioittavasti Nopeuden katedraaliksi, ja Alankomaiden TT kerää yhä kymmeniätuhansia katsojia." },
+      { q: "Miksi Drenthe on suosittu tähtien katselijoiden keskuudessa?", a: "Dwingelderveldin kansallispuisto sai 2013 Alankomaiden ensimmäisenä kansainvälisen tumman taivaan puiston statuksen, koska valosaastetta on siellä poikkeuksellisen vähän muuten niin tiheään asutussa maassa. Selkeinä öinä taivaalta erottaa Linnunradan paljain silmin." },
+    ],
+    "Zuid-Holland": [
+      { q: "Miksi Keukenhofin puutarha on auki vain muutaman viikon vuodessa?", a: "Keukenhof Lissessä on maailman suurin kukkapuisto, ja se avataan yleisölle vain maalis-toukokuun tulppaanikukinnan ajaksi, noin kahdeksaksi viikoksi. Puutarhassa on yli seitsemän miljoonaa sipulikasvia, jotka istutetaan joka syksy uudelleen seuraavaa kevättä varten." },
+      { q: "Miksi Haagissa ei istu Alankomaiden virallista pääkaupunkia, vaikka hallitus toimii siellä?", a: "Perustuslain mukaan pääkaupunki on aina Amsterdam, vaikka hallitus, parlamentti ja kuningashuone toimivat käytännössä Haagissa. Järjestely juontuu 1800-luvun alusta, jolloin Haagista tuli hallinnon keskus ilman että pääkaupunkiasema koskaan virallisesti siirtyi sinne." },
+      { q: "Miksi Rotterdamissa näkee niin paljon rohkeaa nykyarkkitehtuuria muihin hollantilaiskaupunkeihin verrattuna?", a: "Saksan pommitukset tuhosivat Rotterdamin keskustan lähes kokonaan toukokuussa 1940, joten kaupunki jouduttiin rakentamaan uudelleen tyhjästä. Vanhojen kanavatalojen sijaan syntyi tilaa kokeiluille, kuten Piet Blomin 1984 valmistuneille kuutiotaloille ja 2014 avatulle Markthallille." },
+    ],
+    Flevoland: [
+      { q: "Mikä 1600-luvun kauppalaiva rakennettiin uudelleen keskelle nykyistä kuivaa maata?", a: "Lelystadissa rakennettiin vuosina 1985–1995 täysimittainen kopio VOC-kauppalaiva Bataviasta, käyttäen mahdollisimman tarkasti aikakauden työkaluja ja menetelmiä. Laiva purjehti aikanaan juuri sillä merenpohjalla, joka on nyt kuivaa Flevolandin peltomaata." },
+      { q: "Mikä maailmanlaajuinen puutarhanäyttely järjestettiin Almeressa?", a: "Floriade-maailmannäyttely, jota Alankomaat isännöi noin kerran vuosikymmenessä, pidettiin Almeressa vuonna 2022. Näyttelyalueesta on tarkoitus kasvaa pysyvästi uusi asuinalue, jossa puutarhat ja rakennukset elävät rinnakkain vielä vuosikymmenten päästä." },
+    ],
+    Friesland: [
+      { q: "Miksi Leeuwarden oli erityisen ylpeä vuonna 2018?", a: "Leeuwarden toimi Euroopan kulttuuripääkaupunkina vuonna 2018, ensimmäisenä friisiläisenä kaupunkina koskaan. Vuoden aikana kaupunki ja koko maakunta täyttyivät sadoista tapahtumista, jotka nostivat esiin nimenomaan friisin kieltä ja paikallista kulttuuria." },
+      { q: "Miksi Leeuwardenin vanha kirkontorni kallistuu pahasti?", a: "Oldehove-torni alkoi painua vinoon jo rakennusaikana 1500-luvulla, kun se rakennettiin liian raskaaksi pehmeälle savimaalle. Rakentaminen keskeytettiin kesken, joten torni jäi vajaaksi ja vinoksi eikä sitä koskaan täydennetty alun perin suunnitellulla huipulla." },
+      { q: "Mikä friisiläinen laji tarkoittaa kanavan yli hyppäämistä pitkän sauvan varassa?", a: "Fierljeppen on perinteinen laji, jossa kilpailija juoksee vauhtia, tarttuu pitkään alumiinisauvaan ja kiipeää sitä pitkin ylös hypätessään kanavan yli. Nykyaikaiset ennätykset ylittävät jo 22 metriä, ja lajia harrastetaan kesäisin yhä kilpailuissa ympäri maakuntaa." },
+    ],
+    Gelderland: [
+      { q: "Miksi Arnhemin siltaa kutsutaan sillaksi liian kauas?", a: "Syyskuussa 1944 liittoutuneiden Market Garden -operaatio yritti vallata Rein-joen sillan Arnhemissa, mutta laskuvarjojoukot jäivät saarroksiin eivätkä maavoimat ehtineet apuun ajoissa. Silta nimettiin myöhemmin John Frost -sillaksi, ja se seisoo yhä samalla paikalla keskellä kaupunkia." },
+      { q: "Mitä eläintä Hoge Veluwen kansallispuistossa saattaa yllättäen kohdata pyörätiellä?", a: "Puistossa elää vapaana muun muassa punahirviä, kauriita ja villisikoja, ja ne liikkuvat usein aivan pyöräteiden tuntumassa. Alue aidattiin riista-aidalla jo 1900-luvun alussa yksityiseksi metsästysmaaksi, ennen kuin siitä tehtiin kansallispuisto vuonna 1935." },
+      { q: "Mikä kävelytapahtuma kokoaa Nijmegeniin joka heinäkuu kymmeniä tuhansia kävelijöitä?", a: "Nijmegenin nelipäivämarssit on järjestetty vuodesta 1909, ja se on maailman suurin usean päivän kävelytapahtuma. Osallistujat kävelevät 30–50 kilometriä päivässä neljänä peräkkäisenä päivänä, ja koko kaupunki juhlii heitä iltaisin katukarnevaalin tapaan." },
+    ],
+    Groningen: [
+      { q: "Miksi Groningenin keskustassa näkee tuskin autoja?", a: "Kaupunki jaettiin vuonna 1977 neljään lohkoon, joiden välillä autolla ei pääse suoraan ajamaan keskustan läpi vaan on kierrettävä kehätietä pitkin. Suunnitelma teki pyörästä käytännössä nopeimman kulkuvälineen, ja nykyään yli puolet kaupungin sisäisistä matkoista tehdään polkupyörällä." },
+      { q: "Mistä Groningenin lempinimi Martinistad tulee?", a: "Kaupungin maamerkki, 97-metrinen Martinitoren, on kohonnut Martinikerkin kupeessa jo 1400-luvulta lähtien. Tornin huipulle pääsee yhä kiipeämään satoja portaita, ja sieltä avautuu näkymä yli koko tasaisen maakunnan aina rannikolle asti." },
+      { q: "Mitä maanjäristysten jäljille tehdään Groningenissa nykyään?", a: "Vaikka kaasuntuotanto loppui vuonna 2023, vanhoja tiilitaloja vahvistetaan yhä tuhansittain järistysten varalta, ja monelle asukkaalle on maksettu korvauksia halkeilleista seinistä. Työ jatkuu koko 2020-luvun, sillä maaperä voi järistä vielä vuosia tuotannon loppumisen jälkeenkin." },
+    ],
+    Limburg: [
+      { q: "Mitä Pietersbergin kalkkikivivuoren sisällä on?", a: "Vuosisatojen kivilouhinta on kaivertanut Sint Pietersbergin sisään yli 20 000 käytävän labyrintin, jota kutsutaan joskus Alankomaiden ainoaksi vuoreksi. Toisen maailmansodan aikana käytäviin piilotettiin muun muassa Rembrandtin Yövartio pommituksilta, ja nykyään niissä käy oppaan johdolla turisteja ympäri vuoden." },
+      { q: "Miksi Maastrichtin karnevaali eroaa muun Alankomaiden juhlinnasta?", a: "Limburg kuuluu, toisin kuin suuri osa maasta, katolisen Etelä-Euroopan kulttuuripiiriin, ja siellä karnevaalia vietetään yhtä äänekkäästi kuin Reininmaalla Saksassa. Maastrichtin kaduilla kolme päivää kestävä juhla pysäyttää käytännössä koko kaupungin joka helmikuu." },
+      { q: "Miksi Valkenburgissa on Alankomaiden ainoa oikea linnanraunio kukkulalla?", a: "Koska Limburgin eteläosassa maasto todella kohoaa mäkiseksi, keskiajan ritarit saattoivat rakentaa linnansa kalkkikivikukkulan huipulle aivan kuten muualla Euroopassa. Muualla tasaisessa Alankomaissa linnat jouduttiin puolustamaan vesillä ja vallihaudoilla, koska kukkuloita ei yksinkertaisesti ollut." },
+    ],
+    Overijssel: [
+      { q: "Mistä Giethoorn sai kummallisen nimensä?", a: "Perimätiedon mukaan nimi juontaa 1170-luvun suurtulvasta, jonka jäljiltä maasta löytyi paljon vuohensarvia hukkuneilta eläimiltä – siitä geytenhorn, vuohensarvi, joka vähitellen muuntui Giethoorniksi. Nykyään kylässä liikutaan usein äänettömillä sähköveneillä, jotta kanavien rauha säilyy turistivilskeestä huolimatta." },
+      { q: "Mikä teki Deventeristä keskiajalla yllättävän tärkeän kaupungin?", a: "Deventer oli 1400-luvulla yksi Pohjois-Euroopan merkittävistä kirjapainokaupungeista ja Hansaliiton solmukohta IJssel-joen varrella. Vanha kauppiastalojen kaupunginosa on säilynyt lähes ennallaan, ja kaupungissa järjestetään yhä syksyisin yksi maan suurimmista kirjamarkkinoista." },
+    ],
+    "Noord-Brabant": [
+      { q: "Mistä Alankomaiden ainoa virallinen trappistiolut tulee?", a: "Koningshoevenin trappistiluostari lähellä Tilburgia on Alankomaiden ainoa luostari, joka saa kutsua oluttaan aidoksi trappistioluksi – koko maailmassa niitä valmistetaan vain reilussa kymmenessä luostarissa. Munkit ovat panneet olutta La Trappe -nimellä jo 1880-luvulta lähtien, ja tuotto ylläpitää yhä luostaria." },
+      { q: "Kuka kuuluisa maalari syntyi 's-Hertogenboschissa?", a: "Hieronymus Bosch, tunnettu oudoista ja painajaismaisista maalauksistaan kuten Maallisten ilojen puutarha, syntyi kaupungissa noin 1450 ja eli siellä suurimman osan elämäänsä. Kaupunki juhli hänen 500. kuolinvuottaan suurnäyttelyllä 2016, ja hänen nimeään kantava taidekeskus toimii siellä yhä." },
+    ],
+    "Noord-Holland": [
+      { q: "Miksi Zaanstreekin tuulimyllyt eivät pumpanneet pelkkää vettä?", a: "1600-luvun Zaanstreekissa satoja tuulimyllyjä käytettiin sahaamiseen, öljyn puristukseen, väriaineiden jauhamiseen ja paperin valmistukseen – aluetta pidetään maailman ensimmäisenä tuulivoimalla teollistuneena seutuna. Nykyään Zaanse Schansin kylässä pyörii yhä muutama toimiva mylly matkailijoiden ihasteltavaksi." },
+      { q: "Miksi Texelillä laiduntaa lampaita niin paljon?", a: "Saari on Länsi-Friisian saarista suurin ja tunnetaan omasta lammasrodustaan, texelinlampaasta, jonka villaa ja lihaa on jalostettu saarella vuosisatoja. Saaren dyynit ja hiekkarannat ovat samalla tärkeä pesimäalue kymmenille lintulajeille, joten lampaat ja linnut jakavat saman maiseman." },
+      { q: "Mikä maailman suurin meripatosulku avattiin äskettäin Noord-Hollannissa?", a: "IJmuidenin uusi merisulku valmistui vuonna 2022, ja se on maailman suurin meriveden sulku, 500 metriä pitkä ja 70 metriä leveä. Se korvasi vuonna 1929 valmistuneen vanhan sulun ja päästää entistä suurempia laivoja Amsterdamin satamaan." },
+    ],
+    Saba: [
+      { q: "Kuka rakensi Saban tien, jota insinöörit sanoivat mahdottomaksi?", a: "Hollantilaiset ja sveitsiläiset insinöörit totesivat 1900-luvun alussa, ettei jyrkkään tulivuoreen voi rakentaa autotietä. Paikallinen mies Josephus Lambert Hassell opetteli tierakennusta kirjekurssilla ja johti työn, joka valmistui 1958 – tietä kutsutaan yhä nimellä tie, jota ei voitu rakentaa." },
+      { q: "Miten Saballe pääsee, jos ei lennä saaren lyhyelle kiitoradalle?", a: "Vaihtoehto on saapua laivalla tai kalastajaveneellä Fort Bayn pieneen satamaan, joka on saaren ainoa kunnollinen laituri. Moni matkustaja valitsee silti lentokoneen, sillä meri voi olla saaren jyrkkien rantojen edustalla hyvin levoton, eikä laivayhteys kulje joka päivä." },
+    ],
+    "St. Eustatius": [
+      { q: "Mikä yhteisö kukoisti St. Eustatiuksella 1700-luvun kauppavuosina?", a: "Saarella toimi kukoistava juutalaisyhteisö, joka rakensi Honen Dalim -synagogan 1739 – yksi läntisen pallonpuoliskon vanhimmista synagogarakennuksista. Kauppakaupungin kulta-ajan loputtua yhteisö hajosi, ja synagogan rauniot seisovat yhä keskellä nykyistä Oranjestadia." },
+      { q: "Mitä St. Eustatiuksen taloudessa tapahtuu nykyään?", a: "Vapaasataman kulta-aika on kaukainen muisto, ja nykyään saaren tärkein tulonlähde on rannikon öljyn varastointi- ja siirtoterminaali. Rinnalle on hitaasti kasvanut ekomatkailu, sillä sammuneen tulivuoren De Quillin sademetsä ja koskemattomat sukelluspaikat houkuttelevat yhä enemmän kävijöitä." },
+    ],
+    Utrecht: [
+      { q: "Missä sijaitsee maailman suurin pyörien pysäköintitalo?", a: "Utrecht Centraalin vieressä avattiin 2019 kolmikerroksinen pyöräparkki, johon mahtuu yli 12 500 polkupyörää – se on maailman suurin. Se kertoo, kuinka keskeinen osa pyöräily on nykyisin Utrechtin arkea, ei vain matkailijoiden ihmettelemä erikoisuus." },
+      { q: "Mikä on Utrechtin kaksitasoinen katujärjestelmä?", a: "Vanhan kaupungin kanavien varsilla kulkee kaksi tasoa: yläkatu ihmisille ja alempi taso, werf, aivan vedenpinnan tasolla – keskiaikaiset kellarit toimivat aikanaan varastoina ja nykyään usein kahviloina ja ravintoloina. Järjestelmä on ainutlaatuinen koko Alankomaissa." },
+    ],
+    Zeeland: [
+      { q: "Miksi Oosterscheldekering ei ole kiinteä pato vaan liikkuvien porttien sarja?", a: "Insinöörit halusivat alun perin sulkea lahden kokonaan tulvien varalta, mutta simpukan- ja osterinviljelijät sekä ympäristönsuojelijat vastustivat, koska suolainen merivesi piti säilyttää. Ratkaisuksi rakennettiin 1986 valmistunut 9 kilometrin sulkuporttien sarja, joka pidetään auki ja suljetaan vain myrskyn uhatessa." },
+      { q: "Miksi osa Zeelandin asukkaista muistaa vuoden 1953 tulvan yhä hyvin tarkasti?", a: "Yön aikana 31. tammikuuta ja 1. helmikuuta 1953 myrskyvuoksi mursi patoja yllättäen pimeässä, eikä tuolloin ollut puhelimia tai sähköä varoittamaan monia kyliä. Selviytyjien tarinoita on tallennettu muun muassa Watersnoodmuseumiin, joka rakennettiin osittain samoihin betonikaisloihin, jotka lopulta pysäyttivät tulvan." },
+    ],
+  },
+  /*
+   * CHE (Sisältökirjuri 27.9.2026, maakunta-erä 3). Faktat eri kulmasta
+   * kuin js/packs/maakunnat-luonnehdinnat.js:n CHE-pitka-tekstit — ei
+   * toisteta samoja tarinoita. Lähteet: en-Wikipedia + WebSearch
+   * tarkistettu 27.9.2026 (mm. weforum.org, iwc.com, victorinox.com,
+   * artbasel.com, whc.unesco.org, admin.ch, swissinfo.ch).
+   */
+  CHE: {
+    Aargau: [
+      { q: "Miksi Aarau oli hetken koko Sveitsin pääkaupunki?", a: "Vuonna 1798 perustettu Helvetian tasavalta julisti Aaraun ensimmäiseksi pääkaupungikseen, ja kansalliskokous kokoontui kaupungintalolla huhtikuussa. Ilo jäi lyhyeksi: jo syyskuussa pääkaupunki siirrettiin Luzerniin, joten Aarau ehti olla koko maan keskus vain muutaman kuukauden." },
+      { q: "Mitä Villigenissä tutkitaan nykyään?", a: "Aaren rannalla sijaitseva Paul Scherrer -instituutti on Sveitsin suurin luonnontieteiden ja tekniikan tutkimuslaitos, jossa työskentelee yli 2300 ihmistä. Siellä tutkitaan hiukkasfysiikkaa, materiaaleja, energiaa ja terveyttä suurten hiukkaskiihdyttimien avulla." },
+    ],
+    "Appenzell Ausserrhoden": [
+      { q: "Milloin Ausserrhoden antoi naisille äänioikeuden?", a: "Ausserrhoden hyväksyi naisten äänioikeuden kantonin asioissa omalla äänestyksellään jo 1989, kaksi vuotta ennen kuin naapurikantoni Innerrhoden pakotettiin siihen liittovaltion tuomioistuimen päätöksellä. Ausserrhoden oli siis huomattavasti nopeampi." },
+      { q: "Mikä on Appenzellerin juuston salaisuus?", a: "Juuston kuorta hierotaan kypsytyksen aikana mausteliemellä, jossa on yli 25 yrttiä, juurta ja maustetta liuotettuna alkoholiin. Tarkka resepti on lukkojen takana, ja sen tuntee koko maailmassa vain kaksi ihmistä." },
+    ],
+    "Appenzell Innerrhoden": [
+      { q: "Missä Sveitsin ainoa pyörivä ravintola sijaitsee?", a: "Hoher Kastenin huipulla, 1795 metrin korkeudessa, ravintolan lattia pyörähtää kokonaan ympäri kerran tunnissa, ja näkymä avautuu Alpsteinilta aina Bodenjärvelle asti. Köysirata vie sinne Brülisausta alle kymmenessä minuutissa." },
+      { q: "Kuinka pieni Innerrhoden oikein on?", a: "Innerrhoden on Sveitsin väkiluvultaan pienin kantoni, ja koko sen asukasmäärä mahtuisi moneen kertaan yhteen suurkaupungin kaupunginosaan. Silti sillä on oma hallitus, oma Landsgemeinde ja täysi äänivalta liittovaltiossa siinä missä isommillakin kantoneilla." },
+    ],
+    "Basel-Landschaft": [
+      { q: "Miksi Baselbieteria kutsutaan kirsikkamaaksi?", a: "Kantonin lempeät rinteet ovat täynnä kirsikkapuita, ja monissa kylissä juhlitaan yhä syksyisin Chriesitagia, kirsikkapäivää. Osa sadosta tislataan kirsikkaviinaksi, jota kutsutaan kirschiksi, ja sitä poltetaan yhä pienillä maatiloilla." },
+      { q: "Kuinka moni Baselbieteri käy nykyään töissä Baselissa?", a: "Vaikka kantonit erosivat toisistaan jo 1833, arki on yhä tiiviisti kietoutunut yhteen: kymmenettuhannet Baselbieterit matkustavat päivittäin junalla tai autolla naapurikaupunkiin töihin, moni lääketeollisuuden pariin." },
+    ],
+    "Basel-Stadt": [
+      { q: "Miksi Art Basel on niin merkittävä tapahtuma?", a: "Kolme baselilaista galleristia perusti messun 1970, ja siitä kasvoi nykyaikaisen taiteen maailman tärkein messu – ensimmäisenä vuonna paikalla oli jo 90 galleriaa kymmenestä maasta. Nykyään Art Basel järjestää sisarmessuja myös Miamissa, Hongkongissa ja Pariisissa." },
+      { q: "Mikä on Sveitsin korkein rakennus?", a: "Lääkeyhtiö Rochen 205-metrinen torni Baselissa valmistui 2022 ja on nykyään koko maan korkein rakennus, jossa työskentelee noin 3200 ihmistä. Se seisoo aivan Reinin rannalla, kaupungin lääketeollisuuden ytimessä." },
+    ],
+    Bern: [
+      { q: "Miksi Bernin vaakunaeläin on karhu?", a: "Tarun mukaan kaupungin perustaja herttua Berthold V lupasi nimetä kaupungin ensimmäisen metsästämänsä eläimen mukaan 1191, ja se osui olemaan karhu. Kaupungin laidalla asuu nykyään eläville karhuille rakennettu puisto, jossa niitä pääsee katsomaan ilmaiseksi." },
+      { q: "Mitä Zytglogge-kellotorni näyttää joka tunti?", a: "Keskiaikainen astronominen kello käynnistää joka tunti pienen mekaanisen näytöksen: kukko kiekaisee, karhut marssivat ja hovinarri soittaa kelloja. Näytelmä on toistunut samalla koneistolla vuosisatoja, ja turistiryhmät pysähtyvät yhä katsomaan sitä joka tunti." },
+    ],
+    Fribourg: [
+      { q: "Miksi Gruyère-juusto on niin arvostettua?", a: "Gruyères-kylän ympäristössä juustoa on valmistettu samalla reseptillä satoja vuosia, ja nimi sai suojatun alkuperämerkinnän 2001. Juustoloissa käy nykyään paljon matkailijoita katsomassa, miten valtavat 35-kiloiset kiekot kypsyvät kellareissa." },
+      { q: "Mistä Sveitsin vanhin yhä toimiva suklaatehdas löytyy?", a: "Brocin kylässä toimiva Maison Cailler on Sveitsin vanhin yhä toimiva suklaatehdas, perustettu 1898 – merkki itse syntyi jo 1819 Vevey'ssä. Nykyään tehdas on suosittu vierailukohde, jossa pääsee haistelemaan kaakaopapuja ja maistelemaan tuoretta suklaata." },
+    ],
+    "Genève": [
+      { q: "Kuinka korkealle Geneven suihkulähde Jet d'Eau nousee?", a: "Järven rannalla sykkivä vesisuihku ampuu vettä jopa 140 metrin korkeuteen, ja se näkyy koko kaupunkiin ja usein myös lentokoneen ikkunasta. Suihkusta on tullut Geneven tunnusmerkki, vaikka se syntyi alun perin vahingossa 1880-luvulla tehtaan paineen purkamiseksi." },
+      { q: "Miksi Geneve on yhä kelloteollisuuden keskus?", a: "Kaupunkiin pakeni 1500-luvulla protestanttisia kultaseppiä, joille kirkko kielsi korujen tekemisen, ja he siirtyivät kellonvalmistukseen. Perinne elää yhä: monet maailman arvostetuimmista kellomerkeistä pitävät päämajaansa Genevessä tänäkin päivänä." },
+    ],
+    Glarus: [
+      { q: "Mikä on Schabziger, ja miksi se on vihreä?", a: "Glarusin oma juusto Schabziger saa vihreän värinsä mausteapila-nimisestä yrtistä, jota on lisätty juustoon jo vuosisatoja. Se on yksi Sveitsin vanhimmista tavaramerkeistä, ja sitä raastetaan yhä perunoiden ja pastan päälle." },
+      { q: "Miksi Wisconsinissa on kylä nimeltä New Glarus?", a: "Glarusin kantoni oli 1840-luvulla niin köyhä, että se rahoitti 131 asukkaan siirtolaisryhmän matkan Amerikkaan 1845. He perustivat New Glarusin, joka mainostaa yhä itseään 'pieneksi Sveitsiksi' ja juhlii sveitsiläistä perintöään juustoineen ja festivaaleineen." },
+    ],
+    "Graubünden": [
+      { q: "Miksi maailman talousjohtajat kokoontuvat juuri Davosiin?", a: "Saksalainen taloustieteilijä Klaus Schwab perusti Maailman talousfoorumin 1971 ja järjesti ensimmäisen kokouksen Davosin kongressikeskuksessa. Tammikuinen huippukokous on siitä lähtien tuonut lumiseen vuoristokaupunkiin vuosittain satoja johtajia ja päättäjiä ympäri maailmaa." },
+      { q: "Miksi Berninan rautatie on Unescon listalla?", a: "Albulan ja Berninan rataosuudet, jotka valmistuivat 1900-luvun alussa, ylittävät Alpit satojen siltojen ja tunnelien kautta ilman hammasratasta. Unesco lisäsi radan maailmanperintöön 2008 poikkeuksellisen rohkean vuoristoinsinööritaidon vuoksi." },
+    ],
+    Jura: [
+      { q: "Miksi osa vanhaa Juraa jäi lopulta Berniin?", a: "Kesäkuussa 1974 koko vanha Jura äänesti erosta Bernistä, mutta eteläiset ranskankieliset alueet halusivat pysyä Bernissä ja saivat äänestää siitä erikseen. Bernin Jura jäi näin Bernin kantoniin, ja raja, joka siitä syntyi, näkyy kartalla yhä tänäkin päivänä." },
+      { q: "Mikä on Marché-Concours Saignelégier'ssä?", a: "Joka elokuu tuhannet ihmiset kokoontuvat Saignelégier'hen katsomaan Franches-Montagnes-hevosia esittelyssä ja kilpailuissa – perinne on jatkunut vuodesta 1897. Se on nykyään yksi Sveitsin suurimmista hevostapahtumista, täynnä paraateja ja karkeloita." },
+    ],
+    Lucerne: [
+      { q: "Mikä on Luzernin Leijonapatsas?", a: "Kallioon veistetty kuoleva leijona muistaa 1792 Pariisissa kuolleita sveitsiläisiä palkkasotilaita, jotka puolustivat Ranskan kuningasta vallankumouksen aikana. Kirjailija Mark Twain kutsui sitä maailman surullisimmaksi ja koskettavimmaksi kiveksi, ja se vetää yhä matkailijoita." },
+      { q: "Voiko Luzernin järvellä yhä risteillä höyrylaivalla?", a: "Kyllä – Vierwaldstättersee'llä liikennöi useita 1900-luvun alun höyrylaivoja, jotka on huolellisesti kunnostettu ja pidetään käynnissä museolaivoina. Matkustajat pääsevät katsomaan alkuperäisiä höyrykoneita samalla kun laiva kiertää vuoristomaisemissa." },
+    ],
+    "Neuchâtel": [
+      { q: "Miksi kaksi kaupunkia rakennettiin kellotehtaita varten?", a: "La Chaux-de-Fonds ja Le Locle rakennettiin 1800-luvun alussa suoriksi ruutukaavan kaduiksi, joissa asunnot ja kellopajat vuorottelevat samassa rakennuksessa. Unesco liitti kaupunkiparin maailmanperintöön 2009 ainutlaatuisena esimerkkinä yhden teollisuuden ympärille suunnitellusta kaupungista." },
+      { q: "Mitä Neuchâtelin vaaleanpunainen viini on?", a: "Oeil-de-Perdrix, 'peltopyyn silmä', on kantonin oma vaalea rosee, joka puristetaan Pinot Noir -rypäleistä hyvin lyhyellä kuoriutumisajalla. Se on säilynyt suosittuna paikallisena erikoisuutena, vaikka moni muu alue tekee nykyään samantyylistä viiniä." },
+    ],
+    Nidwalden: [
+      { q: "Mitä Bürgenstockilla tapahtui kesällä 2024?", a: "Ylellinen Bürgenstockin hotelli vuoren laella isännöi kesäkuussa 2024 kansainvälistä Ukrainan rauhankokousta, johon osallistui edustajia yli 90 maasta. Vuosikymmenten ajan julkkiksia, kuten Audrey Hepburnia, majoittanut hotelli nousi hetkeksi maailmanpolitiikan keskiöön." },
+      { q: "Miksi Nidwalden houkuttelee nykyään niin paljon yrityksiä?", a: "Pieni kantoni kilpailee Zugin tapaan alhaisilla veroprosenteilla, ja monet kansainväliset yhtiöt ovat siirtäneet päätoimipaikkansa sinne. Samaan aikaan Stanserhornin avokattoinen köysirata houkuttelee ihan toisenlaisia vierailijoita – matkailijoita, ei veroneuvojia." },
+    ],
+    Obwalden: [
+      { q: "Miksi Obwaldenin verotus kohautti 2006?", a: "Kantoni otti käyttöön verojärjestelmän, jossa suurituloiset maksoivat suhteessa vähemmän kuin pienituloiset, houkutellakseen varakkaita muuttajia. Liittovaltion tuomioistuin kumosi mallin puolentoista vuoden kuluttua perustuslain vastaisena, ja tilalle tuli tasaverokanta, jonka äänestäjät hyväksyivät ylivoimaisesti." },
+      { q: "Käykö Flüeli-Ranftissa yhä pyhiinvaeltajia?", a: "Kyllä – Sveitsin suojeluspyhimyksen Niklaus von Flüen erakkomaja on säilynyt Ranftin rotkossa, ja paikalla käy edelleen tuhansia pyhiinvaeltajia ja matkailijoita vuosittain. Hän vetäytyi sinne 1467 jättäen perheensä, ja tarina kiehtoo yhä sveitsiläisiä." },
+    ],
+    Schaffhausen: [
+      { q: "Mikä maailmankuulu kellomerkki syntyi Schaffhausenissa?", a: "Amerikkalainen kelloseppä Florentine Ariosto Jones perusti IWC:n kaupunkiin 1868 yhdistääkseen amerikkalaisen sarjatuotannon sveitsiläiseen käsityöhön, ja Reinin vesivoima pyöritti tehtaan koneita. Merkki tekee yhä lentäjänkelloja samassa kaupungissa." },
+      { q: "Kuka soittaa Munotin linnoituksen kelloa joka ilta?", a: "Munotin vartija asuu yhä linnoituksen tornissa ja soittaa käsin kelloa joka ilta kello yhdeksältä, aivan kuten vuodesta 1589 lähtien. Perinteen mukaan soitto muistuttaa kaupunkilaisesta, joka hukkui myrskyssä ristiretkeltä palatessaan." },
+    ],
+    Schwyz: [
+      { q: "Mistä linkkuveitsi Victorinox on kotoisin?", a: "Kelloseppä Karl Elsener perusti pienen veistämön Ibachin kylään 1884, ja nimi Victorinox syntyi hänen äitinsä Victorian ja ruostumattoman teräksen sanan inox yhdistelmästä. Yhtiö on valmistanut jo yli 500 miljoonaa sveitsiläistä linkkuveistä ja toimii yhä samassa kylässä." },
+      { q: "Miksi Einsiedelniin virtaa niin paljon pyhiinvaeltajia?", a: "Einsiedelnin luostarikirkossa säilytetään mustaa Madonna-patsasta, jonka ympärille pyhiinvaellusperinne on kasvanut jo keskiajalta lähtien. Kirkolla käy nykyään satoja tuhansia kävijöitä vuosittain, osa heistä yhä perinteisiä pyhiinvaellusreittejä kävellen." },
+    ],
+    Solothurn: [
+      { q: "Mikä on Solothurnin elokuvajuhla?", a: "Solothurnin Filmtage on järjestetty vuodesta 1966, ja tammikuisin kaupunki täyttyy sveitsiläisen elokuvan tekijöistä ja yleisöstä – vuosittain paikalla on yli 60 000 kävijää. Se on maan tärkein näyteikkuna kotimaiselle elokuvalle." },
+      { q: "Keitä olivat Solothurnin suojeluspyhimykset?", a: "Legendan mukaan roomalaiset legioonalaiset Urs ja Viktor teloitettiin Solothurnissa 200-luvun lopulla, koska he kieltäytyivät luopumasta kristillisestä uskostaan. Kaupungin päätuomiokirkko on nimetty heidän mukaansa, ja tarina elää yhä kaupungin nimissä ja vaakunassa." },
+    ],
+    "Sankt Gallen": [
+      { q: "Mikä on Olma, ja miksi se on niin suosittu?", a: "Olma-messu on järjestetty vuodesta 1943, ja lokakuussa se täyttää St. Gallenin maatalouden, ruoan ja perinteiden juhlalla – suosituin yleisötapahtuma koko Sveitsissä. Yksi katsotuimmista ohjelmanumeroista on vuodesta 1997 järjestetty possujen juoksukilpailu." },
+      { q: "Miksi St. Gallenin yliopisto on niin arvostettu?", a: "HSG-yliopisto on Euroopan johtavia kauppakorkeakouluja, ja sen tutkintopaikoista kilpaillaan kovasti ympäri maailmaa. Kaupungin vanha tekstiiliteollisuuden osaaminen ja kansainvälinen kauppahenki elävät nykyään yliopiston kautta uudessa muodossa." },
+    ],
+    Thurgau: [
+      { q: "Miksi Thurgauta kutsutaan siiderin Intiaksi?", a: "Kantonin lempinimi 'Mostindien' viittaa sen valtaviin omena- ja päärynätarhoihin, joiden sato puristetaan syksyisin siideriksi. Peltojen ja järven väliin jäävät kylät elävät yhä hedelmänviljelystä samaan tapaan kuin sata vuotta sitten." },
+      { q: "Mikä on Kartause Ittingen nykyään?", a: "Entinen kartusiaaniluostari Warthin kylän liepeillä toimii nykyään kulttuurikeskuksena, jossa on taidemuseo, hotelli ja yhä toimiva maatila viinitarhoineen. Munkkien vaikenemisen sijaan pihalla kuuluu nykyään konserttien ja näyttelyjen ääntä." },
+    ],
+    Ticino: [
+      { q: "Miksi Locarnon elokuvajuhlat kokoontuvat torille?", a: "Locarnon festivaali on järjestetty vuodesta 1946, ja sen suurin näyttämö on Piazza Grande, jonne mahtuu iltaisin kahdeksantuhatta katsojaa avotaivaan alle. Torinäytännöt tulivat mukaan ohjelmaan 1971, ja niistä tuli nopeasti festivaalin tunnusmerkki." },
+      { q: "Mikä on grotto, jossa Ticinossa käydään syömässä?", a: "Grotto on perinteinen, usein kallioon tai metsän siimekseen rakennettu ravintola, jossa tarjoillaan paikallista polentaa, kastanjoita ja salamia kivipöydillä. Monet grotot ovat toimineet samoissa paikoissa sukupolvien ajan, ja ne ovat yhä suosittuja kesäisin." },
+    ],
+    Uri: [
+      { q: "Näytelläänkö Wilhelm Telliä yhä Altdorfissa?", a: "Kyllä – Tellspiele-näytelmäseura on esittänyt Schillerin näytelmää Wilhelm Tellistä Altdorfissa vuodesta 1899, yleensä muutaman vuoden välein. Se on yksi Sveitsin vanhimmista harrastajateattereista, ja Tellin patsas seisoo yhä kaupungin torilla." },
+      { q: "Miksi vanhan Gotthard-tunnelin rakentaminen vei niin monta henkeä?", a: "Työ alkoi Urin puolella Göschenenissä 1872, ja louhijat kärsivät malariasta, pölykeuhkosta ja onnettomuuksista vuoristoisissa oloissa. Satoja työmiehiä kuoli ennen kuin tunneli lopulta murtui läpi 1880, kaksi vuotta ennen junaliikenteen alkua." },
+    ],
+    Valais: [
+      { q: "Mikä on bisse eli suoni?", a: "Bisset ovat 1200-luvulta lähtien rakennettuja avokanavia, jotka johtavat sulavesiä vuorenrinteitä pitkin kuiviin laaksoihin viinitarhoja ja niittyjä varten. Osa niistä on yhä käytössä kastelussa, ja niiden vierellä kulkevat polut ovat nykyään suosittuja vaellusreittejä." },
+      { q: "Mistä Mundin kylän kallis mauste tulee?", a: "Mund on Sveitsin ainoa paikka, jossa kasvatetaan sahramia, ja perinne juontaa 1300-luvulle. Kukat poimitaan käsin loka-marraskuussa, ja koko kylän vuotuinen sato on vain muutaman kilon luokkaa." },
+    ],
+    Vaud: [
+      { q: "Miksi Montreux'n rannalla seisoo patsas Freddie Mercurysta?", a: "Montreux'n jazzfestivaali on järjestetty vuodesta 1967, ja Queen-yhtye rakastui kaupunkiin niin paljon, että se perusti sinne oman äänitysstudionsa. Laulaja Freddie Mercuryn muistopatsas seisoo yhä järven rannalla, ja fanit kokoontuvat sinne edelleen." },
+      { q: "Missä Charlie Chaplin vietti elämänsä viimeiset vuodet?", a: "Chaplin muutti perheineen Corsier-sur-Vevey'hin 1953 ja asui siellä Manoir de Ban -kartanossa kuolemaansa 1977 asti. Talo on nykyään Chaplin's World -museo, jossa vahanuket ja hänen oma studionsa esittelevät hänen elämäänsä." },
+    ],
+    Zug: [
+      { q: "Mikä sveitsiläinen kakku on nimetty Zugin mukaan?", a: "Zuger Kirschtorte on mantelipohjainen, kirsikkaviinalla maustettu kerroskakku, joka syntyi kaupungissa 1915 ja on nykyään suojattu alkuperämerkintä. Se on yhä yksi Sveitsin tunnetuimmista leivonnaisista, ja kirsikkapuita kasvaa kantonissa runsaasti." },
+      { q: "Miksi maailman suurimmat raaka-ainekauppiaat pitävät toimistoaan Zugissa?", a: "Pieni Zug on yksi maailman johtavista raaka-ainekaupan keskuksista, ja esimerkiksi jättiläisyhtiö Glencore on pitänyt päämajaansa kantonissa yli viisikymmentä vuotta. Alhaiset verot ja keskeinen sijainti ovat houkutelleet satoja kaupankäyntiyhtiöitä pieneen kaupunkiin." },
+    ],
+    "Zürich": [
+      { q: "Mikä on Street Parade?", a: "Matematiikan opiskelija Marek Krynski perusti kulkueen 1992 parintuhannen ihmisen tapahtumana, ja nykyään elokuinen Street Parade kerää sadattuhannet tanssijat Zürichin kaduille – yksi maailman suurimmista technojuhlista. Kaupunki muuttuu yhdeksi valtavaksi ulkoilmabileeksi." },
+      { q: "Miksi jalkapallon maailmanjärjestö FIFA pitää päämajaansa Zürichissä?", a: "FIFA perustettiin Pariisissa 1904, mutta se siirsi päämajansa Zürichiin jo 1930-luvulla, ja siellä se toimii yhä. Kaupungin vakaa pankki- ja liike-elämä sekä keskeinen sijainti Euroopassa ovat pitäneet monet kansainväliset järjestöt siellä vuosikymmenten ajan." },
+    ],
+  },
 };
