@@ -223,5 +223,32 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(double.IsNaN(Lukijaaani.JsParseFloat("-")));
             Oleta.Tosi(double.IsNegativeInfinity(Lukijaaani.JsParseFloat(" -Infinityx")));
         }
+    
+        // Luennan palat (omistaja 27.9.2026): otsikko kappaleen alkuun, kappale = pala, ei katkaisua.
+        [Testi] static void LuennanPalatOtsikkoKappaleeseen()
+        {
+            var palat = Lukijaaani.LuennanPalat(new[] { "Eiffel-torni", "Torni valmistui 1889. Se on rautaa.", "  ", "Toinen kappale." });
+            Oleta.Sama(2, palat.Count);
+            Oleta.Sama("Eiffel-torni. Torni valmistui 1889. Se on rautaa.", palat[0]);
+            Oleta.Sama("Toinen kappale.", palat[1]);
+            // Peräkkäiset otsikot samaan kohtaan; hännän otsikko jää lukematta (web keraaKohdat).
+            palat = Lukijaaani.LuennanPalat(new[] { "Osasto", "Alaotsikko", "Leipä.", "Orpo otsikko" });
+            Oleta.Sama(1, palat.Count);
+            Oleta.Sama("Osasto. Alaotsikko. Leipä.", palat[0]);
+        }
+
+        [Testi] static void LuennanPalatPitkaKappaleVirkerajalta()
+        {
+            string virke = new string('a', 30) + ".";
+            string kappale = string.Join(" ", Enumerable.Repeat(virke, 10)); // 319 mrk
+            var palat = Lukijaaani.LuennanPalat(new[] { kappale }, 100);
+            Oleta.Sama(4, palat.Count);
+            foreach (var p in palat) Oleta.Tosi(p.Length <= 100, p.Length.ToString());
+            // Mitään ei pudoteta: palat yhdessä = kappale.
+            Oleta.Sama(kappale, string.Join(" ", palat));
+            // Oletuskatolla tavallinen kappale on yksi pala, ja katto mahtuu workerin rajaan.
+            Oleta.Sama(1, Lukijaaani.LuennanPalat(new[] { kappale }).Count);
+            Oleta.Tosi(Lukijaaani.PalaKatto < 2500);
+        }
     }
 }

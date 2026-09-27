@@ -968,6 +968,26 @@
     background-color: #f5f0e2;
 }
 
+/* Kaiutinvivun tila (web PR #3366, omistaja 27.9.2026): päällä kultainen pohja, muste ja ääniaallot; pois paperilla,
+   kuvake himmeä (0,55) ja kaiuttimen yli vinoviiva. Nappirivin sääntö yllä voittaisi mk-valittu-säännön, siksi sama
+   valitsin tässä. */
+.mk-chat__nappirivi > .mk-chat__kaiutin.mk-valittu {
+    background-color: #e3ad45;
+    border-color: #7a5514;
+    color: #211d18;
+}
+
+.mk-chat__kaiutin > .mk-chat__kaiutin-paalla,
+.mk-chat__kaiutin > .mk-chat__kaiutin-pois {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+}
+
+.mk-chat__kaiutin > .mk-chat__kaiutin-pois {
+    opacity: 0.55;
+}
+
 .mk-chat__mikki {
     flex-grow: 2;
     flex-direction: row;

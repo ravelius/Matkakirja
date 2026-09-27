@@ -64,6 +64,12 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
+
+        /// <summary>
+        /// Jokainen näkyvä avaus (valon id; myös toinen avaus ja lisäkaupungin kortti), toisin kuin
+        /// PeliOhjain.NostoLoytyi, joka tulee vain ensimmäisestä löydöstä. Mallinseppä 27.9.2026.
+        /// </summary>
+        public static event Action<string> Avattu;
         /// <summary>Löydös 132/150: noston kuva kokoruudulla (sumennuksen taso Kokoruutu).</summary>
         public bool KuvaKokoruudulla => suurennos != null && suurennos.Auki && suurennos.Kokoruutu;
 
@@ -225,7 +231,11 @@ namespace Matkakirja.Natiivi
         /// Elävä kartta (Pelikoodari, build 18): kortti on näkyvissä → löytö kirjataan ja tallennetaan
         /// (PeliOhjain.NostoAvattu; toinen avaus ei tee mitään). Maakunnan herätys ja laskurit tulevat tapahtumista.
         /// </summary>
-        static void KirjaaLoyto(string valoId) => PeliOhjain.Instanssi?.NostoAvattu(valoId);
+        static void KirjaaLoyto(string valoId)
+        {
+            PeliOhjain.Instanssi?.NostoAvattu(valoId);
+            try { Avattu?.Invoke(valoId); } catch (Exception e) { Debug.LogException(e); }
+        }
 
         void MittaaAvaus(string valoId, int v)
         {

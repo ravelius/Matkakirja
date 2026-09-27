@@ -161,6 +161,12 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
+/* Löydös 178: aukio ja luonto rakennusta keveämpinä (web .maakartta-piste.kohde-kevyt .kohde-piirros-kuva). */
+.mk-kohdekartta__piirros--kevyt > .mk-kohdekartta__piirroskuva {
+    scale: 0.72 0.72;
+    opacity: 0.78;
+}
+
 /* Kyltti vain valitulla (web .kohde-kyltti display none, .valittu block). */
 .mk-kohdekartta__kyltti {
     display: none;

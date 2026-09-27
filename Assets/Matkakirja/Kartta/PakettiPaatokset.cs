@@ -191,6 +191,29 @@ namespace Matkakirja
             return s;
         }
 
+        /// <summary>
+        /// SISÄLTÖ VAIHTUI (löydös 170, Fable 26.9.2026): uuden version polut, joiden sisältö eroaa käytössä olleesta
+        /// (uusi polku tai eri sha256), sekä poistuneet polut. Järjestys: uuden hakemiston järjestys, poistuneet perään.
+        /// </summary>
+        public static List<string> Muuttuneet(IDictionary<string, string> vanha, IEnumerable<Rivi> uusi)
+        {
+            var ulos = new List<string>();
+            var uudet = new HashSet<string>();
+            foreach (var r in uusi)
+            {
+                uudet.Add(r.Polku);
+                if (vanha == null || !vanha.TryGetValue(r.Polku, out var sha) || sha != r.Sha256) ulos.Add(r.Polku);
+            }
+            if (vanha != null) foreach (var p in vanha.Keys) if (!uudet.Contains(p)) ulos.Add(p);
+            return ulos;
+        }
+
+        /// <summary>
+        /// Otetaanko juuri valmistunut versio käyttöön kesken istunnon: vain uudempi kuin istunnon versio (palautus eli
+        /// vanhempi kohde odottaa seuraavaa käynnistystä, jotta kesken olevan pelin sisältö ei hyppää taaksepäin).
+        /// </summary>
+        public static bool VaihdaKeskenIstunnon(int valmis, int istunnon) => valmis > 0 && valmis > istunnon;
+
         /// <summary>Varaston tiedostot (sha256), joihin yksikään säilytettävä hakemisto ei viittaa.</summary>
         public static List<string> Orvot(IEnumerable<string> varasto, IEnumerable<IEnumerable<Rivi>> sailytettavat)
         {

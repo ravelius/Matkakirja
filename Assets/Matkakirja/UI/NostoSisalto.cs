@@ -137,6 +137,18 @@ namespace Matkakirja.Natiivi
         static readonly List<Action> mediaOdottajat = new List<Action>();
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
+
+        /// <summary>
+        /// Löydös 170: sisältöpaketti vaihtui kesken istunnon (PakettiPaivitys.SisaltoVaihtui) → kokoelmat, moduulit, karttavalot ja
+        /// media hylätään; seuraava haku lukee uuden version (Sisalto.HaePaketista). Avoin kortti päivittyy seuraavalla avauksella.
+        /// </summary>
+        public static void Hylkaa()
+        {
+            kokoelmat.Clear();
+            moduulit.Clear();
+            valot = null;
+            if (!mediaHaussa) media = null;
+        }
         static string T(Dictionary<string, object> o, string k) => MiniJson.Teksti(o, k);
 
         // --- esilataus (löydös 104) ---------------------------------------------------------
@@ -282,8 +294,9 @@ namespace Matkakirja.Natiivi
                     if (at > 0) { iso = tunnus.Substring(at + 1); tunnus = tunnus.Substring(0, at); }
                     if (iso == null)
                     {
-                        yield return ValojenMaat();
-                        valot.TryGetValue("kohde:" + tunnus, out var valo);
+                        Dictionary<string, Valo> vt = null;
+                        yield return ValojenMaat(tulos: x => vt = x);
+                        vt.TryGetValue("kohde:" + tunnus, out var valo);
                         iso = valo?.Maa;
                         // Arktiksen napakohteella ei ole maata (kokoelma maat): moduuli maastokohteet-ark
                         // tunnuksen etuliitteestä ("ark-pohjoisnapa").
@@ -340,8 +353,9 @@ namespace Matkakirja.Natiivi
                     n = Takynosto(tunnus, kaupunki, iso ?? UiSisalto.Kaupunki(kaupunki)?.Maa, d, luokat);
                     if (n.KohdeId != null)
                     {
-                        yield return ValojenMaat();
-                        if (valot.TryGetValue("kohde:" + n.KohdeId, out var valo))
+                        Dictionary<string, Valo> vt = null;
+                        yield return ValojenMaat(tulos: x => vt = x);
+                        if (vt.TryGetValue("kohde:" + n.KohdeId, out var valo))
                         {
                             n.KohdeNimi = valo.Nimi;
                             n.KohdeIso = valo.Maa ?? n.Iso;
@@ -477,13 +491,17 @@ namespace Matkakirja.Natiivi
 
         static IEnumerator Alkio(string kokoelma, string id, Action<Dictionary<string, object>, string> valmis)
         {
-            yield return LataaKokoelma(kokoelma);
-            kokoelmat[kokoelma].TryGetValue(id, out var d);
+            Dictionary<string, Dictionary<string, object>> taulu = null;
+            yield return LataaKokoelma(kokoelma, tulos: x => taulu = x);
+            taulu.TryGetValue(id, out var d);
             valmis(d, d != null ? T(d, "$maa") : null);
         }
 
-        /// <summary>Kokoelma kerran muistiin (id → data; maa talteen kenttään $maa).</summary>
-        static IEnumerator LataaKokoelma(string kokoelma, Taso taso = Taso.Nakyva)
+        /// <summary>
+        /// Kokoelma kerran muistiin (id → data; maa talteen kenttään $maa). tulos saa taulun suoraan (löydös 170: Hylkaa voi
+        /// tyhjentää muistin kesken korutiinin).
+        /// </summary>
+        static IEnumerator LataaKokoelma(string kokoelma, Taso taso = Taso.Nakyva, Action<Dictionary<string, Dictionary<string, object>>> tulos = null)
         {
             if (!kokoelmat.TryGetValue(kokoelma, out var taulu))
             {
@@ -514,11 +532,16 @@ namespace Matkakirja.Natiivi
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui nostot: " + kokoelma + ": " + e.Message); }
                 kokoelmat[kokoelma] = taulu;
             }
+            tulos?.Invoke(taulu);
         }
 
-        static IEnumerator ValojenMaat(Taso taso = Taso.Nakyva)
+        /// <summary>
+        /// Karttavalot kerran muistiin. tulos saa ladatun taulun suoraan: löydös 170:n <see cref="Hylkaa"/> voi nollata
+        /// staattisen taulun kesken korutiinin (sisältö vaihtui), joten kutsuja ei lue sitä uudelleen yield-rivin jälkeen.
+        /// </summary>
+        static IEnumerator ValojenMaat(Taso taso = Taso.Nakyva, Action<Dictionary<string, Valo>> tulos = null)
         {
-            if (valot != null) yield break;
+            if (valot != null) { tulos?.Invoke(valot); yield break; }
             string teksti = null;
             yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, true, taso);
             var m = new Dictionary<string, Valo>();
@@ -534,6 +557,7 @@ namespace Matkakirja.Natiivi
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui nostot: karttavalot: " + e.Message); }
             valot = m;
+            tulos?.Invoke(m);
         }
 
         /// <summary>
@@ -551,8 +575,9 @@ namespace Matkakirja.Natiivi
                 bool kaupunki = iso != null;
                 if (iso == null)
                 {
-                    yield return ValojenMaat();
-                    if (valot.TryGetValue(valoId, out var valo)) { iso = valo.Maa; kaupunki = valo.Aihe == "kaupungit"; }
+                    Dictionary<string, Valo> vt = null;
+                    yield return ValojenMaat(tulos: x => vt = x);
+                    if (vt.TryGetValue(valoId, out var valo)) { iso = valo.Maa; kaupunki = valo.Aihe == "kaupungit"; }
                 }
                 int tilde = tunnus.IndexOf('~');
                 if (tilde > 0) tunnus = tunnus.Substring(0, tilde);
@@ -680,8 +705,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Maakunnan ("ISO:tunnus") salaisuus-noston id ja nimi kokoelmasta maakuntasalaisuudet, tai null.</summary>
         public static IEnumerator MaakunnanSalaisuus(string maakunta, Action<string, string> valmis)
         {
-            yield return LataaKokoelma("maakuntasalaisuudet");
-            foreach (var p in kokoelmat["maakuntasalaisuudet"])
+            Dictionary<string, Dictionary<string, object>> taulu = null;
+            yield return LataaKokoelma("maakuntasalaisuudet", tulos: x => taulu = x);
+            foreach (var p in taulu)
                 if (T(p.Value, "maakunta") == maakunta) { valmis(p.Key, T(p.Value, "nimi")); yield break; }
             valmis(null, null);
         }
@@ -693,10 +719,11 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static IEnumerator MaakunnanPiste(string maakunta, Action<double, double, bool> valmis)
         {
-            yield return ValojenMaat();
+            Dictionary<string, Valo> vt = null;
+            yield return ValojenMaat(tulos: x => vt = x);
             var lat = new List<double>();
             var lon = new List<double>();
-            foreach (var v in valot.Values)
+            foreach (var v in vt.Values)
                 if (v.Maakunta == maakunta && !double.IsNaN(v.Lat) && !double.IsNaN(v.Lon)) { lat.Add(v.Lat); lon.Add(v.Lon); }
             if (lat.Count == 0) { valmis(0, 0, false); yield break; }
             lat.Sort();

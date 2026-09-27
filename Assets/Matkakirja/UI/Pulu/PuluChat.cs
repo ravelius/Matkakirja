@@ -82,9 +82,14 @@ namespace Matkakirja.Natiivi
         readonly ScrollView virta;
         readonly TextField kentta;
         readonly Button kaiutin, palaa;
+        readonly VisualElement kaiutinPaalla, kaiutinPois;
+        /// <summary>Web POLLO_KAIUTIN_IKONI pois-tilassa: kaiuttimen runko ja vinoviiva (.pollo-kaiutin-vino), ei aaltoja.</summary>
+        const string KaiutinPoisIkoni = "<path d=\"M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z\"/><path d=\"M3.4 3.4l17.2 17.2\"/>";
         readonly List<(string Rooli, string Teksti)> historia = new List<(string, string)>();
         readonly System.Random arpa = new System.Random();
         bool tervehditty, kysyy;
+        /// <summary>Löydös 177: Uusi peli kasvattaa; kesken ollut vastaus ei kirjoitu uuden pelin chattiin.</summary>
+        int sukupolvi;
         string viimeMietinta;
         int ehdotusPoletti, kuvaPoletti;
         Button naytaKuplat;
@@ -138,7 +143,10 @@ namespace Matkakirja.Natiivi
             var nappirivi = Rakenne.El("mk-chat__nappirivi", syote, PickingMode.Ignore);
             var kirjoita = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__kirjoita", () => VaihdaTilaan(false, kohdista: true), nappirivi, NappaimistoIkoni);
             kirjoita.tooltip = "Kirjoita kysymys";
-            kaiutin = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__kaiutin", VaihdaAani, nappirivi, Ikonit.Viiva["kaiutin"]);
+            // Kaiutinvivun tila näkyy kuvakkeessa (web PR #3366, omistaja 27.9.): päällä aallot, pois vinoviiva.
+            kaiutin = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__kaiutin", VaihdaAani, nappirivi);
+            kaiutinPaalla = Rakenne.Ikoni(Ikonit.Viiva["kaiutin"], "mk-chat__kaiutin-paalla", kaiutin);
+            kaiutinPois = Rakenne.Ikoni(KaiutinPoisIkoni, "mk-chat__kaiutin-pois", kaiutin);
             kaiutin.tooltip = "Lue vastaukset ääneen";
             mikki = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__mikki", VaihdaSanelu, nappirivi);
             mikkiIkoni = Rakenne.Ikoni(MikkiIkoni, "mk-ikoni", mikki);
@@ -311,6 +319,25 @@ namespace Matkakirja.Natiivi
             Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");
             kentta.Blur();
+        }
+
+        /// <summary>
+        /// Löydös 177 (Uusi peli, PeliOhjain.MuistitTyhjennetty): keskustelu, historia ja tervehdys alusta kuten webin
+        /// uudelleenlatauksessa; kesken olevat ehdotus- ja kuvahaut sekä vastaus hylätään.
+        /// </summary>
+        public void Nollaa()
+        {
+            Sulje();
+            sukupolvi++;
+            ehdotusPoletti++;
+            kuvaPoletti++;
+            historia.Clear();
+            linssiKysytyt.Clear();
+            virta.Clear();
+            kentta.SetValueWithoutNotify("");
+            tervehditty = false;
+            viimeMietinta = null;
+            Alku(true);
         }
 
         void Tervehdi()
@@ -688,6 +715,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Pyyda(string kysymys, bool jatko, bool paikkakysymys, bool joLennetty)
         {
             kysyy = true;
+            int suku = sukupolvi;
             var odotus = Viesti("mk-chat__odottaa", Mietinta(true));
             var pitka = odotus.schedule.Execute(() => odotus.text = Pitkat[arpa.Next(Pitkat.Length)]).StartingIn(6000);
             // Löydös 66: pulu salamana ulos odottamaan (web aloitaLivianOdotus → chatDashOut), ei "hetkinen"-hymyä.
@@ -713,6 +741,7 @@ namespace Matkakirja.Natiivi
             odotus.RemoveFromHierarchy();
             osittainen?.RemoveFromHierarchy();
             kysyy = false;
+            if (suku != sukupolvi) { pulu.ChatOdotusLoppui(); yield break; } // Uusi peli välissä (löydös 177)
             // Virhe tai katkos: pulu vain takaisin; muuten (ei striimiä, koko vastaus kerralla) sama paluuketju.
             if (t.Katkesi || t.Virhe != null) pulu.ChatOdotusLoppui();
             else pulu.ChatVastausAlkoi();
@@ -1268,6 +1297,12 @@ namespace Matkakirja.Natiivi
             AsetaSaneluTila(null);
         }
 
-        void PaivitaKaiutin() => kaiutin.EnableInClassList("mk-valittu", AaniPaalla);
+        void PaivitaKaiutin()
+        {
+            bool paalla = AaniPaalla;
+            kaiutin.EnableInClassList("mk-valittu", paalla);
+            kaiutinPaalla.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
+            kaiutinPois.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
+        }
     }
 }

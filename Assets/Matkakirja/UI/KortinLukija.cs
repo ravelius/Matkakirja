@@ -42,8 +42,10 @@ namespace Matkakirja.Natiivi
             if (otsikko != null) this.otsikko = otsikko;
             Pysayta();
             if (ajossa != null && ajossa != this) ajossa.Pysayta();
-            palat = (tekstit ?? Enumerable.Empty<string>()).Where(t => !string.IsNullOrWhiteSpace(t)).Select(t => t.Trim()).ToList();
-            Nappi.style.display = palat.Sum(p => p.Length) >= Vahimmais ? DisplayStyle.Flex : DisplayStyle.None;
+            var raaka = (tekstit ?? Enumerable.Empty<string>()).Where(t => !string.IsNullOrWhiteSpace(t)).Select(t => t.Trim()).ToList();
+            // Lukijan putkitus (Pelikoodari 27.9.): otsikko kappaleen alkuun, pitkä kappale paloiksi.
+            palat = Lukijaaani.LuennanPalat(raaka);
+            Nappi.style.display = raaka.Sum(p => p.Length) >= Vahimmais ? DisplayStyle.Flex : DisplayStyle.None;
             PaivitaMykistys();
         }
 
@@ -69,9 +71,22 @@ namespace Matkakirja.Natiivi
             {
                 if (v != versio) return;
                 if (i >= palat.Count) { Pysayta(); return; }
-                if (!puhe.Lue(palat[i++], "kertoja", 0, () => UiKerros.PaaSaikeessa(Seuraava))) Pysayta();
+                if (!puhe.Lue(palat[i++], "kertoja", 0, () => UiKerros.PaaSaikeessa(Seuraava))) { Pysayta(); return; }
+                Esihae(puhe, palat, i);
             }
             Seuraava();
+        }
+
+        /// <summary>
+        /// Lukijan putkitus (omistaja 27.9. klo 01.5x: pitkä tauko otsikon ja kappaleiden välissä): kun pala i−1 alkaa soida,
+        /// kaksi seuraavaa palaa generoidaan jo taustalla samalla persoonalla (Puhe.Esihae), joten seuraava ei odota
+        /// koko generointia. Yhteinen Lehtinakyma- ja Nahtavyysarkki-luennalle.
+        /// </summary>
+        public static void Esihae(Puhe puhe, IReadOnlyList<string> palat, int i, string persoona = "kertoja")
+        {
+            if (puhe == null || palat == null) return;
+            if (i < palat.Count) puhe.Esihae(palat[i], persoona);
+            if (i + 1 < palat.Count) puhe.Esihae(palat[i + 1], persoona);
         }
 
         /// <summary>Luenta seis (kortti suljettiin, sivu vaihtui tai toinen kortti aukesi).</summary>

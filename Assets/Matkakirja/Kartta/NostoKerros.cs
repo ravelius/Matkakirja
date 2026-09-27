@@ -148,6 +148,11 @@ namespace Matkakirja
         /// on kaupunkinäkymän korkeus. Rajojen latautumatta 1. Päivittyy kehyksittäin (Paivittyi herää muutoksesta).
         /// </summary>
         public float ZoomKerroin { get; private set; } = 1f;
+        /// <summary>
+        /// Suurin kerroin, johon kamera tässä maassa pääsee (saapumiskorkeus / PalloKierto.MinKorkeus). Mallinsepän löydös
+        /// 27.9.: pienissä maissa (NLD saapuminen 404 km, lähin ~311 km → 1,3) tason 1 3D-mallien kynnys 2,5 ei täyty koskaan.
+        /// </summary>
+        public float SuurinKerroin { get; private set; } = float.PositiveInfinity;
         /// <summary>Tämän kehyksen näytettävät nostot (ruudulla, edessä, lähimmät keskeltä, enintään katto).</summary>
         public IReadOnlyList<Nosto> Naytettavat => naytettavat;
         /// <summary>Herää, kun Naytettavat, Nakyvissa tai Syttyminen muuttui tässä kehyksessä.</summary>
@@ -439,6 +444,7 @@ namespace Matkakirja
             UloinOsuus = uloinKorkeusM > 0 && kierto.korkeus > 0 ? kierto.korkeus / uloinKorkeusM : 0;
             float kerroin = (float)NostoSaannot.Karttakerroin(saapumisKorkeusM, kierto.korkeus);
             if (kerroin != ZoomKerroin) { ZoomKerroin = kerroin; muuttui = true; }
+            SuurinKerroin = saapumisKorkeusM > 0 ? (float)NostoSaannot.Karttakerroin(saapumisKorkeusM, kierto.MinKorkeus()) : float.PositiveInfinity;
 
             // Saapumisportti: kamera ja nappula paikallaan porttiViiveen ajan (web saapumisPortti).
             bool liikkuu = kierto.Liikkeessa || (nappula != null && nappula.Vaihe != LennonVaihe.Ei) || (nappula != null && nappula.Liikkeessa);
