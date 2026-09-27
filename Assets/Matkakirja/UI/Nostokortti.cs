@@ -709,12 +709,12 @@ namespace Matkakirja.Natiivi
                 if (otsake != null) b.tooltip = otsake;
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
-            if (n.Aani != null) { string u = n.Aani; Nappi("▷ Kuuntele näyte", null, () => Puhe.Hae()?.Soita(u)); }
+            if (n.Aani != null) { string u = n.Aani; Nappi("▷ Kuuntele näyte", null, () => Puhe.Hae()?.Soita(u, pyynnosta: true)); }
             foreach (var (nimi, url) in n.Musiikkilinkit) { string u = url; Nappi(nimi + " ›", null, () => Application.OpenURL(u)); }
             if (n.MusiikkiNayte != null)
             {
                 string u = n.MusiikkiNayte;
-                Nappi("▷ Kuuntele musiikkia", n.MusiikkiNayteNimi ?? "Vapaasti lisensoitu ääninäyte", () => Puhe.Hae()?.Soita(u));
+                Nappi("▷ Kuuntele musiikkia", n.MusiikkiNayteNimi ?? "Vapaasti lisensoitu ääninäyte", () => Puhe.Hae()?.Soita(u, pyynnosta: true));
             }
         }
 

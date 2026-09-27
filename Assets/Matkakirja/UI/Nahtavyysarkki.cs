@@ -604,7 +604,7 @@ namespace Matkakirja.Natiivi
             void Seuraava()
             {
                 if (v != lukuVersio || i >= palat.Count) { if (v == lukuVersio) PysaytaLuenta(); return; }
-                puhe.Lue(palat[i++], "kertoja", 0, Seuraava);
+                puhe.Lue(palat[i++], "kertoja", 0, Seuraava, pyynnosta: true);
                 KortinLukija.Esihae(puhe, palat, i);
             }
             Seuraava();
