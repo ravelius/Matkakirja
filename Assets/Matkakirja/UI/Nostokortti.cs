@@ -210,6 +210,8 @@ namespace Matkakirja.Natiivi
             {
                 if (string.IsNullOrEmpty(nappi)) { tulos?.Invoke(null); return; }
                 if (nappi != "lisaa" && kortti.ClassListContains("mk-nosto--esittely")) Vaihe2();
+                // Kaiutin (luennan mittaus): kuin napautus, ei kortin oma nappi.
+                if (nappi == "kaiutin") { lukija.Paina(); tulos?.Invoke(null); return; }
                 if (napit.TryGetValue(nappi, out var a)) { a(); tulos?.Invoke(null); }
                 else tulos?.Invoke("kortilla ei ole nappia " + nappi + " (on: " + string.Join(", ", napit.Keys) + ")");
             }
