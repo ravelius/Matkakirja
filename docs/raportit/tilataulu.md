@@ -56,7 +56,7 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 
 - **5 h -kiintiö:** 14 %. **Viikko (kaikki mallit):** 65 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
 - **Levy:** 90 Gi vapaana (laski 100→90 Gi ~15 min:ssa, 90 % käytössä — seurataan tiiviisti, ei kriittinen, raja-hälytys <15 Gi). Suurimmat: wt/ 45G, proto-3d/lokit 43G. **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 72 kpl (nousi 65:stä — jatkaa kasvua).
-- **Simulaattorit boottina:** 2 (iPhone 17, iPad Pro 11" M5; max 4 päivällä — OK). **coreaudiod:** normaali (~6-7% per prosessi, kaukana 200 %). **UUSI: Chrome-GPU-testiajurit (chromium_headless_shell) 15 kpl (raja >4) — ilmoitettu Julkaisijalle 18:10 (ei Fablelle, sääntöjen mukaan).**
+- **Simulaattorit boottina:** 2 (iPhone 17, iPad Pro 11" M5; max 4 päivällä — OK). **coreaudiod:** normaali (~6-7% per prosessi, kaukana 200 %). **Chrome-GPU-testiajurit:** Julkaisija selvitti 18:1x — 15 prosessia = 3 headless-selainta × ~5 aliprosessia (CI Savukkeet, PR sisaltokirjuri-euroopan-era5, rinnakkaisuus 3), normaali, sulkeutuu ajon mukana. **Raja lasketaan tästä eteenpäin pääprosesseista (ei `--type=`-aliprosesseista), ei kaikista.**
 - **Konteksti (kynnys Fable 65%/roolit 70%):** **Sisältökirjuri 72 % — YLI, uusi ilmoitus.** Laitetestaaja nollautunut (11%). Muut alle kynnyksen (Natiiviseppä 62% korkein muista).
 - **Juna:** normaalikäytössä 18:1x alkaen (Natiiviseppä purki tauon), kääntää juna/b13-kärkeä 1.0.32:ksi.
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
