@@ -7,15 +7,15 @@ namespace Matkakirja.Linssit.Elava
     /// <summary>
     /// Kinderdijk: perusliike = 1–3 myllyä pyörii kerrallaan (käy 20–60 s, seisoo 30–120 s, jokaisella oma aikataulu). Siivet
     /// kiihtyvät 3 s:ssa ja pysähtyvät tasaisella hidastuvuudella pystyristiin (+, myllärin lepoasento). Harvinainen (1/10
-    /// käynnistyksistä): aalto — kaikki kahdeksan käynnistyvät 0,6 s:n porrastuksella rivin päästä päähän, pyörivät 30 s ja
-    /// pysähtyvät samassa järjestyksessä. Reaktio: lähestyttäessä ensimmäinen seisova mylly herää; tapahtuma = aalto heti.
+    /// käynnistyksistä): aalto — kaikki kuusi käynnistyvät 0,6 s:n porrastuksella lännestä itään, pyörivät 30 s ja
+    /// pysähtyvät samassa järjestyksessä (v3 27.9.: kuusi isoa myllyä kahdessa rivissä kameraa kohti). Reaktio: lähestyttäessä ensimmäinen seisova mylly herää; tapahtuma = aalto heti.
     /// Siivet pyörivät vastapäivään edestä (tuulen puolelta) katsottuna kuten hollantilaiset myllyt.
     /// </summary>
     public sealed class KinderdijkLiike : ErikoisAnimaatio
     {
-        public const int Myllyja = 8, EnintaanKay = 3;
-        /// <summary>Siipien akseli (tuulen tulosuunta lounas), sama kuin mallin Symbolimallit.KdTuuli.</summary>
-        public const double AkseliX = -0.7071067811865476, AkseliZ = -0.7071067811865476;
+        public const int Myllyja = 6, EnintaanKay = 3;
+        /// <summary>Siipien akseli (tuulen tulosuunta etelälounas, tyylitelty kameraa kohti), sama kuin mallin Symbolimallit.KdTuuli.</summary>
+        public const double AkseliX = -0.25881904510252074, AkseliZ = -0.9659258262890683;
         public const double KierrosS = 5, KiihdytysS = 3, AaltoPorras = 0.6, AaltoS = 30;
         const double Huippu = 360 / KierrosS;
 
