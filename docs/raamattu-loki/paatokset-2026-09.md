@@ -7987,3 +7987,7 @@ Julkaisija 09.4x: #3380 (tukilaattasilmukka) v2307 ja #3371 (PELIN_SYVIN_TASO 10
 ## OMISTAJA 09.4x (SITOVA): VIIKKOKIINTIO 97 % → KAIKKI SESSIOT PYSAYTETAAN JA FABLE KIRJOITTAA SIIRTOPROMPTIN TILINVAIHTOA VARTEN (27.9.2026 klo 09.46)
 
 Omistaja 09.4x: kun viikkokiintio (kaikki mallit) on 97 %, Fable pysayttaa kaikki sessiot (jokainen kirjoittaa luovutuksen ja pushaa, sitten stop) ja kirjoittaa siirtopromptin tilinvaihtoa varten (docs/raportit/viesti-fable-tilinvaihto-<pvm>.md: kaikkien roolien tila, jonot, haarat, session id:t vanhalla tililla, aloitusviestit uudelle tilille, avoimet kortit). Postivahti ilmoittaa 93 % (ennakko) ja 97 %. Nyt 84 % (nollautuu to 2.10.).
+
+## PULUN PUHE ILMAN AANIKYTKIMIA: WEB PR 3386, PROTO bae36144; NATIIVI-UI:N MAAKUNTAERA 0ca9c11e (27.9.2026 klo 09.48)
+
+Pelikoodari 09.5x: web #3386 (lueVirtana + lueAaneen(pollo) ohittavat mykistyksen, mykistys/kertojakytkin eivat katkaise Pulua; 4426/0; versio nostetaan junassa), natiivi pelikoodari/pulu-ilman-kytkimia bae36144 (Puhe.cs PulunPuhe; Natiivi-UI:lle ei speksia). Natiivi-UI teki maakuntaeran osansa 0ca9c11e; Linssisepan ElavaHerays odottaa. Pelikoodari seuraavaksi nostojen luennan saatimet webiin. Omistajan kasinkirjoitetut ideat 09.02 (kuva): ruokaraha (nukkuminen + syominen, kultainen omena huvipuistosta), Pulu sekoilee (+10/−10 p), karttaan piilotettu aarre +100 p, minipelit maissa kaveria vastaan → matkakirjaan, huvipuistojen paasylippu 30 p / voitto 100 p — Fable luki ja tarkistaa omistajalta ennen kirjausta ideoina.
