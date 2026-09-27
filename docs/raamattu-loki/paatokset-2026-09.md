@@ -7887,3 +7887,7 @@ Natiivi-UI 08.2x kartoitti: vaiheittainen paljastuminen = Kartta/NostoKerros.cs 
 ## Z10-WEB-SELVITYS #3378: EI KATON NOSTOA NYT; LOYDOS TUKILAATTASILMUKKA PUHELIMELLA Z9-LUETTELOLLA → #3371 PIDOSSA, KORJAUS ENSIN (27.9.2026 klo 08.23)
 
 Pelikoodari 08.2x (raportti #3378, kuvat proto-3d/lokit/z10-web/): pallon laattakerros valitsee tason px/aste-tarpeesta — tyopoyta haluaisi z10 (1 546 px/°) mutta laattakatto 48 pudottaa z9:aan, puhelin tarvitsee vain z9 (924 px/°) eli este on lahizoomin katto. Siirto per nakyma Pariisi: tyopoyta z8 1,9 Mt → z9 5,7 Mt → z10 (katto 2x) 5,9 Mt; puhelin z8 3,2 Mt → z10 4,3 Mt. UUSI LOYDOS: puhelin + #3371 (z9) → tukilaattojen hakusilmukka (68 z7-laattaa ~17 000 kertaa/min, 3/3). Fable: #3371 pidossa kunnes silmukka korjattu (Pelikoodari etusijalle), #3376 saa menna; katon nosto (tyopoyta 48→64, puhelin 2x z10-alueilla) paatetaan kuvaparista myohemmin; z10 teravoittaa vain reliefia. x-puhe-moottori-tarkistus lisatty #3372:een.
+
+## NATIIVI-UI NOLLATTU JA KAYNNISTETTY 08.2x (LUOVUTUS W 5eeb041ab; AVAUSKORTTI natiivi-ui/avauskortti 3de0ca7f) (27.9.2026 klo 08.24)
+
+Natiivi-UI nollattu 08.2x (74 % → tyhja), aloitusviesti: avauskortti natiiviin jatkuu haarasta 3de0ca7f, 1.0.28-todennukset, maanosa/nostot Pelikoodarilla ja Natiivisepalla.
