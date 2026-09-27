@@ -147,12 +147,13 @@ export function rikastaElavaKartta(kokoelmat, taulukko) {
       pikkukuva: pikkukuvaOsoite(pk.osoite, avain), pikkukuvaLahde: pk.lahde ?? null,
     });
   }
+  // Omistaja 27.9.2026 klo 08.3x: salaisuudet näkyvät heti kuten muut nostot (ennen: vasta maakunnan valmistuttua).
   kokoelmat.maakuntasalaisuudet = taulukko('js/packs/maakuntasalaisuudet.js + maakuntasalaisuudet-<iso>.js (Sisältökirjuri)',
     'Maakuntien salaisuus-nostot (skeema 1.47, Elävä kartta, vain natiivi): yksi maakuntaa kohden, aina paakohde. '
       + 'id = salaisuus:<tunnus>, maakunta = maakuntarajojen id, maakuntaNimi, nimi, nimio (datan oma ≤ 18 merkkiä tai null), '
       + 'laji = kohteen tyyppi, kategoria ja aihe kuten karttavaloissa, lat/lon, lyhyt = Livian repliikki, teksti, '
-      + 'nappi = 1873-alaotsikko, viite = lähdeteksti. Natiivi näyttää sen vasta, kun maakunnan kaikki nostot (karttavalot.maakunta) '
-      + 'on löydetty. Ei karttavaloissa, jotta vanhat buildit eivät piirrä sitä. Skeema 1.49: pikkukuva = salaisuuden kuvan '
+      + 'nappi = 1873-alaotsikko, viite = lähdeteksti. Natiivi näyttää sen heti kuten muut nostot (omistaja 27.9.2026; ei '
+      + 'ilmestymis- eikä palkintoefektiä). Ei karttavaloissa, jotta vanhat buildit eivät piirrä sitä. Skeema 1.49: pikkukuva = salaisuuden kuvan '
       + 'ämpäriosoite (https) tai null (löydös 158), pikkukuvaLahde = kuvan tekijä ja lisenssi (pakollinen, kun kuva on).',
     { maakunta: 'maakuntarajat' }, salaiset);
   for (const a of alueet) {
