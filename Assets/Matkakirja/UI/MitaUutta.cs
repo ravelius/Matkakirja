@@ -11,6 +11,10 @@
 // kokoelma muutosloki-natiivi (rivit: versio/build, päivä, 1–3 lausetta suomeksi), jonka
 // Julkaisija täyttää joka TestFlight-buildissa. Kunnes kokoelma on paketissa, lista on
 // nykyisen buildin rivi "Ensimmäinen natiiviversio."
+// VANHA TIETO ESTETTY (omistajan löydös 27.9.2026 klo 12.0x: päivityksen jälkeen näkyi build 11:n rivi): asennetun
+// buildin rivi tunnistetaan versio + build -merkkijonosta (VersioJaBuild, sama muoto kuin muutoslokin "1.0.29 (29)").
+// Jos lokissa ei ole asennetun buildin riviä, kärkeen tulee sen oma rivi ("tiedot päivittyvät"), eikä "Peli päivittyi"
+// näytä vanhempien buildien rivejä uutena: vain asennettua edeltävää versiota uudemmat rivit.
 // Sisältöpaketin päivitys (Siirtoseppä, skeema 1.22) on osoittimessa (sisalto/1/uusin.json:
 // muutos {paiva, teksti}, esim. "Sisältö päivittyi: 3 uutta kaupunkilehteä") ja näytetään listan kärjessä.
 using System;
@@ -136,11 +140,26 @@ namespace Matkakirja.Natiivi
             if (!pakota && (string.IsNullOrEmpty(edellinen) || edellinen == nyt)) return;
             Lataa(() =>
             {
-                Tayta(paivitysLista, loki, 2);
+                Tayta(paivitysLista, Uudet(loki, edellinen == nyt ? null : edellinen), 2); // pakotettu testi: kärki
                 paivitys.BringToFront();
                 Rakenne.Nayta(paivitys, true, 320);
                 SyoteLukko.Esta(paivitys);
             });
+        }
+
+        /// <summary>
+        /// "Peli päivittyi" -rivit: sisältörivi ja buildirivit asennetusta (kärki, Lue takaa) edelliseen asennettuun asti;
+        /// edellisen buildin rivi ja sitä vanhemmat eivät ole uutta.
+        /// </summary>
+        static List<Rivi> Uudet(List<Rivi> rivit, string edellinen)
+        {
+            var uudet = new List<Rivi>();
+            foreach (var r in rivit)
+            {
+                if (r.Otsake == null && r.Versio == edellinen) break;
+                uudet.Add(r);
+            }
+            return uudet;
         }
 
         void SuljePaivitys()
@@ -179,7 +198,19 @@ namespace Matkakirja.Natiivi
                 }
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui muutosloki: " + e.Message); }
-            if (rivit.Count == 0) rivit.Add(new Rivi { Versio = Application.version, Teksti = "Ensimmäinen natiiviversio." });
+            // Asennetun buildin rivi aina kärkeen: vanhan buildin teksti ei saa näkyä tämän buildin tietona.
+            string nyt = VersioJaBuild();
+            if (rivit.Count == 0 || rivit[0].Versio != nyt)
+            {
+                if (rivit.Count > 0)
+                    Debug.LogWarning($"MATKAKIRJA ui muutosloki: asennetun buildin {nyt} rivi puuttuu (uusin {rivit[0].Versio}); Julkaisija: tools/vienti/muutosloki-natiivi.mjs");
+                rivit.RemoveAll(x => x.Versio == nyt);
+                rivit.Insert(0, new Rivi
+                {
+                    Versio = nyt,
+                    Teksti = rivit.Count == 0 ? "Ensimmäinen natiiviversio." : "Uusi versio asennettu. Tämän version muutokset päivittyvät tähän pian.",
+                });
+            }
 
             // Sisältöpäivityksen rivi osoittimesta listan kärkeen (versionumero syntyy vasta paketin tiivisteestä).
             using (var r = UnityEngine.Networking.UnityWebRequest.Get(Sisalto.Osoitin))
