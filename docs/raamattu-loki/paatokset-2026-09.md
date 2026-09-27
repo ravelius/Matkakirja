@@ -8411,3 +8411,7 @@ Omistaja 23.5x sanatarkasti: "pääseekö astronautin kamerassa jo iss:n kyytiin
 ## WEBIN LAATTAVIKA: JUURISYY LOYTYI, KORJAUS PR #3516 (v2347) ODOTTAA TILINVAIHDON JALKEEN (27.9.2026 klo 23.59)
 
 Pelikoodari: epaonnistunut laatta menetti href:n mutta jai tila.laatat-karttaan eika sita haettu uudelleen → pysyva aukko (Safari katkaisee haut taustalle mennessa/naytön lukittuessa). Korjaus 44f1429bd: 2 uusintaa + paikkaus seuraavassa paivityksessa ja visibilitychange/pageshow/online-tapahtumissa; testit 3 uutta, pyramidi 104/104. WebKit-savuke ennen/jalkeen aamulla. Natiivissa sama perhe: Laattapalvelimen pergamenttivaralaattaa Cesium ei hae uudelleen → Natiivisepalle (varalaatta uudelleen verkon palatessa / 8 s). Omistajan 23.58 linjauksen mukaan #3516 ei mene junaan ennen striimiluennan julkaisua ja tilinvaihtoa.
+
+## TF 1.0.33 TESTFLIGHTISSA (202609272009 = BUILD 33 edf03bfd); #3426 MAINISSA (#3515 v2346); #3516 JA #3517 ODOTTAVAT TILINVAIHTOA (27.9.2026 klo 23.59)
+
+Julkaisija: TF 1.0.33 = CFBundleVersion 202609272009 (ajo 36348081044). #3426 (5 historian hetkeä) mergetty sisältöjunana #3515 v2346 ennen taukoa, testit 4495/0. #3513 (puhetagit web, v2349) CI:ssä → merge + Pöllö + xAI-tarkistus. Pelikoodari: laattavian oikea juurisyy js/pallolaatat.js (pudonnut kerros merkittiin valmiiksi, virhelaattaa ei haettu uudelleen), korjaus #3516 c92c61193, pallolaatat 378/378; ihme-nappi pois #3517 v2348. Molemmat odottavat tilinvaihdon jälkeen.
