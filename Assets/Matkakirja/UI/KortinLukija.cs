@@ -175,6 +175,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Luenta seis (kortti suljettiin, sivu vaihtui tai toinen kortti aukesi).</summary>
+        /// <summary>Testikomento (ui nostonappi kaiutin): kuin kaiuttimen napautus.</summary>
+        public void Paina() => Vaihda();
+
         public void Pysayta()
         {
             SuljePaneeli();
