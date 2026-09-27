@@ -99,6 +99,8 @@ namespace Matkakirja.Natiivi
         {
             if (k == null) return;
             k.El.AddToClassList("mk-kupla--avaus");
+            // Pino on 272 px levyinen; avauskuplan ajan 336 px (muuten kupla ei leviä kaistaansa).
+            pino.AddToClassList("mk-kuplapino--avaus");
             int i = 0;
             foreach (var kappale in k.El.Query<Label>(className: "mk-kupla__kappale").ToList())
                 kappale.style.marginTop = i++ > 0 ? 7.2f : 0f;
@@ -148,6 +150,7 @@ namespace Matkakirja.Natiivi
             k.Poistuu = true;
             k.Ajastin?.Pause();
             kuplat.Remove(k);
+            if (!kuplat.Exists(x => x.El.ClassListContains("mk-kupla--avaus"))) pino.RemoveFromClassList("mk-kuplapino--avaus");
             Rakenne.Nayta(k.El, false, heti ? 120 : 260);
             k.El.schedule.Execute(() => k.El.RemoveFromHierarchy()).StartingIn(heti ? 160 : 320);
             PaivitaHannat();

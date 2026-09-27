@@ -53,6 +53,10 @@
     align-items: flex-end;
 }
 
+.mk-kuplapino.mk-kuplapino--avaus {
+    width: 336px;
+}
+
 .mk-kuplapino__vieritys {
     max-height: 224px;
     flex-shrink: 1;
