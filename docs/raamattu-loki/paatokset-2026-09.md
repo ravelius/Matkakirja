@@ -8187,3 +8187,7 @@ Omistaja 27.9.2026 klo 12.5x: Codexin (kayttaja samireivinen) luomia tiedostoja,
 ## OMISTAJA: MEREN LAJIT KORKEAMPAAN LAATUUN (ERIKOISMALLIEN TASO) (27.9.2026 klo 12.55)
 
 Omistaja 27.9.2026 klo 13.0x (kuva meri-10-lajia-1029.png): meren 10 lajia voisi tehda korkeammalla laadulla. Fable → Linssiseppa (Opus max): siluetit ja yksityiskohdat (mastot, koysisto, kaarevat purjeet, valaan suihku), B-seepiaramppi ja kaiverrusvarjostin kuten symboleissa, vesikontakti (vanavesi, kuohu, varjo), elavyys EI MONOTONIAA, LOD0 ≤ 3 000 kolmiota, ≤ 0,3 ms/malli; ensin 3 lajia kuvaparina omistajalle, sitten loput 7; maaspeksit taman jalkeen. Vuori-symbolin LOD0-juurikorjaus 6e721977 1.0.30:aan (Fable OK).
+
+## TF 1.0.29 TESTFLIGHTISSA (202609270957 = BUILD 29b 20ce6a28); VIKAINEN 202609270926 VANHENNETTU (27.9.2026 klo 13.20)
+
+Julkaisija: 1.0.29 (202609270957, ajo 36310995227) sisaisessa ryhmassa, What to test Fablen muotoilulla; 202609270926 (6809d5ae, synteesipuhe aaneton) vanhennettu, teksti ALA KAYTA (ajo 36312159853). Laitetestaaja 29b PASS 92201b561 (puhe rms 0,134). Mita uutta: muutosloki sisaltopaketissa (#3405 + Siirtosepan delta), natiivin vartija 296ffd04 1.0.30:aan. Talous-UI laitteella toimii, kuvaparit klo 14 kaannoksen jalkeen. Ei-paikat: #3411 (42 kohdetta 17 kaupungista), loput ~1 366 luokitellaan kuvan perusteella.
