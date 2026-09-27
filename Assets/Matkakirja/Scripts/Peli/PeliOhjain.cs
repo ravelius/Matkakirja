@@ -1003,7 +1003,9 @@ namespace Matkakirja.Natiivi
             KytkeRekisteri();
             KytkeReitti(m);
             m.Saapui += (_, k, uusi) => { if (m == matka) uusiKaupunki = uusi ? k : null; };
-            m.Tapahtui += (laji, teksti) => { tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
+            // "rahat" (rahatilanne, pelistreak) ei tapahtumariville: Natiivi-UI näyttää sen omana kuplanaan
+            // (Rahatilanne / Pelistreak), kuten web yhtenä emit('rahat')-toastina — muuten kaksi päällekkäistä toastia.
+            m.Tapahtui += (laji, teksti) => { if (laji != "rahat") tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
             KytkeTalous(m);
             KytkePelistreak(m);
             m.Loysi += (p, l) =>
