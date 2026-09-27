@@ -10952,6 +10952,14 @@ export const NAHTAVYYSJUTUT = {
             + 'museo sai 1933 tutkija Grigore Antipan mukaan.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
         },
+        /*
+         * PIENI KUVA, EI KORVATA (27.9.2026, Siirtosepän eheystarkistus
+         * #3434): ainoa löytynyt Belle Époque -aikainen postikorttikuva
+         * museosta Voittoaukiolla. Isompaa versiota tai muuta saman
+         * ajan kuvaa ei löytynyt Commonsista — museon nykytilasta on jo
+         * iso kuva yllä (Chainwit.), joten tämä täydentää sitä
+         * aikalaiskuvana eikä sitä korvata nykyisemmällä.
+         */
         {
           tiedosto: 'Belle Époque photo of the Antipa Museum in Victory Square of Bucharest, Romania.jpg',
           lyhyt: 'Museon juuret ulottuvat vuoteen 1834, kokoelmissa nykyään yli 2 miljoonaa näytettä.',

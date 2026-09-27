@@ -332,3 +332,19 @@ test('nimetyt lisätiedostot: lipputankoankkurit kartta/lippu_lonlat.json (löyd
     assert.equal(tiedostot.get(tiedosto), readFileSync(join(JUURI, lahde), 'utf8'));
   }
 });
+
+test('eheysvartija: laattavälit, yhteenveto ja työnkulku ilman puhetta', async () => {
+  const { laatat, yhteenveto } = await import('../tools/vienti/eheysvartija.mjs');
+  assert.deepEqual(laatat(10, [[1, 2, 2, 2], [5, 3, 5, 3]]), ['10/1/2', '10/2/2', '10/5/3']);
+  assert.deepEqual(laatat(9, [0, 0, 1, 0]), ['9/0/0', '9/1/0']);
+  assert.deepEqual(yhteenveto({ puuttuvat: [], orvot: [], lehdetPuuttuu: [], ylitykset: [] }), []);
+  const v = yhteenveto({ puuttuvat: [{ laji: 'pieni' }, { laji: 'pieni' }], orvot: [{}], lehdetPuuttuu: [], ylitykset: [{ iso: 'FRA' }] });
+  assert.equal(v.join('; '), '2 puuttuu (pieni 2); 1 orpoa viittausta; maakatto ylittyy: FRA');
+  const { readFileSync } = await import('node:fs');
+  const koodi = readFileSync(new URL('../tools/vienti/eheysvartija.mjs', import.meta.url), 'utf8');
+  // Fable 27.9.: vartija ei koskaan pyydä puhetta workerilta (maksullinen generointi).
+  assert.ok(!/pollo|workers\.dev|\/puhe\b|tehtava/.test(koodi.replace(/^ \*.*$/gm, '')), 'ei puheworkeria');
+  const tyonkulku = readFileSync(new URL('../.github/workflows/eheysvartija.yml', import.meta.url), 'utf8');
+  assert.match(tyonkulku, /workflows: \['Vie sisältöpaketti ämpäriin'\]/);
+  assert.match(tyonkulku, /cron:/);
+});

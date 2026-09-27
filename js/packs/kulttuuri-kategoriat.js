@@ -2067,7 +2067,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Dvořák vei kylätanssit maailmalle',
-          tiedosto: 'Jan Langhans Antonin Dvorak 1904 (cropped).jpg',
+          tiedosto: 'Dvorak 1901.jpg',
           teksti: 'Antonín Dvořák oli teurastajan poika, joka soitti alttoviulua '
             + 'prahalaisessa orkesterissa ennen kuin hänen sävellyksensä '
             + 'löydettiin. Slaavilaiset tanssit tekivät hänestä kuuluisan: '
@@ -2079,7 +2079,7 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Antonín Dvořák soitti alttoviulua prahalaisessa '
             + 'orkesterissa ennen kuin hänen sävellyksensä löydettiin, ja '
             + 'hän eli vuoteen 1904.',
-          lahde: 'Jan Nepomuk Langhans, Wikimedia Commons (PD)',
+          lahde: 'Jan & Joseph Mulač, Wikimedia Commons (PD)',
           wiki: 'Antonín Dvořák',
           musiikki: 'https://music.apple.com/fi/search?term=dvorak%20slavonic%20dances',
           musiikkiNimi: 'Dvořákin Slaavilaiset tanssit Apple Musicissa',
@@ -3744,6 +3744,77 @@ export const KULTTUURI_KATEGORIAT = {
           + 'kuninkaanlinna.',
       },
     },
+    /*
+     * KUVATAIDE (27.9.2026, Eurooppa-erä 9). Prado-museo on jo
+     * NAHTAVYYSJUTUT-kohde (rakennus/sijainti), mutta Las Meninas
+     * -maalauksen oma tarina ei esiinny siellä eikä
+     * MAA_KATEGORIAT[ESP]:n kuvataide-kategoriassa — eri kohde.
+     */
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Velázquez maalasi itsensä maalaamassa kuningasperhettä '
+          + '— ja teki samalla maalauksen, jota taidehistorioitsijat '
+          + 'ovat väitelleet lähes neljäsataa vuotta.',
+      nostot: [
+        {
+          otsikko: 'Maalaaja maalasi itsensä maalaamassa',
+          aika: '1656',
+          tiedosto: 'Las Meninas (1656), by Velazquez.jpg',
+          teksti: 'Diego Velázquez maalasi Las Meninas -teoksensa '
+            + '1656 hovimaalarina kuningas Filip IV:n palveluksessa. '
+            + 'Maalauksessa nähdään prinsessa Margarita Teresa '
+            + 'hovinaistensa ympäröimänä, mutta kuvan keskiössä on '
+            + 'itse Velázquez: hän on maalannut itsensä suureen '
+            + 'kankaaseen sivellin ja paletti kädessä, ikään kuin '
+            + 'katsoja seisoisi kuninkaan ja kuningattaren paikalla, '
+            + 'joiden peilikuva näkyy taustan seinällä. Teos herätti '
+            + 'kysymyksen, jota pohditaan yhä: kenen näkökulmasta '
+            + 'kohtausta oikeastaan katsotaan?',
+          lyhyt: 'Las Meninas, jossa Velázquez maalasi itsensä maalaamassa '
+            + 'kuninkaallista prinsessaa hovinaistensa keskellä.',
+          selite: 'Diego Velázquezin Las Meninas (1656): maalari on '
+            + 'kuvannut itsensä maalaamassa, prinsessa Margarita Teresa '
+            + 'hovinaistensa keskellä.',
+          lahde: 'Diego Velázquez, Wikimedia Commons (public domain)',
+          wiki: 'Las Meninas',
+        },
+        {
+          otsikko: 'Maalari kirjasi arvonimensä maalaukseen jälkikäteen',
+          tiedosto: 'Diego Velázquez - Las Meninas - Selfportrait.jpg',
+          teksti: 'Velázquezin rinnassa Las Meninas-teoksessa näkyy '
+            + 'Santiagon ritarikunnan risti — mutta Velázquez sai '
+            + 'ritarikunnan jäsenyyden vasta 1659, kolme vuotta '
+            + 'maalauksen valmistumisen jälkeen. Perimätiedon mukaan '
+            + 'joko kuningas itse maalasi ristin lisää jälkikäteen tai '
+            + 'Velázquez lisäsi sen itse saatuaan arvonimen — kumpikaan '
+            + 'ei ole varmuudella todistettu, mutta risti on joka '
+            + 'tapauksessa myöhempi lisäys alkuperäiseen maalaukseen.',
+          lyhyt: 'Lähikuva Velázquezin omakuvasta Las Meninas-teoksessa; '
+            + 'rinnan risti lisättiin maalaukseen vasta jälkikäteen.',
+          selite: 'Lähikuva Velázquezin omakuvasta Las Meninas-teoksessa; '
+            + 'rinnassa näkyvä Santiagon ritarikunnan risti lisättiin '
+            + 'maalaukseen vasta vuoden 1659 jälkeen.',
+          lahde: 'Diego Velázquez, Wikimedia Commons (public domain)',
+          wiki: 'Las Meninas',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Velázquezin rinnassa näkyvä risti Las '
+            + 'Meninas-teoksessa on erikoinen?',
+        vaihtoehdot: [
+          'Se on maalattu väärän värisenä',
+          'Se lisättiin maalaukseen vasta jälkikäteen, ritarikunnan '
+            + 'jäsenyyden myöntämisen jälkeen',
+          'Se kuuluu oikeasti toiselle henkilölle maalauksessa',
+          'Se on piilotettu näkymättömiin kerroksiin maalauksen alle',
+        ],
+        oikea: 1,
+        fakta: 'Velázquez sai Santiagon ritarikunnan jäsenyyden vasta '
+            + '1659, kolme vuotta Las Meninaksen valmistumisen jälkeen, '
+            + 'joten rinnan risti on myöhempi lisäys.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
@@ -5135,6 +5206,76 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * MUSIIKKI (27.9.2026, Eurooppa-erä 8). Ei päällekkäisyyttä
+     * MAA_KATEGORIAT[ITA]:n musiikki-nostojen (ooppera, Verdi, Cremonan
+     * viulut, Napolin laulut) kanssa — Vivaldi ei esiinny niissä.
+     */
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Punatukkainen pappi sävelsi orpokodin tytöille musiikkia, '
+          + 'joka kiersi koko Euroopan.',
+      nostot: [
+        {
+          otsikko: 'Punainen pappi opetti orpoja soittamaan',
+          aika: '1703–',
+          tiedosto: 'Pio Ospedale della Pietà (Venice) 10.jpg',
+          teksti: 'Antonio Vivaldi vihittiin papiksi 1703, mutta astmansa '
+            + 'vuoksi hän ei juuri lukenut messua — punaisen tukkansa '
+            + 'vuoksi häntä kutsuttiin "il Prete Rosso", punaiseksi '
+            + 'papiksi. Samana vuonna hän aloitti viulunsoiton opettajana '
+            + 'Ospedale della Pietàssa, orpokodissa, joka kasvatti '
+            + 'löytölapsitytöistä muusikoita. Tytöt soittivat ristikon '
+            + 'takana konserteissa, joita tultiin kuulemaan kaukaakin — '
+            + 'kukaan ei nähnyt soittajia, vain kuuli heidät. Vivaldi '
+            + 'sävelsi heille suurimman osan tuotannostaan lähes '
+            + 'neljänkymmenen vuoden ajan.',
+          lyhyt: 'Ospedale della Pietà oli orpokoti, jossa Vivaldi opetti '
+            + 'löytölapsitytöistä muusikoita vuodesta 1703.',
+          selite: 'Ospedale della Pietà oli orpokoti, jossa Antonio Vivaldi '
+            + 'opetti löytölapsitytöistä muusikoita ja sävelsi heille '
+            + 'suurimman osan tuotannostaan.',
+          lahde: 'ERC ARCHIATER, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Antonio Vivaldi',
+        },
+        {
+          otsikko: 'Neljä vuodenaikaa unohdettiin sadaksi vuodeksi',
+          aika: '1725',
+          tiedosto: 'Vivaldi.jpg',
+          teksti: 'Vivaldin tunnetuin teos, Neljä vuodenaikaa, julkaistiin '
+            + '1725 osana kaksitoista viulukonserttoa sisältävää '
+            + 'kokoelmaa. Kukin konsertto kuvaa yhtä vuodenaikaa säkeiden '
+            + 'ohjaamana — ukkonen, jäätynyt maa, kesän helle — ja teos '
+            + 'oli aikanaan suosittu kautta Euroopan. Vivaldin kuoltua '
+            + 'köyhänä Wienissä 1741 hänen musiikkinsa unohtui lähes '
+            + 'kokonaan yli sadaksi vuodeksi, kunnes 1900-luvulla '
+            + 'löydetyt käsikirjoitukset toivat sen takaisin — isoisän '
+            + 'matkan aikaan Vivaldi on jo unohdettu säveltäjä.',
+          lyhyt: 'Vivaldin muotokuva; hänen musiikkinsa unohtui vuosisadaksi '
+            + 'hänen kuolemansa jälkeen.',
+          selite: 'Antonio Vivaldin (1678–1741) muotokuva; hänen '
+            + 'musiikkinsa unohtui lähes vuosisadaksi kuoleman jälkeen ja '
+            + 'löydettiin uudelleen vasta 1900-luvulla.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+          wiki: 'The Four Seasons (Vivaldi)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä Antonio Vivaldi opetti viulunsoittoa vuodesta 1703 '
+            + 'lähtien?',
+        vaihtoehdot: [
+          'Venetsian oopperatalossa',
+          'Orpokoti Ospedale della Pietàssa',
+          'Dogen palatsin kuoro-koulussa',
+          'Omassa yksityisessä musiikkikoulussaan',
+        ],
+        oikea: 1,
+        fakta: 'Vivaldi opetti viulunsoittoa Ospedale della Pietàssa, '
+            + 'orpokodissa, joka kasvatti löytölapsitytöistä muusikoita, '
+            + 'ja sävelsi heille suurimman osan tuotannostaan.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -5671,6 +5812,75 @@ export const KULTTUURI_KATEGORIAT = {
         oikea: 1,
         fakta: 'Kuningatar Kristiinan aikaan sulkutyöhön otettiin mestareita '
           + 'Hollannista, ja ensimmäinen sulku valmistui vuonna 1642.',
+      },
+    },
+    /*
+     * LUONTO (27.9.2026, Eurooppa-erä 8). Saariston laajuus on oma
+     * aiheensa, ei sama kuin MAA_KATEGORIAT[SWE]:n luonto-nostot
+     * (jokamiehenoikeus, erämaa, hirvi, revontulet — kaikki
+     * sisämaasta, ei saaristosta).
+     */
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupungin itäpuolella avautuu saaristo, jossa on '
+          + 'kolmekymmentätuhatta saarta ja luotoa — matka mantereelta '
+          + 'ulapalle vaihtaa maiseman metsästä paljaaksi kallioksi.',
+      nostot: [
+        {
+          otsikko: 'Kolmekymmentätuhatta saarta yhden kaupungin edustalla',
+          tiedosto: '20130202 Stockholm Skärgård (21).jpg',
+          teksti: 'Tukholman saaristo koostuu noin kolmestakymmenestä '
+            + 'tuhannesta saaresta, luodosta ja karista, jotka levittäytyvät '
+            + 'yli 80 kilometrin matkalle mantereelta itään avomerelle. '
+            + 'Lähempänä kaupunkia saaret ovat metsäisiä ja niillä on '
+            + 'kesämökkejä; mitä kauemmas ulapalle mennään, sitä '
+            + 'paljaammiksi ja puuttomammiksi kalliosaaret muuttuvat, '
+            + 'kunnes jäljellä on vain merenjäätämien kallioiden ja '
+            + 'majakoiden nauha. Saaristo syntyi mannerjään sulaessa: maa '
+            + 'kohoaa täällä yhä noin puoli senttiä vuodessa, ja uusia '
+            + 'luotoja nousee merestä hitaasti koko ajan.',
+          lyhyt: 'Tukholman saaristossa on noin kolmekymmentätuhatta saarta '
+            + 'ja luotoa, jotka levittäytyvät yli 80 kilometrin matkalle.',
+          selite: 'Tukholman saaristossa on noin kolmekymmentätuhatta '
+            + 'saarta ja luotoa; maa kohoaa alueella yhä jääkauden '
+            + 'jäljiltä noin puoli senttiä vuodessa.',
+          lahde: 'Belola80, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Stockholm archipelago',
+        },
+        {
+          otsikko: 'Ulommat luodot ovat lähes puuttomia',
+          tiedosto: 'Grönskär February 2013.jpg',
+          teksti: 'Mitä kauemmas Tukholman saaristossa mennään, sitä '
+            + 'karumpaa maisema muuttuu. Sisemmän saariston metsäiset '
+            + 'saaret vaihtuvat vähitellen ulomman saariston paljaisiin, '
+            + 'tuulen ja aallokon kuluttamiin kallioluotoihin, joilla '
+            + 'kasvaa enää matalaa kasvillisuutta tai ei mitään. Näillä '
+            + 'uloimmilla luodoilla seisovat majakat, jotka ovat vuosisatoja '
+            + 'ohjanneet laivaliikennettä Tukholmaan — ilman niitä '
+            + 'saariston kapeat ja mutkittelevat väylät olisivat vaarallisia '
+            + 'kulkea pimeällä tai myrskyssä.',
+          lyhyt: 'Ulomman saariston kallioluodot ovat lähes kasvittomia, ja '
+            + 'niillä seisoo majakoita.',
+          selite: 'Tukholman saariston uloimmat luodot ovat tuulen ja '
+            + 'aallokon kuluttamia, lähes kasvittomia kallioita, joilla '
+            + 'seisoo majakoita.',
+          lahde: 'Arild, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Stockholm archipelago',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Tukholman saaristoon nousee koko ajan uusia luotoja?',
+        vaihtoehdot: [
+          'Ihmiset täyttävät merta keinotekoisesti',
+          'Maa kohoaa yhä jääkauden jäljiltä',
+          'Merenpinta laskee ilmastonmuutoksen vuoksi',
+          'Tulivuoritoiminta nostaa uutta maata',
+        ],
+        oikea: 1,
+        fakta: 'Tukholman seudulla maa kohoaa yhä mannerjään sulamisen '
+            + 'jäljiltä noin puoli senttiä vuodessa, ja uusia luotoja '
+            + 'nousee merestä hitaasti.',
       },
     },
   ],
@@ -7624,6 +7834,79 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * TIEDE (27.9.2026, Eurooppa-erä 9). Ateenan tähtitieteellinen
+     * observatorio ei esiinny kaupungin 13 NAHTAVYYSJUTUT-kohteessa
+     * eikä MAA_KATEGORIAT[GRC]:n tiede-kategoriassa — eri kohde.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Nymfien kukkulalle nousi 1842 Kreikan ensimmäinen '
+          + 'tutkimuslaitos — kansallinen observatorio, joka aloitti '
+          + 'toimintansa jo ennen kuin Kreikka oli edes kunnolla '
+          + 'itsenäinen valtio.',
+      nostot: [
+        {
+          otsikko: 'Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle',
+          aika: '1842',
+          tiedosto: 'The National Observatory of Athens on February 24, 2020.jpg',
+          teksti: 'Ateenan kansallinen observatorio perustettiin vuonna '
+            + '1842 Nymfien kukkulalle, ja se on Kreikan vanhin '
+            + 'tutkimuslaitos — vain vuosikymmen sen jälkeen, kun '
+            + 'Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. '
+            + 'Rakennuksen suunnitteli tanskalainen arkkitehti Theophil '
+            + 'Hansen, ja rahoituksen antoi kreikkalainen liikemies '
+            + 'Georgios Sinas Wienistä. Observatorio teki tähtitieteen '
+            + 'lisäksi meteorologisia ja seismologisia havaintoja, ja '
+            + 'isoisän matkan aikaan se on toiminut jo yli kolmekymmentä '
+            + 'vuotta.',
+          lyhyt: 'Ateenan kansallinen observatorio Nymfien kukkulalla on '
+            + 'Kreikan vanhin tutkimuslaitos, perustettu 1842.',
+          selite: 'Ateenan kansallinen observatorio Nymfien kukkulalla on '
+            + 'Kreikan vanhin tutkimuslaitos; se perustettiin vuonna '
+            + '1842, tanskalaisen arkkitehti Theophil Hansenin '
+            + 'suunnittelemana.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC0)',
+          wiki: 'National Observatory of Athens',
+        },
+        {
+          otsikko: 'Observatorio mittasi maan liikkeitäkin',
+          tiedosto: 'View of the National Observatory of Athens on the Hill of the Nymphs from the area of the Areopagus.jpg',
+          teksti: 'Nymfien kukkula valittiin observatorion paikaksi '
+            + 'tarkoituksella: se on lähellä Akropolista mutta '
+            + 'silti tarpeeksi korkealla ja kaupungin valoista '
+            + 'erillään, jotta tähtien tarkkailu onnistuisi. '
+            + 'Observatorio ei rajoittunut vain tähtiin — se alkoi '
+            + '1800-luvun kuluessa mitata myös maanjäristyksiä, joita '
+            + 'Kreikan seudulla riittää, ja siitä tuli vähitellen koko '
+            + 'maan tärkein tieteellisten mittausten keskus.',
+          lyhyt: 'Näkymä Areiopagilta Ateenan observatorioon Nymfien '
+            + 'kukkulalla, lähellä Akropolista mutta erillään kaupungin '
+            + 'valoista.',
+          selite: 'Näkymä Areiopagilta Ateenan kansalliseen '
+            + 'observatorioon Nymfien kukkulalla; paikka valittiin '
+            + 'lähelle Akropolista mutta erilleen kaupungin valoista.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'National Observatory of Athens',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Ateenan kansallinen observatorio rakennettiin '
+            + 'juuri Nymfien kukkulalle?',
+        vaihtoehdot: [
+          'Se oli lähellä kuninkaan palatsia',
+          'Se oli tarpeeksi korkealla ja erillään kaupungin valoista, '
+            + 'silti lähellä Akropolista',
+          'Se oli Ateenan korkein kohta',
+          'Paikalla oli jo muinainen tähtitorni',
+        ],
+        oikea: 1,
+        fakta: 'Nymfien kukkula on lähellä Akropolista mutta silti '
+            + 'tarpeeksi korkealla ja kaupungin valoista erillään, '
+            + 'jotta tähtien tarkkailu onnistuisi.',
+      },
+    },
   ],
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa:
   // monivirkkeiset kuvatekstit tiivistetty yhteen virkkeeseen.
@@ -8798,6 +9081,75 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+    },
+    /*
+     * MUSIIKKI (27.9.2026, Eurooppa-erä 9). Ei päällekkäisyyttä
+     * MAA_KATEGORIAT[TUR]:n musiikki-kategorian eikä kaupungin omien
+     * NAHTAVYYSJUTUT-kohteiden kanssa (mehter ei esiinny kummassakaan).
+     */
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Maailman vanhin yhä soiva sotilassoittokunta marssi '
+          + 'kerran sulttaanin edellä rintamalle — ja marssii yhä '
+          + 'joka päivä Istanbulin sotamuseon pihalla.',
+      nostot: [
+        {
+          otsikko: 'Maailman vanhin sotilassoittokunta soi yhä',
+          tiedosto: 'Mehter (1).jpg',
+          teksti: 'Mehter on osmanien janitsaarijoukkojen '
+            + 'sotilassoittokunta, jota pidetään maailman vanhimpana '
+            + 'yhä toimivana sotilasorkesterityyppinä — juuret '
+            + 'ulottuvat 1300-luvulle. Soittokunnan kuparirummut, '
+            + 'symbaalit ja torvet soivat niin kovaa, että ne olivat '
+            + 'osa sotataktiikkaa: musiikin oli tarkoitus säikäyttää '
+            + 'vihollinen ja rohkaista omia joukkoja rintaman edessä. '
+            + 'Nykyään Mehter-soittokunta esiintyy Istanbulin '
+            + 'sotamuseon pihalla säännöllisesti historiallisissa '
+            + 'univormuissaan.',
+          lyhyt: 'Mehter-soittokunta esiintyy historiallisissa '
+            + 'univormuissa; sen juuret ulottuvat 1300-luvulle.',
+          selite: 'Mehter, osmanien sotilassoittokunta, esiintyy '
+            + 'historiallisissa univormuissa; sitä pidetään maailman '
+            + 'vanhimpana yhä toimivana sotilasorkesterityyppinä.',
+          lahde: 'CeeGee, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mehter',
+        },
+        {
+          otsikko: 'Sama musiikki soi Euroopan hoveissakin',
+          tiedosto: 'Ottoman military band.jpg',
+          teksti: 'Mehter-musiikin vaikutus levisi Osmanien '
+            + 'valtakunnan rajojen ulkopuolelle 1700-luvulla: '
+            + 'eurooppalaiset hovit alkoivat perustaa omia '
+            + '"janitsaarimusiikki"-innoittamia soittokuntiaan, ja '
+            + 'säveltäjät kuten Mozart ja Beethoven lainasivat mehterin '
+            + 'rytmejä ja lyömäsoittimia sävellyksiinsä — tästä syntyi '
+            + 'termi "turkkilainen tyyli". Näin yhden sulttaanin '
+            + 'armeijan taistelumusiikki muokkasi vuosisatoja '
+            + 'myöhemmin eurooppalaisen orkesterin lyömäsoitinkalustoa.',
+          lyhyt: 'Osmanien sotilassoittokunta noin 1900-luvun alussa; '
+            + 'sen tyyli vaikutti eurooppalaisiin säveltäjiin.',
+          selite: 'Osmanien sotilassoittokunta noin 1900-luvun alussa; '
+            + 'mehterin rytmit ja lyömäsoittimet vaikuttivat 1700-luvun '
+            + 'eurooppalaiseen "turkkilaiseen tyyliin".',
+          lahde: 'Paul Thompson, Wikimedia Commons (public domain)',
+          wiki: 'Mehter',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin mehter-musiikin rytmit ja lyömäsoittimet '
+            + 'vaikuttivat 1700-luvulla?',
+        vaihtoehdot: [
+          'Intialaiseen klassiseen musiikkiin',
+          'Eurooppalaiseen "turkkilaiseen tyyliin" (mm. Mozart, Beethoven)',
+          'Amerikkalaiseen jazz-musiikkiin',
+          'Kiinalaiseen oopperaan',
+        ],
+        oikea: 1,
+        fakta: 'Mehterin rytmit ja lyömäsoittimet vaikuttivat 1700-luvun '
+            + 'eurooppalaisten säveltäjien, kuten Mozartin ja Beethovenin, '
+            + '"turkkilaiseen tyyliin".',
+      },
     },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
@@ -11058,6 +11410,82 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+    },
+    /*
+     * HISTORIA (27.9.2026, Eurooppa-erä 8). Ei päällekkäisyyttä
+     * MAA_KATEGORIAT[PRT]:n historia-nostojen (löytöretket, Vasco da
+     * Gama, Kolumbus, karttaviiva) kanssa — 1755:n maanjäristys ei ole
+     * niissä, ja se on jo omissa hetki-nostoissaan käsitellyistä
+     * löytöretkiaiheista täysin erillinen tapahtuma.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaikkien pyhien päivän aamuna 1755 kaupunki romahti '
+          + 'kolmessa aallossa — ja nousi tuhkasta suoraviivaisena '
+          + 'ruutukaavana.',
+      nostot: [
+        {
+          otsikko: 'Kolme iskua yhtenä aamuna',
+          aika: '1.11.1755',
+          tiedosto: 'Lisbone Abysmée - estampe - btv1b52524679j.jpg',
+          teksti: 'Kaikkien pyhien päivänä, 1. marraskuuta 1755 aamulla, '
+            + 'kirkot olivat täynnä kynttilöitä, kun maa alkoi täristä. '
+            + 'Järistys, arviolta magnitudiltaan 8–9, kesti useita '
+            + 'minuutteja ja repi auki halkeamia keskellä katuja. '
+            + 'Selviytyjät pakenivat satamaan avoimelle alueelle, mutta '
+            + 'noin neljäkymmentä minuuttia myöhemmin meri veti '
+            + 'puoleensa ja iski takaisin jättiaaltoina. Kynttilöiden '
+            + 'kaatamat tulipalot roihusivat vielä päiviä. Kaupungin '
+            + 'noin 200 000 asukkaasta kymmeniä tuhansia kuoli, ja '
+            + 'suurin osa keskustasta tuhoutui.',
+          lyhyt: 'Aikalaiskaiverrus vuoden 1755 maanjäristyksen ja '
+            + 'tulipalojen tuhoamasta Lissabonista.',
+          selite: 'Aikalaiskaiverrus näyttää Lissabonin raunioina ja '
+            + 'liekeissä vuoden 1755 maanjäristyksen, tsunamin ja '
+            + 'tulipalojen jäljiltä.',
+          lahde: 'Bibliothèque nationale de France, Wikimedia Commons '
+            + '(public domain)',
+          wiki: '1755 Lisbon earthquake',
+        },
+        {
+          otsikko: 'Sotilaat testasivat uudisrakennukset marssimalla',
+          aika: '1758–',
+          tiedosto: 'Looking South over Baixa to the Tagus River, Lisbon, Portugal - Panoramio.jpg',
+          teksti: 'Kuningas José I:n pääministeri, markiisi de Pombal, '
+            + 'otti jälleenrakennuksen johtoonsa ja teetti Baixan '
+            + 'keskustaan täysin uuden, suoraviivaisen ruutukaavan — yhden '
+            + 'Euroopan ensimmäisistä. Talot rakennettiin "gaiola '
+            + 'pombalinaksi" kutsutulla puisella häkkirungolla, joka '
+            + 'joustaa järistyksessä murtumatta; kestävyys testattiin '
+            + 'muun muassa marssittamalla sotilasjoukkoja rakennusten '
+            + 'ympärillä täristystä jäljittelemään. Isoisän matkan '
+            + 'aikaan Baixan ruutukaava on jo yli sata vuotta vanha ja '
+            + 'vakiintunut osa kaupunkia.',
+          lyhyt: 'Baixan ruutukaava ylhäältä nähtynä; alue rakennettiin '
+            + 'uudelleen 1755 järistyksen jälkeen suoraviivaisena ja '
+            + 'järistyksenkestävänä.',
+          selite: 'Baixan kaupunginosa ylhäältä; se rakennettiin uudelleen '
+            + '1755 järistyksen jälkeen suoraviivaisena ruutukaavana ja '
+            + 'järistyksenkestävällä "gaiola pombalina" -rakennustavalla.',
+          lahde: 'David Broad, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Baixa Pombalina',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Baixan uudisrakennusten järistyksenkestävyys '
+            + 'testattiin 1755 jälkeen?',
+        vaihtoehdot: [
+          'Rakennusten päälle pudotettiin painoja',
+          'Sotilasjoukkoja marssitettiin niiden ympärillä täristystä jäljittelemään',
+          'Rakennuksia ravisteltiin köysillä',
+          'Testejä ei tehty, vain rukoiltiin'
+        ],
+        oikea: 1,
+        fakta: 'Baixan "gaiola pombalina" -runkojen kestävyyttä testattiin '
+            + 'muun muassa marssittamalla sotilasjoukkoja rakennusten '
+            + 'ympärillä järistystä jäljittelemään.',
+      },
     },
   ],
   /*
@@ -14948,6 +15376,76 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * TIEDE (27.9.2026, Eurooppa-erä 9). Kaivopuiston tähtitorni ei
+     * ole NAHTAVYYSJUTUT-listalla eikä MAA_KATEGORIAT[FIN]:n tiede-
+     * kategoriassa — ei päällekkäisyyttä.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Kaivopuiston kukkulalle nousi 1830-luvulla torni, joka '
+          + 'antoi nuorelle suuriruhtinaskunnalle oman tarkan ajan ja '
+          + 'oman paikan kartalla.',
+      nostot: [
+        {
+          otsikko: 'Helsinki sai oman tähtitornin suomalaista aikaa varten',
+          aika: '1834',
+          tiedosto: 'Ursan tähtitorni Kaivopuisto Helsinki 2022-09-18 01.jpg',
+          teksti: 'Helsingin tähtitorni valmistui Kaivopuiston kukkulalle '
+            + '1834, ja sen suunnitteli sama arkkitehti Carl Ludvig '
+            + 'Engel, joka piirsi Senaatintorin rakennukset. Tornin '
+            + 'tehtävä ei ollut vain tähtien tarkkailu: se määritti '
+            + 'Helsingille tarkan paikallisajan ja maantieteelliset '
+            + 'koordinaatit, joita tarvittiin sekä laivaliikenteessä '
+            + 'että maanmittauksessa. Torni oli pitkään Suomen '
+            + 'johtava tähtitieteellinen ja geodeettinen laitos, ja '
+            + 'isoisän matkan aikaan se on ollut toiminnassa jo '
+            + 'lähes neljäkymmentä vuotta.',
+          lyhyt: 'Helsingin tähtitorni Kaivopuistossa valmistui 1834 '
+            + 'C. L. Engelin suunnitelmien mukaan.',
+          selite: 'Helsingin tähtitorni Kaivopuistossa valmistui 1834; '
+            + 'sen suunnitteli arkkitehti Carl Ludvig Engel, ja se '
+            + 'määritti kaupungille tarkan paikallisajan.',
+          lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)',
+          wiki: 'Helsinki Observatory',
+        },
+        {
+          otsikko: 'Tornista tuli kaikkien tähtiharrastajien oma',
+          aika: '1926',
+          tiedosto: 'Ursan torni.jpg',
+          teksti: 'Helsingin yliopisto käytti tähtitornia tutkimukseen '
+            + 'vuosikymmenten ajan, kunnes uusi, isompi tutkimusobservatorio '
+            + 'valmistui muualle. Vuonna 1926 vanha Kaivopuiston torni '
+            + 'siirtyi tähtitieteen harrastajayhdistys Ursalle, joka '
+            + 'käyttää sitä yhä yleisölle avoimiin tähtitarkkailuiltoihin. '
+            + 'Ammattitähtitieteilijöiden yksityisestä työkalusta tuli '
+            + 'näin paikka, jonne kuka tahansa voi tulla katsomaan '
+            + 'kuuta ja planeettoja kaukoputkella.',
+          lyhyt: 'Kaivopuiston vanha tähtitorni siirtyi 1926 harrastajayhdistys '
+            + 'Ursalle yleisölle avoimiin tarkkailuiltoihin.',
+          selite: 'Kaivopuiston vanha tähtitorni siirtyi vuonna 1926 '
+            + 'tähtitieteen harrastajayhdistys Ursalle, joka käyttää '
+            + 'sitä yhä yleisölle avoimiin tarkkailuiltoihin.',
+          lahde: 'Markku Poutanen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ursa (yhdistys)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä oli Kaivopuiston tähtitornin tärkeä tehtävä '
+            + 'tähtien tarkkailun lisäksi 1800-luvulla?',
+        vaihtoehdot: [
+          'Se toimi Helsingin ainoana kellotehtaana',
+          'Se määritti kaupungille tarkan paikallisajan ja koordinaatit',
+          'Se toimi meripelastuksen tähystyspaikkana',
+          'Se oli Suomen ensimmäinen sääasema',
+        ],
+        oikea: 1,
+        fakta: 'Tähtitorni määritti Helsingille tarkan paikallisajan ja '
+            + 'maantieteelliset koordinaatit, joita tarvittiin sekä '
+            + 'laivaliikenteessä että maanmittauksessa.',
+      },
+    },
   ],
   /*
    * TAMPERE (17.8.2026). Lehti on tehty Kööpenhaminan mallin mukaan:
@@ -17111,6 +17609,79 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * TAIDE (27.9.2026, Eurooppa-erä 8). MAA_KATEGORIAT[RUS]:n
+     * taide-nostot (Verikirkko, Pähkinänsärkijän ensi-ilta) ovat jo
+     * kaupungin omassa NAHTAVYYSJUTUT-listassa ('Verikirkko',
+     * 'Mariinski-teatteri') — Eremitaasin kokoelman synty on eri
+     * kohde, ei päällekkäinen.
+     */
+    {
+      id: 'taide',
+      nimi: 'Taide',
+      johdanto: 'Keisarinna osti sata kaksikymmentäviisi maalausta '
+          + 'Preussille kelvanneena hylkytavarana, ja niistä kasvoi '
+          + 'maailman suurimpia museoita.',
+      nostot: [
+        {
+          otsikko: 'Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle',
+          aika: '1764',
+          tiedosto: 'Argunov Catherine the Great.jpg',
+          teksti: 'Berliiniläinen kauppias Johann Ernst Gotzkowsky oli '
+            + 'koonnut 225 maalauksen kokoelman Preussin kuningas '
+            + 'Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen '
+            + 'kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. '
+            + 'Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko '
+            + 'kokoelman velan kuittaukseksi ja ripusti taulut '
+            + 'yksityiseen siipirakennukseensa Talvipalatsin vieressä — '
+            + 'rakennus sai nimen Eremitaasi, erakon asunto, koska sinne '
+            + 'pääsivät vain harvat kutsutut. Tästä ostosta syntyi '
+            + 'kokoelma, joka on nykyään yksi maailman suurimpia '
+            + 'taidemuseoita.',
+          lyhyt: 'Katariina Suuri osti 1764 preussilaiselta kauppiaalta '
+            + '225 maalausta, joista Eremitaasin kokoelma syntyi.',
+          selite: 'Katariina Suuri osti vuonna 1764 kauppias '
+            + 'Gotzkowskylta 225 maalausta, joista Eremitaasin '
+            + 'taidekokoelma sai alkunsa.',
+          lahde: 'Ivan Argunov, Wikimedia Commons (public domain)',
+          wiki: 'Hermitage Museum',
+        },
+        {
+          otsikko: 'Erakon kokoelma avattiin lopulta yleisölle',
+          aika: '1852',
+          tiedosto: 'Hermitage Museum - 2015 Dec - IMG 2027.jpg',
+          teksti: 'Lähes sata vuotta Eremitaasin kokoelma oli varattu '
+            + 'hoville ja harvoille kutsuvieraille — nimikin, erakon '
+            + 'asunto, kertoi kokoelman yksityisyydestä. Vasta 1852 '
+            + 'keisari Nikolai I avasi Uuden Eremitaasin rakennuksen '
+            + 'yleisölle, tosin aluksi tiukoin pääsyvaatimuksin: kävijän '
+            + 'piti pukeutua hännystakkiin. Isoisän matkan aikaan museo '
+            + 'on ollut avoinna jo kaksikymmentä vuotta, ja kokoelma '
+            + 'kasvaa koko ajan uusilla hankinnoilla ja lahjoituksilla.',
+          lyhyt: 'Eremitaasin sali; museo avattiin yleisölle vasta 1852, '
+            + 'lähes sata vuotta kokoelman perustamisen jälkeen.',
+          selite: 'Eremitaasin näyttelysali; museo avattiin yleisölle '
+            + 'vuonna 1852, lähes sata vuotta kokoelman perustamisen '
+            + 'jälkeen.',
+          lahde: 'Poudou99, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hermitage Museum',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Eremitaasin taidekokoelma sai alkunsa vuonna 1764?',
+        vaihtoehdot: [
+          'Katariina Suuri tilasi maalaukset suoraan taiteilijoilta',
+          'Katariina Suuri osti Preussin kuninkaalle kootun kokoelman '
+            + 'velan kuittaukseksi',
+          'Kokoelma perittiin Ruotsin kruunulta',
+          'Maalaukset ostettiin huutokaupasta Pariisista',
+        ],
+        oikea: 1,
+        fakta: 'Katariina Suuri osti vuonna 1764 kauppias Gotzkowskylta '
+            + '225 maalauksen kokoelman, joka oli alun perin koottu '
+            + 'Preussin kuninkaalle mutta jäi tältä maksamatta.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
@@ -18184,6 +18755,74 @@ export const KULTTUURI_KATEGORIAT = {
           + 'karhupari ei enää mahtunut palatsin puistoon.',
       },
     },
+    /*
+     * RUOKA (27.9.2026, Eurooppa-erä 9). MAA_KATEGORIAT[BGR]:ssa ei ole
+     * omaa ruoka-kategoriaa listattuna (vain luonto/historia/kulttuuri/
+     * menovinkit), joten ei päällekkäisyyttä. Ei myöskään NAHTAVYYSJUTUT-
+     * kohdetta samasta aiheesta.
+     */
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kaupungin vanhin tori on täynnä vihanneskasoja ja '
+          + 'juustotiskejä — ja se on ollut samalla paikalla jo '
+          + 'osmaniajasta asti.',
+      nostot: [
+        {
+          otsikko: 'Naisten tori on kaupungin vanhin kauppapaikka',
+          tiedosto: 'Sofia Zhenski Pazar October 2012 PD 03.jpg',
+          teksti: 'Zhenski pazar eli Naisten tori on Sofian vanhin ja '
+            + 'tunnetuin ulkoilmamarkkina, ja se sai nimensä siitä, että '
+            + 'naiset kävivät siellä perinteisesti hoitamassa perheen '
+            + 'päivittäiset ostokset. Kauppapaikka on ollut samalla '
+            + 'kadulla jo osmaniajalta asti, ja nykyään sen kojuissa '
+            + 'myydään kaikkea tuoreista vihanneksista ja hedelmistä '
+            + 'bulgarialaiseen valkoiseen juustoon, siriseen ja kuivattuihin '
+            + 'yrtteihin. Tori on yhä keskustan asukkaiden arkinen '
+            + 'ruokakauppa, ei turistinähtävyys.',
+          lyhyt: 'Zhenski pazarin kojuissa myydään tuoretta vihannesta, '
+            + 'hedelmää ja bulgarialaista juustoa keskellä Sofiaa.',
+          selite: 'Zhenski pazar eli Naisten tori on Sofian vanhin '
+            + 'ulkoilmamarkkina; kojuissa myydään tuoretta vihannesta, '
+            + 'hedelmää ja bulgarialaista juustoa.',
+          lahde: 'Bin im Garten, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Zhenski pazar',
+        },
+        {
+          otsikko: 'Bakteeri sai nimensä Bulgariasta',
+          tiedosto: 'Bulgarian yogurt 2015.jpg',
+          teksti: 'Perinteinen bulgarialainen jogurtti, kiselo mlyako, '
+            + 'käy paksuksi bakteerilla, joka sai tieteellisen nimensä '
+            + '"Lactobacillus bulgaricus" juuri Bulgarian mukaan — '
+            + 'bulgarialainen lääketieteen opiskelija Stamen Grigorov '
+            + 'tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti '
+            + 'oli tunnettu Balkanilla vuosisatoja ennen sitä, ja '
+            + 'perinteisesti sitä tehdään lampaanmaidosta savisissa '
+            + 'astioissa. Zhenski pazarin juustotiskeiltä sitä saa yhä '
+            + 'suoraan valmistajilta.',
+          lyhyt: 'Perinteinen bulgarialainen jogurtti; sen käymisbakteeri '
+            + 'sai tieteellisen nimensä Bulgarian mukaan 1905.',
+          selite: 'Perinteinen bulgarialainen jogurtti, kiselo mlyako; sen '
+            + 'käymisbakteeri "Lactobacillus bulgaricus" sai nimensä '
+            + 'Bulgarian mukaan, kun Stamen Grigorov tunnisti sen 1905.',
+          lahde: 'Biser Todorov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lactobacillus delbrueckii subsp. bulgaricus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Zhenski pazar eli Naisten tori sai nimensä?',
+        vaihtoehdot: [
+          'Sen perusti bulgarialainen naisyrittäjä 1900-luvulla',
+          'Naiset kävivät siellä perinteisesti perheen päivittäiset ostokset',
+          'Torilla saivat kaupankäydä vain naiset osmaniaikana',
+          'Se on nimetty Bulgarian ensimmäisen naispuolisen pormestarin mukaan',
+        ],
+        oikea: 1,
+        fakta: 'Zhenski pazar sai nimensä siitä, että naiset kävivät '
+            + 'siellä perinteisesti hoitamassa perheen päivittäiset '
+            + 'ostokset.',
+      },
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -18646,6 +19285,79 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Carol Szathmari 1854, Wikimedia Commons (public domain)',
         },
       ],
+    },
+    /*
+     * HISTORIA (27.9.2026, Eurooppa-erä 8). MAA_KATEGORIAT[ROU]:n
+     * historia-nostot ovat Transilvanian linnoista ja Vlad Seponaan
+     * liittyviä — ei kosketa Bukarestin riemukaarta tai Calea
+     * Victorieita. Ei päällekkäisyyttä kaupungin omien
+     * NAHTAVYYSJUTUT-kohteiden (Parlamenttipalatsi, Romanian
+     * ateneum jne.) kanssa — nämä ovat eri rakennuksia.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Sotilaat marssivat kotiin puisen riemukaaren ali vuonna '
+          + '1878, ja kaupunki alkoi kutsua itseään Pieneksi Pariisiksi.',
+      nostot: [
+        {
+          otsikko: 'Riemukaari pystytettiin viikoissa sotilaita varten',
+          aika: '1878',
+          tiedosto: 'Arcul de Triumf.JPG',
+          teksti: 'Vuonna 1878 Romania sai lopulta täyden itsenäisyytensä '
+            + 'Osmanivallasta Berliinin sopimuksessa Venäjän-Turkin sodan '
+            + 'jälkeen. Kun voitokkaat joukot palasivat Bukarestiin, '
+            + 'kaupunkiin pystytettiin nopeasti puinen ja kipsinen '
+            + 'riemukaari, jonka alta rivistöt marssivat juhlakulkueessa. '
+            + 'Väliaikainen kaari lahosi vuosien myötä ja korvattiin '
+            + 'myöhemmin uusilla versioilla — nykyinen, kivinen Arcul de '
+            + 'Triumf valmistui vasta 1930-luvulla — mutta ensimmäinen '
+            + 'kaari vuodelta 1878 loi perinteen, joka jatkuu yhä samalla '
+            + 'paikalla.',
+          lyhyt: 'Nykyinen kivinen Arcul de Triumf seisoo samalla '
+            + 'paikalla kuin vuoden 1878 väliaikainen puinen riemukaari.',
+          selite: 'Bukarestin Arcul de Triumf seisoo samalla paikalla '
+            + 'kuin ensimmäinen, vuonna 1878 pystytetty väliaikainen '
+            + 'puinen riemukaari.',
+          lahde: 'Vaivoda Vlad, Wikimedia Commons (CC BY-SA 3.0 ro)',
+          wiki: 'Arcul de Triumf',
+        },
+        {
+          otsikko: 'Voitonkadusta tuli Pikku Pariisin sydän',
+          aika: 'n. 1900',
+          tiedosto: 'Calea Victoriei around 1900.jpg',
+          teksti: 'Bukarestin pääkatu tunnettiin pitkään nimellä Podul '
+            + 'Mogoșoaiei, kunnes se nimettiin uudelleen Calea '
+            + 'Victorieiksi eli Voitonkaduksi vuoden 1878 '
+            + 'itsenäisyysvoiton kunniaksi. Kadun varrelle nousi '
+            + 'vuosikymmenten kuluessa ranskalaistyylisiä palatseja, '
+            + 'kauppoja ja kahviloita, ja kaupunki alkoi saada '
+            + 'lempinimen "Micul Paris", Pieni Pariisi — osittain siksi, '
+            + 'että moni romanialainen arkkitehti oli opiskellut juuri '
+            + 'Pariisissa.',
+          lyhyt: 'Calea Victoriei noin vuonna 1900; kadun ranskalaisvaikutteinen '
+            + 'arkkitehtuuri antoi Bukarestille lempinimen Pieni Pariisi.',
+          selite: 'Calea Victoriei noin vuonna 1900; kadun '
+            + 'ranskalaisvaikutteinen arkkitehtuuri antoi Bukarestille '
+            + 'lempinimen "Micul Paris", Pieni Pariisi.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+          wiki: 'Calea Victoriei',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä tapahtuman kunniaksi Bukarestin pääkatu nimettiin '
+            + 'Calea Victorieiksi eli Voitonkaduksi?',
+        vaihtoehdot: [
+          'Vuoden 1848 vallankumouksen',
+          'Vuoden 1878 itsenäisyysvoiton Berliinin sopimuksessa',
+          'Ensimmäisen maailmansodan päättymisen',
+          'Bukarestin valinnan pääkaupungiksi 1862',
+        ],
+        oikea: 1,
+        fakta: 'Katu nimettiin Calea Victorieiksi Romanian täyden '
+            + 'itsenäisyyden voiton kunniaksi Berliinin sopimuksessa '
+            + '1878.',
+      },
     },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
@@ -24472,7 +25184,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Pieni maa sai Nobelin',
-          tiedosto: 'Halldór Kiljan Laxness 1955.jpg',
+          tiedosto: 'Uitreiking Nobelprijzen door koning Gustaaf Adolf van Zweden , De prijswinnaars , Bestanddeelnr 907-4970.jpg',
           teksti: 'Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955. Hänen '
             + 'kirjansa kertovat tavallisista islantilaisista: lampaista, '
             + 'sitkeydestä ja köyhyydestä, mutta niin että lukija nauraa ja '
@@ -24481,11 +25193,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ottamaan apua keneltäkään. Kun palkinto tuli, maassa oli alle '
             + 'sataseitsemänkymmentätuhatta asukasta — pienin maa, josta '
             + 'kirjallisuuden Nobel oli siihen asti tullut.',
-          lyhyt: 'Halldór Laxness sai kirjallisuuden Nobelin 1955, jolloin Islannissa oli alle 170 000 asukasta.',
-          selite: 'Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955, '
-            + 'jolloin Islannissa oli alle sataseitsemänkymmentätuhatta '
-            + 'asukasta.',
-          lahde: 'Nobel-säätiö, Wikimedia Commons (public domain)',
+          lyhyt: 'Vuoden 1955 Nobel-palkinnonsaajat Ruotsin kuningas Kustaa Aadolfin luona — Laxness istuu joukossa.',
+          selite: 'Vuoden 1955 Nobel-palkinnonsaajat Tukholmassa; Laxness '
+            + 'istuu ryhmässä kirjallisuuden Nobelin saajana.',
+          lahde: 'Wim van Rossem / Anefo, Wikimedia Commons (CC0)',
           wiki: 'Halldór Laxness',
         },
       ],
@@ -25834,7 +26545,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Ritarit narujen varassa',
-          tiedosto: 'Sicilian puppets.JPG',
+          tiedosto: 'Pupi siciliani.jpg',
           teksti: 'Opera dei pupi on sisilialainen nukketeatteri, jossa metrin '
             + 'mittaiset haarniskoidut ritarit taistelevat Kaarle Suuren '
             + 'tarinoissa. Sama tarina jatkui iltaa toisensa jälkeen '
@@ -25843,7 +26554,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Opera dei pupin haarniskoidut nuket painavat jopa kymmenen kiloa ja niitä ohjataan ylhäältä.',
           selite: 'Opera dei pupin haarniskoidut ritarinuket painavat jopa '
             + 'kymmenen kiloa, ja niitä ohjataan rautatangoilla ylhäältä.',
-          lahde: 'Lookandlike, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: 'Harvey Barrison, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Opera dei pupi',
         },
         {
