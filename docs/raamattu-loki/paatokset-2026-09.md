@@ -7947,3 +7947,7 @@ Omistaja 09.2x: striimiluenta taukoilee vahan valia ja hyppii eteenpain (virkkei
 ## OMISTAJA 09.2x (SITOVA): STRIIMIPUHE EI OLE SIDOTTU AANIKYTKIMIIN — AINA PAALLA, LAHTEE VAIN PYYNNOSTA (27.9.2026 klo 09.20)
 
 Omistaja 09.2x sitova: striimipuhe (Pulun vastauksen luenta) ei saa olla sidottu mihinkaan aanitogleen (Kertoja, Musiikki, Aanimaisema, mykistys) — aina paalla, koska lahtee vain pelaajan pyynnosta; vain Pulun oma kaiutinvipu ohjaa. Web: js/lukija.js lueVirtana aanetPaalla()-portti pois (Pelikoodari, samaan P1-korjaukseen); natiivi: Natiivi-UI poistaa portit Pulu-luentapolulta 1.0.29. Raamattuun seuraavassa Raamattu-PR:ssa (LUKIJAAANI/PULU-osio).
+
+## TF 1.0.28 TESTFLIGHTISSA (BUILD 28, PROTO 7788b629, AJO 36299333927) (27.9.2026 klo 09.20)
+
+Julkaisija 09.19: TF 1.0.28 lahetetty ja ASC:ssa kasitelty, CFBundleVersion 202609270611, proto 7788b629, laskuri 28. Push omistajalle 09.2x. Seuraava 1.0.29: meri 10 lajia, nostot-heti 934103a9, maakuntaeteneminen/salaisuudet/alkuanimaatio pois, striimipuhe ilman aanikytkimia, lahitaso LOD0, avauskortti natiiviin, Brugge/Matterhorn/Hohensalzburg.
