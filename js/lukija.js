@@ -1367,13 +1367,15 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
       paivitaOhjain(merkki, t);
       seuranta?.paivita(t);
     },
-    onVirhe: (vaihe) => {
+    onVirhe: (vaihe, virhe) => {
       if (ajossa?.merkki !== merkki) return;
       ajossa = null;
       seuranta?.pura();
       merkitseTila(nappi, false);
       suljeOhjain();
-      if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu, persoona)) return;
+      // Raja tai palvelinvirhe: pysähdys ja viesti, ei laitteen ääntä.
+      if (virhe?.pysayttaa) ilmoitaPuhevirhe(virhe);
+      else if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu, persoona)) return;
       kunLoppuu?.();
     },
   });
@@ -1660,6 +1662,25 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
  * kuunnella kaiuttimesta uudestaan (se polku kulkee lueAaneen kautta
  * varapolkuineen).
  */
+/*
+ * PUHEVIRHE KERRAN (27.9.2026): workerin 429-viesti ("Lukijaääni on lukenut
+ * sinulle jo pitkään tänään…") tai 5xx näytetään pelaajalle kerran
+ * istunnossa per syy. Tapahtuman näyttää js/ui.js (PUHEVIRHE_TAPAHTUMA).
+ */
+export const PUHEVIRHE_TAPAHTUMA = 'matkakirja-puhevirhe';
+const PUHEVIRHE_OLETUS = 'Lukijaääni ei nyt vastaa. Kokeile hetken päästä uudelleen.';
+const ilmoitetutPuhevirheet = new Set();
+
+function ilmoitaPuhevirhe(virhe) {
+  const syy = virhe?.status === 429 ? 'raja' : 'palvelin';
+  if (ilmoitetutPuhevirheet.has(syy)) return;
+  ilmoitetutPuhevirheet.add(syy);
+  const viesti = virhe?.viesti || PUHEVIRHE_OLETUS;
+  try {
+    document.dispatchEvent(new CustomEvent(PUHEVIRHE_TAPAHTUMA, { detail: { syy, viesti } }));
+  } catch { /* ei dokumenttia (testit) */ }
+}
+
 function puheVirtana(nappi, persoona, vapautaVaisto = null) {
   if (!puheTuettu()) return null;
   const merkki = {};
@@ -1676,7 +1697,10 @@ function puheVirtana(nappi, persoona, vapautaVaisto = null) {
     // Striimattu vastaus on yksi puheenvuoro: virkeväli, ei kappaleväliä.
     yksiPuheenvuoro: true,
     onLoppu: loppui,
-    onVirhe: () => loppui(),
+    onVirhe: (vaihe, virhe) => {
+      if (virhe?.pysayttaa && ajossa?.merkki === merkki) ilmoitaPuhevirhe(virhe);
+      loppui();
+    },
   });
   if (!soitin) return null;
   ajossa = {
