@@ -11,15 +11,21 @@ voimassa.
 - docs/raportit/elava-kartta-suunnitelma-20260926.md (Elävä kartta, omistajan päätös 26.9.) ja
   docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md (taustapäivitys, hyväksytty 25.9.).
 
-## Tila (päivitetty 27.9. klo 17.2x) — pallo-Z10 VALMIS
+## Tila (päivitetty 27.9. klo 18.5x) — KESKEN: skeema 1.52 mediaKuvat (#3432)
 
-1–3. **Pallo-Z10 tuotannossa v238 (skeema 1.51, #3395 merge d09607ef4).** Z10 omassa avaimessa (Natiivisepän ehdotus
-   ja kuittaus): lahteet.rasteri.kaupunkiRasteri {tasot [10], laattoja 13 856} ja maat.<ISO>.kaupunkiRasteri["10"],
-   laattoja/tavuja.kaupunkiRasteri (ei yht:ssä); rasteri, maxzoom 9, kaupunkitaso [9] ennallaan → vanhat buildit
-   eivät lataa Z10:tä. 117 maata, ~183 Mt, Z10-keskitavut 13 075 (kaikki 13 856 laattaa 200). Natiivi lukee ja
-   piirtää 1.0.31:stä. Worktree wt/siirtoseppa-pallo-z10 voi poistaa (uw.sh --poista).
+1. **Euroopan eheystarkistus (Fable 27.9.) valmis:** raportti docs/raportit/siirtoseppa-eurooppa-eheys-20260927.md
+   (#3434 mainissa). Löydökset lähetetty Sisältökirjurille (Nouméa, Antikythera, 23 miniatyyriä, 7 TIFFiä, Luxemburg,
+   pienet kuvat); Pelikoodarille ei löydöksiä. Flickr-korjaus #3427 tuotannossa v241 (53 kuvaa ämpäristä, 200).
+2. **#3432 (luonnos, worktree wt/siirtoseppa-offline-omat-urlit, head 76dc4028e):** skeema 1.52 maat.*.mediaKuvat
+   [{url, pieni?}] + tavuja.mediaKuvat (ei yht:ssä), pienennetyt kuvat pieni/<avain>.jpg|png (tools/vienti/mediakuvat.mjs,
+   mediakuvat.json; CI-vaihe "Pienennä ja vie mediaKuvat" vie-sisalto.yml:ssä), katto 100 Mt/maa (Fable), merentakaiset
+   alueet BMU/FLK/GUF/NCL omiksi kohteiksi (Fable: VAIN EUROOPPA maantieteellinen), maaston keskitavut z7–z12 päivitetty.
+   ODOTTAA Natiivisepän kuittausta (kysytty: maat-avain ilman countryShapes-muotoa, siirto- vai levykoko). Sitten
+   gh pr ready → Julkaisijan juna → ensimmäinen CI-vienti tekee ~3 570 pientä → tarkista ämpäri → rivi Fablelle ja
+   Natiivisepälle (todentaa lentotilassa 1.0.32).
+3. Puhetta EI koskaan pyydetä workerilta (Fable 27.9.): vain ämpärissä olevat tiedostot.
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
-   Tuotanto nyt **1.x v238** (1.51). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
+   Tuotanto nyt **1.x v241+** (1.51). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
 5. **Pelikoodarin pyyntö (27.9. klo 11.3x), #3394 (main v2314) sääntövakiot:** START_MONEY 300 → 400, STRANDED_AID
    poistui, uudet PAIVAKULU_RUOKA 8, PAIVAKULU_MAJOITUS 12, HINTATASON_KERTOIMET, RAHATTOMUUS_VUOROJA 8 ja data
