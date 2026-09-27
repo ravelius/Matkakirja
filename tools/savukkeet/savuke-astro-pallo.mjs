@@ -56,7 +56,7 @@
  *      Kun requestAnimationFrame lakkaa kutsumasta takaisin linssin
  *      avautuessa, syntyy TÄSMÄLLEEN Codexin kuva: ruskea tyhjä ruutu,
  *      `vartija puute=pisteet pisteita=0`. Kehysvahdin on pakotettava
- *      piirto ajastimesta, jolloin pallo ja 64 pistettä tulevat silti.
+ *      piirto ajastimesta, jolloin pallo ja kaikki kohdepisteet tulevat silti.
  *  10c. MUSTA PINTA HUOMATAAN JA KORJATAAN. Kun kangas valehtelee
  *      (drawImage ei piirrä, getImageData antaa uskottavia pikseleitä),
  *      pinnasta tulee musta. Mittauksen on nähtävä se PIIRTOPUSKURISTA
@@ -90,9 +90,18 @@ import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
+import { SATELLIITTI_KOHTEET } from '../../js/linssit/satelliitti-data.js';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
+/*
+ * ODOTETTU PISTEMÄÄRÄ luetaan samasta datasta kuin linssi
+ * (js/linssit/satelliitti.js: kohteet, joilla on havaintoja). Kiinteä
+ * 64 vanheni, kun Astronautin kamera -erät 1–7 (9da80d49a v2276 …
+ * baaf78dbd v2300) kasvattivat kohteet 64 → 189 — savuke punastui
+ * vaikka pisteet tulivat DOMiin kaikki (pistemittari domissa=189).
+ */
+const ODOTETUT_PISTEET = SATELLIITTI_KOHTEET.filter((k) => (k.havainnot ?? []).length).length;
 if (ULOS) mkdirSync(ULOS, { recursive: true });
 
 const MIME = {
@@ -2899,8 +2908,8 @@ async function ajaSafarinRajatMacissa() {
       pinnanKirkkaus: kahva?.avaruus?.tila?.()?.pinnanKirkkaus ?? null,
     };
   });
-  vaadi('SAFARIN RAJAT: vartija ei näe puutetta ja pisteitä on 64',
-    tila.puute === 'ei' && tila.pisteita === 64,
+  vaadi(`SAFARIN RAJAT: vartija ei näe puutetta ja pisteitä on ${ODOTETUT_PISTEET}`,
+    tila.puute === 'ei' && tila.pisteita === ODOTETUT_PISTEET,
     `puute ${tila.puute}, pisteitä ${tila.pisteita}, pinnan kirkkaus ${tila.pinnanKirkkaus}`);
   vaadi('SAFARIN RAJAT: ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 2).join(' | '));
   if (ULOS) {
@@ -2941,7 +2950,7 @@ async function ajaKehyksetPoikki() {
     };
   });
   vaadi('KEHYKSET POIKKI: kohdepisteet tulevat silti DOMiin',
-    tila.pisteita === 64,
+    tila.pisteita === ODOTETUT_PISTEET,
     `pisteitä ${tila.pisteita}, puute ${tila.puute}, kehykset ${JSON.stringify(tila.kehykset)}`);
   vaadi('KEHYKSET POIKKI: kehysvahti pakotti piirron',
     Number(tila.kehykset?.pakotettuja) > 0 && Number(tila.kehykset?.kehyksia) > 0,
@@ -3157,13 +3166,13 @@ async function ajaMacVastakoe() {
    * mutta ne eivät ole kynnys (ks. PISTEIDEN_TAVOITE_MAC_MS).
    */
   vaadi('VASTAKOE: kohdepisteet päätyvät DOMiin eikä pelaajalle jää ilmoitusta',
-    ennenVaihtoa.pisteAika !== null && ennenVaihtoa.pisteita === 64
+    ennenVaihtoa.pisteAika !== null && ennenVaihtoa.pisteita === ODOTETUT_PISTEET
       && !ennenVaihtoa.ilmoitus,
     `${viive} ms / ${kehysviive} kehystä aktivoinnista (Macin tavoite`
     + ` ${PISTEIDEN_TAVOITE_MAC_MS} ms tarkistetaan Mac-ajossa),`
     + ` pisteitä ${ennenVaihtoa.pisteita}, ilmoitus ${ennenVaihtoa.ilmoitus}`);
   vaadi('VASTAKOE: pisteet pysyvät pinnan vaihdon yli',
-    jalkeen.pisteita === 64 && jalkeen.reliefi === true,
+    jalkeen.pisteita === ODOTETUT_PISTEET && jalkeen.reliefi === true,
     `ennen ${ennenVaihtoa.pisteita}, jälkeen ${jalkeen.pisteita}, reliefi ${jalkeen.reliefi}`);
   vaadi('VASTAKOE: ehjässä ajossa ei mustaa pintaa eikä varapolkua',
     jalkeen.varapolku === false && Number(jalkeen.pinnanKirkkaus) > 20 && jalkeen.puute === 'ei',
