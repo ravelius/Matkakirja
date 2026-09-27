@@ -6,6 +6,18 @@ Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab. S = /private/tmp/claude
 74aa735c-cd53-4417-8c06-91819a4a5f3a/scratchpad (skriptit ottavat S:n ympäristöstä; päivitä polku uudessa sessiossa).
 Jos sait nollauksen jälkeen vanhoja viestejä tai agenttien raportteja, ne kuuluvat alla oleviin eriin.*
 
+## PÄIVITYS 10.4x (keskustelu 1aa2bb77)
+
+- **Fablen päätökset 10.3x:** (1) Matterhorn v2 hoikemmalla koukkuhuipulla ennen erikoismallit3:n merge-pyyntöä + nimiö pois
+  mallin päältä (Natiivisepälle pyydetty nimiön väistö 10.3x); (2) saapumisessa pelin pysyvät kerrokset näkyviin → tehty
+  linssiseppa/maakunta-taytto **abfb54e5** (Natiivisepälle ilmoitettu uusi kärki); (3) meri- ja maakunta-merge-pyynnöt ok.
+- **Lähitaso VALMIS kaikille:** mallinseppa/lahitaso **eb536d5c** = 9 erikoismallia + 14 symbolia (Stonehengen lampaiden korjaus
+  f1b05047 mukana). Merge-pyyntö vasta Matterhorn v2:n jälkeen (lahitaso sisältää erikoismallit3:n).
+- **Matterhorn v2:** Matterhorn-agentti (harness mallinseppa-esikatselu-e) tekee v2:n + Lahin + vertailukuvan
+  kuvat/matterhorn-v1-v2.png → kopioi Matterhorn.cs proto-lahitaso-worktreehen JA erikoismallit3:een (proto-mallinseppa).
+- **Klo 11 ikkuna:** $S/ajo-era5.sh taustalla (odottaa 11.02 ja Natiivi-UI:n käännöstä, sitten käännös era5 + ajo lokit/
+  mallinseppa-laite-20260927-j: saapuminen odotuksella, lähitaso Brandenburg/Segovia/Stonehenge, symbolit Kreikassa).
+
 ## PÄIVITYS 10.3x (keskustelu 1aa2bb77)
 
 - **MERGE-PYYNNÖT Natiivisepälle 10.2x:** linssiseppa/meri-tuotanto **0a9fdba5** ja linssiseppa/maakunta-taytto **643a5ff9**
