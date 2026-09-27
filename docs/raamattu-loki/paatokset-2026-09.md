@@ -7863,3 +7863,7 @@ Linssiseppa 08.0x: meren tuotantorunko todennettu laitteella (kaannos 54201ed2):
 ## Z10-KATKOKSEN KORJAUS PR 3376 (VERSIOVAHDIN HOLLENNYS, pohja.kopio); JARJESTYS #3376+#3371 → PAGES → OSOITIN (27.9.2026 klo 08.05)
 
 Karttaseppa 08.0x: pallon lepokerroksen katkoksen korjaus PR #3376 — vahti hyvaksyy luettelon, jonka pohja.kopio = { versio: pallon versio, tasot z0–z8 } (s-pohjan z0–z8 on tavulleen pohja 26; uusi pallosarja olisi identtinen mutta pakottaisi kaikki lataamaan pallolaatat uudelleen). Fable hyvaksyi jarjestyksen: #3376 + #3371 junaan → Pages → osoitin sarja = 2026-09-26s → savuke. Natiivisepalta kysytty, onko natiivissa sama vahti.
+
+## LINSSISEPPA NOLLATTU JA KAYNNISTETTY 08.1x (LUOVUTUS -L) (27.9.2026 klo 08.06)
+
+Linssiseppa nollattu 08.1x (79 % → tyhja), aloitusviesti: luovutus -l, meri 8 lajia, BEL/CHE/AUT, lahitaso LOD0 kuvaparit ensin. Julkaisija sai luvan: #3376 + #3371 junaan → Pages → osoitin 2026-09-26s, ehtona Natiivisepan vastaus natiivin versiovahdista.
