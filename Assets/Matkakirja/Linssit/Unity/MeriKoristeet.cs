@@ -41,6 +41,8 @@ namespace Matkakirja.Natiivi
             public Kohta Ankkuri;
             public bool AnkkuriAsetettu;
             public float SiirtoPt;
+            /// <summary>Maiden määrä, joissa laji on mahdollinen (arvonnan paino 1 / Maita), lasketaan latauksessa.</summary>
+            public int Maita;
         }
 
         public struct Kohta
@@ -100,6 +102,11 @@ namespace Matkakirja.Natiivi
                     }
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA meren koristeet: merikohdat.json ei jäsenny: " + e.Message); }
+            foreach (var l in Lajit)
+            {
+                l.Maita = 0;
+                foreach (var lista in tulos.Values) foreach (var k in lista) if (Sallittu(l, k)) { l.Maita++; break; }
+            }
             kohdat = tulos;
             ladataan = false;
             Debug.Log($"MATKAKIRJA meren koristeet: merikohdat {tulos.Count} maata, {KohtiaYhteensa} kohtaa");
@@ -132,10 +139,16 @@ namespace Matkakirja.Natiivi
                 if (l.Harvinainen) { l.Valittu = true; continue; }
                 foreach (var k in lista) if (Sallittu(l, k)) { ehdokkaat.Add(l); break; }
             }
+            // Painotettu arvonta: paino 1 / niiden maiden määrä, joissa laji on mahdollinen, joten harvinaisempien merien
+            // lajit (jäävuori, valas, majakkalaiva) päätyvät omille rannikoilleen eivätkä huku yleislajien alle.
             uint h = Siemen(maa);
             for (int i = 0; i < 2 && ehdokkaat.Count > 0; i++)
             {
-                int j = (int)(h % (uint)ehdokkaat.Count);
+                float yht = 0f;
+                foreach (var e in ehdokkaat) yht += 1f / Math.Max(1, e.Maita);
+                float r = h % 1000003u / 1000003f * yht;
+                int j = 0;
+                while (j < ehdokkaat.Count - 1 && r >= 1f / Math.Max(1, ehdokkaat[j].Maita)) { r -= 1f / Math.Max(1, ehdokkaat[j].Maita); j++; }
                 ehdokkaat[j].Valittu = true;
                 ehdokkaat.RemoveAt(j);
                 h = h / 7u + 1013904223u;
