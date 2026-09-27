@@ -7959,3 +7959,7 @@ Pelikoodari 09.2x: progressiivinen soitto #3384 (v2307): mp3 kehysrajoilta segme
 ## OMISTAJA 09.3x: STRIIMI KORJAUTUI TF 1.0.28:SSA — VIKA OLI NATIIVIN 1.0.27, P1 PURETTU (27.9.2026 klo 09.22)
 
 Omistaja 09.3x: striimiluenta korjautui uudessa buildissa (TF 1.0.28, lukija-putki) — 09.2x:n taukoilu/hyppiminen oli natiivin 1.0.27. P1 purettu; puheen paivarajan nosto ja 429-kasittely (ei ohiteta virketta aanetta) tehdaan normaalina PR:na. Pelikoodarin jarjestys: raja-PR → maakuntaera (mannerlennot jaavat) → natiivin progressiivisen soiton speksi → luovutus + nollaus.
+
+## OMISTAJA 09.3x (SITOVA): NOSTOJEN STRIIMILUENTA — NOPEUSSAATO, JATKO SAMASTA KOHDASTA, VILKKUVA KAIUTIN TAUOLLA, RATAS VASEMMALLA, VU-KAIUTTIMET OIKEALLA (27.9.2026 klo 09.27)
+
+Omistaja 09.3x: 1) striimipuheen nopeus saadettavissa (xAI speed); 2) nostojen luenta jatkuu samasta kohdasta jos sen keskeyttaa (tauko/jatka, ei alusta); 3) keskeytettyna kaiutinsymboli vilkkuu kevyesti; 4) kaiuttimen vasemmalle puolelle pieni saatoratas, josta nopeus saadetaan; 5) oikealle puolelle kolme kaiutinsymbolia sykkimaan VU-mittarina kuten isoisan luennassa. Web Pelikoodari (nollauksen jalkeen ensimmaisena), natiivi Natiivi-UI webin mallin mukaan 1.0.29/1.0.30.
