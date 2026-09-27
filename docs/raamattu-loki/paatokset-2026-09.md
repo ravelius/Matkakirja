@@ -7823,3 +7823,7 @@ Omistaja 07.4x "Haluan nahda nuo pelissa": TF 1.0.28 tanaan mahdollisimman pian;
 ## Z10 TUOTANNOSSA 07.32 (OSOITIN 2026-09-26s-pohja, TASOT 0–10); LAITETESTAAJAN 1.0.28-RESEPTI 9ccb50e5a; #3206 REBASETTU (27.9.2026 klo 07.39)
 
 Karttaseppa 07.4x: Z10 tuotannossa, osoitin vaihdettu 07.32, CDN:n pyramidi.json versio 2026-09-26s-pohja tasot 0–10, varmuuskopio pyramidi-20260927-0732.json; nayte tuotannosta z10-tuotanto-8-maata-20260927.png omistajalle; #3371 (PELIN_SYVIN_TASO 10) Julkaisijan jonossa. Laitetestaaja: 1.0.28-resepti 8 kohdetta (9ccb50e5a); Kinderdijkin mylly vain mallinseppa/erikoismallit2 01810d0c:ssa → 1.0.28 ilman sita (yleinen kynnyskorjaus testataan), era 2 tulee 1.0.29:aan. Sisaltokirjuri: #3206 turistiopas era 19 rebasettu (4437/4437), astro era 7 tyossa.
+
+## PULUN VIRKEVALI 220 ms (#3374 v2299); PELIKOODARILLE WEBIN ZOOMIKATTO Z10-SELVITYS (27.9.2026 klo 07.42)
+
+Pelikoodari 07.4x: Pulun striimivirkkeiden vali 450 → 220 ms, #3374 (v2299) junassa, mitattu tuotannon workerilla. Fable antoi seuraavan eran: webin zoomikaton nosto kaupunkien lahizoomissa z10:een (#3371:n jalkeen) — mittaus laatta- ja siirtomaarista, kuvapari Pariisi z9 vs z10, suositus Fablelle ennen tuotantoa; savukkeeseen x-puhe-moottori = xai -tarkistus.
