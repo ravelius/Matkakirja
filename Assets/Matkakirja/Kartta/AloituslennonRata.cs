@@ -245,7 +245,7 @@ namespace Matkakirja
         /// <summary>
         /// Lennon laatat (LennonV3Kaytava.Laatta): ALKU (odotus odottaa ne kokonaan) = lähtökaupungin lähikuva Z7–Z9 ±1
         /// ensimmäiseltä 25 km:ltä ja koko reitin matkanäkymä Z4–Z5 ±1; LOPUT = reitin päiden Z6 ±1 (10 %) ja kohteen lasku
-        /// Z7–Z9 ±1 viimeiseltä 80 km:ltä. Aloitusnäytön esilämmitys ottaa näistä Z8–Z9 (LennonV3Kaytava.Esilammitettavat).
+        /// Z7–Z9 ±1 viimeiseltä 80 km:ltä (40 km:n välein). Aloitusnäytön esilämmitys ottaa näistä Z8–Z9 (LennonV3Kaytava.Esilammitettavat).
         /// </summary>
         public static List<LennonV3Kaytava.Laatta> Laatat(double lat0, double lon0, double lat1, double lon1)
         {
@@ -260,7 +260,7 @@ namespace Matkakirja
             for (int i = 0; i <= 4; i++) Lisaa(i * 6_250.0 / L, true, 7, 8, 9);
             for (int i = 0; i <= 40; i++) Lisaa(i / 40.0, true, 4, 5);
             for (int i = 0; i <= 10; i++) { Lisaa(i * 0.01, false, 6); Lisaa(1 - i * 0.01, false, 6); }
-            for (int i = 0; i <= 8; i++) Lisaa(1 - i * 10_000.0 / L, false, 7, 8, 9);
+            for (int i = 0; i <= 2; i++) Lisaa(1 - i * 40_000.0 / L, false, 7, 8, 9);
             return tulos;
         }
 

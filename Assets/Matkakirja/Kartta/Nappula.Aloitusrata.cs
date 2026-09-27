@@ -37,8 +37,10 @@ namespace Matkakirja
         const double JalkiKorkeusM = 1800.0;
         /// <summary>Kuljetun osuuden ja edessä olevan reitin väri (lennon punainen kuten lähtö- ja kohdemerkit, web: punainen
         /// jälki) ja paksuus (pt).</summary>
-        static readonly Color JalkiVari = new Color(LentoPunainen.r, LentoPunainen.g, LentoPunainen.b, 0.9f),
-            EdessaVari = new Color(LentoPunainen.r, LentoPunainen.g, LentoPunainen.b, 0.5f);
+        /// (Ominaisuuksina eikä staattisina kenttinä: LentoPunainen on toisessa osatiedostossa, eikä kenttien alustusjärjestys
+        /// osatiedostojen välillä ole määritelty — kenttänä väri oli musta.)
+        static Color JalkiVari => new Color(LentoPunainen.r, LentoPunainen.g, LentoPunainen.b, 0.9f);
+        static Color EdessaVari => new Color(LentoPunainen.r, LentoPunainen.g, LentoPunainen.b, 0.5f);
         const float JalkiPt = 5.0f, EdessaPt = 2.2f;
 
         GameObject jalkiOlio, edessaOlio;
@@ -153,6 +155,65 @@ namespace Matkakirja
             m.SetFloat("_Peitto", peitto);
             m.SetVector("_Keskus", keskus);
             m.SetVector("_Katko", new Vector4(katko, 0.55f, 0, 0));
+        }
+
+        // ---- Ennakkokamera: lähikuvan ja laskun laatat Cesiumille ennen kuin kamera on siellä ----
+
+        /// <summary>Lähikuvan ja laskun ennakkoasennot (s radalla): Cesium valitsee laatat myös tälle kameralle.</summary>
+        public const double EnnakkoLahiS = 2.7, EnnakkoLaskuS = 12.5, EnnakkoVaihtoS = 3.6;
+
+        Camera ennakko;
+        readonly List<CesiumCameraManager> ennakkoHallinnat = new List<CesiumCameraManager>();
+
+        /// <summary>
+        /// ENNAKKOKAMERA (v1-video 27.9.: Lontoon lähikuva oli tyhjä ~3 s, koska Cesium valitsee laatat vain kameroille, ja
+        /// syöksy saapui lähikuvaan 2 s:ssa). Piirtämätön kamera (pois päältä, cullingMask 0) radan asentoon kaikkien
+        /// tilesettien CesiumCameraManager.additionalCamerasiin (native getAllCameras ei vaadi enabled-tilaa, ks. LiikeLaatat):
+        /// odotuksesta lähikuvaan asti lähikuvan asento, sitten laskun asento, perillä pois. Pääkamera pysyy valinnassa.
+        /// </summary>
+        void EnnakkoAsentoon(AloituslennonRata.Asento a, Camera paa)
+        {
+            if (paa == null || georeferenssi == null) return;
+            if (ennakko == null)
+            {
+                var go = new GameObject("Aloitusradan ennakkokamera");
+                ennakko = go.AddComponent<Camera>();
+                ennakko.enabled = false;
+                ennakko.cullingMask = 0;
+                ennakko.clearFlags = CameraClearFlags.Nothing;
+            }
+            if (ennakkoHallinnat.Count == 0)
+                foreach (var t in FindObjectsByType<Cesium3DTileset>(FindObjectsSortMode.None))
+                {
+                    var h = CesiumCameraManager.GetOrCreate(t.gameObject);
+                    if (h == null) continue;
+                    if (!h.additionalCameras.Contains(ennakko)) h.additionalCameras.Add(ennakko);
+                    ennakkoHallinnat.Add(h);
+                }
+            // Asento kuten PalloKierto.LaskeAsento (ilman maaston rakoa): kamera kiertää katsepistettä.
+            double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(a.Lon, a.Lat, a.Katse));
+            double3 ylos = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde);
+            double3 pohjoinen = math.normalize(new double3(0, 0, 1) - ylos * ylos.z);
+            double3 ita = math.normalize(math.cross(pohjoinen, ylos));
+            double b = math.radians(a.Suuntima), k = math.radians(a.Kallistus);
+            double3 eteen = pohjoinen * math.cos(b) + ita * math.sin(b);
+            double3 silma = kohde + (ylos * math.cos(k) - eteen * math.sin(k)) * a.EtaisyysM;
+            var gt = georeferenssi.transform;
+            var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(silma));
+            var q = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(kohde));
+            var yl = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(eteen * math.cos(k) + ylos * math.sin(k)));
+            ennakko.transform.SetPositionAndRotation(p, Quaternion.LookRotation(q - p, yl));
+            ennakko.rect = paa.rect;
+            ennakko.fieldOfView = paa.fieldOfView;
+            ennakko.aspect = paa.aspect;
+            ennakko.nearClipPlane = (float)math.max(50.0, a.EtaisyysM * 0.01);
+            ennakko.farClipPlane = (float)(a.EtaisyysM + 2.0 * CesiumWgs84Ellipsoid.GetMaximumRadius());
+        }
+
+        void EnnakkoPois()
+        {
+            foreach (var h in ennakkoHallinnat) if (h != null && ennakko != null) h.additionalCameras.Remove(ennakko);
+            ennakkoHallinnat.Clear();
         }
 
         void PoistaJalki()

@@ -181,6 +181,7 @@ namespace Matkakirja
         void V3Pois()
         {
             PoistaJalki();
+            EnnakkoPois();
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
             LentoV3Odotus = -1f;
             V3Aani = new LentoV3Aani { EtaisyysM = -1f };
@@ -286,6 +287,18 @@ namespace Matkakirja
             double maaKohteessa = merkit != null ? merkit.PisteenKorkeus(lat1, lon1) - merkit.nosto : double.NaN;
             if (double.IsNaN(maaKohteessa)) maaKohteessa = 0;
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
+            // Napautusnäkymä on radan alku: ei leikkausta (kamera lähtee levosta nykyisestä asennosta). Rata lasketaan jo
+            // odotuksen alussa, jotta ennakkokamera pyytää lähikuvan laatat odotuksen ja syöksyn aikana.
+            AloituslennonRata rata = null;
+            var napautus = default(AloituslennonRata.Asento);
+            if (rataPaalla)
+            {
+                napautus = new AloituslennonRata.Asento(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus,
+                    kierto.suuntima, kierto.katseKorkeus);
+                rata = new AloituslennonRata(lat0, lon0, lat1, lon1, napautus, (double)Screen.width / Mathf.Max(1, Screen.height),
+                    kamera != null ? kamera.fieldOfView : 50.0, maaKohteessa);
+                EnnakkoAsentoon(rata.Kamera(EnnakkoLahiS), kamera);
+            }
 
             // 1. ODOTUS: nykyinen näkymä elää (ei feidiä eikä verhoa), käytävä latautuu, moottori käynnistyy. Kone luodaan ja
             // piirretään jo nyt lähtöpaikassaan (esilämmitys: varjostin ja verkot ennen leikkausta; valintanäkymästä se on
@@ -349,14 +362,8 @@ namespace Matkakirja
             lahti?.Invoke();
             AsetaVaihe(LennonVaihe.Nousu);
             V3Tapahtuma("leikkaus");
-            AloituslennonRata rata = null;
-            if (rataPaalla)
+            if (rata != null)
             {
-                // Napautusnäkymä on radan alku: ei leikkausta (kamera lähtee levosta nykyisestä asennosta).
-                var napautus = new AloituslennonRata.Asento(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus,
-                    kierto.suuntima, kierto.katseKorkeus);
-                rata = new AloituslennonRata(lat0, lon0, lat1, lon1, napautus, (double)Screen.width / Mathf.Max(1, Screen.height),
-                    kamera != null ? kamera.fieldOfView : 50.0, maaKohteessa);
                 TeeJalki(lat0, lon0, lat1, lon1);
                 Debug.Log($"MATKAKIRJA aloitusrata: {kohdeId ?? "?"} {rata.ReittiM / 1000:0} km, napautus {napautus.EtaisyysM / 1000:0} km "
                           + $"{napautus.Kallistus:0}° {napautus.Suuntima:0}°, lähikuva puoli {rata.Puoli}, rajaukset "
@@ -435,6 +442,7 @@ namespace Matkakirja
                 else if (kierto != null) kierto.Kuvaa(klat, klon, kk.EtaisyysM, kallistusK, q.Suunta + kk.Theta, katse);
                 Vector3 paikka = v3Kone != null ? V3AsetaKone(kamera, q.Lat, q.Lon, h, q.Suunta, t, siemen, kall, siipi) : Vector3.zero;
                 if (rata != null) PaivitaJalki(u, ra.EtaisyysM, kamera);
+                if (rata != null) { if (t >= EnnakkoLaskuS) EnnakkoPois(); else EnnakkoAsentoon(rata.Kamera(t < EnnakkoVaihtoS ? EnnakkoLahiS : EnnakkoLaskuS), kamera); }
 
                 // Äänen tila (LentoAani.Tila) ja EI MONOTONIAA -seuranta lokiin.
                 var elo = LennonV3.Elo(t, siemen);
