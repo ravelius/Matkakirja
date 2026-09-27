@@ -410,6 +410,47 @@ button, .brand, .turn-pill, .fact-card h2 {
 .turn-pill .kassa.rahaton { color: #c0392b; font-weight: 700; }
 .turn-pill .rahaton-aika { color: #c0392b; font-size: 0.85em; white-space: nowrap; }
 
+/*
+ * RAHATTOMUUSPALKKI (omistaja 27.9.2026 klo 15.1x; js/ui.js
+ * paivitaRahattomuuspalkki): kahdeksan kuuden tunnin lohkoa kartan
+ * yläreunan keskellä. UI KEVYT: pieni pergamenttilappu, ei koristeita,
+ * ei ota osumia (kartta liikkuu sen alta).
+ */
+.rahattomuuspalkki {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 5px 9px 4px;
+  border: 1px solid rgba(85, 64, 42, 0.45);
+  border-radius: 8px;
+  background: rgba(244, 234, 212, 0.94);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+.rahattomuuspalkki[hidden] { display: none; }
+.rahattomuus-lohkot { display: flex; gap: 3px; }
+.rahattomuus-lohko {
+  width: 10px;
+  height: 6px;
+  border-radius: 1.5px;
+  border: 1px solid rgba(158, 44, 33, 0.45);
+  background: rgba(192, 57, 43, 0.12);
+}
+.rahattomuus-lohko.palaa { border-color: #9e2c21; background: #c0392b; }
+.rahattomuus-teksti {
+  font: 600 10px/1 var(--font-type);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9e2c21;
+  white-space: nowrap;
+}
+
 .turn-pill .clock {
   color: var(--muted);
   font-variant-numeric: tabular-nums;

@@ -19,7 +19,7 @@ import {
 } from './ai.js';
 import {
   BUS_FARE, DUEL_PRIZE, FLIGHT_PRICE,
-  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RECORD_DAYS, SEA_FARE, STAR_PRIZE,
+  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RAHATTOMUUS_VUOROJA, RECORD_DAYS, SEA_FARE, STAR_PRIZE, TURN_HOURS,
 } from './game.js';
 import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
@@ -10910,6 +10910,65 @@ export class UI {
 
   // --- paneeli ------------------------------------------------------------
 
+  /**
+   * RAHATTOMUUSPALKKI (omistaja 27.9.2026 klo 15.1x, talous): kun rahat ovat
+   * loppu, kartan yläreunaan tulee kevyt palkki — kahdeksan punaista lohkoa,
+   * yksi jokaista jäljellä olevaa kuuden tunnin jaksoa kohden (2 vrk =
+   * RAHATTOMUUS_VUOROJA). Lohko sammuu, kun vuoro (6 h pelin aikaa) kuluu,
+   * ja palkki katoaa, kun kassa selviää (js/game.js tarkistaRahattomuus).
+   * UI KEVYT: pieni pergamenttilappu keskellä yläreunaa paikkakyltin ja
+   * karttaselitteen välissä, ei peitä karttaa eikä ota osumia.
+   */
+  paivitaRahattomuuspalkki(piilossa = false) {
+    const { game } = this;
+    const vuoroja = piilossa || game.phase === 'over' ? null : game.rahattomuusVuorojaJaljella?.(game.player);
+    let palkki = this.rahattomuuspalkki;
+    if (vuoroja === null || vuoroja === undefined) {
+      if (palkki) palkki.hidden = true;
+      return;
+    }
+    if (!palkki) {
+      const kehys = document.querySelector('.rail') ?? document.querySelector('.map-pane');
+      if (!kehys) return;
+      palkki = html('div', 'rahattomuuspalkki');
+      palkki.setAttribute('role', 'img');
+      const lohkot = html('div', 'rahattomuus-lohkot');
+      for (let i = 0; i < RAHATTOMUUS_VUOROJA; i++) lohkot.appendChild(html('span', 'rahattomuus-lohko'));
+      palkki.append(lohkot, html('span', 'rahattomuus-teksti'));
+      kehys.appendChild(palkki);
+      this.rahattomuuspalkki = palkki;
+    }
+    const tunnit = vuoroja * TURN_HOURS;
+    const aika = `${Math.floor(tunnit / 24) ? `${Math.floor(tunnit / 24)} vrk ` : ''}${tunnit % 24 ? `${tunnit % 24} h` : ''}`.trim() || '0 h';
+    palkki.querySelectorAll('.rahattomuus-lohko').forEach((l, i) => l.classList.toggle('palaa', i < vuoroja));
+    palkki.querySelector('.rahattomuus-teksti').textContent = `rahat loppu · ${aika}`;
+    palkki.setAttribute('aria-label', `Rahat loppu: aikaa ${aika} hankkia rahaa, muuten matka päättyy`);
+    palkki.hidden = false;
+    /*
+     * Paikka: yläreunan painikerivin alle (karttaselitteen nappi on rivin
+     * korkein), jottei palkki osu paikkakylttiin, jonka leveys vaihtelee
+     * kaupungin nimen mukaan. Ilman selitettä palkki on aivan yläreunassa.
+     */
+    const kehys = palkki.offsetParent;
+    const selite = document.querySelector('.karttaselite');
+    const sr = selite && !selite.hidden ? selite.getBoundingClientRect() : null;
+    const kr = kehys?.getBoundingClientRect();
+    palkki.style.top = sr && kr && sr.height > 0 ? `${Math.round(sr.bottom - kr.top + 6)}px` : '';
+    /*
+     * Leveällä ruudulla auki oleva matkapäiväkirja ulottuu keskelle
+     * (iPad 834): palkki keskitetään päiväkirjan ja selitteen väliin, jos
+     * se mahtuu sinne; muuten se pysyy kartan keskellä.
+     */
+    palkki.style.left = '';
+    const kortti = document.querySelector('.fact-card');
+    const fr = kortti && !kortti.hidden ? kortti.getBoundingClientRect() : null;
+    const pr = palkki.getBoundingClientRect();
+    if (fr && kr && fr.width > 0 && pr.left < fr.right + 8 && pr.bottom > fr.top) {
+      const oikea = sr && sr.width > 0 ? sr.left : kr.right;
+      if (oikea - fr.right >= pr.width + 16) palkki.style.left = `${Math.round((fr.right + oikea) / 2 - kr.left)}px`;
+    }
+  }
+
   renderTurnPill() {
     const { game } = this;
     /*
@@ -10920,6 +10979,7 @@ export class UI {
      * pelissä kumpikaan ehto ei ole tosi ja pilleri näkyy heti.
      */
     const piilossa = game.phase === 'pickstart' || this.aloituslentoKesken;
+    this.paivitaRahattomuuspalkki(piilossa);
     this.turnPill.hidden = piilossa;
     if (piilossa) return;
     this.turnPill.textContent = '';
@@ -10959,9 +11019,8 @@ export class UI {
     const jaljella = game.rahattomuuttaJaljella?.(game.player);
     kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
     this.turnPill.appendChild(kassa);
-    if (jaljella !== null && jaljella !== undefined) {
-      this.turnPill.appendChild(html('span', 'rahaton-aika', `rahat loppu · ${jaljella} vrk`));
-    }
+    // Jäljellä oleva aika näkyy kartan yläreunan rahattomuuspalkissa (paivitaRahattomuuspalkki):
+    // yläpalkin "rahat loppu · N vrk" katkaisi puhelimella päivämäärän, joten kassa vain punastuu.
     // Mittari on päivämäärä, ei kello eikä palkki: aika on tarinaa, ei uhkaa,
     // joten se ei saa hälytysväriä eikä muutu punaiseksi ennätyksen jälkeen.
     const kello = game.clockLabel();

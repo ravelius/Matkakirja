@@ -1503,6 +1503,15 @@ export class Game {
   }
 
   /** Vuorokautta jäljellä ennen matkan päättymistä (varoitusnauha); null ilman varoitusta. */
+  /**
+   * Kuuden tunnin jaksoja (vuoroja) jäljellä ennen matkan päättymistä
+   * (rahattomuuspalkin lohkot, 2 vrk = RAHATTOMUUS_VUOROJA); null ilman varoitusta.
+   */
+  rahattomuusVuorojaJaljella(p = this.player) {
+    if (!p?.rahaton) return null;
+    return Math.max(0, RAHATTOMUUS_VUOROJA - (this.turnCount - p.rahaton.alkuVuoro));
+  }
+
   rahattomuuttaJaljella(p = this.player) {
     if (!p.rahaton) return null;
     const vuoroja = Math.max(0, RAHATTOMUUS_VUOROJA - (this.turnCount - p.rahaton.alkuVuoro));

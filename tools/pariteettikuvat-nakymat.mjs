@@ -225,6 +225,17 @@ export const NAKYMAT = [
   },
   { nimi: 'kartta', kuvaus: 'Intro ohitettu: pallo kaupungissa, toimintavaihe (?koe=suoraan + tallenne)' },
   {
+    nimi: 'rahattomuus', kuvaus: 'Rahat loppu: rahattomuuspalkki 6/8 lohkoa (1 vrk 12 h) kartan yläreunassa, kassa punainen',
+    avaa: () => {
+      const { ui } = window.matkakirja;
+      const g = ui.game;
+      g.player.money = 0;
+      g.player.rahaton = { alkuVuoro: g.turnCount - 2, paiva: g.dayCount?.() ?? 1 };
+      ui.render();
+    },
+    odota: '.rahattomuuspalkki:not([hidden])',
+  },
+  {
     nimi: 'matkakirjakortti-auki', kuvaus: 'Matkakirjan merkintäkortti auki (ui.asetaPaivakirjanKoko(false))',
     avaa: () => { window.matkakirja.ui.asetaPaivakirjanKoko(false); }, odota: '.fact-card:not(.pieni)',
   },
@@ -586,6 +597,10 @@ const linssiKaynnissa = (p) => {
 };
 const TODENNUS = {
   aloitusportti: { nakyy: ['.start-btn'] },
+  rahattomuus: {
+    nakyy: ['.rahattomuuspalkki'],
+    ehto: () => (document.querySelectorAll('.rahattomuuspalkki .rahattomuus-lohko.palaa').length === 6 ? null : 'lohkoja ei 6'),
+  },
   'avausteksti-kesken': { nakyy: ['.intro-juliste'] },
   'avausteksti-valmis': { nakyy: ['.intro-valinta'] },
   aloitusvalinta: { ehto: () => (window.matkakirja.game.phase === 'pickstart' ? null : `vaihe ${window.matkakirja.game.phase}`) },
