@@ -100,6 +100,9 @@ namespace Matkakirja
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
+    ///   symbolit alla 0|1         erikoismalli voittaa (Linssisepän speksi 27.9. klo 21.2x, oletus 1): muiden nostojen symbolit
+    ///                             erikoismallin kalustelaatikossa piiloon (0,3 s, hystereesi 10 %) ja merkki laatikon reunalle
+    ///                             mustepisteenä; tila-rivillä "piilossa erikoismallin alla: vltava→cesky-krumlov, …"
     ///   pohja savy [kontrasti nosto]  pohjakartan kontrasti (0 = ennallaan, −0,5…0,3) ja mustan nosto (0–0,4); säilyy laitteella
     ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke|suunta maailma|ruutu|kamera   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
@@ -779,7 +782,7 @@ namespace Matkakirja
                     else if (m == "taso23" && o.Length > 2) Symbolimallit.Taso23 = o[2] != "0" && o[2] != "pois";
                     else if (m == "loydetty" || m == "himmea") Symbolimallit.PakotaLoydetty = m == "loydetty";
                     else if (m == "koko" && o.Length > 2) Symbolimallit.KokoPt = float.Parse(o[2], CultureInfo.InvariantCulture);
-                    else Symbolimallit.Komento(o);   // 1.0.27: ylhaalta 3d|2d, perspektiivi <aste>, reuna <pt>, maasto 0|1, kategoriat 1|0|ruutu|pohjoinen
+                    else Symbolimallit.Komento(o);   // 1.0.27: ylhaalta 3d|2d, perspektiivi <aste>, reuna <pt>, maasto 0|1, kategoriat 1|0|ruutu|pohjoinen, alla 0|1
                     // Natiivi-UI kysyy OnMallia merkkejä päivittäessään: näytettävät uudelleen, jotta 2D-merkit palaavat tai lähtevät.
                     if (m != "tila") NostoKerros.Instanssi?.Herata();
                     PallonLepo.Muuttui("symbolit");

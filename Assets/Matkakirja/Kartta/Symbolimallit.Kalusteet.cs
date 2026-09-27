@@ -37,8 +37,8 @@ namespace Matkakirja
                 if (k.Malli >= 0 || !k.R.enabled || k.LeveysPx <= 0f) continue;
                 Vector3 r = kam.WorldToScreenPoint(k.JalkaMaailma);
                 if (r.z <= 0f) continue;
-                float w = k.LeveysPx, h = w * k.Suhde;
-                ulos.Add(new Ruutulaatikko(r.x - w * 0.5f - vara, r.y - vara, r.x + w * 0.5f + vara, r.y + h + vara));
+                // Sama laatikko piilottaa muiden nostojen symbolit (Symbolimallit.ErikoismallinAlla.cs).
+                ulos.Add(ErikoismallinAlla.Kalustelaatikko(r.x, r.y, k.LeveysPx, k.Suhde, vara));
             }
         }
 

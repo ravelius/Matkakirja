@@ -127,10 +127,15 @@ namespace Matkakirja
         readonly int[] tasoittain = new int[2], lodeittain = new int[2];
         int piirtokutsuja, kolmioita23;
 
-        void OnEnable() => PallonLepo.Animoi(Syttyy23, "symbolimallit: syttyminen");
+        void OnEnable()
+        {
+            PallonLepo.Animoi(Syttyy23, "symbolimallit: syttyminen");
+            PallonLepo.Animoi(Haivyttaa, "symbolimallit: erikoismallin alla");
+        }
         void OnDisable()
         {
             PallonLepo.Poista(Syttyy23);
+            PallonLepo.Poista(Haivyttaa);
             if (tilattu != null) tilattu.Paivittyi -= NostotPaivittyivat;
             tilattu = null;
         }
@@ -175,6 +180,9 @@ namespace Matkakirja
             if (nk == null || !Taso23)
             {
                 if (animoi23 || piirtokutsuja > 0 || tasoittain[0] + tasoittain[1] > 0) Tyhjenna23();
+                // Erikoismallin alla -tilat nollaan (instansseja ei piirretä, UI:n reunapisteet pois).
+                AloitaAlla(false);
+                if (LopetaAlla(false)) NostoKerros.Instanssi?.Herata();
                 return;
             }
             // Kehystä ei piirretä (Ruudunpaivitys harventaa levossa): ei laskentaa eikä piirtokutsuja.
@@ -191,13 +199,14 @@ namespace Matkakirja
                            || laskettuFov != kamera.fieldOfView || laskettuKerroin != nk.ZoomKerroin || laskettuSyttyminen != nk.Syttyminen
                            || laskettuKoko != KokoPt || laskettuKorkeus != Screen.height || laskettuPakota != PakotaLoydetty
                            || laskettuYlhaalta != Ylhaalta3D || laskettuPerspektiivi != PerspektiiviAste || laskettuReuna != ReunaPt
-                           || laskettuLeveys != Screen.width || laskettuMaasto != maastoVersio || laskettuKategoriat != Kategoriat || laskettuRuutu != KategoriaRuutuYlos;
+                           || laskettuLeveys != Screen.width || laskettuMaasto != maastoVersio || laskettuKategoriat != Kategoriat || laskettuRuutu != KategoriaRuutuYlos
+                           || eMuuttui || laskettuAlla != AllaSaanto;
             if (!muuttui) return false;
             laskettuVersio = nostoVersio; laskettuKamera = kameraM; laskettuPallo = palloM; laskettuFov = kamera.fieldOfView;
             laskettuKerroin = nk.ZoomKerroin; laskettuSyttyminen = nk.Syttyminen; laskettuKoko = KokoPt;
             laskettuKorkeus = Screen.height; laskettuPakota = PakotaLoydetty;
             laskettuYlhaalta = Ylhaalta3D; laskettuPerspektiivi = PerspektiiviAste; laskettuReuna = ReunaPt; laskettuLeveys = Screen.width; laskettuMaasto = maastoVersio;
-            laskettuKategoriat = Kategoriat; laskettuRuutu = KategoriaRuutuYlos;
+            laskettuKategoriat = Kategoriat; laskettuRuutu = KategoriaRuutuYlos; laskettuAlla = AllaSaanto;
             return true;
         }
 
@@ -222,6 +231,9 @@ namespace Matkakirja
             Vector3 kp = kamera.transform.position;
             float skaala = Mathf.Max(1e-9f, gt.lossyScale.x), nyt = Time.unscaledTime, piilo = 1f - nk.Syttyminen;
             bool rajatAlussa = true;
+            // Erikoismalli voittaa (Symbolimallit.ErikoismallinAlla.cs): laatikkoon osuvat instanssit häivytetään _Tila.y:llä.
+            float dtAlla = AloitaAlla23();
+            bool allaMuuttui = false, allaKesken = false;
             foreach (var s in nk.Naytettavat)
             {
                 if (s.Taso < 2 || s.Id == null) continue;
@@ -243,6 +255,8 @@ namespace Matkakirja
                 Vector3 kohti = kp - p;
                 float etaisyys = kohti.magnitude;
                 if (Vector3.Dot(gt.TransformDirection(i.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) <= 0.08f) continue;
+                float allaPiilo = AllaSaanto ? Arvioi(s.Id, s.Taso, p, dtAlla, ref allaMuuttui, ref allaKesken) : 0f;
+                if (allaPiilo >= 1f) continue;   // kokonaan erikoismallin alla: ei instanssia (UI piirtää reunapisteen)
 
                 float pt = KokoNyt(nk.ZoomKerroin) * (s.Taso == 2 ? Taso2Koko : Taso3Koko)
                            * (NostoSaannot.KuvamerkkiPieni(s.Taso, nk.ZoomKerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
@@ -271,7 +285,7 @@ namespace Matkakirja
                 var pk = PerspektiiviKierto(i.Paikka, i.Normaali, perus, MalliPuoli(malli), out float nosto);
                 matriisit[e][lkm[e]] = paikallinen * Matrix4x4.TRS(i.Paikka + i.Normaali * (nosto * koko), pk * perus, Vector3.one * koko);
                 // z = ääriviivan leveys mallin yksiköissä (vain ääriviivamateriaali lukee sen).
-                tilat[e][lkm[e]] = new Vector4(muste, piilo, ReunaYksikoissa(pt), 0f);
+                tilat[e][lkm[e]] = new Vector4(muste, Mathf.Max(piilo, allaPiilo), ReunaYksikoissa(pt), 0f);
                 if (pohjaLkm < EnintaanErassa)
                 {
                     // Levy mallin juuren tasossa kaakkoon siirrettynä; leveys LOD0:sta, ettei levy hyppää LOD-vaihdossa.
@@ -279,7 +293,7 @@ namespace Matkakirja
                     // Levy maassa ilman perspektiivin kallistusta.
                     pohjaMatriisit[pohjaLkm] = paikallinen * Matrix4x4.TRS(i.Paikka, i.Asento, Vector3.one * koko)
                                                * Matrix4x4.TRS(PohjaSiirto, Quaternion.identity, new Vector3(lev, lev, lev));
-                    pohjaTilat[pohjaLkm++] = new Vector4(0f, piilo, 0f, 0f);
+                    pohjaTilat[pohjaLkm++] = new Vector4(0f, Mathf.Max(piilo, allaPiilo), 0f, 0f);
                 }
                 lkm[e]++;
                 var b = new Bounds(p, Vector3.one * (2f * koko * skaala));
@@ -288,6 +302,10 @@ namespace Matkakirja
                 tasoittain[s.Taso == 2 ? 0 : 1]++;
                 lodeittain[i.Lod]++;
             }
+            if (LopetaAlla(false)) allaMuuttui = true;
+            if (allaKesken) animoi23 = true;
+            // Natiivi-UI kysyy ReunaPistettä merkkejä päivittäessään: näytettävät uudelleen, kun joku piiloutuu tai palaa.
+            if (allaMuuttui) nk.Herata();
             tilatMuuttuivat = true;
         }
 
