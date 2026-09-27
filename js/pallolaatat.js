@@ -367,6 +367,22 @@ export function lepokerroksenTaso(tasot, tarvePxAste, teravyys = LEPOKERROS_TERA
   return jarjestys[jarjestys.length - 1] ?? null;
 }
 
+/*
+ * SAMA POHJA ERI NIMELLÄ (Karttaseppä 27.9.2026, Z10-ketju). Syvä sarja
+ * lisää tasot z9–z10 uuteen versioon (2026-09-26s-pohja), jonka z0–z8
+ * on kopioitu tavulleen edellisestä pohjasta. Pallon sarja on poltettu
+ * juuri noista z0–z8-laatoista, joten se kelpaa: luettelo kertoo sen
+ * kentässä `pohja.kopio = { versio, tasot }`. Tasoista tarkistetaan,
+ * että kopio kattaa pallon lähteen (z0–z8); muuten vaaditaan sama versio.
+ */
+const PALLON_LAHDETASOT = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+export function samaPohja(pallonVersio, pyramidi) {
+  if (pallonVersio === pyramidi?.versio) return true;
+  const kopio = pyramidi?.pohja?.kopio;
+  return Boolean(kopio?.versio) && kopio.versio === pallonVersio
+    && Array.isArray(kopio.tasot) && PALLON_LAHDETASOT.every((z) => kopio.tasot.includes(z));
+}
+
 /**
  * Mitkä kerrokset lepokerros saa piirtää, kun pallon sarja (laatat.json)
  * ja pyramidi (pyramidi.json) ovat nämä. Pohja vaatii saman version;
@@ -378,7 +394,7 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null,
   poltetutNostot = laattakerroksenKokeet().has('poltetutnostot'),
 } = {}) {
   if (!pallonLuettelo?.versio || !pyramidi?.versio) return null;
-  if (pallonLuettelo.versio !== pyramidi.versio) return null;
+  if (!samaPohja(pallonLuettelo.versio, pyramidi)) return null;
   const viivat = pallonLuettelo.viivat ?? null;
   const nostot = pallonLuettelo.nostot ?? null;
   if (viivat && viivat !== (pyramidi.viivataso?.versio ?? null)) return null;

@@ -101,6 +101,13 @@ test('versiovahti: kerros vain kun pallon sarja on poltettu samasta pyramidista'
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A' }, pyramidi),
     { pohja: true, ranta: false, viiva: false, nosto: false, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false, nimio: false });
   assert.equal(lepokerroksenKerrokset({ versio: 'B', viivat: 'V', nostot: 'N' }, pyramidi), null, 'eri pohja');
+  // Syvä sarja (Z10-ketju): pohja.kopio kertoo, että z0–z8 on sama kuin pallon versio.
+  const syva = { ...pyramidi, versio: 'A-s', pohja: { kopio: { versio: 'A', tasot: [0, 1, 2, 3, 4, 5, 6, 7, 8] } } };
+  assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, syva),
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false, nimio: false });
+  assert.equal(lepokerroksenKerrokset({ versio: 'B' }, syva), null, 'kopio eri versiosta');
+  assert.equal(lepokerroksenKerrokset({ versio: 'A' }, { ...syva, pohja: { kopio: { versio: 'A', tasot: [0, 1, 2] } } }), null, 'kopio ei kata z0–z8:aa');
+  assert.equal(lepokerroksenKerrokset({ versio: 'A' }, { ...syva, pohja: {} }), null, 'ei kopiokenttää');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N2' }, pyramidi), null, 'eri nostot');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V' }, { versio: 'A' }), null, 'pyramidilla ei viivatasoa');
   assert.equal(lepokerroksenKerrokset(null, pyramidi), null);
