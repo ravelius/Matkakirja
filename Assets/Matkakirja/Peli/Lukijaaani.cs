@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Matkakirja.Peli
 {
@@ -103,6 +104,53 @@ namespace Matkakirja.Peli
 
         /// <summary>Luennan säilölohko (js/lukija.js lueAaneen): persoona, paitsi pöllöllä ei mitään.</summary>
         public static string OletusLohko(string persoona) => persoona == "pollo" ? null : persoona;
+
+        /// <summary>Palakatto (web js/puhe.js PUHE_PALA_KATTO), workerin PUHE_TEKSTIN_KATTO 2500:n alla.</summary>
+        public const int PalaKatto = 2400;
+
+        /// <summary>
+        /// LUENNAN PALAT kortin teksteistä (omistaja 27.9.2026 klo 01.5x: pitkä tauko otsikon ja kappaleiden
+        /// välissä). Webin säännöt: otsikko (lyhyt rivi ilman lopetusmerkkiä) liitetään seuraavan kappaleen alkuun
+        /// pisteellä (js/lukija.js keraaKohdat + paate), hännäksi jäänyt otsikko jää lukematta, ja kappale on yksi
+        /// pala — vain kattoa pidempi pilkotaan virkerajalta (js/puhe.js kappaleenPalat). Ei katkaisua: mitään
+        /// tekstiä ei pudoteta. Palat luetaan putkena: kutsuja esihakee seuraavat (Puhe.Esihae) edellisen soidessa.
+        /// </summary>
+        public static List<string> LuennanPalat(IEnumerable<string> tekstit, int katto = PalaKatto)
+        {
+            var palat = new List<string>();
+            string odottava = null;
+            foreach (var raaka in tekstit ?? Enumerable.Empty<string>())
+            {
+                string t = JsTrim(raaka ?? "");
+                if (t.Length == 0) continue;
+                if (OnOtsikko(t)) { odottava = odottava == null ? Paate(t) : odottava + " " + Paate(t); continue; }
+                string kohta = odottava == null ? t : odottava + " " + t;
+                odottava = null;
+                palat.AddRange(KappaleenPalat(kohta, katto));
+            }
+            return palat;
+        }
+
+        static bool OnOtsikko(string t) => t.Length <= 120 && !Lopetus(t[t.Length - 1]);
+        static bool Lopetus(char c) => c == '.' || c == '!' || c == '?' || c == ':' || c == ';' || c == '…';
+        static string Paate(string t) => Lopetus(t[t.Length - 1]) ? t : t + ".";
+
+        /// <summary>js/puhe.js kappaleenPalat: koko kappale, jos mahtuu; muuten virkkeet kattoon asti.</summary>
+        public static List<string> KappaleenPalat(string rivi, int katto = PalaKatto)
+        {
+            var palat = new List<string>();
+            var kertyma = new StringBuilder();
+            foreach (var virke in Regex.Split(JsTrim(rivi ?? ""), @"(?<=[.!?…])\s+"))
+            {
+                string v = JsTrim(virke);
+                if (v.Length == 0) continue;
+                if (kertyma.Length > 0 && kertyma.Length + v.Length + 1 > katto) { palat.Add(kertyma.ToString()); kertyma.Clear(); }
+                if (kertyma.Length > 0) kertyma.Append(' ');
+                kertyma.Append(v);
+            }
+            if (kertyma.Length > 0) palat.Add(kertyma.ToString());
+            return palat;
+        }
 
         readonly Func<string, string> lue;
         readonly Action<string, string> kirjoita;

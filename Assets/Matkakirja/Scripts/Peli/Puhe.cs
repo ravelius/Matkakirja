@@ -56,8 +56,8 @@ namespace Matkakirja.Natiivi
     public sealed class Puhe : MonoBehaviour
     {
         public const string Puhepalvelin = Lukijaaani.Palvelin;
-        /// <summary>Workerin PUHE_TEKSTIN_KATTO (tools/pollo/rajat.js).</summary>
-        public const int TekstinKatto = 1000;
+        /// <summary>Workerin PUHE_TEKSTIN_KATTO (tools/pollo/rajat.js; 1000 → 2500 web PR #3368, omistaja 27.9.2026).</summary>
+        public const int TekstinKatto = 2500;
         /// <summary>Luennan loppuhäivytys (web LUENNAN_HAIPYMA_S).</summary>
         public const float Haivytys = 1.5f;
         /// <summary>Uuden puheen alkuhäivytys (web: kertoja alkaa pehmeästi).</summary>
@@ -294,19 +294,41 @@ namespace Matkakirja.Natiivi
             ViimeVirhe = null;
             var (runko, koodi) = Saadot.Pyynto(teksti, persoona, lohko);
             string avain = Saadot.Valimuistiavain(persoona, teksti);
-            lataus = StartCoroutine(LataaJaSoita(avain, () =>
-            {
-                var r = new UnityWebRequest(Puhepalvelin, UnityWebRequest.kHttpVerbPOST)
-                {
-                    uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" },
-                };
-                r.SetRequestHeader("Content-Type", "application/json");
-                r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
-                r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
-                if (koodi != null) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
-                return r;
-            }, viiveS, oma, true, sailo));
+            lataus = StartCoroutine(LataaJaSoita(avain, () => SynteesiPyynto(runko, koodi), viiveS, oma, true, sailo));
             return true;
+        }
+
+        static UnityWebRequest SynteesiPyynto(string runko, string koodi)
+        {
+            var r = new UnityWebRequest(Puhepalvelin, UnityWebRequest.kHttpVerbPOST)
+            {
+                uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" },
+            };
+            r.SetRequestHeader("Content-Type", "application/json");
+            r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+            if (koodi != null) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
+            return r;
+        }
+
+        /// <summary>
+        /// PUTKITUS (omistaja 27.9.2026 klo 01.5x: "todella pitkä tauko otsikon ja kappaleiden väliin"): hakee luennan
+        /// palan levyvälimuistiin soittamatta, jotta seuraava Lue(sama teksti, sama persoona) alkaa heti. Kutsu
+        /// seuraaville 1–2 palalle, kun edellinen alkaa soida (web js/puhe.js aikatauluta hakee +1 ja +2). Ilman tätä
+        /// pala haettiin vasta edellisen loputtua ja väliin jäi koko generointi (~5 s / 330 mrk, mitattu 27.9.).
+        /// Sama avain ja tiedosto kuin Luessa; kesken oleva esihaku ei lataudu kahdesti (Lue odottaa sitä).
+        /// </summary>
+        public void Esihae(string teksti, string persoona = "kertoja")
+        {
+            if (!Paalla || string.IsNullOrWhiteSpace(teksti)) return;
+            persoona ??= "kertoja";
+            teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
+            string avain = Saadot.Valimuistiavain(persoona, teksti);
+            if (esiladataan.Contains(avain)) return;
+            string tiedosto = Path.Combine(Kansio, Tiiviste(avain) + ".mp3");
+            if (File.Exists(tiedosto)) return;
+            var (runko, koodi) = Saadot.Pyynto(teksti, persoona, Lukijaaani.OletusLohko(persoona));
+            StartCoroutine(EsilataaTiedosto(avain, tiedosto, Taso.SeuraavaRuutu, () => SynteesiPyynto(runko, koodi), "esihaettu pala"));
         }
 
         /// <summary>Katkaisee tekstin viimeiseen virkkeen loppuun ennen kattoa (tai kattoon).</summary>
@@ -345,20 +367,22 @@ namespace Matkakirja.Natiivi
             if (Mukana.Polku(url) != null) { Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} (buildissa)"); return; }
             string tiedosto = Path.Combine(Kansio, Tiiviste(url) + Paate(url));
             if (File.Exists(tiedosto)) { Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} (välimuistissa)"); return; }
-            StartCoroutine(EsilataaTiedosto(url, tiedosto, taso));
+            StartCoroutine(EsilataaTiedosto(url, tiedosto, taso, () => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET), null));
         }
 
-        IEnumerator EsilataaTiedosto(string url, string tiedosto, Taso taso)
+        IEnumerator EsilataaTiedosto(string url, string tiedosto, Taso taso, Func<UnityWebRequest> pyynto, string nimi)
         {
             esiladataan.Add(url);
             Directory.CreateDirectory(Kansio);
             string valiaikainen = tiedosto + ".esilataus";
             bool ok = false;
             // Esilataus kutsujan tasolla (oletus seuraava ruutu; Esilataaja: näkyvä ohittaa).
-            yield return Esilataaja.Hae(() => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET)
+            yield return Esilataaja.Hae(() =>
             {
-                downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true },
-                timeout = 60,
+                var r = pyynto();
+                r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
+                r.timeout = 60;
+                return r;
             }, taso, "puhe", r => ok = r.result == UnityWebRequest.Result.Success, avain: url);
             try
             {
@@ -366,7 +390,7 @@ namespace Matkakirja.Natiivi
                 else if (File.Exists(valiaikainen)) File.Delete(valiaikainen);
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA puhe: esilataus: " + e.Message); }
-            Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} {(ok ? "ok" : "EPÄONNISTUI")}");
+            Debug.Log($"MATKAKIRJA puhe: esiladattu {nimi ?? Path.GetFileName(url.Split('?')[0])} {(ok ? "ok" : "EPÄONNISTUI")}");
             esiladataan.Remove(url);
         }
 
