@@ -550,13 +550,13 @@ print("paikka 1 ← lennon varakartta (_lentoVara, _lentoVaraKartta); paikka 2 �
 # Tekstuurien nimet viitataan suoraan (Shader Graph julistaa ne kaavion ominaisuuksista samoilla nimillä), UV-kanavat
 # tulevat UV-solmuista 0–3. Näyte _GRAD-muodossa, derivaatat ennen haarautumista.
 HAMARA_RUNKO = (
-    "// Base map tone (owner 27.9.2026 17.2x, Kartta/Pohjasavy.cs): pohjaSavy.x = contrast change around mid-grey\n"
+    "// Base map tone (owner 27.9.2026 17.2x, Kartta/Pohjasavy.cs): pohjaSavy.x = contrast change around the paper tone 0.78\n"
     "// (0 = as before, -0.3 = softer), pohjaSavy.y = black lift towards white 0..1 ('milky'); in sRGB space.\n"
     "float3 pv = vari.rgb;\n"
     "if (pohjaSavy.x != 0.0 || pohjaSavy.y != 0.0)\n"
     "{\n"
     "    float3 sv = pow(max(pv, 1e-6), 0.4545);\n"
-    "    sv = (sv - 0.5) * (1.0 + pohjaSavy.x) + 0.5;\n"
+    "    sv = (sv - 0.78) * (1.0 + pohjaSavy.x) + 0.78;   // pivot at the parchment tone: softer darks, paper unchanged\n"
     "    sv = sv + saturate(pohjaSavy.y) * (1.0 - sv);\n"
     "    pv = pow(saturate(sv), 2.2);\n"
     "}\n"

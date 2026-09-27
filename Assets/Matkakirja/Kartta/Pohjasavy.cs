@@ -6,8 +6,8 @@ namespace Matkakirja
     /// <summary>
     /// POHJAKARTAN SÄVY (omistajan löydös 27.9.2026 klo 17.2x Fablen kautta: epäterävämpi kuva on miellyttävämpi,
     /// maitomaisempi): kontrasti ja mustan nosto varjostimessa ilman uudelleenpolttoa. Tileset-varjostimen globaali
-    /// _pohjaSavy (Shaders/Cesium/Lahde~/tee_tileset.py, RadioHamara-funktion alku): x = kontrastin muutos keskiharmaan
-    /// ympäri sRGB-avaruudessa (0 = ennallaan, −0,3 = pehmeämpi), y = mustan nosto valkoista kohti 0–1 (0 = ennallaan).
+    /// _pohjaSavy (Shaders/Cesium/Lahde~/tee_tileset.py, RadioHamara-funktion alku): x = kontrastin muutos paperin sävyn
+    /// (0,78) ympäri sRGB-avaruudessa (paperi pysyy, tummat vaalenevat) (0 = ennallaan, −0,3 = pehmeämpi), y = mustan nosto valkoista kohti 0–1 (0 = ennallaan).
     /// Oletus = nykyinen kuva (0, 0). Valinta säilyy laitteella (PlayerPrefs), jotta omistaja voi kokeilla arvoja
     /// kehittäjävalikon liukusäätimillä (Natiivi-UI) ja arvo pysyy seuraavaan käynnistykseen.
     /// Komento: `pohja savy [kontrasti nosto]` (ilman arvoja tila lokiin).
