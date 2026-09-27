@@ -35,8 +35,10 @@ namespace Matkakirja
 
         /// <summary>Viivojen korkeus pinnasta (m, kuten ElavaMatka).</summary>
         const double JalkiKorkeusM = 1800.0;
-        /// <summary>Kuljetun osuuden ja edessä olevan reitin väri (ElavaMatka: tummanpunainen muste) ja paksuus (pt).</summary>
-        static readonly Color JalkiVari = new Color(0.55f, 0.03f, 0.03f, 0.85f), EdessaVari = new Color(0.55f, 0.03f, 0.03f, 0.45f);
+        /// <summary>Kuljetun osuuden ja edessä olevan reitin väri (lennon punainen kuten lähtö- ja kohdemerkit, web: punainen
+        /// jälki) ja paksuus (pt).</summary>
+        static readonly Color JalkiVari = new Color(LentoPunainen.r, LentoPunainen.g, LentoPunainen.b, 0.9f),
+            EdessaVari = new Color(LentoPunainen.r, LentoPunainen.g, LentoPunainen.b, 0.5f);
         const float JalkiPt = 5.0f, EdessaPt = 2.2f;
 
         GameObject jalkiOlio, edessaOlio;

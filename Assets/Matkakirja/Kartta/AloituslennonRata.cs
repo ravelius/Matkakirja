@@ -8,8 +8,8 @@ namespace Matkakirja
     /// Lontoo → aloituskaupunki yhtenä 15 s:n otoksena, joka lähtee siitä pallonäkymästä, jossa pelaaja napautti:
     ///   0,0–2,0  SYÖKSY     napautusnäkymästä koneen lähikuvaan Lontoossa (LennonV3.Alkuliuku: katsepiste isoympyrää
     ///                       pitkin 1,4 s:ssa, etäisyys logaritmisena, lähtö levosta). Kone rullaa ja irtoaa.
-    ///   2,0–3,4  LÄHIKUVA   kone nousee kuvan keskellä vasemmalta etuviistosta (θ 75° → 60°, 22 → 26 km, katse 16–19°
-    ///                       alaspäin: horisontti ja taivas yläreunassa), maa virtaa 4 km/s.
+    ///   2,0–3,4  LÄHIKUVA   kone nousee kuvan keskellä etuviistosta (θ ±75° → ±60°, 28 → 32 km, katse 28–32° alaspäin:
+    ///                       maata näkyy usvan alta, horisontti yläreunassa), maa virtaa 4 km/s.
     ///   3,4–7,0  NOUSU      kamera nousee pehmeästi ja kääntyy koneen taakse (θ → 0): reitti avautuu ruudun alareunasta
     ///                       ylös kohti kohdetta; 7 s:ssa kuvassa Lontoo (alhaalla), koko reitti ja kohde (ylhäällä),
     ///                       kallistus 35–45° pystystä, joten pallon kaarevuus ja horisontti näkyvät (tunne matkasta).
@@ -85,8 +85,8 @@ namespace Matkakirja
             // Lähikuva: etuviisto kylki sillä puolella, jolle syöksyn kierto napautusnäkymän suuntimasta on lyhyempi
             // (Puoli +1 = kamera koneen vasemmalla); kamera hieman loittonee ja kiertää kohti koneen takaa.
             Puoli = Math.Abs(LennonV3.Kulmaero(alku.Suuntima, lahtoSuunta + 75)) <= Math.Abs(LennonV3.Kulmaero(alku.Suuntima, lahtoSuunta - 75)) ? 1 : -1;
-            lnD[0] = Math.Log(22_000); kall[0] = 74; suunt[0] = alku.Suuntima + LennonV3.Kulmaero(alku.Suuntima, lahtoSuunta + Puoli * 75); etumatka[0] = 0;
-            lnD[1] = Math.Log(26_000); kall[1] = 71; suunt[1] = lahtoSuunta + Puoli * 60; etumatka[1] = 0;
+            lnD[0] = Math.Log(28_000); kall[0] = 62; suunt[0] = alku.Suuntima + LennonV3.Kulmaero(alku.Suuntima, lahtoSuunta + Puoli * 75); etumatka[0] = 0;
+            lnD[1] = Math.Log(32_000); kall[1] = 58; suunt[1] = lahtoSuunta + Puoli * 60; etumatka[1] = 0;
             // Matka: rajaus reitin loppuosaan. 7 s: koko reitti (Lontoo alhaalla); 9 ja 11 s: koneen takaa kohteeseen.
             Rajaukset = new (double, double, double, double)[3];
             for (int k = 0; k < 3; k++)
