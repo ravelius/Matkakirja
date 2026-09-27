@@ -226,3 +226,6 @@ pilvisumu, ELOKUVALLINEN ALOITUSLENTO, ALOITUSLENNON KAMERAKÄSIKIRJOITUS ja 25.
   näkee v3:n laitteella vasta sen jälkeen.
 - **Lentopeli** (docs/raportit/lentopeli-suunnitelma-20260927.md) rakentuu v3:n päälle: sama kone, kamerapohja,
   käytävämalli ja LentoAani (+ kaasu). Siksi v3 kannattaa saada junaan ennen lentopelin prototyyppiä.
+- **Fablen päätös 27.9. klo 12.1x:** kaikki kolme ehdotusta hyväksytty (15 s kaikille lennoille; käytävä Etusija ja
+  taustajono tauolla lennon ajan; ääni A eli vanha lentoääni nyt, papatus Pelikoodarilta myöhemmin). v3 (tiger-moth
+  7b1bf9b9 + natiiviseppa/lento-v3 cdd285f9) menee 1.0.30-junaan Natiivisepän kautta.
