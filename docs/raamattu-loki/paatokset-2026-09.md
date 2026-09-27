@@ -7935,3 +7935,7 @@ Omistaja 09.0x kortilla: lahitaso LOD0 (Colosseum 1 060 → 2 946, MSM 1 044 →
 ## LAITETESTAAJA 1.0.28 d3fa3c78 PASS (0 POIKKEUSTA, LUKIJAN TAUKO 5 718 → 33 ms) → MASTER + TF (27.9.2026 klo 09.10)
 
 Laitetestaaja 09.1x: 1.0.28 d3fa3c78 PASS: kaiutinvipu, striimiaani-valitsin, lukijan tauko 5 718 → 33 ms (valimuisti), 14 symbolia + vuori Olympoksella, Kinderdijk 3 myllya 3D, 177 mittausliput, Colosseum (velarium), Brandenburg rekisteroity; MSM/Stonehenge ei loytynyt annetuista koordinaateista (Linssiseppa todensi laitteella 91a4b727 → hyvaksytty); P1 ei kaatumista, racea ei saatu pakotettua. Raportti savukierros-tf1028-20260927.md 4393a1739. Fable → Natiiviseppa master-merge → Julkaisija TF 1.0.28.
+
+## TF 1.0.28 VIE (BUILD 28 = MASTER 7788b629); #3374 v2303, #3206 v2304 MAINISSA (27.9.2026 klo 09.10)
+
+Fable 09.1x Julkaisijalle VIE — TF 1.0.28 = build 28 = proto-master 7788b629 (juna 1eff4f76). Sisalto: P1 nosto-hylkaa-170, kaiutinvipu natiivi, striimiaani-USS, lukija-putki web+natiivi, maastokorkeus, taso1-kynnys, erikoismallit MSM/Stonehenge/Colosseum + Kinderdijk/Brandenburg/Segovia, 14 kategoriasymbolia 3D (B, vuori C), 177-avaimet. Mainissa #3374 (virkevali 220 ms) v2303 ja #3206 (turistiopas 19) v2304; #3381/#3382 junassa.
