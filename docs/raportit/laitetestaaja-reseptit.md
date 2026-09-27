@@ -15,6 +15,19 @@ ulkopuolelle jos y/x ylittää laitepisteiden rajan). Jos tap ei näytä vaikutt
 ensin tämä ennen kuin epäilet build-vikaa. `elava elementit` (meri) kuuluu `linssi-komento.txt`:hen,
 EI `komento.txt`:hen — sekoitin nämä 1.0.29-kierroksella, tunnisti "tuntematon"-vastauksesta.
 
+**KORJAUS/TYÖKALU (Laitetestaaja 27.9.2026 klo 13.0x):** yllä olevan koordinaattibugin oikea
+ratkaisu on `echo "ui puu" > ui-komento.txt` — dumppaa KOKO UI-puun tarkoilla laitepiste-
+koordinaateilla `Documents/ui-puu.json`:ään (jokainen elementti: tyyppi, luokat, teksti, x/y/w/h).
+Lue json (python/jq) ja etsi haluttu elementti luokan/tekstin perusteella, laske keskipiste ja
+napauta sillä — EI ARVATA kuvakaappauksesta. Kalibroitu ja vahvistettu 1.0.29-uusintakierroksella:
+osui täsmälleen. Käytä tätä AINA kun täytyy napauttaa jotain UI-elementtiä jota ei voi ohjata
+tekstikomennolla. HUOM: `ui chat <kysymys>` (UiKomennot.cs `case "chat"`) hyväksyy kysymyksen
+suoraan parametrina (`ui.Chat.Kysy(loput)`) — ei tarvitse napauttaa valmiiksi ehdotettua kysymystä.
+Äänen todellinen mittaus: `echo "aani mittaa <sekuntia>" > peli-komento.txt` (peli-loki.txt:
+"rms X, huippu Y, soivia N [kanava:url@voimakkuus, ...]") — todistaa oikean Unity-mixerin
+ulostulon, EI pelkkää "ok"-kuittausta. Käytä tätä AINA kun täytyy todistaa että ääni oikeasti soi
+(esim. Pulun kaiutinvipu, puhevirta) — pelkkä komennon "ok"-paluuarvo ei riitä todisteeksi.
+
 ## 1.0.29-kierroksen valmisteltu resepti (Laitetestaaja 27.9.2026 klo 12.0x, ennen buildia)
 
 Tutkittu Explore-agentilla proto-3d/Matkakirja-proto:sta (HEAD master 7788b629 = BUILD 28).
