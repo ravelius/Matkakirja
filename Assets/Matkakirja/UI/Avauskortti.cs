@@ -113,6 +113,9 @@ namespace Matkakirja.Natiivi
             oppaanOtsikko = Rakenne.Teksti("", "mk-avauskortti__oppaanotsikko", tekstit);
             Kirjasimet.Aseta(oppaanOtsikko, Kirjasin.LukuLihava);
             oppaanTeksti = Rakenne.Teksti("", "mk-avauskortti__oppaanteksti", tekstit);
+            // Web .kaupunkipopup-sisalto padding-bottom 0,85rem: oma loppuelementti, koska ScrollView ei laske
+            // contentContainerin paddingia korkeuteensa (kortti jäi 13,6 pt lyhyeksi ja turisti-info leikkautui).
+            Rakenne.El("mk-avauskortti__loppu", sisalto, PickingMode.Ignore);
             Kirjasimet.Aseta(oppaanTeksti, Kirjasin.Luku);
             oppaanRivi.style.display = DisplayStyle.None;
 
@@ -181,6 +184,7 @@ namespace Matkakirja.Natiivi
                 nimiLappu.text = this.nimi;
                 heroKuva.style.backgroundImage = StyleKeyword.None;
                 heroKuva.style.opacity = 0f;
+                heroKuva.userData = null; // muuten sama kuva ei latautuisi uudelleen (TaytaHero vertaa userDataa)
                 teksti.text = "";
                 oppaanRivi.style.display = DisplayStyle.None;
                 karttaKaista.Clear();

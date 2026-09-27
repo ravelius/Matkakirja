@@ -415,8 +415,9 @@
     flex-shrink: 1;
 }
 
-.mk-avauskortti__vieritys > .unity-scroll-view__content-viewport > .unity-scroll-view__content-container {
-    padding-bottom: 13.6px;
+.mk-avauskortti__loppu {
+    flex-shrink: 0;
+    height: 13.6px;
 }
 
 /* Hero: 16 % ruudun korkeudesta (Avauskortti.Mitoita), pohja #d9ccb0 kunnes kuva saapuu, cover. */
