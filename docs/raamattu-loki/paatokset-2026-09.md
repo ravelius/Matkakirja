@@ -8323,3 +8323,7 @@ Karttasepan polttojono (docs/raportit/karttaseppa-polttojono.md, #3433): 1) jarv
 ## PROJEKTISIVUSTO JULKAISTU: https://matkakirja.app/projekti.html (noindex); POLLO-KV #3439 TUOTANNOSSA (27.9.2026 klo 19.15)
 
 Julkaisija 19.1x: #3410 julkaistu, projekti.html, linssikatalogi.html ja pelikatalogi.html 200, kaikissa noindex, nofollow (Fable tarkisti projekti.html:n). #3439 pollo-KV mergetty, pollon julkaisu OK, tuotannon puhemoottori xai. #3438 tekijamerkinnat kaatui vartijaan 'jokaisella kuvalla tekija/lisenssi/lahde tai havainnekuva-merkinta' aarrekuvan merkinnan poiston jalkeen → Pelikoodarille: vartijan pitaa hyvaksya havainnekuva-tieto lahderivilla ilman kuvan paalla olevaa merkkia (omistajan 18.3x poikkeus).
+
+## SKEEMA 1.54: EUROOPAN OFFLINE 3,2 → 1,3 Gt; KUVAT 1024 px / JPEG 75 PIDETAAN (EI 960/70) (27.9.2026 klo 19.44)
+
+Siirtoseppa #3445 (1.53+1.54, 128/0, Natiivisepan kuittaus, natiivi 1.0.32-junassa bbbfadde): Euroopan offline ~1,3 Gt (media 1,14 Gt = kuvat 1024 px/JPEG 75 + ampärin puheet, musiikki ja aanimaisemat verkosta; maasto ~0,1; laatat 0,06); 100 Mt maakatto ei tayty missaan (ESP 106 kokonaisuutena, media < 100; Tanska 35, Kroatia 37 Mt); kaikki maat 3,46 Gt. Fable: 960 px/JPEG 70 (~1,1 Gt) hylatty — iPadin kuvanlaatu tarkeampi. App Store -luvut docs/raportit/siirtoseppa-appstore-luvut-20260927.md (#3463). Sisaltojuna #3448 v2335 (#3428, #3435, #3437, #3444, #3447) mainissa.
