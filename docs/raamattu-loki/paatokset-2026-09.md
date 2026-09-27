@@ -7855,3 +7855,7 @@ Pelikoodari 08.0x (Z10-selvityksen sivuloydos): webin pallon laattakerros pois t
 ## TURISTIOPASPAKETTI VALMIS (71/71 MIINUS 11 TURVALLISUUSPOIKKEUSTA); SISALTOKIRJURILLE ERIKOISMALLIEN SISALTOTARKISTUS (27.9.2026 klo 08.00)
 
 Sisaltokirjuri 08.0x: turistioppaat 266 avaimesta 14 ilman matkailijalle-kenttaa; 3 (#3206) mergea vaille, 11 (darfur, suakin, bahrelghazal, rashafun, tshadjarvi, kamerun, sanambrosio, kongo, sahara, tanganjika, ahaggar) tarkoituksella ulkona Fablen 24.9. turvallisuuspaatoksella (sisalto-inventaario-20260924 kohta 9) → Fable: jaavat rauhaan, paketti valmis. Seuraava era: erikoismallien (Tivoli, MSM, Stonehenge, Colosseum, Kinderdijk, Brandenburg, Segovia, Brugge, Matterhorn, Hohensalzburg) nostot, Pulun kysymykset ja elamanidean tapahtumat teksteissa — puuttuvat yhdella PR:lla.
+
+## MERI TODENNETTU LAITTEELLA (54201ed2); KINDERDIJK NAKYY; LINSSISEPPA NOLLAA (LUOVUTUS -L 9aac294c5) (27.9.2026 klo 08.04)
+
+Linssiseppa 08.0x: meren tuotantorunko todennettu laitteella (kaannos 54201ed2): merikohdat 29/129 latautuvat, maan lajit valitaan, valas Norjassa, hoyrylaiva Suomenlahdella, 0 poikkeusta; merge-pyynto 0126ce8b pysyy. Kinderdijk nakyy kynnyskorjauksella (kinderdijk-v2.png + video). Taustalla 8 Opus-agenttia: 8 merilajia, Brugge/Matterhorn/Hohensalzburg, lahitason kuvaparit. Luovutus -l 9aac294c5, nollaus itse → aloitusviesti Fablelta.
