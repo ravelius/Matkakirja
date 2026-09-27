@@ -7971,3 +7971,7 @@ Pelikoodari 09.3x (jonoviestit eivat ehtineet): #3385 (v2307) mannerLennot ilman
 ## OMISTAJA 09.3x: LUKIJAN AANEN VALINTA SAATORATTAASEEN (POIS KEHITTAJAVALIKOSTA); iPHONELLA NOSTOT HIEMAN ALEMMAS (YLIN RIVI NAKYVIIN, KAIUTIN SAMALLA RIVILLA) (27.9.2026 klo 09.30)
 
 Omistaja 09.3x lisays: nostojen luennan saatorattaaseen siirretaan myos lukijan (xAI) aanen valinta ja se poistetaan kehittajavalikosta (web + natiivi). iPhonella nostokortin sisallon pitaa alkaa hieman alempaa niin, etta noston ylin tekstirivi nakyy heti — kaiutin (ratas + kaiutin + VU-kaiuttimet) on samalla rivilla eika saa peittaa sita. Web Pelikoodari, natiivi Natiivi-UI webin mallin mukaan.
+
+## PELIKOODARI NOLLATTU JA KAYNNISTETTY 09.4x (LUOVUTUS -B f07e4927a) (27.9.2026 klo 09.34)
+
+Pelikoodari nollattu 09.4x (81 % → tyhja), aloitusviesti: #3385/21e79d71 korjaus (mannerlennot palautetaan, sumun poisto ja Taysi jaavat, maakuntien heraaminen + salaisuudet + alkuanimaatio pois), striimipuhe ilman aanikytkimia, nostojen luennan saatimet (nopeus, jatko, vilkkuva kaiutin, ratas + aanen valinta, VU-kaiuttimet), raja-PR, natiivin progressiivinen soitto.
