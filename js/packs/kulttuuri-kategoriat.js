@@ -25996,7 +25996,8 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'oppi',
       nimi: 'Oppi',
-      johdanto: 'Vilnassa on opiskeltu ja tutkittu satoja vuosia.',
+      johdanto: 'Vilnassa on opiskeltu ja tutkittu satoja vuosia, '
+        + 'kaupungin vanhimmasta yliopistosta sen omaan tähtitorniin.',
       tehtava: {
         kysymys: 'Minä vuonna Vilnan yliopisto sai yliopiston oikeudet?',
         vaihtoehdot: [
