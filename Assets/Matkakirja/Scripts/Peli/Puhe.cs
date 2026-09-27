@@ -368,14 +368,8 @@ namespace Matkakirja.Natiivi
             esihakujono.Clear();
             // Palavirta (Virta): lyhyt ensimmäinen pala soi heti, loput haetaan sen soidessa (Lukijaaani.VirtaPalat).
             var palat = Virta && sailo ? Lukijaaani.VirtaPalat(teksti) : new List<string> { teksti };
-            if (palat.Count > 1)
-            {
-                lataus = StartCoroutine(SoitaPalat(palat, persoona, lohko, viiveS, oma, sailo));
-                return true;
-            }
-            var (runko, koodi) = Saadot.Pyynto(teksti, persoona, lohko);
-            string avain = Saadot.Valimuistiavain(persoona, teksti);
-            lataus = StartCoroutine(LataaJaSoita(avain, () => SynteesiPyynto(runko, koodi), viiveS, oma, true, sailo));
+            // Yksikin pala kulkee SoitaPalatin kautta: uusinta ja palaloki koskevat kaikkea luentaa.
+            lataus = StartCoroutine(SoitaPalat(palat, persoona, lohko, viiveS, oma, sailo));
             return true;
         }
 
@@ -402,10 +396,55 @@ namespace Matkakirja.Natiivi
                 if (!viimeinen) EsihaePala(palat[i + 1], persoona, lohko, true);
                 var (runko, koodi) = Saadot.Pyynto(palat[i], persoona, lohko);
                 string avain = Saadot.Valimuistiavain(persoona, palat[i]);
-                ViimeVirhe = null;
-                yield return LataaJaSoita(avain, () => SynteesiPyynto(runko, koodi), i == 0 ? viiveS : 0, oma, true, sailo, viimeinen, i > 0);
-                if (oma != tunnus || ViimeVirhe != null) yield break;
+                PalaNyt = $"{i + 1}/{palat.Count} {palat[i].Length} mrk";
+                /*
+                 * EI PUDOTETA PALAA (omistaja 27.9.2026 klo 22.0x, TF 1.0.32: "luenta pomppasi taas joidenkin kohtien yli"):
+                 * epäonnistunut pala (verkko, avaus, tallennus; Esilataaja on jo uusinut 429/5xx/yhteysvirheet) haetaan
+                 * uudelleen 1, 2 ja 4 s:n päästä. Seuraavaan palaan ei siirrytä koskaan ennen kuin tämä on soinut loppuun;
+                 * jos uusinnatkaan eivät auta (tai worker vastaa 429 = päiväraja), luenta pysähtyy tähän kuten webissä.
+                 */
+                for (int yritys = 0; ; yritys++)
+                {
+                    ViimeVirhe = null;
+                    yield return LataaJaSoita(avain, () => SynteesiPyynto(runko, koodi), i == 0 ? viiveS : 0, oma, true, sailo, viimeinen, i > 0);
+                    if (oma != tunnus) yield break;
+                    if (ViimeVirhe == null) break;
+                    bool raja = ViimeVirhe.Contains("429");
+                    if (raja || yritys >= PalanUusinnat)
+                    {
+                        Kirjaa($"pala {PalaNyt} LUOVUTETTU ({yritys} uusintaa): {ViimeVirhe}");
+                        yield break;
+                    }
+                    PalojaUusittu++;
+                    Kirjaa($"pala {PalaNyt} uusitaan ({yritys + 1}/{PalanUusinnat}): {ViimeVirhe}");
+                    yield return new WaitForSecondsRealtime(1 << yritys);
+                    if (oma != tunnus) yield break;
+                }
             }
+        }
+
+        /// <summary>Epäonnistuneen palan uusinnat (1, 2, 4 s) ennen kuin luenta pysähtyy.</summary>
+        public const int PalanUusinnat = 3;
+        /// <summary>Soiva pala "i/n mrk" (palaloki).</summary>
+        public static string PalaNyt { get; private set; }
+        /// <summary>Palaloki (mittari: "puhe palat"): soitetut, kesken loppuneet ja jatketut, uusitut palat.</summary>
+        public static int PalojaSoitettu, PalojaJatkettu, PalojaUusittu;
+        static readonly List<string> palaloki = new List<string>();
+        public static IReadOnlyList<string> Palaloki => palaloki;
+        public static void NollaaPalaloki() { palaloki.Clear(); PalojaSoitettu = PalojaJatkettu = PalojaUusittu = 0; }
+        static void Kirjaa(string rivi)
+        {
+            Debug.Log("MATKAKIRJA puhe: " + rivi);
+            palaloki.Add($"{Time.unscaledTime:0.0} {rivi}");
+            if (palaloki.Count > 40) palaloki.RemoveAt(0);
+        }
+        /// <summary>Workerin x-puhe-lahde (reuna | r2 | generoitu) välimuistiavaimittain: palaloki kertoo, mistä pala tuli.</summary>
+        static readonly Dictionary<string, string> puheLahde = new Dictionary<string, string>();
+        static void MuistaLahde(string avain, UnityWebRequest r)
+        {
+            string l = r.GetResponseHeader("x-puhe-lahde");
+            puheLahde[avain] = $"{(l ?? "?")} {r.responseCode}";
+            if (puheLahde.Count > 64) puheLahde.Clear();
         }
 
         /// <summary>
@@ -544,7 +583,7 @@ namespace Matkakirja.Natiivi
                 r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
                 r.timeout = 60;
                 return r;
-            }, taso, "puhe", r => ok = r.result == UnityWebRequest.Result.Success, avain: url);
+            }, taso, "puhe", r => { ok = r.result == UnityWebRequest.Result.Success; MuistaLahde(url, r); }, avain: url);
             try
             {
                 if (ok && !File.Exists(tiedosto)) File.Move(valiaikainen, tiedosto);
@@ -595,7 +634,7 @@ namespace Matkakirja.Natiivi
                     r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
                     r.timeout = 60;
                     return r;
-                }, Taso.Nakyva, "puhe", r => { ok = r.result == UnityWebRequest.Result.Success; virhe = r.error; });
+                }, Taso.Nakyva, "puhe", r => { ok = r.result == UnityWebRequest.Result.Success; virhe = r.error; if (synteesi) MuistaLahde(url, r); });
                 VerkkoOdotus.Kirjaa(vaihe, "puhe:" + Path.GetFileName(url.Split('?')[0]), (Time.realtimeSinceStartup - odotusAlku) * 1000.0, 1, ok ? null : "virhe");
                 if (sailo) Esilataaja.NakyvaValmis(url);
                 if (oma != tunnus) yield break;
@@ -650,9 +689,42 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA puhe: alkoi {(Time.unscaledTime - alku) * 1000:0} ms pyynnöstä ({(valimuistista ? "välimuisti" : "verkko")}) "
                       + Path.GetFileName(url.Split('?')[0]) + (mukana != null ? " [buildissa]" : ""));
 
-            // Loppu: äänite soi loppuun (ei pysäytetty eikä korvattu).
-            while (oma == tunnus && (lahde.isPlaying || tauolla)) yield return null;
+            /*
+             * SOI LOPPUUN ASTI (TF 1.0.32 ohitukset): ennen loppu tunnistettiin pelkästä isPlayingista samassa ruudussa
+             * kuin Play() — jos pakattu klippi ei ollut vielä soimassa (tai äänilähde pysähtyi kesken, esim. istunnon
+             * keskeytys), pala "loppui" heti ja seuraava pala korvasi sen = kohta ohitettiin. Nyt: odotetaan alkua enintään
+             * 2 s (Play uudelleen), seurataan soitettua aikaa, ja kesken pysähtynyt pala jatkuu samasta kohdasta (≤ 3 kertaa).
+             */
+            float kesto = klippi != null ? klippi.length : 0f, soi = 0f, alkuOdotus = Time.unscaledTime;
+            while (oma == tunnus && !lahde.isPlaying && !tauolla && Time.unscaledTime - alkuOdotus < 2f) yield return null;
             if (oma != tunnus) yield break;
+            if (!lahde.isPlaying && !tauolla) { Kirjaa($"pala {PalaNyt} ei alkanut 2 s:ssa: Play uudelleen"); lahde.Play(); }
+            for (int jatkoja = 0; ; jatkoja++)
+            {
+                while (oma == tunnus && (lahde.isPlaying || tauolla))
+                {
+                    if (lahde.isPlaying && lahde.clip == klippi) soi = Mathf.Max(soi, lahde.time);
+                    yield return null;
+                }
+                if (oma != tunnus) yield break;
+                // Viimeinen ruutu jää usein mittaamatta (~1/60 s): 0,25 s:n vara ei jatka valmista palaa turhaan.
+                if (!synteesi || kesto <= 0f || soi >= kesto - 0.25f || jatkoja >= 3 || lahde.clip != klippi) break;
+                PalojaJatkettu++;
+                Kirjaa($"pala {PalaNyt} pysähtyi kesken {soi:0.0}/{kesto:0.0} s: jatketaan");
+                lahde.time = Mathf.Min(soi, Mathf.Max(0f, kesto - 0.05f));
+                lahde.Play();
+                yield return null;
+            }
+            if (synteesi)
+            {
+                PalojaSoitettu++;
+                string mista = mukana != null ? "buildissa" : valimuistista ? "levy" : "verkko";
+                puheLahde.TryGetValue(url, out var worker);
+                // Mallin ohitus näkyy lyhyenä klippinä: puhetta ~14 mrk/s, alle puolet siitä → merkintä lokiin.
+                int mrk = PalaNyt != null && int.TryParse(PalaNyt.Split(' ')[1], out var m) ? m : 0;
+                string lyhyt = mrk > 60 && kesto > 0f && kesto < mrk / 28f ? " LYHYT KLIPPI (mallin ohitus?)" : "";
+                Kirjaa($"pala {PalaNyt} soi {soi:0.0}/{kesto:0.0} s, {mista}{(worker != null ? ", worker " + worker : "")}{lyhyt}");
+            }
             // Palavirran välipala: puhe jatkuu seuraavalla palalla (SoitaPalat), ei loppua eikä Puhuu-muutosta.
             if (synteesi) klippiLoppui = Time.unscaledTime;
             if (!viimeinen) yield break;

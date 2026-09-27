@@ -32,6 +32,7 @@
 //   luento kaupunki|intro|lento|lento-alku|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
 //   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
 //   puhe lue <teksti>         lukee tekstin kertojan äänellä (palavirran mittaus); puhe virta|striimi [pois|paalle]
+//   puhe palat [nollaa]       palaloki: soitetut, kesken jatketut ja uusitut palat + viimeiset rivit (soi/kesto, lähde, worker)
 //   puhe katkot               nollaa katkomittarin (puhe virta → katkot [ms]: klipin loppu → seuraavan alku < 5 s)
 //   kehittaja koodi|pois|tila kehittäjätila kuin Päävalikon kenttä (Asetukset.AsetaKehittaja): koodi luetaan
 //                             Documents/kehittaja-koodi.txt:stä, joka poistetaan heti; arvoa ei kirjata mihinkään
@@ -314,6 +315,11 @@ namespace Matkakirja.Natiivi
                                 + $"{(Puhe.VirtaPetti ? " (striimi petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms"
                                 + $", katkot [{string.Join(", ", System.Linq.Enumerable.Select(Puhe.Raot, x => x.ToString("0", CultureInfo.InvariantCulture)))}] ms";
                         case "katkot": Puhe.NollaaRaot(); return "=katkot nollattu";
+                        // Palaloki (TF 1.0.32 ohitukset): soitetut/jatketut/uusitut palat ja viimeiset rivit (soi s/kesto, lähde, worker).
+                        case "palat":
+                            if (A(2) == "nollaa") { Puhe.NollaaPalaloki(); return "=palaloki nollattu"; }
+                            return $"=palat soitettu {Puhe.PalojaSoitettu}, jatkettu kesken {Puhe.PalojaJatkettu}, uusittu {Puhe.PalojaUusittu}\n  "
+                                + string.Join("\n  ", Puhe.Palaloki);
                         // Lukee annetun tekstin kertojan äänellä (palavirran mittaus: "puhe virta" → 1. ääni ms, aani mittaa).
                         case "lue":
                         {
@@ -327,7 +333,7 @@ namespace Matkakirja.Natiivi
                             if (A(2) == "pois") Puhe.Striimi = false;
                             else if (A(2) == "paalle") { Puhe.Striimi = true; Puhe.NollaaVirta(); }
                             return $"=striimi {(Puhe.Striimi ? "päällä" : "pois")}{(Puhe.VirtaPetti ? " (petti: vanha polku)" : "")}";
-                        default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]|striimi [pois|paalle]|katkot|lue <teksti>";
+                        default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]|striimi [pois|paalle]|katkot|palat [nollaa]|lue <teksti>";
                     }
                 case "kehittaja":
                     switch (A(1))
