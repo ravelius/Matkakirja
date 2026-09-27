@@ -1,0 +1,401 @@
+[
+  {
+    "tunnus": "sakurajima",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka usein Sakurajima purkautuu?",
+        "vastaus": "Sakurajima purkautuu pieninä räjähdyksinä jopa satoja kertoja vuodessa, ja tuhkaa sataa säännöllisesti läheiseen Kagoshiman kaupunkiin. Asukkaat ovat tottuneet ilmiöön niin hyvin, että kouluissa harjoitellaan tuhkasadetta siinä missä muuallakin harjoitellaan paloturvallisuutta.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Sakurajima", "title": "Sakurajima – Wikipedia" }
+        ],
+        "havaintoId": "iss034e027139"
+      },
+      {
+        "kysymys": "Milloin Sakurajimasta tuli niemimaa?",
+        "vastaus": "Vuoden 1914 suuri purkaus täytti salmen laavalla ja yhdisti aiemmin saarena olleen Sakurajiman Osumin niemimaahan. Purkaus oli 1900-luvun voimakkain Japanissa ja pakotti tuhannet asukkaat pakenemaan.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Sakurajima", "title": "Sakurajima – Wikipedia" }
+        ],
+        "havaintoId": "iss034e027139"
+      }
+    ]
+  },
+  {
+    "tunnus": "aorounga",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka vanha Aorounga-kraatteri on?",
+        "vastaus": "Aorounga-kraatterin arvioidaan syntyneen noin 345 miljoonaa vuotta sitten, devonin ja hiilikauden taitteessa. Sahara on tuolloin ollut aivan toisenlainen paikka, eikä autiomaata vielä ollut.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Aorounga_crater", "title": "Aorounga crater – Wikipedia" }
+        ],
+        "havaintoId": "iss012e09639"
+      },
+      {
+        "kysymys": "Miksi Aorounga saattaa olla kolmoiskraatteri?",
+        "vastaus": "Tutkasatelliitit ovat paljastaneet hiekan alta kaksi lisää samanikäistä rengasrakennetta näkyvän kraatterin vierestä. Tutkijat arvelevat, että samasta asteroidista irronneet kolme kappaletta osuivat maahan lähes samaan aikaan riviin.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Aorounga_crater", "title": "Aorounga crater – Wikipedia" }
+        ],
+        "havaintoId": "iss012e09639"
+      }
+    ]
+  },
+  {
+    "tunnus": "emi-koussi",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka korkea Emi Koussi on?",
+        "vastaus": "Emi Koussi kohoaa 3 415 metrin korkeuteen ja on Saharan aavikon korkein huippu. Se on kilpitulivuori, jonka loivat rinteet syntyvät juoksevasta basalttilaavasta.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Emi_Koussi", "title": "Emi Koussi – Wikipedia" }
+        ],
+        "havaintoId": "iss030e005456"
+      },
+      {
+        "kysymys": "Missä vuoristossa Emi Koussi sijaitsee?",
+        "vastaus": "Emi Koussi kuuluu Tšadin pohjoisosan Tibestin vuoristoon, joka on syntynyt maankuoren alla olevan kuumaläikän toiminnasta. Alueen syrjäisyyden vuoksi vuori on yksi maailman vähiten tutkituista suurista tulivuorista.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Emi_Koussi", "title": "Emi Koussi – Wikipedia" }
+        ],
+        "havaintoId": "iss030e005456"
+      }
+    ]
+  },
+  {
+    "tunnus": "meteor-crater-arizona",
+    "kysymykset": [
+      {
+        "kysymys": "Kuka todisti Meteorikraatterin syntyneen törmäyksestä?",
+        "vastaus": "Kaivosinsinööri Daniel Barringer esitti 1900-luvun alussa, että kraatteri syntyi meteoriitin törmäyksestä, vaikka useimmat geologit epäilivät tuolloin tulivuoritoimintaa. Myöhemmät tutkimukset vahvistivat hänen teoriansa oikeaksi, ja kraatteria kutsutaan yhä myös Barringerin kraatteriksi.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Meteor_Crater", "title": "Meteor Crater – Wikipedia" }
+        ],
+        "havaintoId": "iss074e0208832"
+      },
+      {
+        "kysymys": "Mihin NASA käytti Meteorikraatteria 1960-luvulla?",
+        "vastaus": "NASA koulutti Apollo-ohjelman astronautteja kraatterin ympäristössä, koska maasto muistutti Kuun pintaa. Astronautit harjoittelivat siellä geologista näytteenottoa ennen Kuu-lentoja.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Meteor_Crater", "title": "Meteor Crater – Wikipedia" }
+        ],
+        "havaintoId": "iss074e0208832"
+      }
+    ]
+  },
+  {
+    "tunnus": "buenos-aires-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka moni asuu Buenos Airesin metropolialueella?",
+        "vastaus": "Buenos Airesin metropolialueella asuu yli 15 miljoonaa ihmistä, vaikka itse kaupungissa on vain noin 3 miljoonaa asukasta. Se tekee siitä yhden Etelä-Amerikan suurimmista kaupunkialueista.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Buenos_Aires", "title": "Buenos Aires – Wikipedia" }
+        ],
+        "havaintoId": "iss072e519264"
+      },
+      {
+        "kysymys": "Mikä joki virtaa Buenos Airesin ohi?",
+        "vastaus": "Buenos Aires sijaitsee Río de la Platan rannalla, joka on Argentiinan ja Uruguayn välinen valtava jokisuisto ja yksi maailman leveimmistä joista. Sitä pitkin kaupungista pääsee suoraan Atlantille.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Buenos_Aires", "title": "Buenos Aires – Wikipedia" }
+        ],
+        "havaintoId": "iss072e519264"
+      }
+    ]
+  },
+  {
+    "tunnus": "riyadh-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka paljon Riadin väkiluku on kasvanut 1960-luvulta?",
+        "vastaus": "Riadissa asui vuonna 1960 vain noin 150 000 ihmistä, mutta nykyään väkiluku on kasvanut yli 7 miljoonaan. Kasvu liittyy öljytulojen tuomaan vaurauteen ja voimakkaaseen kaupungistumiseen.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Riyadh", "title": "Riyadh – Wikipedia" }
+        ],
+        "havaintoId": "iss033e020288"
+      },
+      {
+        "kysymys": "Mistä Riadin juomavesi on peräisin?",
+        "vastaus": "Riadin lähellä ei virtaa pysyvää jokea, joten kaupungin vesi tulee pääosin merivedestä suolanpoistolaitoksissa sekä syvältä pohjavedestä. Vesi pumpataan kaupunkiin satojen kilometrien putkistoja pitkin.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Riyadh", "title": "Riyadh – Wikipedia" }
+        ],
+        "havaintoId": "iss033e020288"
+      }
+    ]
+  },
+  {
+    "tunnus": "casablanca-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä Casablanca tarkoittaa espanjaksi?",
+        "vastaus": "Casablanca tarkoittaa espanjaksi 'valkoista taloa', ja nimi juontuu kaupungin valkoisiksi kalkituista rakennuksista. Eurooppalaiset merenkulkijat antoivat nimen jo vuosisatoja sitten.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Casablanca", "title": "Casablanca – Wikipedia" }
+        ],
+        "havaintoId": "iss072e645691"
+      },
+      {
+        "kysymys": "Mikä on Casablancan asema Marokossa?",
+        "vastaus": "Casablanca on Marokon suurin kaupunki ja maan tärkein talous- ja satamakeskus, vaikka pääkaupunki on Rabat. Kaupungissa asuu yli 3,7 miljoonaa ihmistä.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Casablanca", "title": "Casablanca – Wikipedia" }
+        ],
+        "havaintoId": "iss072e645691"
+      }
+    ]
+  },
+  {
+    "tunnus": "empty-quarter",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka korkeita Tyhjän neljänneksen dyynit voivat olla?",
+        "vastaus": "Rub al-Khalin dyynit voivat kohota jopa 250 metrin korkeuteen, mikä tekee niistä maailman suurimpia hiekkadyynejä. Tuuli muovaa niitä jatkuvasti uusiin muotoihin.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Rub%27_al_Khali", "title": "Rub' al Khali – Wikipedia" }
+        ],
+        "havaintoId": "iss027e034290"
+      },
+      {
+        "kysymys": "Kuka ylitti Tyhjän neljänneksen ensimmäisten joukossa?",
+        "vastaus": "Brittiläinen tutkimusmatkailija Bertram Thomas ylitti Rub al-Khalin ensimmäisenä eurooppalaisena vuosina 1930–1931. Myöhemmin myös Wilfred Thesiger teki alueella kuuluisia vaelluksia paikallisten beduiinien kanssa.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Rub%27_al_Khali", "title": "Rub' al Khali – Wikipedia" }
+        ],
+        "havaintoId": "iss027e034290"
+      }
+    ]
+  },
+  {
+    "tunnus": "taklamakan",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä Taklamakanin nimen on tulkittu tarkoittavan?",
+        "vastaus": "Taklamakanin nimen on kansanperinteessä tulkittu tarkoittavan jotain 'sinne menet mutta et tule takaisin' -tyyppistä, vaikka kielitieteilijät kiistelevät tulkinnasta. Autiomaan äärimmäiset olosuhteet ovat joka tapauksessa tehneet siitä pelätyn.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Taklamakan_Desert", "title": "Taklamakan Desert – Wikipedia" }
+        ],
+        "havaintoId": "iss074e0316083"
+      },
+      {
+        "kysymys": "Miten muinaiset kauppiaat kiersivät Taklamakanin?",
+        "vastaus": "Silkkitien kulkijat eivät yrittäneet ylittää Taklamakania, vaan kiersivät sen pohjois- tai eteläreunaa pitkin vuorten juurella sijaitsevien keidaskaupunkien kautta. Reitit yhtyivät jälleen autiomaan molemmin puolin.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Taklamakan_Desert", "title": "Taklamakan Desert – Wikipedia" }
+        ],
+        "havaintoId": "iss074e0316083"
+      }
+    ]
+  },
+  {
+    "tunnus": "simpson-desert",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä Simpsonin autiomaan hiekan punainen väri johtuu?",
+        "vastaus": "Simpsonin autiomaan hiekanjyväset ovat peittyneet ohuella rautaoksidikerroksella, joka antaa dyyneille niiden punertavan sävyn. Kerros on muodostunut hitaasti tuhansien vuosien aikana.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Simpson_Desert", "title": "Simpson Desert – Wikipedia" }
+        ],
+        "havaintoId": "iss005e21295"
+      },
+      {
+        "kysymys": "Kuka ylitti Simpsonin autiomaan ensimmäisenä jalan?",
+        "vastaus": "Ted Colson ylitti Simpsonin autiomaan ensimmäisenä eurooppalaissyntyisenä jalan ja kamelein vuonna 1936. Aiemmin aluetta pidettiin liian ankarana ylitettäväksi.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Simpson_Desert", "title": "Simpson Desert – Wikipedia" }
+        ],
+        "havaintoId": "iss005e21295"
+      }
+    ]
+  },
+  {
+    "tunnus": "aurora-scandinavia",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä aiheuttaa revontulien vihreän värin?",
+        "vastaus": "Revontulien vihreä väri syntyy, kun Auringon hiukkaset virittävät happiatomeja noin 100–300 kilometrin korkeudessa yläilmakehässä. Viritetyt atomit purkavat energiansa vihreänä valona.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Aurora", "title": "Aurora – Wikipedia" }
+        ],
+        "havaintoId": "iss064e024089"
+      },
+      {
+        "kysymys": "Mistä revontulien hiukkaset ovat peräisin?",
+        "vastaus": "Revontulet syntyvät Auringon aurinkotuulen mukana tulevista varautuneista hiukkasista, jotka Maan magneettikenttä ohjaa napa-alueiden yläilmakehään. Siellä ne törmäävät happi- ja typpimolekyyleihin ja saavat ne hehkumaan.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Aurora", "title": "Aurora – Wikipedia" }
+        ],
+        "havaintoId": "iss064e024089"
+      }
+    ]
+  },
+  {
+    "tunnus": "manam",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka moni evakuoitiin Manam-saarelta 2004?",
+        "vastaus": "Manamin vuoden 2004 purkaus pakotti evakuoimaan lähes kaikki saaren noin 9 000 asukasta mantereelle. Monet heistä eivät ole koskaan palanneet pysyvästi takaisin saarelle.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Manam", "title": "Manam – Wikipedia" }
+        ],
+        "havaintoId": "sts093-709-051"
+      },
+      {
+        "kysymys": "Millainen saari Manam on?",
+        "vastaus": "Manam on kokonaan yhden tulivuoren muodostama pyöreä saari Papua-Uuden-Guinean rannikon edustalla. Se on yksi Bismarckin vulkaanisen kaaren aktiivisimmista tulivuorista.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Manam", "title": "Manam – Wikipedia" }
+        ],
+        "havaintoId": "sts093-709-051"
+      }
+    ]
+  },
+  {
+    "tunnus": "karymsky",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä lähtien Karymski on purkautunut jatkuvasti?",
+        "vastaus": "Karymski on purkautunut lähes yhtäjaksoisesti vuodesta 1996 lähtien, mikä tekee siitä yhden Kamtšatkan aktiivisimmista tulivuorista. Purkaukset ovat tyypillisesti tuhka- ja kaasupurkauksia.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Karymsky", "title": "Karymsky – Wikipedia" }
+        ],
+        "havaintoId": "iss033e019822"
+      },
+      {
+        "kysymys": "Missä Karymski sijaitsee vanhaan kalderaan nähden?",
+        "vastaus": "Karymski on kasvanut vanhemman, noin 7 600 vuotta sitten syntyneen kalderan sisään. Kalderan pohjalla on myös järvi aivan tulivuoren vieressä.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Karymsky", "title": "Karymsky – Wikipedia" }
+        ],
+        "havaintoId": "iss033e019822"
+      }
+    ]
+  },
+  {
+    "tunnus": "tarawa",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä taistelu käytiin Tarawalla vuonna 1943?",
+        "vastaus": "Tarawalla käytiin marraskuussa 1943 yksi Tyynenmeren sodan verisimmistä taisteluista Yhdysvaltain ja Japanin joukkojen välillä. Taistelu kesti vain muutaman päivän, mutta molemmin puolin kaatui tuhansia sotilaita.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Battle_of_Tarawa", "title": "Battle of Tarawa – Wikipedia" }
+        ],
+        "havaintoId": "iss053e180184"
+      },
+      {
+        "kysymys": "Miksi Kiribati on altis ilmastonmuutokselle?",
+        "vastaus": "Kiribatin atollit, kuten Tarawa, kohoavat vain muutaman metrin meren pinnan yläpuolelle. Merenpinnan nousu uhkaa tehdä osista saaria asumiskelvottomia jo tämän vuosisadan aikana.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Kiribati", "title": "Kiribati – Wikipedia" }
+        ],
+        "havaintoId": "iss053e180184"
+      }
+    ]
+  },
+  {
+    "tunnus": "wake-island",
+    "kysymykset": [
+      {
+        "kysymys": "Milloin Japani valtasi Waken saaren?",
+        "vastaus": "Japani valtasi Waken saaren joulukuussa 1941, pian Pearl Harborin hyökkäyksen jälkeen. Saaren pieni yhdysvaltalaisvaruskunta puolusti asemiaan viikkojen ajan ennen antautumista.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Battle_of_Wake_Island", "title": "Battle of Wake Island – Wikipedia" }
+        ],
+        "havaintoId": "iss033e007873"
+      },
+      {
+        "kysymys": "Kuinka monesta saaresta Waken atolli koostuu?",
+        "vastaus": "Waken atolli koostuu kolmesta pienestä matalasta saaresta laguunin ympärillä. Saarilla ei asu siviilejä, vaan ne toimivat lähinnä Yhdysvaltain sotilastukikohtana.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Wake_Island", "title": "Wake Island – Wikipedia" }
+        ],
+        "havaintoId": "iss033e007873"
+      }
+    ]
+  },
+  {
+    "tunnus": "bassac-vietnam",
+    "kysymykset": [
+      {
+        "kysymys": "Montako haaraa Mekong muodostaa suistoonsa?",
+        "vastaus": "Mekong jakautuu suistossaan yhdeksään pääuomaan, joita kutsutaan vietnamiksi nimellä 'Cửu Long' eli yhdeksän lohikäärmettä. Bassac on näistä haaroista toiseksi suurin.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Mekong_Delta", "title": "Mekong Delta – Wikipedia" }
+        ],
+        "havaintoId": "iss073e0818427"
+      },
+      {
+        "kysymys": "Mistä Bassac-joen ruskea väri johtuu?",
+        "vastaus": "Bassac-joen ruskea väri syntyy Mekongin koko valuma-alueelta kertyneestä hienojakoisesta liejusta ja savesta. Vuorovesi sekoittaa sedimenttiä vielä lisää joen suulla ennen sen laskua mereen.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Mekong_Delta", "title": "Mekong Delta – Wikipedia" }
+        ],
+        "havaintoId": "iss073e0818427"
+      }
+    ]
+  },
+  {
+    "tunnus": "kenya-rift",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä synnyttää Kenian riftilaakson murroslinjat?",
+        "vastaus": "Kenian riftilaakso syntyy, kun Afrikan ja Somalian mannerlaatat vetäytyvät hitaasti toisistaan erilleen. Liike venyttää ja murtaa maankuorta, minkä seurauksena syntyy rinnakkaisia hautavajoamia.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/East_African_Rift", "title": "East African Rift – Wikipedia" }
+        ],
+        "havaintoId": "iss030e035487"
+      },
+      {
+        "kysymys": "Mitä riftilaaksolle voi tapahtua miljoonien vuosien päästä?",
+        "vastaus": "Tutkijoiden mukaan Itä-Afrikan hautavajoama voi miljoonien vuosien kuluessa halkaista mantereen kahtia. Vajoamaan voi tuolloin muodostua kokonaan uusi valtameri Afrikan sisään.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/East_African_Rift", "title": "East African Rift – Wikipedia" }
+        ],
+        "havaintoId": "iss030e035487"
+      }
+    ]
+  },
+  {
+    "tunnus": "sahara-dust-western",
+    "kysymykset": [
+      {
+        "kysymys": "Miten Saharan pöly vaikuttaa Amazonin sademetsään?",
+        "vastaus": "Saharasta nouseva pöly kulkeutuu tuulten mukana Atlantin yli Amazonin sademetsään asti. Pöly sisältää fosforia, joka toimii luonnollisena lannoitteena sademetsän muuten ravinneköyhälle maaperälle.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Saharan_dust", "title": "Saharan dust – Wikipedia" }
+        ],
+        "havaintoId": "iss007e08259"
+      },
+      {
+        "kysymys": "Mikä saaristo kärsii usein Saharan pölystä?",
+        "vastaus": "Kanariansaaret kärsivät toistuvasti Saharan pölypilvistä, joita paikalliset kutsuvat nimellä 'calima'. Ilmiö voi heikentää näkyvyyttä ja ilmanlaatua saarilla useiksi päiviksi kerrallaan.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Canary_Islands", "title": "Canary Islands – Wikipedia" }
+        ],
+        "havaintoId": "iss007e08259"
+      }
+    ]
+  },
+  {
+    "tunnus": "baghdad-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Minä vuonna Bagdad perustettiin?",
+        "vastaus": "Bagdad perustettiin vuonna 762 Abbasidien kalifikunnan uudeksi pääkaupungiksi. Kaupungista kasvoi nopeasti yksi keskiajan islamilaisen maailman suurimmista oppineisuuden keskuksista.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Baghdad", "title": "Baghdad – Wikipedia" }
+        ],
+        "havaintoId": "iss073e0515117"
+      },
+      {
+        "kysymys": "Mikä joki virtaa Bagdadin läpi?",
+        "vastaus": "Tigris-joki virtaa Bagdadin läpi tehden kaupungin kohdalla selvän mutkan. Joki on ollut kaupungin elinehto sen perustamisesta lähtien aina nykypäivään asti.",
+        "lahteet": [
+          { "url": "https://en.wikipedia.org/wiki/Baghdad", "title": "Baghdad – Wikipedia" }
+        ],
+        "havaintoId": "iss073e0515117"
+      }
+    ]
+  }
+]
