@@ -195,21 +195,125 @@ Madrid ~45 väitettä (2 virhettä), Ateena yli 40 väitettä neljässä
 osassa — Akropolis-kokonaisuus, kaupunkihistoria, agora/Schliemann/
 Pnyx, olympialaiset/Kallimarmaro (1 virhe + korkeusristiriita).
 
-**Istanbul: EI ALOITETTU** — seuraavan session ensimmäinen tehtävä
-tässä ohjelmassa.
+**Istanbul: VALMIS** (erä 3, alla).
+
+## Erä 3: Istanbul
+
+Menetelmä: Istanbul on poikkeuksellisen laaja (myös oma kaupunkilauta
+kysymyksineen), joten tarkistus jaettiin kuuteen tutkimusagenttiin:
+kolme kattoi vakiotiedostot (kulttuuri-kategoriat.js, nahtavyysjutut.js,
+fokusvirta-istanbul.js), kolme kattoi istanbul-questions.js:n
+ISTANBUL_QUESTIONS/ISTANBUL_FACTS-sisällön aihepiireittäin.
+
+### KORJATUT VIRHEET
+
+**kulttuuri-kategoriat.js**
+
+1. **Merilumimyrskyjen toistuvuus** — kulttuuri-kategoriat.js (istanbul,
+   "Neljä vuodenaikaa ja tulppaanikuukausi" -teksti + taustakommentti).
+   Väite: "yli 30 senttiä lähes joka talvi". Virhe: en-Wikipedian
+   ilmastoartikkelin mukaan yli 30 cm:n merilumimyrskyjä on ollut vain
+   neljä n. 80 vuoden aikana (1942, 1987, 2017, 2022) — kerran
+   vuosikymmenessä tai harvemmin, ei lähes joka talvi. Korjattu:
+   "kerran vuosikymmenessä tai harvemmin". Lähde: en-Wikipedia
+   "Climate of Istanbul".
+2. **Konstantinopolin piirityksen kesto, sisäinen ristiriita** —
+   kulttuuri-kategoriat.js (Historian hetki -nosto "Konstantinopoli
+   1453", lyhyt+selite). Väite: "kuuden viikon piiritys". Virhe: sama
+   nosto-objekti antaa muualla (kysymys + pääteksti) piirityksen
+   kestoksi 53 päivää (6.4.–29.5.1453) — n. 7,5 viikkoa, ei kuusi.
+   Korjattu: "reilun seitsemän viikon". Lähde: sama tiedosto
+   (53 päivää -kohta) + en-Wikipedia "Fall of Constantinople".
+3. **Mehter, tukematon superlatiivi** — kulttuuri-kategoriat.js
+   (istanbul, "Maailman vanhin sotilassoittokunta" -nosto: otsikko,
+   teksti, lyhyt, selite). Väite esitettiin faktana ("vanhin tunnettu
+   marssiva soittokunta maailmassa"), vaikka lähteet käyttävät
+   hedge-muotoa ("thought to be") — sama tiedosto käyttää oikeaoppista
+   hedge-muotoa toisaalla samasta aiheesta. Korjattu otsikko "Ehkä
+   maailman vanhin sotilassoittokunta" ja teksti/lyhyt/selite
+   "jota pidetään vanhimpana tunnettuna...". Lähde: en-Wikipedia
+   "Ottoman military band".
+
+**istanbul-questions.js**
+
+4. **Balat, tukematon superlatiivi** — istanbul-questions.js, `balat`
+   facts-taulukko. Väite: "suosituimpia valokuvauspaikkoja koko
+   kaupungissa". Virhe: absoluuttinen väite ohittaa selvästi
+   suositummat kohteet (Hagia Sofia, Sininen moskeija ym.), eikä
+   lähteitä löytynyt tukemaan vertailua. Korjattu: "yksi kaupungin
+   suosituimmista valokuvauspaikoista".
+5. **Maustebasaari, keksitty täsmäluku** — istanbul-questions.js,
+   `maustebasaari` facts-taulukko. Väite: "sata lajia juustoa". Virhe:
+   täsmälukua ei löytynyt mistään lähteestä. Korjattu: "monenlaisia
+   juustoja".
+6. **Sinan, "tunnetuin" vs. hänen oma mestariteoksensa** —
+   istanbul-questions.js, `uskudar` kysymys idx4 (fact+hint). Väite:
+   "hänen tunnetuin työnsä on Selimiye Edirnessä". Virhe: lähteet ovat
+   jakautuneita — Süleymaniye on monen mielestä "tunnetuin" (Istanbulissa,
+   turisteille tutumpi), mutta Sinan itse kutsui Selimiyeä
+   mestariteoksekseen. Korjattu: "Hän itse piti mestariteoksenaan
+   Selimiyeä" (kiertää kiistanalaisen "tunnetuin"-vertailun). Lähde:
+   en-Wikipedia "Mimar Sinan".
+7. **Mekan seitsemäs minareetti, legenda faktana** —
+   istanbul-questions.js, `sinimoskeija` kysymys idx1 (fact). Väite:
+   "Mekkaan rakennettiin seitsemäs [minareetti]" esitettynä suorana
+   historiallisena tosiasiana. Virhe: suosittu mutta historiallisesti
+   epävarma legenda; pelissä muualla vastaavat legendat merkitään
+   selvästi tarinoiksi. Korjattu: lisätty "Tarinan mukaan... mutta
+   historiallinen näyttö tästä on epävarma."
+8. **"Istanbul on Euroopan suurin kaupunki"** —
+   istanbul-questions.js, `general` kysymys idx0 (fact). Väite
+   kategorisena superlatiivina. Virhe: kiistanalainen — mannertenvälisenä
+   kaupunkina Istanbul jätetään usein "vain Euroopassa sijaitsevien
+   kaupunkien" vertailuista pois, jolloin Moskova nousee suurimmaksi.
+   Korjattu: "yksi Euroopan suurimmista kaupungeista".
+
+### EPÄSELVÄ (ei korjattu, ei selkeää virhettä)
+
+- **Käärmepylvään leuan irtoamisajankohta** — nahtavyysjutut.js,
+  "Käärmepylväs"-selite. Ajankohta ja tekijä (Mehmed II vs. kolme
+  muuta hallitsijaa) ovat historiantutkimuksessa aidosti kiistanalaisia;
+  teksti tunnustaa tämän jo itse mainitsemalla kolme mahdollista
+  tekijää — ei muutostarvetta.
+- **Käärmepylvään siirtovuosi 324** — fokusvirta-istanbul.js. Osa
+  lähteistä antaa 330 (kaupungin vihkiminen) täsmävuoden 324 sijaan,
+  ja jotkut sanovat täsmävuoden olevan tuntematon. 324 on yksi
+  hyväksytyistä tulkinnoista, ei ainoa — ei muutosta.
+- **Camondo "juutalaisen yhteisön patriarkka"** — fokusvirta-istanbul.js.
+  En-Wikipedia käyttää sanaa "patriarch" Camondo-suvusta, ei koko
+  yhteisöstä; asiasisältö (johtoasema) on tosi, sanavalinta on lievä
+  laajennus. Ei selkeä virhe, ei muutosta.
+- **Dolmabahçen läimäys-tarinan kaksi versiota** — kulttuuri-kategoriat.js.
+  Molemmat versiot (kasvo-/vatsaläimäys) ovat dokumentoituja, mutta
+  tarkkaa "kaksi erillistä syytä" -asetelmaa ei pystytty täysin
+  vahvistamaan. Ei muutosta.
+- **Kesäpäivän lämpötila 28 °C** — kulttuuri-kategoriat.js. Lähteet
+  hajaantuvat vuorokauden keskiarvon (23–24 °C) ja päivän
+  ylimmän lämpötilan (27–35 °C) välillä asemasta riippuen; 28 °C on
+  kohtuullinen arvio päivän ylimmälle lämmölle. Ei muutosta.
+
+### Tarkistettu ja todettu oikeaksi (ei muutostarvetta)
+
+Yhteensä noin 220 yksittäistä väitettä (päivämäärät, nimet, luvut,
+superlatiivit, quiz-kysymysten `correct`-indeksit) tarkistettiin kaikista
+neljästä tiedostosta. Erityisesti tarkkuudella pitivät paikkansa: İznikin
+kaakeleiden lukumäärä, Süleymaniyen mitat, Galatan sillan jänneväli,
+Camondon elämäkerran päivämäärät, Sirkecin aseman historia, Valensin
+vesijohto, Tünelin avaus 1875, Suuren basaarin koko ja perustamisvuosisata,
+Topkapın kauhantekijän timantti (kolme lusikkaa — ei kahta, kuten
+epäiltiin), Hagia Sofian kupolin ylivoima Firenzeen asti, kaikki
+kysymysten `correct`-vastaukset (mukaan lukien Rumelihisarın rakennusaika,
+Dolmabahçen kattokruunu, Tünelin pituus, Galatan tornin korkeus, Neitsyttornin
+2023-uudelleenavaus, Prinssisaarten hevoskärryjen lopettaminen 2020).
 
 ## Korjausten tila
 
-Kaikki 17 vahvistettua virhettä korjattu haarassa
-`sisaltokirjuri-faktatarkistus-e1` (PR #3473, draft — poista draft
-kun koko testisarja on ajettu ja vihreä). EPÄSELVÄT-kohdat jätetty
-ennalleen ja ilmoitettu Fablelle.
+Kaikki 25 vahvistettua virhettä (17 erä 1-2 + 8 Istanbul) korjattu
+haarassa `sisaltokirjuri-faktatarkistus-e1` (PR #3473, ei-draft).
+EPÄSELVÄT-kohdat jätetty ennalleen ja kirjattu.
 
 ## Seuraava erä
 
-Istanbul (ei aloitettu), sitten seuraavat suuret kaupungit Fablen
-ohjeen mukaan (Fable ei listannut nimiä erän 2 jälkeen — kysy tai
-jatka loogisesti seuraaviin: esim. Tukholma, Kööpenhamina, Praha,
-Budapest — nämä ovat jo saaneet oman lehtiaiheensa Eurooppa-erissä
-7-9, joten niissä on tuoretta, agenttien vielä tarkistamatonta
-sisältöä).
+Fablen ohjeen mukaan seuraavaksi: Tukholma, Bukarest, Pietari, Lissabon,
+Sofia, Helsinki (tuoretta, agenttien vielä tarkistamatonta sisältöä
+Eurooppa-erissä 7-9).
