@@ -1346,7 +1346,7 @@ test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympä
   const o = JSON.parse(tiedostot.get('offline.json'));
   const R = o.lahteet.rasteri;
   assert.match(R.url, /\/2026-09-26-pohja-20260926\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
-  assert.equal(R.maxzoom, 9);
+  assert.equal(R.maxzoom, 9, '1.51: Z10 omassa avaimessa kaupunkiRasteri, ei maxzoomissa');
   assert.deepEqual(R.kaupunkitaso.tasot, [9]);
   const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((c) => c.tyyppi === 'kaupunki');
   assert.ok(kaupungit.length >= 70);
@@ -1519,4 +1519,47 @@ test('skeema 1.50: musiikkiaiheet ja kaupungin maanosa äänitauluissa', async (
   const ateena = k.find((a) => a.id === 'musiikkiketju:ateena');
   assert.equal(ateena.maanosa, kaupunginMaanosa('ateena', 'GRC'));
   assert.ok(ateena.maanosa);
+});
+
+test('skeema 1.51: natiivin pallon Z10 offline-välit = Karttasepän poltettu joukko', async () => {
+  const { readFileSync } = await import('node:fs');
+  const lista = new Set(JSON.parse(readFileSync(new URL('../tools/vienti/pallo-z10.json', import.meta.url), 'utf8')).laatat);
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  // Natiiviseppä 27.9.: vanhat buildit lataavat jokaisen maan rasteri-kentän tason → Z10 omaan avaimeen.
+  assert.equal(o.lahteet.rasteri.maxzoom, 9);
+  assert.deepEqual(o.lahteet.rasteri.kaupunkitaso.tasot, [9]);
+  assert.deepEqual(o.lahteet.rasteri.kaupunkiRasteri.tasot, [10]);
+  assert.equal(o.lahteet.rasteri.kaupunkiRasteri.laattoja, lista.size);
+  const kaikki = new Set();
+  for (const [iso, m] of Object.entries(o.maat)) {
+    assert.ok(Object.keys(m.rasteri).every((z) => Number(z) <= 9), `${iso}: rasteri-kentässä vain z ≤ 9`);
+    assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman Z10:tä`);
+    if (!m.kaupunkiRasteri) continue;
+    assert.deepEqual(Object.keys(m.kaupunkiRasteri), ['10']);
+    assert.ok(m.laattoja.kaupunkiRasteri > 0 && m.tavuja.kaupunkiRasteri > 0, iso);
+    for (const [x0, y0, x1, y1] of m.kaupunkiRasteri['10']) {
+      for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) {
+        assert.ok(lista.has(`${x}/${y}`), `${iso}: ${x}/${y} ei ole poltettu (natiivi saisi 404)`);
+        kaikki.add(`${x}/${y}`);
+      }
+    }
+  }
+  // Kaikki paitsi maattomien kaupunkien (Jerusalem) laatat ovat jonkin maan offline-alueessa.
+  assert.ok(kaikki.size >= lista.size - 40, `${kaikki.size}/${lista.size}`);
+});
+
+test('eheys 27.9.: Flickr-kuvat repon kopiona ämpärissä, Flickr vain varana', async () => {
+  const { sivustonAssetit } = await import('../tools/vienti/vie-sisalto.mjs');
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  const flickr = media.filter((v) => v.laji === 'kuva-flickr');
+  assert.ok(flickr.length > 0);
+  const assetit = sivustonAssetit(tiedostot);
+  for (const v of flickr) {
+    assert.match(v.url, /^https:\/\/media\.matkakirja\.app\/assets\/valokuvat\/flickr-\d+\.jpg\?v=[0-9a-f]{12}$/, v.arvo);
+    assert.ok(assetit[v.url.slice('https://media.matkakirja.app/'.length).split('?')[0]], `${v.arvo} ei ämpärin assettilistassa`);
+    assert.match(v.varat.at(-1), /^https:\/\/live\.staticflickr\.com\//);
+  }
+  const offline = JSON.parse(tiedostot.get('offline.json'));
+  const kaikki = Object.values(offline.maat).flatMap((m) => m.media);
+  assert.equal(kaikki.filter((u) => u.includes('staticflickr')).length, 0, 'offline-lataus ei hae Flickristä');
 });

@@ -2824,7 +2824,7 @@ export class Pollo {
    * @returns {boolean} näkyikö kupla.
    */
   naytaAvauskupla(teksti, {
-    lennahda = false, kuittaus = null, muotokuva = false,
+    lennahda = false, kuittaus = null, muotokuva = false, ohita = false,
   } = {}) {
     if (!teksti) return false;
     /*
@@ -2862,6 +2862,25 @@ export class Pollo {
       kupla.append(kuvapaikka, puhe);
     } else {
       kupla.appendChild(puhe);
+    }
+    /*
+     * OHITA-NAPPI (omistaja 27.9.2026 klo 17.2x, "KERRAN + OHITA"):
+     * uuden matkan lyhyessä tervehdyksessä (js/livia.js
+     * naytaLivianLyhytAvaus) kuplassa on näkyvä Ohita. Napautus kuplaan
+     * kuittaa jo ennestään (kuplan pointerup), joten nappi vain kertoo
+     * sen — ja toimii näppäimistöllä, jolla kuplaa ei voi napauttaa.
+     */
+    if (ohita && kuittaus) {
+      const nappi = polloElementti('button', 'pollo-vihje-ohita', 'Ohita');
+      nappi.type = 'button';
+      nappi.setAttribute('aria-label', 'Ohita Livian tervehdys');
+      nappi.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const k = kupla.polloKuittaus;
+        kupla.polloKuittaus = null;
+        k?.();
+      });
+      kupla.appendChild(nappi);
     }
     kupla.polloKuittaus = kuittaus;
     this.lisaaPinoon(kupla);

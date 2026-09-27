@@ -410,6 +410,60 @@ button, .brand, .turn-pill, .fact-card h2 {
 .turn-pill .kassa.rahaton { color: #c0392b; font-weight: 700; }
 .turn-pill .rahaton-aika { color: #c0392b; font-size: 0.85em; white-space: nowrap; }
 
+/*
+ * RAHATTOMUUSPALKKI (omistaja 27.9.2026 klo 15.1x; js/ui.js
+ * paivitaRahattomuuspalkki): kahdeksan kuuden tunnin lohkoa kartan
+ * yläreunan keskellä. Omistaja 15.2x: PELKÄT PUNAISET NELIÖT — ei
+ * tekstiä, ei kehystä, sama ulkoasu kaikilla laitteilla. 16.1x: heti
+ * yläreunassa, väistää alas kalusteiden alle; napautus avaa miniselitteen.
+ */
+.rahattomuuspalkki {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Näkymätön lisäpinta napautukselle (neliörivi on vain 11 px korkea);
+   * pehmuste on samalla rako yläpuolen kalusteisiin (ui.js asetteleRahattomuuspalkki). */
+  padding: 6px 8px;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.rahattomuuspalkki[hidden] { display: none; }
+.rahattomuuspalkki:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 6px; }
+/* Miniselite: kevyt pergamenttilappu palkin alla (omistaja 16.1x). */
+.rahattomuus-selite {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  width: min(260px, calc(100% - 32px));
+  padding: 8px 11px;
+  border: 1px solid rgba(85, 64, 42, 0.45);
+  border-radius: 8px;
+  background: rgba(244, 234, 212, 0.96);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  color: #3a2a1a;
+  font: 400 13px/1.4 var(--font-luku);
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.rahattomuus-selite[hidden] { display: none; }
+.rahattomuus-lohkot { display: flex; gap: 3px; }
+.rahattomuus-lohko {
+  width: 9px;
+  height: 9px;
+  border-radius: 1.5px;
+  border: 1px solid rgba(158, 44, 33, 0.45);
+  background: rgba(192, 57, 43, 0.12);
+}
+.rahattomuus-lohko.palaa { border-color: #9e2c21; background: #c0392b; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
 .turn-pill .clock {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
@@ -21744,6 +21798,31 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 .pollo-vihje-maadoitus .pollo-vihje-lause + .pollo-vihje-lause {
   margin-top: 0.45rem;
 }
+
+/*
+ * UUDEN MATKAN LYHYT TERVEHDYS: Ohita kuplan oikeassa alakulmassa
+ * (omistaja 27.9.2026 "KERRAN + OHITA"; js/livia.js
+ * naytaLivianLyhytAvaus). Kevyt: pelkkä tekstinappi ilman kehystä,
+ * sama muste kuin kuplan teksti, kosketusalue ≥ 32 px.
+ */
+.pollo-vihje-ohita {
+  display: block;
+  margin: 0.2rem -0.35rem -0.3rem auto;
+  min-height: 2rem;
+  padding: 0.25rem 0.45rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.pollo-vihje-ohita:hover,
+.pollo-vihje-ohita:focus-visible { opacity: 1; }
 
 /*
  * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistajan tilaus 29.8.2026;

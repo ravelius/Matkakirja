@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.31 (202609271444)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 31: kaupungit tarkentuvat pallolla nyt Z10-tasolle asti, rahattomuuden elämäpalkki kartan yläreunassa ja luenta kuuluu pyynnöstä myös äänet pois -tilassa. Aloitusvalinnassa näkyvät aina Lontoo ja valittavat kohteet."
+  },
+  {
    "versio": "1.0.30 (202609271221)",
    "paiva": "2026-09-27",
    "teksti": "Build 30: talous (päiväkulut, kassa, rahat loppu ja matkan loppukortti), pelistreak armopäivineen, uusi avauskortti ja Tiger Moth -lento. Puhe alkaa taas heti paloina, meren laivat ovat tarkempia ja maakuntien nimet poistuivat kartalta."

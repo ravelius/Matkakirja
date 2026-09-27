@@ -10,12 +10,12 @@
   "reuna": 0
  },
  "amsterdam-herengracht-537.webp": {
-  "sha": "8ff583b93fdb86c1",
+  "sha": "6b634fa453eb4183",
   "taytto": 0.331,
   "reuna": 0
  },
  "amsterdam-kapein-talo.webp": {
-  "sha": "56682e4107de61da",
+  "sha": "6796e7882675cc08",
   "taytto": 0.144,
   "reuna": 0
  },
@@ -35,7 +35,7 @@
   "reuna": 0
  },
  "amsterdam-maitotytto.webp": {
-  "sha": "a93480682080db44",
+  "sha": "c12b03bf28b17b31",
   "taytto": 0.36,
   "reuna": 0
  },
@@ -50,7 +50,7 @@
   "reuna": 0
  },
  "amsterdam-yovartio.webp": {
-  "sha": "8a2f00a604fcb6fa",
+  "sha": "b658d43e47c1be88",
   "taytto": 0.484,
   "reuna": 0
  },
@@ -270,7 +270,7 @@
   "reuna": 0
  },
  "berliini-gaertnerin-berliini.webp": {
-  "sha": "9a83f1810129141c",
+  "sha": "fe0477c00f3c2b85",
   "taytto": 0.332,
   "reuna": 0
  },
@@ -575,12 +575,12 @@
   "reuna": 0
  },
  "helsinki-johanneksenkirkko.webp": {
-  "sha": "35ff7cfecca42041",
+  "sha": "227d798d70855402",
   "taytto": 0.198,
   "reuna": 0
  },
  "helsinki-kaisaniemen-puisto.webp": {
-  "sha": "b0c45ae8eca7f9bb",
+  "sha": "091fb22f32921531",
   "taytto": 0.409,
   "reuna": 0
  },
@@ -590,7 +590,7 @@
   "reuna": 0
  },
  "helsinki-linnanmaki.webp": {
-  "sha": "3b94c72445c81d53",
+  "sha": "23f5d5b7a1f9a97b",
   "taytto": 0.296,
   "reuna": 0
  },
@@ -600,12 +600,12 @@
   "reuna": 0
  },
  "helsinki-suomenlinna.webp": {
-  "sha": "d4c4eb98b28022a0",
+  "sha": "0ec0a4620f116b6a",
   "taytto": 0.317,
   "reuna": 0
  },
  "helsinki-suomi-heraa-1899.webp": {
-  "sha": "ad8a303d812b5f39",
+  "sha": "afcf604d0755bb66",
   "taytto": 0.226,
   "reuna": 0
  },
@@ -620,7 +620,7 @@
   "reuna": 0
  },
  "helsinki-uspenskin-katedraali.webp": {
-  "sha": "cc347b329635dfae",
+  "sha": "1400e0cb55190a9f",
   "taytto": 0.295,
   "reuna": 0
  },
@@ -920,7 +920,7 @@
   "reuna": 0
  },
  "ljubljana-pre-ernin-aukio.webp": {
-  "sha": "5ec03a95d5674e25",
+  "sha": "00848829574b24c7",
   "taytto": 0.335,
   "reuna": 0
  },
@@ -950,7 +950,7 @@
   "reuna": 0
  },
  "lontoo-canaletto-lontoossa.webp": {
-  "sha": "4b9df7a521e1385b",
+  "sha": "fc91b50448f9b7a7",
   "taytto": 0.51,
   "reuna": 0
  },
@@ -960,7 +960,7 @@
   "reuna": 0
  },
  "lontoo-exchange-alley.webp": {
-  "sha": "51fdb91fc1fff903",
+  "sha": "40e49bda20f30b84",
   "taytto": 0.386,
   "reuna": 0
  },
@@ -970,12 +970,12 @@
   "reuna": 0
  },
  "lontoo-fleming-1928.webp": {
-  "sha": "479aa31a14f85104",
+  "sha": "406be214a54b0769",
   "taytto": 0.404,
   "reuna": 0
  },
  "lontoo-globe-1599.webp": {
-  "sha": "d6cd2ba890a6de61",
+  "sha": "d6c1e78fe7f4c7a1",
   "taytto": 0.186,
   "reuna": 0
  },
@@ -995,7 +995,7 @@
   "reuna": 0
  },
  "lontoo-metron-hoyryveturi.webp": {
-  "sha": "096b83035a7571e6",
+  "sha": "a2a09559d9fef65b",
   "taytto": 0.33,
   "reuna": 0
  },
@@ -1005,7 +1005,7 @@
   "reuna": 0.007
  },
  "lontoo-palo-1666.webp": {
-  "sha": "d3ea4f3f188a0f83",
+  "sha": "38e8e7c92a5f066d",
   "taytto": 0.402,
   "reuna": 0
  },
@@ -1070,7 +1070,7 @@
   "reuna": 0
  },
  "madrid-chotis.webp": {
-  "sha": "10f353eab896a3ed",
+  "sha": "25352ea49051931b",
   "taytto": 0.363,
   "reuna": 0
  },
@@ -1080,7 +1080,7 @@
   "reuna": 0
  },
  "madrid-goyan-kansankuvat.webp": {
-  "sha": "4e916dfb25ae09c0",
+  "sha": "c949da7036f0fd5e",
   "taytto": 0.328,
   "reuna": 0
  },
@@ -1120,7 +1120,7 @@
   "reuna": 0
  },
  "madrid-tapaskierros.webp": {
-  "sha": "589a759a5e42250e",
+  "sha": "afb3b6308681b068",
   "taytto": 0.305,
   "reuna": 0
  },
@@ -1199,36 +1199,6 @@
   "taytto": 0.253,
   "reuna": 0
  },
- "nikosia-buyuk-han.webp": {
-  "sha": "484ff3f91515a282",
-  "taytto": 0.512,
-  "reuna": 0
- },
- "nikosia-faneromenin-kirkko.webp": {
-  "sha": "1eaecaaf92770d6f",
-  "taytto": 0.486,
-  "reuna": 0
- },
- "nikosia-kyproksen-museo.webp": {
-  "sha": "0677c0b88fe86f20",
-  "taytto": 0.317,
-  "reuna": 0
- },
- "nikosia-leventis-museo.webp": {
-  "sha": "883b02bbdde75b22",
-  "taytto": 0.586,
-  "reuna": 0
- },
- "nikosia-omeryen-hamam.webp": {
-  "sha": "a3537732b7a789a5",
-  "taytto": 0.315,
-  "reuna": 0
- },
- "nikosia-selimiyen-moskeija.webp": {
-  "sha": "8bc513d1c2377bb3",
-  "taytto": 0.391,
-  "reuna": 0
- },
  "oslo-akershusin-linnoitus.webp": {
   "sha": "b9154ea6a53991f6",
   "taytto": 0.181,
@@ -1250,7 +1220,7 @@
   "reuna": 0
  },
  "oslo-oopperatalo.webp": {
-  "sha": "1daaf00bdc303f08",
+  "sha": "6cf7689176d41b1c",
   "taytto": 0.16,
   "reuna": 0
  },

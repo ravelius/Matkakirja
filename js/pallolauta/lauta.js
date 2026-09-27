@@ -2199,6 +2199,8 @@ export async function avaaPallolauta(ui) {
     '.pollo-nappi',
     '.pollo-kuplapino-kehys',
     '.pollo-paneeli',
+    // Rahattomuuspalkki (talous, omistaja 27.9.2026): nostot ja kutsu väistävät sitä.
+    '.rahattomuuspalkki',
   ];
   /**
    * Kalusteiden ruutulaatikot KOTELON pikseleinä (sama koordinaatisto
