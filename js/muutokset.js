@@ -13,6 +13,13 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2323, teksti: 'v2320: Nähtävyyskuvien tasaus tuotantoon (#3413)' },
+  { v: 2322, teksti: 'v2317: Nähtävyyskuvien tasausskriptit + 36 orvo… (#3408)' },
+  { v: 2321, teksti: 'v2316: Avauskortti kevyemmäksi — kutsu kaupungi… (#3406)' },
+  { v: 2320, teksti: 'Raamattu: VAIN EUROOPPA, kunnes omistaja toteaa… (#3416)' },
+  { v: 2319, teksti: 'v2316: Pelistreak — peräkkäiset pelipäivät tuov… (#3401)' },
+  { v: 2318, teksti: 'Tilannekatsaus: kehityssivuston etusivun tekstit (#3407)' },
+  { v: 2317, teksti: 'Hintatasot.js: tarkennus 49 puuttuvalle pelin m… (#3402)' },
   { v: 2316, teksti: 'v2316: KIIREELLINEN korjaus — naytaStriimiaani… (#3404)' },
   { v: 2315, teksti: 'v2313: Nostokortin luennan säätimet — ratas, VU… (#3388)' },
   { v: 2314, teksti: 'v2313: Talouden vaihe 1 — päiväkulut, 400 £, ro… (#3394)' },
