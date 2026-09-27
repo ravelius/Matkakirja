@@ -39,6 +39,13 @@ export const RAAMATTU = {
           + 'on CLAUDE.md:n ja docs/roolitus.md:n ensimmäisellä rivillä. '
           + 'Kumoaa 1.9.2026 kohdan poikkeuksen "todella vaikeaan ongelmaan '
           + 'kysyen".',
+        'VAIN EUROOPPA, KUNNES OMISTAJA TOTEAA SEN VALMIIKSI (omistaja 27.9.2026 klo 13.5x, '
+          + 'sitova, kaikki roolit): sisältöä, nostoja, lehtiä, kuvia, malleja, linssien kohteita ja '
+          + 'karttatyötä tehdään nyt vain Euroopan kaupunkeihin ja maihin. Muihin maanosiin ei tehdä '
+          + 'mitään uutta (ei aloituksia, ei pilotteja, ei suunnitelmia), ennen kuin omistaja on '
+          + 'todennut Euroopan omasta mielestään valmiiksi; siirtymä muihin maanosiin vain omistajan '
+          + 'erillisellä päätöksellä. Olemassa oleva maailmanlaajuinen sisältö ja pelin maailmanlaajuiset '
+          + 'perustoiminnot (pallo, kartta, lennot) pysyvät ja niiden vikoja korjataan.',
         'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
           + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
           + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '

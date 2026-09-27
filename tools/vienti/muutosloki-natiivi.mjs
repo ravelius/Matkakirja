@@ -8,6 +8,9 @@
  *   node tools/vienti/muutosloki-natiivi.mjs --versio "1.0.0 (202609232339)" \
  *     --teksti "Radiolinssi natiivissa. Korjattu asemien suodatus." [--paiva 2026-09-24]
  *
+ * Käsivienti (proto3d-testflight.yml) hylätään, jos rivi puuttuu: valitse build-numero
+ * etukäteen (date -u +%Y%m%d%H%M), mergeä rivi ja anna sama -f build_numero=<numero>.
+ *
  * Tiedosto tools/vienti/muutosloki-natiivi.json, rivit uusin ensin.
  * Natiivi näyttää rivin muodossa "v<versio>  teksti (paiva)".
  * Sisältöpäivitysten rivit tulevat osoittimeen automaattisesti
