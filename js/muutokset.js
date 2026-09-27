@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2335, teksti: 'Eheyskorjaus: 7 TIFF-kuvaa JPG:ksi (Siirtosepän löydös)' },
   { v: 2334, teksti: 'v2333: Vilna, Sarajevo, Odessa, Amsterdam, Tall… (#3429)' },
   { v: 2333, teksti: 'v2333: Livian avausesittely kerran, uusilla mat… (#3431)' },
   { v: 2332, teksti: 'v2331: Rahattomuuspalkki — jäljellä oleva aika… (#3421)' },

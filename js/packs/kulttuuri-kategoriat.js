@@ -7393,7 +7393,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Iliou Melathron — Troijan palatsi',
-          tiedosto: 'Heinrich Schliemann\'s house..tif',
+          tiedosto: 'The Numismatic Museum of Athens (Iliou Melathron) on August 2, 2020.jpg',
           teksti: 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich '
             + 'Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
             + 'kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän '
@@ -7404,7 +7404,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ikuisesti, lapio kädessä.',
           selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
             + 'nykyään Ateenan numismaattinen museo.',
-          lahde: 'athenswalk, Wikimedia Commons (CC0)',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
         /*
          * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026). Ateenan viereen
