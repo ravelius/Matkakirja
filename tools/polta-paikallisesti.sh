@@ -1238,11 +1238,15 @@ tila_kirjoita () {
 # välein ja otsikossaan "… 341 laattaa → <kansio>". Tehtyjen määrä
 # otetaan kummasta tahansa suuremmasta, koska pallon loki on karkea:
 # levyllä olevat tiedostot kertovat tahdin niiden viidensadan välissä.
+# TAVUINA (LC_ALL=C, 27.9.2026): `tail -c` katkaisee lokin usein kesken
+# monitavuisen merkin (ä, →), ja UTF-8-lokaalissa tr lopetti siihen
+# ("tr: Illegal byte sequence", syvä Z10 -ajo 26.–27.9.) — edistys jäi
+# lukematta. Tavuvertailu löytää "laattaa →" -rivin yhtä hyvin.
 lue_edistys () {
   local loki="$1" kansio="${2:-}" pate="${3:-}"
   local parit="0 0" tehty kaikki n
   if [ -s "$loki" ]; then
-    parit="$(tail -c 8000 "$loki" 2>/dev/null | tr '\r' '\n' | awk '
+    parit="$(tail -c 8000 "$loki" 2>/dev/null | LC_ALL=C tr '\r' '\n' | LC_ALL=C awk '
       /laattoja [0-9]+\/[0-9]+/ {
         for (i = 1; i <= NF; i++) if ($i ~ /^[0-9]+\/[0-9]+$/) { split($i, a, "/"); t = a[1]; k = a[2] }
       }
@@ -1266,6 +1270,37 @@ kesken_loki () {
   else echo "$ULOS/lokit/$1.log"; fi
 }
 
+# KESKEN JÄÄNEET = listan shardit ilman .valmis-merkkiä (rivi per shardi).
+# Merkki kirjoitetaan vasta onnistuneen piirron ja viennin jälkeen, joten
+# se ratkaisee eikä xargsin koodi: xargs palauttaa nollasta poikkeavan,
+# jos yksikin lapsi päättyi niin, vaikka työ olisi tehty (ks. lapsi).
+kesken_jaaneet () {
+  local nimi
+  while read -r nimi; do
+    [ -n "$nimi" ] || continue
+    [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))"
+  done < "$1"
+}
+
+# XARGSIN KOODI VS. VALMIS-MERKIT (27.9.2026). Syvä Z10 -ajo 26.–27.9.
+# päättyi "yksi tai useampi shardi kaatui" -virheeseen ja koodiin 1,
+# vaikka kaikki 507 shardia olivat valmiita — luettelo ja eheystarkistus
+# jäivät ajamatta ja tehtiin käsin. Nyt tyhjä kesken-lista on varoitus.
+# Palauttaa 0 (jatka) tai 1 (otsikko ja kesken jääneet tulostettu).
+tarkista_kesken () {
+  local lista="$1" otsikko="$2" kesken
+  kesken="$(kesken_jaaneet "$lista")"
+  if [ -z "$kesken" ]; then
+    echo "VAROITUS: xargs palautti nollasta poikkeavan koodin, mutta kaikki" >&2
+    echo "  $(grep -c . "$lista") shardia ovat valmiita — jatketaan (etsi yltä rivi" >&2
+    echo "  \"VIRHE: lapsi … päättyi koodilla\")." >&2
+    return 0
+  fi
+  echo "$otsikko" >&2
+  echo "$kesken" >&2
+  return 1
+}
+
 # Taustasilmukka shardin sisällä: päivittää tilatiedoston, kunnes
 # piirtoprosessi on ohi ja isäntä tappaa sen.
 tila_vahti () {
@@ -1273,6 +1308,14 @@ tila_vahti () {
   # Taustatyö perii EXIT-ansan; ilman tätä `kill` ajaisi ansan
   # (valmis.json) kesken polton, kerran jokaista shardia kohti.
   trap - EXIT
+  # VAHDIN VIRHEET HILJAA (27.9.2026). Kun shardi valmistuu, `kill` osuu
+  # vahtiin usein kesken `$(lue_edistys …)`-kutsun: orvoksi jäänyt
+  # alikuori kirjoittaa suljettuun putkeen. Polttovahdin python-kääre
+  # (os.execvp) jättää SIGPIPE:n ohitetuksi, joten bash tulosti joka
+  # kerta "echo: write error: Broken pipe" (12 kertaa syvässä ajossa).
+  # Vaaraton mutta harhaanjohtava: se luettiin ajon koodin 1 syyksi.
+  # Funktio ajetaan aina taustalla (&), joten exec koskee vain vahtia.
+  exec 2>/dev/null
   while :; do
     sleep "$TILAVALI"
     # shellcheck disable=SC2046
@@ -1507,7 +1550,8 @@ shardin_yritys () {
 aja_shardi () {
   local nimi="$1"
   local rivi args
-  rivi="$(shardit | awk -F'|' -v n="$nimi" '$1 == n { print $2 }')"
+  rivi="$(shardit | awk -F'|' -v n="$nimi" '$1 == n { print $2 }')" \
+    || { echo "VIRHE: shardilistaa ei saatu ($nimi)" >&2; return 2; }
   [ -n "$rivi" ] || { echo "VIRHE: tuntematon shardi $nimi" >&2; exit 2; }
   args="$rivi"
   local kansio="$ULOS/$nimi"
@@ -2154,7 +2198,8 @@ aja_pallo_shardi () {
   # jonka luettelo lupaa (laatat.json `ranta`: null = rantaviivaa ei ole
   # laatoissa, koska pallo piirtää sen vektorina).
   if [ -s "$luettelokansio/laatat.json" ]; then
-    rantalippu="$(node -e 'const j = JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8")); process.stdout.write(j.ranta ? "" : "--ilman-rantaa");' "$luettelokansio/laatat.json")"
+    rantalippu="$(node -e 'const j = JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8")); process.stdout.write(j.ranta ? "" : "--ilman-rantaa");' "$luettelokansio/laatat.json")" \
+      || { echo "VIRHE: $luettelokansio/laatat.json: lukeminen epäonnistui ($nimi)" >&2; return 1; }
   fi
   local kansio="$ULOS/$nimi"
   local loki="$ULOS/lokit/$nimi.log"
@@ -2304,11 +2349,8 @@ polta_pallo () {
   local kesto
   kesto=$(( $(date +%s) - alkoi ))
   echo "· pallon laatat: ${kesto} s ($(awk -v k="$kesto" 'BEGIN { printf "%.1f", k / 3600 }') h)"
-  if [ "$virhe" -ne 0 ]; then
-    echo "VIRHE: yksi tai useampi pallon shardi kaatui. Kesken jääneet:" >&2
-    while read -r nimi2; do
-      [ -f "$ULOS/lokit/$nimi2.valmis" ] || echo "  $nimi2 (loki $(kesken_loki "$nimi2"))" >&2
-    done < "$lista"
+  if [ "$virhe" -ne 0 ] && ! tarkista_kesken "$lista" \
+      "VIRHE: yksi tai useampi pallon shardi kaatui. Kesken jääneet:"; then
     echo "Aja uudestaan: tools/polta-paikallisesti.sh --vain-pallo" >&2
     echo "  --pallotunniste $PALLOTUNNISTE --pallo-osia $PALLO_OSIA" >&2
     return 1
@@ -2696,15 +2738,21 @@ odota_paikka () {
 }
 
 # Lapsiprosessi (xargs) ajaa yhden shardin ilman esitarkistuksia.
+# KOODI TALTEEN JA PAIKKA AINA VAPAAKSI (27.9.2026). Ennen tätä `set -e`
+# lopetti lapsen heti kaatuneen shardin kohdalla, jolloin paikka jäi
+# varatuksi, ja epäonnistunut rmdir lopetti lapsen koodilla 1 ilman
+# riviäkään lokiin. Syvä Z10 -ajo 26.–27.9. päättyi koodiin 1, vaikka
+# kaikki 507 shardia olivat valmiita — mikä lapsi ja miksi, ei näkynyt.
 if [ "$LAPSI" -eq 1 ] && [ -n "$VAIN" ]; then
   odota_paikka
+  k=0
   case "$VAIN" in
-    pallo-*) aja_pallo_shardi "$VAIN" ;;
-    *) aja_shardi "$VAIN" ;;
+    pallo-*) aja_pallo_shardi "$VAIN" || k=$? ;;
+    *) aja_shardi "$VAIN" || k=$? ;;
   esac
-  k=$?
-  [ -z "$PAIKKA" ] || rmdir "$PAIKKA" 2>/dev/null
-  exit $k
+  [ -z "$PAIKKA" ] || rmdir "$PAIKKA" 2>/dev/null || true
+  [ "$k" -eq 0 ] || echo "VIRHE: lapsi $VAIN päättyi koodilla $k" >&2
+  exit "$k"
 fi
 
 [ "$VIE" -eq 1 ] && vaadi_avaimet
@@ -2875,11 +2923,8 @@ vie_lapsille
 kesto=$(( $(date +%s) - alkoi ))
 echo ""
 echo "Poltto valmis: ${kesto} s ($(awk -v k="$kesto" 'BEGIN { printf "%.1f", k / 3600 }') h)"
-if [ "$virhe" -ne 0 ]; then
-  echo "VIRHE: yksi tai useampi shardi kaatui. Kesken jääneet:" >&2
-  while read -r nimi; do
-    [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))" >&2
-  done < "$lista"
+if [ "$virhe" -ne 0 ] && ! tarkista_kesken "$lista" \
+    "VIRHE: yksi tai useampi shardi kaatui. Kesken jääneet:"; then
   echo "Aja uudestaan: tools/polta-paikallisesti.sh --vain <shardi>" >&2
   exit 1
 fi

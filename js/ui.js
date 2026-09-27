@@ -20728,7 +20728,20 @@ export class UI {
      */
     this.kaydytEnnenSiirtoa = this.game.phase === 'pickstart' ? null : this.kaydytKaupungit();
     try {
+      // Tekijä ennen tekoa: vuoro voi vaihtua teon aikana (moninpeli, botit).
+      const tekija = this.game.player;
+      const lahtovalinta = this.game.phase === 'pickstart';
       const result = fn();
+      /*
+       * PELISTREAK (talous 5b, omistaja 27.9.2026): päivän ensimmäinen
+       * onnistunut teko kirjaa pelipäivän laitteen paikallisella päivällä
+       * (js/game.js kirjaaPelipaiva; botit ja lähtövalinta eivät kirjaa).
+       */
+      if (!(result && result.ok === false) && !lahtovalinta) {
+        const nyt = new Date();
+        const paivays = `${nyt.getFullYear()}-${String(nyt.getMonth() + 1).padStart(2, '0')}-${String(nyt.getDate()).padStart(2, '0')}`;
+        this.game.kirjaaPelipaiva?.(paivays, tekija);
+      }
       if (result && result.ok === false) {
         this.showError(result.error);
         // Peruuntunut lento ei saa jättää kalvolippua päälle mykistämään
@@ -23856,6 +23869,11 @@ export class UI {
       if (event.tilanne === 'peli.vararikko.varoitus') {
         ilmoitaLivianTunne(
           { tunne: 'vakava', voimakkuus: 0.55 },
+          { lahde: 'peli', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'peli.streak') {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.5 },
           { lahde: 'peli', tunnus: event.tilanne },
         );
       } else if (event.tilanne === 'peli.vararikko.selvisi') {

@@ -159,6 +159,28 @@ jobs:
           echo "Versio $versio (ordinaali ${ord:-–})"
           echo "Buildinumero $build, kansio Build/$VIENTI_KANSIO, Unity-vienti: $VIE_UNITYSTA"
 
+      # Natiivin "Mitä uutta" vertaa asennettua "<versio> (<CFBundleVersion>)" muutoslokin riviin
+      # (Natiivi-UI 27.9.2026: rivit 12–28 puuttuivat → build 11:n teksti näkyi uutena).
+      # Käsivienti hylätään ennen Unity-vientiä, jos riviä ei ole ajon commitissa: Julkaisija
+      # valitsee build_numeron etukäteen ja mergee rivin (tools/vienti/muutosloki-natiivi.mjs) ensin.
+      # Ajastettu yöajo ei tiedä numeroa etukäteen → vain varoitus; rivi lisätään latauksen jälkeen.
+      - name: Muutoslokin rivi
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          haettu=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github.raw" \
+            "https://api.github.com/repos/${{ github.repository }}/contents/tools/vienti/muutosloki-natiivi.json?ref=${{ github.sha }}")
+          rivi="$VERSIO ($BUILD_NUMERO)"
+          if printf '%s' "$haettu" | python3 -c 'import json,sys; v=sys.argv[1]; sys.exit(0 if any(r.get("versio")==v for r in json.load(sys.stdin).get("rivit",[])) else 1)' "$rivi"; then
+            echo "Muutoslokissa on rivi \"$rivi\"."
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "::warning title=Muutoslokin rivi puuttuu::\"$rivi\" — lisää latauksen jälkeen: node tools/vienti/muutosloki-natiivi.mjs --versio \"$rivi\" --teksti \"…\""
+          else
+            echo "::error title=Muutoslokin rivi puuttuu::\"$rivi\" ei ole tools/vienti/muutosloki-natiivi.json:ssa (${{ github.sha }}). Mergeä rivi ensin ja anna sama build_numero."
+            exit 1
+          fi
+
       - name: Yöajon ohitusehdot
         if: env.VIE_UNITYSTA == 'true'
         working-directory: ${{ env.PROJEKTI }}
