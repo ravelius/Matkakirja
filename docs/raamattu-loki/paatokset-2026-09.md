@@ -8039,3 +8039,7 @@ Omistaja 10.2x: aanille omat nimet, jotta ne eivat yhdisty xAI:n moottoriin. Fab
 ## PUHERAJA-PR 3389: 400 000 mrk/IP/vrk, 6 M/kk, 429 PYSAYTTAA LUENNAN (VAHVISTETTU); #3388 PIDOSSA KORJAUKSIIN ASTI (27.9.2026 klo 10.17)
 
 Pelikoodari 10.1x: #3389 (v2311) PUHE_PAIVARAJA 60 000 → 400 000 mrk/IP/vrk, PUHE_KUUKAUSIRAJA 900 000 → 6 000 000; 429/5xx pysayttaa luennan (ei laitteen aanta, ei aanetonta ohitusta), workerin viesti kerran/istunto, myos Pulun striimi; vaatii Pollon julkaisun. Fable vahvisti luvut. Julkaisijan jarjestys: #3386 → #3389 → #3388 (pidossa kunnes VU/ratas/nimet korjattu ja omistaja kuitannut). Pelikoodarin jono: #3388-korjaukset → talous-suunnitelma → natiivin progressiivinen soitto.
+
+## AMPARIN KOKO 27.9.: 106,9 Gt, 7,68 M OBJEKTIA, ~1,60 $/kk; VANHAT PYRAMIDISARJAT ~14 Gt SIIVOTTAVISSA (27.9.2026 klo 10.19)
+
+Julkaisija 10.2x (ajo 36298275631): R2 yhteensa 106,9 Gt / 7,68 milj. objektia (Cloudflare 108 GB), ~1,60 $/kk. Suurimmat: pyramidi/2026-09-26s-pohja 18,9 Gt, julisteet/maasto 13,8 Gt, julisteet/pallo 12,5 Gt, pyramidi/2026-09-23a-pohja 5,2 Gt, kuvat 4,3 Gt. Vanhat pyramidisarjat 09-21/22/22c/25/26 a 2,7–2,9 Gt = ~14 Gt siivottavissa (omistajalta kysytty). R2:ssa ei kokorajaa.
