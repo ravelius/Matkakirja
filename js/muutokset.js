@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2341, teksti: 'Kuvien tekijät Commonsista, havainnekuvat merkitty' },
+  { v: 2341, teksti: 'Kuvien tekijät, lähteet ja lisenssit Commonsista' },
   { v: 2340, teksti: 'Maakuntasalaisuudet nostoiksi (skeema 1.55, Kreikka)' },
   { v: 2339, teksti: 'v2338: Pulun virtaluenta rampilla — vähemmän pu… (#3469)' },
   { v: 2338, teksti: 'Euroopan erät 8–9 ja pienet kuvat' },
