@@ -159,6 +159,9 @@ namespace Matkakirja
 
         // ---- Ennakkokamera: lähikuvan ja laskun laatat Cesiumille ennen kuin kamera on siellä ----
 
+        /// <summary>Odotus napautusnäkymässä enintään (s): käytävän lisäksi Cesiumin valinta tasaantunut ennakkokameran kanssa.</summary>
+        public const float AloitusrataOdotusKattoS = 4f;
+
         /// <summary>Lähikuvan ja laskun ennakkoasennot (s radalla): Cesium valitsee laatat myös tälle kameralle.</summary>
         public const double EnnakkoLahiS = 2.7, EnnakkoLaskuS = 12.5, EnnakkoVaihtoS = 3.6;
 

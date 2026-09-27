@@ -318,6 +318,7 @@ namespace Matkakirja
             // saapuminen jatkuvat. Päättyy perillä tai lennon purussa (V3Pois).
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, true);
             float odotusAlku = Time.unscaledTime;
+            var rataEhto = rata != null ? new ValmiusEhto() : null;
             string syy;
             int kehyksia = 0;
             while (true)
@@ -327,6 +328,11 @@ namespace Matkakirja
                 float kulunut = Time.unscaledTime - odotusAlku;
                 LentoV3Odotus = kulunut;
                 syy = LennonV3Kaytava.Leikkaa(kulunut, v3Kaytava != null ? v3Kaytava.Osuus : 1f, v3Kaytava != null ? v3Kaytava.AlkuOsuus : 1f);
+                // Aloitusrata: myös Cesiumin valinta tasaantunut (ennakkokamera mukana: Lontoon lähikuvan laatat piirtoon asti,
+                // v3-video 27.9.: levyltäkin ~3 s), enintään AloitusrataOdotusKattoS napautuksesta. Näkymä on koko ajan paikallaan.
+                bool pallo = rata == null || Valmius.Tasaantunut(rataEhto, kerrokset != null ? kerrokset.pallo : null);
+                if (syy != null && !pallo && syy == "valmis" && kulunut < AloitusrataOdotusKattoS) syy = null;
+                else if (syy != null && rata != null) syy += pallo ? ", pallo valmis" : ", pallo kesken";
                 if (syy != null) break;
                 yield return null;
             }
