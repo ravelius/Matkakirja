@@ -621,7 +621,7 @@ test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () =
   assert.match(lukija, /kortinVu\.kaynnista\(nappi, puheMittari\)/);
   assert.doesNotMatch(lukija, /lukija-vu/);
   assert.match(tyyli, /\.lukija-saatimin > button\.lukija-nappi\.lukee \.kaiutin-kaari\.palaa \{ opacity: 1; \}/);
-  assert.match(puhe, /kompressori\.connect\(mittari\);\s*mittari\.connect\(piiri\.destination\);/);
+  assert.match(puhe, /kompressori\.connect\(vuAnalysaattori\);\s*vuAnalysaattori\.connect\(piiri\.destination\);/);
 });
 
 test('lukijan äänillä on pelinimet: jokainen moottorin ääni nimetty, tunnus ei näy valikossa', async () => {

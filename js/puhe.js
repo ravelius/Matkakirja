@@ -592,9 +592,9 @@ function virtaKaytossa() {
 }
 
 /** Lukijaäänen analysaattori (VU-mittari), tai null ennen kuin piiri on kytketty. */
-let mittari = null;
+let vuAnalysaattori = null;
 export function puheMittari() {
-  return mittari;
+  return vuAnalysaattori;
 }
 
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
@@ -639,12 +639,12 @@ function kytkeVahvistin() {
        * lukijaäänen juuri sellaisena kuin se kuuluu (js/kaiutinmittari.js).
        */
       try {
-        mittari = piiri.createAnalyser();
-        mittari.fftSize = 512;
-        kompressori.connect(mittari);
-        mittari.connect(piiri.destination);
+        vuAnalysaattori = piiri.createAnalyser();
+        vuAnalysaattori.fftSize = 512;
+        kompressori.connect(vuAnalysaattori);
+        vuAnalysaattori.connect(piiri.destination);
       } catch {
-        mittari = null;
+        vuAnalysaattori = null;
         kompressori.connect(piiri.destination);
       }
       kytketty = true;
