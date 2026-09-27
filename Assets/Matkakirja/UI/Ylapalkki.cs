@@ -183,7 +183,7 @@ namespace Matkakirja.Natiivi
         int? rahatonVrk, rahatonVuoroja;
         bool matkaPaattyi;
         /// <summary>Elämäpalkin lohkot: Talous.RahattomuusVuoroja (2 vrk × 4 vuoroa à 6 h).</summary>
-        const int ElamaLohkoja = 8;
+        const int ElamaLohkoja = 8, ElamaPunaisia = 3;
         readonly VisualElement elama, elamaLohkot;
         readonly Label elamaTeksti;
         /// <summary>Lapun teksti "RAHAT LOPPU · 1 VRK 12 H" (web #3421-luonnos); omistaja 15.2x: pelkät neliöt, joten pois.</summary>
@@ -273,7 +273,10 @@ namespace Matkakirja.Natiivi
             elamaAjastin = elama.schedule.Execute(AsetteleElama).Every(250);
             elamaAjastin.Pause();
             elamaLohkot = Rakenne.El("mk-elamapalkki__lohkot", elama, PickingMode.Ignore);
-            for (int i = 0; i < ElamaLohkoja; i++) Rakenne.El("mk-elamapalkki__lohko", elamaLohkot, PickingMode.Ignore);
+            // Värit (omistaja 27.9. klo 17.2x, web #3443 v2335): lohkot sammuvat oikealta, joten viimeiset 18 h = kolme
+            // vasemmanpuoleista punaisina, loput viisi oransseina; lopussa näkyy vain punaista.
+            for (int i = 0; i < ElamaLohkoja; i++)
+                Rakenne.El("mk-elamapalkki__lohko" + (i >= ElamaPunaisia ? " mk-elamapalkki__lohko--oranssi" : ""), elamaLohkot, PickingMode.Ignore);
             elamaTeksti = Rakenne.Teksti("", "mk-elamapalkki__teksti", elama);
             Kirjasimet.Aseta(elamaTeksti, Kirjasin.KoneLihava);
             elama.style.display = DisplayStyle.None;
