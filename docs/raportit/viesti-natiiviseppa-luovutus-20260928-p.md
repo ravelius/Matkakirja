@@ -1,4 +1,4 @@
-# Natiivisepän luovutus 28.9.2026 (p), klo 00.2x EEST — tilinvaihto (BUILD 34 PASSia odottamassa)
+# Natiivisepän luovutus 28.9.2026 (p), klo 00.2x EEST — tilinvaihto (BUILD 34 = TF 1.0.34 valmis)
 
 Luovuttaja: Natiiviseppä (Opus 5.5, Macin käyttäjä koodaus), sessio nollattiin luovutuksen -o jälkeen. Syy: tilinvaihto
 (omistaja 27.9. klo 23.58 Fablen kautta). Edellinen: viesti-natiiviseppa-luovutus-20260927-o.md, jonka kaikki kohdat ovat
@@ -25,14 +25,13 @@ yhä voimassa, ellei tässä toisin sanota.
   [long-pause]) ja 5 (Pulun tagit; `ui pulu sano` ei kulje chat-polkua, vaatii oikean kysymyksen Pululle). Molemmat ovat
   yksikkötesteissä (LuennanTagitKappalejakoJaValiotsikko, PuhetagitEivatNayNaytolla), kerrottu Fablelle. TF 1.0.34:n päätös
   Fablella ja Julkaisijalla.
-- **TF 1.0.34 -VIENTI ALKOI 00.26** (Julkaisija, ajo 36351716395, proto_ref 17c2928b, CFBundleVersion 202609272058, julkaisulippu
-  Julkaisijalla päällä — älä poista sitä).
-- **Ei mergejä proto-masteriin ennen Julkaisijan "vienti valmis" -viestiä (TF 1.0.34).**
+- **TF 1.0.34 VALMIS klo 00.33** (Julkaisija: ajo 36351716395, proto_ref 17c2928b, 1.0.34 (202609272058) sisäisessä ryhmässä,
+  julkaisulippu poistettu, master vapaa). Seuraava juna on siis **1.0.35**.
 - TF 1.0.33 (202609272009) valmis klo 23.56 sisäisessä ryhmässä.
 - Yötauko jatkuu Karttasepän polton loppuun: ei käännöksiä eikä simulaattoreita, paitsi julkaisu lipulla
   (`touch /tmp/matkakirja-julkaisu`, `rm -f` heti kun kukaan ei aja; lippu on yhteinen, tarkista `gh run list`).
 - Build-juna tauolla (/tmp/matkakirja-juna-tauko). **juna/b13 on yhä 508761e8 (= BUILD 33)**: mergeä master 17c2928b junaan
-  ensimmäisenä, kun 1.0.34-juna avataan.
+  ensimmäisenä, kun 1.0.35-juna avataan (`tyokalut/juna-merge.sh master`).
 
 ## Haarat (proto-git), ei vielä junassa
 
@@ -41,9 +40,9 @@ yhä voimassa, ellei tässä toisin sanota.
 | natiiviseppa/aloitusrata (wt/proto-natiiviseppa-offline-media) | cbb4811f | aloituslento v2, TAUOLLA (v3-palaute alla) |
 | natiiviseppa/symbolit-erikoismalli (wt/proto-natiiviseppa-symbolit) | 6cecf733 | laatikkoleikkaus valmis, laiteajo Kinderdijk jalka vs. laatikko puuttuu |
 | linssiseppa/symbolit-lippu (Linssisepän) | cd4911b1 | merge-pyyntö aamulla laitekuvien ja Fablen OK:n jälkeen; yhdistyy puhtaasti |
-| mallinseppa/era5 (Linssisepän) | d35e9f2c | 1.0.34-jonossa |
-| Natiivi-UI: ihme-nappi pois | ? | 1.0.34-jonossa (kysy SHA Natiivi-UI:lta) |
-| natiivi-ui/nimet-laskuri | 5d79edd9 | 1.0.34 (luovutus -o, muut avoimet 5) |
+| mallinseppa/era5 (Linssisepän) | d35e9f2c | 1.0.35-jonossa |
+| Natiivi-UI: ihme-nappi pois | ? | 1.0.35-jonossa (kysy SHA Natiivi-UI:lta) |
+| natiivi-ui/nimet-laskuri | 5d79edd9 | 1.0.35 (luovutus -o, muut avoimet 5) |
 
 ## Tauolla: ALOITUSLENTO v3 (omistajan palaute v2-videoon 27.9. klo 23.5x, SANATARKASTI Fablen aloitusviestistä)
 
@@ -56,16 +55,15 @@ kone on pieni esine valtavan kartan päällä (mittakaava tuntuu), kasvaa vasta 
 kaukaa ja pehmeästi, kosketusta ei lähikuvana. Oma ajatus: symbolisen koneen siipiväli (nyt 5 % kameran etäisyydestä,
 AloituslennonRata.cs) ei saa seurata etäisyyttä; käytä todellista kokoa + pieni vähimmäiskoko ruudulla (esim. ≥ 1,5 % leveydestä),
 ja saapumisen avaimet kauemmas (kosketus ≥ ~15 km:stä). Video rajattuna laitteen ruutuun, versio kuvaan → Fablelle.
-Merge 1.0.34:ään vasta omistajan OK:n jälkeen.
+Merge junaan (1.0.35) vasta omistajan OK:n jälkeen.
 
 ## Jono (Fablen aloitusviestin järjestys, kun tauko päättyy)
 
-1. BUILD 34 loppuun (PASS → TF), jos ei vielä valmis.
-2. Aloituslento v3 (yllä), kun Fable avaa.
-3. RAE- ja PATINA-säätimet (luovutus -o, oma osio).
-4. Kinderdijkin laiteajo 6cecf733: Linssisepän ajo-symbolit-alla.sh, `symbolit alla jalka|laatikko`, kuvapari Fablelle.
-5. Ensikäynnistyksen karttavika (fyysinen iPad Pro 13, sovi vuoro), 120 Hz -mittaus.
-6. 1.0.34-junan merget polton jälkeen: master 17c2928b → juna/b13, sitten yllä olevan taulukon haarat.
+1. Aloituslento v3 (yllä), kun Fable avaa.
+2. RAE- ja PATINA-säätimet (luovutus -o, oma osio).
+3. Kinderdijkin laiteajo 6cecf733: Linssisepän ajo-symbolit-alla.sh, `symbolit alla jalka|laatikko`, kuvapari Fablelle.
+4. Ensikäynnistyksen karttavika (fyysinen iPad Pro 13, sovi vuoro), 120 Hz -mittaus.
+5. 1.0.35-junan merget polton jälkeen: master 17c2928b → juna/b13, sitten yllä olevan taulukon haarat.
 
 ## Tässä vuorossa muuttunut / opetukset
 
@@ -81,7 +79,7 @@ Olet Natiiviseppä (Opus): Matkakirja-pelin natiivin (Unity, proto-git /Users/Sh
 laatat, merkit, käännökset ja proto-masterin omistaja. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, Macin käyttäjä koodaus.
 Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutuksesi: git fetch origin && git show
 origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20260928-p.md (ja siitä viitattu -o kokonaan).
-Tarkista ensin BUILD 34 (17c2928b): onko Laitetestaajan puhe-PASS tullut ja onko Julkaisija vienyt TF 1.0.34:n.
+TF 1.0.34 = BUILD 34 (17c2928b) on valmis; seuraava juna on 1.0.35 (juna/b13 ← master ensin).
 Yötauko polton ajan: ei käännöksiä eikä simulaattoreita, paitsi julkaisu lipulla. Vain oma simulaattori FBBD41D7.
 Viestit Fablelle vain valmis erä, jumi tai kysymys (≤ 8 riviä), Fablen session id local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc.
 Agentit vain Opus/Sonnet. Aikaleimat date-komennolla.
