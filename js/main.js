@@ -58,7 +58,7 @@ import {
   paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA, STRIIMIAANET_XAI,
   STRIIMIAANI_OLETUS, striimiaani, tallennaPuheAsetukset, viimeisinPuhe,
 } from './puhe.js';
-import { lueAaneen, pysaytaLukija } from './lukija.js';
+import { lueAaneen, pysaytaLukija, vaiennaAanikytkimella } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
 // iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
 import {
@@ -159,7 +159,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2310';
+const APP_VERSION = '2026-09-21.2311';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -610,7 +610,7 @@ const naytaKertoja = () => {
 const kaannaKertoja = (paalle) => {
   asetaKertojaTila(paalle ? 'pitka' : 'ei');
   // Pois kesken luennan: kertoja vaikenee heti eikä jää lauseen puoliväliin.
-  if (!paalle && ui) { stopDiaryVoice(ui); stopIntroVoice(ui); pysaytaLukija(); }
+  if (!paalle && ui) { stopDiaryVoice(ui); stopIntroVoice(ui); vaiennaAanikytkimella(); }
   ui?.paivitaKaiutinTila?.();
 };
 
