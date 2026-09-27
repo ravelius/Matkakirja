@@ -26,7 +26,7 @@ Viikko (all models) **64 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (F
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikossa uusi viesti 17:41 (Codex: Ateenan miniatyyrit Fablelle) — normaali PR-kuittausvuo, ei toimenpidettä Postivahdilta.
 
-**Juna (Fable 18:0x):** tauko johtuu lipusta `/tmp/matkakirja-juna-tauko` — Natiiviseppä purkaa sen omalla A/B-mittauksellaan jälkeen ja ilmoittaa. Ei hälytystä juna.login tauko-riveistä ennen sitä.
+**Juna (Natiiviseppä 18:1x):** tauko purettu, lippu `/tmp/matkakirja-juna-tauko` poistettu omistajan luvalla. Juna-vahti kääntää nyt juna/b13:n kärkeä (55d15a01 → 1.0.32) Laitetestaajan simulaattoreihin, 10 min niputus — normaali toiminta.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
@@ -58,7 +58,7 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - **Levy:** 100 Gi vapaana (raja 80 Gt — puskuri nousi hieman, 89 % käytössä). **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 65 kpl (nousi 56:sta — seurataan).
 - **Simulaattorit boottina:** 2 (iPhone 17, iPad Pro 11" M5; max 4 päivällä — OK). **coreaudiod / GPU-ajurit:** ei tarkistettu erikseen tällä kierroksella.
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen paitsi **Laitetestaaja 73 % (YLI, jo ilmoitettu, laskusuunnassa 76→73%)**. Sisältökirjuri 65 % — lähestyy, ei vielä ylitä.
-- **Juna:** ks. kohta 2 — log yhä "tauko" 16:00, ei vahvistusta Fablen mainitsemasta 16:50-normalisoinnista.
+- **Juna:** normaalikäytössä 18:1x alkaen (Natiiviseppä purki tauon), kääntää juna/b13-kärkeä 1.0.32:ksi.
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
   - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
