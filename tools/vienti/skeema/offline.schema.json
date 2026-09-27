@@ -234,6 +234,24 @@
             },
             "additionalProperties": false
           }
+        },
+        "kaupunkiMaasto": {
+          "type": "object",
+          "description": "Skeema 1.53: maaston tarkemmat tasot (lahteet.maasto.kaupunkiMaasto.tasot) kaupunkien ympäriltä rivijuoksuina [x0, y, x1, y] (TMS). Vanhat buildit ohittavat; maat.*.maasto enintään lahteet.maasto.kokoMaaMax.",
+          "propertyNames": {
+            "pattern": "^[0-9]+$"
+          },
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            }
+          }
         }
       }
     }

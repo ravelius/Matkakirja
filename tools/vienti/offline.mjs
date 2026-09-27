@@ -65,6 +65,13 @@ export const OFFLINE_LAHTEET = {
     layer: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23b/layer.json',
     url: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23b/{z}/{x}/{y}.terrain?v=2026-09-23b',
     skeema: 'tms', projektio: 'EPSG:4326', globaaliMax: 6,
+    /*
+     * Skeema 1.53 (Fable 27.9.2026, ehdotus B1+C docs/raportit/siirtoseppa-maasto-offline-ehdotus-20260927.md):
+     * maan maasto-kenttä enintään kokoMaaMax (z10), ja tarkemmat tasot vain kaupunkien ympäriltä omassa avaimessa
+     * maat.*.kaupunkiMaasto (vanhat buildit ohittavat). Verkossa maasto haetaan ennallaan layer.json-tasoille asti.
+     */
+    kokoMaaMax: 10,
+    kaupunkiMaasto: { tasot: [11, 12], sadeKm: 50 },
   },
 };
 const MERCATOR_MAX = 85.05112878;
@@ -405,7 +412,7 @@ export function maidenMaanosat({ countryShapes, cities, cityCountry, cityManner 
 }
 
 function summaa(lista) {
-  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), mediaKuvat: 0, levy: 0 };
+  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), mediaKuvat: 0, levy: 0, kaupunkiMaasto: 0 };
   for (const x of lista) for (const k of Object.keys(t)) t[k] += x[k] ?? 0;
   return t;
 }
@@ -494,11 +501,38 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       kaupunkiRasteri[z] = t.valit; laattoja.kaupunkiRasteri = (laattoja.kaupunkiRasteri ?? 0) + t.laatat.size;
       kTavut += t.laatat.size * (koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[z - 1] ?? 0);
     }
-    for (let z = M.globaaliMax + 1; z < saatavilla.length; z++) {
+    for (let z = M.globaaliMax + 1; z < saatavilla.length && z <= M.kokoMaaMax; z++) {
       const t = maastoLaatat(renkaat, b, z, saatavilla[z]);
       if (!t) continue;
       maasto[z] = t.vali; laattoja.maasto += t.laattoja; mTavut += t.laattoja * (koot.maasto.keskitavut[z] ?? 0);
       mLevy += t.laattoja * (koot.maasto.purettu?.[z] ?? koot.maasto.keskitavut[z] ?? 0);
+    }
+    // Skeema 1.53: tarkemmat maastotasot kaupunkien ympäriltä (± sadeKm), vain available-väleissä olevat laatat.
+    const kaupunkiMaasto = {}; let kmTavut = 0;
+    const omatKaupungit = kaupunkiLista.filter((c) => alueenMaa(c) === iso && Number.isFinite(c.lat) && Number.isFinite(c.lon));
+    for (const z of M.kaupunkiMaasto.tasot) {
+      if (z >= saatavilla.length || !omatKaupungit.length) continue;
+      const w = 180 / 2 ** z; const nx = 2 ** (z + 1) - 1; const ny = 2 ** z - 1;
+      const on = (x, y) => saatavilla[z].some((a) => x >= a.startX && x <= a.endX && y >= a.startY && y <= a.endY);
+      const nahty = new Set(); const valit = [];
+      for (const c of omatKaupungit) {
+        const dla = M.kaupunkiMaasto.sadeKm / 111; const dlo = M.kaupunkiMaasto.sadeKm / (111 * Math.max(0.2, Math.cos(c.lat * Math.PI / 180)));
+        const x0 = Math.max(0, Math.floor((c.lon - dlo + 180) / w)); const x1 = Math.min(nx, Math.floor((c.lon + dlo + 180) / w));
+        const y0 = Math.max(0, Math.floor((c.lat - dla + 90) / w)); const y1 = Math.min(ny, Math.floor((c.lat + dla + 90) / w));
+        for (let y = y0; y <= y1; y++) {
+          let alku = null;
+          for (let x = x0; x <= x1 + 1; x++) {
+            const k = `${x}/${y}`;
+            const ok = x <= x1 && !nahty.has(k) && on(x, y);
+            if (ok && alku === null) alku = x;
+            if (!ok && alku !== null) { valit.push([alku, y, x - 1, y]); for (let i = alku; i < x; i++) nahty.add(`${i}/${y}`); alku = null; }
+          }
+        }
+      }
+      if (!valit.length) continue;
+      kaupunkiMaasto[z] = valit;
+      laattoja.kaupunkiMaasto = (laattoja.kaupunkiMaasto ?? 0) + nahty.size;
+      kmTavut += nahty.size * (koot.maasto.keskitavut[z] ?? 0);
     }
     const kaikkiMedia = [...(jako.get(iso) ?? [])].sort();
     const media = kaikkiMedia.filter((a) => !onLisamedia(arvot.get(a)));
@@ -530,11 +564,15 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       iso2: ISO2[iso] ?? Object.values(MERENTAKAISET).find((a) => a.iso === iso)?.iso2 ?? null, nimi: maa.nimi, rasteri, ...(Object.keys(kaupunkiRasteri).length ? { kaupunkiRasteri } : {}), maasto, laattoja,
       media: [...media.map(url), ...mallit.map((m) => m.url)],
       ...(mediaKuvat.length ? { mediaKuvat } : {}),
+      ...(Object.keys(kaupunkiMaasto).length ? { kaupunkiMaasto } : {}),
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
         yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}),
         mediaKuvat: kuvaTavut,
         // Skeema 1.52 (Natiiviseppä 27.9.): levykoko = yht, jossa maasto purettuna (iOS purkaa gzipin latauksessa).
-        levy: Math.round(rTavut + mLevy + medTavut) },
+        levy: Math.round(rTavut + mLevy + medTavut),
+        // Skeema 1.53: kaupunkien ympäristön tarkka maasto (gzip-siirtokoko; natiivi 1.0.32+ tallentaa pakattuna,
+        // Natiiviseppä 27.9.), ei yht:ssä eikä levy:ssä.
+        kaupunkiMaasto: Math.round(kmTavut) },
     };
   }
   const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),

@@ -219,8 +219,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        lataavat media-listan mutta eivät käytä sitä kuville ja puheelle (Natiiviseppä 27.9.). Kuvat pienennettyinä
  *        (pieni/<avain>.jpg, 1280 px, JPEG 80, tools/vienti/mediakuvat.mjs), katto 100 Mt maata kohden, järjestys
  *        karttanostot → miniatyyrit → puheet → luennat → muut (Fable 27.9.) — Euroopan eheystarkistus.
+ *   1.53 offline: maat.*.maasto enintään z10 (lahteet.maasto.kokoMaaMax) ja uusi maat.*.kaupunkiMaasto { "11", "12" }
+ *        50 km:n säteeltä kaupungeista (lahteet.maasto.kaupunkiMaasto), tavuja.kaupunkiMaasto (siirto; natiivi pakkaa maaston itse levylle) —
+ *        Fable 27.9.2026 (B1+C): Euroopan offline-maasto 939 → noin 94 Mt siirtona.
  */
-export const SKEEMAVERSIO_TARKKA = '1.52';
+export const SKEEMAVERSIO_TARKKA = '1.53';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
