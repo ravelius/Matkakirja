@@ -199,7 +199,7 @@ test('kehote: äänitagisääntö on mukana selaimelle, ei natiiville', () => {
   assert.match(kehote, /PAIKKA-riville/);
 });
 
-test('kehote: chat-pyynnön järjestelmäkehotteessa sääntö selaimelle, ei natiiville', async () => {
+test('kehote: sääntö selaimelle ja tagit siivoavalle natiiville (puhetagit: 1), ei vanhalle natiiville', async () => {
   const { default: worker } = await import('../tools/pollo/worker.js');
   const env = { ANTHROPIC_API_KEY: 'testiavain', POLLO_ORIGINIT: 'https://matkakirja.app' };
   const alkuperainen = globalThis.fetch;
@@ -209,23 +209,26 @@ test('kehote: chat-pyynnön järjestelmäkehotteessa sääntö selaimelle, ei na
     return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Pariisi on Ranskan pääkaupunki.' }] }),
       { status: 200, headers: { 'content-type': 'application/json' } });
   };
-  const kysy = (otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
+  const kysy = (otsakkeet, lisa = {}) => worker.fetch(new Request('https://pollo.example/', {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...otsakkeet },
-    body: JSON.stringify({ kysymys: 'Mikä on Pariisi?' }),
+    body: JSON.stringify({ kysymys: 'Mikä on Pariisi?', ...lisa }),
   }), env, {});
+  const natiiviOtsakkeet = {
+    'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/1 (app.matkakirja.proto3d)',
+  };
   try {
     assert.equal((await kysy({ origin: 'https://matkakirja.app' })).status, 200);
-    assert.equal((await kysy({
-      'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/1 (app.matkakirja.proto3d)',
-    })).status, 200);
+    assert.equal((await kysy(natiiviOtsakkeet)).status, 200);
+    assert.equal((await kysy(natiiviOtsakkeet, { puhetagit: 1 })).status, 200);
   } finally {
     globalThis.fetch = alkuperainen;
   }
   const teksti = (k) => (Array.isArray(k) ? k.map((o) => o.text).join('\n') : String(k));
-  const [selain, natiivi] = kehotteet.map(teksti);
+  const [selain, natiivi, uusiNatiivi] = kehotteet.map(teksti);
   assert.match(selain, /ÄÄNITAGIT — VAIN OMAAN ÄÄNEEN/);
   assert.match(selain, /VASTAUKSEN LAJI[^]*$/, 'kehyslaji pysyy viimeisenä');
   assert.ok(selain.indexOf('ÄÄNITAGIT') < selain.lastIndexOf('VASTAUKSEN LAJI'));
-  assert.doesNotMatch(natiivi, /ÄÄNITAGIT/, 'natiivi ei vielä siivoa tageja näytöltä');
+  assert.doesNotMatch(natiivi, /ÄÄNITAGIT/, 'vanha natiivi ei siivoa tageja näytöltä');
+  assert.match(uusiNatiivi, /ÄÄNITAGIT — VAIN OMAAN ÄÄNEEN/, 'tagit siivoava natiivi pyytää säännön');
 });

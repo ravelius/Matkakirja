@@ -733,9 +733,11 @@ selitä sitä.`;
  *     (js/puhetagit.js poistaPuhetagit). Jatko- ja ehdotusrivit
  *     siivotaan jo täällä (rajat.js poimiEhdotukset).
  *
- * VAIN SELAIMELLE: natiivisovellus näyttää vastauksen omalla
- * pinnallaan eikä vielä siivoa tageja, joten natiivin chat-pyyntö saa
- * kehotteen ilman tätä osiota.
+ * SELAIMELLE AINA, NATIIVILLE VAIN PYYDETTÄESSÄ: natiivisovellus näyttää
+ * vastauksen omalla pinnallaan, ja vasta tagit siivoava versio (proto
+ * pelikoodari/puhetagit, PuluChat.Nakyva) lähettää kentän puhetagit: 1.
+ * Vanhat TestFlight-versiot eivät lähetä sitä, joten niiden kupliin ei
+ * koskaan tule tagia.
  */
 const PUHETAGIKEHOTE = `ÄÄNITAGIT — VAIN OMAAN ÄÄNEEN
 Vastauksesi luetaan ääneen, ja lukijaääni ymmärtää kolme merkintää. Saat merkitä vastaukseen ENINTÄÄN YHDEN niistä, ja vain OMAN ÄÄNESI osaan — alustukseen, loppukommenttiin tai Livian lisäykseen — EI KOSKAAN ydinvastaukseen:
@@ -2284,8 +2286,8 @@ export default {
        */
       const kehote = `${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}`
         + `\n\n${PAIKKAKEHOTE}`
-        // Äänitagit vain selaimelle (ks. PUHETAGIKEHOTE).
-        + (natiivi ? '' : `\n\n${PUHETAGIKEHOTE}`)
+        // Äänitagit selaimelle ja tagit siivoavalle natiiville (ks. PUHETAGIKEHOTE).
+        + (!natiivi || runko?.puhetagit === 1 ? `\n\n${PUHETAGIKEHOTE}` : '')
         + `\n\n${kehysOhje(kehysLaji(runko?.kehys))}`;
       /*
        * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
