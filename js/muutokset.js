@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2331, teksti: 'Yhtenäistä 22 nähtävyysminiatyyrin värisävyt (#3425)' },
+  { v: 2330, teksti: 'v2329: Luenta kuuluu pyynnöstä myös äänet pois… (#3422)' },
   { v: 2329, teksti: 'v2329: Barcelona, Kiova, Edinburgh, Varsova, Du… (#3423)' },
   { v: 2328, teksti: 'v2327: Havainnekuva — loput generoitujen kuvien… (#3415)' },
   { v: 2327, teksti: 'v2325: Valletta ja Luxemburg — 2 juttua + 4 ska… (#3419)' },
