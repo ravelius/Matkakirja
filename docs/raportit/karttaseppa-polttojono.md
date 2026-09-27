@@ -85,26 +85,52 @@ kuin `2026-09-26-pohja`, ETagit tarkistettu 27.9.) ja pallo
   8 ytimellä. Tehdään rivin 1 ja pallon Z0–Z9 jälkeen, jotta lähteenä on uusi
   pohja.
 
-## Järjestys yhdessä ajossa
+### 4. Joet: puuttuvat ja sivussa kulkevat (pohja, omistaja 27.9. klo 18.5x)
 
-1. **Pohja** (rivi 1): z0–z8 vesilaatat noin 1–1,5 h täysillä ytimillä ja
-   z9–z10 vesilaatat noin 4–5 h 8 ytimellä.
-2. **Viivataso** (rivi 2): noin 30–45 min. Riippumaton, joten voidaan ajaa
-   rivin 1 kanssa rinnakkain.
-3. **Pallo Z0–Z9** uudesta pohjasta: vesilaatat noin 312 000, noin 3 h 8
-   ytimellä.
-4. **Pallo Z10** (rivi 3): noin 15–30 min.
+- **Puuttuvat joet:** Vltava (Praha), Kemijoki ja Ounasjoki (Rovaniemi) ja Moskva.
+- **Sivussa kulkevat joet:** Tonava (Wien) ja Rein (Alpit), 1,5–2 km uomasta.
+- **Lähde:** parempi lähde Euroopalle, HydroRIVERS tai OSM waterways. Lisenssi
+  tarkistetaan ennen käyttöä (vain PD/CC tai vastaava, kirjataan lähteisiin).
+- **N6:** joet leikataan järvimaskiin, ettei Nevan kaltainen viiva jatku järven yli.
+- **Koodi ja koepoltto:** 28.9. päivällä.
 
-**Yhteensä** noin 8–10 h 8 ytimellä, eli yksi yö (klo 22 jälkeen täysi
-teho). Päivällä 4 ytimellä noin kaksinkertainen.
+### 5. Oslon pikkusaaret maaksi (pohja)
 
-**Levy:** palvelinkopiot tehdään ämpärin sisällä. Paikallisesti tarvitaan vain
-shardien väliaikaistiedostot `--siivoa`-lipulla, alle 10 Gt, joten 80 Gt:n
-raja ei ole vaarassa.
+- **Syy:** merirenkaat on tehty karsinnalla `--pienin 0.004` (noin 400 m).
+  GSHHG-lähteestä jäi pois 53 577 saarta, myös Oslonvuonon pikkusaaret.
+- **Korjaus:** merirenkaat uudelleen pienemmällä karsinnalla (0,0015° eli
+  työkalun oletus). Kokoraja tarkistetaan koepoltolla, ettei kaukotasoille
+  synny pistepölyä.
+- **Koodi ja koepoltto:** 28.9. päivällä.
 
-**Vienti:**
-- pohjan uusi versio ja viivaversio ämpäriin polton aikana (uusi polku, ei
-  ylikirjoitusta)
-- osoitin (`pyramidi.json`) ja pallon laatat.json vaihdetaan omistajan kortilla
-  kerralla lopuksi
-- palautus tehdään varmuuskopioluettelosta kuten 27.9.
+### 6. Pintamallin kohina tasaisilla alueilla (pohja z9–z10, ehkä z8)
+
+- **Päätös:** tasoitetaan vain tasaisilla alueilla, joissa läikät ovat
+  rakennuksia tai metsänreunoja. Vuoret ja rinteet jäävät ennalleen, eikä kuvaa
+  terävöitetä.
+- **Menetelmä (suunnitelma):** DEM:n paikallinen vaihtelu suodatetaan alipäästöllä
+  vain, kun ympäristön kaltevuus on pieni (tasamaa). Rinteissä suodatus
+  häivytetään pois.
+- **Koepoltto 28.9.:** Bukarest ja Kiova, kontrollina yksi vuoristokaupunki.
+
+## Järjestys yhdessä ajossa (poltto ma–ti-yönä 28.–29.9. klo 22 alkaen, täysillä ytimillä)
+
+Kohdat 4–6 muuttavat myös maata: joet ovat pohjassa (`--joet-pohjaan`), ja
+kohina koskee maata. Delta ei silloin enää säästä juuri mitään, joten pohja
+poltetaan TÄYTENÄ uudeksi versioksi. Viivataso (rivi 2) ja pallo tehdään
+sen jälkeen.
+
+1. **Pohja z0–z8 täytenä:** noin 93 000 laattaa. Vertailu 26.9.: 119 000
+   laattaa kerroksineen 1,5 h täysillä ytimillä, joten arvio noin 1,5 h.
+2. **Pohja z9–z10 täytenä:** olemassa olevat 376 000 laattaa. 27.9. syvä
+   ajo 8 ytimellä teki 721 laattaa/min, ja täysillä ytimillä (16) noin
+   kaksinkertaisesti, joten arvio noin 4,5–5 h.
+3. **Viivataso z0–z8:** noin 45 min, voidaan ajaa rinnakkain kohdan 1 kanssa.
+4. **Pallo Z0–Z9 uudesta pohjasta:** 349 000 laattaa, noin 2–3 h täysillä ytimillä.
+5. **Pallo Z10:** 13 856 laattaa z10:stä, noin 15 min.
+
+**KOKONAISKESTO:** noin 9–10 h täysillä ytimillä. Alku 22.00, valmis tiistaina
+noin klo 7–8. Vienti ja osoittimen vaihto omistajan kortilla aamulla.
+
+**Levy:** kopiot tehdään ämpärissä, ja `--siivoa` poistaa shardien laatat
+viennin jälkeen, joten paikallisesti tarvitaan alle 10 Gt kerrallaan.
