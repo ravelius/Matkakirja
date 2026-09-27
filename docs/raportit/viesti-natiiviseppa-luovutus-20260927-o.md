@@ -87,9 +87,18 @@ Mittaa GPU-hinta (ms) iPhonella. Yksi mietitty toteutus ja kuvapari eri tasoilla
    Poissuljettu: sävysäätimet (global _pohjaSavy oletus 0; säätimet SÄILYVÄT, omistaja pitää niistä), gzip-luku, Z10:n
    varatie, skeeman luku (TryGetValue). Seuraava: fyysinen iPad Pro 13 -testi Release 1.0.31 → 1.0.32 ja 1.0.33 (Metal),
    iPad on Linssisepän ja Laitetestaajan vuorolaite, joten sovi vuoro. Fable kysyy omistajalta 1.0.33:n ensikäynnistyksestä.
-2. **Symbolit erikoismallin alla** (haara natiiviseppa/symbolit-erikoismalli d1cba402, worktree wt/proto-natiiviseppa-symbolit):
-   Krumlov OK laitteella (Linssiseppä), Kinderdijk EI laukea (Gouda 14,8 km NNE, jalkapiste laatikon ulkopuolella) → vaihda
-   ehto "symbolin laatikko leikkaa mallin laatikon" (Linssisepän ehdotus). 1.0.34.
+2. **Symbolit erikoismallin alla** (haara natiiviseppa/symbolit-erikoismalli, worktree wt/proto-natiiviseppa-symbolit):
+   Krumlov OK laitteella (Linssiseppä), Kinderdijk EI lauennut (Gouda 14,8 km NNE, jalkapiste laatikon ulkopuolella).
+   **LAATIKKOLEIKKAUS TEHTY 28.9. klo 00.1x: 6cecf733** (d1cba402:n päällä): symbolin laatikko (sama muoto kuin Linssisepän
+   väistössä) leikkaa mallin laatikon → piiloon; merkki reunapisteeseen tai jalan ollessa ulkona noston omaan paikkaan;
+   tasot 2–3 arvioidaan pt:n jälkeen; A/B `symbolit alla laatikko|jalka`. Kartta-testit 347/347, unity-tarkistus 0.
+   SEURAAVA: laiteajo Kinderdijk jalka vs. laatikko yötauon jälkeen (Linssisepän proto-3d/tyokalut/linssiseppa-ajot/
+   ajo-symbolit-alla.sh, alla 0|1 → alla jalka|laatikko), kuvapari Fablelle, sitten 1.0.34-junaan.
+   **Linssisepän haara linssiseppa/symbolit-lippu cd4911b1** (symbolit 54 pt ja kynnys 1,25, väistö, lippu maailman
+   kokoisena; speksi Matkakirja-linssiseppa/docs/raportit/symbolit-ja-lippu-speksi-20260928.md) muuttaa tiedostojani
+   (Symbolimallit*.cs, Lipputanko.cs, NostoKerros.cs, Komennot.cs). Merge-pyyntö tulee aamulla laitekuvien ja Fablen OK:n
+   jälkeen. Tarkistettu: yhdistyy ilman ristiriitoja masteriin edf03bfd, junaan 508761e8, aloitusrataan cbb4811f ja
+   6cecf733:een, ja yhdistetyssä puussa (6cecf733 + cd4911b1) Kartta-testit 354/354 ja unity-tarkistus 0. Kuitattu Linssisepälle.
 3. **120 Hz -laitemittaus** (skripti sessio-n/vieritys120.sh, iPad Pro 13, Release): tekemättä yötauon takia.
 4. **Offline-todennus 1.52–1.55** (tuotannossa v250): Siirtoseppä ajaa E2E:n aamulla (F989814A); minun osuus kartalta + palvelin-
    laskurit. Vastasin: natiivi jäsentää offline.jsonin TryGetValue-kutsuilla, uudet kentät eivät kaada.
