@@ -7867,3 +7867,7 @@ Karttaseppa 08.0x: pallon lepokerroksen katkoksen korjaus PR #3376 — vahti hyv
 ## LINSSISEPPA NOLLATTU JA KAYNNISTETTY 08.1x (LUOVUTUS -L) (27.9.2026 klo 08.06)
 
 Linssiseppa nollattu 08.1x (79 % → tyhja), aloitusviesti: luovutus -l, meri 8 lajia, BEL/CHE/AUT, lahitaso LOD0 kuvaparit ensin. Julkaisija sai luvan: #3376 + #3371 junaan → Pages → osoitin 2026-09-26s, ehtona Natiivisepan vastaus natiivin versiovahdista.
+
+## OMISTAJA 08.2x: MAANOSITTAIN ETENEVA AVAUTUMINEN POIS (1.0.29 + WEB); NOSTOJEN PIILOTUS JAA (27.9.2026 klo 08.15)
+
+Omistaja kysyi 08.1x poistuvatko maanosaeteneminen ja nostojen piilotus seuraavassa buildissa; lokista ei loytynyt paatosta → kortti. Omistaja paatti: VAIN maanosittain eteneva avautuminen pois (koko maailma avoinna alusta asti), muiden maiden nostojen piilotus kohdemaan ulkopuolelta (14.9.) JAA. Toteutus: Pelikoodari web, Natiivi-UI/Natiiviseppa natiivi, 1.0.29. Ei 1.0.28:ssa.
