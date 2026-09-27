@@ -7843,3 +7843,7 @@ Linssiseppa 07.5x: linssiseppa/meri-tuotanto 0126ce8b (tuotantorunko + v3 hoyryl
 ## ASTRONAUTIN KAMERA: TILAUS TAYNNA (ERA 7 PR 3375, 102 UUTTA, 189 KOHDETTA); LINSSIRAPORTTI (27.9.2026 klo 07.56)
 
 Sisaltokirjuri 07.5x: era 7 PR #3375 (13 kohdetta: Niagara, Gronlannin vuonot, Manaus, Cosiguina, Jamesinlahti, Krimin lagunit, Valakia yolla, Montreal, Englannin kanaali yolla, Tanska, Geneven jarvi, Pico, Prinssi Edwardin saari) → omistajan 26.9. tilaus ~100 uutta taynna (erat 2–7 = 102). Koko linssi kun PR:t mainissa: 189 kohdetta / 229 kuvaa / 378 kysymysta; mantereittain P-Amerikka 43, Afrikka 33, Aasia 39, Eurooppa 33, E-Amerikka 22, Oseania 16; kaikki NASA images-api public domain (210 ISS, 18 STS), kuvat katsottu kasin. Etelamanner 0 ja korkea arktinen puuttuvat ISS:n ratakaltevuuden (51,6°) takia — ei aukko vaan fysiikka. Seuraava era: turistiopassarja jatkuu #3206:n jalkeen.
+
+## OMISTAJA: NOSTOJEN 3D-MALLIEN POLYGONIMAARA KASVAA LAHIZOOMISSA (LOD0 LAHI) (27.9.2026 klo 07.58)
+
+Omistaja 08.0x: "Voiko nostojen polygonimaara kasvaa kun zoomataan lahelle? Pelkaan etta nykyinen taso ei riita." Fable: kylla — LODGroupiin kolmas taso LOD0 lahi (3–5 x kolmiota, tarkemmat yksityiskohdat), nakyy vain kun kamera on lahella (zoomikerroin ≥ 4 tai etaisyysraja, ≤ ~3 lahimallia ruudulla). Natiiviseppa lisaa rajapintaan (oma haara, 1.0.29); Linssiseppa mallintaa ensin Colosseum, Mont-Saint-Michel ja kaari kuvapariksi omistajalle, sitten loput.
