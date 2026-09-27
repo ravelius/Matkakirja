@@ -7859,3 +7859,7 @@ Sisaltokirjuri 08.0x: turistioppaat 266 avaimesta 14 ilman matkailijalle-kenttaa
 ## MERI TODENNETTU LAITTEELLA (54201ed2); KINDERDIJK NAKYY; LINSSISEPPA NOLLAA (LUOVUTUS -L 9aac294c5) (27.9.2026 klo 08.04)
 
 Linssiseppa 08.0x: meren tuotantorunko todennettu laitteella (kaannos 54201ed2): merikohdat 29/129 latautuvat, maan lajit valitaan, valas Norjassa, hoyrylaiva Suomenlahdella, 0 poikkeusta; merge-pyynto 0126ce8b pysyy. Kinderdijk nakyy kynnyskorjauksella (kinderdijk-v2.png + video). Taustalla 8 Opus-agenttia: 8 merilajia, Brugge/Matterhorn/Hohensalzburg, lahitason kuvaparit. Luovutus -l 9aac294c5, nollaus itse → aloitusviesti Fablelta.
+
+## Z10-KATKOKSEN KORJAUS PR 3376 (VERSIOVAHDIN HOLLENNYS, pohja.kopio); JARJESTYS #3376+#3371 → PAGES → OSOITIN (27.9.2026 klo 08.05)
+
+Karttaseppa 08.0x: pallon lepokerroksen katkoksen korjaus PR #3376 — vahti hyvaksyy luettelon, jonka pohja.kopio = { versio: pallon versio, tasot z0–z8 } (s-pohjan z0–z8 on tavulleen pohja 26; uusi pallosarja olisi identtinen mutta pakottaisi kaikki lataamaan pallolaatat uudelleen). Fable hyvaksyi jarjestyksen: #3376 + #3371 junaan → Pages → osoitin sarja = 2026-09-26s → savuke. Natiivisepalta kysytty, onko natiivissa sama vahti.
