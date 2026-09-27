@@ -8283,3 +8283,7 @@ Siirtosepan kysymys (#3434 Euroopan eheys v238): maakoodilla GBR/FRA Eurooppaan 
 ## TF 1.0.31 TESTFLIGHTISSA (202609271444 = BUILD 31 a7a6d9ec) (27.9.2026 klo 18.02)
 
 Julkaisija: TF 1.0.31 sisaisessa ryhmassa, CFBundleVersion 202609271444, proto a7a6d9ec (juna 8096bae5), ajo 36327465467, laskuri 31, What to test Fablen tekstilla (Z10-pohja kaupunkien ymparilla, luenta aina pyynnosta myos mykistettyna, aloitusvalinnassa vain lennettavat, elamapalkki). Laitetestaaja PASS 6/6 a322fdc15.
+
+## OMISTAJA: SAARISTOT EROTTUMAAN — MATALIN VESIVYOHYKE (0…−10 m) HIEMAN VIILEAMMAKSI, MAAN SAVY ENNALLAAN, DELTA VAIN RANNIKKOLAATTOIHIN (27.9.2026 klo 18.04)
+
+Karttasepan laatukierroksen VAKAVA V1: Tukholman saaristo sulautuu (koepoltto: maa/meri-luokittelu oikein; resepti 26 tekee matalasta vedesta lahes maan savyisen, DEM-reliefi saarilla viimeistelee). Kortti 18.0x (kuva eu-laatu-5-tukholma-koepoltto.jpg, #3433): omistaja valitsi (a) matalin vesivyohyke 0…−10 m hieman viileammaksi, maan savy ja maitomainen yleisilme ennallaan, delta-poltto vain Euroopan rannikkolaattoihin; ei (b) reliefi vain maalle. Karttaseppa: koepoltto Tukholma + 2 saaristoa kuvapariksi Fablelle ennen laajaa polttoa; erat 1 (jarvet GSHHG taso 2) ja 2 (meriväylat vain veteen) rinnalla.
