@@ -8091,3 +8091,7 @@ Omistaja 11.2x: kun lentokone tai mika tahansa muu uusi linssi tai peli teetetaa
 ## OMISTAJA 11.3x (SITOVA): FPS-VAATIMUS PELIN JA LINSSIN MUKAAN — TOIMINTAJUTUISSA VASTA 60 fps ON RIITTAVAN SULAVA, ARVIOIDAAN TAPAUSKOHTAISESTI (27.9.2026 klo 11.19)
 
 Omistaja 11.3x tarkennus hyvaksymislistaan: fps-vaatimus ei ole kiintea 30 — se maaritellaan pelin ja linssin mukaan; lahtokohtaisesti toimintajutuissa (esim. lentopeli, minipelit) vasta 60 fps on riittavan sulava; rauhallisissa linsseissa/kartan levossa voi riittaa vahemman. Jokaiselle uudelle linssille/pelille kirjataan oma fps-tavoite suunnitelmaan ja se mitataan laitteella ennen merge-pyyntoa.
+
+## LINSSISEPPA 11.2x: MATTERHORN V2, LAHITASO KAIKISSA 9 ERIKOISMALLISSA + 14 SYMBOLISSA, MERGE-PYYNTO mallinseppa/lahitaso be353929 (27.9.2026 klo 11.21)
+
+Linssiseppa 11.2x: Matterhorn v2 (hoikempi koukkuhuippu, peitto ~½, korkeus 1,35 → 1,0; laite 2d04e085; nimion vaisto Natiivisepalla kesken); lahitaso kaikissa 9 erikoismallissa ja 14 symbolissa, laitteella kytkeytyy (pienissa maissa vasta kynnyskorjauksen jalkeen). Merge-pyynto Natiivisepalle mallinseppa/lahitaso be353929 (sisaltaa erikoismallit3: Kinderdijk v3, Brugge, Hohensalzburg, Matterhorn v2 + lahitasot). Saapuminen pysyvin kerroksin abfb54e5 kaannetty (2d04e085), kuva odottaa simulaattoria.
