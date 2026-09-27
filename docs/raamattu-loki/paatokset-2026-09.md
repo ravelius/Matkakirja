@@ -8007,3 +8007,7 @@ Julkaisija 09.59: Z10-osoitin vaihdettu 09.47, CDN 2026-09-26s-pohja tasot 0–1
 ## OMISTAJA 10.0x: MAA VALMIS → LIPPU LIEHUU PIDETAAN, VAIKKA MAAKUNTAETENEMINEN EI NAY VISUAALISESTI (27.9.2026 klo 10.01)
 
 Omistaja 10.0x: 'Tama on ideana hyva. Pidetaan se vaikka muuten maakunta ei nay visuaalisesti pelin aikana etenemisena' — maan valmistuttua (kaikki nostot loydetty) lippu liehuu -palkinto SAILYY; maakuntien vaiheittainen heraaminen, salaisuudet ja alkuanimaation muut vaiheet poistuvat kuten paatetty.
+
+## SISALTOKIRJURI NOLLATTU 10.0x (LUOVUTUS -D #3387 MAINISSA) → PELIKATALOGI (27.9.2026 klo 10.05)
+
+Sisaltokirjuri nollattu 10.0x; #3387 (docs) mergetty ILMAN --delete-branch (haara oli checkoutin haara); aloitusviesti: uusi tyohaara origin/mainista, pelikatalogi docs/pelikatalogi.md linssikatalogin mallilla.
