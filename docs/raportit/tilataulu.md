@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 21:36 EEST
+**Päivitetty:** 2026-09-27 21:50 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **79 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen (Natiivi-UI 68% korkein, ennallaan). **Postivahti (self) 5h-kiintiö 69%, resetoituu 53 min:ssa — ei toimenpidettä (kiintiöikkuna, ei kontekstiraja).**
+Viikko (all models) **81 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **UUSI: Natiivi-UI 73% — YLI 70%.** Linssiseppä 68% lähellä. Postivahti (self) 5h-kiintiö 73%, resetoituu 37 min:ssa — ei toimenpidettä.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 54% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 45% | running |
-| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 44% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 40% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 13% | idle |
-| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 68% | idle |
-| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 65% | idle |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 57% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 47% | running |
+| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 45% | running |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 45% | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 18% | idle |
+| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | **73% — YLI, uusi ilmoitus 21:50** | idle |
+| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 68% | idle |
 | Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 60% | idle |
-| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 18% | running |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 39% | running |
+| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 21% | running |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 43% | running |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 29% | running |
 
 ## 1a) YÖTAUKO klo 22.30 alkaen (Fable 21:4x, sitova)
@@ -60,15 +60,15 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (21:36)
+## 5) Resurssit (21:50)
 
-- **5 h -kiintiö:** 69 %. **Viikko (kaikki mallit):** 79 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 80 Gi vapaana (laskenut tasaisesti 88→80, ei kriittinen, seurataan). wt/-worktreet 35 kpl.
-- **Muistipaine:** 2 (WARN), toistuva ilmiö raskaista rinnakkaisajoista — ei critical, ei erillistä hälytystä.
-- **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **Simulaattorit boottina:** 3 (pariteetti-iPhone, natiiviseppa-iPhone, iPhone 17).
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
-- **Juna: LOKI KIRJOITTI UUDELLEEN 21:22** (KÄÄNNETTY 3f3b67ea) — ei enää raako, edellinen huomio ratkesi itsestään.
+- **5 h -kiintiö:** 73 %. **Viikko (kaikki mallit):** 81 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy: jatkaa tasaista laskua — 76 Gi vapaana (88→83→80→76, ~3-4 Gi/10min).** Selvitetty: seurattujen kansioiden koot (wt/, proto-3d/lokit, Matkakirja-proto*, _valmiit) ovat kaikki PIENENTYNEET viimeisen tunnin aikana (esim. wt 45G→31G) — pudotus ei siis johdu näistä. Todennäköinen syy: `~/Library/Developer/CoreSimulator/Devices` (71G, hitaasti kasvava) + Xcode DerivedData (5,2G) + normaali macOS-järjestelmädata/-välimuisti simulaattoriajojen ja Unity-käännösten sivuvaikutuksena. Ei yhtä selkeää vuotajaa. Ei vielä kriittinen (raja <15 Gi), mutta trendi jatkuu — ilmoitettu Fablelle 21:50.
+- **Muistipaine:** 1 (normal). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **Simulaattorit boottina:** 1 (natiiviseppa-iPhone).
+- **Konteksti (kynnys Fable 65%/roolit 70%):** **Natiivi-UI 73% — YLI, uusi.** Linssiseppä 68% lähellä.
+- **Juna:** kirjoittaa normaalisti (viimeisin KÄÄNNETTY 3f3b67ea 21:22).
 - **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
+- **YÖTAUKO klo 22.30 alkaen (ks. kohta 1a):** roolit eivät aja savukkeita/testejä/Unity-käännöksiä/simulaattoreita klo 22.30 jälkeen. Seuraan load averagea klo 22.45 jälkeen.
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
   - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
