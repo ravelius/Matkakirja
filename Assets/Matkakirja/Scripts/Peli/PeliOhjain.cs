@@ -902,7 +902,7 @@ namespace Matkakirja.Natiivi
             (Valmius.AutoAvain, 'i'), (Valmius.KevennysPoisAvain, 'i'), (PyyntoLoki.Avain, 'i'),
             ("matkakirja-verho-taysi", 'i'), ("matkakirja-mustan-katto", 'i'),
             ("matkakirja-avaus-esilataus", 'i'), ("matkakirja-avaus-malli", 's'),
-            (Nappula.LentoV3Avain, 'i'),
+            (Nappula.LentoV3Avain, 'i'), (Nappula.AloitusrataAvain, 'i'),
             (IhmisenMatkaKerros.TekstitysAvain, 'i'), (LinssiOhjain.KyllaisyysAvain, 'f'),
             // Natiivisepän mittauslippujen avaimet (Saapumisvartija.LippuAvain, Ruudunpaivitys.Liike120Avain,
             // LaattaPortit.YksiPorttiAvain, KarttaKerrokset saapumislaatat, NostotKartalla aihemerkit).

@@ -71,7 +71,7 @@ namespace Matkakirja
             return tulos;
         }
 
-        static void Lisaa(List<Laatta> tulos, HashSet<long> nahty, double lat, double lon, int z, int sade, bool alku)
+        internal static void Lisaa(List<Laatta> tulos, HashSet<long> nahty, double lat, double lon, int z, int sade, bool alku)
         {
             // Pohja (Web Mercator XYZ).
             int n = 1 << z;

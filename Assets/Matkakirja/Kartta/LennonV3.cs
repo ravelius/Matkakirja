@@ -131,6 +131,46 @@ namespace Matkakirja
             return h00 * p0 + h10 * h * v0 + h01 * p1 + h11 * h * v1;
         }
 
+        // ---- Jatkuva lähtö napautusnäkymästä (omistajan TF-löydös 27.9.2026: ei leikkausta ennen lentoa) ----
+
+        /// <summary>Alkuliu'un kesto (s): 0,8 s etäisyyden e-kertaistumista kohden (pallonäkymä 5000 km → 20 km ≈ 4,4 s), 2–5 s.</summary>
+        public static double AlkuliukuS(double alkuEtaisyysM, double lentoEtaisyysM) =>
+            Rajaa(0.8 * Math.Log(Math.Max(1.0, alkuEtaisyysM) / Math.Max(1.0, lentoEtaisyysM)), 2.0, 5.0);
+
+        /// <summary>Katsepisteen siirto on valmis tällä osuudella alkuliu'usta: siirto tehdään kaukaa (halpa ruudulla), zoomaus
+        /// jatkuu loppuun, joten maa ei liu'u lähikuvassa.</summary>
+        public const double AlkuliukuSiirto = 0.7;
+
+        /// <summary>
+        /// Kameran asento alkuliu'ussa: lähtöasennosta a (napautusnäkymä: katsepiste, etäisyys, kallistus pystystä, suuntima,
+        /// katseen korkeus) lennon kameraan b hetkellä t (0–T). Etäisyys logaritmisena, kallistus, suuntima lyhintä tietä ja
+        /// katsepiste isoympyrää pitkin (valmis <see cref="AlkuliukuSiirto"/> × T). Painot smootherstep: kamera lähtee levosta
+        /// ja liittyy lennon kameraan nopeus ja kiihtyvyys jatkuvina (painon derivaatat 0 lopussa).
+        /// </summary>
+        public static (double Lat, double Lon, double EtaisyysM, double Kallistus, double Suuntima, double Katse) Alkuliuku(
+            double t, double T,
+            (double Lat, double Lon, double EtaisyysM, double Kallistus, double Suuntima, double Katse) a,
+            (double Lat, double Lon, double EtaisyysM, double Kallistus, double Suuntima, double Katse) b)
+        {
+            if (T <= 0 || t >= T) return b;
+            if (t <= 0) return a;
+            double w = Pehmea(t / T), wp = Pehmea(t / (AlkuliukuSiirto * T));
+            var p = Isoympyralla(a.Lat, a.Lon, b.Lat, b.Lon, wp);
+            double e = Math.Exp(Math.Log(Math.Max(1.0, a.EtaisyysM)) * (1 - w) + Math.Log(Math.Max(1.0, b.EtaisyysM)) * w);
+            return (p.Lat, p.Lon, e, a.Kallistus + (b.Kallistus - a.Kallistus) * w,
+                Normalisoi(a.Suuntima + Kulmaero(a.Suuntima, b.Suuntima) * w), a.Katse + (b.Katse - a.Katse) * wp);
+        }
+
+        /// <summary>Piste osuudella u isoympyrällä a → b (slerp).</summary>
+        public static (double Lat, double Lon) Isoympyralla(double lat0, double lon0, double lat1, double lon1, double u)
+        {
+            if (u <= 0) return (lat0, lon0);
+            if (u >= 1) return (lat1, lon1);
+            double d = LennonAikajana.ReittiM(lat0, lon0, lat1, lon1);
+            if (d < 1.0) return (lat1, lon1);
+            return Kohta(lat0, lon0, Suuntima(lat0, lon0, lat1, lon1), d * u);
+        }
+
         // ---- Koneen nopeus ja paikka reitillä ----
 
         /// <summary>Nopeusprofiili f(t) osuutena huipusta (speksi kohta 2), pehmeät siirtymät (smootherstep).</summary>

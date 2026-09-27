@@ -1451,7 +1451,14 @@ namespace Matkakirja
         /// jonota näkyvän kartan perässä). Satelliittipintaa ja kermaa ei haeta (v3 lentää pohjan päällä). Nappula odottaa
         /// käytävää ≥ 96 % ja alkua 100 % (LennonV3Kaytava.Leikkaa). Edellinen käytävä perutaan.
         /// </summary>
-        public KaytavaLataus EsilataaLentoV3(List<(double Lat, double Lon)> reitti)
+        public KaytavaLataus EsilataaLentoV3(List<(double Lat, double Lon)> reitti) => EsilataaKaytava(LennonV3Kaytava.Laatat(reitti));
+
+        /// <summary>Aloituslennon radan laatat (AloituslennonRata.Laatat: lähtökaupungin lähikuva ja matkanäkymä alkuun, kohteen
+        /// lasku loppuun) samaan etusijajonoon kuin v3-käytävä.</summary>
+        public KaytavaLataus EsilataaAloitusrata(double lat0, double lon0, double lat1, double lon1) =>
+            EsilataaKaytava(AloituslennonRata.Laatat(lat0, lon0, lat1, lon1));
+
+        KaytavaLataus EsilataaKaytava(List<LennonV3Kaytava.Laatta> laatat)
         {
             LentoV3Kaytava?.Peru();
             var k = new KaytavaLataus();
@@ -1459,7 +1466,7 @@ namespace Matkakirja
             string pm = PohjaMalli();
             var alku = new List<string>();
             var loput = new List<string>();
-            foreach (var l in LennonV3Kaytava.Laatat(reitti))
+            foreach (var l in laatat)
             {
                 string p = KaytavanPolku(l, pm);
                 if (p == null) continue;
@@ -1498,8 +1505,11 @@ namespace Matkakirja
             {
                 if (kp == null || kp.id == null || !LennonAikajana.Kaupungit.ContainsKey(kp.id)) continue;
                 kohteita++;
-                var reitti = LennonV3.Reitti(kp.id, AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon);
-                foreach (var l in LennonV3Kaytava.Esilammitettavat(LennonV3Kaytava.Laatat(reitti)))
+                var laatat = Nappula.Aloitusrata
+                    ? AloituslennonRata.Laatat(AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon)
+                    : LennonV3Kaytava.Laatat(LennonV3.Reitti(kp.id, AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon));
+                // Aloitusrata: lähtö- ja kohdekaupungin tarkat tasot Z8–Z9 (lähikuva ja lasku); v3: alun 5 s.
+                foreach (var l in Nappula.Aloitusrata ? laatat.FindAll(x => x.Z >= 8) : LennonV3Kaytava.Esilammitettavat(laatat))
                 {
                     string p = KaytavanPolku(l, pm);
                     if (p != null && nahty.Add(p)) polut.Add(p);
