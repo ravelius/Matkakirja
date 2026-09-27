@@ -4,8 +4,140 @@
     {
       "name": "matkakirja",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8790", "--bind", "127.0.0.1"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8790",
+        "--bind",
+        "127.0.0.1"
+      ],
       "port": 8790
+    },
+    {
+      "name": "saatimet",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8791",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-luennan-saatimet"
+      ],
+      "port": 8791
+    },
+    {
+      "name": "saatimet-ennen",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8792",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-puhevirta"
+      ],
+      "port": 8792
+    },
+    {
+      "name": "talous",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8793",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-talous-vaihe1"
+      ],
+      "port": 8793
+    },
+    {
+      "name": "pelistreak",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8794",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-pelistreak"
+      ],
+      "port": 8794
+    },
+    {
+      "name": "avauskortti",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8795",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-avauskortti-kevyt"
+      ],
+      "port": 8795
+    },
+    {
+      "name": "hotfix",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8796",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-striimiaani-korjaus"
+      ],
+      "port": 8796
+    },
+    {
+      "name": "pelikatalogi",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8797",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-pelikatalogi"
+      ],
+      "port": 8797
+    },
+    {
+      "name": "rahattomuus",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8799",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-rahattomuuspalkki"
+      ],
+      "port": 8799
+    },
+    {
+      "name": "luenta",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8800",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-luenta-aina"
+      ],
+      "port": 8800
     }
   ]
 }
