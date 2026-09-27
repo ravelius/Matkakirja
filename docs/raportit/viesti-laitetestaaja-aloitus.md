@@ -1,12 +1,18 @@
-# Laitetestaajan aloitusviesti (26.9.2026 ~17.5x, päivitetty edellisen session lopussa)
+# Laitetestaajan aloitusviesti (27.9.2026 ~09.5x, päivitetty edellisen session lopussa)
 
 Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetestaaja.
 `git fetch origin && git pull` (haara laitetestaaja-savukierros-b13; jos main on edellä,
-`git merge origin/main`, EI force-pushia). Tämä pull tuo mm. uuden sallinnan
-`xcrun simctl erase/delete`, `git worktree remove/prune`, `tools/uusi-worktree.sh --poista`
-(omistaja 26.9. klo 16.04, commit 081598dd2) — ei ollut vielä käytössä edellisen session lopussa.
+`git merge origin/main`, EI force-pushia).
 
-## Lue ensin
+## Lue ENSIMMÄISENÄ
+- **docs/raportit/viesti-laitetestaaja-luovutus-20260927.md** — edellisen session luovutus:
+  tila (1.0.28 PASS, commit 4393a1739), valmistelematon 1.0.29-resepti (meri 10 lajia, lähitaso,
+  maakunnat heti + salaisuudet pois, luennan säätimet natiivi, kaiutinvipu, Matterhorn v2,
+  Kinderdijk/Brugge/Hohensalzburg, puhevirta, talousportti) ja koko session ajan kertyneet
+  sudenkuopat (koordinaattimuunnos, `ui`-etuliite, Kehittäjä-paneelin oikea reitti, jumittavat
+  dialogit). Lue tämä ennen mitään muuta.
+
+## Lue seuraavaksi
 - **docs/raportit/laitetestaaja-reseptit.md** (kasvava, päivitetty jatkuvasti) — KAIKKI toimivat
   debug-komennot: kamera (`komento.txt`: aja/kallista/nappula/veto), pelitila (`peli-komento.txt`:
   uusi-peli/muste/aani/pallo lepo/ruutu), UI (`ui-komento.txt`: kartuscha/maakunnat/offline/sulje),
@@ -14,7 +20,7 @@ Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetesta
   keneltäkään — suurin osa on jo siellä.
 - **CLAUDE.md**, Raamatun Ydinajatus kohta 2 (työtapa), WEB ON MALLI MITATTUNA.
 - Tämän session luovutusraportit kronologisesti jos tarvitset yksityiskohtia: git log
-  `docs/raportit/savukierros-*` 26.9. — jokainen kierros on oma committinsa, uusin ensin.
+  `docs/raportit/savukierros-*` 26.–27.9. — jokainen kierros on oma committinsa, uusin ensin.
 
 ## Kierroksen kaava (toistuu build-kierroksesta toiseen)
 1. Rooli (Natiiviseppä/Fable) ilmoittaa uuden käännöksen SHA:n + asennetut simulaattorit + testilistan.
