@@ -810,7 +810,12 @@ test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', as
   assert.deepEqual(validoiNimella(o, 'offline.schema.json'), []);
   const { MAAILMANKARTTA: P } = await import('../js/packs/maailmankartta.js');
   const muodolliset = Object.entries(P.map.countryShapes).filter(([, v]) => v.renkaat?.length).map(([k]) => k);
-  assert.deepEqual(Object.keys(o.maat).sort(), muodolliset.sort(), 'jokainen muodollinen maa');
+  // Skeema 1.52: + merentakaiset alueet omina kohteinaan (BMU, FLK, GUF, NCL).
+  const { MERENTAKAISET } = await import('../tools/vienti/offline.mjs');
+  const alueet = Object.values(MERENTAKAISET).map((a) => a.iso);
+  assert.deepEqual(Object.keys(o.maat).sort(), [...muodolliset, ...alueet].sort(), 'jokainen muodollinen maa + alueet');
+  for (const iso of alueet) assert.ok(!o.ryhmat.europe.maat.includes(iso), `${iso} ei Euroopassa`);
+  assert.equal(o.maat.NCL.manner, 'oceania');
   const fin = o.maat.FIN;
   assert.equal(fin.iso2, 'FI');
   assert.deepEqual(Object.keys(fin.rasteri), ['6', '7', '8']);
@@ -1439,8 +1444,9 @@ test('skeema 1.45: Elävä kartta — kokoluokka, maakunta ja salaisuus', async 
   const maakunta = (t) => valot.find((v) => v.maa === 'GRC' && v.tunnus === t)?.maakunta;
   assert.equal(maakunta('hahmotelma-sounion'), 'GRC:Attiki');
   assert.equal(maakunta('egeanmeri'), null);
+  // Skeema 1.55: maakuntarajat.salaisuus poistettu (omistaja 27.9.2026: ei salaisuuksia maakuntiin).
   const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
-  assert.ok(rajat.every((a) => 'salaisuus' in a));
+  assert.ok(rajat.every((a) => !('salaisuus' in a)));
 });
 
 test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () => {
@@ -1455,20 +1461,12 @@ test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () =>
   assert.ok(k.alkiot.some((r) => r.laji === 'laiva') && k.alkiot.some((r) => r.laji === 'rautatie'));
 });
 
-test('skeema 1.47: maakuntasalaisuudet omana kokoelmana, ei karttavaloissa', async () => {
-  const { MAAKUNTASALAISUUDET } = await import('../js/packs/maakuntasalaisuudet.js');
-  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
-  assert.equal(k.length, Object.keys(MAAKUNTASALAISUUDET).length);
-  for (const s of k) {
-    assert.ok(s.id.startsWith('salaisuus:') && s.kokoluokka === 'paakohde' && s.maakunta && s.teksti && s.lyhyt, s.id);
-    assert.ok(Number.isFinite(s.lat) && Number.isFinite(s.lon) && s.aihe, s.id);
-    assert.equal(MAAKUNTASALAISUUDET[s.maakunta], `nosto:${s.tunnus}`);
-    assert.ok(s.nimio === null || s.nimio.length <= 18, s.id);
-  }
+test('skeema 1.55: ei maakuntasalaisuuksia (omistaja 27.9.2026), Kreikan salaisuudet tavallisina nostoina', () => {
+  const manifest = JSON.parse(tiedostot.get('manifest.json'));
+  assert.ok(!manifest.kokoelmat.some((k) => k.nimi === 'maakuntasalaisuudet'));
+  assert.ok(!tiedostot.has('kokoelmat/maakuntasalaisuudet.json'));
   const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
-  assert.ok(!valot.some((v) => v.id.startsWith('salaisuus:') || 'salaisuus' in v), 'ei karttavaloissa (build 16/17 piirtäisi)');
-  const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
-  assert.equal(rajat.find((a) => a.id === 'GRC:Attiki').salaisuus, 'salaisuus:salaisuus-eleusiin-mysteerit');
+  assert.ok(!valot.some((v) => v.id.startsWith('salaisuus:') || 'salaisuus' in v));
 });
 
 test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () => {
@@ -1486,7 +1484,7 @@ test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () =>
 });
 
 
-test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luonnehdinnoissa', async () => {
+test('skeema 1.49: pikkukuva ämpäriosoitteena maakuntien luonnehdinnoissa', async () => {
   const { pikkukuvaOsoite } = await import('../tools/vienti/elava-kartta.mjs');
   const juuri = 'https://media.matkakirja.app/';
   assert.equal(pikkukuvaOsoite('assets/kartat/maakunnat/grc-attiki.webp'), `${juuri}kohtaamiset/maakunnat/grc-attiki.webp`);
@@ -1495,11 +1493,6 @@ test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luo
   assert.equal(pikkukuvaOsoite(`${juuri}x.jpg`), `${juuri}x.jpg`);
   assert.equal(pikkukuvaOsoite(null), null);
   assert.throws(() => pikkukuvaOsoite('ei kuva'), /https-osoitetta/);
-  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
-  for (const s of k) {
-    assert.ok('pikkukuva' in s && (s.pikkukuva === null || s.pikkukuva.startsWith('https://')), s.id);
-    assert.ok(s.pikkukuva === null || s.pikkukuvaLahde, `${s.id}: kuvalla pitää olla tekijä ja lisenssi (pikkukuvaLahde)`);
-  }
   const m = JSON.parse(tiedostot.get('moduulit/js/packs/maakunnat-luonnehdinnat.json')).exportit;
   const kuvat = JSON.stringify(m).match(/"pikkukuva":("[^"]*"|null)/g) ?? [];
   for (const p of kuvat) assert.match(p, /^"pikkukuva":(null|"https:\/\/[^"]+")$/);
@@ -1548,6 +1541,34 @@ test('skeema 1.51: natiivin pallon Z10 offline-välit = Karttasepän poltettu jo
   assert.ok(kaikki.size >= lista.size - 40, `${kaikki.size}/${lista.size}`);
 });
 
+test('skeema 1.52: mediaKuvat — omat tiedostot offline-lataukseen omassa avaimessa, pienennettyinä, katto maata kohden', async () => {
+  const { onOffline, MEDIAKUVAT } = await import('../tools/vienti/offline.mjs');
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  const omat = media.filter((v) => (v.laji === 'kuva-url' || v.laji === 'aani-url') && v.url?.startsWith('https://media.matkakirja.app/'));
+  assert.ok(omat.length > 1000 && omat.every(onOffline), `omia absoluuttisia ${omat.length}`);
+  assert.equal(onOffline({ laji: 'kuva-url', url: 'https://upload.wikimedia.org/x.jpg' }), false, 'ulkoinen jää pois');
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  assert.equal(o.lahteet.mediaKuvat.katto, MEDIAKUVAT.katto);
+  // Natiiviseppä 27.9.: vanhat buildit lataavat media-listan, joten uudet eivät saa olla siellä eikä yht:ssä.
+  assert.ok(Object.values(o.maat).every((m) => !m.media.some((u) => u.includes('/karttanostot/'))), 'karttanostot eivät media-listalla');
+  let kuvia = 0; let pienia = 0;
+  for (const [iso, m] of Object.entries(o.maat)) {
+    assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman mediaKuvia`);
+    assert.ok(m.tavuja.mediaKuvat <= MEDIAKUVAT.katto, `${iso}: ${m.tavuja.mediaKuvat} yli katon`);
+    for (const k of m.mediaKuvat ?? []) {
+      assert.match(k.url, /^https:\/\/media\.matkakirja\.app\//, iso);
+      if (k.pieni) { pienia++; assert.match(k.pieni, /^https:\/\/media\.matkakirja\.app\/pieni\/.+\.(jpg|png)$/); }
+      kuvia++;
+    }
+  }
+  assert.ok(kuvia > 1000 && pienia > 500, `mediaKuvia ${kuvia}, pieniä ${pienia}`);
+  assert.ok(Object.values(o.maat).some((m) => m.mediaKuvat?.some((k) => k.url.includes('/karttanostot/'))), 'karttanostot mediaKuvissa');
+  assert.ok(o.ryhmat.europe.tavuja.mediaKuvat > 0);
+  // Natiiviseppä 27.9.: levykoko (maasto purettuna) ≥ yht.
+  for (const [iso, m] of Object.entries(o.maat)) assert.ok(m.tavuja.levy >= m.tavuja.yht, `${iso}: levy ${m.tavuja.levy} < yht`);
+  assert.ok(o.ryhmat.europe.tavuja.levy > o.ryhmat.europe.tavuja.yht);
+});
+
 test('eheys 27.9.: Flickr-kuvat repon kopiona ämpärissä, Flickr vain varana', async () => {
   const { sivustonAssetit } = await import('../tools/vienti/vie-sisalto.mjs');
   const media = JSON.parse(tiedostot.get('media.json')).viitteet;
@@ -1562,4 +1583,44 @@ test('eheys 27.9.: Flickr-kuvat repon kopiona ämpärissä, Flickr vain varana',
   const offline = JSON.parse(tiedostot.get('offline.json'));
   const kaikki = Object.values(offline.maat).flatMap((m) => m.media);
   assert.equal(kaikki.filter((u) => u.includes('staticflickr')).length, 0, 'offline-lataus ei hae Flickristä');
+});
+
+test('skeema 1.53: maasto koko maasta z10:een, tarkemmat tasot vain kaupunkien ympäriltä', async () => {
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  const M = o.lahteet.maasto;
+  assert.equal(M.kokoMaaMax, 10);
+  assert.deepEqual(M.kaupunkiMaasto, { tasot: [11, 12], sadeKm: 50 });
+  const { readFileSync } = await import('node:fs');
+  const saatavilla = JSON.parse(readFileSync(new URL('../tools/vienti/offline-koot.json', import.meta.url), 'utf8')).maasto.available;
+  let laattoja = 0;
+  for (const [iso, m] of Object.entries(o.maat)) {
+    assert.ok(Object.keys(m.maasto).every((z) => Number(z) <= 10), `${iso}: maasto-kentässä vain z ≤ 10 (vanhat buildit)`);
+    for (const [z, valit] of Object.entries(m.kaupunkiMaasto ?? {})) {
+      assert.ok(M.kaupunkiMaasto.tasot.includes(Number(z)), `${iso}: taso ${z}`);
+      for (const [x0, y, x1, y1] of valit) {
+        assert.equal(y, y1);
+        for (let x = x0; x <= x1; x++) {
+          laattoja++;
+          assert.ok(saatavilla[z].some((a) => x >= a.startX && x <= a.endX && y >= a.startY && y <= a.endY), `${iso} ${z}/${x}/${y} ei available`);
+        }
+      }
+    }
+    assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman kaupunkiMaastoa`);
+  }
+  assert.ok(laattoja > 1000, `kaupunkiMaasto-laattoja ${laattoja}`);
+  assert.ok(o.ryhmat.europe.tavuja.maasto + o.ryhmat.europe.tavuja.kaupunkiMaasto < 200e6, 'Euroopan offline-maasto alle 200 Mt siirtona');
+});
+
+test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', async () => {
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  assert.equal(o.lahteet.mediaKuvat.korvaaMedian, true);
+  for (const [iso, m] of Object.entries(o.maat)) {
+    const t = m.tavuja;
+    assert.ok(t.mediaKuvat <= o.lahteet.mediaKuvat.katto, iso);
+    assert.equal(t.offline, t.rasteri + t.maasto + (t.kaupunkiRasteri ?? 0) + t.kaupunkiMaasto + t.mediaKuvat, `${iso}: offline-summa`);
+  }
+  // Media-listan kuvat mukana mediaKuvissa (pienennettyinä), ei vain lisätiedostot.
+  const fra = o.maat.FRA;
+  const kuvat = new Set(fra.mediaKuvat.map((k) => k.url));
+  assert.ok(fra.media.some((u) => kuvat.has(u)), 'FRA: media-listan kuvia mediaKuvissa');
 });

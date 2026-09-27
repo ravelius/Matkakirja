@@ -5791,10 +5791,10 @@ export const NAHTAVYYSJUTUT = {
           + 'ikuisesti, lapio kädessä.',
       kuvat: [
         {
-          tiedosto: 'Heinrich Schliemann\'s house..tif',
+          tiedosto: 'The Numismatic Museum of Athens (Iliou Melathron) on August 2, 2020.jpg',
           selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
             + 'nykyään Ateenan numismaattinen museo.',
-          lahde: 'athenswalk, Wikimedia Commons (CC0)',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -10952,6 +10952,14 @@ export const NAHTAVYYSJUTUT = {
             + 'museo sai 1933 tutkija Grigore Antipan mukaan.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
         },
+        /*
+         * PIENI KUVA, EI KORVATA (27.9.2026, Siirtosepän eheystarkistus
+         * #3434): ainoa löytynyt Belle Époque -aikainen postikorttikuva
+         * museosta Voittoaukiolla. Isompaa versiota tai muuta saman
+         * ajan kuvaa ei löytynyt Commonsista — museon nykytilasta on jo
+         * iso kuva yllä (Chainwit.), joten tämä täydentää sitä
+         * aikalaiskuvana eikä sitä korvata nykyisemmällä.
+         */
         {
           tiedosto: 'Belle Époque photo of the Antipa Museum in Victory Square of Bucharest, Romania.jpg',
           lyhyt: 'Museon juuret ulottuvat vuoteen 1834, kokoelmissa nykyään yli 2 miljoonaa näytettä.',
@@ -13064,13 +13072,13 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'ETH-BIB-Dobrovnik, Pile-Tor-Dia 247-09508.tif',
-          lyhyt: 'Vuonna 1936 Pilen portista kuljettiin vapaasti, mutta aiemmin nostosilta vedettiin joka ilta ylös.',
-          selite: 'Vuonna 1936 portista kuljettiin jo vapaasti, mutta '
-            + 'aikoinaan sisäportille johti puinen nostosilta, joka '
-            + 'vedettiin joka ilta ylös — kukaan ei päässyt sisään eikä '
-            + 'ulos ennen aamua.',
-          lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Pile Gate from inside, Dubrovnik (2) (29524644444).jpg',
+          lyhyt: 'Nykyään Pilen portista kuljetaan vapaasti, mutta aikoinaan nostosilta vedettiin joka ilta ylös.',
+          selite: 'Pilen portin sisäpuoli: nykyään portista kuljetaan '
+            + 'vapaasti, mutta aikoinaan sisäportille johti puinen '
+            + 'nostosilta, joka vedettiin joka ilta ylös — kukaan ei '
+            + 'päässyt sisään eikä ulos ennen aamua.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -13220,13 +13228,12 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'ETH-BIB-Dobrovnik, Fort Lovrijenac vom Hôtel Impérial-Dia 247-09506.tif',
-          lyhyt: 'Vuonna 1936 linnaketta puolusti kymmenen tykkiä, suurin nimeltään Gušter eli Lisko.',
-          selite: 'Vuonna 1936 linnake oli jo aikoja sitten menettänyt '
-            + 'sotilaallisen tehtävänsä; sitä puolusti aikanaan kymmenen '
-            + 'suurta tykkiä, joista suurinta kutsuttiin nimellä '
-            + '\'Gušter\' eli Lisko.',
-          lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Fort Lovrijenac. Dubrovnik.jpg',
+          lyhyt: 'Linnaketta puolusti aikanaan kymmenen tykkiä, suurin nimeltään Gušter eli Lisko.',
+          selite: 'Fort Lovrijenac kalliolla kaupungin länsipuolella; '
+            + 'linnaketta puolusti aikanaan kymmenen suurta tykkiä, joista '
+            + 'suurinta kutsuttiin nimellä \'Gušter\' eli Lisko.',
+          lahde: 'Zysko serhii, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
