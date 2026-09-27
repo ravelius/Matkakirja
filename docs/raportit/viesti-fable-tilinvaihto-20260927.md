@@ -86,3 +86,16 @@ jatko tallennuksesta, pankin apu pois, Odota-kulkutapa); pelistreak; lentopeli; 
 säätimet (ratas + VU kaiuttimessa + pelinimet Aino…Väinö); nostot heti, maakuntaeteneminen ja salaisuudet pois, vain
 pohjaväri, lippu liehuu jää, mannerlennot jäävät; lähitaso LOD0; meri 10 lajia; uusi linssi/peli Opus max + hyväksymislista,
 fps tapauskohtaisesti (toiminta 60); viikko 97 → tilinvaihto; Fable ei koskaan `--delete-branch`.
+
+## 7. Päivitys 11.3x (viikko 94 %, Fablen konteksti 72 %)
+
+- Mainissa lisäksi #3394 talous vaihe 1 web (v2314), #3396 pelistreak-ehdotus (docs); #3388 mergessä (Pöllön julkaisu).
+- Omistaja hyväksyi pelistreak-luvut sellaisenaan (3–6 pv 20 £/pv, 7. pv 50 + 100 £, 8+ pv 30 £/pv + joka 7. pv 100 £).
+- Natiivin talousportti pelikoodari/talous-vaihe1 fbda3812 valmis → 1.0.30 yhdessä Natiivi-UI:n UI-osan kanssa (kassarivi,
+  toast, loppukortti, Odota-nappi); Siirtosepälle START_MONEY 400. 1.0.29 pysyy visuaalisessa kokoonpanossa.
+- Luovutukset tilinvaihtoon pushattu: Natiivi-UI (f8f7a9c67), Julkaisija (c01adfd54), Karttaseppä (1bcc21e08), Linssiseppä -m
+  (01289a762), Laitetestaaja (6b46d3f13), Sisältökirjuri -e, Pelikoodari (db81fcab4), Siirtoseppä (e147220ce, nollasi itsensä).
+  Natiiviseppä ja Postivahti tekevät omiaan.
+- Lähitaso: sitova raja 3 000 kolmiota/malli, Raamatun "2–3 ×" → "2–5 ×, katto 3 000" seuraavassa Raamattu-PR:ssä.
+- Saapuminen v2 (abfb54e5) todennettu laitteella: nostot ja rajat näkyvät täytön aikana.
+- Avauskortin korjaukset natiivissa koodissa (11a3c43a), käännös klo 12 → kuvapari → omistajan kortti (uusi Fable).
