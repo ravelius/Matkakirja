@@ -679,6 +679,8 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(osoite))
                     Kuvat.Hae(osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
                 string lahde = string.Join(" · ", new[] { MiniJson.Teksti(k, "lahde"), MiniJson.Teksti(k, "lisenssi") }.Where(s => !string.IsNullOrEmpty(s)));
+                // Tekijä ja lisenssi Commonsista, jos puuttuu (web karttatyokalu-maakunnat taytaLahderivi, #3438).
+                lahde = Kuvatekija.Taydenna(lahde, MiniJson.Teksti(k, "tiedosto") ?? osoite) ?? "";
                 if (lahde.Length > 0)
                 {
                     var l = Rakenne.Teksti(lahde, "mk-maakuntaKortti__lahde", kehys);
