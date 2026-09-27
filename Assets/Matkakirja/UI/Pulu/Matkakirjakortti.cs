@@ -663,8 +663,10 @@ namespace Matkakirja.Natiivi
                 Kuvat.Hae(k.Osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
                 // Web: lähde (.kuvalahde 0,6rem #8a7a60) kuvatekstin sisällä sen perässä.
                 string kuvateksti = k.Selite ?? k.Lyhyt ?? "";
-                if (!string.IsNullOrEmpty(k.Lahde))
-                    kuvateksti += (kuvateksti.Length > 0 ? " " : "") + "<size=9.6><color=#8a7a60>" + k.Lahde + "</color></size>";
+                // Tekijä ja lisenssi Commonsista, jos lähteestä puuttuu (web taytaLahderivi fokusvirrassa, #3438).
+                string kl = Kuvatekija.Taydenna(k.Lahde, k.Osoite);
+                if (!string.IsNullOrEmpty(kl))
+                    kuvateksti += (kuvateksti.Length > 0 ? " " : "") + "<size=9.6><color=#8a7a60>" + kl + "</color></size>";
                 var teksti = Rakenne.Teksti(kuvateksti, "mk-postikortti__teksti", kortti);
                 Kirjasimet.Aseta(teksti, Kirjasin.Kone);
                 teksti.style.display = kuvateksti.Length == 0 ? DisplayStyle.None : DisplayStyle.Flex;

@@ -293,6 +293,8 @@ namespace Matkakirja.Natiivi
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
+            // Commons-tekijätaulu heti (38 kt): ensimmäinenkin lähderivi täydentyy (Kuvatekija, #3438).
+            kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(Kuvatekija.Esilataa).StartingIn(3000);
             Palaute = new PalauteIkkuna(kerros); // hampurilaisen "ehdota sisältöä"
             Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
