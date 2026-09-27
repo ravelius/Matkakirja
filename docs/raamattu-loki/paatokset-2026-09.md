@@ -8003,3 +8003,7 @@ Omistaja 09.5x: pelit ovat yhta merkittava osa kuin linssit → oma suunnittelus
 ## Z10 OSOITIN VAIHDETTU 09.47 (TASOT 0–10, pohja.kopio 0–8); #3384 v2309, #3385 v2310 MAINISSA (27.9.2026 klo 09.59)
 
 Julkaisija 09.59: Z10-osoitin vaihdettu 09.47, CDN 2026-09-26s-pohja tasot 0–10 (pallosarja pohja.kopio 0–8); #3384 progressiivinen soitto v2309 ja #3385 loytosumu pois v2310 mainissa; savukkeet ja Pelikoodarin puhelinmittaus kaynnissa.
+
+## OMISTAJA 10.0x: MAA VALMIS → LIPPU LIEHUU PIDETAAN, VAIKKA MAAKUNTAETENEMINEN EI NAY VISUAALISESTI (27.9.2026 klo 10.01)
+
+Omistaja 10.0x: 'Tama on ideana hyva. Pidetaan se vaikka muuten maakunta ei nay visuaalisesti pelin aikana etenemisena' — maan valmistuttua (kaikki nostot loydetty) lippu liehuu -palkinto SAILYY; maakuntien vaiheittainen heraaminen, salaisuudet ja alkuanimaation muut vaiheet poistuvat kuten paatetty.
