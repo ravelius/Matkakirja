@@ -65,3 +65,18 @@ hyväksynnän jälkeen.
 2. Kolmiot: LOD0 ≤ 3 000 ja kaukotaso ≤ 800 (tila-rivi).
 3. Elävä kerros: laji lisää kehysaikaa ≤ 0,3 ms (tila-rivin mittaus), 0 poikkeusta.
 4. Harmaata ei ole: jokainen kiinteä kärki on rampissa tai korostusvärissä.
+
+## 6. Tila 27.9. klo 14.4x: erä 1 laitteella
+
+- **Proto** `linssiseppa/meri-laatu` 148b2b82 (junan ad444b9d päällä), käännös 9a2a60c1: MeriMalli-varjostin, MeriRakentaja
+  (vesikolmiot aina ylös), ElavatElementit (Seepia-lippu, ääriviivamateriaali, kaukotaso, roottori ennen lapsia, ms-mittaus
+  tila-rivillä) sekä lajit MeriLaiva v12, MeriPurjelaiva v10 ja MeriValas v8 (Opus-agentit, harness
+  proto-3d/tyokalut/meri-laatu/).
+- **Laitteella (iPhone-simulaattori):** merilaiva 2 911 kolmiota (kaukotaso 1 861), purjelaiva 2 520 (1 654), valas 2 655
+  (2 499). CPU 0,005–0,03 ms lajia kohden, 0 poikkeusta.
+- **Kuvaparit:** proto-3d/lokit/mallinseppa-toimitus-20260927/meri-laatu-{merilaiva,purjelaiva,valas}-ennen-jalkeen.png
+  (ennen 1.0.29 c567fa57 | jälkeen 9a2a60c1). Kuvaus 1,8°:n kaarella, koska elävät elementit haalistuvat 450–600 km:n
+  korkeudella (peitto 0,59, kun kaari on 2,4° eli noin 510 km).
+- **Avoin omistajalle:** purjeet rampissa (seepia ja kaiverrus; kameran puoli on varjossa, koska valo tulee luoteesta) vai
+  vaaleampi kangas korostuspolulla (harmaantuu varjossa). Suositus ramppi.
+- **Jatko:** merge-pyyntö Natiivisepälle Fablen OK:lla, sitten loput 7 lajia samalla kaavalla.
