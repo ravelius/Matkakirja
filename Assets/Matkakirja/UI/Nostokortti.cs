@@ -393,10 +393,33 @@ namespace Matkakirja.Natiivi
             var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
             float p = Mathf.Round(Mathf.Max(t.y + KuvaMarginaali, tavoite));
             kiinteaYla = p;
-            odottavaVieritys = Mathf.Max(0f, p - tavoite);
+            odottavaVieritys = KokoRivi(Mathf.Max(0f, p - tavoite));
             Pystypaikka();
             Vierita();
         }
+
+        /// <summary>
+        /// Omistaja 27.9. klo 09.3x (iPhone): vaiheen 2 ylin näkyvä tekstirivi ei saa jäädä puoliksi kortin yläreunan taakse.
+        /// Jos vierityksen raja osuu tekstin keskelle, vieritystä vähennetään rivin alkuun (+ RiviVara), jolloin sisältö ja kuva
+        /// alkavat hieman alempaa (enintään rivin verran; löydös 131:n kuvan paikka muuten ennallaan).
+        /// </summary>
+        float KokoRivi(float v)
+        {
+            if (v <= 0f) return v;
+            foreach (var c in sisus.contentContainer.Children())
+            {
+                var r = c.layout;
+                if (float.IsNaN(r.y) || r.yMax <= v) continue;
+                if (r.y >= v || !(c is TextElement te)) return v;
+                float fs = te.resolvedStyle.fontSize;
+                if (fs <= 0f || float.IsNaN(fs)) return v;
+                int rivit = Mathf.Max(1, Mathf.RoundToInt(r.height / (fs * 1.3f)));
+                float riviK = r.height / rivit, leikattu = (v - r.y) % riviK;
+                return leikattu < 0.5f ? v : Mathf.Max(0f, v - leikattu - RiviVara);
+            }
+            return v;
+        }
+        const float RiviVara = 4f;
 
         /// <summary>Korjauksen vieritys; ScrollView rajaa arvon vieritysalueeseen, joten yritys toistuu sen päivittyessä.</summary>
         void Vierita()
