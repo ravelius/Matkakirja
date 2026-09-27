@@ -349,10 +349,53 @@ namespace Matkakirja.Natiivi
             SoivaUrl = "puhe:" + persoona + ":" + teksti;
             SoivaPersoona = persoona;
             ViimeVirhe = null;
+            ekaAlku = Time.unscaledTime;
+            mittaaEka = true;
+            // Palavirta (Virta): lyhyt ensimmäinen pala soi heti, loput haetaan sen soidessa (Lukijaaani.VirtaPalat).
+            var palat = Virta && sailo ? Lukijaaani.VirtaPalat(teksti) : new List<string> { teksti };
+            if (palat.Count > 1)
+            {
+                lataus = StartCoroutine(SoitaPalat(palat, persoona, lohko, viiveS, oma, sailo));
+                return true;
+            }
             var (runko, koodi) = Saadot.Pyynto(teksti, persoona, lohko);
             string avain = Saadot.Valimuistiavain(persoona, teksti);
             lataus = StartCoroutine(LataaJaSoita(avain, () => SynteesiPyynto(runko, koodi), viiveS, oma, true, sailo));
             return true;
+        }
+
+        float ekaAlku;
+        bool mittaaEka;
+
+        /// <summary>
+        /// PALAVIRTA: palat peräkkäin samana puheena. Seuraava pala haetaan heti, kun edellinen on pyydetty
+        /// (web aikatauluta +1), joten se on levyllä ennen kuin edellinen soi loppuun. Välissä Puhuu pysyy
+        /// päällä eikä loppu-kutsua tehdä; virhe missä tahansa palassa lopettaa puheen kuten ennenkin.
+        /// </summary>
+        IEnumerator SoitaPalat(List<string> palat, string persoona, string lohko, float viiveS, int oma, bool sailo)
+        {
+            for (int i = 0; i < palat.Count; i++)
+            {
+                if (oma != tunnus) yield break;
+                bool viimeinen = i == palat.Count - 1;
+                if (!viimeinen) EsihaePala(palat[i + 1], persoona, lohko);
+                var (runko, koodi) = Saadot.Pyynto(palat[i], persoona, lohko);
+                string avain = Saadot.Valimuistiavain(persoona, palat[i]);
+                ViimeVirhe = null;
+                yield return LataaJaSoita(avain, () => SynteesiPyynto(runko, koodi), i == 0 ? viiveS : 0, oma, true, sailo, viimeinen, i > 0);
+                if (oma != tunnus || ViimeVirhe != null) yield break;
+            }
+        }
+
+        /// <summary>Hakee yhden synteesipalan levylle soittamatta (Esihae ja palavirta).</summary>
+        void EsihaePala(string pala, string persoona, string lohko)
+        {
+            string avain = Saadot.Valimuistiavain(persoona, pala);
+            if (esiladataan.Contains(avain)) return;
+            string tiedosto = Path.Combine(Kansio, Tiiviste(avain) + ".mp3");
+            if (File.Exists(tiedosto)) return;
+            var (runko, koodi) = Saadot.Pyynto(pala, persoona, lohko);
+            StartCoroutine(EsilataaTiedosto(avain, tiedosto, Taso.SeuraavaRuutu, () => SynteesiPyynto(runko, koodi), "esihaettu pala"));
         }
 
         static UnityWebRequest SynteesiPyynto(string runko, string koodi)
@@ -380,12 +423,10 @@ namespace Matkakirja.Natiivi
             if ((!Paalla && !PulunPuhe(persoona)) || string.IsNullOrWhiteSpace(teksti)) return;
             persoona ??= "kertoja";
             teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
-            string avain = Saadot.Valimuistiavain(persoona, teksti);
-            if (esiladataan.Contains(avain)) return;
-            string tiedosto = Path.Combine(Kansio, Tiiviste(avain) + ".mp3");
-            if (File.Exists(tiedosto)) return;
-            var (runko, koodi) = Saadot.Pyynto(teksti, persoona, Lukijaaani.OletusLohko(persoona));
-            StartCoroutine(EsilataaTiedosto(avain, tiedosto, Taso.SeuraavaRuutu, () => SynteesiPyynto(runko, koodi), "esihaettu pala"));
+            // Samat palat kuin Lue tekee (palavirta), muuten esihaku menisi hukkaan ja pala generoitaisiin kahdesti.
+            string lohko = Lukijaaani.OletusLohko(persoona);
+            foreach (var pala in Virta ? Lukijaaani.VirtaPalat(teksti) : new List<string> { teksti })
+                EsihaePala(pala, persoona, lohko);
         }
 
         /// <summary>Katkaisee tekstin viimeiseen virkkeen loppuun ennen kattoa (tai kattoon).</summary>
@@ -452,7 +493,8 @@ namespace Matkakirja.Natiivi
             esiladataan.Remove(url);
         }
 
-        IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma, bool synteesi, bool sailo)
+        IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma, bool synteesi, bool sailo,
+            bool viimeinen = true, bool jatko = false)
         {
             float alku = Time.unscaledTime;
             // Buildiin mukana (Mukana, löydös 118: avausluenta ilman verkkoa) → suoraan sieltä.
@@ -469,7 +511,7 @@ namespace Matkakirja.Natiivi
             if (sailo && File.Exists(tiedosto)) Esilataaja.NakyvaValmis(url);
             if (oma != tunnus) yield break;
             // Synteesi verkosta: soitto alkaa ensimmäisistä tavuista (VIRTA alla), ei koko palan latauksen jälkeen.
-            if (synteesi && Virta && !virtaPetti && (!sailo || !File.Exists(tiedosto)))
+            if (synteesi && Striimi && viimeinen && !jatko && !virtaPetti && (!sailo || !File.Exists(tiedosto)))
             {
                 yield return SoitaVirtana(url, pyynto, viiveS, oma, sailo, tiedosto, alku);
                 yield break;
@@ -504,12 +546,12 @@ namespace Matkakirja.Natiivi
                 catch (Exception e) { ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: välimuisti: " + e.Message); LatausPetti(); yield break; }
             }
 
-            yield return LataaJaSoitaTiedosto(url, viiveS, oma, sailo, tiedosto, alku, synteesi, valimuistista, mukana);
+            yield return LataaJaSoitaTiedosto(url, viiveS, oma, sailo, tiedosto, alku, synteesi, valimuistista, mukana, viimeinen, jatko);
         }
 
         /// <summary>Avaa levyllä olevan äänitteen klipiksi ja soittaa sen loppuun (LataaJaSoita ja virran varapolku).</summary>
         IEnumerator LataaJaSoitaTiedosto(string url, float viiveS, int oma, bool sailo, string tiedosto, float alku,
-            bool synteesi = true, bool valimuistista = false, string mukana = null)
+            bool synteesi = true, bool valimuistista = false, string mukana = null, bool viimeinen = true, bool jatko = false)
         {
             AudioClip klippi;
             using (var r = UnityWebRequestMultimedia.GetAudioClip("file://" + tiedosto, TyyppiPaatteesta(tiedosto)))
@@ -534,8 +576,11 @@ namespace Matkakirja.Natiivi
             if (jaljella > 0) yield return new WaitForSecondsRealtime(jaljella);
             if (oma != tunnus) { Destroy(klippi); yield break; }
 
-            AloitaKlippi(klippi, synteesi);
-            if (synteesi) ViimeEkaAaniMs = (Time.unscaledTime - alku) * 1000.0;
+            // Palavirran välissä tauotettu puhe ei jatku itsestään: odotetaan jatkoa (Jatka purkaa tauon).
+            while (jatko && tauolla && oma == tunnus) yield return null;
+            if (oma != tunnus) { Destroy(klippi); yield break; }
+            AloitaKlippi(klippi, synteesi, jatko);
+            if (synteesi && mittaaEka) { ViimeEkaAaniMs = (Time.unscaledTime - ekaAlku) * 1000.0; mittaaEka = false; }
             // Viive pyynnöstä ääneen (löydös 118: intron pitää alkaa painalluksesta heti).
             Debug.Log($"MATKAKIRJA puhe: alkoi {(Time.unscaledTime - alku) * 1000:0} ms pyynnöstä ({(valimuistista ? "välimuisti" : "verkko")}) "
                       + Path.GetFileName(url.Split('?')[0]) + (mukana != null ? " [buildissa]" : ""));
@@ -543,6 +588,8 @@ namespace Matkakirja.Natiivi
             // Loppu: äänite soi loppuun (ei pysäytetty eikä korvattu).
             while (oma == tunnus && (lahde.isPlaying || tauolla)) yield return null;
             if (oma != tunnus) yield break;
+            // Palavirran välipala: puhe jatkuu seuraavalla palalla (SoitaPalat), ei loppua eikä Puhuu-muutosta.
+            if (!viimeinen) yield break;
             SoivaUrl = null;
             AsetaPuhuu(false);
             var l = loppu;
@@ -559,11 +606,17 @@ namespace Matkakirja.Natiivi
          * Virta = false (testikomento "puhe virta pois") palauttaa vanhan polun vertailumittausta varten.
          */
         /// <summary>
-        /// Progressiivinen soitto (komento "puhe virta paalle"). OLETUS POIS (Laitetestaajan uusinta 27.9. b380a78d4, TF 1.0.29:
-        /// laitteella striimattu pala päätyi "Data Processing Error, see Download Handler error 200" -virheeseen ja jäi äänettömäksi,
-        /// vanha polku soi): pala ladataan kokonaan ennen soittoa, kunnes striimaus on korjattu ja mitattu laitteella.
+        /// PALAVIRTA (oletus päällä; komento "puhe virta pois|paalle"): synteesi soi kasvavina paloina
+        /// (Lukijaaani.VirtaPalat), ensimmäinen lyhyt pala ~2 s:ssa, jokainen pala vanhalla, laitteella toimivalla
+        /// polulla (levy → klippi). Pois: koko teksti yhtenä palana (vertailumittaus).
         /// </summary>
-        public static bool Virta = false;
+        public static bool Virta = true;
+        /// <summary>
+        /// Striimattu mp3 (DownloadHandlerAudioClip streamAudio, SoitaVirtana). OLETUS POIS: iOS ei jäsennä sitä
+        /// (Laitetestaajan uusinta 27.9. b380a78d4, TF 1.0.29: "Data Processing Error, see Download Handler error 200").
+        /// Vain kokeiluun komennolla "puhe striimi paalle"; palavirta on laitteen tapa.
+        /// </summary>
+        public static bool Striimi = false;
         /// <summary>Virta petti tässä istunnossa (jäsennysvirhe laitteella): synteesi soitetaan vanhalla polulla. Komento "puhe virta paalle" nollaa.</summary>
         static bool virtaPetti;
         /// <summary>Nollaa virran pettämisen (testikomento "puhe virta paalle").</summary>
@@ -666,7 +719,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Vaihtaa soivan klipin (vanha tuhotaan), käynnistää sen ja häivyttää sisään; Puhuu-tapahtuma uudelleen.</summary>
-        void AloitaKlippi(AudioClip klippi, bool synteesi)
+        void AloitaKlippi(AudioClip klippi, bool synteesi, bool jatko = false)
         {
             if (haivytys != null) { StopCoroutine(haivytys); haivytys = null; }
             var vanha = lahde.clip;
@@ -679,10 +732,14 @@ namespace Matkakirja.Natiivi
             vahvistin.Nollaa();
             lahde.Play();
             if (vanha != null && vanha != klippi) Destroy(vanha);
-            // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun.
-            if (puhuu) AsetaPuhuu(false);
-            AsetaPuhuu(true);
-            lataus = null;
+            // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
+            // saman puheen jatkoa: ei loppua eikä alkua väliin (lataus-kahva kuuluu yhä SoitaPalat-korutiinille).
+            if (!jatko)
+            {
+                if (puhuu) AsetaPuhuu(false);
+                lataus = null;
+            }
+            if (!puhuu) AsetaPuhuu(true);
             haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
         }
 

@@ -152,6 +152,40 @@ namespace Matkakirja.Peli
             return palat;
         }
 
+        /// <summary>Palavirran ensimmäisen palan katto merkkeinä (~2 s generointia, xAI ~70 mrk/s).</summary>
+        public const int VirtaEka = 140;
+        /// <summary>Palavirran kasvukerroin: seuraava pala generoituu edellisen soidessa (puhe ~14 mrk/s, generointi ~5× nopeampi).</summary>
+        public const int VirtaKasvu = 3;
+
+        /// <summary>
+        /// PALAVIRTA (natiivin progressiivinen soitto, TF 1.0.29 P1: iOS ei jäsennä striimattua mp3:a,
+        /// DownloadHandlerAudioClip streamAudio → DataProcessingError). Teksti pilkotaan virkerajoilta kasvaviin
+        /// paloihin: ensimmäinen enintään VirtaEka merkkiä (ääni alkaa sen generoinnin jälkeen, ~2 s), seuraavat
+        /// kertoimella VirtaKasvu kattoon asti. Seuraava pala haetaan edellisen soidessa, joten väliin ei jää taukoa.
+        /// Virkettä ei katkaista: kattoa pidempi virke on oma palansa. Mitään tekstiä ei pudoteta.
+        /// </summary>
+        public static List<string> VirtaPalat(string teksti, int eka = VirtaEka, int kasvu = VirtaKasvu, int katto = PalaKatto)
+        {
+            var palat = new List<string>();
+            var kertyma = new StringBuilder();
+            int raja = Math.Max(1, eka);
+            foreach (var virke in Regex.Split(JsTrim(teksti ?? ""), @"(?<=[.!?…])\s+"))
+            {
+                string v = JsTrim(virke);
+                if (v.Length == 0) continue;
+                if (kertyma.Length > 0 && kertyma.Length + v.Length + 1 > raja)
+                {
+                    palat.Add(kertyma.ToString());
+                    kertyma.Clear();
+                    raja = Math.Min(katto, raja * Math.Max(1, kasvu));
+                }
+                if (kertyma.Length > 0) kertyma.Append(' ');
+                kertyma.Append(v);
+            }
+            if (kertyma.Length > 0) palat.Add(kertyma.ToString());
+            return palat;
+        }
+
         readonly Func<string, string> lue;
         readonly Action<string, string> kirjoita;
         readonly Action<string> poista;
