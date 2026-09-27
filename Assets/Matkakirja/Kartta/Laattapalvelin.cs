@@ -1128,7 +1128,9 @@ namespace Matkakirja
                 tila = 502;
                 data = null;
             }
-            if (tila != 200 && tila != 499 && kaupunkitaso && !esi) return await Vanhemmasta(polku, kz, kx, ky, lahde, pyydetty);
+            // Kaupunkitason ulkopuolinen Z10: näkyvälle vanhemmasta, esilataukselle pelkkä virhe (ei varalaattaa eikä
+            // varalla-listaa, joka latauttaisi pohjan uudelleen).
+            if (tila != 200 && tila != 499 && kaupunkitaso) return esi ? (tila, null) : await Vanhemmasta(polku, kz, kx, ky, lahde, pyydetty);
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
             {
                 Interlocked.Increment(ref Varakuvia);
