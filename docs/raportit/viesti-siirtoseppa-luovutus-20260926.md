@@ -39,7 +39,8 @@ voimassa.
    kartalla:false, 70 tarinakohdetta), v193 (C BLR+ROU, astro 2), v201 (maalehti-siirto, astro 3–4). Pikkukuvia 527
    aluetta 31 maassa. Natiivi 170 (sisältö vaihtuu kesken istunnon) mergetty junaan d211337c. ISS-TLE cron toimii.
    Pyramidisarjat 09-21…09-26 natiivin kannalta vapaita (ei osoittimen tasosarjoja).
-7. Kuvapareihin versio, build ja kuvakulma SUORAAN kuvaan (omistaja 27.9.).
+7. **VAIN EUROOPPA (omistaja 27.9. klo 13.5x, Raamattu #3416):** uusi sisältö vain Eurooppaan; siirrot ja deltat ennallaan. Fable 27.9.: EI koske #3395:tä (pallo-Z10 koko maailma, 266 kaupunkia, web-pariteetti). #3405 (muutosloki-natiivi 1.0.12–1.0.29) → mergen jälkeen delta ja rivi Fablelle versiosta.
+8. Kuvapareihin versio, build ja kuvakulma SUORAAN kuvaan (omistaja 27.9.).
 
 ## Voimassa olevat työtavat (tämän vuoron uudet)
 
