@@ -2,25 +2,25 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 17:17 EEST
+**Päivitetty:** 2026-09-27 17:34 EEST
 
 ## 1) Sessiot — uusi tili, kaikki 11 session id:tä tiedossa
 
-Viikko (all models) **60 %** (nollautuu ma 28.9. klo 09:59), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **NATIIVI-UI YLITTI 70 % (73 %) ja Fable ylitti 65 % (65 %) — ilmoitettu Fablelle 17:17.**
+Viikko (all models) **62 %** (nollautuu ma 28.9. klo 09:59), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **Fable nollasi itsensä itse (65%→16%) ja pyysi Postivahtia uudelleenkäynnistämään: viesti lähetetty + Remote Control kytketty päälle 17:2x.** Natiivi-UI nollasi itsensä (73%→19%). Ei ylityksiä. Laitetestaaja 68% nouseva, seurataan.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | **65% — kynnys, ilmoitettu 17:17** | running |
-| Postivahti (self) | local_63227b57-d045-4b93-ab52-cddc04e3b90f | 67% | running |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 16% | running (uudelleenkäynnistetty) |
+| Postivahti (self) | local_63227b57-d045-4b93-ab52-cddc04e3b90f | 70% | running — **lähestyy nollausta, kirjoitan luovutuksen 80% tuntumassa** |
 | Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 31% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 50% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 34% | idle |
-| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | **73% — YLI, ilmoitettu 17:17** | idle |
-| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 29% | idle |
-| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 18% | idle |
-| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 29% | idle |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 45% | running (PR #3397 auki) |
-| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 61% | running (savukierros B13) |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 54% | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 35% | idle |
+| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 19% | idle (nollattu) |
+| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 30% | idle |
+| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 23% | idle |
+| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 32% | idle |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 57% | running (PR #3397 auki) |
+| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 68% | running (savukierros B13, nouseva) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
@@ -28,7 +28,7 @@ Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkai
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
-- **Levyraja 80 Gt.** Nykytila 107 Gi vapaana, puskuri ~27 Gi, laskenut hieman.
+- **Levyraja 80 Gt.** Nykytila 102 Gi vapaana, puskuri ~22 Gi, laskee edelleen — seurataan tiiviisti.
 - **UUSI (Fable 12:5x): samireivinen-omisteiset (Codex-tili) tiedostot/worktreet EI poisteta, ei pyydetä rooleilta poistamaan — ilmoitus Fablelle, poistopyyntö menee Codexille postilaatikon kautta.**
 - Worktree-sallinnot mainissa (PR #3329): git worktree remove/prune, --poista, simctl erase/delete — roolit poistavat itse omat mergetyt worktreensä.
 - SendMessage-rajan täyttyessä (~10/vuoro) käytä varakanavaa `mcp__ccd_session_mgmt__send_message`.
@@ -37,7 +37,7 @@ Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkai
 - Postivahti EI koskaan poista tiedostoja itse — pysyvä poisto ehdottomasti kiellettyä.
 - Chrome-GPU-prosessien (playwright/headless-testiajurit, type=gpu-process, chromium_headless_shell) ilmoitus menee Julkaisijalle, ei Fablelle. Tällä kierroksella 3, ei ylitystä (raja >4).
 - Työtilapolut, joissa "Codex" tai "ChatGPT", eivät ole poikkeama.
-- **Viikkokiintiö (kaikki mallit, omistaja 09:4x sitova):** seurataan joka kierroksella. Kynnykset 93 %/95 %/97 % (viimeksi 97 % → "VIIKKO 97 — tilinvaihto"). **Nyt 60 %** (nollautuu ma 28.9. klo 09:59) — kaukana kynnyksistä.
+- **Viikkokiintiö (kaikki mallit, omistaja 09:4x sitova):** seurataan joka kierroksella. Kynnykset 93 %/95 %/97 % (viimeksi 97 % → "VIIKKO 97 — tilinvaihto"). **Nyt 62 %** (nollautuu ma 28.9. klo 09:59) — kaukana kynnyksistä.
 - Simulaattori-UDID-omistukset (27.9. selvitetty): 993F8873/C1D5E34C = Natiiviseppä, F989814A = Siirtoseppä, A2FD9C9F = Pelikoodari, 503000D1 = jaettu.
 - **Konteksti-kynnykset (Fable 12.0x):** Fable ≥65 %, roolit ≥70 % → ilmoita Fablelle. (Postivahti/self ei koske.)
 
@@ -50,12 +50,12 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (17:17)
+## 5) Resurssit (17:34)
 
-- **5 h -kiintiö:** 71 %. **Viikko (kaikki mallit):** 60 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 107 Gi vapaana (raja 80 Gt — puskuri ~27 Gi, laskenut hieman). **Swap:** 20/21,5 Gt käytössä, ei kasva. **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 56 kpl.
-- **Simulaattorit boottina:** 2 (linssiseppa-iPhone, iPhone 17; max 4 päivällä — OK). **coreaudiod:** ~11 % CPU yhteensä, kaukana 200 % rajasta. **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 1 (raja >4, ei ylitystä).
-- **Konteksti (kynnys Fable 65%/roolit 70%):** **Fable 65 % (kynnys, ilmoitettu) ja Natiivi-UI 73 % (YLI, ilmoitettu)**, muut 18–61%.
+- **5 h -kiintiö:** 1 % (uusi ikkuna, nollautui). **Viikko (kaikki mallit):** 62 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 102 Gi vapaana (raja 80 Gt — puskuri ~22 Gi, laskee edelleen). **Swap:** 20/21,5 Gt käytössä, ei kasva. **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 56 kpl.
+- **Simulaattorit boottina:** 2 (linssiseppa-iPhone, iPhone 17; max 4 päivällä — OK). **coreaudiod:** ~15 % CPU yhteensä, kaukana 200 % rajasta. **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 4 (raja >4, ei ylitystä — lähellä).
+- **Konteksti (kynnys Fable 65%/roolit 70%):** Fable 16% (uudelleenkäynnistetty), muut 19–68% — ei ylityksiä. Postivahti (self) 70%, lähestyy omaa nollausrajaa.
 - **Juna:** yhä tauolla (Karttasepän Z10-poltto 26.–27.9.) — ei hälytystä, tarkoituksellinen.
 - **Postilaatikko:** Sisältökirjuri↔Codex-kuittausvuo (PR #3425/#3426, tyyliuudistus) — normaali, ei toimenpidettä. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku ~40).
 - **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja.
