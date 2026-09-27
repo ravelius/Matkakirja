@@ -77,3 +77,6 @@ ja `-834x1194.png` (A rahat kunnossa | B rahat loppu 6/8 lohkoa, "RAHAT LOPPU ·
 painikkeiden alla keskellä; iPadilla päiväkirjan ja selitteen välissä; ei ota kosketuksia; nostot väistävät. Yläpalkin
 "rahat loppu · N vrk" poistettu (katkaisi päivämäärän puhelimella), kassa pysyy punaisena. Mitat Natiivi-UI:lle lähetetty
 (tekee natiivin kortin jälkeen). node --test 4459/0.
+
+### Rahattomuuspalkki päivitetty omistajan tarkennukseen 15.2x (Natiivi-UI välitti)
+#3421 → 27ced122: pelkät punaiset neliöt (ei tekstiä), yläpalkkiin lyhyt "£0 2 vrk" kaikilla ruuduilla. Kuvaparit uusittu samoihin polkuihin.
