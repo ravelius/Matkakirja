@@ -948,4 +948,176 @@ export const MAAKUNTIEN_PULU = {
       { q: "Missä Grão Vascon teoksia voi nähdä nykyään?", a: "Viseun Grão Vasco -museo sijaitsee entisessä piispanpalatsissa vanhan tuomiokirkon vierellä, ja esillä on hänen suurikokoisia alttaritauluja, jotka hän maalasi alun perin Viseun katedraaliin." },
     ],
   },
+  SWE: {
+    Blekinge: [
+      { q: "Miksi Brömsebron rauha vuonna 1645 oli niin merkittävä Ruotsille?", a: "Blekingen rajalla solmittu rauha päätti sodan Tanskaa vastaan, ja Ruotsi sai haltuunsa Gotlannin, Hallannin ja Jämtlannin – siitä alkoi Ruotsin suurvalta-aika." },
+      { q: "Mikä tekee Ronnebystä erikoisen kylpyläkaupungin?", a: "Ronneby on ollut kylpyläkaupunki jo 1600-luvulta lähtien – parantavaksi uskottu lähdevesi houkutteli väkeä ympäri Ruotsia terveyttä hakemaan." },
+    ],
+    Dalarna: [
+      { q: "Miten Falun kuparikaivoksen suuronnettomuus muutti maisemaa?", a: "Juhannuspäivänä 1687 kaivoksen katto romahti ja syntyi Stora Stöten, syvä ja laaja kuilu – onneksi kaivosmiehet olivat sattumalta vapaapäivällä juhlimassa." },
+      { q: "Mistä Dalan puuhevonen on peräisin?", a: "Perinteinen käsin veistetty ja maalattu puuhevonen syntyi Nusnäsin kylässä 1800-luvulla ja siitä tuli Ruotsin tunnetuin matkamuistosymboli." },
+    ],
+    Gotland: [
+      { q: "Mitä raukat ovat ja mistä ne johtuvat?", a: "Raukat ovat meren vuosituhansien saatossa muotoilemia kalkkikivipatsaita Gotlannin rannoilla – Digerhuvudin alue pohjoisrannikolla on niistä suurin kenttä." },
+      { q: "Missä gotlanninponit elävät nykyään lähes puolivillinä?", a: "Gotlanninponi on Ruotsin vanhin alkuperäinen hevosrotu, ja Lojsta Hedin nummella laumat laiduntavat edelleen luonnontilan kaltaisissa oloissa." },
+    ],
+    Gävleborg: [
+      { q: "Mikä tekee Hälsingegårdar-taloista maailmanperintökohteen?", a: "UNESCO nimesi 2012 seitsemän 1800-luvun hälsinkiläistalota maailmanperinnöksi – talonpojat rakensivat kokonaisia juhlahuoneita täyteen maalauksia ja koristeita." },
+      { q: "Miten Gävlen vanha kaupunginosa Gamla Gefle säilyi tähän päivään?", a: "Puutalokortteli selvisi vuoden 1869 tuhoisasta tulipalosta, joka poltti suuren osan Gävleä – nykyään se on yksi Ruotsin parhaiten säilyneistä puukaupunginosista." },
+    ],
+    Halland: [
+      { q: "Miksi Tjolöholmin linna näyttää enemmän englantilaiselta kuin ruotsalaiselta?", a: "Linna rakennettiin 1898–1904 Dickson-suvun kesähuvilaksi, ja arkkitehti sai vaikutteita englantilaisesta Tudor-tyylistä ja taideteollisuusliikkeestä." },
+      { q: "Mikä tekee Laholmin joesta kuuluisan?", a: "Lagan-joki Laholmissa on ollut arvostettu lohijoki jo keskiajalta lähtien, ja kuninkailla oli aikoinaan omat kalastusoikeutensa sen koskiin." },
+    ],
+    Jämtland: [
+      { q: "Mitä Frösön riimukivi kertoo?", a: "Noin vuonna 1050 pystytetty kivi on Jämtlannin ainoa säilynyt riimukivi ja ainoa tunnettu kivi, joka kertoo kokonaisen maakunnan kristinuskoon kääntymisestä." },
+      { q: "Miksi Åre on yksi Pohjoismaiden suosituimmista laskettelupaikoista?", a: "Åressa yhdistyvät korkeat tunturit, luotettava lumitilanne ja pitkä hiihtokeskusperinne, mikä on tehnyt siitä yhden Skandinavian suurimmista laskettelukeskuksista." },
+    ],
+    Jönköping: [
+      { q: "Mistä Huskvarnan tehtaat saivat alkunsa?", a: "Vuonna 1689 Huskvarnaan perustettiin asetehdas Vättern-järven putouksien äärelle – samasta tehtaasta kasvoi myöhemmin myös ompelukoneita ja moottoripyöriä valmistava Husqvarna." },
+      { q: "Mikä tekee Habon kirkosta erikoisen?", a: "Habon puukirkko on yksi Euroopan suurimmista puukirkoista, ja sen sisätilat on maalattu 1700-luvulla lattiasta kattoon raamatullisin kuvin." },
+    ],
+    Kalmar: [
+      { q: "Mitä Kalmarin linnassa sovittiin vuonna 1397?", a: "Kalmarin linnassa solmittiin Kalmarin unioni, jolla Tanska, Norja ja Ruotsi yhdistyivät saman hallitsijan alle – sopimuksen allekirjoitti kymmeniä aatelisia ja kirkonmiehiä." },
+      { q: "Miksi Stora Alvaret Öölannissa on maailmanperintökohde?", a: "Tämä laaja kalkkikivikangas on yksi Euroopan suurimmista alvareista, ja sen ainutlaatuinen kasvillisuus on syntynyt vuosituhansien laidunnuksen tuloksena." },
+    ],
+    Kronoberg: [
+      { q: "Mikä on Glasriket ja miksi se syntyi juuri tänne?", a: "Smoolannin lasiteollisuusalueella toimii useita lasitehtaita, kuten 1742 perustettu Kosta – seudun metsät tarjosivat polttopuuta ja hiekka raaka-ainetta lasinpuhallukseen." },
+      { q: "Miksi Växjötä kutsutaan Euroopan vihreimmäksi kaupungiksi?", a: "Växjö on saanut kansainvälistä tunnustusta ilmastotyöstään – kaupunki tavoittelee fossiilivapautta ja sen energiantuotanto perustuu suurelta osin bioenergiaan." },
+    ],
+    Norrbotten: [
+      { q: "Miksi koko Kirunan kaupunki siirretään uuteen paikkaan?", a: "Maailman suurin maanalainen rautakaivos syö vuori vuodelta maaperää kaupungin alta, ja siksi keskusta rakennetaan kokonaan uudelleen muutaman kilometrin päähän." },
+      { q: "Mikä tekee Gammelstadin kirkkokylästä ainutlaatuisen?", a: "Luulajan liepeillä sijaitseva Gammelstad on maailman suurin ja parhaiten säilynyt kirkkokylä satoineen pienine mökkeineen kaukaisia kirkkomatkalaisia varten – UNESCO-kohde vuodesta 1996." },
+    ],
+    Skåne: [
+      { q: "Miten Öresundin silta muutti liikkumista Ruotsin ja Tanskan välillä?", a: "Vuonna 2000 avattu silta ja tunneli yhdistivät Skoonen ja Kööpenhaminan – matka, joka ennen vaati lauttaa, kestää nyt autolla vain kymmenisen minuutin." },
+      { q: "Mitä Kivikin kuninkaanhaudassa on erikoista?", a: "Pronssikautinen, noin 3500 vuotta vanha hauta on Pohjoismaiden suurimpia, ja sen kivissä on harvinaislaatuisia hautakammion sisäpuolisia kuvakaiverruksia." },
+    ],
+    Stockholm: [
+      { q: "Mitä Vaasa-laivalle tapahtui neitsytmatkallaan?", a: "Sotalaiva kaatui ja upposi Tukholman satamassa elokuussa 1628 vain lyhyen matkan jälkeen – se nostettiin pintaan vasta 1961, upean hyvin säilyneenä." },
+      { q: "Missä Nobel-palkintojen juhlaillallinen järjestetään?", a: "Joulukuun 10. päivä juhlaillallinen pidetään Tukholman kaupungintalon Sinisessä salissa, joka on punatiilinen sali – arkkitehti muutti mielensä sinisestä värityksestä kesken rakennustöiden." },
+    ],
+    Södermanland: [
+      { q: "Mitä Ramsundsbergetin kalliokaiverrus kuvaa?", a: "Sigurdinkaiverrus 1000-luvulta kertoo sankari Sigurd Lohikäärmeentappajan tarinan – se on yksi Pohjoismaiden merkittävimmistä viikinkiaikaisista kuvakaiverruksista." },
+      { q: "Mikä tekee Gripsholmin linnasta erityisen?", a: "Mälaren-järven rannalla kohoava linna toimii Ruotsin valtion muotokuvakokoelman kotina – siellä on satoja kuninkaallisten ja merkkihenkilöiden muotokuvia 1500-luvulta nykypäivään." },
+    ],
+    Uppsala: [
+      { q: "Miksi Uppsalan yliopisto on erityisen merkittävä?", a: "Vuonna 1477 perustettu yliopisto on koko Pohjoismaiden vanhin, ja se on kouluttanut tutkijoita ja virkamiehiä yli 500 vuoden ajan." },
+      { q: "Mikä tekee Uppsalan tuomiokirkosta erikoisen?", a: "Se on Skandinavian korkeimpia kirkkorakennuksia, ja sen kryptaan on haudattu kuningas Kustaa Vaasa, Ruotsin Vaasa-suvun ensimmäinen hallitsija." },
+    ],
+    Värmland: [
+      { q: "Kuka oli Selma Lagerlöf ja mihin hän liittyy Värmlantiin?", a: "Nobelin kirjallisuuspalkinnon ensimmäinen naisvoittaja vuonna 1909 kasvoi Mårbackan tilalla Värmlannissa, ja lapsuudenkoti on nykyään museona yleisölle avoinna." },
+      { q: "Kuka oli John Ericsson ja mitä hän keksi?", a: "Filipstadissa syntynyt insinööri suunnitteli 1800-luvulla mm. laivapotkurin ja Yhdysvaltain sisällissodassa kuuluisaksi tulleen sota-alus Monitorin panssaroidun tornin." },
+    ],
+    Västerbotten: [
+      { q: "Miksi Uumajaa kutsutaan koivujen kaupungiksi?", a: "Vuoden 1888 tulipalo tuhosi suuren osan kaupungista, ja jälleenrakennuksessa kaduille istutettiin koivukujia palokaistaleiksi – nimitys Björkarnas stad on säilynyt siitä lähtien." },
+      { q: "Mikä tekee Skellefteån Sara-kulttuuritalosta poikkeuksellisen?", a: "Vuonna 2021 avattu 20-kerroksinen, 80 metriä korkea rakennus on yksi Euroopan korkeimmista puutaloista – hotelli, teatteri ja museo saman puurungon sisällä." },
+    ],
+    Västernorrland: [
+      { q: "Miten Sundsvallista tuli 'Kivikaupunki'?", a: "Vuoden 1888 suurpalo tuhosi kaupungin puukorttelit muutamassa tunnissa, ja jälleenrakennuksessa keskusta määrättiin rakennettavaksi kivestä – siitä syntyi lempinimi Stenstan." },
+      { q: "Mitä tapahtui Ådalenissa vuonna 1931?", a: "Sotilaat avasivat tulen lakkoilevia sahatyöläisiä kohti Kramforsin seudulla, ja viisi ihmistä kuoli – tapaus järkytti koko maata ja muutti Ruotsin työmarkkinasuhteita pysyvästi." },
+    ],
+    Västmanland: [
+      { q: "Mikä on Anundshög ja mitä sen ympärillä on?", a: "Se on Ruotsin suurin muinainen hautakumpu Västeråsin liepeillä, ja sitä ympäröi kymmenkunta pienempää kumpua sekä pitkä kivistä ladottu laivasettaus." },
+      { q: "Mitä Engelsbergin rautaruukissa säilyi ennallaan?", a: "1600–1800-luvun rautaruukki koneineen ja työläisasuntoineen on niin hyvin säilynyt, että UNESCO nimesi sen maailmanperintökohteeksi vuonna 1993." },
+    ],
+    "Västra Götaland": [
+      { q: "Miksi Göteborgin keskustassa on kanaaleja kuin Amsterdamissa?", a: "Kaupunki perustettiin 1621 hollantilaisten asiantuntijoiden avulla, ja he suunnittelivat kanavat ja katuverkon Amsterdamin mallin mukaan – Stora Hamnkanalen on yhä keskeinen näky." },
+      { q: "Miten Liseberg-huvipuisto syntyi?", a: "Puisto avattiin 1923 osana Göteborgin 300-vuotisjuhlanäyttelyä, ja se oli tarkoitettu väliaikaiseksi – suosion ansiosta siitä tuli pysyvä ja nykyään Pohjoismaiden suosituin huvipuisto." },
+    ],
+    Orebro: [
+      { q: "Mitä Örebrossa päätettiin vuonna 1810?", a: "Valtiopäivät valitsivat Örebrossa ranskalaisen marsalkka Bernadotten Ruotsin kruununperijäksi – hänestä tuli myöhemmin kuningas Kaarle XIV Juhana, nykyisen kuningashuoneen kantaisä." },
+      { q: "Mikä on Örebron linnan erityispiirre?", a: "Keskiaikainen linna kohoaa saarella keskellä Svartån-jokea kaupungin sydämessä, ja sen muurien sisällä on pidetty useita historiallisia valtiopäiviä." },
+    ],
+    Östergötland: [
+      { q: "Kuka perusti Vadstenan luostarin ja miksi?", a: "Pyhä Birgitta suunnitteli luostarin yksityiskohtia myöten, ja se vihittiin käyttöön 1384 – Birgitta itse julistettiin pyhäksi vuonna 1391." },
+      { q: "Miten Göta-kanava rakennettiin Motalan kautta?", a: "Kanavatyöt alkoivat Motalassa ja Forsvikissa 1810, ja 22 vuoden urakan jälkeen 1832 valmistunut kanava yhdisti Itämeren ja Pohjanmeren sisävesireittiä pitkin." },
+    ],
+  },
+  NOR: {
+    Akershus: [
+      { q: "Mistä Akershus-maakunnan nimi on peräisin?", a: "Nimi juontuu Oslossa sijaitsevasta Akershusin linnasta ja linnoituksesta, jonka rakentaminen alkoi vuonna 1299 kuningas Håkon V:n aikana. Linnoitus antoi aikanaan nimensä koko sitä ympäröivälle läänille." },
+      { q: "Mikä on Raknehaugen, ja miksi se hämmentää arkeologeja?", a: "Raknehaugen Ullensakerissa on Norjan suurin muinainen maakumpu, halkaisijaltaan 77 metriä. Kaivauksissa ei ole löytynyt hautaa eikä ihmisen jäänteitä, joten se saattaa olla 500-luvun katastrofin muistomerkki, ei kuninkaan hauta." },
+    ],
+    "Aust-Agder": [
+      { q: "Miksi Arendalia kutsuttiin joskus \"Pohjolan Venetsiaksi\"?", a: "1700–1800-luvuilla Arendal rakennettiin useille saarille kanavien ympärille, ja se oli laivanvarustuksen ansiosta yksi Pohjois-Euroopan vauraimmista kaupungeista. Suuren tulipalon jälkeen kanavat täytettiin ja muutettiin leveiksi kaduiksi." },
+      { q: "Mitä erikoista Arendalin Tyholmenin puutalokorttelissa on?", a: "Tyholmenin 1700-luvun puutalot ovat yksi parhaiten säilyneistä puutalokokonaisuuksista Pohjois-Euroopassa, ja alue palkittiin arvostetulla Europa Nostra -palkinnolla vuonna 1992." },
+    ],
+    "Bouvet Island": [
+      { q: "Mikä mysteeri löytyi Bouvetinsaarelta vuonna 1964?", a: "Brittiläinen laiva löysi saaren lagunista hylätyn, osittain uponneen pelastusveneen sekä tynnyrin ja airoja – kukaan ei ollut ilmoittanut haaksirikosta. Myöhemmin neuvostoasiakirjoista selvisi veneen jääneen jälkeen myrskyn keskeyttämältä valaanpyyntiretkikunnalta vuodelta 1958." },
+      { q: "Milloin ja miten Bouvetinsaaresta tuli osa Norjaa?", a: "Ranskalainen löysi saaren vuonna 1739, mutta se pysyi vuosisatoja käytännössä kenenkään maana. Norja liitti sen viralliseksi alueekseen vuonna 1930, ja nykyään se on luonnonsuojelualue vailla pysyvää väestöä." },
+    ],
+    Buskerud: [
+      { q: "Mikä on Spiralen Drammenissa?", a: "Spiralen on vuorenläpäisevä kiertotie, joka nousee kuudessa lenkissä Bragernesåsen-vuoren laelle. Se kaivettiin alun perin 1950-luvulla graniitin louhintaa varten, ja kuningas Olav V avasi sen yleisölle vuonna 1961." },
+      { q: "Miksi Spiralenista tuli suosittu nähtävyys eikä vain louhostie?", a: "Kaupungininsinööri halusi vähentää louhinnan haittoja ja ehdotti tunnelia, joka toimisi samalla matkailukohteena. Vuosina 2019–2020 tunneliin lisättiin värillinen valaistus, joka muuttuu vuorokaudenajan mukaan." },
+    ],
+    Finnmark: [
+      { q: "Miksi Nordkapp tuli suosituksi matkailukohteeksi juuri 1870-luvulla?", a: "Kuningas Oscar II vieraili Nordkapilla heinäkuussa 1873 ja pystytti paikalle muistokiven käyntinsä kunniaksi. Vierailu teki kalliosta tunnetun, ja pian sen jälkeen brittiläinen matkatoimisto Thomas Cook alkoi järjestää matkoja Nordkapille." },
+      { q: "Onko Nordkapp oikeasti Euroopan mantereen pohjoisin piste?", a: "Ei aivan – vaikka Nordkapp on suosituin ja tunnetuin kohde, todellinen pohjoisin niemi on vieressä sijaitseva Knivskjellodden, joka työntyy mereen noin 1 450 metriä Nordkappia pohjoisemmaksi." },
+    ],
+    Hedmark: [
+      { q: "Miksi Hedmarkia kutsutaan Norjan hirvimaakunnaksi?", a: "Hedmarkin metsät ovat niin hirvirikkaita, että maakunnasta kaadetaan noin viidesosa koko Norjan vuosittaisesta hirvisaaliista. Alueella on yli 25 000 rekisteröityä metsästäjää." },
+      { q: "Kuinka tiheä hirvikanta Hedmarkissa parhaimmillaan on?", a: "Kaakkois-Norjan metsäalueilla, erityisesti Hedmarkissa, hirvitiheys voi nousta jopa 2,5 eläimeen neliökilometrillä – yksi Euroopan suurimmista." },
+    ],
+    Hordaland: [
+      { q: "Mikä Trolltunga on, ja missä se sijaitsee?", a: "Trolltunga on Oddan lähellä Hordalandissa sijaitseva litteä kalliokieleke, joka työntyy noin 700 metrin korkeudessa Ringedalsvatnetin järven yllä. Siitä on tullut yksi Norjan tunnetuimmista valokuvauskohteista." },
+      { q: "Kuinka suosittu Trolltunga-vaellus on nykyään?", a: "Vielä 2010-luvun alussa Trolltungalla vieraili alle 800 kävijää vuodessa, mutta vuonna 2016 luku oli jo noin 80 000. Vaellus on noin 27 kilometriä edestakaisin ja kestää yleensä 10–12 tuntia." },
+    ],
+    Svalbard: [
+      { q: "Mikä on Global Seed Vault, ja miksi se rakennettiin Huippuvuorille?", a: "Huippuvuorten kylmyys ja ikirouta suojaavat maailman kasvilajikkeiden siemenvarastoja kriisin varalta. Holvi louhittiin syvälle vuoreen, ja se avattiin vuonna 2008 satojen miljoonien siementen voimin." },
+      { q: "Kuinka monesta maasta siemeniä on tallennettu Svalbardin holviin?", a: "Avajaisissa vuonna 2008 holviin tuotiin yli 100 miljoonaa siementä yli sadasta maasta, ja kokoelma on kasvanut siitä lähtien merkittävästi. Holvi toimii varmuuskopiona maailman siemenpankeille." },
+    ],
+    "Møre og Romsdal": [
+      { q: "Miksi Ålesund näyttää niin erilaiselta kuin muut Norjan rannikkokaupungit?", a: "Tuhoisa tulipalo tammikuussa 1904 tuhosi suurimman osan puukaupungista yhdessä yössä ja jätti yli 10 000 ihmistä kodittomiksi. Kaupunki rakennettiin uudelleen aikansa muotisuuntauksen, jugendtyylin, mukaisesti vain muutamassa vuodessa." },
+      { q: "Mitä erikoista Ålesundin jugendarkkitehtuurissa on?", a: "Yli 50 arkkitehtia ympäri Norjaa osallistui jälleenrakennukseen, ja rakennuksiin yhdisteltiin kansainvälistä jugendtyyliä viikingiaikaisiin koristeaiheisiin, lohikäärmeisiin ja kasvikuvioihin." },
+    ],
+    "Nord-Trøndelag": [
+      { q: "Miksi Namsenia kutsutaan \"jokien kuningattareksi\"?", a: "Namsen on yksi maailman parhaista lohijoista, ja siellä on saatu vuosien varrella useita yli 20-kiloisia lohia. Suurin koskaan saatu yksilö painoi peräti 68 naulaa, noin 31 kiloa." },
+      { q: "Millä tekniikalla Namsenin lohta perinteisesti pyydetään?", a: "Leveällä joella käytetään usein \"harling\"-menetelmää, jossa vieheitä vedetään hitaasti liikkuvan veneen perässä rannalta rannalle. Ylävirtaan uiva lohi kohtaa vieheen tällä tavalla luonnollisesti." },
+    ],
+    Nordland: [
+      { q: "Mikä tekee Vegan saariryhmästä UNESCOn maailmanperintökohteen?", a: "Vegan saarilla asukkaat ovat yli 1 500 vuoden ajan eläneet kalastuksella ja haahkansulan keruulla ankarissa oloissa. Kohde otettiin maailmanperintölistalle vuonna 2004 Norjan ensimmäisenä kulttuurimaisemana." },
+      { q: "Millaisia ovat Vegan saarten haahkantalot?", a: "Karuille ulkoluodoille rakennettiin pieniä kivisiä pönttömäisiä taloja, joissa haahkanaaraat pesivät suojassa. Untuvaa kerättiin pesän tyhjennyttyä, ja siitä valmistettiin arvostettuja untuvapeittoja jopa kuninkaallisille asiakkaille." },
+    ],
+    Oppland: [
+      { q: "Mitä Lillehammerissa tapahtui helmikuussa 1994?", a: "Lillehammer isännöi talviolympialaisia 12.–27. helmikuuta 1994, ja siitä tuli pohjoisin kaupunki, joka on koskaan järjestänyt olympialaiset. Kisat levittäytyivät kymmeneen paikkaan Opplandin ja Hedmarkin alueella." },
+      { q: "Mitä pysyvää hyötyä Lillehammerin olympialaisista jäi alueelle?", a: "Kisoja varten rakennettu kansainvälinen lähetyskeskus mahdollisti Storhoven korkeakoulun kasvun; opiskelijamäärä nousi noin 600:sta yli 6 000:een parissa vuosikymmenessä." },
+    ],
+    Oslo: [
+      { q: "Mikä tekee Vigelandin puistosta ainutlaatuisen?", a: "Frognerpuistossa sijaitseva Vigelandin puisto on maailman suurin yhden taiteilijan tekemä veistospuisto: siinä on yli 200 Gustav Vigelandin veistosta pronssista, graniitista ja raudasta. Puistoa rakennettiin pääosin vuosina 1939–1949." },
+      { q: "Mitä Vigelandin veistokset kuvaavat?", a: "Veistokset esittävät ihmiselämän kiertokulkua vauvasta vanhuuteen ja kaikkia niiden väliin mahtuvia tunteita. Puisto on ilmainen, ja siellä vierailee vuosittain yli miljoona kävijää." },
+    ],
+    Rogaland: [
+      { q: "Miksi Stavangeria kutsutaan Norjan öljypääkaupungiksi?", a: "Joulukuussa 1969 Ekofisk-kentältä Pohjanmereltä löytyi valtava öljy- ja kaasuesiintymä, joka muutti koko Norjan talouden suunnan. Stavangeriin keskittyi nopeasti öljy-yhtiöiden pääkonttoreita ja palveluyrityksiä." },
+      { q: "Kuinka suuri vaikutus Ekofiskin löydöllä oli Norjaan?", a: "Ennen löytöä Norja oli öljyn tuoja ja velkaantunut maa, mutta löydön jälkeen siitä kehittyi vuosikymmenten kuluessa yksi maailman vauraimmista valtioista valtavan öljyrahaston ansiosta." },
+    ],
+    "Sogn og Fjordane": [
+      { q: "Miksi Flåmin rautatietä pidetään yhtenä maailman upeimmista?", a: "Flåmsbana on yksi maailman jyrkimmistä normaaliraiteisista rautateistä: 80 % matkasta kulkee 5,5 % nousussa Myrdalin ja Flåmin välillä. Radan rakentaminen kesti vuodesta 1923 vuoteen 1940." },
+      { q: "Kuinka monta tunnelia Flåmsbanan radalla on?", a: "Radalla on 20 tunnelia, ja 18 niistä louhittiin käsin ilman nykyaikaisia koneita. Rata laskee 866 metriä matkalla, joka on vain 20,2 kilometriä pitkä." },
+    ],
+    "Sør-Trøndelag": [
+      { q: "Mikä on Fosenin tuulipuisto, ja miksi se on kiistanalainen?", a: "Fosenin niemimaalla sijaitsee Euroopan suurin manner-tuulipuisto, mutta Norjan korkein oikeus totesi vuonna 2021 sen loukkaavan saamelaisten poronhoitajien oikeuksia. Turbiinit häiritsevät perinteisiä poronhoitoreittejä." },
+      { q: "Ratkaistiinko Fosenin kiista lopulta?", a: "Vuonna 2024 hallitus ja saamelaiset pääsivät sopimukseen, jonka mukaan tuulivoimalat saavat jäädä käyntiin, mutta poronhoitokulttuurin suojaamiseksi otettiin käyttöön uusia toimenpiteitä." },
+    ],
+    Telemark: [
+      { q: "Miksi hiihtotekniikkaa kutsutaan \"telemarkiksi\"?", a: "Tekniikka on saanut nimensä Telemarkin maakunnasta, jossa Morgedalin kylästä kotoisin oleva Sondre Norheim kehitti 1800-luvulla vapaakantaisen siteen ja käännöstekniikan. Hän esitteli tyylinsä julkisesti Kristianiassa vuonna 1868." },
+      { q: "Mikä tekee telemark-hiihdosta erilaista kuin alppihiihdosta?", a: "Telemark-siteessä vain kärki on kiinni suksessa, kantapää nousee vapaasti irti, mikä mahdollistaa polvea koukistavan käännösliikkeen. Norheimia pidetään nykyaikaisen hiihdon isänä." },
+    ],
+    Troms: [
+      { q: "Miksi valaita voi bongata Tromssan seudulla juuri talvella?", a: "Marraskuusta tammikuuhun miekkavalaat ja ryhävalaat kerääntyvät Skjervøyn ja Kvænangenin vesille syömään silliparvia. Ilmiö on kasvattanut suosiotaan talviristeilyjen ja retkien myötä 2010-luvulta lähtien." },
+      { q: "Kuinka kaukana Skjervøy on Tromssasta?", a: "Skjervøy sijaitsee noin 250 kilometrin päässä Tromssasta, ja retket sinne yhdistävät usein bussi- tai minibussikyydin veneellä tehtävään valaidenkatseluun." },
+    ],
+    "Vest-Agder": [
+      { q: "Miksi Kristiansandin kaupunkisuunnitelma on niin poikkeuksellinen?", a: "Kuningas Christian IV perusti kaupungin vuonna 1641 ja määräsi sille tiukan ruudukkomuotoisen katusuunnitelman renessanssi-ihanteiden mukaan. Kadut tehtiin poikkeuksellisen leveiksi tulipalojen leviämisen estämiseksi." },
+      { q: "Miksi Kvadraturen-alue on vielä nykyään tunnistettavissa?", a: "Alkuperäinen 1600-luvun ruudukko seitsemine pohjois-eteläkatuineen ja kymmenine itä-länsikatuineen on säilynyt lähes muuttumattomana yli 380 vuotta, ja se tunnetaan nykyään nimellä Kvadraturen." },
+    ],
+    Vestfold: [
+      { q: "Miksi Sandefjordia kutsuttiin maailman valaanpyyntipääkaupungiksi?", a: "1900-luvun alusta toisen maailmansodan jälkeiseen aikaan asti suurin osa maailman valaanpyyntilaivojen omistajista ja miehistöstä tuli Sandefjordista, mikä teki kaupungista Norjan rikkaimman." },
+      { q: "Mitä Sandefjordin valaanpyyntimuseossa voi nähdä?", a: "Museo on Euroopan ainoa täysin valaisiin ja valaanpyyntiin keskittynyt museo, ja siellä roikkuu katosta 21 metriä pitkä täysikokoinen sinivalaan jäljitelmä." },
+    ],
+    Østfold: [
+      { q: "Mitä tapahtui Fredriksten linnoituksessa Haldenissa vuonna 1718?", a: "Ruotsin kuningas Kaarle XII kaatui piiritystä johtaessaan, kun luoti osui häneen linnoitusta tarkastaessa. Hänen kuolemansa päätti Ruotsin valloitusyritykset Norjaan." },
+      { q: "Miksi Kaarle XII:n kuolemalla oli laajempi historiallinen merkitys?", a: "Tapahtuma vauhditti Ruotsin suurvalta-aseman päättymistä ja niin kutsutun vapauden ajan alkua, kun rauha solmittiin muutaman vuoden kuluttua Uudenkaupungin rauhassa." },
+    ],
+  },
 };
