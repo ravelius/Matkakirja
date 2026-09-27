@@ -2480,41 +2480,44 @@ export const HAHMOTELMA_GRC = [
     lahde: 'en-Wikipedia "Poliochni" ja "Priam\'s Treasure", haettu 26.9.2026.',
   },
   {
-    id: 'hahmotelma-munkkihylkeet',
-    // Oli maakunnan salaisuus (Thessalia); omistaja 27.9.2026 klo 20.0x: tavallinen nosto.
+    id: 'hahmotelma-sporadien-meripuisto',
+    // Oli maakunnan salaisuus (Thessalia, "Alonnisoksen munkkihylkeet"); omistaja 27.9.2026 klo 20.0x: tavallinen
+    // nosto. Fable 20.3x: näkökulma merikansallispuistoon, koska Kreikan maalehdellä on jo munkkihyljejuttu.
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-salaisuus-munkkihylkeet-1685bc39.jpg',
-      lyhyt: 'Välimerenmunkkihylje rantakivillä.',
-      selite: 'Lajikuva välimerenmunkkihylkeestä Pulasta Kroatiasta; Alonnisokselta ei löytynyt vapaasti käytettävää kuvaa.',
+      lyhyt: 'Välimerenmunkkihylje, meripuiston tärkein suojeltava laji.',
+      selite: 'Lajikuva välimerenmunkkihylkeestä Pulasta Kroatiasta; Pohjoisten Sporadien merikansallispuisto perustettiin suojelemaan juuri tätä lajia.',
       lahde: 'Valokuva: Marinko Babić, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Marinko Babić',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Monachus_monachus_DSC_0274.jpg',
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
-    nimi: 'Alonnisoksen munkkihylkeet',
-    nimio: 'Munkkihylkeet',
-    tyyppi: 'elain',
+    nimi: 'Pohjoisten Sporadien merikansallispuisto',
+    nimio: 'Sporadien puisto',
+    tyyppi: 'meri',
     lahi: true,
     kysymykset: [
-      'Miksi munkkihylkeet synnyttävät luolissa?',
-      'Mikä on Alonnisoksen meripuisto?',
+      'Miksi meripuisto perustettiin?',
+      'Mitä saaria puistoon kuuluu?',
     ],
-    korostukset: ['Alonnisoksen|Alonnisos'],
+    korostukset: ['välimerenmunkkihylkeen|välimerenmunkkihylje'],
     nappi: 'Saari, joka sai 1838 erehdyksessä antiikin nimen Alonnisos',
-    // 23.833333 E / 39.15 N (salaisuuspakan koordinaatit, en-Wikipedia)
+    // 24.147606 E / 39.3071 N — en-Wikipedia "National Marine Park of Alonnisos Northern Sporades"
     laudat: {
-      maailmankartta: { x: 6627.8, y: 1836.2 },
-      europe: { x: 668.8, y: 864 },
+      maailmankartta: { x: 6638.3, y: 1830 },
+      europe: { x: 674.8, y: 859.8 },
     },
-    teksti: 'Välimerenmunkkihyljettä pidetään maailman harvinaisimpana hyljelajina: '
-      + 'arvioiden mukaan sitä on jäljellä noin 800–1000 yksilöä, etenkin '
-      + 'Egeanmerellä. Pohjoisten Sporadien Alonnisoksen ympärille perustettiin 1992 '
-      + 'meripuisto juuri sen ja muiden merieläinten suojelemiseksi. Hylkeet ovat '
-      + 'ihmisten häirinnän vuoksi siirtyneet synnyttämään rantaluoliin, joihin on '
-      + 'vaikea päästä, vaikka myrskyt tekevät luolista vaarallisia vastasyntyneille. '
-      + '1900-luvulla kalastajat hävittivät hylkeitä, koska ne rikkoivat verkkoja; '
-      + 'nykyään Kreikan laki suojelee lajia tiukasti.',
-    lahde: 'en-Wikipedia "Mediterranean monk seal" ja "Alonnisos", haettu 26.9.2026.',
+    teksti: 'Alonnisoksen ja Pohjoisten Sporadien merikansallispuisto perustettiin presidentin '
+      + 'asetuksella 16. toukokuuta 1992. Se oli Kreikan ensimmäinen merikansallispuisto, ja noin '
+      + '2 260 neliökilometrin laajuisena se on nykyään Euroopan suurin merensuojelualue. Puistoon '
+      + 'kuuluvat Alonnisoksen saari, kuusi pienempää saarta – Peristera, Kyra Panagia, Gioura, '
+      + 'Psathoura, Piperi ja Skantzoura – sekä 22 asumatonta luotoa ja karia pohjoisella '
+      + 'Egeanmerellä. Suojelua ehdotti ensimmäisenä saksalainen eläintieteilijä Thomas '
+      + 'Schultze-Westrum tutkimusmatkoillaan 1976, ja Alonnisoksen kalastajat sitoutuivat '
+      + 'auttamaan. Puiston tärkeimpiä tehtäviä on välimerenmunkkihylkeen suojelu: '
+      + 'Alonnisokselle perustettiin lajin ensimmäinen hoitokeskus koko Välimerellä.',
+    lahde: 'en-Wikipedia "National Marine Park of Alonnisos Northern Sporades" (johdanto ja '
+      + 'History) ja "Alonissos", haettu 27.9.2026.',
   },
 ];
