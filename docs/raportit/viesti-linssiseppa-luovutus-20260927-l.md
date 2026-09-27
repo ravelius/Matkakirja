@@ -6,6 +6,24 @@ Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab. S = /private/tmp/claude
 74aa735c-cd53-4417-8c06-91819a4a5f3a/scratchpad (skriptit ottavat S:n ympäristöstä; päivitä polku uudessa sessiossa).
 Jos sait nollauksen jälkeen vanhoja viestejä tai agenttien raportteja, ne kuuluvat alla oleviin eriin.*
 
+## PÄIVITYS 09.2x (keskustelu 1aa2bb77)
+
+- **Proto-haarat (merge-pyyntöjä EI vielä lähetetty; kuvat ensin Fablelle):**
+  - `linssiseppa/meri-tuotanto` **0a9fdba5**: 10 lajia (MeriLajit/), lapset kallistuvat omaan pisteeseen (dd9c411c), ensimmäinen
+    näytös ei harvinainen.
+  - `mallinseppa/erikoismallit3` **9476a431**: Kinderdijk v3, Brugge, Hohensalzburg, Matterhorn ja pääskyjen suunta (1a110b18).
+  - `mallinseppa/lahitaso` **0a8b1302** (worktree /Users/Shared/Claude/wt/proto-lahitaso): erikoismallit3 + natiiviseppa/lahitaso
+    + Colosseumin, MSM:n ja kaaren Lahi. Omistaja hyväksyi 09.0x: Lahi kaikille erikoismalleille ja 14 symbolille (katto 3 000).
+- **Laitteella 09.03 (käännös c7ddef15, kuvat lokit/mallinseppa-laite-20260927-g, koosteet $S/era3/):** Kinderdijk v3,
+  Brugge ja Hohensalzburg OK, 0 poikkeusta. Meren valinta OK; jäävuori näkyy, muut lajit olivat ruudun ulkopuolella. Ajo
+  $S/ajo-meri2.sh (kamera lajin ankkuriin, lokit/…-h) odottaa vapaata simulaattoria taustalla.
+- **Lähitason agentit 09.1x (Opus):** l1 Stonehenge + Segovia, l2 Brandenburg + Kinderdijk, l3 Brugge + Hohensalzburg
+  (mallinseppa-esikatselu-l1..l3), k1 Vuori/Tulivuori/Aallot/Kiekko, k2 Kellotorni/Malja/Ratas/Ankkuri, k3 Salama/Tahti/Tassu/
+  Tiimalasi/Vaaka (kategoria-esikatselu-k1..k3); Matterhorn-agentti (harness -e) tekee MatterhornLahin. Kehotteet
+  $S/kehotteet/lahi-*.txt. Integrointi: kopioi tiedosto proto-lahitaso-worktreehen (rekisteröinti Lahi = … on jo tiedostossa).
+- Löydökset Natiivisepälle: pienten maiden koko (korjattu be33f310) ja lähitason kynnys 4 ei täyty NLD/BEL/CHE/DNK:ssa (09.2x).
+- Seuraava käännös klo 10.00–10.15 (yksi tunnissa): juna/b13 + meri-tuotanto + mallinseppa/lahitaso + natiiviseppa/taso1-kynnys.
+
 ## PÄIVITYS 08.4x (nollauksen jälkeinen keskustelu 1aa2bb77)
 
 - Uusi S = /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa/1aa2bb77-7b88-4b65-ad2c-19a8462dfde5/scratchpad
