@@ -7875,3 +7875,7 @@ Omistaja kysyi 08.1x poistuvatko maanosaeteneminen ja nostojen piilotus seuraava
 ## OMISTAJA 08.2x: KOHDEMAAN KAIKKI NOSTOT NAKYVIIN HETI (EI VAIHEITTAISTA PALJASTUMISTA) (27.9.2026 klo 08.15)
 
 Omistaja 08.2x lisays: kohdemaan kaikki nostot pitaa nakya heti saapuessa — ei vaiheittaista paljastumista; muiden maiden nostot pysyvat piilossa (14.9.). Sama era kuin maanosaetenemisen poisto: Pelikoodari web + speksi, Natiivi-UI natiivi, 1.0.29. Elavan kartan salaisuudet (palkinnot) jaavat, ellei omistaja toisin sano.
+
+## MAANOSAETENEMINEN = MANNERLENTOJEN PAAAARRE-EHTO (Kaupat.cs MannerLennot) → POIS; LAHTOKAUPUNGIT ENNALLAAN (27.9.2026 klo 08.16)
+
+Natiivi-UI 08.2x kartoitti: maanosittainen avautuminen natiivissa = Peli/Kaupat.cs:403–431 MannerLennot (toiselle mantereelle vasta kun oman mantereen paaaarre loytynyt, mannerlento 300 £), Liikkuminen.cs:39–46, Matka.cs:213 LentoKohteet; lahtokaupungit PeliOhjain.cs:219 vain Aloitus-kaupungit; muiden maiden nostojen piilotus PeliOhjain.Matkareitit.cs:127 PaivitaPeliSuodatin (JAA). Fable paatti: paaaarre-ehto pois webissa ja natiivissa (hinta sailyy), lahtokaupungit ennallaan ellei omistaja toisin sano; Pelikoodari tekee (natiivin Peli/ on sen), Natiivi-UI jatkaa avauskorttia.
