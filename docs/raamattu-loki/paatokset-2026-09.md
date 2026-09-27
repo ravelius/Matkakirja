@@ -8043,3 +8043,7 @@ Pelikoodari 10.1x: #3389 (v2311) PUHE_PAIVARAJA 60 000 → 400 000 mrk/IP/vrk, P
 ## AMPARIN KOKO 27.9.: 106,9 Gt, 7,68 M OBJEKTIA, ~1,60 $/kk; VANHAT PYRAMIDISARJAT ~14 Gt SIIVOTTAVISSA (27.9.2026 klo 10.19)
 
 Julkaisija 10.2x (ajo 36298275631): R2 yhteensa 106,9 Gt / 7,68 milj. objektia (Cloudflare 108 GB), ~1,60 $/kk. Suurimmat: pyramidi/2026-09-26s-pohja 18,9 Gt, julisteet/maasto 13,8 Gt, julisteet/pallo 12,5 Gt, pyramidi/2026-09-23a-pohja 5,2 Gt, kuvat 4,3 Gt. Vanhat pyramidisarjat 09-21/22/22c/25/26 a 2,7–2,9 Gt = ~14 Gt siivottavissa (omistajalta kysytty). R2:ssa ei kokorajaa.
+
+## NATIIVIN PROGRESSIIVINEN PUHE KOODATTU (pelikoodari/puhevirta b6fc76d7); MITTAUS VASTA #3389:N JULKAISUN JALKEEN (27.9.2026 klo 10.19)
+
+Pelikoodari 10.2x: natiivi Puhe.SoitaVirtana — DownloadHandlerAudioClip(streamAudio) soi ~12 kt (≈1 s) esirullan jalkeen, valmis pala valimuistiin, varapolku, komento 'puhe virta', 1. aani -mittari; unity 0 virhetta; lukijat eivat muutu. Mittaus jumissa (kehittajakoodi puuttuu, paivaraja tayttyi) → Fable: b) mittaus #3389:n julkaisun jalkeen. Seuraavaksi #3388-korjaukset ja talous-suunnitelma (jonossa).
