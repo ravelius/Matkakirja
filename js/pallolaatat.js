@@ -906,6 +906,27 @@ export const LAATTAKERROS_TUKI_LOITONNUSRAJA = 0.04;
  */
 export const LAATTAKERROS_TUKI_VARA = 0.75;
 export const LAATTAKERROS_LAATTAKATTO_TUKI = 24;
+
+/*
+ * TUKI MAHTUU TAVUKIINTIÖÖN TAI SITÄ EI OTETA (Pelikoodari 27.9.2026,
+ * docs/raportit/z10-web-lahizoomi-20260927.md). Tukilaatta ei ole
+ * näkyvä, joten LRU:n tavukatto saa purkaa sen. Kun NÄKYVÄT laatat
+ * yksin täyttävät kosketuslaitteen 96 Mt:n kiintiön (puhelin z9:llä
+ * Pariisissa: 68 näkyvää), LRU purki koko tuen joka päivityksellä ja
+ * seuraava päivitys pyysi sen uudestaan — mitattu 68 z7-tukilaattaa
+ * ~17 000 kertaa minuutissa. Nyt tukitaso hyväksytään vain, jos sen
+ * laatat mahtuvat kiintiöön näkyvien lisäksi; muuten kokeillaan
+ * karkeampaa tasoa (neljäsosa laatoista), ja jos mikään ei mahdu,
+ * tukea ei oteta lainkaan.
+ *
+ * @param {number} nakyvienTavut näkyvien laattojen tekstuuritavut (arvio lataamattomille)
+ * @param {number} tukia tukitason laattojen määrä
+ * @param {number} laatanTavut yhden laatan tekstuuritavut
+ * @param {number} tavukatto kerroksen tavukiintiö
+ */
+export function tukiMahtuu(nakyvienTavut, tukia, laatanTavut, tavukatto) {
+  return nakyvienTavut + tukia * laatanTavut <= tavukatto;
+}
 /** Kerman odotus, kun tarkka suoja ei ole vielä saapunut (ks. valmistele). */
 export const KERMAN_ODOTUS_MS = 200;
 export const KERMAN_ODOTUS_KERTOJA = 25;
@@ -4275,6 +4296,10 @@ export function luoLaattakerros({
      */
     const tuet = new Set();
     {
+      // Kiintiölaskenta (ks. tukiMahtuu): lataamattoman laatan tavut arvioidaan mipmapeineen.
+      const laatanArvio = Math.round(koko * koko * 4 * (4 / 3));
+      let nakyvienTavut = 0;
+      for (const avain of nakyvat) nakyvienTavut += laatat.get(avain)?.tavut || laatanArvio;
       const tukiVaraLat = LAATTAKERROS_TUKI_VARA * (alue.lat1 - alue.lat0);
       const tukiVaraLon = LAATTAKERROS_TUKI_VARA * (alue.lon1 - alue.lon0);
       const tukialue = {
@@ -4298,6 +4323,7 @@ export function luoLaattakerros({
         const ehdokkaat = tukikartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(tukitaso, l.sarake, l.rivi), pov));
         if (!ehdokkaat.length) break;
         if (ehdokkaat.length > LAATTAKERROS_LAATTAKATTO_TUKI) continue;
+        if (!tukiMahtuu(nakyvienTavut, ehdokkaat.length, laatanArvio, tavukatto())) continue;
         const tukiPpu = tukitaso.pikseliaPerYksikko;
         const tukiKeskiX = (((keski.lng - pyramidi.projektio.lon0) / 360) * pyramidi.projektio.leveys - pyramidi.arkki.x) * tukiPpu;
         const tukiKeskiY = (laudanY(keski.lat) - pyramidi.arkki.y) * tukiPpu;

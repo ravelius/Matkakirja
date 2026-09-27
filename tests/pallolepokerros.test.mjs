@@ -594,3 +594,21 @@ test('laattakerros rajaa jokaisen laatan karttaAlaan', () => {
   assert.match(laatat, /laatanPalloAlue\(\{\n\s*taso: tasoOlio, sarake, rivi, laatta: koko, lonPx, latPx, karttaAla: karttaAla\(\),/);
   assert.match(laatat, /karttaAlaMuisti = pyramidinKarttaAla\(\{ pyramidi, yLat, naparaja \}\)/);
 });
+
+test('tukitaso mahtuu tavukiintiöön tai sitä ei oteta (puhelimen z9-silmukka 27.9.2026)', async () => {
+  const {
+    tukiMahtuu, LAATTAKERROS_LAATTAKATTO_TAVUT, LAATTAKERROS_TAVUKERROIN_OSOITIN,
+  } = await import('../js/pallolaatat.js');
+  const laatta = Math.round(512 * 512 * 4 * (4 / 3));
+  const nakyvat = 68 * laatta; // mitattu: puhelin, Pariisi, z9, 68 näkyvää
+  // Kosketuslaite: z7:n 34 tukilaattaa eivät mahdu — ennen tätä LRU purki ne joka kierroksella.
+  assert.equal(tukiMahtuu(nakyvat, 34, laatta, LAATTAKERROS_LAATTAKATTO_TAVUT), false);
+  // Karkeampi tuki (muutama laatta) mahtuu.
+  assert.equal(tukiMahtuu(nakyvat, 3, laatta, LAATTAKERROS_LAATTAKATTO_TAVUT), true);
+  // Osoitinlaitteen kaksinkertainen kiintiö: sama tuki mahtuu.
+  assert.equal(tukiMahtuu(nakyvat, 34, laatta,
+    LAATTAKERROS_LAATTAKATTO_TAVUT * LAATTAKERROS_TAVUKERROIN_OSOITIN), true);
+  // Tukitason valinta käyttää ehtoa ennen tukilaattojen luontia.
+  const lahde = readFileSync(new URL('../js/pallolaatat.js', import.meta.url), 'utf8');
+  assert.match(lahde, /if \(!tukiMahtuu\(nakyvienTavut, ehdokkaat\.length, laatanArvio, tavukatto\(\)\)\) continue;/);
+});
