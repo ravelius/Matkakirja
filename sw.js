@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2299';
+const CACHE = 'matkakirja-2026-09-21.2329';
 const SHELL = [
   './',
   './index.html',
@@ -147,6 +147,7 @@ const SHELL = [
   './js/pulu-paikka.js',
   './js/liviapuhe.js',
   './js/livia.js',
+  './js/puhevirta.js',
   './js/puhe.js',
   // Tehosteketjut (Tuna, 5.9.2026): moduuli kuuluu kuoreen, kirjasto
   // itse tulee ämpärin vendor/-polusta ja säilyy VENDORCACHE-korissa.
@@ -295,7 +296,6 @@ const SHELL = [
   './js/pallolauta/kerrokset.js',
   './js/pallolauta/kehysprofiili.js',
   './js/pallolauta/kallistus.js',
-  './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
   // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
@@ -779,6 +779,7 @@ const SHELL = [
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',
+  './js/packs/hintatasot.js',
   './js/packs/pollo-kysymykset.js',
   './js/packs/pollo-poiminnat.js',
   './js/packs/europe-valokuvat.js',
@@ -1379,12 +1380,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/madrid-kaksi-joukkuetta.webp',
   './assets/kartat/miniatyyrit/madrid-palamaton-linna.webp',
   './assets/kartat/miniatyyrit/madrid-tapaskierros.webp',
-  './assets/kartat/miniatyyrit/nikosia-buyuk-han.webp',
-  './assets/kartat/miniatyyrit/nikosia-faneromenin-kirkko.webp',
-  './assets/kartat/miniatyyrit/nikosia-kyproksen-museo.webp',
-  './assets/kartat/miniatyyrit/nikosia-leventis-museo.webp',
-  './assets/kartat/miniatyyrit/nikosia-omeryen-hamam.webp',
-  './assets/kartat/miniatyyrit/nikosia-selimiyen-moskeija.webp',
   './assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
   './assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
   './assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',

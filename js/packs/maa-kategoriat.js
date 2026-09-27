@@ -1315,16 +1315,16 @@ export const MAA_KATEGORIAT = {
           aika: 'Joulupöydässä',
           tiedosto: 'Kapustnica (Sauerkraut soup).jpg',
           teksti: 'Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja '
-              + 'Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen '
-              + 'kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan '
-              + 'leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, '
-              + 'jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia '
-              + 'säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja '
-              + 'maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja '
-              + 'syödään myös Puolassa, Ukrainassa ja Venäjällä.',
+            + 'Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen '
+            + 'kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan '
+            + 'leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, '
+            + 'jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia '
+            + 'säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja '
+            + 'maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja '
+            + 'syödään myös Puolassa, Ukrainassa ja Venäjällä.',
           lyhyt: 'Kapustnica-keitossa on hapankaalia ja makkaranpaloja.',
           selite: 'Kapustnica tarjoillaan savikulhossa, ja punertavasta liemestä nousee '
-              + 'lusikalle hapankaalia ja makkaraa.',
+            + 'lusikalle hapankaalia ja makkaraa.',
           lahde: 'young shanahan, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Cabbage soup',
         },
@@ -6210,11 +6210,12 @@ export const MAA_KATEGORIAT = {
             + 'vaatetus — puhuvat lokakuun puolesta.',
           lyhyt: 'Pompejilainen kauppias yrittää pelastaa omaisuutensa '
             + 'hohkakivien alkaessa ropista katolle.',
-          selite: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa vaa’an '
-            + 'ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien alkavaa '
-            + 'ropinaa katoksella. He eivät tiedä, onko viisaampaa suojautua vai '
-            + 'lähteä — juuri tämä epävarmuus jätti osan pompejilaisista '
-            + 'koteihin, joiden katoille kertyi lopulta metreittäin lapilleja.',
+          selite: 'Havainnekuvan nimetön torikauppias yrittää vielä pelastaa '
+            + 'vaa’an ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien '
+            + 'alkavaa ropinaa katoksella. He eivät tiedä, onko viisaampaa '
+            + 'suojautua vai lähteä — juuri tämä epävarmuus jätti osan '
+            + 'pompejilaisista koteihin, joiden katoille kertyi lopulta '
+            + 'metreittäin lapilleja.',
           lahde: 'Matkakirjan havainnekuva. Faktat: Archaeological Park of '
             + 'Pompeii — date of the eruption, tarkistettu 5.9.2026.',
           galleria: [
@@ -10328,6 +10329,28 @@ export const MAA_KATEGORIAT = {
           lahde: 'Bert Verhoeff for Anefo, Wikimedia Commons (CC0)',
           wiki: 'Pyöräily',
         },
+        {
+          otsikko: 'Yhdeksäntoista myllyä pumppasi maan kuivaksi',
+          aika: '1740',
+          tiedosto: 'KinderdijkMolens02.jpg',
+          teksti: 'Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista '
+            + 'tuulimyllyä, jotka pumppasivat ylimääräisen veden '
+            + 'Alblasserwaardin suoalueelta jokeen — ilman niitä koko '
+            + 'polderi olisi veden alla. Unesco liitti myllyrivistön '
+            + 'maailmanperintöluetteloon 1997. Toukokuun kansallisena '
+            + 'myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä '
+            + 'yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta '
+            + 'riittää. Kylän nimeen liittyy legenda: vuoden 1421 '
+            + 'suurtulvassa kehto ajelehti padolle, ja kissa piti sen '
+            + 'tasapainossa niin, ettei se kaatunut — sisällä nukkui '
+            + 'vahingoittumaton vauva.',
+          lyhyt: 'Kinderdijkin 19 tuulimyllyä pumppasivat vettä pois polderilta 1740-luvulta lähtien, Unescon perintöä 1997.',
+          selite: 'Kinderdijkin 19 tuulimyllyä pumppasivat vettä pois '
+            + 'polderilta 1740-luvulta lähtien, ja Unesco liitti ne '
+            + 'maailmanperintöluetteloon 1997.',
+          lahde: 'Lucas Hirschegger, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kinderdijk',
+        },
       ],
       tehtava: {
         kysymys: 'Mikä sai 1600-luvun kalleimpien tulppaanien terälehdet '
@@ -13842,6 +13865,28 @@ export const MAA_KATEGORIAT = {
             + 'monin paikoin kirjettä vähemmän.',
           lahde: 'austrian-hungarian postal service, Wikimedia Commons (Public domain)',
           wiki: 'Postikortti',
+        },
+        {
+          otsikko: 'Härkä möyryää linnan tornista',
+          aika: '1502',
+          tiedosto: 'Fortress Hohensalzburg above the Salzach.jpg',
+          teksti: 'Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja '
+            + 'sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan '
+            + 'suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja '
+            + '150 metriä leveä. Piispa Leonhard von Keutschach tilasi '
+            + 'linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on '
+            + 'yli 200 pilliä; sen möyryävää ääntä verrattiin härän '
+            + 'ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus '
+            + 'Egedacher uudisti sen 1735, ja se soi yhä päivittäin '
+            + 'palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna '
+            + 'koki ainoan piirityksensä talonpoikaissodassa 1525 ja '
+            + 'antautui taistelutta ranskalaisille vuonna 1800.',
+          lyhyt: 'Hohensalzburgin linnan mekaaninen urkukone Salzburgin härkä soi päivittäin, yli 200 pillillä.',
+          selite: 'Hohensalzburgin linna kohoaa Salzburgin yllä; sen '
+            + 'tornissa soiva mekaaninen urkukone, Salzburgin härkä, on '
+            + 'peräisin vuodelta 1502.',
+          lahde: 'Mattsjc, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hohensalzburgin linna',
         },
       ],
       tehtava: {
@@ -45088,7 +45133,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Pieni käsikirjoitus, kirjoitustarvikkeet ja päähine Nigerian ajami-perinnettä mukailevassa kuvassa.',
           selite: 'Pieni käsikirjoitus, kirjoitustarvikkeet ja päähine '
             + 'Nigerian ajami-perinnettä mukailevassa asetelmassa. '
-            + 'Kirjoitus on kuvitusta.',
+            + 'Kirjoitus on havainnekuvaa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
             + 'Smithsonian Libraries — kokoelmatietue arabialaisista ja '
             + 'ajami-käsikirjoituksista Nigeriassa',
@@ -45267,10 +45312,10 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisen nigerialaiselle myönnetyn Grammy-ehdokkuuden. '
               + 'Adén yhtyeessä soi kymmenkunta soittajaa, joukossa pedal '
               + 'steel -kitara ja useita puhuvia rumpuja.',
-          lyhyt: 'Laaja 1980-luvun juju-yhtye kitaroineen ja lyömäsoittimineen konserttilavalla, kuvitus.',
+          lyhyt: 'Laaja 1980-luvun juju-yhtye kitaroineen ja lyömäsoittimineen konserttilavalla, havainnekuva.',
           selite: 'Laaja 1980-luvun juju-yhtye kitaroineen ja '
             + 'lyömäsoittimineen tummalla konserttilavalla — lähteisiin '
-            + 'perustuva kuvitus, muusikot ovat kuvitteellisia.',
+            + 'perustuva havainnekuva, muusikot ovat kuvitteellisia.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Grammy.com '
             + '— King Sunny Adé -artistisivu',
         },
@@ -45402,7 +45447,7 @@ export const MAA_KATEGORIAT = {
               + 'koulukielioppia. Arvostelu on sittemmin vaimennut, ja kirja '
               + 'on käännetty kymmenille kielille.',
           selite: 'Amos Tutuolan The Palm-Wine Drinkard -romaanin '
-            + 'yliluonnollisen matkan innoittama kuvitus.',
+            + 'yliluonnollisen matkan innoittama havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: WorldCat — '
             + 'The Palm-Wine Drinkard -tietue',
         },
@@ -45464,7 +45509,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Onitshan torikirjallisuutta mukaileva pöytä kuvitteellisine vihkokansineen ja painokoneineen.',
           selite: 'Onitshan torikirjallisuutta mukaileva pöytä '
             + 'kuvitteellisine vihkokansineen ja painokoneineen — '
-            + 'kuvitus.',
+            + 'havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Library of '
             + 'Congress — LCSH-aihesanasto (Onitsha market literature)',
         },
@@ -45493,9 +45538,9 @@ export const MAA_KATEGORIAT = {
               + '830, ja 1000-luvulla cordobalainen al-Bakri kuvasi maata '
               + 'tarkemmin. Valtakunta päätyi 1200-luvulla Malin vasalliksi. '
               + 'Nimen otti käyttöön Kultarannikko itsenäistyessään 1957.',
-          lyhyt: 'Kamelikaravaani muinaisen Ghanan valtakunnan kulta- ja suolakaupan piirissä, historiallinen kuvitus.',
+          lyhyt: 'Kamelikaravaani muinaisen Ghanan valtakunnan kulta- ja suolakaupan piirissä, historiallinen havainnekuva.',
           selite: 'Kamelikaravaani muinaisen Ghanan valtakunnan kulta- '
-            + 'ja suolakaupan piirissä — historiallinen kuvitus.',
+            + 'ja suolakaupan piirissä — historiallinen havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
             + 'Sahel: Art and Empires on the Shores of the Sahara',
         },
@@ -45753,10 +45798,10 @@ export const MAA_KATEGORIAT = {
               + 'Orkesterien nimet olivat Jazz Kings, Cape Coast Sugar '
               + 'Babies ja Accra Orchestra. Unesco otti highlifen '
               + 'aineettoman kulttuuriperinnön luetteloon 2025.',
-          lyhyt: 'Varhaisen ghanalaisen highlife-tanssiorkesterin esiintyminen 1920-luvun hengessä, kuvitus.',
+          lyhyt: 'Varhaisen ghanalaisen highlife-tanssiorkesterin esiintyminen 1920-luvun hengessä, havainnekuva.',
           selite: 'Varhaisen ghanalaisen highlife-tanssiorkesterin '
             + 'esiintyminen 1920-luvun hengessä — historiallinen '
-            + 'kuvitus.',
+            + 'havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
             + 'Smithsonian Libraries — kokoelmatietue 1090467',
         },
@@ -45774,9 +45819,9 @@ export const MAA_KATEGORIAT = {
               + 'kanssa; sen jälkeen Mensahia kutsuttiin highlifen '
               + 'kuninkaaksi. Kitarahighlifen puolella E. K. Nyame ja hänen '
               + 'Akan Trio -yhtyeensä julkaisivat yli neljäsataa levyä.',
-          lyhyt: '1950-luvun ghanalainen highlife-tanssiorkesteri soittimineen, kuvitteellinen historiallinen kuvitus.',
+          lyhyt: '1950-luvun ghanalainen highlife-tanssiorkesteri soittimineen, kuvitteellinen historiallinen havainnekuva.',
           selite: '1950-luvun ghanalainen highlife-tanssiorkesteri '
-            + 'soittimineen — historiallinen kuvitus, muusikot ovat '
+            + 'soittimineen — historiallinen havainnekuva, muusikot ovat '
             + 'kuvitteellisia.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
             + 'Smithsonian Libraries — kokoelmatietue 1090467',
@@ -45813,7 +45858,7 @@ export const MAA_KATEGORIAT = {
               + 'Vuonna 2013 azonto näkyi lähes kaikissa ghanalaisissa '
               + 'musiikkivideoissa ja levisi sieltä muualle Afrikkaan.',
           selite: 'Azonton arkityötä mukailevan liikekielen innoittama '
-            + 'tanssiasento — kuvitus.',
+            + 'tanssiasento — havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Dance '
             + 'Research Journal (Cambridge) — Invented Dances',
         },
@@ -45840,7 +45885,7 @@ export const MAA_KATEGORIAT = {
               + 'syntyi lauantaina ja YK:n pääsihteeri Kofi Annan '
               + 'perjantaina.',
           selite: 'Ghanalaisen kahdeksannen päivän nimeämisjuhlan '
-            + 'perhepiiriä mukaileva kuvitus.',
+            + 'perhepiiriä mukaileva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ghanan '
             + 'yliopisto (UGSpace) — tutkielma kahdeksannen päivän '
             + 'nimeämisjuhlasta',
@@ -45879,7 +45924,7 @@ export const MAA_KATEGORIAT = {
               + 'kuninkaalliselle hautausmaalle — akaanien käsityksen '
               + 'mukaan päällikkö ei kuole vaan menee kylään.',
           selite: 'Odwira-juhlan aluksi raivattavaa esi-isien polkua '
-            + 'mukaileva kuvitus Akropongin perinteestä.',
+            + 'mukaileva havainnekuva Akropongin perinteestä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ghanan '
             + 'yliopisto (UGSpace) — tutkielma Odwira-juhlasta',
         },
@@ -45896,8 +45941,8 @@ export const MAA_KATEGORIAT = {
               + 'seuraaja ei ole hänen poikansa vaan hänen sisarensa poika. '
               + 'Suvun sisällä vuorottelevat haarat, joita kutsutaan '
               + 'keittiöiksi, ja kukin esittää vuorollaan oman ehdokkaansa.',
-          lyhyt: 'Akanien äitilinjaisen sukulaisuuden innoittama kuvitus kolmesta naissukupolvesta esineen äärellä.',
-          selite: 'Akanien äitilinjaisen sukulaisuuden innoittama kuvitus '
+          lyhyt: 'Akanien äitilinjaisen sukulaisuuden innoittama havainnekuva kolmesta naissukupolvesta esineen äärellä.',
+          selite: 'Akanien äitilinjaisen sukulaisuuden innoittama havainnekuva '
               + 'kolmen sukupolven naisista perhe-esineen äärellä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Harvard '
               + 'University — Twi-oppimateriaali, Akan Family System',
@@ -45928,8 +45973,8 @@ export const MAA_KATEGORIAT = {
               + 'eikä wolofiksi, mikä teki hänestä jalosukuisen '
               + 'muukalaisen. Dankin taistelu 1549 hajotti valtakunnan '
               + 'itsenäisiksi kuningaskunniksi.',
-          lyhyt: 'Wolofin suullisen Njaajan Njaay -perinteen innoittama kuvitus perustamisesta, perustaja selin.',
-          selite: 'Wolofin suullisen Njaajan Njaay -perinteen innoittama kuvitus '
+          lyhyt: 'Wolofin suullisen Njaajan Njaay -perinteen innoittama havainnekuva perustamisesta, perustaja selin.',
+          selite: 'Wolofin suullisen Njaajan Njaay -perinteen innoittama havainnekuva '
             + 'valtakunnan perustamisesta; perustaja nähdään selin.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Journal of African '
             + 'History — arvio teoksesta Samba Diop, The Oral History and '
@@ -45949,8 +45994,8 @@ export const MAA_KATEGORIAT = {
               + 'padotakseen ryöstöretket ja ranskalaisten etenemisen, ja '
               + 'hänen sisarensa Ndaté Yalla Mbodj hallitsi vuodesta 1846. '
               + 'Ranska valloitti Waalon 1855.',
-          lyhyt: 'Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva kuvitus: hallitsija katsoo selin tasangolle.',
-          selite: 'Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva kuvitus: '
+          lyhyt: 'Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva havainnekuva: hallitsija katsoo selin tasangolle.',
+          selite: 'Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva havainnekuva: '
             + 'hallitsija katsoo selin Senegaljoen tasangolle.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Michael C. Carlos '
             + 'Museum — Ndaté Yalla Mbodj -näyttely',
@@ -46071,9 +46116,9 @@ export const MAA_KATEGORIAT = {
               + '1902. Sitä tarjotaan juhlissa ja muistotilaisuuksissa, ja '
               + '2000-luvulla se on levinnyt kadunkulmiin uskonnosta '
               + 'riippumatta.',
-          lyhyt: 'Café Touba, kahvipavut ja pitkät djar-hedelmät senegalilaista kahvihetkeä kuvaavassa kuvituksessa.',
+          lyhyt: 'Café Touba, kahvipavut ja pitkät djar-hedelmät senegalilaista kahvihetkeä kuvaavassa havainnekuvassa.',
           selite: 'Café Touba, kahvipavut ja pitkät kuivat djar-hedelmät '
-            + 'senegalilaista kahvihetkeä mukailevassa kuvituksessa.',
+            + 'senegalilaista kahvihetkeä mukailevassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Heritage Sénégal — '
             + 'Café Touba; University of Cape Coast — Xylopia aethiopica; '
             + 'World Flora Online',
@@ -46154,10 +46199,10 @@ export const MAA_KATEGORIAT = {
               + 'esiintymisen kaksitoistavuotiaana ja soitti 1970-luvulla '
               + 'Dakarin suosituimmassa Star Bandissa. Tanssilattialla '
               + 'yleisö palkitsee laulajan kuin griotin.',
-          lyhyt: 'Kolme sabar-rumpalia soittaa pitkiä tappikiristeisiä rumpuja käsin ja kepillä kyläjuhlassa, kuvitus.',
+          lyhyt: 'Kolme sabar-rumpalia soittaa pitkiä tappikiristeisiä rumpuja käsin ja kepillä kyläjuhlassa, havainnekuva.',
           selite: 'Kolme sabar-rumpalia soittaa pitkiä tappikiristeisiä '
             + 'rumpuja käsin ja kepillä senegalilaisessa kyläjuhlassa — '
-            + 'lähteisiin perustuva kuvitus.',
+            + 'lähteisiin perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Música '
             + 'para Ver — sabar-soittimen esittely',
         },
@@ -46184,7 +46229,7 @@ export const MAA_KATEGORIAT = {
               + 'vasta Senegalin itsenäistyttyä 1960. Maasta tuli '
               + 'nopeasti afrikkalaisen elokuvan keskuksia, ja sen '
               + 'kulta-aika kesti 1960-luvulta 1980-luvun alkuun.',
-          selite: 'Afrique sur Seinen vuoden 1955 tekijäryhmän innoittama kuvitus '
+          selite: 'Afrique sur Seinen vuoden 1955 tekijäryhmän innoittama havainnekuva '
             + 'Seinen rannalta; ryhmä näkyy selin.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: African Film '
             + 'Festival New York — Afrique sur Seine (1955)',
@@ -46226,7 +46271,7 @@ export const MAA_KATEGORIAT = {
               + 'kuvavirtana. Se sai kriitikoiden palkinnon Cannesissa. '
               + 'Kaikkiaan Mambéty teki vain viisi pitkää elokuvaa.',
           selite: 'Touki Boukin tunnusomaisen, sarvilla koristellun '
-            + 'moottoripyörän innoittama kuvitus.',
+            + 'moottoripyörän innoittama havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The '
             + 'Criterion Collection — Touki Bouki: Mambéty and Modernity',
         },
@@ -46246,7 +46291,7 @@ export const MAA_KATEGORIAT = {
               + 'rahastollaan vuodesta 2015. Uuden aallon tekijöistä moni '
               + 'on nainen.',
           selite: 'Beniniin vuonna 2021 palautetun kuningas Ghézon korkean '
-            + 'valtaistuimen muotoon perustuva kuvitus.',
+            + 'valtaistuimen muotoon perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Musée du quai '
             + 'Branly — 26 teoksen palautus Beninin tasavallalle',
         },
@@ -46332,7 +46377,7 @@ export const MAA_KATEGORIAT = {
               + 'perinteisiä viljelytapoja. Tavoitteena on kunnostaa '
               + 'sata miljoonaa hehtaaria maata vuoteen 2030 mennessä.',
           selite: 'Nuorten puiden istutusta Senegalin Sahel-alueen '
-            + 'ennallistamistyön hengessä — kuvitus.',
+            + 'ennallistamistyön hengessä — havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FAO — '
             + 'Sahelin metsityshanketta käsittelevä raportti (PDF)',
         },
@@ -46669,10 +46714,10 @@ export const MAA_KATEGORIAT = {
               + 'pidetty polkukangaspuita herkempänä kutojan omille '
               + 'ideoille. Espanjalaiset toivat polkukangaspuut, mutta ne '
               + 'eivät syrjäyttäneet vanhaa tapaa.',
-          lyhyt: 'Kutoja käyttää maya-selkävyökangaspuiden rakennetta mukailevaa kudontavälinettä, kuvitus.',
+          lyhyt: 'Kutoja käyttää maya-selkävyökangaspuiden rakennetta mukailevaa kudontavälinettä, havainnekuva.',
           selite: 'Kutoja käyttää guatemalalaista '
             + 'maya-selkävyökangaspuiden rakennetta mukailevaa '
-            + 'kudontavälinettä — kuvitus.',
+            + 'kudontavälinettä — havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
             + 'Smithsonian NMAI — kokoelmatietue 156423 (backstrap loom)',
         },
@@ -46753,7 +46798,7 @@ export const MAA_KATEGORIAT = {
               + 'kansallissoittimeksi.',
           selite: 'Perinteinen guatemalalainen marimba '
             + 'kurpitsaresonaattoreineen — museoesineeseen perustuva '
-            + 'kuvitus.',
+            + 'havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
             + 'Smithsonian Music — Object of the Day: Gourd Marimba',
         },
@@ -46789,9 +46834,9 @@ export const MAA_KATEGORIAT = {
               + 'kromaattisen eli kaksirivisen marimban hormigo-puusta. '
               + 'Hänen poikansa esittivät soitinta Buffalossa New Yorkin '
               + 'osavaltiossa 1908, ja niin marimba lähti maailmalle.',
-          lyhyt: 'Kaksirivinen kromaattinen marimba puisine resonaattoreineen, museoesinettä mukaileva kuvitus.',
+          lyhyt: 'Kaksirivinen kromaattinen marimba puisine resonaattoreineen, museoesinettä mukaileva havainnekuva.',
           selite: 'Kaksirivinen kromaattinen marimba puisine resonaattoreineen — '
-            + 'museoesineen rakennetta mukaileva kuvitus.',
+            + 'museoesineen rakennetta mukaileva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian '
             + 'Folkways — SFW40542-levyn tekstivihko (PDF)',
         },
@@ -46808,9 +46853,9 @@ export const MAA_KATEGORIAT = {
               + 'todellisesta kiistasta. Veljeskunnan jäsen Bartolo Sis '
               + 'kirjoitti vuorosanat muistiin 1850, ja Unesco nimesi '
               + 'näytelmän ihmiskunnan mestariteokseksi 2005.',
-          lyhyt: 'Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja kaksi kumipäistä kapulaa, kuvitus.',
+          lyhyt: 'Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja kaksi kumipäistä kapulaa, havainnekuva.',
           selite: 'Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja '
-              + 'kaksi kumipäistä kapulaa — lähteisiin perustuva kuvitus.',
+              + 'kaksi kumipäistä kapulaa — lähteisiin perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: ACEM / MINEDUC '
               + '— Música y danza maya, luku 3.11 El Tun',
         },
@@ -46900,7 +46945,7 @@ export const MAA_KATEGORIAT = {
               + 'Cholulan laaksosta, ja kolmas kansa, subtiabat, saapui '
               + 'Guerreron seudulta noin vuonna 1200.',
           selite: 'Suur-Nicoyan alueen moniväristä, eläinaiheista '
-            + 'kolmijalkakeramiikkaa mukaileva kuvitus.',
+            + 'kolmijalkakeramiikkaa mukaileva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
             + 'Smithsonian-julkaisu Suur-Nicoyan keramiikasta',
         },
@@ -46939,10 +46984,10 @@ export const MAA_KATEGORIAT = {
               + 'espanjaan, mutta lapset kehittivät keskenään oman '
               + 'kielensä. Henkilökunta ei ymmärtänyt sitä ja kutsui '
               + 'kesäkuussa 1986 paikalle kielitieteilijän.',
-          lyhyt: 'Kaksi nicaragualaista nuorta keskustelee viittomakielellä koulun aurinkoisella pihalla, kuvitus.',
+          lyhyt: 'Kaksi nicaragualaista nuorta keskustelee viittomakielellä koulun aurinkoisella pihalla, havainnekuva.',
           selite: 'Kaksi nicaragualaista nuorta keskustelee '
             + 'viittomakielellä koulun aurinkoisella pihalla — '
-            + 'lähteisiin perustuva kuvitus.',
+            + 'lähteisiin perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Gallaudet '
             + 'University Press — The Emergence of the Deaf Community in '
             + 'Nicaragua',
@@ -47194,7 +47239,7 @@ export const MAA_KATEGORIAT = {
               + 'meluisasti. Soittimina olivat puunrungosta koverretut '
               + 'rummut, pyykkilautabasso ja aasin leukaluu.',
           selite: 'Palo de Mayo -juhla Nicaraguan Karibian rannikolla — '
-            + 'perinteeseen perustuva kuvitus.',
+            + 'perinteeseen perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Nicaraguan '
             + 'kulttuuri-instituutti (INC) — Origen e historia del Palo '
             + 'de Mayo',
@@ -47603,7 +47648,7 @@ export const MAA_KATEGORIAT = {
               + 'terästetty munatoti.',
           lyhyt: 'Panamalaista cevicheä valmistetaan limetin ja yrttien kanssa toritiskillä.',
           selite: 'Panamalaista cevicheä valmistetaan limetin ja yrttien '
-            + 'kanssa toritiskillä — lähteisiin perustuva kuvitus.',
+            + 'kanssa toritiskillä — lähteisiin perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Estación '
             + 'Coiba AIP — cevichenäytteiden jäljitettävyystutkimus '
             + 'Panaman Tyynenmeren rannikolta',
@@ -47634,7 +47679,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Tamborito-ryhmä soittaa caja-, pujador- ja repicador-rumpuja kyläpihan tanssissa.',
           selite: 'Tamborito-ryhmä soittaa caja-, pujador- ja '
             + 'repicador-rumpuja kyläpihan tanssissa — lähteisiin '
-            + 'perustuva kuvitus.',
+            + 'perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Día a Día '
             + '— tamboriton rummut; Panaman kulttuuriministeriö (SIC) — '
             + 'congo-rumpujen valmistus',
@@ -47670,7 +47715,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Congo-perinteen tanssijat ja rumpalit esiintyvät Portobelon karibialaisessa rantaympäristössä.',
           selite: 'Congo-perinteen tanssijat ja rumpalit esiintyvät '
             + 'Portobelon karibialaisessa rantaympäristössä — lähteisiin '
-            + 'perustuva kuvitus.',
+            + 'perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Panaman '
             + 'kulttuuriministeriö (SIC) — Festival de la Pollera Congo '
             + 'y de Máscaras de Diablos Congos',
@@ -47692,7 +47737,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Música típica -yhtye soittaa haitaria ja lyömäsoittimia Panaman maaseudun yhteisöjuhlassa.',
           selite: 'Música típica -yhtye soittaa haitaria ja '
             + 'lyömäsoittimia Panaman maaseudun yhteisöjuhlassa — '
-            + 'lähteisiin perustuva kuvitus.',
+            + 'lähteisiin perustuva havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: SERTV — '
             + 'Fiesta de Acordeones; Oxford Academic — Panaman música '
             + 'típica',
@@ -47779,7 +47824,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Guna-käsityöläinen avaa nyytin, jossa on käsin veistettyjä nuchukana-puuhahmoja.',
           selite: 'Guna-käsityöläinen avaa nyytin, jossa on käsin '
             + 'veistettyjä nuchukana-puuhahmoja — lähteisiin perustuva '
-            + 'kuvitus.',
+            + 'havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Maxwell '
             + 'Museum (UNM) — Object Monday: Guna nuchu',
         },
@@ -48086,7 +48131,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Eskista-tanssijat liikuttavat hartioita, rintakehää, päätä ja niskaa rummun rytmissä.',
           selite: 'Eskista-tanssijat liikuttavat hartioita, rintakehää, '
             + 'päätä ja niskaa rummun rytmissä — lähteisiin perustuva '
-            + 'kuvitus.',
+            + 'havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Dance '
             + 'Chronicle — eskista-artikkeli; UCLA CAP — '
             + 'Ethiocolor-ohjelmalehti',
@@ -48157,7 +48202,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Däbtära valmistaa parannuskääröä pöydän ääressä etiopialaista käsikirjoitusperinnettä mukaillen.',
           selite: 'Däbtära valmistaa parannuskääröä pöydän ääressä '
             + 'etiopialaista käsikirjoitusperinnettä mukailevassa '
-            + 'kuvituksessa — lähteisiin perustuva kuvitus.',
+            + 'havainnekuvassa, joka perustuu lähteisiin.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
             + 'kokoelmatietue 307601 ja essee Ethiopian Healing Scrolls',
         },
@@ -48219,8 +48264,8 @@ export const MAA_KATEGORIAT = {
               + 'reunat alkoivat kulua, papit ja kyläläiset ryhtyivät '
               + 'muuraamaan niiden ympärille kiviaitoja.',
           wiki: 'Ethiopian Orthodox Tewahedo Church',
-          lyhyt: 'Etiopialaisen kirkkometsän innoittama kuvitus: metsäsaareke kirkon ympärillä viljelymaisemassa.',
-          selite: 'Etiopialaisen kirkkometsän innoittama kuvitus: '
+          lyhyt: 'Etiopialaisen kirkkometsän innoittama havainnekuva: metsäsaareke kirkon ympärillä viljelymaisemassa.',
+          selite: 'Etiopialaisen kirkkometsän innoittama havainnekuva: '
             + 'ortodoksikirkkoa ympäröivä metsäsaareke ylängön '
             + 'viljelymaisemassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Wageningen '
@@ -48326,8 +48371,8 @@ export const MAA_KATEGORIAT = {
               + 'sen mukaan elettiin 1300-luvulle asti — pitempään kuin '
               + 'minkään toisen tunnetun sopimuksen mukaan.',
           wiki: 'Mukurra',
-          lyhyt: 'Baqt-sopimusta mukaileva kuvitus nubialaisten ja egyptiläisten 600-luvun kohtaamisesta.',
-          selite: 'Baqt-sopimuksen alkuvaiheita mukaileva historiallinen kuvitus '
+          lyhyt: 'Baqt-sopimusta mukaileva havainnekuva nubialaisten ja egyptiläisten 600-luvun kohtaamisesta.',
+          selite: 'Baqt-sopimuksen alkuvaiheita mukaileva historiallinen havainnekuva '
             + 'nubialaisten ja Egyptin lähettiläiden kohtaamisesta 600-luvun '
             + 'puolivälissä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Library of '
@@ -48516,7 +48561,7 @@ export const MAA_KATEGORIAT = {
               + 'Kairossa 1930-luvulla ja myytiin Omdurmanista käsin.',
           wiki: 'Music of Sudan',
           selite: 'Solisti, kuoro ja kehärumpu 1920-luvun Omdurmanin '
-            + 'haqiba-laulua mukailevassa kuvituksessa.',
+            + 'haqiba-laulua mukailevassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Rift Valley '
             + 'Institute — The Sudan Handbook (PDF, s. 248–249)',
         },
@@ -48555,8 +48600,8 @@ export const MAA_KATEGORIAT = {
               + 'omaa musiikkia ovat myös dalooka-rummun tahdittamat '
               + 'aghani al-banat eli tyttöjen laulut.',
           wiki: 'Music of Sudan',
-          lyhyt: 'Hakamattien yhteisösovittelun innoittama kuvitus Sudanista, jossa naisen sanat kokoavat kuulijat.',
-          selite: 'Hakamattien yhteisösovittelun innoittama kuvitus läntisestä '
+          lyhyt: 'Hakamattien yhteisösovittelun innoittama havainnekuva Sudanista, jossa naisen sanat kokoavat kuulijat.',
+          selite: 'Hakamattien yhteisösovittelun innoittama havainnekuva läntisestä '
             + 'Sudanista: naisen sanat kokoavat kuulijat yhteen.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: UN Women — Women’s '
             + 'Peace and Humanitarian Fund, Sudanin vuosiraportti 2024 (PDF)',
@@ -48752,7 +48797,7 @@ export const MAA_KATEGORIAT = {
               + 'kuivui.',
           wiki: 'Wadi Howar',
           selite: 'Wadi Howarin kosteamman holoseenikauden jokimaisemaa mukaileva '
-            + 'luonnonhistoriallinen kuvitus.',
+            + 'luonnonhistoriallinen havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Science 237 (1987) '
             + '— Wadi Howar, DOI 10.1126/science.237.4812.298',
         },
@@ -48868,7 +48913,7 @@ export const MAA_KATEGORIAT = {
               + 'miljoonaa ihmistä.',
           wiki: 'Azande people',
           selite: 'Azande-perinteeseen kuuluvan moniteräisen heittoveitsen '
-            + 'muotoon perustuva kuvitus sepän työpajasta.',
+            + 'muotoon perustuva havainnekuva sepän työpajasta.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: University of '
             + 'Michigan Museum of Art — heittoveitsi 1983/1.149',
         },
@@ -48889,7 +48934,7 @@ export const MAA_KATEGORIAT = {
               + 'kartalle.',
           wiki: 'Etelä-Sudan',
           selite: 'Tammikuun 2011 Etelä-Sudanin kansanäänestyksen innoittama '
-            + 'kuvitus äänestyshetkestä.',
+            + 'havainnekuva äänestyshetkestä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: YK:n '
             + 'UNMIS-operaatio — Etelä-Sudanin kansanäänestys tammikuussa '
             + '2011',
@@ -48928,7 +48973,7 @@ export const MAA_KATEGORIAT = {
               + 'julkaistiin 1960-luvulla — muun muassa antropologi '
               + 'E. E. Evans-Pritchardin kokoelma Ture-tarinoita.',
           wiki: 'Azande people',
-          selite: 'Ture-veijarin tarinaperinteen innoittama kuvitus: hunajaruukun '
+          selite: 'Ture-veijarin tarinaperinteen innoittama havainnekuva: hunajaruukun '
             + 'kumoutuminen huvittaa kuulijoita.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Persée — arvio '
             + 'teoksesta E. E. Evans-Pritchard, The Zande Trickster (1969)',
@@ -48948,7 +48993,7 @@ export const MAA_KATEGORIAT = {
               + 'oikeuslaitos: ne osoittivat, kuka oli aiheuttanut '
               + 'onnettomuuden.',
           wiki: 'Azande people',
-          selite: 'Benge-oraakkelin kysymistä mukaileva historiallinen kuvitus '
+          selite: 'Benge-oraakkelin kysymistä mukaileva historiallinen havainnekuva '
             + 'Azande-yhteisöstä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: HAU: Journal of '
             + 'Ethnographic Theory — benge-oraakkeli, DOI 10.1086/732910',
@@ -49025,7 +49070,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Ohutta durrasta valmistettua kisraa paistetaan viljapuuron rinnalla sudanilaisessa ruokaperinteessä.',
           selite: 'Ohutta durrasta valmistettua kisraa paistetaan paksun '
             + 'viljapuuron rinnalla sudanilaista ruokaperinnettä mukailevassa '
-            + 'kuvituksessa.',
+            + 'havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FAO — Sorghum and '
             + 'millets in human nutrition',
         },
@@ -49044,7 +49089,7 @@ export const MAA_KATEGORIAT = {
               + 'paistetaan mandazia, kolmion muotoista uppopaistettua '
               + 'leipää.',
           selite: 'Kombo-ruoan lehtivihannes-, maapähkinä- ja '
-            + 'tomaattiaineksia havainnollistava väljä keittiökuvitus.',
+            + 'tomaattiaineksia havainnollistava väljä havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Global Table '
             + 'Adventure — kombo-pata South Sudanese Cookbookin mukaan',
           wiki: 'South Sudanese cuisine',
@@ -49191,7 +49236,7 @@ export const MAA_KATEGORIAT = {
               + 'jälkeen maa on suunnannut katseensa itään ja '
               + 'suahilinkieliseen Itä-Afrikan yhteisöön.',
           wiki: 'Culture of South Sudan',
-          selite: 'Etelä-Sudanin monikielisyyden innoittama kuvitus keskustelusta '
+          selite: 'Etelä-Sudanin monikielisyyden innoittama havainnekuva keskustelusta '
             + 'yhteisöradion mikrofonien äärellä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: ILO NATLEX — '
             + 'Etelä-Sudanin väliaikainen perustuslaki 2011, artikla 6 (PDF)',
@@ -49229,7 +49274,7 @@ export const MAA_KATEGORIAT = {
               + 'Sanastossa on paljon yhteistä nubian kanssa, luultavasti '
               + 'keskiajan Alwan valtakunnan ajoilta.',
           wiki: 'Dinkan kieli',
-          selite: 'Dinkan vokaalien pituuserojen tutkimista mukaileva kuvitus '
+          selite: 'Dinkan vokaalien pituuserojen tutkimista mukaileva havainnekuva '
             + 'äänitystilanteesta.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Edinburghin '
             + 'yliopisto — dinkan vokaalinpituudet, DOI '
@@ -49248,8 +49293,8 @@ export const MAA_KATEGORIAT = {
               + 'perinnettä, jota käännettiin 1960-luvulla. Azandet '
               + 'tunnetaan koko seudulla juuri tarinankertojinaan.',
           wiki: 'Azande people',
-          lyhyt: 'Zandenkielisen suullisen tarinankerronnan kuvitus vanhimmasta ja eri-ikäisistä kuulijoista.',
-          selite: 'Zandenkielisen suullisen tarinankerronnan innoittama kuvitus '
+          lyhyt: 'Zandenkielisen suullisen tarinankerronnan havainnekuva vanhimmasta ja eri-ikäisistä kuulijoista.',
+          selite: 'Zandenkielisen suullisen tarinankerronnan innoittama havainnekuva '
             + 'vanhimmasta ja eri-ikäisistä kuulijoista.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Glottolog — Zande '
             + '(zand1248)',
@@ -50052,7 +50097,7 @@ export const MAA_KATEGORIAT = {
               + 'kuninkaan henkilökohtaisesti. Kotiin palattuaan 1930 hän piti maan '
               + 'ensimmäisiä yksityisnäyttelyitä.',
           lyhyt: 'Anonyymi selin kuvattu maalari työhuoneessa viittaa Myanmarin modernin maalaustaiteen murrokseen.',
-          selite: 'Anonyymi selin kuvattu taidemaalari työhuoneessa; ympäristökuvitus viittaa '
+          selite: 'Anonyymi selin kuvattu taidemaalari työhuoneessa; havainnekuva viittaa '
               + 'Myanmarin modernin maalaustaiteen murroskauteen.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Heritage Board (Roots) — '
               + 'kokoelmakohde 1395370',
@@ -50274,9 +50319,9 @@ export const MAA_KATEGORIAT = {
               + 'arvon — Mahāvaṃsan avulla ajoitettiin Intian keisari Ashokan vihkimys, '
               + 'ja Sanchin kaivaukset tukivat kertomusta. Unesco otti kronikan Maailman '
               + 'muisti -rekisteriin 2023.',
-          lyhyt: 'Sri Lankan 1800-luvun palmulehtikäsikirjoitusten kansien innoittama kuvitus, ei minkään toisinto.',
+          lyhyt: 'Sri Lankan 1800-luvun palmulehtikäsikirjoitusten kansien innoittama havainnekuva, ei minkään toisinto.',
           selite: 'Sri Lankan 1800-luvun alun maalattujen '
-              + 'palmulehtikäsikirjoituksen kansien innoittama esinekuvitus. '
+              + 'palmulehtikäsikirjoituksen kansien innoittama havainnekuva. '
               + 'Kuva ei ole Mahavamsan tietyn käsikirjoituksen toisinto.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The '
               + 'Metropolitan Museum of Art — kokoelmakohde 75411, maalatut '
@@ -50511,8 +50556,8 @@ export const MAA_KATEGORIAT = {
               + 'laulajaksi siirtynyt Wally Bastiansz sovitti sen 1960-luvun alussa '
               + 'sinhalankielisiin sanoihin. Wada bailassa laulajat sepittävät säkeitä '
               + 'kilpaa tuomariston antamasta aiheesta.',
-          lyhyt: 'Sri Lankan bailan innoittama kuvitus soittajista kitaran, viulun ja kehärummun äärellä.',
-          selite: 'Sri Lankan bailan innoittama kuvitus rannikkokylän soittajista '
+          lyhyt: 'Sri Lankan bailan innoittama havainnekuva soittajista kitaran, viulun ja kehärummun äärellä.',
+          selite: 'Sri Lankan bailan innoittama havainnekuva rannikkokylän soittajista '
             + 'kitaran, viulun ja kehärummun äärellä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian, '
             + 'National Museum of Asian Art — Baila Music from Sri Lanka',
@@ -50639,9 +50684,9 @@ export const MAA_KATEGORIAT = {
               + 'koko saari siirtyi siirtomaahallintoon 1815; usein toistetun väitteen '
               + 'mukaan se olisi myös kielletty asetuksella, mutta väitteelle ei ole '
               + 'esitetty näyttöä. Liikkeitä on säilynyt temppelien seinämaalauksissa.',
-          lyhyt: 'Embekke Devalayan painijareliefin paneelirakenteeseen perustuva kuvitus, ei tarkka toisinto.',
+          lyhyt: 'Embekke Devalayan painijareliefin paneelirakenteeseen perustuva havainnekuva, ei tarkka toisinto.',
           selite: 'Embekke Devalayan painijareliefin todelliseen '
-            + 'paneelirakenteeseen perustuva kuvitus; ei tarkka toisinto eikä '
+            + 'paneelirakenteeseen perustuva havainnekuva; ei tarkka toisinto eikä '
             + 'väite nimetystä angampora-tekniikasta.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Sri Lankan '
             + 'Keski-provinssin matkailusivusto — Ambekke Devalaya; Cyril '
@@ -50735,9 +50780,9 @@ export const MAA_KATEGORIAT = {
               + 'kalottia, joka näytti paikallisten silmään pieneltä korilta, '
               + 'okambale — lempinimi Nakambale päätyi hänen hautakiveensä. Ensimmäiset '
               + 'paikalliset pastorit aloittivat työnsä 1925.',
-          lyhyt: 'Ambomaan suomalaisen lähetystyön innoittama kuvitus 1800-luvun lopun lähetysasemakohtaamisesta.',
+          lyhyt: 'Ambomaan suomalaisen lähetystyön innoittama havainnekuva 1800-luvun lopun lähetysasemakohtaamisesta.',
           selite: 'Ambomaan suomalaisen lähetystyön innoittama historiallinen '
-            + 'kuvitus 1800-luvun lopun kohtaamisesta lähetysasemalla.',
+            + 'havainnekuva 1800-luvun lopun kohtaamisesta lähetysasemalla.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Museums '
             + 'Association of Namibia — Nakambale Museum',
         },
@@ -50893,9 +50938,9 @@ export const MAA_KATEGORIAT = {
               + 'paistettu taikinapallo. Myyjiä on samassa paikassa monta, joten '
               + 'hinnasta sovitaan paikan päällä ja jokainen huutaa oman lihansa '
               + 'olevan paras. Windhoekin Katutura on kapanan tunnetuin kortteli.',
-          lyhyt: 'Anonyymi myyjä grillaa kapana-naudanlihapaloja Katuturan markkinoita mukailevassa kuvituksessa.',
+          lyhyt: 'Anonyymi myyjä grillaa kapana-naudanlihapaloja Katuturan markkinoita mukailevassa havainnekuvassa.',
           selite: 'Anonyymi myyjä grillaa pieniä kapana-naudanlihapaloja '
-            + 'Katuturan markkinoita mukailevassa kuvituksessa.',
+            + 'Katuturan markkinoita mukailevassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Visit Namibia — '
             + 'Uniquely Namibian Food',
         },
@@ -53480,7 +53525,7 @@ export const MAA_KATEGORIAT = {
               + 'kaksikerroksisen bussilinjan avajaisiin, ja Double-Decker Bus jäi '
               + 'soimaan vuosikymmeniksi. Myöhemmin Calendarin sanoitukset kääntyivät '
               + 'yhteiskunnallisiksi ja hengellisiksi.',
-          selite: 'Sierra Leonen palm wine -musiikin innoittama kuvitus '
+          selite: 'Sierra Leonen palm wine -musiikin innoittama havainnekuva '
               + 'yhteisestä soittohetkestä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Real World '
               + 'Records — S. E. Rogie, Dead Men Don’t Smoke Marijuana',
@@ -53499,9 +53544,9 @@ export const MAA_KATEGORIAT = {
               + 'ja temneksi. My Lovely Elizabeth teki hänestä tunnetun, ja vuonna '
               + '2019 yhdysvaltalainen Vampire Weekend rakensi kappaleensa hänen '
               + 'kitarasilmukastaan.',
-          lyhyt: 'S. E. Rogien räätälinuran ja musiikin innoittama kuvitus anonyymistä räätälistä työhuoneessa.',
+          lyhyt: 'S. E. Rogien räätälinuran ja musiikin innoittama havainnekuva anonyymistä räätälistä työhuoneessa.',
           selite: 'S. E. Rogien räätälinuran ja musiikin yhteyden innoittama '
-              + 'kuvitus anonyymistä räätälistä työhuoneessa.',
+              + 'havainnekuva anonyymistä räätälistä työhuoneessa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Mississippi '
               + 'Records — Rogee Rogersin haastattelu isästään S. E. Rogiesta',
         },
@@ -53533,8 +53578,8 @@ export const MAA_KATEGORIAT = {
               + 'kylän, jossa samaa laulua yhä laulettiin, ja saivat selville, että se '
               + 'on hautajaisvirsi. Kahden perheen kohtaaminen on tallennettu '
               + 'dokumenttielokuvaan The Language You Cry In.',
-          lyhyt: 'Menden lauluperinteen tallennuksen innoittama kuvitus lauluryhmästä ja äänityslaitteista.',
-          selite: 'Menden lauluperinteen tallentamisen innoittama kuvitus '
+          lyhyt: 'Menden lauluperinteen tallennuksen innoittama havainnekuva lauluryhmästä ja äänityslaitteista.',
+          selite: 'Menden lauluperinteen tallentamisen innoittama havainnekuva '
               + 'anonyymistä lauluryhmästä ja äänityslaitteista.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian '
               + '(Anacostia Community Museum) — kokoelmakohde Wa Ka -peitto, '
@@ -53680,7 +53725,7 @@ export const MAA_KATEGORIAT = {
               + 'kääntämällä: Shakespearen Julius Caesar ilmestyi krioksi 1964 ja '
               + 'sovitus As You Like Itistä 1966. Uusi testamentti käännettiin 1986 '
               + 'ja Vanha testamentti 2013.',
-          selite: 'Thomas Deckerin Krio-käännöstyön innoittama kuvitus '
+          selite: 'Thomas Deckerin Krio-käännöstyön innoittama havainnekuva '
               + 'anonyymistä kääntäjästä työpöytänsä ääressä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: AfricaBib — '
               + 'Tcho Mbaimba Caulkerin artikkeli Thomas Deckerin '
@@ -53699,9 +53744,9 @@ export const MAA_KATEGORIAT = {
               + 'West African Countries and Peoples vuodelta 1868 kumosi eurooppalaisia '
               + 'rotuoppeja ja vaati itsehallintoa Länsi-Afrikan siirtomaille. '
               + 'Merkuriuksen kraatteri on nimetty hänen mukaansa.',
-          lyhyt: '1800-luvun lääkärin työpöytä ja stetoskooppi James Africanus Hortonin ajan kuvituksessa.',
+          lyhyt: '1800-luvun lääkärin työpöytä ja stetoskooppi James Africanus Hortonin ajan havainnekuvassa.',
           selite: '1800-luvun lääkärin työpöytä, kirjoja ja puinen stetoskooppi James Africanus '
-              + 'Hortonin ajan innoittamassa kuvituksessa.',
+              + 'Hortonin ajan innoittamassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Birminghamin yliopiston arkisto — '
               + 'CMS-kokoelma, kohde XCMS/B/1803-1880/A1/O/26-235/118; Smithsonian National '
               + 'Museum of American History — puinen stetoskooppi, kokoelmakohde 1073629',
@@ -54150,7 +54195,7 @@ export const MAA_KATEGORIAT = {
               + 'Jüsipbek Šaihislamuly Kazanissa 1894. Toisintoja tunnetaan kuusitoista. '
               + 'Eepoksesta tehtiin ooppera 1934 ja elokuva 1970.',
           selite: 'Kaksikielinen dombra ja käsikirjoitus kazakkien kertovan lauluperinteen '
-              + 'kuvituksena.',
+              + 'havainnekuvana.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Kazakstanin e-museum.kz — '
               + 'dombra-kokoelmakohteet',
         },
@@ -54169,7 +54214,7 @@ export const MAA_KATEGORIAT = {
               + 'varassa. Musiikin suurkirjassaan hän kuvasi kaksikielisen luutun, '
               + 'jollainen dombra on.',
           selite: 'Musiikin mittasuhteita tutkiva oppinut al-Farabin ajan innoittamassa '
-              + 'kuvituksessa.',
+              + 'havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: British Library — Or. 2361, ff. '
               + '238v–240r, al-Farabin musiikintutkielma',
         },
@@ -55015,7 +55060,7 @@ export const MAA_KATEGORIAT = {
               + 'syntynyttä työtä, ja yhdessä niistä ääriviivat on vedetty valkoisella '
               + 'kuin batiikissa.',
           selite: 'Balilla maalaavia taiteilijoita Nanyang-taiteen matkojen innoittamassa '
-              + 'kuvituksessa.',
+              + 'havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Gallery Singapore — '
               + 'Siapa Nama Kamu -näyttelyjulkaisu, Nanyang Reverie',
         },
@@ -55053,7 +55098,7 @@ export const MAA_KATEGORIAT = {
               + 'jälkeen hän osti lemmikkikaupasta gibbonin kolmellasadalla dollarilla ja '
               + 'kasvatti niitä lopulta kuusi.',
           selite: 'Gibboni taiteilijan työtilassa: Chen Wen Hsin kotipuutarhan ja '
-              + 'maalausaiheiden innoittama kuvitus.',
+              + 'maalausaiheiden innoittama havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Gallery Singapore — Chen '
               + 'Wen Hsi, Gibbons (kokoelmakohde 2015-00455) ja Home to Heart -elokuvaesittely',
         },
@@ -55433,7 +55478,7 @@ export const MAA_KATEGORIAT = {
               + 'Masekelan kanssa ja esiintyi 1977 Lagosin FESTAC-festivaalilla. Levyt '
               + 'In Kokolioko ja Miatta ilmestyivät 1979. Vuonna 2005 hän perusti '
               + 'tyttökoulun, joka jakaa yli 180 stipendiä.',
-          selite: 'Kuvitus nimettömän liberialaisen laulajan 1970-luvun '
+          selite: 'Havainnekuva nimettömän liberialaisen laulajan 1970-luvun '
               + 'teatteriharjoituksesta.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Miatta Fahnbullehin oma '
               + 'elämäkertasivu',
@@ -55479,9 +55524,9 @@ export const MAA_KATEGORIAT = {
               + 'Merkit ovat yksinkertaistuneet sukupolvi sukupolvelta, ja Liberian '
               + 'yliopisto täydensi merkistön 1960-luvulla kattamaan kaikki kielen '
               + 'tavut. Unicode-standardiin vai päätyi 2008.',
-          lyhyt: 'Vai-tavukirjoituksen opetusta 1830-luvun Liberiassa; kuvituksen merkit ovat tulkinnallisia.',
+          lyhyt: 'Vai-tavukirjoituksen opetusta 1830-luvun Liberiassa; havainnekuvan merkit ovat tulkinnallisia.',
           selite: 'Vai-tavukirjoituksen opetus 1830-luvun Liberian innoittamassa '
-              + 'kuvituksessa. Paperin merkit ovat tulkinnallisia.',
+              + 'havainnekuvassa. Paperin merkit ovat tulkinnallisia.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian National Museum of '
               + 'African Art — Inscribing Meaning: Writing and Graphic Systems in African '
               + 'Art',
@@ -55552,7 +55597,7 @@ export const MAA_KATEGORIAT = {
               + 'paikalliskielten ohella juuri sillä. Merimiesten pidgin on sammumassa, '
               + 'koska se eli laivatyön mukana.',
           selite: 'Liberialaista torikeskustelua ja kaupankäynnin puhekieltä '
-              + 'havainnollistava kuvitus.',
+              + 'havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Trade.gov — Liberia: Selling '
               + 'Factors & Techniques',
         },
@@ -55833,7 +55878,7 @@ export const MAA_KATEGORIAT = {
               + 'järjestys on voitu päätellä jälkeenpäin. Negatiiveja säilyi '
               + 'tuhansia, mutta asiakkaiden nimiä hän ei kirjannut. Vasta 1991 '
               + 'kuvat päätyivät New Yorkiin — aluksi ilman tekijän nimeä.',
-          selite: 'Bamakon 1950-luvun muotokuvastudioiden innoittama kuvitus.',
+          selite: 'Bamakon 1950-luvun muotokuvastudioiden innoittama havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Metropolitan Museum of Art '
               + '— kokoelmaesine 508077, Bamakon studiovalokuva',
         },
@@ -57664,7 +57709,7 @@ export const MAA_KATEGORIAT = {
               + 'Icefiord Bryghus Ilulissatissa, joka maustaa oluensa variksenmarjalla ja '
               + 'väinönputkella. Vuoteen 1954 asti alkoholin myyntiä rajoitettiin ankarasti, '
               + 'ja siltä ajalta on jäänyt tapa panna itse.',
-          selite: 'Kuvitus grönlantilaisen kahvin näyttävästä valmistuksesta.',
+          selite: 'Havainnekuva grönlantilaisen kahvin näyttävästä valmistuksesta.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Visit Greenland '
             + '— Greenlandic gastronomy; Greenland Travel — The taste of '
             + 'Greenland',
@@ -57737,7 +57782,7 @@ export const MAA_KATEGORIAT = {
               + 'toi vielä yhden. Pariisin maantieteellisessä seurassa epäiltiin 1886, '
               + 'olivatko paikalliset voineet tehdä sellaista; Holm kumosi epäilyn. Kartat '
               + 'ovat nyt Grönlannin kansallismuseossa Nuukissa.',
-          selite: 'Kuvitus museokokoelman kahdesta Ammassalikin puisesta '
+          selite: 'Havainnekuva museokokoelman kahdesta Ammassalikin puisesta '
             + 'tuntokartasta.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Tanskan '
             + 'kansallismuseo — esinetietue 35702',
@@ -57798,7 +57843,7 @@ export const MAA_KATEGORIAT = {
               + '"Maamme, joka olet käynyt niin vanhaksi", on ollut virallinen vuodesta 1916; '
               + 'sen sävelsi Jonathan Petersen ja sanoitti Henrik Lund, molemmat '
               + 'grönlantilaisia.',
-          selite: 'Kuvitus kalattuut-tanssista grönlantilaisessa '
+          selite: 'Havainnekuva kalattuut-tanssista grönlantilaisessa '
             + 'kokoontumistilassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Visit Greenland '
             + '— Music',
@@ -57939,7 +57984,7 @@ export const MAA_KATEGORIAT = {
               + 'prosenttiin. Lopulta tuonti kasvoi niin suureksi, että inflaatio söi '
               + 'rahan arvon.',
           selite: 'Kongon valtakunnan nzimbu-kuorirahan keräämistä '
-            + 'havainnollistava historiallinen kuvitus.',
+            + 'havainnollistava historiallinen havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Yale MAVCOR — '
             + 'Money in Kongo',
         },
@@ -58519,9 +58564,9 @@ export const MAA_KATEGORIAT = {
               + 'ja otti bändiinsä kitarat ja rummut. Hän näytteli Nehandaa '
               + 'elokuvassa Ambuya Nehanda. Tytär Virginia Mukwesha soittaa '
               + 'samaa soitinta.',
-          lyhyt: 'Nimettömän soittajan käsissä mbira dzavadzimu ja deze-kaikukoppa; tekoälykuvitus, ei muusikkokuva.',
+          lyhyt: 'Nimettömän soittajan käsissä mbira dzavadzimu ja deze-kaikukoppa; tekoälyn havainnekuva, ei muusikkokuva.',
           selite: 'Nimettömän soittajan käsissä oleva mbira dzavadzimu ja sen '
-            + 'deze-kaikukoppa. Tekoälykuvitus, ei nimetyn muusikon '
+            + 'deze-kaikukoppa. Tekoälyn havainnekuva, ei nimetyn muusikon '
             + 'muotokuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Washingtonin '
             + 'yliopiston etnomusikologinen kokoelma — mbira dzavadzimu',
@@ -58541,7 +58586,7 @@ export const MAA_KATEGORIAT = {
               + 'rumpali. Mutumba-rumpu tehdään mutiti-puusta ja tahtia '
               + 'lyödään kovapuisilla lautasilla, joita sanotaan maja.',
           selite: 'Mbende Jerusarema -tanssia, rumpalia ja puukapuloiden '
-            + 'soittajaa havainnollistava tekoälykuvitus.',
+            + 'soittajaa tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unesco ICH — '
             + 'Mbende Jerusarema -tanssi, valokuva 00233',
           wiki: 'Mbende Jerusarema dance',
@@ -58666,8 +58711,8 @@ export const MAA_KATEGORIAT = {
               + 'Tšekkoslovakian ja Neuvostoliiton edellä. Se oli maan '
               + 'ensimmäinen kisa omalla nimellään ja on yhä sen ainoa '
               + 'joukkuemitali: seitsemän muuta on uima-altaasta.',
-          lyhyt: 'Zimbabwen 1980 olympiakultaa muistava kuvitus: aikakauden maahockeymaila, pallo ja maan värit.',
-          selite: 'Zimbabwen vuoden 1980 olympiakultaa muistava kuvitus: '
+          lyhyt: 'Zimbabwen 1980 olympiakultaa muistava havainnekuva: aikakauden maahockeymaila, pallo ja maan värit.',
+          selite: 'Zimbabwen vuoden 1980 olympiakultaa muistava havainnekuva: '
             + 'aikakauden tyylinen maahockeymaila, pallo ja maan värit.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FIH — '
             + 'maahockeyn historia; Wikimedia Commons — RIA Novostin '
@@ -58688,9 +58733,9 @@ export const MAA_KATEGORIAT = {
               + 'Testiasema tuli heinäkuussa 1992, ja saman vuoden '
               + 'lokakuussa Zimbabwe pelasi yhdeksäntenä testimaana '
               + 'ensimmäisen testinsä Intiaa vastaan Hararessa.',
-          lyhyt: 'Zimbabwen 1983 yllätysvoittoa taustoittava krikettikuvitus; välineet eivät ole otteluvalokuvasta.',
+          lyhyt: 'Zimbabwen 1983 yllätysvoittoa taustoittava havainnekuva; välineet eivät ole otteluvalokuvasta.',
           selite: 'Zimbabwen vuoden 1983 yllätysvoittoa taustoittava '
-            + 'krikettikuvitus. Välineet ja kenttänäkymä eivät ole '
+            + 'havainnekuva. Välineet ja kenttänäkymä eivät ole '
             + 'alkuperäinen otteluvalokuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: CricketArchive '
             + '— Zimbabwen maailmancupottelut',
@@ -58946,10 +58991,10 @@ export const MAA_KATEGORIAT = {
               + 'sikoja ja vuohia. Kaksi kolmasosaa perheistä saa osan ruoastaan omasta '
               + 'viljelystä tai kalastuksesta, ja silti maa ei tuota tarpeeksi ruokaa '
               + 'itselleen vaan tuo osan ulkomailta.',
-          lyhyt: 'Batar daan: maissia, papuja ja kurpitsaa samassa annoksessa – tekoälykuvitus Timor-Lesten ruoasta.',
+          lyhyt: 'Batar daan: maissia, papuja ja kurpitsaa samassa annoksessa – tekoälyn havainnekuva Timor-Lesten ruoasta.',
           selite: 'Batar daan: maissia, papuja ja kurpitsaa samassa '
             + 'annoksessa. Timor-Lesten ruokaperinnettä havainnollistava '
-            + 'tekoälykuvitus.',
+            + 'tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Timor-Lesten '
             + 'matkailusivusto — Eat & Drink; Timor-Lesten hallitus — ASEAN '
             + 'Media Guide',
@@ -58966,7 +59011,7 @@ export const MAA_KATEGORIAT = {
               + 'riisin kera, sekä tapai, käytetty riisi, joka on yhtaikaa makeaa, '
               + 'hapanta ja hitusen alkoholista.',
           selite: 'Ikan sabuko: grillattua makrillia ja tamarindikastiketta. '
-            + 'Annos on tekoälykuvitus.',
+            + 'Annos on tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Timor-Lesten '
             + 'matkailusivusto — Eat & Drink',
         },
@@ -58981,9 +59026,9 @@ export const MAA_KATEGORIAT = {
               + 'nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen '
               + 'kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, '
               + 'koska niistä tuotiin sotilaita Timorille.',
-          lyhyt: 'Portugalilaista vaikutusta ja Timorin kahvikulttuuria kuvaava tekoälykuvitus rantakahvilassa.',
+          lyhyt: 'Portugalilaista vaikutusta ja Timorin kahvikulttuuria kuvaava tekoälyn havainnekuva rantakahvilassa.',
           selite: 'Portugalilaista vaikutusta ja Timorin kahvikulttuuria '
-            + 'havainnollistava tekoälykuvitus kuvitteellisessa '
+            + 'tekoälyn havainnekuva kuvitteellisessa '
             + 'rantakahvilassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Timor-Lesten '
             + 'matkailusivusto — Eat & Drink; Timor-Lesten matkailusivusto — '
@@ -59138,9 +59183,9 @@ export const MAA_KATEGORIAT = {
               + 'rinnalle ripustettava metallikiekko. Naisilla on kaibaukin lisäksi ulum '
               + 'suku hiuksissa, pitkäpiikkinen sasuit-kampa ja mortene-kaulanauha. '
               + 'Kaikki esiintyvät paljain jaloin, olkapäillään salenda-huivi.',
-          lyhyt: 'Atsaben 1930-luvun kaibauk- ja belak-korujen muotoja mukaileva tekoälykuvitus museokokoelmasta.',
+          lyhyt: 'Atsaben 1930-luvun kaibauk- ja belak-korujen muotoja mukaileva tekoälyn havainnekuva museokokoelmasta.',
           selite: 'Atsaben noin vuoden 1930 kaibauk- ja belak-korujen muotoja '
-            + 'mukaileva tekoälykuvitus. Referenssit ovat Museu do Orienten '
+            + 'mukaileva tekoälyn havainnekuva. Referenssit ovat Museu do Orienten '
             + 'kokoelmasta.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: e-Cultura — '
             + 'Museu do Oriente, kaibauk ja belak; Wikimedia Commons — Belak, '
@@ -59383,7 +59428,7 @@ export const MAA_KATEGORIAT = {
               + 'siitä alkoivat ensimmäiset järjestelmälliset tutkimukset levän '
               + 'kasvattamisesta ravinnoksi 1970-luvulla.',
           selite: 'Dihé-leväkakkujen kuivatusta Tšadjärven alueella '
-            + 'havainnollistava tekoälykuvitus.',
+            + 'tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FAO — '
             + 'spirulinan kuvagalleria; FAO — Spirulina-raportti i0424e',
         },

@@ -2385,7 +2385,7 @@ export const ELAINTAKYT = {
       {
         url: `${ELAINTAKY_KUVAJUURI_0709}elain-fji-fidzinleguaani-r20260907-v3.jpg`,
         kuvateksti: 'Nauhaleguaani (Brachylophus fasciatus) lehvästössä '
-          + 'Lau-saarten ympäristöä mukailevassa kuvituksessa.',
+          + 'Lau-saarten ympäristöä mukailevassa havainnekuvassa.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
           + 'Iguana Specialist Group — Iguana Species',
         lahdeUrl: 'https://www.iucn-isg.org/species/iguana-species/',
@@ -2417,9 +2417,9 @@ export const ELAINTAKYT = {
     kuvat: [
       {
         url: `${ELAINTAKY_KUVAJUURI_0709}elain-slb-ducorpsinkakadu-r20260907-v1.jpg`,
-        lyhyt: 'Ducorpsinkakadu pitää nokassaan pähkinää Salomonsaarten metsäkuvituksessa.',
+        lyhyt: 'Ducorpsinkakadu pitää nokassaan pähkinää Salomonsaarten metsää mukailevassa havainnekuvassa.',
         kuvateksti: 'Ducorpsinkakadu pitää nokassaan pyöreää pähkinää '
-          + 'Salomonsaarten metsäympäristöä mukailevassa kuvituksessa.',
+          + 'Salomonsaarten metsäympäristöä mukailevassa havainnekuvassa.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell '
           + 'BirdNet — Cacatua ducorpsii; Avibase — Cacatua ducorpsii',
         lahdeUrl: 'https://birdnet.cornell.edu/taxonomy/species/Cacatua%20ducorpsii',

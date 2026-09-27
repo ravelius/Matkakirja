@@ -338,6 +338,22 @@ jobs:
           fi
           printf '%s' "$POLLO_KEHITTAJAKOODI" | "$WRANGLER" secret put POLLO_KEHITTAJAKOODI --config "$POLLO_ASETUS"
 
+      # PUHEMOOTTORIN TARKISTUS (Fable 27.9.2026): kun xAI-avain on
+      # asetettu, julkaistun workerin on vastattava puheeseen xAI:lla
+      # (x-puhe-moottori: xai) — muuten luenta on hiljaa pudonnut
+      # OpenAI:lle eikä sitä kuulisi kukaan. Ilman avainta ohitetaan.
+      - name: Tarkista puhemoottori (xai)
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${XAI_API_KEY:-}" ] || [ -z "${POLLO_OSOITE:-}" ]; then
+            echo "XAI_API_KEY tai workerin osoite puuttuu — ohitetaan."
+            exit 0
+          fi
+          origin=$(printf '%s' "$POLLO_ORIGINIT" | cut -d, -f1)
+          node tools/pollo/tarkista-puhemoottori.mjs "$POLLO_OSOITE" "$origin" xai
+
       - name: Kerro mitä julkaistiin
         if: success()
         run: |

@@ -367,6 +367,22 @@ export function lepokerroksenTaso(tasot, tarvePxAste, teravyys = LEPOKERROS_TERA
   return jarjestys[jarjestys.length - 1] ?? null;
 }
 
+/*
+ * SAMA POHJA ERI NIMELLÄ (Karttaseppä 27.9.2026, Z10-ketju). Syvä sarja
+ * lisää tasot z9–z10 uuteen versioon (2026-09-26s-pohja), jonka z0–z8
+ * on kopioitu tavulleen edellisestä pohjasta. Pallon sarja on poltettu
+ * juuri noista z0–z8-laatoista, joten se kelpaa: luettelo kertoo sen
+ * kentässä `pohja.kopio = { versio, tasot }`. Tasoista tarkistetaan,
+ * että kopio kattaa pallon lähteen (z0–z8); muuten vaaditaan sama versio.
+ */
+const PALLON_LAHDETASOT = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+export function samaPohja(pallonVersio, pyramidi) {
+  if (pallonVersio === pyramidi?.versio) return true;
+  const kopio = pyramidi?.pohja?.kopio;
+  return Boolean(kopio?.versio) && kopio.versio === pallonVersio
+    && Array.isArray(kopio.tasot) && PALLON_LAHDETASOT.every((z) => kopio.tasot.includes(z));
+}
+
 /**
  * Mitkä kerrokset lepokerros saa piirtää, kun pallon sarja (laatat.json)
  * ja pyramidi (pyramidi.json) ovat nämä. Pohja vaatii saman version;
@@ -378,7 +394,7 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null,
   poltetutNostot = laattakerroksenKokeet().has('poltetutnostot'),
 } = {}) {
   if (!pallonLuettelo?.versio || !pyramidi?.versio) return null;
-  if (pallonLuettelo.versio !== pyramidi.versio) return null;
+  if (!samaPohja(pallonLuettelo.versio, pyramidi)) return null;
   const viivat = pallonLuettelo.viivat ?? null;
   const nostot = pallonLuettelo.nostot ?? null;
   if (viivat && viivat !== (pyramidi.viivataso?.versio ?? null)) return null;
@@ -890,6 +906,27 @@ export const LAATTAKERROS_TUKI_LOITONNUSRAJA = 0.04;
  */
 export const LAATTAKERROS_TUKI_VARA = 0.75;
 export const LAATTAKERROS_LAATTAKATTO_TUKI = 24;
+
+/*
+ * TUKI MAHTUU TAVUKIINTIÖÖN TAI SITÄ EI OTETA (Pelikoodari 27.9.2026,
+ * docs/raportit/z10-web-lahizoomi-20260927.md). Tukilaatta ei ole
+ * näkyvä, joten LRU:n tavukatto saa purkaa sen. Kun NÄKYVÄT laatat
+ * yksin täyttävät kosketuslaitteen 96 Mt:n kiintiön (puhelin z9:llä
+ * Pariisissa: 68 näkyvää), LRU purki koko tuen joka päivityksellä ja
+ * seuraava päivitys pyysi sen uudestaan — mitattu 68 z7-tukilaattaa
+ * ~17 000 kertaa minuutissa. Nyt tukitaso hyväksytään vain, jos sen
+ * laatat mahtuvat kiintiöön näkyvien lisäksi; muuten kokeillaan
+ * karkeampaa tasoa (neljäsosa laatoista), ja jos mikään ei mahdu,
+ * tukea ei oteta lainkaan.
+ *
+ * @param {number} nakyvienTavut näkyvien laattojen tekstuuritavut (arvio lataamattomille)
+ * @param {number} tukia tukitason laattojen määrä
+ * @param {number} laatanTavut yhden laatan tekstuuritavut
+ * @param {number} tavukatto kerroksen tavukiintiö
+ */
+export function tukiMahtuu(nakyvienTavut, tukia, laatanTavut, tavukatto) {
+  return nakyvienTavut + tukia * laatanTavut <= tavukatto;
+}
 /** Kerman odotus, kun tarkka suoja ei ole vielä saapunut (ks. valmistele). */
 export const KERMAN_ODOTUS_MS = 200;
 export const KERMAN_ODOTUS_KERTOJA = 25;
@@ -2213,7 +2250,7 @@ function maalaaKermaMaamaskilla(ctx, {
 }
 
 /*
- * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js poistettu 27.9.2026 — piirtokyky jäi ilman kytkentää;
  * prototyyppi kehittäjälipun takana). Kohdemaan renkaiden SISÄLLÄ
  * maalataan kevyt kerma (`tasoitus.sumu.peitto`, 0,35) kaikkialle paitsi
  * käytyjen kaupunkien ympärille: jokainen aukko on ellipsi laudan
@@ -4259,6 +4296,10 @@ export function luoLaattakerros({
      */
     const tuet = new Set();
     {
+      // Kiintiölaskenta (ks. tukiMahtuu): lataamattoman laatan tavut arvioidaan mipmapeineen.
+      const laatanArvio = Math.round(koko * koko * 4 * (4 / 3));
+      let nakyvienTavut = 0;
+      for (const avain of nakyvat) nakyvienTavut += laatat.get(avain)?.tavut || laatanArvio;
       const tukiVaraLat = LAATTAKERROS_TUKI_VARA * (alue.lat1 - alue.lat0);
       const tukiVaraLon = LAATTAKERROS_TUKI_VARA * (alue.lon1 - alue.lon0);
       const tukialue = {
@@ -4282,6 +4323,7 @@ export function luoLaattakerros({
         const ehdokkaat = tukikartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(tukitaso, l.sarake, l.rivi), pov));
         if (!ehdokkaat.length) break;
         if (ehdokkaat.length > LAATTAKERROS_LAATTAKATTO_TUKI) continue;
+        if (!tukiMahtuu(nakyvienTavut, ehdokkaat.length, laatanArvio, tavukatto())) continue;
         const tukiPpu = tukitaso.pikseliaPerYksikko;
         const tukiKeskiX = (((keski.lng - pyramidi.projektio.lon0) / 360) * pyramidi.projektio.leveys - pyramidi.arkki.x) * tukiPpu;
         const tukiKeskiY = (laudanY(keski.lat) - pyramidi.arkki.y) * tukiPpu;

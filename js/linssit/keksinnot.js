@@ -866,7 +866,7 @@ export const KEKSINNOT = [
       asento: '30% top',
       selite: 'Isoisä viivähtää arkun vieressä. Vaunun ikkunassa näkyvä '
         + 'saattaja vastaa hänen pieneen hyvästieleeseensä.',
-      lahde: 'Kuvaputken generoitu valokuva',
+      lahde: 'Matkakirjan havainnekuva',
     },
     /*
      * HAVAINNEKUVA KARTAN PÄÄLLE TEKSTILAATIKON TILALLE (omistaja
@@ -889,7 +889,7 @@ export const KEKSINNOT = [
       selite: 'Isoisä istuu teehuoneen hämärässä ja seuraa, kuinka '
         + 'teeammattilainen näyttää lehtiä tarjottimelta. Käytössä taittunut '
         + 'vedos säilyttää yhteisen hetken mutta kadottaa isoisän kasvot varjoon.',
-      lahde: 'Kuvaputken generoitu valokuva',
+      lahde: 'Matkakirjan havainnekuva',
     },
     /*
      * KUVAKIERTO (omistaja 4.9.2026 iltapäivä: *"ne itseasiassa voisivat
@@ -911,7 +911,7 @@ export const KEKSINNOT = [
         ulkoinen: true,
         selite: 'Isoisä kättelee lautturia Bombayn laiturilla. Kuva on hänen '
           + 'matka-arkustaan; kasvot jäävät katoksen varjoon.',
-        lahde: 'Kuvaputken generoitu valokuva',
+        lahde: 'Matkakirjan havainnekuva',
       },
     ],
     /*

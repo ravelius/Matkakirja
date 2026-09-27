@@ -123,9 +123,6 @@ import {
 import * as laattaApi from '../pallolaatat.js';
 import { luoKameraloki } from './kameraloki.js';
 import { luoSulavuusmittari } from './sulavuusmittari.js';
-import {
-  SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
-} from './sumu.js';
 import { LEVON_ESTEET, luoKartanLiike } from '../kartta-liike.js';
 import { asennaLepopiirto, lepopiirtoKaytossa } from './lepopiirto.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
@@ -3045,8 +3042,6 @@ export async function avaaPallolauta(ui) {
   const napautaNosto = (osuma) => {
     if (ui.dead || ui.busy || !osuma) return false;
     heraa();
-    // Löytämisen sumu: avaaminen mustaa luonnoksen (js/pallolauta/sumu.js).
-    if (sumuPaalla() && merkitseLoydetyksi(osuma.id)) pyydaLadonta();
     osuma.avaa(ankkuri(osuma.lat, osuma.lng));
     return true;
   };
@@ -4331,17 +4326,22 @@ export async function avaaPallolauta(ui) {
    * PAIKKA VÄISTÄÄ: nostojen ikonit ja muste, kaupungin piste ja
    * nappula sekä ruudun kalusteet (Pulu, Liiku, paikkarivi —
    * ruudunKalusteet). Asennot kokeillaan järjestyksessä yläoikea,
-   * ylävasen, oikea, vasen, alaoikea; jos mikään ei mahdu, kutsu jää
-   * pois (ei peitä mitään). Piiloon, kun kamera on maatasoa kauempana
-   * (nostojen karttakerroin < KUTSUN_KERROIN), linssissä, lennolla ja
-   * aloitusnäkymässä.
+   * ylävasen, oikea, vasen, alaoikea. Piiloon, kun kamera on maatasoa
+   * kauempana (nostojen karttakerroin < KUTSUN_KERROIN), linssissä,
+   * lennolla ja aloitusnäkymässä.
+   *
+   * LÄHELLÄ KAUPUNKIA (omistaja 27.9.2026 klo 11.2x, v2296:n palaute;
+   * natiivin hyväksytty malli Natiivi-UI 11a3c43a): renkaat 8/20/36 px
+   * (ennen 16/40/70/100, jolloin Pariisissa kutsu karkasi kauas). Jos
+   * mikään asento ei ole vapaa, TOINEN KIERROS väistää vain ruudun
+   * kalusteet sekä kaupungin pisteen ja nappulan — kutsu saa peittää
+   * nostomerkin, mutta pysyy kaupungin vieressä.
    */
   const KUTSUN_KOKO = 64;
   const KUTSUN_KERROIN = 0.95;
   // Asennot etäisyysrenkaittain (lähin ensin), kussakin renkaassa yläoikea
-  // → ylävasen → oikea → vasen → alaoikea: tiheässä kaupungissa (Pariisi)
-  // lähin vapaa kohta löytyy vasta kauempaa.
-  const KUTSUN_ASENNOT = [16, 40, 70, 100].flatMap((v) => [
+  // → ylävasen → oikea → vasen → alaoikea.
+  const KUTSUN_ASENNOT = [8, 20, 36].flatMap((v) => [
     { dx: v, dy: -v - KUTSUN_KOKO }, { dx: -v - KUTSUN_KOKO, dy: -v - KUTSUN_KOKO },
     { dx: v + 4, dy: -KUTSUN_KOKO / 2 }, { dx: -v - 4 - KUTSUN_KOKO, dy: -KUTSUN_KOKO / 2 },
     { dx: v, dy: v },
@@ -4389,16 +4389,18 @@ export async function avaaPallolauta(ui) {
     const W = kotelo.clientWidth;
     const H = kotelo.clientHeight;
     // Kaupungin piste ja nappula (seisoo pisteen päällä, n. 44 px ylös).
-    const esteet = [...kiinteaMuste, ...omaMuste, ...ruudunKalusteet(),
-      { x0: p.x - 14, y0: p.y - 46, x1: p.x + 14, y1: p.y + 10 }];
-    let valittu = null;
-    for (const a of KUTSUN_ASENNOT) {
-      const r = { x0: p.x + a.dx, y0: p.y + a.dy, x1: p.x + a.dx + KUTSUN_KOKO, y1: p.y + a.dy + KUTSUN_KOKO + 14 };
-      if (r.x0 < 4 || r.y0 < 4 || r.x1 > W - 4 || r.y1 > H - 4) continue;
-      if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
-      valittu = { a, r };
-      break;
-    }
+    const nappula = { x0: p.x - 14, y0: p.y - 46, x1: p.x + 14, y1: p.y + 10 };
+    const kalusteet = ruudunKalusteet();
+    const etsi = (esteet) => {
+      for (const a of KUTSUN_ASENNOT) {
+        const r = { x0: p.x + a.dx, y0: p.y + a.dy, x1: p.x + a.dx + KUTSUN_KOKO, y1: p.y + a.dy + KUTSUN_KOKO + 14 };
+        if (r.x0 < 4 || r.y0 < 4 || r.x1 > W - 4 || r.y1 > H - 4) continue;
+        if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
+        return { a, r };
+      }
+      return null;
+    };
+    const valittu = etsi([...kiinteaMuste, ...omaMuste, ...kalusteet, nappula]) ?? etsi([...kalusteet, nappula]);
     if (!valittu) return tyhjaa();
     merkit.aseta('kaupunkikortinkutsu', [{
       avain: `kaupunkikortinkutsu:${city.id}`,
@@ -5015,8 +5017,6 @@ export async function avaaPallolauta(ui) {
 
   /* ---- merkit pelitilasta ------------------------------------------- */
   let merkkiAvain = null;
-  /** Löytämisen sumu: avain, jolla käytyjen maiden rajat viimeksi laskettiin. */
-  let sumunRajaAvain = null;
   /** posKey siitä paikasta, jossa nappula viimeksi NÄHTIIN laudalla. */
   let nappulanPaikka = null;
   const merkitseNappulanPaikka = (pos) => { nappulanPaikka = pos ? posKey(pos) : null; };
@@ -5296,43 +5296,6 @@ export async function avaaPallolauta(ui) {
      * `poltettu:true` ensimmäisen kameran liikkeen jälkeen.
      */
     if (maaVaihtui) setTimeout(() => { if (!kuori.hidden) ladoLevossa(); }, 0);
-    /*
-     * LÖYTÄMISEN SUMU (prototyyppi, js/pallolauta/sumu.js): kohdemaan
-     * käymättömien kaupunkien seudut kermalla (laattapyramidi
-     * asetaSisasumu → pallolaatat maalaaSisasumu) ja käymättömien
-     * maiden rajat vaaleampina (pallovektorit asetaSumu). Avain =
-     * maa + käydyt kaupungit; molemmat päivittyvät vain sen vaihtuessa.
-     */
-    if (sumuPaalla()) {
-      const { game } = ui;
-      const kaydytIdt = [...(game.world?.visited ?? [])];
-      const nyt = game.cityOf?.();
-      if (nyt?.id && !kaydytIdt.includes(nyt.id)) kaydytIdt.push(nyt.id);
-      const sumuAvain = `${korostusIso ?? '-'}|${kaydytIdt.sort().join(',')}`;
-      // Maan renkaat merentakaisten suodattimeen (sumu.js mantereenKaupungit);
-      // ne saapuvat laiskasti, joten avain erottaa tilan ilman renkaita.
-      const renkaat = korostusIso ? pallonKorostusRenkaat(korostusIso) : [];
-      const aukot = korostusIso
-        ? sisasumunAukot({ iso: korostusIso, game, lauta: PALLO_LAUTA, renkaat })
-        : null;
-      const sisasumunAvain = `${sumuAvain}|r${renkaat.length}`;
-      const sumuVaihtui = asetaSisasumu(aukot ? { ...aukot, peitto: SISASUMUN_PEITTO, avain: sisasumunAvain } : null);
-      if (sumuVaihtui) heraa();
-      if (sumuAvain !== sumunRajaAvain) {
-        sumunRajaAvain = sumuAvain;
-        const cityCountry = game.pack?.map?.cityCountry ?? {};
-        const kaydytMaat = [...new Set(kaydytIdt.map((id) => cityCountry[id]).filter(Boolean))]
-          .filter((iso) => iso !== korostusIso);
-        const renkaitaOli = renkaat.length > 0;
-        lataaMaapolygonit().then((data) => {
-          if (!data || sumuAvain !== sumunRajaAvain || ui.dead) return;
-          const viivat = kaydytMaat.flatMap((iso) => maanRenkaatAsteina(data, iso, pallonAsteet));
-          vektorit?.asetaSumu?.({ paalla: true, avain: sumuAvain, viivat, kerroin: SUMUN_RAJAKERROIN });
-          // Renkaat saapuivat vasta nyt: sisäsumu uudestaan mantereen tiedolla.
-          if (!renkaitaOli && korostusIso && pallonKorostusRenkaat(korostusIso).length) paivita();
-        }).catch(() => {});
-      }
-    }
     if (maaVaihtui || (korostusIso && !maanLaatikko)) {
       if (!korostusIso) {
         maanLaatikko = null;

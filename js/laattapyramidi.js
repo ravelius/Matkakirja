@@ -207,6 +207,8 @@ const NOUTO_VIIVE_MS = 300;
  * TERÄVÄMPI kuin tarkka taso: pelkkä kustannus ilman hyötyä.
  */
 const POHJA_SYVIN = 3;
+// Syvin taso, joka on poltettu koko maailmalle; sen alla tasot ovat harvoja.
+const KOKO_MAAILMA_SYVIN = 8;
 
 /**
  * Pohjakerroksen taso: AINA sama, tai ei pohjaa lainkaan.
@@ -229,8 +231,18 @@ const POHJA_SYVIN = 3;
  * kerroksesta tulee alin (ks. `alin`), eikä se enää heitä pois sitä,
  * mikä on ruudulla.
  */
-function pohjanTaso(tasot, taso) {
+export function pohjanTaso(tasot, taso) {
   if (taso.z <= POHJA_SYVIN) return null;
+  /*
+   * SYVÄT TASOT OVAT HARVOJA (Z10-ketju 27.9.2026): z9–z10 on poltettu
+   * vain kaupunkien ±1° ja maakuntamaiden alalle, ja muualla laatasto on
+   * nollaa. Pohjaksi otetaan silloin z8 (koko maailma), jotta syvän alan
+   * ulkopuolella näkyy z8 venytettynä eikä z3:n mössö.
+   */
+  if (taso.z > KOKO_MAAILMA_SYVIN) {
+    const z8 = tasot.find((t) => t.z === KOKO_MAAILMA_SYVIN);
+    if (z8) return z8;
+  }
   return tasot.find((t) => t.z === POHJA_SYVIN) ?? null;
 }
 
@@ -578,7 +590,12 @@ export function pyramidinArkki(lauta) {
 /* ------------------------------------------------------------ luettelo */
 
 /*
- * PELIN SYVIN TASO (Karttaseppä 23.9.2026). Ämpärin luettelo voi kuvata
+ * PELIN SYVIN TASO 10 (Karttaseppä 27.9.2026, Z10-ketju): z9–z10 on
+ * poltettu kaupungeille ±1° ja 138 maakuntamaalle (versio
+ * 2026-09-26s-pohja). Harvan tason puuttuvat laatat eivät ole
+ * laatastossa, joten niitä ei pyydetä; alle piirtyy z8 (pohjanTaso).
+ *
+ * Alkuperäinen perustelu kattoon 8 (Karttaseppä 23.9.2026). Ämpärin luettelo voi kuvata
  * tasot z9–z10: ne poltetaan vain alueelle (Ranska) 30 metrin
  * korkeusaineistosta natiivipelin pallosarjaa Z9–Z11 varten
  * (tools/generoi-laattapyramidi.mjs SYVÄT TASOT). Selainpeli EI käytä
@@ -589,7 +606,7 @@ export function pyramidinArkki(lauta) {
  * (tasokartta, pallon lepokerros, pallolauta) saa luettelonsa
  * haePyramidinLuettelo()-kutsusta ja näkee vain tasot z0–z8.
  */
-export const PELIN_SYVIN_TASO = 8;
+export const PELIN_SYVIN_TASO = 10;
 
 /**
  * Luettelo pelin käyttöön: tasot, joiden z ylittää PELIN_SYVIN_TASO:n,
@@ -2094,7 +2111,7 @@ let variLiike = false;
 let variLiikeKohde = null;
 
 /*
- * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js poistettu 27.9.2026 — piirtokyky jäi ilman kytkentää;
  * prototyyppi): lauta antaa käytyjen kaupunkien aukot laudan
  * yksiköissä (sisasumunAukot) ja peiton; tasoitus kantaa ne laatoille
  * (js/pallolaatat.js maalaaSisasumu). Avaimessa mukana, jotta laatat

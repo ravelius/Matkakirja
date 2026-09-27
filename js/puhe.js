@@ -39,6 +39,7 @@ import { PUHEVOIMA_OLETUS, puheVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { akustiikka, tehosteketju } from './tehosteketju.js';
+import { luoMp3Virta } from './puhevirta.js';
 
 /** Persoonat, jotka worker tuntee. Muu arvo lukee kertojan äänellä. */
 export const PUHE_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
@@ -88,14 +89,36 @@ export function tallennaPuheAsetukset(asetukset) {
  * 27.9. klo 00.25); tämä lista on workerin XAI_AANET-taulun NÄYTTÖKOPIO
  * (tools/pollo/worker.js) — tests/puheohjeet.test.mjs valvoo, että ne
  * ovat samat. Valinta tallentuu samaan laitekohtaiseen persoonatauluun
- * kuin työhuoneen säädöt (kaikille kolmelle persoonalle kerralla), ja
- * worker tottelee sitä vain kehittäjäkoodilla kuten muitakin säätöjä.
+ * kuin työhuoneen säädöt (kaikille kolmelle persoonalle kerralla).
+ * 27.9.2026 klo 09.3x (omistaja): valinta on pelaajan — nostokortin
+ * säätörattaassa (js/lukija.js), ei enää kehittäjävalikossa — ja worker
+ * tottelee listan ääntä ilman kehittäjäkoodia.
  */
 export const STRIIMIAANET_XAI = ['altair', 'ara', 'atlas', 'aurora', 'carina', 'castor',
   'celeste', 'cosmo', 'eve', 'helios', 'helix', 'iris', 'kepler', 'leo',
   'liora', 'lumen', 'luna', 'lux', 'naksh', 'orion', 'perseus', 'rex',
   'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
 export const STRIIMIAANI_OLETUS = 'ara';
+
+/*
+ * ÄÄNTEN PELINIMET (omistaja 27.9.2026 klo 10.2x, sitova): pelaaja näkee
+ * vain pelinimen — moottorin äänitunnus pysyy sisäisenä (pyyntö, worker,
+ * välimuistiavain). Yksi taulu, tests/lukija.test.mjs valvoo, että
+ * jokainen STRIIMIAANET_XAI-ääni on nimetty. Järjestys on valikon järjestys.
+ */
+export const AANTEN_PELINIMET = {
+  ara: 'Aino', aurora: 'Aamu', carina: 'Kerttu', celeste: 'Siiri', eve: 'Helmi',
+  iris: 'Ilta', liora: 'Lyyli', luna: 'Vieno', ursa: 'Saima',
+  altair: 'Aarne', atlas: 'Antero', castor: 'Kalle', cosmo: 'Kosti', helios: 'Heikki',
+  helix: 'Herman', kepler: 'Kaarlo', leo: 'Lauri', lumen: 'Lassi', lux: 'Luukas',
+  naksh: 'Niilo', orion: 'Onni', perseus: 'Pekka', rex: 'Reino', rigel: 'Risto',
+  sal: 'Sulo', sirius: 'Simo', zagan: 'Sakari', zenith: 'Väinö',
+};
+
+/** Äänitunnuksen pelinimi (tuntematon → oletusäänen nimi). */
+export function aanenPelinimi(aani) {
+  return AANTEN_PELINIMET[aani] ?? AANTEN_PELINIMET[STRIIMIAANI_OLETUS];
+}
 const STRIIMIN_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
 
 /** Kehittäjän valitsema xAI-striimiääni, tai null = workerin oletus (ara). */
@@ -502,9 +525,9 @@ const NOPEUS_AVAIN = 'matkakirja-puhe-nopeus';
  * (nopeusTunniste), joten vanhalla 1,0-nopeudella generoidut palat
  * eivät enää osu — puhe generoituu uudelleen ensikuuntelulla.
  */
-const NOPEUS_OLETUS = 1.15;
-const NOPEUS_MIN = 0.6;
-const NOPEUS_MAX = 1.6;
+export const NOPEUS_OLETUS = 1.15;
+export const NOPEUS_MIN = 0.6;
+export const NOPEUS_MAX = 1.6;
 
 /** Lukijaäänen nopeus (1 = normaali). */
 export function puheenNopeus() {
@@ -534,6 +557,46 @@ function nopeusTunniste() {
   return nopeus !== 1 ? `|${nopeus}` : '';
 }
 
+/*
+ * PUHEPIIRI 24 KHZ:LLÄ (progressiivinen puhe, omistaja 27.9.2026). Puhe
+ * tulee mp3:na 24 kHz:llä (xAI ja OpenAI), ja virta dekoodataan
+ * segmentteinä (js/puhevirta.js). Segmenttien sauma on bittitarkka vain,
+ * kun dekoodaus ei näytteistä: 48 kHz:n piirissä jokainen segmentti
+ * näytteistettiin erikseen ja rajoille jäi mitattuna 0,04–0,13:n hyppy.
+ * 24 kHz ei hukkaa mitään (lähde on jo 24 kHz). Jos selain ei suostu
+ * taajuuteen, piiri syntyy oletuksella ja pala dekoodataan kokonaisena
+ * kuten ennen (virtaKaytossa).
+ */
+export const PUHEPIIRIN_TAAJUUS = 24000;
+function luoPiiri(AC) {
+  try {
+    return new AC({ sampleRate: PUHEPIIRIN_TAAJUUS });
+  } catch {
+    return new AC();
+  }
+}
+
+/*
+ * Progressiivisen soiton vara-avain: `?puhevirta=0` tai localStorage
+ * `matkakirja-puhevirta` = '0' palauttaa kokonaisen palan dekoodauksen
+ * (vertailumittaus ja hätävara laitteelle, jolla sauma ei toimi).
+ */
+export const PUHEVIRTA_AVAIN = 'matkakirja-puhevirta';
+function virtaKaytossa() {
+  if (!piiri || piiri.sampleRate !== PUHEPIIRIN_TAAJUUS) return false;
+  try {
+    if (new URLSearchParams(window.location?.search ?? '').get('puhevirta') === '0') return false;
+    if (window.localStorage?.getItem(PUHEVIRTA_AVAIN) === '0') return false;
+  } catch { /* yksityinen tila */ }
+  return true;
+}
+
+/** Lukijaäänen analysaattori (VU-mittari), tai null ennen kuin piiri on kytketty. */
+let vuAnalysaattori = null;
+export function puheMittari() {
+  return vuAnalysaattori;
+}
+
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
 function kytkeVahvistin() {
   if (kytketty || typeof window === 'undefined') return;
@@ -542,7 +605,7 @@ function kytkeVahvistin() {
   const AC = window.AudioContext || window.webkitAudioContext;
   if (!AC) return;
   try {
-    piiri = piiri ?? new AC();
+    piiri = piiri ?? luoPiiri(AC);
   } catch {
     return;
   }
@@ -570,7 +633,20 @@ function kytkeVahvistin() {
       kompressori.release.value = 0.25;
       for (const lahde of lahteet) lahde.connect(vahvistin);
       vahvistin.connect(kompressori);
-      kompressori.connect(piiri.destination);
+      /*
+       * VU-MITTARI (nostokortin luenta, omistaja 27.9.2026 klo 09.3x):
+       * analysaattori kompressorin ja kaiuttimien välissä näkee kaiken
+       * lukijaäänen juuri sellaisena kuin se kuuluu (js/kaiutinmittari.js).
+       */
+      try {
+        vuAnalysaattori = piiri.createAnalyser();
+        vuAnalysaattori.fftSize = 512;
+        kompressori.connect(vuAnalysaattori);
+        vuAnalysaattori.connect(piiri.destination);
+      } catch {
+        vuAnalysaattori = null;
+        kompressori.connect(piiri.destination);
+      }
       kytketty = true;
     } catch { /* elementti oli jo kytketty tai piiri kuoli */ }
   };
@@ -730,6 +806,30 @@ async function sailioAvain(persoona, teksti) {
   }
 }
 
+/*
+ * LUKIJAMITTARI (Fable 27.9.2026 klo 07.2x: korvakuuntelu ei saa olla
+ * ainoa todiste). Viimeisin haettu pala: moottori ja lähde workerin
+ * otsakkeista (x-puhe-moottori xai|openai, x-puhe-lahde
+ * generoitu|reuna|r2; laitteen oma säilö = 'laite'), ensimmäisen tavun
+ * ja koko palan aika millisekunteina pyynnöstä sekä merkkimäärä.
+ * Kehittäjävalikko (js/main.js) näyttää sen ja kuuntelee tapahtumaa
+ * PUHEMITTARI_TAPAHTUMA. Mittari on pelkkää tietoa — luenta ei lue sitä.
+ */
+export const PUHEMITTARI_TAPAHTUMA = 'matkakirja-puhemittari';
+let puhemittari = null;
+
+/** Viimeisimmän haetun palan mittari tai null. */
+export function viimeisinPuhe() {
+  return puhemittari;
+}
+
+function kirjaaPuhe(tieto) {
+  puhemittari = { ...tieto, aika: Date.now() };
+  try {
+    window.dispatchEvent(new CustomEvent(PUHEMITTARI_TAPAHTUMA, { detail: puhemittari }));
+  } catch { /* ei selainta (testit) */ }
+}
+
 /**
  * Hakee yhden palan puheeksi ja palauttaa blob-osoitteen.
  *
@@ -741,13 +841,41 @@ async function sailioAvain(persoona, teksti) {
  * @param {string} persoona workerin persoonataulun avain
  * @param {string|null} sailio pysyvän säilön lohko, null = ei säilötä
  */
-async function haePala(teksti, persoona, sailio = null) {
+async function haePala(teksti, persoona, sailio = null, kuulija = null) {
   // Laitekohtaiset säädöt mukaan avaimeen ja pyyntöön: säädetty ääni ei
   // saa soida vanhan äänen välimuistista eikä päinvastoin.
   const saadot = puheenSaadot(persoona);
   const saatoTunniste = `${saadot ? `${saadot.aani ?? ''}|${saadot.ohje ?? ''}` : ''}${nopeusTunniste()}`;
   const avain = `${persoona}|${saatoTunniste}|${teksti}`;
   if (puheMuisti.has(avain)) return puheMuisti.get(avain);
+  /*
+   * KÄYNNISSÄ OLEVA HAKU JAETAAN (progressiivinen puhe 27.9.2026): jos
+   * esipuskuri tai edellinen kutsu hakee jo samaa palaa, uusi kuulija
+   * saa tähän asti tulleet tavut heti ja loput sitä mukaa — pala
+   * generoidaan kerran eikä soitto odota koko haun loppua.
+   */
+  const kesken = puheHautKesken.get(avain);
+  if (kesken) {
+    if (kuulija) {
+      for (const o of kesken.osat) kuulija(o);
+      kesken.kuulijat.add(kuulija);
+    }
+    return kesken.lupaus;
+  }
+  const tila = { osat: [], kuulijat: new Set(kuulija ? [kuulija] : []), lupaus: null };
+  tila.lupaus = haePalaVerkosta(teksti, persoona, sailio, saadot, saatoTunniste, avain, tila);
+  puheHautKesken.set(avain, tila);
+  try {
+    return await tila.lupaus;
+  } finally {
+    puheHautKesken.delete(avain);
+  }
+}
+
+/** Käynnissä olevat haut avaimittain (ks. haePala). */
+const puheHautKesken = new Map();
+
+async function haePalaVerkosta(teksti, persoona, sailio, saadot, saatoTunniste, avain, tila) {
 
   let kansio = null;
   let osoiteAvain = null;
@@ -760,6 +888,9 @@ async function haePala(teksti, persoona, sailio = null) {
         if (osuma) {
           const osoite = URL.createObjectURL(await osuma.blob());
           muistiin(avain, osoite);
+          kirjaaPuhe({
+            moottori: osuma.headers.get('x-puhe-moottori'), lahde: 'laite', ekaTavuMs: 0, valmisMs: 0, merkkeja: teksti.length,
+          });
           return osoite;
         }
       } catch {
@@ -775,6 +906,7 @@ async function haePala(teksti, persoona, sailio = null) {
   const otsakkeet = { 'content-type': 'application/json' };
   const koodi = saadot ? kehittajaKoodi() : null;
   if (koodi) otsakkeet['x-pollo-kehittaja'] = koodi;
+  const alku = performance.now();
   const vastaus = await fetch(POLLOPALVELIN, {
     method: 'POST',
     headers: otsakkeet,
@@ -793,15 +925,57 @@ async function haePala(teksti, persoona, sailio = null) {
   });
   if (!vastaus.ok) {
     if ([403, 404, 503].includes(vastaus.status)) estaPuhe();
-    throw new Error(`puhe ${vastaus.status}`);
-  }
-  if (kansio && osoiteAvain) {
-    // Kopio talteen ennen lukemista; täysi levy ei kaada luentaa.
+    const virhe = new Error(`puhe ${vastaus.status}`);
+    virhe.status = vastaus.status;
+    /*
+     * RAJA JA PALVELINVIRHE PYSÄYTTÄVÄT (27.9.2026): 429 (worker: päivä-
+     * tai kuukausiraja) ja 5xx eivät saa ohittaa virkettä äänettä eikä
+     * pudota laitteen ääneen — luenta pysähtyy ja workerin viesti näkyy
+     * kerran (js/lukija.js ilmoitaPuhevirhe).
+     */
+    virhe.pysayttaa = vastaus.status === 429 || vastaus.status >= 500;
     try {
-      await kansio.put(osoiteAvain, vastaus.clone());
-    } catch { /* säilö täynnä tai estetty */ }
+      virhe.viesti = (await vastaus.json())?.viesti ?? null;
+    } catch {
+      virhe.viesti = null;
+    }
+    throw virhe;
   }
-  const blob = await vastaus.blob();
+  // Kopio talteen rinnalla (klooni luetaan samaan aikaan kuin runko, joten
+  // mittarin ensimmäinen tavu on todellinen); täysi levy ei kaada luentaa.
+  const talteen = kansio && osoiteAvain
+    ? kansio.put(osoiteAvain, vastaus.clone()).catch(() => { /* säilö täynnä tai estetty */ })
+    : null;
+  // Runko luetaan paloina: ensimmäisen tavun aika mittariin ja palat
+  // kuulijoille heti (progressiivinen soitto, js/puhevirta.js).
+  const osat = tila.osat;
+  const jaa = (o) => {
+    osat.push(o);
+    for (const k of tila.kuulijat) {
+      try { k(o); } catch { /* kuulijan virhe ei kaada hakua */ }
+    }
+  };
+  let ekaTavu = null;
+  const lukija = vastaus.body?.getReader?.();
+  if (lukija) {
+    for (;;) {
+      const { done, value } = await lukija.read();
+      if (done) break;
+      ekaTavu ??= performance.now();
+      jaa(value);
+    }
+  } else {
+    jaa(new Uint8Array(await vastaus.arrayBuffer()));
+  }
+  await talteen;
+  const blob = new Blob(osat, { type: vastaus.headers.get('content-type') || 'audio/mpeg' });
+  kirjaaPuhe({
+    moottori: vastaus.headers.get('x-puhe-moottori'),
+    lahde: vastaus.headers.get('x-puhe-lahde'),
+    ekaTavuMs: Math.round((ekaTavu ?? performance.now()) - alku),
+    valmisMs: Math.round(performance.now() - alku),
+    merkkeja: teksti.length,
+  });
   const osoite = URL.createObjectURL(blob);
   muistiin(avain, osoite);
   return osoite;
@@ -871,12 +1045,17 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *   persoona?: string,
  *   sailio?: string|null pysyvän säilön lohko; null = ei säilötä
  *   onLoppu?: () => void,
- *   onVirhe?: (vaihe: 'alku'|'kesken') => void,
+ *   onVirhe?: (vaihe: 'alku'|'kesken', virhe?: Error) => void — virhe.pysayttaa
+ *     (429/5xx) ja virhe.viesti (workerin teksti) kertovat rajasta
  *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number,
  *     teksti: string|null, alku: number}) => void,
  *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
+ *   aloitusAlku?: number merkkikohta aloituskappaleessa: soitto alkaa
+ *     palasta, joka sisältää kohdan (keskeytetyn luennan jatko, onTila.alku)
  *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
  *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
+ *   yksiPuheenvuoro?: boolean kaikki lisätty teksti on yhtä kappaletta
+ *     (Pulun striimivastaus): palojen väliin virkeväli, ei kappaleväliä
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -890,14 +1069,14 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0, otsikkoKappaleet = null,
+  aloitusKappale = 0, aloitusAlku = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
   const AC = window.AudioContext || window.webkitAudioContext;
   if (!AC) return null;
   try {
-    piiri = piiri ?? new AC();
+    piiri = piiri ?? luoPiiri(AC);
   } catch {
     return null;
   }
@@ -913,6 +1092,7 @@ export function luoPuheSoitin({
    * (otsikkoKappaleet), koska soitin näkee vain paljasta tekstiä.
    */
   const OTSIKKOVALI = 0.95; // s — tauko ennen otsikolla alkavaa kappaletta
+  const VIRRAN_ALKUVARA = 0.45; // s — kesken olevan virran aloitusvara (ks. soitaPala)
   const otsikolliset = new Set(otsikkoKappaleet ?? []);
   const HAIVYTYS = 0.012; // s — mikrohäivytys sauman molemmin puolin
   const KYNNYS = 0.02; // hiljaisuuden huippuraja trimmauksessa
@@ -929,6 +1109,10 @@ export function luoPuheSoitin({
     kaynnissa: false,
     soiva: -1,
     kappaleita: 0,
+    // Virran myöhästymiset: osa ehti soittovuoroonsa vasta sen jälkeen (mittari).
+    katkoja: 0,
+    // [pala, osa, valmistui (piirin aika), vuoro, soitettiin] — mittaus.
+    virtaloki: [],
   };
   let vuorossa = 0; // seuraavaksi aikataulutettava pala
   let seuraavaAlku = 0; // piirin aika, johon seuraava pala liitetään
@@ -1000,8 +1184,11 @@ export function luoPuheSoitin({
     } catch { /* paneelin virhe ei saa kaataa luentaa */ }
   };
 
-  /** Puheen rajat puskurissa: hiljaisuus pois päistä, pieni jousto jää. */
-  const trimmaa = (puskuri) => {
+  /**
+   * Äänekkään puheen rajat puskurissa sekunteina: ensimmäinen ja viimeinen
+   * 20 ms:n ikkuna, jonka huippu ylittää kynnyksen. Hiljaisella null.
+   */
+  const aanirajat = (puskuri) => {
     const data = puskuri.getChannelData(0);
     const sr = puskuri.sampleRate;
     const ikkuna = Math.max(1, Math.round(sr * 0.02));
@@ -1019,25 +1206,75 @@ export function luoPuheSoitin({
         vika = raja;
       }
     }
-    // Pelkkää hiljaisuutta (testityngät): soitetaan sellaisenaan.
-    if (eka < 0) return { alku: 0, loppu: puskuri.duration };
-    return {
-      alku: Math.max(0, eka / sr - 0.02),
-      loppu: Math.min(puskuri.duration, vika / sr + 0.06),
-    };
+    return eka < 0 ? { eka: null, vika: null } : { eka: eka / sr, vika: vika / sr };
   };
 
+  /*
+   * ODOTUS: virran uusi osa, virran loppu tai ohjaus (hyppy, pysäytys,
+   * tauko) herättää aikatauluttajan. Varmuuden vuoksi herätys myös
+   * ajastimella, ettei mikään unohtunut kutsu jätä luentaa jumiin.
+   */
+  const odottajat = new Set();
+  const heratys = () => {
+    const kaikki = [...odottajat];
+    odottajat.clear();
+    for (const f of kaikki) f();
+  };
+  const odota = () => new Promise((valmis) => {
+    odottajat.add(valmis);
+    setTimeout(() => { odottajat.delete(valmis); valmis(); }, 400);
+  });
+
+  /*
+   * PALA ON VIRTA (progressiivinen puhe, omistaja 27.9.2026 klo 07.5x:
+   * "pala alkaa soida heti kun ensimmäiset tavut tulevat"). hae()
+   * käynnistää haun ja dekoodaa mp3:n segmentteinä sitä mukaa kuin
+   * tavuja tulee (js/puhevirta.js): v.osat kasvaa, v.valmis kertoo
+   * lopun. Välimuistista tuleva pala dekoodataan kokonaisena kuten
+   * ennen, samoin kaikki, jos piiri ei ole 24 kHz (virtaKaytossa).
+   */
   const hae = (indeksi) => {
     if (indeksi >= palat.length || haut.has(indeksi)) return;
-    haut.set(indeksi, (async () => {
-      const osoite = await haePala(palat[indeksi].teksti, persoona, sailio);
-      const raaka = await (await fetch(osoite)).arrayBuffer();
-      const puskuri = await piiri.decodeAudioData(raaka);
-      return { puskuri, ...trimmaa(puskuri) };
-    })());
-    // Hylkäys käsitellään aikatauluttajassa; tämä estää vain
-    // "unhandled rejection" -kohinan konsoliin.
-    haut.get(indeksi).catch(() => {});
+    const v = { osat: [], saapui: [], valmis: false, virhe: null };
+    haut.set(indeksi, v);
+    const lisaaOsa = (puskuri, alku, pituus) => {
+      // Koko puskuri (välimuisti, kokonainen dekoodaus): sellaisenaan.
+      if (alku === 0 && pituus === puskuri.length) {
+        v.osat.push(puskuri);
+        heratys();
+        return;
+      }
+      const kanavia = puskuri.numberOfChannels ?? 1;
+      const osa = piiri.createBuffer(kanavia, pituus, puskuri.sampleRate);
+      for (let c = 0; c < kanavia; c += 1) {
+        osa.copyToChannel(puskuri.getChannelData(c).subarray(alku, alku + pituus), c);
+      }
+      v.osat.push(osa);
+      v.saapui.push(piiri.currentTime);
+      heratys();
+    };
+    const virta = luoMp3Virta({
+      dekoodaa: (tavut) => piiri.decodeAudioData(tavut),
+      osa: lisaaOsa,
+      kokonaan: !virtaKaytossa(),
+    });
+    (async () => {
+      try {
+        const osoite = await haePala(palat[indeksi].teksti, persoona, sailio, (o) => virta.lisaa(o));
+        if (virta.tavuja()) {
+          await virta.loppu();
+        } else {
+          // Muistista tai laitteen säilöstä: koko pala on jo täällä.
+          const raaka = await (await fetch(osoite)).arrayBuffer();
+          const puskuri = await piiri.decodeAudioData(raaka);
+          lisaaOsa(puskuri, 0, puskuri.length);
+        }
+      } catch (virhe) {
+        v.virhe = virhe;
+      }
+      v.valmis = true;
+      heratys();
+    })();
   };
 
   const loppu = () => {
@@ -1047,18 +1284,139 @@ export function luoPuheSoitin({
     clearInterval(kello);
     kello = null;
     puraKetju();
+    heratys();
     onLoppu?.();
   };
 
+  const verhot = new Set();
   const pysaytaLahteet = () => {
     for (const lahde of lahteet) {
       try { lahde.onended = null; lahde.stop(); } catch { /* jo pysähtynyt */ }
       try { lahde.disconnect(); } catch { /* jo irti */ }
     }
     lahteet.clear();
+    for (const verho of verhot) {
+      try { verho.disconnect(); } catch { /* jo irti */ }
+    }
+    verhot.clear();
+    heratys();
   };
 
-  /** Liittää valmiit palat piirin aikajanalle, pari palaa kerrallaan. */
+  /**
+   * Soittaa yhden palan sitä mukaa kuin sen osat valmistuvat.
+   *
+   * Osat liitetään peräkkäin samalle aikajanalle ilman väliä (sauma on
+   * bittitarkka, ks. js/puhevirta.js), alun hiljaisuus jätetään pois ja
+   * yksi häivytysverho kattaa koko palan: sisään alussa, ulos puheen
+   * viimeisen äänekkään kohdan jälkeen. Palauttaa puheen loppuhetken
+   * piirin ajassa, tai 'keskeytyi', jos hyppy, pysäytys tai tauko ennen
+   * ensimmäistä ääntä vei vuoron.
+   */
+  const soitaPala = async (indeksi, v) => {
+    const keskeytyi = () => tila.peruttu || vuorossa !== indeksi;
+    let i = 0;
+    let ohitus = 0;
+    for (;;) {
+      if (keskeytyi() || tila.tauolla) return 'keskeytyi';
+      while (i < v.osat.length) {
+        const r = aanirajat(v.osat[i]);
+        if (r.eka !== null) {
+          ohitus = Math.max(0, r.eka - 0.02);
+          break;
+        }
+        i += 1; // kokonaan hiljainen alkuosa jää soittamatta
+      }
+      if (i < v.osat.length || v.valmis) break;
+      await odota();
+    }
+    if (v.virhe && !v.osat.length) throw v.virhe;
+    // Pelkkää hiljaisuutta (testityngät): soitetaan sellaisenaan.
+    const hiljainen = i >= v.osat.length;
+    if (hiljainen) {
+      i = 0;
+      ohitus = 0;
+    }
+    /*
+     * VIRRAN ALKUVARA: kesken oleva virta aloitetaan hieman myöhemmin kuin
+     * valmis pala, jotta seuraavat segmentit ehtivät dekoodautua ennen
+     * soittovuoroaan (mitattu 27.9.: ilman varaa kaksi 0,5 s:n katkoa alussa, 0,3 s:llä yksi 0,04–0,27 s:n katko joka toisessa ajossa — xAI:n virta tulee purskeina).
+     */
+    const alkuAika = Math.max(seuraavaAlku, piiri.currentTime + (v.valmis ? 0.08 : VIRRAN_ALKUVARA));
+    const verho = piiri.createGain();
+    verho.gain.setValueAtTime(0, alkuAika);
+    verho.gain.linearRampToValueAtTime(1, alkuAika + HAIVYTYS);
+    verho.connect(paate());
+    verhot.add(verho);
+    aloitusajat[indeksi] = { alku: alkuAika, loppu: Infinity };
+    const soitetut = [];
+    let kursori = alkuAika;
+    let ensimmainen = true;
+    let soimassa = 0;
+    for (;;) {
+      while (i < v.osat.length) {
+        const osa = v.osat[i];
+        const offset = ensimmainen ? ohitus : 0;
+        ensimmainen = false;
+        const kesto = osa.duration - offset;
+        if (kesto > 0) {
+          // Myöhästynyt osa (virta ei ehtinyt): ei soiteta menneisyyteen.
+          const aika = Math.max(kursori, piiri.currentTime + 0.02);
+          if (aika > kursori + 0.001) tila.katkoja += 1;
+          if (tila.virtaloki.length < 60) {
+            tila.virtaloki.push([indeksi, i, Number((v.saapui[i] ?? -1).toFixed(3)), Number(kursori.toFixed(3)), Number(aika.toFixed(3))]);
+          }
+          const lahde = piiri.createBufferSource();
+          lahde.buffer = osa;
+          lahde.connect(verho);
+          lahde.start(aika, offset, kesto);
+          soimassa += 1;
+          /*
+           * KERRAN PER LÄHDE: ended-tapahtuma saapui mitattuna kahdesti
+           * samalle lähteelle (Chromium, start kestolla), ja laskuri meni
+           * nollaan kesken palan — verho irtosi ja loppu pala oli mykkä
+           * (27.9.2026, kuulonäytteessä hiljaisuus 10,7 s:sta alkaen).
+           */
+          let paattyi = false;
+          lahde.onended = () => {
+            if (paattyi) return;
+            paattyi = true;
+            lahteet.delete(lahde);
+            soimassa -= 1;
+            if (!soimassa && v.valmis) {
+              verhot.delete(verho);
+              try { verho.disconnect(); } catch { /* jo irti */ }
+            }
+          };
+          lahteet.add(lahde);
+          soitetut.push({ aika, osa, offset });
+          kursori = aika + kesto;
+        }
+        i += 1;
+      }
+      if (v.valmis) break;
+      await odota();
+      if (keskeytyi()) return 'keskeytyi';
+    }
+    // Puheen loppu: viimeinen äänekäs kohta osien yli, pieni jousto perään.
+    let loppuAika = kursori;
+    if (!hiljainen) {
+      for (let k = soitetut.length - 1; k >= 0; k -= 1) {
+        const { aika, osa, offset } = soitetut[k];
+        const r = aanirajat(osa);
+        if (r.vika !== null && r.vika > offset) {
+          loppuAika = Math.min(kursori, aika + (r.vika - offset) + 0.06);
+          break;
+        }
+      }
+    }
+    loppuAika = Math.max(loppuAika, alkuAika + 0.05);
+    verho.gain.setValueAtTime(1, Math.max(alkuAika + HAIVYTYS, loppuAika - HAIVYTYS));
+    verho.gain.linearRampToValueAtTime(0, loppuAika);
+    aloitusajat[indeksi] = { alku: alkuAika, loppu: loppuAika };
+    return loppuAika;
+  };
+
+  /** Liittää palat piirin aikajanalle sitä mukaa kuin ne valmistuvat. */
   const aikatauluta = () => {
     if (aikataulutus) return;
     aikataulutus = (async () => {
@@ -1070,10 +1428,10 @@ export function luoPuheSoitin({
         // kerralla, jotta hyppy ja pysäytys pysyvät kevyinä.
         if (seuraavaAlku - piiri.currentTime > PUSKURI_S) return;
         const indeksi = vuorossa;
-        let pala;
+        let loppuAika;
         try {
-          pala = await haut.get(indeksi);
-        } catch {
+          loppuAika = await soitaPala(indeksi, haut.get(indeksi));
+        } catch (virhe) {
           // Ensimmäisen palan virhe → kutsuja voi valita varapolun
           // koko tekstille; myöhempi virhe päättää luennan siististi.
           const vaihe = tila.soiva < 0 && !lahteet.size ? 'alku' : 'kesken';
@@ -1083,32 +1441,14 @@ export function luoPuheSoitin({
           kello = null;
           pysaytaLahteet();
           puraKetju();
-          onVirhe?.(vaihe);
+          onVirhe?.(vaihe, virhe);
           return;
         }
-        if (tila.peruttu || tila.tauolla || vuorossa !== indeksi) return;
-        const kesto = Math.max(0.05, pala.loppu - pala.alku);
-        const alkuAika = Math.max(seuraavaAlku, piiri.currentTime + 0.08);
-        const lahde = piiri.createBufferSource();
-        lahde.buffer = pala.puskuri;
-        const verho = piiri.createGain();
-        verho.gain.setValueAtTime(0, alkuAika);
-        verho.gain.linearRampToValueAtTime(1, alkuAika + HAIVYTYS);
-        verho.gain.setValueAtTime(1, Math.max(alkuAika + HAIVYTYS, alkuAika + kesto - HAIVYTYS));
-        verho.gain.linearRampToValueAtTime(0, alkuAika + kesto);
-        lahde.connect(verho);
-        verho.connect(paate());
-        lahde.start(alkuAika, pala.alku, kesto);
-        lahde.onended = () => {
-          lahteet.delete(lahde);
-          try { verho.disconnect(); } catch { /* jo irti */ }
-        };
-        lahteet.add(lahde);
-        aloitusajat[indeksi] = { alku: alkuAika, loppu: alkuAika + kesto };
+        if (loppuAika === 'keskeytyi') return;
         const sama = palat[indeksi + 1]?.kappale === palat[indeksi].kappale;
         const vali = sama ? VIRKEVALI
           : (otsikolliset.has(palat[indeksi + 1]?.kappale) ? OTSIKKOVALI : KAPPALEVALI);
-        seuraavaAlku = alkuAika + kesto + vali;
+        seuraavaAlku = loppuAika + vali;
         vuorossa += 1;
       }
     })().finally(() => { aikataulutus = null; });
@@ -1165,6 +1505,16 @@ export function luoPuheSoitin({
     const uudet = [];
     for (const rivi of String(teksti ?? '').split('\n')) {
       if (!rivi.trim()) continue;
+      /*
+       * YKSI VASTAUS ON YKSI PUHEENVUORO (Fable 27.9.2026 klo 07.4x):
+       * striimi tuo Pulun vastauksen virke kerrallaan, ja jokainen lisäys
+       * oli oma kappaleensa → 450 ms kappaleväli joka virkkeen välissä.
+       * Puheenvuorossa kaikki on samaa kappaletta, joten väli on 220 ms.
+       */
+      if (yksiPuheenvuoro && tila.kappaleita > 0) {
+        for (const pala of kappaleenPalat(rivi)) uudet.push({ ...pala, kappale: 0 });
+        continue;
+      }
       const kappale = tila.kappaleita;
       tila.kappaleita += 1;
       for (const pala of kappaleenPalat(rivi)) {
@@ -1199,8 +1549,16 @@ export function luoPuheSoitin({
        * ensimmäistäkään aikataulutusta jono kelataan pyydetyn
        * kappaleen alkuun.
        */
-      if (aloitusKappale > 0 && !tila.kaynnissa && vuorossa === 0) {
-        const indeksi = palat.findIndex((p) => p.kappale === aloitusKappale);
+      if ((aloitusKappale > 0 || aloitusAlku > 0) && !tila.kaynnissa && vuorossa === 0) {
+        let indeksi = palat.findIndex((p) => p.kappale === aloitusKappale);
+        /*
+         * JATKO SAMASTA KOHDASTA (omistaja 27.9.2026 klo 09.3x): keskeytetty
+         * luenta jatkuu siitä palasta, jonka alku on viimeksi kuullussa
+         * kohdassa — ei kappaleen alusta.
+         */
+        for (let i = indeksi; i >= 0 && i < palat.length && palat[i].kappale === aloitusKappale; i += 1) {
+          if (palat[i].alku <= aloitusAlku) indeksi = i;
+        }
         if (indeksi > 0) vuorossa = indeksi;
       }
       if (!tila.kaynnissa) kaynnista();
@@ -1227,6 +1585,7 @@ export function luoPuheSoitin({
       // kohdasta, eikä aikatauluun kosketa.
       try { piiri.suspend?.(); } catch { /* piiri oli jo kiinni */ }
       ilmoita();
+      heratys();
     },
     jatka() {
       if (tila.peruttu || !tila.tauolla) return;
@@ -1237,6 +1596,10 @@ export function luoPuheSoitin({
     },
     tauolla() {
       return tila.tauolla;
+    },
+    /** Progressiivisen soiton mittari: virran myöhästymiset. */
+    mittari() {
+      return { katkoja: tila.katkoja, virta: virtaKaytossa(), loki: tila.virtaloki.slice() };
     },
     /** Sen hetkinen tila paneelin ensipiirtoa varten. */
     tilanne() {

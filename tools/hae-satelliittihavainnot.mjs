@@ -2719,6 +2719,258 @@ export const KOHTEET = [
       },
     ],
   },
+  {
+    tunnus: 'niagara', nimi: 'Niagaranputous', seutu: 'New York, Yhdysvallat ja Ontario, Kanada', lat: 43.08, lon: -79.07,
+    selite: 'Niagaranjoki ja sen kuuluisa putous muodostavat luonnollisen rajan '
+            + 'Yhdysvaltojen ja Kanadan välille.',
+    oletus: 'iss010e17563',
+    kuvat: [
+      {
+        id: 'iss010e17563',
+        teksti: 'Talvinen näkymä Niagaranjoelta helmikuussa 2005: joki mutkittelee '
+          + 'lumisen maiseman halki ja erottaa Yhdysvallat ja Kanadan toisistaan. '
+          + 'Kuvan alaosassa erottuu jokiuoman jyrkkä silmukka, Niagaran pyörre, '
+          + 'joka syntyi kun putous on vuosituhansien aikana kaivautunut '
+          + 'taaksepäin kalliopohjaan. Itse putous jää kuvassa lumipeitteisen '
+          + 'maiseman keskelle, mutta sen tekemä jälki näkyy koko jokilaaksossa.',
+      },
+      {
+        id: 'iss015e05624',
+        teksti: 'Sama alue huhtikuussa 2007, kun Erie-järven talvijää on juuri '
+          + 'sulanut ja lähtenyt liikkeelle Niagaranjokea pitkin. Vaalea, '
+          + 'jäänmurskaa täynnä oleva joki erottuu selvästi jo sulaneesta, '
+          + 'tummasta vedestä. Erie-järven suulle asennettu jääpuomi pidättelee '
+          + 'jäätä joka talvi, jotta se ei tukkisi voimalaitosten vedenottoa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'gronlannin-vuonot', nimi: 'Grönlannin vuonot', seutu: 'Lounais-Grönlanti, Tanska', lat: 60.72, lon: -46.03,
+    selite: 'Grönlannin lounaisrannikko on satojen jääkauden veistämien '
+            + 'vuonojen pirstoma, ja saaren sisäosaa peittää kilometrien '
+            + 'paksuinen mannerjää.',
+    oletus: 'sts066-114-031',
+    kuvat: [
+      {
+        id: 'sts066-114-031',
+        teksti: 'Marraskuussa 1994 otettu kuva näyttää Grönlannin lounaisrannikon '
+          + 'vuonoverkoston lähellä Kap Farvelia ja Julianehåbin lahtea. Rannikon '
+          + 'terävät niemet ja syvät lahdet erottuvat selvästi sisämaan '
+          + 'tasaisesta, valkoisesta jäätikköylängöstä. Grönlannin mannerjää on '
+          + 'paksuimmillaan lähes 3,5 kilometriä, ja sen reunoilta valuu '
+          + 'jäätikkövirtoja, jotka murtuvat mereen jäävuoriksi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'manaus', nimi: 'Vetten kohtaaminen Manausissa', seutu: 'Amazonas, Brasilia', lat: -3.1, lon: -59.99,
+    selite: 'Manausin kaupungin kohdalla tumma Rio Negro ja samea Solimões-joki '
+            + 'yhtyvät muodostaen Amazon-joen, mutta niiden vedet sekoittuvat '
+            + 'toisiinsa vasta kilometrien päässä.',
+    oletus: 'iss009e15488',
+    kuvat: [
+      {
+        id: 'iss009e15488',
+        teksti: 'Heinäkuussa 2004 otettu kuva näyttää, miten Solimõesin '
+          + 'vaaleanruskea, sedimenttipitoinen vesi virtaa kaupungin ohi kuvan '
+          + 'alalaitaa kohti, kun taas Rio Negron tummempi vesi tulee oikealta. '
+          + 'Manausin kaupunki erottuu keskellä terävänä, ruutukaavamaisena '
+          + 'alueena jokikielekkeen kärjessä. Vedet eivät sekoitu heti, koska '
+          + 'niiden lämpötila, virtausnopeus ja tiheys eroavat toisistaan – ilmiö '
+          + 'jatkuu jokien yhtymäkohdasta kymmenien kilometrien päähän.',
+      },
+    ],
+  },
+  {
+    tunnus: 'cosiguina', nimi: 'Cosigüinan tulivuori', seutu: 'Nicaragua', lat: 12.98, lon: -87.58,
+    selite: 'Cosigüinan tulivuoren huippua peittää kraatterijärvi niemellä, '
+            + 'joka sulkee Fonsecanlahden suuta Tyynenmeren rannikolla '
+            + 'Nicaraguassa.',
+    oletus: 'iss016e010894',
+    kuvat: [
+      {
+        id: 'iss016e010894',
+        teksti: 'Marraskuussa 2007 otettu kuva näyttää Cosigüinan tulivuoren pyöreän '
+          + 'tunturin ja sen huipulla lepäävän kraatterijärven, Laguna '
+          + 'Cosigüinan. Vuoren juurella erottuu Fonsecanlahden sameaa vettä, '
+          + 'joka virtaa jokisuistosta Tyynellemerelle. Vuori purkautui viimeksi '
+          + 'vuonna 1859, mutta sen vuoden 1835 purkaus oli Keski-Amerikan '
+          + 'historian suurin: tuhkaa levisi aina Meksikoon ja Jamaikalle asti.',
+      },
+    ],
+  },
+  {
+    tunnus: 'jamesinlahti-harjanteet', nimi: 'Jamesinlahden rantaharjanteet', seutu: 'Ontario ja Québec, Kanada', lat: 51.05, lon: -80,
+    selite: 'Jamesinlahden etelärannalla maankamara nousee yhä, koska jääkauden '
+            + 'mannerjää painoi sitä alas tuhansien vuosien ajan.',
+    oletus: 'STS099-706-090',
+    kuvat: [
+      {
+        id: 'STS099-706-090',
+        teksti: 'Helmikuussa 2000 kuvattu Hannah Bay Jamesinlahden eteläosassa '
+          + 'näyttää kymmeniä toisiaan seuraavia vaaleita harjanteita, jotka ovat '
+          + 'entisiä rantaviivoja. Kun mannerjää suli viimeisen jääkauden '
+          + 'jälkeen, maa alkoi hitaasti kohota ja meri perääntyi, jättäen '
+          + 'jälkeensä nämä 100–200 metriä leveät muinaiset rantavallit. Ilmiö '
+          + 'jatkuu yhä: Hudsoninlahden ja Jamesinlahden ranta-alueet ovat yksi '
+          + 'maapallon nopeimmin kohoavista alueista.',
+      },
+    ],
+  },
+  {
+    tunnus: 'krimin-lagunit', nimi: 'Krimin värilliset lagunit', seutu: 'Krimin niemimaa', lat: 45.35, lon: 36.3,
+    selite: 'Krimin niemimaan matalat rannikkolagunit hehkuvat turkoosina, '
+            + 'punaisena ja violettina, koska niiden suola- ja levämäärä '
+            + 'vaihtelee lammikoittain.',
+    oletus: 'iss056e032828',
+    kuvat: [
+      {
+        id: 'iss056e032828',
+        teksti: 'Kesäkuussa 2018 otettu kuva näyttää sarjan pieniä rannikkolaguuneja '
+          + 'Krimillä, Atsovanmeren ja Mustanmeren välissä. Jokainen allas hohtaa '
+          + 'omaa väriään – turkoosia, vaaleanpunaista, viininpunaista – koska '
+          + 'veden suolapitoisuus, syvyys ja mikrolevien määrä poikkeavat '
+          + 'toisistaan lammikosta toiseen. Krim on kansainvälisesti tunnustettu '
+          + 'osaksi Ukrainaa, mutta Venäjä on hallinnoinut aluetta vuodesta 2014 '
+          + 'lähtien.',
+      },
+    ],
+  },
+  {
+    tunnus: 'valakian-tasanko', nimi: 'Valakian tasanko yöllä', seutu: 'Romania', lat: 45.3, lon: 25.3,
+    selite: 'Yöllä otetussa kuvassa Karpaateilta Valakian tasangolle laskevat '
+            + 'joet erottuvat siitä, miten asutuksen valot seuraavat '
+            + 'jokilaaksoja.',
+    oletus: 'iss074e0149572',
+    kuvat: [
+      {
+        id: 'iss074e0149572',
+        teksti: 'Tammikuussa 2026 otettu yökuva näyttää, kuinka kylien ja kaupunkien '
+          + 'valot haarautuvat puumaiseksi kuvioksi seuraten jokilaaksoja, jotka '
+          + 'virtaavat Karpaateilta Romanian Valakian tasangon hedelmällisille '
+          + 'alangoille. Tummat, valottomat alueet kuvion välissä ovat vuorten '
+          + 'metsäisiä, harvaan asuttuja rinteitä. Valakia on Romanian '
+          + 'väkirikkain alue, ja sen eteläosassa sijaitsee myös pääkaupunki '
+          + 'Bukarest.',
+      },
+    ],
+  },
+  {
+    tunnus: 'montreal', nimi: 'Montréal', seutu: 'Québec, Kanada', lat: 45.5, lon: -73.57,
+    selite: 'Montréal on rakennettu saarelle, jonka kärjessä Ottawa-joki yhtyy '
+            + 'Saint Lawrence -jokeen.',
+    oletus: 'sts060-94-072',
+    kuvat: [
+      {
+        id: 'sts060-94-072',
+        teksti: 'Helmikuussa 1994 kuvattu lumipeitteinen Montréal näkyy '
+          + 'tarkkarajaisena saarena, jonka pääväylät ja katuverkko erottuvat '
+          + 'valkoista lunta vasten. Kaupungin keskellä kohoava Mont Royal '
+          + '-puisto erottuu tummana, metsäisenä kukkulana keskustan yllä. '
+          + 'Montréal on Kanadan toiseksi suurin kaupunki ja maailman toiseksi '
+          + 'suurin ranskankielinen kaupunki Pariisin jälkeen, vaikka se '
+          + 'sijaitsee lähes 1 600 kilometrin päässä merestä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'englanninkanaali-yolla', nimi: 'Englannin kanaali yöllä', seutu: 'Iso-Britannia, Ranska, Belgia ja Alankomaat', lat: 51.2, lon: 2,
+    selite: 'Englannin kanaalin molemmin puolin syttyvät Lontoon, Amsterdamin, '
+            + 'Brysselin ja niiden naapurikaupunkien valot yhdeksi Euroopan '
+            + 'tiheimmin asutuksi yövyöhykkeeksi.',
+    oletus: 'iss058e005276',
+    kuvat: [
+      {
+        id: 'iss058e005276',
+        teksti: 'Tammikuussa 2019 otettu yökuva näyttää Englannin kanaalin molemmin '
+          + 'puolin loistavat kaupungit: oikealla Lontoo, vasemmalla myötäpäivään '
+          + 'Amsterdam, Haag, Rotterdam, Antwerpen ja Bryssel. Itse kanaali '
+          + 'erottuu kuvan keskellä täysin pimeänä vyönä, koska merellä ei ole '
+          + 'maakohteiden valoja. Kanaalin ali kulkee Eurotunneli, ja sen vedet '
+          + 'ovat yksi maailman vilkkaimmin liikennöidyistä merireiteistä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'tanska', nimi: 'Tanskan saaristo', seutu: 'Tanska', lat: 55.5, lon: 9.8,
+    selite: 'Tanska koostuu Jyllannin niemimaasta ja yli 400 saaresta, jotka '
+            + 'pistävät esiin meren sinestä kuin palapelin palat.',
+    oletus: 'iss039e017228',
+    kuvat: [
+      {
+        id: 'iss039e017228',
+        teksti: 'Kuvassa näkyy Tanskan keskiosa: vasemmalla Jyllannin niemimaan '
+          + 'itärannikko, keskellä pyöreähkö Fynin saari ja oikealla saaristo, '
+          + 'joka jatkuu kohti Sjællantia. Kesäinen kuva näyttää maan '
+          + 'poikkeuksellisen tasaisena ja vihreänä, sillä Tanskassa ei ole '
+          + 'yhtään yli 200 metrin korkeuteen nousevaa kukkulaa. Maan yli 400 '
+          + 'saaresta noin 70 on asuttuja, ja monet niistä on yhdistetty '
+          + 'toisiinsa silloilla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'geneven-jarvi', nimi: 'Geneven järvi', seutu: 'Sveitsi ja Ranska', lat: 46.45, lon: 6.5,
+    selite: 'Geneven järven puolikuun muotoinen allas lepää Alppien juurella '
+            + 'Sveitsin ja Ranskan rajalla.',
+    oletus: 'sts068-243-076',
+    kuvat: [
+      {
+        id: 'sts068-243-076',
+        teksti: 'Syyskuussa 1994 otettu kuva näyttää Geneven järven sinisenä '
+          + 'puolikuuna Alppien lumihuippujen keskellä. Järveä ruokkii '
+          + 'Rhône-joki, joka syntyy alppijäätiköiltä ja virtaa järven läpi '
+          + 'matkallaan kohti Välimerta. Järvi on tilavuudeltaan Länsi-Euroopan '
+          + 'suurin, ja Ranskan ja Sveitsin raja kulkee sitä pitkin lähes '
+          + 'keskeltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'pico', nimi: 'Pico-tulivuori', seutu: 'Azorit, Portugali', lat: 38.47, lon: -28.4,
+    selite: 'Portugalin korkein vuori, Pico, on jyrkkäpiirteinen tulivuori '
+            + 'keskellä Atlantin valtamerta Azoreilla.',
+    oletus: 'iss036e009390',
+    kuvat: [
+      {
+        id: 'iss036e009390',
+        teksti: 'Kesäkuussa 2013 otettu pystykuva näyttää Pico-saaren pitkänomaisena '
+          + 'vihreänä muotona Atlantilla; saaren itäpäässä kohoaa 2 351 metriä '
+          + 'korkea Pico-tulivuori huippukraattereineen. Vuori on koko Portugalin '
+          + 'korkein kohta, vaikka se sijaitsee tuhansien kilometrien päässä '
+          + 'Euroopan mantereesta. Saaren länsiosan viinitarhat kasvavat mustan '
+          + 'laavakiven ruutujen suojissa, ja perinne on nykyään Unescon '
+          + 'maailmanperintökohde.',
+      },
+    ],
+  },
+  {
+    tunnus: 'prinssiedwardinsaari', nimi: 'Prinssi Edwardin saari', seutu: 'Saint Lawrencenlahti, Kanada', lat: 46.51, lon: -63.42,
+    selite: 'Kanadan pienin provinssi on punamultainen, sirppimäinen saari '
+            + 'Saint Lawrencenlahdella.',
+    oletus: 'iss067e035819',
+    kuvat: [
+      {
+        id: 'iss067e035819',
+        teksti: 'Toukokuussa 2022 otettu kuva auringon kimallellessa merestä näyttää '
+          + 'Prinssi Edwardin saaren tumman sirpin Saint Lawrencenlahdella, '
+          + 'Uuden-Brunswickin ja Uuden-Skotlannin välissä. Kirkas heijastus '
+          + 'meren pinnalla korostaa rannikon muotoja tavallista tarkemmin. Saari '
+          + 'on Kanadan pienin provinssi, ja sen punamulta syntyy maaperän '
+          + 'runsaasta rautapitoisuudesta.',
+      },
+      {
+        id: 'iss059e019410',
+        teksti: 'Huhtikuussa 2019 kuvattu laajempi näkymä samalta alueelta näyttää '
+          + 'Saint Lawrencenlahden, Prinssi Edwardin saaren sekä osia Québecistä '
+          + 'ja Uudesta-Brunswickista yhdellä silmäyksellä. Saari on tunnettu '
+          + 'myös kirjailija L. M. Montgomeryn Anna-kirjoista, jotka sijoittuvat '
+          + 'sen maalaismaisemiin. Manterelle saaren yhdistää '
+          + 'Confederation-silta, joka on yksi maailman pisimmistä jääpeitteisen '
+          + 'veden yli rakennetuista silloista.',
+      },
+    ],
+  },
 ];
 
 /**

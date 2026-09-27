@@ -1012,7 +1012,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pakenevien tavaroiden joukossa.',
           selite: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: lähes '
             + 'joka kolmannessa kotinsa tavaroita kuljettavassa veneessä oli '
-            + 'virginal-soitin. Kuvituksen nuori nainen pitää oman soittimensa '
+            + 'virginal-soitin. Havainnekuvan nuori nainen pitää oman soittimensa '
             + 'kantta kiinni kipinäsateessa — koti saattaa palaa, mutta perhe ei '
             + 'vielä suostu jättämään kaikkia entisen elämän ääniä rannalle.',
           lahde: 'Matkakirjan havainnekuva. Faktat: The National Archives — '
@@ -4403,7 +4403,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Berliinin muurin ensimmäisenä päivänä poliisi vetää '
             + 'piikkilangan lähellä olevien sisarusten väliin.',
           selite: 'Bernauer Straßella talon seinä kuului itään mutta jalkakäytävä '
-            + 'länteen. Kuvituksen sisarukset ovat yhä huutoetäisyydellä, kun '
+            + 'länteen. Havainnekuvan sisarukset ovat yhä huutoetäisyydellä, kun '
             + 'nuori poliisi kiristää lankaa heidän väliinsä; kukaan heistä ei '
             + 'vielä tiedä, että ovet ja ikkunat muurataan tulevina päivinä.',
           lahde: 'Matkakirjan havainnekuva. Faktat: Chronik der Mauer — 13 August '
@@ -6727,7 +6727,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja siitä tulee trikolori.',
           lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin '
             + 'portti vihdoin avautuu.',
-          selite: 'Kuvituksen pariisilainen metallityöläinen on kantanut '
+          selite: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
             + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
             + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
             + 'sekoittuu pelkoon: savun takana odottaa piha, jolta äsken '
@@ -9626,6 +9626,82 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Kaupunki, joka nimesi kadut kirjailijoidensa mukaan ja '
+        + 'pystytti kirjailijalle korkeimman patsaan, minkä se osasi rakentaa.',
+      tehtava: {
+        kysymys: 'Minä vuonna Edinburghista tuli maailman ensimmäinen '
+          + 'Unescon kirjallisuuden kaupunki?',
+        vaihtoehdot: ['1996', '2004', '2010', '2012'],
+        oikea: 1,
+        fakta: 'Nimitys myönnettiin vuonna 2004, ja se tunnusti sekä '
+          + 'kaupungin kirjallisen menneisyyden että sen elävän nykyisen '
+          + 'kirjailija- ja kustannuskentän.',
+      },
+      nostot: [
+        {
+          otsikko: 'Torni, jonka rakensi itseoppinut kirvesmies',
+          tiedosto: 'The Scott Monument, Princes Street Gardens.jpg',
+          teksti: 'Kun Walter Scott kuoli 1832, Edinburgh päätti pystyttää '
+            + 'hänelle muistomerkin, jommoista ei ollut aiemmin annettu '
+            + 'yhdellekään kirjailijalle. Suunnittelukilpailun voitti George '
+            + 'Meikle Kemp, itseoppinut arkkitehti, joka oli aiemmin tehnyt '
+            + 'työkseen kirvesmiehen hommia ja jätti kilpailuun ehdotuksensa '
+            + 'salanimellä. Goottilainen 61-metrinen torni valmistui 1844 — '
+            + 'Kemp ei ehtinyt nähdä sitä valmiina, sillä hän hukkui '
+            + 'kanavaan samana vuonna matkalla työmaalta kotiin. Torni on '
+            + 'yhä maailman suurin yksittäiselle kirjailijalle pystytetty '
+            + 'muistomerkki.',
+          lyhyt: 'Scott Monument valmistui 1844, ja se on maailman suurin yksittäiselle kirjailijalle pystytetty muistomerkki.',
+          selite: 'Scott Monument valmistui vuonna 1844 itseoppineen '
+            + 'arkkitehti George Meikle Kempin suunnitelmien mukaan, ja se '
+            + 'on maailman suurin yksittäiselle kirjailijalle pystytetty '
+            + 'muistomerkki.',
+          lahde: 'Enrohm1963, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Scott Monument',
+        },
+        {
+          otsikko: 'Kolme kirjailijaa saman katon alla',
+          tiedosto: 'Three great men of Scottish literature.JPG',
+          teksti: 'Kirjailijamuseo toimii 1600-luvulla rakennetussa Lady '
+            + 'Stairin talossa Kuninkaantien varrella. Sisällä on esineitä '
+            + 'kolmelta Skotlannin tunnetuimmalta kirjailijalta: Robert '
+            + 'Burnsin kirjoituspöytä, painokone, jolla Walter Scottin '
+            + 'Waverley-romaanit ensin painettiin, ja esineitä Robert Louis '
+            + 'Stevensonin matkoilta ympäri maailmaa. Kolmen kirjailijan '
+            + 'rintakuvat seisovat samassa huoneessa, vaikka he elivät eri '
+            + 'aikoina — Burns kuoli 1796 Scottin ollessa vielä '
+            + 'kaksikymmentäviisivuotias, ja Stevenson syntyi 1850, '
+            + 'kahdeksantoista vuotta Scottin kuoleman jälkeen.',
+          lyhyt: 'Kirjailijamuseossa on Burnsin, Scottin ja Stevensonin esineitä samassa huoneessa.',
+          selite: 'Kirjailijamuseo Lady Stairin talossa säilyttää Robert '
+            + 'Burnsin, Walter Scottin ja Robert Louis Stevensonin esineitä '
+            + 'samassa huoneessa.',
+          lahde: 'Kim Traynor, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Writers\' Museum',
+        },
+        {
+          otsikko: 'Katukivet, joihin on kaiverrettu lainauksia',
+          tiedosto: 'Makars\' Court, Sir Walter Scott.jpg',
+          teksti: 'Kirjailijamuseon ulkopuolella Makars\' Courtin '
+            + 'katukiviin on kaiverrettu lainauksia skotlantilaisilta '
+            + 'kirjailijoilta — makar on vanha skottilainen sana runoilijalle. '
+            + 'Walter Scottin kivessä lukee rivi hänen runostaan Lay of the '
+            + 'Last Minstrel vuodelta 1805: "Breathes there the man, with '
+            + 'soul so dead, who never to himself hath said, this is my own, '
+            + 'my native land." Uusia kiviä on lisätty pihaan vuosien '
+            + 'varrella, ja piha kasvaa yhä kaupungin kirjallisuushistorian '
+            + 'mukana.',
+          lyhyt: 'Makars\' Courtin katukiviin on kaiverrettu lainauksia skotlantilaisilta kirjailijoilta.',
+          selite: 'Makars\' Courtin katukiviin on kaiverrettu lainauksia '
+            + 'skotlantilaisilta kirjailijoilta, ja Walter Scottin kivessä '
+            + 'lukee rivi hänen vuoden 1805 runostaan.',
+          lahde: 'Stefan Schäfer, Lich, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -10023,6 +10099,117 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jonka muoto on pikkuvene — juuri sitä sana navette '
             + 'tarkoittaa.',
           lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ranskan vanhin kaupunki perustettiin kreikkalaisten '
+        + 'toimesta, selvisi keskiajan pahimmasta rutosta ja on '
+        + 'kuuluisan romaanivangin saaren isäntä.',
+      tehtava: {
+        kysymys: 'Ketkä perustivat Marseillen alun perin noin 600 eaa.?',
+        vaihtoehdot: [
+          'Foinikialaista alkuperää olevat kreikkalaiset Fokaiasta',
+          'Roomalaiset legioonalaiset',
+          'Ligurialaiset paikallisheimot',
+          'Karthagolaiset kauppiaat',
+        ],
+        oikea: 0,
+        fakta: 'Kreikkalaiset siirtolaiset Vähän-Aasian Fokaiasta '
+          + 'perustivat Massalian, nykyisen Marseillen, noin vuonna '
+          + '600 eaa. — Ranskan vanhimman kaupungin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonka perustivat kreikkalaiset merenkulkijat',
+          tiedosto: 'Marseille-Jardin des Vestiges-bjs180810-01.jpg',
+          teksti: 'Kreikkalaiset siirtolaiset Vähän-Aasian '
+            + 'Fokaian kaupungista perustivat Massalian noin '
+            + 'vuonna 600 eaa. luonnonsatamaan, joka on nykyinen '
+            + 'Vieux-Port. Massaliasta tuli nopeasti tärkeä '
+            + 'kauppasatama, joka välitti viiniä, öljyä ja keramiikkaa '
+            + 'Välimereltä sisämaahan päin — ja Ranskan vanhin '
+            + 'kaupunki oli syntynyt.'
+            + '\n\n'
+            + 'Kaupungin muinaiset satamamuurit ja rakennusten '
+            + 'perustukset ovat säilyneet Jardin des Vestiges '
+            + '-puutarhassa keskellä nykyistä kaupunkia — '
+            + 'kaivaukset paljastivat ne 1960-luvulla ostoskeskuksen '
+            + 'rakennustöiden yhteydessä.',
+          lyhyt: 'Kreikkalaiset Fokaiasta perustivat Marseillen (Massalia) noin 600 eaa., Ranskan vanhimman kaupungin.',
+          selite: 'Massalian antiikin satamamuurien jäänteet Jardin '
+            + 'des Vestiges -puutarhassa keskellä nykyistä Marseillea.',
+          lahde: 'Bjs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Rutto, joka tappoi joka toisen kaupunkilaisen',
+          tiedosto: 'Michel Serre-Peste-Cours Belsunce.jpg',
+          teksti: 'Rutto saapui Marseilleen toukokuussa 1720 '
+            + 'kauppalaiva Grand-Saint-Antoinen mukana Levantista, ja '
+            + 'sairaus levisi nopeasti kaupunkiin, jonka viranomaiset '
+            + 'olivat aluksi kieltäytyneet asettamasta laivaa '
+            + 'karanteeniin kauppaetujen takia. Tauti tappoi lopulta '
+            + 'noin puolet kaupungin sadastatuhannesta asukkaasta '
+            + 'kahden vuoden aikana.'
+            + '\n\n'
+            + 'Taiteilija Michel Serre eli itse epidemian keskellä ja '
+            + 'maalasi katukohtauksia, joissa ruumiita kasataan '
+            + 'kärryihin kadulle — hänen teoksensa ovat harvinaisia '
+            + 'silminnäkijäkuvia siitä, miltä ruttoepidemia näytti '
+            + 'todellisuudessa. Katastrofi johti tiukempiin '
+            + 'karanteenisäännöksiin koko Ranskan satamissa.',
+          lyhyt: 'Vuoden 1720 rutto tappoi noin puolet Marseillen sadastatuhannesta asukkaasta.',
+          selite: 'Michel Serren maalaus kuvaa ruumiiden keräämistä '
+            + 'Cours Belsuncelta ruttoepidemian aikana 1720 — '
+            + 'taiteilija eli itse tapahtumat.',
+          lahde: 'Michel Serre, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Linnoitussaari, josta tuli maailmankuulu vankila',
+          tiedosto: 'Château d\'If @ Baie de Marseille 01.jpg',
+          teksti: 'Kuningas Frans I rakennutti If-linnoituksen pienelle '
+            + 'saarelle Marseillen edustalle 1520-luvulla puolustamaan '
+            + 'satamaa mereltä tulevilta hyökkäyksiltä. Linnoitus ei '
+            + 'koskaan joutunut puolustamaan kaupunkia sotilaallisesti, '
+            + 'mutta siitä tuli sen sijaan pelätty vankila, jonne '
+            + 'suljettiin sekä poliittisia vankeja että '
+            + 'protestantteja.'
+            + '\n\n'
+            + 'Linnoitus tuli maailmankuuluksi Alexandre Dumasin '
+            + 'romaanista Monte-Criston kreivi (1844), jossa '
+            + 'päähenkilö Edmond Dantès vangitaan sinne vuosikausiksi '
+            + 'perättömän syytöksen takia ja pakenee lopulta '
+            + 'meritse. Saarelle tehdään yhä laivakierroksia tarinan '
+            + 'takia, vaikka Dantès on täysin kuvitteellinen hahmo.',
+          lyhyt: 'If-linnoitus rakennettiin 1520-luvulla, mutta tuli kuuluisaksi Dumasin Monte-Criston kreivi -romaanista.',
+          selite: 'If-linnoitus saarellaan Marseillen edustalla — '
+            + 'rakennettiin 1520-luvulla, kuuluisaksi teki Dumasin '
+            + 'romaani Monte-Criston kreivi.',
+          lahde: 'Rémih, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neitsyt, joka vahtii merenkulkijoita mäen laelta',
+          tiedosto: 'Notre-Dame de la Garde Basilica in Marseille.jpg',
+          teksti: 'Notre-Dame de la Garde -basilika kohoaa Marseillen '
+            + 'korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen '
+            + 'kultainen Neitsyt Maria -patsas näkyy kauas merelle. '
+            + 'Nykyinen basilika valmistui 1864, mutta paikalla on '
+            + 'ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle '
+            + 'rakennettiin ensimmäinen pieni kappeli.'
+            + '\n\n'
+            + 'Merenkulkijat ovat perinteisesti pitäneet basilikaa '
+            + 'suojelijanaan ja jättäneet sinne kiitoslahjoja '
+            + 'onnistuneista matkoista — kirkon seinillä riippuu yhä '
+            + 'satoja pienoislaivoja ja muistolaattoja pelastuneista '
+            + 'haaksirikoista. Marseillelaiset kutsuvat patsasta '
+            + 'hellästi "La Bonne Mère", hyväksi äidiksi.',
+          lyhyt: 'Notre-Dame de la Garde -basilika 1864 on merenkulkijoiden perinteinen suojeluspaikka Marseillen korkeimmalla kukkulalla.',
+          selite: 'Notre-Dame de la Garde -basilika Marseillen '
+            + 'korkeimmalla kukkulalla — merenkulkijoiden perinteinen '
+            + 'suojeluskohde vuodesta 1864.',
+          lahde: 'Vinaciv183, Wikimedia Commons (CC0)',
         },
       ],
     },
@@ -11080,6 +11267,80 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Palau de la Música Catalana',
           musiikki: 'https://music.apple.com/fi/search?term=orfe%C3%B3%20catal%C3%A0',
           musiikkiNimi: 'Orfeó Català Apple Musicissa',
+        },
+      ],
+    },
+    {
+      id: 'castellit',
+      nimi: 'Castellit',
+      johdanto: 'Yli kaksisataa vuotta vanha perinne, jossa kaupunki rakentaa '
+        + 'itsestään tornin: ihminen ihmisen päälle, kunnes ylimpänä on lapsi.',
+      tehtava: {
+        kysymys: 'Kuka kiipeää castell-tornin huipulle?',
+        vaihtoehdot: [
+          'Joukkueen vahvin jäsen',
+          'Pienin lapsi, anxaneta',
+          'Palkattu akrobaatti',
+          'Joukkueen perustaja',
+        ],
+        oikea: 1,
+        fakta: 'Huipulle kiipeävää lasta kutsutaan anxanetaksi. Hän nostaa '
+          + 'kädet ilmaan tornin huipulla ennen kuin koko rakennelma '
+          + 'puretaan alhaalta ylöspäin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Torni, joka on tehty ihmisistä',
+          tiedosto: 'Castells bcn 01.jpg',
+          teksti: 'Castell tarkoittaa katalaaniksi linnaa, ja se on ihmisistä '
+            + 'rakennettu torni: joukkue kiipeää toistensa hartioille kerros '
+            + 'kerrokselta, kunnes tornissa voi olla kahdeksan, yhdeksän tai '
+            + 'jopa kymmenen kerrosta. Perinne juontaa 1700-luvun lopun '
+            + 'Vallsiin, lähelle Tarragonaa, mutta levisi sieltä koko '
+            + 'Kataloniaan. Unesco lisäsi castellit ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön luetteloon vuonna 2010. Torni ei ole '
+            + 'kilpailu voimasta vaan tasapainosta: mitä useampi kerros, sitä '
+            + 'enemmän koko joukkue harjoittelee yhdessä ennen onnistumista.',
+          lyhyt: 'Castell on ihmisistä rakennettu torni, ja Unesco lisäsi perinteen luetteloonsa 2010.',
+          selite: 'Castell on ihmisistä rakennettu torni, jossa voi olla '
+            + 'kymmenen kerrosta, ja Unesco lisäsi perinteen aineettoman '
+            + 'kulttuuriperinnön luetteloonsa vuonna 2010.',
+          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Satojen ihmisten kannattama paino',
+          tiedosto: 'Castells bcn 12.jpg',
+          teksti: 'Tornin pohjalla on pinya, tiivis ihmisjoukko, joka ottaa '
+            + 'vastaan koko rakennelman painon ja pehmentää mahdollisen '
+            + 'kaatumisen. Pinyaan voi kuulua satoja ihmisiä, eikä siihen '
+            + 'tarvita erityistaitoa — kuka tahansa katsoja voi kävellä '
+            + 'joukkoon mukaan ja työntää olkapäänsä tueksi. Vasta pinyan '
+            + 'päälle nousee tronc, varsinainen runko, jonka jäsenet on '
+            + 'valittu voiman ja tasapainon mukaan. Harjoituksissa joukkue '
+            + 'opettelee tunnistamaan, milloin torni alkaa horjua liikaa.',
+          lyhyt: 'Pinya on tornin pohjalla oleva ihmisjoukko, joka kannattaa painon ja pehmentää kaatumisen.',
+          selite: 'Pinya on tornin pohjalla oleva tiivis ihmisjoukko, joka '
+            + 'kannattaa koko rakennelman painon ja pehmentää mahdollisen '
+            + 'kaatumisen.',
+          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Castells',
+        },
+        {
+          otsikko: 'Kaupungintalon aukio täyttyy syyskuussa',
+          tiedosto: 'Mercè 2016 - Castellers a la Plaça de Sant Jaume 04.jpg',
+          teksti: 'Barcelonan suurin castell-päivä osuu syyskuun La Mercè '
+            + '-juhlaan, kaupungin suojeluspyhimykselle omistettuun '
+            + 'kaupunkijuhlaan. Silloin kaikki kaupungin joukkueet kokoontuvat '
+            + 'samalle aukiolle, Plaça de Sant Jaumelle kaupungintalon eteen, '
+            + 'ja rakentavat torninsa vuorotellen yleisön edessä. Castellers '
+            + 'de Barcelona, kaupungin vanhin joukkue, on isännöinyt '
+            + 'tapahtumaa vuosikymmenten ajan. Aukio on ollut sama paikka '
+            + 'lähes puoli vuosisataa.',
+          lyhyt: 'La Mercè -juhlassa syyskuussa kaupungin castell-joukkueet kokoontuvat Plaça de Sant Jaumelle.',
+          selite: 'La Mercè -juhlassa syyskuussa Barcelonan castell-joukkueet '
+            + 'kokoontuvat Plaça de Sant Jaumelle, kaupungintalon eteen, '
+            + 'rakentamaan torninsa vuorotellen.',
+          lahde: 'Jordiferrer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -13721,6 +13982,82 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupunki, jonka natsit tuhosivat tarkoituksella melkein '
+        + 'kokonaan — ja jonka asukkaat rakensivat takaisin maalausten '
+        + 'avulla.',
+      tehtava: {
+        kysymys: 'Miltä vuosisadalta ovat maalaukset, joita arkkitehdit '
+          + 'käyttivät vanhankaupungin jälleenrakennuksen pohjana?',
+        vaihtoehdot: ['1600-luvulta', '1700-luvulta', '1800-luvulta', '1900-luvulta'],
+        oikea: 1,
+        fakta: 'Hovimaalari Bernardo Bellotto maalasi noin kolmekymmentä '
+          + 'näkymää Varsovasta 1760-luvulta lähtien, ja ne säilyivät sodan '
+          + 'yli kaupungin ulkopuolella.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, joka tuhottiin rangaistukseksi',
+          tiedosto: 'Rynek Starego Miasta widok w kierunku ul. Nowomiejskiej 1945.jpg',
+          teksti: 'Elokuussa 1944 Varsovan asukkaat nousivat kapinaan '
+            + 'saksalaismiehittäjää vastaan. Kapina kesti '
+            + 'kuusikymmentäkolme päivää ennen kuin se murskattiin, ja '
+            + 'taisteluissa kuoli noin kaksisataatuhatta siviiliä. '
+            + 'Kapinan jälkeen saksalaisjoukot saivat käskyn tuhota kaupunki '
+            + 'talo talolta rangaistukseksi — yli 85 prosenttia '
+            + 'vanhastakaupungista raunioitui. Kuvassa on Vanhan '
+            + 'kaupungintorin rauniot vuodelta 1945, valokuvaaja Leonard '
+            + 'Sempolińskin ottamana pian sodan päätyttyä.',
+          lyhyt: 'Varsovan vanhakaupunki raunioitui yli 85-prosenttisesti kapinan murskaamisen jälkeen 1944.',
+          selite: 'Varsovan vanhakaupunki raunioitui yli 85-prosenttisesti, '
+            + 'kun saksalaisjoukot tuhosivat sen tarkoituksella kapinan '
+            + 'murskaamisen jälkeen vuonna 1944.',
+          lahde: 'Leonard Sempoliński, Wikimedia Commons (PD)',
+          wiki: 'Varsovan kansannousu',
+        },
+        {
+          otsikko: 'Maalaukset, joista tuli pohjapiirustus',
+          tiedosto: 'Bellotto View of Warsaw from Praga 02.jpg',
+          teksti: 'Vuonna 1767 italialainen Bernardo Bellotto, joka käytti '
+            + 'setänsä Canaletton tavaramerkkinimeä, tuli Puolan kuninkaan '
+            + 'hovimaalariksi ja maalasi lähes kolmekymmentä näkymää '
+            + 'Varsovasta niin tarkasti, että ikkunat, koristelistat ja '
+            + 'talojen mittasuhteet erottuvat yksitellen. Taulut olivat '
+            + 'sodan aikana muualla kuin Varsovassa ja säilyivät ehjinä. '
+            + 'Jälleenrakennuksessa arkkitehdit käyttivät niitä '
+            + 'pohjapiirustuksina: talo toisensa jälkeen rakennettiin '
+            + 'takaisin täsmälleen sellaisena kuin Bellotto oli sen '
+            + 'kaksisataa vuotta aiemmin maalannut.',
+          lyhyt: 'Bellotto maalasi 1767 lähtien lähes 30 näkymää Varsovasta, ja niitä käytettiin jälleenrakennuksen pohjana.',
+          selite: 'Bernardo Bellotto maalasi vuodesta 1767 lähtien lähes '
+            + 'kolmekymmentä tarkkaa näkymää Varsovasta, ja niitä käytettiin '
+            + 'jälleenrakennuksen pohjapiirustuksina.',
+          lahde: 'Bernardo Bellotto, Wikimedia Commons (PD)',
+          wiki: 'Bernardo Bellotto',
+        },
+        {
+          otsikko: 'Kaupunki nousi raunioista',
+          tiedosto: '2018-07-08 Old Town Market Square in Warsaw.jpg',
+          teksti: 'Jälleenrakennus alkoi heti sodan jälkeen, ja se jatkui '
+            + 'aina 1960-luvun puoliväliin asti — vanhankaupungin '
+            + 'keskeisimmät osat saatiin valmiiksi noin kymmenessä vuodessa. '
+            + 'Ulkoasu rakennettiin Bellotton maalausten ja säilyneiden '
+            + 'valokuvien mukaan, mutta sisätilat suunniteltiin '
+            + 'nykyaikaisiksi, jotta ihmiset houkuteltaisiin muuttamaan '
+            + 'takaisin autioituneeseen kaupunginosaan. Unesco lisäsi '
+            + 'Varsovan vanhankaupungin maailmanperintöluetteloonsa vuonna '
+            + '1980 — poikkeuksellisesti juuri jälleenrakennuksen ansiosta, '
+            + 'ei alkuperäisyyden.',
+          lyhyt: 'Vanhakaupunki jälleenrakennettiin 1960-luvun puoliväliin mennessä, ja Unesco listasi sen 1980.',
+          selite: 'Varsovan vanhakaupunki jälleenrakennettiin 1960-luvun '
+            + 'puoliväliin mennessä Bellotton maalausten mukaan, ja Unesco '
+            + 'lisäsi sen maailmanperintöluetteloonsa vuonna 1980.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -15561,6 +15898,79 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'Štšedryk Apple Musicissa',
           musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/Shchedryk%27s_%22Carol_of_the_Bells%22_%281922%29.oga/Shchedryk%27s_%22Carol_of_the_Bells%22_%281922%29.oga.mp3',
           musiikkiNayteNimi: 'Štšedryk vuoden 1922 levytyksenä — Ukrainan kansalliskuoro, johtajana Oleksandr Košyts (PD)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Luola joesta rinteessä kasvoi tuhat vuotta sitten luostariksi, '
+        + 'jonka käytävät ovat yhä täynnä vuosisatojen historiaa.',
+      tehtava: {
+        kysymys: 'Mistä munkki Antonius palasi, kun hän asettui Kiovan '
+          + 'luoliin vuonna 1051?',
+        vaihtoehdot: [
+          'Roomasta',
+          'Athos-vuorelta',
+          'Konstantinopolista',
+          'Jerusalemista',
+        ],
+        oikea: 1,
+        fakta: 'Antonius oli elänyt munkkina Athos-vuorella Kreikassa ja '
+          + 'palasi sieltä kaivamaan luolan Dnipro-joen rantatörmään.',
+      },
+      nostot: [
+        {
+          otsikko: 'Luola, josta kasvoi luostari',
+          tiedosto: '2008-08-24 Kiev Pechersk Lavra - 2.jpg',
+          teksti: 'Vuonna 1051 munkki Antonius asettui Athos-vuorelta '
+            + 'palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen '
+            + 'askeettinen elämänsä veti puoleensa seuraajia, ja pian '
+            + 'luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, '
+            + 'Teodosios, järjesti yhteisölle omat säännöt ja rakennutti '
+            + 'ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. '
+            + 'Nimi Petšerska tulee sanasta petšera, luola — ja koko '
+            + 'luostarikompleksi kantaa sitä nimeä yhä.',
+          lyhyt: 'Munkki Antonius kaivoi luolan Dnipro-joen rantaan 1051, ja luostari kasvoi sen ympärille.',
+          selite: 'Munkki Antonius kaivoi luolan Dnipro-joen rantatörmään '
+            + 'vuonna 1051, ja hänen ympärilleen kokoontuneesta '
+            + 'munkkiyhteisöstä kasvoi koko luostari.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Käytävät täynnä vuosisatoja',
+          tiedosto: 'Kiev Pechersk Lavra (8600719515).jpg',
+          teksti: 'Luolakäytävät ovat kapeita, vain metrin tai puolitoista '
+            + 'leveitä, ja niiden seiniin on kaiverrettu pieniä koppeja '
+            + 'munkeille ja hautanišejä. Lähiluolissa lepää noin kahdeksankymmentä '
+            + 'ja kaukoluolissa noin neljäkymmentäviisi pyhäksi julistettua '
+            + 'munkkia, ja kuiva luolailma on säilyttänyt monet heidän '
+            + 'jäännöksensä vuosisatojen ajan. Käytävät toimivat yhä '
+            + 'hautausmaana ja pyhiinvaelluskohteena, ja kynttilät ovat ainoa '
+            + 'valonlähde niiden mutkittelevissa kaarissa.',
+          lyhyt: 'Kapeat luolakäytävät ovat toimineet hautana ja pyhiinvaelluskohteena tuhat vuotta.',
+          selite: 'Kapeat, metrin levyiset luolakäytävät ovat toimineet '
+            + 'munkkien hautana ja pyhiinvaelluskohteena luostarin koko '
+            + 'tuhatvuotisen historian ajan.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kellotorni, joka näkyy joelle',
+          tiedosto: 'Great Lavra Bell Tower. Listed ID 80-382-0290. From Dnieper River. - 9 Lavrska Street, Pechersk Raion, Kiev.jpg',
+          teksti: 'Luostarin kellotorni rakennettiin vuosina 1731–1745 '
+            + 'saksalaisen arkkitehti Johann Gottfried Schädelin '
+            + 'suunnitelmien mukaan, ja se oli valmistuessaan maailman korkein '
+            + 'vapaasti seisova kellotorni. Ristin kanssa se nousee 96,5 '
+            + 'metrin korkeuteen ja sen kullattu kupoli näkyy kauas '
+            + 'Dnipro-joelle. Koko luostarikompleksi, luolat ja maanpäälliset '
+            + 'rakennukset yhdessä, on ollut Unescon maailmanperintökohde '
+            + 'vuodesta 1990.',
+          lyhyt: 'Kellotorni valmistui 1745 ja nousi 96,5 metriin — maailman korkein kellotorni valmistuessaan.',
+          selite: 'Luostarin kellotorni valmistui vuonna 1745 ja nousi 96,5 '
+            + 'metrin korkeuteen, mikä teki siitä maailman korkeimman '
+            + 'vapaasti seisovan kellotornin valmistumishetkellään.',
+          lahde: 'Wadco2, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Great Lavra Bell Tower',
         },
       ],
     },
@@ -22781,6 +23191,116 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tromssasta lähdettiin etsimään navan ympäriltä sekä '
+        + 'mainetta että olutta, ja sinne ajautui lopulta myös '
+        + 'Euroopan pelätyin sotalaiva.',
+      tehtava: {
+        kysymys: 'Miksi Tromssaa on kutsuttu "Jäämeren Pariisiksi" ja arktisten retkikuntien porttikaupungiksi?',
+        vaihtoehdot: [
+          'Retkikunnat varustautuivat ja rekrytoivat miehistöä siellä ennen pohjoista matkaa',
+          'Kaupunki sijaitsee tarkalleen Pohjoisnavalla',
+          'Kaikki tunnetut napamatkaajat syntyivät siellä',
+          'Kaupungissa on Euroopan suurin jäätikkömuseo',
+        ],
+        oikea: 0,
+        fakta: 'Napaan ja Koillisväylälle suuntaavat retkikunnat, muun '
+          + 'muassa Amundsenin ja Nansenin, varustautuivat usein '
+          + 'Tromssassa ennen matkaansa — siksi lempinimi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kirkko, joka on kokonaan puuta ja silti katedraali',
+          tiedosto: 'Tromsø Cathedral (domkirke) Norway interior. Pillars (bæresøyler), tables, pews (kirkebenker), sunlight, tulips, etc in nave (kirkeskip hovedrom). Wooden church 1861 Chr. H. Grosch 2019-04-04 DSC02286.jpg',
+          teksti: 'Tromssan tuomiokirkko valmistui 1861 arkkitehti '
+            + 'Christian Heinrich Groschin piirustusten mukaan '
+            + 'uusgoottilaiseen tyyliin, mutta poikkeuksellisesti '
+            + 'kokonaan puusta kiven sijaan. Se on maailman pohjoisin '
+            + 'luterilainen katedraali, ja sen valkoinen puujulkisivu '
+            + 'näkyy kauas Tromssan salmen yli.'
+            + '\n\n'
+            + 'Puurakenne oli käytännöllinen valinta pohjoisessa, '
+            + 'jossa kivimateriaalin kuljetus olisi ollut kallista, '
+            + 'mutta se on myös vaatinut jatkuvaa kunnostusta '
+            + 'ankarassa ilmastossa. Kirkko on yhä Tromssan '
+            + 'hiippakunnan pääkirkko ja suosittu konserttipaikka '
+            + 'kesäisin, kun aurinko ei laske ollenkaan.',
+          lyhyt: 'Tromssan puinen tuomiokirkko 1861 on maailman pohjoisin luterilainen katedraali.',
+          selite: 'Tromssan tuomiokirkon sisätila — kokonaan puinen '
+            + 'uusgoottilainen rakennus vuodelta 1861, maailman '
+            + 'pohjoisin luterilainen katedraali.',
+          lahde: 'Wolfmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Panimo, joka väittää olevansa maailman pohjoisin',
+          tiedosto: 'Mack Brewery,Tromsø.jpg',
+          teksti: 'Ludwig Markus Mack perusti panimonsa Tromssaan '
+            + 'vuonna 1877 — vain muutama vuosi isoisän matkan '
+            + 'jälkeen — ja yritys markkinoi itseään yhä maailman '
+            + 'pohjoisimpana panimona. Alusta asti panimo palveli '
+            + 'sekä kaupunkilaisia että pohjoiseen suuntaavia '
+            + 'retkikuntia, joille kylmässä säilyvä olut oli '
+            + 'käytännöllinen matkaeväs.'
+            + '\n\n'
+            + 'Panimo on vaihtanut omistajaa ja tuotanto on '
+            + 'sittemmin osittain siirtynyt muualle Norjaan, mutta '
+            + 'Mack-nimi ja sen tunnettu Isbjørn-etiketti ovat '
+            + 'pysyneet Tromssan kaupunkikuvassa yli sata '
+            + 'neljäkymmentä vuotta perustamisen jälkeen.',
+          lyhyt: 'Mackin panimo perustettiin Tromssaan 1877 ja markkinoi itseään yhä maailman pohjoisimpana panimona.',
+          selite: 'Mackin panimon rakennus Tromssassa — perustettu '
+            + '1877, markkinoi itseään maailman pohjoisimpana '
+            + 'panimona.',
+          lahde: 'Manxruler, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaupunki, josta retkikunnat lähtivät napaa kohti',
+          tiedosto: 'Polar Museum in Tromsø (Jul 2019) 1.jpg',
+          teksti: 'Tromssan sijainti syvän vuonon suojassa mutta silti '
+            + 'lähellä avomerta teki siitä 1800-luvun lopulla '
+            + 'luontevan viimeisen pysähdyspaikan napaseuduille '
+            + 'suuntaaville retkikunnille — muun muassa Roald '
+            + 'Amundsen ja Fridtjof Nansen varustautuivat ja '
+            + 'rekrytoivat miehistöä Tromssassa ennen matkojaan '
+            + 'Koillisväylälle ja Pohjoisnavan suunnalle.'
+            + '\n\n'
+            + 'Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", '
+            + 'osin ironisesti ja osin ylpeydestä sen kansainvälisestä '
+            + 'merkityksestä napatutkimukselle. Nykyinen Polarmuseet '
+            + 'toimii vanhassa tullirakennuksessa satamassa ja '
+            + 'kertoo näiden retkikuntien historiasta.',
+          lyhyt: 'Amundsen ja Nansen varustautuivat retkikuntiinsa Tromssassa, joka sai lempinimen "Jäämeren Pariisi".',
+          selite: 'Polarmuseet Tromssan satamassa vanhassa '
+            + 'tullirakennuksessa — kertoo kaupungista napaseutujen '
+            + 'retkikuntien lähtöpaikkana.',
+          lahde: 'Visem, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sotalaiva, joka kaatui Tromssan edustalla',
+          tiedosto: 'Battlehip Tirpitz capsized at Tromso c1944.jpg',
+          teksti: 'Saksan laivaston Tirpitz oli sisarlaivansa Bismarckin '
+            + 'ohella Euroopan suurin ja pelätyin sotalaiva, ja se oli '
+            + 'sijoitettu Norjan rannikolle uhkaamaan liittoutuneiden '
+            + 'arktisia saattueita. Marraskuussa 1944 brittiläiset '
+            + 'pommikoneet upottivat sen Tromssan edustalla '
+            + 'räjähtävillä Tallboy-erikoispommeilla, jotka lävistivät '
+            + 'laivan kannen.'
+            + '\n\n'
+            + 'Laiva kaatui kyljelleen minuuteissa, ja arviolta yli '
+            + 'tuhat merimiestä kuoli. Hylky makasi Tromssan '
+            + 'vuonossa vuoteen 1957 asti, jolloin se lopulta '
+            + 'romutettiin — mutta osia siitä ja sieltä löydettyjä '
+            + 'esineitä säilytetään yhä museoissa Norjassa.',
+          lyhyt: 'Saksan sotalaiva Tirpitz upotettiin Tromssan edustalla marraskuussa 1944.',
+          selite: 'Tirpitz kaatuneena Tromssan edustalla marraskuussa '
+            + '1944 brittiläisten pommikoneiden upotettua sen.',
+          lahde: 'Sqn.Ldr. F.L. Dodd ja P/O A. Hill, No. 544 Squadron RAF, '
+            + 'Wikimedia Commons (public domain)',
+        },
+      ],
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -23185,6 +23705,111 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asukasta.',
           lahde: 'Nobel-säätiö, Wikimedia Commons (public domain)',
           wiki: 'Halldór Laxness',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saari, jolla maailman vanhin yhä toimiva parlamentti '
+        + 'perustettiin taivaan alla kalliorotkossa ja uskonto vaihdettiin '
+        + 'yhdellä miehen päätöksellä ilman sotaa.',
+      tehtava: {
+        kysymys: 'Missä vuonna Alþingi perustettiin Þingvellirin tasangolla?',
+        vaihtoehdot: ['930', '874', '1000', '1262'],
+        oikea: 0,
+        fakta: 'Alþingi perustettiin vuonna 930 — se on maailman vanhin '
+          + 'yhä toimiva parlamentti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mies, joka heitti pylväät mereen ja seurasi niitä',
+          tiedosto: 'Ingólfur Arnarson Statue, Reykjavik.jpg',
+          teksti: 'Norjalainen päällikkö Ingólfur Arnarson heitti '
+            + 'perimätiedon mukaan laivansa kunniapylväät mereen '
+            + 'lähestyessään Islannin rannikkoa noin vuonna 874 ja '
+            + 'lupasi asettua sinne, minne pylväät ajautuisivat. Ne '
+            + 'löytyivät lahdesta, jossa hän näki maasta nousevaa '
+            + 'höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi '
+            + 'lahdeksi", kuumien lähteiden mukaan.'
+            + '\n\n'
+            + 'Ingólfuria pidetään Islannin ensimmäisenä pysyvänä '
+            + 'asukkaana, ja häntä seurasivat vuosikymmenten aikana '
+            + 'tuhannet muut siirtolaiset, pääosin Norjasta ja '
+            + 'Brittein saarilta. Asutuskausi kesti perimätiedon '
+            + 'mukaan noin vuoteen 930 asti, jolloin koko saari '
+            + 'katsottiin asutetuksi.',
+          lyhyt: 'Ingólfur Arnarson asettui Reykjavíkiin noin 874 seurattuaan mereen heitettyjä kunniapylväitä.',
+          selite: 'Ingólfur Arnarsonin patsas Reykjavíkissä — hänet '
+            + 'tunnetaan Islannin ensimmäisenä pysyvänä asukkaana, '
+            + 'noin vuodesta 874.',
+          lahde: 'Rob Young, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Parlamentti kalliorotkossa taivasalla',
+          tiedosto: 'Roca de la Ley, Parque Nacional de Þingvellir, Suðurland, Islandia, 2014-08-16, DD 019.jpg',
+          teksti: 'Islannin päällikkömiehet kokoontuivat vuonna 930 '
+            + 'Þingvellirin tasangolle, jossa Atlantin ja Euraasian '
+            + 'mannerlaatat erkanevat toisistaan, ja perustivat Alþingin '
+            + '— yleiskokouksen, joka sääti lakeja ja ratkaisi '
+            + 'riitoja koko saarelle. Kokous pidettiin joka kesä '
+            + 'kahden viikon ajan Lögbergillä, "lakikalliolla", josta '
+            + 'lakimies julisti maan lait ääneen muistista, sillä '
+            + 'niitä ei aluksi kirjoitettu ylös.'
+            + '\n\n'
+            + 'Alþingi on maailman vanhin yhä toimiva parlamentti — '
+            + 'se lakkautettiin väliaikaisesti vain vuosina 1800–1844 '
+            + 'Tanskan vallan aikana, mutta perustettiin uudelleen ja '
+            + 'toimii Reykjavíkissä nykyäänkin.',
+          lyhyt: 'Alþingi perustettiin 930 Þingvellirin tasangolle, jossa mannerlaatat erkanevat toisistaan.',
+          selite: 'Lögberg, "lakikallio", Þingvellirin kansallispuistossa '
+            + '— paikka, jossa Alþingi kokoontui vuodesta 930 alkaen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Päätös, joka vaihtoi uskonnon ilman sotaa',
+          tiedosto: 'Almannagjá gorge at Þingvellir National Park.jpg',
+          teksti: 'Vuoden 999 tai 1000 Alþingillä kristityt ja '
+            + 'vanhauskoiset olivat ajautumassa avoimeen '
+            + 'yhteenottoon siitä, pitäisikö koko saaren siirtyä '
+            + 'kristinuskoon. Kokous antoi ratkaisun lakimies '
+            + 'Þorgeir Ljósvetningagoðille, joka vetäytyi vuorokaudeksi '
+            + 'makaamaan viitan alle miettimään — perimätiedon mukaan '
+            + 'ilman ruokaa ja puhumatta kenellekään.'
+            + '\n\n'
+            + 'Nousuaan hän julisti koko saaren kristityksi, mutta '
+            + 'salli vanhojen jumalien palvonnan yksityisesti kotona: '
+            + 'kompromissi, joka vältti sisällissodan uhan. Þorgeir '
+            + 'itse heitti perimätiedon mukaan omat epäjumalankuvansa '
+            + 'lähistön Goðafossiin, "jumalten koskeen".',
+          lyhyt: 'Lakimies Þorgeir julisti Islannin kristityksi vuonna 1000 kompromissilla, joka vältti sisällissodan.',
+          selite: 'Almannagjá-rotko Þingvellirin kansallispuistossa — '
+            + 'samalla tasangolla, jossa Islanti päätti siirtyä '
+            + 'kristinuskoon vuonna 1000.',
+          lahde: 'Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vuori, jota Eurooppa piti helvetin porttina',
+          tiedosto: 'Hekla (A. Ortelius) Detail from map of Iceland 1585.jpg',
+          teksti: 'Heklan tulivuori purkautui keskiajalla toistuvasti '
+            + 'niin näyttävästi, että eurooppalaiset oppineet alkoivat '
+            + 'pitää sitä kirjaimellisesti helvetin porttina — '
+            + '1200-luvun munkkikirjoituksissa Heklan sanottiin '
+            + 'olevan paikka, josta kuuluivat kadotettujen sielujen '
+            + 'huudot. Maine levisi karttoihin ja kirjoihin ympäri '
+            + 'mannerta vuosisatojen ajan.'
+            + '\n\n'
+            + 'Kartantekijä Abraham Ortelius kuvasi Heklan '
+            + 'Islanti-kartassaan 1585 liekkejä syöksevänä vuorena — '
+            + 'yksi monista esimerkeistä siitä, miten kaukainen ja '
+            + 'tuntematon saari täyttyi eurooppalaisten mielikuvituksen '
+            + 'hirviöistä ja helvetinkuvista todellisen tiedon '
+            + 'puutteessa.',
+          lyhyt: 'Keskiajan Eurooppa piti purkautuvaa Hekla-tulivuorta kirjaimellisesti helvetin porttina.',
+          selite: 'Yksityiskohta Abraham Orteliuksen vuoden 1585 '
+            + 'Islanti-kartasta: Hekla on kuvattu liekkejä syöksevänä '
+            + 'vuorena, ajan käsityksen mukaan helvetin porttina.',
+          lahde: 'Abraham Ortelius, Wikimedia Commons (public domain)',
         },
       ],
     },
@@ -23593,6 +24218,106 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'saamelaiset',
+      nimi: 'Saamelaiskulttuuri',
+      johdanto: 'Lappi on saamelaisten kotiseutu Sápmi, jossa oma kieli, '
+        + 'puku, laulu ja itsehallinto ovat eläviä nykypäivän asioita, '
+        + 'ei museoesineitä.',
+      tehtava: {
+        kysymys: 'Minä vuonna Suomen saamelaiskäräjien oma talo Sajos valmistui?',
+        vaihtoehdot: ['2012', '1996', '1971', '1991'],
+        oikea: 0,
+        fakta: 'Saamelaiskäräjät perustettiin 1996, mutta oma rakennus '
+          + 'Sajos Inarissa valmistui vasta 2012.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laulukilpailu, joka on käyty vuodesta 1971',
+          tiedosto: 'Sami Grand Prix.jpg',
+          teksti: 'Sámi Grand Prix on saamelaisen musiikin laulukilpailu, '
+            + 'jota on järjestetty Kautokeinossa pääsiäisenä vuodesta '
+            + '1971 lähtien. Suuri osa esityksistä pohjautuu joikuun, '
+            + 'saamelaiseen perinnelauluun, jolla ei ole alkua eikä '
+            + 'loppua tavallisessa mielessä — saamelaisen käsityksen '
+            + 'mukaan ei "lauleta jostakin" vaan "joiataan joku tai '
+            + 'jokin", ikään kuin laulu kantaisi kohteensa esiin.'
+            + '\n\n'
+            + 'Kilpailu on kasvanut pieneksi pääsiäisfestivaaliksi, '
+            + 'joka kokoaa saamelaisia eri puolilta Norjaa, Ruotsia, '
+            + 'Suomea ja Venäjää samaan kaupunkiin joka kevät.',
+          lyhyt: 'Sámi Grand Prix on saamelaisen musiikin kilpailu, jota on järjestetty Kautokeinossa pääsiäisenä 1971 lähtien.',
+          selite: 'Esiintyjä Sámi Grand Prix -laulukilpailussa '
+            + 'Kautokeinossa — kilpailua on järjestetty pääsiäisenä '
+            + 'vuodesta 1971.',
+          lahde: 'Wikikontiki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Festivaali, joka kutsuu koolle alkuperäiskansat',
+          tiedosto: 'The opening concert at the Riddu Riđđu festival 2019.jpg',
+          teksti: 'Riddu Riđđu -festivaali sai alkunsa 1991 nuorten '
+            + 'saamelaisten omasta aloitteesta pienessä Manndalenin '
+            + 'kylässä Pohjois-Norjassa, kun paikalliset halusivat tehdä '
+            + 'saamelaisuudesta jotain, josta kannattaa olla ylpeä sen '
+            + 'sijaan että sitä hävettäisiin. Festivaali laajeni '
+            + 'nopeasti kutsumaan mukaan myös muiden alkuperäiskansojen '
+            + 'esiintyjiä Grönlannista Australiaan asti.'
+            + '\n\n'
+            + 'Nykyään Riddu Riđđu on yksi Euroopan tunnetuimmista '
+            + 'alkuperäiskansojen kulttuuritapahtumista: ohjelmassa on '
+            + 'musiikkia, elokuvia, käsityötä ja keskusteluja, ja se '
+            + 'kokoaa Manndaleniin tuhansia kävijöitä joka kesä.',
+          lyhyt: 'Riddu Riđđu -festivaali syntyi 1991 nuorten saamelaisten aloitteesta ja kokoaa nyt alkuperäiskansoja ympäri maailmaa.',
+          selite: 'Avajaiskonsertti Riddu Riđđu -festivaalilla 2019 — '
+            + 'festivaali syntyi 1991 ja kutsuu koolle alkuperäiskansojen '
+            + 'esiintyjiä ympäri maailmaa.',
+          lahde: 'Sabine Rønsen (WMNO), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puku, joka kertoo kantajastaan ennen kuin tämä avaa suunsa',
+          tiedosto: "Berit Alette Mienna's gákti at 2025 Riddu Riđđu.jpg",
+          teksti: 'Gákti on saamelaisten perinteinen puku, ja sen värit, '
+            + 'kuosit ja koristeet kertovat tuntevalle katsojalle '
+            + 'kantajansa kotiseudun, suvun ja joskus siviilisäädynkin — '
+            + 'kaksi saamelaista voivat lukea toisistaan puvun '
+            + 'perusteella asioita, joita ulkopuolinen ei huomaa '
+            + 'lainkaan. Puvut ommellaan usein suvussa, ja monella '
+            + 'perheellä on omat, sukupolvelta toiselle siirtyvät '
+            + 'kuvionsa.'
+            + '\n\n'
+            + 'Kuvan gáktin ompeli Berit Alette Miennan serkku sari-'
+            + 'kankaasta perinteisin saamelaiskuvioin — esimerkki '
+            + 'siitä, miten vanha käsityöperinne elää ja uudistuu yhä, '
+            + 'eikä ole jäänyt vain juhlapäivien museoasuksi.',
+          lyhyt: 'Gáktipuvun värit ja kuosit kertovat kantajansa kotiseudun ja suvun tuntevalle katsojalle.',
+          selite: 'Berit Alette Miennan gákti vuoden 2025 Riddu Riđđu '
+            + '-festivaalilla — serkun ompelema, perinteisin '
+            + 'saamelaiskuvioin koristeltu.',
+          lahde: 'John Sears, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Parlamentti, joka sai oman talon vasta 2012',
+          tiedosto: 'Sajos Sami Parliament, Inari, Finland.jpg',
+          teksti: 'Suomen saamelaiskäräjät perustettiin 1996 hoitamaan '
+            + 'saamelaisten kielen ja kulttuurin itsehallintoa, mutta '
+            + 'sillä ei pitkään ollut omaa rakennusta — istunnot '
+            + 'pidettiin vuokratiloissa Inarissa. Oma talo, Sajos, '
+            + 'valmistui vasta 2012, ja sen puurakenteinen sali on '
+            + 'suunniteltu perinteisen saamelaiskodan, kotan, muotoa '
+            + 'mukaillen.'
+            + '\n\n'
+            + 'Saamelaiskäräjät päättää muun muassa saamen kielten '
+            + 'opetuksesta ja kulttuurimäärärahoista, mutta sillä ei '
+            + 'ole Suomen eduskunnan kaltaista lainsäädäntövaltaa — '
+            + 'se on neuvotteleva ja lausuntoja antava itsehallintoelin.',
+          lyhyt: 'Sajos, Suomen saamelaiskäräjien talo Inarissa, valmistui vasta 2012.',
+          selite: 'Sajos, Suomen saamelaiskäräjien rakennus Inarissa — '
+            + 'sen puurakenteinen sali mukailee perinteisen kodan '
+            + 'muotoa.',
+          lahde: 'Ben Morphett, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
@@ -23987,6 +24712,112 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen '
             + 'ajanlaskua.',
           lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saari, jolla on tallella Euroopan vanhin palatsi, '
+        + 'lukemattomaksi jäänyt kirjoitus ja munkkien viimeinen '
+        + 'vastarinta ottomaaneja vastaan.',
+      tehtava: {
+        kysymys: 'Kuinka monta vuotta ottomaanien piiritys Heraklionissa lopulta kesti?',
+        vaihtoehdot: ['21 vuotta', '4 vuotta', '9 vuotta', '15 vuotta'],
+        oikea: 0,
+        fakta: 'Heraklionin piiritys 1648–1669 kesti kaksikymmentäyksi '
+          + 'vuotta — pisin tunnettu piiritys historiassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Valtaistuinhuone, jota kukaan ei enää istu',
+          tiedosto: 'Throne of Minos at Knossos Palace.jpg',
+          teksti: 'Arkeologi Arthur Evans kaivoi Knossoksen palatsin esiin '
+            + 'vuodesta 1900 alkaen ja löysi sen sydämestä huoneen, jonka '
+            + 'keskellä seisoo yhä paikoillaan alabasterinen tuoli — '
+            + 'Euroopan vanhin säilynyt valtaistuin, veistetty noin '
+            + '1400-luvulla eaa. Evans nimesi huoneen valtaistuinhuoneeksi '
+            + 'ja uskoi tuolissa istuneen legendaarisen kuningas Minoksen, '
+            + 'vaikka nykytutkijat epäilevät huoneen olleen ennemmin '
+            + 'kulttikäytössä kuin hallitsijan istuinsalina.'
+            + '\n\n'
+            + 'Seiniä koristavat kopiot alkuperäisistä griffinfreskoista, '
+            + 'ja Evans myös jälleenrakensi osia palatsista betonilla '
+            + 'omien tulkintojensa mukaan — ratkaisu, jota myöhemmät '
+            + 'arkeologit ovat arvostelleet liian vapaaksi.',
+          lyhyt: 'Knossoksen valtaistuinhuoneen alabasterituoli on Euroopan vanhin säilynyt valtaistuin.',
+          selite: 'Knossoksen palatsin valtaistuinhuone: alabasterinen '
+            + 'tuoli on veistetty noin 1400-luvulla eaa. ja on Euroopan '
+            + 'vanhin säilynyt valtaistuin.',
+          lahde: 'Jebulon, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Levy, jota kukaan ei ole pystynyt lukemaan',
+          tiedosto: 'Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg',
+          teksti: 'Italialainen arkeologi Luigi Pernier löysi Faistoksen '
+            + 'palatsiraunioista 1908 poltetusta savesta valmistetun '
+            + 'kiekon, jonka molemmille puolille on painettu spiraalimuotoon '
+            + '241 kuvamerkkiä. Merkit on tehty erillisillä leimasimilla '
+            + 'ennen polttoa — poikkeuksellinen tekniikka, jota ei tunneta '
+            + 'muualta muinaismaailmasta samalta ajalta.'
+            + '\n\n'
+            + 'Levyn ikä ajoittuu keskiminolaiselle kaudelle, noin '
+            + '1850–1600 eaa., mutta sen kirjoitusjärjestelmää ei ole '
+            + 'onnistuttu yhdistämään mihinkään tunnettuun kieleen. '
+            + 'Kymmenet tutkijat ovat esittäneet ratkaisujaan '
+            + 'vuosikymmenten varrella, mutta yksikään tulkinta ei ole '
+            + 'saanut laajaa hyväksyntää — levy on yhä yksi arkeologian '
+            + 'ratkaisemattomista arvoituksista.',
+          lyhyt: 'Faistoksen levyn 241 painettua kuvamerkkiä on jäänyt lukematta yli sata vuotta löydöstä.',
+          selite: 'Faistoksen levy Heraklionin arkeologisessa museossa: '
+            + 'sen spiraalimuotoista kirjoitusta ei ole onnistuttu '
+            + 'tulkitsemaan löydöstä lähtien.',
+          lahde: 'Joyofmuseums, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Linnoitus, joka kesti kaksikymmentäyksi vuotta',
+          tiedosto: 'Venetian Fortress of Koules in Heraklion, Crete 003.jpg',
+          teksti: 'Venetsialaiset rakensivat Koulesin linnoituksen '
+            + 'Heraklionin sataman suulle 1500-luvulla puolustamaan '
+            + 'kaupunkia ottomaaneja vastaan. Se osoittautui tarpeelliseksi: '
+            + 'kun ottomaanit hyökkäsivät Kreetalle 1645, Heraklionin '
+            + 'piiritys venyi lopulta kaksikymmentäyksi vuotta pitkäksi — '
+            + 'pisimmäksi piiritykseksi tunnetussa historiassa.'
+            + '\n\n'
+            + 'Kaupunki antautui vasta 1669, kun molemmat osapuolet '
+            + 'olivat menettäneet kymmeniätuhansia sotilaita. Koulesin '
+            + 'paksut muurit ja sen edustalle kaiverretut Pyhän Markuksen '
+            + 'leijonat ovat tallella yhä, ja linnoitus on nykyään '
+            + 'Heraklionin tunnetuin maamerkki satamassa.',
+          lyhyt: 'Koulesin linnoitus näki Heraklionin kaksikymmentäyksi vuotta kestäneen piirityksen 1648–1669.',
+          selite: 'Koulesin venetsialaislinnoitus Heraklionin sataman '
+            + 'suulla — se puolusti kaupunkia historian pisimmässä '
+            + 'tunnetussa piirityksessä, joka kesti kaksikymmentäyksi '
+            + 'vuotta.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Luostari, joka valitsi räjähdyksen antautumisen sijaan',
+          tiedosto: 'Kreta (GR), Amnatos, Kloster Arkadi -- 2023 -- 8553.jpg',
+          teksti: 'Arkadin luostarista tuli marraskuussa 1866 kreetalaisen '
+            + 'kapinan symboli, kun ottomaanijoukot piirittivät sinne '
+            + 'paenneet sadat kapinalliset ja siviilit. Kaksi päivää '
+            + 'kestäneen taistelun jälkeen muureja murrettiin, ja '
+            + 'puolustajat sytyttivät luostarin ruutivaraston mieluummin '
+            + 'kuin antautuivat — räjähdys tappoi puolustajia ja '
+            + 'hyökkääjiä yhdessä.'
+            + '\n\n'
+            + 'Uutinen levisi nopeasti Euroopassa ja herätti myötätuntoa '
+            + 'kreetalaisten asialle Ranskassa, Britanniassa ja '
+            + 'Yhdysvalloissa asti, vaikka kapina lopulta kukistettiin. '
+            + 'Isoisän matkan aikaan 1873 tapahtuma on yhä tuore muisto, '
+            + 'ja luostarin pihalla seisoo edelleen räjähdyksen '
+            + 'jäljiltä ammuttu, kuulien lävistämä tuulimylly.',
+          lyhyt: 'Arkadin luostarin puolustajat räjäyttivät ruutivarastonsa mieluummin kuin antautuivat 1866.',
+          selite: 'Arkadin luostari, jonka puolustajat räjäyttivät '
+            + 'ruutivarastonsa marraskuussa 1866 mieluummin kuin '
+            + 'antautuivat piirittäneille ottomaanijoukoille.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -24388,6 +25219,112 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Normannikuninkaat rakennuttivat kirkkoja, joissa '
+        + 'bysanttilaiset mosaiikkitaiteilijat, arabialaiset '
+        + 'kattoveistäjät ja latinalainen kirkko työskentelivät '
+        + 'samojen seinien sisällä.',
+      tehtava: {
+        kysymys: 'Kuka kruunaa kuningas Roger II:n Martoranan kirkon mosaiikissa?',
+        vaihtoehdot: ['Kristus itse', 'Paavi', 'Konstantinopolin patriarkka', 'Amiraali Yrjö Antiokialainen'],
+        oikea: 0,
+        fakta: 'Martoranan mosaiikki näyttää Kristuksen kruunaamassa '
+          + 'Roger II:ta suoraan, ilman paavin väliintuloa — poliittinen '
+          + 'kannanotto kuninkaan jumalallisesta vallasta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kappeli, jossa kolme kulttuuria kohtaa',
+          tiedosto: 'Palermo - Cappella Palatina - 1.jpg',
+          teksti: 'Kuningas Roger II aloitti Palatinan kappelin '
+            + 'rakentamisen 1132 osaksi Palermon kuninkaanlinnaa. '
+            + 'Hän toi Bysantista mosaiikkitaiteilijat kuvaamaan '
+            + 'seinät ja katon kultaisiksi Raamatun kertomuksiksi, '
+            + 'mutta antoi arabialaisten puuseppien veistää katon '
+            + 'muqarnas-tekniikalla — samalla tyylillä kuin '
+            + 'islamilaisen maailman moskeijoissa.'
+            + '\n\n'
+            + 'Lopputulos on ainutlaatuinen: yhden pienen huoneen '
+            + 'sisällä yhdistyvät normannien läntinen arkkitehtuuri, '
+            + 'bysanttilainen kuvataide ja arabialainen '
+            + 'koristeveistos, kaikki saman hallitsijan tilaamina '
+            + 'samaan aikaan.',
+          lyhyt: 'Palatinan kappelin katto ja seinät yhdistävät normannien, bysanttilaisten ja arabien käsialan.',
+          selite: 'Palatinan kappeli Palermon kuninkaanlinnassa: '
+            + 'bysanttilaiset kultamosaiikit ja arabialaisten '
+            + 'puuseppien veistämä muqarnas-katto samassa tilassa.',
+          lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuningas, jonka kruunasi Kristus itse',
+          tiedosto: 'Chiesa della Martorana Palermo mosaico Cristo.jpg',
+          teksti: 'Roger II:n amiraali Yrjö Antiokialainen, syyrialainen '
+            + 'ortodoksikristitty kuninkaan palveluksessa, rakennutti '
+            + 'Martoranan kirkon Palermoon 1143. Kirkon mosaiikeissa '
+            + 'on kuva, jossa Kristus itse asettaa kruunun Roger II:n '
+            + 'päähän — ei paavi eikä piispa, vaan suoraan taivaasta.'
+            + '\n\n'
+            + 'Kuva oli poliittinen kannanotto: se väitti kuninkaan '
+            + 'vallan tulevan suoraan Jumalalta ilman kirkon '
+            + 'väliintuloa, samaan aikaan kun paavius riiteli '
+            + 'normannien kanssa Sisilian herruudesta. Kirkko '
+            + 'tunnetaan yhä kansanomaisesti Martoranan nimellä '
+            + 'läheisen, myöhemmin siihen liitetyn nunnaluostarin '
+            + 'mukaan.',
+          lyhyt: 'Martoranan kirkon mosaiikki kuvaa Kristusta kruunaamassa kuningas Roger II:ta suoraan, ilman paavia.',
+          selite: 'Martoranan kirkon mosaiikki Palermossa: Kristus '
+            + 'asettaa kruunun kuningas Roger II:n päähän — poliittinen '
+            + 'kuva kuninkaan jumalallisesta vallasta ilman paavin '
+            + 'väliintuloa.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kirkko, jonka lupasi rakentaa myrskyssä pelastunut kuningas',
+          tiedosto: 'Cefalu Cathedral MosaicChristPantocrator 009 6038.jpg',
+          teksti: 'Tarinan mukaan Roger II lupasi myrskyn keskellä '
+            + 'aluksellaan, että jos hän pääsisi hengissä rantaan, hän '
+            + 'rakentaisi kiitokseksi katedraalin — ja laiva ajautui '
+            + 'juuri Cefalùn rannalle 1131. Katedraalin rakennustyöt '
+            + 'alkoivat samana vuonna, ja se oli Roger II:n ensimmäinen '
+            + 'suuri rakennushanke kuninkaana.'
+            + '\n\n'
+            + 'Apsiksen kattoa hallitsee valtava Kristus Pantokraattori '
+            + '-mosaiikki, jonka bysanttilaiset mestarit tekivät '
+            + '1140-luvulla — yksi vanhimmista ja parhaiten '
+            + 'säilyneistä esimerkeistä Sisilian normannikauden '
+            + 'mosaiikkitaiteesta.',
+          lyhyt: 'Cefalùn katedraalin Kristus Pantokraattori on 1140-luvulta, yksi Sisilian vanhimmista mosaiikeista.',
+          selite: 'Cefalùn katedraalin apsismosaiikki: Kristus '
+            + 'Pantokraattori, bysanttilaisten mestarien tekemä '
+            + '1140-luvulla, yksi Sisilian normannikauden vanhimmista '
+            + 'mosaiikeista.',
+          lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuudentuhannen neliömetrin kultapinta',
+          tiedosto: 'Ceiling of left chapel in Cathedral (Monreale) - Mosaic of Christ Pantocrator.jpg',
+          teksti: 'Kuningas Vilhelm II käynnisti Monrealen katedraalin '
+            + 'rakennustyöt 1174, ja sen sisäseinät peitettiin lähes '
+            + 'kokonaan kultapohjaisilla mosaiikeilla — yhteensä noin '
+            + '6 300 neliömetriä, enemmän kuin missään muualla '
+            + 'Konstantinopolin ja Ravennan ulkopuolella.'
+            + '\n\n'
+            + 'Mosaiikit kuvaavat Raamatun tarinaa Luomisesta '
+            + 'Ilmestyskirjaan asti, ja apsiksessa kohoaa yli '
+            + 'seitsemän metrin korkuinen Kristus Pantokraattori. '
+            + 'Katedraali on yhä Monrealen käytössä oleva '
+            + 'pääkirkko, ei museo, vaikka se on myös Unescon '
+            + 'maailmanperintökohde.',
+          lyhyt: 'Monrealen katedraalin mosaiikit kattavat noin 6 300 neliömetriä — enemmän kuin missään muualla Bysantin ulkopuolella.',
+          selite: 'Monrealen katedraalin sisäkatto: kultapohjainen '
+            + 'Kristus Pantokraattori -mosaiikki on osa noin 6 300 '
+            + 'neliömetrin mosaiikkipintaa.',
+          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
@@ -24650,6 +25587,25 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Paebi, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lumivyöry',
         },
+        {
+          otsikko: 'Vuori hehkuu punaisena auringon laskiessa',
+          tiedosto: '043 Matterhorn reflecting in Stellisee at sunset Photo by Giles Laurent.jpg',
+          teksti: 'Matterhorn on lähes symmetrinen pyramidi, jonka neljä '
+            + 'jyrkkää seinämää osoittavat ilmansuuntiin, ja huippu kohoaa '
+            + '4 478 metriin Sveitsin ja Italian rajalla. Auringon '
+            + 'laskiessa tai noustessa huippu hehkuu hetken punaisena tai '
+            + 'oranssina, kun matala valo heijastuu ilmakehän '
+            + 'pisaroista — ilmiötä kutsutaan alppihehkuksi (saksaksi '
+            + 'Alpenglühen), ja nimi tulee juuri Alpeilta. Muotonsa ja '
+            + 'hehkunsa ansiosta Matterhorn on yksi maailman kuvatuimmista '
+            + 'vuorista.',
+          lyhyt: 'Matterhorn hehkuu auringonlaskun aikaan Stelliseen tyynen pinnan yllä, huippu 4 478 metrissä.',
+          selite: 'Matterhorn heijastuu Stelliseen tyyneen pintaan '
+            + 'auringonlaskun aikaan; alppihehku värjää taivaan ja huipun '
+            + 'punertavaksi.',
+          lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Matterhorn',
+        },
       ],
       /*
        * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
@@ -24781,6 +25737,113 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Aikanaan jäätikön reunaan rakennetut vuoristomajat seisovat '
             + 'nykyään satojen metrien päässä sulaneesta jäästä.',
           lahde: 'Friedrich Haag, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuoret, jotka pysäyttivät kenraaleja, tappoivat '
+        + 'kiipeilijöitä ja pelastivat eksyneitä koirien avulla — '
+        + 'este, joka on aina houkutellut ylittäjiä.',
+      tehtava: {
+        kysymys: 'Minä vuonna Matterhornin ensimmäinen huipulle nousu tehtiin?',
+        vaihtoehdot: ['1865', '1786', '1800', '1906'],
+        oikea: 0,
+        fakta: 'Edward Whymperin ryhmä nousi Matterhornin huipulle '
+          + 'ensimmäisenä 1865, mutta neljä ryhmän jäsentä kuoli '
+          + 'laskeutuessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kenraali, joka vei norsut vuorten yli',
+          tiedosto: "Hannibal traversant les Alpes à dos d'éléphant - Nicolas Poussin.jpg",
+          teksti: 'Karthagolainen kenraali Hannibal ylitti Alpit '
+            + 'armeijoineen vuonna 218 eaa. yllättääkseen roomalaiset '
+            + 'hyökkäämällä Italiaan pohjoisesta, mistä kukaan ei '
+            + 'odottanut vihollista tulevan. Mukana kulki myös '
+            + 'sotanorsuja — täsmällistä reittiä ei tiedetä '
+            + 'varmuudella, ja historioitsijat ovat väitelleet siitä '
+            + 'yli kaksi vuosituhatta.'
+            + '\n\n'
+            + 'Ylitys maksoi kalliisti: osa historioitsijoista arvioi, '
+            + 'että Hannibal menetti puolet armeijastaan matkalla '
+            + 'kylmään, korkeuteen ja paikallisten heimojen '
+            + 'väijytyksiin. Silti hän saapui Italiaan ja voitti '
+            + 'roomalaiset useissa taisteluissa seuraavien vuosien '
+            + 'aikana — rohkea reitti, jota kukaan ei ollut '
+            + 'aavistanut.',
+          lyhyt: 'Hannibal ylitti Alpit sotanorsuineen 218 eaa. yllättääkseen roomalaiset pohjoisesta.',
+          selite: 'Nicolas Poussinin maalaus kuvaa Hannibalia ylittämässä '
+            + 'Alpit norsun selässä 218 eaa. — reitti, jota '
+            + 'historioitsijat ovat väitelleet yli kaksi vuosituhatta.',
+          lahde: 'Nicolas Poussin (attribuoitu), Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Voitto, joka päättyi neljään hautaan',
+          tiedosto: 'Matterhorn disaster Dore.jpg',
+          teksti: 'Englantilainen Edward Whymper ja hänen kuusihenkinen '
+            + 'ryhmänsä nousivat 14. heinäkuuta 1865 ensimmäisinä '
+            + 'Matterhornin huipulle — vuoren, jota oli pidetty '
+            + 'mahdottomana kiivetä. Voitonriemu kesti tunteja: '
+            + 'laskeutuessa köysi katkesi tai irtosi, ja neljä ryhmän '
+            + 'jäsentä syöksyi kuolemaansa tuhannen metrin jyrkänteeltä.'
+            + '\n\n'
+            + 'Onnettomuus järkytti koko Eurooppaa ja herätti '
+            + 'julkisen keskustelun vuorikiipeilyn vaaroista — '
+            + 'kuningatar Viktoriakin harkitsi lajin kieltämistä '
+            + 'kokonaan. Whymper itse selvisi ja kirjoitti '
+            + 'nousustaan kirjan, joka teki Matterhornista '
+            + 'vuorikiipeilyn tunnetuimman symbolin.',
+          lyhyt: 'Whymperin ryhmä valloitti Matterhornin 1865, mutta neljä jäsentä kuoli laskeutuessa.',
+          selite: 'Gustave Doré kuvasi Matterhorn-onnettomuuden 1865: '
+            + 'köysi katkesi laskeutuessa, ja neljä kiipeilijää syöksyi '
+            + 'kuolemaansa.',
+          lahde: 'Gustave Doré, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Munkit, jotka kasvattivat pelastuskoiria',
+          tiedosto: 'Hospice du Grand Saint-Bernard, Gustav Nünnicke 02.jpg',
+          teksti: 'Pyhän Bernhardin luostarihospitsi perustettiin '
+            + '1000-luvulla yli 2 400 metrin korkeuteen '
+            + 'auttamaan matkalaisia, jotka ylittivät vaarallisen '
+            + 'solan Sveitsin ja Italian välillä. 1600–1700-luvuilla '
+            + 'munkit alkoivat kasvattaa vahvoja, paksuturkkisia '
+            + 'koiria etsimään lumimyrskyihin eksyneitä matkalaisia — '
+            + 'rotu tunnetaan nykyään Bernhardinkoirana.'
+            + '\n\n'
+            + 'Kuuluisin koirista, Barry, pelasti perimätiedon mukaan '
+            + 'yli neljäkymmentä ihmistä 1800-luvun alussa ennen '
+            + 'kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden '
+            + 'yösijana solan yli, ja munkkien koirankasvatusperinne '
+            + 'jatkuu läheisessä erillisessä kasvattamossa.',
+          lyhyt: 'Pyhän Bernhardin munkit kasvattivat koiria etsimään solaan eksyneitä matkalaisia 1600-luvulta lähtien.',
+          selite: 'Pyhän Bernhardin hospitsi solassa yli 2 400 metrin '
+            + 'korkeudessa — munkit kasvattivat siellä Bernhardinkoiria '
+            + 'eksyneiden matkalaisten etsintään.',
+          lahde: 'Gustav Nünnicke, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tie, jonka kenraali rakennutti tykkejä varten',
+          tiedosto: 'Retaining wall of Napoleon Road at Simplon Pass, Switzerland.jpg',
+          teksti: 'Napoleon määräsi 1801 rakennettavaksi leveän, '
+            + 'tykistölle sopivan tien Simplon-solan yli Ranskan ja '
+            + 'Italian välille — aiemmat polut olivat kapeita '
+            + 'muulipolkuja, joita pitkin raskasta kalustoa ei voinut '
+            + 'kuljettaa. Tie valmistui 1805 ja oli aikansa '
+            + 'insinööritaidon huippu: leveitä tukimuureja, siltoja '
+            + 'ja galleria-tunneleita lumivyöryjä vastaan.'
+            + '\n\n'
+            + 'Napoleon perusteli hanketta sotilaallisella tarpeella, '
+            + 'mutta tie palveli pian myös tavallista kauppaa ja '
+            + 'matkailua. Osia alkuperäisistä tukimuureista ja '
+            + 'kivetyksestä on säilynyt nykyiseen valtatiehen asti, '
+            + 'yli kaksisataa vuotta rakentamisen jälkeen.',
+          lyhyt: 'Napoleon rakennutti Simplon-solan yli tykistölle sopivan tien 1801–1805.',
+          selite: 'Napoleonin tien tukimuuri Simplon-solassa — tie '
+            + 'rakennettiin 1801–1805 alun perin tykistön '
+            + 'kuljetukseen.',
+          lahde: 'Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -25210,6 +26273,81 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Orlandon patsaan kyynärvarren pituus oli Dubrovnikin '
             + 'virallinen mitta, ja se on kaiverrettu myös patsaan jalustaan.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'muurit',
+      nimi: 'Muurit',
+      johdanto: 'Melkein kaksi kilometriä kiveä, joka piti sotalaivat '
+        + 'loitolla vuosisatoja — ja jonka asukkaat korjasivat itse, kun '
+        + 'kranaatit repivät katot 1990-luvulla.',
+      tehtava: {
+        kysymys: 'Minä vuonna Dubrovnikin muurit lisättiin Unescon '
+          + 'maailmanperintöluetteloon?',
+        vaihtoehdot: ['1969', '1979', '1991', '2000'],
+        oikea: 1,
+        fakta: 'Muurit lisättiin luetteloon vuonna 1979, ja sen jälkeen '
+          + 'Dubrovnik on ollut myös Unescon vaarassa olevien kohteiden '
+          + 'listalla — 1990-luvun sodan seurauksena, mutta ei enää.',
+      },
+      nostot: [
+        {
+          otsikko: 'Melkein kaksi kilometriä kiveä',
+          tiedosto: 'City walls of Dubrovnik 02.jpg',
+          teksti: 'Muuri kiertää koko vanhankaupungin lähes kahden '
+            + 'kilometrin matkalta ja nousee paikoin 25 metrin korkeuteen. '
+            + 'Rakentaminen alkoi jo 800-luvulla, mutta nykyinen muoto '
+            + 'vahvistui pääosin 1300–1600-luvuilla, kun Ottomaanien valta '
+            + 'levisi lähelle ja Dubrovnikin kauppatasavalta halusi '
+            + 'varmistaa itsenäisyytensä. Muurissa on kuusitoista tornia, '
+            + 'kolme linnoitusta ja lukuisia ulokkeisia vartiokoppeja, joista '
+            + 'yksi näkyy kuvassa lähellä Pilen porttia. Muuria kiertää '
+            + 'nykyään suosittu kävelyreitti, jolta näkee koko vanhankaupungin '
+            + 'kattojen yli.',
+          lyhyt: 'Dubrovnikin muuri on lähes kaksi kilometriä pitkä ja nousee paikoin 25 metriin.',
+          selite: 'Dubrovnikin muuri kiertää vanhankaupungin lähes kahden '
+            + 'kilometrin matkalta ja nousee paikoin 25 metrin korkeuteen.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Walls of Dubrovnik',
+        },
+        {
+          otsikko: 'Torni, jonka rakennutti paavi',
+          tiedosto: 'Croatia-01550 - Minčeta Tower in the Morning (10008001305).jpg',
+          teksti: 'Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee '
+            + 'kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II '
+            + 'lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun '
+            + 'Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli '
+            + 'oli kaatunut vain kymmenen vuotta aiemmin. Alun perin '
+            + 'nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska '
+            + 'pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. '
+            + 'Torni ei koskaan joutunut todelliseen taisteluun — se riitti, '
+            + 'että se näytti vahvalta.',
+          lyhyt: 'Minčeta-torni rakennettiin 1463 paavi Pius II:n lähettämien rakentajien voimin.',
+          selite: 'Pyöreä Minčeta-torni rakennettiin vuonna 1463 paavi '
+            + 'Pius II:n lähettämien rakentajien voimin, kun Ottomaanien '
+            + 'uhka oli suurimmillaan.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Minčeta Tower',
+        },
+        {
+          otsikko: 'Katot korjattiin kranaattien jäljiltä',
+          tiedosto: 'Dubrovnik Old Town Roof Tops (4059913617).jpg',
+          teksti: 'Vuosina 1991–1992 jugoslavialaisjoukot piirittivät '
+            + 'Dubrovnikia ja ampuivat vanhaakaupunkia kranaateilla '
+            + 'kuukausien ajan, vaikka kaupunki oli jo silloin Unescon '
+            + 'maailmanperintökohde. Noin seitsemänkymmentä prosenttia '
+            + 'vanhankaupungin kattotiilistä vaurioitui tai tuhoutui. '
+            + 'Sodan jälkeen katot korjattiin tiili tiileltä, ja koska '
+            + 'vanhaa tiilimallia ei enää valmistettu, uudet tiilet piti '
+            + 'suunnitella vastaamaan alkuperäisten väriä ja muotoa '
+            + 'mahdollisimman tarkasti. Dubrovnik poistettiin Unescon '
+            + 'vaarassa olevien kohteiden listalta vuonna 1998.',
+          lyhyt: 'Noin 70 % vanhankaupungin katoista vaurioitui piirityksessä 1991–92, ja ne korjattiin tiili tiileltä.',
+          selite: 'Noin seitsemänkymmentä prosenttia vanhankaupungin '
+            + 'katoista vaurioitui vuosien 1991–1992 piirityksessä, ja ne '
+            + 'korjattiin sodan jälkeen tiili tiileltä.',
+          lahde: 'Tony Hisgett, Wikimedia Commons (CC BY 2.0)',
         },
       ],
     },
@@ -25646,6 +26784,110 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Joka viides vuosi kymmenettuhannet laulajat kokoontuvat '
+        + 'Riikaan perinteeseen, joka alkoi isoisän omana matkavuonna '
+        + '1873 ja on nykyään Unescon suojelema.',
+      tehtava: {
+        kysymys: 'Minä vuonna ensimmäinen yleinen laulujuhla järjestettiin Riiassa?',
+        vaihtoehdot: ['1873', '1903', '1923', '1938'],
+        oikea: 0,
+        fakta: 'Ensimmäinen yleinen latvialainen laulujuhla pidettiin '
+          + 'Riiassa vuonna 1873 — samana vuonna kuin isoisän matka.',
+      },
+      nostot: [
+        {
+          otsikko: 'Juhla, joka syntyi isoisän matkavuonna',
+          tiedosto: 'Latvian song festival by Dainis Matisons, 2008.jpg',
+          teksti: 'Ensimmäinen yleinen latvialainen laulujuhla '
+            + 'järjestettiin Riiassa kesäkuussa 1873 — täsmälleen '
+            + 'samana vuonna, jona isoisä kirjoitti oman matkansa '
+            + 'muistiin. Tapahtuman järjesti opettajakoulun johtaja '
+            + 'Jānis Cimze yhdessä paikallisten laulukuorojen kanssa, '
+            + 'ja se kokosi yhteen satoja laulajia eri puolilta '
+            + 'Latvian maaseutua.'
+            + '\n\n'
+            + 'Juhlasta tuli nopeasti kansallinen perinne, jota on '
+            + 'sittemmin järjestetty noin joka viides vuosi — myös '
+            + 'neuvostoaikana, jolloin se säilyi yhtenä harvoista '
+            + 'sallituista tavoista ilmaista kansallista identiteettiä '
+            + 'julkisesti.',
+          lyhyt: 'Ensimmäinen latvialainen laulujuhla pidettiin Riiassa 1873, samana vuonna kuin isoisän matka.',
+          selite: 'Kuoro esiintymässä latvialaisessa laulujuhlassa — '
+            + 'perinne, joka alkoi Riiassa 1873 ja jatkuu yhä joka '
+            + 'viides vuosi.',
+          lahde: 'Dainis Matisons, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Lava, joka mahtuu kolmellekymmenelletuhannelle laulajalle',
+          tiedosto: 'Mežaparks Great Bandstand before concert.jpg',
+          teksti: 'Nykyinen laulujuhla huipentuu Mežaparksin suurella '
+            + 'lavalla Riiassa, jonne mahtuu esiintymään jopa '
+            + 'kolmekymmentätuhatta laulajaa ja tanssijaa samaan aikaan '
+            + '— yksi maailman suurimmista pysyvistä '
+            + 'esiintymislavoista. Yleisöä juhlaan kokoontuu vielä '
+            + 'moninkertainen määrä ympäri Latviaa ja ulkomaita.'
+            + '\n\n'
+            + 'Osallistujat harjoittelevat kuukausia omissa '
+            + 'paikallisissa kuoroissaan ympäri maata ennen kuin '
+            + 'kaikki kokoontuvat samaan aikaan samalle lavalle — '
+            + 'logistinen ja musiikillinen ponnistus, joka toistuu '
+            + 'nyt viidennen sukupolven latvialaisten kesken.',
+          lyhyt: 'Mežaparksin lavalle Riiassa mahtuu esiintymään jopa 30 000 laulajaa ja tanssijaa.',
+          selite: 'Mežaparksin suuri esiintymislava Riiassa ennen '
+            + 'laulujuhlakonserttia — lavalle mahtuu jopa 30 000 '
+            + 'esiintyjää kerralla.',
+          lahde: 'Gustamons, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Perinne, jonka Unesco otti suojaansa',
+          tiedosto: 'View from Mežaparks Great Bandstand side.jpg',
+          teksti: 'Unesco lisäsi Latvian, Viron ja Liettuan yhteiset '
+            + 'laulu- ja tanssijuhlat ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön luetteloonsa vuonna 2003 — '
+            + 'tunnustuksena siitä, että perinne on säilyttänyt '
+            + 'kolmen maan kansanmusiikkia elävänä sukupolvesta '
+            + 'toiseen kirjoitetun nuotin ja suullisen opetuksen '
+            + 'yhdistelmällä.'
+            + '\n\n'
+            + 'Kolmen Baltian maan juhlat kehittyivät toisistaan '
+            + 'erillään 1800-luvun kansallisen herätyksen aikana, '
+            + 'mutta niitä yhdistää sama perusidea: tavalliset '
+            + 'ihmiset, ei ammattilaiset, laulavat yhdessä isoina '
+            + 'joukkoina oman kielensä ja kulttuurinsa kunniaksi.',
+          lyhyt: 'Unesco lisäsi Baltian maiden laulu- ja tanssijuhlat aineettoman kulttuuriperinnön luetteloon 2003.',
+          selite: 'Näkymä Mežaparksin lavalta sivulta — perinne, jonka '
+            + 'Unesco tunnusti ihmiskunnan aineettomaksi '
+            + 'kulttuuriperinnöksi 2003.',
+          lahde: 'Gustamons, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kuoro, johon kuka tahansa voi liittyä',
+          tiedosto: 'Choir Minjona University of Latvia 2018.jpg',
+          teksti: 'Laulujuhlaan ei tarvitse olla ammattilaulaja '
+            + 'osallistuakseen: mukaan pääsevät koulujen, '
+            + 'yliopistojen, työpaikkojen ja harrastuskuorojen '
+            + 'jäsenet ympäri Latviaa, kunhan he läpäisevät '
+            + 'paikallisen karsinnan ja harjoittelevat yhteisen '
+            + 'ohjelmiston. Latvian nykyisessä, alle kahden miljoonan '
+            + 'asukkaan maassa tuhannet ihmiset osallistuvat samaan '
+            + 'juhlaan joka kerta.'
+            + '\n\n'
+            + 'Moni osallistuja kuvailee kokemusta elämänsä '
+            + 'vahvimmaksi yhteisöllisyyden hetkeksi: kun '
+            + 'kolmekymmentätuhatta ääntä laulaa saman kansallislaulun '
+            + 'yhtä aikaa Mežaparksin lavalla, ero yleisön ja '
+            + 'esiintyjien välillä hämärtyy.',
+          lyhyt: 'Laulujuhlaan osallistuu tuhansia harrastajakuorolaisia ympäri Latviaa, ei vain ammattilaisia.',
+          selite: 'Latvian yliopiston kuoro Minjona esiintymässä 2018 '
+            + '— yksi sadoista harrastajakuoroista, jotka osallistuvat '
+            + 'laulujuhlaan.',
+          lahde: 'Didzis Šēnbergs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
@@ -25977,7 +27219,8 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'oppi',
       nimi: 'Oppi',
-      johdanto: 'Vilnassa on opiskeltu ja tutkittu satoja vuosia.',
+      johdanto: 'Vilnassa on opiskeltu ja tutkittu satoja vuosia, '
+        + 'kaupungin vanhimmasta yliopistosta sen omaan tähtitorniin.',
       tehtava: {
         kysymys: 'Minä vuonna Vilnan yliopisto sai yliopiston oikeudet?',
         vaihtoehdot: [
@@ -95133,7 +96376,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Iddoon ja lopulta Ekon saarelle.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-lagos-kaupunki-0-r20260907-v3.jpg',
           selite: 'Iga Idunganranin nykyistä pääsisäänkäyntiä Lagosissa '
-            + 'mukaileva tekoälykuvitus.',
+            + 'mukaileva tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Airial Travel — '
             + 'Iga Idunganran, Lagosin oban palatsi',
           wiki: 'Lagos',
@@ -96595,9 +97838,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sivistyksen keskuksista, ja kaupungin juutalaisyhteisö '
             + 'oli Marokon vanhin ja suurin.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-0-r20260907-v1.jpg',
-          lyhyt: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia havainnollistava tekoälykuvitus.',
+          lyhyt: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia tekoälyn havainnekuva.',
           selite: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia '
-            + 'havainnollistava tekoälykuvitus. Aukeama ja heprealainen '
+            + 'tekoälyn havainnekuva. Aukeama ja heprealainen '
             + 'teksti eivät ole alkuperäisen sivun jäljennös.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Library of '
             + 'Congress — 16th Century Hebrew Books, finding aid; Library of '
@@ -96622,9 +97865,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli '
             + 'vähintään neljä kirjapainoa.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-1-r20260907-v7.jpg',
-          lyhyt: 'Fèsin 1860-luvun kivipainoa havainnollistava tekoälykuvitus.',
+          lyhyt: 'Fèsin 1860-luvun kivipainoa tekoälyn havainnekuva.',
           selite: 'Fèsin 1860-luvun kivipainoa havainnollistava '
-            + 'tekoälykuvitus. Koneen rakenne perustuu saman aikakauden '
+            + 'tekoälyn havainnekuva. Koneen rakenne perustuu saman aikakauden '
             + 'museoprässiin; kuva ei ole al-Rudanin painon tai aidon '
             + 'kirjasivun jäljennös.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Science Museum '
@@ -96910,9 +98153,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli siis vuoden vanhan Goréen kunnan osa; omaksi '
             + 'kunnakseen se irrotettiin vasta 1887.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-2-r20260907-v2.jpg',
-          lyhyt: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin varhaista satamaa havainnollistava tekoälykuvitus.',
+          lyhyt: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin varhaista satamaa tekoälyn havainnekuva.',
           selite: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin '
-            + 'varhaista satamaa havainnollistava tekoälykuvitus. Kuva ei '
+            + 'varhaista satamaa tekoälyn havainnekuva. Kuva ei '
             + 'esitä dokumentoitua yksittäistä lastausta vuodelta 1873.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Port autonome '
             + 'de Dakar — Tout sur le port, nro 18; IRD Horizon — Senegalin '
@@ -97220,9 +98463,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Beaux-Artsin ensimmäinen musta jäsen. Hän kuoli '
             + 'Dakarissa 2016.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-nykytaide-2-r20260907-v3.jpg',
-          lyhyt: 'Ousmane Sow\'n Couple de lutteurs -veistoksen muotoja mukaileva tekoälykuvitus.',
+          lyhyt: 'Ousmane Sow\'n Couple de lutteurs -veistoksen muotoja mukaileva tekoälyn havainnekuva.',
           selite: 'Ousmane Sow’n Couple de lutteurs (Corps à corps) '
-            + '-veistoksen muotoja mukaileva tekoälykuvitus. Näyttelypiha on '
+            + '-veistoksen muotoja mukaileva tekoälyn havainnekuva. Näyttelypiha on '
             + 'kuvitteellinen.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Les Abattoirs '
             + '(Navigart) — Ousmane Sow, Couple de lutteurs (Corps à corps)',
@@ -114763,6 +116006,281 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Americo-Liberians',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Kap Palmasin niemi ja
+       * sen kaupunki Harper, Marylandin piirikunnan pääkaupunki. Taustatiedot
+       * englannin Wikipediasta (Harper, Liberia; Cape Palmas; Maryland County;
+       * Cavalla River; Pleebo; William Tubman; William V. S. Tubman University;
+       * Cuttington University; Diocese of Cape Palmas; Cape Palmas Airport;
+       * J. J. Dossen; Partners In Health: Liberia) ja Wikivoyagesta (Harper,
+       * Liberia) — teksti omaa. Turvallisuus Wikivoyagen Liberia-artikkelin
+       * Stay safe- ja Stay healthy -osioista; osio on YK:n Liberian-operaation
+       * (päättyi 2018) ajalta ja koskee lähinnä Monroviaa, ja se sanotaan
+       * tekstissä suoraan. Hinnat, aikataulut ja aukioloajat jätetty pois, koska
+       * Wikivoyagen Harper-artikkeli on keskeneräinen ja tiedot vuosien takaa.
+       * Nostojen ja gallerioiden aiheita (grebot, siirtokunnan perustaminen,
+       * majakka, laguuni ja kalastajakanootit, vapaamuurarien maja ja New
+       * Orleansin kaltaiset talot, Russwurm, lippu, uudisraivaajien muistomerkki,
+       * vuosien 1856–57 sota, litografia 1853) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja wikitekstistä, ja kuvat
+       * katsottu silmin. Pystykuva: auringonlasku Harperin rannassa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Harper River.jpg',
+          lyhyt: 'Poika katsoo auringonlaskua Harperin rannassa, ja kalastusvene kelluu lahdella.',
+          selite: 'Poika seisoo siluettina matalassa rantavedessä Harperissa, ja '
+            + 'auringonlaskun edessä kelluu puinen kalastusvene. Taustalla on '
+            + 'palmujen peittämä niemi. Kuvaaja on otsikoinut kuvan Harperin '
+            + 'kalastajista ja kalakaupasta. Kuva on otettu maaliskuussa '
+            + '2020.',
+          lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kap Palmas tarkoittaa nykyään käytännössä Harperia, Marylandin '
+          + 'piirikunnan pääkaupunkia Liberian kaakkoiskärjessä. Perille on '
+          + 'pitkä matka: pääkaupunki Monroviasta ajetaan tänne maanteitse '
+          + 'parikymmentä tuntia, ja Wikivoyage mainitsee vaihtoehtoina '
+          + 'veneen ja lähetyslentojärjestö MAF:n pienkoneet. '
+          + 'Norsunluurannikon puolelta kaupunkiin pääsee Taboun kautta. '
+          + 'Liberian viisumia haettaessa tarvitaan '
+          + 'keltakuumerokotustodistus. Paras matka-aika on kuiva kausi '
+          + 'marraskuusta huhtikuuhun, sillä toukokuusta lokakuuhun sataa '
+          + 'runsaasti ja matka-ajat venyvät. Kortilla ei pitkälle pääse, '
+          + 'joten mukaan otetaan Yhdysvaltain dollareita käteisenä. '
+          + 'Wikivoyagen Liberia-opas muistuttaa, että Monrovian '
+          + 'ulkopuolella matkustaminen on vaikeaa eikä sitä kannata tehdä '
+          + 'yksin, joten paikallinen yhteyshenkilö tai opas on tärkein '
+          + 'matkavaruste.',
+        artikkeli: {
+          nimi: 'Matkailijan Kap Palmas',
+          teksti: 'Liberian kaakkoiskärjen rantakaupunki palkitsee pitkän matkan tekijän.',
+          nosto: 'Kap Palmas on Guineanlahden länsiraja: kansainvälisen '
+            + 'hydrografisen järjestön mukaan lahti alkaa juuri tästä '
+            + 'niemestä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rantoja niemen molemmin puolin',
+              teksti: 'Wikivoyage luonnehtii Harperia ennen kaikkea kauniiden '
+                + 'rantojensa ja rantatalojensa kaupungiksi. Monet talot ovat '
+                + 'rapistuneet, mutta rannat ovat ennallaan, ja ne ovat '
+                + 'kaupunkilaisten omaa vapaa-ajan aluetta. Sataman vieressä on '
+                + 'Cape Palmas Beach, ja niemen länsipuolella Hoffman-joki laskee '
+                + 'mereen suistona. Itään päin rannikkoa riittää noin 21 '
+                + 'kilometriä Cavalla-joen suulle, jossa Liberian ja '
+                + 'Norsunluurannikon raja kohtaa meren. Välissä vuorottelevat '
+                + 'kaartuvat hiekkalahdet, palmurivit ja tummat kalliolaatat, ja '
+                + 'Marylandin piirikunnan kylärannoilla, kuten Fishtownissa, '
+                + 'palmut kurottuvat lähes vesirajaan asti. Paikalliset '
+                + 'kokoontuvat rannoille uimaan ja leikkimään, ja rantavedessä '
+                + 'voi olla kymmeniä ihmisiä yhtä aikaa, kuten Change Beachilla '
+                + 'otetusta ilmakuvasta näkyy. Niemenkärjessä seisova on '
+                + 'maantieteellisessä kulmapisteessä: täällä Länsi-Afrikan '
+                + 'rannikko lakkaa kulkemasta etelään ja kääntyy itään, ja '
+                + 'kansainvälinen hydrografinen järjestö pitää niemeä '
+                + 'Guineanlahden länsirajana. Uimaan kannattaa silti mennä '
+                + 'harkiten. Wikivoyagen Liberia-opas varoittaa maan rannikon '
+                + 'voimakkaista virtauksista ja kovasta aallokosta, ja Monrovian '
+                + 'suosituimmillakin rannoilla uimapaikat on rajattu erikseen. '
+                + 'Harperin rannoista vastaavia tietoja ei ole, joten uimaan '
+                + 'mennään vain paikallisten neuvomiin kohtiin, ei yksin eikä '
+                + 'pimeällä. Paras rantasää osuu kuivalle kaudelle, mutta '
+                + 'marras–maaliskuussa puhaltava kuiva harmattan-tuuli voi tuoda '
+                + 'ilmaan pölyä.',
+              kuva: [
+                {
+                  tiedosto: 'Photo of Residents of Harper District playing in the Change Beach, Harper district, Maryland County, Liberia.jpg',
+                  lyhyt: 'Harperilaisia uimassa ja leikkimässä Change Beachin rantavedessä ylhäältä kuvattuna.',
+                  selite: 'Ilmakuvassa kymmenet ihmiset kahlaavat, uivat ja leikkivät '
+                    + 'aaltojen huuhtoessa hiekkarantaa, ja vesi vaihtuu rannan '
+                    + 'ruskeasta ulapan vihreään. Kuvaajan mukaan he ovat Harperin '
+                    + 'piirin asukkaita Change Beachilla. Kuva on otettu maaliskuussa '
+                    + '2020.',
+                  lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Photo of Fish town Beach and waves.jpg',
+                  lyhyt: 'Kookospalmut kaartuvat Fishtownin hiekkarannan ylle Marylandin piirikunnassa.',
+                  selite: 'Kookospalmut kaartuvat hiekkarannan ylle, ja matalat aallot '
+                    + 'huuhtovat rantaa. Kauempana rantaa reunustaa kivikko, ja '
+                    + 'horisontissa näkyy metsäinen rannikko. Kuva on otettu '
+                    + 'maaliskuussa 2020 Fishtownin rannalla Marylandin '
+                    + 'piirikunnassa.',
+                  lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'At Maryland County, Liberia.jpg',
+                  lyhyt: 'Tummat kalliolaatat ja palmumetsä reunustavat hiekkalahtea Marylandin piirikunnassa.',
+                  selite: 'Etualalla hiekkaan painuneita tummia kalliolaattoja, taustalla '
+                    + 'kaartuva lahti ja tiheä palmumetsä ukkospilvien alla. Oikealla '
+                    + 'rantaan laskee tyyni joensuu. Kuva on otettu helmikuussa 2020.',
+                  lahde: 'Bethel Anthony Chisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Parikymmentä tuntia tietä',
+              teksti: 'Harper on Liberian syrjäisimpiä kaupunkeja. Avustusjärjestö '
+                + 'Partners In Healthin mukaan Marylandin piirikuntaan on '
+                + 'Monroviasta noin 20 tunnin ajomatka, ja Wikivoyage varoittaa, '
+                + 'että sadekaudella matka-ajat pitenevät huomattavasti ja maan '
+                + 'huonokuntoisilla teillä nelivetoauto voi olla välttämätön. '
+                + 'Nopeammin pääsee meritse tai ilmateitse: Wikivoyage mainitsee '
+                + 'Monroviasta lähtevät veneet ja lähetyslentojärjestö MAF:n '
+                + 'lennot, ja kaupunkia palvelee Cape Palmasin lentokenttä. '
+                + 'Yhteydet ja aikataulut tarkistetaan paikan päällä, sillä '
+                + 'kirjalliset tiedot vanhenevat nopeasti. Idästä tultaessa '
+                + 'Harperiin pääsee Norsunluurannikon Taboun kautta. Raja kulkee '
+                + 'Cavalla-jokea pitkin: 515 kilometrin pituinen joki on Liberian '
+                + 'pisin, ja nimi on peräisin sen suulla elävästä '
+                + 'piikkimakrillista. Paikan päällä liikutaan '
+                + 'moottoripyörätakseilla, joita liberialaiset kutsuvat '
+                + 'pen-peniksi. Wikivoyagen mukaan Harperissa voi pysäyttää '
+                + 'käytännössä minkä tahansa moottoripyörän, jonka kyydissä ei '
+                + 'ole matkustajaa. Samat kuljettajat vievät myös Pleeboon, '
+                + 'piirikunnan suurimpaan kaupunkiin ja maaseudun kauppapaikkaan, '
+                + 'jonne kulkevat lisäksi yhteistaksit ja kuorma-autot. Valtion '
+                + 'liikennelaitos NTA ilmoitti vuonna 2024 avaavansa Harperin ja '
+                + 'Pleebon välisen linjansa uudelleen, ja paikallisen senaattorin '
+                + 'mukaan taksit kulkevat välin nykyään sadekaudellakin. Pimeällä '
+                + 'liikkumista kannattaa silti välttää, sillä Wikivoyage neuvoo, '
+                + 'ettei Liberiassa kuljeta jalan pimeän tultua.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 011 - An unpaved road from Zwedru to Harper. A white Renault 4 - Grand Gedeh County, Liberia, 1978.tiff',
+                lyhyt: 'Valkoinen Renault 4 hiekkatiellä Zwedrusta Harperiin vuonna 1978.',
+                selite: 'Päällystämätön tie ylittää pienen sillan tiheän metsän halki, '
+                  + 'ja tiellä ajaa valkoinen pikkuauto. Kuva on otettu vuonna 1978 '
+                  + 'Grand Gedehin piirikunnassa Zwedrun ja Harperin välisellä '
+                  + 'tiellä.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Presidentin kotikaupunki',
+              teksti: 'Harper on Liberian pitkäaikaisimman presidentin, William V. S. '
+                + 'Tubmanin, kotikaupunki. Tubman syntyi täällä marraskuussa 1895 '
+                + 'ja kävi koulunsa Harperissa ja metodistien Cape Palmas '
+                + 'Seminaryssa. Hänen isoisänsä Alexander Tubman oli '
+                + 'kivenhakkaaja, kenraali, edustajainhuoneen puhemies ja '
+                + 'metodistisaarnaaja, ja hänen patsaansa on kuvattu kaupungissa '
+                + '1970-luvulla. Nuori Tubman valittiin vuonna 1923 Marylandin '
+                + 'piirikunnan senaattoriksi vain 28-vuotiaana, ja hän on yhä '
+                + 'Liberian historian nuorin senaattori. Presidenttinä vuosina '
+                + '1944–1971 hän houkutteli maahan ulkomaisia sijoituksia '
+                + 'avointen ovien politiikallaan, ja häntä kutsutaan modernin '
+                + 'Liberian isäksi. Hänen kaudellaan Liberia alkoi rekisteröidä '
+                + 'ulkomaisten varustamoiden laivoja, ja Wikivoyagen mukaan maan '
+                + 'laivarekisteri on yhä maailman toiseksi suurin '
+                + 'mukavuuslippurekisteri. Hallinto oli kuitenkin itsevaltainen, '
+                + 'ja poliittisia vastustajia vainottiin. Tubmanin kartano seisoo '
+                + 'meren rannalla South Baltimore Streetillä, jonka nimi '
+                + 'muistuttaa siirtokunnan juurista Yhdysvaltain Marylandissa. '
+                + 'Wikivoyage kuvaa taloa pahasti rapistuneeksi mutta yhä yhdeksi '
+                + 'kaupungin vaikuttavimmista rakennuksista, ja Wikipedian mukaan '
+                + 'raunioissa asui vuonna 2021 valtaajia. Koska talossa asutaan, '
+                + 'sisälle ei mennä kysymättä, eikä asukkaita kuvata ilman lupaa. '
+                + 'Tubman-ajan vauraus näkyy nykyään lähinnä raunioina: '
+                + 'Wikivoyagen mukaan vuosina 1989–2003 käydyt sisällissodat '
+                + 'tuhosivat lähes kaiken hänen aikanaan rakennetun '
+                + 'infrastruktuurin, ja ennen sotia tärkeä hallintokeskus Harper '
+                + 'toipuu yhä.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 018 - Tubman Mansion of William V. S. Tubman (Liberian president from 1944-1971), South Baltimore Street - Harper, Maryland County, Liberia, 1978.tiff',
+                lyhyt: 'Presidentti Tubmanin kartano palmujen keskellä Atlantin rannalla Harperissa vuonna 1978.',
+                selite: 'Vaalea, tasakattoinen kartano seisoo palmujen ja korkeiden '
+                  + 'puiden keskellä meren rannalla, ja sen ohi kulkee päällystetty '
+                  + 'tie, jolla on pysäköitynä valkoinen Renault 4. Kuva on otettu '
+                  + 'South Baltimore Streetillä vuonna 1978, jolloin Tubman oli '
+                  + 'kuollut seitsemän vuotta aiemmin.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kirkontornit ja kampus',
+              teksti: 'Harperin keskustassa kirkot ovat yhä kaupunkikuvan '
+                + 'maamerkkejä. Wikivoyage nostaa nähtävyyksiksi episkopaalisen '
+                + 'Pyhän Markuksen kirkon ja Mount Scottin yhdistyneen '
+                + 'metodistikirkon, jotka ovat vain parinsadan metrin päässä '
+                + 'toisistaan ja Tubmanin kartanosta. Kaksitorninen Mount Scott '
+                + 'erottuu kauas, ja se seisoo korkealla pengerryksellä kadun '
+                + 'yläpuolella. Myös katolisella kirkolla on niemellä vahva '
+                + 'asema: Cape Palmasin hiippakunta on yksi Liberian kolmesta '
+                + 'katolisesta hiippakunnasta, ja se sai nykyisen asemansa vuonna '
+                + '1981. Kouluilla on Kap Palmasissa pitkät perinteet. '
+                + 'Episkopaalikirkko perusti tänne vuonna 1889 Cuttington '
+                + 'Collegen, jota pidetään Saharan eteläpuolisen Afrikan '
+                + 'vanhimpana yksityisenä, molemmille sukupuolille avoimena '
+                + 'nelivuotisena korkeakouluna. Se muutti myöhemmin Bongin '
+                + 'piirikuntaan Suacocoon, jossa se toimii yhä yliopistona. '
+                + 'Nykyään Harperin oma korkeakoulu on William V. S. Tubmanin '
+                + 'yliopisto noin neljän kilometrin päässä keskustasta '
+                + 'koilliseen. Se perustettiin vuonna 1978 teknilliseksi '
+                + 'opistoksi, mutta sisällissota sulki sen koko 1990-luvuksi. '
+                + 'Presidentti Ellen Johnson Sirleaf avasi opiston uudelleen '
+                + 'vuonna 2008, ja seuraavana vuonna se sai yliopiston aseman. Se '
+                + 'on yksi Liberian kahdesta julkisesta yliopistosta, ja sen '
+                + 'kuudessa tiedekunnassa opiskellaan esimerkiksi maataloutta, '
+                + 'terveystieteitä ja tekniikkaa. Ensimmäiset tutkinnot jaettiin '
+                + 'kesäkuussa 2014, ja vuonna 2016 yliopistosta valmistui '
+                + 'Liberian ensimmäinen naispuolinen koneinsinööri. Kampukselle '
+                + 'kannattaa sopia vierailu etukäteen.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 015 - Mount Scott United Methodist Church with palm trees - Harper, Maryland County, Liberia, 1978.tiff',
+                lyhyt: 'Mount Scottin metodistikirkon kaksoistornit siluettina Harperin taivasta vasten.',
+                selite: 'Kirkon kaksi suippoa, ristein kruunattua tornia ja päätykolmio '
+                  + 'erottuvat tummana siluettina pilvistä taivasta vasten, ja '
+                  + 'vasemmalla kohoaa hoikka palmu. Kirkko seisoo korkealla '
+                  + 'pengerryksellä. Kuva on otettu vuonna 1978.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Palmuvoita, käteistä ja varovaisuutta',
+              teksti: 'Harperin ruokapaikat ovat pieniä ja yksinkertaisia. Wikivoyage '
+                + 'mainitsee kaupungin kahvikojut, joissa tarjotaan paikallisin '
+                + 'mausteisiin paistettuja munia ja leipää, pikakahvia, '
+                + 'säilykelihaa, sardiineja ja tulista spagettia. Liberialaisessa '
+                + 'keittiössä perusruokaa ovat riisi ja kastikkeet, kuten '
+                + 'öljypalmun hedelmistä keitetty palmuvoi, kassavanlehtikastike '
+                + 'ja bataatinlehdet, sekä kassavasta tehty fufu keiton kera. '
+                + 'Oluista yleisin on paikallinen Club. Juomavesi ostetaan '
+                + 'pullotettuna, sillä kaduilla myytävän pussiveden puhtaudesta '
+                + 'ei ole takeita. Wikivoyagen mukaan kortteja voi Liberiassa '
+                + 'käyttää vain vähän, joten mukaan otetaan Yhdysvaltain '
+                + 'dollareita ja pieniin ostoksiin Liberian dollareita. '
+                + 'Terveysasiat hoidetaan ennen lähtöä: malaria ja lavantauti '
+                + 'ovat maassa yleisiä, ja ulkomaalaisille sopivia lääkäreitä on '
+                + 'vähän. Harperin J. J. Dossenin muistosairaala on yksi '
+                + 'Kaakkois-Liberian sairaaloista, ja Partners In Health on '
+                + 'vuodesta 2015 auttanut rakentamaan piirikunnan '
+                + 'terveydenhuoltoa uudelleen ebolaepidemian jälkeen. '
+                + 'Turvallisuudesta on sanottava suoraan. Wikivoyagen '
+                + 'Liberia-oppaan turvallisuusosio on kirjoitettu YK:n '
+                + 'rauhanturvaoperaation aikaan, joka päättyi 2018, ja se koskee '
+                + 'lähinnä Monroviaa, mutta sen neuvot ovat selvät: pimeällä ei '
+                + 'kävellä, autonovet pidetään lukittuina, autioita paikkoja '
+                + 'vältetään ja liikutaan porukassa. Oppaan mukaan aseelliset '
+                + 'ryöstöt ja raiskaukset ovat yleisiä, ja Monrovian ulkopuolella '
+                + 'se ei suosittele liikkumaan yksin. Matkasta kannattaa '
+                + 'ilmoittaa oman maan edustustolle ja tarkistaa ajantasainen '
+                + 'matkustustiedote. Oppaan mukaan valtaosa liberialaisista on '
+                + 'silti ystävällisiä ja helposti lähestyttäviä: jokaista '
+                + 'tervehditään, suoraa kieltäytymistä pidetään töykeänä, eikä '
+                + 'sisällissodista kannata aloittaa keskustelua, koska ne '
+                + 'herättävät yhä kipeitä muistoja.',
+              kuva: {
+                tiedosto: 'A prepared dish of palm butter soup.jpg',
+                lyhyt: 'Kulhollinen riisiä ja palmuvoikastiketta kalan kera punaisella tarjottimella.',
+                selite: 'Punaisella tarjottimella on kulhollinen valkoista riisiä ja '
+                  + 'toinen kulho oranssinruskeaa palmuvoikastiketta, jossa on '
+                  + 'kalaa ja tomaattia. Kuva on otettu Liberiassa huhtikuussa 2025 '
+                  + 'koululaisten wikikilpailua varten.',
+                lahde: 'Foundation Digital Schools Liberia, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -114901,6 +116419,243 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Boa Vista, Roraima',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Pelin boavista on Roraiman
+       * pääkaupunki Brasiliassa (southamerica-pakka, BRA), ei Kap Verden
+       * saari. Taustatiedot englannin Wikipediasta (Boa Vista, Roraima;
+       * Roraima; BR-174 (Brazil highway); Boa Vista International Airport;
+       * Takutu River Bridge; Bonfim, Roraima; Pacaraima; Waimiri-Atroari;
+       * Tepequém; Lake Caracaranã), Wikivoyagen Boa Vista- ja Roraima-
+       * sivuilta sekä portugalin Wikipediasta (Boa Vista (Roraima): kulttuuri
+       * ja gastronomia; Roraima: keittiö, musiikki, juhlat ja aikavyöhyke;
+       * Orla Taumanan; Serra do Tepequém; Lago Caracaranã) — teksti omaa.
+       * Wikivoyagen hinnat ja aikataulut ovat vanhoja, joten ne jätettiin
+       * pois. Nostojen aiheita (karjatila ja seurakunta, Rio Branco
+       * kulkuväylänä, viuhkakaava, kuivan kauden hiekkasärkät,
+       * garimpeiro-patsas, päiväntasaajan pohjoispuoli ja rantapromenadi,
+       * lavrado ja termiittikeot, sadekauden tulvat, Roraima-vuori, im
+       * Thurnin ensinousu, Kadonnut maailma) eikä valokuva- ja
+       * saapumistekstien aiheita (Pintolândian vastaanottokeskus, Igarapé
+       * Água Boa, paistettu piraija) toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Funilin putouksen kallioleikkaus Tepequémin ylängöllä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cachoeira do Funil.jpg',
+          lyhyt: 'Funilin puro virtaa kapeassa kallioleikkauksessa Tepequémin ylängön reunalla.',
+          selite: 'Funilin putouksen puro Serra do Tepequémin ylängöllä kulkee '
+            + 'kapeassa, punertavassa kallioleikkauksessa, jonka uomaa '
+            + 'timantinkaivajat aikanaan muokkasivat dynamiitilla; taustalla '
+            + 'aukeaa metsäinen laakso.',
+          lahde: 'Ingrid Torres de Macedo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Boa Vistaan saavutaan useimmiten lentäen Manausin tai '
+          + 'Brasílian kautta, sillä Roraimasta muualle Brasiliaan vie vain '
+          + 'yksi päällystetty maantie, ja sekin suljetaan öisin '
+          + 'Waimiri-Atroarien alueen kohdalla. Kaupunki on silti portti kahteen '
+          + 'naapurimaahan: Guyanan rajalle Bonfimiin on reilut sata '
+          + 'kilometriä ja Venezuelan rajalle Pacaraimaan parisataa. '
+          + 'Kesäkuussa kaupunki tanssii quadrilhaa koillisbrasilialaiseen '
+          + 'tapaan, ja pöydässä maistuu paçoca, keltaisen maniokkijauhon '
+          + 'kanssa survottu kuivaliha. Savannin takana odottavat Tepequémin '
+          + 'ylängön vesiputoukset ja Caracaranã-järven rannat, joita '
+          + 'reunustavat cashewpuut.',
+        artikkeli: {
+          nimi: 'Matkailijan Boa Vista',
+          teksti: 'Boa Vistaan tullaan taivaalta tai yhtä ainoaa maantietä, '
+            + 'ja sieltä jatketaan kolmeen maahan.',
+          nosto: 'Takutu-joen rajasillalla auto vaihtaa tien puolta: '
+            + 'Guyanassa ajetaan vasemmalla, Brasiliassa oikealla.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen tai BR-174:ää pitkin',
+              teksti: 'Useimmat matkailijat saapuvat Boa Vistaan lentäen. '
+                + 'Kaupungin lentoasema on Brasilian pohjoisin, jolle lennetään '
+                + 'säännöllisiä vuoroja, ja lennot kulkevat tavallisesti '
+                + 'Manausin tai Brasílian kautta. Kenttä on nimetty vuodesta 2009 '
+                + 'lentäjä ja poliitikko Atlas Brasil Cantanhedeen mukaan, joka '
+                + 'raivasi 1950-luvulla tietä ilmailulle Roraimassa, ja '
+                + 'keskustaan on vain noin neljä kilometriä. Maitse Boa Vistaan '
+                + 'tullaan Manausista BR-174-tietä, joka on ainoa päällystetty '
+                + 'tie Roraimasta muualle Brasiliaan. Bussilla matka kestää '
+                + 'reilusti yli kymmenen tuntia, ja matkan varrella '
+                + 'liittovaltion poliisi tarkastaa matkustajien henkilöpaperit. '
+                + 'Tie halkaisee Waimiri-Atroarien alkuperäiskansan alueen, ja '
+                + 'sen kohdalla tie suljetaan joka ilta puoli seitsemältä ja '
+                + 'avataan vasta aamukuudelta. Alueella ei ole suotavaa '
+                + 'pysähtyä, sillä metsän eläimet ja osa asukkaista liikkuvat '
+                + 'öisin, ja eläinonnettomuuksia sattuu päivälläkin. '
+                + 'Kaukoliikenteen bussit lähtevät José Amador de Oliveira – '
+                + 'Batonin kansainväliseltä linja-autoasemalta, josta pääsee '
+                + 'Roraiman pikkukaupunkeihin, Amazonasin osavaltioon, Guyanaan '
+                + 'ja Venezuelaan. Kello kannattaa siirtää heti perillä: '
+                + 'Roraima on tunnin jäljessä Brasílian virallisesta ajasta.',
+              kuva: [
+                {
+                  tiedosto: 'Entrada do Aeroporto Internacional de Boa Vista - Atlas Brasil Cantanhede, Boa Vista RR.jpg',
+                  lyhyt: 'Boa Vistan kansainvälisen lentoaseman sisäänkäynti ja lennonjohtotorni.',
+                  selite: 'Boa Vistan lentoaseman terminaalin kaareva katos ja '
+                    + 'sininen nimikyltti toukokuussa 2011; katon takana kohoaa '
+                    + 'lennonjohtotorni, ja edustalla on pysäköityjä autoja.',
+                  lahde: 'Jorge Andrade, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Rodoviária Internacional de Boa Vista - panoramio.jpg',
+                  lyhyt: 'Kansainväliseltä linja-autoasemalta bussit lähtevät Manausiin ja naapurimaihin.',
+                  selite: 'Boa Vistan kansainvälisen linja-autoaseman julkisivu '
+                    + 'iltahämärissä huhtikuussa 2007: katoksen edessä seisovat '
+                    + 'mopo ja katukeittiön kärry, ja taivaalla on tummia '
+                    + 'pilviä.',
+                  lahde: 'Rogério Regis, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'BR-174 Sul.jpg',
+                  lyhyt: 'BR-174 kulkee mäkisessä sademetsässä Waimiri-Atroarien alueella.',
+                  selite: 'Päällystetty kaksikaistainen BR-174 nousee ja laskee '
+                    + 'sademetsän halki Waimiri-Atroarien alkuperäiskansan '
+                    + 'alueella; tien oikealla puolella punainen maa paljastuu '
+                    + 'leikkauksessa.',
+                  lahde: 'SallesNeto BR, Wikimedia Commons (Public domain)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Rajan yli Guyanaan ja Venezuelaan',
+              teksti: 'Boa Vistasta pääsee maanteitse kolmeen maahan, ja moni '
+                + 'ulkomaalainen kulkee kaupungin läpi matkalla Manausin ja '
+                + 'Venezuelan välillä. Itään lähtee BR-401, joka ylittää Rio '
+                + 'Brancon heti kaupungin kohdalla Macuxien sillalla ja päättyy '
+                + 'noin 115 kilometrin päässä Bonfimin rajakaupunkiin. '
+                + 'Takutu-joen yli Guyanan Lethemiin vie silta, jonka Brasilia '
+                + 'rakensi ja maksoi ja joka avattiin vuonna 2009. Se on koko '
+                + 'Amerikan ainoa maaraja, jolla autoilija vaihtaa tien puolta: '
+                + 'Guyanassa ajetaan vasemmalla ja Brasiliassa oikealla, ja '
+                + 'vaihto tehdään Guyanan puolella ylikulkusillan avulla. '
+                + 'Lethemistä tie jatkuu Georgetowniin Atlantin rannikolle. '
+                + 'Bonfimin seudulla asuu wapishana- ja macuxi-kansaa, ja moni '
+                + 'puhuu omaa kieltään, portugalia ja englantia. Pohjoiseen '
+                + 'BR-174 nousee noin 220 kilometriä Pacaraimaan Venezuelan '
+                + 'rajalle. Pacaraima on 920 metrin korkeudessa koko '
+                + 'Pohjois-Brasilian korkeimmalla sijaitseva kunta, ja sen '
+                + 'vuoristoilma on selvästi viileämpää kuin kuuman savannin '
+                + 'pääkaupungissa. Rajan takana on Santa Elena de Uairén, ja '
+                + 'sieltä lähtevät myös Roraima-vuoren vaellukset, sillä '
+                + 'vuorelle noustaan vain Venezuelan puolelta.',
+              kuva: {
+                tiedosto: 'Vgm Guiana 054.JPG',
+                lyhyt: 'Tie nousee Takutu-joen rajasillalle, joka vie Bonfimista Guyanan Lethemiin.',
+                selite: 'Katuvalojen reunustama tie nousee Takutu-joen sillalle '
+                  + 'Bonfimin puolella helmikuussa 2012; vihreä kyltti ilmoittaa '
+                  + 'sillan pituudeksi 230 metriä.',
+                lahde: 'SallesNeto BR, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kesäkuussa tanssitaan quadrilhaa',
+              teksti: 'Boa Vistan kulttuuri on paljolti koillisbrasilialaista ja '
+                + 'alkuperäiskansojen perintöä. Roraimaan muutti 1900-luvulla '
+                + 'paljon väkeä etenkin Koillis-Brasiliasta, ja muuttajien '
+                + 'mukana tulivat forró ja sertanejo, jotka ovat yhä kaupungin '
+                + 'kuunnelluimmat musiikkityylit. Boa Vistalla on myös '
+                + 'ystävyyssuhde Caruaruun, Pernambucon osavaltion kaupunkiin '
+                + 'Koillis-Brasiliassa. Vuoden kohokohta on kesäkuun festa '
+                + 'junina. Portugalilaisten tuoma juhla alkaa perinteisesti 12. '
+                + 'kesäkuuta Pyhän Antoniuksen aattona, huipentuu Johannes '
+                + 'Kastajan päivänä 24. kesäkuuta ja päättyy Pyhän Pietarin '
+                + 'päivään 29. kesäkuuta. Juhlaan kuuluvat kokot, ilotulitukset '
+                + 'ja kaduilla tanssittavat kansantanssit. Kaupungin oma juhla '
+                + 'on nimeltään Boa Vista Junina: kojut myyvät ruokaa ja '
+                + 'juomaa, ja lavalla esiintyvät quadrilha-ryhmät värikkäissä '
+                + 'maalaisasuissa. Quadrilha on alun perin eurooppalaisten '
+                + 'hovien tanssi, ja sen askelilla on yhä ranskankieliset '
+                + 'nimet, mikä kertoo hovielämän ja maalaiskulttuurin '
+                + 'vuorovaikutuksesta. Ennen maaseudun juhla on nykyään '
+                + 'Brasiliassa ennen kaikkea kaupunkien juhla. Lokakuun '
+                + 'viides päivä on Roraiman ainoa osavaltion oma vapaapäivä: '
+                + 'silloin muistetaan, että liittovaltion alueesta tuli '
+                + 'osavaltio vuoden 1988 perustuslailla.',
+              kuva: {
+                tiedosto: 'Portal do Arraial 2008 - panoramio.jpg',
+                lyhyt: 'Boa Vista Junina -juhlan portti kesäkuussa 2008 ja sen takana kojujen rivi.',
+                selite: 'Sininen, värikkäin kolmioin koristeltu portti Boa Vista '
+                  + 'Junina -juhlan alueelle kesäkuussa 2008; portin pielissä '
+                  + 'seisoo tanssivia maalaishahmoja esittäviä veistoksia, ja '
+                  + 'taustalla palavat kojujen valot.',
+                lahde: 'Rogério Regis, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Paçocaa, damuridaa ja pepitoja',
+              teksti: 'Roraiman keittiö yhdistää macuxi- ja wapixana-kansojen '
+                + 'perinteitä sekä naapuriosavaltioiden Amazonasin, Parán ja '
+                + 'Maranhãon ruokia. Arjen perusta on riisi ja maniokkijauho eli '
+                + 'farinha, ja joista pyydetään tambaquia, pirarukua ja pacua. '
+                + 'Boa Vistan oma ylpeys on paçoca, jossa kuivattu liha '
+                + 'survotaan keltaisen maniokkijauhon kanssa murumaiseksi '
+                + 'seokseksi. Vuonna 2025 kaupunki sai arvonimen Brasilian '
+                + 'lihapaçocan pääkaupunkina. Macuxien perinneruoka on '
+                + 'damurida-keitto, ja jokikaloista tehdään tambaquipataa ja '
+                + 'grillattua tambaquia. Cuscuz ja tapioka kuuluvat '
+                + 'aamiaispöytään, ja kaduilla myydään pepitoa, Venezuelasta '
+                + 'tullutta täytettyä voileipää. Iltaisin joenrannan Orla '
+                + 'Taumananilla soi brasilialainen populaarimusiikki ja '
+                + 'roraimeira, paikallinen musiikki, jonka lauluissa kerrotaan '
+                + 'Roraiman luonnosta, alkuperäiskansoista, tavoista ja '
+                + 'muuttoliikkeestä. Sen oma rytmi makunaimeira sekoittaa '
+                + 'alkuperäiskansojen parixara-rituaalien, karibialaisen '
+                + 'merenguen ja salsan sekä Amazonin rytmejä. Viikonlopun '
+                + 'ostokset kannattaa hoitaa ajoissa, sillä monet kaupat '
+                + 'sulkeutuvat lauantaina aikaisin ja pysyvät sunnuntaina '
+                + 'kiinni.',
+              kuva: {
+                tiedosto: 'Paçoca salgada.JPG',
+                lyhyt: 'Suolaista paçocaa: kuivalihaa survottuna keltaisen maniokkijauhon kanssa.',
+                selite: 'Rasiallinen suolaista paçocaa, jonka keltaisesta '
+                  + 'jauhosta erottuu punertavia lihasuikaleita; kauha on '
+                  + 'jätetty seokseen tarjoilua varten.',
+                lahde: 'Mizunoryu, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Ylängön putoukset ja cashewpuiden järvi',
+              teksti: 'Boa Vistan parhaat retkikohteet ovat parin sadan '
+                + 'kilometrin päässä. Luoteessa Amajarin kunnassa kohoaa Serra '
+                + 'do Tepequém, ylänkö, jonka laki nousee noin tuhanteen '
+                + 'metriin. Asfalttitie vie ylös Vila do Paivan kylään, jossa on '
+                + 'majataloja, ravintoloita ja leirintäpaikkoja. Ylängöllä '
+                + 'vaelletaan ja pyöräillään, laskeudutaan köysillä, tutkitaan '
+                + 'luolia, tarkkaillaan lintuja ja uidaan Paivan, Sobralin, '
+                + 'Baratan ja Funilin putouksilla. Maisemassa näkyy yhä '
+                + 'timanttikuumeen jälki: kaivaminen alkoi virallisesti '
+                + '1930-luvulla ja oli vilkkaimmillaan 1940- ja 1950-luvuilla. '
+                + 'Nyt ylängön talous nojaa matkailuun ja käsitöihin, kuten '
+                + 'vuolukiviesineisiin. Idässä BR-401:n varrella, noin 180 '
+                + 'kilometrin päässä Normandian kunnassa, on Caracaranã-järvi, '
+                + 'jota kiertävät hienohiekkaiset rannat ja luonnonvaraiset '
+                + 'cashewpuut. Järvi on Raposa Serra do Solin alkuperäiskansojen '
+                + 'alueella, ja se avattiin matkailijoille uudelleen vuonna '
+                + '2013. Kävijät maksavat pienen pääsymaksun, alkoholi on '
+                + 'alueella kielletty, eikä rannalla ole enää majoitusta, joten '
+                + 'yöksi ajetaan 18 kilometrin päähän Normandiaan. Pacaraiman '
+                + 'kunnassa on Pedra Pintada, noin 40 metriä korkea '
+                + 'graniittimonoliitti, jonka kylkeä peittävät punaiset '
+                + 'kalliomaalaukset. Se on alkuperäiskansojen maalla, ja '
+                + 'käynnille tarvitaan alkuperäiskansaviraston FUNAIn lupa.',
+              kuva: {
+                tiedosto: 'Crespusculo.jpg',
+                lyhyt: 'Ilta laskeutuu Caracaranã-järvelle Raposa Serra do Solin alueella.',
+                selite: 'Pitkällä valotuksella kuvattu iltanäkymä '
+                  + 'Caracaranã-järveltä kesäkuussa 2013: rantapuun siluetti '
+                  + 'kaartuu veden ylle, ja horisontissa siintää vuorijono '
+                  + 'pilvisen taivaan alla.',
+                lahde: 'Guignipper, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -120993,6 +122748,290 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Arrau turtle',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on jokisaari ja
+       * kansallispuisto, ei kaupunki, joten opas kulkee porttikaupunkien,
+       * joen ja vuodenaikojen kautta. Taustatiedot englannin Wikipediasta
+       * (Bananal Island, Araguaia National Park, Araguaia River, Cantão
+       * State Park, Karajá, Palmas (Tocantins), World Indigenous Games,
+       * Bananal antbird, Arapaima, Peacock bass, Potamotrygonidae, FUNAI),
+       * Wikivoyagesta (Araguaia National Park, Tocantins, Palmas, Brazil:
+       * Stay healthy ja Stay safe) ja portugalin Wikipediasta (Ilha do
+       * Bananal: Transbananal, Mata do Mamãon avá-canoeirot, ilmasto;
+       * Parque Nacional do Araguaia: ICMBion toimisto Piumissa; Parque
+       * Estadual do Cantão: järvet, igapó, piranheira, palot; Caseara, Pium
+       * (nimen tupi-etymologia), Rio do Côco (Praia do Sol), Araguacema
+       * (Praia da Gaivota), São Miguel do Araguaia (Luiz Alves,
+       * Carnaraguaia), Rio Javaés (kalalajit), Piracema, Período de
+       * defeso, Praça dos Girassóis, Aeroporto de São Félix do Araguaia,
+       * Juanahu Karajá, Jogos Mundiais dos Povos Indígenas, Narubia
+       * Werreria) — teksti omaa. Hinnat, aukioloajat ja aikataulut jätetty
+       * pois. Nostojen ja gallerioiden aiheita (saaren synty ja koko,
+       * löytöhistoria ja Villas Bôas, suojelu 1959/1973/Unesco, tulvapulssi
+       * yleisesti, jättiläissaukot ja jaguaari, jokidelfiini,
+       * kilpikonnarannat, inyjen kieli ja väkiluku, ritxoko-nuket,
+       * sulkakoristeet) ei toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta, kuvat katsottu silmin ja
+       * tiedostonimet tarkistettu käyttämättömiksi. Pystykuva: jabiru
+       * Cantãon hiekkasärkällä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Parque Estadual do Cantão - Jorge Lansarin(01).jpg',
+          lyhyt: 'Jabiru Araguaian hiekkasärkällä Cantãon puistossa saaren pohjoiskärjen naapurissa.',
+          selite: 'Suuri valkoinen haikaralintu, jolla on musta paljas pää '
+            + 'ja kaula sekä punainen kaulus, seisoo pitkillä jaloillaan '
+            + 'hiekalla kuivan pensaikon edessä. Kuva on otettu toukokuussa '
+            + '2022 Cantãon osavaltionpuistossa, jonka Javaés-joki erottaa '
+            + 'Araguaian kansallispuistosta.',
+          lahde: 'Jorge Lansarin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ilha do Bananalille ei johda siltaa, joten matka päättyy '
+          + 'aina veneeseen. Tavallisin reitti kulkee Tocantinsin '
+          + 'pääkaupungin Palmasin kautta itärannan pikkukaupunkeihin, mutta '
+          + 'saarelle pääsee myös lännestä Mato Grosson São Félix do '
+          + 'Araguaiasta ja etelästä Goiásin Luiz Alvesista. Pohjoinen '
+          + 'kolmannes on Araguaian kansallispuistoa ja loput kaksi '
+          + 'kolmannesta alkuperäiskansojen maata, jonne mennään vain luvan ja '
+          + 'paikallisen oppaan kanssa. Paras matka-aika on kuiva kausi '
+          + 'toukokuusta lokakuuhun, kun joesta nousee valkoisia hiekkasärkkiä '
+          + 'ja rannoille pystytetään kesäleirejä. Marraskuusta huhtikuuhun '
+          + 'sataa, ja alkuvuodesta osa saaresta on veden alla. Kalastajat '
+          + 'tulevat tucunarén perässä, lintuharrastajat etsivät saaren omaa '
+          + 'muurahaislintua. Hyttyskarkote ja aurinkosuoja kuuluvat '
+          + 'varustukseen, ja keltakuumerokotusta kannattaa harkita.',
+        artikkeli: {
+          nimi: 'Matkailijan Ilha do Bananal',
+          teksti: 'Maailman suurimmalle jokisaarelle mennään veneellä, oppaan kanssa ja joen aikataulussa.',
+          nosto: 'Kansallispuiston toimisto on Piumissa, kaupungissa, jonka '
+            + 'nimi tulee vanhan tupin kielen mäkärää tarkoittavasta sanasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Joen yli, ei sillalla',
+              teksti: 'Useimmat matkat alkavat Palmasista, Tocantinsin '
+                + 'pääkaupungista, joka rakennettiin tyhjälle maalle vuodesta '
+                + '1990 alkaen Brasílian mallin mukaan. Wikivoyagen mukaan '
+                + 'kaupunkiin pääsee parhaiten etelästä Brasílian kautta niin '
+                + 'lentäen kuin bussilla, ja lentoasema on muutaman '
+                + 'kymmenen kilometrin päässä keskustasta. Kaupungin sydän on '
+                + 'valtava Praça dos Girassóis -aukio, jolla seisoo '
+                + 'osavaltion hallituspalatsi Palácio Araguaia. Sen aulassa voi '
+                + 'asettua valokuvaan Brasilian geodeettiseen keskipisteeseen. '
+                + 'Palmasista jatketaan maanteitse länteen. Noin 124 '
+                + 'kilometrin päässä olevassa Piumissa on kansallispuistoa '
+                + 'hoitavan ICMBio-viraston paikallistoimisto, ja 256 '
+                + 'kilometrin päässä oleva Caseara on Cantãon '
+                + 'osavaltionpuiston pääportti. Kalastajien perustamassa '
+                + 'kylässä on lauttasatama, ja Wikivoyage neuvoo vuokraamaan '
+                + 'sieltä veneen ja oppaan saaren pohjoiskärkeen. Mato Grosson '
+                + 'puolella São Félix do Araguaialla on oma lentokenttänsä, ja '
+                + 'joen toisella puolella on saaren suurin kylä, Santa Isabel '
+                + 'do Morro. Etelässä Goiásin Luiz Alvesin rannasta lähtee '
+                + 'veneitä jokiretkille ja kalaan. Saaren poikki kulkee '
+                + 'liittovaltion valtatie BR-242, paikallisesti Transbananal, '
+                + 'mutta se on päällystämätön maantie, jota sadekaudella ei '
+                + 'käytännössä pysty ajamaan. Sen päällystämisestä '
+                + 'alkuperäiskansojen maan halki on kiistelty vuosia. '
+                + 'Kuivimpina viikkoina kesä–elokuussa joen voi ylittää '
+                + 'nelivetoautolla kahlaten, muulloin vene on ainoa keino. '
+                + 'Saarella liikutaan jalan, polkupyörällä tai hevosella.',
+              kuva: [
+                {
+                  tiedosto: 'Cascata Pca Girassois Palmas TO.jpg',
+                  lyhyt: 'Tekoputous ja Palácio Araguaia Praça dos Girassóis -aukiolla Palmasissa.',
+                  selite: 'Kivilohkareiden välistä valuva tekoputous laskee '
+                    + 'vihreään altaaseen, ja sen takana näkyy osavaltion '
+                    + 'hallituspalatsi Palácio Araguaia vaakunoineen. Putous '
+                    + 'kuvaa Tocantinsin jokia ja vesiputouksia. Kuva on '
+                    + 'otettu maaliskuussa 2018.',
+                  lahde: 'Flávio André / MTur Destinos, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Rio Araguaia durante Travessia na Balsa 01.jpg',
+                  lyhyt: 'Leveä Araguaia lautan kannelta Tocantinsin ja Parán välillä.',
+                  selite: 'Leveä, harmaa Araguaia-joki virtaa pilvisen taivaan '
+                    + 'alla, ja vasemmalla rannalla kasvaa tiheää metsää. Kuva '
+                    + 'on otettu maaliskuussa 2017 lautalta, joka ylittää '
+                    + 'joen Tocantinsin ja Parán osavaltioiden välillä.',
+                  lahde: 'Ruan Lion, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Porto de Luis Alves, barco dos pirangueiros passeio de turistas e pesca esportiva - panoramio.jpg',
+                  lyhyt: 'Moottoriveneitä Luiz Alvesin rantatörmän juurella Araguaia-joella.',
+                  selite: 'Kapeita moottoriveneitä on vedetty Luiz Alvesin '
+                    + 'rantatörmän juurelle ruskeaan jokiveteen, ja törmän '
+                    + 'yläpuolella näkyy taloja ja bambupensaita. Veneillä '
+                    + 'viedään matkailijoita jokiretkille ja kalaan. Kuva on '
+                    + 'otettu toukokuussa 2012.',
+                  lahde: 'Angelo Vieira, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tucunaré ja kutukauden kielto',
+              teksti: 'Araguaia on urheilukalastajien joki. Pelkästään '
+                + 'saaren itäpuolella virtaavasta Javaés-haarasta pyydetään '
+                + 'muun muassa tucunaréa, pintadoa, pacua, piraijaa, suurta '
+                + 'pirarara-monnia ja pirarucua. Halutuin saalis on '
+                + 'tucunaré eli englanniksi peacock bass, kirjoahventen '
+                + 'sukuun kuuluva taistelija, jonka suvun suurimmat lajit '
+                + 'kasvavat metrin mittaisiksi. Urheilukalastajat matkustavat '
+                + 'sen vuoksi Brasiliaan varta vasten. Casearan '
+                + 'viereisessä Coco-joessa pyydetään tucunarén lisäksi jaú- ja '
+                + 'curimatã-kaloja. Saaren pohjoispuolen Cantãon noin 900 '
+                + 'järveä ovat entisiä joenmutkia, jotka jäävät kuivana '
+                + 'kautena erilleen joesta. Niissä kutevat tucunaré ja moni muu '
+                + 'laji, ja siksi aluetta kutsutaan Araguaian lastenkamariksi. '
+                + 'Samat syrjäiset järvet ovat yksi pirarucun viimeisistä '
+                + 'turvapaikoista. Maailman suurimpiin makean veden kaloihin '
+                + 'kuuluva pirarucu nousee pintaan hengittämään ilmaa, mikä '
+                + 'tekee siitä helpon saaliin. Brasilia kielsi sen '
+                + 'kalastuksen vuonna 1996, kun kannat olivat hupenemassa. '
+                + 'Pyydä ja päästä -kalastuksessa suuri kala pidetään '
+                + 'vedessä, sillä pirarucun nostaminen kokonaan ilmaan '
+                + 'valokuvaa varten voi repiä sen selkärangan vierellä '
+                + 'kulkevan suuren verisuonen. Kalastusta säätelee myös '
+                + 'piracema, kalojen kutuvaellus, jonka nimi tulee tupin '
+                + 'sanoista kala ja lähtö. Kutuaikana marraskuusta helmikuuhun '
+                + 'ympäristövirasto Ibaman määräämä kausi kieltää tai rajoittaa '
+                + 'kalastusta, joten kalamatka kannattaa ajoittaa kuivaan '
+                + 'kauteen.',
+              kuva: {
+                tiedosto: 'Pesca na Área de Proteção Ambiental Meandros do Araguaia (01).jpg',
+                lyhyt: 'Kaksi kalastajaa kahlaa Araguaian matalikossa suuren kalan roiskiessa vettä.',
+                selite: 'Kaksi lippalakkista miestä seisoo ruskeassa, '
+                  + 'matalassa jokivedessä, ja heidän edessään suuri kala '
+                  + 'roiskii vettä pinnalla. Taustalla on hiekkasärkkä ja '
+                  + 'rantametsää. Kuva on otettu heinäkuussa 2020 Araguaian '
+                  + 'mutkien suojelualueella saaren eteläpuolella.',
+                lahde: 'Cuia Elias, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vieraana inyjen maalla',
+              teksti: 'Saaren kaksi eteläistä kolmannesta on alkuperäiskansojen '
+                + 'aluetta, jota hoitaa liittovaltion alkuperäiskansavirasto '
+                + 'FUNAI, ja kansallispuiston päällekin ulottuu kaksi '
+                + 'alkuperäiskansojen aluetta. Kyliin ei mennä omin '
+                + 'päin: Wikivoyage neuvoo käyttämään luvanvaraista ja '
+                + 'hyvämaineista matkanjärjestäjää, ja kuvaamiseen kysytään '
+                + 'aina lupa. Saaren keskiosan Mata do Mamão -metsässä elää '
+                + 'pieni avá-canoeiro-ryhmä, joka torjuu kaiken yhteyden '
+                + 'ulkomaailmaan, jopa naapurikyliin. Se on Tocantinsin ainoa '
+                + 'eristäytyneenä elävä alkuperäiskansojen ryhmä, eikä sitä '
+                + 'pidä yrittää etsiä. Karajá-perheet leiriytyvät kuivana '
+                + 'kautena kalastamaan joen rannoille ja viettävät silloin '
+                + 'juhlansa, ja sadekaudeksi ne siirtyvät korkeammalla '
+                + 'sijaitseviin kyliin. Tärkein juhla on Hetohokỹ, poikien '
+                + 'aikuistumisriitti. Siitä kertoo O Povo que Veio do Fundo do '
+                + 'Rio eli Kansa, joka tuli joen pohjasta. Juanahu Karaján '
+                + 'vuonna 2014 valmistunut elokuva on ensimmäinen karajá-'
+                + 'ohjaajan tekemä pitkä elokuva omasta kulttuurista. '
+                + 'Kehomaalaus on yhä elävää taidetta, ja sen tekijät ovat '
+                + 'enimmäkseen naisia. Värit saadaan genipapuhedelmän '
+                + 'mehusta, puuhiilestä ja urukusta. Inyjen kulttuuria näkee '
+                + 'myös Palmasissa, joka järjesti lokakuussa 2015 '
+                + 'ensimmäiset alkuperäiskansojen maailmankisat. Niihin '
+                + 'osallistui yli 2 000 urheilijaa ja kulttuurivierasta, ja '
+                + 'lajeina olivat esimerkiksi tukkijuoksu, keihäänheitto ja '
+                + 'xikunahati, pallopeli jossa palloa saa koskettaa vain '
+                + 'päällä. Kisat saivat myös arvostelua: Ilha do Bananalin '
+                + 'karajá-perheestä lähtöisin oleva aktivisti Narubia '
+                + 'Werreria moitti niitä siitä, ettei suurin osa Brasilian '
+                + 'kansoista päässyt mukaan.',
+              kuva: {
+                tiedosto: 'Xambioas.jpg',
+                lyhyt: 'Xambioá-kansan edustajia sulkakoristein ja kehomaalauksin Palmasissa 2015.',
+                selite: 'Poika ja nainen seisovat sulkakoristeissa ja '
+                  + 'helmikaulakoruissa, ja heidän vartaloihinsa on maalattu '
+                  + 'tummia kuvioita. Taustalla nuori mies kantaa selässään '
+                  + 'suurta sulkaviuhkaa. Xambioá on yksi karajan kielen '
+                  + 'murteista ja sitä puhuvan ryhmän nimi. Kuva on otettu lokakuussa 2015 alkuperäiskansojen '
+                  + 'maailmankisoissa Palmasissa.',
+                lahde: 'Marcelo Camargo/Agência Brasil, Wikimedia Commons (CC BY 3.0 br)',
+              },
+            },
+            {
+              otsikko: 'Saaren oma lintu ja tulvametsät',
+              teksti: 'Lintuharrastajan tärkein laji on bananalinmuurahaislintu '
+                + '(Cercomacra ferdinandi), jonka levinneisyysalue keskittyy '
+                + 'juuri Ilha do Bananalille. Noin 16-senttinen koiras on '
+                + 'lähes kokomusta, siivissä valkoisia täpliä, ja naaras on '
+                + 'harmaa. Lintu piileskelee köynnösten tiheiköissä '
+                + 'rantametsissä ja vanhojen joenmutkien järvien lähellä, ja '
+                + 'sen hätäinen, vinkuva laulu on kuvattu tavuina tudr-tudr-'
+                + 'tudr. Laji on luokiteltu silmälläpidettäväksi, sillä '
+                + 'vesivoimaloiden padot uhkaavat hukuttaa sen kapeaa '
+                + 'elinympäristöä. Saaren savanneilla elää nanduja, '
+                + 'ja kansallispuistossa elää muun muassa suohirviä, '
+                + 'harjasusia, jättiläismuurahaiskarhuja ja kapybaroita. '
+                + 'Rantapuissa pesii hoatsin, jonka poikasilla on '
+                + 'siivissään kaksi kynttä kiipeilyä varten, ja vesissä elävät '
+                + 'anakonda ja mustakaimaani. Pohjoiskärjen naapurissa '
+                + 'Cantãon osavaltionpuistossa on vierailukeskus, majoitusta '
+                + 'ja opastettuja polkuja. Yhdessä selvityksessä puistosta '
+                + 'laskettiin 317 lintulajia. Sen igapó-tulvametsissä vesi '
+                + 'seisoo maaliskuun huipputulvan aikaan viidestä '
+                + 'kahdeksaan metriä syvänä ja virtaa muutaman kilometrin '
+                + 'tuntivauhtia puiden välissä. Helmikuussa piranheira-puu '
+                + 'pudottaa lehtensä, ja uusiin lehtiin kerääntyy toukkia. '
+                + 'Kun tuuli ravistaa latvoja, toukat putoavat veteen ja '
+                + 'houkuttelevat paikalle piraijaparvia, joista puu on '
+                + 'saanut nimensä.',
+              kuva: {
+                tiedosto: 'Cercomacra ferdinandi - Bananal antbird (male).jpg',
+                lyhyt: 'Bananalinmuurahaislinnun musta koiras oksalla Piumissa Tocantinsissa.',
+                selite: 'Lähes kokomusta pieni lintu istuu vaakasuoralla '
+                  + 'oksalla, ja sen siivessä erottuu valkoisia täpliä ja '
+                  + 'reunuksia. Kuva on otettu syyskuussa 2015 Canguçun '
+                  + 'luonnonsuojelualueella Piumin kunnassa.',
+                lahde: 'Marco Cruz, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Rantakausi, rauskut ja savu',
+              teksti: 'Saarella on kaksi selvää vuodenaikaa. Marraskuusta '
+                + 'huhtikuuhun sataa, ja tammi–maaliskuussa joki tulvii niin, '
+                + 'että osa saaresta jää veden alle. Toukokuusta lokakuuhun on '
+                + 'kuivaa. Heinäkuussa lämpötila laskee alimmillaan noin 22 '
+                + 'asteeseen, ja elo–syyskuussa päivälämpö nousee 38 '
+                + 'asteeseen. Kuiva kausi on myös rantakausi. Joen laskiessa '
+                + 'esiin nousevat valkoiset hiekkasärkät, joille pystytetään '
+                + 'heinäkuun lomakaudeksi olkikattoisia katoksia, kioskeja ja '
+                + 'telttaleirejä. Pohjoisempana Araguacemassa kaupungin '
+                + 'edustan saaren Praia da Gaivota -ranta vetää heinäkuussa '
+                + 'tuhansia kävijöitä, Casearan Coco-joen Praia do Sol on '
+                + 'auki kesäkuusta syyskuuhun, ja Luiz Alvesissa vietetään '
+                + 'heinäkuussa Carnaraguaia-karnevaalia. Hiekkapohjaisella '
+                + 'matalikolla kannattaa kävellä jalkoja laahaten, sillä '
+                + 'makean veden rauskut lepäävät pohjassa ja pistävät '
+                + 'myrkkypiikillään yleensä silloin, kun uimari astuu niiden '
+                + 'päälle. Kuivan kauden varjopuoli ovat maastopalot. '
+                + 'Salaman sytyttämät palot sammuvat yleensä pian '
+                + 'seuraavaan sateeseen, mutta ihmisen sytyttämät leviävät '
+                + 'paahteessa laajoiksi, ja Ilha do Bananalilla niitä on '
+                + 'usein. Hyttyset ja mäkärät kuuluvat maisemaan, ja '
+                + 'kansallispuiston toimistokaupungin Piumin nimikin tulee '
+                + 'vanhan tupin kielen mäkärää tarkoittavasta sanasta. '
+                + 'Wikivoyagen mukaan keltakuumerokotus ja malarialääkitys '
+                + 'voivat olla tarpeen Mato Grossossa ja Pohjois-Brasiliassa. '
+                + 'Särkillä on vähän '
+                + 'varjoa, joten juomavesi, lierihattu ja pitkähihaiset '
+                + 'vaatteet kuuluvat päiväretkelle.',
+              kuva: {
+                tiedosto: 'Casas de Palha.jpg',
+                lyhyt: 'Olkikattoisia katoksia Araguaian hiekkarannalla heinäkuun rantakaudella.',
+                selite: 'Tyynen joen takana kaartuu vaalea hiekkaranta, '
+                  + 'jolle on rakennettu useita olkikattoisia katoksia, ja '
+                  + 'rannan takana kasvaa vehreää metsää. Kuva on otettu '
+                  + 'heinäkuun alussa 2013 Araguaia-joella Tocantinsissa.',
+                lahde: 'Edivaldo Alves de Sousa, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kulttuuri',

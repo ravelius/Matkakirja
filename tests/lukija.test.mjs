@@ -528,7 +528,8 @@ test('mykistysportti on molempien sisäänkäyntien ensimmäinen ehto', () => {
     // Portin on oltava rungon alussa, ennen kuin mitään
     // taustajärjestelmää kysytään.
     const runko = lahde.slice(kohta, kohta + 900);
-    assert.match(runko, /if \(!aanetPaalla\(\)\)/, `${nimi} ei kysy pelin äänivalintaa`);
+    // Pulu ohittaa portin (omistaja 27.9.2026 klo 09.2x): sen puhetta ohjaa vain oma kaiutinvipu.
+    assert.match(runko, /if \(!pulunPuhe\(persoona\) && !aanetPaalla\(\)\)/, `${nimi} ei kysy pelin äänivalintaa`);
     const portti = runko.indexOf('aanetPaalla()');
     const tausta = runko.indexOf('puheTuettu()');
     assert.ok(tausta < 0 || portti < tausta, `${nimi} kysyy taustajärjestelmää ennen mykistystä`);
@@ -542,5 +543,94 @@ test('mykistys lähettää tapahtuman, jota lukija kuuntelee', () => {
   assert.match(aani, /export const AANIVALINTA_TAPAHTUMA = 'matkakirja-aanivalinta'/);
   assert.match(aani, /setEnabled\(enabled\)\s*\{[\s\S]*?ilmoitaAaniValinta\(enabled\)/);
   assert.match(lukija, /addEventListener\(AANIVALINTA_TAPAHTUMA/);
-  assert.match(lukija, /detail\?\.enabled === false\) pysaytaLukija\(\)/);
+  assert.match(lukija, /detail\?\.enabled === false\) vaiennaAanikytkimella\(\)/);
+});
+
+/*
+ * PULUN PUHE ILMAN ÄÄNIKYTKIMIÄ (omistaja 27.9.2026 klo 09.2x, sitova):
+ * Pulun striimipuhetta ja valmista vastausta ohjaa vain Pulun kaiutinvipu.
+ * Pelin mykistys ja kertojakytkin eivät estä eivätkä katkaise sitä.
+ */
+test('Pulun puhe ohittaa pelin äänikytkimet, muu luenta ei', () => {
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  assert.match(lukija, /function pulunPuhe\(persoona\) \{\s*return persoona === 'pollo';/);
+  assert.match(lukija, /export function vaiennaAanikytkimella\(\) \{\s*if \(ajossa && ajossaPulu\) return;\s*pysaytaLukija\(\);/);
+  // Molemmat sisäänkäynnit merkitsevät soivan luennan Pulun omaksi.
+  assert.equal((lukija.match(/ajossaPulu = pulunPuhe\(persoona\);/g) ?? []).length, 2);
+  // Äänikytkimet vaientavat vaiennaAanikytkimella-kahvalla, eivät pysaytaLukija-kutsulla.
+  const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
+  assert.match(main, /stopIntroVoice\(ui\); vaiennaAanikytkimella\(\); \}/);
+  const valikko = readFileSync(new URL('../js/aikajana-valikko.js', import.meta.url), 'utf8');
+  assert.match(valikko, /pysaytaLinssiluenta\(ui\); vaiennaAanikytkimella\(\); \}/);
+  // Mykkä peli ei silti lue kertojana.
+  const oli = sfx.enabled;
+  try {
+    sfx.enabled = false;
+    assert.equal(lueAaneen('Tokiossa astuin risteykseen.', null, { persoona: 'kertoja' }), false);
+  } finally {
+    sfx.enabled = oli;
+  }
+});
+
+/*
+ * RAJA JA PALVELINVIRHE PYSÄYTTÄVÄT (27.9.2026): 429/5xx ei ohita virkettä
+ * äänettä eikä pudota laitteen ääneen; workerin viesti näytetään kerran.
+ */
+test('puheen 429/5xx pysäyttää luennan ja näyttää workerin viestin kerran', () => {
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  assert.match(puhe, /virhe\.pysayttaa = vastaus\.status === 429 \|\| vastaus\.status >= 500;/);
+  assert.match(puhe, /virhe\.viesti = \(await vastaus\.json\(\)\)\?\.viesti \?\? null;/);
+  assert.match(puhe, /onVirhe\?\.\(vaihe, virhe\);/);
+  // Ei laitteen ääntä rajan jälkeen.
+  assert.match(lukija, /if \(virhe\?\.pysayttaa\) ilmoitaPuhevirhe\(virhe\);\s*else if \(vaihe === 'alku' && lueLaitteella/);
+  assert.match(lukija, /if \(ilmoitetutPuhevirheet\.has\(syy\)\) return;/);
+  assert.match(ui, /addEventListener\?\.\(PUHEVIRHE_TAPAHTUMA/);
+});
+
+/*
+ * NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x): kaiutin
+ * keskeyttää ja jatkaa samasta kohdasta, keskeytettynä se vilkkuu,
+ * vasemmalla säätöratas (nopeus + xAI-ääni), oikealla VU-mittari.
+ */
+test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () => {
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
+  const tyyli = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  // Kortin napautus kulkee kortinPainallus-polkua: tauko ↔ jatka, ei paneelia.
+  assert.match(lukija, /if \(nappi\.__lukijaKortti\) \{\s*kortinPainallus\(nappi, isanta\);/);
+  assert.match(lukija, /if \(soitin\.tauolla\(\)\) soitin\.jatka\(\);\s*else soitin\.tauko\(\);/);
+  assert.match(lukija, /if \(alkoi && !nappi\.__lukijaKortti\) avaaOhjain\(isanta, nappi\);/);
+  // Katkennut luenta jättää kohdan napille, ja uusi luenta alkaa siitä.
+  assert.match(lukija, /ajossa = null;\s*talletaKortinKohta\(nyt\);/);
+  assert.match(lukija, /aloitusAlku: jatkoKohta\?\.alku \?\? 0/);
+  assert.match(puhe, /if \(palat\[i\]\.alku <= aloitusAlku\) indeksi = i;/);
+  // Luettu loppuun: seuraava kerta alusta.
+  assert.match(lukija, /unohdaKortinKohta\(nappi\);/);
+  // Vilkunta vain läpinäkyvyydellä, liike vähennettynä ei animaatiota.
+  assert.match(tyyli, /button\.lukija-nappi\.keskeytetty \{ animation: lukija-keskeytetty/);
+  assert.match(tyyli, /@keyframes lukija-keskeytetty \{\s*0%, 100% \{ opacity: 1; \}\s*50% \{ opacity: 0\.4; \}/);
+  // Ratas: nopeus ja ääni; äänivalinta ei enää kehittäjävalikossa.
+  assert.match(lukija, /asetaPuheenNopeus\(liuku\.value\)/);
+  assert.match(lukija, /asetaStriimiaani\(valinta\.value \|\| null\)/);
+  assert.doesNotMatch(html, /id="kehittaja-striimiaani"/);
+  // VU kaiuttimessa itsessään kuten isoisän luennassa: kolme kaarta, oma mittari, lukijaäänen analysaattori.
+  assert.equal((lukija.match(/class="kaiutin-kaari" data-kaari="\d"/g) ?? []).length, 3);
+  assert.match(lukija, /kortinVu\.kaynnista\(nappi, puheMittari\)/);
+  assert.doesNotMatch(lukija, /lukija-vu/);
+  assert.match(tyyli, /\.lukija-saatimin > button\.lukija-nappi\.lukee \.kaiutin-kaari\.palaa \{ opacity: 1; \}/);
+  assert.match(puhe, /kompressori\.connect\(vuAnalysaattori\);\s*vuAnalysaattori\.connect\(piiri\.destination\);/);
+});
+
+test('lukijan äänillä on pelinimet: jokainen moottorin ääni nimetty, tunnus ei näy valikossa', async () => {
+  const { AANTEN_PELINIMET, STRIIMIAANET_XAI, STRIIMIAANI_OLETUS, aanenPelinimi } = await import('../js/puhe.js');
+  assert.deepEqual(Object.keys(AANTEN_PELINIMET).sort(), [...STRIIMIAANET_XAI].sort(), 'kaikki 28 ääntä nimetty');
+  assert.equal(new Set(Object.values(AANTEN_PELINIMET)).size, STRIIMIAANET_XAI.length, 'nimet ovat yksilöllisiä');
+  assert.equal(AANTEN_PELINIMET[STRIIMIAANI_OLETUS], 'Aino');
+  assert.equal(aanenPelinimi('tuntematon'), 'Aino');
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  assert.match(lukija, /vaihtoehto\(`\$\{AANTEN_PELINIMET\[STRIIMIAANI_OLETUS\]\} \(oletus\)`, ''\)/);
+  assert.match(lukija, /valinta\.append\(vaihtoehto\(nimi, aani\)\)/);
 });

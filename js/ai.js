@@ -66,6 +66,8 @@ export function chooseTravel(game) {
   const p = game.player;
   const modes = game.travelModes();
   if (modes.length === 0) return { type: 'land' };
+  // Ei ilmaista eikä maksettavaa reittiä: tehtävä, jos tarjolla, muuten odotus (talouden vaihe 1).
+  if (modes.includes('wait')) return { type: modes.includes('stay') ? 'stay' : 'wait' };
 
   // Aarrekaupungissa kannattaa usein yrittää kysymystä uudelleen.
   if (modes.includes('stay') && !racingHome(game, p) && game.rng() < 0.55) {
