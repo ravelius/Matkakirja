@@ -472,6 +472,7 @@ namespace Matkakirja.Natiivi
             o.MatkaPerilla += k => { if (k != null) UiKerros.PaaSaikeessa(() => Noppa.Haivyta()); };
             // Avauskortti on ruudun yläosassa eikä merkin vieressä: kamera ei panoroi (web avaaAvauskortti ilman ajoa).
             PeliOhjain.KortinRuutupiste = KaupunginRuutupiste;
+            PeliOhjain.KorttiIlmanAjoa = true; // Pelikoodari c7b475d7: napautus avaa kortin heti (web avaaAvauskortti)
             // Livian sähkekuplat (johdanto, odotus, vinkki, linkin saate, oikein, paluu) puluun.
             o.LivianKuplat += (kaupunki, kentta, kuplat) => Sahkelomake.LivianKuplat(kaupunki, kentta, kuplat);
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
