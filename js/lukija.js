@@ -87,7 +87,7 @@ import { luoLivianKuunteluvuoro, seuraaLivianKuuntelulausumaa } from './livia-ti
 
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import {
-  NOPEUS_MAX, NOPEUS_MIN, STRIIMIAANET_XAI, STRIIMIAANI_OLETUS,
+  AANTEN_PELINIMET, NOPEUS_MAX, NOPEUS_MIN, STRIIMIAANI_OLETUS,
   asetaPuheenNopeus, asetaStriimiaani, esihaePala, kappaleenPalat, luoPuheSoitin,
   puheMittari, puheTuettu, puheenNopeus, striimiaani,
 } from './puhe.js';
@@ -2184,13 +2184,16 @@ const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
  *    alusta. Loppuun luettu kortti alkaa taas alusta.
  * 2. KESKEYTETTYNÄ KAIUTIN VILKKUU KEVYESTI (.keskeytetty, vain
  *    läpinäkyvyys — iOS-sääntö: ei suodattimia eikä skaalausta).
- * 3. SÄÄTÖRATAS kaiuttimen vasemmalla: lukunopeus (xAI speed, workerin
- *    `nopeus`) ja lukijan xAI-ääni. Äänen valinta muutti pois
- *    kehittäjävalikosta; worker tottelee listan ääntä ilman
- *    kehittäjäkoodia. Molemmat kuuluvat seuraavasta palasta alkaen.
- * 4. VU-MITTARI kaiuttimen oikealla: kolme kaarta kuten isoisän
- *    luennassa (js/kaiutinmittari.js, oma mittari rinnakkain isoisän
- *    kanssa), lähteenä lukijaäänen analysaattori (js/puhe.js puheMittari).
+ * 3. SÄÄTÖRATAS kaiuttimen vasemmalla (omistaja 10.1x: lähellä kaiutinta):
+ *    lukunopeus (workerin `nopeus`) ja lukijan ääni pelinimellään
+ *    (js/puhe.js AANTEN_PELINIMET — moottorin tunnus ei näy pelaajalle).
+ *    Äänen valinta muutti pois kehittäjävalikosta; worker tottelee listan
+ *    ääntä ilman kehittäjäkoodia. Molemmat kuuluvat seuraavasta palasta.
+ * 4. VU-MITTARI KAIUTTIMESSA ITSESSÄÄN (omistaja 10.1x: "kuten isoisän
+ *    luennassa"): kortin kaiutin on sama kolmikaarinen kuvake kuin
+ *    #fact-kuuntele, ja sen omat ääniaallot sykkivät tasosta
+ *    (js/kaiutinmittari.js, oma mittari rinnakkain isoisän kanssa;
+ *    lähteenä lukijaäänen analysaattori js/puhe.js puheMittari).
  */
 const SAADIN_OTSIKKO = 'Luennan nopeus ja ääni';
 const JATKA_OTSIKKO = 'Jatka kuuntelua';
@@ -2202,12 +2205,13 @@ const SAADIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
   + '<path d="M12 4.2v2.2M12 17.6v2.2M4.2 12h2.2M17.6 12h2.2M6.5 6.5l1.55 1.55M15.95 15.95l1.55 1.55'
   + 'M6.5 17.5l1.55-1.55M15.95 8.05l1.55-1.55"/><circle cx="12" cy="12" r="5.4"/></svg>';
 
-// Samat kaaret kuin isoisän kaiuttimessa (index.html #fact-kuuntele), ilman runkoa.
-const VU_IKONI = '<svg viewBox="8 0 12 24" aria-hidden="true" fill="none"'
-  + ' stroke="currentColor" stroke-width="1.5" stroke-linecap="round">'
-  + '<path class="kaiutin-kaari" data-kaari="1" d="M10.2 10.2a2.4 2.4 0 0 1 0 3.6"/>'
-  + '<path class="kaiutin-kaari" data-kaari="2" d="M12.6 8.4a5 5 0 0 1 0 7.2"/>'
-  + '<path class="kaiutin-kaari" data-kaari="3" d="M15 6.6a7.6 7.6 0 0 1 0 10.8"/></svg>';
+// Sama kaiutin kuin isoisän luennassa (index.html #fact-kuuntele): runko ja kolme kaarta, jotka ovat VU-mittari.
+const KORTIN_KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
+  + ' stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'
+  + '<path d="M4.5 9.6v4.8h3.2l4.5 3.8V5.8L7.7 9.6Z" stroke-width="1.7"/>'
+  + '<path class="kaiutin-kaari" data-kaari="1" d="M14.6 10.2a2.4 2.4 0 0 1 0 3.6" stroke-width="1.5"/>'
+  + '<path class="kaiutin-kaari" data-kaari="2" d="M16.4 8.4a5 5 0 0 1 0 7.2" stroke-width="1.5"/>'
+  + '<path class="kaiutin-kaari" data-kaari="3" d="M18.2 6.6a7.6 7.6 0 0 1 0 10.8" stroke-width="1.5"/></svg>';
 
 const kortinVu = luoKaiutinmittari();
 
@@ -2253,11 +2257,10 @@ function kortinPainallus(nappi, isanta) {
   kaynnistaLuenta(nappi, isanta);
 }
 
-/** Kortin VU-mittari käyntiin luennan ajaksi, muuten sammuksiin. */
+/** Kortin kaiuttimen kaaret VU:na luennan ajaksi, muuten täysinä (kuten isoisän kaiutin). */
 function paivitaKortinVu(nappi, lukee) {
-  const vu = nappi?.__lukijaVu;
-  if (!vu) return;
-  if (lukee) kortinVu.kaynnista(vu, puheMittari);
+  if (!nappi?.__lukijaSaadin) return;
+  if (lukee) kortinVu.kaynnista(nappi, puheMittari);
   else if (kortinVu.kaynnissa()) kortinVu.pysayta();
 }
 
@@ -2306,15 +2309,16 @@ function avaaKortinSaadot(koti, rataas) {
   aaniNimi.textContent = 'Ääni';
   const valinta = doc.createElement('select');
   valinta.setAttribute('aria-label', 'Lukijan ääni');
+  // Pelinimet (AANTEN_PELINIMET): arvo on sisäinen tunnus, teksti pelaajan nimi.
   const vaihtoehto = (teksti, arvoNyt) => {
     const o = doc.createElement('option');
     o.value = arvoNyt;
     o.textContent = teksti;
     return o;
   };
-  valinta.append(vaihtoehto(`${STRIIMIAANI_OLETUS} (oletus)`, ''));
-  for (const aani of STRIIMIAANET_XAI) {
-    if (aani !== STRIIMIAANI_OLETUS) valinta.append(vaihtoehto(aani, aani));
+  valinta.append(vaihtoehto(`${AANTEN_PELINIMET[STRIIMIAANI_OLETUS]} (oletus)`, ''));
+  for (const [aani, nimi] of Object.entries(AANTEN_PELINIMET)) {
+    if (aani !== STRIIMIAANI_OLETUS) valinta.append(vaihtoehto(nimi, aani));
   }
   valinta.value = striimiaani() ?? '';
   valinta.addEventListener('change', () => {
@@ -2338,9 +2342,9 @@ function avaaKortinSaadot(koti, rataas) {
   doc.addEventListener('pointerdown', sulje, { once: true, capture: true });
 }
 
-/** Säätöratas vasemmalle ja VU oikealle kortin kaiuttimesta (kerran per nappi). */
+/** Säätöratas kortin kaiuttimen vasemmalle ja kaiuttimeen VU-kaaret (kerran per nappi). */
 function varustaKortinSaatimet(koti, nappi) {
-  if (!koti || !nappi || nappi.__lukijaVu) return;
+  if (!koti || !nappi || nappi.__lukijaSaadin) return;
   const doc = koti.ownerDocument;
   const rataas = doc.createElement('button');
   rataas.type = 'button';
@@ -2354,13 +2358,8 @@ function varustaKortinSaatimet(koti, nappi) {
     // Nykyinen rivi, ei varustushetken koti: kaksivaiheisella kortilla ratas siirtyy otsikkoriville.
     avaaKortinSaadot(rataas.parentElement ?? koti, rataas);
   });
-  const vu = doc.createElement('span');
-  vu.className = 'lukija-vu';
-  vu.setAttribute('aria-hidden', 'true');
-  vu.innerHTML = VU_IKONI;
+  nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KORTIN_KAIUTIN_IKONI}</span>`;
   nappi.before?.(rataas);
-  nappi.after?.(vu);
-  nappi.__lukijaVu = vu;
   nappi.__lukijaSaadin = rataas;
   koti.classList?.add('lukija-saatimin');
 }
@@ -2434,7 +2433,7 @@ function odotaKortinOtsikkorivia(kortti, nappi) {
     vahti.disconnect();
     nappi.__lukijaRiviVahti = null;
     const vanha = nappi.parentElement;
-    rivi.append(...[nappi.__lukijaSaadin, nappi, nappi.__lukijaVu].filter(Boolean));
+    rivi.append(...[nappi.__lukijaSaadin, nappi].filter(Boolean));
     vanha?.classList?.remove(KORTIN_RIVILUOKKA, 'lukija-saatimin');
     rivi.classList.add(KORTIN_RIVILUOKKA, 'lukija-saatimin');
     nappi.__lukijaIsanta = rivi;

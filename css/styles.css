@@ -13027,40 +13027,28 @@ button.lukija-nappi:focus-visible,
 }
 
 /*
- * NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x;
- * js/lukija.js varustaKortinSaatimet): [⚙] [kaiutin] [)))] otsikkorivin
- * oikeassa reunassa. Kaiutin siirtyy VU-mittarin verran vasemmalle,
- * ratas sen vasemmalle puolelle. Vain läpinäkyvyys liikkuu (iOS-sääntö).
+ * NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x ja 10.1x;
+ * js/lukija.js varustaKortinSaatimet): [⚙][kaiutin] otsikkorivin oikeassa
+ * reunassa, ratas aivan kaiuttimen vieressä. Kaiuttimen omat kolme kaarta
+ * ovat VU-mittari kuten isoisän luennassa (#fact-kuuntele): luennan aikana
+ * himmeinä ja palavat tasosta, muuten täysinä. Vain läpinäkyvyys (iOS-sääntö).
  */
-.lukija-otsikkorivi.lukija-saatimin { padding-right: 5.4rem; }
+.lukija-otsikkorivi.lukija-saatimin { padding-right: 3.7rem; }
 
-.lukija-saatimin > button.lukija-nappi,
-.dialog .lukija-saatimin > button.lukija-nappi { right: 1.15rem; }
+.lukija-saatimin > button.lukija-nappi.lukee .kaiutin-kaari { opacity: 0.2; transition: opacity 120ms linear; }
+.lukija-saatimin > button.lukija-nappi.lukee .kaiutin-kaari.palaa { opacity: 1; }
+.lukija-saatimin > button.lukija-nappi.mykistetty .kaiutin-kaari { opacity: 0.2; }
 
-.lukija-saatimin > .lukija-vu {
-  position: absolute;
-  top: 50%;
-  right: 0.05rem;
-  transform: translateY(-50%);
-  width: 1rem;
-  height: 1.35rem;
-  color: #a8741a;
-  pointer-events: none;
-  visibility: hidden;
+@media (prefers-reduced-motion: reduce) {
+  .lukija-saatimin > button.lukija-nappi.lukee .kaiutin-kaari { opacity: 1; transition: none; }
 }
-
-.lukija-saatimin > .lukija-vu svg { width: 100%; height: 100%; display: block; }
-
-/* VU näkyy luennan ja keskeytyksen ajan; kaaret himmeinä, palavat tasosta. */
-.lukija-saatimin > button.lukija-nappi.lukee + .lukija-vu { visibility: visible; }
-.lukija-vu .kaiutin-kaari { opacity: 0.2; transition: opacity 120ms linear; }
-.lukija-vu .kaiutin-kaari.palaa { opacity: 1; }
 
 .lukija-saatimin > button.lukija-saadin,
 .dialog .lukija-saatimin > button.lukija-saadin {
   position: absolute;
   top: 50%;
-  right: 3.3rem;
+  right: 1.5rem;
+  z-index: 7;
   transform: translateY(-50%);
   width: 1.9rem;
   height: 1.9rem;

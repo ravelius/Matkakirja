@@ -572,8 +572,21 @@ test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () =
   assert.match(lukija, /asetaPuheenNopeus\(liuku\.value\)/);
   assert.match(lukija, /asetaStriimiaani\(valinta\.value \|\| null\)/);
   assert.doesNotMatch(html, /id="kehittaja-striimiaani"/);
-  // VU: kolme kaarta omalla mittarilla, lähteenä lukijaäänen analysaattori.
+  // VU kaiuttimessa itsessään kuten isoisän luennassa: kolme kaarta, oma mittari, lukijaäänen analysaattori.
   assert.equal((lukija.match(/class="kaiutin-kaari" data-kaari="\d"/g) ?? []).length, 3);
-  assert.match(lukija, /kortinVu\.kaynnista\(vu, puheMittari\)/);
+  assert.match(lukija, /kortinVu\.kaynnista\(nappi, puheMittari\)/);
+  assert.doesNotMatch(lukija, /lukija-vu/);
+  assert.match(tyyli, /\.lukija-saatimin > button\.lukija-nappi\.lukee \.kaiutin-kaari\.palaa \{ opacity: 1; \}/);
   assert.match(puhe, /kompressori\.connect\(mittari\);\s*mittari\.connect\(piiri\.destination\);/);
+});
+
+test('lukijan äänillä on pelinimet: jokainen moottorin ääni nimetty, tunnus ei näy valikossa', async () => {
+  const { AANTEN_PELINIMET, STRIIMIAANET_XAI, STRIIMIAANI_OLETUS, aanenPelinimi } = await import('../js/puhe.js');
+  assert.deepEqual(Object.keys(AANTEN_PELINIMET).sort(), [...STRIIMIAANET_XAI].sort(), 'kaikki 28 ääntä nimetty');
+  assert.equal(new Set(Object.values(AANTEN_PELINIMET)).size, STRIIMIAANET_XAI.length, 'nimet ovat yksilöllisiä');
+  assert.equal(AANTEN_PELINIMET[STRIIMIAANI_OLETUS], 'Aino');
+  assert.equal(aanenPelinimi('tuntematon'), 'Aino');
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  assert.match(lukija, /vaihtoehto\(`\$\{AANTEN_PELINIMET\[STRIIMIAANI_OLETUS\]\} \(oletus\)`, ''\)/);
+  assert.match(lukija, /valinta\.append\(vaihtoehto\(nimi, aani\)\)/);
 });

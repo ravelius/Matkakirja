@@ -99,6 +99,26 @@ export const STRIIMIAANET_XAI = ['altair', 'ara', 'atlas', 'aurora', 'carina', '
   'liora', 'lumen', 'luna', 'lux', 'naksh', 'orion', 'perseus', 'rex',
   'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
 export const STRIIMIAANI_OLETUS = 'ara';
+
+/*
+ * ÄÄNTEN PELINIMET (omistaja 27.9.2026 klo 10.2x, sitova): pelaaja näkee
+ * vain pelinimen — moottorin äänitunnus pysyy sisäisenä (pyyntö, worker,
+ * välimuistiavain). Yksi taulu, tests/lukija.test.mjs valvoo, että
+ * jokainen STRIIMIAANET_XAI-ääni on nimetty. Järjestys on valikon järjestys.
+ */
+export const AANTEN_PELINIMET = {
+  ara: 'Aino', aurora: 'Aamu', carina: 'Kerttu', celeste: 'Siiri', eve: 'Helmi',
+  iris: 'Ilta', liora: 'Lyyli', luna: 'Vieno', ursa: 'Saima',
+  altair: 'Aarne', atlas: 'Antero', castor: 'Kalle', cosmo: 'Kosti', helios: 'Heikki',
+  helix: 'Herman', kepler: 'Kaarlo', leo: 'Lauri', lumen: 'Lassi', lux: 'Luukas',
+  naksh: 'Niilo', orion: 'Onni', perseus: 'Pekka', rex: 'Reino', rigel: 'Risto',
+  sal: 'Sulo', sirius: 'Simo', zagan: 'Sakari', zenith: 'Väinö',
+};
+
+/** Äänitunnuksen pelinimi (tuntematon → oletusäänen nimi). */
+export function aanenPelinimi(aani) {
+  return AANTEN_PELINIMET[aani] ?? AANTEN_PELINIMET[STRIIMIAANI_OLETUS];
+}
 const STRIIMIN_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
 
 /** Kehittäjän valitsema xAI-striimiääni, tai null = workerin oletus (ara). */
