@@ -83,6 +83,15 @@ namespace Matkakirja.Natiivi
             public bool Nakyvissa;
             public float Peitto = -1;
             public Material Materiaali, PohjaMateriaali, ValoMateriaali;
+            /// <summary>Meren laatutaso (omistaja 27.9. klo 13.0x, meri-laatu-speksi): MeriMalli-varjostin, ääriviiva omana
+            /// materiaalinaan ja kaukotason roottori (vaihtuu, kun peitto on alle 0,5).</summary>
+            public bool Seepia;
+            public Func<Mesh> RoottoriKauko;
+            public Material ReunaMateriaali;
+            public Mesh RoottoriLod0, RoottoriKaukoVerkko;
+            public int KolmioitaKauko;
+            /// <summary>Elävän kerroksen kustannus: aiheen LateUpdate-osuus näkyvissä (ms, liukuva keskiarvo, tila-rivillä).</summary>
+            public double Ms;
         }
 
         static readonly Aihe[] Aiheet = MeriAiheet(new[]
@@ -185,12 +194,13 @@ namespace Matkakirja.Natiivi
                     Runko = HoyryGeometria.Joki, Roottori = l.Roottori, Lapsi = l.Lapsi, LastenPaikat = l.Lapsi != null ? new Vector3[l.Lapsia] : null,
                     Lapsi2 = l.Lapsi2, Lapsia2 = l.Lapsia2, Lapsi3 = l.Lapsi3, Lapsia3 = l.Lapsia3,
                     PohjaSade = 0.001f, Haalistus = 0.25f, KallistaVainRoottori = true, LapsetOmaanPisteeseen = true,
-                    Naytos = l.Nakyy, Animoi = l.Animoi,
+                    Naytos = l.Nakyy, Animoi = l.Animoi, Seepia = l.Seepia, RoottoriKauko = l.RoottoriKauko,
                 });
             return kaikki.ToArray();
         }
 
         static ElavatElementit instanssi;
+        static readonly int ValoId = Shader.PropertyToID("_Valo"), YlosId = Shader.PropertyToID("_Ylos");
         public static bool Paalla = true;
         static double AikaSiirto;
         /// <summary>Arviointikuvien koko (komento "elava elementit koko <kerroin>", oletus 1): mallit isommiksi lähikuviin.</summary>
@@ -266,7 +276,8 @@ namespace Matkakirja.Natiivi
                 var yk = a.Oliot.Count > 0 ? a.Oliot[0] : null;
                 string tauko = yk?.Aikataulu == null ? "" : $", nopeus {yk.Nopeus:F2}, seuraava tauko {yk.Aikataulu.SeuraavaTauko(nyt) - nyt:F0} s";
                 if (yk != null && a.Naytos != null) tauko = ", " + (a.Meri != null ? a.Meri.Aikataulu.Kuvaus(yk.Aika + yk.Vaihe) : MeriGeometria.Kuvaus(a.Nimi, yk.Aika + yk.Vaihe));
-                osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota{tauko}");
+                string laatu = a.Seepia ? $" (kauko {a.KolmioitaKauko}), {a.Ms:F3} ms" : "";
+                osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota{laatu}{tauko}");
             }
             return $"{(Paalla ? "päällä" : "pois")}; meri {MeriKoristeet.Maa ?? "-"} ({MeriKoristeet.KohtiaYhteensa} kohtaa): {MeriKoristeet.Kuvaus()}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
         }
@@ -276,11 +287,30 @@ namespace Matkakirja.Natiivi
             StartCoroutine(MeriKoristeet.Lataa());
             var s = Resources.Load<Shader>("Varjostimet/Malli");
             if (s == null) { Debug.LogWarning("MATKAKIRJA elävät elementit: Malli-varjostin puuttuu"); enabled = false; return; }
+            var meriVarjostin = Resources.Load<Shader>("Varjostimet/MeriMalli");
+            if (meriVarjostin == null) Debug.LogWarning("MATKAKIRJA elävät elementit: MeriMalli-varjostin puuttuu (meri vanhalla varjostimella)");
             foreach (var a in Aiheet)
             {
                 a.Oliot.Clear();
-                a.Materiaali = new Material(s) { name = a.Nimi };
-                a.Materiaali.SetFloat("_Haalistus", a.Haalistus);
+                if (a.Seepia && meriVarjostin == null) a.Seepia = false;
+                if (a.Seepia)
+                {
+                    // Laatutaso (meri-laatu-speksi): MeriMalli, ja ääriviiva samasta verkosta omalla materiaalillaan (Cull Off,
+                    // ZWrite Off, piirto ennen mallia), leveys 1,2 pt mallin yksiköissä.
+                    a.Materiaali = new Material(meriVarjostin) { name = a.Nimi };
+                    a.Materiaali.SetFloat("_ReunaLeveys", 1.2f / a.KokoPt);
+                    a.ReunaMateriaali = new Material(a.Materiaali) { name = a.Nimi + " ääriviiva" };
+                    a.ReunaMateriaali.SetFloat("_Reuna", 1f);
+                    a.ReunaMateriaali.SetFloat("_Cull", (float)CullMode.Off);
+                    a.ReunaMateriaali.SetFloat("_ZWrite", 0f);
+                    a.ReunaMateriaali.renderQueue = a.Materiaali.renderQueue - 1;
+                    roskat.Add(a.ReunaMateriaali);
+                }
+                else
+                {
+                    a.Materiaali = new Material(s) { name = a.Nimi };
+                    a.Materiaali.SetFloat("_Haalistus", a.Haalistus);
+                }
                 roskat.Add(a.Materiaali);
                 // Maapohja ja pehmeä varjo: maaston päällä (ZTest Always, ZWrite Off), mallia ennen (jono 3010).
                 a.PohjaMateriaali = new Material(s) { name = a.Nimi + " pohja", renderQueue = 3010 };
@@ -292,6 +322,9 @@ namespace Matkakirja.Natiivi
                 var runko = a.Runko(); var roottori = a.Roottori(); var lapsi = a.Lapsi?.Invoke(); var valot = a.Valot?.Invoke();
                 var lapsi2 = a.Lapsia2 > 0 ? a.Lapsi2?.Invoke() : null;
                 var lapsi3 = a.Lapsia3 > 0 ? a.Lapsi3?.Invoke() : null;
+                var kauko = a.Seepia ? a.RoottoriKauko?.Invoke() : null;
+                if (kauko != null) roskat.Add(kauko);
+                a.RoottoriLod0 = roottori; a.RoottoriKaukoVerkko = kauko;
                 roskat.Add(runko); roskat.Add(roottori); if (lapsi != null) roskat.Add(lapsi); if (lapsi2 != null) roskat.Add(lapsi2);
                 if (lapsi3 != null) roskat.Add(lapsi3);
                 Material valoMateriaali = null;
@@ -308,6 +341,7 @@ namespace Matkakirja.Natiivi
                 a.Kolmioita = (runko.triangles.Length + roottori.triangles.Length + (valot != null ? valot.triangles.Length : 0)
                     + (lapsi != null ? lapsi.triangles.Length * lapsia : 0) + (lapsi2 != null ? lapsi2.triangles.Length * lapsia2 : 0)
                     + (lapsi3 != null ? lapsi3.triangles.Length * lapsia3 : 0)) / 3;
+                a.KolmioitaKauko = a.Kolmioita - (kauko != null ? (roottori.triangles.Length - kauko.triangles.Length) / 3 : 0);
                 foreach (var (_, _, vaihe) in a.Yksilot)
                 {
                     var pt = new GameObject(a.Nimi + " pohja").transform;
@@ -320,18 +354,18 @@ namespace Matkakirja.Natiivi
                     Kappale(juuri, "Runko", runko, a.Materiaali);
                     var rt = new GameObject("Roottori").transform;
                     rt.SetParent(juuri, false);
-                    Kappale(rt, "Roottori", roottori, a.Materiaali);
+                    var (rtSuodatin, rtReuna) = Kappale(rt, "Roottori", roottori, a.Materiaali, a.ReunaMateriaali);
                     if (valot != null) Kappale(rt, "Valot", valot, valoMateriaali);
                     var lapset = new Transform[lapsia + lapsia2 + lapsia3];
                     for (int i = 0; i < lapset.Length; i++)
                     {
                         lapset[i] = new GameObject("Lapsi").transform;
                         lapset[i].SetParent(rt, false);
-                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali);
+                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali, a.ReunaMateriaali);
                     }
                     juuri.gameObject.SetActive(false);
                     var yksilo = new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, LapsiPerus = new Vector3[lapset.Length], Vaihe = vaihe,
-                        Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) };
+                        Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count), RoottoriSuodatin = rtSuodatin, RoottoriReuna = rtReuna };
                     a.Oliot.Add(yksilo);
                     a.Animoi(rt, lapset, vaihe, 0f);
                     for (int i = 0; i < lapset.Length; i++) yksilo.LapsiPerus[i] = lapset[i].localPosition;
@@ -340,16 +374,32 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA elävät elementit: {Tila()}");
         }
 
-        void Kappale(Transform isa, string nimi, Mesh mesh, Material m)
+        /// <summary>Kappale isän alle; laatutasolla (reuna ≠ null) sama verkko toisena piirtona ääriviivan materiaalilla.</summary>
+        (MeshFilter, MeshFilter) Kappale(Transform isa, string nimi, Mesh mesh, Material m, Material reuna = null)
         {
             var go = new GameObject(nimi);
             go.transform.SetParent(isa, false);
             if (ElavaKerros.Taso >= 0) go.layer = ElavaKerros.Taso;
-            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var mf = go.AddComponent<MeshFilter>();
+            mf.sharedMesh = mesh;
             var r = go.AddComponent<MeshRenderer>();
             r.sharedMaterial = m;
             r.shadowCastingMode = ShadowCastingMode.Off;
             r.receiveShadows = false;
+            MeshFilter rf = null;
+            if (reuna != null)
+            {
+                var gr = new GameObject(nimi + " ääriviiva");
+                gr.transform.SetParent(isa, false);
+                gr.layer = go.layer;
+                rf = gr.AddComponent<MeshFilter>();
+                rf.sharedMesh = mesh;
+                var rr = gr.AddComponent<MeshRenderer>();
+                rr.sharedMaterial = reuna;
+                rr.shadowCastingMode = ShadowCastingMode.Off;
+                rr.receiveShadows = false;
+            }
+            return (mf, rf);
         }
 
         void OnEnable()
@@ -441,10 +491,29 @@ namespace Matkakirja.Natiivi
                 if (!Mathf.Approximately(p, a.Peitto))
                 {
                     a.Peitto = p; a.Materiaali.SetFloat("_Peitto", p); a.PohjaMateriaali.SetFloat("_Peitto", p);
+                    if (a.ReunaMateriaali != null) a.ReunaMateriaali.SetFloat("_Peitto", p);
                     if (a.ValoMateriaali != null) a.ValoMateriaali.SetFloat("_Peitto", p);
                 }
                 if (!a.Nakyvissa) continue;
                 jokin = true;
+                long ajastinAlku = System.Diagnostics.Stopwatch.GetTimestamp();
+                if (a.Seepia)
+                {
+                    // Valo kartan luoteesta ylhäältä maailmassa (kuten kuvamerkeissä): laiva kääntyy, valo ei.
+                    Vector3 ita = Vector3.Cross(ylos, pohjoinen);
+                    a.Materiaali.SetVector(ValoId, gt.TransformDirection(-0.4592f * ita + 0.8163f * ylos + 0.4082f * pohjoinen).normalized);
+                    a.Materiaali.SetVector(YlosId, gt.TransformDirection(ylos).normalized);
+                    // Kaukotaso häivytyksessä (näytöksen alku ja loppu, horisontti).
+                    bool kaukoNyt = a.RoottoriKaukoVerkko != null && p < 0.5f;
+                    foreach (var yk in a.Oliot)
+                        if (yk.Kauko != kaukoNyt && yk.RoottoriSuodatin != null)
+                        {
+                            yk.Kauko = kaukoNyt;
+                            var m = kaukoNyt ? a.RoottoriKaukoVerkko : a.RoottoriLod0;
+                            yk.RoottoriSuodatin.sharedMesh = m;
+                            if (yk.RoottoriReuna != null) yk.RoottoriReuna.sharedMesh = m;
+                        }
+                }
                 // Koko ruudulla vakio; yksilöiden rivi asettuu ruudulla vaakaan kamerasta riippumatta.
                 float pt = 2f * LinssiOhjain.Pistekerroin * (kameraL - juuri).magnitude * tanPuoli / Mathf.Max(1, Screen.height);
                 Vector3 oikea = gt.InverseTransformDirection(kamera.transform.right);
@@ -518,6 +587,8 @@ namespace Matkakirja.Natiivi
                         }
                     }
                 }
+                double ms = (System.Diagnostics.Stopwatch.GetTimestamp() - ajastinAlku) * 1000.0 / System.Diagnostics.Stopwatch.Frequency;
+                a.Ms = a.Ms <= 0 ? ms : a.Ms * 0.95 + ms * 0.05;
             }
             jokinNakyvissa = jokin;
             jokinLiikkuu = liikkuu;
@@ -550,6 +621,9 @@ namespace Matkakirja.Natiivi
             public Quaternion RoottoriPerus = Quaternion.identity;
             /// <summary>Lasten Animoin asettamat paikat (LapsetOmaanPisteeseen), joista kallistus lasketaan joka kehys.</summary>
             public Vector3[] LapsiPerus;
+            /// <summary>Laatutaso: roottorin verkko ja sen ääriviiva (kaukotason vaihto) ja nykyinen taso.</summary>
+            public MeshFilter RoottoriSuodatin, RoottoriReuna;
+            public bool Kauko;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)

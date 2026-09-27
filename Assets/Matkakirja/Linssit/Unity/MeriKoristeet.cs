@@ -33,6 +33,11 @@ namespace Matkakirja.Natiivi
             public double VahintaanLat = -90;
             public Func<Mesh> Roottori, Lapsi, Lapsi2, Lapsi3;
             public int Lapsia, Lapsia2, Lapsia3;
+            /// <summary>Laatutaso (omistaja 27.9. klo 13.0x, meri-laatu-speksi): MeriRakentajan verkot MeriMalli-varjostimella
+            /// (B-seepiaramppi, kaiverrusreuna, ääriviiva, vesikerros). False = vanha Malli-varjostin.</summary>
+            public bool Seepia;
+            /// <summary>Kaukotaso roottorille (≤ 800 kolmiota), kun peitto on alle 0,5 (näytöksen häivytys, horisontti).</summary>
+            public Func<Mesh> RoottoriKauko;
             public Func<float, float> Nakyy;
             public Action<Transform, Transform[], float, float> Animoi;
             public MeriAikataulu Aikataulu;
@@ -57,10 +62,10 @@ namespace Matkakirja.Natiivi
 
         public static readonly Laji[] Lajit =
         {
-            new Laji { Nimi = "merilaiva", Meret = new[] { "valimeri", "atlantti", "pohjanmeri", "itameri" }, KokoPt = MeriGeometria.LaivaKokoPt,
-                Roottori = MeriGeometria.Laiva, Lapsi = HoyryGeometria.Siipiratas, Lapsia = 2, Lapsi2 = HoyryGeometria.Savupallo,
-                Lapsia2 = HoyryGeometria.Palloja, Nakyy = MeriGeometria.LaivaNakyy, Animoi = MeriGeometria.LaivaAnimoi,
-                Aikataulu = MeriGeometria.LaivaAikataulu },
+            new Laji { Nimi = MeriLaiva.Nimi, Meret = MeriLaiva.Meret, KokoPt = MeriLaiva.KokoPt, Roottori = MeriLaiva.Roottori,
+                RoottoriKauko = MeriLaiva.RoottoriKauko, Lapsi = MeriLaiva.Lapsi, Lapsia = MeriLaiva.Lapsia, Lapsi2 = MeriLaiva.Lapsi2,
+                Lapsia2 = MeriLaiva.Lapsia2, Lapsi3 = MeriLaiva.Lapsi3, Lapsia3 = MeriLaiva.Lapsia3, Nakyy = MeriLaiva.Nakyy,
+                Animoi = MeriLaiva.Animoi, Aikataulu = MeriLaiva.Aikataulu, Seepia = true },
             new Laji { Nimi = "valas", Meret = new[] { "atlantti", "jaameri" }, KokoPt = MeriGeometria.ValasKokoPt,
                 Roottori = HoyryGeometria.Joki, Lapsi = MeriGeometria.ValaanSelka, Lapsia = 1, Lapsi2 = MeriGeometria.Suihku,
                 Lapsia2 = MeriGeometria.Suihkuja, Lapsi3 = MeriGeometria.Pyrsto, Lapsia3 = 1,
