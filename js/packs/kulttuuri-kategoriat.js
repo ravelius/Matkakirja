@@ -3744,6 +3744,77 @@ export const KULTTUURI_KATEGORIAT = {
           + 'kuninkaanlinna.',
       },
     },
+    /*
+     * KUVATAIDE (27.9.2026, Eurooppa-erä 9). Prado-museo on jo
+     * NAHTAVYYSJUTUT-kohde (rakennus/sijainti), mutta Las Meninas
+     * -maalauksen oma tarina ei esiinny siellä eikä
+     * MAA_KATEGORIAT[ESP]:n kuvataide-kategoriassa — eri kohde.
+     */
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Velázquez maalasi itsensä maalaamassa kuningasperhettä '
+          + '— ja teki samalla maalauksen, jota taidehistorioitsijat '
+          + 'ovat väitelleet lähes neljäsataa vuotta.',
+      nostot: [
+        {
+          otsikko: 'Maalaaja maalasi itsensä maalaamassa',
+          aika: '1656',
+          tiedosto: 'Las Meninas (1656), by Velazquez.jpg',
+          teksti: 'Diego Velázquez maalasi Las Meninas -teoksensa '
+            + '1656 hovimaalarina kuningas Filip IV:n palveluksessa. '
+            + 'Maalauksessa nähdään prinsessa Margarita Teresa '
+            + 'hovinaistensa ympäröimänä, mutta kuvan keskiössä on '
+            + 'itse Velázquez: hän on maalannut itsensä suureen '
+            + 'kankaaseen sivellin ja paletti kädessä, ikään kuin '
+            + 'katsoja seisoisi kuninkaan ja kuningattaren paikalla, '
+            + 'joiden peilikuva näkyy taustan seinällä. Teos herätti '
+            + 'kysymyksen, jota pohditaan yhä: kenen näkökulmasta '
+            + 'kohtausta oikeastaan katsotaan?',
+          lyhyt: 'Las Meninas, jossa Velázquez maalasi itsensä maalaamassa '
+            + 'kuninkaallista prinsessaa hovinaistensa keskellä.',
+          selite: 'Diego Velázquezin Las Meninas (1656): maalari on '
+            + 'kuvannut itsensä maalaamassa, prinsessa Margarita Teresa '
+            + 'hovinaistensa keskellä.',
+          lahde: 'Diego Velázquez, Wikimedia Commons (public domain)',
+          wiki: 'Las Meninas',
+        },
+        {
+          otsikko: 'Maalari kirjasi arvonimensä maalaukseen jälkikäteen',
+          tiedosto: 'Diego Velázquez - Las Meninas - Selfportrait.jpg',
+          teksti: 'Velázquezin rinnassa Las Meninas-teoksessa näkyy '
+            + 'Santiagon ritarikunnan risti — mutta Velázquez sai '
+            + 'ritarikunnan jäsenyyden vasta 1659, kolme vuotta '
+            + 'maalauksen valmistumisen jälkeen. Perimätiedon mukaan '
+            + 'joko kuningas itse maalasi ristin lisää jälkikäteen tai '
+            + 'Velázquez lisäsi sen itse saatuaan arvonimen — kumpikaan '
+            + 'ei ole varmuudella todistettu, mutta risti on joka '
+            + 'tapauksessa myöhempi lisäys alkuperäiseen maalaukseen.',
+          lyhyt: 'Lähikuva Velázquezin omakuvasta Las Meninas-teoksessa; '
+            + 'rinnan risti lisättiin maalaukseen vasta jälkikäteen.',
+          selite: 'Lähikuva Velázquezin omakuvasta Las Meninas-teoksessa; '
+            + 'rinnassa näkyvä Santiagon ritarikunnan risti lisättiin '
+            + 'maalaukseen vasta vuoden 1659 jälkeen.',
+          lahde: 'Diego Velázquez, Wikimedia Commons (public domain)',
+          wiki: 'Las Meninas',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Velázquezin rinnassa näkyvä risti Las '
+            + 'Meninas-teoksessa on erikoinen?',
+        vaihtoehdot: [
+          'Se on maalattu väärän värisenä',
+          'Se lisättiin maalaukseen vasta jälkikäteen, ritarikunnan '
+            + 'jäsenyyden myöntämisen jälkeen',
+          'Se kuuluu oikeasti toiselle henkilölle maalauksessa',
+          'Se on piilotettu näkymättömiin kerroksiin maalauksen alle',
+        ],
+        oikea: 1,
+        fakta: 'Velázquez sai Santiagon ritarikunnan jäsenyyden vasta '
+            + '1659, kolme vuotta Las Meninaksen valmistumisen jälkeen, '
+            + 'joten rinnan risti on myöhempi lisäys.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
@@ -7763,6 +7834,79 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * TIEDE (27.9.2026, Eurooppa-erä 9). Ateenan tähtitieteellinen
+     * observatorio ei esiinny kaupungin 13 NAHTAVYYSJUTUT-kohteessa
+     * eikä MAA_KATEGORIAT[GRC]:n tiede-kategoriassa — eri kohde.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Nymfien kukkulalle nousi 1842 Kreikan ensimmäinen '
+          + 'tutkimuslaitos — kansallinen observatorio, joka aloitti '
+          + 'toimintansa jo ennen kuin Kreikka oli edes kunnolla '
+          + 'itsenäinen valtio.',
+      nostot: [
+        {
+          otsikko: 'Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle',
+          aika: '1842',
+          tiedosto: 'The National Observatory of Athens on February 24, 2020.jpg',
+          teksti: 'Ateenan kansallinen observatorio perustettiin vuonna '
+            + '1842 Nymfien kukkulalle, ja se on Kreikan vanhin '
+            + 'tutkimuslaitos — vain vuosikymmen sen jälkeen, kun '
+            + 'Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. '
+            + 'Rakennuksen suunnitteli tanskalainen arkkitehti Theophil '
+            + 'Hansen, ja rahoituksen antoi kreikkalainen liikemies '
+            + 'Georgios Sinas Wienistä. Observatorio teki tähtitieteen '
+            + 'lisäksi meteorologisia ja seismologisia havaintoja, ja '
+            + 'isoisän matkan aikaan se on toiminut jo yli kolmekymmentä '
+            + 'vuotta.',
+          lyhyt: 'Ateenan kansallinen observatorio Nymfien kukkulalla on '
+            + 'Kreikan vanhin tutkimuslaitos, perustettu 1842.',
+          selite: 'Ateenan kansallinen observatorio Nymfien kukkulalla on '
+            + 'Kreikan vanhin tutkimuslaitos; se perustettiin vuonna '
+            + '1842, tanskalaisen arkkitehti Theophil Hansenin '
+            + 'suunnittelemana.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC0)',
+          wiki: 'National Observatory of Athens',
+        },
+        {
+          otsikko: 'Observatorio mittasi maan liikkeitäkin',
+          tiedosto: 'View of the National Observatory of Athens on the Hill of the Nymphs from the area of the Areopagus.jpg',
+          teksti: 'Nymfien kukkula valittiin observatorion paikaksi '
+            + 'tarkoituksella: se on lähellä Akropolista mutta '
+            + 'silti tarpeeksi korkealla ja kaupungin valoista '
+            + 'erillään, jotta tähtien tarkkailu onnistuisi. '
+            + 'Observatorio ei rajoittunut vain tähtiin — se alkoi '
+            + '1800-luvun kuluessa mitata myös maanjäristyksiä, joita '
+            + 'Kreikan seudulla riittää, ja siitä tuli vähitellen koko '
+            + 'maan tärkein tieteellisten mittausten keskus.',
+          lyhyt: 'Näkymä Areiopagilta Ateenan observatorioon Nymfien '
+            + 'kukkulalla, lähellä Akropolista mutta erillään kaupungin '
+            + 'valoista.',
+          selite: 'Näkymä Areiopagilta Ateenan kansalliseen '
+            + 'observatorioon Nymfien kukkulalla; paikka valittiin '
+            + 'lähelle Akropolista mutta erilleen kaupungin valoista.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'National Observatory of Athens',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Ateenan kansallinen observatorio rakennettiin '
+            + 'juuri Nymfien kukkulalle?',
+        vaihtoehdot: [
+          'Se oli lähellä kuninkaan palatsia',
+          'Se oli tarpeeksi korkealla ja erillään kaupungin valoista, '
+            + 'silti lähellä Akropolista',
+          'Se oli Ateenan korkein kohta',
+          'Paikalla oli jo muinainen tähtitorni',
+        ],
+        oikea: 1,
+        fakta: 'Nymfien kukkula on lähellä Akropolista mutta silti '
+            + 'tarpeeksi korkealla ja kaupungin valoista erillään, '
+            + 'jotta tähtien tarkkailu onnistuisi.',
+      },
+    },
   ],
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa:
   // monivirkkeiset kuvatekstit tiivistetty yhteen virkkeeseen.
@@ -8937,6 +9081,75 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+    },
+    /*
+     * MUSIIKKI (27.9.2026, Eurooppa-erä 9). Ei päällekkäisyyttä
+     * MAA_KATEGORIAT[TUR]:n musiikki-kategorian eikä kaupungin omien
+     * NAHTAVYYSJUTUT-kohteiden kanssa (mehter ei esiinny kummassakaan).
+     */
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Maailman vanhin yhä soiva sotilassoittokunta marssi '
+          + 'kerran sulttaanin edellä rintamalle — ja marssii yhä '
+          + 'joka päivä Istanbulin sotamuseon pihalla.',
+      nostot: [
+        {
+          otsikko: 'Maailman vanhin sotilassoittokunta soi yhä',
+          tiedosto: 'Mehter (1).jpg',
+          teksti: 'Mehter on osmanien janitsaarijoukkojen '
+            + 'sotilassoittokunta, jota pidetään maailman vanhimpana '
+            + 'yhä toimivana sotilasorkesterityyppinä — juuret '
+            + 'ulottuvat 1300-luvulle. Soittokunnan kuparirummut, '
+            + 'symbaalit ja torvet soivat niin kovaa, että ne olivat '
+            + 'osa sotataktiikkaa: musiikin oli tarkoitus säikäyttää '
+            + 'vihollinen ja rohkaista omia joukkoja rintaman edessä. '
+            + 'Nykyään Mehter-soittokunta esiintyy Istanbulin '
+            + 'sotamuseon pihalla säännöllisesti historiallisissa '
+            + 'univormuissaan.',
+          lyhyt: 'Mehter-soittokunta esiintyy historiallisissa '
+            + 'univormuissa; sen juuret ulottuvat 1300-luvulle.',
+          selite: 'Mehter, osmanien sotilassoittokunta, esiintyy '
+            + 'historiallisissa univormuissa; sitä pidetään maailman '
+            + 'vanhimpana yhä toimivana sotilasorkesterityyppinä.',
+          lahde: 'CeeGee, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mehter',
+        },
+        {
+          otsikko: 'Sama musiikki soi Euroopan hoveissakin',
+          tiedosto: 'Ottoman military band.jpg',
+          teksti: 'Mehter-musiikin vaikutus levisi Osmanien '
+            + 'valtakunnan rajojen ulkopuolelle 1700-luvulla: '
+            + 'eurooppalaiset hovit alkoivat perustaa omia '
+            + '"janitsaarimusiikki"-innoittamia soittokuntiaan, ja '
+            + 'säveltäjät kuten Mozart ja Beethoven lainasivat mehterin '
+            + 'rytmejä ja lyömäsoittimia sävellyksiinsä — tästä syntyi '
+            + 'termi "turkkilainen tyyli". Näin yhden sulttaanin '
+            + 'armeijan taistelumusiikki muokkasi vuosisatoja '
+            + 'myöhemmin eurooppalaisen orkesterin lyömäsoitinkalustoa.',
+          lyhyt: 'Osmanien sotilassoittokunta noin 1900-luvun alussa; '
+            + 'sen tyyli vaikutti eurooppalaisiin säveltäjiin.',
+          selite: 'Osmanien sotilassoittokunta noin 1900-luvun alussa; '
+            + 'mehterin rytmit ja lyömäsoittimet vaikuttivat 1700-luvun '
+            + 'eurooppalaiseen "turkkilaiseen tyyliin".',
+          lahde: 'Paul Thompson, Wikimedia Commons (public domain)',
+          wiki: 'Mehter',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin mehter-musiikin rytmit ja lyömäsoittimet '
+            + 'vaikuttivat 1700-luvulla?',
+        vaihtoehdot: [
+          'Intialaiseen klassiseen musiikkiin',
+          'Eurooppalaiseen "turkkilaiseen tyyliin" (mm. Mozart, Beethoven)',
+          'Amerikkalaiseen jazz-musiikkiin',
+          'Kiinalaiseen oopperaan',
+        ],
+        oikea: 1,
+        fakta: 'Mehterin rytmit ja lyömäsoittimet vaikuttivat 1700-luvun '
+            + 'eurooppalaisten säveltäjien, kuten Mozartin ja Beethovenin, '
+            + '"turkkilaiseen tyyliin".',
+      },
     },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
@@ -15163,6 +15376,76 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * TIEDE (27.9.2026, Eurooppa-erä 9). Kaivopuiston tähtitorni ei
+     * ole NAHTAVYYSJUTUT-listalla eikä MAA_KATEGORIAT[FIN]:n tiede-
+     * kategoriassa — ei päällekkäisyyttä.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Kaivopuiston kukkulalle nousi 1830-luvulla torni, joka '
+          + 'antoi nuorelle suuriruhtinaskunnalle oman tarkan ajan ja '
+          + 'oman paikan kartalla.',
+      nostot: [
+        {
+          otsikko: 'Helsinki sai oman tähtitornin suomalaista aikaa varten',
+          aika: '1834',
+          tiedosto: 'Ursan tähtitorni Kaivopuisto Helsinki 2022-09-18 01.jpg',
+          teksti: 'Helsingin tähtitorni valmistui Kaivopuiston kukkulalle '
+            + '1834, ja sen suunnitteli sama arkkitehti Carl Ludvig '
+            + 'Engel, joka piirsi Senaatintorin rakennukset. Tornin '
+            + 'tehtävä ei ollut vain tähtien tarkkailu: se määritti '
+            + 'Helsingille tarkan paikallisajan ja maantieteelliset '
+            + 'koordinaatit, joita tarvittiin sekä laivaliikenteessä '
+            + 'että maanmittauksessa. Torni oli pitkään Suomen '
+            + 'johtava tähtitieteellinen ja geodeettinen laitos, ja '
+            + 'isoisän matkan aikaan se on ollut toiminnassa jo '
+            + 'lähes neljäkymmentä vuotta.',
+          lyhyt: 'Helsingin tähtitorni Kaivopuistossa valmistui 1834 '
+            + 'C. L. Engelin suunnitelmien mukaan.',
+          selite: 'Helsingin tähtitorni Kaivopuistossa valmistui 1834; '
+            + 'sen suunnitteli arkkitehti Carl Ludvig Engel, ja se '
+            + 'määritti kaupungille tarkan paikallisajan.',
+          lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)',
+          wiki: 'Helsinki Observatory',
+        },
+        {
+          otsikko: 'Tornista tuli kaikkien tähtiharrastajien oma',
+          aika: '1926',
+          tiedosto: 'Ursan torni.jpg',
+          teksti: 'Helsingin yliopisto käytti tähtitornia tutkimukseen '
+            + 'vuosikymmenten ajan, kunnes uusi, isompi tutkimusobservatorio '
+            + 'valmistui muualle. Vuonna 1926 vanha Kaivopuiston torni '
+            + 'siirtyi tähtitieteen harrastajayhdistys Ursalle, joka '
+            + 'käyttää sitä yhä yleisölle avoimiin tähtitarkkailuiltoihin. '
+            + 'Ammattitähtitieteilijöiden yksityisestä työkalusta tuli '
+            + 'näin paikka, jonne kuka tahansa voi tulla katsomaan '
+            + 'kuuta ja planeettoja kaukoputkella.',
+          lyhyt: 'Kaivopuiston vanha tähtitorni siirtyi 1926 harrastajayhdistys '
+            + 'Ursalle yleisölle avoimiin tarkkailuiltoihin.',
+          selite: 'Kaivopuiston vanha tähtitorni siirtyi vuonna 1926 '
+            + 'tähtitieteen harrastajayhdistys Ursalle, joka käyttää '
+            + 'sitä yhä yleisölle avoimiin tarkkailuiltoihin.',
+          lahde: 'Markku Poutanen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ursa (yhdistys)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä oli Kaivopuiston tähtitornin tärkeä tehtävä '
+            + 'tähtien tarkkailun lisäksi 1800-luvulla?',
+        vaihtoehdot: [
+          'Se toimi Helsingin ainoana kellotehtaana',
+          'Se määritti kaupungille tarkan paikallisajan ja koordinaatit',
+          'Se toimi meripelastuksen tähystyspaikkana',
+          'Se oli Suomen ensimmäinen sääasema',
+        ],
+        oikea: 1,
+        fakta: 'Tähtitorni määritti Helsingille tarkan paikallisajan ja '
+            + 'maantieteelliset koordinaatit, joita tarvittiin sekä '
+            + 'laivaliikenteessä että maanmittauksessa.',
+      },
+    },
   ],
   /*
    * TAMPERE (17.8.2026). Lehti on tehty Kööpenhaminan mallin mukaan:
@@ -18470,6 +18753,74 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Eläintarha perustettiin kuninkaallisella asetuksella 1. '
           + 'toukokuuta 1888. Nykyiselle paikalleen se muutti vasta, kun '
           + 'karhupari ei enää mahtunut palatsin puistoon.',
+      },
+    },
+    /*
+     * RUOKA (27.9.2026, Eurooppa-erä 9). MAA_KATEGORIAT[BGR]:ssa ei ole
+     * omaa ruoka-kategoriaa listattuna (vain luonto/historia/kulttuuri/
+     * menovinkit), joten ei päällekkäisyyttä. Ei myöskään NAHTAVYYSJUTUT-
+     * kohdetta samasta aiheesta.
+     */
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kaupungin vanhin tori on täynnä vihanneskasoja ja '
+          + 'juustotiskejä — ja se on ollut samalla paikalla jo '
+          + 'osmaniajasta asti.',
+      nostot: [
+        {
+          otsikko: 'Naisten tori on kaupungin vanhin kauppapaikka',
+          tiedosto: 'Sofia Zhenski Pazar October 2012 PD 03.jpg',
+          teksti: 'Zhenski pazar eli Naisten tori on Sofian vanhin ja '
+            + 'tunnetuin ulkoilmamarkkina, ja se sai nimensä siitä, että '
+            + 'naiset kävivät siellä perinteisesti hoitamassa perheen '
+            + 'päivittäiset ostokset. Kauppapaikka on ollut samalla '
+            + 'kadulla jo osmaniajalta asti, ja nykyään sen kojuissa '
+            + 'myydään kaikkea tuoreista vihanneksista ja hedelmistä '
+            + 'bulgarialaiseen valkoiseen juustoon, siriseen ja kuivattuihin '
+            + 'yrtteihin. Tori on yhä keskustan asukkaiden arkinen '
+            + 'ruokakauppa, ei turistinähtävyys.',
+          lyhyt: 'Zhenski pazarin kojuissa myydään tuoretta vihannesta, '
+            + 'hedelmää ja bulgarialaista juustoa keskellä Sofiaa.',
+          selite: 'Zhenski pazar eli Naisten tori on Sofian vanhin '
+            + 'ulkoilmamarkkina; kojuissa myydään tuoretta vihannesta, '
+            + 'hedelmää ja bulgarialaista juustoa.',
+          lahde: 'Bin im Garten, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Zhenski pazar',
+        },
+        {
+          otsikko: 'Bakteeri sai nimensä Bulgariasta',
+          tiedosto: 'Bulgarian yogurt 2015.jpg',
+          teksti: 'Perinteinen bulgarialainen jogurtti, kiselo mlyako, '
+            + 'käy paksuksi bakteerilla, joka sai tieteellisen nimensä '
+            + '"Lactobacillus bulgaricus" juuri Bulgarian mukaan — '
+            + 'bulgarialainen lääketieteen opiskelija Stamen Grigorov '
+            + 'tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti '
+            + 'oli tunnettu Balkanilla vuosisatoja ennen sitä, ja '
+            + 'perinteisesti sitä tehdään lampaanmaidosta savisissa '
+            + 'astioissa. Zhenski pazarin juustotiskeiltä sitä saa yhä '
+            + 'suoraan valmistajilta.',
+          lyhyt: 'Perinteinen bulgarialainen jogurtti; sen käymisbakteeri '
+            + 'sai tieteellisen nimensä Bulgarian mukaan 1905.',
+          selite: 'Perinteinen bulgarialainen jogurtti, kiselo mlyako; sen '
+            + 'käymisbakteeri "Lactobacillus bulgaricus" sai nimensä '
+            + 'Bulgarian mukaan, kun Stamen Grigorov tunnisti sen 1905.',
+          lahde: 'Biser Todorov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lactobacillus delbrueckii subsp. bulgaricus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Zhenski pazar eli Naisten tori sai nimensä?',
+        vaihtoehdot: [
+          'Sen perusti bulgarialainen naisyrittäjä 1900-luvulla',
+          'Naiset kävivät siellä perinteisesti perheen päivittäiset ostokset',
+          'Torilla saivat kaupankäydä vain naiset osmaniaikana',
+          'Se on nimetty Bulgarian ensimmäisen naispuolisen pormestarin mukaan',
+        ],
+        oikea: 1,
+        fakta: 'Zhenski pazar sai nimensä siitä, että naiset kävivät '
+            + 'siellä perinteisesti hoitamassa perheen päivittäiset '
+            + 'ostokset.',
       },
     },
   ],
