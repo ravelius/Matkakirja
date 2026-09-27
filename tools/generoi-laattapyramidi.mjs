@@ -91,7 +91,9 @@ import {
 } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
+import {
+  ikkunanRajat, keraaMaailma, meriRenkaat, rannikot,
+} from './fokuskartta/maailma.mjs';
 import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
 import { demIkkuna, demVali } from './maasto/dem-ikkuna.mjs';
 import {
@@ -3449,6 +3451,26 @@ if (!ILMAN_AINEISTOA) {
  * POLTETTU UUDESTAAN. Se on kunnossa: laatta on muuttumaton kuva, ja
  * uusi viivaversio korvaa sen kokonaan (ks. VIIVAVERSIO).
  */
+/*
+ * MERIREITTIEN MAAOSUUDET (27.9.2026, Euroopan laatukierros N1, Fablen
+ * päätös a): `--merireitit-maaosuus` merkitsee Euroopan kaupunkien
+ * merireiteille kaupungista satamaan kulkevan maaosuuden, jonka piirto
+ * vetää maareitin tyylillä (tools/fokuskartta/merireitit.mjs). Meri on
+ * sama kuin pohjalla (--data, --rannikon-harvennus).
+ */
+if (VIIVATASO && lippu('merireitit-maaosuus')) {
+  const { merkitseMaaosuudet } = await import('./fokuskartta/merireitit.mjs');
+  const rr = meriRenkaat(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  const manner = pack.map?.cityManner ?? {};
+  // Reitin poly on pallopistekorjattu (sisalto.mjs), joten kaupungin paikka
+  // on sen pallopiste laudalla — laudan x/y voi olla kymmeniä yksikköjä sivussa.
+  const kaupungit = (pack.cities ?? []).filter((c) => manner[c.id] === 'europe')
+    .map((c) => (c.pallo ? [kaava.lautaX(c.pallo.lon), kaava.lautaY(c.pallo.lat)] : [c.x, c.y]));
+  const n = merkitseMaaosuudet(lautaSisalto.reitit, {
+    renkaat: Array.isArray(rr) ? rr : rr.renkaat, kaava, kaupungit, sade: 6,
+  });
+  console.log(`  merireitit      ${n} Euroopan merireitillä maaosuus maareitin tyylillä`);
+}
 writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(VIIVATASO
   ? {
     reitit: lautaSisalto.reitit,

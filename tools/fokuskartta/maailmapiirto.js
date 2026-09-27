@@ -3898,13 +3898,50 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
       const n = xs.length;
       const T = KATKO.jakso * R;
       const valit = r.piirtoValit ?? [[0, n - 1]];
+      /*
+       * MAAOSUUDET (tools/fokuskartta/merireitit.mjs): katko, jonka keskikohta
+       * on kaupungista satamaan kulkevalla maaosuudella, jätetään pois —
+       * sen kohdalle vedetään maareitin viiva (maaosuusPolku).
+       */
+      let ohita = a.ohita;
+      if (r.maaosuudet?.length) {
+        const sTot = s[n - 1];
+        ohita = new Set(a.ohita ?? []);
+        for (const [t0, t1] of r.maaosuudet) {
+          for (let k = Math.floor((t0 * sTot) / T); k <= Math.floor((t1 * sTot) / T); k += 1) {
+            const keski = k * T + T / 2;
+            if (keski >= t0 * sTot && keski <= t1 * sTot) ohita.add(k);
+          }
+        }
+      }
       for (const [v0, v1] of valit) {
         let i0 = v0;
         for (let raja = v0 + 1; raja <= v1 + 1; raja += 1) {
           if (raja <= v1 && !uusi[raja]) continue;
-          jaksonKatkot(g, xs, ys, s, i0, raja - 1, r.siemen ?? 1, dx, T, w, a.ohita);
+          jaksonKatkot(g, xs, ys, s, i0, raja - 1, r.siemen ?? 1, dx, T, w, ohita);
           i0 = raja;
         }
+      }
+    };
+
+    /** Merireitin maaosuudet polkuna (kaaren osuudet → kuvapisteet). */
+    const maaosuusPolku = (g, r, dx) => {
+      const a = arkilla(r);
+      if (a.x1 + dx < NX0 || a.x0 + dx > NX1 || a.y1 < NY0 || a.y0 > NY1) return;
+      const { xs, ys, s } = a;
+      const n = xs.length;
+      const sTot = s[n - 1];
+      const kohta = (sp) => {
+        let i = 1;
+        while (i < n - 1 && s[i] < sp) i += 1;
+        const t = (sp - s[i - 1]) / ((s[i] - s[i - 1]) || 1);
+        return [xs[i - 1] + (xs[i] - xs[i - 1]) * t + dx, ys[i - 1] + (ys[i] - ys[i - 1]) * t];
+      };
+      for (const [t0, t1] of r.maaosuudet) {
+        const sA = t0 * sTot; const sB = t1 * sTot;
+        g.moveTo(...kohta(sA));
+        for (let i = 0; i < n; i += 1) if (s[i] > sA && s[i] < sB) g.lineTo(xs[i] + dx, ys[i]);
+        g.lineTo(...kohta(sB));
       }
     };
 
@@ -4028,6 +4065,25 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
         g.closePath();
       }
     };
+
+    /*
+     * MERIREITTIEN MAAOSUUDET MAAREITIN TYYLILLÄ ennen katkoja ja helmiä:
+     * sama muste ja kynänpaineen porras kuin maantiellä (ks. alla).
+     */
+    const maalla = sisalto.reitit.filter((r) => r.laji === 'meri' && r.maaosuudet?.length);
+    if (maalla.length) {
+      ctx.strokeStyle = MUSTEET.maa.viiva;
+      for (let k = 0; k < KYNIA; k += 1) {
+        const kynalla = maalla.filter((r) => { heitot(r); return r.__kyna === k; });
+        if (!kynalla.length) continue;
+        ctx.lineWidth = MAAVIIVA * (0.88 + 0.06 * k);
+        for (const d of siirrot) {
+          ctx.beginPath();
+          for (const r of kynalla) maaosuusPolku(ctx, r, d * px);
+          ctx.stroke();
+        }
+      }
+    }
 
     for (const laji of ['meri', 'maa']) {
       const osa = sisalto.reitit.filter((r) => r.laji === laji);
