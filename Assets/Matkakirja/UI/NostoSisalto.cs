@@ -16,9 +16,7 @@
 //                      (kaupungin oma pooli, esim. Sevilla ja Edinburgh; myös webin merkkitunnus "nosto-<id>")
 //   "syvennys:<kaupunki>-<täky>" kokoelma fokusvirrat → virta.takyt + moduuli syvennyspaikat
 //                      (web js/syvennys.js; myös "syvennys:<kaupunki>:<täky>" ja "syvennys-<kaupunki>-<täky>")
-//   "salaisuus:<tunnus>" kokoelma maakuntasalaisuudet (skeema 1.47, Elävä kartta, vain natiivi: maa, maakunta,
-//                      maakuntaNimi, nimi, nimio, laji, kategoria, aihe, lyhyt, teksti, nappi, viite, lat, lon);
-//                      avain on koko id. Kokoelman puuttuessa (vanha paketti) null.
+//   (maakuntasalaisuudet poistuivat 27.9.2026, omistaja: entiset "salaisuus:<tunnus>" ovat hahmotelma-nostoja)
 // Täkypooli (web nostoKaupunginPooli): kaupungin oma virta.takynostot voittaa, muuten maan NOSTO_MAAT;
 // kokoelman takynostot kenttä kaupungit kertoo valmiiksi, minkä kaupunkien pooliin nosto kuuluu (Pooli).
 // Täkynoston "Katso X kartalla" lukee kohteen nimen ja paikan karttavaloista (kohde:<id>).
@@ -39,7 +37,7 @@ using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
-    public enum NostoLaji { Kohde, Skandaali, Hetki, Elain, Takynosto, Syvennys, Salaisuus }
+    public enum NostoLaji { Kohde, Skandaali, Hetki, Elain, Takynosto, Syvennys }
 
     public sealed class NostoKuva
     {
@@ -367,14 +365,6 @@ namespace Matkakirja.Natiivi
                     }
                     break;
                 }
-                case "salaisuus":
-                {
-                    // Elävä kartta: maakunnan salaisuus (kokoelman avain on koko id "salaisuus:<tunnus>").
-                    Dictionary<string, object> d = null;
-                    yield return Alkio("maakuntasalaisuudet", "salaisuus:" + tunnus, (x, _) => d = x);
-                    if (d != null) n = Salaisuus("salaisuus:" + tunnus, d);
-                    break;
-                }
                 case "syvennys":
                 {
                     // "<kaupunki>-<täky>" tai "<kaupunki>:<täky>": kaupunkitunnuksissa ei ole viivaa.
@@ -675,41 +665,6 @@ namespace Matkakirja.Natiivi
             Kuvat(n, MiniJson.Kentta(d, "kuvat") ?? MiniJson.Kentta(d, "kuva"), "osoite");
             n.Visa = Visa(d);
             return n;
-        }
-
-        /// <summary>
-        /// Maakunnan salaisuus (ELÄVÄ KARTTA, suunnitelma kohta 3): iso, harvinainen nosto, joka ilmestyy, kun maakunnan kaikki
-        /// nostot on löydetty. Kortti on sama kuin muilla nostoilla (löydös 135: koko sama, vain tyyli eri, mk-nosto--salaisuus).
-        /// Ingressi = Livian repliikki (lyhyt) tai 1873-alaotsikko (nappi); teksti ja lopuksi lähderivi (viite).
-        /// </summary>
-        static Nosto Salaisuus(string id, Dictionary<string, object> d)
-        {
-            string viite = T(d, "viite");
-            var kappaleet = Kappalejako.Jaa(T(d, "teksti"));
-            if (!string.IsNullOrEmpty(viite)) kappaleet.Add("Lähde: " + viite);
-            var n = new Nosto
-            {
-                Laji = NostoLaji.Salaisuus, Id = id, Iso = T(d, "maa") ?? T(d, "$maa"), Luokka = "MAAKUNNAN SALAISUUS",
-                Symboli = T(d, "aihe") ?? "historia",
-                Otsikko = T(d, "nimi"), Meta = T(d, "maakuntaNimi"), Ingressi = T(d, "lyhyt") ?? T(d, "nappi"),
-                Teksti = string.Join("\n\n", kappaleet),
-            };
-            // Löydös 158: kortin kuva kentästä kuva (yksi tai lista), varana pikkukuva (ämpäriosoite).
-            Kuvat(n, MiniJson.Kentta(d, "kuva"), "osoite");
-            // Siirtoseppä v159 (skeema 1.49): pikkukuvaLahde = tekijä ja lisenssi, näytetään kuvan lähderivinä.
-            if (n.Kuvat.Count == 0 && T(d, "pikkukuva") is string pk && pk.Length > 0)
-                n.Kuvat.Add(new NostoKuva { Lahde = pk, LahdeRivi = T(d, "pikkukuvaLahde") });
-            return n;
-        }
-
-        /// <summary>Maakunnan ("ISO:tunnus") salaisuus-noston id ja nimi kokoelmasta maakuntasalaisuudet, tai null.</summary>
-        public static IEnumerator MaakunnanSalaisuus(string maakunta, Action<string, string> valmis)
-        {
-            Dictionary<string, Dictionary<string, object>> taulu = null;
-            yield return LataaKokoelma("maakuntasalaisuudet", tulos: x => taulu = x);
-            foreach (var p in taulu)
-                if (T(p.Value, "maakunta") == maakunta) { valmis(p.Key, T(p.Value, "nimi")); yield break; }
-            valmis(null, null);
         }
 
         /// <summary>
