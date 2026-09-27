@@ -8243,3 +8243,7 @@ Omistaja 27.9.2026 klo 17.0x (kuvakaappaus web, Ateenan kohdekartta): kuvissa se
 ## OMISTAJA: APP STORE -JULKAISUA EI TEHDA VIELA — VALMISTELLAAN VAIN LAATUA (27.9.2026 klo 16.59)
 
 Kortti 17.2x (hinta/maat/aikataulu): omistaja vastasi ettei julkaisua tehda viela. Fablen tulkinta: 1.0.31:n jalkeinen App Store -valmistelu rajataan laatuun (iPadin suorituskyky, vieritys, tekijamerkinnat pelissa), ei metatietoja, hintaa, maita eika lahetysta. Pelikoodari: tekijamerkinnat (tekijakortti + lisenssi-inventaario, havainnekuva-merkinta, vartija). Omistaja lisasi POLLO_KEHITTAJAKOODI avaintiedostoon (tasmaa paakoodiin) → Pelikoodarin puhevirran mittaus. Elamapalkki #3421 v2331 junaan.
+
+## NATIIVIN VIERITYS: KOSKETUSVIERITYS KAIKKIIN PYSTYSIVUIHIN, KARTTA POIS ARKIN ALTA, 120 Hz VAIN VIERITYKSEN AJAN (FABLE) (27.9.2026 klo 16.59)
+
+Natiivi-UI:n analyysi omistajan loydoksesta (turistiopas vierii tahmeasti): 1) ~30 sivua kayttaa UITK:n omaa ScrollViewia (heitto 234 pt vs Safari 653 pt, veto ei 1:1), iOS-hidastuvuuden Kosketusvieritys vain lehdessa ja nostokortissa; 2) pallo + Cesium + elavat piirtyvat peittavan arkin takana taydella taajuudella; 3) kosketuksen katto 60 Hz myos ProMotionilla (S10). Fablen paatos (lampo-saannon 24.9. sisalla): Kosketusvieritys kaikkiin pystysivuihin, kartta pois peittavan arkin alta, 120 Hz vain ProMotion-laitteilla kosketuksen ja inertian ajan kun kartta ei piirry, thermalState ≥ serious → 60 Hz, lepo heti lepotaajuudelle; lampo-/virtamittaus 5 min ennen/jalkeen → 1.0.31.
