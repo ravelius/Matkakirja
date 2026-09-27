@@ -657,6 +657,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     rantaKerroin = 1,
     reliefi = null,
     /*
+     * `jarviPieninPx` (27.9.2026, Euroopan laatukierros N3): järvi
+     * piirretään vain, jos sen laatikon pidempi sivu on tällä tasolla
+     * vähintään näin monta kuvapikseliä. 0 = kaikki (entinen käytös).
+     */
+    jarviPieninPx = 0,
+    /*
      * `meriKohina`: syvyyden kohinan kerroin (löydös 46, omistaja 24.9.
      * ilta: *"syvyys vain hienovaraisena sävynä … pehmeä liuku ilman
      * viivoja"*). 1 = entinen ±150 m:n aaltoilu, joka piirtää merelle
@@ -1648,6 +1654,11 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
   for (const j of aineisto.jarvet ?? []) {
+    if (jarviPieninPx > 0 && j.laatikko) {
+      const [l0, b0, l1, b1] = j.laatikko;
+      const koko = Math.max(Math.abs(kuvaX(l1) - kuvaX(l0)), Math.abs(kuvaY(b0) - kuvaY(b1)));
+      if (koko < jarviPieninPx) continue;
+    }
     viivaPolku(ctx, j.renkaat, true);
     ctx.fillStyle = 'rgb(206,201,181)';
     ctx.fill('evenodd');

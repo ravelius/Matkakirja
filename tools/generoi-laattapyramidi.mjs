@@ -1111,6 +1111,17 @@ const PAPERIRAE_RUUDULLA = valitsin('paperirae', 'poltto') === 'ruutu';
  *   --dem-kaikki-tasot        --dem myös tasoille z0–z8 (muuten vain z9+)
  */
 const MASKI_AA = Number(valitsin('maski-aa', 0)) || 0;
+/*
+ * JÄRVET (Euroopan laatukierros 27.9.2026, N3). Oletukset ovat entiset
+ * (yleislehden 0,4° ja harvennus 0,006°), joten vanhat reseptit polttavat
+ * tavulleen saman. GSHHG-järvillä (tools/gshhs-jarvet.mjs) annetaan pieni
+ * `--jarvi-pienin` ja `--jarvi-harvennus`, ja `--jarvi-pienin-px` karsii
+ * piirrossa järvet, joiden laatikko on tasolla alle N kuvapikseliä —
+ * muuten kaukotasoille tulisi tummia pisteitä (maailma.mjs `jarvet`).
+ */
+const JARVI_PIENIN = Number(valitsin('jarvi-pienin', '0.4'));
+const JARVI_HARVENNUS = Number(valitsin('jarvi-harvennus', '0.006'));
+const JARVI_PIENIN_PX = Number(valitsin('jarvi-pienin-px', '0')) || 0;
 const RANTALEVEYS = valitsin('rantaleveys', null)
   ? String(valitsin('rantaleveys', null)).split(',').map((p) => p.split(':').map(Number))
     .filter(([z, k]) => Number.isFinite(z) && k > 0).sort((a, b) => a[0] - b[0])
@@ -2995,6 +3006,8 @@ if (!ILMAN_AINEISTOA) {
     ruutu: RUUTU,
     palat: KORKEUSPALAT,
     harvennus: RANNIKON_HARVENNUS,
+    jarviPienin: JARVI_PIENIN,
+    jarviHarvennus: JARVI_HARVENNUS,
   });
   if (DEM_KAYTOSSA) {
     /*
@@ -4278,6 +4291,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     paperiRaeRuudulla: PAPERIRAE_RUUDULLA,
     // Löydös 46 -koe (oletuksena pois).
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
+    ...(JARVI_PIENIN_PX ? { jarviPieninPx: JARVI_PIENIN_PX } : {}),
     ...(RANTALEVEYS ? { rantaKerroin: rantaKerroinTasolle(mitat.z) } : {}),
     ...(RELIEFI_KOE ? { reliefi: RELIEFI_KOE } : {}),
     ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
@@ -4812,6 +4826,7 @@ function teeLuettelo() {
      */
     ...(RESEPTINIMI ? { resepti: RESEPTINIMI } : {}),
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
+    ...(JARVI_PIENIN !== 0.4 || JARVI_PIENIN_PX ? { jarvet: { pienin: JARVI_PIENIN, harvennus: JARVI_HARVENNUS, pieninPx: JARVI_PIENIN_PX } } : {}),
     ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
     ...(RELIEFI_KOE ? { reliefi: valitsin('reliefi-koe', null) === 'lammin' ? 'lammin' : RELIEFI_KOE } : {}),
     ...(RANTALEVEYS ? { rantaleveys: RANTALEVEYS } : {}),
