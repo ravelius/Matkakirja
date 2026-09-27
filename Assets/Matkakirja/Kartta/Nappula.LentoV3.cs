@@ -175,8 +175,12 @@ namespace Matkakirja
         }
 
         /// <summary>V3-esitys pois (perillä, keskeytys): kone deaktivoituu (Potkurit ja PallonLepo), käytävä perutaan.</summary>
+        /// <summary>Laattapalvelimen saapumistilan syy lennon ajan taustatauolle.</summary>
+        const string TaustaTaukoSyy = "lento-v3";
+
         void V3Pois()
         {
+            Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
             LentoV3Odotus = -1f;
             V3Aani = new LentoV3Aani { EtaisyysM = -1f };
             if (v3Kaytava != null) { v3Kaytava.Peru(); v3Kaytava = null; }
@@ -290,6 +294,10 @@ namespace Matkakirja
             // Pelin lento on jo alkanut (PeliOhjain.AloitaLento ennen Lennaa): vaihe heti, jotta sen oma ajastin ei etene.
             if (!aloitus) AsetaVaihe(LennonVaihe.Nousu);
             V3Tapahtuma("kaynnistys");
+            // TAUSTAJONO TAUOLLE LENNON AJAKSI (Fablen päätös 27.9. klo 12.2x): saapumistilan tavoin tausta, tavallinen
+            // esilataus ja pohjan uusinta odottavat, näkyvällä kartalla on verhon paikat, ja käytävä (etusija) sekä kohdemaan
+            // saapuminen jatkuvat. Päättyy perillä tai lennon purussa (V3Pois).
+            Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, true);
             float odotusAlku = Time.unscaledTime;
             string syy;
             int kehyksia = 0;
@@ -429,6 +437,7 @@ namespace Matkakirja
             if (reittiNaytteet != null)
                 Debug.Log(LennonKamerareitti.Raportti(LennonKamerareitti.Analysoi(reittiNaytteet),
                     $"{(aloitus ? "aloituslento" : "lento")} v3 {kohdeId ?? "?"} {LennonV3.KestoS:0.0} s (oikea kamera)"));
+            Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
             V3Tapahtuma("perilla");
             // Nappula kohteeseen piilossa: esityksen purku näyttää sen perillä (V3Pois).
             if (olio != null) Siirra(lat1, lon1, 0);

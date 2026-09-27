@@ -1468,12 +1468,11 @@ namespace Matkakirja
             }
             k.AlkuN = alku.Count;
             k.LoputN = loput.Count;
-            if (alku.Count > 0)
-                StartCoroutine(Esilataaja.Tehtava(Taso.Nakyva, "lento-v3-alku", () => LaattaEra(alku, k.Alku), laatta: true,
-                    peruttu: () => k.Alku.Peruttu));
-            if (loput.Count > 0)
-                StartCoroutine(Esilataaja.Tehtava(Taso.SeuraavaRuutu, "lento-v3", () => LaattaEra(loput, k.Loput), laatta: true,
-                    peruttu: () => k.Loput.Peruttu));
+            // ETUSIJA (Fablen päätös 27.9. klo 12.2x): käytävä suoraan Laattapalvelimen etusijajonoon (kohdeJono, omat
+            // KohdePaikat) ilman Esilataajan tehtäväpaikkoja; jono on saapumisjärjestyksessä, joten alun 5 s ensin. Tausta ja
+            // tavallinen esilataus ovat tauolla lennon ajan (Nappula: Laattapalvelin.AsetaSaapumistila("lento-v3")).
+            if (alku.Count > 0) Laattapalvelin.Esilataa(alku, k.Alku);
+            if (loput.Count > 0) Laattapalvelin.Esilataa(loput, k.Loput);
             Debug.Log($"MATKAKIRJA lento v3: käytävä {k.Yhteensa} laattaa (alku {k.AlkuN}, pohja {k.PohjaN}, maasto {k.MaastoN}"
                       + $"{(pm == null ? ", pohja ei ämpärissä" : "")}{(maastoPohja == null ? ", maaston layer.json puuttuu" : "")})");
             return k;
