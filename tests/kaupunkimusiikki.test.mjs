@@ -148,7 +148,7 @@ test('työkalun ja pelin nimet täsmäävät kaupunki kaupungilta', () => {
 });
 
 test('tuntematon paikka ei saa raitaa', () => {
-  for (const paikka of ['lontoo', 'jalkamatka', 'merimatka', 'lentomatka', 'etusivu', null, undefined]) {
+  for (const paikka of ['edinburgh', 'jalkamatka', 'merimatka', 'lentomatka', 'etusivu', null, undefined]) {
     assert.equal(kaupunginMusiikki(paikka), null, `${paikka}: sai raidan tyhjästä`);
   }
   // Object.hasOwn eikä `in`: prototyypin kenttä ei saa vastata raitana.
@@ -197,7 +197,8 @@ test('ohje kertoo kaupunkiraidoista omassa osiossaan', () => {
 
 test('saapuminen Ateenaan vaihtaa pohjavireen kaupungin raitaan', async () => {
   const s = await lataaAmbienssi();
-  await saavu(s, 'lontoo');
+  // Edinburgh: ei omaa kappaletta (Lontoo sai vaiheessa 3 tunnuskaupungin raidan).
+  await saavu(s, 'edinburgh');
   assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku('musa-pohja'),
     'pohjavire ei lähtenyt soimaan');
   const pohja = s.musiikit()[0];

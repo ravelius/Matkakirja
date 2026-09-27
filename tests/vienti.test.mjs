@@ -20,10 +20,11 @@
  * Packien ulkopuoliset nimetyt exportit (tools/vienti/lahteet.mjs)
  * tarkistetaan samoin kohdissa 1 ja 2.
  */
+import { gunzipSync } from 'node:zlib';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { JUURI, kokoaVienti, peitaSahkopostit } from '../tools/vienti/vie-sisalto.mjs';
@@ -180,6 +181,8 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
     maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
     aluenimet: ((a) => a.nimet.length + a.valtameret.length)(JSON.parse(readFileSync(join(JUURI, 'assets/data/aluenimet-natiivi.json'), 'utf8'))),
+    maakuntasalaisuudet: Object.keys(ns('maakuntasalaisuudet.js').MAAKUNTASALAISUUDET).length,
+    reitit1873: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/reitit1873.json.gz'))).toString('utf8')).reitit.length,
     merinimet: ns('nimisto-1873.js').NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva')).length,
     tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
     'muutosloki-natiivi': JSON.parse(readFileSync(join(JUURI, 'tools/vienti/muutosloki-natiivi.json'), 'utf8')).rivit.length,
@@ -188,7 +191,9 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     aanitaulut: P.cities.length + 4 + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length + 2 + ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
       + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
-      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length,
+      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length
+      // Skeema 1.50: musiikkiaiheet (matkan aiheet + saapumistunnukset maanosittain).
+      + Object.keys(ns('js/ui.js').MATKAN_AIHEET).length + Object.keys(ns('js/kaupunkimusiikki.js').SAAPUMISTUNNUKSET).length,
     kuvakysymykset: P.cities.filter((c) => !ns('js/sisaltotaulut.js').EI_VALOKUVAKYSYMYKSEEN.has(c.id)
       && (ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.uusi?.tiedosto || ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.tiedosto)).length,
     lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
@@ -205,7 +210,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,
     livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
     livianrepliikit: avaimia(ns('js/liviapuhe.js').LIVIAN_AANITETYT),
-    maakuntarajat: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maakuntarajat.json'), 'utf8')).alueet.length,
+    maakuntarajat: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/maakuntarajat.json.gz'))).toString('utf8')).alueet.length,
     luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
@@ -311,4 +316,19 @@ test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () 
   const hae = async (url) => (url in ampari ? { tila: 200, koko: ampari[url] } : { tila: 404, koko: NaN });
   const v = await tarkistaAmpari('x/', [{ polku: 'a.json', koko: 10 }, { polku: 'bä.json', koko: 6 }, { polku: 'c.json' }], { hae });
   assert.deepEqual(v, ['bä.json: koko 5 ≠ 6', 'c.json: 404']);
+});
+
+test('nimetyt lisätiedostot: lipputankoankkurit kartta/lippu_lonlat.json (löydös 161)', async () => {
+  const { tarkistaMuoto } = await import('../tools/vienti/vie-sisalto.mjs');
+  const { NIMETYT_LISATIEDOSTOT } = await import('../tools/vienti/lahteet.mjs');
+  tarkistaMuoto('iso3-lonlat', { GRC: [26.3, 41.1] }, 'koe');
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { GRC: [41.1] }, 'koe'), /lon, lat/);
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { GRC: { lon: 26, lat: 41 } }, 'koe'), /lon, lat/);
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { gr: [26, 41] }, 'koe'), /lon, lat/);
+  for (const { lahde, tiedosto } of NIMETYT_LISATIEDOSTOT) {
+    const rivi = manifest.lisatiedostot.find((t) => t.tiedosto === tiedosto);
+    if (!existsSync(join(JUURI, lahde))) { assert.equal(rivi, undefined, tiedosto); continue; }
+    assert.equal(rivi?.lahde, lahde, tiedosto);
+    assert.equal(tiedostot.get(tiedosto), readFileSync(join(JUURI, lahde), 'utf8'));
+  }
 });

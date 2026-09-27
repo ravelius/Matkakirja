@@ -38,6 +38,8 @@ import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
 import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
+import { rikastaElavaKartta } from './elava-kartta.mjs';
+import { reitti1873Kokoelma } from './reitit1873.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
 import { maamerkkiKokoelma } from './maamerkit.mjs';
@@ -535,6 +537,7 @@ function aaniKokoelma(ns, hae) {
   const aani = hae('js/sound.js');
   const siirtyma = hae('js/siirtymamusiikki.js');
   const valitsin = hae('js/musiikkivalitsin.js');
+  const kaupunkimusa = hae('js/kaupunkimusiikki.js');
   const P = ns.MAAILMANKARTTA;
   // Radioerä (skeema 1.16): viritysäänet (radion haku), pelin osoitteella.
   const viritys = hae('js/packs/viritysaanet.js');
@@ -560,6 +563,8 @@ function aaniKokoelma(ns, hae) {
     ...P.cities.map((c) => ({
       id: `musiikkiketju:${c.id}`, laji: 'musiikkiketju', kaupunki: c.id,
       ketju: valitsin.musiikkiketju(c.id, P.map.cityCountry?.[c.id] ?? null),
+      // Skeema 1.50: kaupungin maanosa (saapumistunnus = musiikkiaihe saapuminen-<maanosa>).
+      maanosa: kaupunkimusa.kaupunginMaanosa(c.id, P.map.cityCountry?.[c.id] ?? null) ?? null,
     })),
     // B7 (Pelikoodari 23.9.2026): äänimaiseman korit pelin omilla funktioilla
     // (js/ambience-stream.js arvoAani: kaupunkiKori → maaKori → tyyppiKori).
@@ -567,6 +572,18 @@ function aaniKokoelma(ns, hae) {
     // Tilaraidat ja aarreaiheet täysin poluin (musaPolku + aaniUrl).
     ...Object.entries(valitsin.TILARAIDAT).map(([nimi, v]) => ({
       id: `tilaraitaUrl:${nimi}`, laji: 'tilaraitaUrl', nimi, url: aaniUrl(musaPolku(v.tunnus)),
+    })),
+    /*
+     * Skeema 1.50 (Pelikoodari 26.9.2026, musiikkisuunnitelman vaihe 2): matkan aiheet (js/ui.js MATKAN_AIHEET:
+     * aloituslento, loppu, ratkaisu, epaonnistuminen) ja saapumistunnukset maanosittain (js/kaupunkimusiikki.js
+     * SAAPUMISTUNNUKSET: nimi saapuminen-<maanosa>). tunnus ilman -lyria-päätettä kuten aarreaiheissa.
+     */
+    ...[
+      ...Object.entries(hae('js/ui.js').MATKAN_AIHEET),
+      ...Object.entries(kaupunkimusa.SAAPUMISTUNNUKSET).map(([maanosa, t]) => [`saapuminen-${maanosa}`, musaPolku(t)]),
+    ].map(([nimi, polku]) => ({
+      id: `musiikkiaihe:${nimi}`, laji: 'musiikkiaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
+      url: aaniUrl(polku),
     })),
     ...Object.entries(hae('js/ui.js').AARRE_MUSIIKKI).map(([nimi, polku]) => ({
       id: `aarreaihe:${nimi}`, laji: 'aarreaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
@@ -582,7 +599,8 @@ function aaniKokoelma(ns, hae) {
       + '(B7): kaupungin tai virtuaalipaikan (etusivu, lentomatka, jalkamatka, merimatka) äänimaisema = kori (url-lista '
       + '#alku/#voima-fragmentein, js/aani-ehdokkaat.js jaaAlku), porras (kaupunki | maa | tyyppi), tyyppi; vakio = true → '
       + 'soita kori[0], muuten arvo satunnaisesti. tilaraitaUrl ja aarreaihe (tavallinen = musa-aarre, paa = musa-paaaarre '
-      + 'tähtilaatalle): valmiit osoitteet.',
+      + 'tähtilaatalle): valmiit osoitteet. Skeema 1.50: musiikkiaihe (nimi aloituslento | loppu | ratkaisu | epaonnistuminen | '
+      + 'saapuminen-<maanosa>; tunnus, url) ja musiikkiketju.maanosa (kaupungin maanosa, js/kaupunkimusiikki.js kaupunginMaanosa).',
     { kaupunki: 'kaupungit' }, rivit);
 }
 
@@ -952,14 +970,17 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const maakunnat = lueMaakuntarajat();
   kokoelmat.maakuntarajat = taulukko(`js/pallomaakunnat.js ämpäriaineisto ${maakunnat.versio ?? ''} (Natural Earth 10m admin-1)`.trim(),
     'Maakuntarajat asteina, sama muoto kuin maarajat: id = "<ISO3>:<tunnus>" (sama avain kuin '
-      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
+      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), vari (skeema 1.43: webin väri-indeksi, naapureilla eri), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
       + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
-      + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL. '
+      + 'Skeema 1.42: kaikki webin maakuntamaat (js/karttatyokalu-maakunnat.js MAAKUNTIEN_MAAT, joilla '
+      + 'webin maakuntienMaa); juuren maat [{ iso3, nimi }] = maat, joilla on maakunnat. Maa, jota ei ole listalla, ei näytä '
+      + 'maakuntia (listassa vain maan nimi tai tyhjä). Nimet webin maakunnanNimi-funktiolla. '
       + 'Skeema 1.25: juuren kaaret [[[lon, lat], …]] = rajaviivat, jokainen sisäraja ja maiden välinen raja '
       + 'kerran sekä ulkorajat (rannikko); harvennettu kaarina solmusta solmuun, ja renkaat on rakennettu '
       + 'samoista kaarista, joten täyttö ja viiva osuvat yhteen.',
     {}, maakunnat.alueet);
   kokoelmat.maakuntarajat.kaaret = maakunnat.kaaret ?? [];
+  kokoelmat.maakuntarajat.maat = maakunnat.maat ?? [];
   // Skeema 1.22 (Natiivi-UI:n "Mitä uutta"): käsin kirjoitetut rivit, uusin ensin.
   const muutosloki = lueMuutosloki();
   kokoelmat['muutosloki-natiivi'] = taulukko('tools/vienti/muutosloki-natiivi.json',
@@ -970,6 +991,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
   const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
   kokoelmat.karttavalot = valot.kokoelma;
+  // Skeema 1.45 (Elävä kartta): kokoluokka ja maakunta valoille, salaisuus maakunnille (tools/vienti/elava-kartta.mjs).
+  rikastaElavaKartta(kokoelmat, taulukko);
   rikastaNippu4(kokoelmat, ns);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
@@ -983,6 +1006,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   kokoelmat.merinimet = merinimiKokoelma(taulukko);
   // Skeema 1.37 (Karttaseppä, löydös 38 b): aluenimet elävinä, webin väistön jälkeiset ankkurit.
   kokoelmat.aluenimet = aluenimiKokoelma(taulukko);
+  // Skeema 1.46 (Elävä kartta): 1873 laivalinjat ja rautatiet (Karttaseppä, tools/vienti/reitit1873.mjs).
+  kokoelmat.reitit1873 = reitti1873Kokoelma(taulukko);
   // Skeema 1.35 (Natiiviseppä 24.9.2026): webin fokuspohja maittain (js/packs/fokus-grc.js
   // FOKUS_POHJAT). Web laskee nostotason ja maan kokonaisena ruudulla -portin tästä
   // (js/pallolauta/nostot.js lehdenOsuus), ei maarajoista: natiivi lukee saman.

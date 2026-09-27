@@ -75,3 +75,13 @@ test('alasnäyte: maan sarjassa laatikon ulkopuoliset lapset maailman sarjasta',
     assert.ok(data[(40 * 256 + 200) * 4 + 3] > 190); // ulkopuoli maailmasta
   } finally { rmSync(juuri, { recursive: true, force: true }); }
 });
+
+test('--peitto skaalaa maan alfan, oletus on webin KERMA_PEITTO', async () => {
+  const m = await import('../tools/tee-pallokerma.mjs');
+  assert.equal(m.kermanAlfa(230, 170), Math.round(255 * m.KERMA_PEITTO));
+  m.asetaPeitto(0.45);
+  assert.equal(m.kermanAlfa(230, 170), Math.round(255 * 0.45));
+  assert.equal(m.kermanAlfa(180, 170), 0);
+  m.asetaPeitto(m.KERMA_PEITTO);
+  assert.throws(() => m.asetaPeitto(0));
+});

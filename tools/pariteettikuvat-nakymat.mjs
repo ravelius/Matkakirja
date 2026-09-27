@@ -513,6 +513,18 @@ export const NAKYMAT = [
     odota: '.karttaselite-levy',
   },
   {
+    nimi: 'karttavalot-loitonnus',
+    kuvaus: 'Karttaselitteen väripallot kaikki päällä, kamera loitonnettu 3× (löydös 117: valot vain kohdemaassa)',
+    localStorage: { 'matkakirja-karttavalot': JSON.stringify(['kaupungit', 'luonto', 'elaimet', 'historia', 'ihmeet',
+      'hetket', 'kulttuuri', 'kauppa', 'skandaalit']) },
+    avaa: async () => {
+      const k = window.matkakirja.ui.pallolauta.kamera;
+      const t = k.kameranTila();
+      await k.ajaKamera({ x: t.x, y: t.y, leveys: t.leveys * 3 }, { kesto: 0 });
+      await new Promise((r) => setTimeout(r, 2500));
+    },
+  },
+  {
     nimi: 'pollo', kuvaus: 'Pöllöpaneeli (.pollo-nappi)',
     avaa: () => { document.querySelector('.pollo-nappi')?.click(); },
     odota: '.pollo-paneeli',
@@ -741,6 +753,9 @@ const TODENNUS = {
   ratas: { nakyy: ['#kehittaja-valikko'] },
   valikko: { nakyy: ['#paavalikko'] },
   karttaselite: { nakyy: ['.karttaselite-levy'] },
+  'karttavalot-loitonnus': {
+    ehto: () => (document.body.className.includes('valot-') ? null : 'karttavalot eivät pala (body-luokka valot-* puuttuu)'),
+  },
   pollo: { nakyy: ['.pollo-paneeli'] },
   aarre: { nakyy: ['.reveal-overlay .reveal-aarrekuva', '.reveal-overlay .reveal-caption'] },
 };

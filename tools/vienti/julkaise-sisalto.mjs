@@ -35,6 +35,7 @@
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
+import { brotliCompressSync, constants as zlibVakiot } from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 import { SKEEMAVERSIO, SKEEMAVERSIO_TARKKA, JUURI } from './vie-sisalto.mjs';
 import { tarkistaSopimus } from './skeemasopimus.mjs';
@@ -140,6 +141,36 @@ export function tarkistaMajor2(tiedostot) {
   return virheet.slice(0, 20);
 }
 
+/*
+ * HAKEMISTO (taustapäivitys vaihe 1, docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md):
+ * jokaisen paketin tiedoston { polku, sha256, tavuja, siirto } aakkosjärjestyksessä. siirto = brotli
+ * (taso 5) -arvio siirtokoosta. Natiivi vertaa sha256:ia levyn tiedostovarastoon ja lataa vain
+ * puuttuvat. osoitin.sha256 = paketinTiiviste lasketaan samoista riveistä, joten natiivi voi tarkistaa
+ * sen. hakemisto.json ei itse kuulu tiivisteeseen, vaan sen oma sha256 on osoittimessa.
+ */
+export const HAKEMISTO = 'hakemisto.json';
+export function kokoaHakemisto(tiedostot) {
+  const rivit = [...tiedostot.keys()].sort().map((polku) => {
+    const puskuri = Buffer.from(tiedostot.get(polku), 'utf8');
+    const siirto = brotliCompressSync(puskuri, { params: { [zlibVakiot.BROTLI_PARAM_QUALITY]: 5 } }).length;
+    return { polku, sha256: createHash('sha256').update(puskuri).digest('hex'), tavuja: puskuri.length, siirto };
+  });
+  const teksti = `${JSON.stringify({ $skeema: 'matkakirja-vienti/hakemisto', tiedostot: rivit })}\n`;
+  const summa = (k) => rivit.reduce((a, r) => a + r[k], 0);
+  return { teksti, sha256: sha(teksti), tavuja: Buffer.byteLength(teksti), pakettiTavuja: summa('tavuja'), pakettiSiirto: summa('siirto') };
+}
+
+/*
+ * TASOITTAIN: uusin versio, jonka kukin natiivin sisältötaso osaa lukea. Periytyy edellisestä
+ * osoittimesta; tämä versio kirjataan tasolle MIN_SOVELLUS.ios. Kun taso nousee, vanha taso jää
+ * osoittamaan viimeiseen sille kelpaavaan versioon.
+ */
+export function kokoaTasoittain(edellinen, versio, min = MIN_SOVELLUS) {
+  const ios = { ...(edellinen?.tasoittain?.ios ?? {}) };
+  if (min.ios != null) ios[String(min.ios)] = versio;
+  return { ios };
+}
+
 export function kokoaJulkaisu({ tiedostot, edellinen = null, suurin = 0, commit, appVersion = null, julkaistu, major = MAJOR }) {
   const tiiviste = paketinTiiviste(tiedostot);
   if (edellinen && edellinen.sha256 === tiiviste) {
@@ -160,13 +191,18 @@ export function kokoaJulkaisu({ tiedostot, edellinen = null, suurin = 0, commit,
     appVersion,
     julkaistu,
   };
+  const hakemisto = kokoaHakemisto(tiedostot);
+  osoitin.hakemisto = { polku: HAKEMISTO, sha256: hakemisto.sha256, tavuja: hakemisto.tavuja };
+  osoitin.tavuja = hakemisto.pakettiTavuja;
+  osoitin.siirto = hakemisto.pakettiSiirto;
+  osoitin.tasoittain = kokoaTasoittain(edellinen, versio);
   const manifest = tiedostot.has('manifest.json') ? JSON.parse(tiedostot.get('manifest.json')) : null;
   if (manifest?.kokoelmat) {
     osoitin.kokoelmaLkm = Object.fromEntries(manifest.kokoelmat.map((k) => [k.nimi, k.lkm]));
     osoitin.muutos = muutosRivi(edellinen?.kokoelmaLkm ?? null, osoitin.kokoelmaLkm, julkaistu);
   }
   if (!kakkonen) virheet.push(...validoiNimella(osoitin, 'osoitin.schema.json', { polku: 'uusin.json' }));
-  return { muuttui: true, versio, osoitin, virheet };
+  return { muuttui: true, versio, osoitin, hakemisto, virheet };
 }
 
 function lueKansio(kansio) {
@@ -207,6 +243,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       mkdirSync(dirname(kohde), { recursive: true });
       writeFileSync(kohde, teksti);
     }
+    writeFileSync(join(ulos, `v${j.versio}`, HAKEMISTO), j.hakemisto.teksti);
     const osoitinTeksti = `${JSON.stringify(j.osoitin, null, 1)}\n`;
     writeFileSync(join(ulos, `v${j.versio}`, 'osoitin.json'), osoitinTeksti);
     writeFileSync(join(ulos, 'uusin.json'), osoitinTeksti);

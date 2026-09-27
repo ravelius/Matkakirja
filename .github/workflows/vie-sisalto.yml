@@ -189,7 +189,7 @@ jobs:
         run: |
           set -euo pipefail
           N="${{ steps.julkaisu.outputs.versio }}"
-          for f in manifest.json osoitin.json kokoelmat/kaupungit.json; do
+          for f in manifest.json osoitin.json hakemisto.json kokoelmat/kaupungit.json; do
             odotettu=$(sha256sum "dist/sisalto/v$N/$f" | cut -d' ' -f1)
             saatu=$(curl -fsSL --retry 5 --retry-delay 3 "$JULKINEN/sisalto/1/v$N/$f" | sha256sum | cut -d' ' -f1)
             if [ "$odotettu" != "$saatu" ]; then

@@ -209,6 +209,19 @@ test('tuomio SAMA ↔ ERI: sijainti ±8 px', () => {
   assert.match(vasen.syyt[0], /dx -9 px/);
 });
 
+test('tuomio: yläpalkin pilleriin ei vähennetä linssin tekstien siirtoa (iPad, Natiivi-UI 25.9.)', () => {
+  // Pilleri palkissa molemmissa (+1 px), linssin tekstit siirtyneet yhdessä +29 px: siirto vähennetään vain niistä.
+  const pilleri = laatikko('£300 · Päivä 1, aamu', 100, 12, 160, 22);
+  const web = nakyma([pilleri, ...PERUS.slice(1)]);
+  const natiivi = nakyma([{ ...pilleri, y: 13 }, ...siirra(PERUS.slice(1), (e) => ({ y: e.y + 29 }))]);
+  const t = tuomio(parita(web, natiivi));
+  assert.equal(t.tila, 'SAMA', t.syyt.join('; '));
+  assert.equal(t.eroPx, 1);
+  // Jos pilleri itse on 20 px eri kohdassa, se on ero, vaikka muu näkymä olisi siirtynyt.
+  const pieleen = tuomio(parita(web, nakyma([{ ...pilleri, y: 32 }, ...siirra(PERUS.slice(1), (e) => ({ y: e.y + 29 }))])));
+  assert.equal(pieleen.tila, 'ERI');
+});
+
 test('tuomio SAMA ↔ ERI: koko ±15 %', () => {
   const web = nakyma(PERUS);
   const sisalla = tuomio(parita(web, nakyma(siirra(PERUS, (e) => ({ x: e.x - 12, w: e.w * 1.15 })))));

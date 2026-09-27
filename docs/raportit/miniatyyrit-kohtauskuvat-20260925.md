@@ -6,7 +6,7 @@ Omistajan löydös 95 (build 13) ja Fablen päätös 25.9.: karttanostojen ja n�
 
 Ämpärin puolella (kohtaamiset/miniatyyrit/*.png, 626 kuvaa, kaikki 1024 px) ei ole ongelmaa: täyttö ≤ 0,6 lähes kaikilla, reunapikselit läpinäkyviä. Ämpärissä puuttuu 27 kuvaa (404, ks. lopussa) — nämä näkyvät pelissä täplänä.
 
-## Pilotti: Ateena (6 kuvaa) — tilattu Codexilta build 14:ään
+## Ateena (6 kuvaa) — tilattu ensin, pilottina build 14:ään
 
 | Tiedosto | Kohde | Täyttö |
 | --- | --- | --- |
@@ -17,7 +17,9 @@ Omistajan löydös 95 (build 13) ja Fablen päätös 25.9.: karttanostojen ja n�
 | ateena-maratonhuijaus.webp | Maratonhuijaus | 0.69 |
 | ateena-niken-temppeli.webp | Niken temppeli | 0.73 |
 
-## Kaikki 70 (tilataan heti kun omistaja on hyväksynyt pilotin build 14:stä)
+## Loput 64 — tilattu kokonaisuudessaan 25.9.2026 (omistaja hyväksyi kaikki 70 odottamatta pilotin tulosta)
+
+Tilausviesti kaupungeittain: posti/sisaltokirjuri-kuvaputki-64-kohtauskuvaa-leikatuiksi-20260925.md (postilaatikko).
 
 | Kaupunki | Kohde | Tiedosto | Leveys | Täyttö |
 | --- | --- | --- | --- | --- |

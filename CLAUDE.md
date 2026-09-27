@@ -21,6 +21,10 @@ luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
 (ES-moduulit, service worker; yhden tiedoston versio rakennetaan
 Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
 
+AIKA (omistaja 26.9.2026, sitova): kartassa eletään NYKYAJASSA, vain estetiikka
+on vanhaa — nykyajan kohteet (maailmanpyörä, Korintin kanava) ovat sallittuja;
+älä hylkää ideaa "koska sitä ei ollut 1873". Raamattu, Ydinajatus, AIKA.
+
 ## Lue ensin
 
 - **Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT"** (sitova

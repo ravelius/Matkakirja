@@ -971,6 +971,26 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 /*
+ * Striimiäänen pudotusvalikko (omistaja 27.9.2026): sama kolmen
+ * sarakkeen rivi kuin kytkimillä, valitsin tilatekstin paikalla.
+ */
+.kehittaja-valikko .kehittaja-valinta {
+  cursor: default;
+}
+
+.kehittaja-valikko .kehittaja-valinta-select {
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(230, 214, 184, 0.35);
+  border-radius: 4px;
+  padding: 0.12rem 0.3rem;
+  max-width: 8.5rem;
+}
+
+/*
  * Tila luetaan yhdellä vilkaisulla: päällä oleva kytkin kultaa sekä
  * nimen että tilatekstin, pois kytketty jää himmeäksi.
  */
@@ -17965,6 +17985,16 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   border: 0;
 }
 
+/*
+ * KEVYT MERKKI (löydös 178, omistaja 26.9.2026): aukio ja luonto jäävät
+ * nähtävyyskartalle, mutta rakennusta keveämpinä — piirros pienempi ja
+ * haaleampi, jotta rakennukset kantavat kartan.
+ */
+.maakartta-piste.kohde-kevyt .kohde-piirros-kuva {
+  transform: scale(0.72);
+  opacity: 0.78;
+}
+
 .kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
   width: 100%;
   height: 100%;
@@ -22862,17 +22892,29 @@ button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
  * pergamenttisääntö, joka muuten voittaisi tämän.
  */
 /*
- * Kaiutin päällä: sama täyteinen muoto kuin kuuntelevalla mikillä,
- * mutta ilman sykettä — vipu on päällä, se ei tee juuri nyt mitään.
+ * KAIUTINVIVUN TILA NÄKYY SELVÄSTI (omistaja 27.9.2026). Päällä nappi
+ * on kultainen ja kuvakkeessa on ääniaallot; pois-tilassa nappi on
+ * paperilla, kuvake himmeä ja kaiuttimen yli kulkee vinoviiva. Kulta
+ * erottaa vivun myös kuuntelevasta mikistä, joka on ruskea ja sykkii.
+ *
+ * Päällä-säännössä ovat mukana myös :hover ja :focus-visible:
+ * kosketuslaitteella hover jää napautuksen jälkeen päälle, eikä
+ * yleinen osoitussääntö saa maalata päällä olevaa vipua paperiksi.
  * Valitsin on paneelin luokan alla samasta syystä kuin mikillä:
  * kartan .actions-napeilla on oma pergamenttisääntönsä.
  */
 .pollo-paneeli button.pollo-kaiutin.paalla,
-body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla {
-  background: var(--pollo-korostus);
-  color: #f7f1e2;
+.pollo-paneeli button.pollo-kaiutin.paalla:hover:not(:disabled),
+.pollo-paneeli button.pollo-kaiutin.paalla:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla,
+body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla:hover:not(:disabled) {
+  background: #e3ad45;
+  color: var(--pollo-muste);
   border-color: var(--pollo-korostus);
 }
+.pollo-kaiutin:not(.paalla) .viiva-ikoni { opacity: 0.55; }
+.pollo-kaiutin:not(.paalla) .pollo-kaiutin-aalto,
+.pollo-kaiutin.paalla .pollo-kaiutin-vino { display: none; }
 
 /* Kehittäjäkoodin kenttä: näkyy vain kehittäjätilassa, ja sen kuuluu
    olla huomaamaton — se on työkalu, ei pelin osa. */
@@ -29198,3 +29240,69 @@ body.pallolauta-kallistettu [class^="pallolauta-liuska"] {
 body.lehtikuori > .app,
 body.lehtikuori > .paivitysruutu { display: none !important; }
 body.lehtikuori { background: #2a241c; }
+
+/*
+ * AVAUSKORTIN KUTSU KARTALLA (omistaja 27.9.2026 klo 23.4x): pieni kortti
+ * (herokuva + kaupungin nimi) kaupungin ja nappulan vieressä yläviistossa.
+ * Juurielementti on pallon CSS2D-piste (0 × 0); kortti asemoidaan siitä
+ * (js/pallolauta/lauta.js asetteleKutsu). Napautus kasvattaa sen
+ * avauskortiksi (js/kaupunkinosto.js avaaAvauskortti).
+ */
+.kaupunkikortin-kutsu { position: relative; width: 0; height: 0; }
+.kaupunkikortin-kutsu-kortti {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 2px solid #f5f0e2;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #d9ccb0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  pointer-events: auto;
+  animation: kaupunkikortin-kutsu-esiin 0.35s ease-out;
+}
+.kaupunkikortin-kutsu-kortti img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kaupunkikortin-kutsu-nimi {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 1px 3px 2px;
+  background: rgba(33, 29, 24, 0.72); color: #fff8ec;
+  font: 600 10px/1.15 var(--font-luku); text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+@keyframes kaupunkikortin-kutsu-esiin {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) { .kaupunkikortin-kutsu-kortti { animation: none; } }
+
+/*
+ * KAUPUNKILEHDEN OSIOHAKEMISTO (omistaja 27.9.2026; js/lehtiosiot.js):
+ * etusivun alla osiot linkkeinä, jutunotsikot alla, yksi kuva osiota kohden.
+ */
+.lehti-osiohakemisto { margin-top: 1rem; }
+.lehti-osiohakemisto-otsikko {
+  margin: 0 0 0.4rem; padding: 0.3rem 0;
+  border-top: 1px solid rgba(70, 51, 31, 0.6); border-bottom: 1px solid rgba(70, 51, 31, 0.6);
+  font: 700 0.8rem var(--font-type); letter-spacing: 0.14em; text-transform: uppercase; text-align: center;
+}
+.lehti-osio {
+  display: grid; grid-template-columns: 5.75rem 1fr; gap: 0.65rem;
+  padding: 0.55rem 0; border-bottom: 1px dotted rgba(70, 51, 31, 0.5);
+}
+.lehti-osio-kuva { width: 5.75rem; height: 4.5rem; border-radius: 4px; overflow: hidden; background: rgba(70, 51, 31, 0.12); }
+.lehti-osio-kuva img { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(0.2); }
+.lehti-osiohakemisto button.lehti-osio-linkki, .lehti-osiohakemisto button.lehti-osio-juttu,
+.dialog .lehti-osiohakemisto button.lehti-osio-linkki, .dialog .lehti-osiohakemisto button.lehti-osio-juttu {
+  display: inline; width: auto; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none;
+  min-height: 0; color: inherit; font-family: var(--font-luku); font-weight: 400; font-size: inherit;
+  letter-spacing: normal; text-transform: none; text-align: left; cursor: pointer;
+}
+.lehti-osiohakemisto button.lehti-osio-linkki, .dialog .lehti-osiohakemisto button.lehti-osio-linkki {
+  font-weight: 700; font-size: 1.05rem; color: #b03a2b;
+}
+.lehti-osio-jutut { margin: 0.2rem 0 0; padding: 0; list-style: none; font-size: 0.88rem; line-height: 1.35; }
+.lehti-osio-jutut li { display: flex; gap: 0.3em; }
+.lehti-osio-jutut li::before { content: '\00b7'; flex: none; color: rgba(70, 51, 31, 0.6); }
+.lehti-osio-linkki:hover, .lehti-osio-juttu:hover { text-decoration: underline; }

@@ -21,9 +21,11 @@
  * 20260925.md.
  *
  * TUNNETUT KOHTAUSKUVAT: 70 kuvaa odottaa kuvaputken (Codexin) leikattua
- * versiota. Ateenan 6 on pilotti build 14:ssä; loput tilataan, kun
- * omistaja on hyväksynyt pilotin. Kun kuva on korvattu, se PITÄÄ
- * poistaa alta — toinen testi kaatuu, jos lista kuvaa jo leikattua.
+ * versiota. Kaikki 70 on tilattu 25.9.2026 (Ateenan 6 ensin pilottina
+ * build 14:ään, loput 64 kaupungeittain samana päivänä — omistaja
+ * hyväksyi kaikki odottamatta pilotin tulosta). Kun kuva on korvattu,
+ * se PITÄÄ poistaa alta — toinen testi kaatuu, jos lista kuvaa jo
+ * leikattua.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -36,49 +38,12 @@ const TAYTTO_RAJA = 0.6;
 const REUNA_RAJA = 0.35;
 
 const TUNNETUT_KOHTAUSKUVAT = new Set([
-  'amsterdam-herengracht-537.webp',
-  'amsterdam-kapein-talo.webp',
-  'amsterdam-kissalaiva.webp',
-  'amsterdam-maitotytto.webp',
-  'amsterdam-yovartio.webp',
   'ateena-akropolis-museo.webp',
   'ateena-diogeneen-astia.webp',
   'ateena-elginin-marmorit.webp',
   'ateena-iliou-melathron.webp',
   'ateena-maratonhuijaus.webp',
   'ateena-niken-temppeli.webp',
-  'berliini-gaertnerin-berliini.webp',
-  'berliini-marlene-dietrich.webp',
-  'berliini-muuri-1961.webp',
-  'bryssel-galeries-royales-saint-hubert.webp',
-  'helsinki-suomi-heraa-1899.webp',
-  'ljubljana-keskustori.webp',
-  'ljubljana-kri-anke.webp',
-  'ljubljana-ljubljanan-linna.webp',
-  'ljubljana-lohikaarmesilta.webp',
-  'ljubljana-pre-ernin-aukio.webp',
-  'ljubljana-tivoli-puisto.webp',
-  'ljubljana-tromostovje.webp',
-  'lontoo-abbey-roadin-suojatie.webp',
-  'lontoo-canaletto-lontoossa.webp',
-  'lontoo-dickensin-pubi.webp',
-  'lontoo-exchange-alley.webp',
-  'lontoo-fleming-1928.webp',
-  'lontoo-globe-1599.webp',
-  'lontoo-leake-streetin-tunneli.webp',
-  'lontoo-metron-hoyryveturi.webp',
-  'lontoo-palo-1666.webp',
-  'lontoo-turbiinihalli.webp',
-  'luxemburg-bockin-kasematit.webp',
-  'luxemburg-chemin-de-la-corniche.webp',
-  'luxemburg-suurherttuallinen-palatsi.webp',
-  'madrid-chotis.webp',
-  'madrid-goyan-kansankuvat.webp',
-  'madrid-gran-v-a.webp',
-  'madrid-kaksi-joukkuetta.webp',
-  'madrid-tapaskierros.webp',
-  'newyork-metropolitan-museo.webp',
-  'nikosia-leventis-museo.webp',
   'pariisi-72-nimea.webp',
   'pariisi-bastilji-1789.webp',
   'pariisi-carmenin-ensi-ilta.webp',

@@ -18,8 +18,14 @@
  *
  * ── VARTIOT (390 × 844 ja 1400 × 900) ─────────────────────────────
  *   1. LYONIN NAPAUTUS AVAA KAUPUNKIKORTIN lehden kehyksessä
- *      (.kaupunkipopup.kaupunkipopup-lisakaupunki), ja kortti on
- *      karttaruudun sisällä. Otsikko on kaupungin nimi.
+ *      (.kaupunkipopup.kaupunkipopup-lisakaupunki). Otsikko on
+ *      kaupungin nimi.
+ *   1b. KORTTI ON KARTTANOSTON KOKOINEN JA KESKELLÄ (Fablen päätös
+ *      26.9.2026, löydös 135: *"Kaikki karttanostot aukeavat samaan
+ *      kokoon ja tyyliin"*). Ennen 1b vaati kortin karttaruudun sisään
+ *      merkin viereen; nyt kortti on ruudun sisällä, vaakasuunnassa
+ *      keskellä (±1 px) ja täsmälleen kuvallisen noston levyinen
+ *      (js/nostokuva.js nostokuvaKortinVakioleveys, ±1 px).
  *   2. HEROKUVA LATAUTUU JA KREDITTI NÄKYY. Kuvaputki toimitti
  *      seitsemän Commons-alkuperäistä 14.9.2026 (manifesti
  *      posti/kuvatoimitus-ranska7-20260914.json), ja jokaisen
@@ -64,7 +70,7 @@ import { jaaKappaleiksi } from '../../js/ui-apurit.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from '../../js/packs/nakyvat-kaupungit-fra.js';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -164,7 +170,7 @@ vaadi('7. yksikään lisäkaupunki ei ole laudan matkakohde',
   laudanKaupungit.size > 0 && kohteina.length === 0, kohteina.map((k) => k.id).join(', '));
 
 /* ---------------- selainvartiot ---------------- */
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 /*
  * KUVA MITATAAN VASTA KUN SE ON DEKOODATTU. `loading="lazy"` ja ämpärin
@@ -188,10 +194,23 @@ const odotaHero = (sivu) => sivu.evaluate(async () => {
 });
 
 /** Yhden kortin mitat DOMista. */
-const lueKortti = (sivu) => sivu.evaluate(() => {
+const lueKortti = (sivu) => sivu.evaluate(async () => {
   const p = document.querySelector('.kaupunkipopup-lisakaupunki');
   if (!p) return null;
-  const pane = document.querySelector('.map-pane').getBoundingClientRect();
+  // Karttanoston vakiokoko (löydös 135): sama kaava kuin kuvallisella
+  // nostolla, kortin oma vaakasuora tila mitattuna samoin kuin
+  // js/nostokuva.js nostokuvaVakiokortti sen mittaa.
+  const { nostokuvaKortinVakioleveys } = await import('/js/nostokuva.js');
+  const reunat = (el) => {
+    const t = el ? getComputedStyle(el) : null;
+    if (!t) return 0;
+    const n = (v) => Number.parseFloat(v) || 0;
+    return n(t.paddingLeft) + n(t.paddingRight) + n(t.borderLeftWidth) + n(t.borderRightWidth)
+      + n(t.marginLeft) + n(t.marginRight);
+  };
+  const sis = p.querySelector('.kaupunkipopup-sisalto');
+  const vara = reunat(p) + reunat(sis) + (sis ? Math.max(0, sis.offsetWidth - sis.clientWidth) : 0);
+  const odoteLeveys = nostokuvaKortinVakioleveys({ ruutuLeveys: innerWidth, ruutuKorkeus: innerHeight, vara });
   const r = p.getBoundingClientRect();
   const nakyy = (el) => Boolean(el) && el.getClientRects().length > 0;
   const paikka = p.querySelector('.kaupunkipopup-heropaikka');
@@ -223,8 +242,12 @@ const lueKortti = (sivu) => sivu.evaluate(() => {
     nostoOtsikko: p.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
     nostoTeksti: p.querySelector('.fokusnosto-teksti')?.textContent ?? null,
     nostolohkoja: p.querySelectorAll('.fokusnosto-teksti').length,
-    ruudulla: r.left >= pane.left - 1 && r.right <= pane.right + 1
-      && r.top >= pane.top - 1 && r.bottom <= pane.bottom + 1,
+    ruudulla: r.left >= -1 && r.right <= innerWidth + 1
+      && r.top >= -1 && r.bottom <= innerHeight + 1,
+    vakio: p.classList.contains('nostokuva-vakiokortti'),
+    keskella: Math.abs((r.left + r.right) / 2 - innerWidth / 2) <= 1,
+    leveys: Math.round(r.width),
+    odoteLeveys,
   };
 });
 
@@ -394,9 +417,12 @@ for (const ruutu of RUUDUT) {
     vaadi(`${ruutu.nimi} ${kohde.nimi}: 1. napautus avaa kaupunkikortin lehden kehyksessä`,
       Boolean(kortti), virheet.join(' | '));
     if (!kortti) continue;
-    vaadi(`${ruutu.nimi} ${kohde.nimi}: 1b. otsikko on kaupungin nimi ja kortti on karttaruudussa`,
+    vaadi(`${ruutu.nimi} ${kohde.nimi}: 1b. otsikko on kaupungin nimi ja kortti on ruudulla`,
       kortti.otsikko === kohde.nimi && kortti.ruudulla,
       `"${kortti.otsikko}", ruudulla ${kortti.ruudulla}`);
+    vaadi(`${ruutu.nimi} ${kohde.nimi}: 1c. karttanoston koko ja paikka (löydös 135): keskellä, kuvallisen noston levyinen`,
+      kortti.vakio && kortti.keskella && Math.abs(kortti.leveys - kortti.odoteLeveys) <= 1,
+      `vakio ${kortti.vakio}, keskellä ${kortti.keskella}, leveys ${kortti.leveys} / odote ${kortti.odoteLeveys}`);
     tarkastaHero(`${ruutu.nimi} ${kohde.nimi}`, kohde, kortti.hero);
     const esittelyOdote = jaaKappaleiksi(kohde.esittely ?? '').join('');
     tieto(`${ruutu.nimi} ${kohde.nimi} esittelyn pituus`, `${(kohde.esittely ?? '').length} merkkiä`);

@@ -52,14 +52,17 @@
 import { nostosymAsetaKuorenKatto, nostosymMitanKatto, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
-  avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
+  LEHDEN_VAKIOESITTELY, avaaTiivisLehtiarkki, kaupunginEsittely, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
   suljeTiivisLehtiarkki,
 } from './lehti.js';
+import { asetaKuva, julisteUrl } from './media.js';
+import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { ensimmainenLause } from './lauseraja.js';
 import {
   avaaNahtavyys, kaupunginNahtavyysteksti, piirraKaupunkiKartta, piirraMatkailijalle,
 } from './nahtavyydet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
+import { nostokuvaVakiokortti } from './nostokuva.js';
 import { sfx } from './sound.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, kuunteleSulkevaNapautus } from './ui-apurit.js';
@@ -409,6 +412,9 @@ function kaupunkinostonAnkkurinLaatikko(auki, pane) {
 export function asemoiKaupunkipopup(ui) {
   const auki = ui?.kaupunkipopupAuki;
   if (!auki?.popup?.isConnected) return;
+  // Lisäkaupungin kortti on karttanosto: sama koko ja paikka kuin kuvallisella
+  // nostolla (löydös 135, js/nostokuva.js nostokuvaVakiokortti).
+  if (auki.popup.nostokuvaVakioAsemoi) { auki.popup.nostokuvaVakioAsemoi(); return; }
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
@@ -520,6 +526,34 @@ export function suljeKaupunkipopup(ui) {
   ui.kaupunkipopupAuki = null;
   document.body.classList.remove('nosto-popup-auki');
   auki.purku?.();
+  auki.popup?.nostokuvaPurku?.();
+  /*
+   * Avauskortti palaa kutsuminiatyyrin paikalle (sama liike takaperin);
+   * kortti poistetaan vasta liikkeen jälkeen, ja miniatyyri tulee näkyviin.
+   */
+  const lahde = auki.lahde;
+  const loppu = lahde?.isConnected && auki.popup?.isConnected && typeof auki.popup.animate === 'function'
+    && !avauskortinLiikeVahennetty() ? kutsunMuunnos(auki.popup, lahde) : null;
+  if (loppu) {
+    auki.popup.style.pointerEvents = 'none';
+    const liike = auki.popup.animate([
+      { transform: 'none', opacity: 1, transformOrigin: '50% 50%' },
+      { transform: loppu, opacity: 0.35, transformOrigin: '50% 50%' },
+    ], { duration: AVAUSKORTIN_KASVU_MS, easing: 'cubic-bezier(0.4, 0, 0.6, 1)', fill: 'forwards' });
+    // Poisto ajastimella liikkeen mittaan (finished voi viipyä, kun
+    // selain säästää kehyksiä): kortti ei saa jäädä haamuksi kartalle.
+    let valmis = false;
+    const loppuu = () => {
+      if (valmis) return;
+      valmis = true;
+      auki.popup.remove();
+      lahde.style.visibility = '';
+    };
+    setTimeout(loppuu, AVAUSKORTIN_KASVU_MS + 30);
+    liike.finished.catch(() => {}).then(loppuu);
+    return;
+  }
+  if (lahde) lahde.style.visibility = '';
   auki.popup?.remove();
 }
 
@@ -583,7 +617,9 @@ function kuunteleKaupunkipopupia(ui, popup) {
  * täyttää sisällön, joten iso pop-up ja turisti-info ovat sama kortti
  * eri sisällöllä — yksi kehys, yksi sulkusopimus, yksi asemointi.
  */
-function avaaKortti(ui, city, { laji, otsikko, ankkuri, lato }) {
+function avaaKortti(ui, city, {
+  laji, otsikko, ankkuri, lato, vakio = false,
+}) {
   if (typeof document === 'undefined' || !city) return null;
   sfx.play('popup');
   lataaKaupunkiTyyli();
@@ -621,6 +657,7 @@ function avaaKortti(ui, city, { laji, otsikko, ankkuri, lato }) {
   // ruutulaatikoita (js/nahtavyydet.js mitoitaKehys, hajautaPiirrospisteet),
   // eikä irrallisella elementillä ole sellaisia.
   lato(ui, sisalto, city);
+  if (vakio) nostokuvaVakiokortti({ kortti: popup, sisalto });
   ui.kaupunkipopupAuki.purku = kuunteleKaupunkipopupia(ui, popup);
   asemoiKaupunkipopup(ui);
   // Mitta uudelleen, kun asettelu ja tyyli ovat valmiit: ensimmäinen
@@ -636,6 +673,143 @@ function avaaKortti(ui, city, { laji, otsikko, ankkuri, lato }) {
  * sen uudestaan joka asemoinnilla — kortti seuraa merkkiään, kun pallo
  * pysähtyy (js/pallolauta/lauta.js).
  */
+/*
+ * ══ KAUPUNGIN AVAUSKORTTI (omistaja 27.9.2026 klo 23.4x, kortilla hyväksytty mock) ══
+ *
+ * Kaupungin napautus avaa KORTIN, jossa on kolme osaa päällekkäin:
+ *   1. herokuva + kaksi ensimmäistä lausetta esittelystä + "Lue kaupunkilehti"
+ *   2. nähtävyyskartta ilman tekstejä (piirraKaupunkiKartta pelkkaKartta);
+ *      minkä tahansa kohdan napautus avaa suurennoksen
+ *   3. turisti-info: oppaan otsikko, 1–2 lausetta ja kuva → avaa oppaan
+ * Kortti korvaa kaupunkiliuskan. Sisältö luetaan samasta lehtidatasta
+ * kuin ennenkin; uutta tekstiä ei kirjoiteta.
+ */
+/** Tekstin n ensimmäistä lausetta ilman lihavointimerkkejä. */
+export function avauskortinLauseet(teksti, n = 2) {
+  const puhdas = String(teksti ?? '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
+  const lauseet = puhdas.match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? (puhdas ? [puhdas] : []);
+  return lauseet.slice(0, n).map((l) => l.trim()).join(' ').trim();
+}
+
+/** Herokuvan osoite (kartan kutsuminiatyyri): avauskuva tai kansikuva. */
+export function avauskortinHeroOsoite(city) {
+  const kansi = kaupunginKansi(city?.id);
+  const teos = kansi?.avauskuvat?.[0] ?? kansi?.kansikuvat?.[0] ?? null;
+  if (!teos) return null;
+  return teos.ampari ? julisteUrl(teos.ampari) : valokuvaUrl(teos.tiedosto, 240);
+}
+
+/** Kortin herokuva: avauskuvista ensimmäinen, muuten kansikuvista. */
+function avauskortinHero(city) {
+  const kansi = kaupunginKansi(city.id);
+  const teos = kansi?.avauskuvat?.[0] ?? kansi?.kansikuvat?.[0] ?? null;
+  if (!teos) return null;
+  const kuva = document.createElement('img');
+  kuva.className = 'avauskortti-hero-kuva';
+  kuva.alt = kuvatekstiLyhyt(teos) || city.name;
+  kuva.decoding = 'async';
+  kuva.draggable = false;
+  if (teos.ampari) asetaKuva(kuva, julisteUrl(teos.ampari), null);
+  else asetaKuva(kuva, valokuvaUrl(teos.tiedosto, 900), valokuvaVara(teos.tiedosto, 900));
+  return kuva;
+}
+
+function latoAvauskortti(ui, sisalto, city) {
+  const hero = html('div', 'avauskortti-hero');
+  const heroKuva = avauskortinHero(city);
+  if (heroKuva) hero.appendChild(heroKuva);
+  hero.appendChild(html('h2', 'avauskortti-nimi', city.name));
+  sisalto.appendChild(hero);
+  const esittely = html('div', 'avauskortti-esittely');
+  esittely.appendChild(html('p', 'avauskortti-teksti', avauskortinLauseet(kaupunginEsittely(city)) || LEHDEN_VAKIOESITTELY));
+  if (typeof ui?.avaaTutkinta === 'function') {
+    const lehti = html('button', 'avauskortti-lehti', 'Lue kaupunkilehti \u2192');
+    lehti.type = 'button';
+    lehti.addEventListener('click', () => {
+      suljeKaupunkipopup(ui);
+      ui.avaaTutkinta(city);
+    });
+    esittely.appendChild(lehti);
+  }
+  sisalto.appendChild(esittely);
+  const kartta = html('div', 'avauskortti-kartta');
+  sisalto.appendChild(kartta);
+  piirraKaupunkiKartta(ui, kartta, { cityId: city.id, pelkkaKartta: true });
+  if (!kartta.childElementCount) kartta.hidden = true;
+  const opas = turistiOppaanArtikkeli(city.id);
+  if (opas) {
+    const rivi = html('button', 'avauskortti-opas');
+    rivi.type = 'button';
+    const kuvaTeos = kaupunginMatkailijalle(city.id)?.kuva ?? null;
+    if (kuvaTeos?.tiedosto || kuvaTeos?.ampari) {
+      const kuva = document.createElement('img');
+      kuva.className = 'avauskortti-opas-kuva';
+      kuva.alt = '';
+      kuva.decoding = 'async';
+      if (kuvaTeos.ampari) asetaKuva(kuva, julisteUrl(kuvaTeos.ampari), null);
+      else asetaKuva(kuva, valokuvaUrl(kuvaTeos.tiedosto, 320), valokuvaVara(kuvaTeos.tiedosto, 320));
+      rivi.appendChild(kuva);
+    }
+    const tekstit = html('span', 'avauskortti-opas-tekstit');
+    tekstit.appendChild(html('span', 'avauskortti-opas-laji', TURISTI_INFO_NIMIO));
+    tekstit.appendChild(html('span', 'avauskortti-opas-otsikko', opas.nimi ?? TURISTI_INFO_NIMIO));
+    tekstit.appendChild(html('span', 'avauskortti-opas-teksti', avauskortinLauseet(opas.teksti, 2)));
+    rivi.appendChild(tekstit);
+    rivi.addEventListener('click', () => {
+      sfx.play('paper');
+      suljeKaupunkipopup(ui);
+      avaaTuristiOpas(ui, city);
+    });
+    sisalto.appendChild(rivi);
+  }
+}
+
+/** Kasvuanimaation kesto (omistaja: 250–300 ms, pehmeä, ei pop-up). */
+export const AVAUSKORTIN_KASVU_MS = 280;
+
+/**
+ * Kortin ja kutsuminiatyyrin välinen muunnos: kortti skaalataan
+ * miniatyyrin kokoiseksi sen paikalle (FLIP), josta se kasvaa.
+ */
+function kutsunMuunnos(kortti, lahde) {
+  const k = kortti.getBoundingClientRect();
+  const m = lahde.getBoundingClientRect();
+  if (!(k.width > 0) || !(m.width > 0)) return null;
+  const skaala = m.width / k.width;
+  const dx = (m.left + m.width / 2) - (k.left + k.width / 2);
+  const dy = (m.top + m.height / 2) - (k.top + k.height / 2);
+  return `translate(${dx}px, ${dy}px) scale(${skaala.toFixed(4)})`;
+}
+
+function avauskortinLiikeVahennetty() {
+  return Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
+}
+
+/**
+ * Avaa kaupungin avauskortin (korvaa kaupunkiliuskan). `lahde` on kartan
+ * kutsuminiatyyri: kortti kasvaa sen paikalta ja palaa sinne suljettaessa.
+ */
+export function avaaAvauskortti(ui, city, { ankkuri = null, lahde = null } = {}) {
+  const kortti = avaaKortti(ui, city, {
+    laji: 'avaus',
+    otsikko: city?.name ?? '',
+    ankkuri,
+    lato: latoAvauskortti,
+  });
+  if (!kortti || !lahde?.isConnected || typeof kortti.animate !== 'function' || avauskortinLiikeVahennetty()) return kortti;
+  ui.kaupunkipopupAuki.lahde = lahde;
+  kortti.style.animation = 'none';
+  const alku = kutsunMuunnos(kortti, lahde);
+  if (alku) {
+    lahde.style.visibility = 'hidden';
+    kortti.animate([
+      { transform: alku, opacity: 0.35, transformOrigin: '50% 50%' },
+      { transform: 'none', opacity: 1, transformOrigin: '50% 50%' },
+    ], { duration: AVAUSKORTIN_KASVU_MS, easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)' });
+  }
+  return kortti;
+}
+
 export function avaaKaupunkipopup(ui, city, { ankkuri = null } = {}) {
   return avaaKortti(ui, city, {
     laji: 'kaupunki',
@@ -1157,5 +1331,14 @@ export function avaaLisakaupunginKortti(ui, kohde, { ankkuri = null } = {}) {
     otsikko: kohde.nimi ?? '',
     ankkuri,
     lato: (u, sisalto) => latoLisakaupunginKortti(u, sisalto, kohde),
+    /*
+     * KARTTANOSTON KOKO JA PAIKKA (Fablen päätös 26.9.2026, löydös 135:
+     * *"Kaikki karttanostot aukeavat samaan kokoon ja tyyliin"*).
+     * Lisäkaupunki avautuu kartan napautuksesta kuten kohde, joten se on
+     * karttanosto: keskelle, kuvallisen noston levyisenä ja samalla
+     * himmennyksellä. Kaupunkilehden oma pop-up ja turisti-info eivät ole
+     * nostoja ja pitävät merkin viereen asemoinnin.
+     */
+    vakio: true,
   });
 }

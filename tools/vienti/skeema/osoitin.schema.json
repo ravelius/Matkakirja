@@ -86,6 +86,28 @@
       "type": "string",
       "format": "date-time"
     },
+    "hakemisto": {
+      "type": "object",
+      "required": ["polku", "sha256", "tavuja"],
+      "properties": {
+        "polku": { "const": "hakemisto.json" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "tavuja": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false,
+      "description": "versiokansion hakemisto.json: kaikki paketin tiedostot { polku, sha256, tavuja, siirto } (taustapäivitys vaihe 1)"
+    },
+    "tavuja": { "type": "integer", "minimum": 0, "description": "paketin tiedostot yhteensä raakana" },
+    "siirto": { "type": "integer", "minimum": 0, "description": "paketin brotli-arvio (taso 5) yhteensä" },
+    "tasoittain": {
+      "type": "object",
+      "required": ["ios"],
+      "properties": {
+        "ios": { "type": "object", "propertyNames": { "pattern": "^[1-9][0-9]*$" }, "additionalProperties": { "type": "integer", "minimum": 1 } }
+      },
+      "additionalProperties": false,
+      "description": "uusin versio kullekin natiivin sisältötasolle; vanha taso jää viimeiseen sille kelpaavaan versioon"
+    },
     "kokoelmaLkm": {
       "type": "object",
       "additionalProperties": {

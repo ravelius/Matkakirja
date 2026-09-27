@@ -18,7 +18,7 @@
  *
  * ── VARTIOT (kummallekin kaupungille, KAHDELLA ZOOMILLA) ──────────
  *
- *   1. PISTE ON KARTALLA ja auki (kaksi ratkaistua nostotehtävää).
+ *   1. PISTE ON KARTALLA ja auki (kynnys: yksi ratkaistu nostotehtävä, löydös 145).
  *   2. PISTE EROTTUU KAUPUNGIN MERKISTÄ: ruutuero ≥ VAHIN_ERO_PX.
  *   3. PISTEEN NAPAUTUS AVAA VIHJEEN eikä kaupungin tietoruutua.
  *   4. KAUPUNGIN NAPAUTUS AVAA YHÄ KAUPUNGIN TIETORUUDUN (vastavartio:
@@ -72,7 +72,7 @@ const KAUPUNGIT = [
  */
 const VAHIN_ERO_PX = 14;
 /** Kynnys, jolla piste on auki (js/fokusvirta.js NOSTOTEHTAVIA_AARREPISTEESEEN). */
-const RATKAISTUJA = 2;
+const RATKAISTUJA = 1;
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',

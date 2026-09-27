@@ -10,14 +10,14 @@
   "reuna": 0
  },
  "amsterdam-herengracht-537.webp": {
-  "sha": "3a78c334dc396aec",
-  "taytto": 0.664,
+  "sha": "a46aeb267438e9ca",
+  "taytto": 0.331,
   "reuna": 0
  },
  "amsterdam-kapein-talo.webp": {
-  "sha": "01c91147bd45c796",
-  "taytto": 0.702,
-  "reuna": 0.001
+  "sha": "5b9f0951734ded1a",
+  "taytto": 0.144,
+  "reuna": 0
  },
  "amsterdam-keskusrautatieasema.webp": {
   "sha": "f5f176d5dffee0b8",
@@ -25,8 +25,8 @@
   "reuna": 0
  },
  "amsterdam-kissalaiva.webp": {
-  "sha": "c9c73a506b118148",
-  "taytto": 0.672,
+  "sha": "6127fa7b1bdf48c7",
+  "taytto": 0.242,
   "reuna": 0
  },
  "amsterdam-kuninkaanpalatsi.webp": {
@@ -35,9 +35,9 @@
   "reuna": 0
  },
  "amsterdam-maitotytto.webp": {
-  "sha": "6604a16aea776202",
-  "taytto": 0.664,
-  "reuna": 0.07
+  "sha": "796d97e404d93831",
+  "taytto": 0.36,
+  "reuna": 0
  },
  "amsterdam-rembrandtin-talo.webp": {
   "sha": "abf0ed24d72cc442",
@@ -50,9 +50,9 @@
   "reuna": 0
  },
  "amsterdam-yovartio.webp": {
-  "sha": "66798f5ad0ea2202",
-  "taytto": 0.766,
-  "reuna": 0.002
+  "sha": "1cf2104befed678c",
+  "taytto": 0.484,
+  "reuna": 0
  },
  "ankara-anatolian-sivilisaatioiden-museo.webp": {
   "sha": "945e55df57e9373b",
@@ -275,8 +275,8 @@
   "reuna": 0
  },
  "berliini-gaertnerin-berliini.webp": {
-  "sha": "7ac14e6d43bbc75c",
-  "taytto": 0.857,
+  "sha": "ed5f09fb036cb5af",
+  "taytto": 0.332,
   "reuna": 0
  },
  "berliini-hattupainen-ukkeli.webp": {
@@ -290,8 +290,8 @@
   "reuna": 0
  },
  "berliini-marlene-dietrich.webp": {
-  "sha": "6e46fae65598d3ab",
-  "taytto": 0.702,
+  "sha": "fc5ea538f0fb7acd",
+  "taytto": 0.446,
   "reuna": 0
  },
  "berliini-museosaari.webp": {
@@ -300,9 +300,9 @@
   "reuna": 0
  },
  "berliini-muuri-1961.webp": {
-  "sha": "797fd22cb0dea509",
-  "taytto": 0.803,
-  "reuna": 0.212
+  "sha": "89fa1c763fa556dc",
+  "taytto": 0.218,
+  "reuna": 0
  },
  "berliini-paavin-kosto.webp": {
   "sha": "0f2b1ce7ce032877",
@@ -325,8 +325,8 @@
   "reuna": 0
  },
  "bryssel-galeries-royales-saint-hubert.webp": {
-  "sha": "6db3fa974226edc0",
-  "taytto": 0.826,
+  "sha": "fc1880faa633d5ac",
+  "taytto": 0.583,
   "reuna": 0
  },
  "bryssel-grand-place.webp": {
@@ -610,8 +610,8 @@
   "reuna": 0
  },
  "helsinki-suomi-heraa-1899.webp": {
-  "sha": "b43079b94a7fc890",
-  "taytto": 0.815,
+  "sha": "b54e0d1c3f1c80e5",
+  "taytto": 0.226,
   "reuna": 0
  },
  "helsinki-temppeliaukion-kirkko.webp": {
@@ -910,18 +910,18 @@
   "reuna": 0
  },
  "ljubljana-keskustori.webp": {
-  "sha": "7dd67cfefa4087ac",
-  "taytto": 0.629,
+  "sha": "48b829ca9fdb5b95",
+  "taytto": 0.32,
   "reuna": 0
  },
  "ljubljana-kri-anke.webp": {
-  "sha": "58e21bbe84946245",
-  "taytto": 0.756,
+  "sha": "8ae48d190713fa70",
+  "taytto": 0.371,
   "reuna": 0
  },
  "ljubljana-ljubljanan-linna.webp": {
-  "sha": "3a0494a74fbcf7a3",
-  "taytto": 0.618,
+  "sha": "15a9b06097376a72",
+  "taytto": 0.431,
   "reuna": 0
  },
  "ljubljana-ljubljanan-tuomiokirkko.webp": {
@@ -930,28 +930,28 @@
   "reuna": 0
  },
  "ljubljana-lohikaarmesilta.webp": {
-  "sha": "cc2b3d9f5d20554a",
-  "taytto": 0.604,
+  "sha": "1b2f8b732b93917d",
+  "taytto": 0.335,
   "reuna": 0
  },
  "ljubljana-pre-ernin-aukio.webp": {
-  "sha": "ae7664d6db1c8e89",
-  "taytto": 0.673,
+  "sha": "d7a780b9d598f270",
+  "taytto": 0.335,
   "reuna": 0
  },
  "ljubljana-tivoli-puisto.webp": {
-  "sha": "d75af439752e54ab",
-  "taytto": 0.67,
+  "sha": "4cdba1a5aa074110",
+  "taytto": 0.412,
   "reuna": 0
  },
  "ljubljana-tromostovje.webp": {
-  "sha": "6df2777462038951",
-  "taytto": 0.717,
+  "sha": "8e6ef2973d5092e0",
+  "taytto": 0.23,
   "reuna": 0
  },
  "lontoo-abbey-roadin-suojatie.webp": {
-  "sha": "c090b871870f9d85",
-  "taytto": 0.797,
+  "sha": "54ed62eea6a503de",
+  "taytto": 0.215,
   "reuna": 0
  },
  "lontoo-big-ben.webp": {
@@ -965,18 +965,18 @@
   "reuna": 0
  },
  "lontoo-canaletto-lontoossa.webp": {
-  "sha": "ef0ab152acf7d39a",
-  "taytto": 0.612,
+  "sha": "2f6e340d538e9201",
+  "taytto": 0.51,
   "reuna": 0
  },
  "lontoo-dickensin-pubi.webp": {
-  "sha": "040b92a2d772cfc6",
-  "taytto": 0.733,
+  "sha": "8373fa0841995179",
+  "taytto": 0.592,
   "reuna": 0
  },
  "lontoo-exchange-alley.webp": {
-  "sha": "713e416519845023",
-  "taytto": 0.828,
+  "sha": "0a4973f33cff6877",
+  "taytto": 0.386,
   "reuna": 0
  },
  "lontoo-faraday-1831.webp": {
@@ -985,18 +985,18 @@
   "reuna": 0
  },
  "lontoo-fleming-1928.webp": {
-  "sha": "ed5f174d29c204a5",
-  "taytto": 0.7,
-  "reuna": 0.008
+  "sha": "0f51e3b01a0d5d96",
+  "taytto": 0.404,
+  "reuna": 0
  },
  "lontoo-globe-1599.webp": {
-  "sha": "17d9e23d94d3479e",
-  "taytto": 0.666,
+  "sha": "430637029588a66b",
+  "taytto": 0.186,
   "reuna": 0
  },
  "lontoo-leake-streetin-tunneli.webp": {
-  "sha": "0e001d59cb3892fe",
-  "taytto": 0.809,
+  "sha": "cdbac8e63e3de576",
+  "taytto": 0.397,
   "reuna": 0
  },
  "lontoo-liukumakiveistos.webp": {
@@ -1010,8 +1010,8 @@
   "reuna": 0
  },
  "lontoo-metron-hoyryveturi.webp": {
-  "sha": "380f3da1136250ac",
-  "taytto": 0.694,
+  "sha": "b711208fbeb7835c",
+  "taytto": 0.33,
   "reuna": 0
  },
  "lontoo-neljas-jalusta.webp": {
@@ -1020,8 +1020,8 @@
   "reuna": 0.007
  },
  "lontoo-palo-1666.webp": {
-  "sha": "60fb3a04ea9d741b",
-  "taytto": 0.744,
+  "sha": "dae2cca6f3fe6c0e",
+  "taytto": 0.402,
   "reuna": 0
  },
  "lontoo-pyhan-paavalin-katedraali.webp": {
@@ -1045,8 +1045,8 @@
   "reuna": 0
  },
  "lontoo-turbiinihalli.webp": {
-  "sha": "ab2085759afe6357",
-  "taytto": 0.778,
+  "sha": "5c9d8b0ab3625d6d",
+  "taytto": 0.352,
   "reuna": 0
  },
  "luxemburg-adolphe-silta.webp": {
@@ -1055,13 +1055,13 @@
   "reuna": 0
  },
  "luxemburg-bockin-kasematit.webp": {
-  "sha": "bfa165281aed8052",
-  "taytto": 0.728,
+  "sha": "9baba9963966fa79",
+  "taytto": 0.521,
   "reuna": 0
  },
  "luxemburg-chemin-de-la-corniche.webp": {
-  "sha": "0c6475895a0a9196",
-  "taytto": 0.702,
+  "sha": "1b6c59d56e2276a3",
+  "taytto": 0.321,
   "reuna": 0
  },
  "luxemburg-guillaume-ii-aukio.webp": {
@@ -1075,8 +1075,8 @@
   "reuna": 0
  },
  "luxemburg-suurherttuallinen-palatsi.webp": {
-  "sha": "dcf2fbb388864d10",
-  "taytto": 0.62,
+  "sha": "fea7f049a7f69362",
+  "taytto": 0.55,
   "reuna": 0
  },
  "madrid-alcalan-portti.webp": {
@@ -1085,8 +1085,8 @@
   "reuna": 0
  },
  "madrid-chotis.webp": {
-  "sha": "7ccb8f47f7c7812f",
-  "taytto": 0.656,
+  "sha": "73bdf5131d147809",
+  "taytto": 0.363,
   "reuna": 0
  },
  "madrid-cibeleen-aukio.webp": {
@@ -1095,19 +1095,19 @@
   "reuna": 0
  },
  "madrid-goyan-kansankuvat.webp": {
-  "sha": "13d4ecdd99185eb5",
-  "taytto": 0.724,
-  "reuna": 0.365
+  "sha": "bb7c56f65a796ad8",
+  "taytto": 0.328,
+  "reuna": 0
  },
  "madrid-gran-v-a.webp": {
-  "sha": "35802dcb1dc9f042",
-  "taytto": 0.667,
+  "sha": "5a15bef97337960f",
+  "taytto": 0.339,
   "reuna": 0
  },
  "madrid-kaksi-joukkuetta.webp": {
-  "sha": "a23e63b611a833dd",
-  "taytto": 0.612,
-  "reuna": 0.257
+  "sha": "dcb3a85a1d0a796d",
+  "taytto": 0.376,
+  "reuna": 0
  },
  "madrid-kuninkaanlinna.webp": {
   "sha": "a5f3f5f5c7404659",
@@ -1135,9 +1135,9 @@
   "reuna": 0
  },
  "madrid-tapaskierros.webp": {
-  "sha": "200dcc2aba225420",
-  "taytto": 0.83,
-  "reuna": 0.057
+  "sha": "5f2357eb0afb8a62",
+  "taytto": 0.305,
+  "reuna": 0
  },
  "moskova-bolsoi-teatteri.webp": {
   "sha": "60458500f3f6e00d",
@@ -1190,8 +1190,8 @@
   "reuna": 0
  },
  "newyork-metropolitan-museo.webp": {
-  "sha": "f3cb3361cd8a7dd2",
-  "taytto": 0.828,
+  "sha": "df36f169140b38b8",
+  "taytto": 0.442,
   "reuna": 0
  },
  "newyork-paakirjasto.webp": {
@@ -1230,8 +1230,8 @@
   "reuna": 0
  },
  "nikosia-leventis-museo.webp": {
-  "sha": "5a5cc792526e037b",
-  "taytto": 0.743,
+  "sha": "883b02bbdde75b22",
+  "taytto": 0.586,
   "reuna": 0
  },
  "nikosia-omeryen-hamam.webp": {

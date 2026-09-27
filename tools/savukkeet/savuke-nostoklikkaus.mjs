@@ -157,7 +157,7 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium' });
 const virheet = [];
 
 async function avaaPeli(kaupunki, leveys, korkeus) {
@@ -188,7 +188,8 @@ async function avaaPeli(kaupunki, leveys, korkeus) {
       headers: { 'access-control-allow-origin': '*' },
     });
   });
-  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  // KOEHAKU (25.9.2026): esim. SAVUKE_HAKU='&pyramidi=2026-09-25' ajaa saman vartion koepyramidilla.
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0${process.env.SAVUKE_HAKU ?? ''}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
   const auki = await sivu
     .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })

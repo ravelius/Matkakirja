@@ -272,6 +272,16 @@ export function odotetutPyramidista(luettelo) {
     ulos.set(`pohja z${t.z}`, t.laatasto
       ? bittienMaara(t.laatasto)
       : numero(t.sarakkeita) * numero(t.riveja));
+    /*
+     * DELTA-POLTTO (generoi-laattapyramidi.mjs --delta): versio on täysi,
+     * mutta shardit POLTTAVAT vain piirrettävät ja tarkistusotoksen; loput
+     * kopioidaan lähdeversiosta ämpärin sisällä. Shardien odotus on siis
+     * luettelon `delta.piirretty` + `delta.tarkistettu`.
+     */
+    const d = luettelo.delta;
+    if (d?.piirretty && d.piirretty[t.z] !== undefined) {
+      ulos.set(`pohja z${t.z}`, numero(d.piirretty[t.z]) + numero(d.tarkistettu?.[t.z]));
+    }
   }
   for (const [kentta, kerros] of [
     ['nostotaso', 'nostot'], ['viivataso', 'viivat'], ['rantataso', 'ranta'],
@@ -307,6 +317,17 @@ export function odotetutPallosta(laatat) {
   const min = numero(laatat?.tasot?.min);
   const max = numero(laatat?.tasot?.max);
   for (let z = min; z <= max; z += 1) ulos.set(`pallo z${z}`, 4 ** z);
+  /*
+   * DELTA-SARJA (tee-pallolaatat.mjs --delta): kun kopiot tehdään
+   * ämpärissä, shardit polttavat vain piirrettävät ja tarkistusotoksen.
+   * Levyltä kopioitu sarja (`kopioituLevylla`) on täysi.
+   */
+  const d = laatat?.delta;
+  if (d?.piirretty && !d.kopioituLevylla) {
+    for (let z = min; z <= max; z += 1) {
+      if (d.piirretty[z] !== undefined) ulos.set(`pallo z${z}`, numero(d.piirretty[z]) + numero(d.tarkistettu?.[z]));
+    }
+  }
   return ulos;
 }
 

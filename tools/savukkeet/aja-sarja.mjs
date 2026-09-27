@@ -22,6 +22,9 @@
 //                       lisäargumentit Chromiumille, esim.
 //                       "--use-gl=angle --use-angle=swiftshader" —
 //                       ks. tools/savukkeet/chromium-liput.mjs
+//   SAVUKE_EI_NAYTTOA  1 = ajuri ilman näyttöistuntoa (WebKit ei käynnisty),
+//                      0 = näyttö on; tyhjä = kokeillaan WebKit kerran
+//                      sarjan alussa (ks. "NÄYTTÖISTUNTO" alla)
 //
 // Tuloskansioon syntyy per savuke:
 //   savuke-<nimiTunniste>.log   ajoloki (stdout+stderr)
@@ -93,6 +96,58 @@ for (const [portti, nimet] of kiinteat) {
   }
 }
 
+/*
+ * NÄYTTÖISTUNTO (Fable 25.9.2026, Karttaseppä). Savukeajurin LaunchAgent
+ * ajaa omassa istunnossaan (SessionCreate); kun Macin konsoli on toisella
+ * käyttäjällä, WebKit ei käynnisty (launch jää 180 s:n aikakatkaisuun) ja
+ * Chrome for Testing kaatuu näyttölinkin puutteeseen. Kokeillaan WebKit
+ * KERRAN (30 s); jos se ei nouse, sarja ajetaan ilman näyttöä:
+ *   - "-webkit"-rivi OHITETAAN, kun samassa sarjassa on sen "-chromium"-
+ *     pari (sama vartio Chromiumilla ajetaan joka tapauksessa);
+ *   - muut rivit saavat SAVUKE_MOOTTORI=chromium (savukkeiden oma
+ *     Chromium-polku) ja SAVUKE_EI_NAYTTOA=1, jolla chromium-liput.mjs
+ *     vaihtaa Chrome for Testingin headless-kuoreen + ANGLE Metaliin ja
+ *     ohjaa kovakoodatun webkit.launchin Chromiumiin.
+ * Kun konsoli palaa ajurin käyttäjälle, koe onnistuu ja kaikki ajetaan
+ * taas WebKitillä ennallaan.
+ */
+async function webkitKaynnistyy() {
+  if (process.env.SAVUKE_EI_NAYTTOA === '1') return false;
+  if (process.env.SAVUKE_EI_NAYTTOA === '0') return true;
+  for (const lahde of ['playwright', process.env.PLAYWRIGHT_JS].filter(Boolean)) {
+    let moduuli;
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      moduuli = await import(lahde);
+    } catch {
+      continue;
+    }
+    const webkit = moduuli?.webkit ?? moduuli?.default?.webkit;
+    if (!webkit) continue;
+    const alku = Date.now();
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      const selain = await webkit.launch({ timeout: 30000 });
+      // eslint-disable-next-line no-await-in-loop
+      await selain.close();
+      return true;
+    } catch (e) {
+      console.log(`WebKit-koe: ei käynnisty ${Math.round((Date.now() - alku) / 1000)} s:ssa (${String(e.message).split('\n')[0]})`);
+      return false;
+    }
+  }
+  return true;
+}
+const eiNayttoa = !(await webkitKaynnistyy());
+const nimet = new Set(matriisi.map((r) => r.nimiTunniste));
+const ohitetaan = (rivi) => eiNayttoa && /-webkit$/.test(rivi.nimiTunniste)
+  && nimet.has(rivi.nimiTunniste.replace(/-webkit$/, '-chromium'));
+if (eiNayttoa) {
+  const ohi = matriisi.filter(ohitetaan).map((r) => r.nimiTunniste);
+  console.log('EI NÄYTTÖISTUNTOA: WebKit-rivit Chromiumilla (headless-kuori + ANGLE Metal)'
+    + `${ohi.length ? `; ohitetaan (Chromium-pari ajetaan): ${ohi.join(', ')}` : ''}.`);
+}
+
 console.log(`Savukesarja "${sarja}": ${matriisi.length} savuketta, rinnakkaisuus ${rinnakkain}, aikakatto ${Math.round(aikakattoMs / 1000)} s/savuke.`);
 console.log(`Tuloskansio: ${tuloskansio}\n`);
 
@@ -125,6 +180,17 @@ function ajaYksi(rivi, indeksi) {
     {
       const shim = pathToFileURL(join(TASSA, 'chromium-liput.mjs')).href;
       ymparisto.NODE_OPTIONS = `${process.env.NODE_OPTIONS ?? ''} --import ${shim}`.trim();
+    }
+
+    if (eiNayttoa) {
+      ymparisto.SAVUKE_EI_NAYTTOA = '1';
+      ymparisto.SAVUKE_MOOTTORI = 'chromium';
+    }
+    if (ohitetaan(rivi)) {
+      writeFileSync(lokiPolku, 'INFO  OHITETTU: ajurilla ei näyttöistuntoa, WebKit ei käynnisty; '
+        + `sama vartio ajetaan rivillä ${rivi.nimiTunniste.replace(/-webkit$/, '-chromium')}\n`);
+      valmis({ rivi, kesto: 0, koodi: 0, lokiPolku, katkaistu: false, ohitettu: true });
+      return;
     }
 
     const argumentit = [join(TASSA, rivi.tiedosto)];
@@ -220,7 +286,7 @@ async function tyontekija() {
       // taulukossa puolikkaat on erotettava toisistaan.
       JSON.stringify({ tiedosto: rivi.nimi ?? rivi.tiedosto, kesto: ajo.kesto, tulosJson }),
     );
-    const merkki = tulosJson.uusiaPunaisia > 0 ? 'UUSI PUNAINEN' : (tulosJson.lapi === tulosJson.yhteensa ? 'OK' : 'tunnettu punainen');
+    const merkki = ajo.ohitettu ? 'OHITETTU (ei näyttöistuntoa)' : tulosJson.uusiaPunaisia > 0 ? 'UUSI PUNAINEN' : (tulosJson.lapi === tulosJson.yhteensa ? 'OK' : 'tunnettu punainen');
     console.log(`[${String(valmiit.length + 1).padStart(2, ' ')}/${matriisi.length}] ${rivi.nimiTunniste}: ${tulosJson.lapi}/${tulosJson.yhteensa} ${merkki}, ${ajo.kesto} s${ajo.katkaistu ? ' (AIKAKATTO)' : ''}`);
     valmiit.push({ rivi, ajo, tuloste, tulosJson });
   }

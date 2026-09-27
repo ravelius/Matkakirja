@@ -2567,6 +2567,10 @@ export const NOSTOSYM_KUVAMERKIT = {
   meri: 'merkki-meri', historia: 'merkki-historia', kulttuuri: 'merkki-kulttuuri',
   ruoka: 'merkki-ruoka', kauppa: 'merkki-kauppa', tekniikka: 'merkki-tekniikka',
   merenkulku: 'merkki-merenkulku',
+  // LÖYDÖS 174b (Fable 26.9.2026): skandaali (kategoria huuto), eläimet ja
+  // historian hetket saivat omat merkkinsä samaan kaiverrustyyliin — ennen
+  // ne jäivät tyyppikuvakkeelle, natiivissa ruskeiksi läikiksi.
+  huuto: 'merkki-huuto', elain: 'merkki-elain', hetki: 'merkki-hetki',
 };
 /**
  * Kuvamerkin osoite kategorialle ja lajille, tai null jos tyypille ei ole

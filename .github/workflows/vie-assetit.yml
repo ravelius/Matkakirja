@@ -31,6 +31,7 @@ on:
           - aarteet
           - nostot
           - ihmeet
+          - maakunnat
           - kaikki
 
 permissions:
@@ -82,12 +83,16 @@ jobs:
         run: |
           set -euo pipefail
           node --input-type=module <<'SKRIPTI' > siirtolista.txt
+          import { existsSync } from 'node:fs';
           import { ASSET_KANSIOT } from './js/media.js';
           const valinta = process.env.KANSIO;
           const lajit = valinta === 'kaikki' ? Object.keys(ASSET_KANSIOT) : [valinta];
           for (const laji of lajit) {
             const kansio = ASSET_KANSIOT[laji];
             if (!kansio) throw new Error(`tuntematon laji: ${laji}`);
+            // "kaikki" ohittaa perheen, jolla ei ole repokansiota (esim. maakunnat, jonka kuvat voivat
+            // syntyä suoraan ämpäriin); nimetty perhe ilman kansiota kaatuu yhä seuraavassa vaiheessa.
+            if (valinta === 'kaikki' && !existsSync(kansio)) { console.error(`${laji}: ${kansio} puuttuu, ohitetaan`); continue; }
             console.log(`${laji}\t${kansio}`);
           }
           SKRIPTI
