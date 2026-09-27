@@ -28,7 +28,7 @@
  * joka commitoidaan. Vienti ei käytä verkkoa, joten sama lähde antaa
  * tavulleen saman offline.json:n.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
@@ -48,6 +48,10 @@ export const OFFLINE_LAHTEET = {
    * on siksi LISTA välejä, yksi kaupunkia kohti.
    * 26.9.2026: sarja 2026-09-26-pohja-20260926 (omistaja hyväksyi pohja 26:n myös natiiviin; kaikki 41 413
    * offline-laattaa tarkistettu ämpäristä). Ei skeemamuutosta, vain osoite ja koot.
+   * Skeema 1.51 (Fable 27.9.2026): Z10 samaan sarjaan kaikkien kokoelman kaupunkien ympärille (± 1°), TARKKA
+   * laattajoukko Karttasepän poltosta (tools/tee-pallolaatat.mjs kaupunkienLaatat, PR #3393) tiedostossa
+   * tools/vienti/pallo-z10.json ({ sarja, laatat: ["x/y", …] }). Maan rasteri[10] = lista välejä (rivien juoksut
+   * kaupungin laatikossa), joten jokainen väli on kokonaan poltettu. Ilman tiedostoa Z10 jää pois (maxzoom 9).
    */
   rasteri: {
     url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-26-pohja-20260926/{z}/{x}/{y}.jpg',
@@ -61,6 +65,21 @@ export const OFFLINE_LAHTEET = {
   },
 };
 const MERCATOR_MAX = 85.05112878;
+const PALLO_Z10 = join(TAMA, 'pallo-z10.json');
+/** Skeema 1.51: Karttasepän Z10-laattajoukko ("x/y") tai null. */
+function palloZ10() {
+  if (!existsSync(PALLO_Z10)) return null;
+  const d = JSON.parse(readFileSync(PALLO_Z10, 'utf8'));
+  if (!Array.isArray(d.laatat)) throw new Error('pallo-z10.json: laatat puuttuu');
+  return new Set(d.laatat);
+}
+const Z10 = palloZ10();
+if (Z10) {
+  OFFLINE_LAHTEET.rasteri.maxzoom = 10;
+  OFFLINE_LAHTEET.rasteri.kaupunkitaso.tasot = [9, 10];
+  OFFLINE_LAHTEET.rasteri.kaupunkitaso.z10 = { laatikkoAste: 1, kaupungit: 'kaikki kokoelman kaupungit', laattoja: Z10.size,
+    lahde: 'tools/vienti/pallo-z10.json (Karttaseppä, tools/tee-pallolaatat.mjs kaupunkienLaatat)' };
+}
 // Sama rajaus kuin tools/vienti/tarkista-media.mjs: linkit, säännöttömät
 // tiedostonimet ja ulkoiset kuva-, ääni- ja video-URLit (hahmotelmien
 // viitekuvat, lähdelinkit) eivät ole pelin omaa mediaa.
@@ -165,7 +184,7 @@ function kaupunkitasonValit(kaupungit, taso) {
     if (c.tyyppi !== 'kaupunki' || !c.maa || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) continue;
     const b = kaupunginLaatikko(c.lon, c.lat, taso.sadeKm);
     if (!maat.has(c.maa)) maat.set(c.maa, new Map());
-    for (const z of taso.tasot) {
+    for (const z of taso.tasot.filter((t) => t !== 10)) {
       const x0 = rajaa(xyzX(b.w, z), z); const x1 = rajaa(xyzX(b.e, z), z);
       const y0 = rajaa(xyzY(b.n, z), z); const y1 = rajaa(xyzY(b.s, z), z);
       const m = maat.get(c.maa);
@@ -175,6 +194,32 @@ function kaupunkitasonValit(kaupungit, taso) {
     }
   }
   return maat;
+}
+
+/**
+ * Skeema 1.51: Z10-välit maittain. Kaupungin laatikon (± laatikkoAste) poltetut laatat riveittäin juoksuiksi
+ * [x0, y, x1, y]; sama laatta voi kuulua kahden maan kaupungille (laatat lasketaan tavuihin maittain kerran).
+ */
+function syvanTasonValit(kaupungit, maat, syva, joukko) {
+  for (const c of kaupungit) {
+    if (!c.maa || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) continue;
+    const a = syva.laatikkoAste;
+    const x0 = rajaa(xyzX(Math.max(-180, c.lon - a), 10), 10); const x1 = rajaa(xyzX(Math.min(180, c.lon + a), 10), 10);
+    const y0 = rajaa(xyzY(Math.min(MERCATOR_MAX, c.lat + a), 10), 10); const y1 = rajaa(xyzY(Math.max(-MERCATOR_MAX, c.lat - a), 10), 10);
+    if (!maat.has(c.maa)) maat.set(c.maa, new Map());
+    const m = maat.get(c.maa);
+    if (!m.has(10)) m.set(10, { valit: [], laatat: new Set() });
+    const t = m.get(10);
+    for (let y = y0; y <= y1; y++) {
+      let alku = null;
+      for (let x = x0; x <= x1 + 1; x++) {
+        const on = x <= x1 && joukko.has(`${x}/${y}`) && !t.laatat.has(`${x}/${y}`);
+        if (on && alku === null) alku = x;
+        if (!on && alku !== null) { t.valit.push([alku, y, x - 1, y]); for (let k = alku; k < x; k++) t.laatat.add(`${k}/${y}`); alku = null; }
+      }
+    }
+    if (!t.valit.length) m.delete(10);
+  }
 }
 
 /** TMS EPSG:4326 -laatat (z0 = 2 × 1), rajattuna available-väleihin. */
@@ -335,7 +380,9 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
   }
 
   const kaupunkiKokoelma = tiedostot.get('kokoelmat/kaupungit.json');
-  const kaupunkiValit = kaupunkitasonValit(kaupunkiKokoelma ? JSON.parse(kaupunkiKokoelma).alkiot : [], R.kaupunkitaso);
+  const kaupunkiLista = kaupunkiKokoelma ? JSON.parse(kaupunkiKokoelma).alkiot : [];
+  const kaupunkiValit = kaupunkitasonValit(kaupunkiLista, R.kaupunkitaso);
+  if (Z10) syvanTasonValit(kaupunkiLista, kaupunkiValit, R.kaupunkitaso.z10, Z10);
   const maat = {};
   for (const [iso, maa] of Object.entries(countryShapes)) {
     if (!maa.renkaat?.length) continue;
