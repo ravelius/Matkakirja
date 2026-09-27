@@ -726,4 +726,144 @@ export const MAAKUNTIEN_PULU = {
       { q: "Miksi jalkapallon maailmanjärjestö FIFA pitää päämajaansa Zürichissä?", a: "FIFA perustettiin Pariisissa 1904, mutta se siirsi päämajansa Zürichiin jo 1930-luvulla, ja siellä se toimii yhä. Kaupungin vakaa pankki- ja liike-elämä sekä keskeinen sijainti Euroopassa ovat pitäneet monet kansainväliset järjestöt siellä vuosikymmenten ajan." },
     ],
   },
+  CZE: {
+    'Jihočeský': [
+      { q: "Miksi jouluna syödään juuri tästä alueesta tuotua karppia?", a: "Etelä-Böömin satojen lampien verkosto, joista suurin on 1500-luvulla kaivettu Rožmberkin lampi, on ollut vuosisatoja maan tärkein karpinkasvatusalue. Nykyään alue tuottaa valtaosan tšekkiläisten jouluateriaan päätyvistä karpeista." },
+      { q: "Mistä nimi 'Budweiser' oikeasti tulee?", a: "České Budějovicen saksankielinen nimi oli Budweis, ja kaupungille myönnettiin panimo-oikeudet jo 1265. Nimi levisi maailmalle oluen mukana, ja siitä riideltiin vuosikymmeniä amerikkalaisen Budweiser-panimon kanssa." },
+    ],
+    'Jihomoravský': [
+      { q: "Miksi Brnon Orloj-veistos pudottaa marmorikuulan puolelta päivin?", a: "Kuulaa pudottava mustan graniitin torni rakennettiin 2010 muistoksi siitä, kun Brno onnistui 1645 puolustautumaan ruotsalaisia vastaan – kaupunkitarinan mukaan kello ehti lyödä keskipäivää vasta yhdeltätoista, mikä huijasi hyökkääjät luopumaan. Nykyinen torni toistaa tempun leikkimielisesti joka päivä." },
+      { q: "Kuinka suuri Lednice-Valticen puistoalue oikein on?", a: "Liechtensteinin suvun 1700–1800-luvuilla rakentama linnojen, temppelien ja puistojen kokonaisuus kattaa lähes 200 neliökilometriä, ja se on Euroopan laajin yhtenäinen ihmisen suunnittelema maisema. Unesco lisäsi sen maailmanperintöluetteloon 1996." },
+    ],
+    'Karlovarský': [
+      { q: "Mitä ovat kylpylävieheet, joita Karlovy Varyssa myydään jokaisella kadulla?", a: "Lázeňské oplatky -kylpylävieheet ovat ohuita, makeita vaahtokeksejä, joita on paistettu kaupungissa 1800-luvulta lähtien lähdeveden juonnin välipalaksi. Ne myydään yhä tuoreina suoraan kadun kojuista, usein vielä lämpimänä." },
+      { q: "Miksi Dianan näkötornille kannattaa nousta funikkelilla?", a: "1900-luvun alussa rakennettu funikkeli vie kylpyläkaupungin yläpuolelle metsäiselle kummulle Dianan näkötornin juurelle, josta avautuu näkymä koko laaksoon ja sen kylpyläpylväikköihin. Matka funikkelilla kestää vain muutaman minuutin, mutta näkymä palkitsee." },
+    ],
+    'Královéhradecký': [
+      { q: "Mitä Kuksin patsaat oikeastaan esittävät?", a: "Kuvanveistäjä Matyáš Bernard Braun veisti 1700-luvun alussa kivestä sarjan hyveitä ja paheita kuvaavia allegorisia hahmoja entisen kylpylän puistoon. Patsaat seisovat yhä paikoillaan ja ovat yksi Keski-Euroopan merkittävimmistä barokkiveistossarjoista." },
+      { q: "Miksi Hradec Králové tunnetaan funktionalistisesta arkkitehtuurista?", a: "Arkkitehti Josef Gočár suunnitteli kaupungille 1920–30-luvuilla useita moderneja rakennuksia, ja kaupunkia on sittemmin kutsuttu 'tasavallan salongiksi' niiden ansiosta. Rakennukset ovat säilyneet ja houkuttelevat arkkitehtuurin ystäviä yhä." },
+    ],
+    'Liberecký': [
+      { q: "Miksi Liberecin eläintarha on erityinen?", a: "Vuonna 1919 perustettu Liberecin eläintarha on Tšekin vanhin, ja se on erikoistunut muun muassa harvinaisiin kissaeläimiin. Se sijaitsee kaupungin laidalla kävelymatkan päässä keskustasta." },
+      { q: "Mikä on Böömin paratiisi?", a: "Český ráj -alue rajautuu Liberecin seutuun ja on täynnä hiekkakivikallioita, kallioasutuksia ja linnanraunioita. Se oli 2005 ensimmäinen Unescon geopark-verkostoon hyväksytty alue Tšekissä." },
+    ],
+    'Moravskoslezský': [
+      { q: "Mistä Štramberkin 'korvat' ovat saaneet nimensä?", a: "Štramberské uši on kartionmuotoinen, kanelinmakuinen piparkakkuherkku, jonka muoto muistuttaa perinteen mukaan tataarien hyökkäyksen uhrien korvia 1200-luvulta. Herkkua paistetaan pienessä Štramberkin kaupungissa yhä käsin avotulella." },
+      { q: "Mikä on Colours of Ostrava?", a: "Vuodesta 2002 järjestetty Colours of Ostrava on kasvanut yhdeksi Keski-Euroopan suurimmista musiikkifestivaaleista, ja osa sen lavoista pystytetään suoraan entisen rautatehtaan teollisuusmaisemaan. Festivaali kerää vuosittain kymmeniätuhansia kävijöitä." },
+    ],
+    'Olomoucký': [
+      { q: "Miksi Olomoucin tähtitieteellinen kello näyttää erilaiselta kuin Prahan?", a: "Toisen maailmansodan lopulla vaurioitunut kello rakennettiin 1955 uudelleen sosialistisen realismin tyyliin, ja perinteisten pyhimysten tilalle tulivat urheilijoita ja työläisiä esittävät mosaiikkihahmot. Se on Euroopan ainoa laatuaan oleva tähtitieteellinen kello." },
+      { q: "Kuinka laaja Olomoucin vanhakaupunki oikein on?", a: "Olomoucin historiallinen keskusta on Prahan jälkeen maan toiseksi laajin suojeltu kaupunkialue. Torien, kirkkojen ja pylväiden tiiviys tekee siitä suositun kohteen, joka jää usein turistien reiteillä Prahan varjoon." },
+    ],
+    'Pardubický': [
+      { q: "Mikä tekee Taxis-ojasta niin pelätyn?", a: "Velká pardubická -esteratsastuksen Taxisin oja on syvä ja leveä vesieste, jonka yli monet hevoset ja ratsastajat ovat kaataneet radan koko historian ajan aina 1874 ensimmäisestä kilpailusta lähtien. Se on tehnyt kilpailusta yhden Euroopan pelätyimmistä esteradoista." },
+      { q: "Mistä Pardubicen perník-piparkakku tunnetaan?", a: "Kaupungissa on leivottu mausteista hunajaperníkkiä ainakin 1600-luvulta lähtien, ja perinne jatkuu yhä paikallisissa leipomoissa ja piparkakkumuseossa. Kanelin, neilikan ja hunajan sekoitus tekee siitä muista piparkakuista poikkeavan." },
+    ],
+    'Plzeňský': [
+      { q: "Mikä on Techmania?", a: "Plzeňin tiedekeskus Techmania toimii osittain entisen Škoda-tehtaan hallissa, ja siellä pääsee kokeilemaan satoja fysiikan ja tähtitieteen ilmiöitä käytännössä. Se avattiin 2008 osaksi kaupungin teollista perintöä." },
+      { q: "Kuinka pitkät kellarit Plzeňin oluttehtaan alla oikein kulkevat?", a: "Pilsner Urquellin panimon alla kulkee yhdeksän kilometriä historiallisia hiekkakivikäytäviä, joissa olutta kypsytettiin ennen jäähdytystekniikan keksimistä. Osa käytävistä on avoinna opastetuilla kierroksilla yhä nykyään." },
+    ],
+    Prague: [
+      { q: "Miksi John Lennon -muuri on täynnä graffiteja Prahassa?", a: "Kommunistihallinnon aikana nuoret maalasivat Lennonin kuvia ja rauhanaiheisia tekstejä muuriin vastarinnan merkkinä, vaikka viranomaiset maalasivat sen yhä uudelleen valkoiseksi. Muuri on säilynyt suosittuna graffitikohteena vallanvaihdon jälkeenkin." },
+      { q: "Miksi Prahan linna on Guinnessin ennätyskirjassa?", a: "Yli 570 metriä pitkänä kokonaisuutena Prahan linna on Guinnessin mukaan maailman suurin yhtenäinen muinainen linnoitusalue. Sen sisällä on kirkkoja, palatseja ja puutarhoja usealta eri vuosisadalta." },
+    ],
+    'Středočeský': [
+      { q: "Mitä Karlštejnin linnassa säilytettiin keskiajalla?", a: "Keisari Kaarle IV rakennutti linnan 1348 erityisesti valtakunnan kruununjalokivien ja pyhäinjäännösten turvasäilytystä varten. Kalleuksia vartioitiin useilla peräkkäisillä lukoilla ja avainten haltijoilla." },
+      { q: "Miksi Křivoklátin metsät ovat säilyneet niin koskemattomina?", a: "Alue oli vuosisatoja kuninkaiden yksityistä metsästysmaata, minkä ansiosta laajat vanhat metsät säästyivät hakkuilta. Nykyään Křivoklátsko on suojeltu Unescon biosfäärialue." },
+    ],
+    'Ústecký': [
+      { q: "Kuinka Mostin keskiaikainen kirkko siirrettiin syrjään avolouhokselta?", a: "Vuonna 1975 koko kivikirkko nostettiin erityisille raiteille ja siirrettiin 841 metrin matka hitaasti syrjään, jotta se säästyisi laajenevalta ruskohiilikaivokselta. Siirto ylitti aikanaan maailmanennätyksen siirretyn rakennuksen painossa." },
+      { q: "Mitä vanhoille avolouhoksille on tehty hiilenlouhinnan päätyttyä?", a: "Useita entisiä ruskohiilen avolouhoksia on täytetty vedellä ja muutettu virkistysjärviksi, kuten Milada-järvi lähellä Ústí nad Labemia. Uimarannat ja veneily ovat korvanneet kaivinkoneet samoilla alueilla." },
+    ],
+    'Vysočina': [
+      { q: "Mikä on Pelhřimovin ennätysfestivaali?", a: "Pieni Pelhřimovin kaupunki on järjestänyt 1994 lähtien vuosittaisen ennätysten festivaalin, jossa yritetään rikkoa Guinnessin ja paikallisia ennätyksiä kaikesta mahdollisesta. Kaupunkia kutsutaankin leikkimielisesti ennätysten pääkaupungiksi." },
+      { q: "Miksi bramborák on Vysočinan oma herkku?", a: "Karulla ylängöllä peruna on kasvanut viljaa varmemmin, ja siitä valmistettu maustettu perunaletty bramborák on alueen tunnetuin katuruoka. Sitä myydään yhä toreilla ja kahviloissa ympäri Vysočinaa." },
+    ],
+    'Zlínský': [
+      { q: "Miksi Zlínissä järjestetään lastenelokuvafestivaalia?", a: "Zlín Film Festival on järjestetty vuodesta 1961, ja se on yksi maailman vanhimmista lasten- ja nuortenelokuville omistetuista festivaaleista. Baťan aikana kaupunkiin rakennettu elokuvastudio teki Zlínistä luonnollisen kodin tapahtumalle." },
+      { q: "Mikä on Baťan kanava?", a: "Baťův kanál on 1930-luvulla rakennettu jokikanava, joka yhdisti Zlínin tehtaat Tonavan vesireitteihin raaka-aineiden kuljetusta varten. Nykyään sillä risteilevät enää huvipurjehtijat ja matkailuveneet." },
+    ],
+  },
+  HUN: {
+    "Bács-Kiskun": [
+      { q: "Miksi Kecskemét tunnetaan aprikoosipaloviinasta?", a: "Kecskemét on Unkarin kuuluisin barackpálinka- eli aprikoosipaloviinakaupunki: hedelmätarhat ympäröivät kaupunkia, ja perinteinen tislaustaito on osa kaupungin identiteettiä yhä nykyäänkin." },
+      { q: "Kuka kuuluisa säveltäjä syntyi Kecskemétissä?", a: "Säveltäjä ja musiikkikasvattaja Zoltán Kodály syntyi Kecskemétissä 1882, ja hänen mukaansa on nimetty maailmalla tunnettu Kodály-menetelmä, jota käytetään musiikin opetuksessa yhä ympäri maailmaa." },
+    ],
+    "Baranya": [
+      { q: "Mistä Pécs tunnetaan keramiikkamaailmassa?", a: "Pécsissä on toiminut 1850-luvulta lähtien Zsolnay-posliinitehdas, joka kehitti kuuluisan eosin-lasitteen – metallinhohtoisen, sateenkaaren väreissä hohtavan pinnan, joka teki tehtaasta maailmankuulun 1800-luvun lopulla." },
+      { q: "Mitä Zsolnay-tehtaan jäljiltä näkyy Pécsin katukuvassa yhä?", a: "Zsolnay-posliinitehtaan värikkäät keramiikkakoristeet peittävät useiden Pécsin rakennusten kattoja ja julkisivuja, ja tehtaan vanha alue toimii nykyään kulttuurikorttelina täynnä museoita ja työpajoja." },
+    ],
+    "Békés": [
+      { q: "Mikä tekee Gyulan linnasta ainutlaatuisen Euroopassa?", a: "Gyulan linna on Keski-Euroopan ainoa säilynyt keskiaikainen tiililinna alavalla maalla: se rakennettiin 1400-luvun alussa tammipaalujen päälle suohon, ja kaksi alkuperäistä paalua on jopa säilynyt tutkijoiden nähtäväksi." },
+      { q: "Miten kauan Gyulan linna oli turkkilaisten hallussa?", a: "Vuonna 1566 yhdeksän viikkoa kestäneen piirityksen jälkeen Gyulan linna joutui turkkilaisten haltuun peräti 129 vuodeksi. Nykyään sen 24 näyttelysalissa pääsee tutustumaan lähes seitsemän vuosisadan historiaan." },
+    ],
+    "Borsod-Abaúj-Zemplén": [
+      { q: "Mikä piilee Aggtelekin maan alla?", a: "Aggtelekin Baradla-luola on osa yli 25 kilometrin pituista luolajärjestelmää, joka ulottuu Slovakian puolelle asti, ja koko alue julistettiin Unescon maailmanperintökohteeksi vuonna 1995." },
+      { q: "Kuinka pitkän matkan Baradla-luolassa voi kävellä?", a: "Aggtelekin ja Jósvafőn väliin jäävä pääkäytävä on 6,65 kilometriä pitkää tippukiviluolaa, ja alue tunnetaan yhtenä Euroopan merkittävimmistä karstialueista." },
+    ],
+    "Budapest": [
+      { q: "Miksi Budapestin metron 1-linja on erikoinen?", a: "Budapestin M1-metro avattiin 1896 ja on mantereisen Euroopan ensimmäinen maanalainen rautatie sekä maailman ensimmäinen sähkövetureilla kulkenut metro. Se rakennettiin muutamassa vuodessa valmiiksi vuosituhannen juhlavuoteen." },
+      { q: "Kuinka nopeasti alkuperäisellä metrolla pääsi perille?", a: "Vörösmartyn aukiolta Városligetiin kulkeva alkuperäinen reitti vei matkustajan perille vain kymmenessä minuutissa, mikä oli 1800-luvun lopulla huikean nopeaa." },
+    ],
+    "Csongrád": [
+      { q: "Mikä yhdistää Szegedin paprikaa Nobel-palkintoon?", a: "Szegedin tutkija Albert Szent-Györgyi eristi paprikasta C-vitamiinia ja sai löydöksestään lääketieteen Nobel-palkinnon 1937. Kansa alkoi tämän jälkeen kutsua palkintoa leikkimielisesti \"paprikapalkinnoksi\"." },
+      { q: "Miksi paprika sopi C-vitamiinin tutkimiseen paremmin kuin appelsiini?", a: "Paprikassa on runsaasti C-vitamiinia mutta vähemmän sokeria kuin monissa hedelmissä, joten vitamiinin eristäminen laboratoriossa oli helpompaa – pieni yksityiskohta, joka johti maailmanluokan löytöön Szegedissä." },
+    ],
+    "Fejér": [
+      { q: "Mikä salaisuus piilee Tácin peltojen alla?", a: "Tácin kylän liepeillä sijaitsee Gorsium, laaja roomalaiskaupungin raunioalue, jonka juuret ulottuvat 1. vuosisadalle. Paikka toimi aikanaan Pannonian keisarikultin ja maakuntakokousten keskuksena." },
+      { q: "Ketkä kävivät Gorsiumissa roomalaisaikaan?", a: "Gorsiumin kaduilla kulkivat aikanaan muun muassa keisarit Traianus, Septimius Severus ja Caracalla, ja kaivauksissa on paljastunut kylpylöitä, temppeleitä ja teatteri sata hehtaarin alueelta." },
+    ],
+    "Győr-Moson-Sopron": [
+      { q: "Miksi Sopronia kutsutaan \"leghűségesebb\" kaupungiksi?", a: "Vuoden 1921 kansanäänestyksessä sopronilaiset äänestivät Itävallan sijaan Unkarin puolesta, ja tästä uskollisuudesta kaupunki sai kunnianimen Civitas Fidelissima – uskollisin kaupunki." },
+      { q: "Mistä Uskollisuuden portti Sopronissa kertoo?", a: "Soproniin rakennettiin äänestyksen muistoksi niin kutsuttu Uskollisuuden portti osaksi 61 metriä korkeaa tulitornia, ja kaupungin liittäminen takaisin Unkariin astui voimaan tammikuussa 1922." },
+    ],
+    "Hajdú-Bihar": [
+      { q: "Miksi Debreceniä kutsutaan \"kalvinistiseksi Roomaksi\"?", a: "Debrecen muuttui 1500-luvun puolivälissä kokonaan protestanttiseksi kaupungiksi, ja siksi sitä on vuosisatoja kutsuttu leikkimielisesti kalvinistiseksi Roomaksi." },
+      { q: "Milloin Debrecenistä tuli Unkarin väliaikainen pääkaupunki?", a: "Debrecen toimi Unkarin pääkaupunkina kahdesti: vuonna 1849 vallankumouksen aikana, kun Kossuth julisti siellä Habsburgien vallan päättyneeksi, ja uudelleen vuonna 1944 sodan jälkimainingeissa." },
+    ],
+    "Heves": [
+      { q: "Mikä yllättävä rakennus Egerin keskustassa muistuttaa turkkilaisvallasta?", a: "Egerin minareetti on Ottomaanien valtakunnan pohjoisin säilynyt muistomerkki Euroopassa. Se rakennettiin 91 vuotta kestäneen turkkilaisvallan aikana, ja sen 98 porrasta johtaa 26 metrin korkeuteen." },
+      { q: "Montako minareettia Egerissä oli aikanaan?", a: "Turkkilaiskaudella Egeriin pystytettiin kaikkiaan kymmenen minareettia, mutta ajan saatossa niistä on säilynyt jäljellä vain tämä yksi ainoa." },
+    ],
+    "Jász-Nagykun-Szolnok": [
+      { q: "Mikä legendaarinen esine löytyy Jászberényn museosta?", a: "Jászberényn Jász-museossa säilytetään Lehel-torvea, koristeellista norsunluutorvea, joka liitetään legendaariseen sotapäällikkö Lehelin tarinaan ja joka on todennäköisesti peräisin 900–1100-luvuilta." },
+      { q: "Mistä jászit, alueen väestö, alunperin polveutuvat?", a: "Jászit olivat alunperin iranilaista alkuperää oleva kansanryhmä, jotka asettuivat Unkarin Alföldille 1200-luvulla, ja torvi on kasvanut heidän yhteisönsä yhtenäisyyden symboliksi." },
+    ],
+    "Komárom-Esztergom": [
+      { q: "Missä Unkarin ensimmäinen kuningas Pyhä István perimätiedon mukaan syntyi?", a: "Vanhojen legendojen mukaan Unkarin valtion perustaja, kuningas Pyhä István, syntyi Esztergomin linnassa noin 970-luvulla, vaikka tarkkaa syntymäpaikkaa ei historiantutkimuksessa voida täysin varmistaa." },
+      { q: "Mikä silta yhdistää Esztergomin Slovakiaan?", a: "Esztergomista pääsee Mária Valéria -sillan yli suoraan Slovakian puolelle Štúrovoon. Silta tuhoutui toisessa maailmansodassa, mutta se rakennettiin uudelleen ja avattiin vasta vuonna 2001." },
+    ],
+    "Nógrád": [
+      { q: "Mitä ainutlaatuista löytyy Ipolytarnócin luonnonsuojelualueelta?", a: "Ipolytarnócista on löytynyt noin 17 miljoonan vuoden ikäisiä eläinten jalanjälkiä hiekkakiveen kivettyneinä, ja alue on yksi Euroopan tärkeimmistä paleontologisista löytöpaikoista." },
+      { q: "Kuinka suuri kivettynyt puu Ipolytarnócista on löytynyt?", a: "Yksi maailman suurimmista tunnetuista kivettyneistä puunrungoista löytyi Ipolytarnócista: sen ympärysmitta on noin 8 metriä ja alkuperäinen pituus arviolta lähes 100 metriä." },
+    ],
+    "Pest": [
+      { q: "Miksi Gödöllön linna oli keisarinna Sisin lempipaikka?", a: "Gödöllön kuninkaallinen linna annettiin häälahjaksi Ferenc Józsefille ja Erzsébetille (Sisille), ja Sisille se oli pako Wienin tiukoista hovietiketeistä sekä paikka, jossa hän sai ratsastaa vapaasti rakastamillaan hevosilla." },
+      { q: "Mikä väri liitetään Gödöllön linnassa Sisin muistoon?", a: "Sisin huoneiden seinät maalattiin hänen lempivärillään, violetilla, ja violetti kukka liitetään yhä hänen muistoonsa linnan kävijöiden mielissä." },
+    ],
+    "Somogy": [
+      { q: "Missä sijaitsee yksi Euroopan ensimmäisistä tähtitaivaspuistoista?", a: "Somogyn Zselicin alueella sijaitseva Zselici Csillagpark sai kansainvälisen pimeän taivaan puiston nimityksen vuonna 2009 – ensimmäisenä koko Euroopassa, yhdessä Skotlannin Gallowayn puiston kanssa." },
+      { q: "Mikä tekee Zselicin yötaivaasta erityisen?", a: "Zselicin metsäalueella on niin vähän valosaastetta, että kesäisin linnunrata näkyy paikan päällä paljain silmin, ja alueella voi osallistua opastettuihin tähtienkatselukierroksiin." },
+    ],
+    "Szabolcs-Szatmár-Bereg": [
+      { q: "Kuka rakennutti Nyírbátorin komean goottilaisen kirkon?", a: "Erdélyin vojvodi Báthori István rakennutti Nyírbátoriin minoriittakirkon 1400-luvun lopulla lupauksensa mukaisesti voitettuaan turkkilaiset Kenyérmezőn taistelussa, ja hänet haudattiin kirkkoon vuonna 1493." },
+      { q: "Mitä erikoista Nyírbátorin kirkoissa on kaksi kappaletta?", a: "Báthori István rakennutti kiitollisuudesta peräti kaksi myöhäisgoottilaista kirkkoa Nyírbátoriin samaan aikaan, ja molemmat lasketaan Unkarin merkittävimpiin goottilaisen arkkitehtuurin muistomerkkeihin." },
+    ],
+    "Tolna": [
+      { q: "Mistä viinilajikkeesta Szekszárd on kuuluisa?", a: "Szekszárdin viinialueen tunnusomainen rypäle on kadarka, jonka toivat alueelle Turkkia paenneet serbit. Viinialue palkittiin arvonimellä \"Viinin ja rypäleen kaupunki\" vuonna 1987." },
+      { q: "Mikä punaviini yhdistää kadarkaa ja kékfrankosia Szekszárdissa?", a: "Szekszárdin Bikavér on paikallinen punaviinikuutio, jonka pohjana on kadarka ja kékfrankos täydennettynä muilla tummilla rypälelajikkeilla, ja se on yksi alueen tunnetuimmista vienneistä." },
+    ],
+    "Vas": [
+      { q: "Miksi pieni Kőszeg piti puolensa sulttaani Suleimania vastaan?", a: "Vuonna 1532 Kőszegin linnankapteeni Jurisics Miklós puolusti kaupunkia vain noin 46 sotilaan ja 700 pakolaistalonpojan voimin sulttaani Suleimanin valtavaa armeijaa vastaan peräti 25 päivän ajan." },
+      { q: "Miksi Kőszegin kellot soivat yhä keskellä päivää?", a: "Piirityksen lopussa sulttaani tarjosi Jurisicsille mahdollisuuden säilyttää linna, kunhan tämä nostaisi symbolisesti Ottomaanien lipun. Turkkilaiset vetäytyivät kello 11, ja tapahtumaa muistetaan Kőszegissä kellonsoitolla joka päivä samaan aikaan." },
+    ],
+    "Veszprém": [
+      { q: "Mikä muinainen asiakirja kirjoitettiin Tihanyssa vuonna 1055?", a: "Tihanyn luostarin perustamiskirja vuodelta 1055 sisältää 58 unkarinkielistä sanaa latinankielisen tekstin seassa, ja sitä pidetään vanhimpana säilyneenä unkarin kielen kirjallisena todisteena." },
+      { q: "Millaisia sanoja perustamiskirjasta löytyy?", a: "Asiakirjasta löytyvät muun muassa unkarin sanojen \"fa\" (puu), \"kút\" (kaivo) ja \"vár\" (linna) varhaisimmat kirjatut muodot, minkä ansiosta se on kielihistorioitsijoille aarreaitta." },
+    ],
+    "Zala": [
+      { q: "Missä sijaitsee Unkarin öljyteollisuuden kehto?", a: "Bázakerettyen kylän lähellä alkoi vuonna 1937 geologi Simon Pappin johdolla Unkarin ensimmäinen teollisen mittakaavan öljynporaus, kun Budafa-2-kaivo alkoi tuottaa raakaöljyä." },
+      { q: "Kuinka paljon öljyä ensimmäinen kaivo tuotti päivässä?", a: "Budafa-2-kaivo tuotti alkuun noin 62–65 kuutiometriä öljyä päivässä, ja ensimmäinen öljyjuna lähti Bázakerettyeltä Budapestiin joulukuussa 1937." },
+    ],
+  },
 };

@@ -5201,6 +5201,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CZE: {
     'Jihočeský': {
       lyhyt: 'Český Krumlovin linnan barokkiteatterissa on säilynyt alkuperäinen puinen lavakoneisto kulisseineen, harvinaisuus koko Euroopassa.',
+      pitka: `Hluboká nad Vltavou -linna kohoaa Vltavan mutkan yllä valkoisena satulinnana, joka näyttää lainatulta Englannista — eikä se ole sattumaa. Schwarzenbergin ruhtinassuku muutti keskiaikaisen linnan perinpohjin uusgoottilaiseksi 1841–1871 esikuvanaan Windsorin linna, ja työ valmistui vain kaksi vuotta ennen isoisän 1873 matkaa: hän olisi voinut nähdä muurit yhä tuoreina, kivipölyn tuskin ehdittyä laantua. Nykyään linna on Tšekin suosituimpia nähtävyyksiä, ja Etelä-Böömin lammikkoverkosto — 1500-luvulla kaivettu Rožmberkin lampi suurimpana — tuottaa yhä valtaosan maan joulukarpeista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihocesky-8d22070f.jpg",
@@ -5215,6 +5216,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Jihomoravský': {
       lyhyt: 'Brnon Tugendhatin huvila valmistui 1930 Mies van der Rohen piirustuksista, ja sen olohuoneen suuret ikkunat voi laskea lattian alle.',
+      pitka: `Slavkov u Brnan tasangolla, vain lyhyen matkan Brnosta, Napoleon murskasi joulukuun toisena päivänä 1805 Venäjän ja Itävallan yhdistetyn armeijan taistelussa, jota historia muistaa Austerlitzin nimellä. Isoisän kulkiessa seudun ohi 1873 taistelusta oli ehtinyt kulua 68 vuotta, ja pelloilla ei ollut yhtäkään muistomerkkiä — Rauhan kumpu, joka nykyään kohoaa taistelupaikan yllä, pystytettiin vasta 1900-luvun alussa. Nykyään Etelä-Moravia tunnetaan ennen kaikkea viinistä: Lednice-Valticen linnojen ja puistojen kokonaisuus on Euroopan suurin ihmisen muotoilema maisemapuisto ja Unescon maailmanperintöä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihomoravsky-aeb03b9d.jpg",
@@ -5229,6 +5231,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Karlovarský': {
       lyhyt: 'Karlovy Varyn kuumin lähde Vřídlo suihkuaa yli 70-asteista vettä, ja kylpylävieraat juovat lähdevettä nokallisista posliinikupeista.',
+      pitka: `Karlovy Vary eli isoisän 1873 matkan aikaan kylpyläkulta-aikaansa: Euroopan aatelisto, kirjailijat ja säveltäjät saapuivat kesäisin juomaan vettä ja verkostoitumaan, ja kaupungin vanhin suurhotelli Pupp isännöi vierainaan sekä hallitsijoita että taiteilijoita vuosikymmenten ajan. Puiset lähdekäytävät korvattiin myöhemmin kivestä ja valuraudasta tehdyillä pylväiköillä, mutta 1870-luvulla vieraat kävelivät yhä vaatimattomamman katoksen alla. Nykyään kaupunki tunnetaan myös Becherovka-yrttilikööristä, jonka apteekkari Josef Vitus Becher kehitti 1807, ja heinäkuisesta kansainvälisestä elokuvajuhlasta, joka on järjestetty vuodesta 1946.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-karlovarsky-b32666cf.jpg",
@@ -5243,6 +5246,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Královéhradecký': {
       lyhyt: 'Krkonošen Sněžka on 1 603 metrillään Tšekin korkein vuori, ja sen huipun poikki kulkee raja Puolaan.',
+      pitka: `Vain seitsemän vuotta ennen isoisän 1873 matkaa Hradec Králové oli yhden 1800-luvun Euroopan suurimmista yksipäiväisistä taisteluista näyttämö: Preussin ja Itävallan armeijat kohtasivat sen pelloilla heinäkuussa 1866, ja taistelu ratkaisi lopulta koko Saksan yhdistymisen suunnan preussilaisittain. Isoisän kulkiessa seudulla arvet olivat yhä tuoreet, ja monet paikalliset perheet muistivat sodan omakohtaisesti. Alueella on myös vanhempaa historiaa: Kuksin kylässä barokkitaiteilija Matyáš Bernard Braun veisti 1700-luvulla kivestä hyveitä ja paheita esittävät patsaat, jotka seisovat siellä yhä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-kralovehradecky-152c1d3d.jpg",
@@ -5257,6 +5261,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Liberecký': {
       lyhyt: 'Ještědin huipulla seisoo 1973 valmistunut suppilomainen torni, jossa on sekä televisiolähetin että hotelli ja ravintola.',
+      pitka: `Liberecin seutua kutsuttiin 1800-luvulla Böömin Manchesteriksi, koska laakson täyttivät villa- ja pellavakehruumot ja niiden savupiiput — isoisän matkan aikaan 1873 alue oli koko Habsburgien valtakunnan johtava tekstiiliteollisuuden keskus, ja moni kylä eli täysin yhden tehtaan tahdissa. Pohjoisempana Nový Bor jatkoi jo satojen vuosien mittaista lasinpuhaltajien perinnettään, joka jatkuu edelleen ja tuottaa lasikoristeita ympäri maailman. Ještědin huipun suppilomainen televisiotorni, jonka lyhyt-teksti mainitsee, valmistui vasta sata vuotta isoisän matkan jälkeen.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-liberecky-513d415c.jpg",
@@ -5271,6 +5276,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Moravskoslezský': {
       lyhyt: 'Ostravan Dolní Vítkovicessa masuunit sammuivat 1998, ja nyt yhden niistä huipulle pääsee kiipeämään näköalapaikalle.',
+      pitka: `Vítkovicen rautatehdas oli isoisän matkan aikaan 1873 jo neljännesvuosisadan ikäinen ja täydessä vauhdissa: se perustettiin 1828, ja 1843 sen ostivat itävaltalais-juutalaiseen Rothschildin sukuun kuuluneet pankkiirit, jotka rakensivat siitä yhden Habsburgien valtakunnan suurimmista rauta- ja teräslaitoksista. Ostrava kasvoi tehtaan ja sitä ympäröivien hiilikaivosten ympärille lähes tyhjästä, ja savupiippujen ja kaivostornien maisema muistutti isoisän aikana enemmän Ruhrin aluetta kuin maalaista Böömiä. Nykyään sammuneet masuunit ovat kulttuurikohde, ja alueen entinen kaasukello on konserttisali, jossa järjestetään myös Colours of Ostrava -musiikkifestivaalia.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-moravskoslezsky-86919ccd.jpg",
@@ -5285,6 +5291,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Olomoucký': {
       lyhyt: 'Olomoucin torilla kohoaa barokkinen Pyhän Kolminaisuuden pylväs, joka on Unescon maailmanperintöä ja kätkee jalustaansa pienen kappelin.',
+      pitka: `Isoisän kulkiessa Olomoucin läpi 1873 kaupunki oli yhä raskaasti linnoitettu Itävallan sotalaitos: muurit ja bastionit olivat kiristäneet kaupungin kasvua vuosisatojen ajan, ja siviilirakentaminen pääsi vapautumaan vasta 1886, kun linnoitusstatus lopulta purettiin. Sitä ennen Olomouc oli tunnettu myös nuoren Franz Josefin kruunauspaikkana — hänet julistettiin Itävallan keisariksi kaupungissa 1848, vain 25 vuotta ennen isoisän vierailua. Nykyään Olomoucin vanhakaupunki on Prahan jälkeen maan laajin historiallinen keskusta, ja alueella valmistetaan yhä ainoaa alkuperäistä tšekkiläistä juustolaatua, voimakastuoksuista tvarůžky-rahkajuustoa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-olomoucky-4a6930cb.jpg",
@@ -5299,6 +5306,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Pardubický': {
       lyhyt: 'Pardubicessa juostaan joka lokakuu Velká pardubická, yksi Euroopan rankimmista estelaukoista, ja sen pelätyin este on Taxis-oja.',
+      pitka: `Pardubicen kuuluisin este­lauku, Velká pardubická, juostiin ensimmäisen kerran vasta 1874 — vuosi isoisän 1873 matkan jälkeen, niin että hän ehti nähdä radan ja Taxis-ojan vain tyhjänä, ilman yhtäkään hevosta yli hyppäämässä. Kaupunki oli isoisän aikaan tunnettu ennen kaikkea perinkeitosta: paikalliset leipurit olivat valmistaneet mausteista Pardubicen perník-piparkakkua ainakin 1500-luvulta lähtien, ja perinne on säilynyt katkeamatta tähän päivään. Renessanssiaikainen Pernštejnin sukukartano hallitsee yhä kaupungin toria, muistona suvusta, joka rakensi seudun vaurauden kalanviljelyllä ja kaupalla 1400–1500-luvuilla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-pardubicky-b550be81.jpg",
@@ -5313,6 +5321,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Plzeňský': {
       lyhyt: 'Plzeňissä pantiin 1842 ensimmäinen vaalea pohjahiivaolut, ja sen mukaan pils-oluet saivat nimensä ympäri maailman.',
+      pitka: `Vain neljä vuotta ennen isoisän 1873 matkaa insinööri Emil Škoda otti 1869 haltuunsa pienen konepajan Plzeňissä — yrityksen, joka kasvoi vuosikymmenten aikana yhdeksi Habsburgien valtakunnan ja sitten koko Euroopan suurimmista kone- ja asetehtaista. Isoisän aikaan Škodan tehdas oli vielä vaatimaton verstas, ei suinkaan se teollisuusjätti, joksi siitä pian tuli. Kaupungin toinen kuuluisuus, vaalea pohjahiivaolut, oli tuolloin jo kolmisenkymmentä vuotta vanha keksintö, ja sen suosio levisi 1800-luvun loppua kohti niin laajalle, että "pils" tuli tarkoittamaan lähes mitä tahansa vaaleaa lageria ympäri maailman.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-plzensky-99a6a1c6.jpg",
@@ -5326,6 +5335,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Prague: {
       lyhyt: 'Petřínin kukkulalla seisoo 1891 rakennettu näkötorni, Eiffel-tornin pienempi sukulainen, jonka huipulle noustaan 299 askelmaa.',
+      pitka: `Isoisän kulkiessa Prahan halki 1873 kaupungin ylpeys, Kansallisteatteri, oli vielä rakennustyömaa: peruskivi muurattiin juhlallisesti 1868 kymmenillä eri puolilta Böömiä tuoduilla kivilohkareilla, ja rakennus valmistui vasta 1881 — palaen samana vuonna piakkoin uudelleen ja avautuen lopullisesti 1883. Isoisä olisi siis voinut nähdä telineiden ja muurien nousevan Vltavan rannalla, ei valmista teatteria. Vanhassakaupungissa Orloj-tähtitieteellinen kello oli isoisän aikaan jo yli 460-vuotias, sen alkuperäiset osat ajalta 1410, ja se näytti aikaa yhtä uskollisesti kuin nykyään.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-prague-013aff3e.jpg",
@@ -5340,6 +5350,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Středočeský': {
       lyhyt: 'Kutná Horan Sedlecin luukappelin kattokruunu ja koristeet on koottu kymmenientuhansien vainajien luista.',
+      pitka: `Karlštejnin linna, jonka keisari Kaarle IV rakennutti 1348 säilyttääkseen siellä valtakunnan kruununjalokivet, näytti isoisän vieraillessa seudulla 1873 yhä pitkälti keskiaikaiselta: sen suuri uusgoottilainen kunnostus, joka antoi linnalle nykyisen jyrkkäharjaisen ilmeen, käynnistyi vasta 1887 arkkitehti Josef Mockerin johdolla. Lähempänä Prahaa sijaitseva Křivoklátin metsästyslinna oli vuosisatoja kuningasten yksityistä metsästysmaata, ja sen laajat metsät ovat säilyneet suojeltuina biosfäärialueena tähän päivään. Böömin sydänmailla, Kutná Horassa, hopeakaivokset olivat isoisän aikaan hiipuneet, mutta 1300-luvulla ne olivat tehneet kaupungista koko valtakunnan rikkaimman.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-stredocesky-fa02cbcb.jpg",
@@ -5354,6 +5365,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ústecký': {
       lyhyt: 'Böömin Sveitsin kansallispuistossa kohoaa Pravčická brána, Euroopan suurin luonnon muovaama hiekkakivikaari.',
+      pitka: `Pohjois-Böömin ruskohiiliallas oli isoisän 1873 matkan aikaan juuri kiihtymässä valtakunnan yhdeksi tärkeimmistä teollisuusalueista: kaivokset syvenivät ja rautatiet uusiutuivat vuosikymmen toisensa jälkeen, kun hiili ruokki koko Habsburgien valtakunnan tehtaita ja rautateitä. Sata vuotta myöhemmin, 1975, Mostin kaupungin keskiaikainen tiilinen kirkko siirrettiin kokonaisena 841 metrin matkan raiteilla syrjään, kun avolouhos uhkasi niellä sen alleen — insinöörityö, joka aikanaan ylitti maailmanennätyksen siirretyn rakennuksen painossa. Nykyään monet vanhat avolouhokset on täytetty vedellä ja muutettu virkistysjärviksi, kun taas hiekkakivimaisemat Böömin Sveitsissä ovat pysyneet koskemattomina.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-ustecky-707b1990.jpg",
@@ -5368,6 +5380,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vysočina': {
       lyhyt: 'Telčin pitkää toria reunustavat renessanssitalot pastellisävyisine päätyineen, ja koko vanha keskusta on Unescon maailmanperintöä.',
+      pitka: `Žďár nad Sázavoun lähellä kohoaa Zelená horan pyhiinvaelluskirkko, jonka arkkitehti Jan Blažej Santini-Aichel suunnitteli 1719–1722 tähdenmuotoiseksi kunnianosoitukseksi Pyhälle Johannes Nepomukille — isoisän kulkiessa ohi 1873 rakennus oli jo 150-vuotias ja pyhiinvaellusperinne juurtunut syvälle seudun elämään. Vysočinan ylängöllä eletään harvaan asutulla, karulla seudulla, jossa perunat ja hapankaali ovat perinteisesti korvanneet vehnän, koska vuoristoinen maaperä ei ole antanut viljaa yhtä helposti kuin muualla Böömissä. Nykyään ylängön kylmät talvet ja kukkulat tekevät siitä myös maan johtavan hiihtoseudun: Nové Město na Moravěn stadion isännöi säännöllisesti ampumahiihdon ja maastohiihdon maailmancupin osakilpailuja.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-vysocina-edd869b3.jpg",
@@ -5382,6 +5395,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Zlínský': {
       lyhyt: 'Zlín on Baťan kenkätehtaan kaupunki, ja sen pilvenpiirtäjässä johtajan työhuone oli hissi, joka liikkui kerroksesta toiseen.',
+      pitka: `Isoisän kulkiessa Zlínin läpi 1873 kaupunki oli vain vaatimaton maalaispitäjä muutaman tuhannen asukkaan kylineen — mitään ei enteillyt tulevaa. Tomáš Baťa, joka kolme vuotta myöhemmin, 1876, syntyi paikallisen suutariperheen lapseksi, perusti kenkätehtaansa vasta 1894, ja koko kaupunki rakennettiin uudelleen 1920–30-luvuilla funktionalistiseksi "puutarhakaupungiksi" tehtaan ympärille. Vuoristoisessa Valašskon alueella oli isoisän aikaan sen sijaan jo pitkät perinteet paimentolaiskarjataloudessa ja puurakentamisessa, joita Rožnov pod Radhoštěmin ulkoilmamuseo — Keski-Euroopan vanhin, perustettu 1925 — esittelee tänä päivänä alkuperäisissä hirsirakennuksissa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-zlinsky-6fc888e8.jpg",
