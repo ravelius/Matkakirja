@@ -8199,3 +8199,7 @@ Omistaja 27.9.2026 klo 13.4x: kaikissa generoiduissa kuvissa kaytetaan sanamuoto
 ## OMISTAJA (SITOVA, RAAMATTUUN): VAIN EUROOPPA, KUNNES OMISTAJA TOTEAA SEN VALMIIKSI (27.9.2026 klo 13.53)
 
 Omistaja 27.9.2026 klo 13.5x: tehdaan nyt pelkkaa Eurooppaa, ei mitaan muuta; vasta kun Eurooppa on omistajan mielesta valmis, siirrytaan muihin maanosiin. Raamattuun uusi Ydinajatus-rivi VAIN EUROOPPA + CLAUDE.md-viite (PR #3416, Julkaisijan junaan). Sisaltokirjurin Lahi-ita-, Novosibirsk- ja 0/0-kaupunkierat pysaytetty; tilalle Euroopan ohuimmat kaupungit ja maat. Kaikille rooleille ilmoitettu.
+
+## OMISTAJA: MEREN LAATUTASO ERA 1 HYVAKSYTTY (9a2a60c1), PURJEET RAMPISSA, HAALISTUMISKYNNYS ENNALLAAN; LOPUT 7 LAJIA HETI (27.9.2026 klo 15.09)
+
+Kortti 14.2x (kuvaparit meri-laatu-{merilaiva,purjelaiva,valas}-ennen-jalkeen.png): uusi MeriMalli-varjostin (B-seepiaramppi, kaiverrusreuna, aariviiva, vesikerros), LOD0 2 911/2 520/2 655, 0,005–0,03 ms/laji → 1.0.30-junaan; purjeet seepia + kaiverrus; elavat elementit haalistuvat 450–600 km:ssa kuten nyt; loput 7 lajia samalla tyylilla. Muut: muutosloki-natiivi v225 (29 rivia, uusin 1.0.29); Sisaltokirjuri #3419 (Valletta 2 juttua + MLT/LUX 2 skandaalia), Lappi/Sisilia/Kreeta uusi lehtiaihe, historian hetket havainnekuvatilauksella.
