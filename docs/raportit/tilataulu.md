@@ -2,25 +2,25 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 22:59 EEST
+**Päivitetty:** 2026-09-27 23:11 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **86 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Linssiseppä 71% — hieman yli, tiedossa (nollaus erä 5:n jälkeen).
+Viikko (all models) **87 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **UUSI: Sisältökirjuri 72% — YLI.** Linssiseppä 72% jatkaa nousua, tiedossa.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 62% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 56% | running |
-| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 47% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 61% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 28% | idle |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 65% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 58% | running |
+| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 48% | running |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 68% | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 31% | idle |
 | Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 26% | idle |
-| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 71% — tiedossa, nollaus tulossa | idle |
+| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 72% — jatkaa nousua, tiedossa | idle |
 | Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 61% | idle |
 | Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 28% | running |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 68% | running |
-| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 29% | running |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | **72% — YLI, uusi ilmoitus** | running |
+| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 35% | running |
 
 ## 1a) YÖTAUKO klo 22.30 alkaen (Fable 21:4x, sitova)
 
@@ -64,14 +64,14 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (22:59)
+## 5) Resurssit (23:11)
 
-- **5 h -kiintiö:** 8 %. **Viikko (kaikki mallit):** 86 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 72 Gi vapaana (vakaa). wt/-worktreet 32 kpl.
-- **Muistipaine:** normal (1). **Load average 156.90/87.48/82.01** — 1min-piikki, 5/15min alempana, Karttasepän polton normaalia vaihtelua. **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 2.
-- **MOLEMMAT LIPUT NYT ASETETTU:** `/tmp/matkakirja-julkaisu` (22:55) ja `/tmp/matkakirja-juna-tauko` (22:50, "Karttasepän yöpoltto 27.–28.9.") — juna on virallisesti tauolla, kaikki havaitut raskaat prosessit (Chrome/Python vb_vaiheet.py, cwd karttaseppa-poltto) ovat Karttasepän oman poltton osia. Ei toimenpidettä.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** Linssiseppä 71%, tiedossa. Sisältökirjuri 68% lähellä.
-- **Juna:** tauolla (lippu asetettu 22:50).
+- **5 h -kiintiö:** 13 %. **Viikko (kaikki mallit):** 87 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 79 Gi vapaana (nousi 72→79). wt/-worktreet 32 kpl.
+- **Muistipaine:** normal (1). **Load average laskenut edelleen: 36.41/82.32/99.35.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 3 (iPhone 18 Pro, natiiviseppa-iPhone, iPhone 17).
+- **Liput:** `/tmp/matkakirja-julkaisu` POISTETTU (julkaisu valmistui) — 20 min ikäinen, alle 90 min raja. `/tmp/matkakirja-juna-tauko` yhä päällä (21 min, "Karttasepän yöpoltto").
+- **Konteksti (kynnys Fable 65%/roolit 70%):** **Sisältökirjuri 72% — YLI, uusi.** Linssiseppä 72% jatkaa nousua (tiedossa, nollaus tulossa). Natiiviseppä 68% lähellä.
+- **Juna:** tauolla.
 - **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
