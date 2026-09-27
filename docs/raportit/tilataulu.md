@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 00:09 EEST
+**Päivitetty:** 2026-09-28 00:21 EEST
 
 ## 1) Sessiot
 
@@ -77,9 +77,10 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - **5 h -kiintiö:** 33 %. **Viikko (kaikki mallit): 93 % — kynnys ylittyi, ilmoitettu Fablelle.** **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
 - **Levy:** 89 Gi vapaana (nousi 76→89). wt/-worktreet 27 kpl.
 - **Muistipaine:** normal (1). **Load average matala: 22.89/24.36/25.80.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 1.
-- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` päällä **79 min — lähestyy 90 min rajaa (00:20)**, seurataan tarkasti.
+- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (00:19, uusi julkaisu — striimiluenta). `/tmp/matkakirja-juna-tauko` PÄÄLLÄ **91 min — YLITTI 90 min rajan (00:20)**, ilmoitettu Fablelle 00:21 (polton/junan hälytysrajana).
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
-- **Juna:** tauolla, poltto jatkuu (omistajan 23.58 -ohjeen mukaisesti).
+- **Juna:** tauolla 91 min, poltto+julkaisu käynnissä.
+- **Karttasepän vahti-PID 85590 elossa, aja.out ei muuttunut (ei "2 koodi 0").**
 - **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
