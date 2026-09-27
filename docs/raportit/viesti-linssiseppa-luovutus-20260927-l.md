@@ -40,6 +40,13 @@ Jos sait nollauksen jälkeen vanhoja viestejä tai agenttien raportteja, ne kuul
    unity-tarkistus + Linssit-testit → käännös → ajo VAIHEET 1 2 9 MALLIT=$'brugge-belfry BEL 51.2089 3.224\nmatterhorn CHE
    45.9775 7.658\nhohensalzburg AUT 47.7956 13.046' → koosta_era2.py (lisää ODOTETTU-rivit) → Fablelle → merge-pyyntö.
 
+3. **LÄHITASO (omistaja 08.0x Fablen kautta):** lähizoomiin kolmas taso, LOD0 × 3–5 kolmiota ja tarkemmat yksityiskohdat
+   (kivien saumat, kaiteet, ikkunat), näkyy vain lähellä; Natiiviseppä tekee rajapinnan (1.0.29). ENSIN kuvaparit keski vs lähi,
+   lähikuva 45° ja 55°, kulma + versio kuvaan: Colosseum, Mont-Saint-Michel ja kaari → omistajan tarkastus → sitten loput.
+   Agentit (Opus, taustalla 08.0x): tyokalut/mallinseppa-esikatselu-g/ (ColosseumLahi(), MontSaintMichelLahi(),
+   kuvat/<avain>-lahitaso*.png) ja tyokalut/kategoria-esikatselu-h/ (KaariLahi(), esikatselu-kaari-lahitaso*.png).
+   → kuvaparit Fablelle; hyväksynnän jälkeen Lahi-verkot haaroihin, kun Natiivisepän rajapinta (Erikoismalli.Lahi?) on tiedossa.
+
 ## TYÖKALUT (proto-3d/tyokalut/linssiseppa-ajot/)
 
 - kaanna-jono.sh <nimi> "<haara+haara>" (.app → $S/<nimi>-app); ajo-mallit.sh VAIHEET: 1 käynnistys, 2 erikoismallit (MALLIT),
