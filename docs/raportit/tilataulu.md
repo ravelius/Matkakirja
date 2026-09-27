@@ -26,6 +26,8 @@ Viikko (all models) **42 %** (nollautuu ma 28.9. klo 09:59), viikko (Fable) **76
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua).
 
+**LEVYVAHTI-SELVITYS (Fablen pyynnöstä 12:4x, kasvaja illan pallo-Z10-polttoa varten):** proto-3d/lokit 45G (aktiivinen, ei >48h-kandidaatteja), wt/ 36G/74 worktreeta (~5 Gt vanhoja kandidaatteja lähetetty rooleille: Natiiviseppä ~2G/16 kpl, Natiivi-UI ~350M/5 kpl, Pelikoodari ~1.2G/2 kpl, Sisältökirjuri ~1.0G/1 kpl, Julkaisija ~420M/1 kpl), CoreSimulator/Devices ~65G/21 laitetta (2 boottina, ~14 Gt tunnistamattomia UDID:eja → Julkaisijalle selvitettäväksi), Xcode DerivedData 9.8G (koskematon). Yksi rivi lähetetty Fablelle 12:4x. Baseline vertailua varten (12:4x): lokit 45G, wt 36G, CoreSimulator 65G, levy 113 Gi vapaana. Vertaan uudelleen ~13:1x.
+
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
 - **Levyraja 80 Gt.** Nykytila 113 Gi vapaana, laskee tasaisesti ~13 Gi/h (125→120→117→113), puskuri ~33 Gi. **Ilmoitettu Fablelle 12:42 (informatiivinen).** Ei toimenpidettä vielä.
