@@ -871,16 +871,68 @@ function vastaa(data, { status = 200, origin = null, sallitut = [] } = {}) {
  */
 const muisti = new Map();
 
+/*
+ * LASKURI EI KOSKAAN KAADA PYYNTÖÄ (Fable 27.9.2026 klo 18.3x: KV:n
+ * ilmaistason päiväkiintiöstä 1 000 kirjoitusta oli käytetty 544, ja
+ * ylityksen jälkeen kv.put heittää — luenta ja chat olisivat kaatuneet).
+ * Luku- tai kirjoitusvirhe kirjataan ja pudotaan muistivaraan, kuten
+ * ilman KV:tä. Raja pitää silloin isolaatin sisällä; palvelu jatkuu.
+ */
 async function lueLaskuri(kv, avain) {
-  if (kv) return Number.parseInt((await kv.get(avain)) ?? '0', 10) || 0;
+  if (kv) {
+    try {
+      return Number.parseInt((await kv.get(avain)) ?? '0', 10) || 0;
+    } catch (virhe) {
+      console.log(`pollo: laskurin luku epäonnistui (${avain}), muistivara: ${virhe?.message ?? virhe}`);
+    }
+  }
   return muisti.get(avain) ?? 0;
 }
 
 async function kasvataLaskuri(kv, avain, elinaikaS, maara = 1) {
   const arvo = (await lueLaskuri(kv, avain)) + maara;
-  if (kv) await kv.put(avain, String(arvo), { expirationTtl: elinaikaS });
-  else muisti.set(avain, arvo);
+  muisti.set(avain, arvo);
+  if (kv) {
+    try {
+      await kv.put(avain, String(arvo), { expirationTtl: elinaikaS });
+    } catch (virhe) {
+      console.log(`pollo: laskurin kirjoitus epäonnistui (${avain}), muistivara: ${virhe?.message ?? virhe}`);
+    }
+  }
   return arvo;
+}
+
+/*
+ * HARVA LASKURI (sama korjaus): kuukauden puhemerkit ovat yksi yhteinen
+ * avain, ja jokainen generoitu pala kirjoitti sen. Kasvu kerätään
+ * isolaatin muistiin ja kirjoitetaan KV:hen vasta, kun kertymä on
+ * HARVA_KYNNYS merkkiä tai HARVA_VALI_MS on kulunut. Luku lisää
+ * kirjoittamattoman kertymän, joten raja näkee oman isolaatin kulutuksen
+ * heti; isolaatin kuolema voi hukata enintään kynnyksen verran — raja on
+ * kustannusvahti, ei kirjanpito.
+ */
+const HARVA_KYNNYS = 5000;
+const HARVA_VALI_MS = 10 * 60 * 1000;
+const harvaKertyma = new Map(); // avain → { maara, viimeksi }
+
+async function lueHarvaLaskuri(kv, avain) {
+  return (await lueLaskuri(kv, avain)) + (harvaKertyma.get(avain)?.maara ?? 0);
+}
+
+async function kasvataHarvaLaskuri(kv, avain, elinaikaS, maara, { kynnys = HARVA_KYNNYS, nyt = Date.now() } = {}) {
+  const k = harvaKertyma.get(avain) ?? { maara: 0, viimeksi: nyt };
+  k.maara += maara;
+  harvaKertyma.set(avain, k);
+  if (!kv) { muisti.set(avain, (muisti.get(avain) ?? 0) + k.maara); harvaKertyma.delete(avain); return; }
+  if (k.maara < kynnys && nyt - k.viimeksi < HARVA_VALI_MS) return;
+  harvaKertyma.delete(avain);
+  await kasvataLaskuri(kv, avain, elinaikaS, k.maara);
+}
+
+/** Testien koukku: muistilaskurit tyhjiksi. */
+export function nollaaLaskurit() {
+  muisti.clear();
+  harvaKertyma.clear();
 }
 
 /* ------------------------------------------------------------------ */
@@ -1132,7 +1184,9 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   }
 
   // Rajat lasketaan merkkeinä (ks. rajat.js). Kehittäjäkoodi ohittaa
-  // rajat mutta laskurit kasvavat silti — sama käytäntö kuin chatissa.
+  // rajat eikä kirjoita IP:n päivälaskuria (Fable 27.9.2026: yksi KV-
+  // kirjoitus per pala, kehittäjä ei kuluta kiintiötä turhaan); kuukauden
+  // kustannusvahti kasvaa kaikilla, harvana (kasvataHarvaLaskuri).
   const kv = env.POLLO_KV ?? null;
   const nyt = new Date();
   const pAvain = puhePaivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
@@ -1140,15 +1194,15 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const kehittaja = kehittajaOhitus(pyynto, env);
   const raja = kehittaja ? { ok: true } : tarkistaPuheRajat({
     paiva: await lueLaskuri(kv, pAvain),
-    kuukausi: await lueLaskuri(kv, kAvain),
+    kuukausi: await lueHarvaLaskuri(kv, kAvain),
     paivaraja: lueLuku(env.PUHE_PAIVARAJA, PUHE_PAIVARAJA_OLETUS),
     kuukausiraja: lueLuku(env.PUHE_KUUKAUSIRAJA, PUHE_KUUKAUSIRAJA_OLETUS),
   });
   if (!raja.ok) {
     return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
   }
-  await kasvataLaskuri(kv, pAvain, 60 * 60 * 30, teksti.length);
-  await kasvataLaskuri(kv, kAvain, 60 * 60 * 24 * 40, teksti.length);
+  if (!kehittaja) await kasvataLaskuri(kv, pAvain, 60 * 60 * 30, teksti.length);
+  await kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, teksti.length);
 
   try {
     let ylavirta;
@@ -2008,7 +2062,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
   const kAvain = kuukausiAvain(nyt);
   const raja = kehittajaOhitus(pyynto, env) ? { ok: true } : tarkistaRajat({
     paiva: await lueLaskuri(kv, pAvain),
-    kuukausi: await lueLaskuri(kv, kAvain),
+    kuukausi: await lueHarvaLaskuri(kv, kAvain),
     paivaraja: lueLuku(env.POLLO_PAIVARAJA, PAIVARAJA_OLETUS),
     kuukausiraja: lueLuku(env.POLLO_KUUKAUSIRAJA, KUUKAUSIRAJA_OLETUS),
   });
@@ -2016,7 +2070,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
     return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
   }
   await kasvataLaskuri(kv, pAvain, 60 * 60 * 30);
-  await kasvataLaskuri(kv, kAvain, 60 * 60 * 24 * 40);
+  await kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 });
 
   try {
     const teksti = await kysyMallilta(env, {
@@ -2139,7 +2193,7 @@ export default {
     const kehittaja = kehittajaOhitus(pyynto, env);
     const raja = kehittaja ? { ok: true } : tarkistaRajat({
       paiva: await lueLaskuri(kv, pAvain),
-      kuukausi: await lueLaskuri(kv, kAvain),
+      kuukausi: await lueHarvaLaskuri(kv, kAvain),
       paivaraja: lueLuku(env.POLLO_PAIVARAJA, PAIVARAJA_OLETUS),
       kuukausiraja: lueLuku(env.POLLO_KUUKAUSIRAJA, KUUKAUSIRAJA_OLETUS),
     });
@@ -2148,7 +2202,7 @@ export default {
     }
     // Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
     await kasvataLaskuri(kv, pAvain, 60 * 60 * 30);
-    await kasvataLaskuri(kv, kAvain, 60 * 60 * 24 * 40);
+    await kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 });
 
     // --- kutsu -------------------------------------------------------
     try {
