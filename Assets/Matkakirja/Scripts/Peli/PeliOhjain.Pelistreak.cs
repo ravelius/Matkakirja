@@ -30,19 +30,22 @@ namespace Matkakirja.Natiivi
         /// <summary>Vuorossa olevan pelaajan pelipäiväputki (Paiva 'yyyy-MM-dd', Pituus) tai null.</summary>
         public StreakTila PelistreakNyt => matka?.Tila.Pelaaja.Streak;
 
-        /// <summary>Kukkaroleiman syy seuraavaan IlmoitaRahaan (putken otsikko), muuten null.</summary>
-        string streakSyy;
+        /// <summary>
+        /// Putken palkkio, jota kukkaroleima EI näytä (web: pelistreak on yksi 'rahat'-toast, ei stamp-leimaa;
+        /// Natiivi-UI 27.9.: kupla + leima olivat kaksi ilmoitusta samasta asiasta). IlmoitaRaha vähentää sen muutoksesta.
+        /// </summary>
+        int streakPalkkio;
         /// <summary>Viimeisin putken lokirivi: ei kelpaa teon omaksi punta-riviksi (IlmoitaRaha).</summary>
         string streakRivi;
 
         void KytkePelistreak(Matka m)
         {
-            streakSyy = null;
+            streakPalkkio = 0;
             streakRivi = null;
             m.Pelistreak += (p, pituus, otsikko, ala) =>
             {
                 if (m != matka) return;
-                streakSyy = otsikko;
+                if (p == m.Tila.Pelaaja) streakPalkkio += Streak.Palkkio(pituus);
                 streakRivi = Streak.Lokirivi(pituus);
                 Debug.Log($"MATKAKIRJA peli: pelistreak {pituus} päivää, {ala}");
                 try { Pelistreak?.Invoke(pituus, otsikko, ala); } catch (Exception e) { Debug.LogException(e); }

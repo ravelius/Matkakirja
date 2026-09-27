@@ -85,17 +85,19 @@ namespace Matkakirja.Peli
             var d = new Dictionary<string, Hintataso>(System.StringComparer.Ordinal);
             foreach (var m in new[]
             {
-                "AUS", "AUT", "BEL", "CAN", "CHE", "DEU", "DNK", "FIN", "FRA", "GBR", "GRL", "HKG",
-                "IRL", "ISL", "JPN", "KOR", "KWT", "LUX", "NLD", "NOR", "NZL", "QAT", "SGP", "SWE",
-                "USA", "ARE",
+                "ARE", "AUS", "AUT", "BEL", "BMU", "CAN", "CHE", "CYP", "DEU", "DNK", "FIN", "FRA",
+                "GBR", "GRL", "HKG", "IRL", "ISL", "ITA", "JPN", "KOR", "KWT", "LUX", "MLT", "NLD",
+                "NOR", "NZL", "PRI", "QAT", "SAU", "SGP", "SWE", "USA",
             }) d[m] = Hintataso.Kallis;
             foreach (var m in new[]
             {
-                "AFG", "BOL", "CMR", "COD", "COL", "DZA", "EGY", "ETH", "GHA", "GTM",
-                "IDN", "IND", "IRN", "IRQ", "KAZ", "KEN", "LBR", "LKA", "MAR", "MDG",
-                "MLI", "MMR", "MNG", "MOZ", "NIC", "NPL", "PAK", "PHL", "PRY", "SDN",
-                "SDS", "SEN", "SLE", "SOM", "SYR", "TCD", "THA", "TUN", "TUR", "TZA",
-                "UGA", "UKR", "UZB", "VEN", "VNM", "YEM", "ZWE",
+                "AFG", "AGO", "ARG", "BGR", "BIH", "BOL", "BRA", "CHL", "CHN", "CMR", "COD", "COL",
+                "CUB", "DZA", "ECU", "EGY", "EST", "ETH", "FJI", "GHA", "GTM", "IDN", "IND", "IRN",
+                "IRQ", "JOR", "KAZ", "KEN", "LBR", "LBY", "LKA", "LTU", "LVA", "MAR", "MDG", "MEX",
+                "MLI", "MMR", "MNG", "MOZ", "NAM", "NGA", "NIC", "NPL", "PAK", "PER", "PHL", "PNG",
+                "PRY", "ROU", "RUS", "SDN", "SDS", "SEN", "SLB", "SLE", "SOM", "SYR", "TCD", "THA",
+                "TLS", "TUN", "TUR", "TZA", "UGA", "UKR", "UZB", "VEN", "VNM", "VUT", "YEM", "ZAF",
+                "ZWE",
             }) d[m] = Hintataso.Edullinen;
             return d;
         }
