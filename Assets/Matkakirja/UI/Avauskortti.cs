@@ -355,8 +355,10 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        /// <summary>Web: linkki aina, kun lehden avaus on tarjolla (ui.avaaTutkinta); kaupungin Lehti-lippu latautuu
+        /// kaupunkikohtaisesti myöhässä (UiSisalto.LataaLehti), joten sitä ei odoteta.</summary>
         void PaivitaLehtilinkki(KaupunkiTiedot k) =>
-            lehtiNappi.style.display = toiminnot?.LueLehti != null && k != null && k.Lehti ? DisplayStyle.Flex : DisplayStyle.None;
+            lehtiNappi.style.display = toiminnot?.LueLehti != null ? DisplayStyle.Flex : DisplayStyle.None;
 
         /// <summary>Web avauskortinHero: avauskuvista ensimmäinen, muuten kansikuvista (ei julistetta).</summary>
         void TaytaHero(KaupunkiTiedot k)
