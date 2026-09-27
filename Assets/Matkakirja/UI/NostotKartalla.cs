@@ -63,6 +63,41 @@ namespace Matkakirja.Natiivi
         /// Ele = lukko tuli eleen aikana (web syy 'ele'). Lukko vapautuu levossa, kun nosto ei ole enää näkyvissä.
         /// </summary>
         sealed class Lukko { public string Kylki; public bool Nakyy, Ele; }
+
+        // VAKAUS (omistajan löydös 1.0.32, Ateena: nostojen nimiöt välkkyivät): näkyvyyden vaihto vaatii, että uusi tila
+        // on jatkunut VaihtoS sekuntia (aikahystereesi noston id:n mukaan, koska merkit kierrätetään indeksillä). Näkyvä
+        // nimiö tai merkki pysyy näkyvissä lyhyen peiton yli, piilossa oleva palaa vasta vakaasti vapaana (lisäksi
+        // tilahystereesi Hystereesi px). Vireillä oleva vaihto ratkeaa ajastetulla arvioinnilla levossakin.
+        const float VaihtoS = 0.35f;
+        readonly Dictionary<string, float> nimionVaihto = new Dictionary<string, float>();
+        readonly Dictionary<string, float> peitonVaihto = new Dictionary<string, float>();
+        /// <summary>Kalusteen/mallin peiton näytetty tila noston id:n mukaan (puuttuva = uusi merkki: tila heti).</summary>
+        readonly Dictionary<string, bool> peittotila = new Dictionary<string, bool>();
+        IVisualElementScheduledItem uusiArvio;
+
+        /// <summary>
+        /// Aikahystereesi: palauttaa tilan, joka näytetään. nyky = näytetty tila, haluttu = tämän arvion tulos. Vaihto
+        /// hyväksytään vasta, kun haluttu on pysynyt VaihtoS; siihen asti nyky ja uusi arvio ajastetaan.
+        /// </summary>
+        bool Vakaa(Dictionary<string, float> vaihdot, string id, bool nyky, bool haluttu)
+        {
+            if (id == null || nyky == haluttu) { if (id != null) vaihdot.Remove(id); return haluttu; }
+            float nyt = Time.unscaledTime;
+            if (!vaihdot.TryGetValue(id, out var alku)) { vaihdot[id] = nyt; AjastaArvio(); return nyky; }
+            if (nyt - alku < VaihtoS) { AjastaArvio(); return nyky; }
+            vaihdot.Remove(id);
+            return haluttu;
+        }
+
+        void AjastaArvio()
+        {
+            if (uusiArvio != null) return;
+            uusiArvio = juuri.schedule.Execute(() =>
+            {
+                uusiArvio = null;
+                if (lepoKierto == null || lepoKierto.Levossa) Paivita();
+            }).StartingIn((long)(VaihtoS * 1000f) + 30);
+        }
         readonly Dictionary<string, Lukko> lukot = new Dictionary<string, Lukko>();
         /// <summary>Web SOVITTELUN_NAKYVYYSVARA_PX: lukittu laatikko tämän varan sisällä ruudusta pitää kylkensä.</summary>
         const float NakyvyysVara = 16f;
@@ -432,6 +467,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PeitaMallienAlta(int n)
         {
+            bool levossa = lepoKierto == null || lepoKierto.Levossa;
             KalusteetPaneeliin();
             mallienPisteet.Clear();
             for (int i = 0; i < n; i++)
@@ -445,15 +481,24 @@ namespace Matkakirja.Natiivi
             {
                 var m = merkit[i];
                 bool peitossa = false;
+                // Vakaus: jo peitossa oleva merkki palaa vasta, kun piste on Hystereesi px:n päässä peittävästä alueesta.
+                bool ennen = false;
+                bool tunnettu = m.Id != null && peittotila.TryGetValue(m.Id, out ennen);
+                float v = ennen ? Hystereesi : 0f;
                 if (mallienPisteet.Count > 0 && m.Loydetty != true && m.Ryhma == null && !Symbolimallit.OnMalli(m.Id))
                     foreach (var (p, koko) in mallienPisteet)
                     {
                         var d = m.Piste - p;
-                        if (Mathf.Abs(d.x) < koko * 0.5f && d.y > -koko * 0.85f && d.y < koko * 0.3f) { peitossa = true; break; }
+                        if (Mathf.Abs(d.x) < koko * 0.5f + v && d.y > -koko * 0.85f - v && d.y < koko * 0.3f + v) { peitossa = true; break; }
                     }
                 // Löydös 167 (Laitetestaaja b23): kalusteen (pulu, kartussi, Liiku, yläpalkki) alle jäävä merkki piiloon
                 // kuten 164:n kaupunkipisteet (natiivin parannus, web ei tee tätä).
-                if (!peitossa) foreach (var r in kalusteRuudut) if (r.Contains(m.Piste)) { peitossa = true; break; }
+                if (!peitossa) foreach (var r in kalusteRuudut)
+                        if (new Rect(r.x - v, r.y - v, r.width + 2f * v, r.height + 2f * v).Contains(m.Piste)) { peitossa = true; break; }
+                // Aikahystereesi vain levossa ja tunnetulle merkille: liikkeessä ja ensi näkymällä tila heti.
+                if (tunnettu && levossa) peitossa = Vakaa(peitonVaihto, m.Id, ennen, peitossa);
+                else if (m.Id != null) peitonVaihto.Remove(m.Id);
+                if (m.Id != null) peittotila[m.Id] = peitossa;
                 float peitto = peitossa ? 0f : 1f - m.Usva;
                 if (m.El.style.opacity.value != peitto) m.El.style.opacity = peitto;
                 var poiminta = peitossa || vainNimet ? PickingMode.Ignore : PickingMode.Position;
@@ -571,6 +616,7 @@ namespace Matkakirja.Natiivi
                         if (vapaa && !m.Kiintea)
                             for (int i = 0; i < n && vapaa; i++) if (merkit[i] != m && ikonit[i].Overlaps(av)) vapaa = false;
                         m.Kylki = lukko.Kylki;
+                        vapaa = Vakaa(nimionVaihto, m.Id, lukko.Nakyy, vapaa);
                         m.NimioNakyy = vapaa;
                         if (vapaa) { varatut.Add(a0); AsetaNimio(m); }
                         m.Nimio.style.opacity = vapaa ? 1f : 0f;
