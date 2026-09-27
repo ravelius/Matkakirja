@@ -89,14 +89,36 @@ export function tallennaPuheAsetukset(asetukset) {
  * 27.9. klo 00.25); tämä lista on workerin XAI_AANET-taulun NÄYTTÖKOPIO
  * (tools/pollo/worker.js) — tests/puheohjeet.test.mjs valvoo, että ne
  * ovat samat. Valinta tallentuu samaan laitekohtaiseen persoonatauluun
- * kuin työhuoneen säädöt (kaikille kolmelle persoonalle kerralla), ja
- * worker tottelee sitä vain kehittäjäkoodilla kuten muitakin säätöjä.
+ * kuin työhuoneen säädöt (kaikille kolmelle persoonalle kerralla).
+ * 27.9.2026 klo 09.3x (omistaja): valinta on pelaajan — nostokortin
+ * säätörattaassa (js/lukija.js), ei enää kehittäjävalikossa — ja worker
+ * tottelee listan ääntä ilman kehittäjäkoodia.
  */
 export const STRIIMIAANET_XAI = ['altair', 'ara', 'atlas', 'aurora', 'carina', 'castor',
   'celeste', 'cosmo', 'eve', 'helios', 'helix', 'iris', 'kepler', 'leo',
   'liora', 'lumen', 'luna', 'lux', 'naksh', 'orion', 'perseus', 'rex',
   'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
 export const STRIIMIAANI_OLETUS = 'ara';
+
+/*
+ * ÄÄNTEN PELINIMET (omistaja 27.9.2026 klo 10.2x, sitova): pelaaja näkee
+ * vain pelinimen — moottorin äänitunnus pysyy sisäisenä (pyyntö, worker,
+ * välimuistiavain). Yksi taulu, tests/lukija.test.mjs valvoo, että
+ * jokainen STRIIMIAANET_XAI-ääni on nimetty. Järjestys on valikon järjestys.
+ */
+export const AANTEN_PELINIMET = {
+  ara: 'Aino', aurora: 'Aamu', carina: 'Kerttu', celeste: 'Siiri', eve: 'Helmi',
+  iris: 'Ilta', liora: 'Lyyli', luna: 'Vieno', ursa: 'Saima',
+  altair: 'Aarne', atlas: 'Antero', castor: 'Kalle', cosmo: 'Kosti', helios: 'Heikki',
+  helix: 'Herman', kepler: 'Kaarlo', leo: 'Lauri', lumen: 'Lassi', lux: 'Luukas',
+  naksh: 'Niilo', orion: 'Onni', perseus: 'Pekka', rex: 'Reino', rigel: 'Risto',
+  sal: 'Sulo', sirius: 'Simo', zagan: 'Sakari', zenith: 'Väinö',
+};
+
+/** Äänitunnuksen pelinimi (tuntematon → oletusäänen nimi). */
+export function aanenPelinimi(aani) {
+  return AANTEN_PELINIMET[aani] ?? AANTEN_PELINIMET[STRIIMIAANI_OLETUS];
+}
 const STRIIMIN_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
 
 /** Kehittäjän valitsema xAI-striimiääni, tai null = workerin oletus (ara). */
@@ -503,9 +525,9 @@ const NOPEUS_AVAIN = 'matkakirja-puhe-nopeus';
  * (nopeusTunniste), joten vanhalla 1,0-nopeudella generoidut palat
  * eivät enää osu — puhe generoituu uudelleen ensikuuntelulla.
  */
-const NOPEUS_OLETUS = 1.15;
-const NOPEUS_MIN = 0.6;
-const NOPEUS_MAX = 1.6;
+export const NOPEUS_OLETUS = 1.15;
+export const NOPEUS_MIN = 0.6;
+export const NOPEUS_MAX = 1.6;
 
 /** Lukijaäänen nopeus (1 = normaali). */
 export function puheenNopeus() {
@@ -569,6 +591,12 @@ function virtaKaytossa() {
   return true;
 }
 
+/** Lukijaäänen analysaattori (VU-mittari), tai null ennen kuin piiri on kytketty. */
+let vuAnalysaattori = null;
+export function puheMittari() {
+  return vuAnalysaattori;
+}
+
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
 function kytkeVahvistin() {
   if (kytketty || typeof window === 'undefined') return;
@@ -605,7 +633,20 @@ function kytkeVahvistin() {
       kompressori.release.value = 0.25;
       for (const lahde of lahteet) lahde.connect(vahvistin);
       vahvistin.connect(kompressori);
-      kompressori.connect(piiri.destination);
+      /*
+       * VU-MITTARI (nostokortin luenta, omistaja 27.9.2026 klo 09.3x):
+       * analysaattori kompressorin ja kaiuttimien välissä näkee kaiken
+       * lukijaäänen juuri sellaisena kuin se kuuluu (js/kaiutinmittari.js).
+       */
+      try {
+        vuAnalysaattori = piiri.createAnalyser();
+        vuAnalysaattori.fftSize = 512;
+        kompressori.connect(vuAnalysaattori);
+        vuAnalysaattori.connect(piiri.destination);
+      } catch {
+        vuAnalysaattori = null;
+        kompressori.connect(piiri.destination);
+      }
       kytketty = true;
     } catch { /* elementti oli jo kytketty tai piiri kuoli */ }
   };
@@ -1009,6 +1050,8 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number,
  *     teksti: string|null, alku: number}) => void,
  *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
+ *   aloitusAlku?: number merkkikohta aloituskappaleessa: soitto alkaa
+ *     palasta, joka sisältää kohdan (keskeytetyn luennan jatko, onTila.alku)
  *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
  *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
  *   yksiPuheenvuoro?: boolean kaikki lisätty teksti on yhtä kappaletta
@@ -1026,7 +1069,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false,
+  aloitusKappale = 0, aloitusAlku = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
@@ -1506,8 +1549,16 @@ export function luoPuheSoitin({
        * ensimmäistäkään aikataulutusta jono kelataan pyydetyn
        * kappaleen alkuun.
        */
-      if (aloitusKappale > 0 && !tila.kaynnissa && vuorossa === 0) {
-        const indeksi = palat.findIndex((p) => p.kappale === aloitusKappale);
+      if ((aloitusKappale > 0 || aloitusAlku > 0) && !tila.kaynnissa && vuorossa === 0) {
+        let indeksi = palat.findIndex((p) => p.kappale === aloitusKappale);
+        /*
+         * JATKO SAMASTA KOHDASTA (omistaja 27.9.2026 klo 09.3x): keskeytetty
+         * luenta jatkuu siitä palasta, jonka alku on viimeksi kuullussa
+         * kohdassa — ei kappaleen alusta.
+         */
+        for (let i = indeksi; i >= 0 && i < palat.length && palat[i].kappale === aloitusKappale; i += 1) {
+          if (palat[i].alku <= aloitusAlku) indeksi = i;
+        }
         if (indeksi > 0) vuorossa = indeksi;
       }
       if (!tila.kaynnissa) kaynnista();

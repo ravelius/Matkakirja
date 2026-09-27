@@ -588,3 +588,49 @@ test('puheen 429/5xx pysäyttää luennan ja näyttää workerin viestin kerran'
   assert.match(lukija, /if \(ilmoitetutPuhevirheet\.has\(syy\)\) return;/);
   assert.match(ui, /addEventListener\?\.\(PUHEVIRHE_TAPAHTUMA/);
 });
+
+/*
+ * NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x): kaiutin
+ * keskeyttää ja jatkaa samasta kohdasta, keskeytettynä se vilkkuu,
+ * vasemmalla säätöratas (nopeus + xAI-ääni), oikealla VU-mittari.
+ */
+test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () => {
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
+  const tyyli = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  // Kortin napautus kulkee kortinPainallus-polkua: tauko ↔ jatka, ei paneelia.
+  assert.match(lukija, /if \(nappi\.__lukijaKortti\) \{\s*kortinPainallus\(nappi, isanta\);/);
+  assert.match(lukija, /if \(soitin\.tauolla\(\)\) soitin\.jatka\(\);\s*else soitin\.tauko\(\);/);
+  assert.match(lukija, /if \(alkoi && !nappi\.__lukijaKortti\) avaaOhjain\(isanta, nappi\);/);
+  // Katkennut luenta jättää kohdan napille, ja uusi luenta alkaa siitä.
+  assert.match(lukija, /ajossa = null;\s*talletaKortinKohta\(nyt\);/);
+  assert.match(lukija, /aloitusAlku: jatkoKohta\?\.alku \?\? 0/);
+  assert.match(puhe, /if \(palat\[i\]\.alku <= aloitusAlku\) indeksi = i;/);
+  // Luettu loppuun: seuraava kerta alusta.
+  assert.match(lukija, /unohdaKortinKohta\(nappi\);/);
+  // Vilkunta vain läpinäkyvyydellä, liike vähennettynä ei animaatiota.
+  assert.match(tyyli, /button\.lukija-nappi\.keskeytetty \{ animation: lukija-keskeytetty/);
+  assert.match(tyyli, /@keyframes lukija-keskeytetty \{\s*0%, 100% \{ opacity: 1; \}\s*50% \{ opacity: 0\.4; \}/);
+  // Ratas: nopeus ja ääni; äänivalinta ei enää kehittäjävalikossa.
+  assert.match(lukija, /asetaPuheenNopeus\(liuku\.value\)/);
+  assert.match(lukija, /asetaStriimiaani\(valinta\.value \|\| null\)/);
+  assert.doesNotMatch(html, /id="kehittaja-striimiaani"/);
+  // VU kaiuttimessa itsessään kuten isoisän luennassa: kolme kaarta, oma mittari, lukijaäänen analysaattori.
+  assert.equal((lukija.match(/class="kaiutin-kaari" data-kaari="\d"/g) ?? []).length, 3);
+  assert.match(lukija, /kortinVu\.kaynnista\(nappi, puheMittari\)/);
+  assert.doesNotMatch(lukija, /lukija-vu/);
+  assert.match(tyyli, /\.lukija-saatimin > button\.lukija-nappi\.lukee \.kaiutin-kaari\.palaa \{ opacity: 1; \}/);
+  assert.match(puhe, /kompressori\.connect\(vuAnalysaattori\);\s*vuAnalysaattori\.connect\(piiri\.destination\);/);
+});
+
+test('lukijan äänillä on pelinimet: jokainen moottorin ääni nimetty, tunnus ei näy valikossa', async () => {
+  const { AANTEN_PELINIMET, STRIIMIAANET_XAI, STRIIMIAANI_OLETUS, aanenPelinimi } = await import('../js/puhe.js');
+  assert.deepEqual(Object.keys(AANTEN_PELINIMET).sort(), [...STRIIMIAANET_XAI].sort(), 'kaikki 28 ääntä nimetty');
+  assert.equal(new Set(Object.values(AANTEN_PELINIMET)).size, STRIIMIAANET_XAI.length, 'nimet ovat yksilöllisiä');
+  assert.equal(AANTEN_PELINIMET[STRIIMIAANI_OLETUS], 'Aino');
+  assert.equal(aanenPelinimi('tuntematon'), 'Aino');
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  assert.match(lukija, /vaihtoehto\(`\$\{AANTEN_PELINIMET\[STRIIMIAANI_OLETUS\]\} \(oletus\)`, ''\)/);
+  assert.match(lukija, /valinta\.append\(vaihtoehto\(nimi, aani\)\)/);
+});

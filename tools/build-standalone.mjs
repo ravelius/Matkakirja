@@ -607,6 +607,8 @@ const MODULES = [
    * Lukijaääni (js/puhe.js) on listalla jo aiemmin (ambience-
    * streamin tuonti), eli myös ennen lukijaa.
    */
+  'js/piirtokoe-asetus.js',
+  'js/kaiutinmittari.js',
   'js/lukija.js',
   /*
    * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen
@@ -843,13 +845,11 @@ const MODULES = [
    * kaiutinmittari tuo sen nyt voimassaOlevatKokeet-lukuun. Ei omia
    * riippuvuuksia, joten paikka muuten vapaa.
    */
-  'js/piirtokoe-asetus.js',
   /*
    * Kaiuttimen VU-mittari (15.9.2026): tuo nyt piirtokoe-asetuksen
    * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
    * joka tuo sen.
    */
-  'js/kaiutinmittari.js',
   'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin
