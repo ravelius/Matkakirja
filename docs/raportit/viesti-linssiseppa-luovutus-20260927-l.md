@@ -6,6 +6,24 @@ Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab. S = /private/tmp/claude
 74aa735c-cd53-4417-8c06-91819a4a5f3a/scratchpad (skriptit ottavat S:n ympäristöstä; päivitä polku uudessa sessiossa).
 Jos sait nollauksen jälkeen vanhoja viestejä tai agenttien raportteja, ne kuuluvat alla oleviin eriin.*
 
+## PÄIVITYS 08.4x (nollauksen jälkeinen keskustelu 1aa2bb77)
+
+- Uusi S = /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa/1aa2bb77-7b88-4b65-ad2c-19a8462dfde5/scratchpad
+  (vanhassa S:ssä yhä ajoskriptit ja .app-kopiot).
+- **Kaikki 8 agenttia kuolivat nollauksessa 07.58–08.04 ilman tuloksia** (vain keskeneräiset MeriPurjelaiva.cs ja
+  MeriDelfiinit.cs). Käynnistetty uudelleen 08.1x samoihin kansioihin (Opus, taustalla). Kehotteet ovat tiedostoissa
+  $S/kehotteet/{lahi-g,lahi-h,meri-a,meri-b,meri-c,brugge,matterhorn,hohensalzburg}.txt. Jos ne kuolevat taas,
+  käynnistä uudelleen samoilla kehotteilla ja lisää huomautus, että jatketaan keskeneräisestä.
+- **Kinderdijk v3** `mallinseppa/erikoismallit3` **29632e19** (juna/b13 1eff4f76:n päällä, worktree proto-mallinseppa):
+  v2 näkyi laitteella noin 35 pt:n "tikapuuna" (sama rajausvirhe: v2-kuvan yläreunan myllyt ovat elävän kartan
+  myllyt-elementti, EIVÄT Kinderdijk). v3: kuusi isoa myllyä kahdessa rivissä kameraa kohti ja yövalot näkyviksi.
+  Liikeytimessä Myllyja 6. Koko 900 kolmiota, unity-tarkistus 0, Linssit 347/347. Esikatselu $S/kd3/kd3-yhd.png.
+  koosta_era2.py: Kinderdijkin ikkuna (603, 1300, 210, 170).
+- **Löydös → Natiiviseppä 08.3x:** pienissä maissa (NLD/BEL/CHE/DNK) ZoomKerroin on enintään noin 1,3, joten
+  KokoNyt jää kynnyskokoon 22 pt × 1,5 = 33 pt. Ehdotus: täysi kerroin = min(6, SuurinKerroin). Koskee Bruggea ja Matterhornia.
+- Seuraavaksi: lähitason kuvaparit (g, h) Fablelle → erikoismallit3:een Brugge, Matterhorn ja Hohensalzburg 29632e19:n päälle →
+  käännös → ajo VAIHEET 1 2 9 (MALLIT: kinderdijk + 3 uutta) → Fablelle. Meren 8 lajia lisäävänä committina meri-tuotantoon.
+
 ## JUNASSA (juna/b13 1eff4f76, 1.0.28 tulossa)
 
 - Kategoriasymbolit 14 (mallinseppa/kategoriamallit-14 31e6cedf: B-ramppi, vuoren lumi C), erikoismallit MSM/Stonehenge/
