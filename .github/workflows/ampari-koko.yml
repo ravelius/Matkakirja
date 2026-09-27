@@ -1,0 +1,48 @@
+# Media-ämpärin (R2) koko ja jako kansioittain — vain luku (Fable/omistaja 27.9.2026:
+# "Paljonko ämpäriin mahtuu?"). Tulos ajon yhteenvetoon; avaimia ei tulosteta.
+# Käsin: gh workflow run ampari-koko.yml
+
+name: Ämpärin koko
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  koko:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+    steps:
+      - name: Listaa ja laske
+        run: |
+          set -euo pipefail
+          aws s3 ls "s3://$R2_AMPARI/" --recursive \
+            --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" > lista.txt
+          # Sarakkeet: pvm aika koko avain. Ryhmä: julisteet/pyramidi/<sarja>/ omana, muuten 1. taso
+          # (ja 2. taso, jos 1. taso on julisteet tai audio).
+          awk '{
+              koko=$3; avain=$4; for(i=5;i<=NF;i++) avain=avain" "$i
+              n=split(avain,o,"/")
+              if (o[1]=="julisteet" && o[2]=="pyramidi" && n>3) r="julisteet/pyramidi/" o[3] "/"
+              else if (n>2 && (o[1]=="julisteet" || o[1]=="audio" || o[1]=="aanet")) r=o[1] "/" o[2] "/"
+              else if (n>1) r=o[1] "/"
+              else r="(juuri)"
+              s[r]+=koko; c[r]++; yht+=koko; kpl++
+            } END {
+              for (r in s) printf "%.3f\t%d\t%s\n", s[r]/1e9, c[r], r
+              printf "YHTEENSÄ\t%.3f Gt\t%d objektia\t%.2f $/kk (0,015 $/Gt-kk)\n", yht/1e9, kpl, yht/1e9*0.015 > "yhteensa.txt"
+            }' lista.txt | sort -rn > jako.tsv
+          {
+            echo "## Ämpärin koko"; echo; cat yhteensa.txt; echo
+            echo '| Gt | objekteja | kansio |'; echo '|---:|---:|---|'
+            awk -F'\t' '{printf "| %s | %s | %s |\n", $1, $2, $3}' jako.tsv
+          } >> "$GITHUB_STEP_SUMMARY"
+          cat yhteensa.txt; head -25 jako.tsv

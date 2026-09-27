@@ -175,6 +175,15 @@ import {
   NOSTON_MITTA, NOSTON_NIMIO_KATTO_PX, KAUPUNKIMERKIN_KERROIN, KAUPUNKIMERKIN_NIMIO_PX,
 } from '../../js/pallolauta/nostot.js';
 
+/*
+ * KAUPUNKILIUSKA POISTUI (omistaja 27.9.2026 klo 23.4x): kaupungin napautus
+ * avaa avauskortin (js/kaupunkinosto.js avaaAvauskortti), jota vartioi
+ * tools/savukkeet/savuke-avauskortti.mjs. Liuskan vartiot ohitetaan INFO-
+ * rivillä, kun kytkin js/pallolauta/lauta.js KAUPUNKILIUSKA on pois.
+ */
+const LIUSKA_KAYTOSSA = /export const KAUPUNKILIUSKA = true;/.test(
+  readFileSync(new URL('../../js/pallolauta/lauta.js', import.meta.url), 'utf8'));
+
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -1110,7 +1119,7 @@ for (const ruutu of RUUDUT) {
     const pp = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
     return pp ? { x: pp.x, y: pp.y, id: oma.id, nimi: oma.name } : null;
   });
-  if (saapuvaPiste) {
+  if (saapuvaPiste && LIUSKA_KAYTOSSA) {
     await sivu.evaluate(() => {
       const l = window.matkakirja.ui.pallolauta;
       const pallo = l.pallo;
@@ -1341,7 +1350,7 @@ for (const ruutu of RUUDUT) {
       + `${nimiSulun ? 'näkyy' : 'PIILOSSA'}`);
     await sivu.waitForTimeout(200);
   } else {
-    tieto(`${ruutu.nimi} · saapumisnäkymän liuska`, 'kaupunkimerkki ei ollut ruudulla');
+    tieto(`${ruutu.nimi} · saapumisnäkymän liuska`, LIUSKA_KAYTOSSA ? 'kaupunkimerkki ei ollut ruudulla' : 'OHITUS: kaupunkiliuska poistettu (avauskortti, savuke-avauskortti.mjs)');
   }
 
   /* --- sisimpään zoomiin --- */
@@ -2470,7 +2479,8 @@ for (const ruutu of RUUDUT) {
  * kaksi 130 s:n riviä rinnakkain on portille lyhyempi kuin yksi
  * 220 s:n rivi.
  */
-if (lohko('liuska')) for (const ruutu of RUUDUT) {
+if (lohko('liuska') && !LIUSKA_KAYTOSSA) console.log('INFO  liuska-lohko: OHITUS — kaupunkiliuska poistettu (avauskortti, savuke-avauskortti.mjs)');
+if (lohko('liuska') && LIUSKA_KAYTOSSA) for (const ruutu of RUUDUT) {
   console.log(`\n=== LIUSKA ${ruutu.nimi} ${ruutu.w} × ${ruutu.h} ==========`);
   const { sivu } = await avaaSivu(ruutu);
   await zoomaaPariisiin(sivu, ZOOMIPORTAAT);

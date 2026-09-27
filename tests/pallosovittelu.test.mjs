@@ -290,7 +290,8 @@ test('turisti-infon kyltti on sovittelun este ja sen varaus on koko kyltti', () 
   assert.match(nostot, /const sovittele = \(\{\n\s*nimet = \[\], kiinteat = \[\], rantaviiva = null, rantaviivaOn = false, lepo = true,\n\s*\} = \{\}\) => \{/);
   assert.match(nostot, /esteet: kiinteat\.length \? \[\.\.\.nimet, \.\.\.kiinteat\] : nimet,/);
   // 2. Lauta antaa kyltin laatikot sekä nimiladonnalle että sovittelulle.
-  assert.match(lauta, /varaukset: \[\.\.\.nostoTulos\.laatikot, \.\.\.infoTulos\]/);
+  // (Avauskortin kutsuminiatyyri, 27.9.2026, on samoin nimiladonnan varaus.)
+  assert.match(lauta, /varaukset: \[\.\.\.nostoTulos\.laatikot, \.\.\.infoTulos, \.\.\.kutsuTulos\]/);
   // 3. Varaus lasketaan SAMASTA kaavasta kuin nostojen omat laatikot —
   //    ei lueta ruudulta, koska merkin rasteri valmistuu omalla ajallaan.
   assert.match(lauta, /return \[nostonLaatikko\(p, KYLTIN_LADONTA\)\];/);
