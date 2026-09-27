@@ -187,3 +187,15 @@ alkaa. B jää pois.*
   lisätään ErikoisLiikkeen Luo-kytkimeen.
 - Haara `mallinseppa/<erä>` junan päälle, merge-pyyntö Natiivisepälle ja kuvat kansioon
   proto-3d/lokit/erikoismallit/cesky-krumlov/.
+
+## 11. Toteutus 27.9.2026 (Opus-agentti, harness proto-3d/tyokalut/mallinseppa-esikatselu-m1)
+- Proto `mallinseppa/era4` fac195c0 (junan caa1d3aa päällä), käännös 9a99a1fe. Runko 1 196 + osat 264 = **LOD0 1 460**
+  (budjetti 1 500), **Lahi 2 816**. Mitat 1,013 × 0,388 × 0,608. Luo: `"cesky-krumlov" => new CeskyKrumlovLiike(id)`.
+- Poikkeamat: vanhakaupunki 29 pientä taloa (9 kattorykelmää luettiin 40 pt:ssä hajanaisiksi majoiksi); tornin huippu 0,388
+  ja tornin takana ei rakennuksia (30°:ssa torni ei muuten noussut kattolinjan yli); osat jaettu tarkemmin (kumilautta,
+  lautan keula ja perä taipuvat, lauttamiehet sauvoineen, keulalyhty, kolme valo-osaa); joki yhtenä ääriviivaosana. v2
+  (Linssisepän pyyntö): ulkorantaan vaalea kaista ja joen mustelinja puolet ohuempi (`CkOhutReuna` kertoo Rakentajan
+  ääriviivasuunnat 0,5:llä joen osalle — Natiivisepän Rakentajan `u`-kentän varassa). Kanootit eivät lähde yöllä edes
+  lähestyttäessä; napautuksen lautta kulkee keulalyhty palaen.
+- Liikeydin: 3 h:n simulaatiossa 198 lähtöä, 24 tukkilauttaa (12 %), 55 % kehyksistä levossa; 0 allokaatiota.
+- Kuvat ja toteutusmuistio: harnessin kuvat/ ja cesky-krumlov-toteutus.md; laitekuvat proto-3d/lokit/mallinseppa-laite-20260927-e4/.

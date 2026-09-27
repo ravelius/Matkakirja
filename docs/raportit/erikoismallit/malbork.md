@@ -177,3 +177,14 @@ alkaa. B jää pois.*
   ErikoisLiikkeen Luo-kytkimeen.
 - Haara `mallinseppa/<erä>` junan päälle, merge-pyyntö Natiivisepälle ja kuvat kansioon
   proto-3d/lokit/erikoismallit/malbork/.
+
+## 11. Toteutus 27.9.2026 (Opus-agentti, harness proto-3d/tyokalut/mallinseppa-esikatselu-m2)
+- Proto `mallinseppa/era4` fac195c0, käännös 9a99a1fe. Runko 905 + osat 182 = **LOD0 1 087**, **Lahi 2 749**.
+  Mitat 1,00 × 0,285 × 0,516. Luo: `"malbork" => new MalborkLiike(id)`.
+- Poikkeamat: asemakaava Commonsin pohjapiirroksesta noin 110° vastapäivään (päätorni Korkean linnan koillisnurkassa =
+  mallin vasen taka); ritareilla kiinteät kaistat (punainen edessä, vaalea takana); Siltaportin tornit 0,088 kartioineen;
+  tiili #926b4e ja katot #634532 (60 pt:n A/B: speksin sävyt eivät erottuneet); niitty pyöristettynä laikkuna; valot neljänä
+  osana; kuula suurennettu (säde 0,0085). v2 (Linssisepän pyyntö): Nogat kapeana (40 %) ilman kehystä, vain linnan puolen
+  laituri; tykki lyhennetyllä vastarannalla. Ritarit tulevat Siltaportista ja palaavat sinne yöksi.
+- Liikeydin: legenda 9,7 % kohtaamisista, harjoituskierros 21 %, noin 1 µs/kehys, 0 allokaatiota.
+- Kuvat ja toteutusmuistio: harnessin kuvat/ ja malbork-toteutus.md; laitekuvat proto-3d/lokit/mallinseppa-laite-20260927-e4/.

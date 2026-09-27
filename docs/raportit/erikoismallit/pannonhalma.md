@@ -167,3 +167,15 @@ alkaa. B jää pois.*
   lisätään ErikoisLiikkeen Luo-kytkimeen.
 - Haara `mallinseppa/<erä>` junan päälle, merge-pyyntö Natiivisepälle ja kuvat kansioon
   proto-3d/lokit/erikoismallit/pannonhalma/.
+
+## 11. Toteutus 27.9.2026 (Opus-agentti, harness proto-3d/tyokalut/mallinseppa-esikatselu-m3)
+- Proto `mallinseppa/era4` fac195c0, käännös 9a99a1fe. Runko 889 + osat 320 = **LOD0 1 209**, **Lahi 2 203**.
+  Mitat 1,000 × 0,543 × 0,800. Luo: `"pannonhalma" => new PannonhalmaLiike(id)`.
+- Poikkeamat: hanhella kaksi osaa (siiveniskut vuorotellen, liito ja kärjen vaihto), aurat 9 ja 7 paikkaa; hanhet
+  suurempia ja vaaleampia (siipiväli 0,052 kuten Hohensalzburgin kyyhkyillä; 0,035 katosi 40–60 pt:ssä); lento 0,6–0,7;
+  tornin kierto pienempi (säde 0,15–0,19), jottei aura mene kartan päälle; tukimuuri tummempi kivi; urheilukenttä jätetty
+  pois (valinnainen punainen aksentti); portti portinvartijan torniksi. Äänirenkaat ohuina seepiaviivoina ilman
+  ääriviivaryhmää (Linssiseppä). Osia 40 (32 hanhenpuolikasta), mikä on enemmän kuin Colosseumilla (18).
+- Liikeydin: kellot 11,3 % auroista, kaksoisaura 26 %, kärjen vaihto 32 %; yksikään hanhi ei näy mallin alueen ulkopuolella;
+  0 allokaatiota.
+- Kuvat ja toteutusmuistio: harnessin kuvat/ ja pannonhalma-toteutus.md; laitekuvat proto-3d/lokit/mallinseppa-laite-20260927-e4/.
