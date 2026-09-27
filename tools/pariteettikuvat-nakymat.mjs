@@ -225,7 +225,7 @@ export const NAKYMAT = [
   },
   { nimi: 'kartta', kuvaus: 'Intro ohitettu: pallo kaupungissa, toimintavaihe (?koe=suoraan + tallenne)' },
   {
-    nimi: 'rahattomuus', kuvaus: 'Rahat loppu: rahattomuuspalkki 6/8 lohkoa (1 vrk 12 h) kartan yläreunassa, kassa punainen',
+    nimi: 'rahattomuus', kuvaus: 'Rahat loppu: rahattomuuspalkki 6/8 punaista neliötä kartan yläreunassa, yläpalkissa £0 · 2 vrk',
     avaa: () => {
       const { ui } = window.matkakirja;
       const g = ui.game;
@@ -598,8 +598,13 @@ const linssiKaynnissa = (p) => {
 const TODENNUS = {
   aloitusportti: { nakyy: ['.start-btn'] },
   rahattomuus: {
-    nakyy: ['.rahattomuuspalkki'],
-    ehto: () => (document.querySelectorAll('.rahattomuuspalkki .rahattomuus-lohko.palaa').length === 6 ? null : 'lohkoja ei 6'),
+    // Palkki on pieni (≈ 109 × 21), joten nakyy-tarkistuksen minimikoko ei sovi: ehto mittaa itse.
+    ehto: () => {
+      const p = document.querySelector('.rahattomuuspalkki');
+      const r = p && !p.hidden ? p.getBoundingClientRect() : null;
+      if (!r || r.width < 60 || r.height < 12) return 'palkki ei näy';
+      return document.querySelectorAll('.rahattomuuspalkki .rahattomuus-lohko.palaa').length === 6 ? null : 'lohkoja ei 6';
+    },
   },
   'avausteksti-kesken': { nakyy: ['.intro-juliste'] },
   'avausteksti-valmis': { nakyy: ['.intro-valinta'] },

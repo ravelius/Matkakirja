@@ -10917,7 +10917,9 @@ export class UI {
    * RAHATTOMUUS_VUOROJA). Lohko sammuu, kun vuoro (6 h pelin aikaa) kuluu,
    * ja palkki katoaa, kun kassa selviää (js/game.js tarkistaRahattomuus).
    * UI KEVYT: pieni pergamenttilappu keskellä yläreunaa paikkakyltin ja
-   * karttaselitteen välissä, ei peitä karttaa eikä ota osumia.
+   * karttaselitteen välissä, ei peitä karttaa eikä ota osumia. PELKÄT
+   * PUNAISET NELIÖT ilman tekstiä (omistaja 15.2x); aika on yläpalkissa
+   * lyhyenä ("£0 · 2 vrk") ja ruudunlukijalle aria-labelissa.
    */
   paivitaRahattomuuspalkki(piilossa = false) {
     const { game } = this;
@@ -10934,14 +10936,13 @@ export class UI {
       palkki.setAttribute('role', 'img');
       const lohkot = html('div', 'rahattomuus-lohkot');
       for (let i = 0; i < RAHATTOMUUS_VUOROJA; i++) lohkot.appendChild(html('span', 'rahattomuus-lohko'));
-      palkki.append(lohkot, html('span', 'rahattomuus-teksti'));
+      palkki.append(lohkot);
       kehys.appendChild(palkki);
       this.rahattomuuspalkki = palkki;
     }
     const tunnit = vuoroja * TURN_HOURS;
     const aika = `${Math.floor(tunnit / 24) ? `${Math.floor(tunnit / 24)} vrk ` : ''}${tunnit % 24 ? `${tunnit % 24} h` : ''}`.trim() || '0 h';
     palkki.querySelectorAll('.rahattomuus-lohko').forEach((l, i) => l.classList.toggle('palaa', i < vuoroja));
-    palkki.querySelector('.rahattomuus-teksti').textContent = `rahat loppu · ${aika}`;
     palkki.setAttribute('aria-label', `Rahat loppu: aikaa ${aika} hankkia rahaa, muuten matka päättyy`);
     palkki.hidden = false;
     /*
@@ -11019,8 +11020,11 @@ export class UI {
     const jaljella = game.rahattomuuttaJaljella?.(game.player);
     kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
     this.turnPill.appendChild(kassa);
-    // Jäljellä oleva aika näkyy kartan yläreunan rahattomuuspalkissa (paivitaRahattomuuspalkki):
-    // yläpalkin "rahat loppu · N vrk" katkaisi puhelimella päivämäärän, joten kassa vain punastuu.
+    // Lyhyt aika kassan vieressä (omistaja 15.2x: "0£ 2 vrk" kaikilla ruuduilla); pitkä
+    // "rahat loppu · N vrk" katkaisi puhelimella päivämäärän. Lohkot: paivitaRahattomuuspalkki.
+    if (jaljella !== null && jaljella !== undefined) {
+      this.turnPill.appendChild(html('span', 'rahaton-aika', `${jaljella} vrk`));
+    }
     // Mittari on päivämäärä, ei kello eikä palkki: aika on tarinaa, ei uhkaa,
     // joten se ei saa hälytysväriä eikä muutu punaiseksi ennätyksen jälkeen.
     const kello = game.clockLabel();
