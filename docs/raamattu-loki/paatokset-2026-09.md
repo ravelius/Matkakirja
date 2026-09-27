@@ -8059,3 +8059,7 @@ Julkaisija 10.2x: kysyy Karttasepalta ja Siirtosepalta viitatut sarjat, kokoaa v
 ## POISTOLISTA OMISTAJALLE: 09-21/22/22c/23a (13,5 Gt) VAPAAT, 09-25 HARKINTA (2,61 Gt); 26s JA 26 SAILYVAT (27.9.2026 klo 10.24)
 
 Julkaisija 10.2x (Karttaseppa + Siirtoseppa vahvistivat): vapaat 2026-09-21-pohja 2,66, -22-pohja 2,72, -22c-pohja 2,92, -23a-pohja 5,19 Gt (yht. 13,5 Gt); harkinta -25-pohja 2,61 Gt (koe/2026-09-25 + varmuuskopio 0926-0856); pidetaan -26s-pohja (tuotanto) ja -26-pohja (palautukset 0927-0732/0947, delta-lahde). Poisto omistajan tehtava (R2-konsoli tai wrangler), lista ja komento annettu 10.2x.
+
+## LINSSISEPAN LAITEKUVAT 10.27: MAAKUNTA-TAYTTO 643a5ff9, MERI LAITTEELLA, KINDERDIJK/BRUGGE/HOHENSALZBURG OK, LAHITASO KYTKEYTYY, MATTERHORN V2 (27.9.2026 klo 10.27)
+
+Linssiseppa 10.27 (iPhone, 0 poikkeusta): maakunnan saapuminen ennen 4,8 s (huntu, kyna, taytto, nostot) → jalkeen vain taytto 0 s:sta, luovutus 1,6 s (linssiseppa/maakunta-taytto 643a5ff9); Fable: odotuksen ajaksi nostot ja rajat nakyviin. Kinderdijk v3, Brugge, Hohensalzburg toimivat; lahitaso kytkeytyy laitteella (kerroin ≥ 4), kytketty 7 erikoismalliin + 9 symboliin (mallinseppa/lahitaso), loput agenteilla; meri: lautta, purjelaiva, delfiinit, merihirvio, lokit, jaavuori nakyvat (majakkalaiva, kalastusvene vain esikatselussa). Matterhorn: 55 asteessa kiilamainen ja nimio mallin paalla → Fable: v2 hoikemmalla koukkuhuipulla + nimion vaisto ennen merge-pyyntoa. Merge-pyynnot Natiivisepalle: meri-tuotanto 0a9fdba5, maakunta-taytto 643a5ff9; lahitaso perassa.
