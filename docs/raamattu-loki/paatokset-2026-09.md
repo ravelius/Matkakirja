@@ -8015,3 +8015,7 @@ Sisaltokirjuri nollattu 10.0x; #3387 (docs) mergetty ILMAN --delete-branch (haar
 ## OMISTAJA 10.0x (SITOVA): PELIN TALOUS — RAHAA KULUU MATKUSTUKSEEN, SYOMISEEN, ASUMISEEN JA HUVITUKSIIN (LINSSIT JA PELIT KAUPASTA, MYOS LOYDETTAVISSA ILMAISEKSI); RAHAT LOPPU → PELI LOPPUU 2 VRK:SSA (27.9.2026 klo 10.05)
 
 Omistaja 10.0x: jatkossa rahaa kuluu pelissa kuin oikeassa elamassa — matkustamisen lisaksi syomiseen ja asumiseen seka huvituksiin: linssit ja pelit ovat ostettavissa Kaupasta (ja edelleen loydettavissa myos ilmaiseksi). Jos rahat loppuvat, peli loppuu kahdessa vuorokaudessa. Toteutus vaiheittain: Pelikoodari laatii ensin talous-suunnitelman (paivakustannus ruoka + majoitus, hinnat linsseille/peleille, tulolahteet: aarteet, minipelit, huvipuistovoitot, aarreruksi, Pulu-pisteet; tasapaino ettei tavallinen matka kaadu; 2 vrk:n varoitus ja loppu; web + natiivi) → omistajan kortti → toteutus. Raamattuun (Perustuslaki/talous) seuraavassa Raamattu-PR:ssa.
+
+## OMISTAJA 10.0x: HUVIPUISTOIHIN SISAANPAASYMAKSU, JOISSA VOI MYOS ANSAITA RAHAA (HUVIPUISTOPELIT) (27.9.2026 klo 10.09)
+
+Omistaja 10.0x tarkennus talouteen: huvipuistoihin (Disneyland, Tivoli tms.) on sisaanpaasymaksu (kasinkirjoitettu idea: 30 p), ja huvipuistossa voi myos ansaita rahaa huvipuistopeleilla (narunveto, pallonheitto, jopa 100 p) — mukaan talous-suunnitelmaan ja pelikatalogiin.
