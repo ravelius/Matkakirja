@@ -3454,6 +3454,11 @@ export const RAAMATTU = {
           + 'sopivuus 13+, botti/kaveri, pelikytkös, oikeudet ja lähde; elävä työlista '
           + 'samalla mallilla kuin linssikatalogi.md, ensimmäisten 10 pelin ehdotus ja '
           + 'omistajan ideat -osio; koneluettava data ja HTML-sivu Pelikoodarin vastuulla).',
+        'docs/tilannekatsaus.md — tilannekatsaus (omistaja 27.9.2026: yhteisen '
+          + 'kehityssivuston etusivu apurahan arvioijille ja yhteistyökumppaneille; '
+          + 'osa-alueittain tila, kuvaus ja seuraavat askeleet; vain Fable kirjoittaa, '
+          + 'Pelikoodarin sivusto renderöi sen Tilanne-välilehdelle linssien ja pelien rinnalle; '
+          + 'vain suomeksi, julkinen linkillä mutta noindex, ei sisäisiä tietoja).',
         'docs/raportit/talous-suunnitelma-20260927.md — pelin talouden suunnitelma '
           + '(päiväkulu, Kaupan hinnat, huvipuistot, tulolähteet, 2 vrk:n loppu, '
           + 'omistajan päätökset 27.9.2026).',
