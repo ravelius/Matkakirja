@@ -884,7 +884,21 @@ async function haePalaVerkosta(teksti, persoona, sailio, saadot, saatoTunniste, 
   });
   if (!vastaus.ok) {
     if ([403, 404, 503].includes(vastaus.status)) estaPuhe();
-    throw new Error(`puhe ${vastaus.status}`);
+    const virhe = new Error(`puhe ${vastaus.status}`);
+    virhe.status = vastaus.status;
+    /*
+     * RAJA JA PALVELINVIRHE PYSÄYTTÄVÄT (27.9.2026): 429 (worker: päivä-
+     * tai kuukausiraja) ja 5xx eivät saa ohittaa virkettä äänettä eikä
+     * pudota laitteen ääneen — luenta pysähtyy ja workerin viesti näkyy
+     * kerran (js/lukija.js ilmoitaPuhevirhe).
+     */
+    virhe.pysayttaa = vastaus.status === 429 || vastaus.status >= 500;
+    try {
+      virhe.viesti = (await vastaus.json())?.viesti ?? null;
+    } catch {
+      virhe.viesti = null;
+    }
+    throw virhe;
   }
   // Kopio talteen rinnalla (klooni luetaan samaan aikaan kuin runko, joten
   // mittarin ensimmäinen tavu on todellinen); täysi levy ei kaada luentaa.
@@ -990,7 +1004,8 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *   persoona?: string,
  *   sailio?: string|null pysyvän säilön lohko; null = ei säilötä
  *   onLoppu?: () => void,
- *   onVirhe?: (vaihe: 'alku'|'kesken') => void,
+ *   onVirhe?: (vaihe: 'alku'|'kesken', virhe?: Error) => void — virhe.pysayttaa
+ *     (429/5xx) ja virhe.viesti (workerin teksti) kertovat rajasta
  *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number,
  *     teksti: string|null, alku: number}) => void,
  *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
@@ -1373,7 +1388,7 @@ export function luoPuheSoitin({
         let loppuAika;
         try {
           loppuAika = await soitaPala(indeksi, haut.get(indeksi));
-        } catch {
+        } catch (virhe) {
           // Ensimmäisen palan virhe → kutsuja voi valita varapolun
           // koko tekstille; myöhempi virhe päättää luennan siististi.
           const vaihe = tila.soiva < 0 && !lahteet.size ? 'alku' : 'kesken';
@@ -1383,7 +1398,7 @@ export function luoPuheSoitin({
           kello = null;
           pysaytaLahteet();
           puraKetju();
-          onVirhe?.(vaihe);
+          onVirhe?.(vaihe, virhe);
           return;
         }
         if (loppuAika === 'keskeytyi') return;

@@ -544,3 +544,20 @@ test('mykistys lähettää tapahtuman, jota lukija kuuntelee', () => {
   assert.match(lukija, /addEventListener\(AANIVALINTA_TAPAHTUMA/);
   assert.match(lukija, /detail\?\.enabled === false\) pysaytaLukija\(\)/);
 });
+
+/*
+ * RAJA JA PALVELINVIRHE PYSÄYTTÄVÄT (27.9.2026): 429/5xx ei ohita virkettä
+ * äänettä eikä pudota laitteen ääneen; workerin viesti näytetään kerran.
+ */
+test('puheen 429/5xx pysäyttää luennan ja näyttää workerin viestin kerran', () => {
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  assert.match(puhe, /virhe\.pysayttaa = vastaus\.status === 429 \|\| vastaus\.status >= 500;/);
+  assert.match(puhe, /virhe\.viesti = \(await vastaus\.json\(\)\)\?\.viesti \?\? null;/);
+  assert.match(puhe, /onVirhe\?\.\(vaihe, virhe\);/);
+  // Ei laitteen ääntä rajan jälkeen.
+  assert.match(lukija, /if \(virhe\?\.pysayttaa\) ilmoitaPuhevirhe\(virhe\);\s*else if \(vaihe === 'alku' && lueLaitteella/);
+  assert.match(lukija, /if \(ilmoitetutPuhevirheet\.has\(syy\)\) return;/);
+  assert.match(ui, /addEventListener\?\.\(PUHEVIRHE_TAPAHTUMA/);
+});
