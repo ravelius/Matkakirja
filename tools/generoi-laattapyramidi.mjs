@@ -1354,7 +1354,31 @@ const SYVA_ALUE = syvaAlueTeksti
     };
   })()
   : null;
-if (TASOT.some((z) => z >= SYVA_ALIN) && !SYVA_ALUE) {
+/*
+ * SYVÄ LAATTALISTA (`--syva-laatat <json>`, Karttaseppä 26.9.2026, Fablen
+ * tilaus Z10 kaupungit ±1° + fokusmaat): ala ei ole yksi suorakaide vaan
+ * tarkka z10-laattajoukko { z: 10, laatat: [[sarake, rivi], …] }. z9 on
+ * sen vanhempien joukko ja z11 sen lasten; sama joukko antaa työlistan ja
+ * luettelon bittikartan (syvallaAlalla), kuten suorakaiteella.
+ */
+const syvaLaatatPolku = valitsin('syva-laatat', null);
+const SYVA_LAATAT = syvaLaatatPolku
+  ? (() => {
+    const j = JSON.parse(readFileSync(syvaLaatatPolku, 'utf8'));
+    if (j.z !== 10 || !Array.isArray(j.laatat) || !j.laatat.length) {
+      console.error(`--syva-laatat ${syvaLaatatPolku}: odotettiin { z: 10, laatat: [[sarake, rivi], …] }`);
+      process.exit(1);
+    }
+    const z10 = new Set(j.laatat.map(([a, b]) => `${a}:${b}`));
+    const z9 = new Set(j.laatat.map(([a, b]) => `${a >> 1}:${b >> 1}`));
+    return { z10, z9, maara: z10.size, lahde: syvaLaatatPolku.split('/').pop() };
+  })()
+  : null;
+if (SYVA_LAATAT && SYVA_ALUE) {
+  console.error('anna joko --syva-alue tai --syva-laatat, ei molempia');
+  process.exit(1);
+}
+if (TASOT.some((z) => z >= SYVA_ALIN) && !SYVA_ALUE && !SYVA_LAATAT) {
   console.error(`--tasot ${TASOT.join(',')}: tasot z${SYVA_ALIN}+ poltetaan vain alueelle — `
     + 'anna --syva-alue lon0,lat0,lon1,lat1 (esim. Ranska -5.5,41,9.8,51.5).');
   process.exit(1);
@@ -1839,7 +1863,13 @@ function alueella(mitat, sarake, rivi, alue = ALUE) {
 
 /** Syvän tason (z ≥ SYVA_ALIN) laatta vain syvällä alalla; muut aina. */
 function syvallaAlalla(mitat, sarake, rivi) {
-  return mitat.z < SYVA_ALIN || alueella(mitat, sarake, rivi, SYVA_ALUE);
+  if (mitat.z < SYVA_ALIN) return true;
+  if (SYVA_LAATAT) {
+    if (mitat.z === 9) return SYVA_LAATAT.z9.has(`${sarake}:${rivi}`);
+    const k = 2 ** (mitat.z - 10);
+    return SYVA_LAATAT.z10.has(`${Math.floor(sarake / k)}:${Math.floor(rivi / k)}`);
+  }
+  return alueella(mitat, sarake, rivi, SYVA_ALUE);
 }
 
 /* ------------------------------------------------- nostotason peite */
@@ -3319,7 +3349,7 @@ if (HARVA) {
   }
   // Työlista ja lohkot uusiksi karsitusta joukosta.
   tyot.length = 0;
-  tyot.push(...jaljelle);
+  for (const t of jaljelle) tyot.push(t); // ei push(...): suuri lista ylittäisi pinon
   tarvitaan.clear();
   lohkot.clear();
   for (const t of tyot) {
@@ -4822,6 +4852,7 @@ function teeLuettelo() {
       syvat: {
         tasot: tasot.filter((m) => m.z >= SYVA_ALIN).map((m) => m.z),
         alue: SYVA_ALUE,
+        ...(SYVA_LAATAT ? { laattalista: { z10: SYVA_LAATAT.maara, lahde: SYVA_LAATAT.lahde } } : {}),
         aineisto: DEM90_KANSIO ? `${DEM_AINEISTO}, varalla ETOPO1 1′` : 'Copernicus GLO-30 (1″), varalla ETOPO1 1′',
         lahdemaininta: LAHDEMAININTA,
       },
