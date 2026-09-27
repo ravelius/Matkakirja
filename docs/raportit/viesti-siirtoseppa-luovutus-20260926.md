@@ -24,6 +24,12 @@ voimassa.
    gh pr ready → Julkaisijan juna → ensimmäinen CI-vienti tekee ~3 570 pientä → tarkista ämpäri → rivi Fablelle ja
    Natiivisepälle (todentaa lentotilassa 1.0.32).
 3. Puhetta EI koskaan pyydetä workerilta (Fable 27.9.): vain ämpärissä olevat tiedostot.
+4a. **#3441 eheysvartija** (wt/siirtoseppa-eheysvartija, head 38d5c43eb): tools/vienti/eheysvartija.mjs + .github/workflows/
+   eheysvartija.yml (06.30 + jokaisen viennin jälkeen, self-hosted macOS) → proto-3d/lokit/eheysvartija/VIKA.txt;
+   Postivahdille ohje lähetetty. Junassa.
+4b. **#3445 skeema 1.53** (wt/siirtoseppa-maasto-153, PINOTTU #3432:n päälle): maasto z≤10 + kaupunkiMaasto z11–12
+   50 km (Fable B1+C, ehdotus #3442), natiivi pakkaa itse (Natiiviseppä kuittasi). Järjestys #3432 → #3445; mergen
+   jälkeen tarkista ämpäri (pienet + tuotanto 1.53) ja rivi Fablelle + Natiivisepälle.
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
    Tuotanto nyt **1.x v241+** (1.51). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
