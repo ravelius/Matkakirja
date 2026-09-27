@@ -74,6 +74,15 @@ import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
 import { MINIATYYRIT } from '../../js/packs/miniatyyrit.js';
 import { NAHTAVYYSJUTUT } from '../../js/packs/nahtavyysjutut.js';
 
+/*
+ * KAUPUNKILIUSKA POISTUI (omistaja 27.9.2026 klo 23.4x): kaupungin napautus
+ * avaa avauskortin (js/kaupunkinosto.js avaaAvauskortti), jota vartioi
+ * tools/savukkeet/savuke-avauskortti.mjs. Liuskan vartiot ohitetaan INFO-
+ * rivillä, kun kytkin js/pallolauta/lauta.js KAUPUNKILIUSKA on pois.
+ */
+const LIUSKA_KAYTOSSA = /export const KAUPUNKILIUSKA = true;/.test(
+  readFileSync(new URL('../../js/pallolauta/lauta.js', import.meta.url), 'utf8'));
+
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -180,6 +189,11 @@ const odotetutSiirretyt = (KAUPUNKIKARTAT.pariisi?.kohteet ?? [])
 /** Kansiosasto lehtidatasta — vartio 9 tarvitsee tietää, mitä poistetaan. */
 const kansiOsasto = (id) => (KULTTUURI_KATEGORIAT[id] ?? []).find((k) => k.id === 'kaupunki');
 
+if (!LIUSKA_KAYTOSSA) {
+  console.log('INFO  OHITUS: kaupungin iso pop-up ja liuska korvattu avauskortilla (savuke-avauskortti.mjs)');
+  palvelin.close();
+  process.exit(0);
+}
 const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 /* ---------------------------------------------------------------- ajo */

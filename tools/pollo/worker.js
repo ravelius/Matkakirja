@@ -93,6 +93,51 @@ const PUHE_RAJAPINTA = 'https://api.openai.com/v1/audio/speech';
 const PUHE_MALLI_OLETUS = 'gpt-4o-mini-tts';
 
 /*
+ * STRIIMILUENTA XAI:N GROK TTS:LLÄ (omistajan päätös 27.9.2026 klo 00.25,
+ * sitova; kytkentä omistajan käskystä 27.9. klo 01.2x "Kytke heti"):
+ * kaikki striimiluenta — web ja natiivi kulkevat tämän saman reitin
+ * kautta — luetaan xAI:n äänellä 'ara'. Perustelu: ensimmäinen tavu
+ * 0,16–0,39 s suomeksi (OpenAI 0,5–1,3 s), sanatarkka, 24 kHz mp3.
+ *
+ * KYTKIN PUHE_MOOTTORI ('xai' | 'openai', wrangler.jsonc vars): oletus
+ * 'xai' aina kun XAI_API_KEY on workerin salaisuuksissa; ilman avainta
+ * pudotaan OpenAI:hin kuin ennenkin. VARAPOLKU: jos xAI vastaa virheellä
+ * tai ei ala vastata XAI_AIKARAJA_MS:ssä, sama pala generoidaan OpenAI:lla
+ * persoonan oletusäänellä — luenta ei koskaan jää mykäksi yhden
+ * palveluntarjoajan takia. Varapolun pala EI mene jaettuihin säilöihin,
+ * ettei OpenAI-ääni jää 60 päiväksi xAI-avaimen alle.
+ *
+ * xAI:lla ei ole ohjetekstiä (instructions) — persoonan luonne tulee
+ * pelkästä äänestä. Nopeus kulkee 'speed'-kenttänä kuten OpenAI:lla.
+ * XAI_AANET on /v1/tts/voices-listaus 27.9.2026; kehittäjävalikon
+ * äänivalinta (js/main.js, index.html #kehittaja-striimiaani) saa valita
+ * vain tältä listalta, ja vain kehittäjäkoodilla kuten muutkin säädöt.
+ * js/puhe.js STRIIMIAANET_XAI on saman listan näyttökopio —
+ * tests/puheohjeet.test.mjs valvoo, että ne ovat samat.
+ */
+const XAI_PUHE_RAJAPINTA = 'https://api.x.ai/v1/tts';
+const XAI_PUHE_MALLI = 'grok-tts';
+const XAI_AANI_OLETUS = 'ara';
+const XAI_AANET = ['altair', 'ara', 'atlas', 'aurora', 'carina', 'castor',
+  'celeste', 'cosmo', 'eve', 'helios', 'helix', 'iris', 'kepler', 'leo',
+  'liora', 'lumen', 'luna', 'lux', 'naksh', 'orion', 'perseus', 'rex',
+  'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
+const XAI_AIKARAJA_MS = 8000;
+
+/**
+ * Kumpi puhemoottori on käytössä: 'xai', 'openai' tai null (ei avaimia).
+ * Puhdas funktio ympäristöstä, jotta se on testattavissa ilman workeria.
+ */
+export function valitsePuhemoottori(env) {
+  const toive = String(env?.PUHE_MOOTTORI ?? '').trim().toLowerCase();
+  const xai = Boolean(env?.XAI_API_KEY);
+  const openai = Boolean(env?.OPENAI_API_KEY);
+  if (toive === 'openai') return openai ? 'openai' : (xai ? 'xai' : null);
+  if (xai) return 'xai';
+  return openai ? 'openai' : null;
+}
+
+/*
  * Persoonien ohjeet englanniksi: gpt-4o-mini-tts seuraa englanninkielistä
  * ohjeistusta luotettavimmin, ja puhuttava kieli määräytyy silti tekstin
  * mukaan (suomi). Äänivalinnat: kertojalle matala ja rauhallinen 'onyx',
@@ -882,6 +927,73 @@ const PUHE_AANET = ['alloy', 'ash', 'ballad', 'coral', 'echo', 'fable',
   'nova', 'onyx', 'sage', 'shimmer', 'verse'];
 const PUHE_OHJEEN_KATTO = 600;
 
+/** Yksi OpenAI-puhekutsu; heittää tilakoodillisen virheen, jos vastaus ei kelpaa. */
+async function kutsuOpenaiPuhetta(env, { teksti, aani, ohje, malli, nopeus }) {
+  const ylavirta = await fetch(PUHE_RAJAPINTA, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      authorization: `Bearer ${env.OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: malli,
+      input: teksti,
+      voice: aani,
+      instructions: ohje,
+      response_format: 'mp3',
+      ...(nopeus !== 1 ? { speed: nopeus } : {}),
+    }),
+  });
+  if (!ylavirta.ok || !ylavirta.body) {
+    const virhe = new Error(`puherajapinta ${ylavirta.status}`);
+    virhe.status = ylavirta.status;
+    throw virhe;
+  }
+  return ylavirta;
+}
+
+/**
+ * Yksi xAI-puhekutsu (Grok TTS, REST). Vastaus on mp3-virta, joka alkaa
+ * ~0,2 s:ssa ja jatkuu sitä mukaa kuin puhe syntyy — sama läpivienti
+ * asiakkaalle kuin OpenAI:lla. Aikaraja koskee vain vastauksen ALKUA:
+ * kun otsakkeet ovat tulleet, ajastin puretaan, ettei pitkä pala
+ * katkea kesken. Virhe tai aikakatkaisu heittää, ja kutsuja päättää
+ * varapolusta.
+ */
+async function kutsuXaiPuhetta(env, { teksti, aani, nopeus }) {
+  const ohjain = new AbortController();
+  const ajastin = setTimeout(() => ohjain.abort(), XAI_AIKARAJA_MS);
+  let ylavirta;
+  try {
+    ylavirta = await fetch(XAI_PUHE_RAJAPINTA, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `Bearer ${env.XAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        text: teksti,
+        voice: aani,
+        language: 'fi',
+        ...(nopeus !== 1 ? { speed: nopeus } : {}),
+      }),
+      signal: ohjain.signal,
+    });
+  } catch (virhe) {
+    clearTimeout(ajastin);
+    const v = new Error('xai puherajapinta ei vastannut');
+    v.status = virhe?.name === 'AbortError' ? 'aikaraja' : 'verkko';
+    throw v;
+  }
+  clearTimeout(ajastin);
+  if (!ylavirta.ok || !ylavirta.body) {
+    const virhe = new Error(`xai puherajapinta ${ylavirta.status}`);
+    virhe.status = ylavirta.status;
+    throw virhe;
+  }
+  return ylavirta;
+}
+
 /**
  * Yksi puhepyyntö: teksti sisään, mp3-virta ulos.
  *
@@ -899,7 +1011,8 @@ const PUHE_OHJEEN_KATTO = 600;
  * ei lokiteta eikä välitetä — sama sääntö kuin pöllön chat-kutsuissa.
  */
 async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
-  if (!env.OPENAI_API_KEY) {
+  const moottori = valitsePuhemoottori(env);
+  if (!moottori) {
     return vastaa({
       virhe: 'asetus',
       viesti: 'Lukijaääni ei ole vielä käytössä.',
@@ -912,20 +1025,27 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   }
   const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
   const persoona = PUHE_PERSOONAT[persoonaNimi];
-  const malli = env.PUHE_MALLI || PUHE_MALLI_OLETUS;
+  const xai = moottori === 'xai';
+  const malli = xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS);
 
   // Ääni ja ohje: persoonan oletukset, joiden yli kehittäjäkoodillinen
-  // pyyntö saa kirjoittaa (työhuoneen säätövälilehti).
-  let aani = persoona.aani;
-  let ohje = persoona.ohje;
+  // pyyntö saa kirjoittaa (työhuoneen säätövälilehti, kehittäjävalikon
+  // striimiääni). xAI:lla oletus on 'ara' kaikille persoonille eikä
+  // ohjetta ole; OpenAI-äänen nimi xAI-pyynnössä (tai päinvastoin)
+  // jätetään huomiotta, jotta vanha laitesäätö ei kaada luentaa.
+  const oletusAani = xai ? XAI_AANI_OLETUS : persoona.aani;
+  const oletusOhje = xai ? '' : persoona.ohje;
+  const sallitutAanet = xai ? XAI_AANET : PUHE_AANET;
+  let aani = oletusAani;
+  let ohje = oletusOhje;
   let saadetty = false;
   if (kehittajaOhitus(pyynto, env)) {
-    if (PUHE_AANET.includes(runko?.aani)) {
+    if (sallitutAanet.includes(runko?.aani)) {
       aani = runko.aani;
     }
-    const omaOhje = siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
+    const omaOhje = xai ? '' : siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
     if (omaOhje) ohje = omaOhje;
-    saadetty = aani !== persoona.aani || ohje !== persoona.ohje;
+    saadetty = aani !== oletusAani || ohje !== oletusOhje;
   }
 
   /*
@@ -1010,25 +1130,27 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   await kasvataLaskuri(kv, kAvain, 60 * 60 * 24 * 40, teksti.length);
 
   try {
-    const ylavirta = await fetch(PUHE_RAJAPINTA, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        authorization: `Bearer ${env.OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: malli,
-        input: teksti,
-        voice: aani,
-        instructions: ohje,
-        response_format: 'mp3',
-        ...(nopeus !== 1 ? { speed: nopeus } : {}),
-      }),
-    });
-    if (!ylavirta.ok || !ylavirta.body) {
-      const virhe = new Error(`puherajapinta ${ylavirta.status}`);
-      virhe.status = ylavirta.status;
-      throw virhe;
+    let ylavirta;
+    if (xai) {
+      try {
+        ylavirta = await kutsuXaiPuhetta(env, { teksti, aani, nopeus });
+      } catch (virhe) {
+        // VARAPOLKU: OpenAI persoonan oletuksin, ilman säilöntää
+        // (avain nollataan, ettei OpenAI-pala jää xAI-avaimen alle).
+        if (!env.OPENAI_API_KEY) throw virhe;
+        console.log(`puhe: xai epäonnistui (${virhe?.status ?? 'verkko'}) → openai`);
+        avain = null;
+        r2Avain = null;
+        ylavirta = await kutsuOpenaiPuhetta(env, {
+          teksti,
+          aani: persoona.aani,
+          ohje: persoona.ohje,
+          malli: env.PUHE_MALLI || PUHE_MALLI_OLETUS,
+          nopeus,
+        });
+      }
+    } else {
+      ylavirta = await kutsuOpenaiPuhetta(env, { teksti, aani, ohje, malli, nopeus });
     }
     /*
      * Sama virta kahtia: toinen haara asiakkaalle heti, toinen talteen

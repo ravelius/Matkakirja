@@ -23,7 +23,14 @@ export const KUUKAUSIRAJA_OLETUS = 1500;
  * — kustannuksena (gpt-4o-mini-tts ~1,5 snt/min) noin 13,5 €/kk
  * enimmillään.
  */
-export const PUHE_TEKSTIN_KATTO = 1000;
+/*
+ * 1000 → 2500 (omistaja 27.9.2026 klo 01.5x, "Voiko tekstit viedä yhtenä
+ * nippuna luettavaksi?"): kappale kulkee yhtenä palana myös silloin, kun se
+ * on pitkä, eikä sitä enää pilkota kesken (intonaatiohyppy) tai natiivissa
+ * katkaista. xAI ottaa 2 400 merkkiä yhdellä pyynnöllä (mitattu 27.9.:
+ * ensimmäinen tavu 0,5 s, koko pala 35 s ≈ 5 × reaaliaika).
+ */
+export const PUHE_TEKSTIN_KATTO = 2500;
 export const PUHE_PAIVARAJA_OLETUS = 60000;
 export const PUHE_KUUKAUSIRAJA_OLETUS = 900000;
 

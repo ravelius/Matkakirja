@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2267';
+const CACHE = 'matkakirja-2026-09-21.2297';
 const SHELL = [
   './',
   './index.html',
@@ -503,6 +503,9 @@ const SHELL = [
   './js/packs/maakuntasalaisuudet.js',
   './js/packs/maakuntasalaisuudet-grc.js',
   './js/packs/nahtavyysjutut.js',
+  './js/lehtiosiot.js',
+  './js/nostokategoriat.js',
+  './js/lehtiosiot-kuvat.js',
   './js/packs/miniatyyrit.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
   './assets/nostotyypit/merkki-vuori.png',
@@ -516,6 +519,9 @@ const SHELL = [
   './assets/nostotyypit/merkki-kauppa.png',
   './assets/nostotyypit/merkki-tekniikka.png',
   './assets/nostotyypit/merkki-merenkulku.png',
+  './assets/nostotyypit/merkki-huuto.png',
+  './assets/nostotyypit/merkki-elain.png',
+  './assets/nostotyypit/merkki-hetki.png',
   './assets/kartat/symbolit/sym-elain.webp',
   './assets/kartat/symbolit/sym-historia.webp',
   './assets/kartat/symbolit/sym-huuto.webp',
@@ -1029,7 +1035,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/praha-prahan-linna.webp',
   './assets/kartat/miniatyyrit/praha-kaarlensilta.webp',
   './assets/kartat/miniatyyrit/praha-vanhauusi-synagoga.webp',
-  './assets/kartat/miniatyyrit/praha-astronominen-kello.webp',
   './assets/kartat/miniatyyrit/praha-kansallismuseo.webp',
   './assets/kartat/miniatyyrit/amsterdam-keskusrautatieasema.webp',
   './assets/kartat/miniatyyrit/amsterdam-anne-frankin-talo.webp',
@@ -1043,7 +1048,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tukholma-kuninkaanlinna.webp',
   './assets/kartat/miniatyyrit/tukholma-vasa-museo.webp',
   './assets/kartat/miniatyyrit/tukholma-skansen.webp',
-  './assets/kartat/miniatyyrit/kobenhavn-pieni-merenneito.webp',
   './assets/kartat/miniatyyrit/kobenhavn-amalienborg.webp',
   './assets/kartat/miniatyyrit/kobenhavn-rundetarn.webp',
   './assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
@@ -1210,7 +1214,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/budapest-pyhan-tapanin-kirkko.webp',
   './assets/kartat/miniatyyrit/budapest-sankarien-aukio.webp',
   './assets/kartat/miniatyyrit/budapest-suuri-kauppahalli.webp',
-  './assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
   './assets/kartat/miniatyyrit/lissabon-kansallispanteoni.webp',
   './assets/kartat/miniatyyrit/lissabon-kauppatori.webp',
   './assets/kartat/miniatyyrit/lissabon-rossio.webp',
@@ -1231,7 +1234,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/barcelona-arc-de-triomf.webp',
   './assets/kartat/miniatyyrit/barcelona-boquerian-kauppahalli.webp',
   './assets/kartat/miniatyyrit/barcelona-casa-batllo.webp',
-  './assets/kartat/miniatyyrit/barcelona-kolumbuksen-patsas.webp',
   './assets/kartat/miniatyyrit/barcelona-musiikkipalatsi.webp',
   './assets/kartat/miniatyyrit/barcelona-sagrada-familia.webp',
   './assets/kartat/miniatyyrit/dublin-dublinin-linna.webp',

@@ -81,6 +81,43 @@ export function tallennaPuheAsetukset(asetukset) {
   } catch { /* yksityistila: säädöt elävät vain istunnon */ }
 }
 
+/*
+ * STRIIMIÄÄNI KEHITTÄJÄVALIKOSSA (omistaja 27.9.2026 klo 01.2x: "Lisää
+ * kehittäjä valikkoon äänen valinta xai:n vaihtoehdoista striimille").
+ * Worker lukee striimiluennan xAI:n Grok TTS:llä (oletus 'ara', päätös
+ * 27.9. klo 00.25); tämä lista on workerin XAI_AANET-taulun NÄYTTÖKOPIO
+ * (tools/pollo/worker.js) — tests/puheohjeet.test.mjs valvoo, että ne
+ * ovat samat. Valinta tallentuu samaan laitekohtaiseen persoonatauluun
+ * kuin työhuoneen säädöt (kaikille kolmelle persoonalle kerralla), ja
+ * worker tottelee sitä vain kehittäjäkoodilla kuten muitakin säätöjä.
+ */
+export const STRIIMIAANET_XAI = ['altair', 'ara', 'atlas', 'aurora', 'carina', 'castor',
+  'celeste', 'cosmo', 'eve', 'helios', 'helix', 'iris', 'kepler', 'leo',
+  'liora', 'lumen', 'luna', 'lux', 'naksh', 'orion', 'perseus', 'rex',
+  'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
+export const STRIIMIAANI_OLETUS = 'ara';
+const STRIIMIN_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
+
+/** Kehittäjän valitsema xAI-striimiääni, tai null = workerin oletus (ara). */
+export function striimiaani() {
+  const aani = luePuheAsetukset()?.pollo?.aani;
+  return typeof aani === 'string' && STRIIMIAANET_XAI.includes(aani) ? aani : null;
+}
+
+/** Asettaa xAI-striimiäänen kaikille persoonille; null/'' palauttaa oletuksen. */
+export function asetaStriimiaani(aani) {
+  const valinta = typeof aani === 'string' && STRIIMIAANET_XAI.includes(aani) ? aani : null;
+  const asetukset = luePuheAsetukset();
+  for (const persoona of STRIIMIN_PERSOONAT) {
+    const oma = { ...(asetukset[persoona] ?? {}) };
+    if (valinta) oma.aani = valinta;
+    else delete oma.aani;
+    asetukset[persoona] = oma;
+  }
+  tallennaPuheAsetukset(asetukset);
+  return valinta;
+}
+
 function puheenSaadot(persoona) {
   const oma = luePuheAsetukset()?.[persoona];
   if (!oma || typeof oma !== 'object') return null;
@@ -103,7 +140,7 @@ function kehittajaKoodi() {
 }
 
 /**
- * Yhden pyynnön merkkikatto. Workerin kova raja on 1000
+ * Yhden pyynnön merkkikatto. Workerin kova raja on 2500
  * (tools/pollo/rajat.js PUHE_TEKSTIN_KATTO); tämä pysyy sen alla,
  * jotta siivousten pyöristykset eivät koskaan leikkaa lausetta kesken.
  *
@@ -112,7 +149,14 @@ function kehittajaKoodi() {
  * mahdollisimman moni kappale yhdellä pyynnöllä — raja on enää
  * workerin kovan rajan vartija, ei palakoon säädin.
  */
-export const PUHE_PALA_KATTO = 950;
+/*
+ * 950 → 2400 (omistaja 27.9.2026 klo 01.5x): pitkäkin kappale on yksi
+ * pala. Palojen väliin ei synny odotusta, koska soitin hakee jo kaksi
+ * seuraavaa palaa sillä aikaa kun edellinen soi (aikatauluta: hae +1, +2;
+ * mitattu 27.9. xAI:lla — lehtisivun palojen välit 0,45/0,95 s eli vain
+ * suunnitellut tauot). Aloituspala katetaan esipuskurilla.
+ */
+export const PUHE_PALA_KATTO = 2400;
 
 /*
  * Istunnon estolippu: asetusvirhe (503/403) tarkoittaa, ettei puhe ole

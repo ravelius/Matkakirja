@@ -264,6 +264,23 @@ jobs:
           fi
           printf '%s' "$OPENAI_API_KEY" | "$WRANGLER" secret put OPENAI_API_KEY --config "$POLLO_ASETUS"
 
+      # STRIIMILUENNAN AVAIN (omistajan päätös 27.9.2026: xAI Grok TTS,
+      # ääni ara, kaikkeen striimiluentaan). Vapaaehtoinen kuten OpenAI:n
+      # avain: ilman sitä worker lukee OpenAI:lla kuin ennen; kun avain
+      # on, worker valitsee xAI:n (PUHE_MOOTTORI wrangler.jsonc:ssa) ja
+      # pitää OpenAI:n varapolkuna.
+      - name: Aseta striimiluennan xAI-avain workerin salaisuudeksi (jos on)
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${XAI_API_KEY:-}" ]; then
+            echo "XAI_API_KEY ei ole asetettu — ohitetaan (striimiluenta jää OpenAI:lle)."
+            exit 0
+          fi
+          printf '%s' "$XAI_API_KEY" | "$WRANGLER" secret put XAI_API_KEY --config "$POLLO_ASETUS"
+
       # TYÖHUONEEN TILANNEPALKKIEN AVAIMET (omistajan tilaus 15.8.2026):
       # vapaaehtoiset salaisuudet, joilla worker näkee ElevenLabsin
       # kuukausikiintiön ja OpenAI:n/Anthropicin/Googlen kulut

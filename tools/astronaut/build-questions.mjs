@@ -1,11 +1,15 @@
 /** Compile reviewed text only. Does not fetch sources, generate speech or edit lens UI. */
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { SATELLIITTI_KOHTEET } from '../../js/linssit/satelliitti-data.js';
 
-const rows = (await Promise.all(['qa-first.json', 'qa-last.json'].map(async name => JSON.parse(await readFile(new URL(name, import.meta.url), 'utf8'))))).flat();
+// Every qa-*.json (qa-first, qa-last, qa-era1, …) in any file order; output follows SATELLIITTI_KOHTEET order.
+const sourceNames = (await readdir(new URL('./', import.meta.url))).filter(name => /^qa-.+\.json$/.test(name)).sort();
+const order = new Map(SATELLIITTI_KOHTEET.map((row, index) => [row.tunnus, index]));
+const rows = (await Promise.all(sourceNames.map(async name => JSON.parse(await readFile(new URL(name, import.meta.url), 'utf8'))))).flat()
+  .sort((a, b) => (order.get(a.tunnus) ?? Infinity) - (order.get(b.tunnus) ?? Infinity));
 const keys = rows.map(row => row.tunnus);
-if (keys.length !== 64 || new Set(keys).size !== keys.length || keys.join('|') !== SATELLIITTI_KOHTEET.map(row => row.tunnus).join('|')) throw Error('Target coverage/order changed: review sources before compiling');
+if (new Set(keys).size !== keys.length || keys.join('|') !== SATELLIITTI_KOHTEET.map(row => row.tunnus).join('|')) throw Error('Target coverage changed: every camera target needs exactly one reviewed qa row');
 const segmenter = new Intl.Segmenter('fi', { granularity: 'sentence' });
 for (const row of rows) {
   const target = SATELLIITTI_KOHTEET.find(item => item.tunnus === row.tunnus);

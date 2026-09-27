@@ -1059,6 +1059,1074 @@ export const KOHTEET = [
       },
     ],
   },
+  /*
+   * ERÄ 1: PELIN KAUPUNGIT (Sisältökirjuri 26.9.2026, omistajan tilaus,
+   * Fablen välitys). 23 kaupunkia pelilaudan PALLON_KAUPUNKIPISTEET-
+   * listasta, jotka eivät olleet vielä mukana. Kaksi Pulu-kysymystä per
+   * kohde: tools/astronaut/qa-era1.json. Amsterdam, Berliini, Tukholma,
+   * Kööpenhamina, Praha, Toronto, Lagos, Hanoi ja Manila jätetty pois —
+   * millekään ei löytynyt kelvollista ISS-käsikamerakuvaa (vain
+   * avaruussukkulakuvia, moni-kaupunki-yleiskuvia joissa kaupunki ei
+   * erotu, tai ei osumia lainkaan).
+   */
+  {
+    tunnus: 'pariisi', nimi: 'Pariisi', seutu: 'Ranska', lat: 48.857, lon: 2.352,
+    selite: 'Ranskan pääkaupunki, jonka säteittäiset bulevardit erottuvat selvästi yöllä avaruudesta.',
+    oletus: 'iss072e789833',
+    kuvat: [
+      {
+        id: 'iss072e789833',
+        teksti: 'Pariisi yöllisessä valaistuksessa avaruusasemalta kuvattuna. Eiffel-tornin ja '
+          + 'Champs de Marsin kohdalla erottuu kirkas valopilkku kuvan keskellä, ja kaupungin '
+          + 'säteittäiset bulevardit haarautuvat siitä joka suuntaan. Seine-joki näkyy tummana, '
+          + 'valottomana nauhana kaupungin halki.',
+      },
+    ],
+  },
+  {
+    tunnus: 'lontoo', nimi: 'Lontoo', seutu: 'Englanti, Yhdistynyt kuningaskunta', lat: 51.507, lon: -0.128,
+    selite: 'Yhdistyneen kuningaskunnan pääkaupunki, jonka halki mutkitteleva Thames erottaa sen kahtia myös yöllä.',
+    oletus: 'iss074e0405029',
+    kuvat: [
+      {
+        id: 'iss074e0405029',
+        teksti: 'Lontoo yöllä avaruusasemalta kuvattuna. Thames-joki mutkittelee kirkkaana '
+          + 'valonauhojen välissä kaupungin keskellä ja jakaa sen kahtia. Kuvan alareunassa erottuu '
+          + 'Heathrowin lentokentän kiitoratavalaistus ja oikeassa reunassa Gatwickin lentokenttä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'rooma', nimi: 'Rooma', seutu: 'Italia', lat: 41.893, lon: 12.483,
+    selite: 'Italian pääkaupunki ja antiikin valtakunnan sydän, asutettuna yhtäjaksoisesti tuhansia vuosia.',
+    oletus: 'iss073e0343840',
+    kuvat: [
+      {
+        id: 'iss073e0343840',
+        teksti: 'Rooma yöllä, avaruusasemalta kuvattuna. Kaupungin tiivis, sokkeloinen valokudos '
+          + 'erottuu selvästi ympäröivästä maaseudusta, ja kuvan vasemmassa reunassa näkyy '
+          + 'Tyrrhenanmeren pimeä rantaviiva.',
+      },
+    ],
+  },
+  {
+    tunnus: 'venetsia', nimi: 'Venetsia', seutu: 'Italia', lat: 45.44, lon: 12.332,
+    selite: 'Italian kanavakaupunki, rakennettu sadan sokkeloisen saaren päälle laguunin keskelle.',
+    oletus: 'iss014e17346',
+    kuvat: [
+      {
+        id: 'iss014e17346',
+        teksti: 'Venetsia päivänvalossa avaruusasemalta kuvattuna. Kaupungin tunnusomainen '
+          + 'kalanmuotoinen saari erottuu selvästi laguunin vihertävästä vedestä, ja Canal Granden '
+          + 'S-mutka halkoo sitä keskeltä. Kuvan yläosassa näkyy Muranon saari, ja vasemmassa '
+          + 'reunassa rautatiesilta, joka yhdistää Venetsian Italian mantereeseen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'moskova', nimi: 'Moskova', seutu: 'Venäjä', lat: 55.751, lon: 37.617,
+    selite: 'Venäjän pääkaupunki, jonka säteittäis-rengasmainen katuverkko erottuu selvästi avaruudesta.',
+    oletus: 'iss064e024687',
+    kuvat: [
+      {
+        id: 'iss064e024687',
+        teksti: 'Moskova yöllä avaruusasemalta kuvattuna. Kaupungin säteittäis-rengasmainen '
+          + 'katuverkko erottuu kirkkaana valokuviona, ja tiiviisti valaistu keskusta hehkuu selvästi '
+          + 'ympäröivää, harvemmin valaistua esikaupunkialuetta vasten. Moskova-joki virtaa '
+          + 'keskustan halki tummana, valottomana raitana.',
+      },
+    ],
+  },
+  {
+    tunnus: 'peking', nimi: 'Peking', seutu: 'Kiina', lat: 39.904, lon: 116.408,
+    selite: 'Kiinan pääkaupunki ja Kielletyn kaupungin kotipaikka, ainoa isännöinyt kesä- ja talviolympialaiset.',
+    oletus: 'iss072e444944',
+    kuvat: [
+      {
+        id: 'iss072e444944',
+        teksti: 'Peking yöllä avaruusasemalta kuvattuna. Kaupungin keskusta erottuu ruudukkomaisena, '
+          + 'oranssinsävyisenä valomerenä, jota ympäröivät konsentriset kehätiet. Kuvan keskellä '
+          + 'erottuu Kielletyn kaupungin kirkkaasti valaistu Meridiaaniportti, ja oikeassa yläkulmassa '
+          + 'näkyvät lentokentän valaistut kiitoradat.',
+      },
+    ],
+  },
+  {
+    tunnus: 'hongkong', nimi: 'Hongkong', seutu: 'Kiina (erityishallintoalue)', lat: 22.278, lon: 114.159,
+    selite: 'Kiinan erityishallintoalue, jonka valot erottuvat selvästi naapurikaupunki Shenzhenin valoista.',
+    oletus: 'iss072e399613',
+    kuvat: [
+      {
+        id: 'iss072e399613',
+        teksti: 'Hongkong ja naapurikaupunki Shenzhen yöllä avaruusasemalta kuvattuna. Kuvan '
+          + 'alaosan Hongkongin rannikko erottuu lämpimän kellertävänä valona, kun taas yläosan '
+          + 'Shenzhen hohtaa sinertävänä — ero johtuu kaupunkien erilaisesta valaistushistoriasta '
+          + 'ja -tekniikasta rajan molemmin puolin.',
+      },
+    ],
+  },
+  {
+    tunnus: 'singapore', nimi: 'Singapore', seutu: 'Singapore', lat: 1.3, lon: 103.8,
+    selite: 'Kaupunkivaltio Malesian kärjessä, jonka lentokenttä ja konttisatama näkyvät selvästi yöllä.',
+    oletus: 'iss073e0763866',
+    kuvat: [
+      {
+        id: 'iss073e0763866',
+        teksti: 'Singapore erottuu kuvan keskellä, erotettuna Malesian Johor Bahrusta vasemmalla '
+          + 'Johorin salmella. Oikealla keskellä siintää Changin lentokenttä, ja kuvan alaosan '
+          + 'kirkas suorakulmainen alue on Pasir Panjangin konttisatama, suunniteltu maailman '
+          + 'suurimmille konttialuksille. Kuva otettu yöllä ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sydney', nimi: 'Sydney', seutu: 'Australia', lat: -33.868, lon: 151.21,
+    selite: 'Australian suurin kaupunki, jonka lentokenttä ja satama-alueet reunustavat Botany Baytä.',
+    oletus: 'iss055e073720',
+    kuvat: [
+      {
+        id: 'iss055e073720',
+        teksti: 'Kuvassa näkyy Sydneyn lentokenttä kahdella kiitoradallaan Botany Bayn rannalla. '
+          + 'Lentokentän ympärillä erottuvat sataman konttiterminaalit ja tiheä ruudukkomainen '
+          + 'kaupunkirakenne, joka jatkuu rannikkoa pitkin koilliseen. Kuva otettu päivänvalossa ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'rio', nimi: 'Rio de Janeiro', seutu: 'Brasilia', lat: -22.911, lon: -43.206,
+    selite: 'Brasilian rantakaupunki Guanabaran lahden rannalla, yhdistettynä Niteróihin pitkällä sillalla.',
+    oletus: 'iss070e108427',
+    kuvat: [
+      {
+        id: 'iss070e108427',
+        teksti: 'Kuvan keskellä avautuu Guanabaran lahti, jonka länsirannalla on Rio de Janeiro ja '
+          + 'itärannalla Niterói. Lahden poikki kulkee noin 13 kilometrin pituinen Rio-Niterói-silta, '
+          + 'joka yhdistää kaupungit. Kuva otettu päivänvalossa ISS:ltä Atlantin rannikon yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'saopaulo', nimi: 'São Paulo', seutu: 'Brasilia', lat: -23.55, lon: -46.634,
+    selite: 'Etelä-Amerikan suurin kaupunki ja Brasilian talouden veturi, levittäytynyt laajana valomerenä.',
+    oletus: 'iss073e0982063',
+    kuvat: [
+      {
+        id: 'iss073e0982063',
+        teksti: 'São Paulo levittäytyy kuvassa laajana valomerenä yöllä otetussa kuvassa. Kaupungin '
+          + 'valot ovat siirtyneet energiatehokkaisiin valkoisiin LED-lamppuihin, jotka näkyvät '
+          + 'kuvassa vanhoja oransseja natriumlamppuja kirkkaampina. São Paulon metropolialueella '
+          + 'asuu noin 22 miljoonaa ihmistä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'losangeles', nimi: 'Los Angeles', seutu: 'Yhdysvallat', lat: 34.05, lon: -118.25,
+    selite: 'Yhdysvaltain Tyynenmeren rannikon suurkaupunki, jonka satama on maan vilkkain konttisatama.',
+    oletus: 'iss073e0513936',
+    kuvat: [
+      {
+        id: 'iss073e0513936',
+        teksti: 'Kuvassa erottuu Los Angelesin rannikkoa ja tiheää ruudukkomaista kaupunkirakennetta '
+          + 'aina Long Beachin satama-alueelle ja Terminal Islandille asti oikeassa alakulmassa. '
+          + 'Vasemmalla rannikolla näkyy myös lentokenttä- ja satamarakenteita. Kuva otettu '
+          + 'päivänvalossa ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sanfrancisco', nimi: 'San Francisco', seutu: 'Yhdysvallat', lat: 37.779, lon: -122.419,
+    selite: 'Kalifornian lahtikaupunki, joka tunnetaan Golden Gate -sillasta ja lähellä syntyneestä Piilaaksosta.',
+    oletus: 'iss073e0285002',
+    kuvat: [
+      {
+        id: 'iss073e0285002',
+        teksti: 'Kuvassa San Franciscon lahti erottuu pimeänä alueena, jonka ympärillä valot '
+          + 'piirtävät kaupungin ja sen esikaupunkien, kuten San Josen ja Oaklandin, ääriviivat '
+          + 'näkyviin. Lahden yli kulkevat siltayhteydet erottuvat valojuovina veden yllä. Kuva '
+          + 'otettu keskiyön aikaan ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'chicago', nimi: 'Chicago', seutu: 'Yhdysvallat', lat: 41.882, lon: -87.628,
+    selite: 'Yhdysvaltain Keskilännen suurkaupunki Michiganjärven rannalla, pilvenpiirtäjien syntypaikka.',
+    oletus: 'iss073e0080182',
+    kuvat: [
+      {
+        id: 'iss073e0080182',
+        teksti: 'Chicago erottuu kuvassa kirkkaana valoruudukkona Michiganjärven eteläkärjessä, ja '
+          + 'järven pimeä pinta rajaa kaupungin selvästi idässä. Kaupungin ydin pistää esiin '
+          + 'ympäröivästä esikaupunkialueesta kirkkaimpana valopilkkuna. Kuva otettu yöllä ISS:ltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mexico', nimi: 'Mexico City', seutu: 'Meksiko', lat: 19.411, lon: -99.131,
+    selite: 'Meksikon pääkaupunki entisen järven pohjalla korkealla vuoristolaaksossa, joka vaipuu vuosi vuodelta.',
+    oletus: 'iss073e0075943',
+    kuvat: [
+      {
+        id: 'iss073e0075943',
+        teksti: 'Mexico City loistaa yöllä kirkkaana Meksikon laakson pohjalla. Kaupungin valot '
+          + 'täyttävät koko altaan, ja niitä reunustavat tummat, valottomat alueet: Texcocon ja '
+          + 'Tláhuac-Xicon luonnonsuojelualueet sekä Ajuscon kansallispuiston vuoret. Kuva otettiin '
+          + 'Kansainväliseltä avaruusasemalta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kapkaupunki', nimi: 'Kapkaupunki', seutu: 'Etelä-Afrikka', lat: -33.925, lon: 18.425,
+    selite: 'Etelä-Afrikan lainsäädäntöpääkaupunki mantereen lounaiskärjessä, Kapniemen vuorten juurella.',
+    oletus: 'iss064e038871',
+    kuvat: [
+      {
+        id: 'iss064e038871',
+        teksti: 'Kapkaupunki ja sen ympäröivä rannikko näkyvät päivänvalossa Etelä-Afrikan '
+          + 'kärjessä, auringon kimmellyksen loistaessa Atlantin pinnalla. Kaupungin katuverkko '
+          + 'erottuu vaaleana, tiiviisti rakennettuna alueena rannikon tuntumassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mumbai', nimi: 'Mumbai', seutu: 'Intia', lat: 18.975, lon: 72.826,
+    selite: 'Intian talouselämän keskus, rakennettu alun perin seitsemälle erilliselle saarelle Arabianmeren rannalla.',
+    oletus: 'iss014e08744',
+    kuvat: [
+      {
+        id: 'iss014e08744',
+        teksti: 'Mumbain satama ja kaupunkialue täyttävät kapean Salsette-niemekkeen Arabianmeren '
+          + 'rannalla. Rakennettu alue jatkuu yhtenäisenä noin 50 kilometrin matkan pohjoisesta '
+          + 'etelään, ja kuvassa erottuvat myös rannikon pienet niemet ja lahdet.',
+      },
+    ],
+  },
+  {
+    tunnus: 'delhi', nimi: 'Delhi', seutu: 'Intia', lat: 28.61, lon: 77.23,
+    selite: 'Intian pääkaupunkialue, maailman toiseksi suurin metropolialue Himalajan eteläpuolella.',
+    oletus: 'iss072e757452',
+    kuvat: [
+      {
+        id: 'iss072e757452',
+        teksti: 'Delhin valot loistavat kirkkaina lähellä puolta yötä paikallista aikaa, Himalajan '
+          + 'reunan tuntumassa. Kaupungin tiivis valoverkko peittää laajan alueen tasaisella '
+          + 'tasangolla, ja valojen tiheys vaihtelee vanhan ja uuden kaupunginosan välillä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bangkok', nimi: 'Bangkok', seutu: 'Thaimaa', lat: 13.75, lon: 100.517,
+    selite: 'Thaimaan pääkaupunki, jonka Chao Phraya -joki jakaa kahtia matkalla Siaminlahteen.',
+    oletus: 'iss072e757257',
+    kuvat: [
+      {
+        id: 'iss072e757257',
+        teksti: 'Bangkok jakautuu selvästi kahtia Chao Phraya -joen ympärille, joka erottuu kuvassa '
+          + 'mustana nauhana kaupungin valojen keskellä. Kuvan keskioikealla erottuu tumma, '
+          + 'vähemmän valaistu Bang Krachaon viheralue joen mutkassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'jakarta', nimi: 'Jakarta', seutu: 'Indonesia', lat: -6.21, lon: 106.845,
+    selite: 'Indonesian pääkaupunki, joka vajoaa nopeasti ja jota siksi korvaamaan rakennetaan uutta pääkaupunkia.',
+    oletus: 'iss030e015896',
+    kuvat: [
+      {
+        id: 'iss030e015896',
+        teksti: 'Kuva on otettu infrapunakameralla, joten Jakartan kaupunkialue hohtaa '
+          + 'oranssinpunaisena rannikolla. Tiivis, verkkomainen kaupunkirakenne erottuu selvästi '
+          + 'ympäröivästä pimeästä merestä ja harvaan asutusta maaseudusta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'shanghai', nimi: 'Shanghai', seutu: 'Kiina', lat: 31.224, lon: 121.476,
+    selite: 'Kiinan väkirikkain kaupunki Jangtse-joen suulla, jonka rannikko värjäytyy joen liejusta.',
+    oletus: 'iss073e0513927',
+    kuvat: [
+      {
+        id: 'iss073e0513927',
+        teksti: 'Kuva näyttää Shanghain kaupunkialueen päiväsaikaan Jangtse-joen suulla Itä-Kiinan '
+          + 'meren rannalla. Ylälaidassa erottuu Pudongin kansainvälisen lentokentän kiitoradat, ja '
+          + 'kuvan oikealla puolella näkyy pyöreä Dishui-järvi, Kiinan suurin tekoallas. Mereen '
+          + 'laskeva sedimenttipitoinen vesi näkyy vaaleanruskeana rannikon tuntumassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'wien', nimi: 'Wien', seutu: 'Itävalta', lat: 48.208, lon: 16.373,
+    selite: 'Itävallan pääkaupunki Tonavan rannalla, jonka tiivis keskusta erottuu selvästi yöllä avaruudesta.',
+    oletus: 'iss064e005231',
+    kuvat: [
+      {
+        id: 'iss064e005231',
+        teksti: 'Kuva näyttää Wienin yöllä avaruusasemalta kuvattuna, katuvalot piirtävät kaupungin '
+          + 'tiheän verkkomaisen rakenteen selvästi näkyviin. Tonava-joki erottuu kuvan keskellä '
+          + 'pimeänä, valottomana nauhana, joka halkoo valaistua kaupunkialuetta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'soul', nimi: 'Soul', seutu: 'Etelä-Korea', lat: 37.567, lon: 126.978,
+    selite: 'Etelä-Korean pääkaupunki, jonka Han-joki jakaa kaupungin kahtia niemimaan keskiosassa.',
+    oletus: 'iss072e757318',
+    kuvat: [
+      {
+        id: 'iss072e757318',
+        teksti: 'Kuva näyttää Soulin yöllä, kaupungin tiheä valoverkko peittää laajan alueen '
+          + 'Korean niemimaan keskiosassa. Han-joki kulkee kuvan poikki pimeänä nauhana ja jakaa '
+          + 'kaupungin selvästi kahteen osaan. Kuva paljastaa myös kaupungin ympärille leviävän '
+          + 'esikaupunkialueen tiiviin tieverkoston.',
+      },
+    ],
+  },
+  /*
+   * ERÄ 2 (26.9.2026): isoisän reitin maisemat, luonnonkohteet ja
+   * sama paikka eri vuosina -parit. Kuvat katsottu ja arvioitu käsin.
+   */
+  {
+    tunnus: 'kilimanjaro', nimi: 'Kilimanjaro', seutu: 'Tansania', lat: -3.07, lon: 37.35,
+    selite: 'Afrikan korkein vuori, jonka huipun jää on kutistunut 85 prosenttia sadan vuoden aikana.',
+    oletus: 'iss014e18950',
+    kuvat: [
+      {
+        id: 'iss014e18950',
+        teksti: 'Kraatterin reuna suoraan ylhäältä kuvattuna. Lumi ja jää peittävät enää osan Kibon '
+          + 'huipusta, ja tumma kivikko pilkistää esiin rengasmaisen jäätikön keskeltä. Vuoren jää oli '
+          + 'vuonna 1912 vielä 11,4 neliökilometrin kokoinen korkki; tässä kuvassa siitä on jäljellä hajanaisia läiskiä.',
+      },
+      {
+        id: 'iss056e098062',
+        teksti: 'Sama vuori yksitoista vuotta myöhemmin, pilvirenkaan ympäröimänä kuin silmä. '
+          + 'Lumihuippu erottuu tumman rinteen keskeltä pienenä valkoisena kolmiona. Kenian raja jää '
+          + 'kuvan taakse pohjoiseen, ja Kilimanjaro nousee tasangosta ilman yhtäkään vieressään kilpailevaa huippua.',
+      },
+    ],
+  },
+  {
+    tunnus: 'victorianputous', nimi: 'Victorianputous', seutu: 'Sambia ja Zimbabwe', lat: -17.92, lon: 25.86,
+    selite: 'Maailman suurin yhtenäinen putoavan veden verho, 1708 metriä leveä.',
+    oletus: 'iss007e14361',
+    kuvat: [
+      {
+        id: 'iss007e14361',
+        teksti: 'Putous näkyy ohuena valkoisena raitana Zambezi-joen poikki, ja sen alapuolella joki '
+          + 'jatkaa matkaansa terävinä sik-sakkeina — samoja basalttirotkoja, jotka putous on kaivertanut '
+          + 'itselleen perääntyessään vuosituhansien varrella. Victoria Falls -kaupunki näkyy oikealla partaalla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'iso-valliriutta', nimi: 'Iso valliriutta', seutu: 'Queensland, Australia', lat: -16.5, lon: 145.7,
+    selite: 'Maailman suurin koralliriuttajärjestelmä, yli 2300 kilometrin matkalla.',
+    oletus: 'iss068e004262',
+    kuvat: [
+      {
+        id: 'iss068e004262',
+        teksti: 'Queenslandin rannikko oikealla, ja sen edustalla riuttojen laikukas turkoosi vyöhyke '
+          + 'jatkuu kuvan reunalle asti. Jokainen vaaleampi laikku on oma matala riuttansa, jonka ympärillä '
+          + 'syvempi vesi tummuu siniseksi — tässä kuvassa näkyy vain murto-osa yli 2900 erillisestä riutasta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kata-tjuta', nimi: 'Kata Tjuta', seutu: 'Pohjoisterritorio, Australia', lat: -25.31, lon: 130.74,
+    selite: 'Kolmisenkymmentä punaista kivikupolia aution tasangon keskellä, Uluru-Kata Tjuta -kansallispuistossa.',
+    oletus: 'iss023e029806',
+    kuvat: [
+      {
+        id: 'iss023e029806',
+        teksti: 'Iltapäivän valo korostaa Kata Tjutan pyöristyneitä kivikupoleja, joiden väliin varjot '
+          + 'piirtävät syviä rakoja. Korkein kupoli, Mount Olga, on 206 metriä naapuriaan Ulurua korkeampi, '
+          + 'vaikka Uluru on niistä kahdesta kuuluisampi. Vihreä kasvillisuus seuraa kuivia puronuomia alaosassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kuollutmeri', nimi: 'Kuollut meri', seutu: 'Israel, Jordania ja Länsiranta', lat: 31.4, lon: 35.5,
+    selite: 'Maapallon matalin kohta merenpinnasta, ja järvi joka kutistuu vuosi vuodelta.',
+    oletus: 'iss062e078990',
+    kuvat: [
+      {
+        id: 'iss062e078990',
+        teksti: 'Meren eteläpää, jossa luonnollinen sininen vesi (vasen) vaihtuu geometrisiksi '
+          + 'haihdutusaltaiksi (oikea): niissä auringossa haihdutetaan suolavettä potaskaksi. Altaiden '
+          + 'vihertävä ja vaaleanpunainen sävy syntyy eri suolapitoisuuksista.',
+      },
+      {
+        id: 'iss073e0425936',
+        teksti: 'Laajempi näkymä samalta seudulta: Galileanjärvi (vasemmalla) ja Kuollut meri (oikealla) '
+          + 'yhdistää Jordan-joki, ohut tumma viiva kuvan keskellä. Galileanjärvi on maailman matalin '
+          + 'makeanveden järvi, Kuollut meri matalin suolajärvi — molemmat samassa hautavajoamassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'tsadjarvi', nimi: 'Tšadjärvi', seutu: 'Tšad, Niger, Nigeria ja Kamerun', lat: 13.15, lon: 14.3,
+    selite: 'Järvi, joka on kutistunut noin 90 prosenttia 1960-luvulta.',
+    oletus: 'iss037e015757',
+    kuvat: [
+      {
+        id: 'iss037e015757',
+        teksti: 'Auringon heijastus vedestä paljastaa matalan, pirstoutuneen järven ääriviivat '
+          + 'paremmin kuin suora kuva pystyisi. 1960-luvulla järvi peitti 25 000 neliökilometriä; nyt '
+          + 'siitä on jäljellä enää murto-osa, ja vesi on hajonnut saarekkeiden ja ruovikon verkoksi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'fitrijarvi', nimi: 'Fitrijärvi', seutu: 'Tšad', lat: 12.83, lon: 17.43,
+    selite: 'Umpijärvi keskellä Saheliä, josta ei lähde ainuttakaan jokea mereen.',
+    oletus: 'iss030e059398',
+    kuvat: [
+      {
+        id: 'iss030e059398',
+        teksti: 'Mutainen keltaruskea vesi täyttää autiomaan painanteen keskeltä, ja sen ympärillä '
+          + 'tummempi rengas on paljastunut, palaneen kasvillisuuden peittämä järvenpohja. Kaikki '
+          + 'Fitrijärveen tuleva vesi joko haihtuu tai imeytyy hiekkaan — mereen ei johda yksikään puro.',
+      },
+    ],
+  },
+  {
+    tunnus: 'dardanellit', nimi: 'Dardanellit', seutu: 'Turkki', lat: 40.14, lon: 26.4,
+    selite: 'Kapea salmi, joka yhdistää Egeanmeren Marmarameren kautta Mustallemerelle.',
+    oletus: 'iss014e08138',
+    kuvat: [
+      {
+        id: 'iss014e08138',
+        teksti: 'Gallipolin kaupunki kuvan keskellä salmen suulla. Vesi virtaa yhtä aikaa koilliseen '
+          + 'ja lounaaseen, sillä pinta- ja pohjavirtaus kulkevat vastakkaisiin suuntiin, ja muutama '
+          + 'laiva näkyy tummina pilkkuina salmessa kaupungin lounaispuolella.',
+      },
+      {
+        id: 'iss002e7758',
+        teksti: 'Laajempi näkymä samalta salmelta viisi vuotta aiemmin: Gelibolun niemimaa työntyy '
+          + 'alas vasemmalla, Egeanmeren saaria pilkottaa oikealla, ja avaruuden musta reuna kaartuu ylhäällä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'okavango', nimi: 'Okavango-suisto', seutu: 'Botswana', lat: -19.28, lon: 22.97,
+    selite: 'Joki joka ei koskaan tavoita merta vaan haihtuu aavikon keskellä viuhkamaiseksi kosteikoksi.',
+    oletus: 'iss073e0604445',
+    kuvat: [
+      {
+        id: 'iss073e0604445',
+        teksti: 'Angolasta virtaava Okavango-joki haarautuu Kalaharin hiekalle lukemattomiksi tummiksi '
+          + 'suoniksi vaaleaa hiekkaa vasten, kuin puun juuristo. Vesi ei koskaan saavuta merta: se haihtuu '
+          + 'ja imeytyy kokonaan, ja suisto ylläpitää yhtä Afrikan lajirikkaimmista ekosysteemeistä.',
+      },
+      {
+        id: 'iss040e008209',
+        teksti: 'Auringon heijastus vedestä muuttaa suiston yhdeksi kirkkaaksi hopeajuovaksi tummaa '
+          + 'maata vasten — tekniikka, jolla miehistö saa esiin veden hienoimmatkin yksityiskohdat. Aseman '
+          + 'oma aurinkopaneeli reunustaa kuvan oikeaa laitaa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kolmen-rotkon-pato', nimi: 'Kolmen rotkon pato', seutu: 'Kiina', lat: 30.82, lon: 111.0,
+    selite: 'Maailman suurin pato, jonka tekojärvi on yli 600 kilometriä pitkä.',
+    oletus: 'iss019e007720',
+    kuvat: [
+      {
+        id: 'iss019e007720',
+        teksti: 'Pato näkyy vasemmassa reunassa kapeana valkoisena viivana joen poikki, ja sen takana '
+          + 'Jangtse-joki on juuri alkanut täyttää laaksoaan uudeksi, kapeaksi tekojärveksi — kuva on yksi '
+          + 'ensimmäisistä, jotka tallensivat täyttymisen vuonna 2009. Vuoristoinen maasto selittää altaan mutkittelun.',
+      },
+    ],
+  },
+  {
+    tunnus: 'vesuvius', nimi: 'Vesuvius', seutu: 'Italia', lat: 40.82, lon: 14.43,
+    selite: 'Tulivuori joka tuhosi Pompejin vuonna 79, ja asuu nyt kolmen miljoonan ihmisen naapurina.',
+    oletus: 'iss067e010622',
+    kuvat: [
+      {
+        id: 'iss067e010622',
+        teksti: 'Vesuviuksen pyöreä kraatteri erottuu Napolinlahden rannalla, ja kaupunki on '
+          + 'levittäytynyt aivan rinteille asti. Capri ja Ischia näkyvät saarina lahden suulla. Vuori '
+          + 'purkautui viimeksi 1944, mutta se on yhä yksi maailman tarkimmin valvotuista tulivuorista.',
+      },
+      {
+        id: 'iss061e006435',
+        teksti: 'Naapurikaupunki Pompeiji jää kuvassa vuoren juurelle: se hautautui tuhkaan vuonna 79 '
+          + 'purkauksessa, joka tappoi tuhansia. Kolme miljoonaa ihmistä asuu nykyään alueella, jonka '
+          + 'Vesuvius voisi vielä joskus haudata uudelleen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ounianga', nimi: 'Ouniangan järvet', seutu: 'Tšad', lat: 19.05, lon: 20.49,
+    selite: 'Kymmenen makean veden järveä keskellä Saharaa, jäänteinä muinaisesta suurjärvestä.',
+    oletus: 'iss021e026475',
+    kuvat: [
+      {
+        id: 'iss021e026475',
+        teksti: 'Oranssit hiekkadyynit ovat tunkeutuneet järven poikki ja pilkkoneet sen tummiksi '
+          + 'kaistaleiksi, jotka näyttävät puun oksilta. Järvet ovat jäänteitä yhdestä isosta järvestä, '
+          + 'joka peitti alueen 14 800–5 500 vuotta sitten kun Sahara oli vihreä; nyt pohjavesi pitää ne '
+          + 'täynnä keskellä autiomaata.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sokotra', nimi: 'Sokotra', seutu: 'Jemen', lat: 12.46, lon: 53.82,
+    selite: 'Saari niin eristyksissä, että 37 prosenttia sen kasveista ei kasva missään muualla.',
+    oletus: 'iss069e004768',
+    kuvat: [
+      {
+        id: 'iss069e004768',
+        teksti: 'Sokotran eteläisen rannikon vuoristo laskeutuu jyrkkinä laaksoina turkoosiin mereen. '
+          + 'Saari erosi mantereesta miljoonia vuosia sitten ja on siksi oma evoluution laboratorionsa: '
+          + 'sen sateenvarjonmuotoiset lohikäärmeenveripuut eivät kasva luonnossa missään muualla maailmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'titicaca', nimi: 'Titicaca-järvi', seutu: 'Peru ja Bolivia', lat: -15.78, lon: -69.34,
+    selite: 'Maailman korkeimmalla sijaitseva suuri purjehduskelpoinen järvi, Andien huipuilla.',
+    oletus: 'iss055e071030',
+    kuvat: [
+      {
+        id: 'iss055e071030',
+        teksti: 'Järvi täyttää Andien ylätasangon painanteen, ja sen luoteisreunaa vasten kohoavat '
+          + 'lumihuippuiset vuoret. Järvi sijaitsee noin 3812 metrin korkeudessa ja jakautuu Perun ja '
+          + 'Bolivian kesken rajaviivaa pitkin keskeltä vettä.',
+      },
+      {
+        id: 'iss067e149915',
+        teksti: 'Lähempi kuva samasta järvestä: auringon kimallus vedessä piirtää vaaleita raitoja, '
+          + 'jotka paljastavat pintavirtausten suunnan. Niemet ja lahdet erottuvat terävinä rantaviivoina — '
+          + 'järvi on niin suuri, että sen tuulet ja aallot muistuttavat merta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'gizan-pyramidit', nimi: 'Gizan pyramidit', seutu: 'Egypti', lat: 29.87, lon: 30.95,
+    selite: 'Muinaisen maailman seitsemästä ihmeestä ainoa, joka on vielä pystyssä.',
+    oletus: 'iss032e009123',
+    kuvat: [
+      {
+        id: 'iss032e009123',
+        teksti: 'Kolme pyramidia näkyy tummina kolmiovarjoineen aivan siinä kohtaa, missä Kairon '
+          + 'tiheä kaupunkikudos loppuu ja aavikko alkaa — raja on käytännössä suora viiva. Suurin '
+          + 'pyramideista, 146,6 metriä valmistuessaan noin 2560 eaa., oli maailman korkein rakennelma '
+          + 'yli 3700 vuotta.',
+      },
+      {
+        id: 'iss068e006657',
+        teksti: 'Laajempi näkymä kymmenen vuotta myöhemmin: pyramidit näkyvät pieninä kolmioina '
+          + 'kuvan yläosassa, ja alhaalla Niilin vihreä laakso ja joki itse leikkaavat aavikon halki. '
+          + 'Kaupunki on levinnyt entistä lähemmäs pyramideja.',
+      },
+    ],
+  },
+  {
+    tunnus: 'tshernobyl', nimi: 'Tšernobyl', seutu: 'Ukraina', lat: 51.39, lon: 30.10,
+    selite: 'Ydinvoimala, jonka ympärille jäi kielletty vyöhyke vuoden 1986 onnettomuuden jälkeen.',
+    oletus: 'iss057e051419',
+    kuvat: [
+      {
+        id: 'iss057e051419',
+        teksti: 'Voimalan rakennukset ja niitä ympäröivät jäähdytysaltaat erottuvat Pripjat-joen '
+          + 'mutkassa. Räjähtäneen neljännen reaktorin päälle rakennettu uusi teräskaari näkyy vaaleana '
+          + 'suorakulmiona. Rajan taakse Valko-Venäjälle perustettiin oma suojelualueensa säteilylle '
+          + 'altistuneelle alueelle — luonto on vallannut molemmat puolet takaisin ihmisen lähdettyä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'everest', nimi: 'Mount Everest', seutu: 'Nepal ja Kiina', lat: 27.99, lon: 86.93,
+    selite: 'Maapallon korkein kohta merenpinnasta, 8849 metriä.',
+    oletus: 'iss069e003192',
+    kuvat: [
+      {
+        id: 'iss069e003192',
+        teksti: 'Terävät lumihuiput työntyvät pilvimeren yläpuolelle Nepalin puolella Himalajaa, '
+          + 'Everest kuvan keskellä muiden jättiläisten joukossa. Pilvet kasautuvat vuorten eteläpuolelle, '
+          + 'koska kostea ilma nousee ja jäähtyy törmätessään Himalajan seinämään.',
+      },
+    ],
+  },
+  {
+    tunnus: 'aletsch', nimi: 'Aletschin jäätikkö', seutu: 'Sveitsi', lat: 46.43, lon: 8.02,
+    selite: 'Alppien pisin jäätikkö, 23 kilometriä, joka virtaa kolmen tunnetun huipun juurelta.',
+    oletus: 'iss013e77377',
+    kuvat: [
+      {
+        id: 'iss013e77377',
+        teksti: 'Jäätikkö mutkittelee laaksossa Jungfrau-, Mönch- ja Eiger-huippujen juurelta '
+          + 'alaspäin, ja sen keskellä kulkevat tummat raidat ovat moreeneja: kolmen erillisen jäävirran '
+          + 'mukanaan tuomaa kivi- ja soraröykkiötä, joka on puristunut yhteen jäätiköiden sulautuessa. '
+          + 'Kuvan yläreunassa siintää Brienzinjärvi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'torres-del-paine', nimi: 'Torres del Paine', seutu: 'Chile', lat: -50.95, lon: -73.03,
+    selite: 'Patagonian graniittitornit ja niitä ympäröivät jäätiköt, jotka kalvavat vuosi vuodelta.',
+    oletus: 'iss056e096830',
+    kuvat: [
+      {
+        id: 'iss056e096830',
+        teksti: 'Jäätikkö päättyy jyrkkään, siniseen jäärintamaan järveen, joka on täynnä juuri '
+          + 'irronneita jäälohkareita. Ympärillä jyrkät vuoret kohoavat suoraan jäästä — koko '
+          + 'kansallispuisto on graniittihuippujen ja jään yhteispeliä.',
+      },
+      {
+        id: 'iss016e012047',
+        teksti: 'Tyndall-jäätikkö yksitoista vuotta aiemmin: 32 kilometriä pitkä jäävirta, jonka '
+          + 'keskellä näkyy tumma moreeniviiva ja lähempänä reunaa rikkonaisia railokenttiä — kohtia, '
+          + 'joissa jää halkeilee virratessaan kallionkielekkeen ohi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kilauea', nimi: 'Kilauea', seutu: 'Havaiji, Yhdysvallat', lat: 19.42, lon: -155.29,
+    selite: 'Yksi maailman aktiivisimmista tulivuorista, joka muokkaa Ison saaren rantaviivaa yhä uudelleen.',
+    oletus: 'iss055e070297',
+    kuvat: [
+      {
+        id: 'iss055e070297',
+        teksti: 'Vaalea tuhka- ja kaasupilvi valuu Ison saaren itärannikolta merelle päin — tämä on '
+          + 'toukokuussa 2018 alkaneen purkauksen alkuvaiheita, jolloin laava tuhosi yli 700 kotia ja '
+          + 'loi saarelle kokonaan uutta rantaviivaa. Vuoren rinteet näkyvät tummina laavavirtojen uurtamina.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ararat', nimi: 'Ararat', seutu: 'Turkki', lat: 39.70, lon: 44.30,
+    selite: 'Turkin korkein vuori, kaksoishuippu joka näkyy kolmen maan rajaseudulta.',
+    oletus: 'iss064e029480',
+    kuvat: [
+      {
+        id: 'iss064e029480',
+        teksti: 'Vinosta kuvakulmasta otettu näkymä paljastaa Araratin kaksi huippua selvästi: '
+          + 'suurempi, 5137-metrinen Suur-Ararat etualalla ja pienempi kartiomainen Pikku-Ararat sen '
+          + 'takana. Lumi peittää molemmat huiput kokonaan, ja rinteiltä laskeutuvat tummat laavavirrat '
+          + 'erottuvat terävinä juovina lumen alta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'crater-lake', nimi: 'Crater Lake', seutu: 'Oregon, Yhdysvallat', lat: 42.94, lon: -122.11,
+    selite: 'Yhdysvaltain syvin järvi, 592 metriä, syntynyt kun tulivuori romahti sisäänpäin.',
+    oletus: 'iss013e54243',
+    kuvat: [
+      {
+        id: 'iss013e54243',
+        teksti: 'Poikkeuksellisen syvänsininen järvi täyttää pyöreän kalderan, joka syntyi kun '
+          + 'Mount Mazama -tulivuori räjähti ja romahti noin 7700 vuotta sitten. Wizard Island, pieni '
+          + 'tulivuorikartio järven sisällä, näkyy tummana pilkkuna eteläreunan lähellä.',
+      },
+      {
+        id: 'iss062e152575',
+        teksti: 'Sama kaldera talvella, lähes 14 vuotta myöhemmin: lumi peittää kraatterin reunat '
+          + 'kauttaaltaan, mutta järven pinta pysyy sulana ja yhtä tummansinisenä kuin kesällä. Wizard '
+          + 'Island erottuu nyt valkoisena lumihuippuna tumman veden keskeltä.',
+      },
+    ],
+  },
+
+  /*
+   * ERÄ 3 (27.9.2026): isoisän reitin maisemat, luonnonkohteet ja
+   * sama paikka eri vuosina -parit. Kuvat katsottu ja arvioitu käsin.
+   */
+  {
+    tunnus: 'upsala-jaatikko', nimi: 'Upsalan jäätikkö', seutu: 'Patagonia, Argentiina', lat: -49.88, lon: -73.30,
+    selite: 'Etelä-Patagonian jäätikköalueen kolmanneksi suurin jäätikkö, joka on vetäytynyt nopeasti.',
+    oletus: 'iss021e015243',
+    kuvat: [
+      { id: 'iss021e015243',
+        teksti: 'Upsala-jäätikön pää työntyy Argentino-järveen lokakuussa 2009. Reunasta irtoaa jäävuoria järveen — kaksi niistä kuljettaa mukanaan tummaa moreeniainesta, joka näkyy tummana raitana jään pinnalla. Vasemmalla oleva sininen järvi on jäätikön kuluttaman kallion ympäröimä, kirkkaampi kuin sameampi pääjärvi.' },
+      { id: 'iss037e005104',
+        teksti: 'Sama jäätikön pää neljä vuotta myöhemmin, lokakuussa 2013. Jään reuna on vetäytynyt keskimäärin 3,6 kilometriä vuodesta 2002, ja järven pinta on tuoreen jäänmurtuman jäljiltä valkoisen jäämurskan peitossa; suuremmat jäävuoret näkyvät valkoisina pilkkuina oikealla. Tutkijoiden mukaan vetäytyminen kertoo alueen ilmaston lämpenemisestä.' },
+    ],
+  },
+  {
+    tunnus: 'poopojarvi', nimi: 'Poopó-järvi', seutu: 'Oruro, Bolivia', lat: -18.75, lon: -67.13,
+    selite: 'Andien korkealla ylängöllä oleva matala suolajärvi, joka on kuivunut toistuvasti lähes kokonaan.',
+    oletus: 'iss012e06469',
+    kuvat: [
+      { id: 'iss012e06469',
+        teksti: 'Poopó-järvi marraskuussa 2005, vielä vihertävän veden peittämänä ja valkoisen suolareunuksen kehystämänä. Järvi on niin matala — yleensä alle kolme metriä — että pienetkin sademäärän muutokset ylä-Andeilla näkyvät suoraan sen pinta-alassa.' },
+      { id: 'iss070e098385',
+        teksti: 'Sama järvi helmikuussa 2024, lähes täysin kuivana. Punaiset ja oranssinruskeat sävyt ovat paljastunutta suolaista ja mineraalipitoista pohjaa, ja vain muutama tumma vesiallas on enää jäljellä. Kaivostoiminta ja kastelu ovat vieneet vettä syöttöjoista.' },
+    ],
+  },
+  {
+    tunnus: 'etosha', nimi: 'Etosha-tasanko', seutu: 'Namibia', lat: -18.60, lon: 16.00,
+    selite: 'Suunnaton, yleensä täysin kuiva suolatasanko, joka värjäytyy harvinaisina sadevuosina levien mukaan.',
+    oletus: 'iss030e234965',
+    kuvat: [
+      { id: 'iss030e234965',
+        teksti: 'Etosha-tasangon luoteiskulma, jonka valkoinen suolapinta erottuu ruskeasta savannista. Harvinaisen sadejakson jäljiltä Ekuma-joki on tuonut vettä lampeen oikealla, ja levä värjää sen vaaleanvihreäksi; toinen pieni allas hehkuu kirkkaan vihreänä. Yleensä tasanko on täysin kuiva.' },
+      { id: 'iss011e09504',
+        teksti: 'Sama seutu lähempää: pinkki ja vaaleanvihreä lampi pistävät esiin valkoisen suolakuoren keskeltä. Värin tekevät suolaa sietävät mikrolevät, joiden sävy vaihtelee veden lämpötilan ja suolaisuuden mukaan. Tasanko on 120 kilometriä pitkä ja Namibian suurimman eläinpuiston sydän.' },
+    ],
+  },
+  {
+    tunnus: 'eyrejarvi', nimi: 'Eyre-järven tulva', seutu: 'Etelä-Australia', lat: -28.90, lon: 137.30,
+    selite: 'Yleensä täysin kuiva järvi, joka harvinaisina vuosina värjäytyy suolaa rakastavien mikrobien mukaan.',
+    oletus: 'iss030e009271',
+    kuvat: [
+      { id: 'iss030e009271',
+        teksti: 'Vuoden 2011 poikkeuksellisten sateiden täyttämä Eyre-järvi. Vihreä Belt Bay on syvempää vettä, punainen Madigan Gulf matalampaa ja suolaisempaa — sen mikrobitiheys voi kohota niin suureksi, että solujen karotenoidipigmentti värjää koko lahden. Alareunassa näkyvä lohko on yhä täysin kuiva ja valkoinen suolasta.' },
+    ],
+  },
+  {
+    tunnus: 'sharkbay', nimi: 'Shark Bay', seutu: 'Länsi-Australia', lat: -25.75, lon: 113.60,
+    selite: 'Haarautunut aavikkolahti, jossa kasvaa maailman laajin merikaislaniitty ja elää eläviä stromatoliitteja.',
+    oletus: 'iss064e003722',
+    kuvat: [
+      { id: 'iss064e003722',
+        teksti: 'Shark Bayn syvälle Länsi-Australian rannikkoon pistävät turkoosit haarat. Matala vesi on täynnä merikaislaa, ja lahden pohjalla elää myös eläviä stromatoliitteja — kivimäisiä mikrobimattoja, jotka muistuttavat maapallon varhaisimpia elämänmuotoja.' },
+      { id: 'iss057e105411',
+        teksti: 'Sama rannikko idempää, missä lahti pilkkoutuu saariksi ja matalikoiksi. Vaaleat hiekkasärkät ja tummemmat syvänteet piirtävät lahden pohjan muodon suoraan veden läpi.' },
+    ],
+  },
+  {
+    tunnus: 'pyramidjarvi', nimi: 'Pyramid Lake', seutu: 'Nevada, Yhdysvallat', lat: 40.00, lon: -119.58,
+    selite: 'Jääkautisen jättimäisen Lahontan-järven jäänne aavikon keskellä, nimetty pyramidinmuotoisesta kalkkikivipatsaasta.',
+    oletus: 'iss073e0919979',
+    kuvat: [
+      { id: 'iss073e0919979',
+        teksti: 'Pyramid Lake syysauringossa; vihreät ja siniset pyörteet vedessä ovat levän värjäämiä virtauksia. Järveä ympäröi jyrkkä aavikkomaasto keskellä Nevadaa.' },
+      { id: 'iss025e005259',
+        teksti: 'Sama järvi talvella, jolloin auringon kajastus paljastaa veden pinnalla kaksi suurta pyörrettä — tuulen jättämän jäljen. Ne kertovat pintavirtauksista, jotka muuttavat paikallisesti sitä, kuinka paljon valoa vesi heijastaa takaisin avaruusasemalle.' },
+    ],
+  },
+  {
+    tunnus: 'monojarvi', nimi: 'Mono-järvi', seutu: 'Kalifornia, Yhdysvallat', lat: 38.00, lon: -119.02,
+    selite: 'Laskujoeton suolajärvi Kalifornian korkealla aavikolla, jonka keskellä kohoaa tulivuoritoiminnan synnyttämä saari.',
+    oletus: 'iss069e000859',
+    kuvat: [
+      { id: 'iss069e000859',
+        teksti: 'Lumen ympäröimä Mono-järvi huhtikuussa. Järven keskellä kohoava vaalea Paoha-saari on kolmesta saaresta nuorin ja syntyi tulivuoritoiminnasta alle 400 vuotta sitten. Järvellä ei ole luonnollista laskujokea, joten se on jäänyt suolaiseksi ja emäksiseksi.' },
+    ],
+  },
+  {
+    tunnus: 'saltonjarvi', nimi: 'Salton Sea', seutu: 'Kalifornia, Yhdysvallat', lat: 33.30, lon: -115.80,
+    selite: 'Vahingossa vuonna 1905 syntynyt järvi Kalifornian eteläisellä aavikolla, joka suolaantuu vuosi vuodelta.',
+    oletus: 'iss040e011868',
+    kuvat: [
+      { id: 'iss040e011868',
+        teksti: 'Salton Sea makaa tummana pisarana aavikon keskellä, vihreiden viljelysten ympäröimänä. Järvi syntyi, kun Colorado-joki murtautui kastelukanavan läpi ja täytti kuivan altaan kahdeksi vuodeksi ennen padon korjaamista; ilman jokea uudistuvaa vettä siitä on sittemmin tullut yhä suolaisempi.' },
+    ],
+  },
+  {
+    tunnus: 'etelaalpit-jarvet', nimi: 'Etelä-Alppien jäätikköjärvet', seutu: 'Uusi-Seelanti', lat: -44.13, lon: 170.13,
+    selite: 'Jäätikköjauhon turkoosiksi värjäämiä järviä Uuden-Seelannin korkeimpien vuorten juurella.',
+    oletus: 'iss071e073568',
+    kuvat: [
+      { id: 'iss071e073568',
+        teksti: 'Kolme peräkkäistä jäätikköjärveä samassa kuvassa — Tekapo, Pukaki ja Ohau vasemmalta oikealle. Kunkin sävy on hieman erilainen sen mukaan, kuinka paljon jäätikköjauhoa eli hienoksi jauhautunutta kivipölyä sen oma syöttöjoki kuljettaa; suurin niistä, Pukaki, on Aoraki/Mount Cookin, maan korkeimman vuoren, eteläpuolella.' },
+    ],
+  },
+  {
+    tunnus: 'zion', nimi: 'Zion Canyon', seutu: 'Utah, Yhdysvallat', lat: 37.30, lon: -113.05,
+    selite: 'Virginin joen kaivama punahiekkakivikanjoni, jonka jyrkät seinämät kohoavat satoja metrejä.',
+    oletus: 'iss017e005351',
+    kuvat: [
+      { id: 'iss017e005351',
+        teksti: 'Zion Canyonin punertavat ja vaaleanpinkit hiekkakivijyrkänteet lähes suoraan ylhäältä kuvattuna. Kivi on noin 200 miljoonaa vuotta vanhan aavikon hiekkadyynien jäänne, ja jokien kaivamat pystysuorat railot seuraavat kallion vanhoja säröjä. Vasemmassa alakulmassa erottuu kapea tie, joka kiipeää kanjonin seinämää pitkin.' },
+    ],
+  },
+  {
+    tunnus: 'volgansuisto', nimi: 'Volgan suisto', seutu: 'Astrahanin alue, Venäjä', lat: 45.70, lon: 47.90,
+    selite: 'Euroopan pisimmän joen laaja haarautuva suisto Kaspianmeren rannalla.',
+    oletus: 'iss005e11203',
+    kuvat: [
+      { id: 'iss005e11203',
+        teksti: 'Volga-joki haarautuu kymmeniksi uomiksi ennen laskuaan Kaspianmereen; vihreät suistosaaret erottuvat selvästi ruskeasta maasta pohjoisessa ja vihertävästä merestä etelässä. Suisto on tärkeä pysähdyspaikka muuttolinnuille ja elinympäristö belugasammille, joista saadaan Venäjän kuuluisaa kaviaaria.' },
+      { id: 'iss013e77351',
+        teksti: 'Sama suisto tulvan aikaan syyskuussa 2006, muutama päivä rankkojen sateiden jälkeen. Sameat tulvavedet virtaavat pitkinä juovina laivaväylän molemmin puolin kosteikkojen yli suoraan Kaspianmereen.' },
+    ],
+  },
+  {
+    tunnus: 'irrawaddyn-suisto', nimi: 'Irrawaddyn suisto', seutu: 'Myanmar', lat: 16.00, lon: 95.00,
+    selite: 'Myanmarin tärkeimmän joen mangrovemetsien ja riisipeltojen halkoma suisto Andamaanien merellä.',
+    oletus: 'iss073e1197819',
+    kuvat: [
+      { id: 'iss073e1197819',
+        teksti: 'Irrawaddy-joki haarautuu lukemattomiksi mangrovemetsän reunustamiksi uomiksi ennen laskuaan Andamaanien merelle. Ruskea sedimenttivyöhyke rannikon edustalla paljastaa, kuinka paljon liejua joki kuljettaa mukanaan riisipeltojen ja kosteikkojen halki. Avaruusaseman aurinkopaneeli näkyy kuvan oikeassa reunassa.' },
+    ],
+  },
+  {
+    tunnus: 'colorado-suisto', nimi: 'Colorado-joen suisto', seutu: 'Kalifornianlahti, Meksiko', lat: 31.80, lon: -114.75,
+    selite: 'Kuivunut jokisuisto, joka paljastaa kuinka kastelu vie Colorado-joen veden ennen kuin se ehtii mereen.',
+    oletus: 'iss064e002258',
+    kuvat: [
+      { id: 'iss064e002258',
+        teksti: 'Colorado-joen suisto Kalifornianlahden pohjukassa. Valkoinen alue vasemmalla on entistä jokiuomaa, joka on kuivunut, koska joen vesi käytetään lähes kokonaan kasteluun ennen kuin se ehtii merelle asti. Turkoosi sedimenttipitoinen vesi näyttää, missä vielä virtaava vesi kohtaa lahden. Avaruusaseman rakenteet näkyvät kuvan oikeassa reunassa.' },
+    ],
+  },
+  {
+    tunnus: 'santorini', nimi: 'Santorini', seutu: 'Kykladit, Kreikka', lat: 36.40, lon: 25.40,
+    selite: 'Kalderasaaristo, joka syntyi yhden historian voimakkaimmista tulivuorenpurkauksista.',
+    oletus: 'iss017e005037',
+    kuvat: [
+      { id: 'iss017e005037',
+        teksti: 'Santorinin saariryhmä ylhäältä: oikealla Théran pääsaari, jonka valkoiset kattojen rivit seuraavat jyrkän kalderan reunaa, ja vasemmalla tumma Nea Kamenin saari, joka on kasvanut esiin merestä laavavirroista. Kalderan synnytti noin vuonna 1620 eaa. tapahtunut purkaus, yksi viimeisten 10 000 vuoden voimakkaimmista. Saaren oikeassa yläkulmassa erottuu lentokenttä.' },
+    ],
+  },
+  {
+    tunnus: 'amazonin-suu', nimi: 'Amazonin suu', seutu: 'Pará, Brasilia', lat: -0.60, lon: -49.90,
+    selite: 'Maailman vesirikkaimman joen suualue, jossa virtaukset muovaavat rantaviivaa jatkuvasti uudelleen.',
+    oletus: 'iss010e13029',
+    kuvat: [
+      { id: 'iss010e13029',
+        teksti: 'Punaruskea liejuinen vesi virtaa vehreiden saarien välistä siellä missä Amazon laskee mereen; Perigoso-kanava erottaa saaren mantereesta, ja pilvet peittävät osan näkymästä. NASA:n tutkijat vertasivat vuosien 2000 ja 2005 kuvia ja havaitsivat kanavan siirtyneen satoja metrejä, kun joki syö rantaa toiselta puolelta ja kasaa lietettä toiselle.' },
+    ],
+  },
+  {
+    tunnus: 'fundynlahti', nimi: 'Fundynlahti', seutu: 'Nova Scotia ja New Brunswick, Kanada', lat: 45.30, lon: -64.50,
+    selite: 'Lahti, jossa on maailman suurin vuorovesivaihtelu — vesi voi nousta ja laskea yli kymmenen metriä.',
+    oletus: 'iss059e059149',
+    kuvat: [
+      { id: 'iss059e059149',
+        teksti: 'Fundynlahti erottaa Nova Scotian (oikealla) New Brunswickistä (vasemmalla). Lahden pohjukoissa vesi on punaruskeaa: maailman suurimmat vuorovedet huuhtovat esiin hiekkakiveä ja punaista mutaa kahdesti päivässä. Pilvijuova kulkee lahden yli kuvan alareunassa.' },
+    ],
+  },
+
+  /*
+   * ERÄ 4 (27.9.2026): isoisän reitin maisemat, luonnonkohteet ja
+   * sama paikka eri vuosina -parit. Kuvat katsottu ja arvioitu käsin.
+   */
+  {
+    tunnus: 'falklandinsaaret', nimi: 'Falklandinsaaret', seutu: 'Etelä-Atlantti, Britannian merentakainen alue', lat: -51.7, lon: -59.5,
+    selite: 'Kahden pääsaaren ja satojen pienempien saarten ryhmä keskellä eteläistä Atlanttia, kaukana lähimmästä mantereesta.',
+    oletus: 'iss071e582470',
+    kuvat: [
+      {
+        id: 'iss071e582470',
+        teksti: 'Länsi- ja Itä-Falkland erottuvat tummina, repaleisina saarina kirkkaan sinisen valtameren '
+          + 'keskeltä. Saarilla asuu vain runsaat 3 700 ihmistä mutta moninkertainen määrä lampaita, ja '
+          + 'rannikon lahdet ovat pingviinien ja merileijonien suosimia poikuupaikkoja.',
+      },
+      {
+        id: 'iss066e091560',
+        teksti: 'Sama saaristo runsaat kaksi vuotta aiemmin, pilvien raosta kuvattuna. Saarten välistä '
+          + 'kulkeva salmi erottaa Länsi- ja Itä-Falklandin toisistaan. Saariryhmän kaksi nimeä — '
+          + 'brittiläinen Falklandinsaaret ja argentiinalainen Malvinas — kertovat kiistasta, joka johti sotaan 1982.',
+      },
+    ],
+  },
+  {
+    tunnus: 'etela-georgia', nimi: 'Etelä-Georgia', seutu: 'Eteläinen Atlantti, Britannian merentakainen alue', lat: -54.3, lon: -36.5,
+    selite: 'Jäätikköinen vuorisaari, jonne Ernest Shackleton käveli hakemaan apua pelastusretkellään 1916.',
+    oletus: 'iss011e12148',
+    kuvat: [
+      {
+        id: 'iss011e12148',
+        teksti: 'Lumihuippuiset vuoret laskevat suoraan jäätiköinä mereen, ja niiden välissä tumma vuono '
+          + 'heijastaa taivasta. Saari on niin jyrkkä ja jäätikköinen, ettei sen halki ole koskaan '
+          + 'rakennettu tietä — Shackleton ja kaksi toveria ylittivät samankaltaisen maaston jalan '
+          + 'vuonna 1916 pelastaakseen haaksirikkoutuneen miehistönsä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'dasht-e-lut', nimi: 'Dasht-e Lutin kaluutit', seutu: 'Kerman, Iran', lat: 30.7, lon: 58.5,
+    selite: 'Yksi Maan kuumimmista paikoista, jonka tuuli on veistänyt pitkiksi, harjanteisiksi yardangeiksi.',
+    oletus: 'iss012e18779',
+    kuvat: [
+      {
+        id: 'iss012e18779',
+        teksti: 'Kaluutit eli tuulen kuluttamat harjanteet piirtyvät aavikkoon kymmenien kilometrien '
+          + 'pituisina riveinä, kultaisina iltapäivän valossa. Satelliitit ovat mitanneet Dasht-e Lutin '
+          + 'pintalämpötilaksi yli 70 astetta — yhden korkeimmista koskaan mitatuista maanpinnan '
+          + 'lämpötiloista. Pilvet kuvassa ovat harvinaisia: alueella ei sada juuri koskaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'damavand', nimi: 'Damavand', seutu: 'Mazandaran, Iran', lat: 35.951, lon: 52.109,
+    selite: 'Iranin ja koko Lähi-idän korkein huippu, lähes symmetrinen lumihuippuinen tulivuori.',
+    oletus: 'iss010e13393',
+    kuvat: [
+      {
+        id: 'iss010e13393',
+        teksti: 'Vuoren rinteiltä laskeutuu säteittäin lumiuurteita joka suuntaan kuin valtava valkoinen '
+          + 'sateenvarjo. Damavand on yli 5 600 metriä korkea ja yhä toimiva tulivuori — huipulla '
+          + 'purkautuu rikkikaasua — vaikka viimeisestä laavapurkauksesta on kulunut tuhansia vuosia.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sarezjarvi', nimi: 'Sarezjärvi', seutu: 'Pamir, Tadžikistan', lat: 38.264, lon: 72.573,
+    selite: 'Maanjäristyksen padottu vuoristojärvi, jonka luonnollinen pato uhkaa yhä pettää.',
+    oletus: 'iss074e0814815',
+    kuvat: [
+      {
+        id: 'iss074e0814815',
+        teksti: 'Turkoosi järvi täyttää Pamirin vuoristolaakson mutkitellen yli 60 kilometrin matkan. Se '
+          + 'syntyi 1911, kun voimakas maanjäristys irrotti kalliovyöryn, joka tukki laakson — Usoin '
+          + 'sortuma on yhä yksi maailman korkeimmista luonnollisista padoista. Geologit seuraavat patoa '
+          + 'jatkuvasti, sillä sen pettäminen uhkaisi satojatuhansia ihmisiä alajuoksulla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'toktogul', nimi: 'Toktogulin tekojärvi', seutu: 'Tien-shan, Kirgisia', lat: 41.72, lon: 73.0,
+    selite: 'Keski-Aasian suurimpiin kuuluva tekojärvi, joka varastoi vuoriston sulamisvedet vuoriston sisään.',
+    oletus: 'iss074e0825692',
+    kuvat: [
+      {
+        id: 'iss074e0825692',
+        teksti: 'Kirkkaan turkoosi tekojärvi täyttää joenlaakson Tien-shanin vuorten keskellä. Pato '
+          + 'valmistui 1974, ja järvi tuottaa suuren osan Kirgisian sähköstä. Kesken talven päästetty '
+          + 'vesi on toistuvasti riidan aihe naapurimaiden kanssa, jotka tarvitsisivat saman veden '
+          + 'keväällä kastelukauden alkuun.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kljutsevskaja', nimi: 'Kljutševskaja Sopka', seutu: 'Kamtšatka, Venäjä', lat: 56.056, lon: 160.642,
+    selite: 'Euraasian korkein toimiva tulivuori, joka purkautuu useita kertoja vuosikymmenessä.',
+    oletus: 'iss038e005515',
+    kuvat: [
+      {
+        id: 'iss038e005515',
+        teksti: 'Tuhkapatsas nousee suoraan huipulta ja taittuu tuulen mukana sivulle — purkaus oli '
+          + 'käynnissä juuri kun avaruusasema lensi ylitse. Vuori on lähes 4 800 metriä korkea ja kasvaa '
+          + 'joka purkauksen myötä. Vasemmalla näkyy lumihuippuinen naapuritulivuori, jonka purkauspilvi jättää varjoonsa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'reunion', nimi: 'Réunion', seutu: 'Intian valtameri, Ranska', lat: -21.13, lon: 55.54,
+    selite: 'Ranskan merentakainen departementti, jonka keskellä kohoaa yksi maailman aktiivisimmista tulivuorista.',
+    oletus: 'iss055e020372',
+    kuvat: [
+      {
+        id: 'iss055e020372',
+        teksti: 'Saaren pyöreä muoto ja rosoiset laaksot paljastavat sen synnyn: koko saari on yhden '
+          + 'ainoan kilpitulivuoren, Piton des Neigesin, rakentama. Vuoren jyrkät valurenkaat erottuvat '
+          + 'kuvan vasemmassa reunassa vihreinä syvänteinä. Saaren toisella laidalla purkautuu säännöllisesti '
+          + 'Piton de la Fournaise, joka purkautuu keskimäärin kerran vuodessa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'villarrica', nimi: 'Villarrica', seutu: 'Araucanía, Chile', lat: -39.42, lon: -71.93,
+    selite: 'Yksi Etelä-Amerikan aktiivisimmista tulivuorista, jonka kraatterissa lipuu pysyvä laavajärvi.',
+    oletus: 'iss068e040596',
+    kuvat: [
+      {
+        id: 'iss068e040596',
+        teksti: 'Lumihuippu piirtää täydellisen kartion kahden järven, Villarrican ja Calafquénin, '
+          + 'väliin. Rinteiltä laskeutuvat tummat juovat ovat vanhoja laavavirtoja ja mutavirtojen uria. '
+          + 'Huipun kraatterissa kiehuu jatkuvasti näkyvä laavajärvi — yksi vain viidestä koko maailmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'laguna-verde', nimi: 'Laguna Verde', seutu: 'Atacama, Chile', lat: -26.98, lon: -68.55,
+    selite: 'Turkoosi korkean vuoriston järvi maailman korkeimman aktiivisen tulivuoren, Ojos del Saladon, juurella.',
+    oletus: 'iss074e0760459',
+    kuvat: [
+      {
+        id: 'iss074e0760459',
+        teksti: 'Järven vesi hohtaa kirkkaan turkoosina liuenneiden mineraalien ansiosta, yli 4 300 '
+          + 'metrin korkeudessa. Ympäröivä maasto on täynnä pieniä tulivuorenkartioita ja tuoreita '
+          + 'laavavirtoja. Vain muutaman kilometrin päässä kohoaa Ojos del Salado, 6 893 metriä korkea '
+          + 'maailman korkein aktiivinen tulivuori.',
+      },
+    ],
+  },
+  {
+    tunnus: 'laguna-colorada', nimi: 'Laguna Colorada', seutu: 'Potosí, Bolivia', lat: -22.2, lon: -67.78,
+    selite: 'Veripunainen suolajärvi Andien ylätasangolla, jonka rannoilla pesii tuhansia flamingoja.',
+    oletus: 'iss066e110899',
+    kuvat: [
+      {
+        id: 'iss066e110899',
+        teksti: 'Järven pinta hohtaa veripunaisena keskellä ruskeaa ylätasankoa, ja valkoiset '
+          + 'boraattisaarekkeet pilkottavat sen läpi. Punainen väri syntyy pigmentistä, jota levät ja '
+          + 'mikrobit tuottavat suojautuakseen kirkkaalta auringolta yli 4 200 metrin korkeudessa. Kolme '
+          + 'flamingolajia ruokailee järven levillä ja äyriäisillä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'san-rafael', nimi: 'San Rafaelin jäätikkö', seutu: 'Aysén, Chile', lat: -46.68, lon: -73.83,
+    selite: 'Patagonian pohjoisen jäätikköalueen jäätikkö, joka laskee suoraan laguuniin ja kalvaa siihen jäävuoria.',
+    oletus: 'iss063e081907',
+    kuvat: [
+      {
+        id: 'iss063e081907',
+        teksti: 'Jäätikön sininen, rikkonainen etureuna työntyy suoraan laguuniin, ja sen edestä '
+          + 'irronneet jäävuoret kelluvat vedessä satoina valkoisina lohkareina. San Rafael on eteläisen '
+          + 'pallonpuoliskon matalimmilla leveysasteilla oleva jäätikkö, joka ulottuu lähes '
+          + 'sademetsävyöhykkeeseen asti — ja on vetäytynyt viime vuosikymmeninä useita kilometrejä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'simienit', nimi: 'Simienin vuoret', seutu: 'Amhara, Etiopia', lat: 13.19, lon: 38.24,
+    selite: 'Jyrkkiin huippuihin ja syviin rotkoihin kulunut ylätasanko, jota kutsutaan Afrikan Grand Canyoniksi.',
+    oletus: 'iss016e010784',
+    kuvat: [
+      {
+        id: 'iss016e010784',
+        teksti: 'Vuosimiljoonien sadevedet ovat uurtaneet rotkoja, jotka haarautuvat ylätasangosta kuin '
+          + 'puun juuret, ja jyrkät reunat erottuvat terävinä varjoina. Ylätasanko on jäänne paljon '
+          + 'suuremmasta laavakerrostumasta, josta eroosio on jättänyt jäljelle vain kovimmat, sakaraiset '
+          + 'huiput. Alueella elää geladapaviaani, jota ei tavata luonnossa missään muualla maailmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'everglades', nimi: 'Everglades', seutu: 'Florida, Yhdysvallat', lat: 25.4, lon: -80.9,
+    selite: 'Valtavan matalana virtaava "ruohon joki", yksi maailman suurimmista kosteikoista.',
+    oletus: 'iss015e08920',
+    kuvat: [
+      {
+        id: 'iss015e08920',
+        teksti: 'Turkoosin ja tummanvihreän kirjava kuvio on satojen tuhansien hehtaarien laajuinen '
+          + 'saraikko, jonka läpi vesi virtaa niin hitaasti — vain muutaman sadan metrin päivässä — että '
+          + 'aluetta kutsutaan "ruohon joeksi". Kansallispuisto on maailman ainoa paikka, jossa '
+          + 'amerikanalligaattori ja amerikankrokotiili elävät luonnossa samalla alueella.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ennedi', nimi: 'Ennedin ylänkö', seutu: 'Ennedi, Tšad', lat: 17.42, lon: 21.75,
+    selite: 'UNESCOn suojelema hiekkakivimuodostuma Saharan keskellä, jonka pinnalla on myös muinaisen meteoriitin jättämä kraatteri.',
+    oletus: 'iss074e0320315',
+    kuvat: [
+      {
+        id: 'iss074e0320315',
+        teksti: 'Gweni-Fadan kraatteri erottuu lähes täydellisenä ympyränä aavikon keskeltä — NASA '
+          + 'tunnistaa sen eroosion paljastamaksi, meteoriitin törmäyksestä syntyneeksi rakenteeksi, '
+          + 'halkaisijaltaan yli kolme kilometriä. Sen ympärillä mutkittelevat kuivat jokiuomat täyttyvät '
+          + 'vedellä vain harvoin sadekausina.',
+      },
+      {
+        id: 'iss072e404551',
+        teksti: 'Laajempi näkymä samasta ylängöstä: punertava hiekkakivi on kulunut sokkeloiseksi '
+          + 'labyrintiksi kanjoneita ja pylväitä. Muodostuma on satoja miljoonia vuosia vanha, ja sen '
+          + 'kallioseinillä on tuhansia vuosia vanhoja maalauksia ajalta, jolloin Sahara oli vihreä ja märkä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'nevado-del-ruiz', nimi: 'Nevado del Ruiz', seutu: 'Kolumbia', lat: 4.892, lon: -75.324,
+    selite: 'Jäätikköinen tulivuori, jonka vuoden 1985 purkaus suli jäätikköä ja hautasi kokonaisen kaupungin mutavirran alle.',
+    oletus: 'iss023e027737',
+    kuvat: [
+      {
+        id: 'iss023e027737',
+        teksti: 'Lumi- ja jäätikkökupu peittää huipun, ja sen keskellä erottuu tumma, pyöreä kraatteri, '
+          + 'josta nousee yhä höyryä. Rinteiltä laskeutuvat syvät, säteittäiset uurteet ovat vanhojen '
+          + 'mutavirtojen jälkiä. Vuoden 1985 purkaus suli osan jäätiköstä ja synnytti laharin, joka '
+          + 'hautasi Armeron kaupungin ja surmasi yli 23 000 ihmistä.',
+      },
+    ],
+  },
+
 ];
 
 /**

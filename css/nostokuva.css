@@ -301,3 +301,36 @@ button.nostokuva-nappi:focus-visible { background: transparent; }
     margin-right: 0;
   }
 }
+
+/* ── KUVATON KORTTI SAMAAN KOKOON (LÖYDÖS 135) ─────────────────────
+ *
+ * Fablen päätös 26.9.2026: *"Kaikki karttanostot aukeavat samaan
+ * kokoon ja tyyliin; vain skandaaleissa tyyli muuttuu, koko pysyy."*
+ * js/nostokuva.js nostokuvaVakiokortti antaa kuvattomalle kortille
+ * (kohde, skandaali, täkynosto, syvennys, hetki, eläintäky,
+ * lisäkaupunki) saman leveyden ja paikan kuin kuva edellä -kortilla —
+ * inline-pikseleinä, kuten yllä. Tässä vain sama vierityskaista, jotta
+ * leveys lasketaan samoin, ja sama vaakavierityksen esto.
+ */
+.nostokuva-vakiokortti .fokusnosto-sisalto,
+.nostokuva-vakiokortti .fokuskohde-sisalto,
+.nostokuva-vakiokortti .kaupunkipopup-sisalto {
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+  touch-action: pan-y;
+}
+
+/*
+ * SAMA HIMMENNYS KAIKILLE. Nostokortti, skandaali, syvennys, hetki ja
+ * eläintäky asuvat omassa koko ruudun kerroksessaan, joka himmentää
+ * kartan (css/fokusnosto.css: rgba(18, 12, 4, 0.3)). Kartan kohdekortti
+ * ja kaupunkikortti asuvat karttaruudussa ilman kerrosta — niille sama
+ * himmennys tulee varjon levityksenä. Varjo ei ota napautuksia, joten
+ * kortin ulkopuolinen napautus sulkee kuten ennenkin (js/fokuskohteet.js
+ * kuunteleKohdetta, js/kaupunkinosto.js kuunteleKaupunkipopupia).
+ */
+.fokuskohde-popup.nostokuva-kortti,
+.fokuskohde-popup.nostokuva-vakiokortti,
+.kaupunkipopup.nostokuva-vakiokortti {
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.3), 0 0 0 200vmax rgba(18, 12, 4, 0.3);
+}

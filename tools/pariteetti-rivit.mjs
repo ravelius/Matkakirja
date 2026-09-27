@@ -39,7 +39,7 @@ export const PERUSTILA = 'Liiku';
 
 export const RIVIT = [
   { rivi: '1', nimi: 'Etusivu / aloitusportti', web: 'aloitusportti', peli: false, natiivi: ['ui:ui aloitus portti', 'odota:3'], huom: 'natiivilla voi olla tallennus (Jatka matkaa)' },
-  { rivi: '2', nimi: 'Aloitusvalinta', web: 'aloitusvalinta', peli: false, natiivi: ['ui:ui aloitus valinta', 'odota:3'] },
+  { rivi: '2', nimi: 'Aloitusvalinta', web: 'aloitusvalinta', peli: false, natiivi: ['ui:ui aloitus valinta', 'odota:3'], vartioimaton: true, huom: 'natiivissa kaupunkinimet ovat 3D-kartan nimiöitä, eivät UI-tekstejä (b21-ui-2): tilaa ei voi vartioida teksteillä' },
   { rivi: '3', nimi: 'Kaupunkilehti: kansi', web: 'kaupunkilehti-kansi', peli: true, natiivi: [`ui:ui lehti ${KAUPUNKI}`, 'odota:3'] },
   { rivi: '4', nimi: 'Kaupunkilehti: kansi vieritetty (Ennen/Nyt, radio)', web: 'kaupunkilehti-kansi-alas', peli: true, natiivi: [`ui:ui lehti ${KAUPUNKI}`, 'odota:3', 'ui:ui lehti vierita 1100', 'odota:1'], huom: 'natiivi vierittää pikseleinä, web ankkurilla' },
   { rivi: '5', nimi: 'Kaupunkilehti: aihesivu 1', web: 'kaupunkilehti-aihe1', peli: true, natiivi: [`ui:ui lehti ${KAUPUNKI} 1`, 'odota:3'] },
@@ -63,7 +63,7 @@ export const RIVIT = [
   { rivi: '21c', nimi: 'Sähke (Sofia)', web: 'sahke', peli: true, natiivi: ['peli:sahketehtava avaa sofia', 'odota:3'] },
   { rivi: '22', nimi: 'Kartta', web: 'kartta', peli: true, natiivi: ['odota:1'] },
   { rivi: '23', nimi: 'Matkakirjakortti kiinni', web: 'matkakirjakortti-kiinni', peli: true, natiivi: [`ui:ui matkakirja ${KAUPUNKI}`, 'odota:2'] },
-  { rivi: '24', nimi: 'Kohtaaminen', web: 'kohtaaminen', peli: true, natiivi: ['peli:tutki', 'odota:2'], nollaa: true },
+  { rivi: '24', nimi: 'Kohtaaminen', web: 'kohtaaminen', peli: true, natiivi: ['peli:tutki', 'peli:odota-tila Kysymys 15', 'odota:1'], nollaa: true, huom: 'natiivissa kohtaamisen tervehdys on visakortin alussa (rivi 16); odotetaan Kysymys-tila' },
   { rivi: '25', nimi: 'Nostokortti (Pont du Gard)', web: 'nostokortti', peli: true, natiivi: ['ui:ui nosto kohde:pont-du-gard@FRA', 'odota:3'], huom: 'natiivin valo-id varmistamatta' },
   { rivi: '26', nimi: 'Nostovisa (Roquefort)', web: 'nostovisa', peli: true, natiivi: ['ui:ui nosto nosto:maalehti-roquefort lisaa', 'odota:3'], huom: 'natiivin valo-id varmistamatta' },
   { rivi: '27', nimi: 'Eläintäky (Ranska)', web: 'elaintaky', peli: true, natiivi: ['ui:ui nosto elaintaky:FRA', 'odota:3'] },
@@ -74,7 +74,7 @@ export const RIVIT = [
   { rivi: '32', nimi: 'Laukku: linssit', web: 'laukku-linssit', peli: true, natiivi: ['ui:ui laukku', 'odota:2'], huom: 'linssit auki kehittaja 1:llä' },
   { rivi: '33', nimi: 'Kaupunkilehti: aihesivu 2', web: 'kaupunkilehti-aihe2', peli: true, natiivi: [`ui:ui lehti ${KAUPUNKI} 2`, 'odota:3'] },
   { rivi: '34', nimi: 'Kaupunkilehti: Lue lisää', web: 'kaupunkilehti-luelisaa', peli: true, natiivi: ['ui:ui wiki Marseille', 'odota:3'] },
-  { rivi: '35', nimi: 'Maalehti: aihesivu 1', web: 'maalehti-aihe1', peli: true, natiivi: ['ui:ui maalehti FRA 2', 'odota:3'], huom: 'natiivin aihenumero: 1 = etusivu (b12g-ajossa FRA 1 osui eri sivulle)' },
+  { rivi: '35', nimi: 'Maalehti: aihesivu 1', web: 'maalehti-aihe1', peli: true, natiivi: ['ui:ui maalehti FRA historia', 'odota:3'], huom: 'aihe-id numeron sijaan: b20-ui-1:ssä FRA 2 osui Ruokaan, web aihe1 = Historia' },
   { rivi: '36', nimi: 'Maalehti: mediarivi', web: 'maalehti-mediarivi', peli: true, natiivi: ['ui:ui maalehti FRA', 'odota:3', 'ui:ui lehti vierita 900', 'odota:1'], huom: 'natiivi vierittää pikseleinä, web ankkurilla' },
   { rivi: '37', nimi: 'Linssi: radio', web: 'linssi-radio', peli: true, natiivi: ['linssi:linssi radio', 'odota:2', 'linssi:kamera 50 10 6000', 'odota:3'] },
   { rivi: '38', nimi: 'Linssi: satelliitti', web: 'linssi-satelliitti', peli: true, natiivi: ['linssi:linssi satelliitti', 'odota:5'] },

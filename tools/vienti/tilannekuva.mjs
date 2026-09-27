@@ -19,13 +19,29 @@ import { mkdirSync, rmSync, renameSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-/** Aloitusdata (Natiiviseppä 26.9.: kylmämittaus proto-3d/lokit/kohta1-kaynnistys-20260926.md). */
+/*
+ * Aloitusdata (Natiiviseppä 26.9.: kylmämittaus proto-3d/lokit/kohta1-kaynnistys-20260926.md). Laajennus Fablen
+ * päätöksellä 26.9. klo 12.4x (Pelikoodari, haara pelikoodari/esilataaja-5): kylmä käynnistys käyttää buildin
+ * tilannekuvaa käynnistyksen kokoelmille, jos se on enintään 2 versiota uusinta vanhempi; tuore haetaan taustalla.
+ * Koko v167:ssä noin 14,1 Mt, josta maakuntarajat 8,4 Mt.
+ */
 export const TILANNEKUVAN_TIEDOSTOT = [
   'kokoelmat/kaupungit.json',
   'kokoelmat/reitit.json',
   'kokoelmat/maarajat.json',
   'kokoelmat/aluenimet.json',
   'moduulit/js/ui-tekstit.json',
+  // Kylmän käynnistyksen laajennus (Pelikoodari 26.9.)
+  'kokoelmat/lippumaat.json',
+  'kokoelmat/karttavalot.json',
+  'kokoelmat/maakuntarajat.json',
+  'kokoelmat/laatat.json',
+  'kokoelmat/maamerkit.json',
+  'kokoelmat/aanitaulut.json',
+  'kokoelmat/julisteet.json',
+  'offline.json',
+  'moduulit/js/packs/maakunnat-luonnehdinnat.json',
+  'moduulit/js/karttatyokalu-maakunnat.json',
 ];
 
 const sha = (b) => createHash('sha256').update(b).digest('hex');

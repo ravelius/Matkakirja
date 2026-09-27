@@ -108,7 +108,7 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -188,7 +188,7 @@ peli.phase = 'action';
 peli.tokens.delete('ateena');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 /** Uusi sivu: tallenne paikallaan, ämpäri reititetty (tai katkaistu). */
 async function avaaSivu({
@@ -446,16 +446,27 @@ if (AMPARI_TOIMII) {
       if (!osuma) return { virhe: 'ei elävää nostoa' };
       const tulos = ui.pallolauta.napautaNosto(osuma.id);
       await new Promise((r) => setTimeout(r, 500));
-      const kortti = document.querySelector('.fokuskohde-popup, .skandaali-kerros, .hetki-kerros, .fokusnosto-kerros, .syvennys-kerros');
+      const kortti = document.querySelector('.fokuskohde-popup, .skandaali-kortti, .hetki-kortti, .fokusnosto-kortti, .syvennys-kortti, .elaintaky-kortti');
       const pane = ui.mapPane.getBoundingClientRect();
       const kr = kortti?.getBoundingClientRect();
-      // Ankkuri: kortti on merkin ruutupisteen vieressä (≤ 260 px) ja ruudulla.
+      /*
+       * KARTTANOSTO KESKELLE (Fablen päätös 26.9.2026, löydös 135: *"Kaikki
+       * karttanostot aukeavat samaan kokoon ja tyyliin"*). Kuvallinen
+       * (.nostokuva-kortti) ja kuvaton (.nostokuva-vakiokortti) nosto
+       * aukeavat ruudun vaakakeskelle ruudun sisään; merkin viereen
+       * (≤ 260 px) asemoituu enää kortti, joka ei ole kumpaakaan.
+       */
+      const vakio = Boolean(kortti?.classList.contains('nostokuva-kortti')
+        || kortti?.classList.contains('nostokuva-vakiokortti'));
+      const keskella = kr ? Math.abs((kr.left + kr.right) / 2 - innerWidth / 2) <= 1.5 : false;
       const p = ui.pallolauta.ruudulla(osuma.lat, osuma.lng);
       const kotelo = ui.pallolauta.kotelo.getBoundingClientRect();
       const ankkuriX = kotelo.left + (p?.x ?? 0);
       const ankkuriY = kotelo.top + (p?.y ?? 0);
       const etaisyys = kr ? Math.min(Math.abs(kr.left - ankkuriX), Math.abs(kr.right - ankkuriX)) : null;
-      const ruudulla = kr ? kr.left >= pane.left - 1 && kr.right <= pane.right + 1 : false;
+      const ruudulla = kr ? (vakio
+        ? kr.left >= -1 && kr.right <= innerWidth + 1 && kr.top >= -1 && kr.bottom <= innerHeight + 1
+        : kr.left >= pane.left - 1 && kr.right <= pane.right + 1) : false;
       // Sulkeva napautus ei avaa uutta: pointerdown koteloon + napautus toiseen nostoon.
       ui.pallolauta.kotelo.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, clientX: 10, clientY: 10 }));
       ui.pallolauta.kotelo.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, clientX: 10, clientY: 10 }));
@@ -467,12 +478,12 @@ if (AMPARI_TOIMII) {
       await new Promise((r) => setTimeout(r, 300));
       const auki2 = Boolean(document.querySelector('.fokuskohde-popup, .skandaali-kerros, .hetki-kerros, .fokusnosto-kerros, .syvennys-kerros'));
       return {
-        id: osuma.id, tulos, kortti: kortti?.className ?? null, etaisyys, ruudulla, auki1, auki2, toinen: toinen?.id ?? null,
+        id: osuma.id, tulos, kortti: kortti?.className ?? null, etaisyys, ruudulla, vakio, keskella, auki1, auki2, toinen: toinen?.id ?? null,
       };
     });
-    vaadi('    noston napautus avaa kortin merkin ruutupisteen viereen, ruudun sisään',
+    vaadi('    noston napautus avaa kortin ruudun sisään: karttanosto keskelle (löydös 135), muu merkin viereen',
       !napautus.virhe && napautus.tulos && napautus.kortti && napautus.ruudulla
-        && (napautus.etaisyys === null || napautus.etaisyys <= 260),
+        && (napautus.vakio ? napautus.keskella : (napautus.etaisyys === null || napautus.etaisyys <= 260)),
       JSON.stringify(napautus));
     vaadi('    sulkeva napautus ei avaa mitään uutta (omistaja 31.8.2026)',
       !napautus.virhe && !napautus.auki2, JSON.stringify(napautus));

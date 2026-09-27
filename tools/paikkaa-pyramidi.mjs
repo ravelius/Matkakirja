@@ -9,6 +9,22 @@
  *        --paikattu <kansio> --lista <laatat.json>
  *   node tools/paikkaa-pyramidi.mjs sauma --paikattu <kansio> \
  *        --lista <laatat.json> [--kuva <png>]
+ *   node tools/paikkaa-pyramidi.mjs suunnittele … --delta meri|maa   (ks. DELTA)
+ *   node tools/paikkaa-pyramidi.mjs arvio --luettelo <pyramidi.json> \
+ *        --data <aineistokansio> [--rannikon-harvennus 0.004] [--pallo 0-9]
+ *
+ * === DELTA (26.9.2026) ==============================================
+ *
+ * Delta-poltto (generoi-laattapyramidi.mjs --delta meri|maa, luokitus
+ * tools/delta-luokitin.mjs) on paikkaus, jonka alue on maski eikä
+ * laatikko: piirretään laatat, joissa on vettä (meri) tai maata (maa),
+ * ja kopioidaan loput. `suunnittele --delta` perii asetukset lähteestä
+ * kuten paikkaus, `vertaa` todistaa kopion samalla tavalla — ja lisäksi
+ * delta-listan TARKISTUSOTOKSEN, eli piirretyt kopioitavat laatat, joiden
+ * on oltava bitilleen lähteen laattoja — ja `arvio` kertoo tasoittain,
+ * montako laattaa kumpikin laji piirtäisi pyramidista (z0–z8) ja pallon
+ * sarjasta (Z0–Z9). Sama `vertaa` käy pallon sarjalle (kansiot <Z>/<X>/
+ * <Y>.jpg, lista tee-pallolaatat.mjs:n delta.json).
  *
  * === MIKSI TÄMÄ ON OLEMASSA =========================================
  *
@@ -64,7 +80,11 @@ const KAYTTO = `Käyttö:
        (listaus = aws s3api list-objects-v2 -tuloste; vertailu tehdään
         ETageilla eikä yhtään laattaa ladata)
   node tools/paikkaa-pyramidi.mjs sauma --paikattu <kansio> --lista <laatat.json> \\
-       [--kuva <png>] [--raja 2.5]`;
+       [--kuva <png>] [--raja 2.5]
+  node tools/paikkaa-pyramidi.mjs suunnittele --luettelo <polku|-> \\
+       --lahdeversio <versio> --versio <uusi versio> --delta meri|maa [--ulos <tiedosto>]
+  node tools/paikkaa-pyramidi.mjs arvio --luettelo <pyramidi.json> --data <aineistokansio> \\
+       [--rannikon-harvennus 0.004] [--marginaali 34] [--pallo 0-9]`;
 
 /** Kuolettava virhe: yksi rivi, ei pinoa — tämä ajetaan työnkulussa. */
 function kuole(viesti) {
@@ -87,20 +107,30 @@ function suunnittele() {
   const lahdeversio = valitsin('lahdeversio');
   const versio = valitsin('versio');
   const alue = valitsin('alue');
-  if (!luettelopolku || !lahdeversio || !versio || !alue) kuole(KAYTTO);
+  /*
+   * DELTA ON TOINEN TAPA SANOA ALUE: maski (meri | maa) laatikon sijaan.
+   * Täsmälleen toinen on annettava — molemmat yhdessä olisi epäselvä
+   * ajo, eikä kumpikaan olisi hiljainen koko maailman uusintapoltto.
+   */
+  const delta = valitsin('delta');
+  if (!luettelopolku || !lahdeversio || !versio || (!alue === !delta)) kuole(KAYTTO);
+  if (delta && !['meri', 'maa'].includes(delta)) kuole(`--delta ${delta}: laji on meri tai maa`);
 
   if (lahdeversio === versio) {
     kuole(`lähdeversio ja uusi versio ovat sama (${versio}). `
       + 'Paikkaus ei saa koskaan kirjoittaa lähteen polkuun.');
   }
-  const osat = alue.split(',').map(Number);
-  if (osat.length !== 4 || osat.some((v) => !Number.isFinite(v))) {
-    kuole(`alue ei ole lon0,lat0,lon1,lat1: ${alue}`);
+  let lon0; let lat0; let lon1; let lat1;
+  if (alue) {
+    const osat = alue.split(',').map(Number);
+    if (osat.length !== 4 || osat.some((v) => !Number.isFinite(v))) {
+      kuole(`alue ei ole lon0,lat0,lon1,lat1: ${alue}`);
+    }
+    [lon0, lat0, lon1, lat1] = osat;
+    for (const v of [lat0, lat1]) if (v < -90 || v > 90) kuole(`leveysaste ${v} ei ole −90..90`);
+    for (const v of [lon0, lon1]) if (v < -360 || v > 360) kuole(`pituusaste ${v} ei ole −360..360`);
+    if (lat0 === lat1 || lon0 === lon1) kuole('alue on nollan levyinen laatikko');
   }
-  const [lon0, lat0, lon1, lat1] = osat;
-  for (const v of [lat0, lat1]) if (v < -90 || v > 90) kuole(`leveysaste ${v} ei ole −90..90`);
-  for (const v of [lon0, lon1]) if (v < -360 || v > 360) kuole(`pituusaste ${v} ei ole −360..360`);
-  if (lat0 === lat1 || lon0 === lon1) kuole('alue on nollan levyinen laatikko');
 
   const teksti = luettelopolku === '-'
     ? readFileSync(0, 'utf8')
@@ -169,7 +199,8 @@ function suunnittele() {
   const arvot = {
     LAHDEVERSIO: lahdeversio,
     VERSIO: versio,
-    ALUE: alue,
+    ALUE: alue ?? '',
+    ...(delta ? { DELTA: delta } : {}),
     TASOT: tasot,
     LAATU: String(luettelo.laatu ?? 0.9),
     MUOTO: luettelo.muoto ?? 'webp',
@@ -181,7 +212,8 @@ function suunnittele() {
   console.log('PAIKKAUSSUUNNITELMA');
   console.log(`  lähdeversio     ${lahdeversio}  (kopioidaan ämpärin sisällä)`);
   console.log(`  uusi versio     ${versio}`);
-  console.log(`  alue            lon ${lon0}..${lon1} lat ${lat0}..${lat1}`);
+  if (alue) console.log(`  alue            lon ${lon0}..${lon1} lat ${lat0}..${lat1}`);
+  else console.log(`  delta           ${delta}: piirretään laatat, joissa on ${delta === 'meri' ? 'vettä' : 'maata'} (tools/delta-luokitin.mjs)`);
   console.log(`  tasot           z${tasot}`);
   console.log(`  asetukset       ${arvot.MUOTO} q${arvot.LAATU}, laatta ${arvot.LAATTA}, patina ${patina}`);
   console.log(`  nostotaso       ${nostoversio || '(ei nostotasoa)'} — ei kopioida eikä piirretä`);
@@ -240,7 +272,11 @@ function keraaListauksesta(polku) {
        * kaatuisi asiaan, joka on tarkoituksella näin.
        */
       if ((rivi.Key ?? '').includes('/nostot/')) continue;
-      const m = /z(\d+)\/(\d+)\/(\d+)\.[a-z0-9]+$/.exec(rivi.Key ?? '');
+      /*
+       * Pyramidin avain on …/z<taso>/<sarake>/<rivi>.webp, pallon sarjan
+       * …/<Z>/<X>/<Y>.jpg (delta-sarja, ks. DELTA): z-etuliite on valinnainen.
+       */
+      const m = /(?:^|\/)z?(\d+)\/(\d+)\/(\d+)\.[a-z0-9]+$/.exec(rivi.Key ?? '');
       if (!m) continue;
       ulos.set(`${m[1]}:${m[2]}:${m[3]}`, String(rivi.ETag ?? '').replace(/"/g, ''));
     }
@@ -254,7 +290,8 @@ function keraaKansiosta(juuri) {
   const ulos = new Map();
   if (!existsSync(juuri)) kuole(`kansiota ei ole: ${juuri}`);
   for (const taso of readdirSync(juuri)) {
-    const m = /^z(\d+)$/.exec(taso);
+    // Pyramidi z<taso>/, pallon sarja <Z>/ (ks. keraaListauksesta).
+    const m = /^z?(\d+)$/.exec(taso);
     if (!m) continue;
     const tasopolku = join(juuri, taso);
     if (!statSync(tasopolku).isDirectory()) continue;
@@ -297,6 +334,13 @@ function vertaa() {
 
   const lista = JSON.parse(readFileSync(listapolku, 'utf8'));
   const listatut = new Set(lista.laatat.map(([z, s, r]) => `${z}:${s}:${r}`));
+  /*
+   * DELTAN TARKISTUSOTOS: piirrettyjä KOPIOITAVIA laattoja. Ne eivät ole
+   * `laatat`-listassa, joten alla oleva ulkopuolisten vertailu vaatii ne
+   * jo bitilleen lähteen laatoiksi; tässä ne vain nimetään, jotta
+   * epäonnistuminen kertoo oikean syyn.
+   */
+  const tarkistettavat = new Set((lista.tarkistus ?? []).map(([z, s, r]) => `${z}:${s}:${r}`));
   const lahteet = keraaLaatat(lahde);
   const paikatut = keraaLaatat(paikattu);
   /*
@@ -341,6 +385,7 @@ function vertaa() {
     }
   }
   const reunaMuuttui = [...reuna].filter((k) => a.has(k) && a.get(k) !== b.get(k));
+  const tarkistusMuuttui = [...tarkistettavat].filter((k) => !b.has(k) || !a.has(k) || a.get(k) !== b.get(k));
 
   console.log('PAIKKAUKSEN VERTAILU');
   console.log(`  lähde           ${a.size} laattaa`);
@@ -352,6 +397,12 @@ function vertaa() {
     + `joista muuttui ${vuotaneet.length}`);
   console.log(`  reunalaatat     ${reuna.size} (alueen ulkopuolinen naapurirengas), `
     + `joista muuttui ${reunaMuuttui.length}`);
+  const deltaTieto = lista.delta ?? (lista.laji ? lista : null);
+  if (deltaTieto) console.log(`  delta           ${deltaTieto.laji} lähteestä ${deltaTieto.lahde}`);
+  if (tarkistettavat.size) {
+    console.log(`  tarkistusotos   ${tarkistettavat.size} piirrettyä kopioitavaa laattaa, `
+      + `joista erosi lähteestä ${tarkistusMuuttui.length}`);
+  }
 
   const virheet = [];
   if (puuttuu.length) virheet.push(`${puuttuu.length} alueen laattaa puuttuu paikatusta setistä (${puuttuu.slice(0, 5).join(' ')})`);
@@ -359,6 +410,10 @@ function vertaa() {
   if (kadonneet.length) virheet.push(`${kadonneet.length} lähteen laattaa puuttuu paikatusta setistä (${kadonneet.slice(0, 5).join(' ')})`);
   if (ylimaaraiset.length) virheet.push(`${ylimaaraiset.length} laattaa on paikatussa setissä ilman vastinetta lähteessä eikä listassa (${ylimaaraiset.slice(0, 5).join(' ')})`);
   if (reunaMuuttui.length) virheet.push(`${reunaMuuttui.length} reunalaattaa muuttui — patina ei ole sidottu arkin pikseliin`);
+  if (tarkistusMuuttui.length) {
+    virheet.push(`${tarkistusMuuttui.length} tarkistuslaattaa erosi lähteestä (${tarkistusMuuttui.slice(0, 5).join(' ')}) — `
+      + 'muutos ei ole puhdas delta-muutos tai marginaali ei riitä; kopioita ei saa julkaista');
+  }
 
   if (virheet.length) {
     for (const v of virheet) console.log(`  FAIL            ${v}`);
@@ -488,11 +543,98 @@ async function sauma() {
   console.log('  OK              sauma on kohinan tasolla');
 }
 
+/* ------------------------------------------------------------- arvio */
+
+/**
+ * DELTA-ARVIO: montako laattaa kumpikin delta-laji piirtäisi ja kopioisi
+ * tasoittain — pyramidista (luettelon tasot, tyypillisesti z0–z8) ja
+ * pallon sarjasta (Z0–Z9, johdettuna pyramidin piirrettävistä kuten
+ * tee-pallolaatat.mjs --delta tekee). Ei selainta eikä korkeusaineistoa:
+ * vain meren ja järvien renkaat ja luettelon geometria.
+ *
+ * PALLON TÄYTE (julisteen ulkopuoli napojen suunnassa) riippuu vain
+ * merisävyistä: meri-deltassa ne muuttuvat aina, maa-deltassa arvio
+ * olettaa niiden pysyvän (mittauspisteet ovat avomerellä; ajo mittaa sen
+ * — ks. tee-pallolaatat.mjs DELTA-SARJA). Rivi "jos merisävy muuttuu"
+ * kertoo maa-deltan varovaisen ylärajan.
+ */
+async function arvio() {
+  const luettelopolku = valitsin('luettelo');
+  const data = valitsin('data');
+  if (!luettelopolku || !data) kuole(KAYTTO);
+  const luettelo = JSON.parse(readFileSync(luettelopolku, 'utf8'));
+  const harvennus = Number(valitsin('rannikon-harvennus', luettelo.delta?.rannikonHarvennus ?? '0.004'));
+  const {
+    lataaLuokitin, pyramidinDeltaSuunnitelma, tasonLuvut, DELTA_LISAMARGINAALI_PX,
+  } = await import('./delta-luokitin.mjs');
+  // REUNUS 32 (generoi-laattapyramidi.mjs reunusTasolle) + lisämarginaali.
+  const marginaaliPx = Number(valitsin('marginaali', String(32 + DELTA_LISAMARGINAALI_PX)));
+  const [pmin, pmax] = String(valitsin('pallo', '0-9')).split('-').map(Number);
+  const pallo = await import('./tee-pallolaatat.mjs');
+  const luokitin = await lataaLuokitin(data, { harvennus });
+  const sd = (laji) => pyramidinDeltaSuunnitelma({
+    luokitin, geometria: luettelo, tasot: luettelo.tasot, laji, marginaaliPx, tarkistus: 0,
+  });
+  const meri = sd('meri');
+  const maa = sd('maa');
+  const pros = (a, b) => `${((100 * a) / b).toFixed(1).padStart(5)} %`;
+  console.log(`DELTA-ARVIO  marginaali ${marginaaliPx} px, rannikon harvennus ${harvennus}°, `
+    + `${luokitin.janoja} rantajanaa (${data})`);
+  console.log('\nPYRAMIDI      laattoja     vesi      maa    ranta    kehys'
+    + '   | meri: piirr. (osuus)  kopio | maa: piirr. (osuus)  kopio');
+  const summa = {
+    kaikki: 0, meri: 0, maa: 0,
+  };
+  for (let k = 0; k < meri.tasot.length; k += 1) {
+    const a = tasonLuvut(meri.tasot[k]);
+    const b = tasonLuvut(maa.tasot[k]);
+    summa.kaikki += a.kaikki; summa.meri += a.piirretaan; summa.maa += b.piirretaan;
+    console.log(`  z${meri.tasot[k].z}  ${String(a.kaikki).padStart(12)} ${String(a.vesi).padStart(8)} `
+      + `${String(a.maa).padStart(8)} ${String(a.molemmat).padStart(8)} ${String(a.ulkona).padStart(8)}   | `
+      + `${String(a.piirretaan).padStart(11)} (${pros(a.piirretaan, a.kaikki)}) ${String(a.kopioidaan).padStart(6)} | `
+      + `${String(b.piirretaan).padStart(10)} (${pros(b.piirretaan, b.kaikki)}) ${String(b.kopioidaan).padStart(6)}`);
+  }
+  console.log(`  yht ${String(summa.kaikki).padStart(12)}${' '.repeat(38)}| `
+    + `${String(summa.meri).padStart(11)} (${pros(summa.meri, summa.kaikki)}) ${String(summa.kaikki - summa.meri).padStart(6)} | `
+    + `${String(summa.maa).padStart(10)} (${pros(summa.maa, summa.kaikki)}) ${String(summa.kaikki - summa.maa).padStart(6)}`);
+
+  const piirto = (s2) => new Map(s2.tasot.map((t) => [t.z, t.piirra]));
+  const pm = pallo.pallonDeltaSuunnitelma({
+    luettelo, pyramidinPiirto: piirto(meri), min: pmin, max: pmax, meretMuuttuu: true, tarkistus: 0,
+  });
+  const pa = pallo.pallonDeltaSuunnitelma({
+    luettelo, pyramidinPiirto: piirto(maa), min: pmin, max: pmax, meretMuuttuu: false, tarkistus: 0,
+  });
+  const pv = pallo.pallonDeltaSuunnitelma({
+    luettelo, pyramidinPiirto: piirto(maa), min: pmin, max: pmax, meretMuuttuu: true, tarkistus: 0,
+  });
+  console.log('\nPALLO         laattoja    täyte   | meri: piirr. (osuus)  kopio | maa: piirr. (osuus)  kopio'
+    + ' | maa, jos merisävy muuttuu');
+  const ps = {
+    kaikki: 0, meri: 0, maa: 0, maaV: 0,
+  };
+  const laske = (t) => t.piirra.reduce((x, v) => x + v, 0);
+  for (let k = 0; k < pm.tasot.length; k += 1) {
+    const kaikki = pm.tasot[k].n ** 2;
+    const a = laske(pm.tasot[k]); const b = laske(pa.tasot[k]); const c = laske(pv.tasot[k]);
+    ps.kaikki += kaikki; ps.meri += a; ps.maa += b; ps.maaV += c;
+    console.log(`  Z${pm.tasot[k].Z}  ${String(kaikki).padStart(12)} ${String(pm.tasot[k].tayte).padStart(8)}   | `
+      + `${String(a).padStart(11)} (${pros(a, kaikki)}) ${String(kaikki - a).padStart(6)} | `
+      + `${String(b).padStart(10)} (${pros(b, kaikki)}) ${String(kaikki - b).padStart(6)} | `
+      + `${String(c).padStart(8)} (${pros(c, kaikki)})`);
+  }
+  console.log(`  yht ${String(ps.kaikki).padStart(12)}${' '.repeat(12)}| `
+    + `${String(ps.meri).padStart(11)} (${pros(ps.meri, ps.kaikki)}) ${String(ps.kaikki - ps.meri).padStart(6)} | `
+    + `${String(ps.maa).padStart(10)} (${pros(ps.maa, ps.kaikki)}) ${String(ps.kaikki - ps.maa).padStart(6)} | `
+    + `${String(ps.maaV).padStart(8)} (${pros(ps.maaV, ps.kaikki)})`);
+}
+
 /* --------------------------------------------------------------- ajo */
 
 if (tila === 'suunnittele') suunnittele();
 else if (tila === 'vertaa') vertaa();
 else if (tila === 'sauma') await sauma();
+else if (tila === 'arvio') await arvio();
 else {
   console.error(KAYTTO);
   process.exit(1);
