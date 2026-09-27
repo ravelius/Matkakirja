@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 01:09 EEST — **Postivahti (self) 74%, luovutus kirjoitettu, pyydetään Fablelta nollausta.**
+**Päivitetty:** 2026-09-28 01:13 EEST — **Postivahti uusi sessio (self) 11%, kierto jatkuu normaalisti.**
 
 ## 1) Sessiot
 
@@ -10,21 +10,21 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 19% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 66% | running |
-| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 50% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 24% | running |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 22% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 11% | running |
+| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 52% | running |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 32% | running |
 | Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 52% | idle |
 | Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 27% | idle |
 | Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 63% | idle |
 | Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 62% | idle |
-| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 31% | running |
+| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 34% | running |
 | Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | ei luettavissa (idle) | — |
-| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 35% | running |
+| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 40% | running |
 
-## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 01:09)
+## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 01:13)
 
-Vahti PID 82063 elossa, aja.out ennallaan (ei "2 koodi" -riviä). Seuraajan tarkistettava tämä joka kierroksella.
+Vahti PID 82063 elossa (24 min), aja.out ennallaan (ei "2 koodi" -riviä vaiheen 2 alusta — viimeisin 00:51 "2 syvä z9–z10 alkaa"). vahti.out normaali ydinsäätö (ytimet nousseet 4→10, kone vapaa). 2.log etenee normaalisti (shardit 44/507, ~9%). Seuraajan tarkistettava tämä joka kierroksella.
 
 Koodi 1 klo 00:39 oli **odotettu** — vain luettelon vientivartion ilmoitus, ei virhe. Laatat/eheys kunnossa (119 495/119 495). Vaihe 1 merkitty valmiiksi. **Uusi vahti PID 82063 (v5e)** käynnistää vaiheen 2 (syvä, T7) ~00:52. Karttaseppä odottaa vaiheen 2 päättyvän todennäköisesti riviin "2 koodi 1" samasta vartiosta — **se on OK jos `2.log`:n lopussa on "eheystarkistus: laattojen määrä täsmää luetteloon".** **Seurataan PID 82063:a ja aja.out:ia — herätä Karttaseppä (local_4bd7c316-55bc-423a-9da1-821fdd123cab) JOKA TAPAUKSESSA kun "2 koodi" ilmestyy tai vahti kuolee**, riippumatta koodin arvosta (tarkista 2.log-eheysrivi ennen viestiä).
 
@@ -74,17 +74,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (00:09)
+## 5) Resurssit (01:13)
 
-- **5 h -kiintiö:** 33 %. **Viikko (kaikki mallit): 93 % — kynnys ylittyi, ilmoitettu Fablelle.** **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 89 Gi vapaana (nousi 76→89). wt/-worktreet 27 kpl.
-- **Muistipaine:** normal (1). **Load average matala: 22.89/24.36/25.80.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 1.
-- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (00:19, uusi julkaisu — striimiluenta). `/tmp/matkakirja-juna-tauko` PÄÄLLÄ — **Fable vahvisti 00:2x: tarkoituksellinen, pysyy polton loppuun ("2 koodi 0") ja purkuun aamulla — EI hälytystä tästä enää tänä yönä.**
+- **5 h -kiintiö:** 35 %. **Viikko (kaikki mallit): 93 % — kynnys ylittyi, ilmoitettu Fablelle.** **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 87 Gi vapaana. wt/-worktreet 27 kpl.
+- **Muistipaine:** normal (1). **Load average matala: 15.26/15.37/12.47.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
+- **Liput:** `/tmp/matkakirja-julkaisu` EI löydy (julkaisu valmistunut/lippu poistettu — ei hälytystä, ei raskasta ajoa ilman lippua havaittu). `/tmp/matkakirja-juna-tauko` PÄÄLLÄ — tarkoituksellinen, pysyy polton loppuun ja purkuun aamulla — EI hälytystä.
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
-- **Juna:** tauolla 91 min, poltto+julkaisu käynnissä.
-- **Karttasepän vahti-PID 85590 elossa 00:33, aja.out ei muuttunut (ei "2 koodi 0"), vahti.out normaali ydinsäätö.**
-- **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
-- **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
+- **Juna:** tauolla, poltto käynnissä (vaihe 2, ~9 %).
+- **Karttasepän vahti-PID 82063 elossa 01:13, aja.out ei muuttunut (ei "2 koodi"), vahti.out normaali ydinsäätö (10 ydintä).**
+- **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
+- **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
   - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
   - **.app-paketit >24h:** 14 kpl, yhteensä **~9,5 Gt** (laatta-esilataus/b23koe.app 359M, esilataaja-5:n 4 pakettia ~346–359M, musiikki-v23/esilataaja-mittari/pohja-26 (2)/musiikki-v1 (2)/loydos155/loydos153/huntu-paljastus-b19 ~333–346M kukin).
