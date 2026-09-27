@@ -105,7 +105,9 @@ import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.m
 import {
   RESEPTIT, TAUSTA, VESIVIIVOITUKSET, patinoiSelaimessa,
 } from './patina.mjs';
-import { laudanProjektio, SYVYYS, asetaSyvyyskontrasti } from './fokuskartta/piirto.js';
+import {
+  laudanProjektio, SYVYYS, asetaSyvyyskontrasti, asetaMatalaViileys,
+} from './fokuskartta/piirto.js';
 import { RANTATYYLI, nimiotasonLadonta } from './fokuskartta/maailmapiirto.js';
 import { NIMISTO_1873 } from '../js/packs/nimisto-1873.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
@@ -1145,6 +1147,10 @@ const RESEPTI_JSON = valitsin('resepti-json', null);
 /** `--syvyyskontrasti 1.35` — meren syvyysrampin venytys (löydös 129; 1 = entinen, ks. piirto.js asetaSyvyyskontrasti). */
 const SYVYYSKONTRASTI = Number(valitsin('syvyyskontrasti', 1));
 asetaSyvyyskontrasti(SYVYYSKONTRASTI);
+/** `--matala-viileys 0.5 [--matala-syvyys 10]` — matalan veden viileys (V1; 0 = entinen, ks. piirto.js). */
+const MATALA_VIILEYS = Number(valitsin('matala-viileys', 0)) || 0;
+const MATALA_SYVYYS = Number(valitsin('matala-syvyys', 10)) || 10;
+asetaMatalaViileys(MATALA_VIILEYS, MATALA_SYVYYS);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
   console.error(`--vesiviivoitus: tuntematon ${VESIVIIVOITUS_VALINTA} (tihea|harva)`);
   process.exit(1);
@@ -4091,6 +4097,12 @@ if (SYVYYSKONTRASTI !== 1) {
     m.asetaSyvyyskontrasti(k);
   }, SYVYYSKONTRASTI);
 }
+if (MATALA_VIILEYS) {
+  await sivu.evaluate(async ([v, d]) => {
+    const m = await import(new URL('./piirto.js', window.location.href).href);
+    m.asetaMatalaViileys(v, d);
+  }, [MATALA_VIILEYS, MATALA_SYVYYS]);
+}
 if (PATINA) {
   await sivu.evaluate((lahde) => {
     // eslint-disable-next-line no-eval
@@ -4826,6 +4838,7 @@ function teeLuettelo() {
      */
     ...(RESEPTINIMI ? { resepti: RESEPTINIMI } : {}),
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
+    ...(MATALA_VIILEYS ? { matalaViileys: { viileys: MATALA_VIILEYS, syvyys: MATALA_SYVYYS } } : {}),
     ...(JARVI_PIENIN !== 0.4 || JARVI_PIENIN_PX ? { jarvet: { pienin: JARVI_PIENIN, harvennus: JARVI_HARVENNUS, pieninPx: JARVI_PIENIN_PX } } : {}),
     ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
     ...(RELIEFI_KOE ? { reliefi: valitsin('reliefi-koe', null) === 'lammin' ? 'lammin' : RELIEFI_KOE } : {}),

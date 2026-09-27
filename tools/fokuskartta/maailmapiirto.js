@@ -85,7 +85,7 @@
 import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI, SYVYYS,
   VARIPALETIT,
-  fbm, laudanProjektio, lerpSyvyysAsteikolla, lerpVari, mulberry32,
+  fbm, laudanProjektio, lerpSyvyysAsteikolla, lerpVari, mulberry32, MATALA_SIIRTO,
 } from './piirto.js';
 import { bilineaarinenKorkeus, varjonVoimakkuus, varjostusPisteessa } from './maastovarjo.js';
 import {
@@ -1660,7 +1660,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       if (koko < jarviPieninPx) continue;
     }
     viivaPolku(ctx, j.renkaat, true);
-    ctx.fillStyle = 'rgb(206,201,181)';
+    // Matalan veden viileys siirtää järven samaa matkaa kuin rannan
+    // (piirto.js MATALA_SIIRTO, puolikas peitolla 0,5); oletuksena 0.
+    ctx.fillStyle = `rgb(${Math.round(206 + MATALA_SIIRTO[0] * 0.5)},${Math.round(201 + MATALA_SIIRTO[1] * 0.5)},${Math.round(181 + MATALA_SIIRTO[2] * 0.5)})`;
     ctx.fill('evenodd');
     ctx.strokeStyle = 'rgba(74,52,33,0.18)';
     ctx.lineWidth = 2.2 * P;
