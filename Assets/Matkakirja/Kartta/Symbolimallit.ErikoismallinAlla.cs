@@ -8,21 +8,26 @@ namespace Matkakirja
     /// KATEGORIASYMBOLIT ERIKOISMALLIN ALLA (Linssisepän speksi 27.9.2026 klo 21.2x, Fablen päätös: yleinen korjaus, nastoja
     /// ei siirretä; geometria ErikoismallinAlla.cs, testit Kartta-testit).
     ///  1. Erikoismalli voittaa: kun tason 1 erikoismalli E näkyy (myös kaupungin maamerkki, Erikoismalli.Kaupunki) ja toisen
-    ///     noston N 3D-symbolin jalkapiste osuu E:n kalustelaatikkoon (sama kuin nimiöiden väistössä, LisaaKalusteet), N:n
-    ///     symboli piilotetaan: tasolla 1 kappale (runko tai lähiverkko, ääriviiva ja maakontakti) lohkon _Tila.y:llä,
+    ///     noston N 3D-symbolin laatikko leikkaa E:n kalustelaatikon (sama kuin nimiöiden väistössä, LisaaKalusteet; 28.9.
+    ///     laatikkoleikkaus, ennen jalkapiste: Kinderdijkin takarivin päälle jäi Goudan Malja, jonka jalka oli laatikon
+    ///     yläpuolella), N:n symboli piilotetaan: tasolla 1 kappale (runko tai lähiverkko, ääriviiva ja maakontakti) lohkon _Tila.y:llä,
     ///     tasoilla 2–3 GPU-instanssin _Tila.y (piilo = 1). Kahteen erikoismalliin sääntö ei koske (N on aina
     ///     kategoriasymboli tai arkkityyppi): niille nykyiset koko- ja lähikynnykset.
-    ///  2. Löydettävyys: Natiivi-UI (NostotKartalla) kysyy <see cref="ReunaPiste"/>:llä laatikon reunapisteen ja piirtää siihen
-    ///     noston merkin pienenä mustepisteenä (≤ 6 pt, tasojen 2–3 minimerkki); napautus ja nimiö seuraavat merkkiä kuten ennen.
+    ///  2. Löydettävyys: Natiivi-UI (NostotKartalla) kysyy <see cref="ReunaPiste"/>:llä merkin paikan ja piirtää siihen noston
+    ///     merkin pienenä mustepisteenä (≤ 6 pt, tasojen 2–3 minimerkki): laatikon reunapiste, tai noston oma paikka, jos jalka
+    ///     on laatikon ulkopuolella (ErikoismallinAlla.MerkinPaikka). Napautus ja nimiö seuraavat merkkiä kuten ennen.
     ///  3. Häivytys 0,3 s ja laatikon 10 %:n hystereesi (ErikoismallinAlla). Kun E piiloutuu (kynnys, kallistus, maa pois,
     ///     piilo), N palaa samalla häivytyksellä.
-    /// Tila `symbolit tila` -rivillä ("piilossa erikoismallin alla: vltava→cesky-krumlov, …"), A/B `symbolit alla 0|1`.
+    /// Tila `symbolit tila` -rivillä ("piilossa erikoismallin alla: vltava→cesky-krumlov, …"), A/B `symbolit alla 0|1` ja
+    /// `symbolit alla laatikko|jalka` (laatikkoleikkaus vai 1.0.33:n jalkapiste).
     /// Ei allokaatioita kehyksittäin: tila noston id:llä luodaan kerran (vain kun erikoismalleja on näkyvissä), listat valmiina.
     /// </summary>
     public sealed partial class Symbolimallit
     {
         /// <summary>Sääntö päällä (komento `symbolit alla 0|1`, oletus 1).</summary>
         public static bool AllaSaanto = true;
+        /// <summary>Symbolin laatikko leikkaa (oletus) vai jalkapiste osuu (1.0.33) — komento `symbolit alla laatikko|jalka`.</summary>
+        public static bool AllaLaatikko = true;
 
         /// <summary>Noston tila erikoismallin alla (noston id:llä).</summary>
         sealed class Alla
@@ -47,14 +52,14 @@ namespace Matkakirja
         float eAllekirjoitus;
         /// <summary>Laatikot muuttuivat edellisestä kehyksestä (tasojen 2–3 laskenta uudelleen, Muuttunut).</summary>
         bool eMuuttui;
-        bool laskettuAlla = true;
+        bool laskettuAlla = true, laskettuAllaLaatikko = true;
         /// <summary>Tason 1 häivytys käynnissä (PallonLepo: kuva muuttuu ilman kameran liikettä).</summary>
         bool allaAnimoi;
         bool Haivyttaa() => allaAnimoi;
         MaterialPropertyBlock piiloLohko;
         float edellinen23 = -1f;
 
-        static void NollaaAlla() { AllaSaanto = true; }
+        static void NollaaAlla() { AllaSaanto = true; AllaLaatikko = true; }
 
         /// <summary>Näkyvien erikoismallien laatikot (LateUpdate tason 1 päivityksen jälkeen, ennen nostojen arviointia).</summary>
         void KeraaErikoismallit()
@@ -79,12 +84,19 @@ namespace Matkakirja
             eAllekirjoitus = allekirjoitus;
         }
 
-        /// <summary>
-        /// Arvioi noston N (id, taso, 3D-symbolin jalka maailmassa): osuuko jalka näkyvän erikoismallin laatikkoon (nykyinen
-        /// E hystereesillä ensin), ja askeltaa häivytystä. Palauttaa piilon 0–1; <paramref name="muuttui"/> = tavoite vaihtui,
-        /// <paramref name="kesken"/> = häivytys jatkuu.
-        /// </summary>
+        /// <summary>Tason 1 noston arvio (PaivitaAllaTaso1): symbolin leveys ja korkeussuhde noston kappaleesta.</summary>
         float Arvioi(string id, int taso, Vector3 jalka, float dt, ref bool muuttui, ref bool kesken)
+        {
+            kappaleet.TryGetValue(id, out var k);
+            return Arvioi(id, taso, jalka, k != null ? k.LeveysPx : 0f, k != null ? k.Suhde : 1f, dt, ref muuttui, ref kesken);
+        }
+
+        /// <summary>
+        /// Arvioi noston N (id, taso, 3D-symbolin jalka maailmassa, symbolin leveys ruudulla px ja korkeussuhde): leikkaako
+        /// symbolin laatikko näkyvän erikoismallin laatikon (nykyinen E hystereesillä ensin), ja askeltaa häivytystä. Palauttaa
+        /// piilon 0–1; <paramref name="muuttui"/> = tavoite vaihtui, <paramref name="kesken"/> = häivytys jatkuu.
+        /// </summary>
+        float Arvioi(string id, int taso, Vector3 jalka, float leveysPx, float suhde, float dt, ref bool muuttui, ref bool kesken)
         {
             if (!alla.TryGetValue(id, out var a))
             {
@@ -99,12 +111,13 @@ namespace Matkakirja
             Vector3 r = kamera.WorldToScreenPoint(jalka);
             if (r.z > 0f)
             {
+                var sl = ErikoismallinAlla.SymbolinLaatikko(r.x, r.y, AllaLaatikko ? leveysPx : 0f, suhde);
                 if (a.Piiloon && a.E != null)
                     for (int i = 0; i < eLaatikot.Count; i++)
-                        if (eLaatikot[i].K == a.E && ErikoismallinAlla.Osuu(eLaatikot[i].L, r.x, r.y, true)) { e = a.E; avain = eLaatikot[i].Avain; break; }
+                        if (eLaatikot[i].K == a.E && ErikoismallinAlla.Leikkaa(eLaatikot[i].L, sl, true)) { e = a.E; avain = eLaatikot[i].Avain; break; }
                 if (e == null)
                     for (int i = 0; i < eLaatikot.Count; i++)
-                        if (ErikoismallinAlla.Osuu(eLaatikot[i].L, r.x, r.y, false)) { e = eLaatikot[i].K; avain = eLaatikot[i].Avain; break; }
+                        if (ErikoismallinAlla.Leikkaa(eLaatikot[i].L, sl, false)) { e = eLaatikot[i].K; avain = eLaatikot[i].Avain; break; }
             }
             bool piiloon = e != null;
             if (piiloon != a.Piiloon || e != a.E) muuttui = true;
@@ -204,7 +217,9 @@ namespace Matkakirja
             Vector3 n = s.kamera.WorldToScreenPoint(a.Jalka);
             if (e.z <= 0f) return false;
             var l = ErikoismallinAlla.Kalustelaatikko(e.x, e.y, a.E.LeveysPx, a.E.Suhde, KalusteVaraPt * PalloKierto.Pistekerroin);
-            ErikoismallinAlla.ReunaPiste(l, e.x, e.y, n.x, n.y, out float x, out float y);
+            float x, y;
+            if (AllaLaatikko) ErikoismallinAlla.MerkinPaikka(l, e.x, e.y, n.x, n.y, out x, out y);
+            else ErikoismallinAlla.ReunaPiste(l, e.x, e.y, n.x, n.y, out x, out y);   // 1.0.33 (symbolit alla jalka)
             ruutu = new Vector2(x, y);
             return true;
         }
@@ -222,6 +237,7 @@ namespace Matkakirja
             }
             if (n == 0) sb.Append(" ei yhtään");
             if (!AllaSaanto) sb.Append(" (sääntö pois, symbolit alla 0)");
+            else if (!AllaLaatikko) sb.Append(" (jalkapiste, symbolit alla jalka)");
         }
     }
 }

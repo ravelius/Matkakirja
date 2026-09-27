@@ -25,7 +25,7 @@ namespace Matkakirja
     /// KaupunkiMerkit. Löytämätön himmeänä (pergamentti, 70 %). Horisonttiusva kuten 153:n nostoilla. Piilossa lennon, linssin
     /// ja aloitusportin aikana sekä pallon takana. Natiivi-UI piilottaa 2D-kuvamerkin, kun <see cref="OnMalli"/> on tosi.
     /// Kolmiobudjetti enintään 1 500 mallia kohden (erikoismallit), arkkityypit 600/150 (LOD0/LOD1).
-    /// Komennot `symbolit tila|pois|paalle|loydetty|himmea|koko pt|taso23 0|1|ylhaalta 3d|2d|perspektiivi aste|reuna pt|maasto 0|1|kategoriat 1|0|alla 0|1`.
+    /// Komennot `symbolit tila|pois|paalle|loydetty|himmea|koko pt|taso23 0|1|ylhaalta 3d|2d|perspektiivi aste|reuna pt|maasto 0|1|kategoriat 1|0|alla 0|1|laatikko|jalka`.
     /// ERIKOISMALLI VOITTAA (Linssisepän speksi 27.9. klo 21.2x): erikoismallin kalustelaatikkoon osuvat muiden nostojen
     /// symbolit piiloon ja merkki laatikon reunalle mustepisteenä, ks. Symbolimallit.ErikoismallinAlla.cs.
     ///
@@ -188,7 +188,11 @@ namespace Matkakirja
                     return true;
                 case "maasto": MaastoKorkeudet = o[2] != "0" && o[2] != "pois"; return true;
                 case "reuna": ReunaPt = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 4f); return true;
-                case "alla": AllaSaanto = o[2] != "0" && o[2] != "pois"; return true;   // erikoismalli voittaa (A/B)
+                case "alla":
+                    // 1|0: erikoismalli voittaa (A/B); laatikko|jalka: symbolin laatikko leikkaa (28.9.) vai jalkapiste osuu (1.0.33).
+                    if (o[2] == "laatikko" || o[2] == "jalka") AllaLaatikko = o[2] == "laatikko";
+                    else AllaSaanto = o[2] != "0" && o[2] != "pois";
+                    return true;
                 case "kategoriat":
                     // 1|0: kategoriasymbolit (reliefit) vai arkkityypit (A/B); ruutu|pohjoinen: reliefin ylös-suunta.
                     if (o[2] == "ruutu" || o[2] == "pohjoinen") KategoriaRuutuYlos = o[2] == "ruutu";

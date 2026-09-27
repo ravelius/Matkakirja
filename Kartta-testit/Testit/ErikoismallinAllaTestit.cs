@@ -1,5 +1,5 @@
 // Kategoriasymbolit erikoismallin alla (Linssisepän speksi 27.9.2026 klo 21.2x, Kartta/ErikoismallinAlla.cs):
-// laatikko-osuma, reunapisteen suunta, hystereesi ja häivytys.
+// laatikko-osuma, laatikkoleikkaus (28.9., Kinderdijk), reunapisteen suunta, merkin paikka, hystereesi ja häivytys.
 using System;
 using Matkakirja;
 
@@ -85,6 +85,73 @@ namespace Matkakirja.Kartta.Testit
             var l0 = ErikoismallinAlla.Kalustelaatikko(200f, 100f, 90f, 0.8f, 0f);
             ErikoismallinAlla.ReunaPiste(l0, 200f, 100f, 150f, 50f, out x, out y);
             Oleta.Tosi(Lahella(x, 200f) && Lahella(y, 100f), $"vara 0 {x}, {y}");
+        }
+
+        [Testi]
+        static void SymbolinLaatikko()
+        {
+            // Sama muoto kuin väistössä: leveys jalan kohdalta, ylös max(0,5 × leveys, leveys × suhde), 0,3 × leveys jalan alle.
+            var l = ErikoismallinAlla.SymbolinLaatikko(100f, 50f, 60f, 1.2f);
+            Oleta.Tosi(Lahella(l.X0, 70f) && Lahella(l.X1, 130f) && Lahella(l.Y0, 32f) && Lahella(l.Y1, 122f), l.ToString());
+            var matala = ErikoismallinAlla.SymbolinLaatikko(100f, 50f, 60f, 0.3f);
+            Oleta.Tosi(Lahella(matala.Y1, 80f), $"matala malli vähintään puolet leveydestä ylös {matala}");
+            var piste = ErikoismallinAlla.SymbolinLaatikko(100f, 50f, 0f, 1.2f);
+            Oleta.Tosi(piste.Leveys == 0f && piste.Korkeus == 0f && piste.X0 == 100f && piste.Y0 == 50f, $"leveys 0 = jalkapiste {piste}");
+        }
+
+        [Testi]
+        static void LaatikkoleikkausKinderdijk()
+        {
+            var l = Krumlov();   // x 147–253, y 92–180
+            // Kinderdijk (Linssisepän laiteajo 27.9. klo 22.0x): Goudan Maljan jalka laatikon yläpuolella, malja myllyjen päällä.
+            Oleta.Tosi(!ErikoismallinAlla.Osuu(l, 240f, 190f, false), "1.0.33: jalkapiste ei osu");
+            var malja = ErikoismallinAlla.SymbolinLaatikko(240f, 190f, 60f, 1.2f);   // y 172–262
+            Oleta.Tosi(ErikoismallinAlla.Leikkaa(l, malja, false), "laatikko leikkaa: piiloon");
+            Oleta.Tosi(!ErikoismallinAlla.Leikkaa(l, ErikoismallinAlla.SymbolinLaatikko(240f, 205f, 60f, 1.2f), false), "ylempänä erillään (y 187–)");
+            // Sivulla: puolet leveydestä ratkaisee.
+            Oleta.Tosi(ErikoismallinAlla.Leikkaa(l, ErikoismallinAlla.SymbolinLaatikko(280f, 120f, 60f, 1.2f), false), "oikealla x 250– leikkaa");
+            Oleta.Tosi(!ErikoismallinAlla.Leikkaa(l, ErikoismallinAlla.SymbolinLaatikko(290f, 120f, 60f, 1.2f), false), "oikealla x 260– erillään");
+            // Alla: symboli ulottuu jalasta ylös; reunan kosketus lasketaan kuten jalkapisteessä.
+            Oleta.Tosi(ErikoismallinAlla.Leikkaa(l, ErikoismallinAlla.SymbolinLaatikko(200f, 20f, 60f, 1.2f), false), "alla yläreuna 92 koskettaa");
+            Oleta.Tosi(!ErikoismallinAlla.Leikkaa(l, ErikoismallinAlla.SymbolinLaatikko(200f, 19f, 60f, 1.2f), false), "alla 1 px irti");
+        }
+
+        [Testi]
+        static void LaatikkoleikkauksenHystereesi()
+        {
+            var l = Krumlov();   // leveys 106: × 1,1 → puolileveys 58,3
+            var s = ErikoismallinAlla.SymbolinLaatikko(285f, 120f, 60f, 1.2f);   // x 255–315, 2 px oikean reunan ulkopuolella
+            Oleta.Tosi(!ErikoismallinAlla.Leikkaa(l, s, false), "uusi ei piiloudu");
+            Oleta.Tosi(ErikoismallinAlla.Leikkaa(l, s, true), "piilotettu pysyy");
+            Oleta.Tosi(!ErikoismallinAlla.Leikkaa(l, ErikoismallinAlla.SymbolinLaatikko(290f, 120f, 60f, 1.2f), true), "7 px ulkona palaa");
+        }
+
+        [Testi]
+        static void NollaleveysOnJalkapiste()
+        {
+            // Leveys 0 (ja `symbolit alla jalka`) = 1.0.33:n sääntö sellaisenaan, myös hystereesillä ja reunoilla.
+            var l = Krumlov();
+            int eri = 0;
+            for (float x = 130f; x <= 270f; x += 0.5f)
+                for (float y = 80f; y <= 195f; y += 0.5f)
+                    foreach (bool jo in new[] { false, true })
+                        if (ErikoismallinAlla.Leikkaa(l, ErikoismallinAlla.SymbolinLaatikko(x, y, 0f, 0.8f), jo) != ErikoismallinAlla.Osuu(l, x, y, jo)) eri++;
+            Oleta.Sama(0, eri, "eroja jalkapisteeseen");
+        }
+
+        [Testi]
+        static void MerkinPaikka()
+        {
+            var l = Krumlov();
+            // Jalka laatikossa: reunapiste kuten ennen.
+            ErikoismallinAlla.MerkinPaikka(l, 200f, 100f, 215f, 100f, out float x, out float y);
+            Oleta.Tosi(Lahella(x, 253f) && Lahella(y, 100f), $"sisällä reunalle {x}, {y}");
+            // Jalka ulkona (vain symboli leikkasi): merkki noston omaan paikkaan, ei laatikon reunalle.
+            ErikoismallinAlla.MerkinPaikka(l, 200f, 100f, 240f, 190f, out x, out y);
+            Oleta.Tosi(Lahella(x, 240f) && Lahella(y, 190f), $"ulkona omaan paikkaan {x}, {y}");
+            // Raja: jalka reunalla → reunapiste on jalka itse (ei hyppyä).
+            ErikoismallinAlla.MerkinPaikka(l, 200f, 100f, 240f, 180f, out x, out y);
+            Oleta.Tosi(Lahella(x, 240f) && Lahella(y, 180f), $"reunalla {x}, {y}");
         }
 
         [Testi]

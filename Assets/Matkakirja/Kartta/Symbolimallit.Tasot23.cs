@@ -200,13 +200,13 @@ namespace Matkakirja
                            || laskettuKoko != KokoPt || laskettuKorkeus != Screen.height || laskettuPakota != PakotaLoydetty
                            || laskettuYlhaalta != Ylhaalta3D || laskettuPerspektiivi != PerspektiiviAste || laskettuReuna != ReunaPt
                            || laskettuLeveys != Screen.width || laskettuMaasto != maastoVersio || laskettuKategoriat != Kategoriat || laskettuRuutu != KategoriaRuutuYlos
-                           || eMuuttui || laskettuAlla != AllaSaanto;
+                           || eMuuttui || laskettuAlla != AllaSaanto || laskettuAllaLaatikko != AllaLaatikko;
             if (!muuttui) return false;
             laskettuVersio = nostoVersio; laskettuKamera = kameraM; laskettuPallo = palloM; laskettuFov = kamera.fieldOfView;
             laskettuKerroin = nk.ZoomKerroin; laskettuSyttyminen = nk.Syttyminen; laskettuKoko = KokoPt;
             laskettuKorkeus = Screen.height; laskettuPakota = PakotaLoydetty;
             laskettuYlhaalta = Ylhaalta3D; laskettuPerspektiivi = PerspektiiviAste; laskettuReuna = ReunaPt; laskettuLeveys = Screen.width; laskettuMaasto = maastoVersio;
-            laskettuKategoriat = Kategoriat; laskettuRuutu = KategoriaRuutuYlos; laskettuAlla = AllaSaanto;
+            laskettuKategoriat = Kategoriat; laskettuRuutu = KategoriaRuutuYlos; laskettuAlla = AllaSaanto; laskettuAllaLaatikko = AllaLaatikko;
             return true;
         }
 
@@ -255,11 +255,13 @@ namespace Matkakirja
                 Vector3 kohti = kp - p;
                 float etaisyys = kohti.magnitude;
                 if (Vector3.Dot(gt.TransformDirection(i.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) <= 0.08f) continue;
-                float allaPiilo = AllaSaanto ? Arvioi(s.Id, s.Taso, p, dtAlla, ref allaMuuttui, ref allaKesken) : 0f;
-                if (allaPiilo >= 1f) continue;   // kokonaan erikoismallin alla: ei instanssia (UI piirtää reunapisteen)
 
                 float pt = KokoNyt(nk.ZoomKerroin) * (s.Taso == 2 ? Taso2Koko : Taso3Koko)
                            * (NostoSaannot.KuvamerkkiPieni(s.Taso, nk.ZoomKerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
+                // Symbolin laatikko instanssin koosta (leveys pt:stä, korkeussuhde LOD0:sta) leikkaa erikoismallin laatikon.
+                float allaPiilo = AllaSaanto ? Arvioi(s.Id, s.Taso, p, pt * PalloKierto.Pistekerroin, Suhde(MallinVerkko(MalliIndeksi(tieto), 0)),
+                                                      dtAlla, ref allaMuuttui, ref allaKesken) : 0f;
+                if (allaPiilo >= 1f) continue;   // kokonaan erikoismallin alla: ei instanssia (UI piirtää reunapisteen)
                 if (i.Lod < 0) i.Lod = pt >= Lod1RajaPt ? 0 : 1;
                 else if (i.Lod == 0 && pt < Lod1RajaPt) i.Lod = 1;
                 else if (i.Lod == 1 && pt >= Lod1RajaPt * (1f + LodHystereesi)) i.Lod = 0;
