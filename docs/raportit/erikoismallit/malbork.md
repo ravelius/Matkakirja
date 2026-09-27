@@ -1,7 +1,7 @@
 # Erikoismalli: Malborkin linna (luonnos omistajan korttiin 27.9.2026, Linssiseppä)
 
-*Pohja docs/raportit/erikoismalli-speksi-pohja.md. Elämänidea odottaa omistajan valintaa (A suositus, B vaihtoehto). Ei
-koodia ennen hyväksyntää.*
+*Pohja docs/raportit/erikoismalli-speksi-pohja.md. OMISTAJA VALITSI A:N 27.9.2026 (Fablen kautta klo 18.4x): mallinnus
+alkaa. B jää pois.*
 
 ## 0. ELÄMÄNIDEA (omistaja valitsee A tai B)
 

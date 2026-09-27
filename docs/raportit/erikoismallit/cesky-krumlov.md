@@ -1,7 +1,7 @@
 # Erikoismalli: Český Krumlov (luonnos omistajan korttiin 27.9.2026, Linssiseppä)
 
-*Pohja docs/raportit/erikoismalli-speksi-pohja.md. Elämänidea odottaa omistajan valintaa (A suositus, B vaihtoehto). Ei
-koodia ennen hyväksyntää.*
+*Pohja docs/raportit/erikoismalli-speksi-pohja.md. OMISTAJA VALITSI A:N 27.9.2026 (Fablen kautta klo 18.4x): mallinnus
+alkaa. B jää pois.*
 
 ## 0. ELÄMÄNIDEA (omistaja valitsee A tai B)
 
@@ -33,8 +33,9 @@ koodia ennen hyväksyntää.*
 - **Harvinainen:** näytös alkaa. Katsomo tekee täyden kierroksen, ja puiston kolme lavavaloa syttyvät vuorotellen
   (valaisematon hehku, ei välähdystä).
 - **Reaktio:** lähestyttäessä katsomo kääntyy heti. Napautus aloittaa näytöksen.
-- **Tausta:** Krumlovin ja Tampereen Pyynikin kesäteatterin pyörivät katsomot olivat Euroopan ensimmäiset, ja ne
-  otettiin käyttöön samana vuonna (cs-Wikipedia). Yhteys ilahduttaa suomalaista pelaajaa.
+- **Tausta:** Krumlovin pyörivä katsomo (1958) oli Euroopan ensimmäisiä; Tampereen Pyynikin kesäteatterin kääntyvä
+  katsomo on vuodelta 1959. Vuosiväitettä "samana vuonna" ei käytetä (Fable 27.9.2026: cs-Wikipedian muotoilu ei riitä
+  lähteeksi).
 - **Heikkous:** katsomo on noin 600 m tornista länteen puutarhan puiden keskellä. Se pitää siirtää tyylitellysti mallin
   vasempaan päähän, kuten Lontoon maailmanpyörä on siirretty sivuun, ja se on 40 pt:ssä pieni. Siksi suositus on A.
 
