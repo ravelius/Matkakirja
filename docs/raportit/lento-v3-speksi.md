@@ -207,3 +207,22 @@ pilvisumu, ELOKUVALLINEN ALOITUSLENTO, ALOITUSLENNON KAMERAKÄSIKIRJOITUS ja 25.
 - **Kaanon:** etumainen matkustaja punaisella huivilla on Fogg (pelaaja), lentäjä nimetön.
 - **Työnjako ja järjestys:** 3 erikoismallia → merikokeilu → lento v3. Koneen malli ja kamera-aikajana: Linssiseppä.
   Esilatauskäytävä ja kytkin `lento v3 0|1`: Natiiviseppä. Moottorin ääni (`LentoAani`): Pelikoodari.
+
+## 10. Tila ja integraation avoimet (Linssiseppä 27.9.2026 klo 12.x) [E]
+
+- **Toteutus valmis kahdessa proto-haarassa, EI junassa eikä 1.0.28/1.0.29:ssä:** kone ja kamera `mallinseppa/tiger-moth`
+  7b1bf9b9 (TigerMoth 1 086 + potkuri 52 + huivi 16 kolmiota, TigerMothKone, LennonV3, Kartta-testit 322/322) ja
+  integraatio `natiiviseppa/lento-v3` cdd285f9 (Nappula.LentoV3, LennonV3Kaytava testeineen, EsilataaLentoV3, kytkin
+  `lento v3 0|1|tila`). Haara odottaa kolmea vastausta (Natiivisepän luovutus 27.9. tilinvaihto):
+- **1. Sisäiset lennot 15 s?** Kyllä: 15,0 s KAIKILLE lennoille (aloituslento ja pelin aikaiset lennot), kuten kohdan 7
+  taulukossa. Lyhyet ja pitkät reitit hoituvat kohdan 2 säännöillä (näkyvä osuus ≤ 600 km, kaukoskaala 36–80 km).
+  Lähestymissuunta `Lahestymiset`-taulukosta, muuten isoympyrän loppuosa. Ohitusta ei lisätä nyt.
+- **2. Käytävän prioriteetti:** alun 5 s = Nakyva + Etusija, loput SeuraavaRuutu (kuten toteutettu). Lennon ajan
+  taustajono (tasot 4–5, Z10-esilämmitys) on tauolla, ja se jatkuu saapumissekvenssin jälkeen. Odotusnäkymä ei hae uusia
+  laattoja (zoom ≤ 5 %), joten se ei kilpaile käytävän kanssa.
+- **3. Ääni puuttuu:** ehdotus A (suositus): v3 junaan nyt. Väliaikaisesti nykyinen lentoääni (`PeliOhjain.LentoAani`)
+  soi koko 15 s, ja gain seuraa `LentoV3Aani.EtaisyysM`:ää (lähikuva 0 dB, kaukokuva −10 dB). Pelikoodari vaihtaa
+  papatukseen (CC0 freesound 586106) omassa erässään samaan rajapintaan. B: v3 odottaa LentoAania, jolloin omistaja
+  näkee v3:n laitteella vasta sen jälkeen.
+- **Lentopeli** (docs/raportit/lentopeli-suunnitelma-20260927.md) rakentuu v3:n päälle: sama kone, kamerapohja,
+  käytävämalli ja LentoAani (+ kaasu). Siksi v3 kannattaa saada junaan ennen lentopelin prototyyppiä.
