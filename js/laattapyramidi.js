@@ -760,6 +760,8 @@ const mittarit = {
   variMaa: null,
   ladattu: 0,
   epaonnistui: 0,
+  // Alimman kerroksen virheen jälkeen uudelleen haetut laatat (ks. POHJAN_UUSINNAT).
+  uusittu: 0,
   esiladattu: 0,
   esijonossa: 0,
   esikaynnissa: 0,
@@ -1384,6 +1386,10 @@ function peruLaatta(kuva) {
  * `lapinakyva` kerros on MERKINTÖJÄ pergamentin päällä, ei karttaa:
  *              vanha taso ei jää uuden alle (ks. paivitaKerros).
  */
+/** Alimman kerroksen epäonnistuneen laatan uusinnat (1,5 s ja 4,5 s), ks. valmis(false). */
+const POHJAN_UUSINNAT = 2;
+const POHJAN_UUSINTAVALI_MS = 1500;
+
 const tyhjaTila = (kerros, alin = false, lapinakyva = false) => ({
   kerros, alin, lapinakyva, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
   nakyva: null, jakso: 0,
@@ -1753,6 +1759,35 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
         kuva.dataset.ladattu = '1';
       } else {
         mittarit.epaonnistui += 1;
+        /*
+         * ALIN KERROS HAETAAN UUDELLEEN (omistaja/Fable 27.9.2026: iPadin
+         * webissä isoja pergamentin värisiä suorakaiteita; Karttasepän
+         * analyysi). Alimman kerroksen alla ei ole mitään, joten yksi
+         * ohimenevä verkkovirhe tai HTTP/2-perutus jätti PYSYVÄN tyhjän
+         * laatan: elementti jäi tila.laatat-karttaan, eikä seuraava
+         * päivitys yrittänyt uudelleen (osoite asetetaan vain luonnissa).
+         * Nyt alimman kerroksen laatta haetaan uudelleen 1,5 ja 4,5 s:n
+         * päästä uudella osoitteella (?r=n ohittaa välimuistiin jääneen
+         * virheen); odottaja-merkki pysyy, joten vanha taso ei häviä alta
+         * ennen aikojaan. Ylemmillä kerroksilla puuttuva laatta on
+         * tavallinen (harvat kerrokset), ja alla näkyy karkeampi taso.
+         */
+        const yritys = Number(kuva.dataset.yritys ?? 0);
+        if (tila.alin && !tila.lapinakyva && yritys < POHJAN_UUSINNAT) {
+          kuva.dataset.yritys = String(yritys + 1);
+          mittarit.uusittu += 1;
+          const osoite = kuva.getAttribute('href');
+          // Osoite pois odotuksen ajaksi (WebKitin rikkinäisen kuvan merkki, ks. alla).
+          kuva.removeAttribute('href');
+          setTimeout(() => {
+            if (kuva.dataset.peruttu === '1' || !kuva.isConnected || !osoite) return;
+            kuva.addEventListener('load', () => valmis(true), { once: true });
+            kuva.addEventListener('error', () => valmis(false), { once: true });
+            const pohja = osoite.replace(/[?&]r=\d+$/, '');
+            kuva.setAttribute('href', `${pohja}${pohja.includes('?') ? '&' : '?'}r=${yritys + 1}`);
+          }, POHJAN_UUSINTAVALI_MS * 3 ** yritys);
+          return;
+        }
         // Saapumaton laatta ei saa jäädä odottajaksi ikuisesti.
         delete kuva.dataset.odottaa;
         /*
