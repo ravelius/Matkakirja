@@ -3872,6 +3872,127 @@ export const SKANDAALIT = {
       },
     },
   ],
+  LUX: [
+    /*
+     * Suurherttuallinen palatsi, Luxemburg (luopumisen ilmoituspaikka).
+     * Lähde: en.wikipedia.org: Marie-Adélaïde, Grand Duchess of Luxembourg
+     */
+    {
+      id: 'marie-adelaiden-luopuminen-1919',
+      otsikko: 'Suurherttuatar, joka tapasi keisarin väärään aikaan',
+      nimio: 'Luopuminen 1919',
+      vuosi: '1919',
+      paikka: 'Suurherttuallinen palatsi, Luxemburg',
+      lat: 49.6109, lon: 6.1328,
+      kortti: 'Kaksikymmentäneljävuotias suurherttuatar tapasi Saksan '
+        + 'keisarin ja päästi tämän joukot maansa läpi — sodan jälkeen '
+        + 'liittoutuneet ja oma parlamentti vaativat hänet pois valtaistuimelta '
+        + 'yhdeksän kuukauden sisällä. Ystävällisyydestä tuli petoksen näköinen '
+        + 'heti kun sota päättyi väärälle puolelle.',
+      teksti: 'Marie-Adélaïde nousi Luxemburgin suurherttuattareksi '
+        + 'vuonna 1912 vain kahdeksantoistavuotiaana. Kun Saksa hyökkäsi '
+        + 'Luxemburgiin elokuussa 1914 matkalla Ranskaan, suurherttuatar '
+        + 'ei vastustanut miehitystä; myöhemmin hän myös tapasi Saksan '
+        + 'keisari Vilhelm II:n vierailulla ja osallistui saksalaisten '
+        + 'järjestämiin tilaisuuksiin sodan aikana.'
+        + '\n\n'
+        + 'Luxemburg oli sopimuksin sitoutunut pysymään puolueettomana, '
+        + 'eikä suurherttuatar tehnyt mitään estääkseen rajan '
+        + 'ylityksen — hallituksen mukaan vastarinta olisi silti '
+        + 'ollut turhaa yhden pienen maan armeijalla suurvaltaa '
+        + 'vastaan.'
+        + '\n\n'
+        + 'Liittoutuneiden silmissä käytös näytti myötäilyltä. Sodan '
+        + 'päätyttyä 1918 Ranska vaati suurherttuattaren erottamista '
+        + 'ehtona sille, että Luxemburgin itsenäisyys ylipäätään '
+        + 'säilyisi, ja maan oma parlamentti äänesti tammikuussa 1919 '
+        + 'epäluottamuksesta hallitsijaansa kohtaan. Vasemmisto '
+        + 'vaati suorastaan tasavaltaa, kun taas suurin osa väestöstä '
+        + 'halusi säilyttää monarkian mutta uudella hallitsijalla.'
+        + '\n\n'
+        + 'Marie-Adélaïde luopui valtaistuimesta 14. tammikuuta 1919 '
+        + 'sisarensa Charlotten hyväksi. Syyskuussa samana vuonna '
+        + 'kansanäänestys vahvisti sekä monarkian jatkumisen että '
+        + 'Charlotten aseman ylivoimaisella enemmistöllä — ratkaisu, '
+        + 'joka rauhoitti kriisin ja antoi Charlottelle valtakauden, '
+        + 'joka kesti lähes neljäkymmentä vuotta. Marie-Adélaïde itse '
+        + 'vetäytyi luostariin ja kuoli espanjantautiin jo 1924, '
+        + 'kahdeksankymmentä vuotta ennen kuin historioitsijat '
+        + 'arvioivat hänen käytöksensä olleen enemmän kokemattomuutta '
+        + 'kuin tietoista petosta.',
+      lahde: 'en-Wikipedia "Marie-Adélaïde, Grand Duchess of Luxembourg". '
+        + 'Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Miksi Marie-Adélaïde joutui luopumaan vallasta 1919?',
+        vaihtoehdot: [
+          'Hän oli myötäillyt Saksan miehitystä sodan aikana',
+          'Hän oli hävinnyt kansanäänestyksen sisarelleen',
+          'Ranska halusi liittää Luxemburgin osaksi omaa aluettaan',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Junglinsterin lähetinasema, Luxemburg.
+     * Lähde: en.wikipedia.org: Radio Luxembourg
+     */
+    {
+      id: 'radio-luxembourg-1933',
+      otsikko: 'Radioasema, jota BBC ei saanut vaiennettua',
+      nimio: 'Radio Luxembourg',
+      vuosi: '1933–',
+      paikka: 'Junglinsterin lähetinasema, Luxemburg',
+      lat: 49.6803, lon: 6.2536,
+      kortti: 'Pieni suurherttuakunta rakensi Euroopan tehokkaimman '
+        + 'radiolähettimen ja alkoi lähettää englanninkielistä '
+        + 'mainosradiota suoraan Britanniaan — ilmaiseksi ja ilman '
+        + 'BBC:n lupaa. Lontoo yritti vaientaa aseman diplomatialla '
+        + 'ja kansainvälisillä sopimuksilla vuosikymmenen ajan, '
+        + 'turhaan.',
+      teksti: 'Radio Luxembourg aloitti kaupallisen lähetystoiminnan '
+        + 'vuonna 1933 Junglinsterin uudesta, poikkeuksellisen '
+        + 'tehokkaasta pitkäaaltolähettimestä. Ison-Britannian BBC:llä '
+        + 'oli tuolloin lähetysmonopoli eikä se sallinut mainoksia '
+        + 'ollenkaan, joten Radio Luxembourg täytti markkinaraon: se '
+        + 'lähetti englanninkielistä viihdettä ja musiikkia, jonka '
+        + 'brittiläiset yritykset maksoivat suoraan.'
+        + '\n\n'
+        + 'Britannian hallitus piti asemaa laittomana kiertotienä ja '
+        + 'yritti hiljentää sen kansainvälisen radiotaajuussopimuksen '
+        + '(Luzernin sopimus 1933) kautta, mutta Luxemburg ei '
+        + 'allekirjoittanut sopimusta eikä ollut sidottu siihen. '
+        + 'Postivirasto uhkaili kuuntelijoita ja BBC kieltäytyi '
+        + 'julkaisemasta aseman ohjelmatietoja lehdissään toivoen, '
+        + 'että pimeys sammuttaisi kiinnostuksen — mainostajat ja '
+        + 'kuuntelijat eivät siitä silti välittäneet.'
+        + '\n\n'
+        + 'Yhtiön omistivat ranskalais-luxemburgilaiset sijoittajat, '
+        + 'ja sen ohjelmat tehtiin Lontoossa mutta lähetettiin '
+        + 'Junglinsterin mastosta niin voimakkaalla teholla, että '
+        + 'signaali kuului selvästi koko Etelä-Englannin yli — '
+        + 'kuuntelijamäärät kasvoivat siitä huolimatta koko '
+        + '1930-luvun ajan, eikä yksikään Britannian viranomainen '
+        + 'pystynyt sulkemaan lähetystä pois ilmasta.'
+        + '\n\n'
+        + 'Asema selvisi sodan jälkeenkin ja kasvoi 1950–60-luvuilla '
+        + 'Euroopan kuunnelluimmaksi kaupalliseksi radioksi — sen '
+        + 'kautta löysivät yleisönsä lukuisat myöhemmät BBC-juontajat '
+        + 'ja pop-artistit, joille kotimaan oma radio ei vielä '
+        + 'antanut tilaa. Vasta 1973 BBC sai oman kaupallisen '
+        + 'kilpailijansa Britanniaan, neljäkymmentä vuotta '
+        + 'Luxemburgin ensilähetyksen jälkeen.',
+      lahde: 'en-Wikipedia "Radio Luxembourg". Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Miksi Britannian BBC ei voinut estää Radio Luxembourgia lähettämästä?',
+        vaihtoehdot: [
+          'Asema toimi Luxemburgista eikä ollut BBC:n tai Britannian lain alainen',
+          'BBC omisti osan asemasta eikä halunnut sulkea sitä',
+          'Kansainliitto myönsi asemalle erityisluvan',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
   LVA: [
     /*
      * Zaube (entinen Jürgensburg), Latvia — oikeudenkäynnin pitäjä.
@@ -3987,6 +4108,115 @@ export const SKANDAALIT = {
           'Vasta vuonna 1919',
         ],
         oikea: 2,
+      },
+    },
+  ],
+  MLT: [
+    /*
+     * Pyhän Angelon linnoitus, Birgu (Vittoriosa) — vankilan paikka.
+     * Lähde: en.wikipedia.org: Caravaggio
+     */
+    {
+      id: 'caravaggion-karkotus-1608',
+      otsikko: 'Ritarikunta erottaa oman kuuluisimman maalarinsa',
+      nimio: 'Caravaggion pako',
+      vuosi: '1608',
+      paikka: 'Pyhän Angelon linnoitus, Birgu',
+      lat: 35.8904, lon: 14.5225,
+      kortti: 'Maalari, joka oli juuri saanut ritarikunnalta kunnianosoituksen '
+        + 'elämästään komeimmasta teoksesta, istui neljä kuukautta myöhemmin '
+        + 'kalliovankilassa toista ritaria vastaan tehdyn hyökkäyksen takia. '
+        + 'Ritarikunta ei antanut anteeksi: se erotti hänet muodollisesti '
+        + '"mätänevänä jäsenenä" ja julisti hänet karkotetuksi.',
+      teksti: 'Michelangelo Merisi da Caravaggio pakeni Roomasta 1607 '
+        + 'tapettuaan miehen kaksintaistelussa. Maltalla suurmestari '
+        + 'Alof de Wignacourt otti hänet vastaan tunnustuksena hänen '
+        + 'maineestaan maalarina, ja heinäkuussa 1608 ritarikunta '
+        + 'nosti hänet ritariksi tavallisen tulokoehuolen ohittaen — '
+        + 'harvinainen kunnia ei-aatelissyntyiselle taiteilijalle.'
+        + '\n\n'
+        + 'Kiitokseksi Caravaggio maalasi katedraalin oratorioon '
+        + '"Johannes Kastajan mestauksen", jonka suurmestari tilasi '
+        + 'henkilökohtaisesti ja joka on edelleen taiteilijan '
+        + 'ainoa allekirjoitettu teos. Menestys ei kuitenkaan '
+        + 'muuttanut hänen luonnettaan: hänellä oli Roomasta asti '
+        + 'maine tulisena riitapukarina, ja sama toistui Maltalla.'
+        + '\n\n'
+        + 'Elokuun 1608 lopulla Caravaggio joutui tappeluun ja '
+        + 'haavoitti vanhempaa ritaria, Fra Giovanni Rodomonte Roeroa. '
+        + 'Hänet vangittiin ja teljettiin kallioon hakattuun selliin '
+        + 'Pyhän Angelon linnoituksessa Birgussa — vankilaan, josta '
+        + 'kukaan ei ollut aiemmin paennut. Caravaggio kuitenkin '
+        + 'pakeni köysien avulla ja purjehti Sisiliaan vain '
+        + 'kuukausia sen jälkeen, kun hänen maalauksensa oli '
+        + 'paljastettu juhlallisesti samassa kaupungissa.'
+        + '\n\n'
+        + 'Ritarikunnan kokous erotti hänet muodollisesti joulukuussa '
+        + '1608 lauseella "tamquam membrum putridum et foetidum" — '
+        + '"kuin mätänevä ja löyhkäävä jäsen". Caravaggio ei koskaan '
+        + 'palannut Maltalle eikä nähnyt oratoriomaalaustaan enää; '
+        + 'hän kuoli kaksi vuotta myöhemmin paossa Italian rannikolla.',
+      lahde: 'en-Wikipedia "Caravaggio". Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Miksi ritarikunta erotti Caravaggion Maltalta 1608?',
+        vaihtoehdot: [
+          'Hän hyökkäsi tappelussa toista ritaria vastaan ja pakeni vankilasta',
+          'Hän kieltäytyi maalaamasta tilattua alttaritaulua',
+          'Hänet paljastettiin väärentämästä ritarikunnan sinettiä',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Suurmestarin palatsi, Valletta — ritarikunnan aarrekammio.
+     * Lähde: en.wikipedia.org: French occupation of Malta (1798–1800)
+     */
+    {
+      id: 'napoleonin-kirkkohopean-ryosto-1798',
+      otsikko: 'Vapauttaja, joka ryösti kirkkojen hopeat',
+      nimio: 'Kirkkohopea 1798',
+      vuosi: '1798',
+      paikka: 'Suurmestarin palatsi, Valletta',
+      lat: 35.8989, lon: 14.5146,
+      kortti: 'Napoleon lupasi maltalaisille vapauden ritarikunnan '
+        + 'vallasta, mutta hänen joukkonsa tyhjensivät saman tien '
+        + 'kirkkojen ja ritarikunnan aarrekammion hopean ja kullan '
+        + 'matkakassaksi Egyptin-retkelle. Vapautuksesta tuli '
+        + 'ryöstöksi koettu kokemus viikkojen sisällä.',
+      teksti: 'Napoleonin laivasto pysähtyi Maltalle kesäkuussa 1798 '
+        + 'matkalla Egyptiin, ja ritarikunta antautui käytännössä '
+        + 'taisteluitta — sen omat säännöt kielsivät ritareita '
+        + 'taistelemasta toisia kristittyjä vastaan, mikä teki '
+        + 'todellisesta puolustuksesta lähes mahdotonta. '
+        + 'Ranskalaiset lupasivat maltalaisille uuden, valistuksen '
+        + 'ihanteiden mukaisen hallinnon ja lakkauttivat muun muassa '
+        + 'orjuuden ja aateliston erioikeudet.'
+        + '\n\n'
+        + 'Rahoittaakseen jatkomatkaa Egyptiin ranskalaiskomentajat '
+        + 'takavarikoivat ritarikunnan aarrekammion hopeaesineet sekä '
+        + 'saaren kirkkojen ja katedraalin hopeiset alttarikoristeet '
+        + 'ja astiat, ja suuri osa niistä sulatettiin laivaston '
+        + 'kassaksi vielä ennen kuin laivasto ehti lähteä satamasta. '
+        + 'Uskonnolliselle väestölle kirkkojen hopean menetys oli '
+        + 'paljon herkempi asia kuin ritarikunnan oman omaisuuden '
+        + 'takavarikointi, sillä moni esine oli ollut suvuittain '
+        + 'lahjoitettu paikallisille kirkoille sukupolvien ajan.'
+        + '\n\n'
+        + 'Ryöstö yhdessä muiden ranskalaisten uudistusten kanssa '
+        + 'kääntyi kansaa vastaan hyvin nopeasti: jo syyskuussa 1798 '
+        + 'maltalaiset nousivat kapinaan varuskuntaa vastaan, ja '
+        + 'brittien tuella ranskalaiset saarrettiin lopulta '
+        + 'Vallettaan kahdeksi vuodeksi ennen antautumistaan 1800.',
+      lahde: 'en-Wikipedia "French occupation of Malta (1798-1800)". '
+        + 'Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Mihin ranskalaiset käyttivät Maltalta takavarikoimansa kirkkohopean?',
+        vaihtoehdot: [
+          'Rahoittamaan laivaston jatkomatkaa Egyptiin',
+          'Lähettämään sen Pariisin vallankumousmuseoon',
+          'Sulattamaan sen ranskalaisiksi mitaleiksi Maltan valloituksesta',
+        ],
+        oikea: 0,
       },
     },
   ],
