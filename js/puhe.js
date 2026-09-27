@@ -926,6 +926,8 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
  *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
  *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
+ *   yksiPuheenvuoro?: boolean kaikki lisätty teksti on yhtä kappaletta
+ *     (Pulun striimivastaus): palojen väliin virkeväli, ei kappaleväliä
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -939,7 +941,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0, otsikkoKappaleet = null,
+  aloitusKappale = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
@@ -1214,6 +1216,16 @@ export function luoPuheSoitin({
     const uudet = [];
     for (const rivi of String(teksti ?? '').split('\n')) {
       if (!rivi.trim()) continue;
+      /*
+       * YKSI VASTAUS ON YKSI PUHEENVUORO (Fable 27.9.2026 klo 07.4x):
+       * striimi tuo Pulun vastauksen virke kerrallaan, ja jokainen lisäys
+       * oli oma kappaleensa → 450 ms kappaleväli joka virkkeen välissä.
+       * Puheenvuorossa kaikki on samaa kappaletta, joten väli on 220 ms.
+       */
+      if (yksiPuheenvuoro && tila.kappaleita > 0) {
+        for (const pala of kappaleenPalat(rivi)) uudet.push({ ...pala, kappale: 0 });
+        continue;
+      }
       const kappale = tila.kappaleita;
       tila.kappaleita += 1;
       for (const pala of kappaleenPalat(rivi)) {
