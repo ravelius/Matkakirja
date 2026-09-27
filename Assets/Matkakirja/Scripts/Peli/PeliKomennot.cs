@@ -348,6 +348,7 @@ namespace Matkakirja.Natiivi
                     else if (A(1) == "paalle") VieritysHeratys.Paalla = true;
                     else if (A(1) == "nollaa") VieritysHeratys.NollaaLaskurit();
                     else if (A(1) == "koe") return VieritysHeratys.Koe();
+                    else if (A(1) == "kestokoe") return VieritysHeratys.Kestokoe(float.TryParse(A(2), out var vks) ? vks : 300f);
                     return "=" + VieritysHeratys.Kuvaus();
                 case "nostokuvat":
                 {
