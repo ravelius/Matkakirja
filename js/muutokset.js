@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2312, teksti: 'Lukijaäänen raja ylös, 429 pysäyttää viestillä' },
   { v: 2311, teksti: 'v2309: Pulun puhe ilman pelin äänikytkimiä — va… (#3386)' },
   { v: 2310, teksti: 'v2309: Löytämisen sumu pois, maakuntasalaisuude… (#3385)' },
   { v: 2309, teksti: 'v2307: Progressiivinen lukijaääni — pala alkaa… (#3384)' },
