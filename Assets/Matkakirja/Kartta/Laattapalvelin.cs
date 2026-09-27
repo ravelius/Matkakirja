@@ -554,6 +554,8 @@ namespace Matkakirja
         void Awake()
         {
             PyyntoLoki.Alusta();
+            // Kehittäjälippu A/B:hen: defaults write … matkakirja-pohja-z10 -int 0 (sovellus kiinni) = pohja Z0–Z9 kuten ennen.
+            KaupunkiRasteri.Paalla = PlayerPrefs.GetInt("matkakirja-pohja-z10", 1) != 0;
             if (varakuva == null)
             {
                 var t = new Texture2D(256, 256, TextureFormat.RGB24, false);
@@ -701,7 +703,11 @@ namespace Matkakirja
                 string u = o.templateUrl;
                 int z = u != null ? u.IndexOf("{z}", StringComparison.Ordinal) : -1;
                 if (o.minimumLevel == 0 && z > 0 && u.StartsWith(Ampari) && u.Contains("pallo/laatat/"))
+                {
                     PohjaPolku = u.Substring(Ampari.Length, z - Ampari.Length);
+                    // POHJAN KAUPUNKITASO Z10 (KaupunkiRasteri): Z10 kaupunkien ympärillä, muualla Z9-vanhemmasta suurennettu.
+                    if (KaupunkiRasteri.Paalla && o.maximumLevel < KaupunkiRasteri.Taso) o.maximumLevel = KaupunkiRasteri.Taso;
+                }
                 o.templateUrl = Paikallinen(u);
             }
         }
@@ -927,6 +933,57 @@ namespace Matkakirja
 
         sealed class Lahde { public string Nimi = "?"; }
 
+        /// <summary>Kaupunkitason ulkopuoliset Z10-laatat, jotka tehtiin Z9-vanhemmasta (loki ja testit).</summary>
+        public static int Vanhemmasta10;
+        readonly ConcurrentQueue<(byte[] data, int qx, int qy, TaskCompletionSource<byte[]> valmis)> suurennokset =
+            new ConcurrentQueue<(byte[], int, int, TaskCompletionSource<byte[]>)>();
+
+        /// <summary>
+        /// Z10-laatta Z9-vanhemman neljänneksestä (KaupunkiRasteri): vanhempi tavallista reittiä (paketti, offline, välimuisti,
+        /// verkko; virheessä varalaatta), suurennus pääsäikeessä (Texture2D). Ei välimuistiin: vanhempi on siellä.
+        /// </summary>
+        async Task<(int, byte[])> Vanhemmasta(string polku, int z, int x, int y, Lahde lahde, Func<bool> pyydetty)
+        {
+            string vp = KaupunkiRasteri.Vanhempi(polku, PohjaPolku, z, x, y, out int qx, out int qy);
+            var (tila, data) = await HaeSisalto(vp, null, new Lahde(), pyydetty);
+            if (tila != 200 || data == null) return (tila, data);
+            var tcs = new TaskCompletionSource<byte[]>(TaskCreationOptions.RunContinuationsAsynchronously);
+            suurennokset.Enqueue((data, qx, qy, tcs));
+            var tulos = await tcs.Task;
+            if (tulos == null) return (200, varakuva);
+            Interlocked.Increment(ref Vanhemmasta10);
+            lahde.Nimi = "vanhemmasta";
+            return (200, tulos);
+        }
+
+        /// <summary>Pääsäikeessä: enintään <paramref name="enintaan"/> suurennusta kehyksessä (JPEG → neljännes → JPEG 85).</summary>
+        void Suurenna(int enintaan)
+        {
+            for (int i = 0; i < enintaan && suurennokset.TryDequeue(out var s); i++)
+            {
+                byte[] tulos = null;
+                Texture2D t = null, u = null;
+                try
+                {
+                    t = new Texture2D(2, 2, TextureFormat.RGB24, false);
+                    if (t.LoadImage(s.data, false) && t.width == t.height && t.width >= 2)
+                    {
+                        int koko = t.width;
+                        var px = t.GetPixels32();
+                        var rgb = new byte[koko * koko * 3];
+                        for (int k = 0; k < px.Length; k++) { rgb[k * 3] = px[k].r; rgb[k * 3 + 1] = px[k].g; rgb[k * 3 + 2] = px[k].b; }
+                        u = new Texture2D(koko, koko, TextureFormat.RGB24, false);
+                        u.LoadRawTextureData(KaupunkiRasteri.Suurenna(rgb, koko, s.qx, s.qy));
+                        u.Apply(false);
+                        tulos = u.EncodeToJPG(85);
+                    }
+                }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA laattapalvelin: Z10 vanhemmasta: " + e.Message); }
+                finally { if (t != null) Destroy(t); if (u != null) Destroy(u); }
+                s.valmis.TrySetResult(tulos);
+            }
+        }
+
         /// <summary>
         /// JPEG kokonainen: alussa SOI (FF D8) ja lopussa EOI (FF D9, enintään 16 täytetavun päässä). Katkennut JPEG
         /// dekoodautuu Cesiumissa harmaaksi loppuosaltaan (puuttuvat lohkot = DC 0 = keskiharmaa, alfa 1), eikä
@@ -960,6 +1017,13 @@ namespace Matkakirja
                 varitasoa = true;   // virhe → läpinäkyvä, ei mustaa
                 if (kattavuusTyhja && tyhjakuva != null) { lahde.Nimi = "kattamaton"; return (200, tyhjakuva); }
             }
+            // POHJAN KAUPUNKITASO: tunnetusta joukosta puuttuva Z10 tehdään heti Z9-vanhemmasta (ei 404-hakua); esilataus
+            // ohittaa sen (vanhempi ladataan omana laattanaan).
+            int kz = 0, kx = 0, ky = 0;
+            bool kaupunkitaso = !varitasoa && KaupunkiRasteri.Paalla && PohjaPolku != null
+                                && KaupunkiRasteri.Jasenna(polku, PohjaPolku, out kz, out kx, out ky) && kz == KaupunkiRasteri.Taso;
+            if (kaupunkitaso && KaupunkiRasteri.Onko(kz, kx, ky) == false)
+                return esi ? (404, null) : await Vanhemmasta(polku, kz, kx, ky, lahde, pyydetty);
             // 0. Buildin laattapaketti (ei levyn tiedostohakua eikä verkkoa).
             var paketti = Paketti;
             if (paketti != null)
@@ -1064,6 +1128,7 @@ namespace Matkakirja
                 tila = 502;
                 data = null;
             }
+            if (tila != 200 && tila != 499 && kaupunkitaso && !esi) return await Vanhemmasta(polku, kz, kx, ky, lahde, pyydetty);
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
             {
                 Interlocked.Increment(ref Varakuvia);
@@ -1133,6 +1198,7 @@ namespace Matkakirja
         void Update()
         {
             SatelliittiLoki.Yhteenveto();
+            Suurenna(6);
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
             // Kohdealueen paikat eivät vie näkyvän kartan paikkoja (muut rajat ilman niitä).
             // Verhon kevennys (BUILD 16): näkyvän kartan jonolle enemmän paikkoja, tausta tauolla.
