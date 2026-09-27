@@ -7931,3 +7931,7 @@ Pelikoodari 08.5x (vanhan ohjeen mukaan): webissa ainoa maanosaportti on js/game
 ## OMISTAJA 09.0x: LAHITASO LOD0 HYVAKSYTTY KAIKILLE MALLEILLE; MERI 10 LAJIA, BRUGGE, KINDERDIJK V3; POSTIVAHTI NOLLATTU (27.9.2026 klo 09.09)
 
 Omistaja 09.0x kortilla: lahitaso LOD0 (Colosseum 1 060 → 2 946, MSM 1 044 → 2 839, kaari 410 → 1 864 kolmiota; nakyy vain lahella) hyvaksytty → kaikille erikoismalleille ja 14 symbolille, 1.0.29 Natiivisepan rajapinnalla. Linssiseppa 08.57: kaikki 10 merilajia meri-tuotanto 0a9fdba5, Brugge valmis (erikoismallit3 6687a86a), Kinderdijk v3 (myllyt isoja; v2 nakyi 35 pt tikapuuna), pienten maiden kokoloydos korjattu (Natiiviseppa be33f310), Matterhorn ja Hohensalzburg agenteilla; seuraava laitekaannos juna + meri + erikoismallit3 + koko. Postivahti nollattu 09.0x (81 % → tyhja), aloitusviesti lahetetty.
+
+## LAITETESTAAJA 1.0.28 d3fa3c78 PASS (0 POIKKEUSTA, LUKIJAN TAUKO 5 718 → 33 ms) → MASTER + TF (27.9.2026 klo 09.10)
+
+Laitetestaaja 09.1x: 1.0.28 d3fa3c78 PASS: kaiutinvipu, striimiaani-valitsin, lukijan tauko 5 718 → 33 ms (valimuisti), 14 symbolia + vuori Olympoksella, Kinderdijk 3 myllya 3D, 177 mittausliput, Colosseum (velarium), Brandenburg rekisteroity; MSM/Stonehenge ei loytynyt annetuista koordinaateista (Linssiseppa todensi laitteella 91a4b727 → hyvaksytty); P1 ei kaatumista, racea ei saatu pakotettua. Raportti savukierros-tf1028-20260927.md 4393a1739. Fable → Natiiviseppa master-merge → Julkaisija TF 1.0.28.
