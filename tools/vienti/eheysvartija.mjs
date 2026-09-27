@@ -8,11 +8,11 @@
  * Lukee tuotannon sisältöpaketin (sisalto/1/uusin.json → vN) ja tarkistaa Euroopan maat (offline.json
  * ryhmat.europe; --kaikki = kaikki maat):
  *   1. 404: HEAD-pyyntö jokaiseen maan offline-tiedostoon — maat.*.media, maat.*.mediaKuvat (url ja pieni) ja
- *      kaupunkitason laatat (rasteri z9 ja kaupunkiRasteri z10, tarkat välit). VAIN media.matkakirja.app:n
+ *      kaupunkitason laatat (rasteri z9, kaupunkiRasteri z10 ja skeeman 1.53 kaupunkiMaasto, tarkat välit). VAIN media.matkakirja.app:n
  *      staattiset tiedostot: EI puhetta workerilta eikä mitään muuta palvelua (Fable 27.9.: puuttuva pala
  *      generoitaisiin ja maksaisi). Maastolaatat (poltto 2026-09-23b, muuttumaton) tarkistettiin kokonaan 27.9.
- *   2. Orvot viittaukset: kokoelmien alkioiden `kaupunki`-kenttä osuu kaupunkeihin, kaupungin kaupunkilehti on
- *      olemassa, ja kaupunki-tyypin kaupungilla on vähintään yksi nähtävyys.
+ *   2. Orvot viittaukset: kokoelmien alkioiden `kaupunki`-kenttä osuu kaupunkeihin, ja kaupungin kaupunkilehti on
+ *      olemassa. (Nähtävyyksiä ei lasketa: osa kaupungeista saa ne maakartoista, Sisältökirjuri 27.9.)
  *   3. Maakatto: maat.*.tavuja.mediaKuvat ≤ lahteet.mediaKuvat.katto (skeema 1.52).
  *
  * Tulos <ulos>/tulos.json ja tulos.md; <ulos>/VIKA.txt on tyhjä, kun kaikki on kunnossa, muuten yksi
@@ -65,6 +65,7 @@ export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null 
   const manifest = await hae(`${polku}manifest.json`);
   const maat = kaikki ? Object.keys(offline.maat) : offline.ryhmat.europe.maat;
   const rasteriUrl = offline.lahteet.rasteri.url;
+  const maastoUrl = offline.lahteet.maasto.url;
 
   // 1. Tarkistettavat osoitteet (duplikaatit pois), ja mistä maasta kukin tuli.
   const lahde = new Map();
@@ -77,6 +78,10 @@ export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null 
     for (const t of laatat(9, m.rasteri?.['9'])) lisaa(rasteriUrl.replace('{z}/{x}/{y}', t), iso, 'z9');
     for (const [z, v] of Object.entries(m.kaupunkiRasteri ?? {})) {
       for (const t of laatat(z, v)) lisaa(rasteriUrl.replace('{z}/{x}/{y}', t), iso, `z${z}`);
+    }
+    // Skeema 1.53: maaston tarkat tasot kaupunkien ympärillä (maastoUrl, TMS).
+    for (const [z, v] of Object.entries(m.kaupunkiMaasto ?? {})) {
+      for (const t of laatat(z, v)) lisaa(maastoUrl.replace('{z}/{x}/{y}', t), iso, `maasto${z}`);
     }
   }
   const osoitteet = [...lahde.keys()];
@@ -92,7 +97,6 @@ export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null 
   const kaupunkiIdt = new Set(kaupungit.map((c) => c.id));
   const tarkasteltavat = kaupungit.filter((c) => kaikki || maat.includes(c.maa));
   const orvot = [];
-  const nahtavyyksia = new Map();
   for (const k of manifest.kokoelmat) {
     if (!k.tiedosto.endsWith('.json') || k.nimi === 'esilasketut') continue;
     let alkiot;
@@ -100,15 +104,12 @@ export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null 
     for (const a of alkiot) {
       // Vain tunnisteen muotoiset arvot (radiot.kaupunki on näyttönimi, esim. "Melbourne").
       if (typeof a?.kaupunki === 'string' && /^[a-z0-9-]+$/.test(a.kaupunki) && !kaupunkiIdt.has(a.kaupunki)) orvot.push({ kokoelma: k.nimi, id: a.id, kaupunki: a.kaupunki });
-      if (k.nimi === 'nahtavyydet' && a?.kaupunki) nahtavyyksia.set(a.kaupunki, (nahtavyyksia.get(a.kaupunki) ?? 0) + 1);
     }
   }
   const lehdetPuuttuu = [];
-  const ilmanNahtavyyksia = [];
   const tiedostot = new Set((await hae(`${polku}hakemisto.json`)).tiedostot.map((t) => t.polku));
   for (const c of tarkasteltavat) {
     if (!tiedostot.has(`kokoelmat/kaupunkilehdet/${c.id}.json`)) lehdetPuuttuu.push(c.id);
-    if (c.tyyppi === 'kaupunki' && !nahtavyyksia.get(c.id)) ilmanNahtavyyksia.push(c.id);
   }
 
   // 3. Maakatto.
@@ -120,7 +121,7 @@ export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null 
     aika: new Date().toISOString(), versio: osoitin.versio, tarkistettuVersio: versio ?? osoitin.versio,
     skeemaversio: osoitin.skeemaversio, laajuus: kaikki ? 'kaikki' : 'europe', maita: maat.length,
     kaupunkeja: tarkasteltavat.length, tarkistettu: osoitteet.length,
-    puuttuvat, orvot, lehdetPuuttuu, ilmanNahtavyyksia, ylitykset,
+    puuttuvat, orvot, lehdetPuuttuu, ylitykset,
   };
 }
 
@@ -150,7 +151,6 @@ function markdown(t, osat) {
   if (t.orvot.length) r.push('## Orvot viittaukset', '', ...t.orvot.slice(0, 100).map((o) => `- ${o.kokoelma}: ${o.id ?? ''} → ${o.kaupunki ?? o.virhe}`), '');
   if (t.lehdetPuuttuu.length) r.push(`## Kaupunkilehti puuttuu\n\n${t.lehdetPuuttuu.join(', ')}\n`);
   if (t.ylitykset.length) r.push('## Maakatto', '', ...t.ylitykset.map((y) => `- ${y.iso}: ${(y.tavuja / 1e6).toFixed(1)} Mt > ${(y.katto / 1e6).toFixed(0)} Mt`), '');
-  if (t.ilmanNahtavyyksia.length) r.push(`Huomio (ei vika): kaupunki-tyypin kaupungit ilman nähtävyyttä: ${t.ilmanNahtavyyksia.join(', ')}\n`);
   return `${r.join('\n')}\n`;
 }
 
