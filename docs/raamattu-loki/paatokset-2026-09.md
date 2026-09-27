@@ -8051,3 +8051,7 @@ Pelikoodari 10.2x: natiivi Puhe.SoitaVirtana — DownloadHandlerAudioClip(stream
 ## OMISTAJA 10.2x: VANHAT PYRAMIDISARJAT POISTETAAN AMPARISTA (VAIN NE, JOIHIN EI OSOITA MIKAAN) (27.9.2026 klo 10.22)
 
 Omistaja 10.2x 'Poista vanhat': Julkaisija poistaa vanhat pyramidisarjat (09-21, 09-22, 09-22c, 09-25 ym., ~14 Gt) — ensin Karttasepalta ja Siirtosepalta vahvistus mihin sarjoihin tuotanto (2026-09-26s-pohja), pallosarjan pohja.kopio (2026-09-26-pohja) ja natiivipaketti osoittavat; niita ei poisteta. Varmuuskopio-luettelot sailytetaan. Poistetut ja vapautunut Gt rivilla.
+
+## PYRAMIDISARJOJEN POISTO: JULKAISIJA KOKOAA LISTAN JA KOMENNON, OMISTAJA AJAA (PYSYVA POISTO ROOLEILTA KIELLETTY) (27.9.2026 klo 10.22)
+
+Julkaisija 10.2x: kysyy Karttasepalta ja Siirtosepalta viitatut sarjat, kokoaa vapaiden sarjojen listan ja valmiin poistokomennon; itse poiston tekee omistaja (pysyva datan poisto kielletty rooleilta). Vanhat varmuuskopioluettelot lakkaavat toimimasta poistettujen sarjojen osalta; 0732-varmuuskopio (2026-09-26-pohja) sailyy.
