@@ -301,8 +301,8 @@ namespace Matkakirja.Natiivi
                         // Progressiivinen soitto (Puhe.Virta): virta [pois|paalle] → tila ja viimeisin 1. ääni.
                         case "virta":
                             if (A(2) == "pois") Puhe.Virta = false;
-                            else if (A(2) == "paalle") Puhe.Virta = true;
-                            return $"=virta {(Puhe.Virta ? "päällä" : "pois")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms";
+                            else if (A(2) == "paalle") { Puhe.Virta = true; Puhe.NollaaVirta(); }
+                            return $"=virta {(Puhe.Virta ? "päällä" : "pois")}{(Puhe.VirtaPetti ? " (petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms";
                         default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]";
                     }
                 case "saapumisluenta":

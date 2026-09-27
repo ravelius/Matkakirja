@@ -469,7 +469,7 @@ namespace Matkakirja.Natiivi
             if (sailo && File.Exists(tiedosto)) Esilataaja.NakyvaValmis(url);
             if (oma != tunnus) yield break;
             // Synteesi verkosta: soitto alkaa ensimmäisistä tavuista (VIRTA alla), ei koko palan latauksen jälkeen.
-            if (synteesi && Virta && (!sailo || !File.Exists(tiedosto)))
+            if (synteesi && Virta && !virtaPetti && (!sailo || !File.Exists(tiedosto)))
             {
                 yield return SoitaVirtana(url, pyynto, viiveS, oma, sailo, tiedosto, alku);
                 yield break;
@@ -564,6 +564,12 @@ namespace Matkakirja.Natiivi
         /// vanha polku soi): pala ladataan kokonaan ennen soittoa, kunnes striimaus on korjattu ja mitattu laitteella.
         /// </summary>
         public static bool Virta = false;
+        /// <summary>Virta petti tässä istunnossa (jäsennysvirhe laitteella): synteesi soitetaan vanhalla polulla. Komento "puhe virta paalle" nollaa.</summary>
+        static bool virtaPetti;
+        /// <summary>Nollaa virran pettämisen (testikomento "puhe virta paalle").</summary>
+        public static void NollaaVirta() => virtaPetti = false;
+        /// <summary>Onko virta pudonnut vanhaan polkuun tässä istunnossa (mittari).</summary>
+        public static bool VirtaPetti => virtaPetti;
         /// <summary>Tavuja ennen soiton alkua: ~1 s mp3:a (xAI 24 kHz); pienempi raja katkoisi alun.</summary>
         public const int EsirullaTavut = 12 * 1024;
         /// <summary>Viimeisimmän striimatun palan 1. ääni ms pyynnöstä (mittari: "puhe virta").</summary>
@@ -601,6 +607,23 @@ namespace Matkakirja.Natiivi
                 {
                     ViimeVirhe = r.error;
                     Debug.LogWarning($"MATKAKIRJA puhe: {url} ei latautunut (virta): {r.error} {r.responseCode}");
+                    /*
+                     * VIRTA EI SAA VAIENTAA PUHETTA (Laitetestaaja TF 1.0.29, b380a78d4): palvelin vastasi 200, mutta
+                     * DownloadHandlerAudioClip (streamAudio, MPEG) ei jäsentänyt virtaa laitteella → DataProcessingError,
+                     * eikä ääntä tullut lainkaan. Jäsennysvirhe (vastaus 200) sammuttaa virran tämän istunnon ajaksi ja
+                     * pala soitetaan vanhalla polulla: ensin jo ladatuista tavuista, muuten uudella haulla.
+                     */
+                    if (r.result == UnityWebRequest.Result.DataProcessingError && r.responseCode == 200)
+                    {
+                        virtaPetti = true;
+                        Debug.LogWarning("MATKAKIRJA puhe: virta pois tästä eteenpäin (jäsennysvirhe), vanha polku");
+                        bool tavuista = Tallenna(dh, tiedosto, hiljaa: true);
+                        r.Dispose();
+                        if (oma != tunnus) yield break;
+                        if (tavuista) yield return LataaJaSoitaTiedosto(url, viiveS, oma, sailo, tiedosto, alku);
+                        else yield return LataaJaSoita(url, pyynto, viiveS, oma, true, sailo);
+                        yield break;
+                    }
                     r.Dispose();
                     LatausPetti();
                     yield break;
@@ -626,7 +649,13 @@ namespace Matkakirja.Natiivi
                 laheta.isDone && r.result == UnityWebRequest.Result.Success ? null : "virhe");
             if (sailo) Esilataaja.NakyvaValmis(url);
             if (laheta.isDone && r.result == UnityWebRequest.Result.Success && sailo) Tallenna(dh, tiedosto);
-            else if (laheta.isDone && r.result != UnityWebRequest.Result.Success) { ViimeVirhe = r.error; Debug.LogWarning($"MATKAKIRJA puhe: virta katkesi: {r.error}"); }
+            else if (laheta.isDone && r.result != UnityWebRequest.Result.Success)
+            {
+                ViimeVirhe = r.error;
+                Debug.LogWarning($"MATKAKIRJA puhe: virta katkesi: {r.error}");
+                // Jäsennysvirhe kesken soiton: seuraavat palat vanhalla polulla (ks. yllä).
+                if (r.result == UnityWebRequest.Result.DataProcessingError) virtaPetti = true;
+            }
             if (oma != tunnus) { if (!laheta.isDone) r.Abort(); r.Dispose(); yield break; }
             r.Dispose();
             SoivaUrl = null;
@@ -658,12 +687,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Valmiin virran tavut välimuistitiedostoon (atominen siirto). false, jos tavuja ei saatu.</summary>
-        bool Tallenna(DownloadHandlerAudioClip dh, string tiedosto)
+        bool Tallenna(DownloadHandlerAudioClip dh, string tiedosto, bool hiljaa = false)
         {
             try
             {
                 var tavut = dh.data;
-                if (tavut == null || tavut.Length == 0) { Debug.LogWarning("MATKAKIRJA puhe: virran tavuja ei saatu talteen"); return false; }
+                if (tavut == null || tavut.Length == 0) { if (!hiljaa) Debug.LogWarning("MATKAKIRJA puhe: virran tavuja ei saatu talteen"); return false; }
                 Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
                 string valiaikainen = tiedosto + ".virta";
                 File.WriteAllBytes(valiaikainen, tavut);
@@ -671,7 +700,7 @@ namespace Matkakirja.Natiivi
                 File.Move(valiaikainen, tiedosto);
                 return true;
             }
-            catch (Exception e) { ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: virran tallennus: " + e.Message); return false; }
+            catch (Exception e) { if (!hiljaa) ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: virran tallennus: " + e.Message); return false; }
         }
 
         /// <summary>
