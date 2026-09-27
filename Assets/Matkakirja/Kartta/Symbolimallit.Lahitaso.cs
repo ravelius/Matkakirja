@@ -42,9 +42,9 @@ namespace Matkakirja
         /// <summary>Valitsee lähitason mallit tälle kehykselle (LateUpdaten lopussa tason 1 päivityksen jälkeen).</summary>
         void ValitseLahitaso(NostoKerros nk)
         {
-            double kerroin = nk != null ? nk.ZoomKerroin : 0.0;
-            if (lahiZoom && kerroin < LahiKerroin * 0.9) lahiZoom = false;
-            else if (!lahiZoom && kerroin >= LahiKerroin) lahiZoom = true;
+            double kerroin = nk != null ? nk.ZoomKerroin : 0.0, kynnys = LahiKynnys(nk);
+            if (lahiZoom && kerroin < kynnys * 0.9) lahiZoom = false;
+            else if (!lahiZoom && kerroin >= kynnys) lahiZoom = true;
             int enintaan = Lahitaso && lahiZoom ? Mathf.Min(LahiEnintaan, lahimmat.Length) : 0;
             int n = 0;
             if (enintaan > 0)
@@ -75,7 +75,14 @@ namespace Matkakirja
             for (int i = 0; i < n; i++) lahimmat[i] = null;
         }
 
+        /// <summary>
+        /// Lähikynnys: <see cref="LahiKerroin"/>, mutta pienissä maissa enintään 0,97 × suurin saavutettava kerroin (Mallinsepän
+        /// löydös 27.9. klo 09.2x: NLD/BEL/CHE/DNK:ssa kerroin on enintään ~1,3), eli lähimmässä zoomissa lähitaso myös niissä.
+        /// </summary>
+        static double LahiKynnys(NostoKerros nk) =>
+            nk != null && !float.IsInfinity(nk.SuurinKerroin) ? System.Math.Min(LahiKerroin, 0.97 * nk.SuurinKerroin) : LahiKerroin;
+
         string LahiTila() =>
-            $"{(Lahitaso ? 1 : 0)} ({lahiNyt}/{LahiEnintaan}, kerroin ≥ {LahiKerroin:0.#}{(lahiZoom ? " nyt" : "")}, verkkoja {lahiVerkot.Count})";
+            $"{(Lahitaso ? 1 : 0)} ({lahiNyt}/{LahiEnintaan}, kerroin ≥ {LahiKynnys(NostoKerros.Instanssi):0.##}{(lahiZoom ? " nyt" : "")}, verkkoja {lahiVerkot.Count})";
     }
 }
