@@ -2067,7 +2067,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Dvořák vei kylätanssit maailmalle',
-          tiedosto: 'Jan Langhans Antonin Dvorak 1904 (cropped).jpg',
+          tiedosto: 'Dvorak 1901.jpg',
           teksti: 'Antonín Dvořák oli teurastajan poika, joka soitti alttoviulua '
             + 'prahalaisessa orkesterissa ennen kuin hänen sävellyksensä '
             + 'löydettiin. Slaavilaiset tanssit tekivät hänestä kuuluisan: '
@@ -2079,7 +2079,7 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Antonín Dvořák soitti alttoviulua prahalaisessa '
             + 'orkesterissa ennen kuin hänen sävellyksensä löydettiin, ja '
             + 'hän eli vuoteen 1904.',
-          lahde: 'Jan Nepomuk Langhans, Wikimedia Commons (PD)',
+          lahde: 'Jan & Joseph Mulač, Wikimedia Commons (PD)',
           wiki: 'Antonín Dvořák',
           musiikki: 'https://music.apple.com/fi/search?term=dvorak%20slavonic%20dances',
           musiikkiNimi: 'Dvořákin Slaavilaiset tanssit Apple Musicissa',
@@ -23958,7 +23958,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Pieni maa sai Nobelin',
-          tiedosto: 'Halldór Kiljan Laxness 1955.jpg',
+          tiedosto: 'Uitreiking Nobelprijzen door koning Gustaaf Adolf van Zweden , De prijswinnaars , Bestanddeelnr 907-4970.jpg',
           teksti: 'Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955. Hänen '
             + 'kirjansa kertovat tavallisista islantilaisista: lampaista, '
             + 'sitkeydestä ja köyhyydestä, mutta niin että lukija nauraa ja '
@@ -23967,11 +23967,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ottamaan apua keneltäkään. Kun palkinto tuli, maassa oli alle '
             + 'sataseitsemänkymmentätuhatta asukasta — pienin maa, josta '
             + 'kirjallisuuden Nobel oli siihen asti tullut.',
-          lyhyt: 'Halldór Laxness sai kirjallisuuden Nobelin 1955, jolloin Islannissa oli alle 170 000 asukasta.',
-          selite: 'Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955, '
-            + 'jolloin Islannissa oli alle sataseitsemänkymmentätuhatta '
-            + 'asukasta.',
-          lahde: 'Nobel-säätiö, Wikimedia Commons (public domain)',
+          lyhyt: 'Vuoden 1955 Nobel-palkinnonsaajat Ruotsin kuningas Kustaa Aadolfin luona — Laxness istuu joukossa.',
+          selite: 'Vuoden 1955 Nobel-palkinnonsaajat Tukholmassa; Laxness '
+            + 'istuu ryhmässä kirjallisuuden Nobelin saajana.',
+          lahde: 'Wim van Rossem / Anefo, Wikimedia Commons (CC0)',
           wiki: 'Halldór Laxness',
         },
       ],
@@ -25320,7 +25319,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Ritarit narujen varassa',
-          tiedosto: 'Sicilian puppets.JPG',
+          tiedosto: 'Pupi siciliani.jpg',
           teksti: 'Opera dei pupi on sisilialainen nukketeatteri, jossa metrin '
             + 'mittaiset haarniskoidut ritarit taistelevat Kaarle Suuren '
             + 'tarinoissa. Sama tarina jatkui iltaa toisensa jälkeen '
@@ -25329,7 +25328,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Opera dei pupin haarniskoidut nuket painavat jopa kymmenen kiloa ja niitä ohjataan ylhäältä.',
           selite: 'Opera dei pupin haarniskoidut ritarinuket painavat jopa '
             + 'kymmenen kiloa, ja niitä ohjataan rautatangoilla ylhäältä.',
-          lahde: 'Lookandlike, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: 'Harvey Barrison, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Opera dei pupi',
         },
         {
