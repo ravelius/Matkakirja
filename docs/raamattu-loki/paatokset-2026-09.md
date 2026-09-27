@@ -8239,3 +8239,7 @@ Kortti 16.5x: pallo-Z10 (13 856/13 856, 181 Mt, 0 virhetta) vienti tuotannon pal
 ## OMISTAJA (SITOVA): NAHTAVYYSKUVIEN ERI TYYLISET KUVAT UUSITAAN KOKONAAN CODEXILLA, CODEX KAY KAIKKI KAUPUNGIT LAPI; MALLITYYLI = AKROPOLIS (27.9.2026 klo 16.52)
 
 Omistaja 27.9.2026 klo 17.0x (kuvakaappaus web, Ateenan kohdekartta): kuvissa selvasti eri tyyleja; Akropolis on oikealla tyylilla (pieni isometrinen pienoismalli, lapinakyva tausta, hillitty seepia). Erilaiset (esim. Iliou Melathron, Niken temppeli, Akropolis-museo, Antiikin agora) tehdaan Codexilla kokonaan uudestaan, ja Codex kay lapi kaikki kaupungit (Eurooppa ensin). Korvaa aiemman koneellisen tasauksen + 22 poikkeaman arvion riittavyyden: tasaus jai voimaan, mutta tyylilta poikkeavat uusitaan. Sisaltokirjuri tekee tilauksen (tyylispeksi, referenssit, hylkaysperusteet, kaupunkierat PR:ina kontaktiarkein) + oman lahtolistan liitteeksi. Pallo-Z10 viety tuotantoon 16.50 (13 856 laattaa).
+
+## OMISTAJA: APP STORE -JULKAISUA EI TEHDA VIELA — VALMISTELLAAN VAIN LAATUA (27.9.2026 klo 16.59)
+
+Kortti 17.2x (hinta/maat/aikataulu): omistaja vastasi ettei julkaisua tehda viela. Fablen tulkinta: 1.0.31:n jalkeinen App Store -valmistelu rajataan laatuun (iPadin suorituskyky, vieritys, tekijamerkinnat pelissa), ei metatietoja, hintaa, maita eika lahetysta. Pelikoodari: tekijamerkinnat (tekijakortti + lisenssi-inventaario, havainnekuva-merkinta, vartija). Omistaja lisasi POLLO_KEHITTAJAKOODI avaintiedostoon (tasmaa paakoodiin) → Pelikoodarin puhevirran mittaus. Elamapalkki #3421 v2331 junaan.
