@@ -12,6 +12,7 @@
 //                                         tai Commonsin esimerkkikuvat, jos aineisto ei lataudu
 //   ui linssi selaa 1|-1                  kuvaselain: seuraava/edellinen kuva (galleria, kohteen lopussa naapuriin)
 //   ui linssi kohde 1|-1                  kuvaselain: viereinen kohde kartalla (alanapit ‹ ›)
+//   ui linssi kuvaselain 0|1              kuvapari: 0 = 1.0.33 (läpinäkymätön tausta, ei ‹ ›), 1 = kuvaselain
 //   ui linssi sumu p                      avaruussumun peitto 0…1 (0 = pois)
 //   ui linssi vertailu [arkki|taynna]     alapalkki esimerkkimailla / vertailuarkki / täyden listan ilmoitus
 //   ui linssi vertailu FIN SWE [ITA JPN]  vertailuarkki näillä mailla (2–4 × ISO3) ja maakäyrät
@@ -92,6 +93,9 @@ namespace Matkakirja.Natiivi
                 case "selaa":
                     l.Astronautti.Kuva.Selaa(a1 == "-1" ? -1 : 1);
                     return l.Astronautti.Kuva.Kohde?.Tunnus;
+                case "kuvaselain":
+                    Kuvanakyma.Vanha = a1 == "0";
+                    return Kuvanakyma.Vanha ? "1.0.33" : "kuvaselain";
                 case "kohde":
                     l.Astronautti.Kuva.VaihdaKohde(a1 == "-1" ? -1 : 1);
                     return l.Astronautti.Kuva.Kohde?.Tunnus;

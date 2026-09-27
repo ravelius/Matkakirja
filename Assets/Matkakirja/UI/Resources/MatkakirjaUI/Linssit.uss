@@ -556,6 +556,11 @@
     border-width: 2px;
 }
 
+/* Kuvapari samasta käännöksestä (`ui linssi kuvaselain 0`): 1.0.33:n läpinäkymätön tausta. */
+.mk-astrokuva.mk-astrokuva--vanha {
+    background-color: rgb(4, 9, 7);
+}
+
 /* Kuvaselain: ‹ › alhaalla keskellä viereiseen kohteeseen kartalla (pienet lasinapit kuten väkänen, ei tekstiä). */
 .mk-astrokuva__kohteet {
     position: absolute;

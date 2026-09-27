@@ -61,6 +61,9 @@ namespace Matkakirja.Natiivi
         bool pyyhkaisy, liukuu;
         IVisualElementScheduledItem liuku;
 
+        /// <summary>Kuvapari samasta käännöksestä (`ui linssi kuvaselain 0|1`): true = 1.0.33 (läpinäkymätön tausta, ei ‹ ›).</summary>
+        public static bool Vanha;
+
         public bool Auki { get; private set; }
         public Havaintokohde Kohde => kohde;
         public event Action<bool> AukiMuuttui;
@@ -188,7 +191,8 @@ namespace Matkakirja.Natiivi
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
             }
-            kohdeNapit.style.display = Linssi()?.KatsoNaapuri(1) != null ? DisplayStyle.Flex : DisplayStyle.None;
+            juuri.EnableInClassList("mk-astrokuva--vanha", Vanha);
+            kohdeNapit.style.display = !Vanha && Linssi()?.KatsoNaapuri(1) != null ? DisplayStyle.Flex : DisplayStyle.None;
             Valitse(Mathf.Clamp(i, 0, Math.Max(0, k.Havainnot.Count - 1)));
             Esilataa();
         }
