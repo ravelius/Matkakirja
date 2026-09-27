@@ -3,7 +3,7 @@
  * MEDIAKUVAT (skeema 1.52, Siirtoseppä 27.9.2026; Fablen päätös: pienennetyt, katto 100 Mt maata kohden).
  *
  *   node tools/vienti/vie-sisalto.mjs            # kirjoittaa dist/mediakuvat-ehdokkaat.json
- *   node tools/vienti/mediakuvat.mjs --paivita [--ulos dist/pienet] [--varmista] [--rinnakkain 16]
+ *   node tools/vienti/mediakuvat.mjs --paivita [--ulos dist/pienet] [--varmista] [--rinnakkain 16] [--aikaraja s]
  *
  * Mittaa offline.json:n maat.*.mediaKuvat-ehdokkaat maittain järjestyksessä (tools/vienti/offline.mjs MEDIAKUVAT),
  * kunnes maan katto täyttyy: alkuperäisen koko HEAD-pyynnöllä (curl; Cloudflare torjuu Pythonin urllibin), ja kuva,
@@ -32,7 +32,7 @@ const KUVA = /\.(jpe?g|png|webp|gif)$/i;
 const aja = promisify(execFile);
 
 const PIENENNA_PY = `
-import sys, json
+import sys, json, os
 from PIL import Image, ImageOps
 pitka, laatu = int(sys.argv[1]), int(sys.argv[2])
 for rivi in sys.stdin:
@@ -42,9 +42,9 @@ for rivi in sys.stdin:
         alfa = im.mode in ('RGBA', 'LA') or (im.mode == 'P' and 'transparency' in im.info)
         im.thumbnail((pitka, pitka), Image.LANCZOS)
         if alfa:
-            kohde = kohde_ilman + '.png'; im.save(kohde, 'PNG', optimize=True)
+            kohde = kohde_ilman + '.png'; im.save(kohde + '.tmp', 'PNG', optimize=True); os.replace(kohde + '.tmp', kohde)
         else:
-            kohde = kohde_ilman + '.jpg'; im.convert('RGB').save(kohde, 'JPEG', quality=laatu, optimize=True, progressive=True)
+            kohde = kohde_ilman + '.jpg'; im.convert('RGB').save(kohde + '.tmp', 'JPEG', quality=laatu, optimize=True, progressive=True); os.replace(kohde + '.tmp', kohde)
         print(json.dumps({'lahde': lahde, 'kohde': kohde}), flush=True)
     except Exception as e:
         print(json.dumps({'lahde': lahde, 'virhe': str(e)}), flush=True)
@@ -109,7 +109,8 @@ async function pienenna(avaimet, ulos, rinnakkain) {
   return tulos;
 }
 
-export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 16, tiedosto = TIEDOSTO }) {
+export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 16, tiedosto = TIEDOSTO, aikaraja = Infinity }) {
+  const loppu = Date.now() + aikaraja * 1000;
   const data = lue(tiedosto);
   const t = data.tiedostot;
   const { katto, pieni: { kynnysTavut } } = MEDIAKUVAT;
@@ -158,10 +159,18 @@ export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 
       (a) => paa(OMA + encodeURI(pieniAvain(a).replace(/\.jpg$/, `.${t[a][2] ?? 'jpg'}`))));
     const puuttuvat = tarkistettavat.filter((_, k) => paat[k][0] !== 200);
     varmistettu = tarkistettavat.length - puuttuvat.length;
-    const uudet = await pienenna(puuttuvat, ulos, rinnakkain);
-    for (const a of puuttuvat) {
-      if (uudet.get(a)) { t[a][1] = uudet.get(a)[0]; tehty++; } else { t[a] = [t[a][0], null]; }
+    // Erissä aikarajaan asti (CI:n työllä on aikaraja; työnkulku vie valmiit pienet ämpäriin minuutin välein).
+    // Ehtimättömät saavat tässä ajossa pieni = null (alkuperäinen url); seuraava ajo jatkaa niistä.
+    let ehtimatta = 0;
+    for (let i = 0; i < puuttuvat.length; i += 200) {
+      const era = puuttuvat.slice(i, i + 200);
+      if (Date.now() > loppu) { for (const a of era) t[a] = [t[a][0], null]; ehtimatta += era.length; continue; }
+      const uudet = await pienenna(era, ulos, rinnakkain);
+      for (const a of era) {
+        if (uudet.get(a)) { t[a][1] = uudet.get(a)[0]; tehty++; } else { t[a] = [t[a][0], null]; }
+      }
     }
+    if (ehtimatta) console.log(`mediakuvat: aikaraja ${aikaraja} s — ${ehtimatta} pientä jäi seuraavaan ajoon`);
   }
   const jarjestetty = Object.fromEntries(Object.entries(t).sort(([a], [b]) => (a < b ? -1 : 1)));
   writeFileSync(tiedosto, `${JSON.stringify({
@@ -182,5 +191,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   }
   const ehdokkaat = JSON.parse(readFileSync(resolve(arvo('--ehdokkaat', join(JUURI, 'dist/mediakuvat-ehdokkaat.json'))), 'utf8'));
   await paivita({ ehdokkaat, ulos: resolve(arvo('--ulos', join(JUURI, 'dist/pienet'))),
-    varmista: process.argv.includes('--varmista'), rinnakkain: Number(arvo('--rinnakkain', 16)) });
+    varmista: process.argv.includes('--varmista'), rinnakkain: Number(arvo('--rinnakkain', 16)),
+    aikaraja: Number(arvo('--aikaraja', Infinity)) });
 }

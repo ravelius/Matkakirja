@@ -1438,7 +1438,7 @@ export class Game {
       const otsikko = streakOtsikko(pituus);
       this.say(p.id, `${otsikko}: +${paiva} puntaa${viikko ? ` ja viikkobonus +${viikko} puntaa` : ''}.`);
       this.emit('rahat', otsikko, {
-        sub: `+${paiva} £${viikko ? ` ja viikkobonus +${viikko} £` : ''}`,
+        sub: `+${paiva}\u00a0£${viikko ? ` ja viikkobonus +${viikko}\u00a0£` : ''}`,
         icon: 'kukkaro', tilanne: 'peli.streak', pelaaja: p.id,
       });
     }
@@ -1461,7 +1461,7 @@ export class Game {
       if (p.pudonnut) continue;
       const k = this.paivakulu(p);
       const paikka = k.matkalla ? 'Yö matkalla' : `Yö kaupungissa ${this.cityOf(p)?.name ?? ''}`.trim();
-      const erittely = k.majoitus ? `ruoka ${k.ruoka} £, majoitus ${k.majoitus} £` : `ruoka ${k.ruoka} £`;
+      const erittely = k.majoitus ? `ruoka ${k.ruoka}\u00a0£, majoitus ${k.majoitus}\u00a0£` : `ruoka ${k.ruoka}\u00a0£`;
       if (p.money >= k.yhteensa) {
         p.money -= k.yhteensa;
         this.say(p.id, `${paikka}: ${erittely} (−${k.yhteensa} puntaa).`);

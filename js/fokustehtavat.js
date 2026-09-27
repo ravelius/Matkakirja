@@ -494,17 +494,17 @@ function pullaIsolla(nimi) {
 
 /** Tarjousnappi vastaamattomana. */
 function pullaNapinTeksti(nimi) {
-  return `Osta ${nimi} Livialle (${PULLA_HINTA} £)`;
+  return `Osta ${nimi} Livialle (${PULLA_HINTA}\u00a0£)`;
 }
 
 /** Sama nappi varmistusta odottamassa. */
 function pullaVarmistusTeksti(nimi) {
-  return `Varmista: ${nimi} Livialle, ${PULLA_HINTA} £`;
+  return `Varmista: ${nimi} Livialle, ${PULLA_HINTA}\u00a0£`;
 }
 
 /** Kassa ei riitä — nappi kertoo sen itse eikä jätä arvailtavaksi. */
 function pullaKoyhaTeksti(nimi) {
-  return `Kassa ei riitä: ${nimi} ${PULLA_HINTA} £`;
+  return `Kassa ei riitä: ${nimi} ${PULLA_HINTA}\u00a0£`;
 }
 
 /*
@@ -519,7 +519,7 @@ const PULLA_VARMISTUS_OHJE = 'Toinen napautus maksaa. Muuten tarjous raukeaa.';
 
 /** Kauppa tehty — rivi jää laatikkoon napin tilalle. */
 function pullaTehtyTeksti(nimi) {
-  return `Livia sai maksunsa (${nimi}, ${PULLA_HINTA} £) ja näytti paikan kartalta.`;
+  return `Livia sai maksunsa (${nimi}, ${PULLA_HINTA}\u00a0£) ja näytti paikan kartalta.`;
 }
 
 /**

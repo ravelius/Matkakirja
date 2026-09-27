@@ -10927,7 +10927,7 @@ export class UI {
    * ja palkki katoaa, kun kassa selviää (js/game.js tarkistaRahattomuus).
    * UI KEVYT (omistaja 15.2x): PELKÄT PUNAISET NELIÖT keskellä yläreunaa
    * painikerivin alla — ei tekstiä, ei kehystä, sama ulkoasu kaikilla
-   * laitteilla; ei ota osumia. Aika on yläpalkissa lyhyenä ("£0 2 vrk")
+   * laitteilla; ei ota osumia. Aika on yläpalkissa lyhyenä ("0 £ 2 vrk")
    * ja ruudunlukijalle aria-labelissa.
    */
   paivitaRahattomuuspalkki(piilossa = false) {
@@ -11094,7 +11094,7 @@ export class UI {
     }
     // Yläpalkissa on kukkaro ja päiväkirjan päivämäärä. Sijainti, kokemus ja
     // tietoprosentti ovat passissa: kartta on tärkeämpi kuin mittaristo.
-    const kassa = html('span', 'kassa', `£${game.player.money}`);
+    const kassa = html('span', 'kassa', `${game.player.money}\u00a0£`);
     /*
      * PÄIVÄKULU JA RAHATTOMUUS (talouden vaihe 1, omistaja 27.9.2026):
      * kassan vihje kertoo päiväkulun ja arvion; rahat lopussa kassa on
@@ -11103,7 +11103,7 @@ export class UI {
     const kulu = game.paivakulu?.(game.player);
     if (kulu) {
       const riittaa = game.kassaRiittaa(game.player);
-      kassa.title = `Päiväkulu ${kulu.yhteensa} £ (ruoka ${kulu.ruoka} £${kulu.majoitus ? `, majoitus ${kulu.majoitus} £` : ''})`
+      kassa.title = `Päiväkulu ${kulu.yhteensa}\u00a0£ (ruoka ${kulu.ruoka}\u00a0£${kulu.majoitus ? `, majoitus ${kulu.majoitus}\u00a0£` : ''})`
         + (Number.isFinite(riittaa) ? ` — kassa riittää noin ${riittaa} päiväksi` : '');
     }
     const jaljella = game.rahattomuuttaJaljella?.(game.player);
@@ -11176,7 +11176,7 @@ export class UI {
 
     const city = this.factCity(p.pos);
     rivi('Sijainti', p.pos.type === 'edge' ? `matkalla — ${city.name}` : city.name);
-    rivi('Kukkaro', `£${p.money}`);
+    rivi('Kukkaro', `${p.money}\u00a0£`);
 
     /*
      * TIETÄJÄRIVI: nimike on rivin selite ja oikeassa reunassa vain
@@ -20537,6 +20537,11 @@ export class UI {
      * kenttää rivi jää pois eikä kortti muutu.
      */
     if (token.fakta) caption.appendChild(html('p', 'reveal-fakta', token.fakta));
+    /*
+     * EI HAVAINNEKUVA-MERKKIÄ AARREKUVAN PÄÄLLÄ (omistaja 27.9.2026 klo
+     * 18.3x): aarrekuvat ovat tekoälyn tuottamia, mutta sen kertovat
+     * Tekijät ja lähteet -sivu ja kuvan lähderivi — ei paljastuskortti.
+     */
     /*
      * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
      * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen

@@ -5912,9 +5912,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
     const avain = sahkePullaAvain(tehtava, 'vinkki');
     pullaOstosnappi(ui, kotelo, {
       hinta: SAHKE_PULLA_VINKKI_HINTA,
-      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA} £) — vinkki`,
-      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA} £`,
-      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA} £`,
+      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA}\u00a0£) — vinkki`,
+      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA}\u00a0£`,
+      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA}\u00a0£`,
       kelluke: `${nimi} Livialle`,
       tehty: `Livia sai kokonaisen pullan (${nimi}) ja sanoi vinkkinsä.`,
       ostettu: ui.game.pullaOstettu?.(avain) === true,
@@ -5951,9 +5951,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
   const ostettuJo = ui.game.pullaOstettu?.(avain) === true;
   pullaOstosnappi(ui, kotelo, {
     hinta: SAHKE_PULLA_LINKKI_HINTA,
-    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA} £) — suora linkki`,
-    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA} £`,
-    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA} £`,
+    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA}\u00a0£) — suora linkki`,
+    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA}\u00a0£`,
+    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA}\u00a0£`,
     kelluke: `puolikas ${nimi} Livialle`,
     tehty: `Livia sai puolikkaan pullan (${nimi}) ja näytti linkin.`,
     ostettu: ostettuJo,
