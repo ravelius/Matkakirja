@@ -121,9 +121,10 @@ namespace Matkakirja
             long tavut = 0;
             if (d.TryGetValue("tavuja", out var t) && t is Dictionary<string, object> td)
             {
-                // Levykoko (purettu; maasto tulee gzip-siirtona ja tallentuu purettuna) ennen siirtokokoa (Siirtosepän skeema 1.52).
-                if (td.TryGetValue("levy", out var lv) && lv is double lvd) tavut = (long)lvd;
-                else if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
+                // Siirtokoko = levykoko: 1.0.32 tallentaa maaston gzipattuna (Laattapalvelin.LataaOffline, Fablen C), joten
+                // tavuja.levy (purettu, vanhoille buildeille) ei koske tätä buildia.
+                if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
+                if (td.TryGetValue("kaupunkiMaasto", out var km) && km is double kmd) tavut += (long)kmd;
                 if (KaupunkiRasteri.Paalla && td.TryGetValue("kaupunkiRasteri", out var kr) && kr is double krd) tavut += (long)krd;
                 if (td.TryGetValue("mediaKuvat", out var mk) && mk is double mkd) tavut += (long)mkd;
             }
@@ -218,6 +219,8 @@ namespace Matkakirja
             // Kaupunkitaso Z10 (samasta pohjasarjasta; vanhat buildit eivät lue avainta).
             if (KaupunkiRasteri.Paalla) Laatat("kaupunkiRasteri", rasteriPohja);
             Laatat("maasto", maastoPohja);
+            // Kaupunkien lähimaasto z11–12 (skeema 1.53, Fablen B1+C): vanhat buildit ohittavat avaimen.
+            Laatat("kaupunkiMaasto", maastoPohja);
             // Napakalotit (NapaKannet) kuuluvat yleiskarttaan: ilman niitä navat jäävät yksivärisiksi kansiksi.
             if (a.Id == "maailma") polut.AddRange(NapaKannet.OfflinePolut());
             // Samoin pelaajan maan tarkka ääriviiva (Maaraja): maa–maa-rajat (löydös 127) ja varana koko renkaat; ilman
