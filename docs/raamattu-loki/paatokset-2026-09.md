@@ -8031,3 +8031,7 @@ Pelikoodari 10.1x: nostokortin luennan saatimet #3388 (pohjana #3384): kaiutin t
 ## OMISTAJA 10.1x: SAATORATAS LAHEMMAS KAIUTINTA (#3388), MUUTEN HYVA (27.9.2026 klo 10.16)
 
 Omistaja 10.1x: luennan saatimissa ratas hieman lahemmas kaiutinta; muuten hyva → Pelikoodari samaan paivitykseen VU-integraation kanssa.
+
+## OMISTAJA 10.2x: LUKIJAN AANILLE OMAT PELINIMET (EI XAI-VIITTEITA) — TAULUKKO (27.9.2026 klo 10.17)
+
+Omistaja 10.2x: aanille omat nimet, jotta ne eivat yhdisty xAI:n moottoriin. Fable nimesi 1870-luvun suomalaisilla etunimilla (alkukirjain sailyy, sukupuoli sailyy): ara→Aino (oletus), aurora→Aamu, carina→Kerttu, celeste→Siiri, eve→Helmi, iris→Ilta, liora→Lyyli, luna→Vieno, ursa→Saima; altair→Aarne, atlas→Antero, castor→Kalle, cosmo→Kosti, helios→Heikki, helix→Herman, kepler→Kaarlo, leo→Lauri, lumen→Lassi, lux→Luukas, naksh→Niilo, orion→Onni, perseus→Pekka, rex→Reino, rigel→Risto, sal→Sulo, sirius→Simo, zagan→Sakari, zenith→Vaino. Asiakas nayttaa vain pelinimen; xAI-tunnus sisainen (worker). Pelikoodari #3388, Natiivi-UI speksi.
