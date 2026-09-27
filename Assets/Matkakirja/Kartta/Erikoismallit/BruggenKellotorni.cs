@@ -360,6 +360,643 @@ namespace Matkakirja
             r.Laatta(new Vector3(p.x, h + paaty * 0.3f, p.z), Vector3.back, leveys * 0.18f, paaty * 0.3f, BbAukko);
         }
 
+        // ---- LÄHITASO (omistaja 27.9. klo 09.0x Fablen kautta: kolmas taso lähizoomiin, rajapinta Natiivisepältä 1.0.29) ----
+
+        /// <summary>Lähitason sävyt rungon paletista: kaikuaukkojen säleiköt, talojen spaarveld-syvennykset ja pollarit.
+        /// Ominaisuuksina, koska Em-paletti on toisessa tiedostossa (staattisten kenttien alustusjärjestys osittaisluokan
+        /// tiedostojen välillä ei ole taattu).</summary>
+        static Color BbLhSaleet => Color.Lerp(BbAukko, BbKivireuna, 0.42f);
+        static Color BbLhSyvennys(Color seina) => Color.Lerp(seina, BbAukko, 0.2f);
+        static Color BbLhPollari => Color.Lerp(EmMuste, BbTiili, 0.35f);
+        /// <summary>Tornin koristeiden taso: rungon tavoin 0,004 pinnan edessä (yövalon hehku on 0,002:ssa).</summary>
+        const float BbLhEteen = 0.004f;
+
+        /// <summary>
+        /// LÄHITASO (Natiivisepän Erikoismalli.Lahi, katto 3 000 kolmiota): sama siluetti, mittasuhteet, värit, ääriviivaosat
+        /// (torni, Hallen siivet, arkadi, kanava, silta ja jokainen talo) ja osien pivotit kuin rungossa, noin 2,6 × kolmiot
+        /// (2 135) lähikuvan yksityiskohtiin. Korvaa rungon vain lähellä; vene, vana, nuotit ja valot pysyvät ennallaan: tornin
+        /// ikkunat, ovi, kaikuaukot ja kello ovat rungon tasoissa yövalon hehkun edessä (tummat myös yöllä), syvennykset ja
+        /// listavyöt hehkun takana (valaistu pinta on yöllä yhtenäinen).
+        ///   torni   kivisokkeli, listavyöt ja spaarveld-syvennykset, kulmatornien kivikonsolit, ampumaraot ja räystäskaista,
+        ///           käytävien kaiteet (etelässä aukotetut), sisäpihan suippokaarinen ovi, suippokaari-ikkunat kivikehyksineen
+        ///           ja ristikkoineen, pinaakkelien raot; lyhdyssä kulmaruoteet, sokeat suippokaaret, listavyö ja konsolirivi,
+        ///           kaikuaukot säleikköineen ja lautoineen, kellotaulu kivikehyksineen ja tuntimerkkeineen, kruunun kaiteen
+        ///           suippoaukot
+        ///   Halle   siipien eteläpäädyissä suippokaari-ikkunat, ovi ja sokkeli, lonkan kattolyhty, pitkillä lappeilla
+        ///           kattoikkunat; arkadin kaaret oikeina aukkoina (tumma galleria ja lattia takana), pylväät ja reunalista
+        ///   kanava  pohjoisrannan reunakivi ja portaat veteen länsipäässä, pollarit, kaksi kanavalyhtyä, väreily avovedellä ja
+        ///           Nepomukin patsas sillalla
+        ///   talot   flaamilainen julkisivu: spaarveld-syvennykset, ristikkoikkunat kahdessa kerroksessa ja päädyssä,
+        ///           listakivi päädyn juurella, kivisokkeli ja savupiippu
+        /// </summary>
+        static Mesh BruggenKellotorniLahi()
+        {
+            var r = new Rakentaja();
+            BbLhTorni(r);
+            BbLhTorniKoristeet(r);
+            BbLhHalle(r);
+            BbLhKanava(r);
+            BbSilta(r);
+            BbLhNepomuk(r);
+            BbJoutsen(r, new Vector3(0.13f, BbVesiY, BbKanavaZ + BbKanavaPuoli - 0.016f), Mathf.PI);
+            BbJoutsen(r, new Vector3(0.162f, BbVesiY, BbKanavaZ + BbKanavaPuoli - 0.024f), Mathf.PI * 0.92f);
+            BbLhTalo(r, new Vector3(-0.445f, 0f, BbTaloZ), 0.095f, 0.085f, 0.1f, 0.07f, BbTaloSeinat[0], 0);
+            BbLhTalo(r, new Vector3(-0.345f, 0f, BbTaloZ), 0.1f, 0.09f, 0.12f, 0.075f, BbTaloSeinat[1], 1);
+            BbLhTalo(r, new Vector3(0.345f, 0f, BbTaloZ), 0.1f, 0.09f, 0.115f, 0.075f, BbTaloSeinat[2], 2);
+            BbLhTalo(r, new Vector3(0.445f, 0f, BbTaloZ), 0.095f, 0.085f, 0.095f, 0.065f, BbTaloSeinat[3], 3);
+            return r.Verkko("BruggenKellotorni-lahi");
+        }
+
+        /// <summary>
+        /// Lähitason torni yhtenä ääriviivaosana: rungon massat (kerrokset, käytävät, kulmatornit, pinaakkelit, kahdeksankulmio ja
+        /// kruunu) samoilla mitoilla sekä siluettia myötäilevät lisät: kivisokkeli ja listavyöt, kulmatornien konsolit,
+        /// käytävien kaiteet, lyhdyn kulmaruoteet, listavyö ja konsolirivi kruunun alla.
+        /// </summary>
+        static void BbLhTorni(Rakentaja r)
+        {
+            var c = new Vector3(0f, 0f, BbTorniZ);
+            var up = Vector3.up;
+            float p1 = BbLeveys1 * 0.5f, p2 = BbLeveys2 * 0.5f;
+            r.AloitaOsa();
+            // 1. kerros, sokkeli, vyö oven ja ikkunan välissä ja käytävä kulmatorneineen; tornien alla kiviset konsolit ja
+            // kartiokatoissa räystäskaista kuten Hallen katoilla.
+            r.Laatikko(c, new Vector3(BbLeveys1, BbK1, BbLeveys1), BbTiili, BbTiili);
+            r.Laatikko(c, new Vector3(BbLeveys1 + 0.006f, 0.022f, BbLeveys1 + 0.006f), BbKivireuna, BbKivireuna);
+            BbLhVyo(r, c, p1, 0.112f, 0.119f);
+            r.Laatikko(c + up * (BbK1 - 0.016f), new Vector3(BbLeveys1 + 0.022f, 0.03f, BbLeveys1 + 0.022f), BbKivireuna, BbKivireuna);
+            foreach (float sx in new[] { -1f, 1f })
+                foreach (float sz in new[] { -1f, 1f })
+                {
+                    var k = c + new Vector3(sx * p1, 0f, sz * p1);
+                    r.Pylvas(k + up * (BbK1 - 0.075f), 0.022f, 0.12f, 6, BbTiiliVaalea);
+                    r.KartioRaystas(k + up * (BbK1 + 0.045f), 0.025f, 0.045f, 6, BbLiuske, BbLiuskeRaystas, 0.25f);
+                    BbLhKonsoli(r, k + up * (BbK1 - 0.075f), 0.022f, 0.04f, 6, BbKivireuna);
+                }
+            // Käytävän kaide kulmatornien välissä: etelässä viisi aukkoa, muilla sivuilla umpinainen.
+            float e1 = p1 + 0.011f;
+            foreach (var n in new[] { Vector3.back, Vector3.right, Vector3.left, Vector3.forward })
+                BbLhKaide(r, c, n, e1, 0.075f, BbK1 + 0.014f, 0.013f, 0.004f, n.z < -0.5f ? 5 : 0);
+            // 2. kerros ja vyö ikkunoiden alla, käytävä ja sen kaide kulmapinaakkelien välissä.
+            r.Laatikko(c + up * (BbK1 + 0.014f), new Vector3(BbLeveys2, BbK2 - BbK1 - 0.014f, BbLeveys2), BbTiiliVaalea, BbTiiliVaalea);
+            BbLhVyo(r, c, p2, 0.408f, 0.415f);
+            r.Laatikko(c + up * (BbK2 - 0.016f), new Vector3(BbLeveys2 + 0.018f, 0.026f, BbLeveys2 + 0.018f), BbKivireuna, BbKivireuna);
+            foreach (float sx in new[] { -1f, 1f })
+                foreach (float sz in new[] { -1f, 1f })
+                {
+                    var k = c + new Vector3(sx * (p2 - 0.004f), 0f, sz * (p2 - 0.004f));
+                    r.Pylvas(k + up * (BbK2 - 0.03f), 0.014f, 0.13f, 4, BbHiekkakiviVarjo);
+                    r.Kartio(k + up * (BbK2 + 0.1f), 0.017f, 0.12f, 4, BbHiekkakiviVarjo);
+                }
+            float e2 = p2 + 0.009f;
+            foreach (var n in new[] { Vector3.back, Vector3.right, Vector3.left })
+                BbLhKaide(r, c, n, e2, 0.067f, BbK2 + 0.01f, 0.012f, 0.004f, n.z < -0.5f ? 5 : 0);
+            // Kahdeksankulmio (hiekkakivi), kulmaruoteet (paitsi kaksi tornin taakse jäävää), listavyö kellon ja kaikuaukkojen
+            // välissä ja konsolirivi kruunun kaiteen ulokkeen alla kameran puoleisilla sivuilla.
+            float rk = BbApoteemi / Mathf.Cos(Mathf.PI / 8f);
+            r.Vaippa(c + up * (BbK2 + 0.01f), rk, rk, BbK3 - BbK2 - 0.01f, 8, BbHiekkakivi, BbKulma0);
+            for (int k = 0; k < 8; k++)
+            {
+                if (k == 1 || k == 2) continue;   // kärjet 67,5° ja 112,5° (pohjoinen) eivät näy
+                BbLhRuode(r, c, rk, BbKulma0 + k * Mathf.PI / 4f, 0.0042f, 0.0048f, BbK2 + 0.01f, BbK3 - 0.006f, BbHiekkakiviVarjo);
+            }
+            var nakyvat = new[] { 0, 4, 5, 6, 7 };   // sivut k · 45°: itä, länsi, lounas, etelä, kaakko
+            BbLhOktaVyo(r, c, nakyvat, 0.004f, 0.776f, 0.783f, BbHiekkakiviVarjo, BbKivireuna);
+            foreach (int k in nakyvat)
+            {
+                float a = k * Mathf.PI / 4f;
+                var n = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));
+                var t = Vector3.Cross(Vector3.up, n);
+                for (int j = -1; j <= 1; j++)
+                {
+                    var q = c + n * (BbApoteemi + 0.0074f) + t * (j * 0.021f) + up * (BbK3 - 0.013f);
+                    r.NelioUlos(q - t * 0.0035f, q + t * 0.0035f, q + t * 0.0035f + up * 0.008f, q - t * 0.0035f + up * 0.008f, n, BbHiekkakiviVarjo);
+                }
+            }
+            // Kruunu kuten rungossa: kaide, tasakatto ja kahdeksan pinaakkelia.
+            float ru = rk + 0.008f, rs = rk - 0.006f, y0 = BbK3 - 0.006f, y1 = BbK3 + BbKruunuH, yk = BbK3 + 0.018f;
+            for (int i = 0; i < 8; i++)
+            {
+                float a0 = BbKulma0 + i * Mathf.PI / 4f, a1 = a0 + Mathf.PI / 4f;
+                Vector3 d0 = new Vector3(Mathf.Cos(a0), 0f, Mathf.Sin(a0)), d1 = new Vector3(Mathf.Cos(a1), 0f, Mathf.Sin(a1));
+                var n = (d0 + d1).normalized;
+                Vector3 u0 = c + d0 * ru, u1 = c + d1 * ru, s0 = c + d0 * rs, s1 = c + d1 * rs;
+                r.NelioUlos(u0 + up * y0, u1 + up * y0, u1 + up * y1, u0 + up * y1, n, BbHiekkakivi);
+                r.NelioUlos(s0 + up * yk, s1 + up * yk, s1 + up * y1, s0 + up * y1, -n, BbHiekkakiviVarjo);
+                r.NelioUlos(u0 + up * y1, u1 + up * y1, s1 + up * y1, s0 + up * y1, Vector3.up, BbKivireuna);
+                r.KolmioUlos(c + up * yk, s0 + up * yk, s1 + up * yk, Vector3.up, BbKruunuKatto);
+                r.Kartio(c + d0 * ((ru + rs) * 0.5f) + up * y1, 0.012f, i % 2 == 0 ? 0.085f : 0.06f, 4, BbHiekkakivi);
+            }
+            r.LopetaOsa();
+        }
+
+        /// <summary>
+        /// Lähitason tornin koristeet ilman omaa ääriviivaa rungon tasoissa (0,004 pinnan edessä; lyhdyn eteläsivulla 2. kerroksen
+        /// pinnan tasossa kuten rungossa), joten yövalon hehku jää niiden taakse: sisäpihan ovi ja 1. kerroksen ikkuna, 2. kerroksen
+        /// ikkunat, kulmatornien ja pinaakkelien raot, kaikuaukot (kameran puolella säleiköin, pohjoisessa rungon aukot),
+        /// kellotaulu ja kruunun kaiteen suippoaukot.
+        /// </summary>
+        static void BbLhTorniKoristeet(Rakentaja r)
+        {
+            var c = new Vector3(0f, 0f, BbTorniZ);
+            var up = Vector3.up;
+            float p1 = BbLeveys1 * 0.5f, p2 = BbLeveys2 * 0.5f, y2 = (BbK1 + BbK2) * 0.5f + 0.01f;
+            // Spaarvelden (suippokaariset syvennykset, Bruggen tiiligotiikan tunnusmerkki) 0,001 pinnan edessä eli hehkun takana:
+            // 1. kerroksessa ikkunan ympärillä ja sen molemmin puolin, 2. kerroksessa kummankin ikkunan ympärillä.
+            var syv1 = BbLhSyvennys(BbTiili);
+            var t1 = c + Vector3.back * (p1 + 0.001f);
+            BbLhAukkoMuoto(r, t1 + up * 0.128f, Vector3.back, 0.066f, 0.177f, syv1);
+            foreach (float s in new[] { -1f, 1f })
+                BbLhAukkoMuoto(r, t1 + Vector3.right * (s * 0.057f) + up * 0.128f, Vector3.back, 0.022f, 0.162f, syv1);
+            var t2 = c + Vector3.back * (p2 + 0.001f);
+            foreach (float s in new[] { -1f, 1f })
+                BbLhAukkoMuoto(r, t2 + Vector3.right * (s * 0.036f) + up * 0.419f, Vector3.back, 0.044f, 0.179f, BbLhSyvennys(BbTiiliVaalea));
+            // 1. kerros: suippokaarinen ovi sisäpihalle ja rungon ikkunan paikalla suippokaari-ikkuna ristikkoineen.
+            var s1 = c + Vector3.back * (p1 + BbLhEteen);
+            BbLhAukko(r, s1, Vector3.back, 0.034f, 0.085f, 2, BbKivireuna, BbKivireuna);
+            BbLhAukko(r, s1 + up * 0.16f, Vector3.back, 0.04f, 0.11f, 0, BbKivireuna, BbKivireuna);
+            // 2. kerros: etelässä ikkunat ristikkoineen, idässä ja lännessä kevyemmin (näkyvät vain sivulta).
+            foreach (var n in new[] { Vector3.back, Vector3.right, Vector3.left })
+            {
+                var t = Vector3.Cross(Vector3.up, n);
+                foreach (float s in new[] { -1f, 1f })
+                    BbLhAukko(r, c + n * (p2 + BbLhEteen) + t * (s * 0.036f) + up * (y2 - 0.075f), n, 0.028f, 0.15f, n.z < -0.5f ? 0 : 3,
+                        BbKivireuna, BbKivireuna);
+            }
+            // Kulmatornien ampumaraot ja pinaakkelien raot kameran puoleisilla tahkoilla (etelän kulmissa).
+            foreach (float sx in new[] { -1f, 1f })
+            {
+                var k1 = c + new Vector3(sx * p1, 0f, -p1);
+                foreach (float a in new[] { 270f, sx > 0f ? 330f : 210f })
+                {
+                    var n = new Vector3(Mathf.Cos(a * Mathf.PI / 180f), 0f, Mathf.Sin(a * Mathf.PI / 180f));
+                    r.Laatta(k1 + n * (0.022f * 0.866f) + up * 0.293f, n, 0.0045f, 0.022f, BbAukko);
+                }
+                var k2 = c + new Vector3(sx * (p2 - 0.004f), 0f, -(p2 - 0.004f));
+                foreach (float a in new[] { 225f, 315f })
+                {
+                    var n = new Vector3(Mathf.Cos(a * Mathf.PI / 180f), 0f, Mathf.Sin(a * Mathf.PI / 180f));
+                    r.Laatta(k2 + n * (0.014f * 0.7071f) + up * 0.697f, n, 0.0045f, 0.036f, BbAukko);
+                }
+            }
+            // Kaikuaukot: kameran puoleisilla viidellä sivulla säleiköt, pystypuite, kivikehys ja lauta; pohjoisessa rungon aukot.
+            for (int i = 0; i < 8; i++)
+            {
+                float a = i * Mathf.PI / 4f;
+                var n = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));
+                float etaisyys = i == 6 ? p2 + 0.0025f : BbApoteemi + 0.0025f;   // i = 6 → suunta −Z (etelä)
+                if (i >= 1 && i <= 3) r.Holvi(c + n * etaisyys + up * (BbK2 + 0.25f), n, 0.026f, 0.17f, BbAukko);
+                else BbLhAukko(r, c + n * (etaisyys + 0.0015f) + up * (BbK2 + 0.165f), n, 0.026f, 0.17f, 1, BbHiekkakiviVarjo, BbLhSaleet);
+            }
+            // Lyhdyn alavyöhyke itä-, länsi- ja viistosivuilla (etelässä kello): kaksi sokeaa suippokaarta listavyön alla,
+            // 0,001 pinnan edessä eli viistosivujen hehkun takana.
+            foreach (int k in new[] { 0, 4, 5, 7 })
+            {
+                float a = k * Mathf.PI / 4f;
+                var n = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));
+                var t = Vector3.Cross(Vector3.up, n);
+                foreach (float s in new[] { -1f, 1f })
+                    BbLhAukkoMuoto(r, c + n * (BbApoteemi + 0.001f) + t * (s * 0.0135f) + up * 0.668f, n, 0.017f, 0.097f, BbHiekkakiviVarjo);
+            }
+            // Kellotaulu: tumma taulu, kivikehys, neljä tuntimerkkiä ja rungon viisarit.
+            var kp = c + Vector3.back * (p2 + 0.0045f) + up * (BbK2 + 0.085f);
+            const int kk = 12;
+            for (int i = 0; i < kk; i++)
+            {
+                float a0 = i * Mathf.PI * 2f / kk, a1 = (i + 1) * Mathf.PI * 2f / kk;
+                Vector3 d0 = new Vector3(Mathf.Cos(a0), Mathf.Sin(a0), 0f), d1 = new Vector3(Mathf.Cos(a1), Mathf.Sin(a1), 0f);
+                r.KolmioUlos(kp, kp + d0 * 0.0205f, kp + d1 * 0.0205f, Vector3.back, BbKello);
+                r.NelioUlos(kp + d0 * 0.0205f, kp + d1 * 0.0205f, kp + d1 * 0.0255f, kp + d0 * 0.0255f, Vector3.back, BbKivireuna);
+            }
+            var vp = kp + Vector3.back * 0.001f;
+            for (int i = 0; i < 4; i++)
+            {
+                float a = i * Mathf.PI * 0.5f;
+                var d = new Vector3(Mathf.Cos(a), Mathf.Sin(a), 0f);
+                var e = new Vector3(-d.y, d.x, 0f);
+                var m = vp + d * 0.0165f;
+                r.NelioUlos(m - d * 0.0025f - e * 0.0014f, m + d * 0.0025f - e * 0.0014f, m + d * 0.0025f + e * 0.0014f, m - d * 0.0025f + e * 0.0014f,
+                    Vector3.back, BbKivireuna);
+            }
+            r.NelioUlos(vp + new Vector3(-0.002f, 0f, 0f), vp + new Vector3(0.002f, 0f, 0f), vp + new Vector3(0.002f, 0.015f, 0f),
+                vp + new Vector3(-0.002f, 0.015f, 0f), Vector3.back, BbKivireuna);
+            r.NelioUlos(vp + new Vector3(0f, -0.002f, 0f), vp + new Vector3(0.011f, -0.002f, 0f), vp + new Vector3(0.011f, 0.002f, 0f),
+                vp + new Vector3(0f, 0.002f, 0f), Vector3.back, BbKivireuna);
+            // Kruunun kaiteen suippoaukot kameran puoleisilla sivuilla (kaksi sivua kohden).
+            float ru = BbApoteemi / Mathf.Cos(Mathf.PI / 8f) + 0.008f, au = ru * Mathf.Cos(Mathf.PI / 8f) + 0.0006f;
+            foreach (int k in new[] { 0, 4, 5, 6, 7 })
+            {
+                float a = k * Mathf.PI / 4f;
+                var n = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));
+                var t = Vector3.Cross(Vector3.up, n);
+                foreach (float s in new[] { -1f, 1f })
+                    BbLhAukko(r, c + n * au + t * (s * 0.0165f) + up * (BbK3 + 0.006f), n, 0.011f, 0.027f, 4, BbAukko, BbAukko);
+            }
+        }
+
+        /// <summary>
+        /// Suippokaari-aukko: alareunan keskipiste p koristetasossa, ulospäin, leveys ja kokonaiskorkeus laki mukaan lukien
+        /// (tasasivuinen suippokaari, kaksi lohkoa puolelleen). Tumma aukko 6 kolmiota; laji 0 ikkuna: kehys (pielet ja kaarinauha
+        /// 12), pystypuite, välipuite ja lakiruutu (6) ja lauta (4); 1 kaikuaukko: kehys, pystypuite, viisi sälettä ja lauta;
+        /// 2 ovi: kehys; 3 kevyt ikkuna: kaarinauha ja lauta; 4 pelkkä aukko. Kehys ja ristikko 0,0006 aukon edessä.
+        /// </summary>
+        static void BbLhAukko(Rakentaja r, Vector3 p, Vector3 ulos, float lev, float kork, int laji, Color kehys, Color ristikko)
+        {
+            var n = new Vector3(ulos.x, 0f, ulos.z).normalized;
+            var t = Vector3.Cross(Vector3.up, n);
+            float w = lev * 0.5f, R = lev, ka = Mathf.Min(lev * 0.866f, kork * 0.6f), sy = ka / (lev * 0.866f), ys = kork - ka;
+            float b = Mathf.Max(0.0032f, lev * 0.13f), e = 0.0006f;
+            Vector3 P(float x, float y, float d) => p + t * x + Vector3.up * y + n * d;
+            // Kaaren piste: puoli −1 vasen kaari (keskipiste oikeassa syntykohdassa), +1 oikea; säde rr, kulma th.
+            Vector3 K(float puoli, float rr, float th, float d) => P(puoli * (rr * Mathf.Cos(th) - w), ys + rr * Mathf.Sin(th) * sy, d);
+            float thR = Mathf.PI / 3f, thB = (float)Math.Acos(w / (R + b));
+            r.NelioUlos(P(-w, 0f, 0f), P(w, 0f, 0f), P(w, ys, 0f), P(-w, ys, 0f), n, BbAukko);
+            var M = P(0f, ys, 0f);
+            foreach (float puoli in new[] { -1f, 1f })
+                for (int k = 0; k < 2; k++)
+                    r.KolmioUlos(M, K(puoli, R, thR * k * 0.5f, 0f), K(puoli, R, thR * (k + 1) * 0.5f, 0f), n, BbAukko);
+            if (laji == 4) return;
+            // Kehys: kaarinauha (kaikki paitsi 4) ja pielet (ikkuna, kaikuaukko ja ovi).
+            foreach (float puoli in new[] { -1f, 1f })
+            {
+                for (int k = 0; k < 2; k++)
+                    r.NelioUlos(K(puoli, R, thR * k * 0.5f, e), K(puoli, R + b, thB * k * 0.5f, e), K(puoli, R + b, thB * (k + 1) * 0.5f, e),
+                        K(puoli, R, thR * (k + 1) * 0.5f, e), n, kehys);
+                if (laji != 3)
+                    r.NelioUlos(P(puoli * w, 0f, e), P(puoli * (w + b), 0f, e), P(puoli * (w + b), ys, e), P(puoli * w, ys, e), n, kehys);
+            }
+            float m = Mathf.Max(0.0015f, lev * 0.05f);
+            if (laji == 0)
+            {
+                float yc = ys + ka * 0.4f, hh = ka * 0.22f, hw = w * 0.36f, yt = ys * 0.55f;
+                r.NelioUlos(P(-m, 0f, e), P(m, 0f, e), P(m, yc - hh, e), P(-m, yc - hh, e), n, ristikko);
+                r.NelioUlos(P(-w, yt - m, e), P(w, yt - m, e), P(w, yt + m, e), P(-w, yt + m, e), n, ristikko);
+                r.NelioUlos(P(0f, yc - hh, e), P(hw, yc, e), P(0f, yc + hh, e), P(-hw, yc, e), n, ristikko);
+            }
+            else if (laji == 1)
+            {
+                float sh = ys * 0.05f;
+                for (int k = 0; k < 5; k++)
+                {
+                    float y = ys * (0.1f + 0.19f * k);
+                    r.NelioUlos(P(-w, y, e), P(w, y, e), P(w, y + sh, e), P(-w, y + sh, e), n, ristikko);
+                }
+                r.NelioUlos(P(-m, 0f, e + 0.0003f), P(m, 0f, e + 0.0003f), P(m, ys + ka * 0.3f, e + 0.0003f), P(-m, ys + ka * 0.3f, e + 0.0003f), n, kehys);
+            }
+            if (laji == 0 || laji == 1 || laji == 3)
+            {
+                // Ikkunalauta: valaistu yläpinta ja kapea etupinta aukon alareunassa.
+                r.NelioUlos(P(-w - b, 0f, 0f), P(w + b, 0f, 0f), P(w + b, 0f, 0.0035f), P(-w - b, 0f, 0.0035f), Vector3.up, kehys);
+                r.NelioUlos(P(-w - b, -0.0025f, 0.0035f), P(w + b, -0.0025f, 0.0035f), P(w + b, 0f, 0.0035f), P(-w - b, 0f, 0.0035f), n, kehys);
+            }
+        }
+
+        /// <summary>Listavyö tornin eteläpinnassa (pinta etäisyydellä puoli keskeltä) korkeuksilla y0 … y1: etu- ja yläpinta 0,001
+        /// pinnan edessä eli yövalon hehkun (0,002) takana, joten valaistu pinta on yöllä yhtenäinen. Vain eteläpinnassa: ympäri
+        /// kiertävän vyön yläpinta näkyisi ylhäältä vaaleana viivana tornin kyljissä. 4 kolmiota.</summary>
+        static void BbLhVyo(Rakentaja r, Vector3 c, float puoli, float y0, float y1)
+        {
+            float z = c.z - puoli - 0.001f, zs = c.z - puoli;
+            r.NelioUlos(new Vector3(-puoli, y0, z), new Vector3(puoli, y0, z), new Vector3(puoli, y1, z), new Vector3(-puoli, y1, z), Vector3.back, BbKivireuna);
+            r.NelioUlos(new Vector3(-puoli, y1, z), new Vector3(puoli, y1, z), new Vector3(puoli, y1, zs), new Vector3(-puoli, y1, zs), Vector3.up, BbKivireuna);
+        }
+
+        /// <summary>Kivikonsoli kulmatornin alla: ylösalainen kartio tornin pohjasta (p, säde) alas kärkeen (korkeus kork). 6 kolmiota
+        /// (sivuja kappaletta).</summary>
+        static void BbLhKonsoli(Rakentaja r, Vector3 p, float sade, float kork, int sivuja, Color vari)
+        {
+            var karki = p - Vector3.up * kork;
+            var keski = p - Vector3.up * (kork * 0.3f);
+            for (int i = 0; i < sivuja; i++)
+            {
+                float a0 = i * Mathf.PI * 2f / sivuja, a1 = (i + 1) * Mathf.PI * 2f / sivuja;
+                r.KolmioKeskelta(p + new Vector3(Mathf.Cos(a0), 0f, Mathf.Sin(a0)) * sade, p + new Vector3(Mathf.Cos(a1), 0f, Mathf.Sin(a1)) * sade,
+                    karki, keski, vari);
+            }
+        }
+
+        /// <summary>Käytävän kaide: neliön sivu suuntaan n etäisyydellä e keskeltä, pituus ±puoli, korkeus y0 … y0 + kork, paksuus;
+        /// ulko-, sisä- ja yläpinta (6 kolmiota) ja ulkopinnassa aukkoja tummina suorakulmioina (2 kolmiota kukin).</summary>
+        static void BbLhKaide(Rakentaja r, Vector3 c, Vector3 n, float e, float puoli, float y0, float kork, float paksuus, int aukkoja)
+        {
+            var t = Vector3.Cross(Vector3.up, n);
+            Vector3 U(float s, float d, float y) => c + n * d + t * s + Vector3.up * y;
+            float y1 = y0 + kork, ei = e - paksuus;
+            r.NelioUlos(U(-puoli, e, y0), U(puoli, e, y0), U(puoli, e, y1), U(-puoli, e, y1), n, BbKivireuna);
+            r.NelioUlos(U(-puoli, ei, y0), U(puoli, ei, y0), U(puoli, ei, y1), U(-puoli, ei, y1), -n, BbHiekkakiviVarjo);
+            r.NelioUlos(U(-puoli, ei, y1), U(puoli, ei, y1), U(puoli, e, y1), U(-puoli, e, y1), Vector3.up, BbKivireuna);
+            for (int i = 0; i < aukkoja; i++)
+            {
+                float s = -puoli + (i + 0.5f) * 2f * puoli / aukkoja, w = puoli / aukkoja * 0.5f;
+                r.NelioUlos(U(s - w, e + 0.0006f, y0 + kork * 0.25f), U(s + w, e + 0.0006f, y0 + kork * 0.25f), U(s + w, e + 0.0006f, y1 - kork * 0.2f),
+                    U(s - w, e + 0.0006f, y1 - kork * 0.2f), n, BbAukko);
+            }
+        }
+
+        /// <summary>Kahdeksankulmion kulmaruode kärjessä kulmalla a (säde rk): tyvi leveys w pitkin viereisiä sivuja, ulkonema ulk,
+        /// korkeudet y0 … y1; kaksi viistoa tahkoa ja kansi (5 kolmiota).</summary>
+        static void BbLhRuode(Rakentaja r, Vector3 c, float rk, float a, float w, float ulk, float y0, float y1, Color vari)
+        {
+            var d = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));
+            var V = c + d * rk;
+            var e1 = (c + new Vector3(Mathf.Cos(a - Mathf.PI / 4f), 0f, Mathf.Sin(a - Mathf.PI / 4f)) * rk - V).normalized;
+            var e2 = (c + new Vector3(Mathf.Cos(a + Mathf.PI / 4f), 0f, Mathf.Sin(a + Mathf.PI / 4f)) * rk - V).normalized;
+            Vector3 B1 = V + e1 * w, B2 = V + e2 * w, T = V + d * ulk, Y0 = Vector3.up * y0, Y1 = Vector3.up * y1;
+            var keski = V - d * 0.01f + Vector3.up * ((y0 + y1) * 0.5f);
+            r.NelioKeskelta(B1 + Y0, T + Y0, T + Y1, B1 + Y1, keski, vari);
+            r.NelioKeskelta(T + Y0, B2 + Y0, B2 + Y1, T + Y1, keski, vari);
+            r.KolmioUlos(B1 + Y1, T + Y1, B2 + Y1, Vector3.up, vari);
+        }
+
+        /// <summary>Kahdeksankulmion listavyö annetuilla sivuilla (sivu k osoittaa kulmaan k · 45°): etu- ja yläpinta, ulkonema ulk
+        /// apoteemin yli, korkeudet y0 … y1 (4 kolmiota sivulta).</summary>
+        static void BbLhOktaVyo(Rakentaja r, Vector3 c, int[] sivut, float ulk, float y0, float y1, Color etu, Color yla)
+        {
+            float rk = BbApoteemi / Mathf.Cos(Mathf.PI / 8f), ru = (BbApoteemi + ulk) / Mathf.Cos(Mathf.PI / 8f);
+            Vector3 Y0 = Vector3.up * y0, Y1 = Vector3.up * y1;
+            foreach (int k in sivut)
+            {
+                float a = k * Mathf.PI / 4f, a0 = a - Mathf.PI / 8f, a1 = a + Mathf.PI / 8f;
+                Vector3 d0 = new Vector3(Mathf.Cos(a0), 0f, Mathf.Sin(a0)), d1 = new Vector3(Mathf.Cos(a1), 0f, Mathf.Sin(a1));
+                var n = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));
+                r.NelioUlos(c + d0 * ru + Y0, c + d1 * ru + Y0, c + d1 * ru + Y1, c + d0 * ru + Y1, n, etu);
+                r.NelioUlos(c + d0 * rk + Y1, c + d1 * rk + Y1, c + d1 * ru + Y1, c + d0 * ru + Y1, Vector3.up, yla);
+            }
+        }
+
+        /// <summary>
+        /// Lähitason Halle: rungon siivet ja lonkkakatot samana ääriviivaosana, eteläisellä lonkalla kattolyhty ja pitkillä
+        /// lappeilla kattoikkunat; siipien eteläpäädyissä sokkeli, rungon ikkunoiden paikoilla suippokaari-ikkunat ja niiden välissä
+        /// ovi; arkadi (BbLhArkadi) kaarineen.
+        /// </summary>
+        static void BbLhHalle(Rakentaja r)
+        {
+            r.AloitaOsa();
+            foreach (float s in new[] { -1f, 1f })
+            {
+                float x0 = s * BbHalleSisaX, x1 = s * BbHalleX;
+                float xa = Mathf.Min(x0, x1), xb = Mathf.Max(x0, x1);
+                var p = new Vector3((xa + xb) * 0.5f, 0f, (BbHalleEtela + BbHallePohjoinen) * 0.5f);
+                r.Laatikko(p, new Vector3(xb - xa, BbHalleSeina, BbHallePohjoinen - BbHalleEtela), BbSeinaHalle, BbSeinaHalle);
+                BbLonkkakatto(r, xa - 0.006f, xb + 0.006f, BbHalleEtela - 0.006f, BbHallePohjoinen + 0.006f, BbHalleSeina, BbHalleKatto,
+                    EmKatto, BbLiuskeRaystas);
+                // Sokkeli eteläpäädyssä.
+                float ze = BbHalleEtela - 0.002f;
+                r.NelioUlos(new Vector3(xa, 0f, ze), new Vector3(xb, 0f, ze), new Vector3(xb, 0.008f, ze), new Vector3(xa, 0.008f, ze), Vector3.back, BbKivireuna);
+                r.NelioUlos(new Vector3(xa, 0.008f, ze), new Vector3(xb, 0.008f, ze), new Vector3(xb, 0.008f, BbHalleEtela), new Vector3(xa, 0.008f, BbHalleEtela),
+                    Vector3.up, BbKivireuna);
+                // Kattolyhty eteläisellä lonkalla (lonkan kaltevuus: nousu katon korkeus räystäältä harjan päähän).
+                float z0 = BbHalleEtela - 0.006f, a = (xb - xa + 0.012f) * 0.5f, k = BbHalleKatto / a;
+                BbLhKattolyhty(r, new Vector3((xa + xb) * 0.5f, 0f, z0 + a * 0.25f), BbHalleSeina + BbHalleKatto * 0.25f, k, 0.032f, 0.026f, 0.014f);
+            }
+            r.LopetaOsa();
+            // Kattoikkunat pitkillä lappeilla: kolme lapetta kohden, lappeen suuntaisina tummina ruutuina.
+            foreach (float s in new[] { -1f, 1f })
+            {
+                float xa = Mathf.Min(s * BbHalleSisaX, s * BbHalleX) - 0.006f, xb = Mathf.Max(s * BbHalleSisaX, s * BbHalleX) + 0.006f;
+                float xc = (xa + xb) * 0.5f, a = (xb - xa) * 0.5f;
+                foreach (float puoli in new[] { -1f, 1f })
+                {
+                    var nn = new Vector3(puoli * BbHalleKatto, a, 0f).normalized;
+                    foreach (var (z, f) in new[] { (0.04f, 0.45f), (0.12f, 0.45f), (0.2f, 0.45f) })
+                    {
+                        // f = osuus räystäältä harjalle.
+                        var q = new Vector3(xc + puoli * a * (1f - f), BbHalleSeina + BbHalleKatto * f, z) + nn * 0.0008f;
+                        var ylos = new Vector3(-puoli * a, BbHalleKatto, 0f).normalized;
+                        Vector3 sv = Vector3.forward * 0.009f, yv = ylos * 0.011f;
+                        r.NelioUlos(q - sv - yv, q + sv - yv, q + sv + yv, q - sv + yv, nn, BbAukko);
+                    }
+                }
+            }
+            // Siipien eteläpäätyjen suippokaari-ikkunat rungon paikoilla (kaarinauha ja lauta) ja niiden välissä ovi (sokkelin edessä).
+            foreach (float s in new[] { -1f, 1f })
+            {
+                float xk = s * (BbHalleSisaX + BbHalleX) * 0.5f;
+                foreach (float dx in new[] { -0.036f, 0.036f })
+                    BbLhAukko(r, new Vector3(xk + dx, BbHalleSeina * 0.48f - 0.026f, BbHalleEtela - 0.0015f), Vector3.back, 0.018f, 0.052f, 3,
+                        BbKivireuna, BbKivireuna);
+                BbLhAukko(r, new Vector3(xk, 0f, BbHalleEtela - 0.0025f), Vector3.back, 0.02f, 0.046f, 2, BbKivireuna, BbKivireuna);
+            }
+            BbLhArkadi(r);
+        }
+
+        /// <summary>Kattolyhty (pieni päätyikkuna) lonkan lappeella, joka nousee pohjoiseen kaltevuudella k: etuseinä ja päätykolmio
+        /// etelään, kyljet, harjakatto ja tumma ikkuna. p = etuseinän alareunan keskikohta (y lasketaan lappeesta: yb), leveys,
+        /// seinän korkeus ja päädyn korkeus. 12 kolmiota.</summary>
+        static void BbLhKattolyhty(Rakentaja r, Vector3 p, float yb, float k, float lev, float hs, float hp)
+        {
+            float w = lev * 0.5f;
+            var y = Vector3.up;
+            Vector3 A = new Vector3(p.x - w, yb, p.z), B = new Vector3(p.x + w, yb, p.z);
+            Vector3 A1 = A + y * hs, B1 = B + y * hs, H = new Vector3(p.x, yb + hs + hp, p.z);
+            float ze = hs / k, zh = (hs + hp) / k;
+            var keski = new Vector3(p.x, yb + hs * 0.5f, p.z + ze * 0.5f);
+            r.NelioUlos(A, B, B1, A1, Vector3.back, BbSeinaHalle);
+            r.KolmioUlos(A1, B1, H, Vector3.back, BbSeinaHalle);
+            r.KolmioKeskelta(A, A1, A1 + Vector3.forward * ze, keski, BbSeinaHalle);
+            r.KolmioKeskelta(B, B1, B1 + Vector3.forward * ze, keski, BbSeinaHalle);
+            var o = Vector3.back * 0.003f;
+            r.NelioKeskelta(A1 + o - Vector3.right * 0.002f, H + o, H + Vector3.forward * zh, A1 + Vector3.forward * ze - Vector3.right * 0.002f, keski, EmKatto);
+            r.NelioKeskelta(B1 + o + Vector3.right * 0.002f, H + o, H + Vector3.forward * zh, B1 + Vector3.forward * ze + Vector3.right * 0.002f, keski, EmKatto);
+            r.NelioUlos(new Vector3(p.x - w * 0.62f, yb + hs * 0.1f, p.z - 0.0003f), new Vector3(p.x + w * 0.62f, yb + hs * 0.1f, p.z - 0.0003f),
+                new Vector3(p.x + w * 0.62f, yb + hs * 0.93f, p.z - 0.0003f), new Vector3(p.x - w * 0.62f, yb + hs * 0.93f, p.z - 0.0003f), Vector3.back, BbKivireuna);
+            r.NelioUlos(new Vector3(p.x - w * 0.46f, yb + hs * 0.2f, p.z - 0.0006f), new Vector3(p.x + w * 0.46f, yb + hs * 0.2f, p.z - 0.0006f),
+                new Vector3(p.x + w * 0.46f, yb + hs * 0.84f, p.z - 0.0006f), new Vector3(p.x - w * 0.46f, yb + hs * 0.84f, p.z - 0.0006f), Vector3.back, BbAukko);
+        }
+
+        /// <summary>
+        /// Arkadi (rungossa Seina + neljä holvikuvaa). Ääriviivaosa on rungon muurin kuori (pohjois- ja yläpinta, päädyt) ja
+        /// eteläpinnan pohjoiseen käännetty kopio: kamera (aina etelästä) karsii sen, mutta ääriviivan kasvatus (Cull Off) piirtää sen
+        /// kuten rungon eteläpinnan, joten musteviiva on sama kuin rungossa. Varsinainen eteläpinta neljine oikeine kaariaukkoineen
+        /// (kaari kolmena lohkona), tumma galleria ja lattia aukkojen takana, pylväät ja reunalista ovat pieninä osina ilman omaa
+        /// ääriviivaa: ääriviivaosan sisällä niiden kasvatetut kopiot tummentaisivat musteviivaa arkadin alla.
+        /// </summary>
+        static void BbLhArkadi(Rakentaja r)
+        {
+            float zs = BbHalleEtela + 0.005f, zn = BbHalleEtela + 0.035f, xa = -BbHalleSisaX, xb = BbHalleSisaX, h = 0.045f;
+            const float syv = 0.011f, aw = 0.013f, ays = 0.023f;
+            Vector3 S(float x, float y) => new Vector3(x, y, zs);
+            Vector3 N(float x, float y) => new Vector3(x, y, zn);
+            r.AloitaOsa();
+            r.NelioUlos(S(xa, 0f), S(xb, 0f), S(xb, h), S(xa, h), Vector3.forward, BbArkadi);   // kuoren eteläpinta pohjoiseen päin
+            r.NelioUlos(N(xa, 0f), N(xb, 0f), N(xb, h), N(xa, h), Vector3.forward, BbArkadi);
+            r.NelioUlos(S(xa, 0f), N(xa, 0f), N(xa, h), S(xa, h), Vector3.left, BbArkadi);
+            r.NelioUlos(S(xb, 0f), N(xb, 0f), N(xb, h), S(xb, h), Vector3.right, BbArkadi);
+            r.NelioUlos(S(xa, h), S(xb, h), N(xb, h), N(xa, h), Vector3.up, BbKivireuna);
+            r.LopetaOsa();
+            // Pilarit (täysi korkeus) aukkojen välissä ja päissä.
+            float edellinen = xa;
+            for (int i = 0; i <= 4; i++)
+            {
+                float xs = i < 4 ? -0.0675f + i * 0.045f - aw : xb;
+                r.NelioUlos(S(edellinen, 0f), S(xs, 0f), S(xs, h), S(edellinen, h), Vector3.back, BbArkadi);
+                if (i < 4) edellinen = xs + 2f * aw;
+            }
+            // Kaarien yläpuoliset kentät (kaari kolmena lohkona kuten Colosseumin aukoissa) ja galleria aukkojen takana.
+            for (int i = 0; i < 4; i++)
+            {
+                float xc = -0.0675f + i * 0.045f;
+                Vector3 A(int j) { float f = j * Mathf.PI / 3f; return S(xc + aw * Mathf.Cos(f), ays + aw * Mathf.Sin(f)); }
+                Vector3 TR = S(xc + aw, h), TL = S(xc - aw, h);
+                r.KolmioUlos(A(0), A(1), TR, Vector3.back, BbArkadi);
+                r.KolmioUlos(TR, TL, A(1), Vector3.back, BbArkadi);
+                r.KolmioUlos(A(1), A(2), TL, Vector3.back, BbArkadi);
+                r.KolmioUlos(A(2), A(3), TL, Vector3.back, BbArkadi);
+                var d = Vector3.forward * syv;
+                r.NelioUlos(S(xc - aw, 0f) + d, S(xc + aw, 0f) + d, S(xc + aw, ays + aw) + d, S(xc - aw, ays + aw) + d, Vector3.back, BbAukko);
+                r.NelioUlos(S(xc - aw, 0.0006f), S(xc + aw, 0.0006f), S(xc + aw, 0.0006f) + d, S(xc - aw, 0.0006f) + d, Vector3.up,
+                    Color.Lerp(BbKivireuna, BbAukko, 0.45f));
+            }
+            // Reunalista neljänä kappaleena (kukin alle ääriviivarajan) ja pylväät (puolipylväät pilarien keskellä).
+            var eteen = Vector3.back * 0.0025f;
+            for (int i = 0; i < 4; i++)
+            {
+                float x0 = Mathf.Lerp(xa, xb, i / 4f), x1 = Mathf.Lerp(xa, xb, (i + 1) / 4f);
+                r.NelioUlos(S(x0, h - 0.005f) + eteen, S(x1, h - 0.005f) + eteen, S(x1, h) + eteen, S(x0, h) + eteen, Vector3.back, BbKivireuna);
+                r.NelioUlos(S(x0, h) + eteen, S(x1, h) + eteen, S(x1, h), S(x0, h), Vector3.up, BbKivireuna);
+            }
+            for (int i = 0; i <= 4; i++)
+            {
+                float x = -0.09f + i * 0.045f;
+                r.NelioUlos(S(x - 0.0022f, 0f) + Vector3.back * 0.0015f, S(x + 0.0022f, 0f) + Vector3.back * 0.0015f,
+                    S(x + 0.0022f, h - 0.005f) + Vector3.back * 0.0015f, S(x - 0.0022f, h - 0.005f) + Vector3.back * 0.0015f, Vector3.back, BbKivireuna);
+            }
+        }
+
+        /// <summary>
+        /// Lähitason kanava: rungon vesi ja rantamuurit samana ääriviivaosana, pohjoisrannan vesipinnassa vaalea reunakivi ja
+        /// länsipäässä portaat veteen (veneen kääntöympyrän ulkopuolella); rannoilla pollarit (pienet, ei ääriviivaa).
+        /// </summary>
+        static void BbLhKanava(Rakentaja r)
+        {
+            float z0 = BbKanavaZ - BbKanavaPuoli, z1 = BbKanavaZ + BbKanavaPuoli;
+            r.AloitaOsa();
+            r.NelioUlos(new Vector3(-0.5f, BbVesiY, z0), new Vector3(0.5f, BbVesiY, z0), new Vector3(0.5f, BbVesiY, z1), new Vector3(-0.5f, BbVesiY, z1),
+                Vector3.up, EmVesi);
+            r.Laatikko(new Vector3(0f, 0f, z0 - BbRantaLeveys * 0.5f), new Vector3(1f, BbRantaY, BbRantaLeveys), EmKivi, EmKiviVaalea);
+            r.Laatikko(new Vector3(0f, 0f, z1 + BbRantaLeveys * 0.5f), new Vector3(1f, BbRantaY, BbRantaLeveys), EmKivi, EmKiviVaalea);
+            // Reunakivi pohjoisrannan vesipinnan yläreunassa (kameraa kohti): ulkoneva vaalea kaista.
+            float zr = z1 - 0.0015f, yr = BbRantaY - 0.0035f;
+            r.NelioUlos(new Vector3(-0.5f, yr, zr), new Vector3(0.5f, yr, zr), new Vector3(0.5f, BbRantaY, zr), new Vector3(-0.5f, BbRantaY, zr), Vector3.back,
+                EmKiviVaalea);
+            r.NelioUlos(new Vector3(-0.5f, BbRantaY, zr), new Vector3(0.5f, BbRantaY, zr), new Vector3(0.5f, BbRantaY, z1), new Vector3(-0.5f, BbRantaY, z1),
+                Vector3.up, EmKiviVaalea);
+            // Portaat veteen pohjoisrannan länsipäässä (laskevat länteen rantamuurin viertä).
+            for (int k = 0; k < 3; k++)
+                r.Laatikko(new Vector3(-0.444f - k * 0.009f, BbVesiY - 0.001f, z1 - 0.0045f),
+                    new Vector3(0.009f, BbRantaY - BbVesiY + 0.001f - 0.0025f * (k + 1), 0.009f), EmKivi, EmKiviVaalea);
+            r.LopetaOsa();
+            // Pollarit rantamuurien harjalla (veneen laituri länsipäässä ja kadunvarsi).
+            foreach (var (x, z) in new[] { (-0.425f, z0 - 0.006f), (-0.3f, z0 - 0.006f), (0.03f, z0 - 0.006f), (0.29f, z0 - 0.006f),
+                (-0.41f, z1 + 0.006f), (-0.07f, z1 + 0.006f), (0.22f, z1 + 0.006f) })
+                r.Laatikko(new Vector3(x, BbRantaY, z), new Vector3(0.0045f, 0.0085f, 0.0045f), BbLhPollari, BbLhPollari);
+            // Väreily: muutama vaalea vaakaviiru avovedellä rantojen tuntumassa (veneen reitin ja joutsenten ulkopuolella; vana
+            // piirtyy niiden päälle).
+            var vire = Color.Lerp(EmVesi, EmVaahto, 0.45f);
+            foreach (var (x, z, l) in new[] { (-0.31f, z0 + 0.012f, 0.05f), (-0.06f, z0 + 0.009f, 0.04f), (0.17f, z0 + 0.013f, 0.055f),
+                (0.39f, z0 + 0.01f, 0.04f), (-0.13f, z1 - 0.011f, 0.045f), (0.03f, z1 - 0.014f, 0.035f), (0.32f, z1 - 0.012f, 0.05f) })
+                r.NelioUlos(new Vector3(x - l * 0.5f, BbVesiY + 0.0003f, z - 0.0012f), new Vector3(x + l * 0.5f, BbVesiY + 0.0003f, z - 0.0012f),
+                    new Vector3(x + l * 0.5f, BbVesiY + 0.0003f, z + 0.0012f), new Vector3(x - l * 0.5f, BbVesiY + 0.0003f, z + 0.0012f), Vector3.up, vire);
+            // Kanavalyhdyt eteläisellä rantamuurilla sillan molemmin puolin: ohut pylväs ja tumma lyhty.
+            foreach (float x in new[] { BbSiltaX - 0.045f, BbSiltaX + 0.045f })
+            {
+                var q = new Vector3(x, BbRantaY, z0 - 0.006f);
+                r.Pylvas(q, 0.0018f, 0.03f, 4, BbLhPollari);
+                r.Timantti(q + Vector3.up * 0.0335f, 0.0045f, 0.0045f, BbLhPollari, 4);
+            }
+        }
+
+        /// <summary>Nepomukin patsas Nepomucenusbrugin itäkaiteella sillan laella: jalusta, kapeneva hahmo ja pää (pienet, ei
+        /// ääriviivaa).</summary>
+        static void BbLhNepomuk(Rakentaja r)
+        {
+            var p = new Vector3(BbSiltaX + BbSiltaLeveys * 0.5f - 0.004f, 0.034f + 0.012f, BbKanavaZ);
+            r.Laatikko(p, new Vector3(0.009f, 0.007f, 0.011f), EmKiviVaalea, EmKiviVaalea);
+            var hahmo = Color.Lerp(EmKivi, EmSeepia, 0.35f);
+            r.Vaippa(p + Vector3.up * 0.007f, 0.0036f, 0.0024f, 0.016f, 6, hahmo);
+            r.Timantti(p + Vector3.up * 0.0262f, 0.0028f, 0.0034f, hahmo, 4);
+        }
+
+        /// <summary>
+        /// Lähitason porraspäätytalo: rungon talon massat (runko, harjakatto, takapääty ja kolme askelmaa) samana ääriviivaosana
+        /// ja listakivi päädyn juurella; julkisivussa kaksi spaarveld-syvennystä (Bruggen tiilijulkisivun tunnusmerkki), niissä
+        /// ristikkoikkunat kahdessa kerroksessa, päädyssä ristikkoikkuna ja ylimpänä luukku; harjan takaosassa savupiippu.
+        /// </summary>
+        static void BbLhTalo(Rakentaja r, Vector3 p, float leveys, float syvyys, float h, float paaty, Color seina, int nro)
+        {
+            const int askelmia = 3;
+            const float paksuus = 0.012f;
+            float x = leveys * 0.5f, zt = p.z + syvyys;
+            r.AloitaOsa();
+            r.Laatikko(p + Vector3.forward * (syvyys * 0.5f), new Vector3(leveys, h, syvyys), seina, seina);
+            float hr = paaty * (askelmia - 0.5f) / askelmia;
+            float z0 = p.z + paksuus;
+            Vector3 eL0 = new Vector3(p.x - x, h, z0), eL1 = new Vector3(p.x - x, h, zt), eR0 = new Vector3(p.x + x, h, z0), eR1 = new Vector3(p.x + x, h, zt);
+            Vector3 hj0 = new Vector3(p.x, h + hr, z0), hj1 = new Vector3(p.x, h + hr, zt);
+            var keski = new Vector3(p.x, h + hr * 0.3f, (z0 + zt) * 0.5f);
+            BbLape(r, eL1, eL0, hj0, hj1, keski, BbTaloKatto, BbTaloRaystas, 0.2f);
+            BbLape(r, eR0, eR1, hj1, hj0, keski, BbTaloKatto, BbTaloRaystas, 0.2f);
+            r.KolmioKeskelta(eL1, eR1, hj1, keski, seina);
+            for (int k = 0; k < askelmia; k++)
+            {
+                float w = leveys * (1f - k / (float)askelmia) - (k > 0 ? 0.004f : 0f);
+                r.Laatikko(new Vector3(p.x, h + k * paaty / askelmia, p.z + paksuus * 0.5f), new Vector3(w, paaty / askelmia, paksuus), seina, BbKivireuna);
+            }
+            // Listakivi päädyn juurella (julkisivun levyinen, ulkoneva).
+            float zl = p.z - 0.002f;
+            r.NelioUlos(new Vector3(p.x - x, h - 0.005f, zl), new Vector3(p.x + x, h - 0.005f, zl), new Vector3(p.x + x, h, zl), new Vector3(p.x - x, h, zl),
+                Vector3.back, BbKivireuna);
+            r.NelioUlos(new Vector3(p.x - x, h, zl), new Vector3(p.x + x, h, zl), new Vector3(p.x + x, h, p.z), new Vector3(p.x - x, h, p.z), Vector3.up, BbKivireuna);
+            // Kivisokkeli julkisivun juurella rantamuurin päällä.
+            r.NelioUlos(new Vector3(p.x - x, 0f, p.z - 0.0008f), new Vector3(p.x + x, 0f, p.z - 0.0008f), new Vector3(p.x + x, 0.0055f, p.z - 0.0008f),
+                new Vector3(p.x - x, 0.0055f, p.z - 0.0008f), Vector3.back, BbKivireuna);
+            r.LopetaOsa();
+            // Spaarvelden: kaksi suippokaarista syvennystä maasta listakiven alle, ikkunasarakkeiden kohdalla.
+            var syvennys = BbLhSyvennys(seina);
+            foreach (float s in new[] { -1f, 1f })
+                BbLhAukkoMuoto(r, new Vector3(p.x + s * x * 0.45f, 0.006f, p.z - 0.0006f), Vector3.back, leveys * 0.3f, h - 0.012f, syvennys);
+            // Ristikkoikkunat: yläkerta rungon paikoilla, alakerta, päätyikkuna ja luukku ylimmällä askelmalla.
+            foreach (float s in new[] { -1f, 1f })
+            {
+                BbLhRistikkoikkuna(r, new Vector3(p.x + s * x * 0.45f, h * 0.62f, p.z), leveys * 0.22f, h * 0.26f);
+                BbLhRistikkoikkuna(r, new Vector3(p.x + s * x * 0.45f, h * 0.27f, p.z), leveys * 0.22f, h * 0.24f);
+            }
+            BbLhRistikkoikkuna(r, new Vector3(p.x, h + paaty * 0.3f, p.z), leveys * 0.18f, paaty * 0.3f);
+            r.Laatta(new Vector3(p.x, h + paaty * 0.76f, p.z), Vector3.back, leveys * 0.09f, paaty * 0.15f, BbAukko);
+            // Savupiippu harjan takaosassa (tumma hormi ylhäällä).
+            float sx = (nro % 2 == 0 ? 1f : -1f) * x * 0.35f;
+            float yk = h + hr * (1f - Mathf.Abs(sx) / x) - 0.009f;
+            r.Laatikko(new Vector3(p.x + sx, yk, p.z + syvyys * 0.72f), new Vector3(0.0085f, h + hr + 0.013f - yk, 0.0085f), seina, BbAukko);
+        }
+
+        /// <summary>Suippokaaren muotoinen pinta (spaarveld-syvennys) ilman kehystä: sama muoto kuin BbLhAukko laji 4 omalla
+        /// värillään. 6 kolmiota.</summary>
+        static void BbLhAukkoMuoto(Rakentaja r, Vector3 p, Vector3 ulos, float lev, float kork, Color vari)
+        {
+            var n = new Vector3(ulos.x, 0f, ulos.z).normalized;
+            var t = Vector3.Cross(Vector3.up, n);
+            float w = lev * 0.5f, ka = Mathf.Min(lev * 0.866f, kork * 0.6f), sy = ka / (lev * 0.866f), ys = kork - ka;
+            Vector3 P(float xx, float y) => p + t * xx + Vector3.up * y;
+            Vector3 K(float puoli, float th) => P(puoli * (lev * Mathf.Cos(th) - w), ys + lev * Mathf.Sin(th) * sy);
+            r.NelioUlos(P(-w, 0f), P(w, 0f), P(w, ys), P(-w, ys), n, vari);
+            var M = P(0f, ys);
+            foreach (float puoli in new[] { -1f, 1f })
+                for (int k = 0; k < 2; k++)
+                    r.KolmioUlos(M, K(puoli, Mathf.PI / 6f * k), K(puoli, Mathf.PI / 6f * (k + 1)), n, vari);
+        }
+
+        /// <summary>Flaamilainen ristikkoikkuna julkisivussa (etelä): tumma ruutu 0,0015 ja vaalea pysty- ja välipuite 0,0021 pinnan
+        /// edessä; keskipiste p julkisivun tasossa. 6 kolmiota.</summary>
+        static void BbLhRistikkoikkuna(Rakentaja r, Vector3 p, float lev, float kork)
+        {
+            r.Laatta(p, Vector3.back, lev, kork, BbAukko);
+            var q = p + Vector3.back * 0.0021f;
+            float m = 0.0014f, w = lev * 0.5f, yt = kork * 0.12f;
+            r.NelioUlos(q + new Vector3(-m, -kork * 0.5f, 0f), q + new Vector3(m, -kork * 0.5f, 0f), q + new Vector3(m, kork * 0.5f, 0f), q + new Vector3(-m, kork * 0.5f, 0f),
+                Vector3.back, BbKivireuna);
+            r.NelioUlos(q + new Vector3(-w, yt - m, 0f), q + new Vector3(w, yt - m, 0f), q + new Vector3(w, yt + m, 0f), q + new Vector3(-w, yt + m, 0f),
+                Vector3.back, BbKivireuna);
+        }
+
         // ---- Liikkuvat osat ----
 
         /// <summary>
@@ -571,6 +1208,6 @@ namespace Matkakirja
         }
 
         static readonly bool bruggenKellotorni = Rekisteroi("brugge-belfry",
-            new Erikoismalli { Runko = BruggenKellotorniRunko, Osat = BruggenKellotorniOsat, Kolmiot0 = 1043, KokoKerroin = 1.5f });
+            new Erikoismalli { Runko = BruggenKellotorniRunko, Osat = BruggenKellotorniOsat, Lahi = BruggenKellotorniLahi, Kolmiot0 = 1043, KokoKerroin = 1.5f });
     }
 }
