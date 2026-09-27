@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pelikatalogi — Matkakirja</title>
+<meta name="robots" content="noindex">
+<!-- Lähde: docs/pelikatalogi.md → pelikatalogi-data.js (tools/tee-pelikatalogi-data.mjs). Pages kopioi tämän (pages.yml). -->
+<!-- Ulkoasu linssikatalogi.html:n mallilla (omistaja 27.9.2026: pelit yhtä merkittäviä kuin linssit, oma sivu samalla mallilla). -->
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap">
+<style>
+  :root {
+    --paperi: #efe6d2;
+    --paperi-tumma: #e3d7bc;
+    --paperi-kortti: #f6efe0;
+    --muste: #2b241b;
+    --muste-haalea: #6b5f4d;
+    --seepia: #8a5a2b;
+    --sininen: #3f5a7a;
+    --kulta: #b8892f;
+    --vihrea: #5f6b4a;
+    --terrakotta: #a0522d;
+    --turkoosi: #3f7a72;
+    --violetti: #6a4f8a;
+    --ruusu: #a14b6e;
+    --hiekka: #7a6a4a;
+    --harmaasininen: #5c6b78;
+    --viiva: #c9bb9c;
+    --varjo: rgba(43, 36, 27, .14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paperi: #1f1a14;
+      --paperi-tumma: #2a241b;
+      --paperi-kortti: #2a241a;
+      --muste: #ebe0c8;
+      --muste-haalea: #a99d86;
+      --seepia: #d2a06a;
+      --sininen: #9fb6cf;
+      --kulta: #d9b25a;
+      --vihrea: #a4b087;
+      --terrakotta: #d88a5c;
+      --turkoosi: #8fc2b8;
+      --violetti: #b39ddb;
+      --ruusu: #d98cae;
+      --hiekka: #c4b48a;
+      --harmaasininen: #93a3ae;
+      --viiva: #4a4034;
+      --varjo: rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paperi: #1f1a14;
+    --paperi-tumma: #2a241b;
+    --paperi-kortti: #2a241a;
+    --muste: #ebe0c8;
+    --muste-haalea: #a99d86;
+    --seepia: #d2a06a;
+    --sininen: #9fb6cf;
+    --kulta: #d9b25a;
+    --vihrea: #a4b087;
+    --terrakotta: #d88a5c;
+    --turkoosi: #8fc2b8;
+    --violetti: #b39ddb;
+    --ruusu: #d98cae;
+    --hiekka: #c4b48a;
+    --harmaasininen: #93a3ae;
+    --viiva: #4a4034;
+    --varjo: rgba(0, 0, 0, .35);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paperi);
+    color: var(--muste);
+    font-family: Vollkorn, Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .mono { font-family: "Special Elite", "Courier New", monospace; }
+  .sivu { max-width: 1180px; margin: 0 auto; padding: 40px 24px 80px; }
+  a { color: inherit; }
+
+  /* --- Otsake --- */
+  header.otsake { display: grid; gap: 10px; padding-bottom: 26px; border-bottom: 2px solid var(--muste); margin-bottom: 32px; }
+  .yla { font-family: "Special Elite", monospace; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--seepia); }
+  h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1; margin: 0; font-weight: 700; letter-spacing: -.01em; text-wrap: balance; }
+  .johdanto { max-width: 62ch; font-size: 18px; color: var(--muste-haalea); margin: 2px 0 6px; }
+  .luvut { display: flex; flex-wrap: wrap; gap: 22px 30px; margin-top: 10px; }
+  .luvut div { font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--muste-haalea); }
+  .luvut b { display: block; font-family: Vollkorn, serif; font-size: 30px; font-weight: 700; letter-spacing: 0; color: var(--muste); font-variant-numeric: tabular-nums; margin-bottom: 2px; }
+  .luvut .erittely { display: block; font-family: Vollkorn, serif; text-transform: none; letter-spacing: 0; font-size: 12.5px; font-style: italic; color: var(--muste-haalea); margin-top: 3px; }
+
+  h2.otsikko { font-size: 15px; margin: 0 0 16px; font-family: "Special Elite", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--seepia); display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  h2.otsikko .selite { font-family: Vollkorn, serif; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--muste-haalea); font-style: italic; }
+  section.lohko { margin: 46px 0; }
+  section.lohko:first-child { margin-top: 0; }
+
+  /* --- Välilehdet --- */
+  .valilehdet { display: flex; gap: 22px; border-bottom: 2px solid var(--muste); margin: 0 0 36px; overflow-x: auto; }
+  .valilehti-nappi {
+    font: 13px "Special Elite", monospace; letter-spacing: .06em; text-transform: uppercase;
+    background: transparent; border: none; border-bottom: 3px solid transparent; margin-bottom: -2px;
+    padding: 10px 2px; cursor: pointer; color: var(--muste-haalea); white-space: nowrap;
+  }
+  .valilehti-nappi:hover { color: var(--muste); }
+  .valilehti-nappi[aria-selected="true"] { color: var(--muste); border-bottom-color: var(--seepia); }
+  .valilehti-nappi:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  .valilehti-nappi .lyhyt { display: none; }
+  .valilehti[hidden] { display: none; }
+  @media (max-width: 480px) {
+    .valilehdet { gap: 4vw; }
+    .valilehti-nappi { font-size: 11.5px; padding: 8px 0; }
+    .valilehti-nappi .pitka { display: none; }
+    .valilehti-nappi .lyhyt { display: inline; }
+  }
+
+  /* --- Osakortit (linssikatalogin moottorikorttien malli) --- */
+  .osat { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .osa { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 16px; display: grid; gap: 8px; align-content: start; }
+  .osa-nro { width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--vari); color: var(--vari); display: flex; align-items: center; justify-content: center; font: 14px "Special Elite", monospace; }
+  .osa b { font-size: 15.5px; font-weight: 700; line-height: 1.3; }
+  .osa p { margin: 0; font-size: 13.5px; color: var(--muste-haalea); line-height: 1.4; }
+  .osa .badge { font: 10px "Special Elite", monospace; letter-spacing: .05em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; width: fit-content; line-height: 1; background: var(--paperi-tumma); color: var(--muste-haalea); }
+  .osa details { font-size: 13px; color: var(--muste-haalea); }
+  .osa summary { font: 11px "Special Elite", monospace; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+  .osa details p { margin-top: 6px; font-size: 13px; }
+  .osa-nappi { font: 11px "Special Elite", monospace; letter-spacing: .05em; background: transparent; border: 1px solid var(--viiva); border-radius: 999px; padding: 5px 11px; cursor: pointer; color: var(--muste); justify-self: start; margin-top: 2px; }
+  .osa-nappi:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+
+  .selite-lista { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .selite-lista div { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 14px 16px; }
+  .selite-lista p { margin: 6px 0 0; font-size: 14px; color: var(--muste-haalea); }
+
+  /* --- Ensimmäiset 10 (linssikatalogin Seuraavat-kaistan malli) --- */
+  .seuraavat-ruudukko { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; padding: 4px 2px 14px; }
+  .sk-kortti { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 12px; display: grid; gap: 6px; align-content: start; cursor: pointer; transition: box-shadow .15s; }
+  .sk-kortti:hover { box-shadow: 0 3px 14px var(--varjo); }
+  .sk-ylarivi { display: flex; align-items: center; justify-content: space-between; }
+  .sk-numero { font: 12px "Special Elite", monospace; color: var(--seepia); }
+  .sk-ikoni { width: 26px; height: 26px; color: var(--vari, var(--muste-haalea)); }
+  .sk-ikoni svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .sk-nimi { font-size: 16px; font-weight: 700; line-height: 1.25; }
+  .sk-kaari { font: 11.5px "Special Elite", monospace; color: var(--muste-haalea); letter-spacing: .03em; }
+  .sk-perustelu { font-size: 13px; color: var(--muste-haalea); margin: 0; line-height: 1.4; }
+
+  /* --- Suodattimet --- */
+  nav.suodatin { position: sticky; top: 0; z-index: 5; background: var(--paperi); border-bottom: 1px solid var(--viiva); padding: 12px 0; margin-bottom: 28px; display: grid; gap: 10px; }
+  .suodatin-rivi { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .suodatin-rivi > div { display: flex; flex-wrap: wrap; gap: 6px; flex: 0 1 auto; min-width: 0; }
+  #osasuodatin { flex: 1 1 0; }
+  .suodatin-rivi .otsikkopieni { font: 11px "Special Elite", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muste-haalea); margin-right: 4px; min-width: 62px; }
+  nav.suodatin button.lippu { font: 12.5px "Special Elite", monospace; letter-spacing: .05em; color: var(--muste); background: transparent; border: 1px solid var(--viiva); border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+  nav.suodatin button.lippu[aria-pressed="true"] { background: var(--muste); color: var(--paperi); border-color: var(--muste); }
+  nav.suodatin button.lippu:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  .haku { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .haku input[type="search"], .haku select { font: 14px Vollkorn, serif; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 7px 14px; color: var(--muste); }
+  .haku input[type="search"] { min-width: 260px; }
+  .osuma-maara { font: 12.5px "Special Elite", monospace; color: var(--muste-haalea); margin-left: auto; white-space: nowrap; }
+
+  /* --- Ruudukko ja pelikortit --- */
+  .osa-lohko { margin-bottom: 38px; }
+  .osa-lohko[hidden] { display: none; }
+  .osa-lohko h3 { display: flex; align-items: center; gap: 10px; font-size: 20px; margin: 0 0 12px; }
+  .osa-lohko h3 .osa-nro { width: 26px; height: 26px; font-size: 12.5px; flex: none; }
+  .osa-lohko h3 .maara { font: 13px "Special Elite", monospace; color: var(--muste-haalea); font-weight: 400; }
+  .ruudukko { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .kortti { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; overflow: hidden; transition: box-shadow .15s; scroll-margin-top: 190px; }
+  .kortti:hover { box-shadow: 0 3px 14px var(--varjo); }
+  .kortti[hidden] { display: none; }
+  .kortti.korostus { box-shadow: 0 0 0 2px var(--kulta), 0 3px 14px var(--varjo); }
+  .k-nauha { height: 6px; background: var(--vari, var(--seepia)); opacity: .85; }
+  .k-body { padding: 12px 14px 14px; display: grid; gap: 6px; }
+  .k-ylarivi { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .k-tunnus { font: 11.5px "Special Elite", monospace; color: var(--seepia); }
+  .k-oikeus { font: 10px "Special Elite", monospace; letter-spacing: .05em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; line-height: 1; white-space: nowrap; }
+  .k-oikeus.suora { background: var(--vihrea); color: var(--paperi); }
+  .k-oikeus.oma { background: var(--terrakotta); color: var(--paperi); }
+  .k-nimi { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.25; }
+  .k-meta { font-size: 12.5px; color: var(--muste-haalea); margin: -3px 0 0; }
+  .k-saanto { font-size: 14px; margin: 2px 0 0; line-height: 1.45; }
+  .k-opitaan { font-size: 13px; font-style: italic; color: var(--muste-haalea); margin: 0; }
+  .k-tiedot { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; margin: 4px 0 0; font-size: 12.5px; line-height: 1.4; }
+  .k-tiedot dt { font: 10.5px "Special Elite", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--muste-haalea); padding-top: 2px; white-space: nowrap; }
+  .k-tiedot dd { margin: 0; }
+  .k-tiedot dd a { color: var(--sininen); }
+  .k-alarivi { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+  .k-tila-teksti { font: 11px "Special Elite", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--tilavari); }
+  .k-top { font: 10.5px "Special Elite", monospace; letter-spacing: .05em; background: var(--muste); color: var(--paperi); padding: 3px 8px; border-radius: 999px; }
+  .tyhja { font-style: italic; color: var(--muste-haalea); }
+
+  /* --- Omistajan ideat --- */
+  .ideat { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .idea { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+  .idea b { font-size: 17px; }
+  .idea p { margin: 0; font-size: 14px; color: var(--muste-haalea); }
+
+  @media (max-width: 900px) {
+    .osat { grid-template-columns: 1fr 1fr; }
+    .ruudukko { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .osat, .ruudukko, .selite-lista { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .sivu { padding: 24px 16px 60px; }
+    .luvut { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 22px; }
+    .luvut b { font-size: 24px; }
+    .haku input[type="search"] { min-width: 0; flex: 1 1 100%; }
+    .suodatin-rivi .otsikkopieni { flex: 1 1 100%; }
+    nav.suodatin { position: static; }
+    .kortti { scroll-margin-top: 16px; }
+  }
+
+  /* --- Alatunniste ja napit --- */
+  .alanapit { display: flex; gap: 10px; flex-wrap: wrap; margin: 44px 0 18px; }
+  .alanapit button { font: 12.5px "Special Elite", monospace; letter-spacing: .06em; text-transform: uppercase; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 8px 16px; cursor: pointer; color: var(--muste); }
+  footer { margin-top: 10px; font-family: "Special Elite", monospace; font-size: 12px; letter-spacing: .05em; color: var(--muste-haalea); line-height: 1.7; }
+  .teemakytkin { position: fixed; top: 14px; right: 14px; z-index: 6; font: 12px "Special Elite", monospace; letter-spacing: .07em; text-transform: uppercase; color: var(--muste-haalea); background: var(--paperi-tumma); border: 1px solid var(--viiva); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .teemakytkin:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  @media (max-width: 640px) { .teemakytkin { top: 8px; right: 8px; padding: 5px 10px; } }
+
+  /* --- Tulostus --- */
+  @media print {
+    :root, :root[data-theme] { --paperi: #fff; --paperi-tumma: #f0ede4; --paperi-kortti: #fff; --muste: #111; --muste-haalea: #555; --viiva: #ccc; }
+    body { font-size: 11px; }
+    .teemakytkin, .valilehdet, nav.suodatin, .alanapit, #valilehti-osat, #valilehti-ensimmaiset, #valilehti-ideat { display: none !important; }
+    .valilehti[hidden] { display: block !important; }
+    .ruudukko { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .kortti { break-inside: avoid; border: 1px solid #ccc; }
+    .sivu { max-width: none; padding: 0; }
+    @page { size: A4 landscape; margin: 10mm; }
+  }
+</style>
+
+<button type="button" class="teemakytkin" id="teemakytkin"></button>
+
+<div class="sivu">
+  <header class="otsake">
+    <div class="yla">Matkakirja ja unohdettu aarre · pelikatalogi · <a href="linssikatalogi.html">linssikatalogi →</a></div>
+    <h1>Pelikatalogi</h1>
+    <p class="johdanto">Euroopan perinteiset pelit maittain — korttipelejä, lautapelejä, pihapelejä ja kansanlajeja, joissa opitaan tekemällä. Jokainen peli pelataan matkan varrella joko bottia tai oikeaa kaveria vastaan.</p>
+    <div class="luvut" id="luvut"></div>
+  </header>
+
+  <nav class="valilehdet" aria-label="Katalogin osiot" id="valilehdet">
+    <button type="button" class="valilehti-nappi" data-valilehti="osat">Osat</button>
+    <button type="button" class="valilehti-nappi" data-valilehti="ensimmaiset"><span class="pitka">Ensimmäiset 10</span><span class="lyhyt">10 ensin</span></button>
+    <button type="button" class="valilehti-nappi" data-valilehti="katalogi"><span class="pitka">Koko katalogi</span><span class="lyhyt">Katalogi</span></button>
+    <button type="button" class="valilehti-nappi" data-valilehti="ideat"><span class="pitka">Omistajan ideat</span><span class="lyhyt">Ideat</span></button>
+  </nav>
+
+  <div class="valilehti" id="valilehti-osat">
+    <section class="lohko">
+      <h2 class="otsikko">Kahdeksan osaa <span class="selite">— maittain ryhmiteltynä</span></h2>
+      <div class="osat" id="osat-kortit"></div>
+    </section>
+    <section class="lohko">
+      <h2 class="otsikko">Oikeudet</h2>
+      <div class="selite-lista" id="oikeudet-selite"></div>
+    </section>
+  </div>
+
+  <div class="valilehti" id="valilehti-ensimmaiset">
+    <section class="lohko">
+      <h2 class="otsikko">Ensimmäiset 10 <span class="selite">— ehdotus toteutusjärjestykseksi</span></h2>
+      <div class="seuraavat-ruudukko" id="ensimmaiset-ruudukko"></div>
+    </section>
+  </div>
+
+  <div class="valilehti" id="valilehti-katalogi">
+    <nav class="suodatin" aria-label="Suodata ja hae" id="suodatin">
+      <div class="suodatin-rivi">
+        <span class="otsikkopieni">Osa</span>
+        <div id="osasuodatin"></div>
+      </div>
+      <div class="suodatin-rivi">
+        <span class="otsikkopieni">Oikeudet</span>
+        <div id="oikeussuodatin"></div>
+        <span class="otsikkopieni" style="margin-left:10px">Tila</span>
+        <div id="tilasuodatin"></div>
+      </div>
+      <div class="suodatin-rivi haku">
+        <input type="search" id="tekstihaku" placeholder="Hae nimellä, maalla tai säännöllä…">
+        <select id="maasuodatin" aria-label="Maa"></select>
+        <span class="osuma-maara" id="osumamaara"></span>
+      </div>
+    </nav>
+
+    <section class="lohko">
+      <h2 class="otsikko">Koko katalogi <span class="selite">— kahdeksan maantieteellistä osaa</span></h2>
+      <div id="ruudukko-kaikki"></div>
+    </section>
+
+    <div class="alanapit">
+      <button type="button" id="tulostanappi">Tulosta / PDF</button>
+    </div>
+  </div>
+
+  <div class="valilehti" id="valilehti-ideat">
+    <section class="lohko">
+      <h2 class="otsikko">Omistajan ideat <span class="selite">— pelien ympärille, omistaja lisää rivejä</span></h2>
+      <div class="ideat" id="ideat"></div>
+    </section>
+  </div>
+
+  <footer id="alatunniste"></footer>
+</div>
+
+<script src="pelikatalogi-data.js"></script>
+<script>
+const KATALOGI = window.PELIKATALOGI;
+const PELIT = KATALOGI.pelit;
+const OSAT = KATALOGI.osat;
+
+// Osan väri linssikatalogin paletista (sama järjestys kuin md:n osat 1–8).
+const OSAVARIT = ['var(--sininen)', 'var(--vihrea)', 'var(--terrakotta)', 'var(--hiekka)', 'var(--turkoosi)', 'var(--violetti)', 'var(--ruusu)', 'var(--harmaasininen)'];
+const osaVari = (nro) => OSAVARIT[(nro - 1) % OSAVARIT.length];
+
+const TILAT = {
+  valmis:      { nimi: 'Valmis',      vari: 'var(--vihrea)' },
+  rakenteilla: { nimi: 'Rakenteilla', vari: 'var(--kulta)' },
+  seuraava:    { nimi: 'Seuraava',    vari: 'var(--seepia)' },
+  tarkista:    { nimi: 'Tarkista',    vari: 'var(--terrakotta)' },
+  idea:        { nimi: 'Idea',        vari: 'var(--muste-haalea)' },
+};
+const OIKEUDET = {
+  'SUORA':      { nimi: 'Suora',      luokka: 'suora' },
+  'OMA VERSIO': { nimi: 'Oma versio', luokka: 'oma' },
+};
+
+// Pelityyppien ikonit (Ensimmäiset 10 -taulukon tyyppi-sarake), 0 0 24 24 -ruudukko.
+const IKONIT = {
+  'piha/tarkkuus': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg>',
+  'lauta/strategia': '<svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 12h16M12 4v16M4 4l16 16M20 4 4 20"/></svg>',
+  'lauta/noppa': '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="15" r="1"/><circle cx="12" cy="12" r="1"/></svg>',
+  kortti: '<svg viewBox="0 0 24 24"><rect x="5" y="3" width="11" height="15" rx="1.5"/><path d="M9 7.5h13v13.5H9z" opacity=".55"/></svg>',
+  muu: '<svg viewBox="0 0 24 24"><path d="M9 3v3.3a2 2 0 1 0 4 0V3h3.5a1.5 1.5 0 0 1 1.5 1.5V8h-1.5a2 2 0 1 0 0 4H18v4.5A1.5 1.5 0 0 1 16.5 18H13v-1.5a2 2 0 1 0-4 0V18H5.5A1.5 1.5 0 0 1 4 16.5V13h1.5a2 2 0 1 0 0-4H4V4.5A1.5 1.5 0 0 1 5.5 3H9Z"/></svg>',
+};
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+// md:n **lihavoinnit** näkyviksi (teksti escapoidaan ensin).
+function mdTeksti(s) {
+  return esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+}
+function paivaTeksti(iso) {
+  const [v, k, p] = (iso || '').split('-').map(Number);
+  return iso ? `${p}.${k}.${v}` : '';
+}
+const ENSIMMAISET = new Map(KATALOGI.ensimmaiset10.map((e) => [e.id, e.jarjestys]));
+
+// --- Luvut ---
+const maita = new Set(PELIT.map((p) => p.maa)).size;
+const suoria = PELIT.filter((p) => p.oikeusluokka === 'SUORA').length;
+document.getElementById('luvut').innerHTML = [
+  ['peliä', PELIT.length, `${maita} maata · ${OSAT.length} osaa`],
+  ['suoraan toteutettavia', suoria, `${PELIT.length - suoria} omana versiona`],
+  ['ensimmäisenä', KATALOGI.ensimmaiset10.length, 'ehdotettu järjestys'],
+  ['tarkistettavia', PELIT.filter((p) => p.tila === 'tarkista').length, 'lähde ohut tai muokattava'],
+].map(([nimi, luku, erittely]) => `<div><b>${luku}</b>${nimi}${erittely ? `<span class="erittely">${erittely}</span>` : ''}</div>`).join('');
+
+// --- Osakortit ---
+document.getElementById('osat-kortit').innerHTML = OSAT.map((o) => {
+  const pelit = PELIT.filter((p) => p.osa === o.nro);
+  const omia = pelit.filter((p) => p.oikeusluokka === 'OMA VERSIO').length;
+  const maat = o.maat.map((m) => `${esc(m.nimi)} ${pelit.filter((p) => p.maa === m.iso3).length}`).join(' · ');
+  return `<div class="osa" style="--vari:${osaVari(o.nro)}">
+    <div class="osa-nro">${o.nro}</div>
+    <b>${esc(o.nimi)}</b>
+    <span class="badge">${pelit.length} peliä · ${o.maat.length} maata${omia ? ` · ${omia} oma versio` : ''}</span>
+    <p>${maat}</p>
+    ${o.huomiot ? `<details><summary>Huomiot</summary><p>${mdTeksti(o.huomiot)}</p></details>` : ''}
+    <button type="button" class="osa-nappi" data-osa="${o.nro}">Näytä pelit →</button>
+  </div>`;
+}).join('');
+document.getElementById('osat-kortit').addEventListener('click', (ev) => {
+  const b = ev.target.closest('.osa-nappi');
+  if (!b) return;
+  asetaSuodin(osaAktiivi, [b.dataset.osa], 'osasuodatin');
+  location.hash = 'katalogi';
+  aktivoiValilehti('katalogi');
+  window.scrollTo(0, 0);
+});
+
+document.getElementById('oikeudet-selite').innerHTML = Object.entries(KATALOGI.oikeudetSelite).map(([avain, teksti]) => {
+  const maara = PELIT.filter((p) => p.oikeusluokka === avain).length;
+  return `<div><span class="k-oikeus ${OIKEUDET[avain]?.luokka || ''}">${esc(avain)}</span> <span class="mono" style="font-size:12px;color:var(--muste-haalea)">${maara} peliä</span><p>${esc(teksti)}</p></div>`;
+}).join('');
+
+// --- Ensimmäiset 10 ---
+document.getElementById('ensimmaiset-ruudukko').innerHTML = KATALOGI.ensimmaiset10.map((e) => {
+  const p = PELIT.find((x) => x.id === e.id);
+  return `<div class="sk-kortti" data-id="${esc(e.id)}" style="--vari:${osaVari(p ? p.osa : 1)}" role="button" tabindex="0">
+    <div class="sk-ylarivi"><span class="sk-numero">#${e.jarjestys}</span><span class="sk-ikoni" title="${esc(e.tyyppi)}">${IKONIT[e.tyyppi] || IKONIT.muu}</span></div>
+    <div class="sk-nimi">${esc(e.peli)}</div>
+    <div class="sk-kaari">${esc(e.id)} · ${esc(p ? p.maaNimi : '')} · ${esc(e.tyyppi)}</div>
+    <p class="sk-perustelu">${esc(e.perustelu)}</p>
+  </div>`;
+}).join('');
+function avaaPeli(id) {
+  // Tyhjennä suodattimet, jotta peli varmasti näkyy.
+  [osaAktiivi, oikeusAktiivi, tilaAktiivi].forEach((s) => s.clear());
+  document.querySelectorAll('nav.suodatin button.lippu').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+  document.getElementById('tekstihaku').value = '';
+  hakuteksti = '';
+  maaValinta.value = '';
+  suodata();
+  location.hash = 'katalogi';
+  aktivoiValilehti('katalogi'); // hashchange tulee vasta myöhemmin; välilehti näkyviin ennen vieritystä
+  const kortti = document.querySelector(`.kortti[data-id="${id}"]`);
+  if (!kortti) return;
+  document.querySelectorAll('.kortti.korostus').forEach((k) => k.classList.remove('korostus'));
+  kortti.classList.add('korostus');
+  requestAnimationFrame(() => kortti.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+}
+const ensimmaisetJuuri = document.getElementById('ensimmaiset-ruudukko');
+ensimmaisetJuuri.addEventListener('click', (ev) => {
+  const k = ev.target.closest('.sk-kortti');
+  if (k) avaaPeli(k.dataset.id);
+});
+ensimmaisetJuuri.addEventListener('keydown', (ev) => {
+  const k = ev.target.closest('.sk-kortti');
+  if (k && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); avaaPeli(k.dataset.id); }
+});
+
+// --- Pelikortit osittain ---
+function korttiHTML(p) {
+  const t = TILAT[p.tila] || TILAT.idea;
+  const o = OIKEUDET[p.oikeusluokka] || { nimi: p.oikeusluokka, luokka: '' };
+  const jarjestys = ENSIMMAISET.get(p.id);
+  const lahde = p.lahdeUrl
+    ? `<a href="${esc(p.lahdeUrl)}" target="_blank" rel="noopener">${esc(p.lahdeNimi)}</a>`
+    : esc(p.lahdeNimi);
+  return `<div class="k-nauha"></div>
+    <div class="k-body">
+      <div class="k-ylarivi">
+        <span class="k-tunnus">${esc(p.id)} · ${esc(p.maaNimi)}</span>
+        <span class="k-oikeus ${o.luokka}">${esc(o.nimi)}</span>
+      </div>
+      <p class="k-nimi">${esc(p.nimi)}</p>
+      ${p.alkuperainen ? `<p class="k-meta">${esc(p.alkuperainen)}</p>` : ''}
+      <p class="k-saanto">${esc(p.saanto)}</p>
+      <p class="k-opitaan">Opitaan: ${esc(p.oppimiskytkos)}</p>
+      <dl class="k-tiedot">
+        <dt>13+</dt><dd>${esc(p.sopivuus13)}</dd>
+        <dt>Vastus</dt><dd>${esc(p.bottiKaveri)}</dd>
+        <dt>Pelissä</dt><dd>${esc(p.pelikytkos)}</dd>
+        <dt>Oikeudet</dt><dd>${esc(p.oikeudet)}</dd>
+        <dt>Lähde</dt><dd>${lahde}</dd>
+      </dl>
+      <div class="k-alarivi">
+        <span class="k-tila-teksti" style="--tilavari:${t.vari}">${t.nimi}</span>
+        ${jarjestys ? `<span class="k-top">Ensimmäiset 10 · #${jarjestys}</span>` : ''}
+      </div>
+    </div>`;
+}
+
+const juuriKaikki = document.getElementById('ruudukko-kaikki');
+for (const o of OSAT) {
+  const pelit = PELIT.filter((p) => p.osa === o.nro);
+  const lohko = document.createElement('div');
+  lohko.className = 'osa-lohko';
+  lohko.dataset.osa = o.nro;
+  lohko.style.setProperty('--vari', osaVari(o.nro));
+  lohko.innerHTML = `<h3><span class="osa-nro">${o.nro}</span>${esc(o.nimi)}<span class="maara">(${pelit.length})</span></h3>
+    <div class="ruudukko"></div>`;
+  juuriKaikki.appendChild(lohko);
+  const ruudukko = lohko.querySelector('.ruudukko');
+  for (const p of pelit) {
+    const d = document.createElement('div');
+    d.className = 'kortti';
+    d.dataset.id = p.id;
+    d.dataset.osa = p.osa;
+    d.dataset.maa = p.maa;
+    d.dataset.oikeus = p.oikeusluokka;
+    d.dataset.tila = p.tila;
+    d.dataset.haku = `${p.id} ${p.nimi} ${p.alkuperainen || ''} ${p.maaNimi} ${p.saanto} ${p.oppimiskytkos} ${p.pelikytkos}`.toLowerCase();
+    d.innerHTML = korttiHTML(p);
+    ruudukko.appendChild(d);
+  }
+}
+juuriKaikki.insertAdjacentHTML('beforeend', '<p class="tyhja" id="ei-osumia" hidden>Ei osumia näillä suodattimilla.</p>');
+
+// --- Suodattimet (osa, oikeudet, tila, maa, haku) ---
+const osaAktiivi = new Set();
+const oikeusAktiivi = new Set();
+const tilaAktiivi = new Set();
+let hakuteksti = '';
+const maaValinta = document.getElementById('maasuodatin');
+
+function lippurivi(kohde, avaimet, nimi, laske, aktiiviSetti) {
+  const juuri = document.getElementById(kohde);
+  juuri.innerHTML = avaimet.map((a) => {
+    const maara = laske(a);
+    return maara > 0 ? `<button type="button" class="lippu" data-avain="${esc(a)}" aria-pressed="false">${esc(nimi(a))} (${maara})</button>` : '';
+  }).join('');
+  juuri.addEventListener('click', (ev) => {
+    const b = ev.target.closest('button');
+    if (!b) return;
+    const avain = b.dataset.avain;
+    if (aktiiviSetti.has(avain)) { aktiiviSetti.delete(avain); b.setAttribute('aria-pressed', 'false'); }
+    else { aktiiviSetti.add(avain); b.setAttribute('aria-pressed', 'true'); }
+    suodata();
+  });
+}
+function asetaSuodin(setti, avaimet, kohde) {
+  setti.clear();
+  avaimet.forEach((a) => setti.add(String(a)));
+  document.querySelectorAll(`#${kohde} button.lippu`).forEach((b) => b.setAttribute('aria-pressed', setti.has(b.dataset.avain) ? 'true' : 'false'));
+  suodata();
+}
+lippurivi('osasuodatin', OSAT.map((o) => String(o.nro)), (a) => OSAT.find((o) => String(o.nro) === a).nimi,
+  (a) => PELIT.filter((p) => String(p.osa) === a).length, osaAktiivi);
+lippurivi('oikeussuodatin', Object.keys(OIKEUDET), (a) => OIKEUDET[a].nimi,
+  (a) => PELIT.filter((p) => p.oikeusluokka === a).length, oikeusAktiivi);
+lippurivi('tilasuodatin', Object.keys(TILAT), (a) => TILAT[a].nimi,
+  (a) => PELIT.filter((p) => p.tila === a).length, tilaAktiivi);
+
+// Maavalitsin: kaikki maat osien järjestyksessä, määrät suluissa.
+maaValinta.innerHTML = `<option value="">Kaikki maat (${maita})</option>` + OSAT.flatMap((o) => o.maat).map((m) =>
+  `<option value="${m.iso3}">${esc(m.nimi)} (${PELIT.filter((p) => p.maa === m.iso3).length})</option>`).join('');
+maaValinta.addEventListener('change', suodata);
+document.getElementById('tekstihaku').addEventListener('input', (ev) => {
+  hakuteksti = ev.target.value.trim().toLowerCase();
+  suodata();
+});
+
+function suodata() {
+  let nakyvia = 0;
+  const maa = maaValinta.value;
+  document.querySelectorAll('.kortti').forEach((k) => {
+    let n = true;
+    if (osaAktiivi.size && !osaAktiivi.has(k.dataset.osa)) n = false;
+    if (oikeusAktiivi.size && !oikeusAktiivi.has(k.dataset.oikeus)) n = false;
+    if (tilaAktiivi.size && !tilaAktiivi.has(k.dataset.tila)) n = false;
+    if (maa && k.dataset.maa !== maa) n = false;
+    if (hakuteksti && !k.dataset.haku.includes(hakuteksti)) n = false;
+    k.hidden = !n;
+    if (n) nakyvia++;
+  });
+  document.querySelectorAll('.osa-lohko').forEach((l) => {
+    l.hidden = !l.querySelector('.kortti:not([hidden])');
+  });
+  document.getElementById('ei-osumia').hidden = nakyvia > 0;
+  document.getElementById('osumamaara').textContent = `${nakyvia} / ${PELIT.length} peliä`;
+}
+suodata();
+
+// --- Omistajan ideat ---
+document.getElementById('ideat').innerHTML = KATALOGI.ideat.length
+  ? KATALOGI.ideat.map((x) => {
+    const t = TILAT[x.tila] || TILAT.idea;
+    return `<div class="idea"><b>${esc(x.idea)}</b><p>${esc(x.kuvaus)}</p><span class="k-tila-teksti" style="--tilavari:${t.vari}">${t.nimi}</span></div>`;
+  }).join('')
+  : '<p class="tyhja">Ei vielä ideoita.</p>';
+
+document.getElementById('alatunniste').innerHTML = `Lähde: <a href="docs/pelikatalogi.md">docs/pelikatalogi.md</a> · päivitetty ${paivaTeksti(KATALOGI.paivitetty)} ·
+  oikeudet: suora, oma versio · tilat: idea, tarkista · <a href="linssikatalogi.html">linssikatalogi</a>`;
+
+// --- Tulostus ---
+document.getElementById('tulostanappi').addEventListener('click', () => window.print());
+
+// --- Teema (sama avain kuin linssikatalogissa) ---
+const TEEMA_AVAIN = 'matkakirja-teema';
+function nykyinenTeema() {
+  return document.documentElement.dataset.theme
+    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+}
+function asetaTeema(teema, tallenna) {
+  if (teema === 'dark' || teema === 'light') document.documentElement.dataset.theme = teema;
+  else delete document.documentElement.dataset.theme;
+  if (tallenna) {
+    try { localStorage.setItem(TEEMA_AVAIN, teema); } catch {}
+  }
+  const kytkin = document.getElementById('teemakytkin');
+  kytkin.textContent = nykyinenTeema() === 'dark' ? 'Päivätila' : 'Yötila';
+}
+try {
+  const tallennettu = localStorage.getItem(TEEMA_AVAIN);
+  if (tallennettu === 'dark' || tallennettu === 'light') asetaTeema(tallennettu, false);
+  else asetaTeema(null, false);
+} catch {
+  asetaTeema(null, false);
+}
+document.getElementById('teemakytkin').addEventListener('click', () => {
+  asetaTeema(nykyinenTeema() === 'dark' ? 'light' : 'dark', true);
+});
+
+// --- Välilehdet ---
+const VALILEHDET = ['osat', 'ensimmaiset', 'katalogi', 'ideat'];
+function nykyinenValilehti() {
+  const hash = (location.hash || '').replace('#', '');
+  return VALILEHDET.includes(hash) ? hash : VALILEHDET[0];
+}
+function aktivoiValilehti(nimi) {
+  VALILEHDET.forEach((v) => {
+    document.getElementById(`valilehti-${v}`).hidden = v !== nimi;
+    document.querySelector(`.valilehti-nappi[data-valilehti="${v}"]`).setAttribute('aria-selected', v === nimi ? 'true' : 'false');
+  });
+}
+document.getElementById('valilehdet').addEventListener('click', (ev) => {
+  const nappi = ev.target.closest('.valilehti-nappi');
+  if (!nappi) return;
+  location.hash = nappi.dataset.valilehti;
+});
+window.addEventListener('hashchange', () => aktivoiValilehti(nykyinenValilehti()));
+aktivoiValilehti(nykyinenValilehti());
+</script>
+</body>
+</html>
