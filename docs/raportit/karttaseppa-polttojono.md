@@ -134,3 +134,17 @@ noin klo 7–8. Vienti ja osoittimen vaihto omistajan kortilla aamulla.
 
 **Levy:** kopiot tehdään ämpärissä, ja `--siivoa` poistaa shardien laatat
 viennin jälkeen, joten paikallisesti tarvitaan alle 10 Gt kerrallaan.
+
+## Tehtävät 28.9. (lopullinen jono Fablelle klo 18 mennessä)
+
+- Kohdat 4–6: koodi ja koepoltot, kuvaparit Fablelle.
+- Laaturaportin 27 PIENTÄ löydöstä käydään läpi, ja jokainen pohjaan vaikuttava
+  lisätään jonoon:
+  - rajan katkoviiva Reinin rinnalla
+  - epävarmat läikät (Valletta, Riika, Pietari)
+  - Oslon saaret (kohta 5)
+- **Étang de Berre:** ei ole GSHHG-tasolla 2 eikä Natural Earthissa
+  (tarkistettu 27.9.). Kolmas lähde (OSM tai HydroLAKES, lisenssi) tarkistetaan
+  28.9.
+- **Beiget maareittiviivat veden yli** (Tejo, Juutinrauma): jos kyse on sillasta
+  tai lautasta, viivat jäävät ja se merkitään tähän. Muuten ne korjataan.
