@@ -8,12 +8,15 @@ samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama kon
 
 ## 1.0.29-kierroksen valmisteltu resepti (Laitetestaaja 27.9.2026 klo 12.0x, ennen buildia)
 
-Tutkittu Explore-agentilla proto-3d/Matkakirja-proto:sta (HEAD master 7788b629 = BUILD 28,
-juna/b13 kärki 962a94cc). **5/7 aihetta on jo juna/b13:ssä** (meri, lähitaso, nostot heti,
-maakuntatäyttö, pulu) — testaa nämä heti kun SHA saapuu. **2/7 aihetta EI VIELÄ mergetty**
-(puhevirta haara pelikoodari/puhevirta b6fc76d7, avauskortti haara natiivi-ui/avauskortti
-11a3c43a, molemmilla oma git worktree käynnissä) — tarkista `git merge-base --is-ancestor`
-kummallekin ennen testausta, jos SHA ei sisällä niitä, ohita ja ilmoita puuttuvaksi.
+Tutkittu Explore-agentilla proto-3d/Matkakirja-proto:sta (HEAD master 7788b629 = BUILD 28).
+**PÄIVITYS (Fable 27.9. klo 12.1x): juna/b13 kärki nyt 918a18f2** — puhevirta (b6fc76d7)
+ON MUKANA (vahvistettu `git merge-base --is-ancestor b6fc76d7 918a18f2`, Puhe.cs-ristiriita
+luennan säätimien kanssa ratkaistu). **Avauskortti (11a3c43a) EI KUULU 1.0.29:ään** (odottaa
+omistajan kuvaparia) — PUDOTETTU reseptistä, ei "ui kaupunki" -rikkovaa muutosta tähän
+kierrokseen. **6/6 jäljellä olevaa aihetta on siis junassa**: meri, lähitaso, nostot heti,
+maakuntatäyttö, pulu, puhevirta. Mahdollinen lisäaihe: lipun suunnan korjaus (lippu ei saa
+kääntyä kun kamera kulkee yli) — jos Natiiviseppä ehtii sen junaan, SHA-viesti kertoo.
+Tarkista silti aina `git merge-base --is-ancestor` juuri saatua SHA:ta vasten ennen kierrosta.
 
 **Meri, 10 lajia (elävät meri-eläimet):**
 ```
@@ -59,24 +62,19 @@ Onnistuminen: Pulun puhe kuuluu VAIKKA `puhe pois` on asetettu (vain kaiutinvipu
 tavallisen kertojan puhe pysyy hiljaisena samalla asetuksella. Ei erillistä uutta debug-komentoa,
 testataan yhdistelemällä olemassa olevia.
 
-**Puhevirta (progressiivinen TTS-striimaus, EI VIELÄ JUNASSA — tarkista ancestor ensin):**
+**Puhevirta (progressiivinen TTS-striimaus, VAHVISTETTU JUNASSA 918a18f2):**
 ```
-echo "puhe virta paalle" > peli-komento.txt   # oletus jo päällä jos haara mukana
+echo "puhe virta paalle" > peli-komento.txt   # oletus jo päällä
 echo "puhe virta pois" > peli-komento.txt     # A/B-vertailu
 ```
-Jos mergattu: onnistuminen on lyhyempi "1. ääni" (ViimeEkaAaniMs) striimatussa versiossa
-verrattuna ei-striimattuun. Jos ei mergattu (`git merge-base --is-ancestor b6fc76d7 <SHA>`
-epäonnistuu), merkitse "ei tässä käännöksessä" äläkä testaa.
+Onnistuminen: lyhyempi "1. ääni" (ViimeEkaAaniMs) striimatussa versiossa verrattuna
+ei-striimattuun. Testaa myös yhdessä pulu/luennan säätimien kanssa (sama Puhe.cs) —
+tarkista ettei kaiutinvipu/lukijan tauko -löydöksiin (1.0.28) tullut regressiota.
 
-**Avauskortti (kaupungin avauskortti, EI VIELÄ JUNASSA — tarkista ancestor ensin, RIKKOVA MUUTOS):**
-```
-echo "ui avauskortti pariisi kartta" > ui-komento.txt
-echo "ui kutsu napauta" > ui-komento.txt
-```
-HUOM RIKKOVA MUUTOS jos haara mukana: vanha `ui kaupunki <id>` ohjaa nyt eri oliota
-(`ui.Liuska`) kuin uusi `ui avauskortti` (`ui.Kaupunkikortti`) — älä olettaa niiden olevan
-sama näkymä. Jos ei mergattu (`git merge-base --is-ancestor 11a3c43a <SHA>` epäonnistuu),
-merkitse "ei tässä käännöksessä" äläkä testaa.
+**Avauskortti — POISTETTU 1.0.29-reseptistä (Fable 27.9. klo 12.1x):** haara
+natiivi-ui/avauskortti (11a3c43a) ei kuulu tähän käännökseen, odottaa omistajan kuvaparia.
+Älä testaa `ui avauskortti`/`ui kutsu` -komentoja tällä kierroksella; `ui kaupunki` toimii
+ennallaan (ei rikkovaa muutosta tässä buildissa).
 
 ## 1.0.28-kierroksen valmisteltu resepti (Fable 27.9.2026 klo 07.2x, ennen buildia)
 
