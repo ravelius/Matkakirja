@@ -161,3 +161,18 @@ test('WebAudio: pysäytetyn lukijan myöhäinen haku ei käynnistä kuuntelua; P
   q.tick(1.2);assert.equal(q.events.length,0);assert.equal(livianKasvopuheenTila().length,1);
   p.pysayta();assert.deepEqual(livianKasvopuheenTila(),[]);
 });
+
+test('Pulun puheenvuoron ramppi: virkkeet puskuriin, 1. pala ~150 mrk, loput isompana (Fable 27.9.)',async t=>{
+  const q=await verkko(t);
+  const s=q.luo({persoona:'pollo',sailio:null,yksiPuheenvuoro:true});
+  const virke=(n)=>`Tämä on virke numero ${n}, ja siinä on hieman sisältöä.`; // ~55 mrk
+  s.lisaa(virke(1));s.lisaa(virke(2));await asettuu();
+  assert.equal(q.pyynnot.length,0,'alle 150 mrk: ei vielä pyyntöä');
+  s.lisaa(virke(3));await asettuu();
+  assert.equal(q.pyynnot.length,1,'150 mrk täynnä: ensimmäinen pala lähtee');
+  assert.ok(q.pyynnot[0].body.teksti.length>=150&&q.pyynnot[0].body.teksti.length<300,q.pyynnot[0].body.teksti);
+  for(let n=4;n<=8;n+=1)s.lisaa(virke(n));
+  s.paata();q.vastaa(0);await asettuu();await asettuu();
+  assert.equal(q.pyynnot.length,2,'loput yhtenä palana, ei virke per pyyntö');
+  assert.match(q.pyynnot[1].body.teksti,/numero 4.*numero 8/);
+});
