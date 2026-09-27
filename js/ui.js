@@ -492,7 +492,7 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
  * kirjoitetaan silti näkyviin samalla kuvateksti + lähde -mallilla
  * kuin muualla pelissä (js/ui.js naytaPostikortti).
  */
-const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
+const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan havainnekuva';
 
 /*
  * SIIRRON KOREOGRAFIAN LUVUT JA KÄYRÄT (STEP_MS, HYPYN_TAUKO_MS,

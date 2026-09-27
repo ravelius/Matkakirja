@@ -227,7 +227,7 @@ test('97 maakuntaa säilyttää Commons-kuvan ja saa vuoden 1873 havainnekuvan',
         new RegExp(`^https://media\\.matkakirja\\.app/karttanostot/20260922/${iso}-[a-z0-9-]+-1873\\.jpg$`),
         `${iso}:${tunnus} havainnekuvan osoite`);
       assert.equal(havainnekuva.lahde, 'Matkakirjan havainnekuva vuodelta 1873');
-      assert.equal(havainnekuva.lisenssi, 'Matkakirjan oma kuvitus');
+      assert.equal(havainnekuva.lisenssi, 'Matkakirjan oma havainnekuva');
       assert.ok(!osoitteet.has(havainnekuva.osoite), `${iso}:${tunnus} havainnekuvan osoite on kahdesti`);
       osoitteet.add(havainnekuva.osoite);
       maara += 1;
