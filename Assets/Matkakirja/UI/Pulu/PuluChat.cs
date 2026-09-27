@@ -414,6 +414,9 @@ namespace Matkakirja.Natiivi
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
                 .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti(HaeAineisto(kysymys))))
                 .Append(",\"kehys\":").Append(PeliApu.Json(Kehys(kysymys, jatko)))
+                // Äänitagit (omistaja 27.9. klo 23.1x): tämä versio siivoaa ne näytöltä (Nakyva), joten worker saa liittää
+                // kehotteeseen tagisäännön; vanhat versiot eivät lähetä kenttää eivätkä saa tageja (web PR #3513).
+                .Append(",\"puhetagit\":1")
                 .Append(",\"historia\":[");
             int alku = Mathf.Max(0, historia.Count - HistoriaKatto);
             for (int i = alku; i < historia.Count; i++)
