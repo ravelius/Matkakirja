@@ -1113,6 +1113,9 @@ export function luoPuheSoitin({
     katkoja: 0,
     // [pala, osa, valmistui (piirin aika), vuoro, soitettiin] — mittaus.
     virtaloki: [],
+    // Ensimmäisen lisäyksen ja ensimmäisen äänen seinäkelloaika (mittari: 1. ääni).
+    ekaLisays: null,
+    ekaAani: null,
   };
   let vuorossa = 0; // seuraavaksi aikataulutettava pala
   let seuraavaAlku = 0; // piirin aika, johon seuraava pala liitetään
@@ -1348,6 +1351,9 @@ export function luoPuheSoitin({
     verho.connect(paate());
     verhot.add(verho);
     aloitusajat[indeksi] = { alku: alkuAika, loppu: Infinity };
+    if (indeksi === 0 && tila.ekaAani == null && typeof performance !== 'undefined') {
+      tila.ekaAani = performance.now() + (alkuAika - piiri.currentTime) * 1000;
+    }
     const soitetut = [];
     let kursori = alkuAika;
     let ensimmainen = true;
@@ -1540,6 +1546,7 @@ export function luoPuheSoitin({
   return {
     lisaa(teksti) {
       if (tila.peruttu || tila.paatetty) return;
+      if (tila.ekaLisays == null && typeof performance !== 'undefined') tila.ekaLisays = performance.now();
       const uudet = pilkoPaloiksi(teksti);
       if (!uudet.length) return;
       palat.push(...uudet);
@@ -1599,7 +1606,26 @@ export function luoPuheSoitin({
     },
     /** Progressiivisen soiton mittari: virran myöhästymiset. */
     mittari() {
-      return { katkoja: tila.katkoja, virta: virtaKaytossa(), loki: tila.virtaloki.slice() };
+      /*
+       * PALAVÄLIT (Fable 27.9.2026: Pulun virtaluennan ramppi — "mittaa
+       * tauko palojen välissä ennen muutosta; tauko ei saa kasvaa"):
+       * hiljaisuus edellisen palan lopusta seuraavan alkuun sekunteina,
+       * suunniteltu väli (VIRKEVALI / KAPPALEVALI) mukaan lukien.
+       */
+      const valit = [];
+      for (let i = 1; i < aloitusajat.length; i += 1) {
+        const a = aloitusajat[i - 1];
+        const b = aloitusajat[i];
+        if (a && b && Number.isFinite(a.loppu)) valit.push(Math.round((b.alku - a.loppu) * 1000) / 1000);
+      }
+      return {
+        katkoja: tila.katkoja,
+        virta: virtaKaytossa(),
+        loki: tila.virtaloki.slice(),
+        palat: palat.map((p) => p.teksti.length),
+        valit,
+        ekaAaniMs: tila.ekaLisays != null && tila.ekaAani != null ? Math.round(tila.ekaAani - tila.ekaLisays) : null,
+      };
     },
     /** Sen hetkinen tila paneelin ensipiirtoa varten. */
     tilanne() {
