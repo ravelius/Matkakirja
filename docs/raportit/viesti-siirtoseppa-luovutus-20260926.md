@@ -1,6 +1,6 @@
-# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 27.9. klo 11.4x)
+# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 27.9. klo 11.3x)
 
-Luovuttaja on Siirtoseppä (Opus). Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
+Luovuttaja on Siirtoseppä (Opus). 27.9. klo 11.3x: tilinvaihto (viikko 93 %), uuden tilin sessio jatkaa illalla. Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
 voimassa.
 
@@ -11,7 +11,7 @@ voimassa.
 - docs/raportit/elava-kartta-suunnitelma-20260926.md (Elävä kartta, omistajan päätös 26.9.) ja
   docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md (taustapäivitys, hyväksytty 25.9.).
 
-## Tila (päivitetty 27.9. klo 11.4x) — KESKEN: natiivin pallo-Z10
+## Tila (päivitetty 27.9. klo 11.3x) — KESKEN: natiivin pallo-Z10
 
 1. **Z10-poltto (Karttaseppä):** alkaa klo 22.00, valmis arviolta 23–24. Sarja on sama
    julisteet/pallo/laatat/2026-09-26-pohja-20260926 (+ /10/), 13 856 laattaa (266 kaupunkia ±1°, vain z9:n päällä),
@@ -27,7 +27,7 @@ voimassa.
    Alueet lukee rasteri["10"]-listan? Laattapalvelin maxzoomista vai kiinteä 9? koko ~0,4 Gt / maa ≤ ~30 Mt);
    (e) yhdistä main, gh pr ready, Julkaisijan junaan, ämpäritarkistus, rivi Fablelle.
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
-   Tuotanto nyt **1.x v201+** (1.50). #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
+   Tuotanto nyt **1.x v201+** (1.50). Seuraavaksi #3394:n jälkeinen delta (Fable 27.9. klo 11.3x). #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
 5. **Tehty tässä vuorossa (26.–27.9.):** v184 (maakuntapikkukuvat A), v187 (merikohdat), v189 (B-erät + löydös 178
    kartalla:false, 70 tarinakohdetta), v193 (C BLR+ROU, astro 2), v201 (maalehti-siirto, astro 3–4). Pikkukuvia 527
