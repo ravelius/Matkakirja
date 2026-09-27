@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 08:30 EEST
+**Päivitetty:** 2026-09-27 08:42 EEST
 
 ## 1) Sessiot
 
-5 h **35 %** (nollautui 05:00 EEST, seur. 12:00 EEST), viikko (all models) 76 %, viikko (Fable) 43 %. **Natiivi-UI nollautui itse (74→10 %).** Sisältökirjuri nousee 68 %. **Postivahti (self) 77 % — luovutus lähestyy voimakkaasti, raportti kirjoitetaan pian.**
+5 h **41 %** (nollautui 05:00 EEST, seur. 12:00 EEST), viikko (all models) 78 %, viikko (Fable) 43 %. Sisältökirjuri 73 % (jo ilmoitettu). **Postivahti (self) 79 % — luovutus lähestyy, raportti kirjoitetaan seuraavalla kierroksella jos ylitän 85 %.**
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 50% | idle | — |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 77% | running | luovutus lähestyy |
-| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 53% | idle | — |
+| Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 51% | idle | — |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 79% | running | luovutus lähestyy |
+| Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 54% | idle | — |
 | Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 63% | idle | — |
-| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 10% | idle | nollautui itse (oli 74 %) |
-| Linssiseppä (Opus, max) | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 31% | idle | — |
-| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 68% | idle | — |
+| Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 10% | idle | — |
+| Linssiseppä (Opus, max) | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 32% | running | — |
+| Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 73% | idle | yli 70 % (raportoitu) |
 | Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 53% | idle | — |
 | Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 65% | idle | — |
-| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 58% | running | — |
+| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 63% | running | — |
 | Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 45% | idle | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle
@@ -50,9 +50,9 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 ## 5) Resurssit
 
 - **5 h -kiintiö:** 17 % (nollautui 00:00, seur. nollaus 05:00 EEST). **Viikko (kaikki mallit):** 59 %. **Viikko (Fable):** 38 %.
-- **Levy:** 137 Gi vapaana (raja 80 Gt — kaukana, vakaa). **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (90 % käytetty, raja 500 Gt vapaana — OK). **wt/-worktreet:** 47 kpl.
-- **Simulaattorit boottina:** 0 (max 4 päivällä — OK). **coreaudiod:** normaali (7,2 % CPU). **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 7 (tunnetusti tarkoituksellisia CI-savukkeita, Julkaisija vahvistanut — ei uutta ilmoitusta).
-- **Konteksti:** Postivahti (self) 77 %, Siirtoseppä 65 %, Sisältökirjuri 68 %, Natiiviseppä 63 %, Pelikoodari 58 %, Laitetestaaja 53 %, Julkaisija 53 %, Fable 50 %, Karttaseppä 45 %, Linssiseppä 31 %, Natiivi-UI 10 % (nollautui itse).
+- **Levy:** 138 Gi vapaana (raja 80 Gt — kaukana, vakaa). **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (90 % käytetty, raja 500 Gt vapaana — OK). **wt/-worktreet:** 48 kpl.
+- **Simulaattorit boottina:** 0 (max 4 päivällä — OK). **coreaudiod:** normaali (6,2 % CPU). **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 6 (tunnetusti tarkoituksellisia CI-savukkeita).
+- **Konteksti:** Postivahti (self) 79 %, Sisältökirjuri 73 %, Siirtoseppä 65 %, Natiiviseppä 63 %, Pelikoodari 63 %, Julkaisija 54 %, Laitetestaaja 53 %, Fable 51 %, Karttaseppä 45 %, Linssiseppä 32 %, Natiivi-UI 10 %.
 - **Juna:** yhä tauolla (Karttasepän Z10-poltto 26.–27.9.) — ei hälytystä, tarkoituksellinen.
 - **Postilaatikko:** ei uutta. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku ~40).
 - **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja tällä kierroksella.
