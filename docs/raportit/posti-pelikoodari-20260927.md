@@ -45,3 +45,9 @@ Julkaisijalle: mittaus valmis, simulaattori sammutettu ja siivottu.
 
 + hintatasot 122 maahan (#3402) ja kultaiset uusittu; 336/336, unity 0. Korvaa 70bebdde:n (merge-pyyntölokin viimeinen osio).
 HAVAINNEKUVA-sääntö (Fable 13.4x): läpikäynti web + natiivi agentilla käynnissä; projektisivulla ei korjattavaa.
+
+## JULKAISIJALLE KIIREELLINEN: korjaus #3414
+
+Main punaisella #3412:n jälkeen → **korjaus #3414**: pelikatalogi-data.js generoitu (22 korttia), testi sallii korttierät
+(≥ 10, järjestys 1..n aukottomina), node --test 4458/0. Docs-PR:issä, jotka muuttavat docs/pelikatalogi.md:tä, pitää ajaa
+`node tools/tee-pelikatalogi-data.mjs` samassa PR:ssä (Fablelle ja Sisältökirjurille tiedoksi).
