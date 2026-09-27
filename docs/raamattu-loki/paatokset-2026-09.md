@@ -8027,3 +8027,7 @@ Omistaja 10.1x: 27.9. kasinkirjoitetut peli-ideat (ruokaraha ja 2 vrk:n loppu, k
 ## LUENNAN SAATIMET PR 3388 (v2311): OMISTAJA — VU INTEGROIDAAN KAIUTTIMEEN KUTEN ISOISAN LUENNASSA (27.9.2026 klo 10.15)
 
 Pelikoodari 10.1x: nostokortin luennan saatimet #3388 (pohjana #3384): kaiutin tauko/jatka vilkkuen, luenta jatkuu samasta palasta, ratas vasemmalla (nopeus 0,6–1,6 + xAI-aani, pois kehittajavalikosta), VU oikealla kolmena kaarena; worker: listan xAI-aani ilman kehittajakoodia (julkaistava); loydos: kaksivaiheisen nostokortin kaiutin jai piiloon → korjattu. Omistaja 10.1x kortilla: VU pitaa integroida kaiuttimeen samalla tavalla kuin isoisan luennassa (kaiuttimen aaniaallot sykkivat), ei erillinen kaari-ikoni → Pelikoodari paivittaa, uusi kuvapari → kortti.
+
+## OMISTAJA 10.1x: SAATORATAS LAHEMMAS KAIUTINTA (#3388), MUUTEN HYVA (27.9.2026 klo 10.16)
+
+Omistaja 10.1x: luennan saatimissa ratas hieman lahemmas kaiutinta; muuten hyva → Pelikoodari samaan paivitykseen VU-integraation kanssa.
