@@ -31,6 +31,9 @@ voimassa.
    kaupunkiMaasto z11–12 50 km; 1.54 mediaKuvat = natiivin koko offline-media (korvaaMedian, kuvat 1024 px/JPEG 75,
    vain puheet, katto 100 Mt/maa), tavuja.offline. Eurooppa ~1,3 Gt (tavoite ~1,2; 960/70 → ~1,1 Gt jos Fable haluaa).
    Natiiviseppä kuittasi, natiivi 1.0.32-junassa bbbfadde. Järjestys #3432 → #3445.
+4b2. **#3479 skeema 1.55** (wt/siirtoseppa-salaisuudet-pois, PINOTTU #3445:n päälle): maakuntasalaisuudet pois (omistaja
+   20.0x, Pelikoodarin pyyntö), skeemasopimus vanhentaa poistettujen kokoelmien ehdot. Julkaistava yhdessä web #3475:n
+   kanssa. Natiiviseppä kuittasi. #3441 eheysvartija MERGETTY 20.13 ja toimii (v247: 3×404 Nouméa).
 4c. **Seuraava (Fable 27.9.):** kun 1.52–1.54 tuotannossa ja 1.0.32 käännetty → päästä päähän offline-testi Tanska +
    Kroatia omalla simulaattorilla F989814A (vuoro Julkaisijalta, booted < 2, sammuta jälkeen): koko ennen latausta ja
    levyllä, lentotila/debug-offline → kartta, maasto, nostokuvat, puheet. Kuvat raporttiin, löydökset rooleille.
