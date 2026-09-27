@@ -1419,13 +1419,13 @@ namespace Matkakirja.Natiivi
         public const float LaivaKokoPt = 280f, ValasKokoPt = 250f;
         public const int Suihkuja = 4;
 
-        static readonly Color Vaahto = new Color(0.96f, 0.94f, 0.88f, 1f);
+        public static readonly Color Vaahto = new Color(0.96f, 0.94f, 0.88f, 1f);
         /// <summary>Suihku kylmän valkoisena, jotta se erottuu vaaleasta merestä (laite 27.9.: vaahdon sävy katosi).</summary>
         static readonly Color SuihkuVari = new Color(0.99f, 1f, 1f, 1f);
         static readonly Color ValasTumma = MalliVarit.Hex(0x39433f), ValasKylki = MalliVarit.Hex(0x4f5b56), ValasVatsa = MalliVarit.Hex(0xd6d2c2);
 
         /// <summary>Toistettava arpa 0–1 ilman allokaatiota (siemen, jakso, kanava).</summary>
-        static float Arpa(int siemen, int n, int k)
+        public static float Arpa(int siemen, int n, int k)
         {
             unchecked
             {
@@ -1435,67 +1435,17 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static float Pehmea(float x) { x = Mathf.Clamp01(x); return x * x * x * (x * (x * 6 - 15) + 10); }
+        public static float Pehmea(float x) { x = Mathf.Clamp01(x); return x * x * x * (x * (x * 6 - 15) + 10); }
 
-        /// <summary>
-        /// Näytösten aikataulu: tauko ja näytös vuorotellen, pituudet siemenestä; ensimmäinen tauko on 3–8 s, jotta näytös alkaa
-        /// pian aiheen tultua näkyviin. Haku jatkuu edellisestä jaksosta (aika kulkee eteenpäin), eikä se allokoi.
-        /// </summary>
-        sealed class Aikataulu
-        {
-            readonly int siemen; readonly float naytosMin, naytosMax, taukoMin, taukoMax;
-            int n, pakotettu = -1; float alku;
-
-            public Aikataulu(int siemen, float naytosMin, float naytosMax, float taukoMin, float taukoMax)
-            {
-                this.siemen = siemen; this.naytosMin = naytosMin; this.naytosMax = naytosMax; this.taukoMin = taukoMin; this.taukoMax = taukoMax;
-            }
-
-            float Tauko(int k) => k == 0 ? 3f + 5f * Arpa(siemen, 0, 0) : Mathf.Lerp(taukoMin, taukoMax, Arpa(siemen, k, 0));
-            float Pituus(int k) => Mathf.Lerp(naytosMin, naytosMax, Arpa(siemen, k, 1));
-            public float Arvo(int k, int kanava) => Arpa(siemen, k, kanava);
-            /// <summary>Harvinainen muunnelma noin joka kymmenennessä näytöksessä (tai pakotettuna komennolla).</summary>
-            public bool Harvinainen(int k) => k == pakotettu || Arpa(siemen, k, 2) < 0.1f;
-
-            /// <summary>Jakso hetkellä t: numero, aika näytöksen alusta (negatiivinen = tauolla) ja näytöksen pituus.</summary>
-            public (int n, float s, float pituus) Kohta(float t)
-            {
-                if (t < alku) { n = 0; alku = 0f; }
-                for (int i = 0; i < 100000; i++)
-                {
-                    float tauko = Tauko(n), pituus = Pituus(n);
-                    if (t < alku + tauko + pituus) return (n, t - alku - tauko, pituus);
-                    alku += tauko + pituus; n++;
-                }
-                return (n, -1f, Pituus(n));
-            }
-
-            /// <summary>Seuraavan näytöksen alku (tauolla tämän jakson, näytöksen aikana seuraavan).</summary>
-            public float SeuraavaAlku(float t)
-            {
-                var (k, s, pituus) = Kohta(t);
-                return s < 0f ? t - s : t - s + pituus + Tauko(k + 1);
-            }
-
-            public void PakotaHarvinainen(float alku) => pakotettu = Kohta(alku + 0.01f).n;
-
-            public string Kuvaus(float t)
-            {
-                var (k, s, pituus) = Kohta(t);
-                return s >= 0f ? $"näytös {k} {s:F1}/{pituus:F0} s{(Harvinainen(k) ? " (harvinainen)" : "")}"
-                    : $"tauko, näytös {k}{(Harvinainen(k) ? " (harvinainen)" : "")} alkaa {-s:F0} s";
-            }
-        }
-
-        static readonly Aikataulu Laivat = new Aikataulu(907, 25f, 40f, 30f, 90f);
-        static readonly Aikataulu Valaat = new Aikataulu(911, 12f, 16f, 60f, 150f);
-        static Aikataulu Hae(string nimi) => nimi == "valas" ? Valaat : Laivat;
+        static readonly MeriAikataulu Laivat = new MeriAikataulu(907, 25f, 40f, 30f, 90f);
+        static readonly MeriAikataulu Valaat = new MeriAikataulu(911, 12f, 16f, 60f, 150f);
+        static MeriAikataulu Hae(string nimi) => nimi == "valas" ? Valaat : Laivat;
         public static float SeuraavaAlku(string nimi, float t) => Hae(nimi).SeuraavaAlku(t);
         public static void PakotaHarvinainen(string nimi, float alku) => Hae(nimi).PakotaHarvinainen(alku);
         public static string Kuvaus(string nimi, float t) => Hae(nimi).Kuvaus(t);
 
         /// <summary>Vaahtonauha: suunnassa kulkeva nelikulmioketju, leveys l0 → l1 ja alfa a0 → a1 (häipyy).</summary>
-        static void Nauha(MalliRakenne r, Vector3 alku, Vector3 suunta, float pituus, float l0, float l1, float a0, float a1, int jaot)
+        public static void Nauha(MalliRakenne r, Vector3 alku, Vector3 suunta, float pituus, float l0, float l1, float a0, float a1, int jaot)
         {
             suunta = suunta.normalized;
             var sivu = Vector3.Cross(Vector3.up, suunta).normalized;
@@ -1747,6 +1697,56 @@ namespace Matkakirja.Natiivi
                 }
                 else pallo.localScale = Vector3.zero;
             }
+        }
+    }
+
+    /// <summary>
+        /// MEREN KORISTEIDEN NÄYTÖSAIKATAULU (kaikki 10 lajia, docs/raportit/meren-koristeanimaatiot-20260926.md). Näytösten aikataulu: tauko ja näytös vuorotellen, pituudet siemenestä; ensimmäinen tauko on 3–8 s, jotta näytös alkaa
+        /// pian aiheen tultua näkyviin. Haku jatkuu edellisestä jaksosta (aika kulkee eteenpäin), eikä se allokoi.
+        /// </summary>
+    public sealed class MeriAikataulu
+    {
+        readonly int siemen; readonly float naytosMin, naytosMax, taukoMin, taukoMax;
+        int n, pakotettu = -1; float alku;
+
+        public MeriAikataulu(int siemen, float naytosMin, float naytosMax, float taukoMin, float taukoMax)
+        {
+            this.siemen = siemen; this.naytosMin = naytosMin; this.naytosMax = naytosMax; this.taukoMin = taukoMin; this.taukoMax = taukoMax;
+        }
+
+        float Tauko(int k) => k == 0 ? 3f + 5f * MeriGeometria.Arpa(siemen, 0, 0) : Mathf.Lerp(taukoMin, taukoMax, MeriGeometria.Arpa(siemen, k, 0));
+        float Pituus(int k) => Mathf.Lerp(naytosMin, naytosMax, MeriGeometria.Arpa(siemen, k, 1));
+        public float Arvo(int k, int kanava) => MeriGeometria.Arpa(siemen, k, kanava);
+        /// <summary>Harvinainen muunnelma noin joka kymmenennessä näytöksessä (tai pakotettuna komennolla).</summary>
+        public bool Harvinainen(int k) => k == pakotettu || MeriGeometria.Arpa(siemen, k, 2) < 0.1f;
+
+        /// <summary>Jakso hetkellä t: numero, aika näytöksen alusta (negatiivinen = tauolla) ja näytöksen pituus.</summary>
+        public (int n, float s, float pituus) Kohta(float t)
+        {
+            if (t < alku) { n = 0; alku = 0f; }
+            for (int i = 0; i < 100000; i++)
+            {
+                float tauko = Tauko(n), pituus = Pituus(n);
+                if (t < alku + tauko + pituus) return (n, t - alku - tauko, pituus);
+                alku += tauko + pituus; n++;
+            }
+            return (n, -1f, Pituus(n));
+        }
+
+        /// <summary>Seuraavan näytöksen alku (tauolla tämän jakson, näytöksen aikana seuraavan).</summary>
+        public float SeuraavaAlku(float t)
+        {
+            var (k, s, pituus) = Kohta(t);
+            return s < 0f ? t - s : t - s + pituus + Tauko(k + 1);
+        }
+
+        public void PakotaHarvinainen(float alku) => pakotettu = Kohta(alku + 0.01f).n;
+
+        public string Kuvaus(float t)
+        {
+            var (k, s, pituus) = Kohta(t);
+            return s >= 0f ? $"näytös {k} {s:F1}/{pituus:F0} s{(Harvinainen(k) ? " (harvinainen)" : "")}"
+                : $"tauko, näytös {k}{(Harvinainen(k) ? " (harvinainen)" : "")} alkaa {-s:F0} s";
         }
     }
 }
