@@ -123,6 +123,13 @@ namespace Matkakirja.Natiivi
             kynnykset.tooltip = "Linssien kynnykset: pois = kaikki linssit auki (kehittäjä).";
             Rakenne.Teksti("Linssien kynnykset", "mk-kytkinrivi__nimi", kynnykset);
             kynnyksetTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", kynnykset);
+            // Pohjakartan sävy (Natiiviseppä, omistajan löydös 27.9. klo 17.2x: maitomaisempi kartta, arvo valitaan laitteella):
+            // vedon aikana kartalle heti, levylle vasta sormen noustessa (Pohjasavy.Aseta tallenna).
+            kontrasti = SavyRivi("Kartan kontrasti", Pohjasavy.KontrastiMin, Pohjasavy.KontrastiMax, true);
+            nosto = SavyRivi("Mustan nosto", Pohjasavy.NostoMin, Pohjasavy.NostoMax, false);
+            var savyNollaus = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Pohjasavy.Aseta(0f, 0f); PaivitaSavy(); }, kokeet, Ikonit.Viiva["paivita"]);
+            savyNollaus.tooltip = "Kartan kontrasti ja mustan nosto oletukseen (0, 0).";
+            Rakenne.Teksti("Kartan sävy oletukseen", "mk-kytkinrivi__nimi", savyNollaus);
             // Striimiääni muutti kehittäjävalikosta nostokortin säätörattaaseen pelinimellä (omistaja 27.9. klo 10.2x,
             // web #3388; KortinLukija, Striimiaani.Pelinimet).
             // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).
@@ -187,6 +194,40 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kokeet;
         Button kynnykset;
         Label kynnyksetTila;
+        (Slider Saadin, Label Arvo) kontrasti, nosto;
+
+        /// <summary>Pohjakartan sävyn liukusäädinrivi kehittäjäosaan (Pohjasavy, Natiiviseppä).</summary>
+        (Slider Saadin, Label Arvo) SavyRivi(string nimi, float min, float max, bool onKontrasti)
+        {
+            var rivi = Rakenne.El("mk-saadinrivi", kokeet);
+            Rakenne.Teksti(nimi, "mk-saadinrivi__nimi", rivi);
+            var s = new Slider(min, max) { pageSize = 0, fill = true };
+            s.AddToClassList("mk-saadin");
+            rivi.Add(s);
+            var arvo = Rakenne.Teksti("", "mk-saadinrivi__arvo", rivi);
+            void Aseta(float v, bool tallenna)
+            {
+                v = Mathf.Round(v * 100f) / 100f;
+                if (onKontrasti) Pohjasavy.Aseta(v, Pohjasavy.Nosto, tallenna);
+                else Pohjasavy.Aseta(Pohjasavy.Kontrasti, v, tallenna);
+                arvo.text = SavyTeksti(v, onKontrasti);
+            }
+            s.RegisterValueChangedCallback(e => Aseta(e.newValue, false));
+            s.RegisterCallback<PointerCaptureOutEvent>(_ => Aseta(s.value, true));
+            return (s, arvo);
+        }
+
+        static string SavyTeksti(float v, bool etumerkki) =>
+            v.ToString(etumerkki ? "+0.00;-0.00;0" : "0.00", System.Globalization.CultureInfo.InvariantCulture).Replace('.', ',');
+
+        void PaivitaSavy()
+        {
+            if (kontrasti.Saadin == null) return;
+            kontrasti.Saadin.SetValueWithoutNotify(Pohjasavy.Kontrasti);
+            kontrasti.Arvo.text = SavyTeksti(Pohjasavy.Kontrasti, true);
+            nosto.Saadin.SetValueWithoutNotify(Pohjasavy.Nosto);
+            nosto.Arvo.text = SavyTeksti(Pohjasavy.Nosto, false);
+        }
         readonly KehittajaIkkuna kehittaja;
         public readonly MitaUutta MitaUutta;
         readonly Label reliefiTila;
@@ -256,6 +297,7 @@ namespace Matkakirja.Natiivi
             DisplayStyle Nayta(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
             bool asetuksia = osa == Osa.Kaikki || osa == Osa.Asetukset;
             kokeet.style.display = Nayta(Asetukset.Kehittaja && osa == Osa.Kehittaja);
+            if (Asetukset.Kehittaja && osa == Osa.Kehittaja) PaivitaSavy();
             aanentasot.style.display = Nayta(osa == Osa.Asetukset);
             if (osa == Osa.Asetukset) Aanentasot.PaivitaSaatimet(saatimet);
             foreach (var e in asetusosat) e.style.display = Nayta(asetuksia);
