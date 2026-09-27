@@ -525,6 +525,12 @@ namespace Matkakirja.Natiivi
                 if (tilanne == "peli.vararikko.varoitus") Pulu.Tunne("vakava", 0.55f);
                 else if (tilanne == "peli.vararikko.selvisi") Pulu.Tunne("lammin", 0.5f);
             });
+            // Pelistreak (talous 5b, web playEvents tilanne 'peli.streak'): sama kupla + Livian ilo.
+            o.Pelistreak += (pituus, otsikko, ala) => UiKerros.PaaSaikeessa(() =>
+            {
+                Leima.Nayta(otsikko, ala, "kukkaro");
+                Pulu.Tunne("ilo", 0.5f);
+            });
             o.MatkaPaattyi += loppu => UiKerros.PaaSaikeessa(() => NaytaMatkanLoppu(o, loppu));
             PaivitaKassa(o);
             if (o.MatkanLoppu != null) NaytaMatkanLoppu(o, o.MatkanLoppu);
