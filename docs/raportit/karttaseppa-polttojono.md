@@ -74,14 +74,37 @@ kuin `2026-09-26-pohja`, ETagit tarkistettu 27.9.) ja pallo
 
 ### 3. Pallon Z10 pyramidin z10:stä
 
-- Nyt pallon Z10 lasketaan pyramidin z9:stä. Mercator venyttää 60 °N:ssa noin
-  kaksinkertaisesti, joten vesi on pohjoisessa pehmeä.
-- **Koodi ja koepoltto:** työn alla.
-- **Poltto:** 13 856 laattaa (kaupungit ±1°), noin 20 min. Tehdään rivin 1
-  jälkeen, jotta lähteenä on jo korjattu pyramidi.
+- Nyt pallon Z10 lasketaan pyramidin z9:stä, joten pohjoisessa ranta ja reliefi
+  ovat pehmeät.
+- **Koodi:** PR #3446, lippu `--z10-lahde`. Z10-laatta lasketaan z10:stä, jos
+  koko sen alla oleva z10 on poltettu, muuten z9:stä.
+- **Kuvapari:** `kuvat/eu-laatu-10-pallo-z10-lahde.jpg`: Riika, Kööpenhamina ja
+  Helsinki. Kokeessa 221/235 laattaa saatiin z10:stä, eikä saumoja näy.
+- **Poltto:** 13 856 laattaa (kaupungit ±1°) samaan pallosarjaan. Koepolton
+  tahdilla noin 2 laattaa/s/ydin, eli noin 30 min 4 ytimellä ja noin 15 min
+  8 ytimellä. Tehdään rivin 1 ja pallon Z0–Z9 jälkeen, jotta lähteenä on uusi
+  pohja.
 
 ## Järjestys yhdessä ajossa
 
-1 (pohja) → 2 (viivat, riippumaton, voidaan ajaa rinnakkain) → pallo Z0–Z9
-uudesta pohjasta → 3 (pallo Z10). Vienti ja osoittimen vaihto tehdään
-omistajan kortilla kerran lopuksi.
+1. **Pohja** (rivi 1): z0–z8 vesilaatat noin 1–1,5 h täysillä ytimillä ja
+   z9–z10 vesilaatat noin 4–5 h 8 ytimellä.
+2. **Viivataso** (rivi 2): noin 30–45 min. Riippumaton, joten voidaan ajaa
+   rivin 1 kanssa rinnakkain.
+3. **Pallo Z0–Z9** uudesta pohjasta: vesilaatat noin 312 000, noin 3 h 8
+   ytimellä.
+4. **Pallo Z10** (rivi 3): noin 15–30 min.
+
+**Yhteensä** noin 8–10 h 8 ytimellä, eli yksi yö (klo 22 jälkeen täysi
+teho). Päivällä 4 ytimellä noin kaksinkertainen.
+
+**Levy:** palvelinkopiot tehdään ämpärin sisällä. Paikallisesti tarvitaan vain
+shardien väliaikaistiedostot `--siivoa`-lipulla, alle 10 Gt, joten 80 Gt:n
+raja ei ole vaarassa.
+
+**Vienti:**
+- pohjan uusi versio ja viivaversio ämpäriin polton aikana (uusi polku, ei
+  ylikirjoitusta)
+- osoitin (`pyramidi.json`) ja pallon laatat.json vaihdetaan omistajan kortilla
+  kerralla lopuksi
+- palautus tehdään varmuuskopioluettelosta kuten 27.9.
