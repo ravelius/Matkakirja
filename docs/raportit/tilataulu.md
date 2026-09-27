@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 00:21 EEST
+**Päivitetty:** 2026-09-28 00:33 EEST — Postivahti (self) 70%, lähestyy omaa nollausrajaa, luovutus valmistellaan pian.
 
 ## 1) Sessiot
 
@@ -80,7 +80,7 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (00:19, uusi julkaisu — striimiluenta). `/tmp/matkakirja-juna-tauko` PÄÄLLÄ — **Fable vahvisti 00:2x: tarkoituksellinen, pysyy polton loppuun ("2 koodi 0") ja purkuun aamulla — EI hälytystä tästä enää tänä yönä.**
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
 - **Juna:** tauolla 91 min, poltto+julkaisu käynnissä.
-- **Karttasepän vahti-PID 85590 elossa, aja.out ei muuttunut (ei "2 koodi 0").**
+- **Karttasepän vahti-PID 85590 elossa 00:33, aja.out ei muuttunut (ei "2 koodi 0"), vahti.out normaali ydinsäätö.**
 - **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
