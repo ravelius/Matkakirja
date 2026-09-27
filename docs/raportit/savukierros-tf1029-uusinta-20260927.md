@@ -53,3 +53,14 @@ Processing Error -virheeseen** (fallback virta=pois toimii). Nostokortin yläriv
 EI-bugiksi (oma virhe, korjattu yllä — kiitos Natiivi-UI:lle nopeasta huomiosta). Pulu ilman
 äänikytkimiä ja maailma auki/mannerlennot PASS todistettuina. iPad-ydinkierros PASS. 0 poikkeusta
 molemmilla laitteilla koko session ajan. Jäljellä: nimiöt väistö, pienten maiden kynnys.
+
+## BUILD 29b -tarkistus (master 20ce6a28, käännös b29b-49ea64ee), 27.9.2026 ~13.3x
+
+Natiiviseppä korjasi: Puhe.Virta oletus pois. Vahvistettu: uudessa pelissä (`uusi-peli 1 pariisi`,
+ei asetettu mitään puhe-komentoa) `puhe virta` → "virta pois, 1. ääni -1 ms" (oletusarvo, ei minun
+asettamani). Käyttäjän oikea polku: `puhe pois` (yleinen kertoja pois) + kaiutinvipu ON napautuksella
+(EI komentoriviltä) + `ui chat <kysymys>` — vastaus alkoi "puhe: alkoi 14833 ms pyynnöstä (verkko)"
+IHAN ILMAN Data Processing Error -riviä. `aani mittaa 3`: **rms 0,13432, huippu 0,7061, soivia 1
+[MatkakirjaPuhe:@1,00]** — puhtaasti puhekanava soi täydellä voimakkuudella, ei virhettä.
+
+**PASS.** Bugi korjattu BUILD 29b:ssä. 0 poikkeusta.
