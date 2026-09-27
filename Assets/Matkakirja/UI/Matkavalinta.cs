@@ -224,7 +224,9 @@ namespace Matkakirja.Natiivi
 
         static string TavanIkoni(Kulkutapa t) => t switch
         {
-            Kulkutapa.Bussi => "bussi", Kulkutapa.Meri => "purje", Kulkutapa.Lento => "kone", _ => "peukalo",
+            Kulkutapa.Bussi => "bussi", Kulkutapa.Meri => "purje", Kulkutapa.Lento => "kone",
+            // Talouden vaihe 1 (web iconButton('saapas', 'Odota', 'primary')): liftauksen paikalla, kun mihinkään ei pääse.
+            Kulkutapa.Odota => "saapas", _ => "peukalo",
         };
 
         /// <summary>Ohjaimen LiikuMuuttui/TilaMuuttui: napit uudelleen; tyhjä lista = Liiku piiloon.</summary>
@@ -323,7 +325,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             SuljeLiuku();
-            valittuTapa = t.Laji;
+            if (t.Laji != Kulkutapa.Odota) valittuTapa = t.Laji;
             var virhe = PeliOhjain.Instanssi?.ValitseKulkutapa(t.Laji);
             if (virhe != null && UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(virhe);
         }

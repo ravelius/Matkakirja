@@ -178,6 +178,9 @@ namespace Matkakirja.Natiivi
 
             Rivi(matka, "Sijainti", d.Sijainti);
             Rivi(matka, "Kukkaro", d.Kukkaro);
+            // Talouden vaihe 1: webin kassan vihje (title) kosketuslaitteella kukkaron alle.
+            var vihje = testiData == null ? KassaVihje(PeliOhjain.Instanssi?.Matka) : null;
+            if (vihje != null) Rakenne.Teksti(vihje, "mk-laukku__kassavihje", matka);
             if (d.Tietaja != null) Tietaja(d.Tietaja);
 
             foreach (var (otsikko, arvo) in d.Tilastot) Rivi(tilastot, otsikko, arvo);
@@ -347,6 +350,19 @@ namespace Matkakirja.Natiivi
             esikatselu = esikatseltu;
             Varusteet();
             Rakenne.Vierita(Sisalto, varusteOtsikko, 50);
+        }
+
+        /// <summary>
+        /// Web kassan vihje (talouden vaihe 1): "Päiväkulu 20 £ (ruoka 8 £, majoitus 12 £) — kassa riittää noin
+        /// 15 päiväksi"; reitillä ilman majoitusta. Luvut Matka.PaivakuluNyt ja KassaRiittaa.
+        /// </summary>
+        public static string KassaVihje(global::Matkakirja.Peli.Matka m)
+        {
+            if (m == null) return null;
+            var k = m.PaivakuluNyt();
+            int riittaa = m.KassaRiittaa();
+            return $"Päiväkulu {k.Yhteensa} £ (ruoka {k.Ruoka} £{(k.Majoitus > 0 ? $", majoitus {k.Majoitus} £" : "")})"
+                + (riittaa != int.MaxValue ? $" — kassa riittää noin {riittaa} päiväksi" : "");
         }
 
         void Rivi(VisualElement isa, string nimi, string arvo)
