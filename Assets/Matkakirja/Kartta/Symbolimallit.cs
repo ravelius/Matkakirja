@@ -25,7 +25,9 @@ namespace Matkakirja
     /// KaupunkiMerkit. Löytämätön himmeänä (pergamentti, 70 %). Horisonttiusva kuten 153:n nostoilla. Piilossa lennon, linssin
     /// ja aloitusportin aikana sekä pallon takana. Natiivi-UI piilottaa 2D-kuvamerkin, kun <see cref="OnMalli"/> on tosi.
     /// Kolmiobudjetti enintään 1 500 mallia kohden (erikoismallit), arkkityypit 600/150 (LOD0/LOD1).
-    /// Komennot `symbolit tila|pois|paalle|loydetty|himmea|koko pt|taso23 0|1|ylhaalta 3d|2d|perspektiivi aste|reuna pt|maasto 0|1|kategoriat 1|0`.
+    /// Komennot `symbolit tila|pois|paalle|loydetty|himmea|koko pt|taso23 0|1|ylhaalta 3d|2d|perspektiivi aste|reuna pt|maasto 0|1|kategoriat 1|0|alla 0|1`.
+    /// ERIKOISMALLI VOITTAA (Linssisepän speksi 27.9. klo 21.2x): erikoismallin kalustelaatikkoon osuvat muiden nostojen
+    /// symbolit piiloon ja merkki laatikon reunalle mustepisteenä, ks. Symbolimallit.ErikoismallinAlla.cs.
     ///
     /// KATEGORIASYMBOLIT (omistaja 26.9. klo 21.5x ja 27.9. klo 00.1x): 3D-nostot ovat NOSTOT-paneelin kategoriasymbolit
     /// oikeina 3D-esineinä (Mallinsepän mallit, Symbolimallit.Kategoriat.cs, KategoriaKartoitus). Järjestys: erikoismalli
@@ -186,6 +188,7 @@ namespace Matkakirja
                     return true;
                 case "maasto": MaastoKorkeudet = o[2] != "0" && o[2] != "pois"; return true;
                 case "reuna": ReunaPt = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 4f); return true;
+                case "alla": AllaSaanto = o[2] != "0" && o[2] != "pois"; return true;   // erikoismalli voittaa (A/B)
                 case "kategoriat":
                     // 1|0: kategoriasymbolit (reliefit) vai arkkityypit (A/B); ruutu|pohjoinen: reliefin ylös-suunta.
                     if (o[2] == "ruutu" || o[2] == "pohjoinen") KategoriaRuutuYlos = o[2] == "ruutu";
@@ -219,6 +222,7 @@ namespace Matkakirja
             NollaaTasot23();
             NollaaKategoriat();
             NollaaLiikkuvat();
+            NollaaAlla();
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -317,6 +321,7 @@ namespace Matkakirja
             for (int i = 0; i < taso1.Length; i++) if (taso1[i] > 0) sb.Append(' ').Append(MallinNimi(i)).Append('×').Append(taso1[i]);
             sb.Append($" ({n} mallia); ");
             instanssi.Tasot23Tila(sb);
+            instanssi.AllaTila(sb);
             sb.Append("; erikoismallien kolmiot:");
             foreach (var p in verkot) sb.Append(' ').Append(p.Key).Append('=').Append(p.Value.triangles.Length / 3);
             int osiaNakyy = 0;
@@ -369,6 +374,8 @@ namespace Matkakirja
             /// <summary>Nimiöiden väistö (LisaaKalusteet): jalka maailmassa, leveys ruutupikseleinä ja korkeus/leveys-suhde.</summary>
             public Vector3 JalkaMaailma;
             public float LeveysPx, Suhde = 1f;
+            /// <summary>Erikoismallin alla (Symbolimallit.ErikoismallinAlla.cs): häivytys lohkon _Tila.y:ssä, 1 = piilossa.</summary>
+            public float Piilo;
         }
         /// <summary>Tason 1 kappaleet noston id:llä.</summary>
         readonly Dictionary<string, Kappale> kappaleet = new Dictionary<string, Kappale>();
@@ -385,6 +392,7 @@ namespace Matkakirja
             reunaMateriaali = ReunaMateriaali(materiaali);
             lohko = new MaterialPropertyBlock();
             reunaLohko = new MaterialPropertyBlock();
+            piiloLohko = new MaterialPropertyBlock();
             AloitaTasot23(s);
         }
 
@@ -421,6 +429,7 @@ namespace Matkakirja
                     PallonLepo.Muuttui("symbolimallit");
                 }
             if (sallittu && Taso1Zoom()) PaivitaMaamerkit(nk);
+            PaivitaAllaTaso1();   // erikoismalli voittaa: muiden nostojen symbolit sen laatikossa piiloon
             ValitseLahitaso(sallittu ? nk : null);
             PiirraTasot23(sallittu ? nk : null);
         }
@@ -527,7 +536,9 @@ namespace Matkakirja
             float etaisyys = kohti.magnitude;
             bool edessa = Vector3.Dot(gt.TransformDirection(k.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) > 0.08f;
             k.Etaisyys = edessa ? etaisyys : float.PositiveInfinity;
-            if (k.R.enabled != edessa) { Nayta(k, edessa); PallonLepo.Muuttui("symbolimallit"); }
+            // Erikoismallin alla kokonaan piilossa (Piilo 1) oleva pysyy poissa; paluun häivytys käynnistää PaivitaAllaTaso1.
+            bool nakyy = edessa && k.Piilo < 1f;
+            if (k.R.enabled != nakyy) { Nayta(k, nakyy); PallonLepo.Muuttui("symbolimallit"); }
             PaivitaOsat(osat, edessa, p);
             if (!edessa) return;
             float kerroin = tieto.Erikois != null && Mallit.TryGetValue(tieto.Erikois, out var em) ? em.KokoKerroin : 1f;
@@ -555,11 +566,11 @@ namespace Matkakirja
                 k.T.localRotation = asentoNyt;
                 k.T.localPosition = paikkaNyt;
             }
-            if (k.Reuna.enabled != ReunaPt > 0f) k.Reuna.enabled = ReunaPt > 0f;
+            if (k.Reuna.enabled != (k.R.enabled && ReunaPt > 0f)) k.Reuna.enabled = k.R.enabled && ReunaPt > 0f;
             float lev = ReunaYksikoissa(pt);
             if (Mathf.Abs(lev - k.ReunaLeveys) > 0.01f * Mathf.Max(lev, 1e-4f))
             {
-                reunaLohko.SetVector(TilaLohkoId, new Vector4(0f, 0f, lev, 0f));
+                reunaLohko.SetVector(TilaLohkoId, new Vector4(0f, k.Piilo, lev, 0f));
                 k.Reuna.SetPropertyBlock(reunaLohko);
                 k.ReunaLeveys = lev;
             }
@@ -567,6 +578,7 @@ namespace Matkakirja
             if (h != k.Himmea)
             {
                 lohko.SetFloat(HimmeaId, h);
+                lohko.SetVector(TilaLohkoId, new Vector4(0f, k.Piilo, 0f, 0f));   // jaettu lohko: myös piilo (erikoismallin alla)
                 k.R.SetPropertyBlock(lohko);
                 HimmennaOsat(osat, lohko);
                 k.Himmea = h;
