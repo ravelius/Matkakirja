@@ -222,8 +222,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.53 offline: maat.*.maasto enintään z10 (lahteet.maasto.kokoMaaMax) ja uusi maat.*.kaupunkiMaasto { "11", "12" }
  *        50 km:n säteeltä kaupungeista (lahteet.maasto.kaupunkiMaasto), tavuja.kaupunkiMaasto (siirto; natiivi pakkaa maaston itse levylle) —
  *        Fable 27.9.2026 (B1+C): Euroopan offline-maasto 939 → noin 94 Mt siirtona.
+ *   1.54 offline: mediaKuvat on natiivin 1.0.32+ koko offline-media (myös media-listan kuvat pienennettyinä ja äänet)
+ *        yhden 100 Mt:n maakaton alla, lahteet.mediaKuvat.korvaaMedian ja tavuja.offline (natiivin latauskoko);
+ *        media-lista vain vanhoille buildeille — Fable 27.9.2026, tavoite Eurooppa ≤ ~1,2 Gt.
  */
-export const SKEEMAVERSIO_TARKKA = '1.53';
+export const SKEEMAVERSIO_TARKKA = '1.54';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

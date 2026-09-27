@@ -121,7 +121,8 @@ function alueenMaa(c) { return MERENTAKAISET[c.id]?.iso ?? c.maa; }
 /** Skeema 1.52: mediaKuvat-asetukset (Fable 27.9.2026: pienennetyt, katto 100 Mt maata kohden). */
 export const MEDIAKUVAT = {
   katto: 100_000_000,
-  pieni: { juuri: 'pieni/', pitkaSivu: 1280, laatu: 80, kynnysTavut: 300_000 },
+  // 1.54: 1024 px / JPEG 75 / kynnys 100 kt (Euroopan tavoite ≤ ~1,2 Gt; 1280/80 oli ~2,5 Gt).
+  pieni: { juuri: 'pieni/', pitkaSivu: 1024, laatu: 75, kynnysTavut: 100_000 },
   // Järjestys katon sisällä (Fable 27.9.): karttanostot → miniatyyrit → Livian ja saapumisen puheet → luennat → muut.
   jarjestys: { karttavalot: 1, takynostot: 1, fokusvirrat: 1, maakuntasalaisuudet: 1, miniatyyrit: 2, livianpuhe: 3,
     livianrepliikit: 3, saapumispuheet: 3, saapuminen: 3, luennat: 4 },
@@ -135,14 +136,17 @@ export function lueMediakuvat(tiedosto = MEDIAKUVAT_TIEDOSTO) {
 export const ampariAvain = (url) => url.slice(OMA_AMPARI.length).split(/[?#]/)[0];
 export const pieniAvain = (avain) => `${MEDIAKUVAT.pieni.juuri}${avain.replace(/\.[a-z0-9]+$/i, '')}.jpg`;
 const MEDIAKUVAT_KUVAUS = {
-  kuvaus: 'Pelin omat tiedostot ämpärissä, jotka eivät ole maat.*.media-listalla: karttanostojen, fokuskohteiden ja '
-    + 'maakuntien kuvat, miniatyyrit, lehtien valmiit kuvaosoitteet, saapumis- ja Livian puheet eleineen, luentojen '
-    + 'äänet ja aikaleimat. Alkio { url, pieni? }: lataa pieni jos on, tallenna url:n polulle (natiivi 1.0.32+).',
-  pieniKaava: `https://media.matkakirja.app/${MEDIAKUVAT.pieni.juuri}<avain ilman päätettä>.jpg `
+  kuvaus: 'Maan koko offline-media natiiville 1.0.32+ (skeema 1.54): kaikki pelin omat kuvat ämpärissä (myös media-'
+    + 'listan kuvat, karttanostot, miniatyyrit, lehtikuvat) pienennettyinä sekä äänet ja puheet, jotka ovat jo ämpärissä. '
+    + 'Alkio { url, pieni? }: lataa pieni jos on, tallenna url:n polulle. media-lista on vain vanhoille buildeille; '
+    + 'alkuperäiskokoinen kuva haetaan verkosta, kun iso kuva avataan.',
+  korvaaMedian: true,
+  pieniKaava: `https://media.matkakirja.app/${MEDIAKUVAT.pieni.juuri}<avain ilman päätettä>.jpg|png `
     + `(pitkä sivu ${MEDIAKUVAT.pieni.pitkaSivu} px, JPEG ${MEDIAKUVAT.pieni.laatu}, kun alkuperäinen > ${MEDIAKUVAT.pieni.kynnysTavut} t)`,
   katto: MEDIAKUVAT.katto,
-  jarjestys: 'karttanostot → miniatyyrit → Livian ja saapumisen puheet → luennat → muut; yli katon jäävät pois',
+  jarjestys: 'karttanostot → miniatyyrit → Livian ja saapumisen puheet → luennat → muut kuvat; yli katon jäävät pois; musiikki, äänimaisemat ja tehosteet eivät offline-latauksessa',
 };
+const AANI_TIEDOSTO = /\.(mp3|ogg|oga|opus|m4a|aac|wav)$/i;
 const SUORA_TIEDOSTO = /\.(jpe?g|png|webp|gif|svg|mp3|ogg|m4a|json|glb)$/i;
 /** Skeema 1.52: mediaKuviin kuuluva viite (oma ämpäri, mutta laji kuva-url/aani-url tai kokoelmavaiheen suora osoite). */
 export const onLisamedia = (v) => Boolean(v.url) && (v.laji === 'ampari-suora'
@@ -412,7 +416,7 @@ export function maidenMaanosat({ countryShapes, cities, cityCountry, cityManner 
 }
 
 function summaa(lista) {
-  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), mediaKuvat: 0, levy: 0, kaupunkiMaasto: 0 };
+  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), mediaKuvat: 0, levy: 0, kaupunkiMaasto: 0, offline: 0 };
   for (const x of lista) for (const k of Object.keys(t)) t[k] += x[k] ?? 0;
   return t;
 }
@@ -538,12 +542,17 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     const media = kaikkiMedia.filter((a) => !onLisamedia(arvot.get(a)));
     // Skeema 1.52: mediaKuvat järjestyksessä, ilman media-listan osoitteita, katon (MEDIAKUVAT.katto) sisällä.
     // Koko tools/vienti/mediakuvat.json:sta; mittaamaton tai puuttuva (alkuperäinen 0) jää pois.
-    const mediassa = new Set(media.map(url));
+    // Skeema 1.54 (Fable 27.9.2026): mediaKuvat on natiivin 1.0.32+ KOKO offline-media — myös media-listan kuvat
+    // (pienennettyinä) ja äänet — yhden 100 Mt:n katon alla; media-lista jää vanhoille buildeille ennalleen.
     const urlinJarjestys = new Map();
     for (const a of kaikkiMedia) {
-      if (!onLisamedia(arvot.get(a)) || mediassa.has(url(a))) continue;
+      const u = url(a);
+      if (!u?.startsWith(OMA_AMPARI)) continue;
       const j = jarjestys.get(`${iso}\t${a}`) ?? 5;
-      urlinJarjestys.set(url(a), Math.min(urlinJarjestys.get(url(a)) ?? 9, j));
+      // Fable 27.9.: offline-media = kuvat + puhe. Ääni vain puhekokoelmista (järjestys 3–4); musiikki, äänimaisemat
+      // ja tehosteet haetaan verkosta.
+      if (AANI_TIEDOSTO.test(ampariAvain(u)) && j > 4) continue;
+      urlinJarjestys.set(u, Math.min(urlinJarjestys.get(u) ?? 9, j));
     }
     const jarj = [...urlinJarjestys].sort((a, b) => a[1] - b[1] || (a[0] < b[0] ? -1 : 1));
     if (jarj.length) ehdokkaat[iso] = jarj;
@@ -572,7 +581,10 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
         levy: Math.round(rTavut + mLevy + medTavut),
         // Skeema 1.53: kaupunkien ympäristön tarkka maasto (gzip-siirtokoko; natiivi 1.0.32+ tallentaa pakattuna,
         // Natiiviseppä 27.9.), ei yht:ssä eikä levy:ssä.
-        kaupunkiMaasto: Math.round(kmTavut) },
+        kaupunkiMaasto: Math.round(kmTavut),
+        // Skeema 1.54: natiivin 1.0.32+ offline-lataus siirtona (ei media-listaa): rasteri, maasto, Z10, kaupunkimaasto
+        // ja mediaKuvat.
+        offline: Math.round(rTavut + mTavut + kTavut + kmTavut + kuvaTavut) },
     };
   }
   const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),

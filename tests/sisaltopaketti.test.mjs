@@ -1567,10 +1567,8 @@ test('skeema 1.52: mediaKuvat — omat tiedostot offline-lataukseen omassa avaim
   for (const [iso, m] of Object.entries(o.maat)) {
     assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman mediaKuvia`);
     assert.ok(m.tavuja.mediaKuvat <= MEDIAKUVAT.katto, `${iso}: ${m.tavuja.mediaKuvat} yli katon`);
-    const media = new Set(m.media);
     for (const k of m.mediaKuvat ?? []) {
       assert.match(k.url, /^https:\/\/media\.matkakirja\.app\//, iso);
-      assert.ok(!media.has(k.url), `${iso}: ${k.url} myös media-listalla`);
       if (k.pieni) { pienia++; assert.match(k.pieni, /^https:\/\/media\.matkakirja\.app\/pieni\/.+\.(jpg|png)$/); }
       kuvia++;
     }
@@ -1623,4 +1621,18 @@ test('skeema 1.53: maasto koko maasta z10:een, tarkemmat tasot vain kaupunkien y
   }
   assert.ok(laattoja > 1000, `kaupunkiMaasto-laattoja ${laattoja}`);
   assert.ok(o.ryhmat.europe.tavuja.maasto + o.ryhmat.europe.tavuja.kaupunkiMaasto < 200e6, 'Euroopan offline-maasto alle 200 Mt siirtona');
+});
+
+test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', async () => {
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  assert.equal(o.lahteet.mediaKuvat.korvaaMedian, true);
+  for (const [iso, m] of Object.entries(o.maat)) {
+    const t = m.tavuja;
+    assert.ok(t.mediaKuvat <= o.lahteet.mediaKuvat.katto, iso);
+    assert.equal(t.offline, t.rasteri + t.maasto + (t.kaupunkiRasteri ?? 0) + t.kaupunkiMaasto + t.mediaKuvat, `${iso}: offline-summa`);
+  }
+  // Media-listan kuvat mukana mediaKuvissa (pienennettyinä), ei vain lisätiedostot.
+  const fra = o.maat.FRA;
+  const kuvat = new Set(fra.mediaKuvat.map((k) => k.url));
+  assert.ok(fra.media.some((u) => kuvat.has(u)), 'FRA: media-listan kuvia mediaKuvissa');
 });
