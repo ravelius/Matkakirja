@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2313, teksti: 'Nostokortin luenta: ratas, VU kaiuttimessa, jatko' },
+  { v: 2313, teksti: 'v2313: Nostokortin luennan säätimet — ratas, VU… (#3388)' },
   { v: 2312, teksti: 'v2312: Lukijaäänen raja 400 000 mrk/IP/vrk, 429… (#3389)' },
   { v: 2311, teksti: 'v2309: Pulun puhe ilman pelin äänikytkimiä — va… (#3386)' },
   { v: 2310, teksti: 'v2309: Löytämisen sumu pois, maakuntasalaisuude… (#3385)' },
