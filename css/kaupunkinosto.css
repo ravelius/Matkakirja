@@ -205,3 +205,131 @@
   margin: 0.2rem 0 0.4rem;
   font-size: 1rem;
 }
+
+/*
+ * ══ KAUPUNGIN AVAUSKORTTI (omistaja 27.9.2026 klo 23.4x) ══════════════
+ * Kolme osaa päällekkäin: herokuva + 2 lausetta + "Lue kaupunkilehti",
+ * nähtävyyskartta ilman tekstejä ja turisti-info. Kartta omassa kuvasuhteessaan
+ * (piirrokset on asemoitu prosentteina kuvasta, joten sitä ei rajata).
+ */
+/* Kortti on modaali: se saa koko karttaruudun (asemoinnin 74 %:n katto ja
+   ankkurointi ohitetaan), jolloin kolme osaa mahtuvat mockin mittoihin. */
+.kaupunkipopup-avaus {
+  width: min(35rem, calc(100% - 24px));
+  max-height: calc(100% - 16px) !important;
+  top: 8px !important;
+  left: 0 !important;
+  right: 0;
+  margin-inline: auto;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.kaupunkipopup-avaus > .kaupunkipopup-otsikko { display: none; }
+.kaupunkipopup-avaus > .kaupunkipopup-sisalto { padding-bottom: 0.85rem; }
+.kaupunkipopup-avaus > .kaupunkipopup-sulje {
+  z-index: 2; top: 0.5rem; right: 0.55rem; width: 2.1rem; height: 2.1rem;
+  background: rgba(245, 240, 226, 0.92); color: #3a2f24; font-size: 1.1rem;
+}
+.avauskortti-hero { position: relative; height: 16svh; min-height: 7.5rem; background: #d9ccb0; overflow: hidden; }
+.avauskortti-hero-kuva { width: 100%; height: 100%; object-fit: cover; display: block; }
+.avauskortti-nimi {
+  position: absolute; left: 0.9rem; bottom: 0.45rem; margin: 0;
+  font: 600 1.9rem/1 var(--font-luku); color: #fff8ec;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+}
+.avauskortti-esittely { padding: 0.65rem 0.9rem 0.5rem; }
+.avauskortti-teksti {
+  margin: 0; font-size: 0.97rem; line-height: 1.42;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+}
+.avauskortti-lehti {
+  display: inline-block; margin-top: 0.3rem; padding: 0; border: 0; border-radius: 0; background: none; cursor: pointer;
+  min-height: 0; box-shadow: none; text-decoration: none;
+  font: 0.9rem var(--font-type); color: #b03a2b; border-bottom: 1px solid currentColor;
+}
+.avauskortti-kartta { margin: 0 0.9rem; border: 1px solid rgba(122, 85, 20, 0.35); border-radius: 8px; overflow: hidden; }
+.avauskortti-kartta[hidden] { display: none; }
+/* Kartta täyttää varatun korkeuden; ylijäämä rajautuu (kartta panoroituu suurennoksessa). */
+.avauskortti-kartta .kaupunkikartta { margin: 0; }
+.avauskortti-kartta .kartta-kehys { cursor: zoom-in; }
+.avauskortti-opas {
+  display: flex; gap: 0.65rem; align-items: stretch; width: calc(100% - 1.8rem);
+  margin: 0.65rem 0.9rem 0; padding: 0.5rem; border: 0; border-radius: 8px;
+  background: #efe1c2; color: inherit; text-align: left; cursor: pointer; font: inherit;
+}
+.avauskortti-opas-kuva { width: 5.25rem; height: 5.25rem; object-fit: cover; border-radius: 6px; flex: none; }
+.avauskortti-opas-tekstit { display: flex; flex-direction: column; min-width: 0; }
+.avauskortti-opas-laji { font: 700 0.72rem var(--font-type); letter-spacing: 0.08em; text-transform: uppercase; color: #8a6114; }
+.avauskortti-opas-otsikko { font-weight: 600; font-size: 0.97rem; margin: 0.1rem 0; }
+.avauskortti-opas-teksti { font-size: 0.86rem; line-height: 1.35; }
+@media (min-width: 700px) {
+  .avauskortti-hero { height: 14svh; }
+  .avauskortti-teksti { -webkit-line-clamp: 4; }
+}
+
+/*
+ * AVAUSKORTIN KARTAN SUURENNOS (omistaja 27.9.2026 klo 23.4x): lähes koko
+ * ruudun popup, tausta sumennettuna, kartan ulkopuoli vaalea paperi.
+ * Zoomattu kartta levittäytyy koko popupin alalle (nahtavyydet.js).
+ */
+.kartta-suurennos-huntu {
+  position: fixed; inset: 0; z-index: 69;
+  background: rgba(29, 22, 16, 0.35);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.postikortti.kulttuuri-suurennos.kartta-suurennos.kartta-suurennos-kortista {
+  width: 94vw;
+  height: 88dvh;
+  max-height: 88dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.6rem 0.6rem 0.6rem;
+  box-sizing: border-box;
+  background: #f5f0e2;
+  border-radius: 14px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+}
+/* Oma huntu sumentaa taustan; suurennoksen musta täyttö pois. */
+.postikortti.kulttuuri-suurennos.kartta-suurennos.kartta-suurennos-kortista::before { background: transparent; }
+.kartta-suurennos.kartta-suurennos-kortista .kartta-suurennos-selitteet { display: none; }
+.kartta-suurennos.kartta-suurennos-kortista .kartta-kehys { border-radius: 6px; overflow: hidden; }
+.kartta-suurennos.kartta-suurennos-kortista .kuvalahde { color: #6b5636; }
+.kartta-suurennos.kartta-suurennos-kortista button.uutinen-sulku {
+  position: absolute; top: 0.45rem; right: 0.45rem; z-index: 3;
+  width: 2.1rem; height: 2.1rem; min-height: 0; padding: 0; border-radius: 50%;
+  border: 1px solid rgba(122, 85, 20, 0.3); background: rgba(245, 240, 226, 0.94);
+  color: #3a2f24; font-size: 1.15rem; line-height: 1; cursor: pointer;
+}
+.kartta-suurennos.kartta-suurennos-kortista .kartta-suurennos-tyokalut {
+  position: absolute; right: 0.9rem; bottom: 0.9rem; display: flex; gap: 0.4rem; z-index: 3;
+}
+.kartta-suurennos.kartta-suurennos-kortista .kartta-suurennos-tyokalut button {
+  background: #efe1c2; color: #3a2f24; border-color: rgba(122, 85, 20, 0.35);
+}
+/* Kortin kartta ilman lehden kehyksiä: ei kaksoisviivaa, ei tyhjää työkaluriviä. */
+.avauskortti-kartta .kaupunkikartta.kaupunkikartta-pelkka { margin-top: 0; padding-top: 0; border-top: 0; }
+.avauskortti-kartta .kaupunkikartta-pelkka .kartta-tyokalut:empty { display: none; }
+.avauskortti-kartta .kaupunkikartta-pelkka .kartta-kehys { margin: 0; border: 0; }
+.avauskortti-kartta .kaupunkikartta-pelkka .kuvalahde { padding: 0.15rem 0.4rem; }
+/*
+ * KARTTA ON 35 % RUUDUN KORKEUDESTA sekä puhelimessa että tabletissa
+ * (omistaja 27.9.2026 klo 00.1x). Kaista on kiinteä, ja kartta täyttää
+ * sen kuten object-fit: cover: kehys pitää oman kuvasuhteensa
+ * (--kartta-suhde, nahtavyydet.js), on vähintään kaistan levyinen ja
+ * korkuinen, ja flex keskittää sen — ylijäämä rajautuu tasan molemmilta
+ * reunoilta. Kehys ei muutu, joten piirrokset pysyvät paikoillaan.
+ * Lähde kulkee kartan päällä alanurkassa.
+ */
+.avauskortti-kartta { height: 35svh; position: relative; }
+.avauskortti-kartta .kaupunkikartta.kaupunkikartta-pelkka {
+  height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.avauskortti-kartta .kaupunkikartta-pelkka .kartta-kehys {
+  flex: none; width: max(100%, calc(35svh * var(--kartta-suhde, 1.5)));
+}
+.avauskortti-kartta .kaupunkikartta-pelkka > .lahde {
+  position: absolute; padding: 0.15rem 0.4rem; font-size: 0.72rem; left: 0; bottom: 0; margin: 0; z-index: 2;
+  background: rgba(245, 240, 226, 0.85); border-top-right-radius: 6px;
+}

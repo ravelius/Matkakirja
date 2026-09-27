@@ -88,7 +88,7 @@ import {
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { piirraVisanVastaukset } from './fokustehtavat.js';
-import { nostokuvaAloita } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaVakiokortti } from './nostokuva.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 /*
  * NELJÄN MAAN POOLIT ASUVAT NYT KAUPUNKIEN OMISSA PAKETEISSA (v1301).
@@ -1178,7 +1178,11 @@ function avaaNostonKortti(ui, nosto) {
     onKuvatta: () => kortti.classList.remove('fokusnosto-pysty'),
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoNosto(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoNosto(sisalto, undefined);
+    // Kuvaton kortti samaan kokoon ja paikkaan kuin kuvallinen (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
+  }
   nostoSeuraaKuvanSuuntaa(kortti, kaksivaihe?.kehys ?? null);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
@@ -1277,7 +1281,7 @@ export function suljeNostonKortti(ui) {
     for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) {
       // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
       // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
-      vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+      vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
       vanha.remove();
     }
   }

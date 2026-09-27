@@ -1224,7 +1224,7 @@ test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () =>
   for (const kohde of SATELLIITTI_KOHTEET) {
     assert.equal(haeAstronautinKysymykset(kohde.tunnus).length, 2, kohde.tunnus);
   }
-  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
+  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, SATELLIITTI_KOHTEET.length);
   /*
    * OMISTAJA 17.9.2026 klo 21.30 Suomen aikaa (Raamattu ASTRONAUTIN KAMERA
    * LISAYS 14): *"ainoastaan kysymykset ovat etukäteen mietittyjä, mutta

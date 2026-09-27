@@ -329,6 +329,45 @@ export const MAA_KATEGORIAT = {
             + 'pidetään maailman vanhimpana yhä hedelmää tuottavana viiniköynnöksenä.',
           lahde: 'Marco Almbauer, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Makkara, jonka ainekset on säädetty tarkasti',
+          aika: '1912',
+          tiedosto: 'Kranjska klobasa.jpg',
+          teksti: 'Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty '
+              + 'makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin '
+              + '(sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja '
+              + 'sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa '
+              + '1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, '
+              + 'ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja '
+              + 'mustapippuria. Makkarat liitetään pareiksi puutikulla ja '
+              + 'kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun '
+              + 'maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa '
+              + 'vastustivat.',
+          lyhyt: 'Grillattu kranjska klobasa tarjoillaan pareina lautasella leivän ja '
+              + 'lisukkeiden kanssa.',
+          selite: 'Grillatut makkarat on liitetty pareiksi puutikulla, ja lautasella on '
+              + 'lisäksi tomaattia, salaattia ja valkoista leipää.',
+          lahde: 'J.O., Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Carniolan sausage',
+        },
+        {
+          otsikko: 'Harmaa mehiläinen Krainista',
+          aika: 'nykyään',
+          tiedosto: 'Apis mellifera carnica worker hive entrance 2.jpg',
+          teksti: 'Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on '
+              + 'läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi '
+              + 'viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan '
+              + 'myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää '
+              + 'asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen '
+              + 'italianmehiläisen jälkeen. EU:n suojaamiin ruokatuotteisiin kuuluu '
+              + 'myös slovenialainen hunaja.',
+          lyhyt: 'Carniolan mehiläisen työläinen on ruskeanharmaa, ja sen takaruumiissa on '
+              + 'vaaleampia raitoja.',
+          selite: 'Lähikuvassa Carniolan mehiläisen työläinen, jonka takaruumista koristavat '
+              + 'ruskeat ja vaaleammat raidat.',
+          lahde: 'Richard Bartz, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Carniolan honey bee',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka paljon viiniä Mariborin vanha köynnös antaa yhtenä syksynä?',
@@ -1262,12 +1301,32 @@ export const MAA_KATEGORIAT = {
             + 'yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, '
             + 'joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet '
             + 'suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. '
-            + 'Slovakiassa tämä on kuudesta viinialueesta pienin.',
+            + 'Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset '
+            + 'että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n '
+            + 'tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.',
           lyhyt: 'Slovakialaisen Tokajin viinialueen keskiaikainen tynnyrikellari.',
           selite: 'Tokajin viinialue jakautuu Unkarin ja Slovakian kesken Trianonin '
             + 'rauhansopimuksen jälkeen.',
           lahde: 'Slavo O., Wikimedia Commons (public domain)',
           wiki: 'Tokaj-Hegyalja',
+        },
+        {
+          otsikko: 'Hapankaalikeitto joulupöytään',
+          aika: 'Joulupöydässä',
+          tiedosto: 'Kapustnica (Sauerkraut soup).jpg',
+          teksti: 'Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja '
+              + 'Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen '
+              + 'kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan '
+              + 'leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, '
+              + 'jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia '
+              + 'säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja '
+              + 'maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja '
+              + 'syödään myös Puolassa, Ukrainassa ja Venäjällä.',
+          lyhyt: 'Kapustnica-keitossa on hapankaalia ja makkaranpaloja.',
+          selite: 'Kapustnica tarjoillaan savikulhossa, ja punertavasta liemestä nousee '
+              + 'lusikalle hapankaalia ja makkaraa.',
+          lahde: 'young shanahan, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Cabbage soup',
         },
       ],
       tehtava: {
@@ -1640,6 +1699,28 @@ export const MAA_KATEGORIAT = {
             + 'pitkään aateliston ja kirkon keskus.',
           lahde: 'R Muscat, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Mdina',
+        },
+        {
+          otsikko: 'Saari, jonka vuokra oli yksi haukka',
+          aika: '1530',
+          tiedosto: 'Prise de Malte en 1530.jpg',
+          teksti: 'Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun '
+              + 'osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän '
+              + 'vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana '
+              + 'Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. '
+              + 'Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian '
+              + 'varakuninkaalle. Suurmestari Philippe Villiers de L\'Isle-Adam purjehti '
+              + 'Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä '
+              + 'Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. '
+              + 'Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan '
+              + 'uudelleen Pyhän Angelon linnakkeeksi.',
+          lyhyt: 'Punaviittaiset ritarit ja ritarikunnan valkoristinen lippu Maltan '
+              + 'rannalla.',
+          selite: 'René Théodore Berthonin vuonna 1839 maalaama kuva ritarikunnan '
+              + 'saapumisesta Maltalle vuonna 1530: punaviittaiset ritarit, trumpetit ja '
+              + 'valkoristinen lippu linnoituksen edustalla.',
+          lahde: 'René Théodore Berthon, Wikimedia Commons (PD)',
+          wiki: 'Hospitaller Malta',
         },
       ],
       tehtava: {
@@ -3264,6 +3345,24 @@ export const MAA_KATEGORIAT = {
             + 'jotta vasen puoli jää kiirehtijöille.',
           lahde: '0x010C, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lontoon metro',
+        },
+        {
+          otsikko: 'Haggis, lanttu ja peruna',
+          aika: '1786',
+          tiedosto: 'Haggis neeps tatties.JPG',
+          teksti: 'Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja '
+            + 'mausteista tehty makkara, joka keitetään perinteisesti lampaan '
+            + 'mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert '
+            + 'Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi '
+            + 'joka 25. tammikuuta istutaan Burns-illalliselle: makkara '
+            + 'kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja '
+            + 'puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.',
+          lyhyt: 'Haggis tehdään lampaan sisäelimistä, kaurasta, sipulista ja mausteista lantun ja perunan kera.',
+          selite: 'Haggis tehdään lampaan sisäelimistä, kaurasuurimoista, '
+            + 'sipulista ja mausteista, ja se syödään lantun ja perunan '
+            + 'kanssa.',
+          lahde: 'Metukkalihis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Haggis',
         },
       ],
     },
@@ -6682,6 +6781,29 @@ export const MAA_KATEGORIAT = {
           lahde: 'Sandra Vallaure, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Feria de Abril',
         },
+        {
+          otsikko: 'Sardanassa askeleet lasketaan',
+          aika: 'Sunnuntaisin',
+          tiedosto: 'Sardana Pla de la Seu.jpg',
+          teksti: 'Sardana tanssitaan piirissä käsi kädessä, ja askeleet '
+            + 'lasketaan tarkasti: jokaisessa sävelmässä on oma määrä lyhyitä '
+            + 'ja pitkiä askelia, eikä määrä ole aina sama. Siksi piirissä on '
+            + 'yleensä yksi, joka laskee ne muiden puolesta ja antaa merkin. '
+            + 'Säestäjänä on cobla, jossa on yksitoista soittajaa mutta '
+            + 'kaksitoista soitinta — flabiol-huilun soittaja lyö samalla '
+            + 'käsivarteensa sidottua pikkurumpua. Barcelonassa piiri syntyy '
+            + 'usein katedraalin edustalle.',
+          lyhyt: 'Sardanaa tanssittaessa laukut ja takit jätetään piirin keskelle, usein katedraalin aukiolla.',
+          selite: 'Sardanaa tanssittaessa laukut ja takit jätetään piirin '
+            + 'keskelle, ja Barcelonassa piiri syntyy usein katedraalin '
+            + 'aukiolle.',
+          lahde: 'Canaan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sardana',
+          musiikki: 'https://music.apple.com/fi/search?term=sardana%20cobla',
+          musiikkiNimi: 'Sardana-musiikkia Apple Musicissa',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/Emigrant.ogg/Emigrant.ogg.mp3',
+          musiikkiNayteNimi: 'Sardana "L\'Emigrant" — Mauné i els seus dinàmics, CC BY-SA (Wikimedia Commons)',
+        },
       ],
       tehtava: {
         kysymys: 'Mistä Antonio de Torres teki erään kitaransa kyljet ja pohjan?',
@@ -6940,6 +7062,167 @@ export const MAA_KATEGORIAT = {
               lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio The '
                 + 'Timesin 7.11.1805 julkaisemasta Trafalgar-uutisesta. Faktat: '
                 + 'Royal Museums Greenwich, *Battle of Trafalgar Timeline*; '
+                + 'tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `kolumbus-palos-1492`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-kolumbus-palos-1492',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Palos 1492',
+      johdanto: 'Kahdeksankymmentä kilometriä Sevillasta länteen, Río Tinton '
+        + 'suistossa, kolme laivaa odotti laskuvettä 3. elokuuta 1492 — ja '
+        + 'lähtijät olivat tämän saman jokisuun omia merenkulkijoita.',
+      tehtava: {
+        kysymys: 'Mikä kolmesta aluksesta oli Kolumbuksen laivueen suurin?',
+        vaihtoehdot: [
+          'Pinta',
+          'Niña',
+          'Santa María',
+          'Bérrio',
+        ],
+        oikea: 2,
+        fakta: 'Santa María oli pyöreärunkoinen nao; Pinta ja Niña olivat '
+          + 'pienempiä karavelleja.',
+      },
+      nostot: [
+        {
+          otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
+          aika: '3.8.1492',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-lahi-photo-v3.jpg',
+          teksti: 'Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja '
+            + 'ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
+            + 'Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja '
+            + 'Niñaa luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín '
+            + 'Alonso ja Vicente Yáñez Pinzón, ja miehistö on värvätty '
+            + 'naapureista Palosista ja Moguerista. Laiturilla seisova väki '
+            + 'tuntee lähtijät nimeltä, ja se on pojan onni ja pelko yhtä aikaa. '
+            + 'Aamu on juuri valjennut. Río Tinton suistossa vesi laskee, ja '
+            + 'juuri sitä on odotettu: laskuvesi vie laivat merelle ilman soutua. '
+            + 'Suurin aluksista on Santa María, pyöreärunkoinen nao, jonka '
+            + 'omistaa Juan de la Cosa ja jota Kolumbus itse komentaa. Kolme '
+            + 'päivää myöhemmin Pintan peräsin murtuu ja korjataan '
+            + 'Kanariansaarilla; vasta 6. syyskuuta laivat kääntyvät La Gomeralta '
+            + 'länteen viiden viikon merimatkalle. Poika luulee purjehtivansa '
+            + 'Aasiaan, kuten Kolumbuskin. Matka päätyy toisaalle, ja siitä '
+            + 'kohtaamisesta tulee käänne sekä Euroopalle että Amerikan '
+            + 'alkuperäiskansoille.',
+          lyhyt: 'Santa Marían laivapoika kuuntelee Palosin kelloja ennen '
+            + 'purjehdusta kohti oletettua Aasiaa.',
+          selite: 'Santa Marían nuori laivapoika kuuntelee Palosin kelloja ja '
+            + 'yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
+            + 'Kolumbus uskoo purjehtivansa Aasiaan; pojan tuntematon matka '
+            + 'päätyy osaksi kohtaamista, joka mullistaa sekä Euroopan että '
+            + 'Amerikan alkuperäiskansojen elämän.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Library of Congress, '
+            + '*Writings of Christopher Columbus* ja Henry Harrisse Collection; '
+            + 'tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
+              lyhyt: 'Kolme laivaa katoaa Río Tinton suulle; retki etsii Aasiaa '
+                + 'mutta avaa yhteyden Atlantin yli.',
+              selite: 'Rannalle jäävä perhe näkee kolmen pienen laivan katoavan '
+                + 'Río Tinton suulle tietämättä, maksetaanko luvattu palkka tai '
+                + 'palaako oma mies koskaan. Kolumbuksen retkikunta etsii Aasiaa '
+                + 'mutta avaa pysyvän ja pian väkivaltaisen yhteyden Atlantin yli.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Library of Congress, '
+                + '*Writings of Christopher Columbus* ja Henry Harrisse '
+                + 'Collection; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `magalhaes-sanlucar-1519`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-magalhaes-sanlucar-1519',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Sanlúcar 1519',
+      johdanto: 'Sevillasta lähdettiin 10. elokuuta 1519 Guadalquivirjokea alas, '
+        + 'ja jokisuussa Sanlúcar de Barramedassa viisi laivaa odotti vielä yli '
+        + 'viisi viikkoa ennen kuin ne katosivat länteen.',
+      tehtava: {
+        kysymys: 'Montako Magalhãesin viidestä laivasta palasi Sanlúcariin vuonna 1522?',
+        vaihtoehdot: [
+          'Ei yhtään',
+          'Yksi',
+          'Kolme',
+          'Kaikki viisi',
+        ],
+        oikea: 1,
+        fakta: 'Victoria palasi 6. syyskuuta 1522, kannellaan kahdeksantoista miestä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
+          aika: '20.9.1519',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-lahi-photo-v3.jpg',
+          teksti: 'Kuka teistä palaa? Sitä ei jokisuussa kysy kukaan ääneen. '
+            + 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä, ja kolmen '
+            + 'vuoden kuluttua kotiin pääsee heistä kahdeksantoista. Laivasto '
+            + 'tuli Sevillasta 10. elokuuta Guadalquivirjokea alas ja on maannut '
+            + 'tässä jokisuussa yli viisi viikkoa: vettä, viiniä ja suolalihaa on '
+            + 'lastattu viimeiseen asti. Ankkurissa on viisi alusta — lippulaiva '
+            + 'Trinidad, San Antonio, Concepción, Victoria ja Santiago. Rannalla '
+            + 'liikkuu ontuen portugalilainen Fernão de Magalhães, jonka jalka '
+            + 'jäi vialle Azemmourin taistelussa Marokossa 1513 ja joka purjehtii '
+            + 'nyt Espanjan kuninkaan lipun alla; espanjalaiset kapteenit '
+            + 'epäilevät häntä jo ennen lähtöä. Hän itse kaatuu Filippiineillä '
+            + 'huhtikuussa 1521. Tähän samaan jokisuuhun palaa 6. syyskuuta 1522 '
+            + 'yksi laiva, Victoria, Juan Sebastián Elcanon komennossa — '
+            + 'ensimmäiset maapallon ympäri purjehtineet ihmiset. Useimmat '
+            + 'toverit jäivät nimettömiin hautoihin matkan varrelle.',
+          lyhyt: 'Noin 270 lähtijästä vain 18 palaa; Magalhães kuolee matkalla, '
+            + 'Elcano tuo viimeisen laivan kotiin.',
+          selite: 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä; kotiin '
+            + 'palaa alkuperäisestä joukosta vain 18. Magalhães itse kuolee '
+            + 'Filippiineillä, ja Juan Sebastián Elcano tuo viimeisen laivan '
+            + 'Espanjaan.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Espanjan merivoimien '
+            + 'Instituto de Historia y Cultura Naval, *Expedición de Juan '
+            + 'Sebastián de Elcano y Fernando de Magallanes (1519–1522)*; '
+            + 'tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
+              lyhyt: 'Viisi laivaa lähtee Sanlúcarista; lähes kolme vuotta '
+                + 'myöhemmin palaa vain uupunut Victoria.',
+              selite: 'Viisi laivaa lähtee, mutta Sanlúcar näkee kahden vuoden ja '
+                + 'yhdentoista kuukauden kuluttua palaavan vain Victorian. Sen '
+                + 'uupuneet miehet ovat ensimmäiset, jotka ovat kiertäneet '
+                + 'maapallon — useimmat toverit jäävät nimettömiin hautoihin '
+                + 'matkan varrelle.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Espanjan merivoimien '
+                + 'Instituto de Historia y Cultura Naval, *Expedición de Juan '
+                + 'Sebastián de Elcano y Fernando de Magallanes (1519–1522)*; '
                 + 'tarkistettu 3.9.2026.',
             },
           ],
@@ -12254,6 +12537,23 @@ export const MAA_KATEGORIAT = {
           lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
           wiki: 'Suklaa',
         },
+        {
+          otsikko: 'Kansallisruoka, joka piti keksiä',
+          aika: '1950-luku',
+          tiedosto: 'Full cheese fondue set - in Switzerland.JPG',
+          teksti: 'Juustofondue oli 1900-luvun alussa tuttu vain muutamassa '
+            + 'laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan '
+            + 'mainoskampanjalla, ja armeijan keittokirja levitti reseptin '
+            + 'koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: '
+            + 'puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä '
+            + 'maksaa laulun.',
+          lyhyt: 'Fondue syödään caquelon-padasta, jota lämmitetään pöydässä juuston pysyessä sulana.',
+          selite: 'Fondue syödään caquelon-nimisestä padasta, jota pidetään '
+            + 'pöydässä pienen lämmittimen päällä, jotta juusto pysyy '
+            + 'sulana koko aterian ajan.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Fondue',
+        },
       ],
       tehtava: {
         kysymys: 'Mitä Rodolphe Lindt teki vahingossa vuonna 1879?',
@@ -12589,6 +12889,27 @@ export const MAA_KATEGORIAT = {
             + 'Pohjanmerellä yli 200 koereiän jälkeen.',
           lahde: 'Telemuseet, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Lipun kannossa oli silakkasalaatti',
+          aika: '1844',
+          tiedosto: 'LAROUSSE - H.Chartier (1859-1924) SUÈDE ET NORVÈGE Armes, drapeaux, armee (Sweden and Norway historical Coat of arms, flags 1890s) Nouveau Larousse Illustré Paris 1898-1901 Vol 07 (detail).jpg',
+          teksti: 'Norjan nykyinen lippu suunniteltiin jo 1821; sen teki '
+            + 'suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli '
+            + 'punaista, valkoista ja sinistä sillä, että ne merkitsivät '
+            + 'silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain '
+            + 'pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli '
+            + 'käytettävä unionin yhteistä kauppalippua, koska suoja '
+            + 'Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna '
+            + '1844 molempien maiden lippujen kantoon pantiin yhteinen '
+            + 'unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen '
+            + 'sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki '
+            + 'katosi vuoden 1899 lopussa.',
+          lyhyt: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina sama, tasan jaettu unionimerkki.',
+          selite: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina '
+            + 'kummassakin sama unionimerkki, jossa maiden värit on jaettu '
+            + 'tasan.',
+          lahde: 'Henri-Georges Chartier, Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka monta päivää Amundsenin jälkeen Scott saapui '
@@ -12664,6 +12985,37 @@ export const MAA_KATEGORIAT = {
           selite: 'Lillehammerin Maihaugen on Pohjois-Euroopan suurimpia '
             + 'ulkomuseoita, ja siellä on lähes 200 rakennusta.',
           lahde: 'אמא של, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Ruskea juusto keitetään herasta',
+          aika: '1863',
+          tiedosto: 'Brunost - Brown cheese.jpg',
+          teksti: 'Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. '
+            + 'Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja '
+            + 'massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna '
+            + '1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin '
+            + 'juusto. Leivän päälle se leikataan juustohöylällä — myös se on '
+            + 'norjalainen keksintö, vuodelta 1925.',
+          selite: 'Brunostin väri ei tule väriaineesta vaan kuumennuksessa '
+            + 'karamellisoituneesta maitosokerista.',
+          lahde: 'color line, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Gudbrandsdalsost',
+        },
+        {
+          otsikko: 'Turska, joka tulee itse käymään',
+          aika: 'Helmikuussa',
+          tiedosto: 'Tørrfisk.jpg',
+          teksti: 'Skrei on turska, joka ui joka talvi Barentsinmereltä Norjan '
+            + 'rannikolle kutemaan. Osa syödään heti mølje-ateriana: kalaa, '
+            + 'mätiä, maksaa ja perunaa. Osa ripustetaan telineille '
+            + 'helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. '
+            + 'Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia '
+            + 'vedestä, ja sen jälkeen se säilyy vuosia.',
+          lyhyt: 'Kapakala kuivuu telineillä helmikuusta, ja kolmessa kuukaudessa siitä haihtuu noin 70 % vedestä.',
+          selite: 'Kapakala ripustetaan telineille helmikuussa, ja kolmessa '
+            + 'kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Kapakala',
         },
       ],
       tehtava: {
@@ -13099,6 +13451,21 @@ export const MAA_KATEGORIAT = {
             + 'Tanskaan itävaltalaisten leipurien mukana.',
           lahde: 'RhinoMind, Wikimedia Commons (CC BY-SA 3.0)',
         },
+        {
+          otsikko: 'Voileipä syödään haarukalla',
+          aika: 'Lounaalla',
+          tiedosto: 'Smørrebrød in Copenhagen 01.jpg',
+          teksti: 'Smørrebrød on avoin voileipä tummalla ruisleivällä, ja se '
+            + 'syödään veitsellä ja haarukalla. Järjestyskin on tarkka: ensin '
+            + 'kala, sitten liha, viimeisenä juusto — eikä päällisiä '
+            + 'sekoiteta keskenään. Vanhoissa lounasravintoloissa listalla '
+            + 'voi olla yli kaksikymmentä eri leipää, ja jokaisella on oma '
+            + 'nimensä ja vakiintunut kuormansa.',
+          selite: 'Smørrebrødin nimi tulee leivälle levitetystä voista: smør '
+            + 'on voi ja brød leipä.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Smørrebrød',
+        },
       ],
       tehtava: {
         kysymys: 'Mistä tanskalainen wienerleipä sai alkunsa?',
@@ -13208,6 +13575,89 @@ export const MAA_KATEGORIAT = {
         fakta: 'Se siirtyy jopa 18 metriä vuodessa ja on Pohjois-Euroopan suurin liikkuva '
           + 'hiekkasärkkä.',
       },
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `viikinkilaiva-roskilde-1040`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-viikinkilaiva-roskilde-1040',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Roskilde 1040',
+      johdanto: 'Roskildenvuonon pohjasta nostettiin vuosina 1957–1962 viisi '
+        + 'viikinkilaivaa, jotka oli aikanaan upotettu sulkemaan väylä — ja juuri '
+        + 'niiden ansiosta tiedetään tarkasti, miltä tuhat vuotta sitten lähtenyt '
+        + 'pitkälaiva näytti.',
+      tehtava: {
+        kysymys: 'Missä Skuldelev 2 -pitkälaiva rakennettiin?',
+        vaihtoehdot: [
+          'Roskildessa',
+          'Bergenissä',
+          'Dublinin seudulla',
+          'Haithabussa',
+        ],
+        oikea: 2,
+        fakta: 'Vuosilustot ajoittavat rakentamisen Dublinin seudulle noin vuoteen 1042.',
+      },
+      nostot: [
+        {
+          otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
+          aika: 'n. 1040',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-lahi-photo-v3.jpg',
+          teksti: 'Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu '
+            + 'kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee '
+            + 'ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö '
+            + 'kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja '
+            + 'mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, '
+            + 'idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti '
+            + 'rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje '
+            + 'on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä '
+            + 'on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään '
+            + 'viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, '
+            + 'koska viisi niistä upotettiin 1000-luvulla tähän samaan vuonoon '
+            + 'sulkemaan Peberrendenin väylä, ja Tanskan kansallismuseo nosti ne '
+            + 'pohjasta vuosina 1957–1962. Suurin, Skuldelev 2, on tammesta '
+            + 'rakennettu kolmikymmenmetrinen sotalaiva: kuusikymmentä soutajaa, '
+            + '112 neliömetrin purje ja tilaa 70–80 miehelle. Sen tarkka '
+            + 'jäljennös Havhingsten fra Glendalough purjehti vuonna 2007 '
+            + 'Roskildesta Dubliniin ja seuraavana kesänä takaisin — sama matka, '
+            + 'samat airot, tuhat vuotta myöhemmin.',
+          lyhyt: 'Nuori soutaja lähtee ensi kertaa pitkälle viikinkimatkalle '
+            + 'tietämättä, palaako miehistö lainkaan.',
+          selite: 'Kuvan nuori soutaja lähtee ensimmäiselle pitkälle matkalleen '
+            + 'eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei '
+            + 'lainkaan. Kapea pitkälaiva tekee saman aluksen kaikista kolmesta '
+            + 'mahdollisen ja kuljettaa pohjoismaisia ihmisiä Atlantille sekä '
+            + 'idän jokireiteille.',
+          lahde: 'Matkakirjan havainnekuva. Alusreferenssi: Vikingeskibsmuseet, '
+            + 'Skuldelev 2, Irlannissa noin 1042–1043 rakennettu pitkälaiva; '
+            + 'tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
+              lyhyt: 'Pitkälaiva kuljettaa kokonaista yhteisöä, sukulaisia ja '
+                + 'soutajia, Atlantille ja itään.',
+              selite: 'Vuonon rannalle jäävät eivät näe pelkkää sotalaivaa vaan '
+                + 'kokonaisen liikkuvan yhteisön: sukulaisia, velallisia, vapaita '
+                + 'miehiä ja ehkä pakotettuja soutajia. Noin 60 airoa antaa '
+                + 'alukselle nopeuden, mutta jokainen meripeninkulma syntyy '
+                + 'yksittäisten käsien työstä.',
+              lahde: 'Matkakirjan havainnekuva. Alusreferenssi: '
+                + 'Vikingeskibsmuseet, Skuldelev 2, Irlannissa noin 1042–1043 '
+                + 'rakennettu pitkälaiva; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'menovinkit',
@@ -16533,6 +16983,24 @@ export const MAA_KATEGORIAT = {
             + 'tiiviimpi, tummempi ja kuitupitoisempi.',
           lahde: 'TravelerMK, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Kaapissa on 268 815 lappua',
+          aika: '2001',
+          tiedosto: 'Dainu skapja oriģināls LNB.jpg',
+          teksti: 'Daina on nelisäkeinen latvialainen kansanlaulu. Krišjānis '
+            + 'Barons keräsi niitä ja järjesti ne itse piirtämäänsä kaappiin: '
+            + '160 senttiä korkea, 70 laatikkoa, jokaisessa 20 lokeroa. '
+            + 'Lappuja on 268 815, kukin 3 × 11 senttiä. Unesco liitti kaapin '
+            + 'maailman muisti -rekisteriin 2001.',
+          lyhyt: 'Krišjānis Baronsin dainakaapissa on 268 815 laululippua, Unescon muistin maailmanperintöä.',
+          selite: 'Krišjānis Baronsin dainakaapissa on 70 laatikkoa ja 268 '
+            + '815 laululippua, ja Unesco liitti sen maailman muisti '
+            + '-rekisteriin 2001.',
+          lahde: 'Savannah Rivka, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Daina',
+          musiikki: 'https://music.apple.com/fi/search?term=latvian%20folk%20songs',
+          musiikkiNimi: 'Latvialaisia kansanlauluja Apple Musicissa',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka usein Latvian laulujuhlat järjestetään?',
@@ -17012,6 +17480,25 @@ export const MAA_KATEGORIAT = {
             + 'omistautuneisuuden ansiosta tullut lajin perinteinen suurmaa.',
           lahde: 'globalite, Wikimedia Commons (CC BY-SA 2.0)',
         },
+        {
+          otsikko: 'Sutartinė soi tahallaan riitasointuisena',
+          aika: '2010',
+          tiedosto: 'Sutartinės.jpg',
+          teksti: 'Sutartinė on liettualainen moniääninen laulu, jota esittää '
+            + 'kaksi, kolme tai neljä naista. Äänet kulkevat sekunnin päässä '
+            + 'toisistaan — siis niin lähellä, että sointi hankaa korvaa '
+            + 'tahallaan. Laji on kotoisin Aukštaitijasta, ja Unesco otti sen '
+            + 'ihmiskunnan perintöluetteloon vuonna 2010.',
+          lyhyt: 'Sutartinėssä äänet kulkevat sekunnin päässä toisistaan, ja laululla on usein oma koreografiansa.',
+          selite: 'Sutartinėssä äänet kulkevat sekunnin päässä toisistaan, '
+            + 'ja laululla on usein oma yksinkertainen koreografiansa.',
+          lahde: 'Bcecilija, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liettua',
+          musiikki: 'https://music.apple.com/fi/search?term=sutartines',
+          musiikkiNimi: 'Sutartinės-lauluja Apple Musicissa',
+          musiikkiNayte: 'https://archive.org/download/EDIS-SRP-0197-03/EDIS-SRP-0197-03.mp3',
+          musiikkiNayteNimi: 'Liettualainen kansanlaulu kanteleilla — CC0',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka monta kertaa viranomaiset raivasivat Ristien kukkulan?',
@@ -17116,6 +17603,23 @@ export const MAA_KATEGORIAT = {
             + 'itsenäisyyttä.',
           lahde: 'Jonas Kernagis, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Baltian ketju',
+        },
+        {
+          otsikko: 'Kirjat kannettiin rajan yli selässä',
+          aika: '1864',
+          tiedosto: 'Lithuanian book carrier Kazys Ūdra (1857–1937).jpg',
+          teksti: 'Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen '
+            + 'painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa '
+            + 'rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä '
+            + 'kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi '
+            + 'knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja '
+            + 'säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai '
+            + 'karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä '
+            + 'vuotta, kunnes kielto kumottiin vuonna 1904.',
+          lyhyt: 'Kazys Ūdra oli knygnešys, joka kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli selässään.',
+          selite: 'Kazys Ūdra oli knygnešys eli kirjankantaja, joka kuljetti '
+            + 'kiellettyjä liettuankielisiä kirjoja rajan yli selässään.',
+          lahde: 'tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
       ],
       tehtava: {
@@ -17957,7 +18461,8 @@ export const MAA_KATEGORIAT = {
       johdanto: 'Turkin vanhimmat tarinat ovat kiven ja saven varassa: pystyyn '
         + 'nostettu pylväs, savitaulu, yhdeksän kaupunkia päällekkäin ja '
         + 'liitutaulu, jonka ääressä koko maa opetteli kirjoittamaan '
-        + 'uudestaan.',
+        + 'uudestaan — ja lähempänä nykypäivää valtio, joka ilmoitti '
+        + 'maksavansa velkansa vain puoliksi.',
       nostot: [
         {
           otsikko: 'Pylväät nostettiin ennen kyliä',
@@ -18039,6 +18544,28 @@ export const MAA_KATEGORIAT = {
             + 'maalliseksi kansallisvaltioksi, ja niihin kuului myös '
             + 'siirtyminen latinalaisiin kirjaimiin.',
           lahde: 'Turkin tasavallan presidentin kanslia, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Valtio ilmoitti maksavansa vain puolet',
+          aika: '1875',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-osmanien-vararikko-1875.jpg',
+          teksti: 'Osmanien valtakunta otti ensimmäisen ulkomaisen lainansa '
+            + 'Krimin sodan aikana 1854, ja parikymmentä vuotta myöhemmin '
+            + 'velanhoito söi valtaosan valtion tuloista. Lokakuun 6. '
+            + 'päivänä 1875 hallitus julkaisi ramazan-asetuksen: seuraavat '
+            + 'viisi vuotta velasta maksettaisiin vain puolet käteisenä ja '
+            + 'loput uusina viiden prosentin obligaatioina. Seuraavana '
+            + 'vuonna maksut loppuivat kokonaan. Sopu syntyi vasta 1881 '
+            + 'muharrem-asetuksella, joka perusti eurooppalaisten velkojien '
+            + 'johtaman velkahallinnon; se keräsi suoraan itselleen muun '
+            + 'muassa suola-, tupakka-, leimavero- ja alkoholitulot. '
+            + 'Virasto jäi Istanbuliin vuosikymmeniksi, ja sen talossa '
+            + 'toimii nykyään Istanbul Erkek Lisesi -lukio.',
+          lyhyt: 'Osmanihallinnon virkamiehet ja velkojat saman pöydän ääressä tyhjän kassalippaan edessä.',
+          selite: 'Osmanihallinnon virkamiehet ja velkojat saman pöydän '
+            + 'ääressä: kassalipas on tyhjä ja tarjottimella on kourallinen '
+            + 'kolikoita.',
+          lahde: 'Matkakirjan havainnekuva: velkaneuvottelu Konstantinopolissa',
         },
       ],
       tehtava: {
@@ -18982,6 +19509,22 @@ export const MAA_KATEGORIAT = {
           selite: 'Kiehuva karpalokisseli kattilassa; paksu, kiiltävä pinta '
             + 'on tyypillinen tälle vanhalle jälkiruoalle.',
           lahde: 'Dmitri Grigorjev, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Laskiaisviikolla syödään aurinkoja',
+          aika: 'Laskiaisviikolla',
+          tiedosto: 'Tea party with pancakes and a samovar.jpg',
+          teksti: 'Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon '
+            + 'suurta paastoa, ja sen ruoka on blini: ohut lettu, joka '
+            + 'esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa '
+            + 'tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon '
+            + 'lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. '
+            + 'Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on '
+            + 'vuoden mittaan loukannut.',
+          selite: 'Maslenitsan ruoka on blini, ohut lettu, joka esittää '
+            + 'aurinkoa, ja teevesi keitetään samovaarissa.',
+          lahde: 'Avsolov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maslenitsa',
         },
       ],
       tehtava: {
@@ -20551,6 +21094,26 @@ export const MAA_KATEGORIAT = {
             + 'piiritanssia horoa 1780-luvulla; kaiverrus julkaistiin '
             + 'kirjassa 1810.',
           lahde: 'Luigi Mayer, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Gaida — säkkipilli Balkanilla',
+          aika: 'Häissä ja tansseissa',
+          tiedosto: 'Kostadin Varimezov playing the gaida.jpg',
+          teksti: 'Gaida on vuohennahasta tehty säkkipilli, jota soitetaan '
+            + 'häissä ja tansseissa. Rodopeilta kotoisin oleva iso kaba '
+            + 'gaida soi matalasti ja käheästi. Soittaja täyttää säkin '
+            + 'puhaltamalla ja puristaa siitä ilmaa kainalollaan, jottei '
+            + 'ääni katkea hengenvedon ajaksi. Tahtilajit ovat '
+            + 'suomalaiseen korvaan outoja: yleisiä ovat 7/8 ja 11/16, '
+            + 'joten askel menee pitkä–lyhyt–lyhyt.',
+          lyhyt: 'Gaida on vuohennahasta tehty säkkipilli, jota soittaja puhaltaa ja puristaa kainalollaan.',
+          selite: 'Gaida on vuohennahasta tehty säkkipilli, jonka soittaja '
+            + 'täyttää puhaltamalla ja josta hän puristaa ilmaa '
+            + 'kainalollaan, jottei ääni katkea hengenvedon ajaksi.',
+          lahde: 'Martha Forsyth, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Säkkipilli',
+          musiikki: 'https://music.apple.com/fi/search?term=bulgarian%20folk%20gaida',
+          musiikkiNimi: 'Bulgarialaista kansanmusiikkia Apple Musicissa',
         },
       ],
       tehtava: {

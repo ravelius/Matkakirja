@@ -25,6 +25,16 @@
 > (`KUVA_PAIVARAJA`). Käyttöönotto: aja "Pöllön julkaisu" -ajo
 > uudelleen, jotta uusi worker-versio menee Cloudflareen.
 >
+> **Päivitys 27.9.2026 (striimiluenta xAI:lla):** omistajan päätös
+> 27.9.2026 klo 00.25 — kaikki striimiluenta luetaan xAI:n Grok TTS:llä
+> äänellä `ara` (ensimmäinen tavu ~0,2 s suomeksi). Viides salaisuus
+> `XAI_API_KEY` (<https://console.x.ai> → API keys); "Pöllön julkaisu"
+> vie sen workerille. Kytkin `PUHE_MOOTTORI` (wrangler.jsonc: `xai` |
+> `openai`); ilman xAI-avainta worker lukee OpenAI:lla kuin ennen, ja
+> xAI:n virhe tai 8 s:n aikakatkaisu putoaa samaan varapolkuun.
+> Kehittäjävalikon *striimiääni*-valitsin kokeilee muita xAI-ääniä
+> (vain kehittäjäkoodilla). Äänilista: worker.js `XAI_AANET`.
+>
 > **Päivitys 14.8.2026 (lukijaääni):** sama worker välittää nyt myös
 > pelin lukijaäänen (OpenAI gpt-4o-mini-tts, `tehtava: 'puhe'`).
 > Se tarvitsee neljännen salaisuuden `OPENAI_API_KEY`

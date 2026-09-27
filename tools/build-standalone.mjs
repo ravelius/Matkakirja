@@ -696,6 +696,8 @@ const MODULES = [
    * liuskan nimiö on nähtävyyksien staattinen riippuvuus.
    */
   'js/karttavalot.js',
+  // Nostojen kategoriat (liuska ja lehden osiohakemisto, ks. moduulin alku).
+  'js/nostokategoriat.js',
   /*
    * KAUPUNKILIUSKAN NIMIÖT ENNEN NÄHTÄVYYKSIÄ (Raamattu,
    * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 8). `NAHTAVYYDET_NIMIO` on
@@ -808,6 +810,8 @@ const MODULES = [
    * kääntöä ei edes yritetä ladata, lehti käyttää vanhaa liukua.
    */
   'js/sivunkaanto.js',
+  // Lehden osiohakemisto (lehti.js tuo sen).
+  'js/lehtiosiot.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
   /*
@@ -1014,6 +1018,8 @@ const MODULES = [
    */
   'js/packs/historian-hetket.js',
   'js/historian-hetket.js',
+  // Osiohakemiston nostokuvat fokusmoduulien jälkeen (tuontisykli, ks. moduuli).
+  'js/lehtiosiot-kuvat.js',
   /*
    * Eläintäyt ennen ui:ta (ui tuo niiden päivitys- ja nollauskutsun).
    * Data ensin, kerros perässä. Kerros lukee laudan projektion

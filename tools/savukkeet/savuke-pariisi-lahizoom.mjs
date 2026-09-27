@@ -175,6 +175,15 @@ import {
   NOSTON_MITTA, NOSTON_NIMIO_KATTO_PX, KAUPUNKIMERKIN_KERROIN, KAUPUNKIMERKIN_NIMIO_PX,
 } from '../../js/pallolauta/nostot.js';
 
+/*
+ * KAUPUNKILIUSKA POISTUI (omistaja 27.9.2026 klo 23.4x): kaupungin napautus
+ * avaa avauskortin (js/kaupunkinosto.js avaaAvauskortti), jota vartioi
+ * tools/savukkeet/savuke-avauskortti.mjs. Liuskan vartiot ohitetaan INFO-
+ * rivillä, kun kytkin js/pallolauta/lauta.js KAUPUNKILIUSKA on pois.
+ */
+const LIUSKA_KAYTOSSA = /export const KAUPUNKILIUSKA = true;/.test(
+  readFileSync(new URL('../../js/pallolauta/lauta.js', import.meta.url), 'utf8'));
+
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -1110,7 +1119,7 @@ for (const ruutu of RUUDUT) {
     const pp = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
     return pp ? { x: pp.x, y: pp.y, id: oma.id, nimi: oma.name } : null;
   });
-  if (saapuvaPiste) {
+  if (saapuvaPiste && LIUSKA_KAYTOSSA) {
     await sivu.evaluate(() => {
       const l = window.matkakirja.ui.pallolauta;
       const pallo = l.pallo;
@@ -1341,7 +1350,7 @@ for (const ruutu of RUUDUT) {
       + `${nimiSulun ? 'näkyy' : 'PIILOSSA'}`);
     await sivu.waitForTimeout(200);
   } else {
-    tieto(`${ruutu.nimi} · saapumisnäkymän liuska`, 'kaupunkimerkki ei ollut ruudulla');
+    tieto(`${ruutu.nimi} · saapumisnäkymän liuska`, LIUSKA_KAYTOSSA ? 'kaupunkimerkki ei ollut ruudulla' : 'OHITUS: kaupunkiliuska poistettu (avauskortti, savuke-avauskortti.mjs)');
   }
 
   /* --- sisimpään zoomiin --- */
@@ -2470,7 +2479,8 @@ for (const ruutu of RUUDUT) {
  * kaksi 130 s:n riviä rinnakkain on portille lyhyempi kuin yksi
  * 220 s:n rivi.
  */
-if (lohko('liuska')) for (const ruutu of RUUDUT) {
+if (lohko('liuska') && !LIUSKA_KAYTOSSA) console.log('INFO  liuska-lohko: OHITUS — kaupunkiliuska poistettu (avauskortti, savuke-avauskortti.mjs)');
+if (lohko('liuska') && LIUSKA_KAYTOSSA) for (const ruutu of RUUDUT) {
   console.log(`\n=== LIUSKA ${ruutu.nimi} ${ruutu.w} × ${ruutu.h} ==========`);
   const { sivu } = await avaaSivu(ruutu);
   await zoomaaPariisiin(sivu, ZOOMIPORTAAT);
@@ -3146,7 +3156,16 @@ if (lohko('liuska')) for (const ruutu of RUUDUT) {
    * kartan nimet, muiden nostojen nimiöt (piilotetut pois), pelaajan
    * nappula ja kelluvat napit (pulu/pöllö).
    */
-  const esteMitta = await sivu.evaluate(() => {
+  /*
+   * ASETTUMINEN (8l4 punainen 21.–26.9.2026, toistui paikallisesti ilman
+   * kuormaa): liuskan alle jäävät nimiöt piiloutuvat sovittelun
+   * seuraavalla kierroksella, eivät samassa kehyksessä, jossa lista
+   * avautuu. Kertaluku osui välillä tähän väliin (36 estettä, 3
+   * leikkausta; heti perään 32 ja 0). Vartio lukee siksi esteet
+   * uudelleen, kunnes leikkauksia ei ole tai sama tulos toistuu
+   * kolmesti (enintään ~3 s) — pysyvä leikkaus jää yhä punaiseksi.
+   */
+  const lueEsteet = () => sivu.evaluate(() => {
     const l = window.matkakirja.ui.pallolauta;
     const r = l.pallo.renderer().domElement.getBoundingClientRect();
     const laatikko = (el) => {
@@ -3160,10 +3179,29 @@ if (lohko('liuska')) for (const ruutu of RUUDUT) {
         korkeus: b.height,
       };
     };
+    /*
+     * NÄKYVÄ MUSTE (8l4 punainen 21.–26.9.2026): sovittelu piilottaa
+     * väistyvän nimiön luokalla, jonka css häivyttää opacityn nollaan
+     * (.nostosym-nimio-piilossa, nostot.js NIMIÖ HÄIVYTETÄÄN, EI POISTETA),
+     * eikä elementti katoa DOMista. Vartio laski nämä näkymättömät
+     * nimiöt esteiksi liuskan alla (Skandaalit × nimiö, vaikka kuvassa
+     * ei ole mitään). Este on vain se, mikä näkyy: elementti ja sen
+     * esivanhemmat, joiden opacity > 0 ja visibility näkyvä.
+     */
+    const nakyy = (el) => {
+      for (let e = el; e && e.nodeType === 1; e = e.parentElement) {
+        const t = getComputedStyle(e);
+        if (t.visibility === 'hidden' || t.display === 'none' || Number(t.opacity) === 0) return false;
+      }
+      return true;
+    };
+    const piilossa = [];
     const kerää = (valitsin) => [...document.querySelectorAll(valitsin)]
+      .filter((el) => nakyy(el) || (piilossa.push(el), false))
       .map(laatikko)
       .filter((b) => b.leveys > 0 && b.korkeus > 0);
     return {
+      piilossa: piilossa.length,
       ruutu: { leveys: r.width, korkeus: r.height },
       rivit: l.nostot.liuskanRivit?.() ?? [],
       esteet: [
@@ -3180,17 +3218,31 @@ if (lohko('liuska')) for (const ruutu of RUUDUT) {
       ],
     };
   });
+  const leikkauksetNyt = (m) => {
+    const tulos = [];
+    for (const rivi2 of m.rivit ?? []) {
+      for (const este of m.esteet) {
+        if (limittyy(rivi2, este)) tulos.push(`${rivi2.nimi || rivi2.laji} × ${este.mikä}`);
+      }
+    }
+    return tulos;
+  };
+  let esteMitta = await lueEsteet();
+  let edellinen = leikkauksetNyt(esteMitta).join('|');
+  let samoja = 1;
+  for (let kierros = 0; kierros < 12 && edellinen !== '' && samoja < 3; kierros += 1) {
+    await sivu.waitForTimeout(250);
+    esteMitta = await lueEsteet();
+    const nyt = leikkauksetNyt(esteMitta).join('|');
+    samoja = nyt === edellinen ? samoja + 1 : 1;
+    edellinen = nyt;
+  }
   const esteRivit = esteMitta.rivit ?? [];
   const esteYli = esteRivit.filter((b) => b.x0 < 0 || b.y0 < 0
     || b.x1 > esteMitta.ruutu.leveys || b.y1 > esteMitta.ruutu.korkeus).map((b) => b.nimi || b.laji);
-  const leikkaukset = [];
-  for (const rivi2 of esteRivit) {
-    for (const este of esteMitta.esteet) {
-      if (limittyy(rivi2, este)) leikkaukset.push(`${rivi2.nimi || rivi2.laji} × ${este.mikä}`);
-    }
-  }
+  const leikkaukset = leikkauksetNyt(esteMitta);
   tieto(`${ruutu.nimi} · 8l4 esteet`,
-    `esteitä ${esteMitta.esteet.length}, liuskan rivejä ${esteRivit.length}`);
+    `esteitä ${esteMitta.esteet.length} (näkymättömiä ohitettu ${esteMitta.piilossa}), liuskan rivejä ${esteRivit.length}`);
   vaadi(`8l4. ${ruutu.nimi}: liuska on ruudussa eikä leikkaa nimeä, nimiötä, nappulaa tai pulua`,
     esteRivit.length > 0 && esteYli.length === 0 && leikkaukset.length === 0,
     `reunan yli: ${esteYli.join(', ') || 'ei'}, leikkaa: ${leikkaukset.slice(0, 6).join(', ') || 'ei'}`);

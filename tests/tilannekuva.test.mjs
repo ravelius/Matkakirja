@@ -13,6 +13,7 @@ function paketti() {
     .map((p, i) => [p, `{"n":${i},"ä":"${p}"}\n`]));
   const h = kokoaHakemisto(tiedostot);
   const osoitin = { versio: 7, polku: 'sisalto/1/v7/', sha256: paketinTiiviste(tiedostot), skeemaversio: '1.48',
+    julkaistu: '2026-09-26T10:30:00.000Z',
     hakemisto: { polku: 'hakemisto.json', sha256: h.sha256, tavuja: h.tavuja } };
   const ampari = new Map([[`${J}sisalto/1/uusin.json`, JSON.stringify(osoitin)], [`${J}sisalto/1/v7/hakemisto.json`, h.teksti],
     ...[...tiedostot].map(([p, t]) => [`${J}sisalto/1/v7/${p}`, t])]);
@@ -29,6 +30,8 @@ test('tilannekuva: vain aloitusdata, sisällön mukaan avainnettuna, tiivisteet 
   const kuvaus = JSON.parse(t.tiedostot.get('tilannekuva.json'));
   assert.deepEqual(kuvaus.tiedostot, TILANNEKUVAN_TIEDOSTOT);
   assert.ok(t.tiedostot.has('osoitin.json') && t.tiedostot.has('hakemisto.json'));
+  // Natiivin varareitti (7eb88111) lukee osoittimen julkaistu-kentän: tilannekuva ≤ 14 vrk vanha.
+  assert.equal(JSON.parse(t.tiedostot.get('osoitin.json')).julkaistu, '2026-09-26T10:30:00.000Z');
 });
 
 test('tilannekuva: sama tiivistesääntö kuin julkaisussa, ja väärä tiedosto hylätään', async () => {
@@ -39,4 +42,10 @@ test('tilannekuva: sama tiivistesääntö kuin julkaisussa, ja väärä tiedosto
   await assert.rejects(kokoaTilannekuva({ juuri: J, hae }), /reitit\.json: sha256/);
   ampari.set(`${J}sisalto/1/uusin.json`, JSON.stringify({ ...osoitin, hakemisto: undefined }));
   await assert.rejects(kokoaTilannekuva({ juuri: J, hae }), /ei hakemistoa/);
+});
+
+test('tilannekuvan tiedostot ovat paketissa (vienti)', async () => {
+  const { kokoaVienti } = await import('../tools/vienti/vie-sisalto.mjs');
+  const { tiedostot } = await kokoaVienti();
+  for (const p of TILANNEKUVAN_TIEDOSTOT) assert.ok(tiedostot.has(p), `${p} puuttuu paketista`);
 });
