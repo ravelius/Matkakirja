@@ -230,6 +230,7 @@ namespace Matkakirja.Natiivi
             if (arvo != null && arvo.StartsWith("siirra ") && double.TryParse(arvo.Substring(7), System.Globalization.NumberStyles.Float,
                 System.Globalization.CultureInfo.InvariantCulture, out var siirto)) AikaSiirto += siirto;
             if (arvo == "0" || arvo == "1") { Paalla = arvo == "1"; PallonLepo.Muuttui("elävät elementit"); }
+            if (arvo == "meri 0" || arvo == "meri 1") { MeriKoristeet.Paalla = arvo == "meri 1"; PallonLepo.Muuttui("elävät elementit"); }
             if (arvo != null && arvo.StartsWith("koko ") && float.TryParse(arvo.Substring(5), System.Globalization.NumberStyles.Float,
                 System.Globalization.CultureInfo.InvariantCulture, out var koko)) { KokoKerroin = Mathf.Clamp(koko, 0.2f, 6f); PallonLepo.Muuttui("elävät elementit"); }
             // "elava elementit nayta <aihe> [harvinainen]": näytöksellisen aiheen (meren koristeet) aika siirtyy seuraavan näytöksen

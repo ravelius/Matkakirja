@@ -67,6 +67,9 @@ namespace Matkakirja.Natiivi
                 Nakyy = MeriGeometria.ValasNakyy, Animoi = MeriGeometria.ValasAnimoi, Aikataulu = MeriGeometria.ValasAikataulu },
         };
 
+        /// <summary>Kytkin (komento "elava elementit meri 0|1", oletus päällä): pois = ei meren koristeita.</summary>
+        public static bool Paalla = true;
+
         static Dictionary<string, List<Kohta>> kohdat;
         static bool ladataan;
         static string maa;
@@ -129,6 +132,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static void Kohdemaa(string nyt)
         {
+            if (!Paalla) nyt = null;
             if (kohdat == null || nyt == maa) return;
             maa = nyt;
             foreach (var l in Lajit) { l.Valittu = false; l.AnkkuriAsetettu = false; l.SiirtoPt = 0f; }
