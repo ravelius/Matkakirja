@@ -9093,19 +9093,6 @@ body.flight-active .fact-card {
 
 .reveal-overlay .reveal-caption .reveal-isoisa { color: #cbb992; }
 
-/* Aarrekuvan havainnekuva-merkki (js/ui.js paljastus): oma rivi tekstien alla, pergamentti mustaa vasten. */
-.reveal-overlay .reveal-caption .reveal-havainne {
-  display: table;
-  margin: 0.55em auto 0;
-  color: rgba(217, 201, 164, 0.78);
-  border-color: rgba(217, 201, 164, 0.35);
-}
-
-.reveal-overlay.paikallis .reveal-caption .reveal-havainne {
-  color: rgba(70, 51, 31, 0.72);
-  border-color: rgba(70, 51, 31, 0.28);
-}
-
 .reveal-overlay.leaving { animation: fade-out 0.3s ease-in forwards; }
 
 /* Kulman sulkuruksi poistui 26.8.2026 (omistaja: "Yläkulman ruksi on

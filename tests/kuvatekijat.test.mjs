@@ -73,8 +73,9 @@ test('peli käyttää täydennystä kaikissa lähderiveissä (taytaLahderivi)', 
   assert.match(lue('../js/tekijakortti.js'), /const teksti = taydennaLahde\(lahde, kohde\);/);
 });
 
-test('aarrekuvan paljastus merkitsee havainnekuvan', () => {
-  assert.match(lue('../js/ui.js'), /html\('small', 'kuvateksti-havainne reveal-havainne', 'Havainnekuva'\)/);
+test('aarrekuvan paljastuskortissa EI ole havainnekuva-merkkiä (omistaja 18.3x)', () => {
+  assert.doesNotMatch(lue('../js/ui.js'), /reveal-havainne/);
+  assert.doesNotMatch(lue('../css/styles.css'), /reveal-havainne/);
 });
 
 test('Tekijät ja lähteet: havainnekuvat, NASA, OSM ja kaikki nimeämistä vaativat liput', () => {

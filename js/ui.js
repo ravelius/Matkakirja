@@ -20527,16 +20527,10 @@ export class UI {
      */
     if (token.fakta) caption.appendChild(html('p', 'reveal-fakta', token.fakta));
     /*
-     * HAVAINNEKUVA-MERKINTÄ (Fablen erä TEKIJÄMERKINNÄT 27.9.2026):
-     * aarrekuvat ovat tekoälyn tuottamia (tools/generoi-aarrekuvat.mjs,
-     * tools/kuvatekijat.mjs HAVAINNEKUVALAJIT), ja pelaajan on nähtävä se
-     * kortilla. Sama pieni merkki kuin kuvateksteissä (js/havainnekuva.js).
+     * EI HAVAINNEKUVA-MERKKIÄ AARREKUVAN PÄÄLLÄ (omistaja 27.9.2026 klo
+     * 18.3x): aarrekuvat ovat tekoälyn tuottamia, mutta sen kertovat
+     * Tekijät ja lähteet -sivu ja kuvan lähderivi — ei paljastuskortti.
      */
-    if (kuva) {
-      const merkki = html('small', 'kuvateksti-havainne reveal-havainne', 'Havainnekuva');
-      merkki.title = 'Tekoälyllä tuotettu havainnekuva';
-      caption.appendChild(merkki);
-    }
     /*
      * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
      * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen
