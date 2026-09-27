@@ -85,7 +85,9 @@ namespace Matkakirja
             r.NelioUlos(V(a - n), V(b - n), V(b + n), V(a + n), Vector3.back, KsMuste);
         }
 
-        static readonly Color KvLumi = Ramppi(0xf8f4ea), KvLumiVarjo = Ramppi(0xe6e0d2), KvHarjanne = Ramppi(0xeadcbd), KvRinne = Ramppi(0xcfb88e), KvKuru = Ramppi(0xa98a5c);
+        /// <summary>Vuoren väritys C (laite 27.9. klo 04.1x, A/B/C samasta ajosta): rinteet seepiarampilla, lumi kärkivärinä (alfa 1),
+        /// jotta lumihuippu pysyy valkoisena kuten kuvamerkissä (pelkällä rampilla lumi tasoittui ruskeaan).</summary>
+        static readonly Color KvLumi = Hex(0xf8f4ea), KvLumiVarjo = Hex(0xe6e0d2), KvHarjanne = Ramppi(0xeadcbd), KvRinne = Ramppi(0xcfb88e), KvKuru = Ramppi(0xa98a5c);
 
         /// <summary>Toistettava kohina −1…1 (kokonaisluvuista, ei allokaatioita).</summary>
         static float KvKohina(int a, int b)
