@@ -10328,6 +10328,28 @@ export const MAA_KATEGORIAT = {
           lahde: 'Bert Verhoeff for Anefo, Wikimedia Commons (CC0)',
           wiki: 'Pyöräily',
         },
+        {
+          otsikko: 'Yhdeksäntoista myllyä pumppasi maan kuivaksi',
+          aika: '1740',
+          tiedosto: 'KinderdijkMolens02.jpg',
+          teksti: 'Kinderdijkiin rakennettiin vuosina 1738–1740 yhdeksäntoista '
+            + 'tuulimyllyä, jotka pumppasivat ylimääräisen veden '
+            + 'Alblasserwaardin suoalueelta jokeen — ilman niitä koko '
+            + 'polderi olisi veden alla. Unesco liitti myllyrivistön '
+            + 'maailmanperintöluetteloon 1997. Toukokuun kansallisena '
+            + 'myllypäivänä lähes tuhat Alankomaiden myllyä avaa siipensä '
+            + 'yleisölle, ja Kinderdijkissä ne pyörivät tahdissa, jos tuulta '
+            + 'riittää. Kylän nimeen liittyy legenda: vuoden 1421 '
+            + 'suurtulvassa kehto ajelehti padolle, ja kissa piti sen '
+            + 'tasapainossa niin, ettei se kaatunut — sisällä nukkui '
+            + 'vahingoittumaton vauva.',
+          lyhyt: 'Kinderdijkin 19 tuulimyllyä pumppasivat vettä pois polderilta 1740-luvulta lähtien, Unescon perintöä 1997.',
+          selite: 'Kinderdijkin 19 tuulimyllyä pumppasivat vettä pois '
+            + 'polderilta 1740-luvulta lähtien, ja Unesco liitti ne '
+            + 'maailmanperintöluetteloon 1997.',
+          lahde: 'Lucas Hirschegger, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kinderdijk',
+        },
       ],
       tehtava: {
         kysymys: 'Mikä sai 1600-luvun kalleimpien tulppaanien terälehdet '
@@ -13842,6 +13864,28 @@ export const MAA_KATEGORIAT = {
             + 'monin paikoin kirjettä vähemmän.',
           lahde: 'austrian-hungarian postal service, Wikimedia Commons (Public domain)',
           wiki: 'Postikortti',
+        },
+        {
+          otsikko: 'Härkä möyryää linnan tornista',
+          aika: '1502',
+          tiedosto: 'Fortress Hohensalzburg above the Salzach.jpg',
+          teksti: 'Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja '
+            + 'sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan '
+            + 'suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja '
+            + '150 metriä leveä. Piispa Leonhard von Keutschach tilasi '
+            + 'linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on '
+            + 'yli 200 pilliä; sen möyryävää ääntä verrattiin härän '
+            + 'ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus '
+            + 'Egedacher uudisti sen 1735, ja se soi yhä päivittäin '
+            + 'palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna '
+            + 'koki ainoan piirityksensä talonpoikaissodassa 1525 ja '
+            + 'antautui taistelutta ranskalaisille vuonna 1800.',
+          lyhyt: 'Hohensalzburgin linnan mekaaninen urkukone Salzburgin härkä soi päivittäin, yli 200 pillillä.',
+          selite: 'Hohensalzburgin linna kohoaa Salzburgin yllä; sen '
+            + 'tornissa soiva mekaaninen urkukone, Salzburgin härkä, on '
+            + 'peräisin vuodelta 1502.',
+          lahde: 'Mattsjc, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hohensalzburgin linna',
         },
       ],
       tehtava: {
