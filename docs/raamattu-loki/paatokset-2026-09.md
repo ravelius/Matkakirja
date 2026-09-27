@@ -8347,3 +8347,7 @@ Omistaja 20.5x: aloituslennon animaation pitaa lahtea suoraan siita nakymasta, j
 ## OMISTAJA: ROOLIEN PITAA MIETTIA RATKAISU ITSE — FABLE ANTAA TAVOITELLUN KOKEMUKSEN, ROOLI TUO YHDEN VALMIIKSI MIETITYN SUOSITUKSEN (27.9.2026 klo 21.01)
 
 Omistaja 21.0x aloituslennon tarkennuksen jalkeen ('Kone pitaisi nakya siis lahelta vain hetken ja sitten kamera voi nousta ylos ja avata nakymaa' / 'Luulisi etta opus osaisi miettia itse paremmin kun on max kaytossa'). Fablen oppi: toimeksianto kuvaa tavoitellun kokemuksen (mita pelaaja tuntee ja nakee), ei parametreja; rooli suunnittelee kokonaisuuden itse ja tuo YHDEN suositellun version (video/kuvapari + 3–4 rivia perusteluja), vaihtoehto vain jos aidosti eri idea; ei parametri-A/B-kysymyksia omistajalle. Natiiviseppa: aloituslento suunnitellaan kokonaisuutena (napautusnakyma → lyhyt lahikuva → pehmea nousu, joka avaa lahtomaan, reitin ja kohteen → laskeutuminen kohteeseen), web mallina.
+
+## TF 1.0.32 TESTFLIGHTISSA (202609271721 = BUILD 32 21f09914); SKEEMAT 1.52–1.55 MAINISSA (27.9.2026 klo 21.08)
+
+Julkaisija 21.1x: TF 1.0.32 sisaisessa ryhmassa (CFBundleVersion 202609271721, ajo 36337231338) Fablen What to test -tekstilla. #3445 (skeemat 1.53–1.54) mainissa; #3479 (1.55, salaisuudet pois) + #3475 (Kreikan 14 → nostot) sisaltojunana #3488 v2340; Alonnisos-jatko #3490 junassa. Siirtosepan paasta paahan -offline-testi (Tanska, Kroatia) voi alkaa 1.0.32:lla.
