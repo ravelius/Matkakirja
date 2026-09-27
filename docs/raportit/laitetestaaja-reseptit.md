@@ -28,6 +28,15 @@ suoraan parametrina (`ui.Chat.Kysy(loput)`) — ei tarvitse napauttaa valmiiksi 
 ulostulon, EI pelkkää "ok"-kuittausta. Käytä tätä AINA kun täytyy todistaa että ääni oikeasti soi
 (esim. Pulun kaiutinvipu, puhevirta) — pelkkä komennon "ok"-paluuarvo ei riitä todisteeksi.
 
+**SUDENKUOPPA (Laitetestaaja 27.9.2026 klo 13.2x, väärä hälytys korjattu Natiivi-UI:n avulla):**
+`ui puu` listaa VAIN NÄKYVÄT (näytöllä olevat) elementit, ei koko sisältöä. Nostokortin (`ui nosto
+...`) LISÄÄ-napautuksen jälkeen ylärivi (aihesymboli+luokka, ratas, kaiutin, VU-kaaret) jää
+vierityksen YLÄPUOLELLE, koska kortti vierittää sisällön kuvan pysyessä paikallaan (löydös 131).
+Jos `ui puu`-dumpista puuttuu odotettu elementti nostokortista/muusta vieritettävästä näkymästä,
+ÄLÄ raportoi sitä heti puuttuvaksi — vedä ensin näkymää (`swipe` esim. y 300→750) ja dumppaa
+uudelleen. iPadilla kortti on korkeampi eikä välttämättä vieritä samoja elementtejä pois, joten
+sama tarkistus laitteiden välillä voi antaa eri tuloksen ilman että kyse on bugista.
+
 ## 1.0.29-kierroksen valmisteltu resepti (Laitetestaaja 27.9.2026 klo 12.0x, ennen buildia)
 
 Tutkittu Explore-agentilla proto-3d/Matkakirja-proto:sta (HEAD master 7788b629 = BUILD 28).
