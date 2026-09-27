@@ -9331,6 +9331,73 @@ export const KULTTUURI_KATEGORIAT = {
           + 'yhdeksäntuhannen vuoden vuokrakausi raukesi kesken.',
       },
     },
+    /*
+     * LUONTO (27.9.2026, Eurooppa-erä 7). Phoenix Park on Dublinin oma
+     * kaupunkipuisto, eri kohde kuin MAA_KATEGORIAT[IRL]:n luonto-
+     * nostot (Giant's Causeway, turvesuo ja lunni ovat Pohjois-Irlannin
+     * ja länsirannikon kohteita, satojen kilometrien päässä).
+     */
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupungin laidalla leviää muuriaidattu puisto, jossa vaeltaa '
+          + 'vapaana villejä kuusipeuroja ja jonka halkaisee Euroopan '
+          + 'korkein obeliski.',
+      nostot: [
+        {
+          otsikko: 'Villit peurat, jotka asuivat puistossa ennen puistoa',
+          aika: '1660-luku',
+          tiedosto: 'Deer in Phoenix Park, Dublin.jpg',
+          teksti: 'Phoenix Park perustettiin 1660-luvulla Irlannin '
+            + 'käskynhaltijan Ormondin herttuan yksityiseksi metsästyspuistoksi, '
+            + 'ja hän toi silloin puistoon kuusipeuroja riistaksi. Puisto '
+            + 'avattiin yleisölle vuonna 1747, mutta peurat jäivät paikalleen, '
+            + 'ja niiden jälkeläiset vaeltavat 707 hehtaarin puistossa yhä '
+            + 'vapaina — lauma on nykyään noin 600 eläintä. Isoisän matkan '
+            + 'aikaan puisto on ollut julkinen jo yli sata vuotta, ja peurat '
+            + 'ovat sille yhtä ominaisia kuin silloinkin.',
+          lyhyt: 'Phoenix Parkissa vaeltaa vapaana kuusipeuralauma, jonka '
+            + 'esi-isät tuotiin puistoon 1660-luvulla.',
+          selite: 'Phoenix Parkissa vaeltaa vapaana villi kuusipeuralauma; '
+            + 'ensimmäiset peurat tuotiin puistoon 1660-luvulla '
+            + 'metsästysriistaksi.',
+          lahde: 'Barry, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Phoenix Park',
+        },
+        {
+          otsikko: 'Euroopan korkein obeliski juuri valmistunut',
+          aika: '1861',
+          tiedosto: 'The Wellington Monument, Phoenix Park, Dublin - geograph.org.uk - 7877426.jpg',
+          teksti: 'Puiston laidalle nousee Wellingtonin muistomerkki, 62 metriä '
+            + 'korkea obeliski, joka on Euroopan korkein. Peruskivi muurattiin '
+            + '1817 kunnianosoituksena Dublinissa syntyneelle herttua '
+            + 'Wellingtonille, mutta rahat loppuivat kesken kahteen otteeseen, '
+            + 'ja obeliski valmistui vasta 1861 — vain kaksitoista vuotta '
+            + 'ennen isoisän matkaa. Neljä pronssireliefiä oli tarkoitus '
+            + 'valaa Waterloon taistelusta vallatuista tykeistä, mutta '
+            + 'rahapulan vuoksi vain yksi niistä ehdittiin lopulta valaa.',
+          lyhyt: 'Wellingtonin muistomerkki Phoenix Parkissa on 62 metriä '
+            + 'korkea, Euroopan korkein obeliski.',
+          selite: 'Wellingtonin muistomerkki Phoenix Parkissa on 62 metriä '
+            + 'korkea obeliski, Euroopan korkein; se valmistui vasta 1861.',
+          lahde: 'Marathon, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Wellington Monument, Dublin',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Phoenix Parkin nykyiset villit kuusipeurat polveutuvat?',
+        vaihtoehdot: [
+          'Ne karkasivat läheiseltä maatilalta 1900-luvulla',
+          '1660-luvulla puistoon tuoduista metsästysriistaeläimistä',
+          'Ne tuotiin puistoon vasta 1900-luvun eläintarhauudistuksessa',
+          'Ne ovat aina asuttaneet Dublinin seutua luonnonvaraisina',
+        ],
+        oikea: 1,
+        fakta: 'Ensimmäiset kuusipeurat tuotiin Phoenix Parkiin 1660-luvulla '
+            + 'metsästysriistaksi, ja niiden jälkeläiset vaeltavat puistossa '
+            + 'yhä vapaina.',
+      },
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -65807,6 +65874,79 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * LUONTO (27.9.2026, Eurooppa-erä 7 — uusi lehtiaihe ohuimmalle
+     * kaupungille). Bryssel rajautuu suoraan Zoniënwoud/Forêt de
+     * Soignesiin, joten kaupungin oma metsä on aiheena eikä kaukainen
+     * maaseutu — ei päällekkäisyyttä NAHTAVYYSJUTUT- tai
+     * MAA_KATEGORIAT[BEL]-sisällön kanssa (BEL:n luonto-aiheet ovat
+     * Hoge Kempenistä, Scheldestä ja Bruggesta, ei Brysselin metsästä).
+     */
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Brysselin eteläreunalla alkaa metsä, joka on sekä kolme viikkoa '
+          + 'keväästä sininen että vuosisatoja vanhoja suoria pyökkejä täynnä.',
+      nostot: [
+        {
+          otsikko: 'Sininen metsä, joka kukkii kolme viikkoa',
+          aika: 'huhtikuu',
+          tiedosto: 'Hallerbos 1 - Halle.jpg',
+          teksti: 'Hallerbos on Zoniënwoud-metsän eteläkärjessä, noin 15 kilometriä '
+            + 'Brysselistä etelään Hallen kaupungin liepeillä. Metsä on jäännös '
+            + 'muinaisesta Kolenwoud-metsästä, joka peitti aikoinaan suuren osan '
+            + 'nykyistä Belgiaa. Huhtikuun puolivälissä metsän pohja peittyy '
+            + 'muutamaksi viikoksi kokonaan sinisillä metsäkellosipuleilla — kukinta on '
+            + 'niin runsas, että paikallinen matkailuneuvonta perusti sille aikanaan '
+            + 'oman puhelinlinjan, josta sai kuulla kukinnan tilanteen. Parhaiten '
+            + 'sinisen maton näkee aikaisin aamulla, ennen kuin kävijät ehtivät '
+            + 'poluille.',
+          lyhyt: 'Hallerbosin metsänpohja peittyy huhtikuussa muutamaksi viikoksi '
+            + 'sinisillä metsäkellosipuleilla.',
+          selite: 'Hallerbos on Zoniënwoud-metsän eteläkärjessä Brysselin liepeillä; '
+            + 'huhtikuussa sen pohja peittyy muutamaksi viikoksi metsäkellosipuleista.',
+          lahde: 'Anja Meert, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hallerbos',
+        },
+        {
+          otsikko: 'Pyökkikäytävä, joka kasvatettiin laivastolle',
+          aika: '1700-luku',
+          tiedosto: 'Chemin du Moulin dans la Forêt de Soignes (DSCF7155).jpg',
+          teksti: 'Zoniënwoudin suorat, jopa 40 metriä korkeat pyökit eivät kasvaneet '
+            + 'sattumalta. Itävaltalaisen kuvernöörin Kaarle Lotringilaisen kaudella '
+            + '1700-luvun puolivälissä metsää ryhdyttiin hoitamaan ranskalaisen '
+            + 'metsätalousopin mukaan: puut istutettiin tiheään, jotta ne kasvaisivat '
+            + 'suorina ja korkeina kohti valoa — juuri sellaisina, joita laivanrakentajat '
+            + 'tarvitsivat mastoiksi ja parruiksi. Isoisän matkan aikaan vanhimmat '
+            + 'näistä pyökeistä ovat jo yli vuosisadan ikäisiä, ja niiden väliin '
+            + 'muodostuneita pylväikköjä kutsutaan metsän katedraaleiksi valon '
+            + 'suodattuessa latvuston läpi kuin kirkon ikkunoista. Osa metsästä on '
+            + 'nykyään Unescon maailmanperintökohde muiden Euroopan '
+            + 'ikimetsien joukossa.',
+          lyhyt: 'Zoniënwoudin suorat, jopa 40 metriä korkeat pyökit muodostavat '
+            + 'pylväikön, jota kutsutaan metsän katedraaliksi.',
+          selite: 'Zoniënwoudin pyökit istutettiin 1700-luvulla kasvamaan suoriksi '
+            + 'laivaston mastopuiksi; niiden väliin syntynyttä käytävää kutsutaan metsän '
+            + 'katedraaliksi.',
+          lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Sonian Forest',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin tarkoitukseen Zoniënwoudin pyökit alun perin kasvatettiin '
+            + 'suoriksi?',
+        vaihtoehdot: [
+          'Huonekaluteollisuudelle',
+          'Laivaston mastoiksi ja parruiksi',
+          'Rautatien ratapölkyiksi',
+          'Paperiteollisuudelle',
+        ],
+        oikea: 1,
+        fakta: 'Itävaltalaishallinnon aikana 1700-luvulla metsää hoidettiin '
+            + 'ranskalaisen opin mukaan niin, että puut kasvoivat suoriksi laivaston '
+            + 'mastopuiksi.',
+      },
+    },
   ],
 
   /*
@@ -66403,6 +66543,76 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * LUONTO (27.9.2026, Eurooppa-erä 7). Ljubljanan suo on kaupungin
+     * OMA reuna-alue, ei sama kohde kuin MAA_KATEGORIAT[SVN]:n
+     * luonto-nostot (Triglav, Soča, Bled, Vintgar — kaikki muualla
+     * Sloveniassa). Ei päällekkäisyyttä NAHTAVYYSJUTUT-sisällön kanssa.
+     */
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupungin eteläpuolella leviää suo, josta on kaivettu esiin '
+          + 'maailman vanhin säilynyt pyörä ja tuhansia vuosia vanhoja '
+          + 'paalukyliä.',
+      nostot: [
+        {
+          otsikko: 'Suosta kaivettiin esiin maailman vanhin pyörä',
+          aika: 'n. 3130 eaa.',
+          tiedosto: 'Ljubljana Marshes Wheel with axle (oldest wooden wheel yet discovered).jpg',
+          teksti: 'Ljubljanan eteläpuolella leviävä suoalue, Ljubljansko barje, on '
+            + 'turvekerrostensa ansiosta säilyttänyt esineitä poikkeuksellisen '
+            + 'hyvin. Vuonna 2002 suon paalukyläkaivauksilta löytyi puinen '
+            + 'pyörä akselinsa kanssa; radiohiiliajoitus asetti sen noin vuoteen '
+            + '3130 eaa., mikä tekee siitä vanhimman tunnetun pyörä-akseli-'
+            + 'yhdistelmän maailmassa. Pyörä on tehty tammesta ja akseli '
+            + 'saarnista, ja se on nykyään esillä Ljubljanan kaupunginmuseossa.',
+          lyhyt: 'Ljubljanan suolta löydetty puinen pyörä akseleineen on '
+            + 'maailman vanhin tunnettu.',
+          selite: 'Ljubljanan suolta vuonna 2002 löydetty puinen pyörä '
+            + 'akselinsa kanssa on maailman vanhin tunnettu pyörä-akseli-'
+            + 'yhdistelmä, noin vuodelta 3130 eaa.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ljubljana Marshes Wheel',
+        },
+        {
+          otsikko: 'Turvetta kaivaessa löytyi kokonainen kivikausi',
+          aika: '1875',
+          tiedosto: 'Ljubljansko barje view.jpg',
+          teksti: 'Kaksi vuotta isoisän matkan jälkeen, vuonna 1875, '
+            + 'suomologi Karel Dežman löysi Ljubljanan suolta ensimmäiset '
+            + 'merkit paalukylistä turvetta kaivaessaan. Myöhemmät '
+            + 'kaivaukset paljastivat, että ihmiset olivat asuttaneet suon '
+            + 'reunoja jo noin 4600–2000 eaa.: he rakensivat mökkinsä '
+            + 'puupaalujen varaan veden ja kosteuden yläpuolelle. '
+            + 'Ljubljanan suon paalukylät kuuluvat nykyään Unescon '
+            + 'Alppien ympäristön esihistoriallisten paalukylien '
+            + 'maailmanperintökohteeseen yhdessä satojen muiden '
+            + 'löytöpaikkojen kanssa kuudessa maassa.',
+          lyhyt: 'Ljubljanan suo, jonka turvekerroksista löytyi 1875 alkaen '
+            + 'merkkejä tuhansia vuosia vanhoista paalukylistä.',
+          selite: 'Ljubljanan suon turvekerroksista on löytynyt merkkejä '
+            + 'esihistoriallisista paalukylistä; ensimmäiset löydöt tehtiin '
+            + 'vuonna 1875.',
+          lahde: 'Darij & Ana, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ljubljana Marshes',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Ljubljanan suolta löydetty vuoden 3130 eaa. pyörä teki '
+            + 'siitä maailman ainutlaatuisimman?',
+        vaihtoehdot: [
+          'Se oli koristeltu kullalla',
+          'Siinä oli oma akseli — vanhin tunnettu yhdistelmä',
+          'Se oli tehty kokonaan kivestä',
+          'Se oli halkaisijaltaan yli kaksi metriä',
+        ],
+        oikea: 1,
+        fakta: 'Ljubljanan suolta löytynyt puinen pyörä akselinsa kanssa on '
+            + 'vanhin tunnettu pyörä-akseli-yhdistelmä maailmassa, noin '
+            + 'vuodelta 3130 eaa.',
+      },
+    },
   ],
 
   /*
@@ -66966,6 +67176,78 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Executioner\'s Bastion',
         },
       ],
+    },
+    /*
+     * LUONTO (27.9.2026, Eurooppa-erä 7). Herľanyn geysiiri on
+     * Košicen lähin oma luontokohde (noin 20 km), ja ajoitus osuu
+     * suoraan 1873:een: kaivo porattiin 1870. Ei päällekkäisyyttä
+     * NAHTAVYYSJUTUT- tai MAA_KATEGORIAT[SVK]-sisällön kanssa (SVK:n
+     * omat luonto-nostot ovat Vysoké Tatryn huipusta, köysiradasta ja
+     * jääluolasta, ei Košicen lähialueesta).
+     */
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kylpykaivon poraus osui vahingossa kylmään geysiiriin, ja '
+          + 'idän suunnalla avautuu porttikäytävä, josta pian alkaa uusi '
+          + 'vuoristomatkailu.',
+      nostot: [
+        {
+          otsikko: 'Kylpylälle kaivettiin kaivo, ja maasta purkautui geysiiri',
+          aika: '1870',
+          tiedosto: 'Erupcia Gejzír Herľany 18 Slovakia31.jpg',
+          teksti: 'Herľanyn kylässä, noin 20 kilometriä Košicesta koilliseen, '
+            + 'porattiin vuonna 1870 kaivoa kivennäisvedelle. Yli 400 metrin '
+            + 'syvyydestä löytyi hiilihapon kyllästämä vesikerros, ja kaivosta alkoi '
+            + 'purkautua kylmää vettä useiden metrien korkeuteen — ilman minkäänlaista '
+            + 'maanalaista kuumuutta, toisin kuin tavallisissa geysiireissä. '
+            + 'Purkaus toistuu edelleen säännöllisin väliajoin, ja se on yksi '
+            + 'harvoista maailman poraamalla syntyneistä kylmistä geysiireistä. '
+            + 'Isoisän matkan aikaan kaivo on vasta muutaman vuoden ikäinen '
+            + 'uteliaisuuden aihe, ei vielä nykyisenlainen nähtävyys.',
+          lyhyt: 'Herľanyn kylmä geysiiri purkautuu säännöllisin väliajoin '
+            + 'kivennäisvesikaivosta, joka porattiin vuonna 1870.',
+          selite: 'Herľanyn kylmä geysiiri purkautuu säännöllisin väliajoin; kaivo '
+            + 'porattiin alun perin kivennäisvedelle vuonna 1870.',
+          lahde: 'Ing.Mgr.Jozef Kotulič, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Herľany Geyser',
+        },
+        {
+          otsikko: 'Rotkot, joihin matkailijat eivät vielä kulje',
+          tiedosto: 'Sucha Bela Gorge.jpg',
+          teksti: 'Košicesta länteen alkaa vuoristo, jota nykyään kutsutaan '
+            + 'Slovenský rajksi eli Slovakian paratiisiksi — kalkkikivirotkoja, '
+            + 'joissa polku kulkee puisia tikapuita ja ketjuja pitkin vesiputousten '
+            + 'ohi. Metsästäjät ja paimenet tunsivat rotkot jo kauan, mutta '
+            + 'järjestäytynyt vuoristomatkailu näille seuduille alkoi vasta '
+            + 'Unkarin Karpaattiseuran (Magyarországi Kárpátegyesület) perustamisen '
+            + 'jälkeen — seura syntyi Popradissa vuonna 1873, isoisän matkan '
+            + 'aikoihin. Nykyisin tunnetut tikapuu- ja ketjupolut rotkoihin '
+            + 'rakennettiin vasta seuraavina vuosikymmeninä, joten isoisän matkan '
+            + 'aikaan rotkot ovat yhä lähes koskemattomia.',
+          lyhyt: 'Slovenský rajn kalkkikivirotko, jossa polku kulkee tikapuita '
+            + 'pitkin vesiputouksen vierestä.',
+          selite: 'Slovenský rajn kalkkikivirotkoissa polku kulkee tikapuita ja '
+            + 'ketjuja pitkin vesiputousten ohi; järjestäytynyt vuoristomatkailu '
+            + 'seudulle alkoi 1870-luvulla.',
+          lahde: 'Margoz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Slovak Paradise',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Herľanyn kaivosta löytyi vuonna 1870, kun sitä porattiin '
+            + 'kivennäisvedelle?',
+        vaihtoehdot: [
+          'Kuumaa lähdevettä',
+          'Kylmä geysiiri',
+          'Maaöljyä',
+          'Suolavettä',
+        ],
+        oikea: 1,
+        fakta: 'Herľanyn kaivosta löytyi hiilihapon kyllästämä vesikerros, joka '
+            + 'purkautuu edelleen säännöllisin väliajoin kylmänä geysiirinä — '
+            + 'ilman maanalaista kuumuutta.',
+      },
     },
   ],
 
@@ -67735,6 +68017,71 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Troldhaugen',
         },
       ],
+    },
+    /*
+     * LUONTO (27.9.2026, Eurooppa-erä 7). Kaksi Bergenille ominaista
+     * luontoaihetta, jotka eivät toista etusivun leipätekstin
+     * "seitsemän vuoren kaupunki" -väitettä eivätkä MAA_KATEGORIAT
+     * [NOR]:n luonto-aiheita (keskiyön aurinko ja myskihärkä ovat
+     * Pohjois-Norjasta/Dovrefjellilta, eivät Bergenistä).
+     */
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Vuoret, jotka kehystävät kaupungin, kerävät Atlantilta niin '
+          + 'paljon sadetta, että Bergen on yksi Euroopan sateisimmista '
+          + 'kaupungeista — ja samat vuoret ovat vetäneet kiipeäjiä huipulle '
+          + 'jo vuosikymmeniä.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jota vuoret kastelevat',
+          tiedosto: 'Regen ^ Bergen . rain ^ Bergen - Flickr - abbilder.jpg',
+          teksti: 'Bergen on yksi Euroopan sateisimmista kaupungeista: sateisia '
+            + 'päiviä kertyy vuodessa yli 200, ja ilmasto on Golfvirran '
+            + 'ansiosta leuto talvellakin. Syy on maantieteessä. Kaupunkia '
+            + 'ympäröivät seitsemän vuorta pysäyttävät Atlantilta saapuvat '
+            + 'sadepilvet: kostea ilma nousee vuorten rinteitä pitkin, '
+            + 'jäähtyy ja purkautuu sateena juuri kaupungin päälle. '
+            + 'Paikalliset ovat tottuneet siihen niin hyvin, että sadetakki '
+            + 'kuuluu arkivaatetukseen ympäri vuoden.',
+          lyhyt: 'Sade valuu Bergenin kaduilla — kaupunkia ympäröivät vuoret '
+            + 'pysäyttävät Atlantin sadepilvet juuri kaupungin päälle.',
+          selite: 'Bergenin sateisuus johtuu kaupunkia ympäröivistä vuorista, '
+            + 'jotka pysäyttävät Atlantilta saapuvat sadepilvet.',
+          lahde: 'abbilder, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Bergen',
+        },
+        {
+          otsikko: 'Vuori, jolle kiivettiin jalan vuosikymmeniä ennen köysirataa',
+          tiedosto: 'Floyen View Bergen Norway 2009 1.jpg',
+          teksti: 'Fløyen, yksi Bergenin seitsemästä vuoresta, on kaupungin '
+            + 'suosituin näköalapaikka: huipulta avautuu näkymä koko '
+            + 'kaupunkiin, vuonoihin ja naapurivuoriin. Nykyinen '
+            + 'köysirata Fløibanen avattiin vasta 1918, joten isoisän '
+            + 'matkan aikaan huipulle noustaan jalan polkuja pitkin — '
+            + 'matka on jyrkkä, mutta lyhyt, alle neljä kilometriä '
+            + 'keskustasta. Näköala on houkutellut kävelijöitä jo '
+            + 'vuosikymmenten ajan ennen köysirataa.',
+          lyhyt: 'Fløy-vuoren huipulta avautuu näkymä Bergenin kaupunkiin ja '
+            + 'ympäröiviin vuoriin.',
+          selite: 'Fløy-vuoren huipulta avautuu näkymä Bergenin kaupunkiin; '
+            + 'nykyinen köysirata avattiin vasta 1918.',
+          lahde: 'Sveter, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fløyen',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Bergeniin sataa niin usein?',
+        vaihtoehdot: [
+          'Kaupunki on suon keskellä',
+          'Ympäröivät vuoret pysäyttävät Atlantin sadepilvet',
+          'Läheinen jäätikkö viilentää ilmaa',
+          'Kaupunki sijaitsee joen suistossa',
+        ],
+        oikea: 1,
+        fakta: 'Bergeniä ympäröivät vuoret pysäyttävät Atlantilta saapuvat '
+            + 'sadepilvet, jotka purkautuvat sateena juuri kaupungin päälle.',
+      },
     },
   ],
   /*
