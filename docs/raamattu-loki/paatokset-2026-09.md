@@ -8111,3 +8111,7 @@ Luovutukset pushattu: Natiivi-UI (f8f7a9c67; avauskortin korjaukset koodissa 11a
 ## LUOVUTUKSET: LINSSISEPPA -M (01289a762), LAITETESTAAJA (6b46d3f13); LAHITASON KOLMIOSUHDE 2–5 x, KATTO 3 000 (FABLE) (27.9.2026 klo 11.27)
 
 Linssiseppa luovutus -m 01289a762 (seuraavat maat Cesky Krumlov, Malbork, Pannonhalma; lento v3 + lentopeli); kysymys: Raamatussa lahitaso 2–3 x mutta osa symboleista 4–4,7 x (kaikki < 3 000) → Fable: ei karsita, sitova raja 3 000 kolmiota, Raamattuun '2–5 x, katto 3 000' seuraavassa Raamattu-PR:ssa. Laitetestaaja luovutus 6b46d3f13 (+ aloitusviesti 6b79b88dd), 1.0.29-resepti 9 aihetta.
+
+## SISALTOKIRJURIN LUOVUTUS -E; PELISUUNNITELMAKORTIT COMMITOIDAAN WIP:INA; TYYLITARKASTUS AGENTILLA; SAAPUMINEN V2 TODENNETTU (27.9.2026 klo 11.28)
+
+Sisaltokirjuri luovutus -e (haara sisalto-pelikatalogi-20260927): pelisuunnitelmakortit 10 + lentopeli + streak kirjoitettu (Fable: commit + push WIP heti), nahtavyyskuvien tyylitarkastus agentilla kaynnissa (sama checkout — ei checkout/reset ennen valmistumista), hintatasot.js-velka. Linssiseppa 11.3x: saapuminen v2 laitteella (maakunta-saapuminen-v2.png, 2d04e085): nostot ja rajat nakyvat tayton aikana, taytto 0,02 s → valmis 1,6 s, mediaani 16,7 ms, p95 22 ms.
