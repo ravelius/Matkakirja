@@ -8,6 +8,10 @@
 // ruudussa, mutta tyyli kirjoitetaan vain, kun piste liikkuu (lepopiirto: levossa ei yhtään muutosta). Paikka on
 // maakunnan keskipiste (MaakuntaTiedot.Paikka: Natiivisepän Maakuntajako-keskipiste, kun rajapinta on kytketty; varana
 // maakunnan nostojen mediaani). Piilossa linssin aikana (NaytaSallittu, kuten nostot) ja kun nostokerros ei näy.
+//
+// POIS NÄKYVISTÄ (omistajan löydös 27.9. klo 12.4x Fablen kautta: isot kursiivinimiöt häiritsevät): <see cref="Nakyvissa"/>
+// = false kaikilla zoomeilla; kohteiden, kaupunkien, vuorten, merien ja maan nimet sekä maakuntatäyttö ja rajat jäävät.
+// Vertailuun komento `ui maakuntanimet 0|1`.
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -34,6 +38,12 @@ namespace Matkakirja.Natiivi
         string maa;
         bool sallittu = true, kerrosNakyy;
 
+        /// <summary>Maakuntien nimet kartalla (omistaja 27.9. klo 12.4x: pois). Muutos näkyy seuraavassa synkronoinnissa.</summary>
+        public static bool Nakyvissa;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void Nollaa() => Nakyvissa = false;
+
         public MaakuntanimetKartalla(UiKerros kerros, Kartuscha kartussi)
         {
             this.kartussi = kartussi;
@@ -49,10 +59,13 @@ namespace Matkakirja.Natiivi
 
         public int Maara => nimet.Count;
 
+        /// <summary>Kytkin ajossa (komento `ui maakuntanimet 0|1`): nimet pois tai takaisin heti.</summary>
+        public void AsetaNakyvissa(bool n) { Nakyvissa = n; Synkronoi(); }
+
         /// <summary>Kartussin maan maakunnat kartalle (kaikki heränneitä); poistuneet pois.</summary>
         void Synkronoi()
         {
-            string uusi = kartussi.Maa;
+            string uusi = Nakyvissa ? kartussi.Maa : null;
             if (uusi != maa)
             {
                 foreach (var n in nimet.Values) n.El.RemoveFromHierarchy();

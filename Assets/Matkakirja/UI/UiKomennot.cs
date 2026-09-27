@@ -136,6 +136,7 @@
 //   ui muste laskuri <ISO:tunnus> [l/k]       Elävä kartta ilman peliä: kartussi auki maalle, maakunnan rivin pisteet l/k
 //                                             (oletus 1/datan määrä tai 7); maakunnat heränneinä heti (maakuntaerä 27.9.)
 //   ui muste valmis <ISO> | pois | tila       maa valmis → lippu liehuu; testitila pois; tila lokiin
+//   ui maakuntanimet 0|1                      maakuntien nimet kartalla (oletus 0, omistaja 27.9. klo 12.4x)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
 //   ui tila teksti                            tilarivin teksti
@@ -964,6 +965,10 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "selite": ui.Karttaselite.Avaa(); ui.Karttaselite.VaihdaValilehti(false); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
+                case "maakuntanimet":
+                    // Maakuntien nimet kartalla (omistaja 27.9. klo 12.4x: pois): 0 | 1 vertailukuviin.
+                    ui.MaakuntaNimet.AsetaNakyvissa(loput.Trim() == "1");
+                    return ui.MaakuntaNimet.Kuvaus();
                 case "muste":
                 {
                     // Maakunnan tunnuksessa voi olla välilyönti (GRC:Notio Aigaio): loput annetaan kokonaisena.
