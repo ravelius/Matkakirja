@@ -130,11 +130,9 @@
 //                                             Saapumistekstit (skeema 1.24): lokiin valokuvien määrä ja äänite (kairo)
 //                                             tai lukijan pituus; esim. kairo, fes (havainto kokoelmasta)
 //   ui kartuscha [ISO3] [auki] | pois         kartuscha maalle ilman peliä (oletus ITA); raukeaa pelaajan maan vaihtuessa
-//   ui muste heraa <ISO:tunnus> [l/k]         Elävä kartta ilman peliä: kartussi auki maalle, maakunnan rivi herää
-//                                             (käsialanimi 1,2 s, pikkukuva leimautuu 0,3 s, pisteet l/k, oletus 1/datan
-//                                             määrä tai 7) ja nimi kirjoittuu kartalle maakunnan kohdalle
-//   ui muste valmis <ISO> | salaisuus <ISO:tunnus> | pois | tila   maa valmis → lippu liehuu; salaisuusrivi
-//                                             kartussiin (napautus avaa kortin salaisuus:<tunnus>); testitila pois; tila lokiin
+//   ui muste laskuri <ISO:tunnus> [l/k]       Elävä kartta ilman peliä: kartussi auki maalle, maakunnan rivin pisteet l/k
+//                                             (oletus 1/datan määrä tai 7); maakunnat heränneinä heti (maakuntaerä 27.9.)
+//   ui muste valmis <ISO> | pois | tila       maa valmis → lippu liehuu; testitila pois; tila lokiin
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
 //   ui tila teksti                            tilarivin teksti

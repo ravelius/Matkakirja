@@ -296,7 +296,12 @@ namespace Matkakirja.Natiivi
                         case "ohita": ohjain.OhitaLuento(); return null;
                         case "pois": Puhe.Paalla = false; return null;
                         case "paalle": Puhe.Paalla = true; return null;
-                        default: return "käyttö: puhe seis|ohita|pois|paalle";
+                        // Progressiivinen soitto (Puhe.Virta): virta [pois|paalle] → tila ja viimeisin 1. ääni.
+                        case "virta":
+                            if (A(2) == "pois") Puhe.Virta = false;
+                            else if (A(2) == "paalle") Puhe.Virta = true;
+                            return $"=virta {(Puhe.Virta ? "päällä" : "pois")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms";
+                        default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]";
                     }
                 case "saapumisluenta":
                     if (A(1) != null && A(1) != "tila") return "käyttö: saapumisluenta [tila]";

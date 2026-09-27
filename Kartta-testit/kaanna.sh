@@ -28,6 +28,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/EtusivunLento.cs
 ../Assets/Matkakirja/Kartta/Geojson.cs
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
+../Assets/Matkakirja/Kartta/KategoriaKartoitus.cs
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
 ../Assets/Matkakirja/Kartta/Kermasarja.cs

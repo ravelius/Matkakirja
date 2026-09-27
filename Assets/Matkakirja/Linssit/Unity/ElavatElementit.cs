@@ -7,6 +7,7 @@
 //   kokeilu 4  Venetsian gondolit Canal Grandella (kaksi vastakkaisiin suuntiin, matka 30 s airon tahdissa, odotus päissä)
 //   kokeilu 5  Lontoon maailmanpyörä (kierros 40 s, 16 koria pysyvät pystyssä, pysähtyy välillä koreja täyttämään)
 //              ja Thamesin siipiratashöyry (matka 22–30 s, odottaa laiturissa 25–45 s, rattaat ja savu)
+//   kokeilu 6  meren koristeet Norjan länsirannikolla: siipiratashöyry ja valas näytöksinä (MeriGeometria), tauolla 0 kehystä
 //
 // Mallit ovat proseduraalisia low-poly-malleja löydöksen 160 paletilla (MalliVarit) ja varjostimella
 // Matkakirja/Linssit/Malli. Natiivisepän Blender-mallit voivat korvata ne myöhemmin (sama juuri ja sama pyörivä osa).
@@ -49,6 +50,16 @@ namespace Matkakirja.Natiivi
             public Vector3[] LastenPaikat;    // lasten paikat roottorin avaruudessa
             public Func<Mesh> Lapsi2;         // valinnainen toinen lapsityyppi (höyrylaivan savupallot), lapset-taulukon perässä
             public int Lapsia2;
+            public Func<Mesh> Lapsi3;         // valinnainen kolmas lapsityyppi (valaan pyrstö), Lapsi2-lasten perässä
+            public int Lapsia3;
+            /// <summary>
+            /// Näytös ja tauko (meren koristeet): näkyvyys 0–1 yksilön ajasta. Tauolla 0, jolloin mitään ei piirretä ja elävä
+            /// kerros lepää, mutta aika kulkee, kun aihe on näkyvyysalueella (seuraava näytös alkaa ajallaan).
+            /// </summary>
+            public Func<float, float> Naytos;
+            /// <summary>Yksilöiden ruutusiirto ilmansuuntiin (x itään, y pohjoiseen) eikä kameran akseleihin: meren koristeet
+            /// pysyvät rannikon suunnassa merellä kameran kierrosta riippumatta.</summary>
+            public bool SiirtoIlmansuuntiin;
             public Action<Transform, Transform[], float, float> Animoi;   // (roottori, lapset, aika s, nopeus 0–1)
             /// <summary>Maapohjan säde mallin yksiköissä (omistaja 16.5x: ei leijuntaa, jokainen aihe istuu maahan).</summary>
             public float PohjaSade = 0.6f;
@@ -58,6 +69,11 @@ namespace Matkakirja.Natiivi
             public float Haalistus;
             /// <summary>Liioiteltu perspektiivi vain roottorille (höyrylaiva: juuren kallistus nostaisi joen polun irti kartasta).</summary>
             public bool KallistaVainRoottori;
+            /// <summary>Meren koristeet (27.9.): lapset (toinen lautta, poijut, lokit, vana) kallistuvat oman vesipisteensä ympäri
+            /// eivätkä roottorin, jottei kaukana roottorista oleva lapsi nouse tai uppoa liioitellussa perspektiivissä.</summary>
+            public bool LapsetOmaanPisteeseen;
+            /// <summary>Meren koriste (MeriKoristeet): paikka, suunta ja siirto kohdemaan merikohdista kehyksittäin.</summary>
+            public MeriKoristeet.Laji Meri;
             // Ajonaikaiset
             public readonly List<Yksilo> Oliot = new();
             /// <summary>Vaihtelu ja tauot yksilölle i (omistaja 16.5x: ei monotoniaa), siemenellä toistettava.</summary>
@@ -69,7 +85,7 @@ namespace Matkakirja.Natiivi
             public Material Materiaali, PohjaMateriaali, ValoMateriaali;
         }
 
-        static readonly Aihe[] Aiheet =
+        static readonly Aihe[] Aiheet = MeriAiheet(new[]
         {
             new Aihe
             {
@@ -153,11 +169,32 @@ namespace Matkakirja.Natiivi
                 PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = 0f, KallistaVainRoottori = true,
                 Animoi = HoyryGeometria.Animoi,
             },
-        };
+        });
+
+        /// <summary>
+        /// Meren koristeet tuotannossa (omistaja 27.9. klo 07.4x): jokaiselle MeriKoristeet-lajille yksi aihe ilman kiinteää
+        /// paikkaa; LateUpdate asettaa paikan, suunnan ja siirron valitusta merikohdasta, ja valitsematon laji ei näy.
+        /// </summary>
+        static Aihe[] MeriAiheet(Aihe[] kaupungit)
+        {
+            var kaikki = new List<Aihe>(kaupungit);
+            foreach (var l in MeriKoristeet.Lajit)
+                kaikki.Add(new Aihe
+                {
+                    Nimi = l.Nimi, Meri = l, KokoPt = l.KokoPt, Yksilot = new[] { (0f, 0f, 0f) }, SiirtoIlmansuuntiin = true,
+                    Runko = HoyryGeometria.Joki, Roottori = l.Roottori, Lapsi = l.Lapsi, LastenPaikat = l.Lapsi != null ? new Vector3[l.Lapsia] : null,
+                    Lapsi2 = l.Lapsi2, Lapsia2 = l.Lapsia2, Lapsi3 = l.Lapsi3, Lapsia3 = l.Lapsia3,
+                    PohjaSade = 0.001f, Haalistus = 0.25f, KallistaVainRoottori = true, LapsetOmaanPisteeseen = true,
+                    Naytos = l.Nakyy, Animoi = l.Animoi,
+                });
+            return kaikki.ToArray();
+        }
 
         static ElavatElementit instanssi;
         public static bool Paalla = true;
         static double AikaSiirto;
+        /// <summary>Arviointikuvien koko (komento "elava elementit koko <kerroin>", oletus 1): mallit isommiksi lähikuviin.</summary>
+        static float KokoKerroin = 1f;
 
         LinssiOhjain ohjain;
         CesiumGeoreference georeferenssi;
@@ -166,6 +203,17 @@ namespace Matkakirja.Natiivi
         Func<bool> kaynnissa;
         float liike;
         bool jokinNakyvissa, jokinLiikkuu;
+        float meriAjastin;
+
+        /// <summary>Merikohdan ruutupiste pisteinä (y ylös), tai null horisontin takana tai kameran takana.</summary>
+        Vector2? RuutuPt(MeriKoristeet.Kohta k, Vector3 c0, Transform gt, Vector3 kameraL)
+        {
+            Vector3 p = Paikka(new LatLon(k.Lat, k.Lon), 25);
+            if (Vector3.Dot(kameraL - p, (p - c0).normalized) <= 0) return null;
+            var r = kamera.WorldToScreenPoint(gt.TransformPoint(p));
+            if (r.z <= 0) return null;
+            return new Vector2(r.x, r.y) / LinssiOhjain.Pistekerroin;
+        }
 
         public static void Kytke(LinssiOhjain o)
         {
@@ -179,13 +227,30 @@ namespace Matkakirja.Natiivi
             instanssi.kamera = kierto.GetComponent<Camera>();
         }
 
-        /// <summary>Testikomento "elava elementit tila|0|1".</summary>
+        /// <summary>Testikomento "elava elementit tila|0|1|siirra s|koko k|nayta aihe [harvinainen]".</summary>
         public static void Testi(string arvo, LinssiOhjain o)
         {
             // "elava elementit siirra <s>": aikataulun kello siirtyy (todennus: hidastus ja tauko videolle).
             if (arvo != null && arvo.StartsWith("siirra ") && double.TryParse(arvo.Substring(7), System.Globalization.NumberStyles.Float,
                 System.Globalization.CultureInfo.InvariantCulture, out var siirto)) AikaSiirto += siirto;
             if (arvo == "0" || arvo == "1") { Paalla = arvo == "1"; PallonLepo.Muuttui("elävät elementit"); }
+            if (arvo == "meri 0" || arvo == "meri 1") { MeriKoristeet.Paalla = arvo == "meri 1"; PallonLepo.Muuttui("elävät elementit"); }
+            if (arvo != null && arvo.StartsWith("koko ") && float.TryParse(arvo.Substring(5), System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out var koko)) { KokoKerroin = Mathf.Clamp(koko, 0.2f, 6f); PallonLepo.Muuttui("elävät elementit"); }
+            // "elava elementit nayta <aihe> [harvinainen]": näytöksellisen aiheen (meren koristeet) aika siirtyy seuraavan näytöksen
+            // alkuun (todennus videolle); harvinainen pakottaa sen näytöksen harvinaiseksi muunnelmaksi.
+            if (arvo != null && arvo.StartsWith("nayta ") && instanssi != null)
+            {
+                var sanat = arvo.Split(' ');
+                foreach (var a in Aiheet)
+                    if (a.Nimi == sanat[1] && a.Naytos != null)
+                        foreach (var yk in a.Oliot)
+                        {
+                            float t = yk.Aika + yk.Vaihe, alku = a.Meri != null ? a.Meri.Aikataulu.SeuraavaAlku(t) : MeriGeometria.SeuraavaAlku(a.Nimi, t);
+                            if (alku - 0.3f > t) yk.Aika += alku - 0.3f - t;
+                            if (sanat.Length > 2 && sanat[2] == "harvinainen") { if (a.Meri != null) a.Meri.Aikataulu.PakotaHarvinainen(alku); else MeriGeometria.PakotaHarvinainen(a.Nimi, alku); }
+                        }
+            }
             o.Kirjaa("elävät elementit: " + Tila());
         }
 
@@ -196,15 +261,19 @@ namespace Matkakirja.Natiivi
             double nyt = Time.unscaledTimeAsDouble + AikaSiirto;
             foreach (var a in Aiheet)
             {
+                // Valitsemattomat meren lajit vain laskuriin (rivi pysyy luettavana).
+                if (a.Meri != null && !a.Meri.Valittu) continue;
                 var yk = a.Oliot.Count > 0 ? a.Oliot[0] : null;
                 string tauko = yk?.Aikataulu == null ? "" : $", nopeus {yk.Nopeus:F2}, seuraava tauko {yk.Aikataulu.SeuraavaTauko(nyt) - nyt:F0} s";
+                if (yk != null && a.Naytos != null) tauko = ", " + (a.Meri != null ? a.Meri.Aikataulu.Kuvaus(yk.Aika + yk.Vaihe) : MeriGeometria.Kuvaus(a.Nimi, yk.Aika + yk.Vaihe));
                 osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota{tauko}");
             }
-            return $"{(Paalla ? "päällä" : "pois")}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
+            return $"{(Paalla ? "päällä" : "pois")}; meri {MeriKoristeet.Maa ?? "-"} ({MeriKoristeet.KohtiaYhteensa} kohtaa): {MeriKoristeet.Kuvaus()}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
         }
 
         void Start()
         {
+            StartCoroutine(MeriKoristeet.Lataa());
             var s = Resources.Load<Shader>("Varjostimet/Malli");
             if (s == null) { Debug.LogWarning("MATKAKIRJA elävät elementit: Malli-varjostin puuttuu"); enabled = false; return; }
             foreach (var a in Aiheet)
@@ -222,7 +291,9 @@ namespace Matkakirja.Natiivi
                 var pohja = MaaPohja.Mesh(); roskat.Add(pohja);
                 var runko = a.Runko(); var roottori = a.Roottori(); var lapsi = a.Lapsi?.Invoke(); var valot = a.Valot?.Invoke();
                 var lapsi2 = a.Lapsia2 > 0 ? a.Lapsi2?.Invoke() : null;
+                var lapsi3 = a.Lapsia3 > 0 ? a.Lapsi3?.Invoke() : null;
                 roskat.Add(runko); roskat.Add(roottori); if (lapsi != null) roskat.Add(lapsi); if (lapsi2 != null) roskat.Add(lapsi2);
+                if (lapsi3 != null) roskat.Add(lapsi3);
                 Material valoMateriaali = null;
                 if (valot != null)
                 {
@@ -233,9 +304,10 @@ namespace Matkakirja.Natiivi
                     roskat.Add(valoMateriaali);
                     a.ValoMateriaali = valoMateriaali;
                 }
-                int lapsia = a.LastenPaikat?.Length ?? 0, lapsia2 = lapsi2 != null ? a.Lapsia2 : 0;
+                int lapsia = a.LastenPaikat?.Length ?? 0, lapsia2 = lapsi2 != null ? a.Lapsia2 : 0, lapsia3 = lapsi3 != null ? a.Lapsia3 : 0;
                 a.Kolmioita = (runko.triangles.Length + roottori.triangles.Length + (valot != null ? valot.triangles.Length : 0)
-                    + (lapsi != null ? lapsi.triangles.Length * lapsia : 0) + (lapsi2 != null ? lapsi2.triangles.Length * lapsia2 : 0)) / 3;
+                    + (lapsi != null ? lapsi.triangles.Length * lapsia : 0) + (lapsi2 != null ? lapsi2.triangles.Length * lapsia2 : 0)
+                    + (lapsi3 != null ? lapsi3.triangles.Length * lapsia3 : 0)) / 3;
                 foreach (var (_, _, vaihe) in a.Yksilot)
                 {
                     var pt = new GameObject(a.Nimi + " pohja").transform;
@@ -250,16 +322,19 @@ namespace Matkakirja.Natiivi
                     rt.SetParent(juuri, false);
                     Kappale(rt, "Roottori", roottori, a.Materiaali);
                     if (valot != null) Kappale(rt, "Valot", valot, valoMateriaali);
-                    var lapset = new Transform[lapsia + lapsia2];
+                    var lapset = new Transform[lapsia + lapsia2 + lapsia3];
                     for (int i = 0; i < lapset.Length; i++)
                     {
                         lapset[i] = new GameObject("Lapsi").transform;
                         lapset[i].SetParent(rt, false);
-                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : lapsi2, a.Materiaali);
+                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali);
                     }
                     juuri.gameObject.SetActive(false);
-                    a.Oliot.Add(new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, Vaihe = vaihe, Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) });
+                    var yksilo = new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, LapsiPerus = new Vector3[lapset.Length], Vaihe = vaihe,
+                        Aikataulu = a.Vaihtelu?.Invoke(a.Oliot.Count) };
+                    a.Oliot.Add(yksilo);
                     a.Animoi(rt, lapset, vaihe, 0f);
+                    for (int i = 0; i < lapset.Length; i++) yksilo.LapsiPerus[i] = lapset[i].localPosition;
                 }
             }
             Debug.Log($"MATKAKIRJA elävät elementit: {Tila()}");
@@ -308,17 +383,53 @@ namespace Matkakirja.Natiivi
             double seina = Time.unscaledTimeAsDouble + AikaSiirto;
             bool liikkuu = false;
 
+            // Meren koristeet: kohdemaan lajit ja ankkurit (ankkuri vaihtuu vain, kun laji ei näy; tarkistus kerran sekunnissa).
+            MeriKoristeet.Kohdemaa(NostoKerros.Instanssi != null ? NostoKerros.Instanssi.NykyinenMaa : null);
+            bool meriAnkkurit = (meriAjastin -= Time.unscaledDeltaTime) <= 0f;
+            if (meriAnkkurit) meriAjastin = 1f;
+            int meriaNakyvissa = 0;
+            foreach (var a in Aiheet) if (a.Meri != null && !a.Meri.Harvinainen && a.Nakyvissa) meriaNakyvissa++;
+            var keskiPt = new Vector2(Screen.width, Screen.height) * (0.5f / LinssiOhjain.Pistekerroin);
+
             bool jokin = false;
             foreach (var a in Aiheet)
             {
+                bool meriPois = false;
+                if (a.Meri != null)
+                {
+                    var l = a.Meri;
+                    if (l.Valittu && !a.Nakyvissa && (meriAnkkurit || !l.AnkkuriAsetettu))
+                        MeriKoristeet.ValitseAnkkuri(l, k => RuutuPt(k, c0, gt, kameraL), keskiPt);
+                    // Valitsematon tai ankkuriton laji ei näy; harvinainen (merihirviö) väistää, jos pari on jo ruudulla.
+                    meriPois = !l.Valittu || !l.AnkkuriAsetettu || (l.Harvinainen && !a.Nakyvissa && meriaNakyvissa >= 2);
+                    if (l.AnkkuriAsetettu)
+                    {
+                        var k = l.Ankkuri;
+                        a.Paikka = new LatLon(k.Lat, k.Lon);
+                        a.Suunta = k.Rannikko;
+                        float r = k.Rannikko * Mathf.Deg2Rad;
+                        a.Yksilot[0] = (l.SiirtoPt * Mathf.Sin(r), l.SiirtoPt * Mathf.Cos(r), 0f);
+                    }
+                }
                 Vector3 juuri = Paikka(a.Paikka, 25);
                 Vector3 ylos = (juuri - c0).normalized;
                 Vector3 pohjoinen = Vector3.ProjectOnPlane(napa, ylos).normalized;
                 // Näkyy: korkeusikkuna, juuri kameran puolella (ei horisontin takana) ja ruudulla reunavaralla (simulaattori
                 // 26.9.: ruudun ulkopuolinen aihe piti elävän kerroksen käynnissä turhaan).
-                float p = Paalla && korkeus >= NakyyAlkaenM && korkeus <= NakyyAstiM && Vector3.Dot(kameraL - juuri, ylos) > 0
+                float p = !meriPois && Paalla && korkeus >= NakyyAlkaenM && korkeus <= NakyyAstiM && Vector3.Dot(kameraL - juuri, ylos) > 0
                     && Ruudulla(gt.TransformPoint(juuri))
                     ? Mathf.Clamp01((float)((NakyyAstiM - korkeus) / (NakyyAstiM - HaipyyAlkaenM))) : 0f;
+                if (a.Naytos != null)
+                {
+                    // Näytös ja tauko (meren koristeet): aika kulkee näkyvyysalueella myös tauolla, jolloin mitään ei piirretä.
+                    float naytos = 0f;
+                    foreach (var yk in a.Oliot)
+                    {
+                        if (p > 0.001f && AikaEteen(yk, seina)) liikkuu = true;
+                        naytos = Mathf.Max(naytos, a.Naytos(yk.Aika + yk.Vaihe));
+                    }
+                    p *= naytos;
+                }
                 bool nyt = p > 0.001f;
                 if (nyt != a.Nakyvissa)
                 {
@@ -343,14 +454,16 @@ namespace Matkakirja.Natiivi
                 Vector3 ruutuYlos = gt.InverseTransformDirection(kamera.transform.up);
                 ruutuYlos = (ruutuYlos - ylos * Vector3.Dot(ruutuYlos, ylos)).normalized;
                 float kameranKallistus = Vector3.Angle(gt.InverseTransformDirection(kamera.transform.forward), -ylos);
-                float kerroin = a.KokoPt * pt;
+                float kerroin = a.KokoPt * pt * KokoKerroin;
                 for (int i = 0; i < a.Oliot.Count; i++)
                 {
                     var yk = a.Oliot[i];
                     var j = yk.Juuri;
                     var (x, y, _) = a.Yksilot[i];
                     // Nosto kameraa kohti rungon syvyyden verran, ettei pop-up-malli painu maaston sisään (ZTest LEqual).
-                    Vector3 maassa = juuri + (oikea * x + eteen * y) * pt;
+                    Vector3 maassa = a.SiirtoIlmansuuntiin
+                        ? juuri + (Vector3.Cross(ylos, pohjoinen) * x + pohjoinen * y) * pt
+                        : juuri + (oikea * x + eteen * y) * pt;
                     // Aito 3D: pystyssä pinnan normaalin mukaan, +z aiheen Suunta-kulmaan pohjoisesta; hieman maan yllä.
                     j.localPosition = maassa + ylos * (0.01f * kerroin);
                     // Maapohja makaa pinnalla juuren alla (ellipsinä kallistettaessa), säde aiheen mukaan.
@@ -377,24 +490,46 @@ namespace Matkakirja.Natiivi
                         j.localPosition += ylos * (0.35f * kerroin * Mathf.Sin((float)kulma * Mathf.Deg2Rad));
                     }
                     j.localScale = Vector3.one * kerroin;
-                    // Vaihtelu ja tauot: yksilön nopeus aikataulusta × liike; aika kulkee nopeuden mukaan.
-                    float tavoite = liike * (float)(yk.Aikataulu?.Tavoite(seina) ?? 1.0);
-                    yk.Nopeus = Mathf.MoveTowards(yk.Nopeus, tavoite, Time.unscaledDeltaTime / PehmeysS);
-                    yk.Aika += yk.Nopeus * Time.unscaledDeltaTime;
-                    if (yk.Nopeus > 0.0001f || tavoite > 0.0001f) liikkuu = true;
+                    // Vaihtelu ja tauot: yksilön nopeus aikataulusta × liike; aika kulkee nopeuden mukaan (näytöksellisillä jo yllä).
+                    if (a.Naytos == null && AikaEteen(yk, seina)) liikkuu = true;
                     if (yk.Nopeus > 0.0001f || !yk.Asetettu)
                     {
+                        // Lasten kallistus omaan pisteeseen (alla) siirtää niitä: Animoi saa perusasennot takaisin ennen askelta.
+                        if (a.LapsetOmaanPisteeseen) for (int li = 0; li < yk.Lapset.Length; li++) yk.Lapset[li].localPosition = yk.LapsiPerus[li];
                         a.Animoi(yk.Roottori, yk.Lapset, yk.Aika + yk.Vaihe, Mathf.Clamp01(yk.Nopeus));
                         yk.Asetettu = true;
                         yk.RoottoriPerus = yk.Roottori.localRotation;
+                        if (a.LapsetOmaanPisteeseen) for (int li = 0; li < yk.Lapset.Length; li++) yk.LapsiPerus[li] = yk.Lapset[li].localPosition;
                     }
                     // Roottorin oma kallistus (juuren avaruudessa) Animoin asennon päälle, joka kehys ilman kertymistä.
                     if (a.KallistaVainRoottori)
+                    {
                         yk.Roottori.localRotation = Quaternion.Inverse(perus) * kallistus * perus * yk.RoottoriPerus;
+                        // Lapset kallistuvat oman vesipisteensä (roottorin tasossa y = 0) ympäri: vesipiste g pysyy kallistamattomana ja
+                        // korkeus kallistuu, eli paikka = Q·g + (0, y, 0), jossa Q = (T·R)⁻¹·R (T kallistus, R Animoin asento).
+                        if (a.LapsetOmaanPisteeseen)
+                        {
+                            var q = Quaternion.Inverse(yk.Roottori.localRotation) * yk.RoottoriPerus;
+                            for (int li = 0; li < yk.Lapset.Length; li++)
+                            {
+                                var b = yk.LapsiPerus[li];
+                                yk.Lapset[li].localPosition = q * new Vector3(b.x, 0f, b.z) + new Vector3(0f, b.y, 0f);
+                            }
+                        }
+                    }
                 }
             }
             jokinNakyvissa = jokin;
             jokinLiikkuu = liikkuu;
+        }
+
+        /// <summary>Yksilön aika eteen: nopeus aikataulusta × liike (pehmeästi), aika nopeuden mukaan; true, jos liikkuu.</summary>
+        bool AikaEteen(Yksilo yk, double seina)
+        {
+            float tavoite = liike * (float)(yk.Aikataulu?.Tavoite(seina) ?? 1.0);
+            yk.Nopeus = Mathf.MoveTowards(yk.Nopeus, tavoite, Time.unscaledDeltaTime / PehmeysS);
+            yk.Aika += yk.Nopeus * Time.unscaledDeltaTime;
+            return yk.Nopeus > 0.0001f || tavoite > 0.0001f;
         }
 
         /// <summary>Juuri ruudulla RuutuVara-osuuden reunavaralla (aihe ulottuu juuresta noin koon verran).</summary>
@@ -413,6 +548,8 @@ namespace Matkakirja.Natiivi
             public Vaihtelu Aikataulu;
             public bool Asetettu;
             public Quaternion RoottoriPerus = Quaternion.identity;
+            /// <summary>Lasten Animoin asettamat paikat (LapsetOmaanPisteeseen), joista kallistus lasketaan joka kehys.</summary>
+            public Vector3[] LapsiPerus;
         }
 
         Vector3 Paikka(LatLon q, double korkeus)
@@ -495,6 +632,16 @@ namespace Matkakirja.Natiivi
             int k = P.Count;
             P.AddRange(new[] { a, b, c }); for (int i = 0; i < 3; i++) { N.Add(n); C.Add(v); }
             T.AddRange(new[] { k, k + 1, k + 2 });
+        }
+
+        /// <summary>Nelikulmio kärkikohtaisin värein (vanavesi ja vaahto häipyvät alfalla).</summary>
+        public void NelioVarit(Vector3 a, Vector3 b, Vector3 c, Vector3 d, Color ca, Color cb, Color cc, Color cd)
+        {
+            var n = Vector3.Cross(b - a, d - a).normalized;
+            int k = P.Count;
+            P.AddRange(new[] { a, b, c, d }); for (int i = 0; i < 4; i++) N.Add(n);
+            C.Add(ca); C.Add(cb); C.Add(cc); C.Add(cd);
+            T.AddRange(new[] { k, k + 1, k + 2, k, k + 2, k + 3 });
         }
 
         /// <summary>Kahdeksankulmainen kapeneva vaippa korkeuksilta y0 → y1 säteillä r0 → r1.</summary>
@@ -1274,6 +1421,13 @@ namespace Matkakirja.Natiivi
         public static Mesh Laiva()
         {
             var r = new MalliRakenne();
+            LaivaMuodot(r);
+            return r.Mesh("Thames: höyrylaiva");
+        }
+
+        /// <summary>Laivan muodot (Thames ja meren koristeiden merilaiva, MeriGeometria.Laiva).</summary>
+        public static void LaivaMuodot(MalliRakenne r)
+        {
             Color runko = new Color(0.24f, 0.21f, 0.17f);
             r.Laatikko(new Vector3(0, 0.006f, 0), new Vector3(0.022f, 0.006f, 0.058f), runko);                     // runko
             r.Kolmio(new Vector3(-0.022f, 0.012f, 0.058f), new Vector3(0.022f, 0.012f, 0.058f), new Vector3(0, 0.012f, 0.08f), MalliVarit.Valo);   // keula (kansi)
@@ -1282,7 +1436,6 @@ namespace Matkakirja.Natiivi
             r.Laatikko(new Vector3(0, 0.038f, -0.004f), new Vector3(0.005f, 0.012f, 0.005f), MalliVarit.TerrakottaHimmea);   // piippu
             foreach (float x in new[] { -0.03f, 0.03f })
                 r.Laatikko(new Vector3(x, 0.016f, 0.005f), new Vector3(0.004f, 0.012f, 0.016f), MalliVarit.Pinta);          // ratakotelo
-            return r.Mesh("Thames: höyrylaiva");
         }
 
         /// <summary>Siipiratas: kuusi lapaa akselin (x) ympäri; origo akselilla.</summary>
@@ -1303,6 +1456,361 @@ namespace Matkakirja.Natiivi
             var r = new MalliRakenne();
             r.Nuppi(Vector3.zero, 0.012f, Color.Lerp(MalliVarit.Valo, MalliVarit.Pinta, 0.3f));
             return r.Mesh("Thames: savu");
+        }
+    }
+    /// <summary>
+    /// MEREN KORISTEET, kokeilu (omistaja hyväksyi lajilistan 26.9.2026 klo 22.3x; docs/raportit/meren-koristeanimaatiot-20260926.md):
+    /// siipiratashöyry (laji 1) ja valas (laji 5) Norjan länsirannikolla, Karttasepän Atlantin merikohdassa
+    /// (assets/data/merikohdat.json: NOR 4,113 E, 61,013 N, merelle 265°). Molemmat ovat näytöksiä (Tivolin logiikka):
+    ///   laiva  kulkee 25–40 s rannikon suuntaista kaarta, tulee näkyviin ja häipyy utuun (vanavesi, rattaat, savu);
+    ///          harvinainen (~1/10) on vihellys eli iso höyrypilvi piipusta. Tauko 30–90 s.
+    ///   valas  nousee pintaan vaahtorenkaan keskelle, puhaltaa kahdesti ja sukeltaa pyrstö pystyssä (12–16 s); harvinainen
+    ///          (~1/10) on pyrstön läiskäytys kahdesti. Tauko 60–150 s.
+    /// Tauolla mitään ei piirretä (elävä kerros lepää). Näytösten pituudet, suunnat, kaaret ja muunnelmat tulevat siemenestä,
+    /// joten toisto ei ole tasaista (EI MONOTONIAA). Liike on mallin avaruudessa, joten matka näkyy samanpituisena kaikilla
+    /// zoomeilla. Reaktio pelaajaan (lähestyminen, napautus) ja valintasääntö (kohdemaan meri) tulevat hyväksynnän jälkeen.
+    /// </summary>
+    public static class MeriGeometria
+    {
+        public const double NorLat = 61.013, NorLon = 4.113;
+        /// <summary>Rannikon suunta pohjoisesta: merikohdan 265° osoittaa merelle, joten rannikko kulkee suuntaan 355°.</summary>
+        public const float NorRannikko = 355f;
+        /// <summary>Laiva 0,14 yksikköä → noin 39 pt ja valaan selkä 0,2 → noin 50 pt (omistaja 27.9. klo 01.4x: 1,5–2 × v2:n 22/28 pt;
+        /// lajilistan 11/14 pt olivat laitteella pilkkuja ja suihku ei erottunut).</summary>
+        public const float LaivaKokoPt = 280f, ValasKokoPt = 250f;
+        public const int Suihkuja = 4;
+
+        public static readonly Color Vaahto = new Color(0.96f, 0.94f, 0.88f, 1f);
+        /// <summary>Suihku kylmän valkoisena, jotta se erottuu vaaleasta merestä (laite 27.9.: vaahdon sävy katosi).</summary>
+        static readonly Color SuihkuVari = new Color(0.99f, 1f, 1f, 1f);
+        static readonly Color ValasTumma = MalliVarit.Hex(0x39433f), ValasKylki = MalliVarit.Hex(0x4f5b56), ValasVatsa = MalliVarit.Hex(0xd6d2c2);
+
+        /// <summary>Toistettava arpa 0–1 ilman allokaatiota (siemen, jakso, kanava).</summary>
+        public static float Arpa(int siemen, int n, int k)
+        {
+            unchecked
+            {
+                uint h = (uint)siemen * 0x9E3779B1u ^ (uint)n * 0x85EBCA77u ^ (uint)k * 0xC2B2AE3Du;
+                h ^= h >> 16; h *= 0x7FEB352Du; h ^= h >> 15; h *= 0x846CA68Bu; h ^= h >> 16;
+                return (h & 0xFFFFFF) / 16777216f;
+            }
+        }
+
+        public static float Pehmea(float x) { x = Mathf.Clamp01(x); return x * x * x * (x * (x * 6 - 15) + 10); }
+
+        static readonly MeriAikataulu Laivat = new MeriAikataulu(907, 25f, 40f, 30f, 90f);
+        static readonly MeriAikataulu Valaat = new MeriAikataulu(911, 12f, 16f, 60f, 150f);
+        public static MeriAikataulu LaivaAikataulu => Laivat;
+        public static MeriAikataulu ValasAikataulu => Valaat;
+        static MeriAikataulu Hae(string nimi) => nimi == "valas" ? Valaat : Laivat;
+        public static float SeuraavaAlku(string nimi, float t) => Hae(nimi).SeuraavaAlku(t);
+        public static void PakotaHarvinainen(string nimi, float alku) => Hae(nimi).PakotaHarvinainen(alku);
+        public static string Kuvaus(string nimi, float t) => Hae(nimi).Kuvaus(t);
+
+        /// <summary>Vaahtonauha: suunnassa kulkeva nelikulmioketju, leveys l0 → l1 ja alfa a0 → a1 (häipyy).</summary>
+        public static void Nauha(MalliRakenne r, Vector3 alku, Vector3 suunta, float pituus, float l0, float l1, float a0, float a1, int jaot)
+        {
+            suunta = suunta.normalized;
+            var sivu = Vector3.Cross(Vector3.up, suunta).normalized;
+            for (int i = 0; i < jaot; i++)
+            {
+                float u0 = i / (float)jaot, u1 = (i + 1) / (float)jaot;
+                Vector3 p0 = alku + suunta * (pituus * u0), p1 = alku + suunta * (pituus * u1);
+                float w0 = Mathf.Lerp(l0, l1, u0) * 0.5f, w1 = Mathf.Lerp(l0, l1, u1) * 0.5f;
+                Color c0 = Vaahto, c1 = Vaahto;
+                c0.a = Mathf.Lerp(a0, a1, u0); c1.a = Mathf.Lerp(a0, a1, u1);
+                r.NelioVarit(p0 - sivu * w0, p0 + sivu * w0, p1 + sivu * w1, p1 - sivu * w1, c0, c0, c1, c1);
+            }
+        }
+
+        // ---- Siipiratashöyry ----
+
+        /// <summary>
+        /// Merilaiva: Thamesin siipiratashöyryn muodot ja vanavesi, joka kertoo liikkeen jo pysäytyskuvassa: Kelvinin kiila
+        /// (haarat ±19,5° perästä), rattaiden kuohu, perän pyörre ja keulakuohu, kaikki häipyvinä vaahtonauhoina.
+        /// </summary>
+        public static Mesh Laiva()
+        {
+            var r = new MalliRakenne();
+            HoyryGeometria.LaivaMuodot(r);
+            const float y = 0.0012f;
+            float kiila = 19.5f * Mathf.Deg2Rad, keula = 35f * Mathf.Deg2Rad;
+            foreach (float puoli in new[] { -1f, 1f })
+            {
+                Nauha(r, new Vector3(0.018f * puoli, y, -0.05f), new Vector3(Mathf.Sin(kiila) * puoli, 0f, -Mathf.Cos(kiila)), 0.2f, 0.006f, 0.016f, 0.6f, 0f, 3);
+                Nauha(r, new Vector3(0.032f * puoli, y, -0.012f), new Vector3(0.1f * puoli, 0f, -1f), 0.12f, 0.01f, 0.02f, 0.45f, 0f, 2);
+                Nauha(r, new Vector3(0.004f * puoli, y, 0.078f), new Vector3(Mathf.Sin(keula) * puoli, 0f, -Mathf.Cos(keula)), 0.045f, 0.004f, 0.008f, 0.55f, 0.1f, 1);
+            }
+            Nauha(r, new Vector3(0f, y, -0.058f), Vector3.back, 0.09f, 0.03f, 0.045f, 0.3f, 0f, 2);
+            return r.Mesh("Meri: siipiratashöyry");
+        }
+
+        public static float LaivaNakyy(float t)
+        {
+            var (_, s, pituus) = Laivat.Kohta(t);
+            return s < 0f ? 0f : Pehmea(s / 2.5f) * Pehmea((pituus - s) / 2.5f);
+        }
+
+        /// <summary>
+        /// Laivan näytös: tasainen matka rannikon suuntaista kaarta (z ±0,5, merelle päin −x 0,05–0,09 keskeltä) pohjoiseen tai
+        /// etelään (jaksosta), keinunta (kallistus ±2,5°, nyökkäys ±1°), rattaat kuljetun matkan mukaan ja savu piipusta.
+        /// </summary>
+        public static void LaivaAnimoi(Transform laiva, Transform[] lapset, float t, float nopeus)
+        {
+            var (n, s, pituus) = Laivat.Kohta(t);
+            s = Mathf.Clamp(s, 0f, pituus);
+            bool pohjoiseen = Laivat.Arvo(n, 3) < 0.5f;
+            float v = pohjoiseen ? s / pituus : 1f - s / pituus, w = 2f * v - 1f;
+            float kaari = 0.05f + 0.04f * Laivat.Arvo(n, 4);
+            laiva.localPosition = new Vector3(-kaari * (1f - w * w), 0f, 0.35f * w);
+            var suunta = new Vector3(4f * kaari * w, 0f, 0.7f).normalized * (pohjoiseen ? 1f : -1f);
+            float vaihe = Laivat.Arvo(n, 5) * 10f;
+            laiva.localRotation = Quaternion.LookRotation(suunta, Vector3.up)
+                * Quaternion.Euler(1f * Mathf.Sin((t + vaihe) * 2.4f), 0f, 2.5f * Mathf.Sin((t + vaihe) * 1.9f));
+            if (lapset == null || lapset.Length < 2) return;
+            // Rattaat pyörivät kuljetun matkan mukaan (noin 50°/s).
+            float ratas = s / pituus * 1575f;
+            lapset[0].localPosition = new Vector3(-0.034f, 0.014f, 0.005f);
+            lapset[1].localPosition = new Vector3(0.034f, 0.014f, 0.005f);
+            lapset[0].localRotation = lapset[1].localRotation = Quaternion.Euler(ratas, 0, 0);
+            // Savupallot piipusta ylös ja taakse (2,2 s:n jakso); vihellys (harvinainen) = iso höyrypilvi 3,2 s keskellä matkaa.
+            bool vihellys = Laivat.Harvinainen(n) && s > pituus * 0.45f && s < pituus * 0.45f + 3.2f;
+            float voima = vihellys ? 2.1f : 1f;
+            for (int k = 2; k < lapset.Length; k++)
+            {
+                float ika = Mathf.Repeat(t / (vihellys ? 1.4f : 2.2f) + (k - 2) / (float)HoyryGeometria.Palloja, 1f);
+                lapset[k].localPosition = new Vector3(0, 0.05f + ika * 0.08f * voima, -0.012f - ika * 0.09f);
+                lapset[k].localScale = Vector3.one * (Mathf.Sin(Mathf.PI * ika) * (0.6f + 0.8f * ika) * voima);
+            }
+        }
+
+        // ---- Valas ----
+
+        /// <summary>
+        /// Valaan selkä ylhäältä tunnistettavana: pyöreä pää, levein kohta etukolmanneksella ja pitkä kapeneva pyrstönvarsi
+        /// (pituus 0,2, leveys 0,06, korkeus 0,024), selkäevä takakolmanneksella, vaaleat pitkät rintaevät (ryhävalaan tunnusmerkki,
+        /// pinnan alla puoliksi läpikuultavina) ja pehmeä vaahtorengas. Animaatio nostaa ja laskee selkää vain y-skaalauksella,
+        /// joten evät ja rengas pysyvät pinnassa. +z eteen (pää).
+        /// </summary>
+        public static Mesh ValaanSelka()
+        {
+            var r = new MalliRakenne();
+            const int pit = 10, ymp = 4;
+            var p = new Vector3[pit + 1, ymp + 1];
+            for (int i = 0; i <= pit; i++)
+            {
+                float u = Mathf.Lerp(-1f, 1f, i / (float)pit), z = 0.1f * u;
+                float lev = ValaanLeveys(u);
+                float q = (u + 0.1f) / (u > -0.1f ? 1.1f : 0.9f);
+                float kork = 0.02f * Mathf.Sqrt(Mathf.Max(0f, 1f - q * q)) + 0.004f;
+                for (int j = 0; j <= ymp; j++)
+                {
+                    float a = Mathf.PI * j / ymp;
+                    p[i, j] = new Vector3(Mathf.Cos(a) * lev, Mathf.Sin(a) * kork, z);
+                }
+            }
+            for (int i = 0; i < pit; i++)
+                for (int j = 0; j < ymp; j++)
+                    r.Nelio(p[i, j], p[i + 1, j], p[i + 1, j + 1], p[i, j + 1], j == 1 || j == 2 ? ValasTumma : ValasKylki);
+            // Pyrstönvarren pää suljetaan (pyrstö kiinnittyy siihen).
+            r.Kolmio(p[0, 0], p[0, 2], p[0, 4], ValasKylki);
+            r.Kolmio(p[0, 0], p[0, 1], p[0, 2], ValasKylki);
+            r.Kolmio(p[0, 2], p[0, 3], p[0, 4], ValasKylki);
+            // Selkäevä takakolmanneksella.
+            r.Kolmio(new Vector3(0f, 0.021f, -0.025f), new Vector3(0f, 0.032f, -0.043f), new Vector3(0f, 0.016f, -0.052f), ValasTumma);
+            // Rintaevät: pitkät ja vaaleat, kylestä ulos ja taakse, pinnan alla (alfa 0,8).
+            Color eva = ValasVatsa; eva.a = 0.8f;
+            float ze = 0.034f, le = ValaanLeveys(0.34f);
+            foreach (float puoli in new[] { -1f, 1f })
+            {
+                Vector3 edessa = new Vector3(le * 0.9f * puoli, 0.003f, ze + 0.008f), takana = new Vector3(le * 0.9f * puoli, 0.003f, ze - 0.007f);
+                Vector3 karki = new Vector3((le + 0.05f) * puoli, 0.002f, ze - 0.034f), polvi = new Vector3((le + 0.026f) * puoli, 0.0025f, ze - 0.012f);
+                r.NelioVarit(edessa, polvi, karki, takana, eva, eva, eva, eva);
+            }
+            // Vaahtorengas: sisäreuna vaahtoa, ulkoreuna häipyy.
+            const int sektoreita = 16;
+            Color sisa = Vaahto, ulko = Vaahto; sisa.a = 0.55f; ulko.a = 0f;
+            for (int i = 0; i < sektoreita; i++)
+            {
+                float a0 = i * Mathf.PI * 2f / sektoreita, a1 = (i + 1) * Mathf.PI * 2f / sektoreita;
+                Vector3 s0 = new Vector3(Mathf.Cos(a0) * 0.04f, 0.0012f, Mathf.Sin(a0) * 0.114f), s1 = new Vector3(Mathf.Cos(a1) * 0.04f, 0.0012f, Mathf.Sin(a1) * 0.114f);
+                Vector3 u0 = new Vector3(Mathf.Cos(a0) * 0.072f, 0.0012f, Mathf.Sin(a0) * 0.15f), u1 = new Vector3(Mathf.Cos(a1) * 0.072f, 0.0012f, Mathf.Sin(a1) * 0.15f);
+                r.NelioVarit(s0, u0, u1, s1, sisa, ulko, ulko, sisa);
+            }
+            return r.Mesh("Meri: valaan selkä");
+        }
+
+        /// <summary>Valaan puolileveys pituuskohdassa u (−1 pyrstönvarsi … 1 pää): pyöreä pää, levein kohdassa 0,2, kapeneva varsi.</summary>
+        static float ValaanLeveys(float u)
+        {
+            const float W = 0.03f;
+            if (u > 0.2f) { float q = (u - 0.2f) / 0.8f; return W * Mathf.Sqrt(Mathf.Max(0f, 1f - q * q)); }
+            return W * (0.18f + 0.82f * Mathf.Pow(Mathf.Clamp01((u + 1f) / 1.2f), 1.4f));
+        }
+
+        /// <summary>Puhalluksen suihkupallo: vaalea oktaedri, skaalataan iän mukaan (neljä palloa pinoutuu pensasmaiseksi pilareeksi).</summary>
+        public static Mesh Suihku()
+        {
+            var r = new MalliRakenne();
+            r.Nuppi(Vector3.zero, 0.026f, SuihkuVari);
+            return r.Mesh("Meri: suihku");
+        }
+
+        /// <summary>
+        /// Valaan pyrstö pystyasennossa (tyvi origossa, +y ylös, lavat x-suunnassa, pyyhkäisty taakse, lovi keskellä): tumma
+        /// yläpinta ja vaalea alapinta hieman erillään (−z), jotta sukelluksessa takaa näkyy kuvioitu alapinta.
+        /// </summary>
+        public static Mesh Pyrsto()
+        {
+            var r = new MalliRakenne();
+            r.Nelio(new Vector3(-0.005f, 0f, 0f), new Vector3(0.005f, 0f, 0f), new Vector3(0.003f, 0.022f, 0f), new Vector3(-0.003f, 0.022f, 0f), ValasTumma);
+            var o = new Vector3(0f, 0.001f, -0.0012f);
+            foreach (float puoli in new[] { -1f, 1f })
+            {
+                Vector3 tyvi = new Vector3(0f, 0.02f, 0f), karki = new Vector3(0.04f * puoli, 0.043f, 0f);
+                Vector3 lovi = new Vector3(0.004f * puoli, 0.034f, 0f), keski = new Vector3(0f, 0.031f, 0f);
+                r.Kolmio(tyvi, karki, lovi, ValasTumma);
+                r.Kolmio(tyvi, lovi, keski, ValasTumma);
+                r.Kolmio(tyvi + o, karki * 0.9f + o, lovi + o, ValasVatsa);
+            }
+            return r.Mesh("Meri: valaan pyrstö");
+        }
+
+        public static float ValasNakyy(float t)
+        {
+            var (_, s, pituus) = Valaat.Kohta(t);
+            return s < 0f ? 0f : Pehmea(s / 0.8f) * Pehmea((pituus - s) / 0.8f);
+        }
+
+        /// <summary>
+        /// Valaan näytös: selkä nousee (1,6 s), puhallus (1,1 s), notkahdus ja toinen puhallus, sitten sukellus: selkä painuu ja
+        /// pyrstö nousee takaa pystyyn, seisoo hetken ja liukuu veteen. Harvinainen: pyrstö nousee korkeammalle ja läiskähtää
+        /// kahdesti (roiskeet), ja vasta sitten valas sukeltaa. Uintisuunta rannikon suuntaan ±25° jaksosta, eteneminen hidas.
+        /// Lapset: 0 selkä, 1–4 suihkupallot, 5 pyrstö.
+        /// </summary>
+        public static void ValasAnimoi(Transform juuri, Transform[] lapset, float t, float nopeus)
+        {
+            if (lapset == null || lapset.Length < 2 + Suihkuja) return;
+            var (n, s, pituus) = Valaat.Kohta(t);
+            s = Mathf.Clamp(s, 0f, pituus);
+            bool harv = Valaat.Harvinainen(n);
+            juuri.localPosition = Vector3.zero;
+            juuri.localRotation = Quaternion.Euler(0f, (Valaat.Arvo(n, 3) < 0.5f ? 0f : 180f) + (Valaat.Arvo(n, 4) - 0.5f) * 50f, 0f);
+            float z = -0.06f + s * 0.009f;
+            float notkoAlku = 0.36f * pituus, puhallus2 = notkoAlku + 2.4f, sukellus = Mathf.Max(pituus - 5f, puhallus2 + 1.2f);
+            // Pyrstön oma aika sukelluksen alusta (nousee 0,4 s selän jälkeen).
+            float sp = s - sukellus - 0.4f;
+
+            // Selkä: nousu, notkahdus (45 %) ja sukellus; harvinaisessa selkä jää pintaan läiskäytyksen ajaksi.
+            float nousu = Pehmea(s / 1.6f);
+            float notko = 1f - 0.45f * Mathf.Sin(Mathf.PI * Mathf.Clamp01((s - notkoAlku) / 2.2f));
+            float sukeltaa = Pehmea((s - sukellus) / 1.4f);
+            float sy = harv ? nousu * notko * (1f - 0.65f * sukeltaa) * (1f - Pehmea((sp - 2.6f) / 1f))
+                : nousu * notko * (1f - sukeltaa);
+            var selka = lapset[0];
+            selka.localPosition = new Vector3(0f, 0f, z);
+            selka.localRotation = Quaternion.Euler(0f, 0f, 1.2f * Mathf.Sin(s * 0.9f + 1f));
+            selka.localScale = new Vector3(1f, Mathf.Max(0.03f, sy), 1f);
+
+            // Pyrstö: tavallinen sukellus (nousu pystyyn 1,2 s, seisoo 1 s, liukuu veteen 1,2 s) tai läiskäytys kahdesti.
+            float kulma = -85f, korkeus = 1f, nosto = 0f, isku1 = -1f, isku2 = -1f;
+            if (sp < 0f) korkeus = 0f;
+            else if (!harv)
+            {
+                float ylos = Pehmea(sp / 1.2f);
+                kulma = Mathf.Lerp(-85f, 4f, ylos) + 3f * Mathf.Sin(sp * 2.2f) * ylos;
+                korkeus = 1f - Pehmea((sp - 2.2f) / 1.2f);
+            }
+            else
+            {
+                nosto = 0.006f * Pehmea(sp / 1f);
+                if (sp < 1f) kulma = Mathf.Lerp(-85f, -4f, Pehmea(sp));
+                else if (sp < 1.3f) kulma = Mathf.Lerp(-4f, -82f, Pehmea((sp - 1f) / 0.3f));
+                else if (sp < 2.1f) kulma = Mathf.Lerp(-82f, -4f, Pehmea((sp - 1.3f) / 0.8f));
+                else kulma = Mathf.Lerp(-4f, -82f, Pehmea((sp - 2.1f) / 0.3f));
+                korkeus = 1f - Pehmea((sp - 3f) / 0.6f);
+                isku1 = sukellus + 0.4f + 1.3f; isku2 = sukellus + 0.4f + 2.4f;
+            }
+            var pyrsto = lapset[1 + Suihkuja];
+            pyrsto.localPosition = new Vector3(0f, nosto, z - 0.1f);
+            pyrsto.localRotation = Quaternion.Euler(kulma, 0f, 0f);
+            pyrsto.localScale = korkeus > 0.001f ? new Vector3(1f, korkeus, 1f) : Vector3.zero;
+
+            // Suihku: neljä palloa suihkuaukosta pinoutuen pensasmaiseksi pilariksi (nousee, leviää ja häipyy 2,2 s:ssa) kahdessa
+            // puhalluksessa; läiskäytyksen roiskeet pyrstön kärjestä matalina ja leveinä (elinikä 1,1 s).
+            var aukko = new Vector3(0f, 0.022f * sy, z + 0.062f);
+            var karki = new Vector3(0f, 0.004f, z - 0.1f - 0.042f);
+            for (int k = 0; k < Suihkuja; k++)
+            {
+                var pallo = lapset[1 + k];
+                float i1 = (s - 1.1f - k * 0.08f) / 2.2f, i2 = (s - puhallus2 - k * 0.08f) / 2.2f;
+                float r1 = isku1 < 0f ? -1f : (s - isku1 - k * 0.06f) / 1.1f, r2 = isku2 < 0f ? -1f : (s - isku2 - k * 0.06f) / 1.1f;
+                if (i1 >= 0f && i1 <= 1f || i2 >= 0f && i2 <= 1f)
+                {
+                    float ika = i1 >= 0f && i1 <= 1f ? i1 : i2;
+                    float h = 0.014f + k * 0.018f + 0.04f * Pehmea(ika * 1.4f);
+                    pallo.localPosition = aukko + new Vector3(0.003f * (k % 2 == 0 ? 1 : -1), h, -0.018f * ika * (1f + k * 0.3f));
+                    pallo.localScale = Vector3.one * (Mathf.Pow(Mathf.Max(0f, Mathf.Sin(Mathf.PI * ika)), 0.6f) * (0.7f + 1.1f * ika) * (1f - 0.1f * k));
+                }
+                else if (r1 >= 0f && r1 <= 1f || r2 >= 0f && r2 <= 1f)
+                {
+                    float ika = r1 >= 0f && r1 <= 1f ? r1 : r2;
+                    pallo.localPosition = karki + new Vector3((k - 1.5f) * 0.012f * (0.5f + ika), 0.035f * Mathf.Sin(Mathf.PI * ika), 0f);
+                    pallo.localScale = Vector3.one * (Mathf.Max(0f, Mathf.Sin(Mathf.PI * ika)) * 0.9f);
+                }
+                else pallo.localScale = Vector3.zero;
+            }
+        }
+    }
+
+    /// <summary>
+        /// MEREN KORISTEIDEN NÄYTÖSAIKATAULU (kaikki 10 lajia, docs/raportit/meren-koristeanimaatiot-20260926.md). Näytösten aikataulu: tauko ja näytös vuorotellen, pituudet siemenestä; ensimmäinen tauko on 3–8 s, jotta näytös alkaa
+        /// pian aiheen tultua näkyviin. Haku jatkuu edellisestä jaksosta (aika kulkee eteenpäin), eikä se allokoi.
+        /// </summary>
+    public sealed class MeriAikataulu
+    {
+        readonly int siemen; readonly float naytosMin, naytosMax, taukoMin, taukoMax;
+        int n, pakotettu = -1; float alku;
+
+        public MeriAikataulu(int siemen, float naytosMin, float naytosMax, float taukoMin, float taukoMax)
+        {
+            this.siemen = siemen; this.naytosMin = naytosMin; this.naytosMax = naytosMax; this.taukoMin = taukoMin; this.taukoMax = taukoMax;
+        }
+
+        float Tauko(int k) => k == 0 ? 3f + 5f * MeriGeometria.Arpa(siemen, 0, 0) : Mathf.Lerp(taukoMin, taukoMax, MeriGeometria.Arpa(siemen, k, 0));
+        float Pituus(int k) => Mathf.Lerp(naytosMin, naytosMax, MeriGeometria.Arpa(siemen, k, 1));
+        public float Arvo(int k, int kanava) => MeriGeometria.Arpa(siemen, k, kanava);
+        /// <summary>Harvinainen muunnelma noin joka kymmenennessä näytöksessä (tai pakotettuna komennolla). Ensimmäinen näytös ei
+        /// ole koskaan harvinainen, jotta pelaaja näkee ensin perusmuodon (27.9.: purjelaivan siemen 913 antoi puuskan heti).</summary>
+        public bool Harvinainen(int k) => k == pakotettu || (k > 0 && MeriGeometria.Arpa(siemen, k, 2) < 0.1f);
+
+        /// <summary>Jakso hetkellä t: numero, aika näytöksen alusta (negatiivinen = tauolla) ja näytöksen pituus.</summary>
+        public (int n, float s, float pituus) Kohta(float t)
+        {
+            if (t < alku) { n = 0; alku = 0f; }
+            for (int i = 0; i < 100000; i++)
+            {
+                float tauko = Tauko(n), pituus = Pituus(n);
+                if (t < alku + tauko + pituus) return (n, t - alku - tauko, pituus);
+                alku += tauko + pituus; n++;
+            }
+            return (n, -1f, Pituus(n));
+        }
+
+        /// <summary>Seuraavan näytöksen alku (tauolla tämän jakson, näytöksen aikana seuraavan).</summary>
+        public float SeuraavaAlku(float t)
+        {
+            var (k, s, pituus) = Kohta(t);
+            return s < 0f ? t - s : t - s + pituus + Tauko(k + 1);
+        }
+
+        public void PakotaHarvinainen(float alku) => pakotettu = Kohta(alku + 0.01f).n;
+
+        public string Kuvaus(float t)
+        {
+            var (k, s, pituus) = Kohta(t);
+            return s >= 0f ? $"näytös {k} {s:F1}/{pituus:F0} s{(Harvinainen(k) ? " (harvinainen)" : "")}"
+                : $"tauko, näytös {k}{(Harvinainen(k) ? " (harvinainen)" : "")} alkaa {-s:F0} s";
         }
     }
 }

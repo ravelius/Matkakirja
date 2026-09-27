@@ -21,9 +21,8 @@ namespace Matkakirja
     ///    ei piilota mitään (web näyttää lähi-nostot heti); vain taso 3 odottaa lähizoomia (<see cref="UloinOsuus"/>
     ///    ≤ 0,7). Kaupungin sisäiset (paikka = kaupunki tai oma paikka ≤ 12 km kaupungista) ja nimikerroksen meret
     ///    eivät ole kartalla millään zoomilla. Diagnoosi: komento `nostot tila` (<see cref="Kuvaus"/>).
-    ///  - Kerros näkyy, kun maan leveys on vähintään <see cref="vahinOsuus"/> näkyvästä leveydestä
-    ///    (LEHDEN_VAHIN_OSUUS 0,5: osuus, ei zoomitaso) ja saapumisesta on kulunut 1,4 s kameran
-    ///    ja nappulan pysähdyttyä (saapumisPortti, PORTIN_VIIVE_MS). Syttyminen 0,7 s.
+    ///  - Kerros näkyy heti, kun maa on näkymässä ja kamera ja nappula ovat pysähtyneet (omistaja 27.9. klo 08.2x, <see cref="Heti"/>;
+    ///    ennen webin LEHDEN_VAHIN_OSUUS 0,5 ja saapumisPortti 1,4 s). Syttyminen 0,3 s.
     ///  - Enintään <see cref="katto"/> nostoa kerrallaan, lähimmät ruudun keskeltä (NOSTOJEN_KATTO 120).
     ///  - ELÄINTÄYT KOKO LAUDALTA (löydös 125, web nostot.js keraa "Eläintäyt: koko laudalla"): naapurimaidenkin
     ///    eläintäyt (lahde elaintaky, yksi per maa: Pelastuskarhu BGR, Mangalitsa HUN, Karhunpennut ROU …) näkyvät,
@@ -42,13 +41,31 @@ namespace Matkakirja
         public KaupunkiMerkit merkit;
         public Nappula nappula;
         [Tooltip("LEHDEN_VAHIN_OSUUS: maan leveys / näkyvä leveys, jonka alla kerros on piilossa.")]
-        public float vahinOsuus = 0.5f;
+        public float vahinOsuus = 0f;
         [Tooltip("NOSTOJEN_KATTO: enintään näin monta nostoa kerrallaan.")]
         public int katto = 120;
         [Tooltip("PORTIN_VIIVE_MS: viive saapumisesta (kamera ja nappula paikallaan), sekunteina.")]
-        public float porttiViive = 1.4f;
+        public float porttiViive = 0f;
         [Tooltip("KOHTEIDEN_SYTTYMINEN_MS: syttymisen kesto sekunteina (Natiivi-UI lukee Syttyminen).")]
-        public float syttyminenS = 0.7f;
+        public float syttyminenS = 0.3f;
+
+        /// <summary>
+        /// KOHDEMAAN NOSTOT HETI (omistaja 27.9. klo 08.2x, 1.0.29): kerros näkyy heti, kun maa on näkymässä (vahinOsuus 0,5 → 0),
+        /// ilman saapumisporttia (1,4 s → 0) ja ilman saapumisanimaation piilotusta (Saapuminen ei piilota), syttyminen 0,3 s.
+        /// Tason 3 lähizoomiportti ja katto 120 jäävät (luettavuus ja kehysaika, kuten web). Komento `nostot heti 0|1`
+        /// palauttaa vanhat arvot A/B-mittaukseen (0,5 / 1,4 s / 0,7 s / saapumispiilo).
+        /// </summary>
+        public static bool Heti = true;
+
+        public void AsetaHeti(bool heti)
+        {
+            Heti = heti;
+            vahinOsuus = heti ? 0f : 0.5f;
+            porttiViive = heti ? 0f : 1.4f;
+            syttyminenS = heti ? 0.3f : 0.7f;
+            if (heti) saapumisPiilo = false;
+            PallonLepo.Muuttui("nostot: heti");
+        }
         [Tooltip("LAHIZOOMIN_OSUUS_ULOIMMASTA: lähizoomi auki (taso 3 näkyy), kun korkeus / saapumisnäkymän korkeus on enintään tämä.")]
         public double lahizoomOsuus = NostoSaannot.LahizoominOsuus;
 
@@ -95,6 +112,12 @@ namespace Matkakirja
             /// </summary>
             public int Luokka = MusteLuokka.Kohde;
             public bool Loydetty = true;
+            /// <summary>
+            /// Piirretäänkö täysi merkki nimineen (Pelikoodarin NostonMuste.Taysi, omistaja 27.9. maailma auki: nostot täytenä
+            /// heti). Ulkoasu luetaan tästä, <see cref="Loydetty"/> jää laskurille ja kartussille. NostonMuste.Taysi = Nakyy, ja
+            /// näkymättömät nostot eivät ole näytettävissä, joten näytettävillä tämä on tosi.
+            /// </summary>
+            public bool Taysi = true;
         }
 
         /// <summary>Elävän kartan kokoluokat (Pelikoodarin Kokoluokka-järjestys, karttavalot.kokoluokka / taso 1–3).</summary>
@@ -148,6 +171,11 @@ namespace Matkakirja
         /// on kaupunkinäkymän korkeus. Rajojen latautumatta 1. Päivittyy kehyksittäin (Paivittyi herää muutoksesta).
         /// </summary>
         public float ZoomKerroin { get; private set; } = 1f;
+        /// <summary>
+        /// Suurin kerroin, johon kamera tässä maassa pääsee (saapumiskorkeus / PalloKierto.MinKorkeus). Mallinsepän löydös
+        /// 27.9.: pienissä maissa (NLD saapuminen 404 km, lähin ~311 km → 1,3) tason 1 3D-mallien kynnys 2,5 ei täyty koskaan.
+        /// </summary>
+        public float SuurinKerroin { get; private set; } = float.PositiveInfinity;
         /// <summary>Tämän kehyksen näytettävät nostot (ruudulla, edessä, lähimmät keskeltä, enintään katto).</summary>
         public IReadOnlyList<Nosto> Naytettavat => naytettavat;
         /// <summary>Herää, kun Naytettavat, Nakyvissa tai Syttyminen muuttui tässä kehyksessä.</summary>
@@ -231,13 +259,14 @@ namespace Matkakirja
         /// </summary>
         public static void Saapuminen(bool piilossa)
         {
+            if (Heti) piilossa = false;   // omistaja 27.9. klo 08.2x: nostot eivät piiloudu saapumisen ajaksi
             if (saapumisPiilo == piilossa) return;
             saapumisPiilo = piilossa;
             PallonLepo.Muuttui("nostot: saapuminen");
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaSaapuminen() { saapumisPiilo = false; Muste = null; }
+        static void NollaaSaapuminen() { saapumisPiilo = false; Muste = null; Heti = true; }
         void OnDisable() => PallonLepo.Poista(Syttyy);
         bool Syttyy() => (Nakyvissa && Syttyminen < 1f && !saapumisPiilo) || saapumisKerroin != (saapumisPiilo ? 0f : 1f);
         void Start()
@@ -439,6 +468,7 @@ namespace Matkakirja
             UloinOsuus = uloinKorkeusM > 0 && kierto.korkeus > 0 ? kierto.korkeus / uloinKorkeusM : 0;
             float kerroin = (float)NostoSaannot.Karttakerroin(saapumisKorkeusM, kierto.korkeus);
             if (kerroin != ZoomKerroin) { ZoomKerroin = kerroin; muuttui = true; }
+            SuurinKerroin = saapumisKorkeusM > 0 ? (float)NostoSaannot.Karttakerroin(saapumisKorkeusM, kierto.MinKorkeus()) : float.PositiveInfinity;
 
             // Saapumisportti: kamera ja nappula paikallaan porttiViiveen ajan (web saapumisPortti).
             bool liikkuu = kierto.Liikkeessa || (nappula != null && nappula.Vaihe != LennonVaihe.Ei) || (nappula != null && nappula.Liikkeessa);
@@ -537,6 +567,7 @@ namespace Matkakirja
             if (Muste != null) try { m = Muste(s.Id); } catch (Exception) { m = null; }
             s.Luokka = m?.luokka ?? MusteLuokka.Kohde;
             s.Loydetty = m?.loydetty ?? true;
+            s.Taysi = m?.nakyy ?? true;
             return m?.nakyy ?? true;
         }
 

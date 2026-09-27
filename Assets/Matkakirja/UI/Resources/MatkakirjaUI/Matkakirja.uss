@@ -952,15 +952,24 @@
     letter-spacing: 5.93px; /* web 0.8px */
 }
 
-/* Striimiääni (kehittäjä, web #kehittaja-striimiaani): kytkinrivi, jonka tilan paikalla on valitsin. */
+/* Striimiääni (kehittäjä, web #kehittaja-striimiaani): kuvake ja nimi ylärivillä, valitsin koko rivin levyisenä
+   alla (iPhonen paneeliin ei mahdu nimi ja "ara (oletus)" rinnakkain). */
 .mk-kytkinrivi--valinta {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.mk-kytkinrivi--valinta > .mk-kytkinrivi__nimi {
+    flex-shrink: 0;
 }
 
 .mk-kytkinrivi__valinta {
-    flex-shrink: 0;
-    margin: 0 0 0 8px;
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin: 6px 0 0 0;
 }
 
 .mk-kytkinrivi__valinta > .unity-base-popup-field__input {
@@ -3210,6 +3219,118 @@
 .mk-lukija > .mk-kaiutin__vinoviiva {
     left: 16px;
     top: 6px;
+}
+
+/* Nostokortin luennan säätimet (KortinLukija saatimet, web #3388 .lukija-saadin/.lukija-saadot): [ratas][kaiutin)))].
+ * Kaaret ovat VU-mittari (inline-opacity luennan aikana), muuten täysinä; keskeytettynä kevyt vilkku (vain opacity). */
+.mk-lukija-rivi {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: visible;
+    letter-spacing: 0;
+}
+
+.mk-lukija__ratas {
+    margin-right: -6px;
+}
+
+.mk-lukija__ratasikoni {
+    width: 19px;
+    height: 19px;
+}
+
+.mk-lukija__ratas.mk-valittu {
+    color: #a8741a;
+}
+
+.mk-lukija--kortti > .mk-kaiutin {
+    width: 21px;
+    height: 21px;
+}
+
+/* Kaaret täysinä kun luenta ei soi (Pulu.uss .mk-kaiutin__kaari 0,2 on isoisän kortin lepotila); mykistettynä himmeät. */
+.mk-lukija--kortti .mk-kaiutin__kaari.mk-lukija__kaari {
+    opacity: 1;
+}
+
+.mk-lukija--kortti.mk-mykistetty .mk-kaiutin__kaari.mk-lukija__kaari {
+    opacity: 0.2;
+}
+
+.mk-lukija--keskeytetty {
+    transition-property: opacity;
+    transition-duration: 0.6s;
+}
+
+.mk-lukija--himmea {
+    opacity: 0.35;
+}
+
+.mk-lukija-saadot {
+    position: absolute;
+    width: 262px;
+    padding: 10px 12px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(122, 85, 20, 0.3);
+    background-color: #f5edd8;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #211d18;
+}
+
+.mk-lukija-saadot__rivi {
+    flex-direction: row;
+    align-items: center;
+    margin: 3px 0;
+}
+
+.mk-lukija-saadot__nimi {
+    width: 56px;
+    flex-shrink: 0;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.mk-lukija-saadot__liuku {
+    flex-grow: 1;
+    margin: 0 8px 0 0;
+}
+
+/* Vaalea raita paperipaneelissa (mk-saadin on tummaa Äänentasot-dialogia varten); täyttö ja nuppi kultaiset. */
+.mk-lukija-saadot .mk-saadin #unity-tracker {
+    background-color: #e3d8bf;
+    border-color: rgba(122, 85, 20, 0.25);
+}
+
+.mk-lukija-saadot__arvo {
+    width: 46px;
+    flex-shrink: 0;
+    font-size: 15px;
+    letter-spacing: 0;
+    -unity-text-align: middle-right;
+}
+
+.mk-lukija-saadot__valinta {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.mk-lukija-saadot__valinta > .unity-base-popup-field__input {
+    min-height: 32px;
+    padding: 4px 8px;
+    border-width: 1px;
+    border-radius: 6px;
+    border-color: rgba(122, 85, 20, 0.35);
+    background-color: #fbf6ea;
+    color: #211d18;
+}
+
+.mk-lukija-saadot__valinta .unity-base-popup-field__text {
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #211d18;
 }
 
 /* Mitä uutta / Peli päivittyi (MitaUutta.cs, web .muutokset-lista li: versio lihavoituna, teksti perään). */

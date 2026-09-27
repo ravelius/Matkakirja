@@ -384,37 +384,6 @@
     color: rgba(74, 52, 33, 0.85);
 }
 
-/* Salaisuusrivi masto-osan alla (kiinni ja auki): pieni kursiivi, kiinni pergamenttihalolla kuten alarivi. */
-.mk-kartuscha__salaisuus {
-    flex-direction: row;
-    align-items: center;
-    min-height: 0;
-    margin: 3px 0 0 0;
-    padding: 0;
-    border-width: 0;
-    border-radius: 0;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.mk-kartuscha__salaisuus:active {
-    opacity: 0.7;
-}
-
-.mk-kartuscha__salaisuusteksti {
-    white-space: normal;
-    font-size: 12.2px;
-    color: #7a5514;
-    text-shadow: 0 0 3px rgb(244, 232, 205);
-}
-
-.mk-kartuscha.mk-auki .mk-kartuscha__salaisuus {
-    margin: 0 0 4px 0;
-}
-
-.mk-kartuscha.mk-auki .mk-kartuscha__salaisuusteksti {
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-}
-
 /* Maakunnan salaisuuden kortti: sama koko, oma sävy ylärivissä ja otsikossa (löydös 135: vain tyyli eri). */
 .mk-nosto--salaisuus .mk-nosto__ylarivi {
     color: #8e4550;

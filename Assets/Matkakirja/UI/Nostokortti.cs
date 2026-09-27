@@ -95,7 +95,8 @@ namespace Matkakirja.Natiivi
             sisus.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
-            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
+            // Luennan säätimet (omistaja 27.9. klo 09.3x, web #3388): ratas + kaiutin (tauko/jatko, VU).
+            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija", saatimet: true);
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
             // Kierto tai ikkunan koko: leveys uudelleen (web asemoi resize-kuuntelijassa), vaiheen 2 kortti keskelle.
             kerros.RegisterCallback<GeometryChangedEvent>(e =>
@@ -393,9 +394,31 @@ namespace Matkakirja.Natiivi
             var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
             float p = Mathf.Round(Mathf.Max(t.y + KuvaMarginaali, tavoite));
             kiinteaYla = p;
-            odottavaVieritys = Mathf.Max(0f, p - tavoite);
+            odottavaVieritys = KokoRivi(Mathf.Max(0f, p - tavoite));
             Pystypaikka();
             Vierita();
+        }
+
+        /// <summary>
+        /// Omistaja 27.9. klo 09.3x (iPhone): vaiheen 2 ylin näkyvä tekstirivi ei saa jäädä puoliksi kortin yläreunan taakse.
+        /// Jos vierityksen raja osuu tekstin keskelle, vieritystä vähennetään rivin alkuun (ei varaa: se paljasti edellisen rivin reunan), jolloin sisältö ja kuva
+        /// alkavat hieman alempaa (enintään rivin verran; löydös 131:n kuvan paikka muuten ennallaan).
+        /// </summary>
+        float KokoRivi(float v)
+        {
+            if (v <= 0f) return v;
+            foreach (var c in sisus.contentContainer.Children())
+            {
+                var r = c.layout;
+                if (float.IsNaN(r.y) || r.yMax <= v) continue;
+                if (r.y >= v || !(c is TextElement te)) return v;
+                float fs = te.resolvedStyle.fontSize;
+                if (fs <= 0f || float.IsNaN(fs)) return v;
+                int rivit = Mathf.Max(1, Mathf.RoundToInt(r.height / (fs * 1.3f)));
+                float riviK = r.height / rivit, leikattu = (v - r.y) % riviK;
+                return leikattu < 0.5f ? v : Mathf.Max(0f, v - leikattu);
+            }
+            return v;
         }
 
         /// <summary>Korjauksen vieritys; ScrollView rajaa arvon vieritysalueeseen, joten yritys toistuu sen päivittyessä.</summary>
@@ -548,7 +571,7 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Salaisuus ? "Kuuntele salaisuus" : "Kuuntele hetki");
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
-            Ylarivi(sisus, n).Add(lukija.Nappi);
+            Ylarivi(sisus, n).Add(lukija.Juuri);
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);

@@ -1,4 +1,5 @@
-// Elävä kartta (Isoisän muste, 26.9.2026): sisärajat, etäisyysjärjestys, aikajanan ikkunat, kamerapolun jatkuvuus.
+// Elävä kartta (Isoisän muste, 26.9.2026): sisärajat, etäisyysjärjestys, aikajanan ikkunat, kamerapolun jatkuvuus;
+// 27.9.2026: saapuminen on vain täyttö ja luovutus, video ennallaan (sormenjälki).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,52 @@ namespace Matkakirja.Linssit.Testit
             },
             "A", "p1", new[] { new LatLon(0.1, 0.1), new LatLon(0.1, 0.3) },
             new[] { ("X", new LatLon(10, 0)), ("Y", new LatLon(5, 5)), ("A", new LatLon(0.3, 0.4)) }, 20_000_000);
+
+        /// <summary>
+        /// Kohtauksen koko aikajana sormenjälkenä (Linssiseppä 27.9.2026: saapumisen karsinta ei saa muuttaa videota):
+        /// profiili, rakenne (syttymiset, viivat, pudotukset, valot) ja jokaisen vaiheen tila 0,05 s välein 0–kesto neljällä
+        /// desimaalilla, FNV-1a 64 -tiivisteenä.
+        /// </summary>
+        static string Sormenjalki(ElavaKohtaus k)
+        {
+            var s = new System.Text.StringBuilder();
+            string F(double x) => x.ToString("F4", System.Globalization.CultureInfo.InvariantCulture);
+            void A(params object[] osat) { foreach (var o in osat) s.Append(o is double d ? F(d) : o?.ToString() ?? "-").Append(' '); }
+            var P = k.P;
+            A(P.Nimi, P.HuntuAlku, P.HuntuLoppu, P.ViivatAlku, P.ViivatLoppu, P.RajanKesto, P.JoenKestoMin, P.JoenKestoMax, P.JokiVali,
+              P.MaakunnatAlku, P.MaakuntaVali, P.MaakuntienKesto, P.MaakunnanTaytto, P.AsettuminenAlku, P.AsettuminenLoppu,
+              P.AsettunutOsuus, P.Kesto, P.LuovutusAlku, P.Kamera);
+            foreach (var (a, b, c) in P.NostoIkkunat) A(a, b, c);
+            foreach (var (t, at, ko) in P.AurinkoPolku(315, 35)) A(t, at, ko);
+            A(k.KestoS, k.Heraava, k.Napautus, k.HuntuMaxKm, k.TulvaMaxKm, k.HeraavanNostoja, k.TulvaKeskus.Lat, k.TulvaKeskus.Lon);
+            for (int i = 0; i < k.Sytytys.Length; i++) A(k.Jarjestys[i], k.Sytytys[i]);
+            foreach (var v in k.Rajat.Concat(k.Joet).Append(k.Laiva).Append(k.Reitti)) A(v.Nimi, v.Alku, v.Kesto, v.Pituus, v.Pisteet.Length);
+            foreach (var n in k.Nostot) A(n.Nosto.Id, n.Alku, n.Kesto, n.Maakunta);
+            foreach (var v in k.Valot) A(v.Nimi, v.Alku, v.Voima);
+            s.Append('\n');
+            for (int j = 0; j * 0.05 <= k.KestoS + 1e-9; j++)
+            {
+                double t = j * 0.05;
+                A(t, k.HuntuSadeKm(t), k.Vesiraja(t), k.HuntuNakyy(t), k.KerrostenPeitto(t), k.Asettuminen(t));
+                for (int i = 0; i < k.Maakunnat.Count; i++) A(k.MaakunnanPeitto(i, t));
+                var (ts, tv) = k.Tulva(t);
+                var (rs, rp) = k.NapautusRengas(t);
+                var (mm, mp) = k.Merkit(t);
+                A(ts, tv, rs, rp, k.NimiOsuus(t), mm, mp);
+                for (int i = 0; i < k.Nostot.Count; i++) { var (a, b, c) = k.Nosto(i, t); A(a, b, c); }
+                double atsimuutti = k.Aurinko(t, out double korkeus);
+                var l = k.LaivanTila(t);
+                A(atsimuutti, korkeus, l.Nakyy, l.Paikka.Lat, l.Paikka.Lon, l.Suunta, l.Peitto, k.Hamara(t));
+                foreach (var p in k.Savu(t)) A(p.Synty, p.Paikka.Lat, p.Paikka.Lon, p.Suunta, p.Ika);
+                for (int i = 0; i < k.Valot.Count; i++) A(k.ValonVoima(i, t));
+                var a2 = k.KameranAsento(t);
+                A(a2.Lat, a2.Lon, a2.EtaisyysM, a2.Kallistus, a2.Suuntima, k.Vaihe(t));
+                s.Append('\n');
+            }
+            ulong h = 14695981039346656037UL;
+            foreach (char c in s.ToString()) { h ^= c; h *= 1099511628211UL; }
+            return h.ToString("x16");
+        }
 
         [Testi] static void SisarajatRisteyksestaKetjuiksi()
         {
@@ -168,35 +215,85 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(j.Pisteet.All(p => p.Lat > 34 && p.Lat < 42 && p.Lon > 19 && p.Lon < 30), j.Nimi);
         }
 
-        static ElavaKohtaus Saapuminen() => new ElavaKohtaus(
-            new LatLon(0.3, 0.4), Kolme(),
+        // Saapuminen kuten pelissä (ElavaKartta.Valmistele: ei herätystä, laivaa eikä reittiä), mutta joet ja nostot annetaan,
+        // jotta nähdään, että profiili itse ohittaa kynäviivat ja pudotukset.
+        static ElavaKohtaus Saapuminen(List<ElavaMaakunta> m = null) => new ElavaKohtaus(
+            new LatLon(0.3, 0.4), m ?? Kolme(),
             new[] { new ElavaJoki("pitkä", new[] { 0.5, 0.2, 0.5, 1.5, 1.5, 1.8 }) },
             new[] { new ElavaNosto("p1", 0.5, 0.5, Kokoluokka.Paakohde), new ElavaNosto("s1", 0.2, 0.2, Kokoluokka.Pieni) },
             null, null, null, null, 0, 315, 35, ElavaProfiili.Saapuminen);
 
-        [Testi] static void SaapuminenAlleViidenSekunnin()
+        /// <summary>
+        /// Saapuminen 27.9.2026 (omistaja 08.3x: koko maailma auki, maakunnat heränneinä heti): vain maakuntien täyttö, joka
+        /// alkaa 0 s:ssa, ja luovutus pelin pysyviin kerroksiin; kokonaisuus 1,5–1,8 s. Ei huntua, kynäviivoja, pudotuksia,
+        /// herätystä (nimi, merkit), laivaa, valoja eikä auringon liikettä.
+        /// </summary>
+        [Testi] static void SaapuminenVainTayttoJaLuovutus()
         {
-            var k = Saapuminen();
-            Oleta.Tosi(k.KestoS <= 5.0, "≤ 5 s (Raamattu ELÄVÄ KARTTA)");
             var P = ElavaProfiili.Saapuminen;
-            foreach (var v in k.Rajat.Concat(k.Joet)) Oleta.Tosi(v.Alku >= P.ViivatAlku - 1e-9 && v.Alku + v.Kesto <= P.ViivatLoppu + 1e-9, v.Nimi);
-            foreach (var s in k.Sytytys) Oleta.Tosi(s + P.MaakunnanTaytto <= P.LuovutusAlku, "maakunnat ennen luovutusta");
-            foreach (var n in k.Nostot) Oleta.Tosi(n.Alku + n.Kesto <= P.LuovutusAlku, "nostot ennen luovutusta");
-            Oleta.Tosi(k.HuntuSadeKm(P.HuntuLoppu) >= k.HuntuMaxKm - 1e-6 && !k.HuntuNakyy(1.7), "huntu kuivunut 1,6 s:ssa");
-            Oleta.Tosi(k.KerrostenPeitto(4.0) == 1 && k.KerrostenPeitto(k.KestoS) < 1e-9, "luovutus pysyville kerroksille");
-            Oleta.Tosi(k.Asettuminen(4.0) == 0, "saapumisessa ei asetuta paperiksi");
-            Oleta.Sama(-1, k.Heraava, "ei herätystä saapuessa");
-            Oleta.Tosi(!k.LaivanTila(2).Nakyy && k.Valot.Count == 0, "ei laivaa eikä valoja");
+            Oleta.Tosi(!P.HuntuKuivuu && !P.ViivatPiirtyvat && !P.NostotPutoavat && !P.AurinkoLiikkuu && !P.Kamera, "vaiheliput: vain täyttö");
+            Oleta.Tosi(P.NostoIkkunat == null && double.IsNaN(P.AsettuminenAlku), "ei pudotusikkunoita eikä asettumista");
+            Oleta.Sama(0.0, P.MaakunnatAlku, "täyttö alkaa heti");
+            Oleta.Tosi(P.MaakunnatAlku + P.MaakuntienKesto + P.MaakunnanTaytto <= P.LuovutusAlku + 1e-9, "täyttö valmis ennen luovutusta");
+            Oleta.Tosi(P.Kesto - P.LuovutusAlku > 0.2 && P.Kesto - P.LuovutusAlku <= 0.5, "lyhyt luovutus");
+
+            var k = Saapuminen();
+            Oleta.Tosi(k.KestoS >= 1.5 && k.KestoS <= 1.8, $"kesto {k.KestoS} s");
+            Oleta.Tosi(k.Rajat.Count == 0 && k.Joet.Count == 0, "ei kynäviivoja (joki annettu)");
+            Oleta.Tosi(k.Nostot.Count == 0 && k.Napautus == -1, "ei pudotuksia (nostot annettu)");
+            Oleta.Tosi(k.Heraava == -1 && k.Valot.Count == 0 && k.Laiva.Pisteet.Length == 0 && k.Reitti.Pisteet.Length == 0,
+                "ei herätystä, laivaa, reittiä eikä valoja");
+
+            // Täyttö: lähin maakunta syttyy 0 s:ssa ja kaikki ovat täysiä luovutuksen alkaessa.
+            int eka = k.Jarjestys[0];
+            Oleta.Sama("A", k.Maakunnat[eka].Id, "saapumiskaupungin maakunta ensin");
+            Oleta.Sama(0.0, k.Sytytys[eka], "ensimmäinen syttyy 0 s:ssa");
+            Oleta.Tosi(k.MaakunnanPeitto(eka, 0) == 0 && k.MaakunnanPeitto(eka, 0.05) > 0.2, "täyttö alkaa heti");
+            for (int i = 1; i < k.Jarjestys.Length; i++) Oleta.Tosi(k.Sytytys[k.Jarjestys[i]] > k.Sytytys[k.Jarjestys[i - 1]], "etäisyysjärjestys");
+            for (int i = 0; i < k.Maakunnat.Count; i++)
+            {
+                Oleta.Tosi(k.Sytytys[i] + P.MaakunnanTaytto <= P.LuovutusAlku + 1e-9, "täyttö ennen luovutusta");
+                Oleta.Sama(1.0, k.MaakunnanPeitto(i, P.LuovutusAlku), "täysi luovutuksessa");
+            }
+
+            // Koko aikajana: ei huntua, ei asettumista paperiksi, kartan valo ennallaan; omat kerrokset täysinä luovutukseen.
+            for (double t = 0; t <= k.KestoS + 1e-9; t += 0.02)
+            {
+                Oleta.Tosi(!k.HuntuNakyy(t) && k.Asettuminen(t) == 0, "ei huntua eikä asettumista " + t);
+                Oleta.Tosi(Math.Abs(k.Aurinko(t, out double e) - 315) < 1e-9 && Math.Abs(e - 35) < 1e-9, "aurinko paikallaan " + t);
+                if (t < P.LuovutusAlku) Oleta.Sama(1.0, k.KerrostenPeitto(t), "ennen luovutusta " + t);
+            }
+            double puoliva = k.KerrostenPeitto((P.LuovutusAlku + P.Kesto) / 2);
+            Oleta.Tosi(puoliva > 0 && puoliva < 1 && k.KerrostenPeitto(k.KestoS) < 1e-9, "luovutus pysyville kerroksille");
+            Oleta.Sama("maakunnat syttyvät", k.Vaihe(0));
+            Oleta.Sama("luovutus pysyville kerroksille", k.Vaihe(P.LuovutusAlku));
         }
 
-        [Testi] static void SaapumisenAurinkoPalaaKartanValoon()
+        [Testi] static void SaapumisenTayttoMonellaMaakunnalla()
         {
-            var k = Saapuminen();
-            Oleta.Tosi(Math.Abs(k.Aurinko(0, out double e0) - 315) < 1e-9 && Math.Abs(e0 - 35) < 1e-9, "alku");
-            Oleta.Tosi(Math.Abs(k.Aurinko(0.8, out double e1) - 285) < 1e-9 && Math.Abs(e1 - 12) < 1e-9, "matala 30° vastapäivään");
-            Oleta.Tosi(Math.Abs(k.Aurinko(4.5, out double e2) - 315) < 1e-9 && Math.Abs(e2 - 35) < 1e-9, "kartan valo lopussa");
-            double ed = k.Aurinko(0, out _);
-            for (double t = 0.02; t <= 4.8; t += 0.02) { double a = k.Aurinko(t, out _); Oleta.Tosi(Math.Abs(((a - ed) % 360 + 540) % 360 - 180) < 3, "ei hyppyä " + t); ed = a; }
+            // 40 maakuntaa rivissä: syttymisväli kutistuu (0,85 s / n), ja kaikki ovat silti täysiä ennen luovutusta.
+            var m = Enumerable.Range(0, 40).Select(i => Maakunta("M" + i, i, 0, i + 1, 0, i + 1, 1, i, 1)).ToList();
+            var k = Saapuminen(m);
+            var P = ElavaProfiili.Saapuminen;
+            Oleta.Sama("M0", k.Maakunnat[k.Jarjestys[0]].Id);
+            Oleta.Sama(0.0, k.Sytytys[k.Jarjestys[0]], "ensimmäinen 0 s:ssa");
+            Oleta.Tosi(k.Sytytys.Max() < P.MaakunnatAlku + P.MaakuntienKesto, "viimeinen syttyy ennen 0,85 s");
+            for (int i = 0; i < m.Count; i++) Oleta.Sama(1.0, k.MaakunnanPeitto(i, P.LuovutusAlku), m[i].Id);
+        }
+
+        /// <summary>
+        /// Video ennallaan (27.9.2026): kaikki vaiheet päällä ja koko aikajana samana kuin ennen saapumisen karsintaa (sormenjälki
+        /// laskettu pohjalla pelikoodari/maailma-auki 7041fd0e ennen muutosta).
+        /// </summary>
+        [Testi] static void VideoEnnallaan()
+        {
+            var V = ElavaProfiili.Video;
+            Oleta.Tosi(V.HuntuKuivuu && V.ViivatPiirtyvat && V.NostotPutoavat && V.AurinkoLiikkuu && V.Kamera, "videossa kaikki vaiheet");
+            Oleta.Tosi(V.Kesto == ElavaKohtaus.Kesto && double.IsPositiveInfinity(V.LuovutusAlku), "18,5 s ilman luovutusta");
+            var k = Kohtaus();
+            Oleta.Tosi(k.Rajat.Count == 3 && k.Joet.Count == 2 && k.Nostot.Count == 4 && k.Heraava == 0 && k.Valot.Count == 3,
+                "videossa rajat, joet, pudotukset, herätys ja valot");
+            Oleta.Sama("f33f2b5c8c29ba1f", Sormenjalki(k), "videon aikajana muuttui");
         }
 
         [Testi] static void JoetGeoJsonistaPaauomat()
@@ -208,33 +305,6 @@ namespace Matkakirja.Linssit.Testit
             var j = ElavaAineisto.JoetGeoJsonista(json);
             Oleta.Sama(3, j.Count, "Strahler 7 ja 6 (kaksi osaa), ei 4");
             Oleta.Tosi(j[0].Pisteet.Length == 3 && Math.Abs(j[0].Pisteet[0].Lat - 40.1) < 1e-9 && Math.Abs(j[0].Pisteet[0].Lon - 22.1) < 1e-9, "[lon, lat] → LatLon");
-        }
-
-        [Testi] static void NostotKarttavaloista()
-        {
-            string json = "{\"alkiot\":[" +
-                "{\"id\":\"a\",\"lat\":38,\"lon\":23,\"maa\":\"GRC\",\"kokoluokka\":\"paakohde\"}," +
-                "{\"id\":\"b\",\"lat\":39,\"lon\":22,\"maa\":\"GRC\",\"taso\":3}," +
-                "{\"id\":\"c\",\"lat\":39,\"lon\":22,\"maa\":\"GRC\",\"salaisuus\":true}," +
-                "{\"id\":\"d\",\"lat\":39,\"lon\":22,\"maa\":\"GRC\",\"paakartalla\":false}," +
-                "{\"id\":\"e\",\"lat\":48,\"lon\":2,\"maa\":\"FRA\",\"taso\":1}]}";
-            var n = ElavaAineisto.NostotKarttavaloista(json, "GRC");
-            Oleta.Sama(2, n.Count, "salaisuus, sivukartta ja muu maa pois");
-            Oleta.Sama(Kokoluokka.Paakohde, n[0].Luokka);
-            Oleta.Sama(Kokoluokka.Pieni, n[1].Luokka, "taso 3 = pieni");
-        }
-
-        [Testi] static void HeraysAlleKolmenSekunnin()
-        {
-            var m = Kolme()[0];
-            var h = new Herays(m, new LatLon(0.5, 0.5), 1, 3);
-            Oleta.Tosi(Herays.Kesto <= 2.5, "herätys ≤ 2,5 s");
-            Oleta.Tosi(h.Tulva(0.05).SadeKm == 0 && h.Tulva(Herays.TulvaAlku + Herays.TulvaKesto).SadeKm >= h.TulvaMaxKm - 1e-6, "tulva kattaa renkaan");
-            Oleta.Tosi(h.Tulva(Herays.TulvaAlku + Herays.TulvaKesto + Herays.ValmisKesto).Valmis >= 1 - 1e-9, "saaret lopuksi");
-            Oleta.Tosi(h.NimiOsuus(Herays.NimiAlku) == 0 && h.NimiOsuus(Herays.NimiAlku + Herays.NimiKesto) >= 1 - 1e-9, "nimi kirjoittuu");
-            Oleta.Tosi(h.Merkit(1.0).Peitto == 0 && h.Merkit(Herays.MerkitAlku + Herays.MerkitKesto).Peitto == 1, "merkit leimautuvat");
-            Oleta.Tosi(h.KerrostenPeitto(1.9) == 1 && h.KerrostenPeitto(Herays.Kesto) < 1e-9, "luovutus pysyvälle täytölle");
-            Oleta.Tosi(Math.Abs(h.TulvaMaxKm - (Math.Sqrt(0.5) * ElavaKohtaus.KmAsteella + 5)) < 1, "kauimmainen kulma");
         }
 
         [Testi] static void MusteenJalkiJaLoyto()

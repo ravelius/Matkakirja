@@ -898,10 +898,10 @@ MonoBehaviour:
   kierto: {fileID: 1108540567}
   merkit: {fileID: 2116600894}
   nappula: {fileID: 2116600904}
-  vahinOsuus: 0.5
+  vahinOsuus: 0
   katto: 120
-  porttiViive: 1.4
-  syttyminenS: 0.7
+  porttiViive: 0
+  syttyminenS: 0.3
   lahizoomOsuus: 0.7
 --- !u!114 &2116600899
 MonoBehaviour:

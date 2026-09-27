@@ -902,6 +902,10 @@ namespace Matkakirja.Natiivi
             ("matkakirja-avaus-esilataus", 'i'), ("matkakirja-avaus-malli", 's'),
             (Nappula.LentoV3Avain, 'i'),
             (IhmisenMatkaKerros.TekstitysAvain, 'i'), (LinssiOhjain.KyllaisyysAvain, 'f'),
+            // Natiivisepän mittauslippujen avaimet (Saapumisvartija.LippuAvain, Ruudunpaivitys.Liike120Avain,
+            // LaattaPortit.YksiPorttiAvain, KarttaKerrokset saapumislaatat, NostotKartalla aihemerkit).
+            ("matkakirja-saapumisvartija", 'i'), ("matkakirja-liike-120", 's'), ("matkakirja-yksi-portti", 'i'),
+            ("matkakirja-saapumislaatat", 'i'), ("matkakirja-aihemerkit", 'i'),
         };
 
         /// <summary>Uusi peli -tyhjennys tehtiin: pelin muistit ovat poissa, aloitusnäkymä seuraa (löydös 177).</summary>
@@ -1166,6 +1170,7 @@ namespace Matkakirja.Natiivi
                     if (MaailmaHyppy(kaupunki)) return;
                     // Siirtovaiheessa korostettu kaupunki valitsee siirron (web lauta.js valitseSiirto → doMove).
                     if (SiirtoAvain(kaupunki) != null) { Siirry(SiirtoAvain(kaupunki)); return; }
+                    if (kaupunkiKortti != null && KorttiIlmanAjoa) { AvaaKorttiHeti(kaupunki); return; }
                     if (kaupunkiKortti != null) { AvaaKorttiAjonJalkeen(kaupunki); return; }
                     AvaaDialogi(kaupunki);
                     return;
@@ -1200,6 +1205,25 @@ namespace Matkakirja.Natiivi
         }
 
         int korttiAjo;
+
+        /// <summary>
+        /// Avauskortti (web v2296 lauta.js: if (!KAUPUNKILIUSKA) { avaaAvauskortti(ui, city); return true; }): kaupungin
+        /// napautus avaa kortin heti ilman 420 ms:n kamera-ajoa. Natiivi-UI asettaa lipun avauskortin kanssa; pois
+        /// päältä (oletus) napautus toimii kuten liuskan aikaan (AvaaKorttiAjonJalkeen). Siirron valinta ennen korttia
+        /// pysyy ennallaan.
+        /// </summary>
+        public static bool KorttiIlmanAjoa;
+
+        /// <summary>
+        /// Kortti heti: KaupunkiMerkkien oma lento kaupunkiin pysäytetään samassa ruudussa (kameranOhitus, kuten
+        /// KortinKamerassa), ja kesken oleva ajon jälkeinen avaus mitätöidään.
+        /// </summary>
+        void AvaaKorttiHeti(string kaupunki)
+        {
+            korttiAjo++;
+            PysaytaKamera();
+            AvaaKortti(kaupunki);
+        }
 
         /// <summary>
         /// Liikkumisen pariteetti D17 (web lauta.js napautaKaupunki: await ajaKamera(LIUSKAN_AJO_MS) → ladoLevossa →

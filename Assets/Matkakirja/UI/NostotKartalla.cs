@@ -790,6 +790,7 @@ namespace Matkakirja.Natiivi
             float oma = kaupunki ? KaupunginKerroin : m.Taso1 ? Taso1Kerroin : 1f;
             // Elävä kartta, kohta 2: kokoluokka (ei kaupunkimerkkeihin eikä ryhmiin).
             if (!kaupunki && !ryhma) oma *= LuokanKerroin(s.Luokka);
+            // s.Loydetty = NostonMuste.Taysi (ElavaKartta, Linssiseppä): täysi merkki nimineen heti, ei himmeää/nimetöntä (omistaja 27.9.).
             bool loydetty = ryhma || s.Loydetty;
             m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
             // Löydös 155: taso 1 aina kuvamerkkinä kuten webin maamerkki. Löydös 174 (Fable 26.9., web on malli, omistaja 2.9.):
