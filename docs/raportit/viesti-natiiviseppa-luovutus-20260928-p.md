@@ -20,6 +20,11 @@ yhä voimassa, ellei tässä toisin sanota.
 - Lähetetty klo 00.18: Laitetestaajalle puhe-PASSiin (PASS suoraan Julkaisijalle ja Fablelle), Julkaisijalle SHA (TF 1.0.34
   PASSin jälkeen, Julkaisija asettaa lipun), Fablelle valmis erä. Julkaisijan muutoslokirivi 1.0.34 (#3518) on jo mainissa.
   Pulun äänitagit (web #3513, v2349) tuotannossa 00.02 alkaen.
+- **Laitetestaaja 00.3x: PASS kohdat 1–3** (kappalejako [pause] ei näy tekstissä, luenta ~10 kappaletta ilman ohituksia,
+  0 poikkeusta; raportti docs/raportit/savukierros-build34-puhetagit-20260928.md, 1599e5779). Todentamatta 4 (väliotsikon
+  [long-pause]) ja 5 (Pulun tagit; `ui pulu sano` ei kulje chat-polkua, vaatii oikean kysymyksen Pululle). Molemmat ovat
+  yksikkötesteissä (LuennanTagitKappalejakoJaValiotsikko, PuhetagitEivatNayNaytolla), kerrottu Fablelle. TF 1.0.34:n päätös
+  Fablella ja Julkaisijalla.
 - **Ei mergejä proto-masteriin ennen Julkaisijan "vienti valmis" -viestiä (TF 1.0.34).**
 - TF 1.0.33 (202609272009) valmis klo 23.56 sisäisessä ryhmässä.
 - Yötauko jatkuu Karttasepän polton loppuun: ei käännöksiä eikä simulaattoreita, paitsi julkaisu lipulla
