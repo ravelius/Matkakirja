@@ -136,6 +136,30 @@ function aanetPaalla() {
   return sfx?.enabled !== false;
 }
 
+/*
+ * PULUN PUHE ILMAN ÄÄNIKYTKIMIÄ (omistaja 27.9.2026 klo 09.2x, sitova):
+ * Pulun puhetta — striimattua (lueVirtana) ja valmista vastausta
+ * (lueAaneen persoonalla 'pollo') — ohjaa VAIN Pulun oma kaiutinvipu
+ * (js/pollo.js aaniPaalla). Pelin mykistys ja kertojakytkin eivät estä
+ * sitä eivätkä katkaise sitä kesken. Lippu kertoo, onko soiva luenta
+ * Pulun; vaiennaAanikytkimella jättää sen soimaan.
+ */
+let ajossaPulu = false;
+
+/** Ohjaako luentaa vain Pulun kaiutinvipu (ei pelin äänikytkimiä). */
+function pulunPuhe(persoona) {
+  return persoona === 'pollo';
+}
+
+/**
+ * Pelin äänikytkin (mykistys tai kertoja pois) vaientaa soivan luennan —
+ * paitsi Pulun puheen, jota ohjaa vain Pulun kaiutinvipu.
+ */
+export function vaiennaAanikytkimella() {
+  if (ajossa && ajossaPulu) return;
+  pysaytaLukija();
+}
+
 /**
  * Luettavan tekstin katto merkkeinä.
  *
@@ -1149,6 +1173,7 @@ export function pysaytaLukija() {
   const nyt = ajossa;
   if (!nyt) return;
   ajossa = null;
+  ajossaPulu = false;
   try {
     nyt.lopeta();
   } catch {
@@ -1170,7 +1195,7 @@ export function pysaytaLukija() {
  */
 if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
   document.addEventListener(AANIVALINTA_TAPAHTUMA, (tapahtuma) => {
-    if (tapahtuma?.detail?.enabled === false) pysaytaLukija();
+    if (tapahtuma?.detail?.enabled === false) vaiennaAanikytkimella();
   });
 }
 
@@ -1261,8 +1286,10 @@ export function lueAaneen(teksti, nappi = null, {
 } = {}) {
   pysaytaLukija();
   // Pelin mykistys ensin: mykkä peli ei lue mitään, millään
-  // taustajärjestelmällä (ks. aanetPaalla).
-  if (!aanetPaalla()) return false;
+  // taustajärjestelmällä (ks. aanetPaalla) — paitsi Pulu, jota ohjaa
+  // vain sen oma kaiutinvipu (ks. ajossaPulu).
+  if (!pulunPuhe(persoona) && !aanetPaalla()) return false;
+  ajossaPulu = pulunPuhe(persoona);
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
@@ -1522,10 +1549,11 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'ke
  */
 export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   pysaytaLukija();
-  // Sama mykistysportti kuin lueAaneenissa: mykkä peli ei lue
-  // virtanakaan. null kertoo kutsujalle, ettei virtaluentaa ole —
-  // sama paluuarvo kuin silloin, kun taustajärjestelmä ei tue sitä.
-  if (!aanetPaalla()) return null;
+  // Sama mykistysportti kuin lueAaneenissa (Pulu ohittaa sen: striimi-
+  // puhetta ohjaa vain Pulun kaiutinvipu). null kertoo kutsujalle, ettei
+  // virtaluentaa ole — sama paluuarvo kuin ilman taustajärjestelmää.
+  if (!pulunPuhe(persoona) && !aanetPaalla()) return null;
+  ajossaPulu = pulunPuhe(persoona);
   // Sama pehmeä taustan väistö kuin valmiin tekstin luennassa
   // (lueAaneen) — kerran-kääre kattaa kaikki loppupolut.
   const vapautaVaisto = kerran(puheLoppui);
