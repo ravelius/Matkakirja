@@ -7975,3 +7975,7 @@ Omistaja 09.3x lisays: nostojen luennan saatorattaaseen siirretaan myos lukijan 
 ## PELIKOODARI NOLLATTU JA KAYNNISTETTY 09.4x (LUOVUTUS -B f07e4927a) (27.9.2026 klo 09.34)
 
 Pelikoodari nollattu 09.4x (81 % → tyhja), aloitusviesti: #3385/21e79d71 korjaus (mannerlennot palautetaan, sumun poisto ja Taysi jaavat, maakuntien heraaminen + salaisuudet + alkuanimaatio pois), striimipuhe ilman aanikytkimia, nostojen luennan saatimet (nopeus, jatko, vilkkuva kaiutin, ratas + aanen valinta, VU-kaiuttimet), raja-PR, natiivin progressiivinen soitto.
+
+## MAAKUNTAERA KORJATTU: #3385 v2309 (MANNERLENNOT = MAIN, SUMU POIS), PROTO maailma-auki 7041fd0e; SPEKSIT NATIIVISEPALLE, NATIIVI-UI:LLE, LINSSISEPALLE (27.9.2026 klo 09.43)
+
+Pelikoodari 09.4x: #3385 → v2309 (mannerlennot ennallaan, loytosumu pois, salaisuudet heti viennissa; web ei sisalla maakuntaetenemista); proto pelikoodari/maailma-auki 7041fd0e (Kaupat/Laatat/kultaiset = master, NostonMuste.Taysi, Heranneet = maakunnassa nostoja, salaisuus nakyy heti ja kuuluu laskuriin, MaakuntaHeraa/MaakuntaValmis eivat laukea; 324/324). Speksit: Natiiviseppa MaaKartta Heraannyt/Herata pois; Natiivi-UI kartussin herays + MAAKUNNAT-palkki + salaisuusrivi pois, nimet heti; Linssiseppa ElavaHerays pois, saapumisesta vain pohjavarin taytto. Palkintoefektit pois: 'Maakunnan salaisuus loytyi' -rivi, herayksen leima + nimen kirjoitus, ElavaHerays-animaatio; maa valmis → lippu liehuu jaa. Fable: #3385 pito purettu.
