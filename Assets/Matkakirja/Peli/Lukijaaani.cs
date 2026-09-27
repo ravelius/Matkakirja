@@ -115,9 +115,25 @@ namespace Matkakirja.Peli
         /// pala — vain kattoa pidempi pilkotaan virkerajalta (js/puhe.js kappaleenPalat). Ei katkaisua: mitään
         /// tekstiä ei pudoteta. Palat luetaan putkena: kutsuja esihakee seuraavat (Puhe.Esihae) edellisen soidessa.
         /// </summary>
-        public static List<string> LuennanPalat(IEnumerable<string> tekstit, int katto = PalaKatto)
+        public static List<string> LuennanPalat(IEnumerable<string> tekstit, int katto = PalaKatto) =>
+            LuennanPalatJaTagit(tekstit, katto).palat;
+
+        /// <summary>
+        /// LUENNAN PALAT JA PUHETAGIT (omistaja 27.9.2026 klo 23.1x: "äänitagit toimi hienosti, lisää peliin"; koe
+        /// proto-3d/lokit/puhetagit/): palat kuten LuennanPalat, ja jokaiselle palalle loppu-tagi, joka lisätään VAIN
+        /// puhepyyntöön (Puhe.Lue loppuTagi), ei näytölle eikä tekstidataan:
+        ///   - kappaleen viimeinen pala, kun perässä on uusi kappale → "[pause]" (kappalejako, mitattu 1,2–2,0 s);
+        ///   - kun seuraava kappale alkaa väliotsikolla → "[long-pause]" (väliotsikon edelle, ~2,1 s);
+        ///   - saman kappaleen pilkotun palan perässä (virkeraja) ja viimeisen palan perässä ei mitään;
+        ///   - otsikon perään EI koskaan: otsikko on seuraavan kappaleen alussa samassa palassa (TF 1.0.32:n palaute).
+        /// Web soittaa kappaleet omina paloinaan, trimmaa reunojen hiljaisuuden ja pitää välit itse (KAPPALEVALI 0,45 s,
+        /// OTSIKKOVALI 0,95 s); natiivi soittaa klipin sellaisenaan, joten tauko tulee tagista.
+        /// </summary>
+        public static (List<string> palat, List<string> tagit) LuennanPalatJaTagit(IEnumerable<string> tekstit, int katto = PalaKatto)
         {
             var palat = new List<string>();
+            var otsikolla = new List<bool>();
+            var kappaleenLoppu = new List<bool>();
             string odottava = null;
             foreach (var raaka in tekstit ?? Enumerable.Empty<string>())
             {
@@ -125,11 +141,66 @@ namespace Matkakirja.Peli
                 if (t.Length == 0) continue;
                 if (OnOtsikko(t)) { odottava = odottava == null ? Paate(t) : odottava + " " + Paate(t); continue; }
                 string kohta = odottava == null ? t : odottava + " " + t;
+                bool alkaaOtsikolla = odottava != null;
                 odottava = null;
-                palat.AddRange(KappaleenPalat(kohta, katto));
+                var osat = KappaleenPalat(kohta, katto);
+                for (int i = 0; i < osat.Count; i++)
+                {
+                    palat.Add(osat[i]);
+                    otsikolla.Add(alkaaOtsikolla && i == 0);
+                    kappaleenLoppu.Add(i == osat.Count - 1);
+                }
             }
+            var tagit = new List<string>(palat.Count);
+            for (int i = 0; i < palat.Count; i++)
+                tagit.Add(i == palat.Count - 1 || !kappaleenLoppu[i] ? null : otsikolla[i + 1] ? TagiPitkaTauko : TagiTauko);
+            return (palat, tagit);
+        }
+
+        public const string TagiTauko = "[pause]";
+        public const string TagiPitkaTauko = "[long-pause]";
+        /// <summary>Tagillisen luennan säilölohkon pääte (kertoja → kertoja-t1): tagiversion palat omana R2-etuliitteenään.</summary>
+        public const string TagiLohkonPaate = "-t1";
+
+        /// <summary>Tagillinen pala säilötään omaan lohkoonsa (kertoja → kertoja-t1); ilman säilöä (pöllö, näyte) ei lohkoa.</summary>
+        public static string TagiLohko(string lohko, string loppuTagi) =>
+            lohko != null && !string.IsNullOrEmpty(loppuTagi) ? lohko + TagiLohkonPaate : lohko;
+
+        /// <summary>
+        /// Puhepyynnön palat (Puhe.Lue ja Puhe.Esihae samasta, jotta välimuistiavaimet osuvat): palavirran palat tai koko
+        /// teksti, ja loppu-tagi viimeisen palan perään. Tagi on pyyntötekstissä, joten tagillisella palalla on oma avain.
+        /// </summary>
+        public static List<string> PyyntoPalat(string teksti, bool virta, string loppuTagi)
+        {
+            var palat = virta ? VirtaPalat(teksti) : new List<string> { teksti };
+            if (!string.IsNullOrEmpty(loppuTagi) && palat.Count > 0) palat[palat.Count - 1] += " " + loppuTagi;
             return palat;
         }
+
+        /// <summary>
+        /// PUHETAGIT NÄYTÖLTÄ POIS: pelaaja ei näe koskaan xAI-puhetagia ([sigh], [pause], &lt;fast&gt;…&lt;/fast&gt;), vain puhe
+        /// kuulee ne (Pulun vastaus: worker sallii [pause] [long-pause] [sigh] [laugh] &lt;fast&gt;). Käsitelinkit [[a|b]] eivät
+        /// ole tageja (kaksoissulut). Tagin jättämä kaksoisväli ja rivin reunan väli siistitään.
+        /// </summary>
+        public static string PoistaPuhetagit(string teksti)
+        {
+            if (string.IsNullOrEmpty(teksti)) return teksti ?? "";
+            string t = PuhetagiRe.Replace(teksti, "");
+            t = Regex.Replace(t, @"[ \t]{2,}", " ");
+            t = Regex.Replace(t, @"[ \t]+(?=[\n.,!?;:…])", "");
+            t = Regex.Replace(t, @"(^|\n)[ \t]+", "$1");
+            return t;
+        }
+
+        /// <summary>Striimin kesken tullut tagin alku ("… [si", "… &lt;fa") piiloon, kunnes tagi sulkeutuu (näyttö ei vilauta sitä).</summary>
+        public static string PoistaKeskenTagi(string teksti)
+        {
+            if (string.IsNullOrEmpty(teksti)) return teksti ?? "";
+            var m = Regex.Match(teksti, @"(?<!\[)\[[a-z-]{0,20}$|</?[a-z-]{0,12}$");
+            return m.Success ? teksti.Substring(0, m.Index).TrimEnd(' ') : teksti;
+        }
+
+        static readonly Regex PuhetagiRe = new Regex(@"(?<!\[)\[[a-z][a-z-]{1,19}\](?!\])|</?[a-z][a-z-]{1,11}>");
 
         static bool OnOtsikko(string t) => t.Length <= 120 && !Lopetus(t[t.Length - 1]);
         static bool Lopetus(char c) => c == '.' || c == '!' || c == '?' || c == ':' || c == ';' || c == '…';
