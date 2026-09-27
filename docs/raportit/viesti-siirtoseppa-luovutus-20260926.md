@@ -29,11 +29,17 @@ voimassa.
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
    Tuotanto nyt **1.x v201+** (1.50). Seuraavaksi #3394:n jälkeinen delta (Fable 27.9. klo 11.3x). #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
-5. **Tehty tässä vuorossa (26.–27.9.):** v184 (maakuntapikkukuvat A), v187 (merikohdat), v189 (B-erät + löydös 178
+5. **Pelikoodarin pyyntö (27.9. klo 11.3x), #3394 (main v2314) sääntövakiot:** START_MONEY 300 → 400, STRANDED_AID
+   poistui, uudet PAIVAKULU_RUOKA 8, PAIVAKULU_MAJOITUS 12, HINTATASON_KERTOIMET, RAHATTOMUUS_VUOROJA 8 ja data
+   js/packs/hintatasot.js. Saannot-kokoelma: tarkista tools/vienti/lahteet.mjs m('js/rules.js', […]) ja kokoelmat.mjs
+   saantoKokoelma (tuleeko uudet vakiot automaattisesti; STRANDED_AID:n poisto voi kaataa viennin) ja harkitse
+   hintatasot-kokoelmaa (uusi kokoelma = skeema 1.5x + Natiivisepän kuittaus; natiivi käyttää nyt peilitaulua Peli/Talous.cs).
+   Kerro Pelikoodarille, kun paketti on viety.
+6. **Tehty tässä vuorossa (26.–27.9.):** v184 (maakuntapikkukuvat A), v187 (merikohdat), v189 (B-erät + löydös 178
    kartalla:false, 70 tarinakohdetta), v193 (C BLR+ROU, astro 2), v201 (maalehti-siirto, astro 3–4). Pikkukuvia 527
    aluetta 31 maassa. Natiivi 170 (sisältö vaihtuu kesken istunnon) mergetty junaan d211337c. ISS-TLE cron toimii.
    Pyramidisarjat 09-21…09-26 natiivin kannalta vapaita (ei osoittimen tasosarjoja).
-6. Kuvapareihin versio, build ja kuvakulma SUORAAN kuvaan (omistaja 27.9.).
+7. Kuvapareihin versio, build ja kuvakulma SUORAAN kuvaan (omistaja 27.9.).
 
 ## Voimassa olevat työtavat (tämän vuoron uudet)
 
