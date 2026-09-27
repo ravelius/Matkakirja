@@ -139,6 +139,21 @@
    "10": 8499,
    "11": 10337,
    "12": 11396
+  },
+  "purettu": {
+   "0": 8261,
+   "1": 4869,
+   "2": 2373,
+   "3": 1385,
+   "4": 724,
+   "5": 494,
+   "6": 317,
+   "7": 8121,
+   "8": 12109,
+   "9": 15573,
+   "10": 18022,
+   "11": 22506,
+   "12": 26847
   }
  },
  "media": {
@@ -159,5 +174,5 @@
   "repo": 369767,
   "muu": 652563
  },
- "maastoHuom": "27.9.2026: z7–z12 Euroopan otoksesta (200/taso, gzip-siirtokoko kuten HEAD content-length); purettuna levyllä noin 2,3 × (Euroopan eheystarkistus)."
+ "maastoHuom": "27.9.2026: keskitavut = gzip-siirtokoko (z7–z12 Euroopan otoksesta 200/taso); purettu = levykoko (iOS purkaa gzipin), Euroopan 96 811 laatan GET-mittaus (Euroopan eheystarkistus)."
 }

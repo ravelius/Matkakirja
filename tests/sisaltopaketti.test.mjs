@@ -1578,6 +1578,9 @@ test('skeema 1.52: mediaKuvat — omat tiedostot offline-lataukseen omassa avaim
   assert.ok(kuvia > 1000 && pienia > 500, `mediaKuvia ${kuvia}, pieniä ${pienia}`);
   assert.ok(Object.values(o.maat).some((m) => m.mediaKuvat?.some((k) => k.url.includes('/karttanostot/'))), 'karttanostot mediaKuvissa');
   assert.ok(o.ryhmat.europe.tavuja.mediaKuvat > 0);
+  // Natiiviseppä 27.9.: levykoko (maasto purettuna) ≥ yht.
+  for (const [iso, m] of Object.entries(o.maat)) assert.ok(m.tavuja.levy >= m.tavuja.yht, `${iso}: levy ${m.tavuja.levy} < yht`);
+  assert.ok(o.ryhmat.europe.tavuja.levy > o.ryhmat.europe.tavuja.yht);
 });
 
 test('eheys 27.9.: Flickr-kuvat repon kopiona ämpärissä, Flickr vain varana', async () => {

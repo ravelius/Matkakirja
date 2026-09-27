@@ -405,7 +405,7 @@ export function maidenMaanosat({ countryShapes, cities, cityCountry, cityManner 
 }
 
 function summaa(lista) {
-  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), mediaKuvat: 0 };
+  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), mediaKuvat: 0, levy: 0 };
   for (const x of lista) for (const k of Object.keys(t)) t[k] += x[k] ?? 0;
   return t;
 }
@@ -424,11 +424,12 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     globaaliRasteri[z] = [0, 0, 2 ** z - 1, 2 ** z - 1];
     globaaliRasteriTavut += 4 ** z * (koot.rasteri.keskitavut[z] ?? 0);
   }
-  const globaaliMaasto = {}; let globaaliMaastoTavut = 0;
+  const globaaliMaasto = {}; let globaaliMaastoTavut = 0; let globaaliMaastoLevy = 0;
   for (let z = 0; z <= M.globaaliMax && z < saatavilla.length; z++) {
     globaaliMaasto[z] = saatavilla[z].map((a) => [a.startX, a.startY, a.endX, a.endY]);
-    globaaliMaastoTavut += saatavilla[z].reduce((s, a) => s + (a.endX - a.startX + 1) * (a.endY - a.startY + 1), 0)
-      * (koot.maasto.keskitavut[z] ?? 0);
+    const n = saatavilla[z].reduce((s, a) => s + (a.endX - a.startX + 1) * (a.endY - a.startY + 1), 0);
+    globaaliMaastoTavut += n * (koot.maasto.keskitavut[z] ?? 0);
+    globaaliMaastoLevy += n * (koot.maasto.purettu?.[z] ?? koot.maasto.keskitavut[z] ?? 0);
   }
   // Maahan sitomaton media ei kuulu "kerran kaikille" -osaan (Natiiviseppä
   // 23.9.2026): se jaetaan valinnaisiksi ryhmiksi, jotka pelaaja voi ladata
@@ -477,7 +478,7 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     const renkaat = maa.asteina ?? renkaatAsteina(maa);
     const b = bbox(renkaat);
     const rasteri = {}; const maasto = {}; const laattoja = { rasteri: 0, maasto: 0 };
-    let rTavut = 0; let mTavut = 0;
+    let rTavut = 0; let mTavut = 0; let mLevy = 0;
     for (let z = R.globaaliMax + 1; z <= R.maaMax; z++) {
       const t = rasteriLaatat(renkaat, b, z);
       rasteri[z] = t.vali; laattoja.rasteri += t.laattoja; rTavut += t.laattoja * (koot.rasteri.keskitavut[z] ?? 0);
@@ -497,6 +498,7 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       const t = maastoLaatat(renkaat, b, z, saatavilla[z]);
       if (!t) continue;
       maasto[z] = t.vali; laattoja.maasto += t.laattoja; mTavut += t.laattoja * (koot.maasto.keskitavut[z] ?? 0);
+      mLevy += t.laattoja * (koot.maasto.purettu?.[z] ?? koot.maasto.keskitavut[z] ?? 0);
     }
     const kaikkiMedia = [...(jako.get(iso) ?? [])].sort();
     const media = kaikkiMedia.filter((a) => !onLisamedia(arvot.get(a)));
@@ -530,11 +532,14 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       ...(mediaKuvat.length ? { mediaKuvat } : {}),
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
         yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}),
-        mediaKuvat: kuvaTavut },
+        mediaKuvat: kuvaTavut,
+        // Skeema 1.52 (Natiiviseppä 27.9.): levykoko = yht, jossa maasto purettuna (iOS purkaa gzipin latauksessa).
+        levy: Math.round(rTavut + mLevy + medTavut) },
     };
   }
   const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
-    media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut) };
+    media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut),
+    levy: Math.round(globaaliRasteriTavut + globaaliMaastoLevy) };
   const tulos = {
     $skeema: 'matkakirja-vienti/1/offline',
     arvio: true,
@@ -641,7 +646,9 @@ async function paivitaKoot(vienti, n = 24) {
   const tulos = {
     haettu: new Date().toISOString().slice(0, 10), otos: n,
     rasteri: { poltto: R.url.split('/').at(-4), keskitavut: rasteri },
-    maasto: { poltto: M.layer.split('/').at(-2), available: layer.available, keskitavut: maasto },
+    // purettu (levykoko) mitataan GET-otoksella erikseen (27.9.2026); säilytetään edellisestä.
+    maasto: { poltto: M.layer.split('/').at(-2), available: layer.available, keskitavut: maasto,
+      ...(lueKoot().maasto.purettu ? { purettu: lueKoot().maasto.purettu } : {}) },
     media,
   };
   writeFileSync(KOOT_TIEDOSTO, `${JSON.stringify(tulos, null, 1)}\n`);
