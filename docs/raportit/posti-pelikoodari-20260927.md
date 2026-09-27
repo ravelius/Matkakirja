@@ -80,3 +80,8 @@ painikkeiden alla keskellä; iPadilla päiväkirjan ja selitteen välissä; ei o
 
 ### Rahattomuuspalkki päivitetty omistajan tarkennukseen 15.2x (Natiivi-UI välitti)
 #3421 → 27ced122: pelkät punaiset neliöt (ei tekstiä), yläpalkkiin lyhyt "£0 2 vrk" kaikilla ruuduilla. Kuvaparit uusittu samoihin polkuihin.
+
+### Rahattomuuspalkki KORJATTU Fablen viestien mukaan → #3421 44deb9e2
+Pelkät punaiset neliöt (8 × 9×9 px): ei tekstiä, ei tuntilukuja, ei kehystä, sama ulkoasu iPhone = iPad (keskellä
+painikerivin alla). Yläpalkissa punainen "£0 2 vrk" kaikilla leveyksillä (vrk EI poistettu). node --test 4459/0.
+Kuvaparit uusittu: `/Users/Shared/Claude/proto-3d/lokit/rahattomuuspalkki/kuvapari-rahattomuus-393x852.png` ja `-834x1194.png`.
