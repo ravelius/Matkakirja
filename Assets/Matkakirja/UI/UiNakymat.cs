@@ -535,6 +535,7 @@ namespace Matkakirja.Natiivi
             // Jatka (tallennettu matka) ei laukaise TilaMuuttui-tapahtumaa, mutta asettaa pelirivin: kassa ja
             // jo päättyneen matkan loppukortti siitä.
             Tilarivi.RiviAsetettu += () => PaivitaKassa(o);
+            Tilarivi.ElamaAnkkurit = () => (Karttaselite.Nappi?.worldBound ?? Rect.zero, Matkakirja.Rajat);
             PaivitaKassa(o);
         }
 

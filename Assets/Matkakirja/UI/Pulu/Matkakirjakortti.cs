@@ -79,6 +79,8 @@ namespace Matkakirja.Natiivi
         Action kirjoitettu;
 
         public bool Nakyy => kortti.style.display == DisplayStyle.Flex;
+        /// <summary>Kortin rajat paneelissa (elämäpalkki väistää auki olevaa päiväkirjaa); tyhjä, kun ei näy.</summary>
+        public Rect Rajat => Nakyy ? kortti.worldBound : Rect.zero;
         /// <summary>Kortin laatikko paneelissa (nopan lepopaikan kulmavalinta, web factCard.dataset.corner).</summary>
         public Rect Laatikko => kortti.worldBound;
 

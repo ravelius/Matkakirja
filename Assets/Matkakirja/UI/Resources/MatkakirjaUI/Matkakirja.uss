@@ -1606,28 +1606,42 @@
     color: #c0392b;
 }
 
-/* Elämäpalkki (omistaja 27.9. 15.1x): pelkät punaiset neliöt, 8 × 6 h; kulunut lohko tyhjenee ääriviivaksi. */
+/* Elämäpalkki = web #3421 rahattomuuspalkki (omistaja 27.9. 15.1x): lappu, 8 lohkoa 10 × 6, teksti 10 px. */
 .mk-elamapalkki {
     position: absolute;
-    left: 0;
-    right: 0;
+    align-items: center;
+    padding: 5px 9px 4px 9px;
+    background-color: rgba(244, 234, 212, 0.94);
+    border-width: 1px;
+    border-color: rgba(85, 64, 42, 0.45);
+    border-radius: 8px;
+}
+
+.mk-elamapalkki__lohkot {
     flex-direction: row;
-    justify-content: center;
 }
 
 .mk-elamapalkki__lohko {
-    width: 12px;
-    height: 12px;
-    margin: 0 2px;
+    width: 10px;
+    height: 6px;
+    margin: 0 1.5px;
     background-color: #c0392b;
-    border-width: 1.5px;
-    border-color: #c0392b;
-    border-radius: 2px;
+    border-width: 1px;
+    border-color: #9e2c21;
+    border-radius: 1.5px;
 }
 
 .mk-elamapalkki__lohko--kulunut {
-    background-color: rgba(192, 57, 43, 0);
-    border-color: rgba(192, 57, 43, 0.45);
+    background-color: rgba(192, 57, 43, 0.12);
+    border-color: rgba(158, 44, 33, 0.45);
+}
+
+.mk-elamapalkki__teksti {
+    margin-top: 3px;
+    font-size: 10px;
+    color: #9e2c21;
+    letter-spacing: 5.2px; /* web 0.6px (.06 em) */
+    white-space: nowrap;
 }
 
 .mk-pilleri__rahaton {
