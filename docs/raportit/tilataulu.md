@@ -6,7 +6,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 ## 1) Sessiot
 
-5 h **53 %** (seur. nollaus ~09:59:59 EEST, 47 min jäljellä), viikko (all models) 81 %, viikko (Fable) 44 %. Sisältökirjuri yhä 75 % (jo ilmoitettu). Pelikoodari 76 % — erikoisraja 90 % (avauskortti+xAI), ei ilmoitusta.
+5 h **53 %** (seur. nollaus ~09:59:59 EEST, 47 min jäljellä), viikko (all models) 81 %, viikko (Fable) 44 %. Sisältökirjuri yhä 75 % (jo ilmoitettu). **Pelikoodarin 90 %:n erikoisraja PÄÄTTYI (Fable 09:2x, avauskortti+xAI valmis) — normaali 70 % voimassa; Pelikoodari 76 % on siis nyt ylitys, mutta Fable tietää jo ja nollaa progressiivisen soiton PR:n jälkeen — ei uutta ilmoitusta.**
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
@@ -19,12 +19,12 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 | Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 75% | idle | yli 70 % (raportoitu) |
 | Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 57% | idle | — |
 | Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 65% | idle | — |
-| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 76% | running | erikoisraja 90 % (avauskortti+xAI), ei ilmoitusta |
+| Pelikoodari | local_7fcab04b-864c-4ec2-98bd-46e171326701 | 76% | running | yli 70 % (normaali raja palautunut, Fable nollaa PR:n jälkeen) |
 | Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | 45% | idle | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. **Ilmoitettu Fablelle 09:12:** `varmuuskopio-VIKA.txt` sai rivin 09:03 "VARMUUSKOPIO: peili (force), master ei fast-forward" (tiedosto oli tyhjä 08:54 asti).
+Ei avoimia jumeja eikä kortteja omistajalle. **Ilmoitettu Fablelle 09:12:** `varmuuskopio-VIKA.txt` sai rivin 09:03 "VARMUUSKOPIO: peili (force), master ei fast-forward" (tiedosto oli tyhjä 08:54 asti). **Fable 09:2x:** vika välitetty Natiivisepälle tarkistettavaksi — kuitattu.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
@@ -33,7 +33,7 @@ Ei avoimia jumeja eikä kortteja omistajalle. **Ilmoitettu Fablelle 09:12:** `va
 - SendMessage-rajan täyttyessä (~10/vuoro) käytä varakanavaa `mcp__ccd_session_mgmt__send_message`.
 - Lokisiivous: Postivahti listaa kandidaatit (>48h lokit-alikansiot, >24h .app), Fable poistaa omistajan luvalla — kerran vrk tai kun >5 Gt. Ei kandidaatteja tällä kierroksella.
 - Effort-tarkistus: 7 Opus-roolia `high`; Linssiseppä `max` nimetty oikein (tarkistettu 09:0x).
-- Konteksti ≥70% (rooleilla, ei Fable/self) → ilmoita Fablelle. Pelikoodarille erikoisraja 90 % (avauskortti-PR + xAI-kytkennän vuoksi).
+- Konteksti ≥70% (rooleilla, ei Fable/self) → ilmoita Fablelle. **Pelikoodarin 90 %:n erikoisraja PÄÄTTYI 09:2x (Fable) — normaali 70 % sääntö voimassa kaikille jälleen.**
 - Postivahti EI koskaan poista tiedostoja itse — pysyvä poisto ehdottomasti kiellettyä.
 - Chrome-GPU-prosessien (playwright/headless-testiajurit, type=gpu-process) ilmoitus menee Julkaisijalle, ei Fablelle. Tällä kierroksella 1, ei ylitystä.
 - Työtilapolut, joissa "Codex" tai "ChatGPT", eivät ole poikkeama.
@@ -53,7 +53,7 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - **5 h -kiintiö:** 53 % (seur. nollaus ~09:59:59 EEST). **Viikko (kaikki mallit):** 81 %. **Viikko (Fable):** 44 %.
 - **Levy:** 136 Gi vapaana (raja 80 Gt — kaukana, vakaa). **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt vapaana — OK). **wt/-worktreet:** 50 kpl.
 - **Simulaattorit boottina:** 3 (linssiseppa-iPhone, iPhone 17, iPad Pro 11-inch M5; max 4 päivällä — OK, nousi 1→3 edellisestä kierroksesta). **coreaudiod:** normaali (alle 200 %). **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 1 (laski 4→1).
-- **Konteksti:** Pelikoodari 76 % (erikoisraja 90 %, ei ilmoitusta), Sisältökirjuri 75 % (yli, jo raportoitu), Siirtoseppä 65 %, Natiiviseppä 64 %, Laitetestaaja 57 %, Julkaisija 55 %, Fable 53 %, Karttaseppä 45 %, Linssiseppä 49 %, Natiivi-UI 15 %, Postivahti (self) 13 %.
+- **Konteksti:** Pelikoodari 76 % (normaali 70 % raja palautunut, Fable nollaa PR:n jälkeen), Sisältökirjuri 75 % (yli, jo raportoitu), Siirtoseppä 65 %, Natiiviseppä 64 %, Laitetestaaja 57 %, Julkaisija 55 %, Fable 53 %, Karttaseppä 45 %, Linssiseppä 49 %, Natiivi-UI 15 %, Postivahti (self) 13 %.
 - **Juna:** yhä tauolla (Karttasepän Z10-poltto 26.–27.9.) — ei hälytystä, tarkoituksellinen.
 - **Postilaatikko:** ei uutta. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku ~40).
 - **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja.
