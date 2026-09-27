@@ -7899,3 +7899,7 @@ Omistaja 08.3x: "Tarkoitin maanosa etenemisella eri asiaa. Termi oli vaara. Pois
 ## OMISTAJA 08.3x: MAAKUNTIEN SALAISUUS-NOSTOT POIS (NAKYVAT HETI, EI PALJASTUSEHTOA) (27.9.2026 klo 08.27)
 
 Omistaja 08.3x "Ota ne salaisuudet pois myos": elavan kartan maakuntasalaisuudet (avautuivat kun maakunnan kaikki nostot loydetty, esim. Athos-jattilainen) poistetaan lukituksena — salaisuusnostot nakyvat heti kuten muut; pelkat palkintoefektit ilman sisaltoa poistetaan kokonaan (Pelikoodari listaa). Web + natiivi (KarttaMuste.cs), sama era kuin maakuntaeteneminen ja nostot heti, 1.0.29.
+
+## OMISTAJA 08.3x: MAAKUNNAN ALKUANIMAATIOSTA VAIN POHJAVARIN ESITTELY JAA (27.9.2026 klo 08.29)
+
+Omistaja 08.3x: maakunnan alkuanimaatiosta poistetaan kaikki muu paitsi pohjavarin esittely (maakunnan varin tayttyminen kartalle) — nimen esittely, rajan hehku, nostojen vaiheittainen syttyminen, kortit/tekstit pois. Web + natiivi, sama 1.0.29-era (maakuntaeteneminen, salaisuudet, nostot heti). Pelikoodari kartoittaa vaiheet ensin.
