@@ -7907,3 +7907,7 @@ Omistaja 08.3x: maakunnan alkuanimaatiosta poistetaan kaikki muu paitsi pohjavar
 ## MAINISSA #3375 v2300, #3372 v2301, #3376 v2302; #3371 PIDOSSA (27.9.2026 klo 08.29)
 
 Julkaisija 08.28: #3375 (astro era 7) v2300, #3372 (lukijamittari + x-puhe-moottori) v2301, #3376 (versiovahdin hollennys) v2302 mainissa; jonossa #3374 (virkevali) ja #3206 (turistiopas 19); #3371 pidossa, osoitin 2026-09-26-pohja kunnes silmukkakorjaus ja #3371.
+
+## TUKILAATTASILMUKKA KORJATTU #3380 (v2303): KIINTIO 96 Mt TAYTTYI, TUKITASO VAIN JOS MAHTUU; #3371 → PAGES → OSOITIN (27.9.2026 klo 08.35)
+
+Pelikoodari 08.3x: silmukan syy — kosketuslaitteen 96 Mt kiintio tayttyi nakyvista z9-laatoista, LRU purki tukilaatat joka kierros ja haki uudelleen; korjaus: tukitaso vain jos mahtuu kiintioon (muuten karkeampi/ei tukea). Mitattu Z10-koeluettelolla: puhelin 17 391 → 71 pyyntoa (314 → 2,8 Mt), tyopoyta 179/5,65 Mt ennallaan, tuotannon z8 puhelimella ennallaan. Fable → Julkaisija: #3380 → #3371 → Pages → osoitin 2026-09-26s → tarkistus.
