@@ -4,7 +4,7 @@
 // Koreografia ja ajoitukset ovat puhtaassa ytimessä (Linssit/Ydin/Elava/ElavaKohtaus.cs); tämä komponentti lataa
 // aineiston, rakentaa paikkamerkkien verkot ja piirtää kohtauksen tilan joka kehys. Paikkamerkit (Natiiviseppä tekee
 // pallon puolen rajapintoina, muut roolit datana):
-//   huntu         Huntu.shader maakuntien kolmioilla (→ Paljastus(keskus, säde, t) laattavarjostimessa)
+//   huntu         Huntu.shader maakuntien kolmioilla (vain video)
 //   joet, rajat   Kynaviiva.shader (→ Viivapiirto(kerros, osuus)); joet käsin (KreikanAineisto)
 //   maakunnat     Maakuntapinta.shader (→ Maakuntavari(id, t)); sävyt Maakuntajako.Taytto kuten pelin maakuntakerros
 //   nostot        Laikka.shader (→ Pelikoodarin kokoluokat ja himmeät jäljet, Natiivisepän piirto)
@@ -14,18 +14,22 @@
 //   hämärä        OIKEA: KarttaKerrokset.PallonSavy; yövalot Pehmeapisteinä (→ Yövalot(maski käydyt))
 // Kamera: PalloKierto.Kuvaa joka kehys (lennon kuvauksen rajapinta: kohde, etäisyys, kallistus, suuntima).
 //
-// SAAPUMINEN (pelattava kohta 1, omistaja hyväksyi 26.9. klo 05.0x, Fable: ≤ 5 s, ohitettava, kerran maata kohden): sama
-// koreografia profiililla ElavaProfiili.Saapuminen. Käynnistyy PeliOhjain.MatkaPerilla-tapahtumasta, kun pelaaja saapuu maahan
-// ensimmäistä kertaa; kohdemaan joet haetaan jo lennon noustessa (ESILATAUSPOLITIIKKA). Kamera on pelin saapumisajo
-// (Natiiviseppä). Pallon puoli ElavaPallo-koukuilla (Varitaso.Paljastus, MaaKartta/NostoKerros.Saapuminen), asettamattomina
-// paikkamerkit. Napautus ohittaa lopputilaan, ja lopuksi omat kerrokset häipyvät pelin pysyviin (luovutus).
+// SAAPUMINEN (pelattava kohta 1, Fable 26.9.: ohitettava, kerran maata kohden): profiili ElavaProfiili.Saapuminen. Omistaja
+// 27.9.2026 klo 08.3x (koko maailma auki, maakunnat heränneinä heti): vain maakuntien pohjavärin täyttö heti 0 s:sta
+// etäisyysjärjestyksessä ja luovutus pelin pysyviin kerroksiin, 1,6 s — ei huntua, kynäviivoja, nostojen pudotusta, nimeä,
+// merkkejä eikä auringon liikettä. Käynnistyy PeliOhjain.MatkaPerilla-tapahtumasta, kun pelaaja saapuu maahan ensimmäistä
+// kertaa; kohdemaan maakunnat ja kolmiot valmistellaan jo lennon noustessa (ESILATAUSPOLITIIKKA). Kamera on pelin
+// saapumisajo (Natiiviseppä). Fable 27.9.2026 klo 10.3x: pelin pysyvät kerrokset (täyttö, rajat ja nostot) jäävät näkyviin
+// koko saapumisen ajan, myös odotuksessa; oma täyttö soi niiden päälle. Napautus ohittaa luovutukseen, ja lopuksi oma täyttö
+// häipyy. (ElavaPallo.PysyvatKerrokset-koukku jää videolle ja myöhempään käyttöön.)
+// Maakunnan herätys (ElavaHerays, Ydin/Elava/Herays) poistettiin samalla kokonaan.
 //
 // KOMENNOT (Documents/linssi-komento.txt): "elava kreikka [alku s] [nopeus]" soittaa kohtauksen, "elava kuva <s>"
 // pysäyttää kohtaan s (pysäytyskuvat), "elava jatka", "elava pois" (kartta ennalleen), "elava tila" ja "elava ui 0|1"
 // (käyttöliittymä piiloon kohtauksen ajaksi, oletus 0 = piiloon); saapumiselle "elava saapuminen <kaupunki>" (testiajo
 // saapumisajoineen), "elava saapumiset 0|1" (automaattinen laukaisu), "elava kaikki 0|1" (myös jo käydyt maat) ja
-// "elava herata <ISO:tunnus>" (maakunnan herätys, ElavaHerays) ja "elava reitti <kaupungit…> | pois" (ElavaMatka),
-// "elava hetki [laiva|juna|parvi|sade]" ja "elava hetket 0|1|tila" (ElavatHetket).
+// "elava reitti <kaupungit…> | pois" (ElavaMatka), "elava hetki [laiva|juna|parvi|sade]" ja "elava hetket 0|1|tila"
+// (ElavatHetket).
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -101,15 +105,12 @@ namespace Matkakirja.Natiivi
         string varitasoEnnen;
         double aurinkoEnnen, aurinkoKorkeusEnnen;
 
-        // Aineisto: maakuntarajat ja karttavalot jäsennetään kerran istunnossa (taustasäie), joet maittain ämpäristä.
+        // Aineisto: maakuntarajat jäsennetään kerran istunnossa (taustasäie), videon joet ämpäristä.
         static Maakuntajako jako;
         static bool jakoHaussa;
         static readonly Dictionary<string, List<ElavaMaakunta>> maakunnatMaittain = new Dictionary<string, List<ElavaMaakunta>>();
         static readonly Dictionary<string, List<ElavaJoki>> joetMaittain = new Dictionary<string, List<ElavaJoki>>();
         static readonly HashSet<string> joetHaussa = new HashSet<string>();
-        static string karttavalot;
-        static bool karttavalotHaussa;
-        static readonly Dictionary<string, List<ElavaNosto>> nostotMaittain = new Dictionary<string, List<ElavaNosto>>();
         static readonly Dictionary<string, List<(int Maakunta, Jarvikolmiot.Verkko Verkko)>> verkotMaittain =
             new Dictionary<string, List<(int, Jarvikolmiot.Verkko)>>();
 
@@ -119,10 +120,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Testi: myös jo käydyt maat (komento "elava kaikki 1").</summary>
         public static bool KaikkiMaat;
         static readonly HashSet<string> nahdytMaat = new HashSet<string>();
-        bool saapuminen, luovutettu, pysyvatPiilossa, paljastusKaytossa;
+        bool saapuminen, luovutettu, pysyvatPiilossa;
         /// <summary>
         /// Pelin saapuminen odottaa luennan, pulun puheen ja kortin loppua (omistaja 26.9. klo 11.5x): kohtaus pysyy
-        /// ajassa 0 (huntu päällä, pysyvät kerrokset piilossa), ja kun kartta on ollut hiljaa VapaaS, kamera ajaa
+        /// ajassa 0 (täyttö tyhjä, pysyvät kerrokset piilossa), ja kun kartta on ollut hiljaa VapaaS, kamera ajaa
         /// saapumisnäkymään ja kohtaus soi kokonaisena.
         /// </summary>
         bool odotaHiljaisuutta;
@@ -189,9 +190,6 @@ namespace Matkakirja.Natiivi
                 case "reitti":
                     if (osat.Length > 2) ElavaMatka.Testi(osat.Skip(2).ToArray(), ohjain);
                     break;
-                case "herata":
-                    if (osat.Length > 2) ElavaHerays.Testi(osat[2]);
-                    break;
                 case "saapumiset":
                     SaapumisetPaalla = !(osat.Length > 2 && osat[2] == "0");
                     ohjain.Kirjaa("elävä: automaattinen saapuminen " + (SaapumisetPaalla ? "päällä" : "pois"));
@@ -244,17 +242,12 @@ namespace Matkakirja.Natiivi
             yield return VarmistaMaakunnat();
             float tMaakunnat = Time.realtimeSinceStartup;
             if (jako == null) { Kirjaa("maakuntarajat puuttuu"); Lopeta(); yield break; }
-            float tValot = tMaakunnat, tJoet = tMaakunnat;
             if (saapuminen)
             {
-                yield return VarmistaKarttavalot();
-                tValot = Time.realtimeSinceStartup;
-                // Joet on haettu yleensä jo lennon aikana (Esivalmistele); muuten odotetaan enintään 0,5 s (saapuminen ei viivästy).
-                if (!joetMaittain.ContainsKey(maa)) yield return HaeJoet(maa, 0.5f);
-                tJoet = Time.realtimeSinceStartup;
-                var nostot = NostotMaalle(maa);
-                kohtaus = new ElavaKohtaus(keskus, MaakunnatMaalle(maa), joetMaittain.TryGetValue(maa, out var j) ? j : new List<ElavaJoki>(),
-                    nostot, null, null, null, null, 0, Aurinko.Atsimuutti, Aurinko.KorkeusAst, ElavaProfiili.Saapuminen);
+                // Saapuminen (omistaja 27.9.2026 klo 08.3x): vain maakuntien täyttö ja luovutus — ei jokia, nostoja, herätystä,
+                // laivaa eikä reittiä, joten niitä ei myöskään haeta.
+                kohtaus = new ElavaKohtaus(keskus, MaakunnatMaalle(maa), null, null, null, null, null, null, 0,
+                    Aurinko.Atsimuutti, Aurinko.KorkeusAst, ElavaProfiili.Saapuminen);
             }
             else
             {
@@ -273,18 +266,14 @@ namespace Matkakirja.Natiivi
             if (!verkotMaittain.TryGetValue(verkkoMaa, out var verkot)) { Kirjaa("kolmiointi epäonnistui"); Lopeta(); yield break; }
             float tKolmiot = Time.realtimeSinceStartup;
 
-            // Laattahuntu (Varitaso.Paljastus) ei rajaudu saapumismaahan: pelaajan oma maa ei ole hunnun alla, ja säde paljastaa
-            // myös naapurimaat (Natiiviseppä 26.9.). Saapumismaahan rajattu verkkohuntu (videon ilme) on käytössä, kunnes
-            // Paljastus sekoittaa säteen sisällä saapumismaan sarjan (naapurit hunnussa) ja ulkona edellisen maan sarjan.
-            paljastusKaytossa = false;
             Rakenna(verkot);
             TilaTalteen();
             t = Math.Max(0, Math.Min(kohtaus.KestoS, alkuPyynto));
             vaihe = kuvaPyynto ? Vaihe.Kuva : odotaHiljaisuutta ? Vaihe.Odottaa : Vaihe.Soi;
             odotusAlkoi = Time.realtimeSinceStartup;
             if (vaihe == Vaihe.Odottaa) Sovella(t);
-            Kirjaa($"valmis {(Time.realtimeSinceStartup - alku) * 1000:F0} ms (maakunnat {(tMaakunnat - alku) * 1000:F0}, valot {(tValot - tMaakunnat) * 1000:F0}, " +
-                   $"joet {(tJoet - tValot) * 1000:F0}, kolmiot {(tKolmiot - tJoet) * 1000:F0}): {(saapuminen ? "saapuminen " + maa + ", " : "")}{kohtaus.Maakunnat.Count} maakuntaa, " +
+            Kirjaa($"valmis {(Time.realtimeSinceStartup - alku) * 1000:F0} ms (maakunnat {(tMaakunnat - alku) * 1000:F0}, " +
+                   $"kolmiot {(tKolmiot - tMaakunnat) * 1000:F0}): {(saapuminen ? "saapuminen " + maa + ", " : "")}{kohtaus.Maakunnat.Count} maakuntaa, " +
                    $"{kohtaus.Rajat.Count} rajaa, {kohtaus.Joet.Count} jokea, {kohtaus.Nostot.Count} nostoa ({kohtaus.HeraavanNostoja} heräävässä), " +
                    $"{verkot.Sum(v => v.Verkko.Kolmiot.Count) / 3} kolmiota; {(kuvaPyynto ? $"kuva {t:F2} s" : $"soi {t:F2} s:sta, nopeus {nopeus:F2}")}");
         }
@@ -324,23 +313,6 @@ namespace Matkakirja.Natiivi
                 }
             // Ennen maakuntarajojen latausta ei välimuistiin (muuten maa jäisi tyhjäksi koko istunnoksi).
             if (jako != null) maakunnatMaittain[iso] = lista;
-            return lista;
-        }
-
-        internal static IEnumerator VarmistaKarttavalot()
-        {
-            while (karttavalotHaussa) yield return null;
-            if (karttavalot != null) yield break;
-            karttavalotHaussa = true;
-            yield return Sisalto.HaeTeksti("karttavalot", x => karttavalot = x, true);
-            karttavalotHaussa = false;
-        }
-
-        internal static List<ElavaNosto> NostotMaalle(string iso)
-        {
-            if (nostotMaittain.TryGetValue(iso, out var valmis)) return valmis;
-            var lista = karttavalot == null ? new List<ElavaNosto>() : ElavaAineisto.NostotKarttavaloista(karttavalot, iso);
-            nostotMaittain[iso] = lista;
             return lista;
         }
 
@@ -403,8 +375,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// ESILATAUSPOLITIIKKA kohta 3 (valinnan ja lennon aikana): kohdemaan maakunnat, nostot, joet ja kolmiot valmiiksi,
-        /// jotta saapuminen alkaa samassa kehyksessä kuin saapumisajo.
+        /// ESILATAUSPOLITIIKKA kohta 3 (valinnan ja lennon aikana): kohdemaan maakunnat ja kolmiot valmiiksi, jotta
+        /// saapuminen alkaa samassa kehyksessä kuin saapumisajo (27.9.2026 alkaen saapuminen ei tarvitse jokia eikä nostoja).
         /// </summary>
         static IEnumerator Esivalmistele(string kaupunki)
         {
@@ -412,9 +384,6 @@ namespace Matkakirja.Natiivi
             if (kaupunki == null || po?.Verkko == null || !po.Verkko.Kaupungit.TryGetValue(kaupunki, out var k) || string.IsNullOrEmpty(k.Maa)) yield break;
             float alku = Time.realtimeSinceStartup;
             yield return VarmistaMaakunnat();
-            yield return VarmistaKarttavalot();
-            NostotMaalle(k.Maa);
-            yield return HaeJoet(k.Maa, 30f);
             yield return Kolmioi(k.Maa, MaakunnatMaalle(k.Maa));
             Debug.Log($"MATKAKIRJA elävä: {k.Maa} esivalmisteltu {(Time.realtimeSinceStartup - alku) * 1000:F0} ms");
         }
@@ -427,16 +396,13 @@ namespace Matkakirja.Natiivi
         static IEnumerator Kytke(LinssiOhjain ohjain)
         {
             // Natiivisepän pallopuoli (natiiviseppa/elava-saapuminen, sovittu 26.9.): koukut sen staattisiin rajapintoihin.
-            ElavaPallo.Paljastus = (lat, lon, sadeKm, reunaKm) => Varitaso.Paljastus(lat, lon, sadeKm, reunaKm);
-            ElavaPallo.PaljastusPois = Varitaso.PaljastusPois;
             ElavaPallo.PysyvatKerrokset = nakyvissa => { MaaKartta.Saapuminen(!nakyvissa); NostoKerros.Saapuminen(!nakyvissa); };
             PalloKierto.SaapuminenAlkaa += (maa, kestoS) => ElavaPallo.IlmoitaSaapuminenAlkaa(kestoS);
             PalloKierto.SaapuminenPaattyi += (maa, keskeytetty) => ElavaPallo.IlmoitaSaapuminenPaattyi();
-            // Aineisto taustalla heti käynnistyksessä (maakuntarajat ja karttavalot jäsennetään kerran).
+            // Aineisto taustalla heti käynnistyksessä (maakuntarajat jäsennetään kerran).
             ohjain.StartCoroutine(VarmistaMaakunnat());
-            ohjain.StartCoroutine(VarmistaKarttavalot());
-            // Kohta 3: maakunta herää (pysyvä tila MaaKartalle ja herätysanimaatio).
-            ElavaHerays.Kytke(ohjain);
+            // Kohta 3 (maakunta herää) poistettiin 27.9.2026 (omistaja 08.3x: maakunnat heränneinä heti): ei MaaKartta.Heraannyt-
+            // tilaa, herätysjonoa eikä -animaatiota. Nostojen muste kytketään NostoKerrokselle alla (KytkeMuste), kun peli on olemassa.
             // Kohta 2: löytämättömien nostojen musteen jäljet tekstuureina Natiivi-UI:lle (taustasäikeessä).
             MusteJaljet.Valmistele();
             // Kohta 4: kirjoitettu maailma (kuljettu reitti kynänjälkenä, käytyjen kaupunkien hehku kaukana).
@@ -449,6 +415,7 @@ namespace Matkakirja.Natiivi
             ErikoismalliElavat.Kytke(ohjain);
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
+            KytkeMuste(po);
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten
             // MatkaPerilla käynnistää 0,5 s:n päästä, jos saapuminen ei ole jo alkanut.
             PalloKierto.SaapuminenAlkaa += (maa, kestoS) => Saavu(po.PelaajanKaupunki, ohjain, maa);
@@ -462,6 +429,25 @@ namespace Matkakirja.Natiivi
             // Pelaajan kaupungin maa heti, kun se tunnetaan (uuden matkan lähtö ja aloituslento: AloituslentoAlkoi ei aina
             // tule ennen laskua), ja joka siirtymän jälkeen; välimuistissa oleva maa ohitetaan heti.
             ohjain.StartCoroutine(SeuraaPelaajanMaata(po, ohjain));
+        }
+
+        /// <summary>
+        /// Kohta 2: nostojen kokoluokka ja ulkoasu NostoKerrokselle (Natiivisepän rajapinta NostoKerros.Muste, merkit
+        /// Natiivi-UI:lla) Pelikoodarin musteesta; siirretty 27.9.2026 poistetusta ElavaHerayksestä. Ulkoasu lukee
+        /// NostonMuste.Taysi: kohdemaan kaikki nostot täytenä ja nimellä heti (omistaja 27.9. klo 08.2x, Pelikoodarin
+        /// 21e79d71, sama kuin natiivi-ui/nostot-taysi); kartussi ja laskuri lukevat yhä Loydetty.
+        /// </summary>
+        static void KytkeMuste(PeliOhjain po)
+        {
+            NostoKerros.Muste = valoId =>
+            {
+                if (!po.MusteLuettu || string.IsNullOrEmpty(valoId)) return null;
+                var m = po.NostonMuste(valoId);
+                return ((int)m.Luokka, m.Taysi, m.Nakyy);
+            };
+            po.MusteValmis += NostoKerros.PaivitaMuste;
+            po.NostoLoytyi += _ => NostoKerros.PaivitaMuste();
+            if (po.MusteLuettu) NostoKerros.PaivitaMuste();
         }
 
         static IEnumerator SeuraaPelaajanMaata(PeliOhjain po, LinssiOhjain ohjain)
@@ -570,7 +556,8 @@ namespace Matkakirja.Natiivi
 
         void Rakenna(List<(int Maakunta, Jarvikolmiot.Verkko Verkko)> verkot)
         {
-            // Maakunnat ja huntu: samat kolmiot, kaksi alimeshiä (täyttö ja huntu).
+            // Maakunnat ja huntu: samat kolmiot, kaksi alimeshiä (täyttö ja huntu). Saapuminen (27.9.2026): vain täyttö.
+            bool huntuPaalla = kohtaus.P.HuntuKuivuu;
             var paikat = new List<Vector3>();
             var varit = new List<Color>();
             var suunnat = new List<Vector3>();
@@ -596,43 +583,54 @@ namespace Matkakirja.Natiivi
                 }
                 foreach (int i in v.Kolmiot) kolmiot.Add(pohja + i);
             }
-            var pinta = UusiMesh("Maakunnat ja huntu");
+            var pinta = UusiMesh(huntuPaalla ? "Maakunnat ja huntu" : "Maakunnat");
             pinta.SetVertices(paikat);
             pinta.SetColors(varit);
             pinta.SetUVs(0, suunnat);
             pinta.SetUVs(1, tiedot);
             pinta.SetUVs(2, korostus);
-            pinta.subMeshCount = 2;
+            pinta.subMeshCount = huntuPaalla ? 2 : 1;
             pinta.SetTriangles(kolmiot, 0);
-            pinta.SetTriangles(kolmiot, 1);
+            if (huntuPaalla) pinta.SetTriangles(kolmiot, 1);
             pinta.RecalculateBounds();
             taytto = Materiaali("Maakuntapinta");
-            huntu = Materiaali("Huntu");
-            if (taytto != null && huntu != null)
+            if (huntuPaalla) huntu = Materiaali("Huntu");
+            if (taytto != null && (huntu != null || !huntuPaalla))
             {
-                taytto.SetFloat("_Kesto", (float)ElavaKohtaus.MaakunnanTaytto);
-                taytto.SetFloat("_AsettunutOsuus", (float)ElavaKohtaus.AsettunutOsuus);
+                // Täytön kesto ja asettuminen profiilista (video 0,4 s kuten ennen; saapuminen 0,35 s kuten ytimen MaakunnanPeitto).
+                taytto.SetFloat("_Kesto", (float)kohtaus.P.MaakunnanTaytto);
+                taytto.SetFloat("_AsettunutOsuus", (float)kohtaus.P.AsettunutOsuus);
                 taytto.SetFloat("_Heraava", kohtaus.Heraava);
                 taytto.SetVector("_TulvaKeskus", Suunta(kohtaus.TulvaKeskus));
                 taytto.SetFloat("_TulvaReuna", (float)(4.0 / 6371));
-                huntu.SetVector("_Keskus", Suunta(kohtaus.Keskus));
-                huntu.SetFloat("_Reuna", (float)(ElavaKohtaus.HuntuReunaKm / 6371));
-                huntu.SetFloat("_Kohina", (float)(45.0 / 6371));
-                // Saapumisessa huntu on Natiivisepän laattahuntu (ElavaPallo.Paljastus), kun se on kytketty.
-                if (paljastusKaytossa) Kappale("Maakunnat", pinta, taytto);
-                else Kappale("Maakunnat ja huntu", pinta, taytto, huntu);
+                if (huntu != null)
+                {
+                    huntu.SetVector("_Keskus", Suunta(kohtaus.Keskus));
+                    huntu.SetFloat("_Reuna", (float)(ElavaKohtaus.HuntuReunaKm / 6371));
+                    huntu.SetFloat("_Kohina", (float)(45.0 / 6371));
+                    Kappale("Maakunnat ja huntu", pinta, taytto, huntu);
+                }
+                else Kappale("Maakunnat", pinta, taytto);
             }
 
-            // Kynäviivat: rajat (ruskea muste), joet (sininen muste), reitti (punainen muste).
-            rajat = Viivat("Maakuntarajat", kohtaus.Rajat, new Color(0.25f, 0.18f, 0.11f, 0.9f), 1.5f * Saato("viiva"));
-            joet = Viivat("Joet", kohtaus.Joet, new Color(0.17f, 0.35f, 0.55f, 0.95f), 1.9f * Saato("viiva"));
+            // Kynäviivat: rajat (ruskea muste) ja joet (sininen muste) vain, jos profiili piirtää ne (saapuminen 27.9.: ei),
+            // ja kirjoitetun maailman reitti (punainen muste).
+            if (kohtaus.P.ViivatPiirtyvat)
+            {
+                rajat = Viivat("Maakuntarajat", kohtaus.Rajat, new Color(0.25f, 0.18f, 0.11f, 0.9f), 1.5f * Saato("viiva"));
+                joet = Viivat("Joet", kohtaus.Joet, new Color(0.17f, 0.35f, 0.55f, 0.95f), 1.9f * Saato("viiva"));
+            }
             reitti = Viivat("Kuljettu reitti", new List<Piirtoviiva> { kohtaus.Reitti }, new Color(0.70f, 0.16f, 0.12f, 0.95f), 2.6f * Saato("viiva"));
 
-            // Musteläikät: nostot + heräävän maakunnan löydösmerkit (4 pientä läikkää nimen alle).
-            laikat = Materiaali("Laikka");
-            laikkaMesh = UusiMesh("Musteläikät");
-            RakennaLaikat();
-            if (laikat != null) Kappale("Musteläikät", laikkaMesh, laikat);
+            // Musteläikät: nostot + heräävän maakunnan löydösmerkit (4 pientä läikkää nimen alle); saapumisessa (27.9.) ei
+            // pudotuksia eikä merkkejä.
+            if (kohtaus.P.NostotPutoavat)
+            {
+                laikat = Materiaali("Laikka");
+                laikkaMesh = UusiMesh("Musteläikät");
+                RakennaLaikat();
+                if (laikat != null) Kappale("Musteläikät", laikkaMesh, laikat);
+            }
 
             // Yövalot ja savu: kameraan käännetyt neliöt (CPU joka kehys).
             valot = Materiaali("Pehmeapiste");
@@ -755,17 +753,6 @@ namespace Matkakirja.Natiivi
         static TMP_FontAsset kasiala;
 
         /// <summary>Käsialafontti (Snell Roundhand iOS:n järjestelmäfontista), varalla kartan nimiöiden fontti.</summary>
-        internal static TMP_FontAsset KasialaFontti()
-        {
-            if (kasiala != null) return kasiala;
-            foreach (var tyyli in new[] { "Bold", "Regular", "Black" })
-            {
-                try { kasiala = TMP_FontAsset.CreateFontAsset("Snell Roundhand", tyyli); } catch (Exception) { }
-                if (kasiala != null) break;
-            }
-            return kasiala ?? KarttaKerrokset.Instanssi?.merkit?.fontti;
-        }
-
         TMP_FontAsset Kasiala()
         {
             if (kasiala != null) return kasiala;
@@ -844,13 +831,12 @@ namespace Matkakirja.Natiivi
 
         void TilaTalteen()
         {
-            aurinkoEnnen = Aurinko.Atsimuutti;
-            aurinkoKorkeusEnnen = Aurinko.KorkeusAst;
             if (saapuminen)
             {
-                // Pelin pysyvät täyttö, rajat ja merkit piiloon saapumisen ajaksi (Natiivisepän koukku); UI ja kamera ennallaan.
-                PysyvatKerrokset(false);
-                pysyvatPiilossa = true;
+                // Fable 27.9.2026 klo 10.3x (omistajan "nostot heti"): pelin pysyvät kerrokset (täyttö, rajat ja nostot) jäävät
+                // näkyviin koko saapumisen ajan, myös luennan ja kortin odotuksessa (ei paljasta maata), ja oma täyttö soi
+                // niiden päälle. UI, kamera ja kartan valo ennallaan (saapuminen ei 27.9.2026 alkaen liikuta aurinkoa).
+                pysyvatPiilossa = false;
                 tilaTalteen = true;
                 return;
             }
@@ -885,9 +871,6 @@ namespace Matkakirja.Natiivi
             {
                 if (pysyvatPiilossa) PysyvatKerrokset(true);
                 pysyvatPiilossa = false;
-                if (paljastusKaytossa) ElavaPallo.PaljastusPois?.Invoke();
-                Aurinko.Atsimuutti = aurinkoEnnen;
-                Aurinko.KorkeusAst = aurinkoKorkeusEnnen;
                 return;
             }
             var k = KarttaKerrokset.Instanssi;
@@ -956,6 +939,41 @@ namespace Matkakirja.Natiivi
             if (vaihe == Vaihe.Loppu && (saapuminen || Time.realtimeSinceStartupAsDouble - loppuHetki > 4)) Lopeta();
         }
 
+        // ── Kartan hiljaisuus (saapuminen ja elävät hetket odottavat; siirretty 27.9.2026 poistetusta ElavaHerayksestä) ──
+
+        /// <summary>Natiivi-UI asettaa: matkakirjakortti (tai muu saapumisen kortti) on auki.</summary>
+        public static Func<bool> KorttiAukiKysely;
+
+        /// <summary>
+        /// Natiivi-UI asettaa: luennan kuvapakka lähtee heti (Luentakuvasarja.Hiljeni(0)). Saapuminen kutsuu, kun puhe ja kortit
+        /// ovat ohi ja vain pakan kuvasumennus on jäljellä (omistaja 26.9.: animaatio heti kortin/luennan jälkeen, ei 6 s:n pakkaa).
+        /// </summary>
+        public static Action KuvapakkaLahtee;
+
+        /// <summary>Kartta vapaa elävälle hetkelle: hiljaa eikä saapumista käynnissä.</summary>
+        internal static bool KarttaVapaa() => HiljaisuudenEste() == null && Instanssi == null;
+
+        /// <summary>
+        /// Ensimmäinen syy, miksi kartta ei ole pelaajan edessä hiljaa (lokiin odotuksen ajalta), tai null. Omistaja 26.9. klo
+        /// 11.5x: elävä kartta ei luennan, pulun puheen eikä kortin aikana — silmukka kartalla, saapumisluenta ei kesken
+        /// (Pelikoodarin 162, myös jonossa), ei puhetta (isoisä tai pulu), ei matkakirjakorttia (Natiivi-UI:n KorttiAukiKysely),
+        /// ei kuvien sumennusta, porttia eikä linssiä.
+        /// </summary>
+        internal static string HiljaisuudenEste()
+        {
+            var po = PeliOhjain.Instanssi;
+            if (po == null) return "ei peliä";
+            if (po.Tila != SilmukanTila.Kartta) return "tila " + po.Tila;
+            if (po.SoivaLuento != null) return "luento soi";
+            if (po.SaapumisluentaKesken) return "saapumisluenta kesken";
+            if (Puhe.Instanssi != null && Puhe.Instanssi.Soi) return "puhe soi";
+            if (KorttiAukiKysely?.Invoke() ?? false) return "kortti auki";
+            if (PalloKierto.KuvaSumea) return "kuvasumennus";
+            if (PalloKierto.PorttiSumea) return "portti";
+            if (LinssiOhjain.Rekisteri?.Auki != null) return "linssi auki";
+            return null;
+        }
+
         /// <summary>Odottaa hiljaista karttaa; peruu, jos pelaaja lähtee maasta (maa jää uudeksi seuraavaa kertaa varten).</summary>
         void Odota()
         {
@@ -970,14 +988,14 @@ namespace Matkakirja.Natiivi
                 return;
             }
             float nyt = Time.realtimeSinceStartup;
-            string este = ElavaHerays.HiljaisuudenEste();
+            string este = HiljaisuudenEste();
             if (este != edellinenEste) { Kirjaa($"odottaa {nyt - odotusAlkoi:F1} s: {este ?? "hiljaa"}"); edellinenEste = este; }
             // Puhe ja kortit ohi, vain luennan kuvapakka sumentaa: pakka lähtee heti (ei 6 s:n loppuviivettä).
-            if (este == "kuvasumennus" && !pakkaPyydetty && ElavaHerays.KuvapakkaLahtee != null)
+            if (este == "kuvasumennus" && !pakkaPyydetty && KuvapakkaLahtee != null)
             {
                 pakkaPyydetty = true;
                 Kirjaa("kuvapakka lähtee (vain kuvasumennus jäljellä)");
-                ElavaHerays.KuvapakkaLahtee();
+                KuvapakkaLahtee();
             }
             if (este != null) { hiljaaAlkaen = -1; return; }
             if (hiljaaAlkaen < 0) { hiljaaAlkaen = nyt; return; }
@@ -1018,19 +1036,16 @@ namespace Matkakirja.Natiivi
             }
             float kerrokset = (float)kohtaus.KerrostenPeitto(aika);
 
-            // Aurinko ja hämärä (oikeat kartan rajapinnat).
-            Aurinko.Atsimuutti = kohtaus.Aurinko(aika, out double korkeus);
-            Aurinko.KorkeusAst = korkeus;
+            // Aurinko ja hämärä (oikeat kartan rajapinnat). Saapuminen (27.9.2026) ei liikuta aurinkoa: kartan valo ennallaan.
+            if (kohtaus.P.AurinkoLiikkuu)
+            {
+                Aurinko.Atsimuutti = kohtaus.Aurinko(aika, out double korkeus);
+                Aurinko.KorkeusAst = korkeus;
+            }
             double hamara = kohtaus.Hamara(aika);
             KarttaKerrokset.PallonSavy(hamara > 0 ? (float)(1 - Saato("hamara") * hamara) : (float?)null);
 
-            if (paljastusKaytossa)
-            {
-                // Natiivisepän laattahuntu: säde joka kehys, loppuu kun kuivunut.
-                if (kohtaus.HuntuNakyy(aika))
-                    ElavaPallo.Paljastus?.Invoke(kohtaus.Keskus.Lat, kohtaus.Keskus.Lon, (float)kohtaus.HuntuSadeKm(aika), (float)ElavaKohtaus.HuntuReunaKm);
-            }
-            else if (huntu != null)
+            if (huntu != null)
             {
                 huntu.SetFloat("_Sade", (float)(kohtaus.HuntuSadeKm(aika) / 6371.0));
                 huntu.SetFloat("_Vesiraja", (float)kohtaus.Vesiraja(aika));

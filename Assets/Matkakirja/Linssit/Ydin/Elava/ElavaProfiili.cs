@@ -1,7 +1,9 @@
 // ELÄVÄ KARTTA: aikajanan profiilit (Linssiseppä 26.9.2026). Sama koreografia kahdella tempolla:
-//   Video       käsikirjoituksen 18,5 s:n video (omistaja hyväksyi suunnan 26.9. klo 05.0x)
-//   Saapuminen  pelattava kohta 1 (Fable 26.9.): ≤ 5 s, ohitettava, kerran maata kohden; kamera on Natiivisepän
-//               saapumisajo, joten profiili ei aja kameraa. Lopussa omat kerrokset häivytetään pelin pysyviin (luovutus).
+//   Video       käsikirjoituksen 18,5 s:n video (omistaja hyväksyi suunnan 26.9. klo 05.0x): kaikki vaiheet.
+//   Saapuminen  pelattava kohta 1 (Fable 26.9.): ohitettava, kerran maata kohden; kamera on Natiivisepän saapumisajo, joten
+//               profiili ei aja kameraa. Omistaja 27.9.2026 klo 08.3x (koko maailma auki, maakunnat heränneinä heti): VAIN
+//               maakuntien pohjavärin täyttö heti 0 s:sta ja lopuksi omien kerrosten luovutus pelin pysyviin kerroksiin — ei
+//               huntua, kynäviivoja (joet ja rajat), nostojen pudotusta eikä auringon liikettä (vaiheliput).
 using System;
 using System.Collections.Generic;
 
@@ -10,6 +12,11 @@ namespace Matkakirja.Linssit.Elava
     public sealed class ElavaProfiili
     {
         public string Nimi;
+        /// <summary>
+        /// Soitettavat vaiheet (oletus kaikki, kuten video): hunnun kuivuminen, joet ja rajat kynällä, nostojen pudotus ja
+        /// auringon liike. Maakuntien täyttö ja luovutus soivat aina. Saapuminen 27.9.2026: kaikki pois.
+        /// </summary>
+        public bool HuntuKuivuu = true, ViivatPiirtyvat = true, NostotPutoavat = true, AurinkoLiikkuu = true;
         public double HuntuAlku, HuntuLoppu;
         public double ViivatAlku, ViivatLoppu, RajanKesto, JoenKestoMin, JoenKestoMax, JokiVali;
         public double MaakunnatAlku, MaakuntaVali, MaakuntienKesto, MaakunnanTaytto;
@@ -38,40 +45,33 @@ namespace Matkakirja.Linssit.Elava
         };
 
         /// <summary>
-        /// Saapuminen ≤ 5 s: huntu kuivuu 1,6 s:ssa, kynä vetää joet ja rajat 0,4–2,5 s, maakunnat syttyvät 2,0–3,2 s,
-        /// nostot putoavat 2,6–3,8 s, aurinko laskee ja nousee 0–4,2 s, ja 4,3–4,8 s omat kerrokset häipyvät pelin pysyviin.
+        /// Saapuminen 1,6 s (omistaja 27.9.2026 klo 08.3x): maakuntien pohjaväri täyttyy etäisyysjärjestyksessä heti 0 s:sta
+        /// (syttymiset 0–0,85 s, kukin 0,35 s, kaikki valmiina viimeistään 1,2 s:ssa), ja 1,2–1,6 s omat kerrokset häipyvät
+        /// pelin pysyviin (luovutus). Ennen 27.9.: huntu, kynäviivat, nostojen pudotus ja auringon liike, 4,8 s.
         /// </summary>
         public static readonly ElavaProfiili Saapuminen = new ElavaProfiili
         {
             Nimi = "saapuminen",
-            HuntuAlku = 0.0, HuntuLoppu = 1.6,
-            ViivatAlku = 0.4, ViivatLoppu = 2.5, RajanKesto = 0.3, JoenKestoMin = 0.45, JoenKestoMax = 0.9, JokiVali = 0.08,
-            MaakunnatAlku = 2.0, MaakuntaVali = 0.08, MaakuntienKesto = 0.85, MaakunnanTaytto = 0.35,
-            NostoIkkunat = new[] { (2.6, 2.9, 0.22), (2.9, 3.4, 0.2), (3.4, 3.65, 0.16) },
-            Kesto = 4.8, LuovutusAlku = 4.3, Kamera = false,
+            HuntuKuivuu = false, ViivatPiirtyvat = false, NostotPutoavat = false, AurinkoLiikkuu = false,
+            MaakunnatAlku = 0.0, MaakuntaVali = 0.08, MaakuntienKesto = 0.85, MaakunnanTaytto = 0.35,
+            Kesto = 1.6, LuovutusAlku = 1.2, Kamera = false,
         };
 
         /// <summary>
-        /// Auringon avaimet (hetki, atsimuutti, korkeus): video aamu → päivä → kartan valo; saapuminen laskee 0,8 s:ssa matalalle
-        /// 30° kartan valon vastapäivään ja nousee takaisin kartan valoon (pitkät varjot liikkuvat ja lyhenevät). Välit pehmeästi, lyhintä kulmaa.
+        /// Auringon avaimet (hetki, atsimuutti, korkeus): video aamu → päivä → kartan valo, välit pehmeästi, lyhintä kulmaa.
+        /// Ilman auringon liikettä (saapuminen 27.9.2026) kartan valo pysyy koko ajan.
         /// </summary>
         public List<(double T, double Atsimuutti, double Korkeus)> AurinkoPolku(double alkuAtsimuutti, double alkuKorkeus)
         {
-            if (Nimi == "video")
-                return new List<(double, double, double)>
-                {
-                    (0, alkuAtsimuutti, alkuKorkeus),
-                    (ElavaKohtaus.SaapuminenLoppu, ElavaKohtaus.AamuAtsimuutti, ElavaKohtaus.AamuKorkeus),
-                    (ElavaKohtaus.AurinkoAlku, ElavaKohtaus.AamuAtsimuutti, ElavaKohtaus.AamuKorkeus),
-                    (ElavaKohtaus.AurinkoLoppu, ElavaKohtaus.PaivaAtsimuutti, ElavaKohtaus.PaivaKorkeus),
-                    (ElavaKohtaus.MaailmaAlku, ElavaKohtaus.PaivaAtsimuutti, ElavaKohtaus.PaivaKorkeus),
-                    (ElavaKohtaus.MaailmaLoppu, alkuAtsimuutti, alkuKorkeus),
-                };
+            if (!AurinkoLiikkuu) return new List<(double, double, double)> { (0, alkuAtsimuutti, alkuKorkeus) };
             return new List<(double, double, double)>
             {
                 (0, alkuAtsimuutti, alkuKorkeus),
-                (0.8, alkuAtsimuutti - 30, 12),
-                (4.2, alkuAtsimuutti, alkuKorkeus),
+                (ElavaKohtaus.SaapuminenLoppu, ElavaKohtaus.AamuAtsimuutti, ElavaKohtaus.AamuKorkeus),
+                (ElavaKohtaus.AurinkoAlku, ElavaKohtaus.AamuAtsimuutti, ElavaKohtaus.AamuKorkeus),
+                (ElavaKohtaus.AurinkoLoppu, ElavaKohtaus.PaivaAtsimuutti, ElavaKohtaus.PaivaKorkeus),
+                (ElavaKohtaus.MaailmaAlku, ElavaKohtaus.PaivaAtsimuutti, ElavaKohtaus.PaivaKorkeus),
+                (ElavaKohtaus.MaailmaLoppu, alkuAtsimuutti, alkuKorkeus),
             };
         }
     }

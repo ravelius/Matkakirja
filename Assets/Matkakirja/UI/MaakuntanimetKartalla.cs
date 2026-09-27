@@ -1,7 +1,8 @@
 // MAAKUNTIEN KÄSIALANIMET KARTALLA (Natiivi-UI, ELÄVÄ KARTTA 26.9.2026; käsikirjoitus 8,0–11,5 s, videon "Attika").
-// Kun maakunta herää, sen nimi kirjoittuu isoisän käsialalla (Kirjasin.Kauno, Snell Roundhand) maakunnan kohdalle
-// 1,2 s:ssa merkki kerrallaan ja jää pysyväksi. Kartalla ovat kartussin maan (pelaajan maa tai testimaa) heränneet
-// maakunnat; lähde on Kartuscha (MaakuntaHerasi, MusteMuuttui, Laskurit), jotta testikomennot näkyvät samoin.
+// Maakuntien nimet isoisän käsialalla (Kirjasin.Kauno, Snell Roundhand) maakunnan kohdalla. MAAKUNTAERÄ (omistaja 27.9.
+// klo 08.3x): kartussin maan (pelaajan maa tai testimaa) kaikki maakunnat ovat heränneinä heti, joten nimet ovat
+// kartalla staattisina heti ilman kirjoitusta. Lähde on Kartuscha (MusteMuuttui, Laskurit), jotta testikomennot näkyvät
+// samoin.
 //
 // UI-kerros kuten NostotKartalla (UiKerros.Nostot): paikka PalloKierto.RuutuPiste(lat, lon) → paneelin piste joka
 // ruudussa, mutta tyyli kirjoitetaan vain, kun piste liikkuu (lepopiirto: levossa ei yhtään muutosta). Paikka on
@@ -16,16 +17,12 @@ namespace Matkakirja.Natiivi
 {
     public sealed class MaakuntanimetKartalla
     {
-        const float KirjoitusKesto = 1.2f;
-
         sealed class Nimi
         {
             public string Avain, Teksti;
             public VisualElement El;
             public Label Label;
             public double Lat = double.NaN, Lon;
-            /// <summary>Kirjoituksen alku (Time.unscaledTime) tai −1 = valmis.</summary>
-            public float Alku = -1f;
             public Vector2 Piste = new Vector2(float.NaN, float.NaN);
             public bool Nakyy;
         }
@@ -44,7 +41,6 @@ namespace Matkakirja.Natiivi
             // Nostomerkkien alle: merkit ja niiden napautus pysyvät päällimmäisinä.
             juuri.SendToBack();
             kartussi.MusteMuuttui += Synkronoi;
-            kartussi.MaakuntaHerasi += Heraa;
             kerros.JokaRuutu += Paivita;
         }
 
@@ -53,7 +49,7 @@ namespace Matkakirja.Natiivi
 
         public int Maara => nimet.Count;
 
-        /// <summary>Kartussin maan heränneet maakunnat kartalle (ilman kirjoitusta); poistuneet pois.</summary>
+        /// <summary>Kartussin maan maakunnat kartalle (kaikki heränneitä); poistuneet pois.</summary>
         void Synkronoi()
         {
             string uusi = kartussi.Maa;
@@ -64,52 +60,40 @@ namespace Matkakirja.Natiivi
                 maa = uusi;
             }
             if (maa == null) return;
-            var heranneet = kartussi.Laskurit(maa).Where(x => x.Loydetyt > 0).Select(x => x.Maakunta).ToList();
+            var heranneet = kartussi.Laskurit(maa).Where(x => x.Kaikki > 0).Select(x => x.Maakunta).ToList();
             foreach (var pois in nimet.Keys.Where(k => !heranneet.Contains(k)).ToList())
             {
                 nimet[pois].El.RemoveFromHierarchy();
                 nimet.Remove(pois);
             }
-            foreach (var m in heranneet) if (!nimet.ContainsKey(m)) Lisaa(m, false);
+            foreach (var m in heranneet) if (!nimet.ContainsKey(m)) Lisaa(m);
         }
 
-        /// <summary>Maakunta heräsi: nimi kirjoittuu (tai kirjoitetaan uudelleen testikomennossa).</summary>
-        void Heraa(string avain)
-        {
-            if (kartussi.Maa == null || !avain.StartsWith(kartussi.Maa + ":", System.StringComparison.Ordinal)) return;
-            if (kartussi.Maa != maa) Synkronoi();
-            if (!nimet.TryGetValue(avain, out var n)) n = Lisaa(avain, true);
-            else if (!LinssiUi.VahennettyLiike()) n.Alku = Time.unscaledTime;
-        }
-
-        Nimi Lisaa(string avain, bool kirjoita)
+        Nimi Lisaa(string avain)
         {
             var n = new Nimi { Avain = avain, Teksti = MaakuntaTiedot.Nimi(avain) };
             n.El = Rakenne.El("mk-maakuntanimi", juuri, PickingMode.Ignore);
             n.El.style.display = DisplayStyle.None;
             n.Label = Rakenne.Teksti(n.Teksti, "mk-maakuntanimi__teksti", n.El);
             Kirjasimet.Aseta(n.Label, Kirjasin.Kauno);
-            if (kirjoita && !LinssiUi.VahennettyLiike()) n.Alku = Time.unscaledTime;
             nimet[avain] = n;
             MaakuntaTiedot.Lataa(() =>
             {
                 n.Teksti = MaakuntaTiedot.Nimi(avain);
-                if (n.Alku < 0f && n.Label.text != n.Teksti) n.Label.text = n.Teksti;
+                if (n.Label.text != n.Teksti) n.Label.text = n.Teksti;
                 UiKerros.Hae().StartCoroutine(MaakuntaTiedot.Paikka(avain, (lat, lon, ok) =>
                 {
                     if (!ok) { Debug.Log("MATKAKIRJA ui muste: ei paikkaa maakunnan nimelle " + avain); return; }
                     n.Lat = lat;
                     n.Lon = lon;
-                    // Kirjoitus alkaa vasta, kun nimi voi näkyä (paikka tuli datan jälkeen).
-                    if (n.Alku >= 0f) n.Alku = Time.unscaledTime;
                 }));
             });
             return n;
         }
 
         /// <summary>
-        /// Joka ruudussa: paikka kamerasta ja kirjoitusvaihe. Tyyliin kirjoitetaan vain muuttunut arvo, joten levossa
-        /// (kamera paikallaan, ei kirjoitusta) paneeli ei likaannu.
+        /// Joka ruudussa: paikka kamerasta. Tyyliin kirjoitetaan vain muuttunut arvo, joten levossa (kamera paikallaan)
+        /// paneeli ei likaannu.
         /// </summary>
         void Paivita()
         {
@@ -145,16 +129,6 @@ namespace Matkakirja.Natiivi
                     n.Nakyy = ruudulla;
                     n.El.style.display = ruudulla ? DisplayStyle.Flex : DisplayStyle.None;
                 }
-                if (n.Alku < 0f || !ruudulla) continue;
-                // Löytö syntyy nostokortin avauksesta: nimi kirjoittuu vasta, kun kortti on suljettu (näkyy kartalla).
-                if (UiNakymat.Hae()?.Nostokortti?.Auki == true) n.Alku = Time.unscaledTime;
-                // Kirjoitus: merkki kerrallaan, loput näkymättöminä (keskitetty nimi ei siirry kirjoittaessa).
-                float t = (Time.unscaledTime - n.Alku) / KirjoitusKesto;
-                if (t >= 1f) n.Alku = -1f;
-                else Ruudunpaivitys.Herata(0.1f);
-                int m = Mathf.Clamp(Mathf.FloorToInt(n.Teksti.Length * Mathf.Clamp01(t)), 0, n.Teksti.Length);
-                string teksti = m >= n.Teksti.Length ? n.Teksti : n.Teksti.Substring(0, m) + "<alpha=#00>" + n.Teksti.Substring(m);
-                if (n.Label.text != teksti) n.Label.text = teksti;
             }
         }
 

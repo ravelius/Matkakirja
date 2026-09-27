@@ -169,6 +169,140 @@ namespace Matkakirja
         /// <summary>Esikatselu (työkalut): LOD0 tai LOD1.</summary>
         public static Mesh KategoriaVaaka3D(bool lod1 = false) => lod1 ? VaakaLod1() : VaakaRunko();
 
-        static readonly bool vaakaMalli = RekisteroiKategoria(Kategoriasymboli.Vaaka, new Erikoismalli { Runko = VaakaRunko, Lod1 = VaakaLod1 });
+        static readonly bool vaakaMalli = RekisteroiKategoria(Kategoriasymboli.Vaaka, new Erikoismalli { Runko = VaakaRunko, Lod1 = VaakaLod1, Lahi = VaakaLahi });
+
+        // ---- LÄHITASO (omistaja 27.9.2026 klo 09.0x Fablen kautta; Natiivisepän rajapinta 1.0.29, Erikoismalli.Lahi) ----
+
+        /// <summary>
+        /// LÄHITASO: sama orsivaaka lähizoomiin (kartan kerroin ≥ 4, korvaa LOD0:n). Sama siluetti, mittasuhteet, värit ja
+        /// sommitelma kuin LOD0:ssa (kaksiportainen jalka kellokaulalla, pylväs kauluksineen ja pallonuppi, loivasti kaartuva
+        /// kapeneva varsi päätynuppeineen, akselinapa ja kaksi kuppia kolmella narulla tasapainossa), mutta 2 476
+        /// kolmiota (LOD0 610, noin 4,1 ×) lähikuvan yksityiskohtiin: sorvaukset tiheämpinä ja pyöristettyinä
+        /// (jalan portaiden särmät, helmirengas kaulan yläpäässä, pylvään kaulus helmenä, pallonupin kaula), varsi
+        /// kahdeksankulmaisena (särmät viistetty) ja päissä sorvatut nupit, napa viistettynä lieriönä ja kupuniitit
+        /// kummallakin puolella, kupeissa pyöristetty reunahelmi ja kaiverrettu rengas pohjassa, narut nelisärmäisinä ja
+        /// pyöreine solmuineen kupin reunalla. Kaiverrustyyli ennallaan: seepiarampin värit (Ramppi) ja ääriviivaosat kuten
+        /// LOD0:ssa (jalka, pylväs, varsi nuppeineen, napa ja kupit; narut, solmut ja niitit ilman). Apurit (VaakaLahi-alkuiset)
+        /// ovat tässä tiedostossa; sorvaus käyttää LOD0:n VaSorvia ja narut VaTankoa.
+        /// </summary>
+        static void VaakaLahiOsat(Rakentaja r)
+        {
+            // Jalka: pohjaviiste, ensimmäinen porras pyöristetyin yläsärmin, toinen porras, kovera siirtymä, kellokaula ja
+            // helmirengas kaulan yläpäässä.
+            r.AloitaOsa();
+            VaSorvi(r, Vector3.zero, new[]
+            {
+                (0.123f, 0f), (0.1275f, 0.004f), (0.1275f, 0.0175f), (0.1235f, 0.0225f), (0.094f, 0.028f), (0.0905f, 0.031f), (0.0905f, 0.047f),
+                (0.087f, 0.0515f), (0.062f, 0.06f), (0.047f, 0.078f), (0.036f, 0.098f), (0.031f, 0.112f), (0.0345f, 0.1155f), (0.0345f, 0.1205f), (0.029f, 0.123f),
+            }, 16, j => j >= 8 ? VaMessinki : VaVarjo);
+            r.LopetaOsa();
+
+            // Pylväs: kapeneva juuri, kaulus helmenä (listat molemmin puolin), varsi, kaularengas ja pallonuppi.
+            r.AloitaOsa();
+            VaSorvi(r, Vector3.zero, new[]
+            {
+                (0.036f, 0.1f), (0.026f, 0.155f), (0.0235f, 0.284f), (0.029f, 0.289f), (0.0375f, 0.296f), (0.041f, 0.31f), (0.0375f, 0.324f),
+                (0.029f, 0.331f), (0.0225f, 0.336f), (0.0205f, 0.704f), (0.026f, 0.708f), (0.026f, 0.716f), (0.021f, 0.72f), (0.034f, 0.728f),
+                (0.046f, 0.741f), (0.05f, 0.756f), (0.047f, 0.772f), (0.038f, 0.787f), (0.022f, 0.8f), (0f, 0.805f),
+            }, 12, j => j >= 12 ? VaNuppi : VaMessinki);
+            r.LopetaOsa();
+
+            VaakaLahiVarsi(r);
+
+            // Akselinapa: viistetty lieriö ja kupuniitit etu- ja takapinnalla.
+            var napa = new Vector3(0f, VaVarsiKorkeus(0f), 0f);
+            r.AloitaOsa();
+            VaakaLahiSorviZ(r, napa, new[] { (0f, -0.03f), (0.034f, -0.03f), (0.04f, -0.024f), (0.04f, 0.024f), (0.034f, 0.03f), (0f, 0.03f) }, 16, VaNuppi);
+            r.LopetaOsa();
+            VaakaLahiSorviZ(r, napa, new[] { (0f, -0.0355f), (0.009f, -0.0345f), (0.013f, -0.031f), (0.013f, -0.028f) }, 8, VaNaru);
+            VaakaLahiSorviZ(r, napa, new[] { (0.013f, 0.028f), (0.013f, 0.031f), (0.009f, 0.0345f), (0f, 0.0355f) }, 8, VaNaru);
+
+            foreach (float sx in new[] { -1f, 1f })
+            {
+                float x = sx * VaKuppiX, yAla = VaVarsiKorkeus(x) - 0.011f;
+                var kiinni = new Vector3(x, yAla - 0.022f, 0f);
+                // Kuppi: ulkopinta, pyöristetty reunahelmi, sisäpinta ja kaiverrettu rengas pohjassa.
+                r.AloitaOsa();
+                VaSorvi(r, new Vector3(x, VaKuppiY, 0f), new[]
+                {
+                    (0f, 0f), (0.1f, 0.009f), (0.142f, 0.026f), (0.162f, 0.045f), (0.1665f, 0.051f), (0.1635f, 0.0555f), (0.156f, 0.0555f),
+                    (0.14f, 0.048f), (0.117f, 0.0375f), (0.106f, 0.034f), (0.1005f, 0.0325f), (0.06f, 0.026f), (0f, 0.024f),
+                }, 16, j => j <= 2 ? VaVarjo : j <= 5 ? VaReuna : j == 9 ? VaNaru : VaKuppi);
+                r.LopetaOsa();
+                // Narut kupin reunalta kiinnityskohtaan (kuten LOD0): kolme (kaksi edessä, yksi takana), nelisärmäiset, ja
+                // pyöreä solmu kupin reunan sisäpuolella.
+                for (int k = 0; k < 3; k++)
+                {
+                    float a = Mathf.PI * (0.5f + k * 2f / 3f);
+                    var reuna = new Vector3(x + Mathf.Cos(a) * 0.136f, VaKuppiY + 0.047f, Mathf.Sin(a) * 0.136f);
+                    for (int q = 0; q < 4; q++)
+                        VaTanko(r, Vector3.Lerp(reuna, kiinni, q / 4f), Vector3.Lerp(reuna, kiinni, (q + 1) / 4f), 0.0065f, 4, VaNaru);
+                    VaSorvi(r, reuna + new Vector3(0f, -0.004f, 0f), new[] { (0f, 0f), (0.0062f, 0.0028f), (0.0062f, 0.0072f), (0f, 0.01f) }, 6, j => VaNaru);
+                }
+            }
+        }
+
+        /// <summary>Lähitason varsi: kahdeksankulmainen poikkileikkaus (suorakulmio viistetyin särmin) kaarta pitkin, kapenee
+        /// päitä kohti; päissä sorvatut pallonupit. Yksi osa kuten LOD0:ssa.</summary>
+        static void VaakaLahiVarsi(Rakentaja r)
+        {
+            const int m = 12;
+            float L = VaKuppiX;
+            var k = new Vector3[m + 1, 8];
+            var c = new Vector3[m + 1];
+            for (int s = 0; s <= m; s++)
+            {
+                float x = -L + 2f * L * s / m;
+                c[s] = new Vector3(x, VaVarsiKorkeus(x), 0f);
+                var n = new Vector3(2f * VaKaari * x / (L * L), 1f, 0f).normalized;
+                float hh = 0.016f - 0.005f * Mathf.Abs(x) / L, hd = 0.021f, v = 0.0045f;
+                var z = Vector3.forward;
+                // Kärjet ylhäältä edestä kiertäen: yläpinta, takaviiste, takapinta, ... (n = ylös, z = taakse).
+                k[s, 0] = c[s] + n * hh - z * (hd - v); k[s, 1] = c[s] + n * hh + z * (hd - v);
+                k[s, 2] = c[s] + n * (hh - v) + z * hd; k[s, 3] = c[s] - n * (hh - v) + z * hd;
+                k[s, 4] = c[s] - n * hh + z * (hd - v); k[s, 5] = c[s] - n * hh - z * (hd - v);
+                k[s, 6] = c[s] - n * (hh - v) - z * hd; k[s, 7] = c[s] + n * (hh - v) - z * hd;
+            }
+            r.AloitaOsa();
+            for (int s = 0; s < m; s++)
+                for (int e = 0; e < 8; e++)
+                    r.NelioKeskelta(k[s, e], k[s + 1, e], k[s + 1, (e + 1) % 8], k[s, (e + 1) % 8], (c[s] + c[s + 1]) * 0.5f, VaVarsiVari);
+            foreach (int s in new[] { 0, m })
+                for (int e = 0; e < 8; e++)
+                    r.KolmioUlos(c[s], k[s, e], k[s, (e + 1) % 8], Vector3.right * (s == 0 ? -1f : 1f), VaVarsiVari);
+            foreach (float sx in new[] { -1f, 1f })
+            {
+                var p = new Vector3(sx * (L + 0.01f), VaVarsiKorkeus(L) - 0.021f, 0f);
+                VaSorvi(r, p, new[] { (0f, 0f), (0.012f, 0.004f), (0.0205f, 0.014f), (0.0205f, 0.028f), (0.012f, 0.038f), (0f, 0.042f) }, 8, j => VaNuppi);
+            }
+            r.LopetaOsa();
+        }
+
+        /// <summary>Sorvattu pinta z-akselin ympäri (napa, niitti): profiili (säde, z) kulkee niin, että aine on kulkusuunnasta
+        /// vasemmalla kuten VaSorvissa; säde 0 päässä tekee viuhkan.</summary>
+        static void VaakaLahiSorviZ(Rakentaja r, Vector3 p, (float sade, float z)[] prof, int n, Color vari)
+        {
+            for (int j = 0; j + 1 < prof.Length; j++)
+            {
+                var (r0, z0) = prof[j]; var (r1, z1) = prof[j + 1];
+                float nr = z1 - z0, nz = r0 - r1;
+                for (int i = 0; i < n; i++)
+                {
+                    float a0 = i * Mathf.PI * 2f / n, a1 = (i + 1) * Mathf.PI * 2f / n, am = (a0 + a1) * 0.5f;
+                    Vector3 d0 = new Vector3(Mathf.Cos(a0), Mathf.Sin(a0), 0f), d1 = new Vector3(Mathf.Cos(a1), Mathf.Sin(a1), 0f);
+                    var ulos = new Vector3(Mathf.Cos(am) * nr, Mathf.Sin(am) * nr, nz);
+                    Vector3 A = p + d0 * r0 + Vector3.forward * z0, B = p + d1 * r0 + Vector3.forward * z0;
+                    Vector3 C = p + d1 * r1 + Vector3.forward * z1, D = p + d0 * r1 + Vector3.forward * z1;
+                    if (r0 <= 0f) r.KolmioUlos(A, C, D, ulos, vari);
+                    else if (r1 <= 0f) r.KolmioUlos(A, B, C, ulos, vari);
+                    else r.NelioUlos(A, B, C, D, ulos, vari);
+                }
+            }
+        }
+
+        static Mesh VaakaLahi() { var r = new Rakentaja(); VaakaLahiOsat(r); return r.Verkko("kategoria-Vaaka-lahi"); }
+
+        /// <summary>Esikatselu (työkalut): lähitaso.</summary>
+        public static Mesh KategoriaVaaka3DLahi() => VaakaLahi();
     }
 }

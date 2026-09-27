@@ -1,6 +1,6 @@
 // ELÄVÄ KARTTA, kohta 5: ELÄVÄT HETKET (Linssiseppä 26.9.2026; suunnitelma §5, Raamattu ELÄVÄ KARTTA kohta 5).
 // Ajastin (Ydin/Elava/Hetket) valitsee 2–5 minuutin välein 3 s:n hetken kartan näkyvältä alueelta, kun kartta on vapaa
-// (ei korttia, luentaa, linssiä, herätystä eikä saapumista), kamera on ollut paikallaan ≥ LevossaS ja sitä on liikutettu
+// (ei korttia, luentaa, linssiä eikä saapumista: ElavaKartta.KarttaVapaa), kamera on ollut paikallaan ≥ LevossaS ja sitä on liikutettu
 // viimeisen PoissaS:n aikana (joku katsoo). Piirto herää vain hetken ajaksi (ElavaKerros.Animoi: vain hetki 30 fps talletetun kartan päälle, ei joutosykkeen
 // aktiivisuutta). Koot ruutupisteinä ja kaikki kameraan päin kuin vanhan kartan kuvituksessa (laiva aina pystyssä):
 //   laiva  Laiva-varjostin (videon SDF-höyrylaiva), savupallot ja vaalea vana
@@ -267,7 +267,7 @@ namespace Matkakirja.Natiivi
         }
 
         bool Vapaa(float nyt) =>
-            ElavaHerays.KarttaVapaa() && !ElavaHerays.Kaynnissa && !(ohjain != null && ohjain.VahennettyLiike) && !ElavaKerros.Staattinen &&
+            ElavaKartta.KarttaVapaa() && !(ohjain != null && ohjain.VahennettyLiike) && !ElavaKerros.Staattinen &&
             nyt - paikallaanAlkaen >= LevossaS && nyt - liikkuiViimeksi <= PoissaS;
 
         bool Aloita(HetkenLaji? pakota, bool testi, out string syy)

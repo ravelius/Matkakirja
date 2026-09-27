@@ -67,6 +67,9 @@ namespace Matkakirja.Linssit.Elava
             "kinderdijk" => new KinderdijkLiike(id),
             "brandenburgin-portti" => new BrandenburginPorttiLiike(id),
             "segovian-akvedukti" => new SegovianAkveduktiLiike(id),
+            "brugge-belfry" => new BruggenKellotorniLiike(id),
+            "hohensalzburg" => new HohensalzburgLiike(id),
+            "matterhorn" => new MatterhornLiike(id),
             _ => null,
         };
 
@@ -380,7 +383,9 @@ namespace Matkakirja.Linssit.Elava
                     double skaala = parviTila == 0 ? 0 : parviTila == 1 ? Pehmea(parviAika / parviKesto) : parviTila == 3 ? 1 - Pehmea(parviAika / parviKesto) : 1;
                     if (skaala <= 0.001) return OsanAsento.Piilossa;
                     double y = 0.012 * Math.Sin(parviKulma * Math.PI / 180 * 1.7);
-                    return new OsanAsento { Y = y, Skaala = skaala }.Kierretty(OsanAsento.Kierto(0, 1, 0, parviKulma));
+                    // Negatiivinen kulma: +Y-kierto on Unityssä ylhäältä myötäpäivään, mutta linnut lentävät nokka vastapäivään
+                    // (Colosseum.cs ColosseumParvi, eteen = kasvavan kulman suunta); positiivisella ne lensivät takaperin.
+                    return new OsanAsento { Y = y, Skaala = skaala }.Kierretty(OsanAsento.Kierto(0, 1, 0, -parviKulma));
                 }
                 case "valot": return Valot();
                 default: return OsanAsento.Lepo;

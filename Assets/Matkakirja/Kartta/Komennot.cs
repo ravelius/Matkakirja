@@ -91,6 +91,7 @@ namespace Matkakirja
     ///   symbolit taso23 0|1       tasojen 2–3 arkkityypit pois/päälle (A/B-mittaus, oletus 1)
     ///   symbolit ylhaalta 3d|2d   1.0.27-kokeilu: 3d = Linna, Kirkko ja Majakka myös pystysuorasta ja liioiteltu perspektiivi
     ///                             (oletus kokeiluhaarassa), 2d = 1.0.26:n sääntö (mallit vasta kallistuksesta 25°)
+    ///   symbolit lahi 0|1|n       lähitaso (Erikoismalli.Lahi) kertoimesta 4, enintään n (oletus 3) lähintä mallia; 0 = pois
     ///   symbolit maasto 0|1       symbolimallit maaston pinnalle (SampleHeightMostDetailed erissä, oletus 1; 0 = ellipsoidilla)
     ///   symbolit perspektiivi <aste>   liioitellun perspektiivin kulma ruudun reunalla (0–80, oletus 55 = Linssisepän
     ///                             LiioiteltuPerspektiivi-käyrä; 0 = pois)
@@ -121,6 +122,8 @@ namespace Matkakirja
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
     ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
+    ///   nostot heti 0|1           kohdemaan nostot heti (1, oletus: ei vähimmäisosuutta, porttia eikä saapumispiiloa) / 0 = vanhat
+    ///                             arvot (0,5 / 1,4 s / syttyminen 0,7 s) A/B-mittaukseen
     ///   nostot tila [ISO3] | nostot maa <ISO3|pois>   nostokerroksen portit lokiin (NostoKerros.Kuvaus): näkyvät,
     ///                             piilotetut syineen (kaupunki nimi/12 km, meri, taso 3, ruutu, katto), uloin osuus,
     ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa); lisäksi minimerkit
@@ -964,6 +967,7 @@ namespace Matkakirja
                     var nk = NostoKerros.Instanssi;
                     if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nostokerros puuttuu"); break; }
                     if (o.Length > 2 && o[1] == "maa") nk.Maa = o[2] == "pois" ? null : o[2].ToUpperInvariant();
+                    if (o.Length > 2 && o[1] == "heti") nk.AsetaHeti(o[2] != "0" && o[2] != "pois");
                     if (o.Length > 2 && o[1] == "kerroin")
                     {
                         // Webin mittauksen portaat (kerroin 1 = saapumisnäkymä, 2, 3,13) samalla kaavalla kuin ZoomKerroin.
@@ -1050,7 +1054,6 @@ namespace Matkakirja
                 {
                     // maakunta <ISO3:tunnus> | maakunta pois | maakunta tila (B17, sama kuin Natiivi-UI:n Maakunnat-valinta)
                     // maakunta maa <ISO3> | maakunta maa pois: kerroksen maa pakotetaan (oletus pelaajan maa, skeema 1.42)
-                    // maakunta herays ab|pois: löydös 168 A/B-lippu (ab = vanha käytös, herääminen värjää maakunnan; oletus pois)
                     var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
                     if (mk == null) break;
                     if (o[1] == "tila")
@@ -1067,14 +1070,6 @@ namespace Matkakirja
                         MaaKartta.ValinnanPeitto = double.Parse(o[2], CultureInfo.InvariantCulture);
                         MaaKartta.PaivitaKaikki();
                         Debug.Log($"MATKAKIRJA maakunnat: valinnan peitto {MaaKartta.ValinnanPeitto:0.00}");
-                        break;
-                    }
-                    if (o[1] == "herays" && o.Length > 2)
-                    {
-                        // maakunta herays ab|pois: löydös 168 A/B-vertailu (ab = vanha käytös, herääminen värjää maakunnan pysyvästi)
-                        MaaKartta.HeraaminenVarjaaTaytonAB = o[2] == "ab";
-                        MaaKartta.PaivitaKaikki();
-                        Debug.Log($"MATKAKIRJA maakunnat: heräyksen täyttö {(MaaKartta.HeraaminenVarjaaTaytonAB ? "AB (vanha, värjää)" : "pois (oletus, ei värjää)")}");
                         break;
                     }
                     if (o[1] == "maski" && o.Length > 2)

@@ -1,10 +1,9 @@
-// ELÄVÄ KARTTA: saapumisen aineisto maittain (Linssiseppä 26.9.2026). Puhdas C#.
+// ELÄVÄ KARTTA: kohtauksen aineisto maittain (Linssiseppä 26.9.2026). Puhdas C#.
 //
 //   JOET   Karttasepän julisteet/pallo/vektorit/joet-2026-09-26b/<ISO>.geojson (GEOGLOWS v2 / TDX-Hydro, CC BY-SA 4.0;
 //          LineString [lon, lat], properties jarjestys = Strahler, valuma_km2). Kynä piirtää vain pääuomat: kaksi suurinta
-//          Strahler-luokkaa ja niistä enintään JokiaEnintaan suurinta valumaltaan.
-//   NOSTOT sisältöpaketin kokoelma karttavalot (id, lat, lon, maa, kokoluokka, taso, salaisuus, paakartalla); luokka
-//          samalla säännöllä kuin Pelikoodarin KarttaMuste.Luokka (data, muuten taso 1 = pääkohde, ≥ 3 = pieni).
+//          Strahler-luokkaa ja niistä enintään JokiaEnintaan suurinta valumaltaan. Vain video (saapuminen 27.9.2026: ei jokia;
+//          saapumisen nostot karttavaloista poistuivat samalla).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -72,40 +71,6 @@ namespace Matkakirja.Linssit.Elava
             foreach (var e in ehdokkaat.Where(e => e.Jarjestys >= suurin - 1).OrderByDescending(e => e.Jarjestys).ThenByDescending(e => e.Valuma).Take(enintaan))
                 tulos.Add(new ElavaJoki($"uoma {++k} (Strahler {e.Jarjestys}, {e.Valuma:0} km²)", e.Pisteet));
             return tulos;
-        }
-
-        /// <summary>Maan nostot karttavaloista (pääkartan nostot, ei salaisuuksia).</summary>
-        public static List<ElavaNosto> NostotKarttavaloista(string json, string iso3)
-        {
-            var tulos = new List<ElavaNosto>();
-            if (!(MiniJson.Jasenna(json) is Dictionary<string, object> juuri) || !juuri.TryGetValue("alkiot", out var a) || !(a is List<object> alkiot))
-                return tulos;
-            foreach (var o in alkiot)
-            {
-                if (!(o is Dictionary<string, object> d)) continue;
-                if (!(d.TryGetValue("maa", out var m) && m as string == iso3)) continue;
-                if (d.TryGetValue("salaisuus", out var s) && s is bool sb && sb) continue;
-                if (d.TryGetValue("paakartalla", out var pk) && pk is bool pb && !pb) continue;
-                string id = d.TryGetValue("id", out var i) ? i as string : null;
-                double lat = d.TryGetValue("lat", out var la) ? Luku(la) : double.NaN, lon = d.TryGetValue("lon", out var lo) ? Luku(lo) : double.NaN;
-                if (id == null || double.IsNaN(lat) || double.IsNaN(lon)) continue;
-                string luokka = d.TryGetValue("kokoluokka", out var kl) ? kl as string : null;
-                double taso = d.TryGetValue("taso", out var ts) ? Luku(ts) : double.NaN;
-                tulos.Add(new ElavaNosto(id, lat, lon, Luokka(luokka, double.IsNaN(taso) ? (int?)null : (int)taso)));
-            }
-            return tulos;
-        }
-
-        /// <summary>Pelikoodarin KarttaMuste.Luokka: data, muuten taso 1 = pääkohde, taso ≥ 3 = pieni, muut kohteita.</summary>
-        public static Kokoluokka Luokka(string kokoluokka, int? taso)
-        {
-            switch (kokoluokka)
-            {
-                case "paakohde": return Kokoluokka.Paakohde;
-                case "kohde": return Kokoluokka.Kohde;
-                case "pieni": return Kokoluokka.Pieni;
-            }
-            return taso == 1 ? Kokoluokka.Paakohde : taso >= 3 ? Kokoluokka.Pieni : Kokoluokka.Kohde;
         }
     }
 }

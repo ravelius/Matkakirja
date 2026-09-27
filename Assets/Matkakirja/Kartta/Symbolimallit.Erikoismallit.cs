@@ -57,6 +57,11 @@ namespace Matkakirja
             public Func<LiikkuvaOsaMaaritys[]> Osat;
             /// <summary>Valinnainen; taso 1 piirtää toistaiseksi LOD0:n (kynnys 2,5, koko enintään 40 pt).</summary>
             public Func<Mesh> Lod1;
+            /// <summary>
+            /// Valinnainen LÄHITASO (omistaja 27.9. klo 08.0x): tarkempi verkko lähizoomiin (kartan kerroin ≥ LahiKerroin), enintään
+            /// LahiEnintaan (3) lähintä mallia kerrallaan; muut piirtävät Rungon. Budjetti ≤ LahiKatto kolmiota.
+            /// </summary>
+            public Func<Mesh> Lahi;
             /// <summary>Valinnainen kolmioarvio (tarkistukseen; oikea luku `symbolit tila` -rivillä).</summary>
             public int Kolmiot0;
             /// <summary>

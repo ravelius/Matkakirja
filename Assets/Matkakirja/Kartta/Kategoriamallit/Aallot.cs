@@ -24,9 +24,33 @@ namespace Matkakirja
         /// </summary>
         static void AallotOsat(Rakentaja r, bool lod1)
         {
-            Vector2[] kierre, maininki;
-            Color[] varitK, varitM;
-            int huuliA, huuliJ;   // päätypinnan jako: huuli (vaahto) kärkiväleillä huuliA..huuliJ, muu runko
+            AaProfiilit(lod1, out var kierre, out var maininki, out var varitK, out var varitM, out int huuliA, out int huuliJ);
+            // Iso aalto takana vasemmalla: päätypinta edessä, harjalinja loivasti kaartuen taakse.
+            var viivatIso = lod1 ? null : new[]
+            {
+                new[] { new Vector2(0.021f, 0.283f), new Vector2(0.082f, 0.318f), new Vector2(0.149f, 0.295f), new Vector2(0.18f, 0.233f), new Vector2(0.159f, 0.185f) },
+                new[] { new Vector2(-0.2f, 0.035f), new Vector2(-0.12f, 0.1f), new Vector2(-0.06f, 0.165f), new Vector2(-0.02f, 0.215f) },
+                new[] { new Vector2(-0.1f, 0.03f), new Vector2(-0.04f, 0.085f), new Vector2(-0.01f, 0.14f) },
+            };
+            var pisarat = lod1 ? null : new[] { new Vector3(0.235f, 0.17f, 0.03f), new Vector3(0.215f, 0.1f, 0.025f), new Vector3(0.26f, 0.11f, 0.02f) };
+            AaAalto(r, new Vector3(-0.19f, 0f, -0.14f), new Vector3(-0.15f, 0f, 0.1f), new Vector3(-0.21f, 0f, 0.34f), 2.0f, 0.92f, 35f,
+                lod1 ? 2 : 6, kierre, maininki, varitK, varitM, huuliA, huuliJ, viivatIso, pisarat);
+            // Pieni aalto edessä oikealla.
+            var viivatPieni = lod1 ? null : new[]
+            {
+                new[] { new Vector2(0.021f, 0.283f), new Vector2(0.082f, 0.318f), new Vector2(0.149f, 0.295f), new Vector2(0.18f, 0.233f) },
+                new[] { new Vector2(-0.19f, 0.04f), new Vector2(-0.1f, 0.12f), new Vector2(-0.03f, 0.2f) },
+            };
+            AaAalto(r, new Vector3(0.27f, 0f, -0.34f), new Vector3(0.3f, 0f, -0.16f), new Vector3(0.26f, 0f, 0.02f), 1.32f, 0.68f, 35f,
+                lod1 ? 2 : 5, kierre, maininki, varitK, varitM, huuliA, huuliJ, viivatPieni, null);
+        }
+
+        /// <summary>
+        /// Aallon profiilit (LOD0, LOD1 ja lähitason pohja): kierre (murtuva pää) ja maininki samoin kärkiindeksein, kaistojen
+        /// värit kummallekin ja päätypinnan jako (huuli = vaahto kärkiväleillä huuliA … huuliJ, muu runko).
+        /// </summary>
+        static void AaProfiilit(bool lod1, out Vector2[] kierre, out Vector2[] maininki, out Color[] varitK, out Color[] varitM, out int huuliA, out int huuliJ)
+        {
             var S = AaSelka; var S2 = AaSelka2; var S3 = AaSelka3;
             if (!lod1)
             {
@@ -76,24 +100,6 @@ namespace Matkakirja
                 varitM = new[] { S2, S, AaHarja, AaKynsi, S, S, S, S, S, S, S, S, S2, S2 };
                 huuliA = 2; huuliJ = 11;
             }
-            // Iso aalto takana vasemmalla: päätypinta edessä, harjalinja loivasti kaartuen taakse.
-            var viivatIso = lod1 ? null : new[]
-            {
-                new[] { new Vector2(0.021f, 0.283f), new Vector2(0.082f, 0.318f), new Vector2(0.149f, 0.295f), new Vector2(0.18f, 0.233f), new Vector2(0.159f, 0.185f) },
-                new[] { new Vector2(-0.2f, 0.035f), new Vector2(-0.12f, 0.1f), new Vector2(-0.06f, 0.165f), new Vector2(-0.02f, 0.215f) },
-                new[] { new Vector2(-0.1f, 0.03f), new Vector2(-0.04f, 0.085f), new Vector2(-0.01f, 0.14f) },
-            };
-            var pisarat = lod1 ? null : new[] { new Vector3(0.235f, 0.17f, 0.03f), new Vector3(0.215f, 0.1f, 0.025f), new Vector3(0.26f, 0.11f, 0.02f) };
-            AaAalto(r, new Vector3(-0.19f, 0f, -0.14f), new Vector3(-0.15f, 0f, 0.1f), new Vector3(-0.21f, 0f, 0.34f), 2.0f, 0.92f, 35f,
-                lod1 ? 2 : 6, kierre, maininki, varitK, varitM, huuliA, huuliJ, viivatIso, pisarat);
-            // Pieni aalto edessä oikealla.
-            var viivatPieni = lod1 ? null : new[]
-            {
-                new[] { new Vector2(0.021f, 0.283f), new Vector2(0.082f, 0.318f), new Vector2(0.149f, 0.295f), new Vector2(0.18f, 0.233f) },
-                new[] { new Vector2(-0.19f, 0.04f), new Vector2(-0.1f, 0.12f), new Vector2(-0.03f, 0.2f) },
-            };
-            AaAalto(r, new Vector3(0.27f, 0f, -0.34f), new Vector3(0.3f, 0f, -0.16f), new Vector3(0.26f, 0f, 0.02f), 1.32f, 0.68f, 35f,
-                lod1 ? 2 : 5, kierre, maininki, varitK, varitM, huuliA, huuliJ, viivatPieni, null);
         }
 
         /// <summary>
@@ -231,6 +237,168 @@ namespace Matkakirja
         /// <summary>Esikatselu (työkalut): LOD0 tai LOD1.</summary>
         public static Mesh KategoriaAallot3D(bool lod1 = false) => lod1 ? AallotLod1() : AallotRunko();
 
-        static readonly bool aallotMalli = RekisteroiKategoria(Kategoriasymboli.Aallot, new Erikoismalli { Runko = AallotRunko, Lod1 = AallotLod1 });
+        static readonly bool aallotMalli = RekisteroiKategoria(Kategoriasymboli.Aallot, new Erikoismalli { Runko = AallotRunko, Lod1 = AallotLod1, Lahi = AallotLahi });
+
+        // ---- LÄHITASO (omistaja 27.9.2026 klo 09.0x; Natiivisepän rajapinta 1.0.29, Erikoismalli.Lahi) ----
+
+        /// <summary>
+        /// LÄHITASO: samat kaksi murtuvaa aaltoa lähizoomiin (korvaa LOD0:n vain lähellä, enintään kolme lähintä). Samat
+        /// harjalinjat, mitat, kallistus, profiilit ja värit kuin LOD0:ssa (<see cref="AaProfiilit"/>, <see cref="AaAalto"/>),
+        /// joten siluetti ja sommitelma pysyvät (rajat samat paitsi syvyys +0,0025 tiheämmän pyyhkäisyn vuoksi), mutta 2 471
+        /// kolmiota (LOD0 554, noin 4,5 ×) lähikuvan yksityiskohtiin: profiilin kärkivälit puolitettuina sileästi (pyöreämpi
+        /// kierre ja huuli), pyyhkäisy kaksinkertaisena (sileä harjalinja), selässä kolme musteista virtausviivaa yhden
+        /// sijaan, päätypinnan kiertoviivat sileinä ja rungossa kaksi (pienessä yksi) lisäviivaa kuvamerkin kaiverruksen
+        /// tapaan, huulen etureuna kuohuvina pullistumina (tasoittuu mainingissa), vaahtokielet valumassa harjalta selkää
+        /// alas ja enemmän eri kokoisia vaahtopisaroita (7 + 2). Ääriviivaosa aaltoa kohden kuten LOD0.
+        /// </summary>
+        static void AallotLahiOsat(Rakentaja r)
+        {
+            AalProfiilit(out var kierre, out var maininki, out var varitK, out var varitM, out int huuliA, out int huuliJ);
+            AaProfiilit(false, out var kierre0, out var maininki0, out _, out _, out _, out _);
+            // Iso aalto takana vasemmalla (kuten LOD0): sileät kiertoviivat ja kaksi lisäviivaa rungossa, seitsemän pisaraa.
+            Vector3 aI = new Vector3(-0.19f, 0f, -0.14f), kI = new Vector3(-0.15f, 0f, 0.1f), bI = new Vector3(-0.21f, 0f, 0.34f);
+            var viivatIso = new[]
+            {
+                AalSilea(new[] { new Vector2(0.021f, 0.283f), new Vector2(0.082f, 0.318f), new Vector2(0.149f, 0.295f), new Vector2(0.18f, 0.233f), new Vector2(0.159f, 0.185f) }),
+                AalSilea(new[] { new Vector2(-0.2f, 0.035f), new Vector2(-0.12f, 0.1f), new Vector2(-0.06f, 0.165f), new Vector2(-0.02f, 0.215f) }),
+                AalSilea(new[] { new Vector2(-0.1f, 0.03f), new Vector2(-0.04f, 0.085f), new Vector2(-0.01f, 0.14f) }),
+                AalSilea(new[] { new Vector2(-0.155f, 0.022f), new Vector2(-0.1f, 0.075f), new Vector2(-0.058f, 0.128f) }),
+                AalSilea(new[] { new Vector2(-0.035f, 0.018f), new Vector2(-0.008f, 0.05f), new Vector2(0.004f, 0.088f) }),
+            };
+            var pisaratIso = new[]
+            {
+                new Vector3(0.235f, 0.17f, 0.03f), new Vector3(0.215f, 0.1f, 0.025f), new Vector3(0.26f, 0.11f, 0.02f),
+                new Vector3(0.255f, 0.205f, 0.016f), new Vector3(0.28f, 0.15f, 0.013f), new Vector3(0.245f, 0.06f, 0.014f), new Vector3(0.29f, 0.08f, 0.011f),
+            };
+            AaAalto(r, aI, kI, bI, 2.0f, 0.92f, 35f, 12, kierre, maininki, varitK, varitM, huuliA, huuliJ, viivatIso, pisaratIso);
+            AalVaahtokielet(r, aI, kI, bI, 2.0f, 0.92f, 35f, kierre0, maininki0, new[] { (0.07f, 4.72f), (0.15f, 4.62f), (0.23f, 4.78f), (0.31f, 4.66f) });
+            // Pieni aalto edessä oikealla.
+            Vector3 aP = new Vector3(0.27f, 0f, -0.34f), kP = new Vector3(0.3f, 0f, -0.16f), bP = new Vector3(0.26f, 0f, 0.02f);
+            var viivatPieni = new[]
+            {
+                AalSilea(new[] { new Vector2(0.021f, 0.283f), new Vector2(0.082f, 0.318f), new Vector2(0.149f, 0.295f), new Vector2(0.18f, 0.233f) }),
+                AalSilea(new[] { new Vector2(-0.19f, 0.04f), new Vector2(-0.1f, 0.12f), new Vector2(-0.03f, 0.2f) }),
+                AalSilea(new[] { new Vector2(-0.1f, 0.03f), new Vector2(-0.04f, 0.085f), new Vector2(-0.01f, 0.14f) }),
+            };
+            var pisaratPieni = new[] { new Vector3(0.235f, 0.16f, 0.022f), new Vector3(0.255f, 0.1f, 0.016f) };
+            AaAalto(r, aP, kP, bP, 1.32f, 0.68f, 35f, 10, kierre, maininki, varitK, varitM, huuliA, huuliJ, viivatPieni, pisaratPieni);
+            AalVaahtokielet(r, aP, kP, bP, 1.32f, 0.68f, 35f, kierre0, maininki0, new[] { (0.09f, 4.7f), (0.2f, 4.6f), (0.3f, 4.75f) });
+        }
+
+        /// <summary>
+        /// Pyyhkäisyn pinta kuten <see cref="AaAalto"/>:ssa: asema t (0 = päätypinta, 1 = hännän pää) ja profiilin murtoindeksi s
+        /// (LOD0:n profiilissa); normaali ulospäin. Lähitason irtoyksityiskohtien paikoitukseen.
+        /// </summary>
+        static Vector3 AalPinta(Vector3 a, Vector3 k, Vector3 b, float korkeus, float syvyys, float kallistus, Vector2[] kierre, Vector2[] maininki,
+            float t, float s, out Vector3 normaali)
+        {
+            float cb = Mathf.Cos(kallistus * Mathf.Deg2Rad), sb = Mathf.Sin(kallistus * Mathf.Deg2Rad), u = 1f - t;
+            var C = a * (u * u) + k * (2f * u * t) + b * (t * t);
+            var T = (k - a) * (2f * u) + (b - k) * (2f * t);
+            T.y = 0f; T = T.normalized;
+            var F = new Vector3(T.z, 0f, -T.x);
+            float amp = Mathf.Pow(Mathf.Max(0f, Mathf.Cos(Mathf.PI * 0.5f * Mathf.Pow(t, 2.2f))), 0.5f);
+            float kiert = Mathf.Pow(Mathf.Max(0f, 1f - t / 0.75f), 1.3f);
+            float eta = korkeus * amp, sig = syvyys * (0.4f + 0.6f * Mathf.Pow(amp, 0.6f));
+            var ylos = Vector3.up * cb + T * sb;
+            int i0 = Mathf.Min(kierre.Length - 2, (int)s);
+            Vector2 P(int i) => AalLerp(maininki[i], kierre[i], kiert);
+            var q = AalLerp(P(i0), P(i0 + 1), s - i0);
+            var d = P(i0 + 1) - P(i0);
+            normaali = (F * (-d.y * eta) + ylos * (d.x * sig)).normalized;
+            return C + F * (q.x * sig) + ylos * (q.y * eta);
+        }
+
+        /// <summary>
+        /// Vaahtokielet selässä: kuohuharjan vaahto (LOD0:n profiilin kaista 5 → 6) valuu kielinä selkää alas (asema t ≤ 0,32,
+        /// jossa harja on vielä vaahtoa; kielen kärki profiilin murtoindeksissä); kielen yläreuna leveä, kärki pyöreähkö, 0,004
+        /// pinnan yläpuolella. 3 kolmiota kieltä kohden, ei omaa ääriviivaa.
+        /// </summary>
+        static void AalVaahtokielet(Rakentaja r, Vector3 a, Vector3 k, Vector3 b, float korkeus, float syvyys, float kallistus,
+            Vector2[] kierre0, Vector2[] maininki0, (float t, float karki)[] kielet)
+        {
+            const float yla = 5.3f, lev = 0.028f;
+            foreach (var (t, karki) in kielet)
+            {
+                Vector3 Piste(float tt, float s) { var p = AalPinta(a, k, b, korkeus, syvyys, kallistus, kierre0, maininki0, tt, s, out var n); return p + n * 0.004f; }
+                float keski = (yla + karki) * 0.5f;
+                Vector3 A = Piste(t - lev, yla), B = Piste(t + lev, yla), C = Piste(t + lev * 0.55f, keski), D = Piste(t - lev * 0.55f, keski), E = Piste(t, karki);
+                AalPinta(a, k, b, korkeus, syvyys, kallistus, kierre0, maininki0, t, keski, out var ulos);
+                r.NelioUlos(A, B, C, D, ulos, AaVaahto);
+                r.KolmioUlos(D, C, E, ulos, AaVaahto);
+            }
+        }
+
+        /// <summary>
+        /// Lähitason profiilit LOD0:n profiileista: jokainen kärkiväli puolitetaan nelipistesäännöllä (samat kärjet, sileä
+        /// kierre), paitsi selän kaistat 0 ja 4, joihin lisätään kapea musteinen virtausviiva (LOD0:ssa viiva vain kaistalla 2),
+        /// ja huulen etureunan kaistat 8–10, jotka saavat kuohuvan pullistuman. Kaistojen värit periytyvät LOD0:n kaistalta,
+        /// huulen rajat siirtyvät uusiin indekseihin.
+        /// </summary>
+        static void AalProfiilit(out Vector2[] kierre, out Vector2[] maininki, out Color[] varitK, out Color[] varitM, out int huuliA, out int huuliJ)
+        {
+            AaProfiilit(false, out var k0, out var m0, out var vk0, out var vm0, out int a0, out int j0);
+            var k = new List<Vector2>(); var mm = new List<Vector2>(); var vk = new List<Color>(); var vm = new List<Color>();
+            var indeksi = new int[k0.Length];
+            for (int i = 0; i < k0.Length; i++)
+            {
+                indeksi[i] = k.Count;
+                k.Add(k0[i]); mm.Add(m0[i]);
+                if (i + 1 == k0.Length) break;
+                float[] viiva = i == 0 ? new[] { 0.5f, 0.62f } : i == 4 ? new[] { 0.42f, 0.56f } : null;
+                if (i >= 8 && i <= 10)
+                {
+                    // Huulen etureuna kuohuna (kuvamerkin vaahtoharja): kaistan kolme välipistettä työnnetään kierteen keskeltä
+                    // ulospäin (0,011; 0,019; 0,011), joten reunaan tulee pyöreä pullistuma ja LOD0:n kärkiin lovet. Vain
+                    // kierteessä: taaempana, missä profiili liukuu mainingiksi, kuohu tasoittuu.
+                    var keski = new Vector2(0.09f, 0.225f);
+                    float[] osuudet = { 0.25f, 0.5f, 0.75f }, tyonto = { 0.011f, 0.019f, 0.011f };
+                    for (int t = 0; t < 3; t++)
+                    {
+                        var q = t == 1 ? AalPuoli(k0, i) : AalLerp(k0[i], k0[i + 1], osuudet[t]);
+                        k.Add(q + (q - keski).normalized * tyonto[t]);
+                        mm.Add(AalLerp(m0[i], m0[i + 1], osuudet[t]));
+                    }
+                    for (int t = 0; t < 4; t++) { vk.Add(vk0[i]); vm.Add(vm0[i]); }
+                }
+                else if (viiva != null)
+                {
+                    foreach (float f in viiva) { k.Add(AalLerp(k0[i], k0[i + 1], f)); mm.Add(AalLerp(m0[i], m0[i + 1], f)); }
+                    vk.Add(vk0[i]); vk.Add(AaViiva); vk.Add(vk0[i]);
+                    vm.Add(vm0[i]); vm.Add(AaViiva); vm.Add(vm0[i]);
+                }
+                else
+                {
+                    k.Add(AalPuoli(k0, i)); mm.Add(AalPuoli(m0, i));
+                    vk.Add(vk0[i]); vk.Add(vk0[i]); vm.Add(vm0[i]); vm.Add(vm0[i]);
+                }
+            }
+            // Huulen laki ei nouse LOD0:n lakea korkeammaksi (rajat ennallaan): puolivälit leikataan LOD0:n suurimpaan korkeuteen.
+            float yMax = 0f, mMax = 0f;
+            foreach (var q in k0) yMax = Mathf.Max(yMax, q.y);
+            foreach (var q in m0) mMax = Mathf.Max(mMax, q.y);
+            for (int i = 0; i < k.Count; i++) { k[i] = new Vector2(k[i].x, Mathf.Min(k[i].y, yMax)); mm[i] = new Vector2(mm[i].x, Mathf.Min(mm[i].y, mMax)); }
+            kierre = k.ToArray(); maininki = mm.ToArray(); varitK = vk.ToArray(); varitM = vm.ToArray();
+            huuliA = indeksi[a0]; huuliJ = indeksi[j0];
+        }
+
+        static Vector2 AalLerp(Vector2 a, Vector2 b, float t) => a + (b - a) * t;
+
+        /// <summary>Nelipistesäännön puoliväli kärkien i ja i + 1 välissä (päissä suora puoliväli).</summary>
+        static Vector2 AalPuoli(Vector2[] P, int i) =>
+            i >= 1 && i + 2 < P.Length ? (P[i] + P[i + 1]) * (9f / 16f) - (P[i - 1] + P[i + 2]) * (1f / 16f) : (P[i] + P[i + 1]) * 0.5f;
+
+        /// <summary>Murtoviiva sileämmäksi: jokaisen välin puoliväli nelipistesäännöllä.</summary>
+        static Vector2[] AalSilea(Vector2[] P)
+        {
+            var tulos = new List<Vector2>();
+            for (int i = 0; i < P.Length; i++) { tulos.Add(P[i]); if (i + 1 < P.Length) tulos.Add(AalPuoli(P, i)); }
+            return tulos.ToArray();
+        }
+
+        static Mesh AallotLahi() { var r = new Rakentaja(); AallotLahiOsat(r); return r.Verkko("kategoria-Aallot-lahi"); }
+
+        /// <summary>Esikatselu (työkalut): lähitaso.</summary>
+        public static Mesh KategoriaAallot3DLahi() => AallotLahi();
     }
 }

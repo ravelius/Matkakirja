@@ -174,6 +174,54 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public bool PuluaaniSoi => puhuu && SoivaPersoona == "pollo";
         public float Aika => lahde != null && lahde.clip != null ? lahde.time : 0;
+        /// <summary>Soiva puhe tauolla (Tauko/Jatka, nostokortin kaiutin: omistaja 27.9.2026 klo 09.3x).</summary>
+        public bool Tauolla => tauolla;
+        bool tauolla;
+        readonly float[] tasoNaytteet = new float[256];
+
+        /// <summary>
+        /// Soivan puheen tauko (web soitin.tauko): AudioSource.Pause, jatko on näytteen tarkka. Loppu-kutsu ei laukea
+        /// tauon aikana; Puhuu-tapahtuma kertoo tauon (musiikki ja ambienssi palaavat). False, jos mikään ei soi.
+        /// </summary>
+        public bool Tauko()
+        {
+            if (tauolla || !puhuu || lahde == null || !lahde.isPlaying || haivytys != null) return false;
+            tauolla = true;
+            lahde.Pause();
+            AsetaPuhuu(false);
+            return true;
+        }
+
+        /// <summary>Tauon jatko samasta kohdasta (web soitin.jatka). False, jos tauolla ei ollut mitään.</summary>
+        public bool Jatka()
+        {
+            if (!tauolla || lahde == null) return false;
+            tauolla = false;
+            lahde.UnPause();
+            AsetaPuhuu(true);
+            return true;
+        }
+
+        /// <summary>Tauolla oleva klippi pois (uusi puhe tai pysäytys ei jatka taukoa).</summary>
+        void PuraTauko()
+        {
+            if (!tauolla) return;
+            tauolla = false;
+            if (lahde != null) lahde.Stop();
+        }
+
+        /// <summary>Soivan puheen RMS-taso (VU-mittari, web puheMittari); 0 kun hiljaa tai tauolla.</summary>
+        public float SoivaTaso
+        {
+            get
+            {
+                if (lahde == null || !lahde.isPlaying || tauolla) return 0f;
+                lahde.GetOutputData(tasoNaytteet, 0);
+                double s = 0;
+                for (int i = 0; i < tasoNaytteet.Length; i++) s += tasoNaytteet[i] * tasoNaytteet[i];
+                return Mathf.Sqrt((float)(s / tasoNaytteet.Length));
+            }
+        }
         public float Kesto => lahde != null && lahde.clip != null ? lahde.clip.length : 0;
         public string ViimeVirhe { get; private set; }
 
@@ -184,10 +232,17 @@ namespace Matkakirja.Natiivi
             set => Asetukset.Aseta(Kytkin.Kertoja, value);
         }
 
+        /// <summary>
+        /// PULUN PUHE ILMAN ÄÄNIKYTKIMIÄ (omistaja 27.9.2026 klo 09.2x, sitova; web js/lukija.js pulunPuhe): persoonan
+        /// pollo puhetta ohjaa vain Pulun kaiutinvipu (PuluChat.AaniPaalla). Kertoja-kytkin ja pelin mykistys
+        /// (Kytkin.Aanimaisema) eivät estä, hiljennä eivätkä katkaise sitä.
+        /// </summary>
+        public static bool PulunPuhe(string persoona) => persoona == "pollo";
+
         void AsetuksetMuuttuivat(string nimi)
         {
             PaivitaVahvistus();
-            if (!Paalla && (puhuu || lataus != null)) { Pysayta(0.3f); return; }
+            if (!Paalla && (puhuu || lataus != null) && !PulunPuhe(SoivaPersoona)) { Pysayta(0.3f); return; }
             if (lahde != null && lahde.isPlaying && haivytys == null) lahde.volume = Kohdetaso;
         }
 
@@ -195,7 +250,7 @@ namespace Matkakirja.Natiivi
         /// AudioSource.volume soivalle: äänite = Voimakkuus (Lukija-taso), synteesi = 1 (taso on
         /// vahvistimessa, jotta se saa ylittää ykkösen). Mykistettynä kumpikin 0.
         /// </summary>
-        float Kohdetaso => synteesi ? (Asetukset.Paalla(Kytkin.Aanimaisema) ? 1f : 0f) : Voimakkuus;
+        float Kohdetaso => synteesi ? (Asetukset.Paalla(Kytkin.Aanimaisema) || PulunPuhe(SoivaPersoona) ? 1f : 0f) : Voimakkuus;
 
         void PaivitaVahvistus()
         {
@@ -243,6 +298,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Paalla || string.IsNullOrEmpty(url)) return false;
             AsetaIstunto();
+            PuraTauko();
             int oma = ++tunnus;
             if (lataus != null) StopCoroutine(lataus);
             if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
@@ -262,7 +318,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null)
         {
-            if (!Paalla) return false;
+            if (!Paalla && !PulunPuhe(persoona)) return false;
             return Syntetisoi(teksti, persoona, Lukijaaani.OletusLohko(persoona), true, viiveS, loppu);
         }
 
@@ -285,6 +341,7 @@ namespace Matkakirja.Natiivi
             persoona ??= "kertoja";
             teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
             AsetaIstunto();
+            PuraTauko();
             int oma = ++tunnus;
             if (lataus != null) StopCoroutine(lataus);
             if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
@@ -320,7 +377,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void Esihae(string teksti, string persoona = "kertoja")
         {
-            if (!Paalla || string.IsNullOrWhiteSpace(teksti)) return;
+            if ((!Paalla && !PulunPuhe(persoona)) || string.IsNullOrWhiteSpace(teksti)) return;
             persoona ??= "kertoja";
             teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
             string avain = Saadot.Valimuistiavain(persoona, teksti);
@@ -345,6 +402,7 @@ namespace Matkakirja.Natiivi
         {
             tunnus++;
             loppu = null;
+            PuraTauko();
             if (lataus != null) { StopCoroutine(lataus); lataus = null; }
             SoivaUrl = null;
             if (lahde.isPlaying) Haivyta(haivytysS, true);
@@ -410,6 +468,12 @@ namespace Matkakirja.Natiivi
             while (sailo && esiladataan.Contains(url)) yield return null;
             if (sailo && File.Exists(tiedosto)) Esilataaja.NakyvaValmis(url);
             if (oma != tunnus) yield break;
+            // Synteesi verkosta: soitto alkaa ensimmäisistä tavuista (VIRTA alla), ei koko palan latauksen jälkeen.
+            if (synteesi && Virta && (!sailo || !File.Exists(tiedosto)))
+            {
+                yield return SoitaVirtana(url, pyynto, viiveS, oma, sailo, tiedosto, alku);
+                yield break;
+            }
             if (!sailo || !File.Exists(tiedosto))
             {
                 Directory.CreateDirectory(kansio);
@@ -440,6 +504,13 @@ namespace Matkakirja.Natiivi
                 catch (Exception e) { ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: välimuisti: " + e.Message); LatausPetti(); yield break; }
             }
 
+            yield return LataaJaSoitaTiedosto(url, viiveS, oma, sailo, tiedosto, alku, synteesi, valimuistista, mukana);
+        }
+
+        /// <summary>Avaa levyllä olevan äänitteen klipiksi ja soittaa sen loppuun (LataaJaSoita ja virran varapolku).</summary>
+        IEnumerator LataaJaSoitaTiedosto(string url, float viiveS, int oma, bool sailo, string tiedosto, float alku,
+            bool synteesi = true, bool valimuistista = false, string mukana = null)
+        {
             AudioClip klippi;
             using (var r = UnityWebRequestMultimedia.GetAudioClip("file://" + tiedosto, TyyppiPaatteesta(tiedosto)))
             {
@@ -463,6 +534,107 @@ namespace Matkakirja.Natiivi
             if (jaljella > 0) yield return new WaitForSecondsRealtime(jaljella);
             if (oma != tunnus) { Destroy(klippi); yield break; }
 
+            AloitaKlippi(klippi, synteesi);
+            if (synteesi) ViimeEkaAaniMs = (Time.unscaledTime - alku) * 1000.0;
+            // Viive pyynnöstä ääneen (löydös 118: intron pitää alkaa painalluksesta heti).
+            Debug.Log($"MATKAKIRJA puhe: alkoi {(Time.unscaledTime - alku) * 1000:0} ms pyynnöstä ({(valimuistista ? "välimuisti" : "verkko")}) "
+                      + Path.GetFileName(url.Split('?')[0]) + (mukana != null ? " [buildissa]" : ""));
+
+            // Loppu: äänite soi loppuun (ei pysäytetty eikä korvattu).
+            while (oma == tunnus && (lahde.isPlaying || tauolla)) yield return null;
+            if (oma != tunnus) yield break;
+            SoivaUrl = null;
+            AsetaPuhuu(false);
+            var l = loppu;
+            loppu = null;
+            l?.Invoke();
+        }
+
+        /*
+         * PROGRESSIIVINEN SOITTO (web PR #3384, Fable 27.9.2026: "natiivin progressiivinen soitto"). Ennen synteesipala
+         * ladattiin kokonaan levylle ja avattiin vasta sitten: xAI tuottaa 2 400 merkin palan ~35 s:ssa (≈ 5 × reaaliaika),
+         * mutta ensimmäinen tavu tulee ~0,5 s:ssa — kuulija odotti koko generoinnin. Nyt POST-pyynnön vastaus soi
+         * striimattuna klippinä (DownloadHandlerAudioClip, streamAudio) heti, kun EsirullaTavut on saapunut, ja
+         * valmis pala tallennetaan välimuistiin samoista tavuista (dh.data), joten toinen kerta soi levyltä kuten ennen.
+         * Virta = false (testikomento "puhe virta pois") palauttaa vanhan polun vertailumittausta varten.
+         */
+        /// <summary>Progressiivinen soitto päällä (oletus). Pois: pala ladataan kokonaan ennen soittoa (vertailu).</summary>
+        public static bool Virta = true;
+        /// <summary>Tavuja ennen soiton alkua: ~1 s mp3:a (xAI 24 kHz); pienempi raja katkoisi alun.</summary>
+        public const int EsirullaTavut = 12 * 1024;
+        /// <summary>Viimeisimmän striimatun palan 1. ääni ms pyynnöstä (mittari: "puhe virta").</summary>
+        public static double ViimeEkaAaniMs { get; private set; } = -1;
+
+        IEnumerator SoitaVirtana(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma, bool sailo, string tiedosto, float alku)
+        {
+            string vaihe = VerkkoOdotus.Vaihe;
+            float odotusAlku = Time.realtimeSinceStartup;
+            var r = pyynto();
+            var dh = new DownloadHandlerAudioClip(Puhepalvelin, AudioType.MPEG) { streamAudio = true, compressed = false };
+            r.downloadHandler = dh;
+            r.timeout = 60;
+            var laheta = r.SendWebRequest();
+            // Esirulla: odotetaan ensimmäiset tavut (tai valmis vastaus, jos pala on lyhyt tai tuli virhe).
+            while (!laheta.isDone && r.downloadedBytes < (ulong)EsirullaTavut)
+            {
+                if (oma != tunnus) { r.Abort(); r.Dispose(); yield break; }
+                yield return null;
+            }
+            bool virhe = laheta.isDone && r.result != UnityWebRequest.Result.Success;
+            AudioClip klippi = null;
+            if (!virhe)
+            {
+                try { klippi = dh.audioClip; } catch (Exception e) { Debug.LogWarning("MATKAKIRJA puhe: virta: " + e.Message); }
+            }
+            if (klippi == null)
+            {
+                // Virtaklippiä ei syntynyt: odotetaan lataus loppuun ja pudotaan vanhaan polkuun (levy → klippi).
+                while (!laheta.isDone) { if (oma != tunnus) { r.Abort(); r.Dispose(); yield break; } yield return null; }
+                VerkkoOdotus.Kirjaa(vaihe, "puhe:" + Path.GetFileName(url.Split('?')[0]), (Time.realtimeSinceStartup - odotusAlku) * 1000.0, 1,
+                    r.result == UnityWebRequest.Result.Success ? null : "virhe");
+                if (sailo) Esilataaja.NakyvaValmis(url);
+                if (r.result != UnityWebRequest.Result.Success)
+                {
+                    ViimeVirhe = r.error;
+                    Debug.LogWarning($"MATKAKIRJA puhe: {url} ei latautunut (virta): {r.error} {r.responseCode}");
+                    r.Dispose();
+                    LatausPetti();
+                    yield break;
+                }
+                bool tallessa = Tallenna(dh, tiedosto);
+                r.Dispose();
+                if (!tallessa) { LatausPetti(); yield break; }
+                yield return LataaJaSoitaTiedosto(url, viiveS, oma, sailo, tiedosto, alku);
+                yield break;
+            }
+
+            float jaljella = viiveS - (Time.unscaledTime - alku);
+            if (jaljella > 0) yield return new WaitForSecondsRealtime(jaljella);
+            if (oma != tunnus) { r.Abort(); r.Dispose(); Destroy(klippi); yield break; }
+            AloitaKlippi(klippi, true);
+            ViimeEkaAaniMs = (Time.unscaledTime - alku) * 1000.0;
+            Debug.Log($"MATKAKIRJA puhe: alkoi {ViimeEkaAaniMs:0} ms pyynnöstä (verkko, virta {r.downloadedBytes} t) " + Path.GetFileName(url.Split('?')[0]));
+
+            // Soi, kunnes lataus on valmis JA klippi on soinut loppuun (virta voi hetkeksi ehtyä latauksen aikana).
+            // Tauolla (Puhe.Tauko) klippi ei soi, mutta puhe ei ole loppunut: loppu-kutsu vasta jatkon jälkeen.
+            while (oma == tunnus && (!laheta.isDone || lahde.isPlaying || tauolla)) yield return null;
+            VerkkoOdotus.Kirjaa(vaihe, "puhe:" + Path.GetFileName(url.Split('?')[0]), (Time.realtimeSinceStartup - odotusAlku) * 1000.0, 1,
+                laheta.isDone && r.result == UnityWebRequest.Result.Success ? null : "virhe");
+            if (sailo) Esilataaja.NakyvaValmis(url);
+            if (laheta.isDone && r.result == UnityWebRequest.Result.Success && sailo) Tallenna(dh, tiedosto);
+            else if (laheta.isDone && r.result != UnityWebRequest.Result.Success) { ViimeVirhe = r.error; Debug.LogWarning($"MATKAKIRJA puhe: virta katkesi: {r.error}"); }
+            if (oma != tunnus) { if (!laheta.isDone) r.Abort(); r.Dispose(); yield break; }
+            r.Dispose();
+            SoivaUrl = null;
+            AsetaPuhuu(false);
+            var l = loppu;
+            loppu = null;
+            l?.Invoke();
+        }
+
+        /// <summary>Vaihtaa soivan klipin (vanha tuhotaan), käynnistää sen ja häivyttää sisään; Puhuu-tapahtuma uudelleen.</summary>
+        void AloitaKlippi(AudioClip klippi, bool synteesi)
+        {
             if (haivytys != null) { StopCoroutine(haivytys); haivytys = null; }
             var vanha = lahde.clip;
             lahde.Stop();
@@ -473,24 +645,29 @@ namespace Matkakirja.Natiivi
             PaivitaVahvistus();
             vahvistin.Nollaa();
             lahde.Play();
-            // Viive pyynnöstä ääneen (löydös 118: intron pitää alkaa painalluksesta heti).
-            Debug.Log($"MATKAKIRJA puhe: alkoi {(Time.unscaledTime - alku) * 1000:0} ms pyynnöstä ({(valimuistista ? "välimuisti" : "verkko")}) "
-                      + Path.GetFileName(url.Split('?')[0]) + (mukana != null ? " [buildissa]" : ""));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun.
             if (puhuu) AsetaPuhuu(false);
             AsetaPuhuu(true);
             lataus = null;
             haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
+        }
 
-            // Loppu: äänite soi loppuun (ei pysäytetty eikä korvattu).
-            while (oma == tunnus && lahde.isPlaying) yield return null;
-            if (oma != tunnus) yield break;
-            SoivaUrl = null;
-            AsetaPuhuu(false);
-            var l = loppu;
-            loppu = null;
-            l?.Invoke();
+        /// <summary>Valmiin virran tavut välimuistitiedostoon (atominen siirto). false, jos tavuja ei saatu.</summary>
+        bool Tallenna(DownloadHandlerAudioClip dh, string tiedosto)
+        {
+            try
+            {
+                var tavut = dh.data;
+                if (tavut == null || tavut.Length == 0) { Debug.LogWarning("MATKAKIRJA puhe: virran tavuja ei saatu talteen"); return false; }
+                Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
+                string valiaikainen = tiedosto + ".virta";
+                File.WriteAllBytes(valiaikainen, tavut);
+                if (File.Exists(tiedosto)) File.Delete(tiedosto);
+                File.Move(valiaikainen, tiedosto);
+                return true;
+            }
+            catch (Exception e) { ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: virran tallennus: " + e.Message); return false; }
         }
 
         /// <summary>

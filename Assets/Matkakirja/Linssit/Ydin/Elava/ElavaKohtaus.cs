@@ -14,6 +14,8 @@
 //               5,0–6,5 nostot putoavat musteläikkinä luokittain | 5,5–8,0 aamuaurinko ja kallistettu kierto
 //               8,0–11,5 maakunta herää (napautus, väri valuu, käsialanimi, löydösmerkit) | 11,5–14,5 elävä hetki (laiva)
 //               14,5–18,0 kirjoitettu maailma (vetäytyminen hämärään, reitti kynänjälkenä, käydyt kaupungit hehkuvat) + pito
+// SAAPUMINEN (ElavaProfiili.Saapuminen, omistaja 27.9.2026 klo 08.3x): vain maakuntien täyttö heti 0 s:sta ja luovutus
+//               pelin pysyviin kerroksiin; profiilin vaiheliput ohittavat hunnun, kynäviivat, pudotukset ja auringon.
 //
 // RAJAPINNAT, joiden paikalla on nyt paikkamerkki (Natiiviseppä tekee pallon puolen, muut datana):
 //   Paljastus(keskus, säde, t)  ← HuntuSadeKm         Viivapiirto(kerros, osuus) ← Piirtoviiva.Osuus
@@ -78,7 +80,7 @@ namespace Matkakirja.Linssit.Elava
         public readonly List<(string Nimi, LatLon Paikka, double Alku, double Voima)> Valot = new List<(string, LatLon, double, double)>();
         public readonly Kamerapolku Kamera;
         public readonly double AlkuAtsimuutti, AlkuKorkeus;
-        /// <summary>Tempo: video (käsikirjoitus 18,5 s) tai saapuminen (pelattava kohta 1, ≤ 5 s).</summary>
+        /// <summary>Tempo: video (käsikirjoitus 18,5 s) tai saapuminen (pelattava kohta 1: täyttö ja luovutus, 1,6 s).</summary>
         public readonly ElavaProfiili P;
         readonly List<(double T, double Atsimuutti, double Korkeus)> aurinko;
 
@@ -104,48 +106,58 @@ namespace Matkakirja.Linssit.Elava
             double vali = n > 0 ? Math.Min(P.MaakuntaVali, P.MaakuntienKesto / n) : 0;
             for (int k = 0; k < n; k++) Sytytys[Jarjestys[k]] = P.MaakunnatAlku + k * vali;
 
-            // Maakuntarajat kynällä keskuksesta ulospäin, jokainen RajanKesto; alkuhetket jaettu ikkunaan.
-            var rajat = Maakuntarajat.Sisarajat(Maakunnat).Select(r => Maakuntarajat.Keskuksesta(keskus, r))
-                .OrderBy(r => r.Etaisyys).ToList();
-            double rajaVali = rajat.Count > 1 ? Math.Min(P.RajanKesto, (P.ViivatLoppu - P.ViivatAlku - P.RajanKesto) / (rajat.Count - 1)) : 0;
-            for (int k = 0; k < rajat.Count; k++)
-                Rajat.Add(new Piirtoviiva("raja " + k, rajat[k].Pisteet) { Alku = P.ViivatAlku + k * rajaVali, Kesto = P.RajanKesto });
-
-            // Joet lähimmästä alkaen (lähin piste), kesto pituuden mukaan.
-            var jl = (joet ?? Array.Empty<ElavaJoki>()).Where(j => j.Pisteet.Length > 1)
-                .Select(j => (j, e: j.Pisteet.Min(p => Kameramatikka.KulmaAsteina(keskus, p)))).OrderBy(x => x.e).ToList();
-            double pisin = jl.Count > 0 ? jl.Max(x => new Piirtoviiva(x.j.Nimi, x.j.Pisteet).Pituus) : 1;
-            double jokiVali = jl.Count > 1 ? Math.Min(P.JokiVali, (P.ViivatLoppu - P.ViivatAlku - P.JoenKestoMax) / (jl.Count - 1)) : 0;
-            for (int k = 0; k < jl.Count; k++)
+            // Kynäviivat vain, jos profiili piirtää ne (saapuminen 27.9.2026: ei rajoja eikä jokia).
+            if (P.ViivatPiirtyvat)
             {
-                var v = new Piirtoviiva(jl[k].j.Nimi, jl[k].j.Pisteet);
-                v.Alku = P.ViivatAlku + k * jokiVali;
-                v.Kesto = P.JoenKestoMin + (P.JoenKestoMax - P.JoenKestoMin) * (pisin > 0 ? v.Pituus / pisin : 1);
-                Joet.Add(v);
+                // Maakuntarajat kynällä keskuksesta ulospäin, jokainen RajanKesto; alkuhetket jaettu ikkunaan.
+                var rajat = Maakuntarajat.Sisarajat(Maakunnat).Select(r => Maakuntarajat.Keskuksesta(keskus, r))
+                    .OrderBy(r => r.Etaisyys).ToList();
+                double rajaVali = rajat.Count > 1 ? Math.Min(P.RajanKesto, (P.ViivatLoppu - P.ViivatAlku - P.RajanKesto) / (rajat.Count - 1)) : 0;
+                for (int k = 0; k < rajat.Count; k++)
+                    Rajat.Add(new Piirtoviiva("raja " + k, rajat[k].Pisteet) { Alku = P.ViivatAlku + k * rajaVali, Kesto = P.RajanKesto });
+
+                // Joet lähimmästä alkaen (lähin piste), kesto pituuden mukaan.
+                var jl = (joet ?? Array.Empty<ElavaJoki>()).Where(j => j.Pisteet.Length > 1)
+                    .Select(j => (j, e: j.Pisteet.Min(p => Kameramatikka.KulmaAsteina(keskus, p)))).OrderBy(x => x.e).ToList();
+                double pisin = jl.Count > 0 ? jl.Max(x => new Piirtoviiva(x.j.Nimi, x.j.Pisteet).Pituus) : 1;
+                double jokiVali = jl.Count > 1 ? Math.Min(P.JokiVali, (P.ViivatLoppu - P.ViivatAlku - P.JoenKestoMax) / (jl.Count - 1)) : 0;
+                for (int k = 0; k < jl.Count; k++)
+                {
+                    var v = new Piirtoviiva(jl[k].j.Nimi, jl[k].j.Pisteet);
+                    v.Alku = P.ViivatAlku + k * jokiVali;
+                    v.Kesto = P.JoenKestoMin + (P.JoenKestoMax - P.JoenKestoMin) * (pisin > 0 ? v.Pituus / pisin : 1);
+                    Joet.Add(v);
+                }
             }
 
-            // Hunnun suurin säde: kauimmainen kärki (km) + reuna, jotta huntu kuivuu kokonaan.
-            double kauin = 0;
-            foreach (var m in Maakunnat) foreach (var r in m.Renkaat) foreach (var q in r) kauin = Math.Max(kauin, Kameramatikka.KulmaAsteina(keskus, q));
-            HuntuMaxKm = kauin * KmAsteella + HuntuReunaKm;
+            // Hunnun suurin säde: kauimmainen kärki (km) + reuna, jotta huntu kuivuu kokonaan (vain profiileissa, joissa on huntu).
+            if (P.HuntuKuivuu)
+            {
+                double kauin = 0;
+                foreach (var m in Maakunnat) foreach (var r in m.Renkaat) foreach (var q in r) kauin = Math.Max(kauin, Kameramatikka.KulmaAsteina(keskus, q));
+                HuntuMaxKm = kauin * KmAsteella + HuntuReunaKm;
+            }
 
             // Heräävä maakunta ja napautettava nosto.
             for (int i = 0; i < n; i++) if (Maakunnat[i].Id == heraavaId) Heraava = i;
             if (Heraava < 0 && heraavaId != null) for (int i = 0; i < n; i++) if (etaisyydet[i] == 0) { Heraava = i; break; }
 
-            // Nostot luokittain (pääkohteet ensin), luokan sisällä keskuksesta ulospäin.
-            var lista = (nostot ?? Array.Empty<ElavaNosto>()).ToList();
-            var ikkunat = P.NostoIkkunat;
-            foreach (Kokoluokka luokka in new[] { Kokoluokka.Paakohde, Kokoluokka.Kohde, Kokoluokka.Pieni })
+            // Nostot luokittain (pääkohteet ensin), luokan sisällä keskuksesta ulospäin (saapuminen 27.9.2026: ei pudotuksia).
+            if (P.NostotPutoavat)
             {
-                var ryhma = lista.Where(x => x.Luokka == luokka).OrderBy(x => Kameramatikka.KulmaAsteina(keskus, x.Paikka))
-                    .ThenBy(x => x.Id, StringComparer.Ordinal).ToList();
-                var (a, b, kesto) = ikkunat[(int)luokka];
-                for (int k = 0; k < ryhma.Count; k++)
+                var lista = (nostot ?? Array.Empty<ElavaNosto>()).ToList();
+                var ikkunat = P.NostoIkkunat;
+                foreach (Kokoluokka luokka in new[] { Kokoluokka.Paakohde, Kokoluokka.Kohde, Kokoluokka.Pieni })
                 {
-                    int maakunta = -1;
-                    for (int i = 0; i < n && maakunta < 0; i++) if (Maakuntarajat.Sisalla(ryhma[k].Paikka, Maakunnat[i])) maakunta = i;
-                    Nostot.Add(new Pudotus { Nosto = ryhma[k], Alku = a + (b - a) * k / Math.Max(1, ryhma.Count), Kesto = kesto, Maakunta = maakunta });
+                    var ryhma = lista.Where(x => x.Luokka == luokka).OrderBy(x => Kameramatikka.KulmaAsteina(keskus, x.Paikka))
+                        .ThenBy(x => x.Id, StringComparer.Ordinal).ToList();
+                    var (a, b, kesto) = ikkunat[(int)luokka];
+                    for (int k = 0; k < ryhma.Count; k++)
+                    {
+                        int maakunta = -1;
+                        for (int i = 0; i < n && maakunta < 0; i++) if (Maakuntarajat.Sisalla(ryhma[k].Paikka, Maakunnat[i])) maakunta = i;
+                        Nostot.Add(new Pudotus { Nosto = ryhma[k], Alku = a + (b - a) * k / Math.Max(1, ryhma.Count), Kesto = kesto, Maakunta = maakunta });
+                    }
                 }
             }
             if (Heraava >= 0)
@@ -267,7 +279,7 @@ namespace Matkakirja.Linssit.Elava
         /// <summary>Kuivumisreunan tummuus 0–1 (vesiraja): vain kun reuna liikkuu.</summary>
         public double Vesiraja(double t) => t < P.HuntuAlku ? 0 : 1 - ElavaKayrat.Pehmea(U(t, P.HuntuLoppu - 0.4, 0.4));
 
-        public bool HuntuNakyy(double t) => t < P.HuntuLoppu + 0.05;
+        public bool HuntuNakyy(double t) => P.HuntuKuivuu && t < P.HuntuLoppu + 0.05;
 
         /// <summary>Omien kerrosten peitto: 1, ja saapumisen lopussa häivytys pelin pysyviin kerroksiin (luovutus).</summary>
         public double KerrostenPeitto(double t) =>
@@ -395,10 +407,10 @@ namespace Matkakirja.Linssit.Elava
         {
             var v = new List<string>();
             if (P.Kamera && t < SaapuminenLoppu) v.Add("saapuminen");
-            if (t >= P.HuntuAlku && t < P.HuntuLoppu) v.Add("huntu kuivuu");
-            if (t >= P.ViivatAlku && t < P.ViivatLoppu) v.Add("joet ja rajat");
+            if (P.HuntuKuivuu && t >= P.HuntuAlku && t < P.HuntuLoppu) v.Add("huntu kuivuu");
+            if (P.ViivatPiirtyvat && t >= P.ViivatAlku && t < P.ViivatLoppu) v.Add("joet ja rajat");
             if (t >= P.MaakunnatAlku && t < P.MaakunnatAlku + P.MaakuntienKesto + P.MaakunnanTaytto) v.Add("maakunnat syttyvät");
-            if (t >= P.NostoIkkunat[0].Alku && t < P.NostoIkkunat[2].Loppu + P.NostoIkkunat[2].Kesto) v.Add("nostot putoavat");
+            if (P.NostotPutoavat && t >= P.NostoIkkunat[0].Alku && t < P.NostoIkkunat[2].Loppu + P.NostoIkkunat[2].Kesto) v.Add("nostot putoavat");
             if (P.Kamera)
             {
                 if (t >= AurinkoAlku && t < AurinkoLoppu) v.Add("aamuaurinko");
