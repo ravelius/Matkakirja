@@ -327,6 +327,11 @@ namespace Matkakirja
                 if (++kehyksia == 3 && v3Kone != null) v3Kone.gameObject.SetActive(false);
                 float kulunut = Time.unscaledTime - odotusAlku;
                 LentoV3Odotus = kulunut;
+                // Aloitusrata: napautusnäkymä pysyy (omistaja: ei siirtymää ennen lentoa). Kaupungin napautus käynnistää myös
+                // KaupunkiMerkit.ValitseKaupunki-ajon kohti kaupunkia heti aloituslennon käynnistyksen jälkeen (v4-video 27.9.:
+                // kamera zoomasi odotuksessa Ateenaan ja syöksy hyppäsi takaisin); Kuvaa katkaisee ajon ja pitää asennon.
+                if (rata != null)
+                    kierto.Kuvaa(napautus.Lat, napautus.Lon, napautus.EtaisyysM, napautus.Kallistus, napautus.Suuntima, napautus.Katse);
                 syy = LennonV3Kaytava.Leikkaa(kulunut, v3Kaytava != null ? v3Kaytava.Osuus : 1f, v3Kaytava != null ? v3Kaytava.AlkuOsuus : 1f);
                 // Aloitusrata: myös Cesiumin valinta tasaantunut (ennakkokamera mukana: Lontoon lähikuvan laatat piirtoon asti,
                 // v3-video 27.9.: levyltäkin ~3 s), enintään AloitusrataOdotusKattoS napautuksesta. Näkymä on koko ajan paikallaan.
