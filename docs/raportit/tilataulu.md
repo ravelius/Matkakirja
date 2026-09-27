@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 19:43 EEST
+**Päivitetty:** 2026-09-27 19:55 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **71 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen — Natiiviseppä 68 % ja Karttaseppä 66 % ennallaan (idle, ei enää nousseet).
+Viikko (all models) **73 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen — Natiiviseppä 68 %, Karttaseppä 66 %, Sisältökirjuri 65 % lähimpänä.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
 | Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 44% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 29% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 30% | running |
 | Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 38% | running |
 | Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 68% | running |
 | Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 61% | idle |
 | Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 52% | idle |
 | Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 43% | idle |
-| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 50% | idle |
+| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 51% | idle |
 | Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 66% | idle |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 60% | running (PR #3397 auki) |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 65% | running (PR #3397 auki) |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 22% | running |
 
 ## 1b) Uusi valvontakohta odottaa (Siirtoseppä/Fable 18:4x)
@@ -56,15 +56,15 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (19:43)
+## 5) Resurssit (19:55)
 
-- **5 h -kiintiö:** 37 %. **Viikko (kaikki mallit):** 71 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 88 Gi vapaana (vakaa, pieni normaalivaihtelu). wt/-worktreet 30 kpl (ennallaan). Ei toimenpidettä.
+- **5 h -kiintiö:** 44 %. **Viikko (kaikki mallit):** 73 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 91 Gi vapaana (vakaa). wt/-worktreet 28 kpl (ennallaan). Ei toimenpidettä.
 - **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK).
 - **Simulaattorit boottina:** 3 (iPhone 18 Pro, iPhone 17, iPad Pro M5; max 4 — OK). **coreaudiod:** normaali.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen, Natiiviseppä 68% ja Karttaseppä 66% ennallaan (idle).
-- **Juna:** käynnissä normaalisti — KÄÄNNETTY 096709fc 19:38.
-- **PR #3441 (eheysvartija):** ei vielä mergetty. Postilaatikossa 6 uutta Codex↔Fable-viestiä (miniatyyrityylin PR:t, Ateenan sulkeminen) — normaali vuo.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen, Natiiviseppä 68% korkein.
+- **Juna:** käynnissä normaalisti, ei uutta niputettavaa 19:38 jälkeen (odottaa uusia committeja).
+- **PR #3441 (eheysvartija):** ei vielä mergetty. Postilaatikossa 2 uutta Codex↔Fable-viestiä (Istanbul/Edinburgh tyyli-PR:t) — normaali vuo.
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
   - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
