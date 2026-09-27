@@ -95153,7 +95153,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Iddoon ja lopulta Ekon saarelle.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-lagos-kaupunki-0-r20260907-v3.jpg',
           selite: 'Iga Idunganranin nykyistä pääsisäänkäyntiä Lagosissa '
-            + 'mukaileva tekoälykuvitus.',
+            + 'mukaileva tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Airial Travel — '
             + 'Iga Idunganran, Lagosin oban palatsi',
           wiki: 'Lagos',
@@ -96615,9 +96615,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sivistyksen keskuksista, ja kaupungin juutalaisyhteisö '
             + 'oli Marokon vanhin ja suurin.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-0-r20260907-v1.jpg',
-          lyhyt: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia havainnollistava tekoälykuvitus.',
+          lyhyt: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia tekoälyn havainnekuva.',
           selite: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia '
-            + 'havainnollistava tekoälykuvitus. Aukeama ja heprealainen '
+            + 'tekoälyn havainnekuva. Aukeama ja heprealainen '
             + 'teksti eivät ole alkuperäisen sivun jäljennös.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Library of '
             + 'Congress — 16th Century Hebrew Books, finding aid; Library of '
@@ -96642,9 +96642,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli '
             + 'vähintään neljä kirjapainoa.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-1-r20260907-v7.jpg',
-          lyhyt: 'Fèsin 1860-luvun kivipainoa havainnollistava tekoälykuvitus.',
+          lyhyt: 'Fèsin 1860-luvun kivipainoa tekoälyn havainnekuva.',
           selite: 'Fèsin 1860-luvun kivipainoa havainnollistava '
-            + 'tekoälykuvitus. Koneen rakenne perustuu saman aikakauden '
+            + 'tekoälyn havainnekuva. Koneen rakenne perustuu saman aikakauden '
             + 'museoprässiin; kuva ei ole al-Rudanin painon tai aidon '
             + 'kirjasivun jäljennös.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Science Museum '
@@ -96930,9 +96930,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli siis vuoden vanhan Goréen kunnan osa; omaksi '
             + 'kunnakseen se irrotettiin vasta 1887.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-2-r20260907-v2.jpg',
-          lyhyt: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin varhaista satamaa havainnollistava tekoälykuvitus.',
+          lyhyt: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin varhaista satamaa tekoälyn havainnekuva.',
           selite: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin '
-            + 'varhaista satamaa havainnollistava tekoälykuvitus. Kuva ei '
+            + 'varhaista satamaa tekoälyn havainnekuva. Kuva ei '
             + 'esitä dokumentoitua yksittäistä lastausta vuodelta 1873.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Port autonome '
             + 'de Dakar — Tout sur le port, nro 18; IRD Horizon — Senegalin '
@@ -97240,9 +97240,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Beaux-Artsin ensimmäinen musta jäsen. Hän kuoli '
             + 'Dakarissa 2016.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-nykytaide-2-r20260907-v3.jpg',
-          lyhyt: 'Ousmane Sow\'n Couple de lutteurs -veistoksen muotoja mukaileva tekoälykuvitus.',
+          lyhyt: 'Ousmane Sow\'n Couple de lutteurs -veistoksen muotoja mukaileva tekoälyn havainnekuva.',
           selite: 'Ousmane Sow’n Couple de lutteurs (Corps à corps) '
-            + '-veistoksen muotoja mukaileva tekoälykuvitus. Näyttelypiha on '
+            + '-veistoksen muotoja mukaileva tekoälyn havainnekuva. Näyttelypiha on '
             + 'kuvitteellinen.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Les Abattoirs '
             + '(Navigart) — Ousmane Sow, Couple de lutteurs (Corps à corps)',
