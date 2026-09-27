@@ -353,7 +353,7 @@ muuten.)*
 | Aarreruksi +100 p | Erikoistason voitto (esim. vaikea peli tai aarteen lopullinen löytyminen) palkitsee kertaluonteisesti +100 pisteellä. Sama avoin kysymys talous-suunnitelmassa kohta 6. | idea |
 | Huvipuistopelit 30/100 p | Tori-/huvipuistotyyppiset minipelit (esim. narunveto, pallonheitto) antavat pienempiä palkintotasoja: 30 tai 100 pistettä. Talous-suunnitelma kohta 4 ehdottaa jo tarkat luvut (pääsy 30 £, panos 10 £, voitto 30–100 £, enintään 3 peliä/vierailu) — omistajan vahvistettavana kohdassa 10.9. | idea |
 | Lentopeli | Tiger Moth -vapaalento tehtävineen, polttoaine maksaa ja kuluu. Kehitetty täydeksi kortiksi, ks. [Uudet omistajan kortit](#uudet-omistajan-kortit-2792026-klo-110x) alla. | tarkista (avoimet kysymykset kortissa) |
-| Pelistreak | 3+ peräkkäistä pelipäivää → kasvava rahapalkinto. Kehitetty täydeksi kortiksi, ks. [Uudet omistajan kortit](#uudet-omistajan-kortit-2792026-klo-110x) alla. | tarkista (avoimet kysymykset kortissa) |
+| Pelistreak | 3+ peräkkäistä oikean elämän pelipäivää → kasvava rahapalkinto, yksi armopäivä viikossa. Kortti alla: [Uudet omistajan kortit](#uudet-omistajan-kortit-2792026-klo-110x). | rakenteilla |
 | *(omistaja lisää tähän)* | | |
 
 ---
@@ -771,41 +771,37 @@ minipeli vai laajennus nykyiseen lento v3 -kamera-ajoon.
 
 ### Pelistreak
 
-**Konsepti:** meta-mekaniikka, joka palkitsee pelaajaa minkä tahansa
-pelikatalogin minipelin pelaamisesta useana peräkkäisenä pelipäivänä.
+**Tila:** hyväksytty ja toteutettu (omistaja 27.9.2026): web ja iOS.
 
-**Sääntö:** peli seuraa, montako peräkkäistä pelin sisäistä vuorokautta
-(dayCount, ks. talous-suunnitelma-20260927.md kohta 1: vuorokaudessa
-4 vuoroa) pelaaja on pelannut vähintään yhden minipelin (mikä tahansa
-katalogin peli, bottia tai kaveria vastaan). Väliin jäänyt päivä
-nollaa streakin. Kolmesta peräkkäisestä pelipäivästä alkaen pelaaja
-saa rahapalkinnon, joka kasvaa streakin pituuden mukaan (ehdotus:
-3 päivää = 20 £, 5 päivää = 50 £, 7+ päivää = 100 £ — porrastus
-omistajan päätettävissä). Palkinto maksetaan kerran per saavutettu
-kynnys, seuraava kynnys vaatii pidemmän streakin.
+**Konsepti:** palkitsee pelaajaa siitä, että hän pelaa oikean elämän
+peräkkäisinä päivinä (laitteen paikallinen päivämäärä). Pelipäivä
+lasketaan, kun pelaaja tekee pelissä vähintään yhden teon (liike,
+tehtävä, visa, kauppa — mikä tahansa teko); pelkkä avaaminen ei riitä.
 
-**Kierrosrakenne — botti/kaveri:** ei sovellu — taustajärjestelmä, ei
-oma pelattava peli, vaan laskuri joka reagoi minkä tahansa katalogin
-pelin pelaamiseen.
+**Sääntö:** päivän ensimmäinen teko kirjaa pelipäivän. Päivät 1–2:
+ei palkkiota. Päivät 3–6: 20 £ päivässä. 7. päivä: 50 £ + viikkobonus
+100 £. 8. päivästä alkaen 30 £ päivässä, ja joka 7. päivä (14, 21, …)
+lisäksi viikkobonus 100 £. ARMOPÄIVÄ: yksi väliin jäänyt päivä 7 päivän
+liukuvassa ikkunassa ei katkaise putkea, mutta siitä ei tule palkkiota
+eikä se kasvata putken pituutta. Toinen väliin jäänyt päivä saman
+ikkunan sisällä (tai kaksi peräkkäistä) nollaa putken. Uusi peli
+aloittaa putken alusta.
+
+**Kierrosrakenne — botti/kaveri:** ei oma pelattava peli vaan
+taustalaskuri. Moninpelissä jokaisella ihmispelaajalla on oma putkensa;
+botit eivät kerrytä putkea.
 
 **Mitä opitaan:** ei suoraa oppimiskytköstä — motivaatiomekaniikka,
-joka kannustaa palaamaan peleihin säännöllisesti ja kokeilemaan eri
-maiden pelejä.
+joka kannustaa palaamaan matkalle säännöllisesti.
 
-**Pisteet/raha:** suora rahapalkinto, porrastettu streakin pituuden
-mukaan (3/5/7+ päivää = 20/50/100 £ ehdotuksena). Ei saa olla
-dominoiva tulonlähde — talous-suunnitelman kohdan 6 mukaan 30 päivän
-matkan nettotulot ovat n. +500 £ ilman streak-bonusta.
+**Pisteet/raha:** suora rahapalkinto kassaan heti päivän ensimmäisellä
+teolla. Viikon putki tuo 20 × 4 + 50 + 100 = 230 £ (noin 11
+päiväkulua); se ei yksin rahoita matkaa, mutta tekee säännöllisestä
+pelaamisesta turvallisempaa.
 
-**Grafiikka ja äänet:** pieni streak-laskurikuvake (esim. liekki tai
-kompassi + numero) matkakirjan kannessa tai kassarivin vieressä, lyhyt
-palkkioanimaatio kynnyksen täyttyessä; ääni: pieni kolikkoääni + Pulun
-tai Livian kannustava repliikki.
+**Grafiikka ja äänet:** ilmoitus kartan päällä ("Kolmas päivä
+peräkkäin matkalla · +20 £") kukkaroikonilla, rivi matkapäiväkirjaan
+ja Pulun iloinen reaktio. Ei kalenteria ensimmäisessä vaiheessa.
 
-**Missä pelataan:** ei sidottu yhteen kohteeseen — näkyy jatkuvasti
-taustalla matkakirjan käyttöliittymässä.
-
-**Avoimet kysymykset omistajalle:** tarkka palkintoporrastus,
-nollautuuko streak jos pelaaja ei matkusta (vain pelaa samassa
-kaupungissa), lasketaanko sama peli toistuvasti pelattuna vai
-vaaditaanko eri pelejä streakin jatkumiseksi.
+**Missä pelataan:** ei sidottu kohteeseen — laskuri kulkee
+tallennuksessa ja iCloud-synkassa laitteelta toiselle.
