@@ -6,6 +6,15 @@ Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia s
 löytyi 26.9.2026 build 20:n testauksessa: kamera-, usva- ja maakuntakomennot ovat siinä, ja se toimii
 samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama konsoli kaikissa käännöksissä).
 
+**SUDENKUOPPA (Laitetestaaja 27.9.2026 klo 12.3x, 1.0.29-kierros):** `mcp__Claude_Code_iOS_Simulator__control`
+tap/swipe-koordinaatit ovat LAITEPISTEINÄ (esim. iPhone 18 Pro 402×874, kerrottu `attach`-kutsun
+vastauksessa), EIVÄT kuvakaappauksen pikseleinä (natiivi resoluutio 3× laitepisteet, esim. 1206×2622).
+Kuvasta silmämääräisesti arvioituja pikselikoordinaatteja EI SAA antaa suoraan tap-parametreiksi —
+tulos on hiljainen ohilyönti (ei virhettä, napautus vain osuu väärään/olemattomaan kohtaan tai laitteen
+ulkopuolelle jos y/x ylittää laitepisteiden rajan). Jos tap ei näytä vaikuttavan mihinkään, tarkista
+ensin tämä ennen kuin epäilet build-vikaa. `elava elementit` (meri) kuuluu `linssi-komento.txt`:hen,
+EI `komento.txt`:hen — sekoitin nämä 1.0.29-kierroksella, tunnisti "tuntematon"-vastauksesta.
+
 ## 1.0.29-kierroksen valmisteltu resepti (Laitetestaaja 27.9.2026 klo 12.0x, ennen buildia)
 
 Tutkittu Explore-agentilla proto-3d/Matkakirja-proto:sta (HEAD master 7788b629 = BUILD 28).
