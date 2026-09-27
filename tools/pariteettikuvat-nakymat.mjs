@@ -225,6 +225,41 @@ export const NAKYMAT = [
   },
   { nimi: 'kartta', kuvaus: 'Intro ohitettu: pallo kaupungissa, toimintavaihe (?koe=suoraan + tallenne)' },
   {
+    nimi: 'rahattomuus', kuvaus: 'Rahat loppu: rahattomuuspalkki 6/8 punaista neliötä kartan yläreunassa, yläpalkissa £0 · 2 vrk',
+    avaa: () => {
+      const { ui } = window.matkakirja;
+      const g = ui.game;
+      g.player.money = 0;
+      g.player.rahaton = { alkuVuoro: g.turnCount - 2, paiva: g.dayCount?.() ?? 1 };
+      ui.render();
+    },
+    odota: '.rahattomuuspalkki:not([hidden])',
+  },
+  {
+    nimi: 'rahattomuus-selite', kuvaus: 'Rahattomuuspalkin napautus: miniselite neliöistä (omistaja 16.1x)',
+    avaa: () => {
+      const { ui } = window.matkakirja;
+      const g = ui.game;
+      g.player.money = 0;
+      g.player.rahaton = { alkuVuoro: g.turnCount - 2, paiva: g.dayCount?.() ?? 1 };
+      ui.render();
+      ui.vaihdaRahattomuusSelite();
+    },
+    odota: '.rahattomuus-selite:not([hidden])',
+  },
+  {
+    nimi: 'rahattomuus-vaisto', kuvaus: 'Matkakirjan kortti auki: palkki väistää kortin alle (tai viereen, jos mahtuu)',
+    avaa: () => {
+      const { ui } = window.matkakirja;
+      const g = ui.game;
+      ui.asetaPaivakirjanKoko(false);
+      g.player.money = 0;
+      g.player.rahaton = { alkuVuoro: g.turnCount - 2, paiva: g.dayCount?.() ?? 1 };
+      ui.render();
+    },
+    odota: '.fact-card:not(.pieni)',
+  },
+  {
     nimi: 'matkakirjakortti-auki', kuvaus: 'Matkakirjan merkintäkortti auki (ui.asetaPaivakirjanKoko(false))',
     avaa: () => { window.matkakirja.ui.asetaPaivakirjanKoko(false); }, odota: '.fact-card:not(.pieni)',
   },
@@ -586,6 +621,25 @@ const linssiKaynnissa = (p) => {
 };
 const TODENNUS = {
   aloitusportti: { nakyy: ['.start-btn'] },
+  'rahattomuus-selite': { nakyy: ['.rahattomuus-selite'] },
+  'rahattomuus-vaisto': {
+    ehto: () => {
+      const p = document.querySelector('.rahattomuus-lohkot')?.getBoundingClientRect();
+      const f = document.querySelector('.fact-card')?.getBoundingClientRect();
+      if (!p || p.width < 60) return 'palkki ei näy';
+      const paalla = f && p.left < f.right && p.right > f.left && p.top < f.bottom && p.bottom > f.top;
+      return paalla ? 'palkki matkakirjan päällä' : null;
+    },
+  },
+  rahattomuus: {
+    // Palkki on pieni (≈ 93 × 11), joten nakyy-tarkistuksen minimikoko ei sovi: ehto mittaa itse.
+    ehto: () => {
+      const p = document.querySelector('.rahattomuuspalkki');
+      const r = p && !p.hidden ? p.getBoundingClientRect() : null;
+      if (!r || r.width < 60 || r.height < 8) return 'palkki ei näy';
+      return document.querySelectorAll('.rahattomuuspalkki .rahattomuus-lohko.palaa').length === 6 ? null : 'lohkoja ei 6';
+    },
+  },
   'avausteksti-kesken': { nakyy: ['.intro-juliste'] },
   'avausteksti-valmis': { nakyy: ['.intro-valinta'] },
   aloitusvalinta: { ehto: () => (window.matkakirja.game.phase === 'pickstart' ? null : `vaihe ${window.matkakirja.game.phase}`) },

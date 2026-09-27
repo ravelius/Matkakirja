@@ -5503,3 +5503,17 @@ test('pelistreak: armopäivä — yksi väliin jäänyt päivä 7 päivän ikkun
   assert.equal(kirjaa('2026-09-24').pituus, 10, 'armopäivä 23.9. on 8 päivää edellisestä (15.9.)');
   assert.equal(game.player.streak.armo, '2026-09-23');
 });
+
+test('rahattomuuspalkki: kuuden tunnin jaksot vähenevät vuoroittain ja katoavat kassan selvitessä', () => {
+  const game = talousPeli('ateena');
+  const p = game.player;
+  assert.equal(game.rahattomuusVuorojaJaljella(p), null, 'ei varoitusta, ei palkkia');
+  p.rahaton = { alkuVuoro: game.turnCount, paiva: 1 };
+  assert.equal(game.rahattomuusVuorojaJaljella(p), RAHATTOMUUS_VUOROJA, '2 vrk = 8 lohkoa');
+  p.rahaton.alkuVuoro -= 3;
+  assert.equal(game.rahattomuusVuorojaJaljella(p), RAHATTOMUUS_VUOROJA - 3);
+  p.rahaton.alkuVuoro -= 20;
+  assert.equal(game.rahattomuusVuorojaJaljella(p), 0, 'ei negatiivinen');
+  p.rahaton = null;
+  assert.equal(game.rahattomuusVuorojaJaljella(p), null);
+});
