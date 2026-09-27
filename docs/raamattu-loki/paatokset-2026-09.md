@@ -7955,3 +7955,7 @@ Julkaisija 09.19: TF 1.0.28 lahetetty ja ASC:ssa kasitelty, CFBundleVersion 2026
 ## PROGRESSIIVINEN SOITTO #3384 (v2307); P1 TODENNAKOINEN SYY: PUHEEN PAIVARAJA 60 000 mrk/IP TAYTTYI MITTAUKSISTA → 429 OMISTAJAN VERKOSSA (27.9.2026 klo 09.22)
 
 Pelikoodari 09.2x: progressiivinen soitto #3384 (v2307): mp3 kehysrajoilta segmentteina, esirulla 3 + jalkirulla 1, 24 kHz; 1. aani 2 400 mrk 25 s → 1,75/2,2 s, lehtisivu 6,6 → 1,64 s, Pulu 2,26 → 1,72 s; kuulonayte proto-3d/lokit/puhevirta/. HUOM mittaukset tayttivat workerin paivarajan 60 000 mrk/IP → saman verkon laitteet saavat 429 → Fable: omistajan 09.2x P1 (taukoilee, hyppii) todennakoisesti tama. Toimet: PUHE_PAIVARAJA/KUUKAUSIRAJA nosto (~400 000/IP/vrk) PR heti, asiakas ei ohita virketta aanetta 429:ssa vaan pysahtyy ja nayttaa viestin, POLLO_KEHITTAJAKOODI Macin avaintiedostoon mittauksia varten (Julkaisija).
+
+## OMISTAJA 09.3x: STRIIMI KORJAUTUI TF 1.0.28:SSA — VIKA OLI NATIIVIN 1.0.27, P1 PURETTU (27.9.2026 klo 09.22)
+
+Omistaja 09.3x: striimiluenta korjautui uudessa buildissa (TF 1.0.28, lukija-putki) — 09.2x:n taukoilu/hyppiminen oli natiivin 1.0.27. P1 purettu; puheen paivarajan nosto ja 429-kasittely (ei ohiteta virketta aanetta) tehdaan normaalina PR:na. Pelikoodarin jarjestys: raja-PR → maakuntaera (mannerlennot jaavat) → natiivin progressiivisen soiton speksi → luovutus + nollaus.
