@@ -21746,6 +21746,31 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 }
 
 /*
+ * UUDEN MATKAN LYHYT TERVEHDYS: Ohita kuplan oikeassa alakulmassa
+ * (omistaja 27.9.2026 "KERRAN + OHITA"; js/livia.js
+ * naytaLivianLyhytAvaus). Kevyt: pelkkä tekstinappi ilman kehystä,
+ * sama muste kuin kuplan teksti, kosketusalue ≥ 32 px.
+ */
+.pollo-vihje-ohita {
+  display: block;
+  margin: 0.2rem -0.35rem -0.3rem auto;
+  min-height: 2rem;
+  padding: 0.25rem 0.45rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.pollo-vihje-ohita:hover,
+.pollo-vihje-ohita:focus-visible { opacity: 1; }
+
+/*
  * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistajan tilaus 29.8.2026;
  * js/livia.js, js/pollo.js naytaAvauskupla).
  *
