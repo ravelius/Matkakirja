@@ -8219,3 +8219,7 @@ Omistaja 27.9.2026 klo 15.5x kortilla: kun pelaaja painaa noston tai lehden kaiu
 ## TF 1.0.30 TESTFLIGHTISSA (202609271221 = BUILD 30 7b8a12c0); #3418 v2326, #3419 v2327 MAINISSA; LEVYSIIVOUS 16,5 Gt (27.9.2026 klo 15.52)
 
 Julkaisija: TF 1.0.30 sisaisessa ryhmassa (ajo 36319884765), muutoslokivartija paasti rivin lapi. Web: havainnekuva-sana #3418 v2326, Euroopan ohuimmat erat 1–2 #3419 v2327 (Valletta, MLT/LUX-skandaalit, Lappi, Sisilia, Kreeta, Islanti, Alpit, Tromssa, Marseille, Riika). Omistaja ajoi Natiivisepan levysiivouksen: 16,52 Gt, vapaana 108 Gi. Laitetestaaja jatko: pelistreak + armopaiva ja vuori PASS; talous-loppukortti odottaa rahan nollauskomentoa, pienten maiden kynnys aloituksella pienessa maassa.
+
+## OMISTAJA: ELAMAPALKKI YLEMMAS, VAISTAA ALEMMAS MATKAKIRJAN TIELTA; NAPAUTUS AVAA MINI-POPUPIN SELITYKSELLA (27.9.2026 klo 16.11)
+
+Kortti 16.1x (kuvaparit kuvapari-elamapalkki-iphone/ipad.png, web #3421 44deb9e2 | natiivi 4137bcc9): palkit oletuksena ylempana kartan ylareunassa ja vaistavat alemmas jos matkakirja vie enemman tilaa; neliöiden napautus avaa mini-popupin, joka kertoo mita palkit tarkoittavat. Pelikoodari web ensin, Natiivi-UI natiivi → 1.0.31. Sisaltokirjuri: Euroopan era 3 #3423 (Barcelona, Kiova, Edinburgh, Varsova, Dubrovnik). TF 1.0.30 tuotannossa.
