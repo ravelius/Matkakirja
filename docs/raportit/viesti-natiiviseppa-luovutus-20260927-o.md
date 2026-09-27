@@ -11,6 +11,9 @@ Luovuttaja: Natiiviseppä (Opus 5.5, Macin käyttäjä koodaus). Syy: konteksti 
 - 1.0.33 sisältö: Pelikoodari fb67281f (luenta), Natiivi-UI e736abc4 (salaisuudet pois), cdb455d2 (400 £), b0a6d307 +
   015fdb8e (VoiceOver + C1) ja 31daba91 (C1 peruttu), 6f1ec96c (kuvakortti vakaa), 1b47f46e (äänivalitsin), Linssiseppä
   fac195c0 (erikoismallit erä 4). Tallessa: _valmiit/juna-8096bae5 (1.0.31), juna-4be1a696 (1.0.32), juna-508761e8 (1.0.33).
+- **JULKAISULIPPU ON YHTEINEN**: poistin sen vahingossa klo 23.44 oman ajoni jälkeen, vaikka Julkaisijan TF-vienti (ajo
+  36348081044, alkoi jonossa 23.27) tarvitsi sitä. Palautin sen 23.46 ja kerroin Julkaisijalle. Poista lippu vain, jos kukaan
+  muu ei aja (kysy Julkaisijalta tai tarkista `gh run list`).
 - **YÖTAUKO** (Fable 22.30 → Karttasepän polton loppu): ei käännöksiä eikä simulaattoreita. Build-juna tauolla
   (/tmp/matkakirja-juna-tauko, purku aamulla Karttasepän ilmoituksesta). Poikkeus vain julkaisu lipulla
   `touch /tmp/matkakirja-julkaisu` → `rm -f` heti perään. Rikoin tämän tietämättä klo 22.33–22.46 (muistio päivitetty).
@@ -67,6 +70,15 @@ Jos video ei ehtinyt Fablelle ennen nollausta: tee se ensin (julkaisulippu, yksi
 **SEURAAVAT:** omistajan palaute videosta; 20 s:n versio, jos omistaja haluaa rauhallisemman (vaiheiden ajat ovat vakioita
 AloituslennonRata.cs:n alussa); alkutekstit peliin (Natiivi-UI:n UI Toolkit -kerros, Nappula antaa tapahtumat
 AloituslennonRata-aikojen mukaan); merge junaan vasta omistajan OK:n jälkeen.
+
+## 1.0.34-JONO aloituslennon rinnalle: RAE ja PATINA (omistajan tilaus Fablen kautta 27.9. klo 23.4x)
+
+Kehittäjävalikkoon RAE- ja PATINA-säätimet samaan tapaan kuin sävy- ja kontrastisäätimet (Pohjasavy.cs + tee_tileset.py:n
+RadioHamara-alku + Natiivi-UI:n säätimet 5bcbc178): varjostimessa, ei polttoa. Omistaja testaa tasot laitteella, ja hyvät
+arvot poltetaan myöhemmin laattoihin. Fablen ehdotus: RAE = voimakkuus + koko (staattinen, kartan pintaan sidottu kohina, EI
+ruudun filmirae, EI animoitu → levossa ei lisäpiirtoa, lämpösääntö); PATINA = tahrat/likaisuus (laaja pehmeä kohina) +
+kellastuminen/haalistuminen + reunatummennus. Oletukset 0 = nykyinen kuva (global kuten _pohjaSavy, oletus 0 ei muuta mitään).
+Mittaa GPU-hinta (ms) iPhonella. Yksi mietitty toteutus ja kuvapari eri tasoilla omistajalle.
 
 ## Muut avoimet
 
