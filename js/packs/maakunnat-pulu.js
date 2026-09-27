@@ -1466,4 +1466,174 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mikä keskiaikainen linna kohoaa Zagrebin yllä Medvednican rinteellä?", a: "Medvedgrad-linna rakennettiin 1249–1254 Zagrebin piispan käskyllä tataarien hyökkäyksen jälkeen; sitä ei koskaan valloitettu taistelussa, mutta maanjäristys jätti sen raunioiksi vuonna 1590." },
     ],
   },
+  ROU: {
+    Alba: [
+      { q: "Miksi Roșia Montană on kuuluisa?", a: "Roomalaiset louhivat siellä kultaa jo pari vuosituhatta sitten, ja nykyaikainen kaivoshanke alueella on herättänyt vuosikausia kiivasta keskustelua ympäristön ja historiallisten kaivostunnelien suojelusta." },
+      { q: "Mistä Alban lääni tunnetaan viininviljelyssä?", a: "Jidveiin viinitilat ovat Romanian laajimmat, ja alueen raikkaat valkoviinit kuuluvat maan arvostetuimpiin." },
+    ],
+    Arad: [
+      { q: "Millainen on Aradin linnoitus?", a: "Kaupungin keskellä kohoava tähdenmuotoinen linnoitus rakennettiin 1700-luvulla, ja osa siitä on edelleen puolustusvoimien käytössä." },
+      { q: "Mistä Arad on tunnettu urheilussa?", a: "Kaupungin jalkapalloseura UTA Arad on yksi Romanian historiallisimmista, ja se voitti useita mestaruuksia 1900-luvun puolivälin jälkeen." },
+    ],
+    Arges: [
+      { q: "Mikä yhteys Vlad Seivästäjällä on Argeșiin?", a: "Hänen todellinen linnansa, Poenarin raunio, kohoaa jyrkän 1480 portaan päässä vuorenrinteellä — toisin kuin turisteille markkinoitu Bran-linna, joka ei liity häneen historiallisesti." },
+      { q: "Mikä oli Argeșin ensimmäinen ruhtinaskaupunki?", a: "Câmpulung toimi Wallachian ensimmäisenä pääkaupunkina 1300-luvulla, ennen kuin ruhtinaan istuin siirrettiin Curtea de Argeșiin." },
+    ],
+    Bacau: [
+      { q: "Mikä on Slănic Moldova?", a: "Bacăun vuoristossa sijaitseva kylpyläkaupunki tunnetaan kivennäislähteistään, joita on käytetty parantavina kylpyinä 1800-luvun puolivälistä lähtien." },
+      { q: "Mitä Târgu Ocnan suolakaivoksessa voi tehdä?", a: "Maan alle louhittuun saliin on rakennettu kappeli ja hengityssairauksien hoitoon käytetty parantola, joihin matkailijat voivat tutustua opastetuilla kierroksilla." },
+    ],
+    Bihor: [
+      { q: "Mikä on Baile Felix?", a: "Oradean liepeillä sijaitseva kuuluisa kylpyläalue, jonka lämpöiset lähteet pysyvät ympäri vuoden yli 20-asteisina ja houkuttelevat kylpijöitä myös talvella." },
+      { q: "Millainen on Oradean linnoitus nykyään?", a: "Transilvanian suurimpiin kuuluva linnoitus on kunnostettu museoksi ja tapahtumapaikaksi, ja sen muurien sisällä voi nykyään yöpyä hotellissa." },
+    ],
+    "Bistrita-Nasaud": [
+      { q: "Mikä on Colibița?", a: "Vuonna 1972 padottu tekojärvi Bistrița-Năsăudissa, jonka rannalla hukkunut kylä paljastuu joskus kuivina kausina veden pinnan laskiessa." },
+      { q: "Miksi Rodnan vuoret ovat suojeltuja?", a: "Alue on kansallispuisto ja biosfäärialue, jossa elää karhuja, susia ja Karpaattien harvinaista kasvistoa." },
+    ],
+    Botosani: [
+      { q: "Missä kolme valtiota kohtaavat Botoșanin läänin liepeillä?", a: "Romanian, Moldovan ja Ukrainan rajapyykki sijaitsee Botoșanin läänin pohjoisosassa Prut-joen tuntumassa — yksi harvoista paikoista Euroopassa, jossa kolme rajaa yhtyy." },
+      { q: "Mikä on Botoșanin suuri synagoga?", a: "Vuonna 1834 rakennettu 'Hoihe Sil' on yksi Moldovan alueen vanhimmista ja koreimmin koristelluista synagogista, muistona kaupungin ennen sotaa vilkkaasta juutalaisyhteisöstä." },
+    ],
+    Braila: [
+      { q: "Millaisia jälkiä Brăilan kansainvälisestä kauppiasyhteisöstä näkyy kaupungissa nykyään?", a: "1800-luvulla kaupunkiin asettuneet kreikkalaiset, italialaiset ja ranskalaiset kauppiaat rakensivat sen keskustaan eurooppalaistyylisiä palatseja, joista monet on nykyään entisöity." },
+      { q: "Mikä on Brăilan pieni saari?", a: "Tonavan haarojen väliin jäävä suojeltu Insula Mică a Brăilei on tärkeä vesilintujen elinalue, ja sinne pääsee tutustumaan veneretkillä kaupungin läheltä." },
+    ],
+    Brasov: [
+      { q: "Mikä yhdistää Brașovin lähistön Draculaan?", a: "Läheinen Bran-linna tunnetaan 'Draculan linnana', vaikka Bram Stoker ei koskaan käynyt siellä — yhteys syntyi vain ulkonäön ja sijainnin perusteella." },
+      { q: "Mikä on Poiana Brașov?", a: "Romanian suosituin hiihtokeskus sijaitsee vain parin kymmenen minuutin ajomatkan päässä kaupungin keskustasta vuoristorinteillä." },
+    ],
+    Bucharest: [
+      { q: "Mikä on yksi maailman painavimmista rakennuksista Bukarestissa?", a: "Parlamentin palatsi on yksi maailman suurimmista hallintorakennuksista — se rakennettiin 1980-luvulla Ceaușescun aikana, ja sen alle louhittiin osia kaupungin metrolinjastosta." },
+      { q: "Miksi Bukarestia on kutsuttu 'Pieneksi Pariisiksi'?", a: "1900-luvun alun ranskalaisvaikutteinen arkkitehtuuri ja leveät bulevardit toivat kaupungille lempinimen, joka elää edelleen matkailumainonnassa." },
+    ],
+    Buzau: [
+      { q: "Mikä on 'elävä tuli' Buzăussa?", a: "Lopătarin kylän lähellä maankamarasta purkautuva metaani syttyy itsestään ja palaa pienenä liekkinä vuosisatoja jatkuneena ilmiönä." },
+      { q: "Mistä Buzăun lääni tunnetaan viinintutkimuksessa?", a: "Pietroasan viinitutkimusasema perustettiin 1893 rypäletuhotautia vastaan, ja se on yhä yksi Romanian tärkeimmistä viininviljelyn tutkimuskeskuksista." },
+    ],
+    Calarasi: [
+      { q: "Mikä on Brăilan suursaari (Insula Mare a Brăilei)?", a: "Tonavan pääuoman ja Borcea-sivuhaaran välissä sijaitseva saari on yksi Euroopan suurimpia jokisaaria; se kuivatettiin ja otettiin maatalouskäyttöön 1960-luvulla." },
+      { q: "Mistä Călărașin kaupungin nimi juontuu?", a: "Nimi liittyy romanian sanaan ratsumies (călăraș) — seudulla toimi aikoinaan ratsuväen ja kirjeenkuljetuksen välitysasemia kauppareittien varrella." },
+    ],
+    "Caras-Severin": [
+      { q: "Mikä on Cheile Nerei-Beușnița?", a: "Kansallispuisto Caraș-Severinissä suojelee Nera-joen kanjoneita ja Beușnițan vesiputousta, joka on yksi Romanian kauneimpia." },
+      { q: "Mistä Semenicin vuoret tunnetaan?", a: "Alueella sijaitsee yksi Romanian vanhimmista hiihtokeskuksista, ja lähistön kalkkikivimaastossa on useita pitkiä luolajärjestelmiä." },
+    ],
+    Cluj: [
+      { q: "Miksi Clujia kutsutaan Romanian teknologiakeskukseksi?", a: "Kaupunkiin on keskittynyt runsaasti IT-yrityksiä ja startup-yhtiöitä, ja sitä kutsutaan usein Romanian piilaaksoksi." },
+      { q: "Mikä on Untold-festivaali?", a: "Cluj-Napocassa elokuussa järjestettävä sähköisen musiikin festivaali on kasvanut yhdeksi Euroopan suurimmista, ja sen lavarakenteet ovat tunnettuja spektaakkelimaisuudestaan." },
+    ],
+    Constanta: [
+      { q: "Kuka roomalaisrunoilija makasi maanpaossa juuri tässä kaupungissa?", a: "Ovidius karkotettiin keisari Augustuksen määräyksestä Tomikseen (nyk. Konstanza) vuonna 8 jaa. Kaupunki pystytti hänelle pronssipatsaan, joka seisoo yhä Ovidiu-aukiolla vanhankaupungin sydämessä." },
+      { q: "Mikä rakennus hallitsee Konstanzan rantabulevardia mutta on ollut vuosia tyhjillään?", a: "Vuonna 1910 valmistunut art nouveau -kasino oli aikanaan Mustanmeren rannikon hienoin huvipaikka. Se on kunnostuksen kohteena, mutta pysyy yhä kaupungin tunnetuimpana maamerkkinä." },
+    ],
+    Covasna: [
+      { q: "Mikä luontokohde piilottelee Covasnan ja Harghitan rajalla?", a: "Vârghiș-rotkon kalkkikivimuodostumat kätkevät lähes 130 luolaa, joista neljä on avoinna kävijöille — rotkolaakso on noin neljä kilometriä pitkä ja ylittyy yksitoista kertaa siltaa pitkin." },
+      { q: "Miksi Covasnan kylien vanhat kirkot on ympäröity paksuilla muureilla?", a: "Kylissä kuten Turiassa keskiaikaiset kirkot linnoitettiin korkeilla puolustusmuureilla, joiden suojiin asukkaat pakenivat tataarien ja turkkilaisten ryöstöretkiltä." },
+    ],
+    "Dâmbovita": [
+      { q: "Missä lepää legendaarisen valakialaisruhtinas Mihai Viteazulin pää?", a: "Se on haudattuna Dealun luostariin Târgoviștejen liepeillä. Ruhtinas murhattiin 1601 nykyisen Itävallan alueella, ja pää tuotiin takaisin kotimaahan lepäämään pyhään maahan." },
+      { q: "Minkä legendan mukaan ottomaanien lähettiläät kohtasivat kohtalonsa Târgoviștejen Chindia-tornissa?", a: "Perimätiedon mukaan Vlad Seivästäjä kutsui 1400-luvulla turkkilaislähettiläitä torniin ja rankaisi heitä, kun he kieltäytyivät nostamasta turbaania hänen edessään. Tarina on epäilemättä liioiteltu, mutta torni on yhä kaupungin tunnusmerkki." },
+    ],
+    Dolj: [
+      { q: "Mikä yhdistää Doljin Calafatin suoraan Bulgariaan?", a: "Vuonna 2013 avattu Uusi Eurooppa -silta yhdistää Calafatin Tonavan yli Vidiniin. Se on vasta toinen kiinteä yhteys Romanian ja Bulgarian välillä koko historiassa." },
+      { q: "Miksi Craiovaa kutsuttiin joskus 'pieneksi Pariisiksi'?", a: "1800-luvun lopun vaurastuminen toi kaupunkiin ranskalaisvaikutteista arkkitehtuuria ja leveitä bulevardeja, ja lempinimi elää yhä paikallisessa ylpeydessä." },
+    ],
+    Galati: [
+      { q: "Mitä kaikkea löytyy Galațin luonnontieteellisen museokompleksin saman katon alta?", a: "Akvaario, kasvitieteellinen puutarha, eläintarha ja planetaario – jonka tähtitorni on yksi Romanian nykyaikaisimmista julkisista observatorioista." },
+      { q: "Mikä Galațin synagogoista on selvinnyt 1930-luvun kolmestakymmenestä hengissä?", a: "Vain 1875 rakennettu käsityöläisten synagoga on säilynyt pystyssä ja toiminnassa. Se kunnostettiin perusteellisesti ja avattiin uudelleen 2014." },
+    ],
+    Giurgiu: [
+      { q: "Minkä luostarin Vlad Seivästäjä perusti Giurgiun seudulle?", a: "Comanan luostarin vuonna 1461. Se on nykyisin Comanan luonnonpuiston sydän – Tonavan suiston jälkeen Romanian toiseksi suurin kosteikkoalue." },
+      { q: "Miksi Giurgiun edustalla Tonavan saarella on yhä vanhoja linnoitusraunioita?", a: "Giurgiu oli osmanien suoraan hallitsema raja-linnoituskaupunki lähes neljä vuosisataa, ennen kuin siitä 1800-luvulla tuli osa Valakiaa." },
+    ],
+    Gorj: [
+      { q: "Miksi Gorjia kutsutaan Romanian energiapiirikunnaksi?", a: "Alueen laajat ruskohiili- eli ligniittikaivokset ja niiden ympärille rakennetut voimalaitokset, kuten Rovinarin ja Turcenin laitokset, tuottavat ison osan Romanian sähköstä." },
+      { q: "Mikä luonnonnähtävyys tarjoaa Gorjissa jyrkkiä kalkkikivirotkoja ja luolamaalauksia?", a: "Sohodolin rotko länsi-Gorjissa on suosittu vaellus- ja kiipeilykohde. Sen suulla sijaitsevan luolan seiniltä on löydetty tummia ihmishahmoja esittäviä kalliomaalauksia." },
+    ],
+    Harghita: [
+      { q: "Mistä Harghitan Corund-kylä on kuuluisa jo 1600-luvulta?", a: "Korundin savenvalajakylä on yksi Euroopan tärkeimmistä perinnekeramiikan keskuksista. Elokuun ensimmäisenä viikonloppuna sen keramiikkamarkkinat tuovat paikalle satoja kädentaitajia." },
+      { q: "Mikä on 'székely-portti' ja mistä sen tunnistaa?", a: "Se on raskaasti veistetty puinen porttirakenne, jolla sekeliperheet ovat perinteisesti merkinneet talonsa rajaa. Kirvesmiehet koristelivat porttien kaaret suvun tunnuskuvioin ja lauselmin." },
+    ],
+    Hunedoara: [
+      { q: "Missä sijaitsi muinaisen Daakian pääkaupunki, ennen kuin Rooma valloitti sen?", a: "Sarmizegetusa Regia kohosi Orăștie-vuorten huipulla – se oli daakialaisten kuninkaiden linnoitettu poliittinen ja uskonnollinen keskus, ja nykyään se on osa Unescon maailmanperintölistan daakialaislinnoituksia." },
+      { q: "Mikä on Romanian vanhin kansallispuisto ja missä se sijaitsee?", a: "Retezatin kansallispuisto perustettiin 1935 Retezat-vuoristoon. Sen alueella on yli 80 jäätikköjärveä ja yli kolmasosa koko Romanian kasvilajistosta." },
+    ],
+    Ialomita: [
+      { q: "Kuka Ialomițan Ogradan kylässä syntynyt mies johti aikanaan New Yorkin Metropolitan-oopperaa?", a: "Kapellimestari ja säveltäjä Ionel Perlea (s. 1900) teki kansainvälisen uran Euroopassa ja Yhdysvalloissa – syntymäkylässä on hänelle omistettu muistomuseo." },
+      { q: "Mikä silta oli valmistuessaan 1895 Euroopan pisin?", a: "Insinööri Anghel Salignyn suunnittelema silta Fetești–Cernavodă-välillä ylitti Tonavan sivuhaaroineen yli neljän kilometrin matkalla ja pysyi käytössä lähes vuosisadan." },
+    ],
+    Iasi: [
+      { q: "Missä kylässä tehty löytö antoi nimensä koko esihistorialliselle kulttuurille?", a: "Iașin lähellä sijaitsevassa Cucuteni-kylässä löydettiin 1884 kivikautisia maalattuja saviastioita. Yli 6000 vuotta vanha Cucuteni-kulttuuri tunnetaan yhä upeasta, geometrisesti kuvioidusta keramiikastaan." },
+      { q: "Missä puussa runoilija Mihai Eminescu istui kirjoittamassa runojaan?", a: "Copou-puiston vanhan lehmuksen alla, joka on yli 400-vuotias ja tunnetaan nykyään 'Eminescun lehmuksena' – romanialaisten runouden ystävien pyhiinvaelluskohteena." },
+    ],
+    Ilfov: [
+      { q: "Mikä on Romanian vilkkain lentokenttä ja missä se sijaitsee?", a: "Henri Coandă -kansainvälinen lentokenttä Otopenissa, Ilfovin piirikunnassa, palvelee yli 17 miljoonaa matkustajaa vuodessa ja on maan kansallisen lentoyhtiön tukikohta." },
+      { q: "Miksi Buftea tunnetaan 'Romanian Hollywoodiksi'?", a: "Vuonna 1959 valmistuneet Buftean elokuvastudiot ovat Itä-Euroopan suurin ja pitkäikäisin elokuvatuotantokompleksi, ja sadat kotimaiset ja ulkomaiset elokuvat on kuvattu sen lavasteissa." },
+    ],
+    Maramures: [
+      { q: "Miksi Vaser-laakson kapearaiteista höyryjunaa kutsutaan Euroopan viimeiseksi?", a: "'Mocănița' on yksi viimeisistä säännöllisesti liikennöivistä metsätalouden höyryjunista Euroopassa. Se kulkee 1930-luvulta periytyvällä 60 kilometrin radalla, joka rakennettiin alun perin tukkien kuljetukseen." },
+      { q: "Mitä maramureșläiset polttavat perinteisesti luumuista?", a: "Pălincaa, vahvaa hedelmäpaloviinaa, jonka tislaamisen taito kulkee suvussa sukupolvelta toiselle ja jota tarjotaan vieraille tervetulotuomana." },
+    ],
+    Mehedinti: [
+      { q: "Kuinka suuri Rautaporttien vesivoimalaitos on Tonavalla?", a: "Vuosina 1964–1972 Romanian ja Jugoslavian yhteisvoimin rakennettu Rautaportti I on yksi Tonavan suurimmista vesivoimalaitoksista ja padoista." },
+      { q: "Miksi Rautaporttien luonnonpuisto on Romanian suurin?", a: "Porțile de Fier -luonnonpuisto suojelee Tonavan dramaattista kanjonimaisemaa kalliokotkineen ja harvinaisine kasvilajeineen laajalla alueella joen molemmin puolin." },
+    ],
+    Mures: [
+      { q: "Miksi Praidin suolakaivos on niin suosittu nähtävyys?", a: "Praidin suolaesiintymä on yksi Euroopan suurimmista, ja kaivoksen sisään on rakennettu kokonainen maanalainen kylpylä leikkipaikkoineen ja kappeleineen — suolaista ilmaa käydään hengittämässä hengitysteiden hoidoksi." },
+      { q: "Mikä on Teleki-Bolyai-kirjasto ja miksi se on erikoinen?", a: "Târgu Mureșissa sijaitseva kirjasto perustettiin vuonna 1802, ja siellä säilytetään harvinaisia vanhoja kirjoja ja käsikirjoituksia, muun muassa yksi maailman vanhimmista painetuista teoksista Transilvaniassa." },
+    ],
+    Neamt: [
+      { q: "Miksi Ceahlăun vuorta kutsutaan Moldovan Olympokseksi?", a: "Ceahlău on yksi Romanian vaikuttavimmista vuorimassiiveista, ja sen huipuille liittyy vanhoja jumaltarustoja ja legendoja — paikalliset pitivät sitä pyhänä, jumalten asuinsijana." },
+      { q: "Miksi Agapian luostarissa asuu niin paljon nunnia?", a: "Agapia ja lähellä sijaitseva Văratecin luostari ovat Romanian suurimpia naisluostareita, joissa asuu satoja nunnia; Agapiassa vaikutti myös kuuluisa maalari Nicolae Grigorescu." },
+    ],
+    Olt: [
+      { q: "Mikä on Corabia ja miksi se sijaitsee juuri Tonavan rannalla?", a: "Corabia on Oltin vanha Tonava-satama, joka kukoisti 1800-luvulla viljan ja muiden maataloustuotteiden vientipaikkana; nykyään se on rauhallinen pikkukaupunki, mutta satamahistoria näkyy keskustan arkkitehtuurissa." },
+      { q: "Miksi Caracalin kaupunki on niin vanha?", a: "Caracal syntyi roomalaisen Sucidavan linnoituksen ja kauppareitin risteyskohtaan, ja se on säilynyt asutettuna lähes koko ajan roomalaisajasta nykypäivään — yksi Oltin vanhimmista jatkuvasti asutuista paikoista." },
+    ],
+    Prahova: [
+      { q: "Miksi Sinaia valittiin Romanian kuninkaiden kesäasunnoksi?", a: "Kuningas Carol I ihastui Sinaian vuoristomaisemaan 1860-luvun lopulla ja rakennutti alueelle luostarin lähelle kesäresidenssinsä; siitä kehittyi hienostuneiden vuoristolomien keskus, jota kutsutaan yhä Karpaattien helmeksi." },
+      { q: "Mitä Buștenin köysirata tarjoaa nykyään?", a: "Buștenin köysirata nousee Bucegin vuorille lähes 2000 metrin korkeuteen muutamassa minuutissa; ylhäältä avautuu näkymä Prahovan laaksoon, ja alueella vaeltaa nykyään paljon retkeilijöitä ja hiihtäjiä." },
+    ],
+    Salaj: [
+      { q: "Miksi Meseșin tunneli on merkittävä?", a: "Sălajin läpi kulkeva Meseșin tietunneli on yksi Romanian pisimmistä maantietunneleista; se avattiin 2020-luvulla ja lyhensi matkaa, joka ennen kiersi hitaasti vuorten yli." },
+      { q: "Mikä yhdistää Sălajin puukirkot muuhun Transilvaniaan?", a: "Sălajin kylissä on säilynyt vanhoja ortodoksisia puukirkkoja, jotka on rakennettu kokonaan hirsistä ja katettu paanuilla; monet niistä ovat satoja vuosia vanhoja ja edelleen käytössä." },
+    ],
+    "Satu Mare": [
+      { q: "Miksi Oașin alueen perinteiset portit ovat niin koristeellisia?", a: "Oașin kylissä veistetyt puuportit on koristeltu perinteisin kansankuvioin, ja niitä pystytetään yhä uusiin taloihin; alueen kansanpuvut ja tanssit ovat säilyneet elävänä perinteenä nykypäivään asti." },
+      { q: "Mikä on Careiin linnan eläinpuisto?", a: "Careiin barokkilinnan ympärille istutettu puisto tunnetaan Euroopan suurimpana tammimetsässä sijaitsevana hirvieläintarhana; siellä kasvaa satoja vuosia vanhoja tammia ja liikkuu vapaana kauriita." },
+    ],
+    Sibiu: [
+      { q: "Mikä on Valheiden silta ja mistä nimi tulee?", a: "Sibiun vanhassa kaupungissa oleva rautasilta tunnetaan Valheiden siltana; tarinan mukaan se romahtaisi, jos sillä valehdeltaisiin — silta on yksi Romanian ensimmäisistä valuraudasta tehdyistä silloista." },
+      { q: "Mikä on ASTRA-museo ja mitä sinne on koottu?", a: "Sibiun laitamilla sijaitseva ASTRA-ulkomuseo on yksi Euroopan suurimmista avoimista museoista; sinne on siirretty kokonaisia maalaistaloja, myllyjä ja työpajoja ympäri Transilvaniaa." },
+    ],
+    Suceava: [
+      { q: "Mikä on Suceavan linna ja mikä sen merkitys oli keskiajalla?", a: "Cetatea de Scaun -linna Suceavassa oli keskiaikaisen Moldovan ruhtinaskunnan pääkaupunki ja hallitsijoiden asuinpaikka; se on kunnostettu, ja siellä voi nykyään kiertää muurien ja tornien sisällä." },
+      { q: "Miksi Bukovinan koristellut pääsiäismunat ovat niin kuuluisia?", a: "Bukovinan alueella, myös Suceavassa, on vahva perinne koristella pääsiäismunia vahamaalauksella ja kaiverruksella; taito on periytynyt sukupolvelta toiselle, ja monet mestarit tekevät sitä yhä käsityönä." },
+    ],
+    Teleorman: [
+      { q: "Miksi Turnu Măgurele on tärkeä satamakaupunki?", a: "Turnu Măgurele sijaitsee Tonavan rannalla ja oli 1900-luvulla merkittävä kemianteollisuuden keskus; se on myös lähellä muinaisen roomalaisen linnoituksen jäänteitä joen rannalla." },
+      { q: "Mitä haikaroita näkee Teleormanin lakeudella kesäisin?", a: "Teleormanin avoimet maatalousmaisemat ja kylien katot ovat suosittuja pesimäpaikkoja valkohaikaroille, joita saapuu alueelle keväisin suuria määriä pesimään." },
+    ],
+    Timis: [
+      { q: "Miksi Timișoaraa kutsutaan vuoden 1989 vallankumouksen syntykaupungiksi?", a: "Timișoarassa alkoivat joulukuussa 1989 mielenosoitukset, jotka levisivät nopeasti muualle Romaniaan ja johtivat Ceaușescun hallinnon kaatumiseen; kaupungin keskustassa on tapahtumille omistettuja muistomerkkejä." },
+      { q: "Mikä on Began kanava ja miksi se on tärkeä Timișoaralle?", a: "Bega-kanava kulkee kaupungin läpi ja oli 1700-luvulta lähtien tärkeä kauppareitti Tonavalle; nykyään sen rannat ovat suosittuja kävely- ja pyöräilyalueita kaupunkilaisten keskuudessa." },
+    ],
+    Tulcea: [
+      { q: "Miksi Tulcean seudulla asuu paljon lipovaanivenäläisiä?", a: "Lipovaanit ovat vanhauskoisia venäläisiä, jotka pakenivat uskonnollista vainoa Venäjältä ja asettuivat Tonavan suiston kylille vuosisatoja sitten; heidän perinteensä ja kielensä elävät yhä alueella." },
+      { q: "Mikä tekee Măcinin vuorista erikoisia?", a: "Măcinin vuoret Tulcean alueella ovat geologisesti Euroopan vanhimpia, satojen miljoonien vuosien ikäisiä, ja aikanaan paljon korkeampia — nykyään ne ovat matalia, pyöristyneitä kukkuloita eroosion jäljiltä." },
+    ],
+    Vaslui: [
+      { q: "Mitä Vasluin alueella viljellään nykyään laajalti?", a: "Vasluin maakunta on yhä vahvasti maatalousvaltainen: pelloilla kasvatetaan viljaa ja aurinkokukkaa, ja alueen kumpuilevilla rinteillä on myös perinteisiä viinitarhoja." },
+      { q: "Miksi Bârlad-joki on tärkeä Vasluille?", a: "Bârlad-joki virtaa Vasluin maakunnan läpi ja on antanut nimensä alueen toiselle merkittävälle kaupungille; joenvarret ovat perinteisesti tarjonneet viljavaa maata viljanviljelylle." },
+    ],
+    "Vâlcea": [
+      { q: "Mikä on Cozian luostari ja kuka on haudattu sinne?", a: "Cozian luostari Oltin rannalla on 1300-luvulta peräisin, ja sinne on haudattu Valakian ruhtinas Mircea Vanhus; luostarikirkko on yksi Romanian tärkeimmistä keskiaikaisista rakennuksista." },
+      { q: "Miksi Oltin jokilaakso on täynnä patoaltaita?", a: "Olt-joki on padottu Vâlcean alueella useaan kertaan vesivoiman tuottamiseksi, ja patojen väliin on syntynyt sarja kapeita tekojärviä, joita reunustavat jyrkät vuorenrinteet." },
+    ],
+    Vrancea: [
+      { q: "Miksi Odobeștin seutu on kuuluisa viinistä?", a: "Odobeștin viinialue Vrancean maakunnassa on yksi Romanian vanhimmista ja tunnetuimmista, ja siellä on viljelty viiniä jo satoja vuosia; nykyään alueen viinitilat houkuttelevat matkailijoita maistelukierroksille." },
+      { q: "Mitä Vrancean vuoristossa Lepșan alueella voi tehdä nykyään?", a: "Lepșa on Vrancean vuoristossa sijaitseva pieni lomakohde, jonne mennään vaeltamaan, hiihtämään ja nauttimaan raikkaasta vuoristoilmasta kaukana kaupungeista." },
+    ],
+  },
 };
