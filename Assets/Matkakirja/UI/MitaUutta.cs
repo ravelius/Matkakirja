@@ -140,7 +140,7 @@ namespace Matkakirja.Natiivi
             if (!pakota && (string.IsNullOrEmpty(edellinen) || edellinen == nyt)) return;
             Lataa(() =>
             {
-                Tayta(paivitysLista, Uudet(loki, edellinen), 2);
+                Tayta(paivitysLista, Uudet(loki, edellinen == nyt ? null : edellinen), 2); // pakotettu testi: kärki
                 paivitys.BringToFront();
                 Rakenne.Nayta(paivitys, true, 320);
                 SyoteLukko.Esta(paivitys);
