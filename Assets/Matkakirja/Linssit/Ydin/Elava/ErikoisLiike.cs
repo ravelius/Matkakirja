@@ -64,6 +64,9 @@ namespace Matkakirja.Linssit.Elava
             "mont-saint-michel" => new MontSaintMichelLiike(id),
             "stonehenge" => new StonehengeLiike(id),
             "colosseum" => new ColosseumLiike(id),
+            "kinderdijk" => new KinderdijkLiike(id),
+            "brandenburgin-portti" => new BrandenburginPorttiLiike(id),
+            "segovian-akvedukti" => new SegovianAkveduktiLiike(id),
             _ => null,
         };
 
