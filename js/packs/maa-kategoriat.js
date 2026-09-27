@@ -6210,11 +6210,12 @@ export const MAA_KATEGORIAT = {
             + 'vaatetus — puhuvat lokakuun puolesta.',
           lyhyt: 'Pompejilainen kauppias yrittää pelastaa omaisuutensa '
             + 'hohkakivien alkaessa ropista katolle.',
-          selite: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa vaa’an '
-            + 'ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien alkavaa '
-            + 'ropinaa katoksella. He eivät tiedä, onko viisaampaa suojautua vai '
-            + 'lähteä — juuri tämä epävarmuus jätti osan pompejilaisista '
-            + 'koteihin, joiden katoille kertyi lopulta metreittäin lapilleja.',
+          selite: 'Havainnekuvan nimetön torikauppias yrittää vielä pelastaa '
+            + 'vaa’an ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien '
+            + 'alkavaa ropinaa katoksella. He eivät tiedä, onko viisaampaa '
+            + 'suojautua vai lähteä — juuri tämä epävarmuus jätti osan '
+            + 'pompejilaisista koteihin, joiden katoille kertyi lopulta '
+            + 'metreittäin lapilleja.',
           lahde: 'Matkakirjan havainnekuva. Faktat: Archaeological Park of '
             + 'Pompeii — date of the eruption, tarkistettu 5.9.2026.',
           galleria: [
@@ -46115,9 +46116,9 @@ export const MAA_KATEGORIAT = {
               + '1902. Sitä tarjotaan juhlissa ja muistotilaisuuksissa, ja '
               + '2000-luvulla se on levinnyt kadunkulmiin uskonnosta '
               + 'riippumatta.',
-          lyhyt: 'Café Touba, kahvipavut ja pitkät djar-hedelmät senegalilaista kahvihetkeä kuvaavassa kuvituksessa.',
+          lyhyt: 'Café Touba, kahvipavut ja pitkät djar-hedelmät senegalilaista kahvihetkeä kuvaavassa havainnekuvassa.',
           selite: 'Café Touba, kahvipavut ja pitkät kuivat djar-hedelmät '
-            + 'senegalilaista kahvihetkeä mukailevassa kuvituksessa.',
+            + 'senegalilaista kahvihetkeä mukailevassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Heritage Sénégal — '
             + 'Café Touba; University of Cape Coast — Xylopia aethiopica; '
             + 'World Flora Online',
@@ -48201,7 +48202,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Däbtära valmistaa parannuskääröä pöydän ääressä etiopialaista käsikirjoitusperinnettä mukaillen.',
           selite: 'Däbtära valmistaa parannuskääröä pöydän ääressä '
             + 'etiopialaista käsikirjoitusperinnettä mukailevassa '
-            + 'kuvituksessa — lähteisiin perustuva havainnekuva.',
+            + 'havainnekuvassa, joka perustuu lähteisiin.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
             + 'kokoelmatietue 307601 ja essee Ethiopian Healing Scrolls',
         },
@@ -48560,7 +48561,7 @@ export const MAA_KATEGORIAT = {
               + 'Kairossa 1930-luvulla ja myytiin Omdurmanista käsin.',
           wiki: 'Music of Sudan',
           selite: 'Solisti, kuoro ja kehärumpu 1920-luvun Omdurmanin '
-            + 'haqiba-laulua mukailevassa kuvituksessa.',
+            + 'haqiba-laulua mukailevassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Rift Valley '
             + 'Institute — The Sudan Handbook (PDF, s. 248–249)',
         },
@@ -49069,7 +49070,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Ohutta durrasta valmistettua kisraa paistetaan viljapuuron rinnalla sudanilaisessa ruokaperinteessä.',
           selite: 'Ohutta durrasta valmistettua kisraa paistetaan paksun '
             + 'viljapuuron rinnalla sudanilaista ruokaperinnettä mukailevassa '
-            + 'kuvituksessa.',
+            + 'havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FAO — Sorghum and '
             + 'millets in human nutrition',
         },
@@ -50937,9 +50938,9 @@ export const MAA_KATEGORIAT = {
               + 'paistettu taikinapallo. Myyjiä on samassa paikassa monta, joten '
               + 'hinnasta sovitaan paikan päällä ja jokainen huutaa oman lihansa '
               + 'olevan paras. Windhoekin Katutura on kapanan tunnetuin kortteli.',
-          lyhyt: 'Anonyymi myyjä grillaa kapana-naudanlihapaloja Katuturan markkinoita mukailevassa kuvituksessa.',
+          lyhyt: 'Anonyymi myyjä grillaa kapana-naudanlihapaloja Katuturan markkinoita mukailevassa havainnekuvassa.',
           selite: 'Anonyymi myyjä grillaa pieniä kapana-naudanlihapaloja '
-            + 'Katuturan markkinoita mukailevassa kuvituksessa.',
+            + 'Katuturan markkinoita mukailevassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Visit Namibia — '
             + 'Uniquely Namibian Food',
         },
@@ -53743,9 +53744,9 @@ export const MAA_KATEGORIAT = {
               + 'West African Countries and Peoples vuodelta 1868 kumosi eurooppalaisia '
               + 'rotuoppeja ja vaati itsehallintoa Länsi-Afrikan siirtomaille. '
               + 'Merkuriuksen kraatteri on nimetty hänen mukaansa.',
-          lyhyt: '1800-luvun lääkärin työpöytä ja stetoskooppi James Africanus Hortonin ajan kuvituksessa.',
+          lyhyt: '1800-luvun lääkärin työpöytä ja stetoskooppi James Africanus Hortonin ajan havainnekuvassa.',
           selite: '1800-luvun lääkärin työpöytä, kirjoja ja puinen stetoskooppi James Africanus '
-              + 'Hortonin ajan innoittamassa kuvituksessa.',
+              + 'Hortonin ajan innoittamassa havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Birminghamin yliopiston arkisto — '
               + 'CMS-kokoelma, kohde XCMS/B/1803-1880/A1/O/26-235/118; Smithsonian National '
               + 'Museum of American History — puinen stetoskooppi, kokoelmakohde 1073629',
@@ -54194,7 +54195,7 @@ export const MAA_KATEGORIAT = {
               + 'Jüsipbek Šaihislamuly Kazanissa 1894. Toisintoja tunnetaan kuusitoista. '
               + 'Eepoksesta tehtiin ooppera 1934 ja elokuva 1970.',
           selite: 'Kaksikielinen dombra ja käsikirjoitus kazakkien kertovan lauluperinteen '
-              + 'kuvituksena.',
+              + 'havainnekuvana.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Kazakstanin e-museum.kz — '
               + 'dombra-kokoelmakohteet',
         },
@@ -54213,7 +54214,7 @@ export const MAA_KATEGORIAT = {
               + 'varassa. Musiikin suurkirjassaan hän kuvasi kaksikielisen luutun, '
               + 'jollainen dombra on.',
           selite: 'Musiikin mittasuhteita tutkiva oppinut al-Farabin ajan innoittamassa '
-              + 'kuvituksessa.',
+              + 'havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: British Library — Or. 2361, ff. '
               + '238v–240r, al-Farabin musiikintutkielma',
         },
@@ -55059,7 +55060,7 @@ export const MAA_KATEGORIAT = {
               + 'syntynyttä työtä, ja yhdessä niistä ääriviivat on vedetty valkoisella '
               + 'kuin batiikissa.',
           selite: 'Balilla maalaavia taiteilijoita Nanyang-taiteen matkojen innoittamassa '
-              + 'kuvituksessa.',
+              + 'havainnekuvassa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Gallery Singapore — '
               + 'Siapa Nama Kamu -näyttelyjulkaisu, Nanyang Reverie',
         },
@@ -55523,9 +55524,9 @@ export const MAA_KATEGORIAT = {
               + 'Merkit ovat yksinkertaistuneet sukupolvi sukupolvelta, ja Liberian '
               + 'yliopisto täydensi merkistön 1960-luvulla kattamaan kaikki kielen '
               + 'tavut. Unicode-standardiin vai päätyi 2008.',
-          lyhyt: 'Vai-tavukirjoituksen opetusta 1830-luvun Liberiassa; kuvituksen merkit ovat tulkinnallisia.',
+          lyhyt: 'Vai-tavukirjoituksen opetusta 1830-luvun Liberiassa; havainnekuvan merkit ovat tulkinnallisia.',
           selite: 'Vai-tavukirjoituksen opetus 1830-luvun Liberian innoittamassa '
-              + 'kuvituksessa. Paperin merkit ovat tulkinnallisia.',
+              + 'havainnekuvassa. Paperin merkit ovat tulkinnallisia.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian National Museum of '
               + 'African Art — Inscribing Meaning: Writing and Graphic Systems in African '
               + 'Art',
