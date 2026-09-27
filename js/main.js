@@ -55,8 +55,8 @@ import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
   asetaPuheenNopeus, asetaPuheenVoima, asetaStriimiaani, luePuheAsetukset,
-  paivitaLukijanVoima, puheenNopeus, puheenVoima, STRIIMIAANET_XAI,
-  STRIIMIAANI_OLETUS, striimiaani, tallennaPuheAsetukset,
+  paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA, STRIIMIAANET_XAI,
+  STRIIMIAANI_OLETUS, striimiaani, tallennaPuheAsetukset, viimeisinPuhe,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
@@ -159,7 +159,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2299';
+const APP_VERSION = '2026-09-21.2301';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -2255,6 +2255,27 @@ if (striimiaaniValinta) {
   striimiaaniValinta.addEventListener('pointerdown', (e) => e.stopPropagation());
   striimiaaniValinta.closest('label')?.addEventListener('click', (e) => e.stopPropagation());
 }
+
+/*
+ * LUKIJAMITTARI (Fable 27.9.2026 klo 07.2x): viimeisimmän lukijaäänen palan
+ * moottori (xai|openai), lähde ja ensimmäisen tavun aika — todiste siitä,
+ * millä äänellä ja kuinka nopeasti luenta oikeasti lähti. Rivi päivittyy
+ * jokaisesta haetusta palasta (js/puhe.js PUHEMITTARI_TAPAHTUMA).
+ */
+const puhemittariRivi = document.getElementById('kehittaja-puhemittari');
+const PUHEEN_LAHTEET = {
+  generoitu: 'generoitu', reuna: 'reunavälimuisti', r2: 'R2-ämpäri', laite: 'laitteen säilö',
+};
+function naytaPuhemittari(m = viimeisinPuhe()) {
+  if (!puhemittariRivi) return;
+  puhemittariRivi.hidden = !m;
+  if (!m) return;
+  const lahde = PUHEEN_LAHTEET[m.lahde] ?? (m.lahde || '?');
+  puhemittariRivi.textContent = `lukija: ${m.moottori ?? '?'} · ${lahde} · 1. tavu ${m.ekaTavuMs} ms`
+    + ` · valmis ${m.valmisMs} ms · ${m.merkkeja} mrk`;
+}
+window.addEventListener(PUHEMITTARI_TAPAHTUMA, (e) => naytaPuhemittari(e.detail));
+naytaPuhemittari();
 
 /* Valikon avaus ja sulku — sama kaava kuin hampurilaisella yllä. */
 const suljeKehittajaValikko = () => {

@@ -890,11 +890,22 @@ async function kasvataLaskuri(kv, avain, elinaikaS, maara = 1) {
 /** Puheäänen otsakkeet asiakkaalle. Selain ei säilö POST-vastausta
  * (max-age on sille kuollut kirjain), mutta pelin oma puhesäilö
  * (js/puhe.js) ja Cloudflaren reuna pitävät — pysyvyys asuu niissä. */
-function puheOtsakkeet(kors) {
+/*
+ * MOOTTORI JA LÄHDE OTSAKKEISSA (Fable 27.9.2026 klo 07.2x: "korvakuuntelu
+ * ei saa olla ainoa todiste"): x-puhe-moottori kertoo, kumpi puhemoottori
+ * äänen teki (xai | openai), ja x-puhe-lahde, tuliko se reunavälimuistista,
+ * R2-ämpäristä vai generoitiinko se nyt. Kehittäjävalikon lukijamittari
+ * (js/main.js) näyttää ne. Selain näkee vain paljastetut otsakkeet, siksi
+ * access-control-expose-headers.
+ */
+function puheOtsakkeet(kors, moottori, lahde) {
   return {
     'content-type': 'audio/mpeg',
     'cache-control': 'private, max-age=3600',
     ...korsOtsakkeet(kors.origin, kors.sallitut),
+    'x-puhe-moottori': moottori,
+    'x-puhe-lahde': lahde,
+    'access-control-expose-headers': 'x-puhe-moottori, x-puhe-lahde',
   };
 }
 
@@ -1027,6 +1038,8 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const persoona = PUHE_PERSOONAT[persoonaNimi];
   const xai = moottori === 'xai';
   const malli = xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS);
+  // Säilöavain sisältää mallin, joten välimuistiosumankin moottori on tiedossa.
+  let moottoriNimi = xai ? 'xai' : 'openai';
 
   // Ääni ja ohje: persoonan oletukset, joiden yli kehittäjäkoodillinen
   // pyyntö saa kirjoittaa (työhuoneen säätövälilehti, kehittäjävalikon
@@ -1082,7 +1095,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
       r2Avain = `puhe/${lohko}/${avain.url.split('/').pop()}.mp3`;
       const osuma = await caches.default.match(avain);
       if (osuma) {
-        return new Response(osuma.body, { status: 200, headers: puheOtsakkeet(kors) });
+        return new Response(osuma.body, { status: 200, headers: puheOtsakkeet(kors, moottoriNimi, 'reuna') });
       }
       /*
        * R2-ÄMPÄRI ON PYSYVÄ KERROS (omistajan kysymys 14.8.2026):
@@ -1100,7 +1113,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
               'cache-control': 'public, max-age=5184000',
             },
           })).catch(() => {}));
-          return new Response(data, { status: 200, headers: puheOtsakkeet(kors) });
+          return new Response(data, { status: 200, headers: puheOtsakkeet(kors, moottoriNimi, 'r2') });
         }
       }
     } catch {
@@ -1141,6 +1154,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
         console.log(`puhe: xai epäonnistui (${virhe?.status ?? 'verkko'}) → openai`);
         avain = null;
         r2Avain = null;
+        moottoriNimi = 'openai';
         ylavirta = await kutsuOpenaiPuhetta(env, {
           teksti,
           aani: persoona.aani,
@@ -1177,9 +1191,9 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
             : null,
         ]);
       })().catch(() => { /* täysi tai estetty säilö ei kaada luentaa */ }));
-      return new Response(asiakkaalle, { status: 200, headers: puheOtsakkeet(kors) });
+      return new Response(asiakkaalle, { status: 200, headers: puheOtsakkeet(kors, moottoriNimi, 'generoitu') });
     }
-    return new Response(ylavirta.body, { status: 200, headers: puheOtsakkeet(kors) });
+    return new Response(ylavirta.body, { status: 200, headers: puheOtsakkeet(kors, moottoriNimi, 'generoitu') });
   } catch (virhe) {
     // Vain tilakoodi lokiin — ei avainta eikä luettavaa tekstiä.
     console.log(`puhe: kutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
