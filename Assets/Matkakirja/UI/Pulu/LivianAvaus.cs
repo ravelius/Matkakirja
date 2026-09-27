@@ -18,6 +18,12 @@
 // valinta tehdään (valinnassa() = false; web doPickStart → peruLivianAvaus), chat on auki,
 // linssi on auki tai sovellus menee taustalle (web visibilitychange) — silloin puhe vaiennetaan.
 //
+// KERRAN + OHITA (omistaja 27.9.2026 klo 17.2x, web #3431 v2333 naytaLivianLyhytAvaus): kun koko esittely on nähty,
+// seuraavilla uusilla matkoilla Livia lennähtää samalla sisäänliidolla, saapumistehoste soi ja YKSI kupla näkyy 900 ms
+// jälkeen (vähennetty liike 0). Repliikit kiertävät (lippu matkakirja-livia-uusi-matka = seuraava indeksi), kuplassa
+// Ohita; kupla pois lukuajan jälkeen, napautuksesta, Ohitasta tai valinnasta. Äänitteitä ei ole (kupla puhuu, ääni vaikenee).
+// Puhelimella kupla alkaa suljettuna kuten muutkin Pulun kuplat (Pulu.TekstitPiilossa).
+//
 // Kutsu: LivianAvaus.Nayta(() => ValitseePallolla) lähtövalinnan alkaessa; Peru() kesken kaiken.
 using System;
 using System.Collections.Generic;
@@ -47,6 +53,26 @@ namespace Matkakirja.Natiivi
             "Ai niin, ja anteeksi valikoima: pöllö on tarkistanut vasta yhden reitin. Ateenasta se alkaa.",
             "Perillä sinua odottaa Viisas Pöllö. Minä olen vain viestinviejä.",
         };
+
+        /// <summary>Uuden matkan lyhyet tervehdykset (web LIVIAN_UUSI_MATKA; Pelikoodarin luonnos, Fable hyväksyy).</summary>
+        public static readonly string[] UusiMatka =
+        {
+            "Taas matkaan? Hyvä. Isoisäsi kirjassa on sivuja, joita kukaan ei ole lukenut.",
+            "Uusi matka, uudet sähkeet. Valitse lähtö — minä hoidan postin.",
+            "Sinä taas. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.",
+        };
+
+        /// <summary>Lyhyen tervehdyksen kierto (web LIVIA_UUSI_MATKA_TALLE): seuraavan repliikin numero.</summary>
+        public const string UusiMatkaAvain = "matkakirja-livia-uusi-matka";
+
+        /// <summary>Seuraava lyhyt repliikki kierrosta; kirjaa seuraavan numeron talteen (web livianUudenMatkanRepliikki).</summary>
+        public static string UudenMatkanRepliikki()
+        {
+            int n = UusiMatka.Length, i = ((PlayerPrefs.GetInt(UusiMatkaAvain, 0) % n) + n) % n;
+            PlayerPrefs.SetInt(UusiMatkaAvain, (i + 1) % n);
+            PlayerPrefs.Save();
+            return UusiMatka[i];
+        }
 
         /// <summary>Äänitteiden versiokysely (web LIVIAN_AANITETYT + LIVIAN_AANIERAT, avaus-1…5).</summary>
         static readonly string[] Aaniversiot = { "62c6bcbd-4", "30c6eb27-4", "1446cf47-4", "b8bf54c6-4", "c7f488b4-4" };
@@ -104,8 +130,10 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Nayta(Func<bool> valinnassa = null, int kohteita = -1)
         {
-            if (kesken || Nahty) return false;
+            if (kesken) return false;
             if (valinnassa != null && !valinnassa()) return false;
+            // KERRAN + OHITA: koko esittely vain ensimmäisellä kerralla laitteella.
+            if (Nahty) return NaytaLyhyt(valinnassa);
             var pulu = Pulu.Hae();
             LivianAvaus.valinnassa = valinnassa;
             LivianAvaus.kohteita = kohteita >= 0 ? kohteita : Aloitusnakyma.Kohteet.Length;
@@ -136,6 +164,42 @@ namespace Matkakirja.Natiivi
             else if (!liitoValmis) liitoVara = Kello.schedule.Execute(Laskeutui).StartingIn((long)LiviaEleet.KestoMs("glideIn") + 200);
             Ajasta(() => NaytaRepliikki(0, v), vahennetty ? 0 : AvauksenViive);
             // Valinnan vahti (web doPickStart → peruLivianAvaus): kaupungin voi valita kesken repliikin.
+            vahti?.Pause();
+            if (valinnassa != null) vahti = Kello.schedule.Execute(() => { if (kesken && v == versio && !Jatkuu()) Lopeta(true); }).Every(200);
+            return true;
+        }
+
+        /// <summary>
+        /// Uuden matkan lyhyt tervehdys (web naytaLivianLyhytAvaus): sisäänliito + saapumistehoste + yksi kupla Ohitalla.
+        /// Kupla ei odota laskeutumista, koska repliikkejä on yksi.
+        /// </summary>
+        static bool NaytaLyhyt(Func<bool> valinnassa)
+        {
+            var pulu = Pulu.Hae();
+            LivianAvaus.valinnassa = valinnassa;
+            kesken = true;
+            nakyi = false;
+            liitoValmis = true;
+            liidonJalkeinen = -1;
+            int v = ++versio;
+            Application.focusChanged -= Fokus;
+            Application.focusChanged += Fokus;
+            bool vahennetty = LinssiUi.VahennettyLiike();
+            pulu.Ensiliito(null, vahennetty);
+            Ajasta(() =>
+            {
+                ajastin = null;
+                if (!kesken || v != versio) return;
+                bool chat = UiNakymat.Olemassa && UiNakymat.Hae().Chat.Auki;
+                if (!Jatkuu() || chat || LinssiUi.Rekisteri?.Auki != null || !pulu.Nakyvissa) { Lopeta(true); return; }
+                // Web jaaKappaleiksi: ≥ 3 virkettä → kaksi kappaletta ("Taas matkaan? Hyvä." | loput).
+                string teksti = UudenMatkanRepliikki();
+                var kupla = pulu.Sano(string.Join("\n\n", Kappalejako.Jaa(teksti)), null, null, () => Lopeta(true));
+                if (kupla != null) pulu.Kuplat.LisaaOhita(kupla);
+                nakyi = true;
+                Aanet.PulunOhjelma("saapuu");
+                Ajasta(() => Lopeta(false), (long)PuluKuplat.Lukuaika(teksti));
+            }, vahennetty ? 0 : AvauksenViive);
             vahti?.Pause();
             if (valinnassa != null) vahti = Kello.schedule.Execute(() => { if (kesken && v == versio && !Jatkuu()) Lopeta(true); }).Every(200);
             return true;

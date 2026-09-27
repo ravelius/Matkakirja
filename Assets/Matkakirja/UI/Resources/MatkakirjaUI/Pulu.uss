@@ -94,6 +94,24 @@
     margin-bottom: 4px;
 }
 
+/* Ohita (web .pollo-vihje-ohita, Livian uuden matkan lyhyt tervehdys, iPad 834 mitattu): tekstinappi oikeassa
+ * alakulmassa ilman kehystä, 12,48 px alleviivattuna, kuplan muste, opacity 0,75, kosketusala ≥ 32 px. */
+.mk-kupla__ohita {
+    align-self: flex-end;
+    min-height: 32px;
+    margin: 3.2px -5.6px -4.8px 0;
+    padding: 4px 7.2px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.75;
+}
+
+.mk-kupla__ohita > .mk-nappi__teksti {
+    font-size: 12.48px;
+    color: #211d18;
+    letter-spacing: 0;
+}
+
 .mk-kupla__hanta {
     display: none;
     position: absolute;

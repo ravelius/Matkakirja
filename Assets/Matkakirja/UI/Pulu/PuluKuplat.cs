@@ -91,6 +91,19 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        /// <summary>
+        /// Ohita-tekstinappi kuplan oikeaan alakulmaan (web .pollo-vihje-ohita, Livian uuden matkan lyhyt tervehdys):
+        /// kuittaa kuplan kuten napautus, mutta kertoo sen näkyvästi.
+        /// </summary>
+        public void LisaaOhita(Kupla k)
+        {
+            if (k == null) return;
+            var nappi = Rakenne.Nappi("<u>Ohita</u>", "mk-kupla__ohita", () => Kuittaa(k));
+            nappi.tooltip = "Ohita Livian tervehdys";
+            var hanta = k.El.Q(className: "mk-kupla__hanta");
+            if (hanta != null) k.El.Insert(k.El.IndexOf(hanta), nappi); else k.El.Add(nappi);
+        }
+
         /// <summary>Pidentää kuplan näkyvyyttä (esim. ääni on lukuaikaa pidempi).</summary>
         public void AsetaKesto(Kupla k, float ms)
         {
