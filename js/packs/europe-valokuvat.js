@@ -1759,16 +1759,14 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'CH-NB Photoglob-Wehrli EAD-WEHR-13555a-B.tif',
+        tiedosto: 'Cow with Eiger, Mönch, Jungfrau.jpg',
 
-        vuosi: 'noin 1910',
+        lahde: 'Leif Söderlund, Wikimedia Commons (CC BY-SA 4.0)',
 
-        lahde: 'Photoglob-Wehrli, Sveitsin kansalliskirjasto, Commons (public domain)',
+        lyhyt: 'Lehmä laitumella Eigerin, Mönchin ja Jungfraun edessä.',
+        selite: 'Lehmä laitumella Eigerin, Mönchin ja Jungfraun edessä. Karja '
 
-        lyhyt: 'Lehmiä ja alppimaja Eigerin, Mönchin ja Jungfraun edessä noin 1910.',
-        selite: 'Lehmiä ja alppimaja Eigerin, Mönchin ja Jungfraun edessä noin '
-
-          + 'vuonna 1910. Karja vietiin kesäksi ylös laitumelle ja haettiin '
+          + 'vietiin perinteisesti kesäksi ylös laitumelle ja haettiin '
 
           + 'syksyllä alas — juuri näiltä rinteiltä kellojen ääni kantautui '
 

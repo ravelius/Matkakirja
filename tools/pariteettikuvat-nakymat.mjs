@@ -225,12 +225,23 @@ export const NAKYMAT = [
   },
   { nimi: 'kartta', kuvaus: 'Intro ohitettu: pallo kaupungissa, toimintavaihe (?koe=suoraan + tallenne)' },
   {
-    nimi: 'rahattomuus', kuvaus: 'Rahat loppu: rahattomuuspalkki 6/8 punaista neliötä kartan yläreunassa, yläpalkissa £0 · 2 vrk',
+    nimi: 'rahattomuus', kuvaus: 'Rahat loppu: rahattomuuspalkki 6/8 lohkoa (3 punaista viimeistä 18 h + 3 oranssia) kartan yläreunassa, yläpalkissa £0 · 1 vrk 12 h',
     avaa: () => {
       const { ui } = window.matkakirja;
       const g = ui.game;
       g.player.money = 0;
       g.player.rahaton = { alkuVuoro: g.turnCount - 2, paiva: g.dayCount?.() ?? 1 };
+      ui.render();
+    },
+    odota: '.rahattomuuspalkki:not([hidden])',
+  },
+  {
+    nimi: 'rahattomuus-lopussa', kuvaus: 'Rahattomuus: 2/8 lohkoa jäljellä (12 h) — vain punaiset viimeiset palavat',
+    avaa: () => {
+      const { ui } = window.matkakirja;
+      const g = ui.game;
+      g.player.money = 0;
+      g.player.rahaton = { alkuVuoro: g.turnCount - 6, paiva: g.dayCount?.() ?? 1 };
       ui.render();
     },
     odota: '.rahattomuuspalkki:not([hidden])',
@@ -638,6 +649,13 @@ const TODENNUS = {
       const r = p && !p.hidden ? p.getBoundingClientRect() : null;
       if (!r || r.width < 60 || r.height < 8) return 'palkki ei näy';
       return document.querySelectorAll('.rahattomuuspalkki .rahattomuus-lohko.palaa').length === 6 ? null : 'lohkoja ei 6';
+    },
+  },
+  'rahattomuus-lopussa': {
+    ehto: () => {
+      const palavat = [...document.querySelectorAll('.rahattomuuspalkki .rahattomuus-lohko.palaa')];
+      if (palavat.length !== 2) return `palavia ${palavat.length}, ei 2`;
+      return palavat.every((l) => l.classList.contains('viimeinen')) ? null : 'jäljellä olevat eivät ole punaisia';
     },
   },
   'avausteksti-kesken': { nakyy: ['.intro-juliste'] },

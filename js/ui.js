@@ -2285,6 +2285,9 @@ const RAHATTOMUUS_SELITE = 'Rahat ovat loppu. Jokainen neliö on 6 tuntia matkaa
 /** Miniselite sulkeutuu itsestään tämän jälkeen (ms). */
 const RAHATTOMUUS_SELITE_MS = 7000;
 
+/** Rahattomuuspalkin punaiset lohkot: viimeiset 18 h (3 × 6 h), omistaja 27.9.2026. */
+export const RAHATTOMUUS_PUNAISIA = 3;
+
 export class UI {
   constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
     this.game = game;
@@ -10943,7 +10946,15 @@ export class UI {
       palkki.setAttribute('role', 'button');
       palkki.tabIndex = 0;
       const lohkot = html('div', 'rahattomuus-lohkot');
-      for (let i = 0; i < RAHATTOMUUS_VUOROJA; i++) lohkot.appendChild(html('span', 'rahattomuus-lohko'));
+      /*
+       * VÄRIT (omistaja 27.9.2026 klo 17.2x): oranssi, ja viimeiset 18 h
+       * (RAHATTOMUUS_PUNAISIA lohkoa) punaisina. Lohkot sammuvat oikealta
+       * (i < vuoroja palaa), joten viimeiset tunnit palavat vasemmassa
+       * päässä: lopussa näkyvissä on vain punaista.
+       */
+      for (let i = 0; i < RAHATTOMUUS_VUOROJA; i++) {
+        lohkot.appendChild(html('span', `rahattomuus-lohko${i < RAHATTOMUUS_PUNAISIA ? ' viimeinen' : ''}`));
+      }
       palkki.append(lohkot);
       /*
        * NAPAUTUS AVAA MINISELITTEEN (omistaja 16.1x): mitä neliöt

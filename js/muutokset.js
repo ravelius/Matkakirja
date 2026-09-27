@@ -13,6 +13,14 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2340, teksti: 'Maakuntasalaisuudet nostoiksi (skeema 1.55, Kreikka)' },
+  { v: 2339, teksti: 'v2338: Pulun virtaluenta rampilla — vähemmän pu… (#3469)' },
+  { v: 2338, teksti: 'Euroopan erät 8–9 ja pienet kuvat' },
+  { v: 2337, teksti: 'v2335: Elämäpalkki oranssi, viimeiset 18 h puna… (#3443)' },
+  { v: 2336, teksti: 'v2334: Livian lyhyet tervehdykset päätoimittaja… (#3440)' },
+  { v: 2335, teksti: 'Euroopan erät 5–7, Ateenan kuvat, TIFF-kuvat JPG:ksi' },
+  { v: 2334, teksti: 'v2333: Vilna, Sarajevo, Odessa, Amsterdam, Tall… (#3429)' },
+  { v: 2333, teksti: 'v2333: Livian avausesittely kerran, uusilla mat… (#3431)' },
   { v: 2332, teksti: 'v2331: Rahattomuuspalkki — jäljellä oleva aika… (#3421)' },
   { v: 2331, teksti: 'Yhtenäistä 22 nähtävyysminiatyyrin värisävyt (#3425)' },
   { v: 2330, teksti: 'v2329: Luenta kuuluu pyynnöstä myös äänet pois… (#3422)' },

@@ -5504,6 +5504,18 @@ test('pelistreak: armopäivä — yksi väliin jäänyt päivä 7 päivän ikkun
   assert.equal(game.player.streak.armo, '2026-09-23');
 });
 
+test('rahattomuuspalkki: oranssi, viimeiset 18 h punaisina (omistaja 27.9.2026 klo 17.2x)', async () => {
+  const { readFileSync: lueTiedosto } = await import('node:fs');
+  const ui = lueTiedosto(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const css = lueTiedosto(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(ui, /export const RAHATTOMUUS_PUNAISIA = 3;/, '3 × 6 h = 18 h');
+  assert.match(ui, /rahattomuus-lohko\$\{i < RAHATTOMUUS_PUNAISIA \? ' viimeinen' : ''\}/,
+    'punaiset ovat ne lohkot, jotka palavat viimeisinä (sammuminen oikealta: i < vuoroja)');
+  assert.match(ui, /classList\.toggle\('palaa', i < vuoroja\)/);
+  assert.match(css, /\.rahattomuus-lohko\.palaa \{[^}]*background: #d97a2b;/, 'palava lohko oranssi');
+  assert.match(css, /\.rahattomuus-lohko\.viimeinen\.palaa \{[^}]*background: #c0392b;/, 'viimeiset punaiset');
+});
+
 test('rahattomuuspalkki: kuuden tunnin jaksot vähenevät vuoroittain ja katoavat kassan selvitessä', () => {
   const game = talousPeli('ateena');
   const p = game.player;
