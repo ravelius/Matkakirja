@@ -53,11 +53,24 @@ kuin `2026-09-26-pohja`, ETagit tarkistettu 27.9.) ja pallo
 
 - **Päätös:** Fable 27.9. vaihtoehto (a). Matka kulkee maitse satamaan ja
   sitten laivalla. Ei via-pisteiden sisältötyötä.
-- **Koodi ja koepoltto:** työn alla.
-- **Reitit (11 kaupunkia):** Lontoo, Rooma, Islanti (Reykjavik), Dublin,
-  Lissabon, Sisilia, Dubrovnik, Helsinki, Odessa, Ateena ja Tallinna.
-  Täsmällinen reittilista lisätään koepolton yhteydessä.
-- **Poltto:** vain viivataso z0–z8 uudeksi viivaversioksi (pohja ei muutu).
+- **Koodi:** PR #3436, lippu `--merireitit-maaosuus` (viivataso,
+  `--data` = pohjan meri).
+  - Maaosuus lasketaan vain reitin päistä ja vain Euroopan kaupungeista
+    (pallopisteen 6 yksikön säteellä).
+  - Keskellä reittiä olevat saarten ylitykset jäävät katkoviivaksi.
+  - Reitin muoto ja heitot säilyvät.
+- **Kuvapari:** `kuvat/eu-laatu-9-merireitit-maaosuus.jpg`: Lontoo, Rooma ja
+  Helsinki z8.
+- **Reitit (18):**
+  - Lontoo–Amsterdam, Lontoo–Dublin, Dublin–Edinburgh
+  - Barcelona–Rooma, Rooma–Sisilia, Sisilia–Ateena, Ateena–Kreeta, Kreeta–Sisilia
+  - Istanbul–Odessa, Dubrovnik–Rooma
+  - Tukholma–Helsinki, Helsinki–Tallinna, Riika–Tukholma
+  - Bergen–Edinburgh, Islanti–Edinburgh, Islanti–Tromssa
+  - Dublin–St. John's, Lissabon–New York
+- **Poltto:** vain viivataso z0–z8 uudeksi viivaversioksi (pohja ei muutu), ja
+  luettelon `viivataso.versio` vaihdetaan. Täysi viivataso on 26.9. mukaan osa
+  1,5 h:n ajoa, joten arvio on noin 30–45 min 4–8 ytimellä.
 
 ### 3. Pallon Z10 pyramidin z10:stä
 
