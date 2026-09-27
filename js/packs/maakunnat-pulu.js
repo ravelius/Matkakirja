@@ -1216,4 +1216,50 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mikä on Turun linna ja milloin se rakennettiin?", a: "Turun linna perustettiin 1280-luvulla Aurajoen suulle, ja se on yksi Pohjoismaiden suurimmista säilyneistä keskiaikaisista linnoista – sen kivimuurien sisällä on eletty seitsemän vuosisadan ajan." },
     ],
   },
+  BEL: {
+    Antwerp: [
+      { q: "Miksi Antwerpenia kutsutaan maailman timanttipääkaupungiksi?", a: "Antwerpenin pieni timanttikorttelin alue käsittelee jopa noin 80–85 % maailman raakatimanteista – kauppa juontaa yli 500 vuoden taakse, Intiasta tuotuihin ensimmäisiin kiviin." },
+      { q: "Kuka oli Antwerpenin kuuluisin maalari?", a: "Barokkimestari Peter Paul Rubens asui ja työskenteli Antwerpenissa, ja kaupungin Notre Damen katedraalissa on edelleen useita hänen suurteoksiaan nähtävillä." },
+    ],
+    Brussels: [
+      { q: "Mikä pieni patsas on Brysselin symboli?", a: "Manneken Pis, pissivä poikapatsas, on ollut kaupungin suihkulähteenä 1300-luvulta lähtien; nykyinen pronssiversio on vuodelta 1619, ja sille puetaan tuhansia erilaisia asuja." },
+      { q: "Mihin tilaisuuteen Atomium rakennettiin?", a: "Atomium pystytettiin Brysselin maailmannäyttelyyn Expo 58:aan symboloimaan rauta-atomin kidehilaa – siitä tuli pysyvä nähtävyys, joka seisoo edelleen paikallaan." },
+    ],
+    "Flemish Brabant": [
+      { q: "Miksi Leuven on Belgian yliopistokaupunkien kärjessä?", a: "Leuvenin katolinen yliopisto perustettiin vuonna 1425 paavi Martin V:n luvalla, ja se on Alankomaiden historiallisen alueen vanhin yliopisto." },
+      { q: "Mistä Stella Artois -olut on kotoisin?", a: "Panimoperinne juontaa Leuvenista, jossa Den Hoornin panimo toimi jo 1360-luvulla; Artois-suku otti panimon haltuunsa 1700-luvun alussa." },
+    ],
+    Hainaut: [
+      { q: "Mikä juhla Monsissa on Unescon listalla?", a: "Monsin Doudou-juhla ja siihen kuuluva lohikäärmetaistelu Lumeçon on merkitty Unescon aineettoman kulttuuriperinnön listalle vuonna 2005, ja perinne juontaa 1300-luvulle." },
+      { q: "Miksi Charleroita kutsutaan katutaiteen kaupungiksi?", a: "Entinen kaivos- ja teollisuuskaupunki Charleroi on täynnä suurikokoisia seinämaalauksia; Urban Dream -hanke on tuonut kaupunkiin kymmeniä monumentaalisia freskoja vuodesta 2014." },
+    ],
+    "East Flanders": [
+      { q: "Mikä maalaus tekee Gentin Pyhän Baavon katedraalista kuuluisan?", a: "Van Eyckin veljesten vuonna 1432 valmistunut Gentin alttaritaulu on historian varastetuin taideteos – yksi sen paneeleista on edelleen kadoksissa vuosikymmenten takaa." },
+      { q: "Kuinka pitkä Gentin kesäjuhla on?", a: "Gentse Feesten valtaa koko vanhankaupungin heinäkuussa noin kymmeneksi päiväksi ja kerää noin miljoona kävijää – yksi Euroopan suurimmista ilmaisista katujuhlista." },
+    ],
+    Liege: [
+      { q: "Kuka kuuluisa kirjailija syntyi Liègessä?", a: "Komisario Maigret -dekkarien luoja Georges Simenon syntyi Liègessä 1903 ja on yksi maailman luetuimmista belgialaiskirjailijoista, yli 500 miljoonaa myytyä kirjaa." },
+      { q: "Mikä on Montagne de Bueren?", a: "374 porrasaskelman rappu Liègen keskustassa nousee jyrkkää rinnettä ylös linnoitukselle; se rakennettiin 1880-luvulla muistoksi kaupunkia 1400-luvulla puolustaneille sotureille." },
+    ],
+    Limburg: [
+      { q: "Mikä on Bokrijk?", a: "Bokrijk on Euroopan suurimpia ulkoilmamuseoita: yli 140 vanhaa flaamilaista rakennusta on siirretty samaan puistoon Genkin lähelle kertomaan maaseudun elämästä ennen teollistumista." },
+      { q: "Miksi Hasselt on Belgian katajaviinan kaupunki?", a: "Hasselt on ollut jenever-katajaviinan valmistuksen keskus 1600-luvulta lähtien, ja kaupungin Jenevermuseumissa toimii yhä oikea, käyvä tislaamo." },
+    ],
+    Luxembourg: [
+      { q: "Mitä tapahtui Bastognessa joulun 1944 alla?", a: "Saksalaiset vaativat piiritetyn Bastognen amerikkalaisjoukkoja antautumaan Ardennien hyökkäyksen aikana; kenraali McAuliffe vastasi yhdellä sanalla: 'Nuts!' – suunnilleen 'painukaa hiiteen'." },
+      { q: "Mikä pieni kaupunki väittää olevansa maailman pienin?", a: "Durbuy on markkinoinut itseään 'maailman pienimpänä kaupunkina' aina 1300-luvulta asti, vaikka virallisesti tittelin omistaa Belgiassa nykyään Mesen." },
+    ],
+    "West Flanders": [
+      { q: "Miksi Brugge on saanut lisänimen 'Pohjolan Venetsia'?", a: "Bruggen keskiaikaiset kanaalit, kellotorni ja ehjä vanhakaupunki ovat Unescon maailmanperintökohde – kaupunki säilyi lähes koskemattomana, kun kauppareitit siirtyivät muualle 1500-luvulla." },
+      { q: "Mikä ikivanha muistoseremonia toistuu Ypresissä joka ilta?", a: "Menin Gate -muistoportilla on soitettu Last Post -iskukutsu joka ilta vuodesta 1928 (saksalaismiehitystä lukuun ottamatta) muistoksi ensimmäisessä maailmansodassa kaatuneista." },
+    ],
+    Namur: [
+      { q: "Mitä Grottes de Han -luolissa pääsee näkemään?", a: "Hanin luolat Namurin maakunnassa ovat Belgian suosituimpia nähtävyyksiä maan alla: Lesse-joki on kaivertanut vuosituhansien saatossa käytäviä ja saleja, joita kierretään opastetulla retkellä." },
+      { q: "Kuinka suuri Namurin linnoitus on?", a: "Namurin sitadelli sijaitsee Sambre- ja Meuse-jokien yhtymäkohdassa ja on yksi Euroopan laajimmista linnoituksista – maanalaisia käytäviä siellä on yli 7 kilometriä." },
+    ],
+    "Walloon Brabant": [
+      { q: "Miksi Louvain-la-Neuve on Belgian nuorin kaupunki?", a: "Louvain-la-Neuve rakennettiin tyhjästä 1970-luvulla, kun Leuvenin yliopisto jaettiin kielikiistojen seurauksena – ranskankielinen osa muutti kokonaan uuteen kaupunkiin." },
+      { q: "Mikä rauniokohde kertoo alueen luostarihistoriasta?", a: "Villersin luostarin rauniot Villers-la-Villessa ovat yksi Belgian vaikuttavimmista keskiaikaisista kohteista; sistanssilaisluostari perustettiin 1146, ja parhaimmillaan siellä asui noin 400 munkkia." },
+    ],
+  },
 };
