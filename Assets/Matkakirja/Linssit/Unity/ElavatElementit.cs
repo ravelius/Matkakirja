@@ -69,6 +69,8 @@ namespace Matkakirja.Natiivi
             public float Haalistus;
             /// <summary>Liioiteltu perspektiivi vain roottorille (höyrylaiva: juuren kallistus nostaisi joen polun irti kartasta).</summary>
             public bool KallistaVainRoottori;
+            /// <summary>Meren koriste (MeriKoristeet): paikka, suunta ja siirto kohdemaan merikohdista kehyksittäin.</summary>
+            public MeriKoristeet.Laji Meri;
             // Ajonaikaiset
             public readonly List<Yksilo> Oliot = new();
             /// <summary>Vaihtelu ja tauot yksilölle i (omistaja 16.5x: ei monotoniaa), siemenellä toistettava.</summary>
@@ -80,7 +82,7 @@ namespace Matkakirja.Natiivi
             public Material Materiaali, PohjaMateriaali, ValoMateriaali;
         }
 
-        static readonly Aihe[] Aiheet =
+        static readonly Aihe[] Aiheet = MeriAiheet(new[]
         {
             new Aihe
             {
@@ -164,31 +166,25 @@ namespace Matkakirja.Natiivi
                 PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = 0f, KallistaVainRoottori = true,
                 Animoi = HoyryGeometria.Animoi,
             },
-            new Aihe
-            {
-                // MEREN KORISTEET, kokeilu (MeriGeometria): siipiratashöyry rannikon suuntaisella merireitillä Norjan
-                // länsirannikolla. Näytös (matka 25–40 s) ja tauko (30–90 s) tulevat MeriGeometrian aikataulusta, joten
-                // Vaihtelua ei tarvita; vähennetty liike ja Staattinen pysäyttävät ajan kuten muillakin.
-                Nimi = "merilaiva", Paikka = new LatLon(MeriGeometria.NorLat, MeriGeometria.NorLon), KokoPt = MeriGeometria.LaivaKokoPt,
-                // Rannikon suunnassa 170 pt pohjoiseen ankkurista ja valas 110 pt etelään: reitti (±0,35 × 280 ≈ ±100 pt) pysyy ≥ 120 pt:n päässä.
-                Yksilot = new[] { (0f, 170f, 0f) }, SiirtoIlmansuuntiin = true,
-                Runko = HoyryGeometria.Joki, Roottori = MeriGeometria.Laiva, Lapsi = HoyryGeometria.Siipiratas,
-                LastenPaikat = new Vector3[2], Lapsi2 = HoyryGeometria.Savupallo, Lapsia2 = HoyryGeometria.Palloja,
-                PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = MeriGeometria.NorRannikko, KallistaVainRoottori = true,
-                Naytos = MeriGeometria.LaivaNakyy, Animoi = MeriGeometria.LaivaAnimoi,
-            },
-            new Aihe
-            {
-                // Valas: nousee, puhaltaa kahdesti ja sukeltaa pyrstö pystyssä (näytös 12–16 s, tauko 60–150 s).
-                Nimi = "valas", Paikka = new LatLon(MeriGeometria.NorLat, MeriGeometria.NorLon), KokoPt = MeriGeometria.ValasKokoPt,
-                Yksilot = new[] { (-6f, -110f, 0f) }, SiirtoIlmansuuntiin = true,
-                Runko = HoyryGeometria.Joki, Roottori = HoyryGeometria.Joki, Lapsi = MeriGeometria.ValaanSelka,
-                LastenPaikat = new Vector3[1], Lapsi2 = MeriGeometria.Suihku, Lapsia2 = MeriGeometria.Suihkuja,
-                Lapsi3 = MeriGeometria.Pyrsto, Lapsia3 = 1,
-                PohjaSade = 0.001f, Haalistus = 0.25f, Suunta = MeriGeometria.NorRannikko, KallistaVainRoottori = true,
-                Naytos = MeriGeometria.ValasNakyy, Animoi = MeriGeometria.ValasAnimoi,
-            },
-        };
+        });
+
+        /// <summary>
+        /// Meren koristeet tuotannossa (omistaja 27.9. klo 07.4x): jokaiselle MeriKoristeet-lajille yksi aihe ilman kiinteää
+        /// paikkaa; LateUpdate asettaa paikan, suunnan ja siirron valitusta merikohdasta, ja valitsematon laji ei näy.
+        /// </summary>
+        static Aihe[] MeriAiheet(Aihe[] kaupungit)
+        {
+            var kaikki = new List<Aihe>(kaupungit);
+            foreach (var l in MeriKoristeet.Lajit)
+                kaikki.Add(new Aihe
+                {
+                    Nimi = l.Nimi, Meri = l, KokoPt = l.KokoPt, Yksilot = new[] { (0f, 0f, 0f) }, SiirtoIlmansuuntiin = true,
+                    Runko = HoyryGeometria.Joki, Roottori = l.Roottori, Lapsi = l.Lapsi, LastenPaikat = l.Lapsi != null ? new Vector3[l.Lapsia] : null,
+                    Lapsi2 = l.Lapsi2, Lapsia2 = l.Lapsia2, Lapsi3 = l.Lapsi3, Lapsia3 = l.Lapsia3,
+                    PohjaSade = 0.001f, Haalistus = 0.25f, KallistaVainRoottori = true, Naytos = l.Nakyy, Animoi = l.Animoi,
+                });
+            return kaikki.ToArray();
+        }
 
         static ElavatElementit instanssi;
         public static bool Paalla = true;
@@ -203,6 +199,17 @@ namespace Matkakirja.Natiivi
         Func<bool> kaynnissa;
         float liike;
         bool jokinNakyvissa, jokinLiikkuu;
+        float meriAjastin;
+
+        /// <summary>Merikohdan ruutupiste pisteinä (y ylös), tai null horisontin takana tai kameran takana.</summary>
+        Vector2? RuutuPt(MeriKoristeet.Kohta k, Vector3 c0, Transform gt, Vector3 kameraL)
+        {
+            Vector3 p = Paikka(new LatLon(k.Lat, k.Lon), 25);
+            if (Vector3.Dot(kameraL - p, (p - c0).normalized) <= 0) return null;
+            var r = kamera.WorldToScreenPoint(gt.TransformPoint(p));
+            if (r.z <= 0) return null;
+            return new Vector2(r.x, r.y) / LinssiOhjain.Pistekerroin;
+        }
 
         public static void Kytke(LinssiOhjain o)
         {
@@ -234,9 +241,9 @@ namespace Matkakirja.Natiivi
                     if (a.Nimi == sanat[1] && a.Naytos != null)
                         foreach (var yk in a.Oliot)
                         {
-                            float t = yk.Aika + yk.Vaihe, alku = MeriGeometria.SeuraavaAlku(a.Nimi, t);
+                            float t = yk.Aika + yk.Vaihe, alku = a.Meri != null ? a.Meri.Aikataulu.SeuraavaAlku(t) : MeriGeometria.SeuraavaAlku(a.Nimi, t);
                             if (alku - 0.3f > t) yk.Aika += alku - 0.3f - t;
-                            if (sanat.Length > 2 && sanat[2] == "harvinainen") MeriGeometria.PakotaHarvinainen(a.Nimi, alku);
+                            if (sanat.Length > 2 && sanat[2] == "harvinainen") { if (a.Meri != null) a.Meri.Aikataulu.PakotaHarvinainen(alku); else MeriGeometria.PakotaHarvinainen(a.Nimi, alku); }
                         }
             }
             o.Kirjaa("elävät elementit: " + Tila());
@@ -249,16 +256,19 @@ namespace Matkakirja.Natiivi
             double nyt = Time.unscaledTimeAsDouble + AikaSiirto;
             foreach (var a in Aiheet)
             {
+                // Valitsemattomat meren lajit vain laskuriin (rivi pysyy luettavana).
+                if (a.Meri != null && !a.Meri.Valittu) continue;
                 var yk = a.Oliot.Count > 0 ? a.Oliot[0] : null;
                 string tauko = yk?.Aikataulu == null ? "" : $", nopeus {yk.Nopeus:F2}, seuraava tauko {yk.Aikataulu.SeuraavaTauko(nyt) - nyt:F0} s";
-                if (yk != null && a.Naytos != null) tauko = ", " + MeriGeometria.Kuvaus(a.Nimi, yk.Aika + yk.Vaihe);
+                if (yk != null && a.Naytos != null) tauko = ", " + (a.Meri != null ? a.Meri.Aikataulu.Kuvaus(yk.Aika + yk.Vaihe) : MeriGeometria.Kuvaus(a.Nimi, yk.Aika + yk.Vaihe));
                 osat.Add($"{a.Nimi} {(a.Nakyvissa ? $"näkyvissä (peitto {a.Peitto:F2})" : "ei näkyvissä")}, {a.Kolmioita} kolmiota{tauko}");
             }
-            return $"{(Paalla ? "päällä" : "pois")}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
+            return $"{(Paalla ? "päällä" : "pois")}; meri {MeriKoristeet.Maa ?? "-"} ({MeriKoristeet.KohtiaYhteensa} kohtaa): {MeriKoristeet.Kuvaus()}; {string.Join("; ", osat)}; liike {instanssi.liike:F2}, kerros {ElavaKerros.Nyt}";
         }
 
         void Start()
         {
+            StartCoroutine(MeriKoristeet.Lataa());
             var s = Resources.Load<Shader>("Varjostimet/Malli");
             if (s == null) { Debug.LogWarning("MATKAKIRJA elävät elementit: Malli-varjostin puuttuu"); enabled = false; return; }
             foreach (var a in Aiheet)
@@ -365,15 +375,40 @@ namespace Matkakirja.Natiivi
             double seina = Time.unscaledTimeAsDouble + AikaSiirto;
             bool liikkuu = false;
 
+            // Meren koristeet: kohdemaan lajit ja ankkurit (ankkuri vaihtuu vain, kun laji ei näy; tarkistus kerran sekunnissa).
+            MeriKoristeet.Kohdemaa(NostoKerros.Instanssi != null ? NostoKerros.Instanssi.NykyinenMaa : null);
+            bool meriAnkkurit = (meriAjastin -= Time.unscaledDeltaTime) <= 0f;
+            if (meriAnkkurit) meriAjastin = 1f;
+            int meriaNakyvissa = 0;
+            foreach (var a in Aiheet) if (a.Meri != null && !a.Meri.Harvinainen && a.Nakyvissa) meriaNakyvissa++;
+            var keskiPt = new Vector2(Screen.width, Screen.height) * (0.5f / LinssiOhjain.Pistekerroin);
+
             bool jokin = false;
             foreach (var a in Aiheet)
             {
+                bool meriPois = false;
+                if (a.Meri != null)
+                {
+                    var l = a.Meri;
+                    if (l.Valittu && !a.Nakyvissa && (meriAnkkurit || !l.AnkkuriAsetettu))
+                        MeriKoristeet.ValitseAnkkuri(l, k => RuutuPt(k, c0, gt, kameraL), keskiPt);
+                    // Valitsematon tai ankkuriton laji ei näy; harvinainen (merihirviö) väistää, jos pari on jo ruudulla.
+                    meriPois = !l.Valittu || !l.AnkkuriAsetettu || (l.Harvinainen && !a.Nakyvissa && meriaNakyvissa >= 2);
+                    if (l.AnkkuriAsetettu)
+                    {
+                        var k = l.Ankkuri;
+                        a.Paikka = new LatLon(k.Lat, k.Lon);
+                        a.Suunta = k.Rannikko;
+                        float r = k.Rannikko * Mathf.Deg2Rad;
+                        a.Yksilot[0] = (l.SiirtoPt * Mathf.Sin(r), l.SiirtoPt * Mathf.Cos(r), 0f);
+                    }
+                }
                 Vector3 juuri = Paikka(a.Paikka, 25);
                 Vector3 ylos = (juuri - c0).normalized;
                 Vector3 pohjoinen = Vector3.ProjectOnPlane(napa, ylos).normalized;
                 // Näkyy: korkeusikkuna, juuri kameran puolella (ei horisontin takana) ja ruudulla reunavaralla (simulaattori
                 // 26.9.: ruudun ulkopuolinen aihe piti elävän kerroksen käynnissä turhaan).
-                float p = Paalla && korkeus >= NakyyAlkaenM && korkeus <= NakyyAstiM && Vector3.Dot(kameraL - juuri, ylos) > 0
+                float p = !meriPois && Paalla && korkeus >= NakyyAlkaenM && korkeus <= NakyyAstiM && Vector3.Dot(kameraL - juuri, ylos) > 0
                     && Ruudulla(gt.TransformPoint(juuri))
                     ? Mathf.Clamp01((float)((NakyyAstiM - korkeus) / (NakyyAstiM - HaipyyAlkaenM))) : 0f;
                 if (a.Naytos != null)
@@ -1439,6 +1474,8 @@ namespace Matkakirja.Natiivi
 
         static readonly MeriAikataulu Laivat = new MeriAikataulu(907, 25f, 40f, 30f, 90f);
         static readonly MeriAikataulu Valaat = new MeriAikataulu(911, 12f, 16f, 60f, 150f);
+        public static MeriAikataulu LaivaAikataulu => Laivat;
+        public static MeriAikataulu ValasAikataulu => Valaat;
         static MeriAikataulu Hae(string nimi) => nimi == "valas" ? Valaat : Laivat;
         public static float SeuraavaAlku(string nimi, float t) => Hae(nimi).SeuraavaAlku(t);
         public static void PakotaHarvinainen(string nimi, float alku) => Hae(nimi).PakotaHarvinainen(alku);
