@@ -4,10 +4,10 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260927-b.md`](viesti-pelikoodari-luovutus-20260927-b.md) (27.9. klo 09.3x): jono
-   1) raja-PR (PUHE_PAIVARAJA + 429 ei ohita virkettä), 2) #3385 + proto maailma-auki korjaus (MANNERLENNOT JÄÄVÄT)
-   ja maakuntaerä, 3) striimipuhe ilman äänikytkimiä, 4) natiivin progressiivinen soitto.
-   Edellinen: `viesti-pelikoodari-luovutus-20260927.md`.
+   [`viesti-pelikoodari-luovutus-20260927-c.md`](viesti-pelikoodari-luovutus-20260927-c.md) (27.9. klo 11.3x): #3384–#3389
+   mainissa, #3388 + #3394 (talouden vaihe 1) junassa; agenteilla natiivin talousportti, astro-pallo-VASTAKOE ja
+   pelikatalogi.html (tarkista haarat); jono: natiiviportin merge + UI-speksi, avauskortin web-kevennys, pelistreak,
+   natiivin puhemittaus. Edellinen: `viesti-pelikoodari-luovutus-20260927-b.md`.
    - Simulaattoriajo vain Julkaisijan "nyt"-kuittauksella ja kun booted < 2. SendMessage-raja → varakanava
      mcp__ccd_session_mgmt__send_message session id:llä (Fable local_5df52e10-10e4-4b72-9554-0049db300dfe,
      Julkaisija local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914).
