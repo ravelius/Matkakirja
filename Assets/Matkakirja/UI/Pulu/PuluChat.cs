@@ -1195,6 +1195,9 @@ namespace Matkakirja.Natiivi
 
         static bool AaniPaalla => PlayerPrefs.GetInt(AaniAvain, 0) == 1;
 
+        /// <summary>Testikomento (ui chat aani): kaiutinkytkin kuin napautus; palauttaa uuden tilan.</summary>
+        public bool VaihdaAaniTesti() { VaihdaAani(); return AaniPaalla; }
+
         void VaihdaAani()
         {
             PlayerPrefs.SetInt(AaniAvain, AaniPaalla ? 0 : 1);
