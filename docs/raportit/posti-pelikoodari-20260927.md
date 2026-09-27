@@ -85,3 +85,11 @@ painikkeiden alla keskellä; iPadilla päiväkirjan ja selitteen välissä; ei o
 Pelkät punaiset neliöt (8 × 9×9 px): ei tekstiä, ei tuntilukuja, ei kehystä, sama ulkoasu iPhone = iPad (keskellä
 painikerivin alla). Yläpalkissa punainen "£0 2 vrk" kaikilla leveyksillä (vrk EI poistettu). node --test 4459/0.
 Kuvaparit uusittu: `/Users/Shared/Claude/proto-3d/lokit/rahattomuuspalkki/kuvapari-rahattomuus-393x852.png` ja `-834x1194.png`.
+
+## LUENTA KUULUU AINA PYYNNÖSTÄ (omistaja 15.5x) valmis
+
+- Web **#3422** v2328: mykistysportti pois lukijasta (lueAaneen, lueVirtana); Äänimaisema ei pysäytä luentaa; kortin kaiutin ei
+  näy mykistettynä. Automaattista luentaa ohjaa kertojakytkin. Ennallaan: linssiluennan pysäytys äänikytkimestä (ei tilauksessa).
+  Selaimessa todennettu: sfx pois → lueAaneen käynnistyy. node --test 4458/0.
+- Natiivi 1.0.31 **pelikoodari/luenta-aina f4ab9dc2** → Natiiviseppä: Puhe-taso ei nollaudu Äänimaisemasta; Lue/Soita/Esihae(pyynnosta).
+  Samassa: Natiivisepän pyytämät `koetila raha|rahaton|loppukortti`. Natiivi-UI:lle lista kaiutinkutsuista (pyynnosta: true).
