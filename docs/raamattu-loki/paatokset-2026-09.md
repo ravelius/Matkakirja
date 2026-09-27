@@ -8159,3 +8159,7 @@ Laitetestaaja (raportti savukierros-tf1029-20260927.md): meri, lahitaso, nostot 
 ## OMISTAJA: LENTOPELI ODOTTAA ENSI VIIKKOA (EI TOTEUTUSTA NYT) (27.9.2026 klo 12.26)
 
 Omistaja 27.9.2026: lentopelia ei tehda viela, jatetaan odottamaan ensi viikkoa. Suunnitelma ja hyvaksymislista (Linssisepan 948a66567, omistajan vastaukset: Kauppa 60 £, peukaloveto + kaasu, hinnat, 6 min, vain natiivi) jaavat valmiiksi; prototyyppi pois Linssisepan jonosta. Lento v3 (9d318451) ei ole lentopeli ja menee 1.0.30:aan.
+
+## OMISTAJA: PELIT JA LINSSIT SAMALLE SIVUSTOLLE, ETUSIVUNA TILANNEKATSAUS OSA-ALUEITTAIN (APURAHAN ARVIOIJAT, KUMPPANIT) (27.9.2026 klo 12.37)
+
+Omistaja 27.9.2026 klo 12.3x: yhteinen kehityssivusto, paaluokat Tilanne (aloitussivu), Linssit, Pelit, Kartta ja maailma, Sisalto ja oppiminen, Natiivi iOS. Kortti: vain suomeksi; julkinen linkilla mutta noindex; osa-alueet kartta/maailma, sisalto/oppiminen, natiivi iOS (talous ja julkaisu ei). Pelikoodari rakentaa sivuston (korvaa #3399:n; vanhat linssikatalogi.html/pelikatalogi.html ohjaavat valilehdelle; automaattiset luvut datasta), Fable kirjoitti tekstit docs/tilannekatsaus.md (PR #3407, Raamatun karttaan). Julkaisu vasta omistajan kortin (puhelin + tyopoyta -kuvat) jalkeen. Ei sisaisia tietoja (id:t, avaimet, roolit, mallit).
