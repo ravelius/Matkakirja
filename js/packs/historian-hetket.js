@@ -3509,7 +3509,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'lahi',
         tiedosto: 'hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
         lyhyt: 'Pompejilainen kauppias yrittää pelastaa omaisuutensa hohkakivien alkaessa ropista katolle.',
-        kuvateksti: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa '
+        kuvateksti: 'Havainnekuvan nimetön torikauppias yrittää vielä pelastaa '
           + 'vaa’an ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien '
           + 'alkavaa ropinaa katoksella. He eivät tiedä, onko viisaampaa '
           + 'suojautua vai lähteä — juuri tämä epävarmuus jätti osan '
@@ -3691,7 +3691,7 @@ export const HISTORIAN_HETKET = [
         lyhyt: 'Nuori nainen suojaa soitintaan Lontoon suurpalossa veneessä pakenevien tavaroiden joukossa.',
         kuvateksti: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: '
           + 'lähes joka kolmannessa kotinsa tavaroita kuljettavassa veneessä '
-          + 'oli virginal-soitin. Kuvituksen nuori nainen pitää oman '
+          + 'oli virginal-soitin. Havainnekuvan nuori nainen pitää oman '
           + 'soittimensa kantta kiinni kipinäsateessa — koti saattaa palaa, '
           + 'mutta perhe ei vielä suostu jättämään kaikkia entisen elämän '
           + 'ääniä rannalle.',
@@ -3791,7 +3791,7 @@ export const HISTORIAN_HETKET = [
         tiedosto: 'hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
         lyhyt: 'Berliinin muurin ensimmäisenä päivänä poliisi vetää piikkilangan lähellä olevien sisarusten väliin.',
         kuvateksti: 'Bernauer Straßella talon seinä kuului itään mutta '
-          + 'jalkakäytävä länteen. Kuvituksen sisarukset ovat yhä '
+          + 'jalkakäytävä länteen. Havainnekuvan sisarukset ovat yhä '
           + 'huutoetäisyydellä, kun nuori poliisi kiristää lankaa heidän '
           + 'väliinsä; kukaan heistä ei vielä tiedä, että ovet ja ikkunat '
           + 'muurataan tulevina päivinä.',
@@ -4322,7 +4322,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'lahi',
         tiedosto: 'hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
         lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin portti vihdoin avautuu.',
-        kuvateksti: 'Kuvituksen pariisilainen metallityöläinen on kantanut '
+        kuvateksti: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
           + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
           + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
           + 'sekoittuu pelkoon: savun takana odottaa piha, jolta äsken '

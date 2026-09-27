@@ -1012,7 +1012,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pakenevien tavaroiden joukossa.',
           selite: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: lähes '
             + 'joka kolmannessa kotinsa tavaroita kuljettavassa veneessä oli '
-            + 'virginal-soitin. Kuvituksen nuori nainen pitää oman soittimensa '
+            + 'virginal-soitin. Havainnekuvan nuori nainen pitää oman soittimensa '
             + 'kantta kiinni kipinäsateessa — koti saattaa palaa, mutta perhe ei '
             + 'vielä suostu jättämään kaikkia entisen elämän ääniä rannalle.',
           lahde: 'Matkakirjan havainnekuva. Faktat: The National Archives — '
@@ -4403,7 +4403,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Berliinin muurin ensimmäisenä päivänä poliisi vetää '
             + 'piikkilangan lähellä olevien sisarusten väliin.',
           selite: 'Bernauer Straßella talon seinä kuului itään mutta jalkakäytävä '
-            + 'länteen. Kuvituksen sisarukset ovat yhä huutoetäisyydellä, kun '
+            + 'länteen. Havainnekuvan sisarukset ovat yhä huutoetäisyydellä, kun '
             + 'nuori poliisi kiristää lankaa heidän väliinsä; kukaan heistä ei '
             + 'vielä tiedä, että ovet ja ikkunat muurataan tulevina päivinä.',
           lahde: 'Matkakirjan havainnekuva. Faktat: Chronik der Mauer — 13 August '
@@ -6727,7 +6727,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja siitä tulee trikolori.',
           lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin '
             + 'portti vihdoin avautuu.',
-          selite: 'Kuvituksen pariisilainen metallityöläinen on kantanut '
+          selite: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
             + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
             + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
             + 'sekoittuu pelkoon: savun takana odottaa piha, jolta äsken '

@@ -234,7 +234,7 @@ export const FOKUSKOHTEET_GBR = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg',
       kadonnut: true,
       lyhyt: 'Lapsi näkee Crystal Palacen valosta tehtynä rakennuksena, jonka sisällä on koko maailmannäyttely.',
-      selite: 'Kuvituksen perheen nuorin näkee mäen laelta rakennuksen, joka '
+      selite: 'Kuvan perheen nuorin näkee mäen laelta rakennuksen, joka '
         + 'näyttää olevan tehty lähes kokonaan valosta. Vanhemmille päivä '
         + 'Crystal Palacessa maksaa aikaa ja rahaa, mutta sisällä odottavat '
         + 'Egypti, Assyria, Alhambra ja kokonainen maailmannäyttely samojen '

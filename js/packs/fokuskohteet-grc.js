@@ -1152,7 +1152,7 @@ export const FOKUSKOHTEET_GRC = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2.jpg',
       kadonnut: false,
       lyhyt: 'Nuori lähettiläs odottaa Pythian vastausta tiellä, jota reunustavat aarreaitat ja pronssipatsaat.',
-      selite: 'Kuvituksen nuori lähettiläs toistaa mielessään kotikaupunkinsa '
+      selite: 'Kuvan nuori lähettiläs toistaa mielessään kotikaupunkinsa '
         + 'kysymystä, sillä Pythian vastausta ei saa pyytää uudelleen vain '
         + 'siksi, ettei siitä pidä. Pyhää tietä reunustavat aarreaitat, '
         + 'pronssipatsaat ja sotasaaliista annetut lahjat muistuttavat häntä '
@@ -2097,7 +2097,7 @@ export const FOKUSKOHTEET_GRC = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2.jpg',
       kadonnut: false,
       lyhyt: 'Isä nostaa tyttärensä laskemaan pylväitä: 104 korinttilaista pylvästä todistaa temppelin valmiiksi.',
-      selite: 'Kuvituksen isä nostaa tyttärensä kivelle, jotta tämä voisi '
+      selite: 'Kuvan isä nostaa tyttärensä kivelle, jotta tämä voisi '
         + 'laskea pylväitä — tehtävä käy mahdottomaksi jo kauan ennen sataa. '
         + 'Lapselle metsä näyttää jatkuvan loputtomiin; aikuisille 104 '
         + 'korinttilaista pylvästä todistavat, että vuosisatoja kesken ollut '
