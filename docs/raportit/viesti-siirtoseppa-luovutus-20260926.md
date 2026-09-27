@@ -34,8 +34,15 @@ voimassa.
 4b2. **#3479 skeema 1.55** (wt/siirtoseppa-salaisuudet-pois, PINOTTU #3445:n päälle): maakuntasalaisuudet pois (omistaja
    20.0x, Pelikoodarin pyyntö), skeemasopimus vanhentaa poistettujen kokoelmien ehdot. Julkaistava yhdessä web #3475:n
    kanssa. Natiiviseppä kuittasi. #3441 eheysvartija MERGETTY 20.13 ja toimii (v247: 3×404 Nouméa).
+4b3. **TILA 27.9. klo 21.3x:** 1.52 tuotannossa v248/249 (pienet 3 570 ok). 1.53–1.55 mainissa (#3445, #3488) mutta
+   EI tuotannossa: vienti katkesi työn 30 min aikarajaan (~10 000 pienen pienennys). Korjaus #3496 (mediakuvat.mjs
+   --aikaraja, pienet ämpäriin minuutin välein, työ 60 min) — Julkaisija mergeää ohi junan. Mergen jälkeen: tarkista
+   uusin.json skeema 1.55, pienet 200 (eheysvartija ajaa itse), rivi Fablelle + Natiivisepälle.
 4c. **Seuraava (Fable 27.9.):** kun 1.52–1.54 tuotannossa ja 1.0.32 käännetty → päästä päähän offline-testi Tanska +
-   Kroatia omalla simulaattorilla F989814A (vuoro Julkaisijalta, booted < 2, sammuta jälkeen): koko ennen latausta ja
+   Kroatia omalla simulaattorilla F989814A — SIIRTYI AAMUUN 28.9. (Julkaisija). Käännös: nohup proto-kaanna.sh
+   21f09914 F989814A-4E6F-4617-8E5E-C7505E30DEF9; ajo: scratchpadin offline-e2e.sh pohja = Natiivisepän
+   proto-3d/lokit/natiiviseppa-skriptit/sessio-m/offline-gzip.sh (komento.txt: alue lataa DNK / alue tila / palvelin),
+   vuoro Julkaisijalta, booted < 2, sammuta jälkeen: koko ennen latausta ja
    levyllä, lentotila/debug-offline → kartta, maasto, nostokuvat, puheet. Kuvat raporttiin, löydökset rooleille.
 4d. Docs-PR:t #3442 (maastoehdotus) ja #3463 (App Store -luvut) junassa. Jono App Storen jälkeen: kaupunkilehdet.json- ja
    media.json-monoliittien pilkkominen.
