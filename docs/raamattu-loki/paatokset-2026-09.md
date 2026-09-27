@@ -8259,3 +8259,7 @@ Omistaja 27.9.2026 klo 17.2x (TF 1.0.30): kartta tarkentuu vierityksen jalkeen (
 ## FABLEN OMA NOLLAUS 65 %:SSA (LUOVUTUS -20260927-b); NATIIVI-UI NOLLAUKSESSA; 1.0.31 KAANNOKSESSA (27.9.2026 klo 17.19)
 
 Fable (tili D, Opus xhigh, local_cf5b4eca) kirjoitti luovutuksen docs/raportit/viesti-fable-luovutus-20260927-b.md ja aloitusviestin; Postivahti tekee Raamatun kaavan (RC pois, 90 s, aloitusviesti Fablen id:lle, RC paalle). Natiivi-UI 73 % → luovutus -y + clear kasketty 17.3x; uusi Fable viimeistelee (aloitusviesti). 1.0.31 (pohjan Z10 c48512b5, luenta aina, koetila, aloitusvalinta, elamapalkki) Natiivisepalla kaannoksessa, Laitetestaajan resepti valmisteilla.
+
+## UUSI FABLE JATKAA (NOLLAUS 65 %); KARTTASEPALLE EUROOPAN KARTAN LAATUKIERROS (27.9.2026 klo 17.23)
+
+Fable nollattu 17.2x, jatkaa luovutuksesta -20260927-b. Natiivi-UI sai nollauskaskyn (73 %), tekee iPad-mittauksen loppuun ennen luovutusta -y; idle-tilaus paalla. 1.0.31-juna juna/b13 8096bae5 kaannoksessa (Natiiviseppa) → Laitetestaaja → TF. #3421 ja #3410 Julkaisijan jonossa (#3424 mainissa). Karttasepan jono oli tyhja → uusi era (VAIN EUROOPPA, App Store -laatu): Euroopan pelikaupungit webin Z8–Z10 ja natiivin pallo-Z10:lla — saumat, reiat, pergamenttilaikut, vesimaski, rantaviiva, savyhypyt, liput; raportti karttaseppa-eurooppa-laatu-20260927.md, korjaukset delta-polttona; ei teravointia (omistaja pitaa maitomaisemmasta, kontrasti natiivin varjostimessa). Omistajan pyramidisarjojen poisto (09-21/22/22c/23a) kaynnissa paatteessa.
