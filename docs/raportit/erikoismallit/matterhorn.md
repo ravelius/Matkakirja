@@ -87,6 +87,15 @@
 - Osat 360: lippupilvi 196 (7 möykkyä), hattara 2 × 28, alppihehku 27 + 37, juna 20 ja valot 24. **LOD0 yhteensä 787.**
 - LOD1 (arvio, ei vielä verkkona, koska taso 1 piirtää LOD0:n): noin 300, eli vuori 8 meridiaanilla ja 4 silmukalla,
   jäätikkö ja kukkula. Talot, puut ja Kulmhotel jäävät pois, ja lippupilvessä on 3 möykkyä.
+- Lähitaso (MatterhornLahi, omistaja hyväksyi tyylin 27.9. klo 09.0x): 1 497 kolmiota (rungon 427 × 3,5, katto 3 000). Siluetti,
+  värit, ääriviivaosat ja osien pivotit ovat samat, ja runko ja osat pysyvät tavulleen ennallaan.
+  - Vuori: 24 meridiaania ja katkeilevat kerrostumien reunukset (hyllyillä lunta ja alla tumma kaista), lumikourut, lumilipat
+    olkapäillä ja Zmuttin sekä Furggenin kalliohampaat. Mukana ovat myös Hörnlin reitti, Solvay-maja, Hörnlihütte ja Italian
+    huipun rautaristi.
+  - Jäätikkö, rata ja Zermatt: jäätikön railot ja reunarailo, kiskot ja hammastanko, ala-asema ja Kulmhotelin ikkunat sekä
+    talojen kivijalat, räystäät, ikkunat, parvekkeet ja savupiiput.
+  - Liikkuvat osat sopivat edelleen: huippupyramidin tahkot ovat rungon tasoissa, joten alppihehku peittää ne. Penger on sama,
+    joten juna kulkee sen päällä, ja talojen seinät ovat paikoillaan, joten yövalot osuvat ikkunoihin.
 
 ## 8. Ääriviiva ja perspektiivi
 - Vuori on yksi ääriviivaosa, joten ääriviiva kiertää koko siluetin eikä jokaista tahkoa. Jäätikkö ja kukkula ovat
@@ -100,4 +109,6 @@
   tummalla kartalla).
 - Video: matterhorn-video-30.mp4 (26 s, 30°): juna nousee, lippupilvi muodostuu ja napautus 14 s:n kohdalla käynnistää
   alppihehkun.
+- Lähitaso: matterhorn-lahitaso-45.png, matterhorn-lahitaso-55.png ja 2 × 2 matterhorn-lahitaso.png (keski vs lähi, molemmat
+  etelästä eli Zermattin näkymä, kulma, versio ja kolmiomäärä kuvassa; lahi.py).
 - Kehyshintaa ei ole mitattu laitteella. Liikeydin ei allokoi, ja asennot ovat suoria kaavoja.
