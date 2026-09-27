@@ -213,6 +213,29 @@ namespace Matkakirja
             ennakko.farClipPlane = (float)(a.EtaisyysM + 2.0 * CesiumWgs84Ellipsoid.GetMaximumRadius());
         }
 
+        /// <summary>Ennakkokamera päällä valintanäkymän aikana (ei vielä lentoa).</summary>
+        bool ennakkoValinnassa;
+
+        /// <summary>
+        /// Valintanäkymä avautui (KarttaKerrokset.LentoPohjaValmiiksi): ennakkokamera lähtökaupungin yleiseen lähikuvaan
+        /// (30 km, katse 30° alas, kaakkoon), jotta Lontoon tarkat laatat ovat Cesiumissa ennen napautusta (v5-video 27.9.:
+        /// koko pallon näkymästä 4 s:n odotus ei riittänyt). Lähikuvan ympäristö on kaikille kohteille sama.
+        /// </summary>
+        public void EnnakkoLahtoon(double lat, double lon)
+        {
+            var paa = kierto != null ? kierto.GetComponent<Camera>() : null;
+            EnnakkoAsentoon(new AloituslennonRata.Asento(lat, lon, 30_000.0, 60.0, 135.0, 1500.0), paa);
+            ennakkoValinnassa = ennakko != null;
+        }
+
+        /// <summary>Valinta sulkeutui: valintanäkymän ennakko pois (käynnistyvä aloituslento asettaa omansa samassa kehyksessä).</summary>
+        public void EnnakkoValintaPois()
+        {
+            if (!ennakkoValinnassa) return;
+            ennakkoValinnassa = false;
+            if (!aloitusAjossa) EnnakkoPois();
+        }
+
         void EnnakkoPois()
         {
             foreach (var h in ennakkoHallinnat) if (h != null && ennakko != null) h.additionalCameras.Remove(ennakko);
