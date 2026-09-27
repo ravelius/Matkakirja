@@ -7895,3 +7895,7 @@ Natiivi-UI nollattu 08.2x (74 % → tyhja), aloitusviesti: avauskortti natiiviin
 ## OMISTAJA 08.3x KORJAA: EI MAANOSA- VAAN MAAKUNTAETENEMINEN POIS; MANNERLENNOT JAAVAT (27.9.2026 klo 08.25)
 
 Omistaja 08.3x: "Tarkoitin maanosa etenemisella eri asiaa. Termi oli vaara. Poista maakunta eteneminen." → mannerlentojen paaaarre-ehto JAA (edellinen 08.16 paatos peruttu); poistetaan maakuntien vaiheittainen heraaminen/avautuminen — kaikki kohdemaan maakunnat auki heti saapuessa, web + natiivi, 1.0.29. Nostot heti taydella ulkoasulla ja NostoKerroksen porttien (a)–(b) poisto pysyvat. Salaisuus-nosto: omistaja paattaa erikseen kun Pelikoodari on kartoittanut.
+
+## OMISTAJA 08.3x: MAAKUNTIEN SALAISUUS-NOSTOT POIS (NAKYVAT HETI, EI PALJASTUSEHTOA) (27.9.2026 klo 08.27)
+
+Omistaja 08.3x "Ota ne salaisuudet pois myos": elavan kartan maakuntasalaisuudet (avautuivat kun maakunnan kaikki nostot loydetty, esim. Athos-jattilainen) poistetaan lukituksena — salaisuusnostot nakyvat heti kuten muut; pelkat palkintoefektit ilman sisaltoa poistetaan kokonaan (Pelikoodari listaa). Web + natiivi (KarttaMuste.cs), sama era kuin maakuntaeteneminen ja nostot heti, 1.0.29.
