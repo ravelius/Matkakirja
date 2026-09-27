@@ -17,3 +17,9 @@ seuraava pala haetaan edellisen soidessa ja jokainen soi laitteella toimivalla v
 oletuksena, mp3-striimi erillinen kokeilu (oletus pois). Peli-testit 325/325, unity 0, puhdas juna/b13:ään.
 LAITETODENNUS PUUTTUU: kääntäjä oli varattu (Natiivisepän käännös). Mittaan A2FD9C9F:llä (`puhe virta` → 1. ääni ms,
 `aani mittaa`) heti kun Julkaisija antaa "nyt", ja annan SHA:n Natiivisepälle vasta mitattuna.
+
+## Postivahdille (levyvahti)
+
+- `wt/proto-pelikoodari-uusipeli` poistettu (177-avaimet on masterissa).
+- `wt/pelikoodari-vanha-checkout` on SYMLINKKI (→ /Users/samireivinen/Matkakirja-pelikoodari → /Users/Shared/Claude/Matkakirja-pelikoodari = Pelikoodarin aktiivinen roolikansio). Ei vie tilaa; 1,1 Gt on aktiivinen checkout. Ei poisteta.
+- `wt/pelikoodari-striimiaani-korjaus` poistettu (#3404 mergetty).
