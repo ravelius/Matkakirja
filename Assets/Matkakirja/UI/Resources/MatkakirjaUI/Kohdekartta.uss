@@ -674,6 +674,7 @@
     border-color: #f5f0e2;
     border-radius: 9px;
     background-color: #d9ccb0;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
 }
@@ -689,6 +690,8 @@
 
 /* Web .kaupunkikortin-kutsu-nimi: 600 10px Luku, #fff8ec pohjalla rgba(33,29,24,.72), yksi rivi, keskitetty. */
 .mk-kutsu__nimi {
+    flex-shrink: 0;
+    width: 100%;
     margin: 0;
     padding: 1px 3px 2px 3px;
     font-size: 10px;

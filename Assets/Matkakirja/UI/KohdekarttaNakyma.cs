@@ -130,7 +130,7 @@ namespace Matkakirja.Natiivi
             kuva = Rakenne.El("mk-kohdekartta__kuva", lava, PickingMode.Ignore);
             // Löydös 63 (web .kartta-mittajana): mittakaavajana ydinalueen vasempaan alakulmaan (3,2 % / 5 %),
             // leveys prosentteina kuvasta; lavan lapsena se skaalautuu kartan mukana kuten webissä.
-            if (kartta.JanaOsuus > 0f)
+            if (kartta.JanaOsuus > 0f && !this.pelkka) // web pelkkaKartta: jana = null
             {
                 var ydin = kartta.Ydin;
                 var jana = Rakenne.El("mk-kohdekartta__mittajana", lava, PickingMode.Ignore);

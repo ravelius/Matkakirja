@@ -122,7 +122,14 @@ namespace Matkakirja.Natiivi
             alue.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
             kerros.JokaRuutu += Animoi;
             kerros.JokaRuutu += TarkistaOhiNapautus;
-            UiSisalto.LehdetSaapuivat += () => { if (Auki) TaytaHero(UiSisalto.Kaupunki(kaupunki)); };
+            // Kylmäkäynnistys: lehdet (avauskuvat, Lehti-lippu) saapuvat myöhemmin → hero ja lehtilinkki uudelleen.
+            UiSisalto.LehdetSaapuivat += () =>
+            {
+                if (!Auki) return;
+                var k = UiSisalto.Kaupunki(kaupunki);
+                TaytaHero(k);
+                PaivitaLehtilinkki(k);
+            };
         }
 
         // --- mitoitus -----------------------------------------------------------------------------
@@ -137,7 +144,9 @@ namespace Matkakirja.Natiivi
             kortti.style.width = leveys;
             kortti.style.left = Mathf.Round((W - leveys) / 2f);
             kortti.style.top = yla;
-            kortti.style.maxHeight = Mathf.Max(200f, H - yla - t.w - Alavara);
+            // Web max-height calc(100 % − 16 px) kartta-alasta: alaraja on turva-alue, ei toimintorivin varaus.
+            float turvaAla = kerros.Reunat(UiKerros.Traileri).w;
+            kortti.style.maxHeight = Mathf.Max(200f, H - yla - turvaAla - Alavara);
             // Web svh-yksiköt: osuus koko ruudun korkeudesta.
             hero.style.height = Mathf.Round(Mathf.Max(HeroVahintaan, H * (UiKerros.Tabletti ? HeroOsuusTabletti : HeroOsuus)));
             karttaKaista.style.height = Mathf.Round(H * KarttaOsuus);
@@ -312,7 +321,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(esittelyTeksti)) esittelyTeksti = Vakioesittely;
             teksti.text = RiviVali + esittelyTeksti;
             RajaaTeksti();
-            lehtiNappi.style.display = toiminnot.LueLehti != null && k.Lehti ? DisplayStyle.Flex : DisplayStyle.None;
+            PaivitaLehtilinkki(k);
             string id = k.Id;
             Kohdekartat.Hae(id, kk =>
             {
@@ -345,6 +354,9 @@ namespace Matkakirja.Natiivi
                     });
             });
         }
+
+        void PaivitaLehtilinkki(KaupunkiTiedot k) =>
+            lehtiNappi.style.display = toiminnot?.LueLehti != null && k != null && k.Lehti ? DisplayStyle.Flex : DisplayStyle.None;
 
         /// <summary>Web avauskortinHero: avauskuvista ensimmäinen, muuten kansikuvista (ei julistetta).</summary>
         void TaytaHero(KaupunkiTiedot k)
@@ -388,9 +400,9 @@ namespace Matkakirja.Natiivi
             float w = teksti.contentRect.width;
             if (string.IsNullOrEmpty(koko) || float.IsNaN(w) || w <= 0) return;
             int rivit = UiKerros.Tabletti ? 4 : 3;
-            float rivi = teksti.MeasureTextSize(RiviVali + "Ag", 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).y;
-            float raja = rivi * rivit + 1f;
             float Korkeus(string s) => teksti.MeasureTextSize(RiviVali + s, w, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y;
+            // Raja n rivin todellisesta korkeudesta (rivivälitagi ei koske ensimmäistä riviä: "Ag" × n jäi rivin vajaaksi).
+            float raja = Korkeus(string.Join("\n", Enumerable.Repeat("Ag", rivit))) + 1f;
             string tulos = koko;
             if (Korkeus(koko) > raja)
             {
