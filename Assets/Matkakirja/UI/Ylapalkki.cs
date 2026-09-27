@@ -186,8 +186,8 @@ namespace Matkakirja.Natiivi
         const int ElamaLohkoja = 8;
         readonly VisualElement elama, elamaLohkot;
         readonly Label elamaTeksti;
-        /// <summary>Lapun teksti "RAHAT LOPPU · 1 VRK 12 H" (web #3421); omistajan tarkennus 15.2x: ehkä pelkät neliöt.</summary>
-        public static bool ElamaTekstilla = true;
+        /// <summary>Lapun teksti "RAHAT LOPPU · 1 VRK 12 H" (web #3421-luonnos); omistaja 15.2x: pelkät neliöt, joten pois.</summary>
+        public static bool ElamaTekstilla = false;
         /// <summary>UiNakymat: karttaselitenapin ja auki olevan matkapäiväkirjan rajat (paneelin pisteinä).</summary>
         public Func<(Rect Selite, Rect Paivakirja)> ElamaAnkkurit;
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
