@@ -1377,6 +1377,11 @@ async function paa() {
           return true;
         }).map(([Z, X, Y]) => `${Z}/${X}/${Y}`));
         console.log(`  z10-lähde: ${z10Lahde.size}/${lista.length} laatan alla koko z10 poltettuna (muut z9:stä)`);
+        // --vain-z10: vain ne laatat, joiden alla koko z10 (pallo Z10 koko maailmaan, omistaja 27.9. ilta).
+        if (process.argv.includes('--vain-z10')) {
+          lista = lista.filter(([Z, X, Y]) => z10Lahde.has(`${Z}/${X}/${Y}`));
+          console.log(`  vain-z10: ${lista.length} laattaa`);
+        }
       }
     }
     console.log(`  kaupungit ${kaupungit.length}: tasoilta ${min}–${max} ${joukko.size} laattaa, tässä osassa ${lista.length}`);
