@@ -11,8 +11,8 @@ window.PROJEKTIDATA = {
     "tila": "pelattavissa, kehitys jatkuu",
     "seuraavaksi": [
      "iOS-sovelluksen julkaisu App Storeen",
-     "pelin sisäinen talous ja ensimmäiset minipelit",
-     "lisää linssejä ja kohteita Euroopan ulkopuolelle"
+     "ensimmäisten minipelien toteutus",
+     "Euroopan viimeistely: kaikki kaupungit ja maat samalle sisältötasolle ennen muita maanosia"
     ],
     "kappaleet": [
      "Matkakirja ja unohdettu aarre on suomenkielinen seikkailupeli, jossa pelaaja oppii maailmasta matkustaessaan. Nuori Fogg seuraa isoisänsä vuoden 1873 matkapäiväkirjaa ja etsii kadonneen luettelon unohdettuja aarteita. Peli on tehty 13 vuotta täyttäneille ja aikuisille. Kartalla eletään nykyajassa, mutta ulkoasu on vanhan matkakirjan: pergamenttia, mustetta ja käsin piirretyn kartan tuntua. Peli toimii selaimessa jo nyt, ja iOS-sovellus on sisäisessä testauksessa. Peli on ilmainen mahdollisimman pitkälle; tulot tulevat lisätoiminnoista."
@@ -37,7 +37,7 @@ window.PROJEKTIDATA = {
     "tila": "tuotannossa, laajenee",
     "seuraavaksi": [
      "nähtävyyskuvien tyylin yhtenäistäminen koko pelissä",
-     "lehtien ja nostojen laajennus Euroopan ulkopuolelle",
+     "lehtien ja nostojen täydennys Euroopan ohuimpiin kaupunkeihin ja alueisiin",
      "luennan säätimet (nopeus, jatko samasta kohdasta) molempiin versioihin"
     ],
     "kappaleet": [
@@ -66,7 +66,7 @@ window.PROJEKTIDATA = {
      "lentopeli (vapaa lento vanhalla kaksitasolla) ensi viikon suunnitelmissa"
     ],
     "kappaleet": [
-     "Peliin tulee Euroopan perinteisiä pelejä, joita pelataan tietokonetta tai kaveria vastaan siinä maassa, josta peli on kotoisin: esimerkiksi mölkky Suomessa, kubb Ruotsissa, pétanque Ranskassa ja tavli Kreikassa. Pelikatalogissa on 117 peliä kahdeksasta maantieteellisestä osasta, ja kymmenelle ensimmäiselle on tehty pelisuunnitelma. Pelit ovat yhtä merkittävä osa kokonaisuutta kuin linssit. Katso Pelit-välilehti."
+     "Peliin tulee Euroopan perinteisiä pelejä, joita pelataan tietokonetta tai kaveria vastaan siinä maassa, josta peli on kotoisin: esimerkiksi mölkky Suomessa, kubb Ruotsissa, pétanque Ranskassa ja tavli Kreikassa. Pelikatalogissa on 116 peliä kahdeksasta maantieteellisestä osasta, ja kymmenelle ensimmäiselle on tehty pelisuunnitelma. Pelit ovat yhtä merkittävä osa kokonaisuutta kuin linssit. Katso Pelit-välilehti."
     ]
    },
    {
@@ -74,7 +74,7 @@ window.PROJEKTIDATA = {
     "otsikko": "Natiivi iOS",
     "tila": "sisäisessä testauksessa",
     "seuraavaksi": [
-     "pelin talous ja uusi aloitusnäkymä seuraavaan testiversioon",
+     "viimeisimmässä testiversiossa pelin talous, uusi aloitusnäkymä ja uusi lento; seuraavaksi viimeistely",
      "suorituskyvyn viimeistely iPadille",
      "App Store -julkaisun valmistelu"
     ],
@@ -110,8 +110,8 @@ window.PROJEKTIDATA = {
    "z10Tuotannossa": "2026-09-27"
   },
   "versiot": {
-   "web": 2328,
-   "natiivi": "1.0.30",
+   "web": 2333,
+   "natiivi": "1.0.31",
    "natiiviPaivitetty": "2026-09-27"
   }
  }
