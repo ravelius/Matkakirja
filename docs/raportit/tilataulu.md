@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 00:45 EEST — Postivahti (self) 71%, lähestyy omaa nollausrajaa (75%), luovutus valmistellaan pian.
+**Päivitetty:** 2026-09-28 00:57 EEST — Postivahti (self) 73%, lähestyy omaa nollausrajaa (75%), luovutus valmistellaan pian.
 
 ## 1) Sessiot
 
@@ -22,7 +22,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 | Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | ei luettavissa (idle) | — |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 35% | running |
 
-## 1a-3) Karttasepän yöpoltto — vaihe 1 valmis, vaihe 2 alkaa ~00:52 (Karttaseppä vahvisti 00:5x)
+## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 00:57)
 
 Koodi 1 klo 00:39 oli **odotettu** — vain luettelon vientivartion ilmoitus, ei virhe. Laatat/eheys kunnossa (119 495/119 495). Vaihe 1 merkitty valmiiksi. **Uusi vahti PID 82063 (v5e)** käynnistää vaiheen 2 (syvä, T7) ~00:52. Karttaseppä odottaa vaiheen 2 päättyvän todennäköisesti riviin "2 koodi 1" samasta vartiosta — **se on OK jos `2.log`:n lopussa on "eheystarkistus: laattojen määrä täsmää luetteloon".** **Seurataan PID 82063:a ja aja.out:ia — herätä Karttaseppä (local_4bd7c316-55bc-423a-9da1-821fdd123cab) JOKA TAPAUKSESSA kun "2 koodi" ilmestyy tai vahti kuolee**, riippumatta koodin arvosta (tarkista 2.log-eheysrivi ennen viestiä).
 
