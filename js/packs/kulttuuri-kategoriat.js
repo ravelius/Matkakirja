@@ -23593,6 +23593,106 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'saamelaiset',
+      nimi: 'Saamelaiskulttuuri',
+      johdanto: 'Lappi on saamelaisten kotiseutu Sápmi, jossa oma kieli, '
+        + 'puku, laulu ja itsehallinto ovat eläviä nykypäivän asioita, '
+        + 'ei museoesineitä.',
+      tehtava: {
+        kysymys: 'Minä vuonna Suomen saamelaiskäräjien oma talo Sajos valmistui?',
+        vaihtoehdot: ['2012', '1996', '1971', '1991'],
+        oikea: 0,
+        fakta: 'Saamelaiskäräjät perustettiin 1996, mutta oma rakennus '
+          + 'Sajos Inarissa valmistui vasta 2012.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laulukilpailu, joka on käyty vuodesta 1971',
+          tiedosto: 'Sami Grand Prix.jpg',
+          teksti: 'Sámi Grand Prix on saamelaisen musiikin laulukilpailu, '
+            + 'jota on järjestetty Kautokeinossa pääsiäisenä vuodesta '
+            + '1971 lähtien. Suuri osa esityksistä pohjautuu joikuun, '
+            + 'saamelaiseen perinnelauluun, jolla ei ole alkua eikä '
+            + 'loppua tavallisessa mielessä — saamelaisen käsityksen '
+            + 'mukaan ei "lauleta jostakin" vaan "joiataan joku tai '
+            + 'jokin", ikään kuin laulu kantaisi kohteensa esiin.'
+            + '\n\n'
+            + 'Kilpailu on kasvanut pieneksi pääsiäisfestivaaliksi, '
+            + 'joka kokoaa saamelaisia eri puolilta Norjaa, Ruotsia, '
+            + 'Suomea ja Venäjää samaan kaupunkiin joka kevät.',
+          lyhyt: 'Sámi Grand Prix on saamelaisen musiikin kilpailu, jota on järjestetty Kautokeinossa pääsiäisenä 1971 lähtien.',
+          selite: 'Esiintyjä Sámi Grand Prix -laulukilpailussa '
+            + 'Kautokeinossa — kilpailua on järjestetty pääsiäisenä '
+            + 'vuodesta 1971.',
+          lahde: 'Wikikontiki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Festivaali, joka kutsuu koolle alkuperäiskansat',
+          tiedosto: 'The opening concert at the Riddu Riđđu festival 2019.jpg',
+          teksti: 'Riddu Riđđu -festivaali sai alkunsa 1991 nuorten '
+            + 'saamelaisten omasta aloitteesta pienessä Manndalenin '
+            + 'kylässä Pohjois-Norjassa, kun paikalliset halusivat tehdä '
+            + 'saamelaisuudesta jotain, josta kannattaa olla ylpeä sen '
+            + 'sijaan että sitä hävettäisiin. Festivaali laajeni '
+            + 'nopeasti kutsumaan mukaan myös muiden alkuperäiskansojen '
+            + 'esiintyjiä Grönlannista Australiaan asti.'
+            + '\n\n'
+            + 'Nykyään Riddu Riđđu on yksi Euroopan tunnetuimmista '
+            + 'alkuperäiskansojen kulttuuritapahtumista: ohjelmassa on '
+            + 'musiikkia, elokuvia, käsityötä ja keskusteluja, ja se '
+            + 'kokoaa Manndaleniin tuhansia kävijöitä joka kesä.',
+          lyhyt: 'Riddu Riđđu -festivaali syntyi 1991 nuorten saamelaisten aloitteesta ja kokoaa nyt alkuperäiskansoja ympäri maailmaa.',
+          selite: 'Avajaiskonsertti Riddu Riđđu -festivaalilla 2019 — '
+            + 'festivaali syntyi 1991 ja kutsuu koolle alkuperäiskansojen '
+            + 'esiintyjiä ympäri maailmaa.',
+          lahde: 'Sabine Rønsen (WMNO), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puku, joka kertoo kantajastaan ennen kuin tämä avaa suunsa',
+          tiedosto: "Berit Alette Mienna's gákti at 2025 Riddu Riđđu.jpg",
+          teksti: 'Gákti on saamelaisten perinteinen puku, ja sen värit, '
+            + 'kuosit ja koristeet kertovat tuntevalle katsojalle '
+            + 'kantajansa kotiseudun, suvun ja joskus siviilisäädynkin — '
+            + 'kaksi saamelaista voivat lukea toisistaan puvun '
+            + 'perusteella asioita, joita ulkopuolinen ei huomaa '
+            + 'lainkaan. Puvut ommellaan usein suvussa, ja monella '
+            + 'perheellä on omat, sukupolvelta toiselle siirtyvät '
+            + 'kuvionsa.'
+            + '\n\n'
+            + 'Kuvan gáktin ompeli Berit Alette Miennan serkku sari-'
+            + 'kankaasta perinteisin saamelaiskuvioin — esimerkki '
+            + 'siitä, miten vanha käsityöperinne elää ja uudistuu yhä, '
+            + 'eikä ole jäänyt vain juhlapäivien museoasuksi.',
+          lyhyt: 'Gáktipuvun värit ja kuosit kertovat kantajansa kotiseudun ja suvun tuntevalle katsojalle.',
+          selite: 'Berit Alette Miennan gákti vuoden 2025 Riddu Riđđu '
+            + '-festivaalilla — serkun ompelema, perinteisin '
+            + 'saamelaiskuvioin koristeltu.',
+          lahde: 'John Sears, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Parlamentti, joka sai oman talon vasta 2012',
+          tiedosto: 'Sajos Sami Parliament, Inari, Finland.jpg',
+          teksti: 'Suomen saamelaiskäräjät perustettiin 1996 hoitamaan '
+            + 'saamelaisten kielen ja kulttuurin itsehallintoa, mutta '
+            + 'sillä ei pitkään ollut omaa rakennusta — istunnot '
+            + 'pidettiin vuokratiloissa Inarissa. Oma talo, Sajos, '
+            + 'valmistui vasta 2012, ja sen puurakenteinen sali on '
+            + 'suunniteltu perinteisen saamelaiskodan, kotan, muotoa '
+            + 'mukaillen.'
+            + '\n\n'
+            + 'Saamelaiskäräjät päättää muun muassa saamen kielten '
+            + 'opetuksesta ja kulttuurimäärärahoista, mutta sillä ei '
+            + 'ole Suomen eduskunnan kaltaista lainsäädäntövaltaa — '
+            + 'se on neuvotteleva ja lausuntoja antava itsehallintoelin.',
+          lyhyt: 'Sajos, Suomen saamelaiskäräjien talo Inarissa, valmistui vasta 2012.',
+          selite: 'Sajos, Suomen saamelaiskäräjien rakennus Inarissa — '
+            + 'sen puurakenteinen sali mukailee perinteisen kodan '
+            + 'muotoa.',
+          lahde: 'Ben Morphett, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
@@ -23987,6 +24087,112 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen '
             + 'ajanlaskua.',
           lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saari, jolla on tallella Euroopan vanhin palatsi, '
+        + 'lukemattomaksi jäänyt kirjoitus ja munkkien viimeinen '
+        + 'vastarinta ottomaaneja vastaan.',
+      tehtava: {
+        kysymys: 'Kuinka monta vuotta ottomaanien piiritys Heraklionissa lopulta kesti?',
+        vaihtoehdot: ['21 vuotta', '4 vuotta', '9 vuotta', '15 vuotta'],
+        oikea: 0,
+        fakta: 'Heraklionin piiritys 1648–1669 kesti kaksikymmentäyksi '
+          + 'vuotta — pisin tunnettu piiritys historiassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Valtaistuinhuone, jota kukaan ei enää istu',
+          tiedosto: 'Throne of Minos at Knossos Palace.jpg',
+          teksti: 'Arkeologi Arthur Evans kaivoi Knossoksen palatsin esiin '
+            + 'vuodesta 1900 alkaen ja löysi sen sydämestä huoneen, jonka '
+            + 'keskellä seisoo yhä paikoillaan alabasterinen tuoli — '
+            + 'Euroopan vanhin säilynyt valtaistuin, veistetty noin '
+            + '1400-luvulla eaa. Evans nimesi huoneen valtaistuinhuoneeksi '
+            + 'ja uskoi tuolissa istuneen legendaarisen kuningas Minoksen, '
+            + 'vaikka nykytutkijat epäilevät huoneen olleen ennemmin '
+            + 'kulttikäytössä kuin hallitsijan istuinsalina.'
+            + '\n\n'
+            + 'Seiniä koristavat kopiot alkuperäisistä griffinfreskoista, '
+            + 'ja Evans myös jälleenrakensi osia palatsista betonilla '
+            + 'omien tulkintojensa mukaan — ratkaisu, jota myöhemmät '
+            + 'arkeologit ovat arvostelleet liian vapaaksi.',
+          lyhyt: 'Knossoksen valtaistuinhuoneen alabasterituoli on Euroopan vanhin säilynyt valtaistuin.',
+          selite: 'Knossoksen palatsin valtaistuinhuone: alabasterinen '
+            + 'tuoli on veistetty noin 1400-luvulla eaa. ja on Euroopan '
+            + 'vanhin säilynyt valtaistuin.',
+          lahde: 'Jebulon, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Levy, jota kukaan ei ole pystynyt lukemaan',
+          tiedosto: 'Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg',
+          teksti: 'Italialainen arkeologi Luigi Pernier löysi Faistoksen '
+            + 'palatsiraunioista 1908 poltetusta savesta valmistetun '
+            + 'kiekon, jonka molemmille puolille on painettu spiraalimuotoon '
+            + '241 kuvamerkkiä. Merkit on tehty erillisillä leimasimilla '
+            + 'ennen polttoa — poikkeuksellinen tekniikka, jota ei tunneta '
+            + 'muualta muinaismaailmasta samalta ajalta.'
+            + '\n\n'
+            + 'Levyn ikä ajoittuu keskiminolaiselle kaudelle, noin '
+            + '1850–1600 eaa., mutta sen kirjoitusjärjestelmää ei ole '
+            + 'onnistuttu yhdistämään mihinkään tunnettuun kieleen. '
+            + 'Kymmenet tutkijat ovat esittäneet ratkaisujaan '
+            + 'vuosikymmenten varrella, mutta yksikään tulkinta ei ole '
+            + 'saanut laajaa hyväksyntää — levy on yhä yksi arkeologian '
+            + 'ratkaisemattomista arvoituksista.',
+          lyhyt: 'Faistoksen levyn 241 painettua kuvamerkkiä on jäänyt lukematta yli sata vuotta löydöstä.',
+          selite: 'Faistoksen levy Heraklionin arkeologisessa museossa: '
+            + 'sen spiraalimuotoista kirjoitusta ei ole onnistuttu '
+            + 'tulkitsemaan löydöstä lähtien.',
+          lahde: 'Joyofmuseums, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Linnoitus, joka kesti kaksikymmentäyksi vuotta',
+          tiedosto: 'Venetian Fortress of Koules in Heraklion, Crete 003.jpg',
+          teksti: 'Venetsialaiset rakensivat Koulesin linnoituksen '
+            + 'Heraklionin sataman suulle 1500-luvulla puolustamaan '
+            + 'kaupunkia ottomaaneja vastaan. Se osoittautui tarpeelliseksi: '
+            + 'kun ottomaanit hyökkäsivät Kreetalle 1645, Heraklionin '
+            + 'piiritys venyi lopulta kaksikymmentäyksi vuotta pitkäksi — '
+            + 'pisimmäksi piiritykseksi tunnetussa historiassa.'
+            + '\n\n'
+            + 'Kaupunki antautui vasta 1669, kun molemmat osapuolet '
+            + 'olivat menettäneet kymmeniätuhansia sotilaita. Koulesin '
+            + 'paksut muurit ja sen edustalle kaiverretut Pyhän Markuksen '
+            + 'leijonat ovat tallella yhä, ja linnoitus on nykyään '
+            + 'Heraklionin tunnetuin maamerkki satamassa.',
+          lyhyt: 'Koulesin linnoitus näki Heraklionin kaksikymmentäyksi vuotta kestäneen piirityksen 1648–1669.',
+          selite: 'Koulesin venetsialaislinnoitus Heraklionin sataman '
+            + 'suulla — se puolusti kaupunkia historian pisimmässä '
+            + 'tunnetussa piirityksessä, joka kesti kaksikymmentäyksi '
+            + 'vuotta.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Luostari, joka valitsi räjähdyksen antautumisen sijaan',
+          tiedosto: 'Kreta (GR), Amnatos, Kloster Arkadi -- 2023 -- 8553.jpg',
+          teksti: 'Arkadin luostarista tuli marraskuussa 1866 kreetalaisen '
+            + 'kapinan symboli, kun ottomaanijoukot piirittivät sinne '
+            + 'paenneet sadat kapinalliset ja siviilit. Kaksi päivää '
+            + 'kestäneen taistelun jälkeen muureja murrettiin, ja '
+            + 'puolustajat sytyttivät luostarin ruutivaraston mieluummin '
+            + 'kuin antautuivat — räjähdys tappoi puolustajia ja '
+            + 'hyökkääjiä yhdessä.'
+            + '\n\n'
+            + 'Uutinen levisi nopeasti Euroopassa ja herätti myötätuntoa '
+            + 'kreetalaisten asialle Ranskassa, Britanniassa ja '
+            + 'Yhdysvalloissa asti, vaikka kapina lopulta kukistettiin. '
+            + 'Isoisän matkan aikaan 1873 tapahtuma on yhä tuore muisto, '
+            + 'ja luostarin pihalla seisoo edelleen räjähdyksen '
+            + 'jäljiltä ammuttu, kuulien lävistämä tuulimylly.',
+          lyhyt: 'Arkadin luostarin puolustajat räjäyttivät ruutivarastonsa mieluummin kuin antautuivat 1866.',
+          selite: 'Arkadin luostari, jonka puolustajat räjäyttivät '
+            + 'ruutivarastonsa marraskuussa 1866 mieluummin kuin '
+            + 'antautuivat piirittäneille ottomaanijoukoille.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -24385,6 +24591,112 @@ export const KULTTUURI_KATEGORIAT = {
             + '400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin '
             + 'viisitoistatuhatta ihmistä.',
           lahde: 'Andrew Malone, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Normannikuninkaat rakennuttivat kirkkoja, joissa '
+        + 'bysanttilaiset mosaiikkitaiteilijat, arabialaiset '
+        + 'kattoveistäjät ja latinalainen kirkko työskentelivät '
+        + 'samojen seinien sisällä.',
+      tehtava: {
+        kysymys: 'Kuka kruunaa kuningas Roger II:n Martoranan kirkon mosaiikissa?',
+        vaihtoehdot: ['Kristus itse', 'Paavi', 'Konstantinopolin patriarkka', 'Amiraali Yrjö Antiokialainen'],
+        oikea: 0,
+        fakta: 'Martoranan mosaiikki näyttää Kristuksen kruunaamassa '
+          + 'Roger II:ta suoraan, ilman paavin väliintuloa — poliittinen '
+          + 'kannanotto kuninkaan jumalallisesta vallasta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kappeli, jossa kolme kulttuuria kohtaa',
+          tiedosto: 'Palermo - Cappella Palatina - 1.jpg',
+          teksti: 'Kuningas Roger II aloitti Palatinan kappelin '
+            + 'rakentamisen 1132 osaksi Palermon kuninkaanlinnaa. '
+            + 'Hän toi Bysantista mosaiikkitaiteilijat kuvaamaan '
+            + 'seinät ja katon kultaisiksi Raamatun kertomuksiksi, '
+            + 'mutta antoi arabialaisten puuseppien veistää katon '
+            + 'muqarnas-tekniikalla — samalla tyylillä kuin '
+            + 'islamilaisen maailman moskeijoissa.'
+            + '\n\n'
+            + 'Lopputulos on ainutlaatuinen: yhden pienen huoneen '
+            + 'sisällä yhdistyvät normannien läntinen arkkitehtuuri, '
+            + 'bysanttilainen kuvataide ja arabialainen '
+            + 'koristeveistos, kaikki saman hallitsijan tilaamina '
+            + 'samaan aikaan.',
+          lyhyt: 'Palatinan kappelin katto ja seinät yhdistävät normannien, bysanttilaisten ja arabien käsialan.',
+          selite: 'Palatinan kappeli Palermon kuninkaanlinnassa: '
+            + 'bysanttilaiset kultamosaiikit ja arabialaisten '
+            + 'puuseppien veistämä muqarnas-katto samassa tilassa.',
+          lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuningas, jonka kruunasi Kristus itse',
+          tiedosto: 'Chiesa della Martorana Palermo mosaico Cristo.jpg',
+          teksti: 'Roger II:n amiraali Yrjö Antiokialainen, syyrialainen '
+            + 'ortodoksikristitty kuninkaan palveluksessa, rakennutti '
+            + 'Martoranan kirkon Palermoon 1143. Kirkon mosaiikeissa '
+            + 'on kuva, jossa Kristus itse asettaa kruunun Roger II:n '
+            + 'päähän — ei paavi eikä piispa, vaan suoraan taivaasta.'
+            + '\n\n'
+            + 'Kuva oli poliittinen kannanotto: se väitti kuninkaan '
+            + 'vallan tulevan suoraan Jumalalta ilman kirkon '
+            + 'väliintuloa, samaan aikaan kun paavius riiteli '
+            + 'normannien kanssa Sisilian herruudesta. Kirkko '
+            + 'tunnetaan yhä kansanomaisesti Martoranan nimellä '
+            + 'läheisen, myöhemmin siihen liitetyn nunnaluostarin '
+            + 'mukaan.',
+          lyhyt: 'Martoranan kirkon mosaiikki kuvaa Kristusta kruunaamassa kuningas Roger II:ta suoraan, ilman paavia.',
+          selite: 'Martoranan kirkon mosaiikki Palermossa: Kristus '
+            + 'asettaa kruunun kuningas Roger II:n päähän — poliittinen '
+            + 'kuva kuninkaan jumalallisesta vallasta ilman paavin '
+            + 'väliintuloa.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kirkko, jonka lupasi rakentaa myrskyssä pelastunut kuningas',
+          tiedosto: 'Cefalu Cathedral MosaicChristPantocrator 009 6038.jpg',
+          teksti: 'Tarinan mukaan Roger II lupasi myrskyn keskellä '
+            + 'aluksellaan, että jos hän pääsisi hengissä rantaan, hän '
+            + 'rakentaisi kiitokseksi katedraalin — ja laiva ajautui '
+            + 'juuri Cefalùn rannalle 1131. Katedraalin rakennustyöt '
+            + 'alkoivat samana vuonna, ja se oli Roger II:n ensimmäinen '
+            + 'suuri rakennushanke kuninkaana.'
+            + '\n\n'
+            + 'Apsiksen kattoa hallitsee valtava Kristus Pantokraattori '
+            + '-mosaiikki, jonka bysanttilaiset mestarit tekivät '
+            + '1140-luvulla — yksi vanhimmista ja parhaiten '
+            + 'säilyneistä esimerkeistä Sisilian normannikauden '
+            + 'mosaiikkitaiteesta.',
+          lyhyt: 'Cefalùn katedraalin Kristus Pantokraattori on 1140-luvulta, yksi Sisilian vanhimmista mosaiikeista.',
+          selite: 'Cefalùn katedraalin apsismosaiikki: Kristus '
+            + 'Pantokraattori, bysanttilaisten mestarien tekemä '
+            + '1140-luvulla, yksi Sisilian normannikauden vanhimmista '
+            + 'mosaiikeista.',
+          lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuudentuhannen neliömetrin kultapinta',
+          tiedosto: 'Ceiling of left chapel in Cathedral (Monreale) - Mosaic of Christ Pantocrator.jpg',
+          teksti: 'Kuningas Vilhelm II käynnisti Monrealen katedraalin '
+            + 'rakennustyöt 1174, ja sen sisäseinät peitettiin lähes '
+            + 'kokonaan kultapohjaisilla mosaiikeilla — yhteensä noin '
+            + '6 300 neliömetriä, enemmän kuin missään muualla '
+            + 'Konstantinopolin ja Ravennan ulkopuolella.'
+            + '\n\n'
+            + 'Mosaiikit kuvaavat Raamatun tarinaa Luomisesta '
+            + 'Ilmestyskirjaan asti, ja apsiksessa kohoaa yli '
+            + 'seitsemän metrin korkuinen Kristus Pantokraattori. '
+            + 'Katedraali on yhä Monrealen käytössä oleva '
+            + 'pääkirkko, ei museo, vaikka se on myös Unescon '
+            + 'maailmanperintökohde.',
+          lyhyt: 'Monrealen katedraalin mosaiikit kattavat noin 6 300 neliömetriä — enemmän kuin missään muualla Bysantin ulkopuolella.',
+          selite: 'Monrealen katedraalin sisäkatto: kultapohjainen '
+            + 'Kristus Pantokraattori -mosaiikki on osa noin 6 300 '
+            + 'neliömetrin mosaiikkipintaa.',
+          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
