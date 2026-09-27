@@ -133,12 +133,12 @@
    "4": 423,
    "5": 317,
    "6": 212,
-   "7": 3327,
-   "8": 5039,
-   "9": 6387,
-   "10": 6814,
-   "11": 7346,
-   "12": 8081
+   "7": 3887,
+   "8": 5437,
+   "9": 7327,
+   "10": 8499,
+   "11": 10337,
+   "12": 11396
   }
  },
  "media": {
@@ -158,5 +158,6 @@
   "lippu-commons": 2729,
   "repo": 369767,
   "muu": 652563
- }
+ },
+ "maastoHuom": "27.9.2026: z7–z12 Euroopan otoksesta (200/taso, gzip-siirtokoko kuten HEAD content-length); purettuna levyllä noin 2,3 × (Euroopan eheystarkistus)."
 }

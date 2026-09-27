@@ -810,7 +810,12 @@ test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', as
   assert.deepEqual(validoiNimella(o, 'offline.schema.json'), []);
   const { MAAILMANKARTTA: P } = await import('../js/packs/maailmankartta.js');
   const muodolliset = Object.entries(P.map.countryShapes).filter(([, v]) => v.renkaat?.length).map(([k]) => k);
-  assert.deepEqual(Object.keys(o.maat).sort(), muodolliset.sort(), 'jokainen muodollinen maa');
+  // Skeema 1.52: + merentakaiset alueet omina kohteinaan (BMU, FLK, GUF, NCL).
+  const { MERENTAKAISET } = await import('../tools/vienti/offline.mjs');
+  const alueet = Object.values(MERENTAKAISET).map((a) => a.iso);
+  assert.deepEqual(Object.keys(o.maat).sort(), [...muodolliset, ...alueet].sort(), 'jokainen muodollinen maa + alueet');
+  for (const iso of alueet) assert.ok(!o.ryhmat.europe.maat.includes(iso), `${iso} ei Euroopassa`);
+  assert.equal(o.maat.NCL.manner, 'oceania');
   const fin = o.maat.FIN;
   assert.equal(fin.iso2, 'FI');
   assert.deepEqual(Object.keys(fin.rasteri), ['6', '7', '8']);
@@ -1548,14 +1553,29 @@ test('skeema 1.51: natiivin pallon Z10 offline-välit = Karttasepän poltettu jo
   assert.ok(kaikki.size >= lista.size - 40, `${kaikki.size}/${lista.size}`);
 });
 
-test('eheys 27.9.: omaan ämpäriin osoittavat kuva-url/aani-url kuuluvat offline-lataukseen', async () => {
-  const { onOffline } = await import('../tools/vienti/offline.mjs');
+test('skeema 1.52: mediaKuvat — omat tiedostot offline-lataukseen omassa avaimessa, pienennettyinä, katto maata kohden', async () => {
+  const { onOffline, MEDIAKUVAT } = await import('../tools/vienti/offline.mjs');
   const media = JSON.parse(tiedostot.get('media.json')).viitteet;
   const omat = media.filter((v) => (v.laji === 'kuva-url' || v.laji === 'aani-url') && v.url?.startsWith('https://media.matkakirja.app/'));
-  assert.ok(omat.length > 1000, `omia absoluuttisia ${omat.length}`);
-  assert.ok(omat.every(onOffline));
+  assert.ok(omat.length > 1000 && omat.every(onOffline), `omia absoluuttisia ${omat.length}`);
   assert.equal(onOffline({ laji: 'kuva-url', url: 'https://upload.wikimedia.org/x.jpg' }), false, 'ulkoinen jää pois');
-  const offline = JSON.parse(tiedostot.get('offline.json'));
-  const kaikki = new Set(Object.values(offline.maat).flatMap((m) => m.media));
-  assert.ok([...kaikki].some((u) => u.includes('/karttanostot/')), 'karttanostojen kuvat offline-listoilla');
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  assert.equal(o.lahteet.mediaKuvat.katto, MEDIAKUVAT.katto);
+  // Natiiviseppä 27.9.: vanhat buildit lataavat media-listan, joten uudet eivät saa olla siellä eikä yht:ssä.
+  assert.ok(Object.values(o.maat).every((m) => !m.media.some((u) => u.includes('/karttanostot/'))), 'karttanostot eivät media-listalla');
+  let kuvia = 0; let pienia = 0;
+  for (const [iso, m] of Object.entries(o.maat)) {
+    assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman mediaKuvia`);
+    assert.ok(m.tavuja.mediaKuvat <= MEDIAKUVAT.katto, `${iso}: ${m.tavuja.mediaKuvat} yli katon`);
+    const media = new Set(m.media);
+    for (const k of m.mediaKuvat ?? []) {
+      assert.match(k.url, /^https:\/\/media\.matkakirja\.app\//, iso);
+      assert.ok(!media.has(k.url), `${iso}: ${k.url} myös media-listalla`);
+      if (k.pieni) { pienia++; assert.match(k.pieni, /^https:\/\/media\.matkakirja\.app\/pieni\/.+\.(jpg|png)$/); }
+      kuvia++;
+    }
+  }
+  assert.ok(kuvia > 1000 && pienia > 500, `mediaKuvia ${kuvia}, pieniä ${pienia}`);
+  assert.ok(Object.values(o.maat).some((m) => m.mediaKuvat?.some((k) => k.url.includes('/karttanostot/'))), 'karttanostot mediaKuvissa');
+  assert.ok(o.ryhmat.europe.tavuja.mediaKuvat > 0);
 });
