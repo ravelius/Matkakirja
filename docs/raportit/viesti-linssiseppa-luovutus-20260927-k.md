@@ -36,8 +36,8 @@ local_eec7f158-d9f3-4b93-9368-c50935bd19ab. Scratchpad S=/private/tmp/claude-502
 
 - A/B/C samasta ajosta: mallinseppa-toimitus-20260927/kategoriat-abc-<paikka>-75.png; C toimii (vuoren lumi valkoinen).
   Suositus Fablelle: B + vuori C. Merge-haara valmiina: **mallinseppa/kategoriamallit-14 31e6cedf** (kaikki 14 symbolia,
-  B + lumi C leivottuna, ei kokeilukomentoa, pohja ddd9b867, merge-tree juna/b13 ja pohja puhdas) → merge-pyyntö
-  Natiivisepälle, kun omistaja vahvistaa värityksen (jos A tai pelkkä B: vain KategoriaApurit.cs:n väririvit).
+  B + lumi C leivottuna, ei kokeilukomentoa, pohja ddd9b867, merge-tree juna/b13 ja pohja puhdas) → **merge-pyyntö
+  Natiivisepälle lähetetty 04.2x** (omistaja 02.3x: B kaikille; jos vuoreen pelkkä B, vain KvLumi/KvLumiVarjo → Ramppi).
 - Kaikki symbolit kartalla: kategoriasymbolit-kartalla.png; lähikuvat kategoriasymbolit-esikatselu-{1,2,3}.png.
   Omistajan vahvistettavaksi lähetetty: kallistukset 20–35° (Ratas, Ankkuri, Salama, Aallot), kaiverretut mustemerkit
   (Tiimalasi, Salama), kapea Kellotorni, pöllö (enum Tassu).
