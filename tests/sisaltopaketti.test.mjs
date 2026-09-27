@@ -1567,10 +1567,8 @@ test('skeema 1.52: mediaKuvat — omat tiedostot offline-lataukseen omassa avaim
   for (const [iso, m] of Object.entries(o.maat)) {
     assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman mediaKuvia`);
     assert.ok(m.tavuja.mediaKuvat <= MEDIAKUVAT.katto, `${iso}: ${m.tavuja.mediaKuvat} yli katon`);
-    const media = new Set(m.media);
     for (const k of m.mediaKuvat ?? []) {
       assert.match(k.url, /^https:\/\/media\.matkakirja\.app\//, iso);
-      assert.ok(!media.has(k.url), `${iso}: ${k.url} myös media-listalla`);
       if (k.pieni) { pienia++; assert.match(k.pieni, /^https:\/\/media\.matkakirja\.app\/pieni\/.+\.(jpg|png)$/); }
       kuvia++;
     }
@@ -1597,4 +1595,44 @@ test('eheys 27.9.: Flickr-kuvat repon kopiona ämpärissä, Flickr vain varana',
   const offline = JSON.parse(tiedostot.get('offline.json'));
   const kaikki = Object.values(offline.maat).flatMap((m) => m.media);
   assert.equal(kaikki.filter((u) => u.includes('staticflickr')).length, 0, 'offline-lataus ei hae Flickristä');
+});
+
+test('skeema 1.53: maasto koko maasta z10:een, tarkemmat tasot vain kaupunkien ympäriltä', async () => {
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  const M = o.lahteet.maasto;
+  assert.equal(M.kokoMaaMax, 10);
+  assert.deepEqual(M.kaupunkiMaasto, { tasot: [11, 12], sadeKm: 50 });
+  const { readFileSync } = await import('node:fs');
+  const saatavilla = JSON.parse(readFileSync(new URL('../tools/vienti/offline-koot.json', import.meta.url), 'utf8')).maasto.available;
+  let laattoja = 0;
+  for (const [iso, m] of Object.entries(o.maat)) {
+    assert.ok(Object.keys(m.maasto).every((z) => Number(z) <= 10), `${iso}: maasto-kentässä vain z ≤ 10 (vanhat buildit)`);
+    for (const [z, valit] of Object.entries(m.kaupunkiMaasto ?? {})) {
+      assert.ok(M.kaupunkiMaasto.tasot.includes(Number(z)), `${iso}: taso ${z}`);
+      for (const [x0, y, x1, y1] of valit) {
+        assert.equal(y, y1);
+        for (let x = x0; x <= x1; x++) {
+          laattoja++;
+          assert.ok(saatavilla[z].some((a) => x >= a.startX && x <= a.endX && y >= a.startY && y <= a.endY), `${iso} ${z}/${x}/${y} ei available`);
+        }
+      }
+    }
+    assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman kaupunkiMaastoa`);
+  }
+  assert.ok(laattoja > 1000, `kaupunkiMaasto-laattoja ${laattoja}`);
+  assert.ok(o.ryhmat.europe.tavuja.maasto + o.ryhmat.europe.tavuja.kaupunkiMaasto < 200e6, 'Euroopan offline-maasto alle 200 Mt siirtona');
+});
+
+test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', async () => {
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  assert.equal(o.lahteet.mediaKuvat.korvaaMedian, true);
+  for (const [iso, m] of Object.entries(o.maat)) {
+    const t = m.tavuja;
+    assert.ok(t.mediaKuvat <= o.lahteet.mediaKuvat.katto, iso);
+    assert.equal(t.offline, t.rasteri + t.maasto + (t.kaupunkiRasteri ?? 0) + t.kaupunkiMaasto + t.mediaKuvat, `${iso}: offline-summa`);
+  }
+  // Media-listan kuvat mukana mediaKuvissa (pienennettyinä), ei vain lisätiedostot.
+  const fra = o.maat.FRA;
+  const kuvat = new Set(fra.mediaKuvat.map((k) => k.url));
+  assert.ok(fra.media.some((u) => kuvat.has(u)), 'FRA: media-listan kuvia mediaKuvissa');
 });
