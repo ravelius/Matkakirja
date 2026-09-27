@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2297, teksti: 'Astronautin kamera erät 5-6: 35 uutta kohdetta' },
   { v: 2296, teksti: 'v2296: Kaupungin avauskortti korvaa liuskan, ku… (#3364)' },
   { v: 2295, teksti: 'Maalehti-siirto: 28 kaupunkijuttua maalehtiin (#3367)' },
   { v: 2294, teksti: 'v2292: Pulun kaiutinvipu — päällä kulta + aallo… (#3366)' },
