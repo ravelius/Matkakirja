@@ -11906,6 +11906,80 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Runoilija, joka rakasti kotikaupunkiaan niin paljon, '
+        + 'ettei koskaan halunnut muuttaa pois — ja jonka hauta on yhä '
+        + 'tuntematon.',
+      tehtava: {
+        kysymys: 'Mitä tiedetään Federico García Lorcan haudasta?',
+        vaihtoehdot: [
+          'Se on suuri muistomerkki Granadan keskustassa',
+          'Sen sijaintia ei tiedetä varmasti',
+          'Hänet haudattiin perheen sukuhautaan',
+          'Hänen ruumiinsa poltettiin',
+        ],
+        oikea: 1,
+        fakta: 'Lorca ammuttiin elokuussa 1936 lähellä Alfacaria ja '
+          + 'haudattiin merkitsemättömään joukkohautaan — hautaa ei ole '
+          + 'koskaan varmuudella löydetty, vaikka sitä on etsitty '
+          + 'useaan otteeseen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nuori runoilija pianon ääressä',
+          tiedosto: 'Federico García Lorca al piano. Granada. 1919. Colección Fundación Federico García Lorca.jpg',
+          teksti: 'Federico García Lorca syntyi 1898 Granadan lähellä ja '
+            + 'vietti nuoruutensa kaupungissa opiskellen musiikkia ennen '
+            + 'kuin siirtyi kirjallisuuteen. Hän piti Granadaa aina '
+            + 'kotinaan, vaikka opiskeli ja työskenteli myöhemmin '
+            + 'Madridissa ja New Yorkissa. Runoissaan ja näytelmissään '
+            + 'toistuvat Andalusian maisema, flamenco ja kaupungin '
+            + 'moorilainen menneisyys, jotka hän tunsi lapsuudestaan '
+            + 'asti.',
+          lyhyt: 'Lorca syntyi 1898 Granadan lähellä ja piti kaupunkia aina kotinaan.',
+          selite: 'Federico García Lorca syntyi vuonna 1898 Granadan '
+            + 'lähellä ja piti kaupunkia aina kotinaan.',
+          lahde: 'Fundación Federico García Lorca, Wikimedia Commons (PD)',
+          wiki: 'Federico García Lorca',
+        },
+        {
+          otsikko: 'Kesähuvila, jossa syntyivät viimeiset näytelmät',
+          tiedosto: 'Fachada principal casa-museo Federico García Lorca.jpg',
+          teksti: 'Huerta de San Vicente oli Lorcan perheen kesähuvila '
+            + 'silloisen Granadan laidalla, ja siellä hän kirjoitti '
+            + 'muun muassa näytelmänsä Verenhäät ja Bernarda Alban '
+            + 'talo. Talo on nyt museo kaupungin oman puiston keskellä '
+            + '— kaupunki kasvoi huvilan ympärille vuosikymmenten '
+            + 'aikana. Lorca vietti täällä viimeiset rauhalliset '
+            + 'kesänsä ennen Espanjan sisällissodan syttymistä 1936.',
+          lyhyt: 'Huerta de San Vicente -huvilassa Lorca kirjoitti Verenhäät ja Bernarda Alban talon.',
+          selite: 'Huerta de San Vicente -huvilassa Lorca kirjoitti '
+            + 'näytelmänsä Verenhäät ja Bernarda Alban talo.',
+          lahde: 'RaquelPe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Huerta de San Vicente',
+        },
+        {
+          otsikko: 'Puisto paikassa, jota kukaan ei tunnista varmasti',
+          tiedosto: 'ParqueHomenajeFGL9.jpg',
+          teksti: 'Elokuussa 1936, pian sisällissodan alettua, '
+            + 'Franco-mieliset joukot pidättivät Lorcan Granadassa ja '
+            + 'ampuivat hänet aamunkoitteessa jonkin matkan päässä '
+            + 'kaupungista, lähellä Alfacaria. Hautaajat hämärsivät '
+            + 'tarkoituksella hautapaikan, eikä ruumista ole koskaan '
+            + 'varmuudella löydetty useista kaivauksista huolimatta. '
+            + 'Alueelle on pystytetty muistopuisto surmattujen '
+            + 'muistoksi — yksi harvoista paikoista, joissa heitä '
+            + 'yhä muistetaan konkreettisesti.',
+          lyhyt: 'Lorca ammuttiin 1936 lähellä Alfacaria; hautaa ei ole koskaan varmuudella löydetty.',
+          selite: 'Federico García Lorca ammuttiin vuonna 1936 lähellä '
+            + 'Alfacaria, ja hänen hautaansa ei ole koskaan '
+            + 'varmuudella löydetty.',
+          lahde: 'Javier martin, Wikimedia Commons (PD)',
+        },
+      ],
+    },
     /*
      * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
      *
@@ -15325,6 +15399,79 @@ export const KULTTUURI_KATEGORIAT = {
             + '1973 väliltä.',
           lahde: 'Visa580, Wikimedia Commons (CC BY 2.5)',
           wiki: 'Amurin museokortteli',
+        },
+      ],
+    },
+    {
+      id: 'taide',
+      nimi: 'Taide',
+      johdanto: 'Kirjailija lahjoitti kotikaupunkinsa museolle tuhansia '
+        + 'omia teoksiaan — ja Tampereesta tuli maailman ainoan '
+        + 'muumimuseon koti.',
+      tehtava: {
+        kysymys: 'Missä lehdessä Tove Jansson julkaisi ensimmäisen '
+          + 'muumisarjakuvansa vuonna 1947?',
+        vaihtoehdot: [
+          'Lastenlehdessä',
+          'Ruotsinkielisessä kulttuurilehdessä',
+          'Sanomalehden urheilusivulla',
+          'Omakustanteessa',
+        ],
+        oikea: 1,
+        fakta: 'Ensimmäinen muumisarjakuva ilmestyi ruotsinkielisessä '
+          + 'kulttuurilehdessä Ny Tid vuonna 1947 — kauan ennen kuin '
+          + 'muumeista tuli lastenilmiö.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lahjoitus, josta tuli museo',
+          tiedosto: 'Muumimuseon sisäänkäynti Tampere-talossa.jpg',
+          teksti: 'Tove Jansson ja hänen kumppaninsa, graafikko Tuulikki '
+            + 'Pietilä, lahjoittivat 1986 Tampereen taidemuseolle '
+            + 'valtavan kokoelman: yli tuhat piirustusta ja maalausta '
+            + 'sekä useita satoja pienoismalleja Muumilaaksosta. '
+            + 'Kokoelma oli aluksi näytteillä nimellä Muumilaakso '
+            + 'vuoteen 2016 asti, jolloin se sai nykyisen nimensä ja '
+            + 'muutti Tampere-talon uusiin tiloihin. Tampereella on yhä '
+            + 'maailman ainoa Muumimuseo.',
+          lyhyt: 'Tove Jansson lahjoitti 1986 Tampereelle yli tuhat teosta, ja niistä syntyi maailman ainoa muumimuseo.',
+          selite: 'Tove Jansson lahjoitti vuonna 1986 Tampereelle yli '
+            + 'tuhat teosta, ja niistä syntyi maailman ainoa '
+            + 'Muumimuseo.',
+          lahde: 'Iljanne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Muumimuseo',
+        },
+        {
+          otsikko: 'Piirtäjä, joka pilkkasi Hitleriä',
+          tiedosto: 'Tove Jansson by Eemu Myntti.jpg',
+          teksti: 'Ennen kuin muumeista tuli lastenkirjahahmoja, Tove '
+            + 'Jansson piirsi 1930- ja 1940-luvuilla poliittisia '
+            + 'pilakuvia ruotsinkieliseen satiirilehteen Garm — yhdessä '
+            + 'kuuluisimmista kuvista Adolf Hitler kuvataan itkevänä '
+            + 'vauvana muiden diktaattoreiden keskellä. Muumimuseon '
+            + 'kokoelmassa on yli viisisataa Jansonin kuvitusta ja '
+            + 'kansikuvaa juuri tältä ajalta, ennen ensimmäistä '
+            + 'muumikirjaa vuodelta 1945.',
+          lyhyt: 'Ennen muumeja Tove Jansson piirsi 1930–40-luvuilla poliittisia pilakuvia, joissa myös Hitler esiintyi.',
+          selite: 'Ennen muumikirjoja Tove Jansson piirsi 1930- ja '
+            + '1940-luvuilla poliittisia pilakuvia satiirilehteen Garm.',
+          lahde: 'Eemu Myntti, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kirjasto, jossa muumit puhuvat monta kieltä',
+          tiedosto: 'Muumimuseon lukukirjasto.jpg',
+          teksti: 'Museon aulassa toimii lukukirjasto, jossa on '
+            + 'muumikirjoja kymmenillä eri kielillä — kirjoja on '
+            + 'käännetty yli viidellekymmenelle kielelle kaikkialta '
+            + 'maailmasta. Valo vahingoittaa herkkiä alkuperäispiirroksia, '
+            + 'joten pysyvää näyttelyä uusitaan muutaman vuoden välein: '
+            + 'suurin osa kokoelman yli kahdesta tuhannesta teoksesta ei '
+            + 'ole koskaan ollut esillä yhtä aikaa.',
+          lyhyt: 'Muumikirjoja on käännetty yli 50 kielelle; museon lukukirjastossa niitä voi selata monella kielellä.',
+          selite: 'Muumikirjoja on käännetty yli viidellekymmenelle '
+            + 'kielelle, ja museon lukukirjastossa niitä voi selata '
+            + 'monella kielellä.',
+          lahde: 'Iljanne, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -28356,6 +28503,79 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'taide',
+      nimi: 'Taide',
+      johdanto: 'Taidemaalari, joka pelkäsi natsien vievän teoksensa — ja '
+        + 'testamenttasi lopulta koko elämäntyönsä kotikaupungilleen.',
+      tehtava: {
+        kysymys: 'Kenelle Edvard Munch testamenttasi lähes koko '
+          + 'elämäntyönsä kuolemansa jälkeen?',
+        vaihtoehdot: [
+          'Norjan valtiolle',
+          'Oslon kaupungille',
+          'Perheelleen',
+          'Louvre-museolle',
+        ],
+        oikea: 1,
+        fakta: 'Munch kirjoitti testamenttinsa 1940, pian Saksan '
+          + 'miehitettyä Norjan, koska pelkäsi natsien takavarikoivan '
+          + 'teoksensa — hän testamenttasi lähes kaiken Oslon '
+          + 'kaupungille.',
+      },
+      nostot: [
+        {
+          otsikko: 'Testamentti, joka kirjoitettiin miehityksen alla',
+          tiedosto: 'Edvard Munch, autoritratto nella veranda di vetro, 1930-33.jpg',
+          teksti: 'Kun Saksa miehitti Norjan huhtikuussa 1940, '
+            + 'seitsemänkymmentäkuusivuotias Edvard Munch pelkäsi natsien '
+            + 'vievän tai tuhoavan hänen elämäntyönsä — hänen '
+            + 'taidettaan oli aiemmin leimattu Saksassa '
+            + '"rappiotaiteeksi". Hän kirjoitti testamenttinsa saman '
+            + 'kuun lopulla ja testamenttasi lähes koko jäljellä olevan '
+            + 'tuotantonsa Oslon kaupungille. Munch kuoli tammikuussa '
+            + '1944, vain reilu vuosi ennen sodan päättymistä.',
+          lyhyt: 'Munch kirjoitti testamenttinsa 1940 pelätessään natsien vievän teoksensa, ja kuoli 1944.',
+          selite: 'Edvard Munch kirjoitti testamenttinsa vuonna 1940 '
+            + 'pelätessään natsien vievän teoksensa, ja hän kuoli '
+            + 'vuonna 1944.',
+          lahde: 'Francesco Bini, Wikimedia Commons (PD)',
+          wiki: 'Edvard Munch',
+        },
+        {
+          otsikko: 'Perintö, joka täytti museon',
+          tiedosto: 'Edvard Munch - Beneath the Red Apples - MM.M.00124 - Munch Museum.jpg',
+          teksti: 'Munchin testamentti sisälsi noin 1 150 maalausta, '
+            + '17 800 vedosta, 4 500 akvarellia ja piirustusta sekä '
+            + 'kolmetoista veistosta — yksi historian suurimmista '
+            + 'yhden taiteilijan jäämistöistä. Kokoelma muodosti pohjan '
+            + 'Munch-museolle, joka avattiin Oslossa 1963 taiteilijan '
+            + 'syntymän satavuotispäivänä. Nykyään museon kokoelmassa '
+            + 'on lähes 27 000 Munchin teosta, joista suurin osa '
+            + 'perustuu juuri tähän lahjoitukseen.',
+          lyhyt: 'Munchin testamentti sisälsi n. 1150 maalausta ja muodosti pohjan 1963 avatulle museolle.',
+          selite: 'Munchin testamentti sisälsi noin 1 150 maalausta ja '
+            + 'muodosti pohjan vuonna 1963 avatulle Munch-museolle.',
+          lahde: 'Edvard Munch, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Uusi koti satamanlahden rannalla',
+          tiedosto: 'Ekeberg hill, Sørenga and Lambda Oslo Norway February 2020 Bernt Rostad CC BY 2.0.jpg',
+          teksti: 'Vuonna 2021 Munch-museo muutti uuteen '
+            + 'kolmentoista kerroksen rakennukseen Bjørvikan '
+            + 'satama-alueella, lähelle oopperataloa. Rakennusta '
+            + 'kutsutaan epävirallisesti nimellä Lambda sen kreikkalaisen '
+            + 'kirjaimen muotoisen siluetin vuoksi. Uusi museo mahdollisti '
+            + 'huomattavasti suuremman osan valtavasta kokoelmasta '
+            + 'näytteille kerralla kuin vanha, pienempi rakennus '
+            + 'kaupungin toisella laidalla.',
+          lyhyt: 'Munch-museo muutti 2021 uuteen Lambda-rakennukseen Bjørvikan satama-alueelle.',
+          selite: 'Munch-museo muutti vuonna 2021 uuteen '
+            + 'Lambda-rakennukseen Bjørvikan satama-alueelle.',
+          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
     /*
      * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
      *
@@ -29050,6 +29270,82 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Munkki, joka sai kaupungin polttamaan omaisuutensa '
+        + 'yhdellä torilla — ja jonka itsensä poltettiin samalla '
+        + 'torilla vuotta myöhemmin.',
+      tehtava: {
+        kysymys: 'Mitä firenzeläiset polttivat Girolamo Savonarolan '
+          + 'kehotuksesta Turhuuksien roviolla 1497?',
+        vaihtoehdot: [
+          'Vain kiellettyjä kirjoja',
+          'Peleja, koruja, peilejä ja taideteoksia',
+          'Vanhoja rakennuksia',
+          'Ruokavarastoja',
+        ],
+        oikea: 1,
+        fakta: 'Tuhat lasta kiersi kaupungin keräämässä pelikortteja, '
+          + 'koruja, peilejä, naamioita ja "säädyttömiä" tauluja, jotka '
+          + 'poltettiin yhdessä valtavassa kasassa Piazza della '
+          + 'Signorialla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Munkki, joka näki tulevan tuhon',
+          tiedosto: 'Girolamo Savonarola by Fra Bartolommeo (1497).jpg',
+          teksti: 'Dominikaanimunkki Girolamo Savonarola nousi 1490-luvulla '
+            + 'Firenzen todelliseksi vallanpitäjäksi saarnoillaan, joissa '
+            + 'hän ennusti Jumalan rangaistusta kaupungin ylellisyydestä '
+            + 'ja synnistä. Hänen ansiostaan Firenzeen perustettiin '
+            + 'lyhytaikainen tasavalta Medici-suvun karkotuksen jälkeen. '
+            + 'Tämän muotokuvan maalasi Fra Bartolomeo, joka oli itse '
+            + 'yksi Savonarolan uskollisimmista seuraajista, samana '
+            + 'vuonna kuin suuri Turhuuksien rovio.',
+          lyhyt: 'Savonarola nousi 1490-luvulla Firenzen todelliseksi vallanpitäjäksi saarnoillaan.',
+          selite: 'Girolamo Savonarola nousi 1490-luvulla Firenzen '
+            + 'todelliseksi vallanpitäjäksi apokalyptisillä '
+            + 'saarnoillaan.',
+          lahde: 'Fra Bartolomeo, Wikimedia Commons (PD)',
+          wiki: 'Girolamo Savonarola',
+        },
+        {
+          otsikko: 'Sama tori, päinvastainen tuli',
+          tiedosto: 'Savonarola Being Burnt at the Stake.jpg',
+          teksti: 'Savonarolan valta murtui nopeasti: paavi julisti '
+            + 'hänet pannaan, ja firenzeläiset kääntyivät häntä vastaan '
+            + 'kun luvatut ihmeet eivät toteutuneet. 23. toukokuuta '
+            + '1498 hänet ja kaksi muuta munkkia hirtettiin ja '
+            + 'poltettiin täsmälleen samalla Piazza della Signorian '
+            + 'paikalla, jossa Turhuuksien rovio oli palanut vuotta '
+            + 'aiemmin. Kansanjoukko, joka oli kerran kuunnellut häntä '
+            + 'hurmoksissa, seurasi nyt hänen teloitustaan.',
+          lyhyt: 'Savonarola teloitettiin 1498 samalla torilla, jossa hän oli polttanut turhuuksia vuotta aiemmin.',
+          selite: 'Savonarola teloitettiin vuonna 1498 samalla Piazza '
+            + 'della Signorian paikalla, jossa Turhuuksien rovio oli '
+            + 'palanut vuotta aiemmin.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Laatta, joka merkitsee paikan',
+          tiedosto: 'SavonarolaPlaque gobeirne.jpg',
+          teksti: 'Piazza della Signorian kivetykseen on upotettu '
+            + 'pyöreä muistolaatta, joka merkitsee tarkan paikan, jossa '
+            + 'Savonarola ja hänen kaksi kumppaniaan poltettiin. '
+            + 'Laattaa uusitaan silloin tällöin — nykyinen versio '
+            + 'kertoo tapahtuman lyhyesti latinaksi ja italiaksi. '
+            + 'Tuhannet turistit astuvat sen yli joka päivä huomaamatta '
+            + 'sitä, samalla torilla jolla Michelangelon Daavid-patsas '
+            + 'seisoi alun perin vuosisatoja.',
+          lyhyt: 'Piazza della Signorian kivetykseen upotettu pyöreä laatta merkitsee Savonarolan teloituspaikan.',
+          selite: 'Piazza della Signorian kivetykseen upotettu pyöreä '
+            + 'laatta merkitsee tarkan paikan, jossa Savonarola '
+            + 'teloitettiin.',
+          lahde: 'Greg O\'Beirne, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -29632,6 +29928,79 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Tivolin pääportti johtaa puistoon, joka rakennettiin '
             + 'kaupungin vanhan linnoitusvallin ulkopuolelle.',
           lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'merenneito',
+      nimi: 'Merenneito',
+      johdanto: 'Pieni pronssipatsas, jonka kalja-perijä tilasi lahjaksi '
+        + 'kaupungille — ja josta tuli maailman valokuvatuin murheellinen '
+        + 'nainen.',
+      tehtava: {
+        kysymys: 'Kenen kasvoja Pieni merenneito -patsaan kasvot '
+          + 'muistuttavat?',
+        vaihtoehdot: [
+          'Kuvanveistäjän oman vaimon',
+          'Balettitanssijan',
+          'H. C. Andersenin sisaren',
+          'Kuningattaren',
+        ],
+        oikea: 1,
+        fakta: 'Patsaan kasvot mallinnettiin baletti Ellen Pricen mukaan, '
+          + 'joka tanssi merenneidon roolia Kööpenhaminan kuninkaallisessa '
+          + 'teatterissa — vartalo sen sijaan on kuvanveistäjän oman '
+          + 'vaimon mukainen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Patsas, jonka tilasi panimoperijä',
+          tiedosto: 'Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-25.jpg',
+          teksti: 'Carlsbergin perustajan poika Carl Jacobsen näki '
+            + 'baletin H. C. Andersenin sadusta Pieni merenneito ja '
+            + 'tilasi 1909 kuvanveistäjä Edvard Eriksenilta patsaan '
+            + 'lahjaksi Kööpenhaminan kaupungille. Patsas paljastettiin '
+            + 'Langelinien rantapromenadilla 1913, ja se on pysynyt '
+            + 'samalla kivellä siitä lähtien — vain runsaan metrin '
+            + 'korkuisena, yllättävän pienenä siihen nähden kuinka '
+            + 'kuuluisa siitä on tullut.',
+          lyhyt: 'Carl Jacobsen tilasi patsaan 1909, ja se paljastettiin Langelinien rannalla 1913.',
+          selite: 'Carl Jacobsen tilasi patsaan vuonna 1909, ja se '
+            + 'paljastettiin Langelinien rantapromenadilla vuonna 1913.',
+          lahde: 'Richardmaackphotography, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Den lille Havfrue',
+        },
+        {
+          otsikko: 'Pää, joka katosi kokonaan',
+          tiedosto: 'Langelinie, Copenhagen 2018-03-03 (39604935190).jpg',
+          teksti: 'Patsas on häväisty lukuisia kertoja vuosikymmenten '
+            + 'aikana. Vuonna 1964 tuntemattomat sahasivat sen pään '
+            + 'kokonaan irti yöllä — päätä ei koskaan löydetty, ja '
+            + 'tilalle valettiin uusi. Vuonna 1984 patsaalta katkaistiin '
+            + 'käsi, ja sittemmin sitä on maalattu, puettu burkaan '
+            + 'poliittisena protestina ja liattu punaisella maalilla '
+            + 'valaanpyyntiä vastustavan viestin kera. Kaupunki on aina '
+            + 'korjannut patsaan.',
+          lyhyt: 'Patsaan pää sahattiin irti 1964 eikä sitä koskaan löydetty; vuosien varrella myös muuta ilkivaltaa.',
+          selite: 'Patsaan pää sahattiin irti vuonna 1964 eikä sitä '
+            + 'koskaan löydetty, ja patsas on häväisty useita kertoja '
+            + 'sen jälkeen.',
+          lahde: 'Guillaume Baviere, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Yksi maailman valokuvatuimmista patsaista',
+          tiedosto: 'Copenhagen 2015-08-29 (22032632181).jpg',
+          teksti: 'Ilkivallasta huolimatta Pieni merenneito on säilynyt '
+            + 'Tanskan tunnetuimpana matkailusymbolina ja yksi maailman '
+            + 'kuvatuimmista patsaista — sitä käy katsomassa vuosittain '
+            + 'miljoonia ihmisiä, vaikka moni yllättyy sen pienestä '
+            + 'koosta. Patsas seisoo yhä samalla kivellä Langelinien '
+            + 'rannassa, katse suunnattuna merelle päin, aivan kuten '
+            + 'sadussakin.',
+          lyhyt: 'Pieni merenneito on säilynyt yhtenä maailman kuvatuimmista patsaista ilkivallasta huolimatta.',
+          selite: 'Pieni merenneito on säilynyt yhtenä maailman '
+            + 'kuvatuimmista patsaista ilkivallasta huolimatta.',
+          lahde: 'Guillaume Baviere, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
