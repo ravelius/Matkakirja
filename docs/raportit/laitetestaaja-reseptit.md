@@ -1,5 +1,59 @@
 # Laitetestaajan komentoreseptit (kartan/pallon debug-konsolit)
 
+## 1.0.30-kierroksen resepti (Laitetestaaja 27.9.2026 klo 15.2x, käännös juna-78565bff/b7d9535d)
+
+Tutkittu Explore-agentilla + omalla testauksella. HUOM: juna/b13 (78565bff) on PIDEMMÄLLÄ kuin
+master/BUILD 29b (20ce6a28) — puhevirta on nyt "palavirta"-algoritmilla TAKAISIN PÄÄLLÄ oletuksena
+(kasvavat palat, ei vanhaa mp3-striimiä), eri kuin BUILD 29b:n "kokonaan pois".
+
+**TÄRKEÄ HAVAINTO puhevirrasta:** `puhe lue <teksti>` (kertoja-persoona) näytti aluksi rms=0
+äänimittauksessa — EI bugi, vaan ☰-valikon **Äänimaisema-kytkin on oletuksena POIS** (Kertoja ja
+Musiikki ovat PÄÄLLÄ oletuksena), ja Puhe.Kohdetaso nollaa kertoja-äänen kun Äänimaisema on pois
+(Pulun pollo-persoona ohittaa tämän, kertoja ei). Kytke ensin päälle (`ui valikko` → napauta
+Äänimaisema-riviä, `ui puu` antaa koordinaatit) ennen kertoja-äänen mittausta, muuten tulos näyttää
+virheellisesti äänettömältä.
+
+1. **Lento v3 (15s, laskeutuminen):** `echo "lento v3 1" > komento.txt` (oletus jo 1) / `lento v3
+   tila`. Kesto/vaihe myös `peli tila` (peli-komento.txt) → Documents/peli-tila.json kentässä
+   `"lento":{"vaihe":...,"kesto":...}`. Vertailu vanhaan: `lento v3 0`.
+2. **Lipun suunta (itään, ei käänny ylilennossa):** `lipputanko koe` (testilippu) + `lipputanko
+   suunta maailma` (uusi, oletus) vs `lipputanko suunta kamera` (vanha, kääntyi). `lipputanko tila`
+   lokiin. PASS jos "suunta maailma" pysyy tilana kameran liikkuessa.
+3. **Maakuntanimet pois:** `echo "ui maakuntanimet 0" > ui-komento.txt` (oletus, pois) vs `ui
+   maakuntanimet 1` (päälle, A/B). HUOM: tämä on ERI ASIA kuin taustan italic-tyyliset perus-
+   maakuntanimet (esim. "BERRY"), jotka ovat AINA näkyvissä eivätkä kuulu tähän — vain kartussin
+   maan käsialatyyliset (Kirjasin.Kauno) nimet piiloutuvat. Testaa zoomaamalla maakunnan
+   keskipisteeseen (komento antaa koordinaatit) ja vertaile kuvakaappauksella 0 vs 1.
+4. **Puhevirta (Pulu + nostokortit, ei Data Processing Error):** Äänimaisema PÄÄLLÄ ensin (yllä).
+   `puhe lue <pitkä lause>` (peli-komento.txt) + ~3s viive + `aani mittaa 2` → rms>0,
+   `[MatkakirjaPuhe:@1,00]`, EI "Data Processing Error" -riviä. Pulun chat: `ui chat` + kaiutinvipu
+   ON (`ui puu` koordinaatit) + `ui chat <kysymys>`. Nostokortin lukija: `ui nosto <id>` + LISÄÄ +
+   vedä alas (swipe y 300→750, ylärivi jää muuten vierityksen yläpuolelle) + napauta kaiutin
+   (`mk-lukija__kaari`-luokka `ui puu`:sta).
+5. **Talous (kassarivi, varoitus, loppukortti, Jatka tallennuksesta, Odota):** EI suoraa debug-
+   komentoa loppukortille. `peli tila` → peli-tila.json kentät raha/tilarivi kassarivin todistukseen.
+   `echo "kulkutapa odota" > peli-komento.txt` laukaisee Odota-toiminnon suoraan. Loppukortin/
+   "Jatka tallennuksesta" -napin näkemiseen raha pitää ajaa loppuun oikeasti pelaamalla, sitten
+   `ui puu` + napautus koordinaateilla.
+6. **Pelistreak + armopäivä:** EI debug-komentoa päivämäärän väärentämiseen (käyttää aina
+   DateTime.Now). Vaatii simulaattorin systeemikellon siirtämistä päivä kerrallaan + yksi teko per
+   päivä + `peli tila` (raha nousee) + `ui puu`/kuva kuplan tarkistukseen. Ei yhden komennon oikotietä.
+7. **Natiivin avauskortti (v2296, NYT MERGETTY):** `echo "ui avauskortti <kaupunki-id> kartta" >
+   ui-komento.txt` (esim. pariisi). Myös `ui kutsu napauta` kutsuminiatyyrille.
+8. **Meren 3 uutta laatumallia (merilaiva v12/purjelaiva v10/valas v8, päivitetyt mallit, EI uusia
+   lajeja):** `elava elementit meri 1` + `elava elementit` (linssi-komento.txt) → lokiriville
+   laji+kolmiomäärä+kauko-kolmiot per merilaji. Vertaile kolmiomääriä (esim. merilaiva LOD0 2910).
+9. **Vuori-symboli (LOD0 juuren tahkot korjattu):** `symbolit kategoriat 1` (komento.txt) + zoomaa
+   lähelle vuorikategorian kohdetta (esim. Olympos 40.086,22.358) + `symbolit tila`. Visuaalinen
+   tarkistus: juuren tahkot oikein päin (ei nurinpäin/läpinäkyvä pohja).
+10. **Mitä uutta -rivi:** `echo "ui mitauutta" > ui-komento.txt` (versiorivi) / `ui mitauutta
+    paivittyi` (pakottaa "Peli päivittyi" -ilmoituksen kärkiriveineen).
+11. **Nimiöt väistävät erikoismalleja (jo build 29:ssä, ei uutta — testaamatta jäänyt 1.0.29:stä):**
+    Ei omaa komentoa. Zoomaa Colosseum/Brandenburgin portti/Matterhorn v2 -kohteisiin ja tarkista
+    kuvakaappauksesta ettei paikannimi mene 3D-mallin päälle.
+12. **Pienten maiden lähitason kynnys (jo build 28-29:ssä, ei uutta — testaamatta jäänyt):**
+    `nostot tila NLD` (tai BEL/CHE/DNK) → ZoomKerroin-arvo lokiin, vertaa lähizoomin aukeamiseen.
+
 Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia sekunnin välein:
 `peli-komento.txt` (pelitila, PeliKomennot.cs), `ui-komento.txt` (UiNakymat.cs), `linssi-komento.txt`
 (LinssiOhjain.cs) — nämä kolme tunnettiin jo. Neljäs, **`komento.txt`** (paljas nimi, Kartta/Komennot.cs),
