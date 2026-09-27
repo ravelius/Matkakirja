@@ -1,4 +1,4 @@
-# Linssisepän aloitusviesti (26.9.2026 myöhäisilta)
+# Linssisepän aloitusviesti (päivitetty 27.9.2026 klo 11.3x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
@@ -12,14 +12,14 @@ Lue:
 - Raamatun Ydinajatus kohta 2 (FABLEN KÄSKYT, JUMI → FABLE, VIESTIRAJA JA VARAKANAVAT)
 - Raamatun kohdat ELÄVÄ KARTTA ja elävät elementit (säännöt), ESILATAUSPOLITIIKKA ja NATIIVI PELI ETUSIJALLE
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260927-l.md** (tila, jono ja taustalla olevat agentit; -k.md yön erät)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260927-m.md** (merge-pyynnöt, avoimet, jono: seuraavat maat, lento v3,
+  lentopeli; -l.md päivän yksityiskohdat)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: omistajan päätökset 27.9. klo 01.4x luovutuksessa -j (kohta "OMISTAJAN PÄÄTÖKSET = JONO"):** erikoismallit
-MSM/Stonehenge/Colosseum hyväksytty (merge-pyyntö 1.0.28-junaan, kun 1.0.27 on TF:ssä) → seuraavat 3 erikoismallia (Segovia,
-Brandenburgin portti, Kinderdijk) → kategoriasymbolit 3D:nä (kaari + vuori loppuun, sitten 12 muuta) → meri isommaksi →
-lento v3 Natiivisepän integraatiossa.
+**Järjestys: luovutus -m kohta 4 (JONO):** merge-pyynnöt (meri-tuotanto, maakunta-taytto, lahitaso) ovat Natiivisepällä →
+mergen jälkeen Pelikoodarille ilmoitus ja worktreiden siivous → seuraavat maat (Český Krumlov, Malbork, Pannonhalma; elämänidea
+ensin) → lento v3 Natiivisepän integraatiossa → lentopeli Fablen työnjaon mukaan.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
