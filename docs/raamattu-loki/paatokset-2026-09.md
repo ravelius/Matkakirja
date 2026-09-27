@@ -8179,3 +8179,7 @@ Kortti 12.5x (kontaktiarkit Pariisi, Helsinki, Lontoo; #3408): 413 kuvaa tasattu
 ## OMISTAJA (SITOVA): NAHTAVYYKSISSA EI EI-PAIKKA-KUVIA — TAPAHTUMAT, HENKILOT, ESINEET JNE. SIIRRETAAN NOSTOIHIN TAI LEHTIIN (27.9.2026 klo 12.50)
 
 Omistaja 27.9.2026 klo 12.5x (kontaktiarkit): nahtavyyksissa nakyy yha ei-paikkoja (esim. Pariisi bastilji-1789, curie-1898, lumiere-1895, paras-patonki). Tarkentaa 26.9. paatosta 178: kaikki ei-paikat (tapahtumat, henkilot, esineet, ruoka, ilmiot) siirretaan nostoiksi tai kaupunkilehden juttuihin kuvineen, ei poisteta; aukiot ja luonto ovat paikkoja. Sisaltokirjuri: koko nahtavyysaineiston luokittelu web + natiivi, suodatuksen vuototarkistus (koodivika → Pelikoodari), siirto, vartija ≥ 1 paikka/kaupunki, PR Julkaisijalle.
+
+## OMISTAJA (SITOVA): CODEXIN TIEDOSTOT POISTAA VAIN CODEX — CLAUDEN ROOLIT PYYTAVAT POSTILAATIKON KAUTTA (27.9.2026 klo 12.51)
+
+Omistaja 27.9.2026 klo 12.5x: Codexin (kayttaja samireivinen) luomia tiedostoja, kansioita ja worktreeta ei poisteta itse; poisto pyydetaan Codexilta (claude/postilaatikko, posti/). Fable pyysi poistamaan wt/proto-natiivi-ui-pulu-karttavaisto-codex (98f4e19a1); Postivahti ohjaa samireivinen-omisteiset kohteet Fablelle eika roolien poistolistoille.
