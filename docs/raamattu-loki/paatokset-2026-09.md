@@ -7999,3 +7999,7 @@ Omistaja 27.9. (kuva 09.02, tarkennus 09.5x): 1) rahaa pitaa olla nukkumiseen ja
 ## OMISTAJA 09.5x (SITOVA): PELEILLE OMA SUUNNITTELUSIVU (docs/pelikatalogi.md + pelikatalogi.html), PELIT YHTA MERKITTAVA OSA KUIN LINSSIT; SISALTOKIRJURIN CHECKOUT PALAUTETTU (27.9.2026 klo 09.59)
 
 Omistaja 09.5x: pelit ovat yhta merkittava osa kuin linssit → oma suunnittelusivu docs/pelikatalogi.md (malli linssikatalogi.md) + Pages-kopio pelikatalogi.html (Pelikoodari); Sisaltokirjuri tekee ensimmaisen version (Euroopan pelit maittain, oikeudet, 10 ensimmaista, omistajan ideat -osio). Raamattuun seuraavassa Raamattu-PR:ssa. VIRHE: Fable mergesi #3377/#3383 --delete-branch:lla ja Sisaltokirjurin checkout (haaralla sisalto-luovutus-20260927) katosi → palautettu git worktree add Matkakirja-sisaltokirjuri -b sisalto-tyo-20260927-0958 origin/main; muistisaanto: ei koskaan --delete-branch, tarkista git worktree list.
+
+## Z10 OSOITIN VAIHDETTU 09.47 (TASOT 0–10, pohja.kopio 0–8); #3384 v2309, #3385 v2310 MAINISSA (27.9.2026 klo 09.59)
+
+Julkaisija 09.59: Z10-osoitin vaihdettu 09.47, CDN 2026-09-26s-pohja tasot 0–10 (pallosarja pohja.kopio 0–8); #3384 progressiivinen soitto v2309 ja #3385 loytosumu pois v2310 mainissa; savukkeet ja Pelikoodarin puhelinmittaus kaynnissa.
