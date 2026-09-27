@@ -206,7 +206,6 @@ namespace Matkakirja.Natiivi
         void Seuraa()
         {
             KytkeMuste();
-            OdottavaHeraaminen();
             if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu) && lippu.resolvedStyle.width > 0f; // löydös 144
             string uusi = TodellinenMaa();
             // Testimaa (ui kartuscha ISO) raukeaa, kun pelaajan todellinen maa vaihtuu (matka, uusi peli): muuten
@@ -520,7 +519,6 @@ namespace Matkakirja.Natiivi
             sisus.style.display = DisplayStyle.Flex;
             Asettele();
             AnimoiVertailut();
-            JatkaHeraamista(250); // Elävä kartta: odottava maakunnan herätys, kun kortti on ehtinyt näkyviin
             if (aalto != null) kortti.schedule.Execute(() => { if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu); }); // löydös 144
             NollaaNimenSovitus(); // löydös 143b: avatun koko eri, sovitus uudelleen
             AukiMuuttui?.Invoke(true);
