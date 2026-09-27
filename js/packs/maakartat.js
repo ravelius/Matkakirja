@@ -8017,6 +8017,7 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Suurherttuallinen palatsi', lat: 49.6109, lon: 6.1328,
+        nosto: 'skandaali-marie-adelaiden-luopuminen-1919',
         aika: '1572–',
         teksti: 'Rakennus, joka tunnetaan nykyään Suurherttuallisena '
           + 'palatsina, rakennettiin vuonna 1572 kaupungintaloksi ja '
@@ -8557,6 +8558,7 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Suurmestarin palatsi', lat: 35.898611, lon: 14.514167,
+        nosto: 'skandaali-napoleonin-kirkkohopean-ryosto-1798',
         wiki: 'Suurmestarin palatsi (Valletta)',
       },
       {
