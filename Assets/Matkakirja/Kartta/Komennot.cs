@@ -98,7 +98,7 @@ namespace Matkakirja
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
-    ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
+    ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke|suunta maailma|ruutu|kamera   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
@@ -779,6 +779,7 @@ namespace Matkakirja
                     else if (m == "jatkuva" || m == "syke") Lipputanko.AsetaJatkuva(m == "jatkuva");
                     else if (m == "koko" && o.Length > 2) Lipputanko.KorkeusPt = float.Parse(o[2], CultureInfo.InvariantCulture);
                     else if (m == "perspektiivi" && o.Length > 2) Lipputanko.Perspektiivi = o[2] != "0";
+                    else if (m == "suunta" && o.Length > 2) Lipputanko.AsetaSuunta(o[2]);
                     else if (m == "koe")
                     {
                         double la = o.Length > 3 ? double.Parse(o[2], CultureInfo.InvariantCulture) : 37.98;

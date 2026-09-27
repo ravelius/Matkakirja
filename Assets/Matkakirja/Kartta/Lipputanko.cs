@@ -21,8 +21,9 @@ namespace Matkakirja
     /// MUOTO: tangon korkeus on vakio ruudulla (<see cref="KorkeusPt"/> pistettä, kuten KaupunkiMerkit), ja tanko nousee
     /// pinnan normaalin suuntaan. Suoraan ylhäältä katsottuna pystysuora tanko olisi pelkkä piste, joten akseli kallistuu
     /// normaalin ja katseen tasossa niin, että tanko on vähintään <see cref="MinKulma"/> asteen kulmassa katseeseen (näkyy
-    /// seisovana; kallistetussa näkymässä se on aito pystysuora). Lippu kääntyy tangon ympäri kameraan päin ja liehuu
-    /// ruudulla oikealle (kuvan tankopuoli pysyy tangossa). Horisonttiusva (Shaders/Horisonttiusva.hlsl) häivyttää sen
+    /// seisovana; kallistetussa näkymässä se on aito pystysuora). Lippu liehuu maailmaan sidottuun suuntaan, itään
+    /// (pohjoinen ylhäällä ruudulla oikealle; omistajan löydös 27.9. klo 12.0x: kameraan sidottu kangas vaihtoi puolta, kun
+    /// kamera kulki tangon yli). Kuvan tankopuoli pysyy tangossa; takaa katsottuna kangas näkyy peilikuvana kuten oikea lippu. Horisonttiusva (Shaders/Horisonttiusva.hlsl) häivyttää sen
     /// kuten 153:n nostot. Piilossa lennon, linssin ja aloitusportin aikana sekä pallon takana.
     /// Komennot: `lipputanko tila | pois | koe [lat lon] | koko <pt>` (Komennot.cs).
     /// </summary>
@@ -59,8 +60,23 @@ namespace Matkakirja
         /// </summary>
         public static bool Jatkuva = true;
 
+        /// <summary>
+        /// Kankaan liehuntasuunta (omistajan löydös 27.9. klo 12.0x): "maailma" = itään, maailmaan sidottu (oletus);
+        /// "ruutu" = aina ruudun oikealle (seuraa kameran suuntimaa, ei käänny tangon yli kuljettaessa);
+        /// "kamera" = entinen, kangas katseeseen päin (vaihtoi puolta, kun kamera ohitti tangon). Komento `lipputanko suunta`.
+        /// </summary>
+        public static string Suunta = "maailma";
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KorkeusPt = 120f; Perspektiivi = true; Jatkuva = true; instanssi = null; }
+        static void Nollaa() { KorkeusPt = 120f; Perspektiivi = true; Jatkuva = true; Suunta = "maailma"; instanssi = null; }
+
+        /// <summary>Liehuntasuunnan vaihto ajossa (vertailukuvat): maailma | ruutu | kamera.</summary>
+        public static void AsetaSuunta(string s)
+        {
+            if (s != "maailma" && s != "ruutu" && s != "kamera") { Debug.LogWarning("MATKAKIRJA lipputanko: suunta maailma|ruutu|kamera"); return; }
+            Suunta = s;
+            PallonLepo.Muuttui("lipputanko");
+        }
 
         /// <summary>Vaihtoehdon vaihto ajossa (A/B-mittaus).</summary>
         public static void AsetaJatkuva(bool j)
@@ -139,7 +155,7 @@ namespace Matkakirja
         string maa;
         bool asetettu, nakyi;
         double lat, lon, korkeus;
-        Vector3 normaaliPaikallinen, perusPaikka;
+        Vector3 normaaliPaikallinen, itaPaikallinen, pohjoinenPaikallinen, perusPaikka;
 
         void Rakenna()
         {
@@ -198,6 +214,11 @@ namespace Matkakirja
             var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lo, la, 0));
             var n = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef);
             normaaliPaikallinen = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(n)).normalized;
+            // Tuulen suunta (maailmaan sidottu): itä ja varalle pohjoinen paikan tangenttitasossa.
+            var ita = math.normalize(math.cross(new double3(0, 0, 1), n));
+            var pohjoinen = math.cross(n, ita);
+            itaPaikallinen = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(ita)).normalized;
+            pohjoinenPaikallinen = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(pohjoinen)).normalized;
             perusPaikka = (Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef)
                           + normaaliPaikallinen * (float)KorkeusKerroin.Lisays(korkeusM);
             transform.localPosition = perusPaikka;
@@ -285,8 +306,22 @@ namespace Matkakirja
                 float a = MinKulma * Mathf.Deg2Rad;
                 akseli = (v * Mathf.Cos(a) + t * Mathf.Sin(a)).normalized;
             }
-            Vector3 eteen = Vector3.ProjectOnPlane(v, akseli);
-            if (eteen.sqrMagnitude < 1e-8f) eteen = Vector3.ProjectOnPlane(-kamera.transform.up, akseli);   // keskellä: tanko katseen suuntainen
+            // Kankaan suunta maailmaan sidottuna (omistaja 27.9. klo 12.0x): lippu liehuu itään (paikallinen −x), joten se ei
+            // käänny eikä vaihda puolta, kun kamera kiertää tai kulkee tangon yli. Ennen +z seurasi katsetta (ProjectOnPlane(v)),
+            // ja sen etumerkki kääntyi, kun kamera ohitti tangon akselin.
+            Vector3 eteen;
+            if (Suunta == "kamera")
+            {
+                eteen = Vector3.ProjectOnPlane(v, akseli);
+                if (eteen.sqrMagnitude < 1e-8f) eteen = Vector3.ProjectOnPlane(-kamera.transform.up, akseli);
+            }
+            else
+            {
+                Vector3 liehuu = Suunta == "ruutu" ? Vector3.ProjectOnPlane(kamera.transform.right, akseli)
+                                                   : Vector3.ProjectOnPlane(gt.TransformDirection(itaPaikallinen), akseli);
+                if (liehuu.sqrMagnitude < 1e-4f) liehuu = Vector3.ProjectOnPlane(gt.TransformDirection(pohjoinenPaikallinen), akseli);
+                eteen = Vector3.Cross(-liehuu.normalized, akseli);   // LookRotation: x = −liehuu, y = akseli, z = x × y
+            }
             var suunta = Quaternion.LookRotation(eteen.normalized, akseli);
 
             // Vakio ruutukoko (KaupunkiMerkit): yksi piste tällä etäisyydellä.
@@ -304,7 +339,7 @@ namespace Matkakirja
 
         string Kuvaus() =>
             $"maa {maa ?? "-"}, paikka {lat:0.00} {lon:0.00}, näkyy {nakyi}, lippu {(lahde != null ? lahde.width + "×" + lahde.height : "-")}" +
-            $", kangas 3D ({(Jatkuva ? "jatkuva" : "syke")}), korkeus {KorkeusPt:0} pt";
+            $", kangas 3D ({(Jatkuva ? "jatkuva" : "syke")}), korkeus {KorkeusPt:0} pt, suunta {Suunta}";
 
         void OnDestroy()
         {
