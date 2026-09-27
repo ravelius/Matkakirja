@@ -8047,3 +8047,7 @@ Julkaisija 10.2x (ajo 36298275631): R2 yhteensa 106,9 Gt / 7,68 milj. objektia (
 ## NATIIVIN PROGRESSIIVINEN PUHE KOODATTU (pelikoodari/puhevirta b6fc76d7); MITTAUS VASTA #3389:N JULKAISUN JALKEEN (27.9.2026 klo 10.19)
 
 Pelikoodari 10.2x: natiivi Puhe.SoitaVirtana — DownloadHandlerAudioClip(streamAudio) soi ~12 kt (≈1 s) esirullan jalkeen, valmis pala valimuistiin, varapolku, komento 'puhe virta', 1. aani -mittari; unity 0 virhetta; lukijat eivat muutu. Mittaus jumissa (kehittajakoodi puuttuu, paivaraja tayttyi) → Fable: b) mittaus #3389:n julkaisun jalkeen. Seuraavaksi #3388-korjaukset ja talous-suunnitelma (jonossa).
+
+## OMISTAJA 10.2x: VANHAT PYRAMIDISARJAT POISTETAAN AMPARISTA (VAIN NE, JOIHIN EI OSOITA MIKAAN) (27.9.2026 klo 10.22)
+
+Omistaja 10.2x 'Poista vanhat': Julkaisija poistaa vanhat pyramidisarjat (09-21, 09-22, 09-22c, 09-25 ym., ~14 Gt) — ensin Karttasepalta ja Siirtosepalta vahvistus mihin sarjoihin tuotanto (2026-09-26s-pohja), pallosarjan pohja.kopio (2026-09-26-pohja) ja natiivipaketti osoittavat; niita ei poisteta. Varmuuskopio-luettelot sailytetaan. Poistetut ja vapautunut Gt rivilla.
