@@ -174,6 +174,54 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public bool PuluaaniSoi => puhuu && SoivaPersoona == "pollo";
         public float Aika => lahde != null && lahde.clip != null ? lahde.time : 0;
+        /// <summary>Soiva puhe tauolla (Tauko/Jatka, nostokortin kaiutin: omistaja 27.9.2026 klo 09.3x).</summary>
+        public bool Tauolla => tauolla;
+        bool tauolla;
+        readonly float[] tasoNaytteet = new float[256];
+
+        /// <summary>
+        /// Soivan puheen tauko (web soitin.tauko): AudioSource.Pause, jatko on näytteen tarkka. Loppu-kutsu ei laukea
+        /// tauon aikana; Puhuu-tapahtuma kertoo tauon (musiikki ja ambienssi palaavat). False, jos mikään ei soi.
+        /// </summary>
+        public bool Tauko()
+        {
+            if (tauolla || !puhuu || lahde == null || !lahde.isPlaying || haivytys != null) return false;
+            tauolla = true;
+            lahde.Pause();
+            AsetaPuhuu(false);
+            return true;
+        }
+
+        /// <summary>Tauon jatko samasta kohdasta (web soitin.jatka). False, jos tauolla ei ollut mitään.</summary>
+        public bool Jatka()
+        {
+            if (!tauolla || lahde == null) return false;
+            tauolla = false;
+            lahde.UnPause();
+            AsetaPuhuu(true);
+            return true;
+        }
+
+        /// <summary>Tauolla oleva klippi pois (uusi puhe tai pysäytys ei jatka taukoa).</summary>
+        void PuraTauko()
+        {
+            if (!tauolla) return;
+            tauolla = false;
+            if (lahde != null) lahde.Stop();
+        }
+
+        /// <summary>Soivan puheen RMS-taso (VU-mittari, web puheMittari); 0 kun hiljaa tai tauolla.</summary>
+        public float SoivaTaso
+        {
+            get
+            {
+                if (lahde == null || !lahde.isPlaying || tauolla) return 0f;
+                lahde.GetOutputData(tasoNaytteet, 0);
+                double s = 0;
+                for (int i = 0; i < tasoNaytteet.Length; i++) s += tasoNaytteet[i] * tasoNaytteet[i];
+                return Mathf.Sqrt((float)(s / tasoNaytteet.Length));
+            }
+        }
         public float Kesto => lahde != null && lahde.clip != null ? lahde.clip.length : 0;
         public string ViimeVirhe { get; private set; }
 
@@ -250,6 +298,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Paalla || string.IsNullOrEmpty(url)) return false;
             AsetaIstunto();
+            PuraTauko();
             int oma = ++tunnus;
             if (lataus != null) StopCoroutine(lataus);
             if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
@@ -292,6 +341,7 @@ namespace Matkakirja.Natiivi
             persoona ??= "kertoja";
             teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
             AsetaIstunto();
+            PuraTauko();
             int oma = ++tunnus;
             if (lataus != null) StopCoroutine(lataus);
             if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
@@ -352,6 +402,7 @@ namespace Matkakirja.Natiivi
         {
             tunnus++;
             loppu = null;
+            PuraTauko();
             if (lataus != null) { StopCoroutine(lataus); lataus = null; }
             SoivaUrl = null;
             if (lahde.isPlaying) Haivyta(haivytysS, true);
@@ -491,7 +542,7 @@ namespace Matkakirja.Natiivi
             haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
 
             // Loppu: äänite soi loppuun (ei pysäytetty eikä korvattu).
-            while (oma == tunnus && lahde.isPlaying) yield return null;
+            while (oma == tunnus && (lahde.isPlaying || tauolla)) yield return null;
             if (oma != tunnus) yield break;
             SoivaUrl = null;
             AsetaPuhuu(false);
