@@ -2094,7 +2094,7 @@ let variLiike = false;
 let variLiikeKohde = null;
 
 /*
- * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js poistettu 27.9.2026 — piirtokyky jäi ilman kytkentää;
  * prototyyppi): lauta antaa käytyjen kaupunkien aukot laudan
  * yksiköissä (sisasumunAukot) ja peiton; tasoitus kantaa ne laatoille
  * (js/pallolaatat.js maalaaSisasumu). Avaimessa mukana, jotta laatat
