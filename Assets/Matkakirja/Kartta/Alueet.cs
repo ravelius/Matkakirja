@@ -123,6 +123,7 @@ namespace Matkakirja
             {
                 if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
                 if (KaupunkiRasteri.Paalla && td.TryGetValue("kaupunkiRasteri", out var kr) && kr is double krd) tavut += (long)krd;
+                if (td.TryGetValue("mediaKuvat", out var mk) && mk is double mkd) tavut += (long)mkd;
             }
             var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
             if (File.Exists(Merkki(id))) { a.Tila = Tila.Valmis; a.Ladattu = tavut; }
@@ -224,8 +225,11 @@ namespace Matkakirja
             // tarkat solut rasterin laatikosta.
             if (a.Id == "maailma") polut.AddRange(Vektorikerros.OfflinePolut(true, null));
             else if (RasterinLaatikko(a.Tiedot, out var laatikko)) polut.AddRange(Vektorikerros.OfflinePolut(false, laatikko));
-            if (a.Tiedot.TryGetValue("media", out var me) && me is List<object> media)
-                foreach (var u in media) if (u is string us && Suhteellinen(us) is string s) polut.Add(s);
+            // Media (sisältö) ja mediaKuvat (Fablen päätös 27.9. klo 17.5x: pienennetyt nostokuvat ja R2:ssa jo olevat puheet,
+            // katto 100 Mt/maa; vanhat buildit ohittavat avaimen). Luetaan Mukana.Polun kautta ilman verkkoa.
+            foreach (var avain in new[] { "media", "mediaKuvat" })
+                if (a.Tiedot.TryGetValue(avain, out var me) && me is List<object> media)
+                    foreach (var u in media) if (u is string us && Suhteellinen(us) is string s) polut.Add(s);
             return polut;
         }
 
