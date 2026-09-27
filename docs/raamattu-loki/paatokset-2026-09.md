@@ -8211,3 +8211,7 @@ Omistaja 27.9.2026 klo 15.1x natiivin talous-UI:n kuvapareista (kassarivi, loppu
 ## 1.0.30 LEIKATAAN NYT ILMAN ELAMAPALKKIA (FABLE C); ELAMAPALKKI PELKAT PUNAISET NELIOT, iPAD = iPHONE → 1.0.31 (27.9.2026 klo 15.16)
 
 Natiivisepan juna 9dffccd0 (valikaannos 7215835c, savuke 0): lento v3, lippu, maakuntanimet pois, puhevirta palavirtana, talousportti + pelistreak, avauskortti, meri-laatu, vuori, mitauutta, havainnekuva + Natiivi-UI:n talous-UI 2addc08c. Fablen paatos C (tyonjohtajan harkinta: omistaja nakee uudet asiat tanaan, TF ennen klo 22 polttoa): leikkaus heti, elamapalkki 1.0.31:een. Omistajan tarkennus 15.2x: elamapalkki = pelkat punaiset neliot ilman tekstia, iPadilla sama kuin iPhonella (myos lyhyt kassarivi). Linssiseppa ja Sisaltokirjuri kontekstirajalla → nollaukset kaynnissa.
+
+## OMISTAJA (SITOVA): LUENTA KUULUU AINA PYYNNOSTA — AANIMAISEMA MYKISTAA VAIN MUSIIKIN JA TEHOSTEET; 1.0.30 TF:AAN (BUILD 30 = 7b8a12c0) (27.9.2026 klo 15.47)
+
+Omistaja 27.9.2026 klo 15.5x kortilla: kun pelaaja painaa noston tai lehden kaiutinta, nostojen ja isoisan luenta soi myos Aanimaisema/mykistys pois -tilassa kuten Pulun puhe; Aanimaisema mykistaa vain musiikin ja tehosteet (web + natiivi, Pelikoodari → 1.0.31). Tausta: Laitetestaajan havainto 1.0.30:ssa, Natiiviseppa: mykistys vaiensi luennan molemmissa versioissa. BUILD 30 = master 7b8a12c0 (juna 78565bff), Laitetestaaja 8/12 PASS 0 poikkeusta; Fable vei TF:aan, loput aiheet samalla kaannoksella 1.0.31:een. Natiiviseppa valmisti levysiivouksen 16,5 Gt (omistaja ajaa).
