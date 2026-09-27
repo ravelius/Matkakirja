@@ -2126,7 +2126,851 @@ export const KOHTEET = [
       },
     ],
   },
-
+  {
+    tunnus: 'sakurajima', nimi: 'Sakurajima', seutu: 'Kyūshū, Japani', lat: 31.593, lon: 130.657,
+    selite: 'Yksi Japanin aktiivisimmista tulivuorista kohoaa keskellä '
+            + 'Kagoshiman lahtea, kaupungin kupeessa.',
+    oletus: 'iss034e027139',
+    kuvat: [
+      {
+        id: 'iss034e027139',
+        teksti: 'Sakurajima purkautuu tammikuussa 2013 kuvattuna Kansainväliseltä '
+          + 'avaruusasemalta. Tuhkapilvi kulkeutuu kaakkoon yli lahden, ja '
+          + 'purkauspilven varjo osuu vedenpinnalle. Alempana näkyy Kagoshiman '
+          + 'kaupunki, jonka noin 600 000 asukasta elävät tulivuoren varjossa ja '
+          + 'pyyhkivät tuhkaa katoiltaan lähes viikoittain.',
+      },
+    ],
+  },
+  {
+    tunnus: 'aorounga', nimi: 'Aorounga-kraatteri', seutu: 'Sahara, Tšad', lat: 19.1, lon: 19.25,
+    selite: 'Yksi maailman parhaiten säilyneistä meteoriittikraattereista '
+            + 'piirtyy tarkkoina renkaina Saharan hiekkaan.',
+    oletus: 'iss012e09639',
+    kuvat: [
+      {
+        id: 'iss012e09639',
+        teksti: 'Aorounga-kraatterin renkaat erottuvat terävinä Tšadin pohjoisosan '
+          + 'aavikolla. Kraatterin halkaisija on noin 17 kilometriä, ja '
+          + 'tutkijoiden mukaan sen iskun jäljet ovat säilyneet lähes '
+          + 'koskemattomina satojen miljoonien vuosien ajan, koska alueella ei '
+          + 'ole ollut juuri lainkaan eroosiota kuluttavaa kasvillisuutta tai '
+          + 'vettä. Tutkakuvaukset ovat paljastaneet hiekan alta vielä kaksi '
+          + 'samanikäistä kraatteria vierekkäin, mikä viittaa kolmen kappaleen '
+          + 'peräkkäiseen törmäykseen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'emi-koussi', nimi: 'Emi Koussi', seutu: 'Tibestin vuoret, Tšad', lat: 19.792, lon: 18.556,
+    selite: 'Saharan korkein huippu on kilpitulivuori, jonka laella on yksi '
+            + 'maailman suurimmista kalderoista.',
+    oletus: 'iss030e005456',
+    kuvat: [
+      {
+        id: 'iss030e005456',
+        teksti: 'Emi Koussin harmaanvihreä kilpitulivuori kohoaa Tšadin Tibestin '
+          + 'vuoristossa, ja oikealla näkyy vertailun vuoksi Aorounga-kraatterin '
+          + 'rengasmuodostuma samassa kuvassa. Emi Koussin huipulla on noin 12 x '
+          + '19 kilometrin kalderarakennelma, yksi laajimmista koko maailmassa. '
+          + 'Vuori kohoaa 3 415 metriin ja on samalla koko Saharan aavikon '
+          + 'korkein kohta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'meteor-crater-arizona', nimi: 'Meteorikraatteri', seutu: 'Arizona, Yhdysvallat', lat: 35.027, lon: -111.022,
+    selite: 'Ensimmäinen kraatteri, joka todistettiin tieteellisesti '
+            + 'meteoriitin iskun jäljeksi, aukeaa terävärajaisena Arizonan '
+            + 'ylängöllä.',
+    oletus: 'iss074e0208832',
+    kuvat: [
+      {
+        id: 'iss074e0208832',
+        teksti: 'Meteorikraatteri erottuu tarkkarajaisena reikänä Arizonan lumisen '
+          + 'ylängön keskellä. Kraatteri syntyi noin 50 000 vuotta sitten, kun '
+          + 'noin 50 metriä leveä rauta-nikkelimeteoriitti iski maahan. Se on '
+          + 'halkaisijaltaan noin 1,2 kilometriä, ja NASA on käyttänyt paikkaa '
+          + 'Kuu-astronauttien maastokoulutukseen sen kuumaisemaa muistuttavan '
+          + 'pinnan takia.',
+      },
+    ],
+  },
+  {
+    tunnus: 'buenos-aires-yolla', nimi: 'Buenos Aires yöllä', seutu: 'Argentiina', lat: -34.61, lon: -58.44,
+    selite: 'Argentiinan pääkaupunki levittäytyy miljoonine valoineen Río de la '
+            + 'Platan rannalle.',
+    oletus: 'iss072e519264',
+    kuvat: [
+      {
+        id: 'iss072e519264',
+        teksti: 'Buenos Airesin katuverkko piirtyy oranssina ja valkoisena yöllisessä '
+          + 'kuvassa tammikuulta 2025. Kaupungissa asuu noin 3,1 miljoonaa '
+          + 'ihmistä, mutta metropolialueella yli 15 miljoonaa – lähes kolmasosa '
+          + 'koko Argentiinan väestöstä. Río de la Plata, maailman leveimpiin '
+          + 'kuuluva jokisuisto, jää kuvan oikeaan reunaan mustana.',
+      },
+    ],
+  },
+  {
+    tunnus: 'riyadh-yolla', nimi: 'Riad yöllä', seutu: 'Saudi-Arabia', lat: 24.7136, lon: 46.6753,
+    selite: 'Aavikon keskelle noussut pääkaupunki hehkuu yöllä laajana '
+            + 'ruudukkona ilman ainoatakaan lähijokea.',
+    oletus: 'iss033e020288',
+    kuvat: [
+      {
+        id: 'iss033e020288',
+        teksti: 'Riadin katuverkko hohtaa keltaisena ja sinisenä marraskuisessa '
+          + 'yökuvassa vuodelta 2012. Kaupungin väkiluku on kasvanut '
+          + 'räjähdysmäisesti: vielä 1960 asukkaita oli noin 150 000, nykyään yli '
+          + '7 miljoonaa. Riad sijaitsee Najdin ylätasangolla, eikä sen lähellä '
+          + 'virtaa yhtään pysyvää jokea – vesi tulee suolanpoistolaitoksista ja '
+          + 'pohjavedestä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'casablanca-yolla', nimi: 'Casablanca yöllä', seutu: 'Marokko', lat: 33.5731, lon: -7.5898,
+    selite: 'Marokon suurin kaupunki ja tärkein satama loistaa Atlantin '
+            + 'rannalla.',
+    oletus: 'iss072e645691',
+    kuvat: [
+      {
+        id: 'iss072e645691',
+        teksti: 'Casablancan valot piirtävät rannikon ääriviivan tarkasti Atlantin '
+          + 'mustaa merta vasten. Kaupunki on Marokon suurin ja tärkein '
+          + 'talouskeskus, ja siellä asuu yli 3,7 miljoonaa ihmistä. Nimi '
+          + 'tarkoittaa espanjaksi \'valkoista taloa\' – portugalilaiset ja '
+          + 'espanjalaiset merenkulkijat antoivat sen valkoisiksi kalkittujen '
+          + 'rakennusten mukaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'empty-quarter', nimi: 'Tyhjä neljännes', seutu: 'Rub al-Khali, Saudi-Arabia', lat: 20, lon: 52,
+    selite: 'Maailman suurin yhtenäinen hiekkameri aaltoilee tuulen muovaamana '
+            + 'loputtomiin.',
+    oletus: 'iss027e034290',
+    kuvat: [
+      {
+        id: 'iss027e034290',
+        teksti: 'Rub al-Khalin – Tyhjän neljänneksen – dyynit muodostavat tarkan, '
+          + 'säännöllisen kuvion aavikon pinnalle. Hiekkameri on maailman suurin '
+          + 'yhtenäinen dyynialue, ja sen dyynit voivat kohota jopa 250 metrin '
+          + 'korkuisiksi. Alueen ylitti ensimmäisten eurooppalaisten joukossa '
+          + 'brittiläinen tutkimusmatkailija Bertram Thomas vuosina 1930–31.',
+      },
+    ],
+  },
+  {
+    tunnus: 'taklamakan', nimi: 'Taklamakanin autiomaa', seutu: 'Xinjiang, Kiina', lat: 39.5, lon: 76.5,
+    selite: 'Yksi maailman suurimmista liikkuvan hiekan aavikoista täyttää koko '
+            + 'Tarimin altaan Keski-Aasiassa.',
+    oletus: 'iss074e0316083',
+    kuvat: [
+      {
+        id: 'iss074e0316083',
+        teksti: 'Taklamakanin autiomaan läntinen reuna kohtaa Pamirin vuoriston '
+          + 'lumihuiput jyrkässä siirtymässä. Autiomaa on toiseksi suurin '
+          + 'liikkuvan hiekan alue maailmassa, ja sen nimen on tulkittu '
+          + 'tarkoittavan suunnilleen \'sinne menee mutta ei tule takaisin\'. '
+          + 'Muinaiset silkkitiekulkijat kiersivät koko autiomaan sen reunoja '
+          + 'pitkin sen sijaan, että olisivat yrittäneet ylittää sen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'simpson-desert', nimi: 'Simpsonin autiomaa', seutu: 'Australia', lat: -24.5, lon: 137,
+    selite: 'Satojen kilometrien pituiset punaiset hiekkaharjanteet juovittavat '
+            + 'Australian sydänmaata.',
+    oletus: 'iss005e21295',
+    kuvat: [
+      {
+        id: 'iss005e21295',
+        teksti: 'Simpsonin autiomaan oranssinpunaiset dyyniharjanteet erottuvat '
+          + 'selvästi vastikään palaneesta, sinertävän vihreästä '
+          + 'kasvillisuudesta. Dyynit ovat pitkittäisiä ja voivat jatkua satojen '
+          + 'kilometrien matkan lähes suorina linjoina. Punainen väri syntyy '
+          + 'hiekanjyvien pintaa peittävästä rautaoksidikerroksesta, joka on '
+          + 'muodostunut vuosituhansien kuluessa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'aurora-scandinavia', nimi: 'Revontulet Pohjolan yllä', seutu: 'Ruotsi ja Suomi', lat: 60, lon: 20,
+    selite: 'Vihreä revontulinauha kaartuu maapallon reunan yli Pohjoismaiden '
+            + 'kaupunkivalojen päällä.',
+    oletus: 'iss064e024089',
+    kuvat: [
+      {
+        id: 'iss064e024089',
+        teksti: 'Vihreä ja punertava revontulinauha kaartuu tähtitaivasta vasten '
+          + 'Ruotsin ja Suomen kaupunkivalojen yllä, ja niiden välissä pimeänä '
+          + 'erottuu Itämeri. Revontulet syntyvät, kun Auringosta tulevat '
+          + 'varautuneet hiukkaset törmäävät yläilmakehän kaasuihin. Vihreä väri '
+          + 'syntyy noin 100–300 kilometrin korkeudessa hehkuvasta hapesta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'manam', nimi: 'Manam', seutu: 'Papua-Uusi-Guinea', lat: -4.08, lon: 145.037,
+    selite: 'Oma saarensa muodostava tulivuori on yksi Papua-Uusi-Guinean '
+            + 'aktiivisimmista.',
+    oletus: 'sts093-709-051',
+    kuvat: [
+      {
+        id: 'sts093-709-051',
+        teksti: 'Manam-saaren pyöreä tulivuori työntää tuhkapilveä pitkälle '
+          + 'Bismarckinmerelle. Vuori muodostaa kokonaan oman, halkaisijaltaan '
+          + 'noin 10 kilometrin saarensa Papua-Uuden-Guinean koillisrannikon '
+          + 'edustalla. Vuoden 2004 suuri purkaus pakotti evakuoimaan koko saaren '
+          + 'noin 9 000 asukasta mantereelle.',
+      },
+    ],
+  },
+  {
+    tunnus: 'karymsky', nimi: 'Karymski', seutu: 'Kamtšatka, Venäjä', lat: 54.049, lon: 159.443,
+    selite: 'Kamtšatkan aktiivisin tulivuori purkautuu lähes jatkuvasti vanhan '
+            + 'kalderajärven kupeessa.',
+    oletus: 'iss033e019822',
+    kuvat: [
+      {
+        id: 'iss033e019822',
+        teksti: 'Karymskin tulivuoren tumma tuhkapilvi kohoaa lumisen rinteen yllä, '
+          + 'ja vieressä siintää pyöreä kalderajärvi. Vuori on yksi Kamtšatkan '
+          + 'aktiivisimmista, ja se on purkautunut lähes yhtäjaksoisesti vuodesta '
+          + '1996 lähtien. Vuori sijaitsee vanhemman, suuremman kalderan sisällä, '
+          + 'joka syntyi noin 7 600 vuotta sitten.',
+      },
+    ],
+  },
+  {
+    tunnus: 'tarawa', nimi: 'Tarawan atollit', seutu: 'Kiribati', lat: 1.5, lon: 173,
+    selite: 'Matalat koralliatollit Tyynellämerellä ovat sekä Kiribatin sydän '
+            + 'että ilmastonmuutoksen etulinja.',
+    oletus: 'iss053e180184',
+    kuvat: [
+      {
+        id: 'iss053e180184',
+        teksti: 'Abaiangin, Tarawan ja Maianan atollit kuvattuna marraskuussa 2017 '
+          + 'muodostavat vihreänsinisen ketjun keskelle Tyyntämerta. Yhdessä ne '
+          + 'ovat osa Kiribatin 33 koralliatollin ja saaren joukkoa. Tarawa oli '
+          + 'näyttämönä toisen maailmansodan verisimpiin taisteluihin kuuluneelle '
+          + 'Tarawan taistelulle marraskuussa 1943.',
+      },
+    ],
+  },
+  {
+    tunnus: 'wake-island', nimi: 'Waken saari', seutu: 'Tyynimeri, Yhdysvallat', lat: 19.28, lon: 166.65,
+    selite: 'Yksinäinen koralliatolli keskellä Tyyntämerta toimi '
+            + 'lentotukikohtana jo ennen toista maailmansotaa.',
+    oletus: 'iss033e007873',
+    kuvat: [
+      {
+        id: 'iss033e007873',
+        teksti: 'Waken atollin vaaleanturkoosi laguuni erottuu selvästi tummansinistä '
+          + 'valtamerta vasten. Atollin muodostavat kolme pientä saarta noin 4 '
+          + '000 kilometrin päässä Havaijista. Japani valtasi Waken joulukuussa '
+          + '1941 lyhyen mutta ankaran taistelun jälkeen, ja saari pysyi '
+          + 'japanilaismiehityksessä koko sodan ajan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bassac-vietnam', nimi: 'Bassac-joen suisto', seutu: 'Vietnam', lat: 9.55, lon: 106.23,
+    selite: 'Mekongin toiseksi suurin haara jakautuu hedelmätarhojen ja '
+            + 'mangrovemetsien ympäröimäksi jokisaareksi ennen Etelä-Kiinan '
+            + 'merta.',
+    oletus: 'iss073e0818427',
+    kuvat: [
+      {
+        id: 'iss073e0818427',
+        teksti: 'Bassac-joki – Mekongin yksi yhdeksästä \'lohikäärmehaarasta\' – '
+          + 'kiertää Cù Lao Dungin jokisaarta ruskeana ja sedimenttipitoisena '
+          + 'juuri ennen laskuaan mereen. Vasemmalla näkyy tummempaa maata ja '
+          + 'oikealla vihreämpää viljelysmaata ja hedelmätarhoja. Sameus syntyy '
+          + 'Mekongin koko valuma-alueelta kertyneestä liejusta, jota vuorovesi '
+          + 'sekoittaa edelleen suulla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kenya-rift', nimi: 'Kenian riftilaakso', seutu: 'Kenia', lat: -1.87, lon: 36.28,
+    selite: 'Itä-Afrikan hautavajoama repii mannerta kahtia ja jättää jälkeensä '
+            + 'värikkäitä soodajärviä.',
+    oletus: 'iss030e035487',
+    kuvat: [
+      {
+        id: 'iss030e035487',
+        teksti: 'Kenian riftilaakson rinnakkaiset murroslinjat viiruttavat maastoa '
+          + 'vinosti kuvan poikki, ja keskellä hohtaa vaaleanpunertava '
+          + 'soodajärvi. Laakso on osa Itä-Afrikan hautavajoamaa, joka syntyy, '
+          + 'kun Afrikan ja Somalian mannerlaatat vetäytyvät hitaasti erilleen. '
+          + 'Miljoonien vuosien kuluessa liike voi lopulta halkaista Afrikan ja '
+          + 'synnyttää alueelle uuden valtameren.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sahara-dust-western', nimi: 'Länsi-Saharan pölymyrsky', seutu: 'Länsi-Sahara', lat: 24, lon: -13.5,
+    selite: 'Saharasta nouseva pölypilvi peittää rannikon ja kulkeutuu edelleen '
+            + 'Atlantin ylle.',
+    oletus: 'iss007e08259',
+    kuvat: [
+      {
+        id: 'iss007e08259',
+        teksti: 'Vaaleanruskea pölypilvi peittää Länsi-Saharan rannikon ja leviää '
+          + 'pilvien lomasta kohti Atlantin valtamerta ja Kanariansaaria. Sahara '
+          + 'nostaa ilmakehään valtavia määriä hienoa pölyä, joka voi kulkeutua '
+          + 'tuhansien kilometrien päähän saakka Amazonin sademetsään asti. Pöly '
+          + 'tuo mukanaan fosforia, joka lannoittaa sademetsän köyhää maaperää.',
+      },
+    ],
+  },
+  {
+    tunnus: 'baghdad-yolla', nimi: 'Bagdad yöllä', seutu: 'Irak', lat: 33.3152, lon: 44.3661,
+    selite: 'Tigris-joen mutka kiemurtelee kirkkaana miljoonakaupungin '
+            + 'valomeren keskellä.',
+    oletus: 'iss073e0515117',
+    kuvat: [
+      {
+        id: 'iss073e0515117',
+        teksti: 'Bagdadin valot piirtävät kaupungin ääriviivat, ja niiden keskeltä '
+          + 'erottuu Tigris-joen tumma S-mutka. Bagdad perustettiin vuonna 762 '
+          + 'Abbasidien kalifikunnan pääkaupungiksi, ja siitä tuli pian yksi '
+          + 'keskiajan maailman suurimmista ja oppineimmista kaupungeista. '
+          + 'Nykyään Bagdadissa asuu yli seitsemän miljoonaa ihmistä, ja se on '
+          + 'edelleen Irakin pääkaupunki.',
+      },
+    ],
+  },
+  {
+    tunnus: 'malaspina', nimi: 'Malaspina', seutu: 'Alaska, Yhdysvallat', lat: 59.87, lon: -140.5,
+    selite: 'Maailman suurin niin sanottu jalustajäätikkö, joka levittäytyy '
+            + 'vuorten juurelta leveäksi jäälakeudeksi rannikolle.',
+    oletus: 'STS066-117-014',
+    kuvat: [
+      {
+        id: 'STS066-117-014',
+        teksti: 'Jäätikön pinnalla kiemurtelee tummia raitoja: ne ovat moreeneja, '
+          + 'kivi- ja soravöitä, jotka syntyvät kun useampi vuoristojäätikkö '
+          + 'yhtyy samaksi jäälevyksi rannikkotasangolla. Malaspina on niin '
+          + 'laaja, että se peittäisi kokonaisen pienen osavaltion. Kuva otettiin '
+          + 'sukkula Atlantiksen STS-66-lennolta marraskuussa 1994.',
+      },
+    ],
+  },
+  {
+    tunnus: 'makgadikgadin-altaat', nimi: 'Makgadikgadin suola-altaat', seutu: 'Botswana', lat: -20.6, lon: 26.08,
+    selite: 'Yksi maailman suurimmista suolatasangoista, jonka reunalla '
+            + 'altaissa haihdutetaan soodaa ja suolaa punaisten suolarakkojen '
+            + 'värjäämästä suolavedestä.',
+    oletus: 'iss014e15732',
+    kuvat: [
+      {
+        id: 'iss014e15732',
+        teksti: 'Geometriset haihdutusaltaat reunustavat Makgadikgadin suolatasankoa: '
+          + 'tummanpunaiset lammikot ovat suolaa rakastavien levien värjäämiä, ja '
+          + 'niiden reunoille on kiteytynyt valkoista soodaa ja suolaa. Suolavesi '
+          + 'pumpataan pinnan alta ja haihdutetaan alueen aurinkoisessa '
+          + 'ilmastossa. Tuotanto on jatkunut samalla paikalla vuodesta 1991 '
+          + 'lähtien.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kaukasusvuoret', nimi: 'Kaukasusvuoret', seutu: 'Azerbaidžan ja Venäjä', lat: 41.05, lon: 47,
+    selite: 'Euroopan ja Aasian rajalla kohoava lumihuippuinen vuorijono, jonka '
+            + 'juurella lepää Kaukasuksen suurin tekojärvi.',
+    oletus: 'iss071e041651',
+    kuvat: [
+      {
+        id: 'iss071e041651',
+        teksti: 'Lumipeitteiset Kaukasuksen huiput kohoavat Azerbaidžanin ja Venäjän '
+          + 'rajaseudulla, ja kuvan yläreunassa kimaltaa Mingečaurin tekojärvi. '
+          + 'Se on Kaukasuksen suurin allas, ja sitä käytetään kalastukseen, '
+          + 'juomaveden hankintaan ja peltojen kasteluun. Kuva otettiin '
+          + 'huhtikuussa 2024 avaruusaseman kiertäessä noin 415 kilometrin '
+          + 'korkeudessa.',
+      },
+      {
+        id: 'iss023e035670',
+        teksti: 'Sama tekojärvi lähempää, neljätoista vuotta aiemmin kuvattuna. '
+          + 'Mingečaurin allas täyttää Kuran laakson syvennystä Suur- ja '
+          + 'Vähä-Kaukasuksen välissä, ja sen rannat on jaettu selkeisiin, '
+          + 'suorakulmaisiin viljelylohkoihin.',
+      },
+    ],
+  },
+  {
+    tunnus: 'guadalupen-pyorteet', nimi: 'Guadalupen saaren pyörteet', seutu: 'Tyynimeri, Meksiko', lat: 29.03, lon: -118.27,
+    selite: 'Tulivuorisaari, jonka jyrkkä huippu pysäyttää matalan '
+            + 'pilvikerroksen virtauksen ja synnyttää toistuvasti näyttäviä '
+            + 'pilvipyörteiden ketjuja.',
+    oletus: 'iss036e035663',
+    kuvat: [
+      {
+        id: 'iss036e035663',
+        teksti: 'Guadalupen saaren korkea, tulivuorinen selänne katkaisee tasaisen '
+          + 'pilvikerroksen virtauksen, ja saaren tuulen alle syntyy pyörteiden '
+          + 'ketju eli von Kármánin pyörrekatu. Ilmiö on nimetty Theodore von '
+          + 'Kármánin mukaan, joka kuvasi sen ensimmäisenä ja oli myöhemmin '
+          + 'perustamassa NASAn JPL-tutkimuskeskusta. Pyörteiden sarja jatkuu '
+          + 'satoja kilometrejä saaren taakse.',
+      },
+      {
+        id: 'iss040e016570',
+        teksti: 'Sama saari lähes suoraan ylhäältä kuvattuna vajaan vuoden kuluttua. '
+          + 'Pyörteet ovat nyt kiertyneet tiukemmiksi spiraaleiksi; niiden tarkka '
+          + 'muoto riippuu kulloisestakin tuulen nopeudesta ja pilvikerroksen '
+          + 'paksuudesta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kanariansaarten-pyorteet', nimi: 'Kanariansaarten pyörteet', seutu: 'Atlantti, Espanja', lat: 28.3, lon: -16.5,
+    selite: 'Saariketju, jonka tulivuorihuiput pysäyttävät passaatituulen '
+            + 'alapilvet ja synnyttävät toistuvia pyörrekatuja valtamerelle.',
+    oletus: 's40-75-003',
+    kuvat: [
+      {
+        id: 's40-75-003',
+        teksti: 'Yksi Kanariansaarista lepää matalan pilvikerroksen keskellä kuin '
+          + 'reikä valkoisessa peitteessä, ja sen taakse kiertyy peräkkäisiä '
+          + 'pyörteitä. Passaattituulten yllä oleva lämmin ilmakerros lukitsee '
+          + 'pilvet matalalle, jolloin saaren jyrkkä huippu muokkaa virtausta '
+          + 'selvästi näkyväksi kuvioksi. Kuva otettiin sukkula Columbian '
+          + 'STS-40-lennolla kesäkuussa 1991.',
+      },
+    ],
+  },
+  {
+    tunnus: 'zagrosvuoret', nimi: 'Zagrosvuoret', seutu: 'Iran', lat: 33.5, lon: 46.7,
+    selite: 'Iranin ylängön reunalla kohoava poimuvuoristo, jonka rinteet '
+            + 'piirtyvät avaruudesta kuin sormenjäljet.',
+    oletus: 'iss074e0315889',
+    kuvat: [
+      {
+        id: 'iss074e0315889',
+        teksti: 'Kalliokerrokset ovat taittuneet mannerlaattojen puristuksessa '
+          + 'pitkiksi, yhdensuuntaisiksi harjanteiksi. Kuvan yläreunassa '
+          + 'harjanteiden laet kohoavat lumirajan yläpuolelle. Poimut ovat '
+          + 'syntyneet, kun Arabian laatta on työntynyt hitaasti Euraasian '
+          + 'laattaa vasten miljoonien vuosien ajan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'lasvegas-yolla', nimi: 'Las Vegas yöllä', seutu: 'Nevada, Yhdysvallat', lat: 36.17, lon: -115.14,
+    selite: 'Aavikkokaupunki, jonka suorakulmainen katuverkko ja kirkkaasti '
+            + 'valaistu Strip erottuvat yöllä selvästi ympäröivästä pimeästä '
+            + 'autiomaasta.',
+    oletus: 'iss026e006255',
+    kuvat: [
+      {
+        id: 'iss026e006255',
+        teksti: 'Las Vegasin kaupunkialue täyttää laakson Mojaven aavikon keskellä, '
+          + 'ja kadut piirtävät säännöllisen ruudukon. Kirkkain, valkoinen '
+          + 'valokimppu keskellä kuvaa on kuuluisa Strip, jonka kasinot ja '
+          + 'hotellit ovat auki ympäri vuorokauden. Kaupungin ympärillä alkaa '
+          + 'heti asumaton, pimeä aavikko.',
+      },
+    ],
+  },
+  {
+    tunnus: 'iberia-yolla', nimi: 'Iberian niemimaa yöllä', seutu: 'Espanja ja Portugali', lat: 40, lon: -4.5,
+    selite: 'Koko niemimaa yöllä: kaksi pääkaupunkia erottuu kirkkaimpina '
+            + 'pisteinä valoverkon keskellä.',
+    oletus: 'iss030e010008',
+    kuvat: [
+      {
+        id: 'iss030e010008',
+        teksti: 'Espanjan ja Portugalin rannikot ja kaupungit piirtyvät oranssina '
+          + 'valoverkkona. Madrid hehkuu kirkkaana pisteenä niemimaan keskellä, '
+          + 'ja Lissabon loistaa rannikolla oikealla. Ilmakehän vihertävä hehku '
+          + 'erottuu selvästi horisontin yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'labradorin-jaameri', nimi: 'Labradorin merijää', seutu: 'Kanada', lat: 54, lon: -57,
+    selite: 'Kylmä Labradorin virta kuljettaa merijäätä ja jäävuoria etelään, '
+            + 'ja jään reunalla näkyvät virtausten piirtämät pyörteet.',
+    oletus: 'iss070e086805',
+    kuvat: [
+      {
+        id: 'iss070e086805',
+        teksti: 'Merijää ajelehtii Labradorin rannikolla virtausten mukana, ja jään '
+          + 'reuna piirtää näkyviin pyörteitä ja raitoja. Kuvan otti astronautti '
+          + 'Loral O\'Hara käsikamerallaan helmikuussa 2024. Saman talven aikana '
+          + 'Arktiksen merijää kasvoi tutkijoiden mukaan tavallista hitaammin.',
+      },
+    ],
+  },
+  {
+    tunnus: 'lake-sharpe', nimi: 'Lake Sharpe ja kastelurenkaat', seutu: 'Etelä-Dakota, Yhdysvallat', lat: 44.07, lon: -99.57,
+    selite: 'Missourijoen entinen mutka padottiin tekojärveksi, ja sen '
+            + 'niemekkeelle piirtyy pyöreiden keskipistekastelukoneiden kuvio.',
+    oletus: 'iss038e023651',
+    kuvat: [
+      {
+        id: 'iss038e023651',
+        teksti: 'Missourijoen entinen mutka on nyt Lake Sharpe -tekojärven lahti, ja '
+          + 'sen sisäkaarteeseen jäänyt niemeke on täynnä pyöreitä '
+          + 'keskipistekastelun kenttiä. Missourijoki on Pohjois-Amerikan pisin '
+          + 'joki, ja sen alajuoksua on padottu useaan otteeseen 1900-luvulla. '
+          + 'Kuva otettiin joulukuussa 2013, ennen talven lumia.',
+      },
+    ],
+  },
+  {
+    tunnus: 'new-orleans-mutka', nimi: 'New Orleans ja joen mutka', seutu: 'Louisiana, Yhdysvallat', lat: 29.95, lon: -90.07,
+    selite: 'Mississippijoki kiemurtelee kaupungin läpi niin jyrkästi, että New '
+            + 'Orleansia kutsutaan Puolikuun kaupungiksi.',
+    oletus: 'iss039e001640',
+    kuvat: [
+      {
+        id: 'iss039e001640',
+        teksti: 'Mississippijoen ruskea vesi kiertää New Orleansin keskustan läpi '
+          + 'kahdessa jyrkässä mutkassa. Oikeassa alakulmassa Pontchartrain-järvi '
+          + 'kimaltaa auringon heijastuksessa. Kuva on otettu 400 millimetrin '
+          + 'polttovälillä maaliskuussa 2014.',
+      },
+    ],
+  },
+  {
+    tunnus: 'rio-negro-mutkat', nimi: 'Río Negron mutkat', seutu: 'Patagonia, Argentiina', lat: -40.5, lon: -63.5,
+    selite: 'Yksi Etelä-Amerikan mutkittelevimmista joista kiemurtelee '
+            + 'Patagonian tasangon poikki lukemattomina hylättyinä lenkkeinä.',
+    oletus: 'iss022e019513',
+    kuvat: [
+      {
+        id: 'iss022e019513',
+        teksti: 'Río Negron nykyinen uoma ja lukuisat entiset jokilenkit erottuvat '
+          + 'tummina käyrinä kuivalla tasangolla. Yksi hylätyistä lenkeistä '
+          + 'hohtaa oranssina, todennäköisesti kuivuneen kasvillisuuden '
+          + 'värjäämänä. Joki tunnetaan astronauttien keskuudessa juuri '
+          + 'poikkeuksellisen mutkittelevasta uomastaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ebron-suisto', nimi: 'Ebron suisto', seutu: 'Espanja', lat: 40.72, lon: 0.72,
+    selite: 'Riisiviljelysten pilkkoma suisto, jossa joen makea vesi ja '
+            + 'Välimeren suolainen vesi kohtaavat.',
+    oletus: 'iss009e09985',
+    kuvat: [
+      {
+        id: 'iss009e09985',
+        teksti: 'Ebro-joki laskee Välimereen kolmiomaisena suistona, jonka pintaa '
+          + 'peittävät geometriset riisipellot. Kuva on otettu auringon '
+          + 'kimmellyksessä, joka paljastaa joen makean veden rajapinnan '
+          + 'suolaisempaa merta vasten. Yläjuoksun padot ovat vähentäneet '
+          + 'suistoon päätyvän veden ja kiintoaineksen määrää.',
+      },
+    ],
+  },
+  {
+    tunnus: 'selengan-suisto', nimi: 'Selengajoen suisto', seutu: 'Burjatia, Venäjä', lat: 52.16, lon: 106.5,
+    selite: 'Baikal-järven suurimman sivujoen suisto, joka suodattaa vettä '
+            + 'ennen kuin se päätyy järveen.',
+    oletus: 'iss029e037915',
+    kuvat: [
+      {
+        id: 'iss029e037915',
+        teksti: 'Selengajoki haarautuu lukemattomiksi kanaviksi ja koukeroisiksi '
+          + 'harjanteiksi ennen laskuaan Baikal-järveen. Tuore lumi korostaa '
+          + 'suiston lohkomaista, viuhkamaista muotoa. Suiston laajuus ja muoto '
+          + 'riippuvat siitä, kuinka paljon kiintoainesta joki kuljettaa '
+          + 'mukanaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'texasin-kastelurenkaat', nimi: 'Länsi-Texasin kastelurenkaat', seutu: 'Texas, Yhdysvallat', lat: 32, lon: -102.1,
+    selite: 'Permin altaan öljynporausalue ja pyöreät kastelupellot limittyvät '
+            + 'samalle kuivalle tasangolle.',
+    oletus: 'iss074e0603632',
+    kuvat: [
+      {
+        id: 'iss074e0603632',
+        teksti: 'Satoja pyöreitä keskipistekastelun kenttiä peittää Länsi-Texasin '
+          + 'tasankoa, ja niiden joukossa erottuu öljynporauslaitteita ja teitä '
+          + 'vaaleina pilkkuina. Alue lepää Permin altaan päällä, joka on yksi '
+          + 'maailman tuottavimmista öljyesiintymistä. Kastelu tekee viljelyn '
+          + 'mahdolliseksi muuten kuivalla aavikkoalueella.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ningaloo-riutta', nimi: 'Ningaloo-riutta', seutu: 'Länsi-Australia', lat: -22.7, lon: 113.85,
+    selite: 'Mantereen laidalle kasvanut reunariutta erottaa turkoosin '
+            + 'matalikon syvästä valtamerestä pitkän niemen länsipuolella.',
+    oletus: 'sts067-722a-053',
+    kuvat: [
+      {
+        id: 'sts067-722a-053',
+        teksti: 'Ningaloo-riutta kulkee ohuena turkoosina reunuksena Luoteisniemen '
+          + 'länsirannalla aivan mantereen laidassa. Niemen itäpuolella avautuu '
+          + 'Exmouth-lahti, jonka sameaan veteen hurrikaani Bobbyn tulvat olivat '
+          + 'huuhtoneet punaista mutaa viikkoa aiemmin. Riutta on yksi harvoista '
+          + 'suurista koralliriutoista, jotka kasvavat kiinni mantereeseen '
+          + 'kaukana avomerellä sijaitsevien riuttojen sijaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'niagara', nimi: 'Niagaranputous', seutu: 'New York, Yhdysvallat ja Ontario, Kanada', lat: 43.08, lon: -79.07,
+    selite: 'Niagaranjoki ja sen kuuluisa putous muodostavat luonnollisen rajan '
+            + 'Yhdysvaltojen ja Kanadan välille.',
+    oletus: 'iss010e17563',
+    kuvat: [
+      {
+        id: 'iss010e17563',
+        teksti: 'Talvinen näkymä Niagaranjoelta helmikuussa 2005: joki mutkittelee '
+          + 'lumisen maiseman halki ja erottaa Yhdysvallat ja Kanadan toisistaan. '
+          + 'Kuvan alaosassa erottuu jokiuoman jyrkkä silmukka, Niagaran pyörre, '
+          + 'joka syntyi kun putous on vuosituhansien aikana kaivautunut '
+          + 'taaksepäin kalliopohjaan. Itse putous jää kuvassa lumipeitteisen '
+          + 'maiseman keskelle, mutta sen tekemä jälki näkyy koko jokilaaksossa.',
+      },
+      {
+        id: 'iss015e05624',
+        teksti: 'Sama alue huhtikuussa 2007, kun Erie-järven talvijää on juuri '
+          + 'sulanut ja lähtenyt liikkeelle Niagaranjokea pitkin. Vaalea, '
+          + 'jäänmurskaa täynnä oleva joki erottuu selvästi jo sulaneesta, '
+          + 'tummasta vedestä. Erie-järven suulle asennettu jääpuomi pidättelee '
+          + 'jäätä joka talvi, jotta se ei tukkisi voimalaitosten vedenottoa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'gronlannin-vuonot', nimi: 'Grönlannin vuonot', seutu: 'Lounais-Grönlanti, Tanska', lat: 60.72, lon: -46.03,
+    selite: 'Grönlannin lounaisrannikko on satojen jääkauden veistämien '
+            + 'vuonojen pirstoma, ja saaren sisäosaa peittää kilometrien '
+            + 'paksuinen mannerjää.',
+    oletus: 'sts066-114-031',
+    kuvat: [
+      {
+        id: 'sts066-114-031',
+        teksti: 'Marraskuussa 1994 otettu kuva näyttää Grönlannin lounaisrannikon '
+          + 'vuonoverkoston lähellä Kap Farvelia ja Julianehåbin lahtea. Rannikon '
+          + 'terävät niemet ja syvät lahdet erottuvat selvästi sisämaan '
+          + 'tasaisesta, valkoisesta jäätikköylängöstä. Grönlannin mannerjää on '
+          + 'paksuimmillaan lähes 3,5 kilometriä, ja sen reunoilta valuu '
+          + 'jäätikkövirtoja, jotka murtuvat mereen jäävuoriksi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'manaus', nimi: 'Vetten kohtaaminen Manausissa', seutu: 'Amazonas, Brasilia', lat: -3.1, lon: -59.99,
+    selite: 'Manausin kaupungin kohdalla tumma Rio Negro ja samea Solimões-joki '
+            + 'yhtyvät muodostaen Amazon-joen, mutta niiden vedet sekoittuvat '
+            + 'toisiinsa vasta kilometrien päässä.',
+    oletus: 'iss009e15488',
+    kuvat: [
+      {
+        id: 'iss009e15488',
+        teksti: 'Heinäkuussa 2004 otettu kuva näyttää, miten Solimõesin '
+          + 'vaaleanruskea, sedimenttipitoinen vesi virtaa kaupungin ohi kuvan '
+          + 'alalaitaa kohti, kun taas Rio Negron tummempi vesi tulee oikealta. '
+          + 'Manausin kaupunki erottuu keskellä terävänä, ruutukaavamaisena '
+          + 'alueena jokikielekkeen kärjessä. Vedet eivät sekoitu heti, koska '
+          + 'niiden lämpötila, virtausnopeus ja tiheys eroavat toisistaan – ilmiö '
+          + 'jatkuu jokien yhtymäkohdasta kymmenien kilometrien päähän.',
+      },
+    ],
+  },
+  {
+    tunnus: 'cosiguina', nimi: 'Cosigüinan tulivuori', seutu: 'Nicaragua', lat: 12.98, lon: -87.58,
+    selite: 'Cosigüinan tulivuoren huippua peittää kraatterijärvi niemellä, '
+            + 'joka sulkee Fonsecanlahden suuta Tyynenmeren rannikolla '
+            + 'Nicaraguassa.',
+    oletus: 'iss016e010894',
+    kuvat: [
+      {
+        id: 'iss016e010894',
+        teksti: 'Marraskuussa 2007 otettu kuva näyttää Cosigüinan tulivuoren pyöreän '
+          + 'tunturin ja sen huipulla lepäävän kraatterijärven, Laguna '
+          + 'Cosigüinan. Vuoren juurella erottuu Fonsecanlahden sameaa vettä, '
+          + 'joka virtaa jokisuistosta Tyynellemerelle. Vuori purkautui viimeksi '
+          + 'vuonna 1859, mutta sen vuoden 1835 purkaus oli Keski-Amerikan '
+          + 'historian suurin: tuhkaa levisi aina Meksikoon ja Jamaikalle asti.',
+      },
+    ],
+  },
+  {
+    tunnus: 'jamesinlahti-harjanteet', nimi: 'Jamesinlahden rantaharjanteet', seutu: 'Ontario ja Québec, Kanada', lat: 51.05, lon: -80,
+    selite: 'Jamesinlahden etelärannalla maankamara nousee yhä, koska jääkauden '
+            + 'mannerjää painoi sitä alas tuhansien vuosien ajan.',
+    oletus: 'STS099-706-090',
+    kuvat: [
+      {
+        id: 'STS099-706-090',
+        teksti: 'Helmikuussa 2000 kuvattu Hannah Bay Jamesinlahden eteläosassa '
+          + 'näyttää kymmeniä toisiaan seuraavia vaaleita harjanteita, jotka ovat '
+          + 'entisiä rantaviivoja. Kun mannerjää suli viimeisen jääkauden '
+          + 'jälkeen, maa alkoi hitaasti kohota ja meri perääntyi, jättäen '
+          + 'jälkeensä nämä 100–200 metriä leveät muinaiset rantavallit. Ilmiö '
+          + 'jatkuu yhä: Hudsoninlahden ja Jamesinlahden ranta-alueet ovat yksi '
+          + 'maapallon nopeimmin kohoavista alueista.',
+      },
+    ],
+  },
+  {
+    tunnus: 'krimin-lagunit', nimi: 'Krimin värilliset lagunit', seutu: 'Krimin niemimaa', lat: 45.35, lon: 36.3,
+    selite: 'Krimin niemimaan matalat rannikkolagunit hehkuvat turkoosina, '
+            + 'punaisena ja violettina, koska niiden suola- ja levämäärä '
+            + 'vaihtelee lammikoittain.',
+    oletus: 'iss056e032828',
+    kuvat: [
+      {
+        id: 'iss056e032828',
+        teksti: 'Kesäkuussa 2018 otettu kuva näyttää sarjan pieniä rannikkolaguuneja '
+          + 'Krimillä, Atsovanmeren ja Mustanmeren välissä. Jokainen allas hohtaa '
+          + 'omaa väriään – turkoosia, vaaleanpunaista, viininpunaista – koska '
+          + 'veden suolapitoisuus, syvyys ja mikrolevien määrä poikkeavat '
+          + 'toisistaan lammikosta toiseen. Krim on kansainvälisesti tunnustettu '
+          + 'osaksi Ukrainaa, mutta Venäjä on hallinnoinut aluetta vuodesta 2014 '
+          + 'lähtien.',
+      },
+    ],
+  },
+  {
+    tunnus: 'valakian-tasanko', nimi: 'Valakian tasanko yöllä', seutu: 'Romania', lat: 45.3, lon: 25.3,
+    selite: 'Yöllä otetussa kuvassa Karpaateilta Valakian tasangolle laskevat '
+            + 'joet erottuvat siitä, miten asutuksen valot seuraavat '
+            + 'jokilaaksoja.',
+    oletus: 'iss074e0149572',
+    kuvat: [
+      {
+        id: 'iss074e0149572',
+        teksti: 'Tammikuussa 2026 otettu yökuva näyttää, kuinka kylien ja kaupunkien '
+          + 'valot haarautuvat puumaiseksi kuvioksi seuraten jokilaaksoja, jotka '
+          + 'virtaavat Karpaateilta Romanian Valakian tasangon hedelmällisille '
+          + 'alangoille. Tummat, valottomat alueet kuvion välissä ovat vuorten '
+          + 'metsäisiä, harvaan asuttuja rinteitä. Valakia on Romanian '
+          + 'väkirikkain alue, ja sen eteläosassa sijaitsee myös pääkaupunki '
+          + 'Bukarest.',
+      },
+    ],
+  },
+  {
+    tunnus: 'montreal', nimi: 'Montréal', seutu: 'Québec, Kanada', lat: 45.5, lon: -73.57,
+    selite: 'Montréal on rakennettu saarelle, jonka kärjessä Ottawa-joki yhtyy '
+            + 'Saint Lawrence -jokeen.',
+    oletus: 'sts060-94-072',
+    kuvat: [
+      {
+        id: 'sts060-94-072',
+        teksti: 'Helmikuussa 1994 kuvattu lumipeitteinen Montréal näkyy '
+          + 'tarkkarajaisena saarena, jonka pääväylät ja katuverkko erottuvat '
+          + 'valkoista lunta vasten. Kaupungin keskellä kohoava Mont Royal '
+          + '-puisto erottuu tummana, metsäisenä kukkulana keskustan yllä. '
+          + 'Montréal on Kanadan toiseksi suurin kaupunki ja maailman toiseksi '
+          + 'suurin ranskankielinen kaupunki Pariisin jälkeen, vaikka se '
+          + 'sijaitsee lähes 1 600 kilometrin päässä merestä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'englanninkanaali-yolla', nimi: 'Englannin kanaali yöllä', seutu: 'Iso-Britannia, Ranska, Belgia ja Alankomaat', lat: 51.2, lon: 2,
+    selite: 'Englannin kanaalin molemmin puolin syttyvät Lontoon, Amsterdamin, '
+            + 'Brysselin ja niiden naapurikaupunkien valot yhdeksi Euroopan '
+            + 'tiheimmin asutuksi yövyöhykkeeksi.',
+    oletus: 'iss058e005276',
+    kuvat: [
+      {
+        id: 'iss058e005276',
+        teksti: 'Tammikuussa 2019 otettu yökuva näyttää Englannin kanaalin molemmin '
+          + 'puolin loistavat kaupungit: oikealla Lontoo, vasemmalla myötäpäivään '
+          + 'Amsterdam, Haag, Rotterdam, Antwerpen ja Bryssel. Itse kanaali '
+          + 'erottuu kuvan keskellä täysin pimeänä vyönä, koska merellä ei ole '
+          + 'maakohteiden valoja. Kanaalin ali kulkee Eurotunneli, ja sen vedet '
+          + 'ovat yksi maailman vilkkaimmin liikennöidyistä merireiteistä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'tanska', nimi: 'Tanskan saaristo', seutu: 'Tanska', lat: 55.5, lon: 9.8,
+    selite: 'Tanska koostuu Jyllannin niemimaasta ja yli 400 saaresta, jotka '
+            + 'pistävät esiin meren sinestä kuin palapelin palat.',
+    oletus: 'iss039e017228',
+    kuvat: [
+      {
+        id: 'iss039e017228',
+        teksti: 'Kuvassa näkyy Tanskan keskiosa: vasemmalla Jyllannin niemimaan '
+          + 'itärannikko, keskellä pyöreähkö Fynin saari ja oikealla saaristo, '
+          + 'joka jatkuu kohti Sjællantia. Kesäinen kuva näyttää maan '
+          + 'poikkeuksellisen tasaisena ja vihreänä, sillä Tanskassa ei ole '
+          + 'yhtään yli 200 metrin korkeuteen nousevaa kukkulaa. Maan yli 400 '
+          + 'saaresta noin 70 on asuttuja, ja monet niistä on yhdistetty '
+          + 'toisiinsa silloilla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'geneven-jarvi', nimi: 'Geneven järvi', seutu: 'Sveitsi ja Ranska', lat: 46.45, lon: 6.5,
+    selite: 'Geneven järven puolikuun muotoinen allas lepää Alppien juurella '
+            + 'Sveitsin ja Ranskan rajalla.',
+    oletus: 'sts068-243-076',
+    kuvat: [
+      {
+        id: 'sts068-243-076',
+        teksti: 'Syyskuussa 1994 otettu kuva näyttää Geneven järven sinisenä '
+          + 'puolikuuna Alppien lumihuippujen keskellä. Järveä ruokkii '
+          + 'Rhône-joki, joka syntyy alppijäätiköiltä ja virtaa järven läpi '
+          + 'matkallaan kohti Välimerta. Järvi on tilavuudeltaan Länsi-Euroopan '
+          + 'suurin, ja Ranskan ja Sveitsin raja kulkee sitä pitkin lähes '
+          + 'keskeltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'pico', nimi: 'Pico-tulivuori', seutu: 'Azorit, Portugali', lat: 38.47, lon: -28.4,
+    selite: 'Portugalin korkein vuori, Pico, on jyrkkäpiirteinen tulivuori '
+            + 'keskellä Atlantin valtamerta Azoreilla.',
+    oletus: 'iss036e009390',
+    kuvat: [
+      {
+        id: 'iss036e009390',
+        teksti: 'Kesäkuussa 2013 otettu pystykuva näyttää Pico-saaren pitkänomaisena '
+          + 'vihreänä muotona Atlantilla; saaren itäpäässä kohoaa 2 351 metriä '
+          + 'korkea Pico-tulivuori huippukraattereineen. Vuori on koko Portugalin '
+          + 'korkein kohta, vaikka se sijaitsee tuhansien kilometrien päässä '
+          + 'Euroopan mantereesta. Saaren länsiosan viinitarhat kasvavat mustan '
+          + 'laavakiven ruutujen suojissa, ja perinne on nykyään Unescon '
+          + 'maailmanperintökohde.',
+      },
+    ],
+  },
+  {
+    tunnus: 'prinssiedwardinsaari', nimi: 'Prinssi Edwardin saari', seutu: 'Saint Lawrencenlahti, Kanada', lat: 46.51, lon: -63.42,
+    selite: 'Kanadan pienin provinssi on punamultainen, sirppimäinen saari '
+            + 'Saint Lawrencenlahdella.',
+    oletus: 'iss067e035819',
+    kuvat: [
+      {
+        id: 'iss067e035819',
+        teksti: 'Toukokuussa 2022 otettu kuva auringon kimallellessa merestä näyttää '
+          + 'Prinssi Edwardin saaren tumman sirpin Saint Lawrencenlahdella, '
+          + 'Uuden-Brunswickin ja Uuden-Skotlannin välissä. Kirkas heijastus '
+          + 'meren pinnalla korostaa rannikon muotoja tavallista tarkemmin. Saari '
+          + 'on Kanadan pienin provinssi, ja sen punamulta syntyy maaperän '
+          + 'runsaasta rautapitoisuudesta.',
+      },
+      {
+        id: 'iss059e019410',
+        teksti: 'Huhtikuussa 2019 kuvattu laajempi näkymä samalta alueelta näyttää '
+          + 'Saint Lawrencenlahden, Prinssi Edwardin saaren sekä osia Québecistä '
+          + 'ja Uudesta-Brunswickista yhdellä silmäyksellä. Saari on tunnettu '
+          + 'myös kirjailija L. M. Montgomeryn Anna-kirjoista, jotka sijoittuvat '
+          + 'sen maalaismaisemiin. Manterelle saaren yhdistää '
+          + 'Confederation-silta, joka on yksi maailman pisimmistä jääpeitteisen '
+          + 'veden yli rakennetuista silloista.',
+      },
+    ],
+  },
 ];
 
 /**

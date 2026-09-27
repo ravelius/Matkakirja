@@ -730,6 +730,30 @@ async function sailioAvain(persoona, teksti) {
   }
 }
 
+/*
+ * LUKIJAMITTARI (Fable 27.9.2026 klo 07.2x: korvakuuntelu ei saa olla
+ * ainoa todiste). Viimeisin haettu pala: moottori ja lähde workerin
+ * otsakkeista (x-puhe-moottori xai|openai, x-puhe-lahde
+ * generoitu|reuna|r2; laitteen oma säilö = 'laite'), ensimmäisen tavun
+ * ja koko palan aika millisekunteina pyynnöstä sekä merkkimäärä.
+ * Kehittäjävalikko (js/main.js) näyttää sen ja kuuntelee tapahtumaa
+ * PUHEMITTARI_TAPAHTUMA. Mittari on pelkkää tietoa — luenta ei lue sitä.
+ */
+export const PUHEMITTARI_TAPAHTUMA = 'matkakirja-puhemittari';
+let puhemittari = null;
+
+/** Viimeisimmän haetun palan mittari tai null. */
+export function viimeisinPuhe() {
+  return puhemittari;
+}
+
+function kirjaaPuhe(tieto) {
+  puhemittari = { ...tieto, aika: Date.now() };
+  try {
+    window.dispatchEvent(new CustomEvent(PUHEMITTARI_TAPAHTUMA, { detail: puhemittari }));
+  } catch { /* ei selainta (testit) */ }
+}
+
 /**
  * Hakee yhden palan puheeksi ja palauttaa blob-osoitteen.
  *
@@ -760,6 +784,9 @@ async function haePala(teksti, persoona, sailio = null) {
         if (osuma) {
           const osoite = URL.createObjectURL(await osuma.blob());
           muistiin(avain, osoite);
+          kirjaaPuhe({
+            moottori: osuma.headers.get('x-puhe-moottori'), lahde: 'laite', ekaTavuMs: 0, valmisMs: 0, merkkeja: teksti.length,
+          });
           return osoite;
         }
       } catch {
@@ -775,6 +802,7 @@ async function haePala(teksti, persoona, sailio = null) {
   const otsakkeet = { 'content-type': 'application/json' };
   const koodi = saadot ? kehittajaKoodi() : null;
   if (koodi) otsakkeet['x-pollo-kehittaja'] = koodi;
+  const alku = performance.now();
   const vastaus = await fetch(POLLOPALVELIN, {
     method: 'POST',
     headers: otsakkeet,
@@ -795,13 +823,34 @@ async function haePala(teksti, persoona, sailio = null) {
     if ([403, 404, 503].includes(vastaus.status)) estaPuhe();
     throw new Error(`puhe ${vastaus.status}`);
   }
-  if (kansio && osoiteAvain) {
-    // Kopio talteen ennen lukemista; täysi levy ei kaada luentaa.
-    try {
-      await kansio.put(osoiteAvain, vastaus.clone());
-    } catch { /* säilö täynnä tai estetty */ }
+  // Kopio talteen rinnalla (klooni luetaan samaan aikaan kuin runko, joten
+  // mittarin ensimmäinen tavu on todellinen); täysi levy ei kaada luentaa.
+  const talteen = kansio && osoiteAvain
+    ? kansio.put(osoiteAvain, vastaus.clone()).catch(() => { /* säilö täynnä tai estetty */ })
+    : null;
+  // Runko luetaan paloina, jotta ensimmäisen tavun aika saadaan mittariin.
+  const osat = [];
+  let ekaTavu = null;
+  const lukija = vastaus.body?.getReader?.();
+  if (lukija) {
+    for (;;) {
+      const { done, value } = await lukija.read();
+      if (done) break;
+      ekaTavu ??= performance.now();
+      osat.push(value);
+    }
+  } else {
+    osat.push(await vastaus.arrayBuffer());
   }
-  const blob = await vastaus.blob();
+  await talteen;
+  const blob = new Blob(osat, { type: vastaus.headers.get('content-type') || 'audio/mpeg' });
+  kirjaaPuhe({
+    moottori: vastaus.headers.get('x-puhe-moottori'),
+    lahde: vastaus.headers.get('x-puhe-lahde'),
+    ekaTavuMs: Math.round((ekaTavu ?? performance.now()) - alku),
+    valmisMs: Math.round(performance.now() - alku),
+    merkkeja: teksti.length,
+  });
   const osoite = URL.createObjectURL(blob);
   muistiin(avain, osoite);
   return osoite;
@@ -877,6 +926,8 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
  *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
  *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
+ *   yksiPuheenvuoro?: boolean kaikki lisätty teksti on yhtä kappaletta
+ *     (Pulun striimivastaus): palojen väliin virkeväli, ei kappaleväliä
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -890,7 +941,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0, otsikkoKappaleet = null,
+  aloitusKappale = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
@@ -1165,6 +1216,16 @@ export function luoPuheSoitin({
     const uudet = [];
     for (const rivi of String(teksti ?? '').split('\n')) {
       if (!rivi.trim()) continue;
+      /*
+       * YKSI VASTAUS ON YKSI PUHEENVUORO (Fable 27.9.2026 klo 07.4x):
+       * striimi tuo Pulun vastauksen virke kerrallaan, ja jokainen lisäys
+       * oli oma kappaleensa → 450 ms kappaleväli joka virkkeen välissä.
+       * Puheenvuorossa kaikki on samaa kappaletta, joten väli on 220 ms.
+       */
+      if (yksiPuheenvuoro && tila.kappaleita > 0) {
+        for (const pala of kappaleenPalat(rivi)) uudet.push({ ...pala, kappale: 0 });
+        continue;
+      }
       const kappale = tila.kappaleita;
       tila.kappaleita += 1;
       for (const pala of kappaleenPalat(rivi)) {

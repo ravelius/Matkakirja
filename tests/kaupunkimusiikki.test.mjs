@@ -241,7 +241,10 @@ test('kaupungista lähtiessä pohjavire palaa', async () => {
   assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku('musa-pohja'));
 });
 
-test('puuttuva kaupunkiraita ei kaada eikä hiljennä: pohjavire jatkaa', async () => {
+test('puuttuva kaupunkiraita ei kaada eikä hiljennä: ketjun seuraava jatkaa', async () => {
+  // Ateena ilman maata (kuten Maailma-laudalla): ketju on oma kappale →
+  // maanosaraita (KAUPUNGIN_MAANOSA, Välimeri) → pohjavire.
+  const SEURAAVA = musaPolku('musa-maanosa-valimeri');
   const s = await lataaAmbienssi();
   await saavu(s, 'ateena');
   const kaupunki = s.musiikit().at(-1);
@@ -251,7 +254,7 @@ test('puuttuva kaupunkiraita ei kaada eikä hiljennä: pohjavire jatkaa', async 
   kaupunki.laukaise('error');
   await Promise.resolve();
   await ajaHaivytykset(s.kello);
-  assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku('musa-pohja'),
+  assert.equal(s.mod.soivaPohjaMusiikki(), SEURAAVA,
     'puuttuva kaupunkiraita jätti pelin hiljaiseksi');
 
   // Sama kaupunki uudestaan ei enää yritä puuttuvaa raitaa.
@@ -259,7 +262,7 @@ test('puuttuva kaupunkiraita ei kaada eikä hiljennä: pohjavire jatkaa', async 
   await saavu(s, 'ateena');
   assert.equal(s.musiikit().length, maara,
     'puuttuvaa raitaa yritettiin uudestaan — 404 jokaisesta piirrosta');
-  assert.equal(s.mod.soivaPohjaMusiikki(), musaPolku('musa-pohja'));
+  assert.equal(s.mod.soivaPohjaMusiikki(), SEURAAVA);
 });
 
 test('taustaäänten kytkin sammuttaa kaupunkiraidan kuten pohjavireen', async () => {

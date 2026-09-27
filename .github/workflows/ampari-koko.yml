@@ -1,0 +1,65 @@
+# Media-ämpärin (R2) koko ja jako kansioittain — vain luku (Fable/omistaja 27.9.2026:
+# "Paljonko ämpäriin mahtuu?"). Tulos ajon yhteenvetoon; avaimia ei tulosteta.
+# Käsin: gh workflow run ampari-koko.yml
+
+name: Ämpärin koko
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  koko:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+    steps:
+      # Kokonaiskoko Cloudflaren mittarista heti (listaus kestää miljoonilla laatoilla yli 30 min;
+      # ensimmäinen ajo 27.9. katkesi aikarajaan). Ei kaada ajoa, jos tunnuksella ei ole R2-lukua.
+      - name: Kokonaiskoko (wrangler r2 bucket info)
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -uo pipefail
+          npx -y wrangler@4.125.0 r2 bucket info "$R2_AMPARI" 2>&1 | grep -viE "token|secret" | tee info.txt
+          { echo "## Kokonaiskoko (Cloudflare)"; echo; echo '```'; cat info.txt; echo '```'; echo; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Listaa ja laske
+        run: |
+          set -euo pipefail
+          PAATE="https://$R2_TILI.r2.cloudflarestorage.com"
+          # Ylätason kansiot rinnakkain (8 virtaa), juuren tiedostot erikseen.
+          aws s3 ls "s3://$R2_AMPARI/" --endpoint-url "$PAATE" > juuri.txt
+          awk '$1=="PRE"{print $2}' juuri.txt > kansiot.txt
+          awk '$1!="PRE"' juuri.txt > lista.txt
+          cat kansiot.txt | xargs -P 8 -I{} sh -c 'aws s3 ls "s3://$R2_AMPARI/{}" --recursive --endpoint-url "'"$PAATE"'" > "osa-$(echo {} | tr / _).txt"'
+          cat osa-*.txt >> lista.txt
+          # Sarakkeet: pvm aika koko avain. Ryhmä: julisteet/pyramidi/<sarja>/ omana, muuten 1. taso
+          # (ja 2. taso, jos 1. taso on julisteet tai audio).
+          awk '{
+              koko=$3; avain=$4; for(i=5;i<=NF;i++) avain=avain" "$i
+              n=split(avain,o,"/")
+              if (o[1]=="julisteet" && o[2]=="pyramidi" && n>3) r="julisteet/pyramidi/" o[3] "/"
+              else if (n>2 && (o[1]=="julisteet" || o[1]=="audio" || o[1]=="aanet")) r=o[1] "/" o[2] "/"
+              else if (n>1) r=o[1] "/"
+              else r="(juuri)"
+              s[r]+=koko; c[r]++; yht+=koko; kpl++
+            } END {
+              for (r in s) printf "%.3f\t%d\t%s\n", s[r]/1e9, c[r], r
+              printf "YHTEENSÄ\t%.3f Gt\t%d objektia\t%.2f $/kk (0,015 $/Gt-kk)\n", yht/1e9, kpl, yht/1e9*0.015 > "yhteensa.txt"
+            }' lista.txt | sort -rn > jako.tsv
+          {
+            echo "## Ämpärin koko"; echo; cat yhteensa.txt; echo
+            echo '| Gt | objekteja | kansio |'; echo '|---:|---:|---|'
+            awk -F'\t' '{printf "| %s | %s | %s |\n", $1, $2, $3}' jako.tsv
+          } >> "$GITHUB_STEP_SUMMARY"
+          cat yhteensa.txt; head -25 jako.tsv
