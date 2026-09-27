@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.30 (202609271221)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 30: talous (päiväkulut, kassa, rahat loppu ja matkan loppukortti), pelistreak armopäivineen, uusi avauskortti ja Tiger Moth -lento. Puhe alkaa taas heti paloina, meren laivat ovat tarkempia ja maakuntien nimet poistuivat kartalta."
+  },
+  {
    "versio": "1.0.29 (202609270957)",
    "paiva": "2026-09-27",
    "teksti": "Build 29b: kuten build 29, mutta synteesipuhe soi taas laitteella (striimaus pois päältä). Koko maailma auki, nostot täytenä heti, meren koristeet ja uudet pienoismallit Matterhorn, Hohensalzburg ja Bruggen kellotorni."
