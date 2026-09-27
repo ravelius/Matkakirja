@@ -8255,3 +8255,7 @@ Natiivi-UI (kaannos 077548e0): aloitusvalinnasta mustat pisteet pois (syy Maailm
 ## OMISTAJAN LOYDOS: NATIIVIN KARTTA TARKENTUU LIIKKEEN JALKEEN, NIMIOT LIIKAHTAVAT; KONTRASTI MAITOMAISEMMAKSI ILMAN POLTTOA (27.9.2026 klo 17.13)
 
 Omistaja 27.9.2026 klo 17.2x (TF 1.0.30): kartta tarkentuu vierityksen jalkeen (hairitsevaa) → halutaan vierittaa suoraan tarkempaa karttaa; nimiot liikahtavat tarkennuksen aikana; epaterava kuva kontrastiltaan miellyttavampi, maitomaisempi — voiko kontrastia muuttaa ilman uudelleenpolttoa. Fable: syy S10:n dynaaminen SSE (32 liikkeessa, 16 levossa); Natiiviseppa kokeilee A vakio-SSE, B esilataus, C ristihaivytys (lampo-saanto pysyy), nimiot vakiokorkeuteen, kontrasti + mustan nosto varjostimeen ja kehittajavalikon liukusaatimella omistajan valittavaksi (ei polttoa). Natiivin elamapalkki (1281414c) 1.0.31-junaan.
+
+## FABLEN OMA NOLLAUS 65 %:SSA (LUOVUTUS -20260927-b); NATIIVI-UI NOLLAUKSESSA; 1.0.31 KAANNOKSESSA (27.9.2026 klo 17.19)
+
+Fable (tili D, Opus xhigh, local_cf5b4eca) kirjoitti luovutuksen docs/raportit/viesti-fable-luovutus-20260927-b.md ja aloitusviestin; Postivahti tekee Raamatun kaavan (RC pois, 90 s, aloitusviesti Fablen id:lle, RC paalle). Natiivi-UI 73 % → luovutus -y + clear kasketty 17.3x; uusi Fable viimeistelee (aloitusviesti). 1.0.31 (pohjan Z10 c48512b5, luenta aina, koetila, aloitusvalinta, elamapalkki) Natiivisepalla kaannoksessa, Laitetestaajan resepti valmisteilla.
