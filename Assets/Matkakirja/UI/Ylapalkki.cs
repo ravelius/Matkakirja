@@ -190,6 +190,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Tilapilleri (matkalaukku ankkuroituu sen alle).</summary>
         public VisualElement Pilleri => pilleri;
 
+        /// <summary>Pelirivi vaihtui (Aseta): UiNakymat lukee talouden tilan (Jatka ei laukaise TilaMuuttui-tapahtumaa).</summary>
+        public event Action RiviAsetettu;
+
         /// <summary>Logon napautus (UiNakymat: tekijätiedot ja lähteet).</summary>
         public event Action LogoPainettu;
 
@@ -605,6 +608,7 @@ namespace Matkakirja.Natiivi
             NaytaTalous(osat.Length >= 3);
             pilleri.style.display = teksti.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             SovitaPilleri();
+            try { RiviAsetettu?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
         /// <summary>

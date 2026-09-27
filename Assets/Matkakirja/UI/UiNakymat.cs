@@ -532,14 +532,19 @@ namespace Matkakirja.Natiivi
                 Pulu.Tunne("ilo", 0.5f);
             });
             o.MatkaPaattyi += loppu => UiKerros.PaaSaikeessa(() => NaytaMatkanLoppu(o, loppu));
+            // Jatka (tallennettu matka) ei laukaise TilaMuuttui-tapahtumaa, mutta asettaa pelirivin: kassa ja
+            // jo päättyneen matkan loppukortti siitä.
+            Tilarivi.RiviAsetettu += () => PaivitaKassa(o);
             PaivitaKassa(o);
-            if (o.MatkanLoppu != null) NaytaMatkanLoppu(o, o.MatkanLoppu);
         }
+
+        global::Matkakirja.Peli.MatkanLoppu naytettyLoppu;
 
         void PaivitaKassa(PeliOhjain o)
         {
             var m = o.Matka;
             Tilarivi.Talous(m?.RahattomuuttaJaljella(), o.MatkanLoppu != null, Matkalaukku.KassaVihje(m));
+            if (o.MatkanLoppu != null && o.MatkanLoppu != naytettyLoppu) NaytaMatkanLoppu(o, o.MatkanLoppu);
         }
 
         /// <summary>
@@ -549,6 +554,7 @@ namespace Matkakirja.Natiivi
         void NaytaMatkanLoppu(PeliOhjain o, global::Matkakirja.Peli.MatkanLoppu loppu)
         {
             if (loppu == null) return;
+            naytettyLoppu = loppu;
             var m = o.Matka;
             var p = m?.Tila.Pelaajat?.FirstOrDefault(x => x.Id == loppu.Pelaaja) ?? m?.Tila.Pelaaja;
             int loydot = p?.Loydot.Count ?? 0;
