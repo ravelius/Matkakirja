@@ -813,11 +813,13 @@ test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', as
   assert.deepEqual(Object.keys(o.maat).sort(), muodolliset.sort(), 'jokainen muodollinen maa');
   const fin = o.maat.FIN;
   assert.equal(fin.iso2, 'FI');
-  assert.deepEqual(Object.keys(fin.rasteri), ['6', '7', '8']);
+  assert.deepEqual(Object.keys(fin.rasteri).filter((z) => Number(z) <= 8), ['6', '7', '8']); // 1.51: + '10' kaupunkien ympärillä
   assert.ok(fin.laattoja.rasteri > 0 && fin.tavuja.yht === fin.tavuja.rasteri + fin.tavuja.maasto + fin.tavuja.media);
   // Muodon leikkaus ei yliarvioi: laattoja vähemmän kuin bbox-välissä.
-  const bboxLaattoja = Object.values(o.maat.NOR.rasteri).reduce((a, [x0, y0, x1, y1]) => a + (x1 - x0 + 1) * (y1 - y0 + 1), 0);
-  assert.ok(o.maat.NOR.laattoja.rasteri < bboxLaattoja);
+  const bboxLaattoja = Object.entries(o.maat.NOR.rasteri).filter(([z]) => Number(z) <= 8).map(([, v]) => v).reduce((a, [x0, y0, x1, y1]) => a + (x1 - x0 + 1) * (y1 - y0 + 1), 0);
+  const norSyva = Object.entries(o.maat.NOR.rasteri).filter(([z]) => Number(z) > 8)
+    .reduce((a, [, v]) => a + v.reduce((b, [x0, y0, x1, y1]) => b + (x1 - x0 + 1) * (y1 - y0 + 1), 0), 0);
+  assert.ok(o.maat.NOR.laattoja.rasteri - norSyva < bboxLaattoja);
   assert.ok(Object.keys(o.maat.FRA.maasto).length > 0, 'Ranskan syvä maasto available-alueella');
   assert.deepEqual(Object.keys(o.globaali.rasteri), ['0', '1', '2', '3', '4', '5']);
   assert.equal(o.globaali.media.length, 0, 'globaali = vain laatat ja maasto');
@@ -1346,8 +1348,8 @@ test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympä
   const o = JSON.parse(tiedostot.get('offline.json'));
   const R = o.lahteet.rasteri;
   assert.match(R.url, /\/2026-09-26-pohja-20260926\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
-  assert.equal(R.maxzoom, 9);
-  assert.deepEqual(R.kaupunkitaso.tasot, [9]);
+  assert.equal(R.maxzoom, 10, '1.51: Z10 kaupunkien ympärillä');
+  assert.deepEqual(R.kaupunkitaso.tasot, [9, 10]);
   const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((c) => c.tyyppi === 'kaupunki');
   assert.ok(kaupungit.length >= 70);
   let valeja = 0;
@@ -1519,4 +1521,24 @@ test('skeema 1.50: musiikkiaiheet ja kaupungin maanosa äänitauluissa', async (
   const ateena = k.find((a) => a.id === 'musiikkiketju:ateena');
   assert.equal(ateena.maanosa, kaupunginMaanosa('ateena', 'GRC'));
   assert.ok(ateena.maanosa);
+});
+
+test('skeema 1.51: natiivin pallon Z10 offline-välit = Karttasepän poltettu joukko', async () => {
+  const { readFileSync } = await import('node:fs');
+  const lista = new Set(JSON.parse(readFileSync(new URL('../tools/vienti/pallo-z10.json', import.meta.url), 'utf8')).laatat);
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  assert.equal(o.lahteet.rasteri.maxzoom, 10);
+  assert.deepEqual(o.lahteet.rasteri.kaupunkitaso.tasot, [9, 10]);
+  assert.equal(o.lahteet.rasteri.kaupunkitaso.z10.laattoja, lista.size);
+  const kaikki = new Set();
+  for (const [iso, m] of Object.entries(o.maat)) {
+    for (const [x0, y0, x1, y1] of m.rasteri['10'] ?? []) {
+      for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) {
+        assert.ok(lista.has(`${x}/${y}`), `${iso}: ${x}/${y} ei ole poltettu (natiivi saisi 404)`);
+        kaikki.add(`${x}/${y}`);
+      }
+    }
+  }
+  // Kaikki paitsi maattomien kaupunkien (Jerusalem) laatat ovat jonkin maan offline-alueessa.
+  assert.ok(kaikki.size >= lista.size - 40, `${kaikki.size}/${lista.size}`);
 });

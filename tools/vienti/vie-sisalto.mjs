@@ -207,8 +207,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        tools/vienti/elava-kartta.mjs pikkukuvaOsoite) — Fable 26.9.2026, löydökset 115 ja 158. Elävä kartta.
  *   1.50 aanitaulut: laji musiikkiaihe (aloituslento, loppu, ratkaisu, epaonnistuminen, saapuminen-<maanosa>; tunnus, url)
  *        ja musiikkiketju.maanosa — Pelikoodari 26.9.2026, musiikkisuunnitelman vaihe 2 (#3304, #3314).
+ *   1.51 offline: natiivin pallon Z10 kaupunkien ympärille (± 1°, 13 856 laattaa Karttasepän poltosta,
+ *        tools/vienti/pallo-z10.json): lahteet.rasteri.maxzoom 10, kaupunkitaso.tasot [9, 10] ja kaupunkitaso.z10,
+ *        maan rasteri["10"] = rivijuoksut — Fable 27.9.2026.
  */
-export const SKEEMAVERSIO_TARKKA = '1.50';
+export const SKEEMAVERSIO_TARKKA = '1.51';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
