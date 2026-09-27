@@ -8131,3 +8131,7 @@ Pelikoodari 11.3x: natiivin talousportti fbda3812 (Peli/Talous.cs: 400 £, paiva
 ## SIIRTOSEPAN LUOVUTUS e147220ce, NOLLAUS; #3394 v2314 MAINISSA (TALOUS VAIHE 1 WEB) (27.9.2026 klo 11.33)
 
 Siirtoseppa 11.3x: luovutus e147220ce (pallo-Z10 #3395 luonnos: poltto 22–24, omistajan vientilupa, pistokoe, koot, Natiivisepan kuittaus; deltajono #3394 saannot + hintatasot, #3370), nollaa itsensa — uusi tili aloittaa tuoreella sessiolla, aloitusviestia ei laheteta vanhalle. Julkaisija 11.28: #3392 v2313, #3394 v2314 mainissa (4440/0), #3388 mergessa.
+
+## OMISTAJA 11.4x: SESSIOT PYSAYTETTY, SIIRTOPROMPTI ANNETTU (TILINVAIHTO, PAATOIMITTAJA OPUS MAX) (27.9.2026 klo 11.35)
+
+Omistaja 11.4x: 'lopeta sessiot ja anna prompti' (viikko 94 %) → Fable pysaytti kaikki 10 roolisessiota (stop_session) ja antoi siirtopromptin docs/raportit/viesti-fable-tilinvaihto-20260927.md kohta 1 omistajalle. Natiivisepan ja Postivahdin tilinvaihtoluovutukset jaivat kirjoittamatta — tila on siirtopromptissa (kohdat 2, 4, 7) ja lokissa; Natiivisepan juna/b13-tila proto-repossa levylla. Pallo-Z10:n yopoltto (PID 72301) jatkuu sessioista riippumatta. Vanhan tilin Fable-sessio jaa omistajan luettavaksi.
