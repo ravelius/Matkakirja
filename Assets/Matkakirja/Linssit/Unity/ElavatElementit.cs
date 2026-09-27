@@ -361,7 +361,9 @@ namespace Matkakirja.Natiivi
                     {
                         lapset[i] = new GameObject("Lapsi").transform;
                         lapset[i].SetParent(rt, false);
-                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali, a.ReunaMateriaali, a.Seepia ? 1 : 0);
+                        // Laatutaso: piirtojärjestys roottori → Lapsi → Lapsi2 → Lapsi3 (jäävuoren ja delfiinien vesikerrokset).
+                        int ryhma = i < lapsia ? 1 : i < lapsia + lapsia2 ? 2 : 3;
+                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali, a.ReunaMateriaali, a.Seepia ? ryhma : 0);
                     }
                     juuri.gameObject.SetActive(false);
                     var yksilo = new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, LapsiPerus = new Vector3[lapset.Length], Vaihe = vaihe,
