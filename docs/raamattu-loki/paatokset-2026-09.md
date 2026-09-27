@@ -7891,3 +7891,7 @@ Pelikoodari 08.2x (raportti #3378, kuvat proto-3d/lokit/z10-web/): pallon laatta
 ## NATIIVI-UI NOLLATTU JA KAYNNISTETTY 08.2x (LUOVUTUS W 5eeb041ab; AVAUSKORTTI natiivi-ui/avauskortti 3de0ca7f) (27.9.2026 klo 08.24)
 
 Natiivi-UI nollattu 08.2x (74 % → tyhja), aloitusviesti: avauskortti natiiviin jatkuu haarasta 3de0ca7f, 1.0.28-todennukset, maanosa/nostot Pelikoodarilla ja Natiivisepalla.
+
+## OMISTAJA 08.3x KORJAA: EI MAANOSA- VAAN MAAKUNTAETENEMINEN POIS; MANNERLENNOT JAAVAT (27.9.2026 klo 08.25)
+
+Omistaja 08.3x: "Tarkoitin maanosa etenemisella eri asiaa. Termi oli vaara. Poista maakunta eteneminen." → mannerlentojen paaaarre-ehto JAA (edellinen 08.16 paatos peruttu); poistetaan maakuntien vaiheittainen heraaminen/avautuminen — kaikki kohdemaan maakunnat auki heti saapuessa, web + natiivi, 1.0.29. Nostot heti taydella ulkoasulla ja NostoKerroksen porttien (a)–(b) poisto pysyvat. Salaisuus-nosto: omistaja paattaa erikseen kun Pelikoodari on kartoittanut.
