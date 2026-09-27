@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 23:11 EEST
+**Päivitetty:** 2026-09-27 23:23 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **87 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **UUSI: Sisältökirjuri 72% — YLI.** Linssiseppä 72% jatkaa nousua, tiedossa.
+Viikko (all models) **88 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **UUSI: Natiiviseppä 80% — YLI, iso hyppy (68%→80%).** Linssiseppä nollautunut. Sisältökirjuri 72% ennallaan.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 65% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 58% | running |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 66% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 59% | running |
 | Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 48% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 68% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 31% | idle |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | **80% — YLI, iso hyppy 68%→80%** | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 35% | idle |
 | Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 26% | idle |
-| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 72% — jatkaa nousua, tiedossa | idle |
+| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 16% — nollautunut | idle |
 | Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 61% | idle |
 | Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 28% | running |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | **72% — YLI, uusi ilmoitus** | running |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 72% — YLI, ennallaan | running |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 35% | running |
 
 ## 1a) YÖTAUKO klo 22.30 alkaen (Fable 21:4x, sitova)
@@ -64,13 +64,13 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (23:11)
+## 5) Resurssit (23:23)
 
-- **5 h -kiintiö:** 13 %. **Viikko (kaikki mallit):** 87 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 79 Gi vapaana (nousi 72→79). wt/-worktreet 32 kpl.
-- **Muistipaine:** normal (1). **Load average laskenut edelleen: 36.41/82.32/99.35.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 3 (iPhone 18 Pro, natiiviseppa-iPhone, iPhone 17).
-- **Liput:** `/tmp/matkakirja-julkaisu` POISTETTU (julkaisu valmistui) — 20 min ikäinen, alle 90 min raja. `/tmp/matkakirja-juna-tauko` yhä päällä (21 min, "Karttasepän yöpoltto").
-- **Konteksti (kynnys Fable 65%/roolit 70%):** **Sisältökirjuri 72% — YLI, uusi.** Linssiseppä 72% jatkaa nousua (tiedossa, nollaus tulossa). Natiiviseppä 68% lähellä.
+- **5 h -kiintiö:** 16 %. **Viikko (kaikki mallit):** 88 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 78 Gi vapaana (vakaa). wt/-worktreet 35 kpl.
+- **Muistipaine:** normal (1). **Load average laskee edelleen: 21.26/23.88/53.03** — hyvä trendi. **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 3.
+- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` yhä päällä (33 min, "Karttasepän yöpoltto") — kaukana 90 min rajasta.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** **Natiiviseppä 80% — YLI, uusi ja iso.** Sisältökirjuri 72% ennallaan. Linssiseppä nollautunut (16%).
 - **Juna:** tauolla.
 - **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
