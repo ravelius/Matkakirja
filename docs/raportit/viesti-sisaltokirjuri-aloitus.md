@@ -1,33 +1,32 @@
-# Sisältökirjurin aloitusviesti (26.9.2026 iltapäivä, kontekstin nollaus)
+# Sisältökirjurin aloitusviesti (27.9.2026 aamu, kontekstivaraus)
 
 Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri.
 Ensimmäinen komento: git fetch origin && git checkout -B sisalto-tyo-$(date +%Y%m%d-%H%M) origin/main.
-Lue CLAUDE.md, Raamatun "TYÖTAPA JA SESSIOT", JUMI → FABLE ja
-docs/raportit/viesti-sisaltokirjuri-luovutus-20260926-b.md kokonaan.
+Lue CLAUDE.md, docs/roolitus.md, Raamatun "TYÖTAPA JA SESSIOT" ja
+docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-b.md kokonaan.
 
-TILA lyhyesti: löydös 158 (maakuntien kuva/pikkukuva-kentät Wikimedia Commonsista)
-etenee maa kerrallaan pitkä-luonnehdintojen (99 aluetta, 9 maata) rinnalla. GRC ja NLD
-ovat mainissa. BEL/DNK/SVK/LVA/LTU ovat VALMIINA HAAROISSA (testattu, pushattu) mutta
-PR:t odottavat vuoroaan (yksi maakunta-PR kerrallaan mainiin, ei pinota).
+TILA lyhyesti: main = v2299. Astronautin kamera valmis (erät 5-6
+mainissa, erä 7 PR #3375 auki, tilaus ~100 kohdetta nyt täynnä 189
+kohteella). Turistiopas erä 19 PR #3206 rebasattu ja mergeable.
+Odotetaan Fablen päätöstä 11 turvallisuussyistä ulkona jätetystä
+turistiopas-kohteesta (raportin kohta 5).
 
 ENSIMMÄINEN TEHTÄVÄ:
-1. Tarkista `gh pr list --search "maakunta OR pitka OR kuva-kenttä" --state open` ja
-   `gh pr view 3318 --json state` (NLD). Jos jono on vapaa, avaa seuraava PR
-   järjestyksessä BEL → DNK → SVK → LVA → LTU (ks. luovutuksen kohta 2: rebase
-   origin/mainiin, testaa, force-with-lease, avaa PR vasta kun jono on vapaa).
-2. Kun kaikki viisi ovat mainissa: jatka FIN/EST/SVN:n kuva-kenttään (luovutuksen
-   kohta 3, toistettava menetelmä vaihe vaiheelta) ja sen jälkeen seuraaviin
-   pitkä-erän maihin (CHE, PRT, HUN, SWE, NOR, IRL — ks. edellinen luovutus
-   viesti-sisaltokirjuri-luovutus-20260926.md).
-3. Lue luovutuksen kohta 5 (Opit) ennen kuin toistat kuvahakuprosessin — siinä on
-   korjattuja virheitä (regex-bugi, sharp-polku, lisenssin API-tarkistus, kuvien
-   silmämääräinen tarkistus ihmisten varalta).
+1. Tarkista onko Fable vastannut kohdan 5 kysymykseen. Jos ei, älä
+   tee niitä 11 kohdetta omin päin.
+2. Tarkista PR #3375 ja #3206 tila; korjaa versiokonflikti
+   tarvittaessa raportin kohdan 8 kaavalla (main liikkuu nopeasti,
+   versiotiedostot voivat konfliktoida useasti — ota aina --theirs
+   niihin ja aja uusi-versio.mjs uudelleen).
+3. Kun jono on tyhjä, ilmoita Fablelle ja odota seuraavaa tehtävää.
 
 SITOVAT KÄYTÄNNÖT:
 - JUMI → FABLE: jumissa yksi viesti Fablelle (tilanne, vaihtoehdot, suositus), ei korttia; muu jono jatkuu.
 - VIESTIRAJA: SendMessage ~10 viestiä/vuoro; varakanava mcp send_message session id:llä.
-- Maakunta-PR:t yksi kerrallaan mainin päälle; agentit vain Sonnet/Opus, enintään 3–4 rinnan.
-- Kuvat vain PD/CC0/CC BY/CC BY-SA, tarkistettuina Commonsin API:sta suoraan (ei vain
-  agentin raportista); ei tunnistettavia yksityishenkilöitä lähikuvassa; jos sopivaa
-  kuvaa ei löydy, jätä kenttä tyhjäksi ja listaa puute PR:n kuvaukseen — ei kompromissia.
-- Aikaleimat date-komennolla. Testit ilman ääniä. Kuormatarkistus `uptime` ennen koko sarjaa.
+- Rakenna KOHTEET-tyyppiset taulukkolisäykset (mm. astronautin kamera) aina
+  tuoreelta origin/main:lta uudella haaralla, älä vanhalta rebasoiden — säästää
+  ison taulukkomerge-konfliktin (raportin kohta 9, opetus 1).
+- Agentit vain Sonnet/Opus, enintään 3-4 rinnan.
+- Kuvat vain PD/CC0/CC BY/CC BY-SA Commonsista tai NASA (public domain
+  astronautin kamera -linssille), tarkistettuina API:sta suoraan ja
+  katsottuina käsin ennen hyväksymistä.

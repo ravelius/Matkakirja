@@ -978,6 +978,16 @@ button, .brand, .turn-pill, .fact-card h2 {
   cursor: default;
 }
 
+/* Lukijamittari: yksi pieni tietorivi striimiäänen alla. */
+.kehittaja-valikko .kehittaja-puhemittari {
+  margin: 0.1rem 0 0.3rem;
+  padding: 0 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  font-variant-numeric: tabular-nums;
+}
+
 .kehittaja-valikko .kehittaja-valinta-select {
   font: inherit;
   font-size: 0.72rem;
