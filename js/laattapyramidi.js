@@ -760,8 +760,9 @@ const mittarit = {
   variMaa: null,
   ladattu: 0,
   epaonnistui: 0,
-  // Alimman kerroksen virheen jälkeen uudelleen haetut laatat (ks. POHJAN_UUSINNAT).
+  // Virheen jälkeen uudelleen haetut laatat (ks. POHJAN_UUSINNAT) ja myöhemmin paikatut aukot.
   uusittu: 0,
+  paikattu: 0,
   esiladattu: 0,
   esijonossa: 0,
   esikaynnissa: 0,
@@ -1386,11 +1387,58 @@ function peruLaatta(kuva) {
  * `lapinakyva` kerros on MERKINTÖJÄ pergamentin päällä, ei karttaa:
  *              vanha taso ei jää uuden alle (ks. paivitaKerros).
  */
-/** Alimman kerroksen epäonnistuneen laatan uusinnat (1,5 s ja 4,5 s), ks. valmis(false). */
+/** Olemassa olevan laatan uusinnat virheen jälkeen (1,5 s ja 4,5 s), ks. valmis(false). */
 const POHJAN_UUSINNAT = 2;
 const POHJAN_UUSINTAVALI_MS = 1500;
+/** Aukoksi jäänyt laatta haetaan taas aikaisintaan näin pian (päivityksessä tai paluussa). */
+const PAIKKAUSVALI_MS = 8000;
 
-const tyhjaTila = (kerros, alin = false, lapinakyva = false) => ({
+/** Kaikki kerrokset (paikkaaKaikki käy niiden laatat läpi paluussa näkyviin). */
+const kaikkiTilat = new Set();
+
+/**
+ * Hakee aukoksi jääneen laatan uudelleen: uudet uusintakerrat ja uusi
+ * osoite (?p=aika ohittaa välimuistiin jääneen virheen).
+ */
+function paikkaaLaatta(kuva) {
+  const osoite = kuva.dataset.osoite;
+  const valmis = kuva.__valmis;
+  if (!osoite || !valmis || !kuva.isConnected || kuva.dataset.peruttu === '1') return;
+  delete kuva.dataset.virhe;
+  kuva.dataset.yritys = '0';
+  mittarit.paikattu += 1;
+  kuva.addEventListener('load', () => valmis(true), { once: true });
+  kuva.addEventListener('error', () => valmis(false), { once: true });
+  kuva.setAttribute('href', `${osoite}${osoite.includes('?') ? '&' : '?'}p=${Date.now()}`);
+}
+
+/**
+ * PALUU NÄKYVIIN PAIKKAA AUKOT (omistaja 27.9.2026 klo 23.5x): Safari
+ * katkaisee kesken olevat haut, kun sovellus menee taustalle tai näyttö
+ * lukittuu, ja ne päättyvät virheeseen. Näkyviin palatessa, sivun
+ * palatessa välimuistista (pageshow) ja verkon palatessa jokainen
+ * aukoksi jäänyt laatta haetaan heti uudelleen.
+ */
+function paikkaaKaikki() {
+  if (typeof document !== 'undefined' && document.hidden) return;
+  for (const tila of kaikkiTilat) {
+    for (const kuva of tila.laatat.values()) if (kuva.dataset.virhe) paikkaaLaatta(kuva);
+    for (const kuva of tila.vanhat?.values?.() ?? []) if (kuva.dataset?.virhe) paikkaaLaatta(kuva);
+  }
+}
+if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+  document.addEventListener('visibilitychange', paikkaaKaikki);
+  window.addEventListener('pageshow', paikkaaKaikki);
+  window.addEventListener('online', paikkaaKaikki);
+}
+
+/** Kerros talteen paikkausta varten (paikkaaKaikki). */
+function kirjaaTila(tila) {
+  kaikkiTilat.add(tila);
+  return tila;
+}
+
+const tyhjaTila = (kerros, alin = false, lapinakyva = false) => kirjaaTila({
   kerros, alin, lapinakyva, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
   nakyva: null, jakso: 0,
 });
@@ -1703,6 +1751,8 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
 
     const oli = vanhatSamalta.get(k);
     if (oli) {
+      // Aukoksi jäänyt laatta haetaan uudelleen, kun aluetta taas katsotaan.
+      if (oli.dataset.virhe && Date.now() - Number(oli.dataset.virhe) > PAIKKAUSVALI_MS) paikkaaLaatta(oli);
       // Reunukselta ruudulle siirtynyt laatta on nyt odottaja.
       if (nakyy && oli.dataset.ladattu !== '1') oli.dataset.odottaa = '1';
       uudet.set(k, oli);
@@ -1766,17 +1816,29 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
          * ohimenevä verkkovirhe tai HTTP/2-perutus jätti PYSYVÄN tyhjän
          * laatan: elementti jäi tila.laatat-karttaan, eikä seuraava
          * päivitys yrittänyt uudelleen (osoite asetetaan vain luonnissa).
-         * Nyt alimman kerroksen laatta haetaan uudelleen 1,5 ja 4,5 s:n
-         * päästä uudella osoitteella (?r=n ohittaa välimuistiin jääneen
-         * virheen); odottaja-merkki pysyy, joten vanha taso ei häviä alta
-         * ennen aikojaan. Ylemmillä kerroksilla puuttuva laatta on
-         * tavallinen (harvat kerrokset), ja alla näkyy karkeampi taso.
+         * Nyt laatta haetaan uudelleen 1,5 ja 4,5 s:n päästä uudella
+         * osoitteella (?r=n ohittaa välimuistiin jääneen virheen);
+         * odottaja-merkki pysyy, joten vanha taso ei häviä alta ennen
+         * aikojaan.
+         *
+         * KAIKKI OLEMASSA OLEVAT LAATAT (omistaja 27.9.2026 klo 23.5x,
+         * iPad: "karttavirhe palaa, vaikka olisi aluksi näyttänyt kaiken
+         * oikein" — pergamenttiruutuja JA tarkkoja ja karkeita laattoja
+         * vierekkäin). Sama pysyvä aukko syntyi jokaisella kerroksella,
+         * erityisesti kun Safari katkaisi kesken olevat haut taustalle
+         * mennessä tai näytön lukittuessa. Uusitaan siis jokainen laatta,
+         * jonka luettelon bittikartta sanoo olevan olemassa (taso.laatasto;
+         * silloin virhe ei voi olla 404), ja alin kerros aina. Harvat
+         * kerrokset ilman bittikarttaa (puuttuva laatta = tavallinen 404)
+         * eivät uusi.
          */
         const yritys = Number(kuva.dataset.yritys ?? 0);
-        if (tila.alin && !tila.lapinakyva && yritys < POHJAN_UUSINNAT) {
+        const olemassa = tila.alin || Boolean(taso.laatasto);
+        if (olemassa && yritys < POHJAN_UUSINNAT) {
           kuva.dataset.yritys = String(yritys + 1);
           mittarit.uusittu += 1;
           const osoite = kuva.getAttribute('href');
+          if (osoite && !kuva.dataset.osoite) kuva.dataset.osoite = osoite;
           // Osoite pois odotuksen ajaksi (WebKitin rikkinäisen kuvan merkki, ks. alla).
           kuva.removeAttribute('href');
           setTimeout(() => {
@@ -1790,6 +1852,17 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
         }
         // Saapumaton laatta ei saa jäädä odottajaksi ikuisesti.
         delete kuva.dataset.odottaa;
+        /*
+         * PAIKKAUS MYÖHEMMIN (ks. paikkaaLaatta): olemassa olevan laatan
+         * uusinnatkin epäonnistuivat (verkko poikki, sovellus taustalla).
+         * Laatta merkitään, ja seuraava päivitys samalla alueella tai
+         * paluu näkyviin hakee sen uudelleen — aukko ei jää pysyväksi.
+         */
+        if (olemassa) {
+          kuva.dataset.virhe = String(Date.now());
+          if (!kuva.dataset.osoite) kuva.dataset.osoite = kuva.getAttribute('href') ?? '';
+          kuva.__valmis = valmis;
+        }
         /*
          * === SININEN KYSYMYSMERKKI KARTALLA (omistaja 4.9.2026) ===
          *
