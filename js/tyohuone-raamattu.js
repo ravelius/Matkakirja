@@ -1087,6 +1087,10 @@ export const RAAMATTU = {
           + 'Kaupungit-osio). Loki: docs/raamattu-loki/paatokset-2026-08-24--09-03.md '
           + '#KAMERA PELIN KÄSISSÄ, #PELINAPPULA VALKOISEKSI, #ULOIN ZOOMI NAYTTAA '
           + 'KOKO LAUDAN, LAUTA KERRAN, PAPERIA YMPARILLE.',
+        'HAVAINNEKUVA-SANA (omistaja 27.9.2026 klo 13.4x, sitova): kaikista generoiduista '
+          + '(tekoälyllä tehdyistä) kuvista käytetään pelissä, lehdissä, kuvateksteissä, tekijä- ja '
+          + 'lähdetiedoissa, projektisivustolla ja raporteissa sanaa HAVAINNEKUVA — ei "kuvitus", '
+          + '"AI-kuva", "generoitu kuva" tai "tekoälykuva".',
         'KUVAT — TYYLI JA TUOTANTO: kaikki generoidut kuvat (kohtaamiset, hetket, '
           + 'ennen/nyt, nostot, eläintäkyt, aarteet, ihmeet, kannet, kuvitukset) '
           + 'fotorealistisia valokuvia, ei piirroksia eikä maalauksia; poikkeus '
