@@ -185,3 +185,6 @@
 - Liikeydin: lautan runko pysyy vedessä (0 virhettä 24 h:n simulaatiossa), tynnyrit 10,8 % saapumisista, lepokehyksiä 69 %,
   0 allokaatiota kehyksessä, noin 1,3 µs/kehys.
 - Kuvat ja toteutusmuistio: harnessin kuvat/ ja visby-toteutus.md.
+- **Integrointi 27.9. klo 23.2x (Linssiseppä):** kuvat tarkistettu (kehä, lautta ja peruutus, tynnyrit, yö ja lähitaso) ja
+  hyväksytty. Proto `mallinseppa/era5` **d35e9f2c** junan 508761e8 päällä, unity-tarkistus 0 virhettä; käännös ja laitekuvat
+  aamulla (yötauko).

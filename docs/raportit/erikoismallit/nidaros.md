@@ -218,3 +218,5 @@ docs/raportit/erikoismallit/era5-ehdotus-20260927.md kohta 3). Vaihtoehtoa B ei 
 - Video `nidaros-video30.mp4` on 22 s, ja napautus tulee 2 s:n kohdalla (speksi 14 s ja 6 s), jotta saapuminen, kynttilät ja
   pysähdys portilla näkyvät ennen kuin ryhmä kiertää kirkon taakse.
 - Kuvat ja toteutusmuistio: harnessin kuvat/ ja nidaros-toteutus.md.
+- **Integrointi 27.9. klo 23.2x (Linssiseppä):** proto `mallinseppa/era5` **1b05b290** junan 508761e8 päällä, unity-tarkistus
+  0 virhettä; käännös ja laitekuvat aamulla (yötauko).

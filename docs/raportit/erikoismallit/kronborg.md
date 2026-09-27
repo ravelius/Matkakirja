@@ -237,3 +237,6 @@ era5-ehdotus-20260927.md kohta 1): Juutinrauman tulli. Tässä on vain hyväksyt
   mukana), noin 1 µs kehystä kohden (Mac Studio). 40 × 15 min: tulli 9,9 % ohituksista ja haamu 10,2 % yön lähdöistä.
   Lautta, laiva, tullivene ja roiske pysyvät jalanjäljellä, ja levossa piirretään 0 kehystä.
 - Kuvat ja toteutusmuistio: harnessin kuvat/ ja kronborg-toteutus.md.
+- **Integrointi 27.9. klo 23.2x (Linssiseppä):** proto `mallinseppa/era5` **b231e756** junan 508761e8 päällä, unity-tarkistus
+  0 virhettä; käännös ja laitekuvat aamulla (yötauko). Fablen ratkaisut 23.1x: kuparinvihreä 14 % jää (oikeat katot ovat
+  kuparia), ja `nosto:kronborg`-ankkurin (12.7125 E, Helsingborgin puolella) korjaa Sisältökirjuri.
