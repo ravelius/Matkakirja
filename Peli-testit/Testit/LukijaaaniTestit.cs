@@ -250,5 +250,25 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(1, Lukijaaani.LuennanPalat(new[] { kappale }).Count);
             Oleta.Tosi(Lukijaaani.PalaKatto < 2500);
         }
+
+        [Testi] static void VirtaPalatKasvavatVirkerajoiltaEikaTekstiaPudoteta()
+        {
+            // Palavirta (TF 1.0.29 P1): 1. pala ≤ 140 mrk virkerajalta, seuraavat ×3 kattoon asti.
+            var virke = "Tämä on kahdeksankymmentä merkkiä pitkä virke, jolla palojen kasvua voi mitata tarkasti."; // 88 mrk
+            var teksti = string.Join(" ", System.Linq.Enumerable.Repeat(virke, 30));
+            var palat = Lukijaaani.VirtaPalat(teksti);
+            Oleta.Sama(teksti, string.Join(" ", palat), "mitään ei pudoteta");
+            Oleta.Tosi(palat[0].Length <= Lukijaaani.VirtaEka, "ensimmäinen pala lyhyt: " + palat[0].Length);
+            Oleta.Tosi(palat.Count >= 3, "useita paloja: " + palat.Count);
+            Oleta.Tosi(palat[1].Length <= Lukijaaani.VirtaEka * Lukijaaani.VirtaKasvu, "toinen ≤ 420: " + palat[1].Length);
+            Oleta.Tosi(palat[1].Length > palat[0].Length, "kasvaa");
+            foreach (var p in palat) Oleta.Tosi(p.Length <= Lukijaaani.PalaKatto, "katto");
+            // Lyhyt teksti on yksi pala; kattoa pidempi virke on oma palansa (ei katkaista).
+            Oleta.Sama(1, Lukijaaani.VirtaPalat("Hei. Moi.").Count);
+            var pitka = new string('a', 300) + ". Loppu.";
+            var pp = Lukijaaani.VirtaPalat(pitka);
+            Oleta.Sama(new string('a', 300) + ".", pp[0]);
+            Oleta.Sama("Loppu.", pp[1]);
+        }
     }
 }

@@ -299,9 +299,15 @@ namespace Matkakirja.Natiivi
                         // Progressiivinen soitto (Puhe.Virta): virta [pois|paalle] → tila ja viimeisin 1. ääni.
                         case "virta":
                             if (A(2) == "pois") Puhe.Virta = false;
-                            else if (A(2) == "paalle") { Puhe.Virta = true; Puhe.NollaaVirta(); }
-                            return $"=virta {(Puhe.Virta ? "päällä" : "pois")}{(Puhe.VirtaPetti ? " (petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms";
-                        default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]";
+                            else if (A(2) == "paalle") Puhe.Virta = true;
+                            return $"=virta {(Puhe.Virta ? "päällä" : "pois")}, striimi {(Puhe.Striimi ? "päällä" : "pois")}"
+                                + $"{(Puhe.VirtaPetti ? " (striimi petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms";
+                        // Striimattu mp3 (kokeilu; iOS ei jäsennä, TF 1.0.29): striimi [pois|paalle].
+                        case "striimi":
+                            if (A(2) == "pois") Puhe.Striimi = false;
+                            else if (A(2) == "paalle") { Puhe.Striimi = true; Puhe.NollaaVirta(); }
+                            return $"=striimi {(Puhe.Striimi ? "päällä" : "pois")}{(Puhe.VirtaPetti ? " (petti: vanha polku)" : "")}";
+                        default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]|striimi [pois|paalle]";
                     }
                 case "saapumisluenta":
                     if (A(1) != null && A(1) != "tila") return "käyttö: saapumisluenta [tila]";
