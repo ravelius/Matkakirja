@@ -20,9 +20,9 @@ namespace Matkakirja.Peli.Testit
             return m;
         }
 
-        [Testi] static void NykyversioOnKuusiJaAlkaaTallennuksen()
+        [Testi] static void NykyversioOnSeitsemanJaAlkaaTallennuksen()
         {
-            Oleta.Sama(6, Pelitila.TallennusVersio);
+            Oleta.Sama(7, Pelitila.TallennusVersio);
             Oleta.Tosi(PelattuPeli().Tallenna().StartsWith("{" + Nyky + ",", StringComparison.Ordinal), "versio ensimmäisenä");
         }
 

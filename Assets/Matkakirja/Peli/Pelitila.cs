@@ -23,6 +23,8 @@
 // askel Paivita-metodiin ja testi (Peli-testit/Testit/TallennusTestit.cs).
 // Versio 6 (27.9.2026, talouden vaihe 1): pelaajan rasti, rahaton ja pudonnut sekä
 // pelin matkaPaattyi (Peli/Talous.cs). Vanha tallennus: ei velkaa, ei varoitusta.
+// Versio 7 (27.9.2026, pelistreak): pelaajan streak {paiva, pituus} (Peli/Pelistreak.cs),
+// kirjoitetaan vain kun putki on alkanut (web: p.streak puuttuu). Vanha tallennus: ei putkea.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -68,6 +70,8 @@ namespace Matkakirja.Peli
         public Rahattomuus Rahaton;
         /// <summary>Rahat loppuivat eikä kassa noussut: pelaaja ei enää pelaa (web pudonnut).</summary>
         public bool Pudonnut;
+        /// <summary>Pelipäiväputki (web p.streak; Peli/Pelistreak.cs), null ennen ensimmäistä kirjausta. Versio 7.</summary>
+        public StreakTila Streak;
     }
 
     /// <summary>Kuljetun reitin piste: kaupunki ja kulkutapa, jolla sinne saavuttiin (null = aloitus tai siirto ilman tapaa).</summary>
@@ -92,7 +96,7 @@ namespace Matkakirja.Peli
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 6;
+        public const int TallennusVersio = 7;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -231,6 +235,10 @@ namespace Matkakirja.Peli
                     : "{\"alkuVuoro\":" + p.Rahaton.AlkuVuoro.ToString(CultureInfo.InvariantCulture)
                       + ",\"paiva\":" + p.Rahaton.Paiva.ToString(CultureInfo.InvariantCulture) + "}");
                 Kentta(sb, "pudonnut", p.Pudonnut ? "true" : "false");
+                // Pelistreak (versio 7): vain alkanut putki (web JSON.stringify jättää puuttuvan p.streakin pois).
+                if (p.Streak != null)
+                    Kentta(sb, "streak", "{\"paiva\":" + Teksti(p.Streak.Paiva)
+                        + ",\"pituus\":" + p.Streak.Pituus.ToString(CultureInfo.InvariantCulture) + "}");
                 sb.Append('}');
             }
             sb.Append(']');
@@ -327,6 +335,9 @@ namespace Matkakirja.Peli
                         Paiva = (int)(MiniJson.Luku(ro, "paiva") ?? 0),
                     };
                 p.Pudonnut = MiniJson.Totuus(pd, "pudonnut");
+                // Pelistreak (versio 7); vanhassa tallennuksessa putkea ei ole (seuraava pelipäivä aloittaa 1:stä).
+                if (MiniJson.Kentta(pd, "streak") is Dictionary<string, object> so && MiniJson.Teksti(so, "paiva") is string sp && Streak.Kelpaa(sp))
+                    p.Streak = new StreakTila { Paiva = sp, Pituus = Math.Max(1, (int)(MiniJson.Luku(so, "pituus") ?? 1)) };
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
@@ -370,6 +381,8 @@ namespace Matkakirja.Peli
             // 5 → 6 (talouden vaihe 1): pelaajan rasti (0), rahaton (null), pudonnut (false) ja
             //   matkaPaattyi (null) puuttuvat → oletukset (lukija hoitaa). Pankin apua ei enää ole;
             //   vanha peli jatkuu nykyisellä kassalla, päiväkulu veloitetaan seuraavasta vuorokaudesta.
+            // 6 → 7 (pelistreak): pelaajan streak puuttuu → null (lukija hoitaa); ensimmäinen
+            //   pelipäivä päivityksen jälkeen aloittaa putken 1:stä.
             for (int v = versio; v < TallennusVersio; v++)
             {
                 switch (v)

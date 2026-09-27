@@ -48,10 +48,12 @@ namespace Matkakirja.Natiivi
             rahaSyy = null;
             if (muutos == 0) return;
             // Teon oma tapahtumarivi punnista (matkan hinta, löytöpalkkio) on tarkin syy.
-            var rivi = tapahtumat.Concat(kysymysLisat).LastOrDefault(t => t != null && t.Contains("punta"));
-            // Päiväkulu (talouden vaihe 1): teon oma punta-rivi on tarkempi, jos sama teko maksoi muutakin.
-            syy ??= rivi ?? paivakuluSyy ?? RahaSyyt.Oletus;
+            // Pelistreakin lokirivi ei ole teon oma rivi: sen syy on putken otsikko (streakSyy).
+            var rivi = tapahtumat.Concat(kysymysLisat).LastOrDefault(t => t != null && t.Contains("punta") && t != streakRivi);
+            // Päiväkulu (talouden vaihe 1) ja pelistreak: teon oma punta-rivi on tarkempi, jos sama teko maksoi muutakin.
+            syy ??= rivi ?? streakSyy ?? paivakuluSyy ?? RahaSyyt.Oletus;
             paivakuluSyy = null;
+            streakSyy = null;
             try { RahaMuuttui?.Invoke(muutos, syy, saldo); } catch (Exception e) { UnityEngine.Debug.LogException(e); }
         }
     }
