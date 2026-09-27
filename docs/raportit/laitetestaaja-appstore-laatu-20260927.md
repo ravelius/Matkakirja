@@ -104,16 +104,14 @@ todentamaan aitoa offline-käytöstä tällä kierroksella.** Suosittelen Peliko
 lentotila-testi tarvitaan, se vaatii joko Mac-tason verkkoeston simulaattorin prosessille tai
 fyysisen laitteen.
 
-### 11. Muisti ja lämpö 10 min pelissä: EI EHDITTY
+### 11. Muisti ja lämpö 10 min pelissä: PASS (jälkikäteen täydennetty)
 
-Ajan puutteen vuoksi ei ajettu erillistä 10 minuutin jatkuvaa pelisessiota lämpötilan/muistin
-seuraamiseksi. `kehysajat`/`lampo`-lokirivit (jotka sisältävät thermal-tilan) osoittivat koko
-tämän kierroksen ajan "Normaali"-lämpöä lyhyemmillä (< 2 min) testijaksoilla. Suosittelen
-erillistä pidempää ajoa jos aikaa on.
+Ajettu erikseen tilinvaihdon yhteydessä, ks. docs/raportit/savukierros-tf1031-lampo-20260927.md:
+11 min 1 s, lämpötila "Normaali" koko ajan (22/22 mittauspistettä), fps vakaa 30,0-32,6, ei
+poikkeuksia. Muisti RSS ~1,54 Gt (yksi mittapiste, ei trendiä pidemmältä ajalta).
 
 ## Ei ehditty / rajaukset
 
-- 10 min muisti/lämpö-seuranta jatkuvassa pelissä.
 - Offline-tilan aito todentaminen (ks. kohta 10).
 - iPadin täysi läpikäynti (nostokortit, chat, avauskortti jne. — testattu vain pysty/vaaka-
   peruskartta ja tiedettiin jo toimivaksi 1.0.29-1.0.31 muilla kierroksilla samalla käännöksellä).

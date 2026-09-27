@@ -24,10 +24,8 @@ tästä jos epäselvää).
   `docs/raportit/savukierros-tf10*-20260927*.md` ja `laitetestaaja-appstore-laatu-20260927.md`.
 
 ## Jono (tärkeysjärjestyksessä)
-1. **Viimeistele 10 min muisti/lämpö-seuranta** TF 1.0.31:llä (ks. luovutuksen ohjeet, saattaa
-   olla jo valmis kun aloitat — tarkista lampo.jsonl/kehysajat.jsonl ja raportoi Natiivisepälle).
-2. **1.0.32-junan savuke kun Natiiviseppä pyytää.**
-3. Avoimet App Store -löydökset (docs/raportit/laitetestaaja-appstore-laatu-20260927.md) — seuraa
+1. **1.0.32-junan savuke kun Natiiviseppä pyytää.**
+2. Avoimet App Store -löydökset (docs/raportit/laitetestaaja-appstore-laatu-20260927.md) — seuraa
    Natiivi-UI:n ja Pelikoodarin vastauksia, uusinta jos he pyytävät varmistusta.
 
 ## Kierroksen kaava (toistuu build-kierroksesta toiseen)

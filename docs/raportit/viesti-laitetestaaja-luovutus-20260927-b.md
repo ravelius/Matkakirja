@@ -29,24 +29,16 @@ HETI VOIMAAN:**
 - Tänään käytetty 14 puhe-/lukutestiä (8 Pulu-chat + 4 `puhe lue` + 2 nostokortin lukijaa) —
   tästä eteenpäin huomattavasti säästeliäämmin.
 
-## 10 minuutin muisti/lämpö-seuranta (KESKEN kun tämä kirjoitettiin — TARKISTA TULOS)
+## 10 minuutin muisti/lämpö-seuranta: VALMIS, PASS
 
-Natiiviseppä pyysi 10 min jatkuvan pelin muisti/lämpöseurantaa TF 1.0.31:llä App Store -
-laatukierrokseen. Käynnistin sen iPhone 18 Prolla (1572C658, HEIDÄN iPad 00008103 oli varattu
-~klo 18.20 asti) klo 17.56.55 (`uusi-peli 1 pariisi`, käännös juna-8096bae5/a86e4eb6, kontaineri
-`/Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658.../Documents`, loki
-`/private/tmp/claude-502/.../scratchpad/iphone-lampo-loki.txt`, ks. myös
-`/tmp/laitetestaaja-lampo-env.sh` ja `/tmp/lampo-alku.txt` tässä samassa työtilassa jos jatkat
-samalla koneella). **Tarkista `lampo.jsonl`/`kehysajat.jsonl` Documents-kansiosta ja konsoliloki
-thermal-kentän ("lampo":"Normaali"/"Kohonnut"/...) kehitys koko 10 min ajalta, kirjoita tulos
-uuteen raporttiin `docs/raportit/savukierros-tf1031-lampo-20260927.md`, committaa ja ilmoita
-Natiivisepälle.** En ehtinyt itse tarkistaa lopputulosta ennen tilinvaihtoa.
+Ajettu loppuun ennen tilinvaihtoa, ks. docs/raportit/savukierros-tf1031-lampo-20260927.md:
+11 min 1 s, lämpötila "Normaali" koko ajan, fps vakaa 30-32,6, 0 poikkeusta, muisti RSS ~1,54 Gt.
+App Store -raportti päivitetty vastaavasti. Natiivisepälle ilmoitettu.
 
 ## Jono seuraavalle sessiolle
 
-1. **Tarkista/viimeistele 10 min muisti/lämpö-tulos** (yllä) ja raportoi Natiivisepälle.
-2. **1.0.32-junan savuke kun Natiiviseppä pyytää.** Ei vielä SHA:ta tätä kirjoittaessa.
-3. Avoimet App Store -löydökset (docs/raportit/laitetestaaja-appstore-laatu-20260927.md):
+1. **1.0.32-junan savuke kun Natiiviseppä pyytää.** Ei vielä SHA:ta tätä kirjoittaessa.
+2. Avoimet App Store -löydökset (docs/raportit/laitetestaaja-appstore-laatu-20260927.md):
    - Natiivi-UI: iPhonen vaakatilan "Näytä yläpalkki" -nappi (mk-vakasnappi) rikkoo asettelun —
      odota heidän vahvistustaan oikealla laitekierrolla ennen kuin oletat sen korjatuksi.
    - Pelikoodari: offline-tilan aito todentaminen jäi kesken.
