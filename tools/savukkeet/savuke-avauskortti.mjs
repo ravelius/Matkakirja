@@ -10,8 +10,10 @@
  * ── VARTIOT (Pariisi ja Ateena, puhelin 390 × 844 ja iPad 834 × 1194) ──
  *
  *   1. KUTSU KARTALLA: kaupungin viereen tulee miniatyyri (herokuva +
- *      nimi), joka on ruudulla eikä peitä nostojen ikoneita, Pulua,
- *      Liiku-riviä eikä nappulaa.
+ *      nimi), joka on ruudulla eikä peitä Pulua, Liiku-riviä eikä
+ *      nappulaa. LÄHELLÄ (omistaja 27.9. klo 11.2x): väli nappulaan
+ *      ≤ KUTSUN_VALI_MAX px. Nostojen ikonin peitto sallitaan, jos
+ *      vapaata asentoa ei ole (lauta.js toinen kierros); se kirjataan.
  *   2. KUTSUN NAPAUTUS KASVATTAA KORTIN: avauskortti aukeaa.
  *   3. KORTISSA KOLME OSAA ja se mahtuu ruutuun ilman vieritystä:
  *      herokuva, esittely (≤ 2 lausetta) + Lue kaupunkilehti, kartta,
@@ -44,6 +46,8 @@ const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 const KAUPUNGIT = ['pariisi', 'ateena'];
+// Kutsun suurin väli nappulaan (lauta.js KUTSUN_ASENNOT: uloin rengas 36 px + asennon siirto).
+const KUTSUN_VALI_MAX = 48;
 const KAIKKI_RUUDUT = [
   { nimi: 'puhelin', w: 390, h: 844 },
   { nimi: 'ipad', w: 834, h: 1194 },
@@ -144,19 +148,35 @@ for (const ruutu of RUUDUT) {
       if (!k) return null;
       const r = k.getBoundingClientRect();
       const laatikko = (el) => { const b = el.getBoundingClientRect(); return { x0: b.left, y0: b.top, x1: b.right, y1: b.bottom }; };
-      const muut = [...document.querySelectorAll('.pollo-nappi, .pallolauta-nappula, .liiku-rivi, .pallolauta-nosto .nostosym-ikoni')]
-        .filter((el) => el.getBoundingClientRect().width > 0).map(laatikko);
+      const nakyvat = (v) => [...document.querySelectorAll(v)].filter((el) => el.getBoundingClientRect().width > 0).map(laatikko);
+      const muut = nakyvat('.pollo-nappi, .liiku-rivi');
+      const ikonit = nakyvat('.pallolauta-nosto .nostosym-ikoni');
+      /*
+       * Nappula piirretään GL-kankaalle (DOM-elementti on ruudun ulkopuolella),
+       * joten väli lasketaan kutsun siirtymästä kaupungin ankkuriin nähden:
+       * kortin left/top = asennon dx/dy, nappulan laatikko ankkurista kuten
+       * lauta.js paivitaKaupunkikortinKutsu (x ±14, y −46…+10).
+       */
+      const dx = parseFloat(k.style.left);
+      const dy = parseFloat(k.style.top);
+      const nappula = Number.isFinite(dx) && Number.isFinite(dy)
+        ? { x0: r.left - dx - 14, y0: r.top - dy - 46, x1: r.left - dx + 14, y1: r.top - dy + 10 } : null;
       return {
-        r: { x0: r.left, y0: r.top, x1: r.right, y1: r.bottom }, muut,
+        r: { x0: r.left, y0: r.top, x1: r.right, y1: r.bottom }, muut, ikonit, nappula,
         kuva: Boolean(k.querySelector('img')?.naturalWidth), nimi: k.textContent.trim(),
         leveys: innerWidth, korkeus: innerHeight,
       };
     });
     if (kutsu) {
       const peittaa = kutsu.muut.filter((m) => leikkaa(kutsu.r, m)).length;
-      vaadi(`1. ${nimi}: kutsuminiatyyri kartalla, ruudulla, ei peitä merkkejä`,
-        kutsu.kuva && kutsu.r.x0 >= 0 && kutsu.r.y0 >= 0 && kutsu.r.x1 <= kutsu.leveys && kutsu.r.y1 <= kutsu.korkeus && peittaa === 0,
-        `kuva ${kutsu.kuva}, laatikko ${JSON.stringify(kutsu.r)}, peittää ${peittaa}`);
+      const ikoneita = kutsu.ikonit.filter((m) => leikkaa(kutsu.r, m)).length;
+      const n = kutsu.nappula;
+      const vali = n ? Math.max(0, kutsu.r.x0 - n.x1, n.x0 - kutsu.r.x1, kutsu.r.y0 - n.y1, n.y0 - kutsu.r.y1) : null;
+      vaadi(`1. ${nimi}: kutsuminiatyyri kartalla, ruudulla, ei peitä Pulua/Liikua/nappulaa, lähellä kaupunkia`,
+        kutsu.kuva && kutsu.r.x0 >= 0 && kutsu.r.y0 >= 0 && kutsu.r.x1 <= kutsu.leveys && kutsu.r.y1 <= kutsu.korkeus
+          && peittaa === 0 && vali !== null && vali <= KUTSUN_VALI_MAX,
+        `kuva ${kutsu.kuva}, laatikko ${JSON.stringify(kutsu.r)}, peittää ${peittaa}, väli nappulaan ${vali} px`
+          + ` (≤ ${KUTSUN_VALI_MAX}), nostoikoneita alla ${ikoneita}`);
       if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `avauskortti-${kaupunki}-${ruutu.w}-0-kutsu.png`) });
       // 2. Kutsun napautus kasvattaa kortin.
       await sivu.mouse.click((kutsu.r.x0 + kutsu.r.x1) / 2, (kutsu.r.y0 + kutsu.r.y1) / 2);
