@@ -1,6 +1,8 @@
 // PeliOhjain.Muste — ELÄVÄ KARTTA, "isoisän muste" (omistaja 26.9.2026; docs/raportit/elava-kartta-suunnitelma-20260926.md
 // kohdat 2–3; Pelikoodari). Säännöt ovat Peli/KarttaMuste.cs:ssä; tämä lukee datan, pitää löydöt tallennuksessa ja kertoo
-// tapahtumat piirrolle (Natiiviseppä: NostonMuste) ja kartussille (Natiivi-UI: MaakuntaHeraa, MaakuntaValmis, NostoLoytyi).
+// tapahtumat piirrolle (Natiiviseppä: NostonMuste) ja kartussille (Natiivi-UI: NostoLoytyi). Omistaja 27.9.2026 klo 08.3x:
+// maakunnat ovat heränneinä heti ja salaisuudet näkyvät heti — MaakuntaHeraa ja MaakuntaValmis eivät enää laukea (jäävät
+// rajapintaan, kunnes kuuntelijat on poistettu).
 // Data: kokoelma karttavalot — kokoluokka ("paakohde" | "kohde" | "pieni", skeema 1.45; puuttuessa taso) ja maakunta
 // ("ISO:tunnus"); salaisuudet kokoelmasta maakuntasalaisuudet (id "salaisuus:<tunnus>", maakunta; skeema 1.47) tai
 // karttavalorivin salaisuus: true. Jäsennys taustasäikeessä kerran.
@@ -22,16 +24,18 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Löytö kirjattiin (uusi): valo, maakunta ja laskuri.</summary>
         public event Action<MusteLoyto> NostoLoytyi;
-        /// <summary>Maakunnan ensimmäinen nosto löytyi: väri valuu esiin, nimi kirjoittuu (suunnitelma kohta 3).</summary>
+        /// <summary>EI ENÄÄ LAUKEA (27.9.2026: kaikki maakunnat heränneinä heti). Poistetaan, kun kuuntelijat on poistettu.</summary>
+#pragma warning disable CS0067
         public event Action<string> MaakuntaHeraa;
-        /// <summary>Maakunnan kaikki nostot löytyivät: salaisuus-nosto (valo-id tai null) ilmestyy.</summary>
+        /// <summary>EI ENÄÄ LAUKEA (27.9.2026: salaisuus näkyy heti, ei palkintoa). Poistetaan, kun kuuntelijat on poistettu.</summary>
         public event Action<string, string> MaakuntaValmis;
+#pragma warning restore CS0067
         /// <summary>Data luettu: piirto voi päivittää kaikki merkit kerralla.</summary>
         public event Action MusteValmis;
 
         public bool MusteLuettu => muste != null;
 
-        /// <summary>Piirrolle: noston kokoluokka ja tila (löytämätön = himmeä jälki ilman nimeä). Ennen dataa: kohde, löydetty.</summary>
+        /// <summary>Piirrolle: noston kokoluokka ja tila (kaikki täysinä heti, NostonMuste.Taysi). Ennen dataa: kohde, löydetty.</summary>
         public NostonMuste NostonMuste(string valoId) =>
             muste == null ? new NostonMuste(Kokoluokka.Kohde, true, true, false) : muste.Tila(matka?.Tila.LoydetytNostot, valoId);
 
@@ -50,11 +54,8 @@ namespace Matkakirja.Natiivi
             var t = m.Kirjaa(matka.Tila.LoydetytNostot, valoId);
             if (!t.Uusi) return t;
             Tallenna();
-            Debug.Log($"MATKAKIRJA peli: muste löytö {valoId} ({t.Maakunta ?? "ei maakuntaa"} {t.Loydetyt}/{t.Kaikki})"
-                      + (t.MaakuntaHeraa ? ", maakunta herää" : "") + (t.MaakuntaValmis ? $", maakunta valmis → {t.Salaisuus ?? "ei salaisuutta"}" : ""));
+            Debug.Log($"MATKAKIRJA peli: muste löytö {valoId} ({t.Maakunta ?? "ei maakuntaa"} {t.Loydetyt}/{t.Kaikki})");
             try { NostoLoytyi?.Invoke(t); } catch (Exception e) { Debug.LogException(e); }
-            if (t.MaakuntaHeraa) try { MaakuntaHeraa?.Invoke(t.Maakunta); } catch (Exception e) { Debug.LogException(e); }
-            if (t.MaakuntaValmis) try { MaakuntaValmis?.Invoke(t.Maakunta, t.Salaisuus); } catch (Exception e) { Debug.LogException(e); }
             return t;
         }
 
@@ -105,13 +106,12 @@ namespace Matkakirja.Natiivi
                 case "tila":
                 {
                     var t = NostonMuste(arvo);
-                    return $"={arvo}: {t.Luokka}, {(t.Loydetty ? "löydetty" : "unohdettu")}{(t.Nakyy ? "" : ", piilossa")}{(t.Salaisuus ? ", salaisuus" : "")}";
+                    return $"={arvo}: {t.Luokka}, {(t.Loydetty ? "löydetty" : "löytämätön")}{(t.Taysi ? ", täysi" : ", piilossa")}{(t.Salaisuus ? ", salaisuus" : "")}";
                 }
                 case "loyda":
                 {
                     var t = NostoAvattu(arvo);
-                    return t == null ? "ei matkaa" : $"={arvo}: uusi {t.Uusi}, {t.Maakunta} {t.Loydetyt}/{t.Kaikki}"
-                        + (t.MaakuntaHeraa ? ", herää" : "") + (t.MaakuntaValmis ? ", valmis → " + t.Salaisuus : "");
+                    return t == null ? "ei matkaa" : $"={arvo}: uusi {t.Uusi}, {t.Maakunta} {t.Loydetyt}/{t.Kaikki}";
                 }
                 case "maakunnat":
                     return "=" + (MusteLuettu ? string.Join(" · ", MusteMaakunnat(arvo ?? "GRC").Select(x => $"{x.Maakunta} {x.Loydetyt}/{x.Kaikki}")) : "ei luettu");

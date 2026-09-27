@@ -4,9 +4,11 @@
 //     (karttavalot.kokoluokka, skeema 1.45, Sisältökirjurin luokitus); puuttuessa tasosta (1 pääkohde, 2 kohde, 3 pieni).
 //   - "Unohdettu" tila POISTETTU (omistaja 27.9.2026 klo 08.2x): kohdemaan kaikki nostot näkyvät heti täydellä
 //     ulkoasulla ja nimellä (NostonMuste.Taysi) — ei himmeää jälkeä, ei nimetöntä merkkiä. Löydöt tallennetaan yhä
-//     (Pelitila.LoydetytNostot, kenttä "nostotLoydetty") laskuria, kartussia ja salaisuutta varten (NostonMuste.Loydetty).
-//   - Maakunnat heräävät: maakunta on tasaista paperia, kunnes sen ensimmäinen nosto löytyy (MaakuntaHeraa); laskuri
-//     löydetyt/kaikki; kun kaikki löytyvät, "maakunnan salaisuus" -nosto ilmestyy (MaakuntaValmis, salaisuus näkyviin).
+//     (Pelitila.LoydetytNostot, kenttä "nostotLoydetty") laskuria ja kartussia varten (NostonMuste.Loydetty).
+//   - Maakuntien vaiheittainen herääminen POISTETTU (omistaja 27.9.2026 klo 08.3x): kohdemaan kaikki maakunnat ovat
+//     heränneinä heti (Heranneet tosi jokaiselle maakunnalle, jossa on nostoja); MusteLoyto.MaakuntaHeraa ei enää nouse.
+//   - Maakuntasalaisuudet näkyvät heti kuten muut nostot (sama omistajan linjaus): salaisuus on maakuntansa pääkohde ja
+//     kuuluu laskuriin; MaakuntaValmis ei enää nouse, eikä salaisuudella ole omaa ilmestymis- tai palkintoefektiä.
 // Piirto (Natiiviseppä) kysyy Tila(id); kartussi ja merkit (Natiivi-UI) kuuntelevat PeliOhjaimen tapahtumia.
 using System;
 using System.Collections.Generic;
@@ -17,8 +19,8 @@ namespace Matkakirja.Peli
     public enum Kokoluokka { Paakohde, Kohde, Pieni }
 
     /// <summary>
-    /// Noston tila piirrolle: luokka, löydetty (kortti avattu: laskuri ja kartussi), näkyykö lainkaan (salaisuus vasta
-    /// lopuksi) ja <see cref="Taysi"/>: piirretäänkö täysi merkki nimineen. Piirto lukee ulkoasun Taysi-kentästä,
+    /// Noston tila piirrolle: luokka, löydetty (kortti avattu: laskuri ja kartussi), näkyykö lainkaan (27.9.2026 alkaen
+    /// aina, myös salaisuus) ja <see cref="Taysi"/>: piirretäänkö täysi merkki nimineen. Piirto lukee ulkoasun Taysi-kentästä,
     /// EI Loydetty-kentästä (omistaja 27.9.2026: kaikki nostot täytenä heti).
     /// </summary>
     public readonly struct NostonMuste
@@ -31,7 +33,11 @@ namespace Matkakirja.Peli
         public bool Taysi => Nakyy;
     }
 
-    /// <summary>Löydön seuraukset: uusi löytö, maakunta heräsi (ensimmäinen), maakunta valmis (salaisuus ilmestyy).</summary>
+    /// <summary>
+    /// Löydön seuraukset: uusi löytö ja maakunnan laskuri. MaakuntaHeraa, MaakuntaValmis ja Salaisuus jäävät rajapintaan
+    /// (kuuntelijat kääntyvät), mutta ovat 27.9.2026 alkaen aina false/null: ei vaiheittaista heräämistä eikä salaisuuden
+    /// palkintoa.
+    /// </summary>
     public sealed class MusteLoyto
     {
         public string Id, Maakunta, Salaisuus;
@@ -44,7 +50,6 @@ namespace Matkakirja.Peli
         sealed class Rivi { public string Maakunta; public Kokoluokka Luokka; public bool Salaisuus; }
 
         readonly Dictionary<string, Rivi> nostot = new Dictionary<string, Rivi>(StringComparer.Ordinal);
-        readonly Dictionary<string, string> salaisuudet = new Dictionary<string, string>(StringComparer.Ordinal);
 
         public int Nostoja => nostot.Count;
 
@@ -67,11 +72,10 @@ namespace Matkakirja.Peli
             nostot[id] = new Rivi { Maakunta = string.IsNullOrEmpty(maakunta) ? null : maakunta, Luokka = luokka };
         }
 
-        /// <summary>Maakunnan salaisuus-nosto (maakuntarajat.alkiot[].salaisuus): aina pääkohde, näkyy vasta maakunnan valmistuttua.</summary>
+        /// <summary>Maakunnan salaisuus-nosto (maakuntarajat.alkiot[].salaisuus): aina pääkohde, näkyy heti ja kuuluu laskuriin.</summary>
         public void LisaaSalaisuus(string maakunta, string id)
         {
             if (string.IsNullOrEmpty(maakunta) || string.IsNullOrEmpty(id)) return;
-            salaisuudet[maakunta] = id;
             nostot[id] = new Rivi { Maakunta = maakunta, Luokka = Kokoluokka.Paakohde, Salaisuus = true };
         }
 
@@ -79,31 +83,25 @@ namespace Matkakirja.Peli
         {
             if (id == null || !nostot.TryGetValue(id, out var r)) return new NostonMuste(Kokoluokka.Kohde, true, true, false);
             bool loydetty = loydetyt != null && loydetyt.Contains(id);
-            bool nakyy = !r.Salaisuus || loydetty || Valmis(loydetyt, r.Maakunta);
-            return new NostonMuste(r.Luokka, loydetty, nakyy, r.Salaisuus);
+            return new NostonMuste(r.Luokka, loydetty, true, r.Salaisuus);
         }
 
-        /// <summary>Maakunnan laskuri (salaisuus ei kuulu kaikkiin).</summary>
+        /// <summary>Maakunnan laskuri löydetyt/kaikki (salaisuus on yksi maakunnan nostoista).</summary>
         public (int Loydetyt, int Kaikki) Laskuri(ICollection<string> loydetyt, string maakunta)
         {
             int kaikki = 0, loyd = 0;
             if (maakunta == null) return (0, 0);
             foreach (var kv in nostot)
             {
-                if (kv.Value.Salaisuus || kv.Value.Maakunta != maakunta) continue;
+                if (kv.Value.Maakunta != maakunta) continue;
                 kaikki++;
                 if (loydetyt != null && loydetyt.Contains(kv.Key)) loyd++;
             }
             return (loyd, kaikki);
         }
 
-        public bool Heranneet(ICollection<string> loydetyt, string maakunta) => Laskuri(loydetyt, maakunta).Loydetyt > 0;
-
-        bool Valmis(ICollection<string> loydetyt, string maakunta)
-        {
-            var (l, k) = Laskuri(loydetyt, maakunta);
-            return k > 0 && l >= k;
-        }
+        /// <summary>Herännyt = maakunnassa on nostoja (omistaja 27.9.2026: kaikki heränneinä heti, löydöistä riippumatta).</summary>
+        public bool Heranneet(ICollection<string> loydetyt, string maakunta) => Laskuri(loydetyt, maakunta).Kaikki > 0;
 
         /// <summary>Maan maakunnat ("ISO:" -alkuiset) laskureineen, esim. kartussin tutkimuspalkkiin.</summary>
         public IEnumerable<(string Maakunta, int Loydetyt, int Kaikki)> Maakunnat(ICollection<string> loydetyt, string iso)
@@ -118,8 +116,8 @@ namespace Matkakirja.Peli
         }
 
         /// <summary>
-        /// Kirjaa löydön (kortti avattu) ja kertoo seuraukset. Tuntematon id kirjataan silti (löytöjoukkoon), mutta sillä ei
-        /// ole maakuntaa. Toinen avaus: Uusi = false eikä tapahtumia.
+        /// Kirjaa löydön (kortti avattu) ja kertoo laskurin. Tuntematon id kirjataan silti (löytöjoukkoon), mutta sillä ei
+        /// ole maakuntaa. Toinen avaus: Uusi = false.
         /// </summary>
         public MusteLoyto Kirjaa(ISet<string> loydetyt, string id)
         {
@@ -127,16 +125,9 @@ namespace Matkakirja.Peli
             if (string.IsNullOrEmpty(id) || loydetyt == null) return t;
             nostot.TryGetValue(id, out var r);
             t.Maakunta = r?.Maakunta;
-            bool olivalmis = r != null && !r.Salaisuus && Valmis(loydetyt, r.Maakunta);
             t.Uusi = loydetyt.Add(id);
             if (!t.Uusi || r == null || r.Maakunta == null) return t;
-            var (l, k) = Laskuri(loydetyt, r.Maakunta);
-            t.Loydetyt = l;
-            t.Kaikki = k;
-            if (r.Salaisuus) return t;
-            t.MaakuntaHeraa = l == 1;
-            t.MaakuntaValmis = !olivalmis && k > 0 && l >= k;
-            if (t.MaakuntaValmis) salaisuudet.TryGetValue(r.Maakunta, out t.Salaisuus);
+            (t.Loydetyt, t.Kaikki) = Laskuri(loydetyt, r.Maakunta);
             return t;
         }
     }

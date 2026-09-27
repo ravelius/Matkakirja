@@ -200,7 +200,7 @@ namespace Matkakirja.Peli
         public string Maa;
         /// <summary>Pääaarre löytyi: Matka kutsuu webin noteRecordin vastineen (ennätysbonus).</summary>
         public bool Ennatys;
-        /// <summary>Aina epätosi 27.9.2026 alkaen (web ei enää sano MANNERLENTO_ILMOITUSta); kenttä säilyy tallennusmuodon vuoksi.</summary>
+        /// <summary>Pääaarre vaelluksessa, ja muilla mantereilla on vielä aarre löytämättä (web MANNERLENTO_ILMOITUS).</summary>
         public bool MannerlentoIlmoitus;
 
         /// <summary>Webin revealToken-paluuarvo: 'pollo' tai tyyppi.</summary>
@@ -463,7 +463,8 @@ namespace Matkakirja.Peli
                     if (vaellus)
                     {
                         loyto.RahaLisays = LaattaVakiot.PaaaarrePalkkio;
-                        // Mannerlentoilmoitusta ei enää anneta: lento on auki alusta asti (web game.js, 27.9.2026).
+                        foreach (var m in MuutMantereet(manner))
+                            if (!PaaaarreLoytynyt(m)) { loyto.MannerlentoIlmoitus = true; break; }
                     }
                     break;
                 }
