@@ -831,6 +831,30 @@
     color: #d9c9a4;
 }
 
+/* HAVAINNEKUVA-merkki (web #3438 .kuvateksti-havainne.reveal-havainne): kirjoituskone 0,68 em = 10,88 px, versaali,
+ * harvennus 0,08 em, täyte 0 / 0,35 em, reunus 1 px, pyöristys 3, oma rivi keskellä 0,55 em tekstien alla.
+ * Tummalla rgba(217, 201, 164, .78) / reunus .35; paikallismallin vaalealla rgba(70, 51, 31, .72) / .28 — sRGB-yhdistelminä
+ * taustojen rgb(11, 8, 5) ja #e6d8ae päällä (lineaarinen väriavaruus vaalentaisi alfan, vrt. Kartta.uss .mk-nosto__havainne). */
+.mk-paljastus__havainne {
+    align-self: center;
+    margin-top: 5.98px;
+    padding: 0 3.81px;
+    height: 17px;
+    font-size: 10.88px;
+    letter-spacing: 9.53px; /* web 0.87px */
+    color: rgb(172, 159, 129);
+    border-width: 1px;
+    border-color: rgb(83, 76, 61);
+    border-radius: 3px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+}
+
+.mk-paljastus--paikallis .mk-paljastus__havainne {
+    color: rgb(115, 97, 71);
+    border-color: rgb(185, 170, 134);
+}
+
 .mk-paljastus__fakta {
     margin-top: 11.2px;
     max-width: 432px;

@@ -56,7 +56,7 @@ namespace Matkakirja.Natiivi
         const int KuvaMs = 420, TekstiMs = 760, LeimaMs = 700, PieniLiikeMs = 900;
 
         readonly VisualElement kerros, scene, tunnus, kuva, kuvapaikka, reuna, caption, loyto, leima;
-        readonly Label alaotsake, nimi, palkkio, fakta, isoisa, arvo, leimaPvm;
+        readonly Label alaotsake, nimi, palkkio, fakta, isoisa, havainne, arvo, leimaPvm;
         readonly Button jatka;
         Action suljettu;
         Action ohitaOdotus;
@@ -106,6 +106,11 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(fakta, Kirjasin.Kone);
             isoisa = Rakenne.Teksti("", "mk-paljastus__isoisa", caption);
             Kirjasimet.Aseta(isoisa, Kirjasin.Kone);
+            // HAVAINNEKUVA-merkki (web #3438 .reveal-havainne, Fablen erä TEKIJÄMERKINNÄT 27.9.): aarrekuvat ovat tekoälyn
+            // tuottamia, joten kortissa on kuvan kanssa sama pieni merkki kuin kuvateksteissä, tekstien alla keskellä.
+            havainne = Rakenne.Teksti("HAVAINNEKUVA", "mk-paljastus__havainne", caption);
+            havainne.tooltip = "Tekoälyllä tuotettu havainnekuva";
+            Kirjasimet.Aseta(havainne, Kirjasin.Kone);
             kerros.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
             scene.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
 
@@ -174,13 +179,14 @@ namespace Matkakirja.Natiivi
             // Kuva: löydön oma (manner-/maakohtainen), laattatyypin aarrekuva tai piirros varana.
             string url = pollo ? null : !string.IsNullOrEmpty(d.LoytoKuvaUrl) ? d.LoytoKuvaUrl
                 : LaattaIkoni.AarreKuvat.TryGetValue(tyyppi ?? "", out var u) ? u : null;
+            havainne.style.display = url != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (url != null)
                 Kuvat.Hae(url, t =>
                 {
                     if (v != versio) return;
                     if (t != null) kuva.style.backgroundImage = new StyleBackground(t);
                     // E17 (web rakennaPaljastus: puuttuva kuva poistaa kuva-alueen, kortti jatkaa tekstillä).
-                    else kuvapaikka.style.display = DisplayStyle.None;
+                    else { kuvapaikka.style.display = DisplayStyle.None; havainne.style.display = DisplayStyle.None; }
                 });
             else if (pollo) Vara(tyyppi); // pöllöllä ei ole aarrekuvaa: viivapiirros kuten tulosruudussa
             else kuvapaikka.style.display = DisplayStyle.None;

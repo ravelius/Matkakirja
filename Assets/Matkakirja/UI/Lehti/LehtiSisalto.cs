@@ -25,7 +25,13 @@ namespace Matkakirja.Natiivi
 
     public sealed class LehtiKuva
     {
-        public string Lahde, Lyhyt, Selite, LahdeRivi, Vuosi, Otsikko;
+        public string Lahde, Lyhyt, Selite, Vuosi, Otsikko;
+        /// <summary>
+        /// Lähderivi täydennettynä Commonsin tekijällä ja lisenssillä, jos jompikumpi puuttuu (Kuvatekija, web taydennaLahde
+        /// #3438): kaikki lähderivit piirtyvät tämän kautta, joten täydennys on yhdessä paikassa kuten webin taytaLahderivi.
+        /// </summary>
+        public string LahdeRivi { get => Kuvatekija.Taydenna(lahdeRivi, Lahde); set => lahdeRivi = value; }
+        string lahdeRivi;
         /// <summary>Matkakirjan ihmeen kulmanauhan teksti (Nostokortti.Ihmenauha), muuten null.</summary>
         public string Nauha;
         /// <summary>Suurennoksen reaktiorivin tunniste ja otsikko (web teos.reaktio), muuten null.</summary>
