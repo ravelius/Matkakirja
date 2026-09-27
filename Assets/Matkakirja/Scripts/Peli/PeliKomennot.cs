@@ -307,7 +307,8 @@ namespace Matkakirja.Natiivi
                             if (A(2) == "pois") Puhe.Virta = false;
                             else if (A(2) == "paalle") Puhe.Virta = true;
                             return $"=virta {(Puhe.Virta ? "päällä" : "pois")}, striimi {(Puhe.Striimi ? "päällä" : "pois")}"
-                                + $"{(Puhe.VirtaPetti ? " (striimi petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms";
+                                + $"{(Puhe.VirtaPetti ? " (striimi petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms"
+                                + $", katkot [{string.Join(", ", System.Linq.Enumerable.Select(Puhe.Raot, x => x.ToString("0", CultureInfo.InvariantCulture)))}] ms";
                         // Lukee annetun tekstin kertojan äänellä (palavirran mittaus: "puhe virta" → 1. ääni ms, aani mittaa).
                         case "lue":
                         {
