@@ -351,8 +351,6 @@ namespace Matkakirja.Natiivi
             ViimeVirhe = null;
             ekaAlku = Time.unscaledTime;
             mittaaEka = true;
-            raot.Clear();
-            palaLoppui = -1f;
             // Palavirta (Virta): lyhyt ensimmäinen pala soi heti, loput haetaan sen soidessa (Lukijaaani.VirtaPalat).
             var palat = Virta && sailo ? Lukijaaani.VirtaPalat(teksti) : new List<string> { teksti };
             if (palat.Count > 1)
@@ -368,10 +366,12 @@ namespace Matkakirja.Natiivi
 
         float ekaAlku;
         bool mittaaEka;
-        float palaLoppui = -1f;
+        static float klippiLoppui = -1f;
         static readonly List<double> raot = new List<double>();
-        /// <summary>Palavirran katkot ms (edellisen palan loppu → seuraavan alku) viimeisimmässä Lue-kutsussa (mittari: "puhe virta").</summary>
+        /// <summary>Katkot ms: synteesiklipin loppu → seuraavan alku, kun väli on alle 5 s (palavirran palat ja
+        /// ketjutetut Lue-kutsut, esim. nostokortin otsikko → kappaleet). Mittari: "puhe virta"; "puhe katkot nollaa".</summary>
         public static IReadOnlyList<double> Raot => raot;
+        public static void NollaaRaot() { raot.Clear(); klippiLoppui = -1f; }
 
         /// <summary>
         /// PALAVIRTA: palat peräkkäin samana puheena. Seuraava pala haetaan heti, kun edellinen on pyydetty
@@ -585,7 +585,7 @@ namespace Matkakirja.Natiivi
             // Palavirran välissä tauotettu puhe ei jatku itsestään: odotetaan jatkoa (Jatka purkaa tauon).
             while (jatko && tauolla && oma == tunnus) yield return null;
             if (oma != tunnus) { Destroy(klippi); yield break; }
-            if (jatko && palaLoppui >= 0f) raot.Add((Time.unscaledTime - palaLoppui) * 1000.0);
+            if (synteesi && klippiLoppui >= 0f && Time.unscaledTime - klippiLoppui < 5f) raot.Add((Time.unscaledTime - klippiLoppui) * 1000.0);
             AloitaKlippi(klippi, synteesi, jatko);
             if (synteesi && mittaaEka) { ViimeEkaAaniMs = (Time.unscaledTime - ekaAlku) * 1000.0; mittaaEka = false; }
             // Viive pyynnöstä ääneen (löydös 118: intron pitää alkaa painalluksesta heti).
@@ -596,7 +596,8 @@ namespace Matkakirja.Natiivi
             while (oma == tunnus && (lahde.isPlaying || tauolla)) yield return null;
             if (oma != tunnus) yield break;
             // Palavirran välipala: puhe jatkuu seuraavalla palalla (SoitaPalat), ei loppua eikä Puhuu-muutosta.
-            if (!viimeinen) { palaLoppui = Time.unscaledTime; yield break; }
+            if (synteesi) klippiLoppui = Time.unscaledTime;
+            if (!viimeinen) yield break;
             SoivaUrl = null;
             AsetaPuhuu(false);
             var l = loppu;

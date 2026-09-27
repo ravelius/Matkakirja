@@ -32,6 +32,7 @@
 //   luento kaupunki|intro|lento|lento-alku|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
 //   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
 //   puhe lue <teksti>         lukee tekstin kertojan äänellä (palavirran mittaus); puhe virta|striimi [pois|paalle]
+//   puhe katkot               nollaa katkomittarin (puhe virta → katkot [ms]: klipin loppu → seuraavan alku < 5 s)
 //   kehittaja koodi|pois|tila kehittäjätila kuin Päävalikon kenttä (Asetukset.AsetaKehittaja): koodi luetaan
 //                             Documents/kehittaja-koodi.txt:stä, joka poistetaan heti; arvoa ei kirjata mihinkään
 //                             (puhemittaus x-pollo-kehittaja-otsakkeella ilman IP-päivärajaa). tila: päällä, koodi on/ei
@@ -309,6 +310,7 @@ namespace Matkakirja.Natiivi
                             return $"=virta {(Puhe.Virta ? "päällä" : "pois")}, striimi {(Puhe.Striimi ? "päällä" : "pois")}"
                                 + $"{(Puhe.VirtaPetti ? " (striimi petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms"
                                 + $", katkot [{string.Join(", ", System.Linq.Enumerable.Select(Puhe.Raot, x => x.ToString("0", CultureInfo.InvariantCulture)))}] ms";
+                        case "katkot": Puhe.NollaaRaot(); return "=katkot nollattu";
                         // Lukee annetun tekstin kertojan äänellä (palavirran mittaus: "puhe virta" → 1. ääni ms, aani mittaa).
                         case "lue":
                         {
@@ -322,7 +324,7 @@ namespace Matkakirja.Natiivi
                             if (A(2) == "pois") Puhe.Striimi = false;
                             else if (A(2) == "paalle") { Puhe.Striimi = true; Puhe.NollaaVirta(); }
                             return $"=striimi {(Puhe.Striimi ? "päällä" : "pois")}{(Puhe.VirtaPetti ? " (petti: vanha polku)" : "")}";
-                        default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]|striimi [pois|paalle]";
+                        default: return "käyttö: puhe seis|ohita|pois|paalle|virta [pois|paalle]|striimi [pois|paalle]|katkot|lue <teksti>";
                     }
                 case "kehittaja":
                     switch (A(1))
