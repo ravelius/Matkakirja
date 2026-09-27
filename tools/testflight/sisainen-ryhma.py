@@ -9,7 +9,8 @@
 Ympäristö: ASC_KEY_ID, ASC_ISSUER_ID, ASC_AVAIN_POLKU (.p8-tiedosto),
 TESTAAJA (sähköposti, valinnainen; oletus tilin omistaja). Argumentit: --bundle-id, --build
 (CFBundleVersion), --odota-min (käsittelyn aikaraja), --testattavaa (TestFlightin
-"What to test" -teksti buildin kaikille kielille; tyhjä = ei muuteta).
+"What to test" -teksti buildin kaikille kielille; tyhjä = ei muuteta), --vanhenna
+(build vanhennetaan TestFlightissa eikä liitetä ryhmään; vikainen build pois testaajilta).
 Kaikki virheet näkyvät ::error-rivinä ja lopettavat nollasta poikkeavasti.
 """
 import argparse
@@ -34,6 +35,7 @@ def main():
     p.add_argument('--build', required=True)
     p.add_argument('--odota-min', type=int, default=45)
     p.add_argument('--testattavaa', default='')
+    p.add_argument('--vanhenna', action='store_true')
     a = p.parse_args()
 
     kid = os.environ['ASC_KEY_ID']
@@ -142,6 +144,14 @@ def main():
             if tila not in (200, 201):
                 virhe('What to test -lisäys epäonnistui', f'{paakieli}: {tila}: {d}')
         print(f"What to test asetettu ({', '.join(k['attributes'].get('locale', '?') for k in kielet) or paakieli}).")
+
+    if a.vanhenna:
+        tila, d = kutsu('PATCH', f'/v1/builds/{build_id}', {'data': {
+            'type': 'builds', 'id': build_id, 'attributes': {'expired': True}}})
+        if tila != 200:
+            virhe('Buildin vanhennus epäonnistui', f'{a.build}: {tila}: {d}')
+        print(f'Build {a.build} vanhennettu (ei enää asennettavissa TestFlightista).')
+        return
 
     if kaikki_buildit:
         print('Ryhmä saa kaikki buildit automaattisesti — liittämistä ei tarvita.')
