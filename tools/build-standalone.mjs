@@ -435,6 +435,7 @@ const MODULES = [
   'js/packs/valokuvat-flickr.js',
   'js/packs/liput-paikalliset.js',
   'js/packs/lippu-tekijat.js',
+  'js/packs/commons-tekijat.js',
   'js/packs/africa-valokuvat.js',
   'js/packs/africa-saapumiset.js',
   'js/packs/africa-kulttuuri.js',
@@ -658,6 +659,7 @@ const MODULES = [
   // Pro-tuottajan tekijäsivu ennen lähderivien piirtäjiä (nähtävyydet
   // ja maalehti tuovat sen; moduuli tuo ehdotukset ja ui-apurit, jotka
   // ovat yllä).
+  'js/kuvatekija.js',
   'js/tekijakortti.js',
   /*
    * Tasogalleria ennen ui.js:ää: galleria tuo minipopupin (yllä) ja

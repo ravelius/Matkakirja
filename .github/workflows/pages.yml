@@ -38,6 +38,11 @@ jobs:
       - name: Kokoa yhden tiedoston versio
         run: node tools/build-standalone.mjs
 
+      # Projektisivun luvut (projekti.html) lasketaan pelin aineistosta
+      # juuri ennen julkaisua, jotta ne ovat aina tuoreita.
+      - name: Päivitä projektisivun luvut
+        run: node tools/tee-projekti-data.mjs
+
       - name: Kerää julkaistavat tiedostot
         run: |
           mkdir -p _site/dist
@@ -45,8 +50,12 @@ jobs:
           # Erillinen työhuonesivusto (tyohuone.html + oma manifesti)
           # poistettiin 18.8.2026: työhuone on nyt pelin sisällä
           # kehittäjävivun takana (hampurilaisvalikon TYÖHUONE-osio).
-          cp index.html kohtaamiskuvat.html linssikatalogi.html linssikatalogi-data.js pelikatalogi.html pelikatalogi-data.js manifest.webmanifest sw.js .nojekyll _site/
-          cp -r css js assets docs _site/
+          cp index.html kohtaamiskuvat.html projekti.html projekti-data.js linssikatalogi.html linssikatalogi-data.js pelikatalogi.html pelikatalogi-data.js manifest.webmanifest sw.js .nojekyll _site/
+          # Projektisivu: projekti.html + projekti/ (tyyli ja moduulit) +
+          # projekti-data.js; kuvat assets/projekti/. Vanhat katalogisivut
+          # ovat ohjaussivuja projekti.html#linssit / #pelit, ja niiden data
+          # tarvitaan projektisivulle.
+          cp -r css js assets docs projekti _site/
           cp dist/matkakirja.html _site/dist/
 
       - uses: actions/upload-pages-artifact@v3
