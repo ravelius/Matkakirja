@@ -1,4 +1,4 @@
-# Natiivi-UI:n luovutus 27.9.2026 (y), klo 14.3x
+# Natiivi-UI:n luovutus 27.9.2026 (y), päivitetty klo 17.2x
 
 Jatkaa luovutusta (x) -20260927-tilinvaihto.md. Fable = local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc (päätoimittaja
 tilapäisesti Opus). Simulaattorit: oma iPhone 17 FB234D08, jaettu iPad Pro 11 503000D1. Käännökset proto-kaanna.sh:lla
@@ -15,16 +15,27 @@ talous-tila.py (tallennuksen muokkaus: rahaton | loppu), web/talous-kuvat.mjs (w
   ui puu listaa vain näkyvät; Laitetestaaja korjasi raporttinsa 84da8c2a7.
 - Worktreet: kuvapakka poistettu; pulu-karttavaisto-codex on samireivinen-tilin (Codex poistaa, postilaatikko 98f4e19a1).
 
-## KESKEN 1: TALOUS-UI (natiivi-ui/talous-vaihe1 @ 1a4852e8, Pelikoodarin pelistreak 4d93da8d:n päällä)
-Työkopio /Users/Shared/Claude/wt/proto-natiivi-ui-nostot. Sisältö: kassarivi (punainen + "rahat loppu · N vrk",
-iPhonella "0£ 2 vrk 1/80" ilman laukkuikonia), kassan vihje laukussa (Kukkaro-rivin alla), Rahatilanne- ja
-Pelistreak-kupla (Leima) + Livian tunne, loppukortti Huipennus-dialogilla (NaytaLoppu; napit rivittyvät), Odota =
-saapas. Jatka-polku: Ylapalkki.RiviAsetettu → PaivitaKassa (Jatka ei laukaise TilaMuuttui).
-Laitteella PASS (b78030b0 / 26515698): kassa, vrk laskee, vihje, varoituskupla (video nv-06), loppukortti, Jatka
-viimeisestä tallennuksesta (palautti 400 £), Odota Vallettassa (vuoro kuluu). 15.00-käännös: iPhonen pilleri ilman
-ikonia → tarkista että "1/80" mahtuu, sitten kuvaparit (proto-3d/lokit/natiivi-ui-talous/: kuvapari-loppukortti.png,
-natiivi-varoituskupla.png, kassapari tekemättä: web-kassa-rahaton.png vs natiivi) → Fable → omistaja → merge-pyyntö
-Natiivisepälle 1.0.30-junaan. Pelistreak-kuplaa ei vielä nähty laitteella (koetila pelipaiva 2026-09-27 … ×3).
+## TILANNE 17.2x
+- TALOUS-UI 2addc08c on BUILD 30:ssä (master). Elämäpalkki (omistaja hyväksyi web #3421 16.5x): natiivi-ui/talous-vaihe1
+  @ 1281414c (8 neliötä kartan yläreunaan, väistö, miniselite; lyhyt "0£ 2 vrk" kaikilla) → MERGE-PYYNTÖ Natiivisepällä
+  1.0.31:een, kuvaparit Fablella (lokit/natiivi-ui-talous/kuvapari-elamapalkki2-{iphone,ipad}.png).
+- LUENTA AINA (omistaja 15.5x): natiivi-ui/luenta-aina e8199dc0 (Pelikoodarin f4ab9dc2:n päällä) → merge-pyyntö lähetetty.
+- HAVAINNEKUVA 793576bd, MITÄ UUTTA 296ffd04, AVAUSKORTTI 11a3c43a: junassa/masterissa.
+- ALOITUSVALINTA (omistaja 16.3x/16.5x): pisteet → natiivi-ui/aloitusvalinta 7f699522 (NaytaVain(nakyvat) aina) →
+  merge-pyyntö lähetetty. Pulun repliikit TOIMIVAT: esittely näkyy KERRAN LAITTEELLA (lippu matkakirja-livia-avaus, kuten
+  web). KYSYMYS Fablella: jokaisessa uudessa matkassa? Diagnostiikkahaara natiivi-ui/livia-avaus 7cca24a9 (EI mergeä;
+  poista, kun päätös tehty). Lipun poisto simulaattorista: `xcrun simctl spawn <UDID> defaults delete
+  <data>/Library/Preferences/app.matkakirja.proto3d matkakirja-livia-avaus` (plutil-muokkaus ei mene cfprefsd:n ohi).
+
+## KESKEN: VIERITYS (omistaja 17.0x) — natiivi-ui/vieritys-2 @ 34366dbd, työkopio wt/proto-natiivi-ui-vieritys
+Analyysi (Opus-agentti): opas/linssikatalogi ym. käyttivät UITK:n ScrollViewia (heitto 1/3 Safarista), kartta piirtyi
+arkin takana, katto 60 Hz. Tehty: (1) Kosketusvieritys.LiitaYleinen kaikkien UiKerros-juurien pystysuuntaisiin
+ScrollViewihin (haltuunotto vasta pystyvedossa; lehti/nosto omilla liitoksillaan), (2) opas/linssipaneeli ≥ 85 % ruudusta
+→ KuvaSumennus.Kokoruutu (pysäytyskuva, kamera pois). KYSYMYS Fablella: 120 Hz UI-vierityksessä (S10).
+Mittaus: scratchpad siirtyma.py <video> [pt-leveys] (kehysten välinen siirtymä PIL:llä). ENNEN (077548e0, opas pariisi,
+pyyhkäisy 200 pt / 0,1 s): iPhone 612 pt, 56 liikkuvaa kehystä/s; iPad 813 pt, 48/s. JÄLKEEN: 18.00-käännös
+(juna/b13+talous+luenta-aina+aloitusvalinta+vieritys-2, FB234D08 + 503000D1) → sama mittaus → video + luvut Fablelle →
+merge-pyyntö.
 
 ## OPIT
 - Päättynyt matka ei jää tallennukseksi (web poistaa, natiivi Aloitus) → loppukortti testataan elävänä: rahaton
