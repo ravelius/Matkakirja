@@ -8003,6 +8003,65 @@ export const KULTTUURI_KATEGORIAT = {
           + 'kannuhyllyn ja tulikorin, jotka Vermeer oli itse peittänyt.',
       },
     },
+    {
+      id: 'vesi',
+      nimi: 'Vesi',
+      johdanto: 'Koko kaupunki seisoo puupaalujen varassa mudassa — ja monet '
+        + 'talot kallistuvat kadulle, koska laki vaati sitä.',
+      tehtava: {
+        kysymys: 'Miksi Amsterdamin kanaalitalot kallistuvat usein '
+          + 'kadulle päin?',
+        vaihtoehdot: [
+          'Maanjäristysten vuoksi',
+          'Se helpotti tavaroiden nostoa yläkertaan',
+          'Rakennusvirheen vuoksi',
+          'Suojaksi tulvilta',
+        ],
+        oikea: 1,
+        fakta: 'Kapeissa taloissa ei ollut tilaa portaikoille, joten '
+          + 'huonekalut ja tavarat nostettiin ikkunasta nostokoukulla — '
+          + 'kallistus esti kuorman hankaamasta seinää vasten.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolme kanaalia, yksi suunnitelma',
+          tiedosto: 'Prinsengracht Amsterdam.jpg',
+          teksti: 'Vuonna 1613 kaupunki päätti laajentua järjestelmällisesti: '
+            + 'kolme puolikaarista kanaalia, Herengracht, Keizersgracht ja '
+            + 'Prinsengracht, kaivettiin vanhan kaupungin ympärille '
+            + 'kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. '
+            + 'Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät ja '
+            + 'reunustettu tuhansilla kauppiastaloilla — kunnianhimoisin '
+            + 'kaupunkisuunnitteluhanke aikansa Euroopassa. Unesco lisäsi '
+            + 'koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna '
+            + '2010.',
+          lyhyt: 'Kolme kanaalia suunniteltiin 1613 kaupungin laajentamiseksi; Unesco listasi ne 2010.',
+          selite: 'Kolme kanaalia, Herengracht, Keizersgracht ja '
+            + 'Prinsengracht, suunniteltiin vuonna 1613 kaupungin '
+            + 'laajentamiseksi, ja Unesco listasi ne vuonna 2010.',
+          lahde: 'Aforaseem, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grachtengordel',
+        },
+        {
+          otsikko: 'Talo, joka kallistuu tarkoituksella',
+          tiedosto: 'Amsterdam - row houses (3415201897).jpg',
+          teksti: 'Monet kanaalitalot, kuten kuvan punainen talo, kallistuvat '
+            + 'hieman eteenpäin katua kohti. Tämä ei ole vuosisatojen '
+            + 'painumista vaan tarkoituksellinen ratkaisu: kapeissa '
+            + 'porrastaloissa ei ollut tilaa leveille portaikoille, joten '
+            + 'vilja, olut ja huonekalut nostettiin ullakon nostokoukulla '
+            + 'suoraan kadulta ylimpiin kerroksiin. Kallistus esti nostettavan '
+            + 'kuorman hankaamasta seinää tai ikkunoita vasten matkalla '
+            + 'ylös. Kaupunki rajoitti kallistuksen enintään yhteen '
+            + 'metriin joka kahtakymmentäviittä metriä kohti.',
+          lyhyt: 'Kanaalitalot kallistuvat tarkoituksella, jotta tavarat mahtuvat nostokoukulla ohi seinän.',
+          selite: 'Kanaalitalot kallistuvat tarkoituksella eteenpäin, jotta '
+            + 'nostokoukulla ylös vedettävät tavarat eivät hankaa seinää '
+            + 'vasten.',
+          lahde: 'Ernest McGray, Jr., Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE":
@@ -15491,6 +15550,79 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'palatsi',
+      nimi: 'Palatsi',
+      johdanto: 'Tsaari rakennutti kesäpalatsin vaimolleen — ja asui itse '
+        + 'vieressä pienessä mökissä valvomassa työmaata.',
+      tehtava: {
+        kysymys: 'Kenelle Venäjän tsaari Pietari Suuri omisti Kadriorgin '
+          + 'palatsin?',
+        vaihtoehdot: [
+          'Äidilleen',
+          'Tyttärelleen',
+          'Vaimolleen Katariinalle',
+          'Kenraalilleen',
+        ],
+        oikea: 2,
+        fakta: 'Palatsin nimi Kadriorg tarkoittaa Katariinan laaksoa — '
+          + 'Pietari nimesi sen vaimonsa Katariina I:n mukaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Palatsi, joka rakennettiin sodan keskellä',
+          tiedosto: 'Palacio de Kadriorg, Tallinn, Estonia, 2012-08-12, DD 01.JPG',
+          teksti: 'Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari '
+            + 'Pietari Suuri, jo varma valloittamiensa Itämeren alueiden '
+            + 'pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin '
+            + 'rakentamisen Tallinnan liepeille. Italialainen arkkitehti '
+            + 'Nicola Michetti suunnitteli barokkipalatsin, jonka '
+            + 'rakennustyöt kestivät vuoteen 1725. Palatsi on yksi '
+            + 'Pohjois-Euroopan komeimmista barokkirakennuksista, ja se '
+            + 'nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin '
+            + 'vaimon Katariina I:n mukaan.',
+          lyhyt: 'Pietari Suuri aloitti Kadriorgin palatsin rakentamisen 1718, kesken Suuren Pohjan sodan.',
+          selite: 'Pietari Suuri aloitti Kadriorgin barokkipalatsin '
+            + 'rakentamisen vuonna 1718 ja nimesi sen vaimonsa Katariina '
+            + 'I:n mukaan.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kadriorg Palace',
+        },
+        {
+          otsikko: 'Tsaari asui pienessä mökissä palatsin vieressä',
+          tiedosto: 'Peter the great cottage in Kadriorg park, Tallin.JPG',
+          teksti: 'Pietari Suuri seurasi palatsinsa rakennustöitä henkilökohtaisesti '
+            + 'ja asui sitä varten pienessä puumökissä aivan '
+            + 'rakennustyömaan vieressä — tsaari ei koskaan itse asunut '
+            + 'valmiissa palatsissa, koska kuoli vuonna 1725, samana '
+            + 'vuonna kun rakennustyöt saatiin päätökseen. Mökki on '
+            + 'säilynyt ja toimii nykyään museona, joka kertoo Pietarin '
+            + 'ajasta Tallinnassa.',
+          lyhyt: 'Pietari Suuri asui pienessä mökissä rakennustyömaan vieressä eikä ehtinyt asua valmiissa palatsissa.',
+          selite: 'Pietari Suuri asui pienessä puumökissä palatsin '
+            + 'rakennustyömaan vieressä, ja mökki toimii nykyään '
+            + 'museona.',
+          lahde: 'Avi1111 dr. avishai teicher, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Katto, joka on täynnä taivasta',
+          tiedosto: 'Kadriorg Palace le plafond du grand hall.jpg',
+          teksti: 'Palatsin komein tila on sen juhlasali, jonka kattoa '
+            + 'peittää täyteen maalattu freskomaisema pilvineen ja '
+            + 'koristeaiheineen — tyypillinen barokin keino tehdä '
+            + 'sisätila tuntuu avaruudelta. Nykyään palatsissa toimii '
+            + 'Kadriorgin taidemuseo, joka näyttää ulkomaista taidetta '
+            + '1500–1900-luvuilta. Palatsia ympäröi laaja puisto, joka '
+            + 'on suosittu kävelypaikka tallinnalaisille vuodenajasta '
+            + 'riippumatta.',
+          lyhyt: 'Juhlasalin kattoa peittää barokkinen freskomaalaus; palatsissa toimii nyt taidemuseo.',
+          selite: 'Palatsin juhlasalin kattoa peittää barokkinen '
+            + 'freskomaalaus, ja palatsissa toimii nykyään Kadriorgin '
+            + 'taidemuseo.',
+          lahde: 'Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -18432,6 +18564,72 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Koko maan nimi juontuu joesta, joka syntyy tässä yhdestä '
+        + 'ainoasta lähteestä kaupungin laidalla.',
+      tehtava: {
+        kysymys: 'Mikä joki saa alkunsa Vrelo Bosnen lähteestä Sarajevon '
+          + 'laidalla?',
+        vaihtoehdot: ['Miljacka', 'Neretva', 'Bosna', 'Drina'],
+        oikea: 2,
+        fakta: 'Bosna-joki, josta koko maa on saanut nimensä, saa alkunsa '
+          + 'juuri tästä karstilähteestä Ilidžan kaupunginosassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lähde, joka antoi maalle nimen',
+          tiedosto: 'Vrelo Bosne, Sarajevo.jpg',
+          teksti: 'Vrelo Bosne on karstilähde, jossa kylmä vesi nousee '
+            + 'kalkkikiven läpi kirkkaisiin altaisiin Sarajevon '
+            + 'länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa '
+            + 'Bosna-joki, joka virtaa halki koko maan ja antoi sille '
+            + 'nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka '
+            + 'altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia '
+            + 'ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.',
+          lyhyt: 'Vrelo Bosnen karstilähde synnyttää Bosna-joen, josta koko maa sai nimensä.',
+          selite: 'Vrelo Bosnen karstilähde Sarajevon laidalla synnyttää '
+            + 'Bosna-joen, josta koko maa on saanut nimensä.',
+          lahde: 'Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Vrelo Bosne',
+        },
+        {
+          otsikko: 'Käytävä, jota on kuljettu sata vuotta',
+          tiedosto: 'Vrelo Bosne 1.JPG',
+          teksti: 'Lähteelle johtaa Suuri kuja, jonka varrelle istutettiin '
+            + 'plataaneja ja hevoskastanjoita aina vuoteen 1894 asti — '
+            + 'puita on nykyään yli seitsemänsataa. Samaa kujaa pitkin on '
+            + 'kuljetettu vierailijoita hevosvetoisilla vaunuilla, '
+            + 'fijakereilla, jo yli sata vuotta: matka Ilidžan '
+            + 'kylpyläalueelta lähteelle tehtiin ratsailla jo '
+            + 'Itävalta-Unkarin aikaan, ja perinne jatkuu yhä samalla '
+            + 'reitillä.',
+          lyhyt: 'Suuren kujan varrella on yli 700 puuta, ja hevosvaunut ovat kuljettaneet vierailijoita yli sata vuotta.',
+          selite: 'Lähteelle johtavan Suuren kujan varrella on yli '
+            + 'seitsemänsataa 1800-luvulla istutettua puuta, ja '
+            + 'hevosvaunut ovat kuljettaneet vierailijoita samaa reittiä '
+            + 'yli sata vuotta.',
+          lahde: 'BiHVolim, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Joutsenet, jotka jäivät',
+          tiedosto: 'Vrelo Bosne Labudovi.jpg',
+          teksti: 'Lähteen kirkkaat, matalat altaat pysyvät sulana '
+            + 'talvellakin tasaisen pohjavesilämpötilan ansiosta, ja '
+            + 'siksi kyhmyjoutsenet ovat asettuneet niille pysyvästi '
+            + 'asumaan sen sijaan että muuttaisivat etelään. Koko '
+            + 'kuudensadankolmen hehtaarin puistoalue on suojeltu '
+            + 'luonnonmuistomerkki, ja se on yksi harvoista paikoista, '
+            + 'joissa sarajevolainen pääsee kävelemään metsässä '
+            + 'suoraan raitiovaunupysäkiltä.',
+          lyhyt: 'Kyhmyjoutsenet asuvat lähteen altailla ympäri vuoden lämpimän pohjaveden ansiosta.',
+          selite: 'Kyhmyjoutsenet asuvat Vrelo Bosnen altailla ympäri '
+            + 'vuoden tasaisen pohjavesilämpötilan ansiosta.',
+          lahde: 'Ethomorphis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -18858,6 +19056,76 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuodesta toiseen myös Darth Vader ja avaruussotilaat.',
           lahde: 'Cebanu Ghenadie, Wikimedia Commons (CC0)',
           wiki: 'Aprillipäivä',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Runoilija karkotettiin tänne rangaistukseksi — ja karkotus '
+        + 'sujui niin hyvin, että kuvernööri karkotti hänet vielä '
+        + 'kauemmas.',
+      tehtava: {
+        kysymys: 'Kuinka vanha Aleksandr Pushkin oli saapuessaan '
+          + 'Odessaan vuonna 1823?',
+        vaihtoehdot: ['18', '24', '31', '40'],
+        oikea: 1,
+        fakta: 'Pushkin oli 24-vuotias saapuessaan — samanikäisenä hänet '
+          + 'on kuvattu myös museon edustalla seisovassa patsaassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Runoilija karkotettiin tänne',
+          tiedosto: 'Pushkin Statue Odessa.jpg',
+          teksti: 'Aleksandr Pushkin lähetettiin Odessaan 1823 '
+            + 'rangaistukseksi Moskovassa kirjoittamistaan '
+            + 'vallanpitäjiä ärsyttäneistä runoista. Kaupunki oli '
+            + 'tuolloin valtakunnan toiseksi vilkkain Pietarin jälkeen, '
+            + 'täynnä teattereita ja seuraelämää — karkotus ei tuntunut '
+            + 'kovin ankaralta. Patsas seisoo Pushkin-museon edessä ja '
+            + 'esittää häntä juuri saapumisikäisenä, 24-vuotiaana; sen '
+            + 'paljasti odessalainen kuvanveistäjä Aleksandr Tokarev '
+            + 'vuonna 1999, Pushkinin syntymän 200-vuotisjuhlan '
+            + 'kunniaksi.',
+          lyhyt: 'Pushkin karkotettiin Odessaan 1823; patsas museon edessä esittää häntä 24-vuotiaana.',
+          selite: 'Pushkin karkotettiin Odessaan vuonna 1823, ja '
+            + 'patsas museon edessä esittää häntä juuri '
+            + 'saapumisikäisenä, 24-vuotiaana.',
+          lahde: 'Radek Linner, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Aleksandr Puškin',
+        },
+        {
+          otsikko: 'Kuvernöörin vaimo ja toinen karkotus',
+          tiedosto: 'Vorontsovskaya Colonnade, Odessa.jpg',
+          teksti: 'Pushkin joutui Odessan kuvernöörin, ruhtinas Mihail '
+            + 'Vorontsovin, alaisuuteen — ja rakastui pian tämän '
+            + 'vaimoon Jelizavetaan. Suhde ja Pushkinin pistävät '
+            + 'huomautukset saivat Vorontsovin kärsimättömäksi: '
+            + 'heinäkuussa 1824 Pushkin erotettiin virastaan ja '
+            + 'karkotettiin edelleen äitinsä tilalle Mihailovskojeen, '
+            + 'kauas pääkaupungeista. Vorontsovin palatsin pylväikkö '
+            + 'seisoo yhä Odessan puistossa meren yllä.',
+          lyhyt: 'Pushkin rakastui kuvernöörin vaimoon; suhde johti toiseen karkotukseen 1824.',
+          selite: 'Pushkinin suhde kuvernööri Vorontsovin vaimoon johti '
+            + 'hänen toiseen karkotukseensa vuonna 1824.',
+          lahde: 'Сіліч Марія, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vorontsovin palatsi (Odessa)',
+        },
+        {
+          otsikko: 'Vuosi, joka riitti Eugen Oneginiin',
+          tiedosto: 'Pushkin monument odessa pushkinskaya street.jpg',
+          teksti: 'Reilun vuoden Odessassa Pushkin ehti kirjoittaa '
+            + 'toisen luvun keskeneräisestä mestariteoksestaan Jevgeni '
+            + 'Onegin, viimeistellä runoelman Bahtšisarain suihkulähde '
+            + 'sekä kirjoittaa yli kolmekymmentä runoa. Toinen '
+            + 'muistopatsas kaupungissa, myös vuodelta 1999, seisoo '
+            + 'Pushkinskaja-kadulla — kadulla, joka on nimetty hänen '
+            + 'mukaansa, vaikka hän ei viihtynyt siellä loppuun asti.',
+          lyhyt: 'Odessan vuoden aikana Pushkin kirjoitti osia Jevgeni Oneginista ja yli 30 runoa.',
+          selite: 'Odessan-vuotenaan Pushkin kirjoitti osia Jevgeni '
+            + 'Oneginista, viimeisteli Bahtšisarain suihkulähteen ja '
+            + 'kirjoitti yli kolmekymmentä runoa.',
+          lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -27267,6 +27535,82 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on Euroopan neljänneksi vanhin, ja sen julkisivuun on '
             + 'kaiverrettu latinankielisiä lauseita ja eläinradan merkkejä.',
           lahde: 'Algirdas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'uskonto',
+      nimi: 'Uskonto',
+      johdanto: 'Kaupunkia kutsuttiin ennen sotia Liettuan Jerusalemiksi — '
+        + 'juutalaisen oppineisuuden keskukseksi, jonka sydän tuhoutui '
+        + 'mutta jonka jäljet kaivetaan yhä esiin.',
+      tehtava: {
+        kysymys: 'Mikä oli Vilnan Gaonin, 1700-luvun kuuluisan '
+          + 'oppineen, koti ennen sotia?',
+        vaihtoehdot: [
+          'Osa yliopiston kirjastoa',
+          'Osa suuren synagogan pihapiiriä',
+          'Kuninkaan linna',
+          'Kaupungintalo',
+        ],
+        oikea: 1,
+        fakta: 'Gaonin koti oli osa suuren synagogan ympärille kasvanutta '
+          + 'pihapiiriä — samaa aluetta, jota arkeologit kaivavat yhä '
+          + 'esiin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nero, jonka mukaan museo on nimetty',
+          tiedosto: 'Gaon of Vilna plaque in Vilnius.JPG',
+          teksti: 'Elijah ben Salomon Zalman, tunnetumpi nimellä Vilnan '
+            + 'Gaon, oli 1700-luvun kuuluisin juutalainen oppinut: hän '
+            + 'osasi Talmudin ulkoa ja kirjoitti kommentaareja lähes '
+            + 'jokaiseen juutalaisen kirjallisuuden osa-alueeseen. Hänen '
+            + 'kotinsa oli osa suuren synagogan ympärille kasvanutta '
+            + 'pihapiiriä, johon kuului myös kirjasto ja kylpylä. '
+            + 'Nykyään paikalla on muistolaatta, ja arkeologit ovat '
+            + '2020-luvulla kaivaneet pihapiirin perustuksia esiin '
+            + 'maan alta.',
+          lyhyt: 'Vilnan Gaonin koti oli osa suuren synagogan pihapiiriä, jota arkeologit kaivavat esiin.',
+          selite: 'Vilnan Gaonin koti oli osa suuren synagogan '
+            + 'pihapiiriä, jonka perustuksia arkeologit kaivavat esiin '
+            + '2020-luvulla.',
+          lahde: 'Avi1111 dr. avishai teicher, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Vilnan Gaon',
+        },
+        {
+          otsikko: 'Museo, joka kantaa hänen nimeään',
+          tiedosto: 'Staatliches Jüdisches Museum Gaon von Vilnius (Vilnius).jpg',
+          teksti: 'Ennen toista maailmansotaa Vilnassa oli yli sata '
+            + 'synagogaa ja kukoistava juutalainen yhteisö, jota '
+            + 'kutsuttiin Liettuan Jerusalemiksi. Suuri synagoga, '
+            + 'yhteisön sydän, tuhoutui sodassa ja purettiin lopullisesti '
+            + 'neuvostoaikana. Nykyinen Vilnan Gaonin juutalainen '
+            + 'valtionmuseo, nimetty samaisen oppineen mukaan, on Liettuan '
+            + 'juutalaisen yhteisön nykyinen koti ja vaalii sitä historiaa, '
+            + 'jonka rakennukset eivät enää voi kertoa.',
+          lyhyt: 'Vilnan Gaonin juutalainen valtionmuseo vaalii yhteisön historiaa, jonka rakennukset ovat kadonneet.',
+          selite: 'Vilnan Gaonin juutalainen valtionmuseo, nimetty '
+            + '1700-luvun oppineen mukaan, on Liettuan juutalaisen '
+            + 'yhteisön nykyinen koti.',
+          lahde: 'Christian Michelides, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Viimeinen suurista synagogista',
+          tiedosto: 'Choral Synagogue in Vilnius (1).JPG',
+          teksti: 'Ennen toista maailmansotaa Vilnassa oli yli sata '
+            + 'synagogaa, ja kaupunkia kutsuttiin juutalaisen oppineisuuden '
+            + 'keskuksena Liettuan Jerusalemiksi. Kuorosynagoga, '
+            + 'rakennettu 1903, on ainoa niistä, joka selvisi sodasta ja '
+            + 'neuvostoajasta ehjänä — se on yhä toimiva synagoga tänä '
+            + 'päivänä. Suuri synagoga, kaupungin pääsynagoga, tuhoutui '
+            + 'sodassa ja purettiin lopullisesti neuvostoaikana.',
+          lyhyt: 'Kuorosynagoga 1903 on ainoa sadasta Vilnan synagogasta, joka selvisi ehjänä.',
+          selite: 'Vuonna 1903 rakennettu Kuorosynagoga on ainoa sadasta '
+            + 'Vilnan synagogasta, joka selvisi sodasta ja neuvostoajasta '
+            + 'ehjänä.',
+          lahde: 'Avi1111 dr. avishai teicher, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Vilniaus choralinė sinagoga',
         },
       ],
     },
