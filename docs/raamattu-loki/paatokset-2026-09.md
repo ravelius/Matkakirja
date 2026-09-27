@@ -7835,3 +7835,7 @@ Linssiseppa 07.5x: meri tuotantoon vaatii 8 uutta lajia + valintalogiikan (maan 
 ## OMISTAJA 07.5x: PROGRESSIIVINEN PUHEEN SOITTO (WEB ENSIN); ERIKOISMALLIT BEL/CHE/AUT IDEAT HYVAKSYTTY (27.9.2026 klo 07.52)
 
 Omistaja kysyi 07.4x kestaako Pulun aloitus pidempaan jos ensimmainen era on pidempi: kylla nykyisella soittimella (lataa koko palan; xAI generoi ~3–4 x reaaliaikaa: 300 mrk 1–2 s, 1 000 mrk 4–5 s, 2 400 mrk 35 s), siksi virkkeittain-striimi. Omistaja paatti 07.5x kortilla: progressiivinen soitto (MediaSource, 1. aani 0,3–0,5 s palan pituudesta riippumatta) — web ensin Pelikoodarille (etusijalle), natiivi perassa Natiivi-UI:lle samalla mallilla; kuulonayte omistajalle. Erikoismallit era 3 elamanideat hyvaksytty: Bruggen kellotorni (kanavavene, kellopeli + nuottikipinat), Matterhorn (lipupilvi, alppihehku, hammasratasjuna, Zermattin valot), Hohensalzburg (koysirata, Salzburgin harka urut + kyyhkyparvi).
+
+## MEREN MERGE-PYYNTO 0126ce8b (HOYRYLAIVA + VALAS, HATAKYTKIN); ERA 2 JUNASSA 1eff4f76 (27.9.2026 klo 07.53)
+
+Linssiseppa 07.5x: linssiseppa/meri-tuotanto 0126ce8b (tuotantorunko + v3 hoyrylaiva ja valas, loput 8 lajia lisaavana committina; hatakytkin elava elementit meri 0), merge-pyynto Natiivisepalle; era 2 erikoismallit jo junassa 1eff4f76. Fable: mukaan 1.0.28:aan jos kaannos ei ole alkanut, muuten 1.0.29.
