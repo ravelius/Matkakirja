@@ -8215,3 +8215,7 @@ Natiivisepan juna 9dffccd0 (valikaannos 7215835c, savuke 0): lento v3, lippu, ma
 ## OMISTAJA (SITOVA): LUENTA KUULUU AINA PYYNNOSTA — AANIMAISEMA MYKISTAA VAIN MUSIIKIN JA TEHOSTEET; 1.0.30 TF:AAN (BUILD 30 = 7b8a12c0) (27.9.2026 klo 15.47)
 
 Omistaja 27.9.2026 klo 15.5x kortilla: kun pelaaja painaa noston tai lehden kaiutinta, nostojen ja isoisan luenta soi myos Aanimaisema/mykistys pois -tilassa kuten Pulun puhe; Aanimaisema mykistaa vain musiikin ja tehosteet (web + natiivi, Pelikoodari → 1.0.31). Tausta: Laitetestaajan havainto 1.0.30:ssa, Natiiviseppa: mykistys vaiensi luennan molemmissa versioissa. BUILD 30 = master 7b8a12c0 (juna 78565bff), Laitetestaaja 8/12 PASS 0 poikkeusta; Fable vei TF:aan, loput aiheet samalla kaannoksella 1.0.31:een. Natiiviseppa valmisti levysiivouksen 16,5 Gt (omistaja ajaa).
+
+## TF 1.0.30 TESTFLIGHTISSA (202609271221 = BUILD 30 7b8a12c0); #3418 v2326, #3419 v2327 MAINISSA; LEVYSIIVOUS 16,5 Gt (27.9.2026 klo 15.52)
+
+Julkaisija: TF 1.0.30 sisaisessa ryhmassa (ajo 36319884765), muutoslokivartija paasti rivin lapi. Web: havainnekuva-sana #3418 v2326, Euroopan ohuimmat erat 1–2 #3419 v2327 (Valletta, MLT/LUX-skandaalit, Lappi, Sisilia, Kreeta, Islanti, Alpit, Tromssa, Marseille, Riika). Omistaja ajoi Natiivisepan levysiivouksen: 16,52 Gt, vapaana 108 Gi. Laitetestaaja jatko: pelistreak + armopaiva ja vuori PASS; talous-loppukortti odottaa rahan nollauskomentoa, pienten maiden kynnys aloituksella pienessa maassa.
