@@ -558,8 +558,12 @@ namespace Matkakirja.Natiivi
          * valmis pala tallennetaan välimuistiin samoista tavuista (dh.data), joten toinen kerta soi levyltä kuten ennen.
          * Virta = false (testikomento "puhe virta pois") palauttaa vanhan polun vertailumittausta varten.
          */
-        /// <summary>Progressiivinen soitto päällä (oletus). Pois: pala ladataan kokonaan ennen soittoa (vertailu).</summary>
-        public static bool Virta = true;
+        /// <summary>
+        /// Progressiivinen soitto (komento "puhe virta paalle"). OLETUS POIS (Laitetestaajan uusinta 27.9. b380a78d4, TF 1.0.29:
+        /// laitteella striimattu pala päätyi "Data Processing Error, see Download Handler error 200" -virheeseen ja jäi äänettömäksi,
+        /// vanha polku soi): pala ladataan kokonaan ennen soittoa, kunnes striimaus on korjattu ja mitattu laitteella.
+        /// </summary>
+        public static bool Virta = false;
         /// <summary>Tavuja ennen soiton alkua: ~1 s mp3:a (xAI 24 kHz); pienempi raja katkoisi alun.</summary>
         public const int EsirullaTavut = 12 * 1024;
         /// <summary>Viimeisimmän striimatun palan 1. ääni ms pyynnöstä (mittari: "puhe virta").</summary>
