@@ -181,7 +181,6 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
     maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
     aluenimet: ((a) => a.nimet.length + a.valtameret.length)(JSON.parse(readFileSync(join(JUURI, 'assets/data/aluenimet-natiivi.json'), 'utf8'))),
-    maakuntasalaisuudet: Object.keys(ns('maakuntasalaisuudet.js').MAAKUNTASALAISUUDET).length,
     reitit1873: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/reitit1873.json.gz'))).toString('utf8')).reitit.length,
     merinimet: ns('nimisto-1873.js').NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva')).length,
     tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
@@ -331,4 +330,20 @@ test('nimetyt lisätiedostot: lipputankoankkurit kartta/lippu_lonlat.json (löyd
     assert.equal(rivi?.lahde, lahde, tiedosto);
     assert.equal(tiedostot.get(tiedosto), readFileSync(join(JUURI, lahde), 'utf8'));
   }
+});
+
+test('eheysvartija: laattavälit, yhteenveto ja työnkulku ilman puhetta', async () => {
+  const { laatat, yhteenveto } = await import('../tools/vienti/eheysvartija.mjs');
+  assert.deepEqual(laatat(10, [[1, 2, 2, 2], [5, 3, 5, 3]]), ['10/1/2', '10/2/2', '10/5/3']);
+  assert.deepEqual(laatat(9, [0, 0, 1, 0]), ['9/0/0', '9/1/0']);
+  assert.deepEqual(yhteenveto({ puuttuvat: [], orvot: [], lehdetPuuttuu: [], ylitykset: [] }), []);
+  const v = yhteenveto({ puuttuvat: [{ laji: 'pieni' }, { laji: 'pieni' }], orvot: [{}], lehdetPuuttuu: [], ylitykset: [{ iso: 'FRA' }] });
+  assert.equal(v.join('; '), '2 puuttuu (pieni 2); 1 orpoa viittausta; maakatto ylittyy: FRA');
+  const { readFileSync } = await import('node:fs');
+  const koodi = readFileSync(new URL('../tools/vienti/eheysvartija.mjs', import.meta.url), 'utf8');
+  // Fable 27.9.: vartija ei koskaan pyydä puhetta workerilta (maksullinen generointi).
+  assert.ok(!/pollo|workers\.dev|\/puhe\b|tehtava/.test(koodi.replace(/^ \*.*$/gm, '')), 'ei puheworkeria');
+  const tyonkulku = readFileSync(new URL('../.github/workflows/eheysvartija.yml', import.meta.url), 'utf8');
+  assert.match(tyonkulku, /workflows: \['Vie sisältöpaketti ämpäriin'\]/);
+  assert.match(tyonkulku, /cron:/);
 });
