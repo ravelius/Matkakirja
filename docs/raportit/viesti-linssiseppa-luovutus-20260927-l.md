@@ -6,6 +6,23 @@ Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab. S = /private/tmp/claude
 74aa735c-cd53-4417-8c06-91819a4a5f3a/scratchpad (skriptit ottavat S:n ympäristöstä; päivitä polku uudessa sessiossa).
 Jos sait nollauksen jälkeen vanhoja viestejä tai agenttien raportteja, ne kuuluvat alla oleviin eriin.*
 
+## PÄIVITYS 10.3x (keskustelu 1aa2bb77)
+
+- **MERGE-PYYNNÖT Natiivisepälle 10.2x:** linssiseppa/meri-tuotanto **0a9fdba5** ja linssiseppa/maakunta-taytto **643a5ff9**
+  (Pelikoodarin pelikoodari/maailma-auki 7041fd0e:n päällä; herätys pois, saapuminen = täyttö 0 s + luovutus 1,6 s, video
+  ennallaan). Pelikoodari siivoaa MaakuntaHeraa/MaakuntaValmis ja Natiiviseppä MaaKartta.Heraannyt, kun maakunta-taytto on
+  masterissa → ILMOITA Pelikoodarille (local_7fcab04b…) mergestä.
+- **Odottaa:** mallinseppa/erikoismallit3 9476a431 (Matterhorn: laitteella kiilamainen iso-koossa ja maastokohteen nimiö päällä;
+  suositus v2 → Fablen päätös), mallinseppa/lahitaso (7 erikoismallia + 9 symbolia; Brandenburg + Kinderdijk agentilla l2,
+  Salama/Tahti/Tassu/Tiimalasi/Vaaka agentilla k3). Integrointi = tiedoston kopio proto-lahitaso-worktreehen + unity-tarkistus.
+- Laitekäännös a109dfdd 10.13 (master + maakunta-taytto + meri + lahitaso + taso1-kynnys): kuvat ja koosteet
+  proto-3d/lokit/mallinseppa-toimitus-20260927/ (maakunta-saapuminen-ennen-jalkeen.png, *-laite.png, meri-lajit-laitteella.png).
+  Fablelle lähetetty 10.27.
+- Worktreet: proto-linssiseppa = linssiseppa/maakunta-taytto (meri-tuotanto commitit haarassaan), proto-mallinseppa =
+  erikoismallit3, proto-lahitaso = mallinseppa/lahitaso (raja 3; proto-mallinseppa-lento poistettu).
+- Erilliset korjausehdokkaat: Vuoren LOD0 juuren käännetyt tahkot (k1-agentin löydös), Malja-symboli Kinderdijkin päällä
+  (nostojen väistö, Natiiviseppä), lähitason kynnys 4 ei täyty pienissä maissa (Natiiviseppä, ilmoitettu 09.2x).
+
 ## PÄIVITYS 09.2x (keskustelu 1aa2bb77)
 
 - **Proto-haarat (merge-pyyntöjä EI vielä lähetetty; kuvat ensin Fablelle):**
