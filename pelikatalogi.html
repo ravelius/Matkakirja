@@ -191,6 +191,24 @@
   .k-top { font: 10.5px "Special Elite", monospace; letter-spacing: .05em; background: var(--muste); color: var(--paperi); padding: 3px 8px; border-radius: 999px; }
   .tyhja { font-style: italic; color: var(--muste-haalea); }
 
+  /* --- Suunnitelmakortit (docs/pelikatalogi.md "Pelisuunnitelmakortit" + "Uudet omistajan kortit") --- */
+  .suunnitelmat { display: grid; gap: 12px; }
+  .suunnitelma { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-left: 4px solid var(--vari, var(--seepia)); border-radius: 10px; }
+  .suunnitelma > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+  .suunnitelma > summary::-webkit-details-marker { display: none; }
+  .suunnitelma > summary::after { content: '+'; margin-left: auto; font: 18px "Special Elite", monospace; color: var(--muste-haalea); }
+  .suunnitelma[open] > summary::after { content: '−'; }
+  .suunnitelma-nro { font: 12px "Special Elite", monospace; color: var(--muste-haalea); }
+  .suunnitelma-nimi { font-family: Vollkorn, serif; font-size: 19px; font-weight: 700; }
+  .suunnitelma-id { font: 11px "Special Elite", monospace; letter-spacing: .05em; color: var(--muste-haalea); }
+  .suunnitelma-tila { font: 10.5px "Special Elite", monospace; letter-spacing: .05em; text-transform: uppercase; background: var(--terrakotta); color: var(--paperi); padding: 3px 8px; border-radius: 999px; }
+  .suunnitelma-tiivis { flex: 1 1 100%; margin: 0; font-size: 14px; color: var(--muste-haalea); }
+  .suunnitelma[open] .suunnitelma-tiivis { display: none; }
+  .suunnitelma dl { margin: 0; padding: 0 16px 16px; display: grid; gap: 10px; }
+  .suunnitelma dt { font: 11.5px "Special Elite", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--seepia); }
+  .suunnitelma dd { margin: 2px 0 0; font-size: 15px; line-height: 1.5; }
+  .suunnitelma dd a { color: inherit; }
+
   /* --- Omistajan ideat --- */
   .ideat { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
   .idea { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 16px; display: grid; gap: 6px; align-content: start; }
@@ -227,7 +245,7 @@
   @media print {
     :root, :root[data-theme] { --paperi: #fff; --paperi-tumma: #f0ede4; --paperi-kortti: #fff; --muste: #111; --muste-haalea: #555; --viiva: #ccc; }
     body { font-size: 11px; }
-    .teemakytkin, .valilehdet, nav.suodatin, .alanapit, #valilehti-osat, #valilehti-ensimmaiset, #valilehti-ideat { display: none !important; }
+    .teemakytkin, .valilehdet, nav.suodatin, .alanapit, #valilehti-osat, #valilehti-ensimmaiset, #valilehti-ideat, #valilehti-suunnitelmat { display: none !important; }
     .valilehti[hidden] { display: block !important; }
     .ruudukko { grid-template-columns: repeat(3, 1fr); gap: 6px; }
     .kortti { break-inside: avoid; border: 1px solid #ccc; }
@@ -247,6 +265,7 @@
   </header>
 
   <nav class="valilehdet" aria-label="Katalogin osiot" id="valilehdet">
+    <button type="button" class="valilehti-nappi" data-valilehti="suunnitelmat"><span class="pitka">Pelisuunnitelmat</span><span class="lyhyt">Suunnitelmat</span></button>
     <button type="button" class="valilehti-nappi" data-valilehti="osat">Osat</button>
     <button type="button" class="valilehti-nappi" data-valilehti="ensimmaiset"><span class="pitka">Ensimmäiset 10</span><span class="lyhyt">10 ensin</span></button>
     <button type="button" class="valilehti-nappi" data-valilehti="katalogi"><span class="pitka">Koko katalogi</span><span class="lyhyt">Katalogi</span></button>
@@ -298,6 +317,17 @@
     <div class="alanapit">
       <button type="button" id="tulostanappi">Tulosta / PDF</button>
     </div>
+  </div>
+
+  <div class="valilehti" id="valilehti-suunnitelmat">
+    <section class="lohko">
+      <h2 class="otsikko">Pelisuunnitelmat <span class="selite">— ensimmäiset 10 peliä toteutuskelpoisina kortteina</span></h2>
+      <div class="suunnitelmat" id="suunnitelmat-ensimmaiset"></div>
+    </section>
+    <section class="lohko">
+      <h2 class="otsikko">Omistajan kortit <span class="selite">— pelin omat mekaniikat</span></h2>
+      <div class="suunnitelmat" id="suunnitelmat-omistajan"></div>
+    </section>
   </div>
 
   <div class="valilehti" id="valilehti-ideat">
@@ -551,6 +581,37 @@ function suodata() {
 }
 suodata();
 
+// --- Pelisuunnitelmat ---
+// md-linkit [teksti](osoite) tekstiksi (osoitteet ovat repon sisäisiä), lihavoinnit näkyviksi.
+const mdKentta = (t) => mdTeksti(String(t ?? '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'));
+// Kortin kiinni-tilan ingressi: noin 140 merkkiä sanarajalta (lyhenteet kuten "n." eivät katkaise).
+function tiivistelma(t) {
+  const puhdas = String(t).replace(/\*\*/g, '');
+  if (puhdas.length <= 150) return puhdas;
+  return `${puhdas.slice(0, 140).replace(/\s+\S*$/, '')} …`;
+}
+function suunnitelmaKortti(k) {
+  const peli = k.id ? PELIT.find((p) => p.id === k.id) : null;
+  const tila = k.kentat.find((x) => x.nimi === 'Tila');
+  const tiivis = k.kentat.find((x) => x.nimi === 'Konsepti' || x.nimi === 'Sääntö');
+  const kentat = k.kentat.filter((x) => x !== tila);
+  const nimi = k.id ? k.otsikko.replace(new RegExp(`,?\\s*${k.id}\\)$`), ')').replace(/\s*\(\)$/, '') : k.otsikko;
+  return `<details class="suunnitelma" style="--vari:${osaVari(peli ? peli.osa : 3)}">
+    <summary>${k.jarjestys ? `<span class="suunnitelma-nro">${k.jarjestys}.</span>` : ''}
+      <span class="suunnitelma-nimi">${esc(nimi)}</span>
+      ${k.id ? `<span class="suunnitelma-id">${esc(k.id)}${peli ? ` · ${esc(peli.maaNimi)}` : ''}</span>` : ''}
+      ${tila ? `<span class="suunnitelma-tila">${esc(tila.teksti.replace(/\.$/, ''))}</span>` : ''}
+      ${tiivis ? `<p class="suunnitelma-tiivis">${mdKentta(tiivistelma(tiivis.teksti))}</p>` : ''}
+    </summary>
+    <dl>${kentat.map((x) => `<div><dt>${esc(x.nimi)}</dt><dd>${mdKentta(x.teksti)}</dd></div>`).join('')}</dl>
+  </details>`;
+}
+for (const ryhma of ['ensimmaiset', 'omistajan']) {
+  const kortit = (KATALOGI.kortit || []).filter((k) => k.ryhma === ryhma);
+  document.getElementById(`suunnitelmat-${ryhma}`).innerHTML = kortit.length
+    ? kortit.map(suunnitelmaKortti).join('') : '<p class="tyhja">Ei vielä kortteja.</p>';
+}
+
 // --- Omistajan ideat ---
 document.getElementById('ideat').innerHTML = KATALOGI.ideat.length
   ? KATALOGI.ideat.map((x) => {
@@ -592,7 +653,7 @@ document.getElementById('teemakytkin').addEventListener('click', () => {
 });
 
 // --- Välilehdet ---
-const VALILEHDET = ['osat', 'ensimmaiset', 'katalogi', 'ideat'];
+const VALILEHDET = ['suunnitelmat', 'osat', 'ensimmaiset', 'katalogi', 'ideat'];
 function nykyinenValilehti() {
   const hash = (location.hash || '').replace('#', '');
   return VALILEHDET.includes(hash) ? hash : VALILEHDET[0];

@@ -59,8 +59,12 @@ export function jasennaPelikatalogi(md) {
   const pelit = [];
   const ensimmaiset10 = [];
   const ideat = [];
+  const kortit = [];
   const oikeudetSelite = {};
-  let tila = null; // 'selite' | 'osa' | 'ensimmaiset' | 'ideat'
+  let tila = null; // 'selite' | 'osa' | 'ensimmaiset' | 'ideat' | 'kortit'
+  let ryhma = null;
+  let kortti = null;
+  let kentta = null;
   let osa = null;
   let huomiot = null;
 
@@ -76,7 +80,38 @@ export function jasennaPelikatalogi(md) {
     if (/^### Oikeudet-selite/.test(rivi)) { tila = 'selite'; continue; }
     if (/^## Ehdotus: ensimmäiset 10/.test(rivi)) { tila = 'ensimmaiset'; osa = null; continue; }
     if (/^## Omistajan ideat/.test(rivi)) { tila = 'ideat'; osa = null; continue; }
-    if (/^## /.test(rivi)) { tila = null; osa = null; continue; }
+    /*
+     * SUUNNITELMAKORTIT (Sisältökirjuri 27.9.2026): "## Pelisuunnitelmakortit…" ja
+     * "## Uudet omistajan kortit…" -osioiden "### Otsikko" = kortti, jonka kentät ovat
+     * kappaleita "**Kenttä:** teksti" (jatkorivit liitetään). Otsikon sulkeissa oleva
+     * <ISO3>-N yhdistää kortin katalogin peliin.
+     */
+    const korttiOsio = rivi.match(/^## (Pelisuunnitelmakortit.*|Uudet omistajan kortit.*)$/);
+    if (korttiOsio) {
+      tila = 'kortit'; osa = null; ryhma = korttiOsio[1].startsWith('Uudet') ? 'omistajan' : 'ensimmaiset';
+      kortti = null; kentta = null;
+      continue;
+    }
+    if (/^## /.test(rivi)) { tila = null; osa = null; kortti = null; kentta = null; continue; }
+
+    if (tila === 'kortit') {
+      const otsikko = rivi.match(/^### (?:(\d+)\. )?(.+)$/);
+      if (otsikko) {
+        const id = otsikko[2].match(/\b([A-Z]{3}-\d+)\)\s*$/)?.[1] ?? null;
+        kortti = { ryhma, jarjestys: otsikko[1] ? Number(otsikko[1]) : null, otsikko: otsikko[2].trim(), id, kentat: [] };
+        kortit.push(kortti);
+        kentta = null;
+        continue;
+      }
+      if (!kortti) continue;
+      if (rivi.trim() === '') { kentta = null; continue; }
+      const k = rivi.match(/^\*\*(.+?):\*\*\s*(.*)$/);
+      if (k) {
+        kentta = { nimi: k[1], teksti: k[2].trim() };
+        kortti.kentat.push(kentta);
+      } else if (kentta) kentta.teksti += ` ${rivi.trim()}`;
+      continue;
+    }
 
     if (tila === 'selite') {
       const m = rivi.match(/^- \*\*(.+?)\*\* — (.*)$/);
@@ -123,7 +158,7 @@ export function jasennaPelikatalogi(md) {
     }
   }
 
-  return { paivitetty: uusinPaiva(md), osat, pelit, ensimmaiset10, ideat, oikeudetSelite };
+  return { paivitetty: uusinPaiva(md), osat, pelit, ensimmaiset10, ideat, kortit, oikeudetSelite };
 }
 
 const OTSAKE = `/*
@@ -148,6 +183,8 @@ const OTSAKE = `/*
  *   tila          idea | tarkista
  * ensimmaiset10[] "Ehdotus: ensimmäiset 10 peliä": jarjestys, id, peli, tyyppi, perustelu
  * ideat[]         "Omistajan ideat": idea, kuvaus, tila (paikkarivi ohitetaan)
+ * kortit[]        suunnitelmakortit: ryhma (ensimmaiset | omistajan), jarjestys (tai null),
+ *                 otsikko, id (<ISO3>-N tai null), kentat[] { nimi, teksti } md-lihavointeineen
  * oikeudetSelite  { SUORA, "OMA VERSIO" } Oikeudet-selitteen teksti
  */
 `;
@@ -168,6 +205,9 @@ ${lista(data.ensimmaiset10)}
   ideat: [
 ${lista(data.ideat)}
   ],
+  kortit: [
+${lista(data.kortit)}
+  ],
   oikeudetSelite: ${JSON.stringify(data.oikeudetSelite)},
 };
 `;
@@ -186,6 +226,6 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   } else {
     writeFileSync(DATA_POLKU, teksti);
     console.log(`pelikatalogi-data.js kirjoitettu: ${data.pelit.length} peliä, ${data.osat.length} osaa, `
-      + `${data.ensimmaiset10.length} ensimmäistä, ${data.ideat.length} ideaa.`);
+      + `${data.ensimmaiset10.length} ensimmäistä, ${data.ideat.length} ideaa, ${data.kortit.length} korttia.`);
   }
 }

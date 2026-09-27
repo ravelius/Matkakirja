@@ -79,3 +79,17 @@ test('pelikatalogi julkaistaan Pagesiin ja sivut linkittävät toisiinsa', () =>
   assert.match(peli, /href="linssikatalogi\.html"/);
   assert.match(linssi, /href="pelikatalogi\.html"/);
 });
+
+test('pelikatalogi: suunnitelmakortit jäsennetään (10 ensimmäistä + omistajan kortit) ja sivu piirtää ne', () => {
+  const data = jasennaPelikatalogi(readFileSync(MD_POLKU, 'utf8'));
+  const ensimmaiset = data.kortit.filter((k) => k.ryhma === 'ensimmaiset');
+  assert.equal(ensimmaiset.length, 10, 'kymmenen pelisuunnitelmakorttia');
+  for (const k of ensimmaiset) {
+    assert.ok(k.id && data.pelit.some((p) => p.id === k.id), `${k.otsikko}: id ${k.id} löytyy katalogista`);
+    assert.ok(k.kentat.some((x) => x.nimi === 'Sääntö'), `${k.otsikko}: Sääntö-kenttä`);
+  }
+  const lento = data.kortit.find((k) => k.otsikko.startsWith('Lentopeli'));
+  assert.ok(lento?.kentat.some((x) => x.nimi === 'Tila' && /odottaa/.test(x.teksti)), 'lentopeli: tila "odottaa, ensi viikko"');
+  const sivu = readFileSync(new URL('../pelikatalogi.html', import.meta.url), 'utf8');
+  assert.match(sivu, /id="valilehti-suunnitelmat"/);
+});
