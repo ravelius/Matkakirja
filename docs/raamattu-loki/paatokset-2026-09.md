@@ -8115,3 +8115,7 @@ Linssiseppa luovutus -m 01289a762 (seuraavat maat Cesky Krumlov, Malbork, Pannon
 ## SISALTOKIRJURIN LUOVUTUS -E; PELISUUNNITELMAKORTIT COMMITOIDAAN WIP:INA; TYYLITARKASTUS AGENTILLA; SAAPUMINEN V2 TODENNETTU (27.9.2026 klo 11.28)
 
 Sisaltokirjuri luovutus -e (haara sisalto-pelikatalogi-20260927): pelisuunnitelmakortit 10 + lentopeli + streak kirjoitettu (Fable: commit + push WIP heti), nahtavyyskuvien tyylitarkastus agentilla kaynnissa (sama checkout — ei checkout/reset ennen valmistumista), hintatasot.js-velka. Linssiseppa 11.3x: saapuminen v2 laitteella (maakunta-saapuminen-v2.png, 2d04e085): nostot ja rajat nakyvat tayton aikana, taytto 0,02 s → valmis 1,6 s, mediaani 16,7 ms, p95 22 ms.
+
+## PELIKOODARIN LUOVUTUS -C (748004216); PELISTREAK-EHDOTUS #3396; AGENTIT: TALOUSPORTTI, VASTAKOE, PELIKATALOGI.HTML (27.9.2026 klo 11.28)
+
+Pelikoodari 11.3x (68 %): luovutus -c 748004216; #3388 niputus korjattu → junassa; pelistreak-ehdotus #3396 (docs): 3–6 pv 20 £/pv, 7. pv 50 + 100 £, 8+ pv 30 £/pv + joka 7. pv 100 £ → omistajan kysymys 11 (Fable mergesi #3396 ilman haaran poistoa); agenteilla natiivin talousportti (pelikoodari/talous-vaihe1), astro-pallo-VASTAKOE + syvazoomi-polku, pelikatalogi.html; sitten avauskortin web-kevennys.
