@@ -70,3 +70,18 @@ Commitit: `-c user.name=ravelius -c user.email=sami@valokuvaamoklik.fi`.
 ## NAS
 - **VALMIS 06.47:** `pyramidi-poltto/nas-ajo-20260927.sh` siirsi kaikki viisi ajokansiota kohteeseen
   `…/Matkakirja-arkisto/poltot/pyramidi/` (loki `nas-ajo-20260927.out`, kaikki ok). Levyä on vapaana 149 Gt.
+
+## Z10 TUOTANNOSSA (27.9. aamupäivä)
+- **Päätös ja vaihdot:** omistaja päätti klo 07.2x viedä Z10:n tuotantoon. Osoitin vaihdettiin ensin klo 07.32, mutta
+  web-pallon lepokerros sammui, koska versiovahti vaati, että pallosarjan versio (2026-09-26-pohja) on sama kuin
+  pyramidin. Osoitin palautettiin klo 08.01.
+- **#3376 (mainissa v2302):** `js/pallolaatat.js samaPohja` hyväksyy luettelon, jonka `pohja.kopio = { versio: pallon
+  versio, tasot z0–z8 }`. Koeluettelo sai tämän kentän. Uutta pallosarjaa ei tarvittu, koska z0–z8 on tavulleen sama.
+- **#3371 (mergetty 09.37):** PELIN_SYVIN_TASO 10, ja z9–z10:n pohjana on z8. Ennen sitä mainiin tuli Pelikoodarin
+  tukilaattojen hakusilmukan korjaus.
+- **Tila klo 10.1x:** CDN:n pyramidi.json on versio 2026-09-26s-pohja, tasot 0–10, `pohja.kopio` mukana. Varmuuskopio
+  on `pyramidi-20260927-0732.json` (palautus: työnkulun syöte palauta).
+- **Näyte:** `pyramidi-poltto/kuvat/z10-tuotanto-8-maata-20260927.png` (tuotannon CDN:stä, 8 × z8|z10).
+- **Selaimen zoomikatto:** puhelimella näkyy z8 ja työpöydällä z9. z10:tä ei nykyisellä ZOOMI_LAHIN-arvolla saavuteta.
+- **Koodi 1 (osa 2):** todennäköinen syy on `lue_edistys`-funktion `echo` suljettuun putkeen (Broken pipe, 13 kertaa
+  lokissa). Jokin xargs-lapsi palasi siksi nollasta poikkeavalla. Pieni korjauserä on tekemättä.
