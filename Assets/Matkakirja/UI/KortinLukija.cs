@@ -44,6 +44,7 @@ namespace Matkakirja.Natiivi
             + "<path d=\"M12 4.2v2.2M12 17.6v2.2M4.2 12h2.2M17.6 12h2.2M6.5 6.5l1.55 1.55M15.95 15.95l1.55 1.55"
             + "M6.5 17.5l1.55-1.55M15.95 8.05l1.55-1.55\"/><circle cx=\"12\" cy=\"12\" r=\"5.4\"/>";
         const long VilkkuMs = 700;
+        const float SaadotLeveys = 262f;
         static KortinLukija ajossa;
 
         public readonly Button Nappi;
@@ -260,7 +261,15 @@ namespace Matkakirja.Natiivi
         void VaihdaPaneeli()
         {
             if (paneeli != null) { SuljePaneeli(); return; }
-            paneeli = Rakenne.El("mk-lukija-saadot", Juuri);
+            // Paneeli kerroksen juureen päällimmäiseksi: rivin lapsena kortin myöhemmät sisarukset (päiväys, otsikko)
+            // piirtyivät sen päälle. Paikka rattaan alle, oikea reuna kaiutinrivin oikeaan reunaan.
+            var juuri = Juuri.panel?.visualTree;
+            if (juuri == null) return;
+            paneeli = Rakenne.El("mk-lukija-saadot", juuri);
+            var rv = Juuri.worldBound;
+            var alku = juuri.WorldToLocal(new Vector2(rv.xMax, ratas.worldBound.yMax + 4f));
+            paneeli.style.left = Mathf.Max(8f, Mathf.Round(alku.x - SaadotLeveys));
+            paneeli.style.top = Mathf.Round(alku.y);
             paneeli.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
 
             var nopeusRivi = Rakenne.El("mk-lukija-saadot__rivi", paneeli, PickingMode.Ignore);
@@ -298,6 +307,7 @@ namespace Matkakirja.Natiivi
             });
 
             ratas.AddToClassList("mk-valittu");
+            Ruudunpaivitys.Herata(0.3f);
             // Napautus paneelin ohi sulkee (web kerran-kuuntelija). Valikon ponnahduslista on omassa paneelissaan.
             Juuri.panel?.visualTree.RegisterCallback<PointerDownEvent>(OhiNapautus, TrickleDown.TrickleDown);
         }
@@ -315,6 +325,7 @@ namespace Matkakirja.Natiivi
             paneeli.panel?.visualTree.UnregisterCallback<PointerDownEvent>(OhiNapautus, TrickleDown.TrickleDown);
             paneeli.RemoveFromHierarchy();
             paneeli = null;
+            Ruudunpaivitys.Herata(0.3f);
             ratas?.RemoveFromClassList("mk-valittu");
         }
     }

@@ -3249,8 +3249,13 @@
     height: 21px;
 }
 
-.mk-lukija__kaari {
+/* Kaaret täysinä kun luenta ei soi (Pulu.uss .mk-kaiutin__kaari 0,2 on isoisän kortin lepotila); mykistettynä himmeät. */
+.mk-lukija--kortti .mk-kaiutin__kaari.mk-lukija__kaari {
     opacity: 1;
+}
+
+.mk-lukija--kortti.mk-mykistetty .mk-kaiutin__kaari.mk-lukija__kaari {
+    opacity: 0.2;
 }
 
 .mk-lukija--keskeytetty {
@@ -3264,8 +3269,6 @@
 
 .mk-lukija-saadot {
     position: absolute;
-    top: 36px;
-    right: 0;
     width: 262px;
     padding: 10px 12px;
     border-width: 1px;
@@ -3293,6 +3296,12 @@
 .mk-lukija-saadot__liuku {
     flex-grow: 1;
     margin: 0 8px 0 0;
+}
+
+/* Vaalea raita paperipaneelissa (mk-saadin on tummaa Äänentasot-dialogia varten); täyttö ja nuppi kultaiset. */
+.mk-lukija-saadot .mk-saadin #unity-tracker {
+    background-color: #e3d8bf;
+    border-color: rgba(122, 85, 20, 0.25);
 }
 
 .mk-lukija-saadot__arvo {
