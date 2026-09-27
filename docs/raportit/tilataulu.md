@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 18:37 EEST
+**Päivitetty:** 2026-09-27 18:48 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **67 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **Sisältökirjuri nollautunut (78%→23%).**
+Viikko (all models) **68 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 39% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 21% | running |
-| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 35% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 64% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 57% | idle |
-| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 45% | idle |
-| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 41% | idle |
-| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 43% | idle |
-| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 56% | idle |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 23% — nollautunut | running (PR #3397 auki) |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 40% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 23% | running |
+| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 36% | running |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 66% | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 59% | idle |
+| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 46% | idle |
+| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 42% | idle |
+| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 46% | idle |
+| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 62% | idle |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 27% | running (PR #3397 auki) |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 22% | running |
 
 ## 1b) Uusi valvontakohta odottaa (Siirtoseppä/Fable 18:4x)
@@ -56,14 +56,14 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (18:37)
+## 5) Resurssit (18:48)
 
-- **5 h -kiintiö:** 21 %. **Viikko (kaikki mallit):** 67 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy: 75 Gi vapaana — JATKAA LASKUA (89→84→75 Gi 18:24-18:37, ~0,7 Gi/min), EI TASAANTUNUT.** Uudet syyt 18:37: `wt/` kasvoi 45G→50G 13 min:ssa (worktreet 72→78 kpl, +6 uutta), ja `/Users/Shared/Claude/Matkakirja-fable/.git/objects/pack/pack-*.pack` 3,9G ilmestyi (git-pakkaus/fetch Fablen checkoutissa). Juna-build (18:22) ei ollut ainoa syy. **Ilmoitettu Fablelle 18:37 — nopea pudotus, tarkempi selvitys tarpeen jos jatkuu.**
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 78 kpl (nousi 72:sta, +6 — CoreSimulator/Devices 69G ennallaan).
-- **Simulaattorit boottina:** 3 (iPhone 18 Pro, iPhone 17, iPad Pro 11" M5; max 4 päivällä — OK). **coreaudiod:** normaali. **Chrome-GPU-testiajurit:** ei tarkistettu erikseen tällä kierroksella (raja >4 pääprosessia).
-- **Konteksti (kynnys Fable 65%/roolit 70%):** Sisältökirjuri nollautunut (23%). Kaikki alle kynnyksen (Natiiviseppä 64% korkein).
-- **Juna:** käynnissä normaalisti, niputtaa af5b96d0 (18:32, alle 600s niputusikkuna).
+- **5 h -kiintiö:** 24 %. **Viikko (kaikki mallit):** 68 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy: KÄÄNTYNYT NOUSUUN — 75→86 Gi vapaana.** wt/-worktreet putosivat 78→49 kpl (joku siivosi mergetyt worktreet, todennäköisesti Fablen 18:37-hälytyksen jälkeen). Ei enää hälytysrajan alla, seurataan normaalisti jatkossa.
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 49 kpl (laski 78:sta).
+- **Simulaattorit boottina:** 3 (iPhone 18 Pro, iPhone 17, iPad Pro 11" M5; max 4 päivällä — OK). **coreaudiod:** normaali. **Chrome-GPU-testiajurit:** ei tarkistettu erikseen tällä kierroksella.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen (Natiiviseppä 66% korkein).
+- **Juna:** käynnissä normaalisti, niputtaa 4f2c2d92 (18:42).
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
   - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
