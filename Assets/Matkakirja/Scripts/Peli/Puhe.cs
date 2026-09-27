@@ -364,6 +364,8 @@ namespace Matkakirja.Natiivi
             ViimeVirhe = null;
             ekaAlku = Time.unscaledTime;
             mittaaEka = true;
+            // Uusi puhe: vanhan puheen jonottavat esihaut pois (kutsuja lisää omat seuraavat palansa heti Luen jälkeen).
+            esihakujono.Clear();
             // Palavirta (Virta): lyhyt ensimmäinen pala soi heti, loput haetaan sen soidessa (Lukijaaani.VirtaPalat).
             var palat = Virta && sailo ? Lukijaaani.VirtaPalat(teksti) : new List<string> { teksti };
             if (palat.Count > 1)
@@ -391,7 +393,7 @@ namespace Matkakirja.Natiivi
             {
                 if (oma != tunnus) yield break;
                 bool viimeinen = i == palat.Count - 1;
-                if (!viimeinen) EsihaePala(palat[i + 1], persoona, lohko);
+                if (!viimeinen) EsihaePala(palat[i + 1], persoona, lohko, true);
                 var (runko, koodi) = Saadot.Pyynto(palat[i], persoona, lohko);
                 string avain = Saadot.Valimuistiavain(persoona, palat[i]);
                 ViimeVirhe = null;
@@ -400,15 +402,55 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Hakee yhden synteesipalan levylle soittamatta (Esihae ja palavirta).</summary>
-        void EsihaePala(string pala, string persoona, string lohko)
+        /// <summary>
+        /// ESIHAKU JÄRJESTYKSESSÄ (Fable 27.9.2026 klo 21.5x, mittaus: nostokortissa 3,2 s katko, kun kortin +1/+2-palojen kaikki
+        /// virtapalat generoitiin rinnakkain soivan puheen seuraavan palan kanssa): synteesipalat haetaan jonosta YKSI kerrallaan.
+        /// Soivan puheen seuraava pala (kiireellinen) menee jonon kärkeen, kortin myöhemmät palat perään. Soitto, joka tarvitsee
+        /// jonossa odottavaa palaa, ottaa sen jonosta ja hakee sen itse heti (LataaJaSoita).
+        /// </summary>
+        struct Esihaku { public string Avain, Tiedosto; public Func<UnityWebRequest> Pyynto; }
+        readonly LinkedList<Esihaku> esihakujono = new LinkedList<Esihaku>();
+        bool esihakuKaynnissa;
+
+        /// <summary>Hakee yhden synteesipalan levylle soittamatta (Esihae ja palavirta) jonon kautta.</summary>
+        void EsihaePala(string pala, string persoona, string lohko, bool kiireellinen = false)
         {
             string avain = Saadot.Valimuistiavain(persoona, pala);
             if (esiladataan.Contains(avain)) return;
             string tiedosto = Path.Combine(Kansio, Tiiviste(avain) + ".mp3");
             if (File.Exists(tiedosto)) return;
+            // Kiireellinen siirtyy kärkeen; muuten jo jonossa oleva pitää paikkansa.
+            if (kiireellinen) PoistaJonosta(avain);
+            else foreach (var h in esihakujono) if (h.Avain == avain) return;
             var (runko, koodi) = Saadot.Pyynto(pala, persoona, lohko);
-            StartCoroutine(EsilataaTiedosto(avain, tiedosto, Taso.SeuraavaRuutu, () => SynteesiPyynto(runko, koodi), "esihaettu pala"));
+            var haku = new Esihaku { Avain = avain, Tiedosto = tiedosto, Pyynto = () => SynteesiPyynto(runko, koodi) };
+            if (kiireellinen) esihakujono.AddFirst(haku);
+            else esihakujono.AddLast(haku);
+            if (!esihakuKaynnissa) StartCoroutine(PuraEsihakujono());
+        }
+
+        /// <summary>Poistaa avaimen jonottavista esihauista; true = oli jonossa.</summary>
+        bool PoistaJonosta(string avain)
+        {
+            for (var n = esihakujono.First; n != null; n = n.Next)
+                if (n.Value.Avain == avain) { esihakujono.Remove(n); return true; }
+            return false;
+        }
+
+        IEnumerator PuraEsihakujono()
+        {
+            esihakuKaynnissa = true;
+            try
+            {
+                while (esihakujono.Count > 0)
+                {
+                    var h = esihakujono.First.Value;
+                    esihakujono.RemoveFirst();
+                    if (esiladataan.Contains(h.Avain) || File.Exists(h.Tiedosto)) continue;
+                    yield return EsilataaTiedosto(h.Avain, h.Tiedosto, Taso.SeuraavaRuutu, h.Pyynto, "esihaettu pala");
+                }
+            }
+            finally { esihakuKaynnissa = false; }
         }
 
         static UnityWebRequest SynteesiPyynto(string runko, string koodi)
@@ -457,6 +499,7 @@ namespace Matkakirja.Natiivi
             tunnus++;
             loppu = null;
             PuraTauko();
+            esihakujono.Clear(); // suljettu kortti ei generoi enää jonottavia palojaan (käynnissä oleva valmistuu)
             if (lataus != null) { StopCoroutine(lataus); lataus = null; }
             SoivaUrl = null;
             if (lahde.isPlaying) Haivyta(haivytysS, true);
@@ -519,6 +562,8 @@ namespace Matkakirja.Natiivi
             string kansio = sailo ? Kansio : Application.temporaryCachePath;
             string tiedosto = mukana ?? (sailo ? Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))
                 : Path.Combine(kansio, "puhenayte-" + oma + ".mp3"));
+            // Jonossa odottava esihaku (ei vielä käynnissä): soitto hakee palan itse heti, ei odota jonoa.
+            if (sailo && synteesi) PoistaJonosta(url);
             // Esilataus kesken (Esilataa): odotetaan sitä, ettei samaa tiedostoa ladata kahdesti rinnakkain.
             while (sailo && esiladataan.Contains(url)) yield return null;
             if (sailo && File.Exists(tiedosto)) Esilataaja.NakyvaValmis(url);
