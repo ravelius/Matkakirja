@@ -4,8 +4,8 @@
 // maakunnat ovat heränneinä heti ja salaisuudet näkyvät heti — MaakuntaHeraa ja MaakuntaValmis eivät enää laukea (jäävät
 // rajapintaan, kunnes kuuntelijat on poistettu).
 // Data: kokoelma karttavalot — kokoluokka ("paakohde" | "kohde" | "pieni", skeema 1.45; puuttuessa taso) ja maakunta
-// ("ISO:tunnus"); salaisuudet kokoelmasta maakuntasalaisuudet (id "salaisuus:<tunnus>", maakunta; skeema 1.47) tai
-// karttavalorivin salaisuus: true. Jäsennys taustasäikeessä kerran.
+// ("ISO:tunnus"). Maakuntasalaisuuksia ei enää ole (omistaja 27.9.2026 klo 20.0x): entiset ovat tavallisia
+// hahmotelmanostoja. Jäsennys taustasäikeessä kerran.
 // Testikomento: muste tila <valo> | muste loyda <valo> | muste maakunnat <ISO>.
 using System;
 using System.Collections;
@@ -64,13 +64,12 @@ namespace Matkakirja.Natiivi
         {
             if (muste != null || musteHaussa) yield break;
             musteHaussa = true;
-            string teksti = null, salaisuudet = null;
+            string teksti = null;
             yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, true, Taso.TamaKaupunki);
             if (teksti == null) { musteHaussa = false; yield break; }
-            // Maakuntien salaisuudet omana kokoelmanaan (skeema 1.47, Siirtoseppä #3285): ei karttavaloina, ettei vanha
-            // build piirrä niitä tavallisina nostoina. Valinnainen.
-            yield return Sisalto.HaeTeksti("maakuntasalaisuudet", t => salaisuudet = t, true, Taso.TamaKaupunki);
-            var tyo = Task.Run(() => LueMuste(teksti, salaisuudet));
+            // Ei maakuntasalaisuuksia (omistaja 27.9. klo 20.0x, web #3475): entiset salaisuudet ovat tavallisia
+            // hahmotelmanostoja karttavaloissa; kokoelma maakuntasalaisuudet ja salaisuus-kenttä poistuvat paketista.
+            var tyo = Task.Run(() => LueMuste(teksti));
             while (!tyo.IsCompleted) yield return null;
             musteHaussa = false;
             if (tyo.IsFaulted) { Debug.LogWarning("MATKAKIRJA peli: muste ei jäsenny: " + tyo.Exception?.GetBaseException().Message); yield break; }
@@ -79,7 +78,7 @@ namespace Matkakirja.Natiivi
             try { MusteValmis?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
-        static KarttaMuste LueMuste(string json, string salaisuudet)
+        static KarttaMuste LueMuste(string json)
         {
             var m = new KarttaMuste();
             var juuri = MiniJson.Jasenna(json) as Dictionary<string, object>;
@@ -87,14 +86,9 @@ namespace Matkakirja.Natiivi
             {
                 if (!(a is Dictionary<string, object> o) || !(MiniJson.Teksti(o, "id") is string id)) continue;
                 string maakunta = MiniJson.Teksti(o, "maakunta");
-                if (MiniJson.Totuus(o, "salaisuus")) { m.LisaaSalaisuus(maakunta, id); continue; }
                 var taso = MiniJson.Luku(o, "taso") is double d ? (int)d : (int?)null;
                 m.LisaaNosto(id, maakunta, KarttaMuste.Luokka(MiniJson.Teksti(o, "kokoluokka"), taso));
             }
-            if (salaisuudet != null)
-                foreach (var a in MiniJson.Kentta(MiniJson.Jasenna(salaisuudet) as Dictionary<string, object>, "alkiot") as List<object> ?? new List<object>())
-                    if (a is Dictionary<string, object> o && MiniJson.Teksti(o, "id") is string id)
-                        m.LisaaSalaisuus(MiniJson.Teksti(o, "maakunta"), id);
             return m;
         }
 

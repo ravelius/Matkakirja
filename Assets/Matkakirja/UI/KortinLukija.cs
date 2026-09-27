@@ -175,6 +175,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Luenta seis (kortti suljettiin, sivu vaihtui tai toinen kortti aukesi).</summary>
+        /// <summary>Testikomento (ui nostonappi kaiutin): kuin kaiuttimen napautus.</summary>
+        public void Paina() => Vaihda();
+
         public void Pysayta()
         {
             SuljePaneeli();
@@ -315,8 +318,20 @@ namespace Matkakirja.Natiivi
         void OhiNapautus(PointerDownEvent e)
         {
             if (paneeli == null) return;
-            if (e.target is VisualElement v && (paneeli.Contains(v) || ratas.Contains(v))) return;
+            if (e.target is VisualElement v && (paneeli.Contains(v) || ratas.Contains(v) || Pudotusvalikossa(v))) return;
             SuljePaneeli();
+        }
+
+        /// <summary>
+        /// Omistajan löydös 1.0.32: äänen valinta "klikkautui pois". DropdownFieldin ponnahduslista (GenericDropdownMenu,
+        /// luokka unity-base-dropdown) piirtyy paneelin juureen säätöpaneelin ulkopuolelle, joten listan rivin napautus
+        /// tulkittiin ohinapautukseksi: paneeli (ja valitsin) poistui ennen kuin valinta ehti tallentua.
+        /// </summary>
+        static bool Pudotusvalikossa(VisualElement v)
+        {
+            for (; v != null; v = v.hierarchy.parent)
+                if (v.ClassListContains(GenericDropdownMenu.ussClassName)) return true;
+            return false;
         }
 
         void SuljePaneeli()

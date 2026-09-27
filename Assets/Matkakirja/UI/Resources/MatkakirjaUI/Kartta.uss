@@ -384,15 +384,6 @@
     color: rgba(74, 52, 33, 0.85);
 }
 
-/* Maakunnan salaisuuden kortti: sama koko, oma sävy ylärivissä ja otsikossa (löydös 135: vain tyyli eri). */
-.mk-nosto--salaisuus .mk-nosto__ylarivi {
-    color: #8e4550;
-}
-
-.mk-nosto--salaisuus .mk-nosto__otsikko {
-    color: #5a2a22;
-}
-
 /* Käsialanimet kartalla (MaakuntanimetKartalla): nimi keskitetty maakunnan pisteeseen, kallistettu kuin kynällä
    kirjoitettu (video 10,4 s "Attika"); muste ja paperihehku kuten maiden nimillä (MaidenNimetKerros). */
 .mk-maakuntanimet {

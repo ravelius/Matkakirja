@@ -51,6 +51,7 @@
 //                                             valokuva | vastaa<n> (0–) | juliste | kysy<n>
 //                                             (lisäkaupunki: kohde:nakyva-kaupunki-lyon → lisäkaupungin kortti)
 //   ui nostonappi <nappi>                     painaa auki olevan nostokortin nappia (esim. vastaa0, sitten juliste)
+//                                             (kaiutin = kortin luenta kuin napautus; mittaus: puhe virta)
 //   ui ihme [kohde[@ISO]]                     kohdekortti ja "Koe ihme" -suurennos (oletus akropolis@GRC;
 //                                             kadonnut ihme on kortin ensimmäinen kuva nauhoineen: ui nosto kohde:crystal-palace@GBR)
 //   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR; Kreikka:
@@ -119,8 +120,11 @@
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui haku <kysymys>                         pulun paikallisen haun katkelmat (leima + pisteet)
 //   ui liiku                                  Liiku-napin napautus: kulkutapaliuku auki (peli käynnissä)
+//   ui voiceover [paalle|pois|puu]           VoiceOver-silta pakolla päälle / laitteen mukaan / solmut → voiceover-puu.txt
+//   ui saavutettavuus [nimi]                  VoiceOver-nimet, 44 pt:n kosketusalat, kontrasti → Documents/saavutettavuus[-nimi].json
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
+//   ui chat aani                              kaiutinkytkin (vastausten luenta) kuin napautus; tila lokiin
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui saapumiskortti [RIVI]                  saapumisen välikortti (oletus ATEENA · PÄIVÄ 1/80, löydös 52)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
@@ -576,6 +580,7 @@ namespace Matkakirja.Natiivi
                 }
                 case "chat":
                     if (loput == "ehdota") { ui.Chat.Avaa(); ui.Chat.EhdotaSisaltoa(); return null; }
+                    if (loput == "aani") { Kirjaa("ui chat aani: " + (ui.Chat.VaihdaAaniTesti() ? "päällä" : "pois")); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
@@ -638,6 +643,12 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "puu":
                     Kirjaa(Puu(loput.Trim()));
+                    return null;
+                case "voiceover":
+                    return SaavutettavuusSilta.Komento(loput.Trim());
+                case "saavutettavuus":
+                    // App Store -laatu (Fable 27.9.): nimettömät napit, alle 44 pt:n kosketusalat, tekstien kontrasti (Saavutettavuus.cs).
+                    Kirjaa(Saavutettavuus.Mittaa(loput.Trim()));
                     return null;
                 case "tyohuone":
                 {

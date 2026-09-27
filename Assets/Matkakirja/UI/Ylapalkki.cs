@@ -644,9 +644,9 @@ namespace Matkakirja.Natiivi
             }
             else if (kelluvaNyt == true || matalaNyt == true)
             {
-                // iPhone: "300£ 1/80" (omistaja 24.9.2026) — raha ja päivä / isoisän ennätys.
-                string luku = Raha(osat[0]).TrimStart('£');
-                string uusiRaha = luku + "£";
+                // iPhone: "300 £ 1/80" — raha ja päivä / isoisän ennätys (omistaja 24.9.2026; suomalainen muoto
+                // "400 £" kaikkialle, Fable 27.9. klo 20.1x).
+                string uusiRaha = Raha(osat[0]);
                 if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
                 var m = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
@@ -660,7 +660,7 @@ namespace Matkakirja.Natiivi
             {
                 string uusiRaha = Raha(osat[0]);
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
-                if (uusiRaha != raha.text && raha.text.StartsWith("£")) Valahda(raha, ref rahaAjastin);
+                if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
                 string uusiKello = Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
@@ -783,12 +783,12 @@ namespace Matkakirja.Natiivi
             rahaton.style.display = varoitus ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
-        /// <summary>Webin muoto "£250" ("250 puntaa" / "250 £" → "£250"), jotta pilleri mahtuu puhelimeen.</summary>
+        /// <summary>Suomalainen muoto "250 £" sitovalla välilyönnillä ("250 puntaa" / "£250" → "250 £"; Fable 27.9.: kaikilla laitteilla).</summary>
         static string Raha(string s)
         {
             var osat = s.Trim().Split(' ');
             if (osat.Length == 2 && int.TryParse(osat[0], out _) && (osat[1] == "£" || osat[1].StartsWith("punta")))
-                return "£" + osat[0];
+                return osat[0] + "\u00A0£";
             return s;
         }
 

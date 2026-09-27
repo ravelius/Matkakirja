@@ -210,6 +210,8 @@ namespace Matkakirja.Natiivi
             {
                 if (string.IsNullOrEmpty(nappi)) { tulos?.Invoke(null); return; }
                 if (nappi != "lisaa" && kortti.ClassListContains("mk-nosto--esittely")) Vaihe2();
+                // Kaiutin (luennan mittaus): kuin napautus, ei kortin oma nappi.
+                if (nappi == "kaiutin") { lukija.Paina(); tulos?.Invoke(null); return; }
                 if (napit.TryGetValue(nappi, out var a)) { a(); tulos?.Invoke(null); }
                 else tulos?.Invoke("kortilla ei ole nappia " + nappi + " (on: " + string.Join(", ", napit.Keys) + ")");
             }
@@ -274,8 +276,6 @@ namespace Matkakirja.Natiivi
             kuvaIndeksi = 0;
             kortti.EnableInClassList("mk-nosto--looppi", n.Looppi);
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
-            // Elävä kartta: maakunnan salaisuus samassa koossa, oma sävy (löydös 135: vain tyyli eri).
-            kortti.EnableInClassList("mk-nosto--salaisuus", n.Laji == NostoLaji.Salaisuus);
             VapautaPaikka();
             Mitoita();
             if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
@@ -568,7 +568,7 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Elain ? "Kuuntele eläinkortti"
                 : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
                 : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina"
-                : n.Laji == NostoLaji.Salaisuus ? "Kuuntele salaisuus" : "Kuuntele hetki");
+                : "Kuuntele hetki");
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
             Ylarivi(sisus, n).Add(lukija.Juuri);
