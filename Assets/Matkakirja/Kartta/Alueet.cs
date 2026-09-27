@@ -85,6 +85,9 @@ namespace Matkakirja
                 lahteet.TryGetValue("rasteri", out var lr) && lr is Dictionary<string, object> rasteri &&
                 rasteri.TryGetValue("maaMax", out var mm) && mm is double mmd)
                 rasterinMaaMax = (int)mmd;
+            // Pohjan kaupunkitaso Z10 (skeema 1.51, Siirtosepän #3395): laattajoukko Laattapalvelimelle.
+            int z10 = KaupunkiRasteri.Lue(juuri);
+            Debug.Log($"MATKAKIRJA alueet: kaupunkitaso Z{KaupunkiRasteri.Taso} {(KaupunkiRasteri.Tunnettu ? z10 + " laattaa" : "ei paketissa")}");
 
             if (!string.IsNullOrEmpty(maastoLayer))
             {
@@ -116,8 +119,11 @@ namespace Matkakirja
         Alue Uusi(string id, string nimi, Dictionary<string, object> d)
         {
             long tavut = 0;
-            if (d.TryGetValue("tavuja", out var t) && t is Dictionary<string, object> td && td.TryGetValue("yht", out var y) && y is double yd)
-                tavut = (long)yd;
+            if (d.TryGetValue("tavuja", out var t) && t is Dictionary<string, object> td)
+            {
+                if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
+                if (KaupunkiRasteri.Paalla && td.TryGetValue("kaupunkiRasteri", out var kr) && kr is double krd) tavut += (long)krd;
+            }
             var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
             if (File.Exists(Merkki(id))) { a.Tila = Tila.Valmis; a.Ladattu = tavut; }
             return a;
@@ -206,6 +212,8 @@ namespace Matkakirja
                 }
             }
             Laatat("rasteri", rasteriPohja);
+            // Kaupunkitaso Z10 (samasta pohjasarjasta; vanhat buildit eivät lue avainta).
+            if (KaupunkiRasteri.Paalla) Laatat("kaupunkiRasteri", rasteriPohja);
             Laatat("maasto", maastoPohja);
             // Napakalotit (NapaKannet) kuuluvat yleiskarttaan: ilman niitä navat jäävät yksivärisiksi kansiksi.
             if (a.Id == "maailma") polut.AddRange(NapaKannet.OfflinePolut());

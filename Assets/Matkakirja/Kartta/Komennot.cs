@@ -1013,6 +1013,7 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
                               $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}, " +
+                              $"Z10 vanhemmasta {Laattapalvelin.Vanhemmasta10} (kaupunkitaso {(KaupunkiRasteri.Paalla ? (KaupunkiRasteri.Tunnettu ? KaupunkiRasteri.Maara + " laattaa" : "tuntematon") : "pois")}), " +
                               $"väritason uusintoja {Laattapalvelin.VariUusintoja} (pelastettu {Laattapalvelin.VariPelastettu}) | {Laattapalvelin.YhteysKuvaus(0)} | {Laattapalvelin.JonoTila()}");
                     Debug.Log(Laattapalvelin.MaastoKuvaus());
                     break;
