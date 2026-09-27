@@ -7911,3 +7911,7 @@ Julkaisija 08.28: #3375 (astro era 7) v2300, #3372 (lukijamittari + x-puhe-moott
 ## TUKILAATTASILMUKKA KORJATTU #3380 (v2303): KIINTIO 96 Mt TAYTTYI, TUKITASO VAIN JOS MAHTUU; #3371 → PAGES → OSOITIN (27.9.2026 klo 08.35)
 
 Pelikoodari 08.3x: silmukan syy — kosketuslaitteen 96 Mt kiintio tayttyi nakyvista z9-laatoista, LRU purki tukilaatat joka kierros ja haki uudelleen; korjaus: tukitaso vain jos mahtuu kiintioon (muuten karkeampi/ei tukea). Mitattu Z10-koeluettelolla: puhelin 17 391 → 71 pyyntoa (314 → 2,8 Mt), tyopoyta 179/5,65 Mt ennallaan, tuotannon z8 puhelimella ennallaan. Fable → Julkaisija: #3380 → #3371 → Pages → osoitin 2026-09-26s → tarkistus.
+
+## ERIKOISMALLIEN SISALTOTARKISTUS PR 3381: 3 LISATTY (KINDERDIJK, HOHENSALZBURG, MATTERHORN); COLOSSEUM JA BRANDENBURG JAAVAT FOKUSKOHTEISIIN (27.9.2026 klo 08.39)
+
+Sisaltokirjuri 08.4x: 7/10 erikoismallista sisalto kunnossa (Tivoli taydellinen; MSM/Stonehenge/Segovia/Brugge elamanidea-fakta tekstissa), 3 puuttui ja lisattiin (#3381, 4440/4440): Kinderdijk (myllypaiva), Hohensalzburg (Salzburgin harka), Matterhorn (alppihehku, ei minitehtavaa). Colosseum ja Brandenburgin portti: taysi sisalto (velarium, kvadriga) on fokuskohteet-ita/deu.js -karttapisteissa (siirretty lehdesta) → Fable: jaa sinne, siirto oli tarkoituksellinen (178). #3206 ajautuu epasynkkaan → Julkaisija ottaa sen ensin. Sisaltokirjurille valissa maalehtien 28 siirretyn jutun johdantojen tarkistus (CZE, IRL, NOR, LTU, SVK).
