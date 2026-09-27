@@ -8167,3 +8167,7 @@ Omistaja 27.9.2026 klo 12.3x: yhteinen kehityssivusto, paaluokat Tilanne (aloitu
 ## OMISTAJA: WEB-AVAUSKORTTI (#3406) HYVAKSYTTY; PELISTREAKIIN YKSI ARMOPAIVA 7 PAIVAN IKKUNASSA (27.9.2026 klo 12.40)
 
 Kortti 12.4x (kuvaparit kuvapari-kutsu/lehti-web-natiivi.png): webin avauskortti natiivin mitoilla julkaistaan (#3406 junaan). Pelistreak: yksi valiin jaanyt paiva liukuvassa 7 paivan ikkunassa ei katkaise putkea, armopaivalta ei palkintoa eika pituuden kasvua; toinen valiin jaanyt paiva ikkunassa nollaa → Pelikoodari #3401 + natiivi 4d93da8d. #3404 (naytaStriimiaani, main.js kaynnistys) v2316 mainissa. Puhevirran mittaus odottaa omistajan kehittajakoodia avaintiedostoon.
+
+## OMISTAJA: MAAKUNTIEN NIMET POIS NAKYVISTA NATIIVIN KARTALTA (27.9.2026 klo 12.40)
+
+Omistaja 27.9.2026 klo 12.4x (kuvakaappaus iPhone, Kreikka): isot kursiiviset maakuntanimiot (Keski-Makedonia, Thessalia, Attika, Peloponnesos ...) hairitsevat → pois kaikilla zoomeilla. Kaupunkien, kohteiden, vuorten, merien ja maan nimet jaavat; maakuntien pohjavari ja rajat jaavat. Natiiviseppa 1.0.30-junaan (sopii Natiivi-UI:n/Linssisepan kanssa jos niiden koodia), kuvapari Fablelle. Pelikoodari: #3399 pelikatalogi.html valivaiheena tuotantoon Pelistreak-kortin korjauksen jalkeen (hyvaksytyt luvut + armopaiva), yhteinen projektisivusto sen paalle.
