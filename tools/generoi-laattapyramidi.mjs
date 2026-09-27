@@ -1126,6 +1126,10 @@ const MASKI_AA = Number(valitsin('maski-aa', 0)) || 0;
 const JARVI_PIENIN = Number(valitsin('jarvi-pienin', '0.4'));
 const JARVI_HARVENNUS = Number(valitsin('jarvi-harvennus', '0.006'));
 const JARVI_PIENIN_PX = Number(valitsin('jarvi-pienin-px', '0')) || 0;
+/** `--pinta-tasoitus askel,ala,yla` (N5; esim. 6,0.03,0.08) — ks. maailmapiirto.js reliefiVarjo. */
+const PINTA_TASOITUS = valitsin('pinta-tasoitus', null)
+  ? (([askel, ala, yla]) => ({ askel, ala, yla }))(String(valitsin('pinta-tasoitus', '')).split(',').map(Number))
+  : null;
 const RANTALEVEYS = valitsin('rantaleveys', null)
   ? String(valitsin('rantaleveys', null)).split(',').map((p) => p.split(':').map(Number))
     .filter(([z, k]) => Number.isFinite(z) && k > 0).sort((a, b) => a[0] - b[0])
@@ -1731,6 +1735,21 @@ const laatikko = {
  * luettelon bittikartta ei voi olla eri mieltä levyn kanssa.
  */
 const lautaSisalto = await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
+/*
+ * --joet-lisa <kansio> (27.9.2026, Euroopan laatukierros kohta 4): Euroopan
+ * alan paketin joet korvataan GEOGLOWS-pääuomilla (tools/fokuskartta/joet-lisa.mjs).
+ */
+if (valitsin('joet-lisa', null)) {
+  const { korvaaEuroopanJoet } = await import('./fokuskartta/joet-lisa.mjs');
+  const { merenPistetesti } = await import('./fokuskartta/merireitit.mjs');
+  const rr = meriRenkaat(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  const k = korvaaEuroopanJoet(lautaSisalto.joet ?? [], resolve(valitsin('joet-lisa', null)), kaava, {
+    onMeri: merenPistetesti(Array.isArray(rr) ? rr : rr.renkaat),
+  });
+  lautaSisalto.joet = k.joet;
+  console.log(`  joet-lisa       Euroopassa ${k.poistettu} paketin jokea korvattu ${k.lisatty} GEOGLOWS-uomalla `
+    + `(${k.paallekkaiset} päällekkäistä pois)`);
+}
 /*
  * RAJAT LAUDAN YKSIKÖIHIN KERRAN. Setti on data (tools/fokuskartta/
  * rajat.mjs); tämä ajo ei tiedä valtioista mitään, vain viivoista.
@@ -4334,6 +4353,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     // Löydös 46 -koe (oletuksena pois).
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
     ...(JARVI_PIENIN_PX ? { jarviPieninPx: JARVI_PIENIN_PX } : {}),
+    ...(PINTA_TASOITUS ? { pintaTasoitus: PINTA_TASOITUS } : {}),
     ...(RANTALEVEYS ? { rantaKerroin: rantaKerroinTasolle(mitat.z) } : {}),
     ...(RELIEFI_KOE ? { reliefi: RELIEFI_KOE } : {}),
     ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
@@ -4869,6 +4889,8 @@ function teeLuettelo() {
     ...(RESEPTINIMI ? { resepti: RESEPTINIMI } : {}),
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
     ...(MATALA_VIILEYS ? { matalaViileys: { viileys: MATALA_VIILEYS, syvyys: MATALA_SYVYYS } } : {}),
+    ...(PINTA_TASOITUS ? { pintaTasoitus: PINTA_TASOITUS } : {}),
+    ...(valitsin('joet-lisa', null) ? { joetLisa: 'GEOGLOWS v2 (CC BY-SA 4.0), Eurooppa' } : {}),
     ...(JARVI_PIENIN !== 0.4 || JARVI_PIENIN_PX ? { jarvet: { pienin: JARVI_PIENIN, harvennus: JARVI_HARVENNUS, pieninPx: JARVI_PIENIN_PX } } : {}),
     ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
     ...(RELIEFI_KOE ? { reliefi: valitsin('reliefi-koe', null) === 'lammin' ? 'lammin' : RELIEFI_KOE } : {}),

@@ -656,6 +656,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     maskiAA = 0,
     rantaKerroin = 1,
     reliefi = null,
+    /* `pintaTasoitus` { askel, ala, yla } (27.9.2026, N5; ks. reliefiVarjo). null = entinen. */
+    pintaTasoitus = null,
     /*
      * `jarviPieninPx` (27.9.2026, Euroopan laatukierros N3): järvi
      * piirretään vain, jos sen laatikon pidempi sivu on tällä tasolla
@@ -1177,13 +1179,36 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     });
   })() : null;
   /** { valo: −1…1 (0 = tasamaa), rinne: 0…1 } pisteessä; askel = ruudukon väli. */
+  /*
+   * PINTAMALLIN TASOITUS (omistaja 27.9.2026, Euroopan laatukierros N5):
+   * Copernicus on PINTAmalli, ja z9–z10:llä tasangolle nousi rakennusten ja
+   * metsänreunojen läikkiä (Bukarest, Kiova). Tasaisella maalla (leveän
+   * pohjan kaltevuus < ala) varjo lasketaan leveältä pohjalta (`askel`
+   * pikseliä), jolloin sadan metrin kohoumat katoavat; rinteissä
+   * (> yla) varjo on entinen, välissä pehmeä siirtymä. Vain kun pikseli on
+   * ≤ 130 m (z9–z10): kaukotasolla leveä pohja olisi kymmeniä kilometrejä,
+   * ja vuoristokin näyttäisi siltä tasaiselta. EI terävöitä mitään.
+   */
+  const PINTA = pintaTasoitus && DLON * 111320 <= 130 ? pintaTasoitus : null;
   const reliefiVarjo = (lon, lat) => {
     const dd = DLON;
     const kx = 2 * dd * 111320 * Math.cos((lat * Math.PI) / 180);
     const ky = 2 * dd * 111320;
-    const dzdx = (korkeus(lon + dd, lat) - korkeus(lon - dd, lat)) / kx;
-    const dzdy = (korkeus(lon, lat + dd) - korkeus(lon, lat - dd)) / ky;
+    let dzdx = (korkeus(lon + dd, lat) - korkeus(lon - dd, lat)) / kx;
+    let dzdy = (korkeus(lon, lat + dd) - korkeus(lon, lat - dd)) / ky;
     if (!Number.isFinite(dzdx) || !Number.isFinite(dzdy)) return { valo: 0, rinne: 0 };
+    if (PINTA) {
+      const DD = dd * PINTA.askel;
+      const gx = (korkeus(lon + DD, lat) - korkeus(lon - DD, lat)) / (kx * PINTA.askel);
+      const gy = (korkeus(lon, lat + DD) - korkeus(lon, lat - DD)) / (ky * PINTA.askel);
+      if (Number.isFinite(gx) && Number.isFinite(gy)) {
+        const k = Math.hypot(gx, gy);
+        const t = Math.min(1, Math.max(0, (PINTA.yla - k) / (PINTA.yla - PINTA.ala)));
+        const w = t * t * (3 - 2 * t);
+        dzdx = dzdx * (1 - w) + gx * w;
+        dzdy = dzdy * (1 - w) + gy * w;
+      }
+    }
     const z = RELIEFI.liioittelu;
     const nx = -dzdx * z; const ny = -dzdy * z;
     const len = Math.hypot(nx, ny, 1);
@@ -2125,7 +2150,29 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     // Sama funktio kuin viivatasolla (ks. JOET OVAT VIIVATASOLLA):
     // pohja saa tyhjän listan, kun joet on siirretty viivatasolle.
     piirraJoetKankaalle(ctx, sisalto, {
-      lautaKuvaX, lautaKuvaY, R, GW,
+      lautaKuvaX, lautaKuvaY, R, GW, px,
+      /*
+       * JOKI EI JATKU JÄRVEN YLI (Euroopan laatukierros N6, Neva
+       * Laatokan päällä): järvet rajataan pois jokien alta
+       * parillisuusleikkeellä. Vain GEOGLOWS-joilla (--joet-lisa), jotta
+       * vanha pohja pysyy tavulleen samana.
+       */
+      jarviLeike: (sisalto?.joet ?? []).some((j) => j.minPx !== undefined) && aineisto.jarvet?.length
+        ? (g) => {
+          g.beginPath();
+          g.rect(-1e7, -1e7, 2e7, 2e7);
+          for (const j of aineisto.jarvet) {
+            for (const viiva of j.renkaat) {
+              for (let i = 0; i < viiva.length; i += 1) {
+                const x = kuvaX(viiva[i][0]); const y = kuvaY(viiva[i][1]);
+                if (i === 0) g.moveTo(x, y); else g.lineTo(x, y);
+              }
+              g.closePath();
+            }
+          }
+          g.clip('evenodd');
+        }
+        : null,
     });
 
     /* --- reitit: pelilaudan rata askelmineen ------------------------
@@ -3348,16 +3395,24 @@ export function piirraJoetKankaalle(ctx, sisalto, mitta) {
     }
   };
   ctx.save();
+  if (mitta.jarviLeike) mitta.jarviLeike(ctx);
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
   ctx.strokeStyle = JOKITYYLI.muste;
   let piirretty = 0;
   for (const joki of sisalto.joet) {
+    // GEOGLOWS-joki vasta tasolla, jonka px/laudan yksikkö ≥ minPx (joet-lisa.mjs).
+    if (joki.minPx !== undefined && mitta.px !== undefined && mitta.px < joki.minPx) continue;
     // Pääjoki on leveämpi; kaikki uomat piirretään joka tasolla.
     ctx.lineWidth = Math.max(
       JOKITYYLI.vahin,
       (joki.tarkeys <= 1 ? JOKITYYLI.paa : JOKITYYLI.sivu) * R,
     );
+    // GEOGLOWS-uoma ei ole leveämpi kuin todellinen uoma (leveysM; laudan
+    // yksikkö ≈ 2 140 m Euroopan leveyksillä), mutta vähintään ohuin veto.
+    if (joki.leveysM !== undefined && mitta.px) {
+      ctx.lineWidth = Math.max(JOKITYYLI.vahin, Math.min(ctx.lineWidth, (joki.leveysM / 2140) * mitta.px));
+    }
     kaari([joki.pisteet]);
     ctx.stroke();
     piirretty += 1;
