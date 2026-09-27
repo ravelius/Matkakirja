@@ -97,6 +97,8 @@ hyväksynnän jälkeen.
   delfiinit 7 s) sukeltavat ennen kuvia. Täydennysajo `ajo-meri-taydennys.sh` odottaa lajin näytöksen tavoitekohtaan
   (tila-rivin "näytös k s/P s" tai "tauko … alkaa N s"; tauolla `nayta`). Hitaasti liikkuva laji jää mediaanitaustaan, joten
   kokoaja ottaa rajauskohdan käsin (`KORJAA`). Puuttuva ruutu merkitään näkyvästi (`PUUTTUU`).
-- **Avoin omistajalle (Fablen kautta):** majakkalaivan kupu punaiseksi? rungon nimi UTGRUND? merihirviön roiskepallojen
-  ääriviivan ohennus?
-- **Merge-pyyntö** Natiivisepälle 1.0.31:een lähetetty 27.9. klo 18.2x.
+- **Fablen päätökset 18.3x (omistaja voi kumota):** lyhdyn punainen kupu ja musta päivämerkkipallo ennallaan; rungon
+  nimi UTGRUND pois (keksitty asemanimi samana kaikissa maissa esittäisi fiktiota faktana; majakkalaiva 2 568 kolmiota,
+  kauko 1 460); merihirviön vesipallot ilman ääriviivaa (pehmeä vaalea vaahto). Korjaus 01997eca, käännös e1f60a11.
+- **Merge-pyyntö** Natiivisepälle 1.0.32-junaan (1.0.31 oli jo TestFlightissa): 01997eca, lähetetty 27.9. klo 18.3x.
+  Korjattujen lajien laitekuvat (ml3) ja puuttuvat ylhäältä-ruudut kuvataan, kun simulaattori vapautuu.
