@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2319, teksti: 'v2316: Pelistreak — peräkkäiset pelipäivät tuov… (#3401)' },
   { v: 2318, teksti: 'Tilannekatsaus: kehityssivuston etusivun tekstit (#3407)' },
   { v: 2317, teksti: 'Hintatasot.js: tarkennus 49 puuttuvalle pelin m… (#3402)' },
   { v: 2316, teksti: 'v2316: KIIREELLINEN korjaus — naytaStriimiaani… (#3404)' },
