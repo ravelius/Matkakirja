@@ -1315,16 +1315,16 @@ export const MAA_KATEGORIAT = {
           aika: 'Joulupöydässä',
           tiedosto: 'Kapustnica (Sauerkraut soup).jpg',
           teksti: 'Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja '
-              + 'Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen '
-              + 'kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan '
-              + 'leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, '
-              + 'jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia '
-              + 'säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja '
-              + 'maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja '
-              + 'syödään myös Puolassa, Ukrainassa ja Venäjällä.',
+            + 'Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen '
+            + 'kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan '
+            + 'leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, '
+            + 'jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia '
+            + 'säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja '
+            + 'maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja '
+            + 'syödään myös Puolassa, Ukrainassa ja Venäjällä.',
           lyhyt: 'Kapustnica-keitossa on hapankaalia ja makkaranpaloja.',
           selite: 'Kapustnica tarjoillaan savikulhossa, ja punertavasta liemestä nousee '
-              + 'lusikalle hapankaalia ja makkaraa.',
+            + 'lusikalle hapankaalia ja makkaraa.',
           lahde: 'young shanahan, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Cabbage soup',
         },
