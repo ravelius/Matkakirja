@@ -63,7 +63,6 @@ const TUNNETUT_KOHTAUSKUVAT = new Set([
   'rooma-kolikko-olan-yli.webp',
   'rooma-sikstus-1510.webp',
   'valletta-pyhan-elmon-linnake.webp',
-  'valletta-ylabarrakka-puutarhat.webp',
   'wien-figaro-1786.webp',
   'wien-lipizzanit.webp',
   'wien-taikahuilu.webp',
