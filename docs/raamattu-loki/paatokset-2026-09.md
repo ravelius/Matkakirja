@@ -8419,3 +8419,7 @@ Julkaisija: TF 1.0.33 = CFBundleVersion 202609272009 (ajo 36348081044). #3426 (5
 ## STRIIMILUENTA WEBISSA TUOTANNOSSA (#3513 v2347, POLLO xai 200); TF 1.0.34 ODOTTAA BUILD 34:A (28.9.2026 klo 00.13)
 
 Julkaisija 00.02: #3513 mergetty, APP_VERSION 2026-09-21.2347 tuotannossa, js/puhetagit.js 200, Pollon julkaisu 36350208524 ok, puhemoottori xai. Tagien kuuluvuutta ei ole todennettu kuuntelemalla. 1.0.34 muutoslokirivi #3518 mainissa. Linssisepan astro-selain c5b073cd: galleria jatkuu naapurikohteeseen, nimipilleri kirkastuu 1,2 s kohteen vaihtuessa (Fablen hyvaksynta, koodataan tauon jalkeen).
+
+## STRIIMILUENTA JULKAISTU: TF 1.0.34 (202609272058 = BUILD 34 17c2928b) + WEB v2347; KAIKKI ROOLIT TAUOLLA, LUOVUTUKSET PUSHATTU → TILINVAIHTO (28.9.2026 klo 00.35)
+
+Julkaisija 00.3x: TF 1.0.34 sisäisessä ryhmässä (ajo 36351716395), What to test asetettu. Kaikkien roolien luovutukset pushattu (taulukko docs/raportit/viesti-fable-luovutus-20260928.md). Yöpoltto jatkuu vahdilla v5e, Postivahti seuraa. Fablen luovutus -20260928 + aloitusviesti.
