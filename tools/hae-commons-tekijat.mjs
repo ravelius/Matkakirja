@@ -37,7 +37,7 @@ const { kuvienTekijat } = await import('./kuvatekijat.mjs');
 const { tiedostot } = await kokoaVienti();
 const puuttuvat = kuvienTekijat(tiedostot)
   .filter((k) => (k.laji === 'kuva-commons' || k.laji === 'lippu-commons')
-    && (k.luokka === 'lisenssi-puuttuu' || k.luokka === 'pd-ei-tekijaa'))
+    && (k.luokka === 'lisenssi-puuttuu' || k.luokka === 'pd-ei-tekijaa' || k.luokka === 'tekija-puuttuu'))
   .map((k) => k.arvo)
   .filter((n) => !(n in COMMONS_TEKIJAT));
 console.log(`Haettavia Commons-tiedostoja: ${puuttuvat.length}`);
@@ -81,9 +81,12 @@ for (let i = 0; i < puuttuvat.length; i += 40) {
     const tiedot = sivu.imageinfo?.[0];
     const m = tiedot?.extmetadata;
     if (!m) { eiLoydy.push(nimi); continue; }
-    const lisenssi = siisti(m.LicenseShortName?.value);
+    // Lisenssille ei nimisääntöjä: siisti() tulkitsee "CC BY 2.5" muodoksi "X by Y" ja jättää "2.5".
+    const lisenssi = String(m.LicenseShortName?.value ?? '').replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
     // PD:ssä "Unknown author" / "Unknown" ei ole tekijä vaan tieto sen puuttumisesta.
     let tekija = siisti(m.Attribution?.value) || siisti(m.Artist?.value) || '';
+    // "Author's own photo" / "Own work": tekijä on lataaja (Commonsin oma työ -merkintä).
+    if (/^(author'?s )?own (work|photo)$/i.test(tekija)) tekija = tiedot.user ?? '';
     if (!tekija && !/public domain|^pd|cc0/i.test(lisenssi)) tekija = tiedot.user ?? '';
     taulu[nimi] = [tekija, lisenssi, m.LicenseUrl?.value ?? ''];
   }

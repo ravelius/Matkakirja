@@ -49,7 +49,7 @@ test('Commons-täydennys: jokaisella rivillä sallittu lisenssi, tekijä tai "tu
   const rivit = Object.entries(COMMONS_TEKIJAT);
   assert.ok(rivit.length > 300);
   for (const [nimi, [tekija, lisenssi]] of rivit) {
-    assert.ok(lisenssi, `${nimi}: lisenssi puuttuu`);
+    assert.ok(lisenssi && !/^[\d.]+$/.test(lisenssi), `${nimi}: lisenssi puuttuu tai katkennut (${lisenssi})`);
     const t = aaniLisenssiTunnus(lisenssi);
     assert.ok(t == null || lisenssiKelpaa(t), `${nimi}: ${lisenssi}`);
     assert.ok(!/see (the )?file history|unknown author/i.test(tekija), `${nimi}: roskatekijä "${tekija}"`);
