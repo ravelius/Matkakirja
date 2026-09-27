@@ -3,12 +3,12 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20260927-b.md`**
-   (haara `karttaseppa-tyo-20260922`). Z10 on tuotannossa (osoitin 2026-09-26s-pohja 09.47). TÄNÄ YÖNÄ klo 22
-   alkaa natiivin pallon Z10 kaupungeille ajastettuna levylle (pallo-z10-20260927/aja.sh, ilman sessiota).
-   **Vienti tuotannon pallosarjaan odottaa OMISTAJAN hyväksyntää tähän sessioon**, ja komento on luovutuksessa.
-   Ei kiertoteitä eikä Julkaisijan ajoa. Taustaksi `viesti-karttaseppa-luovutus-20260927.md`.
-3. Auto-memory `karttaseppa-tila-20260927-paiva`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20260927-c.md`**
+   (haara `karttaseppa-tyo-20260922`). YÖPOLTTO KÄYNNISSÄ: uusi pohja 2026-09-27 z0–z10 + ranta +
+   viivat levylle (`pyramidi-poltto/ajo-20260927y`, vahti v5b). Lähetä Fablelle heti rivi tilasta
+   (edellisen session viestit katkesivat rajaan). Aamulla vienti, pallo ja osoitin OMISTAJAN KORTILLA.
+   Polttojono ja laatuaineisto: PR #3433, koodi PR:t #3436 ja #3446.
+3. Auto-memory `karttaseppa-tila-20260927-ilta`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
    Sääntö **JUMI → FABLE**: jumissa yksi viesti Fablelle, ei korttia omistajalle.
    Kill-komennot ja vahdin löysennykset vaativat omistajan hyväksynnän tähän sessioon (luokitin).
 
