@@ -144,12 +144,72 @@ pitivät paikkansa).
   14.8.1961 otsikon tarkka sanamuoto. Todennäköisesti oikein, mutta ei
   riippumattomasti vahvistettu.
 
+## Erä 2: Wien, Madrid, Ateena (Istanbul ei ehditty)
+
+### KORJATUT VIRHEET
+
+14. **Madrid, Metrópolis-talon voitonjumalatar** —
+    kulttuuri-kategoriat.js (lyhyt+selite). Väite: "vuonna 1975".
+    Virhe: patsas (Federico Coullaut-Valera) asennettiin vasta
+    11.10.1977. Korjattu: "1977".
+15. **Madrid, Kuninkaanlinnan arkkitehti** — nahtavyysjutut.js.
+    Väite: "Filippo Juvarra suunnitteli sen [linnan]". Virhe: Juvarra
+    kuoli 1736, kaksi vuotta ENNEN rakennustöiden alkua 1738 — hänen
+    oppilaansa Giovanni Battista Sacchetti suunnitteli lopulta
+    rakennetun linnan. Korjattu mainitsemaan molemmat.
+16. **Wien, Parlamenttitalon alkuperäinen käyttäjä** —
+    kulttuuri-kategoriat.js (lyhyt+selite). Väite: "Itävalta-Unkarin
+    valtiopäiville". Virhe: Itävalta-Unkarilla ei koskaan ollut
+    yhteistä parlamenttia — vuoden 1867 sovinnon jälkeen Cisleithanialla
+    (Itävalta) ja Transleithanialla (Unkari) oli kummallakin oma
+    valtiopäivänsä. Wienin rakennus oli nimenomaan Itävallan
+    (Cisleithanian) valtiopäivätalo. Korjattu: "Itävallan
+    valtiopäiville".
+17. **Ateena, Kallimarmaron 1896-avajaisyleisö** —
+    nahtavyysjutut.js (kuvateksti). Väite: "katsomossa 80 000
+    ihmistä". Virhe: sama pelin oma leipäteksti sanoo kahdesti
+    "noin 60 000", ja ulkoiset lähteet (Wikipedia) vahvistavat 60 000
+    — kuvateksti oli sisäisesti ristiriitainen. Korjattu: "noin 60 000".
+
+### EPÄSELVÄ / EI KORJATTU (raportoitu Fablelle)
+
+- **Ateena, Akropoliin korkeus** — kolme eri lukua eri tiedostoissa:
+  kulttuuri-kategoriat.js ja nahtavyysjutut.js sanovat "150 metriä
+  merenpinnasta" (täsmää Wikipedian pääartikkeliin), mutta
+  maakartat.js sanoo "156 metrin korkeuteen merenpinnasta" JA "90
+  metriä ympäröivän tasangon yli" — jälkimmäiselle ei löytynyt
+  vahvaa lähdetukea (todennäköisempi arvo n. 60–70 m). EI korjattu
+  tässä erässä, koska maakartat.js:n muokkaaminen on eri roolin
+  (Karttaseppä) vastuualuetta — Fable päättäköön kuka korjaa.
+- **Rooma, Wien, Madrid, Ateena**: useita pienempiä EPÄSELVÄ-huomioita
+  (esim. Ateenan elokuun sademäärä 5mm vs. lähteiden 3,8mm, Wienin
+  Café Sperlin alkuperäinen nimi, yliopiston "valmistumisvuosi" 1837
+  viittaa perustamiseen ei rakennukseen) — ei koeta korjaustarpeeksi,
+  ei listattu erikseen tässä raportissa (agenttien täydet raportit
+  tämän session transkriptissä jos tarvitaan).
+
+### Rooma, Wien, Madrid, Ateena — puhtaaksi tarkistetut kokonaisuudet
+
+Rooma ~45 väitettä (0 virhettä), Wien ~40-45 väitettä (1 virhe),
+Madrid ~45 väitettä (2 virhettä), Ateena yli 40 väitettä neljässä
+osassa — Akropolis-kokonaisuus, kaupunkihistoria, agora/Schliemann/
+Pnyx, olympialaiset/Kallimarmaro (1 virhe + korkeusristiriita).
+
+**Istanbul: EI ALOITETTU** — seuraavan session ensimmäinen tehtävä
+tässä ohjelmassa.
+
 ## Korjausten tila
 
-Kaikki 13 vahvistettua virhettä korjattu haarassa
-`sisaltokirjuri-faktatarkistus-e1`, PR tulossa. EPÄSELVÄT-kohdat
-jätetty ennalleen ja ilmoitettu Fablelle.
+Kaikki 17 vahvistettua virhettä korjattu haarassa
+`sisaltokirjuri-faktatarkistus-e1` (PR #3473, draft — poista draft
+kun koko testisarja on ajettu ja vihreä). EPÄSELVÄT-kohdat jätetty
+ennalleen ja ilmoitettu Fablelle.
 
 ## Seuraava erä
 
-Wien, Madrid, Ateena, Istanbul (agentit käynnissä/jonossa).
+Istanbul (ei aloitettu), sitten seuraavat suuret kaupungit Fablen
+ohjeen mukaan (Fable ei listannut nimiä erän 2 jälkeen — kysy tai
+jatka loogisesti seuraaviin: esim. Tukholma, Kööpenhamina, Praha,
+Budapest — nämä ovat jo saaneet oman lehtiaiheensa Eurooppa-erissä
+7-9, joten niissä on tuoretta, agenttien vielä tarkistamatonta
+sisältöä).
