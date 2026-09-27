@@ -318,7 +318,7 @@ namespace Matkakirja.Natiivi
                         // Palaloki (TF 1.0.32 ohitukset): soitetut/jatketut/uusitut palat ja viimeiset rivit (soi s/kesto, lähde, worker).
                         case "palat":
                             if (A(2) == "nollaa") { Puhe.NollaaPalaloki(); return "=palaloki nollattu"; }
-                            return $"=palat soitettu {Puhe.PalojaSoitettu}, jatkettu kesken {Puhe.PalojaJatkettu}, uusittu {Puhe.PalojaUusittu}\n  "
+                            return $"=palat soitettu {Puhe.PalojaSoitettu}, jatkettu kesken {Puhe.PalojaJatkettu}, uusittu {Puhe.PalojaUusittu}, alkoi myöhässä {Puhe.PalojaMyohassa}\n  "
                                 + string.Join("\n  ", Puhe.Palaloki);
                         // Lukee annetun tekstin kertojan äänellä (palavirran mittaus: "puhe virta" → 1. ääni ms, aani mittaa).
                         case "lue":

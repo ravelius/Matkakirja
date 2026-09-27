@@ -428,10 +428,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Soiva pala "i/n mrk" (palaloki).</summary>
         public static string PalaNyt { get; private set; }
         /// <summary>Palaloki (mittari: "puhe palat"): soitetut, kesken loppuneet ja jatketut, uusitut palat.</summary>
-        public static int PalojaSoitettu, PalojaJatkettu, PalojaUusittu;
+        public static int PalojaSoitettu, PalojaJatkettu, PalojaUusittu, PalojaMyohassa;
         static readonly List<string> palaloki = new List<string>();
         public static IReadOnlyList<string> Palaloki => palaloki;
-        public static void NollaaPalaloki() { palaloki.Clear(); PalojaSoitettu = PalojaJatkettu = PalojaUusittu = 0; }
+        public static void NollaaPalaloki() { palaloki.Clear(); PalojaSoitettu = PalojaJatkettu = PalojaUusittu = PalojaMyohassa = 0; }
         static void Kirjaa(string rivi)
         {
             Debug.Log("MATKAKIRJA puhe: " + rivi);
@@ -696,7 +696,15 @@ namespace Matkakirja.Natiivi
              * 2 s (Play uudelleen), seurataan soitettua aikaa, ja kesken pysähtynyt pala jatkuu samasta kohdasta (≤ 3 kertaa).
              */
             float kesto = klippi != null ? klippi.length : 0f, soi = 0f, alkuOdotus = Time.unscaledTime;
-            while (oma == tunnus && !lahde.isPlaying && !tauolla && Time.unscaledTime - alkuOdotus < 2f) yield return null;
+            // Juurisyyn mittari: vanha koodi tulkitsi Play()-ruudun isPlaying = false palan loppumiseksi.
+            bool heti = lahde.isPlaying || tauolla;
+            int ruutuja = 0;
+            while (oma == tunnus && !lahde.isPlaying && !tauolla && Time.unscaledTime - alkuOdotus < 2f) { ruutuja++; yield return null; }
+            if (synteesi && !heti && oma == tunnus)
+            {
+                PalojaMyohassa++;
+                Kirjaa($"pala {PalaNyt} alkoi soida vasta {ruutuja} ruudun / {(Time.unscaledTime - alkuOdotus) * 1000:0} ms päästä Play():sta (vanha koodi olisi OHITTANUT palan)");
+            }
             if (oma != tunnus) yield break;
             if (!lahde.isPlaying && !tauolla) { Kirjaa($"pala {PalaNyt} ei alkanut 2 s:ssa: Play uudelleen"); lahde.Play(); }
             for (int jatkoja = 0; ; jatkoja++)
