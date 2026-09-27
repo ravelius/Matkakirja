@@ -2704,3 +2704,100 @@
     align-self: stretch;
     margin: 0 17.1px;
 }
+
+/* --- LEHDEN OSIOHAKEMISTO (web v2296 css/styles.css .lehti-osiohakemisto, Lehtiosiot.cs) --------------------------- */
+
+.mk-lehti__osiot {
+    margin-top: 16px;
+}
+
+/* Web .lehti-osiohakemisto-otsikko: Kone lihava 0,8 rem versaalit, välistys 0,14 em, viivat ylä ja ala. */
+.mk-lehti__osiot-otsikko {
+    margin: 0 0 6.4px 0;
+    padding: 4.8px 0;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgba(70, 51, 31, 0.6);
+    font-size: 12.8px;
+    letter-spacing: 13.5px; /* web 0.14em */
+    -unity-text-align: middle-center;
+    color: #211d18;
+}
+
+/* Web .lehti-osio: kuva 5,75 rem + teksti, rako 0,65 rem, padding 0,55 rem 0, pisteviiva (UITK: yhtenäinen, vaaleampi). */
+.mk-lehti__osio {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8.8px 0;
+    border-bottom-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+}
+
+.mk-lehti__osio-kuva {
+    flex-shrink: 0;
+    width: 92px;
+    height: 72px;
+    margin-right: 10.4px;
+    border-radius: 4px;
+    background-color: rgba(70, 51, 31, 0.12);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-lehti__osio-tekstit {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+/* Web button.lehti-osio-linkki: Luku lihava 1,05 rem #b03a2b, ei nappipohjaa. */
+.mk-lehti__osio-linkki {
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+}
+
+.mk-lehti__osio-linkki .mk-nappi__teksti {
+    font-size: 16.8px;
+    color: #b03a2b;
+    white-space: normal;
+}
+
+/* Web .lehti-osio-jutut: 0,88 rem, riviväli 1,35, "·"-luetelma rgba(70,51,31,.6). */
+.mk-lehti__osio-jutut {
+    margin-top: 3.2px;
+}
+
+.mk-lehti__osio-juttu {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-lehti__osio-piste {
+    flex-shrink: 0;
+    margin: 0 4.2px 0 0;
+    padding: 0;
+    font-size: 14.1px;
+    color: rgba(70, 51, 31, 0.6);
+}
+
+.mk-lehti__osio-juttunappi {
+    flex-shrink: 1;
+    min-height: 0;
+    margin: 0;
+    padding: 0 0 2.4px 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+}
+
+.mk-lehti__osio-juttunappi .mk-nappi__teksti {
+    font-size: 14.1px;
+    color: #211d18;
+    white-space: normal;
+    -unity-text-align: upper-left;
+}
