@@ -199,12 +199,14 @@ namespace Matkakirja.Natiivi
         /// <summary>Pohjakartan sävyn liukusäädinrivi kehittäjäosaan (Pohjasavy, Natiiviseppä).</summary>
         (Slider Saadin, Label Arvo) SavyRivi(string nimi, float min, float max, bool onKontrasti)
         {
-            var rivi = Rakenne.El("mk-saadinrivi", kokeet);
-            Rakenne.Teksti(nimi, "mk-saadinrivi__nimi", rivi);
+            // Kapea kehittäjäpaneeli: nimi ja arvo ylärivillä, säädin koko leveydeltä alla (vierekkäin säädin jäi ~30 px:ksi).
+            var rivi = Rakenne.El("mk-saadinrivi mk-saadinrivi--pino", kokeet);
+            var yla = Rakenne.El("mk-saadinrivi__yla", rivi);
+            Rakenne.Teksti(nimi, "mk-saadinrivi__nimi", yla);
+            var arvo = Rakenne.Teksti("", "mk-saadinrivi__arvo", yla);
             var s = new Slider(min, max) { pageSize = 0, fill = true };
             s.AddToClassList("mk-saadin");
             rivi.Add(s);
-            var arvo = Rakenne.Teksti("", "mk-saadinrivi__arvo", rivi);
             void Aseta(float v, bool tallenna)
             {
                 v = Mathf.Round(v * 100f) / 100f;
