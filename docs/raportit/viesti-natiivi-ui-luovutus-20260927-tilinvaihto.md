@@ -38,6 +38,19 @@ Kuvapari: kutsu + lehden osiot (web pariisi-iphone-0-kutsu / -3-lehti vs natiivi
   Laitteella: rms 0,125 → tauko 0,006 → jatko 0,105. Paneelin korjaus (kerroksen juureen) 56ab226b:ssä EI vielä ajettu.
   Pelikoodari lisää `|| tauolla` puhevirta-haaransa silmukoihin: VÄLITÄ hänelle merge-SHA kun Natiiviseppä ilmoittaa.
 
+## JONOSSA 2: TALOUDEN VAIHE 1 UI (Pelikoodari 11.3x, 1.0.29; aloita avauskortin jälkeen)
+Logiikka proto `pelikoodari/talous-vaihe1` fbda3812, web #3394 mainissa v2314 = malli. Haara natiivi-ui/talous-vaihe1 sen päälle.
+1. Kassarivi: Matka.RahattomuuttaJaljella() (int?) ≠ null → kassa punaisena + "rahat loppu · N vrk"; vihje
+   Matka.PaivakuluNyt() {Ruoka, Majoitus, Yhteensa, Taso, Matkalla}: "Päiväkulu X £ (ruoka a £, majoitus b £) — kassa
+   riittää noin Matka.KassaRiittaa() päiväksi" (majoitus pois, jos Matkalla).
+2. Toast: PeliOhjain.Rahatilanne(tilanne, otsikko, ala): peli.vararikko.varoitus (Livia vakava) / .selvisi (lämmin) / .loppu.
+3. Loppukortti: PeliOhjain.MatkaPaattyi(MatkanLoppu{Pelaaja, Kaupunki, Paiva}): "Matka päättyi", "Rahat loppuivat
+   kaupungissa X / matkalla, matkan N. päivänä" + löydöt (Yhteenveto()); "Jatka viimeisestä tallennuksesta" vain jos
+   TurvaTallennusOn → JatkaTurvasta(); "Uusi peli" → UusiMatka(...).
+4. Odota: Liikkuminen.Napit antaa Kulkutapa.Odota ("Odota", korostettu) Liftauksen paikalla → PeliOhjain.ValitseKulkutapa
+   (Kulkutapa.Odota). Käsittele Odota jokaisessa Kulkutapa-switchissä.
+Web-kuvapari tools/pariteettikuvat.mjs:llä samasta tilasta (tallennus rahaa 5 £, 4 vuoroa): kassarivi punaisena + loppukortti.
+
 ## AVOIMET
 - Pollo-puhe (Pulun vastauksen luenta) ei soi simulaattorissa mykistettynä eikä äänet päällä (kertojan luenta soi, uudet
   mp3:t aani/-kansiossa) → Fable: todenna laitteella 1.0.29:stä. Pulupuhe-portit tekee Pelikoodarin bae36144 (junassa);
