@@ -610,14 +610,15 @@ namespace Matkakirja
             return r.Verkko("Stonehenge-sade");
         }
 
-        /// <summary>Lampaiden lepopaikat (vallin sisällä lounaassa ja etelässä).</summary>
-        static readonly Vector3[] ShLampaat = { ShSuunta(200f) * 0.36f + ShMaataso, ShSuunta(225f) * 0.38f + ShMaataso, ShSuunta(160f) * 0.37f + ShMaataso };
-
         /// <summary>
         /// Maatason osien nosto (laite 27.9.: liioiteltu maasto peitti 0,002:n korkeudella olevan nurmilevyn ja vallin osittain,
         /// koska malli on kartalla kymmenien kilometrien levyinen): valli, lampaat ja säde 0,006 yksikköä maan yläpuolella.
         /// </summary>
         static readonly Vector3 ShMaataso = new Vector3(0f, 0.006f, 0f);
+
+        /// <summary>Lampaiden lepopaikat (vallin sisällä lounaassa ja etelässä). ShMaataso:n jälkeen:
+        /// staattiset kentät alustetaan tekstijärjestyksessä, ja ennen 27.9. lampaat jäivät korkeudelle 0.</summary>
+        static readonly Vector3[] ShLampaat = { ShSuunta(200f) * 0.36f + ShMaataso, ShSuunta(225f) * 0.38f + ShMaataso, ShSuunta(160f) * 0.37f + ShMaataso };
 
         /// <summary>
         /// Liikkuvat osat (Natiivisepän rajapinta). Liikkeen laskee Linssisepän liikeydin avaimen ja osan nimen mukaan.
