@@ -4,7 +4,7 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260927-c.md`](viesti-pelikoodari-luovutus-20260927-c.md) (27.9. klo 11.3x): #3384–#3389
+   [`viesti-pelikoodari-luovutus-20260927-tilinvaihto.md`](viesti-pelikoodari-luovutus-20260927-tilinvaihto.md) (27.9. klo 11.3x, tilinvaihto; = -c + zoomikatto): #3384–#3389
    mainissa, #3388 + #3394 (talouden vaihe 1) junassa; agenteilla natiivin talousportti, astro-pallo-VASTAKOE ja
    pelikatalogi.html (tarkista haarat); jono: natiiviportin merge + UI-speksi, avauskortin web-kevennys, pelistreak,
    natiivin puhemittaus. Edellinen: `viesti-pelikoodari-luovutus-20260927-b.md`.
