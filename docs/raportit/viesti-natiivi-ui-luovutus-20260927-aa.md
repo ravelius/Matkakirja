@@ -25,6 +25,10 @@ Apuskriptit tämän session scratchpadissa (/private/tmp/claude-502/-Users-Share
    toleranssi). Ehdotettu 1.0.34:ään, ei junassa. tarkista.sh 0 virhettä.
 4) JONO 1.0.34 (Fable 22.5x): "Koe ihme" -nappi pois; ihmekuva kortin ensimmäiseksi isoksi kuvaksi, valokuva pienenä tekstin
    kylkeen. Odota Pelikoodarin web-speksiä ja kuvaparia → natiivi samaksi.
+5) KATSELMOINTI (Linssiseppä 28.9. 00.0x, Fablen tilaus): linssiseppa/astro-selain c5b073cd muuttaa Kuvanakyma.cs
+   (vaakapyyhkäisy + reunanapautus 22 % selaa, AstronauttiLinssi.Naapuri, ‹ › mk-astrokuva__kohteet, liu'ut 140+160 ms,
+   tuplanapautuszoomi vain keskellä), Linssit.uss (.mk-astrokuva-tausta rgba(4,9,7,.7)), LinssiKomennot.cs (ui linssi selaa|kohde,
+   kuvaselain 0|1). Speksi docs/raportit/astronautin-kuvaselain-20260928.md. Katselmoi ennen merge-pyyntöä Natiivisepälle.
 
 ## OPIT
 - MCP-simulaattorin screenshot näyttää EDELLISEN tilan (Unity piirtää vain herätettynä) → käytä `xcrun simctl io screenshot`.
