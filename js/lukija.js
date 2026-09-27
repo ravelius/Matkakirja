@@ -1645,6 +1645,8 @@ function puheVirtana(nappi, persoona, vapautaVaisto = null) {
     persoona,
     // Virtaluenta on aina kertakäyttöistä (pöllön striimi) — ei säilöä.
     sailio: null,
+    // Striimattu vastaus on yksi puheenvuoro: virkeväli, ei kappaleväliä.
+    yksiPuheenvuoro: true,
     onLoppu: loppui,
     onVirhe: () => loppui(),
   });

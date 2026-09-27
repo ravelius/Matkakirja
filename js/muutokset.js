@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2303, teksti: 'Erikoismalli-sisaltotarkistus: 3 puuttuvaa nostoa' },
+  { v: 2304, teksti: 'Turistiopas erä 19: Ilha do Bananal, Boa Vista,… (#3206)' },
+  { v: 2303, teksti: 'v2299: Pulun striimivastaus yhtenä puheenvuoron… (#3374)' },
   { v: 2302, teksti: 'Pallon versiovahti: sama pohja eri nimellä (#3376)' },
   { v: 2301, teksti: 'v2299: Lukijamittari — worker kertoo puhemootto… (#3372)' },
   { v: 2300, teksti: 'Astronautin kamera erä 7: 13 kohdetta, tilaus t… (#3375)' },
