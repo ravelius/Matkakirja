@@ -8099,3 +8099,7 @@ Linssiseppa 11.2x: Matterhorn v2 (hoikempi koukkuhuippu, peitto ~½, korkeus 1,3
 ## OMISTAJA 11.3x: SEURAAVA SIIRTOPROMPTI POIKKEUKSELLISESTI NIIN, ETTA PAATOIMITTAJA KAYTTAA OPUS-MALLIA (27.9.2026 klo 11.22)
 
 Omistaja 11.3x: seuraava siirtoprompti (tilinvaihto viikkokiintion 97 %:ssa, tai Fablen seuraava nollaus) tehdaan poikkeuksellisesti niin, etta paatoimittaja (Fablen rooli) ajetaan Opus-mallilla (effort max), ei Fable-mallilla. Kirjataan siirtopromptiin ja aloitusviestiin: sessio 'FABLE' luodaan Opus max -tilassa; Raamatun saannot ja lokikaytanto samat. Poikkeus on kertaluonteinen, ellei omistaja jatka sita.
+
+## VIIKKO 93 % → SIIRTOPROMPTI KIRJOITETTU (viesti-fable-tilinvaihto-20260927.md), ROOLIT KIRJOITTAVAT LUOVUTUKSET (27.9.2026 klo 11.25)
+
+Postivahti 11.23: viikkokiintio 93 % (~1 pp/12 min). Fable: siirtoprompti docs/raportit/viesti-fable-tilinvaihto-20260927.md (paatoimittaja Opus max poikkeus, tila, roolien aloitusviestit, jono) ja kaikille 10 roolille kasky kirjoittaa luovutus nyt ja jatkaa tyota; 97 %:ssa sessiot pysaytetaan (stop_session), viimeisena Fable.
