@@ -133,7 +133,8 @@ sen jälkeen.
 noin klo 7–8. Vienti ja osoittimen vaihto omistajan kortilla aamulla.
 
 **Levy:** kopiot tehdään ämpärissä, ja `--siivoa` poistaa shardien laatat
-viennin jälkeen, joten paikallisesti tarvitaan alle 10 Gt kerrallaan.
+viennin jälkeen, joten paikallisesti tarvitaan alle 10 Gt kerrallaan. Ennen
+alkua tarkistetaan, että levyä on vapaana vähintään 90 Gi (Fable 27.9.).
 
 ## Tehtävät 28.9. (lopullinen jono Fablelle klo 18 mennessä)
 
