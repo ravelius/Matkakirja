@@ -8123,3 +8123,7 @@ Pelikoodari 11.3x (68 %): luovutus -c 748004216; #3388 niputus korjattu → juna
 ## OMISTAJA 11.3x: PELISTREAK-LUVUT HYVAKSYTTY (3–6 pv 20 £, 7. pv 50 + 100 £, 8+ pv 30 £ + JOKA 7. PV 100 £); PELIKOODARIN TILINVAIHTOLUOVUTUS db81fcab4 (27.9.2026 klo 11.32)
 
 Omistaja 11.3x kortilla: pelistreak-luvut hyvaksytty sellaisenaan → talous vaihe 1 web + natiivi. Pelikoodari: tilinvaihtoluovutus db81fcab4 (#3388/#3394 junassa, proto-haarat, talousportti agentilla, streak, avauskortin kevennys, natiivimittaus, zoomikatto).
+
+## NATIIVIN TALOUSPORTTI VALMIS (pelikoodari/talous-vaihe1 fbda3812) → 1.0.30 YHDESSA NATIIVI-UI:N OSAN KANSSA, EI 1.0.29 (27.9.2026 klo 11.32)
+
+Pelikoodari 11.3x: natiivin talousportti fbda3812 (Peli/Talous.cs: 400 £, paivakulu x hintataso, pankin apu pois, 2 vrk → loppu, Odota, tallennus v6; 330/330, unity 0); merge-pyynto Natiivisepalle, UI-speksi Natiivi-UI:lle (kassarivi punaisena, toast, loppukortti + jatko turvatallennuksesta, Odota-nappi), Siirtosepalle START_MONEY 400; tunnetut erot: ei webin lokiriveja, loppukortti ei palaa uudelleenkaynnistyksen jalkeen. Fable: talous → 1.0.30 yhdessa UI-osan kanssa; 1.0.29 pysyy sovitussa kokoonpanossa.
