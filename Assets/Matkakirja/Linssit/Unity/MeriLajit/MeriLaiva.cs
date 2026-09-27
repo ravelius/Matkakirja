@@ -35,6 +35,9 @@ namespace Matkakirja.Natiivi
         const float ZPiippu = -0.0055f, YPiippuAla = 0.0140f, YPiippuYla = 0.0650f, RPiippu = 0.0042f, PiippuKallistus = 7f;
         const float ZKeulamasto = 0.041f, ZIsomasto = -0.037f, MastoKallistus = 4f;
         const float RSavu = 0.0062f;
+        /// <summary>Keulapuomi keulavarren päästä eteen ja hieman ylös (pituus noin 0,02 = 13 % rungosta): keulaharus päättyy
+        /// tarkalleen nokkaan ja vesipuomivantti (bobstay) nokasta keulavarteen vesirajan lähelle.</summary>
+        static readonly Vector3 KeulapuomiTyvi = new Vector3(0f, 0.0185f, 0.0745f), KeulapuomiNokka = new Vector3(0f, 0.0237f, 0.094f);
 
         // ---- Värit: vain B-seepiaramppi (alfa 0) ja pelin punainen (alfa 1) ----
 
@@ -45,7 +48,7 @@ namespace Matkakirja.Natiivi
         static readonly Color PiippuVari = Rampi(0.3f), PiippuHattu = Rampi(0.12f), Messinki = Rampi(1.55f);
         static readonly Color MastoVari = Rampi(0.7f), PuomiVari = Rampi(0.75f), PurjeVari = Rampi(2f), Reivi = Rampi(1.7f);
         static readonly Color Koysi = Rampi(0.4f), Vene = Rampi(1.82f), VenePeite = Rampi(1.4f), Taavetti = Rampi(0.6f);
-        static readonly Color SiltaVari = Rampi(1.6f);
+        static readonly Color SiltaVari = Rampi(1.6f), KeulapuomiVari = Rampi(0.5f);
         static readonly Color Lapa = Rampi(1.05f), Keha = Rampi(1.7f), Napa = Rampi(0.45f);
         /// <summary>Savun rampin kohdat: vaalea savu ja höyry 1,9, hiilisavun kupu 1,3 (väri rampista, ei sekoitusta sRGB:nä).</summary>
         const float SavuVaalea = 1.9f, SavuTumma = 1.3f;
@@ -307,8 +310,8 @@ namespace Matkakirja.Natiivi
             int sivuja = kauko ? 4 : 5;
             r.Tanko(MastoPiste(ZKeulamasto, Kansi(ZKeulamasto)), MastoPiste(ZKeulamasto, 0.097f), 0.00125f, 0.0008f, sivuja, MastoVari, true);
             r.Tanko(MastoPiste(ZIsomasto, Kansi(ZIsomasto)), MastoPiste(ZIsomasto, 0.090f), 0.00125f, 0.0008f, sivuja, MastoVari, true);
-            // Keulapuomi.
-            Pala(r, new Vector3(0f, Kansi(0.074f) + 0.0005f, 0.0745f), new Vector3(0f, 0.0225f, 0.095f), 0.0009f, 0.0006f, kauko ? 3 : 4, MastoVari);
+            // Keulapuomi selvästi näkyvänä puomina (säde 0,0014 → 0,0011, tumma ramppi 0,5), jotta keulaharus ei pääty tyhjään.
+            Pala(r, KeulapuomiTyvi, KeulapuomiNokka, 0.0014f, 0.0011f, kauko ? 4 : 5, KeulapuomiVari);
 
             // Keulapurje ja isopurje reivattuina (alaosa käärittynä puomille vaaleana rullana): siipiratashöyryn purjeet ovat
             // apupurjeita, joten ne ovat pienet ja piippu ja ratakotelot hallitsevat siluettia.
@@ -362,8 +365,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Seisova köysistö kolmisivuisina tankoina (säde 0,001 → noin 0,45 pt, laitteella MSAA pois), tumma ramppi, ei
-        /// ääriviivaa: vantit kaksi kummallekin puolelle kumpaankin mastoon, keulaharus keulapuomin nokkaan, välistaagi
-        /// mastosta mastoon piipun yli, perävantit perän kulmiin ja piipun harukset.
+        /// ääriviivaa: vantit kaksi kummallekin puolelle kumpaankin mastoon, keulaharus tarkalleen keulapuomin nokkaan ja
+        /// vesipuomivantti nokasta keulavarteen, välistaagi mastosta mastoon piipun yli, perävantit peräkaiteelle ja piipun
+        /// harukset. Jokainen köysi päättyy mastoon, kaiteelle tai puomin nokkaan (ei tyhjään eikä rungon ulkopuolelle).
         /// </summary>
         static void Koydet(MeriRakentaja r)
         {
@@ -377,10 +381,11 @@ namespace Matkakirja.Natiivi
                 var iso = MastoPiste(ZIsomasto, 0.074f);
                 Pala(r, iso, Reuna(ZIsomasto - 0.004f, p), rk, rk, 3, Koysi);
                 Pala(r, iso, Reuna(ZIsomasto - 0.010f, p), rk, rk, 3, Koysi);
-                Pala(r, MastoPiste(ZIsomasto, 0.086f), Reuna(-0.064f, p) + new Vector3(-p * 0.002f, 0f, 0f), rk, rk, 3, Koysi);
+                Pala(r, MastoPiste(ZIsomasto, 0.086f), Reuna(-0.067f, p), rk, rk, 3, Koysi);
                 Pala(r, PiippuPiste(0.047f), Reuna(ZPiippu - 0.013f, p), rk * 0.9f, rk * 0.9f, 3, Koysi);
             }
-            Pala(r, MastoPiste(ZKeulamasto, 0.093f), new Vector3(0f, 0.0225f, 0.095f), rk, rk, 3, Koysi);
+            Pala(r, MastoPiste(ZKeulamasto, 0.093f), KeulapuomiNokka, rk, rk, 3, Koysi);
+            Pala(r, KeulapuomiNokka - new Vector3(0f, 0.0008f, 0f), new Vector3(0f, 0.004f, 0.0665f), rk * 0.9f, rk * 0.9f, 3, Koysi);
             Pala(r, MastoPiste(ZKeulamasto, 0.091f), MastoPiste(ZIsomasto, 0.086f), rk, rk, 3, Koysi);
         }
 
@@ -419,11 +424,12 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Punainen lippu perän lipputangossa, liehuu taakse ja hieman suojan puolelle (kaksi aaltoa).</summary>
+        /// <summary>Punainen lippu perän lipputangossa (tanko seisoo peräkaiteella rungon sisällä), liehuu taakse ja hieman
+        /// suojan puolelle (kaksi aaltoa).</summary>
         static void Lippu(MeriRakentaja r, bool kauko)
         {
-            var tyvi = new Vector3(0f, Kansi(-0.071f) + 0.001f, -0.0712f);
-            var paa = new Vector3(0f, 0.0315f, -0.0752f);
+            var tyvi = new Vector3(0f, Kansi(ZPera) + Kaide - 0.0015f, -0.0722f);
+            var paa = new Vector3(0f, 0.0305f, -0.0733f);
             r.Tanko(tyvi, paa, 0.0006f, 0.0005f, 3, MastoVari, false);
             Vector3 y0 = paa + new Vector3(0f, -0.0003f, 0f), a0 = paa + new Vector3(0f, -0.0058f, 0.0004f);
             Vector3 y1 = y0 + new Vector3(0.0012f, 0.0002f, -0.0045f), a1 = a0 + new Vector3(0.0012f, 0.0002f, -0.0045f);

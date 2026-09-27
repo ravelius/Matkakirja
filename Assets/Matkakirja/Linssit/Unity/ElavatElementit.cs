@@ -361,7 +361,7 @@ namespace Matkakirja.Natiivi
                     {
                         lapset[i] = new GameObject("Lapsi").transform;
                         lapset[i].SetParent(rt, false);
-                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali, a.ReunaMateriaali);
+                        Kappale(lapset[i], "Lapsi", i < lapsia ? lapsi : i < lapsia + lapsia2 ? lapsi2 : lapsi3, a.Materiaali, a.ReunaMateriaali, a.Seepia ? 1 : 0);
                     }
                     juuri.gameObject.SetActive(false);
                     var yksilo = new Yksilo { Juuri = juuri, Roottori = rt, Lapset = lapset, LapsiPerus = new Vector3[lapset.Length], Vaihe = vaihe,
@@ -375,7 +375,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kappale isän alle; laatutasolla (reuna ≠ null) sama verkko toisena piirtona ääriviivan materiaalilla.</summary>
-        (MeshFilter, MeshFilter) Kappale(Transform isa, string nimi, Mesh mesh, Material m, Material reuna = null)
+        (MeshFilter, MeshFilter) Kappale(Transform isa, string nimi, Mesh mesh, Material m, Material reuna = null, int jarjestys = 0)
         {
             var go = new GameObject(nimi);
             go.transform.SetParent(isa, false);
@@ -386,6 +386,9 @@ namespace Matkakirja.Natiivi
             r.sharedMaterial = m;
             r.shadowCastingMode = ShadowCastingMode.Off;
             r.receiveShadows = false;
+            // Laatutaso: roottori ennen lapsia (samassa jonossa ja samassa pisteessä etäisyys ei ratkaise järjestystä), jottei
+            // lapsen vesikerros kirjoita syvyyttä rungon eteen (purjelaivan agentin huomio 27.9.).
+            r.sortingOrder = jarjestys;
             MeshFilter rf = null;
             if (reuna != null)
             {
@@ -398,6 +401,7 @@ namespace Matkakirja.Natiivi
                 rr.sharedMaterial = reuna;
                 rr.shadowCastingMode = ShadowCastingMode.Off;
                 rr.receiveShadows = false;
+                rr.sortingOrder = jarjestys;
             }
             return (mf, rf);
         }
