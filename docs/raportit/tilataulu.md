@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 19:12 EEST
+**Päivitetty:** 2026-09-27 19:24 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **69 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen (Natiiviseppä 67% ja Karttaseppä 65% lähimpänä).
+Viikko (all models) **71 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen — Natiiviseppä 68 % ja Karttaseppä 66 % lähimpänä, seurataan seuraavalla kierroksella.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 42% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 26% | running |
-| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 36% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 67% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 60% | idle |
-| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 51% | idle |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 44% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 27% | running |
+| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 38% | running |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 68% | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 61% | idle |
+| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 52% | idle |
 | Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 43% | idle |
-| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 49% | idle |
-| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 65% | idle |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 42% | running (PR #3397 auki) |
+| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 50% | idle |
+| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 66% | idle |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 55% | running (PR #3397 auki) |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 22% | running |
 
 ## 1b) Uusi valvontakohta odottaa (Siirtoseppä/Fable 18:4x)
@@ -56,14 +56,14 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (19:12)
+## 5) Resurssit (19:24)
 
-- **5 h -kiintiö:** 30 %. **Viikko (kaikki mallit):** 69 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 91 Gi vapaana (vakaa, pieni normaalivaihtelu 95→91). wt/-worktreet ennallaan 28 kpl. Ei toimenpidettä.
+- **5 h -kiintiö:** 35 %. **Viikko (kaikki mallit):** 71 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 91 Gi vapaana (vakaa). wt/-worktreet 29 kpl (ennallaan). Ei toimenpidettä.
 - **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK).
-- **Simulaattorit boottina:** 3 (natiiviseppa-iPhone vapautunut, iPhone 18 Pro/iPhone 17/iPad Pro M5 jäljellä; max 4 — OK). **coreaudiod:** normaali.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen (Natiiviseppä 67% korkein).
-- **Juna:** käynnissä normaalisti — KÄÄNNETTY d9c401f5 19:01, niputtaa bbbfadde (19:11).
+- **Simulaattorit boottina:** 3 (iPhone 18 Pro, iPhone 17, iPad Pro M5; max 4 — OK). **coreaudiod:** normaali.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen — Natiiviseppä 68% ja Karttaseppä 66% lähimpänä, seurataan.
+- **Juna:** käynnissä normaalisti, niputtaa caa1d3aa (19:21).
 - **PR #3441 (eheysvartija):** ei vielä mergetty.
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
