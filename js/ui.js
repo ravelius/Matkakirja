@@ -2279,6 +2279,12 @@ function julisteMantereet() {
 const FACT_WIDTH = 340; // pidettävä samana kuin .fact-card css:ssä
 const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 
+/** Rahattomuuspalkin miniselite (omistaja 27.9.2026 klo 16.1x). */
+const RAHATTOMUUS_SELITE = 'Rahat ovat loppu. Jokainen neliö on 6 tuntia matkaa — kun kaikki sammuvat, matka päättyy. '
+  + 'Ansaitse tai löydä rahaa jatkaaksesi.';
+/** Miniselite sulkeutuu itsestään tämän jälkeen (ms). */
+const RAHATTOMUUS_SELITE_MS = 7000;
+
 export class UI {
   constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
     this.game = game;
@@ -10927,34 +10933,119 @@ export class UI {
     let palkki = this.rahattomuuspalkki;
     if (vuoroja === null || vuoroja === undefined) {
       if (palkki) palkki.hidden = true;
+      this.suljeRahattomuusSelite();
       return;
     }
     if (!palkki) {
       const kehys = document.querySelector('.rail') ?? document.querySelector('.map-pane');
       if (!kehys) return;
       palkki = html('div', 'rahattomuuspalkki');
-      palkki.setAttribute('role', 'img');
+      palkki.setAttribute('role', 'button');
+      palkki.tabIndex = 0;
       const lohkot = html('div', 'rahattomuus-lohkot');
       for (let i = 0; i < RAHATTOMUUS_VUOROJA; i++) lohkot.appendChild(html('span', 'rahattomuus-lohko'));
       palkki.append(lohkot);
+      /*
+       * NAPAUTUS AVAA MINISELITTEEN (omistaja 16.1x): mitä neliöt
+       * tarkoittavat. Oma napautus: kartan eleet eivät saa ottaa sitä.
+       */
+      const avaa = (e) => { e.stopPropagation(); this.vaihdaRahattomuusSelite(); };
+      palkki.addEventListener('pointerdown', (e) => e.stopPropagation());
+      palkki.addEventListener('click', avaa);
+      palkki.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); avaa(e); } });
       kehys.appendChild(palkki);
       this.rahattomuuspalkki = palkki;
+      // Matkakirjan kortti kasvaa ja kutistuu ilman renderiä: palkki asettuu uudelleen.
+      if (typeof ResizeObserver === 'function') {
+        const seuraaja = new ResizeObserver(() => this.asetteleRahattomuuspalkki());
+        for (const v of ['.fact-card', '.karttaselite']) {
+          const el = document.querySelector(v);
+          if (el) seuraaja.observe(el);
+        }
+        seuraaja.observe(kehys);
+      }
     }
     const tunnit = vuoroja * TURN_HOURS;
     const aika = `${Math.floor(tunnit / 24) ? `${Math.floor(tunnit / 24)} vrk ` : ''}${tunnit % 24 ? `${tunnit % 24} h` : ''}`.trim() || '0 h';
     palkki.querySelectorAll('.rahattomuus-lohko').forEach((l, i) => l.classList.toggle('palaa', i < vuoroja));
-    palkki.setAttribute('aria-label', `Rahat loppu: aikaa ${aika} hankkia rahaa, muuten matka päättyy`);
+    palkki.setAttribute('aria-label', `Rahat loppu: aikaa ${aika} hankkia rahaa, muuten matka päättyy. Napauta: selitys`);
     palkki.hidden = false;
-    /*
-     * Paikka: yläreunan painikerivin alle (karttaselitteen nappi on rivin
-     * korkein), jottei palkki osu paikkakylttiin, jonka leveys vaihtelee
-     * kaupungin nimen mukaan. Ilman selitettä palkki on aivan yläreunassa.
-     */
+    this.asetteleRahattomuuspalkki();
+  }
+
+  /**
+   * PAIKKA (omistaja 16.1x): oletuksena heti kartan yläreunassa keskellä;
+   * jos palkki osuisi yläreunan kalusteisiin (matkakirjan kortti tai
+   * otsikkorivi, karttaselitteen nappi), se VÄISTÄÄ ALEMMAS niiden alle.
+   * Ei päällekkäisyyttä, sama sääntö kaikilla laitteilla.
+   */
+  asetteleRahattomuuspalkki() {
+    const palkki = this.rahattomuuspalkki;
+    if (!palkki || palkki.hidden) return;
     const kehys = palkki.offsetParent;
-    const selite = document.querySelector('.karttaselite');
-    const sr = selite && !selite.hidden ? selite.getBoundingClientRect() : null;
     const kr = kehys?.getBoundingClientRect();
-    palkki.style.top = sr && kr && sr.height > 0 ? `${Math.round(sr.bottom - kr.top + 6)}px` : '';
+    if (!kr) return;
+    const esteet = ['.fact-card', '.karttaselite']
+      .map((v) => document.querySelector(v))
+      .filter((el) => el && !el.hidden)
+      .map((el) => el.getBoundingClientRect())
+      .filter((r) => r.width > 0 && r.height > 0);
+    // Pehmuste (css 6 px) on jo rako: laatikon yläreuna saa koskettaa kalustetta.
+    const RAKO = 0;
+    palkki.style.top = `${RAKO}px`;
+    const leveys = palkki.offsetWidth;
+    const korkeus = palkki.offsetHeight;
+    const vasen = kr.left + (kr.width - leveys) / 2;
+    let yla = kr.top + RAKO;
+    // Väistö alas, kunnes mikään kaluste ei osu (este kerrallaan; enintään esteiden määrä kierrosta).
+    for (let k = 0; k <= esteet.length; k++) {
+      const osuu = esteet.filter((r) => vasen < r.right && vasen + leveys > r.left && yla < r.bottom && yla + korkeus > r.top);
+      if (!osuu.length) break;
+      yla = Math.max(...osuu.map((r) => r.bottom)) + RAKO;
+    }
+    palkki.style.top = `${Math.round(yla - kr.top)}px`;
+    this.asetteleRahattomuusSelite();
+  }
+
+  /** Miniselite auki/kiinni (napautus palkkiin). */
+  vaihdaRahattomuusSelite() {
+    if (this.rahattomuusSelite && !this.rahattomuusSelite.hidden) { this.suljeRahattomuusSelite(); return; }
+    const palkki = this.rahattomuuspalkki;
+    if (!palkki) return;
+    let selite = this.rahattomuusSelite;
+    if (!selite) {
+      selite = html('div', 'rahattomuus-selite', RAHATTOMUUS_SELITE);
+      selite.setAttribute('role', 'status');
+      selite.addEventListener('pointerdown', (e) => e.stopPropagation());
+      selite.addEventListener('click', (e) => { e.stopPropagation(); this.suljeRahattomuusSelite(); });
+      palkki.parentElement.appendChild(selite);
+      this.rahattomuusSelite = selite;
+    }
+    selite.hidden = false;
+    this.asetteleRahattomuusSelite();
+    // Sulkeutuu napautuksella mihin tahansa tai itsestään (RAHATTOMUUS_SELITE_MS).
+    clearTimeout(this.rahattomuusSeliteAjastin);
+    this.rahattomuusSeliteAjastin = setTimeout(() => this.suljeRahattomuusSelite(), RAHATTOMUUS_SELITE_MS);
+    // Napautus muualle sulkee; palkin oma napautus hoitaa vaihdon itse (ei sulje-ja-avaa-uudelleen).
+    this.rahattomuusSeliteSulje ??= (e) => {
+      if (this.rahattomuuspalkki?.contains(e.target) || this.rahattomuusSelite?.contains(e.target)) return;
+      this.suljeRahattomuusSelite();
+    };
+    document.removeEventListener('pointerdown', this.rahattomuusSeliteSulje, { capture: true });
+    document.addEventListener('pointerdown', this.rahattomuusSeliteSulje, { capture: true });
+  }
+
+  suljeRahattomuusSelite() {
+    clearTimeout(this.rahattomuusSeliteAjastin);
+    if (this.rahattomuusSeliteSulje) document.removeEventListener('pointerdown', this.rahattomuusSeliteSulje, { capture: true });
+    if (this.rahattomuusSelite) this.rahattomuusSelite.hidden = true;
+  }
+
+  asetteleRahattomuusSelite() {
+    const selite = this.rahattomuusSelite;
+    const palkki = this.rahattomuuspalkki;
+    if (!selite || selite.hidden || !palkki) return;
+    selite.style.top = `${palkki.offsetTop + palkki.offsetHeight}px`;
   }
 
   renderTurnPill() {

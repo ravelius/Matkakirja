@@ -414,7 +414,8 @@ button, .brand, .turn-pill, .fact-card h2 {
  * RAHATTOMUUSPALKKI (omistaja 27.9.2026 klo 15.1x; js/ui.js
  * paivitaRahattomuuspalkki): kahdeksan kuuden tunnin lohkoa kartan
  * yläreunan keskellä. Omistaja 15.2x: PELKÄT PUNAISET NELIÖT — ei
- * tekstiä, ei kehystä, sama ulkoasu kaikilla laitteilla. Ei ota osumia.
+ * tekstiä, ei kehystä, sama ulkoasu kaikilla laitteilla. 16.1x: heti
+ * yläreunassa, väistää alas kalusteiden alle; napautus avaa miniselitteen.
  */
 .rahattomuuspalkki {
   position: absolute;
@@ -425,9 +426,34 @@ button, .brand, .turn-pill, .fact-card h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: none;
+  /* Näkymätön lisäpinta napautukselle (neliörivi on vain 11 px korkea);
+   * pehmuste on samalla rako yläpuolen kalusteisiin (ui.js asetteleRahattomuuspalkki). */
+  padding: 6px 8px;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
 }
 .rahattomuuspalkki[hidden] { display: none; }
+.rahattomuuspalkki:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 6px; }
+/* Miniselite: kevyt pergamenttilappu palkin alla (omistaja 16.1x). */
+.rahattomuus-selite {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  width: min(260px, calc(100% - 32px));
+  padding: 8px 11px;
+  border: 1px solid rgba(85, 64, 42, 0.45);
+  border-radius: 8px;
+  background: rgba(244, 234, 212, 0.96);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  color: #3a2a1a;
+  font: 400 13px/1.4 var(--font-luku);
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.rahattomuus-selite[hidden] { display: none; }
 .rahattomuus-lohkot { display: flex; gap: 3px; }
 .rahattomuus-lohko {
   width: 9px;

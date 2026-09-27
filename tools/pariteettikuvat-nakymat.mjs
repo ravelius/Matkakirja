@@ -236,6 +236,30 @@ export const NAKYMAT = [
     odota: '.rahattomuuspalkki:not([hidden])',
   },
   {
+    nimi: 'rahattomuus-selite', kuvaus: 'Rahattomuuspalkin napautus: miniselite neliöistä (omistaja 16.1x)',
+    avaa: () => {
+      const { ui } = window.matkakirja;
+      const g = ui.game;
+      g.player.money = 0;
+      g.player.rahaton = { alkuVuoro: g.turnCount - 2, paiva: g.dayCount?.() ?? 1 };
+      ui.render();
+      ui.vaihdaRahattomuusSelite();
+    },
+    odota: '.rahattomuus-selite:not([hidden])',
+  },
+  {
+    nimi: 'rahattomuus-vaisto', kuvaus: 'Matkakirjan kortti auki: palkki väistää kortin alle (tai viereen, jos mahtuu)',
+    avaa: () => {
+      const { ui } = window.matkakirja;
+      const g = ui.game;
+      ui.asetaPaivakirjanKoko(false);
+      g.player.money = 0;
+      g.player.rahaton = { alkuVuoro: g.turnCount - 2, paiva: g.dayCount?.() ?? 1 };
+      ui.render();
+    },
+    odota: '.fact-card:not(.pieni)',
+  },
+  {
     nimi: 'matkakirjakortti-auki', kuvaus: 'Matkakirjan merkintäkortti auki (ui.asetaPaivakirjanKoko(false))',
     avaa: () => { window.matkakirja.ui.asetaPaivakirjanKoko(false); }, odota: '.fact-card:not(.pieni)',
   },
@@ -597,6 +621,16 @@ const linssiKaynnissa = (p) => {
 };
 const TODENNUS = {
   aloitusportti: { nakyy: ['.start-btn'] },
+  'rahattomuus-selite': { nakyy: ['.rahattomuus-selite'] },
+  'rahattomuus-vaisto': {
+    ehto: () => {
+      const p = document.querySelector('.rahattomuus-lohkot')?.getBoundingClientRect();
+      const f = document.querySelector('.fact-card')?.getBoundingClientRect();
+      if (!p || p.width < 60) return 'palkki ei näy';
+      const paalla = f && p.left < f.right && p.right > f.left && p.top < f.bottom && p.bottom > f.top;
+      return paalla ? 'palkki matkakirjan päällä' : null;
+    },
+  },
   rahattomuus: {
     // Palkki on pieni (≈ 93 × 11), joten nakyy-tarkistuksen minimikoko ei sovi: ehto mittaa itse.
     ehto: () => {
