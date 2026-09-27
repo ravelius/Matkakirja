@@ -67,6 +67,7 @@ namespace Matkakirja.Linssit.Elava
             "kinderdijk" => new KinderdijkLiike(id),
             "brandenburgin-portti" => new BrandenburginPorttiLiike(id),
             "segovian-akvedukti" => new SegovianAkveduktiLiike(id),
+            "brugge-belfry" => new BruggenKellotorniLiike(id),
             _ => null,
         };
 
