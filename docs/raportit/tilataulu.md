@@ -22,6 +22,10 @@ Viikko (all models) **67 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (F
 | Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 23% — nollautunut | running (PR #3397 auki) |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 22% | running |
 
+## 1b) Uusi valvontakohta odottaa (Siirtoseppä/Fable 18:4x)
+
+Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysvartija/VIKA.txt` ei vielä olemassa). Kun PR mergetty: lue VIKA.txt joka kierroksella kuten varmuuskopio-VIKA.txt — tyhjä = kunnossa, ei-tyhjä → rivi Fablelle ja Siirtosepälle, tulos.md:n VIKA-rivi tilatauluun. Tiedossa oleva tila (ei uusi hälytys ennen muutosta): 3 × 404 Nouméan kuvat, Sisältökirjurilla työn alla.
+
 ## 2) Jumit ja avoimet kortit omistajalle
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikossa uusi viesti 17:41 (Codex: Ateenan miniatyyrit Fablelle) — normaali PR-kuittausvuo, ei toimenpidettä Postivahdilta.
