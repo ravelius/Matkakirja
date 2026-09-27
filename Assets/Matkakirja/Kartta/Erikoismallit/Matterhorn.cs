@@ -4,20 +4,23 @@ using UnityEngine;
 namespace Matkakirja
 {
     /// <summary>
-    /// ERIKOISMALLI MATTERHORN (speksi docs/raportit/erikoismallit/matterhorn.md; omistaja hyväksyi elämänidean 27.9. klo 07.5x).
-    /// Tunnistus sekunnissa: jyrkkä nelitahkoinen pyramidi, jonka vino huippuharjanne kaartuu koukuksi (vasen kylki lähes
-    /// pystysuora huipun alla, oikealla pitkä Zmuttin harjanne olkapäineen); lumilakki ja valkoinen pohjoisseinä oikealla,
-    /// harmaanruskea itäseinä lumijuovineen vasemmalla, tumma kallionauha juurella, Matterhorngletscher, Zermattin kylä ja
-    /// Gornergratin hammasrata.
-    /// Mitat: yksikkö 1,0 ≈ 3 km vaakasuunnassa (jalanjälki kylineen 1,01 × 0,78; pyramidi 0,90 × 0,55, syvyys tiivistetty),
-    /// korkeus 1,35 (huippu nousee jäätiköiden yläpuolelle noin 1,5 km → pystyliioittelu noin 2,8), jotta 30°:n kallistuksessa
-    /// huippu on siluetin korkein kohta ja koukku erottuu 60 pt:ssä. Takarinteet ovat jyrkempiä kuin 60° (muuten kallistettu
-    /// kamera näkisi takarinteen huipun yläpuolella).
+    /// ERIKOISMALLI MATTERHORN v2 (speksi docs/raportit/erikoismallit/matterhorn.md; elämänidea hyväksytty 27.9. klo 07.5x; v2 Fablen
+    /// päätös 10.3x laitekuvan jälkeen: v1 luki 55°:ssa ja 112 pt:ssä isona litteäseinäisenä kiilana, koukku ei erottunut ja malli
+    /// peitti liikaa karttaa).
+    /// Tunnistus sekunnissa: kapea ja jyrkkä huippupyramidi, jonka koukku erottuu etelästä sekä 30°:ssa että 55°:ssa: kärki
+    /// (Sveitsin huippu) on vasemmalla ja ulkonee hieman lähes pystysuoran vasemman kyljen yli, vino huippuharjanne laskee oikealle
+    /// Italian huipulle, ja koukun alla on Furggenin olan lovi; oikealla Zmuttin olka. Seinät on taiteltu harjanteiksi ja uomiksi
+    /// (joka seinällä uoma, kylkiluu, uoma) ja lumi on uomissa juovina eikä isoina levyinä. Juurella tumma kallionauha,
+    /// Matterhorngletscher, Zermattin kylä ja Gornergratin hammasrata.
+    /// Mitat: yksikkö 1,0 ≈ 4 km vaakasuunnassa; vuoren juuri etelästä katsottuna 0,68 (koko jalanjälki kylineen noin 0,8), korkeus
+    /// 1,0 (huippu nousee jäätiköiden yläpuolelle noin 1,5 km → pystyliioittelu noin 2,6). Takarinteet ovat jyrkempiä kuin 60°
+    /// (muuten 30°:n kamera näkisi takarinteen huipun yläpuolella).
     /// SUUNTA TYYLITELTY: kuuluisa Zermattin näkymä katsoo koillisesta lounaaseen, mutta kallistettu kamera katsoo etelästä,
     /// joten vuori on käännetty noin 125° myötäpäivään: Hörnlin harjanne (todellisuudessa koilliseen) osoittaa kameraa kohti
     /// (−Z), itäseinä on vasemmalla ja pohjoisseinä oikealla edessä, Furggen vasemmalle, Zmutt oikealle ja Lion taakse.
-    /// Huippuharjanne (Sveitsin ja Italian huippu) on käännetty vasemmalta oikealle, jotta vino koukkuhuippu näkyy.
-    /// Zermatt (edessä) ja Gornergrat (vasemmalla edessä) ovat samassa käännetyssä suunnassa, etäisyydet tiivistetty.
+    /// Huippuharjanne (Sveitsin ja Italian huippu) on käännetty vasemmalta oikealle, jotta vino koukkuhuippu näkyy, ja huippulohko
+    /// kallistuu hieman kameraa kohti (todellisuudessa koilliseen). Zermatt (edessä) ja Gornergrat (vasemmalla edessä) ovat samassa
+    /// käännetyssä suunnassa, etäisyydet tiivistetty.
     /// Liikkuvat osat:
     ///   lippupilvi       lippupilvi muodostuu huipun suojan puolelle, liehuu ja hajoaa (perusliike, tauko välissä)
     ///   hattara0–1       pilvenriekaleet irtoavat lipun pyrstöstä, ajautuvat tuulen alle ja haihtuvat
@@ -29,48 +32,58 @@ namespace Matkakirja
     public sealed partial class Symbolimallit
     {
         /// <summary>Suunnittelukoordinaattien siirto: juuri jalanjäljen keskelle (kylä ja Gornergrat ovat vuoren edessä).</summary>
-        const float MhDx = 0.037f, MhDz = 0.144f;
+        const float MhDx = 0.044f, MhDz = 0.106f;
         static Vector3 MhP(float x, float y, float z) => new Vector3(x + MhDx, y, z + MhDz);
 
-        /// <summary>Huippuharjanne: Sveitsin huippu (4 478 m, korkein, vasemmalla) ja Italian huippu (4 476 m, oikealla ja hieman
-        /// alempana). Vino harjanne on Zermattin näkymän koukkuhuippu.</summary>
-        static readonly Vector3 MhSveitsi = MhP(-0.1f, 1.35f, -0.05f), MhItalia = MhP(-0.025f, 1.305f, -0.045f);
+        /// <summary>Huippuharjanne: Sveitsin huippu (4 478 m, korkein, vasemmalla; kärki ulkonee 0,01 vasemman kyljen yli) ja Italian
+        /// huippu (4 476 m, oikealla ja alempana). Vino harjanne ja ulkoneva kärki ovat Zermattin näkymän koukku.</summary>
+        static readonly Vector3 MhSveitsi = MhP(-0.1f, 1f, -0.02f), MhItalia = MhP(-0.03f, 0.955f, -0.015f);
 
         /// <summary>
-        /// Harjanteet silmukoittain (0 = huippupyramidin alareuna … 6 = maa) mallin avaruudessa; järjestys myötäpäivään
-        /// ylhäältä: Zmutt (oikealle ja hieman taakse), Hörnli (kameraa kohti), Furggen (vasemmalle), Lion (taakse).
-        /// Olkapäät: Zmuttin olka silmukassa 2, Hörnlin olka (4 200 m) silmukassa 1 ja Furggenin olka silmukassa 1
-        /// (koukun pystyseinän alla). Lion laskee jyrkästi, jotta takarinne pysyy 30°:n kamerassa huipun alapuolella.
+        /// Harjanteet silmukoittain (0 = huippupyramidin alareuna … 5 = maa) mallin avaruudessa; järjestys myötäpäivään ylhäältä:
+        /// Zmutt (oikealle ja hieman taakse), Hörnli (kameraa kohti), Furggen (vasemmalle), Lion (taakse). Silmukka 1 on olkapäät:
+        /// Furggenin olan lovi koukun alla, Hörnlin olka, Zmuttin olka ja Pic Tyndall. Alarinteet levenevät hieman (kovera profiili).
         /// </summary>
         static readonly Vector3[][] MhHarjanteet =
         {
-            new[] { MhP(0.1f, 0.92f, 0f), MhP(0.175f, 0.79f, 0.015f), MhP(0.275f, 0.7f, 0.035f), MhP(0.315f, 0.5f, 0.05f), MhP(0.38f, 0.27f, 0.07f), MhP(0.44f, 0.1f, 0.085f), MhP(0.47f, 0f, 0.09f) },
-            new[] { MhP(-0.1f, 1f, -0.14f), MhP(-0.1f, 0.955f, -0.195f), MhP(-0.095f, 0.78f, -0.225f), MhP(-0.09f, 0.56f, -0.25f), MhP(-0.085f, 0.27f, -0.275f), MhP(-0.08f, 0.1f, -0.292f), MhP(-0.075f, 0f, -0.3f) },
-            new[] { MhP(-0.19f, 0.99f, -0.03f), MhP(-0.265f, 0.93f, -0.025f), MhP(-0.285f, 0.78f, -0.02f), MhP(-0.325f, 0.56f, -0.015f), MhP(-0.37f, 0.27f, -0.01f), MhP(-0.41f, 0.1f, -0.005f), MhP(-0.43f, 0f, 0f) },
-            new[] { MhP(-0.04f, 0.98f, 0.07f), MhP(-0.05f, 0.9f, 0.11f), MhP(-0.055f, 0.765f, 0.145f), MhP(-0.06f, 0.54f, 0.18f), MhP(-0.065f, 0.27f, 0.215f), MhP(-0.07f, 0.1f, 0.237f), MhP(-0.07f, 0f, 0.245f) },
+            new[] { MhP(0.1f, 0.66f, 0.02f), MhP(0.175f, 0.57f, 0.035f), MhP(0.225f, 0.45f, 0.05f), MhP(0.272f, 0.28f, 0.06f), MhP(0.315f, 0.12f, 0.07f), MhP(0.345f, 0f, 0.075f) },
+            new[] { MhP(-0.075f, 0.745f, -0.115f), MhP(-0.07f, 0.695f, -0.16f), MhP(-0.064f, 0.47f, -0.21f), MhP(-0.058f, 0.28f, -0.245f), MhP(-0.054f, 0.12f, -0.272f), MhP(-0.05f, 0f, -0.29f) },
+            new[] { MhP(-0.09f, 0.73f, -0.005f), MhP(-0.17f, 0.675f, 0f), MhP(-0.205f, 0.47f, 0.005f), MhP(-0.25f, 0.29f, 0.01f), MhP(-0.295f, 0.12f, 0.012f), MhP(-0.33f, 0f, 0.015f) },
+            new[] { MhP(-0.035f, 0.72f, 0.1f), MhP(-0.035f, 0.66f, 0.14f), MhP(-0.037f, 0.46f, 0.18f), MhP(-0.04f, 0.28f, 0.21f), MhP(-0.042f, 0.12f, 0.23f), MhP(-0.044f, 0f, 0.245f) },
         };
 
-        const int MhSilmukat = 7, MhMeridiaanit = 12;
+        /// <summary>Silmukat, meridiaanit ja tahkot seinää kohden (harjanne, uoma, kylkiluu, uoma → seuraava harjanne).</summary>
+        const int MhSilmukat = 6, MhMeridiaanit = 16, MhSeinaTahkot = 4;
+        /// <summary>Harjanteiden meridiaanit: Zmutt, Hörnli, Furggen ja Lion.</summary>
+        const int MhZmutt = 0, MhHornli = 4, MhFurggen = 8, MhLion = 12;
         /// <summary>Meridiaanien huiput: 0 = Sveitsin huippu (Hörnli, itäseinä, Furggen ja eteläseinän alku), 1 = Italian huippu
-        /// (Zmutt, pohjoisseinä, Lion, länsiseinä ja eteläseinän loppu). Järjestys: Z, n1, n2, H, e1, e2, F, s1, s2, L, w1, w2.</summary>
-        static readonly int[] MhKarki = { 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1 };
-        /// <summary>Kourujen painuma silmukoittain: seinien välimeridiaanit ovat harjanteita alempana (kourut ja lumiuomat).</summary>
-        static readonly float[] MhKouru = { 0.03f, 0.03f, 0.025f, 0.02f, 0.012f, 0.006f, 0f };
+        /// (Zmutt, pohjoisseinä, Lion, länsiseinä ja eteläseinän loppu).</summary>
+        static readonly int[] MhKarki = { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1 };
+        /// <summary>Seinän välimeridiaanit: osuus jänteellä harjanteelta seuraavalle, veto akselia kohti (syvät uomat 22 %, kylkiluu
+        /// vain 3 %, joten pääharjanteet hallitsevat ja seinät taittuvat varjostukseltaan) ja painuma suhteessa kouruun.</summary>
+        static readonly (float f, float veto, float painuma)[] MhSeinaMeridiaanit = { (0.25f, 0.22f, 1.6f), (0.5f, 0.03f, 0.3f), (0.75f, 0.22f, 1.6f) };
+        /// <summary>Kourujen painuma silmukoittain: uomat ovat harjanteita alempana (lumi kerääntyy niihin).</summary>
+        static readonly float[] MhKouru = { 0.02f, 0.03f, 0.025f, 0.02f, 0.01f, 0f };
+        /// <summary>Uomien syvyys silmukoittain: kapean huippupyramidin juurella loiva (syvä uoma näkyisi ylhäältä railona),
+        /// seinissä täysi.</summary>
+        static readonly float[] MhUomaSyvyys = { 0.35f, 0.75f, 1f, 1f, 1f, 1f };
         /// <summary>Huippupyramidin vyöt säteittäin huipulta silmukkaan 0 (lumilakki, keskivyö, alavyö).</summary>
         static readonly float[] MhPaaVyot = { 0.3f, 0.62f, 1f };
 
         /// <summary>
         /// Värikartta seinittäin (0 pohjoisseinä oikealla edessä, 1 itäseinä vasemmalla edessä, 2 eteläseinä takana vasemmalla,
-        /// 3 länsiseinä takana oikealla): rivit ylhäältä (3 huippupyramidin vyötä, 6 rinnevyötä), kussakin kolme tahkoa
-        /// harjanteelta seuraavalle myötäpäivään. L lumi, V vaalea kallio, K kallio, T tumma kallionauha.
-        /// Pohjoisseinä on valkoinen ja itäseinä harmaanruskea lumireunuksin (Zermattin näkymän kontrasti).
+        /// 3 länsiseinä takana oikealla): rivit ylhäältä (3 huippupyramidin vyötä, 5 rinnevyötä), kussakin neljä tahkoa
+        /// harjanteelta seuraavalle myötäpäivään (harjanne–uoma, uoma–kylkiluu, kylkiluu–uoma, uoma–harjanne). L lumi, V vaalea kallio,
+        /// K kallio, T tumma kallionauha. Lumi on pystyjuovina uomissa (seinät taittuvat harjanteiksi, eivät isoja levyjä);
+        /// alempana seinät ovat yhtenäistä kalliota, jonka syvät uomat taittavat varjostukseltaan, ja itä- ja eteläseinällä on
+        /// tumma kallionauha; pohjoisseinällä lunta eniten, itäseinä vaaleaa kalliota lumijuovin (Zermattin näkymän kontrasti).
         /// </summary>
         static readonly string[][] MhVarit =
         {
-            new[] { "LLL", "LLL", "LLL", "LLL", "LLL", "LLL", "KLL", "KKK", "KKK" },
-            new[] { "LLL", "VVV", "VVV", "VVV", "LLL", "VVV", "KKK", "TTT", "KKK" },
-            new[] { "LLL", "KKK", "KKK", "KKK", "LLL", "KKK", "KKK", "TTT", "KKK" },
-            new[] { "LLL", "LLL", "LLL", "LLL", "KKK", "KKK", "KKK", "KKK", "KKK" },
+            new[] { "LLLL", "LLLL", "LLKL", "LLKL", "KLKL", "KLKK", "KKKK", "KKKK" },
+            new[] { "LLLL", "VLVV", "VLVL", "VLVL", "VLVV", "VVVV", "TTTT", "KKKK" },
+            new[] { "LLLL", "KKLK", "KKLK", "KKLK", "KKKK", "KKKK", "TTTT", "KKKK" },
+            new[] { "LLLL", "LKLL", "LKLK", "LKLK", "KKLK", "KKKK", "KKKK", "KKKK" },
         };
 
         // ---- Paletti (Em-ramppi; aksentti vain liikkuvissa osissa: alppihehku ja juna) ----
@@ -86,24 +99,29 @@ namespace Matkakirja
         /// vasemmalle ja hieman eteen. Sama vektori liikeytimessä (MatterhornLiike.TuuliX/Z).</summary>
         static readonly Vector3 MhTuuli = new Vector3(-0.9404f, 0f, -0.3401f);
         /// <summary>Lippupilven juuri koukun pystyseinän kohdalla huipun alla (pilvi kasvaa tästä ulos).</summary>
-        static readonly Vector3 MhPilviJuuri = MhP(-0.13f, 1.2f, -0.05f);
+        static readonly Vector3 MhPilviJuuri = MhP(-0.09f, 0.88f, -0.03f);
         /// <summary>Alppihehkun pivotit 0,015 huippujen yläpuolella: huipulta skaalattu kuori pysyy pinnan ulkopuolella.</summary>
         static readonly Vector3 MhHehkuNosto = new Vector3(0f, 0.015f, 0f);
         /// <summary>Gornergratin rata ala-asemalta (Zermatt) yläasemalle (Gornergrat): suora rata kukkulan harjalla. Vektori on
         /// sama kuin liikeytimessä (MatterhornLiike.RataX/Y/Z); muuta molempia yhdessä.</summary>
-        static readonly Vector3 MhRata = new Vector3(-0.28f, 0.105f, 0.12f);
-        static readonly Vector3 MhRataAlku = MhP(-0.13f, 0.015f, -0.44f), MhRataLoppu = MhRataAlku + MhRata;
+        static readonly Vector3 MhRata = new Vector3(-0.22f, 0.085f, 0.09f);
+        static readonly Vector3 MhRataAlku = MhP(-0.1f, 0.012f, -0.38f), MhRataLoppu = MhRataAlku + MhRata;
+        /// <summary>Lehtikuuset kylän ympärillä.</summary>
+        static readonly Vector3[] MhPuut = { MhP(-0.07f, 0f, -0.43f), MhP(0.17f, 0f, -0.4f), MhP(0.185f, 0f, -0.33f),
+            MhP(0.1f, 0f, -0.445f), MhP(0.2f, 0f, -0.365f), MhP(0.105f, 0f, -0.3f) };
         /// <summary>Kylän keskipiste (yövalojen pivot).</summary>
-        static readonly Vector3 MhKyla = MhP(0.03f, 0f, -0.45f);
+        static readonly Vector3 MhKyla = MhP(0.055f, 0f, -0.385f);
+        /// <summary>Kirkontornin paikka (Zermattin Pyhän Mauritiuksen kirkko kylän vasemmalla laidalla).</summary>
+        static readonly Vector3 MhKirkko = MhP(-0.012f, 0f, -0.335f);
 
         /// <summary>Zermattin talot: pohjan keskipiste ja harjan suunta (rad).</summary>
         static readonly (Vector3 p, float suunta)[] MhTalot =
         {
-            (MhP(-0.035f, 0f, -0.46f), 0.35f),
-            (MhP(0.03f, 0f, -0.425f), -0.15f),
-            (MhP(0.085f, 0f, -0.46f), 0.25f),
-            (MhP(0.035f, 0f, -0.495f), -0.3f),
-            (MhP(0.11f, 0f, -0.41f), 0.1f),
+            (MhP(-0.005f, 0f, -0.395f), 0.35f),
+            (MhP(0.055f, 0f, -0.36f), -0.15f),
+            (MhP(0.108f, 0f, -0.395f), 0.25f),
+            (MhP(0.055f, 0f, -0.43f), -0.3f),
+            (MhP(0.132f, 0f, -0.345f), 0.1f),
         };
 
         /// <summary>Pystyakseli huippuharjanteen keskeltä (seinien koveruus ja tahkojen etupuoli).</summary>
@@ -115,9 +133,9 @@ namespace Matkakirja
         static Vector3 MhKarkiPiste(int m) => MhKarki[m] == 0 ? MhSveitsi : MhItalia;
 
         /// <summary>
-        /// Vuoren pisteverkko [meridiaani, silmukka]: neljä harjannetta ja kummallakin seinällä kaksi välimeridiaania
-        /// kolmannesten kohdalla. Seinät ovat koveria (välipisteet vedetty akselia kohti 7–13 %), ja kourut painuvat
-        /// harjanteita alemmas (toistettava siemen 1865, Whymperin ensinousun vuosi).
+        /// Vuoren pisteverkko [meridiaani, silmukka]: neljä harjannetta ja kummankin välissä seinä, joka taittuu uomaksi, kylkiluuksi
+        /// ja uomaksi (MhSeinaMeridiaanit): uomat vedetään akselia kohti ja painetaan kourun verran alemmas, kylkiluu työntyy hieman
+        /// jänteen ulkopuolelle. Pieni toistettava kohina (siemen 1865, Whymperin ensinousun vuosi).
         /// </summary>
         static Vector3[,] MhVerkko()
         {
@@ -127,15 +145,16 @@ namespace Matkakirja
                 for (int k = 0; k < MhSilmukat; k++)
                 {
                     Vector3 a = MhHarjanteet[h][k], b = MhHarjanteet[(h + 1) % 4][k];
-                    p[h * 3, k] = a;
-                    for (int j = 1; j <= 2; j++)
+                    p[h * MhSeinaTahkot, k] = a;
+                    for (int j = 0; j < MhSeinaMeridiaanit.Length; j++)
                     {
-                        var q = Vector3.Lerp(a, b, j / 3f);
+                        var (f, veto, painuma) = MhSeinaMeridiaanit[j];
+                        var q = Vector3.Lerp(a, b, f);
                         var akseli = MhAkseli(q.y);
-                        float veto = 0.07f + 0.06f * (float)sat.NextDouble();
-                        q = akseli + (q - akseli) * (1f - veto);
-                        q.y = Mathf.Max(0f, q.y - MhKouru[k] * (0.6f + 0.8f * (float)sat.NextDouble()));
-                        p[h * 3 + j, k] = q;
+                        float v = (veto + 0.06f * ((float)sat.NextDouble() - 0.5f)) * (veto > 0.1f ? MhUomaSyvyys[k] : 1f);
+                        q = akseli + (q - akseli) * (1f - v);
+                        q.y = Mathf.Max(0f, q.y - MhKouru[k] * painuma * (0.8f + 0.4f * (float)sat.NextDouble()));
+                        p[h * MhSeinaTahkot + 1 + j, k] = q;
                     }
                 }
             return p;
@@ -171,14 +190,14 @@ namespace Matkakirja
             {
                 int n = (m + 1) % MhMeridiaanit, karki = MhKarki[m];
                 var K = MhKarkiPiste(m);
-                string[] kartta = MhVarit[m / 3];
+                string[] kartta = MhVarit[m / MhSeinaTahkot];
                 if (kuori < 0 || kuori == karki)
                 {
                     float t0 = 0f;
                     for (int v = 0; v < MhPaaVyot.Length; v++)
                     {
                         float t1 = MhPaaVyot[v];
-                        char c = kartta[v][m % 3];
+                        char c = kartta[v][m % MhSeinaTahkot];
                         var vari = kuori < 0 ? MhVari(c) : c == 'L' ? MhHehkuLumi : MhHehkuKallio;
                         Vector3 a1 = Vector3.Lerp(K, p[m, 0], t1), b1 = Vector3.Lerp(K, p[n, 0], t1);
                         var ulos = MhUlos((a1 + b1) * 0.5f);
@@ -215,10 +234,10 @@ namespace Matkakirja
             for (int m = 0; m < MhMeridiaanit; m++)
             {
                 int n = (m + 1) % MhMeridiaanit;
-                string[] kartta = MhVarit[m / 3];
+                string[] kartta = MhVarit[m / MhSeinaTahkot];
                 // Rinteet silmukasta toiseen (olkapäät, seinät, itäseinän lumireunus ja tumma kallionauha).
                 for (int k = 0; k + 1 < MhSilmukat; k++)
-                    r.NelioUlos(p[m, k], p[n, k], p[n, k + 1], p[m, k + 1], MhUlos((p[m, k] + p[n, k + 1]) * 0.5f), MhVari(kartta[3 + k][m % 3]));
+                    r.NelioUlos(p[m, k], p[n, k], p[n, k + 1], p[m, k + 1], MhUlos((p[m, k] + p[n, k + 1]) * 0.5f), MhVari(kartta[3 + k][m % MhSeinaTahkot]));
             }
             r.LopetaOsa();
 
@@ -251,21 +270,21 @@ namespace Matkakirja
             var ulos = new Vector3(0.69f, 0f, -0.72f).normalized;
             var sivu = Vector3.Cross(Vector3.up, ulos);
             // Juuren paikat pohjoisseinällä (meridiaani, osuus seuraavaan): seinän keskiosa Zmuttin ja Hörnlin välissä.
-            (int m, float f)[] paikat = { (0, 0.55f), (1, 0.2f), (1, 0.75f), (2, 0.35f) };
-            float[] leveys = { 0.012f, 0.045f, 0.045f, 0.012f };
+            (int m, float f)[] paikat = { (0, 0.6f), (1, 0.5f), (2, 0.5f), (3, 0.35f) };
+            float[] leveys = { 0.01f, 0.036f, 0.036f, 0.01f };
             var juuri = new Vector3[4]; var keski = new Vector3[4];
             for (int j = 0; j < 4; j++)
             {
                 var (m, f) = paikat[j];
-                Vector3 y5 = Vector3.Lerp(p[m, 5], p[m + 1, 5], f), y6 = Vector3.Lerp(p[m, 6], p[m + 1, 6], f);
+                Vector3 y5 = Vector3.Lerp(p[m, MhSilmukat - 2], p[m + 1, MhSilmukat - 2], f), y6 = Vector3.Lerp(p[m, MhSilmukat - 1], p[m + 1, MhSilmukat - 1], f);
                 var a = MhAkseli(0f);
                 var o = new Vector3(y6.x - a.x, 0f, y6.z - a.z).normalized;
-                juuri[j] = Vector3.Lerp(y5, y6, 0.35f) + o * 0.014f;
-                keski[j] = y6 + ulos * leveys[j] + Vector3.up * 0.014f;
+                juuri[j] = Vector3.Lerp(y5, y6, 0.45f) + o * 0.012f;
+                keski[j] = y6 + ulos * leveys[j] + Vector3.up * 0.012f;
             }
-            var karki = (keski[1] + keski[2]) * 0.5f + ulos * 0.07f;
+            var karki = (keski[1] + keski[2]) * 0.5f + ulos * 0.06f;
             karki.y = 0.003f;
-            Vector3 k0 = karki - sivu * 0.03f, k1 = karki + sivu * 0.03f;
+            Vector3 k0 = karki - sivu * 0.026f, k1 = karki + sivu * 0.026f;
             // Kärjen kulmat keskirivin päiden puolelle.
             if ((k0 - keski[0]).sqrMagnitude > (k1 - keski[0]).sqrMagnitude) (k0, k1) = (k1, k0);
             return (juuri, keski, k0, k1, ulos);
@@ -339,11 +358,10 @@ namespace Matkakirja
         {
             foreach (var (p, suunta) in MhTalot)
                 r.Talo(p, suunta, 0.042f, 0.03f, 0.026f, 0.018f, MhHirsi, MhLiuske);
-            var kirkko = MhP(0.005f, 0f, -0.39f);
+            var kirkko = MhKirkko;
             r.Pylvas(kirkko, 0.009f, 0.05f, 6, EmPaperi);
             r.Kartio(kirkko + Vector3.up * 0.05f, 0.011f, 0.028f, 6, EmKatto);
-            foreach (var puu in new[] { MhP(-0.09f, 0f, -0.51f), MhP(0.15f, 0f, -0.48f), MhP(0.17f, 0f, -0.39f),
-                         MhP(0.08f, 0f, -0.52f), MhP(0.2f, 0f, -0.44f), MhP(0.07f, 0f, -0.36f) })
+            foreach (var puu in MhPuut)
                 r.Kartio(puu, 0.013f, 0.04f, 5, EmPuu);
         }
 
@@ -362,17 +380,18 @@ namespace Matkakirja
         /// <summary>Lähitason vuoren renkaan laji: rungon silmukka, kerrostuman hylly (reunuksen yläpinnan takareuna rinteessä) tai
         /// huuli (ulos työnnetty reuna).</summary>
         enum MhLRengas { Silmukka, Hylly, Huuli }
-        /// <summary>Lähitason renkaat ylhäältä alas (laji, rungon vyö tai silmukka k): kerrostuman reunus vöissä 1–4.</summary>
+        /// <summary>Lähitason renkaat ylhäältä alas (laji, rungon vyö tai silmukka k): kerrostuman reunus vöissä 2 ja 3 (vyö 1 olkapäiden
+        /// alla jää ehjäksi, jotta lumijuovat pysyvät yhtenäisinä).</summary>
         static readonly (MhLRengas laji, int k)[] MhLRenkaat =
         {
-            (MhLRengas.Silmukka, 0), (MhLRengas.Silmukka, 1),
-            (MhLRengas.Hylly, 1), (MhLRengas.Huuli, 1), (MhLRengas.Silmukka, 2),
+            (MhLRengas.Silmukka, 0), (MhLRengas.Silmukka, 1), (MhLRengas.Silmukka, 2),
             (MhLRengas.Hylly, 2), (MhLRengas.Huuli, 2), (MhLRengas.Silmukka, 3),
             (MhLRengas.Hylly, 3), (MhLRengas.Huuli, 3), (MhLRengas.Silmukka, 4),
-            (MhLRengas.Hylly, 4), (MhLRengas.Huuli, 4), (MhLRengas.Silmukka, 5),
-            (MhLRengas.Silmukka, 6),
+            (MhLRengas.Silmukka, 5),
         };
-        const int MhLMeridiaanit = 24;
+        const int MhLMeridiaanit = 2 * MhMeridiaanit;
+        /// <summary>Reunusvyöt (kerrostumat) lähitasossa.</summary>
+        const int MhLReunusVyot = 3;
         /// <summary>Huippupyramidin lähitason vyöt säteittäin: rungon rajat 0,3 ja 0,62 säilyvät, väliin ohuet kerrostumat.</summary>
         static readonly float[] MhLPaaVyot = { 0.3f, 0.46f, 0.62f, 0.8f, 1f };
 
@@ -387,10 +406,10 @@ namespace Matkakirja
         static Vector3 MhLUlos(Vector3 c) { var a = MhAkseli(c.y); return new Vector3(c.x - a.x, 0f, c.z - a.z).normalized; }
 
         /// <summary>
-        /// Lähitason vuoriverkko [meridiaani, rengas] ja kerrostumien vahvuus [vyö, meridiaani]: rungon 12 meridiaania samoina
+        /// Lähitason vuoriverkko [meridiaani, rengas] ja kerrostumien vahvuus [vyö, meridiaani]: rungon 16 meridiaania samoina
         /// pisteinä ja jokaisen parin väliin meridiaani. Silmukoissa 0 ja 6 välimeridiaani on tarkalleen jänteen keskellä, joten
         /// huippupyramidin tahkot pysyvät rungon tasoissa (alppihehkun kuori peittää ne) ja juuri maassa; muualla pieni kohina
-        /// (kylkiluut ja uomat). Vöissä 1–4 kerrostuman reunus: hylly rinteen pinnalla 0,003 huulen yläpuolella ja huuli enintään
+        /// (kylkiluut ja uomat). Vöissä 2–3 kerrostuman reunus: hylly rinteen pinnalla 0,003 huulen yläpuolella ja huuli enintään
         /// 0,0075 ulos työnnettynä. Reunuksen korkeus vaeltaa (0,2–0,8 vyöstä) ja vahvuus hiipuu paikoin nollaan (pehmennetty
         /// kohina, siemen 4478), joten reunukset katkeilevat eivätkä näytä korkeuskäyriltä; lumiseinässä reunusta ei ole.
         /// </summary>
@@ -409,8 +428,8 @@ namespace Matkakirja
                     if (k > 0 && k < MhSilmukat - 1) c += MhLUlos(c) * (s * 0.012f) + Vector3.up * (y * 0.012f);
                     q[2 * m + 1, k] = c;
                 }
-            var osuus = new float[5, MhLMeridiaanit]; var vahvuus = new float[5, MhLMeridiaanit];
-            for (int k = 1; k <= 4; k++)
+            var osuus = new float[MhLReunusVyot + 1, MhLMeridiaanit]; var vahvuus = new float[MhLReunusVyot + 1, MhLMeridiaanit];
+            for (int k = 1; k <= MhLReunusVyot; k++)
             {
                 var a = new float[MhLMeridiaanit]; var b = new float[MhLMeridiaanit];
                 for (int j = 0; j < MhLMeridiaanit; j++) { a[j] = (float)sat.NextDouble(); b[j] = (float)sat.NextDouble(); }
@@ -424,7 +443,8 @@ namespace Matkakirja
                 for (int j = 0; j < MhLMeridiaanit; j++)
                 {
                     int e = (j + MhLMeridiaanit - 1) % MhLMeridiaanit;
-                    if (MhVarit[e / 2 / 3][3 + k][e / 2 % 3] == 'L' && MhVarit[j / 2 / 3][3 + k][j / 2 % 3] == 'L') vahvuus[k, j] = 0f;
+                    if (MhVarit[e / 2 / MhSeinaTahkot][3 + k][e / 2 % MhSeinaTahkot] == 'L' && MhVarit[j / 2 / MhSeinaTahkot][3 + k][j / 2 % MhSeinaTahkot] == 'L')
+                        vahvuus[k, j] = 0f;
                 }
             }
             var v = new Vector3[MhLMeridiaanit, MhLRenkaat.Length];
@@ -448,8 +468,8 @@ namespace Matkakirja
         static bool[,] MhLLumiHyllyt(float[,] vahvuus)
         {
             var sat = new System.Random(1865 * 3);
-            var lumi = new bool[5, MhLMeridiaanit];
-            for (int k = 1; k <= 4; k++)
+            var lumi = new bool[MhLReunusVyot + 1, MhLMeridiaanit];
+            for (int k = 1; k <= MhLReunusVyot; k++)
             {
                 var a = new float[MhLMeridiaanit];
                 for (int j = 0; j < MhLMeridiaanit; j++) a[j] = (float)sat.NextDouble();
@@ -464,7 +484,7 @@ namespace Matkakirja
 
         /// <summary>Lumikourut kalliossa (lähitason meridiaanitahko j, vyöt): itäseinän keskellä Zermattin näkymän lumiuoma ja
         /// eteläseinällä toinen.</summary>
-        static readonly (int j, int ylin, int alin)[] MhLKourut = { (9, 2, 3), (15, 1, 2) };
+        static readonly (int j, int ylin, int alin)[] MhLKourut = { };
 
         /// <summary>Lähitason rinnekaistan väri renkaan i alapuolella: rungon värikartan vyö ja sarake (sama väri samassa paikassa).
         /// Kalliossa reunuksen hylly on lunta jaksoittain (itäseinän lumijuovat) tai vaaleaa kalliota ja reunuksen alla tummempi
@@ -473,7 +493,7 @@ namespace Matkakirja
         {
             int m = j / 2, n = (j + 1) % MhLMeridiaanit;
             var (laji, k) = MhLRenkaat[i];
-            char c = MhVarit[m / 3][3 + k][m % 3];
+            char c = MhVarit[m / MhSeinaTahkot][3 + k][m % MhSeinaTahkot];
             var perus = MhVari(c);
             foreach (var (kj, ylin, alin) in MhLKourut)
                 if (j == kj && k >= ylin && k <= alin) return laji == MhLRengas.Huuli ? MhLVarjoLumi : MhLumi;
@@ -488,7 +508,7 @@ namespace Matkakirja
         static Color MhLPaaVari(int j, int b)
         {
             int m = j / 2, rivi = b == 0 ? 0 : b <= 2 ? 1 : 2;
-            char c = MhVarit[m / 3][rivi][m % 3];
+            char c = MhVarit[m / MhSeinaTahkot][rivi][m % MhSeinaTahkot];
             var perus = MhVari(c);
             if (b != 2 && b != 4 || c == 'L') return perus;
             return b == 2 ? Color.Lerp(perus, MhLTumma(perus), 0.7f) : Color.Lerp(perus, MhLumi, 0.45f);
@@ -546,16 +566,16 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// LÄHITASO (omistaja 27.9. klo 09.0x; Natiivisepän Erikoismalli.Lahi, katto 3 000 kolmiota): sama siluetti, mittasuhteet,
-        /// värit, ääriviivaosat (vuori, jäätikkö, Gornergratin kukkula) ja osien pivotit kuin rungossa; 1 497 kolmiota (rungon 427 ×
-        /// 3,5) lähikuvan yksityiskohtiin. Korvaa rungon vain lähellä; lippupilvi, riekaleet, alppihehku, juna ja valot pysyvät
-        /// ennallaan: huippupyramidin tahkot ovat rungon tasoissa (hehkun kuori peittää ne), radan penger on sama (juna kulkee sen
-        /// päällä) ja talojen seinät samoilla paikoilla (yövalot osuvat ikkunoihin).
-        ///   vuori     24 meridiaania (kylkiluut ja uomat) ja kerrostumat: vöissä 1–4 katkeileva ulos työnnetty reunus, jonka hyllyllä
-        ///             kalliossa lunta (itäseinän lumijuovat) ja alla tummempi jyrkkä kaista, lumiseinässä vain muotona; itä- ja
-        ///             eteläseinällä lumikouru; huippupyramidissa ohuet kerrostumat samoissa tasoissa; lumilipat Hörnlin,
-        ///             Furggenin ja Lionin olalla sekä Zmuttin olalla (suoja itään); kalliohampaat Zmuttin ja Furggenin
-        ///             alaharjanteilla; Hörnlin reitti polkuna Hörnlihütteltä Solvay-majalle; Italian huipun rautaristi
+        /// LÄHITASO (omistaja 27.9. klo 09.0x; Natiivisepän Erikoismalli.Lahi, katto 3 000 kolmiota; v2 10.3x): sama siluetti,
+        /// mittasuhteet, värit, ääriviivaosat (vuori, jäätikkö, Gornergratin kukkula) ja osien pivotit kuin rungossa; 1 451 kolmiota
+        /// (rungon 463 × 3,1) lähikuvan yksityiskohtiin. Korvaa rungon vain lähellä; lippupilvi, riekaleet, alppihehku, juna ja valot
+        /// pysyvät ennallaan: huippupyramidin tahkot ovat rungon tasoissa (hehkun kuori peittää ne), radan penger on sama (juna kulkee
+        /// sen päällä) ja talojen seinät samoilla paikoilla (yövalot osuvat ikkunoihin).
+        ///   vuori     32 meridiaania (rungon harjanteet, uomat ja kylkiluut sekä hienommat kylkiluut niiden välissä) ja kerrostumat:
+        ///             vöissä 2–3 katkeileva ulos työnnetty reunus, jonka hyllyllä kalliossa lunta (itäseinän lumijuovat) ja alla
+        ///             tummempi jyrkkä kaista, lumiseinässä vain muotona; huippupyramidissa ohuet kerrostumat samoissa tasoissa;
+        ///             lumilipat Hörnlin, Furggenin ja Lionin olalla sekä Zmuttin olalla (suoja itään); kalliohampaat Zmuttin ja
+        ///             Furggenin alaharjanteilla; Hörnlin reitti polkuna Hörnlihütteltä Solvay-majalle; Italian huipun rautaristi
         ///   jäätikkö  rungon jäätikkö, railot poikittain virtaukseen ja reunarailo juurella
         ///   rata      kiskot ja hammastanko penkereellä, ala-asema radan alapäässä, Kulmhotelin ikkunat
         ///   Zermatt   rungon talot samoilla paikoilla: kivijalka, lehtikuusihirret, räystäät, ikkunat, ovi, parveke ja savupiippu;
@@ -598,34 +618,35 @@ namespace Matkakirja
                 for (int i = 0; i + 1 < nR; i++)
                     r.NelioUlos(v[j, i], v[n, i], v[n, i + 1], v[j, i + 1], MhUlos((v[j, i] + v[n, i + 1]) * 0.5f), MhLRinneVari(j, i, vahvuus, lumi));
             }
-            // Lumilipat olkapäillä (suoja itään): Hörnli (6) itäseinän puolelle, Zmutt (0) pohjoisseinän, Furggen (12) itäseinän ja
-            // Lion (18) eteläseinän puolelle.
+            // Lumilipat olkapäillä (suoja itään): Hörnli itäseinän puolelle, Zmutt pohjoisseinän, Furggen itäseinän ja Lion
+            // eteläseinän puolelle.
+            const int lH = 2 * MhHornli, lZ = 2 * MhZmutt, lF = 2 * MhFurggen, lL = 2 * MhLion;
             int s1 = MhLSilmukka(1), s2 = MhLSilmukka(2);
-            MhLLippa(r, v, 6, 7, 0, s1);
-            MhLLippa(r, v, 0, 1, s1, s2);
-            MhLLippa(r, v, 12, 11, 0, s1);
-            MhLLippa(r, v, 18, 17, 0, s1);
-            // Hörnlin reitti: polku itäseinän puolella Hörnlihütteltä (silmukka 4) Solvay-majalle (silmukka 1), siksakkina.
-            int s4 = MhLSilmukka(4);
-            Vector3 Polku(int i) => Vector3.Lerp(v[6, i], v[7, i], i % 2 == 0 ? 0.16f : 0.5f);
+            MhLLippa(r, v, lH, lH + 1, 0, s1);
+            MhLLippa(r, v, lZ, lZ + 1, s1, s2);
+            MhLLippa(r, v, lF, lF - 1, 0, s1);
+            MhLLippa(r, v, lL, lL - 1, 0, s1);
+            // Hörnlin reitti: polku itäseinän puolella Hörnlihütteltä (silmukka 3) Solvay-majalle (silmukka 1), siksakkina.
+            int s4 = MhLSilmukka(3);
+            Vector3 Polku(int i) => Vector3.Lerp(v[lH, i], v[lH + 1, i], i % 2 == 0 ? 0.16f : 0.5f);
             for (int i = s4; i > s1; i--)
             {
                 Vector3 a = Polku(i), b = Polku(i - 1);
-                var nrm = Vector3.Cross(v[7, i] - v[6, i], v[6, i - 1] - v[6, i]).normalized;
+                var nrm = Vector3.Cross(v[lH + 1, i] - v[lH, i], v[lH, i - 1] - v[lH, i]).normalized;
                 if (Vector3.Dot(nrm, MhLUlos(a) + Vector3.up * 0.3f) < 0f) nrm = -nrm;
                 Vector3 p0 = Vector3.Lerp(a, b, 0.18f) + nrm * 0.0015f, p1 = Vector3.Lerp(a, b, 0.82f) + nrm * 0.0015f;
                 var sv = Vector3.Cross(nrm, p1 - p0).normalized * 0.0013f;
                 r.NelioUlos(p0 - sv, p1 - sv, p1 + sv, p0 + sv, nrm, EmSeepia);
             }
             // Kalliohampaat (santarmit) harjanteilla: Zmuttin hampaat olan alla ja Furggenin alaharjanteen tornit.
-            MhLHampaat(r, v, 0, MhLSilmukka(2), MhLSilmukka(4), 1865);
-            MhLHampaat(r, v, 12, MhLSilmukka(2) + 1, MhLSilmukka(4), 1868);
+            MhLHampaat(r, v, lZ, MhLSilmukka(2), MhLSilmukka(4), 1865);
+            MhLHampaat(r, v, lF, MhLSilmukka(2) + 1, MhLSilmukka(4), 1868);
             r.LopetaOsa();
             // Solvay-hätämaja Hörnlin olalla (4 003 m) itäseinän puolella ja Hörnlihütte (3 260 m) harjanteen juurella.
-            var lh = MhLSuoja(v, 6, 7, s1);
-            r.Talo(v[6, s1] + lh * 0.009f - Vector3.up * 0.007f, -Mathf.PI * 0.5f, 0.014f, 0.009f, 0.009f, 0.004f, MhHirsi, EmKatto);
-            var lh4 = MhLSuoja(v, 6, 7, s4);
-            var hutte = v[6, s4] + lh4 * 0.012f - Vector3.up * 0.012f;
+            var lh = MhLSuoja(v, lH, lH + 1, s1);
+            r.Talo(v[lH, s1] + lh * 0.009f - Vector3.up * 0.007f, -Mathf.PI * 0.5f, 0.014f, 0.009f, 0.009f, 0.004f, MhHirsi, EmKatto);
+            var lh4 = MhLSuoja(v, lH, lH + 1, s4);
+            var hutte = v[lH, s4] + lh4 * 0.012f - Vector3.up * 0.012f;
             r.Talo(hutte, 0f, 0.034f, 0.02f, 0.03f, 0.008f, EmPaperi, EmKatto);
             for (int y = 0; y < 2; y++)
                 for (int x = -1; x <= 1; x++)
@@ -756,7 +777,7 @@ namespace Matkakirja
         static void MhLZermatt(Rakentaja r)
         {
             for (int i = 0; i < MhTalot.Length; i++) MhLTalo(r, MhTalot[i].p, MhTalot[i].suunta, i);
-            var kirkko = MhP(0.005f, 0f, -0.39f);
+            var kirkko = MhKirkko;
             r.Pylvas(kirkko, 0.009f, 0.05f, 6, EmPaperi);
             r.Kartio(kirkko + Vector3.up * 0.05f, 0.011f, 0.028f, 6, EmKatto);
             // Kuusikulmaisen tornin kameran puoleiset sivut (normaalit 210°, 270°, 330°): kellotapulin aukot ja kello.
@@ -768,8 +789,7 @@ namespace Matkakirja
                 r.Laatta(pinta + Vector3.up * 0.042f, d, 0.0042f, 0.008f, MhLIkkuna);
                 if (i == 4) r.Laatta(pinta + Vector3.up * 0.031f, d, 0.0048f, 0.0048f, EmKulta);
             }
-            foreach (var puu in new[] { MhP(-0.09f, 0f, -0.51f), MhP(0.15f, 0f, -0.48f), MhP(0.17f, 0f, -0.39f),
-                         MhP(0.08f, 0f, -0.52f), MhP(0.2f, 0f, -0.44f), MhP(0.07f, 0f, -0.36f) })
+            foreach (var puu in MhPuut)
                 r.Kartio(puu, 0.013f, 0.04f, 5, EmPuu);
         }
 
@@ -802,13 +822,13 @@ namespace Matkakirja
         /// paksuin ja kaksi kumpunuppia päällä, pyrstö ohenee ja nousee hieman.</summary>
         static readonly (float d, float y, float s, float rp, float rs, float rk)[] MhPilviMoykyt =
         {
-            (0.025f, 0f, 0f, 0.055f, 0.048f, 0.042f),
-            (0.11f, 0.015f, 0.015f, 0.082f, 0.07f, 0.062f),
-            (0.22f, 0.03f, -0.012f, 0.098f, 0.08f, 0.07f),
-            (0.325f, 0.025f, 0.018f, 0.088f, 0.072f, 0.062f),
-            (0.425f, 0.038f, -0.01f, 0.065f, 0.058f, 0.05f),
-            (0.175f, 0.082f, 0f, 0.058f, 0.05f, 0.05f),
-            (0.305f, 0.08f, 0.008f, 0.052f, 0.045f, 0.045f),
+            (0.02f, 0f, 0f, 0.044f, 0.038f, 0.034f),
+            (0.088f, 0.012f, 0.012f, 0.066f, 0.056f, 0.05f),
+            (0.176f, 0.024f, -0.01f, 0.078f, 0.064f, 0.056f),
+            (0.26f, 0.02f, 0.014f, 0.07f, 0.058f, 0.05f),
+            (0.34f, 0.03f, -0.008f, 0.052f, 0.046f, 0.04f),
+            (0.14f, 0.066f, 0f, 0.046f, 0.04f, 0.04f),
+            (0.244f, 0.064f, 0.006f, 0.042f, 0.036f, 0.036f),
         };
 
         /// <summary>Lippupilvi (pivot juuressa, MhPilviJuuri): möykyt tuulen suuntaan. Skaalautuu juuresta, joten pilvi kasvaa
@@ -829,7 +849,7 @@ namespace Matkakirja
         static Mesh MatterhornHattara()
         {
             var r = new Rakentaja();
-            MhMoykky(r, Vector3.zero, 0.055f, 0.047f, 0.042f, MhPilvi, 0.4f);
+            MhMoykky(r, Vector3.zero, 0.044f, 0.038f, 0.034f, MhPilvi, 0.4f);
             return r.Verkko("Matterhorn-hattara");
         }
 
@@ -890,7 +910,7 @@ namespace Matkakirja
                 var n = new Vector3(Mathf.Sin(suunta), 0f, -Mathf.Cos(suunta));   // talon etuseinän normaali (eteen, −Z)
                 r.Laatta(p + n * 0.0155f + Vector3.up * 0.012f - MhKyla, n, 0.02f, 0.014f, EmIkkunavalo);
             }
-            r.Laatta(MhP(0.005f, 0.03f, -0.39f - 0.0095f) - MhKyla, Vector3.back, 0.006f, 0.012f, EmIkkunavalo);
+            r.Laatta(MhKirkko + new Vector3(0f, 0.03f, -0.0095f) - MhKyla, Vector3.back, 0.006f, 0.012f, EmIkkunavalo);
             r.Kiekko(new Vector3(0.01f, 0.002f, 0.005f), 0.1f, 0.065f, 12, EmIkkunavalo);
             return r.Verkko("Matterhorn-valot");
         }
@@ -903,9 +923,9 @@ namespace Matkakirja
                 new LiikkuvaOsaMaaritys { Nimi = "lippupilvi", Verkko = MatterhornLippupilvi, Pivot = MhPilviJuuri, Liike = Liike.Keinunta,
                     Akseli = Vector3.up, Nopeus = 1f / 9f, Laajuus = 3f, KayS = 36f, TaukoS = 50f },
                 new LiikkuvaOsaMaaritys { Nimi = "hattara0", Verkko = MatterhornHattara, Pivot = MhPilviJuuri, Liike = Liike.Liuku,
-                    Akseli = MhTuuli, Laajuus = 0.3f, KayS = 7f },
+                    Akseli = MhTuuli, Laajuus = 0.24f, KayS = 7f },
                 new LiikkuvaOsaMaaritys { Nimi = "hattara1", Verkko = MatterhornHattara, Pivot = MhPilviJuuri, Liike = Liike.Liuku,
-                    Akseli = MhTuuli, Laajuus = 0.3f, KayS = 7f },
+                    Akseli = MhTuuli, Laajuus = 0.24f, KayS = 7f },
                 new LiikkuvaOsaMaaritys { Nimi = "alppihehku0", Verkko = () => MatterhornAlppihehku(0), Pivot = MhSveitsi + MhHehkuNosto,
                     Liike = Liike.Valahdys },
                 new LiikkuvaOsaMaaritys { Nimi = "alppihehku1", Verkko = () => MatterhornAlppihehku(1), Pivot = MhItalia + MhHehkuNosto,
@@ -917,6 +937,6 @@ namespace Matkakirja
         }
 
         static readonly bool matterhorn = Rekisteroi("matterhorn",
-            new Erikoismalli { Runko = MatterhornRunko, Osat = MatterhornOsat, Lahi = MatterhornLahi, Kolmiot0 = 787, KokoKerroin = 1.5f });
+            new Erikoismalli { Runko = MatterhornRunko, Osat = MatterhornOsat, Lahi = MatterhornLahi, Kolmiot0 = 843, KokoKerroin = 1.5f });
     }
 }

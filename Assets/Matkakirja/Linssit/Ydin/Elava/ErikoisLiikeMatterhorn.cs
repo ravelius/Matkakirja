@@ -20,11 +20,11 @@ namespace Matkakirja.Linssit.Elava
         /// <summary>Lippupilven akseli (tuulen alapuoli) mallin avaruudessa, sama kuin Symbolimallit.MhTuuli.</summary>
         public const double TuuliX = -0.9404, TuuliZ = -0.3401;
         /// <summary>Rata ala-asemalta Gornergratille mallin yksiköissä, sama kuin Symbolimallit.MhRataLoppu − MhRataAlku.</summary>
-        public const double RataX = -0.28, RataY = 0.105, RataZ = 0.12;
-        /// <summary>Riekale lähtee lipun pyrstöstä (0,2 juuresta), ajautuu 0,3 tuulen alle ja nousee 0,025.</summary>
-        public const double HattaraAlku = 0.2, HattaraMatka = 0.3, HattaraNousu = 0.025;
+        public const double RataX = -0.22, RataY = 0.085, RataZ = 0.09;
+        /// <summary>Riekale lähtee lipun pyrstöstä (0,16 juuresta), ajautuu 0,24 tuulen alle ja nousee 0,02 (v2: pilvi 0,8 ×).</summary>
+        public const double HattaraAlku = 0.16, HattaraMatka = 0.24, HattaraNousu = 0.02;
         /// <summary>Hajoava lippu ajautuu tuulen alle.</summary>
-        public const double Ajelehtii = 0.08;
+        public const double Ajelehtii = 0.065;
 
         enum Pilvi { Tauko, Muodostuu, Liehuu, Hajoaa }
         enum Juna { Zermatt, Nousee, Gornergrat, Laskee }
