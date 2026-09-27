@@ -1579,3 +1579,19 @@ test('skeema 1.52: mediaKuvat — omat tiedostot offline-lataukseen omassa avaim
   assert.ok(Object.values(o.maat).some((m) => m.mediaKuvat?.some((k) => k.url.includes('/karttanostot/'))), 'karttanostot mediaKuvissa');
   assert.ok(o.ryhmat.europe.tavuja.mediaKuvat > 0);
 });
+
+test('eheys 27.9.: Flickr-kuvat repon kopiona ämpärissä, Flickr vain varana', async () => {
+  const { sivustonAssetit } = await import('../tools/vienti/vie-sisalto.mjs');
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  const flickr = media.filter((v) => v.laji === 'kuva-flickr');
+  assert.ok(flickr.length > 0);
+  const assetit = sivustonAssetit(tiedostot);
+  for (const v of flickr) {
+    assert.match(v.url, /^https:\/\/media\.matkakirja\.app\/assets\/valokuvat\/flickr-\d+\.jpg\?v=[0-9a-f]{12}$/, v.arvo);
+    assert.ok(assetit[v.url.slice('https://media.matkakirja.app/'.length).split('?')[0]], `${v.arvo} ei ämpärin assettilistassa`);
+    assert.match(v.varat.at(-1), /^https:\/\/live\.staticflickr\.com\//);
+  }
+  const offline = JSON.parse(tiedostot.get('offline.json'));
+  const kaikki = Object.values(offline.maat).flatMap((m) => m.media);
+  assert.equal(kaikki.filter((u) => u.includes('staticflickr')).length, 0, 'offline-lataus ei hae Flickristä');
+});
