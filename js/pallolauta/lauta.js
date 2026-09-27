@@ -4326,17 +4326,22 @@ export async function avaaPallolauta(ui) {
    * PAIKKA VÄISTÄÄ: nostojen ikonit ja muste, kaupungin piste ja
    * nappula sekä ruudun kalusteet (Pulu, Liiku, paikkarivi —
    * ruudunKalusteet). Asennot kokeillaan järjestyksessä yläoikea,
-   * ylävasen, oikea, vasen, alaoikea; jos mikään ei mahdu, kutsu jää
-   * pois (ei peitä mitään). Piiloon, kun kamera on maatasoa kauempana
-   * (nostojen karttakerroin < KUTSUN_KERROIN), linssissä, lennolla ja
-   * aloitusnäkymässä.
+   * ylävasen, oikea, vasen, alaoikea. Piiloon, kun kamera on maatasoa
+   * kauempana (nostojen karttakerroin < KUTSUN_KERROIN), linssissä,
+   * lennolla ja aloitusnäkymässä.
+   *
+   * LÄHELLÄ KAUPUNKIA (omistaja 27.9.2026 klo 11.2x, v2296:n palaute;
+   * natiivin hyväksytty malli Natiivi-UI 11a3c43a): renkaat 8/20/36 px
+   * (ennen 16/40/70/100, jolloin Pariisissa kutsu karkasi kauas). Jos
+   * mikään asento ei ole vapaa, TOINEN KIERROS väistää vain ruudun
+   * kalusteet sekä kaupungin pisteen ja nappulan — kutsu saa peittää
+   * nostomerkin, mutta pysyy kaupungin vieressä.
    */
   const KUTSUN_KOKO = 64;
   const KUTSUN_KERROIN = 0.95;
   // Asennot etäisyysrenkaittain (lähin ensin), kussakin renkaassa yläoikea
-  // → ylävasen → oikea → vasen → alaoikea: tiheässä kaupungissa (Pariisi)
-  // lähin vapaa kohta löytyy vasta kauempaa.
-  const KUTSUN_ASENNOT = [16, 40, 70, 100].flatMap((v) => [
+  // → ylävasen → oikea → vasen → alaoikea.
+  const KUTSUN_ASENNOT = [8, 20, 36].flatMap((v) => [
     { dx: v, dy: -v - KUTSUN_KOKO }, { dx: -v - KUTSUN_KOKO, dy: -v - KUTSUN_KOKO },
     { dx: v + 4, dy: -KUTSUN_KOKO / 2 }, { dx: -v - 4 - KUTSUN_KOKO, dy: -KUTSUN_KOKO / 2 },
     { dx: v, dy: v },
@@ -4384,16 +4389,18 @@ export async function avaaPallolauta(ui) {
     const W = kotelo.clientWidth;
     const H = kotelo.clientHeight;
     // Kaupungin piste ja nappula (seisoo pisteen päällä, n. 44 px ylös).
-    const esteet = [...kiinteaMuste, ...omaMuste, ...ruudunKalusteet(),
-      { x0: p.x - 14, y0: p.y - 46, x1: p.x + 14, y1: p.y + 10 }];
-    let valittu = null;
-    for (const a of KUTSUN_ASENNOT) {
-      const r = { x0: p.x + a.dx, y0: p.y + a.dy, x1: p.x + a.dx + KUTSUN_KOKO, y1: p.y + a.dy + KUTSUN_KOKO + 14 };
-      if (r.x0 < 4 || r.y0 < 4 || r.x1 > W - 4 || r.y1 > H - 4) continue;
-      if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
-      valittu = { a, r };
-      break;
-    }
+    const nappula = { x0: p.x - 14, y0: p.y - 46, x1: p.x + 14, y1: p.y + 10 };
+    const kalusteet = ruudunKalusteet();
+    const etsi = (esteet) => {
+      for (const a of KUTSUN_ASENNOT) {
+        const r = { x0: p.x + a.dx, y0: p.y + a.dy, x1: p.x + a.dx + KUTSUN_KOKO, y1: p.y + a.dy + KUTSUN_KOKO + 14 };
+        if (r.x0 < 4 || r.y0 < 4 || r.x1 > W - 4 || r.y1 > H - 4) continue;
+        if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
+        return { a, r };
+      }
+      return null;
+    };
+    const valittu = etsi([...kiinteaMuste, ...omaMuste, ...kalusteet, nappula]) ?? etsi([...kalusteet, nappula]);
     if (!valittu) return tyhjaa();
     merkit.aseta('kaupunkikortinkutsu', [{
       avain: `kaupunkikortinkutsu:${city.id}`,
