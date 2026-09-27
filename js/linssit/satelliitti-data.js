@@ -10,7 +10,7 @@
  * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan
  * ladataan NASAn omasta ämpäristä.
  *
- * Haettu: 2026-09-26. Kohteita 176, kuvia 214.
+ * Haettu: 2026-09-27. Kohteita 189, kuvia 229.
  */
 
 export const SATELLIITTI_LAHDE = {
@@ -19,7 +19,7 @@ export const SATELLIITTI_LAHDE = {
   "lisenssi": "Public domain",
   "osoite": "https://images.nasa.gov/",
   "katalogi": "https://images-api.nasa.gov/search?media_type=image",
-  "haettu": "2026-09-26"
+  "haettu": "2026-09-27"
 };
 
 export const SATELLIITTI_KOHTEET = [
@@ -5166,6 +5166,374 @@ export const SATELLIITTI_KOHTEET = [
         "kuva": "https://images-assets.nasa.gov/image/sts067-722a-053/sts067-722a-053~large.jpg",
         "pikku": "https://images-assets.nasa.gov/image/sts067-722a-053/sts067-722a-053~small.jpg",
         "sivu": "https://images.nasa.gov/details/sts067-722a-053"
+      }
+    ]
+  },
+  {
+    "tunnus": "niagara",
+    "nimi": "Niagaranputous",
+    "seutu": "New York, Yhdysvallat ja Ontario, Kanada",
+    "selite": "Niagaranjoki ja sen kuuluisa putous muodostavat luonnollisen rajan Yhdysvaltojen ja Kanadan välille.",
+    "lat": 43.08,
+    "lon": -79.07,
+    "oletus": "iss010e17563",
+    "havainnot": [
+      {
+        "id": "iss010e17563",
+        "aika": "2005-02-11",
+        "teksti": "Talvinen näkymä Niagaranjoelta helmikuussa 2005: joki mutkittelee lumisen maiseman halki ja erottaa Yhdysvallat ja Kanadan toisistaan. Kuvan alaosassa erottuu jokiuoman jyrkkä silmukka, Niagaran pyörre, joka syntyi kun putous on vuosituhansien aikana kaivautunut taaksepäin kalliopohjaan. Itse putous jää kuvassa lumipeitteisen maiseman keskelle, mutta sen tekemä jälki näkyy koko jokilaaksossa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 10",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss010e17563/iss010e17563~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss010e17563/iss010e17563~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss010e17563"
+      },
+      {
+        "id": "iss015e05624",
+        "aika": "2007-04-29",
+        "teksti": "Sama alue huhtikuussa 2007, kun Erie-järven talvijää on juuri sulanut ja lähtenyt liikkeelle Niagaranjokea pitkin. Vaalea, jäänmurskaa täynnä oleva joki erottuu selvästi jo sulaneesta, tummasta vedestä. Erie-järven suulle asennettu jääpuomi pidättelee jäätä joka talvi, jotta se ei tukkisi voimalaitosten vedenottoa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 15",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss015e05624/iss015e05624~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss015e05624/iss015e05624~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss015e05624"
+      }
+    ]
+  },
+  {
+    "tunnus": "gronlannin-vuonot",
+    "nimi": "Grönlannin vuonot",
+    "seutu": "Lounais-Grönlanti, Tanska",
+    "selite": "Grönlannin lounaisrannikko on satojen jääkauden veistämien vuonojen pirstoma, ja saaren sisäosaa peittää kilometrien paksuinen mannerjää.",
+    "lat": 60.72,
+    "lon": -46.03,
+    "oletus": "sts066-114-031",
+    "havainnot": [
+      {
+        "id": "sts066-114-031",
+        "aika": "1994-11-14",
+        "teksti": "Marraskuussa 1994 otettu kuva näyttää Grönlannin lounaisrannikon vuonoverkoston lähellä Kap Farvelia ja Julianehåbin lahtea. Rannikon terävät niemet ja syvät lahdet erottuvat selvästi sisämaan tasaisesta, valkoisesta jäätikköylängöstä. Grönlannin mannerjää on paksuimmillaan lähes 3,5 kilometriä, ja sen reunoilta valuu jäätikkövirtoja, jotka murtuvat mereen jäävuoriksi.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1916
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts066-114-031/sts066-114-031~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts066-114-031/sts066-114-031~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts066-114-031"
+      }
+    ]
+  },
+  {
+    "tunnus": "manaus",
+    "nimi": "Vetten kohtaaminen Manausissa",
+    "seutu": "Amazonas, Brasilia",
+    "selite": "Manausin kaupungin kohdalla tumma Rio Negro ja samea Solimões-joki yhtyvät muodostaen Amazon-joen, mutta niiden vedet sekoittuvat toisiinsa vasta kilometrien päässä.",
+    "lat": -3.1,
+    "lon": -59.99,
+    "oletus": "iss009e15488",
+    "havainnot": [
+      {
+        "id": "iss009e15488",
+        "aika": "2004-07-20",
+        "teksti": "Heinäkuussa 2004 otettu kuva näyttää, miten Solimõesin vaaleanruskea, sedimenttipitoinen vesi virtaa kaupungin ohi kuvan alalaitaa kohti, kun taas Rio Negron tummempi vesi tulee oikealta. Manausin kaupunki erottuu keskellä terävänä, ruutukaavamaisena alueena jokikielekkeen kärjessä. Vedet eivät sekoitu heti, koska niiden lämpötila, virtausnopeus ja tiheys eroavat toisistaan – ilmiö jatkuu jokien yhtymäkohdasta kymmenien kilometrien päähän.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 9",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss009e15488/iss009e15488~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss009e15488/iss009e15488~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss009e15488"
+      }
+    ]
+  },
+  {
+    "tunnus": "cosiguina",
+    "nimi": "Cosigüinan tulivuori",
+    "seutu": "Nicaragua",
+    "selite": "Cosigüinan tulivuoren huippua peittää kraatterijärvi niemellä, joka sulkee Fonsecanlahden suuta Tyynenmeren rannikolla Nicaraguassa.",
+    "lat": 12.98,
+    "lon": -87.58,
+    "oletus": "iss016e010894",
+    "havainnot": [
+      {
+        "id": "iss016e010894",
+        "aika": "2007-11-17",
+        "teksti": "Marraskuussa 2007 otettu kuva näyttää Cosigüinan tulivuoren pyöreän tunturin ja sen huipulla lepäävän kraatterijärven, Laguna Cosigüinan. Vuoren juurella erottuu Fonsecanlahden sameaa vettä, joka virtaa jokisuistosta Tyynellemerelle. Vuori purkautui viimeksi vuonna 1859, mutta sen vuoden 1835 purkaus oli Keski-Amerikan historian suurin: tuhkaa levisi aina Meksikoon ja Jamaikalle asti.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 16",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss016e010894/iss016e010894~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss016e010894/iss016e010894~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss016e010894"
+      }
+    ]
+  },
+  {
+    "tunnus": "jamesinlahti-harjanteet",
+    "nimi": "Jamesinlahden rantaharjanteet",
+    "seutu": "Ontario ja Québec, Kanada",
+    "selite": "Jamesinlahden etelärannalla maankamara nousee yhä, koska jääkauden mannerjää painoi sitä alas tuhansien vuosien ajan.",
+    "lat": 51.05,
+    "lon": -80,
+    "oletus": "STS099-706-090",
+    "havainnot": [
+      {
+        "id": "STS099-706-090",
+        "aika": "2000-03-14",
+        "teksti": "Helmikuussa 2000 kuvattu Hannah Bay Jamesinlahden eteläosassa näyttää kymmeniä toisiaan seuraavia vaaleita harjanteita, jotka ovat entisiä rantaviivoja. Kun mannerjää suli viimeisen jääkauden jälkeen, maa alkoi hitaasti kohota ja meri perääntyi, jättäen jälkeensä nämä 100–200 metriä leveät muinaiset rantavallit. Ilmiö jatkuu yhä: Hudsoninlahden ja Jamesinlahden ranta-alueet ovat yksi maapallon nopeimmin kohoavista alueista.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1907,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS099-706-090/STS099-706-090~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS099-706-090/STS099-706-090~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS099-706-090"
+      }
+    ]
+  },
+  {
+    "tunnus": "krimin-lagunit",
+    "nimi": "Krimin värilliset lagunit",
+    "seutu": "Krimin niemimaa",
+    "selite": "Krimin niemimaan matalat rannikkolagunit hehkuvat turkoosina, punaisena ja violettina, koska niiden suola- ja levämäärä vaihtelee lammikoittain.",
+    "lat": 45.35,
+    "lon": 36.3,
+    "oletus": "iss056e032828",
+    "havainnot": [
+      {
+        "id": "iss056e032828",
+        "aika": "2018-06-24",
+        "teksti": "Kesäkuussa 2018 otettu kuva näyttää sarjan pieniä rannikkolaguuneja Krimillä, Atsovanmeren ja Mustanmeren välissä. Jokainen allas hohtaa omaa väriään – turkoosia, vaaleanpunaista, viininpunaista – koska veden suolapitoisuus, syvyys ja mikrolevien määrä poikkeavat toisistaan lammikosta toiseen. Krim on kansainvälisesti tunnustettu osaksi Ukrainaa, mutta Venäjä on hallinnoinut aluetta vuodesta 2014 lähtien.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 56",
+        "kuvaaja": null,
+        "mitat": [
+          1280,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss056e032828/iss056e032828~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss056e032828/iss056e032828~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss056e032828"
+      }
+    ]
+  },
+  {
+    "tunnus": "valakian-tasanko",
+    "nimi": "Valakian tasanko yöllä",
+    "seutu": "Romania",
+    "selite": "Yöllä otetussa kuvassa Karpaateilta Valakian tasangolle laskevat joet erottuvat siitä, miten asutuksen valot seuraavat jokilaaksoja.",
+    "lat": 45.3,
+    "lon": 25.3,
+    "oletus": "iss074e0149572",
+    "havainnot": [
+      {
+        "id": "iss074e0149572",
+        "aika": "2026-01-18",
+        "teksti": "Tammikuussa 2026 otettu yökuva näyttää, kuinka kylien ja kaupunkien valot haarautuvat puumaiseksi kuvioksi seuraten jokilaaksoja, jotka virtaavat Karpaateilta Romanian Valakian tasangon hedelmällisille alangoille. Tummat, valottomat alueet kuvion välissä ovat vuorten metsäisiä, harvaan asuttuja rinteitä. Valakia on Romanian väkirikkain alue, ja sen eteläosassa sijaitsee myös pääkaupunki Bukarest.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0149572/iss074e0149572~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0149572/iss074e0149572~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0149572"
+      }
+    ]
+  },
+  {
+    "tunnus": "montreal",
+    "nimi": "Montréal",
+    "seutu": "Québec, Kanada",
+    "selite": "Montréal on rakennettu saarelle, jonka kärjessä Ottawa-joki yhtyy Saint Lawrence -jokeen.",
+    "lat": 45.5,
+    "lon": -73.57,
+    "oletus": "sts060-94-072",
+    "havainnot": [
+      {
+        "id": "sts060-94-072",
+        "aika": "1994-02-09",
+        "teksti": "Helmikuussa 1994 kuvattu lumipeitteinen Montréal näkyy tarkkarajaisena saarena, jonka pääväylät ja katuverkko erottuvat valkoista lunta vasten. Kaupungin keskellä kohoava Mont Royal -puisto erottuu tummana, metsäisenä kukkulana keskustan yllä. Montréal on Kanadan toiseksi suurin kaupunki ja maailman toiseksi suurin ranskankielinen kaupunki Pariisin jälkeen, vaikka se sijaitsee lähes 1 600 kilometrin päässä merestä.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1903,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts060-94-072/sts060-94-072~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts060-94-072/sts060-94-072~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts060-94-072"
+      }
+    ]
+  },
+  {
+    "tunnus": "englanninkanaali-yolla",
+    "nimi": "Englannin kanaali yöllä",
+    "seutu": "Iso-Britannia, Ranska, Belgia ja Alankomaat",
+    "selite": "Englannin kanaalin molemmin puolin syttyvät Lontoon, Amsterdamin, Brysselin ja niiden naapurikaupunkien valot yhdeksi Euroopan tiheimmin asutuksi yövyöhykkeeksi.",
+    "lat": 51.2,
+    "lon": 2,
+    "oletus": "iss058e005276",
+    "havainnot": [
+      {
+        "id": "iss058e005276",
+        "aika": "2019-01-18",
+        "teksti": "Tammikuussa 2019 otettu yökuva näyttää Englannin kanaalin molemmin puolin loistavat kaupungit: oikealla Lontoo, vasemmalla myötäpäivään Amsterdam, Haag, Rotterdam, Antwerpen ja Bryssel. Itse kanaali erottuu kuvan keskellä täysin pimeänä vyönä, koska merellä ei ole maakohteiden valoja. Kanaalin ali kulkee Eurotunneli, ja sen vedet ovat yksi maailman vilkkaimmin liikennöidyistä merireiteistä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 58",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss058e005276/iss058e005276~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss058e005276/iss058e005276~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss058e005276"
+      }
+    ]
+  },
+  {
+    "tunnus": "tanska",
+    "nimi": "Tanskan saaristo",
+    "seutu": "Tanska",
+    "selite": "Tanska koostuu Jyllannin niemimaasta ja yli 400 saaresta, jotka pistävät esiin meren sinestä kuin palapelin palat.",
+    "lat": 55.5,
+    "lon": 9.8,
+    "oletus": "iss039e017228",
+    "havainnot": [
+      {
+        "id": "iss039e017228",
+        "aika": "2014-04-28",
+        "teksti": "Kuvassa näkyy Tanskan keskiosa: vasemmalla Jyllannin niemimaan itärannikko, keskellä pyöreähkö Fynin saari ja oikealla saaristo, joka jatkuu kohti Sjællantia. Kesäinen kuva näyttää maan poikkeuksellisen tasaisena ja vihreänä, sillä Tanskassa ei ole yhtään yli 200 metrin korkeuteen nousevaa kukkulaa. Maan yli 400 saaresta noin 70 on asuttuja, ja monet niistä on yhdistetty toisiinsa silloilla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Rick Mastracchio",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e017228/iss039e017228~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e017228/iss039e017228~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e017228"
+      }
+    ]
+  },
+  {
+    "tunnus": "geneven-jarvi",
+    "nimi": "Geneven järvi",
+    "seutu": "Sveitsi ja Ranska",
+    "selite": "Geneven järven puolikuun muotoinen allas lepää Alppien juurella Sveitsin ja Ranskan rajalla.",
+    "lat": 46.45,
+    "lon": 6.5,
+    "oletus": "sts068-243-076",
+    "havainnot": [
+      {
+        "id": "sts068-243-076",
+        "aika": "1994-09-30",
+        "teksti": "Syyskuussa 1994 otettu kuva näyttää Geneven järven sinisenä puolikuuna Alppien lumihuippujen keskellä. Järveä ruokkii Rhône-joki, joka syntyy alppijäätiköiltä ja virtaa järven läpi matkallaan kohti Välimerta. Järvi on tilavuudeltaan Länsi-Euroopan suurin, ja Ranskan ja Sveitsin raja kulkee sitä pitkin lähes keskeltä.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1904
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts068-243-076/sts068-243-076~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts068-243-076/sts068-243-076~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts068-243-076"
+      }
+    ]
+  },
+  {
+    "tunnus": "pico",
+    "nimi": "Pico-tulivuori",
+    "seutu": "Azorit, Portugali",
+    "selite": "Portugalin korkein vuori, Pico, on jyrkkäpiirteinen tulivuori keskellä Atlantin valtamerta Azoreilla.",
+    "lat": 38.47,
+    "lon": -28.4,
+    "oletus": "iss036e009390",
+    "havainnot": [
+      {
+        "id": "iss036e009390",
+        "aika": "2013-06-18",
+        "teksti": "Kesäkuussa 2013 otettu pystykuva näyttää Pico-saaren pitkänomaisena vihreänä muotona Atlantilla; saaren itäpäässä kohoaa 2 351 metriä korkea Pico-tulivuori huippukraattereineen. Vuori on koko Portugalin korkein kohta, vaikka se sijaitsee tuhansien kilometrien päässä Euroopan mantereesta. Saaren länsiosan viinitarhat kasvavat mustan laavakiven ruutujen suojissa, ja perinne on nykyään Unescon maailmanperintökohde.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss036e009390/iss036e009390~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss036e009390/iss036e009390~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss036e009390"
+      }
+    ]
+  },
+  {
+    "tunnus": "prinssiedwardinsaari",
+    "nimi": "Prinssi Edwardin saari",
+    "seutu": "Saint Lawrencenlahti, Kanada",
+    "selite": "Kanadan pienin provinssi on punamultainen, sirppimäinen saari Saint Lawrencenlahdella.",
+    "lat": 46.51,
+    "lon": -63.42,
+    "oletus": "iss067e035819",
+    "havainnot": [
+      {
+        "id": "iss059e019410",
+        "aika": "2019-04-11",
+        "teksti": "Huhtikuussa 2019 kuvattu laajempi näkymä samalta alueelta näyttää Saint Lawrencenlahden, Prinssi Edwardin saaren sekä osia Québecistä ja Uudesta-Brunswickista yhdellä silmäyksellä. Saari on tunnettu myös kirjailija L. M. Montgomeryn Anna-kirjoista, jotka sijoittuvat sen maalaismaisemiin. Manterelle saaren yhdistää Confederation-silta, joka on yksi maailman pisimmistä jääpeitteisen veden yli rakennetuista silloista.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 59",
+        "kuvaaja": "David Saint-Jacques",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss059e019410/iss059e019410~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss059e019410/iss059e019410~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss059e019410"
+      },
+      {
+        "id": "iss067e035819",
+        "aika": "2022-05-07",
+        "teksti": "Toukokuussa 2022 otettu kuva auringon kimallellessa merestä näyttää Prinssi Edwardin saaren tumman sirpin Saint Lawrencenlahdella, Uuden-Brunswickin ja Uuden-Skotlannin välissä. Kirkas heijastus meren pinnalla korostaa rannikon muotoja tavallista tarkemmin. Saari on Kanadan pienin provinssi, ja sen punamulta syntyy maaperän runsaasta rautapitoisuudesta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 67",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss067e035819/iss067e035819~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss067e035819/iss067e035819~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss067e035819"
       }
     ]
   }
