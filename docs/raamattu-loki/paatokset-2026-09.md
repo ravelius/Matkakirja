@@ -8103,3 +8103,7 @@ Omistaja 11.3x: seuraava siirtoprompti (tilinvaihto viikkokiintion 97 %:ssa, tai
 ## VIIKKO 93 % → SIIRTOPROMPTI KIRJOITETTU (viesti-fable-tilinvaihto-20260927.md), ROOLIT KIRJOITTAVAT LUOVUTUKSET (27.9.2026 klo 11.25)
 
 Postivahti 11.23: viikkokiintio 93 % (~1 pp/12 min). Fable: siirtoprompti docs/raportit/viesti-fable-tilinvaihto-20260927.md (paatoimittaja Opus max poikkeus, tila, roolien aloitusviestit, jono) ja kaikille 10 roolille kasky kirjoittaa luovutus nyt ja jatkaa tyota; 97 %:ssa sessiot pysaytetaan (stop_session), viimeisena Fable.
+
+## LUOVUTUKSET TILINVAIHTOON: NATIIVI-UI, JULKAISIJA, KARTTASEPPA; PALLO-Z10 YOPOLTTO IRROTETTU SESSIOSTA (PID 72301) (27.9.2026 klo 11.26)
+
+Luovutukset pushattu: Natiivi-UI (f8f7a9c67; avauskortin korjaukset koodissa 11a3c43a, kaannos klo 12; nostot-taysi 18543b3c), Julkaisija (c01adfd54; tyokalut julkaisija-tyokalut/; #3392 v2313 mainissa, #3391 suljettu, #3394 ja #3388 junassa), Karttaseppa (1bcc21e08; pallo-Z10 yopoltto nohup PPID 1 PID 72301 alkaa klo 22 → pallo-z10-20260927/ulos/10/; vientikomento luovutuksessa, ajetaan vasta omistajan hyvaksynnalla uuden tilin Karttaseppa-sessiossa; worktree wt/karttaseppa-pallo-z10 sailytetaan).
