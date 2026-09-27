@@ -233,7 +233,12 @@ namespace Matkakirja.Natiivi
             bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki
                 || Kohdekartan.KortistaAuki);
             // Löydös 132 (Natiivi-UI): Kokoruutu, kun noston kuva on kokoruudulla (löydös 150); muut näkymät Kortti.
-            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
+            // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää ≥ 70 % ruudusta (iPhone 17: opas 77 %), kartta
+            // pysäytetään kuten kokoruudun kuvan alla (kaappaus kerran, pallon kamera pois; reunat pysäytyskuvana), jolloin
+            // vieritys ei maksa pallon, Cesiumin ja elävien elementtien piirtoa (iPhone ja iPad).
+            bool arkkiPeittaa = (Nahtavyydet.Auki && Peittoosuus(Nahtavyydet.Arkki) >= ArkkiPeittoRaja)
+                || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && Peittoosuus(Linssit.Valitsin.Paneeli) >= ArkkiPeittoRaja);
+            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
             if (taso != KuvaSumennus.Ei) s = true;
             if (taso != KuvaTaso) { KuvaTaso = taso; KuvaTasoMuuttui?.Invoke(taso); }
             if (s == KuvaSumea) return;
@@ -583,6 +588,20 @@ namespace Matkakirja.Natiivi
                 var virhe = o.JatkaTurvasta();
                 if (virhe != null) Tilarivi.Viesti(virhe);
             } : (System.Action)null, () => UusiMatka(o));
+        }
+
+        /// <summary>Arkin peitto, josta kartta pysäytetään (mitattu: iPhone 17 opas 0,77, iPad Pro 11 opas 0,80; kartta on peitteen alla).</summary>
+        const float ArkkiPeittoRaja = 0.7f;
+
+        /// <summary>Elementin osuus paneelin pinta-alasta (0 = ei näy).</summary>
+        static float Peittoosuus(UnityEngine.UIElements.VisualElement e)
+        {
+            if (e?.panel == null || e.resolvedStyle.display == UnityEngine.UIElements.DisplayStyle.None || e.resolvedStyle.opacity < 0.99f) return 0f;
+            var r = e.worldBound;
+            var p = e.panel.visualTree.layout;
+            if (float.IsNaN(r.width) || float.IsNaN(r.height) || p.width <= 0 || p.height <= 0) return 0f;
+            float w = Mathf.Min(r.xMax, p.width) - Mathf.Max(r.xMin, 0f), h = Mathf.Min(r.yMax, p.height) - Mathf.Max(r.yMin, 0f);
+            return w <= 0 || h <= 0 ? 0f : w * h / (p.width * p.height);
         }
 
         static string esiladattuMaa;

@@ -80,6 +80,51 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        /// <summary>
+        /// Testikomento `vieritys kestokoe [s]` (vierityksen lämpö- ja CPU-mittaus, omistaja 27.9. klo 17.0x): toistuvia heittoja
+        /// Kosketusvierityksen iOS-hidastuvuudella (0,998/ms) s sekuntia (oletus 300), suunta kääntyy reunalla; jokainen kehys kutsuu
+        /// Ruudunpaivitys.Vierita kuten oikea veto/inertia. Kehysajat kehysajat.jsonl:ään, yhteenveto lokiin.
+        /// </summary>
+        public static string Kestokoe(float sekuntia)
+        {
+            if (instanssi == null) return "ei käynnissä";
+            ScrollView kohde = null;
+            float paras = 10f;
+            foreach (var s in instanssi.seuratut)
+            {
+                if (s == null || s.panel == null || !Naytetaan(s)) continue;
+                float vara = s.contentContainer.layout.height - s.contentViewport.layout.height;
+                if (vara > paras) { paras = vara; kohde = s; }
+            }
+            if (kohde == null) return "ei vieritettävää ScrollView'tä näkyvissä";
+            if (kestokoe != null) instanssi.StopCoroutine(kestokoe);
+            kestokoe = instanssi.StartCoroutine(Kesto(kohde, sekuntia > 0 ? sekuntia : 300f, paras));
+            return null;
+        }
+
+        static Coroutine kestokoe;
+
+        static System.Collections.IEnumerator Kesto(ScrollView s, float kesto, float suurin)
+        {
+            float alku = Time.realtimeSinceStartup, nopeus = 0f, suunta = 1f; // nopeus pt/ms
+            int kehyksia = 0, heittoja = 0;
+            while (Time.realtimeSinceStartup - alku < kesto && s.panel != null)
+            {
+                if (Mathf.Abs(nopeus) * 1000f < 10f) { nopeus = 2.5f * suunta; heittoja++; } // uusi heitto ~2 500 pt/s
+                Ruudunpaivitys.Vierita();
+                yield return null;
+                kehyksia++;
+                float dt = Time.unscaledDeltaTime * 1000f, k = Mathf.Pow(0.998f, dt);
+                float y = s.scrollOffset.y + nopeus * (k - 1f) / Mathf.Log(0.998f);
+                nopeus *= k;
+                if (y <= 0f || y >= suurin) { y = Mathf.Clamp(y, 0f, suurin); nopeus = 0f; suunta = -suunta; }
+                s.scrollOffset = new Vector2(s.scrollOffset.x, y);
+            }
+            float t = Time.realtimeSinceStartup - alku;
+            kestokoe = null;
+            Debug.Log($"MATKAKIRJA vieritys kestokoe: {t:0} s, {kehyksia} kehystä ({kehyksia / Mathf.Max(t, 0.01f):0.0} fps), {heittoja} heittoa");
+        }
+
         static bool Naytetaan(VisualElement e)
         {
             for (; e != null; e = e.hierarchy.parent)

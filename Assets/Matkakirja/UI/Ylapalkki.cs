@@ -614,6 +614,10 @@ namespace Matkakirja.Natiivi
             if (!palkki.worldBound.Contains(pp) && !vakasnappi.worldBound.Contains(pp)) Sulje();
         }
 
+        /// <summary>Näkyvän palkin alareuna paneelin pisteinä, piilossa 0 (näkymäpeiton tarkistus: palkki on läpinäkymätön).</summary>
+        public float NakyvaAlareuna => palkki.resolvedStyle.display != DisplayStyle.None && !palkki.ClassListContains("mk-ylapalkki--piilossa")
+            && palkki.worldBound.height > 0 ? palkki.worldBound.yMax : 0f;
+
         /// <summary>Palkin alareuna paneelin pisteinä (pudotusvalikot asettuvat tämän alle).</summary>
         public float Alareuna => palkki.resolvedStyle.height > 0 ? palkki.resolvedStyle.height : Korkeus;
 

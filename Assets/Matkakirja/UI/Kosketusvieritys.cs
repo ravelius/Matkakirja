@@ -9,6 +9,11 @@
 // yksiköt = pisteet), kynnys 8 pt pystysuunnassa; vedon alkaessa osoitin kaapataan isälle, jolloin lasten napit
 // peruuntuvat eivätkä laukea irrotuksessa. Irrotus: nopeus viimeiseltä 80 ms:lta ja iOS:n normaali hidastuvuus
 // (UIScrollView.DecelerationRate.normal 0,998 / ms), reunalla pysähtyy. Hiiri ja kynä kulkevat ScrollViewin omaa reittiä.
+//
+// YLEINEN LIITOS (vierityslöydös, omistaja 27.9. klo 17.0x: turistiopas, linssikatalogi ym. vierivät tahmeasti): jokaisen
+// UI-kerroksen juuressa kuuntelija ottaa kosketuksen alta lähimmän pystysuuntaisen ScrollViewin haltuun vasta, kun
+// pystyveto ylittää kynnyksen — sitä ennen tapahtumat kulkevat normaalisti, joten liukusäätimet, vaakaselaimet ja napit
+// toimivat. Omalla liitoksella varustetut (lehti, nostokortti) ohitetaan.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +30,10 @@ namespace Matkakirja.Natiivi
 
         readonly VisualElement isa;
         readonly Func<ScrollView> kohde;
+        /// <summary>Yleinen liitos kerroksen juuressa: kohde haetaan kosketuksen alta, veto otetaan vasta kynnyksen jälkeen.</summary>
+        readonly bool yleinen;
+        /// <summary>Omalla liitoksella varustetut isät (yleinen liitos ohittaa niiden ScrollViewit).</summary>
+        static readonly HashSet<VisualElement> omat = new HashSet<VisualElement>();
         readonly List<(float t, float y)> naytteet = new List<(float, float)>();
         int id = -1;
         bool vetaa;
@@ -33,10 +42,12 @@ namespace Matkakirja.Natiivi
         ScrollView sv;
         IVisualElementScheduledItem liuku;
 
-        Kosketusvieritys(VisualElement isa, Func<ScrollView> kohde)
+        Kosketusvieritys(VisualElement isa, Func<ScrollView> kohde, bool yleinen = false)
         {
             this.isa = isa;
             this.kohde = kohde;
+            this.yleinen = yleinen;
+            if (!yleinen) omat.Add(isa);
             isa.RegisterCallback<PointerDownEvent>(Alas, TrickleDown.TrickleDown);
             isa.RegisterCallback<PointerMoveEvent>(Liike, TrickleDown.TrickleDown);
             isa.RegisterCallback<PointerUpEvent>(Ylos, TrickleDown.TrickleDown);
@@ -49,6 +60,23 @@ namespace Matkakirja.Natiivi
         /// <summary>Liittää vierityksen isään, jonka lapsi kohde() on (sivu voi vaihtua).</summary>
         public static void Liita(VisualElement isa, Func<ScrollView> kohde) => new Kosketusvieritys(isa, kohde);
 
+        /// <summary>Kerroksen juureen: kaikki sen pystysuuntaiset ScrollViewit (UiKerros.Dokumentti).</summary>
+        public static void LiitaYleinen(VisualElement juuri) => new Kosketusvieritys(juuri, null, true);
+
+        /// <summary>Lähin pystysuuntainen, vieritettävä ScrollView kosketuksen alta; null, jos sillä on oma liitos.</summary>
+        ScrollView Lahin(VisualElement v)
+        {
+            ScrollView loydetty = null;
+            for (; v != null && v != isa; v = v.parent)
+            {
+                if (omat.Contains(v)) return null;
+                if (loydetty == null && v is ScrollView s && s.mode != ScrollViewMode.Horizontal
+                    && s.contentContainer.layout.height > s.contentViewport.layout.height + 1f)
+                    loydetty = s;
+            }
+            return loydetty;
+        }
+
         static bool Kosketus(IPointerEvent e) => e.pointerType == UnityEngine.UIElements.PointerType.touch;
 
         // Vieritysalue: ScrollViewin vierityspalkin yläraja tai sisällön ja näkymän erotus (suurempi).
@@ -58,7 +86,7 @@ namespace Matkakirja.Natiivi
         void Alas(PointerDownEvent e)
         {
             if (!Kaytossa || !Kosketus(e) || id >= 0) return;
-            sv = kohde();
+            sv = yleinen ? Lahin(e.target as VisualElement) : kohde();
             if (sv == null) return;
             liuku?.Pause();
             liuku = null;
@@ -73,9 +101,11 @@ namespace Matkakirja.Natiivi
         void Liike(PointerMoveEvent e)
         {
             if (!Kaytossa || !Kosketus(e)) return;
-            // ScrollView ei saa vierittää itse kosketuksella (se liikutti sisältöä moninkertaisesti).
-            e.StopPropagation();
+            // ScrollView ei saa vierittää itse kosketuksella (se liikutti sisältöä moninkertaisesti). Yleinen liitos
+            // pysäyttää vasta omassa vedossaan, jotta muut eleet (liukusäädin, vaakaselain) saavat tapahtumansa.
+            if (!yleinen) e.StopPropagation();
             if (e.pointerId != id || sv == null) return;
+            if (yleinen && vetaa) e.StopPropagation();
             var d = (Vector2)e.position - alku;
             if (!vetaa)
             {
@@ -86,8 +116,10 @@ namespace Matkakirja.Natiivi
                 alku = e.position; // ei hyppyä kynnyksen verran
                 offset0 = sv.scrollOffset.y;
                 d = Vector2.zero;
+                if (yleinen) e.StopPropagation();
             }
             sv.scrollOffset = new Vector2(sv.scrollOffset.x, Mathf.Clamp(offset0 - d.y, 0f, Suurin));
+            Ruudunpaivitys.Vierita(); // veto: täysi taajuus (peitossa ProMotionilla 120 Hz)
             float t = Time.unscaledTime * 1000f;
             naytteet.Add((t, e.position.y));
             while (naytteet.Count > 2 && t - naytteet[0].t > NayteMs) naytteet.RemoveAt(0);
@@ -124,7 +156,7 @@ namespace Matkakirja.Natiivi
             float edellinen = Time.unscaledTime * 1000f;
             liuku = kohdeSv.schedule.Execute(() =>
             {
-                Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
+                Ruudunpaivitys.Vierita(); // lämpö: täysi taajuus inertian ajan, loputtua heti lepotaajuus
                 float nyt = Time.unscaledTime * 1000f, dt = Mathf.Max(0f, nyt - edellinen);
                 edellinen = nyt;
                 // Sijainti integroituna: v(t) = v0 · k^t, siirtymä dt:n aikana v · (k^dt − 1) / ln k.

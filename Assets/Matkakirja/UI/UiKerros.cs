@@ -163,6 +163,8 @@ namespace Matkakirja.Natiivi
             juuri.AddToClassList("mk-juuri");
             if (!nakyvissa) juuri.style.display = DisplayStyle.None;
             juuri.RegisterCallback<TransitionRunEvent>(TransitioAlkoi, TrickleDown.TrickleDown);
+            // Vierityslöydös (omistaja 27.9. klo 17.0x): iOS-tuntumainen kosketusvieritys kaikkiin pystysivuihin.
+            Kosketusvieritys.LiitaYleinen(juuri);
             dokumentit[kerros] = d;
             return d;
         }
