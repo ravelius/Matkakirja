@@ -68,6 +68,7 @@ namespace Matkakirja.Linssit.Elava
             "brandenburgin-portti" => new BrandenburginPorttiLiike(id),
             "segovian-akvedukti" => new SegovianAkveduktiLiike(id),
             "brugge-belfry" => new BruggenKellotorniLiike(id),
+            "hohensalzburg" => new HohensalzburgLiike(id),
             _ => null,
         };
 
