@@ -9,8 +9,8 @@ namespace Matkakirja.Natiivi
     /// ja lyhdyn keila kiertää vedenpinnalla. Verkot MeriRakentajalla MeriMalli-varjostimelle.
     ///
     /// Klassinen Pohjanmeren ja Itämeren majakkalaiva: PUNAINEN runko (korostusväri kylkien yläosassa ja lyhdyn kuvussa,
-    /// vain tällä lajilla, noin 14 % näkyvästä alasta pelikoossa 35°:ssa), tumma vesirajan kaista, paperinen nimikaista
-    /// UTGRUND kummassakin kyljessä (asemanimen muoto, ei yksittäinen laiva), vaalea kaide, kaareva kansilinja, kylki
+    /// vain tällä lajilla, noin 14 % näkyvästä alasta pelikoossa 35°:ssa), tumma vesirajan kaista (ei nimeä: keksitty
+    /// asemanimi samana kaikissa maissa esittäisi fiktiota faktana, Fable 27.9.2026 klo 18.3x), vaalea kaide, kaareva kansilinja, kylki
     /// kallistuu taitteesta sisään (ylhäältä punainen reunus) ja pyöreä perä. Keskellä vankka lyhtytorni haruksineen:
     /// tasanne kaiteineen (paperi ja muste), lyhty lasiruutuineen ja punainen kupu, huipputangossa musta päivämerkkipallo.
     /// Pieni kansirakennus (sumutorvi, kattoikkuna, savupiippu), kaksi pelastusvenettä taaveteissa, perämasto
@@ -73,7 +73,7 @@ namespace Matkakirja.Natiivi
 
         static Color R(float s) => MeriRakentaja.Rampi(s);
         static readonly Color Punainen = MeriRakentaja.Punainen;
-        static readonly Color Saapas = R(0.22f), KaideYla = R(1.95f), KaideSisaVari = R(1.6f), KansiVari = R(1.18f), Kirjain = R(2f);
+        static readonly Color Saapas = R(0.22f), KaideYla = R(1.95f), KaideSisaVari = R(1.6f), KansiVari = R(1.18f);
         static readonly Color TaloSeina = R(1.8f), TaloKatto = R(1.95f), Ikkuna = R(0.4f), Ovi = R(0.55f);
         static readonly Color TorniVari = R(1.5f), Jalusta = R(1.1f), TasanneYla = R(1.95f), TasanneReuna = R(1.45f);
         static readonly Color Kaiteet = R(0.22f), LyhtyJalka = R(1.2f), Lasi = R(1.98f), Puite = R(0.2f), Reunus = R(0.3f);
@@ -160,7 +160,7 @@ namespace Matkakirja.Natiivi
 
         public static Mesh Roottori() => Rakenna(false);
 
-        /// <summary>Kaukotaso (≤ 800 kolmiota): sama siluetti harvemmin jaoin, nimikaista yhtenä nauhana, ilman kaiteen
+        /// <summary>Kaukotaso (≤ 800 kolmiota): sama siluetti harvemmin jaoin, ilman kaiteen
         /// pylväitä, ikkunoita, tuulettimia ja köysiä.</summary>
         public static Mesh RoottoriKauko() => Rakenna(true);
 
@@ -169,7 +169,6 @@ namespace Matkakirja.Natiivi
             var r = new MeriRakentaja(ReunaMinimi);
             Vesikerros(r, kauko);
             Runko(r, kauko);
-            Nimikaista(r, kauko);
             Kansirakenteet(r, kauko);
             Torni(r, kauko);
             Peramasto(r, kauko);
@@ -325,66 +324,6 @@ namespace Matkakirja.Natiivi
             var keski = (kansi[asemia] + kansi[asemia + kaaria + 1]) * 0.5f;
             for (int i = asemia; i <= asemia + kaaria; i++) r.KolmioUlos(keski, kansi[i], kansi[i + 1], Vector3.up, KansiVari);
             r.LopetaOsa();
-        }
-
-        // ---- Nimikaista ----
-
-        /// <summary>Nimikaista "UTGRUND" (ulkomatala: yleinen pohjoismainen ja Itämeren majakkalaivan asemanimen muoto, ei
-        /// yksittäinen laiva) kirjaimina ruudukossa 3 × 5 (sarake, rivi alhaalta; suorakulmiot x0, y0, x1, y1).</summary>
-        static readonly float[][] Merkit =
-        {
-            new[] { 0f, 0.9f, 1f, 5f, 2f, 0.9f, 3f, 5f, 0.4f, 0f, 2.6f, 1f },                                   // U
-            new[] { 0f, 4f, 3f, 5f, 1f, 0f, 2f, 4f },                                                           // T
-            new[] { 0f, 0.9f, 1f, 4.1f, 0.4f, 4f, 3f, 5f, 0.4f, 0f, 2.6f, 1f, 2f, 0.9f, 3f, 2.6f, 1.5f, 2f, 2.6f, 2.8f }, // G
-            new[] { 0f, 0f, 1f, 5f, 1f, 4f, 2.6f, 5f, 2f, 2.9f, 3f, 4.3f, 1f, 2.2f, 2.6f, 3f, 1.9f, 0f, 3f, 2.2f },   // R
-            new[] { 0f, 0.9f, 1f, 5f, 2f, 0.9f, 3f, 5f, 0.4f, 0f, 2.6f, 1f },                                   // U
-            new[] { 0f, 0f, 1f, 5f, 2f, 0f, 3f, 5f, 1f, 2.6f, 1.6f, 4f, 1.4f, 1f, 2f, 2.7f },                   // N
-            new[] { 0f, 0f, 1f, 5f, 1f, 4f, 2.4f, 5f, 1f, 0f, 2.4f, 1f, 2f, 0.8f, 3f, 4.2f },                   // D
-        };
-        const float KirjainAla = 0.0062f, KirjainRivi = 0.00062f, KirjainSarake = 0.00135f, KirjainVali = 0.0058f;
-
-        /// <summary>Kyljen pinnan piste nimikaistan kohdalla (z, y) ja puoli: hieman pinnan ulkopuolella.</summary>
-        static Vector3 KylkiPiste(float z, float y, float puoli)
-        {
-            float d = KansiY(z), zr = z / Rake(y, d);
-            return new Vector3(puoli * (Puoli(zr) + Profiili(y, d, KaideH(zr)) + 0.00014f), y, z);
-        }
-
-        /// <summary>
-        /// Paperinen nimikaista punaisessa yläkyljessä molemmin puolin (luetaan oikealla perästä keulaan ja vasemmalla keulasta
-        /// perään kuten laivan nimi): merkit pieninä erillisinä neliöinä (ei ääriviivaa). Kaukotasossa yksi kapea nauha.
-        /// </summary>
-        static void Nimikaista(MeriRakentaja r, bool kauko)
-        {
-            float pituus = Merkit.Length * KirjainVali - (KirjainVali - 3f * KirjainSarake), zc = 0.0015f;
-            for (int k = 0; k < 2; k++)
-            {
-                float puoli = k == 0 ? 1f : -1f, dz = puoli;
-                var ulos = new Vector3(puoli, 0.25f, 0f);
-                if (kauko)
-                {
-                    float y0 = KirjainAla + KirjainRivi, y1 = KirjainAla + 4f * KirjainRivi;
-                    for (int i = 0; i < 3; i++)
-                    {
-                        float z0 = zc - 0.5f * pituus + pituus * i / 3f, z1 = zc - 0.5f * pituus + pituus * (i + 1) / 3f;
-                        r.NelioUlos(KylkiPiste(z0, y0, puoli), KylkiPiste(z1, y0, puoli), KylkiPiste(z1, y1, puoli), KylkiPiste(z0, y1, puoli), ulos, Kirjain);
-                    }
-                    continue;
-                }
-                float alku = zc - dz * 0.5f * pituus;
-                for (int g = 0; g < Merkit.Length; g++)
-                {
-                    var m = Merkit[g];
-                    if (m == null) continue;
-                    float vasen = alku + dz * g * KirjainVali;
-                    for (int i = 0; i + 3 < m.Length; i += 4)
-                    {
-                        float za = vasen + dz * m[i] * KirjainSarake, zb = vasen + dz * m[i + 2] * KirjainSarake;
-                        float ya = KirjainAla + m[i + 1] * KirjainRivi, yb = KirjainAla + m[i + 3] * KirjainRivi;
-                        r.NelioUlos(KylkiPiste(za, ya, puoli), KylkiPiste(zb, ya, puoli), KylkiPiste(zb, yb, puoli), KylkiPiste(za, yb, puoli), ulos, Kirjain);
-                    }
-                }
-            }
         }
 
         // ---- Kansirakenteet ----

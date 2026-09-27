@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
     ///             irrota niitä): harja, avoin kita hampaineen, kieli (ainoa korostus), silmät, sarvet ja poskievät;
     ///             vesikerros: varjo, vaahtorengas keulakuohuineen, väreilyrengas ja Kelvinin vana. Animoi kääntää sitä vain
     ///             y-akselin ympäri (nyökkäys enintään ±3,5°, jotta vesikerros pysyy pinnassa), nousu ja kohoaminen y-skaalalla.
-    ///   Lapsi3    (10) vesipallo (säde 0,0075, ääriviivallinen): pinnan murtumisen ja sukelluksen roiskeet, kidasta tippuvat
+    ///   Lapsi3    (10) vesipallo (säde 0,0075, ilman ääriviivaa): pinnan murtumisen ja sukelluksen roiskeet, kidasta tippuvat
     ///             pisarat ja harvinaisen suihkun pisarat (pinnassa litistettyinä vaahtorenkaina).
     /// Värit vain rampista (Rampi, kärjen alfa 0), kieli korostuksena (Punainen, alfa 1; 1,3 % kaulan ja pään kiinteästä
     /// pinta-alasta) ja vesikerroksen Vaahto/VarjoVari. Kolmiot: LOD0 2 708 (pyrstö 240 + kaari 348 × 4 + kaula ja pää 756 +
@@ -524,10 +524,11 @@ namespace Matkakirja.Natiivi
 
         const float PalloR = 0.0075f;
 
-        /// <summary>Vesipallo: paperinvaalea (ramppi 1,95), ääriviiva erottaa sen vaaleasta merestä.</summary>
+        /// <summary>Vesipallo: paperinvaalea (ramppi 1,95) ilman ääriviivaa, pehmeä vaalea vaahto (Fable 27.9.2026 klo 18.3x:
+        /// pintaan litistetyt pallot näkyivät lähikuvassa paksuina mustina renkaina).</summary>
         public static Mesh Lapsi3()
         {
-            var r = new MeriRakentaja();
+            var r = new MeriRakentaja(1f);
             r.Pallo(Vector3.zero, PalloR, R(1.95f), 1);
             return r.Verkko("merihirviö: vesipallo");
         }
