@@ -72,7 +72,9 @@ export const RAHATTOMUUS_VUOROJA = 8; // 2 vrk × 4 vuoroa (TURN_HOURS 6)
  * docs/raportit/talous-suunnitelma-20260927.md 5b): oikean elämän peräkkäiset
  * pelipäivät (laitteen paikallinen päivä, ensimmäinen teko). Päivät 1–2: 0,
  * 3–6: 20 £/pv, 7.: 50 + 100 £, 8+: 30 £/pv ja joka 7. päivä +100 £.
- * Väliin jäänyt päivä nollaa laskurin (ei armopäivää).
+ * ARMOPÄIVÄ (omistaja 27.9.2026 klo 12.4x): yksi väliin jäänyt päivä 7 päivän
+ * liukuvassa ikkunassa ei katkaise putkea, mutta siitä ei tule palkkiota eikä se
+ * kasvata pituutta; toinen väliin jäänyt päivä saman ikkunan sisällä nollaa.
  */
 export function streakPalkkio(pituus) {
   return streakErittely(pituus).yhteensa;
@@ -92,6 +94,9 @@ const JARJESTYSLUVUT = ['', 'Ensimmäinen', 'Toinen', 'Kolmas', 'Neljäs', 'Viid
 export function streakOtsikko(pituus) {
   return `${JARJESTYSLUVUT[pituus] ?? `${pituus}.`} päivä peräkkäin matkalla`;
 }
+
+/** Armopäivien vähimmäisväli: kaksi väliin jäänyttä päivää saman 7 päivän ikkunan sisällä nollaa putken. */
+export const STREAK_ARMOIKKUNA = 7;
 
 /** Päivämäärä 'YYYY-MM-DD' + n päivää (UTC-laskenta, ei aikavyöhykehyppyä). */
 function paivaaLisaa(paivays, n) {
@@ -1413,8 +1418,20 @@ export class Game {
     if (!p || p.isBot || p.pudonnut || this.phase === 'over' || typeof paivays !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(paivays)) return null;
     const ennen = p.streak ?? null;
     if (ennen?.paiva === paivays) return null;
-    const pituus = ennen && paivaaLisaa(ennen.paiva, 1) === paivays ? ennen.pituus + 1 : 1;
-    p.streak = { paiva: paivays, pituus };
+    let pituus = 1;
+    let armo = null;
+    if (ennen && paivaaLisaa(ennen.paiva, 1) === paivays) {
+      pituus = ennen.pituus + 1;
+      armo = ennen.armo ?? null;
+    } else if (ennen && paivaaLisaa(ennen.paiva, 2) === paivays) {
+      // Yksi väliin jäänyt päivä: armopäivä, jos edellinen on vähintään ikkunan päässä.
+      const valissa = paivaaLisaa(ennen.paiva, 1);
+      if (!ennen.armo || paivaaLisaa(ennen.armo, STREAK_ARMOIKKUNA) <= valissa) {
+        pituus = ennen.pituus + 1;
+        armo = valissa;
+      }
+    }
+    p.streak = armo ? { paiva: paivays, pituus, armo } : { paiva: paivays, pituus };
     const { paiva, viikko, yhteensa: palkkio } = streakErittely(pituus);
     if (palkkio > 0) {
       p.money += palkkio;
