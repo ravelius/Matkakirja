@@ -21,9 +21,23 @@ local_eec7f158-d9f3-4b93-9368-c50935bd19ab. Scratchpad S=/private/tmp/claude-502
 5. **A/B/C-kokeiluhaara** mallinseppa/kategoriat3d-abc dfce4ec3 (EI mergeen): `symbolit kategoriavari a|b|c`
    (c = ramppi + vuoren lumi kärkivärinä). Ajo-vaihe 6 ajo-mallit.sh:ssa (lahi-<paikka>-<koko>-<kulma>-<a|b|c>.png).
 
+## TULOS 03.1x (käännös b95f65aa, kuvat proto-3d/lokit/mallinseppa-laite-20260927-d/)
+
+- A/B reilusti samasta ajosta: mallinseppa-toimitus-20260927/kategoriat-ab-<paikka>-75.png (koosta_abc.py, VARIANTIT=ab).
+  C = B tässä ajossa (bugi: Rakentaja tallentaa värit lineaarisina) → korjattu 33b682ef.
+- Erä 2: brandenburgin-portti-v1.png + video, segovian-akvedukti-v1.png + video (koosta_era2.py). Kinderdijk EI näy
+  laitteella: pienissä maissa kamera pysähtyy MinKorkeus ~311 km:iin (NLD saapuminen 404 km → ZoomKerroin ≤ 1,3 < 2,5) →
+  löydös Natiivisepälle 03.1x. Korjaukset 01810d0c: Segovia korkeammaksi (4,4), myllyt isommiksi, vaunut 1,5×.
+- 12 symbolia: 8 valmiina haarassa mallinseppa/kategoriat3d-12 a9f2efbf (Tahti, Tiimalasi, Salama, Kiekko, Malja, Vaaka,
+  Ratas, Ankkuri), esikatselut mallinseppa-toimitus-20260927/kategoriasymbolit-esikatselu-{1,2}.png. Agentti B (Tulivuori,
+  Aallot, Tassu = pöllö, Kellotorni) kesken.
+
 ## KÄYNNISSÄ
 
-- **Klo 03.00 käännös + laiteajo** (taustalla, $S/ajo-0300.sh, loki $S/ajo-0300.log): juna/b13 + mallinseppa/erikoismallit2 +
+- **Klo 04 käännös + laiteajo** $S/ajo-0400.sh (alkaa, kun $S/go-0400 on olemassa, viimeistään 04.12): juna/b13 +
+  mallinseppa/erikoismallit2 + mallinseppa/kategoriat3d-12 → VAIHEET 12679 (Brandenburg ja Segovia, A/B/C, symbolit kartalla)
+  → lokit/mallinseppa-laite-20260927-e/.
+- (tehty) **Klo 03.00 käännös + laiteajo** (taustalla, $S/ajo-0300.sh, loki $S/ajo-0300.log): juna/b13 + mallinseppa/erikoismallit2 +
   mallinseppa/kategoriat3d-abc → .app $S/mallit4-app → VAIHEET 1269 → kuvat proto-3d/lokit/mallinseppa-laite-20260927-d/.
   Sen jälkeen: koosteet (erikoismallit 3 kpl kuten koosta.py, A/B/C tiukat rajaukset koosta_tiukka.py:n tapaan) → Fablelle,
   rivi Karttasepälle "valmis".
