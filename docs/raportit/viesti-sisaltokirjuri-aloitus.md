@@ -1,31 +1,36 @@
-# Sisältökirjurin aloitusviesti (27.9.2026 klo 11.2x, tilinvaihto)
+# Sisältökirjurin aloitusviesti (27.9.2026 klo 14.0x, kontekstin nollaus)
 
 Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri.
-ENSIN: tarkista onko agentti a6bf7fa6a5172d3f7 (nähtävyyskuvien
-tyylitarkastus) yhä käynnissä (ListAgents) ennen mitään
-git checkout/reset/clean -komentoa nykyisellä haaralla
-sisalto-pelikatalogi-20260927 — se jakaa työtilan tämän agentin kanssa.
-Ensimmäinen komento (kun turvallista): git fetch origin && git checkout -B
-sisalto-tyo-$(date +%Y%m%d-%H%M) origin/main (checkout-haaraa ei koskaan
-mergetä; erät worktreissä tools/uusi-worktree.sh:lla — TAI jos jatkat
-suoraan kesken olevaa docs/pelikatalogi.md-työtilaa, tee se ennen
-haaranvaihtoa, ks. raportin kohta 4.1).
-Lue CLAUDE.md, docs/roolitus.md ja
-docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-e.md KOKONAAN.
+Ensimmäinen komento: `git fetch origin main` (liikkuu, useita sessioita
+rinnakkain). Lue CLAUDE.md, docs/roolitus.md ja
+docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-f.md KOKONAAN
+ennen töiden aloitusta.
 
-TILA lyhyesti: main = v2313. Pelikatalogi (docs/pelikatalogi.md)
-mainissa. Kaksi kesken-tehtävää raportin kohdassa 4: 4.1
-pelisuunnitelmakortit valmiina paikallisessa työtilassa, tarvitsee vain
-commit+push+PR; 4.2 nähtävyyskuvien tyylitarkastus käynnissä
-taustalla agentilla a6bf7fa6a5172d3f7 — tarkista tila ensin.
+TILA lyhyesti: main = v2318+. Kolme PR:ää avoinna Julkaisijan junassa
+(#3408, #3411, #3413 — ks. luovutusraportin kohta 2). Kolme worktreeta
+odottaa niiden mergeä (sisaltokirjuri-nahtavyys-tasaus,
+sisaltokirjuri-nahtavyys-tuotanto2, sisaltokirjuri-nahtavyys-tyyppi).
 
-ENSIMMÄINEN TEHTÄVÄ:
-1. Tarkista agentin a6bf7fa6a5172d3f7 tila (ListAgents/SendMessage).
-2. Jos työtila on vapaa: commitoi ja pushaa docs/pelikatalogi.md:n
-   pelisuunnitelmakortit (kohta 4.1), avaa PR Julkaisijan junaan.
-3. Kun agentti 4.2 valmistuu: tarkista sen PR, rivi Fablelle.
-4. Uusi tehtävä hintatasot.js:stä (kohta 9, velka 1) odottaa —
-   kysy Fablelta ennen aloitusta onko se seuraava prioriteetti.
+JONO (Fablen päätös 27.9. klo 14.0x, järjestyksessä):
+
+1. **LÄHI-IDÄN NOSTOERÄ**: 13 kaupunkia (Damaskos, Ankara, Izmir,
+   Riad, Kuwait, Doha, Mekka, Sana, Nikosia, Halab, Isfahan, Tabriz,
+   Masqat) — kaikilla on jo NAHTAVYYSJUTUT-artikkelit mutta nolla
+   nosto-kenttää. Kirjoita nostot olemassa olevista jutuista + kuvat.
+   Sitten Novosibirsk samalla periaatteella.
+2. **0/0-KAUPUNGIT omana eränä**: Kalgoorlie, Gao, Cayenne + 4 muuta
+   tasapelissä (Macapá, João Pessoa, Santarém, Portovelho, Mount Isa,
+   Geraldton, Broome) — tarvitsevat sekä jutut että nostot alusta.
+3. **"HAVAINNEKUVA"-sana** (omistajan sääntö 13.4x): korvaa
+   pelaajalle näkyvissä teksteissä "kuvitus"/"AI-kuva"/"generoitu
+   kuva" sanalla "havainnekuva". Selvitä laajuus grepillä ensin.
+4. **Codex-arviotilaus** kun PR #3413 on TUOTANNOSSA (ei vain
+   mergetty — tarkista julkaisu erikseen): yhdistä 23 jäljellä
+   olevaa poikkeamaa + jo tilatut 7 maalattua taustaa yhdeksi
+   tilaukseksi postilaatikkoon.
+
+Täydet perustelut ja menetelmät jokaiselle kohdalle:
+docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-f.md kohta 3.
 
 SITOVAT KÄYTÄNNÖT:
 - JUMI → FABLE: jumissa yksi viesti Fablelle, ei korttia; muu jono jatkuu.
@@ -35,3 +40,6 @@ SITOVAT KÄYTÄNNÖT:
   jos agentin pitää työskennellä erillään jaetusta checkoutista.
 - Älä mergaa checkout-haaraa (sisalto-tyo-<pvm>-<aika>) äläkä poista
   sitä --delete-branch-lipulla — se on session checkout, ei työhaara.
+- Kuvien/assettien PR:ssä aja aina node tools/mittaa-miniatyyrit.mjs
+  (sharp: symlinkkaa node_modules Matkakirja-fablesta jos puuttuu,
+  ÄLÄ committoi symlinkkiä).
