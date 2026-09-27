@@ -164,20 +164,9 @@ namespace Matkakirja
 
         // ---- Elävä kartta, kohta 3: maakunta herää (Linssisepän rajapinta 26.9., build 20) ----
 
-        /// <summary>
-        /// MAAKUNTAETENEMINEN POISTETTU (omistaja 27.9. klo 08.3x, Pelikoodarin maailma-auki 7041fd0e): kohdemaan kaikki
-        /// maakunnat ovat heränneinä heti, eikä uinuvaa tilaa ole (löydös 168:n jälkeen täyttö ei jo reagoinut herätykseen).
-        /// <see cref="Heraannyt"/>, <see cref="Herata"/> ja <see cref="PaivitaHeraaminen"/> jäävät tyhjinä, kunnes Linssisepän
-        /// ElavaHerays lakkaa kutsumasta niitä; sitten ne poistetaan.
-        /// </summary>
-        public static Func<string, bool?> Heraannyt;
+        // Maakuntaeteneminen poistettu (omistaja 27.9. klo 08.3x): kohdemaan maakunnat heränneinä heti, ei uinuvaa tilaa
+        // eikä herätysrajapintaa (Heraannyt, Herata, PaivitaHeraaminen poistettu, kun Linssisepän ElavaHerays ei enää kutsu niitä).
         static readonly List<MaaKartta> kaikki = new List<MaaKartta>();
-
-        /// <summary>Ei vaikutusta (maakuntaeteneminen poistettu); säilyy kääntymisen ajaksi.</summary>
-        public static void PaivitaHeraaminen() { }
-
-        /// <summary>Ei vaikutusta (maakuntaeteneminen poistettu); säilyy kääntymisen ajaksi.</summary>
-        public static void Herata(string avain, bool piilossa) { }
 
         void Awake() => kaikki.Add(this);
 
@@ -199,7 +188,7 @@ namespace Matkakirja
         bool SaapuminenLiikkuu => saapumisKerroin != (saapumisPiilo ? 0f : 1f);
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaSaapuminen() { saapumisPiilo = false; Heraannyt = null; kaikki.Clear(); }
+        static void NollaaSaapuminen() { saapumisPiilo = false; kaikki.Clear(); }
 
         /// <summary>Saapumiskertoimen askel; tosi, jos muuttui (täytön häive ja rajan väri uusiksi).</summary>
         bool PaivitaSaapuminen()
