@@ -470,6 +470,12 @@ export const FOKUSVIRTA_BUKAREST = {
        *
        * Commons 25.8.2026: 377×503, public domain, Carol Szathmari,
        * päiväys 1854, kuvaus "Crimean War: Turkish infantry in 1854".
+       *
+       * PIENI KUVA, EI KORVATA (27.9.2026, Siirtosepän eheystarkistus
+       * #3434): Szathmarin KAIKKI säilyneet Krimin sodan valokuvat ovat
+       * Commonsissa samaa pientä kokoluokkaa (377–503 px) — nämä ovat
+       * skannattuja alkuperäisiä 1854-valokuvia, ei uudelleenkuvattavissa.
+       * Isompaa versiota tästä eikä muusta saman sarjan kuvasta löytynyt.
        */
       kuva: {
         tiedosto: 'Kırım Savaşı, Türk piyadeleri 1854 senesi.jpg',
