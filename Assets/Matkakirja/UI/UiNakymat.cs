@@ -233,7 +233,12 @@ namespace Matkakirja.Natiivi
             bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki
                 || Kohdekartan.KortistaAuki);
             // Löydös 132 (Natiivi-UI): Kokoruutu, kun noston kuva on kokoruudulla (löydös 150); muut näkymät Kortti.
-            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
+            // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää ≥ 85 % ruudusta (iPhone), kartta
+            // pysäytetään kuten kokoruudun kuvan alla (kaappaus kerran, pallon kamera pois; reunat pysäytyskuvana), jolloin
+            // vieritys ei maksa pallon, Cesiumin ja elävien elementtien piirtoa. iPadin kapeampi arkki ei pysäytä.
+            bool arkkiPeittaa = (Nahtavyydet.Auki && Peittoosuus(Nahtavyydet.Arkki) >= 0.85f)
+                || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && Peittoosuus(Linssit.Valitsin.Paneeli) >= 0.85f);
+            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
             if (taso != KuvaSumennus.Ei) s = true;
             if (taso != KuvaTaso) { KuvaTaso = taso; KuvaTasoMuuttui?.Invoke(taso); }
             if (s == KuvaSumea) return;
@@ -317,11 +322,6 @@ namespace Matkakirja.Natiivi
             Lehti.Avautui += _ => { lehtiAuki = true; PulunKerros(); };
             Lehti.Suljettu += _ => { lehtiAuki = false; PulunKerros(); };
             Nahtavyydet.Avautui += () => { arkkiAuki = true; PulunKerros(); };
-            // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää koko kartan (iPhone), pallon
-            // kamera sammuu (SyoteLukko-näkymäpeitto → PalloKierto.Peitetty → Ruudunpaivitys), jolloin vieritys ei maksa
-            // pallon, Cesiumin ja elävien elementtien piirtoa. Osittainen arkki (iPad) ei sammuta: kartta näkyy reunoilla.
-            SyoteLukko.LisaaNakymaPeitto(() => (Nahtavyydet.Auki && KattaaKartan(Nahtavyydet.Arkki))
-                || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && KattaaKartan(Linssit.Valitsin.Paneeli)));
             Nahtavyydet.Suljettu += () => { arkkiAuki = false; PulunKerros(); };
             // Pulun puhekanavan reunat soittimelle (soitin suodattaa toistot).
             kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
@@ -585,14 +585,15 @@ namespace Matkakirja.Natiivi
             } : (System.Action)null, () => UusiMatka(o));
         }
 
-        /// <summary>Peittääkö elementti koko kartan: koko leveys, alareunaan asti ja ylhäältä näkyvän yläpalkin alle.</summary>
-        bool KattaaKartan(UnityEngine.UIElements.VisualElement e)
+        /// <summary>Elementin osuus paneelin pinta-alasta (0 = ei näy).</summary>
+        static float Peittoosuus(UnityEngine.UIElements.VisualElement e)
         {
-            if (e?.panel == null || e.resolvedStyle.display == UnityEngine.UIElements.DisplayStyle.None || e.resolvedStyle.opacity < 0.99f) return false;
+            if (e?.panel == null || e.resolvedStyle.display == UnityEngine.UIElements.DisplayStyle.None || e.resolvedStyle.opacity < 0.99f) return 0f;
             var r = e.worldBound;
             var p = e.panel.visualTree.layout;
-            if (float.IsNaN(r.width) || p.width <= 0) return false;
-            return r.xMin <= 1f && r.xMax >= p.width - 1f && r.yMax >= p.height - 1f && r.yMin <= Tilarivi.NakyvaAlareuna + 1f;
+            if (float.IsNaN(r.width) || float.IsNaN(r.height) || p.width <= 0 || p.height <= 0) return 0f;
+            float w = Mathf.Min(r.xMax, p.width) - Mathf.Max(r.xMin, 0f), h = Mathf.Min(r.yMax, p.height) - Mathf.Max(r.yMin, 0f);
+            return w <= 0 || h <= 0 ? 0f : w * h / (p.width * p.height);
         }
 
         static string esiladattuMaa;
