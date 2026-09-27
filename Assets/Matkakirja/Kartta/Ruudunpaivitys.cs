@@ -25,6 +25,9 @@ namespace Matkakirja
     /// Testikomento `ruutu` (peli-komento.txt) kertoo tilan; `lampo …` pakottaa lämpötason.
     /// Löydös S10 (Natiiviseppä 26.9.): TÄYDEN tilan katto <see cref="LiikeKatto"/> A/B-mittaukseen (komento `ruutu liike
     /// 120|60` komento.txt:ssä, Komennot.cs).
+    /// VIERITYS 120 Hz (Natiivi-UI, Fablen ehdot 27.9.2026): UI-listan veto ja inertia (<see cref="Vierita"/>, Kosketusvieritys)
+    /// saavat näytön täyden taajuuden vain ProMotion-näytöllä, vain kun kartta on pois piirrosta (PalloKierto.Peitetty) ja lämpö
+    /// on normaali (thermalState &lt; serious); muuten liikkeen katto. Vierityksen päätyttyä ei 0,5 s:n pitoa: heti lepotaajuus.
     /// </summary>
     [DefaultExecutionOrder(10000)]
     public sealed class Ruudunpaivitys : MonoBehaviour
@@ -86,7 +89,9 @@ namespace Matkakirja
         public int Naytto { get; private set; } = 60;
         public string Syy { get; private set; } = "";
 
-        static float herattyAsti;
+        static float herattyAsti, vieritysAsti;
+        /// <summary>Vierityksen pito viimeisestä veto- tai inertiakehyksestä (sekuntia).</summary>
+        public const float VieritysPitoS = 0.1f;
         PalloKierto kierto;
         Camera kamera;
         Nappula nappula;
@@ -105,8 +110,11 @@ namespace Matkakirja
             if (asti > herattyAsti) herattyAsti = asti;
         }
 
+        /// <summary>UI-lista vierii (sormi vetää tai inertia liukuu): täysi taajuus, peitossa ProMotionilla 120 Hz. Pääsäikeestä.</summary>
+        public static void Vierita() => vieritysAsti = Time.unscaledTime + VieritysPitoS;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = 0; LiikeKatto = LiikeKattoOletus; }
+        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = vieritysAsti = 0; LiikeKatto = LiikeKattoOletus; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -156,6 +164,7 @@ namespace Matkakirja
             float nyt = Time.unscaledTime;
             string syy = LiikkeenSyy();
             if (syy != null) { viimeLiike = nyt; Syy = syy; }
+            else if (Syy == "vieritys") viimeLiike = nyt - TaysiPitoS;   // vieritys päättyi: heti lepotaajuus, ei pitoa
 
             // Peitossa (koko ruudun lehti tms.) pallon kamera pois; UI piirtyy silti.
             bool peitto = kierto != null && kierto.Peitetty;
@@ -188,7 +197,10 @@ namespace Matkakirja
             paikallaanHaut = haut;
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
-            int taysi = Syy == "verho" ? Naytto : LiikeLaatatPaatos.Katto(Naytto, LiikeKatto);   // löydös S10: liikkeen katto
+            // Vieritys 120 Hz (Fablen ehdot 27.9.): ProMotion, kartta pois piirrosta, lämpö normaali — muuten liikkeen katto.
+            bool vieritys120 = syy == "vieritys" && kameraPois && Naytto > 60
+                && Lampo.Taso == Lampotaso.Normaali && Lampo.ThermalState < 2;
+            int taysi = Syy == "verho" || vieritys120 ? Naytto : LiikeLaatatPaatos.Katto(Naytto, LiikeKatto);   // löydös S10: liikkeen katto
             int fps = Math.Min(uusi == Tila.Taysi ? taysi : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
             int vali = uusi == Tila.Paikallaan ? PaikallaanVali : 1;
             if (Application.targetFrameRate != fps) Application.targetFrameRate = fps;
@@ -199,6 +211,7 @@ namespace Matkakirja
         /// <summary>Syy täydelle taajuudelle tai null.</summary>
         string LiikkeenSyy()
         {
+            if (Time.unscaledTime < vieritysAsti) return "vieritys";
             if (Kosketus.activeTouches.Count > 0) return "kosketus";
             if (kierto != null && kierto.Liikkeessa && !kierto.Peitetty) return "pallo";
             if (nappula != null && nappula.Liikkeessa) return "lento";

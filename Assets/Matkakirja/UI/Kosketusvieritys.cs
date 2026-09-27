@@ -119,6 +119,7 @@ namespace Matkakirja.Natiivi
                 if (yleinen) e.StopPropagation();
             }
             sv.scrollOffset = new Vector2(sv.scrollOffset.x, Mathf.Clamp(offset0 - d.y, 0f, Suurin));
+            Ruudunpaivitys.Vierita(); // veto: täysi taajuus (peitossa ProMotionilla 120 Hz)
             float t = Time.unscaledTime * 1000f;
             naytteet.Add((t, e.position.y));
             while (naytteet.Count > 2 && t - naytteet[0].t > NayteMs) naytteet.RemoveAt(0);
@@ -155,7 +156,7 @@ namespace Matkakirja.Natiivi
             float edellinen = Time.unscaledTime * 1000f;
             liuku = kohdeSv.schedule.Execute(() =>
             {
-                Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
+                Ruudunpaivitys.Vierita(); // lämpö: täysi taajuus inertian ajan, loputtua heti lepotaajuus
                 float nyt = Time.unscaledTime * 1000f, dt = Mathf.Max(0f, nyt - edellinen);
                 edellinen = nyt;
                 // Sijainti integroituna: v(t) = v0 · k^t, siirtymä dt:n aikana v · (k^dt − 1) / ln k.
