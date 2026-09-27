@@ -27,9 +27,10 @@ Natiivi-UI local_44392b3c-86ee-4873-9d76-82f9aaa6b832. S = /private/tmp/claude-5
 - Natiiviseppä: (a) lähikynnys pienissä maissa (LahiKerroin 4, mutta CHE/NLD/BEL/DNK ZoomKerroin ≤ 1,3 → ehdotus
   min(4, 0,9 × SuurinKerroin)); (b) noston/maastokohteen nimiö pois erikoismallin päältä (Matterhorn, Stonehenge, Brandenburg;
   Fablen päätös 10.3x); (c) Malja-symboli Kinderdijkin takarivin päällä. Kokokorjaus pienille maille on jo natiiviseppa/taso1-kynnys be33f310.
-- **Todentamatta:** saapuminen, jossa pysyvät kerrokset näkyvät (abfb54e5). Odotustesti peruuntui ("pelaaja lähti maasta"),
-  koska testipelaaja on Marseillessa. Lyhyt ajo odotti vapaata simulaattoria taustalla (app $S/era5-app, kuvat
-  lokit/mallinseppa-laite-20260927-k/saapuminen-ateena-raw.mp4) → poimi kuvat (ffmpeg, kuten $S/sa-pari) → Fablelle.
+- **Todennettu 11.3x:** saapuminen v2 laitteella (2d04e085): nostot ja rajat näkyvät täytön aikana, täyttö 0,02 s, luovutus
+  1,22 s, valmis 1,6 s, 0 poikkeusta, kehys mediaani 16,7 ms (yksi 150 ms:n piikki alussa); kuva
+  proto-3d/lokit/mallinseppa-toimitus-20260927/maakunta-saapuminen-v2.png Fablelle. Odotustila (luento/kortti) todentamatta,
+  koska testipelaaja on Marseillessa ("elava saapuminen ateena odota" peruuntuu); testaa pelaaja Kreikassa.
 
 ## 3. TEHDYT (agenttien tulokset, kaikki integroitu)
 
