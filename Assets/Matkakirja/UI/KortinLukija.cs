@@ -28,7 +28,6 @@ namespace Matkakirja.Natiivi
     public sealed class KortinLukija
     {
         public const int Vahimmais = 80;
-        const string Mykka = "Äänet ovat mykistettynä — luentaa ei ole";
         const string SaadinOtsikko = "Luennan nopeus ja ääni", JatkaOtsikko = "Jatka kuuntelua", KeskeytaOtsikko = "Keskeytä kuuntelu";
         // Sama kaiutin kuin isoisän luennassa (Matkakirjakortti): runko ja kolme kaarta, jotka ovat VU-mittari.
         const string KaiutinRunko = "M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z";
@@ -114,7 +113,8 @@ namespace Matkakirja.Natiivi
 
         void PaivitaMykistys()
         {
-            bool mykka = !Puhe.Paalla;
+            // Luenta kuuluu aina pyynnöstä (omistaja 27.9. klo 15.5x, web #3422 const mykka = false): kaiutin ei mykisty.
+            bool mykka = false;
             Nappi.EnableInClassList("mk-mykistetty", mykka);
             PaivitaNimi();
             if (mykka && luetaan) Pysayta();
@@ -122,7 +122,6 @@ namespace Matkakirja.Natiivi
 
         void PaivitaNimi()
         {
-            if (!Puhe.Paalla) { Nappi.tooltip = Mykka; return; }
             Nappi.tooltip = !saatimet ? otsikko : keskeytetty ? JatkaOtsikko : luetaan ? KeskeytaOtsikko : otsikko;
         }
 
@@ -141,7 +140,7 @@ namespace Matkakirja.Natiivi
             }
             if (luetaan) { Pysayta(); return; }
             var puhe = Puhe.Hae();
-            if (palat.Count == 0 || puhe == null || !Puhe.Paalla) return;
+            if (palat.Count == 0 || puhe == null) return;
             if (ajossa != null && ajossa != this) ajossa.Pysayta();
             ajossa = this;
             luetaan = true;
@@ -156,7 +155,7 @@ namespace Matkakirja.Natiivi
                 if (v != versio) return;
                 if (i >= palat.Count) { jatkoKohta = -1; kohta = palat.Count; Pysayta(); return; } // luettu loppuun: alusta
                 kohta = i;
-                if (!puhe.Lue(palat[i++], "kertoja", 0, () => UiKerros.PaaSaikeessa(Seuraava))) { Pysayta(); return; }
+                if (!puhe.Lue(palat[i++], "kertoja", 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true)) { Pysayta(); return; }
                 Esihae(puhe, palat, i);
             }
             Seuraava();
@@ -170,8 +169,9 @@ namespace Matkakirja.Natiivi
         public static void Esihae(Puhe puhe, IReadOnlyList<string> palat, int i, string persoona = "kertoja")
         {
             if (puhe == null || palat == null) return;
-            if (i < palat.Count) puhe.Esihae(palat[i], persoona);
-            if (i + 1 < palat.Count) puhe.Esihae(palat[i + 1], persoona);
+            // Kaikki kutsujat ovat kaiuttimen luentoja (pyynnöstä): esihaku myös Kertoja pois -tilassa.
+            if (i < palat.Count) puhe.Esihae(palat[i], persoona, pyynnosta: true);
+            if (i + 1 < palat.Count) puhe.Esihae(palat[i + 1], persoona, pyynnosta: true);
         }
 
         /// <summary>Luenta seis (kortti suljettiin, sivu vaihtui tai toinen kortti aukesi).</summary>
