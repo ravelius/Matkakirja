@@ -140,7 +140,7 @@ namespace Matkakirja
         // (Viivaleveys.AluerajaHaive) jatkuvat kameran pysähdyttyä; kuoren ja paletin vaihdot ovat yksittäisiä muutoksia.
         void OnEnable() => PallonLepo.Animoi(Haivyttaa, kokoelma);
         void OnDisable() => PallonLepo.Poista(Haivyttaa);
-        bool Haivyttaa() => (maakohtainen && haiveAlku >= 0f) || rajaHaiveLiikkuu || SaapuminenLiikkuu || herataan.Count > 0;
+        bool Haivyttaa() => (maakohtainen && haiveAlku >= 0f) || rajaHaiveLiikkuu || SaapuminenLiikkuu;
         bool rajaHaiveLiikkuu;
 
         // ---- Elävä kartta: saapuminen (Linssisepän rajapinta 26.9., build 19) ----
@@ -165,77 +165,19 @@ namespace Matkakirja
         // ---- Elävä kartta, kohta 3: maakunta herää (Linssisepän rajapinta 26.9., build 20) ----
 
         /// <summary>
-        /// Maakunnan pysyvä tila elävässä kartassa: avain "ISO:tunnus" → true = herännyt (täysi sävy), false = uinuva
-        /// (himmeä paperi, <see cref="UinuvanPeitto"/>), null = ei elävän kartan tilaa (täyttö kuten ennen). Asettaa
-        /// Assembly-CSharp (Linssisepän ElavaKartta PeliOhjain.Muste-tiedosta); muutoksen jälkeen <see cref="PaivitaHeraaminen"/>.
+        /// MAAKUNTAETENEMINEN POISTETTU (omistaja 27.9. klo 08.3x, Pelikoodarin maailma-auki 7041fd0e): kohdemaan kaikki
+        /// maakunnat ovat heränneinä heti, eikä uinuvaa tilaa ole (löydös 168:n jälkeen täyttö ei jo reagoinut herätykseen).
+        /// <see cref="Heraannyt"/>, <see cref="Herata"/> ja <see cref="PaivitaHeraaminen"/> jäävät tyhjinä, kunnes Linssisepän
+        /// ElavaHerays lakkaa kutsumasta niitä; sitten ne poistetaan.
         /// </summary>
         public static Func<string, bool?> Heraannyt;
-        /// <summary>Uinuvan maakunnan täytön peitto herääneen suhteen.</summary>
-        public const float UinuvanPeitto = 0.3f;
-        /// <summary>
-        /// Löydös 168 (omistaja 26.9.2026): noston avaus ei saa värjätä maakuntaa. Oletuksena <see cref="Heraannyt"/>
-        /// ja <see cref="Herata"/> eivät enää vaikuta täyttöön eikä väriin (sama näkymä kuin ilman herätystä) —
-        /// rajapinta säilyy ennallaan muille kutsujille (Linssiseppä), mutta <see cref="PaivitaPaletti"/> jättää
-        /// tilan ja piilotuskertoimen huomiotta. Kehittäjälippu true palauttaa vanhan käytöksen (uinuva himmeänä,
-        /// herännyt täydessä sävyssä pysyvästi, herätyksen ajaksi piilotus) A/B-kuvia varten; ei UI:ta, aseta koodista/debuggerista.
-        /// </summary>
-        public static bool HeraaminenVarjaaTaytonAB = false;
         static readonly List<MaaKartta> kaikki = new List<MaaKartta>();
-        // Herätyksen ajaksi piilotetut maakunnat: avain → nykyinen kerroin ja tavoite (0 piilossa, 1 näkyy).
-        readonly Dictionary<string, (float nyt, float tavoite)> herataan = new Dictionary<string, (float, float)>(StringComparer.Ordinal);
 
-        /// <summary>Maakuntien tila muuttui (Heraannyt): paletit uusiksi.</summary>
-        public static void PaivitaHeraaminen()
-        {
-            foreach (var m in kaikki)
-            {
-                if (m == null || !m.maakohtainen) continue;
-                m.PaivitaPaletti();
-                // Diagnostiikka (avainmuodon täsmäys musteen kanssa): montako maakuntaa kussakin tilassa ja esimerkkiavain.
-                int h = 0, u = 0, n = 0;
-                string esim = null;
-                foreach (var a in m.indeksi.Keys)
-                {
-                    esim ??= a;
-                    bool? t = null;
-                    if (Heraannyt != null) try { t = Heraannyt(a); } catch (Exception) { }
-                    if (t == true) h++; else if (t == false) u++; else n++;
-                }
-                Debug.Log($"MATKAKIRJA maakunnat: herääminen {m.NykyinenMaa ?? "-"}: herännyt {h}, uinuva {u}, ei tilaa {n} (avain esim. {esim ?? "-"})");
-            }
-        }
+        /// <summary>Ei vaikutusta (maakuntaeteneminen poistettu); säilyy kääntymisen ajaksi.</summary>
+        public static void PaivitaHeraaminen() { }
 
-        /// <summary>
-        /// Maakunnan pysyvä täyttö piiloon herätyksen ajaksi (Linssisepän herätysanimaatio piirtää oman täyttönsä) ja
-        /// takaisin <see cref="SaapumisHaiveS"/>:n häivytyksellä (piilossa = false). Kaikki maakohtaiset maakartat.
-        /// </summary>
-        public static void Herata(string avain, bool piilossa)
-        {
-            if (string.IsNullOrEmpty(avain)) return;
-            foreach (var m in kaikki)
-            {
-                if (m == null || !m.maakohtainen) continue;
-                float nyt = m.herataan.TryGetValue(avain, out var h) ? h.nyt : 1f;
-                m.herataan[avain] = (nyt, piilossa ? 0f : 1f);
-                m.PaivitaPaletti();
-            }
-            PallonLepo.Muuttui("maakartta: herätys");
-        }
-
-        /// <summary>Herätyskertoimien askel; poistaa valmiit näkyvät. Tosi, jos paletti muuttui.</summary>
-        bool PaivitaHeratys()
-        {
-            if (herataan.Count == 0) return false;
-            float askel = Time.unscaledDeltaTime / SaapumisHaiveS;
-            foreach (var avain in new List<string>(herataan.Keys))
-            {
-                var (nyt, tavoite) = herataan[avain];
-                nyt = Mathf.MoveTowards(nyt, tavoite, askel);
-                if (nyt >= 1f && tavoite >= 1f) herataan.Remove(avain); else herataan[avain] = (nyt, tavoite);
-            }
-            PaivitaPaletti();
-            return true;
-        }
+        /// <summary>Ei vaikutusta (maakuntaeteneminen poistettu); säilyy kääntymisen ajaksi.</summary>
+        public static void Herata(string avain, bool piilossa) { }
 
         void Awake() => kaikki.Add(this);
 
@@ -762,21 +704,6 @@ namespace Matkakirja
                     // Oletusrajat (löydös 113): ilman valintaa vain rajat, täyttö läpinäkyvä.
                     double peitto = t.A;
                     bool nakyy = TayttoNakyy;
-                    // Löydös 168 (omistaja 26.9.2026): herääminen ei enää värjää maakuntaa — täyttö pysyy samana
-                    // riippumatta Heraannyt-tilasta tai käynnissä olevasta herätyksestä (HeraaminenVarjaaTaytonAB
-                    // palauttaa vanhan käytöksen A/B-kuvia varten).
-                    if (HeraaminenVarjaaTaytonAB)
-                    {
-                        // Elävä kartta (kohta 3, vanha käytös): uinuva maakunta himmeänä, herätyksen ajaksi piilotettu häivytyksellä.
-                        bool? tila = null;
-                        if (Heraannyt != null) try { tila = Heraannyt(p.Key); } catch (Exception) { tila = null; }
-                        // Herännyt näkyy täysin sävyin aina (myös oletusrajoilla ilman täyttöä); uinuva himmeänä
-                        // vain, kun täyttö on päällä, muuten paperina (ei täyttöä).
-                        // Löydös 157: pelaajan valitsema maakunta näkyy vahvana myös uinuvana (valinta on tarkoituksellinen katse).
-                        if (tila == false && !korostettu) peitto *= UinuvanPeitto;
-                        if (herataan.TryGetValue(p.Key, out var hk)) peitto *= hk.nyt;
-                        nakyy = tila == true || TayttoNakyy;
-                    }
                     px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), nakyy ? B(peitto) : (byte)0);
                 }
                 else px[p.Value] = C(s.Taytto);
@@ -963,7 +890,6 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (maakohtainen) PaivitaHaive();
-            if (maakohtainen) PaivitaHeratys();
             bool saapuminenMuuttui = PaivitaSaapuminen();
             rajaHaiveLiikkuu = false;
             if (rajaOma == null || rajat == null || georeferenssi == null) return;
