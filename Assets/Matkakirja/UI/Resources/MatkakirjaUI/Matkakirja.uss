@@ -1606,15 +1606,11 @@
     color: #c0392b;
 }
 
-/* Elämäpalkki = web #3421 rahattomuuspalkki (omistaja 27.9. 15.1x/15.2x): lappu ≈ 109 × 21, 8 neliötä 9 × 9, ei tekstiä. */
+/* Elämäpalkki = web #3421 44deb9e2 (omistaja 27.9. lopullinen): pelkät 8 punaista neliötä 9 × 9, ei lappua eikä tekstiä.
+   Webin varjo 0 1 2 rgba(0,0,0,.3) jää pois (UITK:ssa ei box-shadowia). */
 .mk-elamapalkki {
     position: absolute;
     align-items: center;
-    padding: 5px 7px 5px 7px;
-    background-color: rgba(244, 234, 212, 0.94);
-    border-width: 1px;
-    border-color: rgba(85, 64, 42, 0.45);
-    border-radius: 8px;
 }
 
 .mk-elamapalkki__lohkot {

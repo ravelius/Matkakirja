@@ -679,19 +679,16 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Web #3421: vaakasuunnassa kartan keskellä, top = karttaselitenapin alareuna + 6. Jos auki oleva matkapäiväkirja
-        /// ulottuu kohdalle, keskitetään päiväkirjan oikean reunan ja selitenapin väliin, jos mahtuu (+16).
+        /// Web #3421 44deb9e2: vaakasuunnassa kartan keskellä, top = karttaselitenapin alareuna + 6 kaikilla laitteilla.
         /// </summary>
         void AsetteleElama()
         {
             if (elama.style.display == DisplayStyle.None || elama.panel == null) return;
-            var (selite, kirja) = ElamaAnkkurit?.Invoke() ?? (Rect.zero, Rect.zero);
+            var (selite, _) = ElamaAnkkurit?.Invoke() ?? (Rect.zero, Rect.zero);
             float w = elama.resolvedStyle.width, leveys = elama.panel.visualTree.layout.width;
             if (float.IsNaN(w) || w <= 0 || float.IsNaN(leveys)) return;
             float top = selite.height > 0 ? selite.yMax + 6f : Varaus + 6f;
             float x = (leveys - w) / 2f;
-            if (kirja.height > 0 && kirja.yMax > top && kirja.xMax > x && selite.width > 0 && selite.xMin - kirja.xMax >= w + 16f)
-                x = kirja.xMax + (selite.xMin - kirja.xMax - w) / 2f;
             var juuri = elama.parent.worldBound;
             elama.style.top = top - juuri.yMin;
             elama.style.left = x - juuri.xMin;
