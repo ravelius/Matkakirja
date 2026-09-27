@@ -21,7 +21,12 @@ Jos sait nollauksen jälkeen vanhoja viestejä tai agenttien raportteja, ne kuul
      siemenarvonnalla (1/maita), ankkuri ruudun keskustaa lähin sallittu kohta ≥ 120 pt:n päässä (vaihtuu vain, kun laji ei
      näy), rannikko = suunta + 90°, sama kohta → siirto ±140 pt, harvinainen laji väistää, kytkin `elava elementit meri 0|1`.
      Tila: `elava elementit tila` (rivi "meri <maa> (<n> kohtaa): lajit…").
-   - **Tarkistusajo käynnissä 07.53** ($S/ajo-meri1.sh → loki $S/ajo-meri1.log, kuvat proto-3d/lokit/mallinseppa-laite-20260927-f/):
+   - **TODENNETTU 08.0x** (käännös 54201ed2 = juna/b13 + meri-tuotanto, kuvat lokit/mallinseppa-laite-20260927-f/): merikohdat
+     29/129 latautuivat, maakohtainen valinta toimii (NOR merilaiva + valas eri kohdissa, GRC/FIN/DNK/UKR merilaiva), valas
+     näkyy Lofooteilla ja höyry Suomenlahdella rannikon suuntaisina, 0 poikkeusta → ilmoitettu Natiivisepälle. Kinderdijk näkyy
+     kynnyskorjauksella (kinderdijk-v2.png; rajaus jää mallin alareunaan ja myllyt ovat pelikoossa pieniä → korjaa rajaus,
+     harkitse myllyjä vielä isommiksi).
+   - (vanha) **Tarkistusajo käynnissä 07.53** ($S/ajo-meri1.sh → loki $S/ajo-meri1.log, kuvat proto-3d/lokit/mallinseppa-laite-20260927-f/):
      juna/b13 + meri-tuotanto, VAIHEET 1289: Kinderdijk (kynnyskorjaus) ja meri tuotanto (NOR/GRC/FIN/DNK/UKR:
      meri-<MAA>-<laji>-<1..4>.png; lokirivit "meren koristeet: <maa> → …"). Tarkista, että laji näkyy merellä oikein
      päin, ja raportoi Natiivisepälle ja Fablelle (bugi → korjaus tai kytkin pois).
