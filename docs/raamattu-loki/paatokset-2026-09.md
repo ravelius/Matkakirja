@@ -8223,3 +8223,7 @@ Julkaisija: TF 1.0.30 sisaisessa ryhmassa (ajo 36319884765), muutoslokivartija p
 ## OMISTAJA: ELAMAPALKKI YLEMMAS, VAISTAA ALEMMAS MATKAKIRJAN TIELTA; NAPAUTUS AVAA MINI-POPUPIN SELITYKSELLA (27.9.2026 klo 16.11)
 
 Kortti 16.1x (kuvaparit kuvapari-elamapalkki-iphone/ipad.png, web #3421 44deb9e2 | natiivi 4137bcc9): palkit oletuksena ylempana kartan ylareunassa ja vaistavat alemmas jos matkakirja vie enemman tilaa; neliöiden napautus avaa mini-popupin, joka kertoo mita palkit tarkoittavat. Pelikoodari web ensin, Natiivi-UI natiivi → 1.0.31. Sisaltokirjuri: Euroopan era 3 #3423 (Barcelona, Kiova, Edinburgh, Varsova, Dubrovnik). TF 1.0.30 tuotannossa.
+
+## OMISTAJA: 1.0.31:N JALKEEN ENSIN APP STORE -VALMISTELU; AJETTAVAT KOMENNOT SUORAAN FABLEN KESKUSTELUUN (27.9.2026 klo 16.18)
+
+Kortti 16.3x: seuraava isompi askel App Store -valmistelu (iPadin suorituskyky, julkaisuaineisto, kuvien tekijamerkinnat pelissa) ennen pelien toteutusta. Omistaja: kun hanen toimiaan tarvitaan, selkea ilmoitus (kortti TOIMI TARVITAAN + push) ja suoraan ajettava komento Fablen keskusteluun (Run-nappi). Kehittajakoodi (POLLO_KEHITTAJAKOODI, GitHub-salaisuus 13.8.) avaintiedostoon omistajan ajamalla read -s -komennolla; ampärin pyramidisarjojen poistokomento Julkaisijalta.
