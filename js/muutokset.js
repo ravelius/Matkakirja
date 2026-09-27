@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2331, teksti: 'Rahattomuuspalkki: jäljellä oleva aika 6 tunnin lohkoina' },
   { v: 2330, teksti: 'v2329: Luenta kuuluu pyynnöstä myös äänet pois… (#3422)' },
   { v: 2329, teksti: 'v2329: Barcelona, Kiova, Edinburgh, Varsova, Du… (#3423)' },
   { v: 2328, teksti: 'v2327: Havainnekuva — loput generoitujen kuvien… (#3415)' },
