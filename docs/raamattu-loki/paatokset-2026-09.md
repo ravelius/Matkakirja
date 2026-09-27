@@ -7979,3 +7979,7 @@ Pelikoodari nollattu 09.4x (81 % → tyhja), aloitusviesti: #3385/21e79d71 korja
 ## MAAKUNTAERA KORJATTU: #3385 v2309 (MANNERLENNOT = MAIN, SUMU POIS), PROTO maailma-auki 7041fd0e; SPEKSIT NATIIVISEPALLE, NATIIVI-UI:LLE, LINSSISEPALLE (27.9.2026 klo 09.43)
 
 Pelikoodari 09.4x: #3385 → v2309 (mannerlennot ennallaan, loytosumu pois, salaisuudet heti viennissa; web ei sisalla maakuntaetenemista); proto pelikoodari/maailma-auki 7041fd0e (Kaupat/Laatat/kultaiset = master, NostonMuste.Taysi, Heranneet = maakunnassa nostoja, salaisuus nakyy heti ja kuuluu laskuriin, MaakuntaHeraa/MaakuntaValmis eivat laukea; 324/324). Speksit: Natiiviseppa MaaKartta Heraannyt/Herata pois; Natiivi-UI kartussin herays + MAAKUNNAT-palkki + salaisuusrivi pois, nimet heti; Linssiseppa ElavaHerays pois, saapumisesta vain pohjavarin taytto. Palkintoefektit pois: 'Maakunnan salaisuus loytyi' -rivi, herayksen leima + nimen kirjoitus, ElavaHerays-animaatio; maa valmis → lippu liehuu jaa. Fable: #3385 pito purettu.
+
+## Z10: #3380 v2307 JA #3371 v2308 MAINISSA, OSOITIN PAGESIN JALKEEN; #3385 JUNASSA; #3384 UUDELLEEN (valmistele.sh KORJATTU) (27.9.2026 klo 09.43)
+
+Julkaisija 09.4x: #3380 (tukilaattasilmukka) v2307 ja #3371 (PELIN_SYVIN_TASO 10) v2308 mainissa; osoitinvaihto heti Pages-julkaisun jalkeen + tarkistus. #3385 pito purettu (Fable kylla) → junassa. #3384 (progressiivinen soitto) uudelleen junassa: valmistele.sh pudotti PR:n sw.js-SHELL-lisaykset ristiriidassa → tyokalu korjattu yhdistamaan rivit.
