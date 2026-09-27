@@ -38,7 +38,7 @@ natiivin pallon Z10:stä.
 - **Tasojen välillä ei ole sävyhyppyä.** B:n, C:n ja D:n keskisävyt ovat 1–7/255:n
   sisällä joka kaupungissa. Ylösnousu z8 → z9 → z10 on siis sävyltään saumaton.
   Tämä oli kierroksen tärkein tarkistus, ja se meni läpi.
-- **Viat ovat vesiaineistossa ja viivatasossa, eivät polton tekniikassa.** Luvut:
+- **Viat ovat vesiaineistossa, viivatasossa ja matalan veden sävyssä, eivät polton tekniikassa.** Luvut:
   vakava 1 (Tukholma, neljä paneelia), näkyvä 28 ja pieni 27. Ilman löydöksiä oli
   17 kaupunkia.
 
@@ -51,15 +51,32 @@ natiivin pallon Z10:stä.
 - **Oire:** Saltsjön ja sisäsaariston vedet ovat maan värisiä, ja reliefi jatkuu veden
   yli. Z8-rantaviivat piirtävät saaret maan päälle. Vettä on vain avomerellä ja
   Mälarenissa (järvi).
-- **Todennettu:**
-  - Lähde on oikein: GSHHG full -aineiston merirenkaissa (`gshhs-data/ne_10m_ocean.geojson`,
-    kuvan oikea paneeli) saariston vesi on merta.
-  - Rannikon harvennus (0,004°) ei kadota vettä, rasteroitu kummallakin arvolla.
-  - Vika syntyy siis pohjan maa- ja meriluokittelussa polton aikana.
-- **Juurisyy on selvittämättä.** Korjauserä 1 aloittaa yhden laatan koepoltolla
-  (`--alue` Tukholman ympäriltä). Epäiltyjä ovat renkaiden laatikkorajaus ja
-  parillisuussäännön kääntyminen suurimmassa mannerrenkaassa. Sama ilmiö voi selittää
-  pallon pohjoiset rannat (N2).
+- **Todennettu koepoltoilla** (yksi z8-laatta, tuotannon koodi ja aineisto):
+
+  ![Tukholma koepoltto](kuvat/eu-laatu-5-tukholma-koepoltto.jpg)
+
+  - **Maa ja meri luokitellaan oikein.** GSHHG full -aineistossa saariston vesi on
+    merta, eikä rannikon harvennus (0,004°) kadota sitä. Perusliputuksella (kuva A)
+    saaret ovat keltaisia ja salmet harmaita.
+  - **Resepti 26 ilman DEM:iä (kuva B):** matalan veden sävy on lähes sama kuin maan
+    sävy. Ero tulee reseptin syvyys-, merikohina- ja lämmin reliefi -valinnoista
+    (omistajan "vahvempi", löydös 129).
+  - **Resepti 26 ja DEM (kuva C, sama kuin tuotanto):** saarten reliefi viimeistelee
+    sulautumisen, ja saaristo näyttää yhtenäiseltä maalta.
+  - **DEM:n positiiviset arvot merisoluissa eivät ole syy.** Kokeilin nollata ne
+    (`--meri-dem-nollaan`). Muutos oli vähäinen ja toi vaakaraitoja, joten kokeilu
+    hylättiin eikä sitä viedä koodiin.
+- **Johtopäätös:** kyse ei ole polttovirheestä vaan sävyvalinnasta. Maitomaisessa
+  paletissa matala vesi ja maa ovat liian lähellä toisiaan juuri saaristossa, jossa
+  molempia on paljon. Luokka on vakava, koska pelaaja ei näe Tukholman saaristoa.
+- **Korjaus vaatii omistajan päätöksen.** Kontrastia ei lisätä omavaltaisesti.
+  Vaihtoehdot:
+  - (a) Matalimman vesivyöhykkeen (noin 0…−10 m) sävy hieman viileämmäksi tai
+    harmaammaksi. Maan sävy ei muutu.
+  - (b) Reliefi vain maalle myös saarten reunoilla.
+  - (c) Ennallaan. Webissä z8-rantaviivat erottavat saaret, pallossa eivät.
+
+  Vaihtoehto (a) polttaisi uudelleen vain rannikkolaatat (delta-laji meri).
 
 ## NÄKYVÄ
 
@@ -139,11 +156,11 @@ järvimaskiin samassa erässä kuin N3.
 Järjestys on vaikutuksen mukaan. Jokainen erä poltetaan vain Eurooppaan, vain
 muuttuvat laatat.
 
-1. **VESI (V1 ja N3, joka korjaa myös N4:n ja N6:n).**
-   - Tukholman juurisyy yhden laatan koepoltolla.
+1. **JÄRVET (N3, joka korjaa myös N4:n ja N6:n).**
    - Euroopan järvet GSHHG-tasolta 2.
    - Delta-poltto: pohjan z0–z10 muuttuvat laatat ja rantataso z0–z8. Pallon osuus
      tehdään erässä 3.
+   - Matalan veden sävy (V1) vasta omistajan valinnan jälkeen (a, b tai c).
 2. **MERIVÄYLÄT (N1).** Viivataso z0–z8 uudelleen Euroopalle, laivareitit vain veteen.
 3. **PALLO Z10 PYRAMIDIN Z10:STÄ (N2).** Euroopan kaupunkien osuus, poltetaan erän 1
    jälkeen, jotta vesi on jo korjattu.
