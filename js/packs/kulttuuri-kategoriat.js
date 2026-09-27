@@ -24650,6 +24650,25 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Paebi, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lumivyöry',
         },
+        {
+          otsikko: 'Vuori hehkuu punaisena auringon laskiessa',
+          tiedosto: '043 Matterhorn reflecting in Stellisee at sunset Photo by Giles Laurent.jpg',
+          teksti: 'Matterhorn on lähes symmetrinen pyramidi, jonka neljä '
+            + 'jyrkkää seinämää osoittavat ilmansuuntiin, ja huippu kohoaa '
+            + '4 478 metriin Sveitsin ja Italian rajalla. Auringon '
+            + 'laskiessa tai noustessa huippu hehkuu hetken punaisena tai '
+            + 'oranssina, kun matala valo heijastuu ilmakehän '
+            + 'pisaroista — ilmiötä kutsutaan alppihehkuksi (saksaksi '
+            + 'Alpenglühen), ja nimi tulee juuri Alpeilta. Muotonsa ja '
+            + 'hehkunsa ansiosta Matterhorn on yksi maailman kuvatuimmista '
+            + 'vuorista.',
+          lyhyt: 'Matterhorn hehkuu auringonlaskun aikaan Stelliseen tyynen pinnan yllä, huippu 4 478 metrissä.',
+          selite: 'Matterhorn heijastuu Stelliseen tyyneen pintaan '
+            + 'auringonlaskun aikaan; alppihehku värjää taivaan ja huipun '
+            + 'punertavaksi.',
+          lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Matterhorn',
+        },
       ],
       /*
        * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
