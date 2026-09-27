@@ -7847,3 +7847,7 @@ Sisaltokirjuri 07.5x: era 7 PR #3375 (13 kohdetta: Niagara, Gronlannin vuonot, M
 ## OMISTAJA: NOSTOJEN 3D-MALLIEN POLYGONIMAARA KASVAA LAHIZOOMISSA (LOD0 LAHI) (27.9.2026 klo 07.58)
 
 Omistaja 08.0x: "Voiko nostojen polygonimaara kasvaa kun zoomataan lahelle? Pelkaan etta nykyinen taso ei riita." Fable: kylla — LODGroupiin kolmas taso LOD0 lahi (3–5 x kolmiota, tarkemmat yksityiskohdat), nakyy vain kun kamera on lahella (zoomikerroin ≥ 4 tai etaisyysraja, ≤ ~3 lahimallia ruudulla). Natiiviseppa lisaa rajapintaan (oma haara, 1.0.29); Linssiseppa mallintaa ensin Colosseum, Mont-Saint-Michel ja kaari kuvapariksi omistajalle, sitten loput.
+
+## TUOTANTOVIKA: OSOITINVAIHTO PUDOTTI WEBIN PALLON LAATTAKERROKSEN → OSOITIN PALAUTETAAN, PALLOSARJA S-POHJALLE (27.9.2026 klo 08.00)
+
+Pelikoodari 08.0x (Z10-selvityksen sivuloydos): webin pallon laattakerros pois tuotannossa 07.32 lahtien — pyramidi.json versio 2026-09-26s-pohja, pallosarja (js/pallo.js PALLO_LAATTAVERSIO, laatat.json) 2026-09-26-pohja → js/pallolaatat.js lepokerroksenKerrokset purkaa kerroksen; s-pohjan pallosarjaa ei ole amparissa (404). Fable paatti: Julkaisija palauttaa osoittimen heti (palauta, varmuuskopio pyramidi-20260927-0732.json), Karttaseppa tekee pallosarjan s-pohjalle + PALLO_LAATTAVERSIO-PR:n (tai perustelee versiovahdin hollennyksen), sitten uusi vaihto. Oppi: osoitinvaihdon tarkistuslistaan pallosarjan versio.
