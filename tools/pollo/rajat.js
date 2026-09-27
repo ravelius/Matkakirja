@@ -31,8 +31,15 @@ export const KUUKAUSIRAJA_OLETUS = 1500;
  * ensimmäinen tavu 0,5 s, koko pala 35 s ≈ 5 × reaaliaika).
  */
 export const PUHE_TEKSTIN_KATTO = 2500;
-export const PUHE_PAIVARAJA_OLETUS = 60000;
-export const PUHE_KUUKAUSIRAJA_OLETUS = 900000;
+/*
+ * 60 000 → 400 000 / 900 000 → 6 000 000 (27.9.2026, Fablen tilaus): 60 000
+ * täyttyi saman päivän mittauksissa ~2 tunnissa, ja koska raja on IP:kohtainen,
+ * koko kotiverkon laitteet saivat 429:n. 400 000 on noin 6,5 tuntia puhetta
+ * vuorokaudessa; kuukausikatto (koko workerin yhteinen) nousee samassa
+ * suhteessa noin sataan tuntiin. R2-/reunaosuma ei kuluta rajaa.
+ */
+export const PUHE_PAIVARAJA_OLETUS = 400000;
+export const PUHE_KUUKAUSIRAJA_OLETUS = 6000000;
 
 /*
  * KUVAGENEROINNIN RAJAT (kehittäjän eräajot, tehtava: 'kuva').
