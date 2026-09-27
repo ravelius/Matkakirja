@@ -50,8 +50,8 @@ hengessä mutta nykytiedon varassa: historiaa, historian hetkiä, kadonneita ihm
 ja arkea. Kartalla nostot johdattavat nähtävyyksiin ja tarinoihin, ja jokaisella nostolla on
 oma kuvansa. Tekstit voi kuunnella: isoisän ääni lukee lehtiä, ja pelin oma opas, Pulu-kyyhky,
 vastaa pelaajan kysymyksiin. Valokuvat ja vanhat kuvat ovat vapaasti käytettäviä (public
-domain tai Creative Commons), ja nähtävyyksien kuvitukset on piirretty pelille tekoälyn avulla
-pelin omaan tyyliin. Kuvien lisenssit on inventoitu; tekijämerkinnät tulevat näkyviin peliin.
+domain tai Creative Commons), ja nähtävyyksien kuvat ovat pelille tehtyjä havainnekuvia pelin
+omaan tyyliin. Kuvien lisenssit on inventoitu; tekijämerkinnät tulevat näkyviin peliin.
 
 Seuraavaksi:
 - nähtävyyskuvien tyylin yhtenäistäminen koko pelissä
