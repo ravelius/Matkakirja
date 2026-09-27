@@ -119,6 +119,7 @@
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui haku <kysymys>                         pulun paikallisen haun katkelmat (leima + pisteet)
 //   ui liiku                                  Liiku-napin napautus: kulkutapaliuku auki (peli käynnissä)
+//   ui saavutettavuus [nimi]                  VoiceOver-nimet, 44 pt:n kosketusalat, kontrasti → Documents/saavutettavuus[-nimi].json
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
@@ -638,6 +639,10 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "puu":
                     Kirjaa(Puu(loput.Trim()));
+                    return null;
+                case "saavutettavuus":
+                    // App Store -laatu (Fable 27.9.): nimettömät napit, alle 44 pt:n kosketusalat, tekstien kontrasti (Saavutettavuus.cs).
+                    Kirjaa(Saavutettavuus.Mittaa(loput.Trim()));
                     return null;
                 case "tyohuone":
                 {
