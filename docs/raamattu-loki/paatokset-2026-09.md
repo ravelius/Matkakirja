@@ -8207,3 +8207,7 @@ Kortti 14.2x (kuvaparit meri-laatu-{merilaiva,purjelaiva,valas}-ennen-jalkeen.pn
 ## OMISTAJA: TALOUDEN ELAMAPALKKI — PUNAISET 6 h LOHKOT KARTAN YLAREUNAAN KUN RAHAT LOPUSSA (WEB + NATIIVI) (27.9.2026 klo 15.12)
 
 Omistaja 27.9.2026 klo 15.1x natiivin talous-UI:n kuvapareista (kassarivi, loppukortti, varoituskupla): lisapalkki kartan ylareunaan, tuntilaskurina punaiset palkit 6 h jaksoissa — paljonko elamaa jaljella ilman rahaa (2 vrk = 8 lohkoa pelin aikaa). Fablen tulkinta: nakyy vain rahat lopussa, katoaa kun rahaa tulee, kevyt. Pelikoodari web ensin, Natiivi-UI natiivi mitoilla; talous-UI:n muut osat (lyhyt kassarivi iPhonella, Jaa-nappi, varoituskupla) jaavat; kaikki yhdessa 1.0.30:aan. Sisaltokirjuri: #3419 lisaksi Lappi (saamelaiskulttuuri), Sisilia (mosaiikit), Kreeta (historia); 5 historian hetken havainnekuvatilaus postilaatikossa.
+
+## 1.0.30 LEIKATAAN NYT ILMAN ELAMAPALKKIA (FABLE C); ELAMAPALKKI PELKAT PUNAISET NELIOT, iPAD = iPHONE → 1.0.31 (27.9.2026 klo 15.16)
+
+Natiivisepan juna 9dffccd0 (valikaannos 7215835c, savuke 0): lento v3, lippu, maakuntanimet pois, puhevirta palavirtana, talousportti + pelistreak, avauskortti, meri-laatu, vuori, mitauutta, havainnekuva + Natiivi-UI:n talous-UI 2addc08c. Fablen paatos C (tyonjohtajan harkinta: omistaja nakee uudet asiat tanaan, TF ennen klo 22 polttoa): leikkaus heti, elamapalkki 1.0.31:een. Omistajan tarkennus 15.2x: elamapalkki = pelkat punaiset neliot ilman tekstia, iPadilla sama kuin iPhonella (myos lyhyt kassarivi). Linssiseppa ja Sisaltokirjuri kontekstirajalla → nollaukset kaynnissa.
