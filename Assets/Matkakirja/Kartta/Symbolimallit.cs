@@ -25,7 +25,11 @@ namespace Matkakirja
     /// KaupunkiMerkit. Löytämätön himmeänä (pergamentti, 70 %). Horisonttiusva kuten 153:n nostoilla. Piilossa lennon, linssin
     /// ja aloitusportin aikana sekä pallon takana. Natiivi-UI piilottaa 2D-kuvamerkin, kun <see cref="OnMalli"/> on tosi.
     /// Kolmiobudjetti enintään 1 500 mallia kohden (erikoismallit), arkkityypit 600/150 (LOD0/LOD1).
-    /// Komennot `symbolit tila|pois|paalle|loydetty|himmea|koko pt|taso23 0|1|ylhaalta 3d|2d|perspektiivi aste|reuna pt`.
+    /// Komennot `symbolit tila|pois|paalle|loydetty|himmea|koko pt|taso23 0|1|ylhaalta 3d|2d|perspektiivi aste|reuna pt|maasto 0|1|kategoriat 1|0`.
+    ///
+    /// KATEGORIASYMBOLIT (omistaja 26.9. klo 21.5x ja 27.9. klo 00.1x): 3D-nostot ovat NOSTOT-paneelin kategoriasymbolit
+    /// oikeina 3D-esineinä (Mallinsepän mallit, Symbolimallit.Kategoriat.cs, KategoriaKartoitus). Järjestys: erikoismalli
+    /// voittaa aina, sitten kategoriasymboli, jos sen malli on rekisteröity, muuten arkkityyppi kuten ennen.
     ///
     /// 1.0.27-KOKEILU (omistaja 26.9. klo 21.3x: "Paras ratkaisu olisi, jos 3D-mallit näyttäisivät järkevältä myös ylhäältä
     /// päin"; Linssisepän tyyliohje A–E): Linna, Kirkko ja Majakka näkyvät 3D:nä myös pystysuorasta kamerasta
@@ -89,10 +93,11 @@ namespace Matkakirja
         /// <summary>Ääriviivan leveys ruudulla (pt), vakio mallin koosta riippumatta (myös LOD1); 0 = ei ääriviivaa.</summary>
         public static float ReunaPt = 1.2f;
 
-        /// <summary>Näkyykö arkkityyppi kokeilussa myös pystysuorasta kamerasta (Linssisepän tyyliohje E: vain nämä kolme).</summary>
+        /// <summary>Näkyykö malli kokeilussa myös pystysuorasta kamerasta: arkkityypeistä vain Linna, Kirkko ja Majakka
+        /// (Linssisepän tyyliohje E) ja kaikki kategoriasymbolit (reliefi on tehty luettavaksi ylhäältä).</summary>
         static bool YlhaaltaKelpaa(Tieto t) =>
             Ylhaalta3D && t != null && t.Erikois == null
-            && (t.Tyyppi == Arkkityyppi.Linna || t.Tyyppi == Arkkityyppi.Kirkko || t.Tyyppi == Arkkityyppi.Majakka);
+            && (KayttaaSymbolia(t) || t.Tyyppi == Arkkityyppi.Linna || t.Tyyppi == Arkkityyppi.Kirkko || t.Tyyppi == Arkkityyppi.Majakka);
 
         /// <summary>Salliiko kameran kallistus noston mallin: kallistettu näkymä tai kokeilun kolme arkkityyppiä.</summary>
         static bool KulmaSallii(Tieto t) => Kallistettu() || YlhaaltaKelpaa(t);
@@ -126,6 +131,24 @@ namespace Matkakirja
             return Quaternion.FromToRotation(normaali, normaali * Mathf.Cos(r) + d * Mathf.Sin(r));
         }
 
+        /// <summary>
+        /// Kategoriasymbolin asento (<see cref="KategoriaRuutuYlos"/>): pystyssä pinnan normaalin suuntaan ja mallin +Z
+        /// (kuvamerkin ylös) ruudun ylös-suuntaan, eli kameran ylös projisoituna tangenttitasoon; kallistetussa kamerassa
+        /// sama suunta on poispäin katsojasta. Kartan kierrossa reliefi pysyy pystyssä kuten 2D-merkki. Rappeutuneessa
+        /// tapauksessa pohjoinen.
+        /// </summary>
+        Quaternion RuutuAsento(Vector3 normaali, Quaternion pohjoinen)
+        {
+            Vector3 ylos = georeferenssi.transform.InverseTransformDirection(kamera.transform.up);
+            Vector3 u = ylos - normaali * Vector3.Dot(ylos, normaali);
+            if (u.sqrMagnitude < 1e-8f) return pohjoinen;
+            return Quaternion.LookRotation(u.normalized, normaali);
+        }
+
+        /// <summary>Noston perusasento: kategoriasymbolilla ruudun ylös (valinnainen), muuten pohjoinen.</summary>
+        Quaternion PerusAsento(Tieto t, Vector3 normaali, Quaternion pohjoinen) =>
+            KategoriaRuutuYlos && KayttaaSymbolia(t) ? RuutuAsento(normaali, pohjoinen) : pohjoinen;
+
         /// <summary>Ääriviivan leveys mallin yksiköissä, kun malli on <paramref name="pt"/> pistettä leveä (1 yksikkö = pt).</summary>
         static float ReunaYksikoissa(float pt) => ReunaPt > 0f ? ReunaPt / Mathf.Max(1f, pt) : 0f;
 
@@ -140,7 +163,13 @@ namespace Matkakirja
             {
                 case "ylhaalta": Ylhaalta3D = o[2] != "2d"; return true;
                 case "perspektiivi": PerspektiiviAste = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 80f); return true;
+                case "maasto": MaastoKorkeudet = o[2] != "0" && o[2] != "pois"; return true;
                 case "reuna": ReunaPt = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 4f); return true;
+                case "kategoriat":
+                    // 1|0: kategoriasymbolit (reliefit) vai arkkityypit (A/B); ruutu|pohjoinen: reliefin ylös-suunta.
+                    if (o[2] == "ruutu" || o[2] == "pohjoinen") KategoriaRuutuYlos = o[2] == "ruutu";
+                    else Kategoriat = o[2] != "0" && o[2] != "pois";
+                    return true;
                 default: return false;
             }
         }
@@ -167,6 +196,7 @@ namespace Matkakirja
             KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             Ylhaalta3D = true; PerspektiiviAste = (float)LiioiteltuPerspektiivi.KulmaMax; ReunaPt = 1.2f;
             NollaaTasot23();
+            NollaaKategoriat();
             NollaaLiikkuvat();
         }
 
@@ -188,11 +218,13 @@ namespace Matkakirja
         // rekisteröinti ja liikkuvat osat Symbolimallit.Erikoismallit.cs:ssä.
         static readonly Dictionary<string, Mesh> verkot = new Dictionary<string, Mesh>();
 
-        /// <summary>Noston mallitieto (lasketaan kerran noston id:llä): erikoismallin avain tai null, arkkityyppi ja taso.</summary>
+        /// <summary>Noston mallitieto (lasketaan kerran noston id:llä): erikoismallin avain tai null, arkkityyppi,
+        /// kategoriasymboli (KategoriaKartoitus; null = ei paneelin symbolia) ja taso.</summary>
         sealed class Tieto
         {
             public string Erikois;
             public Arkkityyppi Tyyppi;
+            public Kategoriasymboli? Symboli;
             public ArkkityyppiKartoitus.Peruste Peruste;
             public int Taso;
         }
@@ -203,6 +235,7 @@ namespace Matkakirja
             if (tiedot.TryGetValue(s.Id, out var t)) return t;
             t = new Tieto { Erikois = Avain(s.Id) ?? Avain(s.Tunnus), Taso = s.Taso };
             t.Tyyppi = ArkkityyppiKartoitus.Kartoita(s.Id, s.Nimi, s.Kategoria, s.Laji, out t.Peruste);
+            t.Symboli = KategoriaKartoitus.Symboli(s.Kategoria, s.Laji);
             tiedot[s.Id] = t;
             return t;
         }
@@ -247,19 +280,20 @@ namespace Matkakirja
         {
             if (instanssi == null) return "ei luotu";
             var sb = new System.Text.StringBuilder($"päällä {Paalla}, koko {KokoPt:0} pt, taso23 {(Taso23 ? 1 : 0)}, ylhaalta {(Ylhaalta3D ? "3d" : "2d")}, " +
-                $"perspektiivi {PerspektiiviAste:0.#}°, reuna {ReunaPt:0.##} pt; taso 1 näkyvissä:");
+                $"perspektiivi {PerspektiiviAste:0.#}°, reuna {ReunaPt:0.##} pt, maasto {(MaastoKorkeudet ? 1 : 0)}, kategoriat {(Kategoriat ? 1 : 0)} " +
+                $"({(KategoriaRuutuYlos ? "ruutu" : "pohjoinen")}); taso 1 näkyvissä:");
             int n = 0;
-            var taso1 = new int[ArkkityyppiKartoitus.Lukumaara];
+            var taso1 = new int[MalliLukumaara];
             foreach (var p in instanssi.kappaleet)
             {
                 if (!p.Value.R.enabled) continue;
                 n++;
                 var t = tiedot.TryGetValue(p.Key, out var tt) ? tt : null;
                 if (t != null && t.Erikois != null) sb.Append(' ').Append(t.Erikois);
-                else if (t != null) taso1[(int)t.Tyyppi]++;
+                else if (t != null) taso1[MalliIndeksi(t)]++;
             }
             if (n == 0) sb.Append(" ei yhtään");
-            for (int i = 0; i < taso1.Length; i++) if (taso1[i] > 0) sb.Append(' ').Append((Arkkityyppi)i).Append('×').Append(taso1[i]);
+            for (int i = 0; i < taso1.Length; i++) if (taso1[i] > 0) sb.Append(' ').Append(MallinNimi(i)).Append('×').Append(taso1[i]);
             sb.Append($" ({n} mallia); ");
             instanssi.Tasot23Tila(sb);
             sb.Append("; erikoismallien kolmiot:");
@@ -274,6 +308,11 @@ namespace Matkakirja
                 var (k0, k1) = ArkkityyppiKolmiot((Arkkityyppi)i);
                 sb.Append(' ').Append((Arkkityyppi)i).Append('=').Append(k0).Append('/').Append(k1);
             }
+            sb.Append("; kategoriasymbolien kolmiot LOD0/LOD1:");
+            for (int i = 0; i < KategoriaKartoitus.Lukumaara; i++)
+                if (SymboliRakennettu((Kategoriasymboli)i))
+                    sb.Append(' ').Append((Kategoriasymboli)i).Append('=').Append(SymbolinKolmiot((Kategoriasymboli)i, 0)).Append('/')
+                      .Append(SymbolinKolmiot((Kategoriasymboli)i, 1));
             return sb.ToString();
         }
 
@@ -289,10 +328,18 @@ namespace Matkakirja
         {
             public Transform T;
             public MeshRenderer R, Pohja, Reuna;
+            /// <summary>Mallin ja ääriviivan verkot (vaihtuvat, kun `symbolit kategoriat 1|0` vaihtaa mallin).</summary>
+            public MeshFilter Suodin, ReunaSuodin;
+            /// <summary>Mallin indeksi (MalliIndeksi) tai −1 = erikoismalli.</summary>
+            public int Malli = -1;
             public Vector3 Paikka, Normaali;
             public Quaternion Asento;
             public Vector2 Puoli;
             public float Himmea = -1f, ReunaLeveys = -1f, PohjaLeveys, Koko = -1f;
+            /// <summary>Pinnan korkeus haettu (Symbolimallit.Maasto.cs).</summary>
+            public bool KorkeusOk;
+            /// <summary>Kaupungin maamerkki (Erikoismalli.Kaupunki): malli kaupunkipisteen vasemmalla puolella.</summary>
+            public bool Maamerkki;
         }
         /// <summary>Tason 1 kappaleet noston id:llä.</summary>
         readonly Dictionary<string, Kappale> kappaleet = new Dictionary<string, Kappale>();
@@ -321,6 +368,7 @@ namespace Matkakirja
                 aurinko = FindAnyObjectByType<Aurinko>();
                 if (kamera == null) return;
             }
+            PaivitaKorkeudet();
             var kk = KarttaKerrokset.Instanssi;
             var nk = NostoKerros.Instanssi;
             bool sallittu = Paalla && nk != null && nk.Nakyvissa && !PalloKierto.PorttiSumea && !(kk != null && kk.LinssiPaalla)
@@ -342,6 +390,7 @@ namespace Matkakirja
                     if (osatNostolla.TryGetValue(p.Key, out var osat)) PaivitaOsat(osat, false, default);
                     PallonLepo.Muuttui("symbolimallit");
                 }
+            if (sallittu && Taso1Zoom()) PaivitaMaamerkit(nk);
             PiirraTasot23(sallittu ? nk : null);
         }
 
@@ -390,10 +439,11 @@ namespace Matkakirja
                 {
                     if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Mallit[tieto.Erikois].Runko();
                 }
-                else verkko = ArkkityypinVerkko(tieto.Tyyppi, 0);
+                else verkko = MallinVerkko(MalliIndeksi(tieto), 0);
                 var go = new GameObject("Symbolimalli-" + (tieto.Erikois ?? tieto.Tyyppi.ToString()) + "-" + s.Id);
                 go.transform.SetParent(transform, false);
-                go.AddComponent<MeshFilter>().sharedMesh = verkko;
+                var suodin = go.AddComponent<MeshFilter>();
+                suodin.sharedMesh = verkko;
                 var r = go.AddComponent<MeshRenderer>();
                 r.sharedMaterial = materiaali;
                 r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
@@ -401,7 +451,8 @@ namespace Matkakirja
                 Asento(s.OmaLat, s.OmaLon, out var paikka, out var asento, out var nl);
                 go.transform.localPosition = paikka;
                 go.transform.localRotation = asento;
-                k = new Kappale { T = go.transform, R = r, Paikka = paikka, Normaali = nl, Asento = asento, Puoli = Puoli(verkko) };
+                k = new Kappale { T = go.transform, R = r, Paikka = paikka, Normaali = nl, Asento = asento, Puoli = Puoli(verkko), Suodin = suodin,
+                                  Malli = tieto.Erikois != null ? -1 : MalliIndeksi(tieto), Maamerkki = OnMaamerkki(s.Id) };
                 // Maakontakti (löydös 175c): varjolevy mallin juuren tasossa, säde 0,6 × mallin leveys; 1.0.27-kokeilussa
                 // siirretty kaakkoon (PohjaSiirto, valo luoteesta) ja mallin sisarena (ei kallistu perspektiivin mukana).
                 k.Pohja = Lapsi(transform, "Maakontakti-" + s.Id, PohjaVerkko(), pohjaMateriaali);
@@ -409,10 +460,29 @@ namespace Matkakirja
                 k.PohjaLeveys = PohjaSade * Leveys(verkko);
                 // Ääriviiva (1.0.27-kokeilu): sama verkko ääriviivamateriaalilla, leveys lohkon _Tila.z:ssa.
                 k.Reuna = Lapsi(go.transform, "Aariviiva", verkko, reunaMateriaali);
+                k.ReunaSuodin = k.Reuna.GetComponent<MeshFilter>();
                 kappaleet[s.Id] = k;
                 LuoOsat(s.Id, tieto.Erikois, go.transform);
             }
+            else if (tieto.Erikois == null && k.Malli != MalliIndeksi(tieto))
+            {
+                // `symbolit kategoriat 1|0`: kategoriasymboli ↔ arkkityyppi samaan kappaleeseen (malli, ääriviiva, levyn koko).
+                k.Malli = MalliIndeksi(tieto);
+                var verkko = MallinVerkko(k.Malli, 0);
+                k.Suodin.sharedMesh = k.ReunaSuodin.sharedMesh = verkko;
+                k.PohjaLeveys = PohjaSade * Leveys(verkko);
+                k.Puoli = Puoli(verkko);
+                k.Koko = -1f;
+                PallonLepo.Muuttui("symbolimallit");
+            }
             var osat = osatNostolla.TryGetValue(s.Id, out var oo) ? oo : eiOsia;
+            if (!k.KorkeusOk && PinnanKorkeus(s.Id, s.OmaLat, s.OmaLon, out double hPinta))
+            {
+                // Maaston pinnalle (Mallinseppä 27.9.: vuori Olympoksella jäi liioitellun maaston sisään).
+                Asento(s.OmaLat, s.OmaLon, hPinta, out k.Paikka, out _, out _);
+                k.KorkeusOk = true;
+                k.Koko = -1f;   // maakontakti uuteen paikkaan
+            }
             var gt = georeferenssi.transform;
             Vector3 p = gt.TransformPoint(k.Paikka);
             Vector3 kohti = kamera.transform.position - p;
@@ -428,13 +498,17 @@ namespace Matkakirja
             {
                 k.T.localScale = Vector3.one * koko;
                 k.Pohja.transform.localScale = Vector3.one * (koko * k.PohjaLeveys);
-                k.Pohja.transform.localPosition = k.Paikka + k.Asento * (PohjaSiirto * koko);
                 k.Koko = koko;
             }
+            // Maamerkki pisteen vasemmalle (nimiö on oletuksena oikealla): mallin puolikas + väli pisteinä, itä = asennon +X.
+            var jalka = k.Maamerkki ? k.Paikka - (k.Asento * Vector3.right) * (koko / Mathf.Max(1e-3f, pt) * (pt * 0.5f + MaamerkkiValiPt)) : k.Paikka;
+            var pohjaNyt = jalka + k.Asento * (PohjaSiirto * koko);
+            if ((k.Pohja.transform.localPosition - pohjaNyt).sqrMagnitude > 1e-8f * koko * koko) k.Pohja.transform.localPosition = pohjaNyt;
             // Liioiteltu perspektiivi (kokeilu): lasketaan joka kehys, koska kulma seuraa ruutupistettä; asetetaan vain muuttuessa.
-            var pk = PerspektiiviKierto(k.Paikka, k.Normaali, k.Asento, k.Puoli, out float nosto);
-            var asentoNyt = pk * k.Asento;
-            var paikkaNyt = k.Paikka + k.Normaali * (nosto * koko);
+            var perus = PerusAsento(tieto, k.Normaali, k.Asento);
+            var pk = PerspektiiviKierto(jalka, k.Normaali, perus, k.Puoli, out float nosto);
+            var asentoNyt = pk * perus;
+            var paikkaNyt = jalka + k.Normaali * (nosto * koko);
             if (Quaternion.Angle(k.T.localRotation, asentoNyt) > 0.01f || (k.T.localPosition - paikkaNyt).sqrMagnitude > 1e-8f * koko * koko)
             {
                 k.T.localRotation = asentoNyt;
