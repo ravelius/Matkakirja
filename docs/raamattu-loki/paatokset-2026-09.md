@@ -7799,3 +7799,7 @@ Julkaisija 02.17: #3367 (28 maajuttua maalehtiin) mainissa v2295, testit 4413/0.
 ## LINSSISEPPA NOLLATTU JA KAYNNISTETTY 02.2x (LUOVUTUS -J bbee24237) (27.9.2026 klo 02.18)
 
 Linssiseppa (Opus, max) = Mallinseppa nollattu 02.2x (89 % → tyhja), id ennallaan; aloitusviesti lahetetty: A/B tiukat rajaukset, meri v3 rajaukset, merge-pyynnot 1.0.28:aan, Segovia/Brandenburg/Kinderdijk, 12 symbolia, lento v3.
+
+## OMISTAJA: KATEGORIASYMBOLIEN 3D-VARITYS = B SEEPIARAMPPI; VUORI A/B/C KLO 03 (27.9.2026 klo 07.16)
+
+Omistaja 02.3x kortilla (kuva kaari-ab-thermopylai.png, rajaus x6, 0/27/55 astetta): kategoriasymbolien 3D-varitys B seepiaramppi (lammin ruskea kuten 2D-kuvamerkki) malliksi kaikille 12 symbolille; A karkivari hylatty. Vuori: B:ssa lumihuippu haviaa ruskeaan → Linssisepan klo 03 kaannos A/B/C (C = B + valkoinen lumihuippu) samalla pohjalla, kuvat ~03.30. Meri v3 -rajaukset valissa.
