@@ -54,7 +54,8 @@ namespace Matkakirja
         /// <summary>Tason 1 mallin ruutukoko kartan kertoimella (tasot 2–3 kertovat tämän Taso2Koko/Taso3Koko:lla).</summary>
         public static float KokoNyt(double kerroin)
         {
-            double u = (kerroin - NostoSaannot.TyyppimerkinKerroin) / (KokoTaysiKerroin - NostoSaannot.TyyppimerkinKerroin);
+            double k0 = Taso1Kynnys();
+            double u = (kerroin - k0) / Math.Max(1e-3, KokoTaysiKerroin - k0);
             return Mathf.Lerp(KokoKynnysPt, KokoPt, Mathf.Clamp01((float)u));
         }
 
@@ -65,7 +66,18 @@ namespace Matkakirja
         static bool Taso1Zoom()
         {
             var nk = NostoKerros.Instanssi;
-            return nk != null && nk.ZoomKerroin >= NostoSaannot.TyyppimerkinKerroin;
+            return nk != null && nk.ZoomKerroin >= Taso1Kynnys();
+        }
+
+        /// <summary>
+        /// Tason 1 mallien kynnys: 155:n kerroin 2,5, mutta pienissä maissa enintään 0,9 × suurin saavutettava kerroin
+        /// (Mallinsepän löydös 27.9.: Alankomaissa, Belgiassa, Sveitsissä ja Tanskassa kamera ei pääse kertoimeen 2,5).
+        /// </summary>
+        static double Taso1Kynnys()
+        {
+            var nk = NostoKerros.Instanssi;
+            double k = NostoSaannot.TyyppimerkinKerroin;
+            return nk != null && !float.IsInfinity(nk.SuurinKerroin) ? Math.Min(k, 0.9 * nk.SuurinKerroin) : k;
         }
 
         /// <summary>Tason 1 noston malli nyt: zoom-kynnys ja kallistus (kokeilussa Linna/Kirkko/Majakka myös ylhäältä).</summary>
