@@ -243,7 +243,7 @@ namespace Matkakirja.Linssit.Elava
     {
         public const double VesiX = 0.45, VesiS = 10, NousuS = 2, HuojuuS = 1.2, AamuS = 1, PutoaaS = 1.2, KajoS = 2.8;
         /// <summary>Kiven siirto lähtöpaikasta (aukio) kourun viereen mallin yksiköissä.</summary>
-        public const double KohdeX = -0.06, KohdeY = 0.165, KohdeZ = 0.1;
+        public const double KohdeX = -0.06, KohdeY = 0.245, KohdeZ = 0.1;
         double vesiAika, vesiKesto, kivi = -1;
         bool virtaa;
         int kimalluksia;

@@ -7,9 +7,10 @@ namespace Matkakirja
     /// ERIKOISMALLI SEGOVIAN AKVEDUKTI (speksi docs/raportit/erikoismallit/segovian-akvedukti.md, omistajan jono 27.9. klo 01.4x).
     /// Tunnistus sekunnissa: pitkä kaaririvi, jonka keskellä (Plaza del Azoguejo, 28,5 m) kaksi kaarikerrosta päällekkäin ja
     /// päissä maan noustessa yksi kerros; yläreunassa vesikouru (specus) ja keskellä kapea syvennys (Neitsyt Marian patsas).
-    /// Tyylitelty: 959 m:n ja 167 kaaren sijaan 1,0 ≈ 400 m ja 20 kaarta (10 kaksikerroksista keskellä), pystyliioittelu 3,
+    /// Tyylitelty: 959 m:n ja 167 kaaren sijaan 1,0 ≈ 400 m ja 20 kaarta (10 kaksikerroksista keskellä), pystyliioittelu 4,4
+    /// (laite 27.9. klo 03.1x: pystyliioittelu 3 jäi 30°:ssa matalaksi viivaksi),
     /// jotta kaaret erottuvat 60 pt:ssä; kulkee itä–länsi (tyylitelty, Kaari-apuri). Graniitti paperi → seepia, aukot
-    /// varjossa, ei laastia eikä saumoja (liian pieniä). Paksuus liioiteltu (0,034), jotta rivi erottuu myös ylhäältä.
+    /// varjossa, ei laastia eikä saumoja (liian pieniä). Paksuus liioiteltu (0,04), jotta rivi erottuu myös ylhäältä.
     /// Liikkuvat osat:
     ///   vesi    kimallus liukuu vesikourua pitkin vuorilta kaupunkiin (perusliike, käynti ja tauko)
     ///   kivi    paholaisen viimeinen kivi (harvinainen ja napautus): nousee aukiolta kaaren yli kohti kourua, jää
@@ -20,7 +21,7 @@ namespace Matkakirja
     public sealed partial class Symbolimallit
     {
         const int SaKaaria = 20;
-        const float SaVali = 0.05f, SaPilari = 0.013f, SaPaksuus = 0.034f, SaYla = 0.17f, SaKouru = 0.018f, SaVyo = 0.105f;
+        const float SaVali = 0.05f, SaPilari = 0.013f, SaPaksuus = 0.04f, SaYla = 0.25f, SaKouru = 0.02f, SaVyo = 0.155f;
         static readonly Color SaGraniitti = Hex(0xcdbb98), SaGraniittiVarjo = Hex(0xb4a07e), SaHolvi = Hex(0x8f7a5a), SaMaa = Hex(0xd6c49c);
 
         /// <summary>Maan korkeus x:ssä: keskellä aukio (0), päissä rinne nousee kourun alle (kaaret madaltuvat).</summary>

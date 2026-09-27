@@ -7,7 +7,7 @@ namespace Matkakirja
     /// ERIKOISMALLI KINDERDIJKIN MYLLYT (speksi docs/raportit/erikoismallit/kinderdijk.md, omistajan jono 27.9. klo 01.4x).
     /// Tunnistus sekunnissa: kaksi rinnakkaista kanavaa, joiden varrella tuulimyllyjen rivit (siipiristit), ja pohjoispäässä
     /// Wisboomin pumppaamo piippuineen. Mittakaava: 1,0 ≈ 1,2 km (rivit noin 1 km); myllyt liioiteltu noin
-    /// kuusinkertaisiksi, jotta siipiristit erottuvat 60 pt:ssä (runko 0,085, siipiväli 0,12). Rivi A kivimyllyt (pyöreä
+    /// kahdeksankertaisiksi, jotta siipiristit erottuvat 60 pt:ssä (runko 0,11, siipiväli 0,16). Rivi A kivimyllyt (pyöreä
     /// tiilirunko), rivi B ruokokattoiset kahdeksankulmaiset myllyt. Kaikki siivet tuulta vastaan lounaaseen.
     /// Liikkuvat osat:
     ///   siivet0–7   siipiristit pyörivät napansa ympäri (akseli lounaaseen): perusliike 1–3 myllyä kerrallaan, harvinainen
@@ -19,7 +19,7 @@ namespace Matkakirja
         /// <summary>Siipien suunta (tuulen tulosuunta lounas): siipiristin taso on kohtisuorassa tätä vastaan, ja siivet
         /// pyörivät tämän akselin ympäri. Sama vakio liikeytimessä (KinderdijkLiike.Akseli).</summary>
         static readonly Vector3 KdTuuli = new Vector3(-0.7071068f, 0f, -0.7071068f);
-        const float KdRunko = 0.085f, KdNapa = 0.078f, KdSiipi = 0.06f, KdSiipiLeveys = 0.013f;
+        const float KdRunko = 0.11f, KdNapa = 0.1f, KdSiipi = 0.08f, KdSiipiLeveys = 0.017f;
 
         /// <summary>Kanavat (Nederwaard länsi, Overwaard itä, rinnakkain kapean penkereen erottamina): alku (pohjoispää),
         /// suunta (atsimuutti pohjoisesta itään, tyylitelty) ja pituus.</summary>
@@ -41,7 +41,7 @@ namespace Matkakirja
             var (alku, atsimuutti, pituus) = KdKanavat[k];
             var d = KdSuunta(atsimuutti);
             var sivu = Vector3.Cross(Vector3.up, d).normalized;   // vasen = länsi, kun kanava kulkee etelään
-            return alku + d * (0.2f + i * (pituus - 0.28f) / 3f) + sivu * 0.045f;
+            return alku + d * (0.16f + i * (pituus - 0.24f) / 3f) + sivu * 0.055f;
         }
 
         static readonly Color KdTiili = Hex(0x80634a), KdTiiliVaalea = Hex(0x9a7c5e), KdRuoko = Hex(0x958665), KdRuokoTumma = Hex(0x7c6e52);
@@ -80,17 +80,17 @@ namespace Matkakirja
                     r.AloitaOsa();
                     if (k == 0)
                     {
-                        r.Vaippa(p, 0.021f, 0.014f, KdRunko, 10, i % 2 == 0 ? KdTiili : KdTiiliVaalea);
-                        r.Kartio(p + Vector3.up * KdRunko, 0.017f, 0.02f, 8, KdRuokoTumma);
+                        r.Vaippa(p, 0.027f, 0.018f, KdRunko, 10, i % 2 == 0 ? KdTiili : KdTiiliVaalea);
+                        r.Kartio(p + Vector3.up * KdRunko, 0.022f, 0.026f, 8, KdRuokoTumma);
                     }
                     else
                     {
-                        r.Laatikko(p, new Vector3(0.05f, 0.012f, 0.05f), KdTiili, KdTiili);   // tiilijalka
-                        r.Vaippa(p + Vector3.up * 0.012f, 0.023f, 0.013f, KdRunko - 0.012f, 8, i % 2 == 0 ? KdRuoko : KdRuokoTumma, Mathf.PI / 8f);
-                        r.Kartio(p + Vector3.up * KdRunko, 0.016f, 0.022f, 8, KdRuokoTumma);
+                        r.Laatikko(p, new Vector3(0.064f, 0.014f, 0.064f), KdTiili, KdTiili);   // tiilijalka
+                        r.Vaippa(p + Vector3.up * 0.014f, 0.03f, 0.017f, KdRunko - 0.014f, 8, i % 2 == 0 ? KdRuoko : KdRuokoTumma, Mathf.PI / 8f);
+                        r.Kartio(p + Vector3.up * KdRunko, 0.021f, 0.028f, 8, KdRuokoTumma);
                     }
                     // Akseli ja napa: lyhyt tumma palkki lakista siipien puolelle.
-                    r.Laatikko(p + Vector3.up * (KdNapa - 0.004f) + KdTuuli * 0.016f, new Vector3(0.008f, 0.008f, 0.008f), KdPuu, KdPuu);
+                    r.Laatikko(p + Vector3.up * (KdNapa - 0.005f) + KdTuuli * 0.021f, new Vector3(0.01f, 0.01f, 0.01f), KdPuu, KdPuu);
                     r.LopetaOsa();
                 }
             // Wisboomin pumppaamo pohjoispäässä kanavien välissä: tiilihalli harjakatolla ja korkea piippu.
@@ -133,8 +133,8 @@ namespace Matkakirja
                 for (int i = 0; i < 4; i++)
                 {
                     var p = KdMylly(k, i);
-                    r.Laatta(p + Vector3.up * 0.04f - KdTuuli * 0.019f, -KdTuuli, 0.008f, 0.012f, EmIkkunavalo);
-                    r.Kiekko(p + Vector3.up * 0.002f, 0.03f, 0.03f, 8, EmIkkunavalo);
+                    r.Laatta(p + Vector3.up * 0.05f - KdTuuli * 0.024f, -KdTuuli, 0.01f, 0.015f, EmIkkunavalo);
+                    r.Kiekko(p + Vector3.up * 0.002f, 0.04f, 0.04f, 8, EmIkkunavalo);
                 }
             return r.Verkko("Kinderdijk-valot");
         }
@@ -145,7 +145,7 @@ namespace Matkakirja
             for (int j = 0; j < 8; j++)
             {
                 var p = KdMylly(j / 4, j % 4);
-                osat[j] = new LiikkuvaOsaMaaritys { Nimi = "siivet" + j, Verkko = KinderdijkSiivet, Pivot = p + Vector3.up * KdNapa + KdTuuli * 0.022f,
+                osat[j] = new LiikkuvaOsaMaaritys { Nimi = "siivet" + j, Verkko = KinderdijkSiivet, Pivot = p + Vector3.up * KdNapa + KdTuuli * 0.028f,
                     Liike = Liike.Kierto, Akseli = KdTuuli, Nopeus = 0.2f, KayS = 40f, TaukoS = 70f };
             }
             osat[8] = new LiikkuvaOsaMaaritys { Nimi = "valot", Verkko = KinderdijkValot, Pivot = Vector3.zero, Liike = Liike.Valahdys };

@@ -86,12 +86,13 @@ namespace Matkakirja
         /// <summary>Hevosvaunut (pivot maassa keskellä, kulkusuunta +Z eli pohjoiseen): hevonen edessä, vaunu takana.</summary>
         static Mesh BrandenburginPorttiVaunut()
         {
+            // Liioiteltu noin 1,5-kertaiseksi (laite 27.9. klo 03.1x: vaunut erottuivat vain viivana).
             var r = new Rakentaja();
             r.AloitaOsa();
-            r.Laatikko(new Vector3(0f, 0.012f, 0.022f), new Vector3(0.01f, 0.014f, 0.03f), EmMuste, EmMuste);   // hevonen
-            r.Laatikko(new Vector3(0f, 0.022f, 0.04f), new Vector3(0.008f, 0.016f, 0.01f), EmMuste, EmMuste);   // pää
-            r.Laatikko(new Vector3(0f, 0f, 0.022f), new Vector3(0.006f, 0.012f, 0.022f), EmMuste, EmMuste);     // jalat
-            r.Laatikko(new Vector3(0f, 0.006f, -0.016f), new Vector3(0.022f, 0.022f, 0.034f), EmSeepia, EmKatto); // vaunu
+            r.Laatikko(new Vector3(0f, 0.018f, 0.033f), new Vector3(0.015f, 0.02f, 0.045f), EmMuste, EmMuste);   // hevonen
+            r.Laatikko(new Vector3(0f, 0.033f, 0.06f), new Vector3(0.012f, 0.024f, 0.015f), EmMuste, EmMuste);  // pää
+            r.Laatikko(new Vector3(0f, 0f, 0.033f), new Vector3(0.009f, 0.018f, 0.033f), EmMuste, EmMuste);     // jalat
+            r.Laatikko(new Vector3(0f, 0.009f, -0.024f), new Vector3(0.033f, 0.033f, 0.05f), EmSeepia, EmKatto); // vaunu
             r.LopetaOsa();
             return r.Verkko("BrandenburginPortti-vaunut");
         }
