@@ -28,6 +28,23 @@
  */
 
 /** Pelin oma tekijänoikeus. Sanamuodot ovat LICENSE-tiedostosta. */
+import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+
+/*
+ * Lipun tekijä luettavaksi: Commonsin kenttä kantaa lataushistoriaa
+ * ("Original uploader was X at en.wikipedia", johdannaisen lähdetiedostot).
+ * Nimet säilyvät, kulissit pois.
+ */
+function lipunTekija(t) {
+  return String(t)
+    .replace(/[^\s:]+\.(svg|gif|png|jpe?g):\s*\*?/gi, '')
+    .replace(/Original uploader was (.+?) at \S+/gi, '$1')
+    .replace(/\s*derivative work:\s*/gi, ', muokannut ')
+    .replace(/\s+aka\s+/i, ' / ')
+    .replace(/^[\s,]+/, '')
+    .trim();
+}
+
 export const PELI = {
   nimi: 'Matkakirja ja unohdettu aarre',
   englanniksi: 'The Travel Journal and the Forgotten Treasure (ehdotus, vahvistetaan käännösvaiheessa)',
@@ -229,8 +246,9 @@ export const LAHTEET = [
     rivit: [
       {
         nimi: 'Wikimedia Commons — pelin valokuvien pääasiallinen lähde',
-        tekija: 'Kuvaajat tiedostokohtaisesti; nimi ja lisenssi näkyvät kuvan '
-          + 'selitteessä pelissä',
+        tekija: 'Kuvaajat kuvakohtaisesti: tekijä, lähde ja lisenssi näkyvät, kun '
+          + 'kuvan avaa isoksi. Jos Commons ei tunne tekijää (vanhat public domain '
+          + '-kuvat), rivillä lukee "tekijä tuntematon".',
         lisenssi: 'Public domain, CC0, CC BY ja CC BY-SA. ND- ja NC-ehtoiset '
           + 'kuvat on rajattu pois.',
       },
@@ -252,11 +270,30 @@ export const LAHTEET = [
       },
       {
         nimi: 'Lippukuvat',
-        tekija: 'Wikimedia Commons; valtaosa valtiontunnuksia. Nimeämistä '
-          + 'vaativat neljä on lueteltu tiedostossa js/packs/lippu-tekijat.js: '
-          + 'Sérgio Horta / Ungoliant MMDCCLXIV, Angelus, Daniele Schirmo '
-          + '(Frankie688) ja Hosmich.',
-        lisenssi: 'Public domain sekä CC BY-SA 2.5 ja 3.0',
+        // Nimeämistä vaativat liput tulevat suoraan datasta (js/packs/lippu-tekijat.js),
+        // jotta luettelo ei vanhene uuden lipun tullessa.
+        tekija: 'Wikimedia Commons; valtaosa valtiontunnuksia. Nimeämistä vaativat: '
+          + `${LIPPU_TEKIJAT.map((l) => lipunTekija(l.tekija)).join('; ')}.`,
+        lisenssi: `Public domain sekä ${[...new Set(LIPPU_TEKIJAT.map((l) => l.lisenssi))].sort().join(', ')}`,
+      },
+      {
+        nimi: 'NASA — astronauttien Maa-kuvat ja satelliittikuvat',
+        tekija: 'NASA (images.nasa.gov, Earth Observatory)',
+        lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'Kaupunkien keskustakartat',
+        tekija: '© OpenStreetMap-tekijät',
+        lisenssi: 'ODbL (Open Database License)',
+      },
+      {
+        nimi: 'Havainnekuvat — tekoälyllä tuotettu kuvitus',
+        tekija: 'Pelin oma tuotanto (Gemini-kuvamallit, jokainen kuva katsottu ennen '
+          + 'käyttöä): nähtävyyksien loistoaikakuvat, kohdekarttojen pienoispiirrokset, '
+          + 'aarrekuvat, kohtaamisten kasvokuvat, eläinten ja historian hetkien kuvat '
+          + 'sekä Viisaan Pöllön muotokuva. Kuvan tiedoissa tai kuvatekstissä lukee '
+          + '"havainnekuva".',
+        lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
       {
         nimi: 'Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, '

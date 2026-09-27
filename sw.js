@@ -64,6 +64,7 @@ const SHELL = [
   // Gallerioiden selauskaistat (omistaja 9.9.2026): ui.js tuo staattisesti.
   './js/galleria.js',
   './js/kohtaamiskuvat-data.js',
+  './js/kuvatekija.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
@@ -211,6 +212,7 @@ const SHELL = [
   './js/packs/omat-tiivistelmat.js',
   './js/packs/liput-paikalliset.js',
   './js/packs/lippu-tekijat.js',
+  './js/packs/commons-tekijat.js',
   './js/aikajana.js',
   // Aikajanan elävä liekkivalo (canvas-kerros, 5.9.2026): vain
   // js/aikajana.js tuo tämän, joten se seuraa samaa polkua.
