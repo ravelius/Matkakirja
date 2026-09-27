@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2338, teksti: 'Pulun luenta isommin paloin: vähemmän puhepyyntöjä' },
   { v: 2337, teksti: 'v2335: Elämäpalkki oranssi, viimeiset 18 h puna… (#3443)' },
   { v: 2336, teksti: 'v2334: Livian lyhyet tervehdykset päätoimittaja… (#3440)' },
   { v: 2335, teksti: 'Euroopan erät 5–7, Ateenan kuvat, TIFF-kuvat JPG:ksi' },
