@@ -8183,3 +8183,7 @@ Omistaja 27.9.2026 klo 12.5x (kontaktiarkit): nahtavyyksissa nakyy yha ei-paikko
 ## OMISTAJA (SITOVA): CODEXIN TIEDOSTOT POISTAA VAIN CODEX — CLAUDEN ROOLIT PYYTAVAT POSTILAATIKON KAUTTA (27.9.2026 klo 12.51)
 
 Omistaja 27.9.2026 klo 12.5x: Codexin (kayttaja samireivinen) luomia tiedostoja, kansioita ja worktreeta ei poisteta itse; poisto pyydetaan Codexilta (claude/postilaatikko, posti/). Fable pyysi poistamaan wt/proto-natiivi-ui-pulu-karttavaisto-codex (98f4e19a1); Postivahti ohjaa samireivinen-omisteiset kohteet Fablelle eika roolien poistolistoille.
+
+## OMISTAJA: MEREN LAJIT KORKEAMPAAN LAATUUN (ERIKOISMALLIEN TASO) (27.9.2026 klo 12.55)
+
+Omistaja 27.9.2026 klo 13.0x (kuva meri-10-lajia-1029.png): meren 10 lajia voisi tehda korkeammalla laadulla. Fable → Linssiseppa (Opus max): siluetit ja yksityiskohdat (mastot, koysisto, kaarevat purjeet, valaan suihku), B-seepiaramppi ja kaiverrusvarjostin kuten symboleissa, vesikontakti (vanavesi, kuohu, varjo), elavyys EI MONOTONIAA, LOD0 ≤ 3 000 kolmiota, ≤ 0,3 ms/malli; ensin 3 lajia kuvaparina omistajalle, sitten loput 7; maaspeksit taman jalkeen. Vuori-symbolin LOD0-juurikorjaus 6e721977 1.0.30:aan (Fable OK).
