@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2329, teksti: '5 uutta lehtiaihetta: ISL/CHE/NOR/FRA/LVA' },
   { v: 2328, teksti: 'Lappi/Sisilia/Kreeta: uusi lehtiaihe kullekin' },
   { v: 2327, teksti: 'Valletta ja Luxemburg: jutut+skandaalit' },
   { v: 2326, teksti: 'v2321: Havainnekuva-sana yhtenäistetty tekoälyk… (#3418)' },
