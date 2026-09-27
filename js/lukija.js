@@ -87,8 +87,11 @@ import { luoLivianKuunteluvuoro, seuraaLivianKuuntelulausumaa } from './livia-ti
 
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import {
-  esihaePala, kappaleenPalat, luoPuheSoitin, puheTuettu,
+  AANTEN_PELINIMET, NOPEUS_MAX, NOPEUS_MIN, STRIIMIAANI_OLETUS,
+  asetaPuheenNopeus, asetaStriimiaani, esihaePala, kappaleenPalat, luoPuheSoitin,
+  puheMittari, puheTuettu, puheenNopeus, striimiaani,
 } from './puhe.js';
+import { luoKaiutinmittari } from './kaiutinmittari.js';
 /*
  * Taustaäänen väistö luennan ajaksi (omistajan tilaus 15.8.2026:
  * "Hiljennä taustaääntä hieman lukijan ajaksi. Pehmeä feidi").
@@ -1173,6 +1176,7 @@ export function pysaytaLukija() {
   const nyt = ajossa;
   if (!nyt) return;
   ajossa = null;
+  talletaKortinKohta(nyt);
   ajossaPulu = false;
   try {
     nyt.lopeta();
@@ -1282,7 +1286,7 @@ function kerran(fn) {
  * @returns {boolean} lähtikö luenta käyntiin
  */
 export function lueAaneen(teksti, nappi = null, {
-  persoona = 'kertoja', sailio, onLoppu, kohdat = null, aloitusKappale = 0, jatko = null,
+  persoona = 'kertoja', sailio, onLoppu, kohdat = null, aloitusKappale = 0, aloitusAlku = 0, jatko = null,
 } = {}) {
   pysaytaLukija();
   // Pelin mykistys ensin: mykkä peli ei lue mitään, millään
@@ -1309,7 +1313,7 @@ export function lueAaneen(teksti, nappi = null, {
   });
   puheAlkoi();
   if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu, {
-    kohdat, aloitusKappale, jatko,
+    kohdat, aloitusKappale, aloitusAlku, jatko,
   })) return true;
   if (lueLaitteella(puhuttava, nappi, kunLoppuu, persoona)) return true;
   // Mikään taustajärjestelmä ei ottanut luentaa — väistö heti pois.
@@ -1327,7 +1331,7 @@ export function lueAaneen(teksti, nappi = null, {
  * ja seuraava painallus yrittää uudestaan).
  */
 function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu = null, {
-  kohdat = null, aloitusKappale = 0, jatko = null,
+  kohdat = null, aloitusKappale = 0, aloitusAlku = 0, jatko = null,
 } = {}) {
   if (!puheTuettu()) return false;
   const merkki = {};
@@ -1335,6 +1339,8 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
+    // Luettu loppuun: seuraava painallus alkaa alusta, ei keskeytyskohdasta.
+    unohdaKortinKohta(nappi);
     seuranta?.pura();
     merkitseTila(nappi, false);
     suljeOhjain();
@@ -1356,6 +1362,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     persoona,
     sailio,
     aloitusKappale,
+    aloitusAlku,
     // Otsikolla alkavien kohtien edellä pidetään pidempi tauko
     // (omistajan tilaus 15.8.2026). Häntään jäänyt paljas otsikko
     // (kohta ilman leipätekstiä) lasketaan samaan joukkoon.
@@ -1366,6 +1373,8 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     onTila: (t) => {
       paivitaOhjain(merkki, t);
       seuranta?.paivita(t);
+      // Viimeksi kuultu kohta: keskeytetty kortti jatkaa tästä (talletaKortinKohta).
+      if (ajossa?.merkki === merkki && t.teksti) ajossa.kohta = { kappale: t.kappale, alku: t.alku };
     },
     onVirhe: (vaihe, virhe) => {
       if (ajossa?.merkki !== merkki) return;
@@ -1943,12 +1952,16 @@ function avaaOhjain(isanta, nappi) {
 function merkitseTila(nappi, lukee) {
   if (!nappi) return;
   nappi.classList?.toggle('lukee', Boolean(lukee));
+  paivitaKortinVu(nappi, lukee);
   // Lukijaäänellä nappi vipuaa soittimen (pysäytys on paneelissa);
   // laitteen omalla äänellä se pysäyttää.
   const soittimella = lukee && Boolean(ajossa?.soitin) && ajossa?.nappi === nappi;
-  const nimi = lukee
+  let nimi = lukee
     ? (soittimella ? OHJAIN_OTSIKKO : SEIS_OTSIKKO)
     : (nappi.dataset?.lukijaNimi || LUE_OTSIKKO);
+  // Nostokortti: kaiutin keskeyttää ja jatkaa (kortinPainallus).
+  if (nappi.__lukijaKortti && nappi.classList?.contains('keskeytetty')) nimi = JATKA_OTSIKKO;
+  else if (nappi.__lukijaKortti && lukee) nimi = soittimella ? KESKEYTA_OTSIKKO : SEIS_OTSIKKO;
   nappi.setAttribute?.('aria-pressed', lukee ? 'true' : 'false');
   nappi.setAttribute?.('aria-label', nimi);
   if ('title' in nappi) nappi.title = nimi;
@@ -2002,16 +2015,24 @@ function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
     teksti = napinTeksti(nappi);
   }
   if (!teksti) return false;
+  // Keskeytetty kortti jatkaa viimeksi kuullusta kohdasta (talletaKortinKohta).
+  const jatkoKohta = nappi.__lukijaKortti ? nappi.__lukijaKohta ?? null : null;
   const alkoi = lueAaneen(teksti, nappi, {
     kohdat,
     // Aloitus on aina otsikkoraja: sivun alku tai ylin näkyvä
     // väliotsikko (omistajan linjaus 25.8.2026, ks. aloitusKohta).
-    aloitusKappale: kohdat ? aloitusKohta(kohdat) : 0,
+    aloitusKappale: jatkoKohta ? jatkoKohta.kappale : (kohdat ? aloitusKohta(kohdat) : 0),
+    aloitusAlku: jatkoKohta?.alku ?? 0,
     jatko: nappi.__lukijaJatko ?? null,
   });
+  if (alkoi && nappi.__lukijaKortti) {
+    merkitseKeskeytys(nappi, false);
+    merkitseTila(nappi, true);
+  }
   // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja
-  // kappalehypyt); laitteen omalla äänellä paneelia ei tule.
-  if (alkoi) avaaOhjain(isanta, nappi);
+  // kappalehypyt); laitteen omalla äänellä paneelia ei tule. Kortilla
+  // paneelia ei ole: kaiutin itse keskeyttää ja jatkaa (kortinPainallus).
+  if (alkoi && !nappi.__lukijaKortti) avaaOhjain(isanta, nappi);
   return alkoi;
 }
 
@@ -2067,6 +2088,10 @@ export function liitaLukija(isanta, lahde, {
     nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KAIUTIN_IKONI}</span>`;
     nappi.addEventListener('click', (tapahtuma) => {
       tapahtuma.stopPropagation();
+      if (nappi.__lukijaKortti) {
+        kortinPainallus(nappi, isanta);
+        return;
+      }
       if (lukijaLukee(nappi)) {
         /*
          * Lukijaäänellä nappi VIPUAA soittimen näkyviin ja piiloon
@@ -2142,6 +2167,8 @@ export function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
   const teksti = napinTeksti(nappi);
   const riittaa = teksti.length >= vahimmais;
   nappi.hidden = !riittaa;
+  // Kortin säätöratas ja VU seuraavat kaiutinta: ilman luettavaa ei säätimiäkään.
+  if (nappi.__lukijaSaadin) nappi.__lukijaSaadin.hidden = !riittaa;
   if (!riittaa && lukijaLukee(nappi)) pysaytaLukija();
 }
 
@@ -2196,6 +2223,199 @@ const KORTIN_RIVILUOKKA = 'lukija-otsikkorivi';
 const KORTIN_LUE_OTSIKKO = 'Kuuntele kortti';
 const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
 
+/*
+ * ── NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x) ─────
+ *
+ *   [⚙] [kaiutin] [)))]
+ *
+ * 1. KESKEYTYS JA JATKO SAMASTA KOHDASTA. Kortin kaiuttimen napautus
+ *    kesken luennan pysäyttää sen (soittimen tauko: jatko on näytteen
+ *    tarkka), ja seuraava napautus jatkaa. Jos luenta katkeaa muualta
+ *    (toinen luenta, dialogi, postikortti), viimeksi kuultu kohta jää
+ *    napille (__lukijaKohta) ja seuraava napautus jatkaa sen palan
+ *    alusta. Loppuun luettu kortti alkaa taas alusta.
+ * 2. KESKEYTETTYNÄ KAIUTIN VILKKUU KEVYESTI (.keskeytetty, vain
+ *    läpinäkyvyys — iOS-sääntö: ei suodattimia eikä skaalausta).
+ * 3. SÄÄTÖRATAS kaiuttimen vasemmalla (omistaja 10.1x: lähellä kaiutinta):
+ *    lukunopeus (workerin `nopeus`) ja lukijan ääni pelinimellään
+ *    (js/puhe.js AANTEN_PELINIMET — moottorin tunnus ei näy pelaajalle).
+ *    Äänen valinta muutti pois kehittäjävalikosta; worker tottelee listan
+ *    ääntä ilman kehittäjäkoodia. Molemmat kuuluvat seuraavasta palasta.
+ * 4. VU-MITTARI KAIUTTIMESSA ITSESSÄÄN (omistaja 10.1x: "kuten isoisän
+ *    luennassa"): kortin kaiutin on sama kolmikaarinen kuvake kuin
+ *    #fact-kuuntele, ja sen omat ääniaallot sykkivät tasosta
+ *    (js/kaiutinmittari.js, oma mittari rinnakkain isoisän kanssa;
+ *    lähteenä lukijaäänen analysaattori js/puhe.js puheMittari).
+ */
+const SAADIN_OTSIKKO = 'Luennan nopeus ja ääni';
+const JATKA_OTSIKKO = 'Jatka kuuntelua';
+const KESKEYTA_OTSIKKO = 'Keskeytä kuuntelu';
+
+const SAADIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
+  + ' stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'
+  + '<circle cx="12" cy="12" r="2.6"/>'
+  + '<path d="M12 4.2v2.2M12 17.6v2.2M4.2 12h2.2M17.6 12h2.2M6.5 6.5l1.55 1.55M15.95 15.95l1.55 1.55'
+  + 'M6.5 17.5l1.55-1.55M15.95 8.05l1.55-1.55"/><circle cx="12" cy="12" r="5.4"/></svg>';
+
+// Sama kaiutin kuin isoisän luennassa (index.html #fact-kuuntele): runko ja kolme kaarta, jotka ovat VU-mittari.
+const KORTIN_KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
+  + ' stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'
+  + '<path d="M4.5 9.6v4.8h3.2l4.5 3.8V5.8L7.7 9.6Z" stroke-width="1.7"/>'
+  + '<path class="kaiutin-kaari" data-kaari="1" d="M14.6 10.2a2.4 2.4 0 0 1 0 3.6" stroke-width="1.5"/>'
+  + '<path class="kaiutin-kaari" data-kaari="2" d="M16.4 8.4a5 5 0 0 1 0 7.2" stroke-width="1.5"/>'
+  + '<path class="kaiutin-kaari" data-kaari="3" d="M18.2 6.6a7.6 7.6 0 0 1 0 10.8" stroke-width="1.5"/></svg>';
+
+const kortinVu = luoKaiutinmittari();
+
+/** Kaiuttimen keskeytysmerkki (vilkunta) ja saavutettava nimi. */
+function merkitseKeskeytys(nappi, keskeytetty) {
+  if (!nappi?.classList) return;
+  nappi.classList.toggle('keskeytetty', Boolean(keskeytetty));
+}
+
+/** Katkenneen kortin luennan kohta talteen (pysaytaLukija). */
+function talletaKortinKohta(nyt) {
+  const nappi = nyt?.nappi;
+  if (!nappi?.__lukijaKortti || nappi.isConnected === false || !nyt.kohta) return;
+  nappi.__lukijaKohta = nyt.kohta;
+  merkitseKeskeytys(nappi, true);
+  // Nimi (Jatka kuuntelua) päivittyy pysaytaLukijan merkitseTila-kutsussa.
+}
+
+function unohdaKortinKohta(nappi) {
+  if (!nappi?.__lukijaKortti) return;
+  nappi.__lukijaKohta = null;
+  merkitseKeskeytys(nappi, false);
+}
+
+/**
+ * Kortin kaiuttimen napautus: aloita, keskeytä tai jatka. Laitteen omalla
+ * äänellä (ei soitinta) keskeytys pysäyttää, ja jatko alkaa talteen
+ * jääneestä kohdasta, jos sellainen ehti syntyä.
+ */
+function kortinPainallus(nappi, isanta) {
+  if (lukijaLukee(nappi)) {
+    const soitin = ajossa?.soitin;
+    if (!soitin) {
+      pysaytaLukija();
+      return;
+    }
+    if (soitin.tauolla()) soitin.jatka();
+    else soitin.tauko();
+    merkitseKeskeytys(nappi, soitin.tauolla());
+    merkitseTila(nappi, true);
+    return;
+  }
+  kaynnistaLuenta(nappi, isanta);
+}
+
+/** Kortin kaiuttimen kaaret VU:na luennan ajaksi, muuten täysinä (kuten isoisän kaiutin). */
+function paivitaKortinVu(nappi, lukee) {
+  if (!nappi?.__lukijaSaadin) return;
+  if (lukee) kortinVu.kaynnista(nappi, puheMittari);
+  else if (kortinVu.kaynnissa()) kortinVu.pysayta();
+}
+
+/** Nopeus näytölle: 1,15× (pilkku kuten muuallakin pelissä). */
+function nopeusTeksti(arvo) {
+  return `${Number(arvo).toFixed(2).replace('.', ',')}×`;
+}
+
+/** Säätörattaan paneeli: nopeusliuku ja äänivalinta. Uusi napautus sulkee. */
+function avaaKortinSaadot(koti, rataas) {
+  const vanha = koti.querySelector?.(':scope > .lukija-saadot');
+  if (vanha) {
+    vanha.remove();
+    rataas.setAttribute('aria-expanded', 'false');
+    return;
+  }
+  const doc = koti.ownerDocument;
+  const paneeli = doc.createElement('div');
+  paneeli.className = 'lukija-saadot';
+  paneeli.addEventListener('click', (e) => e.stopPropagation());
+  paneeli.addEventListener('pointerdown', (e) => e.stopPropagation());
+
+  const nopeusRivi = doc.createElement('label');
+  nopeusRivi.className = 'lukija-saadot-rivi';
+  const nopeusNimi = doc.createElement('span');
+  nopeusNimi.textContent = 'Nopeus';
+  const liuku = doc.createElement('input');
+  liuku.type = 'range';
+  liuku.min = String(NOPEUS_MIN);
+  liuku.max = String(NOPEUS_MAX);
+  liuku.step = '0.05';
+  liuku.value = String(puheenNopeus());
+  liuku.setAttribute('aria-label', 'Luennan nopeus');
+  const arvo = doc.createElement('output');
+  arvo.textContent = nopeusTeksti(liuku.value);
+  liuku.addEventListener('input', () => { arvo.textContent = nopeusTeksti(liuku.value); });
+  liuku.addEventListener('change', () => {
+    liuku.value = String(asetaPuheenNopeus(liuku.value));
+    arvo.textContent = nopeusTeksti(liuku.value);
+  });
+  nopeusRivi.append(nopeusNimi, liuku, arvo);
+
+  const aaniRivi = doc.createElement('label');
+  aaniRivi.className = 'lukija-saadot-rivi';
+  const aaniNimi = doc.createElement('span');
+  aaniNimi.textContent = 'Ääni';
+  const valinta = doc.createElement('select');
+  valinta.setAttribute('aria-label', 'Lukijan ääni');
+  // Pelinimet (AANTEN_PELINIMET): arvo on sisäinen tunnus, teksti pelaajan nimi.
+  const vaihtoehto = (teksti, arvoNyt) => {
+    const o = doc.createElement('option');
+    o.value = arvoNyt;
+    o.textContent = teksti;
+    return o;
+  };
+  valinta.append(vaihtoehto(`${AANTEN_PELINIMET[STRIIMIAANI_OLETUS]} (oletus)`, ''));
+  for (const [aani, nimi] of Object.entries(AANTEN_PELINIMET)) {
+    if (aani !== STRIIMIAANI_OLETUS) valinta.append(vaihtoehto(nimi, aani));
+  }
+  valinta.value = striimiaani() ?? '';
+  valinta.addEventListener('change', () => {
+    asetaStriimiaani(valinta.value || null);
+    valinta.value = striimiaani() ?? '';
+  });
+  aaniRivi.append(aaniNimi, valinta);
+
+  paneeli.append(nopeusRivi, aaniRivi);
+  koti.appendChild(paneeli);
+  rataas.setAttribute('aria-expanded', 'true');
+  // Napautus paneelin ulkopuolelle sulkee sen (kerran-kuuntelija).
+  const sulje = (e) => {
+    if (paneeli.contains(e.target) || rataas.contains(e.target)) {
+      doc.addEventListener('pointerdown', sulje, { once: true, capture: true });
+      return;
+    }
+    paneeli.remove();
+    rataas.setAttribute('aria-expanded', 'false');
+  };
+  doc.addEventListener('pointerdown', sulje, { once: true, capture: true });
+}
+
+/** Säätöratas kortin kaiuttimen vasemmalle ja kaiuttimeen VU-kaaret (kerran per nappi). */
+function varustaKortinSaatimet(koti, nappi) {
+  if (!koti || !nappi || nappi.__lukijaSaadin) return;
+  const doc = koti.ownerDocument;
+  const rataas = doc.createElement('button');
+  rataas.type = 'button';
+  rataas.className = 'lukija-saadin';
+  rataas.title = SAADIN_OTSIKKO;
+  rataas.setAttribute('aria-label', SAADIN_OTSIKKO);
+  rataas.setAttribute('aria-expanded', 'false');
+  rataas.innerHTML = `<span class="icon-glyph viiva-ikoni">${SAADIN_IKONI}</span>`;
+  rataas.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Nykyinen rivi, ei varustushetken koti: kaksivaiheisella kortilla ratas siirtyy otsikkoriville.
+    avaaKortinSaadot(rataas.parentElement ?? koti, rataas);
+  });
+  nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KORTIN_KAIUTIN_IKONI}</span>`;
+  nappi.before?.(rataas);
+  nappi.__lukijaSaadin = rataas;
+  koti.classList?.add('lukija-saatimin');
+}
+
 /** Kortin kaiuttimen mykistysmerkki ja nimi pelin äänivalinnan mukaan. */
 function paivitaKortinKaiutin(nappi) {
   if (!nappi) return;
@@ -2239,10 +2459,40 @@ export function lisaaLukijanappi(kortti, {
   koti.classList?.add(KORTIN_RIVILUOKKA);
   // Kortin lööppi kuuluu luentaan (ks. kaynnistaLuenta).
   nappi.__lukijaOtsikko = true;
+  nappi.__lukijaKortti = true;
   nappi.dataset.lukijaKorttiNimi = otsikko;
+  varustaKortinSaatimet(koti, nappi);
   paivitaLukija(nappi);
   paivitaKortinKaiutin(nappi);
+  if (!rivi && koti === kortti) odotaKortinOtsikkorivia(kortti, nappi);
   return nappi;
+}
+
+/*
+ * KAKSIVAIHEINEN KORTTI (js/nostokuva.js: kuva ensin, "Lisää" latoo
+ * tekstin ja otsikkorivin): kutsuhetkellä otsikkoriviä ja tekstiä ei vielä
+ * ole, joten kaiutin jäi kortin juureen piiloon eikä noussut koskaan
+ * näkyviin (havaittu 27.9.2026 säätimiä tehdessä). Tarkkailija siirtää
+ * kaiuttimen säätimineen otsikkoriville heti kun se syntyy ja päivittää
+ * näkyvyyden tekstin mukaan.
+ */
+function odotaKortinOtsikkorivia(kortti, nappi) {
+  if (typeof MutationObserver !== 'function' || nappi.__lukijaRiviVahti) return;
+  const vahti = new MutationObserver(() => {
+    if (!nappi.isConnected) { vahti.disconnect(); return; }
+    const rivi = kortti.querySelector(KORTIN_OTSIKKORIVIT);
+    if (!rivi) return;
+    vahti.disconnect();
+    nappi.__lukijaRiviVahti = null;
+    const vanha = nappi.parentElement;
+    rivi.append(...[nappi.__lukijaSaadin, nappi].filter(Boolean));
+    vanha?.classList?.remove(KORTIN_RIVILUOKKA, 'lukija-saatimin');
+    rivi.classList.add(KORTIN_RIVILUOKKA, 'lukija-saatimin');
+    nappi.__lukijaIsanta = rivi;
+    paivitaLukija(nappi);
+  });
+  nappi.__lukijaRiviVahti = vahti;
+  vahti.observe(kortti, { childList: true, subtree: true });
 }
 
 /*
