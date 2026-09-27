@@ -1316,6 +1316,27 @@ namespace Matkakirja.Natiivi
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
                     Kirjaa($"iss: {IssTleLataaja.Tila()}, alapiste {p.Lat:F2}, {p.Lon:F2} ({utc:HH:mm:ss} UTC)");
                 }
+                else if (osat[0] == "astro" && osat.Length > 1)
+                {
+                    // Kuvaselain (Linssisepän suositus 28.9.): "astro kuva <tunnus|n>" avaa astronautin linssin kuvan
+                    // (napautuksen reitti), "astro naapuri 1|-1 [galleria]" viereiseen kohteeseen, "astro kierros" kertoo järjestyksen.
+                    var l = FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
+                    if (l == null) Kirjaa("astro: linssi ei auki (linssi satelliitti)");
+                    else if (osat[1] == "kuva" && osat.Length > 2)
+                    {
+                        var kohteet = l.Kohteet;
+                        var k = int.TryParse(osat[2], out int n) && n >= 0 && n < kohteet.Count ? kohteet[n] : kohteet.Find(x => x.Tunnus == osat[2]);
+                        if (k != null) l.Napauta(k.Tunnus);
+                        Kirjaa($"astro kuva: {k?.Tunnus ?? "ei kohdetta"} ({k?.Lat:F1}, {k?.Lon:F1})");
+                    }
+                    else if (osat[1] == "naapuri" && osat.Length > 2)
+                    {
+                        var k = l.Naapuri(osat[2] == "-1" ? -1 : 1, osat.Length > 3 && osat[3] == "galleria");
+                        Kirjaa($"astro naapuri: {k?.Tunnus ?? "-"}");
+                    }
+                    else if (osat[1] == "kierros")
+                        Kirjaa("astro kierros: " + string.Join(" ", l.KierrosTunnukset()));
+                }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)

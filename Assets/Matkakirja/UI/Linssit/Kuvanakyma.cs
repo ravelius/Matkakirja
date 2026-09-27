@@ -15,6 +15,12 @@
 //   oikea ala    minipulu astronauttina (LiviaKuva mini, leijuu itsestään);
 //                napautus kujertaa ja avaa minipulun kysymyskortin (MinipulunKortti:
 //                kohteen valmiit kysymykset + vapaa kysymys pulun chatin reittiä).
+//   ala keskellä ‹ › viereinen kohde kartalla (AstronauttiKierros: maailmankierros myötäpäivään).
+// KUVASELAIN (omistaja 27.9.2026 klo 23.5x Fablen kautta, Linssisepän suositus docs/raportit/astronautin-kuvaselain-20260928.md):
+// vaakapyyhkäisy ja napautus kuvan reunaan (ulommat 22 %) selaavat kuvia kuin galleriassa: ensin kohteen omat kuvat, sitten
+// viereisen kohteen kuvat maailmankierroksella, joten selaus ei pääty. Tausta on läpikuultava, ja linssin pallo liukuu kuvan
+// kohteen ylle (AstronauttiLinssi.AvaaKohde): kuvan takana hohtaa himmeästi maapallo juuri kuvan kohdalta, kuin ikkunasta.
+// Liu'ut 140 + 160 ms; pieni liike pois: suora vaihto.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -46,6 +52,14 @@ namespace Matkakirja.Natiivi
         float edellinenNapautus = -1f;
         readonly HashSet<string> nahdyt = new HashSet<string>();
         IVisualElementScheduledItem kelaus;
+
+        // Kuvaselain: kohdenapit, pyyhkäisy ja liuku.
+        const float ReunaOsuus = 0.22f, PyyhkaisyRaja = 0.2f, PyyhkaisyNopeus = 0.6f, LiukuUlosMs = 140f, LiukuSisaanMs = 160f;
+        readonly VisualElement kohdeNapit;
+        Vector2 alkuPiste, viimeinenPiste;
+        float alkuAika, vetoX;
+        bool pyyhkaisy, liukuu;
+        IVisualElementScheduledItem liuku;
 
         public bool Auki { get; private set; }
         public Havaintokohde Kohde => kohde;
@@ -94,6 +108,11 @@ namespace Matkakirja.Natiivi
             sulku.tooltip = "Sulje kuva";
 
             nauha = Rakenne.El("mk-astrokuva__nauha", turva);
+
+            // Kuvaselain: alhaalla keskellä ‹ › viereiseen kohteeseen kartalla (Linssisepän suositus 28.9.).
+            kohdeNapit = Rakenne.El("mk-astrokuva__kohteet", turva, PickingMode.Ignore);
+            Rakenne.Nappi("‹", "mk-astrokuva__kohdenappi", () => VaihdaKohde(-1), kohdeNapit).tooltip = "Edellinen kohde kartalla";
+            Rakenne.Nappi("›", "mk-astrokuva__kohdenappi", () => VaihdaKohde(1), kohdeNapit).tooltip = "Seuraava kohde kartalla";
 
             // Web .satelliitti-pulukulma (löydös 96): sarake oikeassa alakulmassa, kortti pulun yläpuolella 8 pt:n välein.
             pulukulma = Rakenne.El("mk-astrokuva__pulu", turva, PickingMode.Ignore);
@@ -169,7 +188,9 @@ namespace Matkakirja.Natiivi
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
             }
+            kohdeNapit.style.display = Linssi()?.KatsoNaapuri(1) != null ? DisplayStyle.Flex : DisplayStyle.None;
             Valitse(Mathf.Clamp(i, 0, Math.Max(0, k.Havainnot.Count - 1)));
+            Esilataa();
         }
 
         /// <summary>Piilottaa näkymän. ilmoitaLinssille = ✕-nappi: linssi kuulee (SuljeKuva).</summary>
@@ -182,6 +203,9 @@ namespace Matkakirja.Natiivi
             }
             if (!Auki) return;
             Auki = false;
+            liuku?.Pause();
+            liukuu = pyyhkaisy = false;
+            kuva.style.opacity = StyleKeyword.Null;
             juuri.style.display = DisplayStyle.None;
             pulukortti.Sulje();
             sormet.Clear();
@@ -426,6 +450,12 @@ namespace Matkakirja.Natiivi
             lava.CapturePointer(e.pointerId);
             if (sormet.Count == 1)
             {
+                alkuPiste = viimeinenPiste = e.localPosition;
+                alkuAika = Time.unscaledTime;
+                pyyhkaisy = false;
+                vetoX = 0f;
+                // Reunan napautus selaa (kuvaselain), joten kaksoisnapautuksen zoomi vain keskiosassa.
+                if (zoomi <= 1.001f && Reunalla(e.localPosition.x) != 0) { edellinenNapautus = -1f; AloitaEle(); return; }
                 // Kaksoisnapautus: 1× ↔ 2,5× napautuskohtaan.
                 float nyt = Time.unscaledTime;
                 if (edellinenNapautus > 0 && nyt - edellinenNapautus < 0.3f)
@@ -436,6 +466,12 @@ namespace Matkakirja.Natiivi
                 }
                 else edellinenNapautus = nyt;
             }
+            else if (pyyhkaisy)
+            {
+                // Toinen sormi kesken pyyhkäisyn: nipistys voittaa, kuva palaa paikalleen.
+                pyyhkaisy = false;
+                Liu(vetoX, 0f, 120f, 1f, null);
+            }
             AloitaEle();
         }
 
@@ -443,6 +479,19 @@ namespace Matkakirja.Natiivi
         {
             if (!sormet.ContainsKey(e.pointerId)) return;
             sormet[e.pointerId] = e.localPosition;
+            if (sormet.Count == 1) viimeinenPiste = e.localPosition;
+            // Kuvaselain: yhden sormen vaakaveto täysikokoisessa kuvassa kuljettaa kuvaa sormen mukana.
+            if (sormet.Count == 1 && zoomi <= 1.001f && !liukuu)
+            {
+                var d = (Vector2)e.localPosition - alkuPiste;
+                if (!pyyhkaisy && Mathf.Abs(d.x) > 10f && Mathf.Abs(d.x) > 1.3f * Mathf.Abs(d.y)) { pyyhkaisy = true; edellinenNapautus = -1f; }
+                if (pyyhkaisy)
+                {
+                    vetoX = d.x;
+                    kuva.style.translate = new Translate(siirto.x + vetoX, siirto.y);
+                    return;
+                }
+            }
             var (keski, etaisyys) = Ele();
             if (sormet.Count >= 2 && alkuEtaisyys > 1f)
             {
@@ -464,7 +513,120 @@ namespace Matkakirja.Natiivi
         {
             if (!sormet.Remove(id)) return;
             if (lava.HasPointerCapture(id)) lava.ReleasePointer(id);
+            if (sormet.Count == 0) PaataPyyhkaisy();
             AloitaEle();
+        }
+
+        // --- kuvaselain ---------------------------------------------------------------
+
+        /// <summary>Reunavyöhyke: −1 vasen, +1 oikea, 0 keskiosa (lavan leveydestä ulommat <see cref="ReunaOsuus"/>).</summary>
+        int Reunalla(float x)
+        {
+            float w = lava.contentRect.width;
+            if (!(w > 0)) return 0;
+            return x < w * ReunaOsuus ? -1 : x > w * (1 - ReunaOsuus) ? 1 : 0;
+        }
+
+        /// <summary>Sormi nousi: pyyhkäisy ratkeaa (matka tai vauhti) tai reunan napautus selaa.</summary>
+        void PaataPyyhkaisy()
+        {
+            float kesto = Mathf.Max(1f, (Time.unscaledTime - alkuAika) * 1000f);
+            if (pyyhkaisy)
+            {
+                pyyhkaisy = false;
+                float w = Mathf.Max(1f, lava.contentRect.width);
+                bool menee = Mathf.Abs(vetoX) > w * PyyhkaisyRaja || Mathf.Abs(vetoX) / kesto > PyyhkaisyNopeus;
+                if (menee) Selaa(vetoX < 0 ? 1 : -1);
+                else Liu(vetoX, 0f, 120f, 1f, null);   // takaisin paikalleen
+                return;
+            }
+            // Napautus reunaan (lyhyt, ei liikettä): edellinen / seuraava kuva.
+            if (zoomi <= 1.001f && !liukuu && kesto < 300f && (viimeinenPiste - alkuPiste).sqrMagnitude < 100f)
+            {
+                int r = Reunalla(alkuPiste.x);
+                if (r != 0) Selaa(r);
+            }
+        }
+
+        /// <summary>Galleria: kohteen seuraava tai edellinen kuva; kohteen lopussa jatketaan viereiseen kohteeseen.</summary>
+        public void Selaa(int suunta)
+        {
+            if (kohde == null || suunta == 0 || liukuu) return;
+            int j = indeksi + Math.Sign(suunta);
+            if (j >= 0 && j < kohde.Havainnot.Count) { Vaihda(suunta, () => Valitse(j)); return; }
+            var linssi = Linssi();
+            if (linssi == null) { Liu(vetoX, 0f, 120f, 1f, null); return; }
+            Vaihda(suunta, () => linssi.Naapuri(suunta, galleria: true));
+        }
+
+        /// <summary>Alanapit ‹ ›: viereinen kohde kartalla (sen oletuskuva); pallo liukuu uuden kohteen ylle.</summary>
+        public void VaihdaKohde(int suunta)
+        {
+            var linssi = Linssi();
+            if (linssi == null || liukuu) return;
+            Vaihda(suunta, () => linssi.Naapuri(suunta));
+        }
+
+        static AstronauttiLinssi Linssi()
+        {
+            var l = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
+            return l != null && l.AvoinKuva != null ? l : null;
+        }
+
+        /// <summary>
+        /// Liuku: nykyinen kuva ulos suunnan vastaiselle puolelle (140 ms), vaihto, uusi sisään toiselta puolelta
+        /// neljänneksen matkalta häivyttäen (160 ms). Pieni liike pois: suora vaihto.
+        /// </summary>
+        void Vaihda(int suunta, Action vaihto)
+        {
+            if (LinssiUi.VahennettyLiike()) { vetoX = 0f; vaihto(); Esilataa(); return; }
+            float w = Mathf.Max(1f, lava.contentRect.width);
+            Liu(vetoX, -Math.Sign(suunta) * w, LiukuUlosMs, 1f, () =>
+            {
+                vaihto();
+                Liu(Math.Sign(suunta) * w * 0.25f, 0f, LiukuSisaanMs, 0f, Esilataa);
+            });
+        }
+
+        /// <summary>Kuvan vaakasiirto <paramref name="alku"/> → <paramref name="loppu"/> (pt) ajassa <paramref name="ms"/>;
+        /// läpinäkyvyys <paramref name="alkuPeitto"/> → 1 (pehmeä käyrä).</summary>
+        void Liu(float alku, float loppu, float ms, float alkuPeitto, Action valmis)
+        {
+            liuku?.Pause();
+            liukuu = true;
+            float t0 = Time.unscaledTime;
+            liuku = kuva.schedule.Execute(() =>
+            {
+                float u = Mathf.Clamp01((Time.unscaledTime - t0) * 1000f / ms);
+                float s = u * u * (3f - 2f * u);
+                kuva.style.translate = new Translate(siirto.x + Mathf.Lerp(alku, loppu, s), siirto.y);
+                kuva.style.opacity = Mathf.Lerp(alkuPeitto, 1f, s);
+                if (u < 1f) return;
+                liuku.Pause();
+                liukuu = false;
+                vetoX = 0f;
+                kuva.style.opacity = StyleKeyword.Null;
+                valmis?.Invoke();
+            }).Every(16);
+        }
+
+        /// <summary>Seuraavat kuvat välimuistiin (Kuvat.Hae): kohteen naapurikuvat ja viereisten kohteiden ensimmäiset kuvat.</summary>
+        void Esilataa()
+        {
+            if (kohde == null) return;
+            void Hae(Havaintokohde k, int i)
+            {
+                if (k == null || i < 0 || i >= k.Havainnot.Count || string.IsNullOrEmpty(k.Havainnot[i].Kuva)) return;
+                Kuvat.Hae(k.Havainnot[i].Kuva, _ => { });
+            }
+            Hae(kohde, indeksi + 1);
+            Hae(kohde, indeksi - 1);
+            var l = Linssi();
+            if (l == null) return;
+            var s = l.KatsoNaapuri(1);
+            Hae(s, 0);
+            var e = l.KatsoNaapuri(-1);
+            Hae(e, e != null ? e.Havainnot.Count - 1 : -1);
         }
 
         void AloitaEle()

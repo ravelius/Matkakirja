@@ -217,8 +217,60 @@ namespace Matkakirja.Linssit.Astronautti
             if (!Auki || Vaihe == AvauksenVaihe.Musta) return;
             var kohde = aineisto.Kohteet.Find(k => k.Tunnus == tunnus);
             if (kohde == null) return;
+            AvaaKohde(kohde, kohde.OletusIndeksi);
+        }
+
+        // ---- Kuvaselain (omistajan toive 27.9.2026 klo 23.5x, Linssisepän suositus docs/raportit/astronautin-kuvaselain-20260928.md) ----
+
+        /// <summary>Kameran liuku kuvan kohteen ylle (s): kuvan takana himmeänä näkyvä pallo on juuri kuvan kohdalta.</summary>
+        public const float KuvaanAjoS = 0.9f;
+        /// <summary>Kameran korkeus kuvan takana avauskorkeuden osuutena (enintään): lepokorkeus, jolloin pallon reuna näkyy
+        /// pystyruudun ylä- ja alalaidassa kuin ikkunasta.</summary>
+        public const double KuvanKorkeus = 0.72;
+
+        int[] kierros;
+
+        /// <summary>Maailmankierros (AstronauttiKierros), lasketaan kerran ensimmäisellä käytöllä.</summary>
+        int[] Kierros => kierros ??= AstronauttiKierros.Laske(aineisto.Kohteet);
+
+        void AvaaKohde(Havaintokohde kohde, int indeksi)
+        {
             AvoinKuva = kohde;
-            nakyma.Kuva(kohde, kohde.OletusIndeksi);
+            nakyma.Kuva(kohde, indeksi);
+            if (double.IsNaN(kohde.Lat) || double.IsNaN(kohde.Lon)) return;
+            // Kamera kohteen ylle nykyisellä korkeudella, kuitenkin enintään lepokorkeudella (pallo täyttää ikkunan).
+            double h = Math.Min(y.Kamera.Korkeus, avaus * KuvanKorkeus);
+            y.AjaKamera(new Nakyma(kohde.Lat, kohde.Lon, h), y.VahennettyLiike ? 0f : KuvaanAjoS, Matkakirja.Linssit.Kamera.Kamerakayrat.Pehmea);
+        }
+
+        /// <summary>Aineiston kohteet (testikomento `astro kuva n`).</summary>
+        public List<Havaintokohde> Kohteet => aineisto.Kohteet;
+
+        /// <summary>Maailmankierros tunnuksina (testikomento `astro kierros`).</summary>
+        public IEnumerable<string> KierrosTunnukset()
+        {
+            foreach (int i in Kierros) yield return aineisto.Kohteet[i].Tunnus;
+        }
+
+        /// <summary>Naapurikohde maailmankierroksella avatun kuvan kohteesta (null, jos kuva ei ole auki).</summary>
+        public Havaintokohde KatsoNaapuri(int suunta)
+        {
+            if (AvoinKuva == null) return null;
+            int i = AstronauttiKierros.Naapuri(Kierros, aineisto.Kohteet.IndexOf(AvoinKuva), suunta);
+            return i >= 0 ? aineisto.Kohteet[i] : null;
+        }
+
+        /// <summary>
+        /// Viereinen kohde kartalla (alanapit ‹ ›: kohteen oletuskuva) tai gallerian jatko kohteen kuvien lopusta
+        /// (<paramref name="galleria"/>: eteenpäin ensimmäinen, taaksepäin viimeinen kuva). Kamera liukuu uuden kohteen ylle.
+        /// </summary>
+        public Havaintokohde Naapuri(int suunta, bool galleria = false)
+        {
+            if (!Auki || AvoinKuva == null || suunta == 0) return null;
+            var k = KatsoNaapuri(suunta);
+            if (k == null || ReferenceEquals(k, AvoinKuva)) return null;
+            AvaaKohde(k, galleria ? (suunta > 0 ? 0 : k.Havainnot.Count - 1) : k.OletusIndeksi);
+            return k;
         }
 
         public void SuljeKuva()

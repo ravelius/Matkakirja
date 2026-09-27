@@ -10,6 +10,8 @@
 //   ui linssi kuva [tunnus] [pulu]        astronautin kuvanäkymä: aineiston kohde (oletus ensimmäinen);
 //                                         pulu = minipulun kysymyskortti auki
 //                                         tai Commonsin esimerkkikuvat, jos aineisto ei lataudu
+//   ui linssi selaa 1|-1                  kuvaselain: seuraava/edellinen kuva (galleria, kohteen lopussa naapuriin)
+//   ui linssi kohde 1|-1                  kuvaselain: viereinen kohde kartalla (alanapit ‹ ›)
 //   ui linssi sumu p                      avaruussumun peitto 0…1 (0 = pois)
 //   ui linssi vertailu [arkki|taynna]     alapalkki esimerkkimailla / vertailuarkki / täyden listan ilmoitus
 //   ui linssi vertailu FIN SWE [ITA JPN]  vertailuarkki näillä mailla (2–4 × ISO3) ja maakäyrät
@@ -44,7 +46,7 @@ namespace Matkakirja.Natiivi
 {
     public static class LinssiKomennot
     {
-        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois";
+        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|selaa|kohde|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois";
 
         public static string Aja(UiNakymat ui, string loput)
         {
@@ -87,6 +89,12 @@ namespace Matkakirja.Natiivi
                 case "kuva":
                     UiKerros.Hae().StartCoroutine(AvaaKuva(l, a1 == "pulu" ? "" : a1, a1 == "pulu" || a2 == "pulu"));
                     return "ladataan aineistoa…";
+                case "selaa":
+                    l.Astronautti.Kuva.Selaa(a1 == "-1" ? -1 : 1);
+                    return l.Astronautti.Kuva.Kohde?.Tunnus;
+                case "kohde":
+                    l.Astronautti.Kuva.VaihdaKohde(a1 == "-1" ? -1 : 1);
+                    return l.Astronautti.Kuva.Kohde?.Tunnus;
                 case "sumu":
                     l.Astronautti.Sumu.Aseta(float.TryParse(a1, NumberStyles.Float, CultureInfo.InvariantCulture, out var p) ? p : 0.62f);
                     return null;
