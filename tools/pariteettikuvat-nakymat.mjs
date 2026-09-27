@@ -598,11 +598,11 @@ const linssiKaynnissa = (p) => {
 const TODENNUS = {
   aloitusportti: { nakyy: ['.start-btn'] },
   rahattomuus: {
-    // Palkki on pieni (≈ 109 × 21), joten nakyy-tarkistuksen minimikoko ei sovi: ehto mittaa itse.
+    // Palkki on pieni (≈ 93 × 11), joten nakyy-tarkistuksen minimikoko ei sovi: ehto mittaa itse.
     ehto: () => {
       const p = document.querySelector('.rahattomuuspalkki');
       const r = p && !p.hidden ? p.getBoundingClientRect() : null;
-      if (!r || r.width < 60 || r.height < 12) return 'palkki ei näy';
+      if (!r || r.width < 60 || r.height < 8) return 'palkki ei näy';
       return document.querySelectorAll('.rahattomuuspalkki .rahattomuus-lohko.palaa').length === 6 ? null : 'lohkoja ei 6';
     },
   },

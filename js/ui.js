@@ -10916,10 +10916,10 @@ export class UI {
    * yksi jokaista jäljellä olevaa kuuden tunnin jaksoa kohden (2 vrk =
    * RAHATTOMUUS_VUOROJA). Lohko sammuu, kun vuoro (6 h pelin aikaa) kuluu,
    * ja palkki katoaa, kun kassa selviää (js/game.js tarkistaRahattomuus).
-   * UI KEVYT: pieni pergamenttilappu keskellä yläreunaa paikkakyltin ja
-   * karttaselitteen välissä, ei peitä karttaa eikä ota osumia. PELKÄT
-   * PUNAISET NELIÖT ilman tekstiä (omistaja 15.2x); aika on yläpalkissa
-   * lyhyenä ("£0 · 2 vrk") ja ruudunlukijalle aria-labelissa.
+   * UI KEVYT (omistaja 15.2x): PELKÄT PUNAISET NELIÖT keskellä yläreunaa
+   * painikerivin alla — ei tekstiä, ei kehystä, sama ulkoasu kaikilla
+   * laitteilla; ei ota osumia. Aika on yläpalkissa lyhyenä ("£0 2 vrk")
+   * ja ruudunlukijalle aria-labelissa.
    */
   paivitaRahattomuuspalkki(piilossa = false) {
     const { game } = this;
@@ -10955,19 +10955,6 @@ export class UI {
     const sr = selite && !selite.hidden ? selite.getBoundingClientRect() : null;
     const kr = kehys?.getBoundingClientRect();
     palkki.style.top = sr && kr && sr.height > 0 ? `${Math.round(sr.bottom - kr.top + 6)}px` : '';
-    /*
-     * Leveällä ruudulla auki oleva matkapäiväkirja ulottuu keskelle
-     * (iPad 834): palkki keskitetään päiväkirjan ja selitteen väliin, jos
-     * se mahtuu sinne; muuten se pysyy kartan keskellä.
-     */
-    palkki.style.left = '';
-    const kortti = document.querySelector('.fact-card');
-    const fr = kortti && !kortti.hidden ? kortti.getBoundingClientRect() : null;
-    const pr = palkki.getBoundingClientRect();
-    if (fr && kr && fr.width > 0 && pr.left < fr.right + 8 && pr.bottom > fr.top) {
-      const oikea = sr && sr.width > 0 ? sr.left : kr.right;
-      if (oikea - fr.right >= pr.width + 16) palkki.style.left = `${Math.round((fr.right + oikea) / 2 - kr.left)}px`;
-    }
   }
 
   renderTurnPill() {
