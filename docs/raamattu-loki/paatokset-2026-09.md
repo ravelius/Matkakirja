@@ -7919,3 +7919,7 @@ Sisaltokirjuri 08.4x: 7/10 erikoismallista sisalto kunnossa (Tivoli taydellinen;
 ## MAALEHTI-QA PR 3382 (5 MAALEHTEA LUETTU, 2 PIENTA KORJAUSTA); #3206 JULKAISIJA REBASOI ITSE (27.9.2026 klo 08.51)
 
 Sisaltokirjuri 08.4x: maalehti-QA #3382 (4441/4441): CZE/IRL/NOR/LTU/SVK luettu, ei orpoja viittauksia; Vilnan oppi-johdanto laajennettu, SVK Kapustnica-sisennys. #3206 ajautui 5. kerran epasynkkaan → Julkaisija yhdistaa mainin itse junassa ja mergeaa; Sisaltokirjuri ei rebasoi enaa. Seuraava sisaltotyo odottaa omistajan suuntaa (kysytty 08.4x).
+
+## 1.0.28-KAANNOS d3fa3c78 (JUNA 1eff4f76) → LAITETESTAAJAN KIERROS; NOSTOT-HETI 934103a9 MITATTU; MAAKUNTAETENEMISEN KARTOITUS (27.9.2026 klo 08.52)
+
+Natiiviseppa (viestit tauolla, Fable luki transkriptin 08.5x): 1.0.28-kaannos d3fa3c78 = juna/b13 1eff4f76 (meri ei mukana → 1.0.29); Fable valitti Laitetestaajalle. Nostot heti (NostoKerros a→0, b→0) haarassa natiiviseppa/nostot-heti 934103a9: iPad Pro 13 Ranska 94 nostoa, mediaani 16,7 ms molemmissa, p95 16,8 vs 33,2 ms — ei hitaampi → 1.0.29. Maakuntaeteneminen natiivissa: Peli/KarttaMuste.cs + PeliOhjain.Muste.cs (Pelikoodari), Kartta/MaaKartta.cs Heraannyt/Herata (Natiiviseppa), UI/Kartuscha(.Muste).cs, MaakuntanimetKartalla.cs, Pulu.cs (Natiivi-UI), Linssit ElavaKartta/ElavaHerays/Herays (Linssiseppa) — Pelikoodari koordinoi osat.
