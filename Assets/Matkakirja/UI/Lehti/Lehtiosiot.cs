@@ -11,9 +11,9 @@
 // ensimmäinen noston kuva tai kansikuva; noston kuva kohdekartan jutusta tai nostokortin datasta), varalla kaupungin
 // nähtävyysjuttujen kuvat.
 //
-// Mitat (web, rem = 16): otsikko Kone lihava 12,8 versaalit välistys 0,14 em, ylä- ja alaviiva 1 px
-// rgba(70,51,31,.6), padding 4,8; rivi: kuva 92 × 72 kulma 4, rako 10,4, padding 8,8 0, alaviiva 1 px
-// rgba(70,51,31,.5) (webissä pisteviiva); linkki Luku lihava 16,8 #b03a2b; jutut 14,1 riviväli 1,35, "·"-luetelma.
+// KEVYT (omistaja 27.9.2026 klo 11.2x: linkit liian raskaan näköiset): ohut rivi — pieni kuva 40 × 40, osion nimi
+// Luku 15,5 #b03a2b ja yhdellä alarivillä enintään kaksi jutun nimeä "·"-erottimin (13,2, himmeä muste); ei
+// "… ja n muuta" -riviä (osion linkki vie loppuihin), ei laatikoita. Otsikko "LEHDEN OSIOT" kuten webissä.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +25,8 @@ namespace Matkakirja.Natiivi
     public static class Lehtiosiot
     {
         public const string Otsikko = "LEHDEN OSIOT";
-        /// <summary>Web OSIOHAKEMISTON_OTSIKOITA.</summary>
-        public const int Otsikoita = 4;
+        /// <summary>Jutun nimiä osion alla (omistaja 11.2x: 1–2; web OSIOHAKEMISTON_OTSIKOITA 4).</summary>
+        public const int Otsikoita = 2;
 
         sealed class Juttu
         {
@@ -142,17 +142,8 @@ namespace Matkakirja.Natiivi
                 }, tekstit);
                 Kirjasimet.Aseta(linkki, Kirjasin.LukuLihava);
                 var lista = Rakenne.El("mk-lehti__osio-jutut", tekstit, PickingMode.Ignore);
-                foreach (var j in o.Jutut.Take(Otsikoita)) JuttuRivi(lista, j, kaanna, avaaNosto);
-                int loput = o.Jutut.Count - Otsikoita;
-                if (loput > 0)
-                {
-                    VisualElement lisa = null;
-                    lisa = JuttuRivi(lista, new Juttu { Otsikko = $"… ja {loput} muuta" }, kaanna, avaaNosto, () =>
-                    {
-                        lisa.RemoveFromHierarchy();
-                        foreach (var j in osio.Jutut.Skip(Otsikoita)) JuttuRivi(lista, j, kaanna, avaaNosto);
-                    });
-                }
+                bool eka = true;
+                foreach (var j in o.Jutut.Take(Otsikoita)) { JuttuRivi(lista, j, kaanna, avaaNosto, eka); eka = false; }
                 // Kuva: ensimmäinen käyttämätön ehdokas, varalla nähtävyysjutut (web kaytetyt).
                 var kuva = o.Ehdokkaat.Concat(varat).FirstOrDefault(k => !kaytetyt.Contains(Avain(k)));
                 if (kuva != null) { kaytetyt.Add(Avain(kuva)); AsetaKuva(kuvapaikka, kuva); }
@@ -173,13 +164,12 @@ namespace Matkakirja.Natiivi
                 }));
         }
 
-        static VisualElement JuttuRivi(VisualElement lista, Juttu j, Action<int> kaanna, Action<KaupunkiNosto> avaaNosto, Action oma = null)
+        /// <summary>Jutun nimi alarivillä (ennen muita "·"-erotin); napautus avaa sivun tai noston.</summary>
+        static void JuttuRivi(VisualElement lista, Juttu j, Action<int> kaanna, Action<KaupunkiNosto> avaaNosto, bool eka)
         {
-            var rivi = Rakenne.El("mk-lehti__osio-juttu", lista, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("·", "mk-lehti__osio-piste", rivi), Kirjasin.Luku);
-            var b = Rakenne.Nappi(j.Otsikko, "mk-lehti__osio-juttunappi", oma ?? (() => Avaa(j, kaanna, avaaNosto)), rivi);
+            if (!eka) Kirjasimet.Aseta(Rakenne.Teksti("·", "mk-lehti__osio-piste", lista), Kirjasin.Luku);
+            var b = Rakenne.Nappi(j.Otsikko, "mk-lehti__osio-juttunappi", () => Avaa(j, kaanna, avaaNosto), lista);
             Kirjasimet.Aseta(b, Kirjasin.Luku);
-            return rivi;
         }
 
         static void Avaa(Juttu j, Action<int> kaanna, Action<KaupunkiNosto> avaaNosto)

@@ -2724,22 +2724,22 @@
     color: #211d18;
 }
 
-/* Web .lehti-osio: kuva 5,75 rem + teksti, rako 0,65 rem, padding 0,55 rem 0, pisteviiva (UITK: yhtenäinen, vaaleampi). */
+/* KEVYT osiorivi (omistaja 27.9. klo 11.2x): ohut rivi, pieni kuva, nimi + enintään kaksi juttua yhdellä rivillä. */
 .mk-lehti__osio {
     flex-direction: row;
-    align-items: flex-start;
-    padding: 8.8px 0;
+    align-items: center;
+    padding: 6px 0;
     border-bottom-width: 1px;
-    border-color: rgba(70, 51, 31, 0.3);
+    border-color: rgba(70, 51, 31, 0.16);
 }
 
 .mk-lehti__osio-kuva {
     flex-shrink: 0;
-    width: 92px;
-    height: 72px;
-    margin-right: 10.4px;
-    border-radius: 4px;
-    background-color: rgba(70, 51, 31, 0.12);
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 3px;
+    background-color: rgba(70, 51, 31, 0.08);
     -unity-background-scale-mode: scale-and-crop;
 }
 
@@ -2749,7 +2749,6 @@
     min-width: 0;
 }
 
-/* Web button.lehti-osio-linkki: Luku lihava 1,05 rem #b03a2b, ei nappipohjaa. */
 .mk-lehti__osio-linkki {
     min-height: 0;
     margin: 0;
@@ -2761,43 +2760,45 @@
 }
 
 .mk-lehti__osio-linkki .mk-nappi__teksti {
-    font-size: 16.8px;
+    font-size: 15.5px;
     color: #b03a2b;
     white-space: normal;
 }
 
-/* Web .lehti-osio-jutut: 0,88 rem, riviväli 1,35, "·"-luetelma rgba(70,51,31,.6). */
 .mk-lehti__osio-jutut {
-    margin-top: 3.2px;
-}
-
-.mk-lehti__osio-juttu {
     flex-direction: row;
-    align-items: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1px;
 }
 
 .mk-lehti__osio-piste {
     flex-shrink: 0;
-    margin: 0 4.2px 0 0;
+    margin: 0 5px;
     padding: 0;
-    font-size: 14.1px;
-    color: rgba(70, 51, 31, 0.6);
+    font-size: 13.2px;
+    color: rgba(70, 51, 31, 0.45);
 }
 
 .mk-lehti__osio-juttunappi {
     flex-shrink: 1;
+    min-width: 0;
     min-height: 0;
     margin: 0;
-    padding: 0 0 2.4px 0;
+    padding: 0;
     border-width: 0;
     border-radius: 0;
     background-color: rgba(0, 0, 0, 0);
     justify-content: flex-start;
+    overflow: hidden;
 }
 
 .mk-lehti__osio-juttunappi .mk-nappi__teksti {
-    font-size: 14.1px;
-    color: #211d18;
-    white-space: normal;
-    -unity-text-align: upper-left;
+    font-size: 13.2px;
+    color: rgba(33, 29, 24, 0.72);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -unity-text-align: middle-left;
 }

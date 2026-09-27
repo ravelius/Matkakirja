@@ -4,8 +4,10 @@
 // Saapuessa mikään ei avaudu itsestään, joten pelaajan kaupungin ja nappulan viereen tulee pieni kortti (herokuva +
 // nimi, 64 × 64 pt), joka napautettaessa kasvaa avauskortiksi (Avauskortti, 280 ms) ja sulkeutuessa palaa samaan
 // paikkaan. Paikka väistää nostojen merkit, kaupungin pisteen ja nappulan sekä ruudun kalusteet (yläpalkki,
-// matkakirjan paikkarivi, Pulu, Liiku); asennot etäisyysrenkaittain 16, 40, 70, 100 pt, kussakin yläoikea → ylävasen
-// → oikea → vasen → alaoikea (web KUTSUN_ASENNOT). Ei mahdu mihinkään → ei kutsua. Piilossa, kun kamera on maatasoa
+// matkakirjan paikkarivi, Pulu, Liiku); asennot etäisyysrenkaittain, kussakin yläoikea → ylävasen → oikea → vasen →
+// alaoikea (web KUTSUN_ASENNOT). Omistaja 27.9. klo 11.2x: kutsu lähemmäs kaupunkia — renkaat 8, 20, 36 pt (web 16–100),
+// ja kun nostot (täytenä nimineen, maailma auki) peittävät kaikki, toinen kierros väistää vain kalusteet, kaupungin
+// pisteen ja nappulan (kutsu saa peittää nostomerkin). Ei mahdu mihinkään → ei kutsua. Piilossa, kun kamera on maatasoa
 // kauempana (NostoKerros.ZoomKerroin < 0,95), linssissä, muussa tilassa kuin kartalla ja avauskortin ollessa auki.
 // Kaupungilla pitää olla nähtävyyskartta tai turisti-info (web kaupungillaKohdekartta || kaupunginMatkailijalle).
 //
@@ -24,7 +26,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Web KUTSUN_KERROIN: nostojen karttakerroin, jonka alla kutsu on piilossa.</summary>
         const float Kerroin = 0.95f;
         const float Reunavara = 4f, EsiinMs = 350f;
-        static readonly float[] Renkaat = { 16f, 40f, 70f, 100f };
+        static readonly float[] Renkaat = { 8f, 20f, 36f };
 
         readonly UiKerros kerros;
         readonly VisualElement juuri, kuva;
@@ -105,6 +107,7 @@ namespace Matkakirja.Natiivi
             var paikallinen = juuri.worldBound.position;
             esteet.Clear();
             ui.Nostot.Laatikot(esteet);
+            int nostoja = esteet.Count;
             float ylapalkki = kerros.Reunat(UiKerros.Nostot).y + Ylapalkki.Varaus;
             esteet.Add(new Rect(paikallinen, new Vector2(W, ylapalkki)));
             if (ui.Matkakirja != null && ui.Matkakirja.Nakyy) esteet.Add(ui.Matkakirja.Laatikko);
@@ -112,24 +115,31 @@ namespace Matkakirja.Natiivi
             esteet.Add(ui.Matkavalinta.LiikuLaatikko);
             esteet.Add(new Rect(paikallinen + new Vector2(p.x - 14f, p.y - 46f), new Vector2(28f, 56f)));
             Rect? valittu = null;
-            foreach (var v in Renkaat)
+            for (int kierros = 0; kierros < 2 && !valittu.HasValue; kierros++)
             {
-                foreach (var a in new[]
+                foreach (var v in Renkaat)
                 {
-                    new Vector2(v, -v - Koko), new Vector2(-v - Koko, -v - Koko),
-                    new Vector2(v + 4f, -Koko / 2f), new Vector2(-v - 4f - Koko, -Koko / 2f), new Vector2(v, v),
-                })
-                {
-                    var rr = new Rect(p.x + a.x, p.y + a.y, Koko, Koko + 14f);
-                    if (rr.xMin < Reunavara || rr.yMin < Reunavara || rr.xMax > W - Reunavara || rr.yMax > H - Reunavara) continue;
-                    var maailma = new Rect(rr.position + paikallinen, rr.size);
-                    bool osuu = false;
-                    foreach (var e in esteet) if (e.width > 0 && e.height > 0 && e.Overlaps(maailma)) { osuu = true; break; }
-                    if (osuu) continue;
-                    valittu = rr;
-                    break;
+                    foreach (var a in new[]
+                    {
+                        new Vector2(v, -v - Koko), new Vector2(-v - Koko, -v - Koko),
+                        new Vector2(v + 4f, -Koko / 2f), new Vector2(-v - 4f - Koko, -Koko / 2f), new Vector2(v, v),
+                    })
+                    {
+                        var rr = new Rect(p.x + a.x, p.y + a.y, Koko, Koko + 14f);
+                        if (rr.xMin < Reunavara || rr.yMin < Reunavara || rr.xMax > W - Reunavara || rr.yMax > H - Reunavara) continue;
+                        var maailma = new Rect(rr.position + paikallinen, rr.size);
+                        bool osuu = false;
+                        for (int i = kierros == 0 ? 0 : nostoja; i < esteet.Count; i++)
+                        {
+                            var e = esteet[i];
+                            if (e.width > 0 && e.height > 0 && e.Overlaps(maailma)) { osuu = true; break; }
+                        }
+                        if (osuu) continue;
+                        valittu = rr;
+                        break;
+                    }
+                    if (valittu.HasValue) break;
                 }
-                if (valittu.HasValue) break;
             }
             if (!valittu.HasValue) { Nayta(false); return; }
             float x = Mathf.Round(valittu.Value.x), y = Mathf.Round(valittu.Value.y);
