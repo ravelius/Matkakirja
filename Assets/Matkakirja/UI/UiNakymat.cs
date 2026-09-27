@@ -233,11 +233,11 @@ namespace Matkakirja.Natiivi
             bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki
                 || Kohdekartan.KortistaAuki);
             // Löydös 132 (Natiivi-UI): Kokoruutu, kun noston kuva on kokoruudulla (löydös 150); muut näkymät Kortti.
-            // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää ≥ 85 % ruudusta (iPhone), kartta
+            // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää ≥ 70 % ruudusta (iPhone 17: opas 77 %), kartta
             // pysäytetään kuten kokoruudun kuvan alla (kaappaus kerran, pallon kamera pois; reunat pysäytyskuvana), jolloin
             // vieritys ei maksa pallon, Cesiumin ja elävien elementtien piirtoa. iPadin kapeampi arkki ei pysäytä.
-            bool arkkiPeittaa = (Nahtavyydet.Auki && Peittoosuus(Nahtavyydet.Arkki) >= 0.85f)
-                || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && Peittoosuus(Linssit.Valitsin.Paneeli) >= 0.85f);
+            bool arkkiPeittaa = (Nahtavyydet.Auki && Peittoosuus(Nahtavyydet.Arkki) >= ArkkiPeittoRaja)
+                || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && Peittoosuus(Linssit.Valitsin.Paneeli) >= ArkkiPeittoRaja);
             var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
             if (taso != KuvaSumennus.Ei) s = true;
             if (taso != KuvaTaso) { KuvaTaso = taso; KuvaTasoMuuttui?.Invoke(taso); }
@@ -584,6 +584,9 @@ namespace Matkakirja.Natiivi
                 if (virhe != null) Tilarivi.Viesti(virhe);
             } : (System.Action)null, () => UusiMatka(o));
         }
+
+        /// <summary>Arkin peitto, josta kartta pysäytetään (iPhone 17 opas 0,77; iPadin kapea arkki ~0,5 ei pysäytä).</summary>
+        const float ArkkiPeittoRaja = 0.7f;
 
         /// <summary>Elementin osuus paneelin pinta-alasta (0 = ei näy).</summary>
         static float Peittoosuus(UnityEngine.UIElements.VisualElement e)
