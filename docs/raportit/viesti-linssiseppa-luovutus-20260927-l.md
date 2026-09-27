@@ -6,6 +6,19 @@ Karttaseppä local_eec7f158-d9f3-4b93-9368-c50935bd19ab. S = /private/tmp/claude
 74aa735c-cd53-4417-8c06-91819a4a5f3a/scratchpad (skriptit ottavat S:n ympäristöstä; päivitä polku uudessa sessiossa).
 Jos sait nollauksen jälkeen vanhoja viestejä tai agenttien raportteja, ne kuuluvat alla oleviin eriin.*
 
+## PÄIVITYS 11.2x (keskustelu 1aa2bb77) — KAIKKI MERGE-PYYNNÖT LÄHETETTY
+
+- Natiivisepälle: linssiseppa/meri-tuotanto **0a9fdba5**, linssiseppa/maakunta-taytto **abfb54e5** (ilmoitettu uusi kärki) ja
+  mallinseppa/lahitaso **be353929** (= erikoismallit3 + natiiviseppa/lahitaso + Lahi 9 erikoismallille ja 14 symbolille +
+  Matterhorn v2; korvaa erillisen erikoismallit3-pyynnön). Laitteella a109dfdd ja 2d04e085, 0 poikkeusta.
+- Mergen jälkeen: ilmoita Pelikoodarille (MaakuntaHeraa-siivous), poista worktreet proto-lahitaso, proto-mallinseppa ja
+  proto-linssiseppa (git worktree remove, haarat mergetty) ja harness-kansiot tarvittaessa.
+- Natiivisepällä avoinna: lähikynnys pienissä maissa (CHE ZoomKerroin 1,04 → Matterhornin lähitaso ei kytkeydy), nimiön
+  väistö mallin päältä (Matterhorn, Stonehenge, Brandenburg), Malja Kinderdijkin päällä.
+- Saapumisen uusi käytös (pysyvät näkyvissä) ilman kuvaa: lyhyt ajo odottaa vapaata simulaattoria taustalla
+  (lokit/mallinseppa-laite-20260927-k, app $S/era5-app) → kuva Fablelle.
+- Korjausehdokas: Vuoren LOD0 juuren käännetyt tahkot.
+
 ## PÄIVITYS 10.4x (keskustelu 1aa2bb77)
 
 - **Fablen päätökset 10.3x:** (1) Matterhorn v2 hoikemmalla koukkuhuipulla ennen erikoismallit3:n merge-pyyntöä + nimiö pois
