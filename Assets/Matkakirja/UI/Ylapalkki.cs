@@ -428,7 +428,9 @@ namespace Matkakirja.Natiivi
                     + rahaton.resolvedStyle.marginLeft;
             if (float.IsNaN(kiintea) || teksti <= 0) return;
             float koko = matala ? 12.48f : 14f; // matala: webin iPhone-pillerin koko
-            while (koko > 11f && kiintea + teksti * koko / nyt + 2f > pilleriMax) koko -= 0.5f;
+            // Rahattomuuden varoitus mukana: kutistus 10 px:iin asti, jotta päivä mahtuu yhä pilleriin.
+            float alaraja = rahaton.style.display == DisplayStyle.Flex ? 10f : 11f;
+            while (koko > alaraja && kiintea + teksti * koko / nyt + 2f > pilleriMax) koko -= 0.5f;
             if (!Mathf.Approximately(koko, nyt)) pilleri.style.fontSize = koko;
             rahaton.style.fontSize = koko * 0.85f;
         }
@@ -650,7 +652,9 @@ namespace Matkakirja.Natiivi
             else raha.style.unityFontDefinition = StyleKeyword.Null;
             float koko = raha.resolvedStyle.fontSize;
             if (!float.IsNaN(koko) && koko > 0) rahaton.style.fontSize = koko * 0.85f;
-            rahaton.text = varoitus ? "rahat loppu · " + rahatonVrk + " vrk" : "";
+            // iPhonen pilleri on Dynamic Islandin vieressä (~104 pt): "0£ 2 vrk 1/80" (punaisena), muualla webin teksti.
+            bool kapea = kelluvaNyt == true || matalaNyt == true;
+            rahaton.text = !varoitus ? "" : kapea ? rahatonVrk + " vrk" : "rahat loppu · " + rahatonVrk + " vrk";
             rahaton.style.display = varoitus ? DisplayStyle.Flex : DisplayStyle.None;
         }
 

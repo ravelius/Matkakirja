@@ -1109,7 +1109,7 @@ namespace Matkakirja.Natiivi
             otsikko = Rakenne.Teksti(Otsikko, "mk-kortti__otsikko mk-huipennus__otsikko", kortti.Sisus);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             teksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
-            var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
+            var napit = Rakenne.El("mk-kortti__napit mk-huipennus__napit", kortti.Sisus, PickingMode.Ignore);
             // Voitossa "Jatka vaeltamista" (sulkee); loppukortissa "Jatka viimeisestä tallennuksesta" (web winner-roam).
             jatka = Rakenne.Nappi("Jatka vaeltamista", "mk-nappi--haamu", () => { var j = jatkaPainettu; Sulje(); j?.Invoke(); }, napit, Ikonit.Viiva["kompassi"]);
             jatkaTeksti = jatka.Q<Label>(className: "mk-nappi__teksti");

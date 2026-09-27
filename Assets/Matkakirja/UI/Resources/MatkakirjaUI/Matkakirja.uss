@@ -2299,6 +2299,23 @@
     -unity-text-align: middle-center;
 }
 
+/* Loppukortin pitkä "Jatka viimeisestä tallennuksesta" (web winner-roam kahdella rivillä): napit rivittyvät ja
+   napin teksti saa taittua, jotteivät Jaa ja Uusi peli jää sen päälle kapealla puhelimella. */
+.mk-huipennus__napit {
+    flex-wrap: wrap;
+}
+
+.mk-huipennus__napit > .mk-nappi {
+    flex-shrink: 1;
+    min-width: 0;
+    margin-top: 8px;
+}
+
+.mk-huipennus__napit .mk-nappi__teksti {
+    white-space: normal;
+    flex-shrink: 1;
+}
+
 /* ◈-aarremerkki viivaikonina (Aloitusnakyma.Merkki). */
 .mk-juliste__merkki.mk-ikoni {
     width: 13px;
