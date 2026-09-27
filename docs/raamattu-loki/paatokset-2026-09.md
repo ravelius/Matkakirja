@@ -7831,3 +7831,7 @@ Pelikoodari 07.4x: Pulun striimivirkkeiden vali 450 → 220 ms, #3374 (v2299) ju
 ## MERI V3 1.0.29:AAN (8 UUTTA LAJIA ~09.3x); ERIKOISMALLIT2 01810d0c 1.0.28-JUNAAN; SEURAAVAT MAAT BEL/CHE/AUT (27.9.2026 klo 07.44)
 
 Linssiseppa 07.5x: meri tuotantoon vaatii 8 uutta lajia + valintalogiikan (maan meret → 1–2 lajia, ≤ 2 ruudulla; merikohdat.json 29 maata/129 kohtaa) → laitekuvat ~09.3x, merge 1.0.29. Era 2 merge-pyynto mallinseppa/erikoismallit2 01810d0c lahetetty → Fable: 1.0.28-junaan jos unity-tarkistus 0, kaannos heti. Seuraavat maat: Belgia (Bruggen kellotorni), Sveitsi (Matterhorn), Itavalta (Hohensalzburg), elamanideat ensin Fablelle.
+
+## OMISTAJA 07.5x: PROGRESSIIVINEN PUHEEN SOITTO (WEB ENSIN); ERIKOISMALLIT BEL/CHE/AUT IDEAT HYVAKSYTTY (27.9.2026 klo 07.52)
+
+Omistaja kysyi 07.4x kestaako Pulun aloitus pidempaan jos ensimmainen era on pidempi: kylla nykyisella soittimella (lataa koko palan; xAI generoi ~3–4 x reaaliaikaa: 300 mrk 1–2 s, 1 000 mrk 4–5 s, 2 400 mrk 35 s), siksi virkkeittain-striimi. Omistaja paatti 07.5x kortilla: progressiivinen soitto (MediaSource, 1. aani 0,3–0,5 s palan pituudesta riippumatta) — web ensin Pelikoodarille (etusijalle), natiivi perassa Natiivi-UI:lle samalla mallilla; kuulonayte omistajalle. Erikoismallit era 3 elamanideat hyvaksytty: Bruggen kellotorni (kanavavene, kellopeli + nuottikipinat), Matterhorn (lipupilvi, alppihehku, hammasratasjuna, Zermattin valot), Hohensalzburg (koysirata, Salzburgin harka urut + kyyhkyparvi).
