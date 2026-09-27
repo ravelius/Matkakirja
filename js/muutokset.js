@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2334, teksti: 'Livian lyhyet tervehdykset päätoimittajan sanoin' },
   { v: 2333, teksti: 'v2333: Livian avausesittely kerran, uusilla mat… (#3431)' },
   { v: 2332, teksti: 'v2331: Rahattomuuspalkki — jäljellä oleva aika… (#3421)' },
   { v: 2331, teksti: 'Yhtenäistä 22 nähtävyysminiatyyrin värisävyt (#3425)' },
