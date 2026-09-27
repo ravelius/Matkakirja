@@ -34,7 +34,7 @@ voimassa.
 - **Odottaa mergeä (Julkaisija ilmoittaa):** #3351 (B3-pikkukuvat MDA/UKR; #3349/#3350 jo mainissa) ja #3353 (löydös 178:
   kohdekartat.kohteet[].tyyppi + kartalla; esitarkistettu PR-haarasta: 70 tarinakohdetta, kaikki natiivin Avattava,
   skeema 1.50 ok, testit 96/0). Mergen jälkeen: ämpäritarkistus, pikkukuvien ja tarinakohteiden määrä tuotannosta, rivi Fablelle.
-- **ISS-TLE:** ajastettu 18.17 UTC -ajo ei lähtenyt (uuden työnkulun viive?). Julkaisija tarkistaa 00.17 UTC -ajon; jos ei lähde,
+- **ISS-TLE:** cron toimii (ensimmäinen ajastettu ajo 21:14Z 26.9., success).
   lisää varmistus vie-sisalto.yml:n rinnalle (TLE > 6 h vanha → haku).
 - Raportti docs/raportit/maakuntanostot-ilman-kuvaa-20260926.md (170, Eurooppa-osio erikseen) tässä haarassa.
 - Omat worktreet: ei. Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-vaihto (siirtoseppa/sisalto-vaihtui) — poista mergen jälkeen.
