@@ -388,3 +388,318 @@
 .mk-kohdekartta-kokoruutu__kortti--levitetty .mk-kohdekartta-kokoruutu__lahde {
     display: none;
 }
+
+/* --- KAUPUNGIN AVAUSKORTTI (web v2296 css/kaupunkinosto.css .kaupunkipopup-avaus, Avauskortti.cs) -------------- */
+
+.mk-avauskortti-alue {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Web .kaupunkipopup + -avaus: #f5f0e2, reuna rgba(122,85,20,.32), kulma 16, varjo; ei sisäreunusta. */
+.mk-avauskortti {
+    position: absolute;
+    flex-direction: column;
+    overflow: hidden;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 16px;
+    background-color: #f5f0e2;
+    color: #211d18;
+}
+
+.mk-avauskortti__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-avauskortti__loppu {
+    flex-shrink: 0;
+    height: 13.6px;
+}
+
+/* Hero: 16 % ruudun korkeudesta (Avauskortti.Mitoita), pohja #d9ccb0 kunnes kuva saapuu, cover. */
+.mk-avauskortti__hero {
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #d9ccb0;
+}
+
+.mk-avauskortti__herokuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+    transition-property: opacity;
+    transition-duration: 0.12s;
+}
+
+/* Web .avauskortti-nimi: 600 1.9rem Luku, #fff8ec, text-shadow 0 2px 8px rgba(0,0,0,.65), vasen 0.9rem ala 0.45rem. */
+.mk-avauskortti__nimi {
+    position: absolute;
+    left: 14.4px;
+    bottom: 7.2px;
+    margin: 0;
+    padding: 0;
+    font-size: 30.4px;
+    color: #fff8ec;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+/* Web .avauskortti-esittely: padding 0.65rem 0.9rem 0.5rem. */
+.mk-avauskortti__esittely {
+    padding: 10.4px 14.4px 8px 14.4px;
+    align-items: flex-start;
+}
+
+.mk-avauskortti__teksti {
+    margin: 0;
+    padding: 0;
+    font-size: 15.5px;
+    white-space: normal;
+    color: #211d18;
+}
+
+/* Web .avauskortti-lehti: 0.9rem type-kirjasin #b03a2b, alaviiva 1 px, ei nappipohjaa. */
+.mk-avauskortti__lehti {
+    min-height: 0;
+    margin: 4.8px 0 0 0;
+    padding: 0 0 1px 0;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    border-color: #b03a2b;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+}
+
+.mk-avauskortti__lehti .mk-nappi__teksti {
+    font-size: 14.4px;
+    color: #b03a2b;
+}
+
+/* Web .avauskortti-kartta: margin 0 0.9rem, reuna rgba(122,85,20,.35), kulma 8, korkeus 35svh (Mitoita). */
+.mk-avauskortti__kartta {
+    flex-shrink: 0;
+    overflow: hidden;
+    margin: 0 14.4px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+    border-radius: 8px;
+}
+
+/* Pelkkä kartta (web .kaupunkikartta-pelkka): täyttää kaistan, ei kehyksen omaa reunaa, lähde kulmassa kartan päällä. */
+.mk-kohdekartta--pelkka {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.mk-kohdekartta--pelkka > .mk-kohdekartta__kehys {
+    flex-shrink: 0;
+    margin: 0;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.mk-kohdekartta--pelkka .mk-kohdekartta__kyltti,
+.mk-kohdekartta--pelkka .mk-kohdekartta__nimi {
+    display: none;
+}
+
+.mk-kohdekartta--pelkka > .mk-kohdekartta__lahde {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 2.4px 6.4px;
+    font-size: 11.5px;
+    border-top-right-radius: 6px;
+    background-color: rgba(245, 240, 226, 0.85);
+}
+
+/* Web .avauskortti-opas: margin 0.65rem 0.9rem 0, padding 0.5rem, #efe1c2, kulma 8, rako 0.65rem. */
+.mk-avauskortti__opas {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 0;
+    margin: 10.4px 14.4px 0 14.4px;
+    padding: 8px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #efe1c2;
+}
+
+.mk-avauskortti__opaskuva {
+    flex-shrink: 0;
+    width: 84px;
+    height: 84px;
+    margin-right: 10.4px;
+    border-radius: 6px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-avauskortti__opastekstit {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.mk-avauskortti__oppaanlaji {
+    margin: 0;
+    padding: 0;
+    font-size: 11.5px;
+    letter-spacing: 7.7px; /* web 0.08em */
+    color: #8a6114;
+}
+
+.mk-avauskortti__oppaanotsikko {
+    margin: 1.6px 0;
+    padding: 0;
+    font-size: 15.5px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-avauskortti__oppaanteksti {
+    margin: 0;
+    padding: 0;
+    font-size: 13.8px;
+    white-space: normal;
+    color: #211d18;
+}
+
+/* Web .kaupunkipopup-avaus > .kaupunkipopup-sulje: 2.1rem ympyrä rgba(245,240,226,.92), × 1.1rem #3a2f24. */
+.mk-avauskortti__sulku {
+    position: absolute;
+    top: 8px;
+    right: 8.8px;
+    width: 33.6px;
+    height: 33.6px;
+    min-height: 33.6px;
+    padding: 0;
+    border-width: 0;
+    border-radius: 16.8px;
+    background-color: rgba(245, 240, 226, 0.92);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-avauskortti__sulku .mk-nappi__teksti {
+    font-size: 22px;
+    color: #3a2f24;
+}
+
+/* Suurennos kortista (web .kartta-suurennos-kortista): huntu rgba(29,22,16,.35) (+ KuvaSumea), kortti #f5f0e2
+   kulma 14, padding 2.6rem 0.6rem 0.6rem, kartta keskellä; × ympyränä; − + oikeassa alakulmassa. */
+.mk-kohdekartta-kokoruutu--kortista {
+    background-color: rgba(29, 22, 16, 0.35);
+}
+
+.mk-kohdekartta-kokoruutu--kortista > .mk-kohdekartta-kokoruutu__kortti {
+    justify-content: center;
+    padding: 41.6px 9.6px 9.6px 9.6px;
+    border-radius: 14px;
+    background-color: #f5f0e2;
+    max-width: 94%;
+}
+
+.mk-kohdekartta-kokoruutu--kortista .mk-kohdekartta__kehys {
+    border-radius: 6px;
+}
+
+.mk-kohdekartta-kokoruutu--kortista .mk-kohdekartta-kokoruutu__sulku {
+    top: 7.2px;
+    right: 7.2px;
+    width: 33.6px;
+    height: 33.6px;
+    min-height: 33.6px;
+    border-color: rgba(122, 85, 20, 0.3);
+    border-radius: 16.8px;
+    background-color: rgba(245, 240, 226, 0.94);
+}
+
+.mk-kohdekartta-kokoruutu__tyokalut {
+    position: absolute;
+    right: 14.4px;
+    bottom: 14.4px;
+    flex-direction: row;
+}
+
+.mk-kohdekartta-kokoruutu__zoom {
+    width: 38px;
+    height: 38px;
+    min-height: 38px;
+    margin-left: 6.4px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+    border-radius: 8px;
+    background-color: #efe1c2;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-kohdekartta-kokoruutu__zoom .mk-nappi__teksti {
+    font-size: 20px;
+    color: #3a2f24;
+}
+
+/* --- AVAUSKORTIN KUTSU (web .kaupunkikortin-kutsu, Kutsuminiatyyri.cs) ------------------------------------------- */
+
+.mk-kutsu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Web .kaupunkikortin-kutsu-kortti: 64 × 64, reuna 2 px #f5f0e2, kulma 9, pohja #d9ccb0. */
+.mk-kutsu__kortti {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    min-height: 64px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-width: 2px;
+    border-color: #f5f0e2;
+    border-radius: 9px;
+    background-color: #d9ccb0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.mk-kutsu__kuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+/* Web .kaupunkikortin-kutsu-nimi: 600 10px Luku, #fff8ec pohjalla rgba(33,29,24,.72), yksi rivi, keskitetty. */
+.mk-kutsu__nimi {
+    flex-shrink: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1px 3px 2px 3px;
+    font-size: 10px;
+    color: #fff8ec;
+    background-color: rgba(33, 29, 24, 0.72);
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
