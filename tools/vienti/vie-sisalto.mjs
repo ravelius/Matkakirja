@@ -212,8 +212,15 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        maan kaupunkiRasteri["10"] = rivijuoksut, laattoja.kaupunkiRasteri ja tavuja.kaupunkiRasteri (ei yht:ssä);
  *        rasteri, maxzoom 9 ja kaupunkitaso ennallaan, jotta vanhat buildit eivät lataa Z10:tä (Natiiviseppä 27.9.)
  *        — Fable 27.9.2026.
+ *   1.52 offline: maat.*.mediaKuvat [{ url, pieni? }] (+ tavuja.mediaKuvat, ei yht:ssä) ja lahteet.mediaKuvat — pelin
+ *        omat tiedostot, jotka
+ *        puuttuivat offline-latauksesta (oma ämpäri mutta kuva-url/aani-url, tai kokoelmavaiheen suora osoite):
+ *        karttanostot, miniatyyrit, Livian ja saapumisen puheet, luentojen äänet. Omassa avaimessa, koska vanhat buildit
+ *        lataavat media-listan mutta eivät käytä sitä kuville ja puheelle (Natiiviseppä 27.9.). Kuvat pienennettyinä
+ *        (pieni/<avain>.jpg, 1280 px, JPEG 80, tools/vienti/mediakuvat.mjs), katto 100 Mt maata kohden, järjestys
+ *        karttanostot → miniatyyrit → puheet → luennat → muut (Fable 27.9.) — Euroopan eheystarkistus.
  */
-export const SKEEMAVERSIO_TARKKA = '1.51';
+export const SKEEMAVERSIO_TARKKA = '1.52';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
@@ -458,7 +465,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     moduulit: manifestModuulit,
   };
   tiedostot.set('manifest.json', JSON.stringify(manifest, null, 1) + '\n');
-  return { tiedostot, manifest, nimiavaruudet };
+  return { tiedostot, manifest, nimiavaruudet, mediaKuvaEhdokkaat: offline.mediaKuvaEhdokkaat };
 }
 
 /** Paketin viittaamat ämpärin assets/-tiedostot: { polku: sha256 }. */
@@ -483,8 +490,10 @@ export function kirjoita(tiedostot, ulos) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const i = process.argv.indexOf('--ulos');
   const ulos = resolve(i > 0 ? process.argv[i + 1] : join(JUURI, 'dist/vienti'));
-  const { tiedostot, manifest } = await kokoaVienti();
+  const { tiedostot, manifest, mediaKuvaEhdokkaat } = await kokoaVienti();
   kirjoita(tiedostot, ulos);
+  // Skeema 1.52: mediaKuvat-ehdokkaat paketin ulkopuolelle (tools/vienti/mediakuvat.mjs --paivita, CI:n syöte).
+  writeFileSync(join(dirname(ulos), 'mediakuvat-ehdokkaat.json'), `${JSON.stringify(mediaKuvaEhdokkaat)}\n`);
   // Ämpäriin vietävät sivuston assetit paketin ulkopuolelle (CI:n syöte).
   const assetit = sivustonAssetit(tiedostot);
   writeFileSync(join(dirname(ulos), 'sivusto-assetit.json'), `${JSON.stringify(assetit, null, 1)}\n`);
