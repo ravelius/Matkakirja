@@ -2,29 +2,31 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 18:00 EEST
+**Päivitetty:** 2026-09-27 17:57 EEST
 
-## 1) Sessiot — uusi tili, kaikki 11 session id:tä tiedossa
+## 1) Sessiot — Postivahti (self) uusi sessio luovutuksen jälkeen
 
-Viikko (all models) **63 %** (nollautuu ma 28.9. klo 09:59), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **Postivahti (self) luovuttaa 72 %:ssa Fablen pyynnöstä (ei odotettu 80 %:iin) — luovutus docs/raportit/viesti-postivahti-luovutus-20260927-b.md, pyydetään nollausta.** Laitetestaaja pysyy yli (76 %), Fable käskenyt nollaukseen B13:n jälkeen.
+Viikko (all models) **64 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Postivahti (self) on uusi sessio luovutuksen 89c3a9aa8 jälkeen, 12 %. Laitetestaaja pysyy yli 70 % (73 %, laskenut 76 %:sta) — Fable käskenyt nollaukseen B13-savukierroksen jälkeen, ei uutta toimenpidettä.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 25% | running |
-| Postivahti (self) | local_63227b57-d045-4b93-ab52-cddc04e3b90f | 72% | running — lähestyy nollausta |
+| Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 28% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 12% | running |
 | Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 32% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 58% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 36% | idle |
-| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 25% | idle |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 60% | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 41% | idle |
+| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 29% | idle |
 | Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 30% | idle |
-| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 27% | idle |
-| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 35% | idle |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 60% | running (PR #3397 auki) |
-| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | **76% — YLI, ilmoitettu 17:47** | running (savukierros B13) |
+| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 30% | idle |
+| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 38% | idle |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 65% | running (PR #3397 auki) |
+| Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | **73% — YLI, jo ilmoitettu** | running (savukierros B13) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Levyvahti-tehtävä ratkaistu, omistajan siivous 15:5x (+16,5 Gt). Postilaatikossa aktiivinen Codex↔Fable/Sisältökirjuri PR-kuittausvuo (miniatyyrit/historian hetket) — normaali toiminta, ei toimenpidettä Postivahdilta.
+Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikossa uusi viesti 17:41 (Codex: Ateenan miniatyyrit Fablelle) — normaali PR-kuittausvuo, ei toimenpidettä Postivahdilta.
+
+**HUOM juna (tarkistettu 17:57):** `juna.log` viimeisin rivi on yhä 16:00 "tauko" (JUNA_PAKOTA-käsiajo, Karttasepän poltto) — seuraava rivi vasta 18:00. Ei löytynyt merkkiä siitä, että tauko olisi purettu 16:50 jälkeen (ei uutta KÄÄNNETTY-riviä, launchd-agentit `fi.matkakirja.juna`/`fi.matkakirja.juna-vahti` eivät aktiivisia juuri nyt). Fablen korjausviestin mukaan juna on palannut normaaliin — tämä ei vielä näy lokissa. Seurataan 18:00 rivi, ilmoitetaan Fablelle jos ei käännöstä silloinkaan.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
@@ -50,17 +52,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (17:47)
+## 5) Resurssit (17:57)
 
-- **5 h -kiintiö:** 6 %. **Viikko (kaikki mallit):** 63 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 98 Gi vapaana (raja 80 Gt — puskuri ~18 Gi, laskee edelleen). **Swap:** 20/21,5 Gt käytössä, ei kasva. **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 56 kpl.
-- **Simulaattorit boottina:** 2 (linssiseppa-iPhone, iPhone 17; max 4 päivällä — OK). **coreaudiod:** ~15 % CPU yhteensä, kaukana 200 % rajasta. **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 2 (raja >4, ei ylitystä).
-- **Konteksti (kynnys Fable 65%/roolit 70%):** Fable 25%, muut 25–60% paitsi **Laitetestaaja 76 % (YLI, ilmoitettu 17:47)**. Postivahti (self) 72 %, lähestyy omaa nollausrajaa.
-- **Juna:** yhä tauolla (Karttasepän Z10-poltto 26.–27.9.) — ei hälytystä, tarkoituksellinen.
-- **Postilaatikko:** Codex↔Fable/Sisältökirjuri PR-kuittausvuo (miniatyyrit) — normaali, ei toimenpidettä. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku ~40).
-- **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja.
+- **5 h -kiintiö:** 9 %. **Viikko (kaikki mallit):** 64 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 100 Gi vapaana (raja 80 Gt — puskuri nousi hieman, 89 % käytössä). **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **wt/-worktreet:** 65 kpl (nousi 56:sta — seurataan).
+- **Simulaattorit boottina:** 2 (iPhone 17, iPad Pro 11" M5; max 4 päivällä — OK). **coreaudiod / GPU-ajurit:** ei tarkistettu erikseen tällä kierroksella.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen paitsi **Laitetestaaja 73 % (YLI, jo ilmoitettu, laskusuunnassa 76→73%)**. Sisältökirjuri 65 % — lähestyy, ei vielä ylitä.
+- **Juna:** ks. kohta 2 — log yhä "tauko" 16:00, ei vahvistusta Fablen mainitsemasta 16:50-normalisoinnista.
+- **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
+- **Lokisiivous-kandidaatit:** tarkistettu tarkasti 17:5x — **ei löytynyt yhtään lokit-alikansiota >48h tai .app-pakettia >24h** (kaikki mtime tuore, jatkuvasti kirjoitettu). `proto-3d/lokit` kokonaiskoko 43G, mutta ei erottuvia vanhoja kandidaatteja mtime-kriteerillä. Fablen luovutuksessa mainitut 5,9 Gt/4,7 Gt eivät täsmää tähän löydökseen — ei toimenpidettä, ilmoitettu Fablelle poikkeamana.
 - **Varmuuskopio:** ratkaistu, ei kasvanut.
 
 ## 6) proto-3d/lokit — tila
 
-Ei kandidaattikansioita (>48h) tällä kierroksella. Ei toimenpiteitä Postivahdilta.
+43G yhteensä, ei mtime-kriteerin (>48h) täyttäviä kandidaattikansioita tällä kierroksella. Ei toimenpiteitä Postivahdilta.
