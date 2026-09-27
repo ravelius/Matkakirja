@@ -2376,8 +2376,8 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Wien Doktor Karl Renner Ring Parlament Rathaus-1900.jpg',
-                  lyhyt: 'Parlamenttitalo rakennettiin Itävalta-Unkarin valtiopäiville, joissa nyt kokoontuu maan parlamentti.',
-                  selite: 'Parlamenttitalo rakennettiin Itävalta-Unkarin '
+                  lyhyt: 'Parlamenttitalo rakennettiin Itävallan valtiopäiville, joissa nyt kokoontuu maan parlamentti.',
+                  selite: 'Parlamenttitalo rakennettiin Itävallan '
                     + 'valtiopäivien kahdelle kamarille, ja siinä '
                     + 'kokoontuvat nykyään Nationalrat ja Bundesrat.',
                   lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
@@ -3220,11 +3220,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Madrid Gran Via Metropolis (28895530633).jpg',
-          lyhyt: 'Gran Vían kulman Metrópolis-talo (1911) sai kupolinsa siivekkään voitonjumalattaren vuonna 1975.',
+          lyhyt: 'Gran Vían kulman Metrópolis-talo (1911) sai kupolinsa siivekkään voitonjumalattaren vuonna 1977.',
           selite: 'Gran Vían ja Alcalá-kadun kulman Metrópolis-talo '
             + 'vihittiin 1911 vakuutusyhtiö La Unión y el Fénixin taloksi, '
             + 'ja sen kupolin huipulla on seissyt siivekäs voitonjumalatar '
-            + 'vuodesta 1975.',
+            + 'vuodesta 1977.',
           lahde: 'Nan Palmero from San Antonio, TX, USA, Wikimedia Commons (CC BY 2.0)',
         },
         {

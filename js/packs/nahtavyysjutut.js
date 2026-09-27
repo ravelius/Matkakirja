@@ -1659,7 +1659,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Kuningas Filip V käski rakentaa palon paikalle upouuden '
           + 'linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli '
-          + 'sen, ja rakennustyöt kestivät vuodesta 1738 vuoteen 1755.'
+          + 'sille ensin hahmotelman, mutta kuoli ennen rakennustöiden '
+          + 'alkua — hänen oppilaansa Giovanni Battista Sacchetti '
+          + 'suunnitteli lopulta rakennetun linnan, ja työt kestivät '
+          + 'vuodesta 1738 vuoteen 1755.'
         + '\n\n'
         + 'Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä '
           + 'lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. '
@@ -5729,7 +5732,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: '1896 Olympic opening ceremony.jpg',
           lyhyt: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896.',
-          selite: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896 — katsomossa 80 000 ihmistä.',
+          selite: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896 — katsomossa noin 60 000 ihmistä.',
           lahde: 'Wikimedia Commons (PD)',
         },
       ],
