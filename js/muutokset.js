@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2345, teksti: 'Faktatarkistus: Istanbul, 8 korjausta' },
   { v: 2344, teksti: 'Maakuntien Pulu-kysymykset ja Berliinin faktakorjaus' },
   { v: 2343, teksti: 'Alonnisoksen nosto merikansallispuistoksi (#3490)' },
   { v: 2342, teksti: 'v2342: Raha muotoon 400 £ (#3480)' },

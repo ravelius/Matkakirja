@@ -3616,11 +3616,12 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
-        lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin kuuden viikon piirityksen.',
+        lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin reilun seitsemän viikon piirityksen.',
         kuvateksti: 'Viimeinen hyökkäys tulee kolmessa aallossa. Ensimmäiset '
           + 'väsyttävät puolustajia, toiset kasvattavat painetta ja '
-          + 'janitsaarit etenevät viimeisinä. Muurin harjalla kuuden viikon '
-          + 'piiritys on kutistunut yhden sotilaan kysymykseksi: yltääkö '
+          + 'janitsaarit etenevät viimeisinä. Muurin harjalla reilun '
+          + 'seitsemän viikon piiritys on kutistunut yhden sotilaan '
+          + 'kysymykseksi: yltääkö '
           + 'seuraava hyökkääjä tikkaiden päästä hänen eteensä.',
         lahde: 'Matkakirjan havainnekuva. Faktat: Constantinople 1453 — '
           + 'history, tarkistettu 5.9.2026.',

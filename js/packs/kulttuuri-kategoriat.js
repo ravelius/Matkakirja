@@ -8658,7 +8658,7 @@ export const KULTTUURI_KATEGORIAT = {
        * "Istanbul" (ilmasto: kesäpäivä noin 28 °C ja alle seitsemän
        * sadepäivää kuussa, talvipäivä 5–10 °C, aurinkoa talvella noin
        * 20 % ja kesällä 60–70 % päivistä, merilumimyrskyt yli 30 cm
-       * lähes vuosittain, viimeksi 2022) ja "Emirgan Park"
+       * kerran vuosikymmenessä tai harvemmin, viimeksi 2022) ja "Emirgan Park"
        * (tulppaanitarha 1960-luvulta, kansainvälinen tulppaanijuhla
        * joka huhtikuu vuodesta 2005; tulppaanikausi 1718–1730) —
        * kaikki haettu 18.8.2026.
@@ -8841,9 +8841,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jää viiden ja kymmenen asteen välille ja sataa '
                 + 'usein: aurinko paistaa vain noin joka viidentenä '
                 + 'päivänä, kun kesällä osuus on 60–70 prosenttia. '
-                + 'Lunta tulee harvoin mutta rajusti — mereltä nouseva '
-                + 'lumipyry tuo yli 30 senttiä lähes joka talvi, '
-                + 'viimeksi 2022. Paras aika on siksi kevät tai syksy, '
+                + 'Lunta tulee harvoin mutta rajusti — pahimmat '
+                + 'mereltä nousevat lumipyryt tuovat yli 30 senttiä '
+                + 'kerran vuosikymmenessä tai harvemmin, viimeksi '
+                + '2022. Paras aika on siksi kevät tai syksy, '
                 + 'ja huhtikuulla on oma syynsä: kaupunki kukkii '
                 + 'tulppaanein. Kukka antoi nimensä koko aikakaudelle '
                 + '1718–1730, ja perinne herätettiin henkiin '
@@ -8872,20 +8873,21 @@ export const KULTTUURI_KATEGORIAT = {
         + 'jotain, mikä yhä näkyy tai kuuluu kadulla.',
       nostot: [
         {
-          otsikko: 'Maailman vanhin sotilassoittokunta',
+          otsikko: 'Ehkä maailman vanhin sotilassoittokunta',
           tiedosto: 'Istanbul Military Museum Mehter show in 2016 25 9327.jpg',
-          teksti: 'Mehter on osmanien sotilassoittokunta ja vanhin tunnettu '
-            + 'marssiva soittokunta maailmassa. Täydessä kokoonpanossa '
-            + 'jokaista soitinta oli yhdeksän: yhdeksän rumpua, yhdeksän '
-            + 'kimeää zurnaa, yhdeksän lautasparia. Jyminä kuului Euroopan '
-            + 'puolelle asti, ja Haydn, Mozart ja Beethoven kirjoittivat '
-            + 'kaikki musiikkia, joka matkii sitä. Soittokunta lakkautettiin '
-            + '1826, mutta Istanbulin sotilasmuseon johtaja herätti sen '
-            + 'henkiin 1911. Museossa se marssii yhä.',
-          lyhyt: 'Mehter, osmanien sotilassoittokunta, on vanhin tunnettu marssiva soittokunta maailmassa.',
-          selite: 'Mehter on osmanien sotilassoittokunta ja vanhin tunnettu '
-            + 'marssiva soittokunta maailmassa; täydessä kokoonpanossa '
-            + 'jokaista soitinta oli yhdeksän.',
+          teksti: 'Mehter on osmanien sotilassoittokunta, jota pidetään '
+            + 'vanhimpana tunnettuna yhä toimivana marssivana soittokuntana '
+            + 'maailmassa. Täydessä kokoonpanossa jokaista soitinta oli '
+            + 'yhdeksän: yhdeksän rumpua, yhdeksän kimeää zurnaa, yhdeksän '
+            + 'lautasparia. Jyminä kuului Euroopan puolelle asti, ja Haydn, '
+            + 'Mozart ja Beethoven kirjoittivat kaikki musiikkia, joka '
+            + 'matkii sitä. Soittokunta lakkautettiin 1826, mutta '
+            + 'Istanbulin sotilasmuseon johtaja herätti sen henkiin 1911. '
+            + 'Museossa se marssii yhä.',
+          lyhyt: 'Mehter, osmanien sotilassoittokunta, on ehkä vanhin tunnettu marssiva soittokunta maailmassa.',
+          selite: 'Mehter on osmanien sotilassoittokunta, jota pidetään '
+            + 'vanhimpana tunnettuna marssivana soittokuntana maailmassa; '
+            + 'täydessä kokoonpanossa jokaista soitinta oli yhdeksän.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mehter',
           musiikki: 'https://music.apple.com/fi/search?term=mehter',
@@ -9070,12 +9072,13 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
               lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin '
-                + 'kuuden viikon piirityksen.',
+                + 'reilun seitsemän viikon piirityksen.',
               selite: 'Viimeinen hyökkäys tulee kolmessa aallossa. Ensimmäiset '
                 + 'väsyttävät puolustajia, toiset kasvattavat painetta ja '
-                + 'janitsaarit etenevät viimeisinä. Muurin harjalla kuuden viikon '
-                + 'piiritys on kutistunut yhden sotilaan kysymykseksi: yltääkö '
-                + 'seuraava hyökkääjä tikkaiden päästä hänen eteensä.',
+                + 'janitsaarit etenevät viimeisinä. Muurin harjalla reilun '
+                + 'seitsemän viikon piiritys on kutistunut yhden sotilaan '
+                + 'kysymykseksi: yltääkö seuraava hyökkääjä tikkaiden päästä '
+                + 'hänen eteensä.',
               lahde: 'Matkakirjan havainnekuva. Faktat: Constantinople 1453 — '
                 + 'history, tarkistettu 5.9.2026.',
             },
