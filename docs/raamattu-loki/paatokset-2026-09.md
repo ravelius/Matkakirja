@@ -7939,3 +7939,7 @@ Laitetestaaja 09.1x: 1.0.28 d3fa3c78 PASS: kaiutinvipu, striimiaani-valitsin, lu
 ## TF 1.0.28 VIE (BUILD 28 = MASTER 7788b629); #3374 v2303, #3206 v2304 MAINISSA (27.9.2026 klo 09.10)
 
 Fable 09.1x Julkaisijalle VIE — TF 1.0.28 = build 28 = proto-master 7788b629 (juna 1eff4f76). Sisalto: P1 nosto-hylkaa-170, kaiutinvipu natiivi, striimiaani-USS, lukija-putki web+natiivi, maastokorkeus, taso1-kynnys, erikoismallit MSM/Stonehenge/Colosseum + Kinderdijk/Brandenburg/Segovia, 14 kategoriasymbolia 3D (B, vuori C), 177-avaimet. Mainissa #3374 (virkevali 220 ms) v2303 ja #3206 (turistiopas 19) v2304; #3381/#3382 junassa.
+
+## OMISTAJA 09.2x P1: STRIIMILUENTA TAUKOILEE JA HYPPII ETEENPAIN → PELIKOODARI HETI (27.9.2026 klo 09.17)
+
+Omistaja 09.2x: striimiluenta taukoilee vahan valia ja hyppii eteenpain (virkkeita jaa soittamatta). Todennakoisesti v2297–v2303 lukijamuutokset (esihaku +1/+2, virkevali 220 ms, pitka pala). Pelikoodari toistaa tuotannossa, mittaa soitetut/ohitetut virkkeet, korjaa ettei yhtaan palaa pudoteta, PR junaan heti; progressiivinen soitto sen jalkeen.
