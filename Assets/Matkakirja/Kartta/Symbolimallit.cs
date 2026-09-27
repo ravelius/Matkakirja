@@ -58,8 +58,12 @@ namespace Matkakirja
         /// <summary>Tason 1 mallin ruutukoko kartan kertoimella (tasot 2–3 kertovat tämän Taso2Koko/Taso3Koko:lla).</summary>
         public static float KokoNyt(double kerroin)
         {
-            double k0 = Taso1Kynnys();
-            double u = (kerroin - k0) / Math.Max(1e-3, KokoTaysiKerroin - k0);
+            // Täysi koko viimeistään maan lähimmässä zoomissa (Mallinsepän löydös 27.9. klo 08.3x: NLD:ssä kerroin enintään 1,3,
+            // jolloin malli jäi kynnyskokoon 22 pt).
+            double k0 = Taso1Kynnys(), k1 = KokoTaysiKerroin;
+            var nk = NostoKerros.Instanssi;
+            if (nk != null && !float.IsInfinity(nk.SuurinKerroin)) k1 = Math.Min(k1, nk.SuurinKerroin);
+            double u = (kerroin - k0) / Math.Max(1e-3, k1 - k0);
             return Mathf.Lerp(KokoKynnysPt, KokoPt, Mathf.Clamp01((float)u));
         }
 
