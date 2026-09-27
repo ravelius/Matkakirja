@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 21:22 EEST
+**Päivitetty:** 2026-09-27 21:36 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **79 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen (Natiivi-UI 68% korkein).
+Viikko (all models) **79 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki roolit alle 70 %:n kynnyksen (Natiivi-UI 68% korkein, ennallaan). **Postivahti (self) 5h-kiintiö 69%, resetoituu 53 min:ssa — ei toimenpidettä (kiintiöikkuna, ei kontekstiraja).**
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
 | Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 54% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 43% | running |
-| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 43% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 39% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 45% | running |
+| Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 44% | running |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 40% | running |
 | Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 13% | idle |
 | Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 68% | idle |
 | Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 65% | idle |
-| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 59% | idle |
+| Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 60% | idle |
 | Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 18% | running |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 33% | running |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 39% | running |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 29% | running |
 
 ## 1b) Uusi valvontakohta odottaa (Siirtoseppä/Fable 18:4x)
@@ -56,14 +56,14 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (21:22)
+## 5) Resurssit (21:36)
 
-- **5 h -kiintiö:** 67 %. **Viikko (kaikki mallit):** 79 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 83 Gi vapaana (laski hieman 88→83, ei kriittinen). wt/-worktreet 33 kpl. Ei toimenpidettä.
-- **Muistipaine: 2 (WARN), toistuu ajoittain** — ei critical (4), ei erillistä hälytystä (kolmas kerta samana, tiedossa raskaiden rinnakkaisajojen aiheuttamana).
-- **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **Simulaattorit boottina:** 3 (natiiviseppa-iPhone, iPhone 17, pariteetti-iPad11-834).
+- **5 h -kiintiö:** 69 %. **Viikko (kaikki mallit):** 79 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 80 Gi vapaana (laskenut tasaisesti 88→80, ei kriittinen, seurataan). wt/-worktreet 35 kpl.
+- **Muistipaine:** 2 (WARN), toistuva ilmiö raskaista rinnakkaisajoista — ei critical, ei erillistä hälytystä.
+- **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **Simulaattorit boottina:** 3 (pariteetti-iPhone, natiiviseppa-iPhone, iPhone 17).
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
-- **Juna: `juna.log` EI VIELÄ PÄIVITTYNYT** (viimeisin rivi yhä 20:44, ~38 min). Varmistettu toistamiseen git-historiasta: viimeisin käännösbranch julkaisija-juna-20260927-2053 (20:57) on jo mergetty mainiin klo 21:11 (PR #3488, "Sisältöjuna: Maakuntasalaisuudet nostoiksi v2340"). **Pipeline toimii ilmiselvästi normaalisti — juna.log-lokitiedosto vain ei kirjoita enää vahdin uudelleenkäynnistyksen jälkeen (kaksi juna-ajo.sh-prosessia käynnissä, molemmat 0% CPU).** Ei uusia hälytyksiä ilman uutta merkkiä oikeasta jumista (ts. commit jää ilman mitään PR:ää >25 min).
+- **Juna: LOKI KIRJOITTI UUDELLEEN 21:22** (KÄÄNNETTY 3f3b67ea) — ei enää raako, edellinen huomio ratkesi itsestään.
 - **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
