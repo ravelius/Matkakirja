@@ -531,12 +531,26 @@ test('suomenkielisistä teksteistä ei puutu ä- ja ö-kirjaimia', async () => {
    */
   const TUNNETAGIT = /(tunne: ')lammin(')/g;
 
+  /*
+   * KOLMAS POIKKEUS: BRASILIALAINEN PAIKANNIMI "PAIVA".
+   *
+   * Boa Vistan turistioppaassa Roraiman Serra do Tepequémin ylängöllä
+   * on kylä Vila do Paiva ja sen lähellä Paivan putoukset — sukunimi,
+   * ei suomen sana. Suomen sijataivutus ("Paivan kylään", "uidaan
+   * Paivan ... putouksilla") kirjoittaa sen täsmälleen kuten väärin
+   * kirjoitettu "päivän". Poikkeus on TAHALLAAN KAPEA ja aakkoslajia
+   * erotteleva (ei 'i'-lippua): vain ISOLLA alkukirjaimella kirjoitettu
+   * "Paivan" väistyy, koska erisnimi on aina isolla. Proosan pieni
+   * "paivan" jää yhä kiinni.
+   */
+  const PAIKANNIMET = /\bPaivan\b/g;
+
   const kansio = new URL('../js/packs/', import.meta.url).pathname;
   const osumat = [];
   for (const nimi of readdirSync(kansio)) {
     if (!nimi.endsWith('.js')) continue;
     const s = readFileSync(join(kansio, nimi), 'utf8')
-      .replace(VIERASSANAT, '$1—').replace(TUNNETAGIT, '$1—$2');
+      .replace(VIERASSANAT, '$1—').replace(TUNNETAGIT, '$1—$2').replace(PAIKANNIMET, '—');
     const loydot = [...new Set((s.match(hahmo) ?? []).map((x) => x.toLowerCase()))];
     if (loydot.length) osumat.push(`${nimi}: ${loydot.slice(0, 6).join(', ')}`);
   }
