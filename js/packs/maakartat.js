@@ -8096,6 +8096,12 @@ export const KAUPUNKIKARTAT = {
           },
         ],
       },
+      // Vuoden 963 tapahtuma avautuu omana historian hetkenään Bockin vieressä.
+      {
+        nimi: 'Bockin kauppa 963', tyyppi: 'henkilo',
+        lat: 49.6118, lon: 6.1358,
+        nosto: 'hetki-siegfried-ostaa-bockin-963',
+      },
     ],
   },
   bryssel: {

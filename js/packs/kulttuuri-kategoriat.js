@@ -24318,6 +24318,76 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `ensimmainen-juna-rovaniemi-1909`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-ensimmainen-juna-rovaniemi-1909',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Ensijuna 1909',
+      johdanto: 'Rautatie Rovaniemelle valmistui 1909 ja toi ensimmäisen '
+        + 'höyryveturin markkinakylään, joka oli tähän asti tavoitettu vesitse, '
+        + 'reellä ja maanteitse.',
+      tehtava: {
+        kysymys: 'Miten Rovaniemelle pääsi ennen rautatietä?',
+        vaihtoehdot: [
+          'Maanteitse, veneellä tai reellä',
+          'Vain lentäen',
+          'Höyrylaivalla merta pitkin',
+          'Ei mitenkään talvisin',
+        ],
+        oikea: 0,
+        fakta: 'Maantie Kemistä valmistui jo 1839. Vesireitit ja reet olivat '
+          + 'tärkeitä, ja rautatie Laurilan suunnasta valmistui 1909.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+          aika: '1909',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-lahi-photo-v4.jpg',
+          teksti: 'Poika seisoo isänsä käden varassa laiturilla ja tuntee maan '
+            + 'tärisevän jalkojensa alla ennen kuin näkee mitään — sitten '
+            + 'savupilvi ilmestyy metsän takaa ja ääni kasvaa jyskeeksi, jota '
+            + 'kukaan paikalla ei ole ennen kuullut näin läheltä. Rovaniemi on '
+            + 'ollut vuosisatoja markkinapaikka joen varrella, tavoitettavissa '
+            + 'veneellä, reellä ja jo vuonna 1839 valmistunutta maantietä pitkin, '
+            + 'mutta rautatie Kemistä pohjoiseen valmistuu 1909 ja tuo veturin '
+            + 'puuvarikon läpi ensimmäistä kertaa. Koko kylä on kokoontunut '
+            + 'laiturille katsomaan, ja moni koskettaa vaunun kylmää '
+            + 'metalliseinää kuin varmistaakseen, että se on totta. Yhtäkkiä '
+            + 'Lappi ei ole enää matkan päässä muusta Suomesta — se on rautatien '
+            + 'päässä. Aiemmin matka Kemistä onnistui maantietä pitkin, ja '
+            + 'jokireitit sekä reet palvelivat eri vuodenaikoina. Juna muuttaa '
+            + 'silti matkan mittaa: tavarat ja ihmiset liikkuvat tästä lähtien '
+            + 'etelään ja takaisin säännöllisemmin kuin ennen.',
+          lyhyt: 'Poika ja isä katsovat ensimmäistä Rovaniemelle saapuvaa höyryjunaa.',
+          selite: 'Poika pitää isänsä kädestä kiinni Rovaniemen puisella '
+            + 'asemalaiturilla ja katsoo lähestyvää höyryveturia.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Rovaniemen kaupunki, '
+            + 'rakennetun ympäristön historia, tarkistettu 27.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-kauko-photo-v4.jpg',
+              lyhyt: 'Höyryjuna saapuu Rovaniemen puuasemalle vuonna 1909.',
+              selite: 'Rovaniemen vuoden 1909 rautatieasemalle saapuu höyryjuna; '
+                + 'väki odottaa laiturilla mäntyjen ja jokimaiseman äärellä.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Rovaniemen kaupunki, '
+                + 'rakennetun ympäristön historia, tarkistettu 27.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
@@ -24818,6 +24888,77 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ruutivarastonsa marraskuussa 1866 mieluummin kuin '
             + 'antautuivat piirittäneille ottomaanijoukoille.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `arkadin-luostarin-rajahdys-1866`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-arkadin-luostarin-rajahdys-1866',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Arkadi 1866',
+      johdanto: 'Arkadin luostarin puolustajat räjäyttivät ruutivarastonsa '
+        + 'marraskuussa 1866 mieluummin kuin antautuivat — tapahtuma, joka '
+        + 'herätti Euroopan myötätunnon kreetalaisten asialle.',
+      tehtava: {
+        kysymys: 'Mitä Arkadin puolustajat tekivät muurien murruttua 1866?',
+        vaihtoehdot: [
+          'Sytyttivät ruutivaraston',
+          'Antautuivat ehdoitta',
+          'Pakenivat vuorille',
+          'Neuvottelivat aselevon',
+        ],
+        oikea: 0,
+        fakta: 'Arkadin luostarin ruutivarasto räjähti 9.11.1866 piirityksen '
+          + 'viimeisessä vaiheessa; tapahtuma herätti kansainvälistä huomiota.',
+      },
+      nostot: [
+        {
+          otsikko: 'Arkadi 1866 — viimeinen ovi',
+          aika: '9.11.1866',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-arkadin-luostarin-rajahdys-1866-lahi-photo-v4.jpg',
+          teksti: 'Nainen painaa lasta vasten seinää ruutivaraston oven takana, '
+            + 'kun kirveniskut ulkopuolella yltyvät — kaksi päivää kestänyt '
+            + 'taistelu on hävitty, muurit on murrettu, eikä paluuta enää ole. '
+            + 'Satoja kapinallisia ja siviilejä on paennut Arkadin luostariin '
+            + 'turvaan marraskuussa 1866, mutta ottomaanijoukot ovat piirittäneet '
+            + 'sen tykistöllä. Igumeni Gabriel on jo päättänyt, mitä tapahtuu, '
+            + 'jos muurit pettävät: ruutivarasto sytytetään mieluummin kuin '
+            + 'antaudutaan. Kun ovi vihdoin murtuu, joku laukaisee liekin — '
+            + 'räjähdys tappaa puolustajia ja hyökkääjiä yhdessä, ja luostarin '
+            + 'pihalta löytyy myöhemmin kuulien lävistämä tuulimylly, joka seisoo '
+            + 'siellä yhä. Uutinen tapahtuneesta kulkeutuu nopeasti Eurooppaan ja '
+            + 'herättää myötätuntoa kreetalaisten asialle Pariisista New Yorkiin '
+            + 'asti. Käytävässä aika tuntuu pysähtyvän. Äiti kuulee askeleita '
+            + 'pihan suunnalta ja pitää lapsen lähellään, vaikka ei voi tietää, '
+            + 'pääsevätkö he ulos. Myöhemmin juuri siviilien kohtalo tekee '
+            + 'tapahtumasta tunnetun kaukana Kreetan ulkopuolella.',
+          lyhyt: 'Äiti pitää lastaan lähellä Arkadin luostarin kivikäytävässä.',
+          selite: 'Äiti suojaa lastaan Arkadin luostarin käytävässä ennen '
+            + 'piirityksen viimeistä vaihetta. Kuva ei esitä itse räjähdystä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Kreikan kulttuuriministeriö, '
+            + 'Arkadi Monastery, tarkistettu 27.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Arkadi 1866 — viimeinen ovi',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-arkadin-luostarin-rajahdys-1866-kauko-photo-v4.jpg',
+              lyhyt: 'Arkadin luostari iltahämärässä marraskuun 1866 piirityksen aikana.',
+              selite: 'Arkadin luostarin kalkkikivijulkisivu ja lähestyvät '
+                + 'ottomaanisotilaat iltahämärässä; katolta kohoaa savua.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Kreikan '
+                + 'kulttuuriministeriö, Arkadi Monastery, tarkistettu 27.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -25322,6 +25463,79 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kristus Pantokraattori -mosaiikki on osa noin 6 300 '
             + 'neliömetrin mosaiikkipintaa.',
           lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `roger-ii-cefalu-lupaus-1131`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-roger-ii-cefalu-lupaus-1131',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Cefalùn lupaus',
+      johdanto: 'Tarinan mukaan kuningas Roger II lupasi myrskyssä rakentaa '
+        + 'katedraalin sinne, minne pääsisi hengissä rantaan — ja hänen laivansa '
+        + 'ajautui Cefalùhun 1131.',
+      tehtava: {
+        kysymys: 'Minä vuonna Cefalùn katedraalin rakentaminen alkoi?',
+        vaihtoehdot: [
+          '1131',
+          '1174',
+          '1143',
+          '963',
+        ],
+        oikea: 0,
+        fakta: 'Roger II aloitti Cefalùn katedraalin rakennustyöt vuonna 1131; '
+          + 'haaksirikkolupaus kuuluu paikalliseen perimätietoon.',
+      },
+      nostot: [
+        {
+          otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
+          aika: '1131',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-lahi-photo-v4.jpg',
+          teksti: 'Kuningas Roger II tarrautuu aluksensa kaiteeseen, kun aalto '
+            + 'nostaa keulan pystyyn ja pudottaa sen taas kuiluun — merimiehet '
+            + 'huutavat toisilleen käskyjä, joita tuuli repii palasiksi. Legendan '
+            + 'mukaan hän vannoo tässä hetkessä: jos hän pääsee hengissä maihin, '
+            + 'hän rakentaa kiitokseksi katedraalin siihen paikkaan, johon myrsky '
+            + 'hänet ajaa. Alus ajautuu lopulta Cefalùn kapealle rannalle jylhän '
+            + 'kalliovuoren juurelle, ja kuningas astuu maihin märkänä mutta '
+            + 'elossa. Samana vuonna, 1131, rakennustyöt alkavat — Roger II:n '
+            + 'ensimmäinen suuri kirkkohanke kuninkaana. Vuosikymmen myöhemmin '
+            + 'sen apsiksen kattoa hallitsee bysanttilaisten mestarien tekemä '
+            + 'valtava Kristus-mosaiikki, joka katsoo yhä alas tyhjää '
+            + 'kirkkosalia. Merimiehet yrittävät pitää purjeen ehjänä, eikä '
+            + 'kukaan voi luvata, minne alus ajautuu. Myöhemmät kertojat '
+            + 'liittävät juuri tähän myrskyyn kirkon syntymisen, vaikka lupauksen '
+            + 'tarkkaa hetkeä ei voida todistaa säilyneistä historiallisista '
+            + 'asiakirjoista.',
+          lyhyt: 'Roger II pitää laivan kaiteesta kiinni myrskyssä Cefalùn edustalla.',
+          selite: 'Normannikuningas Roger II pitää kiinni märästä laivan '
+            + 'kaiteesta. Katedraalin syntyä selittävä myrskylupaus on '
+            + 'perimätietoa, ei varmistettu tapahtuma.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Cefalù Visit Sicily, The '
+            + 'Cathedral of Cefalù, tarkistettu 27.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-kauko-photo-v4.jpg',
+              lyhyt: 'Pieni normannialus kamppailee aaltoja vastaan La Roccan edustalla.',
+              selite: 'Myrskyävä meri ja Cefalùn La Rocca muodostavat näyttämön '
+                + 'legendalle, jonka mukaan Roger II lupasi rakentaa katedraalin '
+                + 'pelastuttuaan.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Cefalù Visit Sicily, The '
+                + 'Cathedral of Cefalù, tarkistettu 27.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -29631,6 +29845,77 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yläkaupungin Kirchbergin EU-kortteleihin.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Grand Duchess Charlotte Bridge',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `siegfried-ostaa-bockin-963`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-siegfried-ostaa-bockin-963',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Bockin kauppa 963',
+      johdanto: 'Koko Luxemburgin kaupunki syntyi kaupasta: kreivi Siegfried '
+        + 'hankki jyrkän Bock-kallion vuonna 963 ja rakensi sen päälle linnan, '
+        + 'jonka ympärille kaupunki kasvoi.',
+      tehtava: {
+        kysymys: 'Miten Siegfried sai Bock-kallion vuonna 963?',
+        vaihtoehdot: [
+          'Vaihtamalla maita luostarille',
+          'Valtaamalla sen sotilaallisesti',
+          'Perimällä sen suvultaan',
+          'Ostamalla sen kullalla',
+        ],
+        oikea: 0,
+        fakta: 'Siegfried hankki Bock-kallion vaihtamalla maita Trierin Pyhän '
+          + 'Maximinin luostarin kanssa vuonna 963.',
+      },
+      nostot: [
+        {
+          otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
+          aika: '963',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-siegfried-ostaa-bockin-963-lahi-photo-v4.jpg',
+          teksti: 'Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion '
+            + 'laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään '
+            + 'voisi louhia. Kallio on luonnostaan lähes valloittamaton — '
+            + 'kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien '
+            + 'pieni luostarirakennus seisoo sen päällä. Siegfried on juuri '
+            + 'vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen '
+            + 'kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. '
+            + 'Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: '
+            + 'hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", '
+            + 'josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion '
+            + 'sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympärille '
+            + 'kasvava kaupunki kantaa yhä saman nimen johdannaista. Jyrkänne '
+            + 'suojaa paikkaa kolmelta puolelta, ja vain lännestä sinne pääsee '
+            + 'helposti. Siegfried kääntää pergamentin kädessään ja katsoo '
+            + 'jokimutkaa vielä kerran: kauppa näyttää nyt pieneltä, mutta sen '
+            + 'seuraukset kasvavat vuosisatoja.',
+          lyhyt: 'Siegfried tutkii Bock-kalliolta jokilaaksoa kauppakirja kädessään.',
+          selite: 'Kreivi Siegfried katsoo Bockin jyrkänteeltä Alzetten laaksoon '
+            + 'vuonna 963. Kallion hankkiminen oli kaupungin historian alku.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Luxembourg City Tourist '
+            + 'Office, Bock Promontory, tarkistettu 27.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-siegfried-ostaa-bockin-963-kauko-photo-v4.jpg',
+              lyhyt: 'Paljas Bock-kallio kohoaa Alzetten metsäisen jokimutkan yllä.',
+              selite: 'Bockin kallioniemi ennen linnan ja kaupungin rakentamista; '
+                + 'Alzette kiertää sen kolmea sivua.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Luxembourg City Tourist '
+                + 'Office, Bock Promontory, tarkistettu 27.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -66008,6 +66293,81 @@ export const KULTTUURI_KATEGORIAT = {
               + 'Russell.',
           lahde: 'J. E. Russell, Royal Navy, Imperial War Museums, Wikimedia Commons (PD)',
           wiki: 'Siege of Malta (World War II)',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `suuri-piiritys-paattyy-1565`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-suuri-piiritys-paattyy-1565',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Apu saapuu 1565',
+      johdanto: 'Neljä kuukautta kestänyt piiritys päättyi, kun sisilialainen '
+        + 'apulaivasto laski maihin Mellieħan lahdessa syyskuun alussa 1565 — '
+        + 'osmaanit purjehtivat pois muutamassa päivässä.',
+      tehtava: {
+        kysymys: 'Mistä apulaivasto saapui Maltan avuksi 1565?',
+        vaihtoehdot: [
+          'Sisiliasta',
+          'Espanjasta',
+          'Ranskasta',
+          'Kreikasta',
+        ],
+        oikea: 0,
+        fakta: 'Don García de Toledon Sisiliassa kokoama apulaivasto toi '
+          + 'lisäjoukkoja Maltalle syyskuussa 1565.',
+      },
+      nostot: [
+        {
+          otsikko: 'Valletta 1565 — purjeet horisontissa',
+          aika: '7.9.1565',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suuri-piiritys-paattyy-1565-lahi-photo-v4.jpg',
+          teksti: 'Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu '
+            + 'hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian '
+            + 'väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä '
+            + 'näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan '
+            + 'sisilialainen apulaivasto, jota Don García de Toledo on kerännyt '
+            + 'Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin '
+            + 'Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille '
+            + 'nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien '
+            + 'komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon '
+            + 'miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää '
+            + 'usko voittoon uuden armeijan edessä. Muutaman päivän kuluttua '
+            + 'laivasto lastaa jäljellä olevat joukot ja purjehtii pois — '
+            + 'piiritys, joka piti kestää päiviä, on lopulta kestänyt lähes neljä '
+            + 'kuukautta, ja saari on yhä ritarikunnan. Muurin sisällä kukaan ei '
+            + 'vielä riisu panssaria. Sotilaat seuraavat laivoja, kunnes ne ovat '
+            + 'tarpeeksi lähellä, ettei näkyä voi erehtyä pitämään uuden '
+            + 'hyökkäyksen alkuna.',
+          lyhyt: 'Birgun puolustajat näkevät merellä apulaivaston purjeet ja '
+            + 'tuskin uskovat silmiään.',
+          selite: 'Birgun puolustusmuurilla kaksi nääntynyttä puolustajaa näkee '
+            + 'horisontissa Sisiliasta saapuvan avun. Vuonna 1565 Valletta ei '
+            + 'ollut vielä rakennettu.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Heritage Malta, The Great '
+            + 'Siege / Victory Day, tarkistettu 27.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Valletta 1565 — purjeet horisontissa',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suuri-piiritys-paattyy-1565-kauko-photo-v4.jpg',
+              lyhyt: 'Sisiliasta tullut apulaivasto tuo väkeä maihin Maltan rannikolla.',
+              selite: 'Mellieħan lahdella apulaivaston veneet kuljettavat '
+                + 'sotilaita matalaan veteen; piirityksen päättyminen alkaa '
+                + 'hahmottua.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Heritage Malta, The Great '
+                + 'Siege / Victory Day, tarkistettu 27.9.2026.',
+            },
+          ],
         },
       ],
     },
