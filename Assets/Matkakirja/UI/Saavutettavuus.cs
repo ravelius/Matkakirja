@@ -26,18 +26,28 @@ namespace Matkakirja.Natiivi
         static string L(float v) => v.ToString("0.##", CultureInfo.InvariantCulture);
         static string Puhdas(string t) => Regex.Replace(t ?? "", "<[^>]+>", "").Trim();
 
-        /// <summary>VoiceOverin nimi ohjaimelle: tooltip, oma teksti tai ensimmäinen lapsen teksti; null = nimetön.</summary>
-        public static string Nimi(VisualElement e)
+        /// <summary>VoiceOverin nimi ohjaimelle: näkyvä teksti (omat ja lasten tekstit), muuten tooltip; null = nimetön.</summary>
+        public static string Nimi(VisualElement e) => Teksti(e) ?? (string.IsNullOrWhiteSpace(e.tooltip) ? null : e.tooltip.Trim());
+
+        /// <summary>Vihje (VoiceOverin hint): tooltip, jos nimi tuli näkyvästä tekstistä ja tooltip kertoo muuta.</summary>
+        public static string Vihje(VisualElement e)
         {
-            if (!string.IsNullOrWhiteSpace(e.tooltip)) return e.tooltip.Trim();
+            string t = Teksti(e);
+            return t != null && !string.IsNullOrWhiteSpace(e.tooltip) && e.tooltip.Trim() != t ? e.tooltip.Trim() : null;
+        }
+
+        /// <summary>Ohjaimen näkyvä teksti: oma teksti, kentän otsikko tai näkyvät lapsitekstit välilyönnein.</summary>
+        static string Teksti(VisualElement e)
+        {
             if (e is TextElement te && !string.IsNullOrWhiteSpace(Puhdas(te.text))) return Puhdas(te.text);
             if (e is BaseField<float> bf && !string.IsNullOrWhiteSpace(bf.label)) return bf.label;
+            var osat = new List<string>();
             foreach (var t in e.Query<TextElement>().ToList())
             {
                 var s = Puhdas(t.text);
-                if (s.Length > 0 && t.resolvedStyle.display != DisplayStyle.None) return s;
+                if (s.Length > 0 && t.resolvedStyle.display != DisplayStyle.None && t.resolvedStyle.visibility != Visibility.Hidden) osat.Add(s);
             }
-            return null;
+            return osat.Count > 0 ? string.Join(" ", osat) : null;
         }
 
         /// <summary>Kosketusala maailmakoordinaateissa: bound ja Kosketusnapin "kosketusala"-lapsi.</summary>

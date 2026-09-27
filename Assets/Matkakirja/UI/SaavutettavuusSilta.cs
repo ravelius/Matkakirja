@@ -139,8 +139,9 @@ namespace Matkakirja.Natiivi
                 }
                 Kay(juuri, 1f, false);
             }
-            // Ylin kerros ensin; rivi = 8 yksikön kaista, jotta samalla rivillä olevat luetaan vasemmalta oikealle.
-            return tulos.OrderByDescending(x => x.Item4).ThenBy(x => Mathf.Round(x.Item5.y / 8f)).ThenBy(x => x.Item5.x)
+            // Lukujärjestys ruudulla ylhäältä alas (peite on jo rajannut alemmat kerrokset); rivi = 8 yksikön kaista,
+            // jotta samalla rivillä olevat luetaan vasemmalta oikealle.
+            return tulos.OrderBy(x => Mathf.Round(x.Item5.y / 8f)).ThenBy(x => x.Item5.x)
                         .Select(x => (x.Item1, x.Item2, x.Item3)).ToList();
         }
 
@@ -172,6 +173,7 @@ namespace Matkakirja.Natiivi
                 {
                     case Laji.Nappi:
                         s.role = AccessibilityRole.Button;
+                        s.hint = Saavutettavuus.Vihje(el);
                         s.invoked += () => Paina(el);
                         break;
                     case Laji.Kytkin:
