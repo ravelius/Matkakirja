@@ -11,6 +11,12 @@
 // kauempana (NostoKerros.ZoomKerroin < 0,95), linssissä, muussa tilassa kuin kartalla ja avauskortin ollessa auki.
 // Kaupungilla pitää olla nähtävyyskartta tai turisti-info (web kaupungillaKohdekartta || kaupunginMatkailijalle).
 //
+// VAKAA ANKKURI (omistajan löydös 1.0.32, Ateena: kortti vaihtoi paikkaa ja välkkyi): paikka valitaan kerran kaupunkia
+// kohden (renkaat ja asennot kuten yllä) ja lukitaan kaupungin pisteeseen kiinteällä siirrolla; kortti ei enää koskaan
+// vaihda asentoa. Lukittuna esteinä ovat vain kalusteet, kaupungin piste, nappula ja ruudun reuna (ei nostomerkit, jotka
+// syttyvät ja sammuvat omien sääntöjensä mukaan). Peitossa kortti piiloutuu paikallaan hystereesillä: piiloon, kun
+// peitto on kestänyt PiiloS, ja takaisin, kun paikka on ollut vapaana (vara Vara pt) PiiloS. Uusi kaupunki = uusi valinta.
+//
 // Ulkoasu (web): reuna 2 px #f5f0e2, kulma 9, pohja #d9ccb0, kuva cover; nimi alareunassa Luku lihava 10 pt #fff8ec
 // pohjalla rgba(33,29,24,.72), yksi rivi. Esiin 350 ms (scale 0,85 → 1, opacity 0 → 1); vähennetty liike: heti.
 using System.Collections.Generic;
@@ -26,6 +32,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Web KUTSUN_KERROIN: nostojen karttakerroin, jonka alla kutsu on piilossa.</summary>
         const float Kerroin = 0.95f;
         const float Reunavara = 4f, EsiinMs = 350f;
+        /// <summary>Piilotuksen ja paluun hystereesi: peiton/vapauden kesto (s) ja paluun lisävara (pt).</summary>
+        const float PiiloS = 0.4f, Vara = 6f;
         static readonly float[] Renkaat = { 8f, 20f, 36f };
 
         readonly UiKerros kerros;
@@ -38,6 +46,12 @@ namespace Matkakirja.Natiivi
         string kaupunki, kuvanTiedosto;
         float esiinAlku = float.NaN;
         bool nakyy;
+        /// <summary>Lukittu siirto kaupungin pisteestä (vasen yläkulma), tai null = ei vielä valittu tälle kaupungille.</summary>
+        Vector2? lukittu;
+        /// <summary>Lukittu paikka peitossa (piilossa peiton takia; muut piilotussyyt eivät viivästä paluuta).</summary>
+        bool peitossa;
+        /// <summary>Hetki, josta alkaen peiton vastainen tila on jatkunut; NaN = ei muutosta vireillä.</summary>
+        float muutosAlkoi = float.NaN;
 
         public Kutsuminiatyyri(UiKerros kerros)
         {
@@ -83,6 +97,9 @@ namespace Matkakirja.Natiivi
             if (kaupunki != id)
             {
                 kaupunki = id;
+                lukittu = null;
+                peitossa = false;
+                muutosAlkoi = float.NaN;
                 nimi.text = k.Nimi ?? id;
                 kuva.style.backgroundImage = StyleKeyword.None;
                 kuvanTiedosto = null;
@@ -114,39 +131,69 @@ namespace Matkakirja.Natiivi
             esteet.Add(ui.Pulu.Laatikko);
             esteet.Add(ui.Matkavalinta.LiikuLaatikko);
             esteet.Add(new Rect(paikallinen + new Vector2(p.x - 14f, p.y - 46f), new Vector2(28f, 56f)));
-            Rect? valittu = null;
-            for (int kierros = 0; kierros < 2 && !valittu.HasValue; kierros++)
+            // Lukittu paikka: sama siirto kaupungin pisteestä; vain kalusteet, piste, nappula ja reuna voivat peittää.
+            if (lukittu.HasValue)
             {
-                foreach (var v in Renkaat)
-                {
-                    foreach (var a in new[]
-                    {
-                        new Vector2(v, -v - Koko), new Vector2(-v - Koko, -v - Koko),
-                        new Vector2(v + 4f, -Koko / 2f), new Vector2(-v - 4f - Koko, -Koko / 2f), new Vector2(v, v),
-                    })
-                    {
-                        var rr = new Rect(p.x + a.x, p.y + a.y, Koko, Koko + 14f);
-                        if (rr.xMin < Reunavara || rr.yMin < Reunavara || rr.xMax > W - Reunavara || rr.yMax > H - Reunavara) continue;
-                        var maailma = new Rect(rr.position + paikallinen, rr.size);
-                        bool osuu = false;
-                        for (int i = kierros == 0 ? 0 : nostoja; i < esteet.Count; i++)
-                        {
-                            var e = esteet[i];
-                            if (e.width > 0 && e.height > 0 && e.Overlaps(maailma)) { osuu = true; break; }
-                        }
-                        if (osuu) continue;
-                        valittu = rr;
-                        break;
-                    }
-                    if (valittu.HasValue) break;
-                }
+                var rr = new Rect(p.x + lukittu.Value.x, p.y + lukittu.Value.y, Koko, Koko + 14f);
+                // Näkyvä piiloutuu vasta selvästä peitosta (PiiloS), peitossa oleva palaa vain varan kanssa ja viiveellä.
+                bool vapaa = Vapaa(rr, peitossa ? Vara : 0f, nostoja, W, H, paikallinen);
+                float nyt = Time.unscaledTime;
+                if (vapaa != peitossa) muutosAlkoi = float.NaN;
+                else if (float.IsNaN(muutosAlkoi)) muutosAlkoi = nyt;
+                if (!float.IsNaN(muutosAlkoi) && nyt - muutosAlkoi >= PiiloS) { peitossa = !vapaa; muutosAlkoi = float.NaN; }
+                // Vireillä oleva muutos tarvitsee piirron, jotta se ratkeaa levossakin.
+                if (!float.IsNaN(muutosAlkoi)) Ruudunpaivitys.Herata(0.1f);
+                Aseta(rr);
+                if (peitossa) { Nayta(false); return; }
             }
-            if (!valittu.HasValue) { Nayta(false); return; }
-            float x = Mathf.Round(valittu.Value.x), y = Mathf.Round(valittu.Value.y);
-            if (nappi.resolvedStyle.left != x) nappi.style.left = x;
-            if (nappi.resolvedStyle.top != y) nappi.style.top = y;
+            else
+            {
+                Rect? valittu = null;
+                for (int kierros = 0; kierros < 2 && !valittu.HasValue; kierros++)
+                {
+                    foreach (var r0 in Renkaat)
+                    {
+                        foreach (var a in new[]
+                        {
+                            new Vector2(r0, -r0 - Koko), new Vector2(-r0 - Koko, -r0 - Koko),
+                            new Vector2(r0 + 4f, -Koko / 2f), new Vector2(-r0 - 4f - Koko, -Koko / 2f), new Vector2(r0, r0),
+                        })
+                        {
+                            var rr = new Rect(p.x + a.x, p.y + a.y, Koko, Koko + 14f);
+                            if (!Vapaa(rr, 0f, kierros == 0 ? 0 : nostoja, W, H, paikallinen)) continue;
+                            valittu = rr;
+                            lukittu = a;
+                            break;
+                        }
+                        if (valittu.HasValue) break;
+                    }
+                }
+                if (!valittu.HasValue) { Nayta(false); return; }
+                Aseta(valittu.Value);
+            }
             Nayta(true);
             Animoi();
+        }
+
+        /// <summary>Laatikko ruudun sisällä ja vapaa esteistä alkaen indeksistä ensimmainen (vara laajentaa laatikkoa).</summary>
+        bool Vapaa(Rect rr, float vara, int ensimmainen, float W, float H, Vector2 paikallinen)
+        {
+            var r = new Rect(rr.x - vara, rr.y - vara, rr.width + 2f * vara, rr.height + 2f * vara);
+            if (r.xMin < Reunavara || r.yMin < Reunavara || r.xMax > W - Reunavara || r.yMax > H - Reunavara) return false;
+            var maailma = new Rect(r.position + paikallinen, r.size);
+            for (int i = ensimmainen; i < esteet.Count; i++)
+            {
+                var e = esteet[i];
+                if (e.width > 0 && e.height > 0 && e.Overlaps(maailma)) return false;
+            }
+            return true;
+        }
+
+        void Aseta(Rect rr)
+        {
+            float x = Mathf.Round(rr.x), y = Mathf.Round(rr.y);
+            if (nappi.resolvedStyle.left != x) nappi.style.left = x;
+            if (nappi.resolvedStyle.top != y) nappi.style.top = y;
         }
 
         void Animoi()
