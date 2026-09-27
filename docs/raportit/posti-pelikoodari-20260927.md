@@ -51,3 +51,15 @@ HAVAINNEKUVA-sääntö (Fable 13.4x): läpikäynti web + natiivi agentilla käyn
 Main punaisella #3412:n jälkeen → **korjaus #3414**: pelikatalogi-data.js generoitu (22 korttia), testi sallii korttierät
 (≥ 10, järjestys 1..n aukottomina), node --test 4458/0. Docs-PR:issä, jotka muuttavat docs/pelikatalogi.md:tä, pitää ajaa
 `node tools/tee-pelikatalogi-data.mjs` samassa PR:ssä (Fablelle ja Sisältökirjurille tiedoksi).
+
+## HAVAINNEKUVA valmis (Fable 13.4x)
+
+- Web: **#3415** v2320 (lähderivit, ~135 kuvatekstiä, 97 maakuntalisenssiä, 33 "Kuvaputken generoitu valokuva"; uusi sanastotesti).
+  Mergeä #3414:n jälkeen (sen 2 pelikatalogi-kaatumista ovat mainin punaisuus).
+- Projektisivu (#3410): ei korjattavaa (osumat = historialliset kuvittajat, "kuvituksellinen" = kaavamainen).
+- Natiivi, oma osuus (Peli/, Scripts/Peli/, Plugins/iOS/): ei osumia; kuvatekstit tulevat web-paketista.
+- **Natiivi-UI:lle** (välitä): `Assets/Matkakirja/UI/KysymysNakyma.cs:357` LahdeRivi "Matkakirjan kuvitus" → "Matkakirjan havainnekuva"
+  ja `:368` Rakenne.Teksti("Matkakirjan kuvitus", …) → sama. Nostokortti.cs:944 regex: pidä molemmat muodot.
+- **Fablelle kysymys:** lähderivi "Tekoälyllä tuotettu havainnekuva. Viitteet: …" (204 datariviä, js/havainnekuva.js:84
+  vihje, HAVAINNEKUVA_LAHDE_RE, natiivi Nostokortti.cs:981) jätettiin ennalleen — säilytetäänkö "Tekoälyllä tuotettu"
+  avoimuuden vuoksi, vai pois?
