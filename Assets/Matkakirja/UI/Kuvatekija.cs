@@ -93,6 +93,9 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        /// <summary>Lataus käynnistyksessä (UiNakymat), jottei ensimmäinen lähderivi jää täydentämättä.</summary>
+        public static void Esilataa() => Hae();
+
         /// <summary>Taulu tai null (ensimmäinen kutsu käynnistää latauksen paketista).</summary>
         static Dictionary<string, (string Tekija, string Lisenssi)> Hae()
         {
