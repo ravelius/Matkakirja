@@ -176,6 +176,8 @@ namespace Matkakirja
         /// 27.9.: pienissä maissa (NLD saapuminen 404 km, lähin ~311 km → 1,3) tason 1 3D-mallien kynnys 2,5 ei täyty koskaan.
         /// </summary>
         public float SuurinKerroin { get; private set; } = float.PositiveInfinity;
+        /// <summary>Pelaajan maan saapumisnäkymän kameran korkeus (m; 0 = tuntematon): kertoimen 1 mittakaava (Lipputanko, maailmakoko).</summary>
+        public double SaapumisKorkeusM => saapumisKorkeusM;
         /// <summary>Tämän kehyksen näytettävät nostot (ruudulla, edessä, lähimmät keskeltä, enintään katto).</summary>
         public IReadOnlyList<Nosto> Naytettavat => naytettavat;
         /// <summary>Herää, kun Naytettavat, Nakyvissa tai Syttyminen muuttui tässä kehyksessä.</summary>

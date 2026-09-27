@@ -791,11 +791,13 @@ namespace Matkakirja
                 }
                 case "lipputanko":
                 {
-                    // lipputanko tila | pois | koe [lat lon] | koko <pt> (löydös 161)
+                    // lipputanko tila | pois | koe [lat lon] | koko <pt> | maailma | ruutu | katto <osuus> (löydös 161)
                     string m = o.Length > 1 ? o[1] : "tila";
                     if (m == "pois") Lipputanko.Pois();
                     else if (m == "jatkuva" || m == "syke") Lipputanko.AsetaJatkuva(m == "jatkuva");
                     else if (m == "koko" && o.Length > 2) Lipputanko.KorkeusPt = float.Parse(o[2], CultureInfo.InvariantCulture);
+                    else if (m == "maailma" || m == "ruutu") Lipputanko.MaailmanKoko = m == "maailma";   // omistaja 27.9. klo 23.2x
+                    else if (m == "katto" && o.Length > 2) Lipputanko.KattoOsuus = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0.1f, 2f);
                     else if (m == "perspektiivi" && o.Length > 2) Lipputanko.Perspektiivi = o[2] != "0";
                     else if (m == "suunta" && o.Length > 2) Lipputanko.AsetaSuunta(o[2]);
                     else if (m == "koe")
@@ -804,6 +806,7 @@ namespace Matkakirja
                         double lo = o.Length > 3 ? double.Parse(o[3], CultureInfo.InvariantCulture) : 23.73;
                         Lipputanko.Aseta("GRC", la, lo, Lipputanko.Koelippu());
                     }
+                    if (m != "tila") PallonLepo.Muuttui("lipputanko");
                     Debug.Log("MATKAKIRJA lipputanko " + m + ": " + Lipputanko.Tila());
                     break;
                 }

@@ -488,7 +488,8 @@ namespace Matkakirja.Natiivi
                 var m = merkit[i];
                 // Löydös 160: tasojen 2–3 arkkityypit 0,6 × ja 0,45 × tason 1 koko (Symbolimallit.Tasot23).
                 if (m.Ryhma == null && !m.MallinAlla && Symbolimallit.OnMalli(m.Id))
-                    mallienPisteet.Add((m.Piste, Symbolimallit.KokoPt * (m.Taso1 ? 1f : m.Taso >= 3 ? 0.45f : 0.6f)));
+                    mallienPisteet.Add((m.Piste, m.Taso1 ? Symbolimallit.Taso1LeveysPt   // symbolin koko nyt (omistaja 27.9. klo 23.2x: isommiksi)
+                        : Symbolimallit.KokoPt * (m.Taso >= 3 ? 0.45f : 0.6f)));
             }
             for (int i = 0; i < n; i++)
             {
@@ -881,6 +882,10 @@ namespace Matkakirja.Natiivi
             // Reunapiste (erikoismallin alla): minimerkin piste enintään 6 pt (musterengas), nimiö omassa mitassaan.
             float pisteMitta = reuna ? ErikoismallinAlla.PisteMitta(m.Mitta) : m.Mitta;
             if (reuna) m.Ruutu = MiniRuutu * pisteMitta / Mathf.Max(1e-4f, m.Mitta);
+            // 3D-symboli (omistaja 27.9. klo 23.2x: isommiksi, Linssisepän speksi): merkin ruutu kattaa symbolin leveyden, jotta oma
+            // nimiö sijoittuu symbolin viereen eikä sen päälle, muiden nimiöt väistävät sitä ja napautusala on symbolin kokoinen.
+            if (m.Taso1 && !ryhma && !reuna && Symbolimallit.OnMalli(s.Id))
+                m.Ruutu = Mathf.Max(m.Ruutu, 0.5f * Symbolimallit.Taso1LeveysPt / Mathf.Max(1e-4f, m.Mitta));
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
             string tyyppi = ryhma ? "ryhma|" + s.Aihe : reuna ? "reunapiste" : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);

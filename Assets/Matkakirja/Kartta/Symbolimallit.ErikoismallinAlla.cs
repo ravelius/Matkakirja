@@ -151,13 +151,15 @@ namespace Matkakirja
                 if (!kappaleet.TryGetValue(id, out var k) || k.Malli < 0) continue;
                 bool edessa = !float.IsInfinity(k.Etaisyys);
                 float piilo = AllaSaanto && edessa ? Arvioi(id, 1, k.JalkaMaailma, dt, ref muuttui, ref kesken) : 0f;
+                // Väistö (Symbolimallit.Vaisto.cs) jakaa piilokanavan: suurempi voittaa.
+                piilo = Mathf.Max(piilo, VaistoPiilo(id));
                 if (!edessa) continue;
                 bool nakyy = piilo < 1f;
                 if (k.R.enabled != nakyy) { Nayta(k, nakyy); PallonLepo.Muuttui("symbolimallit"); }
                 AsetaPiiloLohkot(k, piilo);
             }
             if (LopetaAlla(true)) muuttui = true;
-            allaAnimoi = kesken;
+            allaAnimoi = kesken || vaistoAnimoi;
             // Natiivi-UI kysyy ReunaPistettä merkkejä päivittäessään: näytettävät uudelleen, kun joku piiloutuu tai palaa.
             if (muuttui) { NostoKerros.Instanssi?.Herata(); PallonLepo.Muuttui("symbolimallit: erikoismallin alla"); }
         }
@@ -198,8 +200,10 @@ namespace Matkakirja
         {
             ruutu = default;
             var s = instanssi;
-            if (s == null || s.kamera == null || nostoId == null || !AllaSaanto || !Paalla) return false;
-            if (!s.alla.TryGetValue(nostoId, out var a) || !a.Piiloon || a.E == null || !a.E.R.enabled) return false;
+            if (s == null || s.kamera == null || nostoId == null || !Paalla) return false;
+            // Ei erikoismallin alla: väistön reunapiste (jalka tärkeämmän symbolin laatikossa, Symbolimallit.Vaisto.cs).
+            if (!AllaSaanto || !s.alla.TryGetValue(nostoId, out var a) || !a.Piiloon || a.E == null || !a.E.R.enabled)
+                return s.VaistonReunaPiste(nostoId, out ruutu);
             Vector3 e = s.kamera.WorldToScreenPoint(a.E.JalkaMaailma);
             Vector3 n = s.kamera.WorldToScreenPoint(a.Jalka);
             if (e.z <= 0f) return false;

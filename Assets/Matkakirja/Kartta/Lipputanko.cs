@@ -18,7 +18,11 @@ namespace Matkakirja
     /// saapumisen ja kosketuksen jälkeen muutaman sekunnin, asettuu levossa suoraksi 0,3 s:ssa ja jähmettyy (lepopiirto 0
     /// kehystä). Vaihtoehto B (eristetty kerros: kartta kerran talteen, vain lippu 30 fps) on mittausta varten erikseen.
     ///
-    /// MUOTO: tangon korkeus on vakio ruudulla (<see cref="KorkeusPt"/> pistettä, kuten KaupunkiMerkit), ja tanko nousee
+    /// MAAILMAN KOKO (omistaja 27.9. klo 23.2x Fablen kautta, Linssisepän speksi symbolit-ja-lippu-speksi-20260928.md): lippu
+    /// pitää kokonsa maailmassa kuin oikea esine. Korkeus on <see cref="KorkeusPt"/> saapumisnäkymän mittakaavassa (kartan
+    /// kerroin 1), joten lähemmäs zoomattaessa tanko kasvaa (kerroin 2 → kaksinkertainen) ja loitonnettaessa pienenee; katto
+    /// <see cref="KattoOsuus"/> ruudun korkeudesta, jotta kangas pysyy ruudulla. `lipputanko ruutu` palauttaa vakioruudun (A/B).
+    /// ENTINEN MUOTO: tangon korkeus on vakio ruudulla (<see cref="KorkeusPt"/> pistettä, kuten KaupunkiMerkit), ja tanko nousee
     /// pinnan normaalin suuntaan. Suoraan ylhäältä katsottuna pystysuora tanko olisi pelkkä piste, joten akseli kallistuu
     /// normaalin ja katseen tasossa niin, että tanko on vähintään <see cref="MinKulma"/> asteen kulmassa katseeseen (näkyy
     /// seisovana; kallistetussa näkymässä se on aito pystysuora). Lippu liehuu maailmaan sidottuun suuntaan, itään
@@ -30,8 +34,12 @@ namespace Matkakirja
     [DefaultExecutionOrder(110)]
     public sealed class Lipputanko : MonoBehaviour
     {
-        /// <summary>Tangon korkeus ruudun pisteinä (liioiteltu, omistaja: "liioitellun iso").</summary>
+        /// <summary>Tangon korkeus ruudun pisteinä (liioiteltu, omistaja: "liioitellun iso"); maailmakoossa saapumisnäkymässä.</summary>
         public static float KorkeusPt = 120f;
+        /// <summary>Maailman kokoinen (oletus, omistaja 27.9. klo 23.2x); false = vakio ruudulla (komento `lipputanko maailma|ruutu`).</summary>
+        public static bool MaailmanKoko = true;
+        /// <summary>Maailmakoon katto: tanko enintään tämä osuus ruudun korkeudesta (komento `lipputanko katto <osuus>`).</summary>
+        public static float KattoOsuus = 0.5f;
         /// <summary>Löydös 176: kartan kerroin, jonka alla tanko piiloutuu (maatasolla 1, Euroopan mittakaavassa ~0,3).</summary>
         public const float PiiloKerroin = 0.55f;
         /// <summary>Tangon koko piilokynnyksellä suhteessa täyteen (kerroin 1): pienenee lineaarisesti tähän.</summary>
@@ -68,7 +76,7 @@ namespace Matkakirja
         public static string Suunta = "maailma";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KorkeusPt = 120f; Perspektiivi = true; Jatkuva = true; Suunta = "maailma"; instanssi = null; }
+        static void Nollaa() { KorkeusPt = 120f; MaailmanKoko = true; KattoOsuus = 0.5f; Perspektiivi = true; Jatkuva = true; Suunta = "maailma"; instanssi = null; }
 
         /// <summary>Liehuntasuunnan vaihto ajossa (vertailukuvat): maailma | ruutu | kamera.</summary>
         public static void AsetaSuunta(string s)
@@ -327,8 +335,21 @@ namespace Matkakirja
             // Vakio ruutukoko (KaupunkiMerkit): yksi piste tällä etäisyydellä.
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
             float piste = 2f * etaisyys * tanPuoli / (Screen.height / PalloKierto.Pistekerroin);
-            float zoom = Mathf.Lerp(PieninOsuus, 1f, Mathf.InverseLerp(PiiloKerroin, 1f, kerroin));
-            float koko = piste * KorkeusPt * zoom / Mathf.Max(1e-9f, gt.lossyScale.x);
+            float koko;
+            double saapuminen = nk != null ? nk.SaapumisKorkeusM : 0;
+            if (MaailmanKoko && saapuminen > 0)
+            {
+                // Maailman kokoinen: KorkeusPt pistettä saapumiskorkeuden etäisyydellä (paikallisina metreinä, joten georeferenssin
+                // skaala kumoutuu), eli kerroin 1 = entinen koko ja kerroin 2 = kaksinkertainen. Katto: KattoOsuus ruudusta.
+                float maailma = 2f * (float)saapuminen * tanPuoli / (Screen.height / PalloKierto.Pistekerroin) * KorkeusPt;
+                float katto = piste * KattoOsuus * Screen.height / PalloKierto.Pistekerroin / Mathf.Max(1e-9f, gt.lossyScale.x);
+                koko = Mathf.Min(maailma, katto);
+            }
+            else
+            {
+                float zoom = Mathf.Lerp(PieninOsuus, 1f, Mathf.InverseLerp(PiiloKerroin, 1f, kerroin));
+                koko = piste * KorkeusPt * zoom / Mathf.Max(1e-9f, gt.lossyScale.x);
+            }
             if (transform.rotation != suunta) transform.rotation = suunta;
             // Jalka sivuun nappulasta ruudun oikealle (vakio pisteinä).
             Vector3 paikka = p + kamera.transform.right * (piste * SivuPt);
@@ -339,7 +360,8 @@ namespace Matkakirja
 
         string Kuvaus() =>
             $"maa {maa ?? "-"}, paikka {lat:0.00} {lon:0.00}, näkyy {nakyi}, lippu {(lahde != null ? lahde.width + "×" + lahde.height : "-")}" +
-            $", kangas 3D ({(Jatkuva ? "jatkuva" : "syke")}), korkeus {KorkeusPt:0} pt, suunta {Suunta}";
+            $", kangas 3D ({(Jatkuva ? "jatkuva" : "syke")}), korkeus {KorkeusPt:0} pt ({(MaailmanKoko ? $"maailma, katto {KattoOsuus:0.##}" : "ruutu")})" +
+            $", suunta {Suunta}";
 
         void OnDestroy()
         {
