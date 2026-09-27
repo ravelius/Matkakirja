@@ -292,7 +292,7 @@ namespace Matkakirja.Peli.Testit
             m.KaannaLaatta(tahti);
             m.LukitseLaatta(m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.MannerAarre).Key);
             var json = m.Tallenna();
-            Oleta.Tosi(json.Contains("\"versio\":6") && json.Contains("\"laattamaailma\":{"), "versio 6");
+            Oleta.Tosi(json.Contains("\"versio\":7") && json.Contains("\"laattamaailma\":{"), "versio 7");
             var l = Matka.Lataa(KultaisetApu.Verkko, json);
             Oleta.Sama(json, l.Tallenna());
             Oleta.Sama(Kartta(m.Laatat.Laatat), Kartta(l.Laatat.Laatat), "Map-järjestys");
@@ -313,7 +313,7 @@ namespace Matkakirja.Peli.Testit
             m.ValitseKulkutapa(Kulkutapa.Maa);
             m.Heita();
             m.Tila.Kysely.AarreLukot.Add("lontoo");
-            var v2 = m.Tallenna().Replace("\"versio\":6", "\"versio\":2");
+            var v2 = m.Tallenna().Replace("\"versio\":7", "\"versio\":2");
             Oleta.Tosi(v2.Contains("\"laattamaailma\":null"), "peli ilman laattoja");
             long ennen = m.Satunnainen.Kutsuja;
 
@@ -328,7 +328,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(a.Satunnainen.Kutsuja >= ennen + 279, "jako kulutti pelin satunnaisuutta");
             Oleta.Sama(Vaihe.Siirto, a.Tila.Vaihe, "vaihe säilyi");
             var v3 = a.Tallenna();
-            Oleta.Tosi(v3.Contains("\"versio\":6"), "seuraava tallennus on nykyversio 6");
+            Oleta.Tosi(v3.Contains("\"versio\":7"), "seuraava tallennus on nykyversio 7");
             Oleta.Sama(v3, Matka.Lataa(KultaisetApu.Verkko, v3, KultaisetApu.Laattamaarat).Tallenna(), "laatallinen tallennus ei jaa uudelleen");
         }
 

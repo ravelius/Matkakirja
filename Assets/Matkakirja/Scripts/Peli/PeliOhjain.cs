@@ -707,6 +707,7 @@ namespace Matkakirja.Natiivi
             rahaSyy = rahanSyy;
             if (kaupat == null || matka == null) return KauppaTulos.Epaonnistui("peli ei ole valmis");
             var lahto = matka.Tila.Pelaaja.Sijainti;
+            var tekija = matka.Tila.Pelaaja;
             tapahtumat.Clear();
             KauppaTulos t;
             int rahaEnnen = matka.Tila.Pelaaja.Raha;
@@ -714,6 +715,7 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { Debug.LogException(e); rahaSyy = null; return KauppaTulos.Epaonnistui(e.Message); }
             if (!t.Ok) { rahaSyy = null; return t; }
             if (matka.Tila.Pelaaja.Raha > rahaEnnen) Aanita(Aanitunnukset.Kolikot);
+            KirjaaPelipaiva(tekija);
             Tallenna();
             if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
             if (Tila == SilmukanTila.Lehti || Tila == SilmukanTila.Matkalla) { tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila)); return t; }
@@ -1002,8 +1004,11 @@ namespace Matkakirja.Natiivi
             KytkeRekisteri();
             KytkeReitti(m);
             m.Saapui += (_, k, uusi) => { if (m == matka) uusiKaupunki = uusi ? k : null; };
-            m.Tapahtui += (laji, teksti) => { tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
+            // "rahat" (rahatilanne, pelistreak) ei tapahtumariville: Natiivi-UI näyttää sen omana kuplanaan
+            // (Rahatilanne / Pelistreak), kuten web yhtenä emit('rahat')-toastina — muuten kaksi päällekkäistä toastia.
+            m.Tapahtui += (laji, teksti) => { if (laji != "rahat") tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
             KytkeTalous(m);
+            KytkePelistreak(m);
             m.Loysi += (p, l) =>
             {
                 kysymysLoyto = l;
@@ -1419,6 +1424,7 @@ namespace Matkakirja.Natiivi
             VaiennaPaikanPuhe();
 
             tapahtumat.Clear();
+            var tekija = matka.Tila.Pelaaja;
             var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento, vapaa && linssit != null ? linssit.VapaaSiirtyminen : (Func<string, TekoTulos>)null, siirto);
             // Liiku-vuossa noppa näytettiin jo heitettäessä (HeitaJaValitse): ei toista kertaa siirrossa.
             if (siirto != null) t.Noppa = null;
@@ -1430,6 +1436,7 @@ namespace Matkakirja.Natiivi
                 return t.Virhe;
             }
             if (t.Saapui != null && t.Saapui == Tavoite) Tavoite = null; // perillä
+            KirjaaPelipaiva(tekija);
             Tallenna();
 
             var osat = new List<string>();
@@ -1772,6 +1779,7 @@ namespace Matkakirja.Natiivi
             bool quiz = fokus.Kohtaaminen(p.Sijainti.Kaupunki) && pulmat?.Odottaa() == null;
             var t = kysely.Tutki(false, quiz ? KysymysMuoto.Visa : (KysymysMuoto?)null);
             if (!t.Ok) { Virhe(t.Virhe); return t.Virhe; }
+            KirjaaPelipaiva(p);
             Tallenna();
             if (Tila == SilmukanTila.Lehti) { SuljeLehti(); return null; }   // LehtiSuljettu näyttää kysymyksen
             if (AvoinTehtava != Tehtava.Ei) NaytaKysymys(); else PaivitaNakyma();
@@ -1820,8 +1828,10 @@ namespace Matkakirja.Natiivi
             kysymysLisat.Clear();
             // Kysymys ei ala luennan päälle.
             if (puhe != null && puhe.Soi) puhe.Pysayta();
+            var tekija = matka.Tila.Pelaaja;
             var t = kysely.Tutki(vaikea);
             if (!t.Ok) { Virhe(t.Virhe); PaivitaNakyma(); return t.Virhe; }
+            KirjaaPelipaiva(tekija);
             if (AvoinTehtava == Tehtava.Ei)
             {
                 Tallenna();
@@ -1923,8 +1933,10 @@ namespace Matkakirja.Natiivi
         {
             if (Tila != SilmukanTila.Kysymys || AvoinTehtava == Tehtava.Ei) return "kysymys ei ole auki";
             bool vastattuEnnen = KysymysTila != null && KysymysTila.Vastattu;
+            var tekija = matka.Tila.Pelaaja;
             var t = teko();
             if (!t.Ok) { rahaSyy = null; NaytaKysymys(t.Virhe); return t.Virhe; }
+            KirjaaPelipaiva(tekija);
             // Vastaus: ensin tuomio, 0,9 s myöhemmin paljastus (Update).
             if (!vastattuEnnen) { tulosPaljastettu = false; paljastusAika = Time.unscaledTime + TuomioS; }
             Tallenna();

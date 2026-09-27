@@ -90,6 +90,13 @@ namespace Matkakirja.Peli
         /// </summary>
         public event Action<Pelaaja, Paivakulu, int> PaivakuluVeloitettiin;
 
+        /// <summary>
+        /// Pelistreak palkitsi (web emit 'rahat' + tilanne 'peli.streak', icon 'kukkaro'):
+        /// (pelaaja, pituus, otsikko "Kolmas päivä peräkkäin matkalla", ala "+20 £" /
+        /// "+50 £ ja viikkobonus +100 £"). Vain kun palkkio &gt; 0; lokirivi tulee Tapahtui("rahat", …).
+        /// </summary>
+        public event Action<Pelaaja, int, string, string> Pelistreak;
+
         public Matka(IReittiverkko verkko, Satunnainen satunnainen, Pelitila tila = null)
         {
             Verkko = verkko ?? throw new ArgumentNullException(nameof(verkko));
@@ -427,6 +434,31 @@ namespace Matkakirja.Peli
         {
             Tapahtui?.Invoke("rahat", otsikko);
             Rahatilanne?.Invoke(p, tilanne, otsikko, ala);
+        }
+
+        /// <summary>
+        /// Web kirjaaPelipaiva (pelistreak, Peli/Pelistreak.cs): pelaajan teko laitteen paikallisella
+        /// päivällä 'yyyy-MM-dd'. Sama päivä uudelleen ei tee mitään; eilisen jatko kasvattaa
+        /// laskuria, muu aloittaa alusta. Palkkio kassaan heti. Pudonnut pelaaja ja päättynyt
+        /// peli eivät kirjaa. Palauttaa (pituus, palkkio) tai null (sama päivä, ei kirjausta).
+        /// Päivä annetaan aina ulkoa: pelilogiikka ei lue kelloa.
+        /// </summary>
+        public (int Pituus, int Palkkio)? KirjaaPelipaiva(string paivays, Pelaaja p = null)
+        {
+            p ??= P;
+            if (p == null || p.Pudonnut || Tila.Vaihe == Vaihe.Ohi || !Streak.Kelpaa(paivays)) return null;
+            var ennen = p.Streak;
+            if (ennen != null && ennen.Paiva == paivays) return null;
+            int pituus = ennen != null && Streak.Kelpaa(ennen.Paiva) && Streak.PaivaaLisaa(ennen.Paiva, 1) == paivays ? ennen.Pituus + 1 : 1;
+            p.Streak = new StreakTila { Paiva = paivays, Pituus = pituus };
+            int palkkio = Streak.Palkkio(pituus);
+            if (palkkio > 0)
+            {
+                p.Raha += palkkio;
+                Tapahtui?.Invoke("rahat", Streak.Lokirivi(pituus));
+                Pelistreak?.Invoke(p, pituus, Streak.Otsikko(pituus), Streak.Ala(pituus));
+            }
+            return (pituus, palkkio);
         }
 
         /// <summary>
