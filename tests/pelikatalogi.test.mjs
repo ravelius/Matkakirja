@@ -69,15 +69,17 @@ test('osat, ensimmäiset 10 ja omistajan ideat', () => {
   assert.match(data.paivitetty, /^\d{4}-\d{2}-\d{2}$/);
 });
 
-test('pelikatalogi julkaistaan Pagesiin ja sivut linkittävät toisiinsa', () => {
+test('pelikatalogi julkaistaan Pagesiin projektisivun Pelit-välilehtenä', () => {
+  // 27.9.2026: pelikatalogi.html on ohjaussivu projekti.html#pelit-osoitteeseen
+  // (tests/projekti.test.mjs vahtii ohjauksen); data ladataan projektisivulle.
   const pages = readFileSync(new URL('../.github/workflows/pages.yml', import.meta.url), 'utf8');
   assert.match(pages, /\bpelikatalogi\.html\b/);
   assert.match(pages, /\bpelikatalogi-data\.js\b/);
+  const projekti = readFileSync(new URL('../projekti.html', import.meta.url), 'utf8');
+  assert.match(projekti, /<script src="pelikatalogi-data\.js"><\/script>/);
+  assert.match(projekti, /<script src="linssikatalogi-data\.js"><\/script>/);
   const peli = readFileSync(new URL('../pelikatalogi.html', import.meta.url), 'utf8');
-  const linssi = readFileSync(new URL('../linssikatalogi.html', import.meta.url), 'utf8');
-  assert.match(peli, /<script src="pelikatalogi-data\.js"><\/script>/);
-  assert.match(peli, /href="linssikatalogi\.html"/);
-  assert.match(linssi, /href="pelikatalogi\.html"/);
+  assert.match(peli, /projekti\.html#pelit/);
 });
 
 test('pelikatalogi: suunnitelmakortit jäsennetään (10 ensimmäistä + omistajan kortit) ja sivu piirtää ne', () => {
@@ -92,6 +94,6 @@ test('pelikatalogi: suunnitelmakortit jäsennetään (10 ensimmäistä + omistaj
   }
   const lento = data.kortit.find((k) => k.otsikko.startsWith('Lentopeli'));
   assert.ok(lento?.kentat.some((x) => x.nimi === 'Tila' && /odottaa/.test(x.teksti)), 'lentopeli: tila "odottaa, ensi viikko"');
-  const sivu = readFileSync(new URL('../pelikatalogi.html', import.meta.url), 'utf8');
-  assert.match(sivu, /id="valilehti-suunnitelmat"/);
+  const sivu = readFileSync(new URL('../projekti/pelit.js', import.meta.url), 'utf8');
+  assert.match(sivu, /data-ala-paneeli="suunnitelmat"/);
 });
