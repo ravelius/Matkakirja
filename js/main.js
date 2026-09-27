@@ -58,7 +58,7 @@ import {
   paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA, STRIIMIAANET_XAI,
   STRIIMIAANI_OLETUS, striimiaani, tallennaPuheAsetukset, viimeisinPuhe,
 } from './puhe.js';
-import { lueAaneen, pysaytaLukija } from './lukija.js';
+import { lueAaneen, pysaytaLukija, vaiennaAanikytkimella } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
 // iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
 import {
@@ -610,7 +610,7 @@ const naytaKertoja = () => {
 const kaannaKertoja = (paalle) => {
   asetaKertojaTila(paalle ? 'pitka' : 'ei');
   // Pois kesken luennan: kertoja vaikenee heti eikä jää lauseen puoliväliin.
-  if (!paalle && ui) { stopDiaryVoice(ui); stopIntroVoice(ui); pysaytaLukija(); }
+  if (!paalle && ui) { stopDiaryVoice(ui); stopIntroVoice(ui); vaiennaAanikytkimella(); }
   ui?.paivitaKaiutinTila?.();
 };
 

@@ -2250,7 +2250,7 @@ function maalaaKermaMaamaskilla(ctx, {
 }
 
 /*
- * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js poistettu 27.9.2026 — piirtokyky jäi ilman kytkentää;
  * prototyyppi kehittäjälipun takana). Kohdemaan renkaiden SISÄLLÄ
  * maalataan kevyt kerma (`tasoitus.sumu.peitto`, 0,35) kaikkialle paitsi
  * käytyjen kaupunkien ympärille: jokainen aukko on ellipsi laudan
