@@ -212,8 +212,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        maan kaupunkiRasteri["10"] = rivijuoksut, laattoja.kaupunkiRasteri ja tavuja.kaupunkiRasteri (ei yht:ssä);
  *        rasteri, maxzoom 9 ja kaupunkitaso ennallaan, jotta vanhat buildit eivät lataa Z10:tä (Natiiviseppä 27.9.)
  *        — Fable 27.9.2026.
+ *   1.52 offline: maat.*.lisamedia (+ tavuja.lisamedia, ei yht:ssä) ja lahteet.lisamedia — pelin omat tiedostot, jotka
+ *        puuttuivat offline-latauksesta (oma ämpäri mutta kuva-url/aani-url, tai kokoelmavaiheen suora osoite):
+ *        karttanostot, miniatyyrit, Livian ja saapumisen puheet, luentojen äänet. Omassa avaimessa, koska vanhat buildit
+ *        lataavat media-listan mutta eivät käytä sitä kuville ja puheelle (Natiiviseppä 27.9.) — Euroopan eheystarkistus.
  */
-export const SKEEMAVERSIO_TARKKA = '1.51';
+export const SKEEMAVERSIO_TARKKA = '1.52';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

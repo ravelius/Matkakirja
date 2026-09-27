@@ -91,8 +91,22 @@ const EI_MEDIAA = new Set(['linkki', 'tiedosto', 'kuva-url', 'aani-url', 'video-
  * Ennen tätä ne jäivät offline-latauksesta pois (4 142 kuvaa ja 56 ääntä koko paketissa).
  */
 const OMA_AMPARI = 'https://media.matkakirja.app/';
-export const onOffline = (v) => Boolean(v.url) && (!EI_MEDIAA.has(v.laji)
+/*
+ * Natiiviseppä 27.9.2026: vanhat buildit (≤ 1.0.31) lataavat maat.*.media-listan offline-kansioon, mutta natiivin Kuvat
+ * ja Puhe eivät lue sitä, joten nämä lisäykset olisivat niille pelkkää latausta. Siksi ne ovat OMASSA avaimessa
+ * maat.*.lisamedia (+ tavuja.lisamedia, ei yht:ssä); natiivi lukee sen 1.0.32:sta (Kuvat/Puhe offline-kansiosta).
+ */
+const LISAMEDIA_KUVAUS = {
+  kuvaus: 'Pelin omat tiedostot ämpärissä, jotka eivät ole maat.*.media-listalla: karttanostojen, fokuskohteiden ja '
+    + 'maakuntien kuvat, miniatyyrit, lehtien valmiit kuvaosoitteet, saapumis- ja Livian puheet eleineen, luentojen '
+    + 'äänet ja aikaleimat. Kuvat ja Puhe lukevat nämä offline-kansiosta (natiivi 1.0.32+).',
+  lajit: ['kuva-url (oma ämpäri)', 'aani-url (oma ämpäri)', 'ampari-suora (kokoelman suora osoite)'],
+};
+const SUORA_TIEDOSTO = /\.(jpe?g|png|webp|gif|svg|mp3|ogg|m4a|json|glb)$/i;
+/** Skeema 1.52: lisamediaan kuuluva viite (oma ämpäri, mutta laji kuva-url/aani-url tai kokoelmavaiheen suora osoite). */
+export const onLisamedia = (v) => Boolean(v.url) && (v.laji === 'ampari-suora'
   || ((v.laji === 'kuva-url' || v.laji === 'aani-url') && v.url.startsWith(OMA_AMPARI)));
+export const onOffline = (v) => Boolean(v.url) && (!EI_MEDIAA.has(v.laji) || onLisamedia(v));
 
 /* ------------------------------------------------------------ geometria */
 
@@ -275,7 +289,14 @@ export function jaaMedia(tiedostot, manifest) {
       const maa = (typeof a.maa === 'string' && maat.has(a.maa)) ? a.maa : (a.kaupunki ? kaupungit.get(a.kaupunki) : null);
       if (!maa) continue;
       const kay = (o) => {
-        if (typeof o === 'string') { if (arvot.has(o)) lisaa(maa, o); } else if (o && typeof o === 'object') for (const v of Object.values(o)) kay(v);
+        if (typeof o === 'string') {
+          // Eheystarkistus 27.9.2026: kokoelmavaiheessa johdetut suorat osoitteet omaan ämpäriin (miniatyyrit, Livian
+          // puheet ja eleet, luentojen äänet ja aikaleimat, lehtien valmiit kuvaosoitteet) eivät ole media.jsonissa.
+          if (!arvot.has(o) && o.startsWith(OMA_AMPARI) && SUORA_TIEDOSTO.test(o.split(/[?#]/)[0])) {
+            arvot.set(o, { arvo: o, laji: 'ampari-suora', url: o, esiintymat: [] });
+          }
+          if (arvot.has(o)) lisaa(maa, o);
+        } else if (o && typeof o === 'object') for (const v of Object.values(o)) kay(v);
       };
       kay(a);
     }
@@ -291,7 +312,8 @@ export function jaaMedia(tiedostot, manifest) {
   };
   for (const v of omat) for (const e of v.esiintymat) { const m = esiintymanMaa(e); if (m) lisaa(m, v.arvo); }
   const sidotut = new Set([...jako.values()].flatMap((s) => [...s]));
-  return { jako, globaali: omat.filter((v) => !sidotut.has(v.arvo)).map((v) => v.arvo), arvot };
+  // Skeema 1.52: maahan sitomaton lisamedia ei mene valinnaisiin ryhmiin (vanhat buildit lataavat ne).
+  return { jako, globaali: omat.filter((v) => !sidotut.has(v.arvo) && !onLisamedia(v)).map((v) => v.arvo), arvot };
 }
 
 /* ------------------------------------------------------------------ kokoaja */
@@ -334,7 +356,7 @@ export function maidenMaanosat({ countryShapes, cities, cityCountry, cityManner 
 }
 
 function summaa(lista) {
-  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}) };
+  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}), lisamedia: 0 };
   for (const x of lista) for (const k of Object.keys(t)) t[k] += x[k] ?? 0;
   return t;
 }
@@ -420,15 +442,19 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       if (!t) continue;
       maasto[z] = t.vali; laattoja.maasto += t.laattoja; mTavut += t.laattoja * (koot.maasto.keskitavut[z] ?? 0);
     }
-    const media = [...(jako.get(iso) ?? [])].sort();
+    const kaikkiMedia = [...(jako.get(iso) ?? [])].sort();
+    const media = kaikkiMedia.filter((a) => !onLisamedia(arvot.get(a)));
+    const lisamedia = kaikkiMedia.filter((a) => onLisamedia(arvot.get(a)));
     // Skeema 1.33: maan kaupunkien 3D-maamerkit (tarkka koko kokoelmasta).
     const mallit = (maamerkit.get(iso) ?? []).sort((a, b) => (a.url < b.url ? -1 : 1));
     const medTavut = mediaTavut(media) + mallit.reduce((s, m) => s + m.tavuja, 0);
     maat[iso] = {
       iso2: ISO2[iso] ?? null, nimi: maa.nimi, rasteri, ...(Object.keys(kaupunkiRasteri).length ? { kaupunkiRasteri } : {}), maasto, laattoja,
       media: [...media.map(url), ...mallit.map((m) => m.url)],
+      ...(lisamedia.length ? { lisamedia: lisamedia.map(url) } : {}),
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
-        yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}) },
+        yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}),
+        lisamedia: Math.round(mediaTavut(lisamedia)) },
     };
   }
   const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
@@ -437,7 +463,7 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     $skeema: 'matkakirja-vienti/1/offline',
     arvio: true,
     koot: { haettu: koot.haettu, otos: koot.otos },
-    lahteet: OFFLINE_LAHTEET,
+    lahteet: { ...OFFLINE_LAHTEET, lisamedia: LISAMEDIA_KUVAUS },
     globaali: {
       rasteri: globaaliRasteri, maasto: globaaliMaasto, media: [], tavuja: globaaliTavut,
     },
