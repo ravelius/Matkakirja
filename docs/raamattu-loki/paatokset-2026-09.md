@@ -7903,3 +7903,7 @@ Omistaja 08.3x "Ota ne salaisuudet pois myos": elavan kartan maakuntasalaisuudet
 ## OMISTAJA 08.3x: MAAKUNNAN ALKUANIMAATIOSTA VAIN POHJAVARIN ESITTELY JAA (27.9.2026 klo 08.29)
 
 Omistaja 08.3x: maakunnan alkuanimaatiosta poistetaan kaikki muu paitsi pohjavarin esittely (maakunnan varin tayttyminen kartalle) — nimen esittely, rajan hehku, nostojen vaiheittainen syttyminen, kortit/tekstit pois. Web + natiivi, sama 1.0.29-era (maakuntaeteneminen, salaisuudet, nostot heti). Pelikoodari kartoittaa vaiheet ensin.
+
+## MAINISSA #3375 v2300, #3372 v2301, #3376 v2302; #3371 PIDOSSA (27.9.2026 klo 08.29)
+
+Julkaisija 08.28: #3375 (astro era 7) v2300, #3372 (lukijamittari + x-puhe-moottori) v2301, #3376 (versiovahdin hollennys) v2302 mainissa; jonossa #3374 (virkevali) ja #3206 (turistiopas 19); #3371 pidossa, osoitin 2026-09-26-pohja kunnes silmukkakorjaus ja #3371.
