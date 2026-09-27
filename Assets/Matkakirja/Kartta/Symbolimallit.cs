@@ -366,6 +366,9 @@ namespace Matkakirja
             public Mesh Perus, LahiVerkko;
             public bool LahiNyt;
             public float Etaisyys = float.PositiveInfinity;
+            /// <summary>Nimiöiden väistö (LisaaKalusteet): jalka maailmassa, leveys ruutupikseleinä ja korkeus/leveys-suhde.</summary>
+            public Vector3 JalkaMaailma;
+            public float LeveysPx, Suhde = 1f;
         }
         /// <summary>Tason 1 kappaleet noston id:llä.</summary>
         readonly Dictionary<string, Kappale> kappaleet = new Dictionary<string, Kappale>();
@@ -489,6 +492,7 @@ namespace Matkakirja
                 k.Reuna = Lapsi(go.transform, "Aariviiva", verkko, reunaMateriaali);
                 k.ReunaSuodin = k.Reuna.GetComponent<MeshFilter>();
                 k.Perus = verkko;
+                k.Suhde = Suhde(verkko);
                 k.LahiVerkko = LahiVerkkoNostolle(tieto);
                 kappaleet[s.Id] = k;
                 LuoOsat(s.Id, tieto.Erikois, go.transform);
@@ -500,6 +504,7 @@ namespace Matkakirja
                 var verkko = MallinVerkko(k.Malli, 0);
                 k.Suodin.sharedMesh = k.ReunaSuodin.sharedMesh = verkko;
                 k.Perus = verkko;
+                k.Suhde = Suhde(verkko);
                 k.LahiVerkko = LahiVerkkoNostolle(tieto);
                 k.LahiNyt = false;
                 k.PohjaLeveys = PohjaSade * Leveys(verkko);
@@ -542,6 +547,8 @@ namespace Matkakirja
             var pk = PerspektiiviKierto(jalka, k.Normaali, perus, k.Puoli, out float nosto);
             var asentoNyt = pk * perus;
             var paikkaNyt = jalka + k.Normaali * (nosto * koko);
+            k.JalkaMaailma = gt.TransformPoint(paikkaNyt);
+            k.LeveysPx = pt * PalloKierto.Pistekerroin;
             if (Quaternion.Angle(k.T.localRotation, asentoNyt) > 0.01f || (k.T.localPosition - paikkaNyt).sqrMagnitude > 1e-8f * koko * koko)
             {
                 k.T.localRotation = asentoNyt;
