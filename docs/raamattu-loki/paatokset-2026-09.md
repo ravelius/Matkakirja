@@ -8019,3 +8019,7 @@ Omistaja 10.0x: jatkossa rahaa kuluu pelissa kuin oikeassa elamassa — matkusta
 ## OMISTAJA 10.0x: HUVIPUISTOIHIN SISAANPAASYMAKSU, JOISSA VOI MYOS ANSAITA RAHAA (HUVIPUISTOPELIT) (27.9.2026 klo 10.09)
 
 Omistaja 10.0x tarkennus talouteen: huvipuistoihin (Disneyland, Tivoli tms.) on sisaanpaasymaksu (kasinkirjoitettu idea: 30 p), ja huvipuistossa voi myos ansaita rahaa huvipuistopeleilla (narunveto, pallonheitto, jopa 100 p) — mukaan talous-suunnitelmaan ja pelikatalogiin.
+
+## IDEOIDEN ALKUPERA 27.9.: OMISTAJAN 12-VUOTIAS TYTAR (27.9.2026 klo 10.10)
+
+Omistaja 10.1x: 27.9. kasinkirjoitetut peli-ideat (ruokaraha ja 2 vrk:n loppu, kultainen omena, Pulu sekoilee ±10 p, aarreruksi +100 p, minipelit bottia/kaveria vastaan matkakirjaan, huvipuistojen paasymaksu ja pelivoitot) tulivat omistajan 12-vuotiaalta tyttarelta — pelaajanakokulma kohderyhman lahelta; kirjataan ideoiden alkuperana pelikatalogiin ja talous-suunnitelmaan (ilman nimea).
