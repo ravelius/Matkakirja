@@ -75,6 +75,7 @@ namespace Matkakirja.Linssit.Elava
             "pannonhalma" => new PannonhalmaLiike(id),
             "nidaros" => new NidarosLiike(id),
             "kronborg" => new KronborgLiike(id),
+            "visby" => new VisbyLiike(id),
             _ => null,
         };
 
