@@ -151,10 +151,20 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // luku ei saa yhä kasvaa.
   // Lähizoomin merkit eivät ole saapumisnäkymässä, joten ne eivät ole
   // kaupungin kohdalla olevaa työlistaa (ks. sallitut yllä).
+  //
+  // 52 → 54 (27.9.2026, Euroopan ohuimpien kaupunkien erä): kaksi
+  // uutta skandaalia osuu lähelle uutta pelikaupunkia mutta jää
+  // kohdekartan rajauksen ulkopuolelle — Radio Luxembourgin
+  // Junglinsterin lähetinasema (5 yksikköä Luxemburgista) ja
+  // Caravaggion pako Pyhän Angelon linnoitukseen Birgussa (alle
+  // yksikön Vallettasta maailmankartan mittakaavassa). Kumpikaan ei
+  // mahdu kaupungin omaan kohdekarttarajaukseen ilman uutta
+  // piirrosta, joten luokka on `rajauksen ulkopuolella` (sallittujen
+  // listalla). Muiden lajien luku ei saa yhä kasvaa.
   const kesken = keskenKaikki.filter((r) => r.kaupunginKohdalla !== 'lähizoomi');
-  assert.ok(kesken.length <= 52,
+  assert.ok(kesken.length <= 54,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
-    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 52 sallittu — uusi nosto kuuluu kohdekartalle`);
+    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 54 sallittu — uusi nosto kuuluu kohdekartalle`);
   // 48 → 49 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
   // päätös, Belgian pilotti), ja Tervurenin museonosto
   // (hahmotelma-tervuren) osuu nyt kaupungin kohdalle syyllä
@@ -170,8 +180,11 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // Brysselin Tervurenilla, kaupunkiresepti luku 4 kohta 11, vaihtoehto
   // 3). Katto nousee vain tämän yhden noston verran; kun Ljubljana saa
   // kohdekartan, nosto siirtyy sinne ja katto voi laskea takaisin.
+  // 50 → 52 (27.9.2026): Radio Luxembourg (Junglinster) ja Caravaggion
+  // pako (Birgu) — molemmat syyllä "rajauksen ulkopuolella", selitetty
+  // yllä. Katto nousee vain näiden kahden verran.
   const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
-  assert.ok(muutKuinHetket.length <= 50,
+  assert.ok(muutKuinHetket.length <= 52,
     `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 

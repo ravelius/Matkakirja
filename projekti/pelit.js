@@ -109,7 +109,7 @@ const RUNKO = `
 
   <div class="valilehti" data-ala-paneeli="suunnitelmat">
     <section class="lohko">
-      <h2 class="otsikko">Pelisuunnitelmat <span class="selite">— ensimmäiset 10 peliä toteutuskelpoisina kortteina</span></h2>
+      <h2 class="otsikko">Pelisuunnitelmat <span class="selite">— pelit toteutusjärjestyksessä, toteutuskelpoisina kortteina</span></h2>
       <div class="suunnitelmat" data-osa="suunnitelmat-ensimmaiset"></div>
     </section>
     <section class="lohko">

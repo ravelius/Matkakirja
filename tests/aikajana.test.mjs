@@ -1139,7 +1139,7 @@ test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
       const sarja = /kohtaamiset\/isoisa\/isoisa-[a-z]+-aged-r20260905-v\d\.jpg$/;
       assert.ok(t.kuva?.ulkoinen && sarja.test(t.kuva.osoite), 'merkkipaalun muotokuva on isoisä kaukaa (sarja r20260905)');
       assert.equal(t.kuva.asento, '30% top', 'vaakakuvan 4:5-rajaus osuu hahmoon');
-      assert.equal(t.kuva.lahde, 'Kuvaputken generoitu valokuva');
+      assert.equal(t.kuva.lahde, 'Matkakirjan havainnekuva');
       assert.ok(t.ilmio?.ulkoinen && sarja.test(t.ilmio.osoite), 'merkkipaalun ilmiökuva on sarjasta r20260905');
       for (const k of t.ilmioSarja ?? []) assert.ok(sarja.test(k.osoite), 'kuvakierron kuvat ovat sarjasta r20260905');
       for (const k of [t.kuva, t.ilmio, ...(t.ilmioSarja ?? [])]) {

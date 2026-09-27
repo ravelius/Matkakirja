@@ -28,7 +28,7 @@ window.PROJEKTIDATA = {
      "alueiden lataus offline-käyttöön maanosittain"
     ],
     "kappaleet": [
-     "Peli käyttää omaa, itse poltettua karttaa: pergamenttityylinen laattapyramidi kattaa koko maapallon ja tarkentuu kaupunkitasolle asti. Karttaan on piirretty rajat, joet, järvet ja meret sekä maaston korkeusvarjostus. iOS-sovelluksessa maasto on aidosti kolmiulotteinen: kameraa voi kallistaa, vuoret nousevat, ja merkittäviä nähtävyyksiä kuvaavat käsin mallinnetut 3D-pienoismallit. Merellä liikkuu eläimiä ja laivoja, ja valmiiksi pelatun maan lippu liehuu kartalla. Kaikki kartta-aineisto on avointa tai itse tuotettua; kaupallisia karttapalveluja ei käytetä."
+     "Peli käyttää omaa, itse poltettua karttaa: pergamenttityylinen laattapyramidi kattaa koko maapallon ja tarkentuu kaupunkitasolle asti. Karttaan on piirretty rajat, joet, järvet ja meret sekä maaston korkeusvarjostus. iOS-sovelluksen testiversiossa maasto on aidosti kolmiulotteinen: kameraa voi kallistaa, vuoret nousevat, ja merkittäviä nähtävyyksiä kuvaavat pelille mallinnetut 3D-pienoismallit. Merellä liikkuu eläimiä ja laivoja, ja valmiiksi pelatun maan lippu liehuu kartalla. Kaikki kartta-aineisto on avointa tai itse tuotettua; kaupallisia karttapalveluja ei käytetä."
     ]
    },
    {
@@ -41,7 +41,7 @@ window.PROJEKTIDATA = {
      "luennan säätimet (nopeus, jatko samasta kohdasta) molempiin versioihin"
     ],
     "kappaleet": [
-     "Jokaisesta kaupungista ja maasta on oma lehti, joka on kirjoitettu vuoden 1873 matkakirjan hengessä mutta nykytiedon varassa: historiaa, historian hetkiä, kadonneita ihmeitä, kulttuuria ja arkea. Kartalla nostot johdattavat nähtävyyksiin ja tarinoihin, ja jokaisella nostolla on oma kuvansa. Tekstit voi kuunnella: isoisän ääni lukee lehtiä, ja pelin oma opas, Pulu-kyyhky, vastaa pelaajan kysymyksiin. Kaikki kuvat ovat vapaasti käytettäviä (public domain tai Creative Commons) tai pelille tilattuja, ja lähteet merkitään."
+     "Jokaisesta kaupungista ja jo yli sadasta maasta on oma lehti, joka on kirjoitettu vuoden 1873 matkakirjan hengessä mutta nykytiedon varassa: historiaa, historian hetkiä, kadonneita ihmeitä, kulttuuria ja arkea. Kartalla nostot johdattavat nähtävyyksiin ja tarinoihin, ja jokaisella nostolla on oma kuvansa. Tekstit voi kuunnella: isoisän ääni lukee lehtiä, ja pelin oma opas, Pulu-kyyhky, vastaa pelaajan kysymyksiin. Valokuvat ja vanhat kuvat ovat vapaasti käytettäviä (public domain tai Creative Commons), ja nähtävyyksien kuvat ovat pelille tehtyjä havainnekuvia pelin omaan tyyliin. Kuvien lisenssit on inventoitu; tekijämerkinnät tulevat näkyviin peliin."
     ]
    },
    {
@@ -79,7 +79,7 @@ window.PROJEKTIDATA = {
      "App Store -julkaisun valmistelu"
     ],
     "kappaleet": [
-     "iOS-sovellus on rakennettu uudelleen natiivina, jotta kartta liikkuu sulavasti ja maasto voidaan näyttää kolmiulotteisena. Tavoite on täysi toimintojen vastaavuus selainpelin kanssa: kaikki pelin toiminnot, lehdet, linssit ja radiot toteutetaan sovellukseen natiivisti. Uusi testiversio julkaistaan sisäiseen testaukseen yleensä päivittäin, ja jokainen versio testataan laitteilla ennen jakelua."
+     "iOS-sovellus on rakennettu uudelleen natiivina, jotta kartta liikkuu sulavasti ja maasto voidaan näyttää kolmiulotteisena. Tavoite on täysi toimintojen vastaavuus selainpelin kanssa: kaikki pelin toiminnot, lehdet, linssit ja radiot toteutetaan sovellukseen natiivisti. Uusi testiversio on viime viikkoina julkaistu sisäiseen testaukseen lähes päivittäin, ja jokainen versio testataan laitteilla ennen jakelua."
     ]
    }
   ]
@@ -87,15 +87,15 @@ window.PROJEKTIDATA = {
  "luvut": {
   "kaupunkeja": 266,
   "kaupunkilehtia": 266,
-  "juttuja": 1568,
+  "juttuja": 1570,
   "maita": 117,
   "maalehtia": 117,
-  "kohteita": 2790,
+  "kohteita": 2794,
   "kohdeLajit": {
    "nahtavyydet": 1574,
    "maasto": 718,
    "elaimet": 109,
-   "skandaalit": 250,
+   "skandaalit": 254,
    "hetket": 49,
    "kulttuuri": 225
   },
@@ -110,7 +110,7 @@ window.PROJEKTIDATA = {
    "z10Tuotannossa": "2026-09-27"
   },
   "versiot": {
-   "web": 2316,
+   "web": 2328,
    "natiivi": "1.0.28",
    "natiiviPaivitetty": "2026-09-27"
   }

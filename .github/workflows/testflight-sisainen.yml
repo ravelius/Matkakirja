@@ -17,6 +17,14 @@ on:
         description: 'Bundle id'
         type: string
         default: 'fi.matkakirja.peli'
+      testattavaa:
+        description: 'TestFlightin "What to test" -teksti (tyhjä = ei muuteta)'
+        type: string
+        default: ''
+      vanhenna:
+        description: 'Vanhenna build TestFlightissa (vikainen build pois testaajilta; ei liitetä ryhmään)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -55,10 +63,12 @@ jobs:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           TESTAAJA: ${{ secrets.TESTFLIGHT_TESTAAJA }}
+          TESTATTAVAA: ${{ inputs.testattavaa }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 tools/testflight/sisainen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "${{ inputs.build_numero }}"
+          python3 tools/testflight/sisainen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "${{ inputs.build_numero }}" --testattavaa "$TESTATTAVAA" \
+            ${{ inputs.vanhenna && '--vanhenna' || '' }}
 
       - name: Siivoa avain
         if: always()

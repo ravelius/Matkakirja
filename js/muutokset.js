@@ -13,6 +13,18 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2328, teksti: 'v2327: Havainnekuva — loput generoitujen kuvien… (#3415)' },
+  { v: 2327, teksti: 'v2325: Valletta ja Luxemburg — 2 juttua + 4 ska… (#3419)' },
+  { v: 2326, teksti: 'v2321: Havainnekuva-sana yhtenäistetty tekoälyk… (#3418)' },
+  { v: 2325, teksti: 'v2317: Löydös 178 -jatko: 42 ei-paikkaa pois nä… (#3411)' },
+  { v: 2324, teksti: 'Tilannekatsaus-jatko: faktantarkistus + HAVAINN… (#3417)' },
+  { v: 2323, teksti: 'v2320: Nähtävyyskuvien tasaus tuotantoon (#3413)' },
+  { v: 2322, teksti: 'v2317: Nähtävyyskuvien tasausskriptit + 36 orvo… (#3408)' },
+  { v: 2321, teksti: 'v2316: Avauskortti kevyemmäksi — kutsu kaupungi… (#3406)' },
+  { v: 2320, teksti: 'Raamattu: VAIN EUROOPPA, kunnes omistaja toteaa… (#3416)' },
+  { v: 2319, teksti: 'v2316: Pelistreak — peräkkäiset pelipäivät tuov… (#3401)' },
+  { v: 2318, teksti: 'Tilannekatsaus: kehityssivuston etusivun tekstit (#3407)' },
+  { v: 2317, teksti: 'Hintatasot.js: tarkennus 49 puuttuvalle pelin m… (#3402)' },
   { v: 2316, teksti: 'v2316: KIIREELLINEN korjaus — naytaStriimiaani… (#3404)' },
   { v: 2315, teksti: 'v2313: Nostokortin luennan säätimet — ratas, VU… (#3388)' },
   { v: 2314, teksti: 'v2313: Talouden vaihe 1 — päiväkulut, 400 £, ro… (#3394)' },

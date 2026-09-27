@@ -85,7 +85,9 @@ test('pelikatalogi julkaistaan Pagesiin projektisivun Pelit-välilehtenä', () =
 test('pelikatalogi: suunnitelmakortit jäsennetään (10 ensimmäistä + omistajan kortit) ja sivu piirtää ne', () => {
   const data = jasennaPelikatalogi(readFileSync(MD_POLKU, 'utf8'));
   const ensimmaiset = data.kortit.filter((k) => k.ryhma === 'ensimmaiset');
-  assert.equal(ensimmaiset.length, 10, 'kymmenen pelisuunnitelmakorttia');
+  // Kortteja tulee erissä (1–10, 11–20, …): vähintään kymmenen, järjestysnumerot 1..n aukottomina.
+  assert.ok(ensimmaiset.length >= 10, `vähintään kymmenen pelisuunnitelmakorttia (${ensimmaiset.length})`);
+  assert.deepEqual(ensimmaiset.map((k) => k.jarjestys), ensimmaiset.map((_, i) => i + 1), 'järjestys 1..n');
   for (const k of ensimmaiset) {
     assert.ok(k.id && data.pelit.some((p) => p.id === k.id), `${k.otsikko}: id ${k.id} löytyy katalogista`);
     assert.ok(k.kentat.some((x) => x.nimi === 'Sääntö'), `${k.otsikko}: Sääntö-kenttä`);
