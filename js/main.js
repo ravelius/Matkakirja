@@ -54,9 +54,9 @@ import { asennaPollo } from './pollo.js';
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
-  asetaPuheenNopeus, asetaPuheenVoima, asetaStriimiaani, luePuheAsetukset,
-  paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA, STRIIMIAANET_XAI,
-  STRIIMIAANI_OLETUS, striimiaani, tallennaPuheAsetukset, viimeisinPuhe,
+  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset,
+  paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA,
+  tallennaPuheAsetukset, viimeisinPuhe,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
@@ -159,7 +159,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2309';
+const APP_VERSION = '2026-09-21.2311';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -2221,40 +2221,9 @@ function paivitaKehittajaValikko() {
 }
 
 /*
- * STRIIMIÄÄNEN VALINTA (omistaja 27.9.2026 klo 01.2x). Pudotusvalikko
- * xAI:n äänistä; tyhjä arvo = workerin oletus (ara). Valinta menee
- * js/puhe.js asetaStriimiaani-apurin kautta samaan laitekohtaiseen
- * persoonatauluun kuin työhuoneen säädöt, joten seuraava luenta
- * (Pulun striimi, lehti, merkinnät) lähtee uudella äänellä ilman
- * sivun latausta. Valikko ei saa sulkeutua valintaan, siksi
- * tapahtumat pysäytetään kuten liu'uissa.
+ * STRIIMIÄÄNEN VALINTA muutti kehittäjävalikosta nostokortin säätörattaaseen
+ * (omistaja 27.9.2026 klo 09.3x; js/lukija.js avaaKortinSaadot).
  */
-const striimiaaniValinta = document.getElementById('kehittaja-striimiaani');
-function naytaStriimiaani() {
-  if (!striimiaaniValinta) return;
-  striimiaaniValinta.value = striimiaani() ?? '';
-  striimiaaniValinta.title = 'Striimiluennan ääni (xAI Grok TTS). Oletus ara on omistajan '
-    + 'valinta kaikkeen striimiluentaan; muut äänet ovat kokeilua varten ja '
-    + 'tottelevat vain kehittäjäkoodilla. Tyhjennä palataksesi oletukseen.';
-}
-if (striimiaaniValinta) {
-  striimiaaniValinta.append(new Option(`${STRIIMIAANI_OLETUS} (oletus)`, ''));
-  for (const aani of STRIIMIAANET_XAI) {
-    if (aani !== STRIIMIAANI_OLETUS) striimiaaniValinta.append(new Option(aani, aani));
-  }
-  naytaStriimiaani();
-  striimiaaniValinta.addEventListener('change', (e) => {
-    e.stopPropagation();
-    const valittu = asetaStriimiaani(striimiaaniValinta.value || null);
-    naytaStriimiaani();
-    naytaKehittajaVihje(valittu
-      ? `Striimiääni: ${valittu} — seuraava luenta lähtee tällä äänellä`
-      : `Striimiääni: ${STRIIMIAANI_OLETUS} (oletus)`);
-  });
-  striimiaaniValinta.addEventListener('click', (e) => e.stopPropagation());
-  striimiaaniValinta.addEventListener('pointerdown', (e) => e.stopPropagation());
-  striimiaaniValinta.closest('label')?.addEventListener('click', (e) => e.stopPropagation());
-}
 
 /*
  * LUKIJAMITTARI (Fable 27.9.2026 klo 07.2x): viimeisimmän lukijaäänen palan

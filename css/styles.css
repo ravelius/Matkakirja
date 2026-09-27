@@ -13027,6 +13027,107 @@ button.lukija-nappi:focus-visible,
 }
 
 /*
+ * NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x;
+ * js/lukija.js varustaKortinSaatimet): [⚙] [kaiutin] [)))] otsikkorivin
+ * oikeassa reunassa. Kaiutin siirtyy VU-mittarin verran vasemmalle,
+ * ratas sen vasemmalle puolelle. Vain läpinäkyvyys liikkuu (iOS-sääntö).
+ */
+.lukija-otsikkorivi.lukija-saatimin { padding-right: 5.4rem; }
+
+.lukija-saatimin > button.lukija-nappi,
+.dialog .lukija-saatimin > button.lukija-nappi { right: 1.15rem; }
+
+.lukija-saatimin > .lukija-vu {
+  position: absolute;
+  top: 50%;
+  right: 0.05rem;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1.35rem;
+  color: #a8741a;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.lukija-saatimin > .lukija-vu svg { width: 100%; height: 100%; display: block; }
+
+/* VU näkyy luennan ja keskeytyksen ajan; kaaret himmeinä, palavat tasosta. */
+.lukija-saatimin > button.lukija-nappi.lukee + .lukija-vu { visibility: visible; }
+.lukija-vu .kaiutin-kaari { opacity: 0.2; transition: opacity 120ms linear; }
+.lukija-vu .kaiutin-kaari.palaa { opacity: 1; }
+
+.lukija-saatimin > button.lukija-saadin,
+.dialog .lukija-saatimin > button.lukija-saadin {
+  position: absolute;
+  top: 50%;
+  right: 3.3rem;
+  transform: translateY(-50%);
+  width: 1.9rem;
+  height: 1.9rem;
+  min-width: 1.9rem;
+  min-height: 1.9rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: rgba(70, 51, 31, 0.55);
+  cursor: pointer;
+}
+
+/* display: grid voittaisi hidden-attribuutin ilman tätä (kaiutin piilossa → ratas piiloon). */
+.lukija-saatimin > button.lukija-saadin[hidden] { display: none; }
+
+.lukija-saatimin > button.lukija-saadin:hover,
+.lukija-saatimin > button.lukija-saadin:focus-visible,
+.lukija-saatimin > button.lukija-saadin[aria-expanded="true"] { color: #46331f; }
+
+.lukija-saatimin > button.lukija-saadin .viiva-ikoni svg { width: 1.05rem; height: 1.05rem; }
+
+/* Keskeytetty luenta: kaiutin vilkkuu kevyesti, kunnes jatketaan. */
+@keyframes lukija-keskeytetty {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+button.lukija-nappi.keskeytetty { animation: lukija-keskeytetty 1.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  button.lukija-nappi.keskeytetty { animation: none; opacity: 0.6; }
+}
+
+.lukija-saatimin > .lukija-saadot {
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  right: 0;
+  z-index: 7;
+  display: grid;
+  gap: 0.4rem;
+  min-width: 13rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.3rem;
+  background: rgba(246, 231, 198, 0.97);
+  box-shadow: 0 3px 12px rgba(40, 28, 14, 0.24);
+  color: #46331f;
+  /* Otsikkorivin versaalit ja harvennus eivät periydy paneeliin. */
+  font: 400 0.9rem/1.3 var(--font-luku);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.lukija-saadot-rivi {
+  display: grid;
+  grid-template-columns: 3.4rem 1fr auto;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lukija-saadot-rivi > select { grid-column: 2 / span 2; font: inherit; }
+.lukija-saadot-rivi > input[type="range"] { width: 100%; accent-color: #a8741a; }
+.lukija-saadot-rivi > output { min-width: 2.8rem; text-align: right; font-variant-numeric: tabular-nums; }
+
+/*
  * MYKISTETTYNÄ VINOVIIVA (Raamattu, LUENTA): sama merkki kuin
  * matkakirjakortin kaiuttimella (.fact-kuuntele.mykistetty), jotta
  * "ei ääntä" näyttää kaikkialla samalta. Nappi jää näkyviin — piilossa

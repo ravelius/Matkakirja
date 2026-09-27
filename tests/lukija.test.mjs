@@ -544,3 +544,36 @@ test('mykistys lähettää tapahtuman, jota lukija kuuntelee', () => {
   assert.match(lukija, /addEventListener\(AANIVALINTA_TAPAHTUMA/);
   assert.match(lukija, /detail\?\.enabled === false\) pysaytaLukija\(\)/);
 });
+
+/*
+ * NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x): kaiutin
+ * keskeyttää ja jatkaa samasta kohdasta, keskeytettynä se vilkkuu,
+ * vasemmalla säätöratas (nopeus + xAI-ääni), oikealla VU-mittari.
+ */
+test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () => {
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
+  const tyyli = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  // Kortin napautus kulkee kortinPainallus-polkua: tauko ↔ jatka, ei paneelia.
+  assert.match(lukija, /if \(nappi\.__lukijaKortti\) \{\s*kortinPainallus\(nappi, isanta\);/);
+  assert.match(lukija, /if \(soitin\.tauolla\(\)\) soitin\.jatka\(\);\s*else soitin\.tauko\(\);/);
+  assert.match(lukija, /if \(alkoi && !nappi\.__lukijaKortti\) avaaOhjain\(isanta, nappi\);/);
+  // Katkennut luenta jättää kohdan napille, ja uusi luenta alkaa siitä.
+  assert.match(lukija, /ajossa = null;\s*talletaKortinKohta\(nyt\);/);
+  assert.match(lukija, /aloitusAlku: jatkoKohta\?\.alku \?\? 0/);
+  assert.match(puhe, /if \(palat\[i\]\.alku <= aloitusAlku\) indeksi = i;/);
+  // Luettu loppuun: seuraava kerta alusta.
+  assert.match(lukija, /unohdaKortinKohta\(nappi\);/);
+  // Vilkunta vain läpinäkyvyydellä, liike vähennettynä ei animaatiota.
+  assert.match(tyyli, /button\.lukija-nappi\.keskeytetty \{ animation: lukija-keskeytetty/);
+  assert.match(tyyli, /@keyframes lukija-keskeytetty \{\s*0%, 100% \{ opacity: 1; \}\s*50% \{ opacity: 0\.4; \}/);
+  // Ratas: nopeus ja ääni; äänivalinta ei enää kehittäjävalikossa.
+  assert.match(lukija, /asetaPuheenNopeus\(liuku\.value\)/);
+  assert.match(lukija, /asetaStriimiaani\(valinta\.value \|\| null\)/);
+  assert.doesNotMatch(html, /id="kehittaja-striimiaani"/);
+  // VU: kolme kaarta omalla mittarilla, lähteenä lukijaäänen analysaattori.
+  assert.equal((lukija.match(/class="kaiutin-kaari" data-kaari="\d"/g) ?? []).length, 3);
+  assert.match(lukija, /kortinVu\.kaynnista\(vu, puheMittari\)/);
+  assert.match(puhe, /kompressori\.connect\(mittari\);\s*mittari\.connect\(piiri\.destination\);/);
+});
