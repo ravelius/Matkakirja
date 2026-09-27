@@ -55,7 +55,11 @@ Mittaus (7 kohdetta, 1/60 s): kone aina kuvassa ja ≥ 11,6 % leveydestä, α �
 saapuminen α 7–49°, Lontoo kuvassa avauksessa, kamera liikkuu koko ajan ilman nykäyksiä. Dokumentti (v2 ennen korkeaa
 avausta): proto-3d/lokit/aloituslento-33/v2-AIKAJANA.md. Uusi taulukko: `cd Kartta-testit && ALOITUSRATA_TAULU=1
 ALOITUSRATA_KOHDE=ateena ./kaanna.sh AloituslennonRata`.
-**VIDEO:** käännös v2 (cbb4811f) käynnistettiin julkaisulipulla klo 23.4x (ensimmäinen yritys kuoli Unity-vaiheessa).
+**VIDEO VALMIS (klo 23.45, lähetetty Fablelle ja omistajalle):** proto-3d/lokit/aloituslento-33/v2/aloituslento-v2-tekstit.mp4
+(käännös 6947ed85 = juna + cbb4811f, 0 poikkeusta; raakavideo v2/aloituslento.mp4, loki v2/konsoli.txt; julkaisulippu poistettu).
+Heikot kohdat: ohituksessa maa usvainen (kamera vain 7° koneen yllä → nosta ~12°: kallistusavaimet KiriS/OhitusS 82–83° → ~78°),
+saapuminen pehmeä verkosta latautuvien laattojen takia (1 560 verkosta; ennakkokamera/odotus riittää lämpimällä välimuistilla).
+Seuraava askel = omistajan palaute tähän videoon.
 Kuvaus oikealla polulla omalla simulaattorilla FBBD41D7: Uusi matka (201, 690) → 21 s → Valitse aloituskaupunki (201, 605) →
 6 s → nauhoitus → Ateenan napautus (270, 325). Väliaikaiset alkutekstit päälle jälkikäsittelynä (EI pelissä):
 lokit/aloituslento-33/v2/teksti1–3.png (EB Garamond), ajoitus 1) 0,8–3,6 s, 2) 6,6–8,0 s, 3) 11,0–12,6 s.
