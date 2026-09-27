@@ -7983,3 +7983,7 @@ Pelikoodari 09.4x: #3385 → v2309 (mannerlennot ennallaan, loytosumu pois, sala
 ## Z10: #3380 v2307 JA #3371 v2308 MAINISSA, OSOITIN PAGESIN JALKEEN; #3385 JUNASSA; #3384 UUDELLEEN (valmistele.sh KORJATTU) (27.9.2026 klo 09.43)
 
 Julkaisija 09.4x: #3380 (tukilaattasilmukka) v2307 ja #3371 (PELIN_SYVIN_TASO 10) v2308 mainissa; osoitinvaihto heti Pages-julkaisun jalkeen + tarkistus. #3385 pito purettu (Fable kylla) → junassa. #3384 (progressiivinen soitto) uudelleen junassa: valmistele.sh pudotti PR:n sw.js-SHELL-lisaykset ristiriidassa → tyokalu korjattu yhdistamaan rivit.
+
+## OMISTAJA 09.4x (SITOVA): VIIKKOKIINTIO 97 % → KAIKKI SESSIOT PYSAYTETAAN JA FABLE KIRJOITTAA SIIRTOPROMPTIN TILINVAIHTOA VARTEN (27.9.2026 klo 09.46)
+
+Omistaja 09.4x: kun viikkokiintio (kaikki mallit) on 97 %, Fable pysayttaa kaikki sessiot (jokainen kirjoittaa luovutuksen ja pushaa, sitten stop) ja kirjoittaa siirtopromptin tilinvaihtoa varten (docs/raportit/viesti-fable-tilinvaihto-<pvm>.md: kaikkien roolien tila, jonot, haarat, session id:t vanhalla tililla, aloitusviestit uudelle tilille, avoimet kortit). Postivahti ilmoittaa 93 % (ennakko) ja 97 %. Nyt 84 % (nollautuu to 2.10.).
