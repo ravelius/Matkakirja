@@ -6,6 +6,78 @@ Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia s
 löytyi 26.9.2026 build 20:n testauksessa: kamera-, usva- ja maakuntakomennot ovat siinä, ja se toimii
 samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama konsoli kaikissa käännöksissä).
 
+## 1.0.29-kierroksen valmisteltu resepti (Laitetestaaja 27.9.2026 klo 12.0x, ennen buildia)
+
+Tutkittu Explore-agentilla proto-3d/Matkakirja-proto:sta (HEAD master 7788b629 = BUILD 28,
+juna/b13 kärki 962a94cc). **5/7 aihetta on jo juna/b13:ssä** (meri, lähitaso, nostot heti,
+maakuntatäyttö, pulu) — testaa nämä heti kun SHA saapuu. **2/7 aihetta EI VIELÄ mergetty**
+(puhevirta haara pelikoodari/puhevirta b6fc76d7, avauskortti haara natiivi-ui/avauskortti
+11a3c43a, molemmilla oma git worktree käynnissä) — tarkista `git merge-base --is-ancestor`
+kummallekin ennen testausta, jos SHA ei sisällä niitä, ohita ja ilmoita puuttuvaksi.
+
+**Meri, 10 lajia (elävät meri-eläimet):**
+```
+echo "elava elementit meri 1" > komento.txt
+echo "elava elementit" > komento.txt
+```
+Onnistuminen: `elava elementit`-tuloste listaa "meri <maa> (<n> kohtaa): ..." kaikki 10 lajia
+mukana (höyrylaiva, valas, purjelaiva, kalastusvene, lautta, majakkalaiva, merihirviö,
+delfiinit, lokit, jäävuori). Vertaile `meri 0` (pois) samasta paikasta.
+
+**Lähitaso LOD0 (kolmas tarkkuustaso arkkityypeille/erikoismalleille):**
+```
+echo "symbolit lahi 1" > komento.txt
+echo "aja <kohteen lat> <kohteen lon> 0.05 2" > komento.txt   # zoomaa hyvin lähelle (kerroin >=4)
+echo "symbolit tila" > komento.txt
+```
+Onnistuminen: `symbolit tila` näyttää lähimallin kytkeytyneen kertoimesta ~4 ylöspäin (max 3
+lähintä oletuksena). Vertaile `symbolit lahi 0` (pois, vanha käytös).
+
+**Nostot heti (löydöt näkyviin ilman viivettä/porttia):**
+```
+echo "nostot heti 1" > komento.txt
+echo "nostot tila <ISO3>" > komento.txt
+```
+Onnistuminen: nostot täynnä heti saapumisen jälkeen, ei vähimmäisosuutta eikä porttia eikä
+saapumispiiloa. Vertaile `nostot heti 0` (vanha käytös, asteittainen täyttö).
+
+**Maakuntatäyttö (maakunnat heränneinä heti, vanha herätyskomento poistettu):**
+```
+echo "maakunta herays pois" > komento.txt   # oletus, uusi käytös: ei erillistä herätysväriä
+echo "maakunta tila" > komento.txt
+```
+HUOM: vanha `elava herata`-komento on POISTETTU koodista (Herays.cs poistettu kokonaan) —
+jos se palauttaa tuntematon-virheen, se vahvistaa haaran olevan buildissa. A/B-vertailuun
+vanhaan käytökseen: `echo "maakunta herays ab" > komento.txt`.
+
+**Pulu ilman äänikytkimiä (persoona "pollo" ohittaa Kertoja/Äänimaisema-kytkimet):**
+```
+echo "puhe pois" > peli-komento.txt
+echo "ui pulu sano <teksti>" > ui-komento.txt
+```
+Onnistuminen: Pulun puhe kuuluu VAIKKA `puhe pois` on asetettu (vain kaiutinvipu ohjaa sitä) —
+tavallisen kertojan puhe pysyy hiljaisena samalla asetuksella. Ei erillistä uutta debug-komentoa,
+testataan yhdistelemällä olemassa olevia.
+
+**Puhevirta (progressiivinen TTS-striimaus, EI VIELÄ JUNASSA — tarkista ancestor ensin):**
+```
+echo "puhe virta paalle" > peli-komento.txt   # oletus jo päällä jos haara mukana
+echo "puhe virta pois" > peli-komento.txt     # A/B-vertailu
+```
+Jos mergattu: onnistuminen on lyhyempi "1. ääni" (ViimeEkaAaniMs) striimatussa versiossa
+verrattuna ei-striimattuun. Jos ei mergattu (`git merge-base --is-ancestor b6fc76d7 <SHA>`
+epäonnistuu), merkitse "ei tässä käännöksessä" äläkä testaa.
+
+**Avauskortti (kaupungin avauskortti, EI VIELÄ JUNASSA — tarkista ancestor ensin, RIKKOVA MUUTOS):**
+```
+echo "ui avauskortti pariisi kartta" > ui-komento.txt
+echo "ui kutsu napauta" > ui-komento.txt
+```
+HUOM RIKKOVA MUUTOS jos haara mukana: vanha `ui kaupunki <id>` ohjaa nyt eri oliota
+(`ui.Liuska`) kuin uusi `ui avauskortti` (`ui.Kaupunkikortti`) — älä olettaa niiden olevan
+sama näkymä. Jos ei mergattu (`git merge-base --is-ancestor 11a3c43a <SHA>` epäonnistuu),
+merkitse "ei tässä käännöksessä" äläkä testaa.
+
 ## 1.0.28-kierroksen valmisteltu resepti (Fable 27.9.2026 klo 07.2x, ennen buildia)
 
 Kaikki 7/8 kohteesta ovat jo mergattu juna/b13:een (tip 180e22dc, 27.9. 07:17) — tarkista
