@@ -40,3 +40,8 @@ Node --test 4463/0. Kysymykset:
 Pariteetti-iPhone A2FD9C9F, käännös 64e551f6, tuotannon worker: virta pois 1. ääni 8 768 ms → palavirta 2 565 ms;
 aani mittaa +9/+21/+33 s: MatkakirjaPuhe soi palojen yli. Virta = päällä oletuksena. Fyysinen laite vielä Laitetestaajalle.
 Julkaisijalle: mittaus valmis, simulaattori sammutettu ja siivottu.
+
+## Natiivisepälle: pelistreak-haaran uusi kärki 1d16d464
+
++ hintatasot 122 maahan (#3402) ja kultaiset uusittu; 336/336, unity 0. Korvaa 70bebdde:n (merge-pyyntölokin viimeinen osio).
+HAVAINNEKUVA-sääntö (Fable 13.4x): läpikäynti web + natiivi agentilla käynnissä; projektisivulla ei korjattavaa.
