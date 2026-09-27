@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2324, teksti: 'Tilannekatsaus-jatko: faktantarkistus + HAVAINN… (#3417)' },
   { v: 2323, teksti: 'v2320: Nähtävyyskuvien tasaus tuotantoon (#3413)' },
   { v: 2322, teksti: 'v2317: Nähtävyyskuvien tasausskriptit + 36 orvo… (#3408)' },
   { v: 2321, teksti: 'v2316: Avauskortti kevyemmäksi — kutsu kaupungi… (#3406)' },
