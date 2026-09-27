@@ -317,6 +317,11 @@ namespace Matkakirja.Natiivi
             Lehti.Avautui += _ => { lehtiAuki = true; PulunKerros(); };
             Lehti.Suljettu += _ => { lehtiAuki = false; PulunKerros(); };
             Nahtavyydet.Avautui += () => { arkkiAuki = true; PulunKerros(); };
+            // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää koko kartan (iPhone), pallon
+            // kamera sammuu (SyoteLukko-näkymäpeitto → PalloKierto.Peitetty → Ruudunpaivitys), jolloin vieritys ei maksa
+            // pallon, Cesiumin ja elävien elementtien piirtoa. Osittainen arkki (iPad) ei sammuta: kartta näkyy reunoilla.
+            SyoteLukko.LisaaNakymaPeitto(() => (Nahtavyydet.Auki && KattaaKartan(Nahtavyydet.Arkki))
+                || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && KattaaKartan(Linssit.Valitsin.Paneeli)));
             Nahtavyydet.Suljettu += () => { arkkiAuki = false; PulunKerros(); };
             // Pulun puhekanavan reunat soittimelle (soitin suodattaa toistot).
             kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
@@ -578,6 +583,16 @@ namespace Matkakirja.Natiivi
                 var virhe = o.JatkaTurvasta();
                 if (virhe != null) Tilarivi.Viesti(virhe);
             } : (System.Action)null, () => UusiMatka(o));
+        }
+
+        /// <summary>Peittääkö elementti koko kartan: koko leveys, alareunaan asti ja ylhäältä näkyvän yläpalkin alle.</summary>
+        bool KattaaKartan(UnityEngine.UIElements.VisualElement e)
+        {
+            if (e?.panel == null || e.resolvedStyle.display == UnityEngine.UIElements.DisplayStyle.None || e.resolvedStyle.opacity < 0.99f) return false;
+            var r = e.worldBound;
+            var p = e.panel.visualTree.layout;
+            if (float.IsNaN(r.width) || p.width <= 0) return false;
+            return r.xMin <= 1f && r.xMax >= p.width - 1f && r.yMax >= p.height - 1f && r.yMin <= Tilarivi.NakyvaAlareuna + 1f;
         }
 
         static string esiladattuMaa;

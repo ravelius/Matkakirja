@@ -56,6 +56,8 @@ namespace Matkakirja.Natiivi
         int lukuVersio;
 
         public bool Auki { get; private set; }
+        /// <summary>Oppaan arkki (UiNakymat: koko ruudun peitto sammuttaa pallon kameran vierityksen ajaksi).</summary>
+        public VisualElement Arkki => arkki;
         public event Action Suljettu;
         /// <summary>Arkki tuli näkyviin (pulun kerros väistää sen alle, UiNakymat).</summary>
         public event Action Avautui;
