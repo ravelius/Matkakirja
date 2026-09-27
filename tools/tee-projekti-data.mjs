@@ -22,9 +22,10 @@
  *              kartan syvin taso → js/laattapyramidi.js PELIN_SYVIN_TASO
  *              webin versio → js/muutokset.js MUUTOKSET[0].v (sama luku
  *                kuin sw.js:n CACHE-nimen loppu)
+ *              iOS-testiversio → tools/vienti/muutosloki-natiivi.json rivit[0]
  *   KÄSIVAKIOT  alla KASIVAKIOT: tiedot, joille repossa ei ole koneluettavaa
- *            lähdettä (laattaluettelo asuu ämpärissä, TestFlight-versio
- *            App Store Connectissa). Päivitä käsin, kun ne muuttuvat.
+ *            lähdettä (laattaluettelo asuu ämpärissä). Päivitä käsin, kun ne
+ *            muuttuvat.
  *
  * Linssien ja pelien tilaluvut lasketaan selaimessa suoraan
  * linssikatalogi-data.js:stä ja pelikatalogi-data.js:stä (sivu lataa ne
@@ -45,21 +46,26 @@ import { fileURLToPath } from 'node:url';
 
 export const MD_POLKU = fileURLToPath(new URL('../docs/tilannekatsaus.md', import.meta.url));
 export const DATA_POLKU = fileURLToPath(new URL('../projekti-data.js', import.meta.url));
+export const NATIIVILOKI_POLKU = fileURLToPath(new URL('./vienti/muutosloki-natiivi.json', import.meta.url));
+
+// Uusin natiiviversio muutoslokista: "1.0.30 (202609271221)" → "1.0.30".
+export function uusinNatiivi(loki) {
+  const r = loki.rivit[0];
+  return { versio: r.versio.split(' ')[0], paiva: r.paiva };
+}
 
 /*
  * KÄSIVAKIOT — ei koneluettavaa lähdettä repossa. Päivitä käsin.
  *   kartta.z10  Z10-tason poltto (tuotannossa 27.9.2026): kaksi
  *               laattaerää, 298 335 + 78 211 laattaa.
- *   natiivi     viimeisin sisäiseen testaukseen (TestFlight) viety versio.
+ *
+ * iOS-testiversio luetaan natiivin muutoslokista (tools/vienti/muutosloki-natiivi.json,
+ * uusin rivi ensin), jotta se ei jää jälkeen TestFlight-julkaisuista.
  */
 export const KASIVAKIOT = {
   kartta: {
     z10Tuotannossa: '2026-09-27',
     z10Laatat: [298335, 78211],
-  },
-  natiivi: {
-    testflight: '1.0.28',
-    paivitetty: '2026-09-27',
   },
 };
 
@@ -133,6 +139,7 @@ export async function laskeLuvut() {
   const { kattavuus, merkkeja } = await import('./laske-karttanostot.mjs');
   const { PELIN_SYVIN_TASO } = await import('../js/laattapyramidi.js');
   const { MUUTOKSET } = await import('../js/muutokset.js');
+  const natiivi = uusinNatiivi(JSON.parse(readFileSync(NATIIVILOKI_POLKU, 'utf8')));
 
   const rivit = kattavuus();
   const pelinMaat = new Set(rivit.map((r) => r.iso));
@@ -174,8 +181,8 @@ export async function laskeLuvut() {
     },
     versiot: {
       web: MUUTOKSET[0].v,
-      natiivi: KASIVAKIOT.natiivi.testflight,
-      natiiviPaivitetty: KASIVAKIOT.natiivi.paivitetty,
+      natiivi: natiivi.versio,
+      natiiviPaivitetty: natiivi.paiva,
     },
   };
 }

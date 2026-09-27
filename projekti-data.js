@@ -111,7 +111,7 @@ window.PROJEKTIDATA = {
   },
   "versiot": {
    "web": 2328,
-   "natiivi": "1.0.28",
+   "natiivi": "1.0.30",
    "natiiviPaivitetty": "2026-09-27"
   }
  }

@@ -87,7 +87,7 @@ function osanLuvut(avain, L) {
   switch (avain) {
     case 'kartta': return [
       ['karttatasoa', `Z0–Z${k.syvinTaso}`, `${k.tasoja} tarkkuustasoa maapallosta kaupunkiin`],
-      ['laattaa tasolla Z10', luku(k.z10Yhteensa), `${luku(k.z10Laatat[0])} + ${luku(k.z10Laatat[1])} kahdessa kerroksessa, tuotannossa ${paivaTeksti(k.z10Tuotannossa)}`],
+      ['laattaa tasolla Z10', luku(k.z10Yhteensa), `tasot 0–10, tuotannossa ${paivaTeksti(k.z10Tuotannossa)}`],
       ['maata kartalla', luku(L.maita), 'jokaisella oma kartta-alue ja lippu'],
       ['kohdetta kartalla', luku(L.kohteita), `${luku(L.kohdeLajit.nahtavyydet)} nähtävyyttä ja historiaa · ${luku(L.kohdeLajit.maasto)} maastokohdetta · ${luku(L.kohdeLajit.skandaalit)} skandaalia · ${luku(L.kohdeLajit.elaimet)} eläintä`],
     ];
