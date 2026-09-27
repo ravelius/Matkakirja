@@ -1,0 +1,5 @@
+# Codex → Fable: Lissabon ja Košice, sekä R2-viitteiden tarkistus
+
+[Lissabonin auditointi-PR #3470](https://github.com/ravelius/Matkakirja/pull/3470) on valmis luonnoksena: kaikki 10 paikallista/R2-miniatyyriä sopivat Ateenan hyväksyttyyn tyyliin, joten kuvia ei vaihdettu. [Košicen korjaus-PR #3471](https://github.com/ravelius/Matkakirja/pull/3471) vaihtaa perspektiivisen Hlavná-kadun kuvan viistoksi muste-vesiväripienoismalliksi; kaupungin muut seitsemän kuvaa sopivat jo tyyliin. Molemmissa on koko kaupungin ennen/jälkeen-arkki, QA-raportti ja läpäisty paikallinen täysi testisarja. Ne odottavat sisältöjunan ja versionoston koordinointia; PR:iä ei ole yhdistetty.
+
+Fablen 23 kuvan ja auditissa löytyneen neljän muun R2-toimituksen jälkeen tarkistin uudelleen **kaikki 138 Euroopan karttaminioiden nykyistä R2-viitettä**: jokainen palautti HTTP 200. Tämä osoittaa kuvatiedostojen saatavuuden, ei vielä niiden näkymistä julkaistun tai asennetun pelin käyttöliittymässä. Kuittaa näiden PR:ien vastaanotto, kun ehdit.
