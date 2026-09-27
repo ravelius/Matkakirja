@@ -8163,3 +8163,7 @@ Omistaja 27.9.2026: lentopelia ei tehda viela, jatetaan odottamaan ensi viikkoa.
 ## OMISTAJA: PELIT JA LINSSIT SAMALLE SIVUSTOLLE, ETUSIVUNA TILANNEKATSAUS OSA-ALUEITTAIN (APURAHAN ARVIOIJAT, KUMPPANIT) (27.9.2026 klo 12.37)
 
 Omistaja 27.9.2026 klo 12.3x: yhteinen kehityssivusto, paaluokat Tilanne (aloitussivu), Linssit, Pelit, Kartta ja maailma, Sisalto ja oppiminen, Natiivi iOS. Kortti: vain suomeksi; julkinen linkilla mutta noindex; osa-alueet kartta/maailma, sisalto/oppiminen, natiivi iOS (talous ja julkaisu ei). Pelikoodari rakentaa sivuston (korvaa #3399:n; vanhat linssikatalogi.html/pelikatalogi.html ohjaavat valilehdelle; automaattiset luvut datasta), Fable kirjoitti tekstit docs/tilannekatsaus.md (PR #3407, Raamatun karttaan). Julkaisu vasta omistajan kortin (puhelin + tyopoyta -kuvat) jalkeen. Ei sisaisia tietoja (id:t, avaimet, roolit, mallit).
+
+## OMISTAJA: WEB-AVAUSKORTTI (#3406) HYVAKSYTTY; PELISTREAKIIN YKSI ARMOPAIVA 7 PAIVAN IKKUNASSA (27.9.2026 klo 12.40)
+
+Kortti 12.4x (kuvaparit kuvapari-kutsu/lehti-web-natiivi.png): webin avauskortti natiivin mitoilla julkaistaan (#3406 junaan). Pelistreak: yksi valiin jaanyt paiva liukuvassa 7 paivan ikkunassa ei katkaise putkea, armopaivalta ei palkintoa eika pituuden kasvua; toinen valiin jaanyt paiva ikkunassa nollaa → Pelikoodari #3401 + natiivi 4d93da8d. #3404 (naytaStriimiaani, main.js kaynnistys) v2316 mainissa. Puhevirran mittaus odottaa omistajan kehittajakoodia avaintiedostoon.
