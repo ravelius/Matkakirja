@@ -26,7 +26,7 @@ Viikko (all models) **64 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (F
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikossa uusi viesti 17:41 (Codex: Ateenan miniatyyrit Fablelle) — normaali PR-kuittausvuo, ei toimenpidettä Postivahdilta.
 
-**HUOM juna (tarkistettu 17:57):** `juna.log` viimeisin rivi on yhä 16:00 "tauko" (JUNA_PAKOTA-käsiajo, Karttasepän poltto) — seuraava rivi vasta 18:00. Ei löytynyt merkkiä siitä, että tauko olisi purettu 16:50 jälkeen (ei uutta KÄÄNNETTY-riviä, launchd-agentit `fi.matkakirja.juna`/`fi.matkakirja.juna-vahti` eivät aktiivisia juuri nyt). Fablen korjausviestin mukaan juna on palannut normaaliin — tämä ei vielä näy lokissa. Seurataan 18:00 rivi, ilmoitetaan Fablelle jos ei käännöstä silloinkaan.
+**Juna (Fable 18:0x):** tauko johtuu lipusta `/tmp/matkakirja-juna-tauko` — Natiiviseppä purkaa sen omalla A/B-mittauksellaan jälkeen ja ilmoittaa. Ei hälytystä juna.login tauko-riveistä ennen sitä.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
@@ -60,9 +60,12 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen paitsi **Laitetestaaja 73 % (YLI, jo ilmoitettu, laskusuunnassa 76→73%)**. Sisältökirjuri 65 % — lähestyy, ei vielä ylitä.
 - **Juna:** ks. kohta 2 — log yhä "tauko" 16:00, ei vahvistusta Fablen mainitsemasta 16:50-normalisoinnista.
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
-- **Lokisiivous-kandidaatit:** tarkistettu tarkasti 17:5x — **ei löytynyt yhtään lokit-alikansiota >48h tai .app-pakettia >24h** (kaikki mtime tuore, jatkuvasti kirjoitettu). `proto-3d/lokit` kokonaiskoko 43G, mutta ei erottuvia vanhoja kandidaatteja mtime-kriteerillä. Fablen luovutuksessa mainitut 5,9 Gt/4,7 Gt eivät täsmää tähän löydökseen — ei toimenpidettä, ilmoitettu Fablelle poikkeamana.
+- **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
+  - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
+  - **.app-paketit >24h:** 14 kpl, yhteensä **~9,5 Gt** (laatta-esilataus/b23koe.app 359M, esilataaja-5:n 4 pakettia ~346–359M, musiikki-v23/esilataaja-mittari/pohja-26 (2)/musiikki-v1 (2)/loydos155/loydos153/huntu-paljastus-b19 ~333–346M kukin).
+  - Poisto omistajan luvalla Fablen kortilla — Postivahti ei poista itse.
 - **Varmuuskopio:** ratkaistu, ei kasvanut.
 
 ## 6) proto-3d/lokit — tila
 
-43G yhteensä, ei mtime-kriteerin (>48h) täyttäviä kandidaattikansioita tällä kierroksella. Ei toimenpiteitä Postivahdilta.
+43G yhteensä. 47 kansiota >48h (~11,8 Gt) + 14 .app-pakettia >24h (~9,5 Gt) — ks. kohta 5, listattu Fablelle 18:0x. Poisto odottaa omistajan lupaa Fablen kortilla.
