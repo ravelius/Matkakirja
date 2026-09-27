@@ -54,12 +54,12 @@ namespace Matkakirja.Natiivi
             "Perillä sinua odottaa Viisas Pöllö. Minä olen vain viestinviejä.",
         };
 
-        /// <summary>Uuden matkan lyhyet tervehdykset (web LIVIAN_UUSI_MATKA; Pelikoodarin luonnos, Fable hyväksyy).</summary>
+        /// <summary>Uuden matkan lyhyet tervehdykset (web LIVIAN_UUSI_MATKA #3440, Fable hyväksyi 27.9.).</summary>
         public static readonly string[] UusiMatka =
         {
-            "Taas matkaan? Hyvä. Isoisäsi kirjassa on sivuja, joita kukaan ei ole lukenut.",
+            "Taas matkaan? Hyvä. Aarnin luettelossa on vielä rivejä ilman rastia.",
             "Uusi matka, uudet sähkeet. Valitse lähtö — minä hoidan postin.",
-            "Sinä taas. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.",
+            "Sinä taas — hyvä. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.",
         };
 
         /// <summary>Lyhyen tervehdyksen kierto (web LIVIA_UUSI_MATKA_TALLE): seuraavan repliikin numero.</summary>
