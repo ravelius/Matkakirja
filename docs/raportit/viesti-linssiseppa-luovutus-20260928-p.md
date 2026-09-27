@@ -42,8 +42,11 @@ merge juna haaraan ennen käännöstä ja aja `tyokalut/tarkista.sh` (0 virhett�
    - Seuraavaksi käännös `sl linssiseppa/symbolit-lippu`, sitten `ajo-symbolit-koko.sh` ja `koosta_koko.py` (speksin §6).
      Kuvaparit (3 zoomia, ennen/jälkeen samasta käännöksestä) Fablelle ja merge-pyyntö Natiivisepälle; hän katselmoi
      ja mergeää, ja tieto on lähetetty.
-   - Huom: Natiiviseppä muuttaa aamulla ErikoismallinAlla-laatikkoleikkausta (Kinderdijk). Jos haarat törmäävät,
-     yhdistä hänen haaransa ensin.
+   - **Natiiviseppä 28.9. klo 00.2x:** laatikkoleikkaus on valmis haarassa natiiviseppa/symbolit-erikoismalli **6cecf733**
+     (d1cba402:n päällä), ja se yhdistyy ristiriidatta cd4911b1:een (yhdistetty puu: Kartta-testit 354/354, 0 virhettä).
+     **Yhdistä 6cecf733 haaraan symbolit-lippu ennen käännöstä**, niin laitekuvissa on laatikkoleikkaus.
+   - Hänen ErikoismallinAlla.SymbolinLaatikkonsa on samaa muotoa kuin SymbolienVaisto.Laatikko, joten ne voi myöhemmin
+     yhdistää yhdeksi lähteeksi. A/B: `symbolit alla laatikko|jalka`.
 3. **Astronautin kuvaselain** (omistajan toive 23.5x; Fable hyväksyi suunnan 00.0x: yksi galleria jatkuu naapurikohteeseen)
    - Proto-haara `linssiseppa/astro-selain` **c5b073cd** (worktree /Users/Shared/Claude/wt/proto-linssiseppa-astro).
    - Suositus docs/raportit/astronautin-kuvaselain-20260928.md. Linssit-testit 351/351.
@@ -67,8 +70,8 @@ merge juna haaraan ennen käännöstä ja aja `tyokalut/tarkista.sh` (0 virhett�
      - Cupola-kehys UI-kerrokseen (media.matkakirja.app/karttanostot/20260926/iss-cupola-*, 6 PNG:tä)
      - vaihto yhdellä napautuksella.
    - Terminaattori ja yövalot ovat Natiivisepän osuus. Tee kuvaselaimen (kohta 3) jälkeen samaan linssiin.
-5. **Symbolit erikoismallin alla:** Kinderdijkin A/B-uusintaajo Natiivisepän laatikkoleikkauksen jälkeen
-   (`ajo-symbolit-alla.sh`, `koosta_alla.py`; -o.md kohta 1.2).
+5. **Symbolit erikoismallin alla:** Kinderdijkin laiteajon (jalka vs. laatikko) tekee **Natiiviseppä** yötauon jälkeen
+   (hänen viestinsä 00.2x), joten se ei ole enää Linssisepän jonossa.
 6. **Erä 6 (Olavinlinna, Geysir, Newgrange; omistaja hyväksyi 27.9. klo 23.4x)**
    - Opus-agentit mallinsivat harnesseissa proto-3d/tyokalut/mallinseppa-esikatselu-o1…o3. Ne **pysäytettiin tauon
      alkaessa 00.0x.**
