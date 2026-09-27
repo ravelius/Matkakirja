@@ -1417,21 +1417,22 @@ namespace Matkakirja
         /// Tallentaa yhden ämpärin polun offline-kansioon (Alueet). Palauttaa tavut tai -1.
         /// Käytetään korutiinina pääsäikeessä.
         /// </summary>
-        public static IEnumerator LataaOffline(string polku, Action<long> valmis)
+        public static IEnumerator LataaOffline(string polku, Action<long> valmis, string lahde = null)
         {
             string f = Tiedosto(OfflineKansio, polku);
             if (File.Exists(f)) { valmis(new FileInfo(f).Length); yield break; }
             // Buildin paketissa: offline-kansioon ei tarvitse kopiota (paketti on aina mukana).
             if (Paketti != null && Paketti.Onko(Laattapaketti.Avain(polku))) { valmis(0); yield break; }
             string v = Tiedosto(ValimuistiKansio, polku);
-            if (File.Exists(v))
+            // Pienennetty lähde (mediaKuvat.pieni): ei kopioida välimuistin isoa alkuperäistä (maan media ≤ 100 Mt).
+            if (lahde == null && File.Exists(v))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(f));
                 File.Copy(v, f, true);
                 valmis(new FileInfo(f).Length);
                 yield break;
             }
-            using var r = UnityWebRequest.Get(Ampari + polku);
+            using var r = UnityWebRequest.Get(Ampari + (lahde ?? polku));
             r.timeout = 30;
             yield return r.SendWebRequest();
             if (r.result != UnityWebRequest.Result.Success) { valmis(r.responseCode == 404 ? 0 : -1); yield break; }
