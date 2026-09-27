@@ -327,7 +327,7 @@ namespace Matkakirja.Natiivi
         static bool Pudotusvalikossa(VisualElement v)
         {
             for (; v != null; v = v.hierarchy.parent)
-                if (v.ClassListContains("unity-base-dropdown")) return true;
+                if (v.ClassListContains(GenericDropdownMenu.ussClassName)) return true;
             return false;
         }
 
