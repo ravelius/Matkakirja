@@ -34,10 +34,10 @@ voimassa.
 4b2. **#3479 skeema 1.55** (wt/siirtoseppa-salaisuudet-pois, PINOTTU #3445:n päälle): maakuntasalaisuudet pois (omistaja
    20.0x, Pelikoodarin pyyntö), skeemasopimus vanhentaa poistettujen kokoelmien ehdot. Julkaistava yhdessä web #3475:n
    kanssa. Natiiviseppä kuittasi. #3441 eheysvartija MERGETTY 20.13 ja toimii (v247: 3×404 Nouméa).
-4b3. **TILA 27.9. klo 21.3x:** 1.52 tuotannossa v248/249 (pienet 3 570 ok). 1.53–1.55 mainissa (#3445, #3488) mutta
-   EI tuotannossa: vienti katkesi työn 30 min aikarajaan (~10 000 pienen pienennys). Korjaus #3496 (mediakuvat.mjs
-   --aikaraja, pienet ämpäriin minuutin välein, työ 60 min) — Julkaisija mergeää ohi junan. Mergen jälkeen: tarkista
-   uusin.json skeema 1.55, pienet 200 (eheysvartija ajaa itse), rivi Fablelle + Natiivisepälle.
+4b3. **TILA 27.9. klo 22.3x:** skeemat 1.52–1.55 TUOTANNOSSA v250 (#3496 korjasi viennin aikarajan: pienet erissä,
+   ämpäriin minuutin välein, työ 60 min). 14 783 pientä kuvaa, Eurooppa offline 1 334 Mt. Fable ja Natiiviseppä tietävät.
+   Fable selvittää 1.0.32:n pergamenttivikaa (pohjakartta ei piirry): lahteet.rasteri v249→v250 ennallaan, kerrottu.
+   YÖTAUKO 22.30 → Karttasepän polton loppuun (ei testisarjaa, headless-ajoja eikä simulaattoria).
 4c. **Seuraava (Fable 27.9.):** kun 1.52–1.54 tuotannossa ja 1.0.32 käännetty → päästä päähän offline-testi Tanska +
    Kroatia omalla simulaattorilla F989814A — SIIRTYI AAMUUN 28.9. (Julkaisija). Käännös: nohup proto-kaanna.sh
    21f09914 F989814A-4E6F-4617-8E5E-C7505E30DEF9; ajo: scratchpadin offline-e2e.sh pohja = Natiivisepän
@@ -47,7 +47,7 @@ voimassa.
 4d. Docs-PR:t #3442 (maastoehdotus) ja #3463 (App Store -luvut) junassa. Jono App Storen jälkeen: kaupunkilehdet.json- ja
    media.json-monoliittien pilkkominen.
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
-   Tuotanto nyt **1.x v241+** (1.51). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
+   Tuotanto nyt **1.x v250+** (1.55). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
 5. **Pelikoodarin pyyntö (27.9. klo 11.3x), #3394 (main v2314) sääntövakiot:** START_MONEY 300 → 400, STRANDED_AID
    poistui, uudet PAIVAKULU_RUOKA 8, PAIVAKULU_MAJOITUS 12, HINTATASON_KERTOIMET, RAHATTOMUUS_VUOROJA 8 ja data
