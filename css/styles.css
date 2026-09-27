@@ -688,6 +688,9 @@ button, .brand, .turn-pill, .fact-card h2 {
   opacity: 0.75;
 }
 
+/* Saavutettavuus C (Fable 27.9.2026): "päällä" täydellä kullalla (4,2 → 6,3:1); "pois" saa jäädä himmeäksi (ei-aktiivinen tila). */
+.paavalikko .kertoja-valikko button.valittu .aanikytkin-tila { opacity: 1; }
+
 /* Päällä oleva kytkin erottuu kullalla, kuten valittu varuste. */
 .paavalikko .kertoja-valikko button.valittu {
   background: var(--panel-2);
@@ -3696,7 +3699,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   font-weight: 400;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
 }
 
 .maa-tunnusluvut::before { content: "Perustiedot"; }
@@ -3713,7 +3716,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 /* Sijoitus maailmassa ja puhujaosuus: vaimeampi lisätieto, mutta
  * sekin luettavan kokoista. */
 .maa-sija {
-  color: rgba(70, 51, 31, 0.62);
+  color: #595046;
   font-size: 0.8em;
   letter-spacing: 0.02em;
   white-space: nowrap;
@@ -3892,7 +3895,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   box-shadow: none;
   padding: 0.3rem;
   margin: 0;
-  color: rgba(90, 74, 51, 0.8);
+  color: #595046;
   cursor: pointer;
 }
 
@@ -4275,7 +4278,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .lahteet-alaotsikko {
   margin: -0.3rem 0 0.6rem;
   font-style: italic;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 .lahteet-copyright {
@@ -4303,7 +4306,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .lahteet-ryhma-johdanto {
   margin: 0 0 0.45rem;
   font-style: italic;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 .lahteet-lista {
@@ -4337,7 +4340,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 
 .lahteet-lisenssi {
   font-size: 0.78rem;
-  color: rgba(70, 51, 31, 0.62);
+  color: #595046;
 }
 
 /* Kirjaamaton lisenssi erottuu, jottei tyhjää kohtaa lueta vapaudeksi. */
@@ -4349,13 +4352,13 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .lahteet-huom {
   font-size: 0.76rem;
   font-style: italic;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 .lahteet-lopetus {
   margin: 1rem 0 0;
   font-size: 0.78rem;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 /* Tavarat matkamuistoina: isompi kuva ja selite sen alla, rivit
@@ -4491,7 +4494,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   text-align: right;
   font-size: 0.68rem;
   font-style: italic;
-  color: rgba(70, 51, 31, 0.6);
+  color: #595046;
 }
 
 /*
@@ -4999,7 +5002,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .source-line a:hover { color: var(--accent); }
 
 /* Pergamenttilaatikossa lähde on mustetta, ei vaaleaa tekstiä. */
-.quiz-result .source-line { color: #7a6039; }
+.quiz-result .source-line { color: #624c2d; }
 .quiz-result .source-line a:hover { color: var(--mark); }
 
 /* Uusi tieto häivähtää esiin, jotta vaihdoksen huomaa. */
@@ -6564,7 +6567,7 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   width: min(100%, 17em);
   font-size: 0.62em;
   letter-spacing: 0;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 .juliste-viiva > span {
@@ -8762,7 +8765,7 @@ body.flight-active .fact-card {
 }
 
 .dialog p, .dialog label, .dialog .muted { color: #5a4326; }
-.dialog .muted { color: #7a6039; }
+.dialog .muted { color: #624c2d; }
 
 .dialog menu {
   display: flex;
@@ -8822,7 +8825,7 @@ body.flight-active .fact-card {
   transform: rotate(-1.5deg);
 }
 
-.quiz-city { color: #7a6039; font-size: 0.9rem; font-style: italic; }
+.quiz-city { color: #624c2d; font-size: 0.9rem; font-style: italic; }
 
 .quiz-question {
   margin: 0 0 1rem;
@@ -9012,7 +9015,7 @@ body.flight-active .fact-card {
   font-family: var(--font-type);
   font-size: 0.98rem;
   font-weight: 700;
-  color: #7a6039;
+  color: #624c2d;
   min-width: 1.6em;
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -10100,7 +10103,7 @@ body[data-mode] .fact-card {
 }
 
 body[data-mode] .fact-card h2 {
-  color: #7a5514; /* tumma kulta erottuu pergamentilta, kirkas ei */
+  color: #6a4a12; /* tumma kulta erottuu pergamentilta, kirkas ei; saavutettavuus C: 4,1 → 5,0:1 kortin pohjalla */
 }
 
 body[data-mode] .fact-place,
@@ -10581,7 +10584,7 @@ body.katselu #newgame-btn { display: none; }
    jolloin listaa voi silmäillä pelkän tekstin perusteella. */
 .muutokset-lista .muutos-versio {
   flex: 0 0 2.2rem;
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
   font-variant-numeric: tabular-nums;
 }
 .muutokset-sulje {
@@ -10642,7 +10645,7 @@ body.katselu #newgame-btn { display: none; }
 .palaute-tilanne {
   margin: 0 0 0.6rem;
   font-size: 0.78rem;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   font-style: italic;
 }
 
@@ -11017,7 +11020,7 @@ body.katselu #newgame-btn { display: none; }
   margin: 0.2rem 0 0;
   font-family: var(--font-type);
   font-size: 0.66rem;
-  color: rgba(70, 51, 31, 0.6);
+  color: #595046;
 }
 
 /* Kuvaton rivi ei jätä ruudun kokoista aukkoa vasempaan reunaan. */
@@ -11132,7 +11135,7 @@ body.katselu #newgame-btn { display: none; }
   margin: 0 0 0.85rem;
   font-size: 0.66rem;
   line-height: 1.3;
-  color: rgba(70, 51, 31, 0.68);
+  color: #595046;
 }
 
 /*
@@ -12967,7 +12970,7 @@ button.lukija-nappi,
   border: 0;
   border-radius: 50%;
   background: rgba(246, 231, 198, 0.72);
-  color: rgba(70, 51, 31, 0.6);
+  color: #595046;
   box-shadow: none;
   cursor: pointer;
   transition: color 0.2s ease, background 0.2s ease;
@@ -13128,7 +13131,7 @@ button.lukija-nappi:focus-visible,
   border: 0;
   background: none;
   box-shadow: none;
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
   cursor: pointer;
 }
 
@@ -13328,7 +13331,7 @@ button.lukija-nappi.lukee,
   text-align: center;
   font-size: 0.74rem;
   font-variant-numeric: tabular-nums;
-  color: rgba(70, 51, 31, 0.72);
+  color: #595046;
   user-select: none;
 }
 
@@ -13349,7 +13352,7 @@ button.lukija-nappi.lukee,
   font-size: 0.62rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.6);
+  color: #595046;
 }
 
 .quiz-isoisa-teksti {
@@ -13568,7 +13571,7 @@ button.lukija-nappi.lukee,
   letter-spacing: 0.34em;
   text-transform: uppercase;
   text-align: center;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 /*
@@ -13925,7 +13928,7 @@ button.lukija-nappi.lukee,
 
 .lehti-kuvalahde {
   font-size: 0.62rem;
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
 }
 
 /* ------------------------------------------------------------------ *
@@ -14258,7 +14261,7 @@ button.lukija-nappi.lukee,
   font-size: 0.68em;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.72);
+  color: #595046;
   border: 1px solid rgba(70, 51, 31, 0.28);
   border-radius: 3px;
   vertical-align: 0.1em;
@@ -15109,7 +15112,7 @@ button.lukija-nappi.lukee,
 .maakayra-lahde {
   margin: 0.7rem 0 0;
   font-size: 0.74rem;
-  color: rgba(70, 51, 31, 0.68);
+  color: #595046;
 }
 
 /*
@@ -15573,7 +15576,7 @@ button.lukija-nappi.lukee,
   box-shadow: none;
   font-size: 1.25rem;
   line-height: 1;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   cursor: pointer;
 }
 
@@ -15659,7 +15662,7 @@ button.lukija-nappi.lukee,
   font-size: 0.74rem;
   font-weight: 400;
   line-height: 1.35;
-  color: rgba(70, 51, 31, 0.68);
+  color: #595046;
 }
 
 /* Artikkelin kuva popupissa: sama kehystys kuin lehden kuvilla. */
@@ -15823,7 +15826,7 @@ button.lukija-nappi.lukee,
 .aani-lahde {
   font-size: 0.62rem;
   line-height: 1.35;
-  color: rgba(90, 74, 51, 0.8);
+  color: #595046;
 }
 
 /*
@@ -16227,7 +16230,7 @@ body.vertailu-tila .pawns { display: none; }
   margin: 0.25rem 0 0;
   font-family: var(--font-type);
   font-size: 0.62rem;
-  color: rgba(90, 74, 51, 0.75);
+  color: #595046;
 }
 
 /*
@@ -17000,7 +17003,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .tk-nuoli {
   flex: 0 0 auto;
-  color: rgba(70, 51, 31, 0.6);
+  color: #595046;
   transition: transform 0.15s ease;
 }
 
@@ -17019,7 +17022,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tk-osuus {
   flex: 0 0 auto;
   font-size: 0.66rem;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   font-variant-numeric: tabular-nums;
 }
 
@@ -17027,7 +17030,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   margin-top: 0.12rem;
   font-size: 0.62rem;
   line-height: 1.3;
-  color: rgba(70, 51, 31, 0.62);
+  color: #595046;
 }
 
 .tk-palkki {
@@ -17128,7 +17131,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.72);
+  color: #595046;
 }
 
 .tk-kiintio-arvo {
@@ -17167,7 +17170,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   margin-right: 0.3em;
 }
 .tuore-chip {
@@ -17190,7 +17193,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 .tk-ohjaus-nimi {
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 0.62rem;
@@ -17217,7 +17220,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tk-selite {
   font-size: 0.68rem;
   line-height: 1.4;
-  color: rgba(70, 51, 31, 0.68);
+  color: #595046;
 }
 
 .tk-luvut .tk-nimi { min-width: 9rem; }
@@ -17240,7 +17243,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   border-bottom: 1px solid rgba(70, 51, 31, 0.18);
   padding-bottom: 0.25rem;
 }
@@ -17273,7 +17276,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .mus-tila {
   font-size: 0.66rem;
   white-space: nowrap;
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
 }
 
 .mus-tila.olemassa { color: #2c5e2a; }
@@ -17293,7 +17296,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.62rem;
   line-height: 1.35;
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
   overflow-wrap: anywhere;
 }
 
@@ -17313,7 +17316,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   font-family: system-ui, sans-serif;
   font-size: 0.68rem;
   line-height: 1.45;
-  color: rgba(70, 51, 31, 0.68);
+  color: #595046;
 }
 
 .mus-huomio {
@@ -17399,7 +17402,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   display: inline;
   margin: 0;
   font-size: 0.62rem;
-  color: rgba(70, 51, 31, 0.68);
+  color: #595046;
 }
 
 /*
@@ -18478,7 +18481,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   font-family: var(--font-type);
   font-size: 0.58rem;
   line-height: 1.4;
-  color: rgba(90, 74, 51, 0.8);
+  color: #595046;
 }
 
 /*
@@ -19037,7 +19040,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   margin: 0;
   font-family: var(--font-type);
   font-size: 0.62rem;
-  color: rgba(90, 74, 51, 0.75);
+  color: #595046;
 }
 
 /* ── NÄHTÄVYYSJUTTU ────────────────────────────────────────────────────
@@ -19228,7 +19231,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.72);
+  color: #595046;
 }
 
 #nahtavyys-otsikko {
@@ -19268,7 +19271,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   border: 0;
   background: none;
   box-shadow: none;
-  color: rgba(70, 51, 31, 0.62);
+  color: #595046;
   /* Kuvakkeen koko sidotaan otsikkoon (alla), joten napin on perittävä
      otsikon kirjasinkoko eikä käytettävä napin omaa. */
   font-size: inherit;
@@ -19353,7 +19356,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   margin: 0.35rem 0 0;
   font-family: var(--font-type);
   font-size: 0.74rem;
-  color: rgba(70, 51, 31, 0.72);
+  color: #595046;
 }
 
 /*
@@ -19451,7 +19454,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 .nahtavyys-lahde {
   font-family: var(--font-type);
   font-size: 0.62rem;
-  color: rgba(70, 51, 31, 0.66);
+  color: #595046;
 }
 
 /*
@@ -19524,7 +19527,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   font-family: var(--font-type);
   font-size: 0.72rem;
   letter-spacing: 0.05em;
-  color: rgba(70, 51, 31, 0.66);
+  color: #595046;
 }
 
 /*
@@ -20291,7 +20294,7 @@ button.opas-saagraafi-nappi {
  * suuntanapit ja kätkö saavat erottua. Hover palauttaa täyden värin.
  */
 .dialog.lehti .dialog-actions #arrival-no {
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
   border-color: rgba(70, 51, 31, 0.3);
   background: none;
 }
@@ -20798,7 +20801,7 @@ body.maatiedot-tila .fact-card {
   font-family: var(--font-type);
   font-size: 0.62rem;
   letter-spacing: 0.03em;
-  color: rgba(70, 51, 31, 0.55);
+  color: #595046;
 }
 
 /*
@@ -23906,7 +23909,7 @@ dialog.minipopup:focus-visible { outline: none; }
 .tietaja-galleria-raja {
   font-size: 0.65rem;
   font-variant-numeric: tabular-nums;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 /* ------------------------------------------------------------------ *
@@ -23972,7 +23975,7 @@ button.reaktionappi {
   border-radius: 999px;
   background: none;
   box-shadow: none;
-  color: rgba(70, 51, 31, 0.5);
+  color: #595046;
   cursor: pointer;
   transition: color 140ms ease-out, border-color 140ms ease-out;
 }
@@ -24071,7 +24074,7 @@ button.reaktio-poks .reaktio-ikoni {
   font-family: var(--font-type);
   font-size: 0.68rem;
   letter-spacing: 0.04em;
-  color: rgba(70, 51, 31, 0.72);
+  color: #595046;
 }
 
 .reaktio-kuittaus:empty { display: none; }
@@ -24226,7 +24229,7 @@ textarea.reaktio-teksti {
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(70, 51, 31, 0.62);
+  color: #595046;
 }
 
 button.pollo-pilleri {
@@ -26179,7 +26182,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   border: 1px solid transparent;
   border-radius: 5px;
   background: none;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   font-family: var(--font-type);
   font-size: 0.68rem;
   letter-spacing: 0.08em;
@@ -26206,7 +26209,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   padding: 0.15rem 0.4rem;
   border: 0;
   background: none;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
   font-size: 0.85rem;
   line-height: 1;
   cursor: pointer;
@@ -26236,7 +26239,8 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.45rem;
-  min-height: 0;
+  /* Saavutettavuus C (Fable 27.9.2026, web + natiivi): kosketusrivi ≥ 44 px. */
+  min-height: 44px;
   padding: 0.3rem 0.4rem;
   border: 0;
   border-radius: 6px;
@@ -26292,7 +26296,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
    merkkiä kartalla juuri nyt on. Numerot ladotaan tabulaarisina, jotta
    sarake ei heilu rivien välillä. */
 .karttaselite-luku {
-  color: rgba(70, 51, 31, 0.6);
+  color: #595046;
   font-family: var(--font-type);
   font-size: 0.74rem;
   font-variant-numeric: tabular-nums;
@@ -26705,7 +26709,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 
 .maakunta-kuva-lahde {
   margin-top: 0.2rem;
-  color: rgba(70, 51, 31, 0.65);
+  color: #595046;
   font-size: 0.66rem;
   line-height: 1.3;
 }
@@ -26739,7 +26743,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  color: rgba(70, 51, 31, 0.7);
+  color: #595046;
 }
 
 .maakunta-pulu-vastaus {

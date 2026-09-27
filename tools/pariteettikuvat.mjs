@@ -9,6 +9,12 @@
  *     [--kaupunki marseille] [--siemen 5] [--dpr-iphone 3]
  *     [--gpu metal|ohjelma] [--uusinta 1] [--laatikot] [--lista]
  *
+ * --kontrasti: jokaisen onnistuneen kuvan viereen <nakyma>-<koko>-kontrasti.json:
+ * näkyvien tekstien väri, efektiivinen tausta ja WCAG-kontrastisuhde (vaatimus
+ * 4,5:1, iso teksti 3:1) sekä napautettavien elementtien koko (vaatimus 44 px).
+ * Tausta lasketaan esivanhempien taustaväreistä alfakoostettuna; taustakuvan
+ * (gradientti, pergamenttikuvio) kohdalla kenttä kuvaTausta = true ja arvo on
+ * kuvan alla olevan värin mukainen — tarkista silmin.
  * --laatikot: jokaisen onnistuneen kuvan viereen <nakyma>-<koko>.json,
  * jossa näkyvien tekstien ja kuvien DOM-laatikot samalla skeemalla kuin
  * natiivin ui-puu.json (automaattinen pariteettiajo vertaa näitä kahta).
@@ -50,6 +56,7 @@ const DPR_IPHONE = Number(arg('dpr-iphone', 3));
 const GPU = String(arg('gpu', 'metal'));
 const UUSINTOJA = Math.max(0, Number(arg('uusinta', 1)));
 const LAATIKOT = Boolean(arg('laatikot'));
+const KONTRASTI = Boolean(arg('kontrasti'));
 const KOOT = String(arg('koot', '393x852,834x1194')).split(',').map((k) => {
   const [w, h] = k.split('x').map(Number);
   // Kapea = iPhone (dpr 3 tai --dpr-iphone), leveä = iPad 11" (dpr 2).
@@ -274,6 +281,77 @@ const NAKYVYYSTARKISTIN = () => {
  * Toisin kuin NAKYVYYSTARKISTIMESSA, pointer-events:none ei vapauta
  * osumavaatimuksesta (ks. kytke alla). Sarjallistetaan page.evaluateen.
  */
+const KERAA_KONTRASTI = () => {
+  const rgba = (s) => {
+    const m = String(s).match(/rgba?\(([^)]+)\)/);
+    if (!m) return null;
+    const [r, g, b, a = 1] = m[1].split(/[ ,/]+/).filter(Boolean).map(Number);
+    return [r, g, b, a];
+  };
+  const paalle = (yla, ala) => {
+    const a = yla[3];
+    return [0, 1, 2].map((i) => yla[i] * a + ala[i] * (1 - a)).concat(1);
+  };
+  const lum = ([r, g, b]) => {
+    const f = (c) => { const v = c / 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+  };
+  const suhde = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+  const tausta = (el) => {
+    const pino = [];
+    let kuva = false;
+    for (let e = el; e && e.nodeType === 1; e = e.parentElement) {
+      const cs = getComputedStyle(e);
+      if (cs.backgroundImage && cs.backgroundImage !== 'none') kuva = true;
+      const c = rgba(cs.backgroundColor);
+      if (c && c[3] > 0) { pino.push(c); if (c[3] >= 1) break; }
+    }
+    let tulos = [255, 255, 255, 1];
+    for (const c of pino.reverse()) tulos = paalle(c, tulos);
+    return { vari: tulos, kuva };
+  };
+  const nakyva = (el, r) => {
+    if (r.width < 2 || r.height < 2 || r.bottom < 0 || r.right < 0 || r.top > innerHeight || r.left > innerWidth) return false;
+    const cs = getComputedStyle(el);
+    if (cs.visibility === 'hidden' || Number(cs.opacity) < 0.05) return false;
+    const x = Math.min(Math.max(r.left + r.width / 2, 0), innerWidth - 1);
+    const y = Math.min(Math.max(r.top + r.height / 2, 0), innerHeight - 1);
+    const osuma = document.elementFromPoint(x, y);
+    return Boolean(osuma && (osuma === el || el.contains(osuma) || osuma.contains(el)));
+  };
+  const tekstit = [];
+  for (const el of document.body.querySelectorAll('*')) {
+    if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE'].includes(el.tagName)) continue;
+    const omat = [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.data).join(' ').replace(/\s+/g, ' ').trim();
+    if (!omat) continue;
+    const r = el.getBoundingClientRect();
+    if (!nakyva(el, r)) continue;
+    const cs = getComputedStyle(el);
+    const t = tausta(el);
+    const vari = rgba(cs.color);
+    if (!vari) continue;
+    // Tekstin oma alfa ja kertynyt opacity: näkyvä väri koostetaan taustan päälle.
+    let op = 1;
+    for (let e = el; e && e.nodeType === 1; e = e.parentElement) op *= Number(getComputedStyle(e).opacity);
+    const nakyvaVari = paalle([vari[0], vari[1], vari[2], vari[3] * op], t.vari);
+    const koko = parseFloat(cs.fontSize);
+    const lihava = Number(cs.fontWeight) >= 700;
+    const iso = koko >= 24 || (lihava && koko >= 18.66);
+    const k = Math.round(suhde(nakyvaVari, t.vari) * 100) / 100;
+    tekstit.push({ teksti: omat.slice(0, 60), luokat: String(el.className?.baseVal ?? el.className ?? '').slice(0, 80), tag: el.tagName,
+      vari: cs.color, tausta: `rgb(${t.vari.slice(0, 3).map(Math.round).join(',')})`, kuvaTausta: t.kuva,
+      fontti: koko, iso, suhde: k, vaatimus: iso ? 3 : 4.5, ok: k >= (iso ? 3 : 4.5) });
+  }
+  const napit = [];
+  for (const el of document.body.querySelectorAll('button, a[href], [role="button"], input, select, summary, label')) {
+    const r = el.getBoundingClientRect();
+    if (!nakyva(el, r)) continue;
+    napit.push({ teksti: (el.innerText || el.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim().slice(0, 50),
+      luokat: String(el.className?.baseVal ?? el.className ?? '').slice(0, 80), w: Math.round(r.width), h: Math.round(r.height), ok: r.height >= 44 && r.width >= 24 });
+  }
+  return { tekstit, napit };
+};
+
 const KERAA_LAATIKOT = () => {
   const OHITA = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE', 'LINK', 'META']);
   const KUVATAGIT = new Set(['IMG', 'CANVAS', 'VIDEO']);
@@ -495,6 +573,10 @@ async function kuvaaYksi(nakyma, koko) {
     if (!syy) {
       // Laatikot heti kuvan jälkeen, ennen jälkitodennusta: sama hetki kuin kuvassa.
       if (LAATIKOT) laatikot = await sivu.evaluate(KERAA_LAATIKOT).catch((e) => ({ virhe: String(e.message).split('\n')[0] }));
+      if (KONTRASTI) {
+        const k = await sivu.evaluate(KERAA_KONTRASTI).catch((e) => ({ virhe: String(e.message).split('\n')[0] }));
+        writeFileSync(join(ULOS, `${nakyma.nimi}-${koko.nimi}-kontrasti.json`), JSON.stringify(k, null, 1));
+      }
       const jalkeen = await todenna(sivu, nakyma, p);
       if (jalkeen) {
         syy = `sulkeutui kuvan aikana: ${jalkeen}`;
