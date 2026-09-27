@@ -82,7 +82,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'London from Primrose Hill May 2013.jpg',
-          lyhyt: 'Primrose Hillin puisto avattiin yleisölle 1842 Camdenin korkeimmalla kukkulalla.',
+          lyhyt: 'Primrose Hillin puisto avattiin yleisölle 1842 yhtenä Camdenin korkeimmista kukkuloista.',
           selite: 'Primrose Hillin puisto avattiin yleisölle 1842, ja sen laki on '
             + 'Camdenin kaupunginosan korkeimpia kohtia.',
           lahde: 'Duncan from Nottingham, UK, Wikimedia Commons (CC BY 2.0)',
@@ -3843,9 +3843,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Fernsehturm, Berlín, Alemania, 2016-04-22, DD 40-42 HDR.jpg',
-          lyhyt: 'Itä-Saksan 1969 rakentama 368-metrinen tv-torni Alexanderplatzilla on Saksan korkein rakennus.',
+          lyhyt: 'Itä-Saksan 1969 rakentama 368-metrinen tv-torni Alexanderplatzilla on Saksan korkein rakennelma.',
           selite: 'Itä-Saksan vuonna 1969 rakentama tv-torni '
-            + 'Alexanderplatzilla on 368-metrisenä Saksan korkein rakennus.',
+            + 'Alexanderplatzilla on 368-metrisenä Saksan korkein rakennelma.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -3943,7 +3943,7 @@ export const KULTTUURI_KATEGORIAT = {
          * PYSTYKUVA JA YKSI AIHE (omistajan linjaus 16.8.2026), sama
          * kaava kuin Pariisissa ja Lontoossa: Commonsin Featured
          * picture, pystysuora, tunnistettava heti pienenä. Berliinin
-         * vastine on Fernsehturm — kaupungin korkein rakennus ja sen
+         * vastine on Fernsehturm — kaupungin korkein rakennelma ja sen
          * selvin tunnus.
          *
          * Entinen Kurfürstendammin kahvilakuva ei kadonnut: se siirtyi
@@ -3953,7 +3953,7 @@ export const KULTTUURI_KATEGORIAT = {
         kuva: {
           tiedosto: 'Berliner Fernsehturm November 2013.jpg',
           selite: 'Fernsehturm on 368 metriä korkea ja siten Saksan korkein '
-            + 'rakennus.',
+            + 'rakennelma.',
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Berliini on väljä kaupunki: pinta-alaltaan se on lähes '
@@ -6529,9 +6529,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa '
             + 'missään vaiheessa pakastaa. Leivät numeroidaan ennen '
             + 'maistamista, jottei raati tiedä kenen leipää se arvostelee, ja '
-            + 'raadissa istuu kuusi arvottua tavallista pariisilaista. '
-            + 'Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän '
-            + 'toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
+            + 'raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua '
+            + 'tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden '
+            + 'velvollisuuden: hän toimittaa presidentinpalatsin leivät '
+            + 'seuraavan vuoden ajan.',
           lyhyt: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta patongista presidentin leipojaksi.',
           selite: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta '
             + 'perinteisestä patongista, ja voittaja toimittaa '
