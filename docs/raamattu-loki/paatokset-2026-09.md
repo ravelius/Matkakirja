@@ -8175,3 +8175,7 @@ Omistaja 27.9.2026 klo 12.4x (kuvakaappaus iPhone, Kreikka): isot kursiiviset ma
 ## OMISTAJA: TASATUT NAHTAVYYSKUVAT PELIIN, SITTEN CODEX ARVIOI JA KORJAA RAIKEIMMAT; BUILD 29b (PUHEVIRTA POIS) (27.9.2026 klo 12.48)
 
 Kortti 12.5x (kontaktiarkit Pariisi, Helsinki, Lontoo; #3408): 413 kuvaa tasattu (poikkeamat 42 → 23, Codex-kohtaukset 0 poikkeamaa) → tuotantoon versionostolla; sen jalkeen Codex arvioi tuotannon kuvat ja korjaa raikeimmat (23 + 7 maalattua taustaa samaan tilaukseen). Natiivi: laitteella puhevirta kaatuu Download Handler -virheeseen → synteesipuhe aaneton; Fable valitsi A: TF 1.0.29 -ajo 36309389916 keskeytetaan, BUILD 29b = master 6809d5ae + puhevirta-pois 49ea64ee; Pelikoodari korjaa virran 1.0.30:aan. iPhonen nostokortin ylarivi (ratas, kaiutin, VU) puuttuu → Natiivi-UI 1.0.30. Pelistreak armopaiva valmis (#3401 aff13a5e6, natiivi 70bebdde).
+
+## OMISTAJA (SITOVA): NAHTAVYYKSISSA EI EI-PAIKKA-KUVIA — TAPAHTUMAT, HENKILOT, ESINEET JNE. SIIRRETAAN NOSTOIHIN TAI LEHTIIN (27.9.2026 klo 12.50)
+
+Omistaja 27.9.2026 klo 12.5x (kontaktiarkit): nahtavyyksissa nakyy yha ei-paikkoja (esim. Pariisi bastilji-1789, curie-1898, lumiere-1895, paras-patonki). Tarkentaa 26.9. paatosta 178: kaikki ei-paikat (tapahtumat, henkilot, esineet, ruoka, ilmiot) siirretaan nostoiksi tai kaupunkilehden juttuihin kuvineen, ei poisteta; aukiot ja luonto ovat paikkoja. Sisaltokirjuri: koko nahtavyysaineiston luokittelu web + natiivi, suodatuksen vuototarkistus (koodivika → Pelikoodari), siirto, vartija ≥ 1 paikka/kaupunki, PR Julkaisijalle.
