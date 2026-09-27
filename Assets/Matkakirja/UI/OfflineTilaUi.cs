@@ -128,7 +128,9 @@ namespace Matkakirja.Natiivi
                 float nyt = Time.realtimeSinceStartup;
                 // Lepopiirto (Fable build 20, Laitetestaaja: verkoton testitila likasi UI:n): vuorottelu seisoo levossa samalla
                 // 3 s:n säännöllä kuin syke (Joutosyke.Voima 0 = lepo) ja jatkuu aktiivisuudesta; vuoron kello alkaa alusta.
-                if (Joutosyke.Voima <= 0.01f) vuoroAlkoi = nyt;
+                // Levossa seistään PILLERIN vuorossa (Laitetestaaja TF 1.0.31: "Ei verkkoa" ei näkynyt koskaan ilman
+                // kosketusta, koska lepo pysäytti lapun vuoroon): yksi vaihto, sitten ei piirtoa.
+                if (Joutosyke.Voima <= 0.01f) { pilleriVuorossa = true; vuoroAlkoi = nyt; }
                 else if (nyt - vuoroAlkoi >= (pilleriVuorossa ? PilleriVuoro : LappuVuoro)) { pilleriVuorossa = !pilleriVuorossa; vuoroAlkoi = nyt; }
                 naytaPilleri = pilleriVuorossa;
             }
