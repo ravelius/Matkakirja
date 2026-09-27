@@ -8107,3 +8107,7 @@ Postivahti 11.23: viikkokiintio 93 % (~1 pp/12 min). Fable: siirtoprompti docs/r
 ## LUOVUTUKSET TILINVAIHTOON: NATIIVI-UI, JULKAISIJA, KARTTASEPPA; PALLO-Z10 YOPOLTTO IRROTETTU SESSIOSTA (PID 72301) (27.9.2026 klo 11.26)
 
 Luovutukset pushattu: Natiivi-UI (f8f7a9c67; avauskortin korjaukset koodissa 11a3c43a, kaannos klo 12; nostot-taysi 18543b3c), Julkaisija (c01adfd54; tyokalut julkaisija-tyokalut/; #3392 v2313 mainissa, #3391 suljettu, #3394 ja #3388 junassa), Karttaseppa (1bcc21e08; pallo-Z10 yopoltto nohup PPID 1 PID 72301 alkaa klo 22 → pallo-z10-20260927/ulos/10/; vientikomento luovutuksessa, ajetaan vasta omistajan hyvaksynnalla uuden tilin Karttaseppa-sessiossa; worktree wt/karttaseppa-pallo-z10 sailytetaan).
+
+## LUOVUTUKSET: LINSSISEPPA -M (01289a762), LAITETESTAAJA (6b46d3f13); LAHITASON KOLMIOSUHDE 2–5 x, KATTO 3 000 (FABLE) (27.9.2026 klo 11.27)
+
+Linssiseppa luovutus -m 01289a762 (seuraavat maat Cesky Krumlov, Malbork, Pannonhalma; lento v3 + lentopeli); kysymys: Raamatussa lahitaso 2–3 x mutta osa symboleista 4–4,7 x (kaikki < 3 000) → Fable: ei karsita, sitova raja 3 000 kolmiota, Raamattuun '2–5 x, katto 3 000' seuraavassa Raamattu-PR:ssa. Laitetestaaja luovutus 6b46d3f13 (+ aloitusviesti 6b79b88dd), 1.0.29-resepti 9 aihetta.
