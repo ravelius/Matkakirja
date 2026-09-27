@@ -33,3 +33,10 @@ Node --test 4463/0. Kysymykset:
 2. Z10 298 335 + 78 211 laattaa näkyy sivulla "kahdessa kerroksessa" — oikein?
 3. Otsikot ulkoiselle yleisölle: "Omistajan kortit" → "Pelin omat mekaniikat", "Omistajan ideat" → "Ideat".
 4. docs/ (myös raakadatat, joissa sisäisiä merkintöjä) on Pagesissa julkisena kuten ennenkin; sivu itse suodattaa.
+
+## P1 puhevirta MITATTU → Natiivisepälle (SendMessage-raja täynnä, välitä myös hänelle)
+
+`pelikoodari/puhevirta-korjaus` 2aec7015 (merge-pyyntö lokit/merge-pyynto-pelikoodari-maisemakompressori.md, viimeinen osio).
+Pariteetti-iPhone A2FD9C9F, käännös 64e551f6, tuotannon worker: virta pois 1. ääni 8 768 ms → palavirta 2 565 ms;
+aani mittaa +9/+21/+33 s: MatkakirjaPuhe soi palojen yli. Virta = päällä oletuksena. Fyysinen laite vielä Laitetestaajalle.
+Julkaisijalle: mittaus valmis, simulaattori sammutettu ja siivottu.
