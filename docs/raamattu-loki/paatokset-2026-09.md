@@ -8119,3 +8119,7 @@ Sisaltokirjuri luovutus -e (haara sisalto-pelikatalogi-20260927): pelisuunnitelm
 ## PELIKOODARIN LUOVUTUS -C (748004216); PELISTREAK-EHDOTUS #3396; AGENTIT: TALOUSPORTTI, VASTAKOE, PELIKATALOGI.HTML (27.9.2026 klo 11.28)
 
 Pelikoodari 11.3x (68 %): luovutus -c 748004216; #3388 niputus korjattu → junassa; pelistreak-ehdotus #3396 (docs): 3–6 pv 20 £/pv, 7. pv 50 + 100 £, 8+ pv 30 £/pv + joka 7. pv 100 £ → omistajan kysymys 11 (Fable mergesi #3396 ilman haaran poistoa); agenteilla natiivin talousportti (pelikoodari/talous-vaihe1), astro-pallo-VASTAKOE + syvazoomi-polku, pelikatalogi.html; sitten avauskortin web-kevennys.
+
+## OMISTAJA 11.3x: PELISTREAK-LUVUT HYVAKSYTTY (3–6 pv 20 £, 7. pv 50 + 100 £, 8+ pv 30 £ + JOKA 7. PV 100 £); PELIKOODARIN TILINVAIHTOLUOVUTUS db81fcab4 (27.9.2026 klo 11.32)
+
+Omistaja 11.3x kortilla: pelistreak-luvut hyvaksytty sellaisenaan → talous vaihe 1 web + natiivi. Pelikoodari: tilinvaihtoluovutus db81fcab4 (#3388/#3394 junassa, proto-haarat, talousportti agentilla, streak, avauskortin kevennys, natiivimittaus, zoomikatto).
