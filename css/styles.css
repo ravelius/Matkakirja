@@ -455,14 +455,24 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 .rahattomuus-selite[hidden] { display: none; }
 .rahattomuus-lohkot { display: flex; gap: 3px; }
+/*
+ * Värit (omistaja 27.9.2026 klo 17.2x): palava lohko pergamentin
+ * palaneen oranssi, viimeiset 18 h (.viimeinen) punainen; sammuneet
+ * vaaleina kuten ennen (reunus ja himmeä täyttö oman värinsä sävystä).
+ */
 .rahattomuus-lohko {
   width: 9px;
   height: 9px;
   border-radius: 1.5px;
-  border: 1px solid rgba(158, 44, 33, 0.45);
+  border: 1px solid rgba(168, 86, 26, 0.45);
+  background: rgba(217, 122, 43, 0.12);
+}
+.rahattomuus-lohko.viimeinen {
+  border-color: rgba(158, 44, 33, 0.45);
   background: rgba(192, 57, 43, 0.12);
 }
-.rahattomuus-lohko.palaa { border-color: #9e2c21; background: #c0392b; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+.rahattomuus-lohko.palaa { border-color: #a8561a; background: #d97a2b; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+.rahattomuus-lohko.viimeinen.palaa { border-color: #9e2c21; background: #c0392b; }
 
 .turn-pill .clock {
   color: var(--muted);
@@ -21798,6 +21808,31 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 .pollo-vihje-maadoitus .pollo-vihje-lause + .pollo-vihje-lause {
   margin-top: 0.45rem;
 }
+
+/*
+ * UUDEN MATKAN LYHYT TERVEHDYS: Ohita kuplan oikeassa alakulmassa
+ * (omistaja 27.9.2026 "KERRAN + OHITA"; js/livia.js
+ * naytaLivianLyhytAvaus). Kevyt: pelkkä tekstinappi ilman kehystä,
+ * sama muste kuin kuplan teksti, kosketusalue ≥ 32 px.
+ */
+.pollo-vihje-ohita {
+  display: block;
+  margin: 0.2rem -0.35rem -0.3rem auto;
+  min-height: 2rem;
+  padding: 0.25rem 0.45rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.pollo-vihje-ohita:hover,
+.pollo-vihje-ohita:focus-visible { opacity: 1; }
 
 /*
  * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistajan tilaus 29.8.2026;

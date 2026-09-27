@@ -174,6 +174,44 @@ export const LIVIAN_AVAUS = [
  * lasketa sitä uudelleen suodatetusta listasta. Ilman tätä
  * ohitetun kuplan äänite soisi seuraavan kuplan kohdalla.
  */
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KERRAN + OHITA (omistaja 27.9.2026 klo 17.2x)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Koko avausesittely (LIVIAN_AVAUS) näytetään laitteella KERRAN
+ * (livianAvausNahty). Seuraavilla uusilla matkoilla Livia lennähtää
+ * paikalle yhdellä lyhyellä repliikillä, ja kuplassa on Ohita-nappi
+ * (js/pollo.js naytaAvauskupla `ohita`). Repliikit kiertävät
+ * järjestyksessä, jottei sama toistu kahdesti peräkkäin.
+ *
+ * PÄÄTOIMITTAJAN HYVÄKSYMÄT (Fable 27.9.2026 klo 18.3x): Livia on
+ * asiantunteva viestinviejä, ei huutomerkkejä, tavoite on Aarnin luettelo.
+ * Äänitteitä ei ole: kupla puhuu, ääni vaikenee (sama sopimus kuin
+ * puuttuvalla äänitteellä).
+ */
+export const LIVIAN_UUSI_MATKA = [
+  'Taas matkaan? Hyvä. Aarnin luettelossa on vielä rivejä ilman rastia.',
+  'Uusi matka, uudet sähkeet. Valitse lähtö — minä hoidan postin.',
+  'Sinä taas — hyvä. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.',
+];
+
+/** Lyhyen tervehdyksen kierto laitteen muistissa (seuraavan repliikin numero). */
+export const LIVIA_UUSI_MATKA_TALLE = 'matkakirja-livia-uusi-matka';
+
+/** Seuraava lyhyt repliikki kierrosta; kirjaa seuraavan numeron talteen. */
+export function livianUudenMatkanRepliikki() {
+  let i = 0;
+  try {
+    i = Number.parseInt(localStorage.getItem(LIVIA_UUSI_MATKA_TALLE) ?? '0', 10) || 0;
+  } catch { /* yksityinen selaus: aina ensimmäinen */ }
+  const indeksi = ((i % LIVIAN_UUSI_MATKA.length) + LIVIAN_UUSI_MATKA.length) % LIVIAN_UUSI_MATKA.length;
+  try {
+    localStorage.setItem(LIVIA_UUSI_MATKA_TALLE, String((indeksi + 1) % LIVIAN_UUSI_MATKA.length));
+  } catch { /* yksityinen selaus */ }
+  return { teksti: LIVIAN_UUSI_MATKA[indeksi], indeksi };
+}
+
 /** Kaanonin järjestysnumero sille kuplalle, joka väistyy usealla reitillä. */
 export const LIVIAN_YHDEN_REITIN_KUPLA = 3;
 
@@ -301,16 +339,14 @@ export function livianKuplanLukuaika(teksti) {
 export function naytaLivianAvaus(ui) {
   if (!ui || ui.dead || ui.katselu) return false;
   if (ui.game?.phase !== 'pickstart') return false;
-  if (avausKesken || livianAvausNahty()) return false;
+  if (avausKesken) return false;
+  // KERRAN + OHITA: koko esittely vain ensimmäisellä kerralla laitteella.
+  if (livianAvausNahty()) return naytaLivianLyhytAvaus(ui);
   avausKesken = true;
   avausLiitoValmis = false;
   avausLiidonJalkeinen = null;
   avauksenUi = ui;
-  if (typeof document !== 'undefined') {
-    avausPiilotus=()=>{if(document.hidden)lopetaAvaus();};
-    document.addEventListener('visibilitychange',avausPiilotus);
-    globalThis.addEventListener?.('pagehide',lopetaAvaus);
-  }
+  kuunteleSivunPiilotusta();
   clearTimeout(avausAjastin);
   const laskeutui=()=>{
     if (!avausKesken || ui.dead || ui.game?.phase !== 'pickstart') return;
@@ -324,6 +360,53 @@ export function naytaLivianAvaus(ui) {
   // Ensimmäinen tuttu repliikki alkaa, kun kaukainen Pulu on jo
   // tunnistettavissa. Reduced motionissa ei tule liikettä eikä viivettä.
   avausAjastin = setTimeout(() => naytaRepliikki(ui, 0), ui.reducedMotion ? 0 : AVAUKSEN_VIIVE);
+  return true;
+}
+
+/** Sarjan kuuntelijat: välilehti taustalle tai sivu pois → sarja pois. */
+function kuunteleSivunPiilotusta() {
+  if (typeof document === 'undefined') return;
+  avausPiilotus = () => { if (document.hidden) lopetaAvaus(); };
+  document.addEventListener('visibilitychange', avausPiilotus);
+  globalThis.addEventListener?.('pagehide', lopetaAvaus);
+}
+
+/**
+ * UUDEN MATKAN LYHYT TERVEHDYS (KERRAN + OHITA): yksi kupla, Livian
+ * lennähdys ja saapumistehoste, Ohita kuplassa. Kupla väistyy lukuajan
+ * jälkeen, napautuksesta, Ohitasta tai pelaajan valinnasta
+ * (peruLivianAvaus) — kuten koko sarja.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @returns {boolean} alkoiko tervehdys
+ */
+export function naytaLivianLyhytAvaus(ui) {
+  if (!ui || ui.dead || ui.katselu) return false;
+  if (ui.game?.phase !== 'pickstart' || avausKesken) return false;
+  avausKesken = true;
+  avausLiitoValmis = true;
+  avausLiidonJalkeinen = null;
+  avauksenUi = ui;
+  kuunteleSivunPiilotusta();
+  clearTimeout(avausAjastin);
+  // Ele: sama sisäänliito kuin koko esittelyssä (Livia lennähtää kuplan
+  // viereen); kupla ei odota laskeutumista, koska repliikkejä on yksi.
+  const liitaa = polloLivianEnsiliito(() => {}, { reducedMotion: ui.reducedMotion });
+  avausAjastin = setTimeout(() => {
+    avausAjastin = null;
+    if (!avausKesken) return;
+    if (ui.dead || ui.game?.phase !== 'pickstart') { lopetaAvaus(); return; }
+    const { teksti } = livianUudenMatkanRepliikki();
+    const nakyi = polloAvauskupla(teksti, {
+      lennahda: !liitaa && !ui.reducedMotion,
+      ohita: true,
+      kuittaus: () => lopetaAvaus(),
+    });
+    if (!nakyi) { lopetaAvaus(); return; }
+    avausNakyi = true;
+    soitaLivianTehoste('saapuu');
+    avausAjastin = setTimeout(() => lopetaAvaus({ vaienna: false }), lukuaika(teksti));
+  }, ui.reducedMotion ? 0 : AVAUKSEN_VIIVE);
   return true;
 }
 

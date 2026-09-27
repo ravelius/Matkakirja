@@ -1,0 +1,47 @@
+# Eheysvartija (Siirtoseppä 27.9.2026, Fablen tilaus): Euroopan eheystarkistus pysyvänä
+# (docs/raportit/siirtoseppa-eurooppa-eheys-20260927.md, tools/vienti/eheysvartija.mjs).
+#
+# Ajetaan kerran vuorokaudessa ja jokaisen onnistuneen sisältöviennin jälkeen Mac Studiolla, jotta tulos
+# on Postivahdin luettavissa: /Users/Shared/Claude/proto-3d/lokit/eheysvartija/{VIKA.txt, tulos.md,
+# tulos.json, historia.log}. VIKA.txt on tyhjä, kun kaikki on kunnossa.
+#
+# Vain HEAD-pyyntöjä media.matkakirja.app:n staattisiin tiedostoihin: EI puhetta workerilta eikä mitään
+# generointia (Fable 27.9.). Ei salaisuuksia, ei kirjoituksia ämpäriin.
+name: Eheysvartija
+
+on:
+  schedule:
+    - cron: '30 3 * * *'   # 06.30 Suomen aikaa (EEST)
+  workflow_run:
+    workflows: ['Vie sisältöpaketti ämpäriin']
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      kaikki:
+        description: 'Kaikki maat (oletus vain Eurooppa)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: eheysvartija
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  vartija:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: [self-hosted, macOS]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Mac-ajokoneen valmistelu
+        run: tools/mac-ajovalmis.sh
+
+      - name: Eheysvartija
+        run: |
+          set -euo pipefail
+          node tools/vienti/eheysvartija.mjs ${{ inputs.kaikki && '--kaikki' || '' }}
+          cat /Users/Shared/Claude/proto-3d/lokit/eheysvartija/tulos.md >> "$GITHUB_STEP_SUMMARY"
