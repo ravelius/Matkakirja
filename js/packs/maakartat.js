@@ -5853,8 +5853,9 @@ export const KAUPUNKIKARTAT = {
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
     esittely: 'Lontoo ei ole yksi kaupunki vaan kaksi, jotka kasvoivat '
-      + 'yhteen: idässä City of London, roomalaisten muurien rajaama '
-      + 'neliökilometri, jossa tehdään rahaa, ja lännessä Westminster, '
+      + 'yhteen: idässä City of London, roomalaisten muurien rajaama, '
+      + '"neliömailiksi" kutsuttu alue, jossa tehdään rahaa, ja lännessä '
+      + 'Westminster, '
       + 'jossa tehdään päätöksiä. Väliin jäänyt maa täyttyi vähitellen '
       + 'taloilla.\n\nThames on vuorovesijoki: pinta nousee ja laskee '
       + 'Lontoon kohdalla noin seitsemän metriä kahdesti päivässä, ja '

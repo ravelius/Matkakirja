@@ -531,4 +531,939 @@ export const MAAKUNTIEN_PULU = {
       { q: "Kaivoiko Persian kuningas todella kanavan Athoksen niemen poikki?", a: "Kyllä: Kserkses I kaivatti kolmen vuoden ajan kanavan niemimaan kapean kannaksen poikki, jotta hänen laivastonsa välttäisi Athoksen myrskyisen kärjen, jossa persialaisten laivasto oli haaksirikkoutunut 492 eaa. Kanava valmistui ennen Kreikkaan hyökkäämistä 480 eaa. Sen jäljet näkyvät yhä maastossa Nea Rodan kylän lähellä." },
     ],
   },
+  /*
+   * NLD (Sisältökirjuri 27.9.2026). Avaimet TÄSMÄLLEEN kuin
+   * MAAKUNTIEN_LUONNEHDINNAT.NLD:ssä (15 aluetta: 12 maakuntaa +
+   * Karibian erityiskunnat Bonaire, Saba, St. Eustatius). Eri
+   * kulma/faktat kuin samojen alueiden lyhyt/pitka-teksteissä sekä
+   * js/packs/nahtavyysjutut.js:n amsterdam-kohteissa ja
+   * maa-kategoriat.js/maakartat.js:n NLD-sisällössä (esim. Amsterdamin
+   * asema/Anne Frank/Rijksmuseum, Delft/Leeuwenhoek, Kinderdijk,
+   * Afsluitdijk, stroopwafel/Gouda, tulppaanimania, Schokland,
+   * Barentsz, Zaanse Schans -sahamylly) — faktat tarkistettu
+   * en-Wikipediasta 27.9.2026.
+   */
+  NLD: {
+    Bonaire: [
+      { q: "Miksi Bonairella maksetaan dollareilla eikä eurolla?", a: "Bonaire on yksi Alankomaiden kolmesta Karibian erityiskunnasta yhdessä Saban ja St. Eustatiuksen kanssa, ja vuodesta 2011 niissä on käytetty Yhdysvaltain dollaria euron sijaan. Mantereen Alankomaissa maksetaan eurolla, mutta täällä raha kulkee samalla valuutalla kuin naapurisaarilla." },
+      { q: "Miksi sukeltajat pitävät Bonairea erityisen hyvänä?", a: "Koko saaren ympärillä oleva riutta kuuluu jo 1979 perustettuun merensuojelualueeseen, yhteen maailman vanhimmista. Rannalta pääsee sukeltamaan suoraan ilman venettä lähes missä tahansa saarella, minkä ansiosta Bonairea kutsutaan usein maailman rantasukelluspääkaupungiksi." },
+      { q: "Mistä Bonairen jatkuva tuuli on tehnyt saaren kuuluisan?", a: "Tasaiset passaatituulet puhaltavat Lac Bayn matalalla lahdella lähes ympäri vuoden, ja siitä on tullut yksi maailman parhaista windsurffauspaikoista. Lahti on isännöinyt useita nuorten maailmanmestaruuskilpailuja, ja nykyään rannalla on kymmeniä lautakouluja." },
+    ],
+    Drenthe: [
+      { q: "Mistä valtavat dolmenikivet oikein tulivat, kun Drenthessä ei ole kallioita?", a: "Kivet ovat jääkauden aikana mannerjään mukana Skandinaviasta kulkeutuneita siirtolohkareita, jotka jäivät maahan jään sulaessa. Kivikautiset ihmiset käyttivät juuri näitä paikalla valmiina lojuneita järkäleitä hautojensa rakennusaineena noin 3500 eaa." },
+      { q: "Miksi moottoripyöräfanit tuntevat Assenin nimeltä?", a: "TT Circuit Assenilla on ajettu huippuluokan moottoripyöräkilpailuja jo vuodesta 1925, mikä tekee siitä yhden maailman vanhimmista yhä käytössä olevista radoista. Rataa kutsutaan kunnioittavasti Nopeuden katedraaliksi, ja Alankomaiden TT kerää yhä kymmeniätuhansia katsojia." },
+      { q: "Miksi Drenthe on suosittu tähtien katselijoiden keskuudessa?", a: "Dwingelderveldin kansallispuisto sai 2013 Alankomaiden ensimmäisenä kansainvälisen tumman taivaan puiston statuksen, koska valosaastetta on siellä poikkeuksellisen vähän muuten niin tiheään asutussa maassa. Selkeinä öinä taivaalta erottaa Linnunradan paljain silmin." },
+    ],
+    "Zuid-Holland": [
+      { q: "Miksi Keukenhofin puutarha on auki vain muutaman viikon vuodessa?", a: "Keukenhof Lissessä on maailman suurin kukkapuisto, ja se avataan yleisölle vain maalis-toukokuun tulppaanikukinnan ajaksi, noin kahdeksaksi viikoksi. Puutarhassa on yli seitsemän miljoonaa sipulikasvia, jotka istutetaan joka syksy uudelleen seuraavaa kevättä varten." },
+      { q: "Miksi Haagissa ei istu Alankomaiden virallista pääkaupunkia, vaikka hallitus toimii siellä?", a: "Perustuslain mukaan pääkaupunki on aina Amsterdam, vaikka hallitus, parlamentti ja kuningashuone toimivat käytännössä Haagissa. Järjestely juontuu 1800-luvun alusta, jolloin Haagista tuli hallinnon keskus ilman että pääkaupunkiasema koskaan virallisesti siirtyi sinne." },
+      { q: "Miksi Rotterdamissa näkee niin paljon rohkeaa nykyarkkitehtuuria muihin hollantilaiskaupunkeihin verrattuna?", a: "Saksan pommitukset tuhosivat Rotterdamin keskustan lähes kokonaan toukokuussa 1940, joten kaupunki jouduttiin rakentamaan uudelleen tyhjästä. Vanhojen kanavatalojen sijaan syntyi tilaa kokeiluille, kuten Piet Blomin 1984 valmistuneille kuutiotaloille ja 2014 avatulle Markthallille." },
+    ],
+    Flevoland: [
+      { q: "Mikä 1600-luvun kauppalaiva rakennettiin uudelleen keskelle nykyistä kuivaa maata?", a: "Lelystadissa rakennettiin vuosina 1985–1995 täysimittainen kopio VOC-kauppalaiva Bataviasta, käyttäen mahdollisimman tarkasti aikakauden työkaluja ja menetelmiä. Laiva purjehti aikanaan juuri sillä merenpohjalla, joka on nyt kuivaa Flevolandin peltomaata." },
+      { q: "Mikä maailmanlaajuinen puutarhanäyttely järjestettiin Almeressa?", a: "Floriade-maailmannäyttely, jota Alankomaat isännöi noin kerran vuosikymmenessä, pidettiin Almeressa vuonna 2022. Näyttelyalueesta on tarkoitus kasvaa pysyvästi uusi asuinalue, jossa puutarhat ja rakennukset elävät rinnakkain vielä vuosikymmenten päästä." },
+    ],
+    Friesland: [
+      { q: "Miksi Leeuwarden oli erityisen ylpeä vuonna 2018?", a: "Leeuwarden toimi Euroopan kulttuuripääkaupunkina vuonna 2018, ensimmäisenä friisiläisenä kaupunkina koskaan. Vuoden aikana kaupunki ja koko maakunta täyttyivät sadoista tapahtumista, jotka nostivat esiin nimenomaan friisin kieltä ja paikallista kulttuuria." },
+      { q: "Miksi Leeuwardenin vanha kirkontorni kallistuu pahasti?", a: "Oldehove-torni alkoi painua vinoon jo rakennusaikana 1500-luvulla, kun se rakennettiin liian raskaaksi pehmeälle savimaalle. Rakentaminen keskeytettiin kesken, joten torni jäi vajaaksi ja vinoksi eikä sitä koskaan täydennetty alun perin suunnitellulla huipulla." },
+      { q: "Mikä friisiläinen laji tarkoittaa kanavan yli hyppäämistä pitkän sauvan varassa?", a: "Fierljeppen on perinteinen laji, jossa kilpailija juoksee vauhtia, tarttuu pitkään alumiinisauvaan ja kiipeää sitä pitkin ylös hypätessään kanavan yli. Nykyaikaiset ennätykset ylittävät jo 22 metriä, ja lajia harrastetaan kesäisin yhä kilpailuissa ympäri maakuntaa." },
+    ],
+    Gelderland: [
+      { q: "Miksi Arnhemin siltaa kutsutaan sillaksi liian kauas?", a: "Syyskuussa 1944 liittoutuneiden Market Garden -operaatio yritti vallata Rein-joen sillan Arnhemissa, mutta laskuvarjojoukot jäivät saarroksiin eivätkä maavoimat ehtineet apuun ajoissa. Silta nimettiin myöhemmin John Frost -sillaksi, ja se seisoo yhä samalla paikalla keskellä kaupunkia." },
+      { q: "Mitä eläintä Hoge Veluwen kansallispuistossa saattaa yllättäen kohdata pyörätiellä?", a: "Puistossa elää vapaana muun muassa punahirviä, kauriita ja villisikoja, ja ne liikkuvat usein aivan pyöräteiden tuntumassa. Alue aidattiin riista-aidalla jo 1900-luvun alussa yksityiseksi metsästysmaaksi, ennen kuin siitä tehtiin kansallispuisto vuonna 1935." },
+      { q: "Mikä kävelytapahtuma kokoaa Nijmegeniin joka heinäkuu kymmeniä tuhansia kävelijöitä?", a: "Nijmegenin nelipäivämarssit on järjestetty vuodesta 1909, ja se on maailman suurin usean päivän kävelytapahtuma. Osallistujat kävelevät 30–50 kilometriä päivässä neljänä peräkkäisenä päivänä, ja koko kaupunki juhlii heitä iltaisin katukarnevaalin tapaan." },
+    ],
+    Groningen: [
+      { q: "Miksi Groningenin keskustassa näkee tuskin autoja?", a: "Kaupunki jaettiin vuonna 1977 neljään lohkoon, joiden välillä autolla ei pääse suoraan ajamaan keskustan läpi vaan on kierrettävä kehätietä pitkin. Suunnitelma teki pyörästä käytännössä nopeimman kulkuvälineen, ja nykyään yli puolet kaupungin sisäisistä matkoista tehdään polkupyörällä." },
+      { q: "Mistä Groningenin lempinimi Martinistad tulee?", a: "Kaupungin maamerkki, 97-metrinen Martinitoren, on kohonnut Martinikerkin kupeessa jo 1400-luvulta lähtien. Tornin huipulle pääsee yhä kiipeämään satoja portaita, ja sieltä avautuu näkymä yli koko tasaisen maakunnan aina rannikolle asti." },
+      { q: "Mitä maanjäristysten jäljille tehdään Groningenissa nykyään?", a: "Vaikka kaasuntuotanto loppui vuonna 2023, vanhoja tiilitaloja vahvistetaan yhä tuhansittain järistysten varalta, ja monelle asukkaalle on maksettu korvauksia halkeilleista seinistä. Työ jatkuu koko 2020-luvun, sillä maaperä voi järistä vielä vuosia tuotannon loppumisen jälkeenkin." },
+    ],
+    Limburg: [
+      { q: "Mitä Pietersbergin kalkkikivivuoren sisällä on?", a: "Vuosisatojen kivilouhinta on kaivertanut Sint Pietersbergin sisään yli 20 000 käytävän labyrintin, jota kutsutaan joskus Alankomaiden ainoaksi vuoreksi. Toisen maailmansodan aikana käytäviin piilotettiin muun muassa Rembrandtin Yövartio pommituksilta, ja nykyään niissä käy oppaan johdolla turisteja ympäri vuoden." },
+      { q: "Miksi Maastrichtin karnevaali eroaa muun Alankomaiden juhlinnasta?", a: "Limburg kuuluu, toisin kuin suuri osa maasta, katolisen Etelä-Euroopan kulttuuripiiriin, ja siellä karnevaalia vietetään yhtä äänekkäästi kuin Reininmaalla Saksassa. Maastrichtin kaduilla kolme päivää kestävä juhla pysäyttää käytännössä koko kaupungin joka helmikuu." },
+      { q: "Miksi Valkenburgissa on Alankomaiden ainoa oikea linnanraunio kukkulalla?", a: "Koska Limburgin eteläosassa maasto todella kohoaa mäkiseksi, keskiajan ritarit saattoivat rakentaa linnansa kalkkikivikukkulan huipulle aivan kuten muualla Euroopassa. Muualla tasaisessa Alankomaissa linnat jouduttiin puolustamaan vesillä ja vallihaudoilla, koska kukkuloita ei yksinkertaisesti ollut." },
+    ],
+    Overijssel: [
+      { q: "Mistä Giethoorn sai kummallisen nimensä?", a: "Perimätiedon mukaan nimi juontaa 1170-luvun suurtulvasta, jonka jäljiltä maasta löytyi paljon vuohensarvia hukkuneilta eläimiltä – siitä geytenhorn, vuohensarvi, joka vähitellen muuntui Giethoorniksi. Nykyään kylässä liikutaan usein äänettömillä sähköveneillä, jotta kanavien rauha säilyy turistivilskeestä huolimatta." },
+      { q: "Mikä teki Deventeristä keskiajalla yllättävän tärkeän kaupungin?", a: "Deventer oli 1400-luvulla yksi Pohjois-Euroopan merkittävistä kirjapainokaupungeista ja Hansaliiton solmukohta IJssel-joen varrella. Vanha kauppiastalojen kaupunginosa on säilynyt lähes ennallaan, ja kaupungissa järjestetään yhä syksyisin yksi maan suurimmista kirjamarkkinoista." },
+    ],
+    "Noord-Brabant": [
+      { q: "Mistä Alankomaiden ainoa virallinen trappistiolut tulee?", a: "Koningshoevenin trappistiluostari lähellä Tilburgia on Alankomaiden ainoa luostari, joka saa kutsua oluttaan aidoksi trappistioluksi – koko maailmassa niitä valmistetaan vain reilussa kymmenessä luostarissa. Munkit ovat panneet olutta La Trappe -nimellä jo 1880-luvulta lähtien, ja tuotto ylläpitää yhä luostaria." },
+      { q: "Kuka kuuluisa maalari syntyi 's-Hertogenboschissa?", a: "Hieronymus Bosch, tunnettu oudoista ja painajaismaisista maalauksistaan kuten Maallisten ilojen puutarha, syntyi kaupungissa noin 1450 ja eli siellä suurimman osan elämäänsä. Kaupunki juhli hänen 500. kuolinvuottaan suurnäyttelyllä 2016, ja hänen nimeään kantava taidekeskus toimii siellä yhä." },
+    ],
+    "Noord-Holland": [
+      { q: "Miksi Zaanstreekin tuulimyllyt eivät pumpanneet pelkkää vettä?", a: "1600-luvun Zaanstreekissa satoja tuulimyllyjä käytettiin sahaamiseen, öljyn puristukseen, väriaineiden jauhamiseen ja paperin valmistukseen – aluetta pidetään maailman ensimmäisenä tuulivoimalla teollistuneena seutuna. Nykyään Zaanse Schansin kylässä pyörii yhä muutama toimiva mylly matkailijoiden ihasteltavaksi." },
+      { q: "Miksi Texelillä laiduntaa lampaita niin paljon?", a: "Saari on Länsi-Friisian saarista suurin ja tunnetaan omasta lammasrodustaan, texelinlampaasta, jonka villaa ja lihaa on jalostettu saarella vuosisatoja. Saaren dyynit ja hiekkarannat ovat samalla tärkeä pesimäalue kymmenille lintulajeille, joten lampaat ja linnut jakavat saman maiseman." },
+      { q: "Mikä maailman suurin meripatosulku avattiin äskettäin Noord-Hollannissa?", a: "IJmuidenin uusi merisulku valmistui vuonna 2022, ja se on maailman suurin meriveden sulku, 500 metriä pitkä ja 70 metriä leveä. Se korvasi vuonna 1929 valmistuneen vanhan sulun ja päästää entistä suurempia laivoja Amsterdamin satamaan." },
+    ],
+    Saba: [
+      { q: "Kuka rakensi Saban tien, jota insinöörit sanoivat mahdottomaksi?", a: "Hollantilaiset ja sveitsiläiset insinöörit totesivat 1900-luvun alussa, ettei jyrkkään tulivuoreen voi rakentaa autotietä. Paikallinen mies Josephus Lambert Hassell opetteli tierakennusta kirjekurssilla ja johti työn, joka valmistui 1958 – tietä kutsutaan yhä nimellä tie, jota ei voitu rakentaa." },
+      { q: "Miten Saballe pääsee, jos ei lennä saaren lyhyelle kiitoradalle?", a: "Vaihtoehto on saapua laivalla tai kalastajaveneellä Fort Bayn pieneen satamaan, joka on saaren ainoa kunnollinen laituri. Moni matkustaja valitsee silti lentokoneen, sillä meri voi olla saaren jyrkkien rantojen edustalla hyvin levoton, eikä laivayhteys kulje joka päivä." },
+    ],
+    "St. Eustatius": [
+      { q: "Mikä yhteisö kukoisti St. Eustatiuksella 1700-luvun kauppavuosina?", a: "Saarella toimi kukoistava juutalaisyhteisö, joka rakensi Honen Dalim -synagogan 1739 – yksi läntisen pallonpuoliskon vanhimmista synagogarakennuksista. Kauppakaupungin kulta-ajan loputtua yhteisö hajosi, ja synagogan rauniot seisovat yhä keskellä nykyistä Oranjestadia." },
+      { q: "Mitä St. Eustatiuksen taloudessa tapahtuu nykyään?", a: "Vapaasataman kulta-aika on kaukainen muisto, ja nykyään saaren tärkein tulonlähde on rannikon öljyn varastointi- ja siirtoterminaali. Rinnalle on hitaasti kasvanut ekomatkailu, sillä sammuneen tulivuoren De Quillin sademetsä ja koskemattomat sukelluspaikat houkuttelevat yhä enemmän kävijöitä." },
+    ],
+    Utrecht: [
+      { q: "Missä sijaitsee maailman suurin pyörien pysäköintitalo?", a: "Utrecht Centraalin vieressä avattiin 2019 kolmikerroksinen pyöräparkki, johon mahtuu yli 12 500 polkupyörää – se on maailman suurin. Se kertoo, kuinka keskeinen osa pyöräily on nykyisin Utrechtin arkea, ei vain matkailijoiden ihmettelemä erikoisuus." },
+      { q: "Mikä on Utrechtin kaksitasoinen katujärjestelmä?", a: "Vanhan kaupungin kanavien varsilla kulkee kaksi tasoa: yläkatu ihmisille ja alempi taso, werf, aivan vedenpinnan tasolla – keskiaikaiset kellarit toimivat aikanaan varastoina ja nykyään usein kahviloina ja ravintoloina. Järjestelmä on ainutlaatuinen koko Alankomaissa." },
+    ],
+    Zeeland: [
+      { q: "Miksi Oosterscheldekering ei ole kiinteä pato vaan liikkuvien porttien sarja?", a: "Insinöörit halusivat alun perin sulkea lahden kokonaan tulvien varalta, mutta simpukan- ja osterinviljelijät sekä ympäristönsuojelijat vastustivat, koska suolainen merivesi piti säilyttää. Ratkaisuksi rakennettiin 1986 valmistunut 9 kilometrin sulkuporttien sarja, joka pidetään auki ja suljetaan vain myrskyn uhatessa." },
+      { q: "Miksi osa Zeelandin asukkaista muistaa vuoden 1953 tulvan yhä hyvin tarkasti?", a: "Yön aikana 31. tammikuuta ja 1. helmikuuta 1953 myrskyvuoksi mursi patoja yllättäen pimeässä, eikä tuolloin ollut puhelimia tai sähköä varoittamaan monia kyliä. Selviytyjien tarinoita on tallennettu muun muassa Watersnoodmuseumiin, joka rakennettiin osittain samoihin betonikaisloihin, jotka lopulta pysäyttivät tulvan." },
+    ],
+  },
+  /*
+   * CHE (Sisältökirjuri 27.9.2026, maakunta-erä 3). Faktat eri kulmasta
+   * kuin js/packs/maakunnat-luonnehdinnat.js:n CHE-pitka-tekstit — ei
+   * toisteta samoja tarinoita. Lähteet: en-Wikipedia + WebSearch
+   * tarkistettu 27.9.2026 (mm. weforum.org, iwc.com, victorinox.com,
+   * artbasel.com, whc.unesco.org, admin.ch, swissinfo.ch).
+   */
+  CHE: {
+    Aargau: [
+      { q: "Miksi Aarau oli hetken koko Sveitsin pääkaupunki?", a: "Vuonna 1798 perustettu Helvetian tasavalta julisti Aaraun ensimmäiseksi pääkaupungikseen, ja kansalliskokous kokoontui kaupungintalolla huhtikuussa. Ilo jäi lyhyeksi: jo syyskuussa pääkaupunki siirrettiin Luzerniin, joten Aarau ehti olla koko maan keskus vain muutaman kuukauden." },
+      { q: "Mitä Villigenissä tutkitaan nykyään?", a: "Aaren rannalla sijaitseva Paul Scherrer -instituutti on Sveitsin suurin luonnontieteiden ja tekniikan tutkimuslaitos, jossa työskentelee yli 2300 ihmistä. Siellä tutkitaan hiukkasfysiikkaa, materiaaleja, energiaa ja terveyttä suurten hiukkaskiihdyttimien avulla." },
+    ],
+    "Appenzell Ausserrhoden": [
+      { q: "Milloin Ausserrhoden antoi naisille äänioikeuden?", a: "Ausserrhoden hyväksyi naisten äänioikeuden kantonin asioissa omalla äänestyksellään jo 1989, kaksi vuotta ennen kuin naapurikantoni Innerrhoden pakotettiin siihen liittovaltion tuomioistuimen päätöksellä. Ausserrhoden oli siis huomattavasti nopeampi." },
+      { q: "Mikä on Appenzellerin juuston salaisuus?", a: "Juuston kuorta hierotaan kypsytyksen aikana mausteliemellä, jossa on yli 25 yrttiä, juurta ja maustetta liuotettuna alkoholiin. Tarkka resepti on lukkojen takana, ja sen tuntee koko maailmassa vain kaksi ihmistä." },
+    ],
+    "Appenzell Innerrhoden": [
+      { q: "Missä Sveitsin ainoa pyörivä ravintola sijaitsee?", a: "Hoher Kastenin huipulla, 1795 metrin korkeudessa, ravintolan lattia pyörähtää kokonaan ympäri kerran tunnissa, ja näkymä avautuu Alpsteinilta aina Bodenjärvelle asti. Köysirata vie sinne Brülisausta alle kymmenessä minuutissa." },
+      { q: "Kuinka pieni Innerrhoden oikein on?", a: "Innerrhoden on Sveitsin väkiluvultaan pienin kantoni, ja koko sen asukasmäärä mahtuisi moneen kertaan yhteen suurkaupungin kaupunginosaan. Silti sillä on oma hallitus, oma Landsgemeinde ja täysi äänivalta liittovaltiossa siinä missä isommillakin kantoneilla." },
+    ],
+    "Basel-Landschaft": [
+      { q: "Miksi Baselbieteria kutsutaan kirsikkamaaksi?", a: "Kantonin lempeät rinteet ovat täynnä kirsikkapuita, ja monissa kylissä juhlitaan yhä syksyisin Chriesitagia, kirsikkapäivää. Osa sadosta tislataan kirsikkaviinaksi, jota kutsutaan kirschiksi, ja sitä poltetaan yhä pienillä maatiloilla." },
+      { q: "Kuinka moni Baselbieteri käy nykyään töissä Baselissa?", a: "Vaikka kantonit erosivat toisistaan jo 1833, arki on yhä tiiviisti kietoutunut yhteen: kymmenettuhannet Baselbieterit matkustavat päivittäin junalla tai autolla naapurikaupunkiin töihin, moni lääketeollisuuden pariin." },
+    ],
+    "Basel-Stadt": [
+      { q: "Miksi Art Basel on niin merkittävä tapahtuma?", a: "Kolme baselilaista galleristia perusti messun 1970, ja siitä kasvoi nykyaikaisen taiteen maailman tärkein messu – ensimmäisenä vuonna paikalla oli jo 90 galleriaa kymmenestä maasta. Nykyään Art Basel järjestää sisarmessuja myös Miamissa, Hongkongissa ja Pariisissa." },
+      { q: "Mikä on Sveitsin korkein rakennus?", a: "Lääkeyhtiö Rochen 205-metrinen torni Baselissa valmistui 2022 ja on nykyään koko maan korkein rakennus, jossa työskentelee noin 3200 ihmistä. Se seisoo aivan Reinin rannalla, kaupungin lääketeollisuuden ytimessä." },
+    ],
+    Bern: [
+      { q: "Miksi Bernin vaakunaeläin on karhu?", a: "Tarun mukaan kaupungin perustaja herttua Berthold V lupasi nimetä kaupungin ensimmäisen metsästämänsä eläimen mukaan 1191, ja se osui olemaan karhu. Kaupungin laidalla asuu nykyään eläville karhuille rakennettu puisto, jossa niitä pääsee katsomaan ilmaiseksi." },
+      { q: "Mitä Zytglogge-kellotorni näyttää joka tunti?", a: "Keskiaikainen astronominen kello käynnistää joka tunti pienen mekaanisen näytöksen: kukko kiekaisee, karhut marssivat ja hovinarri soittaa kelloja. Näytelmä on toistunut samalla koneistolla vuosisatoja, ja turistiryhmät pysähtyvät yhä katsomaan sitä joka tunti." },
+    ],
+    Fribourg: [
+      { q: "Miksi Gruyère-juusto on niin arvostettua?", a: "Gruyères-kylän ympäristössä juustoa on valmistettu samalla reseptillä satoja vuosia, ja nimi sai suojatun alkuperämerkinnän 2001. Juustoloissa käy nykyään paljon matkailijoita katsomassa, miten valtavat 35-kiloiset kiekot kypsyvät kellareissa." },
+      { q: "Mistä Sveitsin vanhin yhä toimiva suklaatehdas löytyy?", a: "Brocin kylässä toimiva Maison Cailler on Sveitsin vanhin yhä toimiva suklaatehdas, perustettu 1898 – merkki itse syntyi jo 1819 Vevey'ssä. Nykyään tehdas on suosittu vierailukohde, jossa pääsee haistelemaan kaakaopapuja ja maistelemaan tuoretta suklaata." },
+    ],
+    "Genève": [
+      { q: "Kuinka korkealle Geneven suihkulähde Jet d'Eau nousee?", a: "Järven rannalla sykkivä vesisuihku ampuu vettä jopa 140 metrin korkeuteen, ja se näkyy koko kaupunkiin ja usein myös lentokoneen ikkunasta. Suihkusta on tullut Geneven tunnusmerkki, vaikka se syntyi alun perin vahingossa 1880-luvulla tehtaan paineen purkamiseksi." },
+      { q: "Miksi Geneve on yhä kelloteollisuuden keskus?", a: "Kaupunkiin pakeni 1500-luvulla protestanttisia kultaseppiä, joille kirkko kielsi korujen tekemisen, ja he siirtyivät kellonvalmistukseen. Perinne elää yhä: monet maailman arvostetuimmista kellomerkeistä pitävät päämajaansa Genevessä tänäkin päivänä." },
+    ],
+    Glarus: [
+      { q: "Mikä on Schabziger, ja miksi se on vihreä?", a: "Glarusin oma juusto Schabziger saa vihreän värinsä mausteapila-nimisestä yrtistä, jota on lisätty juustoon jo vuosisatoja. Se on yksi Sveitsin vanhimmista tavaramerkeistä, ja sitä raastetaan yhä perunoiden ja pastan päälle." },
+      { q: "Miksi Wisconsinissa on kylä nimeltä New Glarus?", a: "Glarusin kantoni oli 1840-luvulla niin köyhä, että se rahoitti 131 asukkaan siirtolaisryhmän matkan Amerikkaan 1845. He perustivat New Glarusin, joka mainostaa yhä itseään 'pieneksi Sveitsiksi' ja juhlii sveitsiläistä perintöään juustoineen ja festivaaleineen." },
+    ],
+    "Graubünden": [
+      { q: "Miksi maailman talousjohtajat kokoontuvat juuri Davosiin?", a: "Saksalainen taloustieteilijä Klaus Schwab perusti Maailman talousfoorumin 1971 ja järjesti ensimmäisen kokouksen Davosin kongressikeskuksessa. Tammikuinen huippukokous on siitä lähtien tuonut lumiseen vuoristokaupunkiin vuosittain satoja johtajia ja päättäjiä ympäri maailmaa." },
+      { q: "Miksi Berninan rautatie on Unescon listalla?", a: "Albulan ja Berninan rataosuudet, jotka valmistuivat 1900-luvun alussa, ylittävät Alpit satojen siltojen ja tunnelien kautta ilman hammasratasta. Unesco lisäsi radan maailmanperintöön 2008 poikkeuksellisen rohkean vuoristoinsinööritaidon vuoksi." },
+    ],
+    Jura: [
+      { q: "Miksi osa vanhaa Juraa jäi lopulta Berniin?", a: "Kesäkuussa 1974 koko vanha Jura äänesti erosta Bernistä, mutta eteläiset ranskankieliset alueet halusivat pysyä Bernissä ja saivat äänestää siitä erikseen. Bernin Jura jäi näin Bernin kantoniin, ja raja, joka siitä syntyi, näkyy kartalla yhä tänäkin päivänä." },
+      { q: "Mikä on Marché-Concours Saignelégier'ssä?", a: "Joka elokuu tuhannet ihmiset kokoontuvat Saignelégier'hen katsomaan Franches-Montagnes-hevosia esittelyssä ja kilpailuissa – perinne on jatkunut vuodesta 1897. Se on nykyään yksi Sveitsin suurimmista hevostapahtumista, täynnä paraateja ja karkeloita." },
+    ],
+    Lucerne: [
+      { q: "Mikä on Luzernin Leijonapatsas?", a: "Kallioon veistetty kuoleva leijona muistaa 1792 Pariisissa kuolleita sveitsiläisiä palkkasotilaita, jotka puolustivat Ranskan kuningasta vallankumouksen aikana. Kirjailija Mark Twain kutsui sitä maailman surullisimmaksi ja koskettavimmaksi kiveksi, ja se vetää yhä matkailijoita." },
+      { q: "Voiko Luzernin järvellä yhä risteillä höyrylaivalla?", a: "Kyllä – Vierwaldstättersee'llä liikennöi useita 1900-luvun alun höyrylaivoja, jotka on huolellisesti kunnostettu ja pidetään käynnissä museolaivoina. Matkustajat pääsevät katsomaan alkuperäisiä höyrykoneita samalla kun laiva kiertää vuoristomaisemissa." },
+    ],
+    "Neuchâtel": [
+      { q: "Miksi kaksi kaupunkia rakennettiin kellotehtaita varten?", a: "La Chaux-de-Fonds ja Le Locle rakennettiin 1800-luvun alussa suoriksi ruutukaavan kaduiksi, joissa asunnot ja kellopajat vuorottelevat samassa rakennuksessa. Unesco liitti kaupunkiparin maailmanperintöön 2009 ainutlaatuisena esimerkkinä yhden teollisuuden ympärille suunnitellusta kaupungista." },
+      { q: "Mitä Neuchâtelin vaaleanpunainen viini on?", a: "Oeil-de-Perdrix, 'peltopyyn silmä', on kantonin oma vaalea rosee, joka puristetaan Pinot Noir -rypäleistä hyvin lyhyellä kuoriutumisajalla. Se on säilynyt suosittuna paikallisena erikoisuutena, vaikka moni muu alue tekee nykyään samantyylistä viiniä." },
+    ],
+    Nidwalden: [
+      { q: "Mitä Bürgenstockilla tapahtui kesällä 2024?", a: "Ylellinen Bürgenstockin hotelli vuoren laella isännöi kesäkuussa 2024 kansainvälistä Ukrainan rauhankokousta, johon osallistui edustajia yli 90 maasta. Vuosikymmenten ajan julkkiksia, kuten Audrey Hepburnia, majoittanut hotelli nousi hetkeksi maailmanpolitiikan keskiöön." },
+      { q: "Miksi Nidwalden houkuttelee nykyään niin paljon yrityksiä?", a: "Pieni kantoni kilpailee Zugin tapaan alhaisilla veroprosenteilla, ja monet kansainväliset yhtiöt ovat siirtäneet päätoimipaikkansa sinne. Samaan aikaan Stanserhornin avokattoinen köysirata houkuttelee ihan toisenlaisia vierailijoita – matkailijoita, ei veroneuvojia." },
+    ],
+    Obwalden: [
+      { q: "Miksi Obwaldenin verotus kohautti 2006?", a: "Kantoni otti käyttöön verojärjestelmän, jossa suurituloiset maksoivat suhteessa vähemmän kuin pienituloiset, houkutellakseen varakkaita muuttajia. Liittovaltion tuomioistuin kumosi mallin puolentoista vuoden kuluttua perustuslain vastaisena, ja tilalle tuli tasaverokanta, jonka äänestäjät hyväksyivät ylivoimaisesti." },
+      { q: "Käykö Flüeli-Ranftissa yhä pyhiinvaeltajia?", a: "Kyllä – Sveitsin suojeluspyhimyksen Niklaus von Flüen erakkomaja on säilynyt Ranftin rotkossa, ja paikalla käy edelleen tuhansia pyhiinvaeltajia ja matkailijoita vuosittain. Hän vetäytyi sinne 1467 jättäen perheensä, ja tarina kiehtoo yhä sveitsiläisiä." },
+    ],
+    Schaffhausen: [
+      { q: "Mikä maailmankuulu kellomerkki syntyi Schaffhausenissa?", a: "Amerikkalainen kelloseppä Florentine Ariosto Jones perusti IWC:n kaupunkiin 1868 yhdistääkseen amerikkalaisen sarjatuotannon sveitsiläiseen käsityöhön, ja Reinin vesivoima pyöritti tehtaan koneita. Merkki tekee yhä lentäjänkelloja samassa kaupungissa." },
+      { q: "Kuka soittaa Munotin linnoituksen kelloa joka ilta?", a: "Munotin vartija asuu yhä linnoituksen tornissa ja soittaa käsin kelloa joka ilta kello yhdeksältä, aivan kuten vuodesta 1589 lähtien. Perinteen mukaan soitto muistuttaa kaupunkilaisesta, joka hukkui myrskyssä ristiretkeltä palatessaan." },
+    ],
+    Schwyz: [
+      { q: "Mistä linkkuveitsi Victorinox on kotoisin?", a: "Kelloseppä Karl Elsener perusti pienen veistämön Ibachin kylään 1884, ja nimi Victorinox syntyi hänen äitinsä Victorian ja ruostumattoman teräksen sanan inox yhdistelmästä. Yhtiö on valmistanut jo yli 500 miljoonaa sveitsiläistä linkkuveistä ja toimii yhä samassa kylässä." },
+      { q: "Miksi Einsiedelniin virtaa niin paljon pyhiinvaeltajia?", a: "Einsiedelnin luostarikirkossa säilytetään mustaa Madonna-patsasta, jonka ympärille pyhiinvaellusperinne on kasvanut jo keskiajalta lähtien. Kirkolla käy nykyään satoja tuhansia kävijöitä vuosittain, osa heistä yhä perinteisiä pyhiinvaellusreittejä kävellen." },
+    ],
+    Solothurn: [
+      { q: "Mikä on Solothurnin elokuvajuhla?", a: "Solothurnin Filmtage on järjestetty vuodesta 1966, ja tammikuisin kaupunki täyttyy sveitsiläisen elokuvan tekijöistä ja yleisöstä – vuosittain paikalla on yli 60 000 kävijää. Se on maan tärkein näyteikkuna kotimaiselle elokuvalle." },
+      { q: "Keitä olivat Solothurnin suojeluspyhimykset?", a: "Legendan mukaan roomalaiset legioonalaiset Urs ja Viktor teloitettiin Solothurnissa 200-luvun lopulla, koska he kieltäytyivät luopumasta kristillisestä uskostaan. Kaupungin päätuomiokirkko on nimetty heidän mukaansa, ja tarina elää yhä kaupungin nimissä ja vaakunassa." },
+    ],
+    "Sankt Gallen": [
+      { q: "Mikä on Olma, ja miksi se on niin suosittu?", a: "Olma-messu on järjestetty vuodesta 1943, ja lokakuussa se täyttää St. Gallenin maatalouden, ruoan ja perinteiden juhlalla – suosituin yleisötapahtuma koko Sveitsissä. Yksi katsotuimmista ohjelmanumeroista on vuodesta 1997 järjestetty possujen juoksukilpailu." },
+      { q: "Miksi St. Gallenin yliopisto on niin arvostettu?", a: "HSG-yliopisto on Euroopan johtavia kauppakorkeakouluja, ja sen tutkintopaikoista kilpaillaan kovasti ympäri maailmaa. Kaupungin vanha tekstiiliteollisuuden osaaminen ja kansainvälinen kauppahenki elävät nykyään yliopiston kautta uudessa muodossa." },
+    ],
+    Thurgau: [
+      { q: "Miksi Thurgauta kutsutaan siiderin Intiaksi?", a: "Kantonin lempinimi 'Mostindien' viittaa sen valtaviin omena- ja päärynätarhoihin, joiden sato puristetaan syksyisin siideriksi. Peltojen ja järven väliin jäävät kylät elävät yhä hedelmänviljelystä samaan tapaan kuin sata vuotta sitten." },
+      { q: "Mikä on Kartause Ittingen nykyään?", a: "Entinen kartusiaaniluostari Warthin kylän liepeillä toimii nykyään kulttuurikeskuksena, jossa on taidemuseo, hotelli ja yhä toimiva maatila viinitarhoineen. Munkkien vaikenemisen sijaan pihalla kuuluu nykyään konserttien ja näyttelyjen ääntä." },
+    ],
+    Ticino: [
+      { q: "Miksi Locarnon elokuvajuhlat kokoontuvat torille?", a: "Locarnon festivaali on järjestetty vuodesta 1946, ja sen suurin näyttämö on Piazza Grande, jonne mahtuu iltaisin kahdeksantuhatta katsojaa avotaivaan alle. Torinäytännöt tulivat mukaan ohjelmaan 1971, ja niistä tuli nopeasti festivaalin tunnusmerkki." },
+      { q: "Mikä on grotto, jossa Ticinossa käydään syömässä?", a: "Grotto on perinteinen, usein kallioon tai metsän siimekseen rakennettu ravintola, jossa tarjoillaan paikallista polentaa, kastanjoita ja salamia kivipöydillä. Monet grotot ovat toimineet samoissa paikoissa sukupolvien ajan, ja ne ovat yhä suosittuja kesäisin." },
+    ],
+    Uri: [
+      { q: "Näytelläänkö Wilhelm Telliä yhä Altdorfissa?", a: "Kyllä – Tellspiele-näytelmäseura on esittänyt Schillerin näytelmää Wilhelm Tellistä Altdorfissa vuodesta 1899, yleensä muutaman vuoden välein. Se on yksi Sveitsin vanhimmista harrastajateattereista, ja Tellin patsas seisoo yhä kaupungin torilla." },
+      { q: "Miksi vanhan Gotthard-tunnelin rakentaminen vei niin monta henkeä?", a: "Työ alkoi Urin puolella Göschenenissä 1872, ja louhijat kärsivät malariasta, pölykeuhkosta ja onnettomuuksista vuoristoisissa oloissa. Satoja työmiehiä kuoli ennen kuin tunneli lopulta murtui läpi 1880, kaksi vuotta ennen junaliikenteen alkua." },
+    ],
+    Valais: [
+      { q: "Mikä on bisse eli suoni?", a: "Bisset ovat 1200-luvulta lähtien rakennettuja avokanavia, jotka johtavat sulavesiä vuorenrinteitä pitkin kuiviin laaksoihin viinitarhoja ja niittyjä varten. Osa niistä on yhä käytössä kastelussa, ja niiden vierellä kulkevat polut ovat nykyään suosittuja vaellusreittejä." },
+      { q: "Mistä Mundin kylän kallis mauste tulee?", a: "Mund on Sveitsin ainoa paikka, jossa kasvatetaan sahramia, ja perinne juontaa 1300-luvulle. Kukat poimitaan käsin loka-marraskuussa, ja koko kylän vuotuinen sato on vain muutaman kilon luokkaa." },
+    ],
+    Vaud: [
+      { q: "Miksi Montreux'n rannalla seisoo patsas Freddie Mercurysta?", a: "Montreux'n jazzfestivaali on järjestetty vuodesta 1967, ja Queen-yhtye rakastui kaupunkiin niin paljon, että se perusti sinne oman äänitysstudionsa. Laulaja Freddie Mercuryn muistopatsas seisoo yhä järven rannalla, ja fanit kokoontuvat sinne edelleen." },
+      { q: "Missä Charlie Chaplin vietti elämänsä viimeiset vuodet?", a: "Chaplin muutti perheineen Corsier-sur-Vevey'hin 1953 ja asui siellä Manoir de Ban -kartanossa kuolemaansa 1977 asti. Talo on nykyään Chaplin's World -museo, jossa vahanuket ja hänen oma studionsa esittelevät hänen elämäänsä." },
+    ],
+    Zug: [
+      { q: "Mikä sveitsiläinen kakku on nimetty Zugin mukaan?", a: "Zuger Kirschtorte on mantelipohjainen, kirsikkaviinalla maustettu kerroskakku, joka syntyi kaupungissa 1915 ja on nykyään suojattu alkuperämerkintä. Se on yhä yksi Sveitsin tunnetuimmista leivonnaisista, ja kirsikkapuita kasvaa kantonissa runsaasti." },
+      { q: "Miksi maailman suurimmat raaka-ainekauppiaat pitävät toimistoaan Zugissa?", a: "Pieni Zug on yksi maailman johtavista raaka-ainekaupan keskuksista, ja esimerkiksi jättiläisyhtiö Glencore on pitänyt päämajaansa kantonissa yli viisikymmentä vuotta. Alhaiset verot ja keskeinen sijainti ovat houkutelleet satoja kaupankäyntiyhtiöitä pieneen kaupunkiin." },
+    ],
+    "Zürich": [
+      { q: "Mikä on Street Parade?", a: "Matematiikan opiskelija Marek Krynski perusti kulkueen 1992 parintuhannen ihmisen tapahtumana, ja nykyään elokuinen Street Parade kerää sadattuhannet tanssijat Zürichin kaduille – yksi maailman suurimmista technojuhlista. Kaupunki muuttuu yhdeksi valtavaksi ulkoilmabileeksi." },
+      { q: "Miksi jalkapallon maailmanjärjestö FIFA pitää päämajaansa Zürichissä?", a: "FIFA perustettiin Pariisissa 1904, mutta se siirsi päämajansa Zürichiin jo 1930-luvulla, ja siellä se toimii yhä. Kaupungin vakaa pankki- ja liike-elämä sekä keskeinen sijainti Euroopassa ovat pitäneet monet kansainväliset järjestöt siellä vuosikymmenten ajan." },
+    ],
+  },
+  CZE: {
+    'Jihočeský': [
+      { q: "Miksi jouluna syödään juuri tästä alueesta tuotua karppia?", a: "Etelä-Böömin satojen lampien verkosto, joista suurin on 1500-luvulla kaivettu Rožmberkin lampi, on ollut vuosisatoja maan tärkein karpinkasvatusalue. Nykyään alue tuottaa valtaosan tšekkiläisten jouluateriaan päätyvistä karpeista." },
+      { q: "Mistä nimi 'Budweiser' oikeasti tulee?", a: "České Budějovicen saksankielinen nimi oli Budweis, ja kaupungille myönnettiin panimo-oikeudet jo 1265. Nimi levisi maailmalle oluen mukana, ja siitä riideltiin vuosikymmeniä amerikkalaisen Budweiser-panimon kanssa." },
+    ],
+    'Jihomoravský': [
+      { q: "Miksi Brnon Orloj-veistos pudottaa marmorikuulan puolelta päivin?", a: "Kuulaa pudottava mustan graniitin torni rakennettiin 2010 muistoksi siitä, kun Brno onnistui 1645 puolustautumaan ruotsalaisia vastaan – kaupunkitarinan mukaan kello ehti lyödä keskipäivää vasta yhdeltätoista, mikä huijasi hyökkääjät luopumaan. Nykyinen torni toistaa tempun leikkimielisesti joka päivä." },
+      { q: "Kuinka suuri Lednice-Valticen puistoalue oikein on?", a: "Liechtensteinin suvun 1700–1800-luvuilla rakentama linnojen, temppelien ja puistojen kokonaisuus kattaa lähes 200 neliökilometriä, ja se on Euroopan laajin yhtenäinen ihmisen suunnittelema maisema. Unesco lisäsi sen maailmanperintöluetteloon 1996." },
+    ],
+    'Karlovarský': [
+      { q: "Mitä ovat kylpylävieheet, joita Karlovy Varyssa myydään jokaisella kadulla?", a: "Lázeňské oplatky -kylpylävieheet ovat ohuita, makeita vaahtokeksejä, joita on paistettu kaupungissa 1800-luvulta lähtien lähdeveden juonnin välipalaksi. Ne myydään yhä tuoreina suoraan kadun kojuista, usein vielä lämpimänä." },
+      { q: "Miksi Dianan näkötornille kannattaa nousta funikkelilla?", a: "1900-luvun alussa rakennettu funikkeli vie kylpyläkaupungin yläpuolelle metsäiselle kummulle Dianan näkötornin juurelle, josta avautuu näkymä koko laaksoon ja sen kylpyläpylväikköihin. Matka funikkelilla kestää vain muutaman minuutin, mutta näkymä palkitsee." },
+    ],
+    'Královéhradecký': [
+      { q: "Mitä Kuksin patsaat oikeastaan esittävät?", a: "Kuvanveistäjä Matyáš Bernard Braun veisti 1700-luvun alussa kivestä sarjan hyveitä ja paheita kuvaavia allegorisia hahmoja entisen kylpylän puistoon. Patsaat seisovat yhä paikoillaan ja ovat yksi Keski-Euroopan merkittävimmistä barokkiveistossarjoista." },
+      { q: "Miksi Hradec Králové tunnetaan funktionalistisesta arkkitehtuurista?", a: "Arkkitehti Josef Gočár suunnitteli kaupungille 1920–30-luvuilla useita moderneja rakennuksia, ja kaupunkia on sittemmin kutsuttu 'tasavallan salongiksi' niiden ansiosta. Rakennukset ovat säilyneet ja houkuttelevat arkkitehtuurin ystäviä yhä." },
+    ],
+    'Liberecký': [
+      { q: "Miksi Liberecin eläintarha on erityinen?", a: "Vuonna 1919 perustettu Liberecin eläintarha on Tšekin vanhin, ja se on erikoistunut muun muassa harvinaisiin kissaeläimiin. Se sijaitsee kaupungin laidalla kävelymatkan päässä keskustasta." },
+      { q: "Mikä on Böömin paratiisi?", a: "Český ráj -alue rajautuu Liberecin seutuun ja on täynnä hiekkakivikallioita, kallioasutuksia ja linnanraunioita. Se oli 2005 ensimmäinen Unescon geopark-verkostoon hyväksytty alue Tšekissä." },
+    ],
+    'Moravskoslezský': [
+      { q: "Mistä Štramberkin 'korvat' ovat saaneet nimensä?", a: "Štramberské uši on kartionmuotoinen, kanelinmakuinen piparkakkuherkku, jonka muoto muistuttaa perinteen mukaan tataarien hyökkäyksen uhrien korvia 1200-luvulta. Herkkua paistetaan pienessä Štramberkin kaupungissa yhä käsin avotulella." },
+      { q: "Mikä on Colours of Ostrava?", a: "Vuodesta 2002 järjestetty Colours of Ostrava on kasvanut yhdeksi Keski-Euroopan suurimmista musiikkifestivaaleista, ja osa sen lavoista pystytetään suoraan entisen rautatehtaan teollisuusmaisemaan. Festivaali kerää vuosittain kymmeniätuhansia kävijöitä." },
+    ],
+    'Olomoucký': [
+      { q: "Miksi Olomoucin tähtitieteellinen kello näyttää erilaiselta kuin Prahan?", a: "Toisen maailmansodan lopulla vaurioitunut kello rakennettiin 1955 uudelleen sosialistisen realismin tyyliin, ja perinteisten pyhimysten tilalle tulivat urheilijoita ja työläisiä esittävät mosaiikkihahmot. Se on Euroopan ainoa laatuaan oleva tähtitieteellinen kello." },
+      { q: "Kuinka laaja Olomoucin vanhakaupunki oikein on?", a: "Olomoucin historiallinen keskusta on Prahan jälkeen maan toiseksi laajin suojeltu kaupunkialue. Torien, kirkkojen ja pylväiden tiiviys tekee siitä suositun kohteen, joka jää usein turistien reiteillä Prahan varjoon." },
+    ],
+    'Pardubický': [
+      { q: "Mikä tekee Taxis-ojasta niin pelätyn?", a: "Velká pardubická -esteratsastuksen Taxisin oja on syvä ja leveä vesieste, jonka yli monet hevoset ja ratsastajat ovat kaataneet radan koko historian ajan aina 1874 ensimmäisestä kilpailusta lähtien. Se on tehnyt kilpailusta yhden Euroopan pelätyimmistä esteradoista." },
+      { q: "Mistä Pardubicen perník-piparkakku tunnetaan?", a: "Kaupungissa on leivottu mausteista hunajaperníkkiä ainakin 1600-luvulta lähtien, ja perinne jatkuu yhä paikallisissa leipomoissa ja piparkakkumuseossa. Kanelin, neilikan ja hunajan sekoitus tekee siitä muista piparkakuista poikkeavan." },
+    ],
+    'Plzeňský': [
+      { q: "Mikä on Techmania?", a: "Plzeňin tiedekeskus Techmania toimii osittain entisen Škoda-tehtaan hallissa, ja siellä pääsee kokeilemaan satoja fysiikan ja tähtitieteen ilmiöitä käytännössä. Se avattiin 2008 osaksi kaupungin teollista perintöä." },
+      { q: "Kuinka pitkät kellarit Plzeňin oluttehtaan alla oikein kulkevat?", a: "Pilsner Urquellin panimon alla kulkee yhdeksän kilometriä historiallisia hiekkakivikäytäviä, joissa olutta kypsytettiin ennen jäähdytystekniikan keksimistä. Osa käytävistä on avoinna opastetuilla kierroksilla yhä nykyään." },
+    ],
+    Prague: [
+      { q: "Miksi John Lennon -muuri on täynnä graffiteja Prahassa?", a: "Kommunistihallinnon aikana nuoret maalasivat Lennonin kuvia ja rauhanaiheisia tekstejä muuriin vastarinnan merkkinä, vaikka viranomaiset maalasivat sen yhä uudelleen valkoiseksi. Muuri on säilynyt suosittuna graffitikohteena vallanvaihdon jälkeenkin." },
+      { q: "Miksi Prahan linna on Guinnessin ennätyskirjassa?", a: "Yli 570 metriä pitkänä kokonaisuutena Prahan linna on Guinnessin mukaan maailman suurin yhtenäinen muinainen linnoitusalue. Sen sisällä on kirkkoja, palatseja ja puutarhoja usealta eri vuosisadalta." },
+    ],
+    'Středočeský': [
+      { q: "Mitä Karlštejnin linnassa säilytettiin keskiajalla?", a: "Keisari Kaarle IV rakennutti linnan 1348 erityisesti valtakunnan kruununjalokivien ja pyhäinjäännösten turvasäilytystä varten. Kalleuksia vartioitiin useilla peräkkäisillä lukoilla ja avainten haltijoilla." },
+      { q: "Miksi Křivoklátin metsät ovat säilyneet niin koskemattomina?", a: "Alue oli vuosisatoja kuninkaiden yksityistä metsästysmaata, minkä ansiosta laajat vanhat metsät säästyivät hakkuilta. Nykyään Křivoklátsko on suojeltu Unescon biosfäärialue." },
+    ],
+    'Ústecký': [
+      { q: "Kuinka Mostin keskiaikainen kirkko siirrettiin syrjään avolouhokselta?", a: "Vuonna 1975 koko kivikirkko nostettiin erityisille raiteille ja siirrettiin 841 metrin matka hitaasti syrjään, jotta se säästyisi laajenevalta ruskohiilikaivokselta. Siirto ylitti aikanaan maailmanennätyksen siirretyn rakennuksen painossa." },
+      { q: "Mitä vanhoille avolouhoksille on tehty hiilenlouhinnan päätyttyä?", a: "Useita entisiä ruskohiilen avolouhoksia on täytetty vedellä ja muutettu virkistysjärviksi, kuten Milada-järvi lähellä Ústí nad Labemia. Uimarannat ja veneily ovat korvanneet kaivinkoneet samoilla alueilla." },
+    ],
+    'Vysočina': [
+      { q: "Mikä on Pelhřimovin ennätysfestivaali?", a: "Pieni Pelhřimovin kaupunki on järjestänyt 1994 lähtien vuosittaisen ennätysten festivaalin, jossa yritetään rikkoa Guinnessin ja paikallisia ennätyksiä kaikesta mahdollisesta. Kaupunkia kutsutaankin leikkimielisesti ennätysten pääkaupungiksi." },
+      { q: "Miksi bramborák on Vysočinan oma herkku?", a: "Karulla ylängöllä peruna on kasvanut viljaa varmemmin, ja siitä valmistettu maustettu perunaletty bramborák on alueen tunnetuin katuruoka. Sitä myydään yhä toreilla ja kahviloissa ympäri Vysočinaa." },
+    ],
+    'Zlínský': [
+      { q: "Miksi Zlínissä järjestetään lastenelokuvafestivaalia?", a: "Zlín Film Festival on järjestetty vuodesta 1961, ja se on yksi maailman vanhimmista lasten- ja nuortenelokuville omistetuista festivaaleista. Baťan aikana kaupunkiin rakennettu elokuvastudio teki Zlínistä luonnollisen kodin tapahtumalle." },
+      { q: "Mikä on Baťan kanava?", a: "Baťův kanál on 1930-luvulla rakennettu jokikanava, joka yhdisti Zlínin tehtaat Tonavan vesireitteihin raaka-aineiden kuljetusta varten. Nykyään sillä risteilevät enää huvipurjehtijat ja matkailuveneet." },
+    ],
+  },
+  HUN: {
+    "Bács-Kiskun": [
+      { q: "Miksi Kecskemét tunnetaan aprikoosipaloviinasta?", a: "Kecskemét on Unkarin kuuluisin barackpálinka- eli aprikoosipaloviinakaupunki: hedelmätarhat ympäröivät kaupunkia, ja perinteinen tislaustaito on osa kaupungin identiteettiä yhä nykyäänkin." },
+      { q: "Kuka kuuluisa säveltäjä syntyi Kecskemétissä?", a: "Säveltäjä ja musiikkikasvattaja Zoltán Kodály syntyi Kecskemétissä 1882, ja hänen mukaansa on nimetty maailmalla tunnettu Kodály-menetelmä, jota käytetään musiikin opetuksessa yhä ympäri maailmaa." },
+    ],
+    "Baranya": [
+      { q: "Mistä Pécs tunnetaan keramiikkamaailmassa?", a: "Pécsissä on toiminut 1850-luvulta lähtien Zsolnay-posliinitehdas, joka kehitti kuuluisan eosin-lasitteen – metallinhohtoisen, sateenkaaren väreissä hohtavan pinnan, joka teki tehtaasta maailmankuulun 1800-luvun lopulla." },
+      { q: "Mitä Zsolnay-tehtaan jäljiltä näkyy Pécsin katukuvassa yhä?", a: "Zsolnay-posliinitehtaan värikkäät keramiikkakoristeet peittävät useiden Pécsin rakennusten kattoja ja julkisivuja, ja tehtaan vanha alue toimii nykyään kulttuurikorttelina täynnä museoita ja työpajoja." },
+    ],
+    "Békés": [
+      { q: "Mikä tekee Gyulan linnasta ainutlaatuisen Euroopassa?", a: "Gyulan linna on Keski-Euroopan ainoa säilynyt keskiaikainen tiililinna alavalla maalla: se rakennettiin 1400-luvun alussa tammipaalujen päälle suohon, ja kaksi alkuperäistä paalua on jopa säilynyt tutkijoiden nähtäväksi." },
+      { q: "Miten kauan Gyulan linna oli turkkilaisten hallussa?", a: "Vuonna 1566 yhdeksän viikkoa kestäneen piirityksen jälkeen Gyulan linna joutui turkkilaisten haltuun peräti 129 vuodeksi. Nykyään sen 24 näyttelysalissa pääsee tutustumaan lähes seitsemän vuosisadan historiaan." },
+    ],
+    "Borsod-Abaúj-Zemplén": [
+      { q: "Mikä piilee Aggtelekin maan alla?", a: "Aggtelekin Baradla-luola on osa yli 25 kilometrin pituista luolajärjestelmää, joka ulottuu Slovakian puolelle asti, ja koko alue julistettiin Unescon maailmanperintökohteeksi vuonna 1995." },
+      { q: "Kuinka pitkän matkan Baradla-luolassa voi kävellä?", a: "Aggtelekin ja Jósvafőn väliin jäävä pääkäytävä on 6,65 kilometriä pitkää tippukiviluolaa, ja alue tunnetaan yhtenä Euroopan merkittävimmistä karstialueista." },
+    ],
+    "Budapest": [
+      { q: "Miksi Budapestin metron 1-linja on erikoinen?", a: "Budapestin M1-metro avattiin 1896 ja on mantereisen Euroopan ensimmäinen maanalainen rautatie sekä maailman ensimmäinen sähkövetureilla kulkenut metro. Se rakennettiin muutamassa vuodessa valmiiksi vuosituhannen juhlavuoteen." },
+      { q: "Kuinka nopeasti alkuperäisellä metrolla pääsi perille?", a: "Vörösmartyn aukiolta Városligetiin kulkeva alkuperäinen reitti vei matkustajan perille vain kymmenessä minuutissa, mikä oli 1800-luvun lopulla huikean nopeaa." },
+    ],
+    "Csongrád": [
+      { q: "Mikä yhdistää Szegedin paprikaa Nobel-palkintoon?", a: "Szegedin tutkija Albert Szent-Györgyi eristi paprikasta C-vitamiinia ja sai löydöksestään lääketieteen Nobel-palkinnon 1937. Kansa alkoi tämän jälkeen kutsua palkintoa leikkimielisesti \"paprikapalkinnoksi\"." },
+      { q: "Miksi paprika sopi C-vitamiinin tutkimiseen paremmin kuin appelsiini?", a: "Paprikassa on runsaasti C-vitamiinia mutta vähemmän sokeria kuin monissa hedelmissä, joten vitamiinin eristäminen laboratoriossa oli helpompaa – pieni yksityiskohta, joka johti maailmanluokan löytöön Szegedissä." },
+    ],
+    "Fejér": [
+      { q: "Mikä salaisuus piilee Tácin peltojen alla?", a: "Tácin kylän liepeillä sijaitsee Gorsium, laaja roomalaiskaupungin raunioalue, jonka juuret ulottuvat 1. vuosisadalle. Paikka toimi aikanaan Pannonian keisarikultin ja maakuntakokousten keskuksena." },
+      { q: "Ketkä kävivät Gorsiumissa roomalaisaikaan?", a: "Gorsiumin kaduilla kulkivat aikanaan muun muassa keisarit Traianus, Septimius Severus ja Caracalla, ja kaivauksissa on paljastunut kylpylöitä, temppeleitä ja teatteri sata hehtaarin alueelta." },
+    ],
+    "Győr-Moson-Sopron": [
+      { q: "Miksi Sopronia kutsutaan \"leghűségesebb\" kaupungiksi?", a: "Vuoden 1921 kansanäänestyksessä sopronilaiset äänestivät Itävallan sijaan Unkarin puolesta, ja tästä uskollisuudesta kaupunki sai kunnianimen Civitas Fidelissima – uskollisin kaupunki." },
+      { q: "Mistä Uskollisuuden portti Sopronissa kertoo?", a: "Soproniin rakennettiin äänestyksen muistoksi niin kutsuttu Uskollisuuden portti osaksi 61 metriä korkeaa tulitornia, ja kaupungin liittäminen takaisin Unkariin astui voimaan tammikuussa 1922." },
+    ],
+    "Hajdú-Bihar": [
+      { q: "Miksi Debreceniä kutsutaan \"kalvinistiseksi Roomaksi\"?", a: "Debrecen muuttui 1500-luvun puolivälissä kokonaan protestanttiseksi kaupungiksi, ja siksi sitä on vuosisatoja kutsuttu leikkimielisesti kalvinistiseksi Roomaksi." },
+      { q: "Milloin Debrecenistä tuli Unkarin väliaikainen pääkaupunki?", a: "Debrecen toimi Unkarin pääkaupunkina kahdesti: vuonna 1849 vallankumouksen aikana, kun Kossuth julisti siellä Habsburgien vallan päättyneeksi, ja uudelleen vuonna 1944 sodan jälkimainingeissa." },
+    ],
+    "Heves": [
+      { q: "Mikä yllättävä rakennus Egerin keskustassa muistuttaa turkkilaisvallasta?", a: "Egerin minareetti on Ottomaanien valtakunnan pohjoisin säilynyt muistomerkki Euroopassa. Se rakennettiin 91 vuotta kestäneen turkkilaisvallan aikana, ja sen 98 porrasta johtaa 26 metrin korkeuteen." },
+      { q: "Montako minareettia Egerissä oli aikanaan?", a: "Turkkilaiskaudella Egeriin pystytettiin kaikkiaan kymmenen minareettia, mutta ajan saatossa niistä on säilynyt jäljellä vain tämä yksi ainoa." },
+    ],
+    "Jász-Nagykun-Szolnok": [
+      { q: "Mikä legendaarinen esine löytyy Jászberényn museosta?", a: "Jászberényn Jász-museossa säilytetään Lehel-torvea, koristeellista norsunluutorvea, joka liitetään legendaariseen sotapäällikkö Lehelin tarinaan ja joka on todennäköisesti peräisin 900–1100-luvuilta." },
+      { q: "Mistä jászit, alueen väestö, alunperin polveutuvat?", a: "Jászit olivat alunperin iranilaista alkuperää oleva kansanryhmä, jotka asettuivat Unkarin Alföldille 1200-luvulla, ja torvi on kasvanut heidän yhteisönsä yhtenäisyyden symboliksi." },
+    ],
+    "Komárom-Esztergom": [
+      { q: "Missä Unkarin ensimmäinen kuningas Pyhä István perimätiedon mukaan syntyi?", a: "Vanhojen legendojen mukaan Unkarin valtion perustaja, kuningas Pyhä István, syntyi Esztergomin linnassa noin 970-luvulla, vaikka tarkkaa syntymäpaikkaa ei historiantutkimuksessa voida täysin varmistaa." },
+      { q: "Mikä silta yhdistää Esztergomin Slovakiaan?", a: "Esztergomista pääsee Mária Valéria -sillan yli suoraan Slovakian puolelle Štúrovoon. Silta tuhoutui toisessa maailmansodassa, mutta se rakennettiin uudelleen ja avattiin vasta vuonna 2001." },
+    ],
+    "Nógrád": [
+      { q: "Mitä ainutlaatuista löytyy Ipolytarnócin luonnonsuojelualueelta?", a: "Ipolytarnócista on löytynyt noin 17 miljoonan vuoden ikäisiä eläinten jalanjälkiä hiekkakiveen kivettyneinä, ja alue on yksi Euroopan tärkeimmistä paleontologisista löytöpaikoista." },
+      { q: "Kuinka suuri kivettynyt puu Ipolytarnócista on löytynyt?", a: "Yksi maailman suurimmista tunnetuista kivettyneistä puunrungoista löytyi Ipolytarnócista: sen ympärysmitta on noin 8 metriä ja alkuperäinen pituus arviolta lähes 100 metriä." },
+    ],
+    "Pest": [
+      { q: "Miksi Gödöllön linna oli keisarinna Sisin lempipaikka?", a: "Gödöllön kuninkaallinen linna annettiin häälahjaksi Ferenc Józsefille ja Erzsébetille (Sisille), ja Sisille se oli pako Wienin tiukoista hovietiketeistä sekä paikka, jossa hän sai ratsastaa vapaasti rakastamillaan hevosilla." },
+      { q: "Mikä väri liitetään Gödöllön linnassa Sisin muistoon?", a: "Sisin huoneiden seinät maalattiin hänen lempivärillään, violetilla, ja violetti kukka liitetään yhä hänen muistoonsa linnan kävijöiden mielissä." },
+    ],
+    "Somogy": [
+      { q: "Missä sijaitsee yksi Euroopan ensimmäisistä tähtitaivaspuistoista?", a: "Somogyn Zselicin alueella sijaitseva Zselici Csillagpark sai kansainvälisen pimeän taivaan puiston nimityksen vuonna 2009 – ensimmäisenä koko Euroopassa, yhdessä Skotlannin Gallowayn puiston kanssa." },
+      { q: "Mikä tekee Zselicin yötaivaasta erityisen?", a: "Zselicin metsäalueella on niin vähän valosaastetta, että kesäisin linnunrata näkyy paikan päällä paljain silmin, ja alueella voi osallistua opastettuihin tähtienkatselukierroksiin." },
+    ],
+    "Szabolcs-Szatmár-Bereg": [
+      { q: "Kuka rakennutti Nyírbátorin komean goottilaisen kirkon?", a: "Erdélyin vojvodi Báthori István rakennutti Nyírbátoriin minoriittakirkon 1400-luvun lopulla lupauksensa mukaisesti voitettuaan turkkilaiset Kenyérmezőn taistelussa, ja hänet haudattiin kirkkoon vuonna 1493." },
+      { q: "Mitä erikoista Nyírbátorin kirkoissa on kaksi kappaletta?", a: "Báthori István rakennutti kiitollisuudesta peräti kaksi myöhäisgoottilaista kirkkoa Nyírbátoriin samaan aikaan, ja molemmat lasketaan Unkarin merkittävimpiin goottilaisen arkkitehtuurin muistomerkkeihin." },
+    ],
+    "Tolna": [
+      { q: "Mistä viinilajikkeesta Szekszárd on kuuluisa?", a: "Szekszárdin viinialueen tunnusomainen rypäle on kadarka, jonka toivat alueelle Turkkia paenneet serbit. Viinialue palkittiin arvonimellä \"Viinin ja rypäleen kaupunki\" vuonna 1987." },
+      { q: "Mikä punaviini yhdistää kadarkaa ja kékfrankosia Szekszárdissa?", a: "Szekszárdin Bikavér on paikallinen punaviinikuutio, jonka pohjana on kadarka ja kékfrankos täydennettynä muilla tummilla rypälelajikkeilla, ja se on yksi alueen tunnetuimmista vienneistä." },
+    ],
+    "Vas": [
+      { q: "Miksi pieni Kőszeg piti puolensa sulttaani Suleimania vastaan?", a: "Vuonna 1532 Kőszegin linnankapteeni Jurisics Miklós puolusti kaupunkia vain noin 46 sotilaan ja 700 pakolaistalonpojan voimin sulttaani Suleimanin valtavaa armeijaa vastaan peräti 25 päivän ajan." },
+      { q: "Miksi Kőszegin kellot soivat yhä keskellä päivää?", a: "Piirityksen lopussa sulttaani tarjosi Jurisicsille mahdollisuuden säilyttää linna, kunhan tämä nostaisi symbolisesti Ottomaanien lipun. Turkkilaiset vetäytyivät kello 11, ja tapahtumaa muistetaan Kőszegissä kellonsoitolla joka päivä samaan aikaan." },
+    ],
+    "Veszprém": [
+      { q: "Mikä muinainen asiakirja kirjoitettiin Tihanyssa vuonna 1055?", a: "Tihanyn luostarin perustamiskirja vuodelta 1055 sisältää 58 unkarinkielistä sanaa latinankielisen tekstin seassa, ja sitä pidetään vanhimpana säilyneenä unkarin kielen kirjallisena todisteena." },
+      { q: "Millaisia sanoja perustamiskirjasta löytyy?", a: "Asiakirjasta löytyvät muun muassa unkarin sanojen \"fa\" (puu), \"kút\" (kaivo) ja \"vár\" (linna) varhaisimmat kirjatut muodot, minkä ansiosta se on kielihistorioitsijoille aarreaitta." },
+    ],
+    "Zala": [
+      { q: "Missä sijaitsee Unkarin öljyteollisuuden kehto?", a: "Bázakerettyen kylän lähellä alkoi vuonna 1937 geologi Simon Pappin johdolla Unkarin ensimmäinen teollisen mittakaavan öljynporaus, kun Budafa-2-kaivo alkoi tuottaa raakaöljyä." },
+      { q: "Kuinka paljon öljyä ensimmäinen kaivo tuotti päivässä?", a: "Budafa-2-kaivo tuotti alkuun noin 62–65 kuutiometriä öljyä päivässä, ja ensimmäinen öljyjuna lähti Bázakerettyeltä Budapestiin joulukuussa 1937." },
+    ],
+  },
+  PRT: {
+    Aveiro: [
+      { q: "Miksi Aveiron rannikolla näkee raidallisia taloja?", a: "Costa Novan kalastajakylässä talot maalattiin perinteisesti räikeän värikkäillä raidoilla, jotta kalastajat erottivat oman kotinsa merelle sumussa. Nykyään värikkäät \"palheiros\"-talot ovat suosittu nähtävyys." },
+      { q: "Mitä Aveiron suolalammikoilla tehdään?", a: "Ria de Aveiron matalissa altaissa on kerätty merisuolaa käsin jo satojen vuosien ajan. Perinteinen keräystapa on säilynyt lähes muuttumattomana keskiajalta näihin päiviin." },
+    ],
+    Azores: [
+      { q: "Mikä on Azorien kaksoisjärvi?", a: "São Miguelin saarella sijaitseva Sete Cidades syntyi tulivuorikraatteriin, ja järviparin toinen puoli näyttää vihertävältä ja toinen sinertävältä, vaikka niitä erottaa vain kapea kannas." },
+      { q: "Miten Furnasissa kypsennetään ruokaa maan lämmöllä?", a: "Furnasin kylässä padat lasketaan tulivuoren lämmittämiin maakuoppiin, ja perinteinen \"cozido das Furnas\" -pata kypsyy siellä hitaasti useita tuntia maan omalla höyryllä." },
+    ],
+    Beja: [
+      { q: "Mikä laulutapa on kotoisin Alentejon seudulta, jonka keskus Beja on?", a: "Alentejon \"cante\" on soittimettomia, kaksiäänisiä kuorolauluja, joita maaseudun työläiset ovat perinteisesti laulaneet yhdessä. Unesco listasi sen ihmiskunnan aineettomaan kulttuuriperintöön vuonna 2014." },
+      { q: "Miksi cante-laulua lauletaan aina yhdessä?", a: "Cante syntyi maatyöläisten yhteislaulusta pelloilla, ja sitä esittävät edelleen harrastajakuorot ilman soittimia: yksi äänet aloittaa ja muut vastaavat samaan tahtiin." },
+    ],
+    Braga: [
+      { q: "Mikä on Portugalin vanhin katedraali?", a: "Bragan tuomiokirkko Sé de Braga on Portugalin vanhin katedraali. Sen rakentaminen alkoi 1000-luvun lopulla, ja se vihittiin käyttöön vuonna 1089 — ennen kuin Portugalista oli edes tullut itsenäinen kuningaskunta." },
+      { q: "Kuka on haudattu Bragan katedraaliin?", a: "Katedraalin kuninkaiden kappeliin on haudattu Portugalin ensimmäisen kuninkaan vanhemmat, kreivi Henrik ja Teresa, jotka hallitsivat aluetta ennen maan itsenäistymistä 1100-luvulla." },
+    ],
+    Bragança: [
+      { q: "Mikä rakennus Bragançassa on ainutlaatuinen koko Iberian niemimaalla?", a: "Domus Municipalis on romaanisen ajan kunnantalo, jonka kaltaista maallista romaanista rakennusta ei tunneta muualta Iberian niemimaalta. Se rakennettiin 1200-luvun alkupuolella epäsäännöllisen viisikulmion muotoiseksi." },
+      { q: "Mihin Domus Municipalista alun perin käytettiin?", a: "Rakennuksen tarkkaa alkuperäistä käyttötarkoitusta ei tiedetä varmasti, mutta sen alla on vedellä täytetty säiliö, ja ylätasanteella kaupungin \"hyvät miehet\" kokoontuivat päättämään asioista." },
+    ],
+    "Castelo Branco": [
+      { q: "Mistä käsityöstä Castelo Branco on kuuluisa?", a: "Castelo Brancon perinteiset \"colchas\" ovat käsin silkkilangalla kirjailtuja pellavapeittoja, joiden kuvioissa toistuvat linnut, kukat ja elämän puu -aiheet. Perinnettä on vaalittu vuosisatoja." },
+      { q: "Kuinka kauan yhden colcha-peitteen kirjailu voi kestää?", a: "Suuren, tiheäkuvioisen peitteen kirjailuun voi kulua ompelijalta kuukausia, sillä koko kuvio tehdään käsin pistoin ilman koneita." },
+    ],
+    Coimbra: [
+      { q: "Miten Coimbran fado eroaa Lissabonin fadosta?", a: "Coimbran fadoa laulavat perinteisesti vain yliopisto-opiskelijat mustissa akateemisissa viitoissaan, ja sävelmät ovat juhlallisempia kuin Lissabonin fado. Myös kitara on erilainen ja viritetty matalammalle." },
+      { q: "Mistä Coimbran opiskelijoiden mustat viitat tulevat?", a: "Mustat viitat ovat osa Coimbran yliopiston perinteistä akateemista pukua. Fadonlaulajat esiintyvät niissä kaduilla ja toreilla iltaisin, ylläpitäen vuosisatoja vanhaa opiskelijaperinnettä." },
+    ],
+    Évora: [
+      { q: "Mikä antiikin rakennus seisoo yhä Évoran keskustassa?", a: "Roomalaisajan Dianan temppeli on yksi parhaiten säilyneistä roomalaisrakennuksista Iberian niemimaalla. Se rakennettiin arviolta 1.–2. vuosisadalla ja on seisonut kaupungin keskustassa lähes kaksi vuosituhatta." },
+      { q: "Miksi Dianan temppeli säilyi tuhoutumatta vuosisatojen ajan?", a: "Keskiajalla temppeliä käytettiin muun muassa linnoituksen osana ja teurastamona, mikä auttoi sen pysymään pystyssä, vaikka alkuperäinen käyttötarkoitus unohtui pitkäksi aikaa." },
+    ],
+    Faro: [
+      { q: "Mikä on Ria Formosa?", a: "Faron edustalla on Ria Formosa, laaja matalien laguunien ja hiekkasaarten verkosto, joka suojaa rannikkoa ja tarjoaa elinympäristön sadoille lintulajeille." },
+      { q: "Miksi Ria Formosa on tärkeä linnuille?", a: "Laguunin matalat vedet ja hiekkasärkät toimivat muuttolintujen levähdyspaikkana Euroopan ja Afrikan välillä, ja alue on suojeltu luonnonpuistona vuodesta 1987." },
+    ],
+    Guarda: [
+      { q: "Mikä kaupunginosa Guardassa muistuttaa keskiaikaisesta juutalaisyhteisöstä?", a: "Guardan vanha Judiaria-kortteli oli keskiajalla yksi Portugalin vanhimmista juutalaisyhteisöistä. 1400-luvun lopulla siellä asui satoja ihmisiä, ennen kuin karkotukset ja pakkokäännytykset hajottivat yhteisön." },
+      { q: "Mitä ammatteja Guardan juutalaisyhteisössä harjoitettiin?", a: "Yhteisössä toimi muun muassa räätäleitä, kultaseppiä, parkitsijoita ja lääkäreitä, ja korttelissa oli oma synagoga, vesimylly ja kaivo asukkaiden käyttöön." },
+    ],
+    Leiria: [
+      { q: "Mikä keskeneräinen mestariteos löytyy Leirian alueelta?", a: "Batalhan luostari on goottilais-manueliinilaista mestariarkkitehtuuria, mutta sen \"Keskeneräiset kappelit\" jäivät katottomiksi 1500-luvulla, kun kuninkaan huomio siirtyi merentakaisiin löytöretkiin." },
+      { q: "Miksi Batalhan luostari rakennettiin?", a: "Luostari rakennettiin kiitokseksi voitosta Aljubarrotan taistelussa 1385, joka varmisti Portugalin itsenäisyyden Kastiliaa vastaan. Rakennustyö kesti lähes kaksi vuosisataa." },
+    ],
+    Lisboa: [
+      { q: "Kuka suunnitteli Lissabonin kuuluisan rautahissin?", a: "Santa Justan hissi on vuonna 1902 valmistunut neogoottinen rautarakennelma, jonka suunnitteli Raoul Mesnier de Ponsard. Hänen kerrotaan opiskelleen Gustave Eiffelin piirissä, vaikka yhteyttä ei ole täysin varmistettu." },
+      { q: "Miksi hissi rakennettiin Lissabonin keskustaan?", a: "Hissi yhdistää alakaupungin Baixan ja korkeammalla sijaitsevan Carmon aukion, koska kaupunginosien välillä on jyrkkä korkeusero. Hissin tornista avautuu näköala koko kaupungin ylle." },
+    ],
+    Madeira: [
+      { q: "Miksi Funchal tunnetaan uudenvuoden ilotulituksesta?", a: "Funchalin satama-alueelle ammuttiin vuoden 2006 uudenvuodenyönä noin 20 000 ilotulitusraketin näytös, joka kirjattiin Guinnessin ennätyskirjaan maailman suurimpana ilotulituksena." },
+      { q: "Mistä pisteistä Funchalin ilotulitus ammutaan?", a: "Nykyisin näytös laukaistaan kymmenistä pisteistä ympäri Funchalin satamaa ja vuorenrinteitä, ja kahdeksan minuutin spektaakkelia seuraa vuosittain yli sata tuhatta katsojaa." },
+    ],
+    Portalegre: [
+      { q: "Mikä käsityöperinne teki Portalegrestä kuuluisan?", a: "Portalegren seinätekstiilipaja perustettiin vuonna 1946, ja siellä kehitettiin ainutlaatuinen käsinompelutekniikka, jolla taidemaalarien maalauksia voidaan toistaa kangaspinnalle pistolta pistolle." },
+      { q: "Miksi Portalegren kirjontatekniikka on erikoinen?", a: "Tavallisesta kutomisesta poiketen kuvio ommellaan käsin erillisiin pystylankoihin, jolloin yhdessä teoksessa voi olla tuhansia värisävyjä. Tekniikka tunnetaan kansainvälisesti juuri Portalegren nimellä." },
+    ],
+    Porto: [
+      { q: "Kuka suunnitteli Porton kaksikerroksisen rautasillan?", a: "Dom Luís I -sillan suunnitteli belgialaisinsinööri Théophile Seyrig, joka oli työskennellyt Gustave Eiffelin toimistossa. Silta valmistui 1886, ja sen kaari oli aikanaan yksi maailman pisimmistä metallikaarista." },
+      { q: "Miten sillan kahta tasoa käytetään nykyään?", a: "Alempaa kantta käyttävät autot ja jalankulkijat joen tasalla, ylempää kantta metro ja kävelijät korkealla joen yllä. Molemmilta tasoilta avautuu näkymä Douro-joen laaksoon." },
+    ],
+    Santarém: [
+      { q: "Miten portugalilainen tauriäisottelu eroaa espanjalaisesta?", a: "Portugalilaisessa corridassa sonnia ei surmata arenalla, ja lopuksi kahdeksan miehen \"forcados\"-ryhmä painaa sonnin paljain käsin ilman aseita. Santarémin seutu on Portugalin tauriäiskulttuurin keskeisimpiä alueita." },
+      { q: "Mitä forcados-ryhmä tekee ottelun lopuksi?", a: "Miehet asettuvat riviin, ja yksi kerrallaan hyökkää sonnia vastaan tarttuen sitä sarvista tai niskasta, kunnes koko ryhmä saa eläimen hallintaan paljain käsin." },
+    ],
+    Setúbal: [
+      { q: "Mikä viinitalo Setúbalin seudulla on Portugalin vanhimpia?", a: "José Maria da Fonseca -viinitalo perustettiin vuonna 1834 Azeitãossa, ja se on Portugalin vanhin pullotetun pöytäviinin ja makean Moscatel de Setúbal -viinin valmistaja." },
+      { q: "Mikä tekee Moscatel de Setúbalista erikoisen?", a: "Muskottirypäleistä tehty makea viini kypsyy tammitynnyreissä usein vuosikausia, ja osa vuosikerroista tuodaan myyntiin vasta vuosikymmenten kuluttua valmistuksesta." },
+    ],
+    "Viana do Castelo": [
+      { q: "Mistä juhlasta Viana do Castelo on kuuluisa?", a: "Elokuisessa Senhora d'Agonia -juhlassa satoja naisia kulkee kaduilla perinteisissä Minhon puvuissa raskaan kultafiligreenikorun kanssa. Tapahtumaa kutsutaan maailman suurimmaksi ulkoilmakultanäytökseksi." },
+      { q: "Mistä perinne kultakorujen keräämiseen syntyi?", a: "Perinteisesti tytöt saivat filigreenikultahelmiä lahjaksi syntymästä, syntymäpäivistä ja jouluista, ja aikuisena naisella saattoi olla koossa kokonainen korunauha juhlapukuun." },
+    ],
+    "Vila Real": [
+      { q: "Mikä on Fisgas de Ermelo?", a: "Vila Realin Alvãon luonnonpuistossa sijaitseva Fisgas de Ermelo on yksi Portugalin suurimmista putouksista. Vesi syöksyy useassa porrastasossa kvartsiittikallion yli satoja metrejä alaspäin." },
+      { q: "Missä Fisgas de Ermelo sijaitsee?", a: "Putous sijaitsee Mondim de Bastonin kunnassa Ermelon kylän lähellä, ja sinne pääsee vain vaeltamalla — mikä on säästänyt paikan rauhalliseksi verrattuna suosituimpiin nähtävyyksiin." },
+    ],
+    Viseu: [
+      { q: "Kuka oli Grão Vasco?", a: "Vasco Fernandes, lempinimeltään \"Grão Vasco\" (Suuri Vasco), oli 1500-luvun alun merkittävimpiä portugalilaisia renessanssimaalareita. Hänen teoksiaan on koottu Viseun kaupungin taidemuseoon." },
+      { q: "Missä Grão Vascon teoksia voi nähdä nykyään?", a: "Viseun Grão Vasco -museo sijaitsee entisessä piispanpalatsissa vanhan tuomiokirkon vierellä, ja esillä on hänen suurikokoisia alttaritauluja, jotka hän maalasi alun perin Viseun katedraaliin." },
+    ],
+  },
+  SWE: {
+    Blekinge: [
+      { q: "Miksi Brömsebron rauha vuonna 1645 oli niin merkittävä Ruotsille?", a: "Blekingen rajalla solmittu rauha päätti sodan Tanskaa vastaan, ja Ruotsi sai haltuunsa Gotlannin, Hallannin ja Jämtlannin – siitä alkoi Ruotsin suurvalta-aika." },
+      { q: "Mikä tekee Ronnebystä erikoisen kylpyläkaupungin?", a: "Ronneby on ollut kylpyläkaupunki jo 1600-luvulta lähtien – parantavaksi uskottu lähdevesi houkutteli väkeä ympäri Ruotsia terveyttä hakemaan." },
+    ],
+    Dalarna: [
+      { q: "Miten Falun kuparikaivoksen suuronnettomuus muutti maisemaa?", a: "Juhannuspäivänä 1687 kaivoksen katto romahti ja syntyi Stora Stöten, syvä ja laaja kuilu – onneksi kaivosmiehet olivat sattumalta vapaapäivällä juhlimassa." },
+      { q: "Mistä Dalan puuhevonen on peräisin?", a: "Perinteinen käsin veistetty ja maalattu puuhevonen syntyi Nusnäsin kylässä 1800-luvulla ja siitä tuli Ruotsin tunnetuin matkamuistosymboli." },
+    ],
+    Gotland: [
+      { q: "Mitä raukat ovat ja mistä ne johtuvat?", a: "Raukat ovat meren vuosituhansien saatossa muotoilemia kalkkikivipatsaita Gotlannin rannoilla – Digerhuvudin alue pohjoisrannikolla on niistä suurin kenttä." },
+      { q: "Missä gotlanninponit elävät nykyään lähes puolivillinä?", a: "Gotlanninponi on Ruotsin vanhin alkuperäinen hevosrotu, ja Lojsta Hedin nummella laumat laiduntavat edelleen luonnontilan kaltaisissa oloissa." },
+    ],
+    Gävleborg: [
+      { q: "Mikä tekee Hälsingegårdar-taloista maailmanperintökohteen?", a: "UNESCO nimesi 2012 seitsemän 1800-luvun hälsinkiläistalota maailmanperinnöksi – talonpojat rakensivat kokonaisia juhlahuoneita täyteen maalauksia ja koristeita." },
+      { q: "Miten Gävlen vanha kaupunginosa Gamla Gefle säilyi tähän päivään?", a: "Puutalokortteli selvisi vuoden 1869 tuhoisasta tulipalosta, joka poltti suuren osan Gävleä – nykyään se on yksi Ruotsin parhaiten säilyneistä puukaupunginosista." },
+    ],
+    Halland: [
+      { q: "Miksi Tjolöholmin linna näyttää enemmän englantilaiselta kuin ruotsalaiselta?", a: "Linna rakennettiin 1898–1904 Dickson-suvun kesähuvilaksi, ja arkkitehti sai vaikutteita englantilaisesta Tudor-tyylistä ja taideteollisuusliikkeestä." },
+      { q: "Mikä tekee Laholmin joesta kuuluisan?", a: "Lagan-joki Laholmissa on ollut arvostettu lohijoki jo keskiajalta lähtien, ja kuninkailla oli aikoinaan omat kalastusoikeutensa sen koskiin." },
+    ],
+    Jämtland: [
+      { q: "Mitä Frösön riimukivi kertoo?", a: "Noin vuonna 1050 pystytetty kivi on Jämtlannin ainoa säilynyt riimukivi ja ainoa tunnettu kivi, joka kertoo kokonaisen maakunnan kristinuskoon kääntymisestä." },
+      { q: "Miksi Åre on yksi Pohjoismaiden suosituimmista laskettelupaikoista?", a: "Åressa yhdistyvät korkeat tunturit, luotettava lumitilanne ja pitkä hiihtokeskusperinne, mikä on tehnyt siitä yhden Skandinavian suurimmista laskettelukeskuksista." },
+    ],
+    Jönköping: [
+      { q: "Mistä Huskvarnan tehtaat saivat alkunsa?", a: "Vuonna 1689 Huskvarnaan perustettiin asetehdas Vättern-järven putouksien äärelle – samasta tehtaasta kasvoi myöhemmin myös ompelukoneita ja moottoripyöriä valmistava Husqvarna." },
+      { q: "Mikä tekee Habon kirkosta erikoisen?", a: "Habon puukirkko on yksi Euroopan suurimmista puukirkoista, ja sen sisätilat on maalattu 1700-luvulla lattiasta kattoon raamatullisin kuvin." },
+    ],
+    Kalmar: [
+      { q: "Mitä Kalmarin linnassa sovittiin vuonna 1397?", a: "Kalmarin linnassa solmittiin Kalmarin unioni, jolla Tanska, Norja ja Ruotsi yhdistyivät saman hallitsijan alle – sopimuksen allekirjoitti kymmeniä aatelisia ja kirkonmiehiä." },
+      { q: "Miksi Stora Alvaret Öölannissa on maailmanperintökohde?", a: "Tämä laaja kalkkikivikangas on yksi Euroopan suurimmista alvareista, ja sen ainutlaatuinen kasvillisuus on syntynyt vuosituhansien laidunnuksen tuloksena." },
+    ],
+    Kronoberg: [
+      { q: "Mikä on Glasriket ja miksi se syntyi juuri tänne?", a: "Smoolannin lasiteollisuusalueella toimii useita lasitehtaita, kuten 1742 perustettu Kosta – seudun metsät tarjosivat polttopuuta ja hiekka raaka-ainetta lasinpuhallukseen." },
+      { q: "Miksi Växjötä kutsutaan Euroopan vihreimmäksi kaupungiksi?", a: "Växjö on saanut kansainvälistä tunnustusta ilmastotyöstään – kaupunki tavoittelee fossiilivapautta ja sen energiantuotanto perustuu suurelta osin bioenergiaan." },
+    ],
+    Norrbotten: [
+      { q: "Miksi koko Kirunan kaupunki siirretään uuteen paikkaan?", a: "Maailman suurin maanalainen rautakaivos syö vuori vuodelta maaperää kaupungin alta, ja siksi keskusta rakennetaan kokonaan uudelleen muutaman kilometrin päähän." },
+      { q: "Mikä tekee Gammelstadin kirkkokylästä ainutlaatuisen?", a: "Luulajan liepeillä sijaitseva Gammelstad on maailman suurin ja parhaiten säilynyt kirkkokylä satoineen pienine mökkeineen kaukaisia kirkkomatkalaisia varten – UNESCO-kohde vuodesta 1996." },
+    ],
+    Skåne: [
+      { q: "Miten Öresundin silta muutti liikkumista Ruotsin ja Tanskan välillä?", a: "Vuonna 2000 avattu silta ja tunneli yhdistivät Skoonen ja Kööpenhaminan – matka, joka ennen vaati lauttaa, kestää nyt autolla vain kymmenisen minuutin." },
+      { q: "Mitä Kivikin kuninkaanhaudassa on erikoista?", a: "Pronssikautinen, noin 3500 vuotta vanha hauta on Pohjoismaiden suurimpia, ja sen kivissä on harvinaislaatuisia hautakammion sisäpuolisia kuvakaiverruksia." },
+    ],
+    Stockholm: [
+      { q: "Mitä Vaasa-laivalle tapahtui neitsytmatkallaan?", a: "Sotalaiva kaatui ja upposi Tukholman satamassa elokuussa 1628 vain lyhyen matkan jälkeen – se nostettiin pintaan vasta 1961, upean hyvin säilyneenä." },
+      { q: "Missä Nobel-palkintojen juhlaillallinen järjestetään?", a: "Joulukuun 10. päivä juhlaillallinen pidetään Tukholman kaupungintalon Sinisessä salissa, joka on punatiilinen sali – arkkitehti muutti mielensä sinisestä värityksestä kesken rakennustöiden." },
+    ],
+    Södermanland: [
+      { q: "Mitä Ramsundsbergetin kalliokaiverrus kuvaa?", a: "Sigurdinkaiverrus 1000-luvulta kertoo sankari Sigurd Lohikäärmeentappajan tarinan – se on yksi Pohjoismaiden merkittävimmistä viikinkiaikaisista kuvakaiverruksista." },
+      { q: "Mikä tekee Gripsholmin linnasta erityisen?", a: "Mälaren-järven rannalla kohoava linna toimii Ruotsin valtion muotokuvakokoelman kotina – siellä on satoja kuninkaallisten ja merkkihenkilöiden muotokuvia 1500-luvulta nykypäivään." },
+    ],
+    Uppsala: [
+      { q: "Miksi Uppsalan yliopisto on erityisen merkittävä?", a: "Vuonna 1477 perustettu yliopisto on koko Pohjoismaiden vanhin, ja se on kouluttanut tutkijoita ja virkamiehiä yli 500 vuoden ajan." },
+      { q: "Mikä tekee Uppsalan tuomiokirkosta erikoisen?", a: "Se on Skandinavian korkeimpia kirkkorakennuksia, ja sen kryptaan on haudattu kuningas Kustaa Vaasa, Ruotsin Vaasa-suvun ensimmäinen hallitsija." },
+    ],
+    Värmland: [
+      { q: "Kuka oli Selma Lagerlöf ja mihin hän liittyy Värmlantiin?", a: "Nobelin kirjallisuuspalkinnon ensimmäinen naisvoittaja vuonna 1909 kasvoi Mårbackan tilalla Värmlannissa, ja lapsuudenkoti on nykyään museona yleisölle avoinna." },
+      { q: "Kuka oli John Ericsson ja mitä hän keksi?", a: "Filipstadissa syntynyt insinööri suunnitteli 1800-luvulla mm. laivapotkurin ja Yhdysvaltain sisällissodassa kuuluisaksi tulleen sota-alus Monitorin panssaroidun tornin." },
+    ],
+    Västerbotten: [
+      { q: "Miksi Uumajaa kutsutaan koivujen kaupungiksi?", a: "Vuoden 1888 tulipalo tuhosi suuren osan kaupungista, ja jälleenrakennuksessa kaduille istutettiin koivukujia palokaistaleiksi – nimitys Björkarnas stad on säilynyt siitä lähtien." },
+      { q: "Mikä tekee Skellefteån Sara-kulttuuritalosta poikkeuksellisen?", a: "Vuonna 2021 avattu 20-kerroksinen, 80 metriä korkea rakennus on yksi Euroopan korkeimmista puutaloista – hotelli, teatteri ja museo saman puurungon sisällä." },
+    ],
+    Västernorrland: [
+      { q: "Miten Sundsvallista tuli 'Kivikaupunki'?", a: "Vuoden 1888 suurpalo tuhosi kaupungin puukorttelit muutamassa tunnissa, ja jälleenrakennuksessa keskusta määrättiin rakennettavaksi kivestä – siitä syntyi lempinimi Stenstan." },
+      { q: "Mitä tapahtui Ådalenissa vuonna 1931?", a: "Sotilaat avasivat tulen lakkoilevia sahatyöläisiä kohti Kramforsin seudulla, ja viisi ihmistä kuoli – tapaus järkytti koko maata ja muutti Ruotsin työmarkkinasuhteita pysyvästi." },
+    ],
+    Västmanland: [
+      { q: "Mikä on Anundshög ja mitä sen ympärillä on?", a: "Se on Ruotsin suurin muinainen hautakumpu Västeråsin liepeillä, ja sitä ympäröi kymmenkunta pienempää kumpua sekä pitkä kivistä ladottu laivasettaus." },
+      { q: "Mitä Engelsbergin rautaruukissa säilyi ennallaan?", a: "1600–1800-luvun rautaruukki koneineen ja työläisasuntoineen on niin hyvin säilynyt, että UNESCO nimesi sen maailmanperintökohteeksi vuonna 1993." },
+    ],
+    "Västra Götaland": [
+      { q: "Miksi Göteborgin keskustassa on kanaaleja kuin Amsterdamissa?", a: "Kaupunki perustettiin 1621 hollantilaisten asiantuntijoiden avulla, ja he suunnittelivat kanavat ja katuverkon Amsterdamin mallin mukaan – Stora Hamnkanalen on yhä keskeinen näky." },
+      { q: "Miten Liseberg-huvipuisto syntyi?", a: "Puisto avattiin 1923 osana Göteborgin 300-vuotisjuhlanäyttelyä, ja se oli tarkoitettu väliaikaiseksi – suosion ansiosta siitä tuli pysyvä ja nykyään Pohjoismaiden suosituin huvipuisto." },
+    ],
+    Orebro: [
+      { q: "Mitä Örebrossa päätettiin vuonna 1810?", a: "Valtiopäivät valitsivat Örebrossa ranskalaisen marsalkka Bernadotten Ruotsin kruununperijäksi – hänestä tuli myöhemmin kuningas Kaarle XIV Juhana, nykyisen kuningashuoneen kantaisä." },
+      { q: "Mikä on Örebron linnan erityispiirre?", a: "Keskiaikainen linna kohoaa saarella keskellä Svartån-jokea kaupungin sydämessä, ja sen muurien sisällä on pidetty useita historiallisia valtiopäiviä." },
+    ],
+    Östergötland: [
+      { q: "Kuka perusti Vadstenan luostarin ja miksi?", a: "Pyhä Birgitta suunnitteli luostarin yksityiskohtia myöten, ja se vihittiin käyttöön 1384 – Birgitta itse julistettiin pyhäksi vuonna 1391." },
+      { q: "Miten Göta-kanava rakennettiin Motalan kautta?", a: "Kanavatyöt alkoivat Motalassa ja Forsvikissa 1810, ja 22 vuoden urakan jälkeen 1832 valmistunut kanava yhdisti Itämeren ja Pohjanmeren sisävesireittiä pitkin." },
+    ],
+  },
+  NOR: {
+    Akershus: [
+      { q: "Mistä Akershus-maakunnan nimi on peräisin?", a: "Nimi juontuu Oslossa sijaitsevasta Akershusin linnasta ja linnoituksesta, jonka rakentaminen alkoi vuonna 1299 kuningas Håkon V:n aikana. Linnoitus antoi aikanaan nimensä koko sitä ympäröivälle läänille." },
+      { q: "Mikä on Raknehaugen, ja miksi se hämmentää arkeologeja?", a: "Raknehaugen Ullensakerissa on Norjan suurin muinainen maakumpu, halkaisijaltaan 77 metriä. Kaivauksissa ei ole löytynyt hautaa eikä ihmisen jäänteitä, joten se saattaa olla 500-luvun katastrofin muistomerkki, ei kuninkaan hauta." },
+    ],
+    "Aust-Agder": [
+      { q: "Miksi Arendalia kutsuttiin joskus \"Pohjolan Venetsiaksi\"?", a: "1700–1800-luvuilla Arendal rakennettiin useille saarille kanavien ympärille, ja se oli laivanvarustuksen ansiosta yksi Pohjois-Euroopan vauraimmista kaupungeista. Suuren tulipalon jälkeen kanavat täytettiin ja muutettiin leveiksi kaduiksi." },
+      { q: "Mitä erikoista Arendalin Tyholmenin puutalokorttelissa on?", a: "Tyholmenin 1700-luvun puutalot ovat yksi parhaiten säilyneistä puutalokokonaisuuksista Pohjois-Euroopassa, ja alue palkittiin arvostetulla Europa Nostra -palkinnolla vuonna 1992." },
+    ],
+    "Bouvet Island": [
+      { q: "Mikä mysteeri löytyi Bouvetinsaarelta vuonna 1964?", a: "Brittiläinen laiva löysi saaren lagunista hylätyn, osittain uponneen pelastusveneen sekä tynnyrin ja airoja – kukaan ei ollut ilmoittanut haaksirikosta. Myöhemmin neuvostoasiakirjoista selvisi veneen jääneen jälkeen myrskyn keskeyttämältä valaanpyyntiretkikunnalta vuodelta 1958." },
+      { q: "Milloin ja miten Bouvetinsaaresta tuli osa Norjaa?", a: "Ranskalainen löysi saaren vuonna 1739, mutta se pysyi vuosisatoja käytännössä kenenkään maana. Norja liitti sen viralliseksi alueekseen vuonna 1930, ja nykyään se on luonnonsuojelualue vailla pysyvää väestöä." },
+    ],
+    Buskerud: [
+      { q: "Mikä on Spiralen Drammenissa?", a: "Spiralen on vuorenläpäisevä kiertotie, joka nousee kuudessa lenkissä Bragernesåsen-vuoren laelle. Se kaivettiin alun perin 1950-luvulla graniitin louhintaa varten, ja kuningas Olav V avasi sen yleisölle vuonna 1961." },
+      { q: "Miksi Spiralenista tuli suosittu nähtävyys eikä vain louhostie?", a: "Kaupungininsinööri halusi vähentää louhinnan haittoja ja ehdotti tunnelia, joka toimisi samalla matkailukohteena. Vuosina 2019–2020 tunneliin lisättiin värillinen valaistus, joka muuttuu vuorokaudenajan mukaan." },
+    ],
+    Finnmark: [
+      { q: "Miksi Nordkapp tuli suosituksi matkailukohteeksi juuri 1870-luvulla?", a: "Kuningas Oscar II vieraili Nordkapilla heinäkuussa 1873 ja pystytti paikalle muistokiven käyntinsä kunniaksi. Vierailu teki kalliosta tunnetun, ja pian sen jälkeen brittiläinen matkatoimisto Thomas Cook alkoi järjestää matkoja Nordkapille." },
+      { q: "Onko Nordkapp oikeasti Euroopan mantereen pohjoisin piste?", a: "Ei aivan – vaikka Nordkapp on suosituin ja tunnetuin kohde, todellinen pohjoisin niemi on vieressä sijaitseva Knivskjellodden, joka työntyy mereen noin 1 450 metriä Nordkappia pohjoisemmaksi." },
+    ],
+    Hedmark: [
+      { q: "Miksi Hedmarkia kutsutaan Norjan hirvimaakunnaksi?", a: "Hedmarkin metsät ovat niin hirvirikkaita, että maakunnasta kaadetaan noin viidesosa koko Norjan vuosittaisesta hirvisaaliista. Alueella on yli 25 000 rekisteröityä metsästäjää." },
+      { q: "Kuinka tiheä hirvikanta Hedmarkissa parhaimmillaan on?", a: "Kaakkois-Norjan metsäalueilla, erityisesti Hedmarkissa, hirvitiheys voi nousta jopa 2,5 eläimeen neliökilometrillä – yksi Euroopan suurimmista." },
+    ],
+    Hordaland: [
+      { q: "Mikä Trolltunga on, ja missä se sijaitsee?", a: "Trolltunga on Oddan lähellä Hordalandissa sijaitseva litteä kalliokieleke, joka työntyy noin 700 metrin korkeudessa Ringedalsvatnetin järven yllä. Siitä on tullut yksi Norjan tunnetuimmista valokuvauskohteista." },
+      { q: "Kuinka suosittu Trolltunga-vaellus on nykyään?", a: "Vielä 2010-luvun alussa Trolltungalla vieraili alle 800 kävijää vuodessa, mutta vuonna 2016 luku oli jo noin 80 000. Vaellus on noin 27 kilometriä edestakaisin ja kestää yleensä 10–12 tuntia." },
+    ],
+    Svalbard: [
+      { q: "Mikä on Global Seed Vault, ja miksi se rakennettiin Huippuvuorille?", a: "Huippuvuorten kylmyys ja ikirouta suojaavat maailman kasvilajikkeiden siemenvarastoja kriisin varalta. Holvi louhittiin syvälle vuoreen, ja se avattiin vuonna 2008 satojen miljoonien siementen voimin." },
+      { q: "Kuinka monesta maasta siemeniä on tallennettu Svalbardin holviin?", a: "Avajaisissa vuonna 2008 holviin tuotiin yli 100 miljoonaa siementä yli sadasta maasta, ja kokoelma on kasvanut siitä lähtien merkittävästi. Holvi toimii varmuuskopiona maailman siemenpankeille." },
+    ],
+    "Møre og Romsdal": [
+      { q: "Miksi Ålesund näyttää niin erilaiselta kuin muut Norjan rannikkokaupungit?", a: "Tuhoisa tulipalo tammikuussa 1904 tuhosi suurimman osan puukaupungista yhdessä yössä ja jätti yli 10 000 ihmistä kodittomiksi. Kaupunki rakennettiin uudelleen aikansa muotisuuntauksen, jugendtyylin, mukaisesti vain muutamassa vuodessa." },
+      { q: "Mitä erikoista Ålesundin jugendarkkitehtuurissa on?", a: "Yli 50 arkkitehtia ympäri Norjaa osallistui jälleenrakennukseen, ja rakennuksiin yhdisteltiin kansainvälistä jugendtyyliä viikingiaikaisiin koristeaiheisiin, lohikäärmeisiin ja kasvikuvioihin." },
+    ],
+    "Nord-Trøndelag": [
+      { q: "Miksi Namsenia kutsutaan \"jokien kuningattareksi\"?", a: "Namsen on yksi maailman parhaista lohijoista, ja siellä on saatu vuosien varrella useita yli 20-kiloisia lohia. Suurin koskaan saatu yksilö painoi peräti 68 naulaa, noin 31 kiloa." },
+      { q: "Millä tekniikalla Namsenin lohta perinteisesti pyydetään?", a: "Leveällä joella käytetään usein \"harling\"-menetelmää, jossa vieheitä vedetään hitaasti liikkuvan veneen perässä rannalta rannalle. Ylävirtaan uiva lohi kohtaa vieheen tällä tavalla luonnollisesti." },
+    ],
+    Nordland: [
+      { q: "Mikä tekee Vegan saariryhmästä UNESCOn maailmanperintökohteen?", a: "Vegan saarilla asukkaat ovat yli 1 500 vuoden ajan eläneet kalastuksella ja haahkansulan keruulla ankarissa oloissa. Kohde otettiin maailmanperintölistalle vuonna 2004 Norjan ensimmäisenä kulttuurimaisemana." },
+      { q: "Millaisia ovat Vegan saarten haahkantalot?", a: "Karuille ulkoluodoille rakennettiin pieniä kivisiä pönttömäisiä taloja, joissa haahkanaaraat pesivät suojassa. Untuvaa kerättiin pesän tyhjennyttyä, ja siitä valmistettiin arvostettuja untuvapeittoja jopa kuninkaallisille asiakkaille." },
+    ],
+    Oppland: [
+      { q: "Mitä Lillehammerissa tapahtui helmikuussa 1994?", a: "Lillehammer isännöi talviolympialaisia 12.–27. helmikuuta 1994, ja siitä tuli pohjoisin kaupunki, joka on koskaan järjestänyt olympialaiset. Kisat levittäytyivät kymmeneen paikkaan Opplandin ja Hedmarkin alueella." },
+      { q: "Mitä pysyvää hyötyä Lillehammerin olympialaisista jäi alueelle?", a: "Kisoja varten rakennettu kansainvälinen lähetyskeskus mahdollisti Storhoven korkeakoulun kasvun; opiskelijamäärä nousi noin 600:sta yli 6 000:een parissa vuosikymmenessä." },
+    ],
+    Oslo: [
+      { q: "Mikä tekee Vigelandin puistosta ainutlaatuisen?", a: "Frognerpuistossa sijaitseva Vigelandin puisto on maailman suurin yhden taiteilijan tekemä veistospuisto: siinä on yli 200 Gustav Vigelandin veistosta pronssista, graniitista ja raudasta. Puistoa rakennettiin pääosin vuosina 1939–1949." },
+      { q: "Mitä Vigelandin veistokset kuvaavat?", a: "Veistokset esittävät ihmiselämän kiertokulkua vauvasta vanhuuteen ja kaikkia niiden väliin mahtuvia tunteita. Puisto on ilmainen, ja siellä vierailee vuosittain yli miljoona kävijää." },
+    ],
+    Rogaland: [
+      { q: "Miksi Stavangeria kutsutaan Norjan öljypääkaupungiksi?", a: "Joulukuussa 1969 Ekofisk-kentältä Pohjanmereltä löytyi valtava öljy- ja kaasuesiintymä, joka muutti koko Norjan talouden suunnan. Stavangeriin keskittyi nopeasti öljy-yhtiöiden pääkonttoreita ja palveluyrityksiä." },
+      { q: "Kuinka suuri vaikutus Ekofiskin löydöllä oli Norjaan?", a: "Ennen löytöä Norja oli öljyn tuoja ja velkaantunut maa, mutta löydön jälkeen siitä kehittyi vuosikymmenten kuluessa yksi maailman vauraimmista valtioista valtavan öljyrahaston ansiosta." },
+    ],
+    "Sogn og Fjordane": [
+      { q: "Miksi Flåmin rautatietä pidetään yhtenä maailman upeimmista?", a: "Flåmsbana on yksi maailman jyrkimmistä normaaliraiteisista rautateistä: 80 % matkasta kulkee 5,5 % nousussa Myrdalin ja Flåmin välillä. Radan rakentaminen kesti vuodesta 1923 vuoteen 1940." },
+      { q: "Kuinka monta tunnelia Flåmsbanan radalla on?", a: "Radalla on 20 tunnelia, ja 18 niistä louhittiin käsin ilman nykyaikaisia koneita. Rata laskee 866 metriä matkalla, joka on vain 20,2 kilometriä pitkä." },
+    ],
+    "Sør-Trøndelag": [
+      { q: "Mikä on Fosenin tuulipuisto, ja miksi se on kiistanalainen?", a: "Fosenin niemimaalla sijaitsee Euroopan suurin manner-tuulipuisto, mutta Norjan korkein oikeus totesi vuonna 2021 sen loukkaavan saamelaisten poronhoitajien oikeuksia. Turbiinit häiritsevät perinteisiä poronhoitoreittejä." },
+      { q: "Ratkaistiinko Fosenin kiista lopulta?", a: "Vuonna 2024 hallitus ja saamelaiset pääsivät sopimukseen, jonka mukaan tuulivoimalat saavat jäädä käyntiin, mutta poronhoitokulttuurin suojaamiseksi otettiin käyttöön uusia toimenpiteitä." },
+    ],
+    Telemark: [
+      { q: "Miksi hiihtotekniikkaa kutsutaan \"telemarkiksi\"?", a: "Tekniikka on saanut nimensä Telemarkin maakunnasta, jossa Morgedalin kylästä kotoisin oleva Sondre Norheim kehitti 1800-luvulla vapaakantaisen siteen ja käännöstekniikan. Hän esitteli tyylinsä julkisesti Kristianiassa vuonna 1868." },
+      { q: "Mikä tekee telemark-hiihdosta erilaista kuin alppihiihdosta?", a: "Telemark-siteessä vain kärki on kiinni suksessa, kantapää nousee vapaasti irti, mikä mahdollistaa polvea koukistavan käännösliikkeen. Norheimia pidetään nykyaikaisen hiihdon isänä." },
+    ],
+    Troms: [
+      { q: "Miksi valaita voi bongata Tromssan seudulla juuri talvella?", a: "Marraskuusta tammikuuhun miekkavalaat ja ryhävalaat kerääntyvät Skjervøyn ja Kvænangenin vesille syömään silliparvia. Ilmiö on kasvattanut suosiotaan talviristeilyjen ja retkien myötä 2010-luvulta lähtien." },
+      { q: "Kuinka kaukana Skjervøy on Tromssasta?", a: "Skjervøy sijaitsee noin 250 kilometrin päässä Tromssasta, ja retket sinne yhdistävät usein bussi- tai minibussikyydin veneellä tehtävään valaidenkatseluun." },
+    ],
+    "Vest-Agder": [
+      { q: "Miksi Kristiansandin kaupunkisuunnitelma on niin poikkeuksellinen?", a: "Kuningas Christian IV perusti kaupungin vuonna 1641 ja määräsi sille tiukan ruudukkomuotoisen katusuunnitelman renessanssi-ihanteiden mukaan. Kadut tehtiin poikkeuksellisen leveiksi tulipalojen leviämisen estämiseksi." },
+      { q: "Miksi Kvadraturen-alue on vielä nykyään tunnistettavissa?", a: "Alkuperäinen 1600-luvun ruudukko seitsemine pohjois-eteläkatuineen ja kymmenine itä-länsikatuineen on säilynyt lähes muuttumattomana yli 380 vuotta, ja se tunnetaan nykyään nimellä Kvadraturen." },
+    ],
+    Vestfold: [
+      { q: "Miksi Sandefjordia kutsuttiin maailman valaanpyyntipääkaupungiksi?", a: "1900-luvun alusta toisen maailmansodan jälkeiseen aikaan asti suurin osa maailman valaanpyyntilaivojen omistajista ja miehistöstä tuli Sandefjordista, mikä teki kaupungista Norjan rikkaimman." },
+      { q: "Mitä Sandefjordin valaanpyyntimuseossa voi nähdä?", a: "Museo on Euroopan ainoa täysin valaisiin ja valaanpyyntiin keskittynyt museo, ja siellä roikkuu katosta 21 metriä pitkä täysikokoinen sinivalaan jäljitelmä." },
+    ],
+    Østfold: [
+      { q: "Mitä tapahtui Fredriksten linnoituksessa Haldenissa vuonna 1718?", a: "Ruotsin kuningas Kaarle XII kaatui piiritystä johtaessaan, kun luoti osui häneen linnoitusta tarkastaessa. Hänen kuolemansa päätti Ruotsin valloitusyritykset Norjaan." },
+      { q: "Miksi Kaarle XII:n kuolemalla oli laajempi historiallinen merkitys?", a: "Tapahtuma vauhditti Ruotsin suurvalta-aseman päättymistä ja niin kutsutun vapauden ajan alkua, kun rauha solmittiin muutaman vuoden kuluttua Uudenkaupungin rauhassa." },
+    ],
+  },
+  DNK: {
+    Nordjylland: [
+      { q: "Mitä Lindholm Højen viikinkikalmistossa löytyy?", a: "Aalborgin liepeillä sijaitseva Lindholm Høje on yli 700 haudan hautausmaa rautakaudelta ja viikinkiajalta, ja monet haudat on merkitty kivillä laivan muotoisiksi. Tuulen kuljettama hiekka peitti paikan vuosisatoja, mikä säilytti sen poikkeuksellisen hyvin." },
+      { q: "Miksi laivanmuotoiset kivilatomukset olivat viikingeille tärkeitä?", a: "Kivistä ladottu laivan hahmo symboloi vainajan matkaa tuonpuoleiseen, ja koko yli sata laivasettausta paikassa tekee siitä yhden Skandinavian suurimmista viikinkiaikaisista kalmistoista." },
+    ],
+    Midtjylland: [
+      { q: "Kuka on Tollundin mies ja mistä hänet löydettiin?", a: "Silkeborgin lähellä suosta löytyi 1950 rautakautinen suomuumio, jonka kasvot ja ilme ovat säilyneet niin hyvin, että hänet on ajoitettu yli 2 300 vuoden ikäiseksi. Hänen kaulassaan oli yhä köysi, joka viittaa väkivaltaiseen kuolemaan." },
+      { q: "Miksi suo säilytti Tollundin miehen niin täydellisesti?", a: "Suon hapettomat, happamat olosuhteet estävät bakteerien toiminnan ja voivat säilyttää ihon ja kasvonpiirteet vuosituhansiksi, vaikka luusto usein liukenee samalla pois." },
+    ],
+    Hovedstaden: [
+      { q: "Miksi Tivoli on niin merkittävä huvipuistojen historiassa?", a: "Kööpenhaminan Tivoli avattiin 1843 ja on yksi maailman vanhimmista yhä toimivista huvipuistoista. Walt Disneyn kerrotaan saaneen siitä inspiraatiota vieraillessaan puistossa ennen Disneylandin suunnittelua." },
+      { q: "Mitä Tivolin puutarhoissa on säilynyt alkuperäisestä asusta?", a: "Puiston satumaiset puutarhat, itämaisvaikutteiset rakennukset ja ilotulitukset ovat osa perustajan Georg Carstensenin alkuperäistä visiota, ja puisto on uudistunut jatkuvasti menettämättä tunnelmaansa." },
+    ],
+    Sjaælland: [
+      { q: "Ketkä on haudattu Roskilden tuomiokirkkoon?", a: "Roskilden tuomiokirkko on toiminut Tanskan kuninkaiden hautapaikkana keskiajalta lähtien, ja siellä lepää yli 40 kuningasta ja kuningatarta. Kirkko on Unescon maailmanperintökohde." },
+      { q: "Miksi Roskilden tuomiokirkko oli aikanaan arkkitehtoninen uutuus Pohjolassa?", a: "1100–1200-luvulla rakennettu tiilikirkko oli ensimmäisiä goottilaisia tiilirakennuksia Skandinaviassa, ja se toimi mallina monille myöhemmille Pohjois-Euroopan tiilikirkoille." },
+    ],
+    Syddanmark: [
+      { q: "Missä Hans Christian Andersen syntyi ja vietti lapsuutensa?", a: "Satukirjailija Hans Christian Andersen syntyi Odensessa 1805 köyhään suutariperheeseen, ja hänen lapsuudenkotinsa on nykyään osa kaupungin Andersen-museokokonaisuutta." },
+      { q: "Miksi Odensen H. C. Andersenin museo uudistettiin kokonaan 2021?", a: "Uusi maanalainen museorakennus avattiin 2021 kertomaan Andersenin elämästä ja saduista immersiivisin näyttelyin, ja se yhdistyy vanhaan kaupunginosaan puutarhojen ja käytävien verkolla." },
+    ],
+  },
+  FIN: {
+    "South Karelia": [
+      { q: "Miksi Saimaan kanava oli merkittävä hanke jo 1800-luvulla?", a: "Vuonna 1856 avattu Saimaan kanava yhdisti Saimaan vesistön Suomenlahteen Viipurin kautta, ja se helpotti valtavasti Itä-Suomen puu- ja muun tavaraliikennettä. Kanava on toiminnassa yhä nykyään, osin Venäjän alueen kautta." },
+      { q: "Mikä tekee Lappeenrannan linnoituksesta erityisen?", a: "1700-luvulla rakennettu Linnoitus-kaupunginosa on yksi harvoista säilyneistä venäläisajan linnoitusalueista Suomessa, ja sen vanhat muurit ja kasarmit ovat nykyään museoiden ja käsityöläisten käytössä." },
+    ],
+    "Southern Ostrobothnia": [
+      { q: "Missä arkkitehti Alvar Aalto syntyi?", a: "Alvar Aalto syntyi 1898 Kuortaneella Etelä-Pohjanmaalla, ennen kuin perhe muutti Jyväskylään. Hänestä tuli myöhemmin yksi maailman vaikutusvaltaisimmista arkkitehdeista ja muotoilijoista." },
+      { q: "Mistä Etelä-Pohjanmaan 'puukkojunkkarit' saivat maineensa?", a: "1800-luvun puolivälissä alueella riehui puukkoja käyttävien häjyjen väkivaltainen alakulttuuri, joka teki Etelä-Pohjanmaasta pelätyn seudun – ilmiö hälveni vasta vuosisadan loppua kohti." },
+    ],
+    "Southern Savonia": [
+      { q: "Milloin Olavinlinna Savonlinnassa rakennettiin ja miksi?", a: "Olavinlinna perustettiin 1475 puolustamaan Ruotsin itärajaa Novgorodia vastaan, ja se on Pohjoismaiden pohjoisin ja itäisin keskiaikainen kivilinna. Linnassa järjestetään nykyään kesäisin oopperajuhlat." },
+      { q: "Kuinka pitkään Savonlinnan oopperajuhlia on järjestetty?", a: "Oopperajuhlat on järjestetty linnan pihalla vuodesta 1912 lähtien (nykyisessä muodossaan vuodesta 1967), ja ne ovat yksi Pohjoismaiden arvostetuimmista oopperatapahtumista." },
+    ],
+    Kainuu: [
+      { q: "Mitä Paltaniemen kirkossa on erikoista?", a: "Kajaanin liepeillä sijaitsevan 1700-luvun puukirkon sisäkatto ja seinät on maalattu täyteen kansanomaisia raamatunaiheisia maalauksia, jotka maalasi taidemaalari Emanuel Granberg 1778–1781." },
+      { q: "Miksi Vuokatti on tunnettu urheilupaikkakuntana?", a: "Vuokatin tunturi- ja hiihtokeskus on Suomen tärkeimpiä huippu-urheilun harjoituspaikkoja, ja sen maanalainen hiihtotunneli mahdollistaa hiihtoharjoittelun ympäri vuoden lämpötilasta riippumatta." },
+    ],
+    "Tavastia Proper": [
+      { q: "Kuka syntyi Hämeenlinnassa vuonna 1865?", a: "Säveltäjä Jean Sibelius syntyi Hämeenlinnassa 1865, ja hänen lapsuudenkotinsa on nykyään museona. Hämeenlinnaa markkinoidaan yhä Sibeliuksen kaupunkina." },
+      { q: "Mikä on Hämeen linna ja milloin se rakennettiin?", a: "Keskiaikainen tiilinen Hämeen linna Vanajaveden rannalla rakennettiin 1200–1300-luvuilla, ja se toimi myöhemmin myös vankilana 1800- ja 1900-luvuilla ennen museoksi muuttumistaan." },
+    ],
+    "Central Ostrobothnia": [
+      { q: "Mikä tekee Kaustisen kansanmusiikkijuhlista niin merkittävät?", a: "Vuodesta 1968 järjestetty Kaustisen kansanmusiikkijuhla on yksi maailman suurimmista ja arvostetuimmista kansanmusiikkifestivaaleista, ja se kokoaa joka heinäkuu pelimanniyhtyeitä ympäri maailmaa." },
+      { q: "Miksi Kaustinen tunnetaan pelimannimusiikin keskuksena?", a: "Seudulla on ollut poikkeuksellisen elinvoimainen viulunsoitto- ja pelimanniperinne sukupolvien ajan, ja monet Suomen tunnetuimmista kansanmuusikoista ovat kotoisin juuri Kaustiselta." },
+    ],
+    "Central Finland": [
+      { q: "Miksi Jyväskylää kutsutaan Alvar Aallon kaupungiksi?", a: "Alvar Aalto vietti lapsuutensa ja nuoruutensa Jyväskylässä ja suunnitteli kaupunkiin myöhemmin lukuisia rakennuksia, kuten yliopiston kampuksen. Kaupungissa on tämän ansiosta poikkeuksellisen paljon hänen arkkitehtuuriaan." },
+      { q: "Mikä on Päijänne ja miksi se on tärkeä Keski-Suomelle?", a: "Päijänne on Suomen toiseksi suurin järvi, ja se on ollut vuosisatoja tärkeä uitto- ja liikennereitti Keski-Suomen metsäteollisuudelle. Se toimii nykyään myös pääkaupunkiseudun raakavesilähteenä tunnelin kautta." },
+    ],
+    Kymenlaakso: [
+      { q: "Mikä tekee Verlan tehdasalueesta maailmanperintökohteen?", a: "Verlan puuhiomo ja pahvitehdas Jaalassa toimi 1880-luvulta 1960-luvulle, ja koko tehdasalue rakennuksineen ja työläisasuntoineen on säilynyt niin hyvin, että Unesco nimesi sen maailmanperinnöksi 1996." },
+      { q: "Miksi Kotka rakennettiin alun perin linnoituskaupungiksi?", a: "Venäjä rakensi Kotkan seudulle linnoituksia 1700-luvun lopulla vahvistaakseen uutta rajaansa Ruotsia vastaan Haminan rauhan 1809 jälkeen, ja kaupunki kasvoi myöhemmin sahateollisuuden ympärille." },
+    ],
+    Lapland: [
+      { q: "Miksi Rovaniemi rakennettiin sotien jälkeen kokonaan uudelleen?", a: "Saksalaiset joukot polttivat Rovaniemen käytännössä maan tasalle vetäytyessään 1944, ja arkkitehti Alvar Aalto suunnitteli kaupungille uuden asemakaavan, jonka pääkatuverkosto muistuttaa ylhäältä poronpäätä." },
+      { q: "Mistä Joulupukin virallinen kotikylä löytyy?", a: "Rovaniemellä napapiirin kohdalla sijaitseva Joulupukin Pajakylä on rakennettu 1985 alkaen, ja se houkuttelee nykyään satojatuhansia matkailijoita vuodessa ympäri maailmaa." },
+    ],
+    Pirkanmaa: [
+      { q: "Miksi Tamperetta kutsuttiin aikoinaan 'Suomen Manchesteriksi'?", a: "Tampereen koskien voimalla toimi 1800-luvulta lähtien laajoja tekstiili- ja metalliteollisuuslaitoksia, kuten Finlaysonin pumpulitehdas, ja teollistuminen muistutti englantilaista teollisuuskaupunkia." },
+      { q: "Mikä on Näsinneula ja mistä sen näkee?", a: "168 metriä korkea Näsinneulan näkötorni valmistui 1971 Särkänniemen huvipuiston yhteyteen, ja sen huipulta näkee selkeällä säällä kymmenien kilometrien päähän." },
+    ],
+    Ostrobothnia: [
+      { q: "Miksi Vaasa on Suomen ruotsinkielisin suurempi kaupunki?", a: "Pohjanmaan rannikkoseudulla on ollut ruotsinkielistä asutusta keskiajalta lähtien, ja Vaasan seudulla ruotsia puhuu yhä huomattava osa väestöstä – kaksikielisyys näkyy katukuvassa ja kouluissa." },
+      { q: "Mikä teki Vaasan kaupasta merkittävän 1700–1800-luvulla?", a: "Vaasa oli tärkeä laivanvarustuksen ja tervakaupan keskus, ja kaupungin porvarit rikastuivat purjelaivoilla käydystä ulkomaankaupasta ennen kuin höyrylaivat ja rautatiet muuttivat kauppareitit." },
+    ],
+    "North Karelia": [
+      { q: "Miksi Ilomantsi on erityinen kunta Suomen kartalla?", a: "Ilomantsi on Suomen ja koko Euroopan unionin itäisin kunta, ja alueella on vahva ortodoksinen ja karjalainen perinne, joka näkyy muun muassa kylien kirkoissa ja ruokakulttuurissa." },
+      { q: "Mikä on runonlaulun perinne Pohjois-Karjalassa?", a: "Alueen kylissä kerättiin 1800-luvulla runsaasti kansanrunoutta, jota Elias Lönnrot hyödynsi Kalevalan koostamisessa, ja runolaulun perinnettä vaalitaan yhä muun muassa Ilomantsin Parppeinvaaran runokylässä." },
+    ],
+    "Northern Ostrobothnia": [
+      { q: "Miksi Oulu oli 1600–1800-luvulla kansainvälisesti tärkeä kaupunki?", a: "Oulu oli maailman johtava tervanvientikaupunki, ja sen satamasta lähti purjelaivojen rakennusaineeksi käytettyä tervaa ympäri Eurooppaa – tervanpoltto teki alueen talonpojista aikanaan varakkaita." },
+      { q: "Miten Oulusta tuli merkittävä teknologiakaupunki?", a: "Nokian matkapuhelinteollisuus ja Oulun yliopiston tietotekniikan tutkimus loivat 1990-luvulla alueelle vahvan teknologiaklusterin, jota kutsutaan yhä 'Oulu-ilmiöksi'." },
+    ],
+    "Northern Savonia": [
+      { q: "Mikä on Puijon näkötorni ja mitä sen huipulta näkee?", a: "Kuopion Puijon vaaralla kohoava näkötorni tarjoaa näkymän kymmenien kilometrien päähän järvien ja metsien mosaiikkiin, ja tornissa on myös pyörivä ravintola." },
+      { q: "Miksi savusauna on erityisen tärkeä osa Pohjois-Savon perinnettä?", a: "Alueella on säilynyt poikkeuksellisen paljon perinteisiä savusaunoja, joissa tuli lämmittää kiukaan kivet ilman hormia, ja Pohjois-Savon savusaunakulttuuri on ehdolla Unescon aineettomaan kulttuuriperintöön." },
+    ],
+    "Päijät-Häme": [
+      { q: "Miksi Lahti on tunnettu muotoilukaupunkina?", a: "Lahdessa on vahva huonekalu- ja teollisen muotoilun perinne 1900-luvun alusta lähtien, ja kaupungissa toimii muun muassa muotoiluun erikoistunut ammattikorkeakoulu ja useita designyrityksiä." },
+      { q: "Mikä on Vesijärvi ja mihin sitä on aikoinaan käytetty?", a: "Lahden kupeessa sijaitseva Vesijärvi toimi 1900-luvulla vilkkaana uittoväylänä ja teollisuuden jätevesien vastaanottajana, mikä rehevöitti sen pahoin – järveä on sittemmin kunnostettu vuosikymmenten ajan." },
+    ],
+    Satakunta: [
+      { q: "Miksi Pori Jazz on niin arvostettu festivaali?", a: "Vuodesta 1966 järjestetty Pori Jazz on yksi Euroopan vanhimmista ja tunnetuimmista jazzfestivaaleista, ja sen lavoilla on esiintynyt lukuisia kansainvälisiä jazz- ja populaarimusiikin suurnimiä." },
+      { q: "Mikä teki Porista aikoinaan merkittävän kauppakaupungin?", a: "Porin satama oli 1800-luvulla vilkas puutavaran vientisatama, ja kaupungin porvaristo vaurastui purjelaivakaupasta – monet aikakauden komeat puutalot ovat säilyneet keskustassa tähän päivään." },
+    ],
+    Uusimaa: [
+      { q: "Miksi Suomenlinna on Unescon maailmanperintökohde?", a: "Ruotsi alkoi rakentaa Helsingin edustan saarille Suomenlinnan merilinnoitusta 1748 puolustamaan itärajaa, ja linnoitus on säilynyt poikkeuksellisen hyvin – nykyään siellä asuu myös vakituisia asukkaita." },
+      { q: "Mikä teki Helsingistä Suomen pääkaupungin vuonna 1812?", a: "Venäjän keisari Aleksanteri I siirsi pääkaupungin Turusta Helsinkiin, koska se sijaitsi lähempänä Pietaria ja oli helpompi puolustaa mereltä – kaupunki rakennettiin sen jälkeen uudelleen empiretyyliin." },
+    ],
+    "Finland Proper": [
+      { q: "Miksi Turkua pidetään Suomen vanhimpana kaupunkina?", a: "Turku syntyi keskiajalla Aurajoen varrelle ja toimi Suomen hallinnollisena ja kirkollisena keskuksena satojen vuosien ajan, kunnes pääkaupunki siirrettiin Helsinkiin 1812." },
+      { q: "Mikä on Turun linna ja milloin se rakennettiin?", a: "Turun linna perustettiin 1280-luvulla Aurajoen suulle, ja se on yksi Pohjoismaiden suurimmista säilyneistä keskiaikaisista linnoista – sen kivimuurien sisällä on eletty seitsemän vuosisadan ajan." },
+    ],
+  },
+  BEL: {
+    Antwerp: [
+      { q: "Miksi Antwerpenia kutsutaan maailman timanttipääkaupungiksi?", a: "Antwerpenin pieni timanttikorttelin alue käsittelee jopa noin 80–85 % maailman raakatimanteista – kauppa juontaa yli 500 vuoden taakse, Intiasta tuotuihin ensimmäisiin kiviin." },
+      { q: "Kuka oli Antwerpenin kuuluisin maalari?", a: "Barokkimestari Peter Paul Rubens asui ja työskenteli Antwerpenissa, ja kaupungin Notre Damen katedraalissa on edelleen useita hänen suurteoksiaan nähtävillä." },
+    ],
+    Brussels: [
+      { q: "Mikä pieni patsas on Brysselin symboli?", a: "Manneken Pis, pissivä poikapatsas, on ollut kaupungin suihkulähteenä 1300-luvulta lähtien; nykyinen pronssiversio on vuodelta 1619, ja sille puetaan tuhansia erilaisia asuja." },
+      { q: "Mihin tilaisuuteen Atomium rakennettiin?", a: "Atomium pystytettiin Brysselin maailmannäyttelyyn Expo 58:aan symboloimaan rauta-atomin kidehilaa – siitä tuli pysyvä nähtävyys, joka seisoo edelleen paikallaan." },
+    ],
+    "Flemish Brabant": [
+      { q: "Miksi Leuven on Belgian yliopistokaupunkien kärjessä?", a: "Leuvenin katolinen yliopisto perustettiin vuonna 1425 paavi Martin V:n luvalla, ja se on Alankomaiden historiallisen alueen vanhin yliopisto." },
+      { q: "Mistä Stella Artois -olut on kotoisin?", a: "Panimoperinne juontaa Leuvenista, jossa Den Hoornin panimo toimi jo 1360-luvulla; Artois-suku otti panimon haltuunsa 1700-luvun alussa." },
+    ],
+    Hainaut: [
+      { q: "Mikä juhla Monsissa on Unescon listalla?", a: "Monsin Doudou-juhla ja siihen kuuluva lohikäärmetaistelu Lumeçon on merkitty Unescon aineettoman kulttuuriperinnön listalle vuonna 2005, ja perinne juontaa 1300-luvulle." },
+      { q: "Miksi Charleroita kutsutaan katutaiteen kaupungiksi?", a: "Entinen kaivos- ja teollisuuskaupunki Charleroi on täynnä suurikokoisia seinämaalauksia; Urban Dream -hanke on tuonut kaupunkiin kymmeniä monumentaalisia freskoja vuodesta 2014." },
+    ],
+    "East Flanders": [
+      { q: "Mikä maalaus tekee Gentin Pyhän Baavon katedraalista kuuluisan?", a: "Van Eyckin veljesten vuonna 1432 valmistunut Gentin alttaritaulu on historian varastetuin taideteos – yksi sen paneeleista on edelleen kadoksissa vuosikymmenten takaa." },
+      { q: "Kuinka pitkä Gentin kesäjuhla on?", a: "Gentse Feesten valtaa koko vanhankaupungin heinäkuussa noin kymmeneksi päiväksi ja kerää noin miljoona kävijää – yksi Euroopan suurimmista ilmaisista katujuhlista." },
+    ],
+    Liege: [
+      { q: "Kuka kuuluisa kirjailija syntyi Liègessä?", a: "Komisario Maigret -dekkarien luoja Georges Simenon syntyi Liègessä 1903 ja on yksi maailman luetuimmista belgialaiskirjailijoista, yli 500 miljoonaa myytyä kirjaa." },
+      { q: "Mikä on Montagne de Bueren?", a: "374 porrasaskelman rappu Liègen keskustassa nousee jyrkkää rinnettä ylös linnoitukselle; se rakennettiin 1880-luvulla muistoksi kaupunkia 1400-luvulla puolustaneille sotureille." },
+    ],
+    Limburg: [
+      { q: "Mikä on Bokrijk?", a: "Bokrijk on Euroopan suurimpia ulkoilmamuseoita: yli 140 vanhaa flaamilaista rakennusta on siirretty samaan puistoon Genkin lähelle kertomaan maaseudun elämästä ennen teollistumista." },
+      { q: "Miksi Hasselt on Belgian katajaviinan kaupunki?", a: "Hasselt on ollut jenever-katajaviinan valmistuksen keskus 1600-luvulta lähtien, ja kaupungin Jenevermuseumissa toimii yhä oikea, käyvä tislaamo." },
+    ],
+    Luxembourg: [
+      { q: "Mitä tapahtui Bastognessa joulun 1944 alla?", a: "Saksalaiset vaativat piiritetyn Bastognen amerikkalaisjoukkoja antautumaan Ardennien hyökkäyksen aikana; kenraali McAuliffe vastasi yhdellä sanalla: 'Nuts!' – suunnilleen 'painukaa hiiteen'." },
+      { q: "Mikä pieni kaupunki väittää olevansa maailman pienin?", a: "Durbuy on markkinoinut itseään 'maailman pienimpänä kaupunkina' aina 1300-luvulta asti, vaikka virallisesti tittelin omistaa Belgiassa nykyään Mesen." },
+    ],
+    "West Flanders": [
+      { q: "Miksi Brugge on saanut lisänimen 'Pohjolan Venetsia'?", a: "Bruggen keskiaikaiset kanaalit, kellotorni ja ehjä vanhakaupunki ovat Unescon maailmanperintökohde – kaupunki säilyi lähes koskemattomana, kun kauppareitit siirtyivät muualle 1500-luvulla." },
+      { q: "Mikä ikivanha muistoseremonia toistuu Ypresissä joka ilta?", a: "Menin Gate -muistoportilla on soitettu Last Post -iskukutsu joka ilta vuodesta 1928 (saksalaismiehitystä lukuun ottamatta) muistoksi ensimmäisessä maailmansodassa kaatuneista." },
+    ],
+    Namur: [
+      { q: "Mitä Grottes de Han -luolissa pääsee näkemään?", a: "Hanin luolat Namurin maakunnassa ovat Belgian suosituimpia nähtävyyksiä maan alla: Lesse-joki on kaivertanut vuosituhansien saatossa käytäviä ja saleja, joita kierretään opastetulla retkellä." },
+      { q: "Kuinka suuri Namurin linnoitus on?", a: "Namurin sitadelli sijaitsee Sambre- ja Meuse-jokien yhtymäkohdassa ja on yksi Euroopan laajimmista linnoituksista – maanalaisia käytäviä siellä on yli 7 kilometriä." },
+    ],
+    "Walloon Brabant": [
+      { q: "Miksi Louvain-la-Neuve on Belgian nuorin kaupunki?", a: "Louvain-la-Neuve rakennettiin tyhjästä 1970-luvulla, kun Leuvenin yliopisto jaettiin kielikiistojen seurauksena – ranskankielinen osa muutti kokonaan uuteen kaupunkiin." },
+      { q: "Mikä rauniokohde kertoo alueen luostarihistoriasta?", a: "Villersin luostarin rauniot Villers-la-Villessa ovat yksi Belgian vaikuttavimmista keskiaikaisista kohteista; sistanssilaisluostari perustettiin 1146, ja parhaimmillaan siellä asui noin 400 munkkia." },
+    ],
+  },
+  IRL: {
+    Carlow: [
+      { q: "Miksi Carlow oli sähkövalaistuksen edelläkävijä?", a: "Carlow'n kaupunki alkoi valaista katujaan sähköllä kesäkuussa 1891 – Milfordin myllyn vesivoimalla tuotettu virta teki siitä ensimmäisen sisämaan kaupungin Irlannissa tai Britanniassa, jossa oli sähköiset katuvalot." },
+      { q: "Mikä on Carlow Collegen erikoisuus?", a: "Piispa James Keeffen vuonna 1782 perustama Carlow College on Irlannin toiseksi vanhin korkeakoulu – se toimi vuosikymmeniä sekä maallikko-oppilaitoksena että papinseminaarina." },
+    ],
+    Cavan: [
+      { q: "Miksi Cavania kutsutaan järvien maakunnaksi?", a: "Cavanissa on perimätiedon mukaan 365 järveä, yksi joka päivälle vuodessa – siksi maakuntaa kutsutaan Lakeland Countyksi, vaikka tarkkaa lukua kukaan ei ole koskaan varmistanut." },
+      { q: "Mitä Cavan Burren Puistosta löytyy?", a: "Cavanin oma 'Burren', kalkkikivitasanne Cuilcagh-vuoren juurella, kätkee kivikautisia dolmeneja ja porttihautoja – alue on osa Marble Arch Cavesin Unescon geoparkkia." },
+    ],
+    Clare: [
+      { q: "Missä elokuvissa Moherin kalliot ovat esiintyneet?", a: "Moherin kalliot toimivat kuvauspaikkana Harry Potter ja Puoliverinen prinssi -elokuvassa, kun Harry ja Dumbledore etsivät kammiota luolasta, ja klassikkokomediassa Prinsessa Bride niistä tuli 'Hulluuden kalliot'." },
+      { q: "Mitä Bunrattyn linnassa voi kokea?", a: "1400-luvulla rakennettu Bunrattyn linna on yksi Irlannin parhaiten säilyneistä tornitaloista, ja sen suuressa salissa on järjestetty keskiaikaisia illallisjuhlia vuodesta 1963." },
+    ],
+    Cork: [
+      { q: "Mitä Blarneyn kivi lupaa suutelijalleen?", a: "Blarneyn linnan muuriin kiinnitetyn kiven suuteleminen tuo perinteen mukaan puhelahjan – matkailijat kumartuvat vuosittain vaarallisen näköiseen asentoon saadakseen 'irlantilaisen suulaudan'." },
+      { q: "Miksi kuningatar Elisabet II vieraili Corkin English Marketissa?", a: "Vuonna 1788 perustettu English Market on yksi maailman vanhimmista toimivista kauppahalleista, ja kuningatar Elisabet II vieraili siellä valtiovierailullaan 2011 tutustuen paikallisiin kauppiaisiin." },
+    ],
+    Donegal: [
+      { q: "Missä elokuvassa Malin Head esiintyi?", a: "Irlannin pohjoisin piste Malin Head Donegalissa toimi kuvauspaikkana Tähtien sota: Viimeinen jedi -elokuvassa vuonna 2016, kun jyrkät kalliot muuttuivat planeetta Ahch-Toksi." },
+      { q: "Mikä majakka Donegalissa on tunnettu kaunottareksi?", a: "Fanad Headin majakka Donegalin niemellä on toistuvasti nimetty yhdeksi maailman kauneimmista majakoista sen dramaattisen sijainnin ja punavalkoisen tornin ansiosta." },
+    ],
+    Dublin: [
+      { q: "Mikä on Kellsin kirja?", a: "Trinity Collegen kirjastossa säilytettävä Kellsin kirja on noin vuonna 800 tehty koristeltu evankeliumikäsikirjoitus, jonka mutkikkaat kuvitukset houkuttelevat puoli miljoonaa kävijää vuosittain." },
+      { q: "Mistä Ha'penny Bridge sai nimensä?", a: "Liffey-joen ylittävä rautasilta avattiin 1816, ja sen rakentaja sai kerätä puolen pennyn tullimaksun ylittäjiltä sata vuotta – siitä juontuu lempinimi 'Puolipennysilta', joka jäi elämään virallisen nimen unohduttua." },
+    ],
+    "Dún Laoghaire–Rathdown": [
+      { q: "Mikä yhdistää Sandycoven martellotornin ja James Joycen?", a: "James Joyce yöpyi Sandycoven martellotornissa syksyllä 1904, ja sama torni on myös näyttämönä hänen romaaninsa Ulysses avausluvulle – nykyään tornissa toimii pieni Joyce-museo." },
+      { q: "Miksi Killineyn lahtea verrataan Napolinlahteen?", a: "Killineyn lahden pehmeä kaari ja Sugarloafin huippu muistuttavat niin paljon Napolinlahtea ja Vesuviusta, että 1800-luvun varakkaat dublinilaiset nimesivät alueen tiet Vicon ja Sorrenton mukaan." },
+    ],
+    Fingal: [
+      { q: "Kuinka pitkään Talbotin suku asui Malahiden linnassa?", a: "Talbotin suku asui Malahiden linnassa yhtäjaksoisesti melkein 800 vuotta, vuodesta 1185 vuoteen 1973 – ainoa katkos oli Cromwellin aikaan, kun linna vaihtoi hetkeksi omistajaa." },
+      { q: "Mikä tekee Skerries Millsistä ainutlaatuisen Euroopassa?", a: "Skerries Millsin alueella Fingalissa on Euroopan ainoa paikka, jossa on kaksi kunnostettua myllyä, vesimylly ja leipomo samassa pihapiirissä – vanhin mylly juontaa juurensa 1400-luvulle." },
+    ],
+    Galway: [
+      { q: "Mistä Claddaghin sormus on peräisin?", a: "Perinteinen Claddaghin sormus – sydän, kruunu ja kädet – syntyi Galwayn kalastajakylä Claddaghissa 1600-luvulla, ja tarinan mukaan sen suunnitteli orjuudesta paennut kultaseppä Richard Joyce." },
+      { q: "Mikä on Dún Aonghasa?", a: "Aranin saarilla sijaitseva Dún Aonghasa on esihistoriallinen kivilinnake, joka kohoaa sata metriä meren yläpuolella olevalla kalliolla ilman minkäänlaista suojakaidetta – sitä käytettiin jo noin 1100 eaa." },
+    ],
+    Kerry: [
+      { q: "Miksi Skellig Michael tunnetaan munkeista?", a: "Ankaralla kalliosaarella Skellig Michaelilla asui 500-luvulta lähtien munkkeja lähes 600 vuoden ajan mehiläispesän muotoisissa kivimajoissa – nykyään saari tunnetaan myös Star Wars -elokuvien kuvauspaikkana." },
+      { q: "Kuka oli Fungie?", a: "Fungie oli Dinglen lahdella vuosikymmenten ajan asustanut yksinäinen pullokuonodelfiini, joka ilmestyi ensin 1983 ja katosi jäljettömiin 2020 – Guinnessin ennätyskirja nimesi sen pisimpään eläneeksi yksinäiseksi delfiiniksi maailmassa." },
+    ],
+    Kildare: [
+      { q: "Kuka suunnitteli Kildaren japanilaisen puutarhan?", a: "Irlannin kansallisen hevossiitoslaitoksen japanilaisen puutarhan Tullyssa suunnitteli japanilainen Tassa Eida poikansa kanssa 1900-luvun alussa – neljäkymmentä työntekijää rakensi sen neljässä vuodessa." },
+      { q: "Mikä on Castletown House?", a: "Celbridgessä sijaitseva Castletown House on Irlannin suurin ja komein palladiolaistyylinen kartano, rakennettu 1720-luvulla maan tuolloin rikkaimmalle yksityishenkilölle William Conollylle." },
+    ],
+    Kilkenny: [
+      { q: "Kuinka vanha Smithwick's-panimo on?", a: "John Smithwick perusti Kilkennyyn panimon vuonna 1710 fransiskaaniluostarin raunioille, ja siitä tuli sulkemiseensa 2013 asti Irlannin vanhin toimiva panimo." },
+      { q: "Kuka oli Alice Kyteler?", a: "Kilkennyläinen Dame Alice Kyteler tuomittiin noituudesta vuonna 1324 – yksi Euroopan ensimmäisistä kirjatuista noitaoikeudenkäynneistä – ja hänen kotinsa toimii nykyään Kyteler's Inn -ravintolana." },
+    ],
+    Laoighis: [
+      { q: "Mikä on Dunamasen kallio?", a: "Dunamasen kalliolla Laoisissa kohoavat normanniaikaisen linnan rauniot, jotka periytyvät varhaiskristilliseltä linnoitukselta – viikingit ryöstivät paikan jo vuonna 843." },
+      { q: "Kuka suunnitteli Emo Courtin?", a: "Emo Courtin uusklassisen kartanon Laoisissa suunnitteli 1790 James Gandon, Dublinin Custom Housen ja Four Courtsin arkkitehti – harvoja hänen suunnittelemiaan yksityiskartanoita." },
+    ],
+    Leitrim: [
+      { q: "Kuka oli Seán MacDiarmada?", a: "Leitrimissä syntynyt Seán MacDiarmada oli yksi seitsemästä miehestä, jotka allekirjoittivat Irlannin itsenäisyysjulistuksen pääsiäiskapinassa 1916 – hänet teloitettiin kapinan kukistamisen jälkeen." },
+      { q: "Mikä yhdistää joen Shannonin ja Ernen?", a: "63 kilometrin pituinen Shannon-Erne-kanava kulkee Leitrimin läpi ja yhdistää kuusitoista sulkua käyttäen Shannon-joen Erne-järveen Pohjois-Irlannissa." },
+    ],
+    Limerick: [
+      { q: "Mikä on Limerickin sopimuskivi?", a: "Thomondin sillan päässä oleva karkea kivilohkare muistuttaa vuoden 1691 sopimuksesta, joka päätti Limerickin piirityksen – sopimusta ei koskaan täysin kunnioitettu, minkä takia kaupunkia kutsutaan 'rikotun sopimuksen kaupungiksi'." },
+      { q: "Miksi Adare on Limerickin kauneimpia kyliä?", a: "Olkikattoiset kivimökit ja Adare Manorin komea kartano tekevät Adaresta yhden Irlannin valokuvatuimmista kylistä, ja se mainitaan usein maan kauneimpien joukossa." },
+    ],
+    Longford: [
+      { q: "Kuka oli Maria Edgeworth?", a: "Edgeworthstownissa varttunut Maria Edgeworth kirjoitti 1800-luvun alussa Irlannin maaseudun elämästä romaanin Castle Rackrent, jota pidetään yhtenä ensimmäisistä historiallisista romaaneista englanniksi." },
+      { q: "Missä Oliver Goldsmith syntyi?", a: "Kirjailija Oliver Goldsmithin syntymäpaikka on kiistanalainen, mutta paikallinen perinne ja perheen omat merkinnät asettavat sen Pallasin kylään Longfordissa lähellä Ballymahonia." },
+    ],
+    Louth: [
+      { q: "Mikä tekee Monasterboicesta erikoisen?", a: "Monasterboicen luostariraunioilla Louthissa seisoo Muiredachin risti, jota pidetään Irlannin hienoimpana korkeana ristinä, sekä 35-metrinen pyöreä torni 900-luvulta." },
+      { q: "Mikä myytti liittyy Cooleyn niemimaahan?", a: "Louthin Cooleyn niemimaa on näyttämönä muinaiselle Táin Bó Cúailnge -taruepokselle, jossa sankari Cú Chulainn puolustaa aluetta yksin vihollisarmeijaa vastaan." },
+    ],
+    Mayo: [
+      { q: "Miksi ihmiset kiipeävät Croagh Patrickille paljain jaloin?", a: "Perimätiedon mukaan Pyhä Patrick paastosi 400-luvulla neljäkymmentä päivää Croagh Patrickin huipulla, ja heinäkuun viimeisenä sunnuntaina tuhannet pyhiinvaeltajat kiipeävät vuorelle – osa yhä perinteen mukaan paljain jaloin." },
+      { q: "Mikä on Céide Fields?", a: "Mayon suomaan hautautuneet Céide Fieldsin kivimuurit ovat maailman vanhimpia tunnettuja peltojärjestelmiä, noin 5500–6000 vuotta vanhoja – ne löydettiin vasta, kun turvetta leikattiin 1930-luvulla." },
+    ],
+    Meath: [
+      { q: "Kuinka vanha Newgrangen hautakumpu on?", a: "Newgrange rakennettiin noin 3200 eaa., mikä tekee siitä vanhemman kuin Egyptin pyramidit ja Stonehenge – talvipäivänseisauksen aamuna aurinko valaisee sen sisäkammion hetken ajan." },
+      { q: "Mitä tapahtui Boynen taistelussa?", a: "Boynen joen rannalla lähellä Droghedaa käytiin 1. heinäkuuta 1690 taistelu, jossa Oranssin Vilhelmin joukot voittivat kuningas Jaakko II:n armeijan – tapahtuma muutti Irlannin ja Britannian valtahistoriaa." },
+    ],
+    Monaghan: [
+      { q: "Mistä Clonesin pitsi syntyi?", a: "Clonesin virkattu pitsi syntyi suuren nälänhädän aikana 1840-luvulla, kun paikallinen pappilan vaimo opetti tekniikan naapurustolle elannoksi – pitsistä tuli pian koko perheen tulonlähde ja sitä myytiin Pariisiin ja New Yorkiin asti." },
+      { q: "Kuka on Patrick Kavanagh?", a: "Yksi Irlannin arvostetuimmista runoilijoista, Patrick Kavanagh, syntyi 1904 Inniskeenin kylässä Monaghanissa ja kuvasi runoissaan rehellisesti maaseudun köyhää arkea." },
+    ],
+    Offaly: [
+      { q: "Kuka perusti Clonmacnoisen luostarin?", a: "Pyhä Ciarán perusti Clonmacnoisen luostarin Shannon-joen varrelle vuonna 544, ja siitä kasvoi keskiajalla Euroopan merkittävä oppimiskeskus opiskelijoineen ympäri mannerta." },
+      { q: "Miksi Charleville Forest Castle on tunnettu?", a: "Tullamoressa sijaitseva goottilaisrevival-linna Charleville Forest Castle on yksi Irlannin mainituimmista 'kummituslinnoista', ja sen synkät tornit ja käytävät houkuttelevat yhä paranormaalien tutkijoita." },
+    ],
+    Roscommon: [
+      { q: "Mitä Strokestown Parkin kansallinen nälänhätämuseo kertoo?", a: "Strokestown Parkista lähti 1847 kävelymatkalle Dubliniin 1490 nälänhädän runtelemaa siirtolaista, jotka toivoivat pääsevänsä laivalla Amerikkaan – kartanon arkistoista löytyi yli 50 000 asiakirjaa tästä ajasta." },
+      { q: "Mikä on Boyle Abbey?", a: "Boylen luostari perustettiin 1161 ensimmäiseksi menestyneeksi sistersiläisluostariksi Connachtin maakunnassa, ja sen kivirauniot muistuttavat yhä keskiaikaisesta munkkiyhteisöstä." },
+    ],
+    Sligo: [
+      { q: "Miksi Carrowmore on merkittävä?", a: "Sligon Carrowmoren megaliittinen hautausmaa on vanhempi kuin Newgrange, noin 700 vuotta, ja se on Irlannin suurin ja vanhin kivikautisten hautakumpujen kokonaisuus." },
+      { q: "Mikä saari inspiroi W.B. Yeatsia?", a: "Lough Gill -järven pieni Innisfree-saari innoitti runoilija W.B. Yeatsia kirjoittamaan tunnetun runon 'The Lake Isle of Innisfree', vaikka hän ei koskaan itse asunut saarella." },
+    ],
+    "South Dublin": [
+      { q: "Mitä Tallaghtin nimi tarkoittaa?", a: "Tallaghtin nimi juontuu irlanninkielisestä sanasta Tamhlacht, 'ruttohauta' – legendan mukaan paikalle haudattiin muinoin yhdessä viikossa kuolleet tuhannet ruttoon menehtyneet." },
+      { q: "Kuka rakennutti Rathfarnhamin linnan?", a: "Dublinin arkkipiispa Adam Loftus rakennutti Rathfarnhamin linnan vuonna 1583 – tornitalo yhdisti aikansa uusimmat puolustusratkaisut arkkipiispan asemaan sopivaan loistoon." },
+    ],
+    "North Tipperary": [
+      { q: "Miksi Nenaghin linnan pyöreä torni on erikoinen?", a: "Nenaghin linnan yli 30 metriä korkea pyöreä päätorni 1200-luvun alusta on monien mielestä Irlannin hienoin säilynyt normannityylinen kivilinnake, ja Butlerin suku käytti sitä pääasumuksenaan." },
+      { q: "Kuinka suuri Lough Derg -järvi on?", a: "Tipperaryn, Claren ja Galwayn rajalla sijaitseva Lough Derg on Irlannin kolmanneksi suurin järvi ja Shannon-joen suurin järvilaajentuma – suosittu veneily- ja kalastuskohde." },
+    ],
+    "South Tipperary": [
+      { q: "Mikä yhdistää Cashelin kallion ja Pyhän Patrickin?", a: "Legendan mukaan Pyhä Patrick kastoi Munsterin kuninkaan Aenghusin Cashelin kalliolla 400-luvulla – vahingossa hän lävisti sauvallaan kuninkaan jalan, jonka tämä kesti hiljaa uskoen sen kuuluvan kasteen menoihin." },
+      { q: "Mikä on Cahirin linna?", a: "Suurin osa Suir-joen saarella sijaitsevasta Cahirin linnasta on säilynyt lähes ennallaan 1100-luvulta, ja se on yksi Irlannin suurimmista ja parhaiten säilyneistä linnoista." },
+    ],
+    Waterford: [
+      { q: "Milloin Waterford Crystal perustettiin?", a: "Penrose-veljekset avasivat ensimmäisen kristallilasitehtaan Waterfordiin 1783, ja sen kirkas, puhdas lasi tunnettiin nopeasti kaupungin ylpeydenaiheena kautta Euroopan." },
+      { q: "Mikä on Reginald's Tower?", a: "Waterfordin Reginald's Tower on Irlannin vanhin yhä käytössä oleva siviilirakennus, ja se on ainoa kaupunkimuistomerkki maassa, joka on säilyttänyt viikinkiperäisen nimensä." },
+    ],
+    Westmeath: [
+      { q: "Mitä ovat Foren seitsemän ihmettä?", a: "Foren luostarin ympärille Westmeathissa on kertynyt seitsemän kansantarun 'ihmettä', kuten vettä joka ei kiehu ja puu joka ei pala – tarinat kietoutuvat 600-luvulla toimineen luostarin historiaan." },
+      { q: "Mitä tapahtui Athlonen piirityksessä 1691?", a: "Athlonen linnaan Shannon-joen varrella kohdistettiin 1691 yksi Irlannin historian raskaimmista tykistöpommituksista, kun williamilaiset ampuivat kaupunkiin noin 12 000 tykinkuulaa ennen sen valtausta." },
+    ],
+    Wexford: [
+      { q: "Missä normannit nousivat ensin maihin Irlannissa?", a: "Ensimmäinen suuri normannijoukko nousi maihin Bannow Bayssa Wexfordissa toukokuussa 1169, ja tästä alkoi normannien vuosisatoja jatkunut vaikutus Irlannin historiaan." },
+      { q: "Mikä yhdistää Wexfordin ja presidentti Kennedyn?", a: "JFK:n isoisoisä Patrick Kennedy syntyi Dunganstownin maatilalla Wexfordissa ennen siirtolaisuutta Amerikkaan, ja presidentti itse vieraili sukutilalla 1963 kutsuen sitä elämänsä parhaaksi matkaksi." },
+    ],
+    Wicklow: [
+      { q: "Kuka perusti Glendaloughin luostarin?", a: "Pyhä Kevin perusti Glendaloughin luostarin kahden järven laaksoon 500-luvulla erakkoelämää etsien, ja paikan pyöreä torni on yksi Irlannin parhaiten säilyneistä." },
+      { q: "Mihin Wicklowin vankilan vangit saattoivat päätyä?", a: "Wicklowin historiallisesta vankilasta kuljetettiin 1790-luvulta lähtien vankeja pitkälle laivamatkalle Australian rangaistussiirtokuntiin – matka oli raskas, ja moni ei selvinnyt perille." },
+    ],
+  },
+  HRV: {
+    "Bjelovarsko-bilogorska": [
+      { q: "Miksi Bjelovarin kadut ovat niin suoraviivaisia ja ruudukkomaisia?", a: "Bjelovar perustettiin 1756 keisarinna Maria Teresian määräyksestä sotilaskaupungiksi Habsburgien rajalle, ja se rakennettiin harvinaisen tarkkaan ruudukkoon linnoituksen ympärille — kaavan näkee kadulla yhä." },
+      { q: "Mikä on Terezijana?", a: "Terezijana on Bjelovarin vuosittainen historiajuhla, joka kunnioittaa kaupungin perustajaa Maria Teresiaa; kaduilla nähdään aikalaisasuja ja kulkueita perustamisen muistoksi." },
+    ],
+    "Brodsko-Posavska": [
+      { q: "Ketä kutsutaan Kroatian Andersenin, ja mitä hänellä on tekemistä Slavonski Brodin kanssa?", a: "Kirjailija Ivana Brlić-Mažuranić muutti aviomiehensä myötä Slavonski Brodiin ja kirjoitti täällä suosituimmat satunsa; häntä kutsutaan Kroatian Andersenin vertaansa vailla olevan sadunkerronnan takia." },
+      { q: "Mikä tekee slavonialaisesta kulen-makkarasta erityisen?", a: "Slavonski kulen on paprikalla maustettu kuivamakkara, jota on valmistettu samalla perinteellä yli 200 vuotta; EU myönsi sille suojatun maantieteellisen merkinnän vuonna 2017." },
+    ],
+    "Dubrovacko-Neretvanska": [
+      { q: "Mikä tekee Stonin suolapadoista niin erikoisia?", a: "Stonin suolapadot ovat Euroopan vanhimmat yhä toimivat suolalammikot; niiden yli 5 kilometrin pituiset suojamuurit rakennettiin 1300–1400-luvuilla ja lasketaan maailman pisimpien linnoitusmuurien joukkoon." },
+      { q: "Miksi Dubrovnikin vanhakaupunki näyttää monelle tutulta televisiosta?", a: "Dubrovnikin muurien ympäröimä vanhakaupunki toimi kuvauspaikkana Game of Thrones -sarjan kuvitteelliselle King's Landingin kaupungille, ja se houkuttelee edelleen sarjan faneja kiertokäynneille." },
+    ],
+    Istarska: [
+      { q: "Miksi Pulan amfiteatteria pidetään yhtenä maailman parhaiten säilyneistä?", a: "Pulan Arena on Roomalaisvaltakunnan kuudenneksi suurin amfiteatteri, mutta se on ainoa, jonka kaikki neljä kulmatornia ovat säilyneet ehjinä — siksi sitä pidetään parhaiten säilyneenä." },
+      { q: "Mitä herkkua Istrian metsistä etsitään koirien avulla syksyisin?", a: "Istria on kuuluisa valkoisista tryffeleistään, joita etsitään koulutettujen koirien kanssa erityisesti Motovunin ympäristön tammimetsistä; alueella järjestetään niille omistettuja syysjuhlia." },
+    ],
+    "Karlovacka": [
+      { q: "Mistä lähtien Karlovacissa on pantu tynnyriin olutta?", a: "Karlovačka-panimo perustettiin Karlovaciin vuonna 1854, ja sen Karlovačko-olut on yhä yksi Kroatian tunnetuimmista — vuonna 2005 se voitti kultaa arvostetussa Münchenin olutkilpailussa." },
+      { q: "Missä sijaitsee Kroatian 'pieni Plitvice'?", a: "Slunjin kylässä Rastokessa Slunjčica-joki jakautuu lukuisiin pieniin putouksiin vanhojen puisten myllyrakennusten lomassa — maisemaa verrataan usein pienimuotoisena Plitvicen järviin." },
+    ],
+    "Koprivničko-Križevačka": [
+      { q: "Miksi Križevci on merkittävä maatalouden historiassa?", a: "Križevciin perustettiin 1860 Kaakkois-Euroopan ensimmäinen maatalous- ja metsäopisto, ja opetus tapahtui poikkeuksellisesti kroaatin kielellä silloisessa Itävalta-Unkarin monarkiassa." },
+      { q: "Mitä jäljellä on Koprivnican vanhoista linnoitusmuureista?", a: "Koprivnica linnoitettiin 1500-luvun jälkipuoliskolla osmanien hyökkäyksiä vastaan, ja osa renessanssiaikaisista puolustusmuureista on säilynyt — niiden kunniaksi kaupungissa järjestetään Kroatian suurin renessanssijuhla." },
+    ],
+    "Krapinsko-Zagorska": [
+      { q: "Miten keskiaikaisesta vartiolinnasta tuli satumainen linna järvenrannalla?", a: "Trakošćanin linna rakennettiin 1200-luvun lopulla vartiotorniksi, mutta 1800-luvulla Drašković-suvun Juraj muutti sen romanttiseksi uusgoottilaiseksi linnaksi ja patosi puron järveksi linnan ympärille." },
+      { q: "Mikä kolkko tarina liittyy Veliki Taborin linnaan?", a: "Legendan mukaan 1400-luvulla nuori Veronika Desinićistä rakastui linnanherran poikaan, mutta isä tuomitsi hänet noituudesta ja hukutti hänet linnan pihalla — tarina elää yhä suullisena perinteenä." },
+    ],
+    "Licko-Senjska": [
+      { q: "Mikä on Kroatian vanhin ja suurin kansallispuisto?", a: "Plitvicen järvien kansallispuisto perustettiin vuonna 1949 ja se on Kroatian vanhin kansallispuisto; sen turkoosit terassijärvet ja vesiputoukset ovat kuuluneet Unescon maailmanperintöluetteloon vuodesta 1979." },
+      { q: "Mitä erikoista löytyy Velebitin vuoriston laella olevasta puutarhasta?", a: "Zavižanin kasvitieteellinen puutarha 1480 metrin korkeudessa on Kroatian ainoa vuoristopuutarha; se perustettiin 1960-luvulla ja siellä kasvaa Velebitille ainutlaatuisia endeemisiä kasvilajeja." },
+    ],
+    Medimurska: [
+      { q: "Kuka omisti Čakovecin vanhan linnan viisi sukupolvea peräkkäin?", a: "Zrinski-suku hallitsi Čakovecin linnaa 1546 alkaen viiden sukupolven ajan ja teki siitä alueen kulttuurikeskuksen; nykyään linnan päärakennuksessa toimii Međimurjen maakuntamuseo." },
+      { q: "Mikä međimurjelainen lauluperinne on päässyt Unescon listalle?", a: "Međimurska popevka -kansanlauluperinne, jonka nuottikuvia tunnetaan 1500-luvulta, lisättiin Unescon aineettoman kulttuuriperinnön listalle vuonna 2018 sen ainutlaatuisen pentatonisen sävelasteikon ansiosta." },
+    ],
+    "Osjecko-Baranjska": [
+      { q: "Miksi Đakovon hevostila on Euroopan mittakaavassa merkittävä?", a: "Đakovon valtion hevostila perustettiin vuonna 1506, ja lipizzanerhevosia on kasvatettu siellä 1800-luvun alusta — tila on 74 vuotta vanhempi kuin kuuluisa Lipican tila Sloveniassa." },
+      { q: "Mikä on Tvrđa, ja miksi se rakennettiin Osijekiin?", a: "Tvrđa on 1712–1722 rakennettu tähdenmuotoinen barokkilinnoitus, joka pystytettiin osmanien karkottamisen jälkeen; se on Kroatian suurin ja parhaiten säilynyt barokkirakennusten kokonaisuus." },
+    ],
+    "Primorsko-Goranska": [
+      { q: "Miksi Opatijaa kutsuttiin joskus 'Itävalta-Unkarin Rivieraksi'?", a: "1800-luvulla rikennettiin Villa Angiolina 1844, ja pian ylhäisö Wienistä ja Budapestista teki Opatijasta muodikkaan terveyskylpylän; 12 kilometrin pituinen Lungomare-rantapromenadi valmistui vuonna 1889." },
+      { q: "Mikä ennätys Krkin sillalla oli valmistuessaan?", a: "Vuonna 1980 avattu Krkin silta yhdistää saman nimisen saaren mantereeseen, ja sen 390 metrin pituinen kaari oli valmistuessaan maailman pisin betoninen kaari, kunnes ennätys siirtyi myöhemmin Kiinaan." },
+    ],
+    "Šibensko-Kninska": [
+      { q: "Mikä tekee Krkan kansallispuiston putouksista poikkeuksellisia?", a: "Skradinski buk Krkan kansallispuistossa on Euroopan suurin travertiinikivestä muodostunut putoussarja; kalkkipitoinen vesi kerrostaa kasveihin travertiinia, joka kasvattaa uusia kynnyksiä vuosien mittaan." },
+      { q: "Miksi Kninia kutsuttiin 'kuninkaiden kaupungiksi'?", a: "Kninin linnoitus on Kroatian suurin linnoitusmonumentti, ja se toimi 1000-luvulla Kroatian kuninkaiden — muun muassa kuningas Zvonimirin — hallintokeskuksena, minkä ansiosta kaupunkia kutsuttiin kuninkaiden kaupungiksi." },
+    ],
+    "Sisacko-Moslavacka": [
+      { q: "Miksi Sisakin vanha linna on kolmion muotoinen?", a: "1500-luvulla rakennettu Sisakin linnoitus on kolmiomainen renessanssilinnake Kupan ja Savan yhtymäkohdassa; se rakennettiin torjumaan osmanien hyökkäyksiä, ja vuonna 1593 siellä käytiin ratkaiseva taistelu." },
+      { q: "Mikä roomalaiskaupunki sijaitsi nykyisen Sisakin paikalla?", a: "Roomalainen Siscia oli merkittävä kaupunki ja rahapajan sijaintipaikka, joka löi kolikoita legioonien palkanmaksuun jopa 400-luvulle asti — kolikot tunnetaan yhä numismaatikkojen keskuudessa." },
+    ],
+    "Splitsko-Dalmatinska": [
+      { q: "Miten Roomasta tuli osa nykyistä Splitiä?", a: "Diokletianuksen palatsi rakennettiin noin vuonna 305 keisari Diokletianuksen eläkepäivien asunnoksi, ja se on niin hyvin säilynyt, että ihmiset asuvat ja käyvät kauppaa sen muurien sisällä yhä tänään." },
+      { q: "Missä sijaitsee Euroopan vanhin yleinen teatteri?", a: "Hvarin kaupunginteatteri avattiin vuonna 1612 kaikille kansalaisille säädystä riippumatta, mikä oli aikanaan poikkeuksellista — sitä pidetään Euroopan vanhimpana kunnallisena teatterina." },
+    ],
+    "Varaždinska": [
+      { q: "Miksi Varaždinin hautausmaata kutsutaan Euroopan kauneimmaksi?", a: "Puutarhamestari Hermann Haller muotoili Varaždinin hautausmaan vuodesta 1905 alkaen leikattujen sypressien ja lehtomaisten käytävien puistoksi; monet pitävät sitä yhtenä Euroopan kauneimmista hautausmaista." },
+      { q: "Mikä musiikkijuhla on järjestetty Varaždinissa vuodesta 1971?", a: "Varaždinin barokki-illat -festivaali tuo joka syksy kaupungin barokkipalatseihin ja kirkkoihin vanhan musiikin konsertteja aidoilla soittimilla; se on yksi Euroopan arvostetuimmista barokkimusiikin juhlista." },
+    ],
+    "Viroviticko-Podravska": [
+      { q: "Mikä Viroviticaa hallitsevaa linnaa ympäröi vallihauta?", a: "Pejačević-linna rakennettiin vuosina 1800–1804 keskiaikaisen rauniolinnan paikalle, ja sitä ympäröi vielä nykyään vallihauta; linnan puistoon johtaa kuusi teemallista siltaa, joista yksi soi kävellessä." },
+      { q: "Miksi Voćinin kirkko on tuhottu ja rakennettu uudelleen kahdesti?", a: "1400-luvulta peräisin oleva goottilainen Voćinin kirkko tuhoutui toisessa maailmansodassa ja jälleen räjäytettynä vuonna 1991, mutta se on molemmilla kerroilla rakennettu uudelleen ja koroitettu 2022 pienoisbasilikaksi." },
+    ],
+    "Vukovarsko-Srijemska": [
+      { q: "Mikä on Kroatian itäisin kaupunki, ja mistä se on kuuluisa?", a: "Ilok on Kroatian itäisin kaupunki Tonavan rannalla, ja sen viinikellarit Iločki podrumi tuottavat maan palkituimpia Graševina-valkoviinejä yli tuhatvuotisen viininviljelyperinteen jatkona." },
+      { q: "Mikä esine yhdistää Vukovarin ja vanhan 20 kunan setelin?", a: "Vučedolin kyyhky on noin 5000 vuotta vanha keraaminen riittiastia, joka löytyi Vukovarin läheltä; sen kuva painettiin aikanaan Kroatian 20 kunan setelin kääntöpuolelle." },
+    ],
+    Zadarska: [
+      { q: "Kuinka moni saari kuuluu Kornatin kansallispuistoon?", a: "Kornatin kansallispuisto koostuu 89 asumattomasta saaresta, saarekkeesta ja kalliosta keskellä Adrianmerta; koko Kornatin saariryhmä on laajempi, mutta vain tämä osa on suojeltu kansallispuistona." },
+      { q: "Mikä valoteos on Zadarissa Meriurkujen vieressä?", a: "Arkkitehti Nikola Bašić suunnitteli Zadariin vuonna 2008 valmistuneen 'Tervehdys auringolle' -teoksen, jonka 300 aurinkopaneelilasilevyä lataa energiaa päivällä ja loistaa värikkäänä valoshow'na illalla." },
+    ],
+    Zagrebacka: [
+      { q: "Mikä on Jastrebarskon vanhin rakennus?", a: "Erdödy-linna Jastrebarskossa rakennettiin 1483–1489, ja Erdödy-suku omisti sen aina vuoteen 1922 asti; linnaa ympäröivä englantilaistyylinen puisto on suojeltu puutarhataiteen muistomerkkinä." },
+      { q: "Mikä harvinainen sikarotu asustaa yhä Turopoljen tammimetsissä?", a: "Turopoljen sika on keskiajalla syntynyt kroatialainen alkuperäisrotu, joka on sopeutunut elämään Turopoljen tulva-alueen tammimetsissä; rotu on nykyään erittäin uhanalainen." },
+    ],
+    "Grad Zagreb": [
+      { q: "Kuinka lyhyt on Zagrebin funikulaari?", a: "Zagrebin funikulaari on vain 66 metriä pitkä ja matka kestää 64 sekuntia, mikä tekee siitä yhden maailman lyhyimmistä julkisista funikulaareista; se on toiminut vuodesta 1890." },
+      { q: "Mikä keskiaikainen linna kohoaa Zagrebin yllä Medvednican rinteellä?", a: "Medvedgrad-linna rakennettiin 1249–1254 Zagrebin piispan käskyllä tataarien hyökkäyksen jälkeen; sitä ei koskaan valloitettu taistelussa, mutta maanjäristys jätti sen raunioiksi vuonna 1590." },
+    ],
+  },
 };

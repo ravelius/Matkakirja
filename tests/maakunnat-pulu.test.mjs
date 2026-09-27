@@ -4,12 +4,15 @@ import { MAAKUNTIEN_LUONNEHDINNAT } from '../js/packs/maakunnat-luonnehdinnat.js
 import { MAAKUNTIEN_PULU } from '../js/packs/maakunnat-pulu.js';
 
 /*
- * GRC, NLD, BEL, DNK, SVK, FIN, EST, LVA, LTU ja SVN ovat 25.9.2026
- * lähtien erässä 1 (vain lyhyt, ks. maakunnat-luonnehdinnat.js:n
- * kommentti) — pulu tulee vasta erässä 3, joten se ei kuulu vielä
- * tähän täydellisyystestiin. Samoin MDA, UKR, BLR ja ISL (erä 3A).
+ * GRC, BEL, DNK, SVK, FIN, EST, LVA, LTU ja SVN ovat 25.9.2026 lähtien
+ * erässä 1 (vain lyhyt, ks. maakunnat-luonnehdinnat.js:n kommentti) —
+ * pulu tulee vasta erässä 3, joten ne eivät kuulu vielä tähän
+ * täydellisyystestiin. Samoin MDA, UKR, BLR ja ISL (erä 3A). NLD ja
+ * CHE saivat pulun 27.9.2026, CZE ja HUN 27.9.2026, PRT, SWE, NOR, DNK,
+ * FIN, BEL, IRL ja HRV 27.9.2026 (HRV myös pitkä-luonnehdinta), ja on
+ * siksi poistettu tästä joukosta.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA', 'AFG', 'MNG', 'KAZ', 'UZB', 'TKM', 'KHM', 'LAO', 'MMR', 'BTN', 'TLS', 'GEO', 'ARM', 'AZE', 'YEM', 'OMN', 'ARE', 'QAT', 'KWT', 'BHR', 'AGO', 'COD', 'CMR', 'TCD', 'SDS', 'SDN', 'MDG', 'MOZ', 'ZWE', 'NAM', 'UGA', 'SEN', 'SLE', 'LBR', 'LBY', 'MLI', 'SOM', 'GTM', 'NIC', 'CUB', 'PAN', 'HKG', 'TWN', 'PRK', 'TJK', 'KGZ', 'PNG', 'SLB', 'FJI', 'VUT', 'NCL', 'GRL', 'BMU', 'SHN', 'KOR']);
+const ERASSA_1 = new Set(['GRC', 'SVK', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'LUX', 'MLT', 'BGR', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA', 'AFG', 'MNG', 'KAZ', 'UZB', 'TKM', 'KHM', 'LAO', 'MMR', 'BTN', 'TLS', 'GEO', 'ARM', 'AZE', 'YEM', 'OMN', 'ARE', 'QAT', 'KWT', 'BHR', 'AGO', 'COD', 'CMR', 'TCD', 'SDS', 'SDN', 'MDG', 'MOZ', 'ZWE', 'NAM', 'UGA', 'SEN', 'SLE', 'LBR', 'LBY', 'MLI', 'SOM', 'GTM', 'NIC', 'CUB', 'PAN', 'HKG', 'TWN', 'PRK', 'TJK', 'KGZ', 'PNG', 'SLB', 'FJI', 'VUT', 'NCL', 'GRL', 'BMU', 'SHN', 'KOR']);
 test('jokaisella luonnehdinta-avaimella on pulu 2-3 paria, ei ylimääräisiä avaimia', () => {
   for (const [iso, alueet] of Object.entries(MAAKUNTIEN_LUONNEHDINNAT)) {
     if (ERASSA_1.has(iso)) continue;
