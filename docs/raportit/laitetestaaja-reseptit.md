@@ -6,6 +6,83 @@ Kolme erillistä komentotiedostoa Documents-kansiossa, sama peli lukee kaikkia s
 löytyi 26.9.2026 build 20:n testauksessa: kamera-, usva- ja maakuntakomennot ovat siinä, ja se toimii
 samassa Kartta-skenessä kuin peli-komento.txt (Natiiviseppä vahvisti: sama konsoli kaikissa käännöksissä).
 
+## 1.0.28-kierroksen valmisteltu resepti (Fable 27.9.2026 klo 07.2x, ennen buildia)
+
+Kaikki 7/8 kohteesta ovat jo mergattu juna/b13:een (tip 180e22dc, 27.9. 07:17) — tarkista
+`git log master..juna/b13` ennen kierrosta jos lisää on tullut. **HUOM Kinderdijk (kohta 7):**
+varsinainen mylly-3D-malli on VAIN mergaamattomalla haaralla `mallinseppa/erikoismallit2`
+(01810d0c) — ellei sitä mergata ennen 1.0.28:n käännöstä, testaa vain kynnysarvo-korjaus (yleinen
+mylly-arkkityyppi), ei bespoke-mallia.
+
+**P1 (sisältö vaihtuu ilman kaatumista, NostoSisalto-korjaus fa30e4a3):**
+Ei komentoa — sama tausta-automatiikka kuin 170:ssä, mutta nyt race-condition korjattu. Käynnistä
+haku ennen sisällön vaihtoa herättääksesi saman koodipolun:
+```
+echo "ui nosto skandaali:shakkiturkkilainen" > ui-komento.txt
+```
+Vie sovellus taustalle/takaisin ~1 s sisällä (uudempi paketti saatavilla). Onnistuminen: EI
+NullReferenceException/KeyNotFoundException NostoSisalto-alueella, normaali "sisältö vaihtui
+vX→vY kesken istunnon" -rivi.
+
+**Pulun kaiutinvipu (natiivi, ON=kulta+aallot / OFF=haalea+yliviivaus):**
+```
+echo "chat" > ui-komento.txt
+```
+Napauta kaiutinkuvaketta kahdesti (molemmat tilat). Ei lokiriviä — puhtaasti visuaalinen.
+
+**Striimiääni-valitsin ei tyhjä (iPhone):** Avaa `ui valikko` → ☰ Muut → Kehittäjä (rataskuvake) →
+tarkista "Striimiääni"-rivin valitsin näyttää tekstin koko rivin levyisenä, ei puristunut tyhjäksi.
+Ei konsolikomentoa suoraan tähän näkymään.
+
+**Lukijan tauko (mittaa ms, KortinLukija-putki):**
+```
+echo "wiki" > ui-komento.txt
+```
+Napauta "Kuuntele artikkeli". Onnistuminen lokista: ensimmäinen segmentti "(verkko)" ~1-5s ok,
+TOINEN+ segmentti pitää lukea "(välimuisti)" pienellä ms-arvolla (ei enää "(verkko)" ~5000ms).
+FAIL jos 2.+ segmentti yhä "(verkko)"-tilassa.
+
+**Erikoismallit MSM/Stonehenge/Colosseum (linssi-komento.txt):**
+```
+echo "aja 48.6361 -1.5115 0.15 2" > komento.txt
+echo "erikois tapahtuma mont-saint-michel" > linssi-komento.txt
+echo "aja 51.1789 -1.8262 0.15 2" > komento.txt
+echo "erikois tapahtuma stonehenge" > linssi-komento.txt
+echo "aja 41.8902 12.4922 0.15 2" > komento.txt
+echo "erikois tapahtuma colosseum" > linssi-komento.txt
+echo "erikois tila" > linssi-komento.txt
+```
+Onnistuminen: kaikki kolme "liikkuu" (ei "odottaa"/"ei näkyvissä"). Tarkista myös ettei mikään
+leikkaudu liioitellun maaston läpi lähikuvassa.
+
+**Kategoriasymbolit 3D + seepiaramppi, vuori Olympoksella (maastokorkeus):**
+```
+echo "symbolit tila" > komento.txt
+echo "aja 40.086 22.358 0.15 2" > komento.txt
+echo "kallista 45" > komento.txt
+echo "symbolit tila" > komento.txt
+```
+Onnistuminen: `symbolit tila` listaa vuori-instanssin taso 1:ssä, malli istuu maaston pinnalla
+(ei kellu/uppoa) kaikissa kallistus/zoomikulmissa, väri lämmin seepia (ei harmaa).
+
+**Kinderdijk NLD (taso1-kynnys pienissä maissa):**
+```
+echo "aja 51.88 4.63 0.08 2" > komento.txt
+echo "symbolit tila" > komento.txt
+echo "nostot tila NLD" > komento.txt
+```
+Onnistuminen: taso 1:ssä näkyy mylly (tai kinderdijk jos erikoismallit2 mergattu), vaikka
+`nostot tila NLD`:n ZoomKerroin on selvästi alle 2.5 (~1.2-1.3).
+
+**177 (uusi peli, mittauslippujen säilyminen, korjaus 0430842):**
+```
+echo "saapuminen vartija paalle" > komento.txt
+echo "uusi-peli 1 ateena" > peli-komento.txt
+echo "saapuminen vartija tila" > komento.txt
+```
+Onnistuminen: `saapuminen vartija tila` raportoi SAMAN tilan (päällä) uuden pelin jälkeen —
+ennen korjausta tämä olisi nollautunut. Aja myös perus-177 ja kortti-avattuna-variantti mukana.
+
 ## 02:00-käännöksen (jälkeen TF 1.0.27) valmisteltu resepti (Fable 27.9.2026, ennen buildia)
 
 Lyhyt kierros: ylhäältä-perspektiivi (löydös 175 jatko, omistajan "Nyt"), lipun perspektiivi, savuke
