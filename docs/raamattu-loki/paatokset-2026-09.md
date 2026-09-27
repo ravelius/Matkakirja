@@ -8087,3 +8087,7 @@ Omistaja 11.2x: nahtavyydet pitaa korjata yhdenmukaisen nakoisiksi (osa kuvakaap
 ## OMISTAJA 11.2x (SITOVA): UUSI LINSSI TAI PELI TEETETAAN OPUKSELLA MAX-TILASSA, VAATIMUS VIIMEISEN PAALLE HIENO LOPPUTULOS (27.9.2026 klo 11.17)
 
 Omistaja 11.2x: kun lentokone tai mika tahansa muu uusi linssi tai peli teetetaan Opuksella, sessiolle aina max-tila paalle ja vaatimus tehda viimeisen paalle hieno lopputulos kaikin puolin. Fablen kanta (hyvaksytty periaate): kylla; hyvaksymislista ennen merge-pyyntoa (toimii laitteella ilman poikkeuksia, 30 fps, kuvapari + video omistajalle, aani/musiikki mukana, oppimiskytkos kirjattu, ei placeholder-grafiikkaa), omistaja hyvaksyy kuvista; max koskee suunnittelua ja toteutusta, ei todennuksia/deltoja/siivouksia. Raamattuun seuraavassa Raamattu-PR:ssa (TYOTAPA: effort-saanto).
+
+## OMISTAJA 11.3x (SITOVA): FPS-VAATIMUS PELIN JA LINSSIN MUKAAN — TOIMINTAJUTUISSA VASTA 60 fps ON RIITTAVAN SULAVA, ARVIOIDAAN TAPAUSKOHTAISESTI (27.9.2026 klo 11.19)
+
+Omistaja 11.3x tarkennus hyvaksymislistaan: fps-vaatimus ei ole kiintea 30 — se maaritellaan pelin ja linssin mukaan; lahtokohtaisesti toimintajutuissa (esim. lentopeli, minipelit) vasta 60 fps on riittavan sulava; rauhallisissa linsseissa/kartan levossa voi riittaa vahemman. Jokaiselle uudelle linssille/pelille kirjataan oma fps-tavoite suunnitelmaan ja se mitataan laitteella ennen merge-pyyntoa.
