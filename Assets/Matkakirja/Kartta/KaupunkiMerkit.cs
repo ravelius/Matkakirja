@@ -519,7 +519,23 @@ namespace Matkakirja
         /// Liiku, pulu, yläpalkki) ruutupikseleinä, y ylös. Natiivi-UI asettaa; ne varataan nostoikonien jälkeen ennen
         /// kaupunkeja, joten kaupunkien ja alueiden nimiöt väistävät niitä (pisteet pysyvät paikallaan).
         /// </summary>
-        public static System.Func<IReadOnlyList<Ruutulaatikko>> Kalusteet;
+        /// Fablen päätös 27.9. klo 10.3x: myös erikoismallit ovat kalusteita (Symbolimallit.LisaaKalusteet), joten noston,
+        /// maastokohteen ja kaupungin nimiö väistää mallia. Asetus (UI) ja luku (KaupunkiMerkit, NostotKartalla) ennallaan.
+        public static System.Func<IReadOnlyList<Ruutulaatikko>> Kalusteet
+        {
+            get => uiKalusteet == null && !Symbolimallit.KalusteitaOn ? null : KalusteetYhdessa;
+            set => uiKalusteet = value;
+        }
+        static System.Func<IReadOnlyList<Ruutulaatikko>> uiKalusteet;
+        static readonly List<Ruutulaatikko> kalusteetYhdessa = new List<Ruutulaatikko>();
+        static IReadOnlyList<Ruutulaatikko> KalusteetYhdessa()
+        {
+            kalusteetYhdessa.Clear();
+            var ui = uiKalusteet?.Invoke();
+            if (ui != null) for (int i = 0; i < ui.Count; i++) kalusteetYhdessa.Add(ui[i]);
+            Symbolimallit.LisaaKalusteet(kalusteetYhdessa);
+            return kalusteetYhdessa;
+        }
         readonly List<Merkki> nakyvat = new List<Merkki>();
         readonly List<NimiLadonta.KaupunkiEhdokas> ehdokkaat = new List<NimiLadonta.KaupunkiEhdokas>();
         readonly List<bool> naytetaan = new List<bool>();
