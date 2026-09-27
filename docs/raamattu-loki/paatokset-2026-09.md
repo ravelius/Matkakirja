@@ -8423,3 +8423,7 @@ Julkaisija 00.02: #3513 mergetty, APP_VERSION 2026-09-21.2347 tuotannossa, js/pu
 ## STRIIMILUENTA JULKAISTU: TF 1.0.34 (202609272058 = BUILD 34 17c2928b) + WEB v2347; KAIKKI ROOLIT TAUOLLA, LUOVUTUKSET PUSHATTU → TILINVAIHTO (28.9.2026 klo 00.35)
 
 Julkaisija 00.3x: TF 1.0.34 sisäisessä ryhmässä (ajo 36351716395), What to test asetettu. Kaikkien roolien luovutukset pushattu (taulukko docs/raportit/viesti-fable-luovutus-20260928.md). Yöpoltto jatkuu vahdilla v5e, Postivahti seuraa. Fablen luovutus -20260928 + aloitusviesti.
+
+## YOPOLTTO: VAIHE 1 (z0–z8) VALMIS 00.39, EHEYS 119 495/119 495; 'KOODI 1' OLI LUETTELON VIENTIVARTIO, EI POLTTOVIKA; VAIHE 2 (SYVA T7) KAYNNISSA (28.9.2026 klo 00.47)
+
+Karttaseppa: --ilman-nostoja-ajo ei kanna ampärin varitasot/nostotasot/erat/nimiotaso-kenttia luetteloon → vartio 1. Aamun viennissa luettelo yhdistetaan ampärin luettelosta (kortissa omistajalle). Tyokaluvika polta-paikallisesti.sh ~r.2948 korjataan PR:na polton jalkeen. Vaihe 2 uudella vahdilla PID 82063 noin 00.52 alkaen.
