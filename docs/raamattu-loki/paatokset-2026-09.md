@@ -8155,3 +8155,7 @@ Sisaltokirjurin tyylitarkastus #3398 (raportti nahtavyyskuvien-tyyli-20260927.md
 ## 1.0.29 VIE: LAITETESTAAJAN iPHONE-KIERROS c567fa57 0 POIKKEUSTA (YDINAIHEET PASS); PULU/PUHEVIRTA-UUSINTA JA iPAD RINNAKKAIN; LENTO V3 9d318451 1.0.30-JUNAAN (27.9.2026 klo 12.26)
 
 Laitetestaaja (raportti savukierros-tf1029-20260927.md): meri, lahitaso, nostot heti, maakuntatayto PASS; pulu + puhevirta koodivahvistettu mutta aanta ei kuultu testityokalun tap-koordinaattibugin takia (laitepisteet vs kuvapikselit); iPad ja 3 UI-kohdetta ajamatta. Fablen paatos (tyonjohtajan harkinta: omistaja haluaa nahda meren tanaan, vika testityokalussa): juna/b13 918a18f2 → master + BUILD → Julkaisija TF 1.0.29 heti; uusinnat samalla SHA:lla, loydokset 1.0.30:aan. Natiiviseppa: lento v3 natiiviseppa/lento-v3 9d318451 (kaannos dfa610ef; Lontoo → Ateena 15,0 s, kaytava 235/235, 0 poikkeusta) 1.0.30-junaan.
+
+## OMISTAJA: LENTOPELI ODOTTAA ENSI VIIKKOA (EI TOTEUTUSTA NYT) (27.9.2026 klo 12.26)
+
+Omistaja 27.9.2026: lentopelia ei tehda viela, jatetaan odottamaan ensi viikkoa. Suunnitelma ja hyvaksymislista (Linssisepan 948a66567, omistajan vastaukset: Kauppa 60 £, peukaloveto + kaasu, hinnat, 6 min, vain natiivi) jaavat valmiiksi; prototyyppi pois Linssisepan jonosta. Lento v3 (9d318451) ei ole lentopeli ja menee 1.0.30:aan.
