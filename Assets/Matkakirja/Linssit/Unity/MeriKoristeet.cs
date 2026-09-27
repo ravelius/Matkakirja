@@ -87,6 +87,19 @@ namespace Matkakirja.Natiivi
                 Lapsi = MeriHirvio.Lapsi, Lapsia = MeriHirvio.Lapsia, Lapsi2 = MeriHirvio.Lapsi2, Lapsia2 = MeriHirvio.Lapsia2,
                 Lapsi3 = MeriHirvio.Lapsi3, Lapsia3 = MeriHirvio.Lapsia3, Nakyy = MeriHirvio.Nakyy, Animoi = MeriHirvio.Animoi,
                 Aikataulu = MeriHirvio.Aikataulu, Harvinainen = true },
+            new Laji { Nimi = MeriDelfiinit.Nimi, Meret = MeriDelfiinit.Meret, KokoPt = MeriDelfiinit.KokoPt,
+                Roottori = MeriDelfiinit.Roottori, Lapsi = MeriDelfiinit.Lapsi, Lapsia = MeriDelfiinit.Lapsia,
+                Lapsi2 = MeriDelfiinit.Lapsi2, Lapsia2 = MeriDelfiinit.Lapsia2, Lapsi3 = MeriDelfiinit.Lapsi3,
+                Lapsia3 = MeriDelfiinit.Lapsia3, Nakyy = MeriDelfiinit.Nakyy, Animoi = MeriDelfiinit.Animoi,
+                Aikataulu = MeriDelfiinit.Aikataulu },
+            new Laji { Nimi = MeriLokit.Nimi, Meret = MeriLokit.Meret, KokoPt = MeriLokit.KokoPt, Roottori = MeriLokit.Roottori,
+                Lapsi = MeriLokit.Lapsi, Lapsia = MeriLokit.Lapsia, Lapsi2 = MeriLokit.Lapsi2, Lapsia2 = MeriLokit.Lapsia2,
+                Lapsi3 = MeriLokit.Lapsi3, Lapsia3 = MeriLokit.Lapsia3, Nakyy = MeriLokit.Nakyy, Animoi = MeriLokit.Animoi,
+                Aikataulu = MeriLokit.Aikataulu },
+            new Laji { Nimi = MeriJaavuori.Nimi, Meret = MeriJaavuori.Meret, KokoPt = MeriJaavuori.KokoPt,
+                Roottori = MeriJaavuori.Roottori, Lapsi = MeriJaavuori.Lapsi, Lapsia = MeriJaavuori.Lapsia, Lapsi2 = MeriJaavuori.Lapsi2,
+                Lapsia2 = MeriJaavuori.Lapsia2, Lapsi3 = MeriJaavuori.Lapsi3, Lapsia3 = MeriJaavuori.Lapsia3, Nakyy = MeriJaavuori.Nakyy,
+                Animoi = MeriJaavuori.Animoi, Aikataulu = MeriJaavuori.Aikataulu, VahintaanLat = 63 },
         };
 
         /// <summary>Kytkin (komento "elava elementit meri 0|1", oletus päällä): pois = ei meren koristeita.</summary>
