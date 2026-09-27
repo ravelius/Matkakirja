@@ -93,3 +93,10 @@ Kuvaparit uusittu: `/Users/Shared/Claude/proto-3d/lokit/rahattomuuspalkki/kuvapa
   Selaimessa todennettu: sfx pois → lueAaneen käynnistyy. node --test 4458/0.
 - Natiivi 1.0.31 **pelikoodari/luenta-aina f4ab9dc2** → Natiiviseppä: Puhe-taso ei nollaudu Äänimaisemasta; Lue/Soita/Esihae(pyynnosta).
   Samassa: Natiivisepän pyytämät `koetila raha|rahaton|loppukortti`. Natiivi-UI:lle lista kaiutinkutsuista (pyynnosta: true).
+
+## ELÄMÄPALKKI 16.1x valmis → #3421 34524825 (omistajan korttiin)
+
+Oletus heti kartan yläreunassa; väistää matkakirjan kyltin/kortin ja selitenapin alle (ei päällekkäisyyttä, kortin avaus siirtää).
+Napautus → miniselite pergamenttilapussa: "Rahat ovat loppu. Jokainen neliö on 6 tuntia matkaa — kun kaikki sammuvat, matka
+päättyy. Ansaitse tai löydä rahaa jatkaaksesi." (sulkeutuu napautuksella tai 7 s). Kuvat (A oletus | B miniselite | C väistö):
+`/Users/Shared/Claude/proto-3d/lokit/rahattomuuspalkki/kuvapari-rahattomuus-16-393x852.png` ja `-834x1194.png`. Mitat Natiivi-UI:lle lähetetty.
