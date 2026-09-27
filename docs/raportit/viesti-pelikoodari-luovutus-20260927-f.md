@@ -21,6 +21,12 @@ Merge-pyynnöt: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-ma
   kun pohjalaatta ei tule, eikä Cesium hae sitä uudelleen ennen häätöä → ehdotus: varalaatan saanut laatta kirjataan, ja se
   pakotetaan uudelleenhakuun (Cesiumin rasterilaatan päivitys) 8 s:n päästä sekä sovelluksen palatessa etualalle / verkon palatessa.
 - **#3517 Olympia (v2348)**: Koe ihme -nappi pois, ihmekuva 1. isona, nykyinen valokuva pienenä tekstin kyljessä (kortti + nähtävyysikkuna). Kohdennetut testit 1288/1288, savukkeet päivitetty mutta AJAMATTA. Puuttuu: kuvapari Olympia + hahmotelma-kohde puhelin/iPad → Fable, speksi + kuvapari Natiivi-UI:lle (1.0.34). Worktree `wt/pelikoodari-ihme-kuvana`.
+- **Astronautin kameran kuvaselain webiin** (Linssiseppä, Fablen jako, omistajan toive 27.9. klo 23.5x; laattatyön JÄLKEEN, ei kiirettä):
+  speksi `docs/raportit/astronautin-kuvaselain-20260928.md` §1, §2, §4; natiivin malli proto `linssiseppa/astro-selain` c5b073cd
+  (Kuvanakyma.cs, AstronauttiKierros.cs). Web: js/linssit/satelliitti.js avaaHavaintokortti — vaakapyyhkäisy ja reunanapautus
+  (ulommat 22 %) → seuraava/edellinen kuva (kohteen lopussa naapurikohteeseen), ‹ › alhaalla keskellä → viereinen kohde,
+  läpikuultava tausta, pallo kääntyy kohteeseen. Naapurijärjestys (lähin naapuri + 2-opt, myötäpäivään läntisimmästä)
+  lasketaan tools-skriptillä aineistoon kentäksi, jota natiivi lukee samana.
 - **Luentakorjauksen välimuistiuusinta** (varmistus): `proto-3d/lokit/puhemittaus/nosto-uusinta.sh` (valmis .app `puhemittaus/korjaus/Matkakirja3D-fb67281f.app`).
 
 ## 3. TÄNÄÄN VALMIIT
