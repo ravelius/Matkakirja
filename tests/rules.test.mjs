@@ -5466,7 +5466,7 @@ test('pelistreak: peräkkäiset pelipäivät palkitaan, väliin jäänyt päivä
   const toastit = game.takeEvents().filter((e) => e.tilanne === 'peli.streak');
   assert.equal(toastit.length, 6);
   assert.equal(toastit[0].text, 'Kolmas päivä peräkkäin matkalla');
-  assert.equal(toastit[4].sub, '+50 £ ja viikkobonus +100 £');
+  assert.equal(toastit[4].sub, '+50\u00a0£ ja viikkobonus +100\u00a0£');
   assert.equal(streakOtsikko(14), '14. päivä peräkkäin matkalla');
 });
 
@@ -5528,4 +5528,18 @@ test('rahattomuuspalkki: kuuden tunnin jaksot vähenevät vuoroittain ja katoava
   assert.equal(game.rahattomuusVuorojaJaljella(p), 0, 'ei negatiivinen');
   p.rahaton = null;
   assert.equal(game.rahattomuusVuorojaJaljella(p), null);
+});
+
+test('raha suomalaisessa muodossa "400 £" sitovalla välilyönnillä (Fable 27.9.2026 klo 20.1x)', async () => {
+  const { readFileSync: lue, readdirSync } = await import('node:fs');
+  const vialliset = [];
+  for (const f of ['fokustehtavat.js', 'fokusvirta.js', 'game.js', 'sahke.js', 'ui.js', 'main.js']) {
+    lue(new URL(`../js/${f}`, import.meta.url), 'utf8').split('\n').forEach((rivi, i) => {
+      const t = rivi.trim();
+      if (t.startsWith('*') || t.startsWith('//') || t.startsWith('/*')) return;
+      if (/(^|[`\s(])£\$\{/.test(rivi) || /[0-9}] £/.test(rivi)) vialliset.push(`js/${f}:${i + 1}`);
+    });
+  }
+  assert.deepEqual(vialliset, [], 'rahamäärä ennen puntaa, välissä \\u00a0');
+  assert.ok(readdirSync(new URL('../js', import.meta.url)).length > 0);
 });
