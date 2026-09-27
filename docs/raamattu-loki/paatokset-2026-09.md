@@ -8195,3 +8195,7 @@ Julkaisija: 1.0.29 (202609270957, ajo 36310995227) sisaisessa ryhmassa, What to 
 ## OMISTAJA (SITOVA): GENEROIDUISTA KUVISTA AINA SANA HAVAINNEKUVA (27.9.2026 klo 13.39)
 
 Omistaja 27.9.2026 klo 13.4x: kaikissa generoiduissa kuvissa kaytetaan sanamuotoa havainnekuva (peli, lehdet, kuvatekstit, tekija- ja lahdetiedot, projektisivusto, raportit) — ei kuvitus, AI-kuva, generoitu kuva tai tekoalykuva. Raamattuun uusi linjausrivi (PR #3407, e30d738e0:n jalkeen), tilannekatsaus korjattu. Pelikoodari tarkistaa pelin ja projektisivun tekstit, Sisaltokirjuri sisaltopaketit.
+
+## OMISTAJA (SITOVA, RAAMATTUUN): VAIN EUROOPPA, KUNNES OMISTAJA TOTEAA SEN VALMIIKSI (27.9.2026 klo 13.53)
+
+Omistaja 27.9.2026 klo 13.5x: tehdaan nyt pelkkaa Eurooppaa, ei mitaan muuta; vasta kun Eurooppa on omistajan mielesta valmis, siirrytaan muihin maanosiin. Raamattuun uusi Ydinajatus-rivi VAIN EUROOPPA + CLAUDE.md-viite (PR #3416, Julkaisijan junaan). Sisaltokirjurin Lahi-ita-, Novosibirsk- ja 0/0-kaupunkierat pysaytetty; tilalle Euroopan ohuimmat kaupungit ja maat. Kaikille rooleille ilmoitettu.
