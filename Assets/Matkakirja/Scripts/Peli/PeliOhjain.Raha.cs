@@ -47,9 +47,11 @@ namespace Matkakirja.Natiivi
             rahaNahty = saldo;
             rahaSyy = null;
             if (muutos == 0) return;
-            // Teon oma tapahtumarivi punnista (matkan hinta, pankin apu, löytöpalkkio) on tarkin syy.
+            // Teon oma tapahtumarivi punnista (matkan hinta, löytöpalkkio) on tarkin syy.
             var rivi = tapahtumat.Concat(kysymysLisat).LastOrDefault(t => t != null && t.Contains("punta"));
-            syy ??= rivi ?? RahaSyyt.Oletus;
+            // Päiväkulu (talouden vaihe 1): teon oma punta-rivi on tarkempi, jos sama teko maksoi muutakin.
+            syy ??= rivi ?? paivakuluSyy ?? RahaSyyt.Oletus;
+            paivakuluSyy = null;
             try { RahaMuuttui?.Invoke(muutos, syy, saldo); } catch (Exception e) { UnityEngine.Debug.LogException(e); }
         }
     }

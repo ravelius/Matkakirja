@@ -7,9 +7,10 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
 - `Assets/Matkakirja/Peli/` — asmdef **Matkakirja.Peli** (`noEngineReferences`, autoReferenced):
   - Sopimukset (rajapinnat IReittiverkko, IKamera), MiniJson, SisaltoTuonti,
     Satunnainen (mulberry32), Reittiverkko.
-  - **Matka** — tilakone (vuoro, kulkutavat, heitto, siirto, bussi, lento, pankkiapu) ja
+  - **Matka** — tilakone (vuoro, kulkutavat, heitto, siirto, bussi, lento, odotus; talouden vaihe 1:
+    päiväkulut, rahattomuus ja matkan loppu, Peli/Talous.cs + TalousTestit) ja
     erästä 3 laattojen jako luonnissa, laatan kääntö (web revealToken), lukitus, ennätys.
-  - **Pelitila** — tallennettava tila (tallennusversio **4**; versiopolku Pelitila.Paivita, uudempi = UudempiTallennus, TallennusTestit).
+  - **Pelitila** — tallennettava tila (tallennusversio **6**; versiopolku Pelitila.Paivita, uudempi = UudempiTallennus, TallennusTestit).
   - **Laatat** — Laattamaailma (jako, kääntö, lukitus; JS Map -järjestys JarjestettyKartta),
     Laattamaarat (paketin `kokoelmat/laatat.json`), Loyto (yhden käännön tulos).
   - **Kysely** + Kysymysdata — kysymysmoottori (js/game.js actionQuiz…closeQuiz).
@@ -140,6 +141,11 @@ muuttua ilman webin muutosta; C# toistaa ne identtisesti, myös satunnaislukukut
 | `tee-pulmajalki.mjs` | pulmajalki.json | PulmaTestit | generaattorit (11 × 25 siementä), pulmien avaus/vastaus/sulku kuudella tavalla laatallisena ja laatattomana, koko peli pulmineen, tallennus välein 1, 2, 3 ja 5 |
 | `tee-linssijalki.mjs` | linssijalki.json | LinssiomistusTestit | passin leimat (JSON-teksti, stampList, isoDate, stampDate, rikkinäinen tallennus) ja omistus kolmella ajolla koerekisterillä (2 hiomassa-riviä): kylkiäiset, kynnykset (myös kaksi kerralla), optikon hyvitys, valmistuminen, kehittäjätila, toinen pelikerta samalla passilla, tallennus välissä ja joka teon jälkeen |
 | `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllöajo; koelaudalla ei ryöstäjiä), myös tallennus/lataus välein 7 ja 3 |
+
+Talouden vaihe 1 (27.9.2026): päiväkulut ja rahattomuus näkyvät jälkien rahassa; ajo, jonka matka
+päättyy rahattomuuteen (web phase 'over'), loppuu siihen (skriptit `break`, C#-silmukat `Vaihe.Ohi`).
+TalousTestit.HintatasotVastaavatWebinTaulua vertaa Peli/Talous.cs:n taulua webin js/packs/hintatasot.js:ään
+(`WEBJS=<verkkopelin js> ./kaanna.sh Talous`; ilman tiedostoa ohitetaan).
 
 ## Pakettivartija (sisältöpaketti vs lukijat)
 

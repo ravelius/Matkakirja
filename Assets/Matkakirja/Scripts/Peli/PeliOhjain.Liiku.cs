@@ -84,6 +84,17 @@ namespace Matkakirja.Natiivi
                     if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
                     return HeitaJaValitse();
                 }
+                case Kulkutapa.Odota:
+                {
+                    // Talouden vaihe 1 (web actionTravel('wait')): vuoro kuluu paikallaan.
+                    tapahtumat.Clear();
+                    var r = matka.ValitseKulkutapa(Kulkutapa.Odota);
+                    if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
+                    Tallenna();
+                    if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
+                    Kartalle(false);
+                    return null;
+                }
                 case Kulkutapa.Meri:
                 {
                     var rivit = PeliApu.KohdeRivit(matka, Kulkutapa.Meri);

@@ -63,11 +63,12 @@ namespace Matkakirja.Peli.Testit
                     Vertaa("raha:" + (int)raha);
                 }
                 var k = new Kasikirjoitus { Valinnat = (int)(MiniJson.Luku(ajo, "alkuValinta") ?? 0) };
-                for (int n = 0; n < 400 && m.Tila.VuoroLaskuri <= vuorot; n++) Vertaa(k.Seuraava(m));
+                for (int n = 0; n < 400 && m.Tila.VuoroLaskuri <= vuorot && m.Tila.Vaihe != Vaihe.Ohi; n++) Vertaa(k.Seuraava(m));
                 Oleta.Sama(askeleet.Count, i, nimi + ": jäljen pituus");
                 yht += i;
             }
-            Oleta.Tosi(yht > 500 && napit > 50, $"askelia {yht}, nappirivejä {napit}");
+            // Talouden vaihe 1: osa ajoista päättyy rahattomuuteen, joten jälki on lyhyempi.
+            Oleta.Tosi(yht > 300 && napit > 50, $"askelia {yht}, nappirivejä {napit}");
         }
 
         static Matka Pariisissa(int raha = 300)

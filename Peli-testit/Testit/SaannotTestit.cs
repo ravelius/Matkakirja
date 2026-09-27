@@ -24,7 +24,7 @@ namespace Matkakirja.Peli.Testit
             var odotettu = new Dictionary<string, int>
             {
                 ["BUS_FARE"] = Vakiot.BussiHinta, ["FLIGHT_PRICE"] = Vakiot.LentoHinta, ["SEA_FEE"] = Vakiot.MeriHinta,
-                ["SEA_FARE"] = Vakiot.MeriHinta, ["START_MONEY"] = Vakiot.AloitusRaha, ["STRANDED_AID"] = Vakiot.HataApu,
+                ["SEA_FARE"] = Vakiot.MeriHinta, ["START_MONEY"] = Vakiot.AloitusRaha,
                 ["TURN_HOURS"] = Vakiot.VuoronTunnit,
                 ["EXPLORE_REWARD"] = KysymysVakiot.TutkimusPalkkio, ["FIFTY_FIFTY_PRICE"] = KysymysVakiot.PuolitusHinta,
                 ["FLAG_CHOICES"] = KysymysVakiot.LippuVaihtoehdot, ["PHOTO_CHOICES"] = KysymysVakiot.KuvaVaihtoehdot,
@@ -42,6 +42,10 @@ namespace Matkakirja.Peli.Testit
             foreach (var kv in odotettu)
             {
                 if (!s.TryGetValue(kv.Key, out var a)) { erot.Add(kv.Key + " puuttuu paketista"); continue; }
+                // Talouden vaihe 1 (27.9.2026): web nosti START_MONEY 300 → 400 ja poisti STRANDED_AID:n.
+                // Koepaketti v4 (paketti/saannot.json) on viety ennen muutosta: vanha 300 hyväksytään,
+                // kunnes Siirtoseppä vie uuden paketin (silloin paketin arvon pitää olla 400).
+                if (kv.Key == "START_MONEY" && a is double vanha && (int)vanha == 300) continue;
                 if (!(a is double d) || (int)d != kv.Value) erot.Add($"{kv.Key}: paketti {a}, C# {kv.Value}");
             }
             void Vali(string id, int min, int max)
