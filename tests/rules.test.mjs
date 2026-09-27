@@ -34,7 +34,7 @@ import {
   ISO_AARRE_ARVO, MANNER_AARRE_ARVO, PIENI_AARRE_ARVO, onAarre, tokenPileTemplate,
 } from '../js/tokens.js';
 import {
-  Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, RAHATTOMUUS_VUOROJA,
+  Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, RAHATTOMUUS_VUOROJA, streakPalkkio, streakOtsikko,
   DUEL_PRIZE, FIFTY_FIFTY_PRICE, HARD_BONUS, HINT_PRICE,
   QUIZ_SECONDS, SEA_FARE,
   XP_NEW_CITY, XP_NEW_BOARD, XP_HARD_ANSWER, XP_STAR,
@@ -5450,4 +5450,35 @@ test('Odota: kun mihinkään ei pääse, vuoron voi kuluttaa (ei automaattisesti
   const vuoro = game.turnCount;
   assert.equal(game.actionTravel('wait').ok, true);
   assert.equal(game.turnCount, vuoro + 1, 'yksinpelissä odotus kuluttaa vuoron');
+});
+
+test('pelistreak: peräkkäiset pelipäivät palkitaan, väliin jäänyt päivä nollaa', () => {
+  const game = talousPeli('ateena');
+  const p = game.player;
+  const alku = p.money;
+  const paivat = ['2026-09-27', '2026-09-28', '2026-09-29', '2026-09-30', '2026-10-01', '2026-10-02', '2026-10-03', '2026-10-04'];
+  const palkkiot = paivat.map((d) => game.kirjaaPelipaiva(d)?.palkkio);
+  assert.deepEqual(palkkiot, [0, 0, 20, 20, 20, 20, 150, 30]);
+  assert.equal(p.money, alku + 260);
+  assert.equal(game.kirjaaPelipaiva('2026-10-04'), null, 'sama päivä ei palkitse uudelleen');
+  assert.deepEqual(game.kirjaaPelipaiva('2026-10-06'), { pituus: 1, palkkio: 0 }, 'väliin jäänyt päivä nollaa');
+  assert.deepEqual([13, 14, 21].map(streakPalkkio), [30, 130, 130]);
+  const toastit = game.takeEvents().filter((e) => e.tilanne === 'peli.streak');
+  assert.equal(toastit.length, 6);
+  assert.equal(toastit[0].text, 'Kolmas päivä peräkkäin matkalla');
+  assert.equal(toastit[4].sub, '+50 £ ja viikkobonus +100 £');
+  assert.equal(streakOtsikko(14), '14. päivä peräkkäin matkalla');
+});
+
+test('pelistreak: botti, pudonnut ja päättynyt peli eivät kirjaa, laskuri kulkee tallennuksessa', () => {
+  const game = talousPeli('ateena');
+  const p = game.player;
+  game.kirjaaPelipaiva('2026-09-27');
+  game.kirjaaPelipaiva('2026-09-28');
+  const ladattu = Game.fromJSON(JSON.parse(JSON.stringify(game)));
+  assert.deepEqual(ladattu.player.streak, { paiva: '2026-09-28', pituus: 2 });
+  assert.equal(ladattu.kirjaaPelipaiva('2026-09-29').palkkio, 20);
+  assert.equal(game.kirjaaPelipaiva('2026-09-29', { ...p, isBot: true }), null);
+  game.phase = 'over';
+  assert.equal(game.kirjaaPelipaiva('2026-09-29'), null);
 });
