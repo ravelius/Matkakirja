@@ -63,6 +63,8 @@ namespace Matkakirja
         // offline.jsonin lahteet.rasteri.maaMax (skeema 1.40): syvin taso, joka kattaa koko maan. Sen yli (Z9) välit
         // ovat vain kaupunkien ympärillä, eivätkä ne kelpaa maan laatikoksi.
         static int rasterinMaaMax = int.MaxValue;
+        // Skeema 1.54: mediaKuvat korvaa media-listan offline-latauksessa.
+        static bool korvaaMedian;
 
         static string Kirjanpito => Path.Combine(Laattapalvelin.OfflineKansio, "_alueet");
         static string Merkki(string id) => Path.Combine(Kirjanpito, id + ".txt");
@@ -81,6 +83,9 @@ namespace Matkakirja
             var juuri = Peli.MiniJson.Jasenna(teksti) as Dictionary<string, object>;
             if (juuri == null) yield break;
             rasterinMaaMax = int.MaxValue;
+            korvaaMedian = juuri.TryGetValue("lahteet", out var lk) && lk is Dictionary<string, object> lkd &&
+                           lkd.TryGetValue("mediaKuvat", out var lmk) && lmk is Dictionary<string, object> lmkd &&
+                           lmkd.TryGetValue("korvaaMedian", out var kmv) && kmv is bool kmb && kmb;
             if (juuri.TryGetValue("lahteet", out var la) && la is Dictionary<string, object> lahteet &&
                 lahteet.TryGetValue("rasteri", out var lr) && lr is Dictionary<string, object> rasteri &&
                 rasteri.TryGetValue("maaMax", out var mm) && mm is double mmd)
@@ -123,10 +128,15 @@ namespace Matkakirja
             {
                 // Siirtokoko = levykoko: 1.0.32 tallentaa maaston gzipattuna (Laattapalvelin.LataaOffline, Fablen C), joten
                 // tavuja.levy (purettu, vanhoille buildeille) ei koske tätä buildia.
-                if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
-                if (td.TryGetValue("kaupunkiMaasto", out var km) && km is double kmd) tavut += (long)kmd;
-                if (KaupunkiRasteri.Paalla && td.TryGetValue("kaupunkiRasteri", out var kr) && kr is double krd) tavut += (long)krd;
-                if (td.TryGetValue("mediaKuvat", out var mk) && mk is double mkd) tavut += (long)mkd;
+                // Skeema 1.54: tavuja.offline = rasteri + maasto + kaupunkiRasteri + kaupunkiMaasto + mediaKuvat (siirto) sellaisenaan.
+                if (td.TryGetValue("offline", out var of) && of is double ofd) tavut = (long)ofd;
+                else
+                {
+                    if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
+                    if (td.TryGetValue("kaupunkiMaasto", out var km) && km is double kmd) tavut += (long)kmd;
+                    if (KaupunkiRasteri.Paalla && td.TryGetValue("kaupunkiRasteri", out var kr) && kr is double krd) tavut += (long)krd;
+                    if (td.TryGetValue("mediaKuvat", out var mk) && mk is double mkd) tavut += (long)mkd;
+                }
             }
             var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
             if (File.Exists(Merkki(id))) { a.Tila = Tila.Valmis; a.Ladattu = tavut; }
@@ -234,7 +244,9 @@ namespace Matkakirja
             // katto 100 Mt/maa; vanhat buildit ohittavat avaimen). Luetaan Mukana.Polun kautta ilman verkkoa.
             // mediaKuvat (skeema 1.52): [{ url, pieni? }] — tiedosto tallennetaan url:n polulle (Kuvat löytää sen alkuperäisellä
             // osoitteella), mutta ladataan pienennetystä, jos sellainen on.
-            foreach (var avain in new[] { "media", "mediaKuvat" })
+            // Skeema 1.54 (Fable: maan offline-media ≤ 100 Mt kokonaisuutena): lahteet.mediaKuvat.korvaaMedian → media-listaa ei
+            // ladata lainkaan (mediaKuvat sisältää sen omat ämpäritiedostot pienennettyinä), vanhat buildit lataavat median.
+            foreach (var avain in korvaaMedian ? new[] { "mediaKuvat" } : new[] { "media", "mediaKuvat" })
                 if (a.Tiedot.TryGetValue(avain, out var me) && me is List<object> media)
                     foreach (var u in media)
                     {
