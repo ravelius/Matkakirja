@@ -1547,3 +1547,15 @@ test('skeema 1.51: natiivin pallon Z10 offline-välit = Karttasepän poltettu jo
   // Kaikki paitsi maattomien kaupunkien (Jerusalem) laatat ovat jonkin maan offline-alueessa.
   assert.ok(kaikki.size >= lista.size - 40, `${kaikki.size}/${lista.size}`);
 });
+
+test('eheys 27.9.: omaan ämpäriin osoittavat kuva-url/aani-url kuuluvat offline-lataukseen', async () => {
+  const { onOffline } = await import('../tools/vienti/offline.mjs');
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  const omat = media.filter((v) => (v.laji === 'kuva-url' || v.laji === 'aani-url') && v.url?.startsWith('https://media.matkakirja.app/'));
+  assert.ok(omat.length > 1000, `omia absoluuttisia ${omat.length}`);
+  assert.ok(omat.every(onOffline));
+  assert.equal(onOffline({ laji: 'kuva-url', url: 'https://upload.wikimedia.org/x.jpg' }), false, 'ulkoinen jää pois');
+  const offline = JSON.parse(tiedostot.get('offline.json'));
+  const kaikki = new Set(Object.values(offline.maat).flatMap((m) => m.media));
+  assert.ok([...kaikki].some((u) => u.includes('/karttanostot/')), 'karttanostojen kuvat offline-listoilla');
+});

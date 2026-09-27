@@ -85,6 +85,14 @@ if (Z10) {
 // tiedostonimet ja ulkoiset kuva-, ääni- ja video-URLit (hahmotelmien
 // viitekuvat, lähdelinkit) eivät ole pelin omaa mediaa.
 const EI_MEDIAA = new Set(['linkki', 'tiedosto', 'kuva-url', 'aani-url', 'video-url']);
+/*
+ * Eheystarkistus 27.9.2026: absoluuttinen kuva- tai ääniosoite PELIN OMAAN ämpäriin (fokuskohteiden ja maakuntien
+ * nostokuvat, saapumis- ja Livian puheet, aikajanat) on pelin omaa mediaa, vaikka laji on kuva-url/aani-url.
+ * Ennen tätä ne jäivät offline-latauksesta pois (4 142 kuvaa ja 56 ääntä koko paketissa).
+ */
+const OMA_AMPARI = 'https://media.matkakirja.app/';
+export const onOffline = (v) => Boolean(v.url) && (!EI_MEDIAA.has(v.laji)
+  || ((v.laji === 'kuva-url' || v.laji === 'aani-url') && v.url.startsWith(OMA_AMPARI)));
 
 /* ------------------------------------------------------------ geometria */
 
@@ -255,7 +263,7 @@ export function jaaMedia(tiedostot, manifest) {
   const lue = (p) => JSON.parse(tiedostot.get(p));
   const kaupungit = new Map(lue('kokoelmat/kaupungit.json').alkiot.map((k) => [k.id, k.maa]));
   const { viitteet } = lue(manifest.media.tiedosto);
-  const omat = viitteet.filter((v) => v.url && !EI_MEDIAA.has(v.laji));
+  const omat = viitteet.filter(onOffline);
   const arvot = new Map(omat.map((v) => [v.arvo, v]));
   const maat = new Set(Object.keys(lue('moduulit/js/packs/maailmankartta.json').exportit.MAAILMANKARTTA.map.countryShapes));
   for (const m of kaupungit.values()) if (m) maat.add(m);
@@ -515,7 +523,7 @@ async function paivitaKoot(vienti, n = 24) {
   const { viitteet } = JSON.parse(readFileSync(join(vienti, 'media.json'), 'utf8'));
   const lajeittain = new Map();
   for (const v of viitteet) {
-    if (!v.url || EI_MEDIAA.has(v.laji)) continue;
+    if (!onOffline(v)) continue;
     if (!lajeittain.has(v.laji)) lajeittain.set(v.laji, []);
     lajeittain.get(v.laji).push(v.url);
   }
