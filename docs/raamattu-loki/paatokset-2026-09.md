@@ -8143,3 +8143,7 @@ Fable (Opus, xhigh — omistajan poikkeus, session effort xhigh eikä max) local
 ## OMISTAJA: AVAUSKORTTI HYVAKSYTTY (35262df2 → 1.0.30); LENTOPEL: KAUPASTA 60 £, PEUKALOVETO + KAASU, HINNAT SELLAISENAAN, TANKKI 6 min, VAIN NATIIVI; FABLE EFFORT xhigh PIDETAAN; 1.0.29 KAANNOS c567fa57 (27.9.2026 klo 12.16)
 
 Kortit 12.xx: natiivin avauskortin korjaukset (kuvaparit 35262df2: miniatyyri kaupungin vieressa, osiolinkit kevyina) hyvaksytty → Natiivi-UI merge-pyynto 1.0.30-junaan. Lentopeli (Linssisepan suunnitelma 41cf81337 §9): avautuu Kaupasta 60 £; ohjaus peukaloveto + kaasuvipu; tankki 24 £ × hintataso, sakot 40/80 £, tehtavat +20–35 %, 1 lento = 1 vuoro; taysi tankki 6 min (800 km); vain natiivi (EI WEBISSA → lupa annettu). Fablen session effort xhigh pidetaan (omistaja). Fable paatti lento v3:n avoimet: 15 s kaikille lennoille, kaytava Etusija + taustajono tauolle, aani A → v3 (7b1bf9b9 + cdd285f9) 1.0.30-junaan. 1.0.29: juna/b13 918a18f2, kaannos c567fa57, savuke 0 poikkeusta → Laitetestaaja. Lipun suunta 88362285 (maailma/ruutu-vaihtoehdot) → 1.0.30 omistajan kuvaparivalinnan jalkeen. Julkaisija: #3388 v2315, #3391 suljettu, #3378 mergetty.
+
+## OMISTAJA: LIPUN SUUNTA MAAILMAAN SIDOTTU (AINA ITAAN, 88362285 → 1.0.30) (27.9.2026 klo 12.18)
+
+Kortti kuvapareista kuvapari-ylhaalta.jpg ja -kallistus40.jpg (A kameraan / B itaan): B valittu. Lippu ei kaanny kun kamera kulkee ylitse; suuntimalla 180 kangas liehuu ruudulla vasemmalle (hyvaksytty). Natiiviseppa mergeaa 1.0.30-junaan.
