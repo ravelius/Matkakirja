@@ -8,3 +8,12 @@ Progressiivisuus natiiviin toisella tavalla (lyhyt ensimmäinen pala) — ehdota
 
 Lisäksi: 3399 ja 3401 valmiit Julkaisijalle (Pelistreak-kortti korjattu hyväksytyn mukaiseksi, armopäivä web aff13a5e6
 + natiivi 70bebdde). Projektisivu (projekti.html) agentilla työn alla.
+
+## Lisäys (P1 tarkennus: virta takaisin päälle)
+
+Proto `pelikoodari/puhevirta-korjaus` uusi kärki (palavirta): iOS ei jäsennä striimattua mp3:a, joten progressiivisuus
+tehdään pilkkomalla synteesi kasvaviin paloihin (1. ≤ 140 mrk ≈ 2 s generointia, seuraavat ×3, katto 2400);
+seuraava pala haetaan edellisen soidessa ja jokainen soi laitteella toimivalla vanhalla polulla. Virta = päällä
+oletuksena, mp3-striimi erillinen kokeilu (oletus pois). Peli-testit 325/325, unity 0, puhdas juna/b13:ään.
+LAITETODENNUS PUUTTUU: kääntäjä oli varattu (Natiivisepän käännös). Mittaan A2FD9C9F:llä (`puhe virta` → 1. ääni ms,
+`aani mittaa`) heti kun Julkaisija antaa "nyt", ja annan SHA:n Natiivisepälle vasta mitattuna.
