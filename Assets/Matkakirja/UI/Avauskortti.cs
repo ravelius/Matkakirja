@@ -35,6 +35,7 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Web AVAUSKORTIN_KASVU_MS (omistaja: 250–300 ms, pehmeä, ei pop-up).</summary>
         public const float KasvuMs = 280f;
+        float maksimi;
         const float Leveyskatto = 560f, Sivuvara = 12f, Ylavara = 8f, Alavara = 8f;
         const float HeroOsuus = 0.16f, HeroOsuusTabletti = 0.14f, HeroVahintaan = 120f, KarttaOsuus = 0.35f;
         const float HaivytysMs = 200f;
@@ -145,8 +146,10 @@ namespace Matkakirja.Natiivi
             kortti.style.left = Mathf.Round((W - leveys) / 2f);
             kortti.style.top = yla;
             // Web max-height calc(100 % − 16 px) kartta-alasta: alaraja on turva-alue, ei toimintorivin varaus.
-            float turvaAla = kerros.Reunat(UiKerros.Traileri).w;
-            kortti.style.maxHeight = Mathf.Max(200f, H - yla - turvaAla - Alavara);
+            // Saman kerroksen turva-alue kuin yläreunalla (Traileri-kerroksen alareuna oli iPhonella ~124 pt, 34:n sijaan,
+            // jolloin turisti-infon alapehmuste jäi vierityksen taakse).
+            maksimi = Mathf.Max(200f, H - yla - t.w - Alavara);
+            kortti.style.maxHeight = maksimi;
             // Web svh-yksiköt: osuus koko ruudun korkeudesta.
             hero.style.height = Mathf.Round(Mathf.Max(HeroVahintaan, H * (UiKerros.Tabletti ? HeroOsuusTabletti : HeroOsuus)));
             karttaKaista.style.height = Mathf.Round(H * KarttaOsuus);
@@ -442,7 +445,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Tila lokiriville: nimi, esittely, kartta ja turisti-info.</summary>
         public string Kuvaus() => !Auki ? "kiinni"
-            : $"{nimi}: \"{esittelyTeksti}\" · kartta {(kartta != null ? "on" : "ei")} · turisti-info {(opas != null ? opas.Nimi : "ei")}";
+            : $"{nimi}: \"{esittelyTeksti}\" · kartta {(kartta != null ? "on" : "ei")} · turisti-info {(opas != null ? opas.Nimi : "ei")}"
+              + $" · kortti {kortti.layout.height:0.#}/{maksimi:0.#} pt (ruutu {alue.layout.height:0.#}, turva ala {kerros.Reunat(UiKerros.Matkavalinta).w:0.#})";
 
         /// <summary>Napauttaa korttia: "kartta" (suurennos), "lehti", "opas" tai "sulje".</summary>
         public string Napauta(string mita)

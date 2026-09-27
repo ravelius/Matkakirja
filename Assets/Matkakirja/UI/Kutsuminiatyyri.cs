@@ -84,6 +84,9 @@ namespace Matkakirja.Natiivi
                 nimi.text = k.Nimi ?? id;
                 kuva.style.backgroundImage = StyleKeyword.None;
                 kuvanTiedosto = null;
+                // Herokuva tulee kaupunkilehden avauskuvista; aloituskaupungissa lehteä ei ole vielä pyydetty
+                // (EsilataaSaapuminen ajetaan vain lennolla), joten kutsu jäi pelkäksi pohjaksi.
+                UiSisalto.LataaLehti(id);
             }
             string tiedosto = Avauskortti.HeroTiedosto(k);
             if (tiedosto != null && tiedosto != kuvanTiedosto)

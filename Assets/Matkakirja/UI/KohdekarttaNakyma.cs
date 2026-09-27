@@ -106,7 +106,7 @@ namespace Matkakirja.Natiivi
             public string Url;
         }
 
-        public KohdekarttaNakyma(Kohdekartta kartta, bool kokoruutu = false, bool pelkka = false)
+        public KohdekarttaNakyma(Kohdekartta kartta, bool kokoruutu = false, bool pelkka = false, bool ilmanJanaa = false)
         {
             this.kartta = kartta;
             this.kokoruutu = kokoruutu;
@@ -130,7 +130,7 @@ namespace Matkakirja.Natiivi
             kuva = Rakenne.El("mk-kohdekartta__kuva", lava, PickingMode.Ignore);
             // Löydös 63 (web .kartta-mittajana): mittakaavajana ydinalueen vasempaan alakulmaan (3,2 % / 5 %),
             // leveys prosentteina kuvasta; lavan lapsena se skaalautuu kartan mukana kuten webissä.
-            if (kartta.JanaOsuus > 0f && !this.pelkka) // web pelkkaKartta: jana = null
+            if (kartta.JanaOsuus > 0f && !this.pelkka && !ilmanJanaa) // web pelkkaKartta: jana = null (myös sen suurennoksessa)
             {
                 var ydin = kartta.Ydin;
                 var jana = Rakenne.El("mk-kohdekartta__mittajana", lava, PickingMode.Ignore);
@@ -797,7 +797,7 @@ namespace Matkakirja.Natiivi
             if (kortista) r.Tausta.AddToClassList("mk-kohdekartta-kokoruutu--kortista");
 
             r.Kortti = Rakenne.El("mk-kohdekartta-kokoruutu__kortti", r.Tausta);
-            r.Nakyma = new KohdekarttaNakyma(k, kokoruutu: true);
+            r.Nakyma = new KohdekarttaNakyma(k, kokoruutu: true, ilmanJanaa: kortista);
             r.Kortti.Add(r.Nakyma);
             void Avaa(KohdekarttaKohde kohde)
             {
