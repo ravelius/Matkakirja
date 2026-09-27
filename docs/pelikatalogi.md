@@ -716,6 +716,8 @@ osiona eri muotoisina kortteina.)*
 
 ### Lentopeli (Tiger Moth -vapaalento)
 
+**Tila:** odottaa, ensi viikko (omistaja 27.9.2026).
+
 **Konsepti:** hyödyntää olemassa olevaa Tiger Moth -kaksitasomallia
 seepiavärityksellä (sama malli kuin saapumislento v3:ssa, ks. Raamattu
 "SAAPUMISLENTO V3") uudessa vuorovaikutteisessa minipelissä, erillään
