@@ -349,7 +349,793 @@ muuten.)*
 | idea | kuvaus | tila |
 |---|---|---|
 | Ruokaraha | Matkan aikana kertyvä/kuluva pieni pistevaluutta, jota pelit tuottavat tai kuluttavat (ei oikeaa rahaa) — mekaniikka avoinna. | idea |
-| Pulu sekoilee ±10 p | Pulu-hahmo voi satunnaisesti sotkea pelitilanteen kesken pelin, siirtäen pisteitä ±10 suuntaan tai toiseen (huumori-/yllätyselementti). | idea |
-| Aarreruksi +100 p | Erikoistason voitto (esim. vaikea peli tai aarteen lopullinen löytyminen) palkitsee kertaluonteisesti +100 pisteellä. | idea |
-| Huvipuistopelit 30/100 p | Tori-/huvipuistotyyppiset minipelit (esim. narunveto, pallonheitto) antavat pienempiä palkintotasoja: 30 tai 100 pistettä. | idea |
+| Pulu sekoilee ±10 p | Pulu-hahmo voi satunnaisesti sotkea pelitilanteen kesken pelin, siirtäen pisteitä ±10 suuntaan tai toiseen (huumori-/yllätyselementti). Numero on samat "£" kuin talousjärjestelmässä — ks. [talous-suunnitelma-20260927.md](raportit/talous-suunnitelma-20260927.md) kohta 5, avoin kysymys 6 (laukaisin puuttuu vielä). | idea |
+| Aarreruksi +100 p | Erikoistason voitto (esim. vaikea peli tai aarteen lopullinen löytyminen) palkitsee kertaluonteisesti +100 pisteellä. Sama avoin kysymys talous-suunnitelmassa kohta 6. | idea |
+| Huvipuistopelit 30/100 p | Tori-/huvipuistotyyppiset minipelit (esim. narunveto, pallonheitto) antavat pienempiä palkintotasoja: 30 tai 100 pistettä. Talous-suunnitelma kohta 4 ehdottaa jo tarkat luvut (pääsy 30 £, panos 10 £, voitto 30–100 £, enintään 3 peliä/vierailu) — omistajan vahvistettavana kohdassa 10.9. | idea |
+| Lentopeli | Tiger Moth -vapaalento tehtävineen, polttoaine maksaa ja kuluu. Kehitetty täydeksi kortiksi, ks. [Uudet omistajan kortit](#uudet-omistajan-kortit-2792026-klo-110x) alla. | tarkista (avoimet kysymykset kortissa) |
+| Pelistreak | 3+ peräkkäistä oikean elämän pelipäivää → kasvava rahapalkinto, yksi armopäivä viikossa. Kortti alla: [Uudet omistajan kortit](#uudet-omistajan-kortit-2792026-klo-110x). | rakenteilla |
 | *(omistaja lisää tähän)* | | |
+
+---
+
+## Pelisuunnitelmakortit: ensimmäiset 10 peliä
+
+Jokainen "Ehdotus: ensimmäiset 10 peliä" -listan peli on tässä
+avattu toteutuskelpoiseksi suunnitelmaksi: täydet säännöt,
+kierrosrakenne bottia ja kaveria vastaan, oppimiskytkös, pisteet/raha
+(kytketty [talous-suunnitelma-20260927.md](raportit/talous-suunnitelma-20260927.md):n
+malliin, jos peli sopii huvipuistotyyppiseen panos/voitto-malliin —
+muuten ilmainen kohtaaminen, joka palkitsee vihjeellä) sekä
+grafiikka-/ääniehdotus ja sijoittelu peliin. Nämä ovat suunnitelmia,
+ei toteutettua koodia.
+
+### 1. Puukeilat (Mölkky, FIN-2)
+
+**Sääntö:** 12 numeroitua puukeilaa (1–12) seisotetaan tiiviissä
+ryhmässä n. 3–4 metrin päähän heittoviivasta. Pelaajat heittävät
+vuorotellen pitkänomaista puukapulaa alakautta keiloja kohti. Jos
+heitto kaataa täsmälleen yhden keilan, pelaaja saa keilan numeron
+verran pisteitä. Jos heitto kaataa kaksi tai useamman keilan, pelaaja
+saa yhden pisteen jokaista kaatunutta keilaa kohden (ei numeroiden
+summaa). Kaatuneet keilat pystytetään takaisin siihen paikkaan johon
+ne kaatuivat — eivät alkumuodostelmaan — joten keilat ryhmittyvät
+pelin edetessä lähelle heittäjää. Ensimmäinen, joka saavuttaa
+täsmälleen 50 pistettä, voittaa välittömästi. Jos heitto veisi
+pelaajan yli 50:n, pistemäärä palautetaan 25:een. Kolme peräkkäistä
+täysin ohimenevää heittoa voi sulkea pelaajan pelistä (valinnainen
+vaikeussääntö).
+
+**Kierrosrakenne — botti/kaveri:** yksi kierros = yksi heitto,
+vuorotellen kunnes joku saavuttaa 50. Botti: heittotarkkuus
+mallinnetaan RNG-kohinalla tavoitteen ympärillä, vaikeustaso säätää
+hajontaa; botti punnitsee turvallisen yksittäisen keilan vs. riskialttiin
+ryhmän. Kaveri: hotseat-vuorottelu samalla laitteella, heitto
+vetoeleellä (suunta+voima), fysiikka ratkaisee osuman.
+
+**Mitä opitaan:** vähennyslasku ja tarkka pistelaskenta täsmälukuun,
+riskinhallinta (iso ryhmä vai turvallinen yksittäinen keila).
+
+**Pisteet/raha:** ilmainen kohtaaminen kesämökki-/järvikohteessa,
+voitosta pelimerkki ja aarrevihje — ei rahapanosta oletuksena.
+Huvipuistoversiossa yleishinnoittelu (panos 10 £, voitto 30–100 £).
+
+**Grafiikka ja äänet:** puukeilat ja -kapula piirroskuvituksena kartan
+tyylillä; heiton kaari ja kaatumisen fysiikka-animaatio; äänet: puu
+vasten puuta -osuma, keilojen kolina, voittofanfaari 50 pisteessä.
+**Nimihuomio:** "Mölkky" on Tactic Games Oy:n rekisteröity
+tavaramerkki — peli toteutetaan omalla nimellä (esim. "Puukeilat")
+ja omalla ulkoasulla, sama mekaniikka.
+
+**Missä pelataan:** avautuu kesämökki-/järvikohteessa Suomessa (esim.
+Saimaa) osana kesäjuhlakohtausta.
+
+### 2. Kubb (SWE-1)
+
+**Sääntö:** Suorakaidekenttä (n. 5×8 m), lyhyillä sivuilla 5 kubbia
+(puupölkkyä) per joukkue ja keskellä yksi suurempi kuningas.
+Joukkueet heittävät vuorotellen kapuloilla vastustajan kubbeja kohti
+oman puoliskonsa takaa. Kaadetut kubbit heitetään vastustajan
+puolelle pystyyn "kenttäkubbeiksi", jotka on kaadettava ennen
+takarivin kubbeja seuraavalla hyökkäysvuorolla. Kun kaikki vastustajan
+kubbit on kaadettu, saa heittää kuningasta kohti — kuninkaan
+kaataminen liian aikaisin (omalla puolella vielä kaatamattomia
+kubbeja) häviää pelin välittömästi. Ensimmäinen joukkue, joka kaataa
+koko vastustajan rivin ja lopuksi kuninkaan oikeassa järjestyksessä,
+voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = koko joukkueen 6 kapulan
+heittosarja. Botti: simuloi koko vastajoukkueen heitot RNG-tarkkuudella,
+vaikeustaso säätää osumaprosenttia ja kenttäkubbien sijoittelustrategiaa.
+Kaveri: kaksi pelaajaa vuorottelevat heitot samalla tai kahdella
+synkronoidulla laitteella, kenttäkubbien heittosuunta valitaan
+kosketuksella.
+
+**Mitä opitaan:** heittoradan geometria (kulma ja voima), joukkuestrategia
+(kenttäkubbi vai takarivi), tilanteen seuranta.
+
+**Pisteet/raha:** ilmainen kohtaaminen Gotlanti-/maaseutukohteessa,
+voitosta aarteen sijainti paljastuu kartalla; huvipuistoversiossa
+10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** puiset pölkyt ja kapulat, nurmikenttä taustana;
+heiton lentorata kaarena, kaatumisanimaatio; äänet: kapulan lento,
+puun osuma, joukkueen riemuhuuto voitosta.
+
+**Missä pelataan:** avautuu Gotlannin/Ruotsin maaseutukohteessa
+kesäjuhlassa.
+
+### 3. Mangala (TUR-1)
+
+**Sääntö:** Kaksirivinen lauta, 6 kuoppaa per rivi plus kummankin
+pelaajan oma aitta päädyssä. Aluksi joka kuopassa 4 kiveä. Vuorollaan
+pelaaja valitsee omalta puoleltaan yhden kuopan, ottaa kaikki sen
+kivet ja jakaa ne yksitellen vastapäivään seuraaviin kuoppiin (myös
+vastustajan puolelle, mutta ei vastustajan aittaan). Jos viimeinen
+kivi osuu omaan aittaan, pelaaja saa lisävuoron. Jos viimeinen kivi
+osuu tyhjään kuoppaan omalla puolella, pelaaja kaappaa sekä sen kiven
+että vastapäisen kuopan kivet omaan aittaansa. Peli päättyy kun
+toisen puoli on tyhjä; jäljelle jääneet kivet menevät niiden
+omistajalle. Eniten kiviä aitassaan kerännyt voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yksi kuopan valinta ja
+kierto (voi ketjuuntua lisävuoroihin). Botti: minimax 3–5 siirron
+syvyyteen riittää hyvään vastustajaan, vaikeustaso säätää hakusyvyyttä.
+Kaveri: hotseat-vuorottelu, näkymä pysyy kiinteänä molemmille
+luettavaksi.
+
+**Mitä opitaan:** ennakoiva jakolaskenta (montako kiveä riittää
+lisävuoroon/kaappaukseen); peli on UNESCO:n aineetonta
+kulttuuriperintöä.
+
+**Pisteet/raha:** ilmainen kohtaaminen Istanbulin torilla, voitosta
+aarrevihje; ei rahapanosta.
+
+**Grafiikka ja äänet:** puinen lauta kuoppineen, kivet simpukankuorina
+tai lasihelminä; äänet: kiven putoaminen kuoppaan, aitan kilinä.
+
+**Missä pelataan:** avautuu Istanbulin torilla, paikallinen opettaa
+säännöt osana kohtaamista.
+
+### 4. Mylly (Nine Men's Morris / Mühle / Mlin / Moara, DEU-2)
+
+**Sääntö:** Lauta on kolme sisäkkäistä neliötä, kulmat ja sivujen
+keskipisteet yhdistettynä viivoin (24 pistettä). Kummallakin
+pelaajalla 9 nappulaa. Peli etenee kolmessa vaiheessa: (1)
+asetusvaihe, jossa nappulat asetetaan vuorotellen tyhjille pisteille;
+(2) siirtovaihe, jossa nappuloita siirretään viivaa pitkin viereiseen
+tyhjään pisteeseen; (3) kun pelaajalla on enää 3 nappulaa, hän saa
+"lentää" minne tahansa tyhjään pisteeseen. Kolmen nappulan suora rivi
+("mylly") antaa oikeuden poistaa yksi vastustajan nappula (ei
+valmiista rivistä, jos muita vaihtoehtoja on). Peli päättyy kun
+vastustajalla on alle 3 nappulaa tai hän ei voi siirtää mihinkään.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yksi asetus tai siirto.
+Botti: minimax alfa-beta-karsinnalla toimii hyvin (täydellinen peli
+on ratkaistu tasapeliksi, joten vaikeustaso säädetään hakusyvyydellä
+ja satunnaisilla ei-optimaaleilla siirroilla). Kaveri: hotseat-vuorottelu
+samalla laudalla.
+
+**Mitä opitaan:** geometrinen hahmotus (rivit ja risteykset), usean
+siirron ennakointi; sama peli tunnetaan eri nimillä useassa maassa
+(Saksa Mühle, Serbia Mlin, Moldova Moara) — yksi mekaniikka, monta
+kulttuuria.
+
+**Pisteet/raha:** ilmainen kohtaaminen, voitosta Aarnin luettelon
+myllykuvioarvoitusvihje; ei rahapanosta.
+
+**Grafiikka ja äänet:** lauta kaiverrettuna kiveen/puuhun (mukautuu
+kohteeseen: katedraalin lattiakuvio Britanniassa/Saksassa, kivilattia
+Serbiassa/Moldovassa), nappulat yksinkertaisina kiekkoina; äänet:
+nappulan napsahdus, myllyn "lukitus"-ääni.
+
+**Missä pelataan:** monikäyttöinen — sama toteutus kytketään useaan
+kohteeseen (Saksan Mühle keskiaikaisessa katedraalissa, Serbian Mlin
+kivilattiassa, Moldovan Moara torilla) yhdellä koodilla, eri
+nimikylteillä ja kohtauksilla.
+
+### 5. Cribbage (GBR-1)
+
+**Sääntö:** 2 pelaajaa, 52 kortin pakka. Kumpikin saa 6 korttia,
+joista molemmat laittavat 2 sivuun yhteiseen "crib"-pinoon (jaon
+tehneen pelaajan pistepinoon). Pelaajat paljastavat vuorotellen
+kortin lukien ääneen juoksevan summan (kuvakortit = 10); jos summa
+osuu 15:een tai 31:een, tai pelaaja pelaa parin/putken viimeisenä,
+hän saa pisteitä heti. Kun kumpikaan ei voi pelata ylittämättä 31:tä,
+sanotaan "go" ja viimeinen pelaaja saa pisteen. Lopuksi molemmat
+laskevat kätensä (+ crib-pino jaon tehneelle) pisteiksi: 15-yhdistelmät
+(2 p), parit (2 p), putket (1 p/kortti), sama maa neljä korttia (4 p).
+Pisteet merkitään tapilla laudalle kahta rataa pitkin; ensimmäinen
+121 pisteeseen voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuorot: jako, kortinpudotus,
+pelivaihe, laskentavaihe. Botti: valitsee kortit heuristiikalla
+(maksimoi oman pistesaannon, minimoi vastustajan crib-arvon jaossa) —
+täysin laskettavissa oleva peli sopii säännöillä ohjatulle botille
+ilman raskasta hakua. Kaveri: vuorottelu kortin paljastuksessa,
+molemmat näkevät oman kätensä salattuna.
+
+**Mitä opitaan:** päässälasku (korttiarvojen summaaminen 15:een ja
+31:een), yhdistelmien tunnistaminen.
+
+**Pisteet/raha:** ilmainen kahvilakohtaus Englannissa, voitosta
+pelimerkki ja pieni vihje; ei rahapanosta.
+
+**Grafiikka ja äänet:** perinteinen cribbage-lauta (kaksi tappirataa)
+kuvitettuna, kortit pelin omalla grafiikalla; äänet: tapin napsahdus,
+kortin läpsäys, pistelaskun ääni-ilmoitus.
+
+**Missä pelataan:** avautuu englantilaisessa pubikohtauksessa isoisän
+reitillä.
+
+### 6. Briscola (ITA-1)
+
+**Sääntö:** 2–4 pelaajaa (tai 4 pareittain), 40 kortin italialainen
+pakka (ei 8/9/10). Jokainen saa 3 korttia, loput pakka pöytään
+käännettynä paitsi alin kortti, joka näyttää valttimaan. Tikin voittaa
+korkein valttikortti, tai jos valttia ei pelattu, korkein aloitusmaan
+kortti. Voittaja nostaa uuden kortin ensin. Pisteytys: ässä 11,
+kolmonen 10, kuningas 4, ratsumies 3, sotamies 2, muut 0. Kun kaikki
+40 korttia on pelattu, lasketaan tikkien pisteet; yli 60 (2 pelaajaa)
+voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yksi kortin pelaaminen
+tikkiin. Botti: säästää valttikortit isoihin tikkeihin ja pelaa
+arvottomat kortit turvallisesti; sääntöpohjainen botti riittää, koska
+täydellistä tietoa vastustajan kädestä ei ole. Kaveri: 2 pelaajan
+hotseat tai 4 pelaajan (2 paria) vuorottelu.
+
+**Mitä opitaan:** päässälasku (korttien pisteytys) ja
+todennäköisyyspäättely (mitä valttikortteja voi olla jäljellä).
+
+**Pisteet/raha:** ilmainen kahvilakohtaus Venetsiassa/Napolissa,
+voitosta aarrevihje; ei rahapanosta.
+
+**Grafiikka ja äänet:** italialaiset korttimaat (coppe, denari, spade,
+bastoni) omalla kuvituksella; äänet: korttien jako, tikin kerääminen,
+valttimaan paljastus.
+
+**Missä pelataan:** avautuu Venetsian/Napolin kahvilassa, isoisän
+tuttava pelasi laivaa odottaessa.
+
+### 7. Tavli (GRC-1)
+
+**Sääntö:** Lauta jakautuu 24 kolmion muotoiseen kenttään. Kummallakin
+pelaajalla 15 nappulaa aloitusasemassa. Vuorollaan pelaaja heittää
+kaksi noppaa ja siirtää nappuloitaan silmälukujen verran myötäpäivään
+kohti kotialuettaan; tuplat antavat neljä siirtoa. Vastustajan
+yksinäisen nappulan voi lyödä pois, jolloin se palaa lähtöruutuun.
+Kun kaikki 15 nappulaa on kotialueella, niitä aletaan poistaa laudalta
+noppatuloksia vastaavasti; ensimmäinen joka poistaa kaikki voittaa
+erän. Kolme muunnelmaa peräkkäin (Portes = perus-backgammon, Plakoto
+= nappulan voi lukita lyömisen sijaan, Fevga = ei lyöntejä); ottelu
+ratkeaa 5 tai 7 voitettuun erään.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = nopanheitto + 1–4 siirtoa.
+Botti: nopan satunnaisuus tekee botista luonnostaan haastavan ilman
+raskasta laskentaa; heuristiikka (lohkojen sulkeminen, yksinäisten
+nappuloiden välttäminen) riittää, vahvempi botti käyttää
+noppaodotusarvoja. Kaveri: hotseat, molemmat heittävät omat noppansa.
+
+**Mitä opitaan:** todennäköisyyslaskenta (noppayhdistelmät) ja
+strateginen päättely (milloin ottaa riski lyönnistä).
+
+**Pisteet/raha:** ilmainen kahvilakohtaus (kafeneio) Kreikassa,
+voitosta vihje; ei rahapanosta.
+
+**Grafiikka ja äänet:** puinen taittolauta perinteisellä
+koristekuvioinnilla, nopat fyysisenä 3D-heittona; äänet: noppien
+kolina, nappulan siirron napsahdus, lyönnin isku.
+
+**Missä pelataan:** avautuu kreikkalaisessa kahvilassa, pelaaja
+haastaa paikallisen ukon vihjeen toivossa.
+
+### 8. Pétanque (FRA-1)
+
+**Sääntö:** Pieni tavoitepallo (cochonnet) heitetään 6–10 m päähän.
+Pelaajat/joukkueet (1–3 hlöä/puoli) heittävät vuorotellen metallipalloja
+(boules) seisten paikallaan, tavoitteena päästä lähimmäs cochonnet'ta.
+Kauempana oleva puoli heittää aina seuraavaksi, kunnes hänen pallonsa
+on lähempänä tai palloja ei ole enää jäljellä. Erän lopuksi lähin
+pallo voittaa, pisteet lasketaan sen mukaan montako oman joukkueen
+palloa on vastustajan lähintä palloa lähempänä. Ensimmäinen 13
+pisteeseen voittaa ottelun. Pallon voi myös lyödä pois paikaltaan
+tarkalla heitolla (tiro).
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yksi heitto. Botti: heiton
+tarkkuus mallinnetaan kohinalla tavoite-etäisyyden ympärillä; valitsee
+"pointer" (tarkka lähestyminen) tai "tirer" (tähtäinlyönti) tilanteen
+mukaan. Kaveri: vetämällä/liu'uttamalla suunta ja voima, fysiikka
+ratkaisee pysähtymispaikan.
+
+**Mitä opitaan:** etäisyyksien ja kulmien silmämääräinen arviointi,
+joukkuetaktiikka (milloin tähdätä syrjäytykseen).
+
+**Pisteet/raha:** ilmainen kohtaaminen Etelä-Ranskan torilla (esim.
+Marseille), voitosta pelimerkki; huvipuistoversiossa 10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** hiekkainen/sorainen tori, kiiltävät metallipallot;
+äänet: pallon lentoääni, metalli-metalli-kilahdus, hiekkaan
+tömähdys.
+
+**Missä pelataan:** avautuu Etelä-Ranskan kaupungin torilla/puistossa.
+
+### 9. Schnapsen (AUT-1)
+
+**Sääntö:** 2 pelaajaa, 20 kortin pakka (A, 10, K, Q, J neljässä
+maassa). Kummallekin 5 korttia, loput pakkaan käännettynä paitsi
+ylin, joka näyttää valttimaan. Tikin voittaa korkeampi valttikortti
+tai sama maa korkeampana, muuten aloittajan kortti voittaa jos ei
+seurata. Niin kauan kuin pakassa on kortteja, ei tarvitse seurata
+maata; kun pakka loppuu, seuraaminen ja ylittäminen tulevat
+pakollisiksi. Kuningas+rouva samassa maassa ("avioliitto") tuo 20
+pistettä (40 valttimaassa) ilmoitettuna oman vuoron alussa.
+Ensimmäinen joka kerää 66 pistettä ilmoittaa "close" ja voittaa erän;
+väärä ilmoitus antaa voiton suoraan vastustajalle.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = kortin pelaaminen tikkiin
+tai avioliiton ilmoitus. Botti: vastustajan käden piilotieto sopii
+hyvin sääntöpohjaiselle botille, joka laskee todennäköisyyksiä
+jäljellä olevista korteista. Kaveri: suora 1v1-hotseat — helpoin
+korttipelityyppi moninpelinä (ei tarvita botin simuloimaa kolmatta
+osapuolta).
+
+**Mitä opitaan:** päässälasku (66 pisteen raja) ja todennäköisyyspäättely.
+
+**Pisteet/raha:** ilmainen kahvilakohtaus Wienissä, voitosta
+aarremerkki; ei rahapanosta.
+
+**Grafiikka ja äänet:** itävaltalainen kahvilamiljöö, kortit
+saksalaistyylisellä maakuvituksella (tammenlehvä, sydän, kello, terä
+— oma piirros); äänet: kortin pelaaminen pöytään, avioliittoilmoituksen
+fanfaari, "close"-jännitysääni.
+
+**Missä pelataan:** avautuu Wienin kahvilassa.
+
+### 10. Hnefatafl (NOR-1)
+
+**Sääntö:** Epäsymmetrinen lauta (ehdotus 11×11). Keskellä kuningas
+ja pieni joukko puolustajia, reunoilla/kulmissa suurempi joukko
+hyökkääjiä. Nappulat liikkuvat kuin tornit shakissa (suoraan, ei
+vinoon, ei ylitse). Vain kuningas saa astua neljään kulmaruutuun
+(turvasatamat). Nappula lyödään, kun se jää kahden vastustajan
+nappulan väliin (kuningas tarvitsee neljä ympäröivää nappulaa paitsi
+kulmien/keskuksen läheisyydessä, jolloin kaksi riittää — valitaan
+yksi selkeä sääntöversio). Puolustajat voittavat, jos kuningas pääsee
+kulmaan; hyökkääjät voittavat vangitsemalla kuninkaan.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yksi siirto. Botti:
+epäsymmetria tekee tasapainottamisesta haastavaa — sääntöpohjainen
+botti avaa (puolustajana) tai tukkii (hyökkääjänä) kuninkaan
+pakoreittejä, syvempi minimax-haku mahdollinen. Kaveri: hotseat,
+pelaajat voivat vaihtaa puolta erien välillä epäsymmetrian
+tasapainottamiseksi.
+
+**Mitä opitaan:** viikinkiajan strategiahistoria ja esimerkki
+lähdekritiikistä (1700-luvun käännösvirhe vääristi säännöt lähes 200
+vuodeksi, kunnes arkeologiset lautalöytöt korjasivat ne 1900-luvulla)
+— historiallinen "tieto" ei ole aina luotettavaa ensi lukemalta.
+
+**Pisteet/raha:** ilmainen kohtaaminen viikinkikohteessa/museossa
+Norjassa, voitosta osa kartasta paljastuu; ei rahapanosta.
+
+**Grafiikka ja äänet:** puinen lauta ruunukaiverruksin, nappulat
+kahtena eri muotoisena joukkona (kuningas kruunukuvioinnilla); äänet:
+siirron kolke puulaudalla, lyönnin poistoääni, kuninkaan pakenemisen
+voittofanfaari.
+
+**Missä pelataan:** avautuu viikinkikohteessa/museossa Norjassa,
+strateginen voitto paljastaa osan kartasta.
+
+---
+
+## Ehdotus: pelit 11–20
+
+Valittu painottaen alueita joita ensimmäiset 10 eivät kata (Baltia,
+Balkan, Itä-Eurooppa, Brittein saaret, Iberia) sekä pelityyppien
+kirjoa (kortti, lauta/strategia, lauta/noppa, lauta/tarkkuus,
+piha/tarkkuus):
+
+| järjestys | peli | id | tyyppi | perustelu |
+|---|---|---|---|---|
+| 11 | Novuss | LVA-2 | lauta/tarkkuus | Latvian kansallislaji (MM-kisat 1993 alk.), biljardimainen tarkkuusmekaniikka joka puuttuu vielä katalogista; SUORA. |
+| 12 | Brus | EST-1 | kortti | Viron tikkipeli, kytkeytyy isoisän 1873 reitin majataloihin; SUORA. |
+| 13 | Tarok | SVN-1 | kortti | 54 kortin (22 tarottia + 32 maakorttia) peli, Itävalta–Unkarin kulttuuriperintöä Sloveniassa, erottuu korttimäärältään muista; SUORA. |
+| 14 | Sudet ja lampaat (Vukovi i ovce) | BIH-3 | lauta/strategia | Epäsymmetrinen strategiapeli (2 sutta vs. 20 lammasta), samaa peliperhettä kuin Hnefatafl mutta eri mekaniikka ja mittasuhde; SUORA. |
+| 15 | Tysiąc | POL-2 | kortti | Puolan suosituin 3 pelaajan korttipeli, huutokauppamekaniikka erottaa sen muista tikkipeleistä; SUORA. |
+| 16 | Vrhcáby | CZE-3 | lauta/noppa | Backgammon-perheen tšekkiläinen muoto, dokumentoitu Vyšehradilla jo 900–1000-luvulla — vahva historiakytkös; SUORA. |
+| 17 | Tienvarsikeilailu (Irish road bowling) | IRL-2 | piha/tarkkuus | Irlannin aikuisurheilua (MM-kisat 1985 alk.), pitkän matkan heittofysiikka erottaa sen Mölkystä/Kubbista/Pétanquesta; SUORA. |
+| 18 | Kettu ja hanhet (Fox and Geese) | IRL-3 | lauta/strategia | Epäsymmetrinen lauta (1 kettu vs. 13–15 hanhea), pelattu myös hoveissa — hyvä pari Sudet ja lampaat -pelin kanssa eri mittasuhteella; SUORA. |
+| 19 | Mus | ESP-1 | kortti | Espanjan suosituin korttipeli, ainutlaatuinen ei-sanallinen parimerkkikieli bluffauksessa; SUORA. |
+| 20 | Jogo da Malha | PRT-2 | piha/tarkkuus | Portugalilainen tappienheittopeli, paimenten peli 1400-luvulta — täydentää piha/tarkkuus-kategoriaa eri mekaniikalla (tapin kaato vs. lähimmäksi heitto); SUORA. |
+
+## Pelisuunnitelmakortit: pelit 11–20
+
+### 11. Novuss (LVA-2)
+
+**Sääntö:** Noin 1×1 metrin puulauta, jonka neljässä nurkassa on
+pussit. Kaksi pelaajaa (tai kaksi paria) lyövät omat 8 nappulaansa
+pienellä mailalla nurkkapusseihin ennen vastustajaa — nappulat ovat
+kahta väriä ja aloitusasetelma symmetrinen laudan keskeltä. Lyönti
+tehdään pöydältä pomppaamatta, ja nappula voi kimmota muista
+nappuloista pussiin asti. Ensimmäinen, joka saa kaikki 8 omaa
+nappulaansa pusseihin, voittaa erän; peli pelataan yleensä parhaat
+kolmesta erästä.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yksi lyönti. Botti laskee
+lyöntikulman ja -voiman fysiikkasimulaationa, vaikeustaso säätää
+tarkkuushajontaa ja sitä, kuinka aggressiivisesti botti käyttää
+kimmokkeita. Kaveri: hotseat-vuorottelu, lyönti vetoeleellä
+(suunta+voima laudan päällä).
+
+**Mitä opitaan:** kulma- ja voimalaskennan käytännön fysiikkaa
+(biljardin kaltainen heijastuminen), Baltian jaettua 1920-luvun
+peliperinnettä (synty jaettu Viron ja Latvian kesken 1925–27).
+
+**Pisteet/raha:** ilmainen kohtaaminen latvialaisessa
+kapakkakohtaisessa, voitosta aarrevihje; huvipuistoversiossa 10 £ /
+30–100 £.
+
+**Grafiikka ja äänet:** puulauta ylhäältä kuvakulmasta, kaksi
+nappulaväriä ja neljä nurkkapussia; äänet: mailan napsahdus
+nappulaan, nappuloiden kimmoke toisistaan, pussiin osuman tömähdys.
+
+**Missä pelataan:** avautuu latvialaisessa kylässä/kapakassa isoisän
+reitillä.
+
+### 12. Brus (EST-1)
+
+**Sääntö:** Neljä pelaajaa kahtena parina pelaa 36 kortin pakalla
+tikkipeliä ilman kiinteää valttia. Vastapäätä istuvat pelaajat
+muodostavat parin. Enemmän tikkejä ottanut pari saa yhden pisteen
+erästä; jos pari ottaa kaikki 9 tikkiä peräkkäin (viisi tikkiä
+riittää jo lukkoon), erä tuo tuplapisteet. Ensimmäinen pari, joka
+saavuttaa sovitun pistemäärän (yleensä 6–8), voittaa ottelun.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yhden kortin pudotus
+tikkiin, neljä pelaajaa kiertävät. Botti täyttää puuttuvat
+pelaajapaikat (1–3 bottia), muistaen pelatut kortit
+todennäköisyyspäätöksiä varten. Kaveri: yksi tai kaksi ihmispelaajaa,
+loput bottia; parinmuodostus kiinteä (vastapäätä).
+
+**Mitä opitaan:** tikkipelin todennäköisyyspäättely (mitä kortteja on
+vielä jäljellä) ja 1800-luvun virolais-tanskalaisen seurustelukulttuurin
+tausta.
+
+**Pisteet/raha:** ilmainen kohtaaminen virolaisessa majatalossa,
+voitosta paikallinen vihje; huvipuistoversiossa 10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** 36 kortin virolaispakka piirroskuvituksena,
+neljä pelipaikkaa pöydän ympärillä; äänet: kortin läpsähdys pöytään,
+tikin keräämisen kahina, tuplapisteäänimerkki viiden tikin lukosta.
+
+**Missä pelataan:** avautuu virolaisessa majatalokohtauksessa isoisän
+matkan varrella.
+
+### 13. Tarok (SVN-1)
+
+**Sääntö:** 54 kortin pakka (22 kuvallista tarottia + 32 tavallista
+maakorttia neljässä maassa) jaetaan 3–4 pelaajalle; kuusi korttia jää
+peittoon "taloksi". Huutokaupan voittaja saa talon kortit ja
+ilmoittaa pelin tyypin. Pelissä on seurattava aloitettua maata (tai
+tarottia, jos maata ei ole kädessä); tietyt tarot-kortit (Pagat,
+Mond, Škis) tuovat lisäpisteitä jos ne voitetaan viimeisenä tikkinä.
+Pisteet lasketaan korttien arvoista tikeissä; huutokaupan tehnyt
+pelaaja voittaa jos saavuttaa tarvittavan pistemäärän.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = huutokauppatarjous TAI
+kortin pudotus tikkiin riippuen pelin vaiheesta. Botti arvioi kätensä
+vahvuuden huutotarjousta varten ja pelaa tikkejä
+todennäköisyyspohjalta; vaikeustaso säätää kuinka tarkasti botti
+muistaa pelatut tarot-kortit. Kaveri: botti täyttää puuttuvat
+pelaajapaikat (peli toimii 3 tai 4 pelaajalla).
+
+**Mitä opitaan:** todennäköisyyspäättely (mitkä kortit ovat vielä
+jäljellä 54 kortin pakassa) ja Itävalta-Unkarin kulttuuriperintö
+Sloveniassa.
+
+**Pisteet/raha:** ilmainen kohtaaminen rautatieasemakahvilassa,
+voitosta aarrevihje; huvipuistoversiossa 10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** kuvitetut tarot-kortit (kuvallinen 22 kortin
+sarja) erottuvat tavallisista maakorteista; äänet: huutotarjouksen
+napsahdus, kortin pudotus tikkiin, Pagat-erikoispisteen fanfaari.
+
+**Missä pelataan:** avautuu sloveenilaisessa rautatieasemakahvilassa,
+jossa matkustajat pelaavat junaa odottaessa.
+
+### 14. Sudet ja lampaat / Vukovi i ovce (BIH-3)
+
+**Sääntö:** Epäsymmetrinen lautapeli: yksi pelaaja ohjaa kahta sutta,
+toinen 20 lammasta. Sudet liikkuvat risteyskohdissa ja syövät
+lampaita hyppäämällä niiden yli (kuten tammessa), lampaat liikkuvat
+vain yhden askeleen kerrallaan eivätkä voi syödä. Lampaiden tavoite
+on ajaa sudet nurkkaan niin etteivät ne pääse liikkumaan; susien
+tavoite on syödä niin monta lammasta ettei lampaita enää riitä
+loukkuun ajamiseen. Peli päättyy kun toinen osapuoli ei voi enää
+saavuttaa tavoitettaan.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yhden nappulan siirto tai
+hyppy. Botti pelaa kumpaa tahansa osapuolta minimax-haulla
+(vaikeustaso säätää hakusyvyyttä); sudet vs. lampaat -epäsymmetria
+tekee botista haastavan kummassakin roolissa. Kaveri: pelaajat
+vaihtavat puolta erien välillä epäsymmetrian tasapainottamiseksi
+(sama ratkaisu kuin Hnefatafl-kortissa).
+
+**Mitä opitaan:** epäsymmetrisen taistelun strateginen logiikka
+(vähemmistö vahvoilla nappuloilla vs. enemmistö heikoilla) ja pelin
+leviämishistoria (Hnefatafl-peräisiä pelejä levisi Balkanille).
+
+**Pisteet/raha:** ilmainen kohtaaminen Bosnian kylän portailla,
+voitosta viisaudenvihje vanhukselta; huvipuistoversiossa 10 £ /
+30–100 £.
+
+**Grafiikka ja äänet:** kivilattiaan piirretty lauta, sudet ja
+lampaat erottuvina nappulamuotoina; äänet: nappulan siirron kolke,
+hypyn/syönnin äänimerkki, loukkuun ajamisen voittofanfaari.
+
+**Missä pelataan:** avautuu bosnialaisen kylän portailla, vanhus
+haastaa matkalaisen.
+
+### 15. Tysiąc (POL-2)
+
+**Sääntö:** 3 pelaajaa, 24 kortin pakka (9:stä ässään). Jokainen saa
+7 korttia, 3 jää peittoon lisäkorteiksi. Huutokauppa alkaa
+100 pisteestä ja nousee 10 pisteen välein; korkein tarjous voittaa
+lisäkortit ja ilmoittaa valtin. Pelin aikana voi julistaa
+kuningas-rouva-pareja ("avioliittoja") lisäpisteiksi ja vaihtaa
+valttia niiden mukana. Huutokaupan voittaja tarvitsee tarjouksensa
+verran pisteitä tikeistä ja pareista läpäistäkseen erän; muuten
+menettää tarjouksen verran. Ensimmäinen 1000 pisteeseen voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = huutotarjous TAI kortin
+pudotus tikkiin. Botti arvioi kätensä vahvuuden ennen tarjousta
+(liian korkea tarjous riskeeraa miinuspisteet) ja pelaa pareja
+optimaalisessa järjestyksessä; vaikeustaso säätää tarjousriskin
+mallinnusta. Kaveri: botti täyttää puuttuvat 1–2 pelaajapaikkaa.
+
+**Mitä opitaan:** suurten lukujen yhteen- ja vähennyslasku (pisteet
+kertyvät/vähenevät satoina kohti 1000:ta) sekä riskinarviointi
+huutokaupassa (tarjoaako vai passaako).
+
+**Pisteet/raha:** ilmainen kohtaaminen puolalaisessa junassa/kahvilassa,
+voitosta aarrevihje; huvipuistoversiossa 10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** 24 kortin puolalaispakka, pistetaulu joka
+täyttyy kohti 1000:ta; äänet: huutotarjouksen kolinamerkki,
+avioliittoparin julistuksen erikoisääni, 1000 pisteen voittofanfaari.
+
+**Missä pelataan:** avautuu puolalaisessa junavaunussa tai
+kaupunkikahvilassa matkan varrella.
+
+### 16. Vrhcáby (CZE-3)
+
+**Sääntö:** Kaksi pelaajaa, 15 nappulaa kumpikin, backgammon-tyyppinen
+lauta 24 kentällä. Nappuloita siirretään noppaparin heittojen
+mukaan omaa reittiä pitkin kohti maalikulmaa; kaksi samaa lukua
+("tuplat") antaa neljä siirtoa kahden sijaan. Vastustajan yksinäisen
+nappulan päälle voi lyödä ja lähettää sen alkuun; oman parin (kahden
+tai useamman nappulan) suojaamaa kenttää ei voi lyödä. Ensimmäinen,
+joka saa kaikki 15 nappulaansa maaliin ja sieltä pois laudalta,
+voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = noppaparin heitto + 1–4
+siirtoa (tuplista riippuen). Botti laskee optimaalisen
+siirtoyhdistelmän (lyö vai suojaudu), vaikeustaso säätää
+laskentasyvyyttä. Kaveri: hotseat-vuorottelu, noppaheitto
+kosketuksella, siirrot vedolla.
+
+**Mitä opitaan:** todennäköisyyslaskenta konkreettisesti
+(noppayhdistelmien todennäköisyydet) ja strategisten riskien
+punninta (milloin kannattaa jättää nappula suojaamattomaksi).
+
+**Pisteet/raha:** ilmainen kohtaaminen Prahan linnanraunio-kohteessa,
+voitosta muinaismerkki; huvipuistoversiossa 10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** puinen lauta 24 kentällä, kaksi nappulaväriä;
+äänet: noppien kalina heitossa, nappulan siirron kolke, lyönnin
+erikoisääni kun nappula lähtee alkuun.
+
+**Missä pelataan:** avautuu Prahan Vyšehradin linnanraunioissa
+historiallisena tapahtumana (dokumentoitu paikalla jo 900–1000-luvulla).
+
+### 17. Tienvarsikeilailu / Irish road bowling (IRL-2)
+
+**Sääntö:** Kaksi pelaajaa tai joukkuetta heittää vuorotellen noin
+800 gramman rautakuulaa pitkin maaseututietä kohti sovittua
+maalilinjaa (perinteisesti useiden kilometrien mittainen reitti).
+Jokainen heitto lasketaan, ja se osapuoli joka saavuttaa maalin
+vähimmällä heittomäärällä voittaa. Heittotekniikka (matala,
+pyörivä heitto tien mutkien mukaan) vaikuttaa siihen kuinka pitkälle
+kuula kulkee ja pysyykö se tiellä.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yksi heitto. Botti
+laskee heiton pituuden fysiikkasimulaationa (kulma+voima+tien
+kaarteet), vaikeustaso säätää tarkkuushajontaa. Kaveri: hotseat-
+vuorottelu, heitto vetoeleellä; lyhyempi minipeliversio (yksi
+tien pätkä) sopii nopeaan kohtaamiseen.
+
+**Mitä opitaan:** heittokulman ja -voiman vaikutus matkaan (käytännön
+fysiikkaa) sekä maantieto (todelliset Corkin/Armaghin
+kilpailureitit).
+
+**Pisteet/raha:** ilmainen kohtaaminen irlantilaisella
+maaseututiellä, voitosta oikoreitti kartalle avautuu;
+huvipuistoversiossa 10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** mutkitteleva maaseututie piirroskuvituksena,
+rautakuulan lentorata animoituna; äänet: heiton huminan, kuulan
+kimpoilu tiellä, maaliin pääsyn fanfaari.
+
+**Missä pelataan:** avautuu Corkin/Armaghin maaseututiellä, voitto
+avaa oikoreitin kartalla.
+
+### 18. Kettu ja hanhet / Fox and Geese (IRL-3)
+
+**Sääntö:** Epäsymmetrinen ristikkolauta: yksi pelaaja ohjaa yhtä
+kettua, toinen 13–15 hanhea. Kettu syö hanhia hyppäämällä niiden yli
+(tammen tapaan), hanhet liikkuvat vain yhden askeleen eivätkä voi
+syödä. Hanhien tavoite on ajaa kettu nurkkaan niin ettei se voi enää
+liikkua; ketun tavoite on syödä niin monta hanhea ettei niitä enää
+riitä loukkuun ajamiseen.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yhden nappulan siirto tai
+hyppy. Botti pelaa kumpaa tahansa osapuolta minimax-haulla
+(vaikeustaso säätää hakusyvyyttä — kettu on erityisen haastava
+botille, koska sen on nähtävä useita siirtoja eteenpäin). Kaveri:
+pelaajat vaihtavat puolta erien välillä.
+
+**Mitä opitaan:** epäsymmetrisen taistelun strategia (vähemmistö
+vahvalla erikoiskyvyllä vs. enemmistö ilman) — sama peruslogiikka
+kuin Sudet ja lampaat -kortissa, mutta eri mittasuhde (1 vs. 13–15)
+tekee pelistä erilaisen.
+
+**Pisteet/raha:** ilmainen kohtaaminen vanhan tilan pihalla Irlannin
+maaseudulla, voitosta vihje; huvipuistoversiossa 10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** ristikkolauta pihakivillä, kettu ja hanhet
+erottuvina nappulamuotoina; äänet: nappulan siirron kolke,
+hypyn/syönnin äänimerkki, loukkuun ajamisen voittofanfaari.
+
+**Missä pelataan:** avautuu vanhan tilan pihalla Irlannin maaseudulla.
+
+### 19. Mus (ESP-1)
+
+**Sääntö:** 4 pelaajaa kahtena parina, espanjalainen 40 kortin
+pakka. Jokainen saa 4 korttia ja voi vaihtaa niitä kerran ennen
+veikkausta. Veikataan neljästä kategoriasta vuorotellen (Grande=
+paras korkea käsi, Chica=paras matala käsi, Pares=parikäsi,
+Juego/Punto=korttiarvojen summa); jokaisessa voi korottaa, passata
+tai haastaa. Parit viestivät kättensä vahvuudesta toisilleen
+kiellettyjen sanojen sijaan ilmeillä/eleillä (esim. kielen näyttö =
+kuningas, silmän räpäytys = ässä) — vastustajat yrittävät lukea
+merkit. Ensimmäinen 40 pisteeseen voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = veikkauskierros yhdestä
+kategoriasta. Botti "viestii" parilleen näkymättömästi (pelimoottori
+tietää käden suoraan) mutta veikkaa uskottavasti niin että
+vastustaja (pelaaja) voi yrittää lukea botin veikkausmallia
+pelisession aikana; vaikeustaso säätää botin bluffaustiheyttä.
+Kaveri: neljän pelaajan tilassa oikea parikaveri voi oikeasti
+merkitä eleillä (valinnainen "eleopas"-ohje ruudulla).
+
+**Mitä opitaan:** ei-sanallinen viestintä ja strateginen bluffauspäättely
+(milloin korottaa, milloin passata perustuen vastustajan
+käytökseen).
+
+**Pisteet/raha:** ilmainen kohtaaminen Baskimaan/Pohjois-Espanjan
+kaupungissa, onnistuneesta bluffista vihjepiste; huvipuistoversiossa
+10 £ / 30–100 £.
+
+**Grafiikka ja äänet:** espanjalainen 40 kortin pakka (miekat, kepit,
+kultarahat, pikarit), neljä pelipaikkaa ja elekuvakkeet parin
+merkkiä varten; äänet: kortinvaihdon kahina, veikkauksen korotusääni,
+onnistuneen bluffin erikoismerkki.
+
+**Missä pelataan:** avautuu Baskimaan/Pohjois-Espanjan kaupungissa
+matkan varrella.
+
+### 20. Jogo da Malha (PRT-2)
+
+**Sääntö:** Kaksi joukkuetta heittää vuorotellen litteitä rautakiekkoja
+kohti maahan pystytettyä tappia (n. 15–20 metrin päästä). Tapin
+kaataminen tuo 6 pistettä, lähimpänä tappia oleva kiekko tuo 3
+pistettä jos tappia ei kaadettu. Ensimmäinen joukkue, joka saavuttaa
+30 pistettä, voittaa.
+
+**Kierrosrakenne — botti/kaveri:** vuoro = yhden kiekon heitto.
+Botti laskee heiton pituuden ja tarkkuuden fysiikkasimulaationa
+(kulma+voima), vaikeustaso säätää hajontaa. Kaveri: hotseat-vuorottelu,
+heitto vetoeleellä.
+
+**Mitä opitaan:** heittoradan fysiikkaa (kulma/voima vs. etäisyys) ja
+maaseudun ammattihistoriaa (paimenten peli 1400-luvulta).
+
+**Pisteet/raha:** ilmainen kohtaaminen portugalilaisen maaseutukylän
+torilla, joukkuevoitosta yhteinen vihje; huvipuistoversiossa 10 £ /
+30–100 £.
+
+**Grafiikka ja äänet:** maaseututori piirroskuvituksena, tappi ja
+rautakiekot; äänet: kiekon lentohuminan, tapin kaatumisen kumahdus,
+joukkuevoiton fanfaari.
+
+**Missä pelataan:** avautuu portugalilaisen maaseutukylän torilla.
+
+---
+
+## Uudet omistajan kortit (27.9.2026 klo 11.0x)
+
+*(Fablen välittämät omistajan uudet ideat samana päivänä — nämä eivät
+ole perinnepelejä maittain vaan pelin omia mekaniikkoja, siksi omana
+osiona eri muotoisina kortteina.)*
+
+### Lentopeli (Tiger Moth -vapaalento)
+
+**Tila:** odottaa, ensi viikko (omistaja 27.9.2026).
+
+**Konsepti:** hyödyntää olemassa olevaa Tiger Moth -kaksitasomallia
+seepiavärityksellä (sama malli kuin saapumislento v3:ssa, ks. Raamattu
+"SAAPUMISLENTO V3") uudessa vuorovaikutteisessa minipelissä, erillään
+elokuvallisesta saapumiskamera-ajosta. Pelaaja voi lähteä vapaalle
+lennolle kaupungeista, joissa on lentokenttä.
+
+**Sääntö:** Pelaaja ohjaa konetta kartan yllä vapaasti (kallistus/kaarto
+kosketuksella tai kallistusanturilla natiivissa) matalalla samalla
+tyylillä kuin saapumissekvenssissä. Polttoainemittari vähenee
+jatkuvasti. Täysi tankki ostetaan etukäteen (hinta sidottu
+talousjärjestelmään). Kartalla on tehtäviä (esim. lento renkaan läpi,
+matala ohilento maamerkin yli, tarkkuuslasku kentälle) — onnistunut
+tehtävä lisää polttoainetta lennon aikana, mikä pidentää lentoaikaa.
+Jos polttoaine loppuu ennen paluuta lähtökentälle, kone joutuu
+pakkolaskuun (rahasakko, pelaaja siirtyy lähimpään kaupunkiin). Paluu
+lähtökentälle ennen polttoaineen loppumista päättää lennon ilman
+sakkoa; jäljellä oleva polttoaine voi hyvittää osan hinnasta.
+
+**Kierrosrakenne — botti/kaveri:** ensisijaisesti yksinpeli (taitolaji,
+ei suoraa vastustajaa). Kaveritila mahdollinen aikahaasteena (kumpi
+suorittaa saman tehtäväradan nopeammin/pienemmällä polttoainekulutuksella)
+tai rinnakkaisena jaettuna näyttönä. Botti ei ole vastustaja vaan
+mahdollinen "opas"-lentäjä ensimmäisellä kerralla.
+
+**Mitä opitaan:** yksinkertainen lentofysiikka (kallistus, polttoaineenkulutus
+matkan funktiona), maantieto (kaupungin ja ympäristön maamerkit ylhäältä,
+sama linssiajatus kuin Astronautin kamerassa mutta matalammalla),
+talouden hallinta (polttoaineen hinta vs. matkan pituus).
+
+**Pisteet/raha:** suora kytkös talousjärjestelmään (ks.
+[talous-suunnitelma-20260927.md](raportit/talous-suunnitelma-20260927.md)):
+tankki maksetaan etukäteen, tehtävät antavat polttoainebonuksia (ei
+suoraa rahaa), epäonnistunut paluu sakottaa rahaa. Ehdotusluvut
+(omistajan vahvistettavaksi): tankki 30 £, pakkolaskusakko 50 £,
+tehtäväpalkkio +20 % polttoainetta.
+
+**Grafiikka ja äänet:** sama Tiger Moth -malli ja seepiapaletti kuin
+lento v3:ssa (ei uutta mallia), kartta pergamenttitilassa matalalta
+kulmalta (sama tekniikka kuin v3); polttoainemittari vanhan
+lentokoneen mittaritaulun tyylillä; äänet: moottorin hurina (nousee/
+laskee kaasun mukaan), tuulen suhina, renkaan läpi lennon helähdys,
+pakkolaskun rutina.
+
+**Missä pelataan:** kaupungeissa, joissa on lentokenttä isoisän
+reitillä (samat kohteet kuin nykyinen mannerlento-mekaniikka); oma
+"Lennä vapaasti" -nappi lentokenttäkohtauksessa.
+
+**Avoimet kysymykset omistajalle:** tarkka hinnoittelu (tankki/sakko/
+bonus), tehtävälista ensimmäiseen erään, onko tämä oma erillinen
+minipeli vai laajennus nykyiseen lento v3 -kamera-ajoon.
+
+### Pelistreak
+
+**Tila:** hyväksytty ja toteutettu (omistaja 27.9.2026): web ja iOS.
+
+**Konsepti:** palkitsee pelaajaa siitä, että hän pelaa oikean elämän
+peräkkäisinä päivinä (laitteen paikallinen päivämäärä). Pelipäivä
+lasketaan, kun pelaaja tekee pelissä vähintään yhden teon (liike,
+tehtävä, visa, kauppa — mikä tahansa teko); pelkkä avaaminen ei riitä.
+
+**Sääntö:** päivän ensimmäinen teko kirjaa pelipäivän. Päivät 1–2:
+ei palkkiota. Päivät 3–6: 20 £ päivässä. 7. päivä: 50 £ + viikkobonus
+100 £. 8. päivästä alkaen 30 £ päivässä, ja joka 7. päivä (14, 21, …)
+lisäksi viikkobonus 100 £. ARMOPÄIVÄ: yksi väliin jäänyt päivä 7 päivän
+liukuvassa ikkunassa ei katkaise putkea, mutta siitä ei tule palkkiota
+eikä se kasvata putken pituutta. Toinen väliin jäänyt päivä saman
+ikkunan sisällä (tai kaksi peräkkäistä) nollaa putken. Uusi peli
+aloittaa putken alusta.
+
+**Kierrosrakenne — botti/kaveri:** ei oma pelattava peli vaan
+taustalaskuri. Moninpelissä jokaisella ihmispelaajalla on oma putkensa;
+botit eivät kerrytä putkea.
+
+**Mitä opitaan:** ei suoraa oppimiskytköstä — motivaatiomekaniikka,
+joka kannustaa palaamaan matkalle säännöllisesti.
+
+**Pisteet/raha:** suora rahapalkinto kassaan heti päivän ensimmäisellä
+teolla. Viikon putki tuo 20 × 4 + 50 + 100 = 230 £ (noin 11
+päiväkulua); se ei yksin rahoita matkaa, mutta tekee säännöllisestä
+pelaamisesta turvallisempaa.
+
+**Grafiikka ja äänet:** ilmoitus kartan päällä ("Kolmas päivä
+peräkkäin matkalla · +20 £") kukkaroikonilla, rivi matkapäiväkirjaan
+ja Pulun iloinen reaktio. Ei kalenteria ensimmäisessä vaiheessa.
+
+**Missä pelataan:** ei sidottu kohteeseen — laskuri kulkee
+tallennuksessa ja iCloud-synkassa laitteelta toiselle.

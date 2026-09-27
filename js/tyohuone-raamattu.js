@@ -39,6 +39,13 @@ export const RAAMATTU = {
           + 'on CLAUDE.md:n ja docs/roolitus.md:n ensimmäisellä rivillä. '
           + 'Kumoaa 1.9.2026 kohdan poikkeuksen "todella vaikeaan ongelmaan '
           + 'kysyen".',
+        'VAIN EUROOPPA, KUNNES OMISTAJA TOTEAA SEN VALMIIKSI (omistaja 27.9.2026 klo 13.5x, '
+          + 'sitova, kaikki roolit): sisältöä, nostoja, lehtiä, kuvia, malleja, linssien kohteita ja '
+          + 'karttatyötä tehdään nyt vain Euroopan kaupunkeihin ja maihin. Muihin maanosiin ei tehdä '
+          + 'mitään uutta (ei aloituksia, ei pilotteja, ei suunnitelmia), ennen kuin omistaja on '
+          + 'todennut Euroopan omasta mielestään valmiiksi; siirtymä muihin maanosiin vain omistajan '
+          + 'erillisellä päätöksellä. Olemassa oleva maailmanlaajuinen sisältö ja pelin maailmanlaajuiset '
+          + 'perustoiminnot (pallo, kartta, lennot) pysyvät ja niiden vikoja korjataan.',
         'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
           + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
           + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '
@@ -3454,6 +3461,11 @@ export const RAAMATTU = {
           + 'sopivuus 13+, botti/kaveri, pelikytkös, oikeudet ja lähde; elävä työlista '
           + 'samalla mallilla kuin linssikatalogi.md, ensimmäisten 10 pelin ehdotus ja '
           + 'omistajan ideat -osio; koneluettava data ja HTML-sivu Pelikoodarin vastuulla).',
+        'docs/tilannekatsaus.md — tilannekatsaus (omistaja 27.9.2026: yhteisen '
+          + 'kehityssivuston etusivu apurahan arvioijille ja yhteistyökumppaneille; '
+          + 'osa-alueittain tila, kuvaus ja seuraavat askeleet; vain Fable kirjoittaa, '
+          + 'Pelikoodarin sivusto renderöi sen Tilanne-välilehdelle linssien ja pelien rinnalle; '
+          + 'vain suomeksi, julkinen linkillä mutta noindex, ei sisäisiä tietoja).',
         'docs/raportit/talous-suunnitelma-20260927.md — pelin talouden suunnitelma '
           + '(päiväkulu, Kaupan hinnat, huvipuistot, tulolähteet, 2 vrk:n loppu, '
           + 'omistajan päätökset 27.9.2026).',

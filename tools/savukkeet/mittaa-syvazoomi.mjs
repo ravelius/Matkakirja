@@ -39,11 +39,21 @@ if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop()
   ohitaVanhanKartanSavuke(import.meta.url);
 }
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-
 const JUURI = new URL('../..', import.meta.url).pathname;
+
+/*
+ * Playwright samalla ketjulla kuin savuke-astro-pallo.mjs (README: älä
+ * kirjoita kiinteää polkua): PLAYWRIGHT_JS → juuren node_modules →
+ * paljas paketti (vanha ensimmäinen yritys) → konttiympäristön /opt.
+ */
+let paketti = null;
+for (const polku of [process.env.PLAYWRIGHT_JS, join(JUURI, 'node_modules', 'playwright', 'index.js'),
+  'playwright', '/opt/node22/lib/node_modules/playwright/index.js']) {
+  if (!polku) continue;
+  paketti = await import(polku).catch(() => null);
+  if (paketti) break;
+}
+const chromium = paketti?.chromium ?? paketti?.default?.chromium;
 const TYYPIT = {
   '.html': 'text/html',
   '.js': 'text/javascript',
