@@ -63,3 +63,9 @@ Main punaisella #3412:n jälkeen → **korjaus #3414**: pelikatalogi-data.js gen
 - **Fablelle kysymys:** lähderivi "Tekoälyllä tuotettu havainnekuva. Viitteet: …" (204 datariviä, js/havainnekuva.js:84
   vihje, HAVAINNEKUVA_LAHDE_RE, natiivi Nostokortti.cs:981) jätettiin ennalleen — säilytetäänkö "Tekoälyllä tuotettu"
   avoimuuden vuoksi, vai pois?
+
+## VAIN EUROOPPA (13.5x) kuitattu
+
+Omissa erissä ei korjattavaa. Huom: docs/tilannekatsaus.md Yleiskuva → Seuraavaksi: "lisää linssejä ja kohteita Euroopan
+ulkopuolelle" näkyy projektisivulla (#3410) — ristiriidassa uuden linjauksen kanssa; teksti on Fablen, korjaa md:hen, niin
+projektisivu päivittyy (tools/tee-projekti-data.mjs).
