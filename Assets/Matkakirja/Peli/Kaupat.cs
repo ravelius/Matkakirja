@@ -55,7 +55,7 @@ namespace Matkakirja.Peli
         public static string SahkePullaAvain(string tehtavaId, string laji) =>
             string.IsNullOrEmpty(tehtavaId) ? "" : $"sahke:{tehtavaId}:{laji}";
 
-        /// <summary>Web MANNERLENTO_ILMOITUS (Foggin ääni, pääaarteen jälkeen).</summary>
+        /// <summary>Web MANNERLENTO_ILMOITUS (Foggin ääni). Ei enää sanota (27.9.2026: lento auki alusta); vakio säilyy sääntöpaketin vertailua varten.</summary>
         public const string MannerlentoIlmoitus = "Mantereen aarre on laukussa. Isoisä olisi etsinyt satamasta laivaa — minä ostin lentolipun puhelimella: toiselle mantereelle pääsee nyt mistä tahansa kaupungista.";
 
         /// <summary>Web MANNER_NIMET: mantereen nimi ja illatiivi napin tekstiin.</summary>
@@ -391,14 +391,12 @@ namespace Matkakirja.Peli
             Matka.Laatat?.MannerOf(kaupunki)
             ?? (Matka.Verkko.Kaupungit.TryGetValue(kaupunki, out var k) && k.Manner != null ? k.Manner : Lauta);
 
-        bool PaaaarreLoytynyt(string manner) => Matka.Laatat != null && Matka.Laatat.PaaaarreLoytynyt(manner);
 
         /// <summary>
-        /// Web mannerLennot: kun oman mantereen pääaarre on löytynyt, lento
-        /// mistä tahansa kaupungista (ei lentokenttäehtoa) jokaisen mantereen
-        /// ensimmäiseen aloituskaupunkiin, jonka mantereen aarre on vielä
-        /// kateissa. Vain vaellustilassa, vaiheessa Toiminta, 300 p.
-        /// Valinta on vakio eikä kuluta arvontaa.
+        /// Web mannerLennot: lento mistä tahansa kaupungista (ei lentokenttäehtoa) jokaisen MUUN mantereen
+        /// ensimmäiseen aloituskaupunkiin. KOKO MAAILMA AUKI ALUSTA ASTI (omistaja 27.9.2026): ei odoteta oman
+        /// mantereen pääaarretta, ja löydetyn aarteen manner on yhä kohde. Vain vaellustilassa, vaiheessa Toiminta,
+        /// 300 p. Valinta on vakio eikä kuluta arvontaa.
         /// </summary>
         public List<MannerlentoKohde> MannerLennot(Pelaaja p = null)
         {
@@ -409,14 +407,12 @@ namespace Matkakirja.Peli
             if (p.Raha < Vakiot.LentoHinta) return kohteet;
             if (!p.Sijainti.Kaupungissa || !Matka.Verkko.Kaupungit.ContainsKey(p.Sijainti.Kaupunki)) return kohteet;
             var oma = MannerOf(p.Sijainti.Kaupunki);
-            if (!PaaaarreLoytynyt(oma)) return kohteet;
             var nahdyt = new HashSet<string> { oma };
             foreach (var c in Matka.KaupunkiLista(Matka.Verkko))
             {
                 if (!c.Aloitus) continue;
                 var manner = MannerOf(c.Id);
                 if (!nahdyt.Add(manner)) continue;
-                if (PaaaarreLoytynyt(manner)) continue;
                 kohteet.Add(new MannerlentoKohde { Kaupunki = c.Id, Manner = manner, Nimi = c.Nimi });
             }
             return kohteet;

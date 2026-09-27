@@ -65,5 +65,20 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(2, lista.Count, "fokida ja pieria");
             Oleta.Sama(("GRC:fokida", 0, 2), lista[0], "fokida 0/2");
         }
+    
+        // Omistaja 27.9.2026: kaikki nostot täytenä heti — ei "unohdettua" himmeää tilaa; salaisuus odottaa yhä.
+        [Testi] static void KaikkiNostotTaysinaHeti()
+        {
+            var m = new KarttaMuste();
+            m.LisaaNosto("a", "GRC:athos", Kokoluokka.Kohde);
+            m.LisaaNosto("b", "GRC:athos", Kokoluokka.Pieni);
+            m.LisaaSalaisuus("GRC:athos", "salaisuus");
+            var loydetyt = new HashSet<string>();
+            Oleta.Tosi(m.Tila(loydetyt, "a").Taysi, "löytämätön nosto ei ole täysi");
+            Oleta.Tosi(!m.Tila(loydetyt, "a").Loydetty);
+            Oleta.Tosi(!m.Tila(loydetyt, "salaisuus").Taysi, "salaisuus näkyi ennen maakunnan valmistumista");
+            loydetyt.Add("a"); loydetyt.Add("b");
+            Oleta.Tosi(m.Tila(loydetyt, "salaisuus").Taysi, "salaisuus ei ilmestynyt valmiissa maakunnassa");
+        }
     }
 }

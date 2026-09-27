@@ -2,8 +2,9 @@
 // kohdat 2–3; Pelikoodari). Vain natiivi (web ennallaan). Puhdas data ja säännöt ilman UnityEngineä (Peli-testit/KarttaMusteTestit):
 //   - Nostojen kolme kokoluokkaa: pääkohde (iso merkki + hehku), kohde, pieni merkintä. Luokka tulee datasta
 //     (karttavalot.kokoluokka, skeema 1.45, Sisältökirjurin luokitus); puuttuessa tasosta (1 pääkohde, 2 kohde, 3 pieni).
-//   - "Unohdettu" tila: löytämätön nosto on himmeä musteen jälki ilman nimeä, löydetty (kortti avattu) täysi merkki nimineen.
-//     Löydöt tallennetaan (Pelitila.LoydetytNostot, kenttä "nostotLoydetty").
+//   - "Unohdettu" tila POISTETTU (omistaja 27.9.2026 klo 08.2x): kohdemaan kaikki nostot näkyvät heti täydellä
+//     ulkoasulla ja nimellä (NostonMuste.Taysi) — ei himmeää jälkeä, ei nimetöntä merkkiä. Löydöt tallennetaan yhä
+//     (Pelitila.LoydetytNostot, kenttä "nostotLoydetty") laskuria, kartussia ja salaisuutta varten (NostonMuste.Loydetty).
 //   - Maakunnat heräävät: maakunta on tasaista paperia, kunnes sen ensimmäinen nosto löytyy (MaakuntaHeraa); laskuri
 //     löydetyt/kaikki; kun kaikki löytyvät, "maakunnan salaisuus" -nosto ilmestyy (MaakuntaValmis, salaisuus näkyviin).
 // Piirto (Natiiviseppä) kysyy Tila(id); kartussi ja merkit (Natiivi-UI) kuuntelevat PeliOhjaimen tapahtumia.
@@ -15,13 +16,19 @@ namespace Matkakirja.Peli
 {
     public enum Kokoluokka { Paakohde, Kohde, Pieni }
 
-    /// <summary>Noston tila piirrolle: luokka, löydetty (täysi merkki ja nimi) ja näkyykö lainkaan (salaisuus vasta lopuksi).</summary>
+    /// <summary>
+    /// Noston tila piirrolle: luokka, löydetty (kortti avattu: laskuri ja kartussi), näkyykö lainkaan (salaisuus vasta
+    /// lopuksi) ja <see cref="Taysi"/>: piirretäänkö täysi merkki nimineen. Piirto lukee ulkoasun Taysi-kentästä,
+    /// EI Loydetty-kentästä (omistaja 27.9.2026: kaikki nostot täytenä heti).
+    /// </summary>
     public readonly struct NostonMuste
     {
         public readonly Kokoluokka Luokka;
         public readonly bool Loydetty, Nakyy, Salaisuus;
         public NostonMuste(Kokoluokka luokka, bool loydetty, bool nakyy, bool salaisuus)
         { Luokka = luokka; Loydetty = loydetty; Nakyy = nakyy; Salaisuus = salaisuus; }
+        /// <summary>Täysi merkki ja nimi: jokainen näkyvä nosto (ei enää "unohdettua" himmeää tilaa).</summary>
+        public bool Taysi => Nakyy;
     }
 
     /// <summary>Löydön seuraukset: uusi löytö, maakunta heräsi (ensimmäinen), maakunta valmis (salaisuus ilmestyy).</summary>

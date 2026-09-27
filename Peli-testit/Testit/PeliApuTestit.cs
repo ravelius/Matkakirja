@@ -103,13 +103,14 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, PeliApu.Vaihtoehdot(m, "ei-ole").Count, "tuntematon");
         }
 
-        [Testi] static void MannerlentoMatkavalinnassaKunMantereenAarreLoytyi()
+        // Omistaja 27.9.2026: koko maailma auki — mannerlento ei odota mantereen aarretta.
+        [Testi] static void MannerlentoMatkavalinnassaAlustaAsti()
         {
             var m = Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(9L), "Fogg", "pariisi", KultaisetApu.Laattamaarat);
             Oleta.Sama(Vaihe.Heitto, m.Tila.Vaihe, "liftaus valittu valmiiksi");
             Oleta.Tosi(m.PeruKulkutapa().Ok, "bussi sallii perumisen");
             var kaukana = new Kaupat(m).MannerLennot();
-            Oleta.Sama(0, kaukana.Count, "ei ennen Euroopan aarretta");
+            Oleta.Tosi(kaukana.Count > 0 && kaukana.All(k => k.Manner != "europe"), "mannerlennot jo ennen Euroopan aarretta");
             var tahti = m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.Paaaarre && m.Laatat.MannerOf(kv.Key) == "europe").Key;
             m.KaannaLaatta(tahti);
             Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe);
@@ -127,8 +128,9 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(t.Ok, t.Virhe);
             Oleta.Sama(k0.Kaupunki, t.Saapui, "perillä");
             Oleta.Sama(raha - Vakiot.LentoHinta, m.Tila.Pelaaja.Raha, "300 p");
-            // Tavallisena lentona sama kohde epäonnistuu siististi (ei lentokenttäreittiä).
-            Oleta.Tosi(!PeliApu.Matkusta(m, "pariisi", Kulkutapa.Lento, true).Ok, "ei toista mannerlentoa ilman aarretta");
+            // Takaisin Eurooppaan: mannerlento on tarjolla, jos Pariisi on Euroopan lentokohde, muuten ei reittiä.
+            bool takaisin = new Kaupat(m).MannerLennot().Any(k => k.Kaupunki == "pariisi");
+            Oleta.Sama(takaisin, PeliApu.Matkusta(m, "pariisi", Kulkutapa.Lento, true).Ok, "paluu Eurooppaan");
         }
 
         [Testi] static void AanitunnuksetKutenWeb()

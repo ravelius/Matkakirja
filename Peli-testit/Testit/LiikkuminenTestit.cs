@@ -102,8 +102,11 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(bussi.Count > 0 && bussi.All(r => r.Rivi.Nimi.EndsWith(" (50 p)")), "bussirivit");
             Oleta.Sama(m.BussiKohteet().Count, bussi.Count);
             var lento = PeliApu.KohdeRivit(m, Kulkutapa.Lento);
-            Oleta.Sama(m.LentoKohteet().Count, lento.Count, "ei mannerlentoja alussa");
-            Oleta.Tosi(lento.All(r => r.Rivi.Nimi.EndsWith(" (300 p)")), "lentorivit");
+            // Mannerlennot ovat tarjolla alusta asti (omistaja 27.9.2026: koko maailma auki).
+            var mannerlennot = new Kaupat(m).MannerLennot();
+            Oleta.Tosi(mannerlennot.Count > 0, "mannerlennot alusta asti");
+            Oleta.Sama(m.LentoKohteet().Count + mannerlennot.Count, lento.Count, "lennot ja mannerlennot");
+            Oleta.Tosi(lento.Take(m.LentoKohteet().Count).All(r => r.Rivi.Nimi.EndsWith(" (300 p)")), "lentorivit");
             Oleta.Sama(0, PeliApu.KohdeRivit(m, Kulkutapa.Meri).Count, "Pariisista ei laivaa");
             Oleta.Sama(0, PeliApu.KohdeRivit(m, Kulkutapa.Maa).Count, "liftaus heittää heti");
 
