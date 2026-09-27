@@ -123,9 +123,6 @@ import {
 import * as laattaApi from '../pallolaatat.js';
 import { luoKameraloki } from './kameraloki.js';
 import { luoSulavuusmittari } from './sulavuusmittari.js';
-import {
-  SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
-} from './sumu.js';
 import { LEVON_ESTEET, luoKartanLiike } from '../kartta-liike.js';
 import { asennaLepopiirto, lepopiirtoKaytossa } from './lepopiirto.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
@@ -3045,8 +3042,6 @@ export async function avaaPallolauta(ui) {
   const napautaNosto = (osuma) => {
     if (ui.dead || ui.busy || !osuma) return false;
     heraa();
-    // Löytämisen sumu: avaaminen mustaa luonnoksen (js/pallolauta/sumu.js).
-    if (sumuPaalla() && merkitseLoydetyksi(osuma.id)) pyydaLadonta();
     osuma.avaa(ankkuri(osuma.lat, osuma.lng));
     return true;
   };
@@ -5015,8 +5010,6 @@ export async function avaaPallolauta(ui) {
 
   /* ---- merkit pelitilasta ------------------------------------------- */
   let merkkiAvain = null;
-  /** Löytämisen sumu: avain, jolla käytyjen maiden rajat viimeksi laskettiin. */
-  let sumunRajaAvain = null;
   /** posKey siitä paikasta, jossa nappula viimeksi NÄHTIIN laudalla. */
   let nappulanPaikka = null;
   const merkitseNappulanPaikka = (pos) => { nappulanPaikka = pos ? posKey(pos) : null; };
@@ -5296,43 +5289,6 @@ export async function avaaPallolauta(ui) {
      * `poltettu:true` ensimmäisen kameran liikkeen jälkeen.
      */
     if (maaVaihtui) setTimeout(() => { if (!kuori.hidden) ladoLevossa(); }, 0);
-    /*
-     * LÖYTÄMISEN SUMU (prototyyppi, js/pallolauta/sumu.js): kohdemaan
-     * käymättömien kaupunkien seudut kermalla (laattapyramidi
-     * asetaSisasumu → pallolaatat maalaaSisasumu) ja käymättömien
-     * maiden rajat vaaleampina (pallovektorit asetaSumu). Avain =
-     * maa + käydyt kaupungit; molemmat päivittyvät vain sen vaihtuessa.
-     */
-    if (sumuPaalla()) {
-      const { game } = ui;
-      const kaydytIdt = [...(game.world?.visited ?? [])];
-      const nyt = game.cityOf?.();
-      if (nyt?.id && !kaydytIdt.includes(nyt.id)) kaydytIdt.push(nyt.id);
-      const sumuAvain = `${korostusIso ?? '-'}|${kaydytIdt.sort().join(',')}`;
-      // Maan renkaat merentakaisten suodattimeen (sumu.js mantereenKaupungit);
-      // ne saapuvat laiskasti, joten avain erottaa tilan ilman renkaita.
-      const renkaat = korostusIso ? pallonKorostusRenkaat(korostusIso) : [];
-      const aukot = korostusIso
-        ? sisasumunAukot({ iso: korostusIso, game, lauta: PALLO_LAUTA, renkaat })
-        : null;
-      const sisasumunAvain = `${sumuAvain}|r${renkaat.length}`;
-      const sumuVaihtui = asetaSisasumu(aukot ? { ...aukot, peitto: SISASUMUN_PEITTO, avain: sisasumunAvain } : null);
-      if (sumuVaihtui) heraa();
-      if (sumuAvain !== sumunRajaAvain) {
-        sumunRajaAvain = sumuAvain;
-        const cityCountry = game.pack?.map?.cityCountry ?? {};
-        const kaydytMaat = [...new Set(kaydytIdt.map((id) => cityCountry[id]).filter(Boolean))]
-          .filter((iso) => iso !== korostusIso);
-        const renkaitaOli = renkaat.length > 0;
-        lataaMaapolygonit().then((data) => {
-          if (!data || sumuAvain !== sumunRajaAvain || ui.dead) return;
-          const viivat = kaydytMaat.flatMap((iso) => maanRenkaatAsteina(data, iso, pallonAsteet));
-          vektorit?.asetaSumu?.({ paalla: true, avain: sumuAvain, viivat, kerroin: SUMUN_RAJAKERROIN });
-          // Renkaat saapuivat vasta nyt: sisäsumu uudestaan mantereen tiedolla.
-          if (!renkaitaOli && korostusIso && pallonKorostusRenkaat(korostusIso).length) paivita();
-        }).catch(() => {});
-      }
-    }
     if (maaVaihtui || (korostusIso && !maanLaatikko)) {
       if (!korostusIso) {
         maanLaatikko = null;
