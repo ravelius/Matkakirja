@@ -32,6 +32,23 @@ local_eec7f158-d9f3-4b93-9368-c50935bd19ab. Scratchpad S=/private/tmp/claude-502
   Ratas, Ankkuri), esikatselut mallinseppa-toimitus-20260927/kategoriasymbolit-esikatselu-{1,2}.png. Agentti B (Tulivuori,
   Aallot, Tassu = pöllö, Kellotorni) kesken.
 
+## OMISTAJAN PÄÄTÖKSET 07.4x (Fablen kautta) = UUSI JONO
+
+1. **Meri v3 TUOTANTOON 10 lajilla** nykyisellä koolla → merge-pyyntö 1.0.28:aan (tai 1.0.29).
+   Tuotantohaara proto `linssiseppa/meri-tuotanto` (worktree /Users/Shared/Claude/wt/proto-linssiseppa): MeriAikataulu julkiseksi
+   (a2d705f1), juna/b13 mergetty (957d17c4), MeriKoristeet.cs (754656c4 + 29fca3da): merikohdat paketista
+   (kartta/merikohdat.json), kohdemaan pari painotetulla siemenarvonnalla (paino 1/maita), ankkuri ruudun keskustaa lähin
+   sallittu kohta ≥ 120 pt:n päässä (vain kun laji ei näy), harvinainen merihirviö väistää. 8 uutta lajia kolmella
+   Opus-agentilla: tyokalut/meri-esikatselu-{a,b,c}/lajit/Meri<Laji>.cs (a: Purjelaiva, Kalastusvene, Lautta; b: Delfiinit,
+   Lokit, Jaavuori; c: Majakkalaiva, Hirvio) → lisää MeriKoristeet.Lajit-taulukkoon (jäävuori VahintaanLat 63, hirviö
+   Harvinainen = true) → käännös → ajo VAIHEET 1 + 8 (meri tuotanto: NOR, GRC, FIN, DNK, UKR) → Fablelle → merge-pyyntö.
+2. Kaikki 14 kategoriasymbolia hyväksytty, ja ne ovat jo junassa 180e22dc.
+3. **Erikoismallit erä 2 hyväksytty** → merge-pyyntö lähetetty 07.5x (mallinseppa/erikoismallit2 01810d0c). Kinderdijk
+   todennetaan laitteella seuraavassa käännöksessä (kynnyskorjaus 23fd85af junassa). **Seuraavat 3** (elämänideat
+   Fablelle 07.5x): Bruggen kellotorni (brugge-belfry), Matterhorn, Hohensalzburg. Agentit tekevät:
+   tyokalut/mallinseppa-esikatselu-{d,e,f}/ (malli/Erikoismallit/<Nimi>.cs, malli/Elava/ErikoisLiike<Nimi>.cs, <avain>.md)
+   → kopioi haaraan mallinseppa/erikoismallit3 (pohja erikoismallit2), Luo-switch, speksit docs/raportit/erikoismallit/.
+
 ## TULOS 04.1x (käännös cb621b9b, kuvat proto-3d/lokit/mallinseppa-laite-20260927-e/)
 
 - A/B/C samasta ajosta: mallinseppa-toimitus-20260927/kategoriat-abc-<paikka>-75.png; C toimii (vuoren lumi valkoinen).
