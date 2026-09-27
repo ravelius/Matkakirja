@@ -58,7 +58,8 @@ concurrency:
 jobs:
   vie:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 60 min (27.9.2026): ensimmäinen mediaKuvat-ajo pienentää ~10 000 kuvaa; vaihe on aikarajattu (--aikaraja).
+    timeout-minutes: 60
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -145,11 +146,18 @@ jobs:
           set -euo pipefail
           python3 -c 'import PIL' 2>/dev/null || sudo apt-get install -y -qq python3-pil >/dev/null
           node tools/vienti/vie-sisalto.mjs > /dev/null
-          node tools/vienti/mediakuvat.mjs --paivita --varmista --ulos dist/pienet
-          if [ -d dist/pienet/pieni ]; then
-            aws s3 sync dist/pienet/pieni "s3://$AMPARI/pieni/" --endpoint-url "$PAATE" \
+          mkdir -p dist/pienet/pieni
+          vie_pienet() {
+            aws s3 sync dist/pienet/pieni "s3://$AMPARI/pieni/" --endpoint-url "$PAATE" --exclude '*.tmp' \
               --cache-control 'public, max-age=86400' --no-progress --only-show-errors
-          fi
+          }
+          # Valmiit pienet ämpäriin minuutin välein: aikaraja tai peruutus ei hukkaa tehtyä työtä, ja seuraava
+          # ajo löytää ne (--varmista tarkistaa julkisesta osoitteesta).
+          ( while sleep 60; do vie_pienet || true; done ) &
+          VIEJA=$!
+          node tools/vienti/mediakuvat.mjs --paivita --varmista --ulos dist/pienet --aikaraja 1500
+          kill $VIEJA 2>/dev/null || true
+          vie_pienet
 
       - name: Vie sisältö ja valmistele paketti
         if: env.PALAUTA == ''

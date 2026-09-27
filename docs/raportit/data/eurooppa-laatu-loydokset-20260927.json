@@ -1,0 +1,610 @@
+[
+ {
+  "kaupunki": "lontoo",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "muu",
+  "kuvaus": "Meritien katkoviiva kulkee maan päällä: leveät harmaat palkit Lontoon itä- ja kaakkoispuolella. A:ssa katkoviiva lähtee Lontoosta ja kulkee noin 75 km maata pitkin etelärannikolle. Sama näkyy B:ssä ja C:ssä.",
+  "x": 0.76,
+  "y": 0.74
+ },
+ {
+  "kaupunki": "marseille",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Étang de Berre (noin 155 km² laguuni) puuttuu: tilalla tasainen vaalea maa, jota kiertää rantatörmän kohokuvio, eikä z8-rantaviivaa ole. Sama puute näkyy kaikissa paneeleissa A–E. Sijainti: vasen yläneljännes.",
+  "x": 0.15,
+  "y": 0.3
+ },
+ {
+  "kaupunki": "marseille",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "muu",
+  "kuvaus": "Irrallinen z8-rantaviivan pätkä (Caronten kanava) päättyy tyhjään vasempaan reunaan, koska laguunin ranta puuttuu. Sama näkyy B:ssä ja C:ssä.",
+  "x": 0.03,
+  "y": 0.41
+ },
+ {
+  "kaupunki": "granada",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "luxemburg",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "ljubljana",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "krakova",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "rooma",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "muu",
+  "kuvaus": "Meritien katkoviiva alkaa rautatien päästä Rooman keskustasta ja kulkee noin 25 km maalla ennen rannikkoa. Harmaat palkit ovat maan päällä vasemmassa keskiosassa, ja sama näkyy A:ssa, B:ssä ja C:ssä.",
+  "x": 0.4,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "rooma",
+  "paneeli": "E",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Braccianon järvi (noin 57 km²) ja viereinen Martignano näkyvät tasaisena vaaleana maana, eivät vetenä. Sijainti: vasen yläneljännes. A:ssa samalla kohdalla on vain vaalea tasanne.",
+  "x": 0.25,
+  "y": 0.22
+ },
+ {
+  "kaupunki": "rooma",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Albanon ja Nemin kraaterijärvien sisäosa on vaaleaa maata eikä vettä (näkyy vain kraaterireuna). Sama näkyy B:ssä, C:ssä ja E:ssä.",
+  "x": 0.59,
+  "y": 0.59
+ },
+ {
+  "kaupunki": "rooma",
+  "paneeli": "A",
+  "luokka": "pieni",
+  "tyyppi": "muu",
+  "kuvaus": "Kaupunki- tai pistemerkki (valkoinen pallo) on avomerellä Ponzan eteläpuolella meritien kohdalla. Epävarma, onko tämä tarkoituksellinen reittipiste.",
+  "x": 0.69,
+  "y": 0.86
+ },
+ {
+  "kaupunki": "rooma",
+  "paneeli": "A",
+  "luokka": "pieni",
+  "tyyppi": "muu",
+  "kuvaus": "Tiberin jokiviiva puuttuu kaikilta tasoilta, vaikka muissa kaupungeissa päävirrat on piirretty (Thames, Veiksel, Neva, Väinäjoki). Epävarma, voi olla aineiston kokoraja.",
+  "x": 0.58,
+  "y": 0.38
+ },
+ {
+  "kaupunki": "kreeta",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "bukarest",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "sävyhyppy",
+  "kuvaus": "Tasangolla D:ssä on voimakkaita kohokuvioläikkiä, luultavasti pintamallin rakennuksia tai metsänreunoja. Ne ovat tiheimmillään yläosassa. B on sileä, C:ssä kuvio on heikko ja E:ssä lähes sileä, joten kuvio ilmestyy vasta z10:ssä.",
+  "x": 0.45,
+  "y": 0.15
+ },
+ {
+  "kaupunki": "pietari",
+  "paneeli": "A",
+  "luokka": "näkyvä",
+  "tyyppi": "muu",
+  "kuvaus": "Nevan jokiviiva jatkuu noin 150 px Laatokan vesialueen päälle (Pähkinälinnan lahti) oikeassa keskiosassa.",
+  "x": 0.8,
+  "y": 0.45
+ },
+ {
+  "kaupunki": "pietari",
+  "paneeli": "E",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Nevanlahden vesi on pehmeäreunainen, pilvimäinen läikkä ilman selvää rantaa. Kaupungin saarten ääriviivat näkyvät haamumaisina kohokuvioina joen suulla (keskivasen), mutta vettä niiden ympärillä ei ole.",
+  "x": 0.3,
+  "y": 0.6
+ },
+ {
+  "kaupunki": "pietari",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "sävyhyppy",
+  "kuvaus": "Maalla D:ssä on hajanaisia kohokuvioläikkiä (pintamalli). B on sileä ja E lähes sileä. Lievempi kuin Bukarestissa.",
+  "x": 0.4,
+  "y": 0.65
+ },
+ {
+  "kaupunki": "riika",
+  "paneeli": "E",
+  "luokka": "vakava",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Riianlahden rantaviiva on pilvimäisen pyöreä, ja siinä on suuria kaarevia pullistumia (yläpuolisko). D:ssä ja z8-rannassa ranta on sileä kaari, joten veden muoto on selvästi väärä.",
+  "x": 0.55,
+  "y": 0.3
+ },
+ {
+  "kaupunki": "riika",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "sävyhyppy",
+  "kuvaus": "Vasemmassa alaneljänneksessä D:ssä on voimakas rakeinen mikrokuvio (metsät tai pintamalli), jota B:ssä ja E:ssä ei ole.",
+  "x": 0.15,
+  "y": 0.8
+ },
+ {
+  "kaupunki": "riika",
+  "paneeli": "A",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Riian lähijärvet (Ķīšezers noin 17 km², Juglas ja Babītes) puuttuvat kaikilta tasoilta, myös z8-rannasta. Järvien sijainti on arvioitu kaupungin ja Väinäjoen suun perusteella.",
+  "x": 0.57,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "bergen",
+  "paneeli": "E",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Saariston vesi on lähes maan sävyistä, ja vasemmassa alaneljänneksessä on harmaita pilvimäisiä ja osin suorareunaisia läikkiä. Saaret sulautuvat veteen. D:ssä vesi erottuu selvästi, ja E on kokonaisuutena vaaleampi kuin D.",
+  "x": 0.2,
+  "y": 0.8
+ },
+ {
+  "kaupunki": "bergen",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "muu",
+  "kuvaus": "Meritien katkoviivan harmaa palkki on osin maan päällä Bergenin niemellä (vasen alakeskusta). Sama näkyy B:ssä ja C:ssä.",
+  "x": 0.23,
+  "y": 0.66
+ },
+ {
+  "kaupunki": "islanti",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "muu",
+  "kuvaus": "Meritien katkoviivat ovat maan päällä: kaksi harmaata palkkia Reykjavikin niemellä ja yksi sisämaassa oikeassa alaneljänneksessä. Myös A:ssa katkoviiva kulkee maalla. Sama näkyy B:ssä ja C:ssä.",
+  "x": 0.63,
+  "y": 0.78
+ },
+ {
+  "kaupunki": "islanti",
+  "paneeli": "E",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Reykjavikin rannikko on möhkälemäinen ja pehmeä. Niemet ja pikkusaaret sulautuvat pilvimäisiksi pullistumiksi, ja z8-rannan yksityiskohdat puuttuvat (keskiosa).",
+  "x": 0.5,
+  "y": 0.45
+ },
+ {
+  "kaupunki": "dublin",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Laivareitin katkoviivan harmaa palkki ulottuu maan päälle: Howthin/Suttonin kannas oikeassa yläneljänneksessä ja Dún Laoghairen ranta keskellä oikealla (sama B:ssä ja C:ssä, z8-viivadataa)",
+  "x": 0.78,
+  "y": 0.32
+ },
+ {
+  "kaupunki": "dublin",
+  "paneeli": "E",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pallossa Dublinin lahden ranta karkea ja 8 px JPEG-lohkoinen, lahden vesi läikikäs; muoto vastaa silti suunnilleen D:tä (epävarma, pieni)",
+  "x": 0.5,
+  "y": 0.6
+ },
+ {
+  "kaupunki": "lissabon",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Laivareitin katkoviivan harmaa palkki on kokonaan maalla Lissabonin niemellä Tejon suun pohjoispuolella, vasen keskiosa (sama B:ssä ja C:ssä)",
+  "x": 0.44,
+  "y": 0.37
+ },
+ {
+  "kaupunki": "lissabon",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "raja",
+  "kuvaus": "Beige maareittiviiva kulkee suoraan Tejon suiston veden yli ja päättyy solmuun rantaviivalle (B/C/D); voi olla tarkoituksellinen yhteys, epävarma",
+  "x": 0.8,
+  "y": 0.4
+ },
+ {
+  "kaupunki": "sevilla",
+  "paneeli": "E",
+  "luokka": "pieni",
+  "tyyppi": "sävyhyppy",
+  "kuvaus": "Pallo on hieman vaaleampi ja relief laimeampi kuin D (keskikirkkaus noin 214 vs 207), näkyy lähinnä vierekkäin; vasemman alakulman kaari on oikea Doñanan rantaviiva, ei virhe",
+  "x": 0.5,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "berliini",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Berliinin järvet (Müggelsee oikealla alhaalla, Havel/Wannsee vasemmalla alhaalla, Tegeler See) puuttuvat pohjasta kaikilla tasoilla B–E; Spree/Havel eivät näy vetenä. Todennäköisesti kokokynnys, mutta z10:ssä Müggelsee olisi noin 45 px",
+  "x": 0.77,
+  "y": 0.63
+ },
+ {
+  "kaupunki": "wien",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "raja",
+  "kuvaus": "Tonavan z8-viiva kulkee noin 15–25 px (1,5–2 km) koilliseen pohjan jokiuomasta Kahlenbergin–Klosterneuburgin kohdalla ja vasemmassa yläosassa pohjan uoma näkyy viivan alapuolella (myös C)",
+  "x": 0.5,
+  "y": 0.4
+ },
+ {
+  "kaupunki": "alpit",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "raja",
+  "kuvaus": "Ranskan–Saksan rajan katkoviiva kulkee Reinin viivan rinnalla 10–20 px erillään ja risteää sen kanssa, vaikka raja seuraa jokea; lisäksi Reinin z8-viiva on 15–25 px pohjan uomasta länteen (oikea reuna, myös A–C)",
+  "x": 0.83,
+  "y": 0.4
+ },
+ {
+  "kaupunki": "sisilia",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Laivareitin katkoviivan harmaat palkit maalla: yksi sisämaan vuorilla alhaalla keskellä, toinen ylittää rannan Isola delle Femminen kohdalla vasemmalla (sama B:ssä ja C:ssä)",
+  "x": 0.57,
+  "y": 0.8
+ },
+ {
+  "kaupunki": "sisilia",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pieni suljettu z8-linssi (järvi/allas?) maalla vasemmassa keskiosassa, pohjassa ei vettä kohdalla; epävarma",
+  "x": 0.27,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Harmaa puoliläpinäkyvä suorakaidepalkki (laivareitin katkoviivan pala) sisämaassa Popovo poljen kohdalla, vasen yläkeskiosa (sama B:ssä ja C:ssä)",
+  "x": 0.3,
+  "y": 0.4
+ },
+ {
+  "kaupunki": "kiova",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "laikku",
+  "kuvaus": "Vasemmassa puoliskossa kukkakaalimainen täplä-/korttelikuvio (todennäköisesti DSM:n metsä- ja rakennuskohina), joka ei seuraa maastoa ja puuttuu C:stä, joten z9→z10 näkyy pienenä hyppynä",
+  "x": 0.12,
+  "y": 0.35
+ },
+ {
+  "kaupunki": "helsinki",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Laivareitin katkoviivan harmaa suorareunainen palkki rannassa Laajalahden/Seurasaarenselän kohdalla peittää saaria ja rantaa, vasen keskiosa (sama B:ssä ja C:ssä)",
+  "x": 0.36,
+  "y": 0.67
+ },
+ {
+  "kaupunki": "helsinki",
+  "paneeli": "E",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pallon rantaviiva on täpläinen ja sumea vyöhyke, saaristo ja Helsingin niemi eivät erotu, merellä 8 px lohkoja; D:ssä (web z10) ranta ja saaret selvät",
+  "x": 0.5,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "vilna",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "laikku",
+  "kuvaus": "Vasemmassa alaneljänneksessä (Vilnan kaupunkialue) täplikäs DSM-kohina (rakennukset/metsä), jota C:ssä ei ole: pieni hyppy z9→z10",
+  "x": 0.15,
+  "y": 0.7
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "paneeli": "E",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pallon vesimaski on karkea ja pyöristynyt: Amager on möhkäle, Saltholm pieni läikkä ja rannat sumeita; muoto poikkeaa selvästi D:n tarkasta rannasta",
+  "x": 0.6,
+  "y": 0.62
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "raja",
+  "kuvaus": "Beiget maareittiviivat kulkevat suoraan Køge-lahden (vasen alaosa) ja Juutinrauman (oikea yläosa) veden yli (B/C/D); voi olla tarkoituksellinen yhteys, epävarma",
+  "x": 0.25,
+  "y": 0.75
+ },
+ {
+  "kaupunki": "edinburgh",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "madrid",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Markermeer/IJ: pohjaan on leivottu oma ohut, suorista pätkistä tehty rantaviiva, joka ei osu z8-rantaviivaan (tupla-rantaviiva, erotus jopa ~15 px). Itärannalla pohjan vesi ulottuu z8-viivan yli maan puolelle (oikea keskiosa)",
+  "x": 0.85,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "amsterdam",
+  "paneeli": "C",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Sama tupla-rantaviiva kuin D:ssä: pohjan ohut rantaviiva ja z8-rantaviiva eri kohdissa Markermeerin ja IJ:n rannoilla (oikea yläneljännes)",
+  "x": 0.8,
+  "y": 0.3
+ },
+ {
+  "kaupunki": "amsterdam",
+  "paneeli": "B",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Tupla-rantaviiva jo z8:ssa: kaksi rinnakkaista tummaa viivaa Markermeerin länsirannalla ja IJ:n suulla (oikea yläneljännes)",
+  "x": 0.75,
+  "y": 0.2
+ },
+ {
+  "kaupunki": "amsterdam",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "raja",
+  "kuvaus": "Laivareitin katkoviiva kulkee maan yli rannikolta Amsterdamiin (Noordzeekanaalin linjalla, mutta pohjassa ei näy kanavaa). Sama B:ssä ja C:ssä. Voi olla tarkoituksellista",
+  "x": 0.43,
+  "y": 0.46
+ },
+ {
+  "kaupunki": "amsterdam",
+  "paneeli": "E",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pohjanmeren ranta on sileä kaari eikä mukaile rantaa yläosassa (poikkeama arviolta 30–40 px D:hen verrattuna). Epävarma, koska projektio on eri",
+  "x": 0.3,
+  "y": 0.25
+ },
+ {
+  "kaupunki": "praha",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Vltava puuttuu: rautatiesolmun (Praha) kohdalla ei ole vettä eikä jokiviivaa, vaikka Vltavan kanjoni näkyy reliefissä (vasen puolisko). Elbe on piirretty oikeaan yläkulmaan. Sama B:ssä, C:ssä ja E:ssä",
+  "x": 0.4,
+  "y": 0.6
+ },
+ {
+  "kaupunki": "budapest",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "venetsia",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "valletta",
+  "paneeli": "A",
+  "luokka": "pieni",
+  "tyyppi": "laikku",
+  "kuvaus": "Tummia, pilvimäisiä läikkiä meressä: oikea reuna, Sisilian rannikon edusta ja vasen keskiosa. Todennäköisesti syvyysvarjostusta (Joonianmeren syvänne), epävarma",
+  "x": 0.9,
+  "y": 0.4
+ },
+ {
+  "kaupunki": "sarajevo",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "odessa",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Meriväylän katkoviivan osat ovat maalla rannikon länsipuolella (yläosa noin x 0.4, alaosa noin x 0.28 y 0.75), ja reitin solmu on sisämaassa noin 70 px rannasta. Sama B:ssä ja C:ssä",
+  "x": 0.4,
+  "y": 0.3
+ },
+ {
+  "kaupunki": "odessa",
+  "paneeli": "B",
+  "luokka": "näkyvä",
+  "tyyppi": "raja",
+  "kuvaus": "Meriväylän katkoviiva kulkee maalla rannan suuntaisesti (vasen keskiosa), ei meressä",
+  "x": 0.3,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "tampere",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Järvet (Näsijärvi, Pyhäjärvi, itäinen järvi) ovat karkeita monikulmioita, joissa on pitkiä suoria sivuja eikä saaria. z10-tarkkuudella muoto näyttää kulmikkaalta. Sama yleistys näkyy kaikilla tasoilla (B, C, E), eli kyse on lähtöaineistosta eikä tasokohtaisesta virheestä",
+  "x": 0.4,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "tukholma",
+  "paneeli": "D",
+  "luokka": "vakava",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Saaristo ja Saltsjön näkyvät maana: z8-rantaviivat piirtävät saaret, mutta niiden väli on maan väristä ja reliefi jatkuu yli. Vesi näkyy vain Mälarenissa (vasen reuna). Koko oikea puolisko",
+  "x": 0.75,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "tukholma",
+  "paneeli": "C",
+  "luokka": "vakava",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Sama kuin D:ssä: saariston vesialueet ovat maata, ja rantaviivat ovat maan päällä (oikea puolisko)",
+  "x": 0.75,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "tukholma",
+  "paneeli": "B",
+  "luokka": "vakava",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Sama jo z8:ssa: saariston vesialueet ovat maan väristä, vain Mälaren on vettä (oikea puolisko)",
+  "x": 0.75,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "tukholma",
+  "paneeli": "E",
+  "luokka": "vakava",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pallossa koko saaristo on maata. Oikealla puoliskolla näkyy vain himmeitä vaaleita läikkiä veden kohdalla. Mälaren on vettä vasemmassa yläosassa",
+  "x": 0.7,
+  "y": 0.55
+ },
+ {
+  "kaupunki": "tukholma",
+  "paneeli": "A",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Laajassa näkymässä sisäsaariston vedet ovat maan värisiä (vain avomeri ja Mälaren ovat harmaita), ja rantaviivaverkko on maan päällä (keskiosa)",
+  "x": 0.5,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "tukholma",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Mälarenin itäpää on karkea monikulmio (suoria sivuja), ei mukaile rantaa tarkasti (vasen keskiosa)",
+  "x": 0.1,
+  "y": 0.6
+ },
+ {
+  "kaupunki": "lappi",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Kemijoki ja Ounasjoki puuttuvat Rovaniemen kohdalta kokonaan: ei vettä eikä jokiviivaa, vain vaalea laakso reliefissä (vaakasuunnassa keskellä). Sama B:ssä, C:ssä ja E:ssä",
+  "x": 0.5,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "lappi",
+  "paneeli": "E",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pallossakaan ei ole Kemijokea eikä Ounasjokea (sama puute kuin webissä)",
+  "x": 0.5,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "pariisi",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "barcelona",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "bryssel",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "kosice",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "varsova",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "firenze",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "ateena",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "muu",
+  "kuvaus": "Meriyhteyden harmaat katkoviivapalat kulkevat Attikan niemimaan maan päällä (Ateenan eteläpuolella, rantaviivan sisäpuolella), ei merellä; sama B:ssä ja C:ssä sekä A:ssa (katkoviiva ylittää Attikan)",
+  "x": 0.62,
+  "y": 0.68
+ },
+ {
+  "kaupunki": "ateena",
+  "paneeli": "E",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Eleusiinanlahdella (vasen yläneljännes) pyöreä tummempi vesiläikkä, ja Salamiin sekä Pireuksen rannat ovat utuiset ja rikkonaiset verrattuna D:hen; voi johtua pallon pienemmästä tarkkuudesta",
+  "x": 0.35,
+  "y": 0.29
+ },
+ {
+  "kaupunki": "sofia",
+  "luokka": "ok"
+ },
+ {
+  "kaupunki": "moskova",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "muu",
+  "kuvaus": "Moskvajoen jokiviiva puuttuu kaikista paneeleista (A–D), vaikka esim. Pariisin Seine ja Varsovan Veiksel näkyvät. Epävarma: z8-jokikerros voi rajata sen tarkoituksella pois",
+  "x": 0.5,
+  "y": 0.5
+ },
+ {
+  "kaupunki": "tallinna",
+  "paneeli": "D",
+  "luokka": "näkyvä",
+  "tyyppi": "muu",
+  "kuvaus": "Laivareitin (Helsinki–Tallinna) viimeinen harmaa katkoviivapala on maalla rantaviivan eteläpuolella, Tallinnan länsipuolella; sama B:ssä ja C:ssä, ja A:ssa pala osuu rantaviivalle",
+  "x": 0.16,
+  "y": 0.69
+ },
+ {
+  "kaupunki": "tallinna",
+  "paneeli": "E",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Pallon maa–meri-raja on pehmeä ja läikikäs: niemien reunoilla on puoliläpinäkyviä vesikielekkeitä (yläpuolisko, erityisesti keskellä ja vasemmalla). Muoto vastaa D:tä karkeasti, mutta reuna näyttää sumealta tahralta",
+  "x": 0.45,
+  "y": 0.45
+ },
+ {
+  "kaupunki": "oslo",
+  "paneeli": "D",
+  "luokka": "pieni",
+  "tyyppi": "vesimaski",
+  "kuvaus": "Sisä-Oslovuonon pienet saaret (mm. Hovedøyan–Malmøyan ryhmä) ovat pohjassa vettä: z8:n saariääriviivojen sisällä on veden sävy, ei maata. Isommat saaret (Bygdøy) ovat oikein maata. Sama C:ssä",
+  "x": 0.48,
+  "y": 0.49
+ }
+]

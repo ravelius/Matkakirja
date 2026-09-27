@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2342, teksti: 'Raha muodossa 400 £ kaikkialla' },
+  { v: 2341, teksti: 'v2341: Tekijämerkinnät — jokaisen kuvan tekijä,… (#3438)' },
   { v: 2340, teksti: 'Maakuntasalaisuudet nostoiksi (skeema 1.55, Kreikka)' },
   { v: 2339, teksti: 'v2338: Pulun virtaluenta rampilla — vähemmän pu… (#3469)' },
   { v: 2338, teksti: 'Euroopan erät 8–9 ja pienet kuvat' },
