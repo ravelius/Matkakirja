@@ -2,29 +2,31 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 22:20 EEST
+**Päivitetty:** 2026-09-27 22:32 EEST
 
 ## 1) Sessiot
 
-Viikko (all models) **83 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Linssiseppä nousi 68%→70% — tasan kynnyksellä, seurataan. Postivahti (self) 5h-kiintiö 82%, resetoituu 9 min:ssa — ei toimenpidettä.
+Viikko (all models) **84 %** (nollautuu ma 28.9. klo 09:59/07:00 UTC), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. Kaikki alle kynnyksen (Linssiseppä 70% ennallaan). Postivahti (self) 5h-kiintiö nollautui uuteen ikkunaan (2%).
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
 | Fable | local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc | 61% | running |
-| Postivahti (self) | (uusi, luovutuksen jälkeen) | 50% | running |
+| Postivahti (self) | (uusi, luovutuksen jälkeen) | 52% | running |
 | Julkaisija | local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629 | 47% | running |
-| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 52% | running |
-| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 26% | idle |
-| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 20% | idle |
-| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | **70% — tasan kynnyksellä** | idle |
+| Natiiviseppä | local_04e2850b-d63c-481d-be73-c7d784a7cbcb | 53% | running |
+| Pelikoodari | local_242febe9-d6cf-45ae-8280-faf394dc6e3e | 28% | idle |
+| Natiivi-UI | local_e9fdc695-8421-4c14-a187-8881e73c835a | 24% | idle |
+| Linssiseppä (max) | local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4 | 70% — tasan kynnyksellä, ennallaan | idle |
 | Siirtoseppä | local_c264506b-dd61-4617-839f-23daf6d0bd5a | 61% | idle |
 | Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | 28% | running |
-| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 54% | running |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | 57% | running |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 29% | running |
 
 ## 1a) YÖTAUKO klo 22.30 alkaen (Fable 21:4x, sitova)
 
 Karttasepän yöpoltto klo 22.30–aamu (arvio). Roolit EIVÄT aja: savukkeita, headless-ajoja, koko testisarjoja, Unity-käännöksiä, simulaattoreita, Mac-CI:tä. Juna-build tauolla — **juna.login tauko-rivit EIVÄT ole hälytys tänä yönä.** Seurataan klo 22.45 jälkeen load average + raskaat prosessit (node, chrome-headless-shell, Unity, xcodebuild) — jos jokin rooli kuormittaa, nimetään Fablelle rivillä.
+
+**ENSIMMÄINEN LÖYDÖS 22:32 (2 min tauon alusta):** `load averages: 149.72 130.27 143.29` — erittäin korkea. Tunnistetut prosessit: 1) Karttasepän oma pyramidipoltto (`wt/karttaseppa-poltto-20260927`, 2× node generoi-laattapyramidi.mjs + Playwright-selain samassa worktreessä) — **odotettu, Fablen hyväksymä yöpoltto, ei toimenpidettä.** 2) `xcodebuild`/clang Unity-build käynnissä cwd `proto-3d/Matkakirja-proto-kaannos` klo 22:30:21 — **JUNA-BUILD KÄYNNISSÄ TAUON ALUSSA**, `/tmp/matkakirja-juna-tauko`-lippua EI ole asetettu. Ilmoitettu Fablelle 22:32 — junan tauko ei ole vielä aktivoitunut.
 
 ## 1b) Uusi valvontakohta odottaa (Siirtoseppä/Fable 18:4x)
 
@@ -60,15 +62,14 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (22:20)
+## 5) Resurssit (22:32)
 
-- **5 h -kiintiö:** 82 %. **Viikko (kaikki mallit):** 83 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 73 Gi vapaana (jatkoi laskua 77→73, hidas, ei kriittinen <15 Gi). wt/-worktreet 33 kpl.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **Simulaattorit boottina:** 3 (pariteetti-iPhone, natiiviseppa-iPhone, iPhone 17).
-- **Konteksti (kynnys Fable 65%/roolit 70%):** **Linssiseppä 70% — tasan kynnyksellä**, muut alle.
-- **Juna:** normaali — KÄÄNNETTY 5eef5138 22:11, niputtaa 706d8125 (22:13).
+- **5 h -kiintiö:** 2 % (uusi ikkuna). **Viikko (kaikki mallit):** 84 % (kynnykset 93/95/97 %, kaukana). **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
+- **Levy:** 72 Gi vapaana (jatkaa hidasta laskua). wt/-worktreet 33 kpl.
+- **Muistipaine:** normal (1). **LOAD AVERAGE 149.72/130.27/143.29 — erittäin korkea, ks. kohta 1a.** **NAS:** 5,6 Ti vapaana (raja 500 Gt — OK). **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 17).
+- **Konteksti (kynnys Fable 65%/roolit 70%):** Linssiseppä 70% ennallaan, muut alle.
+- **Juna: EI TAUOLLA VIELÄ** — xcodebuild/Unity-käännös käynnissä `proto-3d/Matkakirja-proto-kaannos`:ssa klo 22:30 jälkeen, tauko-lippu puuttuu. Ks. kohta 1a, ilmoitettu Fablelle.
 - **PR #3441 (eheysvartija):** ennallaan "Kunnossa".
-- **YÖTAUKO klo 22.30 alkaen (ks. kohta 1a):** 10 min jäljellä. Seuraavalla kierroksella (~22:30-22:35) alkaa load average- ja raskaiden prosessien seuranta klo 22:45 jälkeen. Juna-tauko ei ole hälytys tänä yönä.
 - **Postilaatikko:** uusi viesti 17:41 (Codex, Ateenan miniatyyrit) — normaali. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
   - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
