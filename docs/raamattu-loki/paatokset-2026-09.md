@@ -8191,3 +8191,7 @@ Omistaja 27.9.2026 klo 13.0x (kuva meri-10-lajia-1029.png): meren 10 lajia voisi
 ## TF 1.0.29 TESTFLIGHTISSA (202609270957 = BUILD 29b 20ce6a28); VIKAINEN 202609270926 VANHENNETTU (27.9.2026 klo 13.20)
 
 Julkaisija: 1.0.29 (202609270957, ajo 36310995227) sisaisessa ryhmassa, What to test Fablen muotoilulla; 202609270926 (6809d5ae, synteesipuhe aaneton) vanhennettu, teksti ALA KAYTA (ajo 36312159853). Laitetestaaja 29b PASS 92201b561 (puhe rms 0,134). Mita uutta: muutosloki sisaltopaketissa (#3405 + Siirtosepan delta), natiivin vartija 296ffd04 1.0.30:aan. Talous-UI laitteella toimii, kuvaparit klo 14 kaannoksen jalkeen. Ei-paikat: #3411 (42 kohdetta 17 kaupungista), loput ~1 366 luokitellaan kuvan perusteella.
+
+## OMISTAJA (SITOVA): GENEROIDUISTA KUVISTA AINA SANA HAVAINNEKUVA (27.9.2026 klo 13.39)
+
+Omistaja 27.9.2026 klo 13.4x: kaikissa generoiduissa kuvissa kaytetaan sanamuotoa havainnekuva (peli, lehdet, kuvatekstit, tekija- ja lahdetiedot, projektisivusto, raportit) — ei kuvitus, AI-kuva, generoitu kuva tai tekoalykuva. Raamattuun uusi linjausrivi (PR #3407, e30d738e0:n jalkeen), tilannekatsaus korjattu. Pelikoodari tarkistaa pelin ja projektisivun tekstit, Sisaltokirjuri sisaltopaketit.
