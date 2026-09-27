@@ -20538,6 +20538,11 @@ export class UI {
      */
     if (token.fakta) caption.appendChild(html('p', 'reveal-fakta', token.fakta));
     /*
+     * EI HAVAINNEKUVA-MERKKIÄ AARREKUVAN PÄÄLLÄ (omistaja 27.9.2026 klo
+     * 18.3x): aarrekuvat ovat tekoälyn tuottamia, mutta sen kertovat
+     * Tekijät ja lähteet -sivu ja kuvan lähderivi — ei paljastuskortti.
+     */
+    /*
      * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
      * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen
      * (omistajan tilaus 9.8.2026 — korvasi isoisän aarresitaatin).

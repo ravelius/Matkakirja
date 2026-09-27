@@ -29,6 +29,7 @@
 
 import { EHDOTUS_OSOITE, ehdotusKaytossa } from './ehdotukset.js';
 import { merkitseHavainnekuva } from './havainnekuva.js';
+import { taydennaLahde } from './kuvatekija.js';
 import { html } from './ui-apurit.js';
 
 /*
@@ -264,7 +265,8 @@ export function kortinKuvalahde(el, lahde, kohde = {}) {
  * @returns {HTMLElement} sama elementti
  */
 export function taytaLahderivi(el, lahde, kohde = {}) {
-  const teksti = String(lahde ?? '');
+  // Puuttuva tekijä tai lisenssi Commonsin metatiedoista (js/kuvatekija.js).
+  const teksti = taydennaLahde(lahde, kohde);
   const id = kohde?.tekijaId;
   if (!id || !ehdotusKaytossa()) {
     const linkit = [
