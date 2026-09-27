@@ -7,6 +7,7 @@
  *        [--osa i/n] [--noutovali ms]
  *        [--luettelo <paikallinen pyramidi.json>] [--lahde <kansio>]
  *        [--relief <reliefipyramidi.json: osoite tai polku>] [--ilman-viivoja]
+ *        [--kaupungit <kaupungit.json> [--kaupunkiaste 1]]  (vain --osa-ajona)
  *
  * RELIEFISARJA (--relief, Linssiseppä 23.9.2026: natiivin
  * topografialinssi on Cesiumin rasterikerros, joka lukee vain Web
@@ -962,6 +963,33 @@ export function tasonLaatat(Z, alue = null) {
 }
 
 /**
+ * KAUPUNKIEN ALUEET (--kaupungit, Karttaseppä 27.9.2026: natiivin pallon
+ * Z10 pelin kaupungeille ±aste°). Tasolta Z ne laatat, jotka leikkaavat
+ * jonkin kaupungin laatikkoa [lon ± aste, lat ± aste] — sama ehto kuin
+ * tasonLaatat(Z, alue), mutta sarake- ja rivialue lasketaan suoraan,
+ * joten 266 kaupunkia ei kierrä koko tasoa 266 kertaa. Avain "Z/X/Y".
+ */
+export function kaupunkienLaatat(kaupungit, min, max, aste = 1) {
+  const joukko = new Set();
+  for (let Z = min; Z <= max; Z += 1) {
+    const n = 2 ** Z;
+    const sarake = (lon) => Math.floor(((lon + 180) / 360) * n);
+    const rivi = (lat) => Math.floor(((1 - Math.log(Math.tan(Math.PI / 4 + (lat * RAD) / 2)) / Math.PI) / 2) * n);
+    for (const { lon, lat } of kaupungit) {
+      const alue = [lon - aste, Math.max(lat - aste, -85), lon + aste, Math.min(lat + aste, 85)];
+      for (let X = Math.max(0, sarake(alue[0]) - 1); X <= Math.min(n - 1, sarake(alue[2]) + 1); X += 1) {
+        for (let Y = Math.max(0, rivi(alue[3]) - 1); Y <= Math.min(n - 1, rivi(alue[1]) + 1); Y += 1) {
+          const r = laatanReunat(Z, X, Y);
+          if (r.ita <= alue[0] || r.lansi >= alue[2] || r.pohjoinen <= alue[1] || r.etela >= alue[3]) continue;
+          joukko.add(`${Z}/${X}/${Y}`);
+        }
+      }
+    }
+  }
+  return joukko;
+}
+
+/**
  * Koko ajon työlista: [Z, X, Y] tasoilta min…max samassa järjestyksessä
  * kuin yksi ajo ne laskee (taso kerrallaan, tasonLaatat-järjestys).
  */
@@ -1302,6 +1330,38 @@ async function paa() {
   const va = luettelo.vari?.alue;
   if (!alue && va) alue = [va.lon0, va.lat0, va.lon1, va.lat1];
   let lista = osanLaatat(min, max, alue, osa);
+  // --kaupungit <kaupungit.json> [--kaupunkiaste 1]: vain kaupunkien alueet (ks. kaupunkienLaatat).
+  const kaupungitPolku = lippu('--kaupungit');
+  if (kaupungitPolku) {
+    if (!osa) throw new Error('--kaupungit vain osittain (--osa i/n): osa ei kirjoita sarjan laatat.json:ia');
+    const kaupungit = JSON.parse(readFileSync(kaupungitPolku, 'utf8')).alkiot
+      .filter((c) => Number.isFinite(c.lat) && Number.isFinite(c.lon));
+    const joukko = kaupunkienLaatat(kaupungit, min, max, Number(lippu('--kaupunkiaste') ?? 1));
+    lista = lista.filter(([Z, X, Y]) => joukko.has(`${Z}/${X}/${Y}`));
+    /*
+     * HARVA LÄHDE (--lahdelaatat <syva-laatat.json>): pyramidin z9–z10 on
+     * poltettu vain listan z10-laatoille ja niiden z9-vanhemmille, joten
+     * pallon laatta kelpaa vain, jos jokainen sen alle osuva z9-laatta
+     * (Mercator Z10:n lähdetaso) on poltettu — muuten reunaan jäisi aukko.
+     */
+    const lahdelaatat = lippu('--lahdelaatat');
+    if (lahdelaatat) {
+      const { lautaX, lautaY, T10 } = await import('./tee-syva-laatat.mjs');
+      const Y0 = luettelo.arkki.y;
+      const olemassa = new Set(JSON.parse(readFileSync(lahdelaatat, 'utf8')).laatat.map(([x, y]) => `${x >> 1}:${y >> 1}`));
+      const T9 = 2 * T10;
+      const ennen = lista.length;
+      lista = lista.filter(([Z, X, Y]) => {
+        const r = laatanReunat(Z, X, Y);
+        const x0 = Math.floor(lautaX(r.lansi) / T9); const x1 = Math.floor(lautaX(r.ita - 1e-9) / T9);
+        const y0 = Math.floor((lautaY(r.pohjoinen) - Y0) / T9); const y1 = Math.floor((lautaY(r.etela) - Y0) / T9);
+        for (let x = x0; x !== x1 + 1; x = (x + 1) % 675) for (let y = y0; y <= y1; y += 1) if (!olemassa.has(`${x}:${y}`)) return false;
+        return true;
+      });
+      console.log(`  lähdelaatat: ${lista.length}/${ennen} laatan alla koko z9 poltettuna`);
+    }
+    console.log(`  kaupungit ${kaupungit.length}: tasoilta ${min}–${max} ${joukko.size} laattaa, tässä osassa ${lista.length}`);
+  }
   /*
    * DELTA-SARJA (ks. DELTA-SARJA yllä): suunnitelma koko sarjalle, ja
    * tämä ajo piirtää siitä oman osansa. Kopioitavat jäävät listasta pois
