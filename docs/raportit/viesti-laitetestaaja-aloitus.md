@@ -1,70 +1,87 @@
-# Laitetestaajan aloitusviesti (27.9.2026 ~09.5x, päivitetty edellisen session lopussa)
+# Laitetestaajan aloitusviesti (27.9.2026 ~18.0x, päivitetty edellisen session lopussa)
 
 Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetestaaja.
 `git fetch origin && git pull` (haara laitetestaaja-savukierros-b13; jos main on edellä,
-`git merge origin/main`, EI force-pushia).
+`git merge origin/main`, EI force-pushia — jos merge tuo satoja tiedostoja jotka eivät liity
+sinun docs-muutoksiisi, peruuta merge ja pushaa suoraan omaan haaraasi, ks. luovutuksen kohta
+tästä jos epäselvää).
 
 ## Lue ENSIMMÄISENÄ
-- **docs/raportit/viesti-laitetestaaja-luovutus-20260927.md** — edellisen session luovutus:
-  tila (1.0.28 PASS, commit 4393a1739), valmistelematon 1.0.29-resepti (meri 10 lajia, lähitaso,
-  maakunnat heti + salaisuudet pois, luennan säätimet natiivi, kaiutinvipu, Matterhorn v2,
-  Kinderdijk/Brugge/Hohensalzburg, puhevirta, talousportti) ja koko session ajan kertyneet
-  sudenkuopat (koordinaattimuunnos, `ui`-etuliite, Kehittäjä-paneelin oikea reitti, jumittavat
-  dialogit). Lue tämä ennen mitään muuta.
+- **docs/raportit/viesti-laitetestaaja-luovutus-20260927-b.md** — edellisen session luovutus:
+  1.0.29/1.0.30/1.0.31-kierrosten tila, KESKENERÄINEN 10 min muisti/lämpö-seuranta (TARKISTA JA
+  VIIMEISTELE ENSIMMÄISENÄ), App Store -laatukierroksen avoimet löydökset, ja TÄRKEÄ UUSI SÄÄNTÖ
+  puhetestien xAI-kulutuksesta (säilöttävät tekstit, oletusääni, ≤5000 mrk/vrk per rooli ilman
+  Fablen lupaa — lue tarkkaan ennen yhtään `ui chat`/`puhe lue` -komentoa). Lue tämä ennen mitään
+  muuta.
 
 ## Lue seuraavaksi
 - **docs/raportit/laitetestaaja-reseptit.md** (kasvava, päivitetty jatkuvasti) — KAIKKI toimivat
-  debug-komennot: kamera (`komento.txt`: aja/kallista/nappula/veto), pelitila (`peli-komento.txt`:
-  uusi-peli/muste/aani/pallo lepo/ruutu), UI (`ui-komento.txt`: kartuscha/maakunnat/offline/sulje),
-  linssit (`linssi-komento.txt`: elava elementit/herata/saapuminen). Lue ennen kuin kysyt komentoa
-  keneltäkään — suurin osa on jo siellä.
+  debug-komennot, mukaan lukien `ui puu` (UI-puun tarkat koordinaatit), `aani mittaa` (todellinen
+  äänimittaus), `koetila raha/rahaton/loppukortti/pelipaiva` (talous/streak ilman kellon siirtoa),
+  pienten maiden kaupunki-id:t. Lue ennen kuin kysyt komentoa keneltäkään.
 - **CLAUDE.md**, Raamatun Ydinajatus kohta 2 (työtapa), WEB ON MALLI MITATTUNA.
 - Tämän session luovutusraportit kronologisesti jos tarvitset yksityiskohtia: git log
-  `docs/raportit/savukierros-*` 26.–27.9. — jokainen kierros on oma committinsa, uusin ensin.
+  `docs/raportit/savukierros-tf10*-20260927*.md` ja `laitetestaaja-appstore-laatu-20260927.md`.
+
+## Jono (tärkeysjärjestyksessä)
+1. **Viimeistele 10 min muisti/lämpö-seuranta** TF 1.0.31:llä (ks. luovutuksen ohjeet, saattaa
+   olla jo valmis kun aloitat — tarkista lampo.jsonl/kehysajat.jsonl ja raportoi Natiivisepälle).
+2. **1.0.32-junan savuke kun Natiiviseppä pyytää.**
+3. Avoimet App Store -löydökset (docs/raportit/laitetestaaja-appstore-laatu-20260927.md) — seuraa
+   Natiivi-UI:n ja Pelikoodarin vastauksia, uusinta jos he pyytävät varmistusta.
 
 ## Kierroksen kaava (toistuu build-kierroksesta toiseen)
 1. Rooli (Natiiviseppä/Fable) ilmoittaa uuden käännöksen SHA:n + asennetut simulaattorit + testilistan.
 2. **Tarkista aina ensin ancestor**: `git merge-base --is-ancestor <juna-SHA> <käännös-SHA>` proto-3d:ssä
    (exit 0 = ok). ÄLÄ testaa jos tämä ei täsmää pyydettyyn.
 3. Boot vain omat laitteet (1572C658 iPhone, 3B4CDACB iPad) — yksi kerrallaan jos toinen rooli mainitsee
-   ydinten/poltton olevan kesken (Z10 tms.).
-4. Jos tarvitset Debug.Log-tason todisteita (esim. "Cesium-näkymä pidetty", "VARTIJA 163"-rivit,
-   "aloitusverho: pois X s"): käynnistä `xcrun simctl launch --console-pty <UDID> app.matkakirja.proto3d
-   > tiedosto 2>&1 &` HETI, ennen muita komentoja — tavallinen `peli-loki.txt`/`ui-loki.txt` EI näytä
-   Debug.Log-rivejä, vain komennon oman "ok"-kuittauksen.
+   ydinten/poltton olevan kesken (Z10 tms.), tai jos toinen rooli on juuri ilmoittanut käyttävänsä
+   jompaakumpaa jaettua/toisen laitetta — tarkista aina ennen bootia.
+4. Jos tarvitset Debug.Log-tason todisteita: käynnistä `xcrun simctl launch --console-pty <UDID>
+   app.matkakirja.proto3d > tiedosto 2>&1 &` HETI, ennen muita komentoja — tavallinen
+   `peli-loki.txt`/`ui-loki.txt` EI näytä Debug.Log-rivejä.
    **ÄLÄ KOSKAAN `pkill` tätä prosessia** — se sammuttaa myös itse sovelluksen. Lopeta aina
    `xcrun simctl terminate <UDID> app.matkakirja.proto3d` ensin, sitten `shutdown`.
 5. Aja pyydetyt kohdat, ota kuvia tarvittaessa (`mcp__Claude_Code_iOS_Simulator__control` attach+screenshot;
-   koordinaatit device-pointteina, ei simctl-pikseleinä — ks. resepti).
-6. Kirjoita raportti `docs/raportit/savukierros-<tunniste>-20260926.md`, committaa, pushaa (`git fetch`
-   ensin jos toinen rooli on saattanut pushata reseptiin väliin — fast-forward pull).
-7. Ilmoita tuloksesta viestillä (max 8 riviä) SendMessage-työkalulla pyytäjälle (Natiiviseppä/Fable).
-   Jos SendMessage sanoo rajan (~10/vuoro) täyttyneen: käytä VARAKANAVAA
-   `mcp__ccd_session_mgmt__send_message` (session_id = vastaanottajan local_-id) — ei koskaan jäädä
-   odottamaan omistajaa tämän takia.
+   koordinaatit device-pointteina — käytä `ui puu` tarkkojen napautuskoordinaattien saamiseksi,
+   ÄLÄ arvaa kuvakaappauksesta pikseleinä, ks. resepti).
+6. Kirjoita raportti `docs/raportit/savukierros-tf<versio>-20260927.md`, committaa, pushaa (`git
+   fetch` ensin jos toinen rooli on saattanut pushata reseptiin väliin — fast-forward pull).
+7. Ilmoita tuloksesta viestillä (max 8 riviä) SendMessage-työkalulla pyytäjälle (Natiiviseppä/Fable),
+   ja löydökset suoraan omistaville rooleille (Natiivi-UI/Natiiviseppä/Pelikoodari) jos App Store-
+   tyyppinen laajempi kierros. Jos SendMessage sanoo rajan (~10/vuoro) täyttyneen: käytä
+   VARAKANAVAA `mcp__ccd_session_mgmt__send_message` (session_id = vastaanottajan local_-id) —
+   ei koskaan jäädä odottamaan omistajaa tämän takia.
 8. Jos jokin havainto tuntuu FAILilta mutta olet epävarma laajuudesta/testijärjestyksestä: kysy ennen
-   raportointia tai merkitse raporttiin selvästi "epäilty FAIL, ei varmistettu" — useampi tämän session
-   FAIL-löydös osoittautui väärän testijärjestyksen tai väärän kriteerin aiheuttamaksi (ks. korjausraportit).
+   raportointia tai merkitse raporttiin selvästi "epäilty FAIL, ei varmistettu".
+9. **Puhetestit (xAI-kulutus, sitova 27.9. ~klo 18.0x):** säilöttävät tekstit, oletusääni, ≤5000
+   mrk/vrk per rooli ilman Fablen lupaa. Yksi lyhyt nosto + yksi Pulun kysymys riittää
+   äänitarkistukseen — ÄLÄ toista useita uniikkeja `ui chat`/`puhe lue` -kutsuja per kierros.
 
 ## Tunnettuja sudenkuoppia
-- **Asennusrekisterin desync**: kun toinen rooli asentaa uuden käännöksen suunnilleen samaan aikaan kuin
-  itse käynnistät simulaattoria, `simctl launch` voi palauttaa "No such process" vaikka `simctl listapps`
-  näyttää sovelluksen asennetuksi. Korjaus: etsi tuorein `Matkakirja3D.app`
-  (`find /Users/Shared/Claude/proto-3d -iname Matkakirja3D.app -newermt "<aika>"`, yleensä
-  `proto-3d/Matkakirja-proto-kaannos/Build/dd-sim/...`), `simctl uninstall` + `simctl install <polku>`,
-  käynnistä uudelleen. Toistui useita kertoja 26.9. illalla — ei build-vika.
-- **Kortit/postikortit** peittävät kameran heti uuden pelin/saapumisen jälkeen — komennot menevät läpi
-  mutta eivät vaikuta näkymään ennen kortin sulkemista (tap ~201,715 device-pointteina "Ohita"-napille,
-  tai koordinaatti muuttuu — tarkista screenshotista ensin).
-- **Musiikkiaiheet eivät katkaise toisiaan** (kuten webissä): testaa `ratkaisu`/`epaonnistuminen`/
-  `kohtaaminen`/mannerraidat AINA tuoreessa pelisessiossa ennen `aloituslento`/`loppu`, muuten tulos näyttää
-  väärin FAILilta. Resepti kertoo tarkat komennot.
-- Container-UUID (Documents-polku) vaihtuu jokaisen `uninstall`/asennuksen/sovelluksen kaatumisen jälkeen —
-  hae aina tuore `xcrun simctl get_app_container <UDID> app.matkakirja.proto3d data` ennen komentotiedostoja.
+- **Asennusrekisterin desync**: `simctl launch` "No such process" vaikka listapps näyttää
+  asennetuksi → uninstall+install tuoreesta Matkakirja-proto-kaannos-buildista.
+- **Kortit/postikortit peittävät kameran** heti uuden pelin/saapumisen jälkeen — sulje ensin
+  (`ui puu` löytää "Ohita"-napin koordinaatit).
+- **Koordinaattimuunnos simulaattorikuvakaappauksissa**: kuvakaappaus on natiivi 3× laitepisteet
+  — käytä AINA `ui puu`:ta napautuskoordinaateille, älä laske kuvasta.
+- **`ui`-etuliite muistikomennoille**: `ui lehti <kaupunki>`, `ui chat`, `ui nosto <id>`,
+  `ui maakuntanimet 0|1`, `ui mitauutta` — pelkkä sana ilman `ui`-etuliitettä ei tee mitään.
+- **`elava elementit` (meri) kuuluu `linssi-komento.txt`:hen**, EI `komento.txt`:hen.
+- **`ui puu` näyttää vain näkyvät elementit** — jos nostokortin ylärivi/lukija puuttuu dumpista,
+  vedä näkymää (swipe) ennen kuin raportoit puuttuvaksi (löydös 131: kuva pysyy paikallaan,
+  kortti vierittää alle).
+- **iPhonen vaakatila**: "Näytä yläpalkki" -nappi (mk-vakasnappi) saattaa rikkoa asettelun
+  (löydös App Store -kierrokselta, ei vielä varmistettu oikealla laitekierrolla) — jos testaat
+  vaakaa, tarkista tämä ensin.
+- **Talous/streak-testaus**: käytä `koetila raha/rahaton/loppukortti/pelipaiva` -komentoja, EI
+  yritä kuluttaa rahaa pelaamalla käsin (hidasta, `kulkutapa odota` vaatii ettei mikään muu
+  kulkutapa toimi).
+- **Pienten maiden kaupunki-id:t**: NLD=amsterdam, BEL=bryssel, CHE=alpit, DNK=kobenhavn.
 
 ## Viestikanava
-Fable: local_5df52e10-10e4-4b72-9554-0049db300dfe (tarkista ettei vaihtunut — Fable ilmoittaa uuden id:n
-aloitusviestissä). Vain valmis kierros, jumi tai kysymys, enintään 8 riviä.
+Fable: local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc (tarkista ettei vaihtunut — Fable ilmoittaa uuden
+id:n aloitusviestissä). Vain valmis kierros, jumi tai kysymys, enintään 8 riviä.
 JUMI → FABLE: ei AskUserQuestion-korttia; viesti Fablelle ja jatka muuta.
 
 Ensin uudessa sessiossa: kuittaa Fablelle yhdellä rivillä, tarkista juna.log
