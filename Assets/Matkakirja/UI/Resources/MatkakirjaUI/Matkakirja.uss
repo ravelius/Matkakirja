@@ -1074,6 +1074,27 @@
     margin: -5px 8px;
 }
 
+/* Kehittäjäosan säädin (pohjan sävy): nimi + arvo ylärivillä, säädin alla koko leveydeltä. */
+.mk-saadinrivi--pino {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 8px;
+}
+
+.mk-saadinrivi__yla {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-saadinrivi--pino .mk-saadinrivi__nimi {
+    width: auto;
+    flex-grow: 1;
+}
+
+.mk-saadinrivi--pino .mk-saadin {
+    margin: 2px 0 0 0;
+}
+
 .mk-saadin .unity-base-slider__input {
     height: 26px;
 }
