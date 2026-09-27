@@ -312,7 +312,7 @@ import { BoardDie } from './die.js';
  */
 import {
   esipuskuroiLuenta, kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, lueAaneen,
-  lukijaLukee, lukijaTuettu, paivitaLukija, pysaytaLukija, vieritaPehmeasti,
+  lukijaLukee, lukijaTuettu, paivitaLukija, pysaytaLukija, PUHEVIRHE_TAPAHTUMA, vieritaPehmeasti,
 } from './lukija.js';
 // Lukijaäänen saatavuus ohjaa merkintöjen luentapolkua: kun lennossa
 // generoitu ääni on käytössä, ElevenLabs-äänitteet ohitetaan
@@ -3214,6 +3214,15 @@ export class UI {
     this.pallolautaEpaonnistui = false;
     // Turvatilan rivi näytetään kerran istunnossa (ilmoitaPallonTurvatila).
     this.pallonTurvatilaIlmoitettu = false;
+    /*
+     * Lukijaäänen raja (429) tai palvelinvirhe: workerin viesti kerran
+     * (js/lukija.js ilmoitaPuhevirhe rajaa toistot).
+     */
+    globalThis.document?.addEventListener?.(PUHEVIRHE_TAPAHTUMA, (e) => {
+      if (this.dead || !e?.detail?.viesti) return;
+      const box = this.buildToast({ kind: 'info', text: e.detail.viesti });
+      setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
+    });
     this.linssikartta = null;
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
     /*

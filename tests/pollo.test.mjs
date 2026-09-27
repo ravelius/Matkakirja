@@ -2898,4 +2898,10 @@ test('worker: lukijan xAI-ääni on pelaajan valinta ilman kehittäjäkoodia (om
   } finally {
     globalThis.fetch = alkuperainen;
   }
+test('lukijaäänen rajat: päivä 400 000 mrk/IP, kuukausi 6 000 000 (27.9.2026)', async () => {
+  const { PUHE_PAIVARAJA_OLETUS, PUHE_KUUKAUSIRAJA_OLETUS, tarkistaPuheRajat } = await import('../tools/pollo/rajat.js');
+  assert.equal(PUHE_PAIVARAJA_OLETUS, 400000);
+  assert.equal(PUHE_KUUKAUSIRAJA_OLETUS, 6000000);
+  assert.equal(tarkistaPuheRajat({ paiva: 399999, kuukausi: 0 }).ok, true);
+  assert.equal(tarkistaPuheRajat({ paiva: 400000, kuukausi: 0 }).syy, 'paivaraja');
 });
