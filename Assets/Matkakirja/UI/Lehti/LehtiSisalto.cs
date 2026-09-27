@@ -398,6 +398,11 @@ namespace Matkakirja.Natiivi
         }
 
         static readonly Dictionary<string, OpasArtikkeli> oppaat = new Dictionary<string, OpasArtikkeli>();
+        static readonly Dictionary<string, LehtiKuva> oppaidenKuvat = new Dictionary<string, LehtiKuva>();
+
+        /// <summary>Kansiaiheen matkailijalle.kuva (avauskortin turisti-info, web kaupunginMatkailijalle().kuva), HaeOpas-kutsun jälkeen.</summary>
+        public static LehtiKuva OppaanKuva(string kaupunki) =>
+            kaupunki != null && oppaidenKuvat.TryGetValue(kaupunki, out var k) ? k : null;
 
         /// <summary>
         /// Kaupungin turistiopas (null = ei opasta). Lataa kaupunkilehdet tarvittaessa. Jäsentää vain
@@ -418,8 +423,10 @@ namespace Matkakirja.Natiivi
             if (kaupunki != null && kaupungit != null && kaupungit.TryGetValue(kaupunki, out var data))
             {
                 var kansi = data.Select(Ob).FirstOrDefault(x => x != null && T(x, "id") == "kaupunki");
-                o = Opas(Ob(MiniJson.Kentta(Ob(MiniJson.Kentta(kansi, "matkailijalle")), "artikkeli")));
+                var mk = Ob(MiniJson.Kentta(kansi, "matkailijalle"));
+                o = Opas(Ob(MiniJson.Kentta(mk, "artikkeli")));
                 if (o != null) o.Kaupunki = kaupunki;
+                oppaidenKuvat[kaupunki] = Kuva(Ob(MiniJson.Kentta(mk, "kuva")));
             }
             if (kaupunki != null) oppaat[kaupunki] = o;
             valmis(o);

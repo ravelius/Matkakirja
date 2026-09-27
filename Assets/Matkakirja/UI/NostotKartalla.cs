@@ -203,6 +203,22 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Linssi päällä tai muu koko ruudun näkymä: merkit piiloon.</summary>
+        /// <summary>Nostojen karttakerroin (web nostot.karttakerroin, NostoKerros.ZoomKerroin); 0 = ei kerrosta.</summary>
+        public float Karttakerroin => lahde != null ? lahde.ZoomKerroin : 0f;
+
+        /// <summary>Näkyvien merkkien paneelilaatikot (web nostot.omatIkonilaatikot): avauskortin kutsu väistää ne.</summary>
+        public void Laatikot(List<Rect> ulos)
+        {
+            if (juuri.panel == null || juuri.resolvedStyle.display == DisplayStyle.None) return;
+            foreach (var m in merkit)
+            {
+                if (m.El == null || m.El.panel == null || m.El.resolvedStyle.display == DisplayStyle.None
+                    || m.El.resolvedStyle.visibility == Visibility.Hidden || m.El.resolvedStyle.opacity <= 0.01f) continue;
+                var r = m.El.worldBound;
+                if (r.width > 0 && r.height > 0) ulos.Add(r);
+            }
+        }
+
         public void NaytaSallittu(bool sallitaan)
         {
             sallittu = sallitaan;
