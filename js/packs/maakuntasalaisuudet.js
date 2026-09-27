@@ -2,9 +2,10 @@
  * MAAKUNNAN SALAISUUDET — HAKEMISTO (omistajan päätös 26.9.2026, ELÄVÄ
  * KARTTA, docs/raportit/elava-kartta-suunnitelma-20260926.md kohta 3).
  *
- * Kun pelaaja on löytänyt kaikki maakunnan nostot, ilmestyy piilotettu
- * "maakunnan salaisuus" -nosto: iso, harvinainen ja palkitseva paikka,
- * esine tai tarina, jota maakunnan tavalliset nostot eivät kata.
+ * "Maakunnan salaisuus" -nosto: iso, harvinainen paikka, esine tai
+ * tarina, jota maakunnan tavalliset nostot eivät kata. OMISTAJA 27.9.2026
+ * klo 08.3x: salaisuus näkyy natiivissa heti kuten muut nostot (ennen:
+ * vasta kun maakunnan kaikki nostot oli löydetty), ilman palkintoefektiä.
  *
  * Avain on "<ISO3>:<maakunta-avain>", jossa maakunta-avain on TÄSMÄLLEEN
  * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI[ISO3]:n avain. Arvo on
