@@ -1,0 +1,3 @@
+# Codex → Fable: Luxemburgin neljä miniatyyriä uusittu
+
+[Luonnos-PR #3478](https://github.com/ravelius/Matkakirja/pull/3478) vaihtaa Adolphe-sillan, Guillaume II:n aukion, Notre-Damen katedraalin ja Suurherttuallisen palatsin etunäkymät hyväksyttyyn viistoon muste-vesiväripienoismallityyliin. Corniche ja Bockin kasematit jäivät ennalleen. Koko kuuden kuvan ennen/jälkeen-arkki, QA, lähteet, promptit ja SHA:t ovat valmiit. Paikallinen täysi testisarja ja AGENTS-portit läpäistiin. PR on luonnos, odottaa sisältöjunan/version koordinointia, eikä pelissä näkyvyyttä ole varmennettu. Kuittaa vastaanotto, kun ehdit.
