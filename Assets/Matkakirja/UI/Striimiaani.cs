@@ -5,7 +5,8 @@
 //
 // Valinta tallentuu samaan laitekohtaiseen persoonatauluun kuin Lukijaäänen säädöt (matkakirja-puhe-persoonat,
 // Lukijaaani.AsetusAvain) kaikille kolmelle persoonalle kerralla; persoonan oma ohje säilyy. Worker tottelee
-// sitä vain kehittäjäkoodilla kuten muitakin säätöjä. Lista on workerin XAI_AANET-taulun näyttökopio.
+// listan ääntä ilman kehittäjäkoodia (#3388). Lista on workerin XAI_AANET-taulun näyttökopio. Valinta on 27.9. klo
+// 10.2x alkaen nostokortin säätörattaassa pelinimellä (KortinLukija), ei enää kehittäjävalikossa.
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,6 +23,27 @@ namespace Matkakirja.Natiivi
             "kepler", "leo", "liora", "lumen", "luna", "lux", "naksh", "orion", "perseus", "rex", "rigel", "sal",
             "sirius", "ursa", "zagan", "zenith",
         };
+
+        /// <summary>
+        /// Äänten pelinimet (omistaja 27.9.2026 klo 10.2x, sitova; web js/puhe.js AANTEN_PELINIMET #3388): pelaajalle näkyy
+        /// vain nimi, moottorin tunnus kulkee pyynnössä. Valikon järjestys; oletus (ara = Aino) ensin.
+        /// </summary>
+        public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Pelinimet = new[]
+        {
+            ("ara", "Aino"), ("aurora", "Aamu"), ("carina", "Kerttu"), ("celeste", "Siiri"), ("eve", "Helmi"),
+            ("iris", "Ilta"), ("liora", "Lyyli"), ("luna", "Vieno"), ("ursa", "Saima"), ("altair", "Aarne"),
+            ("atlas", "Antero"), ("castor", "Kalle"), ("cosmo", "Kosti"), ("helios", "Heikki"), ("helix", "Herman"),
+            ("kepler", "Kaarlo"), ("leo", "Lauri"), ("lumen", "Lassi"), ("lux", "Luukas"), ("naksh", "Niilo"),
+            ("orion", "Onni"), ("perseus", "Pekka"), ("rex", "Reino"), ("rigel", "Risto"), ("sal", "Sulo"),
+            ("sirius", "Simo"), ("zagan", "Sakari"), ("zenith", "Väinö"),
+        };
+
+        /// <summary>Tunnuksen pelinimi (tuntematon → tunnus sellaisenaan ei näy: palauttaa oletuksen nimen).</summary>
+        public static string Nimi(string tunnus)
+        {
+            foreach (var (t, n) in Pelinimet) if (t == tunnus) return n;
+            return Pelinimet[0].Nimi;
+        }
 
         static readonly string[] Persoonat = { "kertoja", "merkinnat", "pollo" };
 

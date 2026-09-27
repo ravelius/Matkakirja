@@ -95,7 +95,8 @@ namespace Matkakirja.Natiivi
             sisus.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
-            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
+            // Luennan säätimet (omistaja 27.9. klo 09.3x, web #3388): ratas + kaiutin (tauko/jatko, VU).
+            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija", saatimet: true);
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
             // Kierto tai ikkunan koko: leveys uudelleen (web asemoi resize-kuuntelijassa), vaiheen 2 kortti keskelle.
             kerros.RegisterCallback<GeometryChangedEvent>(e =>
@@ -548,7 +549,7 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Salaisuus ? "Kuuntele salaisuus" : "Kuuntele hetki");
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
-            Ylarivi(sisus, n).Add(lukija.Nappi);
+            Ylarivi(sisus, n).Add(lukija.Juuri);
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
