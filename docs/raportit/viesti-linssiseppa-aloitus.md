@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 27.9.2026 klo 16.3x)
+# Linssisepän aloitusviesti (päivitetty 27.9.2026 klo 23.1x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Oma worktree: /Users/Shared/Claude/wt/proto-linssiseppa-meri
-  (nyt linssiseppa/meri-laatu-2, meren laatutaso erä 2). Vanhat (lahitaso, mallinseppa, linssiseppa, vuori) on poistettu.
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Oma worktree: /Users/Shared/Claude/wt/proto-linssiseppa-era4
+  (mallinseppa/era4, junassa; poistetaan kun masterissa). Erä 5:lle luodaan proto-linssiseppa-era5 (luovutus -o kohta 1).
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
 
 Lue:
@@ -13,14 +13,15 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260927-n.md** (jono, työkalut ja opit; -m.md ja -l.md päivän aiemmat vaiheet)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260927-o.md** (jono, työkalut ja opit; -n.md, -m.md ja -l.md päivän aiemmat vaiheet)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -n kohta 1 (JONO):** meren laatutason erä 2 (7 lajia, proto linssiseppa/meri-laatu-2 abb862d2) käännös →
-ennen/jälkeen-kuvaparit laitteelta Fablelle → merge-pyyntö Natiivisepälle → maaspeksit (Krumlov, Malbork, Pannonhalma; vain
-Eurooppa) elämänidea Fablen kautta omistajalle → mallinnus. Lentopeli odottaa ensi viikkoa (suunnitelma valmis).
+**Järjestys: luovutus -o kohta 1 (JONO):** erä 5 (Kronborg, Visby, Nidaros; harnessit mallinseppa-esikatselu-n1…n3)
+tarkistus → integrointi haaraan mallinseppa/era5 junan päälle → käännös → laitekuvat Fablelle → merge-pyyntö Natiivisepälle;
+symbolit erikoismallin alla -uusintaajo Kinderdijkille Natiivisepän korjauksen jälkeen; erä 6 -ehdotus (Olavinlinna, Geysir,
+Newgrange). YÖTAUKO: ei käännöksiä eikä simulaattoreita ennen Karttasepän polton valmistumista (Fable 27.9.).
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
