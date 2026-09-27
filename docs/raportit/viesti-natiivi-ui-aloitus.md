@@ -2,7 +2,7 @@
 
 Olet Natiivi-UI (Opus). Checkout: /Users/Shared/Claude/Matkakirja-natiivi-ui (haara natiivi-ui-luovutus-m). Proto-git:
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe> juna/b13:n päälle; juna/b13 ja master mergeää
-Natiiviseppä). Työkopiot wt/proto-natiivi-ui-{sisallys,nostot,pariteetti,kuvapakka}. Simulaattorit: oma iPhone 17
+Natiiviseppä). Työkopiot wt/proto-natiivi-ui-{sisallys,nostot,pariteetti}. Simulaattorit: oma iPhone 17
 FB234D08, jaettu iPad Pro 11 503000D1. Fable = local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc.
 
 Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 (JUMI → FABLE) ja docs/raportit/viesti-natiivi-ui-luovutus-20260927-y.md (ja tarvittaessa -tilinvaihto.md)
