@@ -2865,3 +2865,14 @@ test('worker: puhevastaus kertoo moottorin ja lähteen otsakkeissa (xai, varapol
     globalThis.fetch = alkuperainen;
   }
 });
+
+test('julkaisun puhemoottoritarkistus: vaatii xai:n, uusii kunnes salaisuus on levinnyt', async () => {
+  const { tarkistaPuhemoottori } = await import('../tools/pollo/tarkista-puhemoottori.mjs');
+  const vastaus = (moottori) => new Response(new Uint8Array([1]), { status: 200, headers: { 'x-puhe-moottori': moottori } });
+  const jono = ['openai', 'xai'];
+  const ok = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { viiveMs: 0, haku: async () => vastaus(jono.shift()) });
+  assert.equal(ok.ok, true);
+  const ei = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { yrityksia: 2, viiveMs: 0, haku: async () => vastaus('openai') });
+  assert.equal(ei.ok, false);
+  assert.equal(ei.moottori, 'openai');
+});
