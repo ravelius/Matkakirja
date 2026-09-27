@@ -180,8 +180,11 @@ namespace Matkakirja.Natiivi
         readonly Label raha, kello, ilmoitusTeksti, rahaton;
         string rivi = "", kelloTeksti = "";
         // Talouden vaihe 1 (UiNakymat.PaivitaKassa): rahattomuuden vuorokaudet ja matkan loppu.
-        int? rahatonVrk;
+        int? rahatonVrk, rahatonVuoroja;
         bool matkaPaattyi;
+        /// <summary>Elämäpalkin lohkot: Talous.RahattomuusVuoroja (2 vrk × 4 vuoroa à 6 h).</summary>
+        const int ElamaLohkoja = 8;
+        readonly VisualElement elama;
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
@@ -225,6 +228,12 @@ namespace Matkakirja.Natiivi
             Ratas.tooltip = "Äänentasot ja asetukset";
             Valikko = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Valikko);
             Valikko.tooltip = "Valikko";
+
+            // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
+            elama = Rakenne.El("mk-elamapalkki", juuri, PickingMode.Ignore);
+            for (int i = 0; i < ElamaLohkoja; i++) Rakenne.El("mk-elamapalkki__lohko", elama, PickingMode.Ignore);
+            elama.style.display = DisplayStyle.None;
+            palkki.RegisterCallback<GeometryChangedEvent>(_ => AsetteleElama());
 
             // Hetkellinen viesti (event-toast).
             ilmoitus = Rakenne.El("mk-ilmoitus", juuri, PickingMode.Ignore);
@@ -618,13 +627,19 @@ namespace Matkakirja.Natiivi
         /// "rahat loppu · N vrk" (Matka.RahattomuuttaJaljella); matkan päätyttyä rahattomuuteen pillerissä on
         /// pelkkä "Matka päättyi" (web game.phase 'over' ilman voittajaa). Vihje = web kassan title.
         /// </summary>
-        public void Talous(int? jaljellaVrk, bool paattyi, string vihje)
+        public void Talous(int? jaljellaVrk, bool paattyi, string vihje, int? jaljellaVuoroja = null)
         {
             pilleri.tooltip = vihje ?? "";
+            if (jaljellaVuoroja != rahatonVuoroja)
+            {
+                rahatonVuoroja = jaljellaVuoroja;
+                NaytaElama();
+            }
             if (jaljellaVrk == rahatonVrk && paattyi == matkaPaattyi) return;
             bool palautuu = matkaPaattyi && !paattyi;
             rahatonVrk = jaljellaVrk;
             matkaPaattyi = paattyi;
+            NaytaElama();
             if (palautuu)
             {
                 // "Matka päättyi" korvasi kassan ja kellon: rivi uudelleen (Jatka viimeisestä tallennuksesta).
@@ -635,6 +650,25 @@ namespace Matkakirja.Natiivi
             }
             NaytaTalous(rivi.Split(new[] { " · " }, StringSplitOptions.None).Length >= 3);
             SovitaPilleri();
+        }
+
+        /// <summary>Elämäpalkki: täysi lohko jokaista jäljellä olevaa 6 h vuoroa kohden; näkyy vain rahattomana.</summary>
+        void NaytaElama()
+        {
+            bool naytetaan = rahatonVuoroja != null && !matkaPaattyi && nakyy;
+            elama.style.display = naytetaan ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!naytetaan) return;
+            for (int i = 0; i < elama.childCount; i++)
+                elama[i].EnableInClassList("mk-elamapalkki__lohko--kulunut", i >= rahatonVuoroja.Value);
+            AsetteleElama();
+        }
+
+        /// <summary>Palkin alareunan alle (piilotettuna turva-alueen alle), vaakasuunnassa keskelle.</summary>
+        void AsetteleElama()
+        {
+            if (elama.style.display == DisplayStyle.None) return;
+            float ala = palkki.resolvedStyle.display == DisplayStyle.None || float.IsNaN(palkki.layout.yMax) ? Varaus : palkki.layout.yMax;
+            elama.style.top = ala + 6f;
         }
 
         void NaytaTalous(bool pelirivi)
@@ -652,9 +686,10 @@ namespace Matkakirja.Natiivi
             else raha.style.unityFontDefinition = StyleKeyword.Null;
             float koko = raha.resolvedStyle.fontSize;
             if (!float.IsNaN(koko) && koko > 0) rahaton.style.fontSize = koko * 0.85f;
-            // iPhonen pilleri on Dynamic Islandin vieressä (~104 pt): "0£ 2 vrk 1/80" (punaisena), muualla webin teksti.
+            // Lyhyt "2 vrk" kaikilla laitteilla (omistaja 27.9. 15.1x: iPad kuten iPhone, ei webin "rahat loppu · 2 vrk").
+            // iPhonen pilleri on Dynamic Islandin vieressä (~104 pt), joten siellä myös laukkuikoni väistyy.
             bool kapea = kelluvaNyt == true || matalaNyt == true;
-            rahaton.text = !varoitus ? "" : kapea ? rahatonVrk + " vrk" : "rahat loppu · " + rahatonVrk + " vrk";
+            rahaton.text = varoitus ? rahatonVrk + " vrk" : "";
             // iPhonella laukkuikoni väistyy varoituksen ajaksi (~22 pt), jotta päivä "1/80" mahtuu saaren viereen.
             var laukku = pilleri.Q(className: "mk-ikoni");
             if (laukku != null) laukku.style.display = varoitus && kapea ? DisplayStyle.None : DisplayStyle.Flex;
@@ -694,6 +729,7 @@ namespace Matkakirja.Natiivi
         {
             this.nakyy = nakyy;
             palkki.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            NaytaElama();
             if (!nakyy) Sulje();
             PaivitaNappi();
         }

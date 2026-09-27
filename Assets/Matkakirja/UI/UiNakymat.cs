@@ -543,7 +543,11 @@ namespace Matkakirja.Natiivi
         void PaivitaKassa(PeliOhjain o)
         {
             var m = o.Matka;
-            Tilarivi.Talous(m?.RahattomuuttaJaljella(), o.MatkanLoppu != null, Matkalaukku.KassaVihje(m));
+            // Elämäpalkki: jäljellä olevat 6 h vuorot ennen matkan päättymistä (web rahattomuuttaJaljella vuoroina).
+            var p = m?.Tila.Pelaaja;
+            int? vuoroja = p?.Rahaton == null ? (int?)null
+                : Mathf.Max(0, global::Matkakirja.Peli.Talous.RahattomuusVuoroja - (m.Tila.VuoroLaskuri - p.Rahaton.AlkuVuoro));
+            Tilarivi.Talous(m?.RahattomuuttaJaljella(), o.MatkanLoppu != null, Matkalaukku.KassaVihje(m), vuoroja);
             if (o.MatkanLoppu != null && o.MatkanLoppu != naytettyLoppu) NaytaMatkanLoppu(o, o.MatkanLoppu);
         }
 

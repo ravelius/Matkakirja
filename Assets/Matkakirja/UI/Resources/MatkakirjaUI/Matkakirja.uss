@@ -1606,6 +1606,30 @@
     color: #c0392b;
 }
 
+/* Elämäpalkki (omistaja 27.9. 15.1x): pelkät punaiset neliöt, 8 × 6 h; kulunut lohko tyhjenee ääriviivaksi. */
+.mk-elamapalkki {
+    position: absolute;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mk-elamapalkki__lohko {
+    width: 12px;
+    height: 12px;
+    margin: 0 2px;
+    background-color: #c0392b;
+    border-width: 1.5px;
+    border-color: #c0392b;
+    border-radius: 2px;
+}
+
+.mk-elamapalkki__lohko--kulunut {
+    background-color: rgba(192, 57, 43, 0);
+    border-color: rgba(192, 57, 43, 0.45);
+}
+
 .mk-pilleri__rahaton {
     flex-shrink: 0;
     margin-left: 6px;
