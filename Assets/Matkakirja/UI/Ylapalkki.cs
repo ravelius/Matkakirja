@@ -177,8 +177,11 @@ namespace Matkakirja.Natiivi
         public event Action PilleriMuuttui;
         readonly Button vakasnappi;
         bool piilossa, nakyy = true;
-        readonly Label raha, kello, ilmoitusTeksti;
+        readonly Label raha, kello, ilmoitusTeksti, rahaton;
         string rivi = "", kelloTeksti = "";
+        // Talouden vaihe 1 (UiNakymat.PaivitaKassa): rahattomuuden vuorokaudet ja matkan loppu.
+        int? rahatonVrk;
+        bool matkaPaattyi;
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
@@ -208,6 +211,8 @@ namespace Matkakirja.Natiivi
             pilleri = Rakenne.Nappi(null, "mk-pilleri", () => PilleriPainettu?.Invoke(), palkki, Ikonit.Laukku);
             Kirjasimet.Aseta(pilleri, Kirjasin.Kone);
             raha = Rakenne.Teksti("", "mk-pilleri__raha", pilleri);
+            rahaton = Rakenne.Teksti("", "mk-pilleri__rahaton", pilleri);
+            rahaton.style.display = DisplayStyle.None;
             kello = Rakenne.Teksti("", "mk-pilleri__kello", pilleri);
             pilleri.style.display = DisplayStyle.None;
             pilleri.RegisterCallback<GeometryChangedEvent>(_ => { SovitaPilleri(); PilleriMuuttui?.Invoke(); });
@@ -415,10 +420,14 @@ namespace Matkakirja.Natiivi
                 + (ikoni != null ? ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight : 0f);
             float teksti = raha.MeasureTextSize(raha.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
                 + kello.MeasureTextSize(kello.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            if (rahaton.style.display == DisplayStyle.Flex)
+                teksti += rahaton.MeasureTextSize(rahaton.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
+                    + rahaton.resolvedStyle.marginLeft;
             if (float.IsNaN(kiintea) || teksti <= 0) return;
             float koko = matala ? 12.48f : 14f; // matala: webin iPhone-pillerin koko
             while (koko > 11f && kiintea + teksti * koko / nyt + 2f > pilleriMax) koko -= 0.5f;
             if (!Mathf.Approximately(koko, nyt)) pilleri.style.fontSize = koko;
+            rahaton.style.fontSize = koko * 0.85f;
         }
 
         void AsetaKelluva()
@@ -593,8 +602,52 @@ namespace Matkakirja.Natiivi
                 kelloTeksti = uusiKello;
                 kello.text = uusiKello; // web: kello omana tekstinään pillerin välillä, ei pistettä
             }
+            NaytaTalous(osat.Length >= 3);
             pilleri.style.display = teksti.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             SovitaPilleri();
+        }
+
+        /// <summary>
+        /// TALOUDEN VAIHE 1 (web renderTurnPill, #3394): rahat lopussa kassa on punainen ja sen vieressä
+        /// "rahat loppu · N vrk" (Matka.RahattomuuttaJaljella); matkan päätyttyä rahattomuuteen pillerissä on
+        /// pelkkä "Matka päättyi" (web game.phase 'over' ilman voittajaa). Vihje = web kassan title.
+        /// </summary>
+        public void Talous(int? jaljellaVrk, bool paattyi, string vihje)
+        {
+            pilleri.tooltip = vihje ?? "";
+            if (jaljellaVrk == rahatonVrk && paattyi == matkaPaattyi) return;
+            bool palautuu = matkaPaattyi && !paattyi;
+            rahatonVrk = jaljellaVrk;
+            matkaPaattyi = paattyi;
+            if (palautuu)
+            {
+                // "Matka päättyi" korvasi kassan ja kellon: rivi uudelleen (Jatka viimeisestä tallennuksesta).
+                var r = rivi;
+                rivi = null;
+                Aseta(r);
+                return;
+            }
+            NaytaTalous(rivi.Split(new[] { " · " }, StringSplitOptions.None).Length >= 3);
+            SovitaPilleri();
+        }
+
+        void NaytaTalous(bool pelirivi)
+        {
+            bool loppu = pelirivi && matkaPaattyi;
+            if (loppu)
+            {
+                raha.text = "Matka päättyi";
+                kello.style.display = DisplayStyle.None;
+            }
+            bool varoitus = pelirivi && !loppu && rahatonVrk != null;
+            raha.EnableInClassList("mk-pilleri__raha--rahaton", varoitus);
+            // Lihavointi kirjasimella (pilleri on Kone); koko 0,85 em pillerin koosta (SovitaPilleri muuttaa sitä).
+            if (varoitus) Kirjasimet.Aseta(raha, Kirjasin.KoneLihava);
+            else raha.style.unityFontDefinition = StyleKeyword.Null;
+            float koko = raha.resolvedStyle.fontSize;
+            if (!float.IsNaN(koko) && koko > 0) rahaton.style.fontSize = koko * 0.85f;
+            rahaton.text = varoitus ? "rahat loppu · " + rahatonVrk + " vrk" : "";
+            rahaton.style.display = varoitus ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
         /// <summary>Webin muoto "£250" ("250 puntaa" / "250 £" → "£250"), jotta pilleri mahtuu puhelimeen.</summary>

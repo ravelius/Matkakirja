@@ -10,6 +10,7 @@
 // Pelin teot vain PeliOhjaimen julkisen API:n kautta (RAJAPINTA.md):
 // "uusi peli" → PeliOhjain.Instanssi.UusiPeli(null).
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -458,6 +459,7 @@ namespace Matkakirja.Natiivi
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
+            KytkeTalous(o);
             // Noppa häipyy, kun nappula on perillä (web haivyta saapuessa).
             // A11 (web ui.js piilotaNoppa): noppa häipyy vain kaupunkiin päättyneellä matkalla; reitin varrella se jää
             // lepopaikalleen seuraavaan heittoon asti.
@@ -505,6 +507,55 @@ namespace Matkakirja.Natiivi
             o.LentoAani += (alkaa, kesto) => UiKerros.PaaSaikeessa(() => Aanet.LentoAani(alkaa, kesto));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
+        }
+
+        // --- TALOUDEN VAIHE 1 (web #3394, Pelikoodarin PeliOhjain.Talous fbda3812) ------------------------------------
+
+        /// <summary>
+        /// Kassarivi (Ylapalkki.Talous), rahatilanteen kupla + Livian tunne (web playEvents) ja loppukortti
+        /// (web naytaMatkanLoppu). Loppukortti myös käynnistyksessä, jos tallennettu matka on jo päättynyt.
+        /// </summary>
+        void KytkeTalous(PeliOhjain o)
+        {
+            o.TilaMuuttui += () => UiKerros.PaaSaikeessa(() => PaivitaKassa(o));
+            o.MatkaAlkoi += () => UiKerros.PaaSaikeessa(() => { Huipennus.Sulje(); PaivitaKassa(o); });
+            o.Rahatilanne += (tilanne, otsikko, ala) => UiKerros.PaaSaikeessa(() =>
+            {
+                Leima.Nayta(otsikko, ala, "kukkaro");
+                if (tilanne == "peli.vararikko.varoitus") Pulu.Tunne("vakava", 0.55f);
+                else if (tilanne == "peli.vararikko.selvisi") Pulu.Tunne("lammin", 0.5f);
+            });
+            o.MatkaPaattyi += loppu => UiKerros.PaaSaikeessa(() => NaytaMatkanLoppu(o, loppu));
+            PaivitaKassa(o);
+            if (o.MatkanLoppu != null) NaytaMatkanLoppu(o, o.MatkanLoppu);
+        }
+
+        void PaivitaKassa(PeliOhjain o)
+        {
+            var m = o.Matka;
+            Tilarivi.Talous(m?.RahattomuuttaJaljella(), o.MatkanLoppu != null, Matkalaukku.KassaVihje(m));
+        }
+
+        /// <summary>
+        /// Web naytaMatkanLoppu: voittoruudun dialogi otsikolla "Matka päättyi"; "Jatka viimeisestä tallennuksesta"
+        /// vain turvatallennuksen ollessa olemassa. Ei voittoääntä eikä läpipeluusaavutusta.
+        /// </summary>
+        void NaytaMatkanLoppu(PeliOhjain o, global::Matkakirja.Peli.MatkanLoppu loppu)
+        {
+            if (loppu == null) return;
+            var m = o.Matka;
+            var p = m?.Tila.Pelaajat?.FirstOrDefault(x => x.Id == loppu.Pelaaja) ?? m?.Tila.Pelaaja;
+            int loydot = p?.Loydot.Count ?? 0;
+            int maat = p?.LoytoMaat.Where(x => !string.IsNullOrEmpty(x)).Distinct().Count() ?? 0;
+            string paikka = loppu.Kaupunki != null ? "kaupungissa " + loppu.Kaupunki : "matkalla";
+            string teksti = $"Rahat loppuivat {paikka}, matkan {loppu.Paiva}. päivänä. "
+                + $"Laukussa {loydot} löytöä{(maat > 0 ? $" {maat} maasta" : "")} ja {p?.Paaaarteet ?? 0} unohdettua aarretta.";
+            SuljeSisaltoikkunat();
+            Huipennus.NaytaLoppu(teksti, o.Yhteenveto()?.Teksti, o.TurvaTallennusOn ? () =>
+            {
+                var virhe = o.JatkaTurvasta();
+                if (virhe != null) Tilarivi.Viesti(virhe);
+            } : (System.Action)null, () => UusiMatka(o));
         }
 
         static string esiladattuMaa;
