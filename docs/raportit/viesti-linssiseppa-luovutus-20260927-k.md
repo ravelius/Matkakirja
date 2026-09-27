@@ -32,6 +32,17 @@ local_eec7f158-d9f3-4b93-9368-c50935bd19ab. Scratchpad S=/private/tmp/claude-502
   Ratas, Ankkuri), esikatselut mallinseppa-toimitus-20260927/kategoriasymbolit-esikatselu-{1,2}.png. Agentti B (Tulivuori,
   Aallot, Tassu = pöllö, Kellotorni) kesken.
 
+## TULOS 04.1x (käännös cb621b9b, kuvat proto-3d/lokit/mallinseppa-laite-20260927-e/)
+
+- A/B/C samasta ajosta: mallinseppa-toimitus-20260927/kategoriat-abc-<paikka>-75.png; C toimii (vuoren lumi valkoinen).
+  Suositus Fablelle: B + vuori C. Merge-haara valmiina: **mallinseppa/kategoriamallit-14 31e6cedf** (kaikki 14 symbolia,
+  B + lumi C leivottuna, ei kokeilukomentoa, pohja ddd9b867, merge-tree juna/b13 ja pohja puhdas) → merge-pyyntö
+  Natiivisepälle, kun omistaja vahvistaa värityksen (jos A tai pelkkä B: vain KategoriaApurit.cs:n väririvit).
+- Kaikki symbolit kartalla: kategoriasymbolit-kartalla.png; lähikuvat kategoriasymbolit-esikatselu-{1,2,3}.png.
+  Omistajan vahvistettavaksi lähetetty: kallistukset 20–35° (Ratas, Ankkuri, Salama, Aallot), kaiverretut mustemerkit
+  (Tiimalasi, Salama), kapea Kellotorni, pöllö (enum Tassu).
+- Erä 2 v2: segovian-akvedukti-v2.png, brandenburgin-portti-v2.png (+ videot). Proto mallinseppa/erikoismallit2 01810d0c.
+
 ## KÄYNNISSÄ
 
 - **Klo 04 käännös + laiteajo** $S/ajo-0400.sh (alkaa, kun $S/go-0400 on olemassa, viimeistään 04.12): juna/b13 +
