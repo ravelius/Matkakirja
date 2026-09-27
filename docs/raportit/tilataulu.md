@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 00:33 EEST — Postivahti (self) 70%, lähestyy omaa nollausrajaa, luovutus valmistellaan pian.
+**Päivitetty:** 2026-09-28 00:45 EEST — Postivahti (self) 71%, lähestyy omaa nollausrajaa (75%), luovutus valmistellaan pian.
 
 ## 1) Sessiot
 
