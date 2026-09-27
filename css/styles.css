@@ -406,6 +406,10 @@ button, .brand, .turn-pill, .fact-card h2 {
  * kirjoituskonetekstiä muun pillerin sävyissä — ei hälytysväriä missään
  * vaiheessa, ei myöskään ennätyksen umpeuduttua.
  */
+/* Rahat lopussa (talouden vaihe 1): kassa punaisena ja jäljellä olevat vuorokaudet vieressä. */
+.turn-pill .kassa.rahaton { color: #c0392b; font-weight: 700; }
+.turn-pill .rahaton-aika { color: #c0392b; font-size: 0.85em; white-space: nowrap; }
+
 .turn-pill .clock {
   color: var(--muted);
   font-variant-numeric: tabular-nums;

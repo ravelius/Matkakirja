@@ -454,6 +454,7 @@ const MODULES = [
   // Lukijaäänen oletusten näyttökopio (main.js tuo sen dialogiin).
   'js/puhe-oletukset.js',
   'js/packs/tarinakaari.js',
+  'js/packs/hintatasot.js',
   'js/packs/europe.js',
   // middleeast-countries.js ENNEN middleeast.js:ää: niputettu koodi on yhtä
   // näkyvyysaluetta, ja middleeast.js lukee MIDDLE_EAST_COUNTRY_SHAPESin heti

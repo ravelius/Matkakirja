@@ -146,6 +146,12 @@ const PLAYER_COLOR = '#d94f3d';
 }());
 
 const SAVE_KEY = 'matkakirja-save-v1';
+/*
+ * TURVATALLENNUS (talouden vaihe 1, omistaja 27.9.2026 klo 10.3x): viimeisin
+ * tallennus, jossa kenenkään rahat eivät ole lopussa. Kun matka päättyy
+ * rahojen loppumiseen, loppukortti tarjoaa jatkon tästä (js/ui.js showWinner).
+ */
+const TURVA_KEY = 'matkakirja-save-turva-v1';
 const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 /*
  * iCloud-synkan lähtötilanne talteen HETI, ennen kuin peli ehtii
@@ -159,7 +165,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2313';
+const APP_VERSION = '2026-09-21.2314';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -277,6 +283,7 @@ function saveGame(game) {
     else {
       talletettu = JSON.stringify(game.toJSON());
       localStorage.setItem(SAVE_KEY, talletettu);
+      if (game.players.every((p) => !p.rahaton && !p.pudonnut)) localStorage.setItem(TURVA_KEY, talletettu);
     }
   } catch {
     /* yksityinen selaustila tai täysi levy — peli jatkuu ilman tallennusta */
@@ -457,8 +464,33 @@ function siirraVanhaMaailma(arvo) {
   return arvo;
 }
 
+/** Turvatallennuksesta ladattu peli (rahat vielä kunnossa), tai null. */
+function lataaTurva() {
+  try {
+    const raw = localStorage.getItem(TURVA_KEY);
+    if (!raw) return null;
+    const tila = JSON.parse(raw);
+    siirraVanhaMaailma(tila);
+    const game = Game.fromJSON(tila);
+    return game && game.phase !== 'over' ? game : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Loppukortin "Jatka viimeisestä tallennuksesta": false, jos turvatallennusta ei ole. */
+function jatkaTurvasta() {
+  const game = lataaTurva();
+  if (!game) return false;
+  if (winnerDialog.open) winnerDialog.close();
+  attach(game);
+  saveGame(game);
+  return true;
+}
+
 function clearSave() {
   try {
+    localStorage.removeItem(TURVA_KEY);
     localStorage.removeItem(SAVE_KEY);
   } catch {
     /* ei mitään tehtävissä */
@@ -494,7 +526,9 @@ function attach(game) {
    * Retkikuntaa tämä ei pura — se on laitteen eikä pelikerran asia.
    */
   nollaaSahke();
-  ui = new UI(game, { onNewGame: startGame, onChange: saveGame });
+  ui = new UI(game, {
+    onNewGame: startGame, onChange: saveGame, onJatkaTurvasta: jatkaTurvasta, turvaOlemassa: () => Boolean(lataaTurva()),
+  });
   ui.mount();
   // Kehityksen apuri konsolia varten. Vanha nimi jää rinnalle, koska
   // työkalut ja kuvakaappausskriptit käyttävät sitä.
