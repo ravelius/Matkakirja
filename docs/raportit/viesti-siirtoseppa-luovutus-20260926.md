@@ -11,23 +11,15 @@ voimassa.
 - docs/raportit/elava-kartta-suunnitelma-20260926.md (Elävä kartta, omistajan päätös 26.9.) ja
   docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md (taustapäivitys, hyväksytty 25.9.).
 
-## Tila (päivitetty 27.9. klo 11.3x) — KESKEN: natiivin pallo-Z10
+## Tila (päivitetty 27.9. klo 17.2x) — pallo-Z10 VALMIS
 
-1. **Z10-poltto (Karttaseppä):** alkaa klo 22.00, valmis arviolta 23–24. Sarja on sama
-   julisteet/pallo/laatat/2026-09-26-pohja-20260926 (+ /10/), 13 856 laattaa (266 kaupunkia ±1°, vain z9:n päällä),
-   laatat.json ennallaan. Lista: /Users/Shared/Claude/pyramidi-poltto/pallo-z10-20260927/pallo-z10.json.
-2. **Ämpärivienti odottaa OMISTAJAN omaa hyväksyntää Karttasepän sessiossa** (omistajan päätös 11.1x: ei kiertoteitä,
-   ei Julkaisijan ajoa). Siirtoseppä ei kirjoita ämpäriin.
-3. **offline.json valmiina: PR #3395 (LUONNOS), haara siirtoseppa-pallo-z10, worktree wt/siirtoseppa-pallo-z10.**
-   tools/vienti/pallo-z10.json (Karttasepän lista) → maxzoom 10, kaupunkitaso.tasot [9, 10], kaupunkitaso.z10;
-   maan rasteri["10"] = rivijuoksut; 13 829/13 856 (Jerusalem 27 pois, ei maata; Karttaseppä kuittasi). Skeema 1.51,
-   testit 100/0. **Kun laatat ovat ämpärissä:** (a) Karttaseppä kertoo, eroaako poltettu määrä listasta → päivitä lista;
-   (b) pistokoe: jokainen offline-välin laatta 200 (curl-agentti; Pythonin urllib saa Cloudflarelta 403!);
-   (c) koot: keskitavut[10] nyt z8:n arvolla → mittaa (offline-koot.json); (d) Natiivisepän kuittaus (pyydetty 11.3x:
-   Alueet lukee rasteri["10"]-listan? Laattapalvelin maxzoomista vai kiinteä 9? koko ~0,4 Gt / maa ≤ ~30 Mt);
-   (e) yhdistä main, gh pr ready, Julkaisijan junaan, ämpäritarkistus, rivi Fablelle.
+1–3. **Pallo-Z10 tuotannossa v238 (skeema 1.51, #3395 merge d09607ef4).** Z10 omassa avaimessa (Natiivisepän ehdotus
+   ja kuittaus): lahteet.rasteri.kaupunkiRasteri {tasot [10], laattoja 13 856} ja maat.<ISO>.kaupunkiRasteri["10"],
+   laattoja/tavuja.kaupunkiRasteri (ei yht:ssä); rasteri, maxzoom 9, kaupunkitaso [9] ennallaan → vanhat buildit
+   eivät lataa Z10:tä. 117 maata, ~183 Mt, Z10-keskitavut 13 075 (kaikki 13 856 laattaa 200). Natiivi lukee ja
+   piirtää 1.0.31:stä. Worktree wt/siirtoseppa-pallo-z10 voi poistaa (uw.sh --poista).
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
-   Tuotanto nyt **1.x v219** (1.50). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
+   Tuotanto nyt **1.x v238** (1.51). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
 5. **Pelikoodarin pyyntö (27.9. klo 11.3x), #3394 (main v2314) sääntövakiot:** START_MONEY 300 → 400, STRANDED_AID
    poistui, uudet PAIVAKULU_RUOKA 8, PAIVAKULU_MAJOITUS 12, HINTATASON_KERTOIMET, RAHATTOMUUS_VUOROJA 8 ja data
