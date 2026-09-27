@@ -4354,7 +4354,7 @@ export const KAUPUNKIKARTAT = {
       // Hagia Sofia, johon 29.5.1453 aamu päättyi; Theodosiuksen muuri on kartan
       // rajauksen länsipuolella.
       {
-        nimi: 'Konstantinopoli 1453', lat: 41.0085, lon: 28.98,
+        nimi: 'Konstantinopoli 1453', tyyppi: 'henkilo', lat: 41.0085, lon: 28.98,
         nosto: 'hetki-konstantinopoli-1453',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -4412,7 +4412,7 @@ export const KAUPUNKIKARTAT = {
       {
         // Nimiö oikealle eikä siirron suuntaan: vasemmalla on Glórian
         // köysiradan nimi, oikealla tyhjää korttelia (kaappaus 2.9.2026).
-        nimi: 'Calçada', lat: 38.7139, lon: -9.1394,
+        nimi: 'Calçada', tyyppi: 'ilmio', lat: 38.7139, lon: -9.1394,
         nosto: 'syvennys-lissabon-calcada', nimiPuoli: 'oikea',
         siirto: { x: -14, y: -22 },
       },
@@ -5147,11 +5147,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Kellsin kirja', lat: 53.3444, lon: -6.2577,
+        nimi: 'Kellsin kirja', tyyppi: 'esine', lat: 53.3444, lon: -6.2577,
         nosto: 'syvennys-dublin-kellsinkirja',
       },
       {
-        nimi: 'Ouzel Galley', lat: 53.3485, lon: -6.2531,
+        nimi: 'Ouzel Galley', tyyppi: 'henkilo', lat: 53.3485, lon: -6.2531,
         nosto: 'skandaali-ouzel-galleyn-mysteeri',
       },
     ],
@@ -5265,7 +5265,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
-        nimi: 'Torni romuraudaksi', lat: 48.85822, lon: 2.2945,
+        nimi: 'Torni romuraudaksi', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
         nosto: 'nosto-lustig-eiffel', nimiPuoli: 'vasen',
         siirto: { x: -6, y: -25 },
       },
@@ -5337,7 +5337,7 @@ export const KAUPUNKIKARTAT = {
       },
       // sama piste kuin Eiffel-torni ja Torni romuraudaksi: nimiö alas oikealle.
       {
-        nimi: 'Torni 1888', lat: 48.85822, lon: 2.2945,
+        nimi: 'Torni 1888', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
         nosto: 'hetki-eiffel-torni-1888',
         nimiPuoli: 'oikea', siirto: { x: 6, y: 25 },
       },
@@ -5369,7 +5369,7 @@ export const KAUPUNKIKARTAT = {
       // Eiffel-tornin neljäs merkki: torni, Torni romuraudaksi ja
       // Torni 1888 ovat samassa pisteessä, joten nimiö suoraan vasemmalle.
       {
-        nimi: '72 nimeä', lat: 48.85822, lon: 2.2945,
+        nimi: '72 nimeä', tyyppi: 'esine', lat: 48.85822, lon: 2.2945,
         nosto: 'nosto-pariisin-72-nimea',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -5381,28 +5381,28 @@ export const KAUPUNKIKARTAT = {
       },
       // Sama piste kuin kartan oma Notre-Dame: nimiö oikealle.
       {
-        nimi: 'Notre-Damen kukko', lat: 48.853, lon: 2.3499,
+        nimi: 'Notre-Damen kukko', tyyppi: 'esine', lat: 48.853, lon: 2.3499,
         nosto: 'nosto-notre-damen-kukko',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
       // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
       {
-        nimi: 'Pariisi soi', lat: 48.8719, lon: 2.3317,
+        nimi: 'Pariisi soi', tyyppi: 'henkilo', lat: 48.8719, lon: 2.3317,
         nosto: 'nosto-pariisi-soi',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
       },
       // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
       // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
       {
-        nimi: 'Paras patonki', lat: 48.8703, lon: 2.3167,
+        nimi: 'Paras patonki', tyyppi: 'ilmio', lat: 48.8703, lon: 2.3167,
         nosto: 'nosto-pariisin-patonki',
       },
       // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
       // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
       // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
       {
-        nimi: 'Pariisin vuosisadat', tyyppi: 'luonto', lat: 48.8462, lon: 2.3464,
+        nimi: 'Pariisin vuosisadat', tyyppi: 'henkilo', lat: 48.8462, lon: 2.3464,
         nosto: 'nosto-pariisin-vuosisadat',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
@@ -5556,7 +5556,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Tycho Brahe', lat: 50.0876, lon: 14.4227,
+        nimi: 'Tycho Brahe', tyyppi: 'henkilo', lat: 50.0876, lon: 14.4227,
         nosto: ['syvennys-praha-tycho', 'skandaali-tycho-brahen-kuolinmysteeri'],
       },
     ],
@@ -5634,7 +5634,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki wien).
        */
       {
-        nimi: 'Vuoristovesijohto', tyyppi: 'luonto', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+        nimi: 'Vuoristovesijohto', tyyppi: 'esine', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -5650,11 +5650,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Klimtin maalaukset', lat: 48.2131, lon: 16.3597,
+        nimi: 'Klimtin maalaukset', tyyppi: 'taide', lat: 48.2131, lon: 16.3597,
         nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
       },
       {
-        nimi: 'Saliera', lat: 48.2036, lon: 16.3619,
+        nimi: 'Saliera', tyyppi: 'esine', lat: 48.2036, lon: 16.3619,
         nosto: 'skandaali-salieran-varkaus',
       },
       /*
@@ -5692,12 +5692,12 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Lipizzanit', lat: 48.2064, lon: 16.3657,
+        nimi: 'Lipizzanit', tyyppi: 'esine', lat: 48.2064, lon: 16.3657,
         nosto: 'nosto-lipizzanit',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Taikahuilu', lat: 48.1981, lon: 16.3653,
+        nimi: 'Taikahuilu', tyyppi: 'henkilo', lat: 48.1981, lon: 16.3653,
         nosto: 'nosto-taikahuilu-wiedenissa',
       },
       {
@@ -5927,7 +5927,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Etelämeren kupla', tyyppi: 'henkilo', lat: 51.5146, lon: -0.0837, nosto: 'skandaali-etelameren-kupla',
       },
       {
-        nimi: 'Cheapsiden kätkö', lat: 51.5141, lon: -0.0937,
+        nimi: 'Cheapsiden kätkö', tyyppi: 'esine', lat: 51.5141, lon: -0.0937,
         nosto: 'syvennys-lontoo-cheapside', nimiPuoli: 'oikea',
       },
       {
@@ -6125,10 +6125,10 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki berliini).
        */
       {
-        nimi: 'Lehmän hinnalla', lat: 52.53, lon: 13.37944, nosto: 'nosto-archaeopteryx',
+        nimi: 'Lehmän hinnalla', tyyppi: 'esine', lat: 52.53, lon: 13.37944, nosto: 'nosto-archaeopteryx',
       },
       {
-        nimi: 'Berliinin karhu', lat: 52.5099, lon: 13.4143, nosto: 'syvennys-berliini-karhu',
+        nimi: 'Berliinin karhu', tyyppi: 'ilmio', lat: 52.5099, lon: 13.4143, nosto: 'syvennys-berliini-karhu',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -6161,7 +6161,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Bernauer Straße, muurin muistomerkki.
       {
-        nimi: 'Muuri 1961', lat: 52.5375, lon: 13.3933,
+        nimi: 'Muuri 1961', tyyppi: 'henkilo', lat: 52.5375, lon: 13.3933,
         nosto: 'hetki-berliinin-muuri-1961',
       },
       /*
@@ -6178,16 +6178,16 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-hattupainen-ukkeli',
       },
       {
-        nimi: 'Gaertnerin Berliini', lat: 52.5175, lon: 13.4022,
+        nimi: 'Gaertnerin Berliini', tyyppi: 'taide', lat: 52.5175, lon: 13.4022,
         nosto: 'nosto-gaertnerin-berliini',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Marlene Dietrich', lat: 52.5075, lon: 13.3728,
+        nimi: 'Marlene Dietrich', tyyppi: 'henkilo', lat: 52.5075, lon: 13.3728,
         nosto: 'nosto-marlene-dietrich',
       },
       {
-        nimi: 'Paavin kosto', lat: 52.5208, lon: 13.4094,
+        nimi: 'Paavin kosto', tyyppi: 'ilmio', lat: 52.5208, lon: 13.4094,
         nosto: 'nosto-paavin-kosto',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6252,7 +6252,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki madrid).
        */
       {
-        nimi: 'Tasavallan vuosi', lat: 40.4153, lon: -3.6971, nosto: 'syvennys-madrid-tasavalta',
+        nimi: 'Tasavallan vuosi', tyyppi: 'henkilo', lat: 40.4153, lon: -3.6971, nosto: 'syvennys-madrid-tasavalta',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -6299,17 +6299,17 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Chotis', lat: 40.4172, lon: -3.6968,
+        nimi: 'Chotis', tyyppi: 'ilmio', lat: 40.4172, lon: -3.6968,
         nosto: 'nosto-chotis-laatalla',
         nimiPuoli: 'oikea',
       },
       {
-        nimi: 'Kaksi joukkuetta', lat: 40.4192, lon: -3.6931,
+        nimi: 'Kaksi joukkuetta', tyyppi: 'ilmio', lat: 40.4192, lon: -3.6931,
         nosto: 'nosto-madridin-kaksi-joukkuetta',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Palamaton linna', lat: 40.418, lon: -3.7143,
+        nimi: 'Palamaton linna', tyyppi: 'henkilo', lat: 40.418, lon: -3.7143,
         nosto: 'nosto-palamaton-linna',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6401,11 +6401,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Setelipankki', lat: 59.3225, lon: 18.0739,
+        nimi: 'Setelipankki', tyyppi: 'henkilo', lat: 59.3225, lon: 18.0739,
         nosto: 'skandaali-palmstruchin-setelipankki',
       },
       {
-        nimi: 'Naamiaislaukaus', lat: 59.3297, lon: 18.0706,
+        nimi: 'Naamiaislaukaus', tyyppi: 'henkilo', lat: 59.3297, lon: 18.0706,
         nosto: 'skandaali-naamiaisten-laukaus',
       },
       {
@@ -6470,7 +6470,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Markuksen hevoset', lat: 45.4345, lon: 12.3394,
+        nimi: 'Markuksen hevoset', tyyppi: 'taide', lat: 45.4345, lon: 12.3394,
         nosto: 'syvennys-venetsia-hevoset',
       },
       {
@@ -6478,7 +6478,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-venetsia-plebiskiitti',
       },
       {
-        nimi: 'Aldon paino', lat: 45.439, lon: 12.3287,
+        nimi: 'Aldon paino', tyyppi: 'henkilo', lat: 45.439, lon: 12.3287,
         nosto: 'syvennys-venetsia-aldus',
       },
     ],
@@ -6587,7 +6587,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Banca Romana', lat: 41.9009, lon: 12.4785,
+        nimi: 'Banca Romana', tyyppi: 'henkilo', lat: 41.9009, lon: 12.4785,
         nosto: 'skandaali-banca-romana-1893',
       },
       /*
@@ -6620,7 +6620,7 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Areenan kellari', lat: 41.8902, lon: 12.4922,
+        nimi: 'Areenan kellari', tyyppi: 'esine', lat: 41.8902, lon: 12.4922,
         nosto: 'nosto-colosseumin-kellari',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6630,7 +6630,7 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
       {
-        nimi: 'Aqua Virgo', lat: 41.9008, lon: 12.4831,
+        nimi: 'Aqua Virgo', tyyppi: 'esine', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-aqua-virgo',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6830,7 +6830,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'E-valtio', lat: 59.4358, lon: 24.7372,
+        nimi: 'E-valtio', tyyppi: 'ilmio', lat: 59.4358, lon: 24.7372,
         nosto: ['syvennys-tallinna-e-valtio', 'skandaali-rummu-jyri-mestarikarkuri'],
       },
       {
@@ -6963,15 +6963,15 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Levski', lat: 42.6967, lon: 23.3353,
+        nimi: 'Levski', tyyppi: 'henkilo', lat: 42.6967, lon: 23.3353,
         nosto: 'syvennys-sofia-levski',
       },
       {
-        nimi: 'Ruhtinaskaappaus', lat: 42.6965, lon: 23.3268,
+        nimi: 'Ruhtinaskaappaus', tyyppi: 'henkilo', lat: 42.6965, lon: 23.3268,
         nosto: 'skandaali-battenbergin-ruhtinaskaappaus',
       },
       {
-        nimi: 'Vihellyskonsertti', lat: 42.6942, lon: 23.3264,
+        nimi: 'Vihellyskonsertti', tyyppi: 'henkilo', lat: 42.6942, lon: 23.3264,
         nosto: 'skandaali-kansallisteatterin-vihellyskohu',
       },
     ],
@@ -7085,7 +7085,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-bukarest-coltea',
       },
       {
-        nimi: 'Kultakana', lat: 44.4313, lon: 26.0973,
+        nimi: 'Kultakana', tyyppi: 'esine', lat: 44.4313, lon: 26.0973,
         nosto: 'skandaali-kultakanan-ryosto-1875',
       },
     ],
@@ -7564,7 +7564,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Huudon varkaus', lat: 59.9163, lon: 10.7373,
+        nimi: 'Huudon varkaus', tyyppi: 'henkilo', lat: 59.9163, lon: 10.7373,
         nosto: 'skandaali-huudon-varkaus',
       },
       {
@@ -8017,6 +8017,7 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Suurherttuallinen palatsi', lat: 49.6109, lon: 6.1328,
+        nosto: 'skandaali-marie-adelaiden-luopuminen-1919',
         aika: '1572–',
         teksti: 'Rakennus, joka tunnetaan nykyään Suurherttuallisena '
           + 'palatsina, rakennettiin vuonna 1572 kaupungintaloksi ja '
@@ -8557,6 +8558,7 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Suurmestarin palatsi', lat: 35.898611, lon: 14.514167,
+        nosto: 'skandaali-napoleonin-kirkkohopean-ryosto-1798',
         wiki: 'Suurmestarin palatsi (Valletta)',
       },
       {
@@ -8832,7 +8834,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Kirjankantajat', tyyppi: 'luonto', lat: 54.6825, lon: 25.2872,
+        nimi: 'Kirjankantajat', tyyppi: 'henkilo', lat: 54.6825, lon: 25.2872,
         nosto: 'syvennys-vilna-knygnesiai',
       },
       {

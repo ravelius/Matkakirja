@@ -27,8 +27,8 @@ import { html } from './ui-apurit.js';
 
 /** Hakemiston otsikko etusivulla. */
 export const OSIOHAKEMISTON_OTSIKKO = 'Lehden osiot';
-/** Montako jutunotsikkoa osion alla näytetään ennen "… ja N muuta" -riviä. */
-export const OSIOHAKEMISTON_OTSIKOITA = 4;
+/** Montako jutunotsikkoa osion alarivillä näytetään (kevyt rivi, ei "… ja N muuta"). */
+export const OSIOHAKEMISTON_OTSIKOITA = 2;
 
 /** Lehden sivun aihe hakemistossa: historian hetket yhdeksi osioksi. */
 function osiohakSivunAihe(osa) {
@@ -162,32 +162,26 @@ export function piirraOsiohakemisto(ui, kohde, { osiot, avaaSivu }) {
       else ensimmainen?.avaa?.();
     });
     tekstit.appendChild(linkki);
-    const lista = html('ul', 'lehti-osio-jutut');
-    const nayta = (j) => {
-      const li = html('li');
+    // Kuva on osa riviä: napautus avaa saman kuin osion nimi.
+    kuvapaikka.addEventListener('click', () => linkki.click());
+    /*
+     * KEVYT RIVI (omistaja 27.9.2026 klo 11.2x, v2296:n palaute; natiivin
+     * hyväksytty malli Natiivi-UI 11a3c43a): yksi alarivi, enintään
+     * OSIOHAKEMISTON_OTSIKOITA juttua "·"-erottimin, ellipsi, ei
+     * "… ja n muuta" -riviä. Kaikki jutut löytyvät osion sivulta.
+     */
+    const lista = html('p', 'lehti-osio-jutut');
+    o.jutut.slice(0, OSIOHAKEMISTON_OTSIKOITA).forEach((j, i) => {
+      if (i) lista.appendChild(html('span', 'lehti-osio-erotin', ' · '));
       const b = html('button', 'lehti-osio-juttu', j.otsikko);
       b.type = 'button';
       b.addEventListener('click', () => {
         if (j.sivu != null) avaaSivu(j.sivu);
         else j.avaa?.();
       });
-      li.appendChild(b);
-      lista.appendChild(li);
-    };
-    o.jutut.slice(0, OSIOHAKEMISTON_OTSIKOITA).forEach(nayta);
-    const loput = o.jutut.length - OSIOHAKEMISTON_OTSIKOITA;
-    if (loput > 0) {
-      const li = html('li', 'lehti-osio-lisaa');
-      const b = html('button', 'lehti-osio-juttu', `… ja ${loput} muuta`);
-      b.type = 'button';
-      b.addEventListener('click', () => {
-        li.remove();
-        o.jutut.slice(OSIOHAKEMISTON_OTSIKOITA).forEach(nayta);
-      });
-      li.appendChild(b);
-      lista.appendChild(li);
-    }
-    tekstit.appendChild(lista);
+      lista.appendChild(b);
+    });
+    if (lista.childElementCount) tekstit.appendChild(lista);
     rivi.appendChild(tekstit);
     lohko.appendChild(rivi);
   }

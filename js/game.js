@@ -1,7 +1,7 @@
 // Pelin tila ja säännöt: vuorot, laattojen kääntäminen ja voittoehdot.
 
 import {
-  BUS_FARE, FLIGHT_PRICE, buildBoard, edgeId, findMoves, posKey, reachableCities,
+  BUS_FARE, FLIGHT_PRICE, buildBoard, edgeId, findMoves, posKey,
 } from './rules.js';
 import { TOKEN_TYPES, arvoAarteenArvo, createTokenPile } from './tokens.js';
 import { packById, sourceList } from './pack.js';
@@ -14,8 +14,11 @@ import { LINSSIAARTEET, linssiAarteesta } from './linssit/aarteet.js';
 import { tietajatasonNousut } from './tietajatasot.js';
 import { pulmanGeneraattori } from './pulmageneraattorit.js';
 import { taytaPohja } from './tekstipohja.js';
+import { HINTATASOT } from './packs/hintatasot.js';
 
-export const START_MONEY = 300;
+// 300 → 400 (omistaja 27.9.2026 klo 10.3x, talouden vaihe 1): päiväkulut alkavat
+// heti, joten aloituskassan on kestettävä ensimmäinen viikko ja yksi lento.
+export const START_MONEY = 400;
 export const SEA_FARE = 100; // laivamatkan hinta vuorolta
 /*
  * BUSSILIPPU 50 puntaa (js/rules.js BUS_FARE) — vietynä tästä, koska
@@ -50,7 +53,57 @@ export const KAVERIAPU_HINTA = 25;
  */
 export const PULLA_HINTA = 25;
 export const QUIZ_SECONDS = 45; // vastausaika tiimalasin verran
-export const STRANDED_AID = 100; // kotisääntö: jumiin jäänyt saa pankilta 100
+/*
+ * TALOUDEN VAIHE 1 (omistaja 27.9.2026 klo 10.3x, docs/raportit/
+ * talous-suunnitelma-20260927.md): ruoka ja majoitus maksetaan joka
+ * vuorokauden vaihtuessa, summa kerrottuna maan hintatasolla
+ * (js/packs/hintatasot.js: 12 / 20 / 32 £). Matkalla (reitillä) yö kuluu
+ * kulkuneuvossa: vain ruoka. Pankin apu (STRANDED_AID) on poistettu: jos
+ * päiväkulu ei mene läpi, alkaa kahden vuorokauden varoitus
+ * (RAHATTOMUUS_VUOROJA), ja ellei kassa nouse, matka päättyy.
+ */
+export const PAIVAKULU_RUOKA = 8;
+export const PAIVAKULU_MAJOITUS = 12;
+export const HINTATASON_KERTOIMET = { edullinen: 0.6, keski: 1, kallis: 1.6 };
+export const RAHATTOMUUS_VUOROJA = 8; // 2 vrk × 4 vuoroa (TURN_HOURS 6)
+
+/*
+ * PELISTREAK (omistaja 27.9.2026 klo 11.3x, luvut hyväksytty sellaisenaan;
+ * docs/raportit/talous-suunnitelma-20260927.md 5b): oikean elämän peräkkäiset
+ * pelipäivät (laitteen paikallinen päivä, ensimmäinen teko). Päivät 1–2: 0,
+ * 3–6: 20 £/pv, 7.: 50 + 100 £, 8+: 30 £/pv ja joka 7. päivä +100 £.
+ * ARMOPÄIVÄ (omistaja 27.9.2026 klo 12.4x): yksi väliin jäänyt päivä 7 päivän
+ * liukuvassa ikkunassa ei katkaise putkea, mutta siitä ei tule palkkiota eikä se
+ * kasvata pituutta; toinen väliin jäänyt päivä saman ikkunan sisällä nollaa.
+ */
+export function streakPalkkio(pituus) {
+  return streakErittely(pituus).yhteensa;
+}
+
+/** Päiväpalkkio ja viikkobonus erikseen (lokirivi ja toast kertovat molemmat). */
+export function streakErittely(pituus) {
+  const paiva = pituus < 3 ? 0 : pituus < 7 ? 20 : pituus === 7 ? 50 : 30;
+  const viikko = pituus >= 7 && pituus % 7 === 0 ? 100 : 0;
+  return { paiva, viikko, yhteensa: paiva + viikko };
+}
+
+const JARJESTYSLUVUT = ['', 'Ensimmäinen', 'Toinen', 'Kolmas', 'Neljäs', 'Viides', 'Kuudes',
+  'Seitsemäs', 'Kahdeksas', 'Yhdeksäs', 'Kymmenes'];
+
+/** "Kolmas päivä peräkkäin matkalla" / "14. päivä peräkkäin matkalla". */
+export function streakOtsikko(pituus) {
+  return `${JARJESTYSLUVUT[pituus] ?? `${pituus}.`} päivä peräkkäin matkalla`;
+}
+
+/** Armopäivien vähimmäisväli: kaksi väliin jäänyttä päivää saman 7 päivän ikkunan sisällä nollaa putken. */
+export const STREAK_ARMOIKKUNA = 7;
+
+/** Päivämäärä 'YYYY-MM-DD' + n päivää (UTC-laskenta, ei aikavyöhykehyppyä). */
+function paivaaLisaa(paivays, n) {
+  const d = new Date(`${paivays}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
 export const HARD_BONUS = 100; // palkkio vaikeasta kysymyksestä oikein vastattaessa
 export const STAR_PRIZE = 2000; // pääaarteen arvo vaellustilassa, jossa peli ei pääty
 export const DUEL_PRIZE = 200; // rosvon saalis, jos kaksintaistelun voittaa suoraan
@@ -603,6 +656,8 @@ export class Game {
     this.aarreLukot = new Set();
     this.lastPath = null;
     this.winner = null;
+    // Rahat loppuivat ja matka päättyi (yksinpeli; talouden vaihe 1): { pelaaja, kaupunki, paiva }.
+    this.matkaPaattyi = null;
     this.turnCount = 1;
     this.log = [];
     this.events = []; // näytölle animoitavat tapahtumat
@@ -1028,6 +1083,13 @@ export class Game {
     if (this.airportDestinations(player).length) modes.push('fly');
     // Tutki paikka: tehtävä ei koskaan aukea itsestään, vaan napista.
     if (this.tehtavaTarjolla(player)) modes.push('stay');
+    /*
+     * ODOTA (talouden vaihe 1, 27.9.2026): pankin apu poistui, joten
+     * rahaton pelaaja voi jäädä kaupunkiin, josta ei pääse ilmaiseksi
+     * (saari ilman laivarahaa). Silloin vuoron voi kuluttaa odottamalla —
+     * muuten aika ei kulkisi eikä kahden vuorokauden sääntö ratkeaisi.
+     */
+    if (!modes.some((m) => m !== 'stay')) modes.push('wait');
     return modes;
   }
 
@@ -1322,6 +1384,154 @@ export class Game {
   /** Päiväkirjan päivämäärä yläpalkkiin: "Päivä 14, ilta". */
   clockLabel() {
     return `Päivä ${this.dayCount()}, ${this.timeOfDay()}`;
+  }
+
+  // --- talous: päiväkulut ja rahattomuus (omistaja 27.9.2026) --------------
+
+  /** Kaupungin maan hintataso: 'edullinen' | 'keski' | 'kallis' (js/packs/hintatasot.js). */
+  hintataso(cityId) {
+    const iso = this.pack.map?.cityCountry?.[cityId] ?? null;
+    return (iso && HINTATASOT[iso]) || 'keski';
+  }
+
+  /**
+   * Pelaajan päiväkulu nyt. Kaupungissa ruoka + majoitus maan hintatasolla;
+   * reitillä yö kuluu kulkuneuvossa, joten vain ruoka (lähtöpään hintataso).
+   */
+  paivakulu(p = this.player) {
+    const matkalla = p.pos.type === 'edge';
+    const paikka = matkalla ? this.board.edgeById.get(p.pos.edge)?.a : p.pos.city;
+    const taso = paikka ? this.hintataso(paikka) : 'keski';
+    const k = HINTATASON_KERTOIMET[taso] ?? 1;
+    const ruoka = Math.round(PAIVAKULU_RUOKA * k);
+    const majoitus = matkalla ? 0 : Math.round(PAIVAKULU_MAJOITUS * k);
+    return { ruoka, majoitus, yhteensa: ruoka + majoitus, taso, matkalla };
+  }
+
+  /**
+   * Pelipäivä (pelistreak): kutsutaan pelaajan teosta laitteen paikallisella
+   * päivämäärällä 'YYYY-MM-DD'. Sama päivä uudelleen ei tee mitään; eilisen
+   * jatko kasvattaa laskuria, muu aloittaa alusta. Palkkio kassaan heti.
+   * Palauttaa { pituus, palkkio } tai null (sama päivä tai botti).
+   */
+  kirjaaPelipaiva(paivays, p = this.player) {
+    if (!p || p.isBot || p.pudonnut || this.phase === 'over' || typeof paivays !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(paivays)) return null;
+    const ennen = p.streak ?? null;
+    if (ennen?.paiva === paivays) return null;
+    let pituus = 1;
+    let armo = null;
+    if (ennen && paivaaLisaa(ennen.paiva, 1) === paivays) {
+      pituus = ennen.pituus + 1;
+      armo = ennen.armo ?? null;
+    } else if (ennen && paivaaLisaa(ennen.paiva, 2) === paivays) {
+      // Yksi väliin jäänyt päivä: armopäivä, jos edellinen on vähintään ikkunan päässä.
+      const valissa = paivaaLisaa(ennen.paiva, 1);
+      if (!ennen.armo || paivaaLisaa(ennen.armo, STREAK_ARMOIKKUNA) <= valissa) {
+        pituus = ennen.pituus + 1;
+        armo = valissa;
+      }
+    }
+    p.streak = armo ? { paiva: paivays, pituus, armo } : { paiva: paivays, pituus };
+    const { paiva, viikko, yhteensa: palkkio } = streakErittely(pituus);
+    if (palkkio > 0) {
+      p.money += palkkio;
+      const otsikko = streakOtsikko(pituus);
+      this.say(p.id, `${otsikko}: +${paiva} puntaa${viikko ? ` ja viikkobonus +${viikko} puntaa` : ''}.`);
+      this.emit('rahat', otsikko, {
+        sub: `+${paiva} £${viikko ? ` ja viikkobonus +${viikko} £` : ''}`,
+        icon: 'kukkaro', tilanne: 'peli.streak', pelaaja: p.id,
+      });
+    }
+    return { pituus, palkkio };
+  }
+
+  /** Montako päivää kassa riittää nykyisellä päiväkululla (kassarivin arvio). */
+  kassaRiittaa(p = this.player) {
+    const k = this.paivakulu(p).yhteensa;
+    return k > 0 ? Math.floor(Math.max(0, p.money - (p.rasti ?? 0)) / k) : Infinity;
+  }
+
+  /**
+   * Vuorokausi vaihtui: jokainen (pudottamaton) pelaaja maksaa ruoan ja
+   * majoituksen. Jos rahat eivät riitä, maksetaan mitä on, loppu jää rästiin
+   * ja alkaa kahden vuorokauden varoitus (tarkistaRahattomuus).
+   */
+  veloitaPaivakulut() {
+    for (const p of this.players) {
+      if (p.pudonnut) continue;
+      const k = this.paivakulu(p);
+      const paikka = k.matkalla ? 'Yö matkalla' : `Yö kaupungissa ${this.cityOf(p)?.name ?? ''}`.trim();
+      const erittely = k.majoitus ? `ruoka ${k.ruoka} £, majoitus ${k.majoitus} £` : `ruoka ${k.ruoka} £`;
+      if (p.money >= k.yhteensa) {
+        p.money -= k.yhteensa;
+        this.say(p.id, `${paikka}: ${erittely} (−${k.yhteensa} puntaa).`);
+        continue;
+      }
+      const maksettu = p.money;
+      p.money = 0;
+      p.rasti = (p.rasti ?? 0) + (k.yhteensa - maksettu);
+      this.say(p.id, `${paikka}: ${erittely} — rahat eivät riittäneet, ${p.rasti} puntaa jäi velaksi.`);
+      if (!p.rahaton) {
+        p.rahaton = { alkuVuoro: this.turnCount, paiva: this.dayCount() };
+        this.say(p.id, `${p.name}: rahat ovat lopussa. Kaksi päivää aikaa hankkia rahaa — muuten matka päättyy.`);
+        this.emit('rahat', 'Rahat lopussa — kaksi päivää aikaa', {
+          sub: 'Tehtävät, visat ja aarteet tuovat rahaa. Maateitse pääsee ilmaiseksi.',
+          icon: 'kukkaro',
+          tilanne: 'peli.vararikko.varoitus',
+          pelaaja: p.id,
+        });
+      }
+    }
+  }
+
+  /**
+   * Rahattomuuden tila vuoron alussa: kassa selvisi (rästi maksetaan), vai
+   * ovatko kaksi vuorokautta kuluneet, jolloin matka päättyy.
+   */
+  tarkistaRahattomuus(p = this.player) {
+    if (!p.rahaton) return;
+    const rasti = p.rasti ?? 0;
+    if (p.money >= rasti + this.paivakulu(p).yhteensa) {
+      p.money -= rasti;
+      p.rasti = 0;
+      p.rahaton = null;
+      this.say(p.id, `Kassa kunnossa${rasti ? ` — velka ${rasti} puntaa maksettu` : ''}.`);
+      this.emit('rahat', 'Kassa kunnossa', { icon: 'kukkaro', tilanne: 'peli.vararikko.selvisi', pelaaja: p.id });
+      return;
+    }
+    if (this.turnCount - p.rahaton.alkuVuoro >= RAHATTOMUUS_VUOROJA) this.paataMatka(p);
+  }
+
+  /** Vuorokautta jäljellä ennen matkan päättymistä (varoitusnauha); null ilman varoitusta. */
+  rahattomuuttaJaljella(p = this.player) {
+    if (!p.rahaton) return null;
+    const vuoroja = Math.max(0, RAHATTOMUUS_VUOROJA - (this.turnCount - p.rahaton.alkuVuoro));
+    return Math.ceil(vuoroja / (24 / TURN_HOURS));
+  }
+
+  /**
+   * Rahat loppuivat eikä kassa noussut kahdessa vuorokaudessa. Yksinpelissä
+   * matka päättyy (loppukortti, jatko viimeisestä tallennuksesta ennen
+   * rahattomuutta — js/main.js). Moninpelissä vain tämä pelaaja putoaa;
+   * viimeinen jäljellä oleva voittaa.
+   */
+  paataMatka(p) {
+    p.pudonnut = true;
+    const city = this.cityOf(p);
+    this.say(p.id, `${p.name}: rahat loppuivat — matka päättyi ${city ? `kaupungissa ${city.name}` : 'matkalla'}, päivä ${this.dayCount()}.`);
+    const jaljella = this.players.filter((x) => !x.pudonnut);
+    if (jaljella.length === 0) {
+      this.matkaPaattyi = { pelaaja: p.id, kaupunki: city?.name ?? null, paiva: this.dayCount() };
+      this.phase = 'over';
+      return;
+    }
+    if (jaljella.length === 1 && this.players.length > 1) {
+      this.winner = jaljella[0];
+      this.phase = 'over';
+      this.say(jaljella[0].id, `🏆 ${jaljella[0].name} jäi viimeisenä matkalle ja voitti pelin!`);
+      return;
+    }
+    this.emit('rahat', `${p.name} putosi pelistä`, { icon: 'kukkaro', tilanne: 'peli.vararikko.loppu', pelaaja: p.id });
   }
 
   /**
@@ -1646,13 +1856,17 @@ export class Game {
     // Pääaarre kotikaupungissa ratkaisee pelin heti vuoron alussa.
     if (this.checkWin()) return;
 
-    if (this.needsAid(p)) {
-      p.money += STRANDED_AID;
-      this.say(p.id, `${p.name} on jumissa ilman rahaa ja saa pankilta ${STRANDED_AID} puntaa.`);
-      this.emit('aid', `${p.name} sai pankilta ${STRANDED_AID} puntaa`, {
-        icon: 'kukkaro',
-        tilanne: 'peli.vararikko.pankkiapu',
-      });
+    // Pudonnut pelaaja (rahat loppuivat, moninpeli) ei enää pelaa: vuoro siirtyy.
+    if (p.pudonnut) {
+      this.endTurn();
+      return;
+    }
+    // Rahattomuuden varoitus: selvisikö kassa, vai päättyykö matka (talouden vaihe 1).
+    this.tarkistaRahattomuus(p);
+    if (this.phase === 'over') return;
+    if (p.pudonnut) {
+      this.endTurn();
+      return;
     }
 
     // Kun vaihtoehtoja ei ole — esimerkiksi sisämaan kaupungissa tai kesken
@@ -1675,7 +1889,8 @@ export class Game {
      * (muitaTapojaTarjolla → js/ui.js paluunappi).
      */
     const modes = this.travelModes(p);
-    const noppaTavat = modes.filter((m) => m !== 'bus');
+    // Odotus ei ole kulkutapa: pelaaja (tai botti) valitsee sen itse.
+    const noppaTavat = modes.filter((m) => m !== 'bus' && m !== 'wait');
     this.autoTravel = noppaTavat.length === 1 && noppaTavat[0] !== 'stay';
     if (this.autoTravel) this.actionTravel(noppaTavat[0]);
 
@@ -1716,33 +1931,6 @@ export class Game {
   }
 
   /**
-   * Kotisääntö: pelaaja saa pankilta rahaa, jos hän ei pysty liikkumaan lainkaan
-   * tai jos yhteenkään tavoitteeseen ei pääse niillä rahoilla jotka hänellä on.
-   *
-   * Ratkaisevaa on riittävätkö rahat, ei se ovatko ne aivan lopussa: 20 punnan
-   * kanssa laivalipun takana oleva tavoite on yhtä lailla saavuttamattomissa
-   * kuin tyhjin taskuin.
-   */
-  needsAid(p) {
-    // Ilman yhtään matkustustapaa pelaaja ei pääse mihinkään.
-    const canTravel = this.travelModes(p).some((m) => m !== 'stay');
-    if (!canTravel) return true;
-
-    // Vaelluksessa kotiin ei tarvitse ehtiä, joten tavoitteita ovat aina laatat.
-    const racingHome = !this.roaming && p.stars > 0;
-    const goals = racingHome
-      ? new Set(this.players.map((pl) => pl.start))
-      : new Set(this.tokens.keys());
-    if (goals.size === 0) return false;
-
-    const reachable = reachableCities(this.board, p.pos, p.money);
-    for (const goal of goals) {
-      if (reachable.has(goal)) return false;
-    }
-    return true;
-  }
-
-  /**
    * Vuoro vaihtuu.
    *
    * `aikaKuluu: false` päättää vuoron ILMAN kellon liikettä (bussi,
@@ -1756,7 +1944,12 @@ export class Game {
     if (this.phase === 'over') return;
     this.phase = 'action';
     this.current = (this.current + 1) % this.players.length;
-    if (this.current === 0 && aikaKuluu) this.turnCount++;
+    if (this.current === 0 && aikaKuluu) {
+      const paivaEnnen = this.dayCount();
+      this.turnCount++;
+      // Uusi vuorokausi: ruoka ja majoitus kaikilta (talouden vaihe 1).
+      if (this.dayCount() > paivaEnnen) this.veloitaPaivakulut();
+    }
     this.updateSchedule();
     this.beginTurn();
   }
@@ -1798,6 +1991,12 @@ export class Game {
       return { ok: false, error: 'Tuo matkustustapa ei ole nyt käytettävissä' };
     }
     if (mode === 'stay') return this.actionQuiz(opts);
+    if (mode === 'wait') {
+      const p = this.player;
+      this.say(p.id, `${p.name} odottaa kaupungissa ${this.cityOf(p)?.name ?? ''} — aika kuluu.`.replace(' kaupungissa  —', ' —'));
+      this.endTurn();
+      return { ok: true, mode };
+    }
     /*
      * BUSSI EI OLE NOPPATAPA. Se on oma tekonsa (actionBus), koska
      * kohde valitaan naapurikaupungeista eikä nopan silmäluvusta —
@@ -2874,7 +3073,9 @@ export class Game {
    * Rosvo esittää kiperän kysymyksen, jossa on kahdeksan vaihtoehtoa.
    * Suora oikea vastaus tuo rosvon saaliin (DUEL_PRIZE). Helpotus poistaa
    * puolet jäljellä olevista vääristä vaihtoehdoista, mutta rosvo vie siitä
-   * puolet rahoista. Väärä vastaus tai aikakatkaisu vie kaikki rahat.
+   * puolet rahoista. Väärä vastaus tai aikakatkaisu vie puolet rahoista
+   * (omistaja 27.9.2026 klo 10.3x; ennen kaikki — päiväkulujen kanssa yksi
+   * häviö olisi voinut lopettaa matkan).
    *
    * Hevosenkengillä ohittaminen poistui uuden aarrejärjestelmän myötä:
    * laattojen alta löytyy vain aarteita, joten kenkiä ei enää ole.
@@ -2952,8 +3153,8 @@ export class Game {
         this.say(p.id, `${p.name} voitti rosvon — loput rahat säilyvät.`);
       }
     } else {
-      const loss = p.money;
-      p.money = 0;
+      const loss = Math.ceil(p.money / 2);
+      p.money -= loss;
       duel.taken += loss;
       const oikea = duel.options[duel.correct];
       this.say(p.id, `☠ ${p.name} hävisi rosvolle ${loss} puntaa — oikea vastaus oli "${oikea}".`);
@@ -2961,7 +3162,7 @@ export class Game {
     return { ok: true, right: duel.right };
   }
 
-  /** Aika loppui: rosvo vie kaikki rahat. */
+  /** Aika loppui: rosvo vie puolet rahoista. */
   timeoutDuel() {
     const duel = this.duel;
     if (this.phase !== 'duel' || !duel || duel.chosen !== null) {
@@ -2973,8 +3174,8 @@ export class Game {
     duel.timedOut = true;
     duel.seconds = 0;
     this.countAnswer(p, false);
-    const loss = p.money;
-    p.money = 0;
+    const loss = Math.ceil(p.money / 2);
+    p.money -= loss;
     duel.taken += loss;
     this.say(p.id, `☠ ${p.name} ei ehtinyt vastata rosvolle ja menetti ${loss} puntaa.`);
     return { ok: true, right: false, timedOut: true };

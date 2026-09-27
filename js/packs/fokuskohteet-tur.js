@@ -1488,7 +1488,7 @@ export const FOKUSKOHTEET_TUR = [
       lyhyt: 'Kilpa-ajokannattajat rakentavat puolustuslinjaa hunneja vastaan, muttei suostu lopettamaan kisojaan.',
       selite: 'Sinisten ja vihreiden kilpa-ajokannattajat rakentavat nyt samaa '
         + 'puolustuslinjaa — mutta eivät suostu lopettamaan kilpailuaan. '
-        + 'Kuvituksen muurarinoppilas pelkää pudottavansa raskaan tiilen '
+        + 'Kuvan muurarinoppilas pelkää pudottavansa raskaan tiilen '
         + 'enemmän kuin kaukana lähestyviä hunneja; vanhemman miehen käsi '
         + 'olkapäällä muistuttaa, että sortuneiden tornien on noustava ennen '
         + 'kuin vihollinen ehtii kaupungille.',

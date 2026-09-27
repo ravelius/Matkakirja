@@ -247,20 +247,8 @@
                 <span class="kehittaja-kytkin-nimi">mittari</span>
                 <span class="kehittaja-kytkin-tila">pois</span>
               </button>
-              <!-- STRIIMIÄÄNI (omistaja 27.9.2026 klo 01.2x, sanatarkasti:
-                   *"Lisää kehittäjä valikkoon äänen valinta xai:n
-                   vaihtoehdoista striimille"*). Striimiluenta kulkee
-                   xAI:n Grok TTS:llä (oletus ara, päätös 27.9. klo 00.25);
-                   tästä kehittäjä valitsee muun xAI-äänen kokeiltavaksi.
-                   Vaihtoehdot täytetään js/main.js:ssä js/puhe.js:n
-                   STRIIMIAANET_XAI-listasta; valinta tallentuu laitteelle
-                   ja worker tottelee sitä vain kehittäjäkoodilla. -->
-              <label class="kehittaja-kytkin kehittaja-valinta" for="kehittaja-striimiaani">
-                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 9.5v5h3.2l4.3 3.4V6.1L7.7 9.5H4.5z"/><path d="M15 9.2a4 4 0 0 1 0 5.6"/><path d="M17.6 6.6a7.6 7.6 0 0 1 0 10.8"/></svg></span>
-                <span class="kehittaja-kytkin-nimi">striimiääni</span>
-                <select id="kehittaja-striimiaani" class="kehittaja-valinta-select"
-                        aria-label="Striimiluennan ääni (xAI)"></select>
-              </label>
+              <!-- Striimiäänen valinta muutti nostokortin säätörattaaseen
+                   (omistaja 27.9.2026 klo 09.3x; js/lukija.js). -->
               <!-- Lukijamittari: viimeisimmän puhepalan moottori, lähde ja
                    ensimmäisen tavun aika (js/main.js naytaPuhemittari). -->
               <p id="kehittaja-puhemittari" class="kehittaja-puhemittari" aria-live="polite" hidden></p>
@@ -1348,7 +1336,7 @@
         esittää kiperän kysymyksen, jossa on kahdeksan vaihtoehtoa. Suora oikea vastaus
         voittaa rosvon saaliin (200 p). <b>Helpotus</b> poistaa puolet jäljellä olevista
         vääristä vaihtoehdoista, mutta rosvo vie siitä puolet rahoistasi — ja toisesta
-        helpotuksesta taas puolet. Väärä vastaus tai ajan loppuminen vie kaikki rahat.</p>
+        helpotuksesta taas puolet. Väärä vastaus tai ajan loppuminen vie puolet rahoista.</p>
       <p><b>Matkakassa.</b> Matka alkaa 300 punnalla — vanhan maailman valuutta
         kelpaa tässä pelissä yhä kaikkialla.</p>
       <p><b>Kaksi ääntä.</b> Tietoruutu kertoo siitä paikasta, jossa vuorossa oleva
@@ -1446,7 +1434,7 @@
       <img id="quiz-kohtaaminen-kuva" class="quiz-kohtaaminen-kuva" alt="">
       <figcaption id="quiz-kohtaaminen-kuvateksti" class="kuvateksti quiz-kohtaaminen-kuvateksti" hidden>
         <span id="quiz-kohtaaminen-selite" class="kuvateksti-selite"></span>
-        <span class="kuvalahde">Matkakirjan kuvitus</span>
+        <span class="kuvalahde">Matkakirjan havainnekuva</span>
       </figcaption>
     </figure>
     <p id="quiz-kohtaaminen" class="quiz-kohtaaminen" hidden></p>

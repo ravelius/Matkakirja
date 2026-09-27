@@ -2877,6 +2877,29 @@ test('julkaisun puhemoottoritarkistus: vaatii xai:n, uusii kunnes salaisuus on l
   assert.equal(ei.moottori, 'openai');
 });
 
+test('worker: lukijan xAI-ääni on pelaajan valinta ilman kehittäjäkoodia (omistaja 27.9.2026)', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const alkuperainen = globalThis.fetch;
+  const aanet = [];
+  globalThis.fetch = async (osoite, init) => {
+    if (String(osoite).includes('api.x.ai')) aanet.push(JSON.parse(init.body).voice_id ?? JSON.parse(init.body).voice);
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const env = { POLLO_ORIGINIT: 'https://matkakirja.app', XAI_API_KEY: 'x', OPENAI_API_KEY: 'o' };
+  const pyynto = (aani) => worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app' },
+    body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei maailma.', persoona: 'kertoja', aani }),
+  }), env, {});
+  try {
+    assert.equal((await pyynto('eve')).status, 200);
+    assert.equal((await pyynto('ei-aani')).status, 200);
+    assert.deepEqual(aanet, ['eve', 'ara'], 'listan ääni kelpaa, tuntematon palaa oletukseen');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+});
+
 test('lukijaäänen rajat: päivä 400 000 mrk/IP, kuukausi 6 000 000 (27.9.2026)', async () => {
   const { PUHE_PAIVARAJA_OLETUS, PUHE_KUUKAUSIRAJA_OLETUS, tarkistaPuheRajat } = await import('../tools/pollo/rajat.js');
   assert.equal(PUHE_PAIVARAJA_OLETUS, 400000);

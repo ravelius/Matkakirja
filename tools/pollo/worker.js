@@ -1052,6 +1052,14 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   let aani = oletusAani;
   let ohje = oletusOhje;
   let saadetty = false;
+  /*
+   * LUKIJAN ÄÄNI ON PELAAJAN VALINTA (omistaja 27.9.2026 klo 09.3x:
+   * nostokortin säätöratas, valinta pois kehittäjävalikosta): xAI-äänen
+   * nimi listalta kelpaa ilman kehittäjäkoodia. Ääni on säilöavaimessa
+   * (puheenAvain), joten valittu ääni säilötään omana palanaan eikä
+   * ohita säilöä kuten ohje.
+   */
+  if (xai && XAI_AANET.includes(runko?.aani)) aani = runko.aani;
   if (kehittajaOhitus(pyynto, env)) {
     if (sallitutAanet.includes(runko?.aani)) {
       aani = runko.aani;
