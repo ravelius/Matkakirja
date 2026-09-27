@@ -26239,8 +26239,9 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.45rem;
-  /* Saavutettavuus C (Fable 27.9.2026, web + natiivi): kosketusrivi ≥ 44 px. */
-  min-height: 44px;
+  /* Saavutettavuus C (Fable 27.9.2026 klo 20.3x): rivi ~32 px (WCAG AA 24 px täyttyy),
+     ettei 11 rivin lista vieri puhelimella; 44 px koskee ikoninappeja. */
+  min-height: 32px;
   padding: 0.3rem 0.4rem;
   border: 0;
   border-radius: 6px;

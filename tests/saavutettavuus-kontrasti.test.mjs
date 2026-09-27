@@ -30,9 +30,9 @@ test('pergamentin toissijainen teksti ei ole alle 0,72-alfaista mustetta', () =>
   assert.deepEqual(vialliset, [], 'käytä #595046 (himmeä) tai #624c2d (lämmin)');
 });
 
-test('kysymyksen kaupunki ja sekunnit #624c2d; karttaselitteen rivit 44 px', () => {
+test('kysymyksen kaupunki ja sekunnit #624c2d; karttaselitteen rivit 32 px (AA 24 px)', () => {
   assert.doesNotMatch(css, /#7a6039/i, 'vanha lämmin ruskea 4,0:1 kysymyskortilla');
   assert.match(css, /\.quiz-city \{ color: #624c2d;/);
-  assert.match(css, /\.karttaselite-rivi \{[^}]*min-height: 44px;/);
+  assert.match(css, /\.karttaselite-rivi \{[^}]*min-height: 32px;/);
   assert.match(css, /\.paavalikko \.kertoja-valikko button\.valittu \.aanikytkin-tila \{ opacity: 1; \}/);
 });
