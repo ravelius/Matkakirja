@@ -7943,3 +7943,7 @@ Fable 09.1x Julkaisijalle VIE — TF 1.0.28 = build 28 = proto-master 7788b629 (
 ## OMISTAJA 09.2x P1: STRIIMILUENTA TAUKOILEE JA HYPPII ETEENPAIN → PELIKOODARI HETI (27.9.2026 klo 09.17)
 
 Omistaja 09.2x: striimiluenta taukoilee vahan valia ja hyppii eteenpain (virkkeita jaa soittamatta). Todennakoisesti v2297–v2303 lukijamuutokset (esihaku +1/+2, virkevali 220 ms, pitka pala). Pelikoodari toistaa tuotannossa, mittaa soitetut/ohitetut virkkeet, korjaa ettei yhtaan palaa pudoteta, PR junaan heti; progressiivinen soitto sen jalkeen.
+
+## OMISTAJA 09.2x (SITOVA): STRIIMIPUHE EI OLE SIDOTTU AANIKYTKIMIIN — AINA PAALLA, LAHTEE VAIN PYYNNOSTA (27.9.2026 klo 09.20)
+
+Omistaja 09.2x sitova: striimipuhe (Pulun vastauksen luenta) ei saa olla sidottu mihinkaan aanitogleen (Kertoja, Musiikki, Aanimaisema, mykistys) — aina paalla, koska lahtee vain pelaajan pyynnosta; vain Pulun oma kaiutinvipu ohjaa. Web: js/lukija.js lueVirtana aanetPaalla()-portti pois (Pelikoodari, samaan P1-korjaukseen); natiivi: Natiivi-UI poistaa portit Pulu-luentapolulta 1.0.29. Raamattuun seuraavassa Raamattu-PR:ssa (LUKIJAAANI/PULU-osio).
