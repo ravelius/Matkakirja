@@ -182,6 +182,18 @@ function kehittajaKoodi() {
 export const PUHE_PALA_KATTO = 2400;
 
 /*
+ * PUHEENVUORON RAMPPI (Fable/omistaja 27.9.2026 klo 18.3x: "vähemmän
+ * pätkiä → vähemmän workeripyyntöjä"). Pulun striimattu vastaus tuli
+ * luennalle virke kerrallaan, ja jokainen virke oli oma workerin
+ * generointinsa (~100 mrk). Nyt virkkeet kerätään puskuriin: ensimmäinen
+ * pala lähtee heti kun ~150 mrk on koossa (soi heti), seuraavat kasvavat
+ * kolminkertaisiksi (450, 1 350) katon 2 400 asti. Puskuri tyhjennetään
+ * myös silloin, kun soittimella ei ole enää aikataulutettavaa (edellinen
+ * pala soi) — hiljaisuutta ei synny odottamalla portaan täyttymistä.
+ */
+export const PUHEENVUORON_PORTAAT = [150, 450, 1350];
+
+/*
  * Istunnon estolippu: asetusvirhe (503/403) tarkoittaa, ettei puhe ole
  * tässä ympäristössä käytössä — jokaista nappia ei kannata kokeilla
  * uudestaan. Ohimenevä verkkovirhe EI nosta lippua.
@@ -1116,6 +1128,9 @@ export function luoPuheSoitin({
     // Ensimmäisen lisäyksen ja ensimmäisen äänen seinäkelloaika (mittari: 1. ääni).
     ekaLisays: null,
     ekaAani: null,
+    // Puheenvuoron ramppi (yksiPuheenvuoro): palaksi odottava teksti ja porras.
+    puskuri: '',
+    rampinPorras: 0,
   };
   let vuorossa = 0; // seuraavaksi aikataulutettava pala
   let seuraavaAlku = 0; // piirin aika, johon seuraava pala liitetään
@@ -1469,6 +1484,9 @@ export function luoPuheSoitin({
         kello = null;
         return;
       }
+      // Ramppi: kun kaikki palat on aikataulutettu, puskurin teksti lähtee heti
+      // (generointi ehtii soivan palan aikana) — portaan odotus ei saa tuottaa hiljaisuutta.
+      if (yksiPuheenvuoro && tila.puskuri && vuorossa >= palat.length) tyhjennaPuskuri(true);
       if (!tila.tauolla) aikatauluta();
       ilmoitaKasvopuhe();
       const nyt = piiri.currentTime;
@@ -1530,6 +1548,25 @@ export function luoPuheSoitin({
     return uudet;
   };
 
+  /**
+   * Puheenvuoron puskuri paloiksi (ramppi, PUHEENVUORON_PORTAAT). `pakota`:
+   * striimin loppu tai soittimelta loppui aikataulutettava — koko puskuri
+   * lähtee portaasta välittämättä.
+   */
+  const tyhjennaPuskuri = (pakota) => {
+    if (!tila.puskuri || tila.peruttu) return;
+    const raja = PUHEENVUORON_PORTAAT[tila.rampinPorras] ?? PUHE_PALA_KATTO;
+    if (!pakota && tila.puskuri.length < raja) return;
+    const uudet = kappaleenPalat(tila.puskuri).map((pala) => ({ ...pala, kappale: 0 }));
+    tila.puskuri = '';
+    tila.rampinPorras += 1;
+    tila.kappaleita = Math.max(tila.kappaleita, 1);
+    if (!uudet.length) return;
+    palat.push(...uudet);
+    if (!tila.kaynnissa) kaynnista();
+    else if (!tila.tauolla) aikatauluta();
+  };
+
   const kaynnista = async () => {
     if (tila.kaynnissa || tila.peruttu) return;
     tila.kaynnissa = true;
@@ -1547,6 +1584,14 @@ export function luoPuheSoitin({
     lisaa(teksti) {
       if (tila.peruttu || tila.paatetty) return;
       if (tila.ekaLisays == null && typeof performance !== 'undefined') tila.ekaLisays = performance.now();
+      if (yksiPuheenvuoro) {
+        // Ramppi: virkkeet puskuriin, pala vasta portaan täyttyessä (PUHEENVUORON_PORTAAT).
+        const lisays = String(teksti ?? '').replace(/\s*\n\s*/g, ' ').trim();
+        if (!lisays) return;
+        tila.puskuri = tila.puskuri ? `${tila.puskuri} ${lisays}` : lisays;
+        tyhjennaPuskuri(false);
+        return;
+      }
       const uudet = pilkoPaloiksi(teksti);
       if (!uudet.length) return;
       palat.push(...uudet);
@@ -1573,6 +1618,7 @@ export function luoPuheSoitin({
     },
     paata() {
       if (tila.peruttu || tila.paatetty) return;
+      if (yksiPuheenvuoro) tyhjennaPuskuri(true);
       tila.paatetty = true;
       if (!palat.length) loppu();
     },
