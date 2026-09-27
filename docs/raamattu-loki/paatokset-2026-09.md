@@ -7951,3 +7951,7 @@ Omistaja 09.2x sitova: striimipuhe (Pulun vastauksen luenta) ei saa olla sidottu
 ## TF 1.0.28 TESTFLIGHTISSA (BUILD 28, PROTO 7788b629, AJO 36299333927) (27.9.2026 klo 09.20)
 
 Julkaisija 09.19: TF 1.0.28 lahetetty ja ASC:ssa kasitelty, CFBundleVersion 202609270611, proto 7788b629, laskuri 28. Push omistajalle 09.2x. Seuraava 1.0.29: meri 10 lajia, nostot-heti 934103a9, maakuntaeteneminen/salaisuudet/alkuanimaatio pois, striimipuhe ilman aanikytkimia, lahitaso LOD0, avauskortti natiiviin, Brugge/Matterhorn/Hohensalzburg.
+
+## PROGRESSIIVINEN SOITTO #3384 (v2307); P1 TODENNAKOINEN SYY: PUHEEN PAIVARAJA 60 000 mrk/IP TAYTTYI MITTAUKSISTA → 429 OMISTAJAN VERKOSSA (27.9.2026 klo 09.22)
+
+Pelikoodari 09.2x: progressiivinen soitto #3384 (v2307): mp3 kehysrajoilta segmentteina, esirulla 3 + jalkirulla 1, 24 kHz; 1. aani 2 400 mrk 25 s → 1,75/2,2 s, lehtisivu 6,6 → 1,64 s, Pulu 2,26 → 1,72 s; kuulonayte proto-3d/lokit/puhevirta/. HUOM mittaukset tayttivat workerin paivarajan 60 000 mrk/IP → saman verkon laitteet saavat 429 → Fable: omistajan 09.2x P1 (taukoilee, hyppii) todennakoisesti tama. Toimet: PUHE_PAIVARAJA/KUUKAUSIRAJA nosto (~400 000/IP/vrk) PR heti, asiakas ei ohita virketta aanetta 429:ssa vaan pysahtyy ja nayttaa viestin, POLLO_KEHITTAJAKOODI Macin avaintiedostoon mittauksia varten (Julkaisija).
