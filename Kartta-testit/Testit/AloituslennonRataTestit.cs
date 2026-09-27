@@ -148,6 +148,22 @@ namespace Matkakirja.Kartta.Testit
                            && AloituslennonRata.PerusKorkeus(AloituslennonRata.KosketusS) == 0, "nousu ja kosketus");
             }
             if (Environment.GetEnvironmentVariable("ALOITUSRATA_TAULU") != "1") return;
+            Console.WriteLine("kohde | reitti km | kone pienin % | α suurin ° (korotus < 60°) | ohitus suurin % | saapuminen α ° | kamera matalin km");
+            foreach (var k in Kohteet)
+            {
+                var r = Rata(k.Lat, k.Lon);
+                double pienin = 9, alfa = 0, ohitus = 0, sa0 = 999, sa1 = 0, matalin = 1e9;
+                for (double t = 0.05; t <= AloituslennonRata.KestoS; t += 1.0 / 60)
+                {
+                    var m = r.Mitta(t);
+                    pienin = Math.Min(pienin, m.Koko);
+                    if (m.Korotus < 60) alfa = Math.Max(alfa, m.Alfa);
+                    if (t >= AloituslennonRata.KiriS && t <= AloituslennonRata.OhitusLoppuS) ohitus = Math.Max(ohitus, m.Koko);
+                    if (t >= AloituslennonRata.SaapuminenS && t <= AloituslennonRata.KosketusS) { sa0 = Math.Min(sa0, m.Alfa); sa1 = Math.Max(sa1, m.Alfa); }
+                    matalin = Math.Min(matalin, m.KameraKorkeusM);
+                }
+                Console.WriteLine($"{k.Id,-8} | {r.ReittiM / 1000,5:F0} | {pienin * 100,5:F1} | {alfa,4:F0} | {ohitus * 100,5:F0} | {sa0:F0}–{sa1:F0} | {matalin / 1000:F1}");
+            }
             string kohde = Environment.GetEnvironmentVariable("ALOITUSRATA_KOHDE") ?? "ateena";
             foreach (var k in Kohteet)
             {
