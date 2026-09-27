@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2310, teksti: 'v2309: Löytämisen sumu pois, maakuntasalaisuude… (#3385)' },
   { v: 2309, teksti: 'v2307: Progressiivinen lukijaääni — pala alkaa… (#3384)' },
   { v: 2308, teksti: 'Pelin syvin taso 10: z9–z10 käyttöön (#3371)' },
   { v: 2307, teksti: 'v2303: Pallon laattakerros — tukitaso vain jos… (#3380)' },
