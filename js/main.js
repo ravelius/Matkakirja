@@ -54,9 +54,9 @@ import { asennaPollo } from './pollo.js';
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
-  asetaPuheenNopeus, asetaPuheenVoima, asetaStriimiaani, luePuheAsetukset,
-  paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA, STRIIMIAANET_XAI,
-  STRIIMIAANI_OLETUS, striimiaani, tallennaPuheAsetukset, viimeisinPuhe,
+  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset,
+  paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA,
+  tallennaPuheAsetukset, viimeisinPuhe,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija, vaiennaAanikytkimella } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
@@ -146,6 +146,12 @@ const PLAYER_COLOR = '#d94f3d';
 }());
 
 const SAVE_KEY = 'matkakirja-save-v1';
+/*
+ * TURVATALLENNUS (talouden vaihe 1, omistaja 27.9.2026 klo 10.3x): viimeisin
+ * tallennus, jossa kenenkään rahat eivät ole lopussa. Kun matka päättyy
+ * rahojen loppumiseen, loppukortti tarjoaa jatkon tästä (js/ui.js showWinner).
+ */
+const TURVA_KEY = 'matkakirja-save-turva-v1';
 const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 /*
  * iCloud-synkan lähtötilanne talteen HETI, ennen kuin peli ehtii
@@ -159,7 +165,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2312';
+const APP_VERSION = '2026-09-21.2315';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -277,6 +283,7 @@ function saveGame(game) {
     else {
       talletettu = JSON.stringify(game.toJSON());
       localStorage.setItem(SAVE_KEY, talletettu);
+      if (game.players.every((p) => !p.rahaton && !p.pudonnut)) localStorage.setItem(TURVA_KEY, talletettu);
     }
   } catch {
     /* yksityinen selaustila tai täysi levy — peli jatkuu ilman tallennusta */
@@ -457,8 +464,33 @@ function siirraVanhaMaailma(arvo) {
   return arvo;
 }
 
+/** Turvatallennuksesta ladattu peli (rahat vielä kunnossa), tai null. */
+function lataaTurva() {
+  try {
+    const raw = localStorage.getItem(TURVA_KEY);
+    if (!raw) return null;
+    const tila = JSON.parse(raw);
+    siirraVanhaMaailma(tila);
+    const game = Game.fromJSON(tila);
+    return game && game.phase !== 'over' ? game : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Loppukortin "Jatka viimeisestä tallennuksesta": false, jos turvatallennusta ei ole. */
+function jatkaTurvasta() {
+  const game = lataaTurva();
+  if (!game) return false;
+  if (winnerDialog.open) winnerDialog.close();
+  attach(game);
+  saveGame(game);
+  return true;
+}
+
 function clearSave() {
   try {
+    localStorage.removeItem(TURVA_KEY);
     localStorage.removeItem(SAVE_KEY);
   } catch {
     /* ei mitään tehtävissä */
@@ -494,7 +526,9 @@ function attach(game) {
    * Retkikuntaa tämä ei pura — se on laitteen eikä pelikerran asia.
    */
   nollaaSahke();
-  ui = new UI(game, { onNewGame: startGame, onChange: saveGame });
+  ui = new UI(game, {
+    onNewGame: startGame, onChange: saveGame, onJatkaTurvasta: jatkaTurvasta, turvaOlemassa: () => Boolean(lataaTurva()),
+  });
   ui.mount();
   // Kehityksen apuri konsolia varten. Vanha nimi jää rinnalle, koska
   // työkalut ja kuvakaappausskriptit käyttävät sitä.
@@ -2221,40 +2255,9 @@ function paivitaKehittajaValikko() {
 }
 
 /*
- * STRIIMIÄÄNEN VALINTA (omistaja 27.9.2026 klo 01.2x). Pudotusvalikko
- * xAI:n äänistä; tyhjä arvo = workerin oletus (ara). Valinta menee
- * js/puhe.js asetaStriimiaani-apurin kautta samaan laitekohtaiseen
- * persoonatauluun kuin työhuoneen säädöt, joten seuraava luenta
- * (Pulun striimi, lehti, merkinnät) lähtee uudella äänellä ilman
- * sivun latausta. Valikko ei saa sulkeutua valintaan, siksi
- * tapahtumat pysäytetään kuten liu'uissa.
+ * STRIIMIÄÄNEN VALINTA muutti kehittäjävalikosta nostokortin säätörattaaseen
+ * (omistaja 27.9.2026 klo 09.3x; js/lukija.js avaaKortinSaadot).
  */
-const striimiaaniValinta = document.getElementById('kehittaja-striimiaani');
-function naytaStriimiaani() {
-  if (!striimiaaniValinta) return;
-  striimiaaniValinta.value = striimiaani() ?? '';
-  striimiaaniValinta.title = 'Striimiluennan ääni (xAI Grok TTS). Oletus ara on omistajan '
-    + 'valinta kaikkeen striimiluentaan; muut äänet ovat kokeilua varten ja '
-    + 'tottelevat vain kehittäjäkoodilla. Tyhjennä palataksesi oletukseen.';
-}
-if (striimiaaniValinta) {
-  striimiaaniValinta.append(new Option(`${STRIIMIAANI_OLETUS} (oletus)`, ''));
-  for (const aani of STRIIMIAANET_XAI) {
-    if (aani !== STRIIMIAANI_OLETUS) striimiaaniValinta.append(new Option(aani, aani));
-  }
-  naytaStriimiaani();
-  striimiaaniValinta.addEventListener('change', (e) => {
-    e.stopPropagation();
-    const valittu = asetaStriimiaani(striimiaaniValinta.value || null);
-    naytaStriimiaani();
-    naytaKehittajaVihje(valittu
-      ? `Striimiääni: ${valittu} — seuraava luenta lähtee tällä äänellä`
-      : `Striimiääni: ${STRIIMIAANI_OLETUS} (oletus)`);
-  });
-  striimiaaniValinta.addEventListener('click', (e) => e.stopPropagation());
-  striimiaaniValinta.addEventListener('pointerdown', (e) => e.stopPropagation());
-  striimiaaniValinta.closest('label')?.addEventListener('click', (e) => e.stopPropagation());
-}
 
 /*
  * LUKIJAMITTARI (Fable 27.9.2026 klo 07.2x): viimeisimmän lukijaäänen palan

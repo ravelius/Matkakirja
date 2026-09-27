@@ -2280,7 +2280,7 @@ const FACT_WIDTH = 340; // pidettävä samana kuin .fact-card css:ssä
 const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 
 export class UI {
-  constructor(game, { onNewGame, onChange }) {
+  constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
     this.game = game;
     /*
      * Remontin M7a: kamera ja koordinaatit asuvat Kartta-oliossa.
@@ -2293,6 +2293,9 @@ export class UI {
      */
     this.kartta = new NukkuvaKartta(this);
     this.onNewGame = onNewGame;
+    // Rahojen loppuminen: loppukortin jatko turvatallennuksesta (js/main.js).
+    this.onJatkaTurvasta = onJatkaTurvasta;
+    this.turvaOlemassa = turvaOlemassa;
     this.onChange = onChange;
     this.botTimer = null;
     // Automaattiheiton ajastin ja viimeisin automaattiheiton paikka
@@ -10936,12 +10939,29 @@ export class UI {
       + '<path d="M7 13.6 10.3 16.4 13.7 13.6 17 16.4"/></svg>';
     this.turnPill.appendChild(laukku);
     if (game.phase === 'over') {
-      this.turnPill.appendChild(html('span', '', `${game.winner.name} voitti`));
+      this.turnPill.appendChild(html('span', '', game.winner ? `${game.winner.name} voitti` : 'Matka päättyi'));
       return;
     }
     // Yläpalkissa on kukkaro ja päiväkirjan päivämäärä. Sijainti, kokemus ja
     // tietoprosentti ovat passissa: kartta on tärkeämpi kuin mittaristo.
-    this.turnPill.appendChild(html('span', '', `£${game.player.money}`));
+    const kassa = html('span', 'kassa', `£${game.player.money}`);
+    /*
+     * PÄIVÄKULU JA RAHATTOMUUS (talouden vaihe 1, omistaja 27.9.2026):
+     * kassan vihje kertoo päiväkulun ja arvion; rahat lopussa kassa on
+     * punainen ja vieressä jäljellä olevat vuorokaudet.
+     */
+    const kulu = game.paivakulu?.(game.player);
+    if (kulu) {
+      const riittaa = game.kassaRiittaa(game.player);
+      kassa.title = `Päiväkulu ${kulu.yhteensa} £ (ruoka ${kulu.ruoka} £${kulu.majoitus ? `, majoitus ${kulu.majoitus} £` : ''})`
+        + (Number.isFinite(riittaa) ? ` — kassa riittää noin ${riittaa} päiväksi` : '');
+    }
+    const jaljella = game.rahattomuuttaJaljella?.(game.player);
+    kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
+    this.turnPill.appendChild(kassa);
+    if (jaljella !== null && jaljella !== undefined) {
+      this.turnPill.appendChild(html('span', 'rahaton-aika', `rahat loppu · ${jaljella} vrk`));
+    }
     // Mittari on päivämäärä, ei kello eikä palkki: aika on tarinaa, ei uhkaa,
     // joten se ei saa hälytysväriä eikä muutu punaiseksi ennätyksen jälkeen.
     const kello = game.clockLabel();
@@ -11360,9 +11380,17 @@ export class UI {
        * Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
        * pelin estetyissä napeissa (vrt. vertailunappi).
        */
-      const landBtn = this.iconButton('peukalo', 'Liftaus',
-        modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
-      if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
+      /*
+       * ODOTA (talouden vaihe 1): kun mihinkään ei pääse (saari ilman
+       * laivarahaa), liftauksen paikalla on Odota — vuoro kuluu ja
+       * kahden vuorokauden varoitus etenee (js/game.js travelModes).
+       */
+      const odotus = modes.includes('wait');
+      const landBtn = odotus
+        ? this.iconButton('saapas', 'Odota', 'primary')
+        : this.iconButton('peukalo', 'Liftaus', modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
+      if (odotus) landBtn.addEventListener('click', () => this.doAction(() => game.actionTravel('wait')));
+      else if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
       else this.estaNappi(landBtn, this.maaEste());
 
       const bussiBtn = this.iconButton('bussi', 'Bussilla');
@@ -19557,6 +19585,11 @@ export class UI {
   showWinner() {
     clearTimeout(this.botTimer);
     clearTimeout(this.automaattiheittoAjastin);
+    // Rahat loppuivat (yksinpeli): loppukortti voittoruudun paikalla.
+    if (!this.game.winner && this.game.matkaPaattyi) {
+      this.naytaMatkanLoppu();
+      return;
+    }
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
@@ -19573,6 +19606,40 @@ export class UI {
     };
     // Läpipeluu on saavutus vasta voitossa — ei vaellustilan välietapissa.
     natiiviSaavutus(NATIIVI_SAAVUTUKSET.lapipeluu);
+    this.paivitaJakonappi();
+    if (!this.winnerDialog.open) this.winnerDialog.showModal();
+  }
+
+  /**
+   * LOPPUKORTTI (talouden vaihe 1, omistaja 27.9.2026 klo 10.3x): rahat
+   * loppuivat eikä kassa noussut kahdessa vuorokaudessa. Sama dialogi kuin
+   * voitossa, mutta otsikko, teksti ja napit ovat matkan päättymisen:
+   * "Jatka viimeisestä tallennuksesta" (turvatallennus ennen rahojen
+   * loppumista, js/main.js) ja "Uusi peli".
+   */
+  naytaMatkanLoppu() {
+    const g = this.game;
+    const loppu = g.matkaPaattyi;
+    const p = g.players.find((x) => x.id === loppu.pelaaja) ?? g.player;
+    document.getElementById('winner-title').textContent = 'Matka päättyi';
+    const paikka = loppu.kaupunki ? `kaupungissa ${loppu.kaupunki}` : 'matkalla';
+    const maat = new Set((p.findMaa ?? []).filter(Boolean));
+    this.typeText(
+      document.getElementById('winner-text'),
+      `Rahat loppuivat ${paikka}, matkan ${loppu.paiva}. päivänä. `
+        + `Laukussa ${p.finds?.length ?? 0} löytöä${maat.size ? ` ${maat.size} maasta` : ''} ja ${p.stars ?? 0} unohdettua aarretta.`,
+      'winner',
+    );
+    const roamBtn = document.getElementById('winner-roam');
+    const nimi = roamBtn.querySelector('span:last-child');
+    const vanhaNimi = nimi?.textContent;
+    const turva = this.onJatkaTurvasta && this.turvaOlemassa?.();
+    roamBtn.hidden = !turva;
+    if (nimi) nimi.textContent = 'Jatka viimeisestä tallennuksesta';
+    roamBtn.onclick = () => {
+      if (nimi && vanhaNimi) nimi.textContent = vanhaNimi;
+      this.onJatkaTurvasta?.();
+    };
     this.paivitaJakonappi();
     if (!this.winnerDialog.open) this.winnerDialog.showModal();
   }
@@ -23786,7 +23853,12 @@ export class UI {
     for (const event of events) {
       sfx.play(EVENT_SOUND[event.kind] ?? 'turn');
       const box = this.buildToast(event);
-      if (event.tilanne === 'peli.vararikko.pankkiapu') {
+      if (event.tilanne === 'peli.vararikko.varoitus') {
+        ilmoitaLivianTunne(
+          { tunne: 'vakava', voimakkuus: 0.55 },
+          { lahde: 'peli', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'peli.vararikko.selvisi') {
         ilmoitaLivianTunne(
           { tunne: 'lammin', voimakkuus: 0.5 },
           { lahde: 'peli', tunnus: event.tilanne },

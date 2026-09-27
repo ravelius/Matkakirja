@@ -103,6 +103,29 @@ Kauppa ei myy aarteita, vihjeitä eikä kulkuneuvoja (ne ovat jo omissa hinnoiss
 | **Kultainen omena** | korvaa päivän ruoan (−8 £ säästö) | uusi esine; löytyy nostoista |
 | Pankin apu 100 £ | **pois** (korvautuu 2 vrk:n varoituksella) | ristiriidassa "rahat loppu → peli loppuu" -säännön kanssa |
 
+## 5b. Pelistreak (Fablen lisäys 27.9.2026 klo 11.2x)
+
+Palkinto siitä, että pelaaja **pelaa oikean elämän peräkkäisinä päivinä** (laitteen paikallinen päivämäärä).
+Pelipäivä lasketaan, kun pelaaja tekee pelissä vähintään yhden teon (liike, tehtävä, visa) sinä päivänä.
+Pelkkä avaaminen ei riitä.
+
+| Streak | Palkinto (ehdotus) |
+|---|---|
+| päivät 1–2 | 0 |
+| päivät 3–6 | 20 £ / päivä |
+| päivä 7 | 50 £ + viikkobonus 100 £ |
+| päivät 8+ | 30 £ / päivä, ja joka 7. päivä (14, 21, …) +100 £ |
+| väliin jäänyt päivä | laskuri nollautuu (kerran viikossa yksi "armopäivä"? → omistaja) |
+
+- **Maksu** päivän ensimmäisellä teolla. Lokiin tulee rivi "Kolmas päivä peräkkäin matkalla: +20 £", ja Pulu
+  kuittaa.
+- **Laskuri on tallennuksessa** (pelaajakohtainen: `streak: { paiva: 'YYYY-MM-DD', pituus }`). Uusi peli
+  aloittaa laskurin alusta. iCloud-synkka kuljettaa laskurin laitteelta toiselle.
+- **Vaikutus talouteen:** viikon streak tuo 20 × 4 + 50 + 100 = 230 £, eli noin 11 päiväkulua (20 £). Se ei
+  yksin rahoita matkaa, mutta tekee säännöllisestä pelaamisesta turvallisempaa.
+- **Web ja natiivi:** logiikka `js/game.js` (`kirjaaPelipaiva(nyt)`, päivämäärä annetaan ulkoa, jotta testit
+  ovat deterministisiä) ja `Peli/Matka.cs`. UI näyttää vain lokirivin ja toastin (ei kalenteria vaiheessa 1).
+
 ## 6. Tasapainolaskelma: tyypillinen 30 päivän Euroopan-matka
 
 **Menot**
@@ -216,3 +239,4 @@ aloituskassa). Ehdotan, ettei mannerlentoon pääse ennen kuin kassassa on lipun
 9. **Huvipuisto:** pääsy 30 £, panos 10 £, voitto 30–100 £, enintään 3 peliä per vierailu, sopiiko? Mitkä
    puistot ensimmäiseen erään?
 10. **Rahaton liikkuminen varoitusaikana:** pääseekö jalan tai liftaamalla naapurikaupunkiin ilmaiseksi?
+11. **Pelistreak (5b):** sopivatko luvut 20 / 50 + 100 / 30 £, ja saako viikossa yhden armopäivän?

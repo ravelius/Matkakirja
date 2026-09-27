@@ -34,7 +34,7 @@ import {
   ISO_AARRE_ARVO, MANNER_AARRE_ARVO, PIENI_AARRE_ARVO, onAarre, tokenPileTemplate,
 } from '../js/tokens.js';
 import {
-  Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, STRANDED_AID,
+  Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, RAHATTOMUUS_VUOROJA,
   DUEL_PRIZE, FIFTY_FIFTY_PRICE, HARD_BONUS, HINT_PRICE,
   QUIZ_SECONDS, SEA_FARE,
   XP_NEW_CITY, XP_NEW_BOARD, XP_HARD_ANSWER, XP_STAR,
@@ -648,7 +648,9 @@ test('saarelta pääsee vain laivalla ja vain jos rahat riittävät', () => {
   assert.equal(findMoves(board, game.player.pos, 3, { mode: 'land' }).size, 0);
 });
 
-test('jumiin jäänyt saa avustuksen vuoron alussa', () => {
+// --- talous: päiväkulut ja rahattomuus (omistaja 27.9.2026 klo 10.3x) ----
+
+test('pankin apua ei enää ole: rahaton pelaaja ei saa rahaa vuoron alussa', () => {
   const game = new Game({
     players: [
       { name: 'A', color: '#f00', start: 'tanger' },
@@ -660,7 +662,90 @@ test('jumiin jäänyt saa avustuksen vuoron alussa', () => {
   p.money = 0;
   p.pos = { type: 'city', city: 'sansibar' };
   game.beginTurn();
-  assert.equal(p.money, STRANDED_AID);
+  assert.equal(p.money, 0);
+});
+
+test('aloitusraha on 400 puntaa', () => {
+  assert.equal(START_MONEY, 400);
+});
+
+/** Yksinpeli maailmankartalla, pelaaja kaupungissa (vaellus). */
+function talousPeli(kaupunki) {
+  const game = new Game({ players: [{ name: 'Fogg', color: '#f00', start: kaupunki }], pack: packById('maailmankartta') });
+  game.phase = 'action';
+  game.player.pos = { type: 'city', city: kaupunki };
+  return game;
+}
+
+/** Kuluta yksi vuorokausi (4 vuoroa, TURN_HOURS 6) yksinpelissä. */
+function kuluVuorokausi(game) {
+  for (let i = 0; i < 4; i += 1) game.endTurn();
+}
+
+test('päiväkulu: ruoka + majoitus maan hintatasolla, matkalla vain ruoka', () => {
+  const pariisi = talousPeli('pariisi');
+  assert.equal(pariisi.hintataso('pariisi'), 'kallis');
+  assert.deepEqual(pariisi.paivakulu(), { ruoka: 13, majoitus: 19, yhteensa: 32, taso: 'kallis', matkalla: false });
+  const ateena = talousPeli('ateena');
+  assert.equal(ateena.paivakulu().yhteensa, 20, 'keskitaso 20 £');
+  const delhi = talousPeli('delhi');
+  if (delhi.board.cityById.has('delhi')) assert.equal(delhi.paivakulu().yhteensa, 12, 'edullinen 12 £');
+  const edge = [...ateena.board.edgeById.values()].find((e) => e.a === 'ateena' || e.b === 'ateena');
+  ateena.player.pos = { type: 'edge', edge: edge.id, step: 1, from: 'ateena' };
+  assert.equal(ateena.paivakulu().majoitus, 0);
+});
+
+test('vuorokauden vaihtuessa päiväkulu veloitetaan kerran', () => {
+  const game = talousPeli('ateena');
+  const ennen = game.player.money;
+  kuluVuorokausi(game);
+  assert.equal(game.dayCount(), 2);
+  assert.equal(game.player.money, ennen - 20);
+});
+
+test('rahat loppu: kaksi vuorokautta varoitusta, sitten matka päättyy', () => {
+  const game = talousPeli('ateena');
+  game.player.money = 5;
+  kuluVuorokausi(game);
+  const p = game.player;
+  assert.equal(p.money, 0);
+  assert.equal(p.rasti, 15);
+  assert.ok(p.rahaton, 'varoitus alkoi');
+  assert.equal(game.rahattomuuttaJaljella(), 2);
+  assert.equal(game.takeEvents().find((e) => e.kind === 'rahat')?.tilanne, 'peli.vararikko.varoitus');
+  kuluVuorokausi(game);
+  assert.notEqual(game.phase, 'over', 'yksi vuorokausi ei vielä riitä');
+  for (let i = 0; i < RAHATTOMUUS_VUOROJA && game.phase !== 'over'; i += 1) game.endTurn();
+  assert.equal(game.phase, 'over');
+  assert.equal(game.matkaPaattyi?.kaupunki, 'Ateena');
+  assert.equal(game.winner, null);
+});
+
+test('rahattomuus selviää, kun kassa kattaa velan ja päivän: velka maksetaan', () => {
+  const game = talousPeli('ateena');
+  game.player.money = 5;
+  kuluVuorokausi(game);
+  game.player.money = 100;
+  game.tarkistaRahattomuus(game.player);
+  assert.equal(game.player.rahaton, null);
+  assert.equal(game.player.rasti, 0);
+  assert.equal(game.player.money, 85);
+  assert.equal(game.takeEvents().at(-1)?.tilanne, 'peli.vararikko.selvisi');
+});
+
+test('moninpelissä rahaton putoaa ja viimeinen jäljellä oleva voittaa', () => {
+  const game = new Game({
+    players: [{ name: 'A', color: '#f00', start: 'ateena' }, { name: 'B', color: '#00f', start: 'ateena' }],
+    pack: packById('maailmankartta'), roaming: true,
+  });
+  game.phase = 'action';
+  for (const p of game.players) p.pos = { type: 'city', city: 'ateena' };
+  game.players[0].money = 0;
+  game.players[1].money = 5000;
+  for (let i = 0; i < 40 && game.phase !== 'over'; i += 1) game.endTurn();
+  assert.equal(game.players[0].pudonnut, true);
+  assert.equal(game.phase, 'over');
+  assert.equal(game.winner, game.players[1]);
 });
 
 test('laattojen vaikutukset: paikallisaarre, mantereen aarre, ryöstäjä ja pääaarre', () => {
@@ -1171,7 +1256,7 @@ test('rosvon kaksintaistelu: helpotus vie puolet ja piilottaa vaihtoehtoja', () 
   assert.equal(p.money, 100);
 });
 
-test('rosvon kaksintaistelu: väärä vastaus vie kaikki rahat', () => {
+test('rosvon kaksintaistelu: väärä vastaus vie puolet rahoista (omistaja 27.9.2026)', () => {
   const game = newGame(63);
   const p = game.player;
   p.pos = { type: 'city', city: 'timbuktu' };
@@ -1181,9 +1266,10 @@ test('rosvon kaksintaistelu: väärä vastaus vie kaikki rahat', () => {
   game.closeQuiz();
 
   const vaara = (game.duel.correct + 1) % 8;
+  const ennen = p.money;
   game.answerDuel(vaara);
   assert.equal(game.duel.right, false);
-  assert.equal(p.money, 0, 'rosvo vei kaikki');
+  assert.equal(p.money, ennen - Math.ceil(ennen / 2), 'rosvo vei puolet');
 
   game.closeDuel();
   assert.equal(game.current, 1);
@@ -5345,4 +5431,23 @@ test('näkymävahti reagoi myös korkeuden hyppyyn', () => {
   const alustus = ui.match(/vahdiNakymanKokoa\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
   assert.match(alustus, /nakymanKorkeus = this\.mittaaNakymanKorkeus\(\)/,
     'lähtökorkeutta ei oteta talteen vahtia käynnistettäessä');
+});
+
+test('Odota: kun mihinkään ei pääse, vuoron voi kuluttaa (ei automaattisesti)', () => {
+  const game = talousPeli('ateena');
+  // Kaupunki, josta lähtee vain meriteitä: ilman laivarahaa ainoa teko on odottaa.
+  const saari = game.pack.cities.find((c) => {
+    const reunat = game.board.adj.get(c.id).map((id) => game.board.edgeById.get(id));
+    return reunat.length && reunat.every((e) => e.type === 'sea') && !c.airport;
+  });
+  assert.ok(saari, 'laudalla on saari ilman lentokenttää');
+  game.player.pos = { type: 'city', city: saari.id };
+  game.player.money = 0;
+  game.tokens.delete(saari.id);
+  const tavat = game.travelModes();
+  assert.ok(tavat.includes('wait'), `tavat: ${tavat}`);
+  assert.equal(game.autoTravel, false);
+  const vuoro = game.turnCount;
+  assert.equal(game.actionTravel('wait').ok, true);
+  assert.equal(game.turnCount, vuoro + 1, 'yksinpelissä odotus kuluttaa vuoron');
 });
