@@ -13,7 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2307, teksti: 'Lukijaääni alkaa soida heti (progressiivinen)' },
+  { v: 2308, teksti: 'Pelin syvin taso 10: z9–z10 käyttöön (#3371)' },
+  { v: 2307, teksti: 'v2303: Pallon laattakerros — tukitaso vain jos… (#3380)' },
+  { v: 2306, teksti: 'Maalehti-QA: 5 maalehteä luettu, 2 pientä korja… (#3382)' },
+  { v: 2305, teksti: 'Erikoismalli-sisältötarkistus: 3 puuttuvaa nost… (#3381)' },
+  { v: 2304, teksti: 'Turistiopas erä 19: Ilha do Bananal, Boa Vista,… (#3206)' },
   { v: 2303, teksti: 'v2299: Pulun striimivastaus yhtenä puheenvuoron… (#3374)' },
   { v: 2302, teksti: 'Pallon versiovahti: sama pohja eri nimellä (#3376)' },
   { v: 2301, teksti: 'v2299: Lukijamittari — worker kertoo puhemootto… (#3372)' },
