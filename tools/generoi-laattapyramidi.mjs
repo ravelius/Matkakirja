@@ -2682,7 +2682,15 @@ if (DELTA) {
       + '(--data <sama aineistokansio kuin piirrolla>).');
     process.exit(1);
   }
-  const luokitin = await lataaLuokitin(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  // Järvet samoin asetuksin kuin piirto; --delta-lisajarvet = lähteen
+  // aineistokansio, jonka järvet (vanhoilla oletuksilla) ovat myös
+  // piirrettäviä laattoja (järvien vaihto, delta-luokitin.mjs).
+  const luokitin = await lataaLuokitin(dataKansio, {
+    harvennus: RANNIKON_HARVENNUS,
+    jarviPienin: JARVI_PIENIN,
+    jarviHarvennus: JARVI_HARVENNUS,
+    lisaJarvet: valitsin('delta-lisajarvet', null),
+  });
   DELTA_SUUNNITELMA = pyramidinDeltaSuunnitelma({
     luokitin,
     geometria: {
