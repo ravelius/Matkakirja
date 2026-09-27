@@ -556,6 +556,8 @@ const MODULES = [
   'js/livia-pilotti-cuet.js',
   'js/livia-puheleet.js',
   'js/livia-lehtireaktiot.js',
+  // Progressiivinen puhe: mp3-virran segmenttidekooderi (puhe.js tuo sen).
+  'js/puhevirta.js',
   'js/puhe.js',
   /*
    * js/isoisan-valokuvat.js OLI TÄSSÄ. Ainoa niputettu tuoja oli
