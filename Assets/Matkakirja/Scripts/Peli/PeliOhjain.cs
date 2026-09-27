@@ -901,6 +901,10 @@ namespace Matkakirja.Natiivi
             ("matkakirja-verho-taysi", 'i'), ("matkakirja-mustan-katto", 'i'),
             ("matkakirja-avaus-esilataus", 'i'), ("matkakirja-avaus-malli", 's'),
             (IhmisenMatkaKerros.TekstitysAvain, 'i'), (LinssiOhjain.KyllaisyysAvain, 'f'),
+            // Natiivisepän mittauslippujen avaimet (Saapumisvartija.LippuAvain, Ruudunpaivitys.Liike120Avain,
+            // LaattaPortit.YksiPorttiAvain, KarttaKerrokset saapumislaatat, NostotKartalla aihemerkit).
+            ("matkakirja-saapumisvartija", 'i'), ("matkakirja-liike-120", 's'), ("matkakirja-yksi-portti", 'i'),
+            ("matkakirja-saapumislaatat", 'i'), ("matkakirja-aihemerkit", 'i'),
         };
 
         /// <summary>Uusi peli -tyhjennys tehtiin: pelin muistit ovat poissa, aloitusnäkymä seuraa (löydös 177).</summary>

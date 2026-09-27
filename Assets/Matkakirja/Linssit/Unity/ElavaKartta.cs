@@ -445,6 +445,8 @@ namespace Matkakirja.Natiivi
             ElavatHetket.Kytke(ohjain);
             // Elävät elementit kaupungeissa (kokeilu 1: Zaandamin myllyt, elävällä kerroksella).
             ElavatElementit.Kytke(ohjain);
+            // Erikoismallien liikkuvat osat (Mont-Saint-Michel, Stonehenge, Colosseum …; Mallinsepän rajapinta).
+            ErikoismalliElavat.Kytke(ohjain);
             while (PeliOhjain.Instanssi == null) yield return null;
             var po = PeliOhjain.Instanssi;
             // Saapumisajon alku käynnistää (ajoitus osuu kameraan); maitse tultaessa ajoa ei ehkä tule, joten

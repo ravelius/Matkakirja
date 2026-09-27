@@ -952,15 +952,24 @@
     letter-spacing: 5.93px; /* web 0.8px */
 }
 
-/* Striimiääni (kehittäjä, web #kehittaja-striimiaani): kytkinrivi, jonka tilan paikalla on valitsin. */
+/* Striimiääni (kehittäjä, web #kehittaja-striimiaani): kuvake ja nimi ylärivillä, valitsin koko rivin levyisenä
+   alla (iPhonen paneeliin ei mahdu nimi ja "ara (oletus)" rinnakkain). */
 .mk-kytkinrivi--valinta {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.mk-kytkinrivi--valinta > .mk-kytkinrivi__nimi {
+    flex-shrink: 0;
 }
 
 .mk-kytkinrivi__valinta {
-    flex-shrink: 0;
-    margin: 0 0 0 8px;
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin: 6px 0 0 0;
 }
 
 .mk-kytkinrivi__valinta > .unity-base-popup-field__input {

@@ -1304,6 +1304,8 @@ namespace Matkakirja.Natiivi
                     if (!AineistoValmis && rekisteri.Kaikki.All(l => l.Tiedot.Id != osat[1])) StartCoroutine(ValitseKunValmis(osat[1]));
                     else rekisteri.Valitse(osat[1]);
                 }
+                else if (osat[0] == "erikois")
+                    ErikoismalliElavat.Testi(osat.Length > 1 ? string.Join(" ", osat, 1, osat.Length - 1) : "tila", this);
                 else if (osat[0] == "elava")
                     ElavaKartta.Komento(osat, this);
                 else if (osat[0] == "iss")

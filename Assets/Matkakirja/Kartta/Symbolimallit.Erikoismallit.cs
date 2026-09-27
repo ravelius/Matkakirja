@@ -64,6 +64,12 @@ namespace Matkakirja
             /// 1,5 × kategoriasymboli (≈ 60 pt), löydös 175c: enintään 40 pt; oletus 1 = 175c, Mallinseppä asettaa mallikohtaisesti.
             /// </summary>
             public float KokoKerroin = 1f;
+            /// <summary>
+            /// Kaupungin maamerkki (Mallinseppä 27.9., Fablen vaihtoehto A): kaupunkimerkin id (esim. "rooma"). Malli piirretään
+            /// kaupunkipisteen vasemmalle puolelle lähizoomissa (kerroin ≥ 2,5, kallistus kuten tasolla 1), vaikka nostoa ei
+            /// olisi pääkartalla; jos saman avaimen nosto on näkyvissä, se voittaa. null = tavallinen noston erikoismalli.
+            /// </summary>
+            public string Kaupunki;
         }
 
         /// <summary>Yksi näkyvä liikkuva osa kartalla (Linssisepän animoijalle).</summary>
@@ -109,6 +115,50 @@ namespace Matkakirja
         static readonly bool akropolis = Rekisteroi("akropolis", new Erikoismalli { Runko = Akropolis });
         static readonly bool delfoi = Rekisteroi("delfoi", new Erikoismalli { Runko = Delfoi });
         static readonly bool meteora = Rekisteroi("meteora", new Erikoismalli { Runko = Meteora });
+
+        // ---- Kaupunkien maamerkit (Erikoismalli.Kaupunki) ----
+
+        /// <summary>Väli kaupunkipisteen ja maamerkin reunan välillä (pt).</summary>
+        const float MaamerkkiValiPt = 8f;
+        const string MaamerkkiEtuliite = "maamerkki:";
+        static bool OnMaamerkki(string id) => id != null && id.StartsWith(MaamerkkiEtuliite, StringComparison.Ordinal);
+
+        /// <summary>Maamerkkien näennäiset nostot (luodaan kerran, kun kaupungin paikka tunnetaan).</summary>
+        readonly Dictionary<string, NostoKerros.Nosto> maamerkit = new Dictionary<string, NostoKerros.Nosto>(StringComparer.Ordinal);
+        List<(string avain, string id, string kaupunki)> maamerkkiLista;
+
+        void PaivitaMaamerkit(NostoKerros nk)
+        {
+            if (maamerkkiLista == null)
+            {
+                maamerkkiLista = new List<(string, string, string)>();
+                foreach (var p in Mallit)
+                    if (!string.IsNullOrEmpty(p.Value.Kaupunki)) maamerkkiLista.Add((p.Key, MaamerkkiEtuliite + p.Key, p.Value.Kaupunki));
+            }
+            if (maamerkkiLista.Count == 0 || nk.merkit == null) return;
+            foreach (var (avain, id, kaupunki) in maamerkkiLista)
+            {
+                if (ErikoismalliPiirretty(avain)) continue;
+                if (!maamerkit.TryGetValue(id, out var s))
+                {
+                    if (!nk.merkit.Paikka(kaupunki, out var la, out var lo)) continue;
+                    s = new NostoKerros.Nosto { Id = id, Tunnus = avain, Nimi = avain, Taso = 1, OmaLat = la, OmaLon = lo, Lat = la, Lon = lo, Loydetty = true };
+                    maamerkit[id] = s;
+                }
+                var tieto = TietoNostolle(s);
+                if (!KulmaSallii(tieto)) continue;
+                nyt.Add(id);
+                Paivita(tieto, s);
+            }
+        }
+
+        /// <summary>Piirretäänkö saman avaimen erikoismalli tällä kehyksellä jo oikean noston kautta.</summary>
+        bool ErikoismalliPiirretty(string avain)
+        {
+            foreach (var id in nyt)
+                if (!OnMaamerkki(id) && tiedot.TryGetValue(id, out var t) && t.Erikois == avain) return true;
+            return false;
+        }
 
         static readonly List<LiikkuvaOsa> liikkuvat = new List<LiikkuvaOsa>();
         /// <summary>Kartalle luodut liikkuvat osat (kaikki, myös piilossa olevat: katso Nakyy).</summary>
