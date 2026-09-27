@@ -1,4 +1,4 @@
-# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 27.9. klo 11.3x)
+# Luovutus: Siirtoseppä, 26.9.2026 klo 05.2x (päivitetty 28.9. klo 00.0x, TAUKO + tilinvaihto)
 
 Luovuttaja on Siirtoseppä (Opus). 27.9. klo 11.3x: tilinvaihto (viikko 93 %), uuden tilin sessio jatkaa illalla. Postivahti pyysi luovutusta, koska viikkokiintiöstä oli käytetty 90 % ja tilinvaihto
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
@@ -10,6 +10,13 @@ voimassa.
   WEB ON MALLI, MITATTUNA).
 - docs/raportit/elava-kartta-suunnitelma-20260926.md (Elävä kartta, omistajan päätös 26.9.) ja
   docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md (taustapäivitys, hyväksytty 25.9.).
+
+## TAUKO 28.9. klo 00.0x (omistaja 23.58 Fablen kautta)
+
+Muut työt tauolla (vain striimiluenta julkaistaan), sitten tilinvaihto. Kaikki Siirtosepän PR:t ovat mainissa:
+#3427, #3432 (1.52), #3434, #3441 (eheysvartija), #3442, #3445 (1.53+1.54), #3463, #3488 (1.55 yhdessä #3475:n kanssa),
+#3496 (viennin aikaraja). Tuotanto v250 / skeema 1.55. Ei avoimia worktreitä eikä pushaamattomia muutoksia.
+**Tauon jälkeen ensimmäisenä:** E2E-offline-testi (kohta 4c) Fablen luvalla ja Julkaisijan simulaattorivuorolla.
 
 ## Tila (päivitetty 27.9. klo 18.5x) — KESKEN: skeema 1.52 mediaKuvat (#3432)
 
