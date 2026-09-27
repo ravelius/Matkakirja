@@ -424,7 +424,7 @@ export const ASSET_KANSIOT = {
   aarteet: 'assets/aarteet',
   nostot: 'assets/kartat/nostot',
   ihmeet: 'assets/kartat/ihmeet',
-  // Maakuntien ja maakuntasalaisuuksien pikkukuvat (löydökset 115 ja 158, Fable 26.9.2026).
+  // Maakuntien pikkukuvat (löydökset 115 ja 158, Fable 26.9.2026).
   maakunnat: 'assets/kartat/maakunnat',
 };
 

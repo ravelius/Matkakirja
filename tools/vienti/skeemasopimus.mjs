@@ -35,7 +35,8 @@ const VAKIOAVAIMET = new Set(['$skeema', 'nimi', 'lahde', 'kuvaus', 'viittaukset
  *   '<kokoelma>/<avain>'        kokoelman juuressa on avain (esim. maakuntarajat/kaaret)
  *   'moduuli:<polku>'          moduuli on manifestissa (esim. moduuli:js/tyohuone-pelit.js)
  *   'manifest.<avain>' | 'offline.<polku.pisteillä>' | 'offline.maat.*.<avain>' | 'media.<avain>'
- *   '!…'                       ei saa olla (poistot)
+ *   '!…'                       ei saa olla (poistot). Poisto vanhentaa saman ehdon aiemmilta versioilta, ja
+ *                              '!kokoelma:<nimi>' myös kaikki kokoelman kenttäehdot (skeema 1.55).
  */
 export const VAATIMUKSET = {
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
@@ -64,6 +65,8 @@ export const VAATIMUKSET = {
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
+  // Omistaja 27.9.2026 klo 20.0x: ei salaisuuksia maakuntiin (Kreikan salaisuudet hahmotelmanostoina, web #3475).
+  '1.55': ['!kokoelma:maakuntasalaisuudet', '!maakuntarajat.salaisuus'],
   '1.54': ['offline.lahteet.mediaKuvat.korvaaMedian'],
   '1.53': ['offline.lahteet.maasto.kaupunkiMaasto'],
   '1.52': ['offline.lahteet.mediaKuvat'],
@@ -163,9 +166,14 @@ export function tarkistaSopimus(tiedostot, skeemaversio, { kuvat = lueKuvat() } 
   const virheet = [];
   const l = lukija(tiedostot);
   if (!VAATIMUKSET[skeemaversio]) virheet.push(`skeemasopimus: versiolla ${skeemaversio} ei ole riviä VAATIMUKSISSA (tools/vienti/skeemasopimus.mjs)`);
+  // Voimassa olevat poistot: ne vanhentavat saman ehdon (ja poistetun kokoelman kenttäehdot) aiemmista versioista.
+  const poistot = new Set(Object.entries(VAATIMUKSET).filter(([v]) => vertaa(v, skeemaversio) <= 0)
+    .flatMap(([, ehdot]) => ehdot.filter((e) => e.startsWith('!')).map((e) => e.slice(1))));
+  const vanhentunut = (e) => poistot.has(e) || poistot.has(`kokoelma:${e.split(/[.#/]/)[0]}`);
   for (const [v, ehdot] of Object.entries(VAATIMUKSET)) {
     if (vertaa(v, skeemaversio) > 0) continue;
     for (const e of ehdot) {
+      if (!e.startsWith('!') && vanhentunut(e)) continue;
       const kielto = e.startsWith('!');
       if (tayttyy(kielto ? e.slice(1) : e, l) === kielto) {
         virheet.push(`skeemasopimus: ${skeemaversio} vaatii ${v}:n ${kielto ? 'poiston' : 'kentän'} ${e}`);
