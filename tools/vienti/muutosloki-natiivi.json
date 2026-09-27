@@ -2,6 +2,106 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.29 (202609270957)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 29b: kuten build 29, mutta synteesipuhe soi taas laitteella (striimaus pois päältä). Koko maailma auki, nostot täytenä heti, meren koristeet ja uudet pienoismallit Matterhorn, Hohensalzburg ja Bruggen kellotorni."
+  },
+  {
+   "versio": "1.0.29 (202609270926)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 29: koko maailma auki ja nostot täytenä heti, meren koristeet (kymmenen lajia, kuten valas ja delfiinit) ja uudet pienoismallit Matterhorn, Hohensalzburg ja Bruggen kellotorni. Nostokortin luennassa ratas nopeudelle ja äänelle sekä jatko samasta kohdasta."
+  },
+  {
+   "versio": "1.0.28 (202609270611)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 28: uusia yksityiskohtaisia pienoismalleja, kuten Mont-Saint-Michel, Stonehenge, Colosseum, Kinderdijkin tuulimyllyt, Brandenburgin portti ja Segovian akvedukti, ja kaikki kartan symbolit muuttuivat pienoismalleiksi entisten kuvakkeiden sijaan."
+  },
+  {
+   "versio": "1.0.27 (202609262244)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 27: Lontoon maailmanpyörä, Venetsian gondolit ja Thamesin höyrylaiva uusina eloisina kohteina, kartan pienoismallit näkyvät nyt myös suoraan ylhäältä katsottuna, uusi peli tyhjentää vanhat tiedot kunnolla, ja maakuntapaneeli siistitty kapeammaksi."
+  },
+  {
+   "versio": "1.0.26 (202609261921)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 26: Pariisiin ilmapallo ja aidosti liikkuva avaruusasema-linssi, maiden liput pienenevät ja piiloutuvat kaukaa katsottuna, kartan lipputangot ja pienoismallit ilmestyvät oikeaan aikaan, ja pöllö väistää sormen kosketuksen kartalla."
+  },
+  {
+   "versio": "1.0.25 (202609261542)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 25: useampi kartan kohde näkyy nyt pienoismallina myös vähemmän tärkeissä paikoissa, majakan ja Meteoran kalliomuodostelmien ulkonäköä hienosäädetty, ja käynnistyksen tekstivalmistelu entistä sulavampi."
+  },
+  {
+   "versio": "1.0.24 (202609261451)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 24: eloisat maisemakohteet asettuvat nyt oikein maaston mukaan ja saivat lisää valoja, fontit valmistellaan etukäteen niin ettei tekstien ilmestyminen nykäise kuvaa, ja käynnistysverho pysyy näkyvissä kunnes peli on todella valmis."
+  },
+  {
+   "versio": "1.0.23 (202609261424)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 23: lisää eloisia maisemakohteita, kuten Tivolin karuselli, eloisat kohteet lepäävät ja liikkuvat nyt vaihtelevasti todentuntuisemmin, näkyvä osa kartasta latautuu ensin, ja kaupunkimerkit seisovat oikein maan pinnalla."
+  },
+  {
+   "versio": "1.0.22 (202609261331)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 22: ensimmäinen eloisa maisemakohde, Zaandamin tuulimyllyt liikkuvine siipineen, maailmanhypyn ja käynnistyksen lataukset nopeutuivat, kartan nimet väistävät käyttöliittymän osia, ja peli toimii paremmin ilman verkkoa tallennetun sisällön ansiosta."
+  },
+  {
+   "versio": "1.0.21 (202609261142)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 21: löytämättömät kohteet näkyvät nyt musteen jälkinä koon mukaan, ensimmäiset pienoismallikohteet kartalla (muun muassa Delfoi ja Meteora), liput heiluvat oikeana kankaana, iPadin vaakanäkymä parannettu, ja musiikkiin maanosien omia sävelmiä."
+  },
+  {
+   "versio": "1.0.20 (202609260759)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 20: kuljettu reitti näkyy kartalla tummanpunaisena viivana, linnut, sadekuurot ja juna erottuvat nyt paremmin, maakunnan valinta ja etäisyyden mukainen usva uusiksi, ja peliin ensimmäinen musiikkivaihe lennon ja saapumisen sävelmineen."
+  },
+  {
+   "versio": "1.0.20 (202609260541)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 20: kuljettu reitti näkyy kartalla tummanpunaisena viivana, linnut, sadekuurot ja juna erottuvat nyt paremmin, maakunnan valinta ja etäisyyden mukainen usva uusiksi, ja peliin ensimmäinen musiikkivaihe lennon ja saapumisen sävelmineen."
+  },
+  {
+   "versio": "1.0.19 (202609260528)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 19: saapuminen uuteen maahan paljastaa kartan sumun ja herättää maakunnan, kaupunkilehdet ja linssien sisältö latautuvat vasta tarvittaessa eli käynnistys nopeutui, Ihmisen matka -linssiin toisto-ohjaimet, ja yölaatat sekä maiden rajaviivat mukana."
+  },
+  {
+   "versio": "1.0.18 (202609260152)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 18: nostokuvat avautuvat kokoruutuun ilman kehystä, liput liehuvat tuulessa, radiosta voi esikuunnella seuraavan aseman, Ihmisen matka -linssi sai uuden jakson äänimaisemineen, ja sisältöpaketit päivittyvät nyt taustalla pelin aikana."
+  },
+  {
+   "versio": "1.0.17 (202609260103)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 17: maiden ja maakuntien rajaviivat siistimmäksi, uudet nostomerkit kartalla, Ihmisen matka -linssiin toisto-ohjaimet ja hitaasti liikkuvat kuvat, pitkät maannimet rivittyvät oikein, ja linsseille omat äänitehosteet, kuten keksintölinssin kilahdus."
+  },
+  {
+   "versio": "1.0.16 (202609251814)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 16: peli säästää nyt akkua ja pysyy viileämpänä, kun kartta ei liiku eikä ruutu vaadi päivitystä, Ihmisen matka -linssiin uusia hetkiä (aamunkoitto, lumi, soihtujen liekehdintä, äänimaisemat), ja aloituslento kestää nyt 12 sekuntia."
+  },
+  {
+   "versio": "1.0.15 (202609251449)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 15: kaikkien maiden maakuntatiedot mukana, kohdekartan kokoruutunäkymä ja nostojen kuvien suurennos uusiksi, isoisän luentakuvat oikean kokoisina, mustan verhon Ohita-nappi toimii aina, ja karttojen sumuefekti päivitetty uudelta pohjakartalta."
+  },
+  {
+   "versio": "1.0.14 (202609251332)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 14: etusivulla uusi lentoanimaatio, aloituslennon aikana ei ylä-palkkia eikä pöllöä, maakuntalista näyttää vain oman maan maakunnat, matkakirjan ilmoitusväri korjattu, avoin linssi ei enää sumene kerronnan kuvista, ja avaruuslinssin pallo tummuu käytön ajaksi."
+  },
+  {
+   "versio": "1.0.13 (202609251020)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 13: uusi aloitusruutu, maiden rajat kartalla, kaupunkien nimet ja yöllä syttyvät valot, matkustustavan ja liikkumisen käyttöliittymä uusiksi, kohdekartan tyylit ja pöllön keskustelu webin mukaisiksi, ja isopuhelinten yläpalkki paremmin sovitettu."
+  },
+  {
+   "versio": "1.0.12 (202609250125)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 12: saapumisnäkymä ja kaupunkien nimet aiempaa siistimmin, radion sulkeutuminen pehmeämmin, peli soi nyt ääntä oikein (aiempi äänetön virhe korjattu), rannikkoviivat tarkemmin ja käyttöliittymän tekstit paremmin asemoituna."
+  },
+  {
    "versio": "1.0.11 (202609241848)",
    "paiva": "2026-09-24",
    "teksti": "Build 11: lennon uusi kamerareitti (kone läheltä, loittonus, kierto kohteen ympäri), iPhonen matalampi yläpalkki, Liiku piilossa kerronnan ajan, iPadin lehti leveämpi, radiolinssin korjaukset (kaikki maat näkyvissä), leveä nostokortti, kartan nimet uudella fontilla."

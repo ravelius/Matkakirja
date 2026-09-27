@@ -34,7 +34,7 @@ import {
   ISO_AARRE_ARVO, MANNER_AARRE_ARVO, PIENI_AARRE_ARVO, onAarre, tokenPileTemplate,
 } from '../js/tokens.js';
 import {
-  Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, RAHATTOMUUS_VUOROJA,
+  Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, RAHATTOMUUS_VUOROJA, streakPalkkio, streakOtsikko,
   DUEL_PRIZE, FIFTY_FIFTY_PRICE, HARD_BONUS, HINT_PRICE,
   QUIZ_SECONDS, SEA_FARE,
   XP_NEW_CITY, XP_NEW_BOARD, XP_HARD_ANSWER, XP_STAR,
@@ -5450,4 +5450,56 @@ test('Odota: kun mihinkään ei pääse, vuoron voi kuluttaa (ei automaattisesti
   const vuoro = game.turnCount;
   assert.equal(game.actionTravel('wait').ok, true);
   assert.equal(game.turnCount, vuoro + 1, 'yksinpelissä odotus kuluttaa vuoron');
+});
+
+test('pelistreak: peräkkäiset pelipäivät palkitaan, väliin jäänyt päivä nollaa', () => {
+  const game = talousPeli('ateena');
+  const p = game.player;
+  const alku = p.money;
+  const paivat = ['2026-09-27', '2026-09-28', '2026-09-29', '2026-09-30', '2026-10-01', '2026-10-02', '2026-10-03', '2026-10-04'];
+  const palkkiot = paivat.map((d) => game.kirjaaPelipaiva(d)?.palkkio);
+  assert.deepEqual(palkkiot, [0, 0, 20, 20, 20, 20, 150, 30]);
+  assert.equal(p.money, alku + 260);
+  assert.equal(game.kirjaaPelipaiva('2026-10-04'), null, 'sama päivä ei palkitse uudelleen');
+  assert.deepEqual(game.kirjaaPelipaiva('2026-10-07'), { pituus: 1, palkkio: 0 }, 'kaksi väliin jäänyttä päivää nollaa');
+  assert.deepEqual([13, 14, 21].map(streakPalkkio), [30, 130, 130]);
+  const toastit = game.takeEvents().filter((e) => e.tilanne === 'peli.streak');
+  assert.equal(toastit.length, 6);
+  assert.equal(toastit[0].text, 'Kolmas päivä peräkkäin matkalla');
+  assert.equal(toastit[4].sub, '+50 £ ja viikkobonus +100 £');
+  assert.equal(streakOtsikko(14), '14. päivä peräkkäin matkalla');
+});
+
+test('pelistreak: botti, pudonnut ja päättynyt peli eivät kirjaa, laskuri kulkee tallennuksessa', () => {
+  const game = talousPeli('ateena');
+  const p = game.player;
+  game.kirjaaPelipaiva('2026-09-27');
+  game.kirjaaPelipaiva('2026-09-28');
+  const ladattu = Game.fromJSON(JSON.parse(JSON.stringify(game)));
+  assert.deepEqual(ladattu.player.streak, { paiva: '2026-09-28', pituus: 2 });
+  assert.equal(ladattu.kirjaaPelipaiva('2026-09-29').palkkio, 20);
+  assert.equal(game.kirjaaPelipaiva('2026-09-29', { ...p, isBot: true }), null);
+  game.phase = 'over';
+  assert.equal(game.kirjaaPelipaiva('2026-09-29'), null);
+});
+
+test('pelistreak: armopäivä — yksi väliin jäänyt päivä 7 päivän ikkunassa ei katkaise, toinen nollaa', () => {
+  const game = talousPeli('ateena');
+  const kirjaa = (d) => game.kirjaaPelipaiva(d);
+  kirjaa('2026-09-01'); kirjaa('2026-09-02'); kirjaa('2026-09-03');
+  // 4.9. väliin: armopäivä, putki jatkuu 5.9. pituudella 4 (armopäivä ei kasvata pituutta).
+  assert.deepEqual(kirjaa('2026-09-05'), { pituus: 4, palkkio: 20 });
+  assert.equal(game.player.streak.armo, '2026-09-04');
+  kirjaa('2026-09-06'); kirjaa('2026-09-07');
+  // 8.9. väliin: toinen väliin jäänyt päivä saman 7 päivän ikkunan sisällä (4.9.–10.9.) → nollaa.
+  assert.deepEqual(kirjaa('2026-09-09'), { pituus: 1, palkkio: 0 });
+  // Kaksi peräkkäistä väliin jäänyttä päivää nollaa aina.
+  kirjaa('2026-09-10');
+  assert.deepEqual(kirjaa('2026-09-13'), { pituus: 1, palkkio: 0 });
+  // Ikkunan jälkeen uusi armopäivä käy: 13., 14., (15. väliin) 16. → ok; 23. väliin (8 pv myöhemmin) → ok.
+  kirjaa('2026-09-14');
+  assert.equal(kirjaa('2026-09-16').pituus, 3);
+  for (const d of ['2026-09-17', '2026-09-18', '2026-09-19', '2026-09-20', '2026-09-21', '2026-09-22']) kirjaa(d);
+  assert.equal(kirjaa('2026-09-24').pituus, 10, 'armopäivä 23.9. on 8 päivää edellisestä (15.9.)');
+  assert.equal(game.player.streak.armo, '2026-09-23');
 });
