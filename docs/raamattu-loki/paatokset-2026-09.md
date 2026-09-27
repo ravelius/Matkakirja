@@ -8415,3 +8415,7 @@ Pelikoodari: epaonnistunut laatta menetti href:n mutta jai tila.laatat-karttaan 
 ## TF 1.0.33 TESTFLIGHTISSA (202609272009 = BUILD 33 edf03bfd); #3426 MAINISSA (#3515 v2346); #3516 JA #3517 ODOTTAVAT TILINVAIHTOA (27.9.2026 klo 23.59)
 
 Julkaisija: TF 1.0.33 = CFBundleVersion 202609272009 (ajo 36348081044). #3426 (5 historian hetkeä) mergetty sisältöjunana #3515 v2346 ennen taukoa, testit 4495/0. #3513 (puhetagit web, v2349) CI:ssä → merge + Pöllö + xAI-tarkistus. Pelikoodari: laattavian oikea juurisyy js/pallolaatat.js (pudonnut kerros merkittiin valmiiksi, virhelaattaa ei haettu uudelleen), korjaus #3516 c92c61193, pallolaatat 378/378; ihme-nappi pois #3517 v2348. Molemmat odottavat tilinvaihdon jälkeen.
+
+## STRIIMILUENTA WEBISSA TUOTANNOSSA (#3513 v2347, POLLO xai 200); TF 1.0.34 ODOTTAA BUILD 34:A (28.9.2026 klo 00.13)
+
+Julkaisija 00.02: #3513 mergetty, APP_VERSION 2026-09-21.2347 tuotannossa, js/puhetagit.js 200, Pollon julkaisu 36350208524 ok, puhemoottori xai. Tagien kuuluvuutta ei ole todennettu kuuntelemalla. 1.0.34 muutoslokirivi #3518 mainissa. Linssisepan astro-selain c5b073cd: galleria jatkuu naapurikohteeseen, nimipilleri kirkastuu 1,2 s kohteen vaihtuessa (Fablen hyvaksynta, koodataan tauon jalkeen).
