@@ -8391,3 +8391,11 @@ Omistaja 23.2x–23.4x: 1) era 6 kaikki kolme (era6-ehdotus-20260927.md 66232903
 ## FABLEN OMA NOLLAUS 70 %:SSA (LUOVUTUS -20260927-c) (27.9.2026 klo 23.39)
 
 Fable 23.4x: konteksti 70 % (Postivahti 23.36) → luovutus docs/raportit/viesti-fable-luovutus-20260927-c.md ja aloitusviesti; Natiiviseppa (84 %) ja Sisaltokirjuri (79 %) kasketty nollaukseen tehtaviensa jalkeen. TF 1.0.33 viennissa, yopoltto kaynnissa, viikko kaikki mallit 90 %.
+
+## OMISTAJA: HISTORIAN HETKET KAIKKIIN EUROOPAN MAIHIN, 1–2 PER PUUTTUVA MAA (CODEX, SISALTOKIRJURI TARKISTAA) (27.9.2026 klo 23.48)
+
+Omistaja 23.4x (kortti): historian hetkia lisataan niihin Euroopan maihin, joista ne puuttuvat (nyt 40 hetkea 14 maassa + 5 junassa #3426), 1–2 per maa. Codex kirjoittaa postilaatikon kautta samaan tapaan kuin #3426; Sisaltokirjuri valitsee aiheet ja tarkistaa ennen sisaltojunaa (ristiintarkistus maalehti + kohdekartta). Tilaus Sisaltokirjurin uuden kontekstin aloitusviestissa yhdessa ihmeiden (14 maata) kanssa.
+
+## OMISTAJA: ALOITUSLENTO V2 — KONE PALJON PIENEMPI KAUKAA KUVATTUNA, LASKEUTUMINEN KAUEMPAA NIIN ETTEI TOKSAHDYS NAY (27.9.2026 klo 23.55)
+
+Omistaja 23.5x (kortti, sanatarkasti): "kone pitää näkyä paljon pienempänä kun se kuvataan kaukaa. laskeutuessa kamera pitää olla sen verran kauempana että töksö laskeutuminen ei näy kun kone näkyy ihan pienenä." Lisaksi Fablen havaitsemat heikot kohdat korjataan: ohituksen usva (kamera korkeammalle) ja saapumisen verkkolataus (ennakkolataus). Natiivisepan seuraava konteksti tekee v3:n; yksi kaannos + yksi ajo julkaisulipulla polton aikana sallittu (aloituslento on omistajan tarkein asia), video Fablelle → omistajalle. Merge 1.0.34-junaan vasta omistajan OK:n jalkeen.
