@@ -420,7 +420,7 @@ namespace Matkakirja.Natiivi
             float kiintea = pilleri.resolvedStyle.paddingLeft + pilleri.resolvedStyle.paddingRight
                 + pilleri.resolvedStyle.borderLeftWidth + pilleri.resolvedStyle.borderRightWidth
                 + kello.resolvedStyle.marginLeft
-                + (ikoni != null ? ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight : 0f);
+                + (ikoni != null && ikoni.style.display != DisplayStyle.None ? ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight : 0f);
             float teksti = raha.MeasureTextSize(raha.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
                 + kello.MeasureTextSize(kello.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
             if (rahaton.style.display == DisplayStyle.Flex)
@@ -655,6 +655,9 @@ namespace Matkakirja.Natiivi
             // iPhonen pilleri on Dynamic Islandin vieressä (~104 pt): "0£ 2 vrk 1/80" (punaisena), muualla webin teksti.
             bool kapea = kelluvaNyt == true || matalaNyt == true;
             rahaton.text = !varoitus ? "" : kapea ? rahatonVrk + " vrk" : "rahat loppu · " + rahatonVrk + " vrk";
+            // iPhonella laukkuikoni väistyy varoituksen ajaksi (~22 pt), jotta päivä "1/80" mahtuu saaren viereen.
+            var laukku = pilleri.Q(className: "mk-ikoni");
+            if (laukku != null) laukku.style.display = varoitus && kapea ? DisplayStyle.None : DisplayStyle.Flex;
             rahaton.style.display = varoitus ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
