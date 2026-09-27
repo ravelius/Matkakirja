@@ -7839,3 +7839,7 @@ Omistaja kysyi 07.4x kestaako Pulun aloitus pidempaan jos ensimmainen era on pid
 ## MEREN MERGE-PYYNTO 0126ce8b (HOYRYLAIVA + VALAS, HATAKYTKIN); ERA 2 JUNASSA 1eff4f76 (27.9.2026 klo 07.53)
 
 Linssiseppa 07.5x: linssiseppa/meri-tuotanto 0126ce8b (tuotantorunko + v3 hoyrylaiva ja valas, loput 8 lajia lisaavana committina; hatakytkin elava elementit meri 0), merge-pyynto Natiivisepalle; era 2 erikoismallit jo junassa 1eff4f76. Fable: mukaan 1.0.28:aan jos kaannos ei ole alkanut, muuten 1.0.29.
+
+## ASTRONAUTIN KAMERA: TILAUS TAYNNA (ERA 7 PR 3375, 102 UUTTA, 189 KOHDETTA); LINSSIRAPORTTI (27.9.2026 klo 07.56)
+
+Sisaltokirjuri 07.5x: era 7 PR #3375 (13 kohdetta: Niagara, Gronlannin vuonot, Manaus, Cosiguina, Jamesinlahti, Krimin lagunit, Valakia yolla, Montreal, Englannin kanaali yolla, Tanska, Geneven jarvi, Pico, Prinssi Edwardin saari) → omistajan 26.9. tilaus ~100 uutta taynna (erat 2–7 = 102). Koko linssi kun PR:t mainissa: 189 kohdetta / 229 kuvaa / 378 kysymysta; mantereittain P-Amerikka 43, Afrikka 33, Aasia 39, Eurooppa 33, E-Amerikka 22, Oseania 16; kaikki NASA images-api public domain (210 ISS, 18 STS), kuvat katsottu kasin. Etelamanner 0 ja korkea arktinen puuttuvat ISS:n ratakaltevuuden (51,6°) takia — ei aukko vaan fysiikka. Seuraava era: turistiopassarja jatkuu #3206:n jalkeen.
