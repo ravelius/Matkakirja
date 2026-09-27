@@ -8095,3 +8095,7 @@ Omistaja 11.3x tarkennus hyvaksymislistaan: fps-vaatimus ei ole kiintea 30 — s
 ## LINSSISEPPA 11.2x: MATTERHORN V2, LAHITASO KAIKISSA 9 ERIKOISMALLISSA + 14 SYMBOLISSA, MERGE-PYYNTO mallinseppa/lahitaso be353929 (27.9.2026 klo 11.21)
 
 Linssiseppa 11.2x: Matterhorn v2 (hoikempi koukkuhuippu, peitto ~½, korkeus 1,35 → 1,0; laite 2d04e085; nimion vaisto Natiivisepalla kesken); lahitaso kaikissa 9 erikoismallissa ja 14 symbolissa, laitteella kytkeytyy (pienissa maissa vasta kynnyskorjauksen jalkeen). Merge-pyynto Natiivisepalle mallinseppa/lahitaso be353929 (sisaltaa erikoismallit3: Kinderdijk v3, Brugge, Hohensalzburg, Matterhorn v2 + lahitasot). Saapuminen pysyvin kerroksin abfb54e5 kaannetty (2d04e085), kuva odottaa simulaattoria.
+
+## OMISTAJA 11.3x: SEURAAVA SIIRTOPROMPTI POIKKEUKSELLISESTI NIIN, ETTA PAATOIMITTAJA KAYTTAA OPUS-MALLIA (27.9.2026 klo 11.22)
+
+Omistaja 11.3x: seuraava siirtoprompti (tilinvaihto viikkokiintion 97 %:ssa, tai Fablen seuraava nollaus) tehdaan poikkeuksellisesti niin, etta paatoimittaja (Fablen rooli) ajetaan Opus-mallilla (effort max), ei Fable-mallilla. Kirjataan siirtopromptiin ja aloitusviestiin: sessio 'FABLE' luodaan Opus max -tilassa; Raamatun saannot ja lokikaytanto samat. Poikkeus on kertaluonteinen, ellei omistaja jatka sita.
