@@ -121,7 +121,9 @@ namespace Matkakirja
             long tavut = 0;
             if (d.TryGetValue("tavuja", out var t) && t is Dictionary<string, object> td)
             {
-                if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
+                // Levykoko (purettu; maasto tulee gzip-siirtona ja tallentuu purettuna) ennen siirtokokoa (Siirtosepän skeema 1.52).
+                if (td.TryGetValue("levy", out var lv) && lv is double lvd) tavut = (long)lvd;
+                else if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
                 if (KaupunkiRasteri.Paalla && td.TryGetValue("kaupunkiRasteri", out var kr) && kr is double krd) tavut += (long)krd;
                 if (td.TryGetValue("mediaKuvat", out var mk) && mk is double mkd) tavut += (long)mkd;
             }
