@@ -449,8 +449,27 @@ namespace Matkakirja.Peli
             if (p == null || p.Pudonnut || Tila.Vaihe == Vaihe.Ohi || !Streak.Kelpaa(paivays)) return null;
             var ennen = p.Streak;
             if (ennen != null && ennen.Paiva == paivays) return null;
-            int pituus = ennen != null && Streak.Kelpaa(ennen.Paiva) && Streak.PaivaaLisaa(ennen.Paiva, 1) == paivays ? ennen.Pituus + 1 : 1;
-            p.Streak = new StreakTila { Paiva = paivays, Pituus = pituus };
+            int pituus = 1;
+            string armo = null;
+            if (ennen != null && Streak.Kelpaa(ennen.Paiva))
+            {
+                if (Streak.PaivaaLisaa(ennen.Paiva, 1) == paivays)
+                {
+                    pituus = ennen.Pituus + 1;
+                    armo = ennen.Armo;
+                }
+                else if (Streak.PaivaaLisaa(ennen.Paiva, 2) == paivays)
+                {
+                    // Yksi väliin jäänyt päivä: armopäivä, jos edellinen on vähintään ikkunan päässä (web kirjaaPelipaiva).
+                    string valissa = Streak.PaivaaLisaa(ennen.Paiva, 1);
+                    if (!Streak.Kelpaa(ennen.Armo) || string.CompareOrdinal(Streak.PaivaaLisaa(ennen.Armo, Streak.Armoikkuna), valissa) <= 0)
+                    {
+                        pituus = ennen.Pituus + 1;
+                        armo = valissa;
+                    }
+                }
+            }
+            p.Streak = new StreakTila { Paiva = paivays, Pituus = pituus, Armo = armo };
             int palkkio = Streak.Palkkio(pituus);
             if (palkkio > 0)
             {

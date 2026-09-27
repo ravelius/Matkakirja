@@ -34,7 +34,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(alku + 260, p.Raha);
             Oleta.Tosi(m.KirjaaPelipaiva("2026-10-04") == null, "sama päivä ei palkitse uudelleen");
             Oleta.Sama(alku + 260, p.Raha);
-            Oleta.Sama(((int, int)?)(1, 0), m.KirjaaPelipaiva("2026-10-06"), "väliin jäänyt päivä nollaa");
+            Oleta.Sama(((int, int)?)(1, 0), m.KirjaaPelipaiva("2026-10-07"), "kaksi väliin jäänyttä päivää nollaa");
             Oleta.Sama("30,130,130", string.Join(",", new[] { 13, 14, 21 }.Select(Streak.Palkkio)));
             Oleta.Sama(6, toastit.Count, "päivät 1–2 eivät ilmoita, eikä nollattu päivä");
             Oleta.Sama("Kolmas päivä peräkkäin matkalla", toastit[0].Otsikko);
@@ -126,6 +126,29 @@ namespace Matkakirja.Peli.Testit
             var rikki = vanha.Tallenna().Replace("\"paiva\":\"2026-09-27\"", "\"paiva\":\"eilen\"");
             Oleta.Tosi(rikki.Contains("\"streak\":{\"paiva\":\"eilen\""), rikki);
             Oleta.Tosi(Matka.Lataa(m.Verkko, rikki).Tila.Pelaaja.Streak == null, "kelvoton päivä ohitetaan");
+        }
+
+        [Testi] static void ArmopaivaYksiIkkunassaToinenNollaa()
+        {
+            // Web: 'pelistreak: armopäivä — yksi väliin jäänyt päivä 7 päivän ikkunassa ei katkaise, toinen nollaa'.
+            var m = Uusi();
+            (int, int)? K(string d) => m.KirjaaPelipaiva(d);
+            K("2026-09-01"); K("2026-09-02"); K("2026-09-03");
+            Oleta.Sama(((int, int)?)(4, 20), K("2026-09-05"), "4.9. armopäivä, pituus ei kasva sillä");
+            Oleta.Sama("2026-09-04", m.Tila.Pelaaja.Streak.Armo);
+            K("2026-09-06"); K("2026-09-07");
+            Oleta.Sama(((int, int)?)(1, 0), K("2026-09-09"), "toinen väliin jäänyt päivä samassa ikkunassa nollaa");
+            K("2026-09-10");
+            Oleta.Sama(((int, int)?)(1, 0), K("2026-09-13"), "kaksi peräkkäistä väliin jäänyttä nollaa");
+            K("2026-09-14");
+            Oleta.Sama(3, K("2026-09-16")?.Item1 ?? 0);
+            foreach (var d in new[] { "2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20", "2026-09-21", "2026-09-22" }) K(d);
+            Oleta.Sama(10, K("2026-09-24")?.Item1 ?? 0, "armopäivä 23.9. on 8 päivää edellisestä");
+            Oleta.Sama("2026-09-23", m.Tila.Pelaaja.Streak.Armo);
+            // Armo kulkee tallennuksessa.
+            var ladattu = Matka.Lataa(m.Verkko, m.Tallenna());
+            Oleta.Sama("2026-09-23", ladattu.Tila.Pelaaja.Streak.Armo);
+            Oleta.Sama(10, ladattu.Tila.Pelaaja.Streak.Pituus);
         }
     }
 }

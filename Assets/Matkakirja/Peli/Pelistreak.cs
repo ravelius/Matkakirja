@@ -4,7 +4,9 @@
 // pelipäivät (laitteen paikallinen päivä, päivän ensimmäinen onnistunut teko).
 //
 // Päivät 1–2: 0, 3–6: 20 £/pv, 7.: 50 + viikkobonus 100 £, 8+: 30 £/pv ja joka
-// 7. päivä (14, 21, …) +100 £. Väliin jäänyt päivä nollaa laskurin (ei armopäivää).
+// 7. päivä (14, 21, …) +100 £. ARMOPÄIVÄ (omistaja 27.9.2026 klo 12.4x): yksi väliin
+// jäänyt päivä 7 päivän liukuvassa ikkunassa ei katkaise putkea, mutta siitä ei tule
+// palkkiota eikä se kasvata pituutta; toinen väliin jäänyt päivä saman ikkunan sisällä nollaa.
 //
 // Päivämäärä tulee aina ulkoa (PeliOhjain: DateTime.Now, testit: kiinteä päivä), joten
 // pelilogiikka ja kultaiset jäljet pysyvät deterministisinä: ilman kutsua streak ei laukea.
@@ -21,6 +23,8 @@ namespace Matkakirja.Peli
         public string Paiva;
         /// <summary>Peräkkäisten pelipäivien määrä (1 = putki alkoi tänään).</summary>
         public int Pituus;
+        /// <summary>Viimeisin käytetty armopäivä yyyy-MM-dd tai null (web p.streak.armo).</summary>
+        public string Armo;
     }
 
     /// <summary>Päiväpalkkio ja viikkobonus erikseen (web streakErittely: lokirivi ja toast kertovat molemmat).</summary>
@@ -35,6 +39,9 @@ namespace Matkakirja.Peli
     /// <summary>Pelistreakin puhtaat säännöt (web streakErittely, streakPalkkio, streakOtsikko, paivaaLisaa).</summary>
     public static class Streak
     {
+        /// <summary>Web STREAK_ARMOIKKUNA: kahden armopäivän vähimmäisväli päivinä.</summary>
+        public const int Armoikkuna = 7;
+
         /// <summary>Web streakErittely(pituus).</summary>
         public static StreakErittely Erittely(int pituus)
         {

@@ -238,7 +238,8 @@ namespace Matkakirja.Peli
                 // Pelistreak (versio 7): vain alkanut putki (web JSON.stringify jättää puuttuvan p.streakin pois).
                 if (p.Streak != null)
                     Kentta(sb, "streak", "{\"paiva\":" + Teksti(p.Streak.Paiva)
-                        + ",\"pituus\":" + p.Streak.Pituus.ToString(CultureInfo.InvariantCulture) + "}");
+                        + ",\"pituus\":" + p.Streak.Pituus.ToString(CultureInfo.InvariantCulture)
+                        + (p.Streak.Armo != null ? ",\"armo\":" + Teksti(p.Streak.Armo) : "") + "}");
                 sb.Append('}');
             }
             sb.Append(']');
@@ -337,7 +338,11 @@ namespace Matkakirja.Peli
                 p.Pudonnut = MiniJson.Totuus(pd, "pudonnut");
                 // Pelistreak (versio 7); vanhassa tallennuksessa putkea ei ole (seuraava pelipäivä aloittaa 1:stä).
                 if (MiniJson.Kentta(pd, "streak") is Dictionary<string, object> so && MiniJson.Teksti(so, "paiva") is string sp && Streak.Kelpaa(sp))
-                    p.Streak = new StreakTila { Paiva = sp, Pituus = Math.Max(1, (int)(MiniJson.Luku(so, "pituus") ?? 1)) };
+                    p.Streak = new StreakTila
+                    {
+                        Paiva = sp, Pituus = Math.Max(1, (int)(MiniJson.Luku(so, "pituus") ?? 1)),
+                        Armo = MiniJson.Teksti(so, "armo") is string sa && Streak.Kelpaa(sa) ? sa : null,
+                    };
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
