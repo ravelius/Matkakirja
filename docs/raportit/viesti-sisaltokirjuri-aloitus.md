@@ -1,56 +1,43 @@
-# Sisältökirjurin aloitusviesti (27.9.2026 klo ~20.3x, kontekstin nollaus)
+# Sisältökirjurin aloitusviesti (27.9.2026 klo ~23.4x, kontekstin nollaus)
 
-Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri
-(haara sisalto-pelikatalogi-20260927). Ensimmäinen komento:
-`git fetch origin main`. Lue CLAUDE.md, docs/roolitus.md ja
-docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-i.md KOKONAAN
+Olet Sisältökirjuri (Sonnet), checkout `/Users/Shared/Claude/Matkakirja-sisaltokirjuri`
+(haara `sisalto-pelikatalogi-20260927`). Ensimmäinen komento:
+`git fetch origin main`. Lue `CLAUDE.md`, `docs/roolitus.md` ja
+`docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-j.md` KOKONAAN
 ennen töiden aloitusta.
 
-TILA lyhyesti: Kaksi rinnakkaista ohjelmaa käynnissä, molemmat Fablen
-27.9. tilauksia.
+TILA lyhyesti: 14 kokonaan puuttuvan maan sarja käynnissä (pitkä-
+luonnehdinta + Pulu). ROU (42 aluetta) valmis, PR #3514 avoinna.
+UKR (25 aluetta) kesken — kaksi tutkimusagenttia käynnissä väärällä
+ohjeistuksella, ks. luovutuksen kohta 3.
 
-**A) Euroopan faktatarkistus** — PR #3473 (draft), 17 korjausta
-tehty (Pariisi/Lontoo/Berliini/Madrid/Wien/Ateena; Rooma 0 virhettä).
-Istanbul ei aloitettu.
+**TÄRKEIN OPPI**: `pitka`-kenttä kirjoitetaan Livian äänellä, NYKY-
+AIKAAN — 1873-kytkös mainitaan yhtenä virkkeenä VAIN kun se on alueen
+identiteetin ydinasia (esim. Transilvania kuului Unkarille), EI koko
+tekstin runkona ("isoisä olisi nähnyt..."). Tämä virhe tehtiin ensin
+CZE/HRV/ROU:lle; ROU korjattiin (PR #3514), CZE/HRV ovat yhä väärällä
+tyylillä mainissa — kysy Fablelta halutaanko korjauskierros.
 
-**B) Maakuntien pulu** (Livian kysymykset) — PR #3472 (draft), NLD+CHE
-(41 aluetta) valmis. Jonossa: CZE, HUN, PRT, SWE, NOR, DNK, FIN, IRL,
-BEL, HRV, + loput.
+JONO: UKR (kesken) → BGR → SRB → BIH → ISL → ALB → MKD → MNE → CYP
+(myös kuva puuttuu) → MLT → LUX → MDA → BLR, sitten loput 21 maata
+(vain Pulu). Menetelmä ja worktree-ohjeet luovutuksen kohdassa 5.
 
-JONO (järjestyksessä):
-
-1. **KIIREELLISIN**: aja koko testisarja molemmissa worktreeissä
-   (`node --test tests/*.test.mjs` sekä
-   `wt/sisaltokirjuri-faktatarkistus-e1`:ssä että
-   `wt/sisaltokirjuri-maakunta-pulu-e1`:ssä) — kumpaakaan ei ehditty
-   ajaa loppuun tässä sessiossa. Faktatarkistus-haarassa oli 1 FAIL
-   aiemmassa ajossa (13 korjauksen jälkeen, ennen viimeisiä 4) —
-   selvitä mikä testi ja korjaa. Kun molemmat vihreitä, poista PR:ien
-   draft-tila.
-2. Faktatarkistus jatkuu: Istanbul, sitten Fablen ohjeen mukaan
-   seuraavat (ehdotus: Tukholma/Bukarest/Pietari/Lissabon/Sofia/
-   Helsinki — tuoretta, tarkistamatonta sisältöä Eurooppa-erä 7-9:stä).
-3. Maakunta-pulu jatkuu prioriteettijärjestyksessä: CZE seuraavaksi
-   (myös pitkä-luonnehdinta puuttuu CZE:ltä, tee molemmat samassa
-   erässä), sitten HUN/PRT/SWE/NOR/DNK/FIN/IRL/BEL/HRV.
-
-Täydet perustelut, menetelmät ja tarkat löydöslistat:
-docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-i.md ja
-docs/raportit/sisaltokirjuri-faktatarkistus-eurooppa-20260927.md.
+Faktatarkistus: Pariisi/Lontoo/Rooma/Berliini/Wien/Madrid/Ateena/
+Istanbul kaikki valmiit ja mergetty. Fable mainitsi "Wien/Madrid/
+Ateena seuraavaksi" — tämä on todennäköisesti ristiriitainen vanha
+tieto, tarkista Fablelta ennen uudelleentarkistusta (luovutuksen
+kohta 4). Todennäköinen jatko: Tukholma/Bukarest/Pietari/Lissabon/
+Sofia/Helsinki.
 
 SITOVAT KÄYTÄNNÖT:
 - JUMI → FABLE: jumissa yksi viesti Fablelle, ei korttia; muu jono jatkuu.
-- VIESTIRAJA: SendMessage ~10/vuoro; varakanava mcp send_message session id:llä.
+- VIESTIRAJA: SendMessage ~10/vuoro.
 - Kohderyhmä 13+, EI lastenpeli.
-- Agentit vain Sonnet/Opus, enintään 3-4 rinnan. HUOM: agentti voi
-  itse käynnistää alaagentteja (nested) ilman lupaa — tämä nostaa
-  todellista rinnakkaisuutta yli rajan huomaamatta. Kirjaa agenttien
-  löydökset TIEDOSTOON heti (älä jätä pelkkään kontekstiin) —
-  pitkät handback-viestit täyttävät kontekstin nopeasti kun useita
-  tulee peräkkäin.
-- Älä mergaa checkout-haaraa (sisalto-pelikatalogi-20260927) äläkä
-  poista sitä --delete-branch-lipulla.
+- Agentit vain Sonnet/Opus. Kirjaa agenttien löydökset TIEDOSTOON heti.
+- Älä mergaa checkout-haaraa (`sisalto-pelikatalogi-20260927`) äläkä
+  poista sitä `--delete-branch`-lipulla.
 - VAIN EUROOPPA on maantieteellinen rajaus.
 - Main liikkuu useita committeja tunnissa: fetch+rebase juuri ennen
-  pushia. js/muutokset.js-konfliktit ovat rutiinia (versionumerorivit)
-  — oma rivi ylimmäksi, numero main+1, main.js+sw.js samaan lukuun.
+  pushia. `js/muutokset.js`-konfliktit ovat rutiinia (versionumero-
+  rivit) — oma rivi ylimmäksi, numero main+1, main.js+sw.js samaan
+  lukuun.
