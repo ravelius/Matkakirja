@@ -80,3 +80,23 @@ hyväksynnän jälkeen.
 - **Avoin omistajalle:** purjeet rampissa (seepia ja kaiverrus; kameran puoli on varjossa, koska valo tulee luoteesta) vai
   vaaleampi kangas korostuspolulla (harmaantuu varjossa). Suositus ramppi.
 - **Jatko:** merge-pyyntö Natiivisepälle Fablen OK:lla, sitten loput 7 lajia samalla kaavalla.
+
+## 7. Tila 27.9. klo 18.2x: erä 2 laitteella, merge-pyyntö lähetetty
+
+- **Erä 1** hyväksytty ja junassa (BUILD 30 = 1.0.30 78565bff).
+- **Proto** `linssiseppa/meri-laatu-2` abb862d2 (erä 1:n päällä), käännös f339eba1 (master + haara): kalastusvene v4,
+  lautta v6, majakkalaiva v8, merihirviö v8, delfiinit v19, lokit v7 ja jäävuori v14 (Opus-agentit, harness
+  proto-3d/tyokalut/meri-laatu/), ElavatElementit (lapsiryhmien piirtojärjestys) ja MeriKoristeet.
+- **Laitteella (iPhone-simulaattori):** kolmioita lajia kohden (kaukotaso suluissa) kalastusvene 2 719 (1 566), lautta 2 821
+  (2 421), majakkalaiva 2 673 (1 473), merihirviö 2 709 (2 569), delfiinit 2 871, lokit 2 732 ja jäävuori 2 780 (1 728). CPU
+  0,005–0,036 ms lajia kohden, 0 poikkeusta. merge-tree juna/b13 fc4578ea ja master: ei konflikteja.
+- **Kuvaparit:** proto-3d/lokit/mallinseppa-toimitus-20260927/meri-laatu-<laji>-ennen-jalkeen.png (ennen 1.0.30 78565bff |
+  jälkeen abb862d2), raakakuvat proto-3d/lokit/linssiseppa-meri-laatu-e/ (käsin annetut rajauskohdat korjaa.txt).
+  Kolme jälkeen-ruutua ylhäältä (merihirviö, delfiinit, lokit) täydentyy, kun simulaattori vapautuu.
+- **Kuvausopit:** `nayta` ei aloita käynnissä olevaa näytöstä alusta, joten lyhyen näytöksen lajit (merihirviö 10 s,
+  delfiinit 7 s) sukeltavat ennen kuvia. Täydennysajo `ajo-meri-taydennys.sh` odottaa lajin näytöksen tavoitekohtaan
+  (tila-rivin "näytös k s/P s" tai "tauko … alkaa N s"; tauolla `nayta`). Hitaasti liikkuva laji jää mediaanitaustaan, joten
+  kokoaja ottaa rajauskohdan käsin (`KORJAA`). Puuttuva ruutu merkitään näkyvästi (`PUUTTUU`).
+- **Avoin omistajalle (Fablen kautta):** majakkalaivan kupu punaiseksi? rungon nimi UTGRUND? merihirviön roiskepallojen
+  ääriviivan ohennus?
+- **Merge-pyyntö** Natiivisepälle 1.0.31:een lähetetty 27.9. klo 18.2x.
