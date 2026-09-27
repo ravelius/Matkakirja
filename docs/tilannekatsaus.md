@@ -21,7 +21,7 @@ lisätoiminnoista.
 
 Seuraavaksi:
 - iOS-sovelluksen julkaisu App Storeen
-- pelin sisäinen talous ja ensimmäiset minipelit
+- ensimmäisten minipelien toteutus
 - Euroopan viimeistely: kaikki kaupungit ja maat samalle sisältötasolle ennen muita maanosia
 
 ## Kartta ja maailma
@@ -98,6 +98,6 @@ Uusi testiversio on viime viikkoina julkaistu sisäiseen testaukseen lähes päi
 testataan laitteilla ennen jakelua.
 
 Seuraavaksi:
-- pelin talous ja uusi aloitusnäkymä seuraavaan testiversioon
+- viimeisimmässä testiversiossa pelin talous, uusi aloitusnäkymä ja uusi lento; seuraavaksi viimeistely
 - suorituskyvyn viimeistely iPadille
 - App Store -julkaisun valmistelu
