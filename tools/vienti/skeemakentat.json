@@ -32,10 +32,11 @@
   "1.51": "aa44f1467fd52867",
   "1.52": "aa44f1467fd52867",
   "1.53": "aa44f1467fd52867",
-  "1.54": "aa44f1467fd52867"
+  "1.54": "aa44f1467fd52867",
+  "1.55": "f05f6f25a4435881"
  },
  "uusin": {
-  "skeemaversio": "1.54",
+  "skeemaversio": "1.55",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -439,29 +440,7 @@
     "iso3",
     "nimi",
     "renkaat",
-    "salaisuus",
     "vari"
-   ],
-   "maakuntasalaisuudet": [
-    "aihe",
-    "id",
-    "kategoria",
-    "kokoluokka",
-    "laji",
-    "lat",
-    "lon",
-    "lyhyt",
-    "maa",
-    "maakunta",
-    "maakuntaNimi",
-    "nappi",
-    "nimi",
-    "nimio",
-    "pikkukuva",
-    "pikkukuvaLahde",
-    "teksti",
-    "tunnus",
-    "viite"
    ],
    "maalehdet": [
     "aiheet",
