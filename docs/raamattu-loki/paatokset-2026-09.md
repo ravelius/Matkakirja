@@ -8055,3 +8055,7 @@ Omistaja 10.2x 'Poista vanhat': Julkaisija poistaa vanhat pyramidisarjat (09-21,
 ## PYRAMIDISARJOJEN POISTO: JULKAISIJA KOKOAA LISTAN JA KOMENNON, OMISTAJA AJAA (PYSYVA POISTO ROOLEILTA KIELLETTY) (27.9.2026 klo 10.22)
 
 Julkaisija 10.2x: kysyy Karttasepalta ja Siirtosepalta viitatut sarjat, kokoaa vapaiden sarjojen listan ja valmiin poistokomennon; itse poiston tekee omistaja (pysyva datan poisto kielletty rooleilta). Vanhat varmuuskopioluettelot lakkaavat toimimasta poistettujen sarjojen osalta; 0732-varmuuskopio (2026-09-26-pohja) sailyy.
+
+## POISTOLISTA OMISTAJALLE: 09-21/22/22c/23a (13,5 Gt) VAPAAT, 09-25 HARKINTA (2,61 Gt); 26s JA 26 SAILYVAT (27.9.2026 klo 10.24)
+
+Julkaisija 10.2x (Karttaseppa + Siirtoseppa vahvistivat): vapaat 2026-09-21-pohja 2,66, -22-pohja 2,72, -22c-pohja 2,92, -23a-pohja 5,19 Gt (yht. 13,5 Gt); harkinta -25-pohja 2,61 Gt (koe/2026-09-25 + varmuuskopio 0926-0856); pidetaan -26s-pohja (tuotanto) ja -26-pohja (palautukset 0927-0732/0947, delta-lahde). Poisto omistajan tehtava (R2-konsoli tai wrangler), lista ja komento annettu 10.2x.
