@@ -287,7 +287,7 @@ namespace Matkakirja.Natiivi
             ehdotusPoletti++;
             Alku(false);
             Viesti("mk-chat__pelaaja", kysymys);
-            var kupla = Viesti("mk-chat__livia mk-chat__valmisvastaus", v.Vastaus);
+            var kupla = Viesti("mk-chat__livia mk-chat__valmisvastaus", Lukijaaani.PoistaPuhetagit(v.Vastaus));
             kupla.enableRichText = false;
             if (v.Lahteet.Count > 0)
             {
@@ -414,6 +414,9 @@ namespace Matkakirja.Natiivi
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
                 .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti(HaeAineisto(kysymys))))
                 .Append(",\"kehys\":").Append(PeliApu.Json(Kehys(kysymys, jatko)))
+                // Äänitagit (omistaja 27.9. klo 23.1x): tämä versio siivoaa ne näytöltä (Nakyva), joten worker saa liittää
+                // kehotteeseen tagisäännön; vanhat versiot eivät lähetä kenttää eivätkä saa tageja (web PR #3513).
+                .Append(",\"puhetagit\":1")
                 .Append(",\"historia\":[");
             int alku = Mathf.Max(0, historia.Count - HistoriaKatto);
             for (int i = alku; i < historia.Count; i++)
@@ -710,7 +713,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Wiki-linkit [[…]] ja putkimerkintä pois näkyvästä tekstistä.</summary>
-        static string Nakyva(string vastaus) => Regex.Replace(vastaus ?? "", @"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", "$1");
+        static string Nakyva(string vastaus) => Lukijaaani.PoistaPuhetagit(Puhuttava(vastaus));
+
+        /// <summary>
+        /// Puheeseen menevä vastaus: käsitelinkit tekstiksi, mutta xAI-puhetagit ([sigh], [laugh], &lt;fast&gt;…&lt;/fast&gt;,
+        /// omistaja 27.9. klo 23.1x) jäävät — ne kuuluvat vain äänessä, näytölle Nakyva poistaa ne.
+        /// </summary>
+        static string Puhuttava(string vastaus) => Regex.Replace(vastaus ?? "", @"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", "$1");
 
         IEnumerator Pyyda(string kysymys, bool jatko, bool paikkakysymys, bool joLennetty)
         {
@@ -768,7 +777,7 @@ namespace Matkakirja.Natiivi
             if (!t.Uusittava) Matkakirjalinkit();
             UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
-            if (AaniPaalla) Puhe.Hae()?.Lue(nakyva, "pollo");
+            if (AaniPaalla) Puhe.Hae()?.Lue(Puhuttava(t.Vastaus), "pollo");
             if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
             if (!t.Uusittava) PoimintaRivi(kysymys, nakyva);
             if (t.Uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
@@ -937,7 +946,7 @@ namespace Matkakirja.Natiivi
             /// <summary>Web poistaKasiteMerkinnat: valmiit [[a|b]] → b, ja keskeneräinen [[… lopussa piiloon.</summary>
             static string PoistaKesken(string t)
             {
-                t = Nakyva(t);
+                t = Lukijaaani.PoistaKeskenTagi(Nakyva(t));
                 int kesken = t.LastIndexOf("[[", StringComparison.Ordinal);
                 return kesken >= 0 && t.IndexOf("]]", kesken, StringComparison.Ordinal) < 0 ? t.Substring(0, kesken) : t;
             }
