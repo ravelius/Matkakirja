@@ -19,8 +19,9 @@
 // etäisyysjärjestyksessä ja luovutus pelin pysyviin kerroksiin, 1,6 s — ei huntua, kynäviivoja, nostojen pudotusta, nimeä,
 // merkkejä eikä auringon liikettä. Käynnistyy PeliOhjain.MatkaPerilla-tapahtumasta, kun pelaaja saapuu maahan ensimmäistä
 // kertaa; kohdemaan maakunnat ja kolmiot valmistellaan jo lennon noustessa (ESILATAUSPOLITIIKKA). Kamera on pelin
-// saapumisajo (Natiiviseppä). Pallon puoli ElavaPallo.PysyvatKerrokset-koukulla (MaaKartta/NostoKerros.Saapuminen),
-// asettamattomana paikkamerkki. Napautus ohittaa luovutukseen, ja lopuksi oma täyttö häipyy pelin pysyviin kerroksiin.
+// saapumisajo (Natiiviseppä). Fable 27.9.2026 klo 10.3x: pelin pysyvät kerrokset (täyttö, rajat ja nostot) jäävät näkyviin
+// koko saapumisen ajan, myös odotuksessa; oma täyttö soi niiden päälle. Napautus ohittaa luovutukseen, ja lopuksi oma täyttö
+// häipyy. (ElavaPallo.PysyvatKerrokset-koukku jää videolle ja myöhempään käyttöön.)
 // Maakunnan herätys (ElavaHerays, Ydin/Elava/Herays) poistettiin samalla kokonaan.
 //
 // KOMENNOT (Documents/linssi-komento.txt): "elava kreikka [alku s] [nopeus]" soittaa kohtauksen, "elava kuva <s>"
@@ -832,10 +833,10 @@ namespace Matkakirja.Natiivi
         {
             if (saapuminen)
             {
-                // Pelin pysyvät täyttö, rajat ja merkit piiloon saapumisen ajaksi (Natiivisepän koukku); UI, kamera ja kartan
-                // valo ennallaan (saapuminen ei 27.9.2026 alkaen liikuta aurinkoa).
-                PysyvatKerrokset(false);
-                pysyvatPiilossa = true;
+                // Fable 27.9.2026 klo 10.3x (omistajan "nostot heti"): pelin pysyvät kerrokset (täyttö, rajat ja nostot) jäävät
+                // näkyviin koko saapumisen ajan, myös luennan ja kortin odotuksessa (ei paljasta maata), ja oma täyttö soi
+                // niiden päälle. UI, kamera ja kartan valo ennallaan (saapuminen ei 27.9.2026 alkaen liikuta aurinkoa).
+                pysyvatPiilossa = false;
                 tilaTalteen = true;
                 return;
             }
