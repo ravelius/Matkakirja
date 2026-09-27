@@ -2,20 +2,20 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 03:31 EEST
+**Päivitetty:** 2026-09-27 03:43 EEST
 
 ## 1) Sessiot
 
-5 h **43 %** (nollautui 00:00, seur. 05:00 EEST), viikko (all models) 65 %, viikko (Fable) 40 %. Ei uusia poikkeamia. Useimmat roolit idle jo tunteja (viim. aktiviteetti 00:0x–00:3x) — ei ongelma, ei vaadi toimenpiteitä.
+5 h **45 %** (nollautui 00:00, seur. 05:00 EEST), viikko (all models) 66 %, viikko (Fable) 40 %. Ei uusia poikkeamia. Useimmat roolit idle ~3 h (viim. aktiviteetti 00:0x–00:4x) — yöaikaan odotettavaa, ei jumia (ei virheilmoituksia, kontekstit ennallaan).
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
 | Fable | local_5df52e10-10e4-4b72-9554-0049db300dfe | 35% | idle | — |
-| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 33% | running | — |
+| Postivahti (self) | local_a24c43c0-8094-4141-b734-90b9555f5044 | 35% | running | — |
 | Julkaisija | local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914 | 48% | idle | — |
 | Natiiviseppä | local_674b9ec4-e2f3-48e9-a810-a129f20a4f03 (kansio Matkakirja-3d-selvittaja) | 56% | idle | — |
 | Natiivi-UI | local_44392b3c-86ee-4873-9d76-82f9aaa6b832 | 49% | idle | — |
-| Linssiseppä (Opus, max) | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 57% | idle | — |
+| Linssiseppä (Opus, max) | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | 59% | idle | — |
 | Sisältökirjuri | local_be1a3375-18cf-4068-94f3-887d55f0e196 | 40% | idle | — |
 | Laitetestaaja | local_af48ba1e-41c2-4921-9068-28cf5cc71b0d | 51% | idle | — |
 | Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | 65% | idle | — |
@@ -52,7 +52,7 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - **5 h -kiintiö:** 17 % (nollautui 00:00, seur. nollaus 05:00 EEST). **Viikko (kaikki mallit):** 59 %. **Viikko (Fable):** 38 %.
 - **Levy:** 136 Gi vapaana (raja 80 Gt — kaukana, vakaa). **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana (90 % käytetty, raja 500 Gt vapaana — OK). **wt/-worktreet:** 42 kpl.
 - **Simulaattorit boottina:** 0 (max 4 päivällä — OK). **coreaudiod:** normaali (0 % CPU). **Headless-testiajureita (chromium_headless_shell, type=gpu-process):** 0.
-- **Konteksti:** Siirtoseppä 65 %, Linssiseppä 57 %, Natiiviseppä 56 %, Laitetestaaja 51 %, Natiivi-UI 49 %, Julkaisija 48 %, Sisältökirjuri 40 %, Pelikoodari 38 %, Fable 35 %, Karttaseppä 32 %, Postivahti (self) 33 %.
+- **Konteksti:** Siirtoseppä 65 %, Linssiseppä 59 %, Natiiviseppä 56 %, Laitetestaaja 51 %, Natiivi-UI 49 %, Julkaisija 48 %, Sisältökirjuri 40 %, Pelikoodari 38 %, Fable 35 %, Karttaseppä 32 %, Postivahti (self) 35 %.
 - **Juna:** yhä tauolla (Karttasepän Z10-poltto 26.–27.9.) — ei hälytystä, tarkoituksellinen.
 - **Postilaatikko:** ei uutta. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella (vanha luku ~40).
 - **Lokisiivous-kandidaatit (>48h lokit-alikansiot, >24h .app):** ei kandidaatteja tällä kierroksella.
