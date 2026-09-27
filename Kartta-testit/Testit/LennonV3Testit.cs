@@ -171,35 +171,6 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
-        static void AlkuliukuNapautusnakymastaLentoon()
-        {
-            // Omistajan TF-löydös 27.9.: lähtö napautusnäkymästä (Eurooppa 5000 km ylhäältä) ilman leikkausta, liittyy lennon kameraan.
-            var a = (Lat: 48.0, Lon: 12.0, EtaisyysM: 5_000_000.0, Kallistus: 0.0, Suuntima: 350.0, Katse: 0.0);
-            var b = (Lat: 33.1, Lon: 22.7, EtaisyysM: 20_000.0, Kallistus: 77.9, Suuntima: 20.0, Katse: 3500.0);
-            double T = LennonV3.AlkuliukuS(a.EtaisyysM, b.EtaisyysM);
-            Oleta.Tosi(T > 4.0 && T <= 5.0, $"kesto {T:F2} s");
-            Oleta.Tosi(LennonV3.Alkuliuku(0, T, a, b).Equals(a), "t = 0: täsmälleen napautusnäkymä");
-            Oleta.Tosi(LennonV3.Alkuliuku(T, T, a, b).Equals(b), "t = T: lennon kamera");
-            // Lähtee levosta: ensimmäisen kehyksen (1/120 s) muutos mitätön.
-            var k1 = LennonV3.Alkuliuku(1.0 / 120, T, a, b);
-            Oleta.Tosi(Math.Abs(k1.EtaisyysM - a.EtaisyysM) < 50 && Math.Abs(k1.Lat - a.Lat) < 1e-4, "levosta");
-            // Suuntima lyhintä tietä (350° → 20° kiertää 30° eikä 330°) ja etäisyys monotonisesti alas.
-            double ed = double.MaxValue;
-            for (double t = 0; t <= T; t += T / 200)
-            {
-                var k = LennonV3.Alkuliuku(t, T, a, b);
-                double d = LennonV3.Kulmaero(a.Suuntima, k.Suuntima);
-                Oleta.Tosi(d >= -1e-9 && d <= 30 + 1e-9, $"suuntima {k.Suuntima:F1} t={t:F2}");
-                Oleta.Tosi(k.EtaisyysM <= ed + 1e-6, $"etäisyys kasvoi t={t:F2}");
-                ed = k.EtaisyysM;
-            }
-            // Katsepiste perillä jo siirto-osuudella (maa ei liu'u lähikuvassa).
-            var ks = LennonV3.Alkuliuku(LennonV3.AlkuliukuSiirto * T, T, a, b);
-            Oleta.Tosi(Math.Abs(ks.Lat - b.Lat) < 1e-6 && Math.Abs(ks.Lon - b.Lon) < 1e-6, "siirto valmis");
-            Oleta.Sama(2.0, LennonV3.AlkuliukuS(30_000, 20_000));
-        }
-
-        [Testi]
         static void EloToistuuJaVaihtelee()
         {
             var a = LennonV3.Elo(6.3, 42); var b = LennonV3.Elo(6.3, 42); var c = LennonV3.Elo(6.3, 43);

@@ -927,13 +927,6 @@ namespace Matkakirja
         /// </summary>
         public void LentoPohjaValmiiksi(bool valmiiksi = true)
         {
-            // ALOITUSRATA: Lontoon lähikuvan laatat Cesiumille jo valintanäkymässä (ennakkokamera; sama kaikille kohteille).
-            // Valinta alkaa → päälle; valinta sulkeutuu → pois (käynnistyvä aloituslento asettaa sen heti uudelleen).
-            if (Nappula.Aloitusrata && nappula != null)
-            {
-                if (valmiiksi) nappula.EnnakkoLahtoon(AloitusLahtoLat, AloitusLahtoLon);
-                else nappula.EnnakkoValintaPois();
-            }
             if (!valmiiksi)
             {
                 if (pintaValmiiksi) pintaVapautus = true;

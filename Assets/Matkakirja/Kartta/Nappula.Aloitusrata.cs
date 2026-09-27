@@ -128,8 +128,8 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Jälki koneen reittiosuuteen p (0–1) ja viivojen näkyvyys kameran etäisyydellä: lähikuvassa (alle ~40 km) viivat
-        /// häipyvät (1,8 km:n nosto erottuisi maastosta, ElavaMatka.ViivaAlkaaM), katkojakso ruutupisteistä kuten ElavaMatka.
+        /// Jälki koneen reittiosuuteen p (0–1) ja viivojen näkyvyys kameran etäisyydellä: lähikuvassa himmeämpi (40 %),
+        /// katkojakso ruutupisteistä kuten ElavaMatka.
         /// </summary>
         void PaivitaJalki(double p, double kameranEtaisyysM, Camera kamera)
         {
@@ -137,7 +137,8 @@ namespace Matkakirja
             // Varjostin: piirretty = smootherstep(_Aika) × pituus → _Aika = smootherstep⁻¹(p) puolitushaulla.
             double lo = 0, hi = 1;
             for (int i = 0; i < 30; i++) { double m = 0.5 * (lo + hi); if (m * m * m * (m * (m * 6 - 15) + 10) < p) lo = m; else hi = m; }
-            float peitto = Mathf.Clamp01((float)((kameranEtaisyysM - 30_000.0) / 40_000.0));
+            // Lähikuvassa (ohitus 23–30 km) jälki jää 40 %:iin: koneen piirtämä viiva näkyy maassa koneen takana (omistaja 27.9.).
+            float peitto = 0.4f + 0.6f * Mathf.Clamp01((float)((kameranEtaisyysM - 30_000.0) / 40_000.0));
             var keskus = (Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             var kw = georeferenssi.transform.TransformPoint(keskus);
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
@@ -159,21 +160,18 @@ namespace Matkakirja
 
         // ---- Ennakkokamera: lähikuvan ja laskun laatat Cesiumille ennen kuin kamera on siellä ----
 
-        /// <summary>Odotus napautusnäkymässä enintään (s): käytävän lisäksi Cesiumin valinta tasaantunut ennakkokameran kanssa. Lontoon
-        /// lähikuva on ladattu jo valintanäkymässä (EnnakkoLahtoon), ja koko pallon näkymä ei tasaannu koskaan (v6: 4 s aina katto).</summary>
+        /// <summary>Odotus napautusnäkymässä enintään (s): käytävän lisäksi Cesiumin valinta tasaantunut ennakkokameran kanssa (koko
+        /// pallon näkymä ei tasaannu koskaan; v6: 4 s aina katto). Ohituksen laatat ehtivät odotuksen ja avauksen aikana.</summary>
         public const float AloitusrataOdotusKattoS = 1.5f;
-
-        /// <summary>Lähikuvan ja laskun ennakkoasennot (s radalla): Cesium valitsee laatat myös tälle kameralle.</summary>
-        public const double EnnakkoLahiS = 2.7, EnnakkoLaskuS = 12.5, EnnakkoVaihtoS = 3.6;
 
         Camera ennakko;
         readonly List<CesiumCameraManager> ennakkoHallinnat = new List<CesiumCameraManager>();
 
         /// <summary>
-        /// ENNAKKOKAMERA (v1-video 27.9.: Lontoon lähikuva oli tyhjä ~3 s, koska Cesium valitsee laatat vain kameroille, ja
-        /// syöksy saapui lähikuvaan 2 s:ssa). Piirtämätön kamera (pois päältä, cullingMask 0) radan asentoon kaikkien
-        /// tilesettien CesiumCameraManager.additionalCamerasiin (native getAllCameras ei vaadi enabled-tilaa, ks. LiikeLaatat):
-        /// odotuksesta lähikuvaan asti lähikuvan asento, sitten laskun asento, perillä pois. Pääkamera pysyy valinnassa.
+        /// ENNAKKOKAMERA (v1-video 27.9.: lähikuva oli tyhjä ~3 s, koska Cesium valitsee laatat vain kameroille). Piirtämätön
+        /// kamera (pois päältä, cullingMask 0) radan asentoon kaikkien tilesettien CesiumCameraManager.additionalCamerasiin
+        /// (native getAllCameras ei vaadi enabled-tilaa, ks. LiikeLaatat): odotuksesta ohitukseen asti ohituksen lähikuva, sitten
+        /// saapuminen, kosketuksesta pois. Pääkamera pysyy valinnassa.
         /// </summary>
         void EnnakkoAsentoon(AloituslennonRata.Asento a, Camera paa)
         {
@@ -212,29 +210,6 @@ namespace Matkakirja
             ennakko.aspect = paa.aspect;
             ennakko.nearClipPlane = (float)math.max(50.0, a.EtaisyysM * 0.01);
             ennakko.farClipPlane = (float)(a.EtaisyysM + 2.0 * CesiumWgs84Ellipsoid.GetMaximumRadius());
-        }
-
-        /// <summary>Ennakkokamera päällä valintanäkymän aikana (ei vielä lentoa).</summary>
-        bool ennakkoValinnassa;
-
-        /// <summary>
-        /// Valintanäkymä avautui (KarttaKerrokset.LentoPohjaValmiiksi): ennakkokamera lähtökaupungin yleiseen lähikuvaan
-        /// (30 km, katse 30° alas, kaakkoon), jotta Lontoon tarkat laatat ovat Cesiumissa ennen napautusta (v5-video 27.9.:
-        /// koko pallon näkymästä 4 s:n odotus ei riittänyt). Lähikuvan ympäristö on kaikille kohteille sama.
-        /// </summary>
-        public void EnnakkoLahtoon(double lat, double lon)
-        {
-            var paa = kierto != null ? kierto.GetComponent<Camera>() : null;
-            EnnakkoAsentoon(new AloituslennonRata.Asento(lat, lon, 30_000.0, 60.0, 135.0, 1500.0), paa);
-            ennakkoValinnassa = ennakko != null;
-        }
-
-        /// <summary>Valinta sulkeutui: valintanäkymän ennakko pois (käynnistyvä aloituslento asettaa omansa samassa kehyksessä).</summary>
-        public void EnnakkoValintaPois()
-        {
-            if (!ennakkoValinnassa) return;
-            ennakkoValinnassa = false;
-            if (!aloitusAjossa) EnnakkoPois();
         }
 
         void EnnakkoPois()

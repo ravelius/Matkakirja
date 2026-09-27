@@ -4,45 +4,54 @@ using System.Collections.Generic;
 namespace Matkakirja
 {
     /// <summary>
-    /// ALOITUSLENNON RATA (omistajan TF-löydös 27.9.2026, Fablen toimeksianto "suunnittele kokonaisuutena"; Natiiviseppä).
-    /// Lontoo → aloituskaupunki yhtenä 15 s:n otoksena, joka lähtee siitä pallonäkymästä, jossa pelaaja napautti:
-    ///   0,0–2,0  SYÖKSY     napautusnäkymästä koneen lähikuvaan Lontoossa (LennonV3.Alkuliuku: katsepiste isoympyrää
-    ///                       pitkin 1,4 s:ssa, etäisyys logaritmisena, lähtö levosta). Kone rullaa ja irtoaa.
-    ///   2,0–3,4  LÄHIKUVA   kone nousee kuvan keskellä etuviistosta (θ ±75° → ±60°, 28 → 32 km, katse 28–32° alaspäin:
-    ///                       maata näkyy usvan alta, horisontti yläreunassa), maa virtaa 4 km/s.
-    ///   3,4–7,0  NOUSU      kamera nousee pehmeästi ja kääntyy koneen taakse (θ → 0): reitti avautuu ruudun alareunasta
-    ///                       ylös kohti kohdetta; 7 s:ssa kuvassa Lontoo (alhaalla), koko reitti ja kohde (ylhäällä),
-    ///                       kallistus 35–45° pystystä, joten pallon kaarevuus ja horisontti näkyvät (tunne matkasta).
-    ///   7,0–11,0 MATKA      rajaus seuraa jäljellä olevaa reittiä (koneen takaa kohteeseen): kamera laskeutuu hitaasti
-    ///                       koneen edetessä, isoisän punainen kynänjälki piirtyy koneen perässä.
-    ///  11,0–15,0 LASKU      kamera tulee alas kohteen ylle (60 km, katse 24° alas, 25° lentosuunnasta), kone laskeutuu
-    ///                       14,3 s (ääni: kosketus) ja rullaa pysähdyksiin 15 s — sama loppu kuin lento v3:ssa.
-    /// Kanavat (log-etäisyys, kallistus, suuntima, katsepisteen etumatka reitillä, katseen korkeus) ovat viidennen asteen
-    /// Hermite-paloja avainten välissä, derivaatat Fritsch–Carlson-rajattuina (ei yliheilahdusta: etäisyydellä on yksi huippu
-    /// nousun lopussa, kallistus ja suuntima monotonisia vaiheittain). Matkan avaimet ratkaistaan rajauksesta pallomallilla
-    /// (<see cref="Rajaa"/>): reitin alapää ruudun alareunaan (y −0,72) ja kohde yläosaan (y +0,55), jolloin reitti kulkee
-    /// ruudun pystyakselia pitkin (kameran suuntima = reitin suunta katsepisteessä). Koneen eteneminen on oma profiilinsa
-    /// (<see cref="KoneenOsuus"/>): lähikuvassa ja laskussa absoluuttinen nopeus, matkanopeus kattaa loput.
-    /// Kone on symbolinen: siipiväli vähintään 5 km ja kaukaa 4,5 % kameran etäisyydestä (web: koneen koko ruudulla on
-    /// vakio), korkeus kasvaa koon mukana, jottei suuri kone leikkaa maastoa. Puhdas laskenta ilman UnityEngineä.
+    /// ALOITUSLENNON RATA v2 (omistajan palaute v7:stä 27.9.2026 klo 23.0x, Fablen kautta; Natiiviseppä). Lontoo → aloituskaupunki
+    /// yhtenä 15 s:n otoksena napautetusta pallonäkymästä pelin saapumisnäkymään. Omistajan säännöt:
+    ///   1. Kone näkyy KOKO AJAN (pienenä tai isona) eikä sitä näytetä koskaan takaa (edestä, sivulta tai niiden välistä).
+    ///   2. Alku: koneen lähtö näytetään kaukaa, kamera rullaa hitaasti lähemmäs matalasta kulmasta (Afrikan päältä pohjoiseen).
+    ///   3. Takaa-ajo kiihtyy, tavoittaa koneen, ja kone lipuu VASEMMALTA OIKEALLE läheltä kameran ohi.
+    ///   4. Kamera lentää kohteen yli ja näyttää saapumisen etuviistosta, kiertää laskeutumiskohtaa ja nousee, kunnes kohde
+    ///      näkyy ylhäältä pelin jatkokohdasta (saapumisnäkymä).
+    ///   5. Viiva ja lähtöpiste näkyvät; kamera muuttaa koko ajan suuntaa tai korkeutta kuminauhamaisesti.
+    ///
+    /// AIKAJANA (s): 0–4 AVAUS (napautusnäkymä → kallistus 60°, etäisyys 7 600 → ~1 800 km: silmä Afrikan rannikon yllä, kone
+    /// ja Lontoo yläosassa horisontin sisällä) · 4–6,3 KIRI (kamera kiihtyy koneeseen, 1 800 → 30 km, kääntyy koneen oikealle kyljelle) · 6,3–7,9 OHITUS (kone lipuu
+    /// vasemmalta oikealle, lähimmillään 23 km, reitin puolivälissä) · 7,9–10,7 YLILENTO (kamera nousee ja kiitää kohteen
+    /// taakse, kääntyy katsomaan konetta edestä) · 10,7–13,2 SAAPUMINEN (kiertää laskeutumiskohtaa, kone etuviistosta,
+    /// kosketus 13,2 s) · 13,2–15 PALJASTUS (nousu saapumisnäkymään, pohjoinen ylös).
+    ///
+    /// TOTEUTUS: kamera suunnitellaan koneen RUUTUPAIKKANA. Kanavat (log-etäisyys katsepisteeseen, kallistus pystystä, suuntima,
+    /// koneen ruutupaikka x/y ja katseen korkeuden paino) ovat avainkehyksiä (smootherstep), joita KUMINAUHA seuraa
+    /// vaimennettuna jousena (ζ 0,7: kiihtyy, ylittää hieman ja asettuu, ei koskaan täysin paikallaan). Joka näytteessä
+    /// (240 Hz) katsepiste ratkaistaan Newtonilla niin, että kone osuu kanavan ruutupaikkaan, joten kone pysyy kuvassa
+    /// rakenteellisesti. Alku on täsmälleen napautusnäkymä ja loppu täsmälleen saapumisnäkymä (viimeinen 1,2 s pakottaa).
+    /// Kone etenee omalla nopeusprofiilillaan: ohituksessa 5 km/s (lipuu kuvan poikki), saapumisessa laskeva absoluuttinen
+    /// nopeus, muualla matkanopeudet, jotka ratkaistaan niin, että ohitus osuu reitin puoliväliin ja pysähdys 13,8 s:iin.
+    /// Kone on symbolinen: siipiväli vähintään 5 km ja kaukana 5 % etäisyydestä kameraan (näkyy aina; web: koneen koko on
+    /// ruudulla vakio). Pallomalli R = 6371 km (sama kuin LennonV3); PalloKierron WGS84 poikkeaa lähikuvassa metrejä.
+    /// Puhdas laskenta ilman UnityEngineä (Kartta-testit/AloituslennonRataTestit mittaa koneen näkyvyyden joka näytteessä).
     /// </summary>
     public sealed class AloituslennonRata
     {
-        public const double KestoS = LennonV3.KestoS, KosketusS = LennonV3.KosketusS;
-        /// <summary>Vaiheiden rajat (s).</summary>
-        public const double SyoksyS = 2.0, LahiLoppuS = 3.4, AvausS = 7.0, MatkaS = 9.0, LaskuS = 11.0;
-        /// <summary>Koneen nopeus lähikuvassa ja laskun alussa / kosketuksessa (m/s).</summary>
-        public const double LahiNopeus = 4000.0, LaskuNopeus = 3000.0, KosketusNopeus = 700.0;
-        /// <summary>Koneen siipiväli (m) lähellä ja osuutena kameran etäisyydestä kaukana.</summary>
-        public const double SiipiLahella = LennonV3SiipiM, SiipiOsuus = 0.045;
-        const double LennonV3SiipiM = 5000.0;
-        /// <summary>Rajaus (ruudun pystykoordinaatti −1…1): reitin alapää ja kohde.</summary>
-        public const double RajausAla = -0.72, RajausYla = 0.55;
-        /// <summary>Loppukuva: etäisyys (m), kallistus pystystä (°) ja suunta lentosuunnasta (°).</summary>
-        public const double LoppuM = 60_000.0, LoppuKallistus = 66.0, LoppuTheta = 25.0;
+        // ---- Aikajana (s) ----
+        public const double KestoS = 15.0, AvausS = 4.0, KiriS = 6.3, OhitusS = 7.1, OhitusLoppuS = 7.9, NousuS = 9.4,
+            SaapuminenS = 10.8, KosketusS = 13.2, PysahdysS = 13.8;
+        /// <summary>Loppu pakotetaan saapumisnäkymään tästä alkaen (s).</summary>
+        public const double PakotusS = 13.0;
+        /// <summary>Ohituksen kohta reitillä (osuus) ja koneen nopeus ohituksessa (m/s).</summary>
+        public const double OhitusOsuus = 0.5, OhitusNopeus = 5000.0;
+        /// <summary>Katseen suunta koneen kulkusuunnasta ohituksessa: −95° = kamera koneen oikealla, kone liikkuu vasemmalta oikealle.</summary>
+        public const double OhitusTheta = -96.0;
+        /// <summary>Koneen näkökulma avauksessa (° keulasta): etuviisto.</summary>
+        public const double AvausAlfa = 30.0;
+        /// <summary>Symbolinen koko: siipiväli vähintään 5 km, kaukana osuus etäisyydestä kameraan.</summary>
+        public const double SiipiLahellaM = 5000.0, SiipiOsuus = 0.05;
+        public const double MatkaKorkeusM = 3500.0;
         const double R = LennonV3.R;
+        const int Hz = 240;
+        const int N = (int)(KestoS * Hz);
 
-        /// <summary>Kameran asento: katsepiste, etäisyys (m), kallistus pystystä (°), suuntima (katseen suunta, °) ja katseen korkeus (m).</summary>
+        /// <summary>Kameran asento PalloKierto.Kuvaa-muodossa: katsepiste, etäisyys (m), kallistus pystystä (°), suuntima (katseen
+        /// suunta, °) ja katsepisteen korkeus (m).</summary>
         public struct Asento
         {
             public double Lat, Lon, EtaisyysM, Kallistus, Suuntima, Katse;
@@ -50,191 +59,371 @@ namespace Matkakirja
             { Lat = lat; Lon = lon; EtaisyysM = etaisyysM; Kallistus = kallistus; Suuntima = suuntima; Katse = katse; }
         }
 
+        /// <summary>Koneen mittaus ruudulla: x, y (−1…1, oikea ja ylä +), näkyykö (edessä, ruudussa, ei pallon takana),
+        /// siipivälin osuus ruudun leveydestä, katselukulma keulasta (° 0 = edestä, 180 = takaa), kameran korotuskulma
+        /// koneesta (°, 90 = suoraan yläpuolella), etäisyys kameraan ja kameran korkeus.</summary>
+        public struct Mittaus
+        {
+            public double T, X, Y, Koko, Alfa, Korotus, EtaisyysM, KameraKorkeusM;
+            public bool Nakyy;
+        }
+
         public readonly double Lat0, Lon0, Lat1, Lon1, ReittiM, Kuvasuhde, Fov, MaaKohteessa;
-        readonly Asento alku;
-        readonly double[] avainT = { SyoksyS, LahiLoppuS, AvausS, MatkaS, LaskuS, KestoS };
-        readonly double[] lnD, kall, suunt, etumatka;
-        readonly double[] dLnD, dKall, dSuunt, dEtumatka;
-        double[] koneP;
-        const int Naytteita = 3000;
+        public readonly Asento Alku, Loppu;
+        /// <summary>Matkanopeuden kertoimet ennen ja jälkeen ohituksen (1/s: kameran etäisyyksiä sekunnissa): loki ja testit.</summary>
+        public double Nopeus1 { get; private set; }
+        public double Nopeus2 { get; private set; }
 
-        /// <summary>Lähikuvan puoli: +1 = kamera koneen vasemmalla (θ +75°), −1 oikealla.</summary>
-        public readonly int Puoli;
-
-        /// <summary>Rajauksen tulos avaimittain (loki ja testit): etäisyys (m), katsepisteen reittiosuus ja alapään reittiosuus.</summary>
-        public readonly (double T, double EtaisyysM, double Katse, double Alapaa)[] Rajaukset;
+        readonly double tanV, tanH;
+        // Näytteet 240 Hz: koneen reittiosuus ja korkeus, symbolinen siipiväli, kameran asento ja katseen paino, mittaus.
+        readonly double[] kp = new double[N + 1], kh = new double[N + 1], siipi = new double[N + 1];
+        readonly double[] cLat = new double[N + 1], cLon = new double[N + 1], cLnD = new double[N + 1], cK = new double[N + 1],
+            cB = new double[N + 1], cKatse = new double[N + 1], cKatseW = new double[N + 1];
+        readonly Mittaus[] mittaus = new Mittaus[N + 1];
 
         /// <param name="alku">Napautusnäkymä (PalloKierto: leveys, pituus, korkeus = etäisyys, KaytettyKallistus, suuntima, katseKorkeus).</param>
+        /// <param name="loppu">Saapumisnäkymä, johon peli jatkaa (PalloKierto.SaapumisNakyma ilman maarajausta).</param>
         /// <param name="kuvasuhde">Ruudun leveys / korkeus.</param>
         /// <param name="fov">Pystykuvakulma (°).</param>
         /// <param name="maaKohteessa">Kohteen maan korkeus (m, liioiteltu).</param>
-        public AloituslennonRata(double lat0, double lon0, double lat1, double lon1, Asento alku, double kuvasuhde, double fov = 50.0,
-            double maaKohteessa = 0.0)
+        public AloituslennonRata(double lat0, double lon0, double lat1, double lon1, Asento alku, Asento loppu, double kuvasuhde,
+            double fov = 50.0, double maaKohteessa = 0.0)
         {
-            Lat0 = lat0; Lon0 = lon0; Lat1 = lat1; Lon1 = lon1;
+            Lat0 = lat0; Lon0 = lon0; Lat1 = lat1; Lon1 = lon1; Alku = alku; Loppu = loppu;
             ReittiM = Math.Max(1000.0, LennonAikajana.ReittiM(lat0, lon0, lat1, lon1));
             Kuvasuhde = kuvasuhde > 0 ? kuvasuhde : 0.46;
             Fov = fov;
             MaaKohteessa = maaKohteessa;
-            this.alku = alku;
-            TaulukoiKone();
+            tanV = Math.Tan(Fov * Math.PI / 360.0);
+            tanH = tanV * Kuvasuhde;
+            var lnD = Etaisyys();
+            var jD = Jousi(lnD, 5.0);
+            Kone(jD);
+            Kamera(lnD, jD);
+        }
 
-            int n = avainT.Length;
-            lnD = new double[n]; kall = new double[n]; suunt = new double[n]; etumatka = new double[n];
-            double lahtoSuunta = LennonV3.Suuntima(lat0, lon0, lat1, lon1);
-            // Lähikuva: etuviisto kylki sillä puolella, jolle syöksyn kierto napautusnäkymän suuntimasta on lyhyempi
-            // (Puoli +1 = kamera koneen vasemmalla); kamera hieman loittonee ja kiertää kohti koneen takaa.
-            Puoli = Math.Abs(LennonV3.Kulmaero(alku.Suuntima, lahtoSuunta + 75)) <= Math.Abs(LennonV3.Kulmaero(alku.Suuntima, lahtoSuunta - 75)) ? 1 : -1;
-            lnD[0] = Math.Log(28_000); kall[0] = 62; suunt[0] = alku.Suuntima + LennonV3.Kulmaero(alku.Suuntima, lahtoSuunta + Puoli * 75); etumatka[0] = 0;
-            lnD[1] = Math.Log(32_000); kall[1] = 58; suunt[1] = lahtoSuunta + Puoli * 60; etumatka[1] = 0;
-            // Matka: rajaus reitin loppuosaan. 7 s: koko reitti (Lontoo alhaalla); 9 ja 11 s: koneen takaa kohteeseen.
-            Rajaukset = new (double, double, double, double)[3];
-            for (int k = 0; k < 3; k++)
+        /// <summary>Kameran etäisyys katsepisteeseen avaimina (log): avaus Afrikan rannikon yllä, kiri, ohitus, nousu kohteen
+        /// yli, saapuminen ja saapumisnäkymä. Riippuu vain reitin pituudesta, joten koneen nopeus voi seurata sitä.</summary>
+        Kanava Etaisyys()
+        {
+            // Avaus: silmä Afrikan rannikon yllä (vaakaetäisyys d · sin 60° katsepisteestä), Lontoo horisontin sisällä.
+            double dA = Math.Min(Rajaa(0.75 * ReittiM, 1_500_000.0, 2_600_000.0), 0.7 * Alku.EtaisyysM);
+            // Ylilento: niin korkealla, että loppumatka kulkee kuvassa rauhassa (kone ~0,8 etäisyyttä sekunnissa).
+            double dC = Rajaa(0.4 * ReittiM, 350_000.0, 1_300_000.0);
+            return new Kanava().Lisaa(0, Math.Log(Alku.EtaisyysM)).Lisaa(AvausS, Math.Log(dA)).Lisaa(KiriS, Math.Log(30_000))
+                .Lisaa(OhitusS, Math.Log(23_000)).Lisaa(OhitusLoppuS, Math.Log(29_000)).Lisaa(NousuS, Math.Log(dC))
+                .Lisaa(SaapuminenS, Math.Log(150_000)).Lisaa(KosketusS - 0.4, Math.Log(135_000)).Lisaa(KestoS, Math.Log(Loppu.EtaisyysM));
+        }
+
+        // ====================================================================================================================
+        // KONE: nopeusprofiili, reittiosuus ja korkeus
+        // ====================================================================================================================
+
+        /// <summary>Kameran suunniteltu etäisyys (m) hetkellä t (kuminauhan etäisyyskanava): matkanopeus = K · etäisyys, jolloin kone
+        /// kulkee ruudulla tasaisesti (ei viuhahda lähikuvan jälkeen eikä matele kaukaa).</summary>
+        double[] dRef;
+        double Dref(double t) => Math.Exp(Lerp(dRef, t));
+
+        static double Rullaus(double t) => 300.0 * S(t / 0.6) * (1 - S((t - 0.6) / 1.6));
+        static double W1(double t) => S((t - 0.5) / 2.4) * (1 - S((t - 4.9) / 1.4));
+        static double Wo(double t) => S((t - 4.9) / 1.4) * (1 - S((t - 7.7) / 0.9));
+        static double W2(double t) => S((t - 7.7) / 1.1) * (1 - S((t - 9.3) / 1.1));
+
+        /// <summary>Saapumisen absoluuttinen nopeus (m/s): 60 km/s → 3 km/s (12,3 s) → 0,7 km/s kosketuksessa → pysähdys.</summary>
+        static double Saapuminen(double t)
+        {
+            double v;
+            if (t <= 10.4) v = 60000.0;
+            else if (t <= 12.3) v = Math.Exp(Math.Log(60000.0) + (Math.Log(3000.0) - Math.Log(60000.0)) * S((t - 10.4) / 1.9));
+            else if (t <= KosketusS) v = 3000.0 + (700.0 - 3000.0) * S((t - 12.3) / (KosketusS - 12.3));
+            else if (t <= PysahdysS) v = 700.0 * (1 - S((t - KosketusS) / (PysahdysS - KosketusS)));
+            else v = 0.0;
+            return S((t - 9.3) / 1.1) * v;
+        }
+
+        double Nopeus(double t) => Rullaus(t) + (Nopeus1 * W1(t) + Nopeus2 * W2(t)) * Dref(t) + OhitusNopeus * Wo(t) + Saapuminen(t);
+
+        void Kone(double[] jD)
+        {
+            dRef = jD;
+            // Matkanopeudet: ohituksen keskikohta reitin puolivälissä (OhitusS) ja pysähdys perillä (PysahdysS).
+            const int ali = 4;
+            double dt = 1.0 / (Hz * ali);
+            double a1 = 0, b1 = 0, a2 = 0, b2 = 0;
+            for (int i = 0; i < (int)(PysahdysS * Hz * ali); i++)
             {
-                double t = avainT[2 + k], p = KoneenOsuus(t);
-                double alapaa = k == 0 ? 0.0 : Math.Max(0.0, p - (k == 1 ? 0.08 : 0.04));
-                var r = Rajaa(alapaa);
-                lnD[2 + k] = Math.Log(r.EtaisyysM);
-                kall[2 + k] = KallistusEtaisyydella(r.EtaisyysM);
-                etumatka[2 + k] = Math.Max(0.0, r.Katse - p);
-                suunt[2 + k] = SuuntimaReitilla(r.Katse);
-                Rajaukset[k] = (t, r.EtaisyysM, r.Katse, alapaa);
+                double tm = (i + 0.5) * dt;
+                if (tm < OhitusS) { a1 += W1(tm) * Dref(tm) * dt; b1 += (Rullaus(tm) + OhitusNopeus * Wo(tm) + Saapuminen(tm)) * dt; }
             }
-            double saapumisSuunta = SuuntimaReitilla(0.999);
-            lnD[5] = Math.Log(LoppuM); kall[5] = LoppuKallistus; suunt[5] = saapumisSuunta + LoppuTheta; etumatka[5] = 0;
-            // Suuntima yhtenäiseksi (lyhin kierto avaimesta toiseen).
-            for (int i = 1; i < n; i++) suunt[i] = suunt[i - 1] + LennonV3.Kulmaero(suunt[i - 1], suunt[i]);
-            dLnD = Kulmakertoimet(lnD); dKall = Kulmakertoimet(kall); dSuunt = Kulmakertoimet(suunt); dEtumatka = Kulmakertoimet(etumatka);
-        }
-
-        /// <summary>Kallistus pystystä (°) etäisyyden mukaan: kaukana 35° (pallon kaarevuus näkyy), 200 km:ssä ja alle 60°.</summary>
-        public static double KallistusEtaisyydella(double etaisyysM)
-        {
-            double u = (Math.Log(3_000_000.0) - Math.Log(Math.Max(1.0, etaisyysM))) / Math.Log(15.0);
-            return 35.0 + 25.0 * Pehmea(u);
-        }
-
-        // ---- Kamera ----
-
-        /// <summary>Kameran asento hetkellä t (0–15 s).</summary>
-        public Asento Kamera(double t)
-        {
-            t = Math.Max(0, Math.Min(KestoS, t));
-            double tr = Math.Max(t, SyoksyS);
-            int i = 0;
-            while (i < avainT.Length - 2 && tr > avainT[i + 1]) i++;
-            double h = avainT[i + 1] - avainT[i], u = (tr - avainT[i]) / h;
-            double d = Math.Exp(H(u, h, lnD, dLnD, i));
-            double k = H(u, h, kall, dKall, i);
-            double s = H(u, h, suunt, dSuunt, i);
-            double e = Math.Max(0.0, H(u, h, etumatka, dEtumatka, i));
-            double p = KoneenOsuus(t);
-            double katseOsuus = Math.Min(1.0, p + e);
-            var q = Kohta(katseOsuus);
-            // Katseen korkeus: lähikuvassa koneen korkeus, nousussa maahan; lopussa kohteen maa.
-            double katse = KoneenPerusKorkeus(t) * (1 - Pehmea((t - LahiLoppuS) / (AvausS - LahiLoppuS)))
-                           + MaaKohteessa * Pehmea((t - LaskuS) / (KestoS - LaskuS));
-            var rata = new Asento(q.Lat, q.Lon, d, k, Normalisoi(s), katse);
-            if (t >= SyoksyS) return rata;
-            var a = LennonV3.Alkuliuku(t, SyoksyS, (alku.Lat, alku.Lon, alku.EtaisyysM, alku.Kallistus, alku.Suuntima, alku.Katse),
-                (rata.Lat, rata.Lon, rata.EtaisyysM, rata.Kallistus, rata.Suuntima, rata.Katse));
-            return new Asento(a.Lat, a.Lon, a.EtaisyysM, a.Kallistus, a.Suuntima, a.Katse);
-        }
-
-        static double H(double u, double h, double[] v, double[] dv, int i) =>
-            Hermite5(u, h, v[i], v[i + 1], dv[i], dv[i + 1]);
-
-        /// <summary>Fritsch–Carlson-derivaatat (monotoninen, ei yliheilahdusta), päissä 0 (lepo syöksyn liitoksessa ja perillä).</summary>
-        double[] Kulmakertoimet(double[] v)
-        {
-            int n = v.Length;
-            var m = new double[n];
-            for (int i = 1; i < n - 1; i++)
+            Nopeus1 = Math.Max(0.0, (OhitusOsuus * ReittiM - b1) / Math.Max(1e-6, a1));
+            for (int i = 0; i < (int)(PysahdysS * Hz * ali); i++)
             {
-                double s0 = (v[i] - v[i - 1]) / (avainT[i] - avainT[i - 1]), s1 = (v[i + 1] - v[i]) / (avainT[i + 1] - avainT[i]);
-                m[i] = s0 * s1 <= 0 ? 0 : 3 * (avainT[i + 1] - avainT[i - 1]) / ((2 * avainT[i + 1] - avainT[i] - avainT[i - 1]) / s0
-                    + (avainT[i + 1] + avainT[i] - 2 * avainT[i - 1]) / s1);
+                double tm = (i + 0.5) * dt;
+                a2 += W2(tm) * Dref(tm) * dt;
+                b2 += (Rullaus(tm) + Nopeus1 * W1(tm) * Dref(tm) + OhitusNopeus * Wo(tm) + Saapuminen(tm)) * dt;
             }
-            return m;
-        }
-
-        // ---- Kone ----
-
-        /// <summary>Koneen reittiosuus 0–1 hetkellä t (monotoninen, 1 kosketuksesta alkaen ≈ perillä).</summary>
-        public double KoneenOsuus(double t)
-        {
-            t = Math.Max(0, Math.Min(KestoS, t));
-            double x = t / KestoS * Naytteita;
-            int i = Math.Min(Naytteita - 1, (int)x);
-            return koneP[i] + (koneP[i + 1] - koneP[i]) * (x - i);
-        }
-
-        /// <summary>Matkanopeus (m/s), jolla reitti tulee katetuksi (loki).</summary>
-        public double MatkaNopeus { get; private set; }
-
-        double Lahi(double t) => Pehmea(t / SyoksyS) * (1 - Pehmea((t - LahiLoppuS) / 2.4));
-        double Matka(double t) => Pehmea((t - LahiLoppuS) / 2.4) * (1 - Pehmea((t - 10.4) / 2.4));
-        double Lasku(double t)
-        {
-            double w = Pehmea((t - 10.4) / 2.4);
-            double v = t < KosketusS
-                ? LaskuNopeus + (KosketusNopeus - LaskuNopeus) * Pehmea((t - 12.8) / (KosketusS - 12.8))
-                : KosketusNopeus * (1 - Pehmea((t - KosketusS) / (KestoS - KosketusS)));
-            return w * v;
-        }
-
-        void TaulukoiKone()
-        {
-            double dt = KestoS / Naytteita;
-            double iLahi = 0, iMatka = 0, iLasku = 0;
-            for (int i = 0; i < Naytteita; i++)
-            {
-                double a = i * dt, b = a + dt, c = a + dt / 2;
-                iLahi += (Lahi(a) + 4 * Lahi(c) + Lahi(b)) / 6 * dt;
-                iMatka += (Matka(a) + 4 * Matka(c) + Matka(b)) / 6 * dt;
-                iLasku += (Lasku(a) + 4 * Lasku(c) + Lasku(b)) / 6 * dt;
-            }
-            double kiinteat = LahiNopeus * iLahi + iLasku;
-            double skaala = kiinteat > 0.8 * ReittiM ? 0.8 * ReittiM / kiinteat : 1.0;   // lyhyt reitti: lähi- ja laskunopeus alas
-            MatkaNopeus = Math.Max(0.0, (ReittiM - kiinteat * skaala) / Math.Max(1e-6, iMatka));
-            koneP = new double[Naytteita + 1];
+            Nopeus2 = Math.Max(0.0, (ReittiM - b2) / Math.Max(1e-6, a2));
             double s = 0;
-            for (int i = 0; i < Naytteita; i++)
+            kp[0] = 0;
+            for (int i = 1; i <= N; i++)
             {
-                double a = i * dt, b = a + dt, c = a + dt / 2;
-                double v(double x) => skaala * (LahiNopeus * Lahi(x) + Lasku(x)) + MatkaNopeus * Matka(x);
-                s += (v(a) + 4 * v(c) + v(b)) / 6 * dt;
-                koneP[i + 1] = s;
+                for (int j = 0; j < ali; j++) s += Nopeus(((i - 1) * ali + j + 0.5) * dt) * dt;
+                kp[i] = Math.Min(1.0, s / ReittiM);
             }
-            for (int i = 0; i <= Naytteita; i++) koneP[i] = Math.Min(1.0, koneP[i] / s);
+            // Pysähdyksestä alkaen täsmälleen perillä (numeerinen integraali ± 1e-4).
+            for (int i = 0; i <= N; i++) if (i / (double)Hz >= PysahdysS) kp[i] = 1.0;
         }
 
-        /// <summary>Koneen korkeus ilman koon nostoa (m merenpinnasta): nousu 1,2–4,5 s 3,5 km:iin, lasku kuten v3 (kosketus 14,3 s).</summary>
-        public static double KoneenPerusKorkeus(double t) =>
-            Math.Min(LennonV3.MatkaKorkeusM * Pehmea((t - 1.2) / 3.3), LennonV3.KoneenKorkeusM(t));
+        /// <summary>Koneen peruskorkeus (m): nousu 0,6–4 s matkakorkeuteen, liuku 10,2 s:sta kosketukseen.</summary>
+        public static double PerusKorkeus(double t)
+        {
+            double h = MatkaKorkeusM * S((t - 0.6) / 3.4);
+            if (t <= 10.2) return h;
+            if (t >= KosketusS) return 0.0;
+            double u = (t - 10.2) / (KosketusS - 10.2);
+            return h * (1 - S(Math.Pow(u, 0.85)));
+        }
 
-        /// <summary>Koneen siipiväli (m) kameran etäisyydellä: vähintään 5 km, kaukana 4,5 % etäisyydestä (pehmeä maksimi).</summary>
-        public static double Siipivali(double kameranEtaisyysM) =>
-            Math.Sqrt(SiipiLahella * SiipiLahella + Math.Pow(SiipiOsuus * kameranEtaisyysM, 2));
+        /// <summary>Symbolinen siipiväli (m) etäisyydellä kameraan.</summary>
+        public static double Siipivali(double etaisyysKameraanM) =>
+            Math.Sqrt(SiipiLahellaM * SiipiLahellaM + Math.Pow(SiipiOsuus * etaisyysKameraanM, 2));
 
-        /// <summary>Koneen korkeus (m): peruskorkeus + 30 % koon kasvusta (iso symbolikone ei leikkaa maastoa kaukana).</summary>
-        public static double KoneenKorkeus(double t, double siipiM) =>
-            KoneenPerusKorkeus(t) + 0.3 * Math.Max(0.0, siipiM - SiipiLahella) * (t < KosketusS ? 1.0 : 0.0);
+        /// <summary>Iso symbolikone nostetaan 30 % koon kasvusta (ei leikkaa maastoa kaukana); häviää saapumisessa.</summary>
+        static double Nosto(double t, double siipiM) =>
+            0.3 * Math.Max(0.0, siipiM - SiipiLahellaM) * (1 - S((t - 10.9) / 1.6));
 
-        // ---- Reitti (isoympyrä) ----
+        // ====================================================================================================================
+        // KAMERA: kanavat, kuminauha ja katsepisteen ratkaisu
+        // ====================================================================================================================
 
-        /// <summary>Piste reitillä osuudella u (0 = lähtö, 1 = kohde).</summary>
-        public (double Lat, double Lon) Kohta(double u) => LennonV3.Isoympyralla(Lat0, Lon0, Lat1, Lon1, Math.Max(0, Math.Min(1, u)));
+        /// <summary>Avainkehykset (smootherstep, lepo avaimissa).</summary>
+        sealed class Kanava
+        {
+            readonly List<(double t, double v)> a = new List<(double, double)>();
+            public Kanava Lisaa(double t, double v) { a.Add((t, v)); return this; }
+            public double Arvo(double t)
+            {
+                if (t <= a[0].t) return a[0].v;
+                for (int i = 1; i < a.Count; i++)
+                    if (t <= a[i].t) return a[i - 1].v + (a[i].v - a[i - 1].v) * S((t - a[i - 1].t) / (a[i].t - a[i - 1].t));
+                return a[a.Count - 1].v;
+            }
+        }
 
-        /// <summary>Lentosuunta (°) reitillä osuudella u.</summary>
+        /// <summary>Kuminauha: vaimennettu jousi seuraa kanavaa (lähtö levosta alkuarvosta).</summary>
+        static double[] Jousi(Kanava k, double omega, double zeta = 0.7)
+        {
+            var ulos = new double[N + 1];
+            const int ali = 4;
+            double x = k.Arvo(0), v = 0, dt = 1.0 / (Hz * ali);
+            ulos[0] = x;
+            for (int i = 1; i <= N; i++)
+            {
+                for (int j = 0; j < ali; j++)
+                {
+                    double t = ((i - 1) * ali + j + 1) * dt;
+                    double a = omega * omega * (k.Arvo(t) - x) - 2 * zeta * omega * v;
+                    v += a * dt;
+                    x += v * dt;
+                }
+                ulos[i] = x;
+            }
+            return ulos;
+        }
+
+        void Kamera(Kanava lnD, double[] jD)
+        {
+            double Psi(double t) => SuuntimaReitilla(OsuusNaytteesta(t));
+
+            // Koneen ruutupaikka napautusnäkymässä (Lontoo) ja saapumisnäkymässä (kohde).
+            var k0 = Kanta(Alku);
+            Projisoi(k0, Ecef(Lat0, Lon0, 0.0), out double s0x, out double s0y, out _);
+            s0x = Rajaa(double.IsNaN(s0x) ? 0 : s0x, -0.95, 0.95); s0y = Rajaa(double.IsNaN(s0y) ? 0 : s0y, -0.95, 0.95);
+            var kL = Kanta(Loppu);
+            Projisoi(kL, Ecef(Lat1, Lon1, MaaKohteessa), out double sfx, out double sfy, out _);
+            sfx = Rajaa(double.IsNaN(sfx) ? 0 : sfx, -0.8, 0.8); sfy = Rajaa(double.IsNaN(sfy) ? 0 : sfy, -0.8, 0.8);
+
+            // Avauksen suunta: kone etuviistosta (AvausAlfa keulasta) sille puolelle, josta kääntö ohituksen suuntaan on lyhyempi
+            // (Lissabon: kiri kääntyisi muuten 130°). Lähtöpiste on silloin koneen takana kuvan yläosassa.
+            double psi0 = Psi(0.8), bKiri = Psi(KiriS) + OhitusTheta;
+            double bA1 = psi0 - 180.0 + AvausAlfa, bA2 = psi0 - 180.0 - AvausAlfa;
+            double bA = Math.Abs(Kulmaero(bKiri, bA1)) <= Math.Abs(Kulmaero(bKiri, bA2)) ? bA1 : bA2;
+            double sxA = Kulmaero(bA, psi0 - 180.0) > 0 ? -0.2 : 0.2;   // kone lähtöpisteen vastakkaiselle puolelle
+            var kal = new Kanava().Lisaa(0, Alku.Kallistus).Lisaa(AvausS, 60).Lisaa(KiriS, 82).Lisaa(OhitusS, 83).Lisaa(OhitusLoppuS, 82)
+                .Lisaa(NousuS, 58).Lisaa(SaapuminenS, 66).Lisaa(KosketusS - 0.4, 50).Lisaa(KestoS, Loppu.Kallistus);
+            // Laskeutumiskohdan kierto sille puolelle, josta paljastus pohjoinen ylös -näkymään on lyhyempi (kone etuviistosta).
+            double bL1 = Psi(KosketusS) - 130, bL2 = Psi(KosketusS) + 130;
+            double bLasku = Math.Abs(Kulmaero(bL1, Loppu.Suuntima)) <= Math.Abs(Kulmaero(bL2, Loppu.Suuntima)) ? bL1 : bL2;
+            var bt = new[] { 0.0, AvausS, KiriS, OhitusS, OhitusLoppuS, NousuS, SaapuminenS, KosketusS, KestoS };
+            var bv = new[]
+            {
+                Alku.Suuntima, bA, Psi(KiriS) + OhitusTheta, Psi(OhitusS) + OhitusTheta - 1, Psi(OhitusLoppuS) + OhitusTheta - 2,
+                Psi(NousuS) - 135, Psi(SaapuminenS) - 172, bLasku, Loppu.Suuntima,
+            };
+            for (int i = 1; i < bv.Length; i++) bv[i] = bv[i - 1] + Kulmaero(bv[i - 1], bv[i]);
+            var suu = new Kanava();
+            for (int i = 0; i < bt.Length; i++) suu.Lisaa(bt[i], bv[i]);
+            var sx = new Kanava().Lisaa(0, s0x).Lisaa(AvausS, sxA).Lisaa(KiriS, -0.55).Lisaa(OhitusS, -0.05).Lisaa(OhitusLoppuS, 0.40)
+                .Lisaa(NousuS, 0.12).Lisaa(SaapuminenS, 0.0).Lisaa(KosketusS, 0.0).Lisaa(KestoS, sfx);
+            var sy = new Kanava().Lisaa(0, s0y).Lisaa(AvausS, 0.05).Lisaa(KiriS, 0.06).Lisaa(OhitusS, 0.0).Lisaa(OhitusLoppuS, -0.02)
+                .Lisaa(NousuS, 0.15).Lisaa(SaapuminenS, 0.25).Lisaa(KosketusS, 0.0).Lisaa(KestoS, sfy);
+            var kw = new Kanava().Lisaa(0, 0).Lisaa(AvausS, 0).Lisaa(KiriS, 1).Lisaa(OhitusLoppuS, 1).Lisaa(NousuS, 0);
+
+            var jK = Jousi(kal, 5.0); var jB = Jousi(suu, 4.5);
+            var jX = Jousi(sx, 6.0); var jY = Jousi(sy, 6.0); var jW = Jousi(kw, 6.0);
+
+            double edLat = Alku.Lat, edLon = Alku.Lon, edEt = Alku.EtaisyysM;
+            for (int i = 0; i <= N; i++)
+            {
+                double t = i / (double)Hz;
+                double w = S((t - PakotusS) / (KestoS - PakotusS));
+                double lnd = jD[i] + (lnD.Arvo(t) - jD[i]) * w;
+                double k = Rajaa(jK[i] + (kal.Arvo(t) - jK[i]) * w, 0, 85);
+                double b = jB[i] + (suu.Arvo(t) - jB[i]) * w;
+                double x = Rajaa(jX[i] + (sx.Arvo(t) - jX[i]) * w, -0.8, 0.8);
+                double y = Rajaa(jY[i] + (sy.Arvo(t) - jY[i]) * w, -0.8, 0.8);
+                double katseW = Rajaa(jW[i] * (1 - w), 0, 1);
+
+                // Kone tässä näytteessä (koko edellisen näytteen etäisyydestä: heikko kytkös).
+                var q = Kohta(kp[i]);
+                siipi[i] = Siipivali(edEt);
+                kh[i] = PerusKorkeus(t) + Nosto(t, siipi[i]);
+                var P = Ecef(q.Lat, q.Lon, kh[i]);
+                double katse = katseW * kh[i];
+
+                double la = edLat, lo = edLon;
+                if (i == 0) { la = Alku.Lat; lo = Alku.Lon; lnd = Math.Log(Alku.EtaisyysM); k = Alku.Kallistus; b = Alku.Suuntima; katse = Alku.Katse; }
+                else if (i == N) { la = Loppu.Lat; lo = Loppu.Lon; lnd = Math.Log(Loppu.EtaisyysM); k = Loppu.Kallistus; b = Loppu.Suuntima; katse = Loppu.Katse; }
+                else Ratkaise(P, Math.Exp(lnd), k, b, katse, x, y, ref la, ref lo);
+                cLat[i] = la; cLon[i] = lo; cLnD[i] = lnd; cK[i] = k; cB[i] = b; cKatse[i] = katse; cKatseW[i] = katseW;
+                edLat = la; edLon = lo;
+
+                var m = Mittaa(t, P, q.Lat, q.Lon, kp[i], siipi[i], new Asento(la, lo, Math.Exp(lnd), k, b, katse));
+                mittaus[i] = m;
+                edEt = m.EtaisyysM;
+            }
+        }
+
+        /// <summary>Katsepiste (lat, lon), jolla piste P projisoituu ruudun kohtaan (x, y): Newton kahdella muuttujalla,
+        /// numeerinen Jacobi, lähtö edellisestä näytteestä, askelraja puolet näkymän koosta.</summary>
+        void Ratkaise(V P, double d, double k, double b, double katse, double x, double y, ref double la, ref double lo)
+        {
+            double h = d / R * 180.0 / Math.PI * 1e-3;
+            for (int it = 0; it < 16; it++)
+            {
+                if (!Arvioi(P, la, lo, d, k, b, katse, out double fx, out double fy)) break;
+                double ex = fx - x, ey = fy - y;
+                if (Math.Abs(ex) < 1e-7 && Math.Abs(ey) < 1e-7) break;
+                double hl = h / Math.Max(0.2, Math.Cos(la * Math.PI / 180.0));
+                Arvioi(P, la + h, lo, d, k, b, katse, out double ax, out double ay);
+                Arvioi(P, la, lo + hl, d, k, b, katse, out double ox, out double oy);
+                double j11 = (ax - fx) / h, j21 = (ay - fy) / h, j12 = (ox - fx) / hl, j22 = (oy - fy) / hl;
+                double det = j11 * j22 - j12 * j21;
+                if (Math.Abs(det) < 1e-18) break;
+                double dla = (-ex * j22 + ey * j12) / det, dlo = (-ey * j11 + ex * j21) / det;
+                double raja = d / R * 180.0 / Math.PI * 0.5;
+                double pit = Math.Sqrt(dla * dla + dlo * dlo);
+                if (pit > raja) { dla *= raja / pit; dlo *= raja / pit; }
+                la = Rajaa(la + dla, -89.0, 89.0); lo += dlo;
+            }
+        }
+
+        bool Arvioi(V P, double la, double lo, double d, double k, double b, double katse, out double x, out double y) =>
+            Projisoi(Kanta(new Asento(la, lo, d, k, b, katse)), P, out x, out y, out _);
+
+        Mittaus Mittaa(double t, V P, double qLat, double qLon, double osuus, double siipiM, Asento a)
+        {
+            var c = Kanta(a);
+            bool edessa = Projisoi(c, P, out double x, out double y, out double z);
+            var w = c.Silma - P;
+            double et = w.Pituus;
+            Kanta(qLat, qLon, out var n, out var pohj, out var ita);
+            double psi = SuuntimaReitilla(osuus) * Math.PI / 180.0;
+            var eteen = pohj * Math.Cos(psi) + ita * Math.Sin(psi);
+            double pysty = V.Dot(w, n);
+            var vaaka = w - n * pysty;
+            double alfa = vaaka.Pituus < 1e-6 ? 90.0 : Math.Acos(Rajaa(V.Dot(vaaka, eteen) / vaaka.Pituus, -1, 1)) * 180.0 / Math.PI;
+            double korotus = Math.Asin(Rajaa(pysty / Math.Max(1e-9, et), -1, 1)) * 180.0 / Math.PI;
+            bool nakyy = edessa && Math.Abs(x) <= 1 && Math.Abs(y) <= 1 && !Peitossa(c.Silma, P);
+            return new Mittaus
+            {
+                T = t, X = x, Y = y, Nakyy = nakyy, Koko = edessa ? siipiM / (2 * z * tanH) : 0, Alfa = alfa, Korotus = korotus,
+                EtaisyysM = et, KameraKorkeusM = c.Silma.Pituus - R,
+            };
+        }
+
+        /// <summary>Pallo peittää pisteen Q silmästä (jana leikkaa pallon ennen Q:ta).</summary>
+        static bool Peitossa(V silma, V q)
+        {
+            var d = q - silma;
+            double l = d.Pituus;
+            var u = d * (1.0 / l);
+            double bb = V.Dot(silma, u), cc = V.Dot(silma, silma) - R * R, disk = bb * bb - cc;
+            if (disk <= 0) return false;
+            double s1 = -bb - Math.Sqrt(disk);
+            return s1 > 0 && s1 < l - 50.0;
+        }
+
+        // ====================================================================================================================
+        // Julkinen rajapinta (Nappula)
+        // ====================================================================================================================
+
+        static double Lerp(double[] a, double t)
+        {
+            double x = Rajaa(t, 0, KestoS) * Hz;
+            int i = Math.Min(N - 1, (int)x);
+            return a[i] + (a[i + 1] - a[i]) * (x - i);
+        }
+
+        /// <summary>Kameran asento hetkellä t (PalloKierto.Kuvaa); lisa = koneen maastolisä (m), joka nostaa lähikuvien katsetta.</summary>
+        public Asento Kamera(double t, double lisa = 0.0)
+        {
+            double x = Rajaa(t, 0, KestoS) * Hz;
+            int i = Math.Min(N - 1, (int)x);
+            double f = x - i;
+            double lo = cLon[i] + Kulmaero(cLon[i], cLon[i + 1]) * f;
+            return new Asento(cLat[i] + (cLat[i + 1] - cLat[i]) * f, Normalisoi180(lo), Math.Exp(cLnD[i] + (cLnD[i + 1] - cLnD[i]) * f),
+                cK[i] + (cK[i + 1] - cK[i]) * f, Normalisoi(cB[i] + (cB[i + 1] - cB[i]) * f),
+                cKatse[i] + (cKatse[i + 1] - cKatse[i]) * f + lisa * (cKatseW[i] + (cKatseW[i + 1] - cKatseW[i]) * f));
+        }
+
+        /// <summary>Koneen reittiosuus 0–1 (monotoninen, 1 pysähdyksestä alkaen).</summary>
+        public double KoneenOsuus(double t) => Lerp(kp, t);
+        /// <summary>Koneen korkeus ilman maastolisää (m): peruskorkeus + symbolisen koon nosto.</summary>
+        public double KoneenKorkeus(double t) => Lerp(kh, t);
+        /// <summary>Symbolinen siipiväli (m).</summary>
+        public double Siipi(double t) => Lerp(siipi, t);
+        /// <summary>Maastolisän paino (nousun jälkeen 1, laskussa kohteen maahan).</summary>
+        public static double LisanPaino(double t) => S((t - 0.6) / 3.4) * (1 - S((t - 10.2) / (KosketusS - 10.2)));
+        /// <summary>Lento v3:n aikaan kuvattu hetki (Elo, nokka, kierrokset): kosketus 13,2 s ↔ v3:n 14,3 s.</summary>
+        public static double V3Aika(double t) =>
+            t <= 9.0 ? t : Math.Min(LennonV3.KestoS, 9.0 + (t - 9.0) * (LennonV3.KosketusS - 9.0) / (KosketusS - 9.0));
+
+        /// <summary>Mittaus näytteestä lähinnä hetkeä t (testit ja loki).</summary>
+        public Mittaus Mitta(double t) => mittaus[Math.Min(N, Math.Max(0, (int)Math.Round(t * Hz)))];
+
+        /// <summary>Pisteen (lat, lon, h) ruutupaikka hetkellä t (testit: lähtöpiste ja kohde kuvassa).</summary>
+        public bool Ruudussa(double t, double lat, double lon, double h, out double x, out double y)
+        {
+            var c = Kanta(Kamera(t));
+            var q = Ecef(lat, lon, h);
+            bool ok = Projisoi(c, q, out x, out y, out _);
+            return ok && Math.Abs(x) <= 1 && Math.Abs(y) <= 1 && !Peitossa(c.Silma, q);
+        }
+
+        // ---- Reitti ----
+
+        public (double Lat, double Lon) Kohta(double u) => LennonV3.Isoympyralla(Lat0, Lon0, Lat1, Lon1, Rajaa(u, 0, 1));
+        double OsuusNaytteesta(double t) => kp[Math.Min(N, Math.Max(0, (int)Math.Round(t * Hz)))];
+
         public double SuuntimaReitilla(double u)
         {
-            u = Math.Max(0, Math.Min(0.999, u));
+            u = Rajaa(u, 0, 0.999);
             var a = Kohta(u); var b = Kohta(Math.Min(1.0, u + 0.001));
             return LennonV3.Suuntima(a.Lat, a.Lon, b.Lat, b.Lon);
         }
 
-        /// <summary>Reitin isoympyrä pisteinä ennen kameran asentoa (käytävä ja maastokysely odotuksen alussa).</summary>
+        /// <summary>Reitin isoympyrä pisteinä (käytävä ja maastokysely odotuksen alussa).</summary>
         public static List<(double Lat, double Lon)> Isoympyra(double lat0, double lon0, double lat1, double lon1, int n = 96)
         {
             var p = new List<(double, double)>(n + 1);
@@ -243,9 +432,9 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Lennon laatat (LennonV3Kaytava.Laatta): ALKU (odotus odottaa ne kokonaan) = lähtökaupungin lähikuva Z7–Z9 ±1
-        /// ensimmäiseltä 25 km:ltä ja koko reitin matkanäkymä Z4–Z5 ±1; LOPUT = reitin päiden Z6 ±1 (10 %) ja kohteen lasku
-        /// Z7–Z9 ±1 viimeiseltä 80 km:ltä (40 km:n välein). Aloitusnäytön esilämmitys ottaa näistä Z8–Z9 (LennonV3Kaytava.Esilammitettavat).
+        /// Lennon laatat (LennonV3Kaytava.Laatta): ALKU (odotus odottaa) = koko reitin matkanäkymä Z4–Z5 ±1, lähtömaa Z6 ±1 ja
+        /// ohituksen lähikuva Z7–Z9 ±1 (reitin puolivälin ±15 km); LOPUT = kohteen lasku Z7–Z9 ±1 viimeiseltä 80 km:ltä ja
+        /// Z6 ±1 reitin loppukymmenykseltä. Aloitusnäytön esilämmitys ottaa näistä Z8–Z9 (ohitus ja kohde).
         /// </summary>
         public static List<LennonV3Kaytava.Laatta> Laatat(double lat0, double lon0, double lat1, double lon1)
         {
@@ -254,104 +443,78 @@ namespace Matkakirja
             double L = Math.Max(1000.0, LennonAikajana.ReittiM(lat0, lon0, lat1, lon1));
             void Lisaa(double u, bool alku, params int[] tasot)
             {
-                var q = LennonV3.Isoympyralla(lat0, lon0, lat1, lon1, Math.Max(0, Math.Min(1, u)));
+                var q = LennonV3.Isoympyralla(lat0, lon0, lat1, lon1, Rajaa(u, 0, 1));
                 foreach (int z in tasot) LennonV3Kaytava.Lisaa(tulos, nahty, q.Lat, q.Lon, z, 1, alku);
             }
-            for (int i = 0; i <= 4; i++) Lisaa(i * 6_250.0 / L, true, 7, 8, 9);
+            for (int i = -2; i <= 2; i++) Lisaa(OhitusOsuus + i * 7_500.0 / L, true, 7, 8, 9);
             for (int i = 0; i <= 40; i++) Lisaa(i / 40.0, true, 4, 5);
-            for (int i = 0; i <= 10; i++) { Lisaa(i * 0.01, false, 6); Lisaa(1 - i * 0.01, false, 6); }
+            for (int i = 0; i <= 4; i++) Lisaa(i * 0.02, true, 6);
+            for (int i = 0; i <= 10; i++) Lisaa(1 - i * 0.01, false, 6);
             for (int i = 0; i <= 2; i++) Lisaa(1 - i * 40_000.0 / L, false, 7, 8, 9);
             return tulos;
         }
 
-        // ---- Rajaus (pallomalli) ----
+        // ====================================================================================================================
+        // Pallomalli
+        // ====================================================================================================================
 
-        /// <summary>
-        /// Matkan rajaus: katsepisteen reittiosuus ja etäisyys, joilla reitin kohta <paramref name="alapaa"/> on ruudun
-        /// korkeudella <see cref="RajausAla"/> ja kohde <see cref="RajausYla"/> (kallistus <see cref="KallistusEtaisyydella"/>,
-        /// suuntima reitin suunta katsepisteessä, joten reitti on ruudun pystyakselilla). Etäisyys 30 km – 20 000 km.
-        /// </summary>
-        public (double Katse, double EtaisyysM) Rajaa(double alapaa)
+        struct V
         {
-            double lo = Math.Log(30_000.0), hi = Math.Log(20_000_000.0);
-            var ap = Kohta(alapaa);
-            for (int j = 0; j < 44; j++)
-            {
-                double ln = 0.5 * (lo + hi), d = Math.Exp(ln);
-                // Liian kaukana: alapää ei ehdi alareunaan edes katseen ollessa kohteessa (reitti on ruudulla lyhyt).
-                double y1 = RuudunY(1.0, d, ap.Lat, ap.Lon);
-                if (!double.IsNaN(y1) && y1 > RajausAla) { hi = ln; continue; }
-                double katse = KatseAlapaalle(alapaa, d);
-                double yA = RuudunY(katse, d, ap.Lat, ap.Lon), yK = RuudunY(katse, d, Lat1, Lon1);
-                // Liian lähellä: alapää putoaa horisontin taakse ennen alareunaa, tai kohde on yli yläosan.
-                bool kauemmas = double.IsNaN(yA) || yA > RajausAla + 0.01 || double.IsNaN(yK) || yK > RajausYla;
-                if (kauemmas) lo = ln; else hi = ln;
-            }
-            double dd = Math.Exp(hi);
-            return (KatseAlapaalle(alapaa, dd), dd);
+            public double X, Y, Z;
+            public V(double x, double y, double z) { X = x; Y = y; Z = z; }
+            public static V operator +(V a, V b) => new V(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+            public static V operator -(V a, V b) => new V(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
+            public static V operator *(V a, double s) => new V(a.X * s, a.Y * s, a.Z * s);
+            public static double Dot(V a, V b) => a.X * b.X + a.Y * b.Y + a.Z * b.Z;
+            public static V Cross(V a, V b) => new V(a.Y * b.Z - a.Z * b.Y, a.Z * b.X - a.X * b.Z, a.X * b.Y - a.Y * b.X);
+            public double Pituus => Math.Sqrt(X * X + Y * Y + Z * Z);
         }
 
-        /// <summary>Katsepisteen reittiosuus, jolla reitin kohta alapaa on korkeudella RajausAla etäisyydellä d.</summary>
-        double KatseAlapaalle(double alapaa, double d)
+        struct Kamerakanta { public V Silma, Eteen, Oikea, Ylos; }
+
+        static V Ecef(double lat, double lon, double h)
         {
-            var ap = Kohta(alapaa);
-            double lo = alapaa, hi = 1.0;
-            double y1 = RuudunY(hi, d, ap.Lat, ap.Lon);
-            if (!double.IsNaN(y1) && y1 > RajausAla) return hi;   // ei ehdi alareunaan: katse kohteeseen (Rajaa loitontaa)
-            for (int j = 0; j < 40; j++)
-            {
-                double m = 0.5 * (lo + hi);
-                double y = RuudunY(m, d, ap.Lat, ap.Lon);
-                // NaN = kameran takana tai horisontin takana: katse on jo liian edellä.
-                if (double.IsNaN(y) || y < RajausAla) hi = m; else lo = m;
-            }
-            return hi;
+            double f = lat * Math.PI / 180, l = lon * Math.PI / 180, r = R + h;
+            return new V(r * Math.Cos(f) * Math.Cos(l), r * Math.Cos(f) * Math.Sin(l), r * Math.Sin(f));
         }
 
-        /// <summary>Pisteen (lat, lon, maan pinta) pystykoordinaatti ruudulla (−1…1), kun katse on reitin osuudella u
-        /// etäisyydellä d; NaN = horisontin takana tai kameran takana.</summary>
-        public double RuudunY(double u, double d, double lat, double lon)
-        {
-            var q = Kohta(u);
-            double k = KallistusEtaisyydella(d) * Math.PI / 180, b = SuuntimaReitilla(u) * Math.PI / 180;
-            Kanta(q.Lat, q.Lon, out var ylos, out var pohj, out var ita);
-            var L = Mul(ylos, R);
-            var eteen = Add(Mul(pohj, Math.Cos(b)), Mul(ita, Math.Sin(b)));
-            var silmaan = Add(Mul(ylos, Math.Cos(k)), Mul(eteen, -Math.Sin(k)));
-            var silma = Add(L, Mul(silmaan, d));
-            var ylosK = Add(Mul(eteen, Math.Cos(k)), Mul(ylos, Math.Sin(k)));
-            Kanta(lat, lon, out var n, out _, out _);
-            var P = Mul(n, R);
-            var v = Add(P, Mul(silma, -1));
-            if (Dot(n, Mul(v, -1)) <= 0) return double.NaN;          // pallon takapuolella kamerasta
-            double z = -Dot(v, silmaan);
-            if (z <= 0) return double.NaN;
-            return Dot(v, ylosK) / z / Math.Tan(Fov * Math.PI / 360);
-        }
-
-        static void Kanta(double lat, double lon, out double[] ylos, out double[] pohj, out double[] ita)
+        static void Kanta(double lat, double lon, out V ylos, out V pohj, out V ita)
         {
             double f = lat * Math.PI / 180, l = lon * Math.PI / 180;
-            ylos = new[] { Math.Cos(f) * Math.Cos(l), Math.Cos(f) * Math.Sin(l), Math.Sin(f) };
-            pohj = new[] { -Math.Sin(f) * Math.Cos(l), -Math.Sin(f) * Math.Sin(l), Math.Cos(f) };
-            ita = new[] { -Math.Sin(l), Math.Cos(l), 0.0 };
+            ylos = new V(Math.Cos(f) * Math.Cos(l), Math.Cos(f) * Math.Sin(l), Math.Sin(f));
+            pohj = new V(-Math.Sin(f) * Math.Cos(l), -Math.Sin(f) * Math.Sin(l), Math.Cos(f));
+            ita = new V(-Math.Sin(l), Math.Cos(l), 0.0);
         }
 
-        static double[] Add(double[] a, double[] b) => new[] { a[0] + b[0], a[1] + b[1], a[2] + b[2] };
-        static double[] Mul(double[] a, double s) => new[] { a[0] * s, a[1] * s, a[2] * s };
-        static double Dot(double[] a, double[] b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+        /// <summary>Kamera kuten PalloKierto.LaskeAsento (pallolla, ilman maaston rakoa).</summary>
+        static Kamerakanta Kanta(Asento a)
+        {
+            Kanta(a.Lat, a.Lon, out var ylos, out var pohj, out var ita);
+            var L = ylos * (R + a.Katse);
+            double b = a.Suuntima * Math.PI / 180, k = a.Kallistus * Math.PI / 180;
+            var eteen = pohj * Math.Cos(b) + ita * Math.Sin(b);
+            var silmaan = ylos * Math.Cos(k) - eteen * Math.Sin(k);
+            var f = silmaan * -1.0;
+            var u = eteen * Math.Cos(k) + ylos * Math.Sin(k);
+            return new Kamerakanta { Silma = L + silmaan * a.EtaisyysM, Eteen = f, Ylos = u, Oikea = V.Cross(f, u) };
+        }
+
+        bool Projisoi(Kamerakanta c, V q, out double x, out double y, out double z)
+        {
+            var v = q - c.Silma;
+            z = V.Dot(v, c.Eteen);
+            if (z <= 1.0) { x = y = double.NaN; return false; }
+            x = V.Dot(v, c.Oikea) / (z * tanH);
+            y = V.Dot(v, c.Ylos) / (z * tanV);
+            return true;
+        }
 
         // ---- Apurit ----
 
-        static double Hermite5(double u, double h, double p0, double p1, double v0, double v1)
-        {
-            double u2 = u * u, u3 = u2 * u, u4 = u3 * u, u5 = u4 * u;
-            double h00 = 1 - 10 * u3 + 15 * u4 - 6 * u5, h10 = u - 6 * u3 + 8 * u4 - 3 * u5;
-            double h01 = 10 * u3 - 15 * u4 + 6 * u5, h11 = -4 * u3 + 7 * u4 - 3 * u5;
-            return h00 * p0 + h10 * h * v0 + h01 * p1 + h11 * h * v1;
-        }
-
-        static double Pehmea(double x) { x = x < 0 ? 0 : x > 1 ? 1 : x; return x * x * x * (x * (x * 6 - 15) + 10); }
+        static double S(double x) { x = x < 0 ? 0 : x > 1 ? 1 : x; return x * x * x * (x * (x * 6 - 15) + 10); }
+        static double Rajaa(double x, double a, double b) => x < a ? a : x > b ? b : x;
         static double Normalisoi(double a) { a %= 360.0; return a < 0 ? a + 360.0 : a; }
+        static double Normalisoi180(double a) { a = Normalisoi(a + 180.0); return a - 180.0; }
+        static double Kulmaero(double a, double b) => LennonV3.Kulmaero(a, b);
     }
 }
