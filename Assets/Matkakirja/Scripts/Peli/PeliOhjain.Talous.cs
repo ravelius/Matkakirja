@@ -105,5 +105,55 @@ namespace Matkakirja.Natiivi
             Debug.Log("MATKAKIRJA peli: jatketaan turvatallennuksesta, " + PeliApu.TilaTeksti(verkko, m.Tila));
             return null;
         }
+
+        // --- TESTIKOMENNOT (Natiiviseppä 27.9.: loppukortti laitteella ilman kahden vuorokauden peliä) ---
+
+        /// <summary>Testikomento 'koetila raha n': asettaa pelaajan kassan (≥ 0) ja tallentaa.</summary>
+        public string KoetilaRaha(string arvo)
+        {
+            if (matka == null) return "peli ei ole valmis";
+            if (!int.TryParse(arvo, out var n) || n < 0) return "käyttö: koetila raha <n>";
+            matka.Tila.Pelaaja.Raha = n;
+            Tallenna();
+            PaivitaNakyma();
+            Debug.Log($"MATKAKIRJA peli: koetila raha {n}");
+            return null;
+        }
+
+        /// <summary>
+        /// Testikomento 'koetila rahaton [vuoroja]': kassa 0 ja rahattomuuden varoitus alkanut niin, että
+        /// jäljellä on annettu määrä kuuden tunnin vuoroja (oletus 8 = 2 vrk; rahattomuuspalkki, Rahatilanne).
+        /// </summary>
+        public string KoetilaRahaton(string vuoroja)
+        {
+            if (matka == null) return "peli ei ole valmis";
+            int j = Talous.RahattomuusVuoroja;
+            if (vuoroja != null && (!int.TryParse(vuoroja, out j) || j < 0 || j > Talous.RahattomuusVuoroja))
+                return $"käyttö: koetila rahaton [0..{Talous.RahattomuusVuoroja}]";
+            var p = matka.Tila.Pelaaja;
+            p.Raha = 0;
+            p.Rahaton = new Rahattomuus { AlkuVuoro = matka.Tila.VuoroLaskuri - (Talous.RahattomuusVuoroja - j), Paiva = matka.Tila.Paiva() };
+            Tallenna();
+            PaivitaNakyma();
+            Debug.Log($"MATKAKIRJA peli: koetila rahaton, vuoroja jäljellä {j}");
+            return null;
+        }
+
+        /// <summary>
+        /// Testikomento 'koetila loppukortti': rahat loppu ja kaksi vuorokautta kulunut → matka päättyy heti
+        /// (Matka.TarkistaRahattomuus → PaataMatka); Tallenna laukaisee MatkaPaattyi (loppukortti).
+        /// </summary>
+        public string KoetilaLoppukortti()
+        {
+            if (matka == null) return "peli ei ole valmis";
+            var p = matka.Tila.Pelaaja;
+            p.Raha = 0;
+            p.Rahaton = new Rahattomuus { AlkuVuoro = matka.Tila.VuoroLaskuri - Talous.RahattomuusVuoroja, Paiva = matka.Tila.Paiva() };
+            matka.TarkistaRahattomuus(p);
+            Tallenna();
+            PaivitaNakyma();
+            Debug.Log("MATKAKIRJA peli: koetila loppukortti, matka " + (matka.Tila.MatkaPaattyi != null ? "päättyi" : "EI päättynyt"));
+            return matka.Tila.MatkaPaattyi != null ? null : "matka ei päättynyt (moninpeli?)";
+        }
     }
 }

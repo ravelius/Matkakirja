@@ -9,7 +9,8 @@
 //
 // Kytkin ja taso: Natiivi-UI:n Asetukset (UI/Asetukset.cs, webin avaimet):
 // Kytkin.Kertoja (web kertojaTila), Voima.Lukija (oletus 0,9, web puheVoima) ja
-// Kytkin.Aanimaisema (koko pelin mykistys). Asetukset.Muuttui päivittää soivan.
+// Kytkin.Aanimaisema (musiikin ja tehosteiden mykistys — EI luentaa, omistaja 27.9.2026 klo 15.5x).
+// Asetukset.Muuttui päivittää soivan. Kaiuttimen painallus: Lue/Soita/Esihae(…, pyynnosta: true).
 // Puhuu-tapahtuma (tosi alkaessa, epätosi loppuessa) on musiikin ja
 // ambienssin vaimennusta varten (web puheAlkoi/puheLoppui).
 //
@@ -68,8 +69,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Puhe alkoi (tosi) tai loppui/pysähtyi (epätosi): musiikin vaimennus.</summary>
         public event Action<bool> Puhuu;
 
-        /// <summary>Puheen taso: Voima.Lukija, nolla kun äänet on mykistetty (Kytkin.Aanimaisema).</summary>
-        public static float Voimakkuus => Asetukset.Paalla(Kytkin.Aanimaisema) ? Asetukset.Taso(global::Matkakirja.Natiivi.Voima.Lukija) : 0f;
+        /// <summary>
+        /// Puheen taso: Voima.Lukija. LUENTA KUULUU AINA PYYNNÖSTÄ (omistaja 27.9.2026 klo 15.5x, web #3422):
+        /// Kytkin.Aanimaisema mykistää vain musiikin ja tehosteet, ei luentaa.
+        /// </summary>
+        public static float Voimakkuus => Asetukset.Taso(global::Matkakirja.Natiivi.Voima.Lukija);
 
         // --- lukijaääni (Kehittäjälehden dialogi; web js/puhe.js + main.js) --------------------------
 
@@ -242,15 +246,19 @@ namespace Matkakirja.Natiivi
         void AsetuksetMuuttuivat(string nimi)
         {
             PaivitaVahvistus();
-            if (!Paalla && (puhuu || lataus != null) && !PulunPuhe(SoivaPersoona)) { Pysayta(0.3f); return; }
+            // Kertojan pois kytkeminen pysäyttää automaattisen luennan, ei pyynnöstä alkanutta (kaiutin) eikä Pulua.
+            if (!Paalla && (puhuu || lataus != null) && !PulunPuhe(SoivaPersoona) && !soiPyynnosta) { Pysayta(0.3f); return; }
             if (lahde != null && lahde.isPlaying && haivytys == null) lahde.volume = Kohdetaso;
         }
 
         /// <summary>
         /// AudioSource.volume soivalle: äänite = Voimakkuus (Lukija-taso), synteesi = 1 (taso on
-        /// vahvistimessa, jotta se saa ylittää ykkösen). Mykistettynä kumpikin 0.
+        /// vahvistimessa, jotta se saa ylittää ykkösen). Äänimaisema ei mykistä luentaa (omistaja 27.9. klo 15.5x).
         /// </summary>
-        float Kohdetaso => synteesi ? (Asetukset.Paalla(Kytkin.Aanimaisema) || PulunPuhe(SoivaPersoona) ? 1f : 0f) : Voimakkuus;
+        float Kohdetaso => synteesi ? 1f : Voimakkuus;
+
+        /// <summary>Soiva luenta alkoi pelaajan pyynnöstä (kaiutin): kertojan pois kytkeminen ei katkaise sitä.</summary>
+        bool soiPyynnosta;
 
         void PaivitaVahvistus()
         {
@@ -294,9 +302,11 @@ namespace Matkakirja.Natiivi
         /// loppu kutsutaan, kun äänite soi loppuun (ei, jos se pysäytetään tai
         /// korvataan). Palauttaa false, jos luennat on kytketty pois tai url puuttuu.
         /// </summary>
-        public bool Soita(string url, float viiveS = 0, Action loppu = null)
+        public bool Soita(string url, float viiveS = 0, Action loppu = null, bool pyynnosta = false)
         {
-            if (!Paalla || string.IsNullOrEmpty(url)) return false;
+            // pyynnosta: pelaaja painoi kaiutinta — soi kertojakytkimestä riippumatta (web lukija: ei porttia).
+            if ((!Paalla && !pyynnosta) || string.IsNullOrEmpty(url)) return false;
+            soiPyynnosta = pyynnosta;
             AsetaIstunto();
             PuraTauko();
             int oma = ++tunnus;
@@ -316,9 +326,11 @@ namespace Matkakirja.Natiivi
         /// voima vahvistimessa. Muuten kuten Soita. Liian pitkä teksti katkaistaan virkkeen rajalta
         /// workerin kattoon.
         /// </summary>
-        public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null)
+        public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null, bool pyynnosta = false)
         {
-            if (!Paalla && !PulunPuhe(persoona)) return false;
+            // pyynnosta: kaiuttimen painallus lukee aina (omistaja 27.9.2026 klo 15.5x); automaattista ohjaa Kertoja.
+            if (!Paalla && !PulunPuhe(persoona) && !pyynnosta) return false;
+            soiPyynnosta = pyynnosta;
             return Syntetisoi(teksti, persoona, Lukijaaani.OletusLohko(persoona), true, viiveS, loppu);
         }
 
@@ -331,7 +343,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public bool Nayte(string persoona)
         {
-            if (!Asetukset.Paalla(Kytkin.Aanimaisema)) return false;
+            // Näyte on aina pelaajan pyyntö; äänimaisema ei mykistä luentaa (omistaja 27.9.2026 klo 15.5x).
+            soiPyynnosta = true;
             return Syntetisoi(Lukijaaani.NayteTeksti(persoona), persoona, null, false, 0, null);
         }
 
@@ -418,9 +431,9 @@ namespace Matkakirja.Natiivi
         /// pala haettiin vasta edellisen loputtua ja väliin jäi koko generointi (~5 s / 330 mrk, mitattu 27.9.).
         /// Sama avain ja tiedosto kuin Luessa; kesken oleva esihaku ei lataudu kahdesti (Lue odottaa sitä).
         /// </summary>
-        public void Esihae(string teksti, string persoona = "kertoja")
+        public void Esihae(string teksti, string persoona = "kertoja", bool pyynnosta = false)
         {
-            if ((!Paalla && !PulunPuhe(persoona)) || string.IsNullOrWhiteSpace(teksti)) return;
+            if ((!Paalla && !PulunPuhe(persoona) && !pyynnosta) || string.IsNullOrWhiteSpace(teksti)) return;
             persoona ??= "kertoja";
             teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
             // Samat palat kuin Lue tekee (palavirta), muuten esihaku menisi hukkaan ja pala generoitaisiin kahdesti.
