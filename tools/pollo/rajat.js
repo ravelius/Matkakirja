@@ -231,6 +231,87 @@ export function siivoaTeksti(teksti, katto = KONTEKSTIN_KATTO) {
   return puhdas.length > katto ? `${puhdas.slice(0, katto - 1)}…` : puhdas;
 }
 
+/*
+ * XAI-PUHETAGIT (omistaja 27.9.2026: huokaus, nauru, innostus).
+ *
+ * xAI:n puhemoottori ymmärtää tekstin seassa pistetageja ([pause]) ja
+ * kääretageja (<fast>…</fast>). Pulu merkitsee niitä vastaukseensa
+ * (worker.js PUHETAGIKEHOTE), ja peli lähettää tagillisen tekstin
+ * luettavaksi. Palvelin ei silti luota tekstiin: vain alla luetellut
+ * tagit menevät xAI:lle, kaikki muu tagin näköinen poistetaan.
+ * siivoaTeksti ei koske hakasulkeisiin eikä kulmasulkeisiin, joten
+ * suodatus on tämän funktion yksin.
+ *
+ * KÄÄREET TASAPAINOON: peli pilkkoo Pulun puheen virkerajoilta
+ * paloiksi, joten <fast> voi jäädä ilman sulkuaan (tai sulku ilman
+ * avaustaan). Pariton puolisko poistetaan; ehjä pari säilyy.
+ *
+ * OPENAI-MOOTTORI (gpt-4o-mini-tts) ei tunne tageja ja lausuisi ne
+ * kirjaimellisesti, joten sille `sallitut: false` poistaa KAIKKI.
+ *
+ * Välit siivotaan vain poistetun tagin kohdalta: tagiton teksti pysyy
+ * merkilleen samana, joten ennen tätä säilötyt äänet pysyvät osumina
+ * (puheenAvain lasketaan suodatetusta tekstistä).
+ */
+export const PUHETAGIT_PISTE = ['pause', 'long-pause', 'sigh', 'laugh'];
+export const PUHETAGIT_KAARE = ['fast'];
+
+/** Tagin näköinen merkintä. [[käsite]] ei ole tagi. */
+const PUHETAGI = /(?<!\[)\[([a-z-]{2,20})\](?!\])|<(\/?)([a-z-]{1,20})>/g;
+/** Poistetun tagin paikkamerkki (ohjausmerkki: siivoaTeksti on jo poistanut ne). */
+const POISTETTU = '\u0000';
+/** Peräkkäiset poistetut tagit väleineen yhtenä kohtana. */
+const POISTOKOHTA = /[ \t]*(?:\u0000[ \t]*)+/g;
+
+/**
+ * Poistettujen tagien paikkamerkit pois niin, ettei jälkeen jää
+ * tuplaväliä, väliä rivin alkuun eikä väliä välimerkin eteen
+ * ("Pulu. [x] No." → "Pulu. No."). Muualla tekstiin ei kosketa.
+ */
+function siivoaPoistokohdat(teksti) {
+  return teksti.replace(POISTOKOHTA, (kohta, alku, kaikki) => {
+    const edellinen = kaikki[alku - 1];
+    const seuraava = kaikki[alku + kohta.length];
+    if (edellinen === undefined || edellinen === '\n') return '';
+    if (seuraava === undefined || seuraava === '\n' || /[.,;:!?…]/.test(seuraava)) return '';
+    return /[ \t]/.test(kohta) ? ' ' : '';
+  });
+}
+
+/**
+ * Suodattaa puhetekstin tagit.
+ *
+ * @param {string} teksti luettava teksti (jo siivoaTeksti-siivottu)
+ * @param {{sallitut?: boolean}} asetukset `sallitut: false` poistaa
+ *   myös sallitut tagit (OpenAI-moottori).
+ * @returns {string}
+ */
+export function suodataPuhetagit(teksti, { sallitut = true } = {}) {
+  const raaka = String(teksti ?? '').replaceAll(POISTETTU, '');
+  // Ensin kääreiden parit: kohdat, joiden tagi saa jäädä.
+  const pidetaan = new Set();
+  if (sallitut) {
+    const auki = new Map();
+    for (const osuma of raaka.matchAll(/<(\/?)([a-z-]{1,20})>/g)) {
+      const [, sulku, nimi] = osuma;
+      if (!PUHETAGIT_KAARE.includes(nimi)) continue;
+      // Uusi avaus ennen sulkua syrjäyttää parittoman edeltäjänsä.
+      if (!sulku) auki.set(nimi, osuma.index);
+      else if (auki.has(nimi)) {
+        pidetaan.add(auki.get(nimi));
+        pidetaan.add(osuma.index);
+        auki.delete(nimi);
+      }
+    }
+  }
+  const merkitty = raaka.replace(PUHETAGI, (tagi, piste, sulku, kaare, kohta) => {
+    if (sallitut && piste && PUHETAGIT_PISTE.includes(piste)) return tagi;
+    if (sallitut && kaare && pidetaan.has(kohta)) return tagi;
+    return POISTETTU;
+  });
+  return merkitty === raaka ? raaka : siivoaPoistokohdat(merkitty);
+}
+
 /**
  * Keskusteluhistorian siivous: vain tunnetut roolit, rajattu määrä ja
  * rajattu pituus. Viimeiset viestit ovat tärkeimmät, joten ylimäärä
@@ -473,6 +554,9 @@ export function luoJatkoSuodatin() {
 export function poimiEhdotukset(teksti, maara = 3) {
   return String(teksti ?? '')
     .split('\n')
+    // Kysymysrivit ovat nappeja, eivät puhetta: puhetagit pois aina
+    // (kehote kieltää ne näiltä riveiltä, tämä on varmistus).
+    .map((rivi) => suodataPuhetagit(rivi, { sallitut: false }))
     .map((rivi) => rivi.trim().replace(/^[-*•\d.)\s]+/, '').trim())
     .filter((rivi) => rivi.length > 6 && rivi.length <= 120 && rivi.includes('?'))
     .slice(0, maara);

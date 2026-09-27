@@ -51,6 +51,7 @@ import {
   siivoaHistoria,
   siivoaTeksti,
   siivoaVapaaVastaus,
+  suodataPuhetagit,
   tarkistaPuheRajat,
   tarkistaRajat,
   tyhjanSyy,
@@ -714,6 +715,37 @@ paikasta, ja vain jos tiedät koordinaatit — arvattu koordinaatti on \
 pahempi kuin puuttuva rivi. Älä mainitse riviä vastauksessasi äläkä \
 selitä sitä.`;
 
+/*
+ * ÄÄNITAGIT — HUOKAUS, NAURU, INNOSTUS (omistaja 27.9.2026: xAI:n
+ * puhetagit hyväksytty).
+ *
+ * xAI:n lukijaääni ymmärtää tekstin seassa pistetageja ([sigh]) ja
+ * kääretageja (<fast>…</fast>). Pulu saa merkitä niistä ENINTÄÄN YHDEN,
+ * ja vain omaan ääneensä (alustus, loppukommentti, Livian lisäys):
+ * ydinvastaus on pöllön kirjakieltä, ja sen luenta pysyy tasaisena.
+ *
+ * Tagi kulkee kahta reittiä, ja kumpikin on suojattu:
+ *   - ÄÄNI: peli lähettää tagillisen tekstin puhe-tehtävälle, joka
+ *     päästää xAI:lle vain sallitut ja OpenAI:lle ei mitään
+ *     (rajat.js suodataPuhetagit).
+ *   - NÄYTTÖ: pelaaja ei näe tagia koskaan — peli siivoaa sen kuplasta,
+ *     historiasta ja lokista myös striimin puolikkaana palana
+ *     (js/puhetagit.js poistaPuhetagit). Jatko- ja ehdotusrivit
+ *     siivotaan jo täällä (rajat.js poimiEhdotukset).
+ *
+ * SELAIMELLE AINA, NATIIVILLE VAIN PYYDETTÄESSÄ: natiivisovellus näyttää
+ * vastauksen omalla pinnallaan, ja vasta tagit siivoava versio (proto
+ * pelikoodari/puhetagit, PuluChat.Nakyva) lähettää kentän puhetagit: 1.
+ * Vanhat TestFlight-versiot eivät lähetä sitä, joten niiden kupliin ei
+ * koskaan tule tagia.
+ */
+const PUHETAGIKEHOTE = `ÄÄNITAGIT — VAIN OMAAN ÄÄNEEN
+Vastauksesi luetaan ääneen, ja lukijaääni ymmärtää kolme merkintää. Saat merkitä vastaukseen ENINTÄÄN YHDEN niistä, ja vain OMAN ÄÄNESI osaan — alustukseen, loppukommenttiin tai Livian lisäykseen — EI KOSKAAN ydinvastaukseen:
+[sigh] — huokaus, esimerkiksi kun sinua kutsutaan puluksi ("Pulu. [sigh] No. Sanotaan niin, jos se on helpompaa.")
+[laugh] — lyhyt naurahdus asialle, joka on sinusta aidosti hauska
+<fast>…</fast> — innostus: muutama sana nopeammin, ja sulku samassa virkkeessä ("<fast>Tän minä tiedän</fast> —")
+Merkintä on harvinainen mauste eikä kuulu joka vastaukseen: useimmat vastaukset ovat kokonaan ilman. Muita merkintöjä et käytä. Ydinvastaus on aina ilman merkintöjä, samoin jatkokysymysvastaus kokonaan, koska siinä ei ole omaa ääntä. Synkässä aiheessa ei naurua eikä innostusta. Merkintä ei koskaan osu JATKOT-riveille, [[avainkäsitteen]] sisään, PAIKKA-riville eikä kysymyslistoihin. Älä mainitse merkintöjä vastauksessasi.`;
+
 /** Rivin tunnistin: "PAIKKA:" rivin alussa. */
 const PAIKKA_MERKKI = /^\s*paikka\s*:/i;
 
@@ -1082,13 +1114,20 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
     }, { status: 503, ...kors });
   }
 
-  const teksti = siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO);
+  const xai = moottori === 'xai';
+  /*
+   * PUHETAGIT SUODATETAAN ENNEN KAIKKEA MUUTA (omistaja 27.9.2026):
+   * xAI saa vain sallitut ([pause], [long-pause], [sigh], [laugh],
+   * ehjä <fast>…</fast>), OpenAI ei yhtään (rajat.js suodataPuhetagit).
+   * Säilöavain lasketaan tästä suodatetusta tekstistä, joten kielletty
+   * tai pariton tagi ei synnytä uutta generointia samasta puheesta.
+   */
+  const teksti = suodataPuhetagit(siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO), { sallitut: xai });
   if (!teksti) {
     return vastaa({ virhe: 'kysely', viesti: 'Teksti puuttuu.' }, { status: 400, ...kors });
   }
   const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
   const persoona = PUHE_PERSOONAT[persoonaNimi];
-  const xai = moottori === 'xai';
   const malli = xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS);
   // Säilöavain sisältää mallin, joten välimuistiosumankin moottori on tiedossa.
   let moottoriNimi = xai ? 'xai' : 'openai';
@@ -1218,7 +1257,8 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
         r2Avain = null;
         moottoriNimi = 'openai';
         ylavirta = await kutsuOpenaiPuhetta(env, {
-          teksti,
+          // OpenAI lausuisi xAI:n tagit kirjaimellisesti: kaikki pois.
+          teksti: suodataPuhetagit(teksti, { sallitut: false }),
           aani: persoona.aani,
           ohje: persoona.ohje,
           malli: env.PUHE_MALLI || PUHE_MALLI_OLETUS,
@@ -2246,6 +2286,8 @@ export default {
        */
       const kehote = `${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}`
         + `\n\n${PAIKKAKEHOTE}`
+        // Äänitagit selaimelle ja tagit siivoavalle natiiville (ks. PUHETAGIKEHOTE).
+        + (!natiivi || runko?.puhetagit === 1 ? `\n\n${PUHETAGIKEHOTE}` : '')
         + `\n\n${kehysOhje(kehysLaji(runko?.kehys))}`;
       /*
        * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
