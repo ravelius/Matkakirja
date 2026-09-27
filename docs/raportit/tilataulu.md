@@ -2,11 +2,11 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-27 17:47 EEST
+**Päivitetty:** 2026-09-27 18:00 EEST
 
 ## 1) Sessiot — uusi tili, kaikki 11 session id:tä tiedossa
 
-Viikko (all models) **63 %** (nollautuu ma 28.9. klo 09:59), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **LAITETESTAAJA YLITTI 70 % (76 %) — ilmoitettu Fablelle 17:47.** Postivahti (self) 72 %, valmistautuu luovutukseen.
+Viikko (all models) **63 %** (nollautuu ma 28.9. klo 09:59), viikko (Fable) **76 %**. Kaukana kynnyksistä 93 %/95 %/97 %. **Postivahti (self) luovuttaa 72 %:ssa Fablen pyynnöstä (ei odotettu 80 %:iin) — luovutus docs/raportit/viesti-postivahti-luovutus-20260927-b.md, pyydetään nollausta.** Laitetestaaja pysyy yli (76 %), Fable käskenyt nollaukseen B13:n jälkeen.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
@@ -28,7 +28,7 @@ Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkai
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
-- **Levyraja 80 Gt.** Nykytila 98 Gi vapaana, puskuri ~18 Gi, laskee edelleen — seurataan tiiviisti.
+- **Levyraja 80 Gt.** Nykytila 97 Gi vapaana, puskuri ~17 Gi, laskee edelleen. Suurin kasvaja tarkistettu 18:00: wt/ 40G, proto-3d/lokit 43G — seurataan tiiviisti, ilmoita Fablelle jos puskuri <15 Gi.
 - **UUSI (Fable 12:5x): samireivinen-omisteiset (Codex-tili) tiedostot/worktreet EI poisteta, ei pyydetä rooleilta poistamaan — ilmoitus Fablelle, poistopyyntö menee Codexille postilaatikon kautta.**
 - Worktree-sallinnot mainissa (PR #3329): git worktree remove/prune, --poista, simctl erase/delete — roolit poistavat itse omat mergetyt worktreensä.
 - SendMessage-rajan täyttyessä (~10/vuoro) käytä varakanavaa `mcp__ccd_session_mgmt__send_message`.
