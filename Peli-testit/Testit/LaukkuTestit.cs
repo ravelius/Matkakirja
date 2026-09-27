@@ -33,7 +33,7 @@ namespace Matkakirja.Peli.Testit
             var m0 = UusiPeli();
             var d = Laukku.Rakenna(m0, Nimet, Julisteet);
             Oleta.Sama("Pariisi", d.Sijainti);
-            Oleta.Sama("£" + Vakiot.AloitusRaha, d.Kukkaro);
+            Oleta.Sama(Vakiot.AloitusRaha + "\u00A0£", d.Kukkaro);
             Oleta.Sama(1, d.Tietaja.Taso);
             Oleta.Tosi(d.Tietaja.SeuraavaRaja > 0 && d.Tietaja.SeuraavaNimi != null, "seuraava taso");
             Oleta.Sama("https://matkakirja.app/assets/tietaja/taso-01.jpg", d.Tietaja.AvatarUrl);
@@ -118,7 +118,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void JsonOnJasennettavissa()
         {
             var o = MiniJson.Objekti(MiniJson.Jasenna(Laukku.Json(Laukku.Rakenna(UusiPeli(), Nimet, Julisteet))));
-            Oleta.Sama("£" + Vakiot.AloitusRaha, MiniJson.Teksti(o, "kukkaro"));
+            Oleta.Sama(Vakiot.AloitusRaha + "\u00A0£", MiniJson.Teksti(o, "kukkaro"));
             Oleta.Sama(7.0, MiniJson.Luku(o, "kateissa"));
             Oleta.Sama("null", Laukku.Json(null));
         }
