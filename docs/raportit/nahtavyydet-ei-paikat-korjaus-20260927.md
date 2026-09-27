@@ -97,13 +97,47 @@ nostoihin automaattisesti (myös natiivin sisältöpaketin vientiin,
 tools/vienti/karttavalot.mjs ja elava-kartta.mjs lukevat samaa
 kohde.tyyppi-kenttää). Tämä oli puhtaasti dataongelma.
 
-## 7. Laajempi jäljellä oleva työ
+## 7. Laajempi tarkistus: koko loppuaineisto käyty läpi (27.9. myöhemmin samana päivänä)
 
-1577 kohteesta olen nyt käynyt läpi 81 (alkuperäinen raportti) + 130
-(nosto+kartalla-audit) = 211 kohdetta yksityiskohtaisesti. Loput ~1366
-kohdetta (joilla ei ole nostoa) ovat todennäköisesti aidosti rakennuksia
-(oletusarvo), mutta niitä EI ole erikseen käyty läpi rivi riviltä — jos
-omistaja haluaa täyden varmuuden koko 1577 kohteen joukosta, seuraava erä
-voisi käydä läpi nimet joilla ei ole nostoa mutta jotka voisivat silti olla
-ei-paikkoja (ei vielä tarinasisältöä kirjoitettu). Tämä on iso lisätyö
-(uuden tarinasisällön kirjoittaminen jokaiselle), joten ehdotan omaa erää.
+Omistajan sääntö koskee koko aineistoa, joten loput 1376 kohdetta (joilla
+ei ole `nosto`-kenttää — kohta 7:n aiempi arvio 1366 tarkentui 1376:ksi
+tarkassa laskennassa) käytiin läpi kymmenen Sonnet-agentin parvella,
+~140 kohteen erissä. Menetelmä: nimi + pelin oma kuvausteksti
+ensisijaisena päätösperusteena; R2-miniatyyrikuva
+(`https://media.matkakirja.app/kohtaamiset/miniatyyrit/<tunnus>.png`)
+tarkistettaisiin vain aidosti epäselvissä tapauksissa — yhtään
+kuvahakua ei koko 1376 kohteen sarjassa tarvittu, koska nimi/teksti
+riitti joka kerta.
+
+**Tulos: 4 ei-paikkaehdokasta 1376:sta.**
+
+| Kaupunki | Kohde | Ehdotettu tyyppi | Peruste | Varmuus |
+|---|---|---|---|---|
+| irkutsk | Jäänmurtaja Angara | esine | nimetty yksittäinen jäänmurtaja-alus | keski |
+| santacruz | Avión Pirata | esine | puistossa seisova yksittäinen lentokone | korkea |
+| vladivostok | Sukellusvene S-56 | esine | museosukellusvene kuivalla maalla | korkea |
+| whitehorse | SS Klondike | esine | museoksi säilötty siipiratasalus | korkea |
+
+**Omistajan päätös (Fablen välittämänä 27.9.): nämä neljä ovat kiinteällä
+paikalla olevia museoaluksia/-koneita, joissa voi käydä — ne PYSYVÄT
+PAIKKOINA nähtävyyksinä. Ei tyyppimuutosta, ei uutta tarinasisältöä.**
+
+Rajatapaukset jotka agentit harkitsivat mutta pitivät PAIKKANA sääntöjen
+mukaisesti (ei vaadi toimenpiteitä, mainittu avoimuuden vuoksi): isot
+muistomerkit/patsaat/obeliskit, mausoleumit ja hauta-alueet, henkilön
+nimeä kantavat RAKENNUKSET (esim. Tippu Tipin talo — kohde on talo, ei
+henkilö), sekä paikat joiden tekstissä korostuu tunnelma/tapa mutta jotka
+ovat silti fyysinen rakennus tietyssä paikassa (esim. Café Hafa).
+
+**Miksi näin vähän verrattuna kohdan 3 42/130-erään:** kohdan 3 joukko
+oli nimenomaan kohteet joilla JO oli kirjoitettu tarinasisältö (nosto) —
+sisältötiimi oli siis jo tietoisesti päättänyt niistä tarinapalan, mutta
+unohtanut päivittää tyyppi-kentän. Tämä 1376 kohteen joukko on vielä
+kirjoittamaton aineisto, joka osoittautui lähtökohtaisesti olevan lähes
+puhtaasti oikeita rakennuksia/paikkoja jo nimeämisvaiheessa.
+
+**Kattavuus: koko 1587 kohteen KAUPUNKIKARTAT-aineisto on nyt käyty läpi**
+(211 aiemmin yksityiskohtaisesti + 1376 agenttiparvella = kaikki).
+Työtiedostot (10 erä-JSON:ia + koontiraportti) olivat tilapäisessä
+kansiossa `/Users/Shared/Claude/wt/sisaltokirjuri-nahtavyys-luokittelu-erat/`
+tämän raportin kirjoitushetkellä — poistettu tämän PR:n pushauksen jälkeen.
