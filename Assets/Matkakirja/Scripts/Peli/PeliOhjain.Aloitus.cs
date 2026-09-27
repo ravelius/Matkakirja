@@ -99,6 +99,8 @@ namespace Matkakirja.Natiivi
             // Varareitti: zoomi 2,5 s + lento + vara (valmis tulee Nappulalta); löydös 84: lisäksi musta verho (häivytys
             // mustaan ja takaisin + latausodotus enintään Nappula.MustanKatto).
             ajoLoppuu = Time.unscaledTime + 2.5f + kesto + AjonVara + 2f + Nappula.MustanKatto + 2f * Mustaverho.Haivytys;
+            // Lento v3 (Natiiviseppä 27.9.): odotus enintään 10 s + 15 s:n lento, ei verhoa.
+            if (Nappula.LentoV3) ajoLoppuu = Time.unscaledTime + Nappula.LentoV3VaraS + AjonVara;
             try
             {
                 nappula.AloitusLento(AloitusLat, AloitusLon, b.Value.Lat, b.Value.Lon, kesto,

@@ -42,14 +42,18 @@ namespace Matkakirja.Natiivi
         {
             if (matka == null) return;
             int saldo = matka.Tila.Pelaaja.Raha;
-            int muutos = saldo - rahaNahty;
+            // Pelistreakin palkkio näkyy omana kuplanaan (Pelistreak), ei kukkaroleimana (web: ei stamp-leimaa).
+            int muutos = saldo - rahaNahty - streakPalkkio;
             var syy = rahaSyy;
             rahaNahty = saldo;
             rahaSyy = null;
-            if (muutos == 0) return;
-            // Teon oma tapahtumarivi punnista (matkan hinta, pankin apu, löytöpalkkio) on tarkin syy.
-            var rivi = tapahtumat.Concat(kysymysLisat).LastOrDefault(t => t != null && t.Contains("punta"));
-            syy ??= rivi ?? RahaSyyt.Oletus;
+            streakPalkkio = 0;
+            if (muutos == 0) { paivakuluSyy = null; return; }
+            // Teon oma tapahtumarivi punnista (matkan hinta, löytöpalkkio) on tarkin syy (ei putken lokiriviä).
+            var rivi = tapahtumat.Concat(kysymysLisat).LastOrDefault(t => t != null && t.Contains("punta") && t != streakRivi);
+            // Päiväkulu (talouden vaihe 1): teon oma punta-rivi on tarkempi, jos sama teko maksoi muutakin.
+            syy ??= rivi ?? paivakuluSyy ?? RahaSyyt.Oletus;
+            paivakuluSyy = null;
             try { RahaMuuttui?.Invoke(muutos, syy, saldo); } catch (Exception e) { UnityEngine.Debug.LogException(e); }
         }
     }

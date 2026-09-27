@@ -37,7 +37,6 @@ namespace Matkakirja.Peli.Testit
             k.LaattaTassa = c => Laatat.ContainsKey(c);
             k.LaattaKaantyy = c => Laatat.Remove(c, out var t) ? t : null;
             k.AarreLukittuu = c => Laatat.Remove(c);
-            k.Matka.Tavoitteet = () => Laatat.Keys.ToList();
         }
     }
 
@@ -300,7 +299,7 @@ namespace Matkakirja.Peli.Testit
                 Vertaa("raha:" + (int)raha);
             }
             var kk = new KyselyKasikirjoitus();
-            for (int n = 0; n < maxTeot && m.Tila.VuoroLaskuri <= vuorot; n++)
+            for (int n = 0; n < maxTeot && m.Tila.VuoroLaskuri <= vuorot && m.Tila.Vaihe != Vaihe.Ohi; n++)
             {
                 Vertaa(kk.Seuraava(ky));
                 if (tallennaVali > 0 && (n + 1) % tallennaVali == 0)
@@ -468,7 +467,7 @@ namespace Matkakirja.Peli.Testit
             var q = m.Tila.Kysely.Kysymys;
             Oleta.Tosi(q.Tutkimus && m.Tila.Vaihe == Vaihe.Kysymys, "tutkimus auki");
             Oleta.Tosi(ky.Vastaa(q.Oikea).Ok, "vastaus");
-            Oleta.Sama(350, m.Tila.Pelaaja.Raha, "löytöpalkkio");
+            Oleta.Sama(Vakiot.AloitusRaha + KysymysVakiot.TutkimusPalkkio, m.Tila.Pelaaja.Raha, "löytöpalkkio");
             Oleta.Sama(Kokemus.Tutkiminen, m.Tila.Pelaaja.Xp);
             Oleta.Tosi(!ky.Vastaa(q.Oikea).Ok, "toista vastausta ei oteta");
             Oleta.Tosi(ky.Sulje().Ok, "sulje");
@@ -528,9 +527,9 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!q.Piilotetut.Contains(q.Oikea), "oikea ei piiloon");
             Oleta.Tosi(!ky.Vastaa(q.Piilotetut[0]).Ok, "piilotettuun ei voi vastata");
             Oleta.Tosi(ky.Kaveriapu().Ok && !ky.Kaveriapu().Ok, "kaveriapu kerran");
-            Oleta.Sama(300 - 40 - 80 - 25, m.Tila.Pelaaja.Raha);
+            Oleta.Sama(Vakiot.AloitusRaha - 40 - 80 - 25, m.Tila.Pelaaja.Raha);
             ky.Vastaa(q.Oikea);
-            Oleta.Sama(300 - 145 + KysymysVakiot.VaikeaPalkkio, m.Tila.Pelaaja.Raha);
+            Oleta.Sama(Vakiot.AloitusRaha - 145 + KysymysVakiot.VaikeaPalkkio, m.Tila.Pelaaja.Raha);
             Oleta.Sama(Kokemus.VaikeaVastaus, m.Tila.Pelaaja.Xp);
             Oleta.Sama("isoAarre", q.Loyto);
             Oleta.Sama(1, m.Tila.Pelaaja.Kysytty);
@@ -578,8 +577,8 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(string.Join(",", q1.Piilotetut), string.Join(",", q2.Piilotetut));
             Oleta.Sama(m.Tila.Kysely.Kaytetyt.Count, m2.Tila.Kysely.Kaytetyt.Count);
             // Versio 1 (erä 1) latautuu yhä.
-            Oleta.Tosi(json.Contains("\"versio\":5"), "tallennusversio 4");
-            var v1 = json.Replace("\"versio\":5", "\"versio\":1");
+            Oleta.Tosi(json.Contains("\"versio\":7"), "tallennusversio 7");
+            var v1 = json.Replace("\"versio\":7", "\"versio\":1");
             v1 = v1.Substring(0, v1.IndexOf(",\"kysely\":", StringComparison.Ordinal)) + "}";
             var vanha = Pelitila.FromJson(v1);
             Oleta.Sama(0, vanha.Kysely.Kaytetyt.Count);

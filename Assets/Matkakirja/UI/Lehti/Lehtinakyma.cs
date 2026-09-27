@@ -549,9 +549,12 @@ namespace Matkakirja.Natiivi
                     t.enableRichText = true;
                 }
             }
-            if (!string.IsNullOrEmpty(a.MatkailijalleKappale)) Matkailijalle(s, a);
-            // Mediarivi etusivun lopussa (web #arrival-media-kaupunki): maan radio, kielinäyte ja vanha tallenne.
-            if (lehti.Laji == LehtiLaji.Kaupunki) Mediarivi.Piirra(s, lehti.Omistaja);
+            // Avauskortti (web v2296, omistaja 27.9.2026): kaupunkilehden etusivulla ei enää Matkailijalle-lohkoa (turisti-info
+            // on avauskortissa) eikä radioriviä (radio on kartussissa, web RADIO_KAUPUNKILEHDESSA = false); tilalle lehden
+            // osiohakemisto (Lehtiosiot, web js/lehtiosiot.js). Aluelehdillä Matkailijalle jää ennalleen.
+            if (lehti.Laji == LehtiLaji.Kaupunki)
+                Lehtiosiot.Piirra(s, lehti, sivu => Kaanna(sivu), nosto => { Sulje(); nosto.Avaa(); });
+            else if (!string.IsNullOrEmpty(a.MatkailijalleKappale)) Matkailijalle(s, a);
         }
 
         /// <summary>

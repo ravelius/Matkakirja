@@ -33,6 +33,11 @@ namespace Matkakirja.Natiivi
             public double VahintaanLat = -90;
             public Func<Mesh> Roottori, Lapsi, Lapsi2, Lapsi3;
             public int Lapsia, Lapsia2, Lapsia3;
+            /// <summary>Laatutaso (omistaja 27.9. klo 13.0x, meri-laatu-speksi): MeriRakentajan verkot MeriMalli-varjostimella
+            /// (B-seepiaramppi, kaiverrusreuna, ääriviiva, vesikerros). False = vanha Malli-varjostin.</summary>
+            public bool Seepia;
+            /// <summary>Kaukotaso roottorille (≤ 800 kolmiota), kun peitto on alle 0,5 (näytöksen häivytys, horisontti).</summary>
+            public Func<Mesh> RoottoriKauko;
             public Func<float, float> Nakyy;
             public Action<Transform, Transform[], float, float> Animoi;
             public MeriAikataulu Aikataulu;
@@ -57,19 +62,18 @@ namespace Matkakirja.Natiivi
 
         public static readonly Laji[] Lajit =
         {
-            new Laji { Nimi = "merilaiva", Meret = new[] { "valimeri", "atlantti", "pohjanmeri", "itameri" }, KokoPt = MeriGeometria.LaivaKokoPt,
-                Roottori = MeriGeometria.Laiva, Lapsi = HoyryGeometria.Siipiratas, Lapsia = 2, Lapsi2 = HoyryGeometria.Savupallo,
-                Lapsia2 = HoyryGeometria.Palloja, Nakyy = MeriGeometria.LaivaNakyy, Animoi = MeriGeometria.LaivaAnimoi,
-                Aikataulu = MeriGeometria.LaivaAikataulu },
-            new Laji { Nimi = "valas", Meret = new[] { "atlantti", "jaameri" }, KokoPt = MeriGeometria.ValasKokoPt,
-                Roottori = HoyryGeometria.Joki, Lapsi = MeriGeometria.ValaanSelka, Lapsia = 1, Lapsi2 = MeriGeometria.Suihku,
-                Lapsia2 = MeriGeometria.Suihkuja, Lapsi3 = MeriGeometria.Pyrsto, Lapsia3 = 1,
-                Nakyy = MeriGeometria.ValasNakyy, Animoi = MeriGeometria.ValasAnimoi, Aikataulu = MeriGeometria.ValasAikataulu },
-            new Laji { Nimi = MeriPurjelaiva.Nimi, Meret = MeriPurjelaiva.Meret, KokoPt = MeriPurjelaiva.KokoPt,
-                Roottori = MeriPurjelaiva.Roottori, Lapsi = MeriPurjelaiva.Lapsi, Lapsia = MeriPurjelaiva.Lapsia,
-                Lapsi2 = MeriPurjelaiva.Lapsi2, Lapsia2 = MeriPurjelaiva.Lapsia2, Lapsi3 = MeriPurjelaiva.Lapsi3,
-                Lapsia3 = MeriPurjelaiva.Lapsia3, Nakyy = MeriPurjelaiva.Nakyy, Animoi = MeriPurjelaiva.Animoi,
-                Aikataulu = MeriPurjelaiva.Aikataulu },
+            new Laji { Nimi = MeriLaiva.Nimi, Meret = MeriLaiva.Meret, KokoPt = MeriLaiva.KokoPt, Roottori = MeriLaiva.Roottori,
+                RoottoriKauko = MeriLaiva.RoottoriKauko, Lapsi = MeriLaiva.Lapsi, Lapsia = MeriLaiva.Lapsia, Lapsi2 = MeriLaiva.Lapsi2,
+                Lapsia2 = MeriLaiva.Lapsia2, Lapsi3 = MeriLaiva.Lapsi3, Lapsia3 = MeriLaiva.Lapsia3, Nakyy = MeriLaiva.Nakyy,
+                Animoi = MeriLaiva.Animoi, Aikataulu = MeriLaiva.Aikataulu, Seepia = true },
+            new Laji { Nimi = MeriValas.Nimi, Meret = MeriValas.Meret, KokoPt = MeriValas.KokoPt, Roottori = MeriValas.Roottori,
+                RoottoriKauko = MeriValas.RoottoriKauko, Lapsi = MeriValas.Lapsi, Lapsia = MeriValas.Lapsia, Lapsi2 = MeriValas.Lapsi2,
+                Lapsia2 = MeriValas.Lapsia2, Lapsi3 = MeriValas.Lapsi3, Lapsia3 = MeriValas.Lapsia3, Nakyy = MeriValas.Nakyy,
+                Animoi = MeriValas.Animoi, Aikataulu = MeriValas.Aikataulu, Seepia = true },
+            new Laji { Nimi = MeriPurjelaiva.Nimi, Meret = MeriPurjelaiva.Meret, KokoPt = MeriPurjelaiva.KokoPt, Roottori = MeriPurjelaiva.Roottori,
+                RoottoriKauko = MeriPurjelaiva.RoottoriKauko, Lapsi = MeriPurjelaiva.Lapsi, Lapsia = MeriPurjelaiva.Lapsia, Lapsi2 = MeriPurjelaiva.Lapsi2,
+                Lapsia2 = MeriPurjelaiva.Lapsia2, Lapsi3 = MeriPurjelaiva.Lapsi3, Lapsia3 = MeriPurjelaiva.Lapsia3, Nakyy = MeriPurjelaiva.Nakyy,
+                Animoi = MeriPurjelaiva.Animoi, Aikataulu = MeriPurjelaiva.Aikataulu, Seepia = true },
             new Laji { Nimi = MeriKalastusvene.Nimi, Meret = MeriKalastusvene.Meret, KokoPt = MeriKalastusvene.KokoPt,
                 Roottori = MeriKalastusvene.Roottori, Lapsi = MeriKalastusvene.Lapsi, Lapsia = MeriKalastusvene.Lapsia,
                 Lapsi2 = MeriKalastusvene.Lapsi2, Lapsia2 = MeriKalastusvene.Lapsia2, Lapsi3 = MeriKalastusvene.Lapsi3,

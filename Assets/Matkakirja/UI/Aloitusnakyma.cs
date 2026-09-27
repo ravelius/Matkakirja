@@ -1089,8 +1089,9 @@ namespace Matkakirja.Natiivi
             + "\"Matka ei lopu siihen, että saapuu.\"";
 
         readonly VisualElement himmennys;
-        readonly Label teksti;
-        Action uusiMatka;
+        readonly Label otsikko, teksti, jatkaTeksti;
+        readonly Button jatka;
+        Action uusiMatka, jatkaPainettu;
         public bool Auki { get; private set; }
 
         // Web #winner-jaa -kuvake: kolme solmua ja kaksi viivaa.
@@ -1105,11 +1106,13 @@ namespace Matkakirja.Natiivi
             var kortti = new Kortti("mk-huipennus");
             himmennys.Add(kortti);
             kortti.Sisus.Add(Aloitusnakyma.Merkki("mk-huipennus__merkki"));
-            var o = Rakenne.Teksti(Otsikko, "mk-kortti__otsikko mk-huipennus__otsikko", kortti.Sisus);
-            Kirjasimet.Aseta(o, Kirjasin.LukuLihava);
+            otsikko = Rakenne.Teksti(Otsikko, "mk-kortti__otsikko mk-huipennus__otsikko", kortti.Sisus);
+            Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             teksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
-            var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var jatka = Rakenne.Nappi("Jatka vaeltamista", "mk-nappi--haamu", Sulje, napit, Ikonit.Viiva["kompassi"]);
+            var napit = Rakenne.El("mk-kortti__napit mk-huipennus__napit", kortti.Sisus, PickingMode.Ignore);
+            // Voitossa "Jatka vaeltamista" (sulkee); loppukortissa "Jatka viimeisestä tallennuksesta" (web winner-roam).
+            jatka = Rakenne.Nappi("Jatka vaeltamista", "mk-nappi--haamu", () => { var j = jatkaPainettu; Sulje(); j?.Invoke(); }, napit, Ikonit.Viiva["kompassi"]);
+            jatkaTeksti = jatka.Q<Label>(className: "mk-nappi__teksti");
             Kirjasimet.Aseta(jatka, Kirjasin.Kone);
             // "Jaa matka" (web #winner-jaa, paivitaJakonappi): vain kun jakoarkki on saatavilla (iOS-laite),
             // muualla nappia ei ole lainkaan. Teksti web natiiviMatkaTeksti = MatkanYhteenveto.Teksti.
@@ -1123,13 +1126,35 @@ namespace Matkakirja.Natiivi
 
         public void Nayta(MatkanYhteenveto yv, Action uusiMatka)
         {
-            this.uusiMatka = uusiMatka;
-            jaettava = yv?.Teksti;
-            jaa.style.display = Jakaminen.Saatavilla && jaettava != null ? DisplayStyle.Flex : DisplayStyle.None;
-            teksti.text = Teksti
+            otsikko.text = Otsikko;
+            jatkaTeksti.text = "Jatka vaeltamista";
+            jatka.style.display = DisplayStyle.Flex;
+            jatkaPainettu = null;
+            Avaa(Teksti
                 .Replace("{paivat}", (yv?.Paivat ?? 0).ToString())
                 .Replace("{kaupungit}", (yv?.Kaupungit ?? 0).ToString())
-                .Replace("{loydot}", (yv?.Aarteet ?? 0).ToString());
+                .Replace("{loydot}", (yv?.Aarteet ?? 0).ToString()), yv?.Teksti, uusiMatka);
+        }
+
+        /// <summary>
+        /// LOPPUKORTTI (talouden vaihe 1, web naytaMatkanLoppu): rahat loppuivat eikä kassa noussut. Sama dialogi,
+        /// otsikko "Matka päättyi"; "Jatka viimeisestä tallennuksesta" vain turvatallennuksen kanssa (jatka ≠ null).
+        /// </summary>
+        public void NaytaLoppu(string loppuTeksti, string jaettava, Action jatka, Action uusiMatka)
+        {
+            otsikko.text = "Matka päättyi";
+            jatkaTeksti.text = "Jatka viimeisestä tallennuksesta";
+            this.jatka.style.display = jatka != null ? DisplayStyle.Flex : DisplayStyle.None;
+            jatkaPainettu = jatka;
+            Avaa(loppuTeksti, jaettava, uusiMatka);
+        }
+
+        void Avaa(string runko, string jaettava, Action uusiMatka)
+        {
+            this.uusiMatka = uusiMatka;
+            this.jaettava = jaettava;
+            jaa.style.display = Jakaminen.Saatavilla && jaettava != null ? DisplayStyle.Flex : DisplayStyle.None;
+            teksti.text = runko;
             if (Auki) return;
             Auki = true;
             Rakenne.Nayta(himmennys, true, 320);

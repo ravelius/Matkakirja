@@ -59,10 +59,13 @@
 //   ui pooli <kaupunki>                       kaupungin täkypooli lokiin (web nostoKaupunginPooli: oma virta tai
 //                                             kokoelma takynostot.kaupungit), esim. ui pooli ateena
 //   ui lisakaupunki [nimi]                    lisäkaupungin kortti (oletus lyon = kohde:nakyva-kaupunki-lyon)
-//   ui kaupunki <id> [nostot [aihe|n] | kohde n | alas | ylos]  kaupunkikortti ilman peliä (kuten ui kortti) ja
+//   ui kaupunki <id> [nostot [aihe|n] | kohde n | alas | ylos]  vanha kaupunkiliuska (UiNakymat.Liuska) ja
 //                                             nostokategoriat haitarina: nostot = avaa aiheen (tai n:nnen,
 //                                             oletus ensimmäinen) ja kirjaa kategoriat lokiin; kohde n = avatun
 //                                             kategorian n:s rivi (kortti kiinni, nosto auki); alas/ylos = kelausrivi
+//   ui avauskortti <id> [kartta|lehti|opas|sulje]  kaupungin avauskortti (web v2296) ilman peliä; kuvaus lokiin 2 s
+//                                             päästä (esittely, kartta, turisti-info); kartta = suurennos kortista
+//   ui kutsu [napauta]                        avauskortin kutsuminiatyyri: tila (paikka, nostojen kerroin) / napautus
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui paljastus [tyyppi] [kaupunki] [kaari]  aarteen paljastus koko ruudulle ilman peliä ja ääniä (Paljastus.Testaa):
 //                                             star (oletus) | isoAarre | pieniAarre | mannerAarre | pollo | piirros;
@@ -133,6 +136,7 @@
 //   ui muste laskuri <ISO:tunnus> [l/k]       Elävä kartta ilman peliä: kartussi auki maalle, maakunnan rivin pisteet l/k
 //                                             (oletus 1/datan määrä tai 7); maakunnat heränneinä heti (maakuntaerä 27.9.)
 //   ui muste valmis <ISO> | pois | tila       maa valmis → lippu liehuu; testitila pois; tila lokiin
+//   ui maakuntanimet 0|1                      maakuntien nimet kartalla (oletus 0, omistaja 27.9. klo 12.4x)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
 //   ui tila teksti                            tilarivin teksti
@@ -413,6 +417,12 @@ namespace Matkakirja.Natiivi
             return string.Format(CultureInfo.InvariantCulture, "napauta ({0:0.#}, {1:0.#}): ei osumaa UI:ssa → pallolle{2}", piste.x, piste.y, kierto != null ? "" : " (ei palloa)");
         }
 
+        System.Collections.IEnumerator KirjaaMyohemmin(float s, System.Func<string> teksti)
+        {
+            yield return new WaitForSecondsRealtime(s);
+            Kirjaa(teksti());
+        }
+
         void Kirjaa(string teksti)
         {
             Debug.Log("MATKAKIRJA ui-komento: " + teksti);
@@ -427,7 +437,7 @@ namespace Matkakirja.Natiivi
             string kid = o.Length > 0 ? o[0] : "pariisi";
             string teko = o.Length > 1 ? o[1] : "";
             string arvo = o.Length > 2 ? o[2] : null;
-            var kortti = ui.Kaupunkikortti;
+            var kortti = ui.Liuska;
             if (kortti.Kaupunki != kid)
                 kortti.Nayta(kid, null, new KaupunkiToiminnot
                 {
@@ -796,6 +806,26 @@ namespace Matkakirja.Natiivi
                     ui.Nostokortti.Avaa("kohde:nakyva-kaupunki-" + (loput.Length > 0 ? loput.ToLowerInvariant() : "lyon"));
                     return null;
                 case "kaupunki": return Kaupunki(ui, loput);
+                case "kutsu":
+                    // ui kutsu [napauta]: avauskortin kutsuminiatyyrin tila / napautus.
+                    if (loput == "napauta") return ui.Kutsu.Napauta();
+                    Kirjaa("kutsu " + (ui.Kutsu.Nakyy ? "näkyy " + ui.Kutsu.Laatikko : "piilossa") + ", nostojen kerroin " + ui.Nostot.Karttakerroin.ToString("0.00", CultureInfo.InvariantCulture));
+                    return null;
+                case "avauskortti":
+                {
+                    // ui avauskortti <id> [kartta | lehti | opas | sulje]: kaupungin avauskortti ilman peliä.
+                    var ao = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string aid = ao.Length > 0 ? ao[0] : "pariisi";
+                    if (ui.Kaupunkikortti.Kaupunki != aid)
+                        ui.Kaupunkikortti.Nayta(aid, null, new KaupunkiToiminnot
+                        {
+                            LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"),
+                            Sulje = () => { },
+                        });
+                    if (ao.Length > 1) return ui.Kaupunkikortti.Napauta(ao[1]);
+                    UiKerros.Hae().StartCoroutine(KirjaaMyohemmin(2f, () => "avauskortti " + ui.Kaupunkikortti.Kuvaus()));
+                    return null;
+                }
                 case "paljastus":
                     return ui.Paljastus.Testaa(loput);
                 case "reaktio":
@@ -935,6 +965,10 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "selite": ui.Karttaselite.Avaa(); ui.Karttaselite.VaihdaValilehti(false); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
+                case "maakuntanimet":
+                    // Maakuntien nimet kartalla (omistaja 27.9. klo 12.4x: pois): 0 | 1 vertailukuviin.
+                    ui.MaakuntaNimet.AsetaNakyvissa(loput.Trim() == "1");
+                    return ui.MaakuntaNimet.Kuvaus();
                 case "muste":
                 {
                     // Maakunnan tunnuksessa voi olla välilyönti (GRC:Notio Aigaio): loput annetaan kokonaisena.

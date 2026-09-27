@@ -18,7 +18,9 @@ namespace Matkakirja
             int n = lod1 ? 12 : 26, m = lod1 ? 3 : 7;
             var p = VuoriRuudukko(n, m, out var harj);
             var huippu = p[0, 0];
-            var keski = new Vector3(huippu.x, huippu.y * 0.2f, huippu.z);
+            // Tahkojen suunnan viitepiste syvällä maan alla: rinne on korkeuskenttä, joten jokainen tahko katsoo ylös.
+            // (Keskipiste 0,2 × huipun korkeudella käänsi juuren loivat tahkot nurin: LOD0:ssa 38/338, k1-löydös.)
+            var keski = new Vector3(huippu.x, -4f, huippu.z);
             Color Vari(float korkeus, int i)
             {
                 // Lumiraja rosoisena: 0,62–0,74 huipun korkeudesta harjanteen ja kohinan mukaan.

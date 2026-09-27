@@ -186,10 +186,11 @@ namespace Matkakirja.Natiivi
             Kulkutapa.Lento => "Lento",
             Kulkutapa.Maa => "Liftaus",
             Kulkutapa.Meri => "Laiva",
+            Kulkutapa.Odota => "Odota",
             _ => "Tutki",
         };
 
-        /// <summary>Komentorivin tapa: bussi, lento, liftaus|maa|noppa, laiva|meri.</summary>
+        /// <summary>Komentorivin tapa: bussi, lento, liftaus|maa|noppa, laiva|meri, odota.</summary>
         public static Kulkutapa? TapaTekstista(string s)
         {
             switch ((s ?? "").Trim().ToLowerInvariant())
@@ -198,6 +199,7 @@ namespace Matkakirja.Natiivi
                 case "lento": case "lenna": return Kulkutapa.Lento;
                 case "liftaus": case "maa": case "noppa": return Kulkutapa.Maa;
                 case "laiva": case "meri": return Kulkutapa.Meri;
+                case "odota": return Kulkutapa.Odota;
                 default: return null;
             }
         }

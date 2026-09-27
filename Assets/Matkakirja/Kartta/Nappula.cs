@@ -20,7 +20,7 @@ namespace Matkakirja
     /// </summary>
     // LennonVaihe (Ei, Nousu, Matka, Lasku) on LennonAikajana.cs:ssä (puhdas, Kartta-testit).
 
-    public class Nappula : MonoBehaviour
+    public partial class Nappula : MonoBehaviour
     {
         public CesiumGeoreference georeferenssi;
         public PalloKierto kierto;
@@ -49,6 +49,7 @@ namespace Matkakirja
             kerrosNakyy = nakyy;
             if (olio != null && olio.TryGetComponent<MeshRenderer>(out var r)) r.enabled = nakyy;
             if (malli != null) foreach (var mr in malli.GetComponentsInChildren<Renderer>()) mr.enabled = nakyy;
+            V3Nakyvat(nakyy);
         }
         public bool Liikkeessa => liike != null;
 
@@ -121,6 +122,8 @@ namespace Matkakirja
         {
             yield return new WaitForSecondsRealtime(1.5f);
             if (liike != null || georeferenssi == null || kierto == null) yield break;
+            // LENTO V3: Tiger Mothin verkot ja materiaalit valmiiksi (juuri jää pois päältä; lento piirtää sen ensin odotuksessa).
+            if (LentoV3) V3TeeKone();
             var kamera = kierto.GetComponent<Camera>();
             if (kamera == null) yield break;
             bool nakyi = Nakyy;
@@ -384,6 +387,13 @@ namespace Matkakirja
         {
             Pysayta();
             Tee();
+            // LENTO V3 (Nappula.LentoV3.cs): kesto on aina 15 s + odotus; kestoS jää vanhalle lennolle.
+            if (LentoV3)
+            {
+                Siirra(lat0, lon0, 0);
+                liike = StartCoroutine(LentoV3Ajo(lat0, lon0, lat1, lon1, null, valmis, false));
+                return;
+            }
             Kone(true);
             Siirra(lat0, lon0, 0);
             liike = StartCoroutine(Lento(lat0, lon0, lat1, lon1, math.max(0.5f, kestoS), 0f, null, valmis, naytaLentokaari));
@@ -400,7 +410,7 @@ namespace Matkakirja
         {
             Pysayta();
             Tee();
-            Kone(true);
+            if (!LentoV3) Kone(true);
             Siirra(lahtoLat, lahtoLon, 0);
             // Omistaja 24.9.: aloituslennon ajan kartalla näkyy vain kohdekaupungin piste (ja nimiö);
             // pelin karttapisteet ja muut kaupungit palaavat perillä (Paatalento).
@@ -410,6 +420,12 @@ namespace Matkakirja
             // Lähtökin näkyy (omistaja 24.9. klo 13.4x: punainen piste ja rengas lähtöön ja kohteeseen koko lennon).
             if (aloitusMerkit != null) aloitusMerkit.NaytaVain(new[] { kohde, lahto }.Where(x => x != null).ToArray());
             KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", false);
+            // LENTO V3: ei mustaa verhoa eikä Lontoon avausta; odotus nykyisessä näkymässä ja 15 s:n saapumislento.
+            if (LentoV3)
+            {
+                liike = StartCoroutine(LentoV3Ajo(lahtoLat, lahtoLon, lat, lon, lahti, valmis, true));
+                return;
+            }
             // Löydös 84 (omistaja 25.9. build 13): ei erillistä Lontoon zoomia. Kuva häivytetään mustaan, lennon pinta
             // latautuu verhon takana, ja verhon jälkeen kamera lähtee valintanäkymästä kohti konetta, joka on jo
             // nousussa (zoomin aika lisätään lentoon, jotta syöksy ei nopeudu).
@@ -1048,6 +1064,7 @@ namespace Matkakirja
             Filmipino.Instanssi?.Paalle(false);
             var pilvet = Matkakirja.Linssit.Pilvet.LentoPilvet.Instanssi;
             if (pilvet != null && pilvet.Nakyvissa) pilvet.Piilota();
+            V3Pois();
             AsetaVaihe(LennonVaihe.Ei);
             Kone(false);
         }
@@ -1231,6 +1248,7 @@ namespace Matkakirja
             Saapumisvartija.Vapauta("lento");
             if (Vaihe != LennonVaihe.Ei || aloitusKesken) Paatalento();
             else if (kierto != null) kierto.SeurantaLoppui();
+            V3Pois();
             Kone(false);
         }
 

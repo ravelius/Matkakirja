@@ -84,13 +84,28 @@ namespace Matkakirja.Natiivi
                     if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
                     return HeitaJaValitse();
                 }
+                case Kulkutapa.Odota:
+                {
+                    // Talouden vaihe 1 (web actionTravel('wait')): vuoro kuluu paikallaan.
+                    tapahtumat.Clear();
+                    var tekija = matka.Tila.Pelaaja;
+                    var r = matka.ValitseKulkutapa(Kulkutapa.Odota);
+                    if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
+                    KirjaaPelipaiva(tekija);
+                    Tallenna();
+                    if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
+                    Kartalle(false);
+                    return null;
+                }
                 case Kulkutapa.Meri:
                 {
                     var rivit = PeliApu.KohdeRivit(matka, Kulkutapa.Meri);
                     NaytaRivit(nappi.Teksti, ala, rivit.Select(x => x.Rivi).ToList(), _ =>
                     {
+                        var tekija = matka.Tila.Pelaaja;
                         var r = matka.ValitseKulkutapa(Kulkutapa.Meri);
                         if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return; }
+                        KirjaaPelipaiva(tekija);
                         Tallenna();
                         Kartalle(false); // heittonappi ja Vaihda (web vaihe 'roll')
                     });
@@ -163,6 +178,7 @@ namespace Matkakirja.Natiivi
             // Noppa on jo heitetty: kohteet ovat kartalla, valinta napautuksella.
             if (matka.Tila.Vaihe == Vaihe.Siirto) { if (Tila != SilmukanTila.Kartta) Kartalle(false); else PaivitaSiirtoKohteet(); return null; }
             var lahto = matka.Tila.Pelaaja.Sijainti;
+            var tekija = matka.Tila.Pelaaja;
             tapahtumat.Clear();
             // Heitto vaientaa paikan puheen (web doRoll → vaiennaPaikanPuhe, löydökset 53–54).
             VaiennaPaikanPuhe();
@@ -170,6 +186,7 @@ namespace Matkakirja.Natiivi
             if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
             dialogi.Piilota();
             dialogi.PiilotaHeitto();
+            KirjaaPelipaiva(tekija);
             Tallenna();
             int noppa = r.Noppa ?? 0;
             Debug.Log($"MATKAKIRJA peli: noppa {noppa}, siirtoja {matka.Tila.Siirrot?.Count ?? 0}");

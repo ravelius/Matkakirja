@@ -25,7 +25,7 @@ namespace Matkakirja.Peli.Testit
             var t = PeliApu.Matkusta(m, "lontoo", Kulkutapa.Bussi);
             Oleta.Tosi(t.Ok, t.Virhe);
             Oleta.Sama("lontoo", t.Saapui);
-            Oleta.Sama(250, m.Tila.Pelaaja.Raha, "bussi 50");
+            Oleta.Sama(Vakiot.AloitusRaha - Vakiot.BussiHinta, m.Tila.Pelaaja.Raha, "bussi 50");
             Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe);
             Oleta.Tosi(k.TehtavaTarjolla(m.Tila.Pelaaja), "Lontoossa tehtävä");
 
@@ -56,7 +56,7 @@ namespace Matkakirja.Peli.Testit
 
             Oleta.Tosi(k.Vastaa(q.Oikea).Ok, "vastaa");
             Oleta.Sama("pieniAarre", loyto?.WebTulos, "laatta");
-            Oleta.Sama(440, m.Tila.Pelaaja.Raha, "löytö +190");
+            Oleta.Sama(Vakiot.AloitusRaha - Vakiot.BussiHinta + 190, m.Tila.Pelaaja.Raha, "löytö +190");
             d = KysymysApu.Nakyma(k, q, loyto);
             Oleta.Sama("Löysit: Kourallinen hopeakolikoita · +190 £", d.Loyto);
             KysymysApu.LisaaKohtaaminen(d, q, ko, false);
@@ -80,7 +80,7 @@ namespace Matkakirja.Peli.Testit
             t = PeliApu.Matkusta(m, "pariisi", Kulkutapa.Maa);
             Oleta.Tosi(t.Ok, t.Virhe);
             Oleta.Sama("pariisi", t.Saapui, "noppa 2 perille");
-            Oleta.Sama(440, m.Tila.Pelaaja.Raha);
+            Oleta.Sama(Vakiot.AloitusRaha - Vakiot.BussiHinta + 190, m.Tila.Pelaaja.Raha);
             Oleta.Sama(Vuorokaudenaika.Yo, m.Tila.Vuorokaudenaika());
             Oleta.Tosi(k.TehtavaTarjolla(m.Tila.Pelaaja), "Pariisi tutkimatta");
         }

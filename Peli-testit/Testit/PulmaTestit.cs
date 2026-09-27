@@ -277,7 +277,7 @@ namespace Matkakirja.Peli.Testit
             bool ladattu = false;
             Vertaa(nimi, i, askeleet[i], Rivi("alku", pe), ladattu); i++;
             var kk = new KyselyKasikirjoitus();
-            for (int n = 0; n < maxTeot && pe.Matka.Tila.VuoroLaskuri <= vuorot; n++)
+            for (int n = 0; n < maxTeot && pe.Matka.Tila.VuoroLaskuri <= vuorot && pe.Matka.Tila.Vaihe != Vaihe.Ohi; n++)
             {
                 pe.Matka.ViimeLoyto = null;
                 string teko = kk.Seuraava(pe.Kysely);
@@ -401,7 +401,7 @@ namespace Matkakirja.Peli.Testit
             ky.Tutki();
             var json = ky.Matka.Tallenna();
             Oleta.Tosi(json.Contains("\"pulmatNahty\":[\"ala\"]") && !json.Contains("tapahtumakortti"), "uudet kentät");
-            var vanha = json.Substring(0, json.IndexOf(",\"pulmatNahty\":", StringComparison.Ordinal)).Replace("\"versio\":5", "\"versio\":3") + "}";
+            var vanha = json.Substring(0, json.IndexOf(",\"pulmatNahty\":", StringComparison.Ordinal)).Replace("\"versio\":7", "\"versio\":3") + "}";
             vanha = vanha.Replace(",\"pulmaTiedot\":", ",\"eiKaytossa\":");
             var t = Pelitila.FromJson(vanha);
             Oleta.Sama(0, t.NahdytPulmat.Count, "ei nähtyjä");

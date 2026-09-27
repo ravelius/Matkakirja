@@ -145,7 +145,7 @@ namespace Matkakirja.Peli.Testit
                 Vertaa("raha:" + (int)raha);
             }
             var kk = new KyselyKasikirjoitus();
-            for (int n = 0; n < maxTeot && m.Tila.VuoroLaskuri <= vuorot; n++)
+            for (int n = 0; n < maxTeot && m.Tila.VuoroLaskuri <= vuorot && m.Tila.Vaihe != Vaihe.Ohi; n++)
             {
                 m.ViimeLoyto = null;   // web viimeAarre nollataan ennen tekoa (istunnon viesti)
                 Vertaa(kk.Seuraava(ky));
@@ -215,21 +215,17 @@ namespace Matkakirja.Peli.Testit
         static Matka UusiPeli(long siemen = 3, string alku = "pariisi") =>
             Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(siemen), "Fogg", alku, KultaisetApu.Laattamaarat);
 
-        [Testi] static void LuontiJakaaLaatatJaTavoitteetOvatLaattoja()
+        [Testi] static void LuontiJakaaLaatat()
         {
             var m = UusiPeli();
             Oleta.Sama(KultaisetApu.Verkko.KaupunkiLista.Count, m.Laatat.Laatat.Count, "laatta joka kaupungissa");
             Oleta.Sama(279L, m.Satunnainen.Kutsuja, "jaon kulutus maailmankartalla");
             Oleta.Tosi(m.LaattaTassa("pariisi") && m.LaattaKaupungissa() == "pariisi", "aloituskaupungissakin laatta");
-            // Tavoitteet = kääntämättömät laatat: tyhjä maailma → ei pankkiapua rahattomallekaan.
+            // Pankin apu (needsAid) poistui talouden vaiheessa 1: rahaton pelaaja ei saa rahaa vuoron alussa.
             m.Tila.Pelaaja.Raha = 0;
-            m.Tila.Vaihe = Vaihe.Toiminta;   // web travelModes vaatii vaiheen 'action'
-            Oleta.Tosi(!m.TarvitseeApua(m.Tila.Pelaaja), "liftaamalla pääsee laattakaupunkiin");
-            m.Tavoitteet = () => new[] { "newyork" };
-            Oleta.Tosi(m.TarvitseeApua(m.Tila.Pelaaja), "ohitus: meren takana ilman rahaa");
-            m.Tavoitteet = null;
-            foreach (var k in m.Laatat.Laatat.Keys.ToList()) m.Laatat.Laatat.Poista(k);
-            Oleta.Tosi(!m.TarvitseeApua(m.Tila.Pelaaja), "ei tavoitteita → ei apua");
+            m.Tila.Vaihe = Vaihe.Toiminta;
+            m.AloitaVuoro();
+            Oleta.Sama(0, m.Tila.Pelaaja.Raha, "ei pankkiapua");
         }
 
         [Testi] static void LoytoKirjataanPelaajalle()
@@ -242,13 +238,13 @@ namespace Matkakirja.Peli.Testit
             m.Loysi += (_, l) => loydetyt.Add(l.Tyyppi);
 
             var l1 = m.KaannaLaatta(pieni);
-            Oleta.Sama(300 + l1.Arvo, p.Raha, "pieni aarre rahaksi");
+            Oleta.Sama(Vakiot.AloitusRaha + l1.Arvo, p.Raha, "pieni aarre rahaksi");
             Oleta.Tosi(l1.Arvo >= 100 && l1.Arvo <= 250, "arvo väliltä");
             Oleta.Sama(0, p.Xp, "paikallisaarre ei anna pisteitä");
 
             var l2 = m.KaannaLaatta(tahti);
             Oleta.Sama(1, p.Paaaarteet);
-            Oleta.Sama(300 + l1.Arvo + LaattaVakiot.PaaaarrePalkkio, p.Raha, "vaelluksessa pääaarre maksaa");
+            Oleta.Sama(Vakiot.AloitusRaha + l1.Arvo + LaattaVakiot.PaaaarrePalkkio, p.Raha, "vaelluksessa pääaarre maksaa");
             Oleta.Sama(Kokemus.Paaaarre + Kokemus.Ennatys, p.Xp, "pääaarre + ennätys päivänä 1");
             Oleta.Sama(1, m.Tila.EnnatysPaiva);
             Oleta.Sama(m.Laatat.MannerOf(tahti), m.Laatat.PaaaarteetLoydetty.Keys.Single());
@@ -280,7 +276,7 @@ namespace Matkakirja.Peli.Testit
             var pieni = m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.PieniAarre).Key;
             var l = m.KaannaLaatta(pieni);
             Oleta.Sama("pollo", l.WebTulos);
-            Oleta.Sama(300, m.Tila.Pelaaja.Raha, "pöllö ei tuo rahaa");
+            Oleta.Sama(Vakiot.AloitusRaha, m.Tila.Pelaaja.Raha, "pöllö ei tuo rahaa");
             Oleta.Tosi(m.Tila.PolloLoydetty && m.OtaPolloPaljastus() && !m.OtaPolloPaljastus(), "paljastus kerran");
             Oleta.Sama("empty", m.Laatat.Kaannetyt.Hae(pieni));
             var toinen = m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.PieniAarre).Key;
@@ -296,7 +292,7 @@ namespace Matkakirja.Peli.Testit
             m.KaannaLaatta(tahti);
             m.LukitseLaatta(m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.MannerAarre).Key);
             var json = m.Tallenna();
-            Oleta.Tosi(json.Contains("\"versio\":5") && json.Contains("\"laattamaailma\":{"), "versio 4");
+            Oleta.Tosi(json.Contains("\"versio\":7") && json.Contains("\"laattamaailma\":{"), "versio 7");
             var l = Matka.Lataa(KultaisetApu.Verkko, json);
             Oleta.Sama(json, l.Tallenna());
             Oleta.Sama(Kartta(m.Laatat.Laatat), Kartta(l.Laatat.Laatat), "Map-järjestys");
@@ -317,7 +313,7 @@ namespace Matkakirja.Peli.Testit
             m.ValitseKulkutapa(Kulkutapa.Maa);
             m.Heita();
             m.Tila.Kysely.AarreLukot.Add("lontoo");
-            var v2 = m.Tallenna().Replace("\"versio\":5", "\"versio\":2");
+            var v2 = m.Tallenna().Replace("\"versio\":7", "\"versio\":2");
             Oleta.Tosi(v2.Contains("\"laattamaailma\":null"), "peli ilman laattoja");
             long ennen = m.Satunnainen.Kutsuja;
 
@@ -332,7 +328,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(a.Satunnainen.Kutsuja >= ennen + 279, "jako kulutti pelin satunnaisuutta");
             Oleta.Sama(Vaihe.Siirto, a.Tila.Vaihe, "vaihe säilyi");
             var v3 = a.Tallenna();
-            Oleta.Tosi(v3.Contains("\"versio\":5"), "seuraava tallennus on nykyversio 4");
+            Oleta.Tosi(v3.Contains("\"versio\":7"), "seuraava tallennus on nykyversio 7");
             Oleta.Sama(v3, Matka.Lataa(KultaisetApu.Verkko, v3, KultaisetApu.Laattamaarat).Tallenna(), "laatallinen tallennus ei jaa uudelleen");
         }
 

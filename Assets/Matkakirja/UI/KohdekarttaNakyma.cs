@@ -32,6 +32,13 @@
 // alla kohdeluettelo napattavina riveinä ja lähderivi. Zoomatessa kortti levenee
 // 98 %:iin ruudusta ja kartta korkeutta myöten (web levita), luettelo piiloon.
 //
+// PELKKÄ KARTTA (avauskortti, web piirraKaupunkiKartta pelkkaKartta, v2296): ei työkalurivia, kylttejä eikä nimiä;
+// kiinteä korkeus (kortin kaista), kuva täyttää kaistan (web width: max(100 %, korkeus × suhde)) keskitettynä, lähde
+// kulmassa kartan päällä. Ei eleitä: mikä tahansa napautus (liike < 6 px) → KokoruutuPyydetty.
+//
+// KORTISTA (Kohdekartan.AvaaKokoruutu kortista: true, web .kartta-suurennos-kortista): kortti 94 % × 88 % ruudusta,
+// sumea pohja (KuvaSumea), ei kohdeluetteloa, zoomausnapit − + oikeassa alakulmassa; pohjan napautus sulkee.
+//
 // Kyltin jalka mitataan piirroksen alimmasta peittävästä rivistä (web mittaaAlareuna):
 // tekstuuri on nonReadable, joten 64 × 64 -blit + AsyncGPUReadback.
 using System;
@@ -60,7 +67,7 @@ namespace Matkakirja.Natiivi
         internal Func<float> Katto;
 
         readonly Kohdekartta kartta;
-        readonly bool kokoruutu;
+        readonly bool kokoruutu, pelkka;
         readonly VisualElement kehys, lava, kuva;
         readonly List<Piste> pisteet = new List<Piste>();
         float kuvaSuhde; // korkeus / leveys
@@ -99,15 +106,17 @@ namespace Matkakirja.Natiivi
             public string Url;
         }
 
-        public KohdekarttaNakyma(Kohdekartta kartta, bool kokoruutu = false)
+        public KohdekarttaNakyma(Kohdekartta kartta, bool kokoruutu = false, bool pelkka = false, bool ilmanJanaa = false)
         {
             this.kartta = kartta;
             this.kokoruutu = kokoruutu;
+            this.pelkka = pelkka && !kokoruutu;
             AddToClassList("mk-kohdekartta");
             if (kokoruutu) AddToClassList("mk-kohdekartta--kokoruutu");
+            if (this.pelkka) AddToClassList("mk-kohdekartta--pelkka");
             kuvaSuhde = kartta.Leveys > 0 && kartta.Korkeus > 0 ? kartta.Suhde : 0f;
 
-            if (!kokoruutu)
+            if (!kokoruutu && !this.pelkka)
             {
                 var tyokalut = Rakenne.El("mk-kohdekartta__tyokalut", this, PickingMode.Ignore);
                 var nappi = Rakenne.Nappi("KOKORUUTU", "mk-kohdekartta__kokoruutu", () => KokoruutuPyydetty?.Invoke(), tyokalut, Kokoruutuikoni);
@@ -121,7 +130,7 @@ namespace Matkakirja.Natiivi
             kuva = Rakenne.El("mk-kohdekartta__kuva", lava, PickingMode.Ignore);
             // Löydös 63 (web .kartta-mittajana): mittakaavajana ydinalueen vasempaan alakulmaan (3,2 % / 5 %),
             // leveys prosentteina kuvasta; lavan lapsena se skaalautuu kartan mukana kuten webissä.
-            if (kartta.JanaOsuus > 0f)
+            if (kartta.JanaOsuus > 0f && !this.pelkka && !ilmanJanaa) // web pelkkaKartta: jana = null (myös sen suurennoksessa)
             {
                 var ydin = kartta.Ydin;
                 var jana = Rakenne.El("mk-kohdekartta__mittajana", lava, PickingMode.Ignore);
@@ -149,6 +158,7 @@ namespace Matkakirja.Natiivi
 
             if (!kokoruutu && !string.IsNullOrEmpty(kartta.Lahde))
                 Kirjasimet.Aseta(Rakenne.Teksti(kartta.Lahde, "mk-kohdekartta__lahde", this), Kirjasin.Kone);
+            if (this.pelkka) RegisterCallback<GeometryChangedEvent>(_ => AsettelePelkka());
 
             kehys.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
             kehys.RegisterCallback<PointerDownEvent>(OsoitinAlas);
@@ -234,8 +244,21 @@ namespace Matkakirja.Natiivi
             Asettele();
         }
 
+        /// <summary>Pelkkä kartta: kehys täyttää kiinteän kaistan (web max(100 %, korkeus × suhde)), keskitettynä.</summary>
+        void AsettelePelkka()
+        {
+            float W = contentRect.width, H = contentRect.height;
+            if (float.IsNaN(W) || float.IsNaN(H) || W < 20f || H < 20f) return;
+            float kw = Mathf.Round(Mathf.Max(W, H / Mathf.Max(0.001f, NakyvaSuhde)));
+            float kh = Mathf.Round(kw * NakyvaSuhde);
+            kehys.style.width = kw;
+            kehys.style.marginLeft = Mathf.Round((W - kw) / 2f);
+            kehys.style.marginTop = Mathf.Round((H - kh) / 2f);
+        }
+
         void Asettele()
         {
+            if (pelkka) AsettelePelkka();
             float w = kehys.contentRect.width;
             if (float.IsNaN(w) || w < 20f) return;
             var y = kartta.Ydin;
@@ -482,6 +505,12 @@ namespace Matkakirja.Natiivi
         void OsoitinAlas(PointerDownEvent e)
         {
             if (e.pointerType == UnityEngine.UIElements.PointerType.mouse && e.button != 0) return;
+            if (pelkka)
+            {
+                // Pelkkä kartta: vain napautus (web kehys click → avaaKarttaSuurennos); veto vierittää korttia.
+                napautus = e.isPrimary ? new Napautus { Id = e.pointerId, Alku = e.position } : null;
+                return;
+            }
             if (e.isPrimary) { sormet.Clear(); elettaKesken = false; }
             var osuma = PisteKohdasta(e.target);
             bool oliValinta = valittu != null;
@@ -568,6 +597,15 @@ namespace Matkakirja.Natiivi
 
         void OsoitinYlos(PointerUpEvent e)
         {
+            if (pelkka)
+            {
+                var n = napautus;
+                napautus = null;
+                if (n == null || n.Id != e.pointerId || Vector2.Distance(e.position, n.Alku) > Napautusraja) return;
+                e.StopPropagation();
+                KokoruutuPyydetty?.Invoke();
+                return;
+            }
             bool oli = sormet.Remove(e.pointerId);
             if (kehys.HasPointerCapture(e.pointerId)) kehys.ReleasePointer(e.pointerId);
             if (raahaus is { } r && r.Id == e.pointerId) raahaus = null;
@@ -622,6 +660,7 @@ namespace Matkakirja.Natiivi
 
         void Rulla(WheelEvent e)
         {
+            if (pelkka) return;
             bool sisaan = e.delta.y < 0f;
             if (sisaan ? k >= Ylaraja() - 0.001f : k <= Pienin + 0.001f) return;
             Zoomaa(k * Mathf.Exp(-e.delta.y * 16f / 620f), e.mousePosition);
@@ -721,23 +760,25 @@ namespace Matkakirja.Natiivi
             public KohdekarttaNakyma Nakyma;
             public ScrollView Selitteet;
             public Label Lahde;
-            public bool Levitetty, Tarkistettu;
+            public bool Levitetty, Tarkistettu, Kortista;
         }
 
         static Kokoruutu auki;
 
         public static bool Auki => auki != null;
+        /// <summary>Avauskortin suurennos auki (UiNakymat: kartta sumeaksi taustalle, web .kartta-suurennos-huntu).</summary>
+        public static bool KortistaAuki => auki != null && auki.Kortista;
 
         /// <summary>
         /// Avaa kartan kokoruudulle: postikorttikehys + ×, sama kartta isona, alla kohdeluettelo
         /// napattavina riveinä ja lähderivi. Kohteen avaus sulkee kokoruudun ja kutsuu avaa.
         /// </summary>
-        public static void AvaaKokoruutu(Kohdekartta k, Action<KohdekarttaKohde> avaa)
+        public static void AvaaKokoruutu(Kohdekartta k, Action<KohdekarttaKohde> avaa, bool kortista = false)
         {
             if (k == null) return;
             Sulje();
             var kerros = UiKerros.Hae();
-            var r = new Kokoruutu();
+            var r = new Kokoruutu { Kortista = kortista };
             auki = r;
             r.Tausta = Rakenne.El("mk-kohdekartta-kokoruutu", kerros.Juuri(UiKerros.Traileri));
             r.Tausta.style.display = DisplayStyle.None;
@@ -747,11 +788,16 @@ namespace Matkakirja.Natiivi
             r.Tausta.style.paddingRight = reunat.z;
             r.Tausta.style.paddingBottom = reunat.w;
             // Löydös 94: pohjan napautus ei sulje (web .kartta-suurennos: vain rasti, omistaja 21.8.2026), mutta se ei
-            // myöskään valu alla olevaan nähtävyysarkkiin.
-            r.Tausta.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            // myöskään valu alla olevaan nähtävyysarkkiin. Avauskortista (web .kartta-suurennos-huntu) pohja sulkee.
+            r.Tausta.RegisterCallback<PointerDownEvent>(e =>
+            {
+                e.StopPropagation();
+                if (kortista && e.target == r.Tausta) Sulje();
+            });
+            if (kortista) r.Tausta.AddToClassList("mk-kohdekartta-kokoruutu--kortista");
 
             r.Kortti = Rakenne.El("mk-kohdekartta-kokoruutu__kortti", r.Tausta);
-            r.Nakyma = new KohdekarttaNakyma(k, kokoruutu: true);
+            r.Nakyma = new KohdekarttaNakyma(k, kokoruutu: true, ilmanJanaa: kortista);
             r.Kortti.Add(r.Nakyma);
             void Avaa(KohdekarttaKohde kohde)
             {
@@ -764,7 +810,14 @@ namespace Matkakirja.Natiivi
             sulku.tooltip = "Sulje suurennettu kartta";
             Kirjasimet.Aseta(sulku, Kirjasin.KoneLihava);
 
-            if (k.Kohteet.Count > 0)
+            if (kortista)
+            {
+                // Web .kartta-suurennos-tyokalut: − ja + oikeassa alakulmassa.
+                var tyokalut = Rakenne.El("mk-kohdekartta-kokoruutu__tyokalut", r.Kortti, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Nappi("−", "mk-kohdekartta-kokoruutu__zoom", () => r.Nakyma.Loitonna(), tyokalut), Kirjasin.KoneLihava);
+                Kirjasimet.Aseta(Rakenne.Nappi("+", "mk-kohdekartta-kokoruutu__zoom", () => r.Nakyma.Lahenna(), tyokalut), Kirjasin.KoneLihava);
+            }
+            else if (k.Kohteet.Count > 0)
             {
                 r.Selitteet = new ScrollView(ScrollViewMode.Vertical);
                 r.Selitteet.AddToClassList("mk-kohdekartta-kokoruutu__selitteet");
@@ -799,6 +852,7 @@ namespace Matkakirja.Natiivi
             r.Nakyma.Katto = () =>
             {
                 var (_, vh) = Ala(r);
+                if (r.Kortista) vh = KortinSisaKorkeus(r) / 0.98f;
                 float lepo = r.Nakyma.LepoKoko.y;
                 return vh > 0f && lepo > 0f ? vh * 0.98f / lepo : 0f;
             };
@@ -827,10 +881,25 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>web mitoitaKarttaSuurennos: leveys = min(98 % ruudusta, 85 % korkeudesta × suhde).</summary>
+        /// <summary>Avauskortin suurennoksen kartta-ala (kortin sisäkorkeus paddingin jälkeen).</summary>
+        static float KortinSisaKorkeus(Kokoruutu r)
+        {
+            float h = r.Kortti.contentRect.height;
+            return float.IsNaN(h) ? 0f : h;
+        }
+
         static void Mitoita(Kokoruutu r)
         {
             var (vw, vh) = Ala(r);
             if (vw <= 0f || vh <= 0f) return;
+            if (r.Kortista)
+            {
+                // Web .kartta-suurennos-kortista: 94vw × 88dvh, kartta kortin levyisenä keskellä pystysuunnassa.
+                r.Kortti.style.width = Mathf.Round(vw * 0.94f);
+                r.Kortti.style.height = Mathf.Round(vh * 0.88f);
+                if (r.Levitetty) Levita(r, r.Nakyma.Zoom);
+                return;
+            }
             if (r.Selitteet != null) r.Selitteet.style.maxHeight = Mathf.Round(vh * 0.2f);
             r.Kortti.style.maxHeight = Mathf.Round(vh * 0.98f);
             if (r.Levitetty) { Levita(r, r.Nakyma.Zoom); return; }
@@ -841,7 +910,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kortti ruutua korkeampi (pitkä luettelo): kavennetaan, enintään puoleen leveydestä.</summary>
         static void TarkistaKorkeus(Kokoruutu r)
         {
-            if (r.Levitetty || r.Tarkistettu) return;
+            if (r.Kortista || r.Levitetty || r.Tarkistettu) return;
             var (vw, vh) = Ala(r);
             float h = r.Kortti.layout.height;
             if (vw <= 0f || vh <= 0f || float.IsNaN(h)) return;
@@ -869,8 +938,14 @@ namespace Matkakirja.Natiivi
             }
             if (!r.Levitetty) r.Nakyma.Naulaa(true);
             r.Levitetty = true;
-            r.Kortti.AddToClassList("mk-kohdekartta-kokoruutu__kortti--levitetty");
             var lepo = r.Nakyma.LepoKoko;
+            if (r.Kortista)
+            {
+                // Kortin koko pysyy; kartta kasvaa kortin sisäkorkeuteen asti.
+                r.Nakyma.Naulaa(true, Mathf.Round(Mathf.Min(KortinSisaKorkeus(r), lepo.y * kerroin)));
+                return;
+            }
+            r.Kortti.AddToClassList("mk-kohdekartta-kokoruutu__kortti--levitetty");
             r.Kortti.style.width = Mathf.Round(Mathf.Min(vw * 0.98f, lepo.x * kerroin));
             r.Nakyma.Naulaa(true, Mathf.Round(Mathf.Min(vh * 0.98f, lepo.y * kerroin)));
         }

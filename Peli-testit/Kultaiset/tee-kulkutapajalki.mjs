@@ -2,7 +2,8 @@
 // Sama käsikirjoitus ja ajot kuin tee-matkajalki.mjs:ssä (C#: MatkaTestit.Kasikirjoitus). Jokaisen
 // askeleen jälkeen kirjataan:
 //   vaihe 'action': napit = [laji, estetty, syy|null, korostettu] järjestyksessä liftaus, bussi,
-//                   laiva, lento (web ui.js renderTravelChoice vaihe A)
+//                   laiva, lento (web ui.js renderTravelChoice vaihe A); liftauksen paikalla
+//                   ['wait', false, null, true], kun tavoissa on odotus (talouden vaihe 1)
 //   vaihe 'roll':   vaihto = !game.autoTravel || game.muitaTapojaTarjolla() (web ui.js ~11262)
 // Estosyyt (keskenReittia, maaEste, bussiEste, laivaEste, lentoEste) luetaan SUORAAN webin ui.js:stä;
 // napin käytössäolon ehdot tarkistetaan lähdetekstistä, joten webin muutos kaataa skriptin.
@@ -26,6 +27,9 @@ for (const ehto of [
   "const laivaa = modes.includes('sea');",
   "const lentoa = flights.length > 0 || mannerLennot.length > 0;",
   "modes.includes('land') && !modes.includes('stay') ? 'primary' : ''",
+  // Talouden vaihe 1 (27.9.2026): kun vain odotus on mahdollinen, liftauksen paikalla on Odota (korostettu).
+  "const odotus = modes.includes('wait');",
+  "? this.iconButton('saapas', 'Odota', 'primary')",
   "if (modes.includes('land')) landBtn.addEventListener",
 ]) if (!ui.includes(ehto)) throw new Error(`web ui.js muuttui, ehto puuttuu: ${ehto}`);
 
@@ -58,7 +62,8 @@ function liiku(g, teko) {
     const lentoa = g.airportDestinations().length > 0 || g.mannerLennot().length > 0;
     const nappi = (laji, kaytossa, syy, korostettu = false) => [laji, !kaytossa, kaytossa ? null : syy.call(u), korostettu];
     kirjaus.napit = [
-      nappi('land', modes.includes('land'), u.maaEste, modes.includes('land') && !modes.includes('stay')),
+      modes.includes('wait') ? ['wait', false, null, true]
+        : nappi('land', modes.includes('land'), u.maaEste, modes.includes('land') && !modes.includes('stay')),
       nappi('bus', modes.includes('bus'), u.bussiEste),
       nappi('sea', modes.includes('sea'), u.laivaEste),
       nappi('fly', lentoa, u.lentoEste),
@@ -98,6 +103,9 @@ for (const { seed, start, alkuValinta = 0, raha = null } of AJOT) {
       const avain = [...g.moves.keys()].sort(ordinaali)[0];
       teko = `move:${avain}`;
       tulos = g.actionMove(avain);
+    } else if (g.phase === 'over') {
+      // Talouden vaihe 1 (27.9.2026): rahat loppuivat ja matka päättyi — jälki loppuu tähän.
+      break;
     } else throw new Error(`odottamaton vaihe ${g.phase}`);
     if (!tulos.ok) throw new Error(`${teko} epäonnistui: ${tulos.error}`);
     askeleet.push(liiku(g, teko));

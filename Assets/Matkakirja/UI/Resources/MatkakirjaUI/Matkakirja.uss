@@ -1600,6 +1600,19 @@
     transition-duration: 0.15s;
 }
 
+/* Talouden vaihe 1 (web .turn-pill .kassa.rahaton, .rahaton-aika): rahat lopussa kassa punaisena ja lihavana,
+   vieressä "rahat loppu · N vrk" 0,85 em. Päivämäärä ei muutu punaiseksi. */
+.mk-pilleri__raha--rahaton {
+    color: #c0392b;
+}
+
+.mk-pilleri__rahaton {
+    flex-shrink: 0;
+    margin-left: 6px;
+    color: #c0392b;
+    white-space: nowrap;
+}
+
 /* --- Matkalaukku (webin .passport-card): paperi nahkakehyksessä pillerin alla --- */
 
 .mk-pudotus.mk-laukku {
@@ -1747,6 +1760,15 @@
     height: 44px;
     margin-right: 10px;
     flex-shrink: 0;
+}
+
+/* Talouden vaihe 1: kassan vihje kukkaron alla (web .kassa title). */
+.mk-laukku__kassavihje {
+    margin-top: -2px;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+    color: rgba(70, 51, 31, 0.7);
+    white-space: normal;
 }
 
 .mk-laukku__tyhja {
@@ -2275,6 +2297,23 @@
 
 .mk-huipennus__otsikko {
     -unity-text-align: middle-center;
+}
+
+/* Loppukortin pitkä "Jatka viimeisestä tallennuksesta" (web winner-roam kahdella rivillä): napit rivittyvät ja
+   napin teksti saa taittua, jotteivät Jaa ja Uusi peli jää sen päälle kapealla puhelimella. */
+.mk-huipennus__napit {
+    flex-wrap: wrap;
+}
+
+.mk-huipennus__napit > .mk-nappi {
+    flex-shrink: 1;
+    min-width: 0;
+    margin-top: 8px;
+}
+
+.mk-huipennus__napit .mk-nappi__teksti {
+    white-space: normal;
+    flex-shrink: 1;
 }
 
 /* ◈-aarremerkki viivaikonina (Aloitusnakyma.Merkki). */
