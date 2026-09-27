@@ -28,16 +28,15 @@ silmämääräinen arviointi. Kalibroitu ja vahvistettu toimivaksi (esim. "Laita
   **Natiivisepälle: ei kuulostaisi haittaavan pelattavuutta (fallback toimisi jos virta oletuksena
   pois), mutta jos virta on oletuksena päällä 1.0.29:ssä, KAIKKI pollo-chat-vastaukset ovat
   äänettömiä käyttäjälle.**
-- **Nostokortin ylärivi + luennan säätimet (ratas, kaiutin tauko/jatko, VU-kaaret): iPhonella
-  PUUTTUU KOKONAAN, iPadilla TOIMII — laitekohtainen layout-bugi.** Testattu kahdella nosto-
-  tyypillä iPhonella (`ui nosto kohde:pompeji@ITA` ja `ui nosto skandaali:shakkiturkkilainen`):
-  `ui puu`-dumppi (115-122 elementtiä) ei sisällä YHTÄÄN `mk-nosto__ylarivi`-luokan elementtiä
-  kummassakaan, ei myöskään `mk-lukija__ratasikoni`/`mk-kaiutin`-elementtejä kortin sisällä. Sama
-  testi iPadilla (`ui nosto kohde:pompeji@ITA`) NÄYTTI ylärivin täydellisenä: symboli+"HISTORIA"-
-  teksti, `mk-lukija__ratasikoni` (ratas) JA `mk-kaiutin__osa mk-lukija__kaari` (VU-kaaret/kaiutin)
-  — kuvakaappauksella vahvistettu (rataskuvake + kaiutinkuvake otsikon "Pompeji" vieressä). Ei
-  poikkeuksia lokissa kummallakaan laitteella — todennäköisesti Ylarivi()-rivin flex-layout
-  romahtaa nollaleveydeksi kapealla iPhone-ruudulla (402 pt) mutta ei iPadin 1032 pt:llä.
+- **Nostokortin ylärivi + luennan säätimet (ratas, kaiutin tauko/jatko, VU-kaaret): PASS, EI BUGI
+  — oma virhearviointi korjattu (kiitos Natiivi-UI:n huomiosta).** Alun perin raportoin nämä
+  puuttuviksi iPhonella, koska `ui puu` listaa vain NÄKYVÄT elementit ja ylärivi jää LISÄÄ-
+  napautuksen jälkeen vierityksen yläpuolelle (löydös 131: kuva pysyy paikallaan, kortti vierittää
+  ali). Vedin korttia alas (swipe y 300→750) → SKANDAALIT-otsikko + ratas + kaiutin ilmestyivät
+  näkyviin täsmälleen odotetusti. Kuvat: proto-3d/lokit/laitetestaaja-ylarivi-puuttuu/
+  (vaihe1-*, vaihe2-*-ei-ylarivia [vierimättä, siis normaali], korjaus-ylarivi-nakyy-vedettyna-*).
+  iPadilla kortti on korkeampi eikä vieritä yläriviä pois, siksi näkyi heti ilman vetämistä.
+  EI vaadi korjausta 1.0.30:aan tämän löydöksen osalta.
 - **Maailma auki (mannerlennot): PASS.** `koetila mannerlento` → lokissa "koetila mannerlento
   (europe), mannerlentoja 6" — mannerlento-järjestelmä aktivoitui oikein ehtojen täytyttyä.
 - **Nimiöt väistävät erikoismalleja / pienten maiden lähitason kynnys: EI EHDITTY tälläkään
@@ -49,9 +48,8 @@ silmämääräinen arviointi. Kalibroitu ja vahvistettu toimivaksi (esim. "Laita
 
 ## Yhteenveto
 
-Kaksi todellista löydöstä korjattavaksi 1.0.30:aan: **(1) puhevirran striimaus epäonnistuu
-Data Processing Error -virheeseen** (fallback virta=pois toimii), **(2) nostokortin ylärivi
-(ratas/kaiutin/VU-kaaret) puuttuu iPhonella mutta toimii iPadilla** — todennäköisesti
-kapean-ruudun flex-layout-bugi. Pulu ilman äänikytkimiä ja maailma auki/mannerlennot PASS
-todistettuina. iPad-ydinkierros PASS. 0 poikkeusta molemmilla laitteilla koko session ajan.
-Jäljellä: nimiöt väistö, pienten maiden kynnys.
+Yksi todellinen löydös korjattavaksi 1.0.30:aan: **puhevirran striimaus epäonnistuu Data
+Processing Error -virheeseen** (fallback virta=pois toimii). Nostokortin ylärivi osoittautui
+EI-bugiksi (oma virhe, korjattu yllä — kiitos Natiivi-UI:lle nopeasta huomiosta). Pulu ilman
+äänikytkimiä ja maailma auki/mannerlennot PASS todistettuina. iPad-ydinkierros PASS. 0 poikkeusta
+molemmilla laitteilla koko session ajan. Jäljellä: nimiöt väistö, pienten maiden kynnys.
