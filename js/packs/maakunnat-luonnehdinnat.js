@@ -6061,6 +6061,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   HRV: {
     'Bjelovarsko-bilogorska': {
       lyhyt: 'Daruvar on Kroatian tšekkiläisvähemmistön keskus, ja kaupungin lämpimissä lähteissä on kylvetty jo roomalaisten aikaan.',
+      pitka: `Bjelovar oli isoisän 1873 matkan aikaan yhä nuori kaupunki suhteessa ympäristöönsä: Habsburgit perustivat sen 1756 säännölliseksi ruutukaava-varuskuntakaupungiksi osaksi Sotarajaa (Vojna granica), joka suojasi valtakuntaa Ottomaanien hyökkäyksiltä vuosisatojen ajan. Vielä 1870-luvulla Bjelovar oli ennen kaikkea sotilaskaupunki täynnä rajarykmenttien varuskuntia, ei siviilihallinnon keskus. Sotaraja lakkautettiin lopulta vasta 1881, kahdeksan vuotta isoisän matkan jälkeen, ja alue liitettiin tavalliseen siviilihallintoon.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-bjelovarsko-bilogorska-c9df4c6e.jpg",
@@ -6075,6 +6076,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Brodsko-Posavska': {
       lyhyt: 'Slavonski Brodissa Savan rannalla on Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui 4 000 sotilasta ja 150 tykkiä.',
+      pitka: `Đakovon suurta tuomiokirkkoa rakennettiin juuri isoisän 1873 matkan aikaan: piispa Josip Juraj Strossmayer tilasi sen wieniläiseltä arkkitehti Friedrich von Schmidtilta, työt alkoivat 1866 ja jatkuivat 1882 asti, joten isoisä olisi voinut nähdä puolivalmiin, telineiden peittämän tiilijättiläisen kohoavan Slavonian tasangolta. Strossmayer oli aikansa vaikutusvaltaisin kroaatti-piispa ja eteläslaavilaisen yhteistyön ajaja, ja hänen nimeään kantaa yhä Zagrebin yliopiston tiedeakatemia. Katedraali valmistui lopulta punatiilisenä uusromaanisena jättiläisenä, joka on yhä yksi Kroatian suurimmista kirkoista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-brodsko-posavska-03b27267.jpg",
@@ -6089,6 +6091,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dubrovacko-Neretvanska': {
       lyhyt: 'Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista.',
+      pitka: `Dubrovnik oli isoisän 1873 matkan aikaan Itävalta-Unkarin syrjäinen provinssikaupunki, hiljaisempi kuin koskaan aiemmin: Napoleon oli lakkauttanut vuosisatoja itsenäisenä säilyneen Ragusan tasavallan 1808, ja seuraavat vuosikymmenet kaupunki eli menneen kauppamahtinsa muistoissa köyhtyneenä. Matkailu, joka nykyään on kaupungin elinehto, ei ollut vielä alkanut lainkaan – ensimmäinen suuri hotelli avattiin vasta 1897, neljännesvuosisata isoisän vierailun jälkeen. Keskiaikaiset muurit ja Stradunin pääkatu näyttivät isoisän aikaan silti jo lähes samalta kuin nykyään, sillä kaupunki ei ollut kasvanut muuriensa ulkopuolelle.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-dubrovacko-neretvanska-8a7bc2ad.jpg",
@@ -6103,6 +6106,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Istarska: {
       lyhyt: 'Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista – asukkaita on noin viisikymmentä.',
+      pitka: `Pula oli isoisän 1873 matkan aikaan kiireisen muutoksen keskellä: Itävallan laivasto oli nostanut sen 1856 tärkeimmäksi sotasatamakseen (Kriegshafen), ja 1870-luvulla kaupungin ympärille kohosi kiihtyvää tahtia uusia linnoituksia, telakoita ja kasarmeja pienestä provinssikaupungista koko monarkian Adrian-laivaston pääasemaksi. Roomalaisajan amfiteatteri, joka on yhä yksi maailman parhaiten säilyneistä, oli isoisän aikaan jo lähes 1 800 vuotta vanha ja seisoi kasvavan sotasataman keskellä muistona aivan toisesta valtakunnasta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-istarska-b8605a87.jpg",
@@ -6117,6 +6121,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Karlovacka: {
       lyhyt: 'Karlovacia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika.',
+      pitka: `Karlovac perustettiin 1579 täydellisen säännölliseksi kuusisakaraiseksi tähtilinnoituskaupungiksi, kun arkkiherttua Kaarle Itävaltalainen halusi vahvan vartioasteman Ottomaanien hyökkäysreitille neljän joen risteykseen. Isoisän kulkiessa kaupungin läpi 1873 tähtimuotoinen kaavoitus oli yhä selvästi nähtävissä katuverkossa, vaikka linnoitusmuurit oli alettu jo purkaa niiden menetettyä sotilaallisen merkityksensä. Kaupunki oli 1870-luvulla ennen kaikkea kauppa- ja liikennesolmu, jonka läpi kulki puutavaraa ja maataloustuotteita Adrianmerelle päin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-karlovacka-18f4ab70.jpg",
@@ -6131,6 +6136,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Koprivničko-Križevačka': {
       lyhyt: 'Koprivnicassa on Podravka-elintarvikeyhtiön koti, ja siellä on valmistettu Vegeta-maustetta vuodesta 1959 lähtien.',
+      pitka: `Križevcin maatalousoppilaitos, joka avattiin 1860, oli isoisän 1873 matkan aikaan yhä koko Itävalta-Unkarin uusimpia ja edistyksellisimpiä: se oli Kroatian ensimmäinen ammatillinen maatalouskoulu ja kouluttajahenkilöstöä koko Slavonian ja Kroatian maaseudulle juuri niinä vuosikymmeninä, kun perinteinen maanviljely alkoi muuttua tehokkaammaksi. Alue oli isoisän aikaan silti pääosin hidasta maalaiselämää, viljapeltoja ja pieniä kyliä, kaukana Podravkan tulevasta teollisesta elintarviketuotannosta, joka syntyi vasta 1900-luvulla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-koprivnicko-krizevacka-852b0258.jpg",
@@ -6145,6 +6151,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Krapinsko-Zagorska': {
       lyhyt: 'Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo.',
+      pitka: `Trakošćanin linna Zagorjen kukkuloilla oli isoisän 1873 matkan aikaan juuri äskettäin muutettu keskiaikaisesta puolustuslinnasta romanttiseksi kreivillisasunnoksi: Drašković-suku kunnosti sen 1800-luvun puolivälissä uusgoottilaiseen tyyliin, keinotekoinen järvi kaivettiin sen juurelle samaan aikaan, ja lopputulos muistutti enemmän satukirjan linnaa kuin sotalinnoitusta. Hušnjakovon mäen neandertalinihmisen fossiilit makasivat isoisän matkan aikaan yhä täysin tuntemattomina maan alla – ne löydettiin vasta 1899, 26 vuotta myöhemmin, ja tekivät Krapinasta yhden maailman tärkeimmistä ihmisen esihistorian löytöpaikoista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-krapinsko-zagorska-861473bf.jpg",
@@ -6159,6 +6166,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Licko-Senjska': {
       lyhyt: 'Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä, ja hänen synnyinkotinsa on nykyään muistokeskus.',
+      pitka: `Isoisän 1873 matkan aikaan 17-vuotias Nikola Tesla asui yhä lähialueella eikä ollut vielä keksinyt mitään: hän kirjoittautui Karlovacin realikouluun juuri samana vuonna ja sairastui pian sen jälkeen vaikeaan koleraan, joka piti hänet hengenvaarassa kuukausien ajan. Vuoristoinen Lika oli isoisän aikaan karua, köyhää seutua, jota tunnettiin ennen kaikkea Velebit-vuoriston hallitsemasta maisemasta ja Josephina-nimisestä 1700-luvulla rakennetusta sotatiestä, joka yhdisti sisämaan Adrianmeren rannikkoon.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-licko-senjska-99975556.jpg",
@@ -6173,6 +6181,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Medimurska: {
       lyhyt: 'Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa.',
+      pitka: `Čakovecin linnaa hallinnut Zrínyi-suku oli 1600-luvulla yksi Kroatian mahtavimmista aatelissukuista – kreivi Nikola Zrínyi kuoli sankarikuoleman 1566 Szigetvárin piirityksessä Ottomaaneja vastaan, ja suvun tarina elää yhä Kroatian kansallistietoisuudessa. Isoisän matkan aikaan 1873 suvun linna oli jo pitkään menettänyt sotilaallisen merkityksensä ja rappeutunut, sillä viimeinen Zrínyi oli teloitettu petturina 1671 ja tilukset takavarikoitu. Međimurje itsessään oli pieni, joen ympäröimä maatalousalue, joka kuului tuolloin Unkarin puoleen kuningaskuntaa, ei Kroatiaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-medimurska-9eae0c14.jpg",
@@ -6187,6 +6196,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Osjecko-Baranjska': {
       lyhyt: 'Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin.',
+      pitka: `Osijekin Tvrđa-linnoituskaupunginosa rakennettiin 1700-luvun alussa Habsburgien voitettua alueen Ottomaaneilta, ja se on yksi Keski-Euroopan parhaiten säilyneistä barokkilinnoituksista: säännölliset kadut, kasarmit ja komentajan talo seisoivat isoisän 1873 matkan aikaan jo lähes muuttumattomina, sillä linnoitus oli menettänyt sotilaallisen merkityksensä mutta säilynyt hallinnollisena keskuksena. Slavonia oli 1870-luvulla Kroatian vilja-aitta, laajoja peltoja ja tammimetsiä, joiden puutavaraa vietiin Tonavaa pitkin ympäri Eurooppaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-osjecko-baranjska-adde931c.jpg",
@@ -6201,6 +6211,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Primorsko-Goranska': {
       lyhyt: 'Rijekassa suunniteltiin ja testattiin 1866 maailman ensimmäinen torpedo, ja kaupunki oli Euroopan kulttuuripääkaupunki 2020.',
+      pitka: `Opatija, joka nykyään on Kroatian tunnetuimpia kylpylärannikkokaupunkeja, oli isoisän 1873 matkan aikaan vielä vaatimaton kalastajakylä laurelipuiden keskellä – sen ensimmäinen suurhotelli avattiin vasta 1884, ja kaupunki nousi Habsburgien aatelien ja keisarikunnan yläluokan suosituksi talvikohteeksi vasta 1880–90-luvuilla. Rijeka itse oli isoisän aikaan sen sijaan jo vilkas satama- ja teollisuuskaupunki, jonka torpedotehdas oli vain seitsemän vuotta aiemmin, 1866, testannut maailman ensimmäisen toimivan torpedon Whiteheadin suunnittelemana.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-primorsko-goranska-08195744.jpg",
@@ -6215,6 +6226,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šibensko-Kninska': {
       lyhyt: 'Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus.',
+      pitka: `Krkan kansallispuiston vesiputoukset olivat isoisän 1873 matkan aikaan yhä täysin koskematon luonnonihme, kaukana nykyisestä suojelustatuksesta: puisto perustettiin vasta 1985, ja 1870-luvulla alueen putouksia hyödynsivät lähinnä paikalliset myllyt. Kninin linnoitus kalliolla oli isoisän aikaan menettänyt vuosisatoja sitten strategisen merkityksensä, mutta seisoi yhä muistona alueesta, joka oli vuosisatoja ollut riidan kohteena Venetsian, Ottomaanien ja Habsburgien välillä ennen kuin rauha vakiintui 1800-luvulla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sibensko-kninska-f4e33cd1.jpg",
@@ -6229,6 +6241,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sisacko-Moslavacka': {
       lyhyt: 'Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi – haikaroita oli enemmän kuin kylässä ihmisiä.',
+      pitka: `Sisak oli isoisän 1873 matkan aikaan hiljainen pikkukaupunki, jonka roomalaisajan menneisyys – kaupunki tunnettiin antiikissa Siscia-nimisenä ja toimi Pannonian maakunnan tärkeänä keskuksena – oli jäänyt vuosisatojen taakse ja pitkälti unohduksiin. Kaupungin nykyinen tunnusmerkki, rautatehdas Željezara Sisak, perustettiin vasta 1938, kuusi vuosikymmentä isoisän vierailun jälkeen. Lonjsko poljen tulvatasangot ympäröivine puukylineen olivat isoisän aikaan sen sijaan jo vanhaa, muuttumatonta talonpoikaismaisemaa, samanlaista kuin nykyään.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sisacko-moslavacka-3455976d.jpg",
@@ -6243,6 +6256,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Splitsko-Dalmatinska': {
       lyhyt: 'Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne alkoi 1715.',
+      pitka: `Splitin Diocletianuksen palatsi oli isoisän 1873 matkan aikaan jo yli 1 500 vuotta vanha, mutta yhä täynnä eläviä ihmisiä: keisari Diocletianus rakennutti sen eläkepalatsikseen noin 300 jaa., ja vuosisatojen kuluessa paikalliset asukkaat olivat muuttaneet palatsin kammiot ja käytävät kaupoiksi, asunnoiksi ja kirkoiksi – ainutlaatuinen ratkaisu, jonka ansiosta antiikin rakennus säilyi käytössä sen sijaan, että olisi jäänyt raunioksi. Isoisä olisi nähnyt saman elävän kaupunkirakenteen, joka on yhä nykyään Splitin vanhankaupungin ydin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-splitsko-dalmatinska-368dd37c.jpg",
@@ -6257,6 +6271,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Varaždinska': {
       lyhyt: 'Barokkinen Varaždin oli Kroatian pääkaupunki vuoteen 1776, ja nykyään sen kadut täyttää loppukesällä Špancirfest-katufestivaali.',
+      pitka: `Varaždin oli isoisän 1873 matkan aikaan menettänyt pääkaupunkiasemansa lähes sata vuotta aiemmin: valtaisa tulipalo tuhosi suuren osan kaupungista 1776, ja hallinto siirtyi sen jälkeen pysyvästi Zagrebiin. Kaupunki rakennettiin palon jälkeen uudelleen barokkityyliin, ja isoisä olisi kulkenut kadulla, joka näytti lähes samalta kuin nykyään turisteja houkutteleva vanhakaupunki. Entisestä pääkaupungista oli isoisän aikaan tullut rauhallinen maakuntakeskus, joka eli ennen kaikkea maatalouskaupasta ja käsityöläisammateista Zagrebin varjossa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-varazdinska-c80fd41a.jpg",
@@ -6271,6 +6286,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Viroviticko-Podravska': {
       lyhyt: 'Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon.',
+      pitka: `Virovitica on yksi Kroatian vanhimmista kaupungeista, mainittu asiakirjoissa jo 1234, mutta isoisän 1873 matkan aikaan se oli vaipunut vaatimattomaan maalaiskaupungin asemaan: aiemmat vuosisadat linnoituskaupunkina Ottomaanien rajaa vastaan olivat ohi, ja seutu eli 1870-luvulla ennen kaikkea viljanviljelystä ja puunjalostuksesta laajojen Papukin ja Bilogoran metsien liepeillä. Alueen geologinen rikkaus – kivilajit ja mineraalit, jotka tekivät Papukista myöhemmin Kroatian ensimmäisen geopuiston – oli isoisän aikaan vielä täysin tutkimatta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-viroviticko-podravska-8d3df889.jpg",
@@ -6285,6 +6301,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vukovarsko-Srijemska': {
       lyhyt: 'Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee.',
+      pitka: `Ilokin viinitilat Tonavan rannalla olivat isoisän 1873 matkan aikaan jo satoja vuosia vanhaa perinnettä: viininviljely alueella juontaa ainakin 1400-luvulle, ja kellareissa kypsyi samaa graševina-rypäleestä tehtyä valkoviiniä, jota alueella tuotetaan yhä. Aivan lähellä, Vučedolin kummulla, lepäsi isoisän aikaan maan alla täysin tuntemattomana kuparikautinen kulttuuri, joka oli kukoistanut paikalla noin 3000 vuotta eaa. – sen kuuluisa savikyyhky löydettiin vasta 1938, 65 vuotta isoisän matkan jälkeen, ja siitä tuli myöhemmin Kroatian tunnetuimpia arkeologisia symboleita.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-vukovarsko-srijemska-117dca75.jpg",
@@ -6299,6 +6316,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zadarska: {
       lyhyt: 'Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä.',
+      pitka: `Zadarin roomalaisajan foorumi ja sen vierellä kohoava Pyhän Donatuksen pyöreä kirkko olivat isoisän 1873 matkan aikaan jo lähes tuhat vuotta vanhoja: kirkko rakennettiin 800-luvulla osittain vanhoista roomalaisista pilareista ja kivistä, jotka oli otettu suoraan vieressä rapistuneesta foorumista. Kaupunki oli asunut isoisän aikaan roomalaisajoista lähtien lähes katkeamattomasti, ensin Rooman, sitten Bysantin, Venetsian ja lopulta Itävallan hallinnon alla – kerrostunut historia, jonka jäljet olivat isoisän nähtävissä yhtä selvästi kuin nykypäivän matkailijoilla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zadarska-7a42776f.jpg",
@@ -6313,6 +6331,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zagrebacka: {
       lyhyt: 'Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos.',
+      pitka: `Turopoljen alue Zagrebin eteläpuolella oli isoisän 1873 matkan aikaan yhä täynnä ainutlaatuista puurakentamisen perinnettä: alueen talonpojat rakensivat kirkkonsa ja talonsa perinteisesti tammihirsistä, ja monet 1700–1800-luvun rakennuksista ovat säilyneet tähän päivään asti Kroatian parhaana esimerkkinä maallikkokäsityöläisten puuarkkitehtuurista. Turopolje oli myös historiallisesti erikoisasemassa: koko alueen talonpojat olivat perineet aatelisoikeuden keskiajalta, ainutlaatuinen järjestely, joka teki heistä muodollisesti aatelisia mutta käytännössä tavallisia maanviljelijöitä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zagrebacka-6be197c2.jpg",
@@ -6327,6 +6346,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Grad Zagreb': {
       lyhyt: 'Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon.',
+      pitka: `Zagreb oli isoisän 1873 matkan aikaan yhä nuori yhtenäiskaupunki: kaksi vierekkäistä keskiaikaista kaupunkia, kirkollinen Kaptol ja maallinen Gradec, yhdistettiin muodollisesti yhdeksi Zagrebiksi vasta 1850, vain 23 vuotta ennen isoisän vierailua. Yläkaupungin (Gornji grad) mutkittelevat kadut ja kaksi erillistä tornia näkyvät yhä kaupungin siluetissa muistona tästä kaksinaisuudesta. Isoisän aikaan Zagreb kasvoi nopeasti Kroatian hallinnollisena ja kulttuurisena keskuksena, mutta oli väkiluvultaan yhä vaatimaton verrattuna Wienin tai Budapestin kaltaisiin monarkian suurkaupunkeihin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-grad-zagreb-f81ad3be.jpg",
