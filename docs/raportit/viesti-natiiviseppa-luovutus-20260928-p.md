@@ -25,6 +25,8 @@ yhä voimassa, ellei tässä toisin sanota.
   [long-pause]) ja 5 (Pulun tagit; `ui pulu sano` ei kulje chat-polkua, vaatii oikean kysymyksen Pululle). Molemmat ovat
   yksikkötesteissä (LuennanTagitKappalejakoJaValiotsikko, PuhetagitEivatNayNaytolla), kerrottu Fablelle. TF 1.0.34:n päätös
   Fablella ja Julkaisijalla.
+- **TF 1.0.34 -VIENTI ALKOI 00.26** (Julkaisija, ajo 36351716395, proto_ref 17c2928b, CFBundleVersion 202609272058, julkaisulippu
+  Julkaisijalla päällä — älä poista sitä).
 - **Ei mergejä proto-masteriin ennen Julkaisijan "vienti valmis" -viestiä (TF 1.0.34).**
 - TF 1.0.33 (202609272009) valmis klo 23.56 sisäisessä ryhmässä.
 - Yötauko jatkuu Karttasepän polton loppuun: ei käännöksiä eikä simulaattoreita, paitsi julkaisu lipulla
