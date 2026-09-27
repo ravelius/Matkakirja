@@ -121,6 +121,8 @@ namespace Matkakirja
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
     ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
+    ///   nostot heti 0|1           kohdemaan nostot heti (1, oletus: ei vähimmäisosuutta, porttia eikä saapumispiiloa) / 0 = vanhat
+    ///                             arvot (0,5 / 1,4 s / syttyminen 0,7 s) A/B-mittaukseen
     ///   nostot tila [ISO3] | nostot maa <ISO3|pois>   nostokerroksen portit lokiin (NostoKerros.Kuvaus): näkyvät,
     ///                             piilotetut syineen (kaupunki nimi/12 km, meri, taso 3, ruutu, katto), uloin osuus,
     ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa); lisäksi minimerkit
@@ -964,6 +966,7 @@ namespace Matkakirja
                     var nk = NostoKerros.Instanssi;
                     if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nostokerros puuttuu"); break; }
                     if (o.Length > 2 && o[1] == "maa") nk.Maa = o[2] == "pois" ? null : o[2].ToUpperInvariant();
+                    if (o.Length > 2 && o[1] == "heti") nk.AsetaHeti(o[2] != "0" && o[2] != "pois");
                     if (o.Length > 2 && o[1] == "kerroin")
                     {
                         // Webin mittauksen portaat (kerroin 1 = saapumisnäkymä, 2, 3,13) samalla kaavalla kuin ZoomKerroin.
