@@ -7,17 +7,19 @@ namespace Matkakirja
     /// ALOITUSLENNON RATA v2 (omistajan palaute v7:stä 27.9.2026 klo 23.0x, Fablen kautta; Natiiviseppä). Lontoo → aloituskaupunki
     /// yhtenä 15 s:n otoksena napautetusta pallonäkymästä pelin saapumisnäkymään. Omistajan säännöt:
     ///   1. Kone näkyy KOKO AJAN (pienenä tai isona) eikä sitä näytetä koskaan takaa (edestä, sivulta tai niiden välistä).
-    ///   2. Alku: koneen lähtö näytetään kaukaa, kamera rullaa hitaasti lähemmäs matalasta kulmasta (Afrikan päältä pohjoiseen).
+    ///   2. Alku: kamera lähtee HYVIN KORKEALTA (napautettu pallonäkymä) ja näyttää koneen lähdön kaukaa (pienenä mutta
+    ///      näkyvissä); se rullaa samalla lähemmäs ja alemmas, ja kartta näkyy kaukaa loivassa kulmassa Afrikan päältä pohjoiseen
+    ///      (omistajan tarkennus Fablen kautta 27.9. klo 23.4x: ei matalaa kulmaa).
     ///   3. Takaa-ajo kiihtyy, tavoittaa koneen, ja kone lipuu VASEMMALTA OIKEALLE läheltä kameran ohi.
     ///   4. Kamera lentää kohteen yli ja näyttää saapumisen etuviistosta, kiertää laskeutumiskohtaa ja nousee, kunnes kohde
     ///      näkyy ylhäältä pelin jatkokohdasta (saapumisnäkymä).
     ///   5. Viiva ja lähtöpiste näkyvät; kamera muuttaa koko ajan suuntaa tai korkeutta kuminauhamaisesti.
     ///
-    /// AIKAJANA (s): 0–4 AVAUS (napautusnäkymä → kallistus 60°, etäisyys 7 600 → ~1 800 km: silmä Afrikan rannikon yllä, kone
-    /// ja Lontoo yläosassa horisontin sisällä) · 4–6,3 KIRI (kamera kiihtyy koneeseen, 1 800 → 30 km, kääntyy koneen oikealle kyljelle) · 6,3–7,9 OHITUS (kone lipuu
-    /// vasemmalta oikealle, lähimmillään 23 km, reitin puolivälissä) · 7,9–10,7 YLILENTO (kamera nousee ja kiitää kohteen
-    /// taakse, kääntyy katsomaan konetta edestä) · 10,7–13,2 SAAPUMINEN (kiertää laskeutumiskohtaa, kone etuviistosta,
-    /// kosketus 13,2 s) · 13,2–15 PALJASTUS (nousu saapumisnäkymään, pohjoinen ylös).
+    /// AIKAJANA (s): 0–4 AVAUS (napautusnäkymä 7 600 km → ~4 500 km ja kallistus 0° → 32°: silmä korkealla Saharan yllä,
+    /// katse pohjoiseen, koko reitti ja Lontoo kuvassa) · 4–6,5 KIRI (kamera kiihtyy koneeseen, 4 500 → 30 km, kääntyy koneen
+    /// oikealle kyljelle) · 6,5–8,1 OHITUS (kone lipuu vasemmalta oikealle, lähimmillään 23 km, reitin puolivälissä) ·
+    /// 8,1–10,9 YLILENTO (kamera nousee ja kiitää kohteen taakse, kääntyy katsomaan konetta edestä) · 10,9–13,2 SAAPUMINEN
+    /// (kiertää laskeutumiskohtaa, kone etuviistosta, kosketus 13,2 s) · 13,2–15 PALJASTUS (nousu saapumisnäkymään).
     ///
     /// TOTEUTUS: kamera suunnitellaan koneen RUUTUPAIKKANA. Kanavat (log-etäisyys katsepisteeseen, kallistus pystystä, suuntima,
     /// koneen ruutupaikka x/y ja katseen korkeuden paino) ovat avainkehyksiä (smootherstep), joita KUMINAUHA seuraa
@@ -33,8 +35,10 @@ namespace Matkakirja
     public sealed class AloituslennonRata
     {
         // ---- Aikajana (s) ----
-        public const double KestoS = 15.0, AvausS = 4.0, KiriS = 6.3, OhitusS = 7.1, OhitusLoppuS = 7.9, NousuS = 9.4,
-            SaapuminenS = 10.8, KosketusS = 13.2, PysahdysS = 13.8;
+        public const double KestoS = 15.0, AvausS = 4.0, KiriS = 6.5, OhitusS = 7.3, OhitusLoppuS = 8.1, NousuS = 9.5,
+            SaapuminenS = 10.9, KosketusS = 13.2, PysahdysS = 13.8;
+        /// <summary>Avauksen loppu: kallistus pystystä (°, loiva) ja etäisyys reitin pituuksina (rajat alla).</summary>
+        public const double AvausKallistus = 32.0, AvausEtaisyys = 1.9;
         /// <summary>Loppu pakotetaan saapumisnäkymään tästä alkaen (s).</summary>
         public const double PakotusS = 13.0;
         /// <summary>Ohituksen kohta reitillä (osuus) ja koneen nopeus ohituksessa (m/s).</summary>
@@ -106,10 +110,10 @@ namespace Matkakirja
         /// yli, saapuminen ja saapumisnäkymä. Riippuu vain reitin pituudesta, joten koneen nopeus voi seurata sitä.</summary>
         Kanava Etaisyys()
         {
-            // Avaus: silmä Afrikan rannikon yllä (vaakaetäisyys d · sin 60° katsepisteestä), Lontoo horisontin sisällä.
-            double dA = Math.Min(Rajaa(0.75 * ReittiM, 1_500_000.0, 2_600_000.0), 0.7 * Alku.EtaisyysM);
+            // Avaus: korkealla ja kaukana (loiva kallistus): silmä Saharan yllä, koko reitti ja lähtöpiste kuvassa.
+            double dA = Math.Min(Rajaa(AvausEtaisyys * ReittiM, 3_000_000.0, 5_500_000.0), 0.8 * Alku.EtaisyysM);
             // Ylilento: niin korkealla, että loppumatka kulkee kuvassa rauhassa (kone ~0,8 etäisyyttä sekunnissa).
-            double dC = Rajaa(0.4 * ReittiM, 350_000.0, 1_300_000.0);
+            double dC = Rajaa(0.4 * ReittiM, 350_000.0, 1_100_000.0);
             return new Kanava().Lisaa(0, Math.Log(Alku.EtaisyysM)).Lisaa(AvausS, Math.Log(dA)).Lisaa(KiriS, Math.Log(30_000))
                 .Lisaa(OhitusS, Math.Log(23_000)).Lisaa(OhitusLoppuS, Math.Log(29_000)).Lisaa(NousuS, Math.Log(dC))
                 .Lisaa(SaapuminenS, Math.Log(150_000)).Lisaa(KosketusS - 0.4, Math.Log(135_000)).Lisaa(KestoS, Math.Log(Loppu.EtaisyysM));
@@ -125,9 +129,9 @@ namespace Matkakirja
         double Dref(double t) => Math.Exp(Lerp(dRef, t));
 
         static double Rullaus(double t) => 300.0 * S(t / 0.6) * (1 - S((t - 0.6) / 1.6));
-        static double W1(double t) => S((t - 0.5) / 2.4) * (1 - S((t - 4.9) / 1.4));
-        static double Wo(double t) => S((t - 4.9) / 1.4) * (1 - S((t - 7.7) / 0.9));
-        static double W2(double t) => S((t - 7.7) / 1.1) * (1 - S((t - 9.3) / 1.1));
+        static double W1(double t) => S((t - 0.5) / 2.4) * (1 - S((t - (KiriS - 1.4)) / 1.4));
+        static double Wo(double t) => S((t - (KiriS - 1.4)) / 1.4) * (1 - S((t - (OhitusLoppuS - 0.2)) / 0.9));
+        static double W2(double t) => S((t - (OhitusLoppuS - 0.2)) / 1.1) * (1 - S((t - 9.4) / 1.0));
 
         /// <summary>Saapumisen absoluuttinen nopeus (m/s): 60 km/s → 3 km/s (12,3 s) → 0,7 km/s kosketuksessa → pysähdys.</summary>
         static double Saapuminen(double t)
@@ -248,8 +252,8 @@ namespace Matkakirja
             double psi0 = Psi(0.8), bKiri = Psi(KiriS) + OhitusTheta;
             double bA1 = psi0 - 180.0 + AvausAlfa, bA2 = psi0 - 180.0 - AvausAlfa;
             double bA = Math.Abs(Kulmaero(bKiri, bA1)) <= Math.Abs(Kulmaero(bKiri, bA2)) ? bA1 : bA2;
-            double sxA = Kulmaero(bA, psi0 - 180.0) > 0 ? -0.2 : 0.2;   // kone lähtöpisteen vastakkaiselle puolelle
-            var kal = new Kanava().Lisaa(0, Alku.Kallistus).Lisaa(AvausS, 60).Lisaa(KiriS, 82).Lisaa(OhitusS, 83).Lisaa(OhitusLoppuS, 82)
+            double sxA = Kulmaero(bA, psi0 - 180.0) > 0 ? -0.12 : 0.12;   // kone lähtöpisteen vastakkaiselle puolelle
+            var kal = new Kanava().Lisaa(0, Alku.Kallistus).Lisaa(AvausS, AvausKallistus).Lisaa(KiriS, 82).Lisaa(OhitusS, 83).Lisaa(OhitusLoppuS, 82)
                 .Lisaa(NousuS, 58).Lisaa(SaapuminenS, 66).Lisaa(KosketusS - 0.4, 50).Lisaa(KestoS, Loppu.Kallistus);
             // Laskeutumiskohdan kierto sille puolelle, josta paljastus pohjoinen ylös -näkymään on lyhyempi (kone etuviistosta).
             double bL1 = Psi(KosketusS) - 130, bL2 = Psi(KosketusS) + 130;
@@ -265,7 +269,7 @@ namespace Matkakirja
             for (int i = 0; i < bt.Length; i++) suu.Lisaa(bt[i], bv[i]);
             var sx = new Kanava().Lisaa(0, s0x).Lisaa(AvausS, sxA).Lisaa(KiriS, -0.55).Lisaa(OhitusS, -0.05).Lisaa(OhitusLoppuS, 0.40)
                 .Lisaa(NousuS, 0.12).Lisaa(SaapuminenS, 0.0).Lisaa(KosketusS, 0.0).Lisaa(KestoS, sfx);
-            var sy = new Kanava().Lisaa(0, s0y).Lisaa(AvausS, 0.05).Lisaa(KiriS, 0.06).Lisaa(OhitusS, 0.0).Lisaa(OhitusLoppuS, -0.02)
+            var sy = new Kanava().Lisaa(0, s0y).Lisaa(AvausS, 0.0).Lisaa(KiriS, 0.06).Lisaa(OhitusS, 0.0).Lisaa(OhitusLoppuS, -0.02)
                 .Lisaa(NousuS, 0.15).Lisaa(SaapuminenS, 0.25).Lisaa(KosketusS, 0.0).Lisaa(KestoS, sfy);
             var kw = new Kanava().Lisaa(0, 0).Lisaa(AvausS, 0).Lisaa(KiriS, 1).Lisaa(OhitusLoppuS, 1).Lisaa(NousuS, 0);
 
