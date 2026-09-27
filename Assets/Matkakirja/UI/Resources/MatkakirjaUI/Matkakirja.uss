@@ -1668,6 +1668,17 @@
     border-color: rgba(158, 44, 33, 0.45);
 }
 
+/* Viisi oikeanpuoleista oransseina (web #3443 v2335): palava #d97a2b / #a8561a, sammunut .12 / .45. */
+.mk-elamapalkki__lohko--oranssi {
+    background-color: #d97a2b;
+    border-color: #a8561a;
+}
+
+.mk-elamapalkki__lohko--oranssi.mk-elamapalkki__lohko--kulunut {
+    background-color: rgba(217, 122, 43, 0.12);
+    border-color: rgba(168, 86, 26, 0.45);
+}
+
 .mk-elamapalkki__teksti {
     margin-top: 3px;
     font-size: 10px;
