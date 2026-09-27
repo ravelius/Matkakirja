@@ -27,9 +27,15 @@ voimassa.
 4a. **#3441 eheysvartija** (wt/siirtoseppa-eheysvartija, head 38d5c43eb): tools/vienti/eheysvartija.mjs + .github/workflows/
    eheysvartija.yml (06.30 + jokaisen viennin jälkeen, self-hosted macOS) → proto-3d/lokit/eheysvartija/VIKA.txt;
    Postivahdille ohje lähetetty. Junassa.
-4b. **#3445 skeema 1.53** (wt/siirtoseppa-maasto-153, PINOTTU #3432:n päälle): maasto z≤10 + kaupunkiMaasto z11–12
-   50 km (Fable B1+C, ehdotus #3442), natiivi pakkaa itse (Natiiviseppä kuittasi). Järjestys #3432 → #3445; mergen
-   jälkeen tarkista ämpäri (pienet + tuotanto 1.53) ja rivi Fablelle + Natiivisepälle.
+4b. **#3445 skeemat 1.53 + 1.54** (wt/siirtoseppa-maasto-153, head bf0c2c1e2, PINOTTU #3432:n päälle): maasto z≤10 +
+   kaupunkiMaasto z11–12 50 km; 1.54 mediaKuvat = natiivin koko offline-media (korvaaMedian, kuvat 1024 px/JPEG 75,
+   vain puheet, katto 100 Mt/maa), tavuja.offline. Eurooppa ~1,3 Gt (tavoite ~1,2; 960/70 → ~1,1 Gt jos Fable haluaa).
+   Natiiviseppä kuittasi, natiivi 1.0.32-junassa bbbfadde. Järjestys #3432 → #3445.
+4c. **Seuraava (Fable 27.9.):** kun 1.52–1.54 tuotannossa ja 1.0.32 käännetty → päästä päähän offline-testi Tanska +
+   Kroatia omalla simulaattorilla F989814A (vuoro Julkaisijalta, booted < 2, sammuta jälkeen): koko ennen latausta ja
+   levyllä, lentotila/debug-offline → kartta, maasto, nostokuvat, puheet. Kuvat raporttiin, löydökset rooleille.
+4d. Docs-PR:t #3442 (maastoehdotus) ja #3463 (App Store -luvut) junassa. Jono App Storen jälkeen: kaupunkilehdet.json- ja
+   media.json-monoliittien pilkkominen.
 4. **Deltajono:** vienti ajetaan automaattisesti jokaisesta mainin pushista; tehtävä on tarkistaa tuotanto ja raportoida.
    Tuotanto nyt **1.x v241+** (1.51). #3394-delta TEHTY 27.9. klo 12.0x: v218 (saannot START_MONEY 400 ym., hintatasot raakamoduulina; natiivi lukee kovakoodattua AloitusRaha 300 → ei vaikutusta ennen 1.0.30), Pelikoodarille kerrottu. #3370 (astronautti erät 5–6) tulee seuraavaan: tarkista SATELLIITTI_KOHTEET
    (v201: 141) ja ämpäri. Uudet sisältö-PR:t: Julkaisija ilmoittaa → ämpäritarkistus + rivi Fablelle.
