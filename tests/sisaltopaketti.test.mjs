@@ -1547,3 +1547,19 @@ test('skeema 1.51: natiivin pallon Z10 offline-välit = Karttasepän poltettu jo
   // Kaikki paitsi maattomien kaupunkien (Jerusalem) laatat ovat jonkin maan offline-alueessa.
   assert.ok(kaikki.size >= lista.size - 40, `${kaikki.size}/${lista.size}`);
 });
+
+test('eheys 27.9.: Flickr-kuvat repon kopiona ämpärissä, Flickr vain varana', async () => {
+  const { sivustonAssetit } = await import('../tools/vienti/vie-sisalto.mjs');
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  const flickr = media.filter((v) => v.laji === 'kuva-flickr');
+  assert.ok(flickr.length > 0);
+  const assetit = sivustonAssetit(tiedostot);
+  for (const v of flickr) {
+    assert.match(v.url, /^https:\/\/media\.matkakirja\.app\/assets\/valokuvat\/flickr-\d+\.jpg\?v=[0-9a-f]{12}$/, v.arvo);
+    assert.ok(assetit[v.url.slice('https://media.matkakirja.app/'.length).split('?')[0]], `${v.arvo} ei ämpärin assettilistassa`);
+    assert.match(v.varat.at(-1), /^https:\/\/live\.staticflickr\.com\//);
+  }
+  const offline = JSON.parse(tiedostot.get('offline.json'));
+  const kaikki = Object.values(offline.maat).flatMap((m) => m.media);
+  assert.equal(kaikki.filter((u) => u.includes('staticflickr')).length, 0, 'offline-lataus ei hae Flickristä');
+});
