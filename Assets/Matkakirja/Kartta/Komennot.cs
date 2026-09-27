@@ -100,6 +100,7 @@ namespace Matkakirja
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
+    ///   pohja savy [kontrasti nosto]  pohjakartan kontrasti (0 = ennallaan, −0,5…0,3) ja mustan nosto (0–0,4); säilyy laitteella
     ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke|suunta maailma|ruutu|kamera   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
@@ -431,6 +432,12 @@ namespace Matkakirja
             double D(int i) => double.Parse(o[i], CultureInfo.InvariantCulture);
             switch (o[0])
             {
+                case "pohja" when o.Length > 1 && o[1] == "savy":
+                    // pohja savy [kontrasti nosto]: pohjakartan kontrasti ja mustan nosto (Pohjasavy; omistaja 27.9. klo 17.2x)
+                    if (o.Length > 3)
+                        Pohjasavy.Aseta(float.Parse(o[2], CultureInfo.InvariantCulture), float.Parse(o[3], CultureInfo.InvariantCulture));
+                    Debug.Log("MATKAKIRJA " + Pohjasavy.Kuvaus());
+                    break;
                 case "hiljaa":
                 case "aanet":
                     // Laitetestit ilman ääniä (Fable 24.9.): koko sovellus mykäksi tai takaisin.
