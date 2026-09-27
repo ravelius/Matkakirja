@@ -69,3 +69,11 @@ Main punaisella #3412:n jälkeen → **korjaus #3414**: pelikatalogi-data.js gen
 Omissa erissä ei korjattavaa. Huom: docs/tilannekatsaus.md Yleiskuva → Seuraavaksi: "lisää linssejä ja kohteita Euroopan
 ulkopuolelle" näkyy projektisivulla (#3410) — ristiriidassa uuden linjauksen kanssa; teksti on Fablen, korjaa md:hen, niin
 projektisivu päivittyy (tools/tee-projekti-data.mjs).
+
+## RAHATTOMUUSPALKKI (omistaja 15.1x) omistajan korttiin
+
+Luonnos-PR **#3421** v2326 (8e39db7e). Kuvaparit: `/Users/Shared/Claude/proto-3d/lokit/rahattomuuspalkki/kuvapari-rahattomuus-393x852.png`
+ja `-834x1194.png` (A rahat kunnossa | B rahat loppu 6/8 lohkoa, "RAHAT LOPPU · 1 VRK 12 H"). Pergamenttilappu yläreunan
+painikkeiden alla keskellä; iPadilla päiväkirjan ja selitteen välissä; ei ota kosketuksia; nostot väistävät. Yläpalkin
+"rahat loppu · N vrk" poistettu (katkaisi päivämäärän puhelimella), kassa pysyy punaisena. Mitat Natiivi-UI:lle lähetetty
+(tekee natiivin kortin jälkeen). node --test 4459/0.
