@@ -10026,6 +10026,117 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ranskan vanhin kaupunki perustettiin kreikkalaisten '
+        + 'toimesta, selvisi keskiajan pahimmasta rutosta ja on '
+        + 'kuuluisan romaanivangin saaren isäntä.',
+      tehtava: {
+        kysymys: 'Ketkä perustivat Marseillen alun perin noin 600 eaa.?',
+        vaihtoehdot: [
+          'Foinikialaista alkuperää olevat kreikkalaiset Fokaiasta',
+          'Roomalaiset legioonalaiset',
+          'Ligurialaiset paikallisheimot',
+          'Karthagolaiset kauppiaat',
+        ],
+        oikea: 0,
+        fakta: 'Kreikkalaiset siirtolaiset Vähän-Aasian Fokaiasta '
+          + 'perustivat Massalian, nykyisen Marseillen, noin vuonna '
+          + '600 eaa. — Ranskan vanhimman kaupungin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonka perustivat kreikkalaiset merenkulkijat',
+          tiedosto: 'Marseille-Jardin des Vestiges-bjs180810-01.jpg',
+          teksti: 'Kreikkalaiset siirtolaiset Vähän-Aasian '
+            + 'Fokaian kaupungista perustivat Massalian noin '
+            + 'vuonna 600 eaa. luonnonsatamaan, joka on nykyinen '
+            + 'Vieux-Port. Massaliasta tuli nopeasti tärkeä '
+            + 'kauppasatama, joka välitti viiniä, öljyä ja keramiikkaa '
+            + 'Välimereltä sisämaahan päin — ja Ranskan vanhin '
+            + 'kaupunki oli syntynyt.'
+            + '\n\n'
+            + 'Kaupungin muinaiset satamamuurit ja rakennusten '
+            + 'perustukset ovat säilyneet Jardin des Vestiges '
+            + '-puutarhassa keskellä nykyistä kaupunkia — '
+            + 'kaivaukset paljastivat ne 1960-luvulla ostoskeskuksen '
+            + 'rakennustöiden yhteydessä.',
+          lyhyt: 'Kreikkalaiset Fokaiasta perustivat Marseillen (Massalia) noin 600 eaa., Ranskan vanhimman kaupungin.',
+          selite: 'Massalian antiikin satamamuurien jäänteet Jardin '
+            + 'des Vestiges -puutarhassa keskellä nykyistä Marseillea.',
+          lahde: 'Bjs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Rutto, joka tappoi joka toisen kaupunkilaisen',
+          tiedosto: 'Michel Serre-Peste-Cours Belsunce.jpg',
+          teksti: 'Rutto saapui Marseilleen toukokuussa 1720 '
+            + 'kauppalaiva Grand-Saint-Antoinen mukana Levantista, ja '
+            + 'sairaus levisi nopeasti kaupunkiin, jonka viranomaiset '
+            + 'olivat aluksi kieltäytyneet asettamasta laivaa '
+            + 'karanteeniin kauppaetujen takia. Tauti tappoi lopulta '
+            + 'noin puolet kaupungin sadastatuhannesta asukkaasta '
+            + 'kahden vuoden aikana.'
+            + '\n\n'
+            + 'Taiteilija Michel Serre eli itse epidemian keskellä ja '
+            + 'maalasi katukohtauksia, joissa ruumiita kasataan '
+            + 'kärryihin kadulle — hänen teoksensa ovat harvinaisia '
+            + 'silminnäkijäkuvia siitä, miltä ruttoepidemia näytti '
+            + 'todellisuudessa. Katastrofi johti tiukempiin '
+            + 'karanteenisäännöksiin koko Ranskan satamissa.',
+          lyhyt: 'Vuoden 1720 rutto tappoi noin puolet Marseillen sadastatuhannesta asukkaasta.',
+          selite: 'Michel Serren maalaus kuvaa ruumiiden keräämistä '
+            + 'Cours Belsuncelta ruttoepidemian aikana 1720 — '
+            + 'taiteilija eli itse tapahtumat.',
+          lahde: 'Michel Serre, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Linnoitussaari, josta tuli maailmankuulu vankila',
+          tiedosto: 'Château d\'If @ Baie de Marseille 01.jpg',
+          teksti: 'Kuningas Frans I rakennutti If-linnoituksen pienelle '
+            + 'saarelle Marseillen edustalle 1520-luvulla puolustamaan '
+            + 'satamaa mereltä tulevilta hyökkäyksiltä. Linnoitus ei '
+            + 'koskaan joutunut puolustamaan kaupunkia sotilaallisesti, '
+            + 'mutta siitä tuli sen sijaan pelätty vankila, jonne '
+            + 'suljettiin sekä poliittisia vankeja että '
+            + 'protestantteja.'
+            + '\n\n'
+            + 'Linnoitus tuli maailmankuuluksi Alexandre Dumasin '
+            + 'romaanista Monte-Criston kreivi (1844), jossa '
+            + 'päähenkilö Edmond Dantès vangitaan sinne vuosikausiksi '
+            + 'perättömän syytöksen takia ja pakenee lopulta '
+            + 'meritse. Saarelle tehdään yhä laivakierroksia tarinan '
+            + 'takia, vaikka Dantès on täysin kuvitteellinen hahmo.',
+          lyhyt: 'If-linnoitus rakennettiin 1520-luvulla, mutta tuli kuuluisaksi Dumasin Monte-Criston kreivi -romaanista.',
+          selite: 'If-linnoitus saarellaan Marseillen edustalla — '
+            + 'rakennettiin 1520-luvulla, kuuluisaksi teki Dumasin '
+            + 'romaani Monte-Criston kreivi.',
+          lahde: 'Rémih, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neitsyt, joka vahtii merenkulkijoita mäen laelta',
+          tiedosto: 'Notre-Dame de la Garde Basilica in Marseille.jpg',
+          teksti: 'Notre-Dame de la Garde -basilika kohoaa Marseillen '
+            + 'korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen '
+            + 'kultainen Neitsyt Maria -patsas näkyy kauas merelle. '
+            + 'Nykyinen basilika valmistui 1864, mutta paikalla on '
+            + 'ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle '
+            + 'rakennettiin ensimmäinen pieni kappeli.'
+            + '\n\n'
+            + 'Merenkulkijat ovat perinteisesti pitäneet basilikaa '
+            + 'suojelijanaan ja jättäneet sinne kiitoslahjoja '
+            + 'onnistuneista matkoista — kirkon seinillä riippuu yhä '
+            + 'satoja pienoislaivoja ja muistolaattoja pelastuneista '
+            + 'haaksirikoista. Marseillelaiset kutsuvat patsasta '
+            + 'hellästi "La Bonne Mère", hyväksi äidiksi.',
+          lyhyt: 'Notre-Dame de la Garde -basilika 1864 on merenkulkijoiden perinteinen suojeluspaikka Marseillen korkeimmalla kukkulalla.',
+          selite: 'Notre-Dame de la Garde -basilika Marseillen '
+            + 'korkeimmalla kukkulalla — merenkulkijoiden perinteinen '
+            + 'suojeluskohde vuodesta 1864.',
+          lahde: 'Vinaciv183, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -22781,6 +22892,116 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tromssasta lähdettiin etsimään navan ympäriltä sekä '
+        + 'mainetta että olutta, ja sinne ajautui lopulta myös '
+        + 'Euroopan pelätyin sotalaiva.',
+      tehtava: {
+        kysymys: 'Miksi Tromssaa on kutsuttu "Jäämeren Pariisiksi" ja arktisten retkikuntien porttikaupungiksi?',
+        vaihtoehdot: [
+          'Retkikunnat varustautuivat ja rekrytoivat miehistöä siellä ennen pohjoista matkaa',
+          'Kaupunki sijaitsee tarkalleen Pohjoisnavalla',
+          'Kaikki tunnetut napamatkaajat syntyivät siellä',
+          'Kaupungissa on Euroopan suurin jäätikkömuseo',
+        ],
+        oikea: 0,
+        fakta: 'Napaan ja Koillisväylälle suuntaavat retkikunnat, muun '
+          + 'muassa Amundsenin ja Nansenin, varustautuivat usein '
+          + 'Tromssassa ennen matkaansa — siksi lempinimi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kirkko, joka on kokonaan puuta ja silti katedraali',
+          tiedosto: 'Tromsø Cathedral (domkirke) Norway interior. Pillars (bæresøyler), tables, pews (kirkebenker), sunlight, tulips, etc in nave (kirkeskip hovedrom). Wooden church 1861 Chr. H. Grosch 2019-04-04 DSC02286.jpg',
+          teksti: 'Tromssan tuomiokirkko valmistui 1861 arkkitehti '
+            + 'Christian Heinrich Groschin piirustusten mukaan '
+            + 'uusgoottilaiseen tyyliin, mutta poikkeuksellisesti '
+            + 'kokonaan puusta kiven sijaan. Se on maailman pohjoisin '
+            + 'luterilainen katedraali, ja sen valkoinen puujulkisivu '
+            + 'näkyy kauas Tromssan salmen yli.'
+            + '\n\n'
+            + 'Puurakenne oli käytännöllinen valinta pohjoisessa, '
+            + 'jossa kivimateriaalin kuljetus olisi ollut kallista, '
+            + 'mutta se on myös vaatinut jatkuvaa kunnostusta '
+            + 'ankarassa ilmastossa. Kirkko on yhä Tromssan '
+            + 'hiippakunnan pääkirkko ja suosittu konserttipaikka '
+            + 'kesäisin, kun aurinko ei laske ollenkaan.',
+          lyhyt: 'Tromssan puinen tuomiokirkko 1861 on maailman pohjoisin luterilainen katedraali.',
+          selite: 'Tromssan tuomiokirkon sisätila — kokonaan puinen '
+            + 'uusgoottilainen rakennus vuodelta 1861, maailman '
+            + 'pohjoisin luterilainen katedraali.',
+          lahde: 'Wolfmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Panimo, joka väittää olevansa maailman pohjoisin',
+          tiedosto: 'Mack Brewery,Tromsø.jpg',
+          teksti: 'Ludwig Markus Mack perusti panimonsa Tromssaan '
+            + 'vuonna 1877 — vain muutama vuosi isoisän matkan '
+            + 'jälkeen — ja yritys markkinoi itseään yhä maailman '
+            + 'pohjoisimpana panimona. Alusta asti panimo palveli '
+            + 'sekä kaupunkilaisia että pohjoiseen suuntaavia '
+            + 'retkikuntia, joille kylmässä säilyvä olut oli '
+            + 'käytännöllinen matkaeväs.'
+            + '\n\n'
+            + 'Panimo on vaihtanut omistajaa ja tuotanto on '
+            + 'sittemmin osittain siirtynyt muualle Norjaan, mutta '
+            + 'Mack-nimi ja sen tunnettu Isbjørn-etiketti ovat '
+            + 'pysyneet Tromssan kaupunkikuvassa yli sata '
+            + 'neljäkymmentä vuotta perustamisen jälkeen.',
+          lyhyt: 'Mackin panimo perustettiin Tromssaan 1877 ja markkinoi itseään yhä maailman pohjoisimpana panimona.',
+          selite: 'Mackin panimon rakennus Tromssassa — perustettu '
+            + '1877, markkinoi itseään maailman pohjoisimpana '
+            + 'panimona.',
+          lahde: 'Manxruler, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaupunki, josta retkikunnat lähtivät napaa kohti',
+          tiedosto: 'Polar Museum in Tromsø (Jul 2019) 1.jpg',
+          teksti: 'Tromssan sijainti syvän vuonon suojassa mutta silti '
+            + 'lähellä avomerta teki siitä 1800-luvun lopulla '
+            + 'luontevan viimeisen pysähdyspaikan napaseuduille '
+            + 'suuntaaville retkikunnille — muun muassa Roald '
+            + 'Amundsen ja Fridtjof Nansen varustautuivat ja '
+            + 'rekrytoivat miehistöä Tromssassa ennen matkojaan '
+            + 'Koillisväylälle ja Pohjoisnavan suunnalle.'
+            + '\n\n'
+            + 'Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", '
+            + 'osin ironisesti ja osin ylpeydestä sen kansainvälisestä '
+            + 'merkityksestä napatutkimukselle. Nykyinen Polarmuseet '
+            + 'toimii vanhassa tullirakennuksessa satamassa ja '
+            + 'kertoo näiden retkikuntien historiasta.',
+          lyhyt: 'Amundsen ja Nansen varustautuivat retkikuntiinsa Tromssassa, joka sai lempinimen "Jäämeren Pariisi".',
+          selite: 'Polarmuseet Tromssan satamassa vanhassa '
+            + 'tullirakennuksessa — kertoo kaupungista napaseutujen '
+            + 'retkikuntien lähtöpaikkana.',
+          lahde: 'Visem, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sotalaiva, joka kaatui Tromssan edustalla',
+          tiedosto: 'Battlehip Tirpitz capsized at Tromso c1944.jpg',
+          teksti: 'Saksan laivaston Tirpitz oli sisarlaivansa Bismarckin '
+            + 'ohella Euroopan suurin ja pelätyin sotalaiva, ja se oli '
+            + 'sijoitettu Norjan rannikolle uhkaamaan liittoutuneiden '
+            + 'arktisia saattueita. Marraskuussa 1944 brittiläiset '
+            + 'pommikoneet upottivat sen Tromssan edustalla '
+            + 'räjähtävillä Tallboy-erikoispommeilla, jotka lävistivät '
+            + 'laivan kannen.'
+            + '\n\n'
+            + 'Laiva kaatui kyljelleen minuuteissa, ja arviolta yli '
+            + 'tuhat merimiestä kuoli. Hylky makasi Tromssan '
+            + 'vuonossa vuoteen 1957 asti, jolloin se lopulta '
+            + 'romutettiin — mutta osia siitä ja sieltä löydettyjä '
+            + 'esineitä säilytetään yhä museoissa Norjassa.',
+          lyhyt: 'Saksan sotalaiva Tirpitz upotettiin Tromssan edustalla marraskuussa 1944.',
+          selite: 'Tirpitz kaatuneena Tromssan edustalla marraskuussa '
+            + '1944 brittiläisten pommikoneiden upotettua sen.',
+          lahde: 'Sqn.Ldr. F.L. Dodd ja P/O A. Hill, No. 544 Squadron RAF, '
+            + 'Wikimedia Commons (public domain)',
+        },
+      ],
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -23185,6 +23406,111 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asukasta.',
           lahde: 'Nobel-säätiö, Wikimedia Commons (public domain)',
           wiki: 'Halldór Laxness',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saari, jolla maailman vanhin yhä toimiva parlamentti '
+        + 'perustettiin taivaan alla kalliorotkossa ja uskonto vaihdettiin '
+        + 'yhdellä miehen päätöksellä ilman sotaa.',
+      tehtava: {
+        kysymys: 'Missä vuonna Alþingi perustettiin Þingvellirin tasangolla?',
+        vaihtoehdot: ['930', '874', '1000', '1262'],
+        oikea: 0,
+        fakta: 'Alþingi perustettiin vuonna 930 — se on maailman vanhin '
+          + 'yhä toimiva parlamentti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mies, joka heitti pylväät mereen ja seurasi niitä',
+          tiedosto: 'Ingólfur Arnarson Statue, Reykjavik.jpg',
+          teksti: 'Norjalainen päällikkö Ingólfur Arnarson heitti '
+            + 'perimätiedon mukaan laivansa kunniapylväät mereen '
+            + 'lähestyessään Islannin rannikkoa noin vuonna 874 ja '
+            + 'lupasi asettua sinne, minne pylväät ajautuisivat. Ne '
+            + 'löytyivät lahdesta, jossa hän näki maasta nousevaa '
+            + 'höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi '
+            + 'lahdeksi", kuumien lähteiden mukaan.'
+            + '\n\n'
+            + 'Ingólfuria pidetään Islannin ensimmäisenä pysyvänä '
+            + 'asukkaana, ja häntä seurasivat vuosikymmenten aikana '
+            + 'tuhannet muut siirtolaiset, pääosin Norjasta ja '
+            + 'Brittein saarilta. Asutuskausi kesti perimätiedon '
+            + 'mukaan noin vuoteen 930 asti, jolloin koko saari '
+            + 'katsottiin asutetuksi.',
+          lyhyt: 'Ingólfur Arnarson asettui Reykjavíkiin noin 874 seurattuaan mereen heitettyjä kunniapylväitä.',
+          selite: 'Ingólfur Arnarsonin patsas Reykjavíkissä — hänet '
+            + 'tunnetaan Islannin ensimmäisenä pysyvänä asukkaana, '
+            + 'noin vuodesta 874.',
+          lahde: 'Rob Young, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Parlamentti kalliorotkossa taivasalla',
+          tiedosto: 'Roca de la Ley, Parque Nacional de Þingvellir, Suðurland, Islandia, 2014-08-16, DD 019.jpg',
+          teksti: 'Islannin päällikkömiehet kokoontuivat vuonna 930 '
+            + 'Þingvellirin tasangolle, jossa Atlantin ja Euraasian '
+            + 'mannerlaatat erkanevat toisistaan, ja perustivat Alþingin '
+            + '— yleiskokouksen, joka sääti lakeja ja ratkaisi '
+            + 'riitoja koko saarelle. Kokous pidettiin joka kesä '
+            + 'kahden viikon ajan Lögbergillä, "lakikalliolla", josta '
+            + 'lakimies julisti maan lait ääneen muistista, sillä '
+            + 'niitä ei aluksi kirjoitettu ylös.'
+            + '\n\n'
+            + 'Alþingi on maailman vanhin yhä toimiva parlamentti — '
+            + 'se lakkautettiin väliaikaisesti vain vuosina 1800–1844 '
+            + 'Tanskan vallan aikana, mutta perustettiin uudelleen ja '
+            + 'toimii Reykjavíkissä nykyäänkin.',
+          lyhyt: 'Alþingi perustettiin 930 Þingvellirin tasangolle, jossa mannerlaatat erkanevat toisistaan.',
+          selite: 'Lögberg, "lakikallio", Þingvellirin kansallispuistossa '
+            + '— paikka, jossa Alþingi kokoontui vuodesta 930 alkaen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Päätös, joka vaihtoi uskonnon ilman sotaa',
+          tiedosto: 'Almannagjá gorge at Þingvellir National Park.jpg',
+          teksti: 'Vuoden 999 tai 1000 Alþingillä kristityt ja '
+            + 'vanhauskoiset olivat ajautumassa avoimeen '
+            + 'yhteenottoon siitä, pitäisikö koko saaren siirtyä '
+            + 'kristinuskoon. Kokous antoi ratkaisun lakimies '
+            + 'Þorgeir Ljósvetningagoðille, joka vetäytyi vuorokaudeksi '
+            + 'makaamaan viitan alle miettimään — perimätiedon mukaan '
+            + 'ilman ruokaa ja puhumatta kenellekään.'
+            + '\n\n'
+            + 'Nousuaan hän julisti koko saaren kristityksi, mutta '
+            + 'salli vanhojen jumalien palvonnan yksityisesti kotona: '
+            + 'kompromissi, joka vältti sisällissodan uhan. Þorgeir '
+            + 'itse heitti perimätiedon mukaan omat epäjumalankuvansa '
+            + 'lähistön Goðafossiin, "jumalten koskeen".',
+          lyhyt: 'Lakimies Þorgeir julisti Islannin kristityksi vuonna 1000 kompromissilla, joka vältti sisällissodan.',
+          selite: 'Almannagjá-rotko Þingvellirin kansallispuistossa — '
+            + 'samalla tasangolla, jossa Islanti päätti siirtyä '
+            + 'kristinuskoon vuonna 1000.',
+          lahde: 'Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vuori, jota Eurooppa piti helvetin porttina',
+          tiedosto: 'Hekla (A. Ortelius) Detail from map of Iceland 1585.jpg',
+          teksti: 'Heklan tulivuori purkautui keskiajalla toistuvasti '
+            + 'niin näyttävästi, että eurooppalaiset oppineet alkoivat '
+            + 'pitää sitä kirjaimellisesti helvetin porttina — '
+            + '1200-luvun munkkikirjoituksissa Heklan sanottiin '
+            + 'olevan paikka, josta kuuluivat kadotettujen sielujen '
+            + 'huudot. Maine levisi karttoihin ja kirjoihin ympäri '
+            + 'mannerta vuosisatojen ajan.'
+            + '\n\n'
+            + 'Kartantekijä Abraham Ortelius kuvasi Heklan '
+            + 'Islanti-kartassaan 1585 liekkejä syöksevänä vuorena — '
+            + 'yksi monista esimerkeistä siitä, miten kaukainen ja '
+            + 'tuntematon saari täyttyi eurooppalaisten mielikuvituksen '
+            + 'hirviöistä ja helvetinkuvista todellisen tiedon '
+            + 'puutteessa.',
+          lyhyt: 'Keskiajan Eurooppa piti purkautuvaa Hekla-tulivuorta kirjaimellisesti helvetin porttina.',
+          selite: 'Yksityiskohta Abraham Orteliuksen vuoden 1585 '
+            + 'Islanti-kartasta: Hekla on kuvattu liekkejä syöksevänä '
+            + 'vuorena, ajan käsityksen mukaan helvetin porttina.',
+          lahde: 'Abraham Ortelius, Wikimedia Commons (public domain)',
         },
       ],
     },
@@ -23593,6 +23919,106 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'saamelaiset',
+      nimi: 'Saamelaiskulttuuri',
+      johdanto: 'Lappi on saamelaisten kotiseutu Sápmi, jossa oma kieli, '
+        + 'puku, laulu ja itsehallinto ovat eläviä nykypäivän asioita, '
+        + 'ei museoesineitä.',
+      tehtava: {
+        kysymys: 'Minä vuonna Suomen saamelaiskäräjien oma talo Sajos valmistui?',
+        vaihtoehdot: ['2012', '1996', '1971', '1991'],
+        oikea: 0,
+        fakta: 'Saamelaiskäräjät perustettiin 1996, mutta oma rakennus '
+          + 'Sajos Inarissa valmistui vasta 2012.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laulukilpailu, joka on käyty vuodesta 1971',
+          tiedosto: 'Sami Grand Prix.jpg',
+          teksti: 'Sámi Grand Prix on saamelaisen musiikin laulukilpailu, '
+            + 'jota on järjestetty Kautokeinossa pääsiäisenä vuodesta '
+            + '1971 lähtien. Suuri osa esityksistä pohjautuu joikuun, '
+            + 'saamelaiseen perinnelauluun, jolla ei ole alkua eikä '
+            + 'loppua tavallisessa mielessä — saamelaisen käsityksen '
+            + 'mukaan ei "lauleta jostakin" vaan "joiataan joku tai '
+            + 'jokin", ikään kuin laulu kantaisi kohteensa esiin.'
+            + '\n\n'
+            + 'Kilpailu on kasvanut pieneksi pääsiäisfestivaaliksi, '
+            + 'joka kokoaa saamelaisia eri puolilta Norjaa, Ruotsia, '
+            + 'Suomea ja Venäjää samaan kaupunkiin joka kevät.',
+          lyhyt: 'Sámi Grand Prix on saamelaisen musiikin kilpailu, jota on järjestetty Kautokeinossa pääsiäisenä 1971 lähtien.',
+          selite: 'Esiintyjä Sámi Grand Prix -laulukilpailussa '
+            + 'Kautokeinossa — kilpailua on järjestetty pääsiäisenä '
+            + 'vuodesta 1971.',
+          lahde: 'Wikikontiki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Festivaali, joka kutsuu koolle alkuperäiskansat',
+          tiedosto: 'The opening concert at the Riddu Riđđu festival 2019.jpg',
+          teksti: 'Riddu Riđđu -festivaali sai alkunsa 1991 nuorten '
+            + 'saamelaisten omasta aloitteesta pienessä Manndalenin '
+            + 'kylässä Pohjois-Norjassa, kun paikalliset halusivat tehdä '
+            + 'saamelaisuudesta jotain, josta kannattaa olla ylpeä sen '
+            + 'sijaan että sitä hävettäisiin. Festivaali laajeni '
+            + 'nopeasti kutsumaan mukaan myös muiden alkuperäiskansojen '
+            + 'esiintyjiä Grönlannista Australiaan asti.'
+            + '\n\n'
+            + 'Nykyään Riddu Riđđu on yksi Euroopan tunnetuimmista '
+            + 'alkuperäiskansojen kulttuuritapahtumista: ohjelmassa on '
+            + 'musiikkia, elokuvia, käsityötä ja keskusteluja, ja se '
+            + 'kokoaa Manndaleniin tuhansia kävijöitä joka kesä.',
+          lyhyt: 'Riddu Riđđu -festivaali syntyi 1991 nuorten saamelaisten aloitteesta ja kokoaa nyt alkuperäiskansoja ympäri maailmaa.',
+          selite: 'Avajaiskonsertti Riddu Riđđu -festivaalilla 2019 — '
+            + 'festivaali syntyi 1991 ja kutsuu koolle alkuperäiskansojen '
+            + 'esiintyjiä ympäri maailmaa.',
+          lahde: 'Sabine Rønsen (WMNO), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puku, joka kertoo kantajastaan ennen kuin tämä avaa suunsa',
+          tiedosto: "Berit Alette Mienna's gákti at 2025 Riddu Riđđu.jpg",
+          teksti: 'Gákti on saamelaisten perinteinen puku, ja sen värit, '
+            + 'kuosit ja koristeet kertovat tuntevalle katsojalle '
+            + 'kantajansa kotiseudun, suvun ja joskus siviilisäädynkin — '
+            + 'kaksi saamelaista voivat lukea toisistaan puvun '
+            + 'perusteella asioita, joita ulkopuolinen ei huomaa '
+            + 'lainkaan. Puvut ommellaan usein suvussa, ja monella '
+            + 'perheellä on omat, sukupolvelta toiselle siirtyvät '
+            + 'kuvionsa.'
+            + '\n\n'
+            + 'Kuvan gáktin ompeli Berit Alette Miennan serkku sari-'
+            + 'kankaasta perinteisin saamelaiskuvioin — esimerkki '
+            + 'siitä, miten vanha käsityöperinne elää ja uudistuu yhä, '
+            + 'eikä ole jäänyt vain juhlapäivien museoasuksi.',
+          lyhyt: 'Gáktipuvun värit ja kuosit kertovat kantajansa kotiseudun ja suvun tuntevalle katsojalle.',
+          selite: 'Berit Alette Miennan gákti vuoden 2025 Riddu Riđđu '
+            + '-festivaalilla — serkun ompelema, perinteisin '
+            + 'saamelaiskuvioin koristeltu.',
+          lahde: 'John Sears, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Parlamentti, joka sai oman talon vasta 2012',
+          tiedosto: 'Sajos Sami Parliament, Inari, Finland.jpg',
+          teksti: 'Suomen saamelaiskäräjät perustettiin 1996 hoitamaan '
+            + 'saamelaisten kielen ja kulttuurin itsehallintoa, mutta '
+            + 'sillä ei pitkään ollut omaa rakennusta — istunnot '
+            + 'pidettiin vuokratiloissa Inarissa. Oma talo, Sajos, '
+            + 'valmistui vasta 2012, ja sen puurakenteinen sali on '
+            + 'suunniteltu perinteisen saamelaiskodan, kotan, muotoa '
+            + 'mukaillen.'
+            + '\n\n'
+            + 'Saamelaiskäräjät päättää muun muassa saamen kielten '
+            + 'opetuksesta ja kulttuurimäärärahoista, mutta sillä ei '
+            + 'ole Suomen eduskunnan kaltaista lainsäädäntövaltaa — '
+            + 'se on neuvotteleva ja lausuntoja antava itsehallintoelin.',
+          lyhyt: 'Sajos, Suomen saamelaiskäräjien talo Inarissa, valmistui vasta 2012.',
+          selite: 'Sajos, Suomen saamelaiskäräjien rakennus Inarissa — '
+            + 'sen puurakenteinen sali mukailee perinteisen kodan '
+            + 'muotoa.',
+          lahde: 'Ben Morphett, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E8: monivirkkeiset selite-kentät
@@ -23987,6 +24413,112 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen '
             + 'ajanlaskua.',
           lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saari, jolla on tallella Euroopan vanhin palatsi, '
+        + 'lukemattomaksi jäänyt kirjoitus ja munkkien viimeinen '
+        + 'vastarinta ottomaaneja vastaan.',
+      tehtava: {
+        kysymys: 'Kuinka monta vuotta ottomaanien piiritys Heraklionissa lopulta kesti?',
+        vaihtoehdot: ['21 vuotta', '4 vuotta', '9 vuotta', '15 vuotta'],
+        oikea: 0,
+        fakta: 'Heraklionin piiritys 1648–1669 kesti kaksikymmentäyksi '
+          + 'vuotta — pisin tunnettu piiritys historiassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Valtaistuinhuone, jota kukaan ei enää istu',
+          tiedosto: 'Throne of Minos at Knossos Palace.jpg',
+          teksti: 'Arkeologi Arthur Evans kaivoi Knossoksen palatsin esiin '
+            + 'vuodesta 1900 alkaen ja löysi sen sydämestä huoneen, jonka '
+            + 'keskellä seisoo yhä paikoillaan alabasterinen tuoli — '
+            + 'Euroopan vanhin säilynyt valtaistuin, veistetty noin '
+            + '1400-luvulla eaa. Evans nimesi huoneen valtaistuinhuoneeksi '
+            + 'ja uskoi tuolissa istuneen legendaarisen kuningas Minoksen, '
+            + 'vaikka nykytutkijat epäilevät huoneen olleen ennemmin '
+            + 'kulttikäytössä kuin hallitsijan istuinsalina.'
+            + '\n\n'
+            + 'Seiniä koristavat kopiot alkuperäisistä griffinfreskoista, '
+            + 'ja Evans myös jälleenrakensi osia palatsista betonilla '
+            + 'omien tulkintojensa mukaan — ratkaisu, jota myöhemmät '
+            + 'arkeologit ovat arvostelleet liian vapaaksi.',
+          lyhyt: 'Knossoksen valtaistuinhuoneen alabasterituoli on Euroopan vanhin säilynyt valtaistuin.',
+          selite: 'Knossoksen palatsin valtaistuinhuone: alabasterinen '
+            + 'tuoli on veistetty noin 1400-luvulla eaa. ja on Euroopan '
+            + 'vanhin säilynyt valtaistuin.',
+          lahde: 'Jebulon, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Levy, jota kukaan ei ole pystynyt lukemaan',
+          tiedosto: 'Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg',
+          teksti: 'Italialainen arkeologi Luigi Pernier löysi Faistoksen '
+            + 'palatsiraunioista 1908 poltetusta savesta valmistetun '
+            + 'kiekon, jonka molemmille puolille on painettu spiraalimuotoon '
+            + '241 kuvamerkkiä. Merkit on tehty erillisillä leimasimilla '
+            + 'ennen polttoa — poikkeuksellinen tekniikka, jota ei tunneta '
+            + 'muualta muinaismaailmasta samalta ajalta.'
+            + '\n\n'
+            + 'Levyn ikä ajoittuu keskiminolaiselle kaudelle, noin '
+            + '1850–1600 eaa., mutta sen kirjoitusjärjestelmää ei ole '
+            + 'onnistuttu yhdistämään mihinkään tunnettuun kieleen. '
+            + 'Kymmenet tutkijat ovat esittäneet ratkaisujaan '
+            + 'vuosikymmenten varrella, mutta yksikään tulkinta ei ole '
+            + 'saanut laajaa hyväksyntää — levy on yhä yksi arkeologian '
+            + 'ratkaisemattomista arvoituksista.',
+          lyhyt: 'Faistoksen levyn 241 painettua kuvamerkkiä on jäänyt lukematta yli sata vuotta löydöstä.',
+          selite: 'Faistoksen levy Heraklionin arkeologisessa museossa: '
+            + 'sen spiraalimuotoista kirjoitusta ei ole onnistuttu '
+            + 'tulkitsemaan löydöstä lähtien.',
+          lahde: 'Joyofmuseums, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Linnoitus, joka kesti kaksikymmentäyksi vuotta',
+          tiedosto: 'Venetian Fortress of Koules in Heraklion, Crete 003.jpg',
+          teksti: 'Venetsialaiset rakensivat Koulesin linnoituksen '
+            + 'Heraklionin sataman suulle 1500-luvulla puolustamaan '
+            + 'kaupunkia ottomaaneja vastaan. Se osoittautui tarpeelliseksi: '
+            + 'kun ottomaanit hyökkäsivät Kreetalle 1645, Heraklionin '
+            + 'piiritys venyi lopulta kaksikymmentäyksi vuotta pitkäksi — '
+            + 'pisimmäksi piiritykseksi tunnetussa historiassa.'
+            + '\n\n'
+            + 'Kaupunki antautui vasta 1669, kun molemmat osapuolet '
+            + 'olivat menettäneet kymmeniätuhansia sotilaita. Koulesin '
+            + 'paksut muurit ja sen edustalle kaiverretut Pyhän Markuksen '
+            + 'leijonat ovat tallella yhä, ja linnoitus on nykyään '
+            + 'Heraklionin tunnetuin maamerkki satamassa.',
+          lyhyt: 'Koulesin linnoitus näki Heraklionin kaksikymmentäyksi vuotta kestäneen piirityksen 1648–1669.',
+          selite: 'Koulesin venetsialaislinnoitus Heraklionin sataman '
+            + 'suulla — se puolusti kaupunkia historian pisimmässä '
+            + 'tunnetussa piirityksessä, joka kesti kaksikymmentäyksi '
+            + 'vuotta.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Luostari, joka valitsi räjähdyksen antautumisen sijaan',
+          tiedosto: 'Kreta (GR), Amnatos, Kloster Arkadi -- 2023 -- 8553.jpg',
+          teksti: 'Arkadin luostarista tuli marraskuussa 1866 kreetalaisen '
+            + 'kapinan symboli, kun ottomaanijoukot piirittivät sinne '
+            + 'paenneet sadat kapinalliset ja siviilit. Kaksi päivää '
+            + 'kestäneen taistelun jälkeen muureja murrettiin, ja '
+            + 'puolustajat sytyttivät luostarin ruutivaraston mieluummin '
+            + 'kuin antautuivat — räjähdys tappoi puolustajia ja '
+            + 'hyökkääjiä yhdessä.'
+            + '\n\n'
+            + 'Uutinen levisi nopeasti Euroopassa ja herätti myötätuntoa '
+            + 'kreetalaisten asialle Ranskassa, Britanniassa ja '
+            + 'Yhdysvalloissa asti, vaikka kapina lopulta kukistettiin. '
+            + 'Isoisän matkan aikaan 1873 tapahtuma on yhä tuore muisto, '
+            + 'ja luostarin pihalla seisoo edelleen räjähdyksen '
+            + 'jäljiltä ammuttu, kuulien lävistämä tuulimylly.',
+          lyhyt: 'Arkadin luostarin puolustajat räjäyttivät ruutivarastonsa mieluummin kuin antautuivat 1866.',
+          selite: 'Arkadin luostari, jonka puolustajat räjäyttivät '
+            + 'ruutivarastonsa marraskuussa 1866 mieluummin kuin '
+            + 'antautuivat piirittäneille ottomaanijoukoille.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -24385,6 +24917,112 @@ export const KULTTUURI_KATEGORIAT = {
             + '400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin '
             + 'viisitoistatuhatta ihmistä.',
           lahde: 'Andrew Malone, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Normannikuninkaat rakennuttivat kirkkoja, joissa '
+        + 'bysanttilaiset mosaiikkitaiteilijat, arabialaiset '
+        + 'kattoveistäjät ja latinalainen kirkko työskentelivät '
+        + 'samojen seinien sisällä.',
+      tehtava: {
+        kysymys: 'Kuka kruunaa kuningas Roger II:n Martoranan kirkon mosaiikissa?',
+        vaihtoehdot: ['Kristus itse', 'Paavi', 'Konstantinopolin patriarkka', 'Amiraali Yrjö Antiokialainen'],
+        oikea: 0,
+        fakta: 'Martoranan mosaiikki näyttää Kristuksen kruunaamassa '
+          + 'Roger II:ta suoraan, ilman paavin väliintuloa — poliittinen '
+          + 'kannanotto kuninkaan jumalallisesta vallasta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kappeli, jossa kolme kulttuuria kohtaa',
+          tiedosto: 'Palermo - Cappella Palatina - 1.jpg',
+          teksti: 'Kuningas Roger II aloitti Palatinan kappelin '
+            + 'rakentamisen 1132 osaksi Palermon kuninkaanlinnaa. '
+            + 'Hän toi Bysantista mosaiikkitaiteilijat kuvaamaan '
+            + 'seinät ja katon kultaisiksi Raamatun kertomuksiksi, '
+            + 'mutta antoi arabialaisten puuseppien veistää katon '
+            + 'muqarnas-tekniikalla — samalla tyylillä kuin '
+            + 'islamilaisen maailman moskeijoissa.'
+            + '\n\n'
+            + 'Lopputulos on ainutlaatuinen: yhden pienen huoneen '
+            + 'sisällä yhdistyvät normannien läntinen arkkitehtuuri, '
+            + 'bysanttilainen kuvataide ja arabialainen '
+            + 'koristeveistos, kaikki saman hallitsijan tilaamina '
+            + 'samaan aikaan.',
+          lyhyt: 'Palatinan kappelin katto ja seinät yhdistävät normannien, bysanttilaisten ja arabien käsialan.',
+          selite: 'Palatinan kappeli Palermon kuninkaanlinnassa: '
+            + 'bysanttilaiset kultamosaiikit ja arabialaisten '
+            + 'puuseppien veistämä muqarnas-katto samassa tilassa.',
+          lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuningas, jonka kruunasi Kristus itse',
+          tiedosto: 'Chiesa della Martorana Palermo mosaico Cristo.jpg',
+          teksti: 'Roger II:n amiraali Yrjö Antiokialainen, syyrialainen '
+            + 'ortodoksikristitty kuninkaan palveluksessa, rakennutti '
+            + 'Martoranan kirkon Palermoon 1143. Kirkon mosaiikeissa '
+            + 'on kuva, jossa Kristus itse asettaa kruunun Roger II:n '
+            + 'päähän — ei paavi eikä piispa, vaan suoraan taivaasta.'
+            + '\n\n'
+            + 'Kuva oli poliittinen kannanotto: se väitti kuninkaan '
+            + 'vallan tulevan suoraan Jumalalta ilman kirkon '
+            + 'väliintuloa, samaan aikaan kun paavius riiteli '
+            + 'normannien kanssa Sisilian herruudesta. Kirkko '
+            + 'tunnetaan yhä kansanomaisesti Martoranan nimellä '
+            + 'läheisen, myöhemmin siihen liitetyn nunnaluostarin '
+            + 'mukaan.',
+          lyhyt: 'Martoranan kirkon mosaiikki kuvaa Kristusta kruunaamassa kuningas Roger II:ta suoraan, ilman paavia.',
+          selite: 'Martoranan kirkon mosaiikki Palermossa: Kristus '
+            + 'asettaa kruunun kuningas Roger II:n päähän — poliittinen '
+            + 'kuva kuninkaan jumalallisesta vallasta ilman paavin '
+            + 'väliintuloa.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kirkko, jonka lupasi rakentaa myrskyssä pelastunut kuningas',
+          tiedosto: 'Cefalu Cathedral MosaicChristPantocrator 009 6038.jpg',
+          teksti: 'Tarinan mukaan Roger II lupasi myrskyn keskellä '
+            + 'aluksellaan, että jos hän pääsisi hengissä rantaan, hän '
+            + 'rakentaisi kiitokseksi katedraalin — ja laiva ajautui '
+            + 'juuri Cefalùn rannalle 1131. Katedraalin rakennustyöt '
+            + 'alkoivat samana vuonna, ja se oli Roger II:n ensimmäinen '
+            + 'suuri rakennushanke kuninkaana.'
+            + '\n\n'
+            + 'Apsiksen kattoa hallitsee valtava Kristus Pantokraattori '
+            + '-mosaiikki, jonka bysanttilaiset mestarit tekivät '
+            + '1140-luvulla — yksi vanhimmista ja parhaiten '
+            + 'säilyneistä esimerkeistä Sisilian normannikauden '
+            + 'mosaiikkitaiteesta.',
+          lyhyt: 'Cefalùn katedraalin Kristus Pantokraattori on 1140-luvulta, yksi Sisilian vanhimmista mosaiikeista.',
+          selite: 'Cefalùn katedraalin apsismosaiikki: Kristus '
+            + 'Pantokraattori, bysanttilaisten mestarien tekemä '
+            + '1140-luvulla, yksi Sisilian normannikauden vanhimmista '
+            + 'mosaiikeista.',
+          lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuudentuhannen neliömetrin kultapinta',
+          tiedosto: 'Ceiling of left chapel in Cathedral (Monreale) - Mosaic of Christ Pantocrator.jpg',
+          teksti: 'Kuningas Vilhelm II käynnisti Monrealen katedraalin '
+            + 'rakennustyöt 1174, ja sen sisäseinät peitettiin lähes '
+            + 'kokonaan kultapohjaisilla mosaiikeilla — yhteensä noin '
+            + '6 300 neliömetriä, enemmän kuin missään muualla '
+            + 'Konstantinopolin ja Ravennan ulkopuolella.'
+            + '\n\n'
+            + 'Mosaiikit kuvaavat Raamatun tarinaa Luomisesta '
+            + 'Ilmestyskirjaan asti, ja apsiksessa kohoaa yli '
+            + 'seitsemän metrin korkuinen Kristus Pantokraattori. '
+            + 'Katedraali on yhä Monrealen käytössä oleva '
+            + 'pääkirkko, ei museo, vaikka se on myös Unescon '
+            + 'maailmanperintökohde.',
+          lyhyt: 'Monrealen katedraalin mosaiikit kattavat noin 6 300 neliömetriä — enemmän kuin missään muualla Bysantin ulkopuolella.',
+          selite: 'Monrealen katedraalin sisäkatto: kultapohjainen '
+            + 'Kristus Pantokraattori -mosaiikki on osa noin 6 300 '
+            + 'neliömetrin mosaiikkipintaa.',
+          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -24800,6 +25438,113 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Aikanaan jäätikön reunaan rakennetut vuoristomajat seisovat '
             + 'nykyään satojen metrien päässä sulaneesta jäästä.',
           lahde: 'Friedrich Haag, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuoret, jotka pysäyttivät kenraaleja, tappoivat '
+        + 'kiipeilijöitä ja pelastivat eksyneitä koirien avulla — '
+        + 'este, joka on aina houkutellut ylittäjiä.',
+      tehtava: {
+        kysymys: 'Minä vuonna Matterhornin ensimmäinen huipulle nousu tehtiin?',
+        vaihtoehdot: ['1865', '1786', '1800', '1906'],
+        oikea: 0,
+        fakta: 'Edward Whymperin ryhmä nousi Matterhornin huipulle '
+          + 'ensimmäisenä 1865, mutta neljä ryhmän jäsentä kuoli '
+          + 'laskeutuessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kenraali, joka vei norsut vuorten yli',
+          tiedosto: "Hannibal traversant les Alpes à dos d'éléphant - Nicolas Poussin.jpg",
+          teksti: 'Karthagolainen kenraali Hannibal ylitti Alpit '
+            + 'armeijoineen vuonna 218 eaa. yllättääkseen roomalaiset '
+            + 'hyökkäämällä Italiaan pohjoisesta, mistä kukaan ei '
+            + 'odottanut vihollista tulevan. Mukana kulki myös '
+            + 'sotanorsuja — täsmällistä reittiä ei tiedetä '
+            + 'varmuudella, ja historioitsijat ovat väitelleet siitä '
+            + 'yli kaksi vuosituhatta.'
+            + '\n\n'
+            + 'Ylitys maksoi kalliisti: osa historioitsijoista arvioi, '
+            + 'että Hannibal menetti puolet armeijastaan matkalla '
+            + 'kylmään, korkeuteen ja paikallisten heimojen '
+            + 'väijytyksiin. Silti hän saapui Italiaan ja voitti '
+            + 'roomalaiset useissa taisteluissa seuraavien vuosien '
+            + 'aikana — rohkea reitti, jota kukaan ei ollut '
+            + 'aavistanut.',
+          lyhyt: 'Hannibal ylitti Alpit sotanorsuineen 218 eaa. yllättääkseen roomalaiset pohjoisesta.',
+          selite: 'Nicolas Poussinin maalaus kuvaa Hannibalia ylittämässä '
+            + 'Alpit norsun selässä 218 eaa. — reitti, jota '
+            + 'historioitsijat ovat väitelleet yli kaksi vuosituhatta.',
+          lahde: 'Nicolas Poussin (attribuoitu), Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Voitto, joka päättyi neljään hautaan',
+          tiedosto: 'Matterhorn disaster Dore.jpg',
+          teksti: 'Englantilainen Edward Whymper ja hänen kuusihenkinen '
+            + 'ryhmänsä nousivat 14. heinäkuuta 1865 ensimmäisinä '
+            + 'Matterhornin huipulle — vuoren, jota oli pidetty '
+            + 'mahdottomana kiivetä. Voitonriemu kesti tunteja: '
+            + 'laskeutuessa köysi katkesi tai irtosi, ja neljä ryhmän '
+            + 'jäsentä syöksyi kuolemaansa tuhannen metrin jyrkänteeltä.'
+            + '\n\n'
+            + 'Onnettomuus järkytti koko Eurooppaa ja herätti '
+            + 'julkisen keskustelun vuorikiipeilyn vaaroista — '
+            + 'kuningatar Viktoriakin harkitsi lajin kieltämistä '
+            + 'kokonaan. Whymper itse selvisi ja kirjoitti '
+            + 'nousustaan kirjan, joka teki Matterhornista '
+            + 'vuorikiipeilyn tunnetuimman symbolin.',
+          lyhyt: 'Whymperin ryhmä valloitti Matterhornin 1865, mutta neljä jäsentä kuoli laskeutuessa.',
+          selite: 'Gustave Doré kuvasi Matterhorn-onnettomuuden 1865: '
+            + 'köysi katkesi laskeutuessa, ja neljä kiipeilijää syöksyi '
+            + 'kuolemaansa.',
+          lahde: 'Gustave Doré, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Munkit, jotka kasvattivat pelastuskoiria',
+          tiedosto: 'Hospice du Grand Saint-Bernard, Gustav Nünnicke 02.jpg',
+          teksti: 'Pyhän Bernhardin luostarihospitsi perustettiin '
+            + '1000-luvulla yli 2 400 metrin korkeuteen '
+            + 'auttamaan matkalaisia, jotka ylittivät vaarallisen '
+            + 'solan Sveitsin ja Italian välillä. 1600–1700-luvuilla '
+            + 'munkit alkoivat kasvattaa vahvoja, paksuturkkisia '
+            + 'koiria etsimään lumimyrskyihin eksyneitä matkalaisia — '
+            + 'rotu tunnetaan nykyään Bernhardinkoirana.'
+            + '\n\n'
+            + 'Kuuluisin koirista, Barry, pelasti perimätiedon mukaan '
+            + 'yli neljäkymmentä ihmistä 1800-luvun alussa ennen '
+            + 'kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden '
+            + 'yösijana solan yli, ja munkkien koirankasvatusperinne '
+            + 'jatkuu läheisessä erillisessä kasvattamossa.',
+          lyhyt: 'Pyhän Bernhardin munkit kasvattivat koiria etsimään solaan eksyneitä matkalaisia 1600-luvulta lähtien.',
+          selite: 'Pyhän Bernhardin hospitsi solassa yli 2 400 metrin '
+            + 'korkeudessa — munkit kasvattivat siellä Bernhardinkoiria '
+            + 'eksyneiden matkalaisten etsintään.',
+          lahde: 'Gustav Nünnicke, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tie, jonka kenraali rakennutti tykkejä varten',
+          tiedosto: 'Retaining wall of Napoleon Road at Simplon Pass, Switzerland.jpg',
+          teksti: 'Napoleon määräsi 1801 rakennettavaksi leveän, '
+            + 'tykistölle sopivan tien Simplon-solan yli Ranskan ja '
+            + 'Italian välille — aiemmat polut olivat kapeita '
+            + 'muulipolkuja, joita pitkin raskasta kalustoa ei voinut '
+            + 'kuljettaa. Tie valmistui 1805 ja oli aikansa '
+            + 'insinööritaidon huippu: leveitä tukimuureja, siltoja '
+            + 'ja galleria-tunneleita lumivyöryjä vastaan.'
+            + '\n\n'
+            + 'Napoleon perusteli hanketta sotilaallisella tarpeella, '
+            + 'mutta tie palveli pian myös tavallista kauppaa ja '
+            + 'matkailua. Osia alkuperäisistä tukimuureista ja '
+            + 'kivetyksestä on säilynyt nykyiseen valtatiehen asti, '
+            + 'yli kaksisataa vuotta rakentamisen jälkeen.',
+          lyhyt: 'Napoleon rakennutti Simplon-solan yli tykistölle sopivan tien 1801–1805.',
+          selite: 'Napoleonin tien tukimuuri Simplon-solassa — tie '
+            + 'rakennettiin 1801–1805 alun perin tykistön '
+            + 'kuljetukseen.',
+          lahde: 'Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -25662,6 +26407,110 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ryhmä: valkoinen on 1400-luvun lopulta, keltaisessa lukee '
             + 'vuosiluku 1646 ja kolmas valmistui 1700-luvun alussa.',
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Joka viides vuosi kymmenettuhannet laulajat kokoontuvat '
+        + 'Riikaan perinteeseen, joka alkoi isoisän omana matkavuonna '
+        + '1873 ja on nykyään Unescon suojelema.',
+      tehtava: {
+        kysymys: 'Minä vuonna ensimmäinen yleinen laulujuhla järjestettiin Riiassa?',
+        vaihtoehdot: ['1873', '1903', '1923', '1938'],
+        oikea: 0,
+        fakta: 'Ensimmäinen yleinen latvialainen laulujuhla pidettiin '
+          + 'Riiassa vuonna 1873 — samana vuonna kuin isoisän matka.',
+      },
+      nostot: [
+        {
+          otsikko: 'Juhla, joka syntyi isoisän matkavuonna',
+          tiedosto: 'Latvian song festival by Dainis Matisons, 2008.jpg',
+          teksti: 'Ensimmäinen yleinen latvialainen laulujuhla '
+            + 'järjestettiin Riiassa kesäkuussa 1873 — täsmälleen '
+            + 'samana vuonna, jona isoisä kirjoitti oman matkansa '
+            + 'muistiin. Tapahtuman järjesti opettajakoulun johtaja '
+            + 'Jānis Cimze yhdessä paikallisten laulukuorojen kanssa, '
+            + 'ja se kokosi yhteen satoja laulajia eri puolilta '
+            + 'Latvian maaseutua.'
+            + '\n\n'
+            + 'Juhlasta tuli nopeasti kansallinen perinne, jota on '
+            + 'sittemmin järjestetty noin joka viides vuosi — myös '
+            + 'neuvostoaikana, jolloin se säilyi yhtenä harvoista '
+            + 'sallituista tavoista ilmaista kansallista identiteettiä '
+            + 'julkisesti.',
+          lyhyt: 'Ensimmäinen latvialainen laulujuhla pidettiin Riiassa 1873, samana vuonna kuin isoisän matka.',
+          selite: 'Kuoro esiintymässä latvialaisessa laulujuhlassa — '
+            + 'perinne, joka alkoi Riiassa 1873 ja jatkuu yhä joka '
+            + 'viides vuosi.',
+          lahde: 'Dainis Matisons, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Lava, joka mahtuu kolmellekymmenelletuhannelle laulajalle',
+          tiedosto: 'Mežaparks Great Bandstand before concert.jpg',
+          teksti: 'Nykyinen laulujuhla huipentuu Mežaparksin suurella '
+            + 'lavalla Riiassa, jonne mahtuu esiintymään jopa '
+            + 'kolmekymmentätuhatta laulajaa ja tanssijaa samaan aikaan '
+            + '— yksi maailman suurimmista pysyvistä '
+            + 'esiintymislavoista. Yleisöä juhlaan kokoontuu vielä '
+            + 'moninkertainen määrä ympäri Latviaa ja ulkomaita.'
+            + '\n\n'
+            + 'Osallistujat harjoittelevat kuukausia omissa '
+            + 'paikallisissa kuoroissaan ympäri maata ennen kuin '
+            + 'kaikki kokoontuvat samaan aikaan samalle lavalle — '
+            + 'logistinen ja musiikillinen ponnistus, joka toistuu '
+            + 'nyt viidennen sukupolven latvialaisten kesken.',
+          lyhyt: 'Mežaparksin lavalle Riiassa mahtuu esiintymään jopa 30 000 laulajaa ja tanssijaa.',
+          selite: 'Mežaparksin suuri esiintymislava Riiassa ennen '
+            + 'laulujuhlakonserttia — lavalle mahtuu jopa 30 000 '
+            + 'esiintyjää kerralla.',
+          lahde: 'Gustamons, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Perinne, jonka Unesco otti suojaansa',
+          tiedosto: 'View from Mežaparks Great Bandstand side.jpg',
+          teksti: 'Unesco lisäsi Latvian, Viron ja Liettuan yhteiset '
+            + 'laulu- ja tanssijuhlat ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön luetteloonsa vuonna 2003 — '
+            + 'tunnustuksena siitä, että perinne on säilyttänyt '
+            + 'kolmen maan kansanmusiikkia elävänä sukupolvesta '
+            + 'toiseen kirjoitetun nuotin ja suullisen opetuksen '
+            + 'yhdistelmällä.'
+            + '\n\n'
+            + 'Kolmen Baltian maan juhlat kehittyivät toisistaan '
+            + 'erillään 1800-luvun kansallisen herätyksen aikana, '
+            + 'mutta niitä yhdistää sama perusidea: tavalliset '
+            + 'ihmiset, ei ammattilaiset, laulavat yhdessä isoina '
+            + 'joukkoina oman kielensä ja kulttuurinsa kunniaksi.',
+          lyhyt: 'Unesco lisäsi Baltian maiden laulu- ja tanssijuhlat aineettoman kulttuuriperinnön luetteloon 2003.',
+          selite: 'Näkymä Mežaparksin lavalta sivulta — perinne, jonka '
+            + 'Unesco tunnusti ihmiskunnan aineettomaksi '
+            + 'kulttuuriperinnöksi 2003.',
+          lahde: 'Gustamons, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kuoro, johon kuka tahansa voi liittyä',
+          tiedosto: 'Choir Minjona University of Latvia 2018.jpg',
+          teksti: 'Laulujuhlaan ei tarvitse olla ammattilaulaja '
+            + 'osallistuakseen: mukaan pääsevät koulujen, '
+            + 'yliopistojen, työpaikkojen ja harrastuskuorojen '
+            + 'jäsenet ympäri Latviaa, kunhan he läpäisevät '
+            + 'paikallisen karsinnan ja harjoittelevat yhteisen '
+            + 'ohjelmiston. Latvian nykyisessä, alle kahden miljoonan '
+            + 'asukkaan maassa tuhannet ihmiset osallistuvat samaan '
+            + 'juhlaan joka kerta.'
+            + '\n\n'
+            + 'Moni osallistuja kuvailee kokemusta elämänsä '
+            + 'vahvimmaksi yhteisöllisyyden hetkeksi: kun '
+            + 'kolmekymmentätuhatta ääntä laulaa saman kansallislaulun '
+            + 'yhtä aikaa Mežaparksin lavalla, ero yleisön ja '
+            + 'esiintyjien välillä hämärtyy.',
+          lyhyt: 'Laulujuhlaan osallistuu tuhansia harrastajakuorolaisia ympäri Latviaa, ei vain ammattilaisia.',
+          selite: 'Latvian yliopiston kuoro Minjona esiintymässä 2018 '
+            + '— yksi sadoista harrastajakuoroista, jotka osallistuvat '
+            + 'laulujuhlaan.',
+          lahde: 'Didzis Šēnbergs, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },

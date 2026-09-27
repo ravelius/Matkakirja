@@ -9460,6 +9460,88 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  valletta: {
+    'Pyhän Johanneksen ko-katedraali': {
+      aika: '1572–1577 (rakennus), 1608 (Caravaggion maalaus)',
+      teksti: 'Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan '
+          + 'omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on '
+          + 'yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa '
+          + 'tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. '
+          + 'Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko '
+          + 'katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia '
+          + 'on yhtenäinen mosaiikki kahdeksastasadasta ritarin '
+          + 'hautalaatasta.'
+          + '\n\n'
+          + 'Caravaggio pakeni Roomasta 1607 tapettuaan miehen '
+          + 'kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa '
+          + '1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi '
+          + 'oratorioon "Johannes Kastajan mestauksen" — ainoan '
+          + 'teoksensa, jonka hän koskaan signeerasi: nimikirjoitus on '
+          + 'piirretty Johanneksen kaulasta valuvaan vereen.'
+          + '\n\n'
+          + 'Kunnia ei kestänyt kauan. Elokuussa 1608 Caravaggio '
+          + 'haavoitti tappelussa vanhempaa ritaria ja joutui '
+          + 'vankityrmään Pyhän Angelon linnoitukseen, mutta pakeni '
+          + 'sieltä Sisiliaan. Joulukuussa 1608 ritarikunta erotti hänet '
+          + 'muodollisesti kokouksessaan sanoin "kuin mätänevä ja '
+          + 'löyhkäävä jäsen".',
+      kuvat: [
+        {
+          tiedosto: 'Beheading of Saint John the Baptist by Caravaggio.jpg',
+          lyhyt: 'Caravaggion "Johannes Kastajan mestaus" oratoriossa — hänen ainoa signeeraamansa teoksensa.',
+          selite: 'Caravaggion 1608 maalaama "Johannes Kastajan mestaus" '
+            + 'katedraalin oratoriossa. Taiteilija signeerasi teoksen '
+            + 'ainoan kerran urallaan — nimikirjoitus on piirretty '
+            + 'Johanneksen kaulasta valuvaan vereen.',
+          lahde: 'Joseolgon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: "Interior of St. John's Co-Cathedral 2025 26.jpg",
+          lyhyt: 'Katedraalin sisätila: Mattia Pretin 1660-luvun kultainen kattomaalaus ja ritarien hautalaattalattia.',
+          selite: 'Katedraalin sisätila, jonka Mattia Preti maalasi '
+            + 'kokonaan 1660-luvulla. Ulkoapäin vaatimaton rakennus '
+            + 'kätkee sisäänsä yhden barokin runsaimmista kirkkotiloista.',
+          lahde: 'Joseolgon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Elmon linnake': {
+      aika: '1552 (rakennus), 1565 (piiritys)',
+      teksti: 'Linnake rakennettiin 1552 vartioimaan kahden sataman, '
+          + 'Grand Harbourin ja Marsamxettin, suuta samalta kapealta '
+          + 'niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden '
+          + 'muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, '
+          + 'mutta osmanien saapuessa 1565 moni piti sitä silti liian '
+          + 'pienenä kestämään pitkää piiritystä.'
+          + '\n\n'
+          + 'Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. '
+          + 'kesäkuuta, vaikka miehistö oli moninkertaisesti '
+          + 'alivoimainen. Yöllä veneet toivat Birgusta lisää '
+          + 'puolustajia ja veivät haavoittuneita pois, ja monet '
+          + 'pahoin haavoittuneet ritarit kieltäytyivät poistumasta: '
+          + 'he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen '
+          + 'taistelua istualtaan viimeiseen asti.'
+          + '\n\n'
+          + 'Kun linnake lopulta kaatui, se oli maksanut osmaneille '
+          + 'kuukauden ajan ja tuhansia miehiä — hinnan, jota suurmestari '
+          + 'Jean de Valette käytti hyväkseen vahvistaakseen Birgun ja '
+          + 'Senglean puolustuksen ennen pääpiiritystä. Linnake '
+          + 'jälleenrakennettiin ja laajennettiin myöhemmin, ja tänään '
+          + 'sen muurien sisällä toimii Maltan sotamuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Fuerte de San Telmo, La Valeta, isla de Malta, Malta, 2021-08-25, DD 218.jpg',
+          lyhyt: 'Pyhän Elmon linnakkeen tähdenmuotoiset muurit niemenkärjessä kahden sataman välissä.',
+          selite: 'Pyhän Elmon linnakkeen tähdenmuotoiset muurit '
+            + 'niemenkärjessä, josta se vartioi sekä Grand Harbourin '
+            + 'että Marsamxettin suuta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   varsova: {
     'Vanhankaupungin tori': {
