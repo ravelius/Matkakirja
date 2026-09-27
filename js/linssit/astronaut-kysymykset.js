@@ -4366,6 +4366,1056 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss023e027737"
       }
     ]
+  },
+  "sakurajima": {
+    "kysymykset": [
+      "Kuinka usein Sakurajima purkautuu?",
+      "Milloin Sakurajimasta tuli niemimaa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka usein Sakurajima purkautuu?",
+        "vastaus": "Sakurajima purkautuu pieninä räjähdyksinä jopa satoja kertoja vuodessa, ja tuhkaa sataa säännöllisesti läheiseen Kagoshiman kaupunkiin. Asukkaat ovat tottuneet ilmiöön niin hyvin, että kouluissa harjoitellaan tuhkasadetta siinä missä muuallakin harjoitellaan paloturvallisuutta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Sakurajima",
+            "title": "Sakurajima – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss034e027139"
+      },
+      {
+        "kysymys": "Milloin Sakurajimasta tuli niemimaa?",
+        "vastaus": "Vuoden 1914 suuri purkaus täytti salmen laavalla ja yhdisti aiemmin saarena olleen Sakurajiman Osumin niemimaahan. Purkaus oli 1900-luvun voimakkain Japanissa ja pakotti tuhannet asukkaat pakenemaan.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Sakurajima",
+            "title": "Sakurajima – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss034e027139"
+      }
+    ]
+  },
+  "aorounga": {
+    "kysymykset": [
+      "Kuinka vanha Aorounga-kraatteri on?",
+      "Miksi Aorounga saattaa olla kolmoiskraatteri?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka vanha Aorounga-kraatteri on?",
+        "vastaus": "Aorounga-kraatterin arvioidaan syntyneen noin 345 miljoonaa vuotta sitten, devonin ja hiilikauden taitteessa. Sahara on tuolloin ollut aivan toisenlainen paikka, eikä autiomaata vielä ollut.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Aorounga_crater",
+            "title": "Aorounga crater – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss012e09639"
+      },
+      {
+        "kysymys": "Miksi Aorounga saattaa olla kolmoiskraatteri?",
+        "vastaus": "Tutkasatelliitit ovat paljastaneet hiekan alta kaksi lisää samanikäistä rengasrakennetta näkyvän kraatterin vierestä. Tutkijat arvelevat, että samasta asteroidista irronneet kolme kappaletta osuivat maahan lähes samaan aikaan riviin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Aorounga_crater",
+            "title": "Aorounga crater – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss012e09639"
+      }
+    ]
+  },
+  "emi-koussi": {
+    "kysymykset": [
+      "Kuinka korkea Emi Koussi on?",
+      "Missä vuoristossa Emi Koussi sijaitsee?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka korkea Emi Koussi on?",
+        "vastaus": "Emi Koussi kohoaa 3 415 metrin korkeuteen ja on Saharan aavikon korkein huippu. Se on kilpitulivuori, jonka loivat rinteet syntyvät juoksevasta basalttilaavasta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Emi_Koussi",
+            "title": "Emi Koussi – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e005456"
+      },
+      {
+        "kysymys": "Missä vuoristossa Emi Koussi sijaitsee?",
+        "vastaus": "Emi Koussi kuuluu Tšadin pohjoisosan Tibestin vuoristoon, joka on syntynyt maankuoren alla olevan kuumaläikän toiminnasta. Alueen syrjäisyyden vuoksi vuori on yksi maailman vähiten tutkituista suurista tulivuorista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Emi_Koussi",
+            "title": "Emi Koussi – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e005456"
+      }
+    ]
+  },
+  "meteor-crater-arizona": {
+    "kysymykset": [
+      "Kuka todisti Meteorikraatterin syntyneen törmäyksestä?",
+      "Mihin NASA käytti Meteorikraatteria 1960-luvulla?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuka todisti Meteorikraatterin syntyneen törmäyksestä?",
+        "vastaus": "Kaivosinsinööri Daniel Barringer esitti 1900-luvun alussa, että kraatteri syntyi meteoriitin törmäyksestä, vaikka useimmat geologit epäilivät tuolloin tulivuoritoimintaa. Myöhemmät tutkimukset vahvistivat hänen teoriansa oikeaksi, ja kraatteria kutsutaan yhä myös Barringerin kraatteriksi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Meteor_Crater",
+            "title": "Meteor Crater – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0208832"
+      },
+      {
+        "kysymys": "Mihin NASA käytti Meteorikraatteria 1960-luvulla?",
+        "vastaus": "NASA koulutti Apollo-ohjelman astronautteja kraatterin ympäristössä, koska maasto muistutti Kuun pintaa. Astronautit harjoittelivat siellä geologista näytteenottoa ennen Kuu-lentoja.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Meteor_Crater",
+            "title": "Meteor Crater – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0208832"
+      }
+    ]
+  },
+  "buenos-aires-yolla": {
+    "kysymykset": [
+      "Kuinka moni asuu Buenos Airesin metropolialueella?",
+      "Mikä joki virtaa Buenos Airesin ohi?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka moni asuu Buenos Airesin metropolialueella?",
+        "vastaus": "Buenos Airesin metropolialueella asuu yli 15 miljoonaa ihmistä, vaikka itse kaupungissa on vain noin 3 miljoonaa asukasta. Se tekee siitä yhden Etelä-Amerikan suurimmista kaupunkialueista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Buenos_Aires",
+            "title": "Buenos Aires – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e519264"
+      },
+      {
+        "kysymys": "Mikä joki virtaa Buenos Airesin ohi?",
+        "vastaus": "Buenos Aires sijaitsee Río de la Platan rannalla, joka on Argentiinan ja Uruguayn välinen valtava jokisuisto ja yksi maailman leveimmistä joista. Sitä pitkin kaupungista pääsee suoraan Atlantille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Buenos_Aires",
+            "title": "Buenos Aires – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e519264"
+      }
+    ]
+  },
+  "riyadh-yolla": {
+    "kysymykset": [
+      "Kuinka paljon Riadin väkiluku on kasvanut 1960-luvulta?",
+      "Mistä Riadin juomavesi on peräisin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka paljon Riadin väkiluku on kasvanut 1960-luvulta?",
+        "vastaus": "Riadissa asui vuonna 1960 vain noin 150 000 ihmistä, mutta nykyään väkiluku on kasvanut yli 7 miljoonaan. Kasvu liittyy öljytulojen tuomaan vaurauteen ja voimakkaaseen kaupungistumiseen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Riyadh",
+            "title": "Riyadh – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss033e020288"
+      },
+      {
+        "kysymys": "Mistä Riadin juomavesi on peräisin?",
+        "vastaus": "Riadin lähellä ei virtaa pysyvää jokea, joten kaupungin vesi tulee pääosin merivedestä suolanpoistolaitoksissa sekä syvältä pohjavedestä. Vesi pumpataan kaupunkiin satojen kilometrien putkistoja pitkin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Riyadh",
+            "title": "Riyadh – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss033e020288"
+      }
+    ]
+  },
+  "casablanca-yolla": {
+    "kysymykset": [
+      "Mitä Casablanca tarkoittaa espanjaksi?",
+      "Mikä on Casablancan asema Marokossa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mitä Casablanca tarkoittaa espanjaksi?",
+        "vastaus": "Casablanca tarkoittaa espanjaksi 'valkoista taloa', ja nimi juontuu kaupungin valkoisiksi kalkituista rakennuksista. Eurooppalaiset merenkulkijat antoivat nimen jo vuosisatoja sitten.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Casablanca",
+            "title": "Casablanca – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e645691"
+      },
+      {
+        "kysymys": "Mikä on Casablancan asema Marokossa?",
+        "vastaus": "Casablanca on Marokon suurin kaupunki ja maan tärkein talous- ja satamakeskus, vaikka pääkaupunki on Rabat. Kaupungissa asuu yli 3,7 miljoonaa ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Casablanca",
+            "title": "Casablanca – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e645691"
+      }
+    ]
+  },
+  "empty-quarter": {
+    "kysymykset": [
+      "Kuinka korkeita Tyhjän neljänneksen dyynit voivat olla?",
+      "Kuka ylitti Tyhjän neljänneksen ensimmäisten joukossa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka korkeita Tyhjän neljänneksen dyynit voivat olla?",
+        "vastaus": "Rub al-Khalin dyynit voivat kohota jopa 250 metrin korkeuteen, mikä tekee niistä maailman suurimpia hiekkadyynejä. Tuuli muovaa niitä jatkuvasti uusiin muotoihin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rub%27_al_Khali",
+            "title": "Rub' al Khali – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss027e034290"
+      },
+      {
+        "kysymys": "Kuka ylitti Tyhjän neljänneksen ensimmäisten joukossa?",
+        "vastaus": "Brittiläinen tutkimusmatkailija Bertram Thomas ylitti Rub al-Khalin ensimmäisenä eurooppalaisena vuosina 1930–1931. Myöhemmin myös Wilfred Thesiger teki alueella kuuluisia vaelluksia paikallisten beduiinien kanssa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rub%27_al_Khali",
+            "title": "Rub' al Khali – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss027e034290"
+      }
+    ]
+  },
+  "taklamakan": {
+    "kysymykset": [
+      "Mitä Taklamakanin nimen on tulkittu tarkoittavan?",
+      "Miten muinaiset kauppiaat kiersivät Taklamakanin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mitä Taklamakanin nimen on tulkittu tarkoittavan?",
+        "vastaus": "Taklamakanin nimen on kansanperinteessä tulkittu tarkoittavan jotain 'sinne menet mutta et tule takaisin' -tyyppistä, vaikka kielitieteilijät kiistelevät tulkinnasta. Autiomaan äärimmäiset olosuhteet ovat joka tapauksessa tehneet siitä pelätyn.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Taklamakan_Desert",
+            "title": "Taklamakan Desert – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0316083"
+      },
+      {
+        "kysymys": "Miten muinaiset kauppiaat kiersivät Taklamakanin?",
+        "vastaus": "Silkkitien kulkijat eivät yrittäneet ylittää Taklamakania, vaan kiersivät sen pohjois- tai eteläreunaa pitkin vuorten juurella sijaitsevien keidaskaupunkien kautta. Reitit yhtyivät jälleen autiomaan molemmin puolin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Taklamakan_Desert",
+            "title": "Taklamakan Desert – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0316083"
+      }
+    ]
+  },
+  "simpson-desert": {
+    "kysymykset": [
+      "Mistä Simpsonin autiomaan hiekan punainen väri johtuu?",
+      "Kuka ylitti Simpsonin autiomaan ensimmäisenä jalan?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mistä Simpsonin autiomaan hiekan punainen väri johtuu?",
+        "vastaus": "Simpsonin autiomaan hiekanjyväset ovat peittyneet ohuella rautaoksidikerroksella, joka antaa dyyneille niiden punertavan sävyn. Kerros on muodostunut hitaasti tuhansien vuosien aikana.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Simpson_Desert",
+            "title": "Simpson Desert – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss005e21295"
+      },
+      {
+        "kysymys": "Kuka ylitti Simpsonin autiomaan ensimmäisenä jalan?",
+        "vastaus": "Ted Colson ylitti Simpsonin autiomaan ensimmäisenä eurooppalaissyntyisenä jalan ja kamelein vuonna 1936. Aiemmin aluetta pidettiin liian ankarana ylitettäväksi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Simpson_Desert",
+            "title": "Simpson Desert – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss005e21295"
+      }
+    ]
+  },
+  "aurora-scandinavia": {
+    "kysymykset": [
+      "Mikä aiheuttaa revontulien vihreän värin?",
+      "Mistä revontulien hiukkaset ovat peräisin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä aiheuttaa revontulien vihreän värin?",
+        "vastaus": "Revontulien vihreä väri syntyy, kun Auringon hiukkaset virittävät happiatomeja noin 100–300 kilometrin korkeudessa yläilmakehässä. Viritetyt atomit purkavat energiansa vihreänä valona.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Aurora",
+            "title": "Aurora – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e024089"
+      },
+      {
+        "kysymys": "Mistä revontulien hiukkaset ovat peräisin?",
+        "vastaus": "Revontulet syntyvät Auringon aurinkotuulen mukana tulevista varautuneista hiukkasista, jotka Maan magneettikenttä ohjaa napa-alueiden yläilmakehään. Siellä ne törmäävät happi- ja typpimolekyyleihin ja saavat ne hehkumaan.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Aurora",
+            "title": "Aurora – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e024089"
+      }
+    ]
+  },
+  "manam": {
+    "kysymykset": [
+      "Kuinka moni evakuoitiin Manam-saarelta 2004?",
+      "Millainen saari Manam on?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka moni evakuoitiin Manam-saarelta 2004?",
+        "vastaus": "Manamin vuoden 2004 purkaus pakotti evakuoimaan lähes kaikki saaren noin 9 000 asukasta mantereelle. Monet heistä eivät ole koskaan palanneet pysyvästi takaisin saarelle.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Manam",
+            "title": "Manam – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts093-709-051"
+      },
+      {
+        "kysymys": "Millainen saari Manam on?",
+        "vastaus": "Manam on kokonaan yhden tulivuoren muodostama pyöreä saari Papua-Uuden-Guinean rannikon edustalla. Se on yksi Bismarckin vulkaanisen kaaren aktiivisimmista tulivuorista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Manam",
+            "title": "Manam – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts093-709-051"
+      }
+    ]
+  },
+  "karymsky": {
+    "kysymykset": [
+      "Mistä lähtien Karymski on purkautunut jatkuvasti?",
+      "Missä Karymski sijaitsee vanhaan kalderaan nähden?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mistä lähtien Karymski on purkautunut jatkuvasti?",
+        "vastaus": "Karymski on purkautunut lähes yhtäjaksoisesti vuodesta 1996 lähtien, mikä tekee siitä yhden Kamtšatkan aktiivisimmista tulivuorista. Purkaukset ovat tyypillisesti tuhka- ja kaasupurkauksia.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Karymsky",
+            "title": "Karymsky – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss033e019822"
+      },
+      {
+        "kysymys": "Missä Karymski sijaitsee vanhaan kalderaan nähden?",
+        "vastaus": "Karymski on kasvanut vanhemman, noin 7 600 vuotta sitten syntyneen kalderan sisään. Kalderan pohjalla on myös järvi aivan tulivuoren vieressä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Karymsky",
+            "title": "Karymsky – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss033e019822"
+      }
+    ]
+  },
+  "tarawa": {
+    "kysymykset": [
+      "Mikä taistelu käytiin Tarawalla vuonna 1943?",
+      "Miksi Kiribati on altis ilmastonmuutokselle?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä taistelu käytiin Tarawalla vuonna 1943?",
+        "vastaus": "Tarawalla käytiin marraskuussa 1943 yksi Tyynenmeren sodan verisimmistä taisteluista Yhdysvaltain ja Japanin joukkojen välillä. Taistelu kesti vain muutaman päivän, mutta molemmin puolin kaatui tuhansia sotilaita.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Tarawa",
+            "title": "Battle of Tarawa – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss053e180184"
+      },
+      {
+        "kysymys": "Miksi Kiribati on altis ilmastonmuutokselle?",
+        "vastaus": "Kiribatin atollit, kuten Tarawa, kohoavat vain muutaman metrin meren pinnan yläpuolelle. Merenpinnan nousu uhkaa tehdä osista saaria asumiskelvottomia jo tämän vuosisadan aikana.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Kiribati",
+            "title": "Kiribati – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss053e180184"
+      }
+    ]
+  },
+  "wake-island": {
+    "kysymykset": [
+      "Milloin Japani valtasi Waken saaren?",
+      "Kuinka monesta saaresta Waken atolli koostuu?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Milloin Japani valtasi Waken saaren?",
+        "vastaus": "Japani valtasi Waken saaren joulukuussa 1941, pian Pearl Harborin hyökkäyksen jälkeen. Saaren pieni yhdysvaltalaisvaruskunta puolusti asemiaan viikkojen ajan ennen antautumista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Wake_Island",
+            "title": "Battle of Wake Island – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss033e007873"
+      },
+      {
+        "kysymys": "Kuinka monesta saaresta Waken atolli koostuu?",
+        "vastaus": "Waken atolli koostuu kolmesta pienestä matalasta saaresta laguunin ympärillä. Saarilla ei asu siviilejä, vaan ne toimivat lähinnä Yhdysvaltain sotilastukikohtana.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Wake_Island",
+            "title": "Wake Island – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss033e007873"
+      }
+    ]
+  },
+  "bassac-vietnam": {
+    "kysymykset": [
+      "Montako haaraa Mekong muodostaa suistoonsa?",
+      "Mistä Bassac-joen ruskea väri johtuu?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Montako haaraa Mekong muodostaa suistoonsa?",
+        "vastaus": "Mekong jakautuu suistossaan yhdeksään pääuomaan, joita kutsutaan vietnamiksi nimellä 'Cửu Long' eli yhdeksän lohikäärmettä. Bassac on näistä haaroista toiseksi suurin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mekong_Delta",
+            "title": "Mekong Delta – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0818427"
+      },
+      {
+        "kysymys": "Mistä Bassac-joen ruskea väri johtuu?",
+        "vastaus": "Bassac-joen ruskea väri syntyy Mekongin koko valuma-alueelta kertyneestä hienojakoisesta liejusta ja savesta. Vuorovesi sekoittaa sedimenttiä vielä lisää joen suulla ennen sen laskua mereen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mekong_Delta",
+            "title": "Mekong Delta – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0818427"
+      }
+    ]
+  },
+  "kenya-rift": {
+    "kysymykset": [
+      "Mikä synnyttää Kenian riftilaakson murroslinjat?",
+      "Mitä riftilaaksolle voi tapahtua miljoonien vuosien päästä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä synnyttää Kenian riftilaakson murroslinjat?",
+        "vastaus": "Kenian riftilaakso syntyy, kun Afrikan ja Somalian mannerlaatat vetäytyvät hitaasti toisistaan erilleen. Liike venyttää ja murtaa maankuorta, minkä seurauksena syntyy rinnakkaisia hautavajoamia.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/East_African_Rift",
+            "title": "East African Rift – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e035487"
+      },
+      {
+        "kysymys": "Mitä riftilaaksolle voi tapahtua miljoonien vuosien päästä?",
+        "vastaus": "Tutkijoiden mukaan Itä-Afrikan hautavajoama voi miljoonien vuosien kuluessa halkaista mantereen kahtia. Vajoamaan voi tuolloin muodostua kokonaan uusi valtameri Afrikan sisään.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/East_African_Rift",
+            "title": "East African Rift – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e035487"
+      }
+    ]
+  },
+  "sahara-dust-western": {
+    "kysymykset": [
+      "Miten Saharan pöly vaikuttaa Amazonin sademetsään?",
+      "Mikä saaristo kärsii usein Saharan pölystä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miten Saharan pöly vaikuttaa Amazonin sademetsään?",
+        "vastaus": "Saharasta nouseva pöly kulkeutuu tuulten mukana Atlantin yli Amazonin sademetsään asti. Pöly sisältää fosforia, joka toimii luonnollisena lannoitteena sademetsän muuten ravinneköyhälle maaperälle.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Saharan_dust",
+            "title": "Saharan dust – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss007e08259"
+      },
+      {
+        "kysymys": "Mikä saaristo kärsii usein Saharan pölystä?",
+        "vastaus": "Kanariansaaret kärsivät toistuvasti Saharan pölypilvistä, joita paikalliset kutsuvat nimellä 'calima'. Ilmiö voi heikentää näkyvyyttä ja ilmanlaatua saarilla useiksi päiviksi kerrallaan.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Canary_Islands",
+            "title": "Canary Islands – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss007e08259"
+      }
+    ]
+  },
+  "baghdad-yolla": {
+    "kysymykset": [
+      "Minä vuonna Bagdad perustettiin?",
+      "Mikä joki virtaa Bagdadin läpi?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minä vuonna Bagdad perustettiin?",
+        "vastaus": "Bagdad perustettiin vuonna 762 Abbasidien kalifikunnan uudeksi pääkaupungiksi. Kaupungista kasvoi nopeasti yksi keskiajan islamilaisen maailman suurimmista oppineisuuden keskuksista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Baghdad",
+            "title": "Baghdad – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0515117"
+      },
+      {
+        "kysymys": "Mikä joki virtaa Bagdadin läpi?",
+        "vastaus": "Tigris-joki virtaa Bagdadin läpi tehden kaupungin kohdalla selvän mutkan. Joki on ollut kaupungin elinehto sen perustamisesta lähtien aina nykypäivään asti.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Baghdad",
+            "title": "Baghdad – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0515117"
+      }
+    ]
+  },
+  "malaspina": {
+    "kysymykset": [
+      "Kuinka suuri Malaspinan jäätikkö on?",
+      "Kenen mukaan Malaspinan jäätikkö on nimetty?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka suuri Malaspinan jäätikkö on?",
+        "vastaus": "Malaspina on maailman suurin jalustajäätikkö, ja se on pinta-alaltaan suurempi kuin Rhode Islandin osavaltio. Se muodostuu useista vuoristojäätiköistä, jotka levittäytyvät yhteen laajaksi jäälevyksi rannikkotasangolla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Malaspina_Glacier",
+            "title": "Malaspina Glacier – Wikipedia"
+          }
+        ],
+        "havaintoId": "STS066-117-014"
+      },
+      {
+        "kysymys": "Kenen mukaan Malaspinan jäätikkö on nimetty?",
+        "vastaus": "Jäätikkö on nimetty italialaissyntyisen merenkulkijan Alessandro Malaspinan mukaan, joka tutki Alaskan rannikkoa 1790-luvulla Espanjan palveluksessa. Hänen retkikuntansa etsi tuolloin muun muassa merireittiä pohjoisen kautta Atlantille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Malaspina_Glacier",
+            "title": "Malaspina Glacier – Wikipedia"
+          }
+        ],
+        "havaintoId": "STS066-117-014"
+      }
+    ]
+  },
+  "makgadikgadin-altaat": {
+    "kysymykset": [
+      "Mistä Makgadikgadin suola-altaiden punainen väri johtuu?",
+      "Mistä Makgadikgadin suolatasanko sai alkunsa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mistä Makgadikgadin suola-altaiden punainen väri johtuu?",
+        "vastaus": "Altaiden tummanpunainen sävy syntyy suolaa rakastavista leville ja mikrobeille, jotka viihtyvät voimakkaan suolaisessa vedessä. Väri kertoo haihtuvan suolaliuoksen olevan keskivahvaa tai vahvaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Makgadikgadi_Pan",
+            "title": "Makgadikgadi Pan – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e15732"
+      },
+      {
+        "kysymys": "Mistä Makgadikgadin suolatasanko sai alkunsa?",
+        "vastaus": "Tasanko on jäänne valtavasta muinaisesta Makgadikgadi-järvestä, joka kuivui vähitellen ilmaston muuttuessa tuhansien vuosien kuluessa. Nykyään altaisiin virtaa vettä satojen kilometrien päästä, muun muassa Angolasta asti.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Makgadikgadi_Pan",
+            "title": "Makgadikgadi Pan – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e15732"
+      }
+    ]
+  },
+  "kaukasusvuoret": {
+    "kysymykset": [
+      "Mikä on Euroopan korkein huippu ja missä se on?",
+      "Mihin tarkoituksiin Mingečaurin tekojärveä käytetään?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä on Euroopan korkein huippu ja missä se on?",
+        "vastaus": "Euroopan korkein huippu on Elbrus, joka kohoaa 5 642 metriin Kaukasuksen vuoristossa Venäjän puolella. Vuori on sammunut tulivuori, jonka huipulle nousee vuosittain tuhansia kiipeilijöitä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Kabardino-Balkaria",
+            "title": "Kabardino-Balkaria – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss071e041651"
+      },
+      {
+        "kysymys": "Mihin tarkoituksiin Mingečaurin tekojärveä käytetään?",
+        "vastaus": "Mingečaurin tekojärvi on Kaukasuksen suurin allas, ja sen vettä käytetään kalastukseen, juomavedeksi ja peltojen kasteluun. Se sijaitsee Kuran laaksossa Suur- ja Vähä-Kaukasuksen välissä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mingachevir_Reservoir",
+            "title": "Mingachevir Reservoir – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss023e035670"
+      }
+    ]
+  },
+  "guadalupen-pyorteet": {
+    "kysymykset": [
+      "Kenen mukaan von Kármánin pyörrekatu on nimetty?",
+      "Millainen paikka Guadalupen saari on?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kenen mukaan von Kármánin pyörrekatu on nimetty?",
+        "vastaus": "Ilmiö on nimetty unkarilaissyntyisen fyysikon Theodore von Kármánin mukaan, joka kuvasi pyörteiden syntymekanismin ensimmäisenä. Hän oli myös perustamassa NASAn Jet Propulsion Laboratorya.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street",
+            "title": "Kármán vortex street – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss036e035663"
+      },
+      {
+        "kysymys": "Millainen paikka Guadalupen saari on?",
+        "vastaus": "Guadalupe on tulivuoresta syntynyt saari Meksikon edustalla Tyynellämerellä, ja se on nykyään suojeltu biosfäärialue. Sen jyrkkä, korkea maasto häiritsee matalan pilvikerroksen virtausta ja synnyttää pyörteitä saaren tuulen puolelle.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Guadalupe_Island",
+            "title": "Guadalupe Island – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss040e016570"
+      }
+    ]
+  },
+  "kanariansaarten-pyorteet": {
+    "kysymykset": [
+      "Miksi matalat pilvet jäävät Kanariansaarten kohdalle?",
+      "Mikä on Kanariansaarten ja Espanjan korkein huippu?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi matalat pilvet jäävät Kanariansaarten kohdalle?",
+        "vastaus": "Passaattituulten yläpuolella on lämpimämpi ilmakerros, joka toimii kannen tavoin ja estää matalia pilviä nousemasta korkeammalle. Kun saaren jyrkkä huippu työntyy tämän pilvikerroksen läpi, virtaus häiriintyy ja synnyttää pyörteitä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street",
+            "title": "Kármán vortex street – Wikipedia"
+          }
+        ],
+        "havaintoId": "s40-75-003"
+      },
+      {
+        "kysymys": "Mikä on Kanariansaarten ja Espanjan korkein huippu?",
+        "vastaus": "Kanariansaarten ja koko Espanjan korkein huippu on Teide Teneriffalla, joka kohoaa 3 715 metriin. Se on yhä toimiva tulivuori ja UNESCOn maailmanperintökohde.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Canary_Islands",
+            "title": "Canary Islands – Wikipedia"
+          }
+        ],
+        "havaintoId": "s40-75-003"
+      }
+    ]
+  },
+  "zagrosvuoret": {
+    "kysymykset": [
+      "Miten Zagrosvuoriston poimut ovat syntyneet?",
+      "Miksi Zagrosvuoret ovat taloudellisesti tärkeät?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miten Zagrosvuoriston poimut ovat syntyneet?",
+        "vastaus": "Vuoret ovat syntyneet, kun Arabian mannerlaatta on hitaasti törmännyt Euraasian laattaan ja puristanut kerrostuneen kallioperän pitkiksi poimuiksi. Sama törmäys jatkuu yhä, minkä vuoksi alue on altis maanjäristyksille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Zagros_Mountains",
+            "title": "Zagros Mountains – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0315889"
+      },
+      {
+        "kysymys": "Miksi Zagrosvuoret ovat taloudellisesti tärkeät?",
+        "vastaus": "Poimuvuorten rakenteet ovat muodostaneet maanalaisia öljy- ja kaasuesiintymiä, ja Zagrosin alue tuottaa suuren osan Iranin ja Irakin öljystä. Poimujen muoto näkyy usein selvästi jo satelliittikuvista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Zagros_Mountains",
+            "title": "Zagros Mountains – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0315889"
+      }
+    ]
+  },
+  "lasvegas-yolla": {
+    "kysymykset": [
+      "Miksi Las Vegasin Strip erottuu yökuvassa kirkkaana?",
+      "Miksi Las Vegas syntyi juuri autiomaahan?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi Las Vegasin Strip erottuu yökuvassa kirkkaana?",
+        "vastaus": "Stripin kasinot ja hotellit pitävät valonsa päällä ympäri vuorokauden houkutellakseen asiakkaita, mikä tekee alueesta ympäristöään huomattavasti kirkkaamman. Las Vegas tunnetaankin itseään kuvailevana viihteen maailman pääkaupunkina.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Las_Vegas",
+            "title": "Las Vegas – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss026e006255"
+      },
+      {
+        "kysymys": "Miksi Las Vegas syntyi juuri autiomaahan?",
+        "vastaus": "Kaupunki sai alkunsa 1900-luvun alussa rautatien vesipysäkkinä, sillä aavikon keskellä oli harvinaisia lähteitä. Uhkapelin laillistaminen vuonna 1931 muutti pienen ratapihakylän vähitellen maailman tunnetuimmaksi kasinokaupungiksi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Las_Vegas",
+            "title": "Las Vegas – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss026e006255"
+      }
+    ]
+  },
+  "iberia-yolla": {
+    "kysymykset": [
+      "Miksi Madrid näkyy niin kirkkaana niemimaan keskellä?",
+      "Mikä tekee Lissabonista poikkeuksellisen vanhan kaupungin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi Madrid näkyy niin kirkkaana niemimaan keskellä?",
+        "vastaus": "Madrid on Espanjan pääkaupunki ja maan suurin kaupunki, ja se sijaitsee poikkeuksellisen korkealla, lähes 700 metrin korkeudessa keskellä Iberian niemimaata. Se on Euroopan korkeimmalla sijaitseva pääkaupunki.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Madrid",
+            "title": "Madrid – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e010008"
+      },
+      {
+        "kysymys": "Mikä tekee Lissabonista poikkeuksellisen vanhan kaupungin?",
+        "vastaus": "Lissabon on yksi Länsi-Euroopan vanhimmista kaupungeista, asutettu kauan ennen Rooman, Lontoon tai Pariisin perustamista. Kaupunki sijaitsee Tejo-joen suulla Atlantin rannikolla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lisbon",
+            "title": "Lisbon – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e010008"
+      }
+    ]
+  },
+  "labradorin-jaameri": {
+    "kysymykset": [
+      "Mikä virta kuljettaa merijäätä Labradorin rannikolle?",
+      "Miten Arktiksen merijää on muuttunut vuosikymmenten aikana?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä virta kuljettaa merijäätä Labradorin rannikolle?",
+        "vastaus": "Kylmä Labradorin virta kuljettaa Arktikselta peräisin olevaa vettä ja jäätä etelään Kanadan itärannikkoa pitkin. Sama virta kuljettaa myös irronneita jäävuoria, joista yksi upotti Titanicin vuonna 1912 kauempana etelässä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Labrador_Current",
+            "title": "Labrador Current – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss070e086805"
+      },
+      {
+        "kysymys": "Miten Arktiksen merijää on muuttunut vuosikymmenten aikana?",
+        "vastaus": "Ilmastonlämpeneminen on vähentänyt Arktiksen merijään kokonaismäärää ja paksuutta vuosikymmenten aikana, ja kutistuminen on nopeinta kesäisin. Satelliitit ja avaruusasemalta otetut valokuvat auttavat tutkijoita seuraamaan muutosta vuodesta toiseen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Arctic_sea_ice_decline",
+            "title": "Arctic sea ice decline – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss070e086805"
+      }
+    ]
+  },
+  "lake-sharpe": {
+    "kysymykset": [
+      "Miten Lake Sharpe -tekojärvi syntyi?",
+      "Miksi kastelukentät näkyvät ilmakuvissa pyöreinä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miten Lake Sharpe -tekojärvi syntyi?",
+        "vastaus": "Lake Sharpe on tekojärvi, joka syntyi kun Missourijokeen rakennettiin Big Bend -pato Etelä-Dakotassa. Pato valmistui 1960-luvulla osana joen laajaa vesivoimahankkeiden sarjaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Sharpe",
+            "title": "Lake Sharpe – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss038e023651"
+      },
+      {
+        "kysymys": "Miksi kastelukentät näkyvät ilmakuvissa pyöreinä?",
+        "vastaus": "Pyöreä muoto syntyy keskipistekastelusta, jossa pitkä kastelulaite kiertää kiinteän keskipisteen ympäri. Menetelmä yleistyi 1900-luvun puolivälin jälkeen ja näkyy nykyään selvästi avaruudesta eri puolilla maailmaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Center-pivot_irrigation",
+            "title": "Center-pivot irrigation – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss038e023651"
+      }
+    ]
+  },
+  "new-orleans-mutka": {
+    "kysymykset": [
+      "Mistä New Orleansin lisänimi Puolikuun kaupunki juontuu?",
+      "Kuinka laajalta alueelta Mississippijoki kerää vetensä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mistä New Orleansin lisänimi Puolikuun kaupunki juontuu?",
+        "vastaus": "Nimi juontuu Mississippijoen jyrkästä mutkasta, jonka sisäkaarteeseen kaupungin vanhin osa on rakennettu. Joen muoto muistuttaa ylhäältä katsottuna puolikuuta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/New_Orleans",
+            "title": "New Orleans – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss039e001640"
+      },
+      {
+        "kysymys": "Kuinka laajalta alueelta Mississippijoki kerää vetensä?",
+        "vastaus": "Mississippijoen valuma-alue kattaa noin 31 Yhdysvaltain osavaltiota ja pienen osan Kanadaa. Se on virtaaman mukaan Pohjois-Amerikan suurin jokijärjestelmä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mississippi_River",
+            "title": "Mississippi River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss039e001640"
+      }
+    ]
+  },
+  "rio-negro-mutkat": {
+    "kysymykset": [
+      "Mistä Río Negro saa alkunsa?",
+      "Mihin Río Negron vettä käytetään laaksossa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mistä Río Negro saa alkunsa?",
+        "vastaus": "Río Negro syntyy, kun Neuquén- ja Limay-joet yhtyvät Andien itäpuolella, ja se virtaa siitä eteenpäin Atlantille asti. Joki tunnetaan poikkeuksellisen mutkittelevasta uomastaan Patagonian tasangolla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/R%C3%ADo_Negro_(Argentina)",
+            "title": "Río Negro (Argentina) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss022e019513"
+      },
+      {
+        "kysymys": "Mihin Río Negron vettä käytetään laaksossa?",
+        "vastaus": "Joen vettä johdetaan kanavilla Alto Valle -nimiseen laaksoon, jossa se kastelee laajoja omena- ja päärynätarhoja. Alue on yksi Argentiinan tärkeimmistä hedelmänviljelyseuduista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/R%C3%ADo_Negro_(Argentina)",
+            "title": "Río Negro (Argentina) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss022e019513"
+      }
+    ]
+  },
+  "ebron-suisto": {
+    "kysymykset": [
+      "Mitä Ebron suistossa viljellään laajalti?",
+      "Miksi Ebron suisto on kutistunut?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mitä Ebron suistossa viljellään laajalti?",
+        "vastaus": "Ebron suisto on yksi Espanjan tärkeimmistä riisintuotantoalueista, ja suuri osa sen pinta-alasta on tulvitettuja riisipeltoja. Alue on myös tärkeä kosteikko vesilinnuille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ebro_Delta",
+            "title": "Ebro Delta – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss009e09985"
+      },
+      {
+        "kysymys": "Miksi Ebron suisto on kutistunut?",
+        "vastaus": "Yläjuoksulle rakennetut padot pidättävät suurimman osan joen kuljettamasta hiekasta ja mudasta, joten suistoon ei enää kerry riittävästi ainesta korvaamaan meren kuluttamaa rantaa. Suisto on siksi vähitellen pienentynyt vuosikymmenten aikana.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ebro_Delta",
+            "title": "Ebro Delta – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss009e09985"
+      }
+    ]
+  },
+  "selengan-suisto": {
+    "kysymykset": [
+      "Kuinka suuren osan Baikalin vedestä Selengajoki tuo?",
+      "Miksi Baikal-järvi on ainutlaatuinen makeanveden järvi?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka suuren osan Baikalin vedestä Selengajoki tuo?",
+        "vastaus": "Selengajoki on Baikal-järven suurin sivujoki ja tuo järveen noin puolet sen koko vesimäärästä. Joki saa alkunsa Mongoliasta ja virtaa Venäjän Burjatian tasavallan läpi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Selenge_River",
+            "title": "Selenge River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss029e037915"
+      },
+      {
+        "kysymys": "Miksi Baikal-järvi on ainutlaatuinen makeanveden järvi?",
+        "vastaus": "Baikal on maailman syvin ja vesimäärältään suurin makeanveden järvi, ja se sisältää noin viidenneksen koko maapallon sulan makean veden varannoista. Järvi on myös yksi maailman vanhimmista, yli 25 miljoonaa vuotta vanha.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Baikal",
+            "title": "Lake Baikal – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss029e037915"
+      }
+    ]
+  },
+  "texasin-kastelurenkaat": {
+    "kysymykset": [
+      "Miksi Länsi-Texasin pellot ovat ilmakuvassa pyöreitä?",
+      "Mikä Permin allas on?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi Länsi-Texasin pellot ovat ilmakuvassa pyöreitä?",
+        "vastaus": "Pellot kastellaan keskipistekastelulla, jossa pitkä, pyörillä kulkeva putkisto kiertää kiinteän keskipisteen ympäri. Menetelmä tuottaa ilmasta katsottuna tunnusomaisen pyöreän kuvion.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Center-pivot_irrigation",
+            "title": "Center-pivot irrigation – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0603632"
+      },
+      {
+        "kysymys": "Mikä Permin allas on?",
+        "vastaus": "Permin allas on Länsi-Texasin ja Uuden-Meksikon alueella sijaitseva geologinen muodostuma, joka on yksi maailman tuottavimmista öljy- ja kaasualueista. Sen tuotanto on kasvanut voimakkaasti liuskeöljyn poraustekniikoiden yleistyttyä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Permian_Basin_(North_America)",
+            "title": "Permian Basin (North America) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0603632"
+      }
+    ]
+  },
+  "ningaloo-riutta": {
+    "kysymykset": [
+      "Mikä tekee Ningaloo-riutasta poikkeuksellisen?",
+      "Mikä värjäsi Exmouth-lahden veden punaiseksi kuvassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä tekee Ningaloo-riutasta poikkeuksellisen?",
+        "vastaus": "Toisin kuin useimmat suuret koralliriutat, Ningaloo kasvaa aivan mantereen rannan tuntumassa kaukana avomerellä sijaitsevien riuttojen sijaan. Riutta on UNESCOn maailmanperintökohde ja tunnetaan valashaista, jotka kokoontuvat sen edustalle vuosittain.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ningaloo_Reef",
+            "title": "Ningaloo Reef – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts067-722a-053"
+      },
+      {
+        "kysymys": "Mikä värjäsi Exmouth-lahden veden punaiseksi kuvassa?",
+        "vastaus": "Viikkoa ennen kuvan ottamista alueen yli kulkenut hurrikaani Bobby toi rankkoja sateita, jotka huuhtoivat punaista mutaa jokien mukana lahteen. Sama ilmiö toistuu usein trooppisten myrskyjen jälkeen kuivien alueiden rannikoilla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/sts067-722a-053",
+            "title": "Exmouth Gulf, Australia as seen from STS-67 – NASA"
+          }
+        ],
+        "havaintoId": "sts067-722a-053"
+      }
+    ]
   }
 };
 
