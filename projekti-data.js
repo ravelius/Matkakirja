@@ -110,7 +110,7 @@ window.PROJEKTIDATA = {
    "z10Tuotannossa": "2026-09-27"
   },
   "versiot": {
-   "web": 2315,
+   "web": 2316,
    "natiivi": "1.0.28",
    "natiiviPaivitetty": "2026-09-27"
   }
