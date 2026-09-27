@@ -31,6 +31,7 @@
 //   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
 //   luento kaupunki|intro|lento|lento-alku|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
 //   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
+//   puhe lue <teksti>         lukee tekstin kertojan äänellä (palavirran mittaus); puhe virta|striimi [pois|paalle]
 //   saapumisluenta [tila]     löydös 162: PeliOhjain.SaapumisluentaKesken (kaupunki, luento jonossa/soi, traileri,
 //                             lykätty) ja viimeisin päättyminen "kaupunki (syy)" peli-lokiin
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
@@ -302,6 +303,14 @@ namespace Matkakirja.Natiivi
                             else if (A(2) == "paalle") Puhe.Virta = true;
                             return $"=virta {(Puhe.Virta ? "päällä" : "pois")}, striimi {(Puhe.Striimi ? "päällä" : "pois")}"
                                 + $"{(Puhe.VirtaPetti ? " (striimi petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms";
+                        // Lukee annetun tekstin kertojan äänellä (palavirran mittaus: "puhe virta" → 1. ääni ms, aani mittaa).
+                        case "lue":
+                        {
+                            string teksti = o.Length > 2 ? string.Join(" ", o, 2, o.Length - 2) : null;
+                            if (string.IsNullOrWhiteSpace(teksti)) return "käyttö: puhe lue <teksti>";
+                            var palat = Puhe.Virta ? Matkakirja.Peli.Lukijaaani.VirtaPalat(teksti).Count : 1;
+                            return Puhe.Hae().Lue(teksti, "kertoja") ? $"=lukee {teksti.Length} mrk, {palat} palaa" : "=ei lue (puhe pois?)";
+                        }
                         // Striimattu mp3 (kokeilu; iOS ei jäsennä, TF 1.0.29): striimi [pois|paalle].
                         case "striimi":
                             if (A(2) == "pois") Puhe.Striimi = false;
