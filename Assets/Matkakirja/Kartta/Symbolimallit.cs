@@ -175,6 +175,11 @@ namespace Matkakirja
             {
                 case "ylhaalta": Ylhaalta3D = o[2] != "2d"; return true;
                 case "perspektiivi": PerspektiiviAste = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 80f); return true;
+                case "lahi":
+                    if (o[2] == "0" || o[2] == "pois") Lahitaso = false;
+                    else if (o[2] == "1" || o[2] == "paalle") Lahitaso = true;
+                    else LahiEnintaan = Mathf.Clamp(int.Parse(o[2], CultureInfo.InvariantCulture), 0, 12);
+                    return true;
                 case "maasto": MaastoKorkeudet = o[2] != "0" && o[2] != "pois"; return true;
                 case "reuna": ReunaPt = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0f, 4f); return true;
                 case "kategoriat":
@@ -293,7 +298,7 @@ namespace Matkakirja
             if (instanssi == null) return "ei luotu";
             var sb = new System.Text.StringBuilder($"päällä {Paalla}, koko {KokoPt:0} pt, taso23 {(Taso23 ? 1 : 0)}, ylhaalta {(Ylhaalta3D ? "3d" : "2d")}, " +
                 $"perspektiivi {PerspektiiviAste:0.#}°, reuna {ReunaPt:0.##} pt, maasto {(MaastoKorkeudet ? 1 : 0)}, kategoriat {(Kategoriat ? 1 : 0)} " +
-                $"({(KategoriaRuutuYlos ? "ruutu" : "pohjoinen")}); taso 1 näkyvissä:");
+                $"({(KategoriaRuutuYlos ? "ruutu" : "pohjoinen")}), lähi {instanssi.LahiTila()}; taso 1 näkyvissä:");
             int n = 0;
             var taso1 = new int[MalliLukumaara];
             foreach (var p in instanssi.kappaleet)
@@ -352,6 +357,11 @@ namespace Matkakirja
             public bool KorkeusOk;
             /// <summary>Kaupungin maamerkki (Erikoismalli.Kaupunki): malli kaupunkipisteen vasemmalla puolella.</summary>
             public bool Maamerkki;
+            /// <summary>Lähitaso (Symbolimallit.Lahitaso.cs): perusverkko, lähiverkko (null = ei lähitasoa), onko lähi käytössä ja
+            /// etäisyys kameraan tältä kehykseltä (∞ = ei näkyvissä).</summary>
+            public Mesh Perus, LahiVerkko;
+            public bool LahiNyt;
+            public float Etaisyys = float.PositiveInfinity;
         }
         /// <summary>Tason 1 kappaleet noston id:llä.</summary>
         readonly Dictionary<string, Kappale> kappaleet = new Dictionary<string, Kappale>();
@@ -403,6 +413,7 @@ namespace Matkakirja
                     PallonLepo.Muuttui("symbolimallit");
                 }
             if (sallittu && Taso1Zoom()) PaivitaMaamerkit(nk);
+            ValitseLahitaso(sallittu ? nk : null);
             PiirraTasot23(sallittu ? nk : null);
         }
 
@@ -473,6 +484,8 @@ namespace Matkakirja
                 // Ääriviiva (1.0.27-kokeilu): sama verkko ääriviivamateriaalilla, leveys lohkon _Tila.z:ssa.
                 k.Reuna = Lapsi(go.transform, "Aariviiva", verkko, reunaMateriaali);
                 k.ReunaSuodin = k.Reuna.GetComponent<MeshFilter>();
+                k.Perus = verkko;
+                k.LahiVerkko = LahiVerkkoNostolle(tieto);
                 kappaleet[s.Id] = k;
                 LuoOsat(s.Id, tieto.Erikois, go.transform);
             }
@@ -482,6 +495,9 @@ namespace Matkakirja
                 k.Malli = MalliIndeksi(tieto);
                 var verkko = MallinVerkko(k.Malli, 0);
                 k.Suodin.sharedMesh = k.ReunaSuodin.sharedMesh = verkko;
+                k.Perus = verkko;
+                k.LahiVerkko = LahiVerkkoNostolle(tieto);
+                k.LahiNyt = false;
                 k.PohjaLeveys = PohjaSade * Leveys(verkko);
                 k.Puoli = Puoli(verkko);
                 k.Koko = -1f;
@@ -500,6 +516,7 @@ namespace Matkakirja
             Vector3 kohti = kamera.transform.position - p;
             float etaisyys = kohti.magnitude;
             bool edessa = Vector3.Dot(gt.TransformDirection(k.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) > 0.08f;
+            k.Etaisyys = edessa ? etaisyys : float.PositiveInfinity;
             if (k.R.enabled != edessa) { Nayta(k, edessa); PallonLepo.Muuttui("symbolimallit"); }
             PaivitaOsat(osat, edessa, p);
             if (!edessa) return;
