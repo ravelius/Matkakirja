@@ -23,3 +23,13 @@ LAITETODENNUS PUUTTUU: kääntäjä oli varattu (Natiivisepän käännös). Mitt
 - `wt/proto-pelikoodari-uusipeli` poistettu (177-avaimet on masterissa).
 - `wt/pelikoodari-vanha-checkout` on SYMLINKKI (→ /Users/samireivinen/Matkakirja-pelikoodari → /Users/Shared/Claude/Matkakirja-pelikoodari = Pelikoodarin aktiivinen roolikansio). Ei vie tilaa; 1,1 Gt on aktiivinen checkout. Ei poisteta.
 - `wt/pelikoodari-striimiaani-korjaus` poistettu (#3404 mergetty).
+
+## Projektisivu valmis omistajan korttiin
+
+Luonnos-PR #3410 (sisältää #3399:n + Pelistreak-korjauksen; julkaistaan vasta kortin jälkeen). Kuvat:
+`/Users/Shared/Claude/proto-3d/lokit/projektisivu/projekti-tilanne-tyopoyta.png` ja `-puhelin.png` (+ jokainen välilehti, yötila).
+Node --test 4463/0. Kysymykset:
+1. Tilannekatsaus sanoo "117 peliä", pelikatalogin data 116.
+2. Z10 298 335 + 78 211 laattaa näkyy sivulla "kahdessa kerroksessa" — oikein?
+3. Otsikot ulkoiselle yleisölle: "Omistajan kortit" → "Pelin omat mekaniikat", "Omistajan ideat" → "Ideat".
+4. docs/ (myös raakadatat, joissa sisäisiä merkintöjä) on Pagesissa julkisena kuten ennenkin; sivu itse suodattaa.
