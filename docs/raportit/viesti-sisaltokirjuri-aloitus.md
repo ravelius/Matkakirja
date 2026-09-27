@@ -1,36 +1,39 @@
-# Sisältökirjurin aloitusviesti (27.9.2026 klo 14.0x, kontekstin nollaus)
+# Sisältökirjurin aloitusviesti (27.9.2026 klo ~15.0x, kontekstin nollaus)
 
-Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri.
-Ensimmäinen komento: `git fetch origin main` (liikkuu, useita sessioita
-rinnakkain). Lue CLAUDE.md, docs/roolitus.md ja
-docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-f.md KOKONAAN
+Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri
+(haara sisalto-pelikatalogi-20260927). Ensimmäinen komento:
+`git fetch origin main` (liikkuu nopeasti, useita PR-junia rinnakkain).
+Lue CLAUDE.md, docs/roolitus.md ja
+docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-g.md KOKONAAN
 ennen töiden aloitusta.
 
-TILA lyhyesti: main = v2318+. Kolme PR:ää avoinna Julkaisijan junassa
-(#3408, #3411, #3413 — ks. luovutusraportin kohta 2). Kolme worktreeta
-odottaa niiden mergeä (sisaltokirjuri-nahtavyys-tasaus,
-sisaltokirjuri-nahtavyys-tuotanto2, sisaltokirjuri-nahtavyys-tyyppi).
+TILA lyhyesti: Lähi-idän/Novosibirskin/0-0-kaupunkien erä PERUUTETTIIN
+omistajan päätöksellä 27.9. — älä koske niihin. Sen sijaan käynnissä
+on **Euroopan ohuimpien lehtikaupunkien erä** (Fablen tilaus, jatkuu):
+PR #3419 avoinna (Valletta+Luxemburg+Lappi+Sisilia+Kreeta+
+Islanti+Alpit+Tromssa+Marseille+Riika, 3 committia) — tarkista onko
+mergetty. Jatka samasta worktreesta
+/Users/Shared/Claude/wt/sisaltokirjuri-euroopan-ohuimmat.
 
-JONO (Fablen päätös 27.9. klo 14.0x, järjestyksessä):
+JONO (järjestyksessä):
 
-1. **LÄHI-IDÄN NOSTOERÄ**: 13 kaupunkia (Damaskos, Ankara, Izmir,
-   Riad, Kuwait, Doha, Mekka, Sana, Nikosia, Halab, Isfahan, Tabriz,
-   Masqat) — kaikilla on jo NAHTAVYYSJUTUT-artikkelit mutta nolla
-   nosto-kenttää. Kirjoita nostot olemassa olevista jutuista + kuvat.
-   Sitten Novosibirsk samalla periaatteella.
-2. **0/0-KAUPUNGIT omana eränä**: Kalgoorlie, Gao, Cayenne + 4 muuta
-   tasapelissä (Macapá, João Pessoa, Santarém, Portovelho, Mount Isa,
-   Geraldton, Broome) — tarvitsevat sekä jutut että nostot alusta.
-3. **"HAVAINNEKUVA"-sana** (omistajan sääntö 13.4x): korvaa
-   pelaajalle näkyvissä teksteissä "kuvitus"/"AI-kuva"/"generoitu
-   kuva" sanalla "havainnekuva". Selvitä laajuus grepillä ensin.
-4. **Codex-arviotilaus** kun PR #3413 on TUOTANNOSSA (ei vain
-   mergetty — tarkista julkaisu erikseen): yhdistä 23 jäljellä
-   olevaa poikkeamaa + jo tilatut 7 maalattua taustaa yhdeksi
-   tilaukseksi postilaatikkoon.
+1. **EUROOPAN ERÄ 3**: seuraavat 5 ohuinta kaupunkia mittarilla
+   (aiheet+lehtinostot+jutut+kulttuurinostot, ks. luovutusraportin
+   kohta 3 — skripti ja ehdokaslista: barcelona, kiova, edinburgh,
+   varsova, dubrovnik, sarajevo, odessa, vilna, krakova...). Kirjoita
+   suoraan (ei pilottia), UUSI PR (ei #3419:ään enää). Tarkista AINA
+   ensin: skandaalikiintiö (2-3/maa, moni jo katossa) ja onko
+   kohdekarttaa (osa alue-ambiensseista ei ole pistekaupunkeja).
+2. **Historian hetket**, kun Codex toimittaa kuvat postilaatikko-
+   tilauksiin (kaksi erää lähetetty, ks. luovutusraportin kohta 4) —
+   lisää js/packs/historian-hetket.js:ään, aja tarkista-nostopaikat.mjs.
+3. **Codex-arviotilaus** kun PR #3413 on TUOTANNOSSA (MERGETTY jo
+   27.9. — tarkista onko myös JULKAISTU): yhdistä 23 poikkeamaa + 7
+   maalattua taustaa yhdeksi tilaukseksi postilaatikkoon.
 
-Täydet perustelut ja menetelmät jokaiselle kohdalle:
-docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-f.md kohta 3.
+Täydet perustelut ja menetelmät: docs/raportit/viesti-sisaltokirjuri-
+luovutus-20260927-g.md kohta 3 (mittari+rajoitteet), kohta 4
+(postilaatikkotilaukset).
 
 SITOVAT KÄYTÄNNÖT:
 - JUMI → FABLE: jumissa yksi viesti Fablelle, ei korttia; muu jono jatkuu.
@@ -43,3 +46,9 @@ SITOVAT KÄYTÄNNÖT:
 - Kuvien/assettien PR:ssä aja aina node tools/mittaa-miniatyyrit.mjs
   (sharp: symlinkkaa node_modules Matkakirja-fablesta jos puuttuu,
   ÄLÄ committoi symlinkkiä).
+- Historian hetket vaativat AINA kuvaputken havainnekuvan — ei koskaan
+  Commons-kuvaa eikä kuvatonta hetkeä. Kirjoita tekstit postilaatikkoon,
+  ei suoraan historian-hetket.js:ään ilman kuvia.
+- Main liikkuu useita committeja tunnissa: fetch+rebase juuri ennen
+  pushia, ei aiemmin. js/muutokset.js-konfliktit ovat rutiinia
+  (versionumerorivit) — ratkaisu luovutusraportin kohdassa 3.
