@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2316, teksti: 'v2316: KIIREELLINEN korjaus — naytaStriimiaani… (#3404)' },
   { v: 2315, teksti: 'v2313: Nostokortin luennan säätimet — ratas, VU… (#3388)' },
   { v: 2314, teksti: 'v2313: Talouden vaihe 1 — päiväkulut, 400 £, ro… (#3394)' },
   { v: 2313, teksti: 'Raamattu: pelit, talous ja luenta 27.9.; pelika… (#3392)' },
