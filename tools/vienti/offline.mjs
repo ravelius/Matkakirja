@@ -28,7 +28,7 @@
  * joka commitoidaan. Vienti ei käytä verkkoa, joten sama lähde antaa
  * tavulleen saman offline.json:n.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
@@ -48,6 +48,13 @@ export const OFFLINE_LAHTEET = {
    * on siksi LISTA välejä, yksi kaupunkia kohti.
    * 26.9.2026: sarja 2026-09-26-pohja-20260926 (omistaja hyväksyi pohja 26:n myös natiiviin; kaikki 41 413
    * offline-laattaa tarkistettu ämpäristä). Ei skeemamuutosta, vain osoite ja koot.
+   * Skeema 1.51 (Fable 27.9.2026): Z10 samaan sarjaan kaikkien kokoelman kaupunkien ympärille (± 1°), TARKKA
+   * laattajoukko Karttasepän poltosta (tools/tee-pallolaatat.mjs kaupunkienLaatat, PR #3393) tiedostossa
+   * tools/vienti/pallo-z10.json ({ sarja, laatat: ["x/y", …] }). Z10 on OMASSA avaimessa: lahteet.rasteri.kaupunkiRasteri
+   * ja maan kaupunkiRasteri["10"] = lista välejä (rivien juoksut kaupungin laatikossa), joten jokainen väli on kokonaan
+   * poltettu. Natiiviseppä 27.9.: vanhat buildit (≤ 1.0.30) lataavat kaikki maan rasteri-kentän tasot mutta piirtävät
+   * enintään z9:n, joten rasteri["10"] olisi niille ~0,4 Gt hukkaa; maxzoom, kaupunkitaso ja tavuja.yht pysyvät
+   * ennallaan. Ilman tiedostoa kaupunkiRasteri jää pois.
    */
   rasteri: {
     url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-26-pohja-20260926/{z}/{x}/{y}.jpg',
@@ -61,6 +68,19 @@ export const OFFLINE_LAHTEET = {
   },
 };
 const MERCATOR_MAX = 85.05112878;
+const PALLO_Z10 = join(TAMA, 'pallo-z10.json');
+/** Skeema 1.51: Karttasepän Z10-laattajoukko ("x/y") tai null. */
+function palloZ10() {
+  if (!existsSync(PALLO_Z10)) return null;
+  const d = JSON.parse(readFileSync(PALLO_Z10, 'utf8'));
+  if (!Array.isArray(d.laatat)) throw new Error('pallo-z10.json: laatat puuttuu');
+  return new Set(d.laatat);
+}
+const Z10 = palloZ10();
+if (Z10) {
+  OFFLINE_LAHTEET.rasteri.kaupunkiRasteri = { tasot: [10], laatikkoAste: 1, kaupungit: 'kaikki kokoelman kaupungit',
+    laattoja: Z10.size, lahde: 'tools/vienti/pallo-z10.json (Karttaseppä, tools/tee-pallolaatat.mjs kaupunkienLaatat)' };
+}
 // Sama rajaus kuin tools/vienti/tarkista-media.mjs: linkit, säännöttömät
 // tiedostonimet ja ulkoiset kuva-, ääni- ja video-URLit (hahmotelmien
 // viitekuvat, lähdelinkit) eivät ole pelin omaa mediaa.
@@ -177,6 +197,32 @@ function kaupunkitasonValit(kaupungit, taso) {
   return maat;
 }
 
+/**
+ * Skeema 1.51: Z10-välit maittain. Kaupungin laatikon (± laatikkoAste) poltetut laatat riveittäin juoksuiksi
+ * [x0, y, x1, y]; sama laatta voi kuulua kahden maan kaupungille (laatat lasketaan tavuihin maittain kerran).
+ */
+function syvanTasonValit(kaupungit, maat, syva, joukko) {
+  for (const c of kaupungit) {
+    if (!c.maa || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) continue;
+    const a = syva.laatikkoAste;
+    const x0 = rajaa(xyzX(Math.max(-180, c.lon - a), 10), 10); const x1 = rajaa(xyzX(Math.min(180, c.lon + a), 10), 10);
+    const y0 = rajaa(xyzY(Math.min(MERCATOR_MAX, c.lat + a), 10), 10); const y1 = rajaa(xyzY(Math.max(-MERCATOR_MAX, c.lat - a), 10), 10);
+    if (!maat.has(c.maa)) maat.set(c.maa, new Map());
+    const m = maat.get(c.maa);
+    if (!m.has(10)) m.set(10, { valit: [], laatat: new Set() });
+    const t = m.get(10);
+    for (let y = y0; y <= y1; y++) {
+      let alku = null;
+      for (let x = x0; x <= x1 + 1; x++) {
+        const on = x <= x1 && joukko.has(`${x}/${y}`) && !t.laatat.has(`${x}/${y}`);
+        if (on && alku === null) alku = x;
+        if (!on && alku !== null) { t.valit.push([alku, y, x - 1, y]); for (let k = alku; k < x; k++) t.laatat.add(`${k}/${y}`); alku = null; }
+      }
+    }
+    if (!t.valit.length) m.delete(10);
+  }
+}
+
 /** TMS EPSG:4326 -laatat (z0 = 2 × 1), rajattuna available-väleihin. */
 function maastoLaatat(renkaat, b, z, saatavilla) {
   const leveys = 180 / 2 ** z;
@@ -280,7 +326,7 @@ export function maidenMaanosat({ countryShapes, cities, cityCountry, cityManner 
 }
 
 function summaa(lista) {
-  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0 };
+  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0, ...(Z10 ? { kaupunkiRasteri: 0 } : {}) };
   for (const x of lista) for (const k of Object.keys(t)) t[k] += x[k] ?? 0;
   return t;
 }
@@ -335,7 +381,10 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
   }
 
   const kaupunkiKokoelma = tiedostot.get('kokoelmat/kaupungit.json');
-  const kaupunkiValit = kaupunkitasonValit(kaupunkiKokoelma ? JSON.parse(kaupunkiKokoelma).alkiot : [], R.kaupunkitaso);
+  const kaupunkiLista = kaupunkiKokoelma ? JSON.parse(kaupunkiKokoelma).alkiot : [];
+  const kaupunkiValit = kaupunkitasonValit(kaupunkiLista, R.kaupunkitaso);
+  const syvatValit = new Map();
+  if (Z10) syvanTasonValit(kaupunkiLista, syvatValit, R.kaupunkiRasteri, Z10);
   const maat = {};
   for (const [iso, maa] of Object.entries(countryShapes)) {
     if (!maa.renkaat?.length) continue;
@@ -352,6 +401,12 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       rasteri[z] = t.valit; laattoja.rasteri += t.laatat.size;
       rTavut += t.laatat.size * (koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[R.maaMax] ?? 0);
     }
+    // Skeema 1.51: Z10 omaan avaimeen (ei rasteri-kenttään eikä yht-summaan, ks. OFFLINE_LAHTEET.rasteri).
+    const kaupunkiRasteri = {}; let kTavut = 0;
+    for (const [z, t] of syvatValit.get(iso) ?? []) {
+      kaupunkiRasteri[z] = t.valit; laattoja.kaupunkiRasteri = (laattoja.kaupunkiRasteri ?? 0) + t.laatat.size;
+      kTavut += t.laatat.size * (koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[z - 1] ?? 0);
+    }
     for (let z = M.globaaliMax + 1; z < saatavilla.length; z++) {
       const t = maastoLaatat(renkaat, b, z, saatavilla[z]);
       if (!t) continue;
@@ -362,10 +417,10 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     const mallit = (maamerkit.get(iso) ?? []).sort((a, b) => (a.url < b.url ? -1 : 1));
     const medTavut = mediaTavut(media) + mallit.reduce((s, m) => s + m.tavuja, 0);
     maat[iso] = {
-      iso2: ISO2[iso] ?? null, nimi: maa.nimi, rasteri, maasto, laattoja,
+      iso2: ISO2[iso] ?? null, nimi: maa.nimi, rasteri, ...(Object.keys(kaupunkiRasteri).length ? { kaupunkiRasteri } : {}), maasto, laattoja,
       media: [...media.map(url), ...mallit.map((m) => m.url)],
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
-        yht: Math.round(rTavut + mTavut + medTavut) },
+        yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}) },
     };
   }
   const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
@@ -439,6 +494,10 @@ async function paivitaKoot(vienti, n = 24) {
       laatat.push(R.url.replace('{z}', z).replace('{x}', x).replace('{y}', y));
     }
     rasteri[z] = await keskiarvo(laatat);
+  }
+  // Skeema 1.51: kaupunkiRasteri-tasot otoksena Karttasepän poltetusta joukosta (27.9. kaikki 13 856: 13 075 t).
+  for (const z of R.kaupunkiRasteri?.tasot ?? []) {
+    rasteri[z] = await keskiarvo(otos([...Z10].sort(), n * 4).map((xy) => R.url.replace('{z}', z).replace('{x}/{y}', xy)));
   }
   const layer = await (await fetch(M.layer)).json();
   const maasto = {};
