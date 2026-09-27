@@ -318,10 +318,41 @@ export const MAAN_MAANOSA = Object.fromEntries(Object.entries(MAANOSAN_MAAT)
  * @param {?string} cityId laudan kaupungin id
  * @param {?string} maa kaupungin ISO-3-maakoodi pakan cityCountry-taulusta
  */
+/*
+ * KAUPUNGIT ILMAN MAATA (26.9.2026, Siirtosepän vienti huomasi): pakan
+ * cityCountry-taulu ei kata kaikkia kaupunkeja — Maailma-laudalla
+ * (js/packs/maailma.js, PACKS[0]) sitä ei ole lainkaan, ja Jerusalem ja
+ * St. Helena puuttuvat muiltakin laudoilta. Niissä ei soinut
+ * saapumistunnusta eikä maanosaraitaa. Maanosa annetaan niille
+ * kaupungin id:llä; testi (tests/musiikkivalitsin.test.mjs) vartioi,
+ * että jokaisella pakkojen kaupungilla on maanosa.
+ */
+export const KAUPUNGIN_MAANOSA = {
+  jerusalem: 'lahi-ita',
+  sthelena: 'saharan-etelapuoli',
+  lontoo: 'lansi-eurooppa',
+  moskova: 'ita-eurooppa',
+  istanbul: 'valimeri',
+  ateena: 'valimeri',
+  tanger: 'lahi-ita',
+  kairo: 'lahi-ita',
+  mumbai: 'etela-aasia',
+  peking: 'ita-aasia',
+  tokio: 'ita-aasia',
+  singapore: 'ita-aasia',
+  sydney: 'oseania',
+  kapkaupunki: 'saharan-etelapuoli',
+  rio: 'etela-amerikka',
+  newyork: 'pohjois-amerikka',
+  losangeles: 'pohjois-amerikka',
+  sanfrancisco: 'pohjois-amerikka',
+};
+
 export function kaupunginMaanosa(cityId, maa = null) {
   const alue = kaupunginAlue(cityId, maa);
   if (alue) return ALUEEN_MAANOSA[alue] ?? null;
   if (maa && Object.hasOwn(MAAN_MAANOSA, maa)) return MAAN_MAANOSA[maa];
+  if (cityId && Object.hasOwn(KAUPUNGIN_MAANOSA, cityId)) return KAUPUNGIN_MAANOSA[cityId];
   return null;
 }
 
