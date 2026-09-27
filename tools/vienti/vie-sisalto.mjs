@@ -225,8 +225,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.54 offline: mediaKuvat on natiivin 1.0.32+ koko offline-media (myös media-listan kuvat pienennettyinä ja äänet)
  *        yhden 100 Mt:n maakaton alla, lahteet.mediaKuvat.korvaaMedian ja tavuja.offline (natiivin latauskoko);
  *        media-lista vain vanhoille buildeille — Fable 27.9.2026, tavoite Eurooppa ≤ ~1,2 Gt.
+ *   1.55 POISTO: kokoelma maakuntasalaisuudet ja maakuntarajat.salaisuus (omistaja 27.9.2026: ei salaisuuksia
+ *        maakuntiin; Kreikan 14 salaisuutta tavallisina hahmotelmanostoina, web #3475). Vanhat buildit: puuttuva
+ *        kokoelma = tyhjä, puuttuva kenttä = false (Natiiviseppä kuittasi).
  */
-export const SKEEMAVERSIO_TARKKA = '1.54';
+export const SKEEMAVERSIO_TARKKA = '1.55';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

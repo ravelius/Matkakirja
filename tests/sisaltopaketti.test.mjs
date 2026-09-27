@@ -1444,8 +1444,9 @@ test('skeema 1.45: Elävä kartta — kokoluokka, maakunta ja salaisuus', async 
   const maakunta = (t) => valot.find((v) => v.maa === 'GRC' && v.tunnus === t)?.maakunta;
   assert.equal(maakunta('hahmotelma-sounion'), 'GRC:Attiki');
   assert.equal(maakunta('egeanmeri'), null);
+  // Skeema 1.55: maakuntarajat.salaisuus poistettu (omistaja 27.9.2026: ei salaisuuksia maakuntiin).
   const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
-  assert.ok(rajat.every((a) => 'salaisuus' in a));
+  assert.ok(rajat.every((a) => !('salaisuus' in a)));
 });
 
 test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () => {
@@ -1460,20 +1461,12 @@ test('skeema 1.46: reitit1873 (laivat ja rautatiet, lisenssi jokaisella)', () =>
   assert.ok(k.alkiot.some((r) => r.laji === 'laiva') && k.alkiot.some((r) => r.laji === 'rautatie'));
 });
 
-test('skeema 1.47: maakuntasalaisuudet omana kokoelmana, ei karttavaloissa', async () => {
-  const { MAAKUNTASALAISUUDET } = await import('../js/packs/maakuntasalaisuudet.js');
-  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
-  assert.equal(k.length, Object.keys(MAAKUNTASALAISUUDET).length);
-  for (const s of k) {
-    assert.ok(s.id.startsWith('salaisuus:') && s.kokoluokka === 'paakohde' && s.maakunta && s.teksti && s.lyhyt, s.id);
-    assert.ok(Number.isFinite(s.lat) && Number.isFinite(s.lon) && s.aihe, s.id);
-    assert.equal(MAAKUNTASALAISUUDET[s.maakunta], `nosto:${s.tunnus}`);
-    assert.ok(s.nimio === null || s.nimio.length <= 18, s.id);
-  }
+test('skeema 1.55: ei maakuntasalaisuuksia (omistaja 27.9.2026), Kreikan salaisuudet tavallisina nostoina', () => {
+  const manifest = JSON.parse(tiedostot.get('manifest.json'));
+  assert.ok(!manifest.kokoelmat.some((k) => k.nimi === 'maakuntasalaisuudet'));
+  assert.ok(!tiedostot.has('kokoelmat/maakuntasalaisuudet.json'));
   const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
-  assert.ok(!valot.some((v) => v.id.startsWith('salaisuus:') || 'salaisuus' in v), 'ei karttavaloissa (build 16/17 piirtäisi)');
-  const rajat = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
-  assert.equal(rajat.find((a) => a.id === 'GRC:Attiki').salaisuus, 'salaisuus:salaisuus-eleusiin-mysteerit');
+  assert.ok(!valot.some((v) => v.id.startsWith('salaisuus:') || 'salaisuus' in v));
 });
 
 test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () => {
@@ -1491,7 +1484,7 @@ test('skeema 1.48: kaupunkilehdet kaupungeittain (Pelikoodari, build 19)', () =>
 });
 
 
-test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luonnehdinnoissa', async () => {
+test('skeema 1.49: pikkukuva ämpäriosoitteena maakuntien luonnehdinnoissa', async () => {
   const { pikkukuvaOsoite } = await import('../tools/vienti/elava-kartta.mjs');
   const juuri = 'https://media.matkakirja.app/';
   assert.equal(pikkukuvaOsoite('assets/kartat/maakunnat/grc-attiki.webp'), `${juuri}kohtaamiset/maakunnat/grc-attiki.webp`);
@@ -1500,11 +1493,6 @@ test('skeema 1.49: pikkukuva ämpäriosoitteena salaisuuksilla ja maakuntien luo
   assert.equal(pikkukuvaOsoite(`${juuri}x.jpg`), `${juuri}x.jpg`);
   assert.equal(pikkukuvaOsoite(null), null);
   assert.throws(() => pikkukuvaOsoite('ei kuva'), /https-osoitetta/);
-  const k = JSON.parse(tiedostot.get('kokoelmat/maakuntasalaisuudet.json')).alkiot;
-  for (const s of k) {
-    assert.ok('pikkukuva' in s && (s.pikkukuva === null || s.pikkukuva.startsWith('https://')), s.id);
-    assert.ok(s.pikkukuva === null || s.pikkukuvaLahde, `${s.id}: kuvalla pitää olla tekijä ja lisenssi (pikkukuvaLahde)`);
-  }
   const m = JSON.parse(tiedostot.get('moduulit/js/packs/maakunnat-luonnehdinnat.json')).exportit;
   const kuvat = JSON.stringify(m).match(/"pikkukuva":("[^"]*"|null)/g) ?? [];
   for (const p of kuvat) assert.match(p, /^"pikkukuva":(null|"https:\/\/[^"]+")$/);

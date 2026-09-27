@@ -124,7 +124,7 @@ export const MEDIAKUVAT = {
   // 1.54: 1024 px / JPEG 75 / kynnys 100 kt (Euroopan tavoite ≤ ~1,2 Gt; 1280/80 oli ~2,5 Gt).
   pieni: { juuri: 'pieni/', pitkaSivu: 1024, laatu: 75, kynnysTavut: 100_000 },
   // Järjestys katon sisällä (Fable 27.9.): karttanostot → miniatyyrit → Livian ja saapumisen puheet → luennat → muut.
-  jarjestys: { karttavalot: 1, takynostot: 1, fokusvirrat: 1, maakuntasalaisuudet: 1, miniatyyrit: 2, livianpuhe: 3,
+  jarjestys: { karttavalot: 1, takynostot: 1, fokusvirrat: 1, miniatyyrit: 2, livianpuhe: 3,
     livianrepliikit: 3, saapumispuheet: 3, saapuminen: 3, luennat: 4 },
 };
 const MEDIAKUVAT_TIEDOSTO = join(TAMA, 'mediakuvat.json');
