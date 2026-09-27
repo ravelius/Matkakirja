@@ -190,6 +190,32 @@ namespace Matkakirja.Natiivi
         public static bool ElamaTekstilla = false;
         /// <summary>UiNakymat: karttaselitenapin ja auki olevan matkapäiväkirjan rajat (paneelin pisteinä).</summary>
         public Func<(Rect Selite, Rect Paivakirja)> ElamaAnkkurit;
+        readonly Label elamaSelite;
+        IVisualElementScheduledItem elamaAjastin, elamaSeliteAjastin;
+        const string ElamaSeliteTeksti = "Rahat ovat loppu. Jokainen neliö on 6 tuntia matkaa — kun kaikki sammuvat, matka päättyy. "
+            + "Ansaitse tai löydä rahaa jatkaaksesi.";
+
+        void VaihdaElamaSelite()
+        {
+            bool auki = elamaSelite.style.display != DisplayStyle.Flex;
+            elamaSelite.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            elamaSeliteAjastin?.Pause();
+            if (!auki) return;
+            elamaSelite.BringToFront();
+            AsetteleElama();
+            elamaSeliteAjastin = elamaSelite.schedule.Execute(() => elamaSelite.style.display = DisplayStyle.None).StartingIn(7000);
+        }
+
+        /// <summary>Web: miniselite sulkeutuu napautuksella mihin tahansa (palkin oma napautus hoitaa itsensä).</summary>
+        void TarkistaElamaSelite()
+        {
+            if (elamaSelite.style.display != DisplayStyle.Flex || elama.panel == null) return;
+            var osoitin = Pointer.current;
+            if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;
+            var ruutu = osoitin.position.ReadValue();
+            var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
+            if (!elama.worldBound.Contains(pp)) { elamaSelite.style.display = DisplayStyle.None; elamaSeliteAjastin?.Pause(); }
+        }
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
@@ -236,7 +262,16 @@ namespace Matkakirja.Natiivi
 
             // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
             // Web #3421 rahattomuuspalkki: lappu kartan keskellä selitenapin alla, 8 lohkoa 10 × 6 ja teksti.
-            elama = Rakenne.El("mk-elamapalkki", juuri, PickingMode.Ignore);
+            elama = Rakenne.El("mk-elamapalkki", juuri, PickingMode.Position);
+            // Napautus avaa miniselitteen (omistaja 16.1x, web #3421 34524825); uusi napautus sulkee.
+            elama.AddManipulator(new Clickable(() => VaihdaElamaSelite()));
+            elamaSelite = Rakenne.Teksti(ElamaSeliteTeksti, "mk-elamapalkki__selite", juuri);
+            elamaSelite.pickingMode = PickingMode.Ignore;
+            Kirjasimet.Aseta(elamaSelite, Kirjasin.Luku);
+            elamaSelite.style.display = DisplayStyle.None;
+            // Kortin/kyltin koko muuttuu ilman omaa tapahtumaa: paikka tarkistetaan 4 kertaa sekunnissa näkyvänä.
+            elamaAjastin = elama.schedule.Execute(AsetteleElama).Every(250);
+            elamaAjastin.Pause();
             elamaLohkot = Rakenne.El("mk-elamapalkki__lohkot", elama, PickingMode.Ignore);
             for (int i = 0; i < ElamaLohkoja; i++) Rakenne.El("mk-elamapalkki__lohko", elamaLohkot, PickingMode.Ignore);
             elamaTeksti = Rakenne.Teksti("", "mk-elamapalkki__teksti", elama);
@@ -262,6 +297,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
             kerros.TurvaMuuttui += Asettele;
             kerros.JokaRuutu += TarkistaOhiNapautus;
+            kerros.JokaRuutu += TarkistaElamaSelite;
             kerros.JokaRuutu += TarkistaVeto;
             Asettele();
         }
@@ -666,7 +702,8 @@ namespace Matkakirja.Natiivi
         {
             bool naytetaan = rahatonVuoroja != null && !matkaPaattyi && nakyy;
             elama.style.display = naytetaan ? DisplayStyle.Flex : DisplayStyle.None;
-            if (!naytetaan) return;
+            if (!naytetaan) { elamaAjastin.Pause(); elamaSelite.style.display = DisplayStyle.None; return; }
+            elamaAjastin.Resume();
             int n = Mathf.Clamp(rahatonVuoroja.Value, 0, ElamaLohkoja);
             for (int i = 0; i < elamaLohkot.childCount; i++)
                 elamaLohkot[i].EnableInClassList("mk-elamapalkki__lohko--kulunut", i >= n);
@@ -679,19 +716,39 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Web #3421 44deb9e2: vaakasuunnassa kartan keskellä, top = karttaselitenapin alareuna + 6 kaikilla laitteilla.
+        /// Web #3421 34524825 (omistaja 16.1x): laatikko (näkymätön pehmuste 6/8) heti kartan yläreunassa keskellä; jos se
+        /// osuisi matkakirjan kylttiin/korttiin tai karttaselitenappiin, top = osuvien alareuna (toistetaan, kunnes ei osumia).
+        /// Miniselite palkin alla keskellä, leveys min(260, leveys − 32).
         /// </summary>
         void AsetteleElama()
         {
             if (elama.style.display == DisplayStyle.None || elama.panel == null) return;
-            var (selite, _) = ElamaAnkkurit?.Invoke() ?? (Rect.zero, Rect.zero);
-            float w = elama.resolvedStyle.width, leveys = elama.panel.visualTree.layout.width;
-            if (float.IsNaN(w) || w <= 0 || float.IsNaN(leveys)) return;
-            float top = selite.height > 0 ? selite.yMax + 6f : Varaus + 6f;
+            var (selite, kirja) = ElamaAnkkurit?.Invoke() ?? (Rect.zero, Rect.zero);
+            float w = elama.resolvedStyle.width, h = elama.resolvedStyle.height, leveys = elama.panel.visualTree.layout.width;
+            if (float.IsNaN(w) || w <= 0 || float.IsNaN(h) || float.IsNaN(leveys)) return;
+            // Kartan yläreuna: näkyvän palkin alareuna, piilotettuna turva-alueen yläreuna (Varaus).
+            float top = palkki.resolvedStyle.display != DisplayStyle.None && palkki.worldBound.height > 0 && !palkki.ClassListContains("mk-ylapalkki--piilossa")
+                ? palkki.worldBound.yMax : kerros.Reunat(UiKerros.Tilarivi).y;
             float x = (leveys - w) / 2f;
+            for (int kierros = 0; kierros < 4; kierros++)
+            {
+                var laatikko = new Rect(x, top, w, h);
+                float ala = top;
+                foreach (var este in new[] { selite, kirja })
+                    if (este.width > 0 && este.height > 0 && este.Overlaps(laatikko)) ala = Mathf.Max(ala, este.yMax);
+                if (ala <= top) break;
+                top = ala;
+            }
             var juuri = elama.parent.worldBound;
-            elama.style.top = top - juuri.yMin;
-            elama.style.left = x - juuri.xMin;
+            if (!Mathf.Approximately(elama.resolvedStyle.top, top - juuri.yMin)) elama.style.top = top - juuri.yMin;
+            if (!Mathf.Approximately(elama.resolvedStyle.left, x - juuri.xMin)) elama.style.left = x - juuri.xMin;
+            if (elamaSelite.style.display == DisplayStyle.Flex)
+            {
+                float sw = Mathf.Min(260f, leveys - 32f);
+                elamaSelite.style.width = sw;
+                elamaSelite.style.left = (leveys - sw) / 2f - juuri.xMin;
+                elamaSelite.style.top = top + h - juuri.yMin;
+            }
         }
 
         void NaytaTalous(bool pelirivi)

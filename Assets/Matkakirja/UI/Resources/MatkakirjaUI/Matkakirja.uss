@@ -1611,6 +1611,21 @@
 .mk-elamapalkki {
     position: absolute;
     align-items: center;
+    padding: 6px 8px 6px 8px; /* näkymätön pehmuste: laatikko ≈ 109 × 23 napautukselle */
+}
+
+/* Miniselite (web #3421 34524825): lappu palkin alla, Luku 13/1.4 #3a2a1a keskitetty. */
+.mk-elamapalkki__selite {
+    position: absolute;
+    padding: 8px 11px 8px 11px;
+    background-color: rgba(244, 234, 212, 0.96);
+    border-width: 1px;
+    border-color: rgba(85, 64, 42, 0.45);
+    border-radius: 8px;
+    font-size: 13px;
+    color: #3a2a1a;
+    white-space: normal;
+    -unity-text-align: middle-center;
 }
 
 .mk-elamapalkki__lohkot {
