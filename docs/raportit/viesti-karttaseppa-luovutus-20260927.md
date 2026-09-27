@@ -68,5 +68,5 @@ Commitit: `-c user.name=ravelius -c user.email=sami@valokuvaamoklik.fi`.
   `pyramidi-poltto/kuvat/grc-z8-vs-z10-20260926-merkitty.png`.
 
 ## NAS
-- `pyramidi-poltto/nas-ajo-20260927.sh` käynnistettiin klo 04.15 (loki `nas-ajo-20260927.out`). Se siirtää ajokansiot
-  ajo-20260926, ajo-20260924-e28-syva, ajo-20260926s, ajo-20260927m ja ajo-20260927-luettelo. Tarkista `ok`-rivit.
+- **VALMIS 06.47:** `pyramidi-poltto/nas-ajo-20260927.sh` siirsi kaikki viisi ajokansiota kohteeseen
+  `…/Matkakirja-arkisto/poltot/pyramidi/` (loki `nas-ajo-20260927.out`, kaikki ok). Levyä on vapaana 149 Gt.

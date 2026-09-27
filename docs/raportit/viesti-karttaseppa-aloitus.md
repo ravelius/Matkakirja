@@ -6,7 +6,7 @@ Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20260927.md`**
    (haara `karttaseppa-tyo-20260922`). Z10-ketju on VALMIS (z10 298 335 ja z9 78 211 versiossa 2026-09-26s-pohja), ja
    luettelo on koekansiossa. Avoinna ovat osan 2 koodi 1 ilman kaatunutta shardia, osoitinvaihto (Fablen lupa ja
-   PELIN_SYVIN_TASO) ja NAS-siirron tarkistus. Polttovahti v4 ohjaa ytimiä free %:n mukaan. Taustaksi
+   PELIN_SYVIN_TASO). NAS-siirto on valmis. Polttovahti v4 ohjaa ytimiä free %:n mukaan. Taustaksi
    `viesti-karttaseppa-luovutus-20260926-b.md`.
 3. Auto-memory `karttaseppa-tila-20260927-aamu`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
    Sääntö **JUMI → FABLE**: jumissa yksi viesti Fablelle, ei korttia omistajalle.
