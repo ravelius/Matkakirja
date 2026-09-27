@@ -42,7 +42,7 @@ Natiivi-UI local_44392b3c-86ee-4873-9d76-82f9aaa6b832. S = /private/tmp/claude-5
 - Lähitaso (Lahi, katto 3 000): Colosseum 2 946, MSM 2 839, Matterhorn 1 451, Brugge 2 135, Hohensalzburg 2 184, Stonehenge 1 653,
   Segovia 2 320, Brandenburg 2 476, Kinderdijk 1 004; symbolit Kaari 1 864, Kellotorni 1 258, Malja 2 560, Ratas 2 042, Ankkuri 1 758,
   Vuori 1 488, Tulivuori 2 350, Aallot 2 471, Kiekko 2 160, Salama 1 052, Tahti 264, Tassu 1 843, Tiimalasi 2 622, Vaaka 2 476.
-  **Tarkista Fablelta:** Raamattu kirjasi "lähitaso 2–3 × kolmiot", mutta osa symboleista on 4–4,7 × (kaikki alle katon 3 000).
+  Fable 11.4x: ei karsita — sitova raja on 3 000 kolmiota per malli ("2–3 ×" suuntaa-antava; Raamattuun "2–5 ×, katto 3 000").
 - Harnessit (proto-3d/tyokalut/): mallinseppa-esikatselu-{d,e,f,g,l1,l2,l3}, kategoria-esikatselu-{h,k1,k2,k3}, meri-esikatselu-{a,b,c};
   kehotteet $S/kehotteet/*.txt.
 
