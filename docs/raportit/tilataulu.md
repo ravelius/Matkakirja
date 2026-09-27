@@ -37,7 +37,7 @@ Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkai
 - Postivahti EI koskaan poista tiedostoja itse — pysyvä poisto ehdottomasti kiellettyä.
 - Chrome-GPU-prosessien (playwright/headless-testiajurit, type=gpu-process) ilmoitus menee Julkaisijalle, ei Fablelle. Tällä kierroksella 2, ei ylitystä.
 - Työtilapolut, joissa "Codex" tai "ChatGPT", eivät ole poikkeama.
-- **Viikkokiintiö (kaikki mallit, omistaja 09:4x sitova):** seurataan joka kierroksella. ≥93 % → ilmoita Fablelle heti (TEHTY 11:23). ≥97 % → "VIIKKO 97 — tilinvaihto" (Fable pysäyttää sessiot). Nyt **93 %**.
+- **Viikkokiintiö (kaikki mallit, omistaja 09:4x sitova):** seurataan joka kierroksella. ≥93 % → ilmoita Fablelle heti (TEHTY 11:23, kuitattu). **UUSI 11:3x (Fable):** tilinvaihto käynnissä — roolit tekevät luovutuksia. Ilmoita nyt myös ≥95 % erikseen. ≥97 % → "VIIKKO 97 — tilinvaihto" (Fable pysäyttää sessiot). Nyt **93 %**. Uudet session id:t tulevat uudelta tililtä tilinvaihdon jälkeen — vanhat id:t tässä taulussa jäävät roolien luovutuksiin, päivitä kun Fable ilmoittaa uudet.
 
 ## 3) Avoimet PR:t
 
