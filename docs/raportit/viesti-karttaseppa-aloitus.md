@@ -3,12 +3,12 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20260927.md`**
-   (haara `karttaseppa-tyo-20260922`). Z10-ketju on VALMIS (z10 298 335 ja z9 78 211 versiossa 2026-09-26s-pohja), ja
-   luettelo on koekansiossa. Avoinna ovat osan 2 koodi 1 ilman kaatunutta shardia, osoitinvaihto (Fablen lupa ja
-   PELIN_SYVIN_TASO). NAS-siirto on valmis. Polttovahti v4 ohjaa ytimiä free %:n mukaan. Taustaksi
-   `viesti-karttaseppa-luovutus-20260926-b.md`.
-3. Auto-memory `karttaseppa-tila-20260927-aamu`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20260927-b.md`**
+   (haara `karttaseppa-tyo-20260922`). Z10 on tuotannossa (osoitin 2026-09-26s-pohja 09.47). TÄNÄ YÖNÄ klo 22
+   alkaa natiivin pallon Z10 kaupungeille ajastettuna levylle (pallo-z10-20260927/aja.sh, ilman sessiota).
+   **Vienti tuotannon pallosarjaan odottaa OMISTAJAN hyväksyntää tähän sessioon**, ja komento on luovutuksessa.
+   Ei kiertoteitä eikä Julkaisijan ajoa. Taustaksi `viesti-karttaseppa-luovutus-20260927.md`.
+3. Auto-memory `karttaseppa-tila-20260927-paiva`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
    Sääntö **JUMI → FABLE**: jumissa yksi viesti Fablelle, ei korttia omistajalle.
    Kill-komennot ja vahdin löysennykset vaativat omistajan hyväksynnän tähän sessioon (luokitin).
 
