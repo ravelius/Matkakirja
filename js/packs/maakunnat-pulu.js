@@ -1120,4 +1120,100 @@ export const MAAKUNTIEN_PULU = {
       { q: "Miksi Kaarle XII:n kuolemalla oli laajempi historiallinen merkitys?", a: "Tapahtuma vauhditti Ruotsin suurvalta-aseman päättymistä ja niin kutsutun vapauden ajan alkua, kun rauha solmittiin muutaman vuoden kuluttua Uudenkaupungin rauhassa." },
     ],
   },
+  DNK: {
+    Nordjylland: [
+      { q: "Mitä Lindholm Højen viikinkikalmistossa löytyy?", a: "Aalborgin liepeillä sijaitseva Lindholm Høje on yli 700 haudan hautausmaa rautakaudelta ja viikinkiajalta, ja monet haudat on merkitty kivillä laivan muotoisiksi. Tuulen kuljettama hiekka peitti paikan vuosisatoja, mikä säilytti sen poikkeuksellisen hyvin." },
+      { q: "Miksi laivanmuotoiset kivilatomukset olivat viikingeille tärkeitä?", a: "Kivistä ladottu laivan hahmo symboloi vainajan matkaa tuonpuoleiseen, ja koko yli sata laivasettausta paikassa tekee siitä yhden Skandinavian suurimmista viikinkiaikaisista kalmistoista." },
+    ],
+    Midtjylland: [
+      { q: "Kuka on Tollundin mies ja mistä hänet löydettiin?", a: "Silkeborgin lähellä suosta löytyi 1950 rautakautinen suomuumio, jonka kasvot ja ilme ovat säilyneet niin hyvin, että hänet on ajoitettu yli 2 300 vuoden ikäiseksi. Hänen kaulassaan oli yhä köysi, joka viittaa väkivaltaiseen kuolemaan." },
+      { q: "Miksi suo säilytti Tollundin miehen niin täydellisesti?", a: "Suon hapettomat, happamat olosuhteet estävät bakteerien toiminnan ja voivat säilyttää ihon ja kasvonpiirteet vuosituhansiksi, vaikka luusto usein liukenee samalla pois." },
+    ],
+    Hovedstaden: [
+      { q: "Miksi Tivoli on niin merkittävä huvipuistojen historiassa?", a: "Kööpenhaminan Tivoli avattiin 1843 ja on yksi maailman vanhimmista yhä toimivista huvipuistoista. Walt Disneyn kerrotaan saaneen siitä inspiraatiota vieraillessaan puistossa ennen Disneylandin suunnittelua." },
+      { q: "Mitä Tivolin puutarhoissa on säilynyt alkuperäisestä asusta?", a: "Puiston satumaiset puutarhat, itämaisvaikutteiset rakennukset ja ilotulitukset ovat osa perustajan Georg Carstensenin alkuperäistä visiota, ja puisto on uudistunut jatkuvasti menettämättä tunnelmaansa." },
+    ],
+    Sjaælland: [
+      { q: "Ketkä on haudattu Roskilden tuomiokirkkoon?", a: "Roskilden tuomiokirkko on toiminut Tanskan kuninkaiden hautapaikkana keskiajalta lähtien, ja siellä lepää yli 40 kuningasta ja kuningatarta. Kirkko on Unescon maailmanperintökohde." },
+      { q: "Miksi Roskilden tuomiokirkko oli aikanaan arkkitehtoninen uutuus Pohjolassa?", a: "1100–1200-luvulla rakennettu tiilikirkko oli ensimmäisiä goottilaisia tiilirakennuksia Skandinaviassa, ja se toimi mallina monille myöhemmille Pohjois-Euroopan tiilikirkoille." },
+    ],
+    Syddanmark: [
+      { q: "Missä Hans Christian Andersen syntyi ja vietti lapsuutensa?", a: "Satukirjailija Hans Christian Andersen syntyi Odensessa 1805 köyhään suutariperheeseen, ja hänen lapsuudenkotinsa on nykyään osa kaupungin Andersen-museokokonaisuutta." },
+      { q: "Miksi Odensen H. C. Andersenin museo uudistettiin kokonaan 2021?", a: "Uusi maanalainen museorakennus avattiin 2021 kertomaan Andersenin elämästä ja saduista immersiivisin näyttelyin, ja se yhdistyy vanhaan kaupunginosaan puutarhojen ja käytävien verkolla." },
+    ],
+  },
+  FIN: {
+    "South Karelia": [
+      { q: "Miksi Saimaan kanava oli merkittävä hanke jo 1800-luvulla?", a: "Vuonna 1856 avattu Saimaan kanava yhdisti Saimaan vesistön Suomenlahteen Viipurin kautta, ja se helpotti valtavasti Itä-Suomen puu- ja muun tavaraliikennettä. Kanava on toiminnassa yhä nykyään, osin Venäjän alueen kautta." },
+      { q: "Mikä tekee Lappeenrannan linnoituksesta erityisen?", a: "1700-luvulla rakennettu Linnoitus-kaupunginosa on yksi harvoista säilyneistä venäläisajan linnoitusalueista Suomessa, ja sen vanhat muurit ja kasarmit ovat nykyään museoiden ja käsityöläisten käytössä." },
+    ],
+    "Southern Ostrobothnia": [
+      { q: "Missä arkkitehti Alvar Aalto syntyi?", a: "Alvar Aalto syntyi 1898 Kuortaneella Etelä-Pohjanmaalla, ennen kuin perhe muutti Jyväskylään. Hänestä tuli myöhemmin yksi maailman vaikutusvaltaisimmista arkkitehdeista ja muotoilijoista." },
+      { q: "Mistä Etelä-Pohjanmaan 'puukkojunkkarit' saivat maineensa?", a: "1800-luvun puolivälissä alueella riehui puukkoja käyttävien häjyjen väkivaltainen alakulttuuri, joka teki Etelä-Pohjanmaasta pelätyn seudun – ilmiö hälveni vasta vuosisadan loppua kohti." },
+    ],
+    "Southern Savonia": [
+      { q: "Milloin Olavinlinna Savonlinnassa rakennettiin ja miksi?", a: "Olavinlinna perustettiin 1475 puolustamaan Ruotsin itärajaa Novgorodia vastaan, ja se on Pohjoismaiden pohjoisin ja itäisin keskiaikainen kivilinna. Linnassa järjestetään nykyään kesäisin oopperajuhlat." },
+      { q: "Kuinka pitkään Savonlinnan oopperajuhlia on järjestetty?", a: "Oopperajuhlat on järjestetty linnan pihalla vuodesta 1912 lähtien (nykyisessä muodossaan vuodesta 1967), ja ne ovat yksi Pohjoismaiden arvostetuimmista oopperatapahtumista." },
+    ],
+    Kainuu: [
+      { q: "Mitä Paltaniemen kirkossa on erikoista?", a: "Kajaanin liepeillä sijaitsevan 1700-luvun puukirkon sisäkatto ja seinät on maalattu täyteen kansanomaisia raamatunaiheisia maalauksia, jotka maalasi taidemaalari Emanuel Granberg 1778–1781." },
+      { q: "Miksi Vuokatti on tunnettu urheilupaikkakuntana?", a: "Vuokatin tunturi- ja hiihtokeskus on Suomen tärkeimpiä huippu-urheilun harjoituspaikkoja, ja sen maanalainen hiihtotunneli mahdollistaa hiihtoharjoittelun ympäri vuoden lämpötilasta riippumatta." },
+    ],
+    "Tavastia Proper": [
+      { q: "Kuka syntyi Hämeenlinnassa vuonna 1865?", a: "Säveltäjä Jean Sibelius syntyi Hämeenlinnassa 1865, ja hänen lapsuudenkotinsa on nykyään museona. Hämeenlinnaa markkinoidaan yhä Sibeliuksen kaupunkina." },
+      { q: "Mikä on Hämeen linna ja milloin se rakennettiin?", a: "Keskiaikainen tiilinen Hämeen linna Vanajaveden rannalla rakennettiin 1200–1300-luvuilla, ja se toimi myöhemmin myös vankilana 1800- ja 1900-luvuilla ennen museoksi muuttumistaan." },
+    ],
+    "Central Ostrobothnia": [
+      { q: "Mikä tekee Kaustisen kansanmusiikkijuhlista niin merkittävät?", a: "Vuodesta 1968 järjestetty Kaustisen kansanmusiikkijuhla on yksi maailman suurimmista ja arvostetuimmista kansanmusiikkifestivaaleista, ja se kokoaa joka heinäkuu pelimanniyhtyeitä ympäri maailmaa." },
+      { q: "Miksi Kaustinen tunnetaan pelimannimusiikin keskuksena?", a: "Seudulla on ollut poikkeuksellisen elinvoimainen viulunsoitto- ja pelimanniperinne sukupolvien ajan, ja monet Suomen tunnetuimmista kansanmuusikoista ovat kotoisin juuri Kaustiselta." },
+    ],
+    "Central Finland": [
+      { q: "Miksi Jyväskylää kutsutaan Alvar Aallon kaupungiksi?", a: "Alvar Aalto vietti lapsuutensa ja nuoruutensa Jyväskylässä ja suunnitteli kaupunkiin myöhemmin lukuisia rakennuksia, kuten yliopiston kampuksen. Kaupungissa on tämän ansiosta poikkeuksellisen paljon hänen arkkitehtuuriaan." },
+      { q: "Mikä on Päijänne ja miksi se on tärkeä Keski-Suomelle?", a: "Päijänne on Suomen toiseksi suurin järvi, ja se on ollut vuosisatoja tärkeä uitto- ja liikennereitti Keski-Suomen metsäteollisuudelle. Se toimii nykyään myös pääkaupunkiseudun raakavesilähteenä tunnelin kautta." },
+    ],
+    Kymenlaakso: [
+      { q: "Mikä tekee Verlan tehdasalueesta maailmanperintökohteen?", a: "Verlan puuhiomo ja pahvitehdas Jaalassa toimi 1880-luvulta 1960-luvulle, ja koko tehdasalue rakennuksineen ja työläisasuntoineen on säilynyt niin hyvin, että Unesco nimesi sen maailmanperinnöksi 1996." },
+      { q: "Miksi Kotka rakennettiin alun perin linnoituskaupungiksi?", a: "Venäjä rakensi Kotkan seudulle linnoituksia 1700-luvun lopulla vahvistaakseen uutta rajaansa Ruotsia vastaan Haminan rauhan 1809 jälkeen, ja kaupunki kasvoi myöhemmin sahateollisuuden ympärille." },
+    ],
+    Lapland: [
+      { q: "Miksi Rovaniemi rakennettiin sotien jälkeen kokonaan uudelleen?", a: "Saksalaiset joukot polttivat Rovaniemen käytännössä maan tasalle vetäytyessään 1944, ja arkkitehti Alvar Aalto suunnitteli kaupungille uuden asemakaavan, jonka pääkatuverkosto muistuttaa ylhäältä poronpäätä." },
+      { q: "Mistä Joulupukin virallinen kotikylä löytyy?", a: "Rovaniemellä napapiirin kohdalla sijaitseva Joulupukin Pajakylä on rakennettu 1985 alkaen, ja se houkuttelee nykyään satojatuhansia matkailijoita vuodessa ympäri maailmaa." },
+    ],
+    Pirkanmaa: [
+      { q: "Miksi Tamperetta kutsuttiin aikoinaan 'Suomen Manchesteriksi'?", a: "Tampereen koskien voimalla toimi 1800-luvulta lähtien laajoja tekstiili- ja metalliteollisuuslaitoksia, kuten Finlaysonin pumpulitehdas, ja teollistuminen muistutti englantilaista teollisuuskaupunkia." },
+      { q: "Mikä on Näsinneula ja mistä sen näkee?", a: "168 metriä korkea Näsinneulan näkötorni valmistui 1971 Särkänniemen huvipuiston yhteyteen, ja sen huipulta näkee selkeällä säällä kymmenien kilometrien päähän." },
+    ],
+    Ostrobothnia: [
+      { q: "Miksi Vaasa on Suomen ruotsinkielisin suurempi kaupunki?", a: "Pohjanmaan rannikkoseudulla on ollut ruotsinkielistä asutusta keskiajalta lähtien, ja Vaasan seudulla ruotsia puhuu yhä huomattava osa väestöstä – kaksikielisyys näkyy katukuvassa ja kouluissa." },
+      { q: "Mikä teki Vaasan kaupasta merkittävän 1700–1800-luvulla?", a: "Vaasa oli tärkeä laivanvarustuksen ja tervakaupan keskus, ja kaupungin porvarit rikastuivat purjelaivoilla käydystä ulkomaankaupasta ennen kuin höyrylaivat ja rautatiet muuttivat kauppareitit." },
+    ],
+    "North Karelia": [
+      { q: "Miksi Ilomantsi on erityinen kunta Suomen kartalla?", a: "Ilomantsi on Suomen ja koko Euroopan unionin itäisin kunta, ja alueella on vahva ortodoksinen ja karjalainen perinne, joka näkyy muun muassa kylien kirkoissa ja ruokakulttuurissa." },
+      { q: "Mikä on runonlaulun perinne Pohjois-Karjalassa?", a: "Alueen kylissä kerättiin 1800-luvulla runsaasti kansanrunoutta, jota Elias Lönnrot hyödynsi Kalevalan koostamisessa, ja runolaulun perinnettä vaalitaan yhä muun muassa Ilomantsin Parppeinvaaran runokylässä." },
+    ],
+    "Northern Ostrobothnia": [
+      { q: "Miksi Oulu oli 1600–1800-luvulla kansainvälisesti tärkeä kaupunki?", a: "Oulu oli maailman johtava tervanvientikaupunki, ja sen satamasta lähti purjelaivojen rakennusaineeksi käytettyä tervaa ympäri Eurooppaa – tervanpoltto teki alueen talonpojista aikanaan varakkaita." },
+      { q: "Miten Oulusta tuli merkittävä teknologiakaupunki?", a: "Nokian matkapuhelinteollisuus ja Oulun yliopiston tietotekniikan tutkimus loivat 1990-luvulla alueelle vahvan teknologiaklusterin, jota kutsutaan yhä 'Oulu-ilmiöksi'." },
+    ],
+    "Northern Savonia": [
+      { q: "Mikä on Puijon näkötorni ja mitä sen huipulta näkee?", a: "Kuopion Puijon vaaralla kohoava näkötorni tarjoaa näkymän kymmenien kilometrien päähän järvien ja metsien mosaiikkiin, ja tornissa on myös pyörivä ravintola." },
+      { q: "Miksi savusauna on erityisen tärkeä osa Pohjois-Savon perinnettä?", a: "Alueella on säilynyt poikkeuksellisen paljon perinteisiä savusaunoja, joissa tuli lämmittää kiukaan kivet ilman hormia, ja Pohjois-Savon savusaunakulttuuri on ehdolla Unescon aineettomaan kulttuuriperintöön." },
+    ],
+    "Päijät-Häme": [
+      { q: "Miksi Lahti on tunnettu muotoilukaupunkina?", a: "Lahdessa on vahva huonekalu- ja teollisen muotoilun perinne 1900-luvun alusta lähtien, ja kaupungissa toimii muun muassa muotoiluun erikoistunut ammattikorkeakoulu ja useita designyrityksiä." },
+      { q: "Mikä on Vesijärvi ja mihin sitä on aikoinaan käytetty?", a: "Lahden kupeessa sijaitseva Vesijärvi toimi 1900-luvulla vilkkaana uittoväylänä ja teollisuuden jätevesien vastaanottajana, mikä rehevöitti sen pahoin – järveä on sittemmin kunnostettu vuosikymmenten ajan." },
+    ],
+    Satakunta: [
+      { q: "Miksi Pori Jazz on niin arvostettu festivaali?", a: "Vuodesta 1966 järjestetty Pori Jazz on yksi Euroopan vanhimmista ja tunnetuimmista jazzfestivaaleista, ja sen lavoilla on esiintynyt lukuisia kansainvälisiä jazz- ja populaarimusiikin suurnimiä." },
+      { q: "Mikä teki Porista aikoinaan merkittävän kauppakaupungin?", a: "Porin satama oli 1800-luvulla vilkas puutavaran vientisatama, ja kaupungin porvaristo vaurastui purjelaivakaupasta – monet aikakauden komeat puutalot ovat säilyneet keskustassa tähän päivään." },
+    ],
+    Uusimaa: [
+      { q: "Miksi Suomenlinna on Unescon maailmanperintökohde?", a: "Ruotsi alkoi rakentaa Helsingin edustan saarille Suomenlinnan merilinnoitusta 1748 puolustamaan itärajaa, ja linnoitus on säilynyt poikkeuksellisen hyvin – nykyään siellä asuu myös vakituisia asukkaita." },
+      { q: "Mikä teki Helsingistä Suomen pääkaupungin vuonna 1812?", a: "Venäjän keisari Aleksanteri I siirsi pääkaupungin Turusta Helsinkiin, koska se sijaitsi lähempänä Pietaria ja oli helpompi puolustaa mereltä – kaupunki rakennettiin sen jälkeen uudelleen empiretyyliin." },
+    ],
+    "Finland Proper": [
+      { q: "Miksi Turkua pidetään Suomen vanhimpana kaupunkina?", a: "Turku syntyi keskiajalla Aurajoen varrelle ja toimi Suomen hallinnollisena ja kirkollisena keskuksena satojen vuosien ajan, kunnes pääkaupunki siirrettiin Helsinkiin 1812." },
+      { q: "Mikä on Turun linna ja milloin se rakennettiin?", a: "Turun linna perustettiin 1280-luvulla Aurajoen suulle, ja se on yksi Pohjoismaiden suurimmista säilyneistä keskiaikaisista linnoista – sen kivimuurien sisällä on eletty seitsemän vuosisadan ajan." },
+    ],
+  },
 };
