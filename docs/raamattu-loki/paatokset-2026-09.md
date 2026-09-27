@@ -7879,3 +7879,7 @@ Omistaja 08.2x lisays: kohdemaan kaikki nostot pitaa nakya heti saapuessa — ei
 ## MAANOSAETENEMINEN = MANNERLENTOJEN PAAAARRE-EHTO (Kaupat.cs MannerLennot) → POIS; LAHTOKAUPUNGIT ENNALLAAN (27.9.2026 klo 08.16)
 
 Natiivi-UI 08.2x kartoitti: maanosittainen avautuminen natiivissa = Peli/Kaupat.cs:403–431 MannerLennot (toiselle mantereelle vasta kun oman mantereen paaaarre loytynyt, mannerlento 300 £), Liikkuminen.cs:39–46, Matka.cs:213 LentoKohteet; lahtokaupungit PeliOhjain.cs:219 vain Aloitus-kaupungit; muiden maiden nostojen piilotus PeliOhjain.Matkareitit.cs:127 PaivitaPeliSuodatin (JAA). Fable paatti: paaaarre-ehto pois webissa ja natiivissa (hinta sailyy), lahtokaupungit ennallaan ellei omistaja toisin sano; Pelikoodari tekee (natiivin Peli/ on sen), Natiivi-UI jatkaa avauskorttia.
+
+## NOSTOT HETI: NOSTOKERROKSEN PORTIT (a) vahinOsuus JA (b) saapumisPortti POIS, (c)–(d) JAAVAT; LOYTAMATTOMAT TAYDELLA ULKOASULLA; SALAISUUS JAA (27.9.2026 klo 08.17)
+
+Natiivi-UI 08.2x kartoitti: vaiheittainen paljastuminen = Kartta/NostoKerros.cs (a) vahinOsuus 0,5, (b) saapumisPortti 1,4 s + Syttyminen 0,7 s + saapumisPiilo, (c) taso 3 lahizoomiportti, (d) katto 120; Peli/KarttaMuste.cs:75 loytamattomat himmeina ilman nimea, salaisuus vasta kun maakunnan nostot loydetty. Fable paatti: (a) → 0, (b) → 0 (haivytys ≤ 0,3 s), (c) ja (d) jaavat luettavuuden/kehysajan takia (web-pariteetti); loytamattomat taydella ulkoasulla ja nimella heti; salaisuus-nosto jaa palkintona; muiden maiden piilotus jaa. Natiiviseppa NostoKerros, Pelikoodari KarttaMuste + web, 1.0.29.
