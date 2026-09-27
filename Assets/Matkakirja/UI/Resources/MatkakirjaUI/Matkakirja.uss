@@ -1606,6 +1606,55 @@
     color: #c0392b;
 }
 
+/* Elämäpalkki = web #3421 44deb9e2 (omistaja 27.9. lopullinen): pelkät 8 punaista neliötä 9 × 9, ei lappua eikä tekstiä.
+   Webin varjo 0 1 2 rgba(0,0,0,.3) jää pois (UITK:ssa ei box-shadowia). */
+.mk-elamapalkki {
+    position: absolute;
+    align-items: center;
+    padding: 6px 8px 6px 8px; /* näkymätön pehmuste: laatikko ≈ 109 × 23 napautukselle */
+}
+
+/* Miniselite (web #3421 34524825): lappu palkin alla, Luku 13/1.4 #3a2a1a keskitetty. */
+.mk-elamapalkki__selite {
+    position: absolute;
+    padding: 8px 11px 8px 11px;
+    background-color: rgba(244, 234, 212, 0.96);
+    border-width: 1px;
+    border-color: rgba(85, 64, 42, 0.45);
+    border-radius: 8px;
+    font-size: 13px;
+    color: #3a2a1a;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.mk-elamapalkki__lohkot {
+    flex-direction: row;
+}
+
+.mk-elamapalkki__lohko {
+    width: 9px;
+    height: 9px;
+    margin: 0 1.5px;
+    background-color: #c0392b;
+    border-width: 1px;
+    border-color: #9e2c21;
+    border-radius: 1.5px;
+}
+
+.mk-elamapalkki__lohko--kulunut {
+    background-color: rgba(192, 57, 43, 0.12);
+    border-color: rgba(158, 44, 33, 0.45);
+}
+
+.mk-elamapalkki__teksti {
+    margin-top: 3px;
+    font-size: 10px;
+    color: #9e2c21;
+    letter-spacing: 5.2px; /* web 0.6px (.06 em) */
+    white-space: nowrap;
+}
+
 .mk-pilleri__rahaton {
     flex-shrink: 0;
     margin-left: 6px;

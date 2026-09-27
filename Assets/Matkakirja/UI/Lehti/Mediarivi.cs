@@ -247,7 +247,7 @@ namespace Matkakirja.Natiivi
         static bool SoitaTallenne(string url)
         {
             soivaUrl = url;
-            return Puhe.Hae().Soita(url, 0, () => { if (soivaUrl == url) Pysayta(); });
+            return Puhe.Hae().Soita(url, 0, () => { if (soivaUrl == url) Pysayta(); }, pyynnosta: true);
         }
 
         static void Tikitys()

@@ -154,7 +154,10 @@ namespace Matkakirja.Natiivi
                 case "koetila":
                     return A(1) == "mannerlento" ? ohjain.KoetilaMannerlento()
                         : A(1) == "pelipaiva" ? ohjain.KoetilaPelipaiva(A(2))
-                        : "käyttö: koetila mannerlento | koetila pelipaiva yyyy-MM-dd";
+                        : A(1) == "raha" ? ohjain.KoetilaRaha(A(2))
+                        : A(1) == "rahaton" ? ohjain.KoetilaRahaton(A(2))
+                        : A(1) == "loppukortti" ? ohjain.KoetilaLoppukortti()
+                        : "käyttö: koetila mannerlento | pelipaiva yyyy-MM-dd | raha n | rahaton [vuoroja] | loppukortti";
                 case "mannerlennot":
                     return ohjain.AvaaMannerlennot();
                 case "peruuta":

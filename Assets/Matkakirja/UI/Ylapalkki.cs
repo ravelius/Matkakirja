@@ -180,8 +180,42 @@ namespace Matkakirja.Natiivi
         readonly Label raha, kello, ilmoitusTeksti, rahaton;
         string rivi = "", kelloTeksti = "";
         // Talouden vaihe 1 (UiNakymat.PaivitaKassa): rahattomuuden vuorokaudet ja matkan loppu.
-        int? rahatonVrk;
+        int? rahatonVrk, rahatonVuoroja;
         bool matkaPaattyi;
+        /// <summary>Elämäpalkin lohkot: Talous.RahattomuusVuoroja (2 vrk × 4 vuoroa à 6 h).</summary>
+        const int ElamaLohkoja = 8;
+        readonly VisualElement elama, elamaLohkot;
+        readonly Label elamaTeksti;
+        /// <summary>Lapun teksti "RAHAT LOPPU · 1 VRK 12 H" (web #3421-luonnos); omistaja 15.2x: pelkät neliöt, joten pois.</summary>
+        public static bool ElamaTekstilla = false;
+        /// <summary>UiNakymat: karttaselitenapin ja auki olevan matkapäiväkirjan rajat (paneelin pisteinä).</summary>
+        public Func<(Rect Selite, Rect Paivakirja)> ElamaAnkkurit;
+        readonly Label elamaSelite;
+        IVisualElementScheduledItem elamaAjastin, elamaSeliteAjastin;
+        const string ElamaSeliteTeksti = "Rahat ovat loppu. Jokainen neliö on 6 tuntia matkaa — kun kaikki sammuvat, matka päättyy. "
+            + "Ansaitse tai löydä rahaa jatkaaksesi.";
+
+        void VaihdaElamaSelite()
+        {
+            bool auki = elamaSelite.style.display != DisplayStyle.Flex;
+            elamaSelite.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            elamaSeliteAjastin?.Pause();
+            if (!auki) return;
+            elamaSelite.BringToFront();
+            AsetteleElama();
+            elamaSeliteAjastin = elamaSelite.schedule.Execute(() => elamaSelite.style.display = DisplayStyle.None).StartingIn(7000);
+        }
+
+        /// <summary>Web: miniselite sulkeutuu napautuksella mihin tahansa (palkin oma napautus hoitaa itsensä).</summary>
+        void TarkistaElamaSelite()
+        {
+            if (elamaSelite.style.display != DisplayStyle.Flex || elama.panel == null) return;
+            var osoitin = Pointer.current;
+            if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;
+            var ruutu = osoitin.position.ReadValue();
+            var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
+            if (!elama.worldBound.Contains(pp)) { elamaSelite.style.display = DisplayStyle.None; elamaSeliteAjastin?.Pause(); }
+        }
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
@@ -226,6 +260,25 @@ namespace Matkakirja.Natiivi
             Valikko = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Valikko);
             Valikko.tooltip = "Valikko";
 
+            // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
+            // Web #3421 rahattomuuspalkki: lappu kartan keskellä selitenapin alla, 8 lohkoa 10 × 6 ja teksti.
+            elama = Rakenne.El("mk-elamapalkki", juuri, PickingMode.Position);
+            // Napautus avaa miniselitteen (omistaja 16.1x, web #3421 34524825); uusi napautus sulkee.
+            elama.AddManipulator(new Clickable(() => VaihdaElamaSelite()));
+            elamaSelite = Rakenne.Teksti(ElamaSeliteTeksti, "mk-elamapalkki__selite", juuri);
+            elamaSelite.pickingMode = PickingMode.Ignore;
+            Kirjasimet.Aseta(elamaSelite, Kirjasin.Luku);
+            elamaSelite.style.display = DisplayStyle.None;
+            // Kortin/kyltin koko muuttuu ilman omaa tapahtumaa: paikka tarkistetaan 4 kertaa sekunnissa näkyvänä.
+            elamaAjastin = elama.schedule.Execute(AsetteleElama).Every(250);
+            elamaAjastin.Pause();
+            elamaLohkot = Rakenne.El("mk-elamapalkki__lohkot", elama, PickingMode.Ignore);
+            for (int i = 0; i < ElamaLohkoja; i++) Rakenne.El("mk-elamapalkki__lohko", elamaLohkot, PickingMode.Ignore);
+            elamaTeksti = Rakenne.Teksti("", "mk-elamapalkki__teksti", elama);
+            Kirjasimet.Aseta(elamaTeksti, Kirjasin.KoneLihava);
+            elama.style.display = DisplayStyle.None;
+            elama.RegisterCallback<GeometryChangedEvent>(_ => AsetteleElama());
+
             // Hetkellinen viesti (event-toast).
             ilmoitus = Rakenne.El("mk-ilmoitus", juuri, PickingMode.Ignore);
             Rakenne.Tausta(ilmoitus, Kuviot.Ilmoitus);
@@ -244,6 +297,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
             kerros.TurvaMuuttui += Asettele;
             kerros.JokaRuutu += TarkistaOhiNapautus;
+            kerros.JokaRuutu += TarkistaElamaSelite;
             kerros.JokaRuutu += TarkistaVeto;
             Asettele();
         }
@@ -618,13 +672,19 @@ namespace Matkakirja.Natiivi
         /// "rahat loppu · N vrk" (Matka.RahattomuuttaJaljella); matkan päätyttyä rahattomuuteen pillerissä on
         /// pelkkä "Matka päättyi" (web game.phase 'over' ilman voittajaa). Vihje = web kassan title.
         /// </summary>
-        public void Talous(int? jaljellaVrk, bool paattyi, string vihje)
+        public void Talous(int? jaljellaVrk, bool paattyi, string vihje, int? jaljellaVuoroja = null)
         {
             pilleri.tooltip = vihje ?? "";
+            if (jaljellaVuoroja != rahatonVuoroja)
+            {
+                rahatonVuoroja = jaljellaVuoroja;
+                NaytaElama();
+            }
             if (jaljellaVrk == rahatonVrk && paattyi == matkaPaattyi) return;
             bool palautuu = matkaPaattyi && !paattyi;
             rahatonVrk = jaljellaVrk;
             matkaPaattyi = paattyi;
+            NaytaElama();
             if (palautuu)
             {
                 // "Matka päättyi" korvasi kassan ja kellon: rivi uudelleen (Jatka viimeisestä tallennuksesta).
@@ -635,6 +695,60 @@ namespace Matkakirja.Natiivi
             }
             NaytaTalous(rivi.Split(new[] { " · " }, StringSplitOptions.None).Length >= 3);
             SovitaPilleri();
+        }
+
+        /// <summary>Elämäpalkki: täysi lohko jokaista jäljellä olevaa 6 h vuoroa kohden; näkyy vain rahattomana.</summary>
+        void NaytaElama()
+        {
+            bool naytetaan = rahatonVuoroja != null && !matkaPaattyi && nakyy;
+            elama.style.display = naytetaan ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!naytetaan) { elamaAjastin.Pause(); elamaSelite.style.display = DisplayStyle.None; return; }
+            elamaAjastin.Resume();
+            int n = Mathf.Clamp(rahatonVuoroja.Value, 0, ElamaLohkoja);
+            for (int i = 0; i < elamaLohkot.childCount; i++)
+                elamaLohkot[i].EnableInClassList("mk-elamapalkki__lohko--kulunut", i >= n);
+            // Web: aika = lohkot × 6 h → "N vrk" + "M h" (tyhjä osa pois, 0 → "0 h").
+            int tunnit = n * 6, vrk = tunnit / 24, h = tunnit % 24;
+            string aika = (vrk > 0 ? vrk + " VRK" : "") + (h > 0 || vrk == 0 ? (vrk > 0 ? " " : "") + h + " H" : "");
+            elamaTeksti.text = "RAHAT LOPPU · " + aika;
+            elamaTeksti.style.display = ElamaTekstilla ? DisplayStyle.Flex : DisplayStyle.None;
+            AsetteleElama();
+        }
+
+        /// <summary>
+        /// Web #3421 34524825 (omistaja 16.1x): laatikko (näkymätön pehmuste 6/8) heti kartan yläreunassa keskellä; jos se
+        /// osuisi matkakirjan kylttiin/korttiin tai karttaselitenappiin, top = osuvien alareuna (toistetaan, kunnes ei osumia).
+        /// Miniselite palkin alla keskellä, leveys min(260, leveys − 32).
+        /// </summary>
+        void AsetteleElama()
+        {
+            if (elama.style.display == DisplayStyle.None || elama.panel == null) return;
+            var (selite, kirja) = ElamaAnkkurit?.Invoke() ?? (Rect.zero, Rect.zero);
+            float w = elama.resolvedStyle.width, h = elama.resolvedStyle.height, leveys = elama.panel.visualTree.layout.width;
+            if (float.IsNaN(w) || w <= 0 || float.IsNaN(h) || float.IsNaN(leveys)) return;
+            // Kartan yläreuna: näkyvän palkin alareuna, piilotettuna turva-alueen yläreuna (Varaus).
+            float top = palkki.resolvedStyle.display != DisplayStyle.None && palkki.worldBound.height > 0 && !palkki.ClassListContains("mk-ylapalkki--piilossa")
+                ? palkki.worldBound.yMax : kerros.Reunat(UiKerros.Tilarivi).y;
+            float x = (leveys - w) / 2f;
+            for (int kierros = 0; kierros < 4; kierros++)
+            {
+                var laatikko = new Rect(x, top, w, h);
+                float ala = top;
+                foreach (var este in new[] { selite, kirja })
+                    if (este.width > 0 && este.height > 0 && este.Overlaps(laatikko)) ala = Mathf.Max(ala, este.yMax);
+                if (ala <= top) break;
+                top = ala;
+            }
+            var juuri = elama.parent.worldBound;
+            if (!Mathf.Approximately(elama.resolvedStyle.top, top - juuri.yMin)) elama.style.top = top - juuri.yMin;
+            if (!Mathf.Approximately(elama.resolvedStyle.left, x - juuri.xMin)) elama.style.left = x - juuri.xMin;
+            if (elamaSelite.style.display == DisplayStyle.Flex)
+            {
+                float sw = Mathf.Min(260f, leveys - 32f);
+                elamaSelite.style.width = sw;
+                elamaSelite.style.left = (leveys - sw) / 2f - juuri.xMin;
+                elamaSelite.style.top = top + h - juuri.yMin;
+            }
         }
 
         void NaytaTalous(bool pelirivi)
@@ -652,9 +766,10 @@ namespace Matkakirja.Natiivi
             else raha.style.unityFontDefinition = StyleKeyword.Null;
             float koko = raha.resolvedStyle.fontSize;
             if (!float.IsNaN(koko) && koko > 0) rahaton.style.fontSize = koko * 0.85f;
-            // iPhonen pilleri on Dynamic Islandin vieressä (~104 pt): "0£ 2 vrk 1/80" (punaisena), muualla webin teksti.
+            // Lyhyt "2 vrk" kaikilla laitteilla (omistaja 27.9. 15.1x: iPad kuten iPhone, ei webin "rahat loppu · 2 vrk").
+            // iPhonen pilleri on Dynamic Islandin vieressä (~104 pt), joten siellä myös laukkuikoni väistyy.
             bool kapea = kelluvaNyt == true || matalaNyt == true;
-            rahaton.text = !varoitus ? "" : kapea ? rahatonVrk + " vrk" : "rahat loppu · " + rahatonVrk + " vrk";
+            rahaton.text = varoitus ? rahatonVrk + " vrk" : "";
             // iPhonella laukkuikoni väistyy varoituksen ajaksi (~22 pt), jotta päivä "1/80" mahtuu saaren viereen.
             var laukku = pilleri.Q(className: "mk-ikoni");
             if (laukku != null) laukku.style.display = varoitus && kapea ? DisplayStyle.None : DisplayStyle.Flex;
@@ -694,6 +809,7 @@ namespace Matkakirja.Natiivi
         {
             this.nakyy = nakyy;
             palkki.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            NaytaElama();
             if (!nakyy) Sulje();
             PaivitaNappi();
         }
