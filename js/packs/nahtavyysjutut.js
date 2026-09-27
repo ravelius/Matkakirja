@@ -7536,6 +7536,26 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  luxemburg: {
+    // Kohdekartan oma piste käyttää samaa tekstiä kuin historian hetki.
+    'Bockin kauppa 963': {
+      nosto: 'hetki-siegfried-ostaa-bockin-963',
+      teksti: 'Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella '
+        + 'Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. '
+        + 'Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, '
+        + 'yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen '
+        + 'päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta '
+        + 'omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu '
+        + 'vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa '
+        + 'kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", '
+        + 'josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään '
+        + 'louhitaan kilometrikaupalla käytäviä, ja linnan ympärille kasvava kaupunki '
+        + 'kantaa yhä saman nimen johdannaista. Jyrkänne suojaa paikkaa kolmelta '
+        + 'puolelta, ja vain lännestä sinne pääsee helposti. Siegfried kääntää '
+        + 'pergamentin kädessään ja katsoo jokimutkaa vielä kerran: kauppa näyttää '
+        + 'nyt pieneltä, mutta sen seuraukset kasvavat vuosisatoja.',
+    },
+  },
   lissabon: {
     // Historian hetken kohdekartan piste (omistaja 3.9.2026): juttu on
     // sanatarkasti hetken oma teksti (js/packs/historian-hetket.js).
