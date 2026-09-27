@@ -472,8 +472,10 @@ export const NAHTAVYYSJUTUT = {
           + 'neuvostosotilaat pystyttivät katolle lipun kuuluisassa '
           + 'valokuvassa.'
         + '\n\n'
-        + 'Sodan jälkeen talo seisoi tyhjänä Länsi-Berliinissä koko '
-          + 'kylmän sodan ajan, kunnes Saksa yhdistyi 1990. Uusi '
+        + 'Sodan jälkeen talo kunnostettiin osittain Länsi-Berliinissä '
+          + 'ja siinä oli pysyvä historianäyttely sekä satunnaisia '
+          + 'virallisia tilaisuuksia, mutta se ei ollut parlamentin '
+          + 'varsinainen istuntopaikka ennen kuin Saksa yhdistyi 1990. Uusi '
           + 'lasikupoli nousi 1990-luvulla arkkitehti Norman Fosterin '
           + 'suunnitelmien mukaan: sen läpi näkee suoraan alla istuvien '
           + 'kansanedustajien saliin.',
@@ -691,8 +693,8 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, '
         + 'jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine '
         + 'liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on '
-        + 'Archaeopteryxin Berliinin yksilö, lajin kahdestatoista löydetystä '
-        + 'yksilöstä täydellisin ja ensimmäinen, jolla on kokonainen pää.'
+        + 'Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä '
+        + 'täydellisin ja ensimmäinen, jolla on kokonainen pää.'
         + '\n\n'
         + 'Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna '
         + '1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen '
@@ -800,7 +802,7 @@ export const NAHTAVYYSJUTUT = {
         + '1872, ja lääkäri-poliitikko Rudolf Virchow. Hobrecht suunnitteli '
         + 'kahdentoista pääsuunnan säteittäisen järjestelmän, joka johti '
         + 'jätevedet kaupungin laidalle sadetuskentille. Pääputkien '
-        + 'rakentaminen alkoi 1873 ja viimeinen valmistui 1893. Samalta '
+        + 'rakentaminen alkoi 1873 ja viimeinen valmistui 1909. Samalta '
         + 'mieheltä tilattiin sen jälkeen viemärit kolmeenkymmeneen '
         + 'saksalaiseen kaupunkiin sekä Moskovaan, Tokioon ja Kairoon.',
       kuvat: [
@@ -1657,7 +1659,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Kuningas Filip V käski rakentaa palon paikalle upouuden '
           + 'linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli '
-          + 'sen, ja rakennustyöt kestivät vuodesta 1738 vuoteen 1755.'
+          + 'sille ensin hahmotelman, mutta kuoli ennen rakennustöiden '
+          + 'alkua — hänen oppilaansa Giovanni Battista Sacchetti '
+          + 'suunnitteli lopulta rakennetun linnan, ja työt kestivät '
+          + 'vuodesta 1738 vuoteen 1755.'
         + '\n\n'
         + 'Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä '
           + 'lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. '
@@ -3017,7 +3022,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Abbey Roadin suojatie': {
       nosto: 'nosto-abbey-roadin-suojatie',
-      teksti: 'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kahdeksan '
+      teksti: 'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi '
         + 'kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin '
         + 'Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit '
         + 'jonottavat yhä joka päivä ylittämään sen samassa rivissä, '
@@ -3080,7 +3085,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Turbiinihalli': {
       nosto: 'nosto-tate-modernin-turbiinihalli',
-      teksti: 'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. Sen '
+      teksti: 'Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen '
         + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
         + 'tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 '
         + 'kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa '
@@ -4163,7 +4168,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1889',
       teksti: 'Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna '
           + '1889, insinööri Gustave Eiffelin toimisto pystytti Champ '
-          + 'de Mars -puistoon 330 metriä korkean rautatornin vain '
+          + 'de Mars -puistoon noin 300 metriä korkean rautatornin vain '
           + 'reilussa kahdessa vuodessa. Torniin käytettiin 18 038 '
           + 'metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko '
           + 'rakennustyön aikana sattui vain yksi kuolemantapaus.'
@@ -4185,7 +4190,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Eiffel tower from trocadero.jpg',
           lyhyt: 'Eiffel-torni pystytettiin 1889 maailmannäyttelyyn 18 038 metalliosasta ja 2,5 miljoonasta niitistä.',
-          selite: 'Gustave Eiffelin toimisto pystytti 330 metriä korkean '
+          selite: 'Gustave Eiffelin toimisto pystytti noin 300 metriä korkean '
             + 'rautatornin reilussa kahdessa vuodessa vuoden 1889 '
             + 'maailmannäyttelyyn 18 038 metalliosasta ja 2,5 miljoonasta '
             + 'niitistä.',
@@ -4310,8 +4315,9 @@ export const NAHTAVYYSJUTUT = {
           + 'Kahdeksankulmaisella altaalla lapset uittavat purjeveneitä, '
           + 'nukketeatteri on toiminut puistossa vuodesta 1933, ja '
           + 'patsaita on toista sataa — niiden joukossa kaksikymmentä '
-          + 'Ranskan kuningatarta ja Bartholdin ensimmäinen pieni malli '
-          + 'Vapaudenpatsaasta. Victor Hugo pani Kurjissa Mariuksen ja '
+          + 'Ranskan kuningatarta ja jäljennös Bartholdin pienoismallista '
+          + 'Vapaudenpatsaasta (alkuperäinen siirrettiin Musée d\'Orsayhin '
+          + '2012). Victor Hugo pani Kurjissa Mariuksen ja '
           + 'Cosetten kohtaamaan juuri täällä.',
       kuvat: [
         {
@@ -4813,7 +4819,7 @@ export const NAHTAVYYSJUTUT = {
     'Notre-Damen kukko': {
       nosto: 'nosto-notre-damen-kukko',
       teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
-        + 'romahti kello 19.45. Katon alla paloi 1 300 tammirungosta tehty '
+        + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
         + 'kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi '
         + 'kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. '
         + 'Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana '
@@ -4872,10 +4878,10 @@ export const NAHTAVYYSJUTUT = {
         + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
         + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
         + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
-        + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu kuusi '
-        + 'arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja '
-        + 'yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät '
-        + 'seuraavan vuoden ajan.',
+        + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
+        + 'ammattilaisia, toimittajia ja kuusi arvottua tavallista '
+        + 'pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
+        + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
       kuvat: [
         {
           tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
@@ -5726,7 +5732,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: '1896 Olympic opening ceremony.jpg',
           lyhyt: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896.',
-          selite: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896 — katsomossa 80 000 ihmistä.',
+          selite: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896 — katsomossa noin 60 000 ihmistä.',
           lahde: 'Wikimedia Commons (PD)',
         },
       ],

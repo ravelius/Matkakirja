@@ -1116,7 +1116,7 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'historia',
       lunastus: [
         'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
-          + 'romahti kello 19.45. Katon alla paloi 1 300 tammirungosta tehty '
+          + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
           + 'kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi '
           + 'kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin '
           + 'sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä '
@@ -1193,10 +1193,10 @@ export const FOKUSVIRTA_PARIISI = {
           + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
           + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
           + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
-          + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu kuusi '
-          + 'arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja '
-          + 'yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät '
-          + 'seuraavan vuoden ajan.',
+          + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
+          + 'ammattilaisia, toimittajia ja kuusi arvottua tavallista '
+          + 'pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
+          + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Paras patonki '
         + 'valitaan sokkona" (js/packs/kulttuuri-kategoriat.js). Teksti '
