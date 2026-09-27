@@ -788,8 +788,13 @@ export async function laskeVariLaatta(luettelo, lukija, Z, X, Y) {
 }
 
 /** Laskee yhden Mercator-laatan RGB-puskurin. */
-export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
-  const z = lahdetaso(Z);
+/*
+ * `z` = lähdetaso tälle laatalle. Oletus lahdetaso(Z); `--z10-lahde`
+ * (Euroopan laatukierros 27.9.2026, N2) antaa Z10:lle pyramidin z10:n
+ * niissä laatoissa, joiden alla koko z10 on poltettu — pohjoisessa
+ * Mercator venyttää z9:n pehmeän rannan näkyväksi.
+ */
+export async function laskeLaatta(luettelo, lukija, Z, X, Y, z = lahdetaso(Z)) {
   const taso = luettelo.tasot.find((t) => t.z === z);
   const n = 2 ** Z;
   const ulos = Buffer.alloc(LAATTA * LAATTA * 3);
@@ -1330,6 +1335,7 @@ async function paa() {
   const va = luettelo.vari?.alue;
   if (!alue && va) alue = [va.lon0, va.lat0, va.lon1, va.lat1];
   let lista = osanLaatat(min, max, alue, osa);
+  let z10Lahde = null; // --z10-lahde (ks. laskeLaatta)
   // --kaupungit <kaupungit.json> [--kaupunkiaste 1]: vain kaupunkien alueet (ks. kaupunkienLaatat).
   const kaupungitPolku = lippu('--kaupungit');
   if (kaupungitPolku) {
@@ -1348,7 +1354,8 @@ async function paa() {
     if (lahdelaatat) {
       const { lautaX, lautaY, T10 } = await import('./tee-syva-laatat.mjs');
       const Y0 = luettelo.arkki.y;
-      const olemassa = new Set(JSON.parse(readFileSync(lahdelaatat, 'utf8')).laatat.map(([x, y]) => `${x >> 1}:${y >> 1}`));
+      const lahdeLista = JSON.parse(readFileSync(lahdelaatat, 'utf8')).laatat;
+      const olemassa = new Set(lahdeLista.map(([x, y]) => `${x >> 1}:${y >> 1}`));
       const T9 = 2 * T10;
       const ennen = lista.length;
       lista = lista.filter(([Z, X, Y]) => {
@@ -1359,6 +1366,18 @@ async function paa() {
         return true;
       });
       console.log(`  lähdelaatat: ${lista.length}/${ennen} laatan alla koko z9 poltettuna`);
+      if (process.argv.includes('--z10-lahde')) {
+        const olemassa10 = new Set(lahdeLista.map(([x, y]) => `${x}:${y}`));
+        z10Lahde = new Set(lista.filter(([Z, X, Y]) => {
+          if (Z !== 10) return false;
+          const r = laatanReunat(Z, X, Y);
+          const x0 = Math.floor(lautaX(r.lansi) / T10); const x1 = Math.floor(lautaX(r.ita - 1e-9) / T10);
+          const y0 = Math.floor((lautaY(r.pohjoinen) - Y0) / T10); const y1 = Math.floor((lautaY(r.etela) - Y0) / T10);
+          for (let x = x0; x !== x1 + 1; x = (x + 1) % 1350) for (let y = y0; y <= y1; y += 1) if (!olemassa10.has(`${x}:${y}`)) return false;
+          return true;
+        }).map(([Z, X, Y]) => `${Z}/${X}/${Y}`));
+        console.log(`  z10-lähde: ${z10Lahde.size}/${lista.length} laatan alla koko z10 poltettuna (muut z9:stä)`);
+      }
     }
     console.log(`  kaupungit ${kaupungit.length}: tasoilta ${min}–${max} ${joukko.size} laattaa, tässä osassa ${lista.length}`);
   }
@@ -1504,7 +1523,8 @@ async function paa() {
       const webp = await sharp(rgba, { raw: { width: LAATTA, height: LAATTA, channels: 4 } }).webp({ quality: 90, alphaQuality: 100 }).toBuffer(); // eslint-disable-line no-await-in-loop
       writeFileSync(join(ulos, String(Z), String(X), `${Y}.webp`), webp);
     } else {
-      const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
+      const z = z10Lahde?.has(`${Z}/${X}/${Y}`) ? 10 : lahdetaso(Z);
+      const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y, z); // eslint-disable-line no-await-in-loop
       if (luettelo.kyllaisyys && luettelo.kyllaisyys !== 1) kyllaista(rgb, luettelo.kyllaisyys);
       const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg(JPEG).toBuffer(); // eslint-disable-line no-await-in-loop
       writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);

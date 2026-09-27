@@ -185,15 +185,15 @@ export const LIVIAN_AVAUS = [
  * (js/pollo.js naytaAvauskupla `ohita`). Repliikit kiertävät
  * järjestyksessä, jottei sama toistu kahdesti peräkkäin.
  *
- * EHDOTUS PÄÄTOIMITTAJALLE (Fable): teksti on Pelikoodarin luonnos
- * Livian äänellä (13+, kuiva, ≤ 85 merkkiä), ei vielä hyväksyttyä
- * kaanonia. Äänitteitä ei ole: kupla puhuu, ääni vaikenee (sama
- * sopimus kuin puuttuvalla äänitteellä).
+ * PÄÄTOIMITTAJAN HYVÄKSYMÄT (Fable 27.9.2026 klo 18.3x): Livia on
+ * asiantunteva viestinviejä, ei huutomerkkejä, tavoite on Aarnin luettelo.
+ * Äänitteitä ei ole: kupla puhuu, ääni vaikenee (sama sopimus kuin
+ * puuttuvalla äänitteellä).
  */
 export const LIVIAN_UUSI_MATKA = [
-  'Taas matkaan? Hyvä. Isoisäsi kirjassa on sivuja, joita kukaan ei ole lukenut.',
+  'Taas matkaan? Hyvä. Aarnin luettelossa on vielä rivejä ilman rastia.',
   'Uusi matka, uudet sähkeet. Valitse lähtö — minä hoidan postin.',
-  'Sinä taas. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.',
+  'Sinä taas — hyvä. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.',
 ];
 
 /** Lyhyen tervehdyksen kierto laitteen muistissa (seuraavan repliikin numero). */
