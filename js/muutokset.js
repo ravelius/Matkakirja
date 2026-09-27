@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2301, teksti: 'v2299: Lukijamittari — worker kertoo puhemootto… (#3372)' },
   { v: 2300, teksti: 'Astronautin kamera erä 7: 13 kohdetta, tilaus t… (#3375)' },
   { v: 2299, teksti: 'v2298: Musiikki: maanosa myös kaupungeille ilma… (#3323)' },
   { v: 2298, teksti: 'Astronautin kamera erät 5-6: 35 uutta kohdetta (#3370)' },
