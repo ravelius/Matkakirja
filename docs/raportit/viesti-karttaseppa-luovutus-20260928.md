@@ -37,6 +37,21 @@
   polton valmiiksi. ILMOITA Julkaisijalle ja Fablelle heti, kun `aja.out` näyttää "2 koodi 0".
 - **Levy klo 23.58:** 74 GiB. Levyä syövät swap (36 Gt) ja muiden käännökset, poltto ei.
 
+## PÄIVITYS 00.4x: VAIHE 1 VALMIS, VAIHE 2 KÄYNNISSÄ
+
+- **Vaihe 1:** laatat 119 495/119 495, eheys täsmää. Koodi 1 tuli vain luettelon vientivartiosta ("varitasot
+  puuttuvat"). `--ilman-nostoja`-ajo ei kanna ämpärin kenttiä: `polta-paikallisesti.sh` ~r.2948 kantaa ne vain,
+  kun nostoshardeja on (`kokoa-nostotasot.mjs`). Vaihe 1 on merkitty käsin valmiiksi (`1.valmis.selitys`).
+- **Vahti:** uusi v5e PID 82063 (00.47), vaihe 2 syvä T7:lle. Odotettu loppu on "2 koodi 1" samasta vartiosta.
+  Tarkista `2.log`:n eheys.
+- **Seuranta:** luokitin esti Monitorin 00.2x, joten Postivahti herättää, kun "2 koodi" tulee tai vahti kuolee.
+- **AAMULLA LUETTELO YHDISTETÄÄN ENNEN VIENTIÄ:**
+  - Ämpäristä: `varitasot`, `nostotasot`, `erat`, `nimiotaso` ja `nostotaso` (tuotannossa `2026-09-25c-nostot`;
+    uudessa luettelossa väärin `2026-09-26-nostot`, koska aja.sh:n `--nostoversio`).
+  - Uudesta: `versio`, `viivataso`, `rantataso`, `pohja`, `korkeus`, `tasot` ja `aineisto`.
+  - Näytä diff kortissa.
+- **Työkalukorjaus PR:nä polton jälkeen:** kanna ämpärin kentät myös ilman nostoshardeja.
+
 ## AAMULLA: KORTTI FABLELLE, OMISTAJA HYVÄKSYY
 
 Toimi kuten luovutuksen `-c` kohdat 1–5, ja lisäksi:
