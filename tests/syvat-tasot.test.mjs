@@ -22,7 +22,7 @@ import {
 } from '../tools/maasto/dem-ikkuna.mjs';
 import { demHakemisto } from '../tools/maasto/tee-maasto.mjs';
 import { bilineaarinenKorkeus } from '../tools/fokuskartta/maastovarjo.js';
-import { pelinLuettelo, PELIN_SYVIN_TASO } from '../js/laattapyramidi.js';
+import { pelinLuettelo, pohjanTaso, PELIN_SYVIN_TASO } from '../js/laattapyramidi.js';
 import { kirjoitaLuettelo } from '../tools/tee-pallolaatat.mjs';
 
 const GENERAATTORI = fileURLToPath(new URL('../tools/generoi-laattapyramidi.mjs', import.meta.url));
@@ -266,17 +266,30 @@ test('--kuiva kertoo DEM-ikkunan koon syvälle kaistalle', () => {
 
 /* ------------------------------------------------ kuluttajat */
 
-test('pelin luettelo: tasot yli PELIN_SYVIN_TASO:n jäävät pois', () => {
-  assert.equal(PELIN_SYVIN_TASO, 8);
-  const tasot = Array.from({ length: 11 }, (_, z) => ({ z, laatasto: z > 8 ? 'AA==' : null }));
-  const j = { versio: 'v', tasot, nostotaso: { tasot: [5, 6, 7, 8] } };
-  const p = pelinLuettelo(j);
+test('pelin luettelo: tasot yli katon jäävät pois (katto 10, Z10-ketju)', () => {
+  assert.equal(PELIN_SYVIN_TASO, 10);
+  const tasot = Array.from({ length: 12 }, (_, z) => ({ z, laatasto: z > 8 ? 'AA==' : null }));
+  const j0 = { versio: 'v', tasot };
+  assert.deepEqual(pelinLuettelo(j0).tasot.map((t) => t.z), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const j = { versio: 'v', tasot: tasot.slice(0, 11), nostotaso: { tasot: [5, 6, 7, 8] } };
+  const p = pelinLuettelo(j, 8);
   assert.deepEqual(p.tasot.map((t) => t.z), [0, 1, 2, 3, 4, 5, 6, 7, 8]);
   assert.equal(p.nostotaso, j.nostotaso);
   assert.equal(j.tasot.length, 11, 'alkuperäinen luettelo ei muutu');
   // Ilman syviä tasoja sama olio (tuotannon luettelo tavulleen ennallaan).
   const vanha = { versio: 'v', tasot: tasot.slice(0, 9) };
   assert.equal(pelinLuettelo(vanha), vanha);
+});
+
+test('pohjan taso: z3 tavallisesti, harvoilla syvillä tasoilla z8', () => {
+  const tasot = Array.from({ length: 11 }, (_, z) => ({ z }));
+  assert.equal(pohjanTaso(tasot, tasot[2]), null);
+  assert.equal(pohjanTaso(tasot, tasot[7]).z, 3);
+  assert.equal(pohjanTaso(tasot, tasot[8]).z, 3);
+  assert.equal(pohjanTaso(tasot, tasot[9]).z, 8);
+  assert.equal(pohjanTaso(tasot, tasot[10]).z, 8);
+  // Ilman z8:aa (osa-luettelo) takaisin z3:een.
+  assert.equal(pohjanTaso(tasot.filter((t) => t.z !== 8), tasot[10]).z, 3);
 });
 
 test('pallon luettelo: alue kirjataan vain aluesarjalle', () => {
