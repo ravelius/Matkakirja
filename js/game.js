@@ -66,6 +66,44 @@ export const PAIVAKULU_RUOKA = 8;
 export const PAIVAKULU_MAJOITUS = 12;
 export const HINTATASON_KERTOIMET = { edullinen: 0.6, keski: 1, kallis: 1.6 };
 export const RAHATTOMUUS_VUOROJA = 8; // 2 vrk × 4 vuoroa (TURN_HOURS 6)
+
+/*
+ * PELISTREAK (omistaja 27.9.2026 klo 11.3x, luvut hyväksytty sellaisenaan;
+ * docs/raportit/talous-suunnitelma-20260927.md 5b): oikean elämän peräkkäiset
+ * pelipäivät (laitteen paikallinen päivä, ensimmäinen teko). Päivät 1–2: 0,
+ * 3–6: 20 £/pv, 7.: 50 + 100 £, 8+: 30 £/pv ja joka 7. päivä +100 £.
+ * ARMOPÄIVÄ (omistaja 27.9.2026 klo 12.4x): yksi väliin jäänyt päivä 7 päivän
+ * liukuvassa ikkunassa ei katkaise putkea, mutta siitä ei tule palkkiota eikä se
+ * kasvata pituutta; toinen väliin jäänyt päivä saman ikkunan sisällä nollaa.
+ */
+export function streakPalkkio(pituus) {
+  return streakErittely(pituus).yhteensa;
+}
+
+/** Päiväpalkkio ja viikkobonus erikseen (lokirivi ja toast kertovat molemmat). */
+export function streakErittely(pituus) {
+  const paiva = pituus < 3 ? 0 : pituus < 7 ? 20 : pituus === 7 ? 50 : 30;
+  const viikko = pituus >= 7 && pituus % 7 === 0 ? 100 : 0;
+  return { paiva, viikko, yhteensa: paiva + viikko };
+}
+
+const JARJESTYSLUVUT = ['', 'Ensimmäinen', 'Toinen', 'Kolmas', 'Neljäs', 'Viides', 'Kuudes',
+  'Seitsemäs', 'Kahdeksas', 'Yhdeksäs', 'Kymmenes'];
+
+/** "Kolmas päivä peräkkäin matkalla" / "14. päivä peräkkäin matkalla". */
+export function streakOtsikko(pituus) {
+  return `${JARJESTYSLUVUT[pituus] ?? `${pituus}.`} päivä peräkkäin matkalla`;
+}
+
+/** Armopäivien vähimmäisväli: kaksi väliin jäänyttä päivää saman 7 päivän ikkunan sisällä nollaa putken. */
+export const STREAK_ARMOIKKUNA = 7;
+
+/** Päivämäärä 'YYYY-MM-DD' + n päivää (UTC-laskenta, ei aikavyöhykehyppyä). */
+function paivaaLisaa(paivays, n) {
+  const d = new Date(`${paivays}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
 export const HARD_BONUS = 100; // palkkio vaikeasta kysymyksestä oikein vastattaessa
 export const STAR_PRIZE = 2000; // pääaarteen arvo vaellustilassa, jossa peli ei pääty
 export const DUEL_PRIZE = 200; // rosvon saalis, jos kaksintaistelun voittaa suoraan
@@ -1368,6 +1406,43 @@ export class Game {
     const ruoka = Math.round(PAIVAKULU_RUOKA * k);
     const majoitus = matkalla ? 0 : Math.round(PAIVAKULU_MAJOITUS * k);
     return { ruoka, majoitus, yhteensa: ruoka + majoitus, taso, matkalla };
+  }
+
+  /**
+   * Pelipäivä (pelistreak): kutsutaan pelaajan teosta laitteen paikallisella
+   * päivämäärällä 'YYYY-MM-DD'. Sama päivä uudelleen ei tee mitään; eilisen
+   * jatko kasvattaa laskuria, muu aloittaa alusta. Palkkio kassaan heti.
+   * Palauttaa { pituus, palkkio } tai null (sama päivä tai botti).
+   */
+  kirjaaPelipaiva(paivays, p = this.player) {
+    if (!p || p.isBot || p.pudonnut || this.phase === 'over' || typeof paivays !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(paivays)) return null;
+    const ennen = p.streak ?? null;
+    if (ennen?.paiva === paivays) return null;
+    let pituus = 1;
+    let armo = null;
+    if (ennen && paivaaLisaa(ennen.paiva, 1) === paivays) {
+      pituus = ennen.pituus + 1;
+      armo = ennen.armo ?? null;
+    } else if (ennen && paivaaLisaa(ennen.paiva, 2) === paivays) {
+      // Yksi väliin jäänyt päivä: armopäivä, jos edellinen on vähintään ikkunan päässä.
+      const valissa = paivaaLisaa(ennen.paiva, 1);
+      if (!ennen.armo || paivaaLisaa(ennen.armo, STREAK_ARMOIKKUNA) <= valissa) {
+        pituus = ennen.pituus + 1;
+        armo = valissa;
+      }
+    }
+    p.streak = armo ? { paiva: paivays, pituus, armo } : { paiva: paivays, pituus };
+    const { paiva, viikko, yhteensa: palkkio } = streakErittely(pituus);
+    if (palkkio > 0) {
+      p.money += palkkio;
+      const otsikko = streakOtsikko(pituus);
+      this.say(p.id, `${otsikko}: +${paiva} puntaa${viikko ? ` ja viikkobonus +${viikko} puntaa` : ''}.`);
+      this.emit('rahat', otsikko, {
+        sub: `+${paiva} £${viikko ? ` ja viikkobonus +${viikko} £` : ''}`,
+        icon: 'kukkaro', tilanne: 'peli.streak', pelaaja: p.id,
+      });
+    }
+    return { pituus, palkkio };
   }
 
   /** Montako päivää kassa riittää nykyisellä päiväkululla (kassarivin arvio). */
