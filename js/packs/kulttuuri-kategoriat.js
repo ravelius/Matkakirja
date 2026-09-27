@@ -5135,6 +5135,76 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * MUSIIKKI (27.9.2026, Eurooppa-erä 8). Ei päällekkäisyyttä
+     * MAA_KATEGORIAT[ITA]:n musiikki-nostojen (ooppera, Verdi, Cremonan
+     * viulut, Napolin laulut) kanssa — Vivaldi ei esiinny niissä.
+     */
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Punatukkainen pappi sävelsi orpokodin tytöille musiikkia, '
+          + 'joka kiersi koko Euroopan.',
+      nostot: [
+        {
+          otsikko: 'Punainen pappi opetti orpoja soittamaan',
+          aika: '1703–',
+          tiedosto: 'Pio Ospedale della Pietà (Venice) 10.jpg',
+          teksti: 'Antonio Vivaldi vihittiin papiksi 1703, mutta astmansa '
+            + 'vuoksi hän ei juuri lukenut messua — punaisen tukkansa '
+            + 'vuoksi häntä kutsuttiin "il Prete Rosso", punaiseksi '
+            + 'papiksi. Samana vuonna hän aloitti viulunsoiton opettajana '
+            + 'Ospedale della Pietàssa, orpokodissa, joka kasvatti '
+            + 'löytölapsitytöistä muusikoita. Tytöt soittivat ristikon '
+            + 'takana konserteissa, joita tultiin kuulemaan kaukaakin — '
+            + 'kukaan ei nähnyt soittajia, vain kuuli heidät. Vivaldi '
+            + 'sävelsi heille suurimman osan tuotannostaan lähes '
+            + 'neljänkymmenen vuoden ajan.',
+          lyhyt: 'Ospedale della Pietà oli orpokoti, jossa Vivaldi opetti '
+            + 'löytölapsitytöistä muusikoita vuodesta 1703.',
+          selite: 'Ospedale della Pietà oli orpokoti, jossa Antonio Vivaldi '
+            + 'opetti löytölapsitytöistä muusikoita ja sävelsi heille '
+            + 'suurimman osan tuotannostaan.',
+          lahde: 'ERC ARCHIATER, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Antonio Vivaldi',
+        },
+        {
+          otsikko: 'Neljä vuodenaikaa unohdettiin sadaksi vuodeksi',
+          aika: '1725',
+          tiedosto: 'Vivaldi.jpg',
+          teksti: 'Vivaldin tunnetuin teos, Neljä vuodenaikaa, julkaistiin '
+            + '1725 osana kaksitoista viulukonserttoa sisältävää '
+            + 'kokoelmaa. Kukin konsertto kuvaa yhtä vuodenaikaa säkeiden '
+            + 'ohjaamana — ukkonen, jäätynyt maa, kesän helle — ja teos '
+            + 'oli aikanaan suosittu kautta Euroopan. Vivaldin kuoltua '
+            + 'köyhänä Wienissä 1741 hänen musiikkinsa unohtui lähes '
+            + 'kokonaan yli sadaksi vuodeksi, kunnes 1900-luvulla '
+            + 'löydetyt käsikirjoitukset toivat sen takaisin — isoisän '
+            + 'matkan aikaan Vivaldi on jo unohdettu säveltäjä.',
+          lyhyt: 'Vivaldin muotokuva; hänen musiikkinsa unohtui vuosisadaksi '
+            + 'hänen kuolemansa jälkeen.',
+          selite: 'Antonio Vivaldin (1678–1741) muotokuva; hänen '
+            + 'musiikkinsa unohtui lähes vuosisadaksi kuoleman jälkeen ja '
+            + 'löydettiin uudelleen vasta 1900-luvulla.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+          wiki: 'The Four Seasons (Vivaldi)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä Antonio Vivaldi opetti viulunsoittoa vuodesta 1703 '
+            + 'lähtien?',
+        vaihtoehdot: [
+          'Venetsian oopperatalossa',
+          'Orpokoti Ospedale della Pietàssa',
+          'Dogen palatsin kuoro-koulussa',
+          'Omassa yksityisessä musiikkikoulussaan',
+        ],
+        oikea: 1,
+        fakta: 'Vivaldi opetti viulunsoittoa Ospedale della Pietàssa, '
+            + 'orpokodissa, joka kasvatti löytölapsitytöistä muusikoita, '
+            + 'ja sävelsi heille suurimman osan tuotannostaan.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -5671,6 +5741,75 @@ export const KULTTUURI_KATEGORIAT = {
         oikea: 1,
         fakta: 'Kuningatar Kristiinan aikaan sulkutyöhön otettiin mestareita '
           + 'Hollannista, ja ensimmäinen sulku valmistui vuonna 1642.',
+      },
+    },
+    /*
+     * LUONTO (27.9.2026, Eurooppa-erä 8). Saariston laajuus on oma
+     * aiheensa, ei sama kuin MAA_KATEGORIAT[SWE]:n luonto-nostot
+     * (jokamiehenoikeus, erämaa, hirvi, revontulet — kaikki
+     * sisämaasta, ei saaristosta).
+     */
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kaupungin itäpuolella avautuu saaristo, jossa on '
+          + 'kolmekymmentätuhatta saarta ja luotoa — matka mantereelta '
+          + 'ulapalle vaihtaa maiseman metsästä paljaaksi kallioksi.',
+      nostot: [
+        {
+          otsikko: 'Kolmekymmentätuhatta saarta yhden kaupungin edustalla',
+          tiedosto: '20130202 Stockholm Skärgård (21).jpg',
+          teksti: 'Tukholman saaristo koostuu noin kolmestakymmenestä '
+            + 'tuhannesta saaresta, luodosta ja karista, jotka levittäytyvät '
+            + 'yli 80 kilometrin matkalle mantereelta itään avomerelle. '
+            + 'Lähempänä kaupunkia saaret ovat metsäisiä ja niillä on '
+            + 'kesämökkejä; mitä kauemmas ulapalle mennään, sitä '
+            + 'paljaammiksi ja puuttomammiksi kalliosaaret muuttuvat, '
+            + 'kunnes jäljellä on vain merenjäätämien kallioiden ja '
+            + 'majakoiden nauha. Saaristo syntyi mannerjään sulaessa: maa '
+            + 'kohoaa täällä yhä noin puoli senttiä vuodessa, ja uusia '
+            + 'luotoja nousee merestä hitaasti koko ajan.',
+          lyhyt: 'Tukholman saaristossa on noin kolmekymmentätuhatta saarta '
+            + 'ja luotoa, jotka levittäytyvät yli 80 kilometrin matkalle.',
+          selite: 'Tukholman saaristossa on noin kolmekymmentätuhatta '
+            + 'saarta ja luotoa; maa kohoaa alueella yhä jääkauden '
+            + 'jäljiltä noin puoli senttiä vuodessa.',
+          lahde: 'Belola80, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Stockholm archipelago',
+        },
+        {
+          otsikko: 'Ulommat luodot ovat lähes puuttomia',
+          tiedosto: 'Grönskär February 2013.jpg',
+          teksti: 'Mitä kauemmas Tukholman saaristossa mennään, sitä '
+            + 'karumpaa maisema muuttuu. Sisemmän saariston metsäiset '
+            + 'saaret vaihtuvat vähitellen ulomman saariston paljaisiin, '
+            + 'tuulen ja aallokon kuluttamiin kallioluotoihin, joilla '
+            + 'kasvaa enää matalaa kasvillisuutta tai ei mitään. Näillä '
+            + 'uloimmilla luodoilla seisovat majakat, jotka ovat vuosisatoja '
+            + 'ohjanneet laivaliikennettä Tukholmaan — ilman niitä '
+            + 'saariston kapeat ja mutkittelevat väylät olisivat vaarallisia '
+            + 'kulkea pimeällä tai myrskyssä.',
+          lyhyt: 'Ulomman saariston kallioluodot ovat lähes kasvittomia, ja '
+            + 'niillä seisoo majakoita.',
+          selite: 'Tukholman saariston uloimmat luodot ovat tuulen ja '
+            + 'aallokon kuluttamia, lähes kasvittomia kallioita, joilla '
+            + 'seisoo majakoita.',
+          lahde: 'Arild, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Stockholm archipelago',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Tukholman saaristoon nousee koko ajan uusia luotoja?',
+        vaihtoehdot: [
+          'Ihmiset täyttävät merta keinotekoisesti',
+          'Maa kohoaa yhä jääkauden jäljiltä',
+          'Merenpinta laskee ilmastonmuutoksen vuoksi',
+          'Tulivuoritoiminta nostaa uutta maata',
+        ],
+        oikea: 1,
+        fakta: 'Tukholman seudulla maa kohoaa yhä mannerjään sulamisen '
+            + 'jäljiltä noin puoli senttiä vuodessa, ja uusia luotoja '
+            + 'nousee merestä hitaasti.',
       },
     },
   ],
@@ -11058,6 +11197,82 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+    },
+    /*
+     * HISTORIA (27.9.2026, Eurooppa-erä 8). Ei päällekkäisyyttä
+     * MAA_KATEGORIAT[PRT]:n historia-nostojen (löytöretket, Vasco da
+     * Gama, Kolumbus, karttaviiva) kanssa — 1755:n maanjäristys ei ole
+     * niissä, ja se on jo omissa hetki-nostoissaan käsitellyistä
+     * löytöretkiaiheista täysin erillinen tapahtuma.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaikkien pyhien päivän aamuna 1755 kaupunki romahti '
+          + 'kolmessa aallossa — ja nousi tuhkasta suoraviivaisena '
+          + 'ruutukaavana.',
+      nostot: [
+        {
+          otsikko: 'Kolme iskua yhtenä aamuna',
+          aika: '1.11.1755',
+          tiedosto: 'Lisbone Abysmée - estampe - btv1b52524679j.jpg',
+          teksti: 'Kaikkien pyhien päivänä, 1. marraskuuta 1755 aamulla, '
+            + 'kirkot olivat täynnä kynttilöitä, kun maa alkoi täristä. '
+            + 'Järistys, arviolta magnitudiltaan 8–9, kesti useita '
+            + 'minuutteja ja repi auki halkeamia keskellä katuja. '
+            + 'Selviytyjät pakenivat satamaan avoimelle alueelle, mutta '
+            + 'noin neljäkymmentä minuuttia myöhemmin meri veti '
+            + 'puoleensa ja iski takaisin jättiaaltoina. Kynttilöiden '
+            + 'kaatamat tulipalot roihusivat vielä päiviä. Kaupungin '
+            + 'noin 200 000 asukkaasta kymmeniä tuhansia kuoli, ja '
+            + 'suurin osa keskustasta tuhoutui.',
+          lyhyt: 'Aikalaiskaiverrus vuoden 1755 maanjäristyksen ja '
+            + 'tulipalojen tuhoamasta Lissabonista.',
+          selite: 'Aikalaiskaiverrus näyttää Lissabonin raunioina ja '
+            + 'liekeissä vuoden 1755 maanjäristyksen, tsunamin ja '
+            + 'tulipalojen jäljiltä.',
+          lahde: 'Bibliothèque nationale de France, Wikimedia Commons '
+            + '(public domain)',
+          wiki: '1755 Lisbon earthquake',
+        },
+        {
+          otsikko: 'Sotilaat testasivat uudisrakennukset marssimalla',
+          aika: '1758–',
+          tiedosto: 'Looking South over Baixa to the Tagus River, Lisbon, Portugal - Panoramio.jpg',
+          teksti: 'Kuningas José I:n pääministeri, markiisi de Pombal, '
+            + 'otti jälleenrakennuksen johtoonsa ja teetti Baixan '
+            + 'keskustaan täysin uuden, suoraviivaisen ruutukaavan — yhden '
+            + 'Euroopan ensimmäisistä. Talot rakennettiin "gaiola '
+            + 'pombalinaksi" kutsutulla puisella häkkirungolla, joka '
+            + 'joustaa järistyksessä murtumatta; kestävyys testattiin '
+            + 'muun muassa marssittamalla sotilasjoukkoja rakennusten '
+            + 'ympärillä täristystä jäljittelemään. Isoisän matkan '
+            + 'aikaan Baixan ruutukaava on jo yli sata vuotta vanha ja '
+            + 'vakiintunut osa kaupunkia.',
+          lyhyt: 'Baixan ruutukaava ylhäältä nähtynä; alue rakennettiin '
+            + 'uudelleen 1755 järistyksen jälkeen suoraviivaisena ja '
+            + 'järistyksenkestävänä.',
+          selite: 'Baixan kaupunginosa ylhäältä; se rakennettiin uudelleen '
+            + '1755 järistyksen jälkeen suoraviivaisena ruutukaavana ja '
+            + 'järistyksenkestävällä "gaiola pombalina" -rakennustavalla.',
+          lahde: 'David Broad, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Baixa Pombalina',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Baixan uudisrakennusten järistyksenkestävyys '
+            + 'testattiin 1755 jälkeen?',
+        vaihtoehdot: [
+          'Rakennusten päälle pudotettiin painoja',
+          'Sotilasjoukkoja marssitettiin niiden ympärillä täristystä jäljittelemään',
+          'Rakennuksia ravisteltiin köysillä',
+          'Testejä ei tehty, vain rukoiltiin'
+        ],
+        oikea: 1,
+        fakta: 'Baixan "gaiola pombalina" -runkojen kestävyyttä testattiin '
+            + 'muun muassa marssittamalla sotilasjoukkoja rakennusten '
+            + 'ympärillä järistystä jäljittelemään.',
+      },
     },
   ],
   /*
@@ -17111,6 +17326,79 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * TAIDE (27.9.2026, Eurooppa-erä 8). MAA_KATEGORIAT[RUS]:n
+     * taide-nostot (Verikirkko, Pähkinänsärkijän ensi-ilta) ovat jo
+     * kaupungin omassa NAHTAVYYSJUTUT-listassa ('Verikirkko',
+     * 'Mariinski-teatteri') — Eremitaasin kokoelman synty on eri
+     * kohde, ei päällekkäinen.
+     */
+    {
+      id: 'taide',
+      nimi: 'Taide',
+      johdanto: 'Keisarinna osti sata kaksikymmentäviisi maalausta '
+          + 'Preussille kelvanneena hylkytavarana, ja niistä kasvoi '
+          + 'maailman suurimpia museoita.',
+      nostot: [
+        {
+          otsikko: 'Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle',
+          aika: '1764',
+          tiedosto: 'Argunov Catherine the Great.jpg',
+          teksti: 'Berliiniläinen kauppias Johann Ernst Gotzkowsky oli '
+            + 'koonnut 225 maalauksen kokoelman Preussin kuningas '
+            + 'Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen '
+            + 'kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. '
+            + 'Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko '
+            + 'kokoelman velan kuittaukseksi ja ripusti taulut '
+            + 'yksityiseen siipirakennukseensa Talvipalatsin vieressä — '
+            + 'rakennus sai nimen Eremitaasi, erakon asunto, koska sinne '
+            + 'pääsivät vain harvat kutsutut. Tästä ostosta syntyi '
+            + 'kokoelma, joka on nykyään yksi maailman suurimpia '
+            + 'taidemuseoita.',
+          lyhyt: 'Katariina Suuri osti 1764 preussilaiselta kauppiaalta '
+            + '225 maalausta, joista Eremitaasin kokoelma syntyi.',
+          selite: 'Katariina Suuri osti vuonna 1764 kauppias '
+            + 'Gotzkowskylta 225 maalausta, joista Eremitaasin '
+            + 'taidekokoelma sai alkunsa.',
+          lahde: 'Ivan Argunov, Wikimedia Commons (public domain)',
+          wiki: 'Hermitage Museum',
+        },
+        {
+          otsikko: 'Erakon kokoelma avattiin lopulta yleisölle',
+          aika: '1852',
+          tiedosto: 'Hermitage Museum - 2015 Dec - IMG 2027.jpg',
+          teksti: 'Lähes sata vuotta Eremitaasin kokoelma oli varattu '
+            + 'hoville ja harvoille kutsuvieraille — nimikin, erakon '
+            + 'asunto, kertoi kokoelman yksityisyydestä. Vasta 1852 '
+            + 'keisari Nikolai I avasi Uuden Eremitaasin rakennuksen '
+            + 'yleisölle, tosin aluksi tiukoin pääsyvaatimuksin: kävijän '
+            + 'piti pukeutua hännystakkiin. Isoisän matkan aikaan museo '
+            + 'on ollut avoinna jo kaksikymmentä vuotta, ja kokoelma '
+            + 'kasvaa koko ajan uusilla hankinnoilla ja lahjoituksilla.',
+          lyhyt: 'Eremitaasin sali; museo avattiin yleisölle vasta 1852, '
+            + 'lähes sata vuotta kokoelman perustamisen jälkeen.',
+          selite: 'Eremitaasin näyttelysali; museo avattiin yleisölle '
+            + 'vuonna 1852, lähes sata vuotta kokoelman perustamisen '
+            + 'jälkeen.',
+          lahde: 'Poudou99, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hermitage Museum',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Eremitaasin taidekokoelma sai alkunsa vuonna 1764?',
+        vaihtoehdot: [
+          'Katariina Suuri tilasi maalaukset suoraan taiteilijoilta',
+          'Katariina Suuri osti Preussin kuninkaalle kootun kokoelman '
+            + 'velan kuittaukseksi',
+          'Kokoelma perittiin Ruotsin kruunulta',
+          'Maalaukset ostettiin huutokaupasta Pariisista',
+        ],
+        oikea: 1,
+        fakta: 'Katariina Suuri osti vuonna 1764 kauppias Gotzkowskylta '
+            + '225 maalauksen kokoelman, joka oli alun perin koottu '
+            + 'Preussin kuninkaalle mutta jäi tältä maksamatta.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN PAINOPISTE":
@@ -18646,6 +18934,79 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Carol Szathmari 1854, Wikimedia Commons (public domain)',
         },
       ],
+    },
+    /*
+     * HISTORIA (27.9.2026, Eurooppa-erä 8). MAA_KATEGORIAT[ROU]:n
+     * historia-nostot ovat Transilvanian linnoista ja Vlad Seponaan
+     * liittyviä — ei kosketa Bukarestin riemukaarta tai Calea
+     * Victorieita. Ei päällekkäisyyttä kaupungin omien
+     * NAHTAVYYSJUTUT-kohteiden (Parlamenttipalatsi, Romanian
+     * ateneum jne.) kanssa — nämä ovat eri rakennuksia.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Sotilaat marssivat kotiin puisen riemukaaren ali vuonna '
+          + '1878, ja kaupunki alkoi kutsua itseään Pieneksi Pariisiksi.',
+      nostot: [
+        {
+          otsikko: 'Riemukaari pystytettiin viikoissa sotilaita varten',
+          aika: '1878',
+          tiedosto: 'Arcul de Triumf.JPG',
+          teksti: 'Vuonna 1878 Romania sai lopulta täyden itsenäisyytensä '
+            + 'Osmanivallasta Berliinin sopimuksessa Venäjän-Turkin sodan '
+            + 'jälkeen. Kun voitokkaat joukot palasivat Bukarestiin, '
+            + 'kaupunkiin pystytettiin nopeasti puinen ja kipsinen '
+            + 'riemukaari, jonka alta rivistöt marssivat juhlakulkueessa. '
+            + 'Väliaikainen kaari lahosi vuosien myötä ja korvattiin '
+            + 'myöhemmin uusilla versioilla — nykyinen, kivinen Arcul de '
+            + 'Triumf valmistui vasta 1930-luvulla — mutta ensimmäinen '
+            + 'kaari vuodelta 1878 loi perinteen, joka jatkuu yhä samalla '
+            + 'paikalla.',
+          lyhyt: 'Nykyinen kivinen Arcul de Triumf seisoo samalla '
+            + 'paikalla kuin vuoden 1878 väliaikainen puinen riemukaari.',
+          selite: 'Bukarestin Arcul de Triumf seisoo samalla paikalla '
+            + 'kuin ensimmäinen, vuonna 1878 pystytetty väliaikainen '
+            + 'puinen riemukaari.',
+          lahde: 'Vaivoda Vlad, Wikimedia Commons (CC BY-SA 3.0 ro)',
+          wiki: 'Arcul de Triumf',
+        },
+        {
+          otsikko: 'Voitonkadusta tuli Pikku Pariisin sydän',
+          aika: 'n. 1900',
+          tiedosto: 'Calea Victoriei around 1900.jpg',
+          teksti: 'Bukarestin pääkatu tunnettiin pitkään nimellä Podul '
+            + 'Mogoșoaiei, kunnes se nimettiin uudelleen Calea '
+            + 'Victorieiksi eli Voitonkaduksi vuoden 1878 '
+            + 'itsenäisyysvoiton kunniaksi. Kadun varrelle nousi '
+            + 'vuosikymmenten kuluessa ranskalaistyylisiä palatseja, '
+            + 'kauppoja ja kahviloita, ja kaupunki alkoi saada '
+            + 'lempinimen "Micul Paris", Pieni Pariisi — osittain siksi, '
+            + 'että moni romanialainen arkkitehti oli opiskellut juuri '
+            + 'Pariisissa.',
+          lyhyt: 'Calea Victoriei noin vuonna 1900; kadun ranskalaisvaikutteinen '
+            + 'arkkitehtuuri antoi Bukarestille lempinimen Pieni Pariisi.',
+          selite: 'Calea Victoriei noin vuonna 1900; kadun '
+            + 'ranskalaisvaikutteinen arkkitehtuuri antoi Bukarestille '
+            + 'lempinimen "Micul Paris", Pieni Pariisi.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+          wiki: 'Calea Victoriei',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä tapahtuman kunniaksi Bukarestin pääkatu nimettiin '
+            + 'Calea Victorieiksi eli Voitonkaduksi?',
+        vaihtoehdot: [
+          'Vuoden 1848 vallankumouksen',
+          'Vuoden 1878 itsenäisyysvoiton Berliinin sopimuksessa',
+          'Ensimmäisen maailmansodan päättymisen',
+          'Bukarestin valinnan pääkaupungiksi 1862',
+        ],
+        oikea: 1,
+        fakta: 'Katu nimettiin Calea Victorieiksi Romanian täyden '
+            + 'itsenäisyyden voiton kunniaksi Berliinin sopimuksessa '
+            + '1878.',
+      },
     },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
