@@ -345,7 +345,7 @@ namespace Matkakirja.Natiivi
         /// PÖLYHIUKKASET AURINGONSÄTEESSÄ (Päätoimittajan käsky 28.9. klo 16.3x): 34 pehmeää hiukkasta leijuu kuvun sisällä ja
         /// näkyy vain vinossa valokeilassa, kun ISS on auringossa (CupolaKerros.Valo.w, maan varjo); yöpuolella ei mitään.
         /// Keila tulee auringon suunnasta ruudulla (Valo.xy; suoraan edessä tai takana oletusvinous ylävasemmalta), joten se
-        /// kääntyy hitaasti ISS:n kiertäessä. Hiukkanen on kolme sisäkkäistä ympyrää (pehmeä reuna, isommat epätarkempia) ja
+        /// kääntyy hitaasti ISS:n kiertäessä. Hiukkanen on pehmeä säteittäinen hehku (PolyKuva, isommat epätarkempia) ja
         /// välähtää kääntyessään (tuike). Liike 0,6–2 pt/s ja kevyt pyörre; vähennetyllä liikkeellä paikallaan.
         /// A/B `astro kyyti polyt 0|1`.
         /// </summary>
@@ -392,6 +392,31 @@ namespace Matkakirja.Natiivi
             }).Every(33);
         }
 
+        /// <summary>
+        /// Hiukkasen kuva: pehmeä säteittäinen hehku (kaksi Gaussia, reunalla nolla), 64 × 64 valkoinen alfalla; väri ja kirkkaus
+        /// kärjen sävystä. Painter2D:n sisäkkäiset ympyrät näyttivät laitteella (cl12) renkailta, joten yksi kuvioitu neliö.
+        /// </summary>
+        static Texture2D polyKuva;
+        static Texture2D PolyKuva()
+        {
+            if (polyKuva != null) return polyKuva;
+            const int n = 64;
+            var t = new Texture2D(n, n, TextureFormat.RGBA32, false) { name = "Polyhiukkanen", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
+            var px = new Color32[n * n];
+            for (int y = 0; y < n; y++)
+                for (int x = 0; x < n; x++)
+                {
+                    float dx = (x + 0.5f) / n * 2f - 1f, dy = (y + 0.5f) / n * 2f - 1f, r2 = dx * dx + dy * dy;
+                    float a = r2 >= 1f ? 0f : Mathf.Clamp01(0.8f * Mathf.Exp(-r2 * 22f) + 0.2f * Mathf.Exp(-r2 * 5f)) * (1f - r2);
+                    px[y * n + x] = new Color32(255, 255, 255, (byte)Mathf.RoundToInt(a * 255f));
+                }
+            t.SetPixels32(px);
+            t.Apply(false, true);
+            return polyKuva = t;
+        }
+
+        readonly Vector4[] polyNakyvat = new Vector4[PolyMaara];
+
         void PiirraPolyt(MeshGenerationContext mgc)
         {
             float w = polyt.contentRect.width, h = polyt.contentRect.height;
@@ -406,8 +431,8 @@ namespace Matkakirja.Natiivi
             var normaali = new Vector2(-suunta.y, suunta.x);
             var keski = new Vector2(w * 0.5f, h * 0.45f);
             float sigma = KeilaOsuus * Mathf.Min(w, h);
-            var p = mgc.painter2D;
             bool liikkuu = !LinssiUi.VahennettyLiike();
+            int m = 0;
             for (int i = 0; i < PolyMaara; i++)
             {
                 var q = poly[i];
@@ -421,16 +446,23 @@ namespace Matkakirja.Natiivi
                 float tuike = liikkuu ? 0.6f + 0.4f * Mathf.Sin(1.3f * polyAika + 3f * q.w) : 0.8f;
                 float b = PolyPeitto * aurinko * keila * tuike;
                 if (b < 0.01f) continue;
-                var c = new Vector2(x, y);
-                for (int k = 0; k < 3; k++)
-                {
-                    float sade = q.z * (k == 0 ? 1.8f : k == 1 ? 1.1f : 0.55f);
-                    float a = b * (k == 0 ? 0.18f : k == 1 ? 0.35f : 0.8f);
-                    p.fillColor = new Color(1f, 0.96f, 0.88f, a);
-                    p.BeginPath();
-                    p.Arc(c, sade, Angle.Degrees(0f), Angle.Degrees(360f));
-                    p.Fill();
-                }
+                polyNakyvat[m++] = new Vector4(x, y, q.z, b);
+            }
+            if (m == 0) return;
+            var md = mgc.Allocate(m * 4, m * 6, PolyKuva());
+            for (int i = 0; i < m; i++)
+            {
+                var p = polyNakyvat[i];
+                // Kuvan neliö on hehkun halkaisija: hiukkasen säde × 2 × 2,4 (ydin noin kolmannes, loput pehmeää hehkua).
+                float puoli = p.z * 2.4f;
+                var tint = (Color32)new Color(1f, 0.96f, 0.88f, Mathf.Clamp01(p.w * 1.25f));
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x - puoli, p.y - puoli, Vertex.nearZ), tint = tint, uv = new Vector2(0, 1) });
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x + puoli, p.y - puoli, Vertex.nearZ), tint = tint, uv = new Vector2(1, 1) });
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x + puoli, p.y + puoli, Vertex.nearZ), tint = tint, uv = new Vector2(1, 0) });
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x - puoli, p.y + puoli, Vertex.nearZ), tint = tint, uv = new Vector2(0, 0) });
+                ushort k = (ushort)(i * 4);
+                md.SetNextIndex(k); md.SetNextIndex((ushort)(k + 1)); md.SetNextIndex((ushort)(k + 2));
+                md.SetNextIndex(k); md.SetNextIndex((ushort)(k + 2)); md.SetNextIndex((ushort)(k + 3));
             }
         }
 
