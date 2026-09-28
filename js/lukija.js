@@ -1822,7 +1822,7 @@ const KAPPALEEN_ALKU = 34;
 /** Avoin valikko: { elementti, nappi, paivita, pura } tai null. */
 let valikko = null;
 
-function suljeValikko() {
+function suljeLukijanValikko() {
   if (!valikko) return;
   const vanha = valikko;
   valikko = null;
@@ -1927,10 +1927,10 @@ function saatoRivit(doc) {
 /** Avaa (tai sulkee, jos jo auki) napin valikon valikkonapin alle. */
 function avaaValikko(nappi, valikkonappi) {
   if (valikko?.nappi === nappi) {
-    suljeValikko();
+    suljeLukijanValikko();
     return;
   }
-  suljeValikko();
+  suljeLukijanValikko();
   const doc = nappi.ownerDocument;
   // Tekstirivin napit ovat parikääreessä (kohdistaValikkonappi); valikko asemoidaan sen isäntään.
   const lahin = valikkonappi.parentElement ?? nappi.parentElement;
@@ -2059,7 +2059,7 @@ function avaaValikko(nappi, valikkonappi) {
 
   let nykyinen = -1;
   const paivita = () => {
-    if (!nappi.isConnected) { suljeValikko(); return; }
+    if (!nappi.isConnected) { suljeLukijanValikko(); return; }
     const soitin = omaSoitin(nappi);
     for (const b of kelausnapit) b.disabled = !soitin;
     const kappale = soitin?.tilanne?.().kappale ?? -1;
@@ -2087,7 +2087,7 @@ function avaaValikko(nappi, valikkonappi) {
     e.stopImmediatePropagation();
     if (e.cancelable) e.preventDefault();
     nieleEle(doc);
-    suljeValikko();
+    suljeLukijanValikko();
   };
   // Ikkunan kaappausvaihe: ennen kortin ja kartan omia kuuntelijoita.
   const ikkuna = doc.defaultView ?? doc;
