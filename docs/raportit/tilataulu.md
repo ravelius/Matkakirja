@@ -8,7 +8,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet (kuorma1 ≤ 8, ≤ 8 ydintä). Käännökset yksi kerrallaan Julkaisijan vuorolla matalalla prioriteetilla, simulaattoreita enintään yksi, ei agenttiparvia rinnakkain (enintään 1 agentti per rooli), ei raskaita paikallisia ajoja. Postivahti seuraa load1:tä joka kierroksella — jos kuorma1 > 10 yli 5 min, ilmoitetaan syyllinen prosessi Päätoimittajalle ja omistavalle roolille.
 
-**10:59 LOAD1 61,2 → 11:01 LOAD1 216 (NOUSI PALLOPOLTON PYSÄYTYKSESTÄ HUOLIMATTA).** Karttaseppä pysäytti pallo-poltton (SIGSTOP 11:00) mutta kuorma nousi silti. Uusi analyysi 11:01: **109 prosessia R/Rs-tilassa** (macOS load1 laskee näistä) — ei yhtä yksittäistä syyllistä vaan monen roolin yhtäaikainen kuormitus: `mds_stores` (Spotlight-indeksointi) 116 % CPU (todennäköisesti indeksoi pallopolton satojatuhansia uusia laattatiedostoja), ~30 Playwright/savuke-chromium-prosessia, Unity-simulaattoriprosessi, AWS S3 -synkronointi (Karttaseppä, tiilien vienti R2:een), testisarjat. Ilmoitettu Päätoimittajalle + Karttasepälle 11:01.
+**Kuormahuippu laantumassa: 61,2 (10:59) → 216 (11:01) → 114 (11:06).** R/Rs-tilaisia prosesseja 109→88. `mds_stores` (Spotlight) laski 116%→2,3% — ei enää syyllinen. Nyt suurimmat: `fseventsd` 76%, `mds` 36% (molemmat tiedostojärjestelmän indeksointia, todennäköisesti pallopolton satojentuhansien uusien tiedostojen jälkiselvittelyä — laskee itsestään), yksittäinen testi `sisaltopaketti.test.mjs` 100% CPU. Trendi laskeva, seurataan 3 min välein kunnes alle 10-15.
 
 ## 1) Sessiot
 
