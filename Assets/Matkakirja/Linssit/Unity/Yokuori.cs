@@ -35,6 +35,11 @@ namespace Matkakirja.Natiivi
         public const float ValojenVoima = 1.6f;
         /// <summary>A/B (`astro kyyti valot 0|1`): kaupunkien valot pois kuvaparia varten.</summary>
         public static bool ValotPois;
+        /// <summary>
+        /// Valojen osuus täydestä (A/B `astro kyyti valot <0…1>`, esim. 0.8): omistaja 28.9. klo 14.1x laitekuvasta "valot
+        /// palavat puhki. miltä näyttää, jos pidetään esim 80% peitolla?" — vertailu 1 / 0,8 / 0,6 samasta kulmasta.
+        /// </summary>
+        public static float ValojenOsuus = 1f;
         /// <summary>A/B (`astro kyyti kiilto 0|1`, `astro kyyti varjo 0|1`): heijastus ja päiväpuolen varjostus pois.</summary>
         public static bool KiiltoPois, VarjoPois;
         public const float KiillonVoima = 6f, VarjonVoima = 0.55f;
@@ -200,7 +205,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdAkseli, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
             materiaali.SetVector(IdNolla, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(1, 0, 0))).normalized);
             materiaali.SetVector(IdIta, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 1, 0))).normalized);
-            materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima);
+            materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima * ValojenOsuus);
             materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
             materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);
         }

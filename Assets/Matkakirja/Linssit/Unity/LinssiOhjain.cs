@@ -1402,7 +1402,13 @@ namespace Matkakirja.Natiivi
                             FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
-                        else if (a == "valot" && osat.Length > 3) Yokuori.ValotPois = osat[3] == "0";   // A/B kaupunkien valot
+                        else if (a == "valot" && osat.Length > 3)   // A/B kaupunkien valot: 0 | 1 | osuus 0…1 (esim. 0.8)
+                        {
+                            Yokuori.ValotPois = osat[3] == "0";
+                            if (!Yokuori.ValotPois && float.TryParse(osat[3], System.Globalization.NumberStyles.Float,
+                                    System.Globalization.CultureInfo.InvariantCulture, out float osuus))
+                                Yokuori.ValojenOsuus = Mathf.Clamp01(osuus);
+                        }
                         else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
                         else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
                         else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
