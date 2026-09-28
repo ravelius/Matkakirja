@@ -1455,8 +1455,8 @@ namespace Matkakirja
 
         /// <summary>Aloituslennon radan laatat (AloituslennonRata.Laatat: lähtökaupungin lähikuva ja matkanäkymä alkuun, kohteen
         /// lasku loppuun) samaan etusijajonoon kuin v3-käytävä.</summary>
-        public KaytavaLataus EsilataaAloitusrata(double lat0, double lon0, double lat1, double lon1) =>
-            EsilataaKaytava(AloituslennonRata.Laatat(lat0, lon0, lat1, lon1));
+        public KaytavaLataus EsilataaAloitusrata(double lat0, double lon0, double lat1, double lon1, double ohitus) =>
+            EsilataaKaytava(AloituslennonRata.Laatat(lat0, lon0, lat1, lon1, ohitus));
 
         KaytavaLataus EsilataaKaytava(List<LennonV3Kaytava.Laatta> laatat)
         {
@@ -1506,7 +1506,7 @@ namespace Matkakirja
                 if (kp == null || kp.id == null || !LennonAikajana.Kaupungit.ContainsKey(kp.id)) continue;
                 kohteita++;
                 var laatat = Nappula.Aloitusrata
-                    ? AloituslennonRata.Laatat(AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon)
+                    ? AloituslennonRata.Laatat(AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon, AloituslennonRata.OhitusKohteelle(kp.id))
                     : LennonV3Kaytava.Laatat(LennonV3.Reitti(kp.id, AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon));
                 // Aloitusrata: lähtö- ja kohdekaupungin tarkat tasot Z8–Z9 (lähikuva ja lasku); v3: alun 5 s.
                 foreach (var l in Nappula.Aloitusrata ? laatat.FindAll(x => x.Z >= 8) : LennonV3Kaytava.Esilammitettavat(laatat))

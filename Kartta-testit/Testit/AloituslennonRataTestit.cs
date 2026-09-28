@@ -19,12 +19,15 @@ namespace Matkakirja.Kartta.Testit
         /// <summary>Valintanäkymä (Aloitusnakyma: 30° N 17° E, koko pallo, v3–v7-lokit: 7 597 km).</summary>
         static readonly AloituslennonRata.Asento Napautus = new AloituslennonRata.Asento(30.0, 17.0, 7_597_000, 0, 0, 0);
 
-        static AloituslennonRata Rata(double lat, double lon)
+        static AloituslennonRata Rata(double lat, double lon, string id = null)
         {
             // Saapumisnäkymä kuten web (kaupunkinäkymä: katsepiste hieman koilliseen, 0,28 R, pohjoinen ylös).
             var loppu = new AloituslennonRata.Asento(lat + 0.6, lon + 0.8, 1_795_000, 0, 0, 0);
-            return new AloituslennonRata(LontooLat, LontooLon, lat, lon, Napautus, loppu, 1206.0 / 2622.0, 50.0, 150.0);
+            return new AloituslennonRata(LontooLat, LontooLon, lat, lon, Napautus, loppu, 1206.0 / 2622.0, 50.0, 150.0,
+                AloituslennonRata.OhitusKohteelle(id));
         }
+
+        static AloituslennonRata Rata((string Id, double Lat, double Lon) k) => Rata(k.Lat, k.Lon, k.Id);
 
         [Testi]
         static void AlkuJaLoppuTasmalleen()
@@ -45,7 +48,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 double pieninKoko = 9;
                 for (double t = 0.05; t <= AloituslennonRata.KestoS; t += 1.0 / 60)
                 {
@@ -65,7 +68,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 var a = r.Mitta(AloituslennonRata.KiriS); var b = r.Mitta(AloituslennonRata.OhitusLoppuS);
                 Oleta.Tosi(a.X < -0.25 && b.X > 0.2, $"{k.Id} kone vasemmalta oikealle: {a.X:F2} → {b.X:F2}");
                 double suurin = 0, ed = double.NegativeInfinity;
@@ -78,9 +81,32 @@ namespace Matkakirja.Kartta.Testit
                     ed = m.X;
                 }
                 Oleta.Tosi(suurin >= 0.3, $"{k.Id} ohitus läheltä: kone {suurin:P0} leveydestä");
-                Oleta.Tosi(Math.Abs(r.KoneenOsuus(AloituslennonRata.OhitusS) - AloituslennonRata.OhitusOsuus) < 0.02,
-                    $"{k.Id} ohitus reitin puolivälissä: {r.KoneenOsuus(AloituslennonRata.OhitusS):F3}");
+                Oleta.Tosi(Math.Abs(r.KoneenOsuus(AloituslennonRata.OhitusS) - r.Ohitus) < 0.02,
+                    $"{k.Id} ohitus ohituskohdassa {r.Ohitus:F3}: {r.KoneenOsuus(AloituslennonRata.OhitusS):F3}");
             }
+        }
+
+        [Testi]
+        static void OhitusMaanPaalla()
+        {
+            // v3b: ohituskohdat (maapolygoneista laskettu taulu) välillä 0,3–0,7; tuntematon kohde puolivälissä.
+            foreach (var kv in AloituslennonRata.OhitusMaalla)
+                Oleta.Tosi(kv.Value >= 0.3 && kv.Value <= 0.7, $"{kv.Key} ohitus {kv.Value}");
+            Oleta.Tosi(AloituslennonRata.OhitusKohteelle("ateena") == 0.47 && AloituslennonRata.OhitusKohteelle("rooma") == 0.5
+                       && AloituslennonRata.OhitusKohteelle(null) == 0.5, "ateena 0,47, muut 0,5");
+            // Ääripää (New York 0,685): kone silti ohituskohdassa ohitushetkellä ja perillä ajallaan.
+            var r = new AloituslennonRata(LontooLat, LontooLon, 37.98, 23.73, Napautus,
+                new AloituslennonRata.Asento(38.58, 24.53, 1_795_000, 0, 0, 0), 1206.0 / 2622.0, 50.0, 150.0, 0.685);
+            Oleta.Tosi(Math.Abs(r.KoneenOsuus(AloituslennonRata.OhitusS) - 0.685) < 0.02 && r.KoneenOsuus(AloituslennonRata.PysahdysS) == 1.0,
+                $"ohitus 0,685: {r.KoneenOsuus(AloituslennonRata.OhitusS):F3}");
+        }
+
+        [Testi]
+        static void KarkeatVaiheetKiriJaYlilento()
+        {
+            Oleta.Tosi(!AloituslennonRata.Karkea(2.0) && AloituslennonRata.Karkea(5.0) && !AloituslennonRata.Karkea(AloituslennonRata.OhitusS)
+                       && AloituslennonRata.Karkea(9.5) && !AloituslennonRata.Karkea(AloituslennonRata.SaapuminenS)
+                       && !AloituslennonRata.Karkea(AloituslennonRata.KosketusS), "karkea vain kiressä ja ylilennossa");
         }
 
         [Testi]
@@ -88,7 +114,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 for (double t = 0.05; t <= AloituslennonRata.KestoS; t += 1.0 / 60)
                 {
                     var m = r.Mitta(t);
@@ -110,7 +136,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 for (double t = AloituslennonRata.KiriS; t <= AloituslennonRata.KosketusS; t += 0.1)
                     Oleta.Tosi(r.MaaNakyvissa(t) >= 0.6, $"{k.Id} maa näkyy usvan läpi t={t:F1}: {r.MaaNakyvissa(t):P0}");
             }
@@ -121,7 +147,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 for (double t = AloituslennonRata.SaapuminenS; t <= AloituslennonRata.KosketusS - 0.3; t += 0.1)
                 {
                     var m = r.Mitta(t);
@@ -136,7 +162,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 for (double t = 0.3; t <= AloituslennonRata.AvausS + 0.3; t += 0.1)
                     Oleta.Tosi(r.Ruudussa(t, LontooLat, LontooLon, 0, out _, out _), $"{k.Id} Lontoo kuvassa t={t:F1}");
             }
@@ -147,7 +173,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 double dt = 1.0 / 60;
                 var ed = r.Kamera(0.4);
                 double edLiike = double.NaN;
@@ -172,7 +198,7 @@ namespace Matkakirja.Kartta.Testit
         {
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 double ed = 0;
                 for (double t = 0; t <= 15; t += 0.01) { double p = r.KoneenOsuus(t); Oleta.Tosi(p >= ed - 1e-12, $"{k.Id} monotoninen"); ed = p; }
                 Oleta.Tosi(r.KoneenOsuus(AloituslennonRata.KosketusS) > 0.998, $"{k.Id} kosketus perillä {r.KoneenOsuus(AloituslennonRata.KosketusS):F4}");
@@ -186,7 +212,7 @@ namespace Matkakirja.Kartta.Testit
                               + "| kosketus % / km | maa usvan läpi ohitus / saapuminen % (v2-raja)");
             foreach (var k in Kohteet)
             {
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 double pienin = 9, alfa = 0, ohitus = 0, sa0 = 999, sa1 = 0, matalin = 1e9, maaO = 1, maaS = 1, maaO2 = 1, maaS2 = 1;
                 for (double t = 0.05; t <= AloituslennonRata.KestoS; t += 1.0 / 60)
                 {
@@ -209,7 +235,7 @@ namespace Matkakirja.Kartta.Testit
             foreach (var k in Kohteet)
             {
                 if (k.Id != kohde && kohde != "kaikki") continue;
-                var r = Rata(k.Lat, k.Lon);
+                var r = Rata(k);
                 Console.WriteLine($"{k.Id}: reitti {r.ReittiM / 1000:F0} km, matkanopeus {r.Nopeus1:F2} / {r.Nopeus2:F2} kameran etäisyyttä/s");
                 Console.WriteLine("   t s | katse km | kall ° | suunta ° | kone x, y | koko % | α ° | korotus ° | kone km | kamera km | kone reitillä km | maa %");
                 for (double t = 0; t <= 15.001; t += 0.5)

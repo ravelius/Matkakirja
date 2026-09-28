@@ -19,7 +19,7 @@ namespace Matkakirja
     ///
     /// AIKAJANA (s): 0–4 AVAUS (napautusnäkymä 7 600 km → ~4 500 km ja kallistus 0° → 32°: silmä korkealla Saharan yllä,
     /// katse pohjoiseen, koko reitti ja Lontoo kuvassa) · 4–6,5 KIRI (kamera kiihtyy koneeseen, 4 500 → 30 km, kääntyy koneen
-    /// oikealle kyljelle) · 6,5–8,1 OHITUS (kone lipuu vasemmalta oikealle, lähimmillään 23 km, reitin puolivälissä) ·
+    /// oikealle kyljelle) · 6,5–8,1 OHITUS (kone lipuu vasemmalta oikealle, lähimmillään 23 km, maan päällä: OhitusMaalla) ·
     /// 8,1–10,9 YLILENTO (kamera nousee ja kiitää kohteen taakse, kääntyy katsomaan konetta edestä) · 10,9–13,2 SAAPUMINEN
     /// (kone etuviistosta ~200 km:stä, kamera kiertää laskeutumiskohtaa ja nousee: kosketus 13,2 s nähdään ~400 km:stä, jolloin
     /// kone on ruudulla pieni) · 13,2–15 PALJASTUS (nousu saapumisnäkymään).
@@ -49,8 +49,40 @@ namespace Matkakirja
         public const double AvausKallistus = 32.0, AvausEtaisyys = 1.9;
         /// <summary>Loppu pakotetaan saapumisnäkymään tästä alkaen (s).</summary>
         public const double PakotusS = 13.0;
-        /// <summary>Ohituksen kohta reitillä (osuus) ja koneen nopeus ohituksessa (m/s).</summary>
+        /// <summary>Ohituksen oletuskohta reitillä (osuus) ja koneen nopeus ohituksessa (m/s).</summary>
         public const double OhitusOsuus = 0.5, OhitusNopeus = 5000.0;
+
+        /// <summary>
+        /// OHITUS MAAN PÄÄLLÄ (v3b, laiteajo 28.9.2026: Lontoo → Ateena -reitin puoliväli 45,4° N 13,2° E on Adrianmerta, ja
+        /// vaalea meri näytti lähikuvassa usvalta): aloituskohteiden (LennonAikajana.Kaupungit) ohituskohta reittiosuutena,
+        /// lähin 0,5:tä, jonka ±25 km:n ikkuna reitillä on maata. Laskettu natiivin maapolygoneista (Maaraja:
+        /// maapolygonit-2026-09-24, Natural Earth 10m + GSHHG) skriptillä proto-3d/lokit/aloituslento-33/v3b/ohitus_maalla.py,
+        /// lähtö Lontoo 51,507° N 0,128° W. Muut kohteet, ja Rio (ei maata väliltä 0,3–0,7), ohittavat puolivälissä.
+        /// </summary>
+        public static readonly Dictionary<string, double> OhitusMaalla = new Dictionary<string, double>(StringComparer.Ordinal)
+        {
+            ["ateena"] = 0.47,         // 45,8° N 12,5° E Veneto (puoliväli Adrianmerellä)
+            ["moskova"] = 0.60,        // 55,5° N 21,7° E Liettua (puoliväli Itämerellä)
+            ["kairo"] = 0.55,          // 40,7° N 19,7° E Albania (puoliväli Adrianmerellä)
+            ["tanger"] = 0.535,        // 43,1° N 3,5° W Kantabria (puoliväli Biskajanlahdella)
+            ["newyork"] = 0.685,       // 49,2° N 55,1° W Newfoundland
+            ["sanfrancisco"] = 0.485,  // 63,8° N 71,0° W Baffininsaari
+            ["buenosaires"] = 0.645,   // 3,4° S 40,2° W Ceará
+            ["perth"] = 0.535,         // 14,1° N 74,7° E Karnataka
+        };
+
+        /// <summary>Kohteen ohituskohta (<see cref="OhitusMaalla"/>, muuten <see cref="OhitusOsuus"/>).</summary>
+        public static double OhitusKohteelle(string kohdeId) =>
+            kohdeId != null && OhitusMaalla.TryGetValue(kohdeId, out var u) ? u : OhitusOsuus;
+
+        /// <summary>
+        /// KEVYT LAATTAKYSYNTÄ NOPEISSA VAIHEISSA (v3b, laiteajo 28.9.: Cesiumin latausjonossa koko lennon 1 000–1 400 laattaa,
+        /// ylilennon alussa 1 445, ja saapumisen laatat valmistuivat vasta 14 s:ssa, joten saapuminen näkyi suttuisena): kiri ja
+        /// ylilento valitsevat laatat näyttövirheellä <see cref="KarkeaSse"/> (LiikeLaatat.LentoKarkeaSse, pohja 20), avaus,
+        /// ohitus ja saapuminen täydellä tarkkuudella. Nopeassa liikkeessä karkeampi taso ei erotu (S10: SSE 32 liikkeessä).
+        /// </summary>
+        public const float KarkeaSse = 40f;
+        public static bool Karkea(double t) => (t >= AvausS && t < KiriS - 0.5) || (t >= OhitusLoppuS + 0.3 && t < SaapuminenS - 0.4);
         /// <summary>Katseen suunta koneen kulkusuunnasta ohituksessa: −95° = kamera koneen oikealla, kone liikkuu vasemmalta oikealle.</summary>
         public const double OhitusTheta = -96.0;
         /// <summary>Koneen näkökulma avauksessa (° keulasta): etuviisto.</summary>
@@ -84,6 +116,8 @@ namespace Matkakirja
         }
 
         public readonly double Lat0, Lon0, Lat1, Lon1, ReittiM, Kuvasuhde, Fov, MaaKohteessa;
+        /// <summary>Ohituksen kohta reitillä (osuus, <see cref="OhitusKohteelle"/>).</summary>
+        public readonly double Ohitus;
         public readonly Asento Alku, Loppu;
         /// <summary>Matkanopeuden kertoimet ennen ja jälkeen ohituksen (1/s: kameran etäisyyksiä sekunnissa): loki ja testit.</summary>
         public double Nopeus1 { get; private set; }
@@ -101,10 +135,12 @@ namespace Matkakirja
         /// <param name="kuvasuhde">Ruudun leveys / korkeus.</param>
         /// <param name="fov">Pystykuvakulma (°).</param>
         /// <param name="maaKohteessa">Kohteen maan korkeus (m, liioiteltu).</param>
+        /// <param name="ohitus">Ohituksen kohta reitillä (osuus 0,3–0,7; <see cref="OhitusKohteelle"/>).</param>
         public AloituslennonRata(double lat0, double lon0, double lat1, double lon1, Asento alku, Asento loppu, double kuvasuhde,
-            double fov = 50.0, double maaKohteessa = 0.0)
+            double fov = 50.0, double maaKohteessa = 0.0, double ohitus = OhitusOsuus)
         {
             Lat0 = lat0; Lon0 = lon0; Lat1 = lat1; Lon1 = lon1; Alku = alku; Loppu = loppu;
+            Ohitus = Rajaa(ohitus, 0.3, 0.7);
             ReittiM = Math.Max(1000.0, LennonAikajana.ReittiM(lat0, lon0, lat1, lon1));
             Kuvasuhde = kuvasuhde > 0 ? kuvasuhde : 0.46;
             Fov = fov;
@@ -165,7 +201,7 @@ namespace Matkakirja
         void Kone(double[] jD)
         {
             dRef = jD;
-            // Matkanopeudet: ohituksen keskikohta reitin puolivälissä (OhitusS) ja pysähdys perillä (PysahdysS).
+            // Matkanopeudet: ohituksen keskikohta ohituskohdassa (Ohitus, OhitusS) ja pysähdys perillä (PysahdysS).
             const int ali = 4;
             double dt = 1.0 / (Hz * ali);
             double a1 = 0, b1 = 0, a2 = 0, b2 = 0;
@@ -174,7 +210,7 @@ namespace Matkakirja
                 double tm = (i + 0.5) * dt;
                 if (tm < OhitusS) { a1 += W1(tm) * Dref(tm) * dt; b1 += (Rullaus(tm) + OhitusNopeus * Wo(tm) + Saapuminen(tm)) * dt; }
             }
-            Nopeus1 = Math.Max(0.0, (OhitusOsuus * ReittiM - b1) / Math.Max(1e-6, a1));
+            Nopeus1 = Math.Max(0.0, (Ohitus * ReittiM - b1) / Math.Max(1e-6, a1));
             for (int i = 0; i < (int)(PysahdysS * Hz * ali); i++)
             {
                 double tm = (i + 0.5) * dt;
@@ -482,10 +518,10 @@ namespace Matkakirja
 
         /// <summary>
         /// Lennon laatat (LennonV3Kaytava.Laatta): ALKU (odotus odottaa) = koko reitin matkanäkymä Z4–Z5 ±1, lähtömaa Z6 ±1 ja
-        /// ohituksen lähikuva Z7–Z9 ±1 (reitin puolivälin ±15 km); LOPUT = kohteen lasku Z7–Z9 ±1 viimeiseltä 80 km:ltä ja
+        /// ohituksen lähikuva Z7–Z9 ±1 (ohituskohdan ±15 km); LOPUT = kohteen lasku Z7–Z9 ±1 viimeiseltä 80 km:ltä ja
         /// Z6 ±1 reitin loppukymmenykseltä. Aloitusnäytön esilämmitys ottaa näistä Z8–Z9 (ohitus ja kohde).
         /// </summary>
-        public static List<LennonV3Kaytava.Laatta> Laatat(double lat0, double lon0, double lat1, double lon1)
+        public static List<LennonV3Kaytava.Laatta> Laatat(double lat0, double lon0, double lat1, double lon1, double ohitus = OhitusOsuus)
         {
             var tulos = new List<LennonV3Kaytava.Laatta>();
             var nahty = new HashSet<long>();
@@ -495,7 +531,7 @@ namespace Matkakirja
                 var q = LennonV3.Isoympyralla(lat0, lon0, lat1, lon1, Rajaa(u, 0, 1));
                 foreach (int z in tasot) LennonV3Kaytava.Lisaa(tulos, nahty, q.Lat, q.Lon, z, 1, alku);
             }
-            for (int i = -2; i <= 2; i++) Lisaa(OhitusOsuus + i * 7_500.0 / L, true, 7, 8, 9);
+            for (int i = -2; i <= 2; i++) Lisaa(Rajaa(ohitus, 0.3, 0.7) + i * 7_500.0 / L, true, 7, 8, 9);
             for (int i = 0; i <= 40; i++) Lisaa(i / 40.0, true, 4, 5);
             for (int i = 0; i <= 4; i++) Lisaa(i * 0.02, true, 6);
             for (int i = 0; i <= 10; i++) Lisaa(1 - i * 0.01, false, 6);
