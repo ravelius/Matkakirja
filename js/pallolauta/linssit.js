@@ -623,6 +623,19 @@ export function luoLinssit({
         tila.mesh.rotation.y = (tila.pinnanKierto ?? 0) + (Number(kulma) || 0);
         lauta?.heraa?.();
       },
+      /**
+       * Kuoren säde pinnan säteinä ilman uutta meshiä (ISS:n kyyti laskee
+       * astronautin pilvikuoren 64 km:stä noin 8 km:iin, ettei sen reuna
+       * nouse horisontin yläpuolelle). Kirjoitetaan vain muuttuessa.
+       */
+      sade: (r) => {
+        if (tila.peruttu || !tila.mesh || !(r > 0)) return;
+        tila.pinnanSkaala ??= tila.mesh.scale.x / sade;
+        const uusi = tila.pinnanSkaala * r;
+        if (Math.abs(tila.mesh.scale.x - uusi) < 1e-7) return;
+        tila.mesh.scale.setScalar(uusi);
+        lauta?.heraa?.();
+      },
     };
   };
 

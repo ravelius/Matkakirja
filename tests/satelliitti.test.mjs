@@ -172,10 +172,16 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
    * loputtomat animaatiot ovat yhä kiellettyjä, ja tämä mitta on se,
    * joka pitää listan lyhyenä: uusi infinite ei mene läpi ilman että
    * se kirjataan tähän.
+   *
+   * ISS:N KYYTI (omistaja 28.9.2026, LIVE-merkki; Linssisepän suositus
+   * luku 6): LIVE-pillerin punainen piste sykkii 0,9 s:n välein ja
+   * Cupolan ulko-osat ja heijastus huojuvat hitaasti — kaikki kolme vain
+   * kyydin omassa kerroksessa (.iss-kyyti), eivät pisteissä.
    */
   const ilmanLeijuntaa = tyyli
     .replace(/animation:\s*satelliitti-pulu-leijuu[^;]*infinite/g, '')
-    .replace(/animation:\s*livia-astronautti-leijuu[^;]*infinite/g, '');
+    .replace(/animation:\s*livia-astronautti-leijuu[^;]*infinite/g, '')
+    .replace(/animation:\s*iss-kyyti-(live|ulko|heijastus)\b[^;]*infinite[^;]*/g, '');
   assert.ok(!/animation:[^;]*infinite/.test(ilmanLeijuntaa), 'hehku ei saa sykkiä jatkuvasti');
   // Liikkeenvähennys: vakaa hehku ilman ilmestymisanimaatiotakin.
   assert.match(tyyli, /prefers-reduced-motion[\s\S]*satelliitti-piste \{ animation: none/);
