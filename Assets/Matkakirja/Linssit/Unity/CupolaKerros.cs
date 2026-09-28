@@ -105,7 +105,7 @@ namespace Matkakirja.Natiivi
             aurinkoAika = Time.unscaledTime;
             var gt = g.transform;
             Vector3 a = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
-                Aurinko.AurinkoEcef(DateTime.UtcNow))).normalized;
+                Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
             double ylos = Vector3.Dot(gt.TransformDirection(IssYlos).normalized, a);
             Vector3 k = kamera.transform.InverseTransformDirection(a);
             var r = CupolanValo.Ruudulle(k.x, k.y, k.z);

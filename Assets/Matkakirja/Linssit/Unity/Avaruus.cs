@@ -201,7 +201,7 @@ namespace Matkakirja.Natiivi
             double3 keskus = g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             kaari.SetVector("_Keskus", gt.TransformPoint((Vector3)(float3)keskus));
             kaari.SetVector("_Akseli", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
-            kaari.SetVector("_Aurinko", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(DateTime.UtcNow))).normalized);
+            kaari.SetVector("_Aurinko", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized);
         }
 
         void OnDestroy()

@@ -1399,6 +1399,8 @@ namespace Matkakirja.Natiivi
                             FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
+                        else if (a == "valot" && osat.Length > 3) Yokuori.ValotPois = osat[3] == "0";   // A/B kaupunkien valot
+                        else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
                         else if (a == "pilvet" && osat.Length > 3)
                         {
                             AstronauttiKerros.PilvetKyydissa = osat[3];
@@ -1586,6 +1588,42 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(kuvaus)) return "-";
             int i = kuvaus.LastIndexOf("VU ", StringComparison.Ordinal);
             return i >= 0 ? kuvaus.Substring(i) : kuvaus;
+        }
+
+        /// <summary>
+        /// Testikello ISS:lle ja auringolle (yökuori, ilmakehän kaari, Cupolan valo): "yo-eurooppa" hyppää seuraavaan hetkeen
+        /// (enintään 36 h), jolloin ISS on Euroopan yllä (lat 42–60, lon −5…30) ja aurinko sen alapisteessä alle −12°
+        /// (kaupunkien valot näkyvät); "+H" siirtää H tuntia; "pois" palauttaa oikean kellon. Kello kulkee siirron jälkeen.
+        /// </summary>
+        static string KyydinKello(string arvo)
+        {
+            if (arvo == "pois") { Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow; return "oikea aika"; }
+            TimeSpan siirto;
+            if (arvo.StartsWith("+") && double.TryParse(arvo.Substring(1), System.Globalization.NumberStyles.Float,
+                    System.Globalization.CultureInfo.InvariantCulture, out double tunnit))
+                siirto = TimeSpan.FromHours(tunnit);
+            else if (arvo == "yo-eurooppa")
+            {
+                var nyt = DateTime.UtcNow;
+                DateTime? loyto = null;
+                for (int s = 0; s < 36 * 3600 && loyto == null; s += 20)
+                {
+                    var t = nyt.AddSeconds(s);
+                    var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
+                    if (p.Lat < 42 || p.Lat > 60 || p.Lon < -5 || p.Lon > 30) continue;
+                    var aur = Aurinko.AurinkoEcef(t);
+                    double la = p.Lat * Math.PI / 180, lo = p.Lon * Math.PI / 180;
+                    double sinKorkeus = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
+                    if (sinKorkeus < Math.Sin(-12 * Math.PI / 180)) loyto = t;
+                }
+                if (loyto == null) return "ei yöylitystä Euroopan yllä 36 tunnin sisällä";
+                siirto = loyto.Value.AddSeconds(-20) - nyt;
+            }
+            else return "käyttö: astro kyyti kello yo-eurooppa|+H|pois";
+            Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow + siirto;
+            var k = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            var paikka = Matkakirja.Linssit.Iss.IssNyt.Paikka(k);
+            return $"{k:yyyy-MM-dd HH:mm:ss} UTC (siirto {siirto.TotalHours:F2} h), ISS ({paikka.Lat:F2}, {paikka.Lon:F2})";
         }
 
         internal void Kirjaa(string teksti)
