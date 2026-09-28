@@ -17,7 +17,6 @@
 // epäterävä, ulko-osat vähemmän, heijastus lasin etäisyydeltä, aavistus raetta; ei ajonaikaista sumennusta).
 // A/B: astro kyyti cupola uusi|terava|3d|vanha (terava = Codexin alkuperäinen).
 using System;
-using System.Globalization;
 using Matkakirja.Linssit.Iss;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -28,9 +27,8 @@ namespace Matkakirja.Natiivi
     {
         const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
         const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
-        static readonly CultureInfo Fi = CultureInfo.GetCultureInfo("fi-FI");
 
-        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, turva, piste;
+        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, turva, pilleri, piste;
         readonly Label live, tieto;
         bool kuvatHaettu, kuva2Haettu, sykkii;
         IVisualElementScheduledItem heilunta, syke;
@@ -62,7 +60,7 @@ namespace Matkakirja.Natiivi
             kehys = Rakenne.El("mk-isskyyti__kehys", juuri, PickingMode.Ignore);
             heijastus = Rakenne.El("mk-isskyyti__heijastus", juuri, PickingMode.Ignore);
             turva = Rakenne.El("mk-isskyyti__turva", juuri, PickingMode.Ignore);
-            var pilleri = Rakenne.El("mk-isskyyti__tieto", turva, PickingMode.Ignore);
+            pilleri = Rakenne.El("mk-isskyyti__tieto", turva, PickingMode.Ignore);
             piste = Rakenne.El("mk-isskyyti__piste", pilleri, PickingMode.Ignore);
             live = Rakenne.Teksti("LIVE", "mk-isskyyti__live", pilleri);
             tieto = Rakenne.Teksti("", "mk-isskyyti__teksti", pilleri);
@@ -78,18 +76,19 @@ namespace Matkakirja.Natiivi
         static void Poistu() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi?.PoistuKyydista();
 
         /// <summary>AstronauttiKerros.KyytiKasittelija.</summary>
-        public void Aseta(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio)
+        public void Aseta(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
         {
             bool oliAuki = Tila != KyydinTila.Kauko;
             Tila = tila;
             bool auki = tila != KyydinTila.Kauko;
             juuri.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
-            if (auki)
-                tieto.text = string.Format(Fi, "{0}ISS · {1:N0} km · {2:N0} km/h{3}", arvio ? "" : "· ", korkeusKm,
-                    Math.Round(nopeusKmh / 10) * 10, arvio ? " · rata-arvio" : "");
-            var liveNakyy = auki && !arvio ? DisplayStyle.Flex : DisplayStyle.None;
-            piste.style.display = liveNakyy; live.style.display = liveNakyy;
-            Syke(auki && !arvio);
+            // Nopeutettuna (web tietorivi kertoimella): "● 100× · ISS · …" ilman LIVE-sanaa, piste harmaa eikä syki.
+            var rivi = KyydinTeksti.Tietorivi(korkeusKm, nopeusKmh, arvio, aika.Nopeutettu ? aika.Nopeus : (double?)null);
+            if (auki) { tieto.text = rivi.Teksti; live.text = rivi.Merkki ?? ""; }
+            var merkkiNakyy = auki && rivi.Merkki != null ? DisplayStyle.Flex : DisplayStyle.None;
+            piste.style.display = merkkiNakyy; live.style.display = merkkiNakyy;
+            pilleri.EnableInClassList("mk-isskyyti__tieto--nopeutettu", auki && aika.Nopeutettu);
+            Syke(auki && rivi.Live);
             bool ikkuna = tila == KyydinTila.Ikkuna;
             if (ikkuna && !kuvatHaettu && CupolaKerros.Vanha) HaeKuvat();
             if (auki && !kuva2Haettu && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva) HaeKuvat2();
@@ -187,6 +186,6 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Linssi vaihtui tai suljettiin: kyydin UI pois.</summary>
-        public void Pois() { if (Tila != KyydinTila.Kauko) Aseta(KyydinTila.Kauko, 0, 0, false); }
+        public void Pois() { if (Tila != KyydinTila.Kauko) Aseta(KyydinTila.Kauko, 0, 0, false, default); }
     }
 }

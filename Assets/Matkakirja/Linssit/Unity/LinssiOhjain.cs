@@ -1610,11 +1610,12 @@ namespace Matkakirja.Natiivi
         /// Testikello ISS:lle ja auringolle (yökuori, ilmakehän kaari, Cupolan valo, taivas): "yo-eurooppa" hyppää seuraavaan
         /// syvän yön ylitykseen Keski-Euroopan yllä (kaupunkien valot, tähdet ja Kuu), "hamara" iltahämärään kohti yötä
         /// (varjostus, hämärän kaari, syttyvät valot), "kiilto" auringon heijastukseen vedestä; "+H" siirtää H tuntia; "pois"
-        /// palauttaa oikean kellon. Kello kulkee siirron jälkeen.
+        /// palauttaa oikean kellon. Kello kulkee siirron jälkeen. Siirto asettaa simuloidun kellon LIVE-hetken (IssNyt.Simu):
+        /// kello hyppää hetkeen LIVE:nä, nopeutus (astro kyyti nopeus) juoksee siitä ja Palaa LIVE palaa siihen.
         /// </summary>
         static string KyydinKello(string arvo)
         {
-            if (arvo == "pois") { Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow; return "oikea aika"; }
+            if (arvo == "pois") { Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(TimeSpan.Zero); return "oikea aika"; }
             TimeSpan siirto;
             if (arvo.StartsWith("+") && double.TryParse(arvo.Substring(1), System.Globalization.NumberStyles.Float,
                     System.Globalization.CultureInfo.InvariantCulture, out double tunnit))
@@ -1693,7 +1694,7 @@ namespace Matkakirja.Natiivi
                 siirto = loyto.Value.AddSeconds(30) - nyt;
             }
             else return "käyttö: astro kyyti kello yo-eurooppa|hamara|kiilto|paiva-eurooppa|+H|pois";
-            Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow + siirto;
+            Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(siirto);
             var k = Matkakirja.Linssit.Iss.IssNyt.Kello();
             var paikka = Matkakirja.Linssit.Iss.IssNyt.Paikka(k);
             return $"{k:yyyy-MM-dd HH:mm:ss} UTC (siirto {siirto.TotalHours:F2} h), ISS ({paikka.Lat:F2}, {paikka.Lon:F2}), " +

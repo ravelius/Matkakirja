@@ -30,8 +30,9 @@ namespace Matkakirja.Natiivi
         public static Action<Havaintokohde, int> KuvaKasittelija;
         /// <summary>Avaruussumun harson peitto 0…1.</summary>
         public static Action<double> SumuKasittelija;
-        /// <summary>ISS:n kyyti (tila, korkeus km, nopeus km/h, rata-arvio): Cupola-kehys, tietorivi ja ✕.</summary>
-        public static Action<KyydinTila, double, double, bool> KyytiKasittelija;
+        /// <summary>ISS:n kyyti (tila, korkeus km, nopeus km/h, rata-arvio, simuloitu aika): Cupola-kehys, tietorivi, nopeutus,
+        /// "Lennä kohteen ylle" ja ✕.</summary>
+        public static Action<KyydinTila, double, double, bool, KyydinAika> KyytiKasittelija;
 
         const double MaanSade = 6_371_000, Nosto = 5000;
         const float Hehku = 28f, IssMerkki = 8f, Etuna = 0.02f;
@@ -254,7 +255,7 @@ namespace Matkakirja.Natiivi
 
         Vector3 issPinta, issYlos = Vector3.up, issEteen = Vector3.forward;
 
-        public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio)
+        public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
         {
             kyyti = tila;
             if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();
@@ -279,7 +280,7 @@ namespace Matkakirja.Natiivi
                 : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
-            KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
+            KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio, aika);
         }
 
         /// <summary>
@@ -359,7 +360,7 @@ namespace Matkakirja.Natiivi
         public void Pois()
         {
             if (cupola != null) Destroy(cupola.gameObject);
-            KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false);
+            KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false, default);
             AvausKasittelija?.Invoke(AvauksenVaihe.Pois);
             SumuKasittelija?.Invoke(0);
             Destroy(gameObject);
@@ -442,7 +443,9 @@ namespace Matkakirja.Natiivi
                 Vector3 paikka = gt.TransformPoint(p.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                bool edessa = kyyti != KyydinTila.Ikkuna && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
+                // Ikkunassa ja kohteen yllä silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
+                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde
+                    && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
                 if (p.juuri.gameObject.activeSelf != edessa) p.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
                 float lahella = etaisyys * (1f - Etuna);

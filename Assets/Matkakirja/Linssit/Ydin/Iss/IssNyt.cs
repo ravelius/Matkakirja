@@ -1,7 +1,8 @@
 // ISS NYT (ISS-linssin suunnitelma docs/raportit/iss-linssi-suunnitelma-20260926.md, omistaja hyväksyi 14.4x): ISS:n
 // todellinen paikka ja maajälki UTC-kellosta. Puhdas C#. TLE tulee Unity-puolelta (ämpäri → välimuisti → buildin
 // tiedosto, Siirtosepän iss-tle.json #3334); Aseta pitää uusimman epookin. Kun TLE on yli 30 vrk vanha tai sitä ei ole,
-// käytetään havainnollista 51,6°:n rataa oikealla kierrosajalla (suunnitelma, "Kun verkkoa ei ole").
+// käytetään havainnollista 51,6°:n rataa oikealla kierrosajalla (suunnitelma, "Kun verkkoa ei ole"). Aika on simuloitu
+// (Simu: nopeutus ja ylilento, web iss-rata.js SIMUKELLO).
 using System;
 using Matkakirja.Linssit.Aikajana;
 
@@ -21,8 +22,15 @@ namespace Matkakirja.Linssit.Iss
         static Tle tle;
         static Rata rata;
 
-        /// <summary>UTC-kello (testit korvaavat).</summary>
-        public static Func<DateTime> Kello = () => DateTime.UtcNow;
+        /// <summary>
+        /// Simuloitu aika (web SIMUKELLO, omistaja 28.9.2026 klo 12.1x): LIVE, nopeutus 10×–1000×, Palaa LIVE ja ylilennon
+        /// kelaus; testikellon siirto (astro kyyti kello) asettaa LIVE-hetken. Unity vaihtaa tilalle kehyskellon
+        /// (Kehyskello: seinäkello kerran kehyksessä), jotta kaikki kerrokset saavat nopeutettunakin saman hetken.
+        /// </summary>
+        public static Simukello Simu = new Simukello(() => DateTime.UtcNow);
+
+        /// <summary>UTC-kello: simuloitu aika, jota rata, aurinko, kaari, yökuori ja taivas lukevat (testit korvaavat).</summary>
+        public static Func<DateTime> Kello = () => Simu.Nyt();
 
         public static Tle Tle => tle;
         /// <summary>Kasvaa, kun TLE vaihtuu (kutsuja laskee maajäljen uudelleen).</summary>

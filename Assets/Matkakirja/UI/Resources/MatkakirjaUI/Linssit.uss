@@ -3142,3 +3142,8 @@
     margin-right: 5px;
     color: rgb(93, 255, 168);
 }
+
+/* Nopeutettuna (web .iss-kyyti-tieto-nopeutettu): "● 100× · ISS …", piste harmaa eikä syki, napautus = Palaa LIVE. */
+.mk-isskyyti__tieto--nopeutettu .mk-isskyyti__piste {
+    background-color: rgb(150, 170, 160);
+}

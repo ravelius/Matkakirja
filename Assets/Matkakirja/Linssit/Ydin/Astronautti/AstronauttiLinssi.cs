@@ -35,10 +35,11 @@ namespace Matkakirja.Linssit.Astronautti
         void KuvaPois();
         void Pois();
         /// <summary>
-        /// ISS:n kyyti (Iss.IssKyyti): tila, johon ollaan menossa, ja tietorivin arvot (korkeus km, nopeus km/h, rata-arvio
-        /// ilman tuoretta TLE:tä). Kutsutaan tilan vaihtuessa ja kerran sekunnissa kyydissä.
+        /// ISS:n kyyti (Iss.IssKyyti): tila, johon ollaan menossa, tietorivin arvot (korkeus km, nopeus km/h, rata-arvio
+        /// ilman tuoretta TLE:tä) ja simuloitu aika (nopeutus, kelaus, ylilennon rivi). Kutsutaan tilan, nopeuden tai
+        /// ylilennon vaihtuessa ja kyydissä kerran sekunnissa (nopeutettuna 4 kertaa sekunnissa).
         /// </summary>
-        void Kyyti(Iss.KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio);
+        void Kyyti(Iss.KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, Iss.KyydinAika aika);
     }
 
     public sealed class AstronauttiLinssi : ILinssi
@@ -180,7 +181,7 @@ namespace Matkakirja.Linssit.Astronautti
         readonly Iss.IssKyyti kyyti = new Iss.IssKyyti();
         double kentta0 = double.NaN, tietoAika = -1;
         Iss.KyydinTila ilmoitettu = Iss.KyydinTila.Kauko;
-        bool kuvataan;
+        bool kuvataan, ilmoitettuLive = true;
 
         public Iss.KyydinTila Kyyti => kyyti.Tila;
         public bool Kyydissa => kyyti.Kyydissa;
@@ -189,24 +190,36 @@ namespace Matkakirja.Linssit.Astronautti
             new Iss.IssHetki(paikka, Iss.IssNyt.KorkeusKm(utc) * 1000, Iss.IssNyt.Suuntima(utc));
 
         /// <summary>
-        /// ISS:ää napautettiin (AstronauttiKerros, 44 pt): kauko → seuranta → ikkuna → seuranta. Ei avauksen aikana eikä kuvan
-        /// ollessa auki.
+        /// ISS:ää napautettiin (AstronauttiKerros, 44 pt): kauko → seuranta → ikkuna → seuranta (kohteen yltä seurantaan).
+        /// Ei avauksen aikana eikä kuvan ollessa auki.
         /// </summary>
         public void NapautaIss()
         {
             if (!Auki || Vaihe == AvauksenVaihe.Musta || AvoinKuva != null) return;
             var utc = Iss.IssNyt.Kello();
-            var k = y.Kamera;
             if (!kyyti.Kyydissa) kentta0 = y.Nakokulma;
-            var nykyinen = Iss.IssKuvakulma.Kauko(k.Lat, k.Lon, k.Korkeus, k.Kallistus, y.Suuntima);
-            kyyti.Napauta(nykyinen, Hetki(utc, Iss.IssNyt.Paikka(utc)), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
+            kyyti.Napauta(Nykyinen(), Hetki(utc, Iss.IssNyt.Paikka(utc)), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
             tietoAika = -1;
         }
 
-        /// <summary>✕ kyydissä: paluu kaukonäkymään ISS:n alapisteen ylle lepokorkeudelle.</summary>
+        /// <summary>
+        /// Siirtymän lähtöasento: kyydissä kyydin oma viimeisin asento (web viimeisin; pelikameran näkymä ei kerro
+        /// katsekorkeutta, joten seurannasta lähtenyt siirtymä alkoi 420 km liian matalalta), muuten pelaajan kamera.
+        /// </summary>
+        Kuvakulma Nykyinen()
+        {
+            if (kyyti.Kyydissa && kyyti.OnAsento) return kyyti.Viimeisin;
+            var k = y.Kamera;
+            return Iss.IssKuvakulma.Kauko(k.Lat, k.Lon, k.Korkeus, k.Kallistus, y.Suuntima);
+        }
+
+        /// <summary>✕ kyydissä: paluu kaukonäkymään ISS:n alapisteen ylle lepokorkeudelle; aika palaa LIVE:ksi paluulennon aikana.</summary>
         public void PoistuKyydista()
         {
-            if (!Auki || !kyyti.Kyydissa) return;
+            if (!Auki || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko) return;
+            // Web poistu: ylilento unohtuu ja aika kelautuu todelliseen hetkeen paluulennon ajassa (ei hyppyä).
+            lento = null;
+            Iss.IssNyt.Simu.PalaaLive(Iss.IssKyyti.KaukoonS, y.VahennettyLiike);
             kyyti.Poistu(avaus * Iss.IssKyyti.PaluuKorkeus, Nyt / 1000, y.VahennettyLiike);
             tietoAika = -1;
         }
@@ -214,19 +227,33 @@ namespace Matkakirja.Linssit.Astronautti
         void PaivitaKyyti(double nyt, DateTime utc, LatLon paikka)
         {
             if (!kyyti.Kyydissa) return;
+            // Ylilento perillä (kelaus ajettu loppuun, ei keskeytetty): kamera kääntyy kohteeseen pitkällä objektiivilla.
+            var l = lento;
+            if (l != null && l.Ylilento.HasValue && !l.Perilla && l.Id != 0 && Iss.IssNyt.Simu.ValmisId == l.Id
+                && kyyti.Tila != Iss.KyydinTila.Kauko)
+            {
+                l.Perilla = true;
+                kyyti.Kohteeseen(new LatLon(l.Kohde.Lat, l.Kohde.Lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
+                tietoAika = -1;
+            }
             double perus = double.IsNaN(kentta0) ? y.Nakokulma : kentta0;
             if (!kyyti.Paivita(nyt, Hetki(utc, paikka), perus, out var asento, out double kentta, out bool paluuValmis)) return;
             y.Kuvaa(asento);
             y.Kenttakulma(kentta);
             kuvataan = true;
             if (paluuValmis) { LopetaKyyti(); return; }
-            // Tietorivi kerran sekunnissa ja tilan vaihtuessa.
-            if (ilmoitettu != kyyti.Tila || nyt - tietoAika >= 1 || tietoAika < 0)
+            // Tietorivi kerran sekunnissa (nopeutettuna 4 kertaa: kerroin ja ylilennon aika muuttuvat), tilan vaihtuessa ja heti,
+            // kun kelaus palaa LIVE:ksi (webissä pilleri jäi sekunniksi kertoimeen).
+            var simu = Iss.IssNyt.Simu;
+            bool live = simu.Live;
+            if (ilmoitettu != kyyti.Tila || live != ilmoitettuLive || nyt - tietoAika >= (live ? 1 : 0.25) || tietoAika < 0)
             {
                 ilmoitettu = kyyti.Tila;
+                ilmoitettuLive = live;
                 tietoAika = nyt;
                 double h = Iss.IssNyt.KorkeusKm(utc);
-                nakyma.Kyyti(kyyti.Tila, h, Iss.IssNyt.NopeusKmh(h), Iss.IssNyt.Laatu(utc) != Iss.RadanLaatu.Tarkka);
+                nakyma.Kyyti(kyyti.Tila, h, Iss.IssNyt.NopeusKmh(h), Iss.IssNyt.Laatu(utc) != Iss.RadanLaatu.Tarkka,
+                    Iss.KyydinAika.Kellosta(simu, YlilennonRivi()));
             }
         }
 
@@ -242,7 +269,73 @@ namespace Matkakirja.Linssit.Astronautti
             kentta0 = double.NaN;
             if (ilmoitettu == Iss.KyydinTila.Kauko) return;
             ilmoitettu = Iss.KyydinTila.Kauko;
-            nakyma.Kyyti(Iss.KyydinTila.Kauko, 0, 0, false);
+            nakyma.Kyyti(Iss.KyydinTila.Kauko, 0, 0, false, default);
+        }
+
+        // ---- Nopeutus ja "Lennä kohteen ylle" (omistaja 28.9.2026 klo 12.1x; web iss-kyyti-nakyma.js asetaNopeus ja
+        // lennaKohteeseen, commit 891958e17). Aika on IssNyt.Simu, jota kaikki kerrokset lukevat IssNyt.Kellon kautta. ----
+
+        sealed class Lento
+        {
+            public Havaintokohde Kohde;
+            /// <summary>null = ei ylilentoa hakuajan sisällä (rivi kertoo sen).</summary>
+            public Iss.Ylilento? Ylilento;
+            public int Id;
+            public bool Perilla;
+        }
+
+        Lento lento;
+        List<Havaintokohde> ylilennonKohteet;
+        List<Havaintokohde> Ylikohteet => ylilennonKohteet ??= Iss.Ylilennot.Kohteet(aineisto?.Kohteet);
+
+        /// <summary>"Lennä kohteen ylle" -valikon kohteet: Euroopan NASA-kohteet nimen mukaan (web ylilennonKohteet).</summary>
+        public IReadOnlyList<Havaintokohde> YlilennonKohteet => Ylikohteet;
+
+        /// <summary>Viimeisin ylilento: kohde, hetki (null = ei ylilentoa) ja onko perillä (testikomento astro kyyti tila).</summary>
+        public (Havaintokohde Kohde, Iss.Ylilento? Hetki, bool Perilla)? ViimeisinLento =>
+            lento == null ? ((Havaintokohde, Iss.Ylilento?, bool)?)null : (lento.Kohde, lento.Ylilento, lento.Perilla);
+
+        /// <summary>Nopeutus (web asetaNopeus): 1 = Palaa LIVE (pehmeä kelaus todelliseen hetkeen), 10, 100 tai 1000. Ylilento unohtuu.</summary>
+        public bool AsetaNopeus(int kerroin)
+        {
+            if (!Auki || Array.IndexOf(Iss.Simukello.Nopeudet, kerroin) < 0) return false;
+            lento = null;
+            Iss.IssNyt.Simu.AsetaNopeus(kerroin, y.VahennettyLiike);
+            tietoAika = -1;
+            return true;
+        }
+
+        /// <summary>
+        /// "Lennä kohteen ylle" (web lennaKohteeseen): SGP4:llä seuraava todellinen ylilento, kellonaika näkyviin ja kelaus sinne
+        /// (kiihdytys noin 1000×:iin, hidastus 1×:iin); maa pyörii alla, ei teleporttia. Kamera seuraa ISS:ää kelauksen ajan
+        /// (ikkunasta ja kohteen yltä ensin seurantaan) ja kääntyy perillä kohteeseen. Vain kyydissä. null = ei kyydissä,
+        /// tuntematon kohde tai ei ylilentoa 48 tunnin sisällä (rivi kertoo sen).
+        /// </summary>
+        public Iss.Ylilento? LennaKohteeseen(string tunnus, bool valoisa = false)
+        {
+            if (!Auki) return null;
+            var k = Ylikohteet.Find(x => x.Tunnus == tunnus);
+            if (k == null || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko) return null;
+            var yl = Iss.Ylilennot.Seuraava(k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
+            tietoAika = -1;
+            if (yl == null) { lento = new Lento { Kohde = k }; return null; }
+            if (kyyti.Tila != Iss.KyydinTila.Seuranta) NapautaIss();
+            var uusi = new Lento { Kohde = k, Ylilento = yl };
+            lento = uusi;
+            uusi.Id = Iss.IssNyt.Simu.KelaaHetkeen(yl.Value.Hetki, vahennetty: y.VahennettyLiike);
+            return yl;
+        }
+
+        /// <summary>Ylilennon rivi pillerin alle (web ylilentoRivi) tai null.</summary>
+        public string YlilennonRivi()
+        {
+            var l = lento;
+            if (l == null) return null;
+            if (!l.Ylilento.HasValue) return $"{l.Kohde.Nimi}: ei ylilentoa {Iss.Ylilennot.HakuH:0} tunnin sisällä";
+            var yl = l.Ylilento.Value;
+            return l.Perilla
+                ? $"{l.Kohde.Nimi}: ISS {Iss.KyydinTeksti.Luku(yl.SivuttainKm)} km sivussa"
+                : $"{l.Kohde.Nimi} · {Iss.KyydinTeksti.YlilennonTeksti(yl.Hetki, Iss.IssNyt.Kello())}";
         }
 
         readonly LatLon[] kaari = new LatLon[Astronauttimatikka.IssKaarenPisteita + 1];
@@ -364,6 +457,9 @@ namespace Matkakirja.Linssit.Astronautti
         {
             if (!Auki) return;
             LopetaKyyti();
+            // Web pura: linssi suljetaan, aika heti todelliseksi (testikellon siirto säilyy).
+            lento = null;
+            Iss.IssNyt.Simu.PalaaLive(vahennetty: true);
             Auki = false;
             SuljeKuva();
             nakyma.Pois();
