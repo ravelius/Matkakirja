@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 08:55 EEST — **Sisältökirjuri NOLLAUTUNUT (72%→21%, automaattinen). Natiiviseppä yhä 73%.** Levy taas kaventunut 84 Gi:hin (heilahtelee 84–94 Gi vaihteluvälillä) — uusi julkaisu käynnissä 08:44.
+**Päivitetty:** 2026-09-28 09:07 EEST — **Kierto normaali. Natiiviseppä yhä koholla (74%, ei nollautunut). Julkaisu valmis, juna kääntänyt uuden buildin a04a57ae 09:00.**
 
 ## 1) Sessiot
 
-Sisältökirjuri nollautui automaattisesti (72%→21%) tilinvaihdon jälkeisen kynnysylityksen jälkeen — odotettua, ei toimenpidettä. **Natiiviseppä pysyy 73%:ssa, ei ole vielä nollautunut, seurataan.**
+**Natiiviseppä 74%, ei ole vielä nollautunut** — jo ilmoitettu Fablelle 08:43/08:55, ei uutta ilmoitusta pienestä noususta. Pelikoodari nousee myös (64%), seurataan.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 44% | running |
-| Postivahti (self) | (tämä sessio) | 30% | running |
+| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 45% | running |
+| Postivahti (self) | (tämä sessio) | 32% | running |
 | Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 17% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | **73%** | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 57% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | **74%** | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 64% | running |
 | Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 34% | running |
 | Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 49% | running |
 | Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 37% | running |
 | Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 36% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 21% (nollautunut) | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 25% | running |
 | Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 25% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
@@ -48,7 +48,7 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
 
-**Juna toimii normaalisti**, ei uutta riviä edellisen (08:19) jälkeen. Tauon lippu ei ole palautunut. **Julkaisulippu päällä** (aikaleima 08:44, uusi julkaisu, sallittu).
+**Juna toimii normaalisti** — käänsi buildin a04a57ae 09:00. Tauon lippu ei ole palautunut. **Julkaisu valmis** — lippu poistunut.
 
 **Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
@@ -76,17 +76,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (08:55)
+## 5) Resurssit (09:07)
 
-- **5 h -kiintiö:** 37 %. **Viikko (kaikki mallit): 10 %.** **Viikko (Fable):** 0 %.
-- **Levy:** 84 Gi vapaana (heilahtelee 84–94 Gi:n välillä poltton jälkeen, worktree-siivousten mukana) — ei alle 80 Gt, ei uutta hälytystä.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
-- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 08:44). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** **Sisältökirjuri nollautui (21%). Natiiviseppä pysyy 73%:ssa — seurataan onko lähellä omaa nollausta.**
+- **5 h -kiintiö:** 38 %. **Viikko (kaikki mallit): 10 %.** **Viikko (Fable):** 0 %.
+- **Levy:** 88 Gi vapaana, heilahtelee normaalisti. wt/-worktreet 23 kpl (laskenut).
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 1 (natiiviseppa-iPhone) — päiväraja 2, ei ylitystä.
+- **Liput:** `/tmp/matkakirja-julkaisu` poissa — julkaisu valmis. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** Natiiviseppä 74% (jo ilmoitettu), Pelikoodari nousee (64%) — seurataan.
 - **GPU-prosessit (type=gpu-process):** 11 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
 - **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
 - **Lokisiivouskandidaatteja:** ei tällä kierroksella.
-- **Postilaatikko:** EI UUTTA tällä kierroksella.
+- **Postilaatikko:** EI UUTTA.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
