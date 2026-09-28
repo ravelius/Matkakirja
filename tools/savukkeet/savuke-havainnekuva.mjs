@@ -279,7 +279,7 @@ async function ajo(laite, viewport, deviceScaleFactor) {
 
   /* --- 1. IHMEKORTTI: Olympian Zeus-patsas (omistajan bugi) --- */
   const ihme = await sivu.evaluate(async () => {
-    const { avaaFokuskohde } = await import('/js/fokuskohteet.js');
+    const { avaaFokuskohde, suljeKohdeSuurennos } = await import('/js/fokuskohteet.js');
     const { FOKUSKOHTEET_GRC } = await import('/js/packs/fokuskohteet-grc.js');
     avaaFokuskohde(window.matkakirja.ui,
       FOKUSKOHTEET_GRC.find((k) => k.id === 'olympia'));
@@ -287,23 +287,49 @@ async function ajo(laite, viewport, deviceScaleFactor) {
     // tietoruudun mitoitus on hitaampi, ja liian aikainen napautus
     // avaisi suurennoksen kesken kortin oman piirron.
     await new Promise((ok) => setTimeout(ok, 1200));
-    const nappi = document.querySelector('.fokuskohde-ihmenappi');
-    nappi?.click();
-    // Suurennos kasvaa ankkuristaan; odotetaan kunnes se on ruudulla
-    // JA pysynyt siellä pari kierrosta (kerroksen sulkusiivous).
-    let zoom = false;
-    for (let i = 0; i < 16 && !zoom; i += 1) {
-      await new Promise((ok) => setTimeout(ok, 200));
-      zoom = Boolean(document.querySelector('.fokuskohde-zoomlahde'));
-    }
-    await new Promise((ok) => setTimeout(ok, 400));
-    return {
-      nappi: Boolean(nappi),
-      zoom: Boolean(document.querySelector('.fokuskohde-zoom')),
+    const odotaZoom = async () => {
+      // Suurennos kasvaa ankkuristaan; odotetaan kunnes se on ruudulla
+      // JA pysynyt siellä pari kierrosta (kerroksen sulkusiivous).
+      let zoom = false;
+      for (let i = 0; i < 16 && !zoom; i += 1) {
+        await new Promise((ok) => setTimeout(ok, 200));
+        zoom = Boolean(document.querySelector('.fokuskohde-zoom'));
+      }
+      await new Promise((ok) => setTimeout(ok, 400));
+      return Boolean(document.querySelector('.fokuskohde-zoom'));
     };
+    /*
+     * "KOE IHME" -NAPPI POISTETTU (omistaja 27.9.2026 klo 23.4x): ihmekuva
+     * on kortin ENSIMMÄINEN kuva nauhoineen, ja nykytilan valokuva kelluu
+     * pienenä tekstin ensimmäisenä lapsena. Ensin nykykuvan suurennos,
+     * sitten ihmekuvan suurennos, jonka lähderivi tarkistetaan alla.
+     */
+    const eka = document.querySelector('.fokuskohde-kuva:not(.fokuskohde-nykykuva)');
+    const teksti = document.querySelector('.fokuskohde-teksti');
+    const nyky = teksti?.querySelector(':scope > .fokuskohde-nykykuva');
+    const tila = {
+      nappeja: document.querySelectorAll('.fokuskohde-ihmenappi').length,
+      ekaNauhalla: Boolean(eka?.querySelector('.fokuskohde-ihmenauha')),
+      nykyEnsimmainen: Boolean(nyky) && teksti.firstElementChild === nyky,
+      nykyKelluu: nyky ? getComputedStyle(nyky).float : '',
+    };
+    nyky?.querySelector('.fokuskohde-kuvanappi')?.click();
+    tila.nykyZoom = await odotaZoom();
+    // Heti kiinni (ei kutistumista), ettei vanha kerros näy uutena.
+    suljeKohdeSuurennos(window.matkakirja.ui);
+    await new Promise((ok) => setTimeout(ok, 300));
+    eka?.querySelector('.fokuskohde-kuvanappi')?.click();
+    tila.zoom = await odotaZoom();
+    tila.zoomlahde = Boolean(document.querySelector('.fokuskohde-zoomlahde'));
+    return tila;
   });
-  vaadi(`${laite} · Olympia: "Koe ihme" avaa suurennoksen`,
-    ihme.nappi && ihme.zoom, JSON.stringify(ihme));
+  vaadi(`${laite} · Olympia: ensimmäinen kuva on ihmekuva nauhoineen, ei "Koe ihme" -nappia`,
+    ihme.ekaNauhalla && ihme.nappeja === 0, JSON.stringify(ihme));
+  vaadi(`${laite} · Olympia: nykykuva kelluu tekstin ensimmäisenä ja avaa suurennoksen`,
+    ihme.nykyEnsimmainen && ihme.nykyKelluu === 'right' && ihme.nykyZoom,
+    JSON.stringify(ihme));
+  vaadi(`${laite} · Olympia: ihmekuvan napautus avaa suurennoksen`,
+    ihme.zoom && ihme.zoomlahde, JSON.stringify(ihme));
   await sivu.screenshot({ path: join(KAAPPAUKSET, `havainnekuva-${laite}-ihme-zeus.png`) });
   await tarkistaPinta(sivu, laite, 'ihmesuurennos (Zeus)',
     '.fokuskohde-zoomlahde', 'Mihin ihmeen kuva perustuu?');
