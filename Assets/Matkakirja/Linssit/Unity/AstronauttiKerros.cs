@@ -16,6 +16,7 @@ using Matkakirja.Linssit.Iss;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.Rendering;
 
 namespace Matkakirja.Natiivi
@@ -277,7 +278,62 @@ namespace Matkakirja.Natiivi
             tahtienPeitto = tila == KyydinTila.Kauko ? 1f
                 : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
+            PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
+        }
+
+        /// <summary>
+        /// ISS-realismi 4a: kyydissä kuukauden oikea pinta (NASA Blue Marble Next Generation 2004 -kuukausisarja, PD; Karttasepän
+        /// pyramidi julisteet/pallo/bmng/&lt;kk&gt;/ Z0–Z7, 256 px Web Mercator) reliefin päällä raster-paikassa 2: lumi, kasvillisuus
+        /// ja aavikot kuten sinä kuukautena, ilman lisättyä rinnevarjostusta (kyydin aurinko valaisee pinnan). Kuukausi
+        /// IssNyt.Kellosta (testikello mukana). Jos kuukauden Z0-laatta puuttuu ämpäristä (vientiä ei ole tehty), relief jää.
+        /// A/B `astro kyyti kuukausi 0|1`.
+        /// </summary>
+        public const string KuukaudenPintaJuuri = "https://media.matkakirja.app/julisteet/pallo/bmng/";
+        public const string KuukausiKerros = "astronautti-kuukausi";
+        public const int KuukaudenPintaMaxTaso = 7;
+        public static bool KuukaudenPintaPois;
+        readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
+        int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
+
+        /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
+        void PaivitaKuukaudenPinta(bool kyydissa)
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk == null) return;
+            int kuukausi = kyydissa && !KuukaudenPintaPois ? IssNyt.Kello().Month : -1;
+            if (kuukausi > 0 && !kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
+            {
+                if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));
+                return;
+            }
+            if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
+            if (kuukausi == kuukausiLisatty) return;
+            if (kuukausi < 0)
+            {
+                kk.PoistaRasteri(KuukausiKerros);
+                kuukausiLisatty = -1;
+                return;
+            }
+            kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausi.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
+                CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
+            kuukausiLisatty = kuukausi;
+            Debug.Log($"MATKAKIRJA linssit: kyydin pinta: BMNG {kuukausi:00}");
+        }
+
+        System.Collections.IEnumerator KokeileKuukausi(int kuukausi)
+        {
+            kuukausiKokeillaan = kuukausi;
+            using (var p = UnityWebRequest.Head(KuukaudenPintaJuuri + kuukausi.ToString("00") + "/0/0/0.jpg"))
+            {
+                p.timeout = 10;
+                yield return p.SendWebRequest();
+                kuukausiAmparissa[kuukausi] = p.result == UnityWebRequest.Result.Success && p.responseCode == 200;
+            }
+            kuukausiKokeillaan = -1;
+            if (!kuukausiAmparissa[kuukausi])
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: BMNG {kuukausi:00} puuttuu ämpäristä, relief jää");
+            PaivitaKuukaudenPinta(kyyti != KyydinTila.Kauko);
         }
 
         void LuoIssMalli()
@@ -492,6 +548,7 @@ namespace Matkakirja.Natiivi
 
         void OnDestroy()
         {
+            if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
             if (kierto != null) kierto.Napautettu -= Napautus;
             if (taivas != null) Destroy(taivas.gameObject);
             if (pilvet != null) Destroy(pilvet.gameObject);
