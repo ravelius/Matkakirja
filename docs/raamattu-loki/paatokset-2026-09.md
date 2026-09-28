@@ -9011,3 +9011,7 @@ Omistaja 28.9. klo 23.26 sanatarkasti: "tilaa konseptikuva ja siirrä idea kuvin
 ## OMISTAJA: SONNET RAJATTUIHIN TEHTÄVIIN ALI-AGENTTINA (28.9.2026 klo 23.30)
 
 Omistaja 28.9. klo 23.30 sanatarkasti: "sonnetteja voisi käyttää nyt enemmän, koska ovat periaatteessa yhtä hyviä kuin opus, ainoa ero on konteksti ikkuna ja pitkäkestoisuus. mutta rajattuihin juttuihin kannattaa melkein aina ottaa nyt sonnet vaikka ongelma olisi haastava." Kortilla: 'Kyllä, kaikille rooleille'. Linjaus: roolisessiot Opuksella pitkinä linjoina, rajatut tehtävät (myös haastavat bugiselvitykset) Sonnet 5.5 -ali-agentille (effort high/max), rooli todentaa ja julkaisee; ali-agentti ei käytä simulaattoreita, käännöspalvelua eikä tuotannon workeria. Raamattuun (#3527 haara raamattu-pienennys-20260928). Ensimmäinen koe: Natiivi-UI:n striimibugin juurisyy Sonnet-ali-agentilla.
+
+## PÄÄTÖS: 1.0.40 = 60F69FE4 VIENTIIN; KOSKETUKSEN YLEISKORJAUS 1.0.41 (28.9.2026 klo 23.30)
+
+Natiivi-UI 28.9. klo 23.30: 1.0.40-käännös 60f69fe4 iPhonella — nosto ei enää sulkeudu (0), luennan jatko toimii (ei hyppyä alkuun); jäljellä: vanhentunut kosketuskohde kortin ulkopuolella syö ensimmäisen napautuksen (UI Toolkit käyttää välimuistin 'osoittimen alla' -elementtiä, kun piste ei muutu) → paneelitason yleiskorjaus 1.0.41:een Sonnet-ali-agentin selvityksellä. Hampurilaisvalikon ensimmäisen napautuksen väärä aloituskohta = sama juurisyy, korjattu junassa 7247e31a. Päätoimittaja: 1.0.40 = 60f69fe4 savukkeen PASS:lla vientiin.
