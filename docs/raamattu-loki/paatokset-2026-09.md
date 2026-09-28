@@ -8843,3 +8843,7 @@ Natiivi-UI 28.9. klo 20.44 a479a462:n puhekoodilla (ElevenLabs): hyppy PASS nost
 ## PÄÄTÖS: BUILD 39 HETI, KORTTIKORJAUS 1.0.40:EEN (28.9.2026 klo 20.44)
 
 Päätoimittaja 28.9. klo 20.44 (Natiivisepän kysymys): BUILD 39 = 5b7261cc heti TF-vientiin — omistajan kaksi tärkeintä korjausta (Pulun hyppy + pysäytys chatin sulkuun) laitteella PASS. Nostokortin lukijan kaiutinvika on vanha (TF 1.0.37/1.0.38) → Natiivi-UI:n korjaus 1.0.40-junaan, sen jälkeen maakuntatila. Testattavaa tyhjä 1.0.39:stä.
+
+## OMISTAJA: ALOITUSLENTO V3F4 TOISTAISEKSI; POLLO-RAJA JA KEHITTÄJÄKOODI (28.9.2026 klo 20.57)
+
+Omistaja 28.9. klo 20.57 kortilla (v3f4-video + kuvaparit 2,0/7,3/9,5 s) sanatarkasti: "Ei ole viel hyvä mutta pidetään tämä toistaiseksi" → v3f4 (aloitus-paivayo, käännös 7d8a0812) 1.0.40-junaan välivaiheena; uusi kierros vasta omistajan suunnalla. Pöllö-raja: chatin laskuri 30/IP/vrk täyttyi (31), Pelikoodari nollasi yhden KV-avaimen; omistaja ei ollut estossa, koska natiivin kehittäjätila pääkoodilla lähettää x-pollo-kehittajan (chat, puhe, realtime). Julkaisija #3579: 15 savuketta saa otsakkeen yhteisestä apufunktiosta (savukkeet-mac-secret, vartiotesti). Kaikki roolit ohjeistettu käyttämään kehittäjäkoodia tuotantokokeissa.
