@@ -203,3 +203,28 @@ rajauksella pysty ja vaaka muodossa". Codex toimitti pyöreän kattoikkunan ohja
     jäivät pystyyn.
 - **Web (Siirtoseppä, kun natiivi on hyväksytty):** samat kuvat, valinta ja painot. Ohjaamo on CSS-kerros cover-rajauksella
   (1,04), ja kolme valokerrosta sekoitetaan opacityllä.
+
+**Päivitys 29.9. klo 00.1x (omistaja 28.9. klo 23.1x: "OK, junaan", kulma A, "keskitä iPadin ikkuna", "tummenna ja pehmennä
+aavistuksen ohjaamoa"; proto linssiseppa/cupola3 f015c4e8, laite cl19–cl21):**
+
+- **Kuvat (oletus):** `iss-cupola3-a-pehmea-umpi-{cockpit,glass,sun-nw,sun-ne,sun-sw}-{iphone-1290x2796,ipad-2732x2048}.png`.
+  Poltto c3_pehmea.py tekee seuraavat:
+  - UMPI: ohjaamon alfa ≥ 240 → 255 ennen sumennusta. Codexin "läpinäkymätön" metalli oli alfa 245–254 (252–254: iPhone
+    58 %, iPad 47 %), ja lineaarinen sekoitus + sRGB päästi maan pilvet läpi (musta 2 → 22, pilvikuvio päivällä, yöllä ei).
+    Natiiviseppä löysi syyn cl19–cl20-mittauksista; kontrollikoe `kehysmusta 1` antoi 0,0. Tarkistus: metallissa yli 20 px
+    ikkunasta 0,000 % alle 255.
+  - Pehmeys: Gaussin sumennus premultiplied-alfalla, σ 2,1 px (iPhone) / 2,3 px (iPad) eli noin 2 näyttöpikseliä, ohjaamoon,
+    lasiin ja reunavaloihin.
+  - Reunavalojen alfa vahvistetaan alkuperäiseen 99,9-persentiiliin (× 1,51–1,53 iPhone, × 1,30–1,36 iPad), koska sumennus
+    himmensi huippua noin 35 %.
+- **Sävy:** 1,0 (0,85 A/B:nä). Hunnun poisto tummentaa ohjaamon jo itsessään (laitteella keskiarvo noin 37 → 26).
+- **Keskitys** (IssKuvakulma.Cupola3Rajaus): ikkunan keskipiste (Codexin maski: iPad 0,503 / 0,465, iPhone 0,498 / 0,473)
+  siirretään kohti ruudun keskustaa kahdessa osassa.
+  1. Kuva siirtyy laatikon sisällä cover-ylijäämän verran (background-position pisteinä Left/Top-avainsanasta). iPad vaaka:
+     31,8 pt alas, laatikko paikallaan.
+  2. Loput laatikon translate-siirtona suurennoksen 1,04 varan sisällä (vara 8 pt). iPhone: 9,5 pt.
+  - UI Toolkit (kuten CSS) leikkaa cover-taustakuvan laatikkoon, joten pelkkä 33 pt:n translate paljasti cl19:ssä iPadin
+    yläreunaan 16 pt:n aukon.
+- **Web:** sama sarja, background-position keskitykseen ja sävy 1. Kuvat ovat samat natiivissa ja webissä (pariteetti).
+- **Kierron testikomento:** `ui kierto vaaka|pysty`. Vaakakuvan simctl-kaappaus tallentuu iPhonella vaakaan (2622 × 1206) ja
+  iPadilla (Pro 11 M5) pystyyn (1668 × 2420), joten iPadin kuva käännetään koosteessa.
