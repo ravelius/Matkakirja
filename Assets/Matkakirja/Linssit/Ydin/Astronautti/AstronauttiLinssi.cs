@@ -230,8 +230,11 @@ namespace Matkakirja.Linssit.Astronautti
 
         int[] kierros;
 
-        /// <summary>Maailmankierros (AstronauttiKierros), lasketaan kerran ensimmäisellä käytöllä.</summary>
-        int[] Kierros => kierros ??= AstronauttiKierros.Laske(aineisto.Kohteet);
+        /// <summary>
+        /// Maailmankierros: aineiston valmis lista (webin SATELLIITTI_KIERROS, sama järjestys molemmissa), muuten lasketaan
+        /// kerran ensimmäisellä käytöllä (AstronauttiKierros).
+        /// </summary>
+        int[] Kierros => kierros ??= AstronauttiKierros.Aineistosta(aineisto.Kierros, aineisto.Kohteet) ?? AstronauttiKierros.Laske(aineisto.Kohteet);
 
         void AvaaKohde(Havaintokohde kohde, int indeksi)
         {

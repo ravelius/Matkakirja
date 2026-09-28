@@ -89,6 +89,27 @@ namespace Matkakirja.Linssit.Astronautti
 
         /// <summary>Naapuri kierroksella: <paramref name="kierros"/>ssa kohteen <paramref name="indeksi"/> jälkeen (suunta +1) tai
         /// ennen (−1), ympäri kiertäen; −1, jos kohde ei ole kierroksella.</summary>
+        /// <summary>
+        /// Aineiston valmis kierros (tunnukset) indekseiksi; null, jos se puuttuu tai ei käy jokaisessa kohteessa täsmälleen
+        /// kerran (silloin kutsuja laskee itse, <see cref="Laske"/>).
+        /// </summary>
+        public static int[] Aineistosta(IReadOnlyList<string> tunnukset, IReadOnlyList<Havaintokohde> kohteet)
+        {
+            if (tunnukset == null || kohteet == null || tunnukset.Count != kohteet.Count) return null;
+            var indeksi = new Dictionary<string, int>();
+            for (int i = 0; i < kohteet.Count; i++)
+                if (kohteet[i].Tunnus == null || !indeksi.TryAdd(kohteet[i].Tunnus, i)) return null;
+            var tulos = new int[tunnukset.Count];
+            var nahty = new bool[kohteet.Count];
+            for (int j = 0; j < tunnukset.Count; j++)
+            {
+                if (tunnukset[j] == null || !indeksi.TryGetValue(tunnukset[j], out int i) || nahty[i]) return null;
+                nahty[i] = true;
+                tulos[j] = i;
+            }
+            return tulos;
+        }
+
         public static int Naapuri(int[] kierros, int indeksi, int suunta)
         {
             if (kierros == null || kierros.Length == 0) return -1;

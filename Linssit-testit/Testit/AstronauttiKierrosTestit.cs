@@ -141,5 +141,20 @@ namespace Matkakirja.Linssit.Testit
             l.SuljeKuva();
             Oleta.Sama(null, l.Naapuri(1), "kuva kiinni: ei naapuria");
         }
+
+        [Testi] static void AineistonKierrosKaytetaanJosSeVastaaKohteita()
+        {
+            var kohteet = new List<Havaintokohde>
+            {
+                new Havaintokohde { Tunnus = "a", Lat = 0, Lon = 0 }, new Havaintokohde { Tunnus = "b", Lat = 0, Lon = 10 },
+                new Havaintokohde { Tunnus = "c", Lat = 0, Lon = 20 },
+            };
+            var k = AstronauttiKierros.Aineistosta(new List<string> { "c", "a", "b" }, kohteet);
+            Oleta.Sama("2 0 1", string.Join(" ", k));
+            Oleta.Sama(null, AstronauttiKierros.Aineistosta(new List<string> { "c", "a" }, kohteet), "puuttuva kohde");
+            Oleta.Sama(null, AstronauttiKierros.Aineistosta(new List<string> { "c", "a", "a" }, kohteet), "kahdesti");
+            Oleta.Sama(null, AstronauttiKierros.Aineistosta(new List<string> { "c", "a", "x" }, kohteet), "tuntematon");
+            Oleta.Sama(null, AstronauttiKierros.Aineistosta(null, kohteet), "ei aineistossa");
+        }
     }
 }
