@@ -1388,8 +1388,11 @@ namespace Matkakirja.Natiivi
                         string a = osat.Length > 2 ? osat[2] : "";
                         if (a == "pois") l.PoistuKyydista();
                         else if (a == "yo" && osat.Length > 3) Yokuori.Pois = osat[3] == "0";   // A/B: astro kyyti yo 0|1
-                        // A/B omistajan Cupola-palautteeseen (28.9.): vanha = 1.0.35:n UI-kehys ja kaukonäkymän hehku.
-                        else if (a == "cupola" && osat.Length > 3) CupolaKerros.Vanha = osat[3] == "vanha";
+                        // A/B omistajan Cupola-palautteeseen (28.9.): uusi = Codexin tumma kuva, 3d = valaistu 3D-kehys,
+                        // vanha = 1.0.35:n UI-kehys.
+                        else if (a == "cupola" && osat.Length > 3)
+                            CupolaKerros.Tyyli = osat[3] == "vanha" ? CupolaKerros.Tyylit.Vanha
+                                : osat[3] == "3d" ? CupolaKerros.Tyylit.Kolmiulotteinen : CupolaKerros.Tyylit.Kuva;
                         else if (a == "ilmakeha" && osat.Length > 3)
                         {
                             Avaruus.VanhaIlmakeha = osat[3] == "vanha";

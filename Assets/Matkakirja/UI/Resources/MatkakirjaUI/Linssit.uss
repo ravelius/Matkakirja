@@ -3068,6 +3068,29 @@
     opacity: 1;
 }
 
+/* Cupola 2 (Codex 28.9.): ulko-osat siluetteina, heijastus ja tumma kehys takaa eteen; cover ja häivytys kuten yllä. */
+.mk-isskyyti__ulko2,
+.mk-isskyyti__heijastus2,
+.mk-isskyyti__kehys2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.mk-isskyyti--kuva2 .mk-isskyyti__ulko2,
+.mk-isskyyti--kuva2 .mk-isskyyti__heijastus2,
+.mk-isskyyti--kuva2 .mk-isskyyti__kehys2 {
+    opacity: 1;
+}
+
 .mk-isskyyti__turva {
     position: absolute;
 }

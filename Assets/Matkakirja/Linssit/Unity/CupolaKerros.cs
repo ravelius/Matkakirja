@@ -29,8 +29,13 @@ namespace Matkakirja.Natiivi
             IdAurinko = Shader.PropertyToID("_AurinkoRuutu"), IdMaavalo = Shader.PropertyToID("_Maavalo"), IdAika = Shader.PropertyToID("_Aika"),
             IdVarsi = Shader.PropertyToID("_Varsi");
 
-        /// <summary>A/B (`astro kyyti cupola vanha|uusi`): vanha = 1.0.35:n UI-kehys ilman valaistusta (kuvaparin "ennen").</summary>
-        public static bool Vanha;
+        /// <summary>Cupolan tyyli: Kuva = Codexin tumma Cupola 28.9. UI-kerroksina (IssKyytiNakyma; jos kuvat eivät
+        /// lataudu, tämä 3D-kehys varalla), Kolmiulotteinen = tämä valaistu 3D-kehys, Vanha = 1.0.35:n UI-kehys.</summary>
+        public enum Tyylit { Kuva, Kolmiulotteinen, Vanha }
+        /// <summary>A/B (`astro kyyti cupola uusi|3d|vanha`); omistajan päätös 28.9. klo 11.0x: Codexin uusi kuva.</summary>
+        public static Tyylit Tyyli = Tyylit.Kuva;
+        /// <summary>1.0.35:n UI-kehys (kuvaparin "ennen").</summary>
+        public static bool Vanha => Tyyli == Tyylit.Vanha;
         /// <summary>A/B (`astro kyyti varsi 0|1`): Canadarm2 ja paneeli ikkunan takana.</summary>
         public static bool Varsi = true;
 

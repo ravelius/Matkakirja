@@ -401,7 +401,7 @@ namespace Matkakirja.Natiivi
             {
                 cupola.IssYlos = issYlos;
                 cupola.IssKorkeusKm = issKorkeusM / 1000;
-                cupola.Nayta(kyyti == KyydinTila.Ikkuna && !IssKyytiNakyma.IlmanKehysta && !CupolaKerros.Vanha);
+                cupola.Nayta(kyyti == KyydinTila.Ikkuna && !IssKyytiNakyma.IlmanKehysta && IssKyytiNakyma.KolmiulotteinenKehys);
             }
             if (iss != null)
             {
