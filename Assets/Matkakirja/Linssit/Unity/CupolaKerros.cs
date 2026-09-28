@@ -45,6 +45,7 @@ namespace Matkakirja.Natiivi
         MeshRenderer piirto;
         Texture2D kehys, heijastus;
         float peitto, tavoite, aurinkoAika = -10f;
+        DateTime aurinkoUtc;
         Vector4 aurinko = new Vector4(0.3f, 0.5f, 0.4f, 1f);
         float maavalo = 0.8f;
         bool haettu;
@@ -94,7 +95,8 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat(IdPeitto, peitto);
             materiaali.SetFloat(IdAika, Time.unscaledTime);
             materiaali.SetFloat(IdVarsi, Varsi ? 1f : 0f);
-            if (Time.unscaledTime - aurinkoAika >= 0.25f) PaivitaValo();
+            // Neljästi sekunnissa ja nopeutettuna sekunnin välein simuloitua aikaa (1000×: ISS kiertää 65°/s).
+            if (Time.unscaledTime - aurinkoAika >= 0.25f || Math.Abs((IssNyt.Kello() - aurinkoUtc).TotalSeconds) >= 1) PaivitaValo();
             materiaali.SetVector(IdAurinko, aurinko);
             materiaali.SetFloat(IdMaavalo, maavalo);
         }
@@ -103,9 +105,10 @@ namespace Matkakirja.Natiivi
         void PaivitaValo()
         {
             aurinkoAika = Time.unscaledTime;
+            aurinkoUtc = IssNyt.Kello();
             var gt = g.transform;
             Vector3 a = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
-                Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                Aurinko.AurinkoEcef(aurinkoUtc))).normalized;
             double ylos = Vector3.Dot(gt.TransformDirection(IssYlos).normalized, a);
             Vector3 k = kamera.transform.InverseTransformDirection(a);
             var r = CupolanValo.Ruudulle(k.x, k.y, k.z);

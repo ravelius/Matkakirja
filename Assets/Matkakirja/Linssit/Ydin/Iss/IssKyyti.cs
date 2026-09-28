@@ -2,16 +2,20 @@
 // suositus docs/raportit/iss-kyyti-suositus-20260928.md, Pelikoodari kuittasi webin samoilla luvuilla). Kolme tilaa
 // napautuksella: kaukonäkymä → seuranta (kamera ISS:n takana ja yllä 1 200 km, kallistus 55°) → Cupola-ikkuna (silmä ISS:ssä,
 // katse radan suuntaan 55° alas, kenttäkulma 80°) → takaisin seurantaan; ✕ palaa kaukonäkymään.
+// KOHTEEN YLLÄ (web iss-kyyti.js TILA.kohde, commit 891958e17; omistaja 28.9.2026 klo 12.1x "Lennä kohteen ylle"): ylilennon
+// perillä silmä ISS:ssä ja katse kohteeseen kuten astronautin vinokuvissa, pitkä objektiivi (noin 90 km leveä alue ruudun
+// pystyyn, 6–50°); napautus palaa seurantaan.
 //
 // Puhdas C#: kameran asento (Kuvakulma) ISS:n paikasta, korkeudesta ja maajäljen suunnasta, sekä siirtymät asentojen
 // välillä. Kohde liikkuu ajon aikana (7,66 km/s), joten siirtymä sekoittaa lähtöasennon ja kohdetilan TÄMÄN kehyksen
 // asennon, eikä valmista kamera-ajoa voi käyttää. Unity-sovitin vie asennon PalloKierto.Kuvaa-metodille.
 using System;
+using System.Globalization;
 using Matkakirja.Linssit.Aikajana;
 
 namespace Matkakirja.Linssit.Iss
 {
-    public enum KyydinTila { Kauko, Seuranta, Ikkuna }
+    public enum KyydinTila { Kauko, Seuranta, Ikkuna, Kohde }
 
     /// <summary>ISS tällä hetkellä: alapiste, korkeus ellipsoidista (m) ja maajäljen suunta (asteina).</summary>
     public readonly struct IssHetki
@@ -60,6 +64,28 @@ namespace Matkakirja.Linssit.Iss
         /// <summary>Kaukonäkymän asento pelaajan kamerasta (katse alas, suuntima säilyy).</summary>
         public static Kuvakulma Kauko(double lat, double lon, double korkeusM, double kallistus, double suuntima) =>
             new Kuvakulma(lat, lon, korkeusM, kallistus, suuntima, 0);
+
+        /// <summary>Kohteen yllä: kenttäkulma rajataan niin, että noin näin leveä alue (m) täyttää ruudun pystyn (pitkä objektiivi).</summary>
+        public const double KohteenNakymaM = 90_000, KohteenKenttaMin = 6, KohteenKenttaMax = 50;
+
+        /// <summary>
+        /// Kohteen yllä (web kohteenKulma): katsekohde on kohde maan pinnalla, silmä ISS:ssä. Etäisyys ρ ja kohteen
+        /// zeniittikulma ζ kolmiosta (R, R + h, keskuskulma θ); suuntima kohteessa on isoympyrän loppusuunta ISS:n
+        /// alapisteestä, jolloin silmä osuu ISS:ään (sama kaava kuin Ikkuna, suunta käännettynä).
+        /// </summary>
+        public static Kuvakulma KohteenKulma(in IssHetki iss, double lat, double lon)
+        {
+            double r = MaanSadeM, h = Math.Max(1000, iss.KorkeusM);
+            double theta = Kaari(iss.Paikka.Lat, iss.Paikka.Lon, lat, lon) * Deg;
+            double rho = Math.Sqrt(r * r + (r + h) * (r + h) - 2 * r * (r + h) * Math.Cos(theta));
+            double zeta = Math.Acos(Math.Max(-1, Math.Min(1, ((r + h) * Math.Cos(theta) - r) / rho)));
+            double loppu = theta < 1e-7 ? iss.Suuntima : (Suunta(lat, lon, iss.Paikka.Lat, iss.Paikka.Lon) + 180) % 360;
+            return new Kuvakulma(lat, lon, rho, zeta / Deg, loppu, 0);
+        }
+
+        /// <summary>Kohteen kenttäkulma etäisyydestä (asteina, web kohteenKentta): 2 atan(90 km / 2ρ), 6…50°.</summary>
+        public static double KohteenKentta(double etaisyysM) =>
+            Math.Max(KohteenKenttaMin, Math.Min(KohteenKenttaMax, 2 * Math.Atan(KohteenNakymaM / 2 / Math.Max(1, etaisyysM)) / Deg));
 
         /// <summary>Isoympyrän alkusuunta pisteestä a pisteeseen b (asteina 0…360).</summary>
         public static double Suunta(double lat1, double lon1, double lat2, double lon2)
@@ -170,19 +196,35 @@ namespace Matkakirja.Linssit.Iss
         public const double KyytiinS = 2.5, KyytiinLisaS = 1.5, IkkunaanS = 1.2, KaukoonS = 2.0;
         /// <summary>Paluun korkeus avauskorkeuden osuutena (astronautin kameran lepokorkeus).</summary>
         public const double PaluuKorkeus = 0.72;
+        /// <summary>Siirtymä seurannasta kohteen ylle (s, web KOHTEESEEN_S).</summary>
+        public const double KohteeseenS = 1.2;
 
         /// <summary>Tila, johon ollaan menossa tai jossa ollaan.</summary>
         public KyydinTila Tila { get; private set; } = KyydinTila.Kauko;
-        /// <summary>Kamera on kyydissä (seuranta, ikkuna tai siirtymä niiden välillä tai paluu kesken).</summary>
+        /// <summary>Kamera on kyydissä (seuranta, ikkuna, kohde tai siirtymä niiden välillä tai paluu kesken).</summary>
         public bool Kyydissa => Tila != KyydinTila.Kauko || siirtyy;
         public bool Siirtyy => siirtyy;
+        /// <summary>Viimeisin ylilennon kohde (KyydinTila.Kohde katsoo siihen); null ennen ensimmäistä.</summary>
+        public LatLon? Kohde => onKohde ? kohdePaikka : (LatLon?)null;
+        /// <summary>
+        /// Kyydin viimeksi antama asento ja kenttäkulma (web viimeisin): siirtymä lähtee tästä, koska pelikameran näkymä ei
+        /// kerro katsekorkeutta (seurannassa ISS 420 km:ssä). OnAsento = kyyti on antanut asennon tämän kyydin aikana.
+        /// </summary>
+        public Kuvakulma Viimeisin => viimeisin;
+        public double ViimeisinKentta => viimeisinKentta;
+        public bool OnAsento { get; private set; }
 
         Kuvakulma alku, viimeisin;
         double alkuKentta, viimeisinKentta, t0, kesto;
         bool siirtyy;
         double paluuKorkeus;
+        LatLon kohdePaikka;
+        bool onKohde;
 
-        /// <summary>Napautus: kauko → seuranta → ikkuna → seuranta. <paramref name="nykyinen"/> on kameran asento nyt.</summary>
+        /// <summary>
+        /// Napautus: kauko → seuranta → ikkuna → seuranta; kohteen yltä takaisin seurantaan. <paramref name="nykyinen"/> on
+        /// kameran asento nyt.
+        /// </summary>
         public void Napauta(in Kuvakulma nykyinen, in IssHetki iss, double kentta, double nyt, bool vahennetty)
         {
             switch (Tila)
@@ -195,9 +237,18 @@ namespace Matkakirja.Linssit.Iss
                     Aloita(KyydinTila.Ikkuna, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
                     break;
                 case KyydinTila.Ikkuna:
+                case KyydinTila.Kohde:
                     Aloita(KyydinTila.Seuranta, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
                     break;
             }
+        }
+
+        /// <summary>Ylilento perillä (web kohteeseen): silmä ISS:ssä, katse kohteeseen, pitkä objektiivi.</summary>
+        public void Kohteeseen(LatLon paikka, in Kuvakulma nykyinen, double kentta, double nyt, bool vahennetty)
+        {
+            kohdePaikka = paikka;
+            onKohde = true;
+            Aloita(KyydinTila.Kohde, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : KohteeseenS);
         }
 
         /// <summary>✕: paluu kaukonäkymään ISS:n alapisteen ylle korkeudelle <paramref name="kaukoKorkeusM"/>.</summary>
@@ -209,7 +260,7 @@ namespace Matkakirja.Linssit.Iss
         }
 
         /// <summary>Kyyti pois heti (linssi suljetaan): ei asentoa, kenttäkulma palautetaan kutsujan puolella.</summary>
-        public void Nollaa() { Tila = KyydinTila.Kauko; siirtyy = false; }
+        public void Nollaa() { Tila = KyydinTila.Kauko; siirtyy = false; OnAsento = false; }
 
         void Aloita(KyydinTila uusi, in Kuvakulma nykyinen, double kentta, double nyt, double kestoS)
         {
@@ -237,6 +288,10 @@ namespace Matkakirja.Linssit.Iss
             {
                 case KyydinTila.Seuranta: kohde = IssKuvakulma.Seuranta(iss); break;
                 case KyydinTila.Ikkuna: kohde = IssKuvakulma.Ikkuna(iss); kohdeKentta = IssKuvakulma.IkkunanKentta; break;
+                case KyydinTila.Kohde when onKohde:
+                    kohde = IssKuvakulma.KohteenKulma(iss, kohdePaikka.Lat, kohdePaikka.Lon);
+                    kohdeKentta = IssKuvakulma.KohteenKentta(kohde.EtaisyysM);
+                    break;
                 default:
                     kohde = IssKuvakulma.Kauko(Math.Max(-55, Math.Min(55, iss.Paikka.Lat)), iss.Paikka.Lon, paluuKorkeus, 0, 0);
                     break;
@@ -248,8 +303,92 @@ namespace Matkakirja.Linssit.Iss
             if (u >= 1) siirtyy = false;
             viimeisin = asento;
             viimeisinKentta = kentta;
+            OnAsento = true;
             if (Tila == KyydinTila.Kauko && !siirtyy) { paluuValmis = true; return true; }
             return true;
         }
+    }
+
+    /// <summary>
+    /// Kyydin simuloitu aika tietoriville ja ohjaimille (web paivitaTietorivi). Oletusarvo = LIVE. Linssi antaa tämän
+    /// tietorivin kanssa: kerran sekunnissa (nopeutettuna 4 kertaa) sekä tilan, nopeuden ja ylilennon vaihtuessa.
+    /// </summary>
+    public readonly struct KyydinAika
+    {
+        /// <summary>Aika ei ole LIVE (nopeutus, kelaus tai perillä ylilennolla): pilleri näyttää kertoimen ilman LIVE-sanaa,
+        /// piste ei ole punainen eikä syki, ja pillerin napautus = Palaa LIVE.</summary>
+        public readonly bool Nopeutettu;
+        /// <summary>Kelaus käynnissä (Palaa LIVE tai ylilento): portaassa ei valintaa.</summary>
+        public readonly bool Kelaa;
+        /// <summary>Portaan kerroin (1, 10, 100, 1000), kun ei kelata.</summary>
+        public readonly int Porras;
+        /// <summary>Todellinen nopeus (×), kelauksessa derivaatta.</summary>
+        public readonly double Nopeus;
+        /// <summary>Ylilennon rivi ("Venetsia · Ylilento klo 14.32, 3 h 12 min päästä") tai null (rivi piiloon).</summary>
+        public readonly string Ylilento;
+
+        public KyydinAika(bool nopeutettu, bool kelaa, int porras, double nopeus, string ylilento)
+        { Nopeutettu = nopeutettu; Kelaa = kelaa; Porras = porras; Nopeus = nopeus; Ylilento = ylilento; }
+
+        /// <summary>Portaan valittu kerroin (web valittu): null kelauksen aikana, LIVE:nä 1.</summary>
+        public int? Valittu => Kelaa ? (int?)null : Nopeutettu ? Math.Max(1, Porras) : 1;
+
+        /// <summary>Kellon tila nyt (Nopeus lukee kellon ensin, jolloin juuri päättynyt kelaus näkyy jo).</summary>
+        public static KyydinAika Kellosta(Simukello s, string ylilento)
+        {
+            double nopeus = s.Nopeus();
+            return new KyydinAika(!s.Live, s.Kelaa, (int)Math.Round(s.Kerroin), nopeus, ylilento);
+        }
+    }
+
+    /// <summary>
+    /// Kyydin tekstit (web iss-kyyti.js tietorivi, nopeudenMerkki, ylilennonTeksti): kokonaisluvut suomeksi tuhaterottimella
+    /// U+00A0 alustan lokaalista riippumatta.
+    /// </summary>
+    public static class KyydinTeksti
+    {
+        /// <summary>Tietorivi: merkki (LIVE, kerroin tai null) ja teksti; Live = punainen sykkivä piste.</summary>
+        public readonly struct Rivi
+        {
+            public readonly bool Live;
+            public readonly string Merkki, Teksti;
+            public Rivi(bool live, string merkki, string teksti) { Live = live; Merkki = merkki; Teksti = teksti; }
+        }
+
+        /// <summary>
+        /// "● LIVE · ISS · 418 km · 27 580 km/h"; nopeutettuna (<paramref name="kerroin"/> annettu) "● 100× · ISS · …" ilman
+        /// LIVE-sanaa (omistaja 28.9. klo 12.1x: kerroin kertoo, ettei ISS ole juuri nyt tuossa); ilman tuoretta TLE:tä ei
+        /// LIVE-merkkiä vaan loppuun "rata-arvio". Nopeus kymmeniin.
+        /// </summary>
+        public static Rivi Tietorivi(double korkeusKm, double nopeusKmh, bool arvio, double? kerroin = null)
+        {
+            string km = Luku(korkeusKm), kmh = Luku(Math.Floor(nopeusKmh / 10 + 0.5) * 10);
+            string k = kerroin.HasValue ? NopeudenMerkki(kerroin.Value) : null;
+            string merkki = k ?? (arvio ? null : "LIVE");
+            return new Rivi(!arvio && k == null, merkki,
+                (merkki != null ? "· " : "") + $"ISS · {km} km · {kmh} km/h" + (arvio ? " · rata-arvio" : ""));
+        }
+
+        /// <summary>Nopeuskerroin pilleriin kahdella merkitsevällä numerolla: 1×, 10×, 870×, 1 000×.</summary>
+        public static string NopeudenMerkki(double k)
+        {
+            double x = double.IsNaN(k) ? 0 : Math.Abs(k);
+            if (x < 1.5) return "1×";
+            double d = Math.Pow(10, Math.Max(0, Math.Floor(Math.Log10(x)) - 1));
+            return Luku(Math.Floor(x / d + 0.5) * d) + "×";
+        }
+
+        /// <summary>Ylilennon kellonaika (paikallinen) ja aika siihen: "Ylilento klo 14.32, 3 h 12 min päästä".</summary>
+        public static string YlilennonTeksti(DateTime hetkiUtc, DateTime nytUtc, TimeZoneInfo vyohyke = null)
+        {
+            var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(hetkiUtc, DateTimeKind.Utc), vyohyke ?? TimeZoneInfo.Local);
+            int min = Math.Max(0, (int)Math.Floor((hetkiUtc - nytUtc).TotalMinutes + 0.5));
+            int h = min / 60;
+            return $"Ylilento klo {d.Hour}.{d.Minute:00}, " + (h > 0 ? $"{h} h {min % 60} min" : $"{min} min") + " päästä";
+        }
+
+        /// <summary>Kokonaisluku tuhaterottimella U+00A0 (web toLocaleString('fi-FI'), pyöristys kuten Math.round).</summary>
+        public static string Luku(double n) =>
+            Math.Floor(n + 0.5).ToString("#,0", CultureInfo.InvariantCulture).Replace(',', '\u00a0');
     }
 }
