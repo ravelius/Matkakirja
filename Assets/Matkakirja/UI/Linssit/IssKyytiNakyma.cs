@@ -1,6 +1,8 @@
 // ISS:N KYYTI (Linssisepän suositus docs/raportit/iss-kyyti-suositus-20260928.md; Natiivi-UI katselmoi):
 // AstronauttiKerros.KyytiKasittelija. Kyydissä (seuranta ja ikkuna):
-//   vasen ylä    tietorivi "ISS · 418 km · 27 580 km/h" kuvanäkymän nimipillerin tyylillä (+ "rata-arvio" ilman tuoretta TLE:tä)
+//   vasen ylä    tietorivi "● LIVE · ISS · 418 km · 27 580 km/h" kuvanäkymän nimipillerin tyylillä; punainen piste sykkii
+//                (0,9 s, vähennetty liike: paikallaan), jotta pelaaja ymmärtää ISS:n olevan juuri nyt tuossa kohdassa (omistaja
+//                28.9.). Ilman tuoretta TLE:tä ei LIVE-merkkiä vaan loppuun "rata-arvio".
 //   oikea ylä    ✕ palaa kaukonäkymään (AstronauttiLinssi.PoistuKyydista); linssin oma sulkunappi on piilossa (KuvaAuki)
 // Ikkunassa lisäksi Cupola-kehys (Codexin toimitus 26.9., ämpäri karttanostot/20260926/iss-cupola-*): keskilasi ja kuusi
 // trapetsilasia koko ruudulle (cover), ja lasin heijastus omana kerroksenaan hitaalla heilunnalla (8 s, 3 pt; pieni liike
@@ -19,10 +21,10 @@ namespace Matkakirja.Natiivi
         const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
         static readonly CultureInfo Fi = CultureInfo.GetCultureInfo("fi-FI");
 
-        readonly VisualElement juuri, kehys, heijastus, turva;
-        readonly Label tieto;
-        bool kuvatHaettu;
-        IVisualElementScheduledItem heilunta;
+        readonly VisualElement juuri, kehys, heijastus, turva, piste;
+        readonly Label live, tieto;
+        bool kuvatHaettu, sykkii;
+        IVisualElementScheduledItem heilunta, syke;
 
         public KyydinTila Tila { get; private set; } = KyydinTila.Kauko;
         /// <summary>Kuvapari samasta käännöksestä (`ui linssi kehys 0|1`): ikkuna ilman Cupola-kehystä.</summary>
@@ -38,6 +40,8 @@ namespace Matkakirja.Natiivi
             heijastus = Rakenne.El("mk-isskyyti__heijastus", juuri, PickingMode.Ignore);
             turva = Rakenne.El("mk-isskyyti__turva", juuri, PickingMode.Ignore);
             var pilleri = Rakenne.El("mk-isskyyti__tieto", turva, PickingMode.Ignore);
+            piste = Rakenne.El("mk-isskyyti__piste", pilleri, PickingMode.Ignore);
+            live = Rakenne.Teksti("LIVE", "mk-isskyyti__live", pilleri);
             tieto = Rakenne.Teksti("", "mk-isskyyti__teksti", pilleri);
             var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", Poistu, turva);
             sulku.tooltip = "Pois kyydistä";
@@ -58,8 +62,11 @@ namespace Matkakirja.Natiivi
             bool auki = tila != KyydinTila.Kauko;
             juuri.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             if (auki)
-                tieto.text = string.Format(Fi, "ISS · {0:N0} km · {1:N0} km/h{2}", korkeusKm, Math.Round(nopeusKmh / 10) * 10,
-                    arvio ? " · rata-arvio" : "");
+                tieto.text = string.Format(Fi, "{0}ISS · {1:N0} km · {2:N0} km/h{3}", arvio ? "" : "· ", korkeusKm,
+                    Math.Round(nopeusKmh / 10) * 10, arvio ? " · rata-arvio" : "");
+            var liveNakyy = auki && !arvio ? DisplayStyle.Flex : DisplayStyle.None;
+            piste.style.display = liveNakyy; live.style.display = liveNakyy;
+            Syke(auki && !arvio);
             bool ikkuna = tila == KyydinTila.Ikkuna;
             if (ikkuna && !kuvatHaettu && CupolaKerros.Vanha) HaeKuvat();
             this.ikkuna = ikkuna;
@@ -87,6 +94,19 @@ namespace Matkakirja.Natiivi
             string koko = ipad ? "ipad-1536x2732" : "iphone-1206x2622";
             Kuvat.Hae(Juuri + "iss-cupola-kokonainen-" + koko + ".png", t => { if (t != null) kehys.style.backgroundImage = t; });
             Kuvat.Hae(Juuri + "iss-cupola-heijastus-" + koko + ".png", t => { if (t != null) heijastus.style.backgroundImage = t; });
+        }
+
+        /// <summary>LIVE-piste sykkii (luokka vaihtuu 0,9 s:n välein, USS-siirtymä); käynnistyy vain tilan vaihtuessa.</summary>
+        void Syke(bool paalla)
+        {
+            paalla &= !LinssiUi.VahennettyLiike();
+            if (paalla == sykkii) return;
+            sykkii = paalla;
+            syke?.Pause();
+            piste.RemoveFromClassList("mk-isskyyti__piste--himmea");
+            if (!paalla) return;
+            bool himmea = false;
+            syke = piste.schedule.Execute(() => { himmea = !himmea; piste.EnableInClassList("mk-isskyyti__piste--himmea", himmea); }).Every(900);
         }
 
         void Heilu(bool paalla)

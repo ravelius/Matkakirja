@@ -3089,3 +3089,33 @@
     white-space: nowrap;
     color: rgb(93, 255, 168);
 }
+
+/* LIVE (omistaja 28.9.): punainen piste sykkii 0,9 s:n siirtymällä ja lihavoitu LIVE ennen tietoja. */
+.mk-isskyyti__tieto {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-isskyyti__piste {
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px;
+    margin-right: 6px;
+    background-color: rgb(255, 86, 86);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-in-out;
+}
+
+.mk-isskyyti__piste--himmea {
+    opacity: 0.25;
+}
+
+.mk-isskyyti__live {
+    font-size: 13px;
+    -unity-font-style: bold;
+    white-space: nowrap;
+    margin-right: 5px;
+    color: rgb(93, 255, 168);
+}
