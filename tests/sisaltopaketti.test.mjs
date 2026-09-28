@@ -669,9 +669,19 @@ test('skeema 1.22: muutosrivi osoittimeen ja muutosloki-natiivi', async () => {
   assert.equal(muutosRivi({ kaupunkilehdet: 5, nahtavyydet: 10 }, { kaupunkilehdet: 8, nahtavyydet: 10 }, '2026-09-24T00:00:00Z').teksti,
     'Sisältö päivittyi: 3 uutta kaupunkilehteä.');
   assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-24T00:00:00Z').teksti, 'Sisältöä päivitettiin.');
+  // 28.9.2026 (Natiivi-UI): muuttuneet kokoelmat nimetään tiivisteistä; kasvanut ei toistu, tuntematon ei nouse riville.
+  const ed = { kaupunkilehdet: 'a'.repeat(12), nahtavyydet: 'b'.repeat(12), offline: 'c'.repeat(12), saannot: 'd'.repeat(12) };
+  const ny = { kaupunkilehdet: 'e'.repeat(12), nahtavyydet: 'f'.repeat(12), offline: '0'.repeat(12), saannot: '1'.repeat(12) };
+  assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-28T00:00:00Z', ed, ny).teksti,
+    'Päivitetty: kaupunkilehdet, nähtävyydet ja offline-kartat.');
+  assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 7 }, '2026-09-28T00:00:00Z', ed, ny).teksti,
+    'Sisältö päivittyi: 2 uutta kaupunkilehteä. Päivitetty: nähtävyydet ja offline-kartat.');
+  assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-28T00:00:00Z', ed, ed).teksti, 'Sisältöä päivitettiin.');
   const j = kokoaJulkaisu({ tiedostot, edellinen: null, suurin: 0, commit: 'abcdef1', julkaistu: '2026-09-23T20:00:00.000Z' });
   assert.deepEqual(j.virheet, []);
   assert.equal(j.osoitin.kokoelmaLkm.kaupungit, 266);
+  assert.match(j.osoitin.kokoelmaSha.kaupungit, /^[0-9a-f]{12}$/);
+  assert.match(j.osoitin.kokoelmaSha.offline, /^[0-9a-f]{12}$/);
   assert.ok(Array.isArray(JSON.parse(tiedostot.get('kokoelmat/muutosloki-natiivi.json')).alkiot));
 });
 
