@@ -1,5 +1,5 @@
-// Kyydin tähdet (ISS-realismi 4c, KyydinTaivas): Yale Bright Star -tähdet ECI-suuntina, _Kierto vie maailmaan (georeferenssi
-// × GMST). Jokainen tähti on neljä kärkeä samassa suunnassa: vertex levittää ne kameraan päin neliöksi (koko pikseleinä
+// Kyydin tähdet (ISS-realismi 4c, KyydinTaivas): Yale Bright Star -tähdet ECI-suuntina, _KiertoX/Y/Z vievät maailmaan (georeferenssi
+// × GMST, sarakkeina _KiertoX/Y/Z). Jokainen tähti on neljä kärkeä samassa suunnassa: vertex levittää ne kameraan päin neliöksi (koko pikseleinä
 // uv2.x, ruudun tiheyden mukaan) ja painaa syvyyden kaukotasolle, joten maa peittää tähdet eikä parallaksia ole.
 // Pehmeä pyöreä piste, kirkkaus uv2.y × _Peitto (ISS varjossa 1, päivällä 0,3), väri B−V:stä (vertex-väri).
 Shader "Matkakirja/Linssit/KyydinTahdet"
@@ -7,6 +7,12 @@ Shader "Matkakirja/Linssit/KyydinTahdet"
     Properties
     {
         _Peitto("Peitto", Range(0, 1)) = 1
+        // Kierto ECI → maailma sarakkeina (Linssiseppä 2, laite taivas2 28.9.): float4x4 ilman Properties-riviä jäi SRP-batcherin
+        // UnityPerMaterial-puskurissa nollaksi (SetMatrix ei päivitä sitä), suunta = normalize(0) = NaN eikä yksikään tähti
+        // piirtynyt; vektorit Properties-lohkossa päivittyvät.
+        _KiertoX("Kierto: ECI x maailmassa", Vector) = (1, 0, 0, 0)
+        _KiertoY("Kierto: ECI y maailmassa", Vector) = (0, 1, 0, 0)
+        _KiertoZ("Kierto: ECI z maailmassa", Vector) = (0, 0, 1, 0)
     }
     SubShader
     {
@@ -27,7 +33,7 @@ Shader "Matkakirja/Linssit/KyydinTahdet"
 
             CBUFFER_START(UnityPerMaterial)
                 half _Peitto;
-                float4x4 _Kierto;
+                float4 _KiertoX, _KiertoY, _KiertoZ;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; float2 uv2 : TEXCOORD1; half4 vari : COLOR; };
@@ -36,7 +42,7 @@ Shader "Matkakirja/Linssit/KyydinTahdet"
             Vali vert(Syote i)
             {
                 Vali o;
-                float3 suunta = normalize(mul((float3x3)_Kierto, i.paikka.xyz));
+                float3 suunta = normalize(_KiertoX.xyz * i.paikka.x + _KiertoY.xyz * i.paikka.y + _KiertoZ.xyz * i.paikka.z);
                 float4 c = TransformWorldToHClip(_WorldSpaceCameraPos + suunta * 1.0e6);
                 // Neliö ruudulla: koko pikseleinä (1× → ruudun pikselit kertoimella lyhyen sivun mukaan).
                 float tiheys = max(1.0, min(_ScreenParams.x, _ScreenParams.y) / 400.0);
