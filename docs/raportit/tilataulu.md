@@ -10,6 +10,8 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
+**GPU-mittarin tarkennus (Julkaisija 12:5x):** ~10 gpu-process on sovellusten (Claude, Chrome, Spark, Unity Hub, CC, Codex, Aqua Voice) pysyviä — ei hälytysperuste. Hälytä Julkaisijalle jatkossa vain jos **chrome-headless-gpu-prosesseja on >4** (=yli 2 savuketta rinnakkain) TAI `/tmp/matkakirja-kevyt` on päällä ja Metal-chromiumeja näkyy.
+
 ## 1) Sessiot
 
 **KYNNYS YLITTYI: Linssiseppä 73%, Sisältökirjuri 73%, Pelikoodari 71% (uusi).** Postivahti (self) 10% (session vaihtui/nollautui edellisen luovutuksen jälkeen).
