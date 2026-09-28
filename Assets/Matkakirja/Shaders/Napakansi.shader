@@ -124,7 +124,11 @@ Shader "Matkakirja/Napakansi"
                     hehku = (half3)(vari * (_keila0Vari.rgb * (_keila0Vari.a * k0 * k0) + _keila1Vari.rgb * (_keila1Vari.a * k1 * k1)));
                     vari *= (half3)(lerp(1.0 - 0.95 * kh, 1.0, max(k0, k1)) * ksavy);
                 }
-                vari = lerp(vari, vari * half3(0.18, 0.17, 0.24) + half3(0.006, 0.006, 0.016), (half)saturate(_radioHamara));
+                // Radion hämärä kannessa puolet laattojen tummennuksesta (löydös 9, omistajan napakaappaus 28.9.2026:
+                // "tumma sininen soikea läiskä"): radio käyttää reliefipohjaa, jolloin navalla on reliefikansi, jonka keskiosa
+                // on reunanäytteiden tasainen keskiarvo (#4370aa); Lambert-valossa se tummui hämärässä mustansiniseksi
+                // soikioksi laattojen vaihtelevan pinnan keskellä.
+                vari = lerp(vari, vari * half3(0.42, 0.40, 0.50) + half3(0.02, 0.02, 0.035), (half)saturate(_radioHamara));
                 return half4((vari * valaistus + hehku) * a, a);
             }
             ENDHLSL

@@ -10,7 +10,9 @@
 //              lasi #3a1408
 //   lamppu     merkkivalo näytön oikealla: kromirengas, kupera lasi ja hehku;
 //              punainen soidessa, meripihka virittäessä, tumma virheessä;
-//              napautus = tauko/jatka (web asetaTauko; ks. alla)
+//              napautus = VIRTAKYTKIN (omistaja 28.9.2026: "punaisesta napista virtakytkin, joka sulkee
+//              linssin"): virtasymboli lasin päällä, painallus sulkee radiolinssin (SuljePyynto → LinssiUi.SuljeLinssi);
+//              aiempi tauko/jatka (web asetaTauko) jää testikomennoille ja AsetaTauko-reitille
 //   asteikko   paperi, asteikkoviivat 8/40 px, punainen viisari keskellä ja
 //              soivan kaupungin naapurit (4 per puoli; ≤ 700 px 3, ≤ 520 px 2);
 //              nimen napautus = RadioLinssi.SoitaKaupunki. Viritys liikuttaa
@@ -92,6 +94,13 @@ namespace Matkakirja.Natiivi
 
         bool tauolla;
 
+        /// <summary>Radion kotelo ja onko se näkyvissä (Pulu hyppää kotelon yläpuolelle, omistaja 28.9.2026).</summary>
+        public VisualElement Kotelo => kotelo;
+        public bool Nakyvissa => nakyvissa;
+
+        /// <summary>Virtakytkin: sulkee radiolinssin (LinssiUi asettaa SuljeLinssi).</summary>
+        public System.Action SuljePyynto;
+
         // Nimirivin liike (webin radio-liuku / radio-haku / radio-lukko).
         enum Liike { Ei, Liuku, Haku, Lukko }
         Liike liike;
@@ -149,7 +158,7 @@ namespace Matkakirja.Natiivi
             var lamppualue = Rakenne.El("mk-radio__lamppualue", rivi, PickingMode.Ignore);
             lamppu = new RadioLamppu(PainaLamppua);
             lamppu.AddToClassList("mk-radio__lamppu");
-            lamppu.tooltip = "Keskeytä lähetys";
+            lamppu.tooltip = "Sulje radio";
             lamppualue.Add(lamppu);
 
             // Asteikko: paperi, viivat (Asteikkoviivat), nimirivi ja viisari.
@@ -580,6 +589,7 @@ namespace Matkakirja.Natiivi
 
         void PainaLamppua()
         {
+            if (SuljePyynto != null) { SuljePyynto(); return; }
             if (vaihe == RadioVaihe.Soi || vaihe == RadioVaihe.Viritys) AsetaTauko(!tauolla);
             else if (tauolla) AsetaTauko(false);
         }
@@ -591,7 +601,7 @@ namespace Matkakirja.Natiivi
             // Oikea tauko (Linssiseppä 943be95): lähetys ja viritysääni pysähtyvät, tila säilyy.
             linssi?.Tauko(paalle);
             lamppu.Tauko = paalle;
-            lamppu.tooltip = paalle ? "Jatka lähetystä" : "Keskeytä lähetys";
+            lamppu.tooltip = SuljePyynto != null ? "Sulje radio" : paalle ? "Jatka lähetystä" : "Keskeytä lähetys";
         }
 
         void AvaaSivu()
@@ -1168,6 +1178,19 @@ namespace Matkakirja.Natiivi
             var e = c + new Vector2((0.18f + 0.19f - 0.5f) * 2 * lasiR, (0.12f + 0.13f - 0.5f) * 2 * lasiR);
             Ellipsi(p, e, 0.38f * lasiR, 0.26f * lasiR, -24f, new Color(1, 1, 1, Pistenaytto.Peitto(tauko ? 0.2f : 0.38f, Color.white, V("#a8564a"))));
             Ellipsi(p, e + new Vector2(0, -0.06f * lasiR), 0.26f * lasiR, 0.14f * lasiR, -24f, new Color(1, 1, 1, Pistenaytto.Peitto(tauko ? 0.25f : 0.5f, Color.white, V("#d59d92"))));
+
+            // Virtasymboli (IEC 5009): kaari, jonka yläosassa rako, ja pystyviiva raon läpi; vaalea kaiverrus lasissa.
+            float vs = lasiR * 0.52f;
+            p.lineWidth = Mathf.Max(1.4f, lasiR * 0.17f);
+            p.lineCap = LineCap.Round;
+            p.strokeColor = new Color(1f, 0.95f, 0.86f, 0.92f);
+            p.BeginPath();
+            p.Arc(c, vs, Angle.Degrees(-55f), Angle.Degrees(235f));
+            p.Stroke();
+            p.BeginPath();
+            p.MoveTo(c + new Vector2(0, -vs * 1.12f));
+            p.LineTo(c + new Vector2(0, -vs * 0.18f));
+            p.Stroke();
         }
 
         static void Ellipsi(Painter2D p, Vector2 c, float rx, float ry, float kulma, Color vari)

@@ -100,7 +100,11 @@ namespace Matkakirja.Linssit.Radio
         public const double VahimmaisaikaMs = 2600, SiirtymaMs = 1250, LukittuminenMs = 320;
         public const double LukitusAikaisintaanMs = VahimmaisaikaMs - LukittuminenMs;
         public const double AikakatkaisuMs = 12000;
-        public const double RistihaivytysS = 0.6, LukituksenHaivytysS = 0.9, PysaytyksenHaiveS = 0.25;
+        /// <summary>
+        /// Lukituksen häivytys 2,2 s (omistaja 28.9.2026: "asema selkiytyy vähitellen"; ennen 0,9 s): lähetys nousee
+        /// Nouseva-käyrällä ja viritysääni (kohina ja rahina) vaimenee saman ajan alla tasatehoisesti.
+        /// </summary>
+        public const double RistihaivytysS = 0.6, LukituksenHaivytysS = 2.2, PysaytyksenHaiveS = 0.25;
         public const float OletusAani = 0.8f;
 
         public static double Nouseva(double x) => Math.Sin(Math.Clamp(x, 0, 1) * Math.PI / 2);
@@ -182,7 +186,9 @@ namespace Matkakirja.Linssit.Radio
         readonly List<Masto> mastot = new List<Masto>();
         readonly Dictionary<string, double> nousunViive = new Dictionary<string, double>();
         readonly MastonKirkkaus kirkkaus = new MastonKirkkaus();
-        readonly List<double> renkaat = new List<double>(4);   // uudelleenkäyttö: ei roskaa joka kehys
+        readonly List<double> renkaat = new List<double>(8), rengasVoimat = new List<double>(8);   // uudelleenkäyttö: ei roskaa joka kehys
+        /// <summary>Aaltorenkaat äänen iskuista (omistaja 28.9.).</summary>
+        readonly VuRenkaat vuRenkaat = new VuRenkaat();
         double avausHetki = double.NaN, soiAlku = double.NaN, edellinenKello = double.NaN;
         double? kallistusEnnen;
         // Kaareva kamera-ajo uudelle mastolle (Mastot.KameraAjonKesto, Kuminauha 0,25).
@@ -245,6 +251,7 @@ namespace Matkakirja.Linssit.Radio
             avausHetki = Nyt;
             soiAlku = double.NaN;
             kirkkaus.Nollaa();
+            vuRenkaat.Nollaa();
             if (Mastot3D != null)
             {
                 Mastot3D.Mastot(mastot);
@@ -384,13 +391,20 @@ namespace Matkakirja.Linssit.Radio
                 var koko = Mastot.Koko(k);
                 bool linkki = ToimintoAsemalle(aineisto.MaanAsema(k.Iso3)) == Toiminto.Linkki;
                 renkaat.Clear();
-                if (!linkki && !vahennetty) Mastot.Renkaat(sLukosta, renkaat);
+                rengasVoimat.Clear();
+                if (!linkki && !vahennetty)
+                {
+                    vuRenkaat.Paivita(dt, vu);
+                    vuRenkaat.Lue(renkaat, rengasVoimat);
+                }
+                Mastot3D.RengasVoimat(rengasVoimat);
                 Mastot3D.Renkaat(k.Lat, k.Lon, Mastot.KuuluvuusKm(koko), renkaat);
                 Mastot3D.YonValot(k.Lat, k.Lon, (float)Kamera.Kamerakayrat.Pehmea(Math.Clamp(sLukosta / Mastot.ValojenSyttyminen, 0, 1)));
             }
             else
             {
                 kirkkaus.Nollaa();
+                vuRenkaat.Nollaa();
                 Mastot3D.Valittu(null, 0);
                 Mastot3D.Renkaat(0, 0, 0, Array.Empty<double>());
             }

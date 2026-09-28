@@ -237,7 +237,7 @@ namespace Matkakirja
                 Horisonttiusva.RuutuRajaY = double.IsNaN(y) ? 0f : Mathf.Clamp01((float)((1.0 - y) * 0.5));
             }
             // Sama usva varjostimille (löydös 159, Shaders/Horisonttiusva.hlsl): reitit, kynäviivat, Overlay-nimet.
-            var usvaRuutu = new Vector4(Horisonttiusva.RuutuRajaY, Horisonttiusva.RuutuVoima, (float)Horisonttiusva.Liuku, 0f);
+            var usvaRuutu = new Vector4(Horisonttiusva.RuutuRajaY, Horisonttiusva.RuutuVoima, (float)Horisonttiusva.LiukuNyt, 0f);
             if (usvaRuutu != edellinenUsvaRuutu) { edellinenUsvaRuutu = usvaRuutu; Shader.SetGlobalVector(UsvaRuutuId, usvaRuutu); }
             if (sumu && !SumuEstetty)
             {
@@ -254,7 +254,7 @@ namespace Matkakirja
                 double mitta = georeferenssi != null ? georeferenssi.transform.lossyScale.x : 1.0;
                 double puoliFov = kameraKomp.fieldOfView * 0.5;
                 var (alku, loppu) = Horisonttiusva.Sumu(kierto.korkeus, kierto.KaytettyKallistus, puoliFov,
-                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaKerroin(kierto.korkeus));
+                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaKerroin(kierto.korkeus), Horisonttiusva.LiukuNyt);
                 float kauas = (float)(loppu * mitta) * 8f;
                 RenderSettings.fog = true;
                 RenderSettings.fogMode = FogMode.Linear;

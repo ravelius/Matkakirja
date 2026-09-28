@@ -76,7 +76,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(k.GetProperty("ajat").GetProperty("siirtyma").GetDouble(), RadioLinssi.SiirtymaMs);
             Oleta.Sama(k.GetProperty("ajat").GetProperty("lukittuminen").GetDouble(), RadioLinssi.LukittuminenMs);
             Oleta.Sama(k.GetProperty("ristihaivytys").GetDouble(), RadioLinssi.RistihaivytysS);
-            Oleta.Sama(k.GetProperty("lukitus").GetDouble(), RadioLinssi.LukituksenHaivytysS);
+            // Lukitus poikkeaa webistä (0,9 s) omistajan päätöksellä 28.9.2026 ("asema selkiytyy vähitellen"): 2,2 s;
+            // webin vastine Siirtosepälle.
+            Oleta.Sama(0.9, k.GetProperty("lukitus").GetDouble(), "web");
+            Oleta.Sama(2.2, RadioLinssi.LukituksenHaivytysS, "natiivi");
             Oleta.Sama(k.GetProperty("aikakatkaisu").GetDouble(), RadioLinssi.AikakatkaisuMs);
             Oleta.Sama(k.GetProperty("fontti").GetString(), RadioAineisto.PistefontinMerkit, "pistefontti");
             for (double x = 0; x <= 1; x += 0.1)
@@ -338,7 +341,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
             Oleta.Sama(l.Tila.Naytto.ToUpperInvariant(), l.Tila.Rivi1);
             Oleta.Sama("HELSINKI · SUOMI", l.Tila.Rivi2, "soidessa [asema, KAUPUNKI · MAA]");
-            Aja(l, y, 1);
+            Aja(l, y, RadioLinssi.LukituksenHaivytysS);
             Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi voimakkuus: " + v.V);
         }
 
@@ -366,7 +369,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!w.Soi, "rahina väistyy");
             Aja(l, y, 1 / 60.0);
             Oleta.Tosi(Math.Abs(v.V - kesken) < 0.05, $"ei hyppyä: {kesken} → {v.V}");
-            Aja(l, y, 1);
+            Aja(l, y, RadioLinssi.LukituksenHaivytysS);
             Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi taas");
             // Irrotus toiselle asemalle: tavallinen viritys, rahina jatkuu.
             l.VetoAlkaa();
