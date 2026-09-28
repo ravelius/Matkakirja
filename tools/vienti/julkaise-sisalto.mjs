@@ -106,16 +106,40 @@ const MUUTOSNIMET = {
   luennat: 'luentoa', elaintayt: 'eläinjuttua', kulttuurivisat: 'kulttuurivisaa', lehtitehtavat: 'lehtitehtävää',
   miniatyyrit: 'pienoismallia', paikallisaarteet: 'paikallisaarretta', historianHetket: 'historian hetkeä',
 };
-export function muutosRivi(edelliset, nykyiset, julkaistu) {
+/*
+ * PÄIVITETYT KOKOELMAT (Natiivi-UI 28.9.2026, omistajan toive Fablen kautta: "Peli päivittyi" -lappu kertoo oikeat
+ * muutokset). Useimmat versiot muuttavat sisältöä lisäämättä alkioita, jolloin rivi oli pelkkä "Sisältöä päivitettiin."
+ * (natiivi jättää sen pois). Osoitin kantaa nyt kokoelmien tiivisteet (kokoelmaSha, 12 merkkiä), ja seuraava versio
+ * nimeää muuttuneet. Nimettävät kokoelmat ja offline-kartat alla; muut (säännöt, esilasketut, moduulit) eivät nouse riville.
+ */
+const PAIVITETTYNIMET = {
+  kaupunkilehdet: 'kaupunkilehdet', maalehdet: 'maalehdet', nahtavyydet: 'nähtävyydet', kysymykset: 'kysymykset',
+  kohtaamiset: 'kohtaamiset', julisteet: 'julisteet', radiot: 'radioasemat', kohdekartat: 'kohdekartat', luennat: 'luennot',
+  elaintayt: 'eläinjutut', kulttuurivisat: 'kulttuurivisat', lehtitehtavat: 'lehtitehtävät', miniatyyrit: 'pienoismallit',
+  paikallisaarteet: 'paikallisaarteet', historianHetket: 'historian hetket', karttavalot: 'karttanostot',
+  maakuntarajat: 'maakunnat', tarinakaari: 'tarina', saapumispuheet: 'saapumispuheet', livianpuhe: 'Livian puheet',
+  kaupungit: 'kaupungit', reitit: 'reitit', pulmat: 'pulmat', kuvakysymykset: 'kuvakysymykset', offline: 'offline-kartat',
+};
+const luettelo = (l) => (l.length < 2 ? l.join('') : `${l.slice(0, -1).join(', ')} ja ${l.at(-1)}`);
+
+export function muutosRivi(edelliset, nykyiset, julkaistu, edSha = null, nySha = null) {
   const paiva = julkaistu.slice(0, 10);
   if (!edelliset) return { paiva, teksti: 'Sisältö päivittyi.' };
-  const uudet = Object.entries(MUUTOSNIMET)
-    .map(([nimi, sana]) => [nykyiset[nimi] - (edelliset[nimi] ?? 0), sana])
+  const kasvaneet = Object.entries(MUUTOSNIMET)
+    .map(([nimi, sana]) => [nykyiset[nimi] - (edelliset[nimi] ?? 0), sana, nimi])
     .filter(([n]) => n > 0).sort((a, b) => b[0] - a[0]).slice(0, 3);
-  return {
-    paiva,
-    teksti: uudet.length ? `Sisältö päivittyi: ${uudet.map(([n, sana]) => `${n} uutta ${sana}`).join(', ')}.` : 'Sisältöä päivitettiin.',
-  };
+  const osat = [];
+  if (kasvaneet.length) osat.push(`Sisältö päivittyi: ${kasvaneet.map(([n, sana]) => `${n} uutta ${sana}`).join(', ')}.`);
+  if (edSha && nySha) {
+    const lasketut = new Set(kasvaneet.map(([, , nimi]) => nimi));
+    const muuttuneet = Object.keys(PAIVITETTYNIMET)
+      .filter((nimi) => !lasketut.has(nimi) && edSha[nimi] && nySha[nimi] && edSha[nimi] !== nySha[nimi]).map((nimi) => PAIVITETTYNIMET[nimi]);
+    if (muuttuneet.length) {
+      const nakyvat = muuttuneet.length > 4 ? [...muuttuneet.slice(0, 4), 'muuta'] : muuttuneet;
+      osat.push(`Päivitetty: ${luettelo(nakyvat)}.`);
+    }
+  }
+  return { paiva, teksti: osat.length ? osat.join(' ') : 'Sisältöä päivitettiin.' };
 }
 
 /*
@@ -199,7 +223,10 @@ export function kokoaJulkaisu({ tiedostot, edellinen = null, suurin = 0, commit,
   const manifest = tiedostot.has('manifest.json') ? JSON.parse(tiedostot.get('manifest.json')) : null;
   if (manifest?.kokoelmat) {
     osoitin.kokoelmaLkm = Object.fromEntries(manifest.kokoelmat.map((k) => [k.nimi, k.lkm]));
-    osoitin.muutos = muutosRivi(edellinen?.kokoelmaLkm ?? null, osoitin.kokoelmaLkm, julkaistu);
+    osoitin.kokoelmaSha = Object.fromEntries([...manifest.kokoelmat.map((k) => [k.nimi, k.sha256?.slice(0, 12)]),
+      ...(manifest.offline?.sha256 ? [['offline', manifest.offline.sha256.slice(0, 12)]] : [])].filter(([, v]) => v));
+    osoitin.muutos = muutosRivi(edellinen?.kokoelmaLkm ?? null, osoitin.kokoelmaLkm, julkaistu,
+      edellinen?.kokoelmaSha ?? null, osoitin.kokoelmaSha);
   }
   if (!kakkonen) virheet.push(...validoiNimella(osoitin, 'osoitin.schema.json', { polku: 'uusin.json' }));
   return { muuttui: true, versio, osoitin, hakemisto, virheet };
