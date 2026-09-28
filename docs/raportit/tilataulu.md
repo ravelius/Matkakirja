@@ -2,25 +2,25 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 10:17 EEST — **LEVY ALITTI 80 Gt RAJAN: 69 Gi vapaana (romahti 82→69 Gi) — ILMOITETTU FABLELLE KIIREELLISENÄ. Linssiseppä nollautunut (72%→20%).**
+**Päivitetty:** 2026-09-28 10:24 EEST — **Levy TASAANTUNUT (70 Gi, yhä alle 80 Gt). SYY LÖYTYI: xcodebuild-ajo (juna, aloitettu 10:11) Build/dd-sim-derived-dataan proto-3d/Matkakirja-proto-kaannos/Build (9,9 Gt) — normaali juna-käännös, ei virhe. Ilmoitettu Fablelle.**
 
 ## 1) Sessiot
 
-Linssiseppä nollautui automaattisesti (72%→20%). Natiiviseppä 64%, nousee — ei vielä ylitystä.
+Natiiviseppä 67%, lähestyy 70% kynnystä — ei vielä ylitystä.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 57% | running |
-| Postivahti (self) | (tämä sessio) | 43% | running |
+| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 59% | running |
+| Postivahti (self) | (tämä sessio) | 45% | running |
 | Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 21% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 64% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 27% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 50% | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 20% (nollautunut) | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | **67%** | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 29% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 51% | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 28% | running |
 | Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 45% | running |
 | Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 36% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 44% | running |
-| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 25% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 45% | running |
+| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 26% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
 
@@ -48,7 +48,9 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
 
-**Juna:** ei uutta riviä 10:02 jälkeen (käännös oli menossa, ei vielä valmis-riviä — seurataan onko jumissa). Tauon lippu ei ole palautunut. **Julkaisulippu poistunut** — julkaisu valmis.
+**Juna:** ei uutta riviä 10:02 jälkeen — xcodebuild käynnissä (alkoi 10:11, normaali kesto, ei jumissa). Tauon lippu ei ole palautunut. Julkaisulippu poissa.
+
+**HUOM (10:24):** Fablen session nimi on nyt **Päätoimittaja (Opus, xhigh)** (sama id local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31). "Fable" ohjeissa = Päätoimittaja.
 
 **Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
@@ -76,17 +78,18 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (10:17)
+## 5) Resurssit (10:24)
 
-- **5 h -kiintiö:** 51 %. **Viikko (kaikki mallit): 14 %.** **Viikko (Fable):** 0 %.
-- **LEVY ALLE 80 Gt RAJAN: 69 Gi vapaana** (romahti 82→69 Gi tällä kierroksella). wt/ 17G, proto-3d/lokit 29G, pyramidi-poltto 7.0G — tarkka kasvaja ei löytynyt nopealla tarkistuksella (todennäköisesti Xcode-käännös/DerivedData, uusi PR #3533-haara julkaisija-pr3533 juuri luotu). wt/-worktreet 25 kpl. **Ilmoitettu Fablelle 10:17 kiireellisenä.**
+- **5 h -kiintiö:** 53 %. **Viikko (kaikki mallit): 14 %.** **Viikko (Fable/Päätoimittaja):** 0 %.
+- **Levy:** 70 Gi vapaana, tasaantunut (69→70 Gi). **Syy tunnistettu:** juna-käännöksen xcodebuild (Build/dd-sim, DerivedData proto-3d/Matkakirja-proto-kaannos/Build 9,9 Gt) — normaalia, ei virhe. Yhä alle 80 Gt rajan, seurataan kunnes käännös valmistuu. wt/-worktreet 26 kpl.
 - **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
-- **Liput:** `/tmp/matkakirja-julkaisu` poissa — julkaisu valmis. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** Linssiseppä nollautui (20%), Natiiviseppä 64% nousee.
-- **GPU-prosessit (type=gpu-process):** 18 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
+- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** Natiiviseppä 67%, lähestyy kynnystä.
+- **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
 - **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
-- **Lokisiivouskandidaatteja:** ei tällä kierroksella (levyhälytys eri syystä — build/käännöstiedostot, ei lokikansiot).
+- **Lokisiivouskandidaatteja:** ei tällä kierroksella.
 - **Postilaatikko:** EI UUTTA.
+- **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
