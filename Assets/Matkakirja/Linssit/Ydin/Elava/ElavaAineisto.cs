@@ -1,6 +1,6 @@
 // ELÄVÄ KARTTA: kohtauksen aineisto maittain (Linssiseppä 26.9.2026). Puhdas C#.
 //
-//   JOET   Karttasepän julisteet/pallo/vektorit/joet-2026-09-26b/<ISO>.geojson (GEOGLOWS v2 / TDX-Hydro, CC BY-SA 4.0;
+//   JOET   Karttasepän julisteet/pallo/vektorit/joet-2026-09-28/<ISO>.geojson (GEOGLOWS v2 / TDX-Hydro, CC BY-SA 4.0;
 //          LineString [lon, lat], properties jarjestys = Strahler, valuma_km2). Kynä piirtää vain pääuomat: kaksi suurinta
 //          Strahler-luokkaa ja niistä enintään JokiaEnintaan suurinta valumaltaan. Vain video (saapuminen 27.9.2026: ei jokia;
 //          saapumisen nostot karttavaloista poistuivat samalla).
@@ -15,7 +15,7 @@ namespace Matkakirja.Linssit.Elava
     public static class ElavaAineisto
     {
         /// <summary>Jokiaineiston hakemisto ämpärissä (Sisalto.Juuri + tämä + ISO3 + ".geojson").</summary>
-        public const string JoetKansio = "julisteet/pallo/vektorit/joet-2026-09-26b/";
+        public const string JoetKansio = "julisteet/pallo/vektorit/joet-2026-09-28/";
         public const string JoetLahde = "GEOGLOWS v2 (TDX-Hydro), CC BY-SA 4.0";
         public const int JokiaEnintaan = 36;
 
