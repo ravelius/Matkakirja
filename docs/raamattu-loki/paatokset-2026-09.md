@@ -8619,3 +8619,7 @@ Omistaja 28.9. klo 12.4x sanatarkasti: "pitäisikö olla pulussa viimeinen vaiht
 ## OMISTAJA: KORJAUS — PUHUN-TILAAN 'NAPAUTA MIKKIA, JOS HALUAT KESKEYTTAA' (EI LEPOTILARIVIA) (28.9.2026 klo 12.44)
 
 Omistaja 28.9. klo 12.4x korjasi sanatarkasti: "eikun anteeksi: puhun, napauta mikkiä jos haluat keskeyttä". Korvaa edellisen kirjauksen lepotilarivin: Puhun-tilan rivi on 'Puhun… napauta mikkiä, jos haluat keskeyttää'; neljatta tilaa ei tule, puheen jalkeen rivi kuten #3546:ssa. Pelikoodari web, Natiivi-UI natiivi.
+
+## OMISTAJA: IDEA MYOHEMMIN — 'MAAPALLON VUOSI' -LINSSI (PYORITETTAVA PALLO KUUKAUSI KERRALLAAN + DATAKERROKSET) (28.9.2026 klo 12.52)
+
+Omistaja 28.9. klo 12.5x: ISS-kyydissa maapallo nakyy sellaisena kuin se kuluvana kuukautena oikeasti on (BMNG, Karttaseppa). Lisaksi myohemmin oma linssi, jossa maapalloa voi pyorittaa eri vuodenaikoina ja paalle voi lisata muutakin dataa. Paatoimittaja: hyva, sopii pelin oppimistehtavaan. Luonnos: kuukausiliukusaadin tammi–joulu (BMNG pohjana) + kerrokset NASA Earth Observations -kuukausiaineistoista (PD): kasvillisuus (NDVI), lumi- ja jaapeite, meren pintalampotila, sademaarat, pilvisyys, palot, yovalot; aiheena esim. monsuuni, lumiraja, vihertyminen, jaan vuosikierto; kytkos Foggin 80 paivan matkan vuodenaikoihin. Ajoitus: VAIN EUROOPPA -linjauksen jalkeen (ei aloiteta ennen omistajan lupaa), vastuu Linssiseppa, data Karttaseppa. Kirjattu jonoon.
