@@ -317,17 +317,22 @@ test('lehteen jätetyllä hetkellä on kirjattu syy', () => {
   // Berliini, Rooma, Ateena, Helsinki). Jokaisella on saman säännön
   // mukaan piste kaupungin kohdekartalla (js/packs/maakartat.js), ja
   // seuraava testi vaatii sen.
+  // 28.9.2026: Wienin pörssi, Christiansborg, Latin-silta, Nikosian
+  // Paafoksen portti ja Pyhä Elmo saivat pisteet kaupunkien kohdekartoille.
   assert.deepEqual(poikkeukset.sort(),
     ['amundsen-etelanapa-1911', 'beethoven-yhdeksas-1824', 'berliinin-muuri-1961',
-      'brooklyn-bridge-1883', 'brunel-thames-tunnel-1827', 'darwin-galapagos-1835',
-      'eiffel-torni-1888', 'faraday-luento-1831', 'fleming-malja-1928',
+      'britannian-lippu-nikosiassa-1878', 'brooklyn-bridge-1883',
+      'brunel-thames-tunnel-1827', 'christiansborgin-palo-1884',
+      'darwin-galapagos-1835', 'eiffel-torni-1888', 'faraday-luento-1831',
+      'fleming-malja-1928', 'franz-ferdinandin-salamurha-1914',
       'kolumbus-portugali-1484', 'konstantinopoli-1453', 'lavoisier-laboratorio-1780',
       'lontoon-palo-1666', 'lumiere-elokuva-1895', 'marie-curie-hangaari-1898',
       'mendelejev-kortit-1869', 'michelangelo-sikstus-1510', 'mozart-wien-1786',
       'nansen-fram-1893', 'olympia-ateena-1896', 'pasteur-pullot-1862',
-      'pietari-perustus-1703', 'ranskan-vallankumous-bastilji-1789',
+      'pietari-perustus-1703', 'pyhan-elmon-linnake-1565',
+      'ranskan-vallankumous-bastilji-1789',
       'shakespeare-globe-1599', 'sibelius-finlandia-1899',
-      'siegfried-ostaa-bockin-963'],
+      'siegfried-ostaa-bockin-963', 'wienin-porssikrahi-1873'],
     'poikkeuslista muuttui — uusi lehteen jäävä hetki vaatii omistajan päätöksen');
 });
 
@@ -348,5 +353,9 @@ test('laatan päälle osuvalla hetkellä on piste kaupungin kohdekartalla', () =
     assert.ok(linkki, `${hetki.id}: kohdekartalta puuttuu piste, joka kantaa nostoa hetki-${hetki.id}`);
     assert.equal(linkki.kaupunki, hetki.lehti.avain,
       `${hetki.id}: kohdekartan piste on kaupungissa ${linkki.kaupunki}, lehti on ${hetki.lehti.avain}`);
+    const piste = KAUPUNKIKARTAT[linkki.kaupunki].kohteet.find((k) => k.nimi === linkki.piste);
+    const juttu = NAHTAVYYSJUTUT[linkki.kaupunki]?.[linkki.piste];
+    assert.equal(juttu?.teksti ?? piste?.teksti, hetki.teksti,
+      `${hetki.id}: kohdekartalta avautuva teksti eriytyi hetken omasta tekstistä`);
   }
 });

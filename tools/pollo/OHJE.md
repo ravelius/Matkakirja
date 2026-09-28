@@ -1,5 +1,20 @@
 # Viisaan Pöllön käyttöönotto (omistajalle, n. 10 min puhelimella)
 
+> **Päivitys 28.9.2026 (Pulun äänikeskustelu, KOE):** uusi reitti
+> `tehtava: 'realtime'` antaa selaimelle lyhytikäisen xAI-tokenin
+> (`POST https://api.x.ai/v1/realtime/client_secrets`) ja valmiin
+> `session.update`-istunnon: sama Pulun kehote kuin chatissa
+> (`worker.js pulunKehote`, muoto `'aani'`), pelin xAI-ääni (`ara` tai
+> pelaajan valinta) ja server VAD. Selain avaa WebSocketin suoraan
+> xAI:hin (`js/pulu-realtime.js`); API-avain ei lähde workerista. Reitti
+> on **vain kehittäjäkoodilla** (403 muuten) eikä natiiville. Päiväkatto
+> minuutteina koko pelille: `REALTIME_PAIVARAJA_MIN` (oletus 30), ja
+> jokainen token varaa istunnon enimmäispituuden `REALTIME_ISTUNTO_MIN`
+> (oletus 3) — kehittäjäkoodikaan ei ohita kattoa (429). Ei uusia
+> salaisuuksia: sama `XAI_API_KEY` kuin striimiluennalla. Mittaus ilman
+> ihmistä: `node tools/pollo/realtime-koe.mjs` (ohje tiedoston alussa).
+> Käyttöönotto vasta Pelikoodarin päätöksellä: "Pöllön julkaisu" -ajo.
+
 > **Päivitys 29.8.2026 (sähketehtävän vapaa vastaus):** sama worker
 > arvioi nyt myös sähketehtävän vapaamuotoiset vastaukset
 > (`tehtava: 'sahke'`). Peli tulkitsee tekstin ensin itse ilmaiseksi ja

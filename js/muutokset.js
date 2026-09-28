@@ -13,7 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2353, teksti: 'Kartta ei jää odottamaan hetkellisen verkkokatkon jälkeen' },
+  { v: 2354, teksti: 'v2354: Pulun äänikeskustelu xAI:lla (#3544)' },
+  { v: 2353, teksti: '13 Euroopan historian hetkeä ja 26 havainnekuvaa (#3529)' },
+  { v: 2352, teksti: 'v2349: Karttalaatat eivät jää aukoiksi — pallo… (#3516)' },
+  { v: 2351, teksti: 'UKR: pitkä-luonnehdinta + pulu kaikille 25 maak… (#3525)' },
+  { v: 2350, teksti: 'CZE+HRV: korjaa pitkä-tekstien ääni Livian nyky… (#3524)' },
   { v: 2349, teksti: 'Poltto: ajo ilman nosto-/nimiöshardeja kantaa ä… (#3521)' },
   { v: 2348, teksti: 'ROU: pitkä-luonnehdinta + pulu kaikille 42 maak… (#3514)' },
   { v: 2347, teksti: 'Pulun äänitagit: huokaus, nauru, innostus (#3513)' },

@@ -62,13 +62,16 @@ export const OFFLINE_LAHTEET = {
     kaupunkitaso: { tasot: [9], sadeKm: 60, kaupungit: "kokoelma kaupungit, tyyppi 'kaupunki'" },
   },
   maasto: {
-    layer: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23b/layer.json',
-    url: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23b/{z}/{x}/{y}.terrain?v=2026-09-23b',
+    layer: 'https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/layer.json',
+    url: 'https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/{z}/{x}/{y}.terrain?v=2026-09-24-maailma',
     skeema: 'tms', projektio: 'EPSG:4326', globaaliMax: 6,
     /*
      * Skeema 1.53 (Fable 27.9.2026, ehdotus B1+C docs/raportit/siirtoseppa-maasto-offline-ehdotus-20260927.md):
      * maan maasto-kenttä enintään kokoMaaMax (z10), ja tarkemmat tasot vain kaupunkien ympäriltä omassa avaimessa
      * maat.*.kaupunkiMaasto (vanhat buildit ohittavat). Verkossa maasto haetaan ennallaan layer.json-tasoille asti.
+     * Sama sarja kuin natiivin kohtauksessa (Pallo.unity maastoLayer, 24.9. alkaen 2026-09-24-maailma): natiivi lataa
+     * laatat kohtauksen pohjasta näillä väleillä, joten vanha 2026-09-23b (z7+ vain Ranska) jätti 127 maata ilman
+     * offline-maastoa (Siirtoseppä 28.9.2026). Sarjan vaihtuessa: vaihda molemmat ja aja --paivita-koot.
      */
     kokoMaaMax: 10,
     kaupunkiMaasto: { tasot: [11, 12], sadeKm: 50 },
@@ -380,6 +383,18 @@ export function jaaMedia(tiedostot, manifest) {
 
 export function lueKoot() {
   return JSON.parse(readFileSync(KOOT_TIEDOSTO, 'utf8'));
+}
+
+/**
+ * offline-koot.json tekstinä: maasto.available yksi taso per rivi (maailmasarjassa tuhansia välejä, 28.9.2026),
+ * muu sisentäen kuten ennen.
+ */
+export function kootTekstina(koot) {
+  const tasot = koot.maasto?.available;
+  if (!tasot) return `${JSON.stringify(koot, null, 1)}\n`;
+  const merkki = '"__available__"';
+  const runko = JSON.stringify({ ...koot, maasto: { ...koot.maasto, available: '__available__' } }, null, 1);
+  return `${runko.replace(merkki, `[\n${tasot.map((t) => `   ${JSON.stringify(t)}`).join(',\n')}\n  ]`)}\n`;
 }
 
 /**
@@ -701,7 +716,7 @@ async function paivitaKoot(vienti, n = 24) {
       ...(lueKoot().maasto.purettu ? { purettu: lueKoot().maasto.purettu } : {}) },
     media,
   };
-  writeFileSync(KOOT_TIEDOSTO, `${JSON.stringify(tulos, null, 1)}\n`);
+  writeFileSync(KOOT_TIEDOSTO, kootTekstina(tulos));
   return tulos;
 }
 
