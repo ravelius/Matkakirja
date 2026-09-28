@@ -98,6 +98,9 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
 
+        /// <summary>Pulun äänikeskustelun koenappi (vain kehittäjätilassa; UI/Pulu/PuluRealtimeNappi.cs).</summary>
+        readonly PuluRealtimeNappi realtime;
+
         public PuluChat(UiKerros kerros, Pulu pulu)
         {
             this.kerros = kerros;
@@ -131,6 +134,7 @@ namespace Matkakirja.Natiivi
             // (näppäimistö 1, kaiutin 1, mikrofoni 2). Sanelutilassa kirjoitusrivi on piilossa.
             var syote = Rakenne.El("mk-chat__syote", paneeli, PickingMode.Ignore);
             saneluTila = Rakenne.Teksti("", "mk-chat__sanelutila", syote);
+            realtime = new PuluRealtimeNappi(syote, Viesti, () => Konteksti(), LopetaSanelu);
             var rivi = Rakenne.El("mk-chat__rivi", syote, PickingMode.Ignore);
             lomake = rivi;
             kentta = new TextField { maxLength = KysymysKatto };
@@ -244,6 +248,7 @@ namespace Matkakirja.Natiivi
             Aanisoitin.Hiljennys("pollo", true);
             pulu.Tilanne("chatOpen");
             naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
+            realtime.PaivitaNakyvyys();
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
             PuluHaku.Valmistele(); // web: indeksi laiskasti chatin ensimmäisellä avauksella
             Alku(historia.Count == 0);
@@ -318,6 +323,7 @@ namespace Matkakirja.Natiivi
             SyoteLukko.Vapauta(this);
             Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");
+            realtime.Lopeta(); // web sulje: äänikeskustelun koe sulkeutuu chatin mukana
             kentta.Blur();
         }
 
