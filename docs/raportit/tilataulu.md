@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 11:32 EEST — **Kuorma nousi takaisin 64,2:een (oli 21,8) — toistuva todellinen syyllinen: `mds_stores`/Spotlight 232% CPU indeksoi jatkuvasti pallopolton tiedostoja.** Pysyvä korjaus vaatii järjestelmätason poikkeuksen (ei Postivahdin tehtävissä), ehdotettu Päätoimittajalle.
+**Päivitetty:** 2026-09-28 11:39 EEST — **Load1 50,3, laahaa perässä huipusta (64,2) mutta rakenteellisesti hyvä: R/Rs-tilaisia vain 10.** mds_stores laskenut 232%→54%. Odotetaan load1:n laskevan seuraavalle kierrokselle mennessä.
 
 ## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
 
