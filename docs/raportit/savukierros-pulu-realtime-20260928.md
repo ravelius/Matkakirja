@@ -48,3 +48,23 @@ Simulaattori-spesifinen ja tiedossa).
 
 Ominaisuus on kehittäjätilan takana (ei näy tavallisille pelaajille), joten tämä EI estä muun sisällön
 TF-vientiä — vain itse Pulu-realtime-kokeilun julkaisukelpoisuutta.
+
+## Jatkoajo: 1.0.36-juna (5480b556) — PASS (korjaus vahvistettu)
+
+Pelikoodarin korjaus `4395a922` (moottori käynnistyy uudelleen kokoonpanon muutoksessa, ei enää
+tulkita keskeytykseksi) + `a6edbd06` (uusi eristetty debug-komento `pulu realtime kanava paalle|pois|tila`).
+
+**Testattu iPhone 18 Pro (1572C658), asennus 14:11:37:**
+- Eristetty kanava (`pulu realtime kanava paalle`, ei WebSocketia): sama "moottorin kokoonpano muuttui"
+  -tapahtuma tuli kuten ennenkin, mutta natiivilogissa näkyi nyt **"uudelleenkäynnistys 1 (moottorin
+  kokoonpano muuttui), sama moottori"** eikä keskeytysvirhettä — juuri odotettu korjaus.
+- Täysi polku (`pulu realtime paalle`, kehittäjäkoodilla): tila eteni Yhdistaa → **Kuuntelee**, kanava
+  auki, ja pysyi vakaana **~30+ sekuntia** (neljä `pulu realtime tila` -tarkistusta, "jäljellä" laski
+  normaalisti 178 s → 147 s), sama kokoonpanon-muutos+uudelleenkäynnistys-tapahtuma näkyi lokissa mutta
+  EI katkaissut yhteyttä. Pysäytettiin siististi `pulu realtime pois`:lla, ei virhettä.
+
+**PASS.** Alkuperäinen katkeaminen (BUILD 35 / 0cd85ecc) on korjattu tässä junassa. En saanut oikeaa
+puhesisältöä läpi (ei ihmisääntä syötteenä simulaattorissa), joten itse keskustelun sisältöä/vastausta
+ei todennettu — vain yhteyden pysyvyys ja tilakoneen kulku. Suosittelen silti fyysisen laitteen
+lopputestiä ennen laajempaa julkaisua, koska simulaattorin 192 kHz-syöte on yhä epätavallinen eikä
+vastaa oikeaa iPhone-mikrofonia.
