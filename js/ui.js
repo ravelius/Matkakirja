@@ -383,7 +383,7 @@ import { vuorikuvat } from './packs/vuori-valokuvat.js';
 import { NukkuvaKartta, lataaTasokartta, tasokartanOsat } from './kartta-lataus.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import {
-  matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet, piirraIhmenappi,
+  matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet,
   piirraIhmenauha,
   avaaKohdeSuurennos,
 } from './fokuskohteet.js';
@@ -1062,13 +1062,15 @@ export const AARRE_MUSIIKKI = {
  * ja palaavat, kun aihe loppuu. Saapumistunnus asuu maanosittain
  * js/kaupunkimusiikki.js:n SAAPUMISTUNNUKSET-taulussa.
  *
- *   aloituslento     Lontoosta ensimmäiseen kaupunkiin, 26 s (doPickStart)
+ *   aloituslento     Lontoosta ensimmäiseen kaupunkiin, 20 s (doPickStart). Omistaja valitsi
+ *                    28.9.2026 vaskimarssin (ehdotus A): innostunut ja mahtipontinen, pelin oma
+ *                    johtoaihe trumpeteilla; isku 7,3 s ja loppusointu 15,1 s natiivin v3f-lennon mukaan.
  *   loppu            kaikki pääaarteet löydetty, 69 s (ajastaMatkanLoppu)
  *   ratkaisu         kohtaamisen kysymys oikein, 4,3 s (soitaKohtaamisenTulos)
  *   epaonnistuminen  kohtaamisen kysymys väärin tai aika loppui, 4,0 s (sama)
  */
 export const MATKAN_AIHEET = {
-  aloituslento: musaPolku('musa-aloituslento'),
+  aloituslento: musaPolku('musa-aloituslento-marssi-a'),
   loppu: musaPolku('musa-loppu'),
   ratkaisu: musaPolku('musa-ratkaisu'),
   epaonnistuminen: musaPolku('musa-epaonnistuminen'),
@@ -12886,7 +12888,7 @@ export class UI {
       if (!this.reducedMotion) this.aloitaLennonAmbienssi();
       /*
        * ALOITUSLENNON AIHE (musiikkisuunnitelma 26.9.2026, vaihe 1):
-       * johtoaihe täytenä ja nousevana, one-shot 26 s. Alkaa samasta
+       * vaskimarssi johtoaiheella (omistaja 28.9.2026), one-shot 20 s. Alkaa samasta
        * napautuksesta kuin kabiini, ja pohjaraita väistyy sen ajaksi
        * kuten aarteen aiheelle. Liikeherkkyydessä lentoa ei ole, joten
        * ei aihettakaan; radiotilassa radio on ainoa ääni.
@@ -15677,8 +15679,8 @@ export class UI {
     let nauha = null;
     /*
      * REAKTIORIVI (js/reaktiot.js) sille kuvalle, jolla on oma
-     * tunniste — käytännössä Matkakirjan ihme, joka aukeaa
-     * nähtävyysjutun "Koe ihme" -napista. Rivi seuraa kuvaa kuten
+     * tunniste — käytännössä Matkakirjan ihme, joka on nähtävyysjutun
+     * ensimmäinen kuva. Rivi seuraa kuvaa kuten
      * nauhakin: sarjaa selattaessa se vaihtuu tai katoaa.
      */
     let reaktiot = null;
@@ -16094,12 +16096,6 @@ export class UI {
 
   /** Nimetyn paikan Matkakirjan ihme kuvaoliona, tai null. */
   matkakirjanIhme(nimi) { return matkakirjanIhme(nimi); }
-
-  /** "Koe ihme" -nappi tähtineen; napautus avaa ihmekuvan suurennoksen. */
-  piirraIhmenappi(sisalto, ihme) {
-    return piirraIhmenappi(sisalto, ihme.nappi,
-      () => this.naytaKulttuuriKuva(ihme));
-  }
 
   /** Ihmenauha kuvan vasempaan yläkulmaan; isäntä on kuvan kokoinen. */
   piirraIhmenauha(isanta, teksti) { return piirraIhmenauha(isanta, teksti); }

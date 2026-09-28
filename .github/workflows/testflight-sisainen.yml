@@ -25,6 +25,10 @@ on:
         description: 'Vanhenna build TestFlightissa (vikainen build pois testaajilta; ei liitetä ryhmään)'
         type: boolean
         default: false
+      palaute_pois:
+        description: 'Sisäisen ryhmän palaute pois (feedbackEnabled=false; ei muuta buildia eikä ryhmää muuten)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -33,10 +37,17 @@ concurrency:
   group: testflight-sisainen
   cancel-in-progress: false
 
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527): Mac-ajurin
+# raskaat työt ajetaan nice -n 15:llä, jotta omistajan omat työt (käyttäjä
+# Sami Reivinen) menevät edelle; nice toimii käyttäjien yli. Ubuntulla harmiton.
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
 jobs:
   ryhma:
     name: Build sisäiselle ryhmälle
-    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    runs-on: [self-hosted, macOS, ARM64, testit]  # TF-etusija (omistaja 28.9.2026): ei savukejonon takana
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
@@ -68,7 +79,7 @@ jobs:
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
           python3 tools/testflight/sisainen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "${{ inputs.build_numero }}" --testattavaa "$TESTATTAVAA" \
-            ${{ inputs.vanhenna && '--vanhenna' || '' }}
+            ${{ inputs.vanhenna && '--vanhenna' || '' }} ${{ inputs.palaute_pois && '--palaute-pois' || '' }}
 
       - name: Siivoa avain
         if: always()

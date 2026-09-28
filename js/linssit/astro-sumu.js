@@ -108,6 +108,15 @@ export const PILVIEN_KORKEUS = 1024;
 export const PILVIEN_PEITTO = 0.9;
 /** Pilvikuoren oma pyöriminen (astetta minuutissa). */
 export const PILVIEN_KIERTO_ASTETTA_MIN = 0.5;
+/**
+ * ISS:N KYYDISSÄ (Linssisepän suositus 28.9.2026 luku 6, natiivi e4ce8ef8):
+ * pilvikuori laskeutuu noin 8 km:iin, koska 64 km:n kuoren reuna nousi
+ * ISS:n korkeudelta horisontin yläpuolelle ja vaalensi sen, ja pilvet
+ * näkyvät vaikka kamera on matalalla (kaukonäkymän profiili veisi ne
+ * nollaan). Avaruussumu on kyydissä pois.
+ */
+export const PILVIEN_SADE_KYYDISSA = 1 + 8 / 6371;
+export const PILVIEN_PEITTO_KYYDISSA = 0.8;
 /** Linssiosan nimi (lauta.linssit) — purku menee tällä. */
 export const PILVIEN_OSA = 'astro-pilvet';
 
@@ -600,6 +609,8 @@ export function luoAstroSumu({
   let pilvetPiilossa = false;
   let edellinenMs = 0;
   let kehyksia = 0;
+  /** ISS:n kyyti 0…1 (siirtymä 0,8 s, js/linssit/iss-kyyti-nakyma.js). */
+  let kyytiOsuus = 0;
 
   /**
    * Yksi kehys. `nyt` on kello millisekunteina (performance.now) ja
@@ -616,6 +627,10 @@ export function luoAstroSumu({
 
     /* pilvet: peitto zoomista, kierto omasta kellostaan */
     pilvienPeittoNyt = pilvienPeitto(korkeus, a);
+    if (kyytiOsuus > 0) {
+      pilvienPeittoNyt += (PILVIEN_PEITTO_KYYDISSA - pilvienPeittoNyt) * kyytiOsuus;
+    }
+    pilvet?.sade?.(PILVIEN_SADE + (PILVIEN_SADE_KYYDISSA - PILVIEN_SADE) * kyytiOsuus);
     if (pilvet) {
       pilvet.peitto?.(pilvienPeittoNyt);
       if (!reduced && dt > 0 && pilvienPeittoNyt > 0) {
@@ -625,7 +640,7 @@ export function luoAstroSumu({
     }
 
     /* sumu: peitto zoomista, ajelehtiminen ja mittakaava korkeudesta */
-    sumunPeittoNyt = sumunPeitto(korkeus, a);
+    sumunPeittoNyt = sumunPeitto(korkeus, a) * (1 - kyytiOsuus);
     const s = a > 0 && Number.isFinite(korkeus) ? korkeus / a : 1;
     /*
      * MITTAKAAVA KASVAA LÄHESTYTTÄESSÄ. Kun kamera tulee sumua kohti,
@@ -649,6 +664,10 @@ export function luoAstroSumu({
 
   return {
     paivita,
+    /** ISS:n kyyti 0…1: pilvet matalalle ja näkyviin, avaruussumu pois. */
+    kyyti(osuus) {
+      kyytiOsuus = Math.max(0, Math.min(1, Number(osuus) || 0));
+    },
     /*
      * ── PILVIKUORI POIS PINNAN MITTAUKSEN AJAKSI ────────────────────
      *
@@ -691,6 +710,7 @@ export function luoAstroSumu({
       reduced,
       aito: Boolean(PILVIEN_OSOITE),
       pilvienLahde,
+      kyyti: +kyytiOsuus.toFixed(3),
     }),
     pura() {
       if (purettu) return;
