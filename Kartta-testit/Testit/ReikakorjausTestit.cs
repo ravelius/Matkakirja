@@ -190,5 +190,22 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(-200.0, Reikakorjaus.Korotettu(-200, 2), "meri ennallaan");
             Oleta.Sama(4000.0, Reikakorjaus.Korotettu(2000, 2), "maa × 2");
         }
+    
+
+        [Testi]
+        static void KermanPuuttuvaMerkkiVainKermalaatoille()
+        {
+            // Siirtosepän E2E-offline 28.9.: kerma _maailma z3–z5 puuttui ämpäristä (404), ja peli haki ja uusi ne ilman verkkoa.
+            const string k = "julisteet/pallo/kerma/2026-09-26-p060/";
+            Oleta.Tosi(Reikakorjaus.KermanPuuttuvaMerkki(k + "_maailma/4/0/11.webp", k), "_maailma z4");
+            Oleta.Tosi(Reikakorjaus.KermanPuuttuvaMerkki(k + "DNK/8/135/78.webp?v=2", k), "maan laatta, kysely ohitetaan");
+            Oleta.Tosi(Reikakorjaus.KermanPuuttuvaMerkki(k + "DNK/8/135/78.PNG", k), "png");
+            Oleta.Tosi(!Reikakorjaus.KermanPuuttuvaMerkki(k + "DNK/laatat.json", k), "luettelo ei saa merkkiä");
+            Oleta.Tosi(!Reikakorjaus.KermanPuuttuvaMerkki(k + "_maailma/4/x/11.webp", k), "ei z/x/y");
+            Oleta.Tosi(!Reikakorjaus.KermanPuuttuvaMerkki("julisteet/pallo/laatat/2026-09-26-pohja-20260926/9/1/2.webp", k), "pohja");
+            Oleta.Tosi(!Reikakorjaus.KermanPuuttuvaMerkki("julisteet/maasto/2026-09-24-maailma/8/1/2.terrain", k), "maasto");
+            Oleta.Tosi(!Reikakorjaus.KermanPuuttuvaMerkki(k + "_maailma/4/0/11.webp", null), "ei kerman kansiota");
+            Oleta.Tosi(!Reikakorjaus.KermanPuuttuvaMerkki(k + "media/kuva.jpg", k), "media");
+        }
     }
 }
