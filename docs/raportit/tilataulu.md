@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 23:33:** Levy 93 Gi. Muisti OK (paine 1, vapaa 57 %), load 71, sim 0, GPU-chrome 10 (kirjattu, ei hälytystä ilman >4-tarkistusta: mittari laski kaikki chrome-headless). Kontekstit: ei mitattu. Juna OK: 60f69fe4 (23:18) käännetty 23:25, sisältää 8de5b3df. wt/ 12 kohdetta, 9,1 Gt (Siirtoseppä kuittaamatta).
+
 **Päivitetty 23:22:** Levy 91 Gi (raja 80, wt-siivous: wt/ 33 → 14–15 kohdetta, 22 → 9,4 Gt; kuittaamatta Siirtoseppä, Linssiseppä). Muisti OK (paine 1, vapaa 63 %), load 52, sim 0, GPU-chrome 0. Kontekstit: ei mitattu tällä kierroksella. Juna: b13 HEAD 8de5b3df 23:02 kääntämättä (20 min, hälytys >23:32).
 
 **Päivitetty 23:11:** LEVY 80 Gi = raja (ilmoitettu). Muisti OK (paine 0, vapaa 62 %), load 18, sim 1, GPU-chrome 0. Kontekstit <=56 %. Juna: b13 HEAD 8de5b3df 23:02 kääntämättä (<30 min).
