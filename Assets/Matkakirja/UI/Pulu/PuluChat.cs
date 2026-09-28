@@ -442,6 +442,9 @@ namespace Matkakirja.Natiivi
                 // Äänitagit (omistaja 27.9. klo 23.1x): tämä versio siivoaa ne näytöltä (Nakyva), joten worker saa liittää
                 // kehotteeseen tagisäännön; vanhat versiot eivät lähetä kenttää eivätkä saa tageja (web PR #3513).
                 .Append(",\"puhetagit\":1")
+                // Vastaus luetaan ääneen (kaiutin tai saneltu kysymys): worker lisää ohjeen "aloita lyhyellä virkkeellä"
+                // välimuistirajan jälkeen (Pelikoodari 28.9.), jotta ensimmäinen luentapala valmistuu nopeasti.
+                .Append(LuentaPaalla ? ",\"aani\":1" : "")
                 .Append(",\"historia\":[");
             int alku = Mathf.Max(0, historia.Count - HistoriaKatto);
             for (int i = alku; i < historia.Count; i++)
