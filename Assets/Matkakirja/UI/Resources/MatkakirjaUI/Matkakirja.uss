@@ -3370,6 +3370,20 @@
     color: #46331f;
 }
 
+/* Kaksinappinen lukija muissa luentakohdissa (web #3537 "kaikissa luentakohdissa"): lehden ja tiedeliitteen ylärivin
+ * oikea pää, nähtävyysjutun otsikon perä (pari rivittyy yhdessä), wikin ylärivi. */
+.mk-lehti__lukija {
+    margin-right: 3px;
+}
+
+.mk-nahtavyys__lukija {
+    margin-left: 6px;
+}
+
+.mk-tiedeliite__lukija {
+    margin-right: 2px;
+}
+
 /* Latausrengas (web .lukija-nappi .icon-glyph::after): inset −0,28 rem, 1,5 px, kaksi neljännestä, 55 %. */
 .mk-lukija__rengas {
     position: absolute;

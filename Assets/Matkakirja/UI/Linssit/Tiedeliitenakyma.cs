@@ -52,7 +52,8 @@ namespace Matkakirja.Natiivi
             paikkarivi = Rakenne.Teksti("", "mk-tiedeliite__paikkarivi", nimiot);
             Kirjasimet.Aseta(paikkarivi, Kirjasin.LukuKursiivi);
             var oikea = Rakenne.El("mk-tiedeliite__reuna mk-tiedeliite__reuna--oikea", ylarivi, PickingMode.Ignore);
-            lukija = new KortinLukija(oikea, "Kuuntele tiedeliite", "mk-tiedeliite__ikoninappi");
+            // Kaksinappinen lukija (omistaja 28.9.2026, web #3537): [valikko][kaiutin] sulkijan vasemmalla.
+            lukija = new KortinLukija(oikea, "Kuuntele tiedeliite", "mk-tiedeliite__lukija", saatimet: true, rajaus: () => kortti.worldBound);
             var sulje = Rakenne.Nappi("✕", "mk-tiedeliite__sulje", Sulje, oikea);
             sulje.tooltip = "Sulje";
 

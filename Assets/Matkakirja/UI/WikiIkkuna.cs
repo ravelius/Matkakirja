@@ -54,7 +54,7 @@ namespace Matkakirja.Natiivi
             otsikko = Rakenne.Teksti("Lue lisää", "mk-kortti__otsikko mk-wiki__otsikko", ylarivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             // Kaiutin artikkelin ylälaidassa (web varustaLukija, seuraa korttia).
-            lukija = new KortinLukija(ylarivi, "Kuuntele artikkeli");
+            lukija = new KortinLukija(ylarivi, "Kuuntele artikkeli", "mk-wiki__lukija", saatimet: true, rajaus: () => kortti.worldBound);
 
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");

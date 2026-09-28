@@ -120,6 +120,29 @@ namespace Matkakirja.Natiivi
             Juuri.style.display = DisplayStyle.None;
         }
 
+        /// <summary>
+        /// Tekstit napautushetkellä (lehden sivu, nähtävyysjuttu: sisältö syntyy vasta sivun ladonnassa). Kun asetettu,
+        /// kaiutin ja valikko hakevat tekstit tästä, jos luenta ei ole käynnissä; näkymä hoitaa Juuren näkyvyyden.
+        /// </summary>
+        public Func<IEnumerable<string>> Lahde;
+
+        void LataaLahteesta()
+        {
+            if (Lahde == null || luetaan) return;
+            var raaka = (Lahde() ?? Enumerable.Empty<string>()).Where(t => !string.IsNullOrWhiteSpace(t)).Select(t => t.Trim()).ToList();
+            (palat, tagit) = Lukijaaani.LuennanPalatJaTagit(raaka);
+            KokoaKohdat(raaka);
+            if (jatkoKohta >= palat.Count) jatkoKohta = -1;
+        }
+
+        /// <summary>Sisältö vaihtui (sivu, juttu): luenta seis, valikko kiinni, ei jatkoa vanhasta kohdasta.</summary>
+        public void Vaihtui()
+        {
+            Pysayta();
+            jatkoKohta = -1;
+            AsetaKeskeytys(false);
+        }
+
         /// <summary>Kortin luettavat tekstit (kappaleet); edellinen luenta pysähtyy (web: uusi kortti ruudulle).</summary>
         public void Aseta(IEnumerable<string> tekstit, string otsikko = null)
         {
@@ -166,6 +189,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             if (luetaan) { Pysayta(); return; }
+            LataaLahteesta();
             Aloita(saatimet && jatkoKohta >= 0 && jatkoKohta < palat.Count ? jatkoKohta : 0);
         }
 
@@ -325,6 +349,7 @@ namespace Matkakirja.Natiivi
         void VaihdaPaneeli()
         {
             if (paneeli != null) { SuljePaneeli(); return; }
+            LataaLahteesta();
             // Valikko kerroksen juureen päällimmäiseksi (kortin myöhemmät sisarukset eivät piirry sen päälle). Paikka
             // otsikkorivin alle, oikea reuna rivin oikeaan reunaan; leveys ja paikka kortin sisään 8 pt:n marginaalilla.
             var juuri = Juuri.panel?.visualTree;
