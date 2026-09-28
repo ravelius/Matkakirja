@@ -27,6 +27,17 @@ test('pääuoma jatkuu suurimman haaran kautta, sivujoki on oma viivansa', () =>
   assert.equal(ketjut.length, 2);
 });
 
+test('GEOGLOWS-pätkät on digitoitu ylävirtaan: ketju ei hypi (tuplaviiva, eu-laatu-13)', () => {
+  const u = (id, alas, valuma, viiva) => ({ id, alas, valuma, jarjestys: 3, viiva });
+  const ketjut = ketjuta([
+    u(1, 2, 500, [[1, 2], [0, 3], [0, 4]]), // yläjuoksu, alku alavirran päässä
+    u(2, 3, 600, [[1, 1], [2, 1.5], [1, 2]]),
+    u(3, -1, 900, [[1, 0], [1, 1]]), // alajuoksu
+  ]);
+  assert.equal(ketjut.length, 1);
+  assert.deepEqual(ketjut[0].pisteet, [[0, 4], [0, 3], [1, 2], [2, 1.5], [1, 1], [1, 0]]);
+});
+
 test('maan osat: toleranssi pitää rajajoen ja suun mukana', () => {
   const maaIso = (lon) => (lon < 10 ? 'AAA' : lon < 20 ? 'BBB' : null);
   const k = { pisteet: [[5, 0], [9.99, 0], [10.01, 0], [15, 0], [20.01, 0], [25, 0]] };
