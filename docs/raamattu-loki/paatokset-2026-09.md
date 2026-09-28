@@ -8519,3 +8519,7 @@ Siirtoseppa: oikeilla laattakoilla Euroopan offline-maasto ~786 Mt (1.53:n arvio
 ## OMISTAJA: NATIIVIN 'PELI PAIVITTYI' -LAPPUUN VARSINAISET MUUTOKSET, JARJESTELMATYYLISET TEKSTILAPUT ALUSTA POIS (28.9.2026 klo 09.48)
 
 Omistaja 28.9. kuvakaappauksella (TF 1.0.34, sisalto 261) sanatarkasti: "Päivitystiedot tulevat jo aiemmassa näkymässä, ja tässä näkymässä tulee tällainen lappu, jossa ei oikein ole sisältöä. Jos päivitystiedot saisi tähän lappuun, niin se olisi visuaalisesti kivempi, jolloin voisi ottaa ne aiemmat käyttöjärjestelmän näköiset tekstilaput alusta pois." Natiivi-UI (karki): lappuun muutosloki-natiivi.json-rivit + sisaltopaivityksen muutokset, selvitys miksi 1.0.34-rivi ei nay; aiemmat tekstilaput pois.
+
+## OMISTAJA VALITSI ALOITUSLENNON MUSIIKIKSI MARSSI A (VASKIMARSSI) (28.9.2026 klo 09.51)
+
+Pelikoodarin kaksi Lyria-ehdotusta pelin omalla johtoaiheella (D–G–F–E–D–C–D), ei elokuvan savelmaa: A vaskimarssi 123 BPM 20,3 s (isku 7,3 s ohitus, loppusointu 15,1 s), B jouset + torvet 129 BPM 21,9 s. Omistaja kortilla: A. Raita media.matkakirja.app/audio/musa-aloituslento-marssi-a-lyria.mp3, −11,4 LUFS; Natiiviseppa kytkee v3f:aan.
