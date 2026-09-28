@@ -34,9 +34,9 @@ export const LAHTEET = Object.freeze({
  * päivä, ei ajelehdi), alfa samalla kirkkaussäännöllä kuin astro-sumun kuva (natiivi Pilvikuva.Alfa = web pilvikuvanAlfa).
  * Kangas 2048 × 1024 (noin 20 km/px; lähde 4096 × 2048 pienennetään selaimessa, kevyempi puhelimelle).
  */
-// Peitto luetaan käyttöhetkellä (astro-sumu.js PILVIEN_PEITTO): moduulit tuovat toisiaan syklisesti satelliitti-avaruuden
-// kautta, joten vakiota ei saa lukea latausvaiheessa.
-export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: null, yo: 0.04 });
+// Peitto 1 kuten natiivin kyydissä päivän oikeilla pilvillä (2eb8a5d0; Päätoimittaja 28.9.). Jos peitto on null, se luetaan
+// käyttöhetkellä (astro-sumu.js PILVIEN_PEITTO): moduulit tuovat toisiaan syklisesti, joten vakiota ei lueta latausvaiheessa.
+export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: 1, yo: 0.04 });
 
 /** Natiivin Yokuori.shader-oletukset (411b0bc7). */
 export const YOKUORI = Object.freeze({
