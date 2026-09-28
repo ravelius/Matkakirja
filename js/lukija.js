@@ -2528,6 +2528,8 @@ const KORTIN_OTSIKKORIVIT = '.fokusnosto-ylarivi, .fokuskohde-ylarivi,'
 
 /** Rivi, jolle kaiutin asetellaan (css/styles.css). */
 const KORTIN_RIVILUOKKA = 'lukija-otsikkorivi';
+/** Kaiutin ja ratas ovat kortin omia lapsia (ei otsikkoriviä): ei rivin säädinreunusta. */
+const KORTTI_KOTINA = 'lukija-kortti-kotina';
 
 const KORTIN_LUE_OTSIKKO = 'Kuuntele kortti';
 const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
@@ -2710,6 +2712,13 @@ export function lisaaLukijanappi(kortti, {
   // Kahden napin rivi (valikko + kaiutin) tarvitsee tilaa oikeassa reunassa.
   koti.classList?.add('lukija-saatimin');
   kohdistaValikkonappi(nappi);
+  /*
+   * KORTTI ITSE KOTINA (ei otsikkoriviä, esim. nostokortin vaihe 1): rivin
+   * säädinreunus (css/styles.css .lukija-saatimin, 3,7 rem) ei saa osua koko
+   * korttiin — se voitti kortin oman reunuksen ja kavensi sisällön 44 px:llä,
+   * jolloin pystykuva vuoti sisällön yli (main-savuke 36405304787, 6c/6d).
+   */
+  koti.classList?.toggle(KORTTI_KOTINA, koti === kortti);
   paivitaLukija(nappi);
   paivitaKortinKaiutin(nappi);
   if (!rivi && koti === kortti) odotaKortinOtsikkorivia(kortti, nappi);
@@ -2734,7 +2743,7 @@ function odotaKortinOtsikkorivia(kortti, nappi) {
     nappi.__lukijaRiviVahti = null;
     const vanha = nappi.parentElement;
     rivi.append(...[nappi.__lukijaValikko, nappi].filter(Boolean));
-    vanha?.classList?.remove(KORTIN_RIVILUOKKA, 'lukija-saatimin');
+    vanha?.classList?.remove(KORTIN_RIVILUOKKA, 'lukija-saatimin', KORTTI_KOTINA);
     rivi.classList.add(KORTIN_RIVILUOKKA, 'lukija-saatimin');
     nappi.__lukijaIsanta = rivi;
     paivitaLukija(nappi);

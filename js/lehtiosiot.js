@@ -27,6 +27,8 @@ import { html } from './ui-apurit.js';
 
 /** Hakemiston otsikko etusivulla. */
 export const OSIOHAKEMISTON_OTSIKKO = 'Lehden osiot';
+/** Varakuvan suurennos pitkällä painalluksella (ms). */
+export const OSIOKUVAN_PITKA_PAINALLUS_MS = 550;
 /** Montako jutunotsikkoa osion alarivillä näytetään (kevyt rivi, ei "… ja N muuta"). */
 export const OSIOHAKEMISTON_OTSIKOITA = 2;
 
@@ -67,11 +69,19 @@ function osiohakKuvanAvain(k) {
   return k ? String(k.osoite ?? k.ampari ?? k.tiedosto ?? '') : '';
 }
 
-function osiohakAsetaKuva(img, k) {
-  if (k.suora) { img.src = k.osoite; return; }
-  if (k.osoite) { img.src = assetOsoite('nostot', k.osoite); return; }
-  if (k.ampari) { asetaKuva(img, julisteUrl(k.ampari), null); return; }
-  asetaKuva(img, valokuvaUrl(k.tiedosto, 320), valokuvaVara(k.tiedosto, 320));
+/*
+ * `onVirhe` vasta LOPULLISESTA virheestä: asetaKuva (js/media.js) yrittää
+ * sitkeästi uudelleen ja vaihtaa varaosoitteeseen, joten kuvan oma
+ * error-tapahtuma ensimmäisestä yrityksestä ei vielä tarkoita tyhjää
+ * paikkaa (savuke-kuvalahteet 28.9.2026: uudelleen avatun lehden
+ * valokuvat katosivat hetkellisen virheen takia).
+ */
+function osiohakAsetaKuva(img, k, onVirhe) {
+  const suora = (osoite) => { img.addEventListener('error', onVirhe, { once: true }); img.src = osoite; };
+  if (k.suora) { suora(k.osoite); return; }
+  if (k.osoite) { suora(assetOsoite('nostot', k.osoite)); return; }
+  if (k.ampari) { asetaKuva(img, julisteUrl(k.ampari), null, onVirhe); return; }
+  asetaKuva(img, valokuvaUrl(k.tiedosto, 320), valokuvaVara(k.tiedosto, 320), onVirhe);
 }
 
 /**
@@ -81,7 +91,9 @@ function osiohakAsetaKuva(img, k) {
  * @param {object} p
  * @param {Array<object>} p.sivut ui.lehtitila.tutkiSivut (sivu i+1 = sivut[i])
  * @param {Array<object>} p.nostot kaupungin nostorivit { id, nimi, aihe, avaa }
- * @returns {Array<{ aihe, nimi, sivu: number|null, jutut: Array<{ otsikko, sivu?, avaa? }>, kuva }>}
+ * @returns {Array<{ aihe, nimi, sivu: number|null, jutut: Array<{ otsikko, sivu?, avaa? }>, kuva,
+ *   kuvanSivu: number|null, kuvanAvaa: Function|null, kuvaVara: boolean }>} kuvanSivu/kuvanAvaa: missä
+ *   sama kuva on lähteineen (pikkukuvan napautus); kuvaVara: nähtävyysjutun kuva, jota osiossa ei ole
  */
 export function osiohakemisto({ sivut = [], nostot = [], iso = null, cityId = null } = {}) {
   const osiot = new Map();
@@ -103,7 +115,9 @@ export function osiohakemisto({ sivut = [], nostot = [], iso = null, cityId = nu
       o.jutut.push({ otsikko, sivu: i + 1 });
     }
     nahty.add(String(osa.id));
-    o.ehdokkaat.push(aihe === 'hetket' ? osiohakHaeNostonKuva(osa.id) : osiohakKuvaLehdesta(osa));
+    // Kuva kantaa oman sivunsa: hetkiosiossa sivuja on monta, ja pikkukuva avaa sen, jolla kuva on.
+    const kuva = aihe === 'hetket' ? osiohakHaeNostonKuva(osa.id) : osiohakKuvaLehdesta(osa);
+    o.ehdokkaat.push({ kuva, sivu: i + 1, vara: Boolean(kuva?.osionVara) });
   });
   for (const kasa of osiohakKategoriat(nostot)) {
     const aihe = kasa.aihe || 'muut';
@@ -114,18 +128,32 @@ export function osiohakemisto({ sivut = [], nostot = [], iso = null, cityId = nu
       nahty.add(otsikko.toLowerCase());
       const o = osio(aihe, kasa.nimi);
       o.jutut.push({ otsikko, avaa: r.avaa });
-      o.ehdokkaat.push(osiohakHaeNostonKuva(r.id, { iso, cityId }));
+      // Kuva kantaa oman nostonsa: pikkukuva avaa sen noston, jonka kuva se on (ei osion ensimmäistä).
+      const kuva = osiohakHaeNostonKuva(r.id, { iso, cityId });
+      o.ehdokkaat.push({ kuva, avaa: r.avaa, vara: Boolean(kuva?.osionVara) });
     }
   }
-  // Varakuvat: kaupungin nähtävyysjuttujen kuvat (osio, jolla ei ole omaa kuvaa).
-  const varat = Object.values(NAHTAVYYSJUTUT[cityId] ?? {}).map((j) => j?.kuvat?.[0]).filter((k) => k?.osoite || k?.tiedosto);
+  /*
+   * Varakuvat: kaupungin nähtävyysjuttujen kuvat (osio, jolla ei ole omaa
+   * kuvaa). Nähtävyydet eivät ole lehdessä, joten varakuva EI näy osiossa:
+   * sen lähde kulkee pikkukuvan mukana (kuvaVara → title/aria ja suurennos
+   * pitkällä painalluksella, Päätoimittaja 28.9.2026).
+   */
+  const varat = Object.values(NAHTAVYYSJUTUT[cityId] ?? {}).map((j) => j?.kuvat?.[0])
+    .filter((k) => k?.osoite || k?.tiedosto).map((kuva) => ({ kuva, vara: true }));
   const kaytetyt = new Set();
   const tulos = [];
   for (const o of osiot.values()) {
     if (!o.jutut.length && o.sivu == null) continue;
-    const kuva = [...o.ehdokkaat, ...varat].find((k) => k && !kaytetyt.has(osiohakKuvanAvain(k))) ?? null;
-    if (kuva) kaytetyt.add(osiohakKuvanAvain(kuva));
-    tulos.push({ aihe: o.aihe, nimi: o.nimi, sivu: o.sivu, jutut: o.jutut, kuva });
+    const valittu = [...o.ehdokkaat, ...varat].find((e) => e.kuva && !kaytetyt.has(osiohakKuvanAvain(e.kuva))) ?? null;
+    if (valittu) kaytetyt.add(osiohakKuvanAvain(valittu.kuva));
+    tulos.push({
+      aihe: o.aihe, nimi: o.nimi, sivu: o.sivu, jutut: o.jutut,
+      kuva: valittu?.kuva ?? null,
+      kuvanSivu: valittu?.sivu ?? null,
+      kuvanAvaa: valittu?.avaa ?? null,
+      kuvaVara: Boolean(valittu?.vara),
+    });
   }
   return tulos;
 }
@@ -151,8 +179,7 @@ export function piirraOsiohakemisto(ui, kohde, { osiot, avaaSivu }) {
       const img = document.createElement('img');
       img.alt = '';
       img.decoding = 'async';
-      img.addEventListener('error', () => { kuvapaikka.classList.add('tyhja'); img.remove(); }, { once: true });
-      osiohakAsetaKuva(img, o.kuva);
+      osiohakAsetaKuva(img, o.kuva, () => { kuvapaikka.classList.add('tyhja'); img.remove(); });
       kuvapaikka.appendChild(img);
     } else kuvapaikka.classList.add('tyhja');
     rivi.appendChild(kuvapaikka);
@@ -165,8 +192,39 @@ export function piirraOsiohakemisto(ui, kohde, { osiot, avaaSivu }) {
       else ensimmainen?.avaa?.();
     });
     tekstit.appendChild(linkki);
-    // Kuva on osa riviä: napautus avaa saman kuin osion nimi.
-    kuvapaikka.addEventListener('click', () => linkki.click());
+    /*
+     * KUVA ON OSION OVI (omistajan mock 27.9.2026) — mutta se avaa sen
+     * sivun tai noston, jolla SAMA KUVA on lähderiveineen (Päätoimittaja
+     * 28.9.2026; ennen osion ensimmäinen juttu, jossa kuvaa ei ollut, ja
+     * lähde jäi saavuttamatta, savuke-kuvalahteet). Varakuva ei näy
+     * osiossa: lähde title/aria-kuvaukseen ja suurennos pitkällä painalluksella.
+     */
+    let pitkaAjastin = null;
+    let pitkaAvattu = false;
+    kuvapaikka.addEventListener('click', () => {
+      if (pitkaAvattu) { pitkaAvattu = false; return; }
+      if (o.kuvanSivu != null) avaaSivu(o.kuvanSivu);
+      else if (o.kuvanAvaa) o.kuvanAvaa();
+      else linkki.click();
+    });
+    if (o.kuva && o.kuvaVara) {
+      const lahde = String(o.kuva.lahde ?? '').trim();
+      if (lahde) {
+        kuvapaikka.title = `Kuva: ${lahde}`;
+        kuvapaikka.setAttribute('aria-label', `${o.nimi}. Kuva: ${lahde}`);
+      }
+      const peru = () => { clearTimeout(pitkaAjastin); pitkaAjastin = null; };
+      kuvapaikka.addEventListener('pointerdown', () => {
+        peru();
+        pitkaAjastin = setTimeout(() => {
+          pitkaAjastin = null;
+          pitkaAvattu = true;
+          ui?.naytaKulttuuriKuva?.(o.kuva);
+        }, OSIOKUVAN_PITKA_PAINALLUS_MS);
+      });
+      for (const t of ['pointerup', 'pointercancel', 'pointerleave']) kuvapaikka.addEventListener(t, peru);
+      kuvapaikka.addEventListener('contextmenu', (e) => e.preventDefault());
+    }
     /*
      * KEVYT RIVI (omistaja 27.9.2026 klo 11.2x, v2296:n palaute; natiivin
      * hyväksytty malli Natiivi-UI 11a3c43a): yksi alarivi, enintään

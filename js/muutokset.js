@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2364, teksti: 'v2362: Nostokortin pystykuva mahtuu taas kortti… (#3565)' },
   { v: 2363, teksti: 'v2351: Astronautin kamera — kuvien selaus, vier… (#3526)' },
   { v: 2362, teksti: 'v2353: Aloituslennolle mahtipontinen vaskimarssi (#3535)' },
   { v: 2361, teksti: 'v2353: Lukijan valikko — kappaleet, kelaus ±10… (#3537)' },
