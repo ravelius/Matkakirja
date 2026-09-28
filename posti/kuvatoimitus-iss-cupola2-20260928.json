@@ -1,0 +1,440 @@
+[
+  {
+    "filename": "iss-cupola2-kehys-iphone-1206x2622.png",
+    "objectKey": "karttanostot/20260928/iss-cupola2-kehys-iphone-1206x2622.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260928/iss-cupola2-kehys-iphone-1206x2622.png",
+    "r2Url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/karttanostot/20260928/iss-cupola2-kehys-iphone-1206x2622.png",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "27ab883aa132d36bd40f4f9b0a6f7363b74718721d165a888b2235ce3d54eae6",
+    "bytes": 3040469,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "role": "frame",
+    "device": "iphone",
+    "http": 200,
+    "cors": true,
+    "publicChecks": {
+      "r2": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "27ab883aa132d36bd40f4f9b0a6f7363b74718721d165a888b2235ce3d54eae6",
+        "bytes": 3040469
+      },
+      "media": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "27ab883aa132d36bd40f4f9b0a6f7363b74718721d165a888b2235ce3d54eae6",
+        "bytes": 3040469
+      }
+    },
+    "lahde": {
+      "tyyppi": "havainnekuva",
+      "toteutus": "ImageGen; NASA-viitteet eivät ole suoraan kopioituja valokuvia",
+      "nasaViitteet": [
+        {
+          "nasa_id": "iss035e010551",
+          "url": "https://images.nasa.gov/details/iss035e010551"
+        },
+        {
+          "nasa_id": "iss038e013587",
+          "url": "https://images.nasa.gov/details/iss038e013587"
+        },
+        {
+          "nasa_id": "iss059e020197",
+          "url": "https://images.nasa.gov/details/iss059e020197"
+        },
+        {
+          "nasa_id": "iss060e007151",
+          "url": "https://images.nasa.gov/details/iss060e007151"
+        }
+      ]
+    },
+    "qa": {
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "windows": 7,
+      "maskExactOldAlpha": true,
+      "clearFractionAlphaBelow8": 0.382984,
+      "frameMeanOpaqueRgb": 45.321,
+      "reflectionMaxAlpha": 21,
+      "exteriorMaxVisibleRgb": 20,
+      "centralWindowExteriorVisiblePixels": 0,
+      "srgbIccPresent": true,
+      "visualPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-cupola2-20260928/previews/cupola2-iphone-mock.jpg",
+      "visualDecision": "accepted"
+    },
+    "integration": "not-yet-verified-in-game"
+  },
+  {
+    "filename": "iss-cupola2-heijastus-iphone-1206x2622.png",
+    "objectKey": "karttanostot/20260928/iss-cupola2-heijastus-iphone-1206x2622.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260928/iss-cupola2-heijastus-iphone-1206x2622.png",
+    "r2Url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/karttanostot/20260928/iss-cupola2-heijastus-iphone-1206x2622.png",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "7ca3c8e4d403bffe80fe204d82cf69e5ff1268fa87ae7c6c8dd4518a849f182e",
+    "bytes": 320695,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "role": "reflection",
+    "device": "iphone",
+    "http": 200,
+    "cors": true,
+    "publicChecks": {
+      "r2": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "7ca3c8e4d403bffe80fe204d82cf69e5ff1268fa87ae7c6c8dd4518a849f182e",
+        "bytes": 320695
+      },
+      "media": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "7ca3c8e4d403bffe80fe204d82cf69e5ff1268fa87ae7c6c8dd4518a849f182e",
+        "bytes": 320695
+      }
+    },
+    "lahde": {
+      "tyyppi": "havainnekuva",
+      "toteutus": "ImageGen; NASA-viitteet eivät ole suoraan kopioituja valokuvia",
+      "nasaViitteet": [
+        {
+          "nasa_id": "iss035e010551",
+          "url": "https://images.nasa.gov/details/iss035e010551"
+        },
+        {
+          "nasa_id": "iss038e013587",
+          "url": "https://images.nasa.gov/details/iss038e013587"
+        },
+        {
+          "nasa_id": "iss059e020197",
+          "url": "https://images.nasa.gov/details/iss059e020197"
+        },
+        {
+          "nasa_id": "iss060e007151",
+          "url": "https://images.nasa.gov/details/iss060e007151"
+        }
+      ]
+    },
+    "qa": {
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "windows": 7,
+      "maskExactOldAlpha": true,
+      "clearFractionAlphaBelow8": 0.382984,
+      "frameMeanOpaqueRgb": 45.321,
+      "reflectionMaxAlpha": 21,
+      "exteriorMaxVisibleRgb": 20,
+      "centralWindowExteriorVisiblePixels": 0,
+      "srgbIccPresent": true,
+      "visualPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-cupola2-20260928/previews/cupola2-iphone-mock.jpg",
+      "visualDecision": "accepted"
+    },
+    "integration": "not-yet-verified-in-game"
+  },
+  {
+    "filename": "iss-cupola2-ulkoosat-iphone-1206x2622.png",
+    "objectKey": "karttanostot/20260928/iss-cupola2-ulkoosat-iphone-1206x2622.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260928/iss-cupola2-ulkoosat-iphone-1206x2622.png",
+    "r2Url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/karttanostot/20260928/iss-cupola2-ulkoosat-iphone-1206x2622.png",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "1a3c453f4a3d0815d3da3bad2e044ae3c175baf4608ec256cbee8d9474e95378",
+    "bytes": 450549,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "role": "exterior",
+    "device": "iphone",
+    "http": 200,
+    "cors": true,
+    "publicChecks": {
+      "r2": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "1a3c453f4a3d0815d3da3bad2e044ae3c175baf4608ec256cbee8d9474e95378",
+        "bytes": 450549
+      },
+      "media": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "1a3c453f4a3d0815d3da3bad2e044ae3c175baf4608ec256cbee8d9474e95378",
+        "bytes": 450549
+      }
+    },
+    "lahde": {
+      "tyyppi": "havainnekuva",
+      "toteutus": "ImageGen; NASA-viitteet eivät ole suoraan kopioituja valokuvia",
+      "nasaViitteet": [
+        {
+          "nasa_id": "iss035e010551",
+          "url": "https://images.nasa.gov/details/iss035e010551"
+        },
+        {
+          "nasa_id": "iss038e013587",
+          "url": "https://images.nasa.gov/details/iss038e013587"
+        },
+        {
+          "nasa_id": "iss059e020197",
+          "url": "https://images.nasa.gov/details/iss059e020197"
+        },
+        {
+          "nasa_id": "iss060e007151",
+          "url": "https://images.nasa.gov/details/iss060e007151"
+        }
+      ]
+    },
+    "qa": {
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "windows": 7,
+      "maskExactOldAlpha": true,
+      "clearFractionAlphaBelow8": 0.382984,
+      "frameMeanOpaqueRgb": 45.321,
+      "reflectionMaxAlpha": 21,
+      "exteriorMaxVisibleRgb": 20,
+      "centralWindowExteriorVisiblePixels": 0,
+      "srgbIccPresent": true,
+      "visualPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-cupola2-20260928/previews/cupola2-iphone-mock.jpg",
+      "visualDecision": "accepted"
+    },
+    "integration": "not-yet-verified-in-game"
+  },
+  {
+    "filename": "iss-cupola2-kehys-ipad-1536x2732.png",
+    "objectKey": "karttanostot/20260928/iss-cupola2-kehys-ipad-1536x2732.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260928/iss-cupola2-kehys-ipad-1536x2732.png",
+    "r2Url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/karttanostot/20260928/iss-cupola2-kehys-ipad-1536x2732.png",
+    "width": 1536,
+    "height": 2732,
+    "sha256": "122276c7eb1089e20e627dcdb388a52d2f7fe9ac9ad7d405ede4342a3ecec0dc",
+    "bytes": 4131445,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "role": "frame",
+    "device": "ipad",
+    "http": 200,
+    "cors": true,
+    "publicChecks": {
+      "r2": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "122276c7eb1089e20e627dcdb388a52d2f7fe9ac9ad7d405ede4342a3ecec0dc",
+        "bytes": 4131445
+      },
+      "media": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "122276c7eb1089e20e627dcdb388a52d2f7fe9ac9ad7d405ede4342a3ecec0dc",
+        "bytes": 4131445
+      }
+    },
+    "lahde": {
+      "tyyppi": "havainnekuva",
+      "toteutus": "ImageGen; NASA-viitteet eivät ole suoraan kopioituja valokuvia",
+      "nasaViitteet": [
+        {
+          "nasa_id": "iss035e010551",
+          "url": "https://images.nasa.gov/details/iss035e010551"
+        },
+        {
+          "nasa_id": "iss038e013587",
+          "url": "https://images.nasa.gov/details/iss038e013587"
+        },
+        {
+          "nasa_id": "iss059e020197",
+          "url": "https://images.nasa.gov/details/iss059e020197"
+        },
+        {
+          "nasa_id": "iss060e007151",
+          "url": "https://images.nasa.gov/details/iss060e007151"
+        }
+      ]
+    },
+    "qa": {
+      "dimensions": [
+        1536,
+        2732
+      ],
+      "windows": 7,
+      "maskExactOldAlpha": true,
+      "clearFractionAlphaBelow8": 0.378492,
+      "frameMeanOpaqueRgb": 48.671,
+      "reflectionMaxAlpha": 25,
+      "exteriorMaxVisibleRgb": 20,
+      "centralWindowExteriorVisiblePixels": 0,
+      "srgbIccPresent": true,
+      "visualPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-cupola2-20260928/previews/cupola2-ipad-mock.jpg",
+      "visualDecision": "accepted"
+    },
+    "integration": "not-yet-verified-in-game"
+  },
+  {
+    "filename": "iss-cupola2-heijastus-ipad-1536x2732.png",
+    "objectKey": "karttanostot/20260928/iss-cupola2-heijastus-ipad-1536x2732.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260928/iss-cupola2-heijastus-ipad-1536x2732.png",
+    "r2Url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/karttanostot/20260928/iss-cupola2-heijastus-ipad-1536x2732.png",
+    "width": 1536,
+    "height": 2732,
+    "sha256": "b1d1913e9c1511ef7ecb6fec85cabb72f4ddb8937808a2a5b1ee7f33f897d1d5",
+    "bytes": 427098,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "role": "reflection",
+    "device": "ipad",
+    "http": 200,
+    "cors": true,
+    "publicChecks": {
+      "r2": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "b1d1913e9c1511ef7ecb6fec85cabb72f4ddb8937808a2a5b1ee7f33f897d1d5",
+        "bytes": 427098
+      },
+      "media": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "b1d1913e9c1511ef7ecb6fec85cabb72f4ddb8937808a2a5b1ee7f33f897d1d5",
+        "bytes": 427098
+      }
+    },
+    "lahde": {
+      "tyyppi": "havainnekuva",
+      "toteutus": "ImageGen; NASA-viitteet eivät ole suoraan kopioituja valokuvia",
+      "nasaViitteet": [
+        {
+          "nasa_id": "iss035e010551",
+          "url": "https://images.nasa.gov/details/iss035e010551"
+        },
+        {
+          "nasa_id": "iss038e013587",
+          "url": "https://images.nasa.gov/details/iss038e013587"
+        },
+        {
+          "nasa_id": "iss059e020197",
+          "url": "https://images.nasa.gov/details/iss059e020197"
+        },
+        {
+          "nasa_id": "iss060e007151",
+          "url": "https://images.nasa.gov/details/iss060e007151"
+        }
+      ]
+    },
+    "qa": {
+      "dimensions": [
+        1536,
+        2732
+      ],
+      "windows": 7,
+      "maskExactOldAlpha": true,
+      "clearFractionAlphaBelow8": 0.378492,
+      "frameMeanOpaqueRgb": 48.671,
+      "reflectionMaxAlpha": 25,
+      "exteriorMaxVisibleRgb": 20,
+      "centralWindowExteriorVisiblePixels": 0,
+      "srgbIccPresent": true,
+      "visualPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-cupola2-20260928/previews/cupola2-ipad-mock.jpg",
+      "visualDecision": "accepted"
+    },
+    "integration": "not-yet-verified-in-game"
+  },
+  {
+    "filename": "iss-cupola2-ulkoosat-ipad-1536x2732.png",
+    "objectKey": "karttanostot/20260928/iss-cupola2-ulkoosat-ipad-1536x2732.png",
+    "url": "https://media.matkakirja.app/karttanostot/20260928/iss-cupola2-ulkoosat-ipad-1536x2732.png",
+    "r2Url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/karttanostot/20260928/iss-cupola2-ulkoosat-ipad-1536x2732.png",
+    "width": 1536,
+    "height": 2732,
+    "sha256": "252b9fdf20ff9be66b55f1d1a3acfb38023828d0c133f713e16005342a7b7a3c",
+    "bytes": 637916,
+    "mime": "image/png",
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "straightAlpha": true,
+    "role": "exterior",
+    "device": "ipad",
+    "http": 200,
+    "cors": true,
+    "publicChecks": {
+      "r2": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "252b9fdf20ff9be66b55f1d1a3acfb38023828d0c133f713e16005342a7b7a3c",
+        "bytes": 637916
+      },
+      "media": {
+        "http": 200,
+        "mime": "image/png",
+        "cors": true,
+        "sha256": "252b9fdf20ff9be66b55f1d1a3acfb38023828d0c133f713e16005342a7b7a3c",
+        "bytes": 637916
+      }
+    },
+    "lahde": {
+      "tyyppi": "havainnekuva",
+      "toteutus": "ImageGen; NASA-viitteet eivät ole suoraan kopioituja valokuvia",
+      "nasaViitteet": [
+        {
+          "nasa_id": "iss035e010551",
+          "url": "https://images.nasa.gov/details/iss035e010551"
+        },
+        {
+          "nasa_id": "iss038e013587",
+          "url": "https://images.nasa.gov/details/iss038e013587"
+        },
+        {
+          "nasa_id": "iss059e020197",
+          "url": "https://images.nasa.gov/details/iss059e020197"
+        },
+        {
+          "nasa_id": "iss060e007151",
+          "url": "https://images.nasa.gov/details/iss060e007151"
+        }
+      ]
+    },
+    "qa": {
+      "dimensions": [
+        1536,
+        2732
+      ],
+      "windows": 7,
+      "maskExactOldAlpha": true,
+      "clearFractionAlphaBelow8": 0.378492,
+      "frameMeanOpaqueRgb": 48.671,
+      "reflectionMaxAlpha": 25,
+      "exteriorMaxVisibleRgb": 20,
+      "centralWindowExteriorVisiblePixels": 0,
+      "srgbIccPresent": true,
+      "visualPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-cupola2-20260928/previews/cupola2-ipad-mock.jpg",
+      "visualDecision": "accepted"
+    },
+    "integration": "not-yet-verified-in-game"
+  }
+]
