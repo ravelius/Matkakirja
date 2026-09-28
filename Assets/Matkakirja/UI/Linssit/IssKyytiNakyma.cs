@@ -25,6 +25,13 @@
 // harmaa, ja pillerin napautus = Palaa LIVE. Valikko: webissä selaimen oma valinta; natiivissa lista napin alla (Euroopan
 // NASA-kohteet samassa järjestyksessä, AstronauttiLinssi.YlilennonKohteet), napautus listan ohi sulkee sen vaihtamatta
 // kyydin tilaa.
+// ISS-SÄÄTÖPANEELI (omistaja 29.9. klo 00.0x "Kyllä, kytke"; Codexin sarja IssOhjaus-nahkana, asettelu sovittu Siirtosepän
+// kanssa samaksi webissä): yksi paneeli vasemmassa yläkulmassa, leveys 280 pt, sisämarginaali 12, rivien väli 8.
+//   rivi 1  lukema (kyydin tietorivi, nopeutettuna napautus = Palaa LIVE) · kutistusnappi (× → + kutistettuna)
+//   rivi 2  välilehdet Nopeus | Kohde | Olosuhteet (segmentit, valittu aktiivinen)
+//   rivi 3  Nopeus: LIVE · 10× · 100× · 1000× (nopeutettuna ensimmäinen "Palaa LIVE"); Kohde: "Lennä kohteen ylle… ⌄"
+//           (lista, kärjessä Oma sijainti) ja ylilennon lukema; Olosuhteet: pilvipeitto ja vuodenaika (arvo otsikkorivillä)
+// Kutistettuna vain rivi 1. Välilehti ja kutistus säilyvät istunnon ajan. Peitto puhelimella ≤ 45 % (omistaja).
 using System;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
@@ -39,9 +46,37 @@ namespace Matkakirja.Natiivi
         const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
 
         readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, polyt, turva, pilleri, piste, ohjaimet, peite;
+        readonly VisualElement runko, ylilentoKilpi;
+        readonly VisualElement[] sivut;
+        readonly Button[] valilehdet;
+        readonly Button kutistus;
         readonly Label live, tieto, ylilento, liveNappi;
         readonly Button[] napit;
         readonly Button valikko;
+        /// <summary>Paneelin välilehti (0 Nopeus, 1 Kohde, 2 Olosuhteet) ja kutistus: säilyvät istunnon ajan.</summary>
+        public static int Valilehti;
+        public static bool Kutistettu;
+        static IssKyytiNakyma instanssi;
+
+        /// <summary>
+        /// Testikomento astro kyyti paneeli 0|1|2|kutista|avaa|nahka perus|codex (kuvapari): välilehti, kutistus tai nahka.
+        /// Palauttaa tilan lokiin (paneelin koko ja peitto ruudusta).
+        /// </summary>
+        public static string Paneeli(string[] a)
+        {
+            var n = instanssi;
+            if (n == null) return "paneeli: ei kyytinäkymää";
+            if (a.Length > 0 && int.TryParse(a[0], out int v)) Valilehti = v;
+            else if (a.Length > 0 && a[0] == "kutista") Kutistettu = true;
+            else if (a.Length > 0 && a[0] == "avaa") Kutistettu = false;
+            else if (a.Length > 1 && a[0] == "nahka") IssOhjaus.Nahka = a[1] == "perus" ? IssOhjaus.Perus : IssOhjaus.Codex;
+            n.PaivitaPaneeli();
+            var r = n.ohjaimet.worldBound;
+            var ruutu = n.juuri.panel?.visualTree.layout ?? Rect.zero;
+            float peitto = ruutu.width > 0 ? r.width * r.height / (ruutu.width * ruutu.height) : 0;
+            return $"paneeli: välilehti {Valilehti}, kutistettu {Kutistettu}, nahka {IssOhjaus.Nahka.Nimi}, {r.width:0} × {r.height:0} pt, " +
+                   $"ruutu {ruutu.width:0} × {ruutu.height:0}, peitto {peitto * 100:0.0} %";
+        }
         readonly ScrollView lista;
         bool nopeutettu, listaTaytetty;
         // Kyydin säätimet (omistaja 28.9. TF 1.0.39: "Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle sekä
@@ -79,6 +114,7 @@ namespace Matkakirja.Natiivi
 
         public IssKyytiNakyma(UiKerros kerros)
         {
+            instanssi = this;
             juuri = Rakenne.El("mk-isskyyti", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
             juuri.style.display = DisplayStyle.None;
             ulko2 = Rakenne.El("mk-isskyyti__ulko2", juuri, PickingMode.Ignore);
@@ -97,50 +133,70 @@ namespace Matkakirja.Natiivi
             peite.style.display = DisplayStyle.None;
             peite.RegisterCallback<PointerDownEvent>(_ => SuljeLista());
             turva = Rakenne.El("mk-isskyyti__turva", juuri, PickingMode.Ignore);
-            pilleri = Rakenne.El("mk-isskyyti__tieto", turva, PickingMode.Ignore);
+            // Säätöpaneeli (IssOhjaus-osat Codexin nahalla).
+            ohjaimet = IssOhjaus.Paneeli(turva);
+            ohjaimet.AddToClassList("mk-isskyyti__ohjaimet");
+            var ylarivi = Rakenne.El("mk-isskyyti__ylarivi", ohjaimet);
+            pilleri = IssOhjaus.Lukema(ylarivi);
+            pilleri.AddToClassList("mk-isskyyti__tieto");
             piste = Rakenne.El("mk-isskyyti__piste", pilleri, PickingMode.Ignore);
             live = Rakenne.Teksti("LIVE", "mk-isskyyti__live", pilleri);
             tieto = Rakenne.Teksti("", "mk-isskyyti__teksti", pilleri);
-            // Pillerin napautus nopeutettuna = Palaa LIVE (poimittava vain nopeutettuna).
+            live.pickingMode = PickingMode.Ignore; tieto.pickingMode = PickingMode.Ignore;
+            // Lukeman napautus nopeutettuna = Palaa LIVE (poimittava vain nopeutettuna).
             pilleri.AddManipulator(new Clickable(() => { if (nopeutettu) Linssi()?.AsetaNopeus(1); }));
+            kutistus = IssOhjaus.Sulku(ylarivi, () => { Kutistettu = !Kutistettu; PaivitaPaneeli(); }, "Pienennä paneeli");
 
-            // Ohjaimet pillerin alla (web .iss-kyyti-ohjaimet): porras, valikko ja ylilennon rivi.
-            ohjaimet = Rakenne.El("mk-isskyyti__ohjaimet", turva, PickingMode.Ignore);
-            var porras = Rakenne.El("mk-isskyyti__nopeudet", ohjaimet);
+            runko = Rakenne.El("mk-isskyyti__runko", ohjaimet);
+            var valit = Rakenne.El("mk-isskyyti__valilehdet", runko);
+            string[] nimet = { "Nopeus", "Kohde", "Olosuhteet" };
+            valilehdet = new Button[nimet.Length];
+            sivut = new VisualElement[nimet.Length];
+            for (int i = 0; i < nimet.Length; i++)
+            {
+                int n = i;
+                valilehdet[i] = IssOhjaus.Segmentti(valit, nimet[i], () => { Valilehti = n; SuljeLista(); PaivitaPaneeli(); });
+                sivut[i] = Rakenne.El("mk-isskyyti__sivu", runko);
+            }
+
+            // Nopeus: porras LIVE · 10× · 100× · 1000× (web .iss-kyyti-ohjaimet).
+            var porras = Rakenne.El("mk-isskyyti__nopeudet", sivut[0]);
             napit = new Button[Simukello.Nopeudet.Length];
             for (int i = 0; i < napit.Length; i++)
             {
                 int kerroin = Simukello.Nopeudet[i];
-                var b = Rakenne.Nappi(kerroin == 1 ? "LIVE" : kerroin + "×", "mk-isskyyti__nopeus", () => Linssi()?.AsetaNopeus(kerroin), porras);
-                if (i > 0) b.AddToClassList("mk-isskyyti__nopeus--jatko");
-                if (i == 0) b.AddToClassList("mk-isskyyti__nopeus--eka");
-                if (i == napit.Length - 1) b.AddToClassList("mk-isskyyti__nopeus--vika");
+                var b = IssOhjaus.Segmentti(porras, kerroin == 1 ? "LIVE" : kerroin + "×", () => Linssi()?.AsetaNopeus(kerroin));
+                b.AddToClassList("mk-isskyyti__nopeus");
                 b.userData = kerroin;
                 napit[i] = b;
             }
             liveNappi = napit[0].Q<Label>(className: "mk-nappi__teksti");
-            valikko = Rakenne.Nappi("Lennä kohteen ylle…", "mk-isskyyti__kohteet", VaihdaLista, ohjaimet);
+
+            // Kohde: "Lennä kohteen ylle…" (lista napin alla, kärjessä Oma sijainti) ja ylilennon lukema.
+            valikko = IssOhjaus.Valikkorivi(sivut[1], "Lennä kohteen ylle…", VaihdaLista, "⌄");
+            valikko.AddToClassList("mk-isskyyti__kohteet");
             valikko.tooltip = "Lennä kohteen ylle";
             lista = new ScrollView(ScrollViewMode.Vertical);
             lista.AddToClassList("mk-isskyyti__lista");
             lista.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             lista.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             lista.style.display = DisplayStyle.None;
-            ohjaimet.Add(lista);
-            ylilento = Rakenne.Teksti("", "mk-isskyyti__ylilento", ohjaimet);
+            sivut[1].Add(lista);
+            ylilentoKilpi = IssOhjaus.Lukema(sivut[1]);
+            ylilento = Rakenne.Teksti("", "mk-isskyyti__ylilento", ylilentoKilpi);
             ylilento.pickingMode = PickingMode.Position;   // web: ohjainten lapset ottavat kosketuksen (ei vaihda tilaa)
-            ylilento.style.display = DisplayStyle.None;
+            ylilentoKilpi.style.display = DisplayStyle.None;
 
-            // Säätöpaneeli ylilennon rivin alla (IssOhjaus: paneeli + liukusäädinrivit nimi · liuku · lukema).
-            var paneeli = IssOhjaus.Paneeli(ohjaimet);
-            pilviSaadin = IssOhjaus.Liukusaadin(paneeli, "Pilvet", 0f, 1f, v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); });
+            // Olosuhteet: pilvipeitto ja vuodenaika (arvo otsikkorivillä).
+            pilviSaadin = IssOhjaus.Liukusaadin(sivut[2], "Pilvipeitto", 0f, 1f, v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); });
             // Kuluva kuukausi = ei pakotusta (pinta seuraa taas ISS-kelloa, myös nopeutettuna).
-            kuukausiSaadin = IssOhjaus.Liukusaadin(paneeli, "Vuodenaika", 1f, 12f, v =>
+            kuukausiSaadin = IssOhjaus.Liukusaadin(sivut[2], "Vuodenaika", 1f, 12f, v =>
             {
                 int kk = Mathf.RoundToInt(v);
                 AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
                 PaivitaSaatimet();
             }, kokonaisluku: true);
+            PaivitaPaneeli();
             OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
 
             var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", Poistu, turva);
@@ -167,6 +223,7 @@ namespace Matkakirja.Natiivi
                 listaTaytetty = true;
                 // Oma sijainti ensin (karkea: maan keskipiste IP:n maasta, ilman lupakyselyä; OmaSijaintiHaku).
                 omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); LennaOmaan(); }, lista);
+                omaNappi.AddToClassList("mk-isskyyti__kohde--oma");
                 foreach (var k in kohteet)
                 {
                     string tunnus = k.Tunnus;
@@ -175,7 +232,7 @@ namespace Matkakirja.Natiivi
             }
             // Korkeus: rivit (28 pt) turva-alueen alareunaan asti (12 pt:n marginaali), vähintään neljä riviä; loput vierittäen.
             float tarve = lista.contentContainer.childCount * RiviPt + 2;
-            float tila = turva.layout.height - (ohjaimet.layout.y + valikko.layout.yMax + 6) - 12;
+            float tila = turva.worldBound.yMax - (valikko.worldBound.yMax + 6) - 12;
             lista.style.height = float.IsNaN(tila) ? tarve : Mathf.Min(tarve, Mathf.Max(4 * RiviPt, tila));
             lista.scrollOffset = Vector2.zero;
             lista.style.display = DisplayStyle.Flex;
@@ -199,6 +256,21 @@ namespace Matkakirja.Natiivi
             pilviSaadin.Aseta(m, m <= 0.01f ? "selkeä" : m >= 0.99f ? "nyt" : $"{Mathf.RoundToInt(m * 100)} %");
             int nyt = IssNyt.Kello().Month, kk = AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12 ? AstronauttiKerros.KuukausiPakotettu : nyt;
             kuukausiSaadin.Aseta(kk, Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1] + (kk == nyt ? " (nyt)" : ""));
+        }
+
+        /// <summary>Välilehti ja kutistus näkyviin (segmenttien tila, sivut, kutistusnapin asento).</summary>
+        void PaivitaPaneeli()
+        {
+            Valilehti = Mathf.Clamp(Valilehti, 0, sivut.Length - 1);
+            runko.style.display = Kutistettu ? DisplayStyle.None : DisplayStyle.Flex;
+            ohjaimet.EnableInClassList("mk-isskyyti__ohjaimet--kutistettu", Kutistettu);
+            kutistus.tooltip = Kutistettu ? "Avaa paneeli" : "Pienennä paneeli";
+            for (int i = 0; i < sivut.Length; i++)
+            {
+                sivut[i].style.display = i == Valilehti ? DisplayStyle.Flex : DisplayStyle.None;
+                IssOhjaus.AsetaTila(valilehdet[i], IssOhjaus.Osa.Segmentti, i == Valilehti ? IssOhjaus.Tila.Aktiivinen : IssOhjaus.Tila.Normaali);
+            }
+            if (Kutistettu) SuljeLista();
         }
 
         void SuljeLista()
@@ -226,10 +298,15 @@ namespace Matkakirja.Natiivi
             Syke(auki && rivi.Live);
             // Porras: valittu kerroin (kelauksessa ei mitään), nopeutettuna LIVE-nappi on "Palaa LIVE"; ylilennon rivi.
             var valittu = aika.Valittu;
-            foreach (var b in napit) b.EnableInClassList("mk-isskyyti__nopeus--valittu", valittu.HasValue && (int)b.userData == valittu.Value);
+            foreach (var b in napit)
+            {
+                bool v = valittu.HasValue && (int)b.userData == valittu.Value;
+                b.EnableInClassList("mk-isskyyti__nopeus--valittu", v);
+                IssOhjaus.AsetaTila(b, IssOhjaus.Osa.Segmentti, v ? IssOhjaus.Tila.Aktiivinen : IssOhjaus.Tila.Normaali);
+            }
             liveNappi.text = aika.Nopeutettu ? "Palaa LIVE" : "LIVE";
             ylilento.text = aika.Ylilento ?? "";
-            ylilento.style.display = auki && aika.Ylilento != null ? DisplayStyle.Flex : DisplayStyle.None;
+            ylilentoKilpi.style.display = auki && aika.Ylilento != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (auki) PaivitaSaatimet();
             if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;

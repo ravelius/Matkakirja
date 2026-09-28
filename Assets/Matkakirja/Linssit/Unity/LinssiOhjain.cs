@@ -1396,6 +1396,8 @@ namespace Matkakirja.Natiivi
                         else if (a == "yo" && osat.Length > 3) Yokuori.Pois = osat[3] == "0";   // A/B: astro kyyti yo 0|1
                         // A/B omistajan Cupola-palautteeseen (28.9.): uusi = Codexin tumma kuva syväterävyydellä (poltettu),
                         // terava = Codexin alkuperäinen, 3d = valaistu 3D-kehys, vanha = 1.0.35:n UI-kehys.
+                        // ISS-säätöpaneeli (omistaja 29.9.): välilehti, kutistus ja nahka kuvapariin.
+                        else if (a == "paneeli") Kirjaa(Matkakirja.Natiivi.IssKyytiNakyma.Paneeli(osat.Skip(3).ToArray()));
                         else if (a == "cupola" && osat.Length > 3)
                         {
                             CupolaKerros.Tyyli = osat[3] == "vanha" ? CupolaKerros.Tyylit.Vanha
