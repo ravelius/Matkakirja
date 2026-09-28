@@ -2653,6 +2653,8 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
   assert.deepEqual(ajatteluKentat('claude-sonnet-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-opus-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-haiku-4-5-20251001'), {});
+  // Sonnet 5.5: `disabled` = 400, pienin tila on ajattelu vain työkalujen välissä.
+  assert.deepEqual(ajatteluKentat('claude-sonnet-5-5'), { thinking: { type: 'between_tools' } });
   // Näillä `disabled` on 400: pienin vaiva on ainoa säädin.
   for (const malli of ['claude-fable-5-1', 'claude-mythos-5-1', 'claude-opus-5-5']) {
     assert.deepEqual(ajatteluKentat(malli), { output_config: { effort: 'low' } }, malli);
@@ -2663,7 +2665,7 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
   });
   const sonnet = await (async () => {
     const vanha = SAHKE_ENV.POLLO_MALLI;
-    SAHKE_ENV.POLLO_MALLI = 'claude-sonnet-5';
+    SAHKE_ENV.POLLO_MALLI = 'claude-sonnet-5-5';
     try {
       return await ajaChat({ runko: { striimi: true }, virta: [palaksi('Sparta.'), pysahdys('end_turn')] });
     } finally {
@@ -2671,8 +2673,8 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
     }
   })();
   assert.equal(ajo.kutsut[0].thinking, undefined, 'Haiku-oletus ei saa thinking-kenttää');
-  assert.deepEqual(sonnet.kutsut[0].thinking, { type: 'disabled' });
-  assert.equal(sonnet.kutsut[0].model, 'claude-sonnet-5');
+  assert.deepEqual(sonnet.kutsut[0].thinking, { type: 'between_tools' });
+  assert.equal(sonnet.kutsut[0].model, 'claude-sonnet-5-5');
 });
 
 test('kesken sanan katkennut teksti leikataan viimeiseen kokonaiseen virkkeeseen', () => {
