@@ -30,12 +30,26 @@ namespace Matkakirja
         /// <summary>Väistösääntö päällä (`symbolit vaisto 0|1`).</summary>
         public static bool VaistoSaanto = true;
 
+        // ---- Koko kallistetussa kartassa (omistaja 28.9. klo 17.4x, SymbolienVaisto kohta 5; A/B samasta käännöksestä) ----
+
+        /// <summary>Kokokerroin tasolle 1 (symbolit ja erikoismallit) ja tasoille 2–3 (`symbolit iso a [b]`; 1 = 1.0.37).</summary>
+        public static float Iso = SymbolienVaisto.IsoKerroin, Iso23 = SymbolienVaisto.IsoKerroin;
+        /// <summary>Kallistetussa kartassa esineen koko ja perspektiivi (`symbolit luonnollinen 0|1`; 0 = 1.0.37:n vakioruutu).</summary>
+        public static bool Luonnollinen = true;
+        /// <summary>Kallistetun kartan lisäkasvu (`symbolit kasvu x`) ja katto ruudun lyhyemmästä sivusta (`symbolit katto osuus`).</summary>
+        public static float LisaKasvu = (float)SymbolienVaisto.LisaKasvu, KattoOsuus = SymbolienVaisto.KattoOsuus;
+        /// <summary>Kasvaa, kun kokoasetus vaihtuu komennolla (tasot 2–3 lasketaan silloin uudelleen).</summary>
+        static int kokoVersio;
+
         static void NollaaVaisto()
         {
             Taso1KynnysKerroin = SymbolienVaisto.KynnysKerroin;
             SymKynnysPt = SymbolienVaisto.SymKynnysPt; SymKokoPt = SymbolienVaisto.SymTaysiPt;
             PerspektiiviReuna = (float)SymbolienVaisto.RamppiReuna;
             LogKoko = true; VaistoSaanto = true;
+            Iso = Iso23 = SymbolienVaisto.IsoKerroin; Luonnollinen = true;
+            LisaKasvu = (float)SymbolienVaisto.LisaKasvu; KattoOsuus = SymbolienVaisto.KattoOsuus;
+            kokoVersio = 0;
         }
 
         /// <summary>`symbolit vanha 1`: kaikki 1.0.33:n arvot kerralla (kuvaparin "ennen"), `vanha 0` uudet.</summary>
@@ -63,18 +77,51 @@ namespace Matkakirja
                 case "ramppi": PerspektiiviReuna = Mathf.Clamp(float.Parse(o[2], c), 0.1f, 1f); return true;
                 case "vaisto": VaistoSaanto = o[2] != "0" && o[2] != "pois"; return true;
                 case "vanha": AsetaVanha(o[2] != "0" && o[2] != "pois"); return true;
+                case "iso":
+                    Iso = Mathf.Clamp(float.Parse(o[2], c), 0.3f, 4f);
+                    Iso23 = o.Length > 3 ? Mathf.Clamp(float.Parse(o[3], c), 0.3f, 4f) : Iso;
+                    kokoVersio++;
+                    return true;
+                case "luonnollinen": Luonnollinen = o[2] != "0" && o[2] != "pois"; kokoVersio++; return true;
+                case "kasvu": LisaKasvu = Mathf.Clamp(float.Parse(o[2], c), 0f, 1.5f); kokoVersio++; return true;
+                case "katto": KattoOsuus = Mathf.Clamp(float.Parse(o[2], c), 0.05f, 1f); kokoVersio++; return true;
                 default: return false;
             }
         }
 
-        /// <summary>Tason 1 symbolin leveys nyt (pt): Natiivi-UI:n merkin ruutu (oma nimiö symbolin viereen) ja muiden merkkien peitto.</summary>
+        /// <summary>
+        /// Tason 1 symbolin leveys ylhäältä nyt (pt, × <see cref="Iso"/>): Natiivi-UI:n merkin ruutu (oma nimiö symbolin viereen)
+        /// ja muiden merkkien peitto, kun noston omaa kokoa ei tunneta (ks. <see cref="LeveysPt"/>).
+        /// </summary>
         public static float Taso1LeveysPt
         {
             get
             {
                 var nk = NostoKerros.Instanssi;
-                return nk != null ? SymKokoNyt(nk.ZoomKerroin) : SymKokoPt;
+                return (nk != null ? SymKokoNyt(nk.ZoomKerroin) : SymKokoPt) * Iso;
             }
+        }
+
+        /// <summary>
+        /// Noston 3D-mallin leveys ruudulla nyt (pt): kallistetussa kartassa jokaisella mallilla on oma kokonsa (lähempänä
+        /// isompi, omistaja 28.9. klo 17.4x), joten Natiivi-UI:n merkin ruutu ja peitto lukevat tämän. Taso 1 kappaleesta,
+        /// tasot 2–3 viimeisimmästä instanssilaskennasta; tuntematon: <see cref="Taso1LeveysPt"/>.
+        /// </summary>
+        public static float LeveysPt(string nostoId)
+        {
+            if (instanssi != null && nostoId != null)
+            {
+                if (instanssi.kappaleet.TryGetValue(nostoId, out var k) && k.R.enabled && k.LeveysPx > 0f)
+                    return k.LeveysPx / Mathf.Max(1e-3f, PalloKierto.Pistekerroin);
+                if (instanssi.instanssit23.TryGetValue(nostoId, out var i) && i.LeveysPt > 0f) return i.LeveysPt;
+            }
+            var t = TietoIdlla(nostoId);
+            if (t != null && t.Taso >= 2)
+            {
+                var nk = NostoKerros.Instanssi;
+                return (nk != null ? KokoNyt23(nk.ZoomKerroin) : KokoPt) * (t.Taso == 2 ? Taso2Koko : Taso3Koko) * Iso23;
+            }
+            return Taso1LeveysPt;
         }
 
         /// <summary>Kategoriasymbolin tai arkkityypin leveys (pt) kartan kertoimella (tason 1 kynnys → täysi kerroin).</summary>
@@ -228,7 +275,8 @@ namespace Matkakirja
         void VaistoTila(System.Text.StringBuilder sb)
         {
             sb.Append($"; kynnys {Taso1KynnysKerroin:0.##}, symbolit {SymKynnysPt:0}–{SymKokoPt:0} pt ({(LogKoko ? "log" : "lineaarinen")}), " +
-                      $"ramppi {PerspektiiviReuna:0.##}; väistää:");
+                      $"ramppi {PerspektiiviReuna:0.##}, iso {Iso:0.##}/{Iso23:0.##}, luonnollinen {(Luonnollinen ? 1 : 0)} " +
+                      $"(paino {kallistusPainoNyt:0.00}, kasvu {LisaKasvu:0.##}, katto {kattoPtNyt:0} pt, fokus {fokusEtaisyys:0.###}); väistää:");
             int n = 0;
             foreach (var p in vaistot)
             {

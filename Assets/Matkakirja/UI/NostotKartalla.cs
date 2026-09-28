@@ -427,6 +427,8 @@ namespace Matkakirja.Natiivi
                 // mallin jalasta noston paikkaan), napautus ja nimiö seuraavat sitä.
                 var r = lista[i].Ruutu;
                 if (Symbolimallit.ReunaPiste(lista[i].Id, out var rp)) { r = rp; reunat[i] = true; }
+                // Kaupungin viereen siirretty erikoismalli (omistaja 28.9. klo 17.4x, Linssiseppä): merkki mallin jalkaan.
+                else if (Symbolimallit.SiirrettyPiste(lista[i].Id, out var sp)) r = sp;
                 pisteet[i] = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(r.x, Screen.height - r.y));
             }
             int n = 0;
@@ -486,10 +488,9 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n; i++)
             {
                 var m = merkit[i];
-                // Löydös 160: tasojen 2–3 arkkityypit 0,6 × ja 0,45 × tason 1 koko (Symbolimallit.Tasot23).
+                // Mallin oma leveys nyt (omistaja 28.9. klo 17.4x: kallistetussa kartassa lähempänä isompi; Symbolimallit.LeveysPt).
                 if (m.Ryhma == null && !m.MallinAlla && Symbolimallit.OnMalli(m.Id))
-                    mallienPisteet.Add((m.Piste, m.Taso1 ? Symbolimallit.Taso1LeveysPt   // symbolin koko nyt (omistaja 27.9. klo 23.2x: isommiksi)
-                        : Symbolimallit.KokoPt * (m.Taso >= 3 ? 0.45f : 0.6f)));
+                    mallienPisteet.Add((m.Piste, Symbolimallit.LeveysPt(m.Id)));
             }
             for (int i = 0; i < n; i++)
             {
@@ -907,7 +908,7 @@ namespace Matkakirja.Natiivi
             // 3D-symboli (omistaja 27.9. klo 23.2x: isommiksi, Linssisepän speksi): merkin ruutu kattaa symbolin leveyden, jotta oma
             // nimiö sijoittuu symbolin viereen eikä sen päälle, muiden nimiöt väistävät sitä ja napautusala on symbolin kokoinen.
             if (m.Taso1 && !ryhma && !reuna && Symbolimallit.OnMalli(s.Id))
-                m.Ruutu = Mathf.Max(m.Ruutu, 0.5f * Symbolimallit.Taso1LeveysPt / Mathf.Max(1e-4f, m.Mitta));
+                m.Ruutu = Mathf.Max(m.Ruutu, 0.5f * Symbolimallit.LeveysPt(s.Id) / Mathf.Max(1e-4f, m.Mitta));
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
             string tyyppi = ryhma ? "ryhma|" + s.Aihe : reuna ? "reunapiste" : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);
