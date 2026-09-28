@@ -237,6 +237,8 @@ namespace Matkakirja.Natiivi
         {
             "mk-ikoninappi", "mk-vakasnappi", "mk-pilleri", "mk-aikajana-nappi", "mk-lehti__ikoninappi", "mk-chat__nappula",
             "mk-nahtavyys__valikkonappi", "mk-tiedeliite__ikoninappi", "mk-tiedeliite__navinappi", "mk-linssivalikko__nappi",
+            // Lukijan kaiutin ja valikkonappi (~20 pt): 1.0.39-savuke, ohi osunut napautus meni korttiin ja sulki sen.
+            "mk-lukija",
         };
 
         VisualElement ala;
