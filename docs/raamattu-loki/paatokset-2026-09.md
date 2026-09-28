@@ -8447,3 +8447,7 @@ Karttaseppa: syva z9–z10 valmis 07.17, eheys taysi; koodi 1 vain luettelon var
 ## OMISTAJA HYVAKSYI UUDEN PERUSKARTAN 2026-09-27-POHJA VIENNIN VAIHEET 1–3 (UUSIIN POLKUIHIN); OSOITIN JA JOET ERIKSEEN (28.9.2026 klo 07.42)
 
 Karttasepan vientikortti ajo-20260927y/vientikortti-20260928.md + 6 kuvaparia omistajalle. Omistaja kortilla 07.4x: 'Tehty' (hyvaksynta kirjoitettu Karttasepan sessioon). Vienti: laatat julisteet/pyramidi/2026-09-27-pohja + ranta + viivat, pallo 2026-09-27-pohja-20260927 (polton jalkeen ~13–14), koeluettelo koe/2026-09-27. Tuotanto ei muutu; osoittimen vaihto (vaihe 4) erillinen paatos koeosoitteen ?pyramidi=2026-09-27 jalkeen. Natiivin jokien tuplaviiva (FIN 4 009, ITA 1 694, GRC 415 hyppya) → Karttaseppa tekee Euroopan 40 maata uusiksi korjatulla tyokalulla (joet-2026-09-28, ~09); sen vienti vaatii oman kortin. PR:t #3521 (luettelovartio + GSHHG lahteisiin) ja #3522 (jokikorjaus) Julkaisijan junaan.
+
+## OMISTAJA: ALOITUSLENNOSSA ATEENAN 3D-SYMBOLI POIS (28.9.2026 klo 07.45)
+
+Omistaja 28.9. aamulla v3-kuvapareista sanatarkasti: "Ota Ateenassa tuo 3d pois lennosta. Näyttää oudolta". Natiiviseppa lisaa v3b:hen: lennon aikana kohteen 3D-mallia ei nayteta (punainen piste + rengas riittaa); mallin paluu lennon jalkeen Natiivisepan suosituksena videon viestissa. v3 muuten: kone kaukaa 2,5 % leveydesta (v2 11,7 %), kosketus 490 km:sta; v3b korjaa ohituksen usvan (ohitus maan paalle), saapumisen sumean maan ja koneen erottuvuuden kosketuksessa.
