@@ -8743,3 +8743,7 @@ Omistaja 28.9. klo 18.1x sanatarkasti: "Pulun voi ainakin jo vaihtaa striimi ä�
 ## OMISTAJA: PULU V4 TURBO; CUPOLAN AJELEHDUS JA ISS-NOPEUTUS NATIIVISSA HYVAKSYTTY; ISOISA KOLMELLA AANELLA (28.9.2026 klo 18.00)
 
 Omistaja 28.9. klo 18.2x kortilla: Pulun striimiaani ElevenLabs v4 Turbo (1. tavu 386 ms); Cupolan painoton ajelehdus (Linssiseppa f4eb4d34) ja ISS-nopeutus + kohdevalikko natiivissa (49f4a21b) hyvaksytty 1.0.38:aan. Sanatarkasti: "Generoi isoisää jollain toisella äänellä. Koita keksiä, mikä sopisi isoisäälle. Tee sama pätkä vaikka kolmella eri äänellä." → Pelikoodari: isoisa-pariisi v4:lla kolmella uudella aanella (vanhempi lampima tarinankertoja), voimakkuus pelin tasolle, 3 kutsua.
+
+## OMISTAJA: CUPOLA — NAKYMA LAHEMMAS LASIA, VAHEMMAN PEHMENNYSTA (28.9.2026 klo 18.06)
+
+Omistaja 28.9. klo 18.4x sanatarkasti: "Avaruuslinssin seuraavaan versioon voisi itse asiassa zoomata näkymää vähän lähemmäksi lasia. Nyt näkymä ulos jää vähän liian pieneksi ja samalla pehmennyksen määrää voi hieman vähentää." → Linssiseppa: kamera/rajaus lahemmas lasia (maa isompi, kehys vahemman), pehmennys hieman pienemmaksi, rae ja ajelehdus ennallaan; kuvapari omistajalle.
