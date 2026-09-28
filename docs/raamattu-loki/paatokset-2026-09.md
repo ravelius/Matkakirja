@@ -8995,3 +8995,7 @@ Linssiseppä 28.9. klo 23.1x: Codexin Cupola 3 (pyöreä kattoikkuna, pimeä ohj
 ## TILA: LEVY 80 GI — WORKTREEPÄT 33/20, KÄÄNNÖSVÄLIMUISTI 40 GT (28.9.2026 klo 23.14)
 
 Päätoimittaja 28.9. klo 23.14: Postivahti 23.11 levy 80 Gi (raja). Suurimmat: proto-3d 46 Gt (käännöspalvelun Xcode CompilationCache ~40 Gt → Julkaisija tyhjentää 1.0.40:n viennin jälkeen), wt/ 33 worktreetä 22 Gt (raja 20) → Postivahti lähettää roolikohtaiset poistolistat (varmat: karttaseppa-pallo-z10 #3393, pelikoodari-iss-kyyti #3576, pelikoodari-pulu-sonnet55 #3580 mergetty; Codexin worktreehen ei kosketa), pyramidi-poltto 15 Gt (ajo-20260927y 9,2 Gt jää kunnes pallon vienti valmis). Omistaja Cupola 3:sta: "tosin tummenna ja pehmennä aavistuksen ohjaamoa" → Linssiseppä ennen merge-pyyntöä.
+
+## OMISTAJA: PULUN [SOFTLY] JA [WHISPERS] POIS KAIKKIALTA (28.9.2026 klo 23.14)
+
+Omistaja 28.9. klo 23.14: "kaikki iloiset, nauravaiset, pirteät, ylpeät toimivat selvästi hyvin, mutta kuiskaavat ja pehmeät eivät" ja Päätoimittajan ehdotukseen "joo vaihdetaan, mutta anna yksi uusi esimerkki lopputuloksesta kun on vaihdettu niin kuuntelen". Sääntö (sitova Pulun äänille): ei [softly]- eikä [whispers]-tageja; [softly] → [warmly] (herkät) / [amused] (kevennykset), [whispers] → [mischievously]; yksi tagi per virke. Helsinki-3 loppu [amused], Ljubljana-3 [proud] koko virkkeelle. Harkitsevat tagit mitataan sävelkorkeudella ja laskevat vaihdetaan [warmly]:ksi. Pelikoodari: muuttuvat repliikit uusiksi, esimerkkikooste omistajalle, jatko-PR junaan.
