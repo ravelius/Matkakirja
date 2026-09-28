@@ -8,7 +8,9 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet (kuorma1 ≤ 8, ≤ 8 ydintä). Käännökset yksi kerrallaan Julkaisijan vuorolla matalalla prioriteetilla, simulaattoreita enintään yksi, ei agenttiparvia rinnakkain (enintään 1 agentti per rooli), ei raskaita paikallisia ajoja. Postivahti seuraa load1:tä joka kierroksella — jos kuorma1 > 10 yli 5 min, ilmoitetaan syyllinen prosessi Päätoimittajalle ja omistavalle roolille.
 
-**Kuormahuippu laantumassa: 61,2 (10:59) → 216 (11:01) → 114 (11:06).** R/Rs-tilaisia prosesseja 109→88. `mds_stores` (Spotlight) laski 116%→2,3% — ei enää syyllinen. Nyt suurimmat: `fseventsd` 76%, `mds` 36% (molemmat tiedostojärjestelmän indeksointia, todennäköisesti pallopolton satojentuhansien uusien tiedostojen jälkiselvittelyä — laskee itsestään), yksittäinen testi `sisaltopaketti.test.mjs` 100% CPU. Trendi laskeva, seurataan 3 min välein kunnes alle 10-15.
+**Kuorma 61,2 (10:59) → 216 (11:01) → 114 (11:06) → 118 (11:10, tasaantunut).** load1 on rullaava 1 min keskiarvo ja laahaa perässä — **rakenteellinen paraneminen näkyy jo: R/Rs-tilaisia prosesseja 109→88→30**, eli akuutti ruuhka on purkautumassa vaikka mittari ei vielä näytä sitä. Nyt näkyvin: `il2cpp` (Unity natiivikäännös, alkoi 10:59, todennäköisesti aloituslento-työtä), `mds_stores` heilahtelee (2,3%→58%), 2× `sisaltopaketti.test.mjs`. Odotetaan load1:n laskevan seuraavalla kierroksella R/Rs-pudotuksen mukana.
+
+**11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu.
 
 ## 1) Sessiot
 
