@@ -43,7 +43,8 @@ export function osiohakNostonKuva(id, { iso = null, cityId = null } = {}) {
     const kohde = (KAUPUNKIKARTAT[cityId]?.kohteet ?? []).find((k) => (Array.isArray(k.nosto) ? k.nosto : [k.nosto]).includes(tunnus));
     const juttu = kohde ? NAHTAVYYSJUTUT[cityId]?.[kohde.nimi] : null;
     const k = juttu?.kuvat?.[0] ?? null;
-    if (k?.osoite || k?.tiedosto) return k;
+    // Nähtävyysjutun kuva ei ole noston kortissa: osiohakemisto kantaa sen lähteen itse (vara).
+    if (k?.osoite || k?.tiedosto) return { ...k, osionVara: true };
   }
   return null;
 }

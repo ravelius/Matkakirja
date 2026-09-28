@@ -3194,6 +3194,77 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `wienin-porssikrahi-1873`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-wienin-porssikrahi-1873',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Wienin krahi 1873',
+      johdanto: 'Wienin pörssi romahti 9. toukokuuta 1873 vain viikko '
+        + 'maailmannäyttelyn avajaisten jälkeen — "Der Krach" painoi Itävallan '
+        + 'talouden vuosien lamaan.',
+      tehtava: {
+        kysymys: 'Mikä avattiin Wienissä vain viikkoa ennen pörssiromahdusta 1873?',
+        vaihtoehdot: [
+          'Maailmannäyttely',
+          'Uusi rautatieasema',
+          'Keisarillinen ooppera',
+          'Pörssin uusi rakennus',
+        ],
+        oikea: 0,
+        fakta: 'Keisari Franz Joseph avasi Wienin maailmannäyttelyn Praterissa '
+          + '1.5.1873; pörssi romahti kahdeksan päivää myöhemmin 9.5.1873.',
+      },
+      nostot: [
+        {
+          otsikko: 'Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi',
+          aika: '9.5.1873',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-lahi-photo-v4.jpg',
+          teksti: 'Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet '
+            + 'huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. '
+            + 'Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai '
+            + '9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin '
+            + 'jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen '
+            + 'edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz '
+            + 'Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli '
+            + 'tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja '
+            + 'rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä '
+            + 'lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki '
+            + 'toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutuu '
+            + 'hajottamaan pörssisalin edustalle kerääntyneen väkijoukon. Krahi, '
+            + 'jota jälkipolvet kutsuvat nimellä "Der Krach", painaa Itävallan '
+            + 'talouden vuosien lamaan juuri samaan aikaan kun näyttelyvieraiden '
+            + 'mukana kaupunkiin leviää koleraepidemia. Seuraavien viikkojen '
+            + 'aikana yli kuusikymmentä pankkia ja rakennusyhtiötä ajautuu '
+            + 'vararikkoon, ja moni pieni säästäjä menettää elämänsä säästöt '
+            + 'yhden ainoan aamupäivän aikana.',
+          lyhyt: 'Pörssimeklari tuntee kurssien romahtavan toukokuussa 1873.',
+          selite: 'Pörssimeklari tuntee kurssien romahtavan toukokuussa 1873.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Wiener Börse, '
+            + 'pörssin historia; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-kauko-photo-v4.jpg',
+              lyhyt: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
+              selite: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Wiener '
+                + 'Börse, pörssin historia; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -19860,6 +19931,78 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `franz-ferdinandin-salamurha-1914`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-franz-ferdinandin-salamurha-1914',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Latin-silta 1914',
+      johdanto: 'Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan '
+        + 'kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, '
+        + 'joka luuli tehtävänsä jo epäonnistuneen.',
+      tehtava: {
+        kysymys: 'Miksi Franz Ferdinandin auto pysähtyi Latin-sillan luona 1914?',
+        vaihtoehdot: [
+          'Kuljettaja ajoi vahingossa väärään kujaan',
+          'Auto hajosi teknisesti',
+          'Väkijoukko esti tien',
+          'Se oli suunniteltu pysähdyspaikka',
+        ],
+        oikea: 0,
+        fakta: 'Reittimuutosta ei kerrottu kuljettajalle; auto pysähtyi '
+          + 'perääntyessään juuri Gavrilo Principin eteen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sarajevo 1914 — auto pysähtyy väärään paikkaan',
+          aika: '28.6.1914',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franz-ferdinandin-salamurha-1914-lahi-photo-v4.jpg',
+          teksti: 'Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään '
+            + 'kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan '
+            + 'ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta '
+            + '1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa '
+            + 'Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana '
+            + 'aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja '
+            + 'yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori '
+            + 'sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo '
+            + 'katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo '
+            + 'luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti '
+            + 'muutaman metrin päästä. Hän yrittää vielä nielaista '
+            + 'syanidikapselin ja kääntää pistoolin itseään kohti, mutta '
+            + 'väkijoukko ehtii ensin lyödä aseen maahan. Molemmat kuolevat '
+            + 'tunnin sisällä. Uutinen kulkee lennättimellä Wieniin saman päivän '
+            + 'iltana, ja kuukauden kuluessa Itävalta-Unkari julistaa sodan '
+            + 'Serbialle — ketju, joka vetää mukaansa koko Euroopan suurvallat ja '
+            + 'käynnistää ensimmäisen maailmansodan.',
+          lyhyt: 'Autonkuljettaja pysäyttää auton Sarajevossa 1914.',
+          selite: 'Autonkuljettaja pysäyttää auton Sarajevossa 1914.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: '
+            + 'Heeresgeschichtliches Museum, Sarajevon attentaatti; tarkistettu '
+            + '28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Sarajevo 1914 — auto pysähtyy väärään paikkaan',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franz-ferdinandin-salamurha-1914-kauko-photo-v4.jpg',
+              lyhyt: 'Franz Ferdinandin autosaattue Latin-sillan luona.',
+              selite: 'Franz Ferdinandin autosaattue Latin-sillan luona.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: '
+                + 'Heeresgeschichtliches Museum, Sarajevon attentaatti; '
+                + 'tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -31000,6 +31143,77 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `christiansborgin-palo-1884`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-christiansborgin-palo-1884',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Linnanpalo 1884',
+      johdanto: 'Christiansborgin linna paloi lähes maan tasalle 3. lokakuuta '
+        + '1884 — hoviteatteri, ratsastushalli ja linnankirkko selvisivät, ja '
+        + 'kolmannen linnan rakentaminen alkoi vasta parinkymmenen vuoden '
+        + 'kuluttua.',
+      tehtava: {
+        kysymys: 'Mitä Christiansborgista säästyi vuoden 1884 palossa?',
+        vaihtoehdot: [
+          'Hoviteatteri, ratsastushalli ja kirkko',
+          'Koko itäsiipi',
+          'Vain kirkko',
+          'Ei mikään osa',
+        ],
+        oikea: 0,
+        fakta: 'Palo tuhosi lähes koko linnan 3.10.1884, mutta hoviteatteri, '
+          + 'ratsastushalli ja linnankirkko jäivät pystyyn.',
+      },
+      nostot: [
+        {
+          otsikko: 'Christiansborg 1884 — savu valtaosien alla',
+          aika: '3.10.1884',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-christiansborgin-palo-1884-lahi-photo-v4.jpg',
+          teksti: 'Vartija pysähtyy käytävällä ja nuuskii ilmaa — hajussa on '
+            + 'jotain, joka ei kuulu perjantai-iltapäivään Christiansborgin '
+            + 'linnassa. Se on 3. lokakuuta 1884, ja savu nousee huoneesta aivan '
+            + 'Riddersalenin, ritarisalin, alapuolelta, missä vanha kaakeliuuni '
+            + 'on juuri sytyttänyt jotain palamaan. Kukaan ei vielä tiedä, että '
+            + 'linnan seinien sisällä on vuosikymmenten aikana syntynyt '
+            + 'lukemattomia onttoja välitiloja, jotka vetävät liekkiä eteenpäin '
+            + 'kuin savupiiput. Palokunta saapuu nopeasti, mutta tuli leviää '
+            + 'käytävästä käytävään nopeammin kuin kukaan osaa sitä pysäyttää. '
+            + 'Yön aikana koko linnan päärakennus — valtiopäivien, hallituksen ja '
+            + 'kuninkaan asuintilojen koti — palaa lähes tyhjäksi kuoreksi; '
+            + 'hoviteatteri, ratsastushalli ja linnankirkko selviävät liekeiltä. '
+            + 'Tanska on menettänyt toisen Christiansborginsa 90 vuotta '
+            + 'ensimmäisen palon jälkeen, ja rauniot seisovat parikymmentä vuotta '
+            + 'ennen kuin kolmannen linnan rakentaminen alkaa. Palosta saadaan '
+            + 'pelastettua paljon omaisuutta, muun muassa kuninkaan maalauksia, '
+            + 'kirjoja ja hopeaesineitä.',
+          lyhyt: 'Linnanvartija havaitsee Christiansborgin palon 1884.',
+          selite: 'Linnanvartija havaitsee Christiansborgin palon 1884.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Folketinget, '
+            + 'Christiansborgin historia; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Christiansborg 1884 — savu valtaosien alla',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-christiansborgin-palo-1884-kauko-photo-v4.jpg',
+              lyhyt: 'Kööpenhaminan Christiansborg palaa lokakuussa 1884.',
+              selite: 'Kööpenhaminan Christiansborg palaa lokakuussa 1884.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: '
+                + 'Folketinget, Christiansborgin historia; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
   ],
   /*
    * DOHAN KANSISIVU (nippu 2:n pilottikaupunki, 12.8.2026). Aihesivun
@@ -32086,6 +32300,76 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Joki on suuren osan vuotta kuiva, ja sen vartta on '
           + 'muutettu kävelyreitiksi 18 kilometrin matkalta.',
       },
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `britannian-lippu-nikosiassa-1878`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-britannian-lippu-nikosiassa-1878',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Nikosia 1878',
+      johdanto: 'Britannia otti Kyproksen hallintaansa Nikosiassa heinäkuussa '
+        + '1878 kesäkuussa solmitun Kyproksen sopimuksen nojalla — brittihallinto '
+        + 'kesti saarella lähes kahdeksankymmentä vuotta.',
+      tehtava: {
+        kysymys: 'Miksi Britannia sai Kyproksen hallinnon 1878?',
+        vaihtoehdot: [
+          'Vastineeksi tuesta Osmanien valtakunnalle Venäjää vastaan',
+          'Sotilaallisella valloituksella',
+          'Ostamalla saaren kullalla',
+          'Kreikan välityksellä',
+        ],
+        oikea: 0,
+        fakta: 'Britannian ja Osmanien valtakunnan Kyproksen sopimus solmittiin '
+          + 'kesäkuussa 1878; hallinto siirtyi virallisesti Nikosiassa '
+          + 'vara-amiraali Lord John Haylle 12.7.1878.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nikosia 1878 — puolikuu laskee, risti nousee',
+          aika: '12.7.1878',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-lahi-photo-v4.jpg',
+          teksti: 'Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy '
+            + 'katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren '
+            + 'hallinto siirtyy Britannialle, ja Union Jack nostetaan '
+            + 'vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan '
+            + 'kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi '
+            + 'hallinto on vasta alkutekijöissään. Britannia ja Osmanien '
+            + 'valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa '
+            + 'vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy '
+            + 'muodollisesti osmanien valtakunnan osana, vaikka käytännön valta '
+            + 'vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu '
+            + 'Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. '
+            + 'Torin kauppiaalle tämä päivä ei vielä kerro, mitä vuosikymmenet '
+            + 'tuovat: hänen edessään muuttuvat ensin sotilaat ja lippu, vasta '
+            + 'sitten lait.',
+          lyhyt: 'Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.',
+          selite: 'Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Nikosian '
+            + 'kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Nikosia 1878 — puolikuu laskee, risti nousee',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-kauko-photo-v4.jpg',
+              lyhyt: 'Nikosian vanhan kaupungin ympäristö Britannian hallinnon '
+                + 'alkaessa; tarkka lipunnostopaikka on epävarma.',
+              selite: 'Nikosian vanhan kaupungin ympäristö Britannian hallinnon '
+                + 'alkaessa; tarkka lipunnostopaikka on epävarma.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Nikosian '
+                + 'kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
     },
   ],
   /*
@@ -68447,6 +68731,76 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'hahmottua.',
               lahde: 'Matkakirjan havainnekuva. Faktat: Heritage Malta, The Great '
                 + 'Siege / Victory Day, tarkistettu 27.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `pyhan-elmon-linnake-1565`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-pyhan-elmon-linnake-1565',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Fort St Elmo 1565',
+      johdanto: 'Pyhän Elmon linnake kaatui 23. kesäkuuta 1565 lähes 28 päivän '
+        + 'puolustuksen jälkeen — tappio, joka silti kulutti osmanijoukkoja niin '
+        + 'paljon, että koko piiritys epäonnistui.',
+      tehtava: {
+        kysymys: 'Mitä tapahtui Pyhän Elmon linnakkeen puolustajille 23.6.1565?',
+        vaihtoehdot: [
+          'Lähes kaikki kaatuivat tai teloitettiin',
+          'Kaikki pääsivät pakoon veneillä',
+          'He antautuivat ehdoitta',
+          'Apu saapui juuri ajoissa',
+        ],
+        oikea: 0,
+        fakta: 'St Elmon noin 1 500 hengen varuskunnasta vain muutama selvisi '
+          + 'uimalla; linnakkeen puolustus kulutti osmanijoukkoja niin, että '
+          + 'Malta pysyi ritarikunnalla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pyhä Elmo 1565 — viimeinen aamu muurilla',
+          aika: '23.6.1565',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pyhan-elmon-linnake-1565-lahi-photo-v4.jpg',
+          teksti: 'Onko tänä aamuna enää mitään puolustettavaa? Pyhän Elmon '
+            + 'linnakkeen viimeiset puolustajat, uupuneita ja lähes kaikki '
+            + 'haavoittuneita, ovat taistelleet kaksikymmentäkahdeksan päivää '
+            + 'Mustafa Pashan tykistöä ja jatkuvia rynnäköitä vastaan pienellä '
+            + 'hiekkakivilinnakkeella Sciberras-niemen kärjessä. Torstaina 23. '
+            + 'kesäkuuta 1565 osmanijoukot murtautuvat vihdoin sisään, ja '
+            + 'suurmestari Jean de Vallette, joka on yöllä lähettänyt viestejä '
+            + 'uimarien mukana linnakkeen ja pääkaupungin Birgun välillä, tietää '
+            + 'jo, ettei apua ehdi tulla ajoissa. Lähes koko St Elmon noin 1 500 '
+            + 'hengen varuskunta kaatuu tai teloitetaan; muutama ritari onnistuu '
+            + 'uimaan yli sataman. Osmaanit menettävät piirityksessä '
+            + 'valloittaakseen pienen linnakkeen niin paljon aikaa ja väkeä — '
+            + 'arviolta kahdeksan päivää jokaista viikkoa vastaan, jonka Vallette '
+            + 'oli laskenut — että koko suuri piiritys lopulta epäonnistuu '
+            + 'syyskuussa. Vuosia myöhemmin uusi pääkaupunki nousee samalle '
+            + 'niemelle ja saa nimensä suurmestarilta: Valletta.',
+          lyhyt: 'Väsynyt puolustaja odottaa Pyhän Elmon viimeistä hyökkäystä.',
+          selite: 'Väsynyt puolustaja odottaa Pyhän Elmon viimeistä hyökkäystä.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Heritage '
+            + 'Malta, Fort St Elmo; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Pyhä Elmo 1565 — viimeinen aamu muurilla',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pyhan-elmon-linnake-1565-kauko-photo-v4.jpg',
+              lyhyt: 'Pyhän Elmon linnake Maltan suuren piirityksen aikana.',
+              selite: 'Pyhän Elmon linnake Maltan suuren piirityksen aikana.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Heritage '
+                + 'Malta, Fort St Elmo; tarkistettu 28.9.2026.',
             },
           ],
         },

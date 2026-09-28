@@ -526,6 +526,54 @@ export const RAIDAT = {
       + 'immediately and ends softly. '
       + `${TYYLI}`,
   },
+  /*
+   * ALOITUSLENNON MARSSI, KAKSI EHDOTUSTA (omistaja 28.9.2026 Fablen kautta, sanatarkasti: musiikkia "joka saisi olla
+   * innostuneen mahtipontinen, vähän kuin Indiana Jonesin vastaavassa tunnusmusiikissa, kun elokuvassa nähdään
+   * lentokoneen liikkuvan kartalla"). Melodia on PELIN OMA johtoaihe (D–G–F–E–D–C–D), ei minkään elokuvan sävelmä eikä
+   * sen jäljitelmä (tekijänoikeus): kehotteessa ei mainita elokuvaa, säveltäjää eikä pisterytmistä nousevaa avausta.
+   * Ajoitus Natiivisepän v3f-lennosta (28.9.): 0 s leikkaus (kamera lähtee), 7,2 s ohitus (kone suurimmillaan),
+   * 9–13 s nousu Ateenan ylle, 13,5 s kosketus, 15,0 s saapumiskortti → loppusointu ~15 s, soi ulos ~18 s:iin.
+   * Leikkaus ja taso: tools/viimeistele-musiikki.mjs.
+   */
+  'aloituslento-marssi-a': {
+    laji: 'suunnitelma',
+    vaihe: 'marssi',
+    tiedosto: 'musa-aloituslento-marssi-a.mp3',
+    kesto: 30000,
+    looppi: false,
+    kuvaus: 'Aloituslento, ehdotus A: vaskimarssi (johtoaihe trumpeteilla)',
+    prompt: 'A grand, excited adventure march for the opening flight of a journey: an old propeller plane crosses a '
+      + 'map of Europe while a red route line draws itself from London to Athens. Full symphony orchestra, bold and '
+      + 'jubilant, a heroic concert march at about 120 BPM in 2/4. Crisp orchestral snare drum and timpani drive the '
+      + 'pulse, trumpets and horns carry the melody, trombones and tuba underneath, strings play a driving ostinato. '
+      + 'The melody is the game\'s own seven-note theme D–G–F–E–D–C–D in even quarter notes: a rising fourth like a '
+      + 'call, then a stepwise descent home. Trumpets state it at full power from the first bar, then the whole '
+      + 'orchestra repeats it a step higher, harmonised so it bursts from D minor into bright F major. Shape: starts '
+      + 'immediately with a short snare roll and brass pickup, no quiet intro; a swelling peak at about 7 seconds; a '
+      + 'rising sequence from 9 to 13 seconds; a triumphant final cadence with a cymbal crash and a long sustained '
+      + 'brass chord at about 15 seconds, then ringing out. Original melody only, not an imitation of any film theme. '
+      + 'Acoustic orchestra. No modern synths, no drum kit, no electronic percussion, no vocals. Grand and thrilling, '
+      + 'never childish, never comedic.',
+  },
+  'aloituslento-marssi-b': {
+    laji: 'suunnitelma',
+    vaihe: 'marssi',
+    tiedosto: 'musa-aloituslento-marssi-b.mp3',
+    kesto: 30000,
+    looppi: false,
+    kuvaus: 'Aloituslento, ehdotus B: laukkaavat jouset ja käyrätorvet (johtoaihe torvilla)',
+    prompt: 'A sweeping, exhilarating orchestral flight theme for the opening of a journey: an old propeller plane '
+      + 'soars across a map of Europe from London to Athens, the whole continent unrolling below. Full symphony '
+      + 'orchestra, grand and excited. Strings gallop in a rapid 6/8 ostinato at about 132 BPM, snare drum and timpani '
+      + 'push forward, woodwinds add bright rising runs and a glockenspiel sparkles on top. Four horns in unison '
+      + 'proclaim the melody, the game\'s own seven-note theme D–G–F–E–D–C–D with long broad notes: a rising fourth '
+      + 'like a call, then a stepwise descent home; trumpets answer with short fanfare calls between the phrases. '
+      + 'Shape: starts immediately with the galloping strings and a timpani hit, no quiet intro; the horns enter at '
+      + 'once; a soaring peak at about 7 seconds; a climbing build from 9 to 13 seconds with rising brass; a majestic '
+      + 'arrival cadence in F major with cymbals and a held full-orchestra chord at about 15 seconds, then ringing out. '
+      + 'Original melody only, not an imitation of any film theme. Acoustic orchestra. No modern synths, no drum kit, '
+      + 'no electronic percussion, no vocals. Grand and thrilling, never childish, never comedic.',
+  },
   'saapuminen-valimeri': {
     laji: 'suunnitelma',
     vaihe: 1,
@@ -780,6 +828,8 @@ export const RYHMAT = {
   vaihe1: () => [...VAIHE1_RAIDAT],
   vaihe2: () => [...VAIHE2_RAIDAT],
   vaihe3: () => [...VAIHE3_RAIDAT],
+  // Aloituslennon marssi, kaksi ehdotusta (omistaja 28.9.2026).
+  marssi: () => vaiheenRaidat('marssi'),
 };
 
 export function valitseRaidat(argumentit) {
