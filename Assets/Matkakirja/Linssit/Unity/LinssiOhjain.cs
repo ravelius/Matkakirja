@@ -1424,6 +1424,13 @@ namespace Matkakirja.Natiivi
                         else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
                         else if (a == "taivas" && osat.Length > 3) { KyydinTaivas.Pois = osat[3] == "0"; KyydinTaivas.VarjoPakko = osat[3] == "2"; } // A/B oikeat tähdet ja Kuu; 2 = ISS varjossa
                         else if (a == "paivanpilvet" && osat.Length > 3) AstronauttiKerros.PaivanPilvetPois = osat[3] == "0";
+                        else if (a == "tarkat" && osat.Length > 3)   // A/B terävät pilvet: 0 | 1 | kohinan pohja km (esim. 20)
+                        {
+                            AstronauttiKerros.TarkatPilvetPois = osat[3] == "0";
+                            if (osat[3] != "0" && osat[3] != "1" && float.TryParse(osat[3].Replace(',', '.'), System.Globalization.NumberStyles.Float,
+                                    System.Globalization.CultureInfo.InvariantCulture, out float km))
+                                AstronauttiKerros.TarkkojenPilvienKm = Mathf.Clamp(km, 2f, 200f);
+                        }
                         else if (a == "revontulet" && osat.Length > 3) Revontulet.Pois = osat[3] == "0";
                         else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("m") && int.TryParse(osat[3].Substring(1), out int pakko))
                             AstronauttiKerros.KuukausiPakotettu = pakko;                                   // 4a: m<kk> pakottaa, m0 pois
