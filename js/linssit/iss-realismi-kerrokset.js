@@ -36,7 +36,7 @@ export const LAHTEET = Object.freeze({
  */
 // Peitto 0,9 molemmissa (Päätoimittaja 28.9. klo 15.2x: web on malli, natiivi e793a2a5). Jos peitto on null, se luetaan
 // käyttöhetkellä (astro-sumu.js PILVIEN_PEITTO): moduulit tuovat toisiaan syklisesti, joten vakiota ei lueta latausvaiheessa.
-export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: 0.9, yo: 0.04 });
+export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: 0.9, yo: 0.04, tarkkuusKm: 35 });
 
 /** Natiivin Yokuori.shader-oletukset (411b0bc7; valot 60 % = 0,96, omistaja 28.9., natiivi 1e773968). */
 export const YOKUORI = Object.freeze({
@@ -232,15 +232,98 @@ void main() {
 // Auringon valaisemat pilvet (Päätoimittaja 28.9.2026, natiivin cl5-kuvien ja astronauttikuvien mukaan): yöpuolella
 // tummat, hämärässä valaistu vain terminaattorin lähellä. Sama terminaattori kuin yökuoressa (−0,105…0,035), yöllä
 // PILVET.yo × kirkkaus; alfa ennallaan, joten tumma pilvi peittää pinnan kuten natiivissa.
+//
+// TERÄVÄT PILVET KYYDISSÄ (2b, Päätoimittaja 28.9. klo 20.0x; natiivi linssiseppa/pilvet-tarkat cc513896 Pilvet.shader,
+// suunnitelma iss-realismi-suunnitelma-20260928.md 2b): pilvikuva on noin 10–20 km/px, ja Cupolasta tekseli venyi
+// kymmeniksi pikseleiksi. Bikuubinen B-splini (Ruijters 2008, neljä bilineaarista näytettä gradienteilla; saumassa pienempi
+// u-derivaatta), reuna 5 oktaavin 3D-simplex-kohinan kynnyksellä (pohja uTarkkuusKm, taajuus × 2,2, amplitudi × 0,5,
+// alle kahden pikselin oktaavit häipyvät), t = 0,5 + 0,36 tanh(0,8 f), smoothstep ±0,08, sekoitus näkyvän osuuden mukaan
+// ja kirkkaus × (1 + 0,05 · kahden alimman oktaavin vaihtelu). Kokonaislukuhajautus (WebGL2), ei sin-hashia.
 const PILVET_FRAGMENT = `
-uniform float uOsuus, uPeitto, uYo;
+uniform float uOsuus, uPeitto, uYo, uTarkkuus, uTarkkuusKm;
 uniform vec3 uAurinko;
+uniform vec4 uTekseli;
 uniform sampler2D uKuva;
 varying vec3 vMaailma;
+
+uint hajautus(ivec3 k) {
+  uint h = (uint(k.x) * 0x8da6b343u) ^ (uint(k.y) * 0xd8163841u) ^ (uint(k.z) * 0xcb1ab31fu);
+  h ^= h >> 16; h *= 0x7feb352du; h ^= h >> 15; h *= 0x846ca68bu; h ^= h >> 16;
+  return h;
+}
+vec3 gradientti(ivec3 k) {
+  uint h = hajautus(k);
+  return vec3(float(h & 1023u), float((h >> 10) & 1023u), float((h >> 20) & 1023u)) * (2.0 / 1023.0) - 1.0;
+}
+float simplex(vec3 p) {
+  const float G3 = 1.0 / 6.0;
+  vec3 s = floor(p + (p.x + p.y + p.z) * (1.0 / 3.0));
+  vec3 x0 = p - s + (s.x + s.y + s.z) * G3;
+  vec3 g = step(x0.yzx, x0.xyz);
+  vec3 l = 1.0 - g;
+  vec3 i1 = min(g, l.zxy), i2 = max(g, l.zxy);
+  vec3 x1 = x0 - i1 + G3, x2 = x0 - i2 + 2.0 * G3, x3 = x0 - 1.0 + 3.0 * G3;
+  ivec3 k = ivec3(s);
+  vec4 m = max(0.6 - vec4(dot(x0, x0), dot(x1, x1), dot(x2, x2), dot(x3, x3)), 0.0);
+  m *= m; m *= m;
+  vec4 d = vec4(dot(gradientti(k), x0), dot(gradientti(k + ivec3(i1)), x1),
+                dot(gradientti(k + ivec3(i2)), x2), dot(gradientti(k + 1), x3));
+  return 42.0 * dot(m, d);
+}
+
+vec4 tarkatPilvet(vec3 n, vec2 uv, out float vaihtelu) {
+  vec2 dx = dFdx(uv), dy = dFdy(uv);
+  float u2 = fract(uv.x + 0.5);
+  float u2x = dFdx(u2), u2y = dFdy(u2);
+  dx.x = abs(u2x) < abs(dx.x) ? u2x : dx.x;
+  dy.x = abs(u2y) < abs(dy.x) ? u2y : dy.x;
+  vec3 q = n * (6371.0 / max(uTarkkuusKm, 1.0));
+  float jalki = max(length(dFdx(q)), length(dFdy(q)));
+
+  vec2 st = uv * uTekseli.zw - 0.5;
+  vec2 ix = floor(st), f = st - ix, o = 1.0 - f;
+  vec2 w0 = o * o * o / 6.0, w1 = 2.0 / 3.0 - 0.5 * f * f * (2.0 - f);
+  vec2 w2 = 2.0 / 3.0 - 0.5 * o * o * (2.0 - o), w3 = f * f * f / 6.0;
+  vec2 g0 = w0 + w1, g1 = w2 + w3;
+  vec2 t0 = (ix - 0.5 + w1 / g0) * uTekseli.xy, t1 = (ix + 1.5 + w3 / g1) * uTekseli.xy;
+  vec4 c = g0.y * (g0.x * textureGrad(uKuva, vec2(t0.x, t0.y), dx, dy) + g1.x * textureGrad(uKuva, vec2(t1.x, t0.y), dx, dy))
+         + g1.y * (g0.x * textureGrad(uKuva, vec2(t0.x, t1.y), dx, dy) + g1.x * textureGrad(uKuva, vec2(t1.x, t1.y), dx, dy));
+  float a0 = clamp(c.a, 0.0, 1.0);
+
+  float h[5];
+  float kaikki = 0.0, nakyva = 0.0, amp = 1.0, taaj = 1.0;
+  for (int k = 0; k < 5; k++) {
+    h[k] = clamp(1.5 - 2.0 * jalki * taaj, 0.0, 1.0);
+    kaikki += amp * amp; nakyva += amp * amp * h[k] * h[k];
+    amp *= 0.5; taaj *= 2.2;
+  }
+  float nak = sqrt(nakyva / kaikki) * uTarkkuus;
+  vaihtelu = 0.0;
+  float aTarkka = 0.0;
+  if (a0 > 0.06) {
+    float summa = 0.0, ala = 0.0;
+    amp = 1.0; taaj = 1.0;
+    for (int j = 0; j < 5; j++) {
+      summa += amp * h[j] * simplex(q * taaj + float(j) * 31.7);
+      if (j == 1) ala = summa;
+      amp *= 0.5; taaj *= 2.2;
+    }
+    const float Sigma = 0.39;
+    float fn = summa * inversesqrt(max(nakyva, 1e-4)) / Sigma;
+    float t = 0.5 + 0.36 * tanh(0.8 * fn);
+    aTarkka = smoothstep(t - 0.08, t + 0.08, a0);
+    vaihtelu = 0.05 * clamp(ala / Sigma, -2.5, 2.5) * nak;
+  }
+  c.a = mix(a0, aTarkka, nak);
+  return c;
+}
+
 void main() {
   vec3 n = normalize(vMaailma);
   vec2 uv = vec2(atan(n.x, n.z) / 6.2831853 + 0.5, asin(clamp(n.y, -1.0, 1.0)) / 3.14159265 + 0.5);
-  vec4 c = texture2D(uKuva, uv);
+  float vaihtelu = 0.0;
+  vec4 c = uTarkkuus > 0.0 ? tarkatPilvet(n, uv, vaihtelu) : texture2D(uKuva, uv);
+  c.rgb *= 1.0 + vaihtelu;
   float valo = mix(uYo, 1.0, smoothstep(-0.105, 0.035, dot(n, uAurinko)));
   gl_FragColor = vec4(c.rgb * valo, c.a * uPeitto * uOsuus);
 }`;
@@ -432,7 +515,9 @@ export function revontulet({ ikkuna = globalThis, lahde = LAHTEET.revontulet, ar
 
 /** Päivän pilvet: data/pilvet/uusin.png → kangas (pilvikuvanAlfa) → kuori 8 km:ssä kyydin ajan. */
 export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PILVET, jarjestys = JARJESTYS.pilvet } = {}) {
-  let mesh = null; let valmis = false; let T = null; let haettu = false; const ab = { pilvet: 1 };
+  let mesh = null; let valmis = false; let T = null; let haettu = false;
+  /** A/B: pilvet 0|1, tarkat 0|1, tarkkuusKm = kohinan pohja-aallonpituus (natiivi `astro kyyti tarkat 0|1|<km>`). */
+  const ab = { pilvet: 1, tarkat: 1, tarkkuusKm: arvot.tarkkuusKm };
   const hae = () => {
     if (haettu || !T || !mesh) return;
     haettu = true;
@@ -459,7 +544,9 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
     ab,
     rakenna(y) {
       const u = { uOsuus: { value: 0 }, uPeitto: { value: arvot.peitto ?? PILVIEN_PEITTO }, uKuva: { value: null },
-        uYo: { value: arvot.yo ?? 0.04 }, uAurinko: { value: vec3(y, [1, 0, 0]) } };
+        uYo: { value: arvot.yo ?? 0.04 }, uAurinko: { value: vec3(y, [1, 0, 0]) },
+        uTarkkuus: { value: 1 }, uTarkkuusKm: { value: arvot.tarkkuusKm },
+        uTekseli: { value: { x: 1 / arvot.leveys, y: 1 / arvot.korkeusPx, z: arvot.leveys, w: arvot.korkeusPx } } };
       mesh = kuori(y, { sade: 1 + arvot.korkeus / MAAN_SADE_M, fragment: PILVET_FRAGMENT, uniformit: u, jarjestys });
       T = tekstuuriLuokka(y.pallo);
       hae();
@@ -470,6 +557,8 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       mesh.visible = valmis && k.osuus > 0.001 && ab.pilvet > 0;
       if (!mesh.visible) return;
       mesh.material.uniforms.uOsuus.value = k.osuus;
+      mesh.material.uniforms.uTarkkuus.value = ab.tarkat > 0 ? 1 : 0;
+      mesh.material.uniforms.uTarkkuusKm.value = ab.tarkkuusKm;
       aurinkoUniform(mesh.material, k.aurinko);
     },
     pura() {

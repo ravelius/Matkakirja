@@ -77,7 +77,7 @@ test('aurinko(ms) on pakollinen', () => {
 
 /* ── Kerrokset (js/linssit/iss-realismi-kerrokset.js): natiivin varjostimet webiin ── */
 import {
-  leveysPituus, mercatorRivi, realismiKerrokset, VARJOSTIMET, YOKUORI, ILMAKAARI, JARJESTYS,
+  leveysPituus, mercatorRivi, realismiKerrokset, VARJOSTIMET, YOKUORI, ILMAKAARI, JARJESTYS, PILVET,
 } from '../js/linssit/iss-realismi-kerrokset.js';
 
 test('pituus ja leveys samasta kaavasta kuin varjostimissa: itä on itä (ei natiivin cl4-peilausta)', () => {
@@ -117,6 +117,12 @@ test('natiivin vakiot varjostimissa (ilmahehku 0,12 σ 4,5 km, yön vesi 0,96, k
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /pilvi = uPilvetOn \* uPilviPeitto \*/);
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /lisaPilvi = pilvi \* osuu \* yoKuori \* clamp\(uYoVesi - a/);
   assert.equal(YOKUORI.valot, 0.96, 'kaupunkien valot 60 % (omistaja 28.9.)');
+  // Terävät pilvet kyydissä (2b, natiivi cc513896): bikuubinen näyte, 5 oktaavin simplex, kynnys ja reunan leveys.
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /textureGrad\(uKuva/);
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /t = 0\.5 \+ 0\.36 \* tanh\(0\.8 \* fn\)/);
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /smoothstep\(t - 0\.08, t \+ 0\.08, a0\)/);
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /h\[k\] = clamp\(1\.5 - 2\.0 \* jalki \* taaj/);
+  assert.equal(PILVET.tarkkuusKm, 35);
   // Pilvet valaistaan samalla terminaattorilla kuin yökuori (Päätoimittaja 28.9.): yöllä tummat.
   assert.match(VARJOSTIMET.PILVET_FRAGMENT, /mix\(uYo, 1\.0, smoothstep\(-0\.105, 0\.035, dot\(n, uAurinko\)\)\)/);
   assert.ok(JARJESTYS.pilvet < JARJESTYS.yokuori && JARJESTYS.yokuori < JARJESTYS.revontulet && JARJESTYS.revontulet < JARJESTYS.kaari);
