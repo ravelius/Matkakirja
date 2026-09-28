@@ -1930,7 +1930,9 @@ function avaaValikko(nappi, valikkonappi) {
   }
   suljeValikko();
   const doc = nappi.ownerDocument;
-  const koti = valikkonappi.parentElement ?? nappi.parentElement;
+  // Tekstirivin napit ovat parikääreessä (kohdistaValikkonappi); valikko asemoidaan sen isäntään.
+  const lahin = valikkonappi.parentElement ?? nappi.parentElement;
+  const koti = lahin?.classList?.contains('lukija-pari') ? lahin.parentElement : lahin;
   if (!koti) return;
   const el = doc.createElement('div');
   el.className = 'lukija-valikko';
@@ -2101,7 +2103,13 @@ function kohdistaValikkonappi(nappi) {
   const v = nappi?.__lukijaValikko;
   if (!v) return;
   const vanhempi = nappi.parentElement;
-  if (!vanhempi) { v.remove(); return; }
+  if (!vanhempi) {
+    // Kaiutin purettiin (esim. tiedeliitteen sivunvaihto): nappi ja vahti pois.
+    v.remove();
+    nappi.__lukijaValikkoVahti?.disconnect();
+    nappi.__lukijaValikkoVahti = null;
+    return;
+  }
   v.hidden = Boolean(nappi.hidden);
   const tyyli = nappi.ownerDocument.defaultView?.getComputedStyle?.(nappi);
   const irti = tyyli?.position === 'absolute' || tyyli?.position === 'fixed';
@@ -2119,7 +2127,25 @@ function kohdistaValikkonappi(nappi) {
     const b = v.getBoundingClientRect?.();
     if (a?.height && b?.height) v.style.marginTop = `${Math.round((a.top + a.height / 2) - (b.top + b.height / 2))}px`;
   } else {
-    if (v.parentElement !== vanhempi || v.previousElementSibling !== nappi) nappi.after(v);
+    /*
+     * TEKSTIRIVILLÄ (nähtävyysjutun otsikko) kaksi erillistä nappia
+     * saisivat rivittyä erikseen: kapealla ruudulla valikkonappi jäi
+     * yksin seuraavalle riville (mitattu 28.9.2026, iPhone 393). Pari
+     * kääritään katkeamattomaan kääreeseen, joka rivittyy kokonaisena.
+     * Flex- ja grid-riveissä (kortit, tiedeliite) kääre on tarpeeton.
+     */
+    const naytto = tyyli && nappi.ownerDocument.defaultView.getComputedStyle(vanhempi).display;
+    const tekstirivi = !vanhempi.classList.contains('lukija-pari')
+      && /^(block|inline|inline-block|list-item)$/.test(naytto || '');
+    if (tekstirivi) {
+      const vanhaPari = v.parentElement?.classList?.contains('lukija-pari') ? v.parentElement : null;
+      const pari = nappi.ownerDocument.createElement('span');
+      pari.className = 'lukija-pari';
+      nappi.before(pari);
+      pari.append(nappi);
+      if (vanhaPari && vanhaPari !== pari && !vanhaPari.querySelector('.lukija-nappi')) vanhaPari.remove();
+    }
+    if (v.parentElement !== nappi.parentElement || v.previousElementSibling !== nappi) nappi.after(v);
     v.classList.remove('irti');
     v.style.right = '';
     v.style.top = '';
@@ -2163,6 +2189,19 @@ function varustaLukijanValikko(isanta, nappi) {
     vahti.observe(isanta, { childList: true, subtree: true });
     nappi.__lukijaValikkoVahti = vahti;
   }
+}
+
+/*
+ * TYYLIN MYÖHÄINEN LATAUS: tiedeliite lataa aikajana.css:n vasta avatessa,
+ * jolloin kaiutin vaihtuu absoluuttisesta rivin jäseneksi ilman DOM-muutosta
+ * eikä vahti herää — valikkonappi jäi kaiuttimen päälle (mitattu 28.9.2026).
+ * Siksi napit kohdistetaan uudelleen jokaisen tyylitiedoston latauduttua.
+ */
+if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+  document.addEventListener('load', (tapahtuma) => {
+    if (tapahtuma.target?.tagName !== 'LINK') return;
+    for (const nappi of document.querySelectorAll?.('.lukija-nappi') ?? []) kohdistaValikkonappi(nappi);
+  }, true);
 }
 
 /** Napin ulkoasu ja saavutettava nimi seuraavat luennan tilaa. */
