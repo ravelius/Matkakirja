@@ -122,11 +122,18 @@ Shader "Matkakirja/Linssit/Cupola"
                     float paneeli = step(0, pl.x) * step(0, pl.y) * step(pl.y, 0.15);
                     if (paneeli > 0)
                     {
-                        float2 kenno = frac(pl / float2(0.018, 0.012));
-                        half viiva = (half)(step(kenno.x, 0.08) + step(kenno.y, 0.1));
-                        half3 kulta = lerp(half3(0.46, 0.33, 0.16), half3(0.20, 0.15, 0.08), saturate(viiva));
-                        half kiilto = (half)pow(saturate(dot(reflect(-aurinko, float3(0, 0.3, 0.95)), float3(0, 0, 1))), 24) * paiva;
-                        half3 c = kulta * (0.25h + 0.9h * voima * (half)saturate(aurinko.z + 0.3)) + kiilto * half3(1, 0.9, 0.7);
+                        // Aurinkopaneeli (laitteen 1. kierros: karkea ruudukko näytti laattalattialta): kullanhohtoiset kennot
+                        // tummin raoin, kennorivien välissä leveämpi tumma sauma, sävyliuku ja kiilto; tangon puolella harmaa masto.
+                        float2 kenno = frac(pl / float2(0.0085, 0.0055));
+                        float2 lohko = frac(pl / float2(0.034, 0.066));
+                        half rako = (half)saturate(step(kenno.x, 0.12) + step(kenno.y, 0.14) + step(lohko.y, 0.05) * 1.0);
+                        half3 kulta = lerp(half3(0.72, 0.50, 0.20), half3(0.52, 0.34, 0.13), (half)saturate(pl.x * 4));
+                        half3 pinta = lerp(kulta, half3(0.07, 0.06, 0.05), rako * 0.85h);
+                        half kiilto = (half)pow(saturate(dot(reflect(-aurinko, normalize(float3(0.1, 0.35, 0.93))), float3(0, 0, 1))), 18) * paiva;
+                        half3 c = pinta * (0.22h + 0.95h * voima * (half)saturate(aurinko.z + 0.35)) + kiilto * half3(1, 0.85, 0.55) * (1 - rako * 0.7h);
+                        // Masto (paneelin alareuna, tangon puoleinen sivu) harmaana putkena.
+                        half masto = (half)(1 - smoothstep(0.0035, 0.0055, abs(pl.y - 0.004)));
+                        c = lerp(c, half3(0.55, 0.56, 0.57) * (0.3h + 0.8h * voima), masto);
                         ulkoC = c; ulkoA = 1;
                     }
                     // Canadarm2: olkapuomi vasemmalta kyynärniveleen, kyynärvarsi yläikkunaan ja tarttuja avaruutta vasten.
