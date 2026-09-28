@@ -8911,3 +8911,7 @@ Päätoimittaja 28.9. klo 22.19: Postivahti 22.16 levy 66 Gi (raja 80) → poist
 ## OMISTAJA: JULKAISIJA TAKAISIN OPUKSELLE; CUPOLA-HORISONTTILUONNOS (28.9.2026 klo 22.21)
 
 Omistaja 28.9. klo 22.21 kortilla: Sonnet 5.5 1M -versiota ei löydy valikosta → 'Julkaisija takaisin Opukselle' (claude-opus-5-5, effort high, nimi 'Julkaisija (Opus)'); Postivahti, Sisältökirjuri ja Laitetestaaja pysyvät 200 k:n Sonnet 5.5:llä ja nollataan useammin (raja 70 % 200 k:sta). Linssiseppä: Cupola-horisontti e711cf84 (kamera radan suuntaan 23° alas, ohjaamo ×0,22, neljä reunavalokerrosta auringon suunnan mukaan + sininen maavalo) luonnoksena omistajalle; Lennä kohteen ylle teleobjektiivilla ilman kehystä, kattoikkuna A/B; korjaus: yläosan tyhjä musta kaista täytetään; laitepari aamulla.
+
+## OMISTAJA: CUPOLAN PÄÄIKKUNA PYÖREÄ, TIIVIS RAJAUS PYSTY/VAAKA (28.9.2026 klo 22.23)
+
+Omistaja 28.9. klo 22.23 horisonttiluonnoksen nähtyään sanatarkasti: "voisiko ennemmin käyttää sitä pyöreää ikkunaa ja rajata se lähelle? toimisi aika hyvin vähän eri rajauksella pysty ja vaaka muodossa" → korvaa 21.58-kirjauksen ison sivuikkunan: pääkulma on pyöreä kattoikkuna tiiviisti rajattuna (omat rajaukset pysty/vaaka), pimeä ohjaamo, aurinko pyöreässä pokassa, yksityiskohdat ja lappu säilyvät; horisontti e711cf84 A/B:ksi; Lennä kohteen ylle -teleobjektiivi ennallaan. Linssiseppä: luonnos pysty+vaaka, laiteajo aamulla. Codexin tilaus päivitetty (posti/fable-codex-iss-ohjaamo-20260928.md, 0eb761cb8).
