@@ -456,6 +456,14 @@ namespace Matkakirja.Natiivi
             // vaikka napin toiminto muuttaa asettelua ja nostosta syntyvä ClickEvent osuu sen jälkeen korttiin (1.0.39-savuke,
             // Laitetestaaja: lukijan napautus sulki kortin; LISÄÄ-napautus sulki kortin FB234D08:lla).
             alkuValitsee = Valitseva(e.target as VisualElement);
+            // Väliaikainen mittari (1.0.40-lukijabugi): painalluksen kohde ja lukijan tila.
+            {
+                var t = e.target as VisualElement;
+                var j = lukija.Juuri;
+                Debug.Log($"MATKAKIRJA ui nostokortti: painallus {e.position} kohde {t?.GetType().Name} [{string.Join(".", t?.GetClasses() ?? System.Linq.Enumerable.Empty<string>())}] valitsee {alkuValitsee}; "
+                    + $"lukija {j.worldBound} näkyy {j.resolvedStyle.display} {j.resolvedStyle.visibility} poiminta {j.pickingMode} isä {(j.parent == kortti ? "kortti" : j.parent?.GetType().Name)} "
+                    + $"indeksi {kortti.IndexOf(j)}/{kortti.childCount}, sisus {kortti.IndexOf(sisus)}, poimittu {j.panel?.Pick(e.position)?.GetType().Name}");
+            }
         }
 
         bool alkuValitsee;
