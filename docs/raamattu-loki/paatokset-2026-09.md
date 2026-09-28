@@ -8959,3 +8959,7 @@ Omistaja 28.9. klo 22.44 sanatarkasti (korjaa 22.42-kirjauksen puskurihypoteesin
 ## OMISTAJA: PULUN [SOFTLY]-TAGI TOIMII HUONOSTI (28.9.2026 klo 22.48)
 
 Omistaja 28.9. klo 22.48 (Helsinki-3 'Se katsoi minua kuin olisin ollut harjoittelija' [softly]) sanatarkasti: "tuo softly toimii vähän huonosti, sitä on ilmeiseti useammassakin eri kohdassa?" → [softly] 27 kohdassa (tools/generoi-pulu.mjs). Pulun v4-PR menee silti junaan; Pelikoodari: korvaajakoe Helsinki-3:lla ([dryly]/[deadpan]/[warmly]/ilman), suositus kuivalle loppukevennykselle ja herkälle loppulauseelle, kooste nykyinen | suositus omistajalle; OK:n jälkeen 27 kohtaa uudelleen jatko-PR:nä. Samalla korjataan helsinki-3:n osumaton [brightly]-ankkuri.
+
+## OMISTAJA: [SOFTLY] POIS PULULTA — LIIAN SURULLINEN (28.9.2026 klo 22.50)
+
+Omistaja 28.9. klo 22.50 sanatarkasti: "pulu kuulostaa siinä liian surulliselta. tuo softly ei vain toimi, kokeillaan tosiaan muita tageja korvaavaksi" → [softly] poistuu Pulun tagivalikoimasta; Pelikoodari kokeilee korvaajia (tavoite kevyt/kuiva/lämmin, ei surullinen: [dryly], [deadpan], [warmly], [amused], ilman) Helsinki-3:lla ja Ljubljana-3:lla, yksi suositus per lause; omistajan OK:n jälkeen 27 kohtaa uusiksi jatko-PR:nä. Yksi tagi per virke.
