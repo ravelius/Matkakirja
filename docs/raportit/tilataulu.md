@@ -8,6 +8,8 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 **15:10 KEVYT TILA POIS (Päätoimittaja):** omistaja vapautti koneen. Takaisin normaaliin: raskaat työt nice 15 -prioriteetilla täysillä ytimillä sallittuja, simulaattoreita ≤ 1 booted päivällä, Mac-savukkeita ≤ 2 rinnakkain. Kaikille 7 GPU-roolille ilmoitettu. Load1 ei ole luotettava mittari (sisältää omistajan oman käytön + I/O-odotuksen) — käytetään tarvittaessa `koodaus`-käyttäjän CPU-summaa vain karkeana lisätietona, ei ensisijaisena hälytysperusteena.
 
+**Vahtipyyntö (Päätoimittaja):** joka kierroksella tarkista `origin/claude/postilaatikko` → `posti/codex-fable-pulu-tekstit-tarkistus-20260928.md`. Kun ilmestyy, ilmoita Päätoimittajalle yhdellä rivillä: commit + "KAIKKI PELISSÄ kyllä/ei". Ei vielä olemassa (tarkistettu 15:1x).
+
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
 **GPU-mittarin tarkennus (Julkaisija 12:5x):** ~10 gpu-process on sovellusten (Claude, Chrome, Spark, Unity Hub, CC, Codex, Aqua Voice) pysyviä — ei hälytysperuste. Hälytä Julkaisijalle jatkossa vain jos **chrome-headless-gpu-prosesseja on >4** (=yli 2 savuketta rinnakkain) TAI `/tmp/matkakirja-kevyt` on päällä ja Metal-chromiumeja näkyy.
