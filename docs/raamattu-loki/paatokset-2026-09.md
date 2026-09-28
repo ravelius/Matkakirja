@@ -8967,3 +8967,7 @@ Omistaja 28.9. klo 22.50 sanatarkasti: "pulu kuulostaa siinä liian surulliselta
 ## OMISTAJA: STRIIMIVIAN TOISTO HAMPURILAISVALIKOSSA (28.9.2026 klo 22.53)
 
 Omistaja 28.9. klo 22.53 sanatarkasti: "pulun virheellisen striimiluennan voi helposti toistaa hampurilaisessa. ensimmäisellä painalluksella tietystä kohtaa pulu lukee väärästä kohtaa mutta kun samaa kohtaa painaa uudestaan pulu alkaa lukea oikeasta kohdasta. esim. jos klikkaa vaikka ihan ensimmäistä otsikkoa tekstissä, niin vasta toinen klikkaus aloittaa luennan alusta." → Natiivi-UI (kärki kaiutinkorjauksen jälkeen): ensimmäisen napautuksen aloituskohta lasketaan todennäköisesti ennen kuin teksti/asettelu/palakartta on valmis tai edellisestä tilasta.
+
+## TILA: KAIUTINKORJAUS PASS; STRIIMIN HYPPYN JUURISYY LÖYTYI (28.9.2026 klo 22.55)
+
+Natiivi-UI 28.9. klo 22.55: 1) nostokortin kaiutin PASS natiivi-ui/kortti-napautus 42dacd5c (juurisyy UI Toolkitin vanhentunut kosketuskohde) → 1.0.40. 2) 'Hyppää alkuun ja lukee uudestaan' -juurisyy: pakatun mp3-klipin isPlaying on yhden ruudun epätosi kesken soiton, Puhe tulkitsee sen katkokseksi ja 'jatkaa' asettamalla time ennen Play():ta → Play() alkaa palan alusta (FB234D08: jokainen pala 'pysähtyi kesken … jatketaan' → 0,000). Korjaus natiivi-ui/luenta-jatko e667523e (odota ≤ 0,25 s, kohta Play():n jälkeen), todennus jonossa → 1.0.40. 3) Isoisän luenta ja saapumispuhe alkavat simulaattorissa oikein; jos korjaus 2 ei selitä, epäilty laitteen reitti (Bluetooth herää hiljaisuudesta). Hampurilaisvalikon toisto seuraavaksi.
