@@ -5377,7 +5377,7 @@ export const HISTORIAN_HETKET = [
         lyhyt: "Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.",
         kuvateksti: "Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.",
         lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Nikosian kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.",
-        url: "https://www.nicosia.org.cy/en-GB/discover/nicosia/nicosia/british/",
+        url: "https://www.um.edu.mt/__data/assets/pdf_file/0010/95563/klearchoskyriakides2006.pdf",
       },
       {
         rooli: "kauko",
@@ -5385,7 +5385,7 @@ export const HISTORIAN_HETKET = [
         lyhyt: "Nikosian vanhan kaupungin ympäristö Britannian hallinnon alkaessa; tarkka lipunnostopaikka on epävarma.",
         kuvateksti: "Nikosian vanhan kaupungin ympäristö Britannian hallinnon alkaessa; tarkka lipunnostopaikka on epävarma.",
         lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Nikosian kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.",
-        url: "https://www.nicosia.org.cy/en-GB/discover/nicosia/nicosia/british/",
+        url: "https://www.um.edu.mt/__data/assets/pdf_file/0010/95563/klearchoskyriakides2006.pdf",
       },
     ],
     kartalla: false,
