@@ -220,7 +220,17 @@ namespace Matkakirja.Natiivi
             }
             Debug.Log($"MATKAKIRJA pulu realtime: linja auki (aliprotokolla {y.Ws.SubProtocol ?? "-"}), enintään {enintaanS} s");
             _ = Task.Run(() => Vastaanota(y));
-            _ = Task.Run(() => Laheta(y, PuluRealtimeLogiikka.IstuntoPaivitys(token.Istunto)));
+            // session.update ennen ensimmäistä ääntä (realtime-koe.mjs odottaa session.updated; web lähettää heti).
+            var paivitys = Task.Run(() => Laheta(y, PuluRealtimeLogiikka.IstuntoPaivitys(token.Istunto)));
+            while (!paivitys.IsCompleted) yield return null;
+            if (oma != sukupolvi) yield break;
+            if (paivitys.IsFaulted || paivitys.IsCanceled)
+            {
+                Debug.LogWarning("MATKAKIRJA pulu realtime: session.update ei lähtenyt: " + paivitys.Exception?.GetBaseException().Message);
+                Ilmoita(PuluRealtimeLogiikka.Katkesi);
+                Lopeta();
+                yield break;
+            }
 
             // 5. Mikrofoni ja kaiutin vasta kun linja on auki.
             int tulos = NatAloita();
