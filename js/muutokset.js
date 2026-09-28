@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2353, teksti: 'Kartta ei jää odottamaan hetkellisen verkkokatkon jälkeen' },
   { v: 2349, teksti: 'Poltto: ajo ilman nosto-/nimiöshardeja kantaa ä… (#3521)' },
   { v: 2348, teksti: 'ROU: pitkä-luonnehdinta + pulu kaikille 42 maak… (#3514)' },
   { v: 2347, teksti: 'Pulun äänitagit: huokaus, nauru, innostus (#3513)' },
