@@ -142,6 +142,12 @@ const tila = (s) => s.evaluate(() => {
     kuva: document.querySelector('.satelliitti-kuva')?.getAttribute('src')?.split('/').pop() ?? null,
     tausta: k ? getComputedStyle(k).backgroundColor : null,
     sumu: [...document.querySelectorAll('.astro-sumu')].map((e) => getComputedStyle(e).visibility).join(',') || null,
+    selite: (() => {
+      const e = document.querySelector('.satelliitti-selite');
+      const o = document.querySelector('.satelliitti-selite-otsikko');
+      if (!e || !o) return null;
+      return { leveys: Math.round(e.getBoundingClientRect().width), otsikko: Math.round(o.scrollWidth), kiinni: e.classList.contains('satelliitti-selite-kiinni') };
+    })(),
     uusi: document.querySelector('.satelliitti-selite')?.classList.contains('satelliitti-selite-uusi') ?? false,
     napit: napit && !napit.hidden ? laatikko(napit) : null,
     nauha: laatikko(document.querySelector('.satelliitti-nauha:not([hidden])')),
@@ -158,7 +164,13 @@ async function ajaNakyma(nimi) {
   const virheet = [];
   const konteksti = await selain.newContext({ ...NAKYMAT[nimi], serviceWorkers: 'block' });
   const s = await konteksti.newPage();
-  await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+  const luennat = [];
+  await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => {
+    // Selitteen luentapyyntö (lohko astro-selite) kirjataan; verkko pysyy poikki.
+    const runko = route.request().postData() ?? '';
+    if (runko.includes('astro-selite')) luennat.push(runko.slice(0, 200));
+    route.abort();
+  });
   await s.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
     const v = await ulkohaku(route.request().url());
     if (!v) { route.abort(); return; }
@@ -197,6 +209,11 @@ async function ajaNakyma(nimi) {
     return;
   }
   vaadi(n('tausta läpikuultava 0,7'), /rgba\(4, 9, 7, 0\.7/.test(etna.tausta ?? ''), etna.tausta);
+  if (JALKEEN && etna.selite?.kiinni) {
+    vaadi(n('pienennetty selite on otsikkorivin kokoinen'), etna.selite.leveys <= etna.selite.otsikko + 32,
+      JSON.stringify(etna.selite));
+  }
+  vaadi(n('selite luetaan ääneen (lohko astro-selite)'), luennat.length > 0, `${luennat.length} pyyntöä ${luennat[0] ?? ''}`);
   vaadi(n('avaruussumu piilossa kuvan ajan'), etna.sumu === null || !etna.sumu.includes('visible'), etna.sumu);
   const e = kohde('etna');
   vaadi(n('kamera kohteen yllä'), etna.pov && Math.abs(etna.pov.lat - e.lat) < 1.5 && Math.abs(etna.pov.lng - e.lon) < 1.5,
