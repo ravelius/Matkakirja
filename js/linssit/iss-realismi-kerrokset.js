@@ -36,7 +36,7 @@ export const LAHTEET = Object.freeze({
  */
 // Peitto luetaan käyttöhetkellä (astro-sumu.js PILVIEN_PEITTO): moduulit tuovat toisiaan syklisesti satelliitti-avaruuden
 // kautta, joten vakiota ei saa lukea latausvaiheessa.
-export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: null });
+export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: null, yo: 0.04 });
 
 /** Natiivin Yokuori.shader-oletukset (411b0bc7). */
 export const YOKUORI = Object.freeze({
@@ -220,15 +220,20 @@ void main() {
 
 /* ─────────────────────────── PILVET ─────────────────────────── */
 
+// Auringon valaisemat pilvet (Päätoimittaja 28.9.2026, natiivin cl5-kuvien ja astronauttikuvien mukaan): yöpuolella
+// tummat, hämärässä valaistu vain terminaattorin lähellä. Sama terminaattori kuin yökuoressa (−0,105…0,035), yöllä
+// PILVET.yo × kirkkaus; alfa ennallaan, joten tumma pilvi peittää pinnan kuten natiivissa.
 const PILVET_FRAGMENT = `
-uniform float uOsuus, uPeitto;
+uniform float uOsuus, uPeitto, uYo;
+uniform vec3 uAurinko;
 uniform sampler2D uKuva;
 varying vec3 vMaailma;
 void main() {
   vec3 n = normalize(vMaailma);
   vec2 uv = vec2(atan(n.x, n.z) / 6.2831853 + 0.5, asin(clamp(n.y, -1.0, 1.0)) / 3.14159265 + 0.5);
   vec4 c = texture2D(uKuva, uv);
-  gl_FragColor = vec4(c.rgb, c.a * uPeitto * uOsuus);
+  float valo = mix(uYo, 1.0, smoothstep(-0.105, 0.035, dot(n, uAurinko)));
+  gl_FragColor = vec4(c.rgb * valo, c.a * uPeitto * uOsuus);
 }`;
 
 /* ─────────────────────────── yhteiset ─────────────────────────── */
@@ -436,7 +441,8 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
     nimi: 'pilvet',
     ab,
     rakenna(y) {
-      const u = { uOsuus: { value: 0 }, uPeitto: { value: arvot.peitto ?? PILVIEN_PEITTO }, uKuva: { value: null } };
+      const u = { uOsuus: { value: 0 }, uPeitto: { value: arvot.peitto ?? PILVIEN_PEITTO }, uKuva: { value: null },
+        uYo: { value: arvot.yo ?? 0.04 }, uAurinko: { value: vec3(y, [1, 0, 0]) } };
       mesh = kuori(y, { sade: 1 + arvot.korkeus / MAAN_SADE_M, fragment: PILVET_FRAGMENT, uniformit: u, jarjestys });
       T = tekstuuriLuokka(y.pallo);
       hae();
@@ -445,7 +451,9 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       if (!mesh) return;
       if (!T) { T = tekstuuriLuokka(y.pallo); hae(); }
       mesh.visible = valmis && k.osuus > 0.001 && ab.pilvet > 0;
-      if (mesh.visible) mesh.material.uniforms.uOsuus.value = k.osuus;
+      if (!mesh.visible) return;
+      mesh.material.uniforms.uOsuus.value = k.osuus;
+      aurinkoUniform(mesh.material, k.aurinko);
     },
     pura() {
       if (!mesh) return;
