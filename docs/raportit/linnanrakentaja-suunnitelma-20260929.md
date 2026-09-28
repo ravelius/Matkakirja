@@ -11,8 +11,8 @@ web ja Pulu, URP-renderöinti, datamalli ja glTF, web-polku, Codexin tarvelista)
 2. Kirjaa poikkeus Raamatun sääntöön UUSIA LINSSEJÄ EI ALOITETA ENNEN PARITEETTIA (omistajan aloitus 29.9. klo 00.0x).
 3. Codex-tilauksen osa 1 on valmis lähetettäväksi nyt (luonnos `linnanrakentaja-codex-tilaus-osa1-luonnos-20260929.md`).
    Osa 2 lähtee erän 1 jälkeen harmaan keittiön kuvien kanssa.
-4. Välitä nämä: Natiiviseppä, näyttämörajapinta (8.4). Pelikoodari, äänet, repliikit ja äänisilmukat (8.2).
-   Sisältökirjuri, faktat (8.3).
+4. Välitä nämä: Pelikoodari, äänet, repliikit ja äänisilmukat (8.2). Sisältökirjuri, faktat (8.3).
+   Natiivisepälle ei tule rajapintapyyntöä (erä 1: talon näkymäpeitto riittää).
 5. Pulu esiintyy nykyisenä Puluna, jotta hahmo pysyy tunnistettavana. Maalattu Pulu tilataan vain, jos erä 2 näyttää tyyliristiriidan.
 6. Erä 1 (harmaa keittiö) alkaa heti. Kun se on valmis, lähetän kuvat ja videon.
 
@@ -237,11 +237,10 @@ joten laitemittaus tehdään erässä 2 Laitetestaajan tai Natiivisepän laitevu
 
 ### 8.4 Natiiviseppä ja muut
 
-- **Natiiviseppä:**
-  - `ILinssiYmparisto.Nayttamo(bool)`: pallon kamera ja Cesium-päivitys tauolle, 60 fps:n pyyntö, ja
-    `Ruudunpaivitys` sekä `KehysMittari` seuraavat linssin kameraa.
-  - Vapaa kerrosnumero (layer) linssille.
-  - Merge-junat.
+- **Natiiviseppä:** vain merge-junat.
+  - Erä 1 osoitti, ettei näyttämörajapintaa tarvita: talon `SyoteLukko.LisaaNakymaPeitto` sammuttaa pallon
+    kameran, ja dioraama näytetään RenderTexturena UI-kerroksessa 24.
+  - Kerros 9 on vapaa (nimeämätön).
 - **Natiivi-UI (erä 2, valinnainen):** Livian lentoeleet natiiviin (glideIn ja flyAway ovat nyt vain SVG:ssä).
 - **Linssiseppä:** tiedoksi, että `LinssiOhjain.cs`:ään tulee kaksi riviä.
 - **Julkaisija (erä 2):** `js/dioraama/*` vientiin (`LISAMODUULIT`) ja ämpäriin kansio `dioraama/`.
