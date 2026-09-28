@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 17.2x)
+# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 19.3x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet (3/3): /Users/Shared/Claude/wt/proto-linssiseppa-astro
-  (linssiseppa/iss-kyyti, junassa), -nopeutus (linssiseppa/iss-nopeutus) ja -symbolit2d (linssiseppa/symbolit-2d); luovutus -s.
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet (3/3): /Users/Shared/Claude/wt/proto-linssiseppa-symbolit2d
+  (linssiseppa/symbolit-3d-luonnollinen), -nopeutus (linssiseppa/iss-nopeutus, junassa) ja -polyt (linssiseppa/cupola-polyt); luovutus -t.
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
 
 Lue:
@@ -13,19 +13,20 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260928-s.md** (cl9-laiteajo kesken: 3D-symbolit pois, Cupolan ajelehdus,
-  ISS-nopeutus; pölyhiukkaset tekemättä; -r.md aiempi)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260928-t.md** (cl13-laiteajo käynnissä itsestään: erikoismalli maalle + seepia,
+  Cupolan sumennuskolmikko ja pölyt → kuvat Päätoimittajalle → merge-pyynnöt; -s.md aiempi)
+- docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)
 - docs/raportit/iss-realismi-suunnitelma-20260928.md (ISS-realismin kaavat, vakiot, datalähteet ja tila)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -s kohta 1:**
-1. cl9-laiteajo (lähtee itse laite-nyt-tiedostosta) → sammutusilmoitus Julkaisijalle, .metat nopeutushaaraan.
-2. Kuvaparit Päätoimittajalle: 3D-symbolit pois (+ rivi erikoismallien zoomista ja kallistuksesta), Cupolan ajelehdus, ISS-nopeutus.
-3. Merge-pyyntö Natiivisepälle 1.0.38: linssiseppa/symbolit-2d 5ac726fd hyväksynnän jälkeen.
-4. Pölyhiukkaset auringonsäteessä (Päätoimittajan 16.3x-käsky), sitten laitekuva.
-5. Natiivin astroselite webin mallin jälkeen. Kohta 4 (BMNG, Kuu, tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
+**Järjestys: luovutus -t kohta 1:**
+1. cl13 valmis → koosta_cl13.py → laite-nyt pois ja sammutusilmoitus Julkaisijalle → kuvat Päätoimittajalle.
+2. Hyväksynnän jälkeen merge-pyynnöt Natiivisepälle: symbolit-3d-luonnollinen f6740687 ja cupola-polyt (878b87ae tai valittu sarja),
+   web-arvot Pelikoodarille Päätoimittajan kautta.
+3. Natiivi-UI:n vastaukset (nimiöt 3D-mallien kanssa, puuttuvat kaupunkimerkit) seuraavaan erään.
+4. Natiivin astroselite webin mallin jälkeen. Kohta 4 (BMNG, Kuu, tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
