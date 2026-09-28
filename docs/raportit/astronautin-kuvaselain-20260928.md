@@ -4,7 +4,7 @@
 keskellä edellinen/seuraava viereisiin kohteisiin kartalla ja himmeä maapallo kuvan takana kuvan kohdalta. Linssiseppä
 (Opus, max). Toteutus natiivissa, web tulee perässä Pelikoodarilta laattatyön jälkeen.*
 
-**Toteutus:** proto-haara `linssiseppa/astro-selain` **77db48b6** (c5b073cd + nimipillerin kirkastus 28.9.) (juna/b13 508761e8:n päällä). Linssit-testit 351/351 (uusi
+**Toteutus:** proto-haara `linssiseppa/astro-selain` **74f21d92** (c5b073cd + nimipillerin kirkastus 77db48b6 + Natiivi-UI:n katselmointikorjaus: pikkukuvanauha ‹ ›:n vasemmalle) (juna/b13 508761e8:n päällä). Linssit-testit 351/351 (uusi
 AstronauttiKierrosTestit 5/5), unity-tarkistus 0 virhettä. Kuvapari ja video otetaan aamulla polton jälkeen (kohta 5).
 
 ## 1. Suositus: yksi galleria koko maailmasta

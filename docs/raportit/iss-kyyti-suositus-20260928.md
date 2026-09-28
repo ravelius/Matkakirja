@@ -1,5 +1,10 @@
 # Astronautin kamera: ISS:n kyyti (Linssisepän suositus 28.9.2026)
 
+**Toteutus:** proto-haara `linssiseppa/iss-kyyti` **e0ad2b73** (astro-selaimen 74f21d92 päällä). Linssit-testit 361/361 (uusi
+IssKyytiTestit 10), unity-tarkistus 0 virhettä. Pelikoodari kuittasi 07.1x luvut sellaisinaan webiin. Natiiviseppä kuittasi
+kenttäkulman (oma arvo tallennetaan ja palautetaan kaikilla poistumisteillä, liu'utetaan) ja antoi yökuoren linssin
+omaksi kerrokseksi.
+
 *Omistajan kysymys 27.9. klo 23.5x: "pääseekö astronautin kamerassa jo iss:n kyytiin?" Fable kirjasi erän Linssisepälle
 (natiivi) ja Pelikoodarille (web on malli). Pohjana on 26.9. hyväksytty ISS-linssin suunnitelma
 (docs/raportit/iss-linssi-suunnitelma-20260926.md), jonka kaukonäkymä (SGP4-rata ja maajälki) on jo natiivissa. Tämä on
@@ -65,9 +70,18 @@ siirtymät ovat häivytyksiä ilman lentoa.
   - Kuvat haetaan ämpäristä ensimmäisellä kyydillä ja tallennetaan välimuistiin. Ne eivät kuulu buildiin
     (ESILATAUSPOLITIIKKA): iPhone 3,1 Mt ja iPad 4,2 Mt.
   - Ilman verkkoa ikkuna näytetään ilman kehystä.
-- **Päivä ja yö:** pallolla ei ole vielä terminaattoria (suunnitelmassa Natiivisepän osuus), joten yöpuolen ikkuna
-  näyttää päivän kartan. **Avoin kysymys Natiivisepälle:** onko terminaattori jonossa? Jos ei, Linssiseppä voi tehdä
-  väliaikaisen yökuoren linssin omana kerroksena (tumma kuori auringon suunnan mukaan ja 6°:n hämärä).
+- **Päivä ja yö:** pallolla ei ole terminaattoria, eikä se ole Natiivisepän jonossa (kuittaus 28.9.). Siksi kyydissä on
+  väliaikainen yökuori linssin omana kerroksena (Yokuori):
+  - kuori on pilvien yllä (1,012 × säde) ja tumma yöpuolella auringon suunnan mukaan
+  - hämäräkaista on aurinko −6° … +2°
+  - kuori näkyy vain kyydissä, ja kaukonäkymä pysyy webin kaltaisena
+  - A/B: `astro kyyti yo 0|1`.
+- **ISS-malli** (IssMalli, 176 kolmiota, oma CC0):
+  - ristikko 100 m ja neljä paria kullanruskeita siipiä 12 × 35 m
+  - valkoinen moduulijono lentosuunnassa ja radiaattorit
+  - näkyy 90 pt leveänä, ja Z-akseli on maajäljen suuntaan.
+- **Testikomennot:** `astro kyyti` (napautus), `astro kyyti pois`, `astro kyyti tila` ja `ui linssi kehys 0|1`.
+- **Ajoskripti:** `proto-3d/tyokalut/linssiseppa-ajot/ajo-iss-kyyti.sh`, joka tuottaa kuvat ja videon.
 
 ## 4. Web (Pelikoodari, web on malli)
 
