@@ -46,7 +46,7 @@ const env = () => ({
   POLLO_KEHITTAJAKOODI: KOODI,
   // Sama malli kuin tuotannossa (tools/pollo/wrangler.jsonc POLLO_MALLI): ilman tätä worker käytti
   // oletusta (Haiku), ja viivemittaus ei vastannut tuotantoa (Natiivi-UI 28.9.2026).
-  POLLO_MALLI: process.env.POLLO_MALLI || 'claude-sonnet-5',
+  POLLO_MALLI: process.env.POLLO_MALLI || 'claude-sonnet-5-5',
   POLLO_KV: { async get(k) { return KV.get(k) ?? null; }, async put(k, v) { KV.set(k, v); } },
 });
 const kulut = { vastaus: 0, puhe: 0, puheMerkit: 0 };
