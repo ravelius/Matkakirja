@@ -136,7 +136,9 @@ namespace Matkakirja.Natiivi
             float h = 2f * d * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad), w = h * kamera.aspect;
             transform.localPosition = new Vector3(0, 0, d);
             transform.localRotation = Quaternion.identity;
-            transform.localScale = new Vector3(w * 1.02f, h * 1.02f, 1f);
+            // Lasin zoom (IssKuvakulma.LasiZoom): neliö ruutua suurempi, jolloin kehys suurenee samassa suhteessa kuin maa.
+            float zoom = Mathf.Max(1f, (float)IssKuvakulma.LasiZoom);
+            transform.localScale = new Vector3(w * 1.02f * zoom, h * 1.02f * zoom, 1f);
             materiaali.SetFloat(IdRuutu, kamera.aspect);
         }
 

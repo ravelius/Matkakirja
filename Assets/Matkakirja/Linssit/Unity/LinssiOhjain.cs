@@ -1394,7 +1394,8 @@ namespace Matkakirja.Natiivi
                         {
                             CupolaKerros.Tyyli = osat[3] == "vanha" ? CupolaKerros.Tyylit.Vanha
                                 : osat[3] == "3d" ? CupolaKerros.Tyylit.Kolmiulotteinen : CupolaKerros.Tyylit.Kuva;
-                            Matkakirja.Natiivi.IssKyytiNakyma.Pehmea = osat[3] != "terava";
+                            // uusi = pehmea2 (omistaja 28.9. klo 18.0x), pehmea = 1.0.37, terava = Codexin alkuperäinen.
+                            Matkakirja.Natiivi.IssKyytiNakyma.Sarja = osat[3] == "terava" ? "" : osat[3] == "pehmea" ? "pehmea" : "pehmea2";
                         }
                         else if (a == "ilmakeha" && osat.Length > 3)
                         {
@@ -1403,6 +1404,9 @@ namespace Matkakirja.Natiivi
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
                         else if (a == "ajelehdus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Ajelehdus = osat[3] != "0"; // A/B painoton ajelehdus
+                        else if (a == "lasi" && osat.Length > 3   // A/B lähemmäs lasia: 1 = 1.0.37, 1.3 = uusi
+                                 && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double lasi))
+                            Matkakirja.Linssit.Iss.IssKuvakulma.LasiZoom = Math.Max(0.5, Math.Min(3.0, lasi));
                         else if (a == "polyt" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Polyt = osat[3] != "0"; // A/B pölyhiukkaset auringonsäteessä
                         else if (a == "valot" && osat.Length > 3)   // A/B kaupunkien valot: 0 | 1 | osuus 0…1 (esim. 0.8)
                         {

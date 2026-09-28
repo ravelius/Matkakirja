@@ -15,7 +15,9 @@
 // SYVÄTERÄVYYS (omistaja 28.9. iltapäivällä Fablen kautta: "tuo cupola ei voi näkyä noin terävänä, koska katse on
 // maapallossa"): oletuksena Linssisepän poltettu muunnelma iss-cupola2-pehmea-* (kehys levysumennuksella voimakkaasti
 // epäterävä, ulko-osat vähemmän, heijastus lasin etäisyydeltä, aavistus raetta; ei ajonaikaista sumennusta).
-// A/B: astro kyyti cupola uusi|terava|3d|vanha (terava = Codexin alkuperäinen).
+// A/B: astro kyyti cupola uusi|pehmea|terava|3d|vanha (uusi = pehmea2, pehmea = 1.0.37, terava = Codexin alkuperäinen).
+// LÄHEMMÄS LASIA (omistaja 28.9. klo 18.0x): ikkuna zoomataan 1,3 × (kenttä 80° → 65,7°, Cupola-kerrokset samassa suhteessa) ja
+// sumennusta on vähemmän (pehmea2); A/B astro kyyti lasi 1|1.3.
 // NOPEUTUS JA "LENNÄ KOHTEEN YLLE" (omistaja 28.9. klo 12.1x; web iss-kyyti-nakyma.js ja css/satelliitti.css, commit
 // 891958e17, px → pt 1:1): pillerin alla porras LIVE · 10× · 100× · 1000× (valittu vihreänä ja lihavoituna; nopeutettuna
 // LIVE-nappi on "Palaa LIVE"), sen alla "Lennä kohteen ylle…" ja ylilennon rivi ("Venetsia · Ylilento klo 14.32, 3 h 12 min
@@ -51,11 +53,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuvapari samasta käännöksestä (`ui linssi kehys 0|1`): ikkuna ilman Cupola-kehystä.</summary>
         public static bool IlmanKehysta;
         /// <summary>
-        /// Cupola 2 syväterävyydellä (oletus): Linssisepän polttamat iss-cupola2-pehmea-* (levysumennus iPhonella kehys r 12 px,
-        /// ulko-osat 3,5 px, heijastus 8 px; iPadilla × 1,27; rae 4/255 kehyksessä). false = Codexin terävä alkuperäinen (A/B).
+        /// Cupola 2:n kuvasarja (A/B `astro kyyti cupola uusi|pehmea|terava`): "pehmea2" (oletus, omistaja 28.9. klo 18.0x:
+        /// "pehmennyksen määrää voi hieman vähentää"; levysumennus iPhonella kehys r 7 px, ulko-osat 2 px, heijastus 4,6 px,
+        /// iPadilla × 1,27, rae 4/255 ennallaan ja 1/1,3 hienompi, koska lasin zoom suurentaa sen; ruudulla ~0,75 × entinen
+        /// sumennus), "pehmea" (1.0.37: 12 / 3,5 / 8 px) tai "" = Codexin terävä alkuperäinen. Työkalu cupola_pehmea.py.
         /// </summary>
-        public static bool Pehmea = true;
-        bool haettuPehmea;
+        public static string Sarja = "pehmea2";
+        string haettuSarja;
         /// <summary>Codexin Cupola 2: null = ei vielä haettu tai latautuu, true = kehys valmis, false = ei saatu (3D varalla).</summary>
         public static bool? Kuva2Tila { get; private set; }
         /// <summary>Piirretäänkö ikkunassa valaistu 3D-kehys (A/B 3d tai Cupola 2:n kehys ei latautunut).</summary>
@@ -201,7 +205,7 @@ namespace Matkakirja.Natiivi
             // Oletus Codexin Cupola 2 (UI-kerrokset); valaistu 3D-kerros (CupolaKerros) A/B:ssä ja varalla; 1.0.35:n UI-kehys
             // vain A/B:n "ennen"-kuvaan (CupolaKerros.Vanha).
             // A/B pehmeä ↔ terävä: haetaan kerrokset uudelleen (Aseta kutsuu tätä sekunnin välein).
-            if (kuva2Haettu && haettuPehmea != Pehmea) { kuva2Haettu = false; Kuva2Tila = null; }
+            if (kuva2Haettu && haettuSarja != Sarja) { kuva2Haettu = false; Kuva2Tila = null; }
             bool vanha = ikkuna && !IlmanKehysta && CupolaKerros.Vanha;
             bool uusi = ikkuna && !IlmanKehysta && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva && Kuva2Tila == true;
             if (vanha && !kuvatHaettu) HaeKuvat();
@@ -209,6 +213,8 @@ namespace Matkakirja.Natiivi
             juuri.EnableInClassList("mk-isskyyti--ikkuna", vanha);
             juuri.EnableInClassList("mk-isskyyti--kuva2", uusi);
             Heilu(vanha || uusi);
+            // Lasin zoom (IssKuvakulma.LasiZoom) myös ilman ajelehdusta (vähennetty liike tai A/B): kerrokset lepoasentoon.
+            if (!(heiluu && Ajelehdus)) AjelehdusLepoon();
             PolytPaalle(ikkuna && !IlmanKehysta && (vanha || uusi || KolmiulotteinenKehys));
         }
 
@@ -239,10 +245,10 @@ namespace Matkakirja.Natiivi
         void HaeKuvat2()
         {
             kuva2Haettu = true;
-            haettuPehmea = Pehmea;
+            haettuSarja = Sarja;
             bool ipad = Screen.width > 0.5f * Screen.height;
             string koko = ipad ? "ipad-1536x2732" : "iphone-1206x2622";
-            string sarja = Pehmea ? "iss-cupola2-pehmea-" : "iss-cupola2-";
+            string sarja = string.IsNullOrEmpty(Sarja) ? "iss-cupola2-" : "iss-cupola2-" + Sarja + "-";
             int odottaa = 3;
             bool kehysOk = false;
             void Valmis(VisualElement e, Texture2D t)
@@ -304,7 +310,9 @@ namespace Matkakirja.Natiivi
             float z = Mathf.Sin(tau * t / 37f + 0.4f);
             float kulma = AjelehdusKallistus * Mathf.Sin(tau * t / 29f + 1.1f);
             // Lähellä: kehys ja lasin heijastus (pää liikkuu, lähellä oleva siirtyy vastakkain); heijastuksen oma heilunta päälle.
-            var lahi = new Scale(Vector3.one * (KehysPohja + AjelehdusSkaala * z));
+            // Pohja on lasin zoom (1,3) tai vähintään KehysPohja, jotta reunat eivät tule näkyviin.
+            float pohja = Mathf.Max(LasinZoom, KehysPohja);
+            var lahi = new Scale(Vector3.one * (pohja + AjelehdusSkaala * z));
             kehys2.style.translate = new Translate(-x, -y);
             kehys2.style.scale = lahi;
             kehys2.style.rotate = new Rotate(-kulma);
@@ -314,20 +322,24 @@ namespace Matkakirja.Natiivi
             // Kaukana: ulko-osat kymmenesosan, kallistus sama (pään kierto kääntää kaiken).
             var ulko = ulko2.style.translate.value;
             ulko2.style.translate = new Translate(ulko.x.value - 0.1f * x, ulko.y.value - 0.1f * y);
-            ulko2.style.scale = new Scale(Vector3.one * (KehysPohja + 0.1f * AjelehdusSkaala * z));
+            ulko2.style.scale = new Scale(Vector3.one * (pohja + 0.1f * AjelehdusSkaala * z));
             ulko2.style.rotate = new Rotate(-kulma);
         }
 
-        /// <summary>Ajelehdus pois (A/B): kerrokset lepoasentoon (skaala 1, ei kiertoa).</summary>
+        /// <summary>Ajelehdus pois (A/B tai vähennetty liike): kerrokset lepoasentoon (skaala = lasin zoom, ei kiertoa).</summary>
         void AjelehdusLepoon()
         {
+            var zoom = new Scale(Vector3.one * LasinZoom);
             foreach (var e in new[] { kehys2, heijastus2, ulko2 })
             {
-                e.style.scale = StyleKeyword.Null;
+                e.style.scale = zoom;
                 e.style.rotate = StyleKeyword.Null;
             }
             kehys2.style.translate = StyleKeyword.Null;
         }
+
+        /// <summary>Cupola-kerrosten suurennos: sama kuin ikkunan kenttäkulman zoom (IssKuvakulma.LasiZoom), vähintään 1.</summary>
+        static float LasinZoom => Mathf.Max(1f, (float)IssKuvakulma.LasiZoom);
 
         /// <summary>
         /// PÖLYHIUKKASET AURINGONSÄTEESSÄ (Päätoimittajan käsky 28.9. klo 16.3x): 34 pehmeää hiukkasta leijuu kuvun sisällä ja
