@@ -1323,7 +1323,13 @@ async function kutsuRajapintaa(env, {
       max_tokens: maxTokens,
       // Ajattelu ei saa kuluttaa lyhyen vastauksen sanarajaa (löydös 67).
       ...ajatteluKentat(malli),
-      system: jarjestelma,
+      /*
+       * KEHOTTEEN VÄLIMUISTI (Fable 28.9.2026): järjestelmäkehote (~8 k
+       * merkkiyksikköä, sama kaikille pelaajille) luetaan välimuistista
+       * 0,1 × syötehinnalla — vastaus ≈ 0,025 → ≈ 0,008 $. Pelaajan tilanne
+       * ja historia ovat viesteissä, joten etuliite pysyy tavu tavulta samana.
+       */
+      system: [{ type: 'text', text: jarjestelma, cache_control: { type: 'ephemeral' } }],
       messages: viestit,
       // Lämpötila annetaan vain kun se on tarkoituksella asetettu:
       // chat-vastaukset saavat mallin oletuksen, tuomiot temperature 0.

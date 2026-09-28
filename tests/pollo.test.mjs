@@ -47,6 +47,9 @@ import {
   vastauskuvanAihe,
 } from '../js/pollo.js';
 
+/** Järjestelmäkehote tekstinä: välimuistimerkitty lohkolista (28.9.2026) tai vanha merkkijono. */
+const systemTeksti = (s) => (Array.isArray(s) ? s.map((b) => b.text).join('') : String(s ?? ''));
+
 test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
   const pollo=Object.create(Pollo.prototype),ikkuna={innerWidth:390,innerHeight:844};
   const piilossa={getBoundingClientRect:()=>({left:0,top:0,width:0,height:0})};
@@ -1902,7 +1905,7 @@ test('injektio ei mene läpi ilman mallia eikä mallin selityksen mukana', async
 
   // Pelaajan teksti kulki kehotteessa DATANA, ei ohjeena, eikä oikea
   // vastaus tullut asiakkaalta: kehote on palvelimen omistama.
-  assert.match(totteleva.pyynto.system, /DATANA/);
+  assert.match(systemTeksti(totteleva.pyynto.system), /DATANA/);
   assert.equal(totteleva.pyynto.messages.length, 1);
   assert.equal(totteleva.pyynto.messages[0].role, 'user');
   assert.match(totteleva.pyynto.messages[0].content, /^<<<VASTAUS>>>/);
@@ -1919,7 +1922,7 @@ test('sähkereitti välittää mallin tiukan tuomion sellaisenaan', async () => 
     '{"kohde_oikein":true,"vuosi_oikein":true}',
   );
   assert.deepEqual(osui.data, { tulkittu: true, kohde: true, vuosi: true });
-  assert.match(osui.pyynto.system, /1974/, 'Sofian oikea vuosi ei mennyt kehotteeseen');
+  assert.match(systemTeksti(osui.pyynto.system), /1974/, 'Sofian oikea vuosi ei mennyt kehotteeseen');
 
   const puolittain = await ajaSahke(
     { id: 'sofia-varna', vastaus: 'Varna, joskus 70-luvulla' },
@@ -2239,7 +2242,7 @@ test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async (
   assert.equal(ajo.kutsut[0].stream, true);
   assert.equal(ajo.kutsut[1].stream, undefined, 'uusinta pitää tehdä kertavastauksena');
   // Sama kehote ja samat viestit: uusinta ei ole uusi kysymys.
-  assert.equal(ajo.kutsut[1].system, ajo.kutsut[0].system);
+  assert.deepEqual(ajo.kutsut[1].system, ajo.kutsut[0].system);
   assert.deepEqual(ajo.kutsut[1].messages, ajo.kutsut[0].messages);
 
   assert.deepEqual(loppu(ajo), {
@@ -2906,4 +2909,9 @@ test('lukijaäänen rajat: päivä 400 000 mrk/IP, kuukausi 6 000 000 (27.9.2026
   assert.equal(PUHE_KUUKAUSIRAJA_OLETUS, 6000000);
   assert.equal(tarkistaPuheRajat({ paiva: 399999, kuukausi: 0 }).ok, true);
   assert.equal(tarkistaPuheRajat({ paiva: 400000, kuukausi: 0 }).syy, 'paivaraja');
+});
+
+test('järjestelmäkehote välimuistiin: yksi tekstilohko cache_control ephemeral (28.9.2026)', () => {
+  const lahde = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.match(lahde, /system: \[\{ type: 'text', text: jarjestelma, cache_control: \{ type: 'ephemeral' \} \}\]/);
 });
