@@ -1426,10 +1426,11 @@ function paikkaaKaikki() {
     for (const kuva of tila.vanhat?.values?.() ?? []) if (kuva.dataset?.virhe) paikkaaLaatta(kuva);
   }
 }
+// Valinnaiset kutsut: testien tynkäikkunoilla ei ole addEventListeneria.
 if (typeof document !== 'undefined' && typeof window !== 'undefined') {
-  document.addEventListener('visibilitychange', paikkaaKaikki);
-  window.addEventListener('pageshow', paikkaaKaikki);
-  window.addEventListener('online', paikkaaKaikki);
+  document.addEventListener?.('visibilitychange', paikkaaKaikki);
+  window.addEventListener?.('pageshow', paikkaaKaikki);
+  window.addEventListener?.('online', paikkaaKaikki);
 }
 
 /** Kerros talteen paikkausta varten (paikkaaKaikki). */

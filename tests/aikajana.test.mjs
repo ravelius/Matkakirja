@@ -1788,8 +1788,9 @@ test('rikkinäinen karttalaatta ei maalaa selaimen kysymysmerkkiä kartalle', ()
   // WebKit piirtää saapumattoman <image>-elementin tilalle sinisen
   // laatikon ja kysymysmerkin, venytettynä laatan koko alaan
   // (omistajan kuvakaappaus 4.9.2026). Osoitteen poisto vie merkin.
+  // Ikkuna 2600 (28.9.2026, #3516): väliin tuli virhelaatan uusinnan selitys.
   const PYRAMIDI = readFileSync(new URL('../js/laattapyramidi.js', import.meta.url), 'utf8');
-  assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,1600}kuva\.removeAttribute\('href'\);/);
+  assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,2600}kuva\.removeAttribute\('href'\);/);
 });
 
 
