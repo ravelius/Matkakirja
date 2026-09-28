@@ -705,7 +705,14 @@ namespace Matkakirja.Natiivi
             string koko = vastaus ?? "";
             var sb = new StringBuilder();
             int kohta = 0, n = 0;
-            string Suojaa(string x) => Nakyva(x).Replace("[[", "").Replace("]]", "").Replace("<", "<noparse><</noparse>");
+            // Linkkien välinen pala siivotaan erikseen: sen alun välilyönti säilyy (PoistaPuhetagit poistaa rivin alun
+            // tyhjän, ja ilman tätä "[[Akropolis]] on" näkyi "Akropolison", TF 1.0.34).
+            string Suojaa(string x)
+            {
+                int alku = 0;
+                while (alku < x.Length && (x[alku] == ' ' || x[alku] == '\t')) alku++;
+                return x.Substring(0, alku) + Nakyva(x.Substring(alku)).Replace("[[", "").Replace("]]", "").Replace("<", "<noparse><</noparse>");
+            }
             foreach (Match m in KasiteKuvio.Matches(koko))
             {
                 if (n >= KasitteidenKatto) break;
