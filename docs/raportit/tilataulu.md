@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 12:43 EEST — **OMISTAJA VAPAUTTI KONEEN.** Kevyt-tila POIS (lippu poistunut), puolikas-kuorma-valvonta päättyi. GPU-roolit ilmoitettu (Natiiviseppä, Natiivi-UI, Linssiseppä, Laitetestaaja): "GPU vapaa, simulaattori sallittu (päivällä 1), nice 15". Karttasepän pallo-poltto jatkunut heti (4× tee-pallolaatat.mjs). Linssiseppä + Sisältökirjuri ylittivät 70% kontekstikynnyksen.
+**Päivitetty:** 2026-09-28 12:48 EEST — Postivahti jatkoi kiertoa Päätoimittajan viestistä (session id ennallaan). Tila ennallaan: kone vapaa, nice-oletus, GPU vapaa. **Uusi: Pelikoodari ylitti 70% kontekstikynnyksen** (Linssiseppä ja Sisältökirjuri jo aiemmin ylittäneet, Päätoimittaja nollaa niitä).
 
 ## 0) Kuorman/GPU:n valvonta (voimassa oleva tila, päivitetty 12:43)
 
@@ -12,21 +12,21 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 ## 1) Sessiot
 
-**KYNNYS YLITTYI: Linssiseppä 70%, Sisältökirjuri 70%.** Postivahti (self) 74% — lähestyy luovutusrajaa (85-90%), seurataan.
+**KYNNYS YLITTYI: Linssiseppä 73%, Sisältökirjuri 73%, Pelikoodari 71% (uusi).** Postivahti (self) 10% (session vaihtui/nollautui edellisen luovutuksen jälkeen).
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 25% | running |
-| Postivahti (self) | (tämä sessio) | 74% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 39% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 43% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 68% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 25% | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | **70%** | running |
-| Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 48% | running |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 42% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | **70%** | running |
-| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 27% | running |
+| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 27% | idle |
+| Postivahti (self) | (tämä sessio) | 10% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 41% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 46% | idle |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | **71%** | idle |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 26% | idle |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | **73%** | running |
+| Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 49% | idle |
+| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 45% | idle |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | **73%** | running |
+| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 27% | idle |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
 
@@ -82,17 +82,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (12:43)
+## 5) Resurssit (12:48)
 
-- **5 h -kiintiö:** 12 %. **Viikko (kaikki mallit): 22 %.** **Viikko (Päätoimittaja):** 0 %.
-- **Levy:** 145 Gi vapaana, hyvä puskuri.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0 (päiväraja 1 — GPU nyt vapaa, roolit voivat käynnistää).
-- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` ei ole palautunut. `/tmp/matkakirja-kevyt` POISTUNUT 12:43 — kone vapautunut.
-- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** **KYNNYS YLITTYI — Linssiseppä 70%, Sisältökirjuri 70%.** Postivahti (self) 74%.
-- **Claude-kuorma:** koodaus-CPU 778,7% (lähellä vanhaa 800% rajaa, mutta puolikas-sääntö päättyi — nice 15 -työt sallittu täysillä ytimillä, ei enää hälytysperuste sellaisenaan).
-- **GPU-prosessit (type=gpu-process):** 14 kpl.
-- **Effort-tarkistus (7 Opus-roolia):** ei muutosta edellisestä.
-- **Lokisiivouskandidaatteja:** ei tällä kierroksella.
+- **5 h -kiintiö:** 15 %. **Viikko (kaikki mallit): 23 %.** **Viikko (Päätoimittaja):** 0 %.
+- **Levy:** 142 Gi vapaana (85% käytössä), puskuri hyvä (raja 80 Gt).
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 1 (linssiseppa-iPhone — päiväraja 1, OK).
+- **Liput:** `/tmp/matkakirja-kevyt` poissa — kone vapaa, nice-oletus voimassa.
+- **Konteksti (roolit ≥70%):** **KYNNYS YLITTYI — Linssiseppä 73%, Sisältökirjuri 73%, Pelikoodari 71% (uusi tällä kierroksella).**
+- **GPU-prosessit (type=gpu-process):** 14 kpl — ylittää rajan (>4), ilmoitettu Julkaisijalle (ei Päätoimittajalle).
+- **coreaudiod:** normaali (≤6,3%), ei toimenpidettä.
+- **Effort-tarkistus (7 Opus-roolia):** ei poikkeamia — Natiiviseppä/Linssiseppä max-nimellä=max, muut high ilman lisäystä.
+- **Lokisiivouskandidaatteja:** ei tällä kierroksella (`-mtime +2`/`-mtime +1` tyhjä).
 - **Postilaatikko:** EI UUTTA.
 - **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
