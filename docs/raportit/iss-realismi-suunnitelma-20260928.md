@@ -165,3 +165,41 @@ siis 30–50 px:ksi, ja pilven reuna (kuvassa 0 → 1 yhden tekselin matkalla) n
   - Kamerakeskeinen pallo (ei parallaksia), ECI → ECEF tähtiajasta, koko ja kirkkaus magnitudista, väri B−V:stä.
   - Päivällä himmeinä (kuten nyt 0,3).
   - Nykyinen satunnainen tähtikenttä jää kaukonäkymään (webin kaltainen).
+
+## 5. Cupola 3: pyöreä kattoikkuna (natiivi linssiseppa/cupola3 c2645317, IssKyytiNakyma)
+
+Omistaja 28.9. klo 22.5x: "voisiko ennemmin käyttää sitä pyöreää ikkunaa ja rajata se lähelle? toimisi aika hyvin vähän eri
+rajauksella pysty ja vaaka muodossa". Codex toimitti pyöreän kattoikkunan ohjaamon klo 22.4x
+(posti/codex-fable-iss-ohjaamo-20260928.md, paketti ~/Documents/Codex/2026-09-28/iss-ohjaamo/).
+
+- **Kuvat:** ämpäri `karttanostot/20260928/iss-cupola3-{a,b}-{cockpit,glass,sun-nw,sun-ne,sun-sw}-{iphone-1290x2796,ipad-2732x2048}.png`.
+  - 20 kuvaa, SHA-256 täsmää Codexin manifestiin.
+  - a = keskitetty (oletus), b = hieman vino.
+  - Maskia ei tarvita, koska ohjaamon alfa on ikkuna.
+- **Kuvan valinta:** jos pitkä / lyhyt sivu < 1,75, käytetään iPadin vaakakuvaa, muuten iPhonen pystykuvaa.
+  - Kerrossäiliö käännetään 90° myötäpäivään, kun ruutu on eri asennossa kuin kuva (iPhone vaaka, iPad pysty).
+- **Rajaus:** cover × 1,04.
+  - Ajelehdus on puolitettu (x 4 pt, y 3,5 pt, skaala ±0,75 %, kallistus 0,25°), jottei kuvan reuna paljastu.
+  - Codexin kuvassa ikkuna on 98 % iPhonen lyhyemmästä sivusta ja 85 % iPadin. Suurennoksen 1,04 kanssa iPhonen ikkunan
+    karmi leikkautuu hieman ruudun lyhyillä sivuilla (tiivis rajaus).
+- **Tummuus:** ohjaamoa ei tummenneta, koska sen metallin keskiarvo on valmiiksi noin 25/255. Ulko-osia ei ole.
+- **Auringonvalo pokissa:** kolme kerrosta. Reunojen suunnat kuvassa (x oikealle, y ylös):
+  - r = luode (−1, 1), koillinen (1, 1) ja lounas (−1, −1), normitettuina.
+  - Aurinko s kuvan suunnissa on CupolaKerros.Valo.xy. Käännetyssä säiliössä s = (−y, x).
+  - Paino = max(0, (−ŝ · r + 0,35) / 1,35): reuna loistaa auringon vastakkaisella puolella, koska valo tulee lasin läpi
+    (kuten Cupola 2:n laskennallisissa reunavaloissa).
+  - Jos |s| < 0,001 (aurinko suoraan edessä tai takana), reunavaloa ei ole.
+  - Alfa = 0,95 · Valo.w · lerp(0,45, 1, saturate(1,4 · |s|)) · paino. Väri on kerroksen oma: luode ja lounas lämmin,
+    koillinen viileä.
+- **Lasi:** `glass` on heijastuksen paikalla (alfa ≤ 17/255), samalla heilunnalla.
+- **A/B:** `astro kyyti ohjaamo 3|3b|2`, jossa 2 = Cupola 2:n suurennettu kattoikkuna 8852e368.
+  - Tila tulee lokiin riville `astro kyyti ohjaamo: …` (kuva, asento ja valojen painot).
+- **Laite cl18:** iPhone 17 Pro ja iPad Pro 11, Euroopan päivä ja yö.
+  - Kuvat: proto-3d/lokit/linssiseppa-laite-20260928-cl18/.
+  - Parit: pari-iphone-{pysty,vaaka}.png, pari-ipad-{vaaka,pysty}.png. Lisäksi kolmikko-iphone-pysty.png (A | B | Cupola 2)
+    ja kolmikko-valo.png.
+  - 0 poikkeusta.
+  - Kierron testikomento on `ui kierto vaaka|pysty` (UiKomennot). Pelkkä `kierto` on tuntematon, joten cl17:n vaakakuvat
+    jäivät pystyyn.
+- **Web (Siirtoseppä, kun natiivi on hyväksytty):** samat kuvat, valinta ja painot. Ohjaamo on CSS-kerros cover-rajauksella
+  (1,04), ja kolme valokerrosta sekoitetaan opacityllä.
