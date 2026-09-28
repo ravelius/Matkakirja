@@ -157,6 +157,96 @@ namespace Matkakirja
             }
         }
 
+        // ---- Erikoismalli kaupungin vieressä (omistaja 28.9. klo 17.4x Päätoimittajan kautta: "jos erikoissymboli on
+        // kohdekaupungissa, se pitää siirtää hieman sen viereen") ----
+
+        /// <summary>
+        /// Kaupungissa oleva erikoismalli piirretään kaupunkipisteen viereen, ettei se peitä kaupungin pistettä eikä nimeä
+        /// (komento `symbolit sivuun 0|1`; 0 = 1.0.37: malli omalla paikallaan, maamerkki idän suuntaan).
+        /// Kiinteä sivusuunta: ruudun vasen (kaupungin nimiö on oletuksena oikealla ja väistää mallia kalusteena), mallin
+        /// lähin reuna SymbolienVaisto.SivuValiPt pisteen päässä kaupunkipisteen keskeltä, eikä liioiteltu perspektiivi
+        /// kallista mallia kaupungin päälle.
+        /// </summary>
+        public static bool SivuunSaanto = true;
+
+        /// <summary>
+        /// Onko noston erikoismalli kaupungissa: kaupungin maamerkki (paikka on kaupunkipiste), kaupunki itse (esim. Visby:
+        /// kaupunkimerkki jää näkyviin ja malli sen viereen) tai enintään SymbolienVaisto.SivuSadeKm kaupunkipisteestä
+        /// (KaupunkiMerkit). Tulos Tietoon; "ei" tallennetaan vasta, kun kaupungit ovat latautuneet.
+        /// </summary>
+        static bool Sivuun(Tieto t, NostoKerros.Nosto s)
+        {
+            if (t == null || t.Erikois == null) return false;
+            if (t.Sivu != 0) return t.Sivu == 2;
+            if (OnMaamerkki(s.Id)) return AsetaSivu(t, s.OmaLat, s.OmaLon);
+            if (t.KaupunkiNosto) return AsetaSivu(t, s.Lat, s.Lon);   // kaupunkimerkin piirtopiste
+            var merkit = NostoKerros.Instanssi != null ? NostoKerros.Instanssi.merkit : null;
+            if (merkit == null || !KaupungitLadattu(merkit)) return false;
+            string id = merkit.LahinId(s.OmaLat, s.OmaLon, SymbolienVaisto.SivuSadeKm / 111.2);
+            if (id != null && merkit.Paikka(id, out double la, out double lo)) return AsetaSivu(t, la, lo);
+            t.Sivu = 1;
+            return false;
+        }
+
+        static bool AsetaSivu(Tieto t, double lat, double lon)
+        {
+            t.SivuLat = lat; t.SivuLon = lon; t.Sivu = 2;
+            return true;
+        }
+
+        static bool KaupungitLadattu(KaupunkiMerkit m)
+        {
+            foreach (var _ in m.Kaupungit()) return true;
+            return false;
+        }
+
+        /// <summary>
+        /// Jalka kaupunkipisteen (k.Paikka) vasemmalle ruudulla: kameran oikea projisoituna pinnan tasoon, siirto = mallin
+        /// ulottuma siihen suuntaan + väli pisteinä (koko / pt = paikallisia yksiköitä ruudun pisteessä mallin etäisyydellä).
+        /// Kartan kierto ja kallistus pitävät mallin aina pisteen vasemmalla puolella kuten nimiöt.
+        /// </summary>
+        Vector3 SivuunJalka(Kappale k, float koko, float pt)
+        {
+            Vector3 oikea = Vector3.ProjectOnPlane(georeferenssi.transform.InverseTransformDirection(kamera.transform.right), k.Normaali);
+            if (oikea.sqrMagnitude < 1e-10f) oikea = k.Asento * Vector3.right;   // rappeutunut: itä
+            Vector3 vasen = -oikea.normalized;
+            Vector3 dl = Quaternion.Inverse(k.Asento) * vasen;
+            return k.Paikka + vasen * SymbolienVaisto.SivuSiirto(dl.x, dl.z, k.Puoli.x, k.Puoli.y, koko, koko / Mathf.Max(1e-3f, pt));
+        }
+
+        /// <summary>
+        /// Kaupungin viereen siirretyn noston erikoismallin jalka ruudulla (pikseleinä, origo vasen ala kuten Nosto.Ruutu):
+        /// Natiivi-UI siirtää noston merkin (napautus ja nimiö) mallin kohdalle. Epätosi, jos mallia ei ole siirretty tai nosto
+        /// on itse kaupunki (kaupunkimerkki pysyy paikallaan) tai maamerkki (ei merkkiä).
+        /// </summary>
+        public static bool SiirrettyPiste(string nostoId, out Vector2 ruutu)
+        {
+            ruutu = default;
+            if (instanssi == null || instanssi.kamera == null || nostoId == null || OnMaamerkki(nostoId)) return false;
+            if (!instanssi.kappaleet.TryGetValue(nostoId, out var k) || !k.SivuunNyt || !k.R.enabled) return false;
+            if (tiedot.TryGetValue(nostoId, out var t) && t.KaupunkiNosto) return false;
+            Vector3 r = instanssi.kamera.WorldToScreenPoint(k.JalkaMaailma);
+            if (r.z <= 0f) return false;
+            ruutu = new Vector2(r.x, r.y);
+            return true;
+        }
+
+        /// <summary>`symbolit tila`: kaupunkien viereen siirretyt erikoismallit (" (vieressä: visby, maamerkki:colosseum)").</summary>
+        string SivuunTila()
+        {
+            int n = 0;
+            var sb = new System.Text.StringBuilder();
+            foreach (var p in kappaleet)
+            {
+                if (!p.Value.SivuunNyt || !p.Value.R.enabled) continue;
+                sb.Append(n++ == 0 ? " (vieressä: " : ", ");
+                int i = p.Key.LastIndexOf(':');
+                sb.Append(OnMaamerkki(p.Key) || i < 0 ? p.Key : p.Key.Substring(i + 1));
+            }
+            if (n > 0) sb.Append(')');
+            return sb.ToString();
+        }
+
         /// <summary>Piirretäänkö saman avaimen erikoismalli tällä kehyksellä jo oikean noston kautta.</summary>
         bool ErikoismalliPiirretty(string avain)
         {

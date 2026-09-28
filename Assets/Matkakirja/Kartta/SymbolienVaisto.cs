@@ -108,5 +108,76 @@ namespace Matkakirja
         /// (negatiivinen = ei vielä päätetty, jolloin ensimmäinen arvio pätee heti).
         /// </summary>
         public static bool SaaVaihtaa(float nytS, float edellinenS) => edellinenS < 0f || nytS - edellinenS >= ViiveS;
+
+        // ---- 5. KOKO KALLISTETUSSA KARTASSA (omistaja 28.9.2026 klo 17.4x Päätoimittajan kautta: "palauta 3d symbolit vielä mutta
+        // tee niistä isompia. nyt kaikki 3d mallit pienenevät kun niitä menee lähemmäksi silloin kun kartta on kallistettuna.
+        // pitäisi mennä päinvastoin"). Syy: malli pidettiin vakiokokoisena ruudulla omalla etäisyydellään, joten kallistetussa
+        // kartassa lähestyttäessä maasto kasvoi ja malli ei, eli malli kutistui maisemaan nähden, ja kaukana olevat mallit olivat
+        // yhtä isoja kuin lähellä olevat. Nyt kallistetussa kartassa malli on esine: koko sidotaan katsepisteen etäisyyteen
+        // (lähempänä isompi, kauempana pienempi) ja kasvaa zoomatessa nopeammin kuin ylhäältä. Ylhäältä ennallaan (× IsoKerroin).
+
+        /// <summary>3D-mallien kokokerroin (tasot 1–3 ja erikoismallit): omistajan "tee niistä isompia".</summary>
+        public const float IsoKerroin = 1.35f;
+        /// <summary>Kameran kallistus (°), josta kallistetun kartan koko on täysin käytössä; 0° = ylhäältä (entinen vakioruutu).</summary>
+        public const double LuonnollinenTaysiAste = 25.0;
+        /// <summary>
+        /// Kallistetun kartan lisäkasvu: ruutukoko × (kerroin / kynnys)^LisaKasvu. Ylhäältä tason 1 käyrä kasvaa kertoimen
+        /// potenssina ~0,37 (30 → 54 pt kertoimilla 1,25 → 6), joten kallistettuna ~0,82, lähes oikea esine (1,0).
+        /// </summary>
+        public const double LisaKasvu = 0.45;
+        /// <summary>Perspektiivikertoimen rajat (katsepisteen etäisyys / mallin etäisyys): horisontissa ei pisteeksi, edessä ei yli 2 ×.</summary>
+        public const double PerspektiiviAla = 0.4, PerspektiiviYla = 2.0;
+        /// <summary>Katto: malli enintään tämä osuus ruudun lyhyemmästä sivusta (ylhäältä-koko ei koskaan pienene katon takia).</summary>
+        public const float KattoOsuus = 0.3f;
+
+        /// <summary>Kallistuksen paino 0–1: 0 ylhäältä, 1 kallistuksesta <paramref name="taysiAste"/> alkaen (smootherstep).</summary>
+        public static double KallistusPaino(double kallistusAste, double taysiAste = LuonnollinenTaysiAste)
+        {
+            if (double.IsNaN(kallistusAste) || kallistusAste <= 0) return 0;
+            if (!(taysiAste > 0)) return 1;
+            double t = Math.Min(1.0, kallistusAste / taysiAste);
+            return t * t * t * (t * (t * 6 - 15) + 10);
+        }
+
+        /// <summary>
+        /// Mallin leveys ruudulla (pt): <paramref name="perusPt"/> (ylhäältä-käyrä) × kasvu × perspektiivi, enintään katto.
+        /// Kasvu = (kerroin / kynnys)^(lisäkasvu × paino), kun kerroin ylittää kynnyksen; perspektiivi = (fokus / etäisyys)^paino
+        /// rajattuna [ala, ylä], eli painolla 1 mallin koko maailmassa ei riipu sen omasta etäisyydestä (oikea perspektiivi).
+        /// Paino 0 palauttaa perusPt:n (entinen vakioruutu). Katto ei koskaan pienennä alle perusPt:n.
+        /// </summary>
+        public static float RuutuKoko(float perusPt, double kerroin, double kynnys, double fokusEtaisyys, double etaisyys,
+            double paino, double lisaKasvu, float kattoPt, double ala = PerspektiiviAla, double yla = PerspektiiviYla)
+        {
+            if (!(perusPt > 0f)) return 0f;
+            double p = double.IsNaN(paino) ? 0 : Math.Max(0.0, Math.Min(1.0, paino));
+            double s = perusPt;
+            if (p > 0)
+            {
+                if (kynnys > 0 && kerroin > kynnys && lisaKasvu > 0) s *= Math.Pow(kerroin / kynnys, lisaKasvu * p);
+                if (fokusEtaisyys > 0 && etaisyys > 0)
+                    s *= Math.Pow(Math.Max(ala, Math.Min(yla, fokusEtaisyys / etaisyys)), p);
+            }
+            double katto = Math.Max(kattoPt, perusPt);
+            if (kattoPt > 0f && s > katto) s = katto;
+            return (float)s;
+        }
+
+        // ---- 6. ERIKOISMALLI KAUPUNGIN VIERESSÄ (omistaja 28.9.2026 klo 17.4x: "jos erikoissymboli on kohdekaupungissa, se pitää
+        // siirtää hieman sen viereen"). Malli ruudulla kaupunkipisteen vasemmalle (kaupungin nimiö on oletuksena oikealla ja
+        // väistää mallia kalusteena), lähin reuna SivuValiPt:n päässä pisteen keskeltä. ----
+
+        /// <summary>Väli kaupunkipisteen keskeltä mallin lähimpään reunaan (pt): pisteen säde ~4 pt + 8 pt rako.</summary>
+        public const float SivuValiPt = 12f;
+        /// <summary>Kaupungin säde (km), jonka sisällä erikoismalli kuuluu kaupunkiin (Colosseum 0,8 km Rooman pisteestä).</summary>
+        public const double SivuSadeKm = 3.0;
+
+        /// <summary>
+        /// Jalan siirto kaupunkipisteestä: mallin ulottuma siirtosuuntaan (<paramref name="dx"/>, <paramref name="dz"/> = suunta
+        /// mallin paikallisessa X–Z-tasossa, <paramref name="puoliX"/>, <paramref name="puoliZ"/> = puolileveydet) kertaa
+        /// <paramref name="koko"/> + väli pisteinä (<paramref name="yksikkoaPisteessa"/> = yksikköä ruudun pisteessä).
+        /// </summary>
+        public static float SivuSiirto(float dx, float dz, float puoliX, float puoliZ, float koko, float yksikkoaPisteessa,
+            float valiPt = SivuValiPt) =>
+            (Math.Abs(dx) * puoliX + Math.Abs(dz) * puoliZ) * koko + valiPt * yksikkoaPisteessa;
     }
 }

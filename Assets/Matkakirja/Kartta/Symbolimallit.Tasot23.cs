@@ -90,6 +90,8 @@ namespace Matkakirja
             public bool Nahty, Loydetty;
             public float SyttyAlku = -1f;
             public bool KorkeusOk;
+            /// <summary>Leveys ruudulla (pt) viimeisimmässä laskennassa (LeveysPt: Natiivi-UI:n peitto); 0 = ei piirretty.</summary>
+            public float LeveysPt;
         }
 
         readonly Dictionary<string, Instanssi23> instanssit23 = new Dictionary<string, Instanssi23>(StringComparer.Ordinal);
@@ -121,6 +123,8 @@ namespace Matkakirja
         int laskettuLeveys, laskettuMaasto = -1;
 
         bool laskettuKategoriat, laskettuRuutu;
+        int laskettuKokoVersio;
+        double laskettuPaino = -1;
 
         // Tila (`symbolit tila`): viimeisimmän laskennan määrät (mallin indeksillä, MalliIndeksi).
         readonly int[,] tyypeittain = new int[2, MalliLukumaara];
@@ -200,8 +204,10 @@ namespace Matkakirja
                            || laskettuKoko != KokoPt || laskettuKorkeus != Screen.height || laskettuPakota != PakotaLoydetty
                            || laskettuYlhaalta != Ylhaalta3D || laskettuPerspektiivi != PerspektiiviAste || laskettuReuna != ReunaPt
                            || laskettuLeveys != Screen.width || laskettuMaasto != maastoVersio || laskettuKategoriat != Kategoriat || laskettuRuutu != KategoriaRuutuYlos
-                           || eMuuttui || laskettuAlla != AllaSaanto || laskettuAllaLaatikko != AllaLaatikko;
+                           || eMuuttui || laskettuAlla != AllaSaanto || laskettuAllaLaatikko != AllaLaatikko
+                           || laskettuKokoVersio != kokoVersio || laskettuPaino != kallistusPainoNyt;
             if (!muuttui) return false;
+            laskettuKokoVersio = kokoVersio; laskettuPaino = kallistusPainoNyt;
             laskettuVersio = nostoVersio; laskettuKamera = kameraM; laskettuPallo = palloM; laskettuFov = kamera.fieldOfView;
             laskettuKerroin = nk.ZoomKerroin; laskettuSyttyminen = nk.Syttyminen; laskettuKoko = KokoPt;
             laskettuKorkeus = Screen.height; laskettuPakota = PakotaLoydetty;
@@ -231,6 +237,8 @@ namespace Matkakirja
             Vector3 kp = kamera.transform.position;
             float skaala = Mathf.Max(1e-9f, gt.lossyScale.x), nyt = Time.unscaledTime, piilo = 1f - nk.Syttyminen;
             bool rajatAlussa = true;
+            // Kallistetun kartan esinekoko (omistaja 28.9. klo 17.4x): kasvu tasojen 2–3 kynnyksestä kuten KokoNyt23.
+            double kynnys23 = SymbolienVaisto.Kynnys(NostoSaannot.TyyppimerkinKerroin, nk.SuurinKerroin);
             // Erikoismalli voittaa (Symbolimallit.ErikoismallinAlla.cs): laatikkoon osuvat instanssit häivytetään _Tila.y:llä.
             float dtAlla = AloitaAlla23();
             bool allaMuuttui = false, allaKesken = false;
@@ -246,6 +254,7 @@ namespace Matkakirja
                     Asento(s.Lat, s.Lon, out i.Paikka, out i.Asento, out i.Normaali);
                     instanssit23[s.Id] = i;
                 }
+                i.LeveysPt = 0f;
                 if (!i.KorkeusOk && PinnanKorkeus(s.Id, s.Lat, s.Lon, out double hPinta))
                 {
                     Asento(s.Lat, s.Lon, hPinta, out i.Paikka, out _, out _);
@@ -256,8 +265,9 @@ namespace Matkakirja
                 float etaisyys = kohti.magnitude;
                 if (Vector3.Dot(gt.TransformDirection(i.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) <= 0.08f) continue;
 
-                float pt = KokoNyt23(nk.ZoomKerroin) * (s.Taso == 2 ? Taso2Koko : Taso3Koko)
-                           * (NostoSaannot.KuvamerkkiPieni(s.Taso, nk.ZoomKerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
+                float pt = RuutuPt(KokoNyt23(nk.ZoomKerroin) * (s.Taso == 2 ? Taso2Koko : Taso3Koko) * Iso23
+                                   * (NostoSaannot.KuvamerkkiPieni(s.Taso, nk.ZoomKerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f),
+                                   nk.ZoomKerroin, kynnys23, etaisyys);
                 // Symbolin laatikko instanssin koosta (leveys pt:stä, korkeussuhde LOD0:sta) leikkaa erikoismallin laatikon.
                 float allaPiilo = AllaSaanto ? Arvioi(s.Id, s.Taso, p, pt * PalloKierto.Pistekerroin, Suhde(MallinVerkko(MalliIndeksi(tieto), 0)),
                                                       dtAlla, ref allaMuuttui, ref allaKesken) : 0f;
@@ -281,6 +291,7 @@ namespace Matkakirja
                 int malli = MalliIndeksi(tieto);
                 int e = malli * 2 + i.Lod;
                 if (lkm[e] >= EnintaanErassa) continue;
+                i.LeveysPt = pt;
                 float koko = PisteMaailmassa(etaisyys) * pt / skaala;
                 // Liioiteltu perspektiivi instanssikohtaisesti (jalan nosto LOD0:n ulottumasta, ettei malli hyppää LOD-vaihdossa).
                 var perus = PerusAsento(tieto, i.Normaali, i.Asento);
