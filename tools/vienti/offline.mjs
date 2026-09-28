@@ -182,7 +182,7 @@ const MEDIAKUVAT_KUVAUS = {
 };
 const KERROKSET_KUVAUS = 'Skeema 1.56: kartan muut rasterikerrokset offline-lataukseen (XYZ, 256 px, osoitteet natiivin omista '
   + 'sarjoista). Maailma: kerma _maailma z3–z5, reliefi (molemmat sarjat) z0–z5, yövalot z0–z5 koko pallo. Maa: kerma '
-  + '<ISO>/ maat.*.kerma-väleillä, sekä maat.*.rasteri-väleillä kerma _maailma z6–z8, reliefi z6–z8 ja yövalot z6. '
+  + '<ISO>/ maat.*.kerma-väleillä ja sen laatat.json (Varitaso lukee alueen siitä), sekä maat.*.rasteri-väleillä kerma _maailma z6–z8, reliefi z6–z8 ja yövalot z6. '
   + 'Puuttuva laatta (404) on läpinäkyvä. tavuja.kerrokset sisältyy tavuja.offline-summaan.';
 const AANI_TIEDOSTO = /\.(mp3|ogg|oga|opus|m4a|aac|wav)$/i;
 const SUORA_TIEDOSTO = /\.(jpe?g|png|webp|gif|svg|mp3|ogg|m4a|json|glb)$/i;
