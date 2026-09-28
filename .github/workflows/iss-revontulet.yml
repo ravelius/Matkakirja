@@ -1,0 +1,66 @@
+# Revontulet ämpäriin 30 minuutin välein (Julkaisija 28.9.2026; Linssisepän
+# ISS-realismi, kohta 3b, docs/raportit/iss-realismi-suunnitelma-20260928.md).
+#
+# NOAA SWPC OVATION Prime (PD) päivittyy 5 minuutin välein; 30 minuuttia riittää
+# kyydin revontulikuoreen. tools/iss-revontulet.mjs tarkistaa syötteen muodon ja
+# kirjoittaa 360 × 181 harmaasävy-PNG:n omalla kooderilla (ei npm installia).
+# Virhe kaataa ajon ENNEN kirjoitusta, joten ämpäriin jää edellinen versio.
+# Pelaajat hakevat vain ämpäristä: media.matkakirja.app/data/revontulet/uusin.{png,json}.
+# Ajokone on GitHubin ubuntu, ei omistajan Mac.
+
+name: Revontulet ämpäriin
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iss-revontulet
+  cancel-in-progress: false
+
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Hae OVATION NOAA SWPC:stä
+        run: node tools/iss-revontulet.mjs --ulos revontulet
+
+      # PNG ensin, JSON viimeisenä: JSON kertoo lukijalle, että kuva on valmis.
+      - name: Vie ämpäriin
+        env:
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          E="https://$R2_TILI.r2.cloudflarestorage.com"
+          aws s3 cp revontulet/uusin.png "s3://$R2_AMPARI/data/revontulet/uusin.png" \
+            --endpoint-url "$E" --content-type 'image/png' \
+            --cache-control 'public, max-age=600' --no-progress
+          aws s3 cp revontulet/uusin.json "s3://$R2_AMPARI/data/revontulet/uusin.json" \
+            --endpoint-url "$E" --content-type 'application/json; charset=utf-8' \
+            --cache-control 'public, max-age=600' --no-progress
+
+      # Takaisinluku julkisesta osoitteesta (kysely ohittaa välimuistin).
+      - name: Tarkista julkinen osoite
+        run: |
+          set -euo pipefail
+          curl -fsS "https://media.matkakirja.app/data/revontulet/uusin.json?t=$(date +%s)" -o julkinen.json
+          node -e "const f=require('fs'),a=JSON.parse(f.readFileSync('revontulet/uusin.json','utf8')),b=JSON.parse(f.readFileSync('julkinen.json','utf8'));if(a.haettu!==b.haettu){console.error('julkinen eri kuin viety');process.exit(1)}"
+          cat julkinen.json

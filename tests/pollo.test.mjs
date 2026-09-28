@@ -47,6 +47,9 @@ import {
   vastauskuvanAihe,
 } from '../js/pollo.js';
 
+/** Järjestelmäkehote tekstinä: välimuistimerkitty lohkolista (28.9.2026) tai vanha merkkijono. */
+const systemTeksti = (s) => (Array.isArray(s) ? s.map((b) => b.text).join('') : String(s ?? ''));
+
 test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
   const pollo=Object.create(Pollo.prototype),ikkuna={innerWidth:390,innerHeight:844};
   const piilossa={getBoundingClientRect:()=>({left:0,top:0,width:0,height:0})};
@@ -680,8 +683,12 @@ test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
     'workerin kehyslajit puuttuvat');
   assert.ok(/KEHYS_LAJIT\.has\(arvo\) \? arvo : 'aloitus'/.test(kehote),
     'tuntematon kehyslaji ei putoa aloitukseen — vanha peli rikkoutuisi');
-  assert.ok(/kehysOhje\(kehysLaji\(runko\?\.kehys\)\)/.test(kehote),
+  // Kehote kootaan pulunKehote-funktiossa (28.9.2026: yhteinen chatille ja
+  // äänikeskustelun kokeelle), ja chat antaa sille pyynnön kehyslajin.
+  assert.ok(/kehysOhje\(kehysLaji\(kehys\)\)/.test(kehote),
     'kehyslajia ei liitetä järjestelmäkehotteeseen');
+  assert.ok(/pulunKehote\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
+    'chat ei välitä kehyslajia kehotteelle');
 });
 
 /*
@@ -1902,7 +1909,7 @@ test('injektio ei mene läpi ilman mallia eikä mallin selityksen mukana', async
 
   // Pelaajan teksti kulki kehotteessa DATANA, ei ohjeena, eikä oikea
   // vastaus tullut asiakkaalta: kehote on palvelimen omistama.
-  assert.match(totteleva.pyynto.system, /DATANA/);
+  assert.match(systemTeksti(totteleva.pyynto.system), /DATANA/);
   assert.equal(totteleva.pyynto.messages.length, 1);
   assert.equal(totteleva.pyynto.messages[0].role, 'user');
   assert.match(totteleva.pyynto.messages[0].content, /^<<<VASTAUS>>>/);
@@ -1919,7 +1926,7 @@ test('sähkereitti välittää mallin tiukan tuomion sellaisenaan', async () => 
     '{"kohde_oikein":true,"vuosi_oikein":true}',
   );
   assert.deepEqual(osui.data, { tulkittu: true, kohde: true, vuosi: true });
-  assert.match(osui.pyynto.system, /1974/, 'Sofian oikea vuosi ei mennyt kehotteeseen');
+  assert.match(systemTeksti(osui.pyynto.system), /1974/, 'Sofian oikea vuosi ei mennyt kehotteeseen');
 
   const puolittain = await ajaSahke(
     { id: 'sofia-varna', vastaus: 'Varna, joskus 70-luvulla' },
@@ -2239,7 +2246,7 @@ test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async (
   assert.equal(ajo.kutsut[0].stream, true);
   assert.equal(ajo.kutsut[1].stream, undefined, 'uusinta pitää tehdä kertavastauksena');
   // Sama kehote ja samat viestit: uusinta ei ole uusi kysymys.
-  assert.equal(ajo.kutsut[1].system, ajo.kutsut[0].system);
+  assert.deepEqual(ajo.kutsut[1].system, ajo.kutsut[0].system);
   assert.deepEqual(ajo.kutsut[1].messages, ajo.kutsut[0].messages);
 
   assert.deepEqual(loppu(ajo), {
@@ -2751,7 +2758,7 @@ test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eik
   const pyynto = (runko, o = otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
     method: 'POST', headers: o, body: JSON.stringify(runko),
   }), env, {});
-  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime']);
   assert.equal(natiivilleSallittu(undefined), true, 'puuttuva tehtävä = vastaus');
   for (const tehtava of ['kuva', 'tila']) {
     const v = await pyynto({ tehtava });
@@ -2906,4 +2913,9 @@ test('lukijaäänen rajat: päivä 400 000 mrk/IP, kuukausi 6 000 000 (27.9.2026
   assert.equal(PUHE_KUUKAUSIRAJA_OLETUS, 6000000);
   assert.equal(tarkistaPuheRajat({ paiva: 399999, kuukausi: 0 }).ok, true);
   assert.equal(tarkistaPuheRajat({ paiva: 400000, kuukausi: 0 }).syy, 'paivaraja');
+});
+
+test('järjestelmäkehote välimuistiin: yksi tekstilohko cache_control ephemeral (28.9.2026)', () => {
+  const lahde = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.match(lahde, /system: \[\{ type: 'text', text: jarjestelma, cache_control: \{ type: 'ephemeral' \} \}\]/);
 });

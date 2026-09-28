@@ -472,7 +472,8 @@ test('kuva avautuu heti koko ruutuun — ei kaksivaiheista nostokuvaa', () => {
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*position: fixed;[\s\S]*inset: 0/);
   // Oma kuvasuhde säilyy, loppu ruudusta tummaa.
   assert.match(tyyli, /\.satelliitti-kuva \{[\s\S]*max-width: 100%;[\s\S]*max-height: 100%/);
-  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: #040907/);
+  // Kuvaselain (omistaja 27.9.2026): läpikuultava, jotta pallo näkyy kuvan takana.
+  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: rgba\(4, 9, 7, 0\.7\)/);
 });
 
 test('✕ ja pienoiskuvat on kiinnitetty RUUTUUN, ei kuvaelementtiin', () => {
@@ -525,7 +526,7 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
   // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, pulukulma\)/);
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
   /*
@@ -737,9 +738,9 @@ test('galleria: hyvin pienet pikkukuvat, EI laskuria, nuolia eikä Vertaa-nappia
   assert.match(lahde, /satelliitti-nauha/);
   // Pikkukuvanauha lataa pienen tiedoston, ei koko ruudun kuvaa uudestaan.
   assert.match(lahde, /pikku\.src = toinen\.pikku \?\? toinen\.kuva/);
-  // Nuolinäppäimet toimivat yhä ilman nappeja.
-  assert.match(lahde, /if \(e\.key === 'ArrowRight'\) nayta\(indeksi \+ 1\);/);
-  assert.match(lahde, /if \(e\.key === 'ArrowLeft'\) nayta\(indeksi - 1\);/);
+  // Nuolinäppäimet selaavat kuten pyyhkäisy (kuvaselain: galleria jatkuu naapurikohteeseen).
+  assert.match(lahde, /if \(e\.key === 'ArrowRight'\) selaa\(1\);/);
+  assert.match(lahde, /if \(e\.key === 'ArrowLeft'\) selaa\(-1\);/);
   // Pikkukuvat ovat hyvin pieniä (aiempi 72×48 → 38×26).
   assert.match(tyyli, /\.satelliitti-pikku \{[\s\S]*width: 38px;[\s\S]*height: 26px/);
 });

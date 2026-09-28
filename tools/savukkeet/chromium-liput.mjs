@@ -126,7 +126,9 @@ if (process.env.SAVUKE_EI_NAYTTOA === '1') {
     pw.chromium.launch = (asetukset = {}) => {
       if (asetukset.headless === false) return kaynnista(asetukset);
       const args = asetukset.args ?? [];
-      const omaGl = args.some((a) => /^--use-(gl|angle)=/.test(a));
+      // Rivin liput (esim. GPU-väistön SwiftShader) lasketaan omaksi
+      // GL-valinnaksi: Metalia ei lisätä niiden rinnalle.
+      const omaGl = [...args, ...liput].some((a) => /^--use-(gl|angle)=/.test(a));
       const cft = /Google Chrome for Testing/.test(asetukset.executablePath ?? '');
       return kaynnista({
         ...asetukset,
