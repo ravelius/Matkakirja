@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2385, teksti: 'Maalehti: Historia-aihe SRB/ALB/MKD/MNE/MDA/BLR… (#3556)' },
   { v: 2384, teksti: 'BIH: pitkä-luonnehdinta + pulu kaikille 18 maak… (#3549)' },
   { v: 2383, teksti: 'Raamattu: pienennys, tehtäväkohtainen effort, s… (#3527)' },
   { v: 2382, teksti: 'Pulu: [softly] ja [whispers] pois, yksi tunneta… (#3585)' },
