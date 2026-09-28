@@ -8759,3 +8759,7 @@ Omistaja 28.9. klo 18.6x sanatarkasti: "F3 on ollut paras tähän mennessä. Sii
 ## OMISTAJA: ISOISAN AANI — G4 MYOS HYVA; 8 SUOSITUINTA MATALAA JA VAKAATA KERTOJAA (28.9.2026 klo 18.26)
 
 Omistaja 28.9. klo 18.7x sanatarkasti: "G4 oli myös aika hyvä. Mitkä ovat kaikkein suosituimmat kertoja äänet, joilla on matala ja vakaa ääni? Voisi vielä sellaisia hakea suoraan vaikka kahdeksan kappaletta." → Pelikoodari H-kierros: 8 suosituinta kirjaston kertoja-aanta (matala, vakaa, vanhempi mies, ulkomaalainen), v4 vakaus 1,0, ei tageja; vertailukohdat F3 (Jeroen Hamerland) ja G4 (Mardi).
+
+## OMISTAJA: ISOISAN AANI — H1 (JAMES) HYVA; SEURAAVAT 8 (28.9.2026 klo 18.35)
+
+Omistaja 28.9. klo 19.0x sanatarkasti: "H1 oli hyvä. Generoi seuraavat kahdeksan." → Pelikoodari I-kierros: suosituimmat matalat vakaat kertojat sijat 9–16, samat asetukset; ehdokkaat nyt F3 (Jeroen Hamerland), G4 (Mardi), H1 (James).
