@@ -20,8 +20,11 @@ namespace Matkakirja.Linssit.Kamera
         /// kallistuksella (° pystysuorasta). Palauttaa kulman (°) ja suunnan ruudulla (yksikkövektori keskeltä kohteeseen;
         /// (0, 0) keskellä, pikseleissä, joten kulmakin on oikea). Etäisyys on elliptinen: sivu jaetaan omalla puolikkaallaan,
         /// joten jokainen reuna on 1 ja kulma on siellä KulmaMax myös pystypuhelimella (kulmissa etäisyys √2, rajataan 1:een).
+        /// <paramref name="reuna"/> = elliptinen etäisyys, jossa KulmaMax saavutetaan (oletus <see cref="Reuna"/> 1,0; 3D-nostot
+        /// 0,5 omistajan toiveesta 27.9.2026 klo 23.2x: tasokuva vaihtuu 3D:ksi nopeammin, keskellä yhä suoraan ylhäältä).
         /// </summary>
-        public static (double kulma, double dx, double dy) Kallistus(double x, double y, double leveys, double korkeus, double kameranKallistus)
+        public static (double kulma, double dx, double dy) Kallistus(double x, double y, double leveys, double korkeus, double kameranKallistus,
+            double reuna = Reuna)
         {
             if (!(leveys > 0) || !(korkeus > 0)) return (0, 0, 0);
             double px = x - leveys * 0.5, py = y - korkeus * 0.5;
@@ -29,7 +32,7 @@ namespace Matkakirja.Linssit.Kamera
             double r = Math.Sqrt(ox * ox + oy * oy), pit = Math.Sqrt(px * px + py * py);
             if (r < 1e-9 || pit < 1e-9) return (0, 0, 0);
             double paino = 1 - Kamerakayrat.Pehmea(Math.Max(0, kameranKallistus) / HaipyyAsteet);
-            return (KulmaMax * Kamerakayrat.Pehmea(r / Reuna) * paino, px / pit, py / pit);
+            return (KulmaMax * Kamerakayrat.Pehmea(r / Math.Max(0.05, reuna)) * paino, px / pit, py / pit);
         }
     }
 }

@@ -47,14 +47,14 @@ namespace Matkakirja.Natiivi
         readonly VisualElement peite, arkki, sivupaikka, alapalkki, sisallys, sisallysLista;
         readonly VisualElement ylaosa, ylaLippu;
         readonly Label ylaNimi, nimioYla;
-        readonly Button kaiutin, sisallysNappi, alaSisallys, poistu, edellinen, seuraava, liite;
+        readonly Button sisallysNappi, alaSisallys, poistu, edellinen, seuraava, liite;
         readonly Kuvasuurennos suurennos;
         readonly LehtiFokus fokus;
         ScrollView sivu;
         Lehti lehti;
         int nyt = -1;
-        bool luetaan;
-        int lukuVersio;
+        /// <summary>Kaksinappinen lukija (omistaja 28.9.2026, web #3537): valikko + kaiutin ylärivin oikeassa päässä.</summary>
+        readonly KortinLukija lukija;
         Vector2 veto0;
         bool vetaa;
         // Pelin tila ja teot (ILehtiNakyma); null = testiavaus ilman ohjainta.
@@ -131,9 +131,12 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(ylaNimi, Kirjasin.KoneBold);
             ylaLippu = Rakenne.El("mk-lehti__lippu", nimiRivi);
             ylaLippu.style.display = DisplayStyle.None;
-            kaiutin = Rakenne.Nappi(null, "mk-lehti__ikoninappi mk-lehti__ikoninappi--oikea", VaihdaLuenta, ylarivi, Ikonit.Viiva["kaiutin"]);
+            // Kaksinappinen lukija (omistaja 28.9.2026, web #3537): [valikko][kaiutin] ylärivin oikeaan päähän; tekstit sivulta
+            // napautushetkellä (ValmistaSivu ladoo loput lohkot).
+            lukija = new KortinLukija(ylarivi, "Lue sivu ääneen", "mk-lehti__lukija", saatimet: true, rajaus: () => arkki.worldBound);
+            lukija.Lahde = SivunTekstit;
+            lukija.Juuri.style.display = DisplayStyle.Flex;
             ylaosa.RegisterCallback<GeometryChangedEvent>(e => { if (!Mathf.Approximately(e.oldRect.width, e.newRect.width)) MitoitaNimio(); });
-            kaiutin.tooltip = "Lue sivu ääneen";
 
             sivupaikka = Rakenne.El("mk-lehti__sivupaikka", arkki);
             sivupaikka.RegisterCallback<PointerDownEvent>(e => { veto0 = e.position; vetaa = true; }, TrickleDown.TrickleDown);
@@ -1654,38 +1657,15 @@ namespace Matkakirja.Natiivi
 
         // --- luenta (kaiutin) ----------------------------------------------------------------------
 
-        void VaihdaLuenta()
+        /// <summary>Sivun luettavat tekstit (leipätekstit ja maan numerot) lukijalle.</summary>
+        IEnumerable<string> SivunTekstit()
         {
-            if (luetaan) { PysaytaLuenta(); return; }
             ValmistaSivu();
-            var raaka = sivu?.contentContainer.Query<Label>(className: "mk-lehti__luettava").ToList().Select(l => l.text)
-                .Concat(lisaLuettavat).Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
-            // Lukijan putkitus (Pelikoodari 27.9.): otsikko kappaleen alkuun, seuraavat palat esihaetaan.
-            var (palat, tagit) = Lukijaaani.LuennanPalatJaTagit(raaka ?? new List<string>());
-            var puhe = Puhe.Hae();
-            if (palat == null || palat.Count == 0 || puhe == null) return;
-            luetaan = true;
-            kaiutin.AddToClassList("mk-valittu");
-            int v = ++lukuVersio;
-            int i = 0;
-            void Seuraava()
-            {
-                if (v != lukuVersio || i >= palat.Count) { if (v == lukuVersio) PysaytaLuenta(); return; }
-                puhe.Lue(palat[i], "kertoja", 0, Seuraava, pyynnosta: true, loppuTagi: tagit[i]);
-                i++;
-                KortinLukija.Esihae(puhe, palat, i, tagit: tagit);
-            }
-            Seuraava();
+            return (sivu?.contentContainer.Query<Label>(className: "mk-lehti__luettava").ToList().Select(l => l.text)
+                ?? Enumerable.Empty<string>()).Concat(lisaLuettavat).ToList();
         }
 
-        void PysaytaLuenta()
-        {
-            if (!luetaan) return;
-            luetaan = false;
-            lukuVersio++;
-            kaiutin.RemoveFromClassList("mk-valittu");
-            Puhe.Instanssi?.Pysayta(0.3f);
-        }
+        void PysaytaLuenta() => lukija.Vaihtui();
 
         // --- testi ---------------------------------------------------------------------------------
 

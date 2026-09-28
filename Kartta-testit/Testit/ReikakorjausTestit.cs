@@ -22,6 +22,21 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
+        static void VaralaattojenUusintaAikataulu()
+        {
+            // Web #3516: ensimmäinen 2 s, sitten 5 s ja 15 s ensimmäisestä, sitten 20 s:n välein.
+            double t = 0;
+            double[] odotettu = { 2, 5, 15, 35, 55 };
+            for (int k = 0; k < odotettu.Length; k++)
+            {
+                t += Reikakorjaus.VaraUusintaViive(k);
+                Oleta.Sama(odotettu[k], t, $"kierros {k + 1}");
+            }
+            Oleta.Sama(20.0, Reikakorjaus.VaraUusintaViive(100), "pitkä");
+            Oleta.Sama(2.0, Reikakorjaus.VaraUusintaViive(-1), "negatiivinen = ensimmäinen");
+        }
+
+        [Testi]
         static void VainTilapainenUusitaan()
         {
             foreach (int k in new[] { 0, -1, 502, 500, 503, 504, 408, 425, 429 })

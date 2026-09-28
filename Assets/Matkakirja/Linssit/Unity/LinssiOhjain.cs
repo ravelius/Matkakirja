@@ -1115,12 +1115,13 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void OnDisable() => ViimeisteleJalkiajot();
+        void OnDisable() { ViimeisteleJalkiajot(); PalautaKuvaus(); }
 
         void OnDestroy()
         {
             rekisteri?.Sulje();
             ViimeisteleJalkiajot();
+            PalautaKuvaus();
             kerrokset?.Irrota();
             if (Instanssi == this) Instanssi = null;
         }
@@ -1178,6 +1179,50 @@ namespace Matkakirja.Natiivi
                 var kamera = kierto.GetComponent<Camera>();
                 return kamera != null ? kamera.fieldOfView : 50;
             }
+        }
+
+        public double Suuntima => kierto.suuntima;
+
+        // KUVAUS (ISS:n kyyti, Linssiseppä 28.9.2026): kamera kiinni liikkuvaan kohteeseen PalloKierto.Kuvaa-metodilla kuten
+        // ElavaKartta. Kenttäkulma (Natiiviseppä 28.9.): ensimmäinen asetus tallentaa kameran oman arvon, null ja kaikki
+        // poistumistiet (SeurantaLoppui, linssin purku, OnDisable/OnDestroy) palauttavat sen; projektiomatriisiin ei kosketa.
+        float? omaKentta;
+        bool kuvataan;
+
+        public void Kuvaa(Kuvakulma a)
+        {
+            if (kierto == null) return;
+            kuvataan = true;
+            kierto.Kuvaa(a.Lat, a.Lon, a.EtaisyysM, a.Kallistus, a.Suuntima, a.KatseKorkeusM);
+        }
+
+        public void KuvausLoppui()
+        {
+            if (!kuvataan) return;
+            kuvataan = false;
+            if (kierto != null) kierto.SeurantaLoppui();
+        }
+
+        public void Kenttakulma(double? asteina)
+        {
+            var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (kamera == null) return;
+            if (asteina is double a)
+            {
+                omaKentta ??= kamera.fieldOfView;
+                kamera.fieldOfView = (float)a;
+            }
+            else if (omaKentta is float oma)
+            {
+                kamera.fieldOfView = oma;
+                omaKentta = null;
+            }
+        }
+
+        void PalautaKuvaus()
+        {
+            KuvausLoppui();
+            Kenttakulma(null);
         }
 
         public double Kuvasuhde
@@ -1336,6 +1381,56 @@ namespace Matkakirja.Natiivi
                     }
                     else if (osat[1] == "kierros")
                         Kirjaa("astro kierros: " + string.Join(" ", l.KierrosTunnukset()));
+                    else if (osat[1] == "kyyti")
+                    {
+                        // ISS:n kyyti (suositus 28.9.): "astro kyyti" = napautus ISS:ään (kauko → seuranta → ikkuna → seuranta),
+                        // "astro kyyti pois" = ✕, "astro kyyti tila" = tila, kamera ja ISS lokiin.
+                        string a = osat.Length > 2 ? osat[2] : "";
+                        if (a == "pois") l.PoistuKyydista();
+                        else if (a == "yo" && osat.Length > 3) Yokuori.Pois = osat[3] == "0";   // A/B: astro kyyti yo 0|1
+                        // A/B omistajan Cupola-palautteeseen (28.9.): uusi = Codexin tumma kuva syväterävyydellä (poltettu),
+                        // terava = Codexin alkuperäinen, 3d = valaistu 3D-kehys, vanha = 1.0.35:n UI-kehys.
+                        else if (a == "cupola" && osat.Length > 3)
+                        {
+                            CupolaKerros.Tyyli = osat[3] == "vanha" ? CupolaKerros.Tyylit.Vanha
+                                : osat[3] == "3d" ? CupolaKerros.Tyylit.Kolmiulotteinen : CupolaKerros.Tyylit.Kuva;
+                            Matkakirja.Natiivi.IssKyytiNakyma.Pehmea = osat[3] != "terava";
+                        }
+                        else if (a == "ilmakeha" && osat.Length > 3)
+                        {
+                            Avaruus.VanhaIlmakeha = osat[3] == "vanha";
+                            FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
+                        }
+                        else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
+                        else if (a == "valot" && osat.Length > 3)   // A/B kaupunkien valot: 0 | 1 | osuus 0…1 (esim. 0.8)
+                        {
+                            Yokuori.ValotPois = osat[3] == "0";
+                            if (!Yokuori.ValotPois && float.TryParse(osat[3], System.Globalization.NumberStyles.Float,
+                                    System.Globalization.CultureInfo.InvariantCulture, out float osuus))
+                                Yokuori.ValojenOsuus = Mathf.Clamp01(osuus);
+                        }
+                        else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
+                        else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
+                        else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
+                        else if (a == "taivas" && osat.Length > 3) KyydinTaivas.Pois = osat[3] == "0";   // A/B oikeat tähdet ja Kuu
+                        else if (a == "paivanpilvet" && osat.Length > 3) AstronauttiKerros.PaivanPilvetPois = osat[3] == "0";
+                        else if (a == "revontulet" && osat.Length > 3) Revontulet.Pois = osat[3] == "0";
+                        else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
+                        else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
+                        else if (a == "pilvet" && osat.Length > 3)
+                        {
+                            AstronauttiKerros.PilvetKyydissa = osat[3];
+                            FindAnyObjectByType<AstronauttiKerros>()?.PaivitaPilvet();
+                        }
+                        else if (a != "tila") l.NapautaIss();
+                        var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+                        var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
+                        var kam = kierto.GetComponent<Camera>();
+                        Kirjaa($"astro kyyti: {l.Kyyti} (kyydissä {l.Kyydissa}), ISS ({p.Lat:F2}, {p.Lon:F2}) " +
+                               $"{Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(utc):F0} km suunta {Matkakirja.Linssit.Iss.IssNyt.Suuntima(utc):F0}°, " +
+                               $"laatu {Matkakirja.Linssit.Iss.IssNyt.Laatu(utc)}, kamera ({kierto.leveys:F2}, {kierto.pituus:F2}) " +
+                               $"{kierto.korkeus / 1000:F0} km kall {kierto.KaytettyKallistus:F1}° suunt {kierto.suuntima:F0}° fov {kam?.fieldOfView:F0}");
+                    }
                 }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
                     Keksinnot(osat[1]);
@@ -1509,6 +1604,130 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(kuvaus)) return "-";
             int i = kuvaus.LastIndexOf("VU ", StringComparison.Ordinal);
             return i >= 0 ? kuvaus.Substring(i) : kuvaus;
+        }
+
+        /// <summary>
+        /// Testikello ISS:lle ja auringolle (yökuori, ilmakehän kaari, Cupolan valo, taivas): "yo-eurooppa" hyppää seuraavaan
+        /// syvän yön ylitykseen Keski-Euroopan yllä (kaupunkien valot, tähdet ja Kuu), "hamara" iltahämärään kohti yötä
+        /// (varjostus, hämärän kaari, syttyvät valot), "kiilto" auringon heijastukseen vedestä; "+H" siirtää H tuntia; "pois"
+        /// palauttaa oikean kellon. Kello kulkee siirron jälkeen.
+        /// </summary>
+        static string KyydinKello(string arvo)
+        {
+            if (arvo == "pois") { Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow; return "oikea aika"; }
+            TimeSpan siirto;
+            if (arvo.StartsWith("+") && double.TryParse(arvo.Substring(1), System.Globalization.NumberStyles.Float,
+                    System.Globalization.CultureInfo.InvariantCulture, out double tunnit))
+                siirto = TimeSpan.FromHours(tunnit);
+            else if (arvo == "yo-eurooppa")
+            {
+                // Syvä yö Keski-Euroopan yllä (lat 40–60, lon −10…35, aurinko alapisteessä alle −20°, jolloin ISS on
+                // yleensä maan varjossa ja tähdet näkyvät täysinä) enintään 24 vrk:n päästä: syys–lokakuun vaihteessa
+                // ISS ylittää Euroopan vain iltahämärässä (laitteen cl3-ajo 28.9.: 36 h:n haku ei löytänyt yötä), joten
+                // testikello hakee seuraavan aamuyön ylityksen (tietorivillä rata-arvio, jos TLE on yli 7 vrk vanha).
+                // Varalla väljempi ehto 72 h:n sisällä (aurinko alle −8°).
+                var nyt = DateTime.UtcNow;
+                // Ensin Länsi- ja Keski-Eurooppa (lat 43–58, lon −5…20, alle −18°: laite cl4 osui 40–60/−10…35-rajauksella Turkin ja
+                // Mustanmeren ylle, jossa kamera katsoo Kaukasiaan), sitten laajempi, lopuksi väljä 72 h.
+                var loyto = HaeKyydinHetki(nyt, 24 * 24, 30, (t, lat, lon) => lat >= 43 && lat <= 58 && lon >= -5 && lon <= 20
+                                && AurinkoKorkeus(t, lat, lon) < -18)
+                    ?? HaeKyydinHetki(nyt, 24 * 24, 30, (t, lat, lon) => lat >= 40 && lat <= 60 && lon >= -10 && lon <= 35
+                                && AurinkoKorkeus(t, lat, lon) < -20)
+                    ?? HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) => lat >= 35 && lat <= 65 && lon >= -15 && lon <= 45
+                                && AurinkoKorkeus(t, lat, lon) < -8);
+                if (loyto == null) return "ei yöylitystä Euroopan yllä 24 vrk:n sisällä";
+                siirto = loyto.Value.AddSeconds(30) - nyt;
+            }
+            else if (arvo == "hamara")
+            {
+                // Iltahämärä Euroopan yllä kohti yötä (alapisteessä aurinko +2…+6° ja laskee): kamera katsoo eteenpäin
+                // yön rajalle, jolloin päiväpuolen varjostus, hämärän kaari ja syttyvät valot näkyvät samassa kuvassa.
+                var nyt = DateTime.UtcNow;
+                var loyto = HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) =>
+                {
+                    if (lat < 38 || lat > 62 || lon < -15 || lon > 40) return false;
+                    double h = AurinkoKorkeus(t, lat, lon);
+                    if (h < 2 || h > 6) return false;
+                    var q = Matkakirja.Linssit.Iss.IssNyt.Paikka(t.AddSeconds(60));
+                    return AurinkoKorkeus(t.AddSeconds(60), q.Lat, q.Lon) < h;
+                });
+                if (loyto == null) return "ei iltahämärää Euroopan yllä 72 tunnin sisällä";
+                siirto = loyto.Value - nyt;
+            }
+            else if (arvo == "kiilto")
+            {
+                // Heijastus seurannan kuvan keskellä (laite cl6 28.9.: ikkunan heijastuskohta jäi Cupolan kehyksen taakse tai kuvan
+                // ulkopuolelle): heijastussuunta (auringon atsimuutti, painuma = auringon korkeus alapisteessä) enintään 20° seurannan
+                // kameran akselista (radan suunta, painuma 35°), alla vettä puolen minuutin ajan. Syys–lokakuun vaihteessa tämä
+                // geometria toteutuu vasta lokakuun lopulla (laskettu 28.9.), joten haku ulottuu 35 vrk:een (rata-arvio).
+                var nyt = DateTime.UtcNow;
+                DateTime? loyto = null;
+                double raja = Math.Cos(20 * Math.PI / 180), dp = 35 * Math.PI / 180;
+                for (int s = 0; s < 35 * 86400 && loyto == null; s += 30)
+                {
+                    var t = nyt.AddSeconds(s);
+                    var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
+                    var aur = Aurinko.AurinkoEcef(t);
+                    double la = p.Lat * Math.PI / 180, lo = p.Lon * Math.PI / 180;
+                    double ylos = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
+                    if (ylos < 0.17) continue;   // aurinko alle 10°
+                    double ita = -Math.Sin(lo) * aur.x + Math.Cos(lo) * aur.y;
+                    double pohj = -Math.Sin(la) * Math.Cos(lo) * aur.x - Math.Sin(la) * Math.Sin(lo) * aur.y + Math.Cos(la) * aur.z;
+                    double h = Math.Asin(Math.Min(1, ylos)), ero = Math.Atan2(ita, pohj) - Matkakirja.Linssit.Iss.IssNyt.Suuntima(t) * Math.PI / 180;
+                    double pistetulo = Math.Cos(dp) * Math.Cos(h) * Math.Cos(ero) + Math.Sin(dp) * Math.Sin(h);
+                    if (pistetulo < raja) continue;
+                    if (!Yokuori.OnVesi(p.Lat, p.Lon)) continue;
+                    var q = Matkakirja.Linssit.Iss.IssNyt.Paikka(t.AddSeconds(30));
+                    if (!Yokuori.OnVesi(q.Lat, q.Lon)) continue;
+                    loyto = t;
+                }
+                if (loyto == null) return "ei heijastushetkeä 35 vrk:n sisällä";
+                siirto = loyto.Value.AddSeconds(-8) - nyt;   // seuranta on yhden napautuksen (~6 s) päässä
+            }
+            else if (arvo == "paiva-eurooppa")
+            {
+                // Päivä Euroopan yllä (lat 40–60, lon −10…30, aurinko alapisteessä yli 20°): päivän pilvet ja kuukauden pinta.
+                var nyt = DateTime.UtcNow;
+                var loyto = HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) => lat >= 40 && lat <= 60 && lon >= -10 && lon <= 30
+                                && AurinkoKorkeus(t, lat, lon) > 20);
+                if (loyto == null) return "ei päiväylitystä Euroopan yllä 72 tunnin sisällä";
+                siirto = loyto.Value.AddSeconds(30) - nyt;
+            }
+            else return "käyttö: astro kyyti kello yo-eurooppa|hamara|kiilto|paiva-eurooppa|+H|pois";
+            Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow + siirto;
+            var k = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            var paikka = Matkakirja.Linssit.Iss.IssNyt.Paikka(k);
+            return $"{k:yyyy-MM-dd HH:mm:ss} UTC (siirto {siirto.TotalHours:F2} h), ISS ({paikka.Lat:F2}, {paikka.Lon:F2}), " +
+                   $"aurinko alapisteessä {AurinkoKorkeus(k, paikka.Lat, paikka.Lon):F1}°";
+        }
+
+        /// <summary>Ikkunan katsekohde ISS:n hetkellä t (IssKuvakulma.Ikkuna).</summary>
+        static Matkakirja.Linssit.Kuvakulma IkkunanKatse(DateTime t)
+        {
+            var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
+            return Matkakirja.Linssit.Iss.IssKuvakulma.Ikkuna(new Matkakirja.Linssit.Iss.IssHetki(p,
+                Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(t) * 1000, Matkakirja.Linssit.Iss.IssNyt.Suuntima(t)));
+        }
+
+        /// <summary>Ensimmäinen hetki (askel s, enintään tunnit), jolloin ISS:n alapiste täyttää ehdon; null = ei löydy.</summary>
+        static DateTime? HaeKyydinHetki(DateTime alku, double tunnit, int askel, Func<DateTime, double, double, bool> ehto)
+        {
+            for (int s = 0; s < tunnit * 3600; s += askel)
+            {
+                var t = alku.AddSeconds(s);
+                var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
+                if (ehto(t, p.Lat, p.Lon)) return t;
+            }
+            return null;
+        }
+
+        /// <summary>Auringon korkeus (asteina) maan pisteessä lat, lon hetkellä t.</summary>
+        static double AurinkoKorkeus(DateTime t, double lat, double lon)
+        {
+            var aur = Aurinko.AurinkoEcef(t);
+            double la = lat * Math.PI / 180, lo = lon * Math.PI / 180;
+            double s = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
+            return Math.Asin(Math.Max(-1, Math.Min(1, s))) * 180 / Math.PI;
         }
 
         internal void Kirjaa(string teksti)

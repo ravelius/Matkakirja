@@ -135,6 +135,7 @@ namespace Matkakirja.Linssit.Testit
             public void Kuva(Havaintokohde k, int i) { }
             public void KuvaPois() { }
             public void Pois() { }
+            public void Kyyti(Matkakirja.Linssit.Iss.KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio) { }
         }
     }
 }
