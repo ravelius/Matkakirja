@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2368, teksti: 'SRB: pitkä-luonnehdinta + pulu kaikille 24 maakunnalle' },
   { v: 2367, teksti: 'v2354: Matkakirjan ihmeen kulmanauha näkyy taas… (#3532)' },
   { v: 2366, teksti: 'BGR: pitkä-luonnehdinta + pulu kaikille 28 maak… (#3534)' },
   { v: 2365, teksti: 'Maapallon vuosi -linssin runko (#3558)' },
