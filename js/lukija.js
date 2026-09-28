@@ -1180,7 +1180,7 @@ export function pysaytaLukija() {
   }
   nyt.seuranta?.pura();
   merkitseTila(nyt.nappi, false);
-  suljeOhjain();
+  paivitaValikko();
   // Loppukoukku myös pysäytettäessä: kutsuja (esim. taustamusiikin
   // vaimennus) tarvitsee signaalin JOKAISESTA loppupolusta.
   nyt.kunLoppuu?.();
@@ -1335,7 +1335,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     unohdaKortinKohta(nappi);
     seuranta?.pura();
     merkitseTila(nappi, false);
-    suljeOhjain();
+    paivitaValikko();
     kunLoppuu?.();
     /*
      * JATKUVA LUENTA: vain luonnollinen loppu jatkaa — pysäytys ja
@@ -1363,7 +1363,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
       : null,
     onLoppu: loppui,
     onTila: (t) => {
-      paivitaOhjain(merkki, t);
+      paivitaValikko();
       seuranta?.paivita(t);
       // Viimeksi kuultu kohta: keskeytetty kortti jatkaa tästä (talletaKortinKohta).
       if (ajossa?.merkki === merkki && t.teksti) ajossa.kohta = { kappale: t.kappale, alku: t.alku };
@@ -1373,7 +1373,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
       ajossa = null;
       seuranta?.pura();
       merkitseTila(nappi, false);
-      suljeOhjain();
+      paivitaValikko();
       // Raja tai palvelinvirhe: pysähdys ja viesti, ei laitteen ääntä.
       if (virhe?.pysayttaa) ilmoitaPuhevirhe(virhe);
       else if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu, persoona)) return;
@@ -1382,7 +1382,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
   });
   if (!soitin) return false;
   ajossa = {
-    nappi, merkki, kunLoppuu, soitin, seuranta, jatko, lopeta: () => soitin.pysayta(),
+    nappi, merkki, kunLoppuu, soitin, seuranta, jatko, kohdat, lopeta: () => soitin.pysayta(),
   };
   soitin.lisaa(puhuttava);
   soitin.paata();
@@ -1745,29 +1745,43 @@ const KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
 
 const LUE_OTSIKKO = 'Kuuntele sivu';
 const SEIS_OTSIKKO = 'Lopeta kuuntelu';
-const OHJAIN_OTSIKKO = 'Luentasoitin';
 
 /* ------------------------------------------------------------------ */
-/* Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026)                  */
+/* Lukijan valikko (omistaja 28.9.2026)                                */
 /* ------------------------------------------------------------------ */
 
 /*
- * Kaiutinnapin painallus avaa lukijaäänellä pienen ohjauspaneelin
- * napin alle: tauko/jatka, kappale taakse ja eteen, kappalelaskuri ja
- * lopetus. Paneeli elää vain luennan ajan — se sulkeutuu, kun luenta
- * päättyy, pysäytetään tai dialogi sulkeutuu. Laitteen oman äänen
- * varapolulla paneelia ei ole (sillä ei ole taukoa eikä kappaleita) —
- * nappi toimii silloin entiseen tapaan kytkimenä.
+ * OMISTAJA 28.9.2026, sanatarkasti: *"Voisiko kaikkiin striimi lukija
+ * nappeihin tehdä pillerin jossa olisi nykyiset kaksi kuvaketta ja
+ * keskelle lisäksi hampurilainen jossa olisi kaikki tekstin kappaleet
+ * klikattavissa sitä varten että jos kuulija haluaa hypätä johonkin
+ * kohtaan sekä alimpana -10sek ja +10sek sekä kappale eteen ja taakse
+ * napit kelaukseen. Taaksepäin napit vierekkäin omalla puolella ja
+ * eteenpäin napi toisella. Siirretään itseasiassa hammaspyörä nappi tähän
+ * samaan mini hampurilaiseen sisälle niin sitten ylös jää nätisti vain
+ * kaksi nappia eikä pilleriä tarvita."*
+ *
+ * KAKSI NAPPIA KAIKISSA LUENTAKOHDISSA: kaiutin (toisto/tauko, kaaret
+ * VU-mittarina) ja mini-hampurilainen. Valikossa ylhäältä alas:
+ *   1. tekstin kappaleet listana — nykyinen korostettuna; napautus
+ *      hyppää kappaleeseen ja luenta jatkuu siitä (luento alkaa, jos se
+ *      ei ollut käynnissä),
+ *   2. kelausrivi: vasemmalla vierekkäin "kappale taakse" ja "−10 s",
+ *      oikealla "+10 s" ja "kappale eteen" (js/puhe.js siirryAika,
+ *      siirryKappale),
+ *   3. entisen säätörattaan sisältö: nopeus ja ääni; lehdessä myös
+ *      jatkuva luenta.
+ * Valikko avautuu pehmeästi ja sulkeutuu ulos napauttamalla. Tämä
+ * korvaa 14.8.2026 ohjauspaneelin (tauko/kappaleet/laskuri/rasti) ja
+ * 27.9.2026 säätörattaan — kumpaakaan ei enää ole.
+ *
+ * Laitteen omalla äänellä (ei soitinta) kelaus on harmaana: sillä ei ole
+ * aikajanaa. Kappaleen napautus aloittaa silloinkin luennan siitä.
  */
 const OHJAIN_PIIRROT = {
-  tauko: '<path d="M8.6 6.4v11.2"/><path d="M15.4 6.4v11.2"/>',
-  jatka: '<path d="M8.6 6.2 17.2 12l-8.6 5.8z"/>',
   edellinen: '<path d="M7.4 6.6v10.8"/><path d="M17 6.8 10.2 12l6.8 5.2z"/>',
   seuraava: '<path d="M16.6 6.6v10.8"/><path d="M7 6.8l6.8 5.2L7 17.2z"/>',
-  sulje: '<path d="M7.2 7.2l9.6 9.6"/><path d="M16.8 7.2 7.2 16.8"/>',
-  // Kiertävät nuolet: luenta jatkuu sivulta toiselle itsestään.
-  auto: '<path d="M6.6 13.5a5.6 5.6 0 0 1 9.3-5.4"/><path d="M16.2 4.6v3.6h-3.6"/>'
-    + '<path d="M17.4 10.5a5.6 5.6 0 0 1-9.3 5.4"/><path d="M7.8 19.4v-3.6h3.6"/>',
+  valikko: '<path d="M6.5 8.2h11"/><path d="M6.5 12h11"/><path d="M6.5 15.8h11"/>',
 };
 
 /*
@@ -1804,147 +1818,464 @@ function ohjainIkoni(nimi) {
     + ` stroke-linejoin="round">${OHJAIN_PIIRROT[nimi]}</svg>`;
 }
 
-/** Avoin paneeli: { elementti, merkki, taukoNappi, kappaleRivi, … } tai null. */
-let ohjain = null;
+const VALIKKO_OTSIKKO = 'Luennan valikko — kappaleet, kelaus, nopeus ja ääni';
+/** Kelauksen askel sekunteina (omistaja: "-10sek ja +10sek"). */
+export const KELAUS_S = 10;
+/** Kappaleen nimen pituus valikossa (merkkiä). */
+const KAPPALEEN_NIMI = 60;
+// Leipätekstin rivillä vain alkusanat; CSS katkaisee rivin, jos sekään ei mahdu.
+const KAPPALEEN_ALKU = 34;
 
-/*
- * ERILLISTÄ KELLUVAA KAIUTINTA EI ENÄÄ OLE (omistaja 18.8.2026
- * illalla): v868:n pysyvä pyöreä kaiutinkahva kellui lehden kuvien
- * päällä otsikkorivin kaiuttimen ALLA — kaksi kaiutinta samassa
- * kulmassa. Luennan pysyvä kahva on nyt sivun tarttuvan otsikkorivin
- * oma kaiutin (lehti ja Matkailijan opas): se pysyy näkyvissä
- * vieritettäessä ja avaa säätöpaneelin myös kesken luennan
- * (liitaLukija-napin vipulogiikka alla).
- */
+/** Avoin valikko: { elementti, nappi, paivita, pura } tai null. */
+let valikko = null;
 
-function suljeOhjain() {
-  if (!ohjain) return;
-  clearTimeout(ohjain.ajastin);
-  ohjain.elementti.remove();
-  ohjain = null;
+function suljeLukijanValikko() {
+  if (!valikko) return;
+  const vanha = valikko;
+  valikko = null;
+  vanha.pura();
 }
 
-/*
- * AUTOMAATTINEN PIILOUTUMINEN (omistajan tilaus 15.8.2026:
- * "Luentasoitin voisi piiloutua automaattisesti ja sen saisi samasta
- * napista näkyviin ja pois ilman että luenta katkeaa"). Paneeli
- * piiloutuu muutaman sekunnin käyttämättömyyden jälkeen; kaiutin
- * vipuaa sen näkyviin ja piiloon luentaa katkaisematta. Tauolla
- * paneeli ei piiloudu — pysäytetty luenta ilman näkyvää säädintä
- * näyttäisi loppuneelta.
- */
-const OHJAIMEN_PIILOAIKA = 4000;
-
-function ajastaOhjaimenPiilotus() {
-  if (!ohjain) return;
-  clearTimeout(ohjain.ajastin);
-  ohjain.ajastin = setTimeout(() => {
-    if (!ohjain) return;
-    if (ajossa?.soitin?.tauolla?.()) {
-      ajastaOhjaimenPiilotus();
-      return;
-    }
-    ohjain.elementti.hidden = true;
-  }, OHJAIMEN_PIILOAIKA);
+/** Soittimen ilmoitus avoimelle valikolle (nykyinen kappale, kelauksen tila). */
+function paivitaValikko() {
+  valikko?.paivita();
 }
 
-function vipuaOhjain() {
-  if (!ohjain) return;
-  if (ohjain.elementti.hidden) {
-    ohjain.elementti.hidden = false;
-    ajastaOhjaimenPiilotus();
-  } else {
-    clearTimeout(ohjain.ajastin);
-    ohjain.elementti.hidden = true;
-  }
-}
-
-/** Paneelin tila soittimen ilmoituksesta (tauko/jatka, kappalelaskuri). */
-function paivitaOhjain(merkki, t) {
-  if (!ohjain || ohjain.merkki !== merkki) return;
-  const nimi = t.tauolla ? 'Jatka kuuntelua' : 'Tauko';
-  ohjain.taukoNappi.innerHTML = '<span class="icon-glyph viiva-ikoni">'
-    + `${ohjainIkoni(t.tauolla ? 'jatka' : 'tauko')}</span>`;
-  ohjain.taukoNappi.title = nimi;
-  ohjain.taukoNappi.setAttribute('aria-label', nimi);
-  // Kappalehypyt ja laskuri vain, kun kappaleita on useampi — yhden
-  // kappaleen merkinnällä nuolet olisivat kuollutta pintaa.
-  const monta = t.kappaleita > 1;
-  ohjain.edellinen.hidden = !monta;
-  ohjain.seuraava.hidden = !monta;
-  ohjain.kappaleRivi.hidden = !monta;
-  if (monta) ohjain.kappaleRivi.textContent = `${t.kappale + 1}/${t.kappaleita}`;
+/** Tämän napin luennan soitin, tai null (ei luentaa / laitteen ääni). */
+function omaSoitin(nappi) {
+  return ajossa?.nappi === nappi ? (ajossa.soitin ?? null) : null;
 }
 
 /**
- * Avaa ohjauspaneelin napin viereen. Tekee jotain vain, jos juuri
- * käynnistetty luenta kulkee lukijaäänellä (ajossa.soitin on olemassa
- * ja kuuluu tälle napille).
+ * Valikon kappaleet: samat kohdat, joista luenta kootaan (kaynnistaLuenta),
+ * jotta listan rivi i on soittimen kappale i. Käynnissä olevan luennan
+ * kohdat luetaan ajosta (jatkuvan luennan sivulla otsikko on mukana).
  */
-function avaaOhjain(isanta, nappi) {
-  const nyt = ajossa;
-  if (!nyt?.soitin || nyt.nappi !== nappi) return;
-  suljeOhjain();
-  const doc = isanta.ownerDocument;
-  const paneeli = doc.createElement('div');
-  paneeli.className = 'lukija-paneeli';
-  // Paneelin napautus ei saa valua taustalle (dialogin sulkijat ym.).
-  paneeli.addEventListener('click', (e) => e.stopPropagation());
-  // Käyttö pitää paneelin näkyvissä — piiloutumislaskuri alkaa alusta
-  // jokaisesta kosketuksesta.
-  paneeli.addEventListener('pointerdown', () => ajastaOhjaimenPiilotus());
-  const tee = (nimi, otsikko, toiminto) => {
+function napinKohdat(nappi) {
+  if (ajossa?.nappi === nappi && ajossa.kohdat?.length) return ajossa.kohdat;
+  const lahde = nappi?.__lukijaLahde;
+  const kohde = typeof lahde === 'function' ? lahde() : lahde;
+  if (kohde && typeof kohde !== 'string' && kohde.nodeType === 1) {
+    return kokoaLuettavatKohdat(kohde, { ohitaEkaOtsikko: nappi.__lukijaOtsikko !== true });
+  }
+  return napinTeksti(nappi).split('\n').map((t) => t.trim()).filter(Boolean).map((teksti) => ({ teksti }));
+}
+
+function lyhenna(teksti, pituus) {
+  const t = String(teksti ?? '').replace(/\s+/g, ' ').trim();
+  if (t.length <= pituus) return t;
+  const leikattu = t.slice(0, pituus);
+  const raja = leikattu.lastIndexOf(' ');
+  return `${(raja > pituus * 0.6 ? leikattu.slice(0, raja) : leikattu).replace(/[,.;:–—-]+$/, '')}…`;
+}
+
+/** Kappaleen napautus: hyppy käynnissä olevassa luennassa tai luennan aloitus kappaleesta. */
+function hyppaaKappaleeseen(nappi, kappale) {
+  const soitin = omaSoitin(nappi);
+  if (soitin?.siirryKappaleeseen) {
+    soitin.siirryKappaleeseen(kappale);
+    merkitseKeskeytys(nappi, false);
+    merkitseTila(nappi, true);
+  } else {
+    if (lukijaLukee()) pysaytaLukija();
+    kaynnistaLuenta(nappi, nappi.__lukijaIsanta ?? nappi.parentElement, { aloitusKappale: kappale });
+  }
+  paivitaValikko();
+}
+
+/** Nopeuden ja äänen rivit (entinen säätöratas, omistaja 27.9.2026 klo 10.1x). */
+function saatoRivit(doc) {
+  const nopeusRivi = doc.createElement('label');
+  nopeusRivi.className = 'lukija-saadot-rivi';
+  const nopeusNimi = doc.createElement('span');
+  nopeusNimi.textContent = 'Nopeus';
+  const liuku = doc.createElement('input');
+  liuku.type = 'range';
+  liuku.min = String(NOPEUS_MIN);
+  liuku.max = String(NOPEUS_MAX);
+  liuku.step = '0.05';
+  liuku.value = String(puheenNopeus());
+  liuku.setAttribute('aria-label', 'Luennan nopeus');
+  const arvo = doc.createElement('output');
+  arvo.textContent = nopeusTeksti(liuku.value);
+  liuku.addEventListener('input', () => { arvo.textContent = nopeusTeksti(liuku.value); });
+  liuku.addEventListener('change', () => {
+    liuku.value = String(asetaPuheenNopeus(liuku.value));
+    arvo.textContent = nopeusTeksti(liuku.value);
+  });
+  nopeusRivi.append(nopeusNimi, liuku, arvo);
+
+  const aaniRivi = doc.createElement('label');
+  aaniRivi.className = 'lukija-saadot-rivi';
+  const aaniNimi = doc.createElement('span');
+  aaniNimi.textContent = 'Ääni';
+  const valinta = doc.createElement('select');
+  valinta.setAttribute('aria-label', 'Lukijan ääni');
+  // Pelinimet (AANTEN_PELINIMET): arvo on sisäinen tunnus, teksti pelaajan nimi.
+  const vaihtoehto = (teksti, arvoNyt) => {
+    const o = doc.createElement('option');
+    o.value = arvoNyt;
+    o.textContent = teksti;
+    return o;
+  };
+  valinta.append(vaihtoehto(`${AANTEN_PELINIMET[STRIIMIAANI_OLETUS]} (oletus)`, ''));
+  for (const [aani, nimi] of Object.entries(AANTEN_PELINIMET)) {
+    if (aani !== STRIIMIAANI_OLETUS) valinta.append(vaihtoehto(nimi, aani));
+  }
+  valinta.value = striimiaani() ?? '';
+  valinta.addEventListener('change', () => {
+    asetaStriimiaani(valinta.value || null);
+    valinta.value = striimiaani() ?? '';
+  });
+  aaniRivi.append(aaniNimi, valinta);
+  return [nopeusRivi, aaniRivi];
+}
+
+/** Avaa (tai sulkee, jos jo auki) napin valikon valikkonapin alle. */
+function avaaValikko(nappi, valikkonappi) {
+  if (valikko?.nappi === nappi) {
+    suljeLukijanValikko();
+    return;
+  }
+  suljeLukijanValikko();
+  const doc = nappi.ownerDocument;
+  // Tekstirivin napit ovat parikääreessä (kohdistaValikkonappi); valikko asemoidaan sen isäntään.
+  const lahin = valikkonappi.parentElement ?? nappi.parentElement;
+  const koti = lahin?.classList?.contains('lukija-pari') ? lahin.parentElement : lahin;
+  if (!koti) return;
+  const el = doc.createElement('div');
+  el.className = 'lukija-valikko';
+  el.setAttribute('role', 'dialog');
+  el.setAttribute('aria-label', 'Luennan valikko');
+  // Valikon napautus ei saa valua taustalle (dialogin sulkijat, kortin ele).
+  el.addEventListener('click', (e) => e.stopPropagation());
+  el.addEventListener('pointerdown', (e) => e.stopPropagation());
+
+  /* 1. kappaleet */
+  const kohdat = napinKohdat(nappi);
+  const lista = doc.createElement('ol');
+  lista.className = 'lukija-kappaleet';
+  /*
+   * YKSI RIVI PER KOHTA (omistaja 28.9.2026: "jokainen kohta mahtuisi
+   * yhdelle riville"): väliotsikko omana lyhyenä rivinään, leipäteksti
+   * numerolla ja parilla alkusanalla ("1  Lontoo on Yhdistyneen…").
+   * Otsikollisen kohdan molemmat rivit hyppäävät samaan kohtaan;
+   * nykyisen korostus osuu leipätekstin riviin.
+   */
+  let numero = 0;
+  const rivinappi = (luokka, i, sisalto, nimi) => {
     const b = doc.createElement('button');
     b.type = 'button';
-    b.className = 'lukija-paneeli-nappi';
-    b.title = otsikko;
-    b.setAttribute('aria-label', otsikko);
-    b.innerHTML = `<span class="icon-glyph viiva-ikoni">${ohjainIkoni(nimi)}</span>`;
-    b.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toiminto();
-    });
-    paneeli.appendChild(b);
+    b.className = `lukija-kappale${luokka}`;
+    b.append(...sisalto);
+    b.setAttribute('aria-label', nimi);
+    b.addEventListener('click', () => hyppaaKappaleeseen(nappi, i));
     return b;
   };
-  // Toiminnot lukevat soittimen ajosta joka painalluksella: paneeli ei
-  // saa ohjata jo vaihtunutta luentaa.
-  const oma = () => (ajossa?.merkki === nyt.merkki ? ajossa.soitin : null);
-  const edellinen = tee('edellinen', 'Edellinen kappale', () => oma()?.siirryKappale(-1));
-  const taukoNappi = tee('tauko', 'Tauko', () => {
-    const soitin = oma();
-    if (!soitin) return;
-    if (soitin.tauolla()) soitin.jatka();
-    else soitin.tauko();
+  const rivit = kohdat.map((k, i) => {
+    const li = doc.createElement('li');
+    const teksti = String(k.teksti ?? '');
+    const viimeinen = k.otsikollinen ? k.osat?.at(-1) : null;
+    const otsikko = k.otsikko ? teksti : (viimeinen ? teksti.slice(0, viimeinen.alku) : '');
+    const leipa = k.otsikko ? '' : (viimeinen ? teksti.slice(viimeinen.alku) : teksti);
+    const siisti = (t) => t.replace(/[\s.·:]+$/u, '').trim();
+    let paa = null;
+    if (siisti(otsikko)) {
+      paa = rivinappi(' otsikko', i, [lyhenna(siisti(otsikko), KAPPALEEN_NIMI)], `Kuuntele otsikosta: ${lyhenna(siisti(otsikko), 40)}`);
+      li.appendChild(paa);
+    }
+    if (/[\p{L}\p{N}]{2}/u.test(leipa)) {
+      numero += 1;
+      const nro = doc.createElement('span');
+      nro.className = 'lukija-kappale-nro';
+      nro.textContent = String(numero);
+      const alku = doc.createElement('span');
+      alku.className = 'lukija-kappale-alku';
+      alku.textContent = lyhenna(leipa, KAPPALEEN_ALKU);
+      paa = rivinappi('', i, [nro, alku], `Kuuntele kappaleesta ${numero}: ${lyhenna(leipa, 40)}`);
+      li.appendChild(paa);
+    }
+    // Koristeriveillä (pisteet, symbolit) ei ole sanoja: rivi piiloon, indeksi säilyy.
+    li.hidden = !paa;
+    lista.appendChild(li);
+    return paa ?? rivinappi('', i, [], '');
   });
-  const seuraava = tee('seuraava', 'Seuraava kappale', () => oma()?.siirryKappale(1));
-  const kappaleRivi = doc.createElement('span');
-  kappaleRivi.className = 'lukija-kappalerivi';
-  kappaleRivi.hidden = true;
-  paneeli.appendChild(kappaleRivi);
-  // Jatkuvan luennan kytkin vain, kun luennalla on minne jatkaa
-  // (lehden sivut) — yksittäisessä jutussa se olisi kuollutta pintaa.
-  if (nyt.jatko) {
-    const autoNappi = tee('auto', AUTO_OTSIKKO, () => {
-      asetaAutoLuenta(!autoLuenta());
-      autoNappi.classList.toggle('aktiivinen', autoLuenta());
-      autoNappi.setAttribute('aria-pressed', autoLuenta() ? 'true' : 'false');
-    });
-    autoNappi.classList.add('lukija-auto-nappi');
-    autoNappi.classList.toggle('aktiivinen', autoLuenta());
-    autoNappi.setAttribute('aria-pressed', autoLuenta() ? 'true' : 'false');
-  }
-  tee('sulje', SEIS_OTSIKKO, () => pysaytaLukija());
-  isanta.appendChild(paneeli);
-  ohjain = {
-    elementti: paneeli, merkki: nyt.merkki, taukoNappi, kappaleRivi, edellinen, seuraava,
-    ajastin: null,
+  lista.hidden = rivit.filter((b) => !b.parentElement.hidden).length < 2;
+
+  /* 2. kelaus: taaksepäin vasemmalla, eteenpäin oikealla */
+  const kelaus = doc.createElement('div');
+  kelaus.className = 'lukija-kelaus';
+  const ryhma = () => {
+    const g = doc.createElement('div');
+    g.className = 'lukija-kelaus-ryhma';
+    kelaus.appendChild(g);
+    return g;
   };
-  ajastaOhjaimenPiilotus();
-  // Ensipiirto heti: soittimen oma ilmoitus ehti jo mennä ohi ennen
-  // paneelin syntyä, ja seuraava tulisi vasta palan vaihtuessa.
-  const alku = nyt.soitin.tilanne?.();
-  if (alku) paivitaOhjain(nyt.merkki, alku);
+  const taakse = ryhma();
+  const eteen = ryhma();
+  const kelausnappi = (isanta, otsikko, sisalto, toiminto) => {
+    const b = doc.createElement('button');
+    b.type = 'button';
+    b.className = 'lukija-kelausnappi';
+    b.title = otsikko;
+    b.setAttribute('aria-label', otsikko);
+    b.innerHTML = sisalto;
+    b.addEventListener('click', () => {
+      const soitin = omaSoitin(nappi);
+      if (!soitin) return;
+      toiminto(soitin);
+      merkitseKeskeytys(nappi, false);
+      merkitseTila(nappi, true);
+      paivitaValikko();
+    });
+    isanta.appendChild(b);
+    return b;
+  };
+  const kelausnapit = [
+    kelausnappi(taakse, 'Edellinen kappale', `<span class="icon-glyph viiva-ikoni">${ohjainIkoni('edellinen')}</span>`, (s) => s.siirryKappale(-1)),
+    kelausnappi(taakse, `${KELAUS_S} sekuntia taaksepäin`, `<span>−${KELAUS_S} s</span>`, (s) => s.siirryAika?.(-KELAUS_S)),
+    kelausnappi(eteen, `${KELAUS_S} sekuntia eteenpäin`, `<span>+${KELAUS_S} s</span>`, (s) => s.siirryAika?.(KELAUS_S)),
+    kelausnappi(eteen, 'Seuraava kappale', `<span class="icon-glyph viiva-ikoni">${ohjainIkoni('seuraava')}</span>`, (s) => s.siirryKappale(1)),
+  ];
+
+  /* 3. nopeus ja ääni; lehdessä jatkuva luenta */
+  const saadot = doc.createElement('div');
+  saadot.className = 'lukija-valikko-saadot';
+  saadot.append(...saatoRivit(doc));
+  if (nappi.__lukijaJatko) {
+    const rivi = doc.createElement('label');
+    rivi.className = 'lukija-jatkuva';
+    const ruksi = doc.createElement('input');
+    ruksi.type = 'checkbox';
+    ruksi.checked = autoLuenta();
+    ruksi.addEventListener('change', () => asetaAutoLuenta(ruksi.checked));
+    const nimi = doc.createElement('span');
+    nimi.textContent = AUTO_OTSIKKO;
+    rivi.append(ruksi, nimi);
+    saadot.appendChild(rivi);
+  }
+
+  // Kelausrivi ALIMPANA peukalon ulottuvilla (omistaja: "alimpana -10sek ja +10sek"; Fable 28.9.).
+  el.append(lista, saadot, kelaus);
+  // Asemointiankkuri: staattinen koti saa suhteellisen asemoinnin valikon ajaksi.
+  const staattinen = doc.defaultView?.getComputedStyle?.(koti)?.position === 'static';
+  if (staattinen) koti.classList.add('lukija-valikko-koti');
+  koti.appendChild(el);
+  sovitaValikko(el);
+  valikkonappi.setAttribute('aria-expanded', 'true');
+
+  let nykyinen = -1;
+  const paivita = () => {
+    if (!nappi.isConnected) { suljeLukijanValikko(); return; }
+    const soitin = omaSoitin(nappi);
+    for (const b of kelausnapit) b.disabled = !soitin;
+    const kappale = soitin?.tilanne?.().kappale ?? -1;
+    if (kappale === nykyinen) return;
+    rivit[nykyinen]?.classList.remove('nykyinen');
+    rivit[nykyinen]?.removeAttribute('aria-current');
+    nykyinen = kappale;
+    const rivi = rivit[kappale];
+    if (!rivi) return;
+    rivi.classList.add('nykyinen');
+    rivi.setAttribute('aria-current', 'true');
+    // Nykyinen kappale näkyviin listan sisällä (ei koko sivun vieritystä).
+    const ylaraja = lista.scrollTop;
+    const alaraja = ylaraja + lista.clientHeight;
+    const y = rivi.offsetTop - lista.offsetTop;
+    if (y < ylaraja || y + rivi.offsetHeight > alaraja) lista.scrollTop = Math.max(0, y - lista.clientHeight / 3);
+  };
+  /*
+   * Napautus valikon ulkopuolelle sulkee VAIN valikon (valikkonappi hoitaa
+   * omansa): koko ele niellään, jottei se sulje alla olevaa korttia eikä
+   * läpäise karttaan (omistajan natiivibugi 28.9.2026, web tehdään samoin).
+   */
+  const ulos = (e) => {
+    if (el.contains(e.target) || valikkonappi.contains(e.target)) return;
+    e.stopImmediatePropagation();
+    if (e.cancelable) e.preventDefault();
+    nieleEle(doc);
+    suljeLukijanValikko();
+  };
+  // Ikkunan kaappausvaihe: ennen kortin ja kartan omia kuuntelijoita.
+  const ikkuna = doc.defaultView ?? doc;
+  ikkuna.addEventListener('pointerdown', ulos, { capture: true });
+  valikko = {
+    elementti: el,
+    nappi,
+    paivita,
+    pura: () => {
+      ikkuna.removeEventListener('pointerdown', ulos, { capture: true });
+      el.remove();
+      if (staattinen) koti.classList.remove('lukija-valikko-koti');
+      valikkonappi.setAttribute('aria-expanded', 'false');
+    },
+  };
+  paivita();
+}
+
+/*
+ * ELEEN NIELEMINEN: valikon sulkeva pointerdown on jo pysäytetty; saman
+ * eleen loput tapahtumat (kosketus, hiiren yhteensopivuus, click) niellään
+ * kaappausvaiheessa, kunnes click on tullut tai ele on selvästi ohi.
+ */
+const NIELTAVAT = ['pointerup', 'pointercancel', 'touchstart', 'touchend', 'mousedown', 'mouseup', 'click'];
+function nieleEle(doc) {
+  const ikkuna = doc.defaultView;
+  if (!ikkuna?.addEventListener) return;
+  let valmis = false;
+  const nielu = (e) => {
+    e.stopImmediatePropagation();
+    if (e.cancelable && e.type !== 'pointerup') e.preventDefault();
+    if (e.type === 'click') lopeta();
+  };
+  const lopeta = () => {
+    if (valmis) return;
+    valmis = true;
+    for (const tyyppi of NIELTAVAT) ikkuna.removeEventListener(tyyppi, nielu, { capture: true });
+  };
+  for (const tyyppi of NIELTAVAT) ikkuna.addEventListener(tyyppi, nielu, { capture: true, passive: false });
+  setTimeout(lopeta, 700);
+}
+
+/*
+ * VALIKKO PYSYY NÄKYVISSÄ: se ankkuroidaan kotinsa oikeaan reunaan, mutta
+ * kortti tai dialogi leikkaa ylivuodon (overflow). Leveys ja paikka
+ * sovitetaan lähimmän leikkaavan esivanhemman (tai ruudun) sisään 8 px:n
+ * marginaalilla.
+ */
+function sovitaValikko(el) {
+  const ikkuna = el.ownerDocument.defaultView;
+  if (!ikkuna?.getComputedStyle) return;
+  let raja = { left: 0, right: ikkuna.innerWidth };
+  for (let e = el.parentElement; e && e !== el.ownerDocument.body; e = e.parentElement) {
+    const t = ikkuna.getComputedStyle(e);
+    if (t.overflowX !== 'visible' || t.overflow !== 'visible') {
+      const r = e.getBoundingClientRect();
+      raja = { left: Math.max(0, r.left), right: Math.min(ikkuna.innerWidth, r.right) };
+      break;
+    }
+  }
+  const vara = 8;
+  const leveys = Math.min(el.offsetWidth, raja.right - raja.left - 2 * vara);
+  if (leveys > 0) el.style.width = `${Math.round(leveys)}px`;
+  const r = el.getBoundingClientRect();
+  const oikea = parseFloat(ikkuna.getComputedStyle(el).right) || 0;
+  if (r.left < raja.left + vara) el.style.right = `${Math.round(oikea - (raja.left + vara - r.left))}px`;
+  else if (r.right > raja.right - vara) el.style.right = `${Math.round(oikea + (r.right - (raja.right - vara)))}px`;
+}
+
+/*
+ * VALIKKONAPPI KAIUTTIMEN VIEREEN. Kaiutin asemoidaan kontekstin mukaan:
+ * korteissa ja lehden otsikkorivillä se on absoluuttinen oikeassa
+ * reunassa, nähtävyysjutussa otsikon perässä rivissä. Nappi seuraa sitä:
+ * absoluuttisen kaiuttimen VASEMMALLE (entisen säätörattaan paikalle)
+ * samalla pystykeskityksellä, rivissä olevan kaiuttimen PERÄÄN. Sivut
+ * siirtävät kaiutinta itse (lehti.js sijoitaLehtiKaiutin,
+ * nahtavyydet.js), joten kohdistus tarkistetaan isännän muutoksista.
+ */
+function kohdistaValikkonappi(nappi) {
+  const v = nappi?.__lukijaValikko;
+  if (!v) return;
+  const vanhempi = nappi.parentElement;
+  if (!vanhempi) {
+    // Kaiutin purettiin (esim. tiedeliitteen sivunvaihto): nappi ja vahti pois.
+    v.remove();
+    nappi.__lukijaValikkoVahti?.disconnect();
+    nappi.__lukijaValikkoVahti = null;
+    return;
+  }
+  v.hidden = Boolean(nappi.hidden);
+  const tyyli = nappi.ownerDocument.defaultView?.getComputedStyle?.(nappi);
+  const irti = tyyli?.position === 'absolute' || tyyli?.position === 'fixed';
+  if (irti) {
+    if (v.parentElement !== vanhempi || v.nextElementSibling !== nappi) nappi.before(v);
+    v.classList.add('irti');
+    const oikea = parseFloat(tyyli.right) || 0;
+    v.style.right = `${oikea + (nappi.offsetWidth || 0)}px`;
+    v.style.top = tyyli.top;
+    v.style.transform = '';
+    v.style.marginTop = '0px';
+    // Pystykeskitys mitaten: kaiuttimen oma siirto (translateY(-50 %)) on
+    // sen korkeudesta, joten kopioitu siirto ei keskittäisi pienempää nappia.
+    const a = nappi.getBoundingClientRect?.();
+    const b = v.getBoundingClientRect?.();
+    if (a?.height && b?.height) v.style.marginTop = `${Math.round((a.top + a.height / 2) - (b.top + b.height / 2))}px`;
+  } else {
+    /*
+     * TEKSTIRIVILLÄ (nähtävyysjutun otsikko) kaksi erillistä nappia
+     * saisivat rivittyä erikseen: kapealla ruudulla valikkonappi jäi
+     * yksin seuraavalle riville (mitattu 28.9.2026, iPhone 393). Pari
+     * kääritään katkeamattomaan kääreeseen, joka rivittyy kokonaisena.
+     * Flex- ja grid-riveissä (kortit, tiedeliite) kääre on tarpeeton.
+     */
+    const naytto = tyyli && nappi.ownerDocument.defaultView.getComputedStyle(vanhempi).display;
+    const tekstirivi = !vanhempi.classList.contains('lukija-pari')
+      && /^(block|inline|inline-block|list-item)$/.test(naytto || '');
+    if (tekstirivi) {
+      const vanhaPari = v.parentElement?.classList?.contains('lukija-pari') ? v.parentElement : null;
+      const pari = nappi.ownerDocument.createElement('span');
+      pari.className = 'lukija-pari';
+      nappi.before(pari);
+      pari.append(nappi);
+      if (vanhaPari && vanhaPari !== pari && !vanhaPari.querySelector('.lukija-nappi')) vanhaPari.remove();
+    }
+    if (v.parentElement !== nappi.parentElement || v.previousElementSibling !== nappi) nappi.after(v);
+    v.classList.remove('irti');
+    v.style.right = '';
+    v.style.top = '';
+    v.style.transform = '';
+    v.style.marginTop = '';
+  }
+}
+
+/** Valikkonappi ja VU-kaaret kaiuttimelle (kerran per nappi). */
+function varustaLukijanValikko(isanta, nappi) {
+  if (!nappi || nappi.__lukijaValikko) return;
+  const doc = nappi.ownerDocument;
+  const v = doc.createElement('button');
+  v.type = 'button';
+  v.className = 'lukija-valikkonappi';
+  v.title = VALIKKO_OTSIKKO;
+  v.setAttribute('aria-label', VALIKKO_OTSIKKO);
+  v.setAttribute('aria-haspopup', 'dialog');
+  v.setAttribute('aria-expanded', 'false');
+  v.innerHTML = `<span class="icon-glyph viiva-ikoni">${ohjainIkoni('valikko')}</span>`;
+  v.addEventListener('click', (e) => {
+    e.stopPropagation();
+    avaaValikko(nappi, v);
+  });
+  // Kaiuttimen kaaret ovat VU-mittari kaikkialla (kuten isoisän luennassa).
+  nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KORTIN_KAIUTIN_IKONI}</span>`;
+  nappi.__lukijaValikko = v;
+  nappi.before?.(v);
+  // Kohdistus vasta kutsujan omien siirtojen jälkeen, sitten isännän muutoksista.
+  const kohdista = () => kohdistaValikkonappi(nappi);
+  queueMicrotask(kohdista);
+  if (typeof MutationObserver === 'function' && isanta?.nodeType === 1) {
+    let odottaa = false;
+    const vahti = new MutationObserver(() => {
+      if (odottaa) return;
+      odottaa = true;
+      const aja = () => { odottaa = false; if (!nappi.isConnected && !isanta.isConnected) vahti.disconnect(); else kohdista(); };
+      if (typeof requestAnimationFrame === 'function') requestAnimationFrame(aja);
+      else setTimeout(aja, 0);
+    });
+    vahti.observe(isanta, { childList: true, subtree: true });
+    nappi.__lukijaValikkoVahti = vahti;
+  }
+}
+
+/*
+ * TYYLIN MYÖHÄINEN LATAUS: tiedeliite lataa aikajana.css:n vasta avatessa,
+ * jolloin kaiutin vaihtuu absoluuttisesta rivin jäseneksi ilman DOM-muutosta
+ * eikä vahti herää — valikkonappi jäi kaiuttimen päälle (mitattu 28.9.2026).
+ * Siksi napit kohdistetaan uudelleen jokaisen tyylitiedoston latauduttua.
+ */
+if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+  document.addEventListener('load', (tapahtuma) => {
+    if (tapahtuma.target?.tagName !== 'LINK') return;
+    for (const nappi of document.querySelectorAll?.('.lukija-nappi') ?? []) kohdistaValikkonappi(nappi);
+  }, true);
 }
 
 /** Napin ulkoasu ja saavutettava nimi seuraavat luennan tilaa. */
@@ -1952,15 +2283,13 @@ function merkitseTila(nappi, lukee) {
   if (!nappi) return;
   nappi.classList?.toggle('lukee', Boolean(lukee));
   paivitaKortinVu(nappi, lukee);
-  // Lukijaäänellä nappi vipuaa soittimen (pysäytys on paneelissa);
+  // Lukijaäänellä kaiutin keskeyttää ja jatkaa (kortinPainallus);
   // laitteen omalla äänellä se pysäyttää.
   const soittimella = lukee && Boolean(ajossa?.soitin) && ajossa?.nappi === nappi;
   let nimi = lukee
-    ? (soittimella ? OHJAIN_OTSIKKO : SEIS_OTSIKKO)
+    ? (soittimella ? KESKEYTA_OTSIKKO : SEIS_OTSIKKO)
     : (nappi.dataset?.lukijaNimi || LUE_OTSIKKO);
-  // Nostokortti: kaiutin keskeyttää ja jatkaa (kortinPainallus).
-  if (nappi.__lukijaKortti && nappi.classList?.contains('keskeytetty')) nimi = JATKA_OTSIKKO;
-  else if (nappi.__lukijaKortti && lukee) nimi = soittimella ? KESKEYTA_OTSIKKO : SEIS_OTSIKKO;
+  if (nappi.classList?.contains('keskeytetty') || (soittimella && ajossa.soitin.tauolla?.())) nimi = JATKA_OTSIKKO;
   nappi.setAttribute?.('aria-pressed', lukee ? 'true' : 'false');
   nappi.setAttribute?.('aria-label', nimi);
   if ('title' in nappi) nappi.title = nimi;
@@ -1985,7 +2314,7 @@ function napinTeksti(nappi) {
  * ks. aloitusKohta). Merkkijonolähde luetaan entiseen tapaan alusta:
  * sillä ei ole kohtia eikä siis rajoja, joilta valita.
  */
-function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
+function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false, aloitusKappale: pakotettu = null } = {}) {
   const lahdeNyt = nappi.__lukijaLahde;
   const kohde = typeof lahdeNyt === 'function' ? lahdeNyt() : lahdeNyt;
   let kohdat = null;
@@ -2015,23 +2344,21 @@ function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
   }
   if (!teksti) return false;
   // Keskeytetty kortti jatkaa viimeksi kuullusta kohdasta (talletaKortinKohta).
-  const jatkoKohta = nappi.__lukijaKortti ? nappi.__lukijaKohta ?? null : null;
+  const jatkoKohta = nappi.__lukijaKortti && !Number.isInteger(pakotettu) ? nappi.__lukijaKohta ?? null : null;
   const alkoi = lueAaneen(teksti, nappi, {
     kohdat,
     // Aloitus on aina otsikkoraja: sivun alku tai ylin näkyvä
     // väliotsikko (omistajan linjaus 25.8.2026, ks. aloitusKohta).
-    aloitusKappale: jatkoKohta ? jatkoKohta.kappale : (kohdat ? aloitusKohta(kohdat) : 0),
+    aloitusKappale: Number.isInteger(pakotettu) ? pakotettu
+      : (jatkoKohta ? jatkoKohta.kappale : (kohdat ? aloitusKohta(kohdat) : 0)),
     aloitusAlku: jatkoKohta?.alku ?? 0,
     jatko: nappi.__lukijaJatko ?? null,
   });
-  if (alkoi && nappi.__lukijaKortti) {
+  if (alkoi) {
     merkitseKeskeytys(nappi, false);
     merkitseTila(nappi, true);
   }
-  // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja
-  // kappalehypyt); laitteen omalla äänellä paneelia ei tule. Kortilla
-  // paneelia ei ole: kaiutin itse keskeyttää ja jatkaa (kortinPainallus).
-  if (alkoi && !nappi.__lukijaKortti) avaaOhjain(isanta, nappi);
+  // Kappaleet, kelaus ja säädöt ovat valikossa (avaaValikko).
   return alkoi;
 }
 
@@ -2087,31 +2414,11 @@ export function liitaLukija(isanta, lahde, {
     nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KAIUTIN_IKONI}</span>`;
     nappi.addEventListener('click', (tapahtuma) => {
       tapahtuma.stopPropagation();
-      if (nappi.__lukijaKortti) {
-        kortinPainallus(nappi, isanta);
-        return;
-      }
-      if (lukijaLukee(nappi)) {
-        /*
-         * Lukijaäänellä nappi VIPUAA soittimen näkyviin ja piiloon
-         * luentaa katkaisematta (omistajan tilaus 15.8.2026) —
-         * pysäytys tapahtuu paneelin rastista. Laitteen omalla
-         * äänellä paneelia ei ole, joten nappi pysäyttää kuten ennen.
-         */
-        if (ajossa?.soitin && ohjain?.merkki === ajossa.merkki) {
-          vipuaOhjain();
-          return;
-        }
-        if (ajossa?.soitin) {
-          avaaOhjain(isanta, nappi);
-          return;
-        }
-        pysaytaLukija();
-        return;
-      }
-      kaynnistaLuenta(nappi, isanta);
+      // Kaiutin on toisto/tauko kaikkialla (omistaja 28.9.2026: kaksi nappia).
+      kortinPainallus(nappi, isanta);
     });
     isanta.appendChild(nappi);
+    varustaLukijanValikko(isanta, nappi);
     /*
      * Pelitilaan poistuminen pysäyttää: dialogin sulkeutuminen on se
      * hetki, jolloin pelaaja palaa kartalle. Kuuntelija kytketään
@@ -2166,8 +2473,11 @@ export function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
   const teksti = napinTeksti(nappi);
   const riittaa = teksti.length >= vahimmais;
   nappi.hidden = !riittaa;
-  // Kortin säätöratas ja VU seuraavat kaiutinta: ilman luettavaa ei säätimiäkään.
-  if (nappi.__lukijaSaadin) nappi.__lukijaSaadin.hidden = !riittaa;
+  // Valikkonappi seuraa kaiutinta: ilman luettavaa ei valikkoakaan.
+  if (nappi.__lukijaValikko) {
+    nappi.__lukijaValikko.hidden = !riittaa;
+    kohdistaValikkonappi(nappi);
+  }
   if (!riittaa && lukijaLukee(nappi)) pysaytaLukija();
 }
 
@@ -2225,7 +2535,7 @@ const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
 /*
  * ── NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x) ─────
  *
- *   [⚙] [kaiutin] [)))]
+ *   [☰] [kaiutin] [)))]   (28.9.2026 alkaen: säätöratas → valikko, ks. avaaValikko)
  *
  * 1. KESKEYTYS JA JATKO SAMASTA KOHDASTA. Kortin kaiuttimen napautus
  *    kesken luennan pysäyttää sen (soittimen tauko: jatko on näytteen
@@ -2235,7 +2545,7 @@ const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
  *    alusta. Loppuun luettu kortti alkaa taas alusta.
  * 2. KESKEYTETTYNÄ KAIUTIN VILKKUU KEVYESTI (.keskeytetty, vain
  *    läpinäkyvyys — iOS-sääntö: ei suodattimia eikä skaalausta).
- * 3. SÄÄTÖRATAS kaiuttimen vasemmalla (omistaja 10.1x: lähellä kaiutinta):
+ * 3. NOPEUS JA ÄÄNI (27.9. säätörattaana, 28.9.2026 alkaen valikossa):
  *    lukunopeus (workerin `nopeus`) ja lukijan ääni pelinimellään
  *    (js/puhe.js AANTEN_PELINIMET — moottorin tunnus ei näy pelaajalle).
  *    Äänen valinta muutti pois kehittäjävalikosta; worker tottelee listan
@@ -2246,15 +2556,8 @@ const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
  *    (js/kaiutinmittari.js, oma mittari rinnakkain isoisän kanssa;
  *    lähteenä lukijaäänen analysaattori js/puhe.js puheMittari).
  */
-const SAADIN_OTSIKKO = 'Luennan nopeus ja ääni';
 const JATKA_OTSIKKO = 'Jatka kuuntelua';
 const KESKEYTA_OTSIKKO = 'Keskeytä kuuntelu';
-
-const SAADIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
-  + ' stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'
-  + '<circle cx="12" cy="12" r="2.6"/>'
-  + '<path d="M12 4.2v2.2M12 17.6v2.2M4.2 12h2.2M17.6 12h2.2M6.5 6.5l1.55 1.55M15.95 15.95l1.55 1.55'
-  + 'M6.5 17.5l1.55-1.55M15.95 8.05l1.55-1.55"/><circle cx="12" cy="12" r="5.4"/></svg>';
 
 // Sama kaiutin kuin isoisän luennassa (index.html #fact-kuuntele): runko ja kolme kaarta, jotka ovat VU-mittari.
 const KORTIN_KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
@@ -2310,109 +2613,51 @@ function kortinPainallus(nappi, isanta) {
 
 /** Kortin kaiuttimen kaaret VU:na luennan ajaksi, muuten täysinä (kuten isoisän kaiutin). */
 function paivitaKortinVu(nappi, lukee) {
-  if (!nappi?.__lukijaSaadin) return;
+  if (!nappi?.__lukijaValikko) return;
   if (lukee) kortinVu.kaynnista(nappi, puheMittari);
   else if (kortinVu.kaynnissa()) kortinVu.pysayta();
+  seuraaLatausta(nappi, lukee);
+}
+
+/*
+ * LATAUSRENGAS (omistaja 28.9.2026: "Kaiuttimen päällä voisi silloin pyöriä
+ * pieni ympyräanimaatio" sen ajan, kun ääntä vasta generoidaan). Rengas
+ * näkyy, kun lukijaäänen soitin on käynnissä mutta yhtään palaa ei ole
+ * aikataulussa (puhe.js odottaa) — alussa ja kelauksen jälkeen. Viive
+ * LATAUS_VIIVE_MS, ettei säilötyn luennan lyhyt haku välähdä. Laitteen
+ * omalla äänellä soitinta ei ole eikä rengasta.
+ */
+const LATAUS_VIIVE_MS = 250;
+const LATAUS_TAHTI_MS = 80;
+function seuraaLatausta(nappi, lukee) {
+  if (!lukee) {
+    if (nappi.__lukijaLataus) clearInterval(nappi.__lukijaLataus.kello);
+    nappi.__lukijaLataus = null;
+    nappi.classList?.remove('lataa');
+    return;
+  }
+  if (nappi.__lukijaLataus || typeof setInterval !== 'function') return;
+  const seuranta = { alku: null, kello: null };
+  nappi.__lukijaLataus = seuranta;
+  const tarkista = () => {
+    const soitin = ajossa?.nappi === nappi ? ajossa.soitin : null;
+    if (!nappi.isConnected || !ajossa || ajossa.nappi !== nappi) {
+      seuraaLatausta(nappi, false);
+      return;
+    }
+    const odottaa = Boolean(soitin?.odottaa?.());
+    const nyt = Date.now();
+    if (!odottaa) seuranta.alku = null;
+    else if (seuranta.alku == null) seuranta.alku = nyt;
+    nappi.classList.toggle('lataa', odottaa && nyt - seuranta.alku >= LATAUS_VIIVE_MS);
+  };
+  seuranta.kello = setInterval(tarkista, LATAUS_TAHTI_MS);
+  tarkista();
 }
 
 /** Nopeus näytölle: 1,15× (pilkku kuten muuallakin pelissä). */
 function nopeusTeksti(arvo) {
   return `${Number(arvo).toFixed(2).replace('.', ',')}×`;
-}
-
-/** Säätörattaan paneeli: nopeusliuku ja äänivalinta. Uusi napautus sulkee. */
-function avaaKortinSaadot(koti, rataas) {
-  const vanha = koti.querySelector?.(':scope > .lukija-saadot');
-  if (vanha) {
-    vanha.remove();
-    rataas.setAttribute('aria-expanded', 'false');
-    return;
-  }
-  const doc = koti.ownerDocument;
-  const paneeli = doc.createElement('div');
-  paneeli.className = 'lukija-saadot';
-  paneeli.addEventListener('click', (e) => e.stopPropagation());
-  paneeli.addEventListener('pointerdown', (e) => e.stopPropagation());
-
-  const nopeusRivi = doc.createElement('label');
-  nopeusRivi.className = 'lukija-saadot-rivi';
-  const nopeusNimi = doc.createElement('span');
-  nopeusNimi.textContent = 'Nopeus';
-  const liuku = doc.createElement('input');
-  liuku.type = 'range';
-  liuku.min = String(NOPEUS_MIN);
-  liuku.max = String(NOPEUS_MAX);
-  liuku.step = '0.05';
-  liuku.value = String(puheenNopeus());
-  liuku.setAttribute('aria-label', 'Luennan nopeus');
-  const arvo = doc.createElement('output');
-  arvo.textContent = nopeusTeksti(liuku.value);
-  liuku.addEventListener('input', () => { arvo.textContent = nopeusTeksti(liuku.value); });
-  liuku.addEventListener('change', () => {
-    liuku.value = String(asetaPuheenNopeus(liuku.value));
-    arvo.textContent = nopeusTeksti(liuku.value);
-  });
-  nopeusRivi.append(nopeusNimi, liuku, arvo);
-
-  const aaniRivi = doc.createElement('label');
-  aaniRivi.className = 'lukija-saadot-rivi';
-  const aaniNimi = doc.createElement('span');
-  aaniNimi.textContent = 'Ääni';
-  const valinta = doc.createElement('select');
-  valinta.setAttribute('aria-label', 'Lukijan ääni');
-  // Pelinimet (AANTEN_PELINIMET): arvo on sisäinen tunnus, teksti pelaajan nimi.
-  const vaihtoehto = (teksti, arvoNyt) => {
-    const o = doc.createElement('option');
-    o.value = arvoNyt;
-    o.textContent = teksti;
-    return o;
-  };
-  valinta.append(vaihtoehto(`${AANTEN_PELINIMET[STRIIMIAANI_OLETUS]} (oletus)`, ''));
-  for (const [aani, nimi] of Object.entries(AANTEN_PELINIMET)) {
-    if (aani !== STRIIMIAANI_OLETUS) valinta.append(vaihtoehto(nimi, aani));
-  }
-  valinta.value = striimiaani() ?? '';
-  valinta.addEventListener('change', () => {
-    asetaStriimiaani(valinta.value || null);
-    valinta.value = striimiaani() ?? '';
-  });
-  aaniRivi.append(aaniNimi, valinta);
-
-  paneeli.append(nopeusRivi, aaniRivi);
-  koti.appendChild(paneeli);
-  rataas.setAttribute('aria-expanded', 'true');
-  // Napautus paneelin ulkopuolelle sulkee sen (kerran-kuuntelija).
-  const sulje = (e) => {
-    if (paneeli.contains(e.target) || rataas.contains(e.target)) {
-      doc.addEventListener('pointerdown', sulje, { once: true, capture: true });
-      return;
-    }
-    paneeli.remove();
-    rataas.setAttribute('aria-expanded', 'false');
-  };
-  doc.addEventListener('pointerdown', sulje, { once: true, capture: true });
-}
-
-/** Säätöratas kortin kaiuttimen vasemmalle ja kaiuttimeen VU-kaaret (kerran per nappi). */
-function varustaKortinSaatimet(koti, nappi) {
-  if (!koti || !nappi || nappi.__lukijaSaadin) return;
-  const doc = koti.ownerDocument;
-  const rataas = doc.createElement('button');
-  rataas.type = 'button';
-  rataas.className = 'lukija-saadin';
-  rataas.title = SAADIN_OTSIKKO;
-  rataas.setAttribute('aria-label', SAADIN_OTSIKKO);
-  rataas.setAttribute('aria-expanded', 'false');
-  rataas.innerHTML = `<span class="icon-glyph viiva-ikoni">${SAADIN_IKONI}</span>`;
-  rataas.addEventListener('click', (e) => {
-    e.stopPropagation();
-    // Nykyinen rivi, ei varustushetken koti: kaksivaiheisella kortilla ratas siirtyy otsikkoriville.
-    avaaKortinSaadot(rataas.parentElement ?? koti, rataas);
-  });
-  nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KORTIN_KAIUTIN_IKONI}</span>`;
-  nappi.before?.(rataas);
-  nappi.__lukijaSaadin = rataas;
-  koti.classList?.add('lukija-saatimin');
 }
 
 /** Kortin kaiuttimen mykistysmerkki ja nimi pelin äänivalinnan mukaan. */
@@ -2462,7 +2707,9 @@ export function lisaaLukijanappi(kortti, {
   nappi.__lukijaOtsikko = true;
   nappi.__lukijaKortti = true;
   nappi.dataset.lukijaKorttiNimi = otsikko;
-  varustaKortinSaatimet(koti, nappi);
+  // Kahden napin rivi (valikko + kaiutin) tarvitsee tilaa oikeassa reunassa.
+  koti.classList?.add('lukija-saatimin');
+  kohdistaValikkonappi(nappi);
   paivitaLukija(nappi);
   paivitaKortinKaiutin(nappi);
   if (!rivi && koti === kortti) odotaKortinOtsikkorivia(kortti, nappi);
@@ -2486,7 +2733,7 @@ function odotaKortinOtsikkorivia(kortti, nappi) {
     vahti.disconnect();
     nappi.__lukijaRiviVahti = null;
     const vanha = nappi.parentElement;
-    rivi.append(...[nappi.__lukijaSaadin, nappi].filter(Boolean));
+    rivi.append(...[nappi.__lukijaValikko, nappi].filter(Boolean));
     vanha?.classList?.remove(KORTIN_RIVILUOKKA, 'lukija-saatimin');
     rivi.classList.add(KORTIN_RIVILUOKKA, 'lukija-saatimin');
     nappi.__lukijaIsanta = rivi;
@@ -2525,7 +2772,7 @@ if (typeof document !== 'undefined' && typeof document.addEventListener === 'fun
  * katsoo kuvaa, jonka pöllö juuri näytti — joten puhe saa jatkua
  * sen alla (omistajan tilaus 18.8.2026).
  *
- * Lukijan oma pinta (lukija-paneeli) ei ole
+ * Lukijan oma pinta (lukija-valikko) ei ole
  * kumpaakaan lajia, joten se ei osu sääntöön — ja automoodin
  * sivunkäännöt vaihtavat sisältöä jo auki olevassa dialogissa, joten
  * nekään eivät osu. Kaksi ikkunaa ei näy tarkkailijalle ja kutsuu
