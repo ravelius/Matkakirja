@@ -707,9 +707,13 @@ export function peilinKatkoJaljella(laji = 'kuvat') {
  * katkaistuja hakuja): katkaisija laukesi uudelleen jokaisessa
  * ikkunassa, ja 62/72 näkyvää laattaa jäi jonoon 70 sekunniksi.
  *
- * Nyt onnistunut haku nollaa laskurin (`peiliToimi`), eli katkaisija
- * laukeaa vain, kun kolme hakua peräkkäin kaatuu ilman yhtään
- * onnistumista välissä — se on peilin vika, ei yksittäinen yskähdys.
+ * Nyt onnistunut haku nollaa laskurin (`peiliToimi`), ja katkaisija
+ * laukeaa vain, kun kolme hakua peräkkäin kaatuu EIKÄ peili ole
+ * vastannut kertaakaan PEILIN_TUORE_MS:n aikana — se on peilin vika,
+ * ei yksittäinen yskähdys. Aikaehto tarvitaan, koska katkennut haku
+ * palaa heti mutta onnistunut vasta siirron jälkeen: rinnakkaisten
+ * hakujen virheet kasautuvat jonon alkuun, ja pelkkä nollaus antoi
+ * mitatusti yhä katkon joka ikkunaan (50/72 jonossa).
  *
  * TAUSTAKATKO EI OLE PEILIN VIKA: Safari katkaisee haut, kun sivu menee
  * taustalle tai näyttö lukittuu. Piilossa tulleita virheitä ei lasketa,
@@ -717,9 +721,12 @@ export function peilinKatkoJaljella(laji = 'kuvat') {
  * (js/pallolaatat.js) uusivat virheensä samassa tapahtumassa.
  */
 /** Peili vastasi: peräkkäisten virheiden laskuri alkaa alusta. */
+export const PEILIN_TUORE_MS = 5000;
+const viimeisinOk = { kuvat: 0, aanet: 0, laatat: 0 };
 export function peiliToimi(laji = 'kuvat') {
   if (!LAJIT.includes(laji) || poisAsti[laji]) return;
   virheita[laji] = 0;
+  viimeisinOk[laji] = Date.now();
 }
 
 const piilossa = () => Boolean(globalThis.document?.hidden);
@@ -730,6 +737,8 @@ export function peiliPetti(laji = 'kuvat') {
   if (piilossa()) return;
   virheita[laji] += 1;
   if (virheita[laji] < VIRHERAJA) return;
+  // Peili vastasi äskettäin: virheet ovat yskähdyksiä, eivät katko.
+  if (Date.now() - viimeisinOk[laji] < PEILIN_TUORE_MS) return;
   poisAsti[laji] = Date.now() + (laji === 'laatat' ? KATKAISUN_KESTO_LAATAT_MS : KATKAISUN_KESTO_MS);
   try {
     globalThis.sessionStorage?.setItem(poisAvain(laji), String(poisAsti[laji]));
@@ -754,6 +763,7 @@ try {
 export function nollaaPeili() {
   for (const laji of LAJIT) {
     virheita[laji] = 0;
+    viimeisinOk[laji] = 0;
     poisAsti[laji] = 0;
     try { globalThis.sessionStorage?.removeItem(poisAvain(laji)); } catch { /* ks. yllä */ }
   }

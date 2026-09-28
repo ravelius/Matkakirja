@@ -741,11 +741,18 @@ test('onnistunut haku nollaa laskurin: hajanaiset virheet eivät laukaise katkai
   }
   assert.equal(peiliKaytossa('laatat'), true);
   assert.equal(peilinKatkoJaljella('laatat'), 0);
-  // Kolme peräkkäistä ilman onnistumista laukaisee yhä (peilin oikea vika).
+  // Äskettäin vastannut peili ei katkea kolmesta peräkkäisestäkään.
   peiliPetti('laatat');
   peiliPetti('laatat');
   peiliPetti('laatat');
-  assert.equal(peiliKaytossa('laatat'), false);
+  assert.equal(peiliKaytossa('laatat'), true);
+  // Kolme peräkkäistä ilman onnistumista 5 s:iin laukaisee yhä (peilin oikea vika).
+  const nyt = Date.now;
+  Date.now = () => nyt() + 6000;
+  try {
+    peiliPetti('laatat');
+    assert.equal(peiliKaytossa('laatat'), false);
+  } finally { Date.now = nyt; }
   // Katkon aikana onnistuminen ei avaa peiliä etuajassa.
   peiliToimi('laatat');
   assert.equal(peiliKaytossa('laatat'), false);
