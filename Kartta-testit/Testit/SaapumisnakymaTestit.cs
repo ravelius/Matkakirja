@@ -123,12 +123,19 @@ namespace Matkakirja.Kartta.Testit
             return new Saapumisnakyma.Laatikko(a.X, a.Y, b.X - a.X, b.Y - a.Y);
         }
 
-        [Testi] static void UloszoomauksenKattoOnSaapumisnakyma()
+        [Testi] static void UloszoomauksenKattoOnKokoMaa()
         {
-            // Web kamera.js:1059: sama kaava kuin saapumisella kertoimella 1,02 → katto = saapumisen korkeus.
+            // Omistaja 28.9. klo 17.2x: "maan pystyy näkemään kerralla". Puhelimella Ranska sovitetaan saapuessa korkeuteen
+            // (kaupunki keskellä), joten katto on koko maan sovitus molempiin suuntiin, ei saapumisnäkymä.
             var r = Saapumisnakyma.Laske(Ranska(), 43.3, 5.4, 390, 700, 50, 3);
             var katto = Saapumisnakyma.Uloszoomauskatto(r);
-            Oleta.Tosi(katto.HasValue && katto.Value == r.Korkeus, $"katto {katto} = saapuminen {r.Korkeus}");
+            Oleta.Tosi(r.Tapa == Saapumisnakyma.Tapa.Korkeuteen, $"puhelimella korkeuteen ({r.Tapa})");
+            Oleta.Tosi(katto.HasValue && katto.Value == r.KokoMaa && r.KokoMaa > r.Korkeus, $"katto {katto} = koko maa {r.KokoMaa} > saapuminen {r.Korkeus}");
+            // Leveällä ruudulla saapuminen on jo koko maa: katto = saapuminen (web kamera.js:1059).
+            var levea = Saapumisnakyma.Laske(Ranska(), 43.3, 5.4, 1400, 900, 50, 2);
+            var kattoL = Saapumisnakyma.Uloszoomauskatto(levea);
+            Oleta.Tosi(levea.Tapa == Saapumisnakyma.Tapa.Molempiin && kattoL.HasValue && Math.Abs(kattoL.Value - levea.Korkeus) < 1e-12,
+                $"leveällä katto {kattoL} = saapuminen {levea.Korkeus} ({levea.Tapa})");
             var iso = Saapumisnakyma.Laske(new Saapumisnakyma.Laatikko(1000, 500, 1900, 900), 40, -100, 1210, 834, 50, 2);
             Oleta.Tosi(!Saapumisnakyma.Uloszoomauskatto(iso).HasValue, "kaupunkinäkymässä ei kattoa (RUS, USA)");
         }
