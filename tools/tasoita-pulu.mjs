@@ -26,8 +26,13 @@
  * Tämän jälkeen js/liviapuhe.js LIVIAN_VERSIOIDUT_AANET osoitetaan
  * tasoitettuihin avaimiin (tulostuu ajon lopuksi).
  *
- *   zsh -c 'source ~/.matkakirja-avaimet-koodaus.zsh; node tools/tasoita-pulu.mjs [--kuiva] ateena-3 iss-a-1 …'
+ *   zsh -c 'source ~/.matkakirja-avaimet-koodaus.zsh; source ~/.zshrc; node tools/tasoita-pulu.mjs [--kuiva] ateena-3 iss-a-1 …'
  *   (ilman repliikkejä: kaikki eleven_v4-erien äänitteet taulukosta)
+ *   … node tools/tasoita-pulu.mjs [--kuiva] --era pulu-<20 hex>
+ *   (uuden erän KAIKKI eleven_v4-äänitteet sen valmiista kuitista
+ *   aanet/pulu/kuitit/<erä>.completed.json — ajetaan heti generoi-pulu.mjs:n
+ *   jälkeen, ennen kuin taulukkoon kirjoitetaan mitään; tuloste on
+ *   LIVIAN_VERSIOIDUT_AANET-rivit tasoitettuihin avaimiin)
  */
 import { execFileSync, spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -68,10 +73,25 @@ function r2(args) {
 async function main() {
   const argv = process.argv.slice(2);
   const kuiva = argv.includes('--kuiva');
-  const pyydetyt = argv.filter((a) => !a.startsWith('--'));
-  const rivit = Object.entries(LIVIAN_VERSIOIDUT_AANET)
-    .filter(([, avain]) => V4_ERAT.some((era) => avain.includes(`/${era}/`)))
-    .filter(([nimi]) => !pyydetyt.length || pyydetyt.includes(nimi));
+  const eraIndeksi = argv.indexOf('--era');
+  const era = eraIndeksi >= 0 ? argv[eraIndeksi + 1] : null;
+  const pyydetyt = argv.filter((a, i) => !a.startsWith('--') && i !== eraIndeksi + 1);
+  let rivit;
+  if (era) {
+    if (!/^pulu-[0-9a-f]{20}$/.test(era)) throw new Error(`--era: odotettiin pulu-<20 hex>, saatiin ${era}`);
+    const kuitti = await fetch(`${MEDIA}aanet/pulu/kuitit/${era}.completed.json`);
+    if (!kuitti.ok) throw new Error(`${era}: valmista kuittia ei löydy (HTTP ${kuitti.status})`);
+    const { utterances = [] } = await kuitti.json();
+    // Vain eleven_v4: v3-äänet ovat jo pelin tasossa, eikä niitä kosketa.
+    rivit = utterances.filter((u) => u.model === 'eleven_v4' && u.finalObjectKey)
+      .map((u) => [u.utteranceKey, u.finalObjectKey])
+      .filter(([nimi]) => !pyydetyt.length || pyydetyt.includes(nimi));
+  } else {
+    rivit = Object.entries(LIVIAN_VERSIOIDUT_AANET)
+      .filter(([, avain]) => V4_ERAT.some((e) => avain.includes(`/${e}/`)))
+      .filter(([, avain]) => !avain.includes('/tasoitettu/'))
+      .filter(([nimi]) => !pyydetyt.length || pyydetyt.includes(nimi));
+  }
   if (!rivit.length) throw new Error('ei tasoitettavia (onko taulukko jo tasoitettu?)');
   const kansio = mkdtempSync(join(tmpdir(), 'tasoita-pulu-'));
   const kuitti = { tehty: new Date().toISOString(), tavoiteLufs: PULU_TASO_LUFS, limitteri: PULU_LIMITTERI, bittivirta: PULU_TASOITUS_BITTIVIRTA, rivit: [] };
@@ -110,7 +130,8 @@ async function main() {
     r2(['cp', kuittiTiedosto, `s3://${process.env.R2_BUCKET}/${kuittiNimi}`, '--content-type', 'application/json']);
     console.log(`kuitti: ${kuittiNimi}`);
   }
-  console.log(JSON.stringify(Object.fromEntries(kuitti.rivit.map((r) => [r.nimi, r.kohde])), null, 2));
+  // Suoraan LIVIAN_VERSIOIDUT_AANET-tauluun liitettävät rivit.
+  for (const r of kuitti.rivit) console.log(`  '${r.nimi}': '${r.kohde}',`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

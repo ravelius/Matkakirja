@@ -369,6 +369,12 @@ export const LIVIAN_KAUPUNKILAHTEET = {
   alpit: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   lappi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   tromssa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  // 28.9.2026: viisi fokusvirtakaupunkia, joiden Pulun kommentti jäi äänittämättä (v4-erä, Päätoimittaja).
+  bryssel: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  ljubljana: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  kosice: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  luxemburg: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  valletta: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
   /*
    * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta, omistaja
    * katsoo koosteesta 9.9.2026). Vanha `maadoitus` korvattiin yhdellä
