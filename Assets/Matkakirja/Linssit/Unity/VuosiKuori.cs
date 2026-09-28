@@ -48,7 +48,14 @@ namespace Matkakirja.Natiivi
         readonly HashSet<string> kaytossa = new HashSet<string>();
         Material materiaali;
         MeshRenderer piirtaja;
-        Avaruus avaruus;
+        GameObject ilmakeha;
+        Material ilmakehaMat;
+        Camera kamera;
+        Color? alkuperainenTausta;
+
+        /// <summary>Web (Globe.gl) backgroundColor #05070d ja atmosphereColor #8fb4ff, atmosphereAltitude 0,16.</summary>
+        public static readonly Color Tausta = new Color32(5, 7, 13, 255), IlmakehanVari = new Color32(143, 180, 255, 255);
+        public const float IlmakehanKorkeus = 0.16f;
         int maxKuvia;
         (string, string, float, string, float, string, float) edellinen;
 
@@ -68,10 +75,7 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(georeferenssi.transform, false);
             var k = go.AddComponent<VuosiKuori>();
             k.Rakenna(georeferenssi, varjostin);
-            // Avaruuden tausta ja ilmakehän hehku kuten astronautin kamerassa (web: tausta #05070d, ilmakehä #8fb4ff;
-            // Avaruus #04060e ja #7fb6ff). Georeferenssin alle kuten astronautilla (kuoren paikka on jo maan keskipiste);
-            // puretaan kuoren mukana, jolloin pelin tausta palaa.
-            k.avaruus = Avaruus.Luo(georeferenssi, georeferenssi.transform);
+            k.LuoIlmakeha(georeferenssi);
             return k;
         }
 
@@ -117,6 +121,8 @@ namespace Matkakirja.Natiivi
         public void Nayta(bool nakyvissa)
         {
             if (piirtaja != null) piirtaja.enabled = nakyvissa;
+            if (ilmakeha != null) ilmakeha.SetActive(nakyvissa);
+            AsetaTausta(nakyvissa);
             PallonLepo.Muuttui("vuosikuori");
         }
 
@@ -133,8 +139,9 @@ namespace Matkakirja.Natiivi
         public void Esilataa(string osoite)
         {
             if (osoite == null || kuvat.ContainsKey(osoite)) return;
-            // Esilataus ei saa vapauttaa näkyvää kuvaa: vain, jos tilaa on.
-            if (kuvat.Count >= maxKuvia) return;
+            // Esilataus ei saa vapauttaa näkyvää kuvaa: tilaa tehdään vain vanhimmasta käyttämättömästä (laite vuosi2 28.9.:
+            // kerroksen kanssa muisti oli täynnä, esilataus jäi pois ja toisto odotti verkkoa joka kuukausi, ~4 s/kk).
+            if (kuvat.Count >= maxKuvia && !VapautaYksi()) return;
             Pyyda(osoite, esilataus: true);
         }
 
@@ -179,8 +186,73 @@ namespace Matkakirja.Natiivi
             return k;
         }
 
+        /// <summary>
+        /// Avaruuden tausta suoraan pallon kameraan (KarttaKerrokset.Taustavari lukee Camera.mainin, joka on null elävän
+        /// kerroksen tilassa: laite vuosi2 28.9. näytti pelin ruskean taustan). Pidetään voimassa joka kehys.
+        /// </summary>
+        void AsetaTausta(bool paalla)
+        {
+            if (kamera == null) { var k = FindAnyObjectByType<PalloKierto>(); kamera = k != null ? k.GetComponent<Camera>() : Camera.main; }
+            if (kamera == null) return;
+            if (paalla)
+            {
+                if (!alkuperainenTausta.HasValue) alkuperainenTausta = kamera.backgroundColor;
+                kamera.backgroundColor = Tausta;
+            }
+            else if (alkuperainenTausta.HasValue)
+            {
+                kamera.backgroundColor = alkuperainenTausta.Value;
+                alkuperainenTausta = null;
+            }
+        }
+
+        /// <summary>Ilmakehän hehku kuten webin Globe.gl (three-glow-mesh, Ilmakeha-varjostin): kuori R × 1,16.</summary>
+        void LuoIlmakeha(CesiumGeoreference g)
+        {
+            var varjostin = Resources.Load<Shader>("Varjostimet/Ilmakeha");
+            if (varjostin == null) return;
+            const int Sektorit = 96, Kehat = 48;
+            double sade = CesiumWgs84Ellipsoid.GetMaximumRadius();
+            ilmakeha = new GameObject("VuosiIlmakeha");
+            ilmakeha.transform.SetParent(g.transform, false);
+            ilmakeha.transform.localPosition = (Vector3)(float3)g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            var paikat = new Vector3[(Kehat + 1) * (Sektorit + 1)];
+            float rk = (float)(sade * (1 + IlmakehanKorkeus));
+            int i = 0;
+            for (int kk = 0; kk <= Kehat; kk++)
+            {
+                float lat = Mathf.PI * (0.5f - kk / (float)Kehat);
+                for (int s = 0; s <= Sektorit; s++, i++)
+                {
+                    float lon = 2 * Mathf.PI * s / Sektorit;
+                    paikat[i] = new Vector3(Mathf.Cos(lat) * Mathf.Cos(lon), Mathf.Sin(lat), Mathf.Cos(lat) * Mathf.Sin(lon)) * rk;
+                }
+            }
+            var kolmiot = new int[Kehat * Sektorit * 6];
+            int t = 0;
+            for (int kk = 0; kk < Kehat; kk++)
+                for (int s = 0; s < Sektorit; s++)
+                {
+                    int a0 = kk * (Sektorit + 1) + s, b = a0 + 1, c = a0 + Sektorit + 1, d = c + 1;
+                    kolmiot[t++] = a0; kolmiot[t++] = b; kolmiot[t++] = c;
+                    kolmiot[t++] = b; kolmiot[t++] = d; kolmiot[t++] = c;
+                }
+            var mesh = new Mesh { name = "VuosiIlmakeha", indexFormat = IndexFormat.UInt32, vertices = paikat, triangles = kolmiot };
+            mesh.RecalculateBounds();
+            ilmakeha.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var r = ilmakeha.AddComponent<MeshRenderer>();
+            ilmakehaMat = new Material(varjostin);
+            ilmakehaMat.SetColor("_Vari", IlmakehanVari);
+            ilmakehaMat.SetFloat("_Ontto", (float)sade);
+            ilmakehaMat.SetFloat("_Peitto", 1f);
+            r.sharedMaterial = ilmakehaMat;
+            r.shadowCastingMode = ShadowCastingMode.Off;
+            ilmakeha.SetActive(false);
+        }
+
         void Update()
         {
+            if (piirtaja != null && piirtaja.enabled && kamera != null && kamera.backgroundColor != Tausta) AsetaTausta(true);
             int kaynnissa = 0;
             foreach (var p in kuvat)
             {
@@ -223,15 +295,19 @@ namespace Matkakirja.Natiivi
         /// <summary>Muistikatto: vanhin käyttämätön kuva pois, kunnes kuvia on enintään MaxKuvia.</summary>
         void Vapauta()
         {
-            while (kuvat.Count > maxKuvia)
-            {
-                string vanhin = null;
-                float aika = float.MaxValue;
-                foreach (var p in kuvat)
-                    if (!kaytossa.Contains(p.Key) && p.Value.Kaytetty < aika) { aika = p.Value.Kaytetty; vanhin = p.Key; }
-                if (vanhin == null) return;
-                Poista(vanhin);
-            }
+            while (kuvat.Count > maxKuvia && VapautaYksi()) { }
+        }
+
+        /// <summary>Vanhin kuva, joka ei ole näkyvissä eikä latautumassa, pois; false, jos sellaista ei ole.</summary>
+        bool VapautaYksi()
+        {
+            string vanhin = null;
+            float aika = float.MaxValue;
+            foreach (var p in kuvat)
+                if (!kaytossa.Contains(p.Key) && p.Value.Pyynto == null && p.Value.Kaytetty < aika) { aika = p.Value.Kaytetty; vanhin = p.Key; }
+            if (vanhin == null) return false;
+            Poista(vanhin);
+            return true;
         }
 
         void Poista(string osoite)
@@ -255,7 +331,10 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             foreach (var o in new List<string>(kuvat.Keys)) Poista(o);
-            if (avaruus != null) Destroy(avaruus.gameObject);
+            if (kamera != null && alkuperainenTausta.HasValue) kamera.backgroundColor = alkuperainenTausta.Value;
+            if (ilmakeha != null) Destroy(ilmakeha);
+            if (ilmakehaMat != null) Destroy(ilmakehaMat);
+            if (ilmakeha != null && ilmakeha.TryGetComponent<MeshFilter>(out var im)) Destroy(im.sharedMesh);
             if (TryGetComponent<MeshFilter>(out var f)) Destroy(f.sharedMesh);
             Destroy(materiaali);
         }
