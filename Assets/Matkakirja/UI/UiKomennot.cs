@@ -97,6 +97,7 @@
 //   ui kuvasumea kokoruutu                  löydös 132: kokoruudun taso (4 pt + pysäytyskuva, pallon kamera pois); auto palauttaa
 //   ui ylapalkki saari x,y,w,h|pois           saaririvin Dynamic Island pisteinä (ei lovea: 0,0,0,0); pois = laitteen mukaan
 //   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
+//   ui mitauutta paivittyi <versio (build)> [vanha]  "Peli päivittyi" asennettuna versiona; vanha = paikallinen loki ohi
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
@@ -902,7 +903,16 @@ namespace Matkakirja.Natiivi
                     ui.Tilarivi.Paivita();
                     return null;
                 case "mitauutta":
-                    if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true); else ui.Valikko.MitaUutta.Avaa();
+                    if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true);
+                    else if (loput.StartsWith("paivittyi "))
+                    {
+                        // ui mitauutta paivittyi 1.0.34 (202609272058) [vanha]: asennettu versio; vanha = laitteen paketti ilman riviä.
+                        string arvo = loput.Substring(10).Trim();
+                        bool vanha = arvo.EndsWith(" vanha");
+                        if (vanha) arvo = arvo.Substring(0, arvo.Length - 6).Trim();
+                        ui.Valikko.MitaUutta.TestaaPaivitys(arvo, vanha);
+                    }
+                    else ui.Valikko.MitaUutta.Avaa();
                     return null;
                 case "liike":
                     return ui.Liike.Lenna(true) ? null : "pieni liike on pois päältä tai lento jo käynnissä";
