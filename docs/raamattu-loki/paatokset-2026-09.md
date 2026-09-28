@@ -8683,3 +8683,7 @@ Omistaja 28.9. klo 16.3x sanatarkasti: "joo tehdään noin, kiva tuo merkkiään
 ## OMISTAJA: MAAPALLON VUOSI -LINSSI HYVAKSYTTY KEHITTAJATILAAN (28.9.2026 klo 16.29)
 
 Omistaja 28.9. klo 16.4x sanatarkasti: "tee vain maapallolinssi, näyttää hyvältä". Natiivi (Linssiseppa 2 0a5ca59e + Natiivi-UI 867b57a0) 1.0.38:aan kehittajatilassa, web #3558 (Siirtoseppa) junaan; pelaajan rekisteririvi vasta kun linssi on valmis.
+
+## OMISTAJA: MAAKUNNAT — VAIN YKSI VARJATTYNA + 'VALITSE KARTALTA' (28.9.2026 klo 16.50)
+
+Omistaja 28.9. klo 16.5x (kaappaus docs/raportit/kaappaukset/omistaja-20260928/maakunnat-kaikki-varjatty.png) sanatarkasti: "Vain yksi maakunta pitäisi olla värjättynä kerrallaan, ellei ole valittu ”kaikki”" → bugi Natiivi-UI (natiivi) + Pelikoodari (web). Klo 17.0x: "Tuossa voisi olla myös toiminto ”valitse kartalta”,jolloin maakuntalista pienenisi, mutta pieni inforuutu jäisi yläreunaan ja käyttäjä voisi klikkailla kartalta eri kohtia, jolloin klikattu maakunta aktivoituisi." Paatoimittaja: oma tila — lista pienenee yläreunan inforuuduksi (nimi, lyhyt kuvaus, Lue lisää, sulkunappi), kartan napautus valitsee maakunnan eika avaa kaupunkeja/nostoja; Pelikoodari web varjaysbugin jalkeen, natiivi Natiivi-UI:lle; kuvasarja omistajalle ennen junaa.
