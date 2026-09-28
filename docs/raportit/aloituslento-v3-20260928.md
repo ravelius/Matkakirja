@@ -218,3 +218,12 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
   - Suunta: 42° kärjessä → 92° (9,8–10,3 s) → 0° (14,8 s).
 - Reittikuva v3f3 | v3f4 ylhäältä (silmä, kone ja katselinjat 0,25 s:n välein): `v3f4/reitti-v3f3-v3f4.png`. Taulut
   `v3f4/v3f3-taulu.txt` ja `v3f4/v3f4-taulu.txt` (ALOITUSRATA_TAULU, 0,05 s).
+- **Kuvattu hiljaisena hetkenä 20.50** (käännös 7d8a0812, FBBD41D7, kansio `v3f4/`):
+  - Lento Ateenaan päättyi 15,02 s:ssa, 0 poikkeusta. Kallistus −14…+40°, bumerangin eksponentti n = 3,0, ohitus 20,0 km
+    (α 75°, kone 58 % leveydestä). Ladattuja laattoja enimmillään 1 601.
+  - F = 14,687 s kehyseroista. Video `v3f4/aloituslento-v3f4.mp4` (736 × 1600, 17,8 s, marssi A).
+  - Kuvaparit v3f3 | v3f4 lennon hetkillä 2,0 / 6,8 / 7,3 / 8,2 / 9,5 / 11,0 s: `v3f4/pari-<t>.png`.
+    - 2,0 s: valonraja pyyhkäisee Euroopan yli korkealta (kello 04.50).
+    - 7,3 s: kone kallistuu kameraan päin, ja siipien yläpinta näkyy.
+    - 9,5 s: kone loittonee, eikä kamera seuraa sitä.
+  - Ensimmäinen otto 20.46 hylättiin: tallennettu peli vaihtoi aloitusnäytön napit, ja napautus osui "Jatka matkaa" -nappiin.
