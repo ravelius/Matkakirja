@@ -2,11 +2,11 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 14:50 EEST — Kevyt tila edelleen noudatettu (0 sim, ei Metal-chromiumeja). **UUTTA: muistipaine WARN (2)** ja **Siirtoseppä ylitti 70% kontekstikynnyksen** — molemmat ilmoitettu Päätoimittajalle.
+**Päivitetty:** 2026-09-28 15:10 EEST — **OMISTAJA VAPAUTTI KONEEN, KEVYT TILA POIS.** Ilmoitettu 7 GPU-roolille: GPU vapaa, simulaattori Julkaisijan vuorolla (päivällä 1), nice 15.
 
 ## 0) Kuorman/GPU:n valvonta (voimassa oleva tila, päivitetty 12:43)
 
-**14:32 KEVYT TILA PÄÄLLE (Julkaisija):** omistaja tarvitsee koneen nyt. Tiukempi valvonta voimassa: simulaattorit 0 (poikkeus: Natiivisepän FBBD41D7, sammumassa), ei GPU-raskaita prosesseja, raskaat CPU-työt taskpolicy -b, käännökset nice 15. Hälytä jos simulaattoreita booted >0 (muu kuin FBBD41D7) tai Metal-chromiumeja näkyy. Load1 ei ole luotettava mittari (sisältää omistajan oman käytön + I/O-odotuksen) — käytetään tarvittaessa `koodaus`-käyttäjän CPU-summaa vain karkeana lisätietona, ei ensisijaisena hälytysperusteena.
+**15:10 KEVYT TILA POIS (Päätoimittaja):** omistaja vapautti koneen. Takaisin normaaliin: raskaat työt nice 15 -prioriteetilla täysillä ytimillä sallittuja, simulaattoreita ≤ 1 booted päivällä, Mac-savukkeita ≤ 2 rinnakkain. Kaikille 7 GPU-roolille ilmoitettu. Load1 ei ole luotettava mittari (sisältää omistajan oman käytön + I/O-odotuksen) — käytetään tarvittaessa `koodaus`-käyttäjän CPU-summaa vain karkeana lisätietona, ei ensisijaisena hälytysperusteena.
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
