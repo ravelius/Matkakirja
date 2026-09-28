@@ -88,7 +88,12 @@ namespace Matkakirja.Natiivi
         {
             kerros = Rakenne.El("mk-himmennys mk-nosto__kerros", ui.Juuri(UiKerros.Valikot));
             kerros.style.display = DisplayStyle.None;
-            kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros) Sulje(); });
+            kerros.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (e.target != kerros) return;
+                Debug.Log($"MATKAKIRJA ui nostokortti: sulku himmennyksestä {e.position} (kortti {kortti.worldBound})");
+                Sulje();
+            });
             kortti = Rakenne.El("mk-nosto", kerros);
             sisus = new ScrollView(ScrollViewMode.Vertical);
             sisus.AddToClassList("mk-nosto__sisus");
@@ -474,6 +479,7 @@ namespace Matkakirja.Natiivi
             bool pohja = kohde == kortti || kohde == sisus || kohde == sisus.contentContainer || kohde == sisus.contentViewport || kohde is TextElement;
             if (!pohja) return;
             Aanet.PulunTehoste("paper");
+            Debug.Log($"MATKAKIRJA ui nostokortti: sulku napautuksesta kohde {kohde?.GetType().Name} {string.Join(" ", kohde?.GetClasses() ?? System.Linq.Enumerable.Empty<string>())} {e.position}");
             Sulje();
         }
 
