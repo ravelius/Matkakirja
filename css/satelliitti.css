@@ -1496,13 +1496,17 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   position: absolute;
   left: max(12px, env(safe-area-inset-left, 0px));
   top: calc(10px + env(safe-area-inset-top, 0px));
-  width: 280px;
-  max-width: calc(100vw - 32px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+  /*
+   * Leveys natiivin kanssa sama (Linssiseppä 2, 29.9.): puhelimella 320, iPadilla 360; kyydin oma ✕ (oikea
+   * yläkulma) jää vapaaksi. Sisämarginaali 12 = pelkkä 9-slice-kehys (ei lisäpaddingia), rivien väli 8.
+   */
+  width: 320px;
+  max-width: calc(100vw - 76px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 12px;
+  padding: 0;
   border: 12px solid transparent;
   border-image-source: url(../assets/iss-saatopaneeli/panel-normal.svg);
   border-image-slice: 20 fill;
@@ -1538,8 +1542,12 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   display: flex;
   align-items: center;
   min-height: 36px;
-  padding: 0 8px 0 12px;
-  background: url(../assets/iss-saatopaneeli/readout-normal.svg) center/100% 100% no-repeat;
+  /* 9-slice (sprites.json readout 10): WebKit ei venytä taustakuvana käytettyä SVG:tä kuvasuhdettaan vastaan. */
+  padding: 0 0 0 16px;
+  box-sizing: border-box;
+  border: 10px solid transparent;
+  border-image: url(../assets/iss-saatopaneeli/readout-normal.svg) 10 fill / 10px stretch;
+  background: none;
   color: rgb(93, 255, 168);
   font-size: 11px;
   line-height: 1.3;
@@ -1547,11 +1555,14 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   overflow: hidden;
 }
 .iss-kyyti-piste {
-  flex: 0 0 auto;
+  /* Piste osuu readout-kilven oman merkkivalon päälle (SVG:n x = 16/280 kilven leveydestä), ei kahta pistettä. */
+  position: absolute;
+  /* Kilven merkkivalo on x = 16/280: 9-slicessä vasen viipale 10 px, loput 6 px venyvässä keskiosassa (260). */
+  left: calc((100% - 0px) * 6 / 260 - 3.5px);
+  top: calc(50% - 3.5px);
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  margin-right: 6px;
   background: rgb(255, 86, 86);
   animation: iss-kyyti-live 0.9s ease-in-out infinite alternate;
 }
@@ -1610,19 +1621,21 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 4px;
-  background: url(../assets/iss-saatopaneeli/segment-cell-normal.svg) center/100% 100% no-repeat;
+  padding: 0 2px;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-image: url(../assets/iss-saatopaneeli/segment-cell-normal.svg) 10 fill / 8px stretch;
+  background: none;
   color: rgba(233, 250, 240, 0.8);
   font: inherit;
   font-size: 11px;
   font-weight: 650;
-  border: 0;
   cursor: pointer;
   white-space: nowrap;
 }
 .iss-kyyti-osio.iss-kyyti-valittu {
   color: rgb(93, 255, 168);
-  background-image: url(../assets/iss-saatopaneeli/segment-cell-active.svg);
+  border-image-source: url(../assets/iss-saatopaneeli/segment-cell-active.svg);
 }
 
 /* Rivi 3, Nopeus: LIVE · 10× · 100× · 1000× (segment-cell × 4). Kelauksen aikana mikään ei ole valittuna. */
@@ -1636,19 +1649,21 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 4px;
-  background: url(../assets/iss-saatopaneeli/segment-cell-normal.svg) center/100% 100% no-repeat;
+  padding: 0 2px;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-image: url(../assets/iss-saatopaneeli/segment-cell-normal.svg) 10 fill / 8px stretch;
+  background: none;
   color: rgba(233, 250, 240, 0.8);
   font: inherit;
   font-size: 11px;
   font-weight: 650;
-  border: 0;
   cursor: pointer;
   white-space: nowrap;
 }
 .iss-kyyti-nopeudet button.iss-kyyti-valittu {
   color: rgb(93, 255, 168);
-  background-image: url(../assets/iss-saatopaneeli/segment-cell-active.svg);
+  border-image-source: url(../assets/iss-saatopaneeli/segment-cell-active.svg);
 }
 
 /* Rivi 3, Kohde: "Lennä kohteen ylle…" (button-row-kilpi) ja ylilentolukema (readout-kilpi) sen alla. */
@@ -1659,12 +1674,14 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
 }
 .iss-kyyti-kohteet {
   min-height: 44px;
-  border: 0;
-  background: url(../assets/iss-saatopaneeli/button-row-normal.svg) center/100% 100% no-repeat;
+  box-sizing: border-box;
+  border: 12px solid transparent;
+  border-image: url(../assets/iss-saatopaneeli/button-row-normal.svg) 12 fill / 12px stretch;
+  background: none;
   color: rgba(233, 250, 240, 0.92);
   font: inherit;
   font-size: 12px;
-  padding: 0 26px 0 14px;
+  padding: 0 14px 0 2px;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
@@ -1673,8 +1690,11 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   min-height: 40px;
   display: flex;
   align-items: center;
-  padding: 0 10px 0 14px;
-  background: url(../assets/iss-saatopaneeli/readout-normal.svg) center/100% 100% no-repeat;
+  padding: 0 0 0 16px;
+  box-sizing: border-box;
+  border: 10px solid transparent;
+  border-image: url(../assets/iss-saatopaneeli/readout-normal.svg) 10 fill / 10px stretch;
+  background: none;
   color: rgba(233, 250, 240, 0.92);
   font-size: 12px;
 }
@@ -1940,3 +1960,7 @@ body.satelliitti-kyyti.livia-astronautti-paalla .livia-lentonayttamo { z-index: 
 }
 .astro-nakymat-nappi[hidden] { display: none; }
 body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }
+/* iPadilla leveämpi paneeli (natiivi 360 pt). */
+@media (min-width: 700px) {
+  .iss-kyyti-paneeli { width: 360px; }
+}
