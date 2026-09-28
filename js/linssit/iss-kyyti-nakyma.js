@@ -200,7 +200,14 @@ void main() {
   gl_FragColor = vec4(0.012, 0.02, 0.05, ${YON_PEITTO.toFixed(2)} * yo * uPeitto);
 }`;
 
-function rakennaKaari(pallo, luokat) {
+/**
+ * Ilmakehän kaari, usva ja yökuori. Realismimoduulin korvaa-liput
+ * (Siirtoseppä 28.9.2026, natiivin Ilmakaari- ja Yokuori-shaderit):
+ * `ilmanKaarta` jättää kaaren ja usvan rakentamatta, `ilmanYota` yökuoren.
+ * Kun kumpaakaan ei rakenneta, palauttaa null.
+ */
+function rakennaKaari(pallo, luokat, { ilmanKaarta = false, ilmanYota = false } = {}) {
+  if (ilmanKaarta && ilmanYota) return null;
   const { Mesh, Sphere, Shader, Vector3 } = luokat;
   if (!Mesh || !Sphere || !Shader || !Vector3) return null;
   const R = pallo.getGlobeRadius?.() ?? 100;
@@ -235,10 +242,10 @@ function rakennaKaari(pallo, luokat) {
     return mesh;
   };
   // three.js: FrontSide = 0, BackSide = 1.
-  const kaari = passi(KAARI_FRAGMENT, 1);
-  const usva = passi(USVA_FRAGMENT, 0);
-  const yoGeometria = new Sphere(R * YOKUOREN_SADE, 96, 48);
-  const yo = new Mesh(yoGeometria, new Shader({
+  const kaari = ilmanKaarta ? null : passi(KAARI_FRAGMENT, 1);
+  const usva = ilmanKaarta ? null : passi(USVA_FRAGMENT, 0);
+  const yoGeometria = ilmanYota ? null : new Sphere(R * YOKUOREN_SADE, 96, 48);
+  const yo = ilmanYota ? null : new Mesh(yoGeometria, new Shader({
     uniforms: { uPeitto: { value: 0 }, uAurinko: { value: new Vector3(0, 0, 1) } },
     vertexShader: KAAREN_VERTEX,
     fragmentShader: YO_FRAGMENT,
@@ -246,15 +253,17 @@ function rakennaKaari(pallo, luokat) {
     depthWrite: false,
     side: 0,
   }));
-  yo.renderOrder = YOKUOREN_JARJESTYS;
-  yo.visible = false;
-  yo.userData.issKyyti = true;
-  pallo.scene().add(yo);
-  const kaikki = [yo, kaari, usva];
+  if (yo) {
+    yo.renderOrder = YOKUOREN_JARJESTYS;
+    yo.visible = false;
+    yo.userData.issKyyti = true;
+    pallo.scene().add(yo);
+  }
+  const kaikki = [yo, kaari, usva].filter(Boolean);
   let aurinkoLaskettu = -Infinity;
   return {
     /** Auringon suunta näyttämössä (uAurinko, yksikkövektori). */
-    aurinko: () => kaari.material.uniforms.uAurinko.value,
+    aurinko: () => kaikki[0].material.uniforms.uAurinko.value,
     aseta(osuus, ms) {
       const nakyy = osuus > 0.001;
       for (const o of kaikki) o.visible = nakyy;
@@ -273,8 +282,8 @@ function rakennaKaari(pallo, luokat) {
         o.parent?.remove(o);
         o.material?.dispose?.();
       }
-      geometria.dispose?.();
-      yoGeometria.dispose?.();
+      if (kaari) geometria.dispose?.();
+      yoGeometria?.dispose?.();
     },
   };
 }
@@ -486,7 +495,10 @@ async function nasaKoeKangas(k, ikkuna) {
  * @param {() => void} p.ennenKyytia avausajo ja seuranta pois
  * @param {(korkeus: number) => void} p.kyytiPaattyi kameran korkeus paluun jälkeen
  * @param {object|null} p.realismi Siirtosepän realismimoduuli (js/linssit/iss-realismi.js):
- *   rakenna({ pallo, luokat, metri, R }), paivita({ osuus, ms, tila, iss, silma, kamera }), pura()
+ *   rakenna({ pallo, luokat, metri, R }), paivita({ osuus, ms, tila, iss, silma, kamera }), pura();
+ *   korvaa = { kaari, yokuori, pilvet }: näkymä ei rakenna kaarta+usvaa / yökuorta, ja astro-sumun pilvikuori
+ *   piilotetaan kyydin ajaksi (avaruussumun häivytys jää). Realismi piirtää omansa järjestyksillä
+ *   KAAREN_JARJESTYS, YOKUOREN_JARJESTYS ja 2 (pilvet) ja laskee auringon itse.
  * @param {object} p.kello simuloitu kello (iss-rata.js SIMUKELLO)
  */
 export function luoIssKyytiNakyma({
@@ -521,6 +533,13 @@ export function luoIssKyytiNakyma({
   let koe = null;
   const mittari = { kehyksia: 0, kuvaMs: 0, kuvaMsMax: 0, realismiVirheita: 0 };
 
+  // Realismin korvaa.pilvet: astro-sumun pilvikuori pois kyydin ajaksi (visible-lippu; vain muutoksessa).
+  let omatPilvetPiilossa = false;
+  const asetaOmatPilvet = (piiloon) => {
+    if (piiloon === omatPilvetPiilossa) return;
+    omatPilvetPiilossa = piiloon;
+    sumu?.piilotaPilvet?.(piiloon);
+  };
   const realismiKutsu = (nimi, arg) => {
     if (!realismi?.[nimi]) return;
     try { realismi[nimi](arg); } catch (e) {
@@ -757,7 +776,13 @@ export function luoIssKyytiNakyma({
     };
     if (ohjaimet) ohjaimet.enabled = false;
     if (!luokat) luokat = etsiLuokat(pallo);
-    if (!kaari) { try { kaari = rakennaKaari(pallo, luokat); } catch { kaari = null; } }
+    if (!kaari) {
+      try {
+        kaari = rakennaKaari(pallo, luokat, {
+          ilmanKaarta: Boolean(realismi?.korvaa?.kaari), ilmanYota: Boolean(realismi?.korvaa?.yokuori),
+        });
+      } catch { kaari = null; }
+    }
     if (!malli) { try { malli = rakennaMalli(pallo, luokat); } catch { malli = null; } }
     if (!realismiRakennettu && luokat) {
       realismiRakennettu = true;
@@ -918,6 +943,7 @@ export function luoIssKyytiNakyma({
       osuus = tavoite > osuus ? Math.min(tavoite, osuus + askel) : Math.max(tavoite, osuus - askel);
     }
     sumu?.kyyti?.(osuus);
+    if (realismi?.korvaa?.pilvet) asetaOmatPilvet(osuus > 0);
     kaari?.aseta(osuus, ms);
     if (osuus > 0.5) asetaHehku(true);
     else asetaHehku(false);
@@ -1041,6 +1067,7 @@ export function luoIssKyytiNakyma({
       simu.palaaLive({ vahennetty: true });
       asetaHehku(false);
       sumu?.kyyti?.(0);
+      asetaOmatPilvet(false);
       kaari?.pura?.();
       malli?.pura?.();
       koe?.kahva?.pura?.();

@@ -260,6 +260,47 @@ function valePallo() {
   };
 }
 
+test('realismikoukut: korvaa.kaari/yokuori/pilvet ohittavat omat kuoret, ilman korvausta kaikki kolme', async () => {
+  const { luoIssKyytiNakyma, KAAREN_JARJESTYS, YOKUOREN_JARJESTYS } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  const { luoIssNyt, luoSimukello } = await import('../js/linssit/iss-rata.js');
+  // Valenäyttämö, josta etsiLuokat löytää three-luokat (pallon SphereGeometry + ShaderMaterial).
+  class V3 { constructor(x = 0, y = 0, z = 0) { this.x = x; this.y = y; this.z = z; } set(a, b, c) { this.x = a; this.y = b; this.z = c; return this; } }
+  class Pallo { constructor(r) { this.type = 'SphereGeometry'; this.parameters = { radius: r }; } dispose() {} }
+  class Varjostin { constructor(o) { Object.assign(this, o); this.type = 'ShaderMaterial'; } dispose() {} }
+  class Mesh { constructor(g, m) { this.geometry = g; this.material = m; this.isMesh = true; this.userData = {}; this.scale = { x: 1 }; } }
+  const ajo = (korvaa) => {
+    const pallo = valePallo();
+    const cam = pallo.camera();
+    cam.position = new V3(0, 0, 400);
+    const lisatyt = [];
+    const pinta = new Mesh(new Pallo(100), new Varjostin({}));
+    pallo.scene = () => ({ traverse: (f) => f(pinta), add: (o) => { lisatyt.push(o); o.parent = { remove() {} }; } });
+    const piilotukset = [];
+    const sumu = { kyyti() {}, piilotaPilvet: (k) => { piilotukset.push(k); return true; } };
+    const doc = { createElement: () => valeElementti(), body: valeElementti() };
+    let r = Date.UTC(2026, 8, 28, 9);
+    const n = luoIssKyytiNakyma({
+      pallo, sumu, issNyt: luoIssNyt(), kello: luoSimukello({ reaali: () => r }), reduced: true,
+      ikkuna: { document: doc, performance: { now: () => r }, innerWidth: 393, innerHeight: 852, location: { search: '' }, Image: class { set src(v) { this.s = v; } } },
+      realismi: { korvaa, rakenna() {}, paivita() {}, pura() {} },
+    });
+    assert.ok(n.napauta());
+    for (let i = 1; i <= 5; i += 1) { r += 500; n.paivita(i * 500); }
+    const jarjestykset = lisatyt.map((o) => o.renderOrder);
+    n.pura();
+    return {
+      kaaria: jarjestykset.filter((j) => j === KAAREN_JARJESTYS).length,
+      yota: jarjestykset.filter((j) => j === YOKUOREN_JARJESTYS).length,
+      piilotukset,
+    };
+  };
+  assert.deepEqual(ajo(undefined), { kaaria: 2, yota: 1, piilotukset: [] }, 'realismi ilman korvausta: kaari, usva, yökuori');
+  assert.deepEqual(ajo({ kaari: true }), { kaaria: 0, yota: 1, piilotukset: [] });
+  assert.deepEqual(ajo({ yokuori: true }), { kaaria: 2, yota: 0, piilotukset: [] });
+  assert.deepEqual(ajo({ kaari: true, yokuori: true, pilvet: true }), { kaaria: 0, yota: 0, piilotukset: [true, false] },
+    'pilvikuori piiloon kyydin ajaksi ja takaisin sulkiessa');
+});
+
 test('realismikoukut: rakenna kerran, paivita joka kehys simuloidulla ajalla, pura', async () => {
   const { luoIssKyytiNakyma, YOKUOREN_JARJESTYS } = await import('../js/linssit/iss-kyyti-nakyma.js');
   const { luoIssNyt, luoSimukello } = await import('../js/linssit/iss-rata.js');
