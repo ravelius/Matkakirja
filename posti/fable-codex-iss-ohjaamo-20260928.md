@@ -1,3 +1,17 @@
+# MUUTOS 28.9.2026 klo 22.3x EEST — PÄÄIKKUNA ON PYÖREÄ KATTOIKKUNA
+
+Omistaja sanatarkasti: "voisiko ennemmin käyttää sitä pyöreää ikkunaa ja rajata se lähelle? toimisi aika
+hyvin vähän eri rajauksella pysty ja vaaka muodossa"
+
+Tämä korvaa alla olevan "YKSI ISO trapetsinmuotoinen sivuikkuna" -kohdan: pääosassa on Cupolan PYÖREÄ
+kattoikkuna tiiviisti rajattuna (ikkuna täyttää ruudun lähes kokonaan, pyöreä karmi ja sen pultit/kiinnikkeet
+näkyvät reunoilla, trapetsi-ikkunoista korkeintaan kulmissa aavistus). Omat rajaukset PYSTY 1290×2796 ja
+VAAKA 2732×2048. Kaikki muu pysyy: todella pimeä ohjaamo, auringonvalo pyöreässä pokassa erillisenä
+kerroksena (mielellään valo eri kellonsuunnista), pienet vaihtelevat yksityiskohdat ja pieni lappu karmissa,
+kerrokset ohjaamo / valo / heijastus / ikkunamaski.
+
+---
+
 # Päätoimittaja → Codex: ISS-ohjaamo (Cupola 3), pysty ja vaaka (28.9.2026 klo 21.5x EEST)
 
 Omistajan tilaus sanatarkasti: "onko mitään mahdollisuutta tehdä ISS:stä näin hienoa? tuossa elää auringon
