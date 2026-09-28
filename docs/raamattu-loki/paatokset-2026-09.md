@@ -8863,3 +8863,7 @@ Omistaja 28.9. klo 21.15 TF 1.0.39:n Cupola-kaappauksella (Dardanellit, pilvet p
 ## OMISTAJA: ISS-SIIRTYMÄ PAIKKOJEN VÄLILLÄ ENINTÄÄN 5 S (28.9.2026 klo 21.16)
 
 Omistaja 28.9. klo 21.16 sanatarkasti: "Ja siirtymä paikkojen välillä ei saa kestää yli 5sek pidempään" → Linssiseppä 2: jokainen Lennä kohteen ylle -siirtymä (myös Oma sijainti ja paluu LIVEen) ≤ 5 s etäisyydestä riippumatta; pisin mitataan laitteella. Sama raja webin ISS-kyytiin (Siirtoseppä).
+
+## OMISTAJA: ISS-SÄÄTÖPANEELI MODULAARISISTA ELEMENTEISTÄ — CODEXILTA (28.9.2026 klo 21.18)
+
+Omistaja 28.9. klo 21.18 sanatarkasti: "Säätimet voisi olla ISS säätöpaneelissa. Tilaa codexilta. Voisi olla muutama modulaarinen elementti mitä voidaan yhdistellä ja monistaa tarpeen mukaan" → Codexille posti/fable-codex-iss-saatopaneeli-20260928.md (292279232): 9-slice-paneeli, liukusäädin, segmenttinappi, valikkorivi, lukemakilpi, sulkunappi (tilat perus/aktiivinen/pois), ISS-paneelien henki nykyisellä vihreällä korostuksella, kevyt (≤ 45 % ruudusta, piilotettava), SVG+PNG @2x/@3x + HTML-esikatselu; vastaus codex-fable-iss-saatopaneeli-20260928.md. Linssiseppä 2 tekee toiminnot nyt vaihdettavan nahan varaan; web Siirtoseppä.
