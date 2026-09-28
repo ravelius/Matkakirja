@@ -8663,3 +8663,7 @@ Omistaja 28.9. sanatarkasti: "en tarvitse enää konetta". Kevyt lippu pois (Jul
 ## OMISTAJA: ALOITUSLENTO V3F2 — PAIVA AIEMMIN; PAATOIMITTAJA: KAUPUNKILEHDEN PIKKUKUVAT (28.9.2026 klo 15.23)
 
 Omistaja 28.9. klo 15.3x kortilla v3f2:sta sanatarkasti: "päivä voisi tulla aiemmin" → Natiiviseppa uusi versio (paivanvalo lennolla aiemmin), junaan vasta omistajan OK:n jalkeen. Paatoimittaja (Pelikoodarin kysymys, kuvalahteet-savuke Pariisi): kaupunkilehden osiohakemiston pikkukuvat pysyvat navigointina osioon, mutta jokainen pikkukuvan kuva nakyy osiossa lahderiveineen (puuttuvat lahteet korjataan); muuten lahde pikkukuvan kuvaukseen. #3565 (nostokortin oma regressio #3388 + kohdevalinnan savuke #3364:n mukaan) Julkaisijalla.
+
+## OMISTAJA: ISS-KYYDIN KAUPUNKIEN VALOT 60 % (28.9.2026 klo 15.28)
+
+Omistaja 28.9. klo 15.4x kortilla (Linssiseppa cl6: 100 | 80 | 60 %): 60 % — suurkaupunkien ytimet eivat pala puhki, valoverkko nakyy kuten astronauttien yokuvissa. Natiivi 1.0.37 ja web samalla arvolla.
