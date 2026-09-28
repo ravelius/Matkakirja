@@ -9007,3 +9007,7 @@ Omistaja 28.9. klo 23.19 näytti kuvan tietokirjan linnan poikkileikkausaukeamas
 ## OMISTAJA: POIKKILEIKKAUSLINSSI — KONSEPTIKUVA JA LINSSIKATALOGIIN (28.9.2026 klo 23.26)
 
 Omistaja 28.9. klo 23.26 sanatarkasti: "tilaa konseptikuva ja siirrä idea kuvineen linssi idea sivulle" → Codexille posti/fable-codex-poikkileikkauslinssi-konsepti-20260928.md (fb8822f92): Olavinlinna aukileikattuna, vaaka 2732×2048 (+ pystyrajaus), numeroidut napautuskohdat, tyylireferenssi vain tyyliin (ei kopioida), avaruuskävelyn jälkeen. Sisältökirjuri: linssikatalogiin E11 'Poikkileikkaus: linna aukileikattuna' (esitysmoottori, tila idea) md + linssikatalogi-data.js; Codexin konseptikuva kuvaksi kun valmis. Omistajan referenssikuvaa (kirjan aukeama) ei julkiseen sivuun tekijänoikeuden vuoksi.
+
+## OMISTAJA: SONNET RAJATTUIHIN TEHTÄVIIN ALI-AGENTTINA (28.9.2026 klo 23.30)
+
+Omistaja 28.9. klo 23.30 sanatarkasti: "sonnetteja voisi käyttää nyt enemmän, koska ovat periaatteessa yhtä hyviä kuin opus, ainoa ero on konteksti ikkuna ja pitkäkestoisuus. mutta rajattuihin juttuihin kannattaa melkein aina ottaa nyt sonnet vaikka ongelma olisi haastava." Kortilla: 'Kyllä, kaikille rooleille'. Linjaus: roolisessiot Opuksella pitkinä linjoina, rajatut tehtävät (myös haastavat bugiselvitykset) Sonnet 5.5 -ali-agentille (effort high/max), rooli todentaa ja julkaisee; ali-agentti ei käytä simulaattoreita, käännöspalvelua eikä tuotannon workeria. Raamattuun (#3527 haara raamattu-pienennys-20260928). Ensimmäinen koe: Natiivi-UI:n striimibugin juurisyy Sonnet-ali-agentilla.
