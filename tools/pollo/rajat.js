@@ -475,11 +475,18 @@ export function tyhjanSyy({ virhe = null, stop = null } = {}) {
  * Pulun vastaukset ovat lyhyitä, joten ajattelu suljetaan siellä, missä
  * malli sen sallii. Mallit, joilla ajattelua ei voi sulkea (Fable,
  * Mythos, Opus 5.5: `disabled` = 400), ajavat pienimmällä vaivalla.
+ * Sonnet 5.5 (omistaja 28.9.2026: "pulu pitää päivittää tähän myös")
+ * hylkää myös `disabled`-tilan, mutta sen pienin tila on `between_tools`:
+ * ajattelua vain työkalukutsujen välissä, ja Pululla työkaluja ei ole.
+ * Mitattu paikallisella workerilla viidellä Pulu-kysymyksellä: ensimmäinen
+ * pala mediaanina 1,2 s (Sonnet 5 disabled 2,8 s); effort low ajatteli
+ * ennen vastausta (5,4 s) ja jätti yhden vastauksen tyhjäksi.
  * Haiku 4.5 ei ajattele ilman pyyntöä eikä hyväksy effort-kenttää.
  */
 export function ajatteluKentat(malli) {
   const m = String(malli ?? '');
   if (/haiku|claude-3/.test(m)) return {};
+  if (/sonnet-5-5/.test(m)) return { thinking: { type: 'between_tools' } };
   if (/fable|mythos|opus-5-5/.test(m)) return { output_config: { effort: 'low' } };
   return { thinking: { type: 'disabled' } };
 }

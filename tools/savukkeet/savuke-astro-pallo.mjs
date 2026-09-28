@@ -707,7 +707,9 @@ async function ajaNakyma(nimi) {
   });
   vaadi(t('53b: ennen kosketusta ISS pysyy ruudun keskellä ja Maa pyörii sen alla'),
     issKeskella.seuranta === true && issKeskella.naytteet.length >= 4
-      && issKeskella.naytteet.every((d) => d <= 6) && issKeskella.liike > 0.2,
+      // Todellinen rata (28.9.2026, js/linssit/iss-rata.js): asema kulkee
+      // ~0,064 °/s, joten 2,4 s:ssa kamera siirtyy ~0,15° (ennen 0,1 × 4,8 °/s).
+      && issKeskella.naytteet.every((d) => d <= 6) && issKeskella.liike > 0.03,
     JSON.stringify(issKeskella));
   vaadi(t('avausajo on käynnissä ja pallo näkyy ensin kokonaan'),
     alku?.avausajo?.kaynnissa === true && alku.avausajo.osuus < 0.6
@@ -828,7 +830,8 @@ async function ajaNakyma(nimi) {
    * Pysähtyminen otteeseen on seuraavan väitteen asia.
    */
   vaadi(t('pallo pyörii ajon jälkeen (ISS-seuranta tai autoRotate)'),
-    loppu.pyorii === true && nopeus > 0.05 && nopeus < 1.5,
+    // Todellisella radalla seuranta kiertää ~0,02–0,1 °/s pituusasteessa.
+    loppu.pyorii === true && nopeus > 0.01 && nopeus < 1.5,
     `${a1.toFixed(3)}° → ${a2.toFixed(3)}° = ${nopeus.toFixed(3)} °/s`
     + ` (seuranta ${loppu.issSeuranta}; kirjaston autoRotateSpeed ${loppu.pyorimisenNopeus})`);
   /*
