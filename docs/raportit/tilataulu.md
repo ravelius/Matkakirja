@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 11:57 EEST — **Kierto normaali uudella mittarilla: koodaus-CPU 244% (raja 800%), idle 63%.** Natiivi-UI nollautui (72%→9%). Juna-vahti havaitsi jumin (natiivi-ui-käännökset 11:19) ja korjasi sen itse 11:37 (Unity-puu tapettu, lukko vapautui) — ei toimenpidettä tarvita.
+**Päivitetty:** 2026-09-28 12:10 EEST — **Kierto normaali. Koodaus-CPU 513,9% (raja 800%, nousussa mutta ei ylitä). Effort-tarkistus OK.** Juna-vahti korjasi toisen jumin itse (linssiseppa-käännökset 11:38→11:58). Uusi postilaatikkoviesti (Codex→Linssiseppä: ISS Cupola 2 -kuvat).
 
 ## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
 
@@ -20,17 +20,17 @@ Aamupäivän kuormasekaannus (load1 61→216→...→104) selvitetty ja korjattu
 
 ## 1) Sessiot
 
-Natiivi-UI nollautui (72%→9%). Kaikki kontekstit alle kynnyksen (korkein Sisältökirjuri 57%).
+Kaikki kontekstit alle kynnyksen. **Postivahti (self) 69% — ei koske kynnystä, mutta lähestyy luovutusrajaa (85-90%), seurataan.**
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 18% | running |
-| Postivahti (self) | (tämä sessio) | 67% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 33% | running |
+| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 20% | running |
+| Postivahti (self) | (tämä sessio) | 69% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 34% | running |
 | Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 43% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 49% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 9% (nollautunut) | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 49% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 55% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 9% | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 50% | running |
 | Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 46% | running |
 | Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 39% | running |
 | Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 57% | running |
@@ -60,9 +60,9 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). **Postilaatikko 11:25: uusi viesti** — `posti/linssiseppa-codexille-cupola-20260928.md` (Linssiseppä→Codex: ISS Cupola 2, omistajan tilaus 28.9. tumma sisätila + ISS:n ulko-osat siluetteina). Ilmoitettu Päätoimittajalle.
+Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). **Postilaatikko 12:08: uusi viesti** — `posti/codex-linssiseppa-cupola2-20260928.md` (Codex→Linssiseppä: ISS Cupola 2 -kuvat toimitettu). Ilmoitettu Päätoimittajalle.
 
-**Juna toimii normaalisti** — käänsi buildin 18382165 11:17. Tauon lippu ei ole palautunut. Julkaisulippu poissa. **Kevyt-tilan lippu `/tmp/matkakirja-kevyt` päällä** (savukkeet 2 rinnakkain, luotu 11:01).
+**Juna toimii normaalisti** — 25379266 ennallaan 12:00. Juna-vahti korjasi 2. jumin itse (linssiseppa-käännökset 11:38→11:58, Unity-puu tapettu). Tauon lippu ei ole palautunut. **Julkaisulippu päällä** (aikaleima 12:08, sallittu).
 
 **HUOM:** Fablen session nimi on nyt **Päätoimittaja (Opus, xhigh)** (sama id local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31). "Fable" ohjeissa = Päätoimittaja.
 
@@ -90,19 +90,19 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (11:57)
+## 5) Resurssit (12:10)
 
-- **5 h -kiintiö:** 0 % (nollautui). **Viikko (kaikki mallit): 19 %.** **Viikko (Päätoimittaja):** 0 %.
+- **5 h -kiintiö:** 3 %. **Viikko (kaikki mallit): 20 %.** **Viikko (Päätoimittaja):** 0 %.
 - **Levy:** 140 Gi vapaana, hyvä puskuri.
 - **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0 (päiväraja 1).
-- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 11:38). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** kaikki alle kynnyksen — Natiivi-UI nollautui (9%). Postivahti (self) 67%, ei koske kynnystä mutta seurataan omaa nollaustarvetta.
-- **Claude-kuorma (uusi mittari klo 17 asti, raja 800%/5min):** koodaus-CPU 244%, idle 63% — ei hälytystä.
-- **Juna-vahti:** havaitsi ja korjasi jumin itse 11:37 (natiivi-ui-käännökset, Unity-puu tapettu) — ei toimenpidettä.
+- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 12:08). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** kaikki alle kynnyksen. Postivahti (self) 69%.
+- **Claude-kuorma (uusi mittari klo 17 asti, raja 800%/5min):** koodaus-CPU 513,9%, idle 52,6% — nousussa mutta ei hälytystä.
+- **Juna-vahti:** korjasi 2. jumin itse 11:37 ja 11:58 (molemmat käännökset, Unity-puu tapettu) — ei toimenpidettä.
 - **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
-- **Effort-tarkistus (7 Opus-roolia):** ei tehty tällä kierroksella (kuormaselvitys vei ajan) — seuraavalla kierroksella.
+- **Effort-tarkistus (7 Opus-roolia):** tehty 12:10 — kaikki OK, ei poikkeamia.
 - **Lokisiivouskandidaatteja:** ei tällä kierroksella.
-- **Postilaatikko:** EI UUTTA.
+- **Postilaatikko:** 1 uusi viesti (Codex→Linssiseppä: ISS Cupola 2 -kuvat) — ilmoitettu.
 - **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
