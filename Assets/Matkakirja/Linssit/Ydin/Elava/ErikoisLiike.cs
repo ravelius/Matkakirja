@@ -73,6 +73,12 @@ namespace Matkakirja.Linssit.Elava
             "cesky-krumlov" => new CeskyKrumlovLiike(id),
             "malbork" => new MalborkLiike(id),
             "pannonhalma" => new PannonhalmaLiike(id),
+            "nidaros" => new NidarosLiike(id),
+            "kronborg" => new KronborgLiike(id),
+            "visby" => new VisbyLiike(id),
+            "olavinlinna" => new OlavinlinnaLiike(id),
+            "geysir" => new GeysirLiike(id),
+            "newgrange" => new NewgrangeLiike(id),
             _ => null,
         };
 
