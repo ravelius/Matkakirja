@@ -8739,3 +8739,7 @@ Omistaja 28.9. klo 18.0x sanatarkasti: "Pulun ääneen tuo on ainakin paljon par
 ## OMISTAJA: PULUN STRIIMIAANI ELEVENLABS V4:AAN (28.9.2026 klo 17.58)
 
 Omistaja 28.9. klo 18.1x sanatarkasti: "Pulun voi ainakin jo vaihtaa striimi ääneksi." → Pelikoodari: Pulun striimipuhe (chat + puhekeskustelu) xAI → ElevenLabs v4 Pulun omalla aanella (Flicker) tunnetagein; malli workerin asetuksena, oletus v4 Turbo jos yksi vertailunayte kuulostaa samalta (kampanja 0,011 $ / 1000 mrk 12.10. asti, sitten 0,04 $; v4 0,022 $ → 0,08 $), muuten v4. Avain vain workerissa, paivakatto, valimuisti ennallaan. Nostojen ja isoisan luenta ennallaan (isoisan v4-nayte omistajalla).
+
+## OMISTAJA: PULU V4 TURBO; CUPOLAN AJELEHDUS JA ISS-NOPEUTUS NATIIVISSA HYVAKSYTTY; ISOISA KOLMELLA AANELLA (28.9.2026 klo 18.00)
+
+Omistaja 28.9. klo 18.2x kortilla: Pulun striimiaani ElevenLabs v4 Turbo (1. tavu 386 ms); Cupolan painoton ajelehdus (Linssiseppa f4eb4d34) ja ISS-nopeutus + kohdevalikko natiivissa (49f4a21b) hyvaksytty 1.0.38:aan. Sanatarkasti: "Generoi isoisää jollain toisella äänellä. Koita keksiä, mikä sopisi isoisäälle. Tee sama pätkä vaikka kolmella eri äänellä." → Pelikoodari: isoisa-pariisi v4:lla kolmella uudella aanella (vanhempi lampima tarinankertoja), voimakkuus pelin tasolle, 3 kutsua.
