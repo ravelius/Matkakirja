@@ -5014,6 +5014,12 @@ function kohteenIhmekuva(kohde) {
   return {
     osoite: ihme.osoite,
     selite: ihme.selite ?? '',
+    /*
+     * LYHYT KUVATEKSTI kortin ja nähtävyysjutun kuvan alle (Natiivi-UI:n
+     * löydös 28.9.2026: web näytti koko pitkän selitteen, natiivi lyhyen).
+     * Pitkä selite jää suurennokseen (js/kuvatekstit.js).
+     */
+    ...(ihme.lyhyt ? { lyhyt: ihme.lyhyt } : {}),
     lahde: ihme.lahde ?? '',
     /*
      * FAKTALÄHTEEN OSOITE kulkee kuvan mukana samalla nimellä kuin

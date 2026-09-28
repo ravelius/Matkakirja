@@ -40,3 +40,13 @@ test('nähtävyysikkunan ihme ei kanna enää nappitekstiä', () => {
   assert.equal(ihme.kadonnut, false);
   assert.equal('nappi' in ihme, false);
 });
+
+test('ihmekuvan alla lyhyt kuvateksti, pitkä selite suurennokseen (Natiivi-UI:n löydös 28.9.2026)', async () => {
+  const { kuvatekstiLyhyt, kuvatekstiPitka } = await import('../js/kuvatekstit.js');
+  const kuva = kohteenKuvalista(olympia)[0];
+  assert.match(kuvatekstiLyhyt(kuva), /^Feidiaan 12,4-metrinen Zeus-patsas/);
+  assert.equal(kuvatekstiPitka(kuva), olympia.ihme.selite);
+  assert.equal(kuvatekstiLyhyt(matkakirjanIhme('Olympia')), olympia.ihme.lyhyt, 'nähtävyysikkuna samoin');
+  const ilman = kohteenKuvalista({ ihme: { osoite: 'a.webp', selite: 'Pitkä.' } })[0];
+  assert.equal(kuvatekstiLyhyt(ilman), 'Pitkä.', 'ilman lyhyttä pitkä kelpaa');
+});
