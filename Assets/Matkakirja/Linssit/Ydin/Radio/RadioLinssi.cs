@@ -51,6 +51,19 @@ namespace Matkakirja.Linssit.Radio
         float Voimakkuus { set; }
     }
 
+    /// <summary>Radion tehosteäänet (Pelikoodarin äänet 29.9.2026, omistaja: "viritysääni jo on, mutta muut voisi tuottaa").</summary>
+    public enum RadioEfekti { KytkinPaalle, KytkinPois, Lampeneminen, Lukittuminen }
+
+    /// <summary>
+    /// Tehosteet ja asemien välin kohinasilmukka (Unityssä RadioEfektit, äänet Resources/RadioAanet). Kohina = silmukan taso
+    /// 0…1 (viivaimen veto asemien välissä); toteutus pehmentää muutokset.
+    /// </summary>
+    public interface IRadioEfektit
+    {
+        void Soita(RadioEfekti efekti, float voimakkuus);
+        float Kohina { set; }
+    }
+
     /// <summary>Kartan radiotila (Natiivisepän KaupunkiMerkit + IKamera.KaupunkiNapautettu).</summary>
     public interface IRadioKartta
     {
@@ -183,6 +196,8 @@ namespace Matkakirja.Linssit.Radio
 
         /// <summary>Mastojen piirto (Natiiviseppä); null = ei mastoja (vanha käännös, testit ilman piirtoa).</summary>
         public IRadioMastot Mastot3D;
+        /// <summary>Tehosteäänet (null = ei tehosteita, kuten testeissä ilman Unityä).</summary>
+        public IRadioEfektit Efektit;
         readonly List<Masto> mastot = new List<Masto>();
         readonly Dictionary<string, double> nousunViive = new Dictionary<string, double>();
         readonly MastonKirkkaus kirkkaus = new MastonKirkkaus();
@@ -526,12 +541,16 @@ namespace Matkakirja.Linssit.Radio
             AvaaMastot();
             NapitMuuttuivat?.Invoke();
             if (viritin != null) viritin.Voimakkuus = aani;
+            // Virtakytkin ja putkiradion lämpeneminen (Pelikoodarin äänet).
+            Efektit?.Soita(RadioEfekti.KytkinPaalle, aani);
+            Efektit?.Soita(RadioEfekti.Lampeneminen, aani);
             AsetaHiljaa();
         }
 
         public void Sulje()
         {
             if (!Auki) return;
+            if (Efektit != null) { Efektit.Kohina = 0; Efektit.Soita(RadioEfekti.KytkinPois, aani); }
             LopetaAani(PysaytyksenHaiveS);
             SuljeMastot();
             Auki = false;
@@ -654,6 +673,8 @@ namespace Matkakirja.Linssit.Radio
             if (!vetaa) return;
             var (lahetys, rahina) = Mastot.Rahina(e);
             if (viritin != null) viritin.Voimakkuus = (float)(aani * rahina);
+            // Asemien välissä kohinasilmukka voimistuu viritysäänen rinnalla (Pelikoodari: "voimistuu kun asteikko asemien välissä").
+            if (Efektit != null) Efektit.Kohina = (float)(aani * rahina);
             if (lukittu && virta != null) virta.Voimakkuus = VirranTaso = (float)(aani * lahetys);
         }
 
@@ -665,6 +686,7 @@ namespace Matkakirja.Linssit.Radio
         {
             if (!vetaa) return;
             vetaa = false;
+            if (Efektit != null) Efektit.Kohina = 0;
             if (lahin != null && lahin == soiva && lukittu)
             {
                 // Lukituksen ramppi jatkuu nykyisestä tasosta (Nouseva⁻¹), ettei taso hyppää.
@@ -776,6 +798,7 @@ namespace Matkakirja.Linssit.Radio
                 if (!lukittu && kuuluu && t >= LukitusAikaisintaanMs && !vetaa)
                 {
                     lukittu = true;
+                    if (!Tauolla) Efektit?.Soita(RadioEfekti.Lukittuminen, aani);
                     lukittuHetki = Nyt;
                     viritin?.Lopeta(LukituksenHaivytysS);
                     Vaihe(ViritysVaihe.Lukittuu);

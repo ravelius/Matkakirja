@@ -871,6 +871,8 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Radio.RadioLinssi linssi;
             RadioVirta virta;
             RadioViritin viritin;
+            /// <summary>Tehosteet elävät linssin yli (sulun kytkinääni ehtii soida loppuun).</summary>
+            RadioEfektit efektit;
             Kartta kartta;
 
             public RadioSovitin(LinssiOhjain o, Matkakirja.Linssit.Radio.RadioAineisto a) { this.o = o; aineisto = a; }
@@ -905,6 +907,8 @@ namespace Matkakirja.Natiivi
                 kartta = new Kartta(o.kierto);
                 linssi = new Matkakirja.Linssit.Radio.RadioLinssi(aineisto, virta, viritin, kartta,
                     Matkakirja.Linssit.Radio.RadioAineisto.Pistefontti);
+                if (efektit == null) efektit = RadioEfektit.Luo(o.transform);
+                linssi.Efektit = efektit;
                 // Pelaajan kaupunki näkyy aina radiotilassa (web sääntö 1).
                 linssi.Sijainti = () => PeliOhjain.Instanssi?.PelaajanKaupunki;
                 // Esikuuntelu (Natiivisepän ehto 4): ei kuumana eikä virransäästössä (Lampo.Kuuma, sama kuin Esilataaja.Seis).

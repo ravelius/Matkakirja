@@ -367,6 +367,40 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi voimakkuus: " + v.V);
         }
 
+        sealed class ValeEfektit : IRadioEfektit
+        {
+            public readonly List<RadioEfekti> Soitetut = new List<RadioEfekti>();
+            public float K;
+            public void Soita(RadioEfekti e, float v) => Soitetut.Add(e);
+            public float Kohina { set => K = value; }
+        }
+
+        // Pelikoodarin äänet (29.9.2026): kytkin ja lämpeneminen avatessa, lukittuminen asemalle, kohina vedon välissä, kytkin pois.
+        [Testi] static void TehosteetKytkimestaLukitukseen()
+        {
+            var y = new ValeYmparisto();
+            var v = new ValeVirta();
+            var k = new ValeRadioKartta();
+            var e = new ValeEfektit();
+            var l = new RadioLinssi(S(), v, new ValeViritin(), k, Fontti()) { Efektit = e };
+            l.Avaa(y);
+            Oleta.Tosi(e.Soitetut.SequenceEqual(new[] { RadioEfekti.KytkinPaalle, RadioEfekti.Lampeneminen }), "avaus: " + string.Join(",", e.Soitetut));
+            k.Napauta("helsinki");
+            v.Kuuluu = true;
+            Aja(l, y, 3.5);
+            Oleta.Sama(1, e.Soitetut.Count(x => x == RadioEfekti.Lukittuminen), "lukittuminen kerran");
+            l.VetoAlkaa();
+            l.Veto(0.25);
+            Oleta.Tosi(e.K > 0.5f, "asemien välissä kohina: " + e.K);
+            l.Veto(0);
+            Oleta.Tosi(e.K < 1e-4f, "asemalla ei kohinaa");
+            l.Veto(0.2);
+            l.VetoLoppuu("helsinki");
+            Oleta.Sama(0f, e.K, "irrotus hiljentää kohinan");
+            l.Sulje();
+            Oleta.Sama(RadioEfekti.KytkinPois, e.Soitetut[e.Soitetut.Count - 1], "sulku");
+        }
+
         [Testi] static void ViivaimenVetoRahinallaJaLukitus()
         {
             // Radiouudistus (suunnitelma luku 7): veto → rahina asteikkoetäisyyden mukaan, irrotus lukitsee.
