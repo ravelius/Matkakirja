@@ -187,23 +187,31 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Avaruuden tausta suoraan pallon kameraan (KarttaKerrokset.Taustavari lukee Camera.mainin, joka on null elävän
-        /// kerroksen tilassa: laite vuosi2 28.9. näytti pelin ruskean taustan). Pidetään voimassa joka kehys.
+        /// Avaruuden tausta pallon kameraan. Aurinko.cs kirjoittaa kameran taustan joka kehys (perustausta + horisonttiusva),
+        /// ellei KarttaKerrokset.OmaTausta ole voimassa, ja Taustavari asettaa sen vain, kun Camera.main löytyy (elävän
+        /// kerroksen tilassa null: laite vuosi2/vuosi3 28.9. näytti pelin ruskean taustan). Siksi: Taustavari aina (usva
+        /// väistyy, kun se onnistuu) ja lisäksi tausta asetetaan juuri ennen kameran piirtoa (beginCameraRendering).
         /// </summary>
         void AsetaTausta(bool paalla)
         {
             if (kamera == null) { var k = FindAnyObjectByType<PalloKierto>(); kamera = k != null ? k.GetComponent<Camera>() : Camera.main; }
-            if (kamera == null) return;
-            if (paalla)
-            {
-                if (!alkuperainenTausta.HasValue) alkuperainenTausta = kamera.backgroundColor;
-                kamera.backgroundColor = Tausta;
-            }
-            else if (alkuperainenTausta.HasValue)
-            {
-                kamera.backgroundColor = alkuperainenTausta.Value;
-                alkuperainenTausta = null;
-            }
+            KarttaKerrokset.Instanssi?.Taustavari(paalla ? Tausta : (Color?)null);
+            if (paalla == taustaKytketty) return;
+            taustaKytketty = paalla;
+            if (paalla) RenderPipelineManager.beginCameraRendering += EnnenPiirtoa;
+            else RenderPipelineManager.beginCameraRendering -= EnnenPiirtoa;
+            if (paalla || kamera == null) return;
+            // Aurinko palauttaa oman taustansa seuraavassa kehyksessä; talteen otettu arvo heti, ettei yksi kehys jää.
+            if (alkuperainenTausta.HasValue) kamera.backgroundColor = alkuperainenTausta.Value;
+            alkuperainenTausta = null;
+        }
+        bool taustaKytketty;
+
+        void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
+        {
+            if (c != kamera || c == null) return;
+            if (!alkuperainenTausta.HasValue) alkuperainenTausta = c.backgroundColor;
+            c.backgroundColor = Tausta;
         }
 
         /// <summary>Ilmakehän hehku kuten webin Globe.gl (three-glow-mesh, Ilmakeha-varjostin): kuori R × 1,16.</summary>
@@ -252,7 +260,6 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
-            if (piirtaja != null && piirtaja.enabled && kamera != null && kamera.backgroundColor != Tausta) AsetaTausta(true);
             int kaynnissa = 0;
             foreach (var p in kuvat)
             {
@@ -331,7 +338,7 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             foreach (var o in new List<string>(kuvat.Keys)) Poista(o);
-            if (kamera != null && alkuperainenTausta.HasValue) kamera.backgroundColor = alkuperainenTausta.Value;
+            AsetaTausta(false);
             if (ilmakeha != null) Destroy(ilmakeha);
             if (ilmakehaMat != null) Destroy(ilmakehaMat);
             if (ilmakeha != null && ilmakeha.TryGetComponent<MeshFilter>(out var im)) Destroy(im.sharedMesh);
