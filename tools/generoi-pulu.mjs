@@ -701,7 +701,7 @@ export const TAGIT = {
   'valletta-3': { alku: '[proud]', kohdat: [['ja koko vanhakaupunki', '[warmly]']] },
   'bryssel-4': { alku: '[mischievously]', kohdat: [['Minä olen nähnyt', '[amused]']] },
   'ljubljana-4': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[softly]']] },
-  'kosice-4': { alku: '[brightly]', kohdat: [['ja sen pääkatu', '[warmly]']] },
+  'kosice-4': { alku: '[brightly]', kohdat: [['Sen pääkatu', '[warmly]']] },
   'luxemburg-4': { alku: '[softly]', kohdat: [['Minä näen', '[proud]']] },
   'valletta-4': { alku: '[curious]', kohdat: [['Nykyään', '[amused]']] },
   /*

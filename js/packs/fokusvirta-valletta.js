@@ -31,12 +31,12 @@ export const FOKUSVIRTA_VALLETTA = {
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
     paikkarivi: 'Valletta, Malta, syyskuussa 1873. Kalkkikivi hehkuu '
-      + 'iltapäivän auringossa; satamassa laivaston harmaat rungot '
+      + 'iltapäivän auringossa; satamassa laivaston mustat rungot '
       + 'kylpevät kuumuudessa.',
     teksti: 'Valletta, syyskuussa 1873. Koko kaupunki on veistetty '
       + 'samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit '
       + 'melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa '
-      + 'laivaston harmaita runkoja kuin tikkuja laatikossa. '
+      + 'laivaston mustia runkoja kuin tikkuja laatikossa. '
       + 'Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden '
       + 'purkamisesta on puhuttu täällä useaan otteeseen — paikallinen '
       + 'upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.',
@@ -47,7 +47,7 @@ export const FOKUSVIRTA_VALLETTA = {
     /* KUPLAT: nykypäivän ääni, ei kaanonia. */
     kommentti: [
       'Nuo muurit ovat yhä pystyssä, ja koko vanhakaupunki on nykyään Unescon maailmanperintökohde.',
-      'Isoisäsi näki satamassa Britannian laivaston mustia panssarilaivoja. Nykyään sama satama täyttyy risteilijöistä ja turisteista.',
+      'Isoisäsi näki satamassa Britannian mustia panssarilaivoja. Nykyään sama satama täyttyy risteilijöistä ja turisteista.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {
