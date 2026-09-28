@@ -1,0 +1,240 @@
+{
+  "source": "posti/sisaltokirjuri-kuvaputki-13-historian-hetkea-era1-20260928.md",
+  "sourceCommit": "01c85b6eb937d5130e7e71f0712fbcad99ff704a",
+  "files": [
+    {
+      "filename": "hetki-wienin-porssikrahi-1873-lahi-photo-v4.jpg",
+      "sha256": "ca1b5d2ac21645f1ac2be0317590a60c25ebff18e00dabbbb2f11471437f75b4",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 373970,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-wienin-porssikrahi-1873-kauko-photo-v4.jpg",
+      "sha256": "20000febc8ceb8fa03493d17faed8945169998b54d674cd8b5ebe5f1d5a071f0",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 475548,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-afsluitdijkin-viimeinen-aukko-1932-lahi-photo-v4.jpg",
+      "sha256": "de090bf72f61c4967be4b547a238156ab4ad72fed7c47ca0eedf96a0993fe56b",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 487084,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-afsluitdijkin-viimeinen-aukko-1932-kauko-photo-v4.jpg",
+      "sha256": "677cc1126b9aab007079d553a5c8df2f67d98b3fcd5e2bb9efd322dacf86573d",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 533397,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-gotthardin-lapimurto-1880-lahi-photo-v4.jpg",
+      "sha256": "8042dd53e92c883572bb546d42e0d655c6aeba09a646ab7058b7a93fc7823b95",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 468925,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-gotthardin-lapimurto-1880-kauko-photo-v4.jpg",
+      "sha256": "ce8a6e138a1c3928160b7f7d5342e547d818dc3366f489fdb5dd816733e40161",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 473270,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-christiansborgin-palo-1884-lahi-photo-v4.jpg",
+      "sha256": "167f99786322e55bda2c6aaef149432c18b6d4002fc83a28e309ef7922896c91",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 270491,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-christiansborgin-palo-1884-kauko-photo-v4.jpg",
+      "sha256": "b04e04a65df469c861fd6f289a0e73ed6fabb4f5955338ef8dc6ca2f9c9fabe2",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 452060,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-belgradin-piiritys-1456-lahi-photo-v4.jpg",
+      "sha256": "c234aad8047eea668c89a8f0865555327e0f60dc01f0d1962bbb58236027a193",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 512662,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-belgradin-piiritys-1456-kauko-photo-v4.jpg",
+      "sha256": "695497156133dd5b7b0ae75e2dcf54945dda1387f62e957f792cb067a358a488",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 590320,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-franz-ferdinandin-salamurha-1914-lahi-photo-v4.jpg",
+      "sha256": "05622d8c847d2156e2237a530e6a4c42a685239aa2dd19df8a7852b671dc15ac",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 468206,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-franz-ferdinandin-salamurha-1914-kauko-photo-v4.jpg",
+      "sha256": "1a51bb7db7a5da8bf68512d87286fdc1fb817fa5385125b268d35933c90ce58f",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 680564,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-vloren-itsenaisyys-1912-lahi-photo-v4.jpg",
+      "sha256": "b1b36ca4bcb76d09f619ba433fcd5f1f7b589f4b05a057e6a340c62944631adb",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 439741,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-vloren-itsenaisyys-1912-kauko-photo-v4.jpg",
+      "sha256": "6e47cb4d094c76a96ea28092cfe97e2a3c36e2da42330870127fab332898cb47",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 539320,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-krusevon-tasavalta-1903-lahi-photo-v4.jpg",
+      "sha256": "331a402c4bc4de57adb7dc15460e3d50612ce412e8438069ddf2925cbd9042e8",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 489989,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-krusevon-tasavalta-1903-kauko-photo-v4.jpg",
+      "sha256": "29c786e0d83bf1860973b3716af92f2c31767af5c06a7863a91f9bb05e39d59f",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 786319,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-obodin-kirjapaino-1494-lahi-photo-v4.jpg",
+      "sha256": "66be894d19d7c6705c54e9e6e378b7605dc2d063e48c78b1cb1f6e7b0ec63a97",
+      "width": 1600,
+      "height": 1341,
+      "bytes": 425147,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-obodin-kirjapaino-1494-kauko-photo-v4.jpg",
+      "sha256": "0a800c08b47629b988d476bbc750ca143a23375416f207419fbf228f6640bc89",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 663618,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-britannian-lippu-nikosiassa-1878-lahi-photo-v4.jpg",
+      "sha256": "35cafd1642e9e8b5f6e00dcb8af973b5bc6e78a59c878d00a81e6a6193371907",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 502074,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-britannian-lippu-nikosiassa-1878-kauko-photo-v4.jpg",
+      "sha256": "09518894536fec4705f82b8ec2cfdc70c4bc5e14f42e6fcc6680dbc13acd896c",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 578080,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-pyhan-elmon-linnake-1565-lahi-photo-v4.jpg",
+      "sha256": "599c1662ebdd62725f61ed911872115b2c2cd76d7b6bb20703d886fce41b4723",
+      "width": 1600,
+      "height": 1341,
+      "bytes": 564553,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-pyhan-elmon-linnake-1565-kauko-photo-v4.jpg",
+      "sha256": "8c9f9fa2358e8fbe358a4b08b1ee21c51f4a8c5e8b95e90e5b8949fa998d62df",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 564749,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-bessarabian-liittyminen-1918-lahi-photo-v4.jpg",
+      "sha256": "fd5be3e6e6cdb51a649ba05bdd13d05fd405642f67384f6f26725d5a25a2ff98",
+      "width": 1600,
+      "height": 1341,
+      "bytes": 313912,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-bessarabian-liittyminen-1918-kauko-photo-v4.jpg",
+      "sha256": "d490b670dd13488f8d841a2c8e04ab5be0177c80c0e2d9fbc6c7ad6f5d6a51c3",
+      "width": 1600,
+      "height": 900,
+      "bytes": 275628,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-berezinan-ylitys-1812-lahi-photo-v4.jpg",
+      "sha256": "10969c84a20a0da50065dccf72ce89038413a7637966a05a78fa6dec4226cf95",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 568009,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    },
+    {
+      "filename": "hetki-berezinan-ylitys-1812-kauko-photo-v4.jpg",
+      "sha256": "95f78dd14f336e683c892da29ce46c5c51a49910921258f7497a22b2a0433cfe",
+      "width": 1600,
+      "height": 900,
+      "bytes": 620137,
+      "mime": "image/jpeg",
+      "icc": "sRGB built-in"
+    }
+  ]
+}
