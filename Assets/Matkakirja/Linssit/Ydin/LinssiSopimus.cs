@@ -108,6 +108,19 @@ namespace Matkakirja.Linssit
     }
 
     /// <summary>
+    /// Kamera kiertää katsekohdetta (PalloKierto.Kuvaa): katsekohde (leveys, pituus, korkeus ellipsoidista metreinä),
+    /// silmän etäisyys siitä metreinä, kallistus kohteen pystysuorasta asteina (0 = suoraan alas) ja suuntima, johon
+    /// katse osoittaa (0 = pohjoiseen, 90 = itään). ISS:n kyyti (Iss.IssKyyti) asettaa tämän joka kehys.
+    /// </summary>
+    public readonly struct Kuvakulma
+    {
+        public readonly double Lat, Lon, EtaisyysM, Kallistus, Suuntima, KatseKorkeusM;
+        public Kuvakulma(double lat, double lon, double etaisyysM, double kallistus, double suuntima, double katseKorkeusM = 0)
+        { Lat = lat; Lon = lon; EtaisyysM = etaisyysM; Kallistus = kallistus; Suuntima = suuntima; KatseKorkeusM = katseKorkeusM; }
+        public override string ToString() => $"({Lat:F2}, {Lon:F2}, {EtaisyysM / 1000:F0} km, {Kallistus:F0}°, {Suuntima:F0}°, katse {KatseKorkeusM / 1000:F0} km)";
+    }
+
+    /// <summary>
     /// Kaikki, mitä linssi saa pelistä. Toteutus: Linssit/Unity/ (sovitin) ja
     /// testeissä vale-ympäristö.
     /// </summary>
@@ -139,6 +152,21 @@ namespace Matkakirja.Linssit
         double Kuvasuhde { get; }
         /// <summary>Kameran pystysuora näkökenttä asteina (web PALLO_FOV 50).</summary>
         double Nakokulma { get; }
+        /// <summary>Kameran suuntima asteina (0 = pohjoinen ylhäällä), kuvauksen aloitusta varten.</summary>
+        double Suuntima { get; }
+
+        /// <summary>
+        /// Kamera kiinni kuvaukseen (PalloKierto.Kuvaa): asento asetetaan heti, joten liikkuvaa kohdetta kuvataan kutsumalla
+        /// tätä joka kehys. Keskeyttää ajon ja eleet, kunnes <see cref="KuvausLoppui"/>.
+        /// </summary>
+        void Kuvaa(Kuvakulma asento);
+        /// <summary>Kuvaus päättyi (PalloKierto.SeurantaLoppui): eleet ja pelaajan kamera palaavat.</summary>
+        void KuvausLoppui();
+        /// <summary>
+        /// Kameran pystysuora kenttäkulma asteina (ISS:n Cupola-ikkuna 80°). Ensimmäinen kutsu tallentaa kameran oman arvon;
+        /// null palauttaa sen (Natiiviseppä 28.9.: ei kovakoodattua 50°:ta, myös linssin purussa).
+        /// </summary>
+        void Kenttakulma(double? asteina);
 
         /// <summary>
         /// Pelin kerrokset (kaupunkien nimet ja pisteet, nappula, nostot,

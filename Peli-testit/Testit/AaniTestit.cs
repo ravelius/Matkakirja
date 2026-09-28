@@ -476,9 +476,9 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!tila.AiheSoi, "tunnus soi loppuun");
 
             tila.AloituslentoAlkoi();
-            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-lyria.mp3") == true, "aloituslento");
+            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-marssi-a-lyria.mp3") == true, "aloituslento");
             tila.UusiKaupunki("ateena");
-            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-lyria.mp3") == true, "tunnus ei katkaise aloituslentoa");
+            Oleta.Tosi(Aihe()?.Contains("musa-aloituslento-marssi-a-lyria.mp3") == true, "tunnus ei katkaise aloituslentoa");
             tila.AarrePaljastui("star");
             Oleta.Tosi(Aihe()?.Contains("musa-paaaarre-lyria.mp3") == true, "aarre katkaisee");
             tila.MatkaLoppui();

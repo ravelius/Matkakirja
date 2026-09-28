@@ -176,6 +176,8 @@ namespace Matkakirja
         /// 27.9.: pienissä maissa (NLD saapuminen 404 km, lähin ~311 km → 1,3) tason 1 3D-mallien kynnys 2,5 ei täyty koskaan.
         /// </summary>
         public float SuurinKerroin { get; private set; } = float.PositiveInfinity;
+        /// <summary>Pelaajan maan saapumisnäkymän kameran korkeus (m; 0 = tuntematon): kertoimen 1 mittakaava (Lipputanko, maailmakoko).</summary>
+        public double SaapumisKorkeusM => saapumisKorkeusM;
         /// <summary>Tämän kehyksen näytettävät nostot (ruudulla, edessä, lähimmät keskeltä, enintään katto).</summary>
         public IReadOnlyList<Nosto> Naytettavat => naytettavat;
         /// <summary>Herää, kun Naytettavat, Nakyvissa tai Syttyminen muuttui tässä kehyksessä.</summary>
@@ -218,6 +220,7 @@ namespace Matkakirja
 
         readonly Dictionary<string, List<Nosto>> maittain = new Dictionary<string, List<Nosto>>();
         readonly Dictionary<string, double4> bboxit = new Dictionary<string, double4>(); // länsi, etelä, itä, pohjoinen
+        readonly Dictionary<string, string> maanNimet = new Dictionary<string, string>(); // ISO3 → nimi (maan niminen kaupunki)
         readonly List<Nosto> naytettavat = new List<Nosto>();
         /// <summary>Kaikkien maiden eläintäyt (lahde elaintaky, yksi per maa), löydös 125.</summary>
         readonly List<Nosto> elaintayt = new List<Nosto>();
@@ -332,7 +335,8 @@ namespace Matkakirja
                         OmaLat = omaLat ?? double.NaN,
                         OmaLon = omaLon ?? double.NaN,
                         // Skeema: paikka on merkkijono; vanhassa muodossa olio { nimi } (web kohde.paikka?.nimi).
-                        Paikka = MiniJson.Kentta(a, "paikka") is Dictionary<string, object> po ? MiniJson.Teksti(po, "nimi") : MiniJson.Teksti(a, "paikka"),
+                        Paikka = NostoSaannot.VertailuPaikka(MiniJson.Kentta(a, "paikka") is Dictionary<string, object> po
+                            ? MiniJson.Teksti(po, "nimi") : MiniJson.Teksti(a, "paikka"), MiniJson.Teksti(a, "paikkaLahde")),
                         // Web: taso 1 tai 3 sellaisenaan, muuten 2 (ennen oletus 1 teki puuttuvasta tasosta kuvamerkin).
                         Taso = NostoSaannot.Taso(MiniJson.Luku(a, "taso")),
                         Tarkeys = (int)(MiniJson.Luku(a, "tarkeys") ?? 1),
@@ -367,6 +371,8 @@ namespace Matkakirja
             if (maatJson == null || !(MiniJson.Jasenna(maatJson) is Dictionary<string, object> r) || !(r.GetValueOrDefault("alkiot") is List<object> maat)) return;
             foreach (var o in maat)
             {
+                if (o is Dictionary<string, object> mn && MiniJson.Teksti(mn, "id") is string mid && MiniJson.Teksti(mn, "nimi") is string mnimi)
+                    maanNimet[mid] = mnimi;
                 if (!(o is Dictionary<string, object> m) || !(MiniJson.Kentta(m, "fokuspohja") is Dictionary<string, object> f)
                     || !(MiniJson.Kentta(f, "bbox") is List<object> b) || b.Count < 4) continue;
                 string id = MiniJson.Teksti(m, "id");
@@ -395,7 +401,8 @@ namespace Matkakirja
             var kaupungit = new List<NostoSaannot.Keskus>();
             if (merkit != null)
                 foreach (var k in merkit.Kaupungit())
-                    if (k != null) kaupungit.Add(new NostoSaannot.Keskus(k.nimi, k.lat, k.lon));
+                    if (k != null) kaupungit.Add(new NostoSaannot.Keskus(k.nimi, k.lat, k.lon,
+                        !NostoSaannot.MaanNiminen(k.nimi, k.maa != null && maanNimet.TryGetValue(k.maa, out var mn) ? mn : null)));
             if (kaupungit.Count == luokiteltuKaupunkeja) return;
             luokiteltuKaupunkeja = kaupungit.Count;
             var keskukset = new List<NostoSaannot.Keskus>();

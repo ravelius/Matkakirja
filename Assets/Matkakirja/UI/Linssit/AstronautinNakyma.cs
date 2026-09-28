@@ -9,6 +9,7 @@
 //                      näkymätöntä palloa pyöritetä; linssin ✕ on sen päällä.
 //   KuvaKasittelija    astronautin valokuva (Kuvanakyma); (null, −1) sulkee.
 //   SumuKasittelija    avaruussumu (Avaruussumu): kaksi ajelehtivaa harsoa.
+//   KyytiKasittelija   ISS:n kyyti (IssKyytiNakyma): tietorivi, ✕ ja ikkunassa Cupola-kehys.
 // Linssin ollessa auki pulu on astronautti (LinssiUi asettaa Pulu.Astronautti).
 using System;
 using Matkakirja.Linssit.Astronautti;
@@ -25,6 +26,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement musta, otsikko;
         public readonly Kuvanakyma Kuva;
         public readonly Avaruussumu Sumu;
+        public readonly IssKyytiNakyma Kyyti;
         IVisualElementScheduledItem piilotus;
 
         public AvauksenVaihe Vaihe { get; private set; } = AvauksenVaihe.Pois;
@@ -46,6 +48,9 @@ namespace Matkakirja.Natiivi
             Kuva = new Kuvanakyma(kerros);
             Kuva.AukiMuuttui += auki => KuvaAuki?.Invoke(auki);
             Sumu = new Avaruussumu(kerros);
+            Kyyti = new IssKyytiNakyma(kerros);
+            // Kyydin ✕ on linssin sulkunapin paikalla, joten sulkunappi piiloon kuten kuvanäkymässä.
+            Kyyti.AukiMuuttui += auki => KuvaAuki?.Invoke(auki);
 
             AstronauttiKerros.AvausKasittelija = Avaus;
             AstronauttiKerros.KuvaKasittelija = (kohde, indeksi) =>
@@ -54,6 +59,7 @@ namespace Matkakirja.Natiivi
                 else Kuva.Avaa(kohde, indeksi);
             };
             AstronauttiKerros.SumuKasittelija = Sumu.Aseta;
+            AstronauttiKerros.KyytiKasittelija = Kyyti.Aseta;
         }
 
         /// <summary>AstronauttiKerros.AvausKasittelija: avauksen vaihe.</summary>
@@ -100,6 +106,7 @@ namespace Matkakirja.Natiivi
             if (Vaihe != AvauksenVaihe.Pois) Avaus(AvauksenVaihe.Pois);
             Sumu.Aseta(0);
             Kuva.Sulje(false);
+            Kyyti.Pois();
         }
 
         // --- testit ----------------------------------------------------------------------

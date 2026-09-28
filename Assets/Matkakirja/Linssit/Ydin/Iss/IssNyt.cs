@@ -60,6 +60,30 @@ namespace Matkakirja.Linssit.Iss
             return Astronautti.Astronauttimatikka.RadanPiste(360.0 * (s % KierrosS) / KierrosS, -360.0 * (s % TahtivuorokausiS) / TahtivuorokausiS);
         }
 
+        /// <summary>Havainnollisen radan korkeus (km): ISS:n tavallinen korkeus.</summary>
+        public const double HavainnollinenKorkeusKm = 420;
+
+        /// <summary>ISS:n korkeus WGS-84-ellipsoidista (km) hetkellä utc; havainnollisella radalla vakio.</summary>
+        public static double KorkeusKm(DateTime utc)
+        {
+            if (Laatu(utc) != RadanLaatu.Havainnollinen && rata.Alapiste(Aika.Jd(utc), out _, out _, out double h)) return h;
+            return HavainnollinenKorkeusKm;
+        }
+
+        /// <summary>
+        /// Maajäljen suunta (asteina, 0 = pohjoinen, 90 = itä) hetkellä utc: alapisteen liike maan pinnalla (sisältää maan
+        /// pyörimisen), joten kyydin kamerassa maa liukuu suoraan taaksepäin.
+        /// </summary>
+        public static double Suuntima(DateTime utc)
+        {
+            var a = Paikka(utc.AddSeconds(-1));
+            var b = Paikka(utc.AddSeconds(1));
+            return IssKuvakulma.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
+        }
+
+        /// <summary>Ratanopeus (km/h) korkeudesta ympyräradalla (vis viva): 420 km ≈ 27 600 km/h (tietorivi).</summary>
+        public static double NopeusKmh(double korkeusKm) => Math.Sqrt(Rata.Mu / (Rata.Maansade + korkeusKm)) * 3600;
+
         /// <summary>
         /// Maajälki puoli kierrosta taakse ja eteen hetkestä utc valmiiseen taulukkoon (pisteitä = pituus − 1, keskipiste on
         /// ISS). Kutsuja laskee sen KaarenValiS:n välein.

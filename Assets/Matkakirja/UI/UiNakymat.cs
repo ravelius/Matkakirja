@@ -55,6 +55,8 @@ namespace Matkakirja.Natiivi
         public readonly PalauteIkkuna Palaute;
         public readonly LinssiUi Linssit;
         public readonly Aloitusnakyma Aloitus;
+        /// <summary>Kello ja "Päivä 1/80" aloituskaupungin valinnassa ja lennolla (v3f).</summary>
+        public readonly Pelikellonaytto Kellonaytto;
         public readonly Huipennus Huipennus;
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
@@ -300,6 +302,7 @@ namespace Matkakirja.Natiivi
             Palaute = new PalauteIkkuna(kerros); // hampurilaisen "ehdota sisältöä"
             Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
+            Kellonaytto = new Pelikellonaytto(kerros);
             // Löydökset 81/82: yläpalkki pois aloitusnäytöltä. Sulkeutuessa päivitys seuraavassa ruudussa, jotta
             // valinnan Aloita ehtii merkitä aloituslennon (palkki ei välähdä valinnan ja lennon välissä).
             Aloitusnakyma.AukiMuuttui += auki =>

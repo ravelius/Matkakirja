@@ -44,6 +44,11 @@ namespace Matkakirja.Linssit.Astronautti
     {
         public List<Havaintokohde> Kohteet = new List<Havaintokohde>();
         public Lahde Lahde;
+        /// <summary>
+        /// Maailmankierros tunnuksina (web SATELLIITTI_KIERROS, tools/laske-astronautin-kierros.mjs, sama algoritmi kuin
+        /// AstronauttiKierros); null, jos aineistossa ei ole sitä. Linssi käyttää omaa laskentaa, jos lista ei vastaa kohteita.
+        /// </summary>
+        public List<string> Kierros;
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
         static List<object> Lista(object x) => x as List<object>;
@@ -58,6 +63,8 @@ namespace Matkakirja.Linssit.Astronautti
                     Aineisto = MiniJson.Teksti(l, "aineisto"), Lisenssi = MiniJson.Teksti(l, "lisenssi"),
                     Osoite = MiniJson.Teksti(l, "osoite"), Haettu = MiniJson.Teksti(l, "haettu"),
                 };
+            if (Lista(MiniJson.Kentta(v, "SATELLIITTI_KIERROS")) is List<object> kierros)
+                a.Kierros = kierros.ConvertAll(x => x as string);
             var kysymykset = Ob(MiniJson.Kentta(Ob(MiniJson.Kentta(Ob(kysymysModuuli), "exportit")), "ASTRONAUTIN_KYSYMYKSET"));
             foreach (var o in Lista(MiniJson.Kentta(v, "SATELLIITTI_KOHTEET")) ?? new List<object>())
             {

@@ -4,8 +4,8 @@
 //   "hetki:<id>"       kokoelma historianHetket  (otsikko, paikka, paivays, teksti, kuvat[tiedosto], visa)
 //   "elaintaky:<ISO>"  kokoelma elaintayt        (elain, otsikko, teksti, kuva | kuvat[url])
 //   "kohde:<id>[~n]"   moduulit fokuskohteet-/maastokohteet-/hahmotelma-<iso> (maa karttavaloista;
-//                      testeissä "kohde:<id>@ISO"); kentästä ihme "Koe ihme" / kadonneen ihmeen kuva
-//                      ensimmäiseksi, ja "Livian leikekirja", jos pelaajan kaupungin täkypooli nimeää
+//                      testeissä "kohde:<id>@ISO"); kentästä ihme ihmekuva ensimmäiseksi (säilyneen oma
+//                      kuva Nykykuvaksi), ja "Livian leikekirja", jos pelaajan kaupungin täkypooli nimeää
 //                      kohteen (web nostoKohteelle). Napakohteet (lahde napakohde, web napanostonRivi →
 //                      avaaFokuskohde): sama kohdekortti moduulista maastokohteet-ata/-ark; arktisen
 //                      valon maa on tyhjä, joten maa luetaan tunnuksen etuliitteestä ("ark-…" → ARK).
@@ -99,9 +99,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Täkynosto: kartan kohde (web nosto.kohde) nimineen ja paikkoineen; null = ei nappia.</summary>
         public string KohdeId, KohdeNimi, KohdeIso;
         public double KohdeLat, KohdeLon;
-        /// <summary>Kohde: säilyneen ihmeen kuva "Koe ihme" -napin takana (kadonneen kuva on Kuvat[0]).</summary>
-        public NostoKuva Ihme;
-        public string IhmeNappi;
+        /// <summary>
+        /// Kohde: yhä olemassa olevan ihmekohteen valokuva siitä, mitä paikalla NYT on (web kohteenNykykuva): pieni
+        /// kuva tekstin kyljessä. Ihmekuva on Kuvat[0] kadonneella ja säilyneellä (omistaja 27.9.2026, "Koe ihme" pois).
+        /// </summary>
+        public NostoKuva Nykykuva;
         /// <summary>Kohde: kohteen nimeävä täkynosto (web piirraKohteenNosto) — otsikko ja valo-id.</summary>
         public string LeikekirjaOtsikko, LeikekirjaValo;
     }
@@ -198,7 +200,7 @@ namespace Matkakirja.Natiivi
                 Nosto n = null;
                 yield return Hae(id, x => n = x);
                 if (n == null) continue;
-                var kuvat = n.Kuvat.Append(n.Valokuva).Append(n.Ihme).Select(k => k?.Lahde)
+                var kuvat = n.Kuvat.Append(n.Nykykuva).Append(n.Valokuva).Select(k => k?.Lahde)
                     .Where(l => !string.IsNullOrEmpty(l)).Distinct().ToList();
                 if (kuvat.Count == 0) continue;
                 ensin.Add(kuvat[0]);
@@ -734,7 +736,8 @@ namespace Matkakirja.Natiivi
                 VisaKaupunki = "nosto", VisaAihe = id, VisaPalkkio = 25,
             };
             var kuvat = new List<object>();
-            if ((MiniJson.Kentta(d, "kuva") ?? MiniJson.Kentta(d, "$kuva")) is object k1) kuvat.Add(k1);
+            var k1 = MiniJson.Kentta(d, "kuva") ?? MiniJson.Kentta(d, "$kuva");
+            if (k1 != null) kuvat.Add(k1);
             if (MiniJson.Kentta(d, "kuvat") is List<object> kk) kuvat.AddRange(kk);
             Kuvat(n, kuvat, "osoite");
             n.Kuvat = n.Kuvat.GroupBy(x => x.Lahde).Select(g => g.First()).ToList();
@@ -744,8 +747,9 @@ namespace Matkakirja.Natiivi
             var kierrokset = MiniJson.Kentta(d, "kierrokset") as List<object> ?? (MiniJson.Kentta(d, "kierros") is object yksi ? new List<object> { yksi } : null);
             foreach (var x in kierrokset?.Select(Ob).Where(x => x != null) ?? Enumerable.Empty<Dictionary<string, object>>())
                 if (T(x, "url") is string url) n.Kierrokset.Add((T(x, "nappi") ?? "Kierros", url));
-            // Matkakirjan ihme (web kohteenIhmekuva): kadonneen kuva kortin ensimmäiseksi, säilyneen
-            // "Koe ihme" -napin taakse. Nauha on pelin piirtämä, ei kuvatiedoston.
+            // Matkakirjan ihme (web kohteenIhmekuva, kohteenKuvalista): ihmekuva kortin ensimmäiseksi kadonneella ja
+            // 27.9.2026 alkaen myös säilyneellä (omistaja, Olympia-kortti: "Koe ihme" -nappi pois). Säilyneen oma
+            // valokuva (`kuva`) ei ole sarjassa vaan pienenä tekstin kyljessä (Nykykuva). Nauha on pelin piirtämä.
             var ihme = Ob(MiniJson.Kentta(d, "ihme"));
             if (T(ihme, "osoite") is string ihmeOsoite)
             {
@@ -756,16 +760,15 @@ namespace Matkakirja.Natiivi
                     // Ihme on oma sisältönsä: suurennos saa oman reaktiorivin (web ihmeReaktioTunniste).
                     Reaktio = string.IsNullOrEmpty(n.Otsikko) ? null : "ihme:" + n.Otsikko, ReaktioOtsikko = n.Otsikko,
                 };
-                if (MiniJson.Totuus(ihme, "kadonnut"))
+                n.Kuvat.RemoveAll(x => x.Lahde == k.Lahde);
+                if (!MiniJson.Totuus(ihme, "kadonnut") && k1 != null)
                 {
-                    n.Kuvat.RemoveAll(x => x.Lahde == k.Lahde);
-                    n.Kuvat.Insert(0, k);
+                    var apu = new Nosto();
+                    Kuvat(apu, k1, "osoite");
+                    n.Nykykuva = apu.Kuvat.FirstOrDefault();
+                    if (n.Nykykuva != null) n.Kuvat.RemoveAll(x => x.Lahde == n.Nykykuva.Lahde);
                 }
-                else
-                {
-                    n.Ihme = k;
-                    n.IhmeNappi = T(ihme, "nappi") ?? "Koe ihme";
-                }
+                n.Kuvat.Insert(0, k);
             }
             n.Symboli = KohteenKategoria(d, n);
             // Web kohteenYlarivinNimike: luokka kategoriasta (kadonnut ihme → KADONNEET IHMEET, kierros → NÄHTÄVYYDET),

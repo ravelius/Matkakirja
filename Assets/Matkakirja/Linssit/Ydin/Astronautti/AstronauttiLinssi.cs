@@ -34,6 +34,11 @@ namespace Matkakirja.Linssit.Astronautti
         void Kuva(Havaintokohde kohde, int indeksi);
         void KuvaPois();
         void Pois();
+        /// <summary>
+        /// ISS:n kyyti (Iss.IssKyyti): tila, johon ollaan menossa, ja tietorivin arvot (korkeus km, nopeus km/h, rata-arvio
+        /// ilman tuoretta TLE:tä). Kutsutaan tilan vaihtuessa ja kerran sekunnissa kyydissä.
+        /// </summary>
+        void Kyyti(Iss.KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio);
     }
 
     public sealed class AstronauttiLinssi : ILinssi
@@ -165,7 +170,79 @@ namespace Matkakirja.Linssit.Astronautti
                 kaariLaskettu = utc;
                 kaarenVersio = Iss.IssNyt.Versio;
             }
-            nakyma.Iss(Iss.IssNyt.Paikka(utc), kaari);
+            var paikka = Iss.IssNyt.Paikka(utc);
+            nakyma.Iss(paikka, kaari);
+            PaivitaKyyti(nyt / 1000, utc, paikka);
+        }
+
+        // ---- ISS:n kyyti (omistajan kysymys 27.9.2026 klo 23.5x, suositus docs/raportit/iss-kyyti-suositus-20260928.md) ----
+
+        readonly Iss.IssKyyti kyyti = new Iss.IssKyyti();
+        double kentta0 = double.NaN, tietoAika = -1;
+        Iss.KyydinTila ilmoitettu = Iss.KyydinTila.Kauko;
+        bool kuvataan;
+
+        public Iss.KyydinTila Kyyti => kyyti.Tila;
+        public bool Kyydissa => kyyti.Kyydissa;
+
+        Iss.IssHetki Hetki(DateTime utc, LatLon paikka) =>
+            new Iss.IssHetki(paikka, Iss.IssNyt.KorkeusKm(utc) * 1000, Iss.IssNyt.Suuntima(utc));
+
+        /// <summary>
+        /// ISS:ää napautettiin (AstronauttiKerros, 44 pt): kauko → seuranta → ikkuna → seuranta. Ei avauksen aikana eikä kuvan
+        /// ollessa auki.
+        /// </summary>
+        public void NapautaIss()
+        {
+            if (!Auki || Vaihe == AvauksenVaihe.Musta || AvoinKuva != null) return;
+            var utc = Iss.IssNyt.Kello();
+            var k = y.Kamera;
+            if (!kyyti.Kyydissa) kentta0 = y.Nakokulma;
+            var nykyinen = Iss.IssKuvakulma.Kauko(k.Lat, k.Lon, k.Korkeus, k.Kallistus, y.Suuntima);
+            kyyti.Napauta(nykyinen, Hetki(utc, Iss.IssNyt.Paikka(utc)), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
+            tietoAika = -1;
+        }
+
+        /// <summary>✕ kyydissä: paluu kaukonäkymään ISS:n alapisteen ylle lepokorkeudelle.</summary>
+        public void PoistuKyydista()
+        {
+            if (!Auki || !kyyti.Kyydissa) return;
+            kyyti.Poistu(avaus * Iss.IssKyyti.PaluuKorkeus, Nyt / 1000, y.VahennettyLiike);
+            tietoAika = -1;
+        }
+
+        void PaivitaKyyti(double nyt, DateTime utc, LatLon paikka)
+        {
+            if (!kyyti.Kyydissa) return;
+            double perus = double.IsNaN(kentta0) ? y.Nakokulma : kentta0;
+            if (!kyyti.Paivita(nyt, Hetki(utc, paikka), perus, out var asento, out double kentta, out bool paluuValmis)) return;
+            y.Kuvaa(asento);
+            y.Kenttakulma(kentta);
+            kuvataan = true;
+            if (paluuValmis) { LopetaKyyti(); return; }
+            // Tietorivi kerran sekunnissa ja tilan vaihtuessa.
+            if (ilmoitettu != kyyti.Tila || nyt - tietoAika >= 1 || tietoAika < 0)
+            {
+                ilmoitettu = kyyti.Tila;
+                tietoAika = nyt;
+                double h = Iss.IssNyt.KorkeusKm(utc);
+                nakyma.Kyyti(kyyti.Tila, h, Iss.IssNyt.NopeusKmh(h), Iss.IssNyt.Laatu(utc) != Iss.RadanLaatu.Tarkka);
+            }
+        }
+
+        void LopetaKyyti()
+        {
+            kyyti.Nollaa();
+            if (kuvataan)
+            {
+                kuvataan = false;
+                y.KuvausLoppui();
+                y.Kenttakulma(null);
+            }
+            kentta0 = double.NaN;
+            if (ilmoitettu == Iss.KyydinTila.Kauko) return;
+            ilmoitettu = Iss.KyydinTila.Kauko;
+            nakyma.Kyyti(Iss.KyydinTila.Kauko, 0, 0, false);
         }
 
         readonly LatLon[] kaari = new LatLon[Astronauttimatikka.IssKaarenPisteita + 1];
@@ -214,11 +291,66 @@ namespace Matkakirja.Linssit.Astronautti
         /// <summary>Havaintopistettä napautettiin (Unity-kerroksen osumatesti, 44 px).</summary>
         public void Napauta(string tunnus)
         {
-            if (!Auki || Vaihe == AvauksenVaihe.Musta) return;
+            if (!Auki || Vaihe == AvauksenVaihe.Musta || kyyti.Kyydissa) return;
             var kohde = aineisto.Kohteet.Find(k => k.Tunnus == tunnus);
             if (kohde == null) return;
+            AvaaKohde(kohde, kohde.OletusIndeksi);
+        }
+
+        // ---- Kuvaselain (omistajan toive 27.9.2026 klo 23.5x, Linssisepän suositus docs/raportit/astronautin-kuvaselain-20260928.md) ----
+
+        /// <summary>Kameran liuku kuvan kohteen ylle (s): kuvan takana himmeänä näkyvä pallo on juuri kuvan kohdalta.</summary>
+        public const float KuvaanAjoS = 0.9f;
+        /// <summary>Kameran korkeus kuvan takana avauskorkeuden osuutena (enintään): lepokorkeus, jolloin pallon reuna näkyy
+        /// pystyruudun ylä- ja alalaidassa kuin ikkunasta.</summary>
+        public const double KuvanKorkeus = 0.72;
+
+        int[] kierros;
+
+        /// <summary>
+        /// Maailmankierros: aineiston valmis lista (webin SATELLIITTI_KIERROS, sama järjestys molemmissa), muuten lasketaan
+        /// kerran ensimmäisellä käytöllä (AstronauttiKierros).
+        /// </summary>
+        int[] Kierros => kierros ??= AstronauttiKierros.Aineistosta(aineisto.Kierros, aineisto.Kohteet) ?? AstronauttiKierros.Laske(aineisto.Kohteet);
+
+        void AvaaKohde(Havaintokohde kohde, int indeksi)
+        {
             AvoinKuva = kohde;
-            nakyma.Kuva(kohde, kohde.OletusIndeksi);
+            nakyma.Kuva(kohde, indeksi);
+            if (double.IsNaN(kohde.Lat) || double.IsNaN(kohde.Lon)) return;
+            // Kamera kohteen ylle nykyisellä korkeudella, kuitenkin enintään lepokorkeudella (pallo täyttää ikkunan).
+            double h = Math.Min(y.Kamera.Korkeus, avaus * KuvanKorkeus);
+            y.AjaKamera(new Nakyma(kohde.Lat, kohde.Lon, h), y.VahennettyLiike ? 0f : KuvaanAjoS, Matkakirja.Linssit.Kamera.Kamerakayrat.Pehmea);
+        }
+
+        /// <summary>Aineiston kohteet (testikomento `astro kuva n`).</summary>
+        public List<Havaintokohde> Kohteet => aineisto.Kohteet;
+
+        /// <summary>Maailmankierros tunnuksina (testikomento `astro kierros`).</summary>
+        public IEnumerable<string> KierrosTunnukset()
+        {
+            foreach (int i in Kierros) yield return aineisto.Kohteet[i].Tunnus;
+        }
+
+        /// <summary>Naapurikohde maailmankierroksella avatun kuvan kohteesta (null, jos kuva ei ole auki).</summary>
+        public Havaintokohde KatsoNaapuri(int suunta)
+        {
+            if (AvoinKuva == null) return null;
+            int i = AstronauttiKierros.Naapuri(Kierros, aineisto.Kohteet.IndexOf(AvoinKuva), suunta);
+            return i >= 0 ? aineisto.Kohteet[i] : null;
+        }
+
+        /// <summary>
+        /// Viereinen kohde kartalla (alanapit ‹ ›: kohteen oletuskuva) tai gallerian jatko kohteen kuvien lopusta
+        /// (<paramref name="galleria"/>: eteenpäin ensimmäinen, taaksepäin viimeinen kuva). Kamera liukuu uuden kohteen ylle.
+        /// </summary>
+        public Havaintokohde Naapuri(int suunta, bool galleria = false)
+        {
+            if (!Auki || AvoinKuva == null || suunta == 0) return null;
+            var k = KatsoNaapuri(suunta);
+            if (k == null || ReferenceEquals(k, AvoinKuva)) return null;
+            AvaaKohde(k, galleria ? (suunta > 0 ? 0 : k.Havainnot.Count - 1) : k.OletusIndeksi);
+            return k;
         }
 
         public void SuljeKuva()
@@ -231,6 +363,7 @@ namespace Matkakirja.Linssit.Astronautti
         public void Sulje()
         {
             if (!Auki) return;
+            LopetaKyyti();
             Auki = false;
             SuljeKuva();
             nakyma.Pois();
