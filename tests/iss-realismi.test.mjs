@@ -114,6 +114,9 @@ test('natiivin vakiot varjostimissa (ilmahehku 0,12 σ 4,5 km, yön vesi 0,96, k
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /lapi = 1\.0 - 0\.85 \* pilvi/);
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /yo\(ng\) \* osuu \* lapi/);
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /uKiilto \* lapi/);
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /pilvi = uPilvetOn \* uPilviPeitto \*/);
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /lisaPilvi = pilvi \* osuu \* yoKuori \* clamp\(uYoVesi - a/);
+  assert.equal(YOKUORI.valot, 0.96, 'kaupunkien valot 60 % (omistaja 28.9.)');
   // Pilvet valaistaan samalla terminaattorilla kuin yökuori (Päätoimittaja 28.9.): yöllä tummat.
   assert.match(VARJOSTIMET.PILVET_FRAGMENT, /mix\(uYo, 1\.0, smoothstep\(-0\.105, 0\.035, dot\(n, uAurinko\)\)\)/);
   assert.ok(JARJESTYS.pilvet < JARJESTYS.yokuori && JARJESTYS.yokuori < JARJESTYS.revontulet && JARJESTYS.revontulet < JARJESTYS.kaari);
