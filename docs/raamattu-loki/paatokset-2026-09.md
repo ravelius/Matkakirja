@@ -8723,3 +8723,7 @@ Omistaja 28.9. klo 17.5x sanatarkasti: "Nykyisessä buildissa striimiluenta alka
 ## OMISTAJA: ELEVENLABS V4 — PIENI VERTAILU XAI:HIN (28.9.2026 klo 17.47)
 
 Omistaja 28.9. klo 17.5x: "elevenlabsilta tuli juuri uusi v4 versio". ElevenLabs julkaisi 28.9. v4 ja v4 Turbo (TechCrunch): striimaus LLM-tokeneista, matalampi viive agenteille, 90+ kielta, sav yn hallinta pitkassa tekstissa. Paatoimittaja: Pelikoodari pieni saastava vertailu (3 tekstia: nosto + 2 Pulun vastausta; xAI vs v4 vs v4 Turbo; ensimmainen tavu, kokonaisaika, hinta/1000 mrk; 9 naytetta omistajalle). Ei vaihtoa ennen omistajan kuuntelua.
+
+## OMISTAJA: ELEVENLABS V4 -VERTAILU PERUTTU (28.9.2026 klo 17.48)
+
+Omistaja 28.9. klo 17.5x sanatarkasti: "älä vertaa". Vertailu peruttu Pelikoodarilta ennen yhtaan API-kutsua; xAI-puhe jatkaa.
