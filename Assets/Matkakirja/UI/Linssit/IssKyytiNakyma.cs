@@ -91,8 +91,17 @@ namespace Matkakirja.Natiivi
             katto = Rakenne.El("mk-isskyyti__katto", juuri, PickingMode.Ignore);
             katto.style.position = Position.Absolute;
             katto.style.left = 0; katto.style.right = 0; katto.style.top = 0; katto.style.height = 0;
-            katto.style.backgroundColor = OhjaamonVari;
+            katto.style.flexDirection = FlexDirection.Column;
             katto.style.display = DisplayStyle.None;
+            // Umpinainen katto kuvan yläreunaan asti ja sen alla 60 pt:n liuku kehyksen päälle (ei kovaa vaakaviivaa).
+            var kiintea = Rakenne.El("mk-isskyyti__katto-kiintea", katto, PickingMode.Ignore);
+            kiintea.style.flexGrow = 1;
+            kiintea.style.backgroundColor = OhjaamonVari;
+            var liuku = Rakenne.El("mk-isskyyti__katto-liuku", katto, PickingMode.Ignore);
+            liuku.style.height = KattoLiukuPt;
+            liuku.style.flexShrink = 0;
+            liuku.style.backgroundImage = KattoLiuku();
+            liuku.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
             for (int i = 0; i < valot.Length; i++)
             {
                 var v = Rakenne.El("mk-isskyyti__valo2", juuri, PickingMode.Ignore);
@@ -442,7 +451,28 @@ namespace Matkakirja.Natiivi
         {
             foreach (var v in valot) { v.style.translate = t; v.style.scale = s; v.style.rotate = r; }
             float H = juuri.layout.height;
-            if (H > 1f) katto.style.height = Mathf.Max(0f, H * 0.5f + siirtoY + skaala * (kuvanYlareuna - H * 0.5f) + 4f);
+            if (H > 1f) katto.style.height = Mathf.Max(0f, H * 0.5f + siirtoY + skaala * (kuvanYlareuna - H * 0.5f) + 4f) + KattoLiukuPt;
+        }
+
+        const float KattoLiukuPt = 60f;
+        static Texture2D kattoLiuku;
+
+        /// <summary>Katon liuku: ohjaamon väri, alfa 1 → 0 ylhäältä alas (smoothstep), 1 × 32.</summary>
+        static Texture2D KattoLiuku()
+        {
+            if (kattoLiuku != null) return kattoLiuku;
+            const int n = 32;
+            var t = new Texture2D(1, n, TextureFormat.RGBA32, false) { name = "KattoLiuku", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
+            var px = new Color32[n];
+            for (int i = 0; i < n; i++)
+            {
+                // Texture2D:n rivi 0 on alhaalla: alimmainen läpinäkyvä, ylin umpinainen.
+                float u = i / (n - 1f), a = u * u * (3f - 2f * u);
+                px[i] = new Color(OhjaamonVari.r, OhjaamonVari.g, OhjaamonVari.b, a);
+            }
+            t.SetPixels32(px);
+            t.Apply(false, true);
+            return kattoLiuku = t;
         }
 
         /// <summary>
