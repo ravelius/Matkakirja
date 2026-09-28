@@ -69,7 +69,5 @@ export const LINSSIT = [
   { tunnus: 'vertailu',     manner: null,            tuo: () => import('./vertailu.js') },
   { tunnus: 'maatiedot',    manner: null,            tuo: () => import('./maatiedot.js') },
   { tunnus: 'vesistot',     manner: null,            tuo: () => import('./vesistot.js') },
-  // Maapallon vuosi (omistaja 28.9.2026): hiomassa, kehityssivu maapallon-vuosi.html; valmistuessa tuo: () => import('./maapallon-vuosi.js').
-  { tunnus: 'maapallon-vuosi', manner: null, tila: 'hiomassa', nimi: 'Maapallon vuosi', ikoni: 'assets/linssit/maapallon-vuosi.png' },
   // { tunnus: 'yokartta',     manner: 'northamerica',  tuo: () => import('./yokartta.js') },
 ];

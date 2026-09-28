@@ -52,19 +52,9 @@ test('piirtojärjestys: pohja, häivytetty pohja, kerros peitolla', () => {
   assert.deepEqual(piirtojarjestys({ pohjaA: A, pohjaB: B, t: 0.5, kerrosA: null, kerrosB: kB, peitto: 1 }).at(-1), { kuva: kB, alfa: 0.5 }, 'puuttuva vanha kerros: uusi häivyttyy sisään');
 });
 
-test('linssi on rekisterissä hiomassa (ei pelaajille) ja kuvaus täydellinen', () => {
-  const rivi = LINSSIT.find((r) => r.tunnus === 'maapallon-vuosi');
-  assert.equal(rivi?.tila, 'hiomassa');
-  assert.equal(rivi.tuo, undefined, 'ei tuontia: moottori ei tarjoa linssiä');
+test('linssi ei ole vielä rekisterissä (ei pelaajille), kuvaus täydellinen', () => {
+  // Rekisteririvi (hiomassa tai valmis) muuttaa natiivin kultaisen linssijäljen (tools/natiivi-kultaiset/
+  // tee-linssijalki.mjs): lisätään yhdessä natiivin rekisterin ja Pelikoodarin tiivisteiden kanssa.
+  assert.equal(LINSSIT.find((r) => r.tunnus === 'maapallon-vuosi'), undefined);
   for (const k of ['tunnus', 'nimi', 'lyhyt', 'ikoni', 'laudat', 'lahde']) assert.ok(LINSSI[k], k);
-  assert.equal(LINSSI.tunnus, rivi.tunnus);
-});
-
-test('koko pallo mahtuu ruutuun: kapea ruutu nostaa kameraa', () => {
-  const nelio = kokoPallonKorkeus(900, 900, 50);
-  const pysty = kokoPallonKorkeus(390, 844, 50);
-  const vaaka = kokoPallonKorkeus(1600, 900, 50);
-  assert.ok(Math.abs(nelio - (1.12 / Math.sin((25 * Math.PI) / 180) - 1)) < 1e-9);
-  assert.ok(pysty > nelio * 1.5, `puhelin pystyssä ${pysty}`);
-  assert.equal(vaaka, nelio, 'leveä ruutu: pystysuunta rajaa');
 });

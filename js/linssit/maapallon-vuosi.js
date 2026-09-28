@@ -7,8 +7,9 @@
  * kasvillisuus, lumi ja jää, meren lämpötila, sade, pilvisyys, palot, yövalot; tasakulmainen 4096 × 2048 PNG alfalla,
  * läpinäkyvyys säädettävä). Kerrosluettelo on ämpärissä (KERROSLUETTELO), joten uusi kerros ei vaadi koodimuutosta.
  *
- * TILA: HIOMASSA (Päätoimittaja 28.9.): rekisterissä `tila: 'hiomassa'` ilman tuontia, joten pelaaja ei voi avata
- * linssiä. Kehitys ja kuvasarjat: maapallon-vuosi.html (?kk=7&kerros=<tunnus>&peitto=0.7). Natiivi (Linssiseppä)
+ * TILA: EI VIELÄ REKISTERISSÄ (Päätoimittaja 28.9.: ei pelaajille), joten pelaaja ei voi avata linssiä. Rekisteririvi
+ * (hiomassa tai valmis) muuttaa natiivin kultaisen linssijäljen, joten se lisätään natiivin rekisterin kanssa samalla
+ * kertaa (Pelikoodarin tiivisteet, tools/natiivi-kultaiset). Kehitys ja kuvasarjat: maapallon-vuosi.html (?kk=7&kerros=<tunnus>&peitto=0.7). Natiivi (Linssiseppä)
  * tehdään myöhemmin tämän web-mallin mukaan.
  *
  * TOTEUTUS: kuukausi A, kuukausi B (häivytys t) ja kerros (peitto) yhdistetään yhdeksi 4096 × 2048 -tekstuuriksi

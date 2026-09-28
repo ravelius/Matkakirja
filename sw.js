@@ -398,6 +398,7 @@ const SHELL = [
   './js/linssit/vertailu.js',
   './js/linssit/maatiedot.js',
   './js/linssit/vesistot.js',
+  './js/linssit/maapallon-vuosi.js',
   './js/packs/viritysaanet.js',
   './css/radio.css',
   './js/packs/valokuvat-paikalliset.js',
