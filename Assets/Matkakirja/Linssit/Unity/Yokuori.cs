@@ -28,13 +28,22 @@ namespace Matkakirja.Natiivi
             IdPeitto = Shader.PropertyToID("_Peitto"), IdAkseli = Shader.PropertyToID("_Akseli"), IdNolla = Shader.PropertyToID("_Nolla"), IdIta = Shader.PropertyToID("_Ita"),
             IdR = Shader.PropertyToID("_R"), IdLitistys = Shader.PropertyToID("_Litistys"), IdValot = Shader.PropertyToID("_Valot"),
             IdValotEu = Shader.PropertyToID("_ValotEu"), IdValotMaa = Shader.PropertyToID("_ValotMaa"),
-            IdKiilto = Shader.PropertyToID("_Kiilto"), IdVarjo = Shader.PropertyToID("_Varjo");
+            IdKiilto = Shader.PropertyToID("_Kiilto"), IdVarjo = Shader.PropertyToID("_Varjo"),
+            IdPilvet = Shader.PropertyToID("_Pilvet"), IdPilvetOn = Shader.PropertyToID("_PilvetOn"), IdPilviPeitto = Shader.PropertyToID("_PilviPeitto");
         const string ValoJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/iss-yovalot-2026-09-28/",
             VesiJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/iss-vesi-2026-09-28/";
-        /// <summary>Valojen voimakkuus (HDR: suurkaupunkien ytimet hehkuvat bloomissa).</summary>
-        public const float ValojenVoima = 1.6f;
+        /// <summary>
+        /// Valojen voimakkuus (HDR: suurkaupunkien ytimet hehkuvat bloomissa). Omistaja 28.9. laitekuvasta: "valot palavat puhki"
+        /// → vertailu 100 / 80 / 60 % → 60 %, eli 1,6 × 0,6 = 0,96.
+        /// </summary>
+        public const float ValojenVoima = 0.96f;
         /// <summary>A/B (`astro kyyti valot 0|1`): kaupunkien valot pois kuvaparia varten.</summary>
         public static bool ValotPois;
+        /// <summary>
+        /// Valojen osuus täydestä (A/B `astro kyyti valot <0…1>`, esim. 0.8): omistaja 28.9. klo 14.1x laitekuvasta "valot
+        /// palavat puhki. miltä näyttää, jos pidetään esim 80% peitolla?" — vertailu 1 / 0,8 / 0,6 samasta kulmasta.
+        /// </summary>
+        public static float ValojenOsuus = 1f;
         /// <summary>A/B (`astro kyyti kiilto 0|1`, `astro kyyti varjo 0|1`): heijastus ja päiväpuolen varjostus pois.</summary>
         public static bool KiiltoPois, VarjoPois;
         public const float KiillonVoima = 6f, VarjonVoima = 0.55f;
@@ -180,6 +189,26 @@ namespace Matkakirja.Natiivi
             valmis(l, kw, kh);
         }
 
+        /// <summary>
+        /// Päivän pilvet (ISS-realismi 2): paksut pilvet peittävät kaupunkien valot ja auringon heijastuksen (valo · (1 − 0,85 alfa)),
+        /// kun pilvet näkyvät kyydissä (Siirtosepän löydös 28.9.: ennen pilviä ei kyydissä piirretty lainkaan). null = ei pilviä.
+        /// </summary>
+        public void Pilvet(Texture kuva)
+        {
+            materiaali.SetTexture(IdPilvet, kuva != null ? kuva : Texture2D.blackTexture);
+            materiaali.SetFloat(IdPilvetOn, kuva != null ? 1f : 0f);
+        }
+
+        /// <summary>Pilvikuoren nykyinen peitto (0…1): himmennys seuraa näkyviä pilviä (A/B `astro kyyti pilvet pois` → 0).</summary>
+        public void PilvienPeitto(float peitto)
+        {
+            if (Mathf.Approximately(pilviPeitto, peitto)) return;
+            pilviPeitto = peitto;
+            materiaali.SetFloat(IdPilviPeitto, peitto);
+        }
+
+        float pilviPeitto = -1f;
+
         /// <summary>Näkyviin tai pois (kyydissä näkyvissä, ellei A/B pois).</summary>
         public void Nayta(bool nakyvissa)
         {
@@ -200,7 +229,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdAkseli, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
             materiaali.SetVector(IdNolla, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(1, 0, 0))).normalized);
             materiaali.SetVector(IdIta, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 1, 0))).normalized);
-            materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima);
+            materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima * ValojenOsuus);
             materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
             materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);
         }
