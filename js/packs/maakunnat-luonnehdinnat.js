@@ -5243,7 +5243,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CZE: {
     'Jihočeský': {
       lyhyt: 'Český Krumlovin linnan barokkiteatterissa on säilynyt alkuperäinen puinen lavakoneisto kulisseineen, harvinaisuus koko Euroopassa.',
-      pitka: `Hluboká nad Vltavou -linna kohoaa Vltavan mutkan yllä valkoisena satulinnana, joka näyttää lainatulta Englannista — eikä se ole sattumaa. Schwarzenbergin ruhtinassuku muutti keskiaikaisen linnan perinpohjin uusgoottilaiseksi 1841–1871 esikuvanaan Windsorin linna, ja työ valmistui vain kaksi vuotta ennen isoisän 1873 matkaa: hän olisi voinut nähdä muurit yhä tuoreina, kivipölyn tuskin ehdittyä laantua. Nykyään linna on Tšekin suosituimpia nähtävyyksiä, ja Etelä-Böömin lammikkoverkosto — 1500-luvulla kaivettu Rožmberkin lampi suurimpana — tuottaa yhä valtaosan maan joulukarpeista.`,
+      pitka: `Hluboká nad Vltavou -linna kohoaa Vltavan mutkan yllä valkoisena satulinnana, joka näyttää lainatulta Englannista — eikä se ole sattumaa, sillä Schwarzenbergin ruhtinassuku muutti keskiaikaisen linnan perinpohjin uusgoottilaiseksi 1841–1871 esikuvanaan Windsorin linna. Nykyään linna on Tšekin suosituimpia nähtävyyksiä komeine sisätiloineen ja laajoine puistoineen. Etelä-Böömin lammikkoverkosto — 1500-luvulla kaivettu Rožmberkin lampi suurimpana — tuottaa yhä valtaosan maan joulukarpeista, ja lampien rannoilla pesii runsaasti vesilintuja. Läänin pääkaupungissa České Budějovicessa pannaan Budweiser Budvar -olutta, jonka nimestä amerikkalainen Anheuser-Busch on kiistellyt tšekkiläisten kanssa oikeussaleissa jo yli sata vuotta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihocesky-8d22070f.jpg",
@@ -5258,7 +5258,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Jihomoravský': {
       lyhyt: 'Brnon Tugendhatin huvila valmistui 1930 Mies van der Rohen piirustuksista, ja sen olohuoneen suuret ikkunat voi laskea lattian alle.',
-      pitka: `Slavkov u Brnan tasangolla, vain lyhyen matkan Brnosta, Napoleon murskasi joulukuun toisena päivänä 1805 Venäjän ja Itävallan yhdistetyn armeijan taistelussa, jota historia muistaa Austerlitzin nimellä. Isoisän kulkiessa seudun ohi 1873 taistelusta oli ehtinyt kulua 68 vuotta, ja pelloilla ei ollut yhtäkään muistomerkkiä — Rauhan kumpu, joka nykyään kohoaa taistelupaikan yllä, pystytettiin vasta 1900-luvun alussa. Nykyään Etelä-Moravia tunnetaan ennen kaikkea viinistä: Lednice-Valticen linnojen ja puistojen kokonaisuus on Euroopan suurin ihmisen muotoilema maisemapuisto ja Unescon maailmanperintöä.`,
+      pitka: `Slavkov u Brnan tasangolla Napoleon murskasi joulukuun toisena päivänä 1805 Venäjän ja Itävallan yhdistetyn armeijan taistelussa, jota historia muistaa Austerlitzin nimellä; taistelukentällä kohoaa nykyään Rauhan kumpu, pystytetty vasta 1900-luvun alussa. Etelä-Moravia tunnetaan nykyään ennen kaikkea viinistä — alueella kasvatetaan enemmän viiniä kuin missään muualla Tšekissä, ja syyskuiset viininkorjuujuhlat täyttävät kylien torit. Lednice-Valticen linnojen ja puistojen kokonaisuus on Euroopan suurin ihmisen muotoilema maisemapuisto ja Unescon maailmanperintöä. Pohjoisempana Moravský kras -karstialueella Macochan kuilu avautuu lähes 140 metrin syvyyteen keskellä metsää, ja sen pohjalta lähtee Punkva-joki uurtamiensa luolastojen läpi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihomoravsky-aeb03b9d.jpg",
@@ -5273,7 +5273,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Karlovarský': {
       lyhyt: 'Karlovy Varyn kuumin lähde Vřídlo suihkuaa yli 70-asteista vettä, ja kylpylävieraat juovat lähdevettä nokallisista posliinikupeista.',
-      pitka: `Karlovy Vary eli isoisän 1873 matkan aikaan kylpyläkulta-aikaansa: Euroopan aatelisto, kirjailijat ja säveltäjät saapuivat kesäisin juomaan vettä ja verkostoitumaan, ja kaupungin vanhin suurhotelli Pupp isännöi vierainaan sekä hallitsijoita että taiteilijoita vuosikymmenten ajan. Puiset lähdekäytävät korvattiin myöhemmin kivestä ja valuraudasta tehdyillä pylväiköillä, mutta 1870-luvulla vieraat kävelivät yhä vaatimattomamman katoksen alla. Nykyään kaupunki tunnetaan myös Becherovka-yrttilikööristä, jonka apteekkari Josef Vitus Becher kehitti 1807, ja heinäkuisesta kansainvälisestä elokuvajuhlasta, joka on järjestetty vuodesta 1946.`,
+      pitka: `Karlovy Vary elää yhä kylpyläkulttuuristaan: kaupungin vanhin suurhotelli, nykyinen Pupp, juontaa juurensa vuoteen 1701 ja on isännöinyt vuosisatojen varrella niin Pietari Suurta, Napoleonia kuin Beethovenia, Bachia ja Kafkaa. Nykyiset kivestä ja valuraudasta veistetyt lähdekäytävät korvasivat vaatimattomammat puiset katokset vasta 1800-luvun lopulla. Kaupunki tunnetaan myös Becherovka-yrttilikööristä, jonka apteekkari Josef Vitus Becher kehitti 1807 ja jonka tarkkaa reseptiä vartioidaan yhä salaisuutena. Heinäkuinen kansainvälinen elokuvajuhla, järjestetty vuodesta 1946, tuo nykyään kaupunkiin tähtiä ympäri maailmaa ja täyttää kylpyläkadut punaisilla matoilla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-karlovarsky-b32666cf.jpg",
@@ -5288,7 +5288,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Královéhradecký': {
       lyhyt: 'Krkonošen Sněžka on 1 603 metrillään Tšekin korkein vuori, ja sen huipun poikki kulkee raja Puolaan.',
-      pitka: `Vain seitsemän vuotta ennen isoisän 1873 matkaa Hradec Králové oli yhden 1800-luvun Euroopan suurimmista yksipäiväisistä taisteluista näyttämö: Preussin ja Itävallan armeijat kohtasivat sen pelloilla heinäkuussa 1866, ja taistelu ratkaisi lopulta koko Saksan yhdistymisen suunnan preussilaisittain. Isoisän kulkiessa seudulla arvet olivat yhä tuoreet, ja monet paikalliset perheet muistivat sodan omakohtaisesti. Alueella on myös vanhempaa historiaa: Kuksin kylässä barokkitaiteilija Matyáš Bernard Braun veisti 1700-luvulla kivestä hyveitä ja paheita esittävät patsaat, jotka seisovat siellä yhä.`,
+      pitka: `Heinäkuussa 1866 Preussin ja Itävallan armeijat kohtasivat Hradec Královén pelloilla Königgrätzin taistelussa, yhdessä 1800-luvun Euroopan suurimmista yksipäiväisistä taisteluista, joka ratkaisi koko Saksan yhdistymisen suunnan preussilaisittain; alueella on yhä lukuisia muistomerkkejä ja hautausmaita. Linnoitusstatuksen purkamisen jälkeen arkkitehti Josef Gočár laati kaupungille 1920-luvulla kunnianhimoisen kaupunkisuunnitelman, jonka ansiosta siitä tuli tunnettu "tasavallan salonkina". Lähellä sijaitsevassa Kuksin kylässä barokkitaiteilija Matyáš Bernard Braun veisti 1700-luvulla kivestä hyveitä ja paheita esittävät patsaat, jotka seisovat siellä yhä. Krkonošen vuoristo tarjoaa kesäisin vaellusreittejä ja talvisin hiihtoa Sněžkan juurella, Tšekin korkeimman huipun kupeessa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-kralovehradecky-152c1d3d.jpg",
@@ -5303,7 +5303,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Liberecký': {
       lyhyt: 'Ještědin huipulla seisoo 1973 valmistunut suppilomainen torni, jossa on sekä televisiolähetin että hotelli ja ravintola.',
-      pitka: `Liberecin seutua kutsuttiin 1800-luvulla Böömin Manchesteriksi, koska laakson täyttivät villa- ja pellavakehruumot ja niiden savupiiput — isoisän matkan aikaan 1873 alue oli koko Habsburgien valtakunnan johtava tekstiiliteollisuuden keskus, ja moni kylä eli täysin yhden tehtaan tahdissa. Pohjoisempana Nový Bor jatkoi jo satojen vuosien mittaista lasinpuhaltajien perinnettään, joka jatkuu edelleen ja tuottaa lasikoristeita ympäri maailman. Ještědin huipun suppilomainen televisiotorni, jonka lyhyt-teksti mainitsee, valmistui vasta sata vuotta isoisän matkan jälkeen.`,
+      pitka: `Liberecin seutua kutsuttiin 1800-luvulla Böömin Manchesteriksi, koska laakson täyttivät villa- ja pellavakehruumot savupiippuineen, ja alueesta kasvoi koko Habsburgien valtakunnan johtava tekstiiliteollisuuden keskus. Monet tehtaista ovat nykyään tyhjillään tai muutettu muuhun käyttöön, mutta niiden punatiiliset piiput hallitsevat yhä laakson maisemaa. Pohjoisempana Nový Bor jatkaa satojen vuosien mittaista lasinpuhaltajien perinnettään, joka tuottaa nykyään lasikoristeita ja taidelasia ympäri maailman. Ještědin huipun suppilomainen televisiotorni palkittiin 1969 arvostetulla kansainvälisellä Perret-arkkitehtuuripalkinnolla vielä ennen kuin se edes valmistui 1973, ja sen suunnittelija Karel Hubáček on yhä ainoa tšekkiläinen palkinnon saaja.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-liberecky-513d415c.jpg",
@@ -5318,7 +5318,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Moravskoslezský': {
       lyhyt: 'Ostravan Dolní Vítkovicessa masuunit sammuivat 1998, ja nyt yhden niistä huipulle pääsee kiipeämään näköalapaikalle.',
-      pitka: `Vítkovicen rautatehdas oli isoisän matkan aikaan 1873 jo neljännesvuosisadan ikäinen ja täydessä vauhdissa: se perustettiin 1828, ja 1843 sen ostivat itävaltalais-juutalaiseen Rothschildin sukuun kuuluneet pankkiirit, jotka rakensivat siitä yhden Habsburgien valtakunnan suurimmista rauta- ja teräslaitoksista. Ostrava kasvoi tehtaan ja sitä ympäröivien hiilikaivosten ympärille lähes tyhjästä, ja savupiippujen ja kaivostornien maisema muistutti isoisän aikana enemmän Ruhrin aluetta kuin maalaista Böömiä. Nykyään sammuneet masuunit ovat kulttuurikohde, ja alueen entinen kaasukello on konserttisali, jossa järjestetään myös Colours of Ostrava -musiikkifestivaalia.`,
+      pitka: `Ostrava kasvoi lähes tyhjästä Vítkovicen rautatehtaan ja sitä ympäröivien hiilikaivosten ympärille: tehdas perustettiin 1828, ja 1843 sen ostivat itävaltalais-juutalaiseen Rothschildin sukuun kuuluneet pankkiirit, jotka rakensivat siitä yhden Habsburgien valtakunnan suurimmista rauta- ja teräslaitoksista. Savupiippujen ja kaivostornien maisema teki kaupungista aikanaan Keski-Euroopan oman pienen Ruhrin alueen. Masuunit sammutettiin lopullisesti 1998, ja nykyään Dolní Vítkovicen teollisuusalue on kulttuurikohde, jonka yhden masuunin huipulle pääsee kiipeämään näköalapaikalle. Entinen kaasukello on muutettu Gong-konserttisaliksi, joka isännöi kesäisin Colours of Ostrava -musiikkifestivaalia, yhtä Keski-Euroopan suurimmista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-moravskoslezsky-86919ccd.jpg",
@@ -5333,7 +5333,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Olomoucký': {
       lyhyt: 'Olomoucin torilla kohoaa barokkinen Pyhän Kolminaisuuden pylväs, joka on Unescon maailmanperintöä ja kätkee jalustaansa pienen kappelin.',
-      pitka: `Isoisän kulkiessa Olomoucin läpi 1873 kaupunki oli yhä raskaasti linnoitettu Itävallan sotalaitos: muurit ja bastionit olivat kiristäneet kaupungin kasvua vuosisatojen ajan, ja siviilirakentaminen pääsi vapautumaan vasta 1886, kun linnoitusstatus lopulta purettiin. Sitä ennen Olomouc oli tunnettu myös nuoren Franz Josefin kruunauspaikkana — hänet julistettiin Itävallan keisariksi kaupungissa 1848, vain 25 vuotta ennen isoisän vierailua. Nykyään Olomoucin vanhakaupunki on Prahan jälkeen maan laajin historiallinen keskusta, ja alueella valmistetaan yhä ainoaa alkuperäistä tšekkiläistä juustolaatua, voimakastuoksuista tvarůžky-rahkajuustoa.`,
+      pitka: `Olomoucin vanhakaupunki on Prahan jälkeen maan laajin historiallinen keskusta, ja sen laajuus juontuu pitkästä sotilashistoriasta: raskaat muurit ja bastionit pitivät kaupungin tiukasti linnoitettuna Itävallan sotalaitoksena, eikä siviilirakentaminen vapautunut ennen kuin linnoitusstatus purettiin 1886. Kaupunki tunnetaan myös nuoren Franz Josefin kruunauspaikkana — hänet julistettiin Itävallan keisariksi Olomoucissa 1848. Palackýn yliopisto, jonka juuret ulottuvat jesuiittakollegioon vuodelta 1573, on Prahan Kaarlen yliopiston jälkeen Tšekin toiseksi vanhin korkeakoulu ja tekee kaupungista nykyään vilkkaan opiskelijakaupungin. Alueella valmistetaan yhä ainoaa alkuperäistä tšekkiläistä juustolaatua, voimakastuoksuista tvarůžky-rahkajuustoa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-olomoucky-4a6930cb.jpg",
@@ -5348,7 +5348,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Pardubický': {
       lyhyt: 'Pardubicessa juostaan joka lokakuu Velká pardubická, yksi Euroopan rankimmista estelaukoista, ja sen pelätyin este on Taxis-oja.',
-      pitka: `Pardubicen kuuluisin este­lauku, Velká pardubická, juostiin ensimmäisen kerran vasta 1874 — vuosi isoisän 1873 matkan jälkeen, niin että hän ehti nähdä radan ja Taxis-ojan vain tyhjänä, ilman yhtäkään hevosta yli hyppäämässä. Kaupunki oli isoisän aikaan tunnettu ennen kaikkea perinkeitosta: paikalliset leipurit olivat valmistaneet mausteista Pardubicen perník-piparkakkua ainakin 1500-luvulta lähtien, ja perinne on säilynyt katkeamatta tähän päivään. Renessanssiaikainen Pernštejnin sukukartano hallitsee yhä kaupungin toria, muistona suvusta, joka rakensi seudun vaurauden kalanviljelyllä ja kaupalla 1400–1500-luvuilla.`,
+      pitka: `Pardubicen kuuluisin estelaukka, Velká pardubická, on juostu joka lokakuu vuodesta 1874, ja sen pelätyin este, syvä Taxis-oja, on niellyt jo lukuisia ratsastajia. Kaupunki on yhtä kuuluisa perinkeitostaan: paikalliset leipurit ovat valmistaneet mausteista Pardubicen perník-piparkakkua ainakin 1500-luvulta lähtien, ja perinne on säilynyt katkeamatta tähän päivään. Renessanssiaikainen Pernštejnin sukukartano hallitsee kaupungin toria, muistona suvusta, joka rakensi seudun vaurauden kalanviljelyllä ja kaupalla 1400–1500-luvuilla. Toukokuussa 1911 lentäjä Jan Kašpar nousi Pardubicesta ilmaan ja lensi 121 kilometrin matkan Prahaan asti — tuolloin pisin lento koko Itävalta-Unkarissa — ja tapaus muistetaan kaupungissa yhä ylpeänä osana sen ilmailuhistoriaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-pardubicky-b550be81.jpg",
@@ -5363,7 +5363,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Plzeňský': {
       lyhyt: 'Plzeňissä pantiin 1842 ensimmäinen vaalea pohjahiivaolut, ja sen mukaan pils-oluet saivat nimensä ympäri maailman.',
-      pitka: `Vain neljä vuotta ennen isoisän 1873 matkaa insinööri Emil Škoda otti 1869 haltuunsa pienen konepajan Plzeňissä — yrityksen, joka kasvoi vuosikymmenten aikana yhdeksi Habsburgien valtakunnan ja sitten koko Euroopan suurimmista kone- ja asetehtaista. Isoisän aikaan Škodan tehdas oli vielä vaatimaton verstas, ei suinkaan se teollisuusjätti, joksi siitä pian tuli. Kaupungin toinen kuuluisuus, vaalea pohjahiivaolut, oli tuolloin jo kolmisenkymmentä vuotta vanha keksintö, ja sen suosio levisi 1800-luvun loppua kohti niin laajalle, että "pils" tuli tarkoittamaan lähes mitä tahansa vaaleaa lageria ympäri maailman.`,
+      pitka: `Plzeňin vanhakaupunki perustettiin 1295 kuningas Václav II:n määräyksestä säännölliseksi ruutukaavaksi, joka on säilynyt sellaisenaan ja on yksi Euroopan parhaiten säilyneistä keskiaikaisista kaupunkisuunnitelmista. Insinööri Emil Škoda otti 1869 haltuunsa pienen konepajan kaupungissa — yrityksen, joka kasvoi yhdeksi Habsburgien valtakunnan ja sittemmin koko Euroopan suurimmista kone- ja asetehtaista, ja Škoda-nimi elää yhä sekä autoissa että raskaassa teollisuudessa. Kaupungin toinen kuuluisuus, vaalea pohjahiivaolut, keksittiin siellä 1842, ja nimitys "pils" on siitä lähtien tarkoittanut lähes mitä tahansa vaaleaa lageria ympäri maailman. Panimoalueella käy nykyään vuosittain satojatuhansia matkailijoita, jotka kiertävät historiallisia hiekkakivikellareita syvällä kaupungin alla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-plzensky-99a6a1c6.jpg",
@@ -5377,7 +5377,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Prague: {
       lyhyt: 'Petřínin kukkulalla seisoo 1891 rakennettu näkötorni, Eiffel-tornin pienempi sukulainen, jonka huipulle noustaan 299 askelmaa.',
-      pitka: `Isoisän kulkiessa Prahan halki 1873 kaupungin ylpeys, Kansallisteatteri, oli vielä rakennustyömaa: peruskivi muurattiin juhlallisesti 1868 kymmenillä eri puolilta Böömiä tuoduilla kivilohkareilla, ja rakennus valmistui vasta 1881 — palaen samana vuonna piakkoin uudelleen ja avautuen lopullisesti 1883. Isoisä olisi siis voinut nähdä telineiden ja muurien nousevan Vltavan rannalla, ei valmista teatteria. Vanhassakaupungissa Orloj-tähtitieteellinen kello oli isoisän aikaan jo yli 460-vuotias, sen alkuperäiset osat ajalta 1410, ja se näytti aikaa yhtä uskollisesti kuin nykyään.`,
+      pitka: `Prahan ylpeys, Kansallisteatteri, valmistui vasta 1881 — peruskivi oli muurattu jo 1868 kymmenillä eri puolilta Böömiä tuoduilla kivilohkareilla — mutta rakennus paloi pian samana vuonna uudelleen ja avautui lopullisesti vasta 1883. Nykyään teatterissa esitetään oopperaa, balettia ja draamaa, ja sen kultainen katto kimaltelee Vltavan rannalla yhtenä kaupungin tunnetuimmista maamerkeistä. Vanhassakaupungissa Orloj-tähtitieteellinen kello on yli 600-vuotias, sen alkuperäiset osat ajalta 1410, ja se näyttää yhä aikaa, planeettojen asennot ja apostolien kulkueen joka tunti turistijoukkojen edessä. Praha säästyi suurelta osin toisen maailmansodan pommituksilta, minkä ansiosta sen keskiaikainen ja barokkiajan katutunnelma on säilynyt poikkeuksellisen ehyenä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-prague-013aff3e.jpg",
@@ -5392,7 +5392,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Středočeský': {
       lyhyt: 'Kutná Horan Sedlecin luukappelin kattokruunu ja koristeet on koottu kymmenientuhansien vainajien luista.',
-      pitka: `Karlštejnin linna, jonka keisari Kaarle IV rakennutti 1348 säilyttääkseen siellä valtakunnan kruununjalokivet, näytti isoisän vieraillessa seudulla 1873 yhä pitkälti keskiaikaiselta: sen suuri uusgoottilainen kunnostus, joka antoi linnalle nykyisen jyrkkäharjaisen ilmeen, käynnistyi vasta 1887 arkkitehti Josef Mockerin johdolla. Lähempänä Prahaa sijaitseva Křivoklátin metsästyslinna oli vuosisatoja kuningasten yksityistä metsästysmaata, ja sen laajat metsät ovat säilyneet suojeltuina biosfäärialueena tähän päivään. Böömin sydänmailla, Kutná Horassa, hopeakaivokset olivat isoisän aikaan hiipuneet, mutta 1300-luvulla ne olivat tehneet kaupungista koko valtakunnan rikkaimman.`,
+      pitka: `Karlštejnin linna, jonka keisari Kaarle IV rakennutti 1348 säilyttääkseen siellä valtakunnan kruununjalokivet, on nykyään yksi Tšekin suosituimmista linnoista ja sai nykyisen jyrkkäharjaisen ilmeensä vasta arkkitehti Josef Mockerin kunnostuksessa 1887 alkaen. Lähempänä Prahaa sijaitseva Křivoklátin metsästyslinna oli vuosisatoja kuningasten yksityistä metsästysmaata, ja sen laajat metsät ovat säilyneet suojeltuina biosfäärialueena. Kutná Horan keskiaikaiset hopeakaivokset tekivät kaupungista 1300-luvun alussa Euroopan johtavan hopeantuottajan, ja sen omalla rahapajalla lyötiin vuodesta 1300 pražský groš -hopearahaa, joka hallitsi Keski-Euroopan kauppaa vuosisadan ajan. Nykyään kaivoskaupunki on Unescon maailmanperintöä, ja sen Pyhän Barbaran kirkko kaivostyöläisten suojeluspyhimykselle on yksi Böömin komeimmista gotiikan rakennuksista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-stredocesky-fa02cbcb.jpg",
@@ -5407,7 +5407,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ústecký': {
       lyhyt: 'Böömin Sveitsin kansallispuistossa kohoaa Pravčická brána, Euroopan suurin luonnon muovaama hiekkakivikaari.',
-      pitka: `Pohjois-Böömin ruskohiiliallas oli isoisän 1873 matkan aikaan juuri kiihtymässä valtakunnan yhdeksi tärkeimmistä teollisuusalueista: kaivokset syvenivät ja rautatiet uusiutuivat vuosikymmen toisensa jälkeen, kun hiili ruokki koko Habsburgien valtakunnan tehtaita ja rautateitä. Sata vuotta myöhemmin, 1975, Mostin kaupungin keskiaikainen tiilinen kirkko siirrettiin kokonaisena 841 metrin matkan raiteilla syrjään, kun avolouhos uhkasi niellä sen alleen — insinöörityö, joka aikanaan ylitti maailmanennätyksen siirretyn rakennuksen painossa. Nykyään monet vanhat avolouhokset on täytetty vedellä ja muutettu virkistysjärviksi, kun taas hiekkakivimaisemat Böömin Sveitsissä ovat pysyneet koskemattomina.`,
+      pitka: `Pohjois-Böömin ruskohiiliallas kasvoi 1800-luvulla nopeasti valtakunnan tärkeimmäksi teollisuusalueeksi, kun kaivokset syvenivät ja rautatiet uudistuivat vuosikymmen toisensa jälkeen. Vuonna 1975 Mostin kaupungin keskiaikainen tiilinen kirkko siirrettiin kokonaisena 841 metrin matkan raiteilla syrjään, kun avolouhos uhkasi niellä sen alleen — insinöörityö, joka ylitti aikanaan maailmanennätyksen siirretyn rakennuksen painossa. Nykyään monet vanhat avolouhokset on täytetty vedellä ja muutettu virkistysjärviksi, joiden rannoilla uidaan ja purjehditaan entisen kaivosmaiseman keskellä. Etelämpänä hiekkakivimaisemat Böömin Sveitsin kansallispuistossa ovat sen sijaan pysyneet lähes koskemattomina ja suosittuina vaellusreitteinä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-ustecky-707b1990.jpg",
@@ -5422,7 +5422,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vysočina': {
       lyhyt: 'Telčin pitkää toria reunustavat renessanssitalot pastellisävyisine päätyineen, ja koko vanha keskusta on Unescon maailmanperintöä.',
-      pitka: `Žďár nad Sázavoun lähellä kohoaa Zelená horan pyhiinvaelluskirkko, jonka arkkitehti Jan Blažej Santini-Aichel suunnitteli 1719–1722 tähdenmuotoiseksi kunnianosoitukseksi Pyhälle Johannes Nepomukille — isoisän kulkiessa ohi 1873 rakennus oli jo 150-vuotias ja pyhiinvaellusperinne juurtunut syvälle seudun elämään. Vysočinan ylängöllä eletään harvaan asutulla, karulla seudulla, jossa perunat ja hapankaali ovat perinteisesti korvanneet vehnän, koska vuoristoinen maaperä ei ole antanut viljaa yhtä helposti kuin muualla Böömissä. Nykyään ylängön kylmät talvet ja kukkulat tekevät siitä myös maan johtavan hiihtoseudun: Nové Město na Moravěn stadion isännöi säännöllisesti ampumahiihdon ja maastohiihdon maailmancupin osakilpailuja.`,
+      pitka: `Žďár nad Sázavoun lähellä kohoaa Zelená horan pyhiinvaelluskirkko, jonka arkkitehti Jan Blažej Santini-Aichel suunnitteli 1719–1722 tähdenmuotoiseksi kunnianosoitukseksi Pyhälle Johannes Nepomukille, ja kirkko on nykyään Unescon maailmanperintöä. Vysočinan ylängöllä eletään harvaan asutulla, karulla seudulla, jossa perunat ja hapankaali ovat perinteisesti korvanneet vehnän, koska vuoristoinen maaperä ei ole antanut viljaa yhtä helposti kuin muualla Böömissä. Nykyään ylängön kylmät talvet ja kukkulat tekevät siitä maan johtavan hiihtoseudun: Nové Město na Moravěn stadion isännöi säännöllisesti ampumahiihdon ja maastohiihdon maailmancupin osakilpailuja. Telč sai keskiaikaisen muotonsa kahden keinotekoisen lammikon välisellä kapealla kannaksella, joka suojasi kaupunkia tulipaloilta ja hyökkääjiltä ja selittää yhä sen poikkeuksellisen ehjänä säilyneen renessanssitorin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-vysocina-edd869b3.jpg",
@@ -5437,7 +5437,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Zlínský': {
       lyhyt: 'Zlín on Baťan kenkätehtaan kaupunki, ja sen pilvenpiirtäjässä johtajan työhuone oli hissi, joka liikkui kerroksesta toiseen.',
-      pitka: `Isoisän kulkiessa Zlínin läpi 1873 kaupunki oli vain vaatimaton maalaispitäjä muutaman tuhannen asukkaan kylineen — mitään ei enteillyt tulevaa. Tomáš Baťa, joka kolme vuotta myöhemmin, 1876, syntyi paikallisen suutariperheen lapseksi, perusti kenkätehtaansa vasta 1894, ja koko kaupunki rakennettiin uudelleen 1920–30-luvuilla funktionalistiseksi "puutarhakaupungiksi" tehtaan ympärille. Vuoristoisessa Valašskon alueella oli isoisän aikaan sen sijaan jo pitkät perinteet paimentolaiskarjataloudessa ja puurakentamisessa, joita Rožnov pod Radhoštěmin ulkoilmamuseo — Keski-Euroopan vanhin, perustettu 1925 — esittelee tänä päivänä alkuperäisissä hirsirakennuksissa.`,
+      pitka: `Zlín oli 1800-luvulla vain vaatimaton maalaispitäjä muutaman tuhannen asukkaan kylineen, kunnes paikallisen suutariperheen poika Tomáš Baťa perusti kenkätehtaansa 1894 — tehdas kasvoi nopeasti maailman suurimpien kenkävalmistajien joukkoon, ja koko kaupunki rakennettiin 1920–30-luvuilla uudelleen funktionalistiseksi "puutarhakaupungiksi" tehtaan ympärille. Nykyään Baťan tehdaskompleksi on osittain museona ja osittain yliopiston ja yritysten käytössä, ja sen punatiiliset tehdashallit ovat harvinainen esimerkki 1900-luvun alun teollisuusarkkitehtuurista. Vuoristoisella Valašskon alueella on sen sijaan pitkät perinteet paimentolaiskarjataloudessa ja hirsirakentamisessa, joita Rožnov pod Radhoštěmin ulkoilmamuseo — Keski-Euroopan vanhin, perustettu 1925 — esittelee alkuperäisissä hirsirakennuksissa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-zlinsky-6fc888e8.jpg",
@@ -6103,7 +6103,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   HRV: {
     'Bjelovarsko-bilogorska': {
       lyhyt: 'Daruvar on Kroatian tšekkiläisvähemmistön keskus, ja kaupungin lämpimissä lähteissä on kylvetty jo roomalaisten aikaan.',
-      pitka: `Bjelovar oli isoisän 1873 matkan aikaan yhä nuori kaupunki suhteessa ympäristöönsä: Habsburgit perustivat sen 1756 säännölliseksi ruutukaava-varuskuntakaupungiksi osaksi Sotarajaa (Vojna granica), joka suojasi valtakuntaa Ottomaanien hyökkäyksiltä vuosisatojen ajan. Vielä 1870-luvulla Bjelovar oli ennen kaikkea sotilaskaupunki täynnä rajarykmenttien varuskuntia, ei siviilihallinnon keskus. Sotaraja lakkautettiin lopulta vasta 1881, kahdeksan vuotta isoisän matkan jälkeen, ja alue liitettiin tavalliseen siviilihallintoon.`,
+      pitka: `Bjelovar syntyi 1756 Habsburgien suunnittelemana ruutukaava-kaupunkina, kun arkkiherttuakunta halusi vahvan varuskunnan osaksi Sotarajaa (Vojna granica), joka vartioi valtakuntaa Ottomaanien hyökkäyksiltä vuosisatojen ajan. Säännöllinen katuverkko näkyy yhä kaupungin keskustassa, vaikka Sotaraja lakkautettiin jo 1881 ja alue siirtyi tavalliseen siviilihallintoon. Naapurikaupunki Daruvarissa on nykyään Kroatian tšekkiläisvähemmistön keskus, ja sen lämpimissä lähteissä on kylvetty jo roomalaisten ajoista lähtien. Bilogoran metsät ja niiden väliin jäävät viljelysmaat tekevät maakunnasta yhä rauhallista maaseutua, jonka sotilaallinen menneisyys elää enää katujen geometriassa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-bjelovarsko-bilogorska-c9df4c6e.jpg",
@@ -6118,7 +6118,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Brodsko-Posavska': {
       lyhyt: 'Slavonski Brodissa Savan rannalla on Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui 4 000 sotilasta ja 150 tykkiä.',
-      pitka: `Đakovon suurta tuomiokirkkoa rakennettiin juuri isoisän 1873 matkan aikaan: piispa Josip Juraj Strossmayer tilasi sen wieniläiseltä arkkitehti Friedrich von Schmidtilta, työt alkoivat 1866 ja jatkuivat 1882 asti, joten isoisä olisi voinut nähdä puolivalmiin, telineiden peittämän tiilijättiläisen kohoavan Slavonian tasangolta. Strossmayer oli aikansa vaikutusvaltaisin kroaatti-piispa ja eteläslaavilaisen yhteistyön ajaja, ja hänen nimeään kantaa yhä Zagrebin yliopiston tiedeakatemia. Katedraali valmistui lopulta punatiilisenä uusromaanisena jättiläisenä, joka on yhä yksi Kroatian suurimmista kirkoista.`,
+      pitka: `Đakovon punatiilinen tuomiokirkko on yksi Kroatian suurimmista kirkoista, uusromaaninen jättiläinen jonka piispa Josip Juraj Strossmayer tilasi wieniläiseltä arkkitehti Friedrich von Schmidtilta – työt kestivät vuosina 1866–1882. Strossmayer oli aikansa vaikutusvaltaisin kroaatti-piispa ja eteläslaavilaisen yhteistyön ajaja, ja hänen nimeään kantaa yhä Zagrebin yliopiston tiedeakatemia. Slavonski Brodissa Savan rannalla seisoo Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui aikanaan 4 000 sotilasta ja 150 tykkiä ja joka on nykyään suosittu käyntikohde. Brodsko-Posavska elää nykyään ennen kaikkea Slavonian viljavista pelloista ja Savan rannan maisemista, Strossmayerin katedraalin kupolin kohotessa yhä tasangon yllä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-brodsko-posavska-03b27267.jpg",
@@ -6133,7 +6133,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dubrovacko-Neretvanska': {
       lyhyt: 'Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista.',
-      pitka: `Dubrovnik oli isoisän 1873 matkan aikaan Itävalta-Unkarin syrjäinen provinssikaupunki, hiljaisempi kuin koskaan aiemmin: Napoleon oli lakkauttanut vuosisatoja itsenäisenä säilyneen Ragusan tasavallan 1808, ja seuraavat vuosikymmenet kaupunki eli menneen kauppamahtinsa muistoissa köyhtyneenä. Matkailu, joka nykyään on kaupungin elinehto, ei ollut vielä alkanut lainkaan – ensimmäinen suuri hotelli avattiin vasta 1897, neljännesvuosisata isoisän vierailun jälkeen. Keskiaikaiset muurit ja Stradunin pääkatu näyttivät isoisän aikaan silti jo lähes samalta kuin nykyään, sillä kaupunki ei ollut kasvanut muuriensa ulkopuolelle.`,
+      pitka: `Dubrovnikin keskiaikaiset muurit ja Stradunin pääkatu tekevät kaupungista yhden Kroatian suosituimmista matkailukohteista, ja Unesco liitti vanhankaupungin maailmanperintöluetteloon 1979. Napoleon lakkautti vuosisatoja itsenäisenä säilyneen Ragusan tasavallan 1808, ja seuraavat vuosikymmenet kaupunki eli menneen kauppamahtinsa muistoissa köyhtyneenä – nykyisin ylivoimainen elinkeino, matkailu, käynnistyi vasta 1880-luvun lopulla, kun ensimmäinen suurhotelli avattiin 1897. Etelämpänä Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista. Nykyään Dubrovnikin kesät täyttyvät risteilyaluksista ja kaduilla kaikuu useampi kieli kuin koskaan kaupungin historiassa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-dubrovacko-neretvanska-8a7bc2ad.jpg",
@@ -6148,7 +6148,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Istarska: {
       lyhyt: 'Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista – asukkaita on noin viisikymmentä.',
-      pitka: `Pula oli isoisän 1873 matkan aikaan kiireisen muutoksen keskellä: Itävallan laivasto oli nostanut sen 1856 tärkeimmäksi sotasatamakseen (Kriegshafen), ja 1870-luvulla kaupungin ympärille kohosi kiihtyvää tahtia uusia linnoituksia, telakoita ja kasarmeja pienestä provinssikaupungista koko monarkian Adrian-laivaston pääasemaksi. Roomalaisajan amfiteatteri, joka on yhä yksi maailman parhaiten säilyneistä, oli isoisän aikaan jo lähes 1 800 vuotta vanha ja seisoi kasvavan sotasataman keskellä muistona aivan toisesta valtakunnasta.`,
+      pitka: `Pulan roomalaisajan amfiteatteri on yksi maailman parhaiten säilyneistä, lähes 2 000 vuotta vanha areena, jossa järjestetään nykyään konsertteja ja elokuvafestivaaleja alkuperäisten kivipenkkien keskellä. Itävallan laivasto nosti kaupungin 1856 tärkeimmäksi sotasatamakseen, ja seuraavina vuosikymmeninä sen ympärille kohosi kiihtyvää tahtia uusia linnoituksia ja telakoita; perintö näkyy yhä, sillä Pula on edelleen Kroatian laivaston tukikohta. Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista, sillä siellä asuu vain noin viisikymmentä ihmistä. Niemimaan sisämaan kylät elävät nykyään tryffeleistä, oliiviöljystä ja viinistä, jotka houkuttelevat ruokamatkailijoita ympäri vuoden.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-istarska-b8605a87.jpg",
@@ -6163,7 +6163,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Karlovacka: {
       lyhyt: 'Karlovacia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika.',
-      pitka: `Karlovac perustettiin 1579 täydellisen säännölliseksi kuusisakaraiseksi tähtilinnoituskaupungiksi, kun arkkiherttua Kaarle Itävaltalainen halusi vahvan vartioasteman Ottomaanien hyökkäysreitille neljän joen risteykseen. Isoisän kulkiessa kaupungin läpi 1873 tähtimuotoinen kaavoitus oli yhä selvästi nähtävissä katuverkossa, vaikka linnoitusmuurit oli alettu jo purkaa niiden menetettyä sotilaallisen merkityksensä. Kaupunki oli 1870-luvulla ennen kaikkea kauppa- ja liikennesolmu, jonka läpi kulki puutavaraa ja maataloustuotteita Adrianmerelle päin.`,
+      pitka: `Karlovac perustettiin 1579 täydellisen säännölliseksi kuusisakaraiseksi tähtilinnoituskaupungiksi, kun arkkiherttua Kaarle Itävaltalainen halusi vahvan vartioaseman neljän joen risteykseen Ottomaanien hyökkäysreitille. Tähtimuotoinen kaavoitus näkyy yhä selvästi kaupungin katuverkossa, vaikka linnoitusmuurit purettiin 1800-luvun loppupuolella niiden menetettyä sotilaallisen merkityksensä. Nykyään kaupunkia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika, joka esittelee jokien elämää. Karlovac on yhä tärkeä liikennesolmu Zagrebin ja Adrianmeren rannikon välillä, aivan kuten se oli jo 1800-luvulla puutavaran ja maataloustuotteiden kauttakulkupaikkana.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-karlovacka-18f4ab70.jpg",
@@ -6178,7 +6178,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Koprivničko-Križevačka': {
       lyhyt: 'Koprivnicassa on Podravka-elintarvikeyhtiön koti, ja siellä on valmistettu Vegeta-maustetta vuodesta 1959 lähtien.',
-      pitka: `Križevcin maatalousoppilaitos, joka avattiin 1860, oli isoisän 1873 matkan aikaan yhä koko Itävalta-Unkarin uusimpia ja edistyksellisimpiä: se oli Kroatian ensimmäinen ammatillinen maatalouskoulu ja kouluttajahenkilöstöä koko Slavonian ja Kroatian maaseudulle juuri niinä vuosikymmeninä, kun perinteinen maanviljely alkoi muuttua tehokkaammaksi. Alue oli isoisän aikaan silti pääosin hidasta maalaiselämää, viljapeltoja ja pieniä kyliä, kaukana Podravkan tulevasta teollisesta elintarviketuotannosta, joka syntyi vasta 1900-luvulla.`,
+      pitka: `Križevcin maatalousoppilaitos, perustettu 1860, on yksi Euroopan vanhimmista edelleen toimivista maatalouskouluista, ja se kouluttaa yhä agronomeja ja maaseudun asiantuntijoita ympäri Kroatiaa. Koulu oli aikanaan koko Itävalta-Unkarin uusimpia ja edistyksellisimpiä, ensimmäinen ammatillinen maatalouskoulu Kroatiassa. Koprivnica tunnetaan nykyään elintarvikeyhtiö Podravkan kotikaupunkina, ja siellä on valmistettu suosittua Vegeta-maustetta vuodesta 1959 lähtien – tuote, joka löytyy nykyään keittiöistä ympäri Balkania ja Keski-Eurooppaa. Maakunta on muuten yhä pääosin hiljaista maaseutua, viljapeltoja ja pieniä kyliä Podravinan tasangolla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-koprivnicko-krizevacka-852b0258.jpg",
@@ -6193,7 +6193,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Krapinsko-Zagorska': {
       lyhyt: 'Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo.',
-      pitka: `Trakošćanin linna Zagorjen kukkuloilla oli isoisän 1873 matkan aikaan juuri äskettäin muutettu keskiaikaisesta puolustuslinnasta romanttiseksi kreivillisasunnoksi: Drašković-suku kunnosti sen 1800-luvun puolivälissä uusgoottilaiseen tyyliin, keinotekoinen järvi kaivettiin sen juurelle samaan aikaan, ja lopputulos muistutti enemmän satukirjan linnaa kuin sotalinnoitusta. Hušnjakovon mäen neandertalinihmisen fossiilit makasivat isoisän matkan aikaan yhä täysin tuntemattomina maan alla – ne löydettiin vasta 1899, 26 vuotta myöhemmin, ja tekivät Krapinasta yhden maailman tärkeimmistä ihmisen esihistorian löytöpaikoista.`,
+      pitka: `Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo, joka tekee Krapinasta yhden maailman tärkeimmistä ihmisen esihistorian tutkimuskohteista. Trakošćanin linna Zagorjen kukkuloilla on toinen alueen vetonaula: Drašković-suku muutti sen 1800-luvun puolivälissä keskiaikaisesta puolustuslinnasta romanttiseksi uusgoottilaiseksi kreivillisasunnoksi, ja sen juurelle kaivettu keinotekoinen järvi tekee linnasta nykyään suositun retkikohteen. Zagorjen kukkulamaisema pienine kylineen ja viinitarhoineen on säilynyt idyllisenä, ja seutu tunnetaan nykyään myös termaalikylpylöistään. Krapina ja sen ympäristö vetävät nykyään sekä tiedematkailijoita että viikonloppuretkeilijöitä Zagrebista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-krapinsko-zagorska-861473bf.jpg",
@@ -6208,7 +6208,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Licko-Senjska': {
       lyhyt: 'Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä, ja hänen synnyinkotinsa on nykyään muistokeskus.',
-      pitka: `Isoisän 1873 matkan aikaan 17-vuotias Nikola Tesla asui yhä lähialueella eikä ollut vielä keksinyt mitään: hän kirjoittautui Karlovacin realikouluun juuri samana vuonna ja sairastui pian sen jälkeen vaikeaan koleraan, joka piti hänet hengenvaarassa kuukausien ajan. Vuoristoinen Lika oli isoisän aikaan karua, köyhää seutua, jota tunnettiin ennen kaikkea Velebit-vuoriston hallitsemasta maisemasta ja Josephina-nimisestä 1700-luvulla rakennetusta sotatiestä, joka yhdisti sisämaan Adrianmeren rannikkoon.`,
+      pitka: `Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä 1856, ja hänen synnyinkotinsa on nykyään Teslan muistokeskus, joka esittelee keksijän elämää ja kokeita interaktiivisin näyttelyin. Nuori Tesla kirjoittautui Karlovacin realikouluun 1873 ja sairastui pian sen jälkeen vaikeaan koleraan, joka piti hänet hengenvaarassa kuukausien ajan ennen kuin hänestä tuli yksi historian merkittävimmistä keksijöistä. Vuoristoinen Lika on nykyään karua, harvaan asuttua seutua, jota hallitsee Velebit-vuoristo ja jonka läpi kulkee yhä 1700-luvulla rakennettu Josephina-sotatie, nykyään suosittu retkeilyreitti. Suuri osa Plitvicen järvien kansallispuistosta sijaitsee myös tällä maakunnalla, ja se on yksi Kroatian harvimmin asutuista mutta luonnoltaan rikkaimmista alueista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-licko-senjska-99975556.jpg",
@@ -6223,7 +6223,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Medimurska: {
       lyhyt: 'Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa.',
-      pitka: `Čakovecin linnaa hallinnut Zrínyi-suku oli 1600-luvulla yksi Kroatian mahtavimmista aatelissukuista – kreivi Nikola Zrínyi kuoli sankarikuoleman 1566 Szigetvárin piirityksessä Ottomaaneja vastaan, ja suvun tarina elää yhä Kroatian kansallistietoisuudessa. Isoisän matkan aikaan 1873 suvun linna oli jo pitkään menettänyt sotilaallisen merkityksensä ja rappeutunut, sillä viimeinen Zrínyi oli teloitettu petturina 1671 ja tilukset takavarikoitu. Međimurje itsessään oli pieni, joen ympäröimä maatalousalue, joka kuului tuolloin Unkarin puoleen kuningaskuntaa, ei Kroatiaan.`,
+      pitka: `Čakovecin linnaa hallinnut Zrinski-suku oli 1600-luvulla yksi Kroatian mahtavimmista aatelissuvuista – kreivi Nikola Zrinski kuoli sankarikuoleman 1566 Szigetvárin piirityksessä Ottomaaneja vastaan, ja suvun tarina elää yhä Kroatian kansallistietoisuudessa. Linna toimii nykyään kaupungin museona, joka kertoo suvun nousun ja vuoden 1671 kukistumisen tarinan, kun viimeinen Zrinski teloitettiin petturina ja tilukset takavarikoitiin. Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa. Nykyään alue tunnetaan viinitiestään ja lämpimistä lähteistään, jotka houkuttelevat kylpylävieraita ympäri vuoden, sekä tiiviistä kylämaisemastaan jokien välissä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-medimurska-9eae0c14.jpg",
@@ -6238,7 +6238,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Osjecko-Baranjska': {
       lyhyt: 'Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin.',
-      pitka: `Osijekin Tvrđa-linnoituskaupunginosa rakennettiin 1700-luvun alussa Habsburgien voitettua alueen Ottomaaneilta, ja se on yksi Keski-Euroopan parhaiten säilyneistä barokkilinnoituksista: säännölliset kadut, kasarmit ja komentajan talo seisoivat isoisän 1873 matkan aikaan jo lähes muuttumattomina, sillä linnoitus oli menettänyt sotilaallisen merkityksensä mutta säilynyt hallinnollisena keskuksena. Slavonia oli 1870-luvulla Kroatian vilja-aitta, laajoja peltoja ja tammimetsiä, joiden puutavaraa vietiin Tonavaa pitkin ympäri Eurooppaa.`,
+      pitka: `Osijekin Tvrđa-linnoituskaupunginosa on yksi Keski-Euroopan parhaiten säilyneistä barokkilinnoituksista: säännölliset kadut, kasarmit ja komentajan talo rakennettiin 1700-luvun alussa Habsburgien voitettua alueen Ottomaaneilta, ja nykyään korttelissa toimii ravintoloita, gallerioita ja yliopiston tiloja vanhojen muurien sisällä. Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin, ja alue on yksi Euroopan merkittävimmistä kosteikkojen suojelukohteista. Slavonia on yhä Kroatian vilja-aitta, laajoja peltoja ja tammimetsiä, joiden puutavaraa on viety Tonavaa pitkin ympäri Eurooppaa jo vuosisatojen ajan. Osijek itse on Slavonian suurin kaupunki ja alueen kulttuurinen ja taloudellinen keskus.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-osjecko-baranjska-adde931c.jpg",
@@ -6253,7 +6253,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Primorsko-Goranska': {
       lyhyt: 'Rijekassa suunniteltiin ja testattiin 1866 maailman ensimmäinen torpedo, ja kaupunki oli Euroopan kulttuuripääkaupunki 2020.',
-      pitka: `Opatija, joka nykyään on Kroatian tunnetuimpia kylpylärannikkokaupunkeja, oli isoisän 1873 matkan aikaan vielä vaatimaton kalastajakylä laurelipuiden keskellä – sen ensimmäinen suurhotelli avattiin vasta 1884, ja kaupunki nousi Habsburgien aatelien ja keisarikunnan yläluokan suosituksi talvikohteeksi vasta 1880–90-luvuilla. Rijeka itse oli isoisän aikaan sen sijaan jo vilkas satama- ja teollisuuskaupunki, jonka torpedotehdas oli vain seitsemän vuotta aiemmin, 1866, testannut maailman ensimmäisen toimivan torpedon Whiteheadin suunnittelemana.`,
+      pitka: `Rijeka on Kroatian tärkein satamakaupunki ja oli Euroopan kulttuuripääkaupunki 2020, jolloin sen entiset telakka- ja tehallialueet muuttuivat näyttely- ja tapahtumatiloiksi. Kaupungin torpedotehdas testasi 1866 maailman ensimmäisen toimivan torpedon Robert Whiteheadin suunnittelemana – keksintö, joka teki Rijeasta aikanaan sotateollisuuden edelläkävijän ja jonka historiaa esitellään nykyään kaupungin merihistoriallisessa museossa. Naapurissa Opatija on nykyään Kroatian tunnetuimpia kylpylärannikkokaupunkeja laurelipuiden ja huviloiden keskellä, vaikka se oli vielä 1800-luvun puolivälissä vaatimaton kalastajakylä ennen ensimmäisen suurhotellin avaamista 1884. Rannikon vuoristoinen tausta, Učka-vuori, kohoaa yhä molempien kaupunkien yllä muistuttaen alueen luonnonläheisyydestä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-primorsko-goranska-08195744.jpg",
@@ -6268,7 +6268,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šibensko-Kninska': {
       lyhyt: 'Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus.',
-      pitka: `Krkan kansallispuiston vesiputoukset olivat isoisän 1873 matkan aikaan yhä täysin koskematon luonnonihme, kaukana nykyisestä suojelustatuksesta: puisto perustettiin vasta 1985, ja 1870-luvulla alueen putouksia hyödynsivät lähinnä paikalliset myllyt. Kninin linnoitus kalliolla oli isoisän aikaan menettänyt vuosisatoja sitten strategisen merkityksensä, mutta seisoi yhä muistona alueesta, joka oli vuosisatoja ollut riidan kohteena Venetsian, Ottomaanien ja Habsburgien välillä ennen kuin rauha vakiintui 1800-luvulla.`,
+      pitka: `Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus, jotka molemmat kertovat kaupungin venetsialaisajan puolustusarkkitehtuurista. Krkan kansallispuiston vesiputoukset, suojeltuina vuodesta 1985, ovat yksi Kroatian suosituimmista luontokohteista, ja niiden ympärillä kulkevat pitkoskävelyreitit vetävät kävijöitä ympäri vuoden. Kalliolla kohoava Kninin linnoitus oli vuosisatoja Venetsian, Ottomaanien ja Habsburgien kiistakapula, mutta nykyään se muistuttaa lähihistoriasta: linnoituksessa toimii museo Kroatian itsenäisyyssodasta, ja elokuun 1995 sotilasoperaatio "Oluja" ("Myrsky") päättyi juuri Kninissä. Maakunta yhdistää näin keskiaikaisen rannikkoarkkitehtuurin, luonnonihmeet ja Kroatian nuoren valtion historian.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sibensko-kninska-f4e33cd1.jpg",
@@ -6283,7 +6283,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sisacko-Moslavacka': {
       lyhyt: 'Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi – haikaroita oli enemmän kuin kylässä ihmisiä.',
-      pitka: `Sisak oli isoisän 1873 matkan aikaan hiljainen pikkukaupunki, jonka roomalaisajan menneisyys – kaupunki tunnettiin antiikissa Siscia-nimisenä ja toimi Pannonian maakunnan tärkeänä keskuksena – oli jäänyt vuosisatojen taakse ja pitkälti unohduksiin. Kaupungin nykyinen tunnusmerkki, rautatehdas Željezara Sisak, perustettiin vasta 1938, kuusi vuosikymmentä isoisän vierailun jälkeen. Lonjsko poljen tulvatasangot ympäröivine puukylineen olivat isoisän aikaan sen sijaan jo vanhaa, muuttumatonta talonpoikaismaisemaa, samanlaista kuin nykyään.`,
+      pitka: `Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi, sillä kesäisin kylässä pesii enemmän haikaroita kuin siellä asuu ihmisiä – puutalot ja niiden räystäät ovat edelleen täynnä pesiä. Sisak tunnettiin antiikissa nimellä Siscia ja toimi Rooman Pannonia-maakunnan tärkeänä keskuksena; roomalaisajan jäänteet ovat yhä esillä kaupungin arkeologisessa museossa. Kaupungin nykyistä teollista identiteettiä hallitsee rautatehdas Željezara Sisak, perustettu 1938, vaikka tuotanto on 2000-luvulla supistunut merkittävästi entisestä huippuvuosistaan. Lonjsko poljen tulvatasangot puukylineen ovat säilyneet vanhana, muuttumattomana talonpoikaismaisemana, joka on nykyään suojeltu luonnonpuisto.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sisacko-moslavacka-3455976d.jpg",
@@ -6298,7 +6298,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Splitsko-Dalmatinska': {
       lyhyt: 'Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne alkoi 1715.',
-      pitka: `Splitin Diocletianuksen palatsi oli isoisän 1873 matkan aikaan jo yli 1 500 vuotta vanha, mutta yhä täynnä eläviä ihmisiä: keisari Diocletianus rakennutti sen eläkepalatsikseen noin 300 jaa., ja vuosisatojen kuluessa paikalliset asukkaat olivat muuttaneet palatsin kammiot ja käytävät kaupoiksi, asunnoiksi ja kirkoiksi – ainutlaatuinen ratkaisu, jonka ansiosta antiikin rakennus säilyi käytössä sen sijaan, että olisi jäänyt raunioksi. Isoisä olisi nähnyt saman elävän kaupunkirakenteen, joka on yhä nykyään Splitin vanhankaupungin ydin.`,
+      pitka: `Splitin Diocletianuksen palatsi on yli 1 700 vuotta vanha, mutta yhä täynnä eläviä ihmisiä: keisari Diocletianus rakennutti sen eläkepalatsikseen noin vuonna 300, ja vuosisatojen kuluessa paikalliset asukkaat muuttivat palatsin kammiot ja käytävät kaupoiksi, asunnoiksi ja kirkoiksi. Tämä ainutlaatuinen ratkaisu piti antiikin rakennuksen elävänä käytössä sen sijaan, että se olisi jäänyt raunioksi, ja sama kaupunkirakenne on yhä Splitin vanhankaupungin sykkivä ydin täynnä kahviloita ja toreja. Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne, joka on jatkunut katkeamatta vuodesta 1715. Nykyään Split on Dalmatian suurin kaupunki ja tärkeä lähtösatama Dalmatian saarille matkustaville.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-splitsko-dalmatinska-368dd37c.jpg",
@@ -6313,7 +6313,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Varaždinska': {
       lyhyt: 'Barokkinen Varaždin oli Kroatian pääkaupunki vuoteen 1776, ja nykyään sen kadut täyttää loppukesällä Špancirfest-katufestivaali.',
-      pitka: `Varaždin oli isoisän 1873 matkan aikaan menettänyt pääkaupunkiasemansa lähes sata vuotta aiemmin: valtaisa tulipalo tuhosi suuren osan kaupungista 1776, ja hallinto siirtyi sen jälkeen pysyvästi Zagrebiin. Kaupunki rakennettiin palon jälkeen uudelleen barokkityyliin, ja isoisä olisi kulkenut kadulla, joka näytti lähes samalta kuin nykyään turisteja houkutteleva vanhakaupunki. Entisestä pääkaupungista oli isoisän aikaan tullut rauhallinen maakuntakeskus, joka eli ennen kaikkea maatalouskaupasta ja käsityöläisammateista Zagrebin varjossa.`,
+      pitka: `Varaždin oli Kroatian pääkaupunki vuoteen 1776 asti, jolloin valtaisa tulipalo tuhosi suuren osan kaupungista ja hallinto siirtyi pysyvästi Zagrebiin. Kaupunki rakennettiin palon jälkeen kokonaan uudelleen barokkityyliin, ja tämä yhtenäinen barokkikeskusta on säilynyt nykypäivään asti yhtenä Kroatian parhaiten säilyneistä historiallisista kaupunkikuvista. Nykyään Varaždinin kaduilla vilisee loppukesällä väkeä Špancirfest-katufestivaalin aikaan, kun kadut täyttyvät muusikoista, käsityöläisistä ja katuesiintyjistä. Entisestä pääkaupungista on tullut rauhallinen mutta elinvoimainen maakuntakeskus, joka elää nykyään kulttuurista, koulutuksesta ja pienteollisuudesta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-varazdinska-c80fd41a.jpg",
@@ -6328,7 +6328,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Viroviticko-Podravska': {
       lyhyt: 'Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon.',
-      pitka: `Virovitica on yksi Kroatian vanhimmista kaupungeista, mainittu asiakirjoissa jo 1234, mutta isoisän 1873 matkan aikaan se oli vaipunut vaatimattomaan maalaiskaupungin asemaan: aiemmat vuosisadat linnoituskaupunkina Ottomaanien rajaa vastaan olivat ohi, ja seutu eli 1870-luvulla ennen kaikkea viljanviljelystä ja puunjalostuksesta laajojen Papukin ja Bilogoran metsien liepeillä. Alueen geologinen rikkaus – kivilajit ja mineraalit, jotka tekivät Papukista myöhemmin Kroatian ensimmäisen geopuiston – oli isoisän aikaan vielä täysin tutkimatta.`,
+      pitka: `Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon sen poikkeuksellisen geologisen monimuotoisuuden ansiosta – alueen kivilajit ja mineraalit kertovat satojen miljoonien vuosien takaisesta merenpohjasta ja tulivuoritoiminnasta. Virovitica on yksi Kroatian vanhimmista kaupungeista, mainittu asiakirjoissa jo 1234, ja sen keskusta säilyttää yhä keskiaikaisen kaupunkirakenteen jäänteitä entisen linnoituskaupungin ajoilta. Seutu elää nykyään ennen kaikkea viljanviljelystä ja puunjalostuksesta laajojen Papukin ja Bilogoran metsien liepeillä. Geopuiston vaellusreitit ja lähteet, kuten Jankovacin laakso, houkuttelevat nykyään luontomatkailijoita ympäri Kroatiaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-viroviticko-podravska-8d3df889.jpg",
@@ -6343,7 +6343,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vukovarsko-Srijemska': {
       lyhyt: 'Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee.',
-      pitka: `Ilokin viinitilat Tonavan rannalla olivat isoisän 1873 matkan aikaan jo satoja vuosia vanhaa perinnettä: viininviljely alueella juontaa ainakin 1400-luvulle, ja kellareissa kypsyi samaa graševina-rypäleestä tehtyä valkoviiniä, jota alueella tuotetaan yhä. Aivan lähellä, Vučedolin kummulla, lepäsi isoisän aikaan maan alla täysin tuntemattomana kuparikautinen kulttuuri, joka oli kukoistanut paikalla noin 3000 vuotta eaa. – sen kuuluisa savikyyhky löydettiin vasta 1938, 65 vuotta isoisän matkan jälkeen, ja siitä tuli myöhemmin Kroatian tunnetuimpia arkeologisia symboleita.`,
+      pitka: `Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee nykyään näköalapaikalle kaupungin ja Tonavan ylle. Ilokin viinitilat Tonavan rannalla jatkavat satoja vuosia vanhaa perinnettä, joka juontaa ainakin 1400-luvulle: kellareissa kypsyy yhä graševina-rypäleestä tehtyä valkoviiniä, jota alueella tuotetaan edelleen ja joka on yksi Kroatian tunnetuimmista viineistä. Aivan lähellä, Vučedolin kummulla, kukoisti noin 3000 eaa. kuparikautinen kulttuuri, jonka kuuluisa savikyyhky löydettiin 1938 ja josta tuli myöhemmin yksi Kroatian tunnetuimmista arkeologisista symboleista. Vukovar on nykyään symboli sekä sodan tuhoista että sitkeästä jälleenrakennuksesta, ja kaupunki muistaa piirityksen päättymistä ja uhrejaan vuosittain 18. marraskuuta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-vukovarsko-srijemska-117dca75.jpg",
@@ -6358,7 +6358,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zadarska: {
       lyhyt: 'Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä.',
-      pitka: `Zadarin roomalaisajan foorumi ja sen vierellä kohoava Pyhän Donatuksen pyöreä kirkko olivat isoisän 1873 matkan aikaan jo lähes tuhat vuotta vanhoja: kirkko rakennettiin 800-luvulla osittain vanhoista roomalaisista pilareista ja kivistä, jotka oli otettu suoraan vieressä rapistuneesta foorumista. Kaupunki oli asunut isoisän aikaan roomalaisajoista lähtien lähes katkeamattomasti, ensin Rooman, sitten Bysantin, Venetsian ja lopulta Itävallan hallinnon alla – kerrostunut historia, jonka jäljet olivat isoisän nähtävissä yhtä selvästi kuin nykypäivän matkailijoilla.`,
+      pitka: `Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä – ainutlaatuinen 2005 avattu teos, joka on tehnyt rantabulevardista suositun auringonlaskun katselupaikan. Roomalaisajan foorumin vierellä kohoava Pyhän Donatuksen pyöreä kirkko rakennettiin 800-luvulla osittain vanhoista roomalaisista pilareista ja kivistä, jotka otettiin suoraan vieressä rapistuneesta foorumista. Kaupunki on asunut roomalaisajoista lähtien lähes katkeamattomasti, ensin Rooman, sitten Bysantin, Venetsian ja lopulta Itävallan hallinnon alla – kerrostunut historia näkyy yhä kaduilla vierekkäin roomalaisista pylväistä keskiaikaisiin kirkkoihin. Zadar on nykyään yksi Dalmatian suosituimmista matkailukaupungeista ja lähtösatama moniin Kornatin saariston kansallispuiston saariin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zadarska-7a42776f.jpg",
@@ -6373,7 +6373,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zagrebacka: {
       lyhyt: 'Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos.',
-      pitka: `Turopoljen alue Zagrebin eteläpuolella oli isoisän 1873 matkan aikaan yhä täynnä ainutlaatuista puurakentamisen perinnettä: alueen talonpojat rakensivat kirkkonsa ja talonsa perinteisesti tammihirsistä, ja monet 1700–1800-luvun rakennuksista ovat säilyneet tähän päivään asti Kroatian parhaana esimerkkinä maallikkokäsityöläisten puuarkkitehtuurista. Turopolje oli myös historiallisesti erikoisasemassa: koko alueen talonpojat olivat perineet aatelisoikeuden keskiajalta, ainutlaatuinen järjestely, joka teki heistä muodollisesti aatelisia mutta käytännössä tavallisia maanviljelijöitä.`,
+      pitka: `Turopoljen alue Zagrebin eteläpuolella tunnetaan ainutlaatuisesta puurakentamisen perinteestä: alueen talonpojat rakensivat kirkkonsa ja talonsa perinteisesti tammihirsistä, ja monet 1700–1800-luvun rakennuksista ovat säilyneet tähän päivään Kroatian parhaana esimerkkinä maallikkokäsityöläisten puuarkkitehtuurista. Turopolje oli myös historiallisesti erikoisasemassa: koko alueen talonpojat olivat perineet aatelisoikeuden keskiajalta, ainutlaatuinen järjestely, joka teki heistä muodollisesti aatelisia mutta käytännössä tavallisia maanviljelijöitä – perinne, josta seutu on yhä ylpeä. Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos, jota myydään kaupungin kahviloissa. Zagrebačka-maakunta toimii nykyään pääkaupungin vihreänä lähiseutuna, jonne kaupunkilaiset pakenevat viikonloppuisin vaeltamaan ja syömään.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zagrebacka-6be197c2.jpg",
@@ -6388,7 +6388,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Grad Zagreb': {
       lyhyt: 'Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon.',
-      pitka: `Zagreb oli isoisän 1873 matkan aikaan yhä nuori yhtenäiskaupunki: kaksi vierekkäistä keskiaikaista kaupunkia, kirkollinen Kaptol ja maallinen Gradec, yhdistettiin muodollisesti yhdeksi Zagrebiksi vasta 1850, vain 23 vuotta ennen isoisän vierailua. Yläkaupungin (Gornji grad) mutkittelevat kadut ja kaksi erillistä tornia näkyvät yhä kaupungin siluetissa muistona tästä kaksinaisuudesta. Isoisän aikaan Zagreb kasvoi nopeasti Kroatian hallinnollisena ja kulttuurisena keskuksena, mutta oli väkiluvultaan yhä vaatimaton verrattuna Wienin tai Budapestin kaltaisiin monarkian suurkaupunkeihin.`,
+      pitka: `Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon poikkeuksellisen konseptinsa ansiosta. Kaupunki syntyi kahdesta vierekkäisestä keskiaikaisesta kaupungista, kirkollisesta Kaptolista ja maallisesta Gradecista, jotka yhdistettiin muodollisesti yhdeksi Zagrebiksi vasta 1850 – kaksinaisuuden muisto näkyy yhä Yläkaupungin (Gornji grad) mutkittelevissa kaduissa ja kahdessa erillisessä tornissa kaupungin siluetissa. Zagreb on nykyään Kroatian selvästi suurin kaupunki, jossa asuu lähes 800 000 ihmistä ja jonka talous, yliopistot ja kulttuurilaitokset hallitsevat koko maata. Adventtiaikaan Zagrebin joulumarkkinat on toistuvasti valittu yhdeksi Euroopan parhaista, ja ne täyttävät kaupungin keskustan valoilla ja glögin tuoksulla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-grad-zagreb-f81ad3be.jpg",
