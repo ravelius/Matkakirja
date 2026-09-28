@@ -35,14 +35,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(id, k.ValmisId, "kelaus kirjattiin valmiiksi");
             Oleta.Sama(0, k.PalaaLive(), "jo LIVE: ei kelausta");
 
-            // Kelaus hetkeen: 3 h eteenpäin huippu noin 1000×, perillä 1× (ei LIVE).
+            // Kelaus hetkeen: 3 h eteenpäin. Siirtymä ≤ 5 s (omistaja 28.9.): kesto katossa 3,6 s, huippu 1,875 · 10 800 / 3,6
+            // = 5 625× puolivälissä; perillä 1× (ei LIVE).
             var kohde = r.AddHours(3);
             int kid = k.KelaaHetkeen(kohde);
-            r = r.AddSeconds(10);   // kesto 1,875 · 10 800 s / 1000 = 20,25 s: puolivälissä huippunopeus
+            r = r.AddSeconds(Simukello.KelausMaxS / 2);
             double huippu = k.Nopeus();
-            Oleta.Tosi(huippu > 800 && huippu < 1200, $"huippu {huippu:0}×");
+            Oleta.Tosi(huippu > 5000 && huippu < 6300, $"huippu {huippu:0}×");
             Oleta.Tosi(k.Kelaa && k.ValmisId != kid, "kesken");
-            r = r.AddSeconds(15);
+            r = r.AddSeconds(Simukello.KelausMaxS);
             Oleta.Sama(kohde, k.Nyt(), "perillä hetki");
             Oleta.Sama(kid, k.ValmisId);
             Oleta.Tosi(!k.Live && !k.Kelaa, "perillä 1×, ei LIVE");
@@ -61,16 +62,16 @@ namespace Matkakirja.Linssit.Testit
         {
             var r = Alku;
             var k = new Simukello(() => r);
-            k.KelaaHetkeen(r.AddMinutes(10));   // 1,875 · 600 / 1000 = 1,1 s → vähintään 2 s
-            r = r.AddSeconds(1.9);
+            k.KelaaHetkeen(r.AddMinutes(10));   // 1,875 · 600 / 1000 = 1,1 s → vähintään 1,5 s
+            r = r.AddSeconds(1.4);
             k.Nyt();
-            Oleta.Tosi(k.Kelaa, "2 s:n minimi");
+            Oleta.Tosi(k.Kelaa, "1,5 s:n minimi");
             r = r.AddSeconds(0.2);
             Oleta.Sama(Alku.AddMinutes(10), k.Nyt());
-            k.KelaaHetkeen(k.Nyt().AddHours(47));   // 317 s → enintään 25 s
-            r = r.AddSeconds(24.9);
+            k.KelaaHetkeen(k.Nyt().AddHours(47));   // 317 s → enintään 3,6 s (siirtymä ≤ 5 s)
+            r = r.AddSeconds(3.5);
             k.Nyt();
-            Oleta.Tosi(k.Kelaa, "25 s:n katto");
+            Oleta.Tosi(k.Kelaa, "3,6 s:n katto");
             r = r.AddSeconds(0.2);
             k.Nyt();
             Oleta.Tosi(!k.Kelaa, "valmis katossa");

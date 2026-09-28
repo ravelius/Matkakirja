@@ -235,6 +235,7 @@ namespace Matkakirja.Linssit.Astronautti
                 if (Iss.IssNyt.Simu.ValmisId == l.Id)
                 {
                     l.Perilla = true;
+                    l.PerillaAika = y.Aika;
                     kyyti.Kohteeseen(new LatLon(l.Kohde.Lat, l.Kohde.Lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
                     tietoAika = -1;
                 }
@@ -286,6 +287,22 @@ namespace Matkakirja.Linssit.Astronautti
             public Iss.Ylilento? Ylilento;
             public int Id;
             public bool Perilla;
+            /// <summary>Lennon alku (y.Aika) ja perilläolon hetki; siirtymä = ero + kohteeseen kääntyminen.</summary>
+            public double Alku = double.NaN, PerillaAika = double.NaN;
+        }
+
+        /// <summary>
+        /// Viimeisimmän lennon koko siirtymä sekunteina (kelaus + kääntyminen kohteeseen, IssKyyti.KohteeseenS; vähennetyllä
+        /// liikkeellä 0), tai null ennen perilläoloa. Omistaja 28.9.: enintään 5 s (Simukello.SiirtymaMaxS); laitemittaus.
+        /// </summary>
+        public double? ViimeisinSiirtymaS
+        {
+            get
+            {
+                var l = lento;
+                if (l == null || double.IsNaN(l.Alku) || double.IsNaN(l.PerillaAika)) return null;
+                return l.PerillaAika - l.Alku + (y.VahennettyLiike ? 0 : Iss.IssKyyti.KohteeseenS);
+            }
         }
 
         Lento lento;
@@ -341,7 +358,7 @@ namespace Matkakirja.Linssit.Astronautti
             tietoAika = -1;
             if (yl == null) { lento = new Lento { Kohde = k }; return null; }
             if (kyyti.Tila != Iss.KyydinTila.Seuranta) NapautaIss();
-            var uusi = new Lento { Kohde = k, Ylilento = yl };
+            var uusi = new Lento { Kohde = k, Ylilento = yl, Alku = y.Aika };
             lento = uusi;
             uusi.Id = Iss.IssNyt.Simu.KelaaHetkeen(yl.Value.Hetki, vahennetty: y.VahennettyLiike);
             return yl;

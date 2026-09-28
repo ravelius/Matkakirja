@@ -1435,6 +1435,9 @@ namespace Matkakirja.Natiivi
                                 AstronauttiKerros.TarkkojenPilvienKm = Mathf.Clamp(km, 2f, 200f);
                         }
                         else if (a == "revontulet" && osat.Length > 3) Revontulet.Pois = osat[3] == "0";
+                        else if (a == "siirtyma")
+                            Kirjaa("astro kyyti siirtymä: " + (FindAnyObjectByType<AstronauttiKerros>()?.Linssi?.ViimeisinSiirtymaS is double ss
+                                ? $"{ss:F2} s (raja {Matkakirja.Linssit.Iss.Simukello.SiirtymaMaxS:0} s)" : "ei perillä"));
                         else if (a == "pilvimaara" && osat.Length > 3) AstronauttiKerros.PilvienMaara = Mathf.Clamp01((float)Luku(osat[3])); // säädin 0–1
                         else if (a == "sijainti")
                         {
