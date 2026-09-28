@@ -183,6 +183,10 @@ namespace Matkakirja.Natiivi
             if (!nakyvissa) juuri.style.display = DisplayStyle.None;
             juuri.RegisterCallback<TransitionRunEvent>(TransitioAlkoi, TrickleDown.TrickleDown);
             // Vierityslöydös (omistaja 27.9. klo 17.0x): iOS-tuntumainen kosketusvieritys kaikkiin pystysivuihin.
+            // Kosketusvälimuistin mitätöinti myös UI Toolkitin omasta irrotuksesta (simulaattorin napautus painuu ja nousee saman
+            // ruudun aikana, jolloin Input Systemin isPressed ei ehdi näkyä LateUpdatessa; mitattu iPad 503000D1 29.9.).
+            juuri.RegisterCallback<PointerUpEvent>(_ => mitatoiKehyksiaJaljella = 3, TrickleDown.TrickleDown);
+            juuri.RegisterCallback<PointerCancelEvent>(_ => mitatoiKehyksiaJaljella = 3, TrickleDown.TrickleDown);
             Kosketusvieritys.LiitaYleinen(juuri);
             dokumentit[kerros] = d;
             return d;
@@ -365,17 +369,26 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PaivitaKosketusValimuisti()
         {
-            bool painettuna = false;
+            bool painettuna = false, vapautui = false;
             var kosketus = Touchscreen.current;
             if (kosketus != null)
             {
                 var kosketukset = kosketus.touches;
                 for (int i = 0; i < kosketukset.Count; i++)
-                    if (kosketukset[i].press.isPressed) { painettuna = true; break; }
+                {
+                    var painike = kosketukset[i].press;
+                    if (painike.isPressed) painettuna = true;
+                    if (painike.wasReleasedThisFrame) vapautui = true;
+                }
             }
             // iPad (myös simulaattori) voi syöttää napautukset hiirenä: hiiren painike lasketaan samaksi eleeksi.
-            if (!painettuna && Mouse.current != null && Mouse.current.leftButton.isPressed) painettuna = true;
-            if (kosketusPainettunaEdellinen && !painettuna) mitatoiKehyksiaJaljella = 3; // tämä + 2 seuraavaa
+            var hiiri = Mouse.current;
+            if (hiiri != null)
+            {
+                if (hiiri.leftButton.isPressed) painettuna = true;
+                if (hiiri.leftButton.wasReleasedThisFrame) vapautui = true;
+            }
+            if (vapautui || (kosketusPainettunaEdellinen && !painettuna)) mitatoiKehyksiaJaljella = 3; // tämä + 2 seuraavaa
             kosketusPainettunaEdellinen = painettuna;
             if (mitatoiKehyksiaJaljella <= 0) return;
             mitatoiKehyksiaJaljella--;
