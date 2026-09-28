@@ -78,6 +78,7 @@ test('aurinko(ms) on pakollinen', () => {
 /* ── Kerrokset (js/linssit/iss-realismi-kerrokset.js): natiivin varjostimet webiin ── */
 import {
   leveysPituus, mercatorRivi, realismiKerrokset, VARJOSTIMET, YOKUORI, ILMAKAARI, JARJESTYS, PILVET,
+  pilvet, yokuori,
 } from '../js/linssit/iss-realismi-kerrokset.js';
 
 test('pituus ja leveys samasta kaavasta kuin varjostimissa: itä on itä (ei natiivin cl4-peilausta)', () => {
@@ -153,4 +154,81 @@ test('kerrokset rakentuvat Globe.gl:n luokilla, korvaavat näkymän omat ja purk
   r.pura();
   assert.equal(lisatyt.length, 0);
   assert.equal(r.tila().virheita, 0);
+});
+
+/*
+ * PILVIPEITON KARSINTA (ISS-säätöpaneeli, Siirtoseppä 29.9.2026, omistajan asettelumuutos): natiivin malli on
+ * pilvimäärä 0…1 (oletus 1 = nyt), karsinta = 1 − pilvimäärä. Lähdetekstistä: molemmat PILVET_FRAGMENT-polut
+ * (bikuubinen tarkatPilvet ja texture2D) karsivat heti näytteen jälkeen kapealla smoothstepillä, ja karsittu pilvi
+ * ei himmennä yökuoren valoja (pilvikuva-callback → uPilviKarsinta).
+ */
+test('PILVET_FRAGMENT: karsi() ajetaan heti molempien polkujen näytteen jälkeen', () => {
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /uniform float uOsuus, uPeitto, uYo, uTarkkuus, uTarkkuusKm, uKynnys, uKarsinta;/);
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /float karsi\(float a0\) \{ return a0 \* smoothstep\(uKarsinta - 0\.02, uKarsinta \+ 0\.02, a0\); \}/);
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /float a0 = karsi\(clamp\(c\.r, 0\.0, 1\.0\)\);/);
+  assert.match(VARJOSTIMET.PILVET_FRAGMENT, /tarkatPilvet\(n, uv, vaihtelu\) : karsi\(texture2D\(uKuva, uv\)\.r\);/);
+});
+
+test('YOKUORI_FRAGMENT: karsittu pilvi (alfa < karsinta) ei himmennä valoja', () => {
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /uPilvetOn, uPilviPeitto, uPilviKarsinta;/);
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /float pilviNaytto = smoothstep\(uPilviKarsinta - 0\.02, uPilviKarsinta \+ 0\.02, pilviAlfa\);/);
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /float pilvi = uPilvetOn \* uPilviPeitto \* pilviAlfa \* pilviNaytto;/);
+});
+
+test('pilvet(): ab.maara oletus 1 (ei karsintaa), 0,4 → uKarsinta 0,6 ja kuva() kertoo karsinnan', () => {
+  class Shader { constructor(o) { Object.assign(this, o); } dispose() {} }
+  class Sphere { constructor(r) { this.r = r; } dispose() {} }
+  class Mesh { constructor(g, m) { this.geometry = g; this.material = m; } }
+  class T { constructor(k) { this.kangas = k; } dispose() {} }
+  const nayttamo = {
+    add: (m) => { m.parent = { remove() {} }; },
+    // tekstuuriLuokka löytää T:n materiaalin map-kentästä.
+    traverse: (f) => f({ material: { map: { isTexture: true, constructor: T } } }),
+  };
+  const koePallo = { ...pallo, scene: () => nayttamo };
+  // Pieni kuva (2×2), jotta pilvikuvanAlfa on nopea testissä.
+  const ctx2d = {
+    drawImage() {},
+    getImageData: (x, y, w, h) => ({ data: new Uint8ClampedArray(w * h * 4).fill(200) }),
+    putImageData() {},
+  };
+  const doc = { createElement: () => ({ width: 0, height: 0, getContext: () => ctx2d }) };
+  const ikkuna = { document: doc, Image: class { set src(v) { this._src = v; this.onload?.(); } } };
+  const p = pilvet({ ikkuna, arvot: { ...PILVET, leveys: 2, korkeusPx: 2 } });
+  assert.equal(p.ab.maara, 1, 'oletus 1 = nyt, ei karsintaa');
+  p.rakenna({ pallo: koePallo, luokat: { Shader, Sphere, Mesh }, metri: 100 / 6378137, R: 100 });
+  p.paivita({ pallo: koePallo }, { osuus: 1, ms: 0, aurinko: [1, 0, 0] });
+  const alussa = p.kuva();
+  assert.ok(alussa, 'pilvikuva valmis (synkroninen onload testissä)');
+  assert.equal(alussa.karsinta, 0, 'oletus: ei karsintaa');
+  p.ab.maara = 0.4;
+  p.paivita({ pallo: koePallo }, { osuus: 1, ms: 0, aurinko: [1, 0, 0] });
+  const kuva = p.kuva();
+  assert.ok(Math.abs(kuva.karsinta - 0.6) < 1e-9, `karsinta ${kuva.karsinta}`);
+});
+
+test('yokuori(): pilvikuva-callbackin karsinta menee uPilviKarsinta-uniformiin', async () => {
+  class Shader { constructor(o) { Object.assign(this, o); } dispose() {} }
+  class Sphere { constructor(r) { this.r = r; } dispose() {} }
+  class Mesh { constructor(g, m) { this.geometry = g; this.material = m; } }
+  class T { constructor(img) { this.img = img; } dispose() {} }
+  const lisatyt = [];
+  const nayttamo = {
+    add: (m) => { lisatyt.push(m); m.parent = { remove: (x) => lisatyt.splice(lisatyt.indexOf(x), 1) }; },
+    traverse: (f) => f({ material: { map: { isTexture: true, constructor: T } } }),
+  };
+  const koePallo = { ...pallo, scene: () => nayttamo };
+  let karsintaNyt = 0.25;
+  const ikkuna = { document: {}, Image: class { set src(v) { this._src = v; this.onload?.(); } } };
+  const y = yokuori({ ikkuna, pilvikuva: () => ({ kuva: 'x', peitto: 0.5, karsinta: karsintaNyt }) });
+  y.rakenna({ pallo: koePallo, luokat: { Shader, Sphere, Mesh }, metri: 100 / 6378137, R: 100 });
+  // Tekstuurien Promise.all(...).then(...) ratkeaa mikrotehtävänä (kuva latautuu synkronisesti mockissa).
+  await Promise.resolve(); await Promise.resolve(); await Promise.resolve();
+  const mesh = lisatyt[0];
+  y.paivita({ pallo: koePallo }, { osuus: 1, ms: 0, aurinko: [1, 0, 0] });
+  assert.equal(y.tila().valmis, true, 'tekstuurit "latautuneet" mockissa');
+  assert.ok(Math.abs(mesh.material.uniforms.uPilviKarsinta.value - 0.25) < 1e-9);
+  karsintaNyt = 0;
+  y.paivita({ pallo: koePallo }, { osuus: 1, ms: 0, aurinko: [1, 0, 0] });
+  assert.equal(mesh.material.uniforms.uPilviKarsinta.value, 0);
 });
