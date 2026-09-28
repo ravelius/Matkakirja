@@ -46,8 +46,8 @@ export const FOKUSVIRTA_VALLETTA = {
   pollo: {
     /* KUPLAT: nykypäivän ääni, ei kaanonia. */
     kommentti: [
-      'Nuo muurit ovat yhä pystyssä. Niiden purkamisesta on puhuttu monta kertaa, mutta linnoitus on säilynyt.',
-      'Isoisäsi näki laivaston harmaita runkoja satamassa. Nykyään sama satama täyttyy risteilijöistä ja turisteista.',
+      'Nuo muurit ovat yhä pystyssä, ja koko vanhakaupunki on nykyään Unescon maailmanperintökohde.',
+      'Isoisäsi näki satamassa Britannian laivaston mustia panssarilaivoja. Nykyään sama satama täyttyy risteilijöistä ja turisteista.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {
