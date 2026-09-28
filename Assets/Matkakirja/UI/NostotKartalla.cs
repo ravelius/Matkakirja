@@ -627,6 +627,9 @@ namespace Matkakirja.Natiivi
             var varatut = new List<Rect>(jono.Count);
             var uudet = new Dictionary<string, Lukko>(jono.Count);
             var mallienNimiot = new List<string>();
+            // Löydös (Český Krumlov ylhäältä): merkki ja laatikkoindeksi talteen jokaiselle mallinnimiölle, jotta
+            // mittaririville voi laskea laatikon ja nimiön y-koordinaatit (malliRuudut[oma] + NimionLaatikko).
+            var malliMerkit = new Dictionary<string, (Merkki M, int Oma)>();
             LueNimet();
             bool Musteeton(Rect a) { foreach (var e in nimet) if (e.Overlaps(a)) return false; return true; }
             foreach (var m in jono)
@@ -642,7 +645,7 @@ namespace Matkakirja.Natiivi
                 int oma = m.Ryhma == null && !m.MallinAlla && m.Id != null ? malliAvaimet.IndexOf(m.Id) : -1;
                 bool malli = oma >= 0 && Symbolimallit.OnMalli(m.Id);
                 m.MallinYla = malli ? malliRuudut[oma].yMin - m.Piste.y : float.NaN;
-                if (oma >= 0) mallienNimiot.Add(m.Id + "#" + oma);
+                if (oma >= 0) { mallienNimiot.Add(m.Id + "#" + oma); malliMerkit[m.Id] = (m, oma); }
                 bool Kalusteeton(Rect a)
                 {
                     for (int k = 0; k < malliRuudut.Count; k++) if (k != oma && malliRuudut[k].Overlaps(a)) return false;
@@ -667,7 +670,14 @@ namespace Matkakirja.Natiivi
                 {
                     var r0 = NimionLaatikko(m, lukko.Kylki);
                     var a0 = new Rect(r0.x + m.Piste.x, r0.y + m.Piste.y, r0.width, r0.height);
-                    if (a0.xMax > -NakyvyysVara && a0.yMax > -NakyvyysVara && a0.xMin < W + NakyvyysVara && a0.yMin < H + NakyvyysVara)
+                    // Löydös (Český Krumlov ylhäältä, mallinoston kalustelaatikko ei tunne kameran kallistusta: laatikon
+                    // korkeus lasketaan mallin 3D-korkeussuhteesta, joten se voi ylhäältä katsottuna ulottua reilusti ruudun
+                    // yli). Mallin lukittu ylä/ala vaatii TARKAN ruudun sisällä olon (ei NakyvyysVaran liukumaa): muuten se
+                    // "näkyy näkyy" -tilassa ruudun ulkopuolella. Muut kyljet (ei mallia) ennallaan liukumalla.
+                    bool ruudulla = malli
+                        ? a0.xMin >= 0f && a0.yMin >= 0f && a0.xMax <= W && a0.yMax <= H
+                        : a0.xMax > -NakyvyysVara && a0.yMax > -NakyvyysVara && a0.xMin < W + NakyvyysVara && a0.yMin < H + NakyvyysVara;
+                    if (ruudulla)
                     {
                         float v = lukko.Nakyy ? 0f : Hystereesi;
                         var av = new Rect(a0.x - v, a0.y - v, a0.width + 2f * v, a0.height + 2f * v);
@@ -704,13 +714,16 @@ namespace Matkakirja.Natiivi
                 }
                 foreach (var ky in ehdokkaat)
                     if (Vapaa(NimionLaatikko(m, ky), vara0)) { loytyi = ky; break; }
-                // Mallin nimi ei katoa (Český Krumlov ylhäältä): tukossa se jää mallin yläpuolelle, kunhan mahtuu ruudulle.
+                // Mallin nimi ei katoa (Český Krumlov ylhäältä): tukossa se jää ylä- tai alapuolelle, kunhan mahtuu
+                // ruudulle — ylä hylätään alan hyväksi, jos mallin kalustelaatikko (ei tunne kameran kallistusta)
+                // ulottuu ruudun yli, ettei nimiö jää "näkyy"-tilaan ruudun ulkopuolella.
                 if (loytyi == null && malli)
-                {
-                    var r = NimionLaatikko(m, "yla");
-                    var a = new Rect(r.x + m.Piste.x, r.y + m.Piste.y, r.width, r.height);
-                    if (a.xMin >= 0 && a.yMin >= 0 && a.xMax <= W && a.yMax <= H) { loytyi = "yla"; paikka = a; }
-                }
+                    foreach (var ky in ehdokkaat)
+                    {
+                        var r = NimionLaatikko(m, ky);
+                        var a = new Rect(r.x + m.Piste.x, r.y + m.Piste.y, r.width, r.height);
+                        if (a.xMin >= 0 && a.yMin >= 0 && a.xMax <= W && a.yMax <= H) { loytyi = ky; paikka = a; break; }
+                    }
                 // Taso 1 ei häivy muiden lappujen tieltä (sovittelu.js sääntö 4): ensimmäinen reunan sisällä oleva
                 // nimistä vapaa ehdokas (nykyinen kylki ensin); jos sellaista ei ole, nimiö häipyy ja ikoni jää.
                 if (loytyi == null && m.Taso1)
@@ -741,12 +754,24 @@ namespace Matkakirja.Natiivi
             // malli, jonka nosto ei ole tällä kerroksella (esim. piilossa tai ryhmässä).
             if (malliRuudut.Count > 0 || mallienNimiot.Count > 0)
             {
-                var sb = new System.Text.StringBuilder($"mallilaatikoita {malliRuudut.Count} [{string.Join(", ", malliAvaimet)}]:");
+                var sb = new System.Text.StringBuilder(
+                    $"mallilaatikoita {malliRuudut.Count} [{string.Join(", ", malliAvaimet)}] (ruutu H {H.ToString("0")}):");
                 foreach (var t in mallienNimiot)
                 {
                     string id = t.Substring(0, t.LastIndexOf('#'));
                     string tila = uudet.TryGetValue(id, out var l) ? $"{l.Kylki} {(l.Nakyy ? "näkyy" : "piilossa")}" : "?";
-                    sb.Append(' ').Append(t).Append(' ').Append(tila).Append(';');
+                    sb.Append(' ').Append(t).Append(' ').Append(tila);
+                    // Löydös (Český Krumlov ylhäältä): laatikon ja nimiön y-alue paneelin pisteinä (y alas, 0 = ruudun
+                    // ylä, H = ruudun ala), jotta laitekuvasta voi todentaa jäikö nimiö ruudun ulkopuolelle.
+                    if (l != null && malliMerkit.TryGetValue(id, out var mm) && mm.Oma < malliRuudut.Count)
+                    {
+                        var lr = malliRuudut[mm.Oma];
+                        var nr = NimionLaatikko(mm.M, l.Kylki);
+                        float ny0 = nr.y + mm.M.Piste.y, ny1 = ny0 + nr.height;
+                        sb.Append(" laatikkoY ").Append(lr.yMin.ToString("0")).Append("..").Append(lr.yMax.ToString("0"))
+                          .Append(" nimiöY ").Append(ny0.ToString("0")).Append("..").Append(ny1.ToString("0"));
+                    }
+                    sb.Append(';');
                 }
                 string rivi = sb.ToString();
                 if (rivi != mallienNimiotLoki) { mallienNimiotLoki = rivi; Debug.Log("MATKAKIRJA nostot: " + rivi); }
