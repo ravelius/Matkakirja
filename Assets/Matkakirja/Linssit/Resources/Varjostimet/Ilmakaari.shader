@@ -9,6 +9,9 @@
 //   Passi 2 (etupinnat): usva maan päällä, kun säde osuu maahan: kuljettu ilmamatka → hento vaalea usva (horisontin
 //   lähellä vahvin, keskellä maata heikko).
 // Kaaren kirkkaus seuraa aurinkoa sivuamispisteessä (yöpuolella lähes musta, hämärässä himmeä).
+// ISS-REALISMI 3 (omistajan kortti 28.9.): hämärässä (aurinko sivuamispisteessä −6° … +6°) kaaren alaosa oranssinpunainen
+// (auringonlaskun pitkä valomatka), yöllä ohut vihertävä ilmahehku noin 95 km:n korkeudella (OI 557,7 nm; ISS:n yökuvissa
+// horisontin yllä näkyvä vihreä viiva), voimakkuus _Hehku.
 Shader "Matkakirja/Linssit/Ilmakaari"
 {
     Properties
@@ -23,6 +26,10 @@ Shader "Matkakirja/Linssit/Ilmakaari"
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
         _Akseli("Napa-akseli (maailma)", Vector) = (0, 1, 0, 0)
         _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
+        _Hamara("Hämärän sävy", Color) = (1, 0.42, 0.14, 1)
+        _HehkuVari("Ilmahehkun sävy", Color) = (0.38, 1, 0.5, 1)
+        _Hehku("Ilmahehkun voimakkuus (0 = pois)", Float) = 0.32
+        _HamaraVoima("Hämärän sävyn voimakkuus (0 = pois)", Float) = 1
     }
     HLSLINCLUDE
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
@@ -30,7 +37,8 @@ Shader "Matkakirja/Linssit/Ilmakaari"
         CBUFFER_START(UnityPerMaterial)
             half _Peitto;
             float _R, _Litistys, _Korkeus, _Asteikko;
-            half4 _Vaalea, _Syva;
+            half4 _Vaalea, _Syva, _Hamara, _HehkuVari;
+            half _Hehku, _HamaraVoima;
             float4 _Keskus, _Akseli, _Aurinko;
         CBUFFER_END
 
@@ -96,8 +104,18 @@ Shader "Matkakirja/Linssit/Ilmakaari"
                 if (t <= 0 || h < 0) discard;   // säde poispäin maasta tai osuu maahan (maa piirtää sen)
                 half a = (half)exp(-h / _Asteikko);
                 half3 vari = lerp(_Syva.rgb, _Vaalea.rgb, (half)exp(-h / 6000.0));
-                a *= Aurinko(n);
-                return half4(vari, saturate(a * 1.15h) * _Peitto);
+                // Hämärä: aurinko lähellä horisonttia sivuamispisteessä → alimmat kerrokset oranssinpunaisiksi.
+                float s = dot(n, normalize(_Aurinko.xyz));
+                half hamara = (half)(exp(-(s * s) / (0.075 * 0.075)) * exp(-h / 9000.0)) * _HamaraVoima;
+                vari = lerp(vari, _Hamara.rgb, saturate(hamara * 1.4h));
+                a *= max(Aurinko(n), hamara * 0.8h);
+                // Ilmahehku yöllä: ohut kerros noin 95 km:ssä (σ 6 km), häipyy päivällä.
+                half yo = 1.0h - (half)smoothstep(-0.105, 0.0, s);
+                half hehku = (half)(exp(-((h - 95000.0) * (h - 95000.0)) / (6000.0 * 6000.0)) * _Hehku) * yo;
+                a = saturate(a * 1.15h);
+                half yht = a + hehku - a * hehku;
+                vari = (vari * a + _HehkuVari.rgb * hehku) / max(a + hehku, 1e-3h);
+                return half4(vari, yht * _Peitto);
             }
             ENDHLSL
         }

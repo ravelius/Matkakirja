@@ -1402,6 +1402,7 @@ namespace Matkakirja.Natiivi
                         else if (a == "valot" && osat.Length > 3) Yokuori.ValotPois = osat[3] == "0";   // A/B kaupunkien valot
                         else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
                         else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
+                        else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
                         else if (a == "pilvet" && osat.Length > 3)
                         {

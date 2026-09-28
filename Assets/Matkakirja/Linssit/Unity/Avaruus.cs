@@ -48,6 +48,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>A/B (`astro kyyti ilmakeha vanha|uusi`): kyydissäkin kaukonäkymän hehku.</summary>
         public static bool VanhaIlmakeha;
+        /// <summary>A/B (`astro kyyti hehku 0|1`): hämärän oranssi ja yön ilmahehku pois (ISS-realismi 3, kuvapari).</summary>
+        public static bool HehkuPois;
         const float KyytiS = 0.8f, KaarenKorkeus = 120_000f;
 
         /// <summary>ISS:n kyyti päälle/pois: hehku häipyy ja ilmakehän kaari tulee tilalle (ellei A/B vanha).</summary>
@@ -194,6 +196,8 @@ namespace Matkakirja.Natiivi
             bool nakyy = kyyti > 0.001f;
             if (kaariPiirto.enabled != nakyy) kaariPiirto.enabled = nakyy;
             kaari.SetFloat("_Peitto", kyyti);
+            kaari.SetFloat("_Hehku", HehkuPois ? 0f : 0.32f);
+            kaari.SetFloat("_HamaraVoima", HehkuPois ? 0f : 1f);
             if (!nakyy || Time.unscaledTime - aurinkoPaivitetty < 1f) return;
             // Keskipiste, napa-akseli ja aurinko maailmassa (georeferenssi voi liikkua); aurinko liikkuu 0,25°/min.
             aurinkoPaivitetty = Time.unscaledTime;
