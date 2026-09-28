@@ -569,3 +569,193 @@ export function lataaIssTle(issNyt, { ikkuna = globalThis, pakota = false } = {}
 
 /** Yhteinen ISS-tila koko pelille (linssi avataan ja suljetaan, TLE säilyy). */
 export const ISS_NYT = luoIssNyt();
+
+/* ═══════════ SIMULOITU AIKA (nopeutus, omistaja 28.9.2026 klo 12.1x) ═══ */
+
+/*
+ * YKSI KELLO KAIKELLE: rata, aurinko, ilmakehän kaari ja yökuori lukevat
+ * ajan tästä (ms, kuten Date.now()). LIVE = todellinen hetki ja kerroin 1.
+ * Nopeutus 10×, 100× tai 1000× (logaritminen porras) juoksuttaa kelloa
+ * todellista nopeammin; "Palaa LIVE" kelaa pehmeästi takaisin todelliseen
+ * hetkeen (ei hyppyä), ja ylilennon lento kelaa ennalta laskettuun hetkeen
+ * kiihtyen noin 1000×:iin ja hidastuen lopussa 1×:iin.
+ */
+export const NOPEUDET = Object.freeze([1, 10, 100, 1000]);
+/** Ylilennon kelauksen huippunopeus (×) ja kelauksen kesto (s) rajoineen. */
+export const KELAUKSEN_HUIPPU = 1000;
+export const KELAUS_MIN_S = 2;
+export const KELAUS_MAX_S = 25;
+
+const pehmea5 = (t) => {
+  const x = Math.max(0, Math.min(1, t));
+  return x * x * x * (x * (x * 6 - 15) + 10);
+};
+
+/**
+ * Simuloitu kello. `reaali` palauttaa todellisen ajan (ms). Puhdas
+ * (tests/iss-rata.test.mjs antaa oman reaalikellon).
+ */
+export function luoSimukello({ reaali = () => Date.now() } = {}) {
+  let ankkuriR = reaali();
+  let ankkuriS = ankkuriR;
+  let kerroin = 1;
+  let live = true;
+  let kelaus = null;
+  let kelauksia = 0;
+
+  const rebase = (sim, k) => {
+    ankkuriR = reaali();
+    ankkuriS = sim;
+    kerroin = k;
+  };
+  const nyt = () => {
+    const r = reaali();
+    if (kelaus) {
+      const u = kelaus.kesto > 0 ? (r - kelaus.alkuR) / kelaus.kesto : 1;
+      if (u >= 1) {
+        const loppu = kelaus.tavoite(r);
+        const k = kelaus;
+        kelaus = null;
+        ankkuriR = r;
+        ankkuriS = loppu;
+        kerroin = k.loppuKerroin;
+        live = k.live;
+        k.valmis?.();
+        return loppu;
+      }
+      return kelaus.alkuS + (kelaus.tavoite(r) - kelaus.alkuS) * pehmea5(u);
+    }
+    return live ? r : ankkuriS + (r - ankkuriR) * kerroin;
+  };
+  const kelaa = (tavoite, kestoMs, loppuKerroin, onLive, valmis) => {
+    const s = nyt();
+    kelauksia += 1;
+    kelaus = { alkuR: reaali(), alkuS: s, tavoite, kesto: Math.max(0, kestoMs), loppuKerroin, live: onLive, valmis, id: kelauksia };
+    live = false;
+    if (kelaus.kesto === 0) nyt();
+    return kelauksia;
+  };
+
+  return {
+    nyt,
+    get live() { return live && !kelaus; },
+    get kerroin() { return kerroin; },
+    get kelaa() { return Boolean(kelaus); },
+    /** Kelauksen tunniste (muuttuu jokaisesta kelauksesta; keskeytys näkyy siitä). */
+    get kelausId() { return kelaus?.id ?? null; },
+    /** Kelauksen edistyminen 0…1 (null, kun ei kelata). */
+    kelausOsuus() {
+      if (!kelaus) return null;
+      return Math.max(0, Math.min(1, (reaali() - kelaus.alkuR) / (kelaus.kesto || 1)));
+    },
+    /** Todellinen nopeus nyt (×): kelauksessa derivaatta, muuten kerroin. */
+    nopeus() {
+      if (!kelaus) return live ? 1 : kerroin;
+      nyt();
+      if (!kelaus) return live ? 1 : kerroin;
+      const r0 = reaali();
+      const u = Math.max(0, Math.min(1, (r0 - kelaus.alkuR) / (kelaus.kesto || 1)));
+      const d = 30 * u * u * (1 - u) * (1 - u); // pehmea5'(u)
+      const tavoite = kelaus.tavoite(r0);
+      return Math.abs(((tavoite - kelaus.alkuS) * d) / (kelaus.kesto || 1));
+    },
+    /** Porras 1× (= LIVE, kelaa takaisin), 10×, 100× tai 1000×. */
+    asetaNopeus(k, { vahennetty = false } = {}) {
+      if (k === 1) return this.palaaLive({ vahennetty });
+      const s = nyt();
+      kelaus = null;
+      live = false;
+      rebase(s, k);
+      return null;
+    },
+    /**
+     * "Palaa LIVE": kelaus todelliseen hetkeen pehmeästi (tavoite liikkuu
+     * todellisen kellon mukana), kesto 0,6–3 s poikkeaman mukaan.
+     */
+    palaaLive({ kestoS = null, vahennetty = false, valmis = null } = {}) {
+      const ero = Math.abs(nyt() - reaali());
+      if (live && !kelaus) return null;
+      const kesto = vahennetty ? 0 : (kestoS ?? Math.min(3, 0.6 + ero / 3.6e6)) * 1000;
+      return kelaa(() => reaali(), kesto, 1, true, valmis);
+    },
+    /**
+     * Kelaa simuloidun hetken `ms`:ään: huippunopeus noin `huippu`×
+     * (pehmeä kiihdytys ja hidastus), kesto KELAUS_MIN_S…KELAUS_MAX_S.
+     * Perillä kerroin 1 (ei LIVE, ellei hetki ole nyt).
+     */
+    kelaaHetkeen(ms, { huippu = KELAUKSEN_HUIPPU, vahennetty = false, valmis = null } = {}) {
+      const ero = Math.abs(ms - nyt());
+      const kesto = vahennetty ? 0
+        : Math.max(KELAUS_MIN_S, Math.min(KELAUS_MAX_S, (1.875 * ero) / (huippu * 1000))) * 1000;
+      return kelaa(() => ms, kesto, 1, false, valmis);
+    },
+  };
+}
+
+/** Pelin yhteinen simuloitu kello (kyyti ja kaukonäkymä). */
+export const SIMUKELLO = luoSimukello();
+
+/* ═══════════ SEURAAVA YLILENTO ════════════════════════════════════ */
+
+/** Ylilennon raja: maajäljen lähin ohitus enintään näin kaukana (km). */
+export const YLILENNON_RAJA_KM = 500;
+export const YLILENNON_HAKU_H = 48;
+
+function maaEtaisyysKm(lat1, lon1, lat2, lon2) {
+  const r = Math.PI / 180;
+  const c = Math.sin(lat1 * r) * Math.sin(lat2 * r) + Math.cos(lat1 * r) * Math.cos(lat2 * r) * Math.cos((lon1 - lon2) * r);
+  return (Math.acos(Math.max(-1, Math.min(1, c))) / r) * 111.195;
+}
+
+/**
+ * ISS:n SEURAAVA ylilento kohteen yli hetken `alkuMs` jälkeen: maajäljen
+ * lähin ohitus, kun se on alle `rajaKm` sivuttain. Karkea haku 20 s:n
+ * askelin (maajälki liikkuu 150 km askeleessa), sitten kultainen leikkaus
+ * sekunnin tarkkuuteen. Palauttaa { ms, sivuttainKm, lat, lon } tai null.
+ */
+export function seuraavaYlilento(issNyt, lat, lon, alkuMs, {
+  rajaKm = YLILENNON_RAJA_KM, hakuH = YLILENNON_HAKU_H, askelS = 20, valoisa = false,
+} = {}) {
+  // `valoisa`: vain ohitukset, joissa aurinko on kohteessa yli 10° horisontin yllä.
+  const valossa = (ms) => {
+    const a = auringonAlihajapiste(jdHetkesta(ms));
+    const r = Math.PI / 180;
+    const s = Math.sin(lat * r) * Math.sin(a.lat * r) + Math.cos(lat * r) * Math.cos(a.lat * r) * Math.cos((lon - a.lon) * r);
+    return s > Math.sin(10 * r);
+  };
+  const d = (ms) => {
+    const p = issNyt.paikka(ms);
+    return maaEtaisyysKm(p.lat, p.lon, lat, lon);
+  };
+  const askel = askelS * 1000;
+  const loppu = alkuMs + hakuH * 3600e3;
+  // Ohitetaan meneillään oleva ohitus: haku alkaa, kun etäisyys kasvaa.
+  let t0 = alkuMs + 60e3;
+  let a = d(t0 - askel);
+  let b = d(t0);
+  for (let t = t0 + askel; t <= loppu; t += askel) {
+    const c = d(t);
+    if (b <= a && b <= c && b < rajaKm + 200) {
+      // Paikallinen minimi välillä [t − 2 askel, t]: kultainen leikkaus.
+      let x0 = t - 2 * askel;
+      let x1 = t;
+      const g = (Math.sqrt(5) - 1) / 2;
+      let c1 = x1 - g * (x1 - x0);
+      let c2 = x0 + g * (x1 - x0);
+      let f1 = d(c1);
+      let f2 = d(c2);
+      while (x1 - x0 > 500) {
+        if (f1 < f2) { x1 = c2; c2 = c1; f2 = f1; c1 = x1 - g * (x1 - x0); f1 = d(c1); } else { x0 = c1; c1 = c2; f1 = f2; c2 = x0 + g * (x1 - x0); f2 = d(c2); }
+      }
+      const ms = Math.round((x0 + x1) / 2);
+      const sivu = d(ms);
+      if (sivu <= rajaKm && ms > alkuMs && (!valoisa || valossa(ms))) {
+        const p = issNyt.paikka(ms);
+        return { ms, sivuttainKm: sivu, lat: p.lat, lon: p.lon };
+      }
+    }
+    a = b;
+    b = c;
+  }
+  return null;
+}

@@ -50,7 +50,15 @@ export const KAAREN_YO = 0.06;
 /** Tähtien peitto kyydissä (päivävalo himmentää). */
 export const TAHDET_KYYDISSA = 0.3;
 
-export const TILA = Object.freeze({ kauko: 'kauko', seuranta: 'seuranta', ikkuna: 'ikkuna' });
+export const TILA = Object.freeze({ kauko: 'kauko', seuranta: 'seuranta', ikkuna: 'ikkuna', kohde: 'kohde' });
+/**
+ * KOHTEEN YLLÄ (ylilento, omistaja 28.9.2026 klo 12.1x): silmä ISS:ssä,
+ * katse kohteeseen kuten astronautin vinokuvissa. Kenttäkulma rajataan
+ * niin, että noin KOHTEEN_NAKYMA_M leveä alue täyttää ruudun pystyn
+ * (pitkä objektiivi), enintään 50° ja vähintään 6°.
+ */
+export const KOHTEEN_NAKYMA_M = 90000;
+export const KOHTEESEEN_S = 1.2;
 
 /** Smootherstep x³(6x² − 15x + 10) (natiivi Kamerakayrat.Pehmea). */
 export function pehmea(t) {
@@ -124,6 +132,28 @@ export function ikkunanKulma(iss, alasA = IKKUNAN_KATSE_ALAS) {
   const rho = eta > 1e-9 ? (r * Math.sin(theta)) / Math.sin(eta) : h;
   const k = kohde(iss.lat, iss.lon, iss.suuntima, theta / DEG);
   return kuvakulma(k.lat, k.lon, rho, zeta / DEG, k.loppu, 0);
+}
+
+/**
+ * Kohteen yllä: katsekohde on kohde maan pinnalla, silmä ISS:ssä. Kohteen
+ * zeniittikulma ζ ja etäisyys ρ kolmiosta (R, R + h, keskuskulma θ);
+ * suuntima kohteessa on isoympyrän loppusuunta ISS:n alapisteestä, jolloin
+ * silmä osuu ISS:ään (sama kaava kuin ikkunanKulma, suunta käännettynä).
+ */
+export function kohteenKulma(iss, kohdeP) {
+  const r = MAAN_SADE_M;
+  const h = Math.max(1000, iss.korkeusM);
+  const theta = kaari(iss.lat, iss.lon, kohdeP.lat, kohdeP.lon) * DEG;
+  const rho = Math.sqrt(r * r + (r + h) * (r + h) - 2 * r * (r + h) * Math.cos(theta));
+  const zeta = Math.acos(Math.max(-1, Math.min(1, ((r + h) * Math.cos(theta) - r) / rho)));
+  const loppu = theta < 1e-7 ? iss.suuntima : (suunta(kohdeP.lat, kohdeP.lon, iss.lat, iss.lon) + 180) % 360;
+  return kuvakulma(kohdeP.lat, kohdeP.lon, rho, zeta / DEG, loppu, 0);
+}
+
+/** Kohteen kenttäkulma etäisyydestä (astetta). */
+export function kohteenKentta(etaisyysM) {
+  const k = (2 * Math.atan(KOHTEEN_NAKYMA_M / 2 / Math.max(1, etaisyysM))) / DEG;
+  return Math.max(6, Math.min(50, k));
 }
 
 /** Kaukonäkymän asento pelaajan kamerasta (katse alas). */
@@ -224,6 +254,7 @@ export function luoKyyti() {
   let t0 = 0;
   let kesto = 0;
   let paluuKorkeus = 0;
+  let kohdeP = null;
 
   const aloita = (uusi, nykyinen, kentta, nyt, kestoS) => {
     tila = uusi;
@@ -245,11 +276,19 @@ export function luoKyyti() {
         const k = kaari(nykyinen.lat, nykyinen.lon, iss.lat, iss.lon);
         aloita(TILA.seuranta, nykyinen, kentta, nyt, vahennetty ? 0 : KYYTIIN_S + (KYYTIIN_LISA_S * k) / 180);
       } else {
+        // Seurannasta ikkunaan; ikkunasta ja kohteen yltä takaisin seurantaan.
         const seuraava = tila === TILA.seuranta ? TILA.ikkuna : TILA.seuranta;
         aloita(seuraava, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt,
           vahennetty ? 0 : IKKUNAAN_S);
       }
     },
+    /** Kohteen yllä (ylilento): silmä ISS:ssä, katse kohteeseen. */
+    kohteeseen(kohdePaikka, nykyinen, kentta, nyt, vahennetty) {
+      kohdeP = { lat: kohdePaikka.lat, lon: kohdePaikka.lon };
+      aloita(TILA.kohde, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt,
+        vahennetty ? 0 : KOHTEESEEN_S);
+    },
+    get kohde() { return kohdeP; },
     /** ✕: paluu kaukonäkymään ISS:n alapisteen ylle korkeudelle `kaukoKorkeusM`. */
     poistu(kaukoKorkeusM, nyt, vahennetty) {
       if (!kyydissa() || (tila === TILA.kauko && siirtyy)) return;
@@ -271,6 +310,9 @@ export function luoKyyti() {
       else if (tila === TILA.ikkuna) {
         kohdeK = ikkunanKulma(iss);
         kohdeKentta = IKKUNAN_KENTTA;
+      } else if (tila === TILA.kohde && kohdeP) {
+        kohdeK = kohteenKulma(iss, kohdeP);
+        kohdeKentta = kohteenKentta(kohdeK.etaisyysM);
       } else {
         kohdeK = kaukoKulma(Math.max(-55, Math.min(55, iss.lat)), iss.lon, paluuKorkeus, 0, 0);
       }
@@ -293,14 +335,40 @@ export function luoKyyti() {
  * pyöristetään kymmeniin, tuhaterotin on suomen väli (U+00A0 kuten
  * natiivin fi-FI).
  */
-export function tietorivi(korkeusKm, nopeus, arvio) {
-  const luku = (n) => Math.round(n).toLocaleString('fi-FI').replace(/\s/g, ' ');
+export function tietorivi(korkeusKm, nopeus, arvio, kerroin = null) {
+  const luku = (n) => Math.round(n).toLocaleString('fi-FI').replace(/\s/g, '\u00a0');
   const km = luku(korkeusKm);
   const kmh = luku(Math.round(nopeus / 10) * 10);
+  /*
+   * NOPEUTETTUNA (omistaja 28.9. klo 12.1x): "● 100× · ISS · …" ilman
+   * LIVE-sanaa, piste ei punainen — kerroin kertoo, ettei ISS ole juuri
+   * nyt tuossa. Rata-arviossa ei LIVE-merkkiä kuten ennenkin.
+   */
+  const k = kerroin === null ? null : nopeudenMerkki(kerroin);
+  const merkki = k ?? (arvio ? null : 'LIVE');
   return {
-    live: !arvio,
-    teksti: `${arvio ? '' : '· '}ISS · ${km} km · ${kmh} km/h${arvio ? ' · rata-arvio' : ''}`,
+    live: !arvio && k === null,
+    merkki,
+    teksti: `${merkki ? '· ' : ''}ISS · ${km} km · ${kmh} km/h${arvio ? ' · rata-arvio' : ''}`,
   };
+}
+
+/** Nopeuskerroin pilleriin: 1×, 10×, 870× (kaksi merkitsevää numeroa). */
+export function nopeudenMerkki(k) {
+  const x = Math.abs(Number(k) || 0);
+  if (x < 1.5) return '1×';
+  const d = 10 ** Math.max(0, Math.floor(Math.log10(x)) - 1);
+  return `${(Math.round(x / d) * d).toLocaleString('fi-FI').replace(/\s/g, '\u00a0')}×`;
+}
+
+/** Ylilennon kellonaika ja aika siihen: "Ylilento klo 14.32, 3 h 12 min päästä". */
+export function ylilennonTeksti(ms, nytMs) {
+  const d = new Date(ms);
+  const klo = `${d.getHours()}.${String(d.getMinutes()).padStart(2, '0')}`;
+  const min = Math.max(0, Math.round((ms - nytMs) / 60000));
+  const h = Math.floor(min / 60);
+  const vali = h > 0 ? `${h} h ${min % 60} min` : `${min} min`;
+  return `Ylilento klo ${klo}, ${vali} päästä`;
 }
 
 /** Kaaren kirkkaus korkeudella h (m): exp(−h / 22 km). */

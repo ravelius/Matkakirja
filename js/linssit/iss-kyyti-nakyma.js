@@ -36,11 +36,14 @@
  */
 
 import {
-  luoKyyti, kaukoKulma, kameranAsento, tietorivi, TILA, MAAN_SADE_M,
+  luoKyyti, kaukoKulma, kameranAsento, tietorivi, ylilennonTeksti, TILA, MAAN_SADE_M, KAUKOON_S,
   MALLIN_NAKYMISRAJA_M, MALLIN_LEVEYS_PX, KAAREN_KORKEUS_M, KAAREN_ASTEIKKO_M,
   KAAREN_SIIRTYMA_S, KAAREN_VAALEA, KAAREN_SYVA, KAAREN_YO, TAHDET_KYYDISSA,
 } from './iss-kyyti.js';
-import { nopeusKmh, RADAN_LAATU, auringonAlihajapiste, jdHetkesta } from './iss-rata.js';
+import {
+  nopeusKmh, RADAN_LAATU, auringonAlihajapiste, jdHetkesta, SIMUKELLO, NOPEUDET, seuraavaYlilento,
+} from './iss-rata.js';
+import { SATELLIITTI_KOHTEET } from './satelliitti-data.js';
 
 /* ═══════════ CUPOLA ═══════════════════════════════════════════════ */
 
@@ -170,6 +173,15 @@ void main() {
  * maan yllä ristiriidassa.
  */
 export const YOKUOREN_SADE = 1.012;
+/**
+ * Piirtojärjestys (three.js renderOrder) läpikuultaville kyydin kuorille:
+ * pilvet 2 (astro-sumu) → NASA-kuvakoe 2,5 → yökuori → ilmakehän kaari 3.
+ * Vakio, jotta realismimoduuli (Siirtoseppä, js/linssit/iss-realismi.js)
+ * voi asettua väliin.
+ */
+export const YOKUOREN_JARJESTYS = 2.8;
+export const KAAREN_JARJESTYS = 3;
+export const NASA_KOE_JARJESTYS = 2.5;
 export const YON_PEITTO = 0.82;
 const YO_FRAGMENT = `
 uniform float uPeitto;
@@ -209,7 +221,7 @@ function rakennaKaari(pallo, luokat) {
       side,
     });
     const mesh = new Mesh(geometria, materiaali);
-    mesh.renderOrder = 3;
+    mesh.renderOrder = KAAREN_JARJESTYS;
     mesh.visible = false;
     mesh.userData.issKyyti = true;
     pallo.scene().add(mesh);
@@ -227,13 +239,15 @@ function rakennaKaari(pallo, luokat) {
     depthWrite: false,
     side: 0,
   }));
-  yo.renderOrder = 2;
+  yo.renderOrder = YOKUOREN_JARJESTYS;
   yo.visible = false;
   yo.userData.issKyyti = true;
   pallo.scene().add(yo);
   const kaikki = [yo, kaari, usva];
   let aurinkoLaskettu = -Infinity;
   return {
+    /** Auringon suunta näyttämössä (uAurinko, yksikkövektori). */
+    aurinko: () => kaari.material.uniforms.uAurinko.value,
     aseta(osuus, ms) {
       const nakyy = osuus > 0.001;
       for (const o of kaikki) o.visible = nakyy;
@@ -342,6 +356,119 @@ function rakennaMalli(pallo, luokat) {
 
 export const KYYTI_LUOKKA = 'satelliitti-kyyti';
 
+/* ═══════════ YLILENNON KOHTEET (vain Eurooppa) ═════════════════════ */
+
+/**
+ * "LENNÄ KOHTEEN YLLE" -VALIKON KOHTEET (omistaja 28.9.2026 klo 12.1x;
+ * VAIN EUROOPPA 27.9.): Astronautin kameran omat NASA-kohteet Euroopan
+ * rajauksella (leveys 34–72°, pituus −25…45°). Samat kohteet, joiden
+ * astronauttikuvat pelaaja jo selaa, joten ylilento vie kuvan paikalle ja
+ * NASA-kuvakoe käyttää samaa kuvaa. Pois vain kohteet, joiden yli ISS ei
+ * lennä (51,6°:n rata näkee enintään noin 56°N 500 km:n rajalla):
+ * revontulet 60°N.
+ */
+export const YLILENNON_ALUE = Object.freeze({ lat: [34, 72], lon: [-25, 45] });
+export const YLILENNON_MAKSIMILEVEYS = 56;
+
+export function ylilennonKohteet(kohteet = SATELLIITTI_KOHTEET) {
+  const { lat, lon } = YLILENNON_ALUE;
+  return (kohteet ?? [])
+    .filter((k) => Number.isFinite(k.lat) && Number.isFinite(k.lon)
+      && k.lat >= lat[0] && k.lat <= lat[1] && k.lon >= lon[0] && k.lon <= lon[1]
+      && Math.abs(k.lat) <= YLILENNON_MAKSIMILEVEYS)
+    .map((k) => ({ tunnus: k.tunnus, nimi: k.nimi, lat: k.lat, lon: k.lon }))
+    .sort((a, b) => a.nimi.localeCompare(b.nimi, 'fi'));
+}
+
+/* ═══════════ NASA-KUVAKOE (omistaja 28.9.2026 klo 12.1x, KOE) ═══════ */
+
+/*
+ * Kohteen yllä Astronautin kameran oma NASA-kuva häivytetään piirretyn
+ * maapallon päälle oikeaan kohtaan. Kuvilla ei ole jalanjälkimetatietoa
+ * (vain NASA-tunnus), joten KALIBROINTI ON KÄSIN: keskipiste, maastoleveys
+ * (km) ja kierto (kuvan "ylös" asteina pohjoisesta myötäpäivään) katsottu
+ * kuvasta ja kartasta. Kuva on tasainen pala pallokuorella (ei
+ * perspektiivikorjausta vinoille kuville), reunat häivytetty.
+ * Päällä vain ?koe=nasakuva (tai kahvan nasaKoe(true)).
+ */
+export const NASA_KOE = Object.freeze({
+  venetsia: { kuva: 'iss014e17346', lat: 45.432, lon: 12.330, leveysKm: 15, kierto: 0 },
+  dardanellit: { kuva: 'iss014e08138', lat: 40.18, lon: 26.45, leveysKm: 80, kierto: 0 },
+  santorini: { kuva: 'iss017e005037', lat: 36.415, lon: 25.415, leveysKm: 17, kierto: -20 },
+});
+export const NASA_KOE_PEITTO = 0.95;
+/*
+ * Kuori 0,5 km:n korkeudella: kapealla kenttäkulmalla ja vinosti katsottuna
+ * 10 km:n kuori (linssikalvojen oletus) näkyi 1. ajossa kymmeniä km
+ * horisonttiin päin siirtyneenä (parallaksi). Syvyyssiirto pitää sen
+ * laattojen päällä.
+ */
+const NASA_KOE_SADE = 1 + 0.5 / 6371;
+
+/** Kierretyn kuvan rajauslaatikko (km) ja pallon ikkuna asteina. Puhdas. */
+export function nasaKoeIkkuna(k, kuvasuhde) {
+  const w = k.leveysKm;
+  const h = w / (kuvasuhde || 1.5);
+  const a = (k.kierto * Math.PI) / 180;
+  const bw = Math.abs(w * Math.cos(a)) + Math.abs(h * Math.sin(a));
+  const bh = Math.abs(w * Math.sin(a)) + Math.abs(h * Math.cos(a));
+  const dLat = bh / 2 / 111.195;
+  const dLon = bw / 2 / (111.195 * Math.cos((k.lat * Math.PI) / 180));
+  return {
+    leveysKm: bw, korkeusKm: bh,
+    ikkuna: { lat0: k.lat - dLat, lat1: k.lat + dLat, lng0: k.lon - dLon, lng1: k.lon + dLon },
+  };
+}
+
+export function nasaKoeKaytossa(ikkuna = globalThis) {
+  try {
+    const arvo = new URLSearchParams(ikkuna?.location?.search ?? '').get('koe') ?? '';
+    return arvo.split(',').map((x) => x.trim()).includes('nasakuva');
+  } catch { return false; }
+}
+
+/** NASA-kuva kankaalle pohjoinen ylös, kierrettynä ja reunat häivytettyinä. */
+async function nasaKoeKangas(k, ikkuna) {
+  const kohde = SATELLIITTI_KOHTEET.find((x) => (x.havainnot ?? []).some((h) => h.id === k.kuva));
+  const havainto = kohde?.havainnot?.find((h) => h.id === k.kuva);
+  if (!havainto?.kuva || typeof ikkuna.createImageBitmap !== 'function') return null;
+  const vastaus = await ikkuna.fetch(havainto.kuva, { mode: 'cors', credentials: 'omit' });
+  if (!vastaus?.ok) return null;
+  const kuva = await ikkuna.createImageBitmap(await vastaus.blob());
+  const suhde = kuva.width / kuva.height;
+  const { leveysKm, korkeusKm } = nasaKoeIkkuna(k, suhde);
+  const pxKm = kuva.width / k.leveysKm;
+  const kangas = ikkuna.document.createElement('canvas');
+  kangas.width = Math.min(2048, Math.round(leveysKm * pxKm));
+  kangas.height = Math.min(2048, Math.round(korkeusKm * pxKm));
+  const mitta = kangas.width / (leveysKm * pxKm);
+  const ctx = kangas.getContext('2d');
+  // Kuva omalle kankaalleen reunat häivytettyinä (6 % joka reunalta).
+  const pala = ikkuna.document.createElement('canvas');
+  pala.width = kuva.width;
+  pala.height = kuva.height;
+  const p = pala.getContext('2d');
+  p.drawImage(kuva, 0, 0);
+  kuva.close?.();
+  p.globalCompositeOperation = 'destination-in';
+  const reuna = 0.06;
+  const vaaka = p.createLinearGradient(0, 0, pala.width, 0);
+  vaaka.addColorStop(0, 'rgba(0,0,0,0)'); vaaka.addColorStop(reuna, '#000');
+  vaaka.addColorStop(1 - reuna, '#000'); vaaka.addColorStop(1, 'rgba(0,0,0,0)');
+  p.fillStyle = vaaka;
+  p.fillRect(0, 0, pala.width, pala.height);
+  const pysty = p.createLinearGradient(0, 0, 0, pala.height);
+  pysty.addColorStop(0, 'rgba(0,0,0,0)'); pysty.addColorStop(reuna, '#000');
+  pysty.addColorStop(1 - reuna, '#000'); pysty.addColorStop(1, 'rgba(0,0,0,0)');
+  p.fillStyle = pysty;
+  p.fillRect(0, 0, pala.width, pala.height);
+  ctx.translate(kangas.width / 2, kangas.height / 2);
+  ctx.rotate((k.kierto * Math.PI) / 180);
+  ctx.scale(mitta, mitta);
+  ctx.drawImage(pala, -pala.width / 2, -pala.height / 2);
+  return { kangas, ikkuna: nasaKoeIkkuna(k, suhde).ikkuna };
+}
+
 /**
  * @param {object} p
  * @param {object} p.pallo Globe.gl
@@ -351,10 +478,14 @@ export const KYYTI_LUOKKA = 'satelliitti-kyyti';
  * @param {() => number} p.paluuKorkeus kaukonäkymän lepokorkeus pallonsäteinä
  * @param {() => void} p.ennenKyytia avausajo ja seuranta pois
  * @param {(korkeus: number) => void} p.kyytiPaattyi kameran korkeus paluun jälkeen
+ * @param {object|null} p.realismi Siirtosepän realismimoduuli (js/linssit/iss-realismi.js):
+ *   rakenna({ pallo, luokat, metri, R }), paivita({ osuus, ms, tila, iss, silma, kamera }), pura()
+ * @param {object} p.kello simuloitu kello (iss-rata.js SIMUKELLO)
  */
 export function luoIssKyytiNakyma({
   pallo, lauta = null, kotelo = null, kalvo = null, sumu = null, reduced = false,
   ikkuna = globalThis, issNyt, paluuKorkeus = () => 3, ennenKyytia = () => {}, kyytiPaattyi = () => {},
+  realismi = null, kello: simu = SIMUKELLO, nasaKoe = null,
 } = {}) {
   const doc = ikkuna?.document;
   if (!pallo?.camera || !issNyt || !doc?.createElement) return null;
@@ -362,6 +493,7 @@ export function luoIssKyytiNakyma({
   const R = pallo.getGlobeRadius?.() ?? 100;
   const metri = R / MAAN_SADE_M;
   const kello = () => (ikkuna.performance?.now?.() ?? Date.now()) / 1000;
+  const kohteet = ylilennonKohteet();
 
   let talteen = null;
   let viimeisin = null;
@@ -376,7 +508,19 @@ export function luoIssKyytiNakyma({
   let mallinakyy = false;
   let kehysNakyy = false;
   let purettu = false;
-  const mittari = { kehyksia: 0, kuvaMs: 0, kuvaMsMax: 0 };
+  let realismiRakennettu = false;
+  let ylilento = null;
+  let koePaalla = nasaKoe ?? nasaKoeKaytossa(ikkuna);
+  let koe = null;
+  const mittari = { kehyksia: 0, kuvaMs: 0, kuvaMsMax: 0, realismiVirheita: 0 };
+
+  const realismiKutsu = (nimi, arg) => {
+    if (!realismi?.[nimi]) return;
+    try { realismi[nimi](arg); } catch (e) {
+      mittari.realismiVirheita += 1;
+      if (mittari.realismiVirheita === 1) { try { console.warn('ISS-realismi:', e); } catch { /* ei konsolia */ } }
+    }
+  };
 
   /* ---- UI ----------------------------------------------------------- */
   let ui = null;
@@ -407,8 +551,57 @@ export function luoIssKyytiNakyma({
     sulku.textContent = '×';
     sulku.title = 'Pois kyydistä';
     sulku.setAttribute('aria-label', 'Pois kyydistä');
-    juuri.append(cupola, kosketus, tieto, sulku);
+
+    /*
+     * OHJAIMET PILLERIN ALLA (omistaja 28.9. klo 12.1x): nopeutuksen porras
+     * LIVE · 10× · 100× · 1000× (logaritminen) ja "Lennä kohteen ylle"
+     * -valikko. Kevyt: yksi rivi nappeja ja selaimen oma valikko.
+     */
+    const ohjaimet = doc.createElement('div');
+    ohjaimet.className = 'iss-kyyti-ohjaimet';
+    const nopeudet = doc.createElement('div');
+    nopeudet.className = 'iss-kyyti-nopeudet';
+    nopeudet.setAttribute('role', 'group');
+    nopeudet.setAttribute('aria-label', 'Ajan nopeutus');
+    const napit = NOPEUDET.map((k) => {
+      const b = doc.createElement('button');
+      b.type = 'button';
+      b.dataset.kerroin = String(k);
+      b.textContent = k === 1 ? 'LIVE' : `${k}×`;
+      b.addEventListener('click', (e) => { e.stopPropagation(); asetaNopeus(k); });
+      return b;
+    });
+    nopeudet.append(...napit);
+    const valikko = doc.createElement('select');
+    valikko.className = 'iss-kyyti-kohteet';
+    valikko.setAttribute('aria-label', 'Lennä kohteen ylle');
+    const tyhja = doc.createElement('option');
+    tyhja.value = '';
+    tyhja.textContent = 'Lennä kohteen ylle…';
+    valikko.append(tyhja, ...kohteet.map((k) => {
+      const o = doc.createElement('option');
+      o.value = k.tunnus;
+      o.textContent = k.nimi;
+      return o;
+    }));
+    valikko.addEventListener('change', () => {
+      const t = valikko.value;
+      valikko.value = '';
+      if (t) lennaKohteeseen(t);
+    });
+    const ylilentoRivi = doc.createElement('div');
+    ylilentoRivi.className = 'iss-kyyti-ylilento';
+    ylilentoRivi.hidden = true;
+    ohjaimet.append(nopeudet, valikko, ylilentoRivi);
+    juuri.append(cupola, kosketus, tieto, ohjaimet, sulku);
     doc.body.appendChild(juuri);
+
+    /* Pillerin napautus nopeutettuna = "Palaa LIVE". */
+    tieto.addEventListener('click', (e) => {
+      if (simu.live) return;
+      e.stopPropagation();
+      asetaNopeus(1);
+    });
 
     /*
      * KOSKETUSKERROS: napautus vaihtaa tilaa, kaikki muu nielaistaan
@@ -462,7 +655,7 @@ export function luoIssKyytiNakyma({
       }
     };
     ui = {
-      juuri, tieto, piste, live, teksti, sulku, kosketus, cupola, haeKuvat,
+      juuri, tieto, piste, live, teksti, sulku, kosketus, cupola, haeKuvat, napit, valikko, ylilentoRivi,
       kehysOk: () => kehysOk,
       kerrokset: () => [...kerrokset.values()].map((el) => ({
         laji: el.dataset.laji, ladattu: el.dataset.ladattu === '1',
@@ -475,11 +668,27 @@ export function luoIssKyytiNakyma({
     if (!ui) return;
     const p = issNyt.paikka(ms);
     const arvio = issNyt.laatu(ms) !== RADAN_LAATU.tarkka;
-    const r = tietorivi(p.korkeusKm, nopeusKmh(p.korkeusKm), arvio);
+    const nopeutettu = !simu.live;
+    const r = tietorivi(p.korkeusKm, nopeusKmh(p.korkeusKm), arvio, nopeutettu ? simu.nopeus() : null);
     ui.teksti.textContent = r.teksti;
-    ui.piste.hidden = !r.live;
-    ui.live.hidden = !r.live;
+    ui.piste.hidden = !r.merkki;
+    ui.live.hidden = !r.merkki;
+    ui.live.textContent = r.merkki ?? '';
     ui.tieto.classList.toggle('iss-kyyti-tieto-live', r.live);
+    ui.tieto.classList.toggle('iss-kyyti-tieto-nopeutettu', nopeutettu);
+    ui.tieto.title = nopeutettu ? 'Palaa LIVE' : '';
+    const valittu = simu.kelaa ? null : (simu.live ? 1 : simu.kerroin);
+    for (const b of ui.napit) {
+      const k = Number(b.dataset.kerroin);
+      b.classList.toggle('iss-kyyti-valittu', k === valittu);
+      if (k === 1) b.textContent = nopeutettu ? 'Palaa LIVE' : 'LIVE';
+    }
+    if (ylilento && ui.ylilentoRivi) {
+      ui.ylilentoRivi.hidden = false;
+      ui.ylilentoRivi.textContent = ylilento.perilla
+        ? `${ylilento.nimi}: ISS ${Math.round(ylilento.sivuttainKm)} km sivussa`
+        : `${ylilento.nimi} · ${ylilennonTeksti(ylilento.ms, simu.nyt())}`;
+    }
   };
 
   /** UI:n tila: auki kyydissä (ei paluussa), Cupola ikkunassa. */
@@ -497,6 +706,35 @@ export function luoIssKyytiNakyma({
     if (auki) u.haeKuvat();
     if (tila !== uiTila) tietoAika = -Infinity;
     uiTila = tila;
+    paivitaKoe();
+  };
+
+  /* ---- NASA-kuvakoe ------------------------------------------------- */
+  const paivitaKoe = () => {
+    const kohde = kyyti.tila === TILA.kohde ? kyyti.kohde : null;
+    const tunnus = kohde ? ylilento?.tunnus : null;
+    const kal = tunnus && koePaalla ? NASA_KOE[tunnus] : null;
+    if (koe && koe.tunnus !== tunnus) {
+      const vanha = koe;
+      koe = null;
+      vanha.kahva?.peittavyys?.(0);
+      ikkuna.setTimeout?.(() => vanha.kahva?.pura?.(), 700);
+    } else if (koe && !kal) {
+      koe.kahva?.peittavyys?.(0);
+    }
+    if (!kal || !lauta?.linssit?.kalvo) return;
+    if (koe) { koe.kahva?.peittavyys?.(NASA_KOE_PEITTO); return; }
+    koe = { tunnus, kahva: null, valmis: false };
+    const oma = koe;
+    nasaKoeKangas(kal, ikkuna).then((v) => {
+      if (!v || koe !== oma || purettu) return;
+      oma.kahva = lauta.linssit.kalvo(`iss-nasakoe-${tunnus}`, {
+        kuva: v.kangas, peittavyys: 0, ikkuna: v.ikkuna, sade: NASA_KOE_SADE, jarjestys: NASA_KOE_JARJESTYS,
+      });
+      oma.valmis = true;
+      oma.ikkuna = v.ikkuna;
+      ikkuna.setTimeout?.(() => { if (koe === oma && koePaalla) oma.kahva?.peittavyys?.(NASA_KOE_PEITTO); }, 60);
+    }).catch(() => {});
   };
 
   /* ---- kamera -------------------------------------------------------- */
@@ -514,6 +752,10 @@ export function luoIssKyytiNakyma({
     if (!luokat) luokat = etsiLuokat(pallo);
     if (!kaari) { try { kaari = rakennaKaari(pallo, luokat); } catch { kaari = null; } }
     if (!malli) { try { malli = rakennaMalli(pallo, luokat); } catch { malli = null; } }
+    if (!realismiRakennettu && luokat) {
+      realismiRakennettu = true;
+      realismiKutsu('rakenna', { pallo, luokat, metri, R });
+    }
   };
 
   const asetaKamera = (asento, fov) => {
@@ -581,7 +823,7 @@ export function luoIssKyytiNakyma({
   /* ---- julkinen ------------------------------------------------------ */
   function napauta() {
     if (purettu || doc.body.classList.contains('satelliitti-kuva-auki')) return false;
-    const ms = Date.now();
+    const ms = simu.nyt();
     const nyt = kello();
     const cam = pallo.camera();
     let nykyinen;
@@ -600,16 +842,66 @@ export function luoIssKyytiNakyma({
 
   function poistu() {
     if (purettu || !kyyti.kyydissa || kyyti.tila === TILA.kauko) return false;
+    ylilento = null;
+    if (ui?.ylilentoRivi) ui.ylilentoRivi.hidden = true;
+    // Aika palaa todelliseen hetkeen paluulennon aikana (ei hyppyä).
+    simu.palaaLive({ kestoS: KAUKOON_S, vahennetty: reduced });
     kyyti.poistu(paluuKorkeus() * MAAN_SADE_M, kello(), reduced);
     paivitaUi();
     return true;
+  }
+
+  /** Nopeutus: 1 = "Palaa LIVE" (kelaus pehmeästi todelliseen hetkeen). */
+  function asetaNopeus(k) {
+    if (purettu || !NOPEUDET.includes(k)) return false;
+    ylilento = null;
+    if (ui?.ylilentoRivi) ui.ylilentoRivi.hidden = true;
+    simu.asetaNopeus(k, { vahennetty: reduced });
+    tietoAika = -Infinity;
+    return true;
+  }
+
+  /**
+   * "Lennä kohteen ylle": SGP4:llä seuraava todellinen ylilento, kellonaika
+   * näkyviin ja kelaus sinne (kiihdytys noin 1000×:iin, hidastus 1×:iin).
+   * Maa pyörii alla, ei teleporttia. Perillä kamera kääntyy kohteeseen.
+   */
+  function lennaKohteeseen(tunnus, { valoisa = false } = {}) {
+    const k = kohteet.find((x) => x.tunnus === tunnus);
+    if (purettu || !k || !kyyti.kyydissa || kyyti.tila === TILA.kauko) return null;
+    const alku = simu.nyt();
+    const y = seuraavaYlilento(issNyt, k.lat, k.lon, alku, { valoisa });
+    rakennaUi();
+    if (!y) {
+      ylilento = null;
+      ui.ylilentoRivi.hidden = false;
+      ui.ylilentoRivi.textContent = `${k.nimi}: ei ylilentoa 48 tunnin sisällä`;
+      return null;
+    }
+    if (kyyti.tila !== TILA.seuranta) napauta();
+    const oma = { ...y, tunnus: k.tunnus, nimi: k.nimi, kohde: k, perilla: false, id: null };
+    ylilento = oma;
+    oma.id = simu.kelaaHetkeen(y.ms, {
+      vahennetty: reduced,
+      valmis: () => {
+        if (ylilento !== oma || purettu || !kyyti.kyydissa || kyyti.tila === TILA.kauko) return;
+        oma.perilla = true;
+        kyyti.kohteeseen(k, viimeisin ?? kaukoKulma(k.lat, k.lon, 1e6), pallo.camera().fov, kello(), reduced);
+        tietoAika = -Infinity;
+        paivitaUi();
+      },
+    });
+    tietoAika = -Infinity;
+    paivitaTietorivi(simu.nyt());
+    return { ...y, teksti: ylilennonTeksti(y.ms, alku) };
   }
 
   /** Yksi kehys (linssin kehyssilmukka). true = kyyti ohjaa kameraa. */
   function paivita(t) {
     if (purettu) return false;
     const alkoi = ikkuna.performance?.now?.() ?? 0;
-    const ms = Date.now();
+    const ms = simu.nyt();
+    const reaali = Date.now();
     const tS = Number.isFinite(t) && t > 0 ? t / 1000 : kello();
     const dt = edellinenT === null ? 0 : Math.max(0, Math.min(0.25, tS - edellinenT));
     edellinenT = tS;
@@ -625,6 +917,12 @@ export function luoIssKyytiNakyma({
 
     if (!kyyti.kyydissa) {
       kalvo?.asetaKyyti?.(osuus, true);
+      if (realismi && realismiRakennettu) {
+        const cam = pallo.camera();
+        realismiKutsu('paivita', {
+          osuus, ms, tila: kyyti.tila, iss: hetki(ms), silma: [cam.position.x, cam.position.y, cam.position.z], kamera: cam,
+        });
+      }
       return false;
     }
     const iss = hetki(ms);
@@ -632,6 +930,7 @@ export function luoIssKyytiNakyma({
     if (!r) { kalvo?.asetaKyyti?.(osuus, true); return false; }
     viimeisin = r.asento;
     const a = asetaKamera(r.asento, r.kentta);
+    realismiKutsu('paivita', { osuus, ms, tila: kyyti.tila, iss, silma: a.silma, kamera: pallo.camera() });
 
     /* ISS-malli seurannassa, kun kamera on alle 3 000 km:n päässä. */
     const issP = pallo.getCoords(iss.lat, iss.lon, iss.korkeusM / MAAN_SADE_M);
@@ -659,10 +958,10 @@ export function luoIssKyytiNakyma({
     }
     kalvo?.asetaKyyti?.(Math.max(osuus, 0.001), kyyti.tila === TILA.seuranta && !mallinakyy);
 
-    /* Tietorivi kerran sekunnissa ja tilan vaihtuessa. */
+    /* Tietorivi kerran sekunnissa (nopeutettuna 4 kertaa) ja tilan vaihtuessa. */
     if (kyyti.tila !== uiTila) paivitaUi();
-    if (ms - tietoAika >= 1000) {
-      tietoAika = ms;
+    if (reaali - tietoAika >= (simu.live ? 1000 : 250)) {
+      tietoAika = reaali;
       paivitaTietorivi(ms);
     }
     if (r.paluuValmis) {
@@ -682,11 +981,21 @@ export function luoIssKyytiNakyma({
     napauta,
     poistu,
     paivita,
+    asetaNopeus,
+    lennaKohteeseen,
+    /** KOE: NASA-kuva kohteen yllä päälle/pois (savuke, ?koe=nasakuva). */
+    nasaKoe(paalla) {
+      koePaalla = Boolean(paalla);
+      paivitaKoe();
+      return koePaalla;
+    },
+    kohteet: () => kohteet.slice(),
     kyydissa: () => kyyti.kyydissa,
     /** Tähtien peitto: 1 kaukonäkymässä, 0,3 kyydissä (liukuen). */
     tahdet: () => 1 + (TAHDET_KYYDISSA - 1) * osuus,
     tila: () => {
       const cam = pallo.camera?.();
+      const ms = simu.nyt();
       return {
         tila: kyyti.tila,
         kyydissa: kyyti.kyydissa,
@@ -701,12 +1010,17 @@ export function luoIssKyytiNakyma({
         kehysOk: ui?.kehysOk?.() ?? null,
         kerrokset: ui?.kerrokset?.() ?? [],
         tieto: ui && !ui.juuri.hidden ? ui.tieto.textContent : null,
-        live: ui ? !ui.live.hidden : null,
-        radanLaatu: issNyt.laatu(Date.now()),
+        live: simu.live && ui ? !ui.live.hidden && ui.live.textContent === 'LIVE' : false,
+        aika: { simMs: Math.round(ms), eroMs: Math.round(ms - Date.now()), live: simu.live, kelaa: simu.kelaa, nopeus: +simu.nopeus().toFixed(1) },
+        ylilento: ylilento ? { tunnus: ylilento.tunnus, ms: ylilento.ms, sivuttainKm: +ylilento.sivuttainKm.toFixed(1), perilla: ylilento.perilla } : null,
+        kohde: kyyti.kohde,
+        nasaKoe: koe ? { tunnus: koe.tunnus, valmis: koe.valmis, peitto: koe.kahva?.nakyvyys?.() ?? null } : null,
+        radanLaatu: issNyt.laatu(ms),
         tle: issNyt.tle ? { epookkiJd: issNyt.tle.epookkiJd, haettu: issNyt.tle.haettu } : null,
         kehyksia: mittari.kehyksia,
         kuvaMsKa: mittari.kehyksia ? +(mittari.kuvaMs / mittari.kehyksia).toFixed(3) : 0,
         kuvaMsMax: +mittari.kuvaMsMax.toFixed(3),
+        realismi: realismiRakennettu,
       };
     },
     pura() {
@@ -716,10 +1030,15 @@ export function luoIssKyytiNakyma({
         lopetaKuvaus();
       }
       purettu = true;
+      // Linssi suljetaan: aika heti todelliseksi.
+      simu.palaaLive({ vahennetty: true });
       asetaHehku(false);
       sumu?.kyyti?.(0);
       kaari?.pura?.();
       malli?.pura?.();
+      koe?.kahva?.pura?.();
+      koe = null;
+      realismiKutsu('pura');
       ui?.juuri?.remove?.();
       doc.body.classList.remove(KYYTI_LUOKKA);
     },
