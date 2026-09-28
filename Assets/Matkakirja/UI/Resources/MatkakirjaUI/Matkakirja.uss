@@ -3440,7 +3440,14 @@
     border-width: 0;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0);
+    /* Web color: inherit (#46331f). Ilman tätä .mk-nappi antoi vaalean --ink-light-tekstin: rivit näkyivät kerma kermalla. */
+    color: #46331f;
     overflow: hidden;
+}
+
+/* Web :hover/:focus-visible; kosketuksessa painallus (.mk-nappi:active olisi tummanruskea). */
+.mk-lukija-valikko__kappale:active {
+    background-color: rgba(234, 184, 78, 0.18);
 }
 
 .mk-lukija-valikko__kappale--nykyinen {
@@ -3503,6 +3510,11 @@
     color: #46331f;
     font-size: 13.1px;
     letter-spacing: 0;
+}
+
+/* Web: napin oma tausta voittaa yleisen button:active-tumman (#43331f), painettuna tausta pysyy vaaleana. */
+.mk-lukija-valikko__kelausnappi:active {
+    background-color: rgba(255, 252, 244, 0.6);
 }
 
 .mk-lukija-valikko__ryhma > .mk-lukija-valikko__kelausnappi:last-child {
