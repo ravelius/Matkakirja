@@ -8827,3 +8827,7 @@ Omistaja 28.9. klo 20.38 kaappauksella (TF, Peloponnesos valittuna, rajat tuskin
 ## OMISTAJA: TESTFLIGHTIN AVAUSSIVUT POIS (MITÄ TESTATA + LÄHETÄ PALAUTETTA) (28.9.2026 klo 20.38)
 
 Omistaja 28.9. klo 20.38 TF 1.0.38:n Kehittäjältä-sivun kaappauksella sanatarkasti: "Saakotete ja tästä seuraavaa lähetä palautetta sivua pois pelin käynnistyksestä?" Sivut ovat TestFlightin omia (näkyvät vain uuden buildin ensimmäisellä avauksella). → Julkaisija 1.0.39:stä: Testattavaa tyhjäksi (kumoaa 28.9. yhden rivin säännön; muutoslokirivi ja pelin Peli päivittyi -lappu ennallaan) ja sisäisen ryhmän TF-palaute pois (ASC betaGroups feedbackEnabled=false). Omistaja todentaa 1.0.39:n avauksessa; palaute kulkee jatkossa kaappauksina chattiin.
+
+## OMISTAJA: MAAKUNTATILA — TOINEN NAPAUTUS POISTUU TILASTA (28.9.2026 klo 20.39)
+
+Omistaja 28.9. klo 20.39 sanatarkasti: "Silloin poistutaan koko maakuntatilasta. Nyt ei nimittäin ole mitään nappia poistua siitä tilasta." → tarkentaa 20.38-kirjausta: saman maakunnan uusi napautus tyhjentää valinnan ja poistuu koko maakuntatilasta tavalliseen karttanäkymään. Natiivi-UI tarkistaa myös valikkonapin kytkimen tilan aikana (omistajan mukaan poistumisnappia ei ole).
