@@ -2,29 +2,29 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 07:0x EEST — **TILINVAIHTO TEHTY (07.0x), kaikki roolit uusilla session id:llä, kontekstit matalia. Poltto lähellä loppua (487/505 shardia, "2 koodi" ei vielä tullut). GPU-prosessit 18 kpl ilmoitettu Julkaisijalle.**
+**Päivitetty:** 2026-09-28 07:18 EEST — **POLTTO VALMIS 07:17 ("2 koodi 1", eheys OK) — ilmoitettu Karttasepälle+Fablelle. Julkaisulippu päällä 07:18 (Julkaisija/Karttaseppä), juna-tauon lippu poistettu.**
 
 ## 1) Sessiot
 
-**TILINVAIHTO 28.9. klo 07.0x tehty** — kaikki roolit uusilla session id:llä, viikkokiintiö nollautunut (0%). Kaikki kontekstit alle 20 %.
+Tilinvaihto 28.9. klo 07.0x tehty, kaikki roolit uusilla session id:llä. Kontekstit nousseet vartissa (moni rooli aktiivisessa koodauksessa polton jälkeen) mutta kaikki yhä alle 70 % kynnyksen.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 19% | running |
-| Postivahti (self) | (tämä sessio) | 10% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 9% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 17% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 18% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 13% | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 11% | running |
-| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 12% | running |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 17% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 9% | running |
-| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 8% | running |
+| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 23% | running |
+| Postivahti (self) | (tämä sessio) | 15% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 11% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 34% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 29% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 29% | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 33% | running |
+| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 17% | running |
+| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 26% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 27% | running |
+| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 10% | running |
 
-## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 07:0x) — LÄHELLÄ LOPPUA
+## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
 
-Polku täsmennetty: `/Users/Shared/Claude/pyramidi-poltto/ajo-20260927y/` (ei enää wt/karttaseppa-poltto-20260927/, se on vain työkalujen checkout). Vahti PID 82063 elossa (6 h 15 min). aja.out ei vielä "2 koodi" -riviä (viimeisin 00:51 "2 syvä z9–z10 alkaa"). vahti.out vakaa, ytimet vaihtelee 4–12 muistipaineen mukaan. 2.log: **487/505 shardia valmis (~96%)**, lähellä loppua. Seuraajan TARKISTETTAVA TIIVIISTI "2 koodi" -rivin ilmestyminen aja.out:ista ja ilmoitettava Karttasepälle (local_16f80454-5b30-4180-ae9b-8c6d1edb6779) + Fablelle heti kun se tulee.
+Polku: `/Users/Shared/Claude/pyramidi-poltto/ajo-20260927y/`. aja.out 07:17 "2 koodi 1", vahti.out 07:17 "poltto päättyi koodi 1" — vahtiprosessi (PID 82063) päättynyt normaalisti. **2.log-eheysrivi: "eheystarkistus: laattojen määrä täsmää luetteloon"** — pohja z10 298335/298335, pohja z9 78211/78211, shardit 507/507, laattoja 376546/376546 (100%). Rivi "VIRHE: luettelon väritasot puuttuvat (ämpäri 27 maata) — ei vientiä" on **odotettu vientivartion ilmoitus** (sama kuvio kuin vaihe 1:n koodi 1, ei virhe). Kesto 6.4 h. Ilmoitettu Karttasepälle (local_16f80454-5b30-4180-ae9b-8c6d1edb6779) + Fablelle 07:18.
 
 Koodi 1 klo 00:39 oli **odotettu** — vain luettelon vientivartion ilmoitus, ei virhe. Laatat/eheys kunnossa (119 495/119 495). Vaihe 1 merkitty valmiiksi. **Uusi vahti PID 82063 (v5e)** käynnistää vaiheen 2 (syvä, T7) ~00:52. Karttaseppä odottaa vaiheen 2 päättyvän todennäköisesti riviin "2 koodi 1" samasta vartiosta — **se on OK jos `2.log`:n lopussa on "eheystarkistus: laattojen määrä täsmää luetteloon".** **Seurataan PID 82063:a ja aja.out:ia — herätä Karttaseppä (local_4bd7c316-55bc-423a-9da1-821fdd123cab) JOKA TAPAUKSESSA kun "2 koodi" ilmestyy tai vahti kuolee**, riippumatta koodin arvosta (tarkista 2.log-eheysrivi ennen viestiä).
 
@@ -48,7 +48,9 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
 
-**Juna:** yhä TAUOLLA — lippu `/tmp/matkakirja-juna-tauko` olemassa (luotu 27.9. 22:50). Viimeisin juna.log-rivi 22:43 (27.9., BUILD juna/b13 → 235e034e). Odottaa polton loppua ja lipun poistoa (Julkaisija/Karttaseppä) ennen jatkoa — Postivahti varmistaa ettei lippu jää roikkumaan poltton jälkeen.
+**Juna:** tauon lippu `/tmp/matkakirja-juna-tauko` **POISTETTU** (ei enää olemassa 07:18) — poltto valmis, juna voi jatkua. Viimeisin juna.log-rivi yhä 22:43 (27.9.) — ei uutta käännöstä vielä tällä kierroksella.
+
+**Julkaisulippu:** `/tmp/matkakirja-julkaisu` luotu 07:18 (Julkaisija/Karttaseppä) — julkaisu käynnissä polton jälkeen, sallittu.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
@@ -74,17 +76,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (07:0x)
+## 5) Resurssit (07:18)
 
-- **5 h -kiintiö:** 2 %. **Viikko (kaikki mallit): 0 % (nollautunut tilinvaihdossa).** **Viikko (Fable):** 0 %.
-- **Levy:** 93 Gi vapaana (raja 80 Gt, puskuri kaventunut ~2 Gi 06:42:sta — seurataan). wt/-worktreet 28 kpl.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
-- **Liput:** `/tmp/matkakirja-julkaisu` EI löydy. `/tmp/matkakirja-juna-tauko` PÄÄLLÄ — tarkoituksellinen, EI hälytystä.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen (kaikki alle 20% tilinvaihdon jälkeen).
-- **GPU-prosessit (type=gpu-process):** 18 kpl, ylittää rajan (>4) — ilmoitettu Julkaisijalle 07:0x.
-- **Effort-tarkistus (7 Opus-roolia):** kaikki OK — Natiiviseppä (max)/Linssiseppä (max)/Siirtoseppä (xhigh) nimessä oikea sulkulisäys, Julkaisija/Natiivi-UI/Pelikoodari/Karttaseppä high ilman lisäystä.
-- **Juna:** tauolla (lippu päällä), poltto käynnissä (vaihe 2, ~96%, 487/505 shardia, ei "2 koodi" vielä).
-- **Karttasepän vahti-PID 82063 elossa (6 h 15 min), aja.out ei muuttunut (ei "2 koodi"), vahti.out vakaa (ytimet 4–12 muistipaineen mukaan).**
+- **5 h -kiintiö:** 10 %. **Viikko (kaikki mallit): 3 %.** **Viikko (Fable):** 0 %.
+- **Levy:** 92 Gi vapaana (raja 80 Gt, puskuri ~12 Gi, vakaa 06:42:sta lähtien). wt/-worktreet 33 kpl.
+- **Muistipaine:** normal (1) (välillä 2 polton lopussa 07:04, normalisoitunut). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
+- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (luotu 07:18, Julkaisija/Karttaseppä — sallittu polton jälkeen). `/tmp/matkakirja-juna-tauko` POISTETTU 07:1x.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen (korkein Natiiviseppä 34%).
+- **GPU-prosessit (type=gpu-process):** 11 kpl, yhä yli rajan (>4) mutta laskenut 18:sta — ei uutta ilmoitusta.
+- **Effort-tarkistus (7 Opus-roolia):** ei muutosta, kaikki OK.
+- **Juna:** tauko poistettu 07:1x, poltto valmis — juna voi jatkaa, ei vielä uutta käännöstä tällä kierroksella.
+- **Karttasepän poltto VALMIS 07:17 (koodi 1, eheys OK) — ks. osio 1a-3.**
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
