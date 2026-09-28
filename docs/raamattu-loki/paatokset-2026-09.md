@@ -8607,3 +8607,7 @@ Pelikoodari 28.9. klo 12.4x: puhekeskustelu PR #3546 junassa (saneltuun kysymyks
 ## TILA: GPU-VAISTO MAINISSA (#3545) + TASKPOLICY -B EI KAANNOKSILLE EIKA AANELLE (28.9.2026 klo 12.32)
 
 Julkaisija 28.9. klo 12.5x: tools/gpu-vapaa.sh (exit 1 kun /tmp/matkakirja-kevyt; GPU_VAPAA_PAKOTA=1/0), aja-sarja.mjs ajaa kevyessa tilassa Chromiumin SwiftShaderilla ja ohittaa WebKit- ja suorituskykyrivit 'GPU varattu (kevyt tila)'. Opit: taskpolicy -b kaatoi kaksi kaannosta jumivahtiin (Julkaisija) ja rikkoi selaimen mikrofoniaanen (Pelikoodari) → kaannokset ja aanta kayttavat ajot vain nice 15, taskpolicy -b vain muille raskaille CPU-toille.
+
+## OMISTAJA: KONE VAPAA NYT (KEVYT TILA POIS ENNEN KLO 17) (28.9.2026 klo 12.43)
+
+Omistaja 28.9. sanatarkasti: "nyt en tarvitse konetta. sanon taas sitten kun tarvitsen". Kevyen tilan lippu pois heti (Julkaisija), nice-oletus taysilla ytimilla ja GPU vapaa: Karttasepan pallopoltto + laattavienti SIGCONT nyt (nice 15), ohitetut 13 GPU-savukeriviä ajetaan, simulaattorit sallittu (paivalla 1). Seuraava tarve-ikkuna omistajan ilmoituksesta.
