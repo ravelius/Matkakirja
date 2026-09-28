@@ -4,7 +4,9 @@ using System.Collections.Generic;
 namespace Matkakirja
 {
     /// <summary>
-    /// ALOITUSLENNON RATA v2 (omistajan palaute v7:stä 27.9.2026 klo 23.0x, Fablen kautta; Natiiviseppä). Lontoo → aloituskaupunki
+    /// ALOITUSLENNON RATA v3 (omistajan palaute v2-videoon 27.9.2026 klo 23.5x Fablen kautta: "kone pitää näkyä paljon pienempänä
+    /// kun se kuvataan kaukaa. laskeutuessa kamera pitää olla sen verran kauempana että töksö laskeutuminen ei näy kun kone näkyy
+    /// ihan pienenä."; v2 omistajan palautteesta v7:ään 27.9. klo 23.0x; Natiiviseppä). Lontoo → aloituskaupunki
     /// yhtenä 15 s:n otoksena napautetusta pallonäkymästä pelin saapumisnäkymään. Omistajan säännöt:
     ///   1. Kone näkyy KOKO AJAN (pienenä tai isona) eikä sitä näytetä koskaan takaa (edestä, sivulta tai niiden välistä).
     ///   2. Alku: kamera lähtee HYVIN KORKEALTA (napautettu pallonäkymä) ja näyttää koneen lähdön kaukaa (pienenä mutta
@@ -19,7 +21,8 @@ namespace Matkakirja
     /// katse pohjoiseen, koko reitti ja Lontoo kuvassa) · 4–6,5 KIRI (kamera kiihtyy koneeseen, 4 500 → 30 km, kääntyy koneen
     /// oikealle kyljelle) · 6,5–8,1 OHITUS (kone lipuu vasemmalta oikealle, lähimmillään 23 km, reitin puolivälissä) ·
     /// 8,1–10,9 YLILENTO (kamera nousee ja kiitää kohteen taakse, kääntyy katsomaan konetta edestä) · 10,9–13,2 SAAPUMINEN
-    /// (kiertää laskeutumiskohtaa, kone etuviistosta, kosketus 13,2 s) · 13,2–15 PALJASTUS (nousu saapumisnäkymään).
+    /// (kone etuviistosta ~200 km:stä, kamera kiertää laskeutumiskohtaa ja nousee: kosketus 13,2 s nähdään ~400 km:stä, jolloin
+    /// kone on ruudulla pieni) · 13,2–15 PALJASTUS (nousu saapumisnäkymään).
     ///
     /// TOTEUTUS: kamera suunnitellaan koneen RUUTUPAIKKANA. Kanavat (log-etäisyys katsepisteeseen, kallistus pystystä, suuntima,
     /// koneen ruutupaikka x/y ja katseen korkeuden paino) ovat avainkehyksiä (smootherstep), joita KUMINAUHA seuraa
@@ -28,8 +31,13 @@ namespace Matkakirja
     /// rakenteellisesti. Alku on täsmälleen napautusnäkymä ja loppu täsmälleen saapumisnäkymä (viimeinen 1,2 s pakottaa).
     /// Kone etenee omalla nopeusprofiilillaan: ohituksessa 5 km/s (lipuu kuvan poikki), saapumisessa laskeva absoluuttinen
     /// nopeus, muualla matkanopeudet, jotka ratkaistaan niin, että ohitus osuu reitin puoliväliin ja pysähdys 13,8 s:iin.
-    /// Kone on symbolinen: siipiväli vähintään 5 km ja kaukana 5 % etäisyydestä kameraan (näkyy aina; web: koneen koko on
-    /// ruudulla vakio). Pallomalli R = 6371 km (sama kuin LennonV3); PalloKierron WGS84 poikkeaa lähikuvassa metrejä.
+    /// KONEEN KOKO (v3): kone on maailmassa vakiokokoinen (siipiväli <see cref="SiipiLahellaM"/> 5 km), joten se kasvaa ruudulla
+    /// vain, kun kamera todella tulee lähelle (alle ~470 km: kiri, ohitus ja saapumisen alku). Kaukaa se on pieni esine valtavan
+    /// kartan päällä: vähimmäiskoko <see cref="KokoVahintaan"/> ruudun leveydestä (v2: siipiväli 5 % etäisyydestä = aina ≥ 11,6 %
+    /// leveydestä, kone näytti aina isolta). Pallomalli R = 6371 km (sama kuin LennonV3); PalloKierron WGS84 poikkeaa lähikuvassa
+    /// metrejä.
+    /// USVA (v3): radan ajan horisonttiusvan raja on vähintään <see cref="UsvaVahintaanM"/> katsepisteestä (Aurinko.UsvaVahintaanM):
+    /// webin raja 0,6 × etäisyys hukutti ohituksen (23 km → raja 14 km koneen takana) ja saapumisen maan sumuun.
     /// Puhdas laskenta ilman UnityEngineä (Kartta-testit/AloituslennonRataTestit mittaa koneen näkyvyyden joka näytteessä).
     /// </summary>
     public sealed class AloituslennonRata
@@ -47,8 +55,11 @@ namespace Matkakirja
         public const double OhitusTheta = -96.0;
         /// <summary>Koneen näkökulma avauksessa (° keulasta): etuviisto.</summary>
         public const double AvausAlfa = 30.0;
-        /// <summary>Symbolinen koko: siipiväli vähintään 5 km, kaukana osuus etäisyydestä kameraan.</summary>
-        public const double SiipiLahellaM = 5000.0, SiipiOsuus = 0.05;
+        /// <summary>Symbolinen koko: siipiväli maailmassa 5 km (ohituksessa ~50 % leveydestä), mutta ruudulla vähintään
+        /// KokoVahintaan leveydestä (kaukaa pieni mutta näkyvissä: iPhone ~10 pt, iPad 13 ~26 pt).</summary>
+        public const double SiipiLahellaM = 5000.0, KokoVahintaan = 0.025;
+        /// <summary>Horisonttiusvan raja vähintään (m katsepisteestä) radan ajan: lähikuvissa maa näkyy usvan läpi.</summary>
+        public const double UsvaVahintaanM = 250_000.0;
         public const double MatkaKorkeusM = 3500.0;
         const double R = LennonV3.R;
         const int Hz = 240;
@@ -106,6 +117,10 @@ namespace Matkakirja
             Kamera(lnD, jD);
         }
 
+        /// <summary>Saapumisen etäisyysavaimet (m): kone etuviistosta, sitten kamera nousee kosketukseen (v2: 150 ja 135 km, jolloin
+        /// kosketus näkyi lähikuvana ja kone oli 14 % leveydestä).</summary>
+        public const double SaapuminenM = 200_000.0, KosketusM = 480_000.0;
+
         /// <summary>Kameran etäisyys katsepisteeseen avaimina (log): avaus Afrikan rannikon yllä, kiri, ohitus, nousu kohteen
         /// yli, saapuminen ja saapumisnäkymä. Riippuu vain reitin pituudesta, joten koneen nopeus voi seurata sitä.</summary>
         Kanava Etaisyys()
@@ -116,7 +131,7 @@ namespace Matkakirja
             double dC = Rajaa(0.4 * ReittiM, 350_000.0, 1_100_000.0);
             return new Kanava().Lisaa(0, Math.Log(Alku.EtaisyysM)).Lisaa(AvausS, Math.Log(dA)).Lisaa(KiriS, Math.Log(30_000))
                 .Lisaa(OhitusS, Math.Log(23_000)).Lisaa(OhitusLoppuS, Math.Log(29_000)).Lisaa(NousuS, Math.Log(dC))
-                .Lisaa(SaapuminenS, Math.Log(150_000)).Lisaa(KosketusS - 0.4, Math.Log(135_000)).Lisaa(KestoS, Math.Log(Loppu.EtaisyysM));
+                .Lisaa(SaapuminenS, Math.Log(SaapuminenM)).Lisaa(KosketusS - 0.4, Math.Log(KosketusM)).Lisaa(KestoS, Math.Log(Loppu.EtaisyysM));
         }
 
         // ====================================================================================================================
@@ -188,9 +203,14 @@ namespace Matkakirja
             return h * (1 - S(Math.Pow(u, 0.85)));
         }
 
-        /// <summary>Symbolinen siipiväli (m) etäisyydellä kameraan.</summary>
-        public static double Siipivali(double etaisyysKameraanM) =>
-            Math.Sqrt(SiipiLahellaM * SiipiLahellaM + Math.Pow(SiipiOsuus * etaisyysKameraanM, 2));
+        /// <summary>Symbolinen siipiväli (m) etäisyydellä kameraan: vakio 5 km, mutta ruudulla vähintään KokoVahintaan leveydestä
+        /// (pehmeä maksimi, 4-normi: rajakohdassa +19 %, neliöjuurella +41 %). Kone kasvaa siis vasta, kun kamera on lähempänä kuin
+        /// SiipiLahellaM / (KokoVahintaan · 2 tan h) (iPhone ~470 km).</summary>
+        public double Siipivali(double etaisyysKameraanM)
+        {
+            double a = SiipiLahellaM, b = KokoVahintaan * 2.0 * tanH * etaisyysKameraanM;
+            return Math.Sqrt(Math.Sqrt(a * a * a * a + b * b * b * b));
+        }
 
         /// <summary>Iso symbolikone nostetaan 30 % koon kasvusta (ei leikkaa maastoa kaukana); häviää saapumisessa.</summary>
         static double Nosto(double t, double siipiM) =>
@@ -253,7 +273,9 @@ namespace Matkakirja
             double bA1 = psi0 - 180.0 + AvausAlfa, bA2 = psi0 - 180.0 - AvausAlfa;
             double bA = Math.Abs(Kulmaero(bKiri, bA1)) <= Math.Abs(Kulmaero(bKiri, bA2)) ? bA1 : bA2;
             double sxA = Kulmaero(bA, psi0 - 180.0) > 0 ? -0.12 : 0.12;   // kone lähtöpisteen vastakkaiselle puolelle
-            var kal = new Kanava().Lisaa(0, Alku.Kallistus).Lisaa(AvausS, AvausKallistus).Lisaa(KiriS, 82).Lisaa(OhitusS, 83).Lisaa(OhitusLoppuS, 82)
+            // Ohitus 75–76° (v2 82–83°: kamera vain 7° koneen yllä, maa usvassa ja puolet ruudusta taivasta); kamera ~14° koneen
+            // yllä näyttää kartan koneen alla ja takana, taivasta enää ylin neljännes.
+            var kal = new Kanava().Lisaa(0, Alku.Kallistus).Lisaa(AvausS, AvausKallistus).Lisaa(KiriS, 75).Lisaa(OhitusS, 76).Lisaa(OhitusLoppuS, 75)
                 .Lisaa(NousuS, 58).Lisaa(SaapuminenS, 66).Lisaa(KosketusS - 0.4, 50).Lisaa(KestoS, Loppu.Kallistus);
             // Laskeutumiskohdan kierto sille puolelle, josta paljastus pohjoinen ylös -näkymään on lyhyempi (kone etuviistosta).
             double bL1 = Psi(KosketusS) - 130, bL2 = Psi(KosketusS) + 130;
@@ -405,6 +427,29 @@ namespace Matkakirja
 
         /// <summary>Mittaus näytteestä lähinnä hetkeä t (testit ja loki).</summary>
         public Mittaus Mitta(double t) => mittaus[Math.Min(N, Math.Max(0, (int)Math.Round(t * Hz)))];
+
+        /// <summary>
+        /// Osuus ruudun pystykeskilinjasta, jolla maa näkyy usvan läpi (sumu alle 50 %) hetkellä t: Aurinko.cs:n lineaarinen
+        /// horisonttiusva (Horisonttiusva.Sumu, voima kallistuksen mukaan), raja vähintään <paramref name="usvaVahintaanM"/>
+        /// katsepisteestä (0 = webin raja 0,6 × etäisyys kuten v2). Taivas ei kuulu. Testit ja taulukko.
+        /// </summary>
+        public double MaaNakyvissa(double t, double usvaVahintaanM = UsvaVahintaanM)
+        {
+            var a = Kamera(t);
+            double d = a.EtaisyysM, k = a.Kallistus, puoli = Fov * 0.5;
+            double kerroin = Math.Max(Horisonttiusva.RajaKerroin, usvaVahintaanM / d);
+            var (alku, loppu) = Horisonttiusva.Sumu(d, k, puoli, R, kerroin);
+            double voima = Horisonttiusva.Vahvuus(k);
+            const int n = 200;
+            int nakyy = 0;
+            for (int i = 0; i < n; i++)
+            {
+                double z = Horisonttiusva.SyvyysRuudulla(d, k, puoli, R, -1.0 + (i + 0.5) * 2.0 / n);
+                if (double.IsInfinity(z)) continue;
+                if (voima * Rajaa((z - alku) / Math.Max(1.0, loppu - alku), 0, 1) < 0.5) nakyy++;
+            }
+            return nakyy / (double)n;
+        }
 
         /// <summary>Pisteen (lat, lon, h) ruutupaikka hetkellä t (testit: lähtöpiste ja kohde kuvassa).</summary>
         public bool Ruudussa(double t, double lat, double lon, double h, out double x, out double y)

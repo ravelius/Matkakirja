@@ -164,22 +164,25 @@ namespace Matkakirja
         /// pallon näkymä ei tasaannu koskaan; v6: 4 s aina katto). Ohituksen laatat ehtivät odotuksen ja avauksen aikana.</summary>
         public const float AloitusrataOdotusKattoS = 1.5f;
 
-        Camera ennakko;
+        readonly Camera[] ennakot = new Camera[2];
         readonly List<CesiumCameraManager> ennakkoHallinnat = new List<CesiumCameraManager>();
 
         /// <summary>
-        /// ENNAKKOKAMERA (v1-video 27.9.: lähikuva oli tyhjä ~3 s, koska Cesium valitsee laatat vain kameroille). Piirtämätön
-        /// kamera (pois päältä, cullingMask 0) radan asentoon kaikkien tilesettien CesiumCameraManager.additionalCamerasiin
-        /// (native getAllCameras ei vaadi enabled-tilaa, ks. LiikeLaatat): odotuksesta ohitukseen asti ohituksen lähikuva, sitten
-        /// saapuminen, kosketuksesta pois. Pääkamera pysyy valinnassa.
+        /// ENNAKKOKAMERAT (v1-video 27.9.: lähikuva oli tyhjä ~3 s, koska Cesium valitsee laatat vain kameroille). Kaksi
+        /// piirtämätöntä kameraa (pois päältä, cullingMask 0) radan asentoihin kaikkien tilesettien
+        /// CesiumCameraManager.additionalCamerasiin (native getAllCameras ei vaadi enabled-tilaa, ks. LiikeLaatat):
+        /// [0] odotuksesta ohitukseen asti ohituksen lähikuva, sitten saapumisen lähin kohta; [1] odotuksesta asti kosketus
+        /// (v3: v2:n saapuminen latautui verkosta vasta ohituksen jälkeen, 1 560 laattaa kylmällä välimuistilla). Kosketuksesta
+        /// pois. Pääkamera pysyy valinnassa.
         /// </summary>
-        void EnnakkoAsentoon(AloituslennonRata.Asento a, Camera paa)
+        void EnnakkoAsentoon(int i, AloituslennonRata.Asento a, Camera paa)
         {
             if (paa == null || georeferenssi == null) return;
+            var ennakko = ennakot[i];
             if (ennakko == null)
             {
-                var go = new GameObject("Aloitusradan ennakkokamera");
-                ennakko = go.AddComponent<Camera>();
+                var go = new GameObject("Aloitusradan ennakkokamera " + i);
+                ennakko = ennakot[i] = go.AddComponent<Camera>();
                 ennakko.enabled = false;
                 ennakko.cullingMask = 0;
                 ennakko.clearFlags = CameraClearFlags.Nothing;
@@ -188,10 +191,10 @@ namespace Matkakirja
                 foreach (var t in FindObjectsByType<Cesium3DTileset>(FindObjectsSortMode.None))
                 {
                     var h = CesiumCameraManager.GetOrCreate(t.gameObject);
-                    if (h == null) continue;
-                    if (!h.additionalCameras.Contains(ennakko)) h.additionalCameras.Add(ennakko);
-                    ennakkoHallinnat.Add(h);
+                    if (h != null) ennakkoHallinnat.Add(h);
                 }
+            foreach (var h in ennakkoHallinnat)
+                if (h != null && !h.additionalCameras.Contains(ennakko)) h.additionalCameras.Add(ennakko);
             // Asento kuten PalloKierto.LaskeAsento (ilman maaston rakoa): kamera kiertää katsepistettä.
             double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(a.Lon, a.Lat, a.Katse));
             double3 ylos = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde);
@@ -214,7 +217,9 @@ namespace Matkakirja
 
         void EnnakkoPois()
         {
-            foreach (var h in ennakkoHallinnat) if (h != null && ennakko != null) h.additionalCameras.Remove(ennakko);
+            foreach (var h in ennakkoHallinnat)
+                if (h != null)
+                    foreach (var e in ennakot) if (e != null) h.additionalCameras.Remove(e);
             ennakkoHallinnat.Clear();
         }
 

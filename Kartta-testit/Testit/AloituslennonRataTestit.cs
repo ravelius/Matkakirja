@@ -1,4 +1,5 @@
-// ALOITUSLENNON RATA v2 (omistajan palaute v7:stä 27.9.2026 klo 23.0x): jokainen näyte mitataan.
+// ALOITUSLENNON RATA v3 (omistajan palaute v2-videoon 27.9.2026 klo 23.5x; v2 v7:stä klo 23.0x): jokainen näyte mitataan.
+// v3: kaukaa kone on pieni (vähimmäiskoko, kasvaa vain lähellä), kosketus nähdään kaukaa pienenä, usva ei hukuta maata.
 // Kone aina ruudulla (pienenä tai isona), ei koskaan takaa, ohitus vasemmalta oikealle läheltä, saapuminen etuviistosta,
 // lähtöpiste kuvassa alussa, kamera liikkuu koko ajan ilman nykäyksiä, alku = napautusnäkymä ja loppu = saapumisnäkymä.
 // ALOITUSRATA_TAULU=1 tulostaa aikajanan 0,5 s välein (kohde ALOITUSRATA_KOHDE, oletus ateena; kaikki = kaikki kohteet).
@@ -55,7 +56,7 @@ namespace Matkakirja.Kartta.Testit
                     Oleta.Tosi(m.Korotus >= 60 || m.Alfa <= 100, $"{k.Id} ei takaa t={t:F2}: α {m.Alfa:F0}° korotus {m.Korotus:F0}°");
                     Oleta.Tosi(m.KameraKorkeusM > 1500, $"{k.Id} kamera maan yllä t={t:F2}: {m.KameraKorkeusM:F0} m");
                 }
-                Oleta.Tosi(pieninKoko >= 0.04, $"{k.Id} kone vähintään 4 % leveydestä: {pieninKoko:P1}");
+                Oleta.Tosi(pieninKoko >= 0.95 * AloituslennonRata.KokoVahintaan, $"{k.Id} kone vähintään 2,4 % leveydestä: {pieninKoko:P1}");
             }
         }
 
@@ -79,6 +80,39 @@ namespace Matkakirja.Kartta.Testit
                 Oleta.Tosi(suurin >= 0.3, $"{k.Id} ohitus läheltä: kone {suurin:P0} leveydestä");
                 Oleta.Tosi(Math.Abs(r.KoneenOsuus(AloituslennonRata.OhitusS) - AloituslennonRata.OhitusOsuus) < 0.02,
                     $"{k.Id} ohitus reitin puolivälissä: {r.KoneenOsuus(AloituslennonRata.OhitusS):F3}");
+            }
+        }
+
+        [Testi]
+        static void KaukaaPieniJaLaskuKaukaa()
+        {
+            foreach (var k in Kohteet)
+            {
+                var r = Rata(k.Lat, k.Lon);
+                for (double t = 0.05; t <= AloituslennonRata.KestoS; t += 1.0 / 60)
+                {
+                    var m = r.Mitta(t);
+                    if (m.EtaisyysM > 600_000)
+                        Oleta.Tosi(m.Koko <= 0.03, $"{k.Id} kaukaa pieni t={t:F2}: {m.Koko:P1} {m.EtaisyysM / 1000:F0} km");
+                }
+                // Kosketus ja pysähdys kaukaa: kone ihan pieni (omistaja: töksö laskeutuminen ei näy).
+                for (double t = AloituslennonRata.KosketusS - 0.3; t <= AloituslennonRata.PysahdysS; t += 0.05)
+                {
+                    var m = r.Mitta(t);
+                    Oleta.Tosi(m.Koko <= 0.035 && m.EtaisyysM >= 300_000,
+                        $"{k.Id} lasku kaukaa t={t:F2}: {m.Koko:P1} {m.EtaisyysM / 1000:F0} km");
+                }
+            }
+        }
+
+        [Testi]
+        static void UsvaEiHukutaMaata()
+        {
+            foreach (var k in Kohteet)
+            {
+                var r = Rata(k.Lat, k.Lon);
+                for (double t = AloituslennonRata.KiriS; t <= AloituslennonRata.KosketusS; t += 0.1)
+                    Oleta.Tosi(r.MaaNakyvissa(t) >= 0.6, $"{k.Id} maa näkyy usvan läpi t={t:F1}: {r.MaaNakyvissa(t):P0}");
             }
         }
 
@@ -148,11 +182,12 @@ namespace Matkakirja.Kartta.Testit
                            && AloituslennonRata.PerusKorkeus(AloituslennonRata.KosketusS) == 0, "nousu ja kosketus");
             }
             if (Environment.GetEnvironmentVariable("ALOITUSRATA_TAULU") != "1") return;
-            Console.WriteLine("kohde | reitti km | kone pienin % | α suurin ° (korotus < 60°) | ohitus suurin % | saapuminen α ° | kamera matalin km");
+            Console.WriteLine("kohde | reitti km | kone pienin % | α suurin ° (korotus < 60°) | ohitus suurin % | saapuminen α ° | kamera matalin km "
+                              + "| kosketus % / km | maa usvan läpi ohitus / saapuminen % (v2-raja)");
             foreach (var k in Kohteet)
             {
                 var r = Rata(k.Lat, k.Lon);
-                double pienin = 9, alfa = 0, ohitus = 0, sa0 = 999, sa1 = 0, matalin = 1e9;
+                double pienin = 9, alfa = 0, ohitus = 0, sa0 = 999, sa1 = 0, matalin = 1e9, maaO = 1, maaS = 1, maaO2 = 1, maaS2 = 1;
                 for (double t = 0.05; t <= AloituslennonRata.KestoS; t += 1.0 / 60)
                 {
                     var m = r.Mitta(t);
@@ -161,8 +196,14 @@ namespace Matkakirja.Kartta.Testit
                     if (t >= AloituslennonRata.KiriS && t <= AloituslennonRata.OhitusLoppuS) ohitus = Math.Max(ohitus, m.Koko);
                     if (t >= AloituslennonRata.SaapuminenS && t <= AloituslennonRata.KosketusS) { sa0 = Math.Min(sa0, m.Alfa); sa1 = Math.Max(sa1, m.Alfa); }
                     matalin = Math.Min(matalin, m.KameraKorkeusM);
+                    if (t >= AloituslennonRata.KiriS && t <= AloituslennonRata.OhitusLoppuS)
+                    { maaO = Math.Min(maaO, r.MaaNakyvissa(t)); maaO2 = Math.Min(maaO2, r.MaaNakyvissa(t, 0)); }
+                    if (t >= AloituslennonRata.SaapuminenS && t <= AloituslennonRata.KosketusS)
+                    { maaS = Math.Min(maaS, r.MaaNakyvissa(t)); maaS2 = Math.Min(maaS2, r.MaaNakyvissa(t, 0)); }
                 }
-                Console.WriteLine($"{k.Id,-8} | {r.ReittiM / 1000,5:F0} | {pienin * 100,5:F1} | {alfa,4:F0} | {ohitus * 100,5:F0} | {sa0:F0}–{sa1:F0} | {matalin / 1000:F1}");
+                var mk = r.Mitta(AloituslennonRata.KosketusS);
+                Console.WriteLine($"{k.Id,-8} | {r.ReittiM / 1000,5:F0} | {pienin * 100,5:F1} | {alfa,4:F0} | {ohitus * 100,5:F0} | {sa0:F0}–{sa1:F0} | {matalin / 1000:F1} "
+                                  + $"| {mk.Koko * 100:F1} / {mk.EtaisyysM / 1000:F0} | {maaO * 100:F0} / {maaS * 100:F0} ({maaO2 * 100:F0} / {maaS2 * 100:F0})");
             }
             string kohde = Environment.GetEnvironmentVariable("ALOITUSRATA_KOHDE") ?? "ateena";
             foreach (var k in Kohteet)
@@ -170,14 +211,14 @@ namespace Matkakirja.Kartta.Testit
                 if (k.Id != kohde && kohde != "kaikki") continue;
                 var r = Rata(k.Lat, k.Lon);
                 Console.WriteLine($"{k.Id}: reitti {r.ReittiM / 1000:F0} km, matkanopeus {r.Nopeus1:F2} / {r.Nopeus2:F2} kameran etäisyyttä/s");
-                Console.WriteLine("   t s | katse km | kall ° | suunta ° | kone x, y | koko % | α ° | korotus ° | kone km | kamera km | kone reitillä km");
+                Console.WriteLine("   t s | katse km | kall ° | suunta ° | kone x, y | koko % | α ° | korotus ° | kone km | kamera km | kone reitillä km | maa %");
                 for (double t = 0; t <= 15.001; t += 0.5)
                 {
                     var c = r.Kamera(t); var m = r.Mitta(t);
                     bool lnakyy = r.Ruudussa(t, LontooLat, LontooLon, 0, out double lx, out double ly);
                     Console.WriteLine($"  {t,4:F1} | {c.EtaisyysM / 1000,8:F1} | {c.Kallistus,5:F1} | {c.Suuntima,6:F0} | {m.X,5:F2}, {m.Y,5:F2} "
                                       + $"| {m.Koko * 100,5:F1} | {m.Alfa,4:F0} | {m.Korotus,5:F0} | {m.EtaisyysM / 1000,7:F1} | {m.KameraKorkeusM / 1000,7:F1} "
-                                      + $"| {r.KoneenOsuus(t) * r.ReittiM / 1000,6:F0} | Lontoo {lx,5:F2}, {ly,5:F2}{(lnakyy ? "" : " (ei)")}{(m.Nakyy ? "" : "  EI NÄY")}");
+                                      + $"| {r.KoneenOsuus(t) * r.ReittiM / 1000,6:F0} | {r.MaaNakyvissa(t) * 100,3:F0} | Lontoo {lx,5:F2}, {ly,5:F2}{(lnakyy ? "" : " (ei)")}{(m.Nakyy ? "" : "  EI NÄY")}");
                 }
             }
         }
