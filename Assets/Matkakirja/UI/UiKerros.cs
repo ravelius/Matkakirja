@@ -283,7 +283,7 @@ namespace Matkakirja.Natiivi
                 var paneeli = juuri?.panel;
                 if (paneeli == null) continue;
                 var p = RuntimePanelUtils.ScreenToPanel(paneeli, ylhaalta);
-                var osuma = paneeli.Pick(p);
+                var osuma = paneeli.PickAll(p, null); // tuore: Pick lukee hiiren välimuistia (kosketusvälimuisti alla)
                 if (osuma != null && osuma != juuri) return true;
             }
             return false;
@@ -373,6 +373,8 @@ namespace Matkakirja.Natiivi
                 for (int i = 0; i < kosketukset.Count; i++)
                     if (kosketukset[i].press.isPressed) { painettuna = true; break; }
             }
+            // iPad (myös simulaattori) voi syöttää napautukset hiirenä: hiiren painike lasketaan samaksi eleeksi.
+            if (!painettuna && Mouse.current != null && Mouse.current.leftButton.isPressed) painettuna = true;
             if (kosketusPainettunaEdellinen && !painettuna) mitatoiKehyksiaJaljella = 3; // tämä + 2 seuraavaa
             kosketusPainettunaEdellinen = painettuna;
             if (mitatoiKehyksiaJaljella <= 0) return;
@@ -406,9 +408,11 @@ namespace Matkakirja.Natiivi
                         return;
                     }
                 }
-                for (int pid = PointerId.touchPointerIdBase; pid < PointerId.touchPointerIdBase + PointerId.touchPointerCount; pid++)
+                for (int pid = PointerId.touchPointerIdBase - 1; pid < PointerId.touchPointerIdBase + PointerId.touchPointerCount; pid++)
                 {
-                    try { tyhjennaValimuistiMetodi.Invoke(paneeli, new object[] { pid, null }); }
+                    // touchPointerIdBase − 1: hiiri (PointerId.mousePointerId, tarkistetaan alla) samalla silmukalla.
+                    int id = pid < PointerId.touchPointerIdBase ? PointerId.mousePointerId : pid;
+                    try { tyhjennaValimuistiMetodi.Invoke(paneeli, new object[] { id, null }); }
                     catch (Exception e)
                     {
                         tyhjennaValimuistiOhitettu = true;
