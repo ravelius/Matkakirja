@@ -17,7 +17,7 @@ namespace Matkakirja.Natiivi
         static double ankkuriT;
         static DateTime ankkuriUtc, kehyksenUtc;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Kytke()
         {
             paaSaie = Thread.CurrentThread.ManagedThreadId;

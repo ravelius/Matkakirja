@@ -227,14 +227,18 @@ namespace Matkakirja.Linssit.Astronautti
         void PaivitaKyyti(double nyt, DateTime utc, LatLon paikka)
         {
             if (!kyyti.Kyydissa) return;
-            // Ylilento perillä (kelaus ajettu loppuun, ei keskeytetty): kamera kääntyy kohteeseen pitkällä objektiivilla.
+            // Ylilento perillä (kelaus ajettu loppuun): kamera kääntyy kohteeseen pitkällä objektiivilla. Jos kelaus keskeytyi
+            // muualta (testikello), ylilento unohtuu, ettei rivi jää laskemaan aikaa ohitukseen, jota ei tule.
             var l = lento;
-            if (l != null && l.Ylilento.HasValue && !l.Perilla && l.Id != 0 && Iss.IssNyt.Simu.ValmisId == l.Id
-                && kyyti.Tila != Iss.KyydinTila.Kauko)
+            if (l != null && l.Ylilento.HasValue && !l.Perilla && l.Id != 0 && kyyti.Tila != Iss.KyydinTila.Kauko)
             {
-                l.Perilla = true;
-                kyyti.Kohteeseen(new LatLon(l.Kohde.Lat, l.Kohde.Lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
-                tietoAika = -1;
+                if (Iss.IssNyt.Simu.ValmisId == l.Id)
+                {
+                    l.Perilla = true;
+                    kyyti.Kohteeseen(new LatLon(l.Kohde.Lat, l.Kohde.Lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
+                    tietoAika = -1;
+                }
+                else if (Iss.IssNyt.Simu.KelausId != l.Id) { lento = null; tietoAika = -1; }
             }
             double perus = double.IsNaN(kentta0) ? y.Nakokulma : kentta0;
             if (!kyyti.Paivita(nyt, Hetki(utc, paikka), perus, out var asento, out double kentta, out bool paluuValmis)) return;

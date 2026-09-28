@@ -365,6 +365,26 @@ namespace Matkakirja.Linssit.Testit
             finally { Palauta(); }
         }
 
+        [Testi] static void KeskeytettyYlilentoUnohtuu()
+        {
+            try
+            {
+                var (l, y, n) = AvaaValekellolla();
+                l.NapautaIss();
+                AjaUtc(l, y, 3);
+                Oleta.Tosi(l.LennaKohteeseen("etna").HasValue, "ylilento");
+                AjaUtc(l, y, 1);
+                Oleta.Tosi(n.Aika.Ylilento != null, "rivi näkyy");
+                // Testikello (astro kyyti kello) keskeyttää kelauksen: ylilento unohtuu eikä kamera käänny.
+                IssNyt.Simu.AsetaSiirto(TimeSpan.FromHours(1));
+                AjaUtc(l, y, Simukello.KelausMaxS + 1);
+                Oleta.Tosi(l.ViimeisinLento == null && n.Aika.Ylilento == null, "rivi pois");
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti, "ei kohteen ylle");
+                Oleta.Sama(valeUtc.AddHours(1), IssNyt.Kello(), "testikellon LIVE");
+            }
+            finally { Palauta(); }
+        }
+
         [Testi] static void NopeutusPilleriinJaPoistuPalaaLiveksi()
         {
             try
