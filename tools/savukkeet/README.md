@@ -66,6 +66,26 @@ Aja paikallisesti koko sarja:
 `SAVUKE_RINNAKKAIN=6 node tools/savukkeet/aja-sarja.mjs julkaisu /tmp/savukkeet`
 (tai pelkkä matriisi: `node tools/savukkeet/rakenna-matriisi.mjs julkaisu`).
 
+### GPU-väistö (omistaja 28.9.2026)
+
+`aja-sarja.mjs` ajaa sarjan alussa kerran `tools/gpu-vapaa.sh`:n. Se
+tarkistaa VAIN lipun `/tmp/matkakirja-kevyt` (omistaja luo sen, kun
+tarvitsee konetta): lippu olemassa → exit 1 ja "kevyt tila (omistaja
+tarvitsee konetta)". Kun GPU on varattu:
+
+- Chromium-rivit ajetaan SwiftShaderilla (`SAVUKE_CHROMIUM_LIPUT` +=
+  `--use-gl=angle --use-angle=swiftshader`, ellei rivi valitse GL-taustaa
+  itse);
+- WebKit-rivit (`-webkit`-tunniste, `SAVUKE_MOOTTORI=webkit` tai savuke
+  oletuksena pelkkä WebKit) ja suorituskykyrivit (`SAVUKE_SUORITUSKYKY=1`)
+  ohitetaan: yhteenvedossa `— (OHITETTU: GPU varattu (kevyt tila))`, ei
+  lasketa punaiseksi;
+- toiminnallisia Chromium-rivejä ei ohiteta eikä porttia löysätä.
+
+`SAVUKE_GPU=varattu|vapaa` ohittaa tarkistuksen; `GPU_VAPAA_PAKOTA=1|0`
+pakottaa itse skriptin tuloksen. Kevyessä tilassa työnkulun `taskpolicy -b`
+pysyy ennallaan. Logiikka: `tools/savukkeet/gpu-vaisto.mjs`.
+
 ## Ohituksessa: vanha kartta pois käytöstä (7.9.2026)
 
 Omistaja 7.9.2026 aamu, sanatarkasti: *"Voisiko vanhan kartan ottaa
@@ -184,6 +204,7 @@ jää vartioimaan murrettua palettia, jos siihen joskus palataan.
 | savuke-vuosisaa | Vuosisääkortti (käyrä, sadepalkit, korostus) |
 | savuke-varilaatat | Kohdemaan värillinen topografia (karttauudistus, erä 1): Ranskan maa on värillistä hypsometriaa, 12 mpk:n aluevedet sinisiä, Belgia ja avomeri seepiaa, väritaso rajattu maahan FRA eikä laattamäärä kaksinkertaistu. Vaatii pilottilaatat (`--laatat <kansio>`; tools/generoi-laattapyramidi.mjs `--vari FRA`). VASTAKOE `--ilman-rajausta` riisuu leikkurin — silloin Belgian ja avomeren väitteiden ON kaaduttava |
 | savuke-varilaatat-pallo | Kohdemaan värillinen topografia PALLOLLA ja uloszoomauksen esto (karttauudistus, erät 1b ja 2): Ranskan maa murretuissa sävyissä, 12 mpk:n aluevedet savunsinisinä, Belgia ja avomeri feidattua seepiaa, kehä `--mark`-punainen, `mittarit().syy` tyhjä (versioportti ei sammuttanut laattakerrosta), laattamäärä ei kasva yli +10 %, uloszoomaus pysähtyy Ranskassa laatikko × 1,15 -rajaan eikä RUS lukkiudu. Mittaa samat pisteet kahdesti — ilman väritasoa (vertailuajo) ja sen kanssa — ja vaatii EROT, koska murrettu paletti on samassa lämpimässä perheessä kuin seepia. Vaatii pilottilaatat (`--laatat <kansio>`; `--vari FRA --variversio pilotti`); pohja tulee tuotannon ämpäristä, jotta versioportti aukeaa. VASTAKOKEET: `--ilman-rajausta` (laatat ajettu ilman poltettua leikkuria → Belgian ja avomeren väitteiden ON kaaduttava) ja `--rikki-versio` (pyramidin versio ei vastaa pallon sarjaa → `syy`-väitteen ON kaaduttava) |
+| savuke-laattaaukot | Epäonnistunut laatta ei jää pysyväksi aukoksi (PR #3516, omistaja 27.9.2026 iPad: *"karttavirhe palaa"*): WebKit iPad 834×1194, PALLO (js/pallolaatat.js), jokaisen laatan ensimmäinen pyyntö katkaistaan ~25 %:n todennäköisyydellä (siemen), keskellä taustajakso (kaikki laattahaut poikki, `document.hidden` + visibilitychange), ~70 s zoomia ja panorointia Euroopassa, 30 s odotus + katkaisijan katko. Tulostaa `AUKKOJA n / näkyviä m, laattavirheita x, uusittu y` (n = nakyvia − nakyviaScenessa) ja `KUVAERO` (poikkeavat 16 px:n lohkot vs. puhdas vertailuajo samassa asennossa, `?kerrokset=porras1`); vaatii JÄLKEEN-versiossa AUKKOJA 0. `--juuri <checkout>` ajaa saman mittauksen ENNEN-versiolle (tunnistus: `laattavirheita` lähteessä). `--lauta kartta` mittaa tasokartan SVG-pyramidin (portti auki omassa palvelimessa kuten savuke-varilaatat) |
 | savuke-tasoitus-pallo | Tasoituskerros PALLOLLA (karttauudistus, erä 1c; omistajan PÄÄTÖS 4): KOHDEMAA ALKUPERÄISENÄ — Ranskan sisältä A ja B ovat pikselilleen identtiset kokonaisella alalla (Berry–Sologne, ei toleranssia), koska laatan alfa on maan sisällä 0 — ja MUUT MAAT TASOITETTUINA: Belgian Ardenneilta pikseli vaalenee kermaan päin JA sen 9 × 9 reliefikontrasti (keskihajonta) pienenee, avomeri vaalenee, eikä 12 mpk:n aluevesi sinerry (leikkurin puskuri on tasoituksessa 0). Lisäksi `mittarit().syy` tyhjä, laattamäärä ja tekstuurimuisti ennallaan, uloszoomauksen esto ja RUS-poikkeus ennallaan. Vaatii pilottilaatat (`--laatat <kansio>`; `--vari FRA --paletti tasoitus --peitto 0.85 --variversio pilotti`, EI `--data`-kansiota); pohja tulee tuotannon ämpäristä, jotta versioportti aukeaa. VASTAKOKEET: `--ilman-rajausta` (leikkuri pois → kerma peittää myös Ranskan → V2:n ON kaaduttava) ja `--rikki-versio` (→ V1:n ON kaaduttava) |
 | savuke-kaistat-levea | EI KAISTOJA LAAJALLA RUUDULLA (rootin live-QA 13.9.2026, v1856, 2560 × 1352): tasoituslaataston kaksi terävää reunaa eivät ole nähtävissä. Saapuu Pariisiin, odottaa levon ja mittaa neljän rajan yli (laattaruudukon läntinen ja itäinen reuna lon −21,40 / 29,80, laataston laatikon reunat lon −10,25 / 14,67) luminanssieron kahdesta avomeripisteestä — rajat LUETAAN pyramidin luettelosta ja laataston bittikartasta, ei kirjoiteta savukkeeseen. Lisäksi V0 (variMaa FRA, varillisia > 0, `syy` tyhjä) ja V5 (Keski-Ranskan reliefikontrasti on yhä naapurin tasoitettua suurempi eli maalaus ei levinnyt kohdemaahan). Ajetaan sekä 2560 × 1352 että 1920 × 1080 (`--ruutu`). VASTAKOE `--ilman-korjausta` tarjoilee js/pallolaatat.js:n ilman asiakkaan kerma-maalausta (peli kuten v1856) — silloin V1…V4 ON KAADUTTAVA (mitattu 45,3 · 41,6 · 37,3 · 10,2 luminanssiyksikköä) |
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |

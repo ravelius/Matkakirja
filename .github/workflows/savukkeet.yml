@@ -90,6 +90,13 @@ concurrency:
   group: savukkeet-${{ github.ref }}
   cancel-in-progress: true
 
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527): Mac-ajurin
+# raskaat työt ajetaan nice -n 15:llä, jotta omistajan omat työt (käyttäjä
+# Sami Reivinen) menevät edelle; nice toimii käyttäjien yli. Ubuntulla harmiton.
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
 jobs:
   # PÄÄREITTI: koko sarja yhtenä jobina Mac Studion runnerilla.
   savukkeet-mac:
@@ -102,7 +109,7 @@ jobs:
     # (SamiMacStudio2-testit) ei saa poimia savukkeita, jotta kaksi
     # Chromium-sarjaa ei aja samalla koneella yhtä aikaa.
     runs-on: [self-hosted, macOS, ARM64, savukkeet]
-    timeout-minutes: 20
+    timeout-minutes: 40
     env:
       # Koneen omat polut (ei asennuksia työnkulussa).
       CHROMIUM: /Users/koodaus/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
@@ -122,7 +129,9 @@ jobs:
       # lyhenevät). Paikallinen aja-sarja.mjs:n oletus on 4 (agenttien ja
       # käsiajojen rinnalla). Raportti docs/raportit/
       # viesti-fable-testit-github-20260919.md.
-      SAVUKE_RINNAKKAIN: '6'
+      # 2 rinnakkain (omistaja 28.9.2026, NICE-OLETUS): GPU ja muisti
+      # rajaavat — Mac-savukkeita enintään 2 yhtä aikaa; katto 20 → 40 min.
+      SAVUKE_RINNAKKAIN: '2'
       TULOKSET: /tmp/matkakirja-savukkeet/${{ github.run_id }}
     steps:
       # CHECKOUT ILMAN docs/-KANSIOTA (Fable/omistaja 18.9.2026, Raamattu
@@ -184,10 +193,17 @@ jobs:
           # on käynnissä, savukkeita enintään 3 rinnakkain (muuten 6).
           kaynnissa=$(xcrun simctl list devices booted 2>/dev/null | grep -c "(Booted)" || true)
           if [ "${kaynnissa:-0}" -gt 0 ]; then
-            export SAVUKE_RINNAKKAIN=3
-            echo "Simulaattoreita käynnissä $kaynnissa → SAVUKE_RINNAKKAIN=3"
+            echo "Simulaattoreita käynnissä $kaynnissa (SAVUKE_RINNAKKAIN=$SAVUKE_RINNAKKAIN)"
           fi
-          node tools/savukkeet/aja-sarja.mjs "${SARJA:-julkaisu}" "$TULOKSET"
+          # KEVYT TILA (omistaja 28.9.2026): kun omistaja käyttää Macia, Julkaisija
+          # luo lipun /tmp/matkakirja-kevyt → savukkeita enintään 2 rinnakkain
+          # taustaprioriteetilla (taskpolicy -b), jotta Clauden kuorma pysyy ≤ 8 ytimessä.
+          ETU=""
+          if [ -f /tmp/matkakirja-kevyt ]; then
+            ETU="taskpolicy -b"
+            echo "Kevyt tila (/tmp/matkakirja-kevyt) → taskpolicy -b"
+          fi
+          $ETU node tools/savukkeet/aja-sarja.mjs "${SARJA:-julkaisu}" "$TULOKSET"
       - name: Yhteenveto
         if: always()
         run: |

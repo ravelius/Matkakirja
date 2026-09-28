@@ -10748,6 +10748,76 @@ export const MAA_KATEGORIAT = {
           + 'kypsyttävät lihan muutamassa päivässä.',
       },
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `afsluitdijkin-viimeinen-aukko-1932`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-afsluitdijkin-viimeinen-aukko-1932',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Vlieter 1932',
+      johdanto: 'Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 '
+        + 'kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.',
+      tehtava: {
+        kysymys: 'Miksi Afsluitdijk rakennettiin?',
+        vaihtoehdot: [
+          'Suojaamaan tulvilta ja luomaan uutta maata',
+          'Sotilaallisena linnoituksena',
+          'Rautatietä varten',
+          'Kalastussatamaksi',
+        ],
+        oikea: 0,
+        fakta: 'Afsluitdijk sulki Zuiderzeen mereltä 1932, muutti sen '
+          + 'makeavetiseksi IJsselmeeriksi ja suojasi aluetta tulvilta.',
+      },
+      nostot: [
+        {
+          otsikko: 'De Vlieter 1932 — meri lakkaa kahtia jakamasta',
+          aika: '28.5.1932',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-afsluitdijkin-viimeinen-aukko-1932-lahi-photo-v4.jpg',
+          teksti: 'Nosturinkuljettaja pitää kättä vivulla ja katsoo alas '
+            + 'viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa '
+            + 'toisistaan — muutama metri kiveä ja savea, ei enää mitään. '
+            + 'Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön '
+            + 'kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de '
+            + 'Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu '
+            + 'vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien '
+            + 'lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja '
+            + 'rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa '
+            + 'veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, '
+            + 'sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet '
+            + 'keskeneräistä patoa, ja insinöörit halusivat viimeistellä sulun '
+            + 'ennen seuraavaa myrskykautta. Hetki päättää insinööri Cornelis '
+            + 'Lelyn vuosikymmeniä vanhan suunnitelman: Pohjanmeren suolainen '
+            + 'Zuiderzee lakkaa olemasta ja muuttuu vähitellen makeavetiseksi '
+            + 'IJsselmeeriksi, ja Alankomaat saa 32 kilometrin patotien, joka '
+            + 'suojaa satojatuhansia ihmisiä tulvilta ja avaa uutta maata '
+            + 'pengerryksille.',
+          lyhyt: 'Nosturinkuljettaja valmistelee Afsluitdijkin viimeistä aukkoa.',
+          selite: 'Nosturinkuljettaja valmistelee Afsluitdijkin viimeistä aukkoa.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Nationaal '
+            + 'Archief, Afsluitdijkin sulkeminen; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'De Vlieter 1932 — meri lakkaa kahtia jakamasta',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-afsluitdijkin-viimeinen-aukko-1932-kauko-photo-v4.jpg',
+              lyhyt: 'Zuiderzeen sulkevan padon viimeinen aukko täytetään 1932.',
+              selite: 'Zuiderzeen sulkevan padon viimeinen aukko täytetään 1932.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Nationaal '
+                + 'Archief, Afsluitdijkin sulkeminen; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -12666,6 +12736,81 @@ export const MAA_KATEGORIAT = {
                 + 'pieni muistiinpanoliuska tuntuu niin epätodennäköiseltä.',
               lahde: 'Matkakirjan havainnekuva. Faktat: Einstein Haus Bern — '
                 + 'Einstein and Bern, tarkistettu 5.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `gotthardin-lapimurto-1880`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-gotthardin-lapimurto-1880',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Läpimurto 1880',
+      johdanto: 'Gotthardin rautatietunnelin pohjois- ja eteläpuolen louhijat '
+        + 'kohtasivat syvällä kalliossa 29. helmikuuta 1880 — insinööri Louis '
+        + 'Favre ei elänyt näkemään sitä.',
+      tehtava: {
+        kysymys: 'Mitä Gotthardin tunnelin läpimurrossa 1880 tapahtui insinööri '
+          + 'Louis Favrelle?',
+        vaihtoehdot: [
+          'Hän oli kuollut jo vuotta aiemmin',
+          'Hän johti juhlaa paikan päällä',
+          'Hän erosi tehtävästään',
+          'Hän muutti Italiaan',
+        ],
+        oikea: 0,
+        fakta: 'Louis Favre kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879; '
+          + 'hänen valokuvansa kulki läpimurtoaukosta helmikuussa 1880.',
+      },
+      nostot: [
+        {
+          otsikko: 'Gotthard 1880 — valokuva kulkee kalliossa',
+          aika: '29.2.1880',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gotthardin-lapimurto-1880-lahi-photo-v4.jpg',
+          teksti: 'Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen '
+            + 'läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis '
+            + 'Favrea, insinööriä, joka johti Gotthardin rautatietunnelin '
+            + 'louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen '
+            + 'tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä '
+            + 'hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä '
+            + 'ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä '
+            + 'Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja '
+            + 'saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen '
+            + 'ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu '
+            + 'reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle. '
+            + 'Kahdeksan vuoden louhinnan aikana yli 200 työmiestä on kuollut '
+            + 'onnettomuuksissa ja työtaudeissa, mutta 15 kilometrin tunneli, '
+            + 'Euroopan tuolloin pisin, yhdistää pian Sveitsin pohjoisen ja '
+            + 'eteläisen puolen ilman vuoristosolaa. Sanomalehdet ympäri '
+            + 'Eurooppaa julkaisevat uutisen jo seuraavana aamuna lennättimellä, '
+            + 'ja rautatieyhtiöt alkavat heti suunnitella aikatauluja, joissa '
+            + 'Milano ja Zürich ovat toisistaan vain tuntien, ei enää päivien, '
+            + 'matkan päässä.',
+          lyhyt: 'Gotthardin työläiset kohtaavat tunnelin läpimurtoaukolla.',
+          selite: 'Gotthardin työläiset kohtaavat tunnelin läpimurtoaukolla.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Sveitsin '
+            + 'kansallismuseo, Gotthardin tunnelin läpimurto; tarkistettu '
+            + '28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Gotthard 1880 — valokuva kulkee kalliossa',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gotthardin-lapimurto-1880-kauko-photo-v4.jpg',
+              lyhyt: 'Gotthardin tunnelin kaksi työryhmää yhdistyvät 1880.',
+              selite: 'Gotthardin tunnelin kaksi työryhmää yhdistyvät 1880.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Sveitsin '
+                + 'kansallismuseo, Gotthardin tunnelin läpimurto; tarkistettu '
+                + '28.9.2026.',
             },
           ],
         },
@@ -63119,6 +63264,451 @@ export const MAA_KATEGORIAT = {
         oikea: 1,
         fakta: 'Vuonna 1986 luonnossa eli enää yksi ainoa naaraspöllö, jonka geeniperimä pelastettiin risteyttämällä uudenseelantilaisiin koiraisiin.',
       },
+    },
+  ],
+  // Historian hetken lehtisivut täydentävät näitä uusia Euroopan maalehtiä.
+  SRB: [
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `belgradin-piiritys-1456`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-belgradin-piiritys-1456',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Piiritys 1456',
+      johdanto: 'Belgradin piiritys päättyi heinäkuussa 1456 yllättävään '
+        + 'talonpoikaisten ristiretkeläisten hyökkäykseen, joka haavoitti '
+        + 'sulttaani Mehmed II:n ja pysäytti osmanien etenemisen Euroopassa '
+        + 'vuosikymmeniksi.',
+      tehtava: {
+        kysymys: 'Kuka johti Belgradin puolustusta 1456?',
+        vaihtoehdot: [
+          'János Hunyadi',
+          'Vlad Seivästäjä',
+          'Skanderbeg',
+          'Mehmed II',
+        ],
+        oikea: 0,
+        fakta: 'Unkarilainen sotapäällikkö János Hunyadi ja munkki Giovanni da '
+          + 'Capistrano torjuivat Mehmed II:n piirityksen heinäkuussa 1456.',
+      },
+      nostot: [
+        {
+          otsikko: 'Belgrad 1456 — talonpojat murtavat piirityksen',
+          aika: '21.–22.7.1456',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-belgradin-piiritys-1456-lahi-photo-v4.jpg',
+          teksti: 'Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on '
+            + 'tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä '
+            + 'sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta '
+            + 'kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja '
+            + 'unkarilainen sotapäällikkö János Hunyadi on juuri torjunut '
+            + 'viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne '
+            + 'tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on '
+            + 'koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen '
+            + 'ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, '
+            + 'koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed '
+            + 'II, valloittanut Konstantinopolin vain kolme vuotta aiemmin, '
+            + 'haavoittuu taistelussa ja joutuu perääntymään joukkoineen. '
+            + 'Piiritykseen tuotu raskas tykistö ja suuri osa osmanien '
+            + 'leirivarusteista jäävät kristittyjen haltuun, kun leiri vallataan '
+            + 'yllätyshyökkäyksen jälkeen. Belgrad pysyy kristityn Euroopan '
+            + 'käsissä vielä seuraavat seitsemänkymmentä vuotta, ja voitosta '
+            + 'kerrotaan tulleen katolisen kirkon keskipäivän kellonsoiton '
+            + 'perinteen taustalle useissa maissa.',
+          lyhyt: 'Talonpoika osallistuu Belgradin puolustukseen 1456.',
+          selite: 'Talonpoika osallistuu Belgradin puolustukseen 1456.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Belgradin '
+            + 'linnoitus, historia; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Belgrad 1456 — talonpojat murtavat piirityksen',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-belgradin-piiritys-1456-kauko-photo-v4.jpg',
+              lyhyt: 'Belgradin linnoituksen piiritys päättyy 1456.',
+              selite: 'Belgradin linnoituksen piiritys päättyy 1456.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Belgradin '
+                + 'linnoitus, historia; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  ALB: [
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `vloren-itsenaisyys-1912`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-vloren-itsenaisyys-1912',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Vlorë 1912',
+      johdanto: 'Ismail Qemali julisti Albanian itsenäiseksi Vlorën satamatalossa '
+        + '28. marraskuuta 1912 — lippu, joka nousi samana iltana, ommeltiin '
+        + 'viime hetkellä uudestaan.',
+      tehtava: {
+        kysymys: 'Kuka ompeli Albanian itsenäisyyslipun Vlorëssa 1912?',
+        vaihtoehdot: [
+          'Marigo Posio',
+          'Ismail Qemalin vaimo',
+          'Eqrem Vlora itse',
+          'Tuntematon ompelija Roomasta',
+        ],
+        oikea: 0,
+        fakta: 'Alkuperäinen lainattu lippu vaadittiin takaisin, joten Marigo '
+          + 'Posio ompeli uuden yöllä ennen julistusta 28.11.1912.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vlorë 1912 — lippu, joka ommeltiin yöllä',
+          aika: '28.11.1912',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vloren-itsenaisyys-1912-lahi-photo-v4.jpg',
+          teksti: 'Neula pistää kangasta vielä muutama tunti ennen kuin lippu '
+            + 'nousee salkoon. Marigo Posio istuu yönsä ompelemassa punaista '
+            + 'kangasta ja mustaa kaksipäistä kotkaa, koska lippu, jonka Ismail '
+            + 'Qemali oli ensin lainannut, vaadittiin takaisin viime hetkellä. '
+            + 'Perjantaina 28. marraskuuta 1912 vanha diplomaatti Qemali seisoo '
+            + 'Vlorën satamakaupungin vaatimattomassa talossa, joka toimii '
+            + 'samalla sairaalana, ja lukee ääneen julistuksen: Albania on '
+            + 'itsenäinen, viiden vuosisadan osmanivallan jälkeen. Balkanin sodat '
+            + 'ovat ajaneet Ottomaanien valtakunnan ahtaalle, ja albaanijohtajat '
+            + 'ovat kokoontuneet Vlorëen nopeasti, ennen kuin naapurimaat ehtivät '
+            + 'jakaa alueen keskenään: Serbian, Montenegron ja Kreikan armeijat '
+            + 'ovat jo tunkeutuneet syvälle albaanien asuttamille alueille '
+            + 'pohjoisessa ja idässä. Talosta tulee heti hallituksen ensimmäinen '
+            + 'istuntopaikka, ja Qemalista maan ensimmäinen pääministeri. '
+            + 'Suurvallat tunnustavat itsenäisyyden vasta seuraavana vuonna '
+            + 'Lontoon konferenssissa, mutta lippu, joka nousi tuona iltana '
+            + 'Vlorën ylle, on sama malli, joka liehuu Albaniassa vielä tänäänkin.',
+          lyhyt: 'Vanhempi nainen ompelee Albanian lippua Vlorëssa 1912.',
+          selite: 'Vanhempi nainen ompelee Albanian lippua Vlorëssa 1912.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Albanian '
+            + 'kansallinen historiamuseo, itsenäisyys; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Vlorë 1912 — lippu, joka ommeltiin yöllä',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vloren-itsenaisyys-1912-kauko-photo-v4.jpg',
+              lyhyt: 'Vlorën kadut täyttyvät itsenäisyysjulistuksen päivänä.',
+              selite: 'Vlorën kadut täyttyvät itsenäisyysjulistuksen päivänä.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Albanian '
+                + 'kansallinen historiamuseo, itsenäisyys; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  MKD: [
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `krusevon-tasavalta-1903`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-krusevon-tasavalta-1903',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Kruševo 1903',
+      johdanto: 'Kruševon kaupunki julistautui tasavallaksi Ilindenin kapinan '
+        + 'aikana 2. elokuuta 1903 — se kesti vain kymmenen päivää ennen '
+        + 'ottomaanien vastaiskua.',
+      tehtava: {
+        kysymys: 'Kuinka kauan Kruševon tasavalta kesti 1903?',
+        vaihtoehdot: [
+          'Noin kymmenen päivää',
+          'Yhden vuoden',
+          'Kolme kuukautta',
+          'Vain muutaman tunnin',
+        ],
+        oikea: 0,
+        fakta: 'Nikola Karevin johtama Kruševon tasavalta julistettiin 2.8.1903 '
+          + 'ja kukistettiin ottomaanien vastahyökkäyksellä noin kymmenen päivää '
+          + 'myöhemmin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kruševo 1903 — kymmenen päivän tasavalta',
+          aika: '2.8.1903',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-krusevon-tasavalta-1903-lahi-photo-v4.jpg',
+          teksti: 'Kirkonkellot soivat kaikkialla Kruševossa samaan aikaan, ja '
+            + 'hetken ne peittävät alleen jokaisen muun äänen. On Elian päivä, '
+            + 'Ilinden, 2. elokuuta 1903, ja makedonialaiset kapinalliset ovat '
+            + 'juuri vallanneet pienen vuoristokaupungin ottomaanihallinnolta. '
+            + 'Julistus tasavallasta tehdään Tomalevski-suvun talossa; torilla '
+            + 'sen uutinen leviää väkijoukkoon — sekakomitea, jossa istuvat sekä '
+            + 'slaavilaiset että kutzovlach-aromanialaiset asukkaat, hallitsee '
+            + 'kaupunkia yhdessä. Kapinallisten riveissä taistelee puutteen '
+            + 'vuoksi myös naisia ja nuoria poikia, joille on jaettu kivääreitä '
+            + 'ilman koulutusta. Kellojen soidessa moni asukas ei vielä tiedä, '
+            + 'kuinka lyhyeksi juhla jää: kymmenen päivän kuluttua osmanijoukot '
+            + 'palaavat tykistön kanssa, ja Kruševo poltetaan suurelta osin maan '
+            + 'tasalle kostoksi. Silti lyhyt tasavalta jää elämään symbolina — '
+            + 'ensimmäisenä kertana, kun makedonialaiset kapinalliset hallitsivat '
+            + 'kaupunkia omilla säännöillään edes hetken, vuosikymmeniä ennen '
+            + 'kuin Makedonia sai koskaan oman valtion.',
+          lyhyt: 'Torilla kerrotaan Kruševon tasavallasta 1903; julistus tehtiin '
+            + 'Tomalevski-suvun talossa.',
+          selite: 'Torilla kerrotaan Kruševon tasavallasta 1903; julistus tehtiin '
+            + 'Tomalevski-suvun talossa.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Kruševon '
+            + 'museo, Ilindenin kansannousu; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Kruševo 1903 — kymmenen päivän tasavalta',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-krusevon-tasavalta-1903-kauko-photo-v4.jpg',
+              lyhyt: 'Kruševon vuoristokaupunki lyhyen tasavallan aikana.',
+              selite: 'Kruševon vuoristokaupunki lyhyen tasavallan aikana.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Kruševon '
+                + 'museo, Ilindenin kansannousu; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  MNE: [
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `obodin-kirjapaino-1494`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-obodin-kirjapaino-1494',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Obod 1494',
+      johdanto: 'Obodin kirjapainossa valmistui 4. tammikuuta 1494 Oktoih '
+        + 'prvoglasnik — ensimmäinen eteläslaavien oma painettu kirja, tehty vain '
+        + 'viisi vuotta ennen painokoneen katoamista osmanien tieltä.',
+      tehtava: {
+        kysymys: 'Mikä kirja valmistui Obodin painossa 4.1.1494?',
+        vaihtoehdot: [
+          'Oktoih prvoglasnik',
+          'Raamatun ensimmäinen käännös',
+          'Zetan lakikirja',
+          'Venetsian kauppasopimus',
+        ],
+        oikea: 0,
+        fakta: 'Munkki Makarije painoi kirkkoslaavilaisen laulukirjan ruhtinas '
+          + 'Đurađ Crnojevićin hankkimalla painokoneella — ensimmäisen '
+          + 'eteläslaavien omalla alueella painetun kirjan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Obod 1494 — musteen viimeinen arkki',
+          aika: '4.1.1494',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-obodin-kirjapaino-1494-lahi-photo-v4.jpg',
+          teksti: 'Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa '
+            + 'viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit '
+            + 'vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta '
+            + '1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu '
+            + 'Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, '
+            + 'kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut '
+            + 'painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja '
+            + 'Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet '
+            + 'valettuina käsin metallista. Paperi tuodaan laivoilla samaa '
+            + 'reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole '
+            + 'yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka '
+            + 'eteläslaavilaiset ovat koskaan tuottaneet omalla kielialueellaan — '
+            + 'aikaisemmin kaikki kirjat oli kopioitava käsin munkkien '
+            + 'luostareissa vuosikausia. Zeta, pieni ruhtinaskunta Balkanin '
+            + 'vuorten keskellä, ehtii painaa vain viisi kirjaa ennen kuin '
+            + 'osmanien paine pakottaa Crnojevićin suvun pakenemaan ja painokone '
+            + 'katoaa historiasta jäljettömiin.',
+          lyhyt: 'Munkki käyttää varhaista painokonetta Obodissa 1494.',
+          selite: 'Munkki käyttää varhaista painokonetta Obodissa 1494.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Montenegron '
+            + 'kansallismuseo, Oktoih prvoglasnik; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Obod 1494 — musteen viimeinen arkki',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-obodin-kirjapaino-1494-kauko-photo-v4.jpg',
+              lyhyt: 'Obodin linnan seutu Rijeka Crnojevićan ympäristössä; '
+                + 'kirjapainon tarkka paikka on epävarma.',
+              selite: 'Obodin linnan seutu Rijeka Crnojevićan ympäristössä; '
+                + 'kirjapainon tarkka paikka on epävarma.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: '
+                + 'Montenegron kansallismuseo, Oktoih prvoglasnik; tarkistettu '
+                + '28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  MDA: [
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `bessarabian-liittyminen-1918`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-bessarabian-liittyminen-1918',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Chișinău 1918',
+      johdanto: 'Sfatul Țării äänesti Bessarabian liittymisestä Romaniaan '
+        + 'Chișinăussa 27. maaliskuuta 1918 äänin 86–3 — päätös, jonka ehdot '
+        + 'jäivät osin lunastamatta.',
+      tehtava: {
+        kysymys: 'Millä äänin Sfatul Țării hyväksyi liittymisen Romaniaan 1918?',
+        vaihtoehdot: [
+          '86 puolesta, 3 vastaan',
+          'Yksimielisesti',
+          '45 puolesta ja 45 vastaan',
+          'Vain kolmen äänen enemmistöllä',
+        ],
+        oikea: 0,
+        fakta: 'Sfatul Țării äänesti Chișinăussa 27.3.1918 (9.4. uutta '
+          + 'kalenteria) Bessarabian liittymisestä Romaniaan äänin 86–3, 36 '
+          + 'pidättäytyi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi',
+          aika: '27.3.1918',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-bessarabian-liittyminen-1918-lahi-photo-v4.jpg',
+          teksti: '"Kahdeksankymmentäkuusi puolesta." Ääni, joka lukee '
+            + 'ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, '
+            + 'mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa '
+            + 'kalenteria (9. huhtikuuta uutta), ja Bessarabian '
+            + 'kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä '
+            + 'puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin '
+            + 'Bessarabia oli julistautunut itsenäiseksi Moldovan '
+            + 'kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta '
+            + 'saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka '
+            + 'ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja '
+            + 'Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii '
+            + 'maareformia, paikallista itsehallintoa ja perusoikeuksien '
+            + 'kunnioittamista, ehtoja joita ei koskaan täysin lunastettu. Kolme '
+            + 'edustajaa äänestää vastaan avoimesti kädet pystyssä, peläten '
+            + 'liiton hukuttavan Bessarabian oman kielen ja hallinnon suurempaan '
+            + 'naapuriin. Sali, jossa ääni juuri kaikui, on rakennettu vain '
+            + 'kolmetoista vuotta aiemmin lukioksi; siitä tulee hetkeksi paikka, '
+            + 'jossa uusi raja Euroopan kartalle piirretään ilman yhtään '
+            + 'laukausta.',
+          lyhyt: 'Sfatul Țării -edustajat äänestävät Chișinăussa 1918.',
+          selite: 'Sfatul Țării -edustajat äänestävät Chișinăussa 1918.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Moldovan '
+            + 'kansallinen historiamuseo, suuri unioni; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-bessarabian-liittyminen-1918-kauko-photo-v4.jpg',
+              lyhyt: 'Sfatul Țării -rakennuksen ympärillä odotetaan päätöstä.',
+              selite: 'Sfatul Țării -rakennuksen ympärillä odotetaan päätöstä.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Moldovan '
+                + 'kansallinen historiamuseo, suuri unioni; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  BLR: [
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `berezinan-ylitys-1812`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-berezinan-ylitys-1812',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Berezina 1812',
+      johdanto: 'Napoleonin armeija ylitti Berezina-joen Studziankan '
+        + 'kahluupaikalla 26.–28. marraskuuta 1812 kenraali Éblén insinöörien '
+        + 'rakentamilla silloilla — pako, josta tuli ranskan kielessä sanonta '
+        + 'katastrofille.',
+      tehtava: {
+        kysymys: 'Kuka johti siltojen rakentamista Berezinan ylityksessä 1812?',
+        vaihtoehdot: [
+          'Kenraali Jean-Baptiste Éblé',
+          'Napoleon itse',
+          'Marsalkka Ney',
+          'Kenraali Kutuzov',
+        ],
+        oikea: 0,
+        fakta: 'Éblén insinöörijoukot rakensivat kaksi puusiltaa jäisessä joessa '
+          + 'Studziankalla, mikä pelasti suuren osan Napoleonin perääntyvästä '
+          + 'armeijasta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Berezina 1812 — jäinen vesi polvien yli',
+          aika: '26.–28.11.1812',
+          leveys: 'taysi',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berezinan-ylitys-1812-lahi-photo-v4.jpg',
+          teksti: 'Pontonöörin jalat eivät enää tunne mitään polvien alapuolella, '
+            + 'mutta hän pysyy pystyssä jäisessä virrassa, koska hirsipukki, jota '
+            + 'hän kannattelee, painaa liikaa pudotettavaksi. Kenraali '
+            + 'Jean-Baptiste Éblé on käskenyt insinöörijoukkonsa rakentaa kaksi '
+            + 'puista siltaa Berezina-joen yli Studziankan kahluupaikalla 25.–26. '
+            + 'marraskuuta 1812, jotta Napoleonin Venäjältä perääntyvä armeija '
+            + 'pääsisi yli ennen kuin kolme venäläisarmeijaa sulkee ansan. Miehet '
+            + 'seisovat jääkylmässä vedessä tuntikausia rakentaen paaluja ja '
+            + 'hirsiä, ja moni heistä kuolee kylmyyteen päivien kuluessa työn '
+            + 'jälkeen. Kolmen päivän aikana, 26.–28. marraskuuta, '
+            + 'kymmeniätuhansia sotilaita ja siviilejä tunkeutuu kahdelle '
+            + 'kapealle sillalle, kun venäläistykistö ampuu itäistä rantaa; osa '
+            + 'silloista pettää, ja jäljelle jääneet poltetaan viimeisten '
+            + 'joukkojen ehdittyä yli, jotta venäläiset eivät pääsisi perässä. '
+            + 'Berezinasta tulee ranskan kielessä sanonta katastrofille — mutta '
+            + 'ilman Éblén insinöörejä koko armeija olisi jäänyt loukkuun.',
+          lyhyt: 'Éblén pontonööri rakentaa siltaa jäisessä Berezinassa.',
+          selite: 'Éblén pontonööri rakentaa siltaa jäisessä Berezinassa.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Fondation '
+            + 'Napoléon, Berezinan ylitys; tarkistettu 28.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Berezina 1812 — jäinen vesi polvien yli',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berezinan-ylitys-1812-kauko-photo-v4.jpg',
+              lyhyt: 'Kaksi puusiltaa vie Napoleonin perääntyvää armeijaa joen yli.',
+              selite: 'Kaksi puusiltaa vie Napoleonin perääntyvää armeijaa joen yli.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Fondation '
+                + 'Napoléon, Berezinan ylitys; tarkistettu 28.9.2026.',
+            },
+          ],
+        },
+      ],
     },
   ],
 };

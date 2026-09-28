@@ -102,6 +102,9 @@ const MODULES = [
   'js/packs/hahmotelma-rus.js',
   'js/packs/hahmotelma-bih.js',
   'js/packs/hahmotelma-ukr.js',
+  // Kohdekartat käyttävät historian hetkien tekstejä suoraan,
+  // jotta kaupungin piste ja hetken oma sivu eivät eriydy.
+  'js/packs/historian-hetket.js',
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
@@ -1023,7 +1026,6 @@ const MODULES = [
    * tekijakortin lähderivin ja projektion (fokusmitat) — kaikki ovat
    * jo yllä.
    */
-  'js/packs/historian-hetket.js',
   'js/historian-hetket.js',
   // Osiohakemiston nostokuvat fokusmoduulien jälkeen (tuontisykli, ks. moduuli).
   'js/lehtiosiot-kuvat.js',
