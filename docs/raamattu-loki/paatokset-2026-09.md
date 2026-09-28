@@ -8815,3 +8815,7 @@ Natiiviseppä 28.9. klo 20.23: 1.0.39-savuke a479a462 EI PASS — Pulun pysäyty
 ## PÄÄTÖS: ISOISÄN ÄÄNI — EI VIELÄ GENEROINTIA (28.9.2026 klo 20.29)
 
 Omistaja 28.9. klo 20.29 (kuunteli suosikit F3/G4/H1/Iv4 + nykyinen v3, kortti valinnasta): "Älä hoppuile, ei vielä mitään generointia." Ääntä ei valittu; isoisän luentoja tai uusia näytteitä ei generoida ennen omistajan erillistä lupaa. Pelikoodarille välitetty.
+
+## OMISTAJA: CODEX TARKISTAA PULUN TEKSTIT, SITTEN PULUN LUENNAT V4:LLÄ (28.9.2026 klo 20.36)
+
+Omistaja 28.9. klo 20.36 sanatarkasti: "Pyydä kodeksia tarkistamaan, onko kaikki uudet tekstit pulun osalta jo lähetetty peliin, ja generoi sen jälkeen pulun luennat uudella äänellä." → Codexille posti/fable-codex-pulu-tekstit-tarkistus-20260928.md (f98968ba3), vastaus codex-fable-pulu-tekstit-tarkistus-20260928.md (Postivahti ilmoittaa). Pelikoodari valmistelee inventaarion (vanhalla äänellä olevat ennalta äänitetyt Pulun luennat, fokusvirta 47 kaupunkia + muut), merkit/$ ja tasoitusputken -17,2 LUFS; generointi eleven_v4 (Flicker) vasta Codexin vastauksen jälkeen. Isoisää ei generoida.
