@@ -90,6 +90,12 @@ namespace Matkakirja
         /// <summary>Symbolinen koko: siipiväli maailmassa 5 km (ohituksessa ~50 % leveydestä), mutta ruudulla vähintään
         /// KokoVahintaan leveydestä (kaukaa pieni mutta näkyvissä: iPhone ~10 pt, iPad 13 ~26 pt).</summary>
         public const double SiipiLahellaM = 5000.0, KokoVahintaan = 0.025;
+        /// <summary>Vähimmäiskoko laskussa (v3d, omistaja 28.9.: "kamera pitää olla selvästi kauempana ja kone pienemmäksi kun
+        /// laskeutuminen"): KokoVahintaan → tämä 11,5–12,8 s, ja pysyy perillä.</summary>
+        public const double KokoLaskussa = 0.015;
+
+        /// <summary>Koneen vähimmäiskoko ruudun leveydestä hetkellä t.</summary>
+        public static double KokoVahintaanHetkella(double t) => KokoVahintaan + (KokoLaskussa - KokoVahintaan) * S((t - 11.5) / 1.3);
         /// <summary>Horisonttiusvan raja vähintään (m katsepisteestä) radan ajan: lähikuvissa maa näkyy usvan läpi.</summary>
         public const double UsvaVahintaanM = 250_000.0;
         public const double MatkaKorkeusM = 3500.0;
@@ -154,8 +160,9 @@ namespace Matkakirja
         }
 
         /// <summary>Saapumisen etäisyysavaimet (m): kone etuviistosta, sitten kamera nousee kosketukseen (v2: 150 ja 135 km, jolloin
-        /// kosketus näkyi lähikuvana ja kone oli 14 % leveydestä).</summary>
-        public const double SaapuminenM = 200_000.0, KosketusM = 480_000.0;
+        /// kosketus näkyi lähikuvana ja kone oli 14 % leveydestä; v3c 200 ja 480 km; v3d omistajan palautteesta "kamera selvästi
+        /// kauempana" 350 ja 900 km).</summary>
+        public const double SaapuminenM = 350_000.0, KosketusM = 900_000.0;
 
         /// <summary>Kameran etäisyys katsepisteeseen avaimina (log): avaus Afrikan rannikon yllä, kiri, ohitus, nousu kohteen
         /// yli, saapuminen ja saapumisnäkymä. Riippuu vain reitin pituudesta, joten koneen nopeus voi seurata sitä.</summary>
@@ -242,9 +249,9 @@ namespace Matkakirja
         /// <summary>Symbolinen siipiväli (m) etäisyydellä kameraan: vakio 5 km, mutta ruudulla vähintään KokoVahintaan leveydestä
         /// (pehmeä maksimi, 4-normi: rajakohdassa +19 %, neliöjuurella +41 %). Kone kasvaa siis vasta, kun kamera on lähempänä kuin
         /// SiipiLahellaM / (KokoVahintaan · 2 tan h) (iPhone ~470 km).</summary>
-        public double Siipivali(double etaisyysKameraanM)
+        public double Siipivali(double etaisyysKameraanM, double t = 0.0)
         {
-            double a = SiipiLahellaM, b = KokoVahintaan * 2.0 * tanH * etaisyysKameraanM;
+            double a = SiipiLahellaM, b = KokoVahintaanHetkella(t) * 2.0 * tanH * etaisyysKameraanM;
             return Math.Sqrt(Math.Sqrt(a * a * a * a + b * b * b * b));
         }
 
@@ -312,7 +319,9 @@ namespace Matkakirja
             // Ohitus 75–76° (v2 82–83°: kamera vain 7° koneen yllä, maa usvassa ja puolet ruudusta taivasta); kamera ~14° koneen
             // yllä näyttää kartan koneen alla ja takana, taivasta enää ylin neljännes.
             var kal = new Kanava().Lisaa(0, Alku.Kallistus).Lisaa(AvausS, AvausKallistus).Lisaa(KiriS, 75).Lisaa(OhitusS, 76).Lisaa(OhitusLoppuS, 75)
-                .Lisaa(NousuS, 58).Lisaa(SaapuminenS, 66).Lisaa(KosketusS - 0.4, 50).Lisaa(KestoS, Loppu.Kallistus);
+                // v3d (omistaja 28.9.: "loppu laskeutuminen kannattaa kuvata ylhäältä, nyt näyttää kun joku pommi iskisi"):
+                // etuviisto 55° saapumisessa, kosketukseen mennessä lähes suoraan alas (15°): kone liukuu kartalla perille.
+                .Lisaa(NousuS, 58).Lisaa(SaapuminenS, 55).Lisaa(KosketusS - 0.4, 15).Lisaa(KestoS, Loppu.Kallistus);
             // Laskeutumiskohdan kierto sille puolelle, josta paljastus pohjoinen ylös -näkymään on lyhyempi (kone etuviistosta).
             double bL1 = Psi(KosketusS) - 130, bL2 = Psi(KosketusS) + 130;
             double bLasku = Math.Abs(Kulmaero(bL1, Loppu.Suuntima)) <= Math.Abs(Kulmaero(bL2, Loppu.Suuntima)) ? bL1 : bL2;
@@ -348,7 +357,7 @@ namespace Matkakirja
 
                 // Kone tässä näytteessä (koko edellisen näytteen etäisyydestä: heikko kytkös).
                 var q = Kohta(kp[i]);
-                siipi[i] = Siipivali(edEt);
+                siipi[i] = Siipivali(edEt, t);
                 kh[i] = PerusKorkeus(t) + Nosto(t, siipi[i]);
                 var P = Ecef(q.Lat, q.Lon, kh[i]);
                 double katse = katseW * kh[i];

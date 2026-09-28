@@ -367,7 +367,9 @@ namespace Matkakirja
             kerrokset?.Nakyvyys("reitit", false);
             lentoMerkit = merkit;
             lentoIdt = kohdeId != null ? new[] { kohdeId } : null;
-            if (maamerkit != null && lentoIdt != null) maamerkit.Nayta(lentoIdt);
+            // Aloitusrata v3d (omistaja 28.9.: "Ota Ateenassa tuo 3d pois lennosta. Näyttää oudolta"): kohteen maamerkkimalli ei
+            // näy aloituslennolla; punainen rengas ja nimi jäävät.
+            if (maamerkit != null && lentoIdt != null && rata == null) maamerkit.Nayta(lentoIdt);
             if (merkit != null && lentoIdt != null)
             {
                 merkit.Renkaat(lentoIdt, null, LentoPunainen);

@@ -59,7 +59,7 @@ namespace Matkakirja.Kartta.Testit
                     Oleta.Tosi(m.Korotus >= 60 || m.Alfa <= 100, $"{k.Id} ei takaa t={t:F2}: α {m.Alfa:F0}° korotus {m.Korotus:F0}°");
                     Oleta.Tosi(m.KameraKorkeusM > 1500, $"{k.Id} kamera maan yllä t={t:F2}: {m.KameraKorkeusM:F0} m");
                 }
-                Oleta.Tosi(pieninKoko >= 0.95 * AloituslennonRata.KokoVahintaan, $"{k.Id} kone vähintään 2,4 % leveydestä: {pieninKoko:P1}");
+                Oleta.Tosi(pieninKoko >= 0.95 * AloituslennonRata.KokoLaskussa, $"{k.Id} kone vähintään 1,4 % leveydestä: {pieninKoko:P1}");
             }
         }
 
@@ -121,12 +121,14 @@ namespace Matkakirja.Kartta.Testit
                     if (m.EtaisyysM > 600_000)
                         Oleta.Tosi(m.Koko <= 0.03, $"{k.Id} kaukaa pieni t={t:F2}: {m.Koko:P1} {m.EtaisyysM / 1000:F0} km");
                 }
-                // Kosketus ja pysähdys kaukaa: kone ihan pieni (omistaja: töksö laskeutuminen ei näy).
+                // Kosketus ja pysähdys kaukaa ja ylhäältä: kone ihan pieni (omistaja: töksö laskeutuminen ei näy; v3d: "selvästi
+                // kauempana ja kone pienemmäksi", "loppu laskeutuminen ylhäältä, nyt näyttää kun joku pommi iskisi").
                 for (double t = AloituslennonRata.KosketusS - 0.3; t <= AloituslennonRata.PysahdysS; t += 0.05)
                 {
                     var m = r.Mitta(t);
-                    Oleta.Tosi(m.Koko <= 0.035 && m.EtaisyysM >= 300_000,
+                    Oleta.Tosi(m.Koko <= 0.02 && m.EtaisyysM >= 700_000,
                         $"{k.Id} lasku kaukaa t={t:F2}: {m.Koko:P1} {m.EtaisyysM / 1000:F0} km");
+                    Oleta.Tosi(m.Korotus >= 65, $"{k.Id} lasku ylhäältä t={t:F2}: korotus {m.Korotus:F0}°");
                 }
             }
         }
@@ -151,7 +153,7 @@ namespace Matkakirja.Kartta.Testit
                 for (double t = AloituslennonRata.SaapuminenS; t <= AloituslennonRata.KosketusS - 0.3; t += 0.1)
                 {
                     var m = r.Mitta(t);
-                    Oleta.Tosi(m.Alfa <= 75, $"{k.Id} saapuminen edestä t={t:F1}: α {m.Alfa:F0}°");
+                    Oleta.Tosi(m.Alfa <= 75 || m.Korotus >= 60, $"{k.Id} saapuminen edestä tai ylhäältä t={t:F1}: α {m.Alfa:F0}° korotus {m.Korotus:F0}°");
                     Oleta.Tosi(r.Ruudussa(t, k.Lat, k.Lon, 0, out _, out _), $"{k.Id} kohde kuvassa t={t:F1}");
                 }
             }
