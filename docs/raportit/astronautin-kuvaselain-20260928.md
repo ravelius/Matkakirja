@@ -4,7 +4,7 @@
 keskellä edellinen/seuraava viereisiin kohteisiin kartalla ja himmeä maapallo kuvan takana kuvan kohdalta. Linssiseppä
 (Opus, max). Toteutus natiivissa, web tulee perässä Pelikoodarilta laattatyön jälkeen.*
 
-**Toteutus:** proto-haara `linssiseppa/astro-selain` **c5b073cd** (juna/b13 508761e8:n päällä). Linssit-testit 351/351 (uusi
+**Toteutus:** proto-haara `linssiseppa/astro-selain` **77db48b6** (c5b073cd + nimipillerin kirkastus 28.9.) (juna/b13 508761e8:n päällä). Linssit-testit 351/351 (uusi
 AstronauttiKierrosTestit 5/5), unity-tarkistus 0 virhettä. Kuvapari ja video otetaan aamulla polton jälkeen (kohta 5).
 
 ## 1. Suositus: yksi galleria koko maailmasta
@@ -36,6 +36,9 @@ mitään. Selaus toimii yhtenä gallerian virtana:
 
 - Ei laskuria, reunanuolia, kohteen nimeä napeissa eikä pikkukarttaa. Selitteen otsikko ("Nimi — seutu") vaihtuu, ja
   pallo näyttää paikan.
+- **Kohteen vaihto huomataan aina** (Fable hyväksyi 28.9. klo 00.0x): ensimmäisellä käynnillä selite avautuu kokonaan
+  1,5 s:ksi. Jo nähdyssä kohteessa kiinni oleva nimipilleri kirkastuu täyteen peittoon 1,2 s:ksi (häivytys 150 ms) ja
+  palaa sitten himmeäksi (Kuvanakyma.Korosta, Linssit.uss `mk-korostus`). Web tekee saman.
 - ‹ › ovat kaksi pientä pyöreää lasinappia (38 pt, sama vihreä lasi kuin väkäsessä) alhaalla keskellä. Pikkukuvat
   (vasen ala, enintään 2) ja minipulu (oikea ala) pysyvät ennallaan, eivätkä ne osu napeihin.
 - Kaksoisnapautuksen zoomi toimii kuvan keskiosassa. Zoomattuna yhden sormen veto panoroi kuten ennen, eikä reunan
