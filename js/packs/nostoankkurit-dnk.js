@@ -17,7 +17,7 @@ export const NOSTOANKKURIT_DNK = {
   'nosto:hetki-viikinkilaiva-roskilde-1040': { lat: 55.754523, lng: 12.017480 },
   'nosto:itameri': { lat: 54.879610, lng: 12.613892 },
   'nosto:jellingin-kivet': { lat: 55.757641, lng: 9.419000 },
-  'nosto:kronborg': { lat: 56.039026, lng: 12.712505 },
+  'nosto:kronborg': { lat: 56.038600, lng: 12.621900 },
   'nosto:lindholm-hoje': { lat: 57.080278, lng: 9.914000 },
   'nosto:mllehj': { lat: 55.977301, lng: 9.827000 },
   'nosto:mons-klint': { lat: 54.992511, lng: 12.445952 },
