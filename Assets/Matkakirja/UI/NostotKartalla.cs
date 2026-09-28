@@ -127,6 +127,13 @@ namespace Matkakirja.Natiivi
             public bool NimioNakyy = true;
             public Vector2 NimioKoko;
             /// <summary>
+            /// Löydös (Český Krumlov ylhäältä, "näkyy"-tilainen nimiö ei piirtynyt): AsetaNimionPeitto vertasi ennen
+            /// UI Toolkitin style.opacity-lukuarvoon takaisin, mikä on epäluotettava (StyleKeyword-tulkinta vaihtelee eikä
+            /// aina heijasta viimeksi asetettua arvoa). Oma välimuisti (-1 = ei koskaan asetettu) tekee optimoinnista
+            /// yksiselitteisen: ensimmäinen kutsu kirjoittaa aina, jottei jäädä kiinni tuntemattomaan alkutilaan.
+            /// </summary>
+            public float NimioOpasiteetti = -1f;
+            /// <summary>
             /// Erikoismallin oma kalustelaatikko pisteen suhteen (paneelin y alas): yläreuna (negatiivinen = pisteen yllä),
             /// NaN = ei mallia. Oma nimiö mallin ylä- tai alapuolelle (Linssiseppä 28.9. klo 19.3x, laitekuvat cl10).
             /// </summary>
@@ -770,6 +777,17 @@ namespace Matkakirja.Natiivi
                         float ny0 = nr.y + mm.M.Piste.y, ny1 = ny0 + nr.height;
                         sb.Append(" laatikkoY ").Append(lr.yMin.ToString("0")).Append("..").Append(lr.yMax.ToString("0"))
                           .Append(" nimiöY ").Append(ny0.ToString("0")).Append("..").Append(ny1.ToString("0"));
+                        // Löydös (Český Krumlov ylhäältä, "näkyy" muttei piirry): nimiön ja merkin todelliset piirtoarvot,
+                        // jotta laitekuvasta voi todentaa opasiteetin, tekstin ja display-tilan eikä vain sijainnin.
+                        var nimio = mm.M.Nimio;
+                        sb.Append(" opa ").Append(nimio.resolvedStyle.opacity.ToString("0.00"))
+                          .Append("(asetettu ").Append(mm.M.NimioOpasiteetti.ToString("0.00")).Append(')')
+                          .Append(" disp ").Append(nimio.resolvedStyle.display == DisplayStyle.Flex ? "flex" : "none")
+                          .Append(" teksti ").Append(nimio.text.Length)
+                          .Append(" elOpa ").Append(mm.M.El.resolvedStyle.opacity.ToString("0.00"))
+                          .Append(" usva ").Append(mm.M.Usva.ToString("0.00"))
+                          .Append(" allaMalli ").Append(mm.M.MallinAlla ? 1 : 0)
+                          .Append(" kiintea ").Append(mm.M.Kiintea ? 1 : 0);
                     }
                     sb.Append(';');
                 }
@@ -926,7 +944,11 @@ namespace Matkakirja.Natiivi
         static void AsetaNimionPeitto(Merkki m, bool nakyy)
         {
             float tavoite = nakyy ? 1f : 0f;
-            if (m.Nimio.style.opacity.keyword == StyleKeyword.Undefined && Mathf.Approximately(m.Nimio.style.opacity.value, tavoite)) return;
+            // Löydös (Český Krumlov ylhäältä): ennen verrattiin m.Nimio.style.opacity-lukuarvoon takaisin, mutta UI Toolkitin
+            // style-getterin StyleKeyword ei luotettavasti kerro, onko arvo koskaan asetettu — vain oma välimuisti (Merkki.
+            // NimioOpasiteetti) tietää sen varmasti. Ensimmäinen kutsu (-1) kirjoittaa aina.
+            if (Mathf.Approximately(m.NimioOpasiteetti, tavoite)) return;
+            m.NimioOpasiteetti = tavoite;
             m.Nimio.style.opacity = tavoite;
             Ruudunpaivitys.Herata(0.35f);
         }
