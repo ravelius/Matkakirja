@@ -540,8 +540,10 @@ namespace Matkakirja
         /// <summary>
         /// LENNON PELIKELLO (v3f, omistaja 28.9.: kello "etenee" ja valonraja muuttuu sen mukana): osuus lennon pelitunneista
         /// hetkellä t, pehmeä S (kiihtyy lähdöstä ja hidastuu perille). Nappula kirjoittaa Pelikello.Tunnit = lähtö + tunnit · tämä.
+        /// v3f2 ("päivä voisi tulla aiemmin"): kello on perillä saapumisen alussa (<see cref="SaapuminenS"/>), ei radan lopussa,
+        /// joten aamu tulee ohitusta ennen ja lasku nähdään täydessä päivässä.
         /// </summary>
-        public static double Kello(double t) => S(t / KestoS);
+        public static double Kello(double t) => S(t / SaapuminenS);
 
         /// <summary>
         /// ESIKÄÄNTÖ (v3f, omistaja 28.9. klo 09.29: "mikäli karttapallo on pyörinyt eri kohtaan, kuin on suunniteltu, niin se voisi

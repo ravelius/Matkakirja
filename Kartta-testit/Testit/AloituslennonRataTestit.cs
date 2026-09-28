@@ -287,9 +287,11 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void LennonKelloKiihtyyJaHidastuuPerille()
         {
-            // v3f: pelikello Tunnit = lähtö + lentoaika · Kello(t): 0 lähdössä, 1 perillä, nopeus kasvaa puoliväliin ja laskee.
-            Oleta.Tosi(AloituslennonRata.Kello(0) == 0 && Math.Abs(AloituslennonRata.Kello(AloituslennonRata.KestoS) - 1) < 1e-12,
-                "kello 0 → 1");
+            // v3f2: pelikello Tunnit = lähtö + lentoaika · Kello(t): 0 lähdössä, 1 saapumisen alussa (12,6 s) ja siitä loppuun,
+            // nopeus kasvaa puoliväliin ja laskee.
+            const double T = AloituslennonRata.SaapuminenS;
+            Oleta.Tosi(AloituslennonRata.Kello(0) == 0 && Math.Abs(AloituslennonRata.Kello(T) - 1) < 1e-12
+                       && AloituslennonRata.Kello(AloituslennonRata.KestoS) == 1, "kello 0 → 1 saapumisen alussa");
             double ed = 0, huippu = 0, huippuT = 0;
             for (double t = 0.1; t <= AloituslennonRata.KestoS + 1e-9; t += 0.1)
             {
@@ -298,7 +300,45 @@ namespace Matkakirja.Kartta.Testit
                 ed = AloituslennonRata.Kello(t);
                 if (v > huippu) { huippu = v; huippuT = t; }
             }
-            Oleta.Tosi(Math.Abs(huippuT - AloituslennonRata.KestoS / 2) < 0.6, $"kellon nopein kohta {huippuT:F1} s");
+            Oleta.Tosi(Math.Abs(huippuT - T / 2) < 0.6, $"kellon nopein kohta {huippuT:F1} s");
+        }
+
+        /// <summary>Auringon korkeus (°) paikassa pelikellon hetkellä (sama NOAA-likiarvo kuin Aurinko.AurinkoEcef).</summary>
+        static double AuringonKorkeus(double utcTunnit, double lat, double lon)
+        {
+            var utc = new DateTime(2026, 9, 28, 0, 0, 0, DateTimeKind.Utc).AddHours(utcTunnit);
+            double paiva = utc.DayOfYear - 1 + (utc.Hour - 12 + utc.Minute / 60.0) / 24.0, g = 2 * Math.PI / 365.0 * paiva;
+            double de = 0.006918 - 0.399912 * Math.Cos(g) + 0.070257 * Math.Sin(g) - 0.006758 * Math.Cos(2 * g)
+                + 0.000907 * Math.Sin(2 * g) - 0.002697 * Math.Cos(3 * g) + 0.00148 * Math.Sin(3 * g);
+            double ay = 229.18 * (0.000075 + 0.001868 * Math.Cos(g) - 0.032077 * Math.Sin(g) - 0.014615 * Math.Cos(2 * g)
+                - 0.040849 * Math.Sin(2 * g));
+            double sl = -(utc.Hour * 60 + utc.Minute + utc.Second / 60.0 + ay - 720.0) / 4.0 * Math.PI / 180;
+            double a = lat * Math.PI / 180, b = lon * Math.PI / 180;
+            return Math.Asin(Math.Cos(de) * Math.Cos(sl) * Math.Cos(a) * Math.Cos(b) + Math.Cos(de) * Math.Sin(sl) * Math.Cos(a) * Math.Sin(b)
+                + Math.Sin(de) * Math.Sin(a)) * 180 / Math.PI;
+        }
+
+        [Testi]
+        static void PaivaTuleeEnnenOhitusta()
+        {
+            // Omistaja 28.9. klo 15.3x v3f2-videosta: "päivä voisi tulla aiemmin". Lähtö 02.30: valinnassa Moskova yössä
+            // (hämärä −6…+2°), ja katsepisteeseen tulee päivä (> 2°) ennen ohitusta; Tanger (lännessä) viimeisenä.
+            double lahto = Pelikello.OletusAlkuKelloUtc;
+            Oleta.Tosi(AuringonKorkeus(lahto, 55.76, 37.62) < -6, $"valinnassa Moskova yössä ({AuringonKorkeus(lahto, 55.76, 37.62):0.0}°)");
+            foreach (var (id, lat, lon, raja) in new[] { ("ateena", 37.98, 23.73, 6.0), ("istanbul", 41.01, 28.98, 6.0),
+                         ("moskova", 55.75, 37.62, 6.0), ("kairo", 30.04, 31.24, 6.0), ("tanger", 35.76, -5.83, 8.0) })
+            {
+                var r = Rata(lat, lon, id);
+                int h = Pelikello.LentoTunnit(LontooLat, LontooLon, lat, lon);
+                double paiva = -1;
+                for (double t = 0; t <= AloituslennonRata.KestoS && paiva < 0; t += 0.1)
+                {
+                    var k = r.Kamera(t);
+                    if (AuringonKorkeus(lahto + h * AloituslennonRata.Kello(t), k.Lat, k.Lon) > 2) paiva = t;
+                }
+                Oleta.Tosi(paiva >= 0 && paiva <= raja, $"{id}: päivä katsepisteessä {paiva:0.0} s (raja {raja} s)");
+                Oleta.Tosi(AuringonKorkeus(lahto + h, lat, lon) > 15, $"{id}: perillä päivä");
+            }
         }
 
         [Testi]
