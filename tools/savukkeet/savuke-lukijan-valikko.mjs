@@ -19,6 +19,11 @@
  *   4. Seuraava kappale / +10 s / −10 s liikuttavat nykyistä kappaletta.
  *   5. Ulos napautus sulkee; kaiutin keskeyttää ("Jatka kuuntelua").
  *   6. Lehden otsikkorivillä kaksi nappia (valikko kaiuttimen vieressä).
+ *   7. Ulos napautus sulkee VAIN valikon: kortti jää auki eikä click
+ *      läpäise (Fable 28.9.2026, omistajan natiivibugi).
+ *   8. Latausrengas (omistaja 28.9.2026): hidas synteesi (tynkä 1,5 s) →
+ *      .lataa näkyy vasta ~250 ms:n jälkeen ja poistuu kun ääni alkaa;
+ *      nopea vastaus → rengasta ei näy lainkaan.
  * Ennen-versiossa (--juuri origin/main) otetaan vain kuvat (ratas auki).
  */
 import { createServer } from 'node:http';
@@ -129,15 +134,19 @@ const valikonTila = (s) => s.evaluate(() => {
   };
 });
 
+let workerViive = 0;
+
 async function ajaNakyma(nimi) {
   const virheet = [];
+  workerViive = 0;
   const ctx = await selain.newContext({ ...NAKYMAT[nimi], serviceWorkers: 'block' });
   const s = await ctx.newPage();
   await s.route((u) => !/127\.0\.0\.1/.test(u.href), async (r) => {
     const url = r.request().url();
     if (/workers\.dev/.test(url)) {
       if (r.request().method() === 'OPTIONS') { r.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*', 'access-control-allow-headers': '*' }, body: '' }); return; }
-      r.fulfill({ status: 200, contentType: 'audio/wav', body: savel, headers: { 'access-control-allow-origin': '*' } });
+      if (workerViive) await new Promise((ok) => setTimeout(ok, workerViive));
+      r.fulfill({ status: 200, contentType: 'audio/wav', body: savel, headers: { 'access-control-allow-origin': '*' } }).catch(() => {});
       return;
     }
     if (/media\.matkakirja\.app|r2\.dev|wikimedia/.test(url)) {
@@ -202,6 +211,59 @@ async function ajaNakyma(nimi) {
   await s.waitForTimeout(400);
   vaadi(n('ulos napautus sulkee valikon'), !(await valikonTila(s)).auki);
 
+  // 7. Napautus kortin tekstiin valikon ollessa auki: vain valikko sulkeutuu, click ei läpäise.
+  await s.click('.lukija-otsikkorivi .lukija-valikkonappi');
+  await s.waitForTimeout(400);
+  const kohta = await s.evaluate(() => {
+    window.__lapaisyt = 0;
+    document.addEventListener('click', () => { window.__lapaisyt += 1; });
+    const kortti = document.querySelector('.fokuskohde-popup');
+    const valikko = document.querySelector('.lukija-valikko')?.getBoundingClientRect();
+    const k = kortti?.getBoundingClientRect();
+    if (!k || !valikko) return null;
+    // Kortin sisältä valikon alapuolelta (tai vasemmalta), ei napista.
+    const y = Math.min(k.bottom - 12, valikko.bottom + 24);
+    return { x: k.left + 16, y };
+  });
+  if (kohta) await s.mouse.click(kohta.x, kohta.y);
+  await s.waitForTimeout(500);
+  const jalki = await s.evaluate(() => ({
+    kortti: Boolean(document.querySelector('.fokuskohde-popup')?.getClientRects().length),
+    lapaisyt: window.__lapaisyt,
+  }));
+  vaadi(n('napautus korttiin sulkee vain valikon: kortti auki, click ei läpäise'),
+    Boolean(kohta) && !(await valikonTila(s)).auki && jalki.kortti && jalki.lapaisyt === 0, JSON.stringify({ kohta, ...jalki }));
+  // Seuraava napautus toimii taas normaalisti (nielu ei jää päälle).
+  await s.waitForTimeout(800);
+  await s.mouse.click(kohta?.x ?? 30, kohta?.y ?? 300);
+  await s.waitForTimeout(200);
+  const perille = await s.evaluate(({ x, y }) => {
+    const el = document.elementFromPoint(x, y);
+    return { lapaisyt: window.__lapaisyt, kohde: el ? `${el.tagName}.${[...el.classList].join('.')}` : null };
+  }, { x: kohta?.x ?? 30, y: kohta?.y ?? 300 });
+  // Perille = click kuplii dokumenttiin TAI kortti reagoi (kuvan napautus avaa suurennoksen, joka pysäyttää clickin).
+  vaadi(n('nielu päättyy: seuraava napautus menee perille'),
+    perille.lapaisyt >= 1 || /fokuskohde-zoom-auki/.test(perille.kohde ?? ''), JSON.stringify(perille));
+  await s.evaluate(() => document.querySelector('.fokuskohde-zoom-auki')?.click());
+  await s.waitForTimeout(300);
+
+  // 8b. Nopea vastaus: kortin luenta ilman viivettä ei näytä rengasta.
+  const nopea = await s.evaluate(async () => {
+    const k = document.querySelector('.lukija-otsikkorivi .lukija-nappi');
+    k?.click();
+    let nahty = false;
+    for (let i = 0; i < 25; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((ok) => setTimeout(ok, 40));
+      if (k?.classList.contains('lataa')) nahty = true;
+    }
+    const lukee = k?.classList.contains('lukee');
+    k?.click(); // tauko
+    return { nahty, lukee };
+  });
+  vaadi(n('nopea synteesi: latausrengasta ei välähdä'), nopea.lukee && !nopea.nahty, JSON.stringify(nopea));
+  await s.evaluate(async () => { const m = await import('/js/lukija.js'); m.pysaytaLukija?.(); });
+
   /* --- Lontoon lehti -------------------------------------------------- */
   await s.evaluate(() => {
     document.querySelector('.fokuskohde-popup [aria-label*="Sulje"], .fokuskohde-sulje')?.click();
@@ -229,8 +291,34 @@ async function ajaNakyma(nimi) {
   vaadi(n('lehden valikko: kappaleet, kelausrivi, nopeus ja ääni; kelaus harmaana ennen luentaa'),
     alku.auki && alku.kappaleita >= 3 && alku.kelaus.join() === '2,2' && alku.saadot && !alku.kelausKaytossa, JSON.stringify(alku));
   await kuva('lehti-valikko');
+  workerViive = 1500;
   await s.click('.lukija-valikko .lukija-kappale >> nth=1');
-  await s.waitForTimeout(1500);
+  const rengas = await s.evaluate(async () => {
+    const k = document.querySelector('#arrival-dialog .lukija-nappi');
+    const odota = (ms) => new Promise((ok) => setTimeout(ok, ms));
+    await odota(120);
+    const heti = k.classList.contains('lataa');
+    await odota(500);
+    const kohta = k.classList.contains('lataa');
+    const ring = getComputedStyle(k.querySelector('.icon-glyph'), '::after');
+    const tyyli = { opacity: ring.opacity, animaatio: ring.animationName };
+    return { heti, kohta, tyyli };
+  });
+  await kuva('lehti-lataus');
+  Object.assign(rengas, await s.evaluate(async () => {
+    const k = document.querySelector('#arrival-dialog .lukija-nappi');
+    let poistui = null;
+    for (let i = 0; i < 60 && poistui == null; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((ok) => setTimeout(ok, 50));
+      if (!k.classList.contains('lataa')) poistui = i * 50;
+    }
+    return { poistui, lukee: k.classList.contains('lukee') };
+  }));
+  vaadi(n('hidas synteesi: latausrengas vasta viiveen jälkeen, pois kun ääni alkaa'),
+    !rengas.heti && rengas.kohta && rengas.poistui != null && rengas.lukee, JSON.stringify(rengas));
+  workerViive = 0;
+  await s.waitForTimeout(600);
   const hyppy = await valikonTila(s);
   vaadi(n('kappaleen napautus aloittaa luennan siitä'), hyppy.lukee && hyppy.nykyinen === 1 && hyppy.kelausKaytossa, JSON.stringify(hyppy));
   await s.click('.lukija-valikko .lukija-kelausnappi >> nth=3');

@@ -2043,24 +2043,57 @@ function avaaValikko(nappi, valikkonappi) {
     const y = rivi.offsetTop - lista.offsetTop;
     if (y < ylaraja || y + rivi.offsetHeight > alaraja) lista.scrollTop = Math.max(0, y - lista.clientHeight / 3);
   };
-  // Napautus valikon ulkopuolelle sulkee (valikkonappi hoitaa omansa).
+  /*
+   * Napautus valikon ulkopuolelle sulkee VAIN valikon (valikkonappi hoitaa
+   * omansa): koko ele niellään, jottei se sulje alla olevaa korttia eikä
+   * läpäise karttaan (omistajan natiivibugi 28.9.2026, web tehdään samoin).
+   */
   const ulos = (e) => {
     if (el.contains(e.target) || valikkonappi.contains(e.target)) return;
+    e.stopImmediatePropagation();
+    if (e.cancelable) e.preventDefault();
+    nieleEle(doc);
     suljeValikko();
   };
-  doc.addEventListener('pointerdown', ulos, { capture: true });
+  // Ikkunan kaappausvaihe: ennen kortin ja kartan omia kuuntelijoita.
+  const ikkuna = doc.defaultView ?? doc;
+  ikkuna.addEventListener('pointerdown', ulos, { capture: true });
   valikko = {
     elementti: el,
     nappi,
     paivita,
     pura: () => {
-      doc.removeEventListener('pointerdown', ulos, { capture: true });
+      ikkuna.removeEventListener('pointerdown', ulos, { capture: true });
       el.remove();
       if (staattinen) koti.classList.remove('lukija-valikko-koti');
       valikkonappi.setAttribute('aria-expanded', 'false');
     },
   };
   paivita();
+}
+
+/*
+ * ELEEN NIELEMINEN: valikon sulkeva pointerdown on jo pysäytetty; saman
+ * eleen loput tapahtumat (kosketus, hiiren yhteensopivuus, click) niellään
+ * kaappausvaiheessa, kunnes click on tullut tai ele on selvästi ohi.
+ */
+const NIELTAVAT = ['pointerup', 'pointercancel', 'touchstart', 'touchend', 'mousedown', 'mouseup', 'click'];
+function nieleEle(doc) {
+  const ikkuna = doc.defaultView;
+  if (!ikkuna?.addEventListener) return;
+  let valmis = false;
+  const nielu = (e) => {
+    e.stopImmediatePropagation();
+    if (e.cancelable && e.type !== 'pointerup') e.preventDefault();
+    if (e.type === 'click') lopeta();
+  };
+  const lopeta = () => {
+    if (valmis) return;
+    valmis = true;
+    for (const tyyppi of NIELTAVAT) ikkuna.removeEventListener(tyyppi, nielu, { capture: true });
+  };
+  for (const tyyppi of NIELTAVAT) ikkuna.addEventListener(tyyppi, nielu, { capture: true, passive: false });
+  setTimeout(lopeta, 700);
 }
 
 /*
@@ -2542,6 +2575,43 @@ function paivitaKortinVu(nappi, lukee) {
   if (!nappi?.__lukijaValikko) return;
   if (lukee) kortinVu.kaynnista(nappi, puheMittari);
   else if (kortinVu.kaynnissa()) kortinVu.pysayta();
+  seuraaLatausta(nappi, lukee);
+}
+
+/*
+ * LATAUSRENGAS (omistaja 28.9.2026: "Kaiuttimen päällä voisi silloin pyöriä
+ * pieni ympyräanimaatio" sen ajan, kun ääntä vasta generoidaan). Rengas
+ * näkyy, kun lukijaäänen soitin on käynnissä mutta yhtään palaa ei ole
+ * aikataulussa (puhe.js odottaa) — alussa ja kelauksen jälkeen. Viive
+ * LATAUS_VIIVE_MS, ettei säilötyn luennan lyhyt haku välähdä. Laitteen
+ * omalla äänellä soitinta ei ole eikä rengasta.
+ */
+const LATAUS_VIIVE_MS = 250;
+const LATAUS_TAHTI_MS = 80;
+function seuraaLatausta(nappi, lukee) {
+  if (!lukee) {
+    if (nappi.__lukijaLataus) clearInterval(nappi.__lukijaLataus.kello);
+    nappi.__lukijaLataus = null;
+    nappi.classList?.remove('lataa');
+    return;
+  }
+  if (nappi.__lukijaLataus || typeof setInterval !== 'function') return;
+  const seuranta = { alku: null, kello: null };
+  nappi.__lukijaLataus = seuranta;
+  const tarkista = () => {
+    const soitin = ajossa?.nappi === nappi ? ajossa.soitin : null;
+    if (!nappi.isConnected || !ajossa || ajossa.nappi !== nappi) {
+      seuraaLatausta(nappi, false);
+      return;
+    }
+    const odottaa = Boolean(soitin?.odottaa?.());
+    const nyt = Date.now();
+    if (!odottaa) seuranta.alku = null;
+    else if (seuranta.alku == null) seuranta.alku = nyt;
+    nappi.classList.toggle('lataa', odottaa && nyt - seuranta.alku >= LATAUS_VIIVE_MS);
+  };
+  seuranta.kello = setInterval(tarkista, LATAUS_TAHTI_MS);
+  tarkista();
 }
 
 /** Nopeus näytölle: 1,15× (pilkku kuten muuallakin pelissä). */

@@ -1076,6 +1076,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *   tauko(): void,
  *   jatka(): void,
  *   tauolla(): boolean,
+ *   odottaa(): boolean,
  *   siirryKappale(askel: number): void,
  *   siirryKappaleeseen(kappale: number): void,
  *   siirryAika(sekunnit: number): void,
@@ -1705,6 +1706,14 @@ export function luoPuheSoitin({
     },
     tauolla() {
       return tila.tauolla;
+    },
+    /**
+     * Odottaako luenta ääntä: soittamassa, mutta yhtään palaa ei ole
+     * aikataulussa (ensimmäinen pala tai kelauksen kohde vielä synteesissä).
+     * Lukijan kaiuttimen latausrengas (omistaja 28.9.2026) lukee tämän.
+     */
+    odottaa() {
+      return !tila.peruttu && !tila.tauolla && lahteet.size === 0;
     },
     /** Progressiivisen soiton mittari: virran myöhästymiset. */
     mittari() {
