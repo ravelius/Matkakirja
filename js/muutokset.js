@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2356, teksti: 'Pulun äänikeskustelun koe myös natiiviin' },
   { v: 2355, teksti: 'v2353: Laattojen katkaisija laskee vain peilin… (#3528)' },
   { v: 2354, teksti: 'v2354: Pulun äänikeskustelu xAI:lla (#3544)' },
   { v: 2353, teksti: '13 Euroopan historian hetkeä ja 26 havainnekuvaa (#3529)' },
