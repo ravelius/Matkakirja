@@ -131,6 +131,18 @@ namespace Matkakirja
             return h00 * p0 + h10 * h * v0 + h01 * p1 + h11 * h * v1;
         }
 
+        // ---- Isoympyrä (AloituslennonRata) ----
+
+        /// <summary>Piste osuudella u isoympyrällä a → b (slerp).</summary>
+        public static (double Lat, double Lon) Isoympyralla(double lat0, double lon0, double lat1, double lon1, double u)
+        {
+            if (u <= 0) return (lat0, lon0);
+            if (u >= 1) return (lat1, lon1);
+            double d = LennonAikajana.ReittiM(lat0, lon0, lat1, lon1);
+            if (d < 1.0) return (lat1, lon1);
+            return Kohta(lat0, lon0, Suuntima(lat0, lon0, lat1, lon1), d * u);
+        }
+
         // ---- Koneen nopeus ja paikka reitillä ----
 
         /// <summary>Nopeusprofiili f(t) osuutena huipusta (speksi kohta 2), pehmeät siirtymät (smootherstep).</summary>

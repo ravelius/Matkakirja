@@ -206,6 +206,27 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>
+        /// Kelaus soivassa tai tauolla olevassa palassa (lukijan valikko, omistaja 28.9.2026: "-10sek ja +10sek"; web
+        /// soitin.siirryAika): 0 = kohta mahtui palaan ja soitto jatkuu siitä; −1 / +1 = raja ylittyi, kutsuja siirtyy
+        /// edelliseen tai seuraavaan palaan. Palan alussa (alle 1 s) taaksepäin = edellinen pala.
+        /// </summary>
+        public int Kelaa(float sekunnit)
+        {
+            if (lahde == null || lahde.clip == null || (!puhuu && !tauolla) || haivytys != null) return 0;
+            float t = lahde.time + sekunnit;
+            if (t < 0f) return lahde.time < 1f ? -1 : KelaaAlkuun();
+            if (t >= lahde.clip.length - 0.05f) return 1;
+            lahde.time = t;
+            return 0;
+        }
+
+        int KelaaAlkuun()
+        {
+            lahde.time = 0f;
+            return 0;
+        }
+
         /// <summary>Tauolla oleva klippi pois (uusi puhe tai pysäytys ei jatka taukoa).</summary>
         void PuraTauko()
         {

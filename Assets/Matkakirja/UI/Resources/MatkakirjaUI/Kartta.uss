@@ -1079,6 +1079,25 @@
     flex-shrink: 0;
 }
 
+/* Napit näkyvät heti (omistaja 28.9.2026): ylärivillä paikkavaraus [valikko 30,4 + 1 + kaiutin 34] kaiuttimen
+   marginaaleilla, napit kortissa sen kohdalla (Nostokortti.SijoitaLukija); vierittäessä paperipohja alle. */
+.mk-nosto__lukijapaikka {
+    width: 65.4px;
+    height: 34px;
+    margin: -9px -6px -9px auto;
+    flex-shrink: 0;
+}
+
+.mk-nosto__lukija.mk-nosto__lukija--kiinni {
+    position: absolute;
+    margin: 0;
+    border-radius: 17px;
+}
+
+.mk-nosto__lukija.mk-nosto__lukija--irti {
+    background-color: rgba(246, 241, 228, 0.94);
+}
+
 .mk-nosto__ylarivi {
     /* Web .fokuskohde-ylarivi: American Typewriter 10,88 px, harvennus 1,52 px, #7a5514, alla 1,92 px.
        Löydös 133: oikealla ei enää ✕:n varausta (40 px). */
@@ -1878,7 +1897,12 @@
 /* Web .nostosym-nimio: --font-atlas (Liberation Serif) kursiivi, rgba(74, 52, 33, 0,92), ei haloa, ei harvennusta;
  * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). Löydös 125: peitto lineaarisena 0,97 ja
  * SDF-reunan vahvistus samalla musteella asetetaan C#:ssa (NostotKartalla.AsetaMuste, NostoKerros.NimionReuna*). */
+/* Nimiö häipyy ja palaa pehmeästi (omistaja 28.9.2026, TF 1.0.34: nostotekstit välkkyivät; web #3540: piilotus,
+   paluu ja kyljen vaihto 220 ms ease-in-out). */
 .mk-nosto-merkki__nimio {
+    transition-property: opacity;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-in-out;
     position: absolute;
     font-size: 8.5px;
     white-space: nowrap;

@@ -180,6 +180,11 @@ namespace Matkakirja
 
         void V3Pois()
         {
+            PoistaJalki();
+            IlmaPois();
+            EnnakkoPois();
+            Aurinko.UsvaVahintaanM = 0;
+            LiikeLaatat.LentoKarkeaSse = 0f;
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
             LentoV3Odotus = -1f;
             V3Aani = new LentoV3Aani { EtaisyysM = -1f };
@@ -195,7 +200,8 @@ namespace Matkakirja
         /// siipiväli <see cref="V3SiipivaliM"/>; elo ja kallistus TigerMothKone.Asetalla. Ääriviivan leveys 1,2 pt ruudulla.
         /// Palauttaa koneen paikan maailmassa.
         /// </summary>
-        Vector3 V3AsetaKone(Camera kamera, double lat, double lon, double h, double suunta, double t, int siemen, double kallistus)
+        Vector3 V3AsetaKone(Camera kamera, double lat, double lon, double h, double suunta, double t, int siemen, double kallistus,
+            double siipiM = V3SiipivaliM)
         {
             double3 ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, h));
             double3 ylos = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef);
@@ -205,7 +211,7 @@ namespace Matkakirja
             double b = math.radians(suunta);
             double3 eteen = pohjoinen * math.cos(b) + ita * math.sin(b);
             double3 p0 = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-            double3 p1 = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef + ylos * V3SiipivaliM);
+            double3 p1 = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef + ylos * siipiM);
             var f = (Vector3)(float3)math.normalize(georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(eteen));
             var y = (Vector3)(float3)math.normalize(georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(ylos));
             var juuri = v3Kone.transform;
@@ -247,11 +253,12 @@ namespace Matkakirja
         }
 
         /// <summary>Reitin maastonäytteet Cesiumilta (raaka korkeus, liioitellaan tuloksessa); null = ei maastoa tai kysely kaatui.</summary>
-        static System.Threading.Tasks.Task<CesiumSampleHeightResult> V3MaastoKysely(List<(double Lat, double Lon)> reitti, double[] pit)
+        static System.Threading.Tasks.Task<CesiumSampleHeightResult> V3MaastoKysely(List<(double Lat, double Lon)> reitti, double[] pit,
+            int n = V3MaastoNaytteita)
         {
             var pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
             if (pallo == null || pallo.tilesetSource != CesiumDataSource.FromUrl) return null;
-            var paikat = new double3[V3MaastoNaytteita];
+            var paikat = new double3[n];
             for (int i = 0; i < paikat.Length; i++)
             {
                 var q = LennonV3.ReitinKohta(reitti, pit, (double)i / (paikat.Length - 1));
@@ -269,17 +276,42 @@ namespace Matkakirja
             aloitusAjossa = aloitus;
             var merkit = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
             string kohdeId = merkit != null ? merkit.LahinId(lat1, lon1) : null;
-            var reitti = LennonV3.Reitti(kohdeId, lat0, lon0, lat1, lon1);
+            // ALOITUSLENNON RATA (omistajan TF-löydös 27.9.2026): aloituslento lentää isoympyrän Lontoosta kohteeseen
+            // AloituslennonRadan kameralla (v2: lähtö kaukaa napautusnäkymästä, kiri, ohitus vasemmalta oikealle, ylilento,
+            // saapuminen etuviistosta ja nousu saapumisnäkymään; v3: kaukaa kone pieni, kosketus kaukaa, usva ohuempi); muut lennot v3.
+            bool rataPaalla = aloitus && Aloitusrata && kierto != null;
+            double ohitusKohta = AloituslennonRata.OhitusKohteelle(kohdeId, LennonAikajana.ReittiM(lat0, lon0, lat1, lon1));
+            var reitti = rataPaalla ? AloituslennonRata.Isoympyra(lat0, lon0, lat1, lon1) : LennonV3.Reitti(kohdeId, lat0, lon0, lat1, lon1);
             var pit = LennonV3.Pituudet(reitti);
             double pituus = pit[pit.Length - 1];
             int siemen = V3Siemen(lat0, lon0, lat1, lon1);
             var kerrokset = KarttaKerrokset.Instanssi;
-            v3Kaytava = kerrokset != null ? kerrokset.EsilataaLentoV3(reitti) : null;
-            var maastoKysely = V3MaastoKysely(reitti, pit);
+            v3Kaytava = kerrokset == null ? null
+                : rataPaalla ? kerrokset.EsilataaAloitusrata(lat0, lon0, lat1, lon1, ohitusKohta)
+                : kerrokset.EsilataaLentoV3(reitti);
+            int maastoN = rataPaalla ? 64 : V3MaastoNaytteita;
+            var maastoKysely = V3MaastoKysely(reitti, pit, maastoN);
             // Kohteen maa (liioiteltu): kaupungin piste on maa + nosto (KaupunkiMerkit.PisteenKorkeus, löydös 166).
             double maaKohteessa = merkit != null ? merkit.PisteenKorkeus(lat1, lon1) - merkit.nosto : double.NaN;
             if (double.IsNaN(maaKohteessa)) maaKohteessa = 0;
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
+            // Napautusnäkymä on radan alku: ei leikkausta (kamera lähtee levosta nykyisestä asennosta). Rata lasketaan jo
+            // odotuksen alussa, jotta ennakkokamera pyytää lähikuvan laatat odotuksen ja syöksyn aikana.
+            AloituslennonRata rata = null;
+            var napautus = default(AloituslennonRata.Asento);
+            if (rataPaalla)
+            {
+                napautus = new AloituslennonRata.Asento(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus,
+                    kierto.suuntima, kierto.katseKorkeus);
+                // Loppu = pelin saapumisnäkymä (PeliOhjain.Saavu(maaRajaus: false) → AjaSaapumisnakymaan): kamera päättyy siihen.
+                var sn = kierto.SaapumisNakyma(null, lat1, lon1, maaRajaus: false);
+                var loppu = new AloituslennonRata.Asento(sn.Lat, sn.Lon, sn.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), sn.Kallistus,
+                    sn.Suunta, 0.0);
+                rata = new AloituslennonRata(lat0, lon0, lat1, lon1, napautus, loppu, (double)Screen.width / Mathf.Max(1, Screen.height),
+                    kamera != null ? kamera.fieldOfView : 50.0, maaKohteessa, ohitusKohta);
+                EnnakkoAsentoon(0, rata.Kamera(AloituslennonRata.OhitusS), kamera);
+                EnnakkoAsentoon(1, rata.Kamera(AloituslennonRata.SaapuminenS + 0.4), kamera);
+            }
 
             // 1. ODOTUS: nykyinen näkymä elää (ei feidiä eikä verhoa), käytävä latautuu, moottori käynnistyy. Kone luodaan ja
             // piirretään jo nyt lähtöpaikassaan (esilämmitys: varjostin ja verkot ennen leikkausta; valintanäkymästä se on
@@ -299,6 +331,7 @@ namespace Matkakirja
             // saapuminen jatkuvat. Päättyy perillä tai lennon purussa (V3Pois).
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, true);
             float odotusAlku = Time.unscaledTime;
+            var rataEhto = rata != null ? new ValmiusEhto() : null;
             string syy;
             int kehyksia = 0;
             while (true)
@@ -307,7 +340,17 @@ namespace Matkakirja
                 if (++kehyksia == 3 && v3Kone != null) v3Kone.gameObject.SetActive(false);
                 float kulunut = Time.unscaledTime - odotusAlku;
                 LentoV3Odotus = kulunut;
+                // Aloitusrata: napautusnäkymä pysyy (omistaja: ei siirtymää ennen lentoa). Kaupungin napautus käynnistää myös
+                // KaupunkiMerkit.ValitseKaupunki-ajon kohti kaupunkia heti aloituslennon käynnistyksen jälkeen (v4-video 27.9.:
+                // kamera zoomasi odotuksessa Ateenaan ja syöksy hyppäsi takaisin); Kuvaa katkaisee ajon ja pitää asennon.
+                if (rata != null)
+                    kierto.Kuvaa(napautus.Lat, napautus.Lon, napautus.EtaisyysM, napautus.Kallistus, napautus.Suuntima, napautus.Katse);
                 syy = LennonV3Kaytava.Leikkaa(kulunut, v3Kaytava != null ? v3Kaytava.Osuus : 1f, v3Kaytava != null ? v3Kaytava.AlkuOsuus : 1f);
+                // Aloitusrata: myös Cesiumin valinta tasaantunut (ennakkokamera mukana: ohituksen lähikuvan laatat piirtoon asti),
+                // enintään AloitusrataOdotusKattoS napautuksesta. Näkymä on koko ajan paikallaan.
+                bool pallo = rata == null || Valmius.Tasaantunut(rataEhto, kerrokset != null ? kerrokset.pallo : null);
+                if (syy != null && !pallo && syy == "valmis" && kulunut < AloitusrataOdotusKattoS) syy = null;
+                else if (syy != null && rata != null) syy += pallo ? ", pallo valmis" : ", pallo kesken";
                 if (syy != null) break;
                 yield return null;
             }
@@ -326,7 +369,9 @@ namespace Matkakirja
             kerrokset?.Nakyvyys("reitit", false);
             lentoMerkit = merkit;
             lentoIdt = kohdeId != null ? new[] { kohdeId } : null;
-            if (maamerkit != null && lentoIdt != null) maamerkit.Nayta(lentoIdt);
+            // Aloitusrata v3d (omistaja 28.9.: "Ota Ateenassa tuo 3d pois lennosta. Näyttää oudolta"): kohteen maamerkkimalli ei
+            // näy aloituslennolla; punainen rengas ja nimi jäävät.
+            if (maamerkit != null && lentoIdt != null && rata == null) maamerkit.Nayta(lentoIdt);
             if (merkit != null && lentoIdt != null)
             {
                 merkit.Renkaat(lentoIdt, null, LentoPunainen);
@@ -343,6 +388,21 @@ namespace Matkakirja
             lahti?.Invoke();
             AsetaVaihe(LennonVaihe.Nousu);
             V3Tapahtuma("leikkaus");
+            if (rata != null)
+            {
+                // v3: horisonttiusvan raja vähintään 250 km radan ajan (ohituksen ja saapumisen lähikuvissa maa näkyy).
+                Aurinko.UsvaVahintaanM = AloituslennonRata.UsvaVahintaanM;
+                TeeJalki(lat0, lon0, lat1, lon1);
+                // v3e: siivenkärkien ja pakoputken vanat sekä loppukohtauksen linnut (AloituslennonIlma).
+                aloitusIlma = AloituslennonIlma.Luo(georeferenssi, kamera);
+                var mo = rata.Mitta(AloituslennonRata.OhitusS);
+                var mk = rata.Mitta(AloituslennonRata.KosketusS);
+                Debug.Log($"MATKAKIRJA aloitusrata: {kohdeId ?? "?"} {rata.ReittiM / 1000:0} km, napautus {napautus.EtaisyysM / 1000:0} km "
+                          + $"{napautus.Kallistus:0}° {napautus.Suuntima:0}°, loppu {rata.Loppu.EtaisyysM / 1000:0} km, matkanopeus "
+                          + $"{rata.Nopeus1:0.00}/{rata.Nopeus2:0.00} etäisyyttä/s, ohitus {mo.EtaisyysM / 1000:0.0} km α {mo.Alfa:0}° "
+                          + $"{mo.Koko:P0}, kosketus {mk.EtaisyysM / 1000:0} km {mk.Koko:P1}, usva vähintään {Aurinko.UsvaVahintaanM / 1000:0} km, "
+                          + $"ohitus reitin kohdassa {rata.Ohitus:0.000}");
+            }
 
             // 3. LENTO 15,0 s.
             double[] lisa = null;
@@ -357,7 +417,7 @@ namespace Matkakirja
                 float nyt = Time.unscaledTime;
                 float dt = Mathf.Max(1e-4f, nyt - edellinen);
                 edellinen = nyt;
-                double t = math.min(LennonV3.KestoS, nyt - alku);
+                double t = math.min(rata != null ? AloituslennonRata.KestoS : LennonV3.KestoS, nyt - alku);
                 // Maaston lisäkorkeus heti, kun Cesiumin kysely valmistuu; pehmeästi 1,5 s:ssa (speksi: pehmennys 1,5 s).
                 if (maastoKysely != null && maastoKysely.IsCompleted)
                 {
@@ -366,7 +426,7 @@ namespace Matkakirja
                     if (!k.IsFaulted && !k.IsCanceled && k.Result != null)
                     {
                         var r = k.Result;
-                        var m = new double[V3MaastoNaytteita];
+                        var m = new double[maastoN];
                         double korkein = 0;
                         for (int i = 0; i < m.Length; i++)
                         {
@@ -382,20 +442,28 @@ namespace Matkakirja
                     else Debug.LogWarning("MATKAKIRJA lento v3: reitin maastokysely epäonnistui, kone 3,5 km:ssä");
                 }
                 if (lisa != null) lisaPaino += (1.0 - lisaPaino) * (1.0 - math.exp(-dt / 1.5));
-                double u = LennonV3.KoneenOsuus(t);
+                double u = rata != null ? rata.KoneenOsuus(t) : LennonV3.KoneenOsuus(t);
                 var q = LennonV3.ReitinKohta(reitti, pit, u);
-                double h = LennonV3Kaytava.KoneenKorkeus(t, lisa != null ? LennonV3Kaytava.LisaOsuudessa(lisa, u) * lisaPaino : 0, maaKohteessa);
-                double kall = LennonV3.Kallistus(reitti, pit, t);
+                double lisaNyt = lisa != null ? LennonV3Kaytava.LisaOsuudessa(lisa, u) * lisaPaino : 0;
+                // Radalla: peruskorkeus + symbolisen koon nosto (AloituslennonRata) + maaston lisä lennon ajan; lasku kohteen maahan.
+                double lisaRata = rata != null ? lisaNyt * AloituslennonRata.LisanPaino(t) : 0;
+                var ra = rata != null ? rata.Kamera(t, lisaRata) : default;
+                double siipi = rata != null ? rata.Siipi(t) : V3SiipivaliM;
+                double h = rata != null
+                    ? rata.KoneenKorkeus(t) + lisaRata + math.max(0.0, maaKohteessa) * math.saturate((t - 11.0) / (AloituslennonRata.KosketusS - 11.0))
+                    : LennonV3Kaytava.KoneenKorkeus(t, lisaNyt, maaKohteessa);
+                double tV3 = rata != null ? AloituslennonRata.V3Aika(t) : t;
+                double kall = rata != null ? 0.0 : LennonV3.Kallistus(reitti, pit, t);
                 Lat = q.Lat;
                 Lon = q.Lon;
-                AsetaVaihe(t < 5.0 ? LennonVaihe.Nousu : t < 11.0 ? LennonVaihe.Matka : LennonVaihe.Lasku);
-                if (aloitus && !vartijaAlkoi && t >= 11.0)
+                AsetaVaihe(tV3 < 5.0 ? LennonVaihe.Nousu : tV3 < 11.0 ? LennonVaihe.Matka : LennonVaihe.Lasku);
+                if (aloitus && !vartijaAlkoi && tV3 >= 11.0)
                 {
                     vartijaAlkoi = true;
                     Saapumisvartija.Aloita("aloituslento " + (kohdeId ?? "?"), "lento", saapumisLataus);
                 }
-                if (!kosketus && t >= LennonV3.KosketusS) { kosketus = true; V3Tapahtuma("kosketus"); }
-                if (!tyhjakaynti && t >= LennonV3.KosketusS + 0.3) { tyhjakaynti = true; V3Tapahtuma("tyhjakaynti"); }
+                if (!kosketus && tV3 >= LennonV3.KosketusS) { kosketus = true; V3Tapahtuma("kosketus"); }
+                if (!tyhjakaynti && tV3 >= LennonV3.KosketusS + 0.3) { tyhjakaynti = true; V3Tapahtuma("tyhjakaynti"); }
 
                 // Kamera (LennonV3.Kamera): kone katseen kohteena, katse liukuu 13–15 s 30 % kohti kaupunkia. PalloKierto.Kuvaa:
                 // kallistus pystystä = 90° − korkeuskulma, suuntima = katseen suunta = lentosuunta + θ (θ 90 = kamera vasemmalla).
@@ -405,21 +473,38 @@ namespace Matkakirja
                 double klon = q.Lon + ((lon1 - q.Lon + 540.0) % 360.0 - 180.0) * s;
                 double katse = h + (maaKohteessa - h) * s;
                 double kallistusK = 90.0 - kk.Korkeuskulma;
-                if (kierto != null) kierto.Kuvaa(klat, klon, kk.EtaisyysM, kallistusK, q.Suunta + kk.Theta, katse);
-                Vector3 paikka = v3Kone != null ? V3AsetaKone(kamera, q.Lat, q.Lon, h, q.Suunta, t, siemen, kall) : Vector3.zero;
+                if (rata != null) kierto.Kuvaa(ra.Lat, ra.Lon, ra.EtaisyysM, ra.Kallistus, ra.Suuntima, ra.Katse);
+                else if (kierto != null) kierto.Kuvaa(klat, klon, kk.EtaisyysM, kallistusK, q.Suunta + kk.Theta, katse);
+                Vector3 paikka = v3Kone != null ? V3AsetaKone(kamera, q.Lat, q.Lon, h, q.Suunta, tV3, siemen, kall, siipi) : Vector3.zero;
+                if (rata != null)
+                {
+                    // v3b: kiri ja ylilento karkeammalla laattavalinnalla (latausjono ei täyty ennen saapumista).
+                    LiikeLaatat.LentoKarkeaSse = AloituslennonRata.Karkea(t) ? AloituslennonRata.KarkeaSse : 0f;
+                    PaivitaJalki(u, ra.EtaisyysM, kamera);
+                    if (aloitusIlma != null && v3Kone != null) aloitusIlma.Paivita((float)t, v3Kone.Runko, siipi, rata.Mitta(t).Koko);
+                    // Ennakkokamerat: [0] ohituksen lähikuva, sen jälkeen kosketus; [1] saapumisen lähin kohta (~200 km, tarkimmat
+                    // laatat; esi-isät kattavat kosketuksen 490 km:n näkymän), sitten kamera itse; kosketuksesta pois.
+                    if (t >= AloituslennonRata.KosketusS) EnnakkoPois();
+                    else
+                    {
+                        EnnakkoAsentoon(0, rata.Kamera(t < AloituslennonRata.OhitusLoppuS ? AloituslennonRata.OhitusS : AloituslennonRata.KosketusS), kamera);
+                        EnnakkoAsentoon(1, rata.Kamera(Math.Max(t, AloituslennonRata.SaapuminenS + 0.4)), kamera);
+                    }
+                }
 
                 // Äänen tila (LentoAani.Tila) ja EI MONOTONIAA -seuranta lokiin.
-                var elo = LennonV3.Elo(t, siemen);
+                var elo = LennonV3.Elo(tV3, siemen);
                 double etaisyys = kamera != null ? Vector3.Distance(kamera.transform.position, paikka) / math.max(1e-9, georeferenssi.transform.lossyScale.x) : kk.EtaisyysM;
                 double lahestyy = double.IsNaN(edEtaisyys) ? 0 : (edEtaisyys - etaisyys) / dt;
                 edEtaisyys = etaisyys;
-                double kaasu = t < 2 ? 0.7 : t < 4 ? 1.0 : t < 11.5 ? 0.85 : t < LennonV3.KosketusS ? 0.4 : 0.1;
+                double kaasu = tV3 < 2 ? 0.7 : tV3 < 4 ? 1.0 : tV3 < 11.5 ? 0.85 : tV3 < LennonV3.KosketusS ? 0.4 : 0.1;
                 V3Aani = new LentoV3Aani { EtaisyysM = (float)etaisyys, LahestymisnopeusMs = (float)lahestyy, Kierrokset = (float)elo.Kierrokset, Kaasu = (float)kaasu };
                 kallMin = math.min(kallMin, kall + elo.Kallistus); kallMax = math.max(kallMax, kall + elo.Kallistus);
                 kierrMin = math.min(kierrMin, elo.Kierrokset); kierrMax = math.max(kierrMax, elo.Kierrokset);
-                kameraMax = math.max(kameraMax, h + kk.EtaisyysM * math.sin(math.radians(kk.Korkeuskulma)));
+                kameraMax = rata != null ? math.max(kameraMax, ra.EtaisyysM * math.cos(math.radians(ra.Kallistus)))
+                    : math.max(kameraMax, h + kk.EtaisyysM * math.sin(math.radians(kk.Korkeuskulma)));
                 katseMin = math.min(katseMin, -kk.Korkeuskulma); katseMax = math.max(katseMax, -kk.Korkeuskulma);
-                if (reittiNaytteet != null && (t >= seuraavaNayte || t >= LennonV3.KestoS))
+                if (reittiNaytteet != null && (t >= seuraavaNayte || t >= (rata != null ? AloituslennonRata.KestoS : LennonV3.KestoS)))
                 {
                     seuraavaNayte += 0.1f;
                     var kp = kamera.transform.position;
@@ -438,6 +523,9 @@ namespace Matkakirja
                 Debug.Log(LennonKamerareitti.Raportti(LennonKamerareitti.Analysoi(reittiNaytteet),
                     $"{(aloitus ? "aloituslento" : "lento")} v3 {kohdeId ?? "?"} {LennonV3.KestoS:0.0} s (oikea kamera)"));
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
+            Aurinko.UsvaVahintaanM = 0;
+            LiikeLaatat.LentoKarkeaSse = 0f;
+            IlmaPois();
             V3Tapahtuma("perilla");
             // Nappula kohteeseen piilossa: esityksen purku näyttää sen perillä (V3Pois).
             if (olio != null) Siirra(lat1, lon1, 0);

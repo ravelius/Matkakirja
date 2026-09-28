@@ -23,8 +23,12 @@
 // Unityn RemoteIO:n, ks. MatkakirjaSanelu.mm).
 //
 // KESKEYTYKSET (kuten sanelussa): sovellus taustalle, istunnon keskeytys (puhelu), mediapalveluiden nollaus,
-// vieras luokanvaihto kesken keskustelun ja pysähtynyt moottori → mikrofoni kiinni, istunto palautetaan ja
+// vieras luokanvaihto kesken keskustelun → mikrofoni kiinni, istunto palautetaan ja
 // MatkakirjaPuhekanava_Tila = Keskeytetty; Unity lopettaa keskustelun seuraavassa ruudussa.
+// UUDELLEENKÄYNNISTYS (Laitetestaajan savuke 28.9.: kanava katkesi ~6 s:ssa 3/3, syöte 192 kHz): moottorin
+// kokoonpanon muutos ja reitin vaihto (kuulokkeet kiinni/irti) eivät sulje kanavaa, vaan moottori käynnistetään
+// uudelleen mikin nykyisestä muodosta (ensin sama moottori, sitten uusi); kanava pysyy auki ja Unity jatkaa samaa
+// WebSocketia. Keskeytys vasta, jos uudelleenkäynnistys epäonnistuu tai toistuu yli 5 kertaa 30 s:ssa.
 //
 // Info.plist: NSMicrophoneUsageDescription (Editor/Rakennus.cs PaikallinenVerkkoPlist, sama kuin sanelulla).
 // Ilman sitä iOS kaataisi sovelluksen lupaa kysyttäessä: Lupa = EiKuvausta eikä mitään kysytä.
@@ -159,6 +163,9 @@ static BOOL MatkakirjaPuhekanava_Kuvaus(void)
 @property (nonatomic, copy) AVAudioSessionCategory aiempiLuokka;
 @property (nonatomic, copy) AVAudioSessionMode aiempiTila;
 @property (nonatomic) AVAudioSessionCategoryOptions aiemmatValinnat;
+@property (nonatomic) BOOL uudelleenJonossa;                 // kokoonpanon/reitin muutos odottaa uudelleenkäynnistystä
+@property (nonatomic) int uudelleenMaara;                    // uudelleenkäynnistykset ikkunassa (silmukkavahti)
+@property (nonatomic) CFAbsoluteTime uudelleenIkkuna;        // ikkunan alku
 @end
 
 static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
@@ -246,6 +253,7 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
 {
     if (self.moottori) [self sulje];
     MatkakirjaPuhekanava_rengas.Tyhjenna();
+    self.uudelleenMaara = 0;
 
     NSError* virhe = nil;
     if (![self keskustelutila:&virhe])
@@ -254,29 +262,25 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
         [self palautaIstunto];
         return MatkakirjaPuhekanava_EiIstuntoa;
     }
-
-    // Tuore moottori istunnon vaihdon jälkeen (kierrätetty jäi toistoluokan syötepolkuun, MatkakirjaSanelu.mm).
-    AVAudioEngine* moottori = [AVAudioEngine new];
-    AVAudioInputNode* syote = moottori.inputNode;
-    if (![syote setVoiceProcessingEnabled:YES error:&virhe])
-        NSLog(@"MATKAKIRJA puhekanava: kaiunpoisto ei käynnistynyt (%@), jatketaan ilman", virhe);
-    if (syote.isVoiceProcessingEnabled)
+    int tulos = [self rakennaMoottori];
+    if (tulos != MatkakirjaPuhekanava_Ok)
     {
-        if (@available(iOS 17.0, *))
-        {
-            // Unityn musiikki ja tehosteet eivät painu lähes hiljaisiksi keskustelun ajaksi.
-            AVAudioVoiceProcessingOtherAudioDuckingConfiguration vaimennus;
-            vaimennus.enableAdvancedDucking = NO;
-            vaimennus.duckingLevel = AVAudioVoiceProcessingOtherAudioDuckingLevelMin;
-            syote.voiceProcessingOtherAudioDuckingConfiguration = vaimennus;
-        }
+        [self palautaIstunto];
+        return tulos;
     }
+    MatkakirjaPuhekanava_tila = MatkakirjaPuhekanava_Auki;
+    return MatkakirjaPuhekanava_Ok;
+}
+
+/// Mikin tap syötteen NYKYISESTÄ muodosta: muunnin näytteistää sen taajuudesta (simulaattori 192 kHz,
+/// kuulokkeet 16/48 kHz) 24 kHz monoksi rengaspuskuriin. Kutsutaan joka käynnistyksessä uudelleen.
+- (int)asennaTap:(AVAudioInputNode*)syote
+{
     AVAudioFormat* muoto = [syote outputFormatForBus:0];
     if (muoto.sampleRate <= 0 || muoto.channelCount == 0) muoto = [syote inputFormatForBus:0];
     if (muoto.sampleRate <= 0 || muoto.channelCount == 0)
     {
         NSLog(@"MATKAKIRJA puhekanava: syötteen muoto 0 Hz");
-        [self palautaIstunto];
         return MatkakirjaPuhekanava_EiMuotoa;
     }
 
@@ -288,7 +292,6 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
     if (muunnin == nil)
     {
         NSLog(@"MATKAKIRJA puhekanava: muunnin %@ → 24 kHz ei onnistu", muoto);
-        [self palautaIstunto];
         return MatkakirjaPuhekanava_EiMuotoa;
     }
     muunnin.downmix = YES;   // voice processing voi antaa useamman kanavan: mono sekoittamalla
@@ -314,6 +317,34 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
         if (ulos.frameLength > 0 && ulos.int16ChannelData != NULL)
             MatkakirjaPuhekanava_rengas.Kirjoita((const uint8_t*)ulos.int16ChannelData[0], (size_t)ulos.frameLength * 2);
     }];
+    NSLog(@"MATKAKIRJA puhekanava: mikki %.0f Hz, %u kanavaa → 24 kHz mono", muoto.sampleRate, (unsigned)muoto.channelCount);
+    return MatkakirjaPuhekanava_Ok;
+}
+
+/// Moottori, mikin tap ja soitin keskustelutilassa olevaan istuntoon. Syötteen muoto luetaan joka kerta
+/// uudelleen: kokoonpanon tai reitin muutoksen jälkeen mikin taajuus voi olla eri (simulaattori 192 kHz,
+/// kuulokkeet 16/48 kHz), ja muunnin näytteistää siitä 24 kHz:iin. Ei koske istuntoon eikä kanavan tilaan.
+- (int)rakennaMoottori
+{
+    NSError* virhe = nil;
+    // Tuore moottori istunnon vaihdon jälkeen (kierrätetty jäi toistoluokan syötepolkuun, MatkakirjaSanelu.mm).
+    AVAudioEngine* moottori = [AVAudioEngine new];
+    AVAudioInputNode* syote = moottori.inputNode;
+    if (![syote setVoiceProcessingEnabled:YES error:&virhe])
+        NSLog(@"MATKAKIRJA puhekanava: kaiunpoisto ei käynnistynyt (%@), jatketaan ilman", virhe);
+    if (syote.isVoiceProcessingEnabled)
+    {
+        if (@available(iOS 17.0, *))
+        {
+            // Unityn musiikki ja tehosteet eivät painu lähes hiljaisiksi keskustelun ajaksi.
+            AVAudioVoiceProcessingOtherAudioDuckingConfiguration vaimennus;
+            vaimennus.enableAdvancedDucking = NO;
+            vaimennus.duckingLevel = AVAudioVoiceProcessingOtherAudioDuckingLevelMin;
+            syote.voiceProcessingOtherAudioDuckingConfiguration = vaimennus;
+        }
+    }
+    int tapTulos = [self asennaTap:syote];
+    if (tapTulos != MatkakirjaPuhekanava_Ok) return tapTulos;
 
     // Vastausääni samaan moottoriin: kaiunpoisto tuntee sen (ks. alku).
     AVAudioPlayerNode* soitin = [AVAudioPlayerNode new];
@@ -326,7 +357,6 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
     {
         NSLog(@"MATKAKIRJA puhekanava: moottori ei käynnistynyt: %@", virhe);
         [syote removeTapOnBus:0];
-        [self palautaIstunto];
         return MatkakirjaPuhekanava_EiMoottoria;
     }
     self.moottori = moottori;
@@ -338,14 +368,12 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
         MatkakirjaPuhekanava_jonossa = 0;
         [soitin play];
     }
-    MatkakirjaPuhekanava_tila = MatkakirjaPuhekanava_Auki;
-    NSLog(@"MATKAKIRJA puhekanava: auki (%.0f Hz, %u kanavaa → 24 kHz mono, kaiunpoisto %d)", muoto.sampleRate,
-          (unsigned)muoto.channelCount, (int)syote.isVoiceProcessingEnabled);
+    NSLog(@"MATKAKIRJA puhekanava: auki (kaiunpoisto %d)", (int)syote.isVoiceProcessingEnabled);
     return MatkakirjaPuhekanava_Ok;
 }
 
-/// Moottori ja soitin kiinni, istunto palautetaan. Turvallinen kutsua monesti.
-- (void)sulje
+/// Moottori ja soitin kiinni, istunto ennallaan. Turvallinen kutsua monesti.
+- (void)puraMoottori
 {
     {
         std::lock_guard<std::mutex> l(MatkakirjaPuhekanava_soittoLukko);
@@ -362,8 +390,87 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
         if (m.isRunning) [m stop];
         self.moottori = nil;
     }
+}
+
+/// Moottori ja soitin kiinni, istunto palautetaan. Turvallinen kutsua monesti.
+- (void)sulje
+{
+    self.uudelleenJonossa = NO;
+    [self puraMoottori];
     MatkakirjaPuhekanava_rengas.Tyhjenna();
     [self palautaIstunto];
+}
+
+/// Kokoonpanon tai reitin muutos: moottori uudelleen hetken päästä (muutokset tulevat usein ryppäänä).
+- (void)ajastaUudelleen:(NSString*)miksi
+{
+    if (MatkakirjaPuhekanava_tila != MatkakirjaPuhekanava_Auki || self.uudelleenJonossa) return;
+    self.uudelleenJonossa = YES;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (!self.uudelleenJonossa) return;   // suljettiin välissä
+        self.uudelleenJonossa = NO;
+        [self kaynnistaUudelleen:miksi];
+    });
+}
+
+/// Uusi moottori samaan istuntoon; kanava pysyy auki, joten Unity jatkaa samaa WebSocketia. Soimassa ollut
+/// vastausääni katkeaa (soitin on uusi), mikin rengaspuskuri säilyy. Silmukkavahti: yli 5 kertaa 30 s:ssa
+/// → keskeytys kuten ennen.
+- (void)kaynnistaUudelleen:(NSString*)miksi
+{
+    if (MatkakirjaPuhekanava_tila != MatkakirjaPuhekanava_Auki) return;
+    CFAbsoluteTime nyt = CFAbsoluteTimeGetCurrent();
+    if (nyt - self.uudelleenIkkuna > 30.0) { self.uudelleenIkkuna = nyt; self.uudelleenMaara = 0; }
+    if (++self.uudelleenMaara > 5)
+    {
+        [self keskeyta:[NSString stringWithFormat:@"%@, uudelleenkäynnistyksiä liikaa", miksi]];
+        return;
+    }
+    if (![[AVAudioSession sharedInstance].category isEqualToString:AVAudioSessionCategoryPlayAndRecord])
+    {
+        self.istuntoVaihdettu = NO;   // joku muu vaihtoi luokan: sen asetusta ei kumota
+        [self keskeyta:@"vieras luokanvaihto"];
+        return;
+    }
+    // Ensin sama moottori (Applen ohje: tap uudelleen uudesta muodosta + start; kaiunpoisto pysyy kytkettynä),
+    // vasta sitten kokonaan uusi (kaiunpoiston uudelleenkytkentä voi itse laukaista uuden muutoksen).
+    if ([self jatkaMoottoria])
+    {
+        NSLog(@"MATKAKIRJA puhekanava: uudelleenkäynnistys %d (%@), sama moottori", self.uudelleenMaara, miksi);
+        return;
+    }
+    [self puraMoottori];
+    int tulos = [self rakennaMoottori];
+    if (tulos != MatkakirjaPuhekanava_Ok)
+    {
+        [self keskeyta:[NSString stringWithFormat:@"%@, uudelleenkäynnistys %d", miksi, tulos]];
+        return;
+    }
+    NSLog(@"MATKAKIRJA puhekanava: uudelleenkäynnistys %d (%@), uusi moottori", self.uudelleenMaara, miksi);
+}
+
+/// Pysähtynyt moottori jatkamaan: tap uudesta syötemuodosta, prepare/start, soitin uudelleen soimaan.
+- (BOOL)jatkaMoottoria
+{
+    AVAudioEngine* m = self.moottori;
+    if (m == nil) return NO;
+    [m.inputNode removeTapOnBus:0];
+    if (m.isRunning) [m stop];
+    if ([self asennaTap:m.inputNode] != MatkakirjaPuhekanava_Ok) return NO;
+    NSError* virhe = nil;
+    [m prepare];
+    if (![m startAndReturnError:&virhe])
+    {
+        NSLog(@"MATKAKIRJA puhekanava: sama moottori ei käynnistynyt: %@", virhe);
+        [m.inputNode removeTapOnBus:0];
+        return NO;
+    }
+    std::lock_guard<std::mutex> l(MatkakirjaPuhekanava_soittoLukko);
+    MatkakirjaPuhekanava_sukupolvi++;   // pysähdyksessä hukkuneet puskurit eivät enää vähennä jonoa
+    MatkakirjaPuhekanava_jonossa = 0;
+    [self.soitin stop];
+    [self.soitin play];
+    return YES;
 }
 
 - (void)keskeyta:(NSString*)miksi
@@ -393,10 +500,19 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
     }];
     [nc addObserverForName:AVAudioSessionRouteChangeNotification object:nil queue:paa
                 usingBlock:^(NSNotification* n) {
-        if ([n.userInfo[AVAudioSessionRouteChangeReasonKey] unsignedIntegerValue] != AVAudioSessionRouteChangeReasonCategoryChange)
-            return;
         MatkakirjaPuhekanava* s = MatkakirjaPuhekanava_olio;
         if (s == nil || MatkakirjaPuhekanava_tila != MatkakirjaPuhekanava_Auki) return;
+        NSUInteger syy = [n.userInfo[AVAudioSessionRouteChangeReasonKey] unsignedIntegerValue];
+        if (syy == AVAudioSessionRouteChangeReasonNewDeviceAvailable
+            || syy == AVAudioSessionRouteChangeReasonOldDeviceUnavailable
+            || syy == AVAudioSessionRouteChangeReasonOverride
+            || syy == AVAudioSessionRouteChangeReasonRouteConfigurationChange)
+        {
+            // Kuulokkeet kiinni/irti tms.: mikin taajuus ja kanavat voivat vaihtua → uusi moottori.
+            [s ajastaUudelleen:[NSString stringWithFormat:@"reitin muutos %lu", (unsigned long)syy]];
+            return;
+        }
+        if (syy != AVAudioSessionRouteChangeReasonCategoryChange) return;
         if ([[AVAudioSession sharedInstance].category isEqualToString:AVAudioSessionCategoryPlayAndRecord]) return;
         // Joku muu (esim. MatkakirjaAani_Toisto) vaihtoi luokan: sen asetusta ei kumota palautuksella.
         s.istuntoVaihdettu = NO;
@@ -406,7 +522,8 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
                 usingBlock:^(NSNotification* n) {
         MatkakirjaPuhekanava* s = MatkakirjaPuhekanava_olio;
         if (s == nil || MatkakirjaPuhekanava_tila != MatkakirjaPuhekanava_Auki || n.object != s.moottori) return;
-        if (!s.moottori.isRunning) [s keskeyta:@"moottorin kokoonpano muuttui"];
+        // Moottori on pysähtynyt tai sen tap-muoto on vanhentunut: uusi moottori, kanava ja WebSocket jatkavat.
+        [s ajastaUudelleen:@"moottorin kokoonpano muuttui"];
     }];
 }
 

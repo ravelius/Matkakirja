@@ -44,7 +44,8 @@ namespace Matkakirja.Natiivi
         readonly UiKerros ui;
         readonly VisualElement peite, arkki, ylaosa, sisus;
         readonly Label aika, otsikko;
-        readonly Button kaiutin;
+        /// <summary>Kaksinappinen lukija (omistaja 28.9.2026, web #3537): otsikon perässä [valikko][kaiutin].</summary>
+        readonly KortinLukija lukija;
         readonly ScrollView vieritys;
         readonly Kuvasuurennos suurennos;
         readonly List<string> luettavat = new List<string>();
@@ -52,8 +53,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement valikko;
         Kohdekartta kartta;
         KohdekarttaKohde nykyinen;
-        bool opas, luetaan;
-        int lukuVersio;
+        bool opas;
 
         public bool Auki { get; private set; }
         /// <summary>Oppaan arkki (UiNakymat: koko ruudun peitto sammuttaa pallon kameran vierityksen ajaksi).</summary>
@@ -82,8 +82,8 @@ namespace Matkakirja.Natiivi
             var otsikkorivi = Rakenne.El("mk-nahtavyys__otsikkorivi", ylaosa, PickingMode.Ignore);
             otsikko = Rakenne.Teksti("", "mk-nahtavyys__otsikko", otsikkorivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
-            kaiutin = Rakenne.Nappi(null, "mk-nahtavyys__kaiutin", VaihdaLuenta, otsikkorivi, Ikonit.Viiva["kaiutin"]);
-            kaiutin.tooltip = "Lue ääneen";
+            lukija = new KortinLukija(otsikkorivi, "Lue ääneen", "mk-nahtavyys__lukija", saatimet: true, rajaus: () => arkki.worldBound);
+            lukija.Lahde = () => luettavat;
 
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-nahtavyys__vieritys");
@@ -590,36 +590,9 @@ namespace Matkakirja.Natiivi
         {
             int pituus = -otsikonPituus;
             foreach (var t in luettavat) pituus += t?.Length ?? 0;
-            kaiutin.style.display = pituus >= 80 ? DisplayStyle.Flex : DisplayStyle.None;
+            lukija.Juuri.style.display = pituus >= 80 ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
-        void VaihdaLuenta()
-        {
-            if (luetaan) { PysaytaLuenta(); return; }
-            // Lukijan putkitus (Pelikoodari 27.9.): otsikko kappaleen alkuun, seuraavat palat esihaetaan.
-            var (palat, tagit) = Lukijaaani.LuennanPalatJaTagit(luettavat.Where(x => !string.IsNullOrWhiteSpace(x)));
-            var puhe = Puhe.Hae();
-            if (palat.Count == 0 || puhe == null) return;
-            luetaan = true;
-            kaiutin.AddToClassList("mk-valittu");
-            int v = ++lukuVersio, i = 0;
-            void Seuraava()
-            {
-                if (v != lukuVersio || i >= palat.Count) { if (v == lukuVersio) PysaytaLuenta(); return; }
-                puhe.Lue(palat[i], "kertoja", 0, Seuraava, pyynnosta: true, loppuTagi: tagit[i]);
-                i++;
-                KortinLukija.Esihae(puhe, palat, i, tagit: tagit);
-            }
-            Seuraava();
-        }
-
-        void PysaytaLuenta()
-        {
-            if (!luetaan) return;
-            luetaan = false;
-            lukuVersio++;
-            kaiutin.RemoveFromClassList("mk-valittu");
-            Puhe.Instanssi?.Pysayta(0.3f);
-        }
+        void PysaytaLuenta() => lukija.Vaihtui();
     }
 }
