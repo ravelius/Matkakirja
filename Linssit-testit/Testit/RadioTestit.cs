@@ -104,6 +104,28 @@ namespace Matkakirja.Linssit.Testit
             "{\"id\":\"NOR\",\"iso3\":\"NOR\",\"nimi\":\"NRK P1\",\"url\":\"https://nrk/p1\",\"luokka\":\"kielletty\"}]}"),
             Paketti("radiot.json"), Paketti("kaupungit-radio.json"));
 
+        // KAIKKI MAAILMAN MAAT (omistaja 28.9.2026): aseman oma kaupunki (kaupunki, lat, lon) korvaa laudan aluesolmun,
+        // mutta lähellä oleva laudan kaupunki (≤ 60 km) ja pelaajan oma kaupunki säilyvät; laudaton maa saa aseman kaupungin.
+        [Testi] static void AsemanKaupunkiKorvaaAluenimen()
+        {
+            var a = RadioAineisto.Lue(MiniJson.Jasenna("{\"alkiot\":[" +
+                "{\"id\":\"COD\",\"iso3\":\"COD\",\"nimi\":\"RTNC\",\"url\":\"https://rtnc/live\",\"luokka\":\"epaselva\",\"kaupunki\":\"Kinshasa\",\"lat\":-4.32,\"lon\":15.31}," +
+                "{\"id\":\"ITA\",\"iso3\":\"ITA\",\"nimi\":\"Rai Radio 1\",\"url\":\"https://rai/r1\",\"luokka\":\"sallittu\",\"kaupunki\":\"Rooma\",\"lat\":41.9,\"lon\":12.5}," +
+                "{\"id\":\"MNG\",\"iso3\":\"MNG\",\"nimi\":\"Mongolian Radio\",\"url\":\"https://mnb/r1\",\"luokka\":\"epaselva\",\"kaupunki\":\"Ulan Bator\",\"lat\":47.92,\"lon\":106.92}]}"),
+                null, MiniJson.Jasenna("{\"alkiot\":[" +
+                "{\"id\":\"kongo\",\"nimi\":\"Kongo\",\"maa\":\"COD\",\"lat\":-1.5,\"lon\":23.0}," +
+                "{\"id\":\"rooma\",\"nimi\":\"Rooma\",\"maa\":\"ITA\",\"lat\":41.89,\"lon\":12.49}," +
+                "{\"id\":\"venetsia\",\"nimi\":\"Venetsia\",\"maa\":\"ITA\",\"lat\":45.44,\"lon\":12.33,\"aloitus\":true}]}"));
+            var n = a.RadionKaupungit();
+            Oleta.Tosi(n.Contains("radio:COD") && !n.Contains("kongo"), "Kongo → Kinshasa: " + string.Join(",", n));
+            Oleta.Tosi(n.Contains("rooma") && !n.Contains("radio:ITA") && !n.Contains("venetsia"), "Rooman laudan kaupunki (alle 60 km)");
+            Oleta.Tosi(n.Contains("radio:MNG"), "laudaton maa mukaan");
+            Oleta.Sama("Kinshasa", a.Kaupunki("radio:COD").Nimi);
+            Oleta.Sama(MastoKoko.Keski, Mastot.Koko(a.Kaupunki("radio:MNG")), "aseman kaupunki keskikokoisena");
+            var oma = a.RadionKaupungit("venetsia");
+            Oleta.Tosi(oma.Contains("venetsia") && !oma.Contains("rooma"), "pelaajan oma kaupunki säilyy");
+        }
+
         [Testi] static void KokoelmaEnsisijainenJaLuokat()
         {
             var a = Hybridi();
