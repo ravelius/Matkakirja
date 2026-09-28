@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 10.1x)
+# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 12.5x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
 - Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet (3/3): /Users/Shared/Claude/wt/proto-linssiseppa-era5
-  (nyt mallinseppa/era6, junassa), -symbolit (linssiseppa/symbolit-lippu) ja -astro (linssiseppa/iss-kyyti); luovutus -q kohta 7.
+  (nyt mallinseppa/era6, junassa), -symbolit (linssiseppa/symbolit-lippu) ja -astro (linssiseppa/iss-kyyti); luovutus -r kohta 6.
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
 
 Lue:
@@ -13,15 +13,21 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260928-q.md** (jono, Cupola-erä, lippu, työkalut ja opit; -p.md aiempi)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260928-r.md** (kesken oleva laiteajo, Cupola ja Codex, kaupunkien valot ja
+  ISS-realismi 1–4, päivän säännöt ja opit; -q.md aiempi)
+- docs/raportit/iss-realismi-suunnitelma-20260928.md (ISS-realismin kaavat, vakiot, datalähteet ja tila)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -q kohta 1:** tarkista itsenäisen cl-ajon tulokset (käännös iss-kyyti + symbolit-lippu, laiteajo
-$S/ajo-cl.sh), sitten Cupolan usvan diagnoosi ja korjaus, Cupolan kuvapari + video Fablelle, lipun kuvapari Fablelle.
-Junassa jo: erät 5+6, astro-selain, joet. Sen jälkeen Geysir-tarkistus (matala prioriteetti) ja natiivin astroselite
-webin mallin jälkeen.
+**Järjestys: luovutus -r kohta 1:**
+1. Laiteajo cl3 käynnissä itsenäisesti: sammutusilmoitus Julkaisijalle, lipun kallistettu kuvapari Fablelle.
+2. Käännös cl4 (valot uudelleen yöllä, ISS-realismi 1, 3a ja 4b–c): kuvaparit Fablelle ja arvot Pelikoodarille ja
+   Siirtosepälle.
+3. Codexin Cupola 2 -kuvien kytkentä ja todennus.
+4. Päivän pilvet ja revontulet, kun Julkaisijan data on ämpärissä; 4a, kun Karttasepän BMNG on ämpärissä.
+5. Natiivin ISS-nopeutus webin mallin mukaan (Pelikoodari 891958e17).
+6. Natiivin astroselite webin mallin jälkeen.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
