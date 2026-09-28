@@ -2,17 +2,19 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 11:25 EEST — **Kuormakriisi ratkeamassa: load1 216→22, juurisyy (vanhan tilan CI-savukeajo) korjattu Julkaisijan toimesta.** Natiivi-UI ylitti 70% kynnyksen. Uusi postilaatikkoviesti (Linssiseppä→Codex, ISS Cupola).
+**Päivitetty:** 2026-09-28 11:32 EEST — **Kuorma nousi takaisin 64,2:een (oli 21,8) — toistuva todellinen syyllinen: `mds_stores`/Spotlight 232% CPU indeksoi jatkuvasti pallopolton tiedostoja.** Pysyvä korjaus vaatii järjestelmätason poikkeuksen (ei Postivahdin tehtävissä), ehdotettu Päätoimittajalle.
 
 ## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
 
 Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet (kuorma1 ≤ 8, ≤ 8 ydintä). Käännökset yksi kerrallaan Julkaisijan vuorolla matalalla prioriteetilla, simulaattoreita enintään yksi, ei agenttiparvia rinnakkain (enintään 1 agentti per rooli), ei raskaita paikallisia ajoja. Postivahti seuraa load1:tä joka kierroksella — jos kuorma1 > 10 yli 5 min, ilmoitetaan syyllinen prosessi Päätoimittajalle ja omistavalle roolille.
 
+**KLO 17 JÄLKEEN (omistaja hyväksyi "nice-oletuksen" 11:31, tuleva sääntö):** kuorma1 > 10 -hälytys poistuu. Sen sijaan valvotaan, että raskaat prosessit (poltot, xcodebuild, chromium-savukkeet, `node --test` -sarjat) ajavat `nice ≥ 10` (`ps -o nice,comm`) — jos raskas prosessi nice 0 yli 5 min, yksi rivi omistavalle roolille. GPU-sääntö jää voimaan: Mac-savukkeita ≤ 2, simulaattoreita ≤ 1 päivällä. Ennen klo 17 nykyinen puolikas-kuorma-valvonta (tämä osio) on voimassa.
+
 **Kuorma 61,2 (10:59) → 216 (11:01) → 114 (11:06) → 118 (11:10, tasaantunut).** load1 on rullaava 1 min keskiarvo ja laahaa perässä — **rakenteellinen paraneminen näkyy jo: R/Rs-tilaisia prosesseja 109→88→30**, eli akuutti ruuhka on purkautumassa vaikka mittari ei vielä näytä sitä. Nyt näkyvin: `il2cpp` (Unity natiivikäännös, alkoi 10:59, todennäköisesti aloituslento-työtä), `mds_stores` heilahtelee (2,3%→58%), 2× `sisaltopaketti.test.mjs`. Odotetaan load1:n laskevan seuraavalla kierroksella R/Rs-pudotuksen mukana.
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
-**JUURISYY SELVISI (Julkaisija 11:2x):** Pelikoodarin #3541-pushi (11:15) laukaisi Mac-savukeajon vanhassa tilassa (30 chromiumia rinnakkain). Julkaisija perui ajon ja mergesi #3539 (kevyt tila, lippu `/tmp/matkakirja-kevyt` luotu 11:01) — uudet savukkeet 2 rinnakkain taskpolicy -b:llä. **LOAD1: 118→57→37→21,8 (11:25), tasaisesti laskeva, lähellä turvallista tasoa.** 11:25 uusi savuke-sarja käynnistyi (36397192407, `aja-sarja.mjs` 18 testiä jonossa), 10 chromium-prosessia havaittu = 2 rinnakkaista savuketta × ~5 apuprosessia, sopii kevyt-tilan 2-rinnakkaisuuteen. Ilmoitettu Julkaisijalle tarkistettavaksi vastaako se odotettua.
+**Osasyy korjattu (Julkaisija 11:2x):** Pelikoodarin #3541-pushin CI-savukeajo vanhassa tilassa (30 chromiumia) peruttu, kevyt tila (#3539) mergetty. **LOAD1: 118→57→37→21,8 (11:25) → 64,2 (11:32, uusi nousu).** **TODELLINEN TOISTUVA JUURISYY: `mds_stores` (Spotlight) 232% CPU** — indeksoi jatkuvasti pallopolton kasvavaa tiedostomäärää, ei ole vielä pysyvästi ratkaistu. Chromium-runnerilla 0 (savuke-sarja tauolla testien välissä). Ilmoitettu Päätoimittajalle 11:32, ehdotettu Spotlight-poikkeusta `/Users/Shared/Claude/pyramidi-poltto/`-kansiolle.
 
 ## 1) Sessiot
 
@@ -86,18 +88,15 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (11:25)
+## 5) Resurssit (11:32)
 
-- **5 h -kiintiö:** 67 %. **Viikko (kaikki mallit): 18 %.** **Viikko (Päätoimittaja):** 0 %. (5 h -kiintiö nollautuu ~24 min sisällä, ei toimenpidettä.)
-- **Levy:** 143 Gi vapaana, hyvä puskuri. wt/-worktreet 30 kpl.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0 (päiväraja nyt 1 uuden puolikone-säännön mukaan).
-- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` ei ole palautunut. `/tmp/matkakirja-kevyt` päällä.
-- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** **Natiivi-UI 72% — ilmoitettu.** Päätoimittaja nollautunut (9%).
-- **LOAD1 (uusi omistajan sääntö klo 17 asti, raja 8):** 21,8 (11:25), laskeva trendi jatkuu (216→118→57→37→22). Juurisyy (CI-savukeajo vanhassa tilassa) korjattu.
-- **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
-- **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
-- **Lokisiivouskandidaatteja:** ei tällä kierroksella.
-- **Postilaatikko:** 1 uusi viesti (Linssiseppä→Codex: ISS Cupola) — ilmoitettu.
+- **5 h -kiintiö:** 68 %. **Viikko (kaikki mallit): 18 %.** **Viikko (Päätoimittaja):** 0 %. (5 h -kiintiö nollautuu ~17 min sisällä, ei toimenpidettä.)
+- **Levy:** 142 Gi vapaana, hyvä puskuri. 
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0 (päiväraja 1).
+- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** Natiivi-UI pysyy 72%:ssa, ei nollautunut.
+- **LOAD1 (uusi omistajan sääntö klo 17 asti, raja 8):** **64,2 (11:32) — nousi takaisin 21,8:sta.** Toistuva syyllinen `mds_stores`/Spotlight, ks. osio 0. Chromium-runnerilla 0.
+- **Postilaatikko:** EI UUTTA.
 - **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
