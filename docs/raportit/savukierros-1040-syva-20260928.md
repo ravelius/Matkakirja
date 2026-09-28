@@ -37,6 +37,19 @@ paljon pienempi kuin näkyvä ympyrä, tai vaatii eri interaktion. **Tarvitsen N
 tarkat pisteet iPhone 18 Prolle (402×874 pt) tai debug-komennon suoraan kaupungin valintaan** —
 en jatkanut arvailua turhan ajan haaskaamisen välttämiseksi.
 
+## Jatko (23.0x, Julkaisijan "laite NYT" + Natiivisepän vastaukset)
+
+**C todennettu: PASS.** `ui aloita ateena` (ui-komento.txt) toimii vasta kun sovellus on tuoreesti
+käynnistetty Aloitus-näyttöön (ei "Jatka matkaa" -tilassa — antoi ensin "sisältö ei ole vielä
+latautunut"). Uudelleenkäynnistyksen jälkeen komento toimi heti: 15 s lento, päivä alkoi heti
+(kello 08.03 heti alussa), kone ei hidastunut, laskeutui siististi Ateenaan, kartta latautui
+normaalisti. Ei kaatumista, ei mustaa ruutua.
+
+**A5-löydös ei estä julkaisua (vahvistettu):** pelaajan oikea polku (☰-valikko → Uusi peli →
+Aloita alusta) tyhjensi koko tallennuksen ja palautti puhtaan Aloitus-näytön ("Aloita seikkailu"),
+eli maakuntakartan tila ei voi jäädä roikkumaan — TyhjennaMuistit-polku toimii. Alkuperäinen FAIL
+koski vain debug-komentoa `uusi-peli`, joka ei kutsu samaa siivousta.
+
 ## Ei testattu
 Nostokortin lukijabugin uusinta — odottaa Natiivi-UI:n kaiutinkorjausta 42dacd5c junaan.
 
