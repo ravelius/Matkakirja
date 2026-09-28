@@ -81,6 +81,8 @@ permissions:
   contents: read
   # gh pr diff --name-only (harvan sarjan polkusuodatin).
   pull-requests: read
+  # Suljetun/mergetyn PR:n jonoon jäänyt ajo peruu itsensä (omistaja 28.9.2026).
+  actions: write
 
 # Peruu saman haaran/PR:n vanhan, yhä käynnissä olevan ajon uuden
 # pushin tullessa (omistaja/Fable 17.9.2026, PR #2551:n korjaussilmukka)
@@ -134,6 +136,21 @@ jobs:
       SAVUKE_RINNAKKAIN: '2'
       TULOKSET: /tmp/matkakirja-savukkeet/${{ github.run_id }}
     steps:
+      # VANHENTUNUT PR-AJO POIS (omistaja hyväksyi 28.9.2026): savukerunneri on
+      # yksi, ja mergettyjen/suljettujen PR:ien ajot jonottivat tunteja
+      # TF-viennin edellä. Jos PR ei ole enää auki, ajo peruu itsensä heti.
+      - name: Ohita suljettu PR
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          tila=$(gh pr view "${{ github.event.pull_request.number }}" --repo "${{ github.repository }}" --json state -q .state || echo OPEN)
+          if [ "$tila" != "OPEN" ]; then
+            echo "::notice::PR #${{ github.event.pull_request.number }} on $tila — savukeajo peruu itsensä."
+            gh run cancel "${{ github.run_id }}" --repo "${{ github.repository }}"
+            sleep 120
+          fi
       # CHECKOUT ILMAN docs/-KANSIOTA (Fable/omistaja 18.9.2026, Raamattu
       # AGENTIT VAIN OPUS JA SONNET, TARKENNUS 11 kohta 24 c).
       #
