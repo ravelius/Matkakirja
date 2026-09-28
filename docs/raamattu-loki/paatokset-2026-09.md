@@ -8811,3 +8811,7 @@ Omistaja 28.9. klo 20.06 kortilla (kooste pulu-iss-kooste.mp3, A1–D4 + Ateena-
 ## TILA: 1.0.39-SAVUKE EI PASS (28.9.2026 klo 20.23)
 
 Natiiviseppä 28.9. klo 20.23: 1.0.39-savuke a479a462 EI PASS — Pulun pysäytys OK, mutta hyppykorjausta ei voitu testata: nostokortin lukijarivin nappi sulki kortin 3/3 (raportti 630a2f415). Kaksinappinen lukija 5313075a on ollut mukana BUILD 37:stä (TF 1.0.37/1.0.38), joten vika on joko jo TF:ssä tai napautuskohdassa (UITK-napit eivät näy ui-puussa). Natiivi-UI todentaa a479a462:lla. 1.0.40 (kerma-404, 3D-symbolit, Cupola, pilvet, maakunta-linssi) odottaa sivuhaarassa natiiviseppa/juna-1040 9c974fd8.
+
+## PÄÄTÖS: ISOISÄN ÄÄNI — EI VIELÄ GENEROINTIA (28.9.2026 klo 20.29)
+
+Omistaja 28.9. klo 20.29 (kuunteli suosikit F3/G4/H1/Iv4 + nykyinen v3, kortti valinnasta): "Älä hoppuile, ei vielä mitään generointia." Ääntä ei valittu; isoisän luentoja tai uusia näytteitä ei generoida ennen omistajan erillistä lupaa. Pelikoodarille välitetty.
