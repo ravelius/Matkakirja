@@ -8543,3 +8543,7 @@ Omistaja 28.9. (TF 1.0.34) sanatarkasti: "Nyt jos vaihdan striimilukijan äänt�
 ## PAIVITYSLAPPU NAYTTAA MUUTOKSET; TESTFLIGHTIN TESTATTAVAA YHDEN RIVIN MITTAISEKSI (28.9.2026 klo 10.02)
 
 Natiivi-UI paivityslappu e19b5d97 (kaannos 522ba7cf): lappu hakee muutoslokirivin tarvittaessa verkon uusimmasta paketista (1.0.34-rivi tuli pakettiin vasta v257:ssa), yleinen teksti pois, versio v1.0.34; merge-pyynto 1.0.35. Omistaja vahvisti kortilla: 'aiemmat tekstilaput' = TestFlightin Testattavaa → Julkaisija jattaa sen yhteen riviin; muutosloki-natiivi.json-rivi kirjoitetaan pelaajan kielella ilman 'Build N:' -etuliitetta.
+
+## OMISTAJA: FABLE-ROOLIN NIMI ON PAATOIMITTAJA; CODEXILLE 'VIESTI CLAUDELLE' (28.9.2026 klo 10.25)
+
+Omistaja 28.9. hyvaksyi: session nimi 'Päätoimittaja (Opus, xhigh)' (id local_8d8ebf72 ennallaan); 'Fable' on roolin vanha nimi ja patee kaikissa ohjeissa (ei uudelleenkirjoitusta); Codexille omistaja sanoo jatkossa 'viesti Claudelle'. Raamattu + CLAUDE.md alias PR #3527:ssa, aloitusviesti paivitetty. Haaran nimenvaihto claude/bold-ride-vow4ki → paatoimittaja seuraavassa tilinvaihdossa (omistajan nelja tilia eivat ole paalla yhtaikaa; tieto siirtyy luovutuksessa).
