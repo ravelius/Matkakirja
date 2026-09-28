@@ -37,8 +37,11 @@ XYZ eli pohjoisesta), reunavalo/ (reunavalokuvat). Laitekuvat proto-3d/lokit/lin
 - Luonnokset on lähetetty Päätoimittajalle:
   - lokit/linssiseppa-luonnos-20260928-pyorea/pari-pysty.png ja pari-vaaka.png
   - lokit/linssiseppa-luonnos-20260928-horisontti/
-- **AAMULLA laiteajo cl17** (Julkaisija siirsi yötauon takia; pyydä vuoro Julkaisijalta (Sonnet)):
-  1. `nohup zsh S/kaynnista-cl17.sh &` (käännös jonottaa lukkoon, laiteajo odottaa S/laite-nyt).
+- **Laiteajo cl17 TÄNÄÄN** (Julkaisija klo 22.3x: yötaukoa ei ole; järjestys Linssiseppä 2 → Natiivi-UI:n 1.0.40-kaiutinkorjaus
+  → cl17). Vahti S/odota-cl17.sh on KÄYNNISSÄ (loki S/odota-cl17.out): kun Natiivi-UI:n käännös on lukossa, se käynnistää
+  S/kaynnista-cl17.sh:n jonoon (enintään 2 h, muuten aikakatkaisurivi → käynnistä itse Julkaisijan luvalla).
+  1. Kun S/kaanna-cl17.out näyttää KÄÄNNETTY, ilmoita Julkaisijalle (local_24e63224-112c-449a-b6a3-e10e4ed43f4b) "cl17 käännös valmis".
+     Julkaisija luo S/laite-nyt, ja ajo-cl17.sh jatkaa itsestään.
   2. Ajo kuvaa pystyn ja vaa'an rajauksilla katto | pyöreä | horisontti (UI-komento `kierto vaaka|pysty` ui-komento.txt:llä),
      pyöreän ilman reunavaloa, pölyt, 100 × -videon, yön ja kohteen ylle -lennon.
   3. Sen jälkeen `S/venv/bin/python X/koosta_cl17.py <L>` ja video X/video_nimio.py.

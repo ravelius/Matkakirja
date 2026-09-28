@@ -22,8 +22,9 @@ Lue:
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
 **Järjestys: luovutus -u kohta 1:**
-1. Laiteajo cl17 aamulla, kun Julkaisija (Sonnet) antaa vuoron: S/kaynnista-cl17.sh → koosta_cl17.py → kuvaparit (pysty + vaaka,
-   nyt | pyöreä) Päätoimittajalle → laite-nyt pois ja "sammutettu" Julkaisijalle.
+1. Laiteajo cl17 tänään: vahti S/odota-cl17.sh käynnistää käännöksen Natiivi-UI:n perään; kun S/kaanna-cl17.out = KÄÄNNETTY →
+   "cl17 käännös valmis" Julkaisijalle → ajo jatkuu laite-nyt-tiedostosta → koosta_cl17.py → kuvaparit (pysty + vaaka, nyt | pyöreä)
+   Päätoimittajalle → laite-nyt pois ja "sammutettu" Julkaisijalle.
 2. Hyväksynnän jälkeen merge-pyyntö Natiivisepälle: linssiseppa/cupola-horisontti. Codexin Cupola 3 -kerrokset korvaavat kehyksen
    ja reunavalot, kun ne tulevat (posti/fable-codex-iss-ohjaamo-20260928.md, pääikkuna pyöreä 0eb761cb8).
 3. Natiivi-UI:n nimiökorjaus (laatikon omistaja avaimella) laitteelle cl16-kaavalla.
