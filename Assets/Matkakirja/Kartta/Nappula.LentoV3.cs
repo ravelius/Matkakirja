@@ -181,6 +181,7 @@ namespace Matkakirja
         void V3Pois()
         {
             PoistaJalki();
+            IlmaPois();
             EnnakkoPois();
             Aurinko.UsvaVahintaanM = 0;
             LiikeLaatat.LentoKarkeaSse = 0f;
@@ -279,13 +280,14 @@ namespace Matkakirja
             // AloituslennonRadan kameralla (v2: lähtö kaukaa napautusnäkymästä, kiri, ohitus vasemmalta oikealle, ylilento,
             // saapuminen etuviistosta ja nousu saapumisnäkymään; v3: kaukaa kone pieni, kosketus kaukaa, usva ohuempi); muut lennot v3.
             bool rataPaalla = aloitus && Aloitusrata && kierto != null;
+            double ohitusKohta = AloituslennonRata.OhitusKohteelle(kohdeId, LennonAikajana.ReittiM(lat0, lon0, lat1, lon1));
             var reitti = rataPaalla ? AloituslennonRata.Isoympyra(lat0, lon0, lat1, lon1) : LennonV3.Reitti(kohdeId, lat0, lon0, lat1, lon1);
             var pit = LennonV3.Pituudet(reitti);
             double pituus = pit[pit.Length - 1];
             int siemen = V3Siemen(lat0, lon0, lat1, lon1);
             var kerrokset = KarttaKerrokset.Instanssi;
             v3Kaytava = kerrokset == null ? null
-                : rataPaalla ? kerrokset.EsilataaAloitusrata(lat0, lon0, lat1, lon1, AloituslennonRata.OhitusKohteelle(kohdeId))
+                : rataPaalla ? kerrokset.EsilataaAloitusrata(lat0, lon0, lat1, lon1, ohitusKohta)
                 : kerrokset.EsilataaLentoV3(reitti);
             int maastoN = rataPaalla ? 64 : V3MaastoNaytteita;
             var maastoKysely = V3MaastoKysely(reitti, pit, maastoN);
@@ -306,7 +308,7 @@ namespace Matkakirja
                 var loppu = new AloituslennonRata.Asento(sn.Lat, sn.Lon, sn.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), sn.Kallistus,
                     sn.Suunta, 0.0);
                 rata = new AloituslennonRata(lat0, lon0, lat1, lon1, napautus, loppu, (double)Screen.width / Mathf.Max(1, Screen.height),
-                    kamera != null ? kamera.fieldOfView : 50.0, maaKohteessa, AloituslennonRata.OhitusKohteelle(kohdeId));
+                    kamera != null ? kamera.fieldOfView : 50.0, maaKohteessa, ohitusKohta);
                 EnnakkoAsentoon(0, rata.Kamera(AloituslennonRata.OhitusS), kamera);
                 EnnakkoAsentoon(1, rata.Kamera(AloituslennonRata.SaapuminenS + 0.4), kamera);
             }
@@ -391,6 +393,8 @@ namespace Matkakirja
                 // v3: horisonttiusvan raja vähintään 250 km radan ajan (ohituksen ja saapumisen lähikuvissa maa näkyy).
                 Aurinko.UsvaVahintaanM = AloituslennonRata.UsvaVahintaanM;
                 TeeJalki(lat0, lon0, lat1, lon1);
+                // v3e: siivenkärkien ja pakoputken vanat sekä loppukohtauksen linnut (AloituslennonIlma).
+                aloitusIlma = AloituslennonIlma.Luo(georeferenssi, kamera);
                 var mo = rata.Mitta(AloituslennonRata.OhitusS);
                 var mk = rata.Mitta(AloituslennonRata.KosketusS);
                 Debug.Log($"MATKAKIRJA aloitusrata: {kohdeId ?? "?"} {rata.ReittiM / 1000:0} km, napautus {napautus.EtaisyysM / 1000:0} km "
@@ -477,6 +481,7 @@ namespace Matkakirja
                     // v3b: kiri ja ylilento karkeammalla laattavalinnalla (latausjono ei täyty ennen saapumista).
                     LiikeLaatat.LentoKarkeaSse = AloituslennonRata.Karkea(t) ? AloituslennonRata.KarkeaSse : 0f;
                     PaivitaJalki(u, ra.EtaisyysM, kamera);
+                    if (aloitusIlma != null && v3Kone != null) aloitusIlma.Paivita((float)t, v3Kone.Runko, siipi, rata.Mitta(t).Koko);
                     // Ennakkokamerat: [0] ohituksen lähikuva, sen jälkeen kosketus; [1] saapumisen lähin kohta (~200 km, tarkimmat
                     // laatat; esi-isät kattavat kosketuksen 490 km:n näkymän), sitten kamera itse; kosketuksesta pois.
                     if (t >= AloituslennonRata.KosketusS) EnnakkoPois();
@@ -520,6 +525,7 @@ namespace Matkakirja
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
             Aurinko.UsvaVahintaanM = 0;
             LiikeLaatat.LentoKarkeaSse = 0f;
+            IlmaPois();
             V3Tapahtuma("perilla");
             // Nappula kohteeseen piilossa: esityksen purku näyttää sen perillä (V3Pois).
             if (olio != null) Siirra(lat1, lon1, 0);

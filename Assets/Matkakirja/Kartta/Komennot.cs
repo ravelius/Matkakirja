@@ -69,6 +69,7 @@ namespace Matkakirja
     ///                             muistetaan (PlayerPrefs matkakirja-lento-v3, Documents/lento-v3.txt), voimaan seuraavasta lennosta
     ///   lento v3 aloitusrata 0|1  aloituslento AloituslennonRadalla (1, oletus: napautusnäkymästä lähikuvaan, nousu matkanäkymään,
     ///                             lasku) tai lento v3:n lähestymisotoksena (0); PlayerPrefs matkakirja-aloitusrata
+    ///   lento v3 ilma 0|1         aloituslennon vanat ja linnut (AloituslennonIlma; 1 oletus, ei muisteta)
     ///   kamerareitti paalle|pois  lennon oikea kamera 0,1 s:n näytteinä lokiin lennon lopussa (nopeus m/s, kulmanopeus °/s,
     ///                             HYPPY/KULMAHYPPY = muutos yli 3 × ympäröivien keskiarvo; löydös 120, LennonKamerareitti)
     ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
@@ -676,7 +677,9 @@ namespace Matkakirja
                         Nappula.LentoV3 = o[2] == "1" || o[2] == "paalle";
                     // lento v3 aloitusrata 0|1 (AloituslennonRata: aloituslento napautusnäkymästä matkanäkymän kautta; 0 = v3-otos)
                     else if (o.Length > 3 && o[2] == "aloitusrata") Nappula.Aloitusrata = o[3] == "1" || o[3] == "paalle";
-                    Debug.Log(Nappula.LentoV3Kuvaus() + $", aloitusrata {(Nappula.Aloitusrata ? 1 : 0)}");
+                    // lento v3 ilma 0|1 (v3e: siivenkärkien ja pakoputken vanat ja loppukohtauksen linnut; A/B, ei muisteta)
+                    else if (o.Length > 3 && o[2] == "ilma") AloituslennonIlma.Paalla = o[3] == "1" || o[3] == "paalle";
+                    Debug.Log(Nappula.LentoV3Kuvaus() + $", aloitusrata {(Nappula.Aloitusrata ? 1 : 0)}, ilma {(AloituslennonIlma.Paalla ? 1 : 0)}");
                     break;
                 case "kamerareitti":
                     Nappula.KamerareittiLoki = o.Length < 2 || o[1] != "pois";

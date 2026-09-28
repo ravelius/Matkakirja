@@ -1506,7 +1506,8 @@ namespace Matkakirja
                 if (kp == null || kp.id == null || !LennonAikajana.Kaupungit.ContainsKey(kp.id)) continue;
                 kohteita++;
                 var laatat = Nappula.Aloitusrata
-                    ? AloituslennonRata.Laatat(AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon, AloituslennonRata.OhitusKohteelle(kp.id))
+                    ? AloituslennonRata.Laatat(AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon, AloituslennonRata.OhitusKohteelle(kp.id,
+                        LennonAikajana.ReittiM(AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon)))
                     : LennonV3Kaytava.Laatat(LennonV3.Reitti(kp.id, AloitusLahtoLat, AloitusLahtoLon, kp.lat, kp.lon));
                 // Aloitusrata: lähtö- ja kohdekaupungin tarkat tasot Z8–Z9 (lähikuva ja lasku); v3: alun 5 s.
                 foreach (var l in Nappula.Aloitusrata ? laatat.FindAll(x => x.Z >= 8) : LennonV3Kaytava.Esilammitettavat(laatat))

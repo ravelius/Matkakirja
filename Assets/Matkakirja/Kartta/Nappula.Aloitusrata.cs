@@ -44,6 +44,14 @@ namespace Matkakirja
         const float JalkiPt = 5.0f, EdessaPt = 2.2f;
 
         GameObject jalkiOlio, edessaOlio;
+        /// <summary>v3e: vanat ja linnut (AloituslennonIlma), vain aloitusradalla.</summary>
+        AloituslennonIlma aloitusIlma;
+
+        void IlmaPois()
+        {
+            if (aloitusIlma != null) Destroy(aloitusIlma.gameObject);
+            aloitusIlma = null;
+        }
         Material jalkiMateriaali, edessaMateriaali;
         Mesh jalkiMesh, edessaMesh;
 
