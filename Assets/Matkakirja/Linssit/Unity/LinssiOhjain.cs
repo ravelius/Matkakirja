@@ -1598,7 +1598,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Testikello ISS:lle ja auringolle (yökuori, ilmakehän kaari, Cupolan valo): "yo-eurooppa" hyppää seuraavaan hetkeen
-        /// (enintään 36 h), jolloin ISS on Euroopan yllä (lat 42–60, lon −5…30) ja aurinko sen alapisteessä alle −12°
+        /// (enintään 72 h), jolloin ISS on Euroopan yllä (lat 35–65, lon −15…45) ja aurinko sen alapisteessä alle −8°
         /// (kaupunkien valot näkyvät); "+H" siirtää H tuntia; "pois" palauttaa oikean kellon. Kello kulkee siirron jälkeen.
         /// </summary>
         static string KyydinKello(string arvo)
@@ -1612,17 +1612,17 @@ namespace Matkakirja.Natiivi
             {
                 var nyt = DateTime.UtcNow;
                 DateTime? loyto = null;
-                for (int s = 0; s < 36 * 3600 && loyto == null; s += 20)
+                for (int s = 0; s < 72 * 3600 && loyto == null; s += 20)
                 {
                     var t = nyt.AddSeconds(s);
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
-                    if (p.Lat < 42 || p.Lat > 60 || p.Lon < -5 || p.Lon > 30) continue;
+                    if (p.Lat < 35 || p.Lat > 65 || p.Lon < -15 || p.Lon > 45) continue;
                     var aur = Aurinko.AurinkoEcef(t);
                     double la = p.Lat * Math.PI / 180, lo = p.Lon * Math.PI / 180;
                     double sinKorkeus = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
-                    if (sinKorkeus < Math.Sin(-12 * Math.PI / 180)) loyto = t;
+                    if (sinKorkeus < Math.Sin(-8 * Math.PI / 180)) loyto = t;
                 }
-                if (loyto == null) return "ei yöylitystä Euroopan yllä 36 tunnin sisällä";
+                if (loyto == null) return "ei yöylitystä Euroopan yllä 72 tunnin sisällä";
                 siirto = loyto.Value.AddSeconds(-20) - nyt;
             }
             else if (arvo == "kiilto")
