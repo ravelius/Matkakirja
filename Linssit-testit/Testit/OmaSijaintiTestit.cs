@@ -34,6 +34,8 @@ namespace Matkakirja.Linssit.Testit
                 {
                     var y = Ylilennot.Seuraava(OmaSijainti.HakuLeveys(lat), lon, alku);
                     Oleta.Tosi(y.HasValue && (y.Value.Hetki - alku).TotalHours < 24, $"ylilento vuorokauden sisällä ({lat}, {lon})");
+                    double km = Matkakirja.Linssit.Astronautti.AstronauttiLinssi.SivussaKm(new Matkakirja.Linssit.Astronautti.Havaintokohde { Lat = lat, Lon = lon }, y.Value);
+                    Oleta.Tosi(km > 1000 && km < 2300, $"rivi kertoo matkan omaan maahan (horisontin sisällä): {km:0} km");
                 }
             }
             finally { IssNyt.Nollaa(); }

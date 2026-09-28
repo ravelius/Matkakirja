@@ -375,9 +375,14 @@ namespace Matkakirja.Linssit.Astronautti
             if (!l.Ylilento.HasValue) return $"{l.Kohde.Nimi}: ei ylilentoa {Iss.Ylilennot.HakuH:0} tunnin sisällä";
             var yl = l.Ylilento.Value;
             return l.Perilla
-                ? $"{l.Kohde.Nimi}: ISS {Iss.KyydinTeksti.Luku(yl.SivuttainKm)} km sivussa"
+                ? $"{l.Kohde.Nimi}: ISS {Iss.KyydinTeksti.Luku(SivussaKm(l.Kohde, yl))} km sivussa"
                 : $"{l.Kohde.Nimi} · {Iss.KyydinTeksti.YlilennonTeksti(yl.Hetki, Iss.IssNyt.Kello())}";
         }
+
+        /// <summary>Etäisyys kohteeseen itseensä: oman sijainnin haku voi osua radan pohjoisimpaan kohtaan (OmaSijainti.HakuLeveys),
+        /// jolloin rivi kertoo matkan omaan maahan eikä hakupisteeseen (laite 28.9.: Suomi "20 km sivussa").</summary>
+        internal static double SivussaKm(Havaintokohde k, Iss.Ylilento yl) =>
+            Math.Max(yl.SivuttainKm, Iss.Ylilennot.MaaEtaisyysKm(yl.Lat, yl.Lon, k.Lat, k.Lon));
 
         readonly LatLon[] kaari = new LatLon[Astronauttimatikka.IssKaarenPisteita + 1];
         DateTime? kaariLaskettu;
