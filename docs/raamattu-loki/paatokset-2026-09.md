@@ -8803,3 +8803,7 @@ Päätoimittaja 28.9. klo 20.0x (omistajan kaappaus 'Colosseum meressä, eri vä
 ## PÄÄTÖS: CUPOLAN TERÄVÄT PILVET JA PULUN V4-TASOITUS (28.9.2026 klo 20.05)
 
 Päätoimittaja 28.9. klo 20.1x: Linssisepän cl14 hyväksytty — pilvet-tarkat cc513896 (bikuubinen näyte + kohinakynnyksen reuna, vain kyyti; kaukonäkymä ennallaan) 1.0.40-junaan symbolien ja cupola-polyjen kanssa; webin kaavat iss-realismi-suunnitelman kohta 2b Siirtosepälle. Pelikoodari: v4-äänet soivat 0–6 dB hiljaisempina kuin v3, koska putki ei normalisoi → kaikki pelin v4-Pulu-tiedostot tasoitetaan -17,2 LUFS:iin (192 kbps, limitteri 0,97), raaka talteen. Tekninen päätös, ei omistajan kortti. Pulun ISS-repliikit A1–D4 + Ateena-3 v4 -kooste omistajalle kuunneltavaksi; haara pelikoodari-pulu-iss-aanet 5ca063230, PR vasta omistajan OK:lla.
+
+## PÄÄTÖS: PULUN ISS-REPLIIKIT PELIIN (28.9.2026 klo 20.06)
+
+Omistaja 28.9. klo 20.06 kortilla (kooste pulu-iss-kooste.mp3, A1–D4 + Ateena-3 v4): "OK, peliin". Pelikoodari avaa PR:n pelikoodari-pulu-iss-aanet (10 ISS-repliikkiä, Quindar D-jaksossa, Ateena/Sofia/Pariisi v4 tasoitettuina) Julkaisijan junaan; sen jälkeen SHA Siirtosepälle ISS-realismin kyytiin.
