@@ -65,6 +65,8 @@ namespace Matkakirja
         static int rasterinMaaMax = int.MaxValue;
         // Skeema 1.54: mediaKuvat korvaa media-listan offline-latauksessa.
         static bool korvaaMedian;
+        // Skeema 1.56: lahteet.kerrokset (kerma, reliefi, yövalot) tai null (vanha paketti: ei ladata).
+        static Dictionary<string, object> kerrokset;
 
         static string Kirjanpito => Path.Combine(Laattapalvelin.OfflineKansio, "_alueet");
         static string Merkki(string id) => Path.Combine(Kirjanpito, id + ".txt");
@@ -86,6 +88,8 @@ namespace Matkakirja
             korvaaMedian = juuri.TryGetValue("lahteet", out var lk) && lk is Dictionary<string, object> lkd &&
                            lkd.TryGetValue("mediaKuvat", out var lmk) && lmk is Dictionary<string, object> lmkd &&
                            lmkd.TryGetValue("korvaaMedian", out var kmv) && kmv is bool kmb && kmb;
+            kerrokset = juuri.TryGetValue("lahteet", out var lk2) && lk2 is Dictionary<string, object> lk2d &&
+                        lk2d.TryGetValue("kerrokset", out var kv) ? kv as Dictionary<string, object> : null;
             if (juuri.TryGetValue("lahteet", out var la) && la is Dictionary<string, object> lahteet &&
                 lahteet.TryGetValue("rasteri", out var lr) && lr is Dictionary<string, object> rasteri &&
                 rasteri.TryGetValue("maaMax", out var mm) && mm is double mmd)
@@ -240,6 +244,9 @@ namespace Matkakirja
             // tarkat solut rasterin laatikosta.
             if (a.Id == "maailma") polut.AddRange(Vektorikerros.OfflinePolut(true, null));
             else if (RasterinLaatikko(a.Tiedot, out var laatikko)) polut.AddRange(Vektorikerros.OfflinePolut(false, laatikko));
+            // Skeema 1.56 (Fable 28.9.2026, Siirtosepän E2E-offline Tanska + Kroatia: "ladattu alue näyttää ja toimii ilman
+            // verkkoa täsmälleen kuten verkossa"): kerma, reliefi (molemmat sarjat) ja yövalot. Osoitteet omista sarjoista.
+            if (kerrokset != null) KerrosPolut(a, polut, Suhteellinen);
             // Media (sisältö) ja mediaKuvat (Fablen päätös 27.9. klo 17.5x: pienennetyt nostokuvat ja R2:ssa jo olevat puheet,
             // katto 100 Mt/maa; vanhat buildit ohittavat avaimen). Luetaan Mukana.Polun kautta ilman verkkoa.
             // mediaKuvat (skeema 1.52): [{ url, pieni? }] — tiedosto tallennetaan url:n polulle (Kuvat löytää sen alkuperäisellä
@@ -260,6 +267,67 @@ namespace Matkakirja
                         }
                     }
             return polut;
+        }
+
+        /// <summary>
+        /// Skeema 1.56 (lahteet.kerrokset, Siirtoseppä): maailmalle kerma _maailma, reliefi ja yövalot koko pallolta
+        /// globaaliTasot-väliltä; maalle oma kermasarja maat.*.kerma-väleillä sekä _maailma-kerma, reliefi ja yövalot
+        /// maat.*.rasteri-väleillä maittainTasot-väliltä. Puuttuva laatta (404) on läpinäkyvä: LataaOffline kirjaa 0 tavua.
+        /// </summary>
+        static void KerrosPolut(Alue a, List<string> polut, Func<string, string> suhteellinen)
+        {
+            string kerma = Laattapalvelin.Ampari + Varitaso.Kansio + "{alue}/{z}/{x}/{y}.webp";
+            var reliefit = new[] { Matkakirja.Linssit.Topografia.ReliefiSarja, Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VaimeaSarja };
+            string yovalot = RadioMastot.YovaloUrl.Replace("{reverseY}", "{y}");
+            bool maailma = a.Id == "maailma";
+            string avain = maailma ? "globaaliTasot" : "maittainTasot";
+            void Lisaa(string pohja, int z, int x0, int y0, int x1, int y1)
+            {
+                if (string.IsNullOrEmpty(pohja)) return;
+                for (int x = x0; x <= x1; x++)
+                    for (int y = y0; y <= y1; y++)
+                        if (suhteellinen(pohja.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{y}", y.ToString())) is string s)
+                            polut.Add(s);
+            }
+            void Kentasta(string pohja, string kentta, int zMin, int zMax)
+            {
+                if (a.Tiedot == null || !a.Tiedot.TryGetValue(kentta, out var k) || !(k is Dictionary<string, object> tasot)) return;
+                foreach (var t in tasot)
+                {
+                    if (!int.TryParse(t.Key, out int z) || z < zMin || z > zMax || !(t.Value is List<object> l) || l.Count == 0) continue;
+                    var valit = new List<List<object>>();
+                    if (l[0] is List<object>) foreach (var v in l) valit.Add((List<object>)v); else valit.Add(l);
+                    foreach (var v in valit)
+                        if (v.Count >= 4) Lisaa(pohja, z, (int)(double)v[0], (int)(double)v[1], (int)(double)v[2], (int)(double)v[3]);
+                }
+            }
+            void Laji(string laji, Action<int, int> tee)
+            {
+                if (!kerrokset.TryGetValue(laji, out var o) || !(o is Dictionary<string, object> d) ||
+                    !d.TryGetValue(avain, out var tv) || !(tv is List<object> tl) || tl.Count < 2) return;
+                tee((int)(double)tl[0], (int)(double)tl[1]);
+            }
+            Laji("kerma", (z0, z1) =>
+            {
+                string m = kerma.Replace("{alue}", "_maailma");
+                if (maailma) { for (int z = z0; z <= z1; z++) Lisaa(m, z, 0, 0, (1 << z) - 1, (1 << z) - 1); }
+                else
+                {
+                    Kentasta(m, "rasteri", z0, z1);
+                    Kentasta(kerma.Replace("{alue}", a.Id), "kerma", 0, 30);
+                }
+            });
+            Laji("reliefi", (z0, z1) =>
+            {
+                foreach (var r in reliefit)
+                    if (maailma) { for (int z = z0; z <= z1; z++) Lisaa(r, z, 0, 0, (1 << z) - 1, (1 << z) - 1); }
+                    else Kentasta(r, "rasteri", z0, z1);
+            });
+            Laji("yovalot", (z0, z1) =>
+            {
+                if (maailma) { for (int z = z0; z <= z1; z++) Lisaa(yovalot, z, 0, 0, (1 << z) - 1, (1 << z) - 1); }
+                else Kentasta(yovalot, "rasteri", z0, z1);
+            });
         }
 
         /// <summary>
