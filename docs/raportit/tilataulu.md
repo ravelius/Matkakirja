@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 01:27:** Levy 100 Gi (101 → 100). Muisti OK (vapaa 61 %). Kuorma 52/75/80 (laskee), sim 1, GPU-chrome 0. /private/tmp 31,9 Gt, wt/ 17 kohdetta 13 Gt. Kontekstit: Siirtoseppä 69 % (ei muuttunut 01.16:sta, ilmoitettu), Linssiseppä 66 %, Natiivi-UI 63 %, Karttaseppä 57 %, Laitetestaaja 50 %, Linssiseppä 2 48 %, Pelikoodari 44 %, Natiiviseppä 44 %, Linnanrakentaja 36 %, Sisältökirjuri 33 %, Julkaisija 32 % (kaikki <70). Juna OK (b13 HEAD 19517f56 sisältyy käännettyyn 485376ca). Posti: ei uutta.
+
 **Päivitetty 01:16:** Levy 101 Gi. Muisti OK (vapaa 62 %). Kuorma 106/125/85 (piikki, ei muistipainetta), sim 1, GPU-chrome 0. /private/tmp 32,0 Gt, wt/ 17 kohdetta 13 Gt. Kontekstit: **Siirtoseppä 69 %** (64 → 66 → 69, nousee ~3 %/10 min, ylittää 70 seuraavalla kierroksella), Linssiseppä 66 %, Natiivi-UI 60 %, Karttaseppä 57 %, Linssiseppä 2 48 %, Natiiviseppä 43 %, Pelikoodari 44 %, Laitetestaaja 45 %, Linnanrakentaja 35 %, Sisältökirjuri 33 %, Julkaisija 31 %. Juna OK (uusi 485376ca käännetty 01:11). Posti: ei uutta.
 
 **Päivitetty 01:05:** Levy 102 Gi (vakaa). Muisti OK (vapaa 63 %). Kuorma 25/31/40, sim 0, GPU-chrome 0. /private/tmp 32,2 Gt (vakaa), wt/ 17 kohdetta 13 Gt (raja 20). Kontekstit: Siirtoseppä 66 %, Linssiseppä 65 %, Natiivi-UI 59 %, Karttaseppä 57 %, Linssiseppä 2 47 %, Pelikoodari 44 %, Natiiviseppä 42 %, Laitetestaaja 42 %, Linnanrakentaja 34 %, Sisältökirjuri 33 %, Julkaisija 31 % (kaikki <70). Juna OK (b13 HEAD 8de5b3df sisältyy käännettyyn 60f69fe4). Posti: ei uutta.
