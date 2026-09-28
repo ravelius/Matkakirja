@@ -1621,7 +1621,7 @@ const SANELU_KUUNTELEE = 'Kuuntelen…';
  * näkee yhdestä paikasta (sanelun tilarivi) missä ollaan: Kuuntelen →
  * Mietin → Puhun → valmis (tyhjä). Mikki puheen aikana = hiljaa.
  */
-const PUHE_TILARIVI = Object.freeze({ miettii: 'Mietin…', puhuu: 'Puhun… napauta mikkiä: hiljaa' });
+const PUHE_TILARIVI = Object.freeze({ miettii: 'Mietin…', puhuu: 'Puhun… napauta mikkiä, jos haluat keskeyttää' });
 /*
  * "Kuuntelen…" vasta kun mikrofoni on OIKEASTI auki (omistaja
  * 13.8.2026: "pöllössä lukee kuuntelen vaikka mikki ei vielä päällä").
