@@ -8527,3 +8527,7 @@ Pelikoodarin kaksi Lyria-ehdotusta pelin omalla johtoaiheella (D–G–F–E–D
 ## OMISTAJA: NATIIVIN NOSTOTEKSTIT EIVAT SAA VALKKYA; KUVAKORTTI JA TEKSTIT HAIPYVAT PEHMEASTI REUNALLA, EI HYPPYJA (28.9.2026 klo 09.54)
 
 Omistaja 28.9. TF 1.0.34 -kuvakaappauksella (Ateena) sanatarkasti: "Nykyisessä versiossa kohdetekstit vielä välkkyvät. Atenan kuvakortti näyttäisi pysyvän paikallaan, mutta sitten kun panoroidaan tarpeeksi reunaan, niin se häviää näkyvistä yhtäkkiä. Se saisi hävitä pehmeästi feidaten pois ja tulla takaisin samalla lailla feidaten. Sama pehmeä fade-out tai mikäli muuten ei onnistu, niin myös liike pitäisi nostojen kohdalla tapahtua pehmeästi, ei yhtäkkiä hyppäämällä. Näin kaikki liike olisi pehmeä eikä tule yhtäkkiä ja yhtäkkisiä hyppäyksiä. Mutta suurimmassa osassa tapauksia paras vaihtoehto on, että nostojen tekstit vain yksinkertaisesti pysyvät paikallaan eivätkä välky." Natiivi-UI: todenna nimet-laskuri 5d79edd9 (1.0.35-junassa), tekstit paikallaan, pehmea haivytys reunalla.
+
+## OMISTAJA: NATIIVIN NOSTOSSA KAIUTIN EI NAY AVATESSA (VIERITYS TARVITAAN) (28.9.2026 klo 09.55)
+
+Omistaja 28.9. TF 1.0.34 (Korintin kanava) sanatarkasti: "Nosto myös aukeaa tähän näkymään, missä ei näy vielä kaiutin kuvaa, vaan käyttäjän pitää vierittää lappua hieman alaspäin, jotta se kaiutin tulee näkyviin. Onko tämä korjaus jo tulossa?" Ei ollut jonossa. Natiivi-UI: luennan napit otsikkoriville (web on malli) striimilukijan kahden napin natiiviversion yhteydessa, tai heti erillisena jos webmalli viivastyy.
