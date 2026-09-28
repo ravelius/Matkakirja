@@ -1996,4 +1996,95 @@ export const MAAKUNTIEN_PULU = {
       { q: "Miten talolle pääsee?", a: "Ainoa keino on uida tai soutaa Drina-joen virran yli — siltaa ei ole koskaan rakennettu, mikä tekee talosta entistä salaperäisemmän nähtävyyden." },
     ],
   },
+  BIH: {
+    'Banja Luka': [
+      { q: "Kuka rakennutti Ferhadija-moskeijan ja milloin?", a: "Moskeijan rakennutti Gazi Ferhad-paša Sokolović vuonna 1579. Suunnittelun taustalla arvellaan olleen legendaarisen arkkitehti Mimar Sinanin oppilaita, ja rakennus edustaa 1500-luvun ottomaaniarkkitehtuurin huippua Balkanilla." },
+      { q: "Mikä moskeijan minareetissa on erikoista?", a: "Minareetti kohoaa 43 metrin korkeuteen ja sen sisällä kiertyy kierreporras huipulle. Ulkopintaa koristavat geometriset kuvioinnit, jotka ovat tyypillisiä ajan ottomaanikäsityölle." },
+      { q: "Mitä muuta moskeijan pihapiiriin kuului?", a: "Pihalla on turkkilaisbarokkia henkivä šadrvan-suihkulähde ja kolme perheen turbea eli hautakammiota. Koko kompleksia ylläpidettiin yli 30 kylän tuloilla, joten se toimi myös torin ja hammamin tapaan yhteisön keskuksena." },
+    ],
+    Bijeljina: [
+      { q: "Mikä on Semberija ja miksi se on tärkeä?", a: "Semberija on Bijeljinan ympärillä levittäytyvä tasainen, hedelmällinen tasanko, alueen tuottavin maatalousalue. Sen pellot tuottavat vuosittain kymmeniätuhansia tonneja vihanneksia, erityisesti kaalia, sekä satoja tuhansia tonneja viljaa." },
+      { q: "Kuinka paljon Semberija tuottaa viljaa vuodessa?", a: "Alueen viljasiilot käsittelevät yli 320 000 tonnia viljaa ja öljykasveja vuosittain. Lisäksi karjatalous tuottaa noin 45 miljoonaa litraa maitoa jalostukseen joka vuosi." },
+      { q: "Mille vihannekselle Semberija on erityisen tunnettu?", a: "Alue tunnetaan etenkin kaalinviljelystä, jolle ilmasto ja hedelmällinen maaperä sopivat erinomaisesti. Pellot tuottavat myös laajasti paprikaa ja tomaattia." },
+    ],
+    'Bosnian Podrinje': [
+      { q: "Mistä nimi Podrinje tulee?", a: "Podrinje tarkoittaa slaavilaisittain 'Drinan vartta' ja viittaa koko joen valuma-alueeseen. Goražde on tämän Bosnian puoleisen Drina-laakson keskus." },
+      { q: "Mitä ulkoiluaktiviteetteja Goraždessa voi harrastaa?", a: "Drina-joella ja sen ympäristössä voi melvoida koskia, kalastaa, pyöräillä ja vaeltaa. Joen kanjonimainen laakso tarjoaa näköalapaikkoja ja rauhallisia reittejä ympäri vuoden." },
+      { q: "Mistä Drina-joki saa alkunsa?", a: "Drina syntyy, kun kaksi vuoristojokea yhtyy kauempana etelässä alueen vuoristossa. Yhdessä ne muodostavat yhden Balkanin vaikuttavimmista jokilaaksoista, jota Goraždekin osaltaan edustaa." },
+    ],
+    'Brčko Distrikt': [
+      { q: "Mikä rakennuskausi muovasi Brčkon katukuvaa eniten?", a: "Itävalta-Unkarin hallintokausi 1878-1918 toi kaupunkiin merkittävää arkkitehtuuria. Muun muassa vuoden 1892 kaupungintalo edustaa tätä ajan pseudomauriaista tyyliä." },
+      { q: "Mistä kaupasta Brčko tunnettiin historiallisesti?", a: "Sava-joen satamakaupunkina Brčko oli jo 1400-luvulta lähtien merkittävä luumujen ja lihan vientipaikka. Kaupunki tunnettiin pitkään erityisesti kuivattujen luumujen kaupasta." },
+      { q: "Mikä on Trg Mladih?", a: "Trg Mladih on Brčkon keskusaukio, jota reunustavat 1800-luvun lopun Itävalta-Unkarin ajan rakennukset. Aukio on edelleen kaupungin sosiaalinen keskus." },
+    ],
+    'Central Bosnia': [
+      { q: "Mikä on Plava Voda?", a: "Plava Voda on Travnikin vanhassa kaupungissa sijaitseva karstilähde, joka pulppuaa esiin linnan juurelta. Se on kaupungin tärkein juomavesilähde, ja sen ympäristö on suojeltu kansallismuistomerkkinä." },
+      { q: "Mistä Vlašićin juusto on peräisin?", a: "Vlašićin juusto on suolattu lampaanmaitojuusto, joka on saanut nimensä Travnikin yläpuolella kohoavasta Vlašić-tunturista. Tunturin laidunmailla juustoa on valmistettu perinteisin menetelmin sukupolvien ajan." },
+      { q: "Mitä muuta Vlašićin tunturilla voi tehdä?", a: "Lähes 2000 metriin kohoava Vlašić on suosittu talvihiihtokohde ja retkeilyalue. Kesäisin sen ylängöt toimivat lampaiden ja lehmien laidunmaina." },
+    ],
+    Doboj: [
+      { q: "Kuinka kauan Banja Vrućican lähteitä on käytetty?", a: "Lähteiden parantavia ominaisuuksia on hyödynnetty jo antiikin Rooman ajoista lähtien, ja myöhemmin myös ottomaanikaudella niitä arvostettiin suuresti. Vesi on koko ajan pulssunut samasta paikasta Usoran laaksossa." },
+      { q: "Millaista Banja Vrućican vesi on?", a: "Vesi on hiilihapollista ja lievästi hapanta, lämpötilaltaan noin 32 astetta. Sitä käytetään perinteisesti sydän- ja verisuonivaivojen sekä reumaattisten oireiden hoidossa." },
+      { q: "Kuinka suuri kylpylä nykyään on?", a: "Banja Vrućicassa toimii neljän hotellin kokonaisuus, jossa on yli tuhat vuodepaikkaa. Se on tällä hetkellä maan suurin lämminvesikylpyläkeskus." },
+    ],
+    'Foča': [
+      { q: "Miksi Tara-jokea kutsutaan Euroopan kyyneleeksi?", a: "Nimitys viittaa joen poikkeuksellisen kirkkaaseen, jopa juomakelpoiseen veteen. Joki virtaa yli 1300 metriä syvässä kanjonissa, joka on yksi Euroopan syvimmistä." },
+      { q: "Mitä koskimelonnassa Taralla kohtaa?", a: "Reitillä on noin 50 koskea, joiden vaikeusaste vaihtelee luokkien 2 ja 4 välillä. Reitit sopivat sekä perheille että kokeneemmille melojille vedenkorkeuden mukaan." },
+      { q: "Mikä tekee Aladža-moskeijasta erityisen?", a: "Se rakennettiin vuonna 1549 ensimmäisenä puhtaasti klassista ottomaanityyliä edustavana moskeijana Bosniassa. Sen värikäs, koristeellinen sisustus antoi sille lempinimen 'kirjava moskeija'." },
+    ],
+    'Herzegovina-Neretva': [
+      { q: "Missä Hertsegovinan viinialueen sydän sijaitsee?", a: "Viinialueen keskus on Čitlukin ympärille kohoava Brotnjon karstiylänkö, jota kutsutaan koko maan viininviljelyn kehdoksi. Kuiva kalkkikivimaaperä ja aurinkoinen ilmasto tekevät siitä ihanteellisen viinitarhoille." },
+      { q: "Kuinka pitkään alueella on viljelty viiniä?", a: "Viininviljelyn juuret ulottuvat yli 2000 vuoden taakse, aina illyyrien aikaan asti. Monissa Brotnjon suvuissa viininvalmistusperinne on jatkunut yhtäjaksoisesti yli 300 vuotta." },
+      { q: "Mitkä rypäleet ovat alueen omia lajikkeita?", a: "Alueen omat lajikkeet ovat valkoinen Žilavka ja punainen Blatina, jotka kasvavat parhaiten Brotnjon punaisessa, hyvin vettä läpäisevässä maaperässä. Lähes jokaisella perheellä on oma pieni viinitarha ja kellari." },
+    ],
+    Posavina: [
+      { q: "Miksi Posavinan maaperä on niin hedelmällistä?", a: "Saava-joki on vuosituhansien aikana jättänyt rantamaille paksuja hienojakoisia tulvamaakerroksia. Nämä alluviaalikerrostumat tekevät kantonin peltomaasta poikkeuksellisen viljavaa." },
+      { q: "Missä Posavinan kaupungit sijaitsevat?", a: "Kantonin pääkaupunki Orašje ja suurin kaupunki Odžak sijaitsevat molemmat Saava-joen varrella, aivan Kroatian rajan tuntumassa. Joki muodostaa luontaisen rajan ja samalla elinehdon koko alueen maataloudelle." },
+    ],
+    Sarajevo: [
+      { q: "Mikä Vrelo Bosne on?", a: "Ilidžan kaupunginosassa sijaitseva 603 hehtaarin puisto ja luonnonmuistomerkki, jossa Bosna-joki syntyy kymmenistä lähteistä Igman-vuoren juurella. Alueella on lampia, saaria ja rikas kasvi- ja eläinlajisto." },
+      { q: "Mikä on fiaker?", a: "Avonainen hevosvaunu, jolla vieraat kuljetetaan pitkin 3,5 kilometrin pituista Velika Aleja -puistokujaa. Samanlaiset vaunut palvelivat aikanaan myös Wienin ja Budapestin katukuvassa." },
+      { q: "Milloin puistokuja istutettiin?", a: "Velika Aleja, kastanja- ja plataanipuiden reunustama kuja, istutettiin vuonna 1892 Itävalta-Unkarin aikana. Se on säilynyt Sarajevon suosituimpana kävelyreittinä tähän päivään asti." },
+    ],
+    'Sarajevo-romanija': [
+      { q: "Mikä Mokranjska Miljacka on?", a: "Bosnia ja Hertsegovinan pisimmäksi tunnettu luola Romanijan ylängöllä lähellä Mokron kylää. Sen suulta purkautuu maanalainen joki, joka on saanut luolalta nimensä." },
+      { q: "Kuinka pitkä luola on?", a: "Kartoitettua käytävää on yli seitsemän kilometriä, eikä luolan koko laajuutta tunneta vieläkään. Sukeltajat ovat tutkineet sitä vuodesta 2007 lähtien italialais-bosnialaisessa yhteistyössä." },
+      { q: "Mitä luolasta on löytynyt?", a: "Tutkijat ovat löytäneet luolan kylmästä vedestä ja pimeistä käytävistä tieteelle täysin uusia eliölajeja. Veden lämpötila pysyttelee ympäri vuoden vain noin viidessä asteessa." },
+    ],
+    Trebinje: [
+      { q: "Mikä Tvrdošin luostari on?", a: "Ortodoksiluostari Trebišnjica-joen rannalla lähellä Trebinjeä, perustettu 1200-luvun lopulla vanhan roomalaisen kirkon paikalle. Se tunnetaan erityisesti pitkästä viininviljelyperinteestään." },
+      { q: "Kuinka vanha luostarin viinikellari on?", a: "Kivikellari louhittiin 1500-luvulla, ja se on ollut yhtäjaksoisesti käytössä siitä lähtien. Sen holveissa viini kypsyy yhä satavuotiaissa tammitynnyreissä." },
+      { q: "Mitä viinejä luostarissa tehdään?", a: "Munkit valmistavat muun muassa Vranac- ja Žilavka-viinejä sekä kansainvälisiä lajikkeita kuten chardonnayta. Perinteinen kellari ja moderni painovoimatehdas toimivat aivan vierekkäin." },
+    ],
+    Tuzla: [
+      { q: "Mikä Šarena džamija on?", a: "Tuzlan vanhin moskeija, alun perin 1500-luvun alusta, joka tunnetaan koristeellisista väriseinistään – nimi tarkoittaa suomeksi suunnilleen 'kirjava moskeija'." },
+      { q: "Miksi sitä kutsutaan myös Atik Behram-begin moskeijaksi?", a: "Sen edessä sijaitsi Behram-begin perustama medresa eli koraanikoulu, jonka mukaan koko rakennus sai nimensä. Molemmat rakennukset kuuluivat samaan vakifiin eli uskonnolliseen säätiöön." },
+      { q: "Milloin moskeija rakennettiin uudelleen?", a: "Tulipalo tuhosi rakennusta, ja se kunnostettiin vuonna 1888 Itävalta-Unkarin hallintokaudella. Samaan aikaan kaupunkiin nousi myös uutta eurooppalaistyylistä arkkitehtuuria." },
+    ],
+    'Una-Sana': [
+      { q: "Mikä Ostrožacin linna on?", a: "Unan joen rannalla Bihaćin lähellä sijaitseva linna, jonka vanhin osa mainitaan jo vuonna 1286. Se sai nykyisen uusgoottilaisen ilmeensä 1900-luvun alun laajassa uudisrakennuksessa." },
+      { q: "Mikä on bihacit?", a: "Alueelta louhittava kivilaji, josta kuvanveistäjät ovat vuodesta 1967 asti veistäneet monumentaalisia teoksia Ostrožacin taiteilijakoloniassa. Alueella on nykyään yli 130 valmista veistosta." },
+      { q: "Miksi linna rakennettiin uudelleen 1900-luvun alussa?", a: "Linnan viimeinen ottomaanikapteeni myi sen vuonna 1896 itävaltalaiselle kreiville, Bihaćin silloiselle pormestarille, joka rakennutti tilalle uusgoottilaisen linnan vuosina 1900–1902." },
+    ],
+    Vlasenica: [
+      { q: "Mitä stećci ovat?", a: "Keskiaikaisia, 1100–1500-luvuilla veistettyjä kalkkikivisiä hautakiviä, joita on Bosnian ja Hertsegovinan lisäksi Serbiassa, Montenegrossa ja Kroatiassa. Ne on merkitty Unescon maailmanperintöluetteloon." },
+      { q: "Kuinka paljon hautakiviä on löydetty Vlasenican seudulta?", a: "Sošarin kylän alueelta on laskettu 71 nekropolia ja 1595 hautakiveä, joista 65:ssä on koristekaiverrus. Yksi kivistä sisältää myös kirjoituksen." },
+      { q: "Mitä hautakivien pintaan on kaiverrettu?", a: "Kivissä nähdään muun muassa tanssi- ja metsästyskohtauksia, geometrisia kuvioita ja kyrillisiä kirjoituksia. Kuvakieli yhdistää yleiseurooppalaisia aiheita paikallisiin perinteisiin." },
+    ],
+    'West Bosnia': [
+      { q: "Mikä Buško jezero on?", a: "Livnon ja Tomislavgradin kuntien alueella sijaitseva tekojärvi, joka on pinta-alaltaan Euroopan suurin: lähes 56 neliökilometriä ja yli 780 miljoonaa kuutiometriä vettä." },
+      { q: "Miten järvi syntyi?", a: "Järvi patoutui vuonna 1974, kun alueelle rakennettiin vesivoimalaitos hyödyntämään karstipoljen keräämiä sade- ja sulamisvesiä. Ennen patoamista alue oli kausittain tulviva kalkkikivilaakso." },
+      { q: "Kuinka korkealla järvi sijaitsee?", a: "Buško jezero lepää 716 metrin korkeudessa merenpinnasta, Dinaarien vuoriston karstiylängöllä. Korkeus ja tyyni vesi tekevät siitä suositun kalastus- ja uimapaikan kesäisin." },
+    ],
+    'West Herzegovina': [
+      { q: "Mikä žilavka on?", a: "Länsi-Hertsegovinassa, erityisesti Ljubuškin seudulla, viljelty valkoviinirypäle, jota on kasvatettu samoilla poljilla jo 1300-luvulta lähtien. Se antaa raikkaan ja hapokkaan viinin." },
+      { q: "Milloin žilavka sai virallisen suojan?", a: "Rypäleen nimi suojattiin vuonna 1970, ja vuonna 1973 sen paras laatu sai oman erityisaseman. Se oli yksi entisen Jugoslavian ensimmäisistä nimisuojatuista viineistä." },
+      { q: "Mikä on žilavkan pari Hertsegovinan viinikartalla?", a: "Punaviinilajike Blatina on žilavkan perinteinen vastinpari – yhdessä ne ovat olleet seudun kaksi tärkeintä viiniä vuosisatojen ajan." },
+    ],
+    'Zenica-Doboj': [
+      { q: "Mikä Kraljeva Sutjeska on?", a: "Kaknjin lähellä sijaitseva kylä, jonka nimi tarkoittaa 'kuninkaan kanjonia'. Täällä sijaitsi keskiaikaisen Bosnian kuningaskunnan hovi 1300-luvulta lähtien." },
+      { q: "Mitä Grgurevon kummulla on?", a: "Kummulla ovat näkyvissä keskiaikaisen kuninkaanlinnan rauniot vuodelta 1330, aivan fransiskaaniluostarin vieressä. Paikka on Bosnian kansallismonumentti." },
+      { q: "Mitä luostarin kirjastossa säilytetään?", a: "Kirjastossa on noin 11 000 teosta, joiden joukossa 31 inkunaabelia eli 1400-luvun painettua kirjaa sekä bosniankielisiä kyrillisiä käsikirjoituksia." },
+    ],
+  },
 };
