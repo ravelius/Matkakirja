@@ -10,7 +10,9 @@ Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet 
 
 **Kuorma 61,2 (10:59) → 216 (11:01) → 114 (11:06) → 118 (11:10, tasaantunut).** load1 on rullaava 1 min keskiarvo ja laahaa perässä — **rakenteellinen paraneminen näkyy jo: R/Rs-tilaisia prosesseja 109→88→30**, eli akuutti ruuhka on purkautumassa vaikka mittari ei vielä näytä sitä. Nyt näkyvin: `il2cpp` (Unity natiivikäännös, alkoi 10:59, todennäköisesti aloituslento-työtä), `mds_stores` heilahtelee (2,3%→58%), 2× `sisaltopaketti.test.mjs`. Odotetaan load1:n laskevan seuraavalla kierroksella R/Rs-pudotuksen mukana.
 
-**11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu.
+**11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
+
+**11:14 LOAD1 57,4 (laskeva jatkuu: 118→57).** Kuorma selvästi laantumassa, ei vielä alle rajan (8-10) mutta trendi vahvasti oikeaan suuntaan.
 
 ## 1) Sessiot
 
