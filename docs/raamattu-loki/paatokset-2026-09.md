@@ -8871,3 +8871,7 @@ Omistaja 28.9. klo 21.18 sanatarkasti: "Säätimet voisi olla ISS säätöpaneel
 ## OMISTAJA: PULUN VALINTATAULU ASTRONAUTIN KAMERAN ALKUUN (28.9.2026 klo 21.21)
 
 Omistaja 28.9. klo 21.21 sanatarkasti: "Pulu voisi esitellä taulun linssin alussa jossa eri vaihtoehdot esim. Meno ISS:n sisälle sekä muut ja sen taulun saisi aina esille napauttamalla pulua" → Pelikoodari (web ensin): linssin alussa Pulu esittelee valintataulun (ISS:n sisälle / kyyti-Cupola, astronauttien kuvat, Lennä kohteen ylle, Oma sijainti, muut linssin toiminnot); Pulun napautus avaa taulun aina; sovitus ISS-tervetulorepliikkeihin (#3575); kevyt, myöhemmin Codexin ISS-paneelielementteihin puettava; kuvat Päätoimittajalle ennen PR:ää, sitten natiiviohje Linssisepälle.
+
+## OMISTAJA: PULUN TAULUSSA VAIN MOODIEN VÄLINEN LIIKKUMINEN (28.9.2026 klo 21.24)
+
+Omistaja 28.9. klo 21.24 sanatarkasti: "Älä lisää tauluun iss:n sisällä tapahtuvia vaihtoehtoja. Ainoastaan eri moodien välillä liikkumiset" → tarkentaa 21.21-kirjausta: Pulun valintataulussa vain linssin moodit (ISS:n sisälle, astronauttien kuvat, pallonäkymä ym.); Lennä kohteen ylle, Oma sijainti, nopeus ja säätimet kuuluvat ISS-säätöpaneeliin. Pelikoodarille välitetty.
