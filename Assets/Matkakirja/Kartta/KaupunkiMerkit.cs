@@ -423,12 +423,49 @@ namespace Matkakirja
                 }
             }
             if (m.kohdemerkki != null && m.kohdemerkki.gameObject.activeSelf != paalla) m.kohdemerkki.gameObject.SetActive(paalla);
+            AsetaLentoaika(m, paalla);
             if (m.pisteT.gameObject.activeSelf == paalla) m.pisteT.gameObject.SetActive(!paalla);
             if (m.valintamerkki == paalla) return;
             m.valintamerkki = paalla;
             Tyyli(m);
         }
         bool kohdeVaroitettu;
+
+        /// <summary>Lähtö (Lontoo): lentoaika lasketaan tästä (Pelikello.LentoTunnit).</summary>
+        const double LahtoLat = 51.5074, LahtoLon = -0.1278;
+        /// <summary>Lentoajan nimiö renkaan alla (pt): koko ja rako renkaan reunasta.</summary>
+        public float lentoaikaKirjain = 11f, lentoaikaRako = 5f;
+
+        /// <summary>
+        /// LENTOAIKA VALITTAVAN ALLE (omistaja 28.9.2026 klo 09.38, v3f: "kohdekaupunkien alapuolella lukisi joko plus
+        /// kuusi tuntia tai plus kaksitoista tuntia"): Pelikello.LentoTunnit Lontoosta pelin 6 h:n ikkunoin, renkaan
+        /// alapuolella keskellä samalla musteella kuin nimi (himmeämpänä). Lontoolla ei lentoaikaa.
+        /// </summary>
+        void AsetaLentoaika(Merkki m, bool paalla)
+        {
+            bool nayta = paalla && m.kaupunki.id != "lontoo";
+            if (nayta && m.lentoaika == null)
+            {
+                var n = new GameObject("Lentoaika").AddComponent<TextMeshPro>();
+                n.transform.SetParent(m.juuri, false);
+                n.font = m.nimio.font;
+                n.fontSharedMaterial = m.nimio.fontSharedMaterial;
+                n.textWrappingMode = TextWrappingModes.NoWrap;
+                n.outlineWidth = 0.2f;
+                n.outlineColor = new Color32(250, 243, 225, 220);
+                n.alignment = TextAlignmentOptions.Top;
+                n.fontSize = lentoaikaKirjain;
+                n.color = new Color(valintaMuste.r, valintaMuste.g, valintaMuste.b, 0.82f);
+                var rt = n.rectTransform;
+                rt.pivot = new Vector2(0.5f, 1f);
+                rt.sizeDelta = new Vector2(200, 30);
+                n.transform.localScale = Vector3.one * 10f;
+                n.transform.localPosition = new Vector3(0, -(Mathf.Max(kohdemerkkiPx * 0.5f * 1.42f, rengasSade) + lentoaikaRako), 0);
+                n.text = Pelikello.LentoaikaTeksti(Pelikello.LentoTunnit(LahtoLat, LahtoLon, m.kaupunki.lat, m.kaupunki.lon));
+                m.lentoaika = n;
+            }
+            if (m.lentoaika != null && m.lentoaika.gameObject.activeSelf != nayta) m.lentoaika.gameObject.SetActive(nayta);
+        }
 
         Transform TeeRengas(Merkki m)
         {
@@ -490,6 +527,7 @@ namespace Matkakirja
             public float nimiHaive = -1f; // nimen häivytys 0–1 (tulo ja lähtö 220 ms), −1 = ensi näkymä: heti
             public bool ruudulla, oliRuudulla, naytettiin; // liikelukko (NimiLadonta.LukittuNakyvyys)
             public Transform kohdemerkki; // aloitusvalinnan kohdemerkki renkaan sisällä, luodaan tarvittaessa
+            public TextMeshPro lentoaika; // aloitusvalinnan lentoaika renkaan alla ("+6 h", v3f), luodaan tarvittaessa
             public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
             public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
             public bool lukittu; // nimen paikka lukittu (web LUKKO): vapautuu, kun kaupunki poistuu näkyvistä tai asu vaihtuu
