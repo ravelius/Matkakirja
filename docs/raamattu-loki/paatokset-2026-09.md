@@ -8667,3 +8667,7 @@ Omistaja 28.9. klo 15.3x kortilla v3f2:sta sanatarkasti: "päivä voisi tulla ai
 ## OMISTAJA: ISS-KYYDIN KAUPUNKIEN VALOT 60 % (28.9.2026 klo 15.28)
 
 Omistaja 28.9. klo 15.4x kortilla (Linssiseppa cl6: 100 | 80 | 60 %): 60 % — suurkaupunkien ytimet eivat pala puhki, valoverkko nakyy kuten astronauttien yokuvissa. Natiivi 1.0.37 ja web samalla arvolla.
+
+## OMISTAJA: CUPOLAAN JOTAIN LEIJUMAAN REALISMIKSI (28.9.2026 klo 15.45)
+
+Omistaja 28.9. klo 15.5x sanatarkasti: "keksisikö tuohon mitään leijumaan mitään sisälle joka ei häiritsisi liikaa, mutta lisäisi realismia?" Paatoimittaja: koe Linssiseppa 1:lle nykyisten jalkeen — 1) kamera hihnan paassa nurkassa (pitka objektiivi, hidas painoton kaantyily, epatarkka; myohemmin napautus Astronautin kameraan), 2) polyhiukkaset auringonsateessa vain paivapuolella, 3) valinnainen ajelehtiva kyna/tarkistuslista muutaman minuutin valein. Esineet Codexilta Cupolan tyylilla (tumma, pehmea, rae), liike Linssisepalta. Kuvapari/video omistajalle ennen junaa.
