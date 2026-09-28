@@ -1306,3 +1306,150 @@ button.satelliitti-pulunappi:focus-visible {
         - var(--satelliitti-oikea) - var(--satelliitti-nappi) - 14px));
   }
 }
+
+/*
+ * ══════════ ISS:N KYYTI (Linssisepän suositus 28.9.2026) ══════════
+ *
+ * js/linssit/iss-kyyti-nakyma.js. Luvut samat kuin natiivin
+ * IssKyytiNakyma/Linssit.uss:ssä (LIVE 853259ec): pilleri kuvanäkymän
+ * nimipillerin tyylillä vasemmassa yläkulmassa, punainen piste 7 px
+ * sykkii 1 ↔ 0,25 0,9 s:n ease-in-out-siirtymällä, lihavoitu LIVE
+ * pillerin vihreällä ja väli 5 px; ✕ oikeassa yläkulmassa samana harmaana
+ * pyöreänä kuin kuvan ✕. Cupola-kerrokset koko ruudulle (cover), häivytys
+ * 300 ms. Ei suodattimia (iOS:n webapp-tila, tests/sw.test.mjs).
+ */
+
+/* Syke kerran linssin avautuessa: rengas ISS:n ympärillä (osuma-ala 44 px). */
+.astro-iss-syke {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  border-radius: 50%;
+  border: 2px solid rgba(242, 248, 255, 0.9);
+  opacity: 0;
+  transform: scale(0.3);
+  pointer-events: none;
+}
+.astro-iss-sykkii .astro-iss-syke { animation: astro-iss-syke 600ms ease-out 1; }
+@keyframes astro-iss-syke {
+  0% { opacity: 0.95; transform: scale(0.3); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+/* Kyydissä linssin oma ✕ ja havaintopisteet pois: kyydillä on oma ✕. */
+body.satelliitti-kyyti .satelliitti-linssikehys { display: none; }
+body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
+
+.iss-kyyti {
+  position: fixed;
+  inset: 0;
+  z-index: 48;
+  pointer-events: none;
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+}
+.iss-kyyti[hidden] { display: none; }
+
+.iss-kyyti-cupola,
+.iss-kyyti-cupola > div {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.iss-kyyti-cupola > div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.iss-kyyti-ikkuna .iss-kyyti-cupola > div[data-ladattu="1"] { opacity: 1; }
+/*
+ * SYVYYS: ulko-osat (lasin takana) ja heijastus (lasissa) liikkuvat hitaasti
+ * vastakkain kuin katsojan pää liikkuisi; parallaksi ≤ 1,5 % ruudusta,
+ * heijastuksen huojunta 0,4 % ~11 s:n jaksolla (natiivi Cupola 2).
+ */
+.iss-kyyti-ikkuna .iss-kyyti-ulko { animation: iss-kyyti-ulko 11s ease-in-out infinite alternate; }
+.iss-kyyti-ikkuna .iss-kyyti-heijastus { animation: iss-kyyti-heijastus 11s ease-in-out infinite alternate; }
+@keyframes iss-kyyti-ulko {
+  from { transform: translate(0.6%, 0.3%); }
+  to { transform: translate(-0.6%, -0.3%); }
+}
+@keyframes iss-kyyti-heijastus {
+  from { transform: translate(-0.4%, -0.2%); }
+  to { transform: translate(0.4%, 0.2%); }
+}
+
+/* Läpinäkyvä kosketuskerros: napautus vaihtaa tilaa, eleet nielaistaan. */
+.iss-kyyti-kosketus {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.iss-kyyti-tieto {
+  position: absolute;
+  left: max(12px, env(safe-area-inset-left, 0px));
+  top: var(--satelliitti-yla);
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(93, 255, 168, 0.28);
+  background: rgba(6, 13, 10, 0.72);
+  color: rgb(93, 255, 168);
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.iss-kyyti-auki .iss-kyyti-tieto { opacity: 1; }
+.iss-kyyti-piste {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: rgb(255, 86, 86);
+  animation: iss-kyyti-live 0.9s ease-in-out infinite alternate;
+}
+.iss-kyyti-live {
+  font-weight: 700;
+  margin-right: 5px;
+  color: rgb(93, 255, 168);
+}
+.iss-kyyti-piste[hidden],
+.iss-kyyti-live[hidden] { display: none; }
+@keyframes iss-kyyti-live {
+  from { opacity: 1; }
+  to { opacity: 0.25; }
+}
+
+.iss-kyyti-sulku {
+  position: absolute;
+  top: var(--satelliitti-yla);
+  right: var(--satelliitti-oikea);
+  pointer-events: auto;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.iss-kyyti-auki .iss-kyyti-sulku { opacity: 1; }
+.iss-kyyti:not(.iss-kyyti-auki) .iss-kyyti-sulku { pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .astro-iss-sykkii .astro-iss-syke,
+  .iss-kyyti-piste,
+  .iss-kyyti-ikkuna .iss-kyyti-ulko,
+  .iss-kyyti-ikkuna .iss-kyyti-heijastus { animation: none; }
+}
+.iss-kyyti-liikkumaton .iss-kyyti-piste,
+.iss-kyyti-liikkumaton .iss-kyyti-ulko,
+.iss-kyyti-liikkumaton .iss-kyyti-heijastus { animation: none !important; }

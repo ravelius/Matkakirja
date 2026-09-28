@@ -392,6 +392,10 @@ const SHELL = [
   './js/tiivistys.js',
   './js/linssit/astronautin-kierros.js',
   './js/linssit/satelliitti-avaruus.js',
+  // ISS:n kyyti (28.9.2026): todellinen rata (oma SGP4), kyydin ydin ja näkymä.
+  './js/linssit/iss-rata.js',
+  './js/linssit/iss-kyyti.js',
+  './js/linssit/iss-kyyti-nakyma.js',
   './js/linssit/satelliitti-nimiot.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
