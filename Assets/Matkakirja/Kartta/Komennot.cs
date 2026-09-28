@@ -793,13 +793,14 @@ namespace Matkakirja
                 }
                 case "lipputanko":
                 {
-                    // lipputanko tila | pois | koe [lat lon] | koko <pt> | maailma | ruutu | katto <osuus> (löydös 161)
+                    // lipputanko tila | pois | koe [lat lon] | koko <pt> | maailma | ruutu | kasvu <0…1> | suoja <osuus> (löydös 161)
                     string m = o.Length > 1 ? o[1] : "tila";
                     if (m == "pois") Lipputanko.Pois();
                     else if (m == "jatkuva" || m == "syke") Lipputanko.AsetaJatkuva(m == "jatkuva");
                     else if (m == "koko" && o.Length > 2) Lipputanko.KorkeusPt = float.Parse(o[2], CultureInfo.InvariantCulture);
                     else if (m == "maailma" || m == "ruutu") Lipputanko.MaailmanKoko = m == "maailma";   // omistaja 27.9. klo 23.2x
-                    else if (m == "katto" && o.Length > 2) Lipputanko.MaxKorkeusKm = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 5f, 1000f);
+                    else if (m == "kasvu" && o.Length > 2) Lipputanko.Kasvu = Mathf.Clamp01(float.Parse(o[2], CultureInfo.InvariantCulture));
+                    else if (m == "suoja" && o.Length > 2) Lipputanko.EtaisyysOsuus = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0.05f, 2f);
                     else if (m == "perspektiivi" && o.Length > 2) Lipputanko.Perspektiivi = o[2] != "0";
                     else if (m == "suunta" && o.Length > 2) Lipputanko.AsetaSuunta(o[2]);
                     else if (m == "koe")
