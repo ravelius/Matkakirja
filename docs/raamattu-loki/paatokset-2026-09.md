@@ -8903,3 +8903,7 @@ Pelikoodari 28.9. klo 22.07: Pulun malli claude-sonnet-5-5 (/v1/models, luotu 28
 ## TILA: JULKAISIJA SONNET 5.5 HIGH (KOE) (28.9.2026 klo 22.11)
 
 Omistaja 28.9. klo 22.11: Julkaisija vaihdettu valikosta Sonnet 5.5:een (effort high), nollattu 22.04 (luovutus julkaisija-luovutus-20260928 939761106). Päätoimittaja arvioi 29.9. illalla: junan läpimeno, virheet, TF-viennit; jos heikompi, takaisin Opukselle.
+
+## TILA: LEVYSIIVOUS 67 → 85 GT; NOLLAUKSET; SONNET 5.5 = 200 K KONTEKSTI (28.9.2026 klo 22.19)
+
+Päätoimittaja 28.9. klo 22.19: Postivahti 22.16 levy 66 Gi (raja 80) → poistettu proto-3d/lokit 111 kansiota, joissa ei yhtään yli 48 h tuoreempaa tiedostoa (11,4 Gt), ja 22 yli 24 h vanhaa .app-kopiota (7,6 Gt); levy 85 Gi vapaana. HUOM: BSD find ei ymmärrä -newermt '-48 hours' (koeajo merkitsi tuoreetkin) → käytä -mmin. Nollaukset: Natiivi-UI 90 %, Natiiviseppä 71 %, Linssiseppä 2 70 %, Sisältökirjuri ja Laitetestaaja (yli 100 % 200 k:sta). Havainto: valikon Sonnet 5.5:llä on 200 k:n konteksti (Julkaisija 69 % heti nollauksen jälkeen, pohjakuorma ~85 k: työkalut, MCP, kehote, muisti) → kysytään omistajalta 1M-versiota.
