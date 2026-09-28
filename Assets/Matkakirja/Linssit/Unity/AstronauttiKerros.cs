@@ -183,7 +183,26 @@ namespace Matkakirja.Natiivi
 
         public void Nimet(bool nakyvissa) => nimetNakyvissa = nakyvissa;
 
-        public void Pilvet(double peitto, double kiertoAsteina) => pilvet?.Aseta(peitto, kiertoAsteina);
+        public void Pilvet(double peitto, double kiertoAsteina) =>
+            pilvet?.Aseta(kyyti != KyydinTila.Kauko && PilvetKyydissa == "pois" ? 0 : peitto, kiertoAsteina);
+
+        /// <summary>
+        /// Pilvet kyydissä (laitteen 1. Cupola-kierros 28.9.: 1,01 R:n eli ~64 km:n pilvikuoren reuna nousi ISS:ltä katsottuna maan
+        /// reunan yläpuolelle ja vaalensi koko horisontin): "matala" = kuori ~8 km:iin kuin oikeat pilvet (oletus), "korkea" =
+        /// kaukonäkymän 1,01 R, "pois" = ei pilviä (A/B: astro kyyti pilvet matala|korkea|pois).
+        /// </summary>
+        public static string PilvetKyydissa = "matala";
+        const double PilvetMatalallaM = 8000;
+
+        /// <summary>A/B-komento: pilvien korkeus heti (peitto päivittyy seuraavassa Pilvet-kutsussa).</summary>
+        public void PaivitaPilvet() => AsetaPilvienKorkeus();
+
+        void AsetaPilvienKorkeus()
+        {
+            if (pilvet == null) return;
+            bool matala = kyyti != KyydinTila.Kauko && PilvetKyydissa == "matala";
+            pilvet.Korkeus(matala ? PilvetMatalallaM : (Astronauttimatikka.PilvienSade - 1) * MaanSade);
+        }
 
         public void Sumu(double peitto) => SumuKasittelija?.Invoke(peitto);
 
@@ -234,6 +253,7 @@ namespace Matkakirja.Natiivi
             if (yokuori != null) yokuori.Nayta(tila != KyydinTila.Kauko);
             // Kyydissä ohut ilmakehän kaari ja musta avaruus (omistajan palaute 28.9.), tähdet himmeinä (päivävalo).
             avaruus?.Kyyti(tila != KyydinTila.Kauko);
+            AsetaPilvienKorkeus();
             tahtienPeitto = tila == KyydinTila.Kauko ? 1f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);

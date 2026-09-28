@@ -1396,6 +1396,11 @@ namespace Matkakirja.Natiivi
                             FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
+                        else if (a == "pilvet" && osat.Length > 3)
+                        {
+                            AstronauttiKerros.PilvetKyydissa = osat[3];
+                            FindAnyObjectByType<AstronauttiKerros>()?.PaivitaPilvet();
+                        }
                         else if (a != "tila") l.NapautaIss();
                         var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
                         var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
