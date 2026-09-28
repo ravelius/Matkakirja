@@ -33,6 +33,99 @@ namespace Matkakirja.Linssit.Iss
         public const double SeurannanEtaisyysM = 1_200_000, SeurannanKallistus = 55;
         /// <summary>Ikkuna: katse radan suuntaan näin monta astetta vaakatason alapuolelle (horisontti 420 km:stä 20,3°).</summary>
         public const double IkkunanKatseAlas = 55;
+        /// <summary>
+        /// HORISONTTI (omistaja 28.9. klo 21.5x Päätoimittajan kautta, mainosvideon ISS-ikkuna: "yksi iso ikkuna olisi pääosassa
+        /// ja sivuikkunat näkyisivät vähän"): katse radan suuntaan 36° vaakatason alapuolelle, jolloin maan kaari ja ilmakehän
+        /// reuna (20,3° alapuolella, 15,7° kuvan keskikohdan yläpuolella) ovat ison sivuikkunan ylimmässä kolmanneksessa ja
+        /// avaruus musta sen yllä. Cupola-kerrokset rajataan yläikkunaan niin, että kehys täyttää ruudun (IssKyytiNakyma).
+        /// A/B `astro kyyti rajaus horisontti`.
+        /// </summary>
+        public const double HorisontinKatseAlas = 36;
+        /// <summary>
+        /// Ikkunan rajaus: PYÖREÄ (oletus, omistaja 28.9. klo 22.5x horisonttiluonnoksen jälkeen: "voisiko ennemmin käyttää sitä
+        /// pyöreää ikkunaa ja rajata se lähelle? toimisi aika hyvin vähän eri rajauksella pysty ja vaaka muodossa") = pyöreä
+        /// kattoikkuna täyttää ruudun lyhyemmän sivun ja karmi näkyy reunoilla, katse 55°; HORISONTTI = iso sivuikkuna, katse 36°;
+        /// KATTO = 1.0.40:n koko kupoli lasin zoomilla 1,3, katse 55°. A/B `astro kyyti rajaus pyorea|horisontti|katto`.
+        /// </summary>
+        public enum IkkunanRajaus { Pyorea, Horisontti, Katto }
+        public static IkkunanRajaus Rajaus = IkkunanRajaus.Pyorea;
+        public static bool Horisontti => Rajaus == IkkunanRajaus.Horisontti;
+
+        /// <summary>
+        /// CUPOLA 3 (Codexin toimitus 28.9. klo 22.4x, posti/codex-fable-iss-ohjaamo-20260928.md; omistajan pyöreä kattoikkuna
+        /// tiiviisti pystyyn ja vaakaan): pyöreän rajauksen ohjaamo on piirretty valmiiksi rajatuksi kahtena kuvana, iPhonen
+        /// pysty 1290 × 2796 (ikkuna 98 % leveydestä) ja iPadin vaaka 2732 × 2048 (ikkuna 85 % korkeudesta). Kuva valitaan
+        /// laitteen muodosta (pitkä / lyhyt sivu alle 1,75 = iPadin kuva) ja käännetään 90°, kun ruutu on eri asennossa kuin
+        /// kuva (iPhone vaaka, iPad pysty): ikkuna pysyy pyöreänä ja täyttää ruudun lyhyemmän sivun.
+        /// </summary>
+        public static (bool ipad, bool kaanna) Cupola3Kuva(double leveys, double korkeus)
+        {
+            double pitka = Math.Max(leveys, korkeus), lyhyt = Math.Min(leveys, korkeus);
+            bool ipad = lyhyt > 0 && pitka / lyhyt < Cupola3IpadRaja;
+            return (ipad, ipad ? korkeus > leveys : leveys > korkeus);
+        }
+        public const double Cupola3IpadRaja = 1.75;
+
+        /// <summary>Codexin kuvan koko pikseleinä: iPadin vaaka tai iPhonen pysty.</summary>
+        public static (double leveys, double korkeus) Cupola3Koko(bool ipad) => ipad ? (2732, 2048) : (1290, 2796);
+
+        /// <summary>
+        /// Pyöreän ikkunan keskipiste Codexin kuvassa osuutena leveydestä ja korkeudesta (mitattu ikkunamaskista 28.9.). iPadin
+        /// kuvissa ikkuna on hieman yläpuolella (y 0,45–0,47), jolloin oranssi lappu leikkautui laitteella (cl18) ruudun reunaan.
+        /// </summary>
+        public static (double x, double y) Cupola3Keskus(bool ipad, string kulma) => kulma == "b"
+            ? (ipad ? (0.498, 0.452) : (0.448, 0.490))
+            : (ipad ? (0.503, 0.465) : (0.498, 0.473));
+
+        /// <summary>
+        /// Rajaus kerrossäiliön omassa koordinaatistossa (pt, x oikealle, y alas): kuva cover-asetettuna <paramref name="leveys"/> ×
+        /// <paramref name="korkeus"/> -laatikkoon ja laatikko suurennettuna <paramref name="z"/>-kertaiseksi keskeltä. Ikkunan
+        /// keskipiste siirretään kohti ruudun keskustaa kahdessa osassa:
+        ///  1) kuvaa siirretään laatikon sisällä (background-position 0–1, 0,5 = keskellä) cover-ylijäämän verran; UI Toolkit leikkaa
+        ///     taustakuvan laatikkoon, joten pelkkä laatikon siirto paljasti cl19:ssä iPadin yläreunaan 16 pt:n aukon;
+        ///  2) loput laatikon siirtona (translate) suurennoksen varan sisällä, reunaan <paramref name="vara"/> pt ajelehdukselle.
+        /// iPad vaaka: asema y 0,065 (kuva 31,8 pt alas laatikossa, ikkuna keskelle), siirto 0; iPhone: ei cover-ylijäämää, siirto 9,5 pt.
+        /// </summary>
+        public static (double asemaX, double asemaY, double x, double y) Cupola3Rajaus(double leveys, double korkeus, bool ipad, string kulma, double z, double vara)
+        {
+            var (kl, kk) = Cupola3Koko(ipad);
+            var (cx, cy) = Cupola3Keskus(ipad, kulma);
+            double s = Math.Max(leveys / kl, korkeus / kk);
+            double lx = (kl * s - leveys) * 0.5, ly = (kk * s - korkeus) * 0.5;
+            double dx = -z * ((leveys - kl * s) * 0.5 + cx * kl * s - leveys * 0.5), dy = -z * ((korkeus - kk * s) * 0.5 + cy * kk * s - korkeus * 0.5);
+            double bx = Math.Clamp(dx / z, -lx, lx), by = Math.Clamp(dy / z, -ly, ly);
+            double ax = lx > 1e-6 ? 0.5 - bx / (2 * lx) : 0.5, ay = ly > 1e-6 ? 0.5 - by / (2 * ly) : 0.5;
+            double vx = Math.Max(0, (z - 1) * leveys * 0.5 - vara), vy = Math.Max(0, (z - 1) * korkeus * 0.5 - vara);
+            return (ax, ay, Math.Clamp(dx - bx * z, -vx, vx), Math.Clamp(dy - by * z, -vy, vy));
+        }
+
+        /// <summary>Cupola 3:n reunavalot Codexin tiedostonimin: kapea valo ikkunan reunassa luoteessa, koillisessa ja lounaassa.</summary>
+        public static readonly string[] Cupola3ValoNimet = { "sun-nw", "sun-ne", "sun-sw" };
+        const double R2 = 0.70710678118654752, Cupola3Keila = 0.35;
+        /// <summary>Reunavalojen puolet kuvassa (x oikealle, y ylös) samassa järjestyksessä.</summary>
+        static readonly (double x, double y)[] Cupola3Reunat = { (-R2, R2), (R2, R2), (-R2, -R2) };
+
+        /// <summary>
+        /// Cupola 3:n reunavalojen painot 0…1, kun aurinko on kuvan suunnassa (<paramref name="x"/>, <paramref name="y"/>; x
+        /// oikealle, y ylös, CupolaKerros.Valo). Valo tulee lasin läpi ja osuu karmin sisäreunaan auringon VASTAKKAISELLA puolella
+        /// (kuten Cupola 2:n reunavaloissa: kehys valaistuu, jos ikkuna on sen ja auringon välissä), eli luoteen reuna loistaa, kun
+        /// aurinko on kaakossa. Pehmeä keila (0,35): suunnalle, jolla ei ole omaa kerrosta (aurinko luoteessa), kaksi viereistä
+        /// himmeästi. Aurinko suoraan edessä tai takana (xy alle 0,001): ei reunavaloa.
+        /// </summary>
+        public static void Cupola3Valot(double x, double y, float[] painot)
+        {
+            double l = Math.Sqrt(x * x + y * y);
+            for (int i = 0; i < Cupola3Reunat.Length; i++)
+            {
+                if (l < 1e-3) { painot[i] = 0; continue; }
+                double vastaan = -(x * Cupola3Reunat[i].x + y * Cupola3Reunat[i].y) / l;
+                painot[i] = (float)Math.Max(0, (vastaan + Cupola3Keila) / (1 + Cupola3Keila));
+            }
+        }
+        /// <summary>Ikkunan katse nyt (A/B `astro kyyti katse &lt;astetta&gt;` ohittaa; NaN = rajauksen mukaan).</summary>
+        public static double KatseAlasPakotettu = double.NaN;
+        public static double IkkunanKatseNyt => !double.IsNaN(KatseAlasPakotettu) ? KatseAlasPakotettu
+            : Horisontti ? HorisontinKatseAlas : IkkunanKatseAlas;
         /// <summary>Cupolan keskilasin kenttäkulma pystyyn ilman zoomia (lasi 80 cm, silmä 45 cm:n päässä; 1.0.37).</summary>
         public const double IkkunanPerusKentta = 80;
         /// <summary>
@@ -60,7 +153,9 @@ namespace Matkakirja.Linssit.Iss
         /// keskuskulma θ = ζ − η ja etäisyys ρ = R sin θ / sin η (420 km, 55°: θ 2,69°, ρ 521 km, ζ 37,7°). Kallistus on ζ ja
         /// suuntima kohteessa isoympyrän loppusuunta, jolloin silmä osuu ISS:ään.
         /// </summary>
-        public static Kuvakulma Ikkuna(in IssHetki iss, double alas = IkkunanKatseAlas)
+        public static Kuvakulma Ikkuna(in IssHetki iss) => Ikkuna(iss, IkkunanKatseNyt);
+
+        public static Kuvakulma Ikkuna(in IssHetki iss, double alas)
         {
             double r = MaanSadeM, h = Math.Max(1000, iss.KorkeusM);
             // Katseen on osuttava maahan: horisontin alapuolella vähintään 1°.

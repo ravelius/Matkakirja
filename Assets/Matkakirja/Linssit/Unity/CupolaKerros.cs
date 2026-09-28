@@ -91,6 +91,8 @@ namespace Matkakirja.Natiivi
         public static Vector4 Valo { get; private set; }
         /// <summary>Valo on laskettu tällä kyydillä (Cupola-kerros olemassa); false = ei tietoa, pölyt pois.</summary>
         public static bool ValoTiedossa { get; private set; }
+        /// <summary>Maavalo 0,15…1 (CupolanValo.Maavalo): horisontin reunavalo alhaalta (IssKyytiNakyma).</summary>
+        public static float MaavaloNyt { get; private set; } = 0.8f;
 
         void Update()
         {
@@ -123,6 +125,7 @@ namespace Matkakirja.Natiivi
             var r = CupolanValo.Ruudulle(k.x, k.y, k.z);
             aurinko = new Vector4((float)r.x, (float)r.y, (float)r.z, (float)CupolanValo.Aurinkoisuus(ylos, IssKorkeusKm));
             maavalo = (float)CupolanValo.Maavalo(ylos);
+            MaavaloNyt = maavalo;
             Valo = aurinko;
             ValoTiedossa = true;
         }
