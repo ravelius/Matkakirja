@@ -157,6 +157,12 @@ test('Cupola: kuvien vaihto on yksi vakio, koko ruudun muodon mukaan', async () 
   const uusi = cupolanOsoitteet(834, 1194, '20260928');
   assert.deepEqual(uusi.map((k) => k.laji), ['ulko', 'heijastus', 'kehys'], 'takaa eteen kuten natiivissa');
   assert.match(uusi[2].osoite, /karttanostot\/20260928\/iss-cupola2-kehys-ipad-1536x2732\.png$/);
+  // Voimassa: pehmeä Cupola 2 (omistaja 28.9.2026 klo 14.1x), sama järjestys, poltettu syväterävyys.
+  assert.equal(CUPOLA_VERSIO, '20260928-pehmea');
+  const pehmea = cupolanOsoitteet(393, 852);
+  assert.deepEqual(pehmea.map((k) => k.laji), ['ulko', 'heijastus', 'kehys']);
+  assert.match(pehmea[0].osoite, /karttanostot\/20260928\/iss-cupola2-pehmea-ulkoosat-iphone-1206x2622\.png$/);
+  assert.match(pehmea[2].osoite, /karttanostot\/20260928\/iss-cupola2-pehmea-kehys-iphone-1206x2622\.png$/);
 });
 
 test('ISS-malli natiivin mittasuhtein: 110 m leveä, neljä paria kullanruskeita siipiä', async () => {
