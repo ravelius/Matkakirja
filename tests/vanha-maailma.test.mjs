@@ -545,12 +545,17 @@ test('suomenkielisistä teksteistä ei puutu ä- ja ö-kirjaimia', async () => {
    */
   const PAIKANNIMET = /\bPaivan\b/g;
 
+  // Historian hetken pysyvä URL-tunnus sisältää teknisen kirjoitusasun.
+  // Rajaus jättää tavallisen proosan "paattyy" edelleen testin löydettäväksi.
+  const HETKEN_TUNNUS = /-paattyy-1565\b/g;
+
   const kansio = new URL('../js/packs/', import.meta.url).pathname;
   const osumat = [];
   for (const nimi of readdirSync(kansio)) {
     if (!nimi.endsWith('.js')) continue;
     const s = readFileSync(join(kansio, nimi), 'utf8')
-      .replace(VIERASSANAT, '$1—').replace(TUNNETAGIT, '$1—$2').replace(PAIKANNIMET, '—');
+      .replace(VIERASSANAT, '$1—').replace(TUNNETAGIT, '$1—$2')
+      .replace(PAIKANNIMET, '—').replace(HETKEN_TUNNUS, '-—-1565');
     const loydot = [...new Set((s.match(hahmo) ?? []).map((x) => x.toLowerCase()))];
     if (loydot.length) osumat.push(`${nimi}: ${loydot.slice(0, 6).join(', ')}`);
   }

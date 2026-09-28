@@ -326,7 +326,8 @@ test('lehteen jätetyllä hetkellä on kirjattu syy', () => {
       'mendelejev-kortit-1869', 'michelangelo-sikstus-1510', 'mozart-wien-1786',
       'nansen-fram-1893', 'olympia-ateena-1896', 'pasteur-pullot-1862',
       'pietari-perustus-1703', 'ranskan-vallankumous-bastilji-1789',
-      'shakespeare-globe-1599', 'sibelius-finlandia-1899'],
+      'shakespeare-globe-1599', 'sibelius-finlandia-1899',
+      'siegfried-ostaa-bockin-963'],
     'poikkeuslista muuttui — uusi lehteen jäävä hetki vaatii omistajan päätöksen');
 });
 

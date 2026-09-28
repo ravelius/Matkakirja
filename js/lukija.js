@@ -102,6 +102,7 @@ import { luoKaiutinmittari } from './kaiutinmittari.js';
  * ristiin.
  */
 import { puheAlkoi, puheLoppui } from './ambience-stream.js';
+import { poistaPuhetagit } from './puhetagit.js';
 import { AANIVALINTA_TAPAHTUMA, sfx } from './sound.js';
 
 /** Luennan kieli. Sama luku laitteen omilla taustajärjestelmillä. */
@@ -1394,7 +1395,11 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
  * puhesyntetisaattori). Tämä oli lueAaneen-funktion koko runko ennen
  * lukijaääntä; sisältö on ennallaan.
  */
-function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'kertoja') {
+function lueLaitteella(tagillinen, nappi = null, kunLoppuu = null, persoona = 'kertoja') {
+  // Laitteen ääni (iOS-silta, selain) lausuisi Pulun xAI-puhetagit
+  // kirjaimellisesti: ne kuuluvat vain lukijaäänelle (js/puhetagit.js).
+  const puhuttava = poistaPuhetagit(tagillinen).trim();
+  if (!puhuttava) return false;
   const merkki = {};
   const kuuntelu = persoona === 'pollo' ? null : luoLivianKuunteluvuoro(merkki, { lahde: 'lukija' });
   const loppui = () => {
@@ -1636,8 +1641,8 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
     lisaa(teksti) {
       if (tila.peruttu || tila.paatetty) return;
       // Sama palakatto kuin valmiilla tekstillä: Chrome katkaisee liian
-      // pitkän lausuman kesken.
-      for (const pala of lukijaPaloittele(teksti)) palat.push(pala);
+      // pitkän lausuman kesken. Puhetagit pois kuten lueLaitteella.
+      for (const pala of lukijaPaloittele(poistaPuhetagit(teksti))) palat.push(pala);
       if (tila.lepaa) puhuPala();
     },
     paata() {

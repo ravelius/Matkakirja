@@ -79,6 +79,7 @@ import { ehdotusKaytossa, lahetaEhdotus } from './ehdotukset.js';
 import { merkitseLivianOmaDialogi } from './livia-dialogitila.js';
 import { haeKuvallinenArtikkeli, suurennusportaat } from './wiki.js';
 import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
+import { poistaPuhetagit } from './puhetagit.js';
 import { sfx } from './sound.js';
 import {
   hiljennaAmbienssi, palautaAmbienssi, taukoaSanelunAjaksi, jatkaSanelunJalkeen,
@@ -793,6 +794,16 @@ export function poistaKasiteMerkinnat(teksti) {
 }
 
 /**
+ * Striimin kertymä pelaajan silmille: ei käsitemerkintöjä eikä
+ * puhetageja, ei myöskään puolikasta tagia palarajalla ("[si" + "gh]").
+ * Siivotaan aina KERTYNYT teksti, ei yksittäinen pala (js/puhetagit.js).
+ * Luenta saa kertymän tageineen (syotaLuennalle).
+ */
+export function striiminNayttoteksti(kertynyt) {
+  return poistaPuhetagit(poistaKasiteMerkinnat(kertynyt), { kesken: true });
+}
+
+/**
  * Jäsentää vastauksen paloiksi: tavallinen teksti ja käsitteet.
  *
  * @returns {Array<{teksti: string, kasite: boolean}>}
@@ -1405,7 +1416,8 @@ export function lueLivianLoki(avain = LIVIAN_LOKI_AVAIN) {
  * @returns {boolean} kirjautuiko.
  */
 export function kirjaaLivianLokiin(rooli, teksti) {
-  const sanat = String(teksti ?? '').trim();
+  // Loki on kelattava näyttö: puhetagit eivät kuulu sinne (js/puhetagit.js).
+  const sanat = poistaPuhetagit(String(teksti ?? '')).trim();
   if (!sanat) return false;
   try {
     const loki = lisaaLokiin(lueLivianLoki(), { r: rooli, t: sanat, aika: Date.now() });
@@ -6454,7 +6466,7 @@ export class Pollo {
           // Naputus alkaa ENSIMMÄISESTÄ palasta eikä pyynnön
           // lähtiessä: kirjoituskone ei naputa tyhjää paperia.
           this.aloitaNaputus();
-          avaaKupla().textContent = poistaKasiteMerkinnat(kertynyt);
+          avaaKupla().textContent = striiminNayttoteksti(kertynyt);
           // Näkymä on jo ankkuroitu: uusi teksti syö varattua tyhjää
           // alhaalta, joten virran vierityskohta ei muutu riviäkään.
           this.paivitaTyhjaTila();
@@ -6477,7 +6489,12 @@ export class Pollo {
       if (ohjain.signal.aborted) return;
       // Naputus loppuu ennen kelloa, ei sen kanssa päällekkäin.
       this.lopetaNaputus();
-      const raaka = String(tulos?.vastaus ?? '').trim();
+      /*
+       * PUHETAGIT (js/puhetagit.js): näyttö, historia, loki ja poiminta
+       * saavat tagittoman tekstin; vain luenta saa tagillisen.
+       */
+      const tagillinen = String(tulos?.vastaus ?? '').trim();
+      const raaka = poistaPuhetagit(tagillinen).trim();
       // Katkennutkin virta näyttää sen, mitä ehti tulla.
       const teksti = raaka || (tulos?.katkesi ? '' : VASTAUS_EI_TULLUT);
       /*
@@ -6580,7 +6597,7 @@ export class Pollo {
        * laite ilman selaimen puhesyntetisaattoria — luetaan valmis
        * vastaus entiseen tapaan.
        */
-      if (!this.paataLuenta(kertyma)) this.lueVastaus(puhdas);
+      if (!this.paataLuenta(kertyma)) this.lueVastaus(raaka ? poistaKasiteMerkinnat(tagillinen) : puhdas);
       if(!varateksti&&!tulos?.katkesi)this.kasvoEleet?.tilanne('answer',{teksti:puhdas});
       /*
        * HISTORIAAN VAIN AITO VASTAUS (omistajan vikailmoitus 6.9.2026).
@@ -6684,7 +6701,7 @@ export class Pollo {
         tulos = await this.pyydaStriimi(runko, (kertynyt) => {
           // Naputus alkaa ensimmäisestä palasta, kuten paneelissakin.
           this.aloitaNaputus();
-          onPala?.(poistaKasiteMerkinnat(kertynyt));
+          onPala?.(striiminNayttoteksti(kertynyt));
         });
       } else {
         const data = await this.pyyda(runko);
@@ -6693,7 +6710,7 @@ export class Pollo {
         };
       }
       this.lopetaNaputus();
-      const puhdas = poistaKasiteMerkinnat(String(tulos?.vastaus ?? '').trim());
+      const puhdas = poistaPuhetagit(poistaKasiteMerkinnat(String(tulos?.vastaus ?? '').trim())).trim();
       if (puhdas && !tulos?.syy && !tulos?.katkesi) {
         this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
         this.historia.push({ rooli: 'pollo', teksti: puhdas });

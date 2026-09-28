@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2347, teksti: 'Pulun äänitagit: huokaus, nauru, innostus (#3513)' },
+  { v: 2346, teksti: 'Viisi Euroopan historian hetkeä kuvineen' },
   { v: 2345, teksti: 'Faktatarkistus erä 3: Istanbul, 8 korjausta (#3511)' },
   { v: 2344, teksti: 'Maakuntien Pulu-kysymykset ja Berliinin faktakorjaus' },
   { v: 2343, teksti: 'Alonnisoksen nosto merikansallispuistoksi (#3490)' },

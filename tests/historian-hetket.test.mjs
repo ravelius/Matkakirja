@@ -81,10 +81,10 @@ function lehtisivu(hetki) {
   return (sivut ?? []).find((s) => s.id === `hetki-${hetki.id}`) ?? null;
 }
 
-test('hetkiä on 49 ja jokaisella on kortin kentät', () => {
-  // 20 → 49 (5.9.2026): kuvaputken H3 51–81 -erä, 29 uutta hetkeä.
-  assert.equal(HISTORIAN_HETKET.length, 49,
-    'H3 45–48, Galilei ja H3 51–81: 49 hetkeä');
+test('hetkiä on 54 ja jokaisella on kortin kentät', () => {
+  // 49 → 54 (27.9.2026): viisi Euroopan ohuen lehtikaupungin hetkeä.
+  assert.equal(HISTORIAN_HETKET.length, 54,
+    'H3 45–81 ja Euroopan viisi uutta hetkeä: 54 hetkeä');
   const tunnukset = new Set();
   for (const hetki of HISTORIAN_HETKET) {
     assert.ok(!tunnukset.has(hetki.id),
