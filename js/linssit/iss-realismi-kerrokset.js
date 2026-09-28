@@ -38,9 +38,9 @@ export const LAHTEET = Object.freeze({
 // käyttöhetkellä (astro-sumu.js PILVIEN_PEITTO): moduulit tuovat toisiaan syklisesti, joten vakiota ei lueta latausvaiheessa.
 export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: 0.9, yo: 0.04 });
 
-/** Natiivin Yokuori.shader-oletukset (411b0bc7). */
+/** Natiivin Yokuori.shader-oletukset (411b0bc7; valot 60 % = 0,96, omistaja 28.9., natiivi 1e773968). */
 export const YOKUORI = Object.freeze({
-  sade: 1.012, peitto: 0.82, vari: [0.012, 0.02, 0.05], valot: 1.6, maaVoima: 2.2, kiilto: 6, aalto: 0.02,
+  sade: 1.012, peitto: 0.82, vari: [0.012, 0.02, 0.05], valot: 0.96, maaVoima: 2.2, kiilto: 6, aalto: 0.02,
   varjo: 0.55, yoVesi: 0.96,
   // Eurooppa-kuvan rajat: lon −28,125…45, Web Mercator -rivit 13/64…26/64 (0 ylhäällä).
   euRaja: [-28.125, 45, 0.203125, 0.40625],
@@ -84,7 +84,7 @@ void main() {
 /* ─────────────────────────── YÖKUORI ─────────────────────────── */
 
 const YOKUORI_FRAGMENT = `
-uniform float uOsuus, uPeitto, uR, uValot, uMaaVoima, uKiilto, uAalto, uVarjo, uYoVesi, uPilvetOn;
+uniform float uOsuus, uPeitto, uR, uValot, uMaaVoima, uKiilto, uAalto, uVarjo, uYoVesi, uPilvetOn, uPilviPeitto;
 uniform vec3 uVari, uAurinko;
 uniform vec4 uEuRaja;
 uniform sampler2D uValotEu, uValotMaa, uVesiEu, uVesiMaa, uPilvet;
@@ -121,8 +121,9 @@ void main() {
   float vesi = mix(texture2D(uVesiMaa, uvMaa).r, texture2D(uVesiEu, uvEu).r, euPaino);
   l = l * l * 0.6 + l * 0.4;
   // Päivän pilvet peittävät valot ja heijastuksen (natiivi 2eb8a5d0): pilvikuoren kuva, tasakulmainen, v = 0 etelässä.
+  // Himmennys seuraa pilvikuoren nykyistä peittoa (natiivi e6e0ef61): pilvet pois → valot ilman himmennystä.
   // Bias −16 = tason 0 näyte kuten natiivin LOD 0: atan-sauma ±180°:ssa ei valitse pienintä mip-tasoa.
-  float pilvi = uPilvetOn * texture2D(uPilvet, vec2(lon / 6.2831853 + 0.5, asin(clamp(ng.y, -1.0, 1.0)) / 3.14159265 + 0.5), -16.0).a;
+  float pilvi = uPilvetOn * uPilviPeitto * texture2D(uPilvet, vec2(lon / 6.2831853 + 0.5, asin(clamp(ng.y, -1.0, 1.0)) / 3.14159265 + 0.5), -16.0).a;
   float lapi = 1.0 - 0.85 * pilvi;
   vec3 savy = mix(vec3(1.0, 0.52, 0.2), vec3(1.0, 0.88, 0.7), clamp(l * 1.6, 0.0, 1.0));
   c += savy * l * uValot * yo(ng) * osuu * lapi;
@@ -140,6 +141,10 @@ void main() {
   float lisa = vesi * osuu * yoKuori * clamp(uYoVesi - a, 0.0, 1.0);
   c += uVari * lisa;
   a += lisa;
+  // Yöllä pilvet yhtä tummiksi kuin vesi (natiivi d6c6bc45: valkoiset pilvet jäivät 0,82-peiton läpi maitomaisen harmaiksi).
+  float lisaPilvi = pilvi * osuu * yoKuori * clamp(uYoVesi - a, 0.0, 1.0);
+  c += uVari * lisaPilvi;
+  a += lisaPilvi;
   gl_FragColor = vec4(c, a) * uOsuus;
 }`;
 
@@ -301,7 +306,7 @@ export function yokuori({
         uVarjo: { value: arvot.varjo }, uYoVesi: { value: arvot.yoVesi }, uVari: { value: vec3(y, arvot.vari) },
         uAurinko: { value: vec3(y, [1, 0, 0]) }, uEuRaja: { value: null },
         uValotEu: { value: null }, uValotMaa: { value: null }, uVesiEu: { value: null }, uVesiMaa: { value: null },
-        uPilvet: { value: null }, uPilvetOn: { value: 0 },
+        uPilvet: { value: null }, uPilvetOn: { value: 0 }, uPilviPeitto: { value: 0 },
       };
       const [a, b, c, d] = arvot.euRaja;
       u.uEuRaja.value = { x: a, y: b, z: c, w: d };
@@ -326,8 +331,9 @@ export function yokuori({
       u.uVarjo.value = arvot.varjo * ab.varjo;
       // Pilvikuoren kuva (pilvet-kerros): peittää valot ja heijastuksen vain, kun pilvet näkyvät.
       const pk = pilvikuva?.();
-      u.uPilvet.value = pk ?? null;
+      u.uPilvet.value = pk?.kuva ?? null;
       u.uPilvetOn.value = pk ? 1 : 0;
+      u.uPilviPeitto.value = pk?.peitto ?? 0;
       aurinkoUniform(mesh.material, k.aurinko);
     },
     pura() {
@@ -472,8 +478,12 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       mesh.parent?.remove(mesh); mesh.geometry.dispose?.(); mesh.material.dispose?.(); mesh = null; valmis = false; haettu = false;
     },
     tila: () => ({ valmis, nakyy: Boolean(mesh?.visible) }),
-    /** Pilvikuva muille kerroksille (yökuori), kun pilvet näkyvät; muuten null. */
-    kuva: () => (mesh?.visible ? mesh.material.uniforms.uKuva.value : null),
+    /** Pilvikuva ja nykyinen peitto (peitto × osuus) muille kerroksille (yökuori), kun pilvet näkyvät; muuten null. */
+    kuva: () => {
+      if (!mesh?.visible) return null;
+      const u = mesh.material.uniforms;
+      return { kuva: u.uKuva.value, peitto: u.uPeitto.value * u.uOsuus.value };
+    },
   };
 }
 
