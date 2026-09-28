@@ -8975,3 +8975,7 @@ Natiivi-UI 28.9. klo 22.55: 1) nostokortin kaiutin PASS natiivi-ui/kortti-napaut
 ## OMISTAJA: IPADILLA NOSTO SULKEUTUU NAPAUTUKSISTA (~1/3) (28.9.2026 klo 22.56)
 
 Omistaja 28.9. klo 22.56 sanatarkasti: "ipadilla myös noston avauduttua pelkkänä kuvana näytölle se häviää ehkä joka kolmas kerta kun painan sitä lisätäkseni myös tekstit näkyville, eli silloin peli palaakin kartalle ja nosto sulkeutuu. sama kun painan kaiutin tai mini hampurilaista, niin nostoikkuna saattaakin sulkeutua eikä ota kaiutin klikkausta. en usko että osun noin huonosti oikeaan kohtaa, siinä on selvästi jokin bugi kosketusalueessa, mutta tosiaan enemmän toimii oikein kuin ei toimisi" → Natiivi-UI: todennäköisesti sama juurisyy kuin kaiutinkorjauksessa 42dacd5c (vanhentunut UITK-kosketuskohde); iPad-todennus kuva-napautus + kaiutin + mini-hampurilainen 20× kukin, 0/60 sulkeutumista ennen 1.0.40:ää.
+
+## OMISTAJA: MAAKUNTANOSTO JA MININOSTO ISOMMIKSI, KUVA KOKORUUDULLE (WEB) (28.9.2026 klo 23.01)
+
+Omistaja 28.9. klo 23.01 webin maakuntatilan kaappauksella (iPad, Keski-Makedonia; docs/raportit/kaappaukset/omistaja-20260928/maakuntanosto-isommaksi-web.png) sanatarkasti: "Nosto ja mininosto saisivat olla isompia. Nosto pitää olla saman kokoinen kuin muut nostot ja kuva pitää pystyä klikkaamaan kokoruudulle" → Siirtoseppä (web): maakunnan nostoikkuna muiden nostojen kokoon/komponenttiin, kuva kokoruudulle samalla kuvaselaimella, mininosto isommaksi; kuvapari ennen PR:ää; natiiviin myöhemmin Natiivi-UI:n maakuntatilan yhteydessä.
