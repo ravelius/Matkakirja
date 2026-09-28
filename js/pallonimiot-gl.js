@@ -214,7 +214,8 @@ void main() {
   gl_Position = clip;
   vUv = uvKoord;
   float p = peitto;
-  if (haivytys.x >= 0.0) p = mix(haivytys.z, haivytys.w, clamp((haivytysAika - haivytys.x) / max(haivytys.y, 0.001), 0.0, 1.0));
+  // Pehmeä ease-in-out (smoothstep; omistaja 28.9.2026: katoaminen ja paluu pehmeästi eikä hyppynä).
+  if (haivytys.x >= 0.0) p = mix(haivytys.z, haivytys.w, smoothstep(0.0, 1.0, clamp((haivytysAika - haivytys.x) / max(haivytys.y, 0.001), 0.0, 1.0)));
   vPeitto = p * edessa;
 }
 `;
