@@ -10,7 +10,7 @@
  *   1. 404: HEAD-pyyntö jokaiseen maan offline-tiedostoon — maat.*.media, maat.*.mediaKuvat (url ja pieni) ja
  *      kaupunkitason laatat (rasteri z9, kaupunkiRasteri z10 ja skeeman 1.53 kaupunkiMaasto, tarkat välit). VAIN media.matkakirja.app:n
  *      staattiset tiedostot: EI puhetta workerilta eikä mitään muuta palvelua (Fable 27.9.: puuttuva pala
- *      generoitaisiin ja maksaisi). Maastolaatat (poltto 2026-09-23b, muuttumaton) tarkistettiin kokonaan 27.9.
+ *      generoitaisiin ja maksaisi). Maastolaatat (poltto 2026-09-23b) tarkistettiin kokonaan 27.9.; 28.9. alkaen sarja 2026-09-24-maailma (offline.mjs).
  *   2. Orvot viittaukset: kokoelmien alkioiden `kaupunki`-kenttä osuu kaupunkeihin, ja kaupungin kaupunkilehti on
  *      olemassa. (Nähtävyyksiä ei lasketa: osa kaupungeista saa ne maakartoista, Sisältökirjuri 27.9.)
  *   3. Maakatto: maat.*.tavuja.mediaKuvat ≤ lahteet.mediaKuvat.katto (skeema 1.52).

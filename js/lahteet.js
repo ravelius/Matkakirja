@@ -82,7 +82,7 @@ export const LAHTEET = [
         lisenssi: 'Public domain',
       },
       {
-        nimi: 'GSHHG — rantaviivat pääkartan laatoissa ja pallon vektoreissa (versio 2.3.7)',
+        nimi: 'GSHHG — rantaviivat ja järvet pääkartan laatoissa, rantaviivat pallon vektoreissa (versio 2.3.7)',
         tekija: 'Wessel & Smith, A Global Self-consistent, Hierarchical, '
           + 'High-resolution Geography Database',
         lisenssi: 'LGPL 3+',
