@@ -8419,6 +8419,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   UKR: {
     Cherkasy: {
       lyhyt: 'Kanivin lähellä Tarasinmäellä Dneprin rannalla lepää runoilija Taras Ševtšenko, jonka maalliset jäännökset siirrettiin sinne Pietarista 1861.',
+      pitka: `Cherkasyn maakunta levittäytyy Dneprin molemmin puolin keskisen Ukrainan metsäaromaisemaan, ja joen rannoilla on asuttu tiiviisti jo vuosisatoja. Alueen nimeen kietoutuu kasakkojen varhaishistoria: 1400-luvulla Keski-Dneprin kasakkayhteisöjä kutsuttiin "tšerkasseiksi", ja Kanivin ja Cherkasyn linnoitukset suojasivat seutua tataarien ratsioilta. Nykyään maakunnan tunnetuin matkakohde ei silti liity sotaan vaan hiljaiseen pyhiinvaellukseen: joka syksy ennen juutalaista uutta vuotta Umaniin saapuu kymmeniätuhansia hasidijuutalaisia rukoilemaan rabbi Nachmanin haudalla, ja pikkukaupungin väkiluku moninkertaistuu muutamaksi päiväksi. Umanin toinen aarre, kreivi Potockin 1796 rakennuttama Sofijivkan puisto, houkuttelee ympäri vuoden retkeilijöitä vesiputouksineen ja keinotekoisine luolineen.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-cherkasy-ba7e3558.jpg",
@@ -8433,6 +8434,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chernihiv: {
       lyhyt: 'Tšernihivin Kirkastumisen katedraalia alettiin rakentaa 1030-luvulla, ja se on harvoja mongolivalloitusta edeltäneen Kiovan Rusin rakennuksia.',
+      pitka: `Chernihiv makaa Desnan rannalla Polissjan metsien reunalla, ja se on yksi Ukrainan vanhimmista kaupungeista – ensimmäinen kirjallinen maininta siitä on vuodelta 907. Keskiajalla Chernihiv oli Kiovan Rusin toiseksi mahtavin kaupunki heti Kiovan jälkeen, ja tuolta ajalta on säilynyt poikkeuksellisen paljon kivirakennuksia ahtaalla Detynetsin linnanmäellä. Mäen alla kiemurtelee toinenkin aikakerrostuma: munkki Antonius kaivoi 1000-luvulla luolan, joka on laajentunut vuosisatojen varrella satojen metrien pituisiksi maanalaisiksi käytäviksi kappeleineen ja hautoineen. Nykyisin pikkukaupunkimainen Chernihiv elää rauhallista arkea vanhojen kirkkojensa ja luostariluolien varjossa, kaukana suurkaupunkien vilinästä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernihiv-96c88ff1.jpg",
@@ -8447,6 +8449,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chernivtsi: {
       lyhyt: 'Tšernivtsin yliopisto toimii entisessä Bukovinan ja Dalmatian metropoliittojen residenssissä, joka on Unescon maailmanperintöä vuodesta 2011.',
+      pitka: `Tšernivtsi on rakennettu kukkuloille Prutin rannalle, ja kaupunkikuvaa hallitsevat yhä keisarilliset kivijulkisivut – vuonna 1873 kaupunki kuului Itävallan keisarikunnan Bukovinan maakuntaan, ja arkkitehtuuri kertoo siitä yhä joka kadulla. Ennen toista maailmansotaa täällä eli rinnakkain ukrainalaisia, romanialaisia, juutalaisia, saksalaisia ja puolalaisia niin tiiviisti, että kaupunkia kutsuttiin "pikku-Wieniksi". Tästä kielten ja kulttuurien sekoituksesta nousi myös runoilija Paul Celan, joka syntyi kaupungissa 1920 ja kirjoitti äidinkielellään saksaksi selviydyttyään natsimiehityksestä juutalaisena – hänestä tuli yksi 1900-luvun tärkeimmistä saksankielisistä runoilijoista. Nykyään yliopistokaupunki on rauhallisempi ja yksikielisempi kuin ennen, mutta sen kadut ja kahvilat muistuttavat yhä siitä, montaa kulttuuria yksi kaupunki voi kantaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernivtsi-491657ec.jpg",
@@ -8461,6 +8464,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Dnipropetrovs'k": {
       lyhyt: 'Petrykivkan kylästä on lähtöisin valkoiselle pohjalle maalattu kukkakoristelu, joka on ollut Unescon aineetonta kulttuuriperintöä vuodesta 2013.',
+      pitka: `Dnipro-joki virtaa keskellä maakuntaa, ja sen rannoilla kohoava samanniminen suurkaupunki tunnettiin vuoteen 2016 asti nimellä Dnipropetrovsk – nimi vaihtui, kun Ukraina siivosi kaduilta ja kaupungeista neuvostojohtajien muiston. Kylmän sodan aikana kaupunki oli niin suljettu ohjustehtaansa Pivdenmašin (silloin Juzhmaš) vuoksi, ettei ulkomaalainen päässyt sinne lainkaan; tehdas valmisti aikanaan kymmeniä mannertenvälisiä ohjuksia vuodessa ja on nykyään osin siviilikäytössä. Kaupungin siluettiin kuuluu myös Menora-keskus, seitsemän toisiinsa kietoutuvaa tornia, joka on maailman suurin juutalaisyhteisön keskus ja avattiin 2012. Nykyään Dnipro on vilkas yliopisto- ja teknologiakaupunki, jonka kadunkulmissa neuvostoaikainen raskas teollisuus ja uusi startup-into elävät rinnakkain.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-dnipropetrovsk-ad593c25.jpg",
@@ -8475,6 +8479,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Donets'k": {
       lyhyt: 'Svjatohirskin luostari kohoaa Siverskyi Donetsin jyrkälle oikealle rannalle liitukallioiden keskelle, ja siitä on kirjallinen maininta vuodelta 1627.',
+      pitka: `Donetskin nykyinen keskuskaupunki syntyi vasta 1869, kun walesilainen teollisuusmies John Hughes perusti aroaukealle rautatehtaan ja hiilikaivoksia – isoisän kulkiessa Eurooppaa 1873 kaupunki, jota kutsuttiin tuolloin Juzovkaksi hänen nimensä mukaan, oli vasta muutaman vuoden ikäinen nouseva tehdasyhdyskunta. Hughes toi mukanaan satakunta walesilaista työläistä perheineen, ja heidän jäljiltään kaupunkiin nousi jopa anglikaaninen kirkko keskelle Donbasin aroa. Kaivosten ja masuunien ympärille kasvoi vuosikymmenten kuluessa koko Neuvostoliiton raskaan teollisuuden ydinalue, ja pohjoisempana Siverskyi Donetsin liitukallioiden harjalla kohoava Svjatohirskin luostari on ollut alueen hengellinen kiintopiste jo vuosisatoja ennen tehtaitakin. Viime vuosien sota on koetellut seutua raskaasti, mutta luostari on pysynyt pystyssä ja on yhä monelle ukrainalaiselle tärkeä paikka.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-donetsk-dc976bd3.jpg",
@@ -8489,6 +8494,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Ivano-Frankivs'k": {
       lyhyt: 'Kolomyjassa on pääsiäismunan muotoinen 14-metrinen museo, jonka kokoelmissa on yli 10 000 koristeltua pysankaa.',
+      pitka: `Ivano-Frankivskin alue kohoaa Karpaattien juurelle, ja sen vuoristokylissä elää yhä hutsuulien kulttuuri: kirjaillut vaatteet, paimentolaisperinteet ja käsityötaidot periytyvät sukupolvelta toiselle. Vuonna 1873 alue kuului Itävalta-Unkariin osana Galitsiaa, ja nykyinen Ivano-Frankivsk tunnettiin tuolloin nimellä Stanislau – kaupunki sai nykyisen nimensä vasta 1962 kirjailija Ivan Frankon mukaan. Nykyään vuoret tunnetaan ennen kaikkea Bukovelista, Itä-Euroopan suurimmasta hiihtokeskuksesta, joka vetää talvisin rinteilleen väkeä ympäri Ukrainaa. Seudun kylissä seisoo myös kymmeniä satojen vuosien ikäisiä puukirkkoja, joista osa on nostettu Unescon maailmanperintöluetteloon ainutlaatuisen hutsuuli- ja boikkiarkkitehtuurinsa ansiosta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ivano-frankivsk-b819f809.jpg",
@@ -8503,6 +8509,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kharkiv: {
       lyhyt: 'Harkovan Vapaudenaukion laidalla seisova konstruktivistinen Deržprom valmistui 1928 Neuvostoliiton ensimmäiseksi pilvenpiirtäjäksi.',
+      pitka: `Harkova on ollut opiskelijakaupunki jo yli 200 vuotta: sen yliopisto perustettiin 1804, ja se on Ukrainan vanhin yhä toimiva korkeakoulu, jonka ympärille on kasvanut kymmeniä muitakin oppilaitoksia. Vuosina 1919–1934 Harkova toimi neuvosto-Ukrainan pääkaupunkina, ja juuri tuolta ajalta ovat peräisin kaupungin laaja Vapaudenaukio sekä sen laidalla kohoava konstruktivistinen Deržprom. Kun pääkaupunki siirrettiin takaisin Kiovaan 1934, Harkovasta jäi silti maan toiseksi suurin kaupunki ja merkittävä teollisuuden ja tieteen keskus. Nykyään reilun 40 kilometrin päässä Venäjän rajasta sijaitseva kaupunki on kokenut sodan raskaasti, mutta sen yliopistot ja teatterit ovat pitäneet ovensa auki läpi vaikeimpienkin vuosien.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kharkiv-be7eb59a.jpg",
@@ -8517,6 +8524,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kherson: {
       lyhyt: 'Askania-Novan suojelualueen perusti 1898 Friedrich Falz-Fein, ja se tunnetaan przewalskinhevosistaan ja koskemattomasta arostaan.',
+      pitka: `Herson perustettiin 1778 keisarinna Katariina Suuren käskystä Mustanmeren laivaston tukikohdaksi, ja kaupungin ensimmäinen suuri sotalaiva, 66-tykkinen Slava Jekateriny, laskettiin vesille sen telakalta jo 1783. Telakkaperinne on hiipunut, mutta Herson tunnetaan nykyään toisenlaisesta tuotteesta: alueen aurinkoiset pellot tuottavat Ukrainan kuuluisimmat vesimelonit, ja Hersonin vesimeloni on käytännössä oma tuotemerkkinsä kauppojen hyllyillä ympäri maata. Kaupungin lounaispuolella Dnepr laskee laajaksi suistoksi Mustaanmereen, ja rannikon Kinburnin niemi on villi hiekkadyynien ja suolaniittyjen maailma. Aivan kaupungin itäpuolella aukeaa vielä toisenlainen erikoisuus: Oleškin hiekka-aavikko on Euroopan toiseksi suurin aavikko, ja sen dyynit paljastuivat vasta 1800-luvulla, kun liiallinen laiduntaminen ja metsien hakkuu riisuivat jääkauden jättämän hiekkakerroksen kasvillisuudesta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kherson-cf1d7ac2.jpg",
@@ -8531,6 +8539,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Khmel'nyts'kyy": {
       lyhyt: 'Kamjanets-Podilskyin linna seisoo niemellä, jonka ympärille Smotrytš-joki on kaivertanut kanjonin; linnaan johtaa 88-metrinen silta.',
+      pitka: `Kamjanets-Podilskyin kanjonin yllä on totuttu näkemään muutakin kuin linnan tornit: kaupungissa lensi Itä-Euroopan ensimmäinen kuumailmapallo jo 1784, ja nykyään siellä järjestetään kahdesti vuodessa ilmapallofestivaali, jossa parikymmentä palloa kohoaa Smotrytšin kanjonin yllä. Etelämpänä Dnestr-joen rannalla sijaitsee Bakotan lahti, jonka pohjaan hukkui 1981 valmistuneen tekoaltaan alle kokonainen keskiaikainen kylä – jäljellä on vain kalliolle 1000-luvulla kaiverrettu luolaluostari, joka kohoaa yhä joen yllä. Maakunnan nykyinen keskuskaupunki on nimetty kasakkahetmani Bohdan Hmelnytskyin mukaan, joka johti 1648 kapinan, mikä lopulta synnytti kasakkavaltion Puolan alaisuudesta. Nykyään Podollian kukkulainen maisema ja hedelmälliset pellot houkuttelevat sekä maalaismatkailijoita että seikkailijoita, jotka etsivät kalliokiipeilyä ja koskimelontaa alueen jokilaaksoista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-khmelnytskyy-23492f8e.jpg",
@@ -8545,6 +8554,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kiev: {
       lyhyt: 'Bila Tserkvan Oleksandrija on Ukrainan suurin dendrologinen puisto, jonka kreivi Branicki perusti Ros-joen rannalle 1793.',
+      pitka: `Kiovan maakunta kehystää pääkaupunkia joka suunnalta, ja sen pohjoisosassa leviävät Polissjan metsät ja suot aina Valko-Venäjän rajalle asti. Juuri pohjoisessa, noin 90 kilometrin päässä Kiovasta, sijaitsee Tšornobylin ydinvoimala ja sen ympärille 1986 perustettu suoja-alue – ennen täysimittaista sotaa alueesta oli tullut yksi maailman puhutuimmista niin sanotun pimeän matkailun kohteista, kun kävijät kiersivät hylätyssä Pripjatin kaupungissa. Etelämpänä, Dneprin ja sen sivujokien varrella, maisema muuttuu jälleen viljavaksi maalaismaisemaksi täynnä pieniä historiallisia kaupunkeja, kuten Perejaslavia, jossa kasakkahetmani Hmelnytski solmi 1654 liiton Venäjän tsaarin kanssa. Nykyään moni kiovalainen pakenee viikonloppuisin juuri näihin maakunnan mökkeihin ja metsiin pääkaupungin vilinästä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-afac92de.jpg",
@@ -8559,6 +8569,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Kiev City': {
       lyhyt: 'Kiovan metron Arsenalna-asema on 105,5 metrin syvyydessä, ja se on yksi maailman syvimmistä metroasemista.',
+      pitka: `Kiova on Ukrainan pääkaupunki ja suurin kaupunki, ja sen symboliksi on noussut yllättävän vaatimaton puu: kastanja, joka tuotiin kaupunkiin 1842 ja jonka valkoiset kukinnot koristavat toukokuisin keskustan puistokatuja. Vanhassa kaupungissa seisoo yhä 1000-luvulla rakennettu Pyhän Sofian katedraali kultaisine kupoleineen, yksi harvoista Kiovan Rusin ajan rakennuksista, jotka ovat säilyneet lähes koskemattomina – se kuuluu Unescon maailmanperintöön. Andriyivskyin mäenrinnettä laskeutuva mutkitteleva katu on täynnä taidemyyjiä ja galleriaportaita, ja siitä on tullut kaupungin epävirallinen taiteilijakortteli jo vuosikymmenten ajan. Maidan Nezaležnostin aukio keskustassa on 2000-luvulla noussut kahdesti koko maan huomion keskipisteeksi suurten mielenosoitusten näyttämönä, ja siitä on tullut nykyajan Ukrainan tärkein symbolinen paikka.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-city-1f928085.jpg",
@@ -8573,6 +8584,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirovohrad: {
       lyhyt: 'Kirovohradin alueen pikkukaupunkia Dobrovelytškivkaa pidetään Ukrainan maantieteellisenä keskipisteenä.',
+      pitka: `Maakunnan keskuskaupunki tunnettiin pitkään nimellä Kirovohrad neuvostojohtaja Sergei Kirovin mukaan, mutta se nimettiin 2016 dekommunisointilain myötä uudelleen Kropyvnytskyiksi näytelmäkirjailija ja näyttelijä Marko Kropyvnytskyin kunniaksi – itse maakunta kantaa yhä vanhaa nimeä, koska sen vaihtaminen vaatisi oman erillisen lakinsa. Kropyvnytskyi oli perustamassa Ukrainan ensimmäistä ammattimaista ukrainankielistä teatteriryhmää, joka esiintyi kaupungissa lokakuussa 1882 – päivää pidetään yhä koko ukrainalaisen ammattiteatterin syntymäpäivänä. Kaupunki tunnettiin aiemmin nimellä Jelisavetgrad, linnoituskaupunkina, joka perustettiin 1754 suojaamaan aroa tataarien ratsioilta. Nykyään ympäröivä maakunta on rauhallista mustamultaista viljelysmaisemaa, jonka läpi kulkee vain vähän läpikulkuliikennettä – ehkä juuri siksi se sopii niin hyvin koko maan symboliseksi keskipisteeksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kirovohrad-250841fd.jpg",
@@ -8587,6 +8599,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "L'viv": {
       lyhyt: 'Lvivin Rynok-toria ympäröi 44 vanhaa kaupunkitaloa, ja torin jokaisessa kulmassa on 1790-luvun kaivolähde antiikin tarujen hahmon patsaineen.',
+      pitka: `Lviv oli 1873 osa Itävalta-Unkaria, Galitsian pääkaupunki, ja kaupungin kadut, kahvilat ja teatterit kantavat yhä keisarikunnan aikaista leimaa vahvemmin kuin missään muualla Ukrainassa. Kaupunki väittää olevansa Itä-Euroopan kahvikulttuurin syntysija: legendan mukaan lvivilaissyntyinen Jerzy Franciszek Kulczycki avasi ensimmäisen kahvilan Wieniin 1683 turkkilaisten jättämillä pavuilla, ja nykyään vanhankaupungin kahviloissa tarjoillaan yhä "kaivoksesta nostettua" kahvia entisissä kellarivarastoissa. Lvivin ooppera- ja balettiteatteri valmistui 1900 arkkitehti Zygmunt Gorgolewskin suunnitelmien mukaan, ja sen rakentamiseksi Poltva-joki ohjattiin kulkemaan maan alle rakennuksen perustusten läpi. Nykyään Lviv on maan tärkeimpiä kulttuurikaupunkeja, jonka teattereissa, oopperassa ja kaduilla kuuluu usein useampi kieli kuin yksi – perintö ajalta, jolloin kaupunki kuului vuorotellen puolalaisille, itävaltalaisille ja neuvostoille ennen itsenäistä Ukrainaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-lviv-500ca648.jpg",
@@ -8601,6 +8614,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Luhans'k": {
       lyhyt: 'Alueen pohjoisosan Striltsivskyin aro otettiin suojeluun arosurmelin vuoksi, ja tuo murmeli on yhä suojelualueen tunnuseläin.',
+      pitka: `Luhanskin alueen aro jatkuu silmänkantamattomiin, ja etelämpänä maisema vaihtuu vähitellen Donbasin teollisiin kaupunkeihin ja vuosisataisen kaivostyön perintöön. Danylivkan kylän liepeillä toimii yhä Derkulin hevostila, joka perustettiin keisarinna Katariina II:n käskystä 1765 kasvattamaan ratsuja armeijalle – vuoteen 1873 mennessä tallissa oli jo yli sata vuotta kartutettu osaamista, josta 1900-luvulla syntyi kokonaan oma rotu, ukrainalainen ratsuhevonen. Alueen ihmiset ovat perinteisesti eläneet sekä maanviljelyn että kaivostyön rytmissä, ja moni perhe tuntee kummankin arjen. Viime vuodet ovat koetelleet seutua raskaasti, mutta Derkulin tallissa hevoset saavat yhä ruokansa ja harjauksensa joka aamu.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-luhansk-cc02798f.jpg",
@@ -8615,6 +8629,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mykolayiv: {
       lyhyt: 'Parutynen kylän lähellä Etelä-Bugin suistossa ovat Olbian rauniot – kaupungin perustivat Miletoksen kreikkalaiset 600-luvulla eaa.',
+      pitka: `Etelä-Bugin ja Inhulin yhtymäkohtaan perusti ruhtinas Potjomkin 1789 telakan, jonka hän nimesi Pyhän Nikolauksen mukaan muistoksi Otšakivin valtauksesta juuri tuon pyhimyksen nimipäivänä – näin syntyi Mykolajiv. Vuoteen 1873 mennessä kaupungin telakat olivat jo vuosikymmenten ajan rakentaneet sotalaivoja Venäjän Mustanmeren laivastolle, ja sama perinne jatkui läpi Neuvostoliiton ajan aina lentotukialuksiin asti. Kaupungin arki kiertyy edelleen laivanrakennuksen ympärillä, vaikka viime vuodet ovat tuoneet telakoille omat haasteensa. Toista puolta kaupungista edustavat sen vehreät puistokadut ja eläintarha, joka on yksi Ukrainan suosituimmista ja vanhimmista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-mykolayiv-ee5018e9.jpg",
@@ -8629,6 +8644,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Odessa: {
       lyhyt: 'Odessan alla kiemurtelee jopa 2 500 kilometriä katakombeja, enimmäkseen louhoksia, joista kaupungin rakennuskivi aikanaan nostettiin.',
+      pitka: `Odessa rakennettiin 1794 alkaen ranskalaisten ja italialaisten arkkitehtien suunnitelmien mukaan, ja kaupungin vaaleat klassismin talot, leveät puistokadut ja Potjomkinin portaat muistuttavat yhä tästä kansainvälisestä alusta. Ooppera- ja balettiteatteri, wieniläisarkkitehtien 1880-luvulla suunnittelema barokkihelmi, on säilynyt kaupungin ylpeytenä ja yhtenä Itä-Euroopan komeimmista teattereista. Odessalaiset ovat kautta aikojen tunnettuja terävästä huumoristaan, ja kaupunki juhlii sitä joka vuosi huhtikuun alussa Humoryna-karnevaalilla, jolloin kaduille kerääntyy klovneja, koomikkoja ja kulkueita. Meri, huumori ja kirjallisuus kietoutuvat täällä yhteen tavalla, joka on tehnyt Odessasta oman legendansa koko Ukrainassa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-odessa-e70df068.jpg",
@@ -8643,6 +8659,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Poltava: {
       lyhyt: 'Opišnjan kylä on tunnettu keramiikastaan: siellä on valmistettu koristeellisia saviastioita perinteisin menetelmin 1800-luvulta asti.',
+      pitka: `Poltavan alue on Ukrainan viljavaa mustamultaa parhaimmillaan, ja kesäisin maisemaa hallitsevat auringonkukka- ja vehnäpellot horisonttiin asti. Kaupungissa syntynyt Ivan Kotljarevskyi kirjoitti 1798 Eneidan, ensimmäisen kokonaan ukrainan puhekielellä kirjoitetun kaunokirjallisen teoksen, ja hänen poltavalainen murteensa muovasi pitkälti nykyisen kirjakielen perustan. Alueen naiset ovat kautta aikojen olleet tunnettuja kirjontataidostaan, ja monet nykyisin tunnetut vyshyvanka-kuosit polveutuvat juuri Poltavan kylistä. Vuoden 1709 suurta taistelua, jossa Pietari Suuri kukisti Ruotsin Kaarle XII:n joukot, muistetaan yhä taistelukentän museossa kaupungin laidalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-poltava-17b214b8.jpg",
@@ -8657,6 +8674,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Rivne: {
       lyhyt: 'Klevanin lähellä kulkee Rakkauden tunneli, muutaman kilometrin teollisuusrata, jonka yllä puut kaartuvat vihreäksi holviksi.',
+      pitka: `Rivnen alueen pohjoisosa on Polesian suota ja mäntymetsää, jossa kylät kohoavat kuivemmilta hiekkaharjanteilta soiden keskeltä – maisema muistuttaa enemmän Pohjolaa kuin Etelä-Ukrainaa. Ostrohin pikkukaupungissa toimi jo 1576 akatemia, jota pidetään koko itäslaavilaisen maailman ensimmäisenä korkeakouluna, ja sen perintöä jatkaa nykyään uudelleen avattu yliopisto samalla paikalla. Kostopilin lähellä maasta kohoaa kymmeniä metrejä korkeita, lähes täydellisen kuusikulmaisia basalttipatsaita – ne syntyivät muinaisesta laavavirrasta ja paljastuivat vasta, kun talonpoika löi lapionsa kiveen kaivaessaan kaivoa 1700-luvulla. Nykyään paikka tunnetaan yhtenä Ukrainan seitsemästä ihmeestä, ja retkeilijät kiipeävät patsaiden juurelle ympäri vuoden.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-rivne-ee6897f4.jpg",
@@ -8671,6 +8689,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sumy: {
       lyhyt: 'Hluhiv oli kasakkahetmanaatin pääkaupunki 1708–1764, ja sinne perustettiin 1730 Venäjän keisarikunnan ensimmäinen laulukoulu.',
+      pitka: `Sumyn seutu on lempeää metsä-aroa Psel-joen varrella, ja kaupunki itse levittäytyy joen mutkien ympärille rauhallisena, vehreänä maakuntakeskuksena. Vuonna 1869 varakas Harytonenkon suku rakensi kaupunkiin sokeritehtaan, joka oli vuoteen 1873 mennessä jo yksi seudun suurimmista työllistäjistä; seuraavien vuosikymmenten aikana suvusta kasvoi yksi koko Venäjän keisarikunnan rikkaimmista. Osa varallisuudesta valui hyväntekeväisyyteen: suku rahoitti kaupunkiin kouluja, sairaaloita ja komeita rakennuksia, jotka seisovat yhä keskustassa. Nykyisin Sumy on ennen kaikkea yliopisto- ja konepajakaupunki, jonka opiskelijaelämä ja teollisuus pitävät seudun arkea käynnissä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-sumy-25ce37d5.jpg",
@@ -8685,6 +8704,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Ternopil'": {
       lyhyt: 'Korolivkan kylän alla on Optymistytšna, maailman pisin kipsiluola – sen käytäviä on kartoitettu noin 264 kilometriä.',
+      pitka: `Ternopilin alueen kalkkikivimaaperä kätkee allaan Optymistytšnan luolaston lisäksi lukuisia muita onkaloita, ja seutu tunnetaankin Ukrainan luolaisimpana maakuntana. Pohjoisessa kohoaa Potšaivin luostari, yksi ortodoksisen kirkon tärkeimmistä pyhiinvaelluskohteista – sen 65-metrinen kellotorni houkuttelee yhä tuhansia pyhiinvaeltajia joka vuosi. Vuonna 1873 seutu kuului Venäjän sijaan Itävalta-Unkarin Galitsiaan, mikä selittää, miksi Ternopilin murre ja kreikkalaiskatolinen kirkko muistuttavat yhä enemmän Keski-Eurooppaa kuin Venäjän tasankoa. Kaupunkien torit reunustavat vaaleat, itävaltalaisvaikutteiset talot, ja moni niistä on viime vuosina saanut uuden raikkaan maalikerroksen.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ternopil-728419af.jpg",
@@ -8699,6 +8719,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Transcarpathia: {
       lyhyt: 'Hustin lähellä on Narsissien laakso, 256 hehtaarin niitty, jolla villit narsissit kukkivat keväisin valkoisena mattona.',
+      pitka: `Transkarpatia on Ukrainan ainoa alue, joka jää kokonaan Karpaattien eteläpuolelle, ja siellä ilmasto ja hedelmätarhat muistuttavat enemmän Unkaria kuin muuta Ukrainaa. Vuonna 1873 seutu kuului Unkarin kuningaskuntaan osana Itävalta-Unkaria, ja tuo perintö näkyy yhä: pääkaupunki Užhorodissa on unkarilaisvaikutteinen linna, ja alueella asuu edelleen merkittävä unkarinkielinen vähemmistö, jolla on omat koulunsa ja lehtensä. Vuosisatojen ajan samalla kapealla kaistaleella ovat eläneet rinnakkain ukrainalaiset, unkarilaiset, slovakit, romanialaiset ja juutalaiset, ja monessa kylässä kuulee yhä useampaa kieltä samalla torilla. Narsissien laakson lisäksi alue tunnetaan viineistään ja termaalilähteistään, jotka nousevat maan alta Karpaattien juurelta ympäri vuoden.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-transcarpathia-585f1b9d.jpg",
@@ -8713,6 +8734,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vinnytsya: {
       lyhyt: 'Tultšynissa opettanut Mykola Leontovytš sävelsi 1914 Štšedrykin, jonka melodia kiertää maailmaa joululauluna Carol of the Bells.',
+      pitka: `Vinnytsjan alue on Etelä-Bugin halkomaa hedelmällistä tasankoa, jonka kylissä viljellään yhä sokerijuurikasta ja hedelmäpuita laajoilla puutarhoilla. Kaupungin laidalla sijaitsee kirurgi Nikolai Pirogovin kartano Vyšnja, jonne hän muutti 1861 ja jossa hän asui kuolemaansa 1881 asti; testamenttinsa mukaisesti hänen ruumiinsa balsamoitiin, ja se lepää yhä kartanon kirkon kryptassa lasikannen alla. Museo on säilyttänyt myös hänen apteekkinsa ja leikkaussalinsa sellaisina kuin ne olivat 1870-luvulla, jolloin Pirogov jo eläkkeellä hoiti alueen köyhiä ilmaiseksi. Nykyisin Vinnytsjan tunnetuin nähtävyys on aivan toista sarjaa: Etelä-Bugin rantaan nousee joka kesäilta Euroopan suurin kelluva suihkulähde, jonka vesisuihkut tanssivat musiikin ja valojen tahtiin 60 metrin korkeuteen.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-vinnytsya-cb36a3d5.jpg",
@@ -8727,6 +8749,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Volyn: {
       lyhyt: 'Lutskin Lubartin linna rakennettiin 1300-luvulla, ja sen porttitorni on painettu 200 hryvnan setelin taakse.',
+      pitka: `Volynin alueen luoteisosaa peittävät Länsi-Polesian suot ja metsät, joissa yli kolmekymmentä järveä muodostaa Šatskin kansallispuiston vesistön. Niistä syvin, Svitjaz, on Ukrainan syvin järvi ja niin kirkasvetinen, että pohja erottuu usean metrin syvyydeltä – kesäisin sen rannoille kertyy tuhansia uimareita ja telttailijoita. Alueen kylissä eletään yhä tiiviisti järvien ja metsien tahdissa: sienestys, kalastus ja lintubongaus kuuluvat arkeen, ja parhaina muuttoaikoina järvillä lepää kymmeniätuhansia muuttolintuja kerralla. Lutskin vanhassa keskustassa keskiaikainen linnoitus ja joenrantakahvilat elävät nykyään rinnakkain, ja kaupungista on tullut suosittu välietappi matkalla Puolan rajalle.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-volyn-a2c67596.jpg",
@@ -8741,6 +8764,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zaporizhzhya: {
       lyhyt: 'Hortytsja on Dneprin suurin saari, 12,5 kilometriä pitkä, ja se on Zaporožjen kasakoiden historian keskeisiä paikkoja.',
+      pitka: `Ennen 1930-lukua Dneprin uoma halkoi Hortytsjan saaren kohdalla joukon koskia ja putouksia, jotka tekivät joesta laivaliikenteelle mahdottoman ja saaresta luonnostaan turvallisen tukikohdan kasakoille. Vuonna 1873 kosket kuohuivat vielä valjastamattomina, ja vasta Dneprogesin voimalapato hukutti ne 1930-luvun alussa – yksi Neuvostoliiton ensimmäisistä suurista teollisuushankkeista. Saarella toimii nykyään elävän historian museo, jossa oppaat esittävät Zaporožjen kasakoiden arkea 1500–1700-luvuilta nahka- ja metallitöineen, ja paikka täyttyy juhlapyhinä tuhansista kävijöistä. Kaupungin toinen puoli on raskasta teollisuutta: Zaporižžjan terästehtaat savuavat yhä joen toisella rannalla, vain muutaman kilometrin päässä saaren rauhasta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zaporizhzhya-deab951b.jpg",
@@ -8755,6 +8779,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zhytomyr: {
       lyhyt: 'Žytomyrissa syntyi 1907 rakettisuunnittelija Sergei Koroljov, ja hänen syntymäkotinsa vastapäätä on astronautiikan museo.',
+      pitka: `Žytomyrin alueen pohjoisosa on Polesian havumetsää, ja kaupungin läpi virtaava Teteriv-joki on kaivertanut graniittiin ahtaan kanjonin, jossa nykyään melotaan koskia kesäisin. Berdytšivin kaupungissa ranskalainen kirjailija Honoré de Balzac vihittiin 1850 puolalaiselle kreivitär Ewelina Hańskalle pitkän kirjeenvaihtoromanssin jälkeen – häät pidettiin pienessä Pyhän Barbaran kirkossa, joka seisoo yhä kaupungissa. Samassa Berdytšivissä syntyi 1905 kirjailija Vasili Grossman, jonka sotakirjeenvaihtoa pidetään yhtenä toisen maailmansodan tärkeimmistä silminnäkijäkuvauksista. Havumetsät antavat alueelle myös arkisemman maineen: Žytomyrin seudun sienet ja mustikat täyttävät syksyisin teiden varsien myyntipöydät.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
