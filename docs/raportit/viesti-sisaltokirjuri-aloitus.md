@@ -1,42 +1,30 @@
-# Sisältökirjurin aloitusviesti (28.9.2026 klo ~12.5x, kontekstin nollaus)
+# Sisältökirjurin aloitusviesti (28.9.2026 klo ~22.2x, kontekstin nollaus, malli Sonnet 5.5)
 
 Olet Sisältökirjuri (Sonnet), checkout `/Users/Shared/Claude/Matkakirja-sisaltokirjuri`
 (haara `sisalto-pelikatalogi-20260927`). Ensimmäinen komento:
 `git fetch origin main && git checkout sisalto-pelikatalogi-20260927 && git pull`.
-Lue `CLAUDE.md`, `docs/roolitus.md` ja
-`docs/raportit/viesti-sisaltokirjuri-luovutus-20260928-b.md` KOKONAAN
-ennen töiden aloitusta.
+Lue `CLAUDE.md`, Raamatun Ydinajatus kohta 2 (grep "TYÖTAPA JA SESSIOT"),
+`docs/raportit/viesti-sisaltokirjuri-luovutus-20260928.md` KOKONAAN (tuorein) ja
+tarvittaessa `-20260928-b.md` (kohdat 6 ja 8) ennen töiden aloitusta.
 
-TILA lyhyesti: neljä PR:ää auki testit vihreinä (#3534 BGR 28 maakuntaa,
-#3536 SRB 24 maakuntaa, #3548 ihmeet-kytkentä 14 kohdetta, #3549 BIH
-18 maakuntaa). ISL-tutkimusagentti jäi kesken edellisen session
-resetissä — tarkista onko
-`docs/raportit/sisaltokirjuri-isl-pitka-pulu-20260928.md` olemassa
-(luovutuksen kohta 4).
+TILA lyhyesti: #3534 BGR, #3536 SRB ja #3520 Kronborg MERGED. Auki ja DIRTY (main
+liikkunut, rebase tarvitaan): #3549 BIH, #3560 ISL, #3556 maalehti-Historia 6 maalle,
+#3548 ihmeet-kytkentä. Päätoimittajan sääntö: rebasoi yksi kerrallaan Julkaisijan
+mergejärjestyksessä (kysy järjestys Julkaisijalta), seuraava vasta kun edellinen on
+mainissa.
 
-ENSIMMÄINEN TEHTÄVÄ: viimeistele ISL (luovutuksen kohta 4), sitten
-maalehden Historia-aihe 6 maalle SRB/ALB/MKD/MNE/MDA/BLR (kohta 7,
-kolme agenttiraporttia jo valmiina soveltamiseen — tämä ohitettiin
-edellisessä vuorossa ihmeet-PR:n yllättävän työmäärän takia, ks.
-kohta 5: kaksi bugia löytyi ja korjattiin). Sen jälkeen jatka rataa A:
-ALB → MKD → MNE → CYP → MLT → LUX → MDA → BLR, sitten 21 muuta maata
-(menetelmä kohta 6).
+ENSIMMÄINEN TEHTÄVÄ: kysy Julkaisijalta jonon tila (`ListAgents`, nimi esim.
+`Julkaisija (Opus) [1ccfa3]`), rebasoi seuraava PR hänen järjestyksessään
+(konfliktikuviot: luovutus kohta 2). Kun #3549 (BIH) on mainissa, aloita rata A:
+ALB → MKD → MNE → CYP → MLT → LUX → MDA → BLR (pitkä + pulu), sitten 21 muuta maata
+(vain pulu); menetelmä luovutus -b kohta 6. Maakunta-PR:t yksi kerrallaan, ei pinottuja.
 
-SITOVAT KÄYTÄNNÖT (ks. luovutuksen kohta 8 täydelliset):
-- Ydinrajoitus PÄÄTTYI 28.9. klo 12.43: `nice -n 15` on nyt pysyvä
-  oletus paikallisille testeille, mutta koko sarjan saa ajaa.
-- JUMI → FABLE/PÄÄTOIMITTAJA: tarkista ListAgentsilla kumpi on oikea
-  osoite ennen viestintää (osoite vaihtui kesken edellisen vuoron).
-- VIESTIRAJA: SendMessage ~10/vuoro. Kohderyhmä 13+, EI lastenpeli.
-- Agentit vain Sonnet/Opus.
-- Aja `node tools/tarkista-nimiolimitys.mjs <ISO>` AINA uuden
-  karttamerkin jälkeen erityisesti pienissä/tiiviissä maissa — ks.
-  luovutuksen kohta 5 (globaali ruuhkanpudotus-sivuvaikutus).
-- `rappeutunutKohde()`/`kohde()`-ihmeiden `ihmeKuva`-tiedostonimen on
-  AINA alettava `ihme-`.
-- BIH-erikoissääntö: ei sotaa, ei entiteettirajoja (kohta 8).
-- Älä mergaa checkout-haaraa (`sisalto-pelikatalogi-20260927`) äläkä
-  poista sitä `--delete-branch`-lipulla.
-- VAIN EUROOPPA on maantieteellinen rajaus.
-- Main liikkuu useita committeja tunnissa: fetch+rebase juuri ennen
-  jokaista versionostoa/pushia, uudelleentestaa jos rebasoit.
+SITOVAT KÄYTÄNNÖT:
+- `nice -n 15` oletus paikallisille testeille, koko sarjan saa ajaa (~5–10 min, taustalle).
+- JUMI → Päätoimittaja; viestit ≤ 8 riviä; SendMessage ~10/vuoro.
+- Agentit vain Sonnet/Opus. Kohderyhmä 13+, EI lastenpeli. VAIN EUROOPPA.
+- `node tools/tarkista-nimiolimitys.mjs <ISO>` uuden karttamerkin jälkeen.
+- `ihmeKuva`-tiedostonimi alkaa aina `ihme-`. BIH: ei sotaa, ei entiteettirajoja.
+- Älä mergaa checkout-haaraa äläkä poista sitä `--delete-branch`-lipulla.
+- fetch + `merge-base --is-ancestor origin/main HEAD` juuri ennen jokaista pushia;
+  uudelleentestaa jos rebasoit.
