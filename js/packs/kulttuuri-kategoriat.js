@@ -32339,19 +32339,19 @@ export const KULTTUURI_KATEGORIAT = {
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-lahi-photo-v4.jpg',
           teksti: 'Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy '
-            + 'katsomaan uutta lippua Nikosiassa. On 5. heinäkuuta 1878: '
-            + 'saarivaltion hallinto siirtyy Britannialle, ja Union Jack '
-            + 'nostetaan vara-amiraali Lord John Grayn läsnä ollessa. Hänen '
-            + 'laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, '
-            + 'mutta uusi hallinto on vasta alkutekijöissään. Britannia ja '
-            + 'Osmanien valtakunta olivat sopineet Kyproksen hallinnasta '
-            + 'kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. '
-            + 'Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka '
-            + 'käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet '
-            + 'Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan '
-            + 'hallintoa. Torin kauppiaalle tämä päivä ei vielä kerro, mitä '
-            + 'vuosikymmenet tuovat: hänen edessään muuttuvat ensin sotilaat ja '
-            + 'lippu, vasta sitten lait.',
+            + 'katsomaan uutta lippua Nikosiassa. On 5. heinäkuuta 1878: saaren '
+            + 'hallinto siirtyy Britannialle, ja Union Jack nostetaan '
+            + 'vara-amiraali Lord John Grayn läsnä ollessa. Hänen laivastostaan '
+            + 'kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi '
+            + 'hallinto on vasta alkutekijöissään. Britannia ja Osmanien '
+            + 'valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa '
+            + 'vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy '
+            + 'muodollisesti osmanien valtakunnan osana, vaikka käytännön valta '
+            + 'vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu '
+            + 'Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. '
+            + 'Torin kauppiaalle tämä päivä ei vielä kerro, mitä vuosikymmenet '
+            + 'tuovat: hänen edessään muuttuvat ensin sotilaat ja lippu, vasta '
+            + 'sitten lait.',
           lyhyt: 'Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.',
           selite: 'Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.',
           lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Nikosian '
