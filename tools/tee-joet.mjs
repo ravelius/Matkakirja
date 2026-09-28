@@ -61,6 +61,25 @@ export function lueUomat(gpkg, valumaKm2) {
   }));
 }
 
+/*
+ * PÄTKÄN SUUNTA (Karttaseppä 27.9.2026): GEOGLOWS/TDX-Hydro digitoi pätkät
+ * ALAVIRRASTA YLÄVIRTAAN (vpu 207: 3 946/3 946 kytkettyä pätkää alkaa
+ * alavirran liitoksesta). Kun pätkät liitettiin virtausjärjestyksessä
+ * kääntämättä, ketju hyppäsi joka pätkän yli ja palasi takaisin, ja uoma
+ * piirtyi tuplaviivana (eu-laatu-13: Praha, Bukarest, Innsbruck). Pätkä
+ * suunnataan siksi liitoksen mukaan: ketjun jatko alkaa edellisen loppupisteen
+ * lähempää päätä, ja ketjun ensimmäinen pätkä päättyy alavirran pätkää kohti.
+ */
+const etaisyys = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+const lahinPaa = (p, v) => Math.min(etaisyys(p, v[0]), etaisyys(p, v.at(-1)));
+export function suunnattu(u, edellinen, alavirta) {
+  const v = u.viiva;
+  const kaanna = edellinen
+    ? etaisyys(edellinen, v.at(-1)) < etaisyys(edellinen, v[0])
+    : Boolean(alavirta) && lahinPaa(v[0], alavirta.viiva) < lahinPaa(v.at(-1), alavirta.viiva);
+  return kaanna ? [...v].reverse() : v;
+}
+
 /** Pätkät pääuomiksi: jatko alavirtaan, jos pätkä on alavirran pätkän suurin ylävirran haara. */
 export function ketjuta(uomat) {
   const kaikki = new Map(uomat.map((u) => [u.id, u]));
@@ -79,7 +98,8 @@ export function ketjuta(uomat) {
     const pisteet = []; let valuma = 0; let jarjestys = 0;
     for (let u = u0; u && !kaytetty.has(u.id); u = jatkuu(u)) {
       kaytetty.add(u.id);
-      pisteet.push(...(pisteet.length ? u.viiva.slice(1) : u.viiva));
+      const viiva = suunnattu(u, pisteet.at(-1), jatkuu(u));
+      pisteet.push(...(pisteet.length ? viiva.slice(1) : viiva));
       valuma = Math.max(valuma, u.valuma); jarjestys = Math.max(jarjestys, u.jarjestys);
     }
     if (pisteet.length >= 2) ketjut.push({ pisteet, valuma, jarjestys });
