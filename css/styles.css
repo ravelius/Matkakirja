@@ -23252,6 +23252,21 @@ body[data-mode] .actions .pollo-paneeli button.pollo-mikki.kuuntelee {
 
 .pollo-sanelu-tila:empty { display: none; }
 
+/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js). */
+.pollo-realtime-koe {
+  align-self: center;
+  padding: 0.25rem 0.7rem;
+  border: 1px dashed var(--pollo-muste-himmea);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--pollo-muste-himmea);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.pollo-realtime-koe.paalla { border-style: solid; color: inherit; }
+.pollo-realtime-koe[hidden] { display: none; }
+
 .pollo-rivi { display: flex; gap: 0.35rem; }
 
 input.pollo-kentta {

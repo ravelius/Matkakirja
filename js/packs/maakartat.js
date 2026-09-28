@@ -1,3 +1,5 @@
+import { HISTORIAN_HETKET_ID } from './historian-hetket.js';
+
 // Maa-osioiden aloitussivujen isot kartat (omistajan toive 7.8.2026:
 // "maaosion aloitussivu voisi alkaa isolla maan kartalla johon
 // merkitty tärkeimmät kaupungit ja maastonmuodot").
@@ -4196,6 +4198,11 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Omeryen hamam', lat: 35.1726, lon: 33.3654 },
       { nimi: 'Kyproksen museo', lat: 35.1717, lon: 33.3553 },
       { nimi: 'Leventis-museo', lat: 35.1706, lon: 33.3617 },
+      {
+        nimi: 'Nikosia 1878', tyyppi: 'henkilo', lat: 35.1768, lon: 33.3573,
+        nosto: 'hetki-britannian-lippu-nikosiassa-1878',
+        teksti: HISTORIAN_HETKET_ID.get('britannian-lippu-nikosiassa-1878').teksti,
+      },
     ],
   },
   /*
@@ -5677,6 +5684,11 @@ export const KAUPUNKIKARTAT = {
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      {
+        nimi: 'Pörssikrahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
+        nosto: 'hetki-wienin-porssikrahi-1873',
+        teksti: HISTORIAN_HETKET_ID.get('wienin-porssikrahi-1873').teksti,
+      },
       /*
        * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
        * 4 uutta pistettä.
@@ -7149,6 +7161,12 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen',
       },
       { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
+      {
+        nimi: 'Latin-silta 1914', tyyppi: 'henkilo', lat: 43.8579, lon: 18.4289,
+        nosto: 'hetki-franz-ferdinandin-salamurha-1914',
+        teksti: HISTORIAN_HETKET_ID.get('franz-ferdinandin-salamurha-1914').teksti,
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
       { nimi: 'Keltainen linnake', lat: 43.86146, lon: 18.43772 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -7736,6 +7754,12 @@ export const KAUPUNKIKARTAT = {
       // värikkäät talot — piste on laiturilla eikä vedessä.
       { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
       { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
+      {
+        nimi: 'Christiansborg 1884', tyyppi: 'henkilo', lat: 55.6763, lon: 12.5806,
+        nosto: 'hetki-christiansborgin-palo-1884',
+        teksti: HISTORIAN_HETKET_ID.get('christiansborgin-palo-1884').teksti,
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
       { nimi: 'Tivoli', tyyppi: 'luonto', lat: 55.6737, lon: 12.5681 },
       /*
        * KOLME LISÄKOHDETTA (paketti K1) — kartan numerointi tulee
@@ -8619,6 +8643,12 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Pyhän Elmon linnake', lat: 35.902, lon: 14.5188,
         wiki: 'Fort Saint Elmo',
+      },
+      {
+        nimi: 'Pyhä Elmo 1565', tyyppi: 'henkilo', lat: 35.9017, lon: 14.5179,
+        nosto: 'hetki-pyhan-elmon-linnake-1565',
+        teksti: HISTORIAN_HETKET_ID.get('pyhan-elmon-linnake-1565').teksti,
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
     ],
   },

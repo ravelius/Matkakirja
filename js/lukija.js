@@ -1554,14 +1554,14 @@ function lueLaitteella(tagillinen, nappi = null, kunLoppuu = null, persoona = 'k
  *
  * @returns {{lisaa(teksti: string): void, paata(): void}|null}
  */
-export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
+export function lueVirtana(nappi = null, { persoona = 'kertoja', onAani = null, onLoppu = null } = {}) {
   pysaytaLukija();
   // Ei mykistysporttia (kuten lueAaneen, omistaja 27.9.2026 klo 15.5x).
   // Sama pehmeä taustan väistö kuin valmiin tekstin luennassa
   // (lueAaneen) — kerran-kääre kattaa kaikki loppupolut.
   const vapautaVaisto = kerran(puheLoppui);
   puheAlkoi();
-  const puhe = puheVirtana(nappi, persoona, vapautaVaisto);
+  const puhe = puheVirtana(nappi, persoona, vapautaVaisto, { onAani, onLoppu });
   if (puhe) return puhe;
   const eiVirtaa = () => {
     vapautaVaisto();
@@ -1584,6 +1584,7 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
     ajossa = null;
     merkitseTila(nappi, false);
     vapautaVaisto();
+    onLoppu?.();
   };
 
   const puhuPala = () => {
@@ -1614,6 +1615,10 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
       ? seuraaLivianKuuntelulausumaa(lausuma, kuuntelu, () => ajossa?.merkki === merkki)
       : seuraaLivianKasvoLausumaa(lausuma, persoona);
     tila.lausuma = lausuma;
+    if (onAani && !tila.aaniIlmoitettu) {
+      tila.aaniIlmoitettu = true;
+      lausuma.addEventListener?.('start', () => { if (!tila.peruttu) onAani(); }, { once: true });
+    }
     synth.speak(lausuma);
   };
 
@@ -1682,7 +1687,7 @@ function ilmoitaPuhevirhe(virhe) {
   } catch { /* ei dokumenttia (testit) */ }
 }
 
-function puheVirtana(nappi, persoona, vapautaVaisto = null) {
+function puheVirtana(nappi, persoona, vapautaVaisto = null, { onAani = null, onLoppu = null } = {}) {
   if (!puheTuettu()) return null;
   const merkki = {};
   const loppui = () => {
@@ -1690,6 +1695,7 @@ function puheVirtana(nappi, persoona, vapautaVaisto = null) {
     ajossa = null;
     merkitseTila(nappi, false);
     vapautaVaisto?.();
+    onLoppu?.();
   };
   const soitin = luoPuheSoitin({
     persoona,
@@ -1697,6 +1703,7 @@ function puheVirtana(nappi, persoona, vapautaVaisto = null) {
     sailio: null,
     // Striimattu vastaus on yksi puheenvuoro: virkeväli, ei kappaleväliä.
     yksiPuheenvuoro: true,
+    onAani,
     onLoppu: loppui,
     onVirhe: (vaihe, virhe) => {
       if (virhe?.pysayttaa && ajossa?.merkki === merkki) ilmoitaPuhevirhe(virhe);
