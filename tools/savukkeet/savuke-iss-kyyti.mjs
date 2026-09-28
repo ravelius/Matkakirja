@@ -133,6 +133,8 @@ const tila = (s) => s.evaluate(() => {
   return {
     kyyti: k,
     issSyke: t?.issSyke ?? null,
+    // ISS-realismi (Siirtoseppä): kerrokset; realismin ilmakaari korvaa näkymän oman kaaren (korvaa.kaari).
+    realismi: t?.realismi ?? null,
     iss: ISS,
     radanLaatu: t?.kalvo?.radanLaatu ?? null,
     rataOpacity: rata ? getComputedStyle(rata).opacity : null,
@@ -252,10 +254,11 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
     /^· ISS · \d{3} km · 2[\d\s]+ km\/h$/.test(seuranta.tieto?.teksti ?? '') && seuranta.kyyti.live === true
       && Number(seuranta.tieto.opacity) > 0.9 && seuranta.tieto.laatikko[0] <= 16,
     JSON.stringify(seuranta.tieto));
-  vaadi(n('seuranta: kaari, malli, ohjaimet kiinni, kenttäkulma 50°'),
-    seuranta.kyyti.kaari && seuranta.kyyti.malli && seuranta.kyyti.osuus === 1 && seuranta.ohjaimet === false
+  const realismiKaari = Boolean(seuranta.realismi?.kerrokset?.some((k) => k.nimi === 'ilmakaari' && k.nakyy));
+  vaadi(n('seuranta: kaari (oma tai realismin ilmakaari), malli, ohjaimet kiinni, kenttäkulma 50°'),
+    (seuranta.kyyti.kaari || realismiKaari) && seuranta.kyyti.malli && seuranta.kyyti.osuus === 1 && seuranta.ohjaimet === false
       && Math.abs(seuranta.kamera.fov - 50) < 0.01 && seuranta.body && seuranta.linssisulku === 'none',
-    JSON.stringify({ ...seuranta.kyyti, kerrokset: undefined, fov: seuranta.kamera.fov, ohjaimet: seuranta.ohjaimet }));
+    JSON.stringify({ ...seuranta.kyyti, kerrokset: undefined, realismiKaari, fov: seuranta.kamera.fov, ohjaimet: seuranta.ohjaimet }));
   vaadi(n('seuranta: silmä 1 200 km ISS:stä, ISS ruudulla'), Math.abs(et.km - 1200) < 25
     && et.ruutu && et.ruutu.x > 0 && et.ruutu.x < seuranta.leveys && et.ruutu.y > 0 && et.ruutu.y < seuranta.korkeusPx,
   JSON.stringify(et));
