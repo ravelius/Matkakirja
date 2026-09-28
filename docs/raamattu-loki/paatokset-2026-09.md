@@ -8939,3 +8939,7 @@ Julkaisija 28.9. klo 22.36: #3580 mergetty (v2377, a6dec6558), pollo-worker julk
 ## OMISTAJA: PULUN V4-ÄÄNET PELIIN HETI (28.9.2026 klo 22.36)
 
 Omistaja 28.9. klo 22.36 sanatarkasti: "sano heti kun uudet pulun äänet ovat pelissä" → koosteen kuuntelua ei odoteta: Pelikoodari avaa PR:n pelikoodari-pulu-v4-kaikki-2 (75 v4-luentaa, 2 lyhennettyä kuplaa, Vallettan isoisän rungot mustiksi) Julkaisijan junan kärkeen; Julkaisija ilmoittaa tuotannosta; Päätoimittaja kertoo omistajalle heti.
+
+## OMISTAJA: ISOISÄN LUENNAN ALKU JA KAUPUNGIN NIMI PUUTTUVAT (NATIIVI 1.0.38–1.0.39) (28.9.2026 klo 22.39)
+
+Omistaja 28.9. klo 22.39 sanatarkasti: "v39 isoisän luennan alusta puuttuu pala sekä myös kaupungin nimet ja sloganin kohdasta puuttuu yleensä kaupungin nimi. tämä oli jo ainakin v38:ssa sama ongelma" → Natiivi-UI kaiutinkorjauksen jälkeen ennen maakuntatilaa: juurisyy (klipin lataus/häivytys/hiljaisuuden leikkaus/aloituskohta; nimi-klippi ennen slogania kuten webissä, paketissa?), mittaus currentTime/timeSamples, laitteella ennen/jälkeen; 1.0.40 jos ehtii, muuten 1.0.41.
