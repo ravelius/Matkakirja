@@ -533,6 +533,34 @@ namespace Matkakirja.Natiivi
             lupa == LupaMyonnetty ? "myönnetty" : lupa == LupaEvatty ? "evätty" : lupa == LupaKysymatta ? "kysymättä"
             : lupa == LupaEiKuvausta ? "Info.plist ilman kuvausta" : "ei iOS";
 
+        /// <summary>
+        /// Kehittäjäkomento `pulu realtime kanava paalle|pois|tila`: pelkkä natiivikanava ilman WebSocketia ja
+        /// pöllön koodia (simulaattorin savuke: pysyykö kanava auki kokoonpanon muutoksen yli). tila lukee mikin
+        /// rengaspuskurin tyhjäksi ja kertoo tavumäärän (24 kHz mono PCM16 = 48 000 tavua/s).
+        /// </summary>
+        public string KanavaKoe(string komento)
+        {
+            if (Kaynnissa) return "keskustelu käynnissä: pulu realtime pois ensin";
+            if (!Saatavilla) return "vain iOS-laitteella/simulaattorissa";
+            switch (komento)
+            {
+                case "paalle":
+                    if (NatLupa() == LupaKysymatta) { NatPyydaLupa(); return "=mikrofonilupa kysytty, aja uudelleen"; }
+                    int r = NatAloita();
+                    return r == 0 ? "=kanava auki" : "kanava ei auennut, koodi " + r;
+                case "pois": NatLopeta(); return "=kanava kiinni";
+                case "tila":
+                {
+                    var p = new byte[48000 * 4];
+                    int luettu = 0, n;
+                    while ((n = NatLue(p, p.Length)) > 0) luettu += n;
+                    int t = NatTila();
+                    return $"=natiivitila {(t == 1 ? "auki" : t == TilaKeskeytetty ? "keskeytetty" : "kiinni")}, mikki {luettu} tavua";
+                }
+                default: return "käyttö: pulu realtime kanava paalle|pois|tila";
+            }
+        }
+
         // --- natiivikanava (Plugins/iOS/MatkakirjaPuhekanava.mm) ------------------------------------
 
         const int LupaKysymatta = 0, LupaMyonnetty = 1, LupaEvatty = 2, LupaEiKuvausta = 3;
