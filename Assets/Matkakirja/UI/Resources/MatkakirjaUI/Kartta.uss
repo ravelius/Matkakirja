@@ -2131,6 +2131,11 @@
     padding: 4px;
 }
 
+/* iPad: kuvausruutu isommaksi myös leveydeltään (1,4 × 300 px), jotta isonnettu teksti ei jää kapeaksi palstaksi. */
+.mk-selite.mk-selite--karttatila.mk-selite--karttatila-tabletti {
+    width: 420px;
+}
+
 /* Pohjaväri jo nostokortin paperi ja ei kehystä (mk-maakunnat__luonnehdinta, kaikilla laitteilla); käsin piirretty
    paneelikehys (KarheaKehys) piilotettu maakuntakarttatilassa (Karttaselite.cs) — se näkyi tummana reunana koko
    pienen kuvausruudun ympärillä (omistaja 29.9.2026, iPhone-laitekuva). */

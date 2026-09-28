@@ -82,6 +82,8 @@ namespace Matkakirja.Natiivi
             {
                 ylarivi.style.display = DisplayStyle.None; // ei välilehtiä eikä ✕: nappi on kytkin
                 paneeli.AddToClassList("mk-selite--karttatila");
+                // iPadilla leveämpi (omistaja: "mininosto saisi olla isompi"): 300 pt jätti isonnetulle tekstille kapean palstan.
+                paneeli.EnableInClassList("mk-selite--karttatila-tabletti", UiKerros.Tabletti);
                 // Omistaja 29.9.2026 (iPhone-laitekuva): käsin piirretty kehys (KarheaKehys) näkyi tummana
                 // reunana koko pienen kuvausruudun ympärillä — pois vain maakuntakarttatilassa, pohja jää
                 // silti nostokortin paperin väriseksi (mk-selite background-color).
