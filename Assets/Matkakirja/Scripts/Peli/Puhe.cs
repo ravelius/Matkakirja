@@ -546,15 +546,25 @@ namespace Matkakirja.Natiivi
                     bool raja = ViimeVirhe.Contains("429");
                     if (raja || yritys >= PalanUusinnat)
                     {
+                        // Virran luovutus on sen loppu (web onVirhe → loppui): kuulija ei jää odottamaan puhetta.
                         Kirjaa($"pala {PalaNyt} LUOVUTETTU ({yritys} uusintaa): {ViimeVirhe}");
+                        LopetaVirta();
                         yield break;
                     }
                     PalojaUusittu++;
                     Kirjaa($"pala {PalaNyt} uusitaan ({yritys + 1}/{PalanUusinnat}): {ViimeVirhe}");
                     yield return new WaitForSecondsRealtime(1 << yritys);
                     if (oma != tunnus) yield break;
+                    // LatausPetti tyhjensi SoivaUrl:n: virta on yhä soiva puhe uusinnan ajan.
+                    SoivaUrl = "puhe:" + v.Persoona + ":virta";
                 }
             }
+            LopetaVirta();
+        }
+
+        /// <summary>Virran loppu (soitettu tai luovutettu): puhe päättyy ja loppu kutsutaan. Korvattu/pysäytetty ei tule tänne.</summary>
+        void LopetaVirta()
+        {
             SoivaUrl = null;
             AsetaPuhuu(false);
             var l = loppu;
