@@ -46,6 +46,14 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// Pohjan varalaattojen uusintakierroksen viive (s) edellisestä kierroksesta, kun <paramref name="kierros"/> kierrosta on
+        /// ajettu (web #3516, pallolaatat.js 1,5 / 4,5 / 13,5 / 20 s): 0 → 2 s ensimmäisestä varalaatasta, 1 → 3 s (5 s:ssa),
+        /// 2 → 10 s (15 s:ssa), sitten 20 s välein. Laattapalvelin: kiireinen palvelin lykkää kierrosta enintään 20 s.
+        /// </summary>
+        public static double VaraUusintaViive(int kierros) =>
+            kierros <= 0 ? 2.0 : kierros == 1 ? 3.0 : kierros == 2 ? 10.0 : 20.0;
+
+        /// <summary>
         /// Tilapäinen virhe, jota kannattaa yrittää uudelleen: verkkovirhe tai aikakatkaisu (koodi ≤ 0 tai 502, jonka
         /// <see cref="Koodi"/> antaa ilman HTTP-vastausta), 408, 425, 429 ja 5xx. 404, 403 ja muut 4xx ovat lopullisia.
         /// </summary>

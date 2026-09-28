@@ -37,6 +37,9 @@
 //   kehittaja koodi|pois|tila kehittäjätila kuin Päävalikon kenttä (Asetukset.AsetaKehittaja): koodi luetaan
 //                             Documents/kehittaja-koodi.txt:stä, joka poistetaan heti; arvoa ei kirjata mihinkään
 //                             (puhemittaus x-pollo-kehittaja-otsakkeella ilman IP-päivärajaa). tila: päällä, koodi on/ei
+//   pulu realtime paalle|pois|tila   Pulun äänikeskustelun koe (PuluRealtime.cs) kuin chatin koenappi: paalle aloittaa
+//                             (vaatii pöllön kehittäjäkoodin), pois lopettaa, tila = tila, kanava, lupa, aika, virhe
+//   pulu realtime toisto unity|natiivi   vastausäänen toisto seuraavasta aloituksesta (oletus natiivi: kaiunpoisto)
 //   saapumisluenta [tila]     löydös 162: PeliOhjain.SaapumisluentaKesken (kaupunki, luento jonossa/soi, traileri,
 //                             lykätty) ja viimeisin päättyminen "kaupunki (syy)" peli-lokiin
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
@@ -351,6 +354,26 @@ namespace Matkakirja.Natiivi
                         case "tila": return $"=kehittäjätila {(Asetukset.Kehittaja ? "päällä" : "pois")}, pöllön koodi {(Asetukset.PolloKoodi != null ? "on" : "ei")}";
                         default: return "käyttö: kehittaja koodi|pois|tila";
                     }
+                case "pulu" when A(1) == "realtime":
+                {
+                    var rt = PuluRealtime.Hae();
+                    switch (A(2))
+                    {
+                        case "paalle":
+                            if (Asetukset.PolloKoodi == null) return "pöllön kehittäjäkoodi puuttuu (kehittaja koodi)";
+                            if (rt.Kaynnissa) return "=jo käynnissä: " + rt.Kuvaus;
+                            // Chatin nappi, jos chat on rakennettu (sanelu pois ja sama konteksti), muuten suoraan.
+                            if (PuluRealtimeNappi.Nykyinen != null) PuluRealtimeNappi.Nykyinen.Vaihda();
+                            else rt.Aloita("Lauta: Maailmankartta");
+                            return "=" + rt.Kuvaus;
+                        case "pois": rt.Lopeta(); return "=" + rt.Kuvaus;
+                        case "tila": return "=" + rt.Kuvaus;
+                        case "toisto" when A(3) == "unity" || A(3) == "natiivi":
+                            PuluRealtime.UnityToisto = A(3) == "unity";
+                            return "=toisto " + A(3) + " (seuraavasta aloituksesta)";
+                        default: return "käyttö: pulu realtime paalle|pois|tila|toisto unity|natiivi";
+                    }
+                }
                 case "saapumisluenta":
                     if (A(1) != null && A(1) != "tila") return "käyttö: saapumisluenta [tila]";
                     return "=" + ohjain.SaapumisluentaTila;

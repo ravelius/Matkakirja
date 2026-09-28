@@ -1570,30 +1570,28 @@
     font-size: 15px;
 }
 
-.mk-nosto__ihmenappi {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    margin: 0 0 11px 0;
-    padding: 6px 12px;
+/* Säilyneen ihmekohteen nykykuva tekstin kyljessä (web .fokuskohde-teksti > .fokuskohde-nykykuva, omistaja
+   27.9.2026; mitattu #3517 Chromiumissa): kuva 10 rem korkea ja rajattu (object-fit cover), napin reunus 1 px
+   rgba(58, 38, 16, 0.22) ja kulmat 8 px; kuvateksti 0,68 rem, riviväli 1,4, marginaali 0,3 0,1 0,4 rem,
+   rgba(33, 29, 24, 0.78). Värit läpinäkymättöminä kortin #f5f0e2:n päällä (sRGB). Leveyden ja paikan asettaa
+   Lehtipalstat (mk-palstat__kylki). */
+.mk-nosto__kuvakehys--nyky {
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.6);
-    border-radius: 4px;
-    background-color: rgba(214, 168, 62, 0.2);
-    color: #6d4d12;
+    border-color: rgb(204, 196, 180);
+    border-radius: 8px;
 }
 
-.mk-nosto__ihmenappi .mk-nappi__teksti {
-    font-size: 13.5px;
-    letter-spacing: 10.37px; /* web 1.4px */
+.mk-nosto__kuvakehys--nyky > .mk-nosto__kuva {
+    -unity-background-scale-mode: scale-and-crop;
+    border-radius: 7px;
 }
 
-.mk-nosto__ihmetahti {
-    width: 24px;
-    height: 24px;
-    margin-right: 7px;
-    color: #b8862b;
+.mk-nosto__nykyteksti {
+    margin: 4.8px 1.6px 6.4px 1.6px;
+    padding: 0;
+    font-size: 10.88px;
+    white-space: normal;
+    color: rgb(80, 75, 68);
 }
 
 .mk-nosto__leikekirja {
@@ -1938,6 +1936,15 @@
 .mk-palstat__mittari {
     position: absolute;
     visibility: hidden;
+}
+
+/* Kelluva kylkikuva (Lehtipalstat.LuoKylkikuvalla): left, top ja width koodissa. */
+.mk-palstat__kylki {
+    position: absolute;
+}
+
+.mk-palstat__vieri {
+    flex-shrink: 0;
 }
 
 .mk-palstat--kaksi > .mk-palstat__sisus {

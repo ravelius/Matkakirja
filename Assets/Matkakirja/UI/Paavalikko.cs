@@ -130,6 +130,26 @@ namespace Matkakirja.Natiivi
             var savyNollaus = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Pohjasavy.Aseta(0f, 0f); PaivitaSavy(); }, kokeet, Ikonit.Viiva["paivita"]);
             savyNollaus.tooltip = "Kartan kontrasti ja mustan nosto oletukseen (0, 0).";
             Rakenne.Teksti("Kartan sävy oletukseen", "mk-kytkinrivi__nimi", savyNollaus);
+            // Paperin rae ja patina (Natiiviseppä, omistajan tilaus 27.9. klo 23.4x: tasot testataan laitteella, hyvät arvot
+            // poltetaan myöhemmin laattoihin; Pohjapatina). Sama kaava kuin sävyssä: vedon aikana kartalle, levylle irrotettaessa.
+            patinaRivit.Clear();
+            PatinaRivi("Paperin rae", 0f, 1f, () => Pohjapatina.Rae,
+                (v, t) => Pohjapatina.Aseta(v, Pohjapatina.Koko, Pohjapatina.Tahrat, Pohjapatina.Kellastus, Pohjapatina.Reuna, t));
+            PatinaRivi("Rakeen koko (px)", Pohjapatina.KokoMin, Pohjapatina.KokoMax, () => Pohjapatina.Koko,
+                (v, t) => Pohjapatina.Aseta(Pohjapatina.Rae, v, Pohjapatina.Tahrat, Pohjapatina.Kellastus, Pohjapatina.Reuna, t));
+            PatinaRivi("Patina: tahrat", 0f, 1f, () => Pohjapatina.Tahrat,
+                (v, t) => Pohjapatina.Aseta(Pohjapatina.Rae, Pohjapatina.Koko, v, Pohjapatina.Kellastus, Pohjapatina.Reuna, t));
+            PatinaRivi("Patina: kellastuminen", 0f, 1f, () => Pohjapatina.Kellastus,
+                (v, t) => Pohjapatina.Aseta(Pohjapatina.Rae, Pohjapatina.Koko, Pohjapatina.Tahrat, v, Pohjapatina.Reuna, t));
+            PatinaRivi("Patina: reunatummennus", 0f, 1f, () => Pohjapatina.Reuna,
+                (v, t) => Pohjapatina.Aseta(Pohjapatina.Rae, Pohjapatina.Koko, Pohjapatina.Tahrat, Pohjapatina.Kellastus, v, t));
+            var patinaNollaus = Rakenne.Nappi(null, "mk-kytkinrivi", () =>
+            {
+                Pohjapatina.Aseta(0f, Pohjapatina.OletusKoko, 0f, 0f, 0f);
+                PaivitaSavy();
+            }, kokeet, Ikonit.Viiva["paivita"]);
+            patinaNollaus.tooltip = "Paperin rae ja patina oletukseen (0 = poltettu kartta sellaisenaan).";
+            Rakenne.Teksti("Rae ja patina oletukseen", "mk-kytkinrivi__nimi", patinaNollaus);
             // Striimiääni muutti kehittäjävalikosta nostokortin säätörattaaseen pelinimellä (omistaja 27.9. klo 10.2x,
             // web #3388; KortinLukija, Striimiaani.Pelinimet).
             // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).
@@ -219,6 +239,29 @@ namespace Matkakirja.Natiivi
             return (s, arvo);
         }
 
+        readonly List<(Slider Saadin, Label Arvo, Func<float> Hae)> patinaRivit = new List<(Slider, Label, Func<float>)>();
+
+        /// <summary>Rakeen ja patinan liukusäädinrivi (Pohjapatina, Natiiviseppä): sama asettelu kuin <see cref="SavyRivi"/>.</summary>
+        void PatinaRivi(string nimi, float min, float max, Func<float> hae, Action<float, bool> aseta)
+        {
+            var rivi = Rakenne.El("mk-saadinrivi mk-saadinrivi--pino", kokeet);
+            var yla = Rakenne.El("mk-saadinrivi__yla", rivi);
+            Rakenne.Teksti(nimi, "mk-saadinrivi__nimi", yla);
+            var arvo = Rakenne.Teksti("", "mk-saadinrivi__arvo", yla);
+            var s = new Slider(min, max) { pageSize = 0, fill = true };
+            s.AddToClassList("mk-saadin");
+            rivi.Add(s);
+            void Aseta(float v, bool tallenna)
+            {
+                v = Mathf.Round(v * 100f) / 100f;
+                aseta(v, tallenna);
+                arvo.text = SavyTeksti(hae(), false);
+            }
+            s.RegisterValueChangedCallback(e => Aseta(e.newValue, false));
+            s.RegisterCallback<PointerCaptureOutEvent>(_ => Aseta(s.value, true));
+            patinaRivit.Add((s, arvo, hae));
+        }
+
         static string SavyTeksti(float v, bool etumerkki) =>
             v.ToString(etumerkki ? "+0.00;-0.00;0" : "0.00", System.Globalization.CultureInfo.InvariantCulture).Replace('.', ',');
 
@@ -229,6 +272,11 @@ namespace Matkakirja.Natiivi
             kontrasti.Arvo.text = SavyTeksti(Pohjasavy.Kontrasti, true);
             nosto.Saadin.SetValueWithoutNotify(Pohjasavy.Nosto);
             nosto.Arvo.text = SavyTeksti(Pohjasavy.Nosto, false);
+            foreach (var r in patinaRivit)
+            {
+                r.Saadin.SetValueWithoutNotify(r.Hae());
+                r.Arvo.text = SavyTeksti(r.Hae(), false);
+            }
         }
         readonly KehittajaIkkuna kehittaja;
         public readonly MitaUutta MitaUutta;

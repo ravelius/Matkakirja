@@ -52,8 +52,9 @@
 //                                             (lisäkaupunki: kohde:nakyva-kaupunki-lyon → lisäkaupungin kortti)
 //   ui nostonappi <nappi>                     painaa auki olevan nostokortin nappia (esim. vastaa0, sitten juliste)
 //                                             (kaiutin = kortin luenta kuin napautus; mittaus: puhe virta)
-//   ui ihme [kohde[@ISO]]                     kohdekortti ja "Koe ihme" -suurennos (oletus akropolis@GRC;
-//                                             kadonnut ihme on kortin ensimmäinen kuva nauhoineen: ui nosto kohde:crystal-palace@GBR)
+//   ui ihme [kohde[@ISO]]                     kohdekortti ja ihmekuvan suurennos (oletus akropolis@GRC; ihmekuva on
+//                                             kortin ensimmäinen kuva nauhoineen, säilyneen oma kuva tekstin kyljessä:
+//                                             ui nosto kohde:olympia@GRC nykykuva)
 //   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR; Kreikka:
 //                                             delfoi@GRC, olympos@GRC, antikythera@GRC). Pelissä pooli on pelaajan
 //                                             kaupungin (web nostoPooli), ilman peliä kohteen maan täkynosto
@@ -96,6 +97,7 @@
 //   ui kuvasumea kokoruutu                  löydös 132: kokoruudun taso (4 pt + pysäytyskuva, pallon kamera pois); auto palauttaa
 //   ui ylapalkki saari x,y,w,h|pois           saaririvin Dynamic Island pisteinä (ei lovea: 0,0,0,0); pois = laitteen mukaan
 //   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
+//   ui mitauutta paivittyi <versio (build)> [vanha]  "Peli päivittyi" asennettuna versiona; vanha = paikallinen loki ohi
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
@@ -581,6 +583,11 @@ namespace Matkakirja.Natiivi
                 case "chat":
                     if (loput == "ehdota") { ui.Chat.Avaa(); ui.Chat.EhdotaSisaltoa(); return null; }
                     if (loput == "aani") { Kirjaa("ui chat aani: " + (ui.Chat.VaihdaAaniTesti() ? "päällä" : "pois")); return null; }
+                    // Puhekeskustelu (web #3546): saneltu kysymys ilman mikrofonia, tila + viive, mikin napautus.
+                    if (loput.StartsWith("puhe ")) { ui.Chat.Kysy(loput.Substring(5), puhe: true); return null; }
+                    if (loput == "virta pois" || loput == "virta paalle") { PuluChat.Virkevirta = loput == "virta paalle"; Kirjaa("ui chat virta: " + (PuluChat.Virkevirta ? "virkevirta" : "valmiina")); return null; }
+                    if (loput == "puhetila") { Kirjaa("ui chat puhetila: " + ui.Chat.PuheTilaTeksti); return null; }
+                    if (loput == "mikki") { ui.Chat.MikkiTesti(); Kirjaa("ui chat mikki: " + ui.Chat.PuheTilaTeksti); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
@@ -901,7 +908,16 @@ namespace Matkakirja.Natiivi
                     ui.Tilarivi.Paivita();
                     return null;
                 case "mitauutta":
-                    if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true); else ui.Valikko.MitaUutta.Avaa();
+                    if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true);
+                    else if (loput.StartsWith("paivittyi "))
+                    {
+                        // ui mitauutta paivittyi 1.0.34 (202609272058) [vanha]: asennettu versio; vanha = laitteen paketti ilman riviä.
+                        string arvo = loput.Substring(10).Trim();
+                        bool vanha = arvo.EndsWith(" vanha");
+                        if (vanha) arvo = arvo.Substring(0, arvo.Length - 6).Trim();
+                        ui.Valikko.MitaUutta.TestaaPaivitys(arvo, vanha);
+                    }
+                    else ui.Valikko.MitaUutta.Avaa();
                     return null;
                 case "liike":
                     return ui.Liike.Lenna(true) ? null : "pieni liike on pois päältä tai lento jo käynnissä";

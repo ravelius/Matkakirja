@@ -41,6 +41,7 @@ namespace Matkakirja
     ///   pohjoinen [s]             pohjoinen ylös (PalautaPohjoinen, kuin tuplanapautus tai kompassinappi)
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
+    ///   palvelin varavika <osuus> <s>   vikakoe: osuus pohjalaatoista saa varalaatan s sekuntia (varalaattojen uusinnan testi)
     ///   palvelin                  laattapalvelimen osumat lokiin (paketti / offline / välimuisti / verkko) ja maastoluokan
     ///                             laskurit
     ///   palvelin loki paalle|pois epäonnistuneet haut lokiin: "MATKAKIRJA palvelin virhe luokka polku koodi yritykset ms
@@ -100,7 +101,13 @@ namespace Matkakirja
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
+    ///   symbolit alla 0|1         erikoismalli voittaa (Linssisepän speksi 27.9. klo 21.2x, oletus 1): muiden nostojen symbolit,
+    ///                             joiden laatikko leikkaa erikoismallin kalustelaatikon, piiloon (0,3 s, hystereesi 10 %) ja merkki
+    ///                             laatikon reunalle (tai noston paikkaan, jos jalka on laatikon ulkopuolella) mustepisteenä;
+    ///                             tila-rivillä "piilossa erikoismallin alla: vltava→cesky-krumlov, …"
+    ///   symbolit alla laatikko|jalka  laatikkoleikkaus (oletus, 28.9.) vai 1.0.33:n jalkapiste laatikossa (A/B)
     ///   pohja savy [kontrasti nosto]  pohjakartan kontrasti (0 = ennallaan, −0,5…0,3) ja mustan nosto (0–0,4); säilyy laitteella
+    ///   pohja patina [rae koko tahrat kellastuminen reuna]  paperin rae 0–1 (koko 1–6 px), tahrat, kellastuminen ja reunatummennus 0–1; 0 = ennallaan
     ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke|suunta maailma|ruutu|kamera   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
@@ -437,6 +444,12 @@ namespace Matkakirja
                     if (o.Length > 3)
                         Pohjasavy.Aseta(float.Parse(o[2], CultureInfo.InvariantCulture), float.Parse(o[3], CultureInfo.InvariantCulture));
                     Debug.Log("MATKAKIRJA " + Pohjasavy.Kuvaus());
+                    break;
+                case "pohja" when o.Length > 1 && o[1] == "patina":
+                    // pohja patina [rae koko tahrat kellastuminen reuna]: paperin rae ja patina (Pohjapatina; omistaja 27.9. klo 23.4x)
+                    if (o.Length > 6)
+                        Pohjapatina.Aseta((float)D(2), (float)D(3), (float)D(4), (float)D(5), (float)D(6));
+                    Debug.Log("MATKAKIRJA " + Pohjapatina.Kuvaus());
                     break;
                 case "hiljaa":
                 case "aanet":
@@ -779,7 +792,7 @@ namespace Matkakirja
                     else if (m == "taso23" && o.Length > 2) Symbolimallit.Taso23 = o[2] != "0" && o[2] != "pois";
                     else if (m == "loydetty" || m == "himmea") Symbolimallit.PakotaLoydetty = m == "loydetty";
                     else if (m == "koko" && o.Length > 2) Symbolimallit.KokoPt = float.Parse(o[2], CultureInfo.InvariantCulture);
-                    else Symbolimallit.Komento(o);   // 1.0.27: ylhaalta 3d|2d, perspektiivi <aste>, reuna <pt>, maasto 0|1, kategoriat 1|0|ruutu|pohjoinen
+                    else Symbolimallit.Komento(o);   // 1.0.27: ylhaalta 3d|2d, perspektiivi <aste>, reuna <pt>, maasto 0|1, kategoriat 1|0|ruutu|pohjoinen, alla 0|1
                     // Natiivi-UI kysyy OnMallia merkkejä päivittäessään: näytettävät uudelleen, jotta 2D-merkit palaavat tai lähtevät.
                     if (m != "tila") NostoKerros.Instanssi?.Herata();
                     PallonLepo.Muuttui("symbolit");
@@ -1010,6 +1023,7 @@ namespace Matkakirja
                     // | palvelin yksiportti paalle|pois (löydös 176: PlayerPrefs, vaikuttaa seuraavasta käynnistyksestä)
                     if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
+                    else if (o.Length > 3 && o[1] == "varavika") Laattapalvelin.AsetaVaraVika(D(2), D(3));
                     else if (o.Length > 2 && o[1] == "yksiportti")
                     {
                         PlayerPrefs.SetInt(LaattaPortit.YksiPorttiAvain, o[2] == "paalle" ? 1 : 0);
@@ -1019,7 +1033,7 @@ namespace Matkakirja
                     }
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
                               $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
-                              $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}, " +
+                              $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia} (uusintakierroksia {Laattapalvelin.VaraUusittu}, paikattu {Laattapalvelin.VaraPaikattu}), " +
                               $"Z10 vanhemmasta {Laattapalvelin.Vanhemmasta10} (kaupunkitaso {(KaupunkiRasteri.Paalla ? (KaupunkiRasteri.Tunnettu ? KaupunkiRasteri.Maara + " laattaa" : "tuntematon") : "pois")}), " +
                               $"väritason uusintoja {Laattapalvelin.VariUusintoja} (pelastettu {Laattapalvelin.VariPelastettu}) | {Laattapalvelin.YhteysKuvaus(0)} | {Laattapalvelin.JonoTila()}");
                     Debug.Log(Laattapalvelin.MaastoKuvaus());
