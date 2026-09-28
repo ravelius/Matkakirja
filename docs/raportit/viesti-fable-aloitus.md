@@ -7,6 +7,8 @@ VAIN EUROOPPA, sitten docs/raportit/viesti-fable-luovutus-20260928.md KOKONAAN j
 Muisti /Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fable/memory/ (MEMORY.md).
 
 ## Heti
+0. Tarkista effort-sallinta: .claude/settings.local.json sisältää "mcp__ccd_session_mgmt__set_session_effort" ja yksi
+   set_session_effort-kutsu onnistuu. Jos ei, anna omistajalle lisäyskomento bash-lohkona (Raamattu, TEHTÄVÄKOHTAINEN EFFORT).
 1. Tilinvaihto: jos roolisessioita ei ole, luo ne (Raamattu SESSIOIDEN LUONTI) ja lähetä kullekin aloitusviesti luovutuksen
    kohdan 2 taulukosta. Remote Control päälle kaikkiin. Kirjaa uudet session id:t lokiin ja muistiin.
 2. Kaikki roolit ovat TAUOLLA omistajan käskystä (28.9. 00.0x) — pura tauko roolikohtaisilla aloitusviesteillä.
