@@ -55,20 +55,21 @@ namespace Matkakirja
         Material jalkiMateriaali, edessaMateriaali;
         Mesh jalkiMesh, edessaMesh;
 
-        /// <summary>Kynänjälki ja edessä oleva reitti isoympyränä (256 väliä); edellinen pois.</summary>
-        void TeeJalki(double lat0, double lon0, double lat1, double lon1)
+        /// <summary>Kynänjälki ja edessä oleva reitti koneen lentämänä reittinä (AloituslennonRata.LentoReitti: isoympyrä 256 välillä
+        /// ja v3f4:n kaarto tiheästi); edellinen pois.</summary>
+        void TeeJalki(List<(double Lat, double Lon)> pisteet)
         {
             PoistaJalki();
             var s = Resources.Load<Shader>("Varjostimet/Kynaviiva");
-            if (s == null || georeferenssi == null) return;
-            const int N = 256;
+            if (s == null || georeferenssi == null || pisteet == null || pisteet.Count < 2) return;
+            int N = pisteet.Count - 1;
             var u = new Vector3[N + 1];
             var matka = new float[N + 1];
             double kulma = 0;
-            var ed = (lat0, lon0);
+            var ed = pisteet[0];
             for (int i = 0; i <= N; i++)
             {
-                var q = LennonV3.Isoympyralla(lat0, lon0, lat1, lon1, (double)i / N);
+                var q = pisteet[i];
                 if (i > 0) kulma += LennonAikajana.ReittiM(ed.Item1, ed.Item2, q.Lat, q.Lon) / 6371000.0 * 180.0 / Math.PI;
                 ed = (q.Lat, q.Lon);
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(q.Lon, q.Lat, JalkiKorkeusM));
@@ -171,6 +172,21 @@ namespace Matkakirja
         /// <summary>Odotus napautusnäkymässä enintään (s): käytävän lisäksi Cesiumin valinta tasaantunut ennakkokameran kanssa (koko
         /// pallon näkymä ei tasaannu koskaan; v6: 4 s aina katto). Ohituksen laatat ehtivät odotuksen ja avauksen aikana.</summary>
         public const float AloitusrataOdotusKattoS = 1.5f;
+
+        /// <summary>Aloituskaupungin valintanäkymä (UI/Aloitusnakyma.AloitaPallovalinta kirjoittaa): v3f:n esikääntö palaa siihen
+        /// ennen lentoa, jos pelaaja on pyörittänyt tai zoomannut palloa (AloituslennonRata.EsikaannonKesto).</summary>
+        public static AloituslennonRata.Asento? Valintanakyma;
+
+        /// <summary>v3f: pelikello on lennon hallussa (Pelikello.Lennossa asetettu tällä lennolla): purku palauttaa sen.</summary>
+        bool kelloLennossa;
+
+        /// <summary>Pelikello pois lennolta (perillä tai purussa).</summary>
+        void KelloPois()
+        {
+            if (!kelloLennossa) return;
+            kelloLennossa = false;
+            Pelikello.Lennossa = false;
+        }
 
         readonly Camera[] ennakot = new Camera[2];
         readonly List<CesiumCameraManager> ennakkoHallinnat = new List<CesiumCameraManager>();

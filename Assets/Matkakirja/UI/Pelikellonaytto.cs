@@ -64,6 +64,7 @@ namespace Matkakirja.Natiivi
             bool valinta = ui != null && ui.Aloitus != null && ui.Aloitus.ValitseePallolla;
             if (valinta && !valinnassa && !Pelikello.Lennossa) Pelikello.Tunnit = 0; // uusi valinta: lähtöhetki
             valinnassa = valinta;
+            Pelikello.Valinnassa = valinta; // v3f: päivän ja yön raja valinnasta asti (Kartta/Paivanvalo.cs)
             if (valinta && !Pelikello.Lennossa) Pelikello.Etene(Time.unscaledDeltaTime);
             bool nayta = valinta || Pelikello.Lennossa;
 
