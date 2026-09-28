@@ -8615,3 +8615,7 @@ Omistaja 28.9. sanatarkasti: "nyt en tarvitse konetta. sanon taas sitten kun tar
 ## OMISTAJA: PULUN PUHEKESKUSTELUN VIIMEINEN TILA 'NAPAUTA MIKKIA, KUN HALUAT PUHUA' (28.9.2026 klo 12.44)
 
 Omistaja 28.9. klo 12.4x sanatarkasti: "pitäisikö olla pulussa viimeinen vaihtoehto: napauta mikkiä kun haluat puhua". Paatoimittaja: kylla — tilarivi ei tyhjene Pulun puheen jalkeen vaan nayttaa 'Napauta mikkiä, kun haluat puhua', jolloin pelaaja nakee tilan koko ajan (Kuuntelen → Mietin → Puhun → Napauta mikkiä…). Nakyy puhekeskustelun jalkeen ja ennen ensimmaista sanelua, ei kirjoitetun kysymyksen jalkeen. Pelikoodari #3546:een ennen mergea tai heti perään, Natiivi-UI samoin natiiviin.
+
+## OMISTAJA: KORJAUS — PUHUN-TILAAN 'NAPAUTA MIKKIA, JOS HALUAT KESKEYTTAA' (EI LEPOTILARIVIA) (28.9.2026 klo 12.44)
+
+Omistaja 28.9. klo 12.4x korjasi sanatarkasti: "eikun anteeksi: puhun, napauta mikkiä jos haluat keskeyttä". Korvaa edellisen kirjauksen lepotilarivin: Puhun-tilan rivi on 'Puhun… napauta mikkiä, jos haluat keskeyttää'; neljatta tilaa ei tule, puheen jalkeen rivi kuten #3546:ssa. Pelikoodari web, Natiivi-UI natiivi.
