@@ -637,10 +637,12 @@ namespace Matkakirja.Natiivi
                 // alle (vain mallit, ei UI-kalusteita: ne piilottivat laitekuvassa cl14 vasemman laidan nimiöt). Mallinoston oma
                 // laatikko (noston id:llä, ei geometrisesti: cl16:ssa Spillingsin kätkö nappasi Visbyn siirretyn mallin laatikon) ei
                 // estä omaa nimiötä. Kategoriasymboleilla ei ole laatikkoa: ennallaan.
-                int oma = m.Ryhma == null && !m.MallinAlla && m.Id != null && Symbolimallit.OnMalli(m.Id) ? malliAvaimet.IndexOf(m.Id) : -1;
-                bool malli = oma >= 0;
+                // Oma laatikko myös kaupungille, jonka erikoismalli on sen vieressä (Visby: kaupunkimerkki jää, OnMalli epätosi):
+                // oma malli ei peitä kaupungin nimiötä (18b484bc: Visbyn nimiö puuttui). Ylä/ala-sijoittelu vain mallinostolle.
+                int oma = m.Ryhma == null && !m.MallinAlla && m.Id != null ? malliAvaimet.IndexOf(m.Id) : -1;
+                bool malli = oma >= 0 && Symbolimallit.OnMalli(m.Id);
                 m.MallinYla = malli ? malliRuudut[oma].yMin - m.Piste.y : float.NaN;
-                if (malli) mallienNimiot.Add(m.Id + "#" + oma);
+                if (oma >= 0) mallienNimiot.Add(m.Id + "#" + oma);
                 bool Kalusteeton(Rect a)
                 {
                     for (int k = 0; k < malliRuudut.Count; k++) if (k != oma && malliRuudut[k].Overlaps(a)) return false;
@@ -739,7 +741,7 @@ namespace Matkakirja.Natiivi
             // malli, jonka nosto ei ole tällä kerroksella (esim. piilossa tai ryhmässä).
             if (malliRuudut.Count > 0 || mallienNimiot.Count > 0)
             {
-                var sb = new System.Text.StringBuilder($"mallilaatikoita {malliRuudut.Count}:");
+                var sb = new System.Text.StringBuilder($"mallilaatikoita {malliRuudut.Count} [{string.Join(", ", malliAvaimet)}]:");
                 foreach (var t in mallienNimiot)
                 {
                     string id = t.Substring(0, t.LastIndexOf('#'));
