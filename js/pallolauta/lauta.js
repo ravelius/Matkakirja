@@ -4349,6 +4349,8 @@ export async function avaaPallolauta(ui) {
    * nostomerkin, mutta pysyy kaupungin vieressä.
    */
   const KUTSUN_KOKO = 64;
+  /** Edellinen asento { city, a } (asentolukko), säilyy kortin piilossa oloajan. */
+  let kutsunAsento = null;
   const KUTSUN_KERROIN = 0.95;
   // Asennot etäisyysrenkaittain (lähin ensin), kussakin renkaassa yläoikea
   // → ylävasen → oikea → vasen → alaoikea.
@@ -4402,8 +4404,15 @@ export async function avaaPallolauta(ui) {
     // Kaupungin piste ja nappula (seisoo pisteen päällä, n. 44 px ylös).
     const nappula = { x0: p.x - 14, y0: p.y - 46, x1: p.x + 14, y1: p.y + 10 };
     const kalusteet = ruudunKalusteet();
+    /*
+     * ASENTOLUKKO (omistaja 28.9.2026 Fablen kautta: ei hyppyjä): edellinen asento kokeillaan
+     * ensin, joten kortti pysyy paikallaan niin kauan kuin se mahtuu, eikä vaihda asentoa joka
+     * ladonnassa (mitattu ennen: jopa 4 hyppyä yhdessä vedossa). Vaihto liukuu (css).
+     */
+    const jarjestys = kutsunAsento && kutsunAsento.city === city.id
+      ? [kutsunAsento.a, ...KUTSUN_ASENNOT.filter((a) => a !== kutsunAsento.a)] : KUTSUN_ASENNOT;
     const etsi = (esteet) => {
-      for (const a of KUTSUN_ASENNOT) {
+      for (const a of jarjestys) {
         const r = { x0: p.x + a.dx, y0: p.y + a.dy, x1: p.x + a.dx + KUTSUN_KOKO, y1: p.y + a.dy + KUTSUN_KOKO + 14 };
         if (r.x0 < 4 || r.y0 < 4 || r.x1 > W - 4 || r.y1 > H - 4) continue;
         if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
@@ -4412,7 +4421,9 @@ export async function avaaPallolauta(ui) {
       return null;
     };
     const valittu = etsi([...kiinteaMuste, ...omaMuste, ...kalusteet, nappula]) ?? etsi([...kalusteet, nappula]);
+    // Asento muistetaan myös piilossa: reunalta palaava kortti tulee samaan asentoon.
     if (!valittu) return tyhjaa();
+    kutsunAsento = { city: city.id, a: valittu.a };
     merkit.aseta('kaupunkikortinkutsu', [{
       avain: `kaupunkikortinkutsu:${city.id}`,
       laji: 'kaupunkikortinkutsu',
