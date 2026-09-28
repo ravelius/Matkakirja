@@ -2,25 +2,25 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 07:58 EEST — **LEVYPUSKURI KAVENTUNUT NOPEASTI: 85 Gi vapaana (raja 80 Gt, puskuri 5 Gi) — ilmoitettu Fablelle. Juna jatkunut poltton jälkeen (uusi commit 7b236c32 jonossa).**
+**Päivitetty:** 2026-09-28 08:11 EEST — **LEVY PALAUTUNUT: 94 Gi vapaana (wt/ siivottu 36→29 kpl) — hälytys ohi. Natiiviseppä 63% ja Sisältökirjuri 61% lähestyvät 70% kynnystä, seurataan tiiviisti. Uusi julkaisu käynnissä (lippu 08:09).**
 
 ## 1) Sessiot
 
-Kaikki roolit tilinvaihdon (28.9. 07.0x) session id:llä. Kontekstit nousevat normaalisti, kaikki yhä alle 70 % kynnyksen — **Natiiviseppä 57% ja Sisältökirjuri 52% nousevat nopeimmin, seurataan**.
+Kaikki roolit tilinvaihdon (28.9. 07.0x) session id:llä. **Natiiviseppä 63% ja Sisältökirjuri 61% lähestyvät 70% kynnystä — vielä ei ylitystä, ei ilmoitusta, mutta seurataan tarkasti seuraavalla kierroksella.**
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 29% | running |
-| Postivahti (self) | (tämä sessio) | 21% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 13% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 57% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 45% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 30% | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 38% | running |
-| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 31% | running |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 32% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 52% | running |
-| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 24% | running |
+| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 34% | running |
+| Postivahti (self) | (tämä sessio) | 23% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 14% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 63% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 47% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 32% | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 45% | running |
+| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 34% | running |
+| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 33% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 61% | running |
+| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 25% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
 
@@ -46,9 +46,9 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella (07:44 viestit kuitattu).
+Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
 
-**Juna JATKUNUT** poltton jälkeen — uusi commit 7b236c32 juna/b13:ssa 07:54, odottaa niputusta (10 min). Tauon lippu ei ole palautunut.
+**Juna toimii normaalisti** — commit 7b236c32 jonossa 08:04, niputus käynnissä. Tauon lippu ei ole palautunut. **Uusi julkaisulippu päällä 08:09** (sallittu).
 
 **Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
@@ -76,16 +76,16 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (07:58)
+## 5) Resurssit (08:11)
 
-- **5 h -kiintiö:** 25 %. **Viikko (kaikki mallit): 7 %.** **Viikko (Fable):** 0 %.
-- **LEVY: 85 Gi vapaana (raja 80 Gt, puskuri VAIN 5 Gi) — nopea lasku 97→95→93→92→91→89→85 Gi n. 1,5 h aikana. Ilmoitettu Fablelle 07:58.** Suurimmat kansiot: wt/ 27G, proto-3d/lokit 28G, pyramidi-poltto 5,3G — ei vielä yksilöity mikä kasvaa juuri nyt, jatketaan seurantaa. wt/-worktreet 36 kpl (kasvanut 33:sta).
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 18 Pro) — päiväraja 2, ei ylitystä.
-- **Liput:** `/tmp/matkakirja-julkaisu` poissa (julkaisu valmis 07:44). `/tmp/matkakirja-juna-tauko` ei ole palautunut — juna jatkunut, uusi commit 7b236c32 07:54.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen, Natiiviseppä 57% ja Sisältökirjuri 52% nousevat nopeimmin.
+- **5 h -kiintiö:** 29 %. **Viikko (kaikki mallit): 8 %.** **Viikko (Fable):** 0 %.
+- **LEVY PALAUTUNUT: 94 Gi vapaana** (oli 85 Gi/07:58) — puskuri ~14 Gi. wt/-worktreet 29 kpl (siivottu 36:sta, selittää palautumisen). Hälytys 07:58 katsotaan ohi, ei uutta ilmoitusta.
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 2 (linssiseppa-iPhone, iPhone 17 — vaihtuneet edellisistä) — päiväraja 2, ei ylitystä.
+- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (luotu 08:09, uusi julkaisu, sallittu). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen, mutta **Natiiviseppä 63% ja Sisältökirjuri 61% nousevat nopeasti — todennäköisesti ylittävät 70% seuraavalla kierroksella**.
 - **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
 - **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
-- **Lokisiivouskandidaatteja:** ei tällä kierroksella (>48h/>24h kynnyksin).
+- **Lokisiivouskandidaatteja:** ei tällä kierroksella.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
