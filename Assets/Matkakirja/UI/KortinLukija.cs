@@ -216,6 +216,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento (ui nostonappi kaiutin): kuin kaiuttimen napautus.</summary>
         public void Paina() => Vaihda();
 
+        /// <summary>Testikomento (ui nosto &lt;valo&gt; valikko): kuin valikkonapin napautus.</summary>
+        public void AvaaValikko() { if (saatimet) VaihdaPaneeli(); }
+
         public void Pysayta() => Pysayta(true);
 
         /// <summary>Luenta seis; sulje = false jättää valikon auki (luettu loppuun).</summary>
