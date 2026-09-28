@@ -21,8 +21,8 @@ namespace Matkakirja
     /// MAAILMAN KOKO (omistaja 27.9. klo 23.2x Fablen kautta, Linssisepän speksi symbolit-ja-lippu-speksi-20260928.md): lippu
     /// pitää kokonsa maailmassa kuin oikea esine. Korkeus on <see cref="KorkeusPt"/> saapumisnäkymän mittakaavassa (kartan
     /// kerroin 1), joten lähemmäs zoomattaessa tanko kasvaa (kerroin 2 → kaksinkertainen) ja loitonnettaessa pienenee; katto
-    /// <see cref="KattoOsuus"/> (0,22) ruudun korkeudesta ja <see cref="EtaisyysOsuus"/> kameran etäisyydestä, jotta kangas pysyy
-    /// ruudulla eikä katoa lähelle zoomatessa kameran taakse (omistaja 28.9.). `lipputanko ruutu` palauttaa vakioruudun (A/B).
+    /// enintään <see cref="MaxKorkeusKm"/> (80 km) maailmassa, ilman ruutukattoa: isossa maassa tanko on matalampi, jotta se ei
+    /// katoa lähelle zoomatessa kameran taakse (omistaja 28.9.). `lipputanko ruutu` palauttaa vakioruudun (A/B).
     /// ENTINEN MUOTO: tangon korkeus on vakio ruudulla (<see cref="KorkeusPt"/> pistettä, kuten KaupunkiMerkit), ja tanko nousee
     /// pinnan normaalin suuntaan. Suoraan ylhäältä katsottuna pystysuora tanko olisi pelkkä piste, joten akseli kallistuu
     /// normaalin ja katseen tasossa niin, että tanko on vähintään <see cref="MinKulma"/> asteen kulmassa katseeseen (näkyy
@@ -40,15 +40,13 @@ namespace Matkakirja
         /// <summary>Maailman kokoinen (oletus, omistaja 27.9. klo 23.2x); false = vakio ruudulla (komento `lipputanko maailma|ruutu`).</summary>
         public static bool MaailmanKoko = true;
         /// <summary>
-        /// Maailmakoon katto: tanko enintään tämä osuus ruudun korkeudesta (komento `lipputanko katto <osuus>`). Omistaja 28.9.
-        /// ("Zoomatessa lähemmäs se vain katoaa kameran taakse koska lipputanko on niin korkea. Ei tehdä koko kattoa."): 0,5 → 0,22.
+        /// Tangon suurin korkeus maailmassa (km; komento `lipputanko katto <km>`). Omistaja 28.9. Fablen kautta: "Zoomatessa
+        /// lähemmäs se vain katoaa kameran taakse koska lipputanko on niin korkea. Ei tehdä koko kattoa." Ei ruutukattoa: tanko
+        /// on kiinteä esine maailmassa ja kasvaa zoomatessa, mutta isoissa maissa matalampi. Saapumisnäkymän 120 pt oli Ruotsissa
+        /// ~260 km, ja kameran lähin korkeus iPhonella on ~307 km (PalloKierto.MinKorkeus), joten yläpää lähestyi kameraa;
+        /// 80 km:n tanko pysyy aina selvästi kameran alla ja kuvassa. Pienissä maissa (Tanska ~60 km) 120 pt säilyy.
         /// </summary>
-        public static float KattoOsuus = 0.22f;
-        /// <summary>
-        /// Tangon korkeus enintään tämä osuus kameran etäisyydestä jalkaan: maailman kokoinen tanko (Ruotsissa ~260 km) lähestyi
-        /// lähelle zoomatessa kameraa ja katosi sen taakse; näin yläpää ja lippu pysyvät aina kuvassa (omistaja 28.9.).
-        /// </summary>
-        public const float EtaisyysOsuus = 0.18f;
+        public static float MaxKorkeusKm = 80f;
         /// <summary>Löydös 176: kartan kerroin, jonka alla tanko piiloutuu (maatasolla 1, Euroopan mittakaavassa ~0,3).</summary>
         public const float PiiloKerroin = 0.55f;
         /// <summary>Tangon koko piilokynnyksellä suhteessa täyteen (kerroin 1): pienenee lineaarisesti tähän.</summary>
@@ -85,7 +83,7 @@ namespace Matkakirja
         public static string Suunta = "maailma";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { KorkeusPt = 120f; MaailmanKoko = true; KattoOsuus = 0.22f; Perspektiivi = true; Jatkuva = true; Suunta = "maailma"; instanssi = null; }
+        static void Nollaa() { KorkeusPt = 120f; MaailmanKoko = true; MaxKorkeusKm = 80f; Perspektiivi = true; Jatkuva = true; Suunta = "maailma"; instanssi = null; }
 
         /// <summary>Liehuntasuunnan vaihto ajossa (vertailukuvat): maailma | ruutu | kamera.</summary>
         public static void AsetaSuunta(string s)
@@ -349,11 +347,9 @@ namespace Matkakirja
             if (MaailmanKoko && saapuminen > 0)
             {
                 // Maailman kokoinen: KorkeusPt pistettä saapumiskorkeuden etäisyydellä (paikallisina metreinä, joten georeferenssin
-                // skaala kumoutuu), eli kerroin 1 = entinen koko ja kerroin 2 = kaksinkertainen. Katto: KattoOsuus ruudusta.
+                // skaala kumoutuu), eli kerroin 1 = entinen koko ja kerroin 2 = kaksinkertainen. Ei ruutukattoa: enintään MaxKorkeusKm.
                 float maailma = 2f * (float)saapuminen * tanPuoli / (Screen.height / PalloKierto.Pistekerroin) * KorkeusPt;
-                float katto = piste * KattoOsuus * Screen.height / PalloKierto.Pistekerroin / Mathf.Max(1e-9f, gt.lossyScale.x);
-                float lahella = EtaisyysOsuus * (float)etaisyys / Mathf.Max(1e-9f, gt.lossyScale.x);
-                koko = Mathf.Min(maailma, Mathf.Min(katto, lahella));
+                koko = Mathf.Min(maailma, MaxKorkeusKm * 1000f);
             }
             else
             {
@@ -370,7 +366,7 @@ namespace Matkakirja
 
         string Kuvaus() =>
             $"maa {maa ?? "-"}, paikka {lat:0.00} {lon:0.00}, näkyy {nakyi}, lippu {(lahde != null ? lahde.width + "×" + lahde.height : "-")}" +
-            $", kangas 3D ({(Jatkuva ? "jatkuva" : "syke")}), korkeus {KorkeusPt:0} pt ({(MaailmanKoko ? $"maailma, katto {KattoOsuus:0.##}" : "ruutu")})" +
+            $", kangas 3D ({(Jatkuva ? "jatkuva" : "syke")}), korkeus {KorkeusPt:0} pt ({(MaailmanKoko ? $"maailma, enintään {MaxKorkeusKm:0} km" : "ruutu")})" +
             $", suunta {Suunta}";
 
         void OnDestroy()

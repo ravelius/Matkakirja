@@ -799,7 +799,7 @@ namespace Matkakirja
                     else if (m == "jatkuva" || m == "syke") Lipputanko.AsetaJatkuva(m == "jatkuva");
                     else if (m == "koko" && o.Length > 2) Lipputanko.KorkeusPt = float.Parse(o[2], CultureInfo.InvariantCulture);
                     else if (m == "maailma" || m == "ruutu") Lipputanko.MaailmanKoko = m == "maailma";   // omistaja 27.9. klo 23.2x
-                    else if (m == "katto" && o.Length > 2) Lipputanko.KattoOsuus = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 0.1f, 2f);
+                    else if (m == "katto" && o.Length > 2) Lipputanko.MaxKorkeusKm = Mathf.Clamp(float.Parse(o[2], CultureInfo.InvariantCulture), 5f, 1000f);
                     else if (m == "perspektiivi" && o.Length > 2) Lipputanko.Perspektiivi = o[2] != "0";
                     else if (m == "suunta" && o.Length > 2) Lipputanko.AsetaSuunta(o[2]);
                     else if (m == "koe")
