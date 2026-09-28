@@ -32,6 +32,8 @@ namespace Matkakirja
             /// <summary>Maanosa offline.jsonin maat[].manner-kentästä (skeema 1.23); maailmalla null.</summary>
             public string Manner;
             public long Tavut, Ladattu;
+            /// <summary>Skeema 1.56: levyllä vievä koko (tavuja.offline: rajauslaatikko ja 4 kt:n lohkot); vanha paketti = Tavut.</summary>
+            public long LevyTavut;
             public Tila Tila;
             public string Virhe;
             internal Dictionary<string, object> Tiedot;
@@ -133,7 +135,10 @@ namespace Matkakirja
                 // Siirtokoko = levykoko: 1.0.32 tallentaa maaston gzipattuna (Laattapalvelin.LataaOffline, Fablen C), joten
                 // tavuja.levy (purettu, vanhoille buildeille) ei koske tätä buildia.
                 // Skeema 1.54: tavuja.offline = rasteri + maasto + kaupunkiRasteri + kaupunkiMaasto + mediaKuvat (siirto) sellaisenaan.
-                if (td.TryGetValue("offline", out var of) && of is double ofd) tavut = (long)ofd;
+                // Skeema 1.56: offline = levykoko (4 kt:n lohkot), siirto = ladattavat tavut. Edistymä (Ladattu/Tavut) laskee
+                // siirtoa, joten Tavut = siirto; levykoko erikseen LevyTavut (Natiiviseppä 28.9.).
+                if (td.TryGetValue("siirto", out var si) && si is double sid) tavut = (long)sid;
+                else if (td.TryGetValue("offline", out var of) && of is double ofd) tavut = (long)ofd;
                 else
                 {
                     if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
@@ -142,7 +147,9 @@ namespace Matkakirja
                     if (td.TryGetValue("mediaKuvat", out var mk) && mk is double mkd) tavut += (long)mkd;
                 }
             }
-            var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
+            long levy = d.TryGetValue("tavuja", out var t2) && t2 is Dictionary<string, object> td2 && td2.ContainsKey("siirto") &&
+                        td2.TryGetValue("offline", out var lv) && lv is double lvd ? (long)lvd : tavut;
+            var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, LevyTavut = levy, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
             if (File.Exists(Merkki(id))) { a.Tila = Tila.Valmis; a.Ladattu = tavut; }
             return a;
         }
@@ -315,6 +322,9 @@ namespace Matkakirja
                 {
                     Kentasta(m, "rasteri", z0, z1);
                     Kentasta(kerma.Replace("{alue}", a.Id), "kerma", 0, 30);
+                    // Varitaso lukee maan kerma-alueen <ISO>/laatat.json:sta (E2E 2: haettiin verkosta, Natiiviseppä 28.9.).
+                    if (a.Tiedot != null && a.Tiedot.ContainsKey("kerma") &&
+                        suhteellinen(Laattapalvelin.Ampari + Varitaso.Kansio + a.Id + "/laatat.json") is string lj) polut.Add(lj);
                 }
             });
             Laji("reliefi", (z0, z1) =>
