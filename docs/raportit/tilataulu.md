@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 11:47 EEST — **LOPULLINEN SELITYS koko aamupäivän kuormasekaannukseen:** load1 EI mitannut Clauden todellista kuormaa. LuoPallo (PID 18584) oli Linssisepän sallittu käännösvuoro (nice 20, 1 ydin). Todellinen loadavg-nostaja: Julkaisijan junan valmistelutestisarja ajoi 15 rinnakkaista node-työtä `taskpolicy -b`:llä — ne jonottavat "runnable"-tilassa ja nostavat loadavgia vaikka CPU oli 64% idle (~6 ydintä käytössä). **Julkaisija rajasi nyt 4 rinnakkaiseen (--test-concurrency=4).** Jatkossa seurataan `koodaus`-käyttäjän CPU-summaa (raja 800%/5min, nyt 147%) JA `top -l 1` idle%:a loadavgin sijaan — kumpikaan aiemmista hälytyksistä (load1 61→216→...→104) ei kuvastanut oikeaa Claude-kuormaa, mutta CI-savukeajon peruminen ja testien rajaaminen olivat silti hyödyllisiä korjauksia.
+**Päivitetty:** 2026-09-28 11:57 EEST — **Kierto normaali uudella mittarilla: koodaus-CPU 244% (raja 800%), idle 63%.** Natiivi-UI nollautui (72%→9%). Juna-vahti havaitsi jumin (natiivi-ui-käännökset 11:19) ja korjasi sen itse 11:37 (Unity-puu tapettu, lukko vapautui) — ei toimenpidettä tarvita.
 
 ## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
 
@@ -16,25 +16,25 @@ Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet.
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
-**Osasyy korjattu (Julkaisija 11:2x):** Pelikoodarin #3541-pushin CI-savukeajo vanhassa tilassa (30 chromiumia) peruttu, kevyt tila (#3539) mergetty. **LOAD1: 118→57→37→21,8 (11:25) → 64,2 (11:32, uusi nousu).** **TODELLINEN TOISTUVA JUURISYY: `mds_stores` (Spotlight) 232% CPU** — indeksoi jatkuvasti pallopolton kasvavaa tiedostomäärää, ei ole vielä pysyvästi ratkaistu. Chromium-runnerilla 0 (savuke-sarja tauolla testien välissä). Ilmoitettu Päätoimittajalle 11:32, ehdotettu Spotlight-poikkeusta `/Users/Shared/Claude/pyramidi-poltto/`-kansiolle.
+Aamupäivän kuormasekaannus (load1 61→216→...→104) selvitetty ja korjattu: väärä mittari + Julkaisijan junan testisarja rajattu 4 rinnakkaiseen. Uusi mittari (koodaus-CPU+idle%) käytössä, ks. osio 0.
 
 ## 1) Sessiot
 
-**KYNNYS YLITTYI: Natiivi-UI 72%.** Päätoimittaja nollautui itsenäisesti aiemmin (nyt 9%). Muut kontekstit alle kynnyksen.
+Natiivi-UI nollautui (72%→9%). Kaikki kontekstit alle kynnyksen (korkein Sisältökirjuri 57%).
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 9% (nollautunut) | running |
-| Postivahti (self) | (tämä sessio) | 59% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 29% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 36% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 44% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | **72%** | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 39% | running |
+| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 18% | running |
+| Postivahti (self) | (tämä sessio) | 67% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 33% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 43% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 49% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 9% (nollautunut) | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 49% | running |
 | Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 46% | running |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 36% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 52% | running |
-| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 26% | running |
+| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 39% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 57% | running |
+| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 27% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
 
@@ -90,14 +90,18 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (11:32)
+## 5) Resurssit (11:57)
 
-- **5 h -kiintiö:** 68 %. **Viikko (kaikki mallit): 18 %.** **Viikko (Päätoimittaja):** 0 %. (5 h -kiintiö nollautuu ~17 min sisällä, ei toimenpidettä.)
-- **Levy:** 142 Gi vapaana, hyvä puskuri. 
+- **5 h -kiintiö:** 0 % (nollautui). **Viikko (kaikki mallit): 19 %.** **Viikko (Päätoimittaja):** 0 %.
+- **Levy:** 140 Gi vapaana, hyvä puskuri.
 - **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0 (päiväraja 1).
-- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** Natiivi-UI pysyy 72%:ssa, ei nollautunut.
-- **LOAD1 (uusi omistajan sääntö klo 17 asti, raja 8):** **64,2 (11:32) — nousi takaisin 21,8:sta.** Toistuva syyllinen `mds_stores`/Spotlight, ks. osio 0. Chromium-runnerilla 0.
+- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 11:38). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** kaikki alle kynnyksen — Natiivi-UI nollautui (9%). Postivahti (self) 67%, ei koske kynnystä mutta seurataan omaa nollaustarvetta.
+- **Claude-kuorma (uusi mittari klo 17 asti, raja 800%/5min):** koodaus-CPU 244%, idle 63% — ei hälytystä.
+- **Juna-vahti:** havaitsi ja korjasi jumin itse 11:37 (natiivi-ui-käännökset, Unity-puu tapettu) — ei toimenpidettä.
+- **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
+- **Effort-tarkistus (7 Opus-roolia):** ei tehty tällä kierroksella (kuormaselvitys vei ajan) — seuraavalla kierroksella.
+- **Lokisiivouskandidaatteja:** ei tällä kierroksella.
 - **Postilaatikko:** EI UUTTA.
 - **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
