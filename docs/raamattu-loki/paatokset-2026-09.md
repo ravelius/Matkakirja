@@ -8755,3 +8755,7 @@ Omistaja 28.9. klo 18.5x sanatarkasti: "Tee vielä lisää muita äänivertailui
 ## OMISTAJA: ISOISAN AANI — F3 (HOLLANTI, JEROEN HAMERLAND) PARAS TAHAN MENNESSA; NELJA UUTTA SAMAAN SUUNTAAN (28.9.2026 klo 18.20)
 
 Omistaja 28.9. klo 18.6x sanatarkasti: "F3 on ollut paras tähän mennessä. Siinä on mielenkiintoinen R-vika lukialla, mutta muuten on todella tasainen ja se R-vika jopa toimii isoisän tapauksessa. Etsi kuitenkin neljä uutta ja etsi kaikki tuon F3 suunnasta ja kaikki ulkomaalaisia." → Pelikoodari G-kierros: 4 ulkomaalaista, vanhempaa, hiljaisen arvovaltaista ja erittain tasaista aanta (v4, vakaus 1,0, style 0, ei tageja).
+
+## OMISTAJA: ISOISAN AANI — G4 MYOS HYVA; 8 SUOSITUINTA MATALAA JA VAKAATA KERTOJAA (28.9.2026 klo 18.26)
+
+Omistaja 28.9. klo 18.7x sanatarkasti: "G4 oli myös aika hyvä. Mitkä ovat kaikkein suosituimmat kertoja äänet, joilla on matala ja vakaa ääni? Voisi vielä sellaisia hakea suoraan vaikka kahdeksan kappaletta." → Pelikoodari H-kierros: 8 suosituinta kirjaston kertoja-aanta (matala, vakaa, vanhempi mies, ulkomaalainen), v4 vakaus 1,0, ei tageja; vertailukohdat F3 (Jeroen Hamerland) ja G4 (Mardi).
