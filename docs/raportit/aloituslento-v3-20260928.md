@@ -56,3 +56,13 @@ Merge 1.0.35-junaan vasta omistajan OK:n jälkeen.
 - **Saapumisen esilataus**: ennakkokamera [1] saapumisen lähimpään kohtaan (~200 km) jo odotuksesta ja lennon käytävään
   kohteen ympäristö Z7–Z9 ±2. Tulos: saapumisessa (12,3 s) ja kosketuksessa (13,2 s) Egeanmeren saaret ja Attika ovat
   terävinä (v3 ja v3b suttuisia 14 s:iin asti). Ensimmäinen saapumishetki (11,3 s) on vielä osin pehmeä.
+
+## v3d: omistajan palaute v3-kuviin (klo 09.1x, suositeltu versio)
+
+Sanatarkasti Fablen kautta: "Ota Ateenassa tuo 3d pois lennosta. Näyttää oudolta", "kamera pitää olla selvästi kauempana ja
+kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylhäältä, nyt näyttää kun joku pommi iskisi".
+- Haara **1636c93a**, käännös **d939384f**, 0 poikkeusta, Kartta-testit 347/347.
+- Kohteen maamerkkimalli ei näy aloituslennolla (rengas ja nimi jäävät). Saapuminen 350 km:stä etuviistosta (kallistus 55°),
+  kamera nousee ja kääntyy alas: kosketus ~915 km:stä, kallistus 15° (kamera 75° koneen yllä), kone 1,7 % leveydestä
+  (vähimmäiskoko 2,5 % → 1,5 % laskussa).
+- Video `v3d/aloituslento-v3d-tekstit.mp4`, kuvaparit v3c | v3d `v3d/kuvaparit/`.
