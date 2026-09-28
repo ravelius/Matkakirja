@@ -8779,3 +8779,7 @@ Omistaja 28.9. klo 19.3x sanatarkasti: "Pulu toimii nyt aivan loistavasti. ISS:�
 ## OMISTAJA: 3D-SYMBOLIERA HYVAKSYTTY (1.0.38) (28.9.2026 klo 19.14)
 
 Omistaja 28.9. klo 19.4x kortilla: Linssisepan 3D-symbolit takaisin x1,35, kallistettuna koko sidottu katsepisteeseen (lahestyessa kasvaa), erikoismallit ylhaalta ja kaupungin vieressa (0ff66cfc) hyvaksytty 1.0.38:aan. Jatkoon: Visby/Vimmerby-nimiopaallekkaisyys (Natiivi-UI + Linssiseppa).
+
+## OMISTAJA: CUPOLA VIELA LIIAN SUMEA; TF 1.0.38 VIENTIIN; PULUN V4 TURBO + NOPEA ALOITUS TUOTANNOSSA (28.9.2026 klo 19.25)
+
+Omistaja 28.9. klo 19.5x kortilla (Cupola cl12, zoom 1,3x, pehmennys 0,75x) sanatarkasti: "Vielä liikaa blurrina" → Linssiseppa: pehmennys ~0,4x ja 0,25x vertailuun, zoom pysyy. BUILD 38 (proto 77ff5f6e: Maapallon vuosi dev, maakuntakartta, kyydin-taivas, ISS-nopeutus + ajelehdus; Laitetestaaja PASS) → VIE 1.0.38. 1.0.39: hyppykorjaus + Pulun pysaytys chatista (karjessa), loitonnusraja, 3D-symbolit (maalle + paletti), Cupola-lasi. Web: #3572 (v4 Turbo) 18.54 ja #3567 (nopea aloitus) 19.16 tuotannossa. Natiiviseppa korjasi proto-kaanna.sh:n VIKA-rivin omistajan luvalla (19.0x).
