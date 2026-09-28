@@ -49,7 +49,6 @@ const TUNNETUT_KOHTAUSKUVAT = new Set([
   'pariisi-pariisi-soi.webp',
   'pariisi-pasteur-1862.webp',
   'pariisi-torni-romuraudaksi.webp',
-  'pariisi-tuileriain-rauniot.webp',
   'pariisi-vrain-lucas.webp',
   'pietari-janissaari-1703.webp',
   'rooma-aqua-virgo.webp',
