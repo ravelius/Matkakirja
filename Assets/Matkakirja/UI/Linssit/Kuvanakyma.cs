@@ -138,6 +138,8 @@ namespace Matkakirja.Natiivi
                 if (float.IsNaN(w) || float.IsNaN(h) || w <= 0 || h <= 0) return;
                 minipulu.MiniKorkeus(w <= 620f || h <= 500f ? 56f : 84f);
                 pulukortti.Mitoita(w, h);
+                turvaLeveys = w;
+                RajaaNauha();
             });
             // Web satelliitti-pulu-leijuu (PAATOKSET 53): nappi leijuu 5 s:n kierroksella 5 pt ja ±3°, ja pysähtyy, kun pulu
             // puhuu (kysymys matkalla). Pieni liike pois: ei leijuntaa.
@@ -196,6 +198,7 @@ namespace Matkakirja.Natiivi
             }
             juuri.EnableInClassList("mk-astrokuva--vanha", Vanha);
             kohdeNapit.style.display = !Vanha && Linssi()?.KatsoNaapuri(1) != null ? DisplayStyle.Flex : DisplayStyle.None;
+            RajaaNauha();
             Valitse(Mathf.Clamp(i, 0, Math.Max(0, k.Havainnot.Count - 1)));
             Esilataa();
         }
@@ -541,6 +544,20 @@ namespace Matkakirja.Natiivi
         }
 
         // --- kuvaselain ---------------------------------------------------------------
+
+        float turvaLeveys = float.NaN;
+
+        /// <summary>
+        /// Pikkukuvanauha (vasen ala, 42 pt/kuva) ei saa ulottua ‹ ›-nappien alle (Natiivi-UI:n katselmointi 28.9.: iPhonella
+        /// neljäs pikkukuva jäi ‹:n alle, ja nappi vei napautuksen). Napit pysyvät paikallaan kohteesta toiseen, joten nauha
+        /// rajataan niiden vasemmalle puolelle (8 pt:n väli) ja rivittyy. Ilman nappeja (A/B vanha) raja on 50 % kuten ennen.
+        /// </summary>
+        void RajaaNauha()
+        {
+            if (kohdeNapit.style.display == DisplayStyle.None || float.IsNaN(turvaLeveys)) { nauha.style.maxWidth = Length.Percent(50); return; }
+            const float NappienPuolikas = 52f, Vasen = 12f, Vali = 8f, Pikkukuva = 42f;
+            nauha.style.maxWidth = Mathf.Max(Pikkukuva, turvaLeveys / 2f - NappienPuolikas - Vasen - Vali);
+        }
 
         /// <summary>Reunavyöhyke: −1 vasen, +1 oikea, 0 keskiosa (lavan leveydestä ulommat <see cref="ReunaOsuus"/>).</summary>
         int Reunalla(float x)
