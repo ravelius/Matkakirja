@@ -597,7 +597,7 @@ namespace Matkakirja.Natiivi
         {
             if (luetaan) { PysaytaLuenta(); return; }
             // Lukijan putkitus (Pelikoodari 27.9.): otsikko kappaleen alkuun, seuraavat palat esihaetaan.
-            var palat = Lukijaaani.LuennanPalat(luettavat.Where(x => !string.IsNullOrWhiteSpace(x)));
+            var (palat, tagit) = Lukijaaani.LuennanPalatJaTagit(luettavat.Where(x => !string.IsNullOrWhiteSpace(x)));
             var puhe = Puhe.Hae();
             if (palat.Count == 0 || puhe == null) return;
             luetaan = true;
@@ -606,8 +606,9 @@ namespace Matkakirja.Natiivi
             void Seuraava()
             {
                 if (v != lukuVersio || i >= palat.Count) { if (v == lukuVersio) PysaytaLuenta(); return; }
-                puhe.Lue(palat[i++], "kertoja", 0, Seuraava, pyynnosta: true);
-                KortinLukija.Esihae(puhe, palat, i);
+                puhe.Lue(palat[i], "kertoja", 0, Seuraava, pyynnosta: true, loppuTagi: tagit[i]);
+                i++;
+                KortinLukija.Esihae(puhe, palat, i, tagit: tagit);
             }
             Seuraava();
         }

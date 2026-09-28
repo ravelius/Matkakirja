@@ -57,6 +57,7 @@ namespace Matkakirja.Natiivi
         VisualElement paneeli;
         string otsikko;
         List<string> palat = new List<string>();
+        List<string> tagit = new List<string>();
         bool luetaan, keskeytetty;
         int versio;
         /// <summary>Soiva (tai viimeksi kuultu) pala; katkennut luenta jatkaa tästä (web __lukijaKohta).</summary>
@@ -105,7 +106,7 @@ namespace Matkakirja.Natiivi
             if (ajossa != null && ajossa != this) ajossa.Pysayta();
             var raaka = (tekstit ?? Enumerable.Empty<string>()).Where(t => !string.IsNullOrWhiteSpace(t)).Select(t => t.Trim()).ToList();
             // Lukijan putkitus (Pelikoodari 27.9.): otsikko kappaleen alkuun, pitkä kappale paloiksi.
-            palat = Lukijaaani.LuennanPalat(raaka);
+            (palat, tagit) = Lukijaaani.LuennanPalatJaTagit(raaka);
             // Säätöratas seuraa kaiutinta: ilman luettavaa ei säätimiäkään (web __lukijaSaadin.hidden).
             Juuri.style.display = raaka.Sum(p => p.Length) >= Vahimmais ? DisplayStyle.Flex : DisplayStyle.None;
             PaivitaMykistys();
@@ -155,8 +156,9 @@ namespace Matkakirja.Natiivi
                 if (v != versio) return;
                 if (i >= palat.Count) { jatkoKohta = -1; kohta = palat.Count; Pysayta(); return; } // luettu loppuun: alusta
                 kohta = i;
-                if (!puhe.Lue(palat[i++], "kertoja", 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true)) { Pysayta(); return; }
-                Esihae(puhe, palat, i);
+                if (!puhe.Lue(palat[i], "kertoja", 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true, loppuTagi: tagit[i])) { Pysayta(); return; }
+                i++;
+                Esihae(puhe, palat, i, tagit: tagit);
             }
             Seuraava();
         }
@@ -166,12 +168,13 @@ namespace Matkakirja.Natiivi
         /// kaksi seuraavaa palaa generoidaan jo taustalla samalla persoonalla (Puhe.Esihae), joten seuraava ei odota
         /// koko generointia. Yhteinen Lehtinakyma- ja Nahtavyysarkki-luennalle.
         /// </summary>
-        public static void Esihae(Puhe puhe, IReadOnlyList<string> palat, int i, string persoona = "kertoja")
+        public static void Esihae(Puhe puhe, IReadOnlyList<string> palat, int i, string persoona = "kertoja", IReadOnlyList<string> tagit = null)
         {
             if (puhe == null || palat == null) return;
             // Kaikki kutsujat ovat kaiuttimen luentoja (pyynnöstä): esihaku myös Kertoja pois -tilassa.
-            if (i < palat.Count) puhe.Esihae(palat[i], persoona, pyynnosta: true);
-            if (i + 1 < palat.Count) puhe.Esihae(palat[i + 1], persoona, pyynnosta: true);
+            // Sama loppu-tagi kuin Luessa, muuten avain ei osu ja pala generoitaisiin kahdesti.
+            if (i < palat.Count) puhe.Esihae(palat[i], persoona, pyynnosta: true, loppuTagi: tagit?[i]);
+            if (i + 1 < palat.Count) puhe.Esihae(palat[i + 1], persoona, pyynnosta: true, loppuTagi: tagit?[i + 1]);
         }
 
         /// <summary>Luenta seis (kortti suljettiin, sivu vaihtui tai toinen kortti aukesi).</summary>

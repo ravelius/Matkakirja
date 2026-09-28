@@ -326,13 +326,20 @@ namespace Matkakirja.Natiivi
         /// voima vahvistimessa. Muuten kuten Soita. Liian pitkä teksti katkaistaan virkkeen rajalta
         /// workerin kattoon.
         /// </summary>
-        public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null, bool pyynnosta = false)
+        /// <param name="loppuTagi">xAI-puhetagi palan loppuun (Lukijaaani.LuennanPalatJaTagit: [pause] kappalejaossa,
+        /// [long-pause] väliotsikon edellä); vain puhepyyntöön, säilö omaan lohkoonsa (kertoja-t1).</param>
+        public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null, bool pyynnosta = false,
+            string loppuTagi = null)
         {
             // pyynnosta: kaiuttimen painallus lukee aina (omistaja 27.9.2026 klo 15.5x); automaattista ohjaa Kertoja.
             if (!Paalla && !PulunPuhe(persoona) && !pyynnosta) return false;
             soiPyynnosta = pyynnosta;
-            return Syntetisoi(teksti, persoona, Lukijaaani.OletusLohko(persoona), true, viiveS, loppu);
+            return Syntetisoi(teksti, persoona, TagiLohko(Lukijaaani.OletusLohko(persoona), loppuTagi), true, viiveS, loppu, loppuTagi);
         }
+
+        static string TagiLohko(string lohko, string loppuTagi) => Lukijaaani.TagiLohko(lohko, loppuTagi);
+        static List<string> PyyntoPalat(string teksti, bool sailo, string loppuTagi) =>
+            Lukijaaani.PyyntoPalat(teksti, Virta && sailo, loppuTagi);
 
         /// <summary>
         /// Kuuntele näyte (web #puhe-nayte): persoonan näyteteksti (PUHE_NAYTTEET) nykyisillä
@@ -348,7 +355,7 @@ namespace Matkakirja.Natiivi
             return Syntetisoi(Lukijaaani.NayteTeksti(persoona), persoona, null, false, 0, null);
         }
 
-        bool Syntetisoi(string teksti, string persoona, string lohko, bool sailo, float viiveS, Action loppu)
+        bool Syntetisoi(string teksti, string persoona, string lohko, bool sailo, float viiveS, Action loppu, string loppuTagi = null)
         {
             if (string.IsNullOrWhiteSpace(teksti)) return false;
             persoona ??= "kertoja";
@@ -367,7 +374,7 @@ namespace Matkakirja.Natiivi
             // Uusi puhe: vanhan puheen jonottavat esihaut pois (kutsuja lisää omat seuraavat palansa heti Luen jälkeen).
             esihakujono.Clear();
             // Palavirta (Virta): lyhyt ensimmäinen pala soi heti, loput haetaan sen soidessa (Lukijaaani.VirtaPalat).
-            var palat = Virta && sailo ? Lukijaaani.VirtaPalat(teksti) : new List<string> { teksti };
+            var palat = PyyntoPalat(teksti, sailo, loppuTagi);
             // Yksikin pala kulkee SoitaPalatin kautta: uusinta ja palaloki koskevat kaikkea luentaa.
             lataus = StartCoroutine(SoitaPalat(palat, persoona, lohko, viiveS, oma, sailo));
             return true;
@@ -518,14 +525,14 @@ namespace Matkakirja.Natiivi
         /// pala haettiin vasta edellisen loputtua ja väliin jäi koko generointi (~5 s / 330 mrk, mitattu 27.9.).
         /// Sama avain ja tiedosto kuin Luessa; kesken oleva esihaku ei lataudu kahdesti (Lue odottaa sitä).
         /// </summary>
-        public void Esihae(string teksti, string persoona = "kertoja", bool pyynnosta = false)
+        public void Esihae(string teksti, string persoona = "kertoja", bool pyynnosta = false, string loppuTagi = null)
         {
             if ((!Paalla && !PulunPuhe(persoona) && !pyynnosta) || string.IsNullOrWhiteSpace(teksti)) return;
             persoona ??= "kertoja";
             teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
             // Samat palat kuin Lue tekee (palavirta), muuten esihaku menisi hukkaan ja pala generoitaisiin kahdesti.
-            string lohko = Lukijaaani.OletusLohko(persoona);
-            foreach (var pala in Virta ? Lukijaaani.VirtaPalat(teksti) : new List<string> { teksti })
+            string lohko = TagiLohko(Lukijaaani.OletusLohko(persoona), loppuTagi);
+            foreach (var pala in PyyntoPalat(teksti, true, loppuTagi))
                 EsihaePala(pala, persoona, lohko);
         }
 
