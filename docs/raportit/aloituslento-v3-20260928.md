@@ -178,3 +178,9 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
   - Päivänvalo ei muuta varjostusta päiväpuolella: hämärän paino lasketaan pallon normaalista, ei rinteestä. Hiljaisena
     hetkenä kuvatussa v3f2:ssa kohokuvio näkyi myös 23°:n auringolla.
   - Uusintakuvaus tehdään hiljaisena hetkenä ja ~30 s:n odotuksella valinnassa ennen omistajalle lähettämistä.
+- **Uusinta hiljaisena hetkenä 16.51** (`v3f3b/`, sama käännös c9fb354d, valinnassa odotettiin 25 s, 0 poikkeusta):
+  - Ohituksessa oli 1 33x ladattua laattaa ja valmiusaste 44–53 %.
+  - Päiväosuudessa näkyy täysi kohokuvio, ja kone ohittaa kameran päivänvalossa vuorten yllä.
+  - F = 8,047 s kehyseroista. Video `v3f3b/aloituslento-v3f3.mp4`, kuvaparit v3f2 | v3f3 lennon hetkillä 5,5 / 7,2 / 9,5 s
+    `v3f3b/kuvaparit-5.5-7.2-9.5.png`, valintakuva `v3f3b/valinta-0230-merkitty.png`.
+  - Lähetetty Päätoimittajalle 16.5x omistajan OK:ta varten.
