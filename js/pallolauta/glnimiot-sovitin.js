@@ -93,8 +93,11 @@ export function vanhanKerroin(vanhaKoko, uusiKoko) {
   return a > 0 && b > 0 ? b / a : 1;
 }
 
-/** Kylkivaihdon ja piilotuksen häivytys (ms) — sama kuin CSS2D:n E3-siirtymä. */
-export const NOSTON_HAIVYTYS_MS = 180;
+/**
+ * Kylkivaihdon, piilotuksen ja paluun häivytys (ms), ease-in-out varjostimessa.
+ * 180 → 220 ms (omistaja 28.9.2026 Fablen kautta: pehmeä häivytys 200–250 ms, ei hyppyä).
+ */
+export const NOSTON_HAIVYTYS_MS = 220;
 
 /** Onko nosto GL-kelpoinen: vain tavallinen nosto ikonilla, ei liuskaa eikä luonnosta. */
 export function glNostoKelpaa(d) {
@@ -219,6 +222,8 @@ export function luoGlNimiosovitin({
   const kohteetCss2d = glKohteetCss2d();
   /** Nimet ja nostot ovat yksi lista rungolle: kumpikin jako säilyttää toisen. */
   let nimiInstanssit = [];
+  /** Edellisen jaon nimet (tunnus → instanssi) tulon ja lähdön häivytykseen; null = ei vielä jakoa. */
+  let edellisetNimet = null;
   let nostoInstanssit = [];
   let peliInstanssit = [];
   /** tunnus → nimiön avain viime jaossa (kylkivaihdon tunnistus). */
@@ -251,6 +256,11 @@ export function luoGlNimiosovitin({
   const ilmoitaHaivytys = () => ui?.pallonInstanssi?.__piirto?.tarvitaan?.(NOSTON_HAIVYTYS_MS + 50);
   /** Häivytys instanssin mukaan GPU-rungolle (js/pallonimiot-gl.js HÄIVYTYS GPU:LLA). */
   const haivytysKuvaus = (h) => ({ alku: h.alku, kestoMs: NOSTON_HAIVYTYS_MS, mista: h.mista, mihin: h.mihin });
+  /** Häivytyksen hetkellinen peitto (keskeytetty häivytys jatkuu siitä, missä se oli). */
+  const haivytyksenPeitto = (h, t) => {
+    const osuus = Math.min(1, Math.max(0, (t - h.alku) / NOSTON_HAIVYTYS_MS));
+    return h.mista + (h.mihin - h.mista) * osuus * osuus * (3 - 2 * osuus); // smoothstep kuten varjostin
+  };
   const nyt = () => globalThis.performance?.now?.() ?? Date.now();
 
   /** Rasteri atlakseen rungon rajapinnalla; false = ei tilaa. */
@@ -333,6 +343,35 @@ export function luoGlNimiosovitin({
       nakyvatNimet.add(tunnus);
     }
     for (const t of [...viimeSpritet.keys()]) if (!nakyvatNimet.has(t) && !t.includes('#')) viimeSpritet.delete(t);
+    /*
+     * NIMEN TULO JA LÄHTÖ PEHMEÄSTI (omistaja 28.9.2026 Fablen kautta: ei hyppyä; esim. iso
+     * kaupunginnimi, joka ilmestyi kerralla, kun kaupunkikortin kutsu väistyi reunalla).
+     * Ensimmäinen jako piirtää suoraan; sen jälkeen uusi nimi nousee nollasta ja poistuva
+     * häipyy paikallaan samalla GPU-häivytyksellä kuin nostojen nimiöt.
+     */
+    const hetki = nyt();
+    if (edellisetNimet) {
+      for (const inst of gl) {
+        const avain = `${inst.tunnus}#nimi`;
+        const kesken = haivytykset.get(avain);
+        if (!edellisetNimet.has(inst.tunnus) && !kesken) {
+          haivytykset.set(avain, { alku: hetki, mista: 0, mihin: inst.opacity ?? 1, poistu: false }); ilmoitaHaivytys();
+        }
+        const h = haivytykset.get(avain);
+        if (h && !h.poistu) { h.mihin = inst.opacity ?? 1; inst.haivytys = haivytysKuvaus(h); inst.opacity = h.mista; }
+      }
+      for (const [t, vanha] of edellisetNimet) {
+        if (nakyvatNimet.has(t)) continue;
+        haivytykset.delete(`${t}#nimi`);
+        const kopio = { instanssi: { ...vanha, tunnus: `${t}#nimi-vanha` }, alku: hetki, mista: vanha.opacity ?? 1, mihin: 0, poistu: true };
+        if (kopio.mista <= 0.01) continue;
+        kopio.instanssi.opacity = kopio.mista;
+        kopio.instanssi.haivytys = haivytysKuvaus(kopio);
+        haivytykset.set(`${t}#nimi-vanha`, kopio); ilmoitaHaivytys();
+      }
+      for (const t of nakyvatNimet) haivytykset.delete(`${t}#nimi-vanha`);
+    }
+    edellisetNimet = new Map(gl.map((inst) => [inst.tunnus, { ...inst, opacity: haivytykset.get(`${inst.tunnus}#nimi`)?.mihin ?? inst.opacity }]));
     nimiInstanssit = gl;
     vieKaikki(k);
     luvut.gl = gl.length;
@@ -423,11 +462,37 @@ export function luoGlNimiosovitin({
           haivytykset.set(`${tunnus}#nimio-vanha`, vanha); ilmoitaHaivytys();
           haivytykset.set(`${tunnus}#nimio`, { alku: hetki, mista: 0, mihin: peitto, poistu: false }); ilmoitaHaivytys();
         }
+        /*
+         * PIILOTUS JA PALUU PEHMEÄSTI (omistaja 28.9.2026 Fablen kautta: "katoaminen ja paluu
+         * pehmeä häivytys eikä hyppy"). Näkyvyys päätetään yhä vain levossa (sovittelu, liikkeessä
+         * lukko); tässä vain muutos häivytetään samalla koneistolla kuin kylkivaihto: piiloutuva
+         * nimiö häipyy paikallaan, palaava nousee nollasta. Ensimmäinen ilmestyminen ennallaan.
+         */
+        if (edellinen && !vaihtui && edellinen.nakyy !== nimioNakyy) {
+          const kesken = haivytykset.get(`${tunnus}#nimio`);
+          const peittoNyt = kesken && !kesken.poistu ? haivytyksenPeitto(kesken, hetki) : edellinen.instanssi.opacity;
+          if (!nimioNakyy) {
+            haivytykset.delete(`${tunnus}#nimio`);
+            if (peittoNyt > 0.01) {
+              const vanha = {
+                instanssi: { ...edellinen.instanssi, tunnus: `${tunnus}#nimio-vanha`, opacity: peittoNyt },
+                alku: hetki, mista: peittoNyt, mihin: 0, poistu: true,
+              };
+              vanha.instanssi.haivytys = haivytysKuvaus(vanha);
+              haivytykset.set(`${tunnus}#nimio-vanha`, vanha); ilmoitaHaivytys();
+            }
+          } else {
+            haivytykset.set(`${tunnus}#nimio`, { alku: hetki, mista: Math.min(peittoNyt, peitto), mihin: peitto, poistu: false });
+            ilmoitaHaivytys();
+          }
+        }
         const haivytys = haivytykset.get(`${tunnus}#nimio`);
         const nimioPeitto = nimioNakyy ? (haivytys && !haivytys.poistu ? haivytys.mista : peitto) : 0;
         const instanssi = glNostonInstanssi(d, nimio, 'nimio', nimioPeitto);
         if (haivytys && !haivytys.poistu) {
           haivytys.instanssi = instanssi;
+          // Peiton muutos kesken häivytyksen (lunastettu, listan alle): tavoite seuraa.
+          if (nimioNakyy) haivytys.mihin = peitto;
           // Piilotettu nimiö pysyy piilossa: häivytys vain näkyvälle.
           if (nimioNakyy) instanssi.haivytys = haivytysKuvaus(haivytys);
         }
@@ -440,6 +505,7 @@ export function luoGlNimiosovitin({
     for (const t of [...viimeSpritet.keys()]) { const i = t.indexOf('#'); if (i > 0 && !nakyvat.has(t.slice(0, i))) viimeSpritet.delete(t); }
     // Häivytys elää vain, kun sen nosto on yhä rungolla.
     for (const [t, h] of haivytykset) {
+      if (/#nimi(-vanha)?$/.test(t)) continue; // paikannimet: jaa() hoitaa omansa
       const emo = t.replace(/#(nimio|ikoni)(-vanha)?$/, '');
       if (!nakyvat.has(emo)) haivytykset.delete(t);
       else if (!h.poistu && !gl.some((i) => i.tunnus === t)) haivytykset.delete(t);
@@ -687,6 +753,7 @@ export function luoGlNimiosovitin({
       nappula = null;
       peliInstanssit = [];
       nimiInstanssit = [];
+      edellisetNimet = null;
       nostoInstanssit = [];
       haivytykset.clear();
       nimiot.clear();
