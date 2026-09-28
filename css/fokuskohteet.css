@@ -748,6 +748,27 @@
   container-type: inline-size;
 }
 
+/*
+ * KORTIN KUVA ON NYKYÄÄN NOSTOKUVA (28.9.2026). Kohdekortti avautuu
+ * kaksivaiheisena nostokuvana (js/nostokuva.js: figure.nostokuva-kehys >
+ * button.nostokuva-nappi), eikä `.fokuskohde-kuva`-paikkaa enää synny.
+ * Nauhan mittamuuttujat ja mittasäiliö olivat vain sillä, joten nauha
+ * jäi 0 × 0 px:n kokoiseksi eikä näkynyt (mitattu WebKitissä: Olympia
+ * ja Rodoksen kolossi, pallolauta). Samat osuudet kuin kortin kuvalla,
+ * mutta kuvan leveydestä `--nauha-kuva` (js/fokuskohteet.js
+ * mitoitaNauhaKuvaan), koska fit-content-nappi ei voi olla mittasäiliö.
+ */
+.nostokuva-kehys.fokuskohde-kuva-nauhalla > .nostokuva-nappi {
+  --nauha-pituus: calc(0.368 * var(--nauha-kuva, 0px));
+  --nauha-korkeus: calc(0.048 * var(--nauha-kuva, 0px));
+  --nauha-teksti: calc(0.0156 * var(--nauha-kuva, 0px));
+  /* Ei pohjustusta: nostokuvan kuvan koko ja paikka ovat lukossa
+     (js/nostokuva.js), joten nauha istuu suoraan kuvan kulmassa. */
+  --nauha-marginaali: 0px;
+  --nauha-kaari: 6px;
+  --nauha-kaari-ulko: 6px;
+}
+
 /* Suurennoksen mitat isännälle, aivan kuten kortissa: korkeus
    2,4rem, ULOS johdettu 1,2rem, PITUUS 18,4rem → näkyvä matka
    15,0rem, teksti (15,2 × 0,78 = 11,86rem) enintään 79 % siitä eli

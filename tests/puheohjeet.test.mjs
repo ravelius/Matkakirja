@@ -62,3 +62,45 @@ test('valitsePuhemoottori: xAI kun avain on, OpenAI varalla, null ilman avaimia'
   assert.equal(valitsePuhemoottori({ XAI_API_KEY: 'x', PUHE_MOOTTORI: 'openai' }), 'xai');
   assert.equal(valitsePuhemoottori({}), null);
 });
+
+test('Pulun striimiääni ElevenLabs v4 Turbolla: tagit, moottori ja reitti (omistaja 28.9.2026)', async () => {
+  const worker = await import('../tools/pollo/worker.js');
+  const { elevenTagit, puluElevenKaytossa, puluElevenMalli, PULU_ELEVEN_AANI, PULU_ELEVEN_MALLI_OLETUS } = worker;
+  assert.equal(elevenTagit('Tuota. [pause] Hei [long-pause] no [sigh] ja [laugh] <fast>nopeasti tämä</fast> loppu.'),
+    'Tuota. <break time="0.4s" /> Hei <break time="0.9s" /> no [sighs] ja [laughs] [quickly] nopeasti tämä loppu.');
+  assert.equal(puluElevenKaytossa({ ELEVEN_API_KEY: 'k' }, 'pollo'), true);
+  assert.equal(puluElevenKaytossa({ ELEVEN_API_KEY: 'k' }, 'kertoja'), false, 'vain Pulu');
+  assert.equal(puluElevenKaytossa({}, 'pollo'), false, 'ilman avainta xAI kuten ennen');
+  assert.equal(puluElevenKaytossa({ ELEVEN_API_KEY: 'k', PULU_PUHE_MOOTTORI: 'xai' }, 'pollo'), false);
+  assert.equal(puluElevenMalli({}), PULU_ELEVEN_MALLI_OLETUS);
+  assert.equal(PULU_ELEVEN_MALLI_OLETUS, 'eleven_v4_turbo');
+  assert.equal(puluElevenMalli({ PULU_PUHE_MALLI: 'eleven_v4' }), 'eleven_v4');
+  assert.equal(puluElevenMalli({ PULU_PUHE_MALLI: 'jotain' }), PULU_ELEVEN_MALLI_OLETUS);
+
+  const kutsut = [];
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async (osoite, asetukset) => {
+    kutsut.push({ osoite: String(osoite), runko: JSON.parse(asetukset.body) });
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44, 0xc4]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const env = { ELEVEN_API_KEY: 'e', XAI_API_KEY: 'x', POLLO_ORIGINIT: 'https://matkakirja.app' };
+  const pyynto = (persoona) => worker.default.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'cf-connecting-ip': '203.0.113.8' },
+    body: JSON.stringify({ tehtava: 'puhe', persoona, teksti: 'Kas. [pause] Pulu puhuu.' }),
+  }), env, {});
+  try {
+    const pulu = await pyynto('pollo');
+    assert.equal(pulu.status, 200);
+    assert.equal(pulu.headers.get('x-puhe-moottori'), 'eleven');
+    const kertoja = await pyynto('kertoja');
+    assert.equal(kertoja.status, 200);
+    assert.equal(kertoja.headers.get('x-puhe-moottori'), 'xai');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+  assert.match(kutsut[0].osoite, new RegExp(`api\\.elevenlabs\\.io/v1/text-to-speech/${PULU_ELEVEN_AANI}/stream`));
+  assert.equal(kutsut[0].runko.model_id, 'eleven_v4_turbo');
+  assert.equal(kutsut[0].runko.text, 'Kas. <break time="0.4s" /> Pulu puhuu.');
+  assert.match(kutsut[1].osoite, /api\.x\.ai/, 'kertoja pysyy xAI:lla');
+});
