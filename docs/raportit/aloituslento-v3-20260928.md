@@ -1,4 +1,4 @@
-# Aloituslento v3 (Natiiviseppä 28.9.2026 klo 07.5x)
+# Aloituslento v3 (Natiiviseppä 28.9.2026 klo 07.3x)
 
 Omistajan palaute v2-videoon (27.9. klo 23.5x, Fablen kautta): "kone pitää näkyä paljon pienempänä kun se kuvataan
 kaukaa. laskeutuessa kamera pitää olla sen verran kauempana että töksö laskeutuminen ei näy kun kone näkyy ihan pienenä."
