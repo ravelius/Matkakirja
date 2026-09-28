@@ -8763,3 +8763,7 @@ Omistaja 28.9. klo 18.7x sanatarkasti: "G4 oli myös aika hyvä. Mitkä ovat kai
 ## OMISTAJA: ISOISAN AANI — H1 (JAMES) HYVA; SEURAAVAT 8 (28.9.2026 klo 18.35)
 
 Omistaja 28.9. klo 19.0x sanatarkasti: "H1 oli hyvä. Generoi seuraavat kahdeksan." → Pelikoodari I-kierros: suosituimmat matalat vakaat kertojat sijat 9–16, samat asetukset; ehdokkaat nyt F3 (Jeroen Hamerland), G4 (Mardi), H1 (James).
+
+## OMISTAJA: PULULLE ÄÄNIEFEKTIT (V4 SFX-TAGIT) MAHDOLLISIMMAN ILMEIKKAASTI — KOE (28.9.2026 klo 18.42)
+
+Omistaja 28.9. klo 19.1x sanatarkasti: "Tuon on loistava uutinen pululle. Noita voisi tehdä paljonkin. Nythän pululle on tehty jo animaatioita, joissa se pingahtaa ensin pois ruudulta ja palaa sitten pikaisesti takaisin, kun siltä kysytään chatissa jotain, niin siihen sopisi myös kaikenlaiset ääniefektit sekä Avaus repliikkiin, kun valitaan ensimmäistä lentoa, niin siinähän pulu kiiruhtaa paikalle. Pulu oikeastaan elää kaikesta ekspressiivisyydestä, niin sitä voisi kokeilla nyt alkuun jopa niin paljon kuin mahdollista. sisällyttäen. Voisitkin tehdä muutamia esimerkkejä näille efekteille ja sitten siihen ISS-kohtaukseen, jos siinä saa niitä radioääniä tai muuta vastaavaa, niin voisi kokeilla." → Pelikoodari koe (~6–8 kutsua): chatin pingahdus, avausrepliikki kiiruhtaen, 2 ilmeikasta vastausta, ISS-radio (kohina, Quindar, kyparahengitys). Isoisa ilman efekteja (vakaa, etainen).
