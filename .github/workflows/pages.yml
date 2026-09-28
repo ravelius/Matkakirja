@@ -17,10 +17,13 @@ permissions:
   pages: write
   id-token: write
 
-# Yksi julkaisu kerrallaan; kesken oleva ajo ei jää jumiin.
+# Yksi julkaisu kerrallaan. Kesken olevaa EI peruta (28.9.2026: junan
+# mergejä tuli ~15 min välein ja julkaisu kestää ~15 min, joten jokainen
+# julkaisu peruuntui ja tuotanto jäi v2353:een 2 tunniksi). GitHub pitää
+# jonossa vain uusimman odottavan ajon, joten tuotanto etenee aina.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:

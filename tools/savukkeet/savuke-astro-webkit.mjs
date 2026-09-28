@@ -43,6 +43,17 @@ import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
 if (ULOS) mkdirSync(ULOS, { recursive: true });
@@ -899,6 +910,7 @@ async function ajaSelain(nimi) {
     const virheet = [];
     const konsoli = [];
     const konteksti = await selain.newContext({ ...asetus, serviceWorkers: 'block', reducedMotion: 'no-preference' });
+    await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
     const s = await konteksti.newPage();
     s.on('pageerror', (e) => virheet.push(String(e).split('\n')[0]));
     s.on('console', (m) => { if (m.type() === 'error' || /pallodiag|WebGL|texture|canvas/i.test(m.text())) konsoli.push(`${m.type()}: ${m.text().slice(0, 160)}`); });

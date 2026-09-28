@@ -117,20 +117,23 @@ test('realtime: ilman kehittäjäkoodia 403 eikä xAI:ta kutsuta', async () => {
   });
 });
 
-test('realtime: natiivi ei pääse reitille, puuttuva xAI-avain = 503', async () => {
+test('realtime: natiivi pääsee reitille vain kehittäjäkoodilla (28.9.2026), puuttuva xAI-avain = 503', async () => {
   nollaaLaskurit();
   await ylavirralla(tokenOk, async ({ kutsut }) => {
-    const natiivi = new Request('https://pollo.example/', {
+    const natiivi = (koodi) => new Request('https://pollo.example/', {
       method: 'POST',
       headers: {
-        'content-type': 'application/json', 'x-pollo-kehittaja': KOODI,
-        'x-matkakirja-natiivi': 'fi.matkakirja.peli', 'user-agent': 'fi.matkakirja.peli/1.0',
+        'content-type': 'application/json', ...(koodi ? { 'x-pollo-kehittaja': koodi } : {}),
+        'x-matkakirja-natiivi': 'fi.matkakirja.peli', 'user-agent': 'Matkakirja/1.0 (fi.matkakirja.peli)',
       },
       body: JSON.stringify({ tehtava: 'realtime' }),
     });
-    assert.equal((await worker.fetch(natiivi, env(), {})).status, 403);
-    assert.equal((await worker.fetch(pyynto({}), env({ XAI_API_KEY: '' }), {})).status, 503);
+    assert.equal((await worker.fetch(natiivi(null), env(), {})).status, 403, 'ilman koodia kiinni');
     assert.equal(kutsut.length, 0);
+    const ok = await worker.fetch(natiivi(KOODI), env(), {});
+    assert.equal(ok.status, 200, 'kehittäjäkoodilla auki');
+    assert.ok((await ok.json()).token);
+    assert.equal((await worker.fetch(pyynto({}), env({ XAI_API_KEY: '' }), {})).status, 503);
   });
 });
 
