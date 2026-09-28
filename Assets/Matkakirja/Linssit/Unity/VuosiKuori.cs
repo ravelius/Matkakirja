@@ -42,9 +42,13 @@ namespace Matkakirja.Natiivi
 
         readonly Dictionary<string, Kuva> kuvat = new Dictionary<string, Kuva>();
         readonly Queue<string> jono = new Queue<string>();
+        /// <summary>Esilataukset lähtevät vasta, kun näkyvien kuvien jono on tyhjä (laite vuosi1 28.9.: rinnakkainen
+        /// esilataus hidasti tammikuun ensimmäistä latausta 1 s:sta 14 s:iin).</summary>
+        readonly Queue<string> esijono = new Queue<string>();
         readonly HashSet<string> kaytossa = new HashSet<string>();
         Material materiaali;
         MeshRenderer piirtaja;
+        Avaruus avaruus;
         int maxKuvia;
         (string, string, float, string, float, string, float) edellinen;
 
@@ -64,6 +68,10 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(georeferenssi.transform, false);
             var k = go.AddComponent<VuosiKuori>();
             k.Rakenna(georeferenssi, varjostin);
+            // Avaruuden tausta ja ilmakehän hehku kuten astronautin kamerassa (web: tausta #05070d, ilmakehä #8fb4ff;
+            // Avaruus #04060e ja #7fb6ff). Georeferenssin alle kuten astronautilla (kuoren paikka on jo maan keskipiste);
+            // puretaan kuoren mukana, jolloin pelin tausta palaa.
+            k.avaruus = Avaruus.Luo(georeferenssi, georeferenssi.transform);
             return k;
         }
 
@@ -127,7 +135,7 @@ namespace Matkakirja.Natiivi
             if (osoite == null || kuvat.ContainsKey(osoite)) return;
             // Esilataus ei saa vapauttaa näkyvää kuvaa: vain, jos tilaa on.
             if (kuvat.Count >= maxKuvia) return;
-            Pyyda(osoite);
+            Pyyda(osoite, esilataus: true);
         }
 
         public void Aseta(string pohjaA, string pohjaB, float t, string kerros1, float alfa1, string kerros2, float alfa2)
@@ -156,12 +164,17 @@ namespace Matkakirja.Natiivi
 
         Texture2D Tekstuuri(string osoite) => osoite != null && kuvat.TryGetValue(osoite, out var k) ? k.Tekstuuri : null;
 
-        Kuva Pyyda(string osoite)
+        Kuva Pyyda(string osoite, bool esilataus = false)
         {
-            if (kuvat.TryGetValue(osoite, out var k)) return k;
+            if (kuvat.TryGetValue(osoite, out var k))
+            {
+                // Esiladattavaksi jonotettu kuva tarvitaan nyt: näkyvien jonoon (kaksoiskappale ohitetaan latauksessa).
+                if (!esilataus && k.Tekstuuri == null && k.Pyynto == null && !k.Luovutti) jono.Enqueue(osoite);
+                return k;
+            }
             k = new Kuva { Kaytetty = Time.unscaledTime };
             kuvat[osoite] = k;
-            jono.Enqueue(osoite);
+            (esilataus ? esijono : jono).Enqueue(osoite);
             Vapauta();
             return k;
         }
@@ -193,9 +206,9 @@ namespace Matkakirja.Natiivi
                 k.Pyynto.Dispose();
                 k.Pyynto = null;
             }
-            while (kaynnissa < RinnakkaisetLataukset && jono.Count > 0)
+            while (kaynnissa < RinnakkaisetLataukset && (jono.Count > 0 || (kaynnissa == 0 && esijono.Count > 0)))
             {
-                string osoite = jono.Dequeue();
+                string osoite = jono.Count > 0 ? jono.Dequeue() : esijono.Dequeue();
                 if (!kuvat.TryGetValue(osoite, out var k) || k.Tekstuuri != null || k.Pyynto != null) continue;
                 var parametrit = DownloadedTextureParams.Default;
                 parametrit.readable = false;
@@ -242,6 +255,7 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             foreach (var o in new List<string>(kuvat.Keys)) Poista(o);
+            if (avaruus != null) Destroy(avaruus.gameObject);
             if (TryGetComponent<MeshFilter>(out var f)) Destroy(f.sharedMesh);
             Destroy(materiaali);
         }

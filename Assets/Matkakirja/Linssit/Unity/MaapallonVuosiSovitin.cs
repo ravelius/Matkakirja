@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
             var g = kierto != null ? kierto.GetComponentInParent<CesiumGeoreference>() : null;
             if (g == null) g = UnityEngine.Object.FindAnyObjectByType<CesiumGeoreference>();
             kuori.Kuori = VuosiKuori.Luo(g);
+            // Kohdemaan karttavalot (AiheValot) piirtyvät kuoren päälle (laite vuosi1 28.9.): pois linssin ajaksi.
+            ymparisto.Kerrokset.Nakyvyys("valot", false);
             linssi.AloitusKk = DateTime.Now.Month;
             linssi.Avaa(ymparisto);
             levossaAlkaen = -1;
@@ -76,6 +78,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             linssi.Sulje();
+            y?.Kerrokset.Nakyvyys("valot", true);
             if (kuori.Kuori != null) UnityEngine.Object.Destroy(kuori.Kuori.gameObject);
             kuori.Kuori = null;
             Linssi = null;
