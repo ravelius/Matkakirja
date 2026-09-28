@@ -343,16 +343,18 @@ namespace Matkakirja.Natiivi
             // joten webp kulkee ImageIO-purun kautta (Natiivisepän MatkakirjaKuvat_Pura, iOS 14+).
             if (OnWebpOsoite(reitit[0]))
             {
-                var w = LataaWebp(avain, reitit, levy, t => tulos = t);
+                var w = LataaWebp(avain, reitit, levy, mukana, t => tulos = t);
                 while (w.MoveNext()) yield return w.Current;
             }
-            else if (mukana != null && mukana.EndsWith(".png"))
+            else if (mukana != null)
             {
-                // Kohta 1: buildissa mukana (nostotyyppien kuvakkeet, pulun kuva) → ei verkkoa eikä välimuistia.
+                // Kohta 1: buildissa mukana (nostotyyppien kuvakkeet, pulun kuva) → ei verkkoa eikä välimuistia; kiinteä LRU:n
+                // ulkopuolella. Offline-alueen kuva (Mukana.Offline, Siirtosepän E2E-offline 28.9.: nostokortin jpg haettiin
+                // verkosta, vaikka pienennetty tiedosto oli levyllä) ladataan samoin mutta tavallisena LRU-kuvana.
                 using var l = UnityWebRequestTexture.GetTexture("file://" + mukana, true);
                 yield return l.SendWebRequest();
                 tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
-                kiintea = tulos != null && muunna == null;
+                kiintea = tulos != null && muunna == null && mukana.StartsWith(Application.streamingAssetsPath, StringComparison.Ordinal);
             }
             if (tulos == null && !OnWebpOsoite(reitit[0]) && File.Exists(levy))
             {
@@ -422,16 +424,18 @@ namespace Matkakirja.Natiivi
         static bool OnWebpOsoite(string url) => url != null && url.Split('?')[0].EndsWith(".webp", StringComparison.OrdinalIgnoreCase);
 
         /// <summary>
-        /// WebP: tavut laitevälimuistista tai verkosta, purku taustasäikeessä ImageIO:lla (RGBA8 + mipit,
+        /// WebP: tavut laitevälimuistista, offline-alueelta (<paramref name="mukana"/>: pienennetty tiedosto on JPEG myös .webp-
+        /// polussa, ImageIO purkaa molemmat) tai verkosta, purku taustasäikeessä ImageIO:lla (RGBA8 + mipit,
         /// esikerrottu alfa, rivi 0 alhaalla) ja alfa takaisin suoraksi, koska UI Toolkit piirtää suoralla
         /// alfalla (esikerrottu tummentaisi piirrosten häivytetyt reunat). Editorissa ei purkua (null).
         /// </summary>
-        static IEnumerator LataaWebp(string avain, string[] reitit, string levy, Action<Texture2D> valmis)
+        static IEnumerator LataaWebp(string avain, string[] reitit, string levy, string mukana, Action<Texture2D> valmis)
         {
             byte[] tavut = null;
-            if (File.Exists(levy))
+            string lahde = File.Exists(levy) ? levy : mukana;
+            if (lahde != null)
             {
-                var luku = System.Threading.Tasks.Task.Run(() => { try { return File.ReadAllBytes(levy); } catch (IOException) { return null; } });
+                var luku = System.Threading.Tasks.Task.Run(() => { try { return File.ReadAllBytes(lahde); } catch (IOException) { return null; } });
                 while (!luku.IsCompleted) yield return null;
                 tavut = luku.Result;
             }
