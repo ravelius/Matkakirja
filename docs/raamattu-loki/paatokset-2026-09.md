@@ -8443,3 +8443,7 @@ Sisaltokirjurin ehdotus 6fbc832d4 (docs/raportit/sisaltokirjuri-ihmeet-historian
 ## YOPOLTTO VALMIS 07.17: 507/507, EHEYS Z10 298 335 + Z9 78 211; PAIVASAANTO VOIMAAN (28.9.2026 klo 07.18)
 
 Karttaseppa: syva z9–z10 valmis 07.17, eheys taysi; koodi 1 vain luettelon varitasovartiosta kuten vaihe 1 (luettelo yhdistetaan amparin luettelosta viennissa). Juna-tauon lippu Julkaisijalla. Seuraavaksi pallo levylle 4 ytimella ja vientikortti omistajalle kuvapareineen. Kaannos- ja simulaattorivuorot Julkaisija jakaa Fablen jarjestyksessa (Natiiviseppa aloituslento v3 ensin).
+
+## OMISTAJA HYVAKSYI UUDEN PERUSKARTAN 2026-09-27-POHJA VIENNIN VAIHEET 1–3 (UUSIIN POLKUIHIN); OSOITIN JA JOET ERIKSEEN (28.9.2026 klo 07.42)
+
+Karttasepan vientikortti ajo-20260927y/vientikortti-20260928.md + 6 kuvaparia omistajalle. Omistaja kortilla 07.4x: 'Tehty' (hyvaksynta kirjoitettu Karttasepan sessioon). Vienti: laatat julisteet/pyramidi/2026-09-27-pohja + ranta + viivat, pallo 2026-09-27-pohja-20260927 (polton jalkeen ~13–14), koeluettelo koe/2026-09-27. Tuotanto ei muutu; osoittimen vaihto (vaihe 4) erillinen paatos koeosoitteen ?pyramidi=2026-09-27 jalkeen. Natiivin jokien tuplaviiva (FIN 4 009, ITA 1 694, GRC 415 hyppya) → Karttaseppa tekee Euroopan 40 maata uusiksi korjatulla tyokalulla (joet-2026-09-28, ~09); sen vienti vaatii oman kortin. PR:t #3521 (luettelovartio + GSHHG lahteisiin) ja #3522 (jokikorjaus) Julkaisijan junaan.
