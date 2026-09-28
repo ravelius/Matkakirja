@@ -521,8 +521,16 @@ namespace Matkakirja.Natiivi
                 // Löydös 167 (Laitetestaaja b23): kalusteen (pulu, kartussi, Liiku, yläpalkki) alle jäävä merkki piiloon
                 // kuten 164:n kaupunkipisteet (natiivin parannus, web ei tee tätä).
                 // Reunapiste on erikoismallin (kalusteen) laatikon reunalla: se ei peity omasta laatikostaan.
+                // Oma erikoismalli ei peitä omaa merkkiä (Český Krumlov: piste on oman mallin laatikossa → merkki ja sen
+                // nimiö piiloon, mittari a7300969 "elOpa 0"). Kalusteissa on samat mallilaatikot kuin malliRuuduissa.
+                int omaMalli = m.Id != null ? malliAvaimet.IndexOf(m.Id) : -1;
+                Rect omaRuutu = omaMalli >= 0 && omaMalli < malliRuudut.Count ? malliRuudut[omaMalli] : default;
                 if (!peitossa && !m.MallinAlla) foreach (var r in kalusteRuudut)
-                        if (new Rect(r.x - v, r.y - v, r.width + 2f * v, r.height + 2f * v).Contains(m.Piste)) { peitossa = true; break; }
+                {
+                    if (omaMalli >= 0 && Mathf.Abs(r.xMin - omaRuutu.xMin) < 0.5f && Mathf.Abs(r.yMin - omaRuutu.yMin) < 0.5f
+                        && Mathf.Abs(r.xMax - omaRuutu.xMax) < 0.5f && Mathf.Abs(r.yMax - omaRuutu.yMax) < 0.5f) continue;
+                    if (new Rect(r.x - v, r.y - v, r.width + 2f * v, r.height + 2f * v).Contains(m.Piste)) { peitossa = true; break; }
+                }
                 // Aikahystereesi vain levossa ja tunnetulle merkille; ensi näkymällä tila heti. LIIKKEESSÄ TILA LUKITTU
                 // (web on malli, Pelikoodarin mittaus 28.9.2026: näkyvyys päätetään vain levossa, liikkeen aikana ruudulla
                 // oleva merkki kulkee paikkaansa muuttamatta näkyvyyttä): kalusteen tai mallin ohi kulkeva merkki ei välky.
