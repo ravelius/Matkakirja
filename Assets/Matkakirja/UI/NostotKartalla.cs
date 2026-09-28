@@ -495,8 +495,11 @@ namespace Matkakirja.Natiivi
                 // kuten 164:n kaupunkipisteet (natiivin parannus, web ei tee tätä).
                 if (!peitossa) foreach (var r in kalusteRuudut)
                         if (new Rect(r.x - v, r.y - v, r.width + 2f * v, r.height + 2f * v).Contains(m.Piste)) { peitossa = true; break; }
-                // Aikahystereesi vain levossa ja tunnetulle merkille: liikkeessä ja ensi näkymällä tila heti.
+                // Aikahystereesi vain levossa ja tunnetulle merkille; ensi näkymällä tila heti. LIIKKEESSÄ TILA LUKITTU
+                // (web on malli, Pelikoodarin mittaus 28.9.2026: näkyvyys päätetään vain levossa, liikkeen aikana ruudulla
+                // oleva merkki kulkee paikkaansa muuttamatta näkyvyyttä): kalusteen tai mallin ohi kulkeva merkki ei välky.
                 if (tunnettu && levossa) peitossa = Vakaa(peitonVaihto, m.Id, ennen, peitossa);
+                else if (tunnettu) { peitossa = ennen; peitonVaihto.Remove(m.Id); }
                 else if (m.Id != null) peitonVaihto.Remove(m.Id);
                 if (m.Id != null) peittotila[m.Id] = peitossa;
                 float peitto = peitossa ? 0f : 1f - m.Usva;

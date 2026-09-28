@@ -20,7 +20,10 @@
 // Ulkoasu (web): reuna 2 px #f5f0e2, kulma 9, pohja #d9ccb0, kuva cover; nimi alareunassa Luku lihava 10 pt #fff8ec
 // pohjalla rgba(33,29,24,.72), yksi rivi. Esiin 350 ms (scale 0,85 → 1, opacity 0 → 1); vähennetty liike: heti.
 // PEHMEÄ POISTUMINEN (omistaja 28.9.2026, TF 1.0.34: Ateenan kortti "häviää näkyvistä yhtäkkiä" ruudun reunalla):
-// piiloon 250 ms:ssa (opacity → 0, scale → 0,92) nykyisestä tilasta; paluu kesken häivytyksen jatkaa siitä.
+// piiloon 250 ms:ssa (opacity → 0, ease-in-out kuten web) nykyisestä tilasta; paluu kesken häivytyksen jatkaa siitä.
+// NÄKYVYYS VAIN LEVOSSA (Fable 28.9.2026, web on malli: Pelikoodarin mittaus proto-3d/lokit/nostoreuna-web): liikkeen
+// aikana lukittu kortti kulkee kaupungin mukana (myös reunan yli, leikkautuen) eikä piiloudu eikä palaa; levossa
+// (PalloKierto.Levossa) peitto ja reuna arvioidaan hystereesillä ja muutos tehdään häivyttäen.
 using System.Collections.Generic;
 using Matkakirja.Peli;
 using UnityEngine;
@@ -106,10 +109,8 @@ namespace Matkakirja.Natiivi
         {
             if (float.IsNaN(poisAlku)) return;
             float s = Mathf.Clamp01((Time.unscaledTime * 1000f - poisAlku) / PoisMs);
-            float e = s * s;
+            float e = s * s * (3f - 2f * s);
             nappi.style.opacity = poisPeitto * (1f - e);
-            float sk = Mathf.Lerp(1f, 0.92f, e);
-            nappi.style.scale = new Scale(new Vector3(sk, sk, 1f));
             Ruudunpaivitys.Herata(0.1f);
             if (s < 1f) return;
             poisAlku = float.NaN;
@@ -149,7 +150,10 @@ namespace Matkakirja.Natiivi
                 Kuvat.Hae(tiedosto, tex => { if (tex != null && kuvanTiedosto == tiedosto) kuva.style.backgroundImage = new StyleBackground(tex); });
             }
             if (kierto == null) kierto = Object.FindAnyObjectByType<PalloKierto>();
-            if (kierto == null || juuri.panel == null || !kierto.RuutuPiste(k.Lat, k.Lon, out var r)) { Nayta(false); return; }
+            bool levossa = kierto == null || kierto.Levossa;
+            // Liikkeessä näkyvä lukittu kortti seuraa kaupunkia ruudun ulkopuolellekin (web: leikkautuu reunaan).
+            bool seuraa = !levossa && lukittu.HasValue && nakyy;
+            if (kierto == null || juuri.panel == null || !kierto.RuutuPiste(k.Lat, k.Lon, out var r, 0, seuraa)) { Nayta(false); return; }
             var p = juuri.WorldToLocal(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y)));
             float W = juuri.layout.width, H = juuri.layout.height;
             if (float.IsNaN(W) || W <= 0) { Nayta(false); return; }
@@ -167,6 +171,15 @@ namespace Matkakirja.Natiivi
             esteet.Add(ui.Matkavalinta.LiikuLaatikko);
             esteet.Add(new Rect(paikallinen + new Vector2(p.x - 14f, p.y - 46f), new Vector2(28f, 56f)));
             // Lukittu paikka: sama siirto kaupungin pisteestä; vain kalusteet, piste, nappula ja reuna voivat peittää.
+            if (lukittu.HasValue && !levossa)
+            {
+                // Liikkeen aikana tila on lukossa: näkyvä kulkee paikkansa mukana, piilossa oleva pysyy piilossa.
+                muutosAlkoi = float.NaN;
+                if (!nakyy) return;
+                Aseta(new Rect(p.x + lukittu.Value.x, p.y + lukittu.Value.y, Koko, Koko + 14f));
+                Animoi();
+                return;
+            }
             if (lukittu.HasValue)
             {
                 var rr = new Rect(p.x + lukittu.Value.x, p.y + lukittu.Value.y, Koko, Koko + 14f);
